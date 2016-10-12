@@ -1,758 +1,1434 @@
 {
+  "159a3bfa25efb3331bcedf4851df9a3a9a5903af": [
+    "sccm\\apps\\deploy-use\\configure-ios-apps-with-app-configuration-policies.md"
+  ],
   "ce8c2aaf093e32b7207834ebb5e98ee12c37cd20": [
     "sccm\\apps\\deploy-use\\configure-ios-apps-with-app-configuration-policies.md"
+  ],
+  "c2b44ee6447c99f7cdc0611212724979099502d7": [
+    "sccm\\apps\\deploy-use\\create-applications.md"
   ],
   "bdfca5a3753d881024d6ff49c2dfd42f87bfe66f": [
     "sccm\\apps\\deploy-use\\create-applications.md"
   ],
+  "e5fbc8c78aee83efd2794099638a1a4eea4dbbff": [
+    "sccm\\apps\\deploy-use\\create-app-v-virtual-environments.md"
+  ],
   "93d2a435c410737bb3baf8ea00a1c0984041ba39": [
     "sccm\\apps\\deploy-use\\create-app-v-virtual-environments.md"
+  ],
+  "5aae22a74e297a2544f607d316bbf84fba31e262": [
+    "sccm\\apps\\deploy-use\\create-global-conditions.md"
   ],
   "b0304de1f0ac8d875e2b89e843764222153cc966": [
     "sccm\\apps\\deploy-use\\create-global-conditions.md"
   ],
+  "75620888f711c183d4910a7a4daacc7888499795": [
+    "sccm\\apps\\deploy-use\\deploy-applications.md"
+  ],
   "e409a6de8c12cdc70241d4755d40b08f80aaddb2": [
     "sccm\\apps\\deploy-use\\deploy-applications.md"
+  ],
+  "fc87bc71a9a72d21a1a5188a1cc028dc2f7721bb": [
+    "sccm\\apps\\deploy-use\\link-users-and-devices-with-user-device-affinity.md"
   ],
   "c8e3d6db3520865abb47bafe13216d63613e1d8a": [
     "sccm\\apps\\deploy-use\\link-users-and-devices-with-user-device-affinity.md"
   ],
+  "bfac0d3d88c9b15d2ca1749ec3cf610e0d8bc411": [
+    "sccm\\apps\\deploy-use\\manage-apps-from-the-windows-store-for-business.md"
+  ],
   "b26aa8e3ec902e214f79de633e3a2396fceeab96": [
     "sccm\\apps\\deploy-use\\manage-apps-from-the-windows-store-for-business.md"
+  ],
+  "c31a33d3caf8011ee8e2b70076f34579f5587b30": [
+    "sccm\\apps\\deploy-use\\manage-internet-access-using-managed-browser-policies.md"
   ],
   "212078ef08b013027c8751c0c229357d07708de6": [
     "sccm\\apps\\deploy-use\\manage-internet-access-using-managed-browser-policies.md"
   ],
+  "f13ad0880f8e0a2b791b560bb33f5172093e41a1": [
+    "sccm\\apps\\deploy-use\\management-tasks-applications.md"
+  ],
   "89730f76ec7289c432ce98cc07414f868e59148b": [
     "sccm\\apps\\deploy-use\\management-tasks-applications.md"
+  ],
+  "3b69003dd67898a0d30b0fba7c09cfed6046d6a1": [
+    "sccm\\apps\\deploy-use\\manage-volume-purchased-ios-apps.md"
   ],
   "d6f2e42ef69f17981572bc9477406e7025c3c334": [
     "sccm\\apps\\deploy-use\\manage-volume-purchased-ios-apps.md"
   ],
+  "9250434b28892ea924fcaea9c8c7fddf2b7c51c0": [
+    "sccm\\apps\\deploy-use\\monitor-applications-from-the-console.md"
+  ],
   "3af35ec68133ea032938e46b0a2df24d2b19e132": [
     "sccm\\apps\\deploy-use\\monitor-applications-from-the-console.md"
+  ],
+  "7ef0ba3e0346d9153c6e36ac490ef015a54e263f": [
+    "sccm\\apps\\deploy-use\\monitor-app-usage-with-software-metering.md"
   ],
   "6d0488e32495e51817d71b3eb083efbd5e2c7ca3": [
     "sccm\\apps\\deploy-use\\monitor-app-usage-with-software-metering.md"
   ],
+  "81db5341e499e586623b2baf5f9e6ceee40b656c": [
+    "sccm\\apps\\deploy-use\\packages-and-programs.md"
+  ],
   "0acb77be8d44a41d44d1d25474cbe4101dc4742b": [
     "sccm\\apps\\deploy-use\\packages-and-programs.md"
+  ],
+  "7180b0d723a658d2ab15c98a880c31619808f6c7": [
+    "sccm\\apps\\deploy-use\\protect-apps-using-mam-policies.md"
   ],
   "11ba93f65d559d185d3f9673f7dd1f6c946cd9f6": [
     "sccm\\apps\\deploy-use\\protect-apps-using-mam-policies.md"
   ],
+  "34df810e16db87a6cf296735628c88659a82a360": [
+    "sccm\\apps\\deploy-use\\revise-and-supersede-applications.md"
+  ],
   "c0f7ff16a2063f39d17213b1a1a23ba67a2b28fb": [
     "sccm\\apps\\deploy-use\\revise-and-supersede-applications.md"
+  ],
+  "909e2e7c98658e7773b3c110abd97d5eda9b31db": [
+    "sccm\\apps\\deploy-use\\simulate-application-deployments.md"
   ],
   "20ecf590aa21cd74508b32cb5672ee68180569a7": [
     "sccm\\apps\\deploy-use\\simulate-application-deployments.md"
   ],
+  "18fe8b6754af386b0f625f7321df662a968d5192": [
+    "sccm\\apps\\deploy-use\\uninstall-applications.md"
+  ],
   "20ed25070a51d8ec041697a194c9340bdfd105cc": [
     "sccm\\apps\\deploy-use\\uninstall-applications.md"
+  ],
+  "4cea894ec00e5c826505e675d4dd603cda2242e5": [
+    "sccm\\apps\\deploy-use\\update-and-retire-applications.md"
   ],
   "31d619f51d1e400599d8095c6f48d15dd7bde754": [
     "sccm\\apps\\deploy-use\\update-and-retire-applications.md"
   ],
+  "3121356deca580b2cf700492e04a4c33b4ac84b7": [
+    "sccm\\apps\\get-started\\create-and-deploy-an-application.md"
+  ],
   "be9a3c727b0507db027c54f708a2c1ca8cfd1329": [
     "sccm\\apps\\get-started\\create-and-deploy-an-application.md"
+  ],
+  "9ca884fd6f4e7de588a1c675209d6dcbbe18544b": [
+    "sccm\\apps\\get-started\\creating-android-applications.md"
   ],
   "588f703944ede08d6a2427b003506adaa4606e9b": [
     "sccm\\apps\\get-started\\creating-android-applications.md"
   ],
+  "3ac6b353ae6d88f60f2ae879695f0fe7cf6696c0": [
+    "sccm\\apps\\get-started\\creating-ios-applications.md"
+  ],
   "60fe0557bf972c17706bd3958969f62ae59d6468": [
     "sccm\\apps\\get-started\\creating-ios-applications.md"
+  ],
+  "8fd226c90185f7a2bf7a3853a71e8607b9101c26": [
+    "sccm\\apps\\get-started\\creating-linux-and-unix-server-applications.md"
   ],
   "6d10cc47651a55479be5a0fa5898745430b6cb24": [
     "sccm\\apps\\get-started\\creating-linux-and-unix-server-applications.md"
   ],
+  "d4e7a0698009829758241c141de2631a6e3cab28": [
+    "sccm\\apps\\get-started\\creating-mac-computer-applications.md"
+  ],
   "e87127d4424f43de64358965ee9333c08fc9ebc7": [
     "sccm\\apps\\get-started\\creating-mac-computer-applications.md"
+  ],
+  "a00af4f8edd8c6cfe78a853ce3a05ca0a73e6595": [
+    "sccm\\apps\\get-started\\creating-windows-applications.md"
   ],
   "4156085a0334a6d908f66ad2e20062655aeb300f": [
     "sccm\\apps\\get-started\\creating-windows-applications.md"
   ],
+  "d50c905eafa4f1f8a8920f1f85c7fc324a050506": [
+    "sccm\\apps\\get-started\\creating-windows-embedded-applications.md"
+  ],
   "4bf843e0dca1787cbce4090ec62861499feeac8f": [
     "sccm\\apps\\get-started\\creating-windows-embedded-applications.md"
+  ],
+  "f58819a20342b41d32c31a6b48ea511895103414": [
+    "sccm\\apps\\get-started\\creating-windows-phone-applications.md"
   ],
   "f66e56d503b4c01ef64acc94079f01c7574d5dc0": [
     "sccm\\apps\\get-started\\creating-windows-phone-applications.md"
   ],
+  "def655660cc949faf41396cd52420e2facdde90d": [
+    "sccm\\apps\\get-started\\deploying-app-v-virtual-applications.md"
+  ],
   "e52f583821e984737af2881fd3190aa887c9f917": [
     "sccm\\apps\\get-started\\deploying-app-v-virtual-applications.md"
+  ],
+  "469f89a045bcc2828ba6d12bfc5aa1c0a384727f": [
+    "sccm\\apps\\plan-design\\plan-for-and-configure-application-management.md"
   ],
   "d59f027b048be55a996091e98a60261f671c193e": [
     "sccm\\apps\\plan-design\\plan-for-and-configure-application-management.md"
   ],
+  "c23fa3ce64ba8580819a875f0aec975b06457de1": [
+    "sccm\\apps\\plan-design\\security-and-privacy-for-application-management.md"
+  ],
   "548c370708ed0ac1bb693d248fae4c511482a0ed": [
     "sccm\\apps\\plan-design\\security-and-privacy-for-application-management.md"
+  ],
+  "e09b54827d3fc2544760e49c8deb5c3221a60b4a": [
+    "sccm\\apps\\TOC.md"
   ],
   "1f7a6364ed4335adb288ecac8b9eda1c2e51e2e9": [
     "sccm\\apps\\TOC.md"
   ],
+  "ecd98fc5ef0cac3544271bf210578dc941e21348": [
+    "sccm\\apps\\understand\\introduction-to-application-management.md"
+  ],
   "ed59949d9dbeacb48d1b142a1603660acecbe51b": [
     "sccm\\apps\\understand\\introduction-to-application-management.md"
+  ],
+  "f09098a1195f7c009b3ab42ad8bbdebc1d0142e0": [
+    "sccm\\compliance\\deploy-use\\configuration-items-for-devices-managed-without-the-client.md"
   ],
   "d040e2d7400873a2dd7f46b6af7a7cf51c16faa3": [
     "sccm\\compliance\\deploy-use\\configuration-items-for-devices-managed-without-the-client.md"
   ],
+  "fe18061ff9f0d882de306c3d30356063f0fe43d8": [
+    "sccm\\compliance\\deploy-use\\configuration-items-for-devices-managed-with-the-client.md"
+  ],
   "5e30402a5c1471a1ff9ed1a75d598aaddd96908f": [
     "sccm\\compliance\\deploy-use\\configuration-items-for-devices-managed-with-the-client.md"
+  ],
+  "c70f5b5b9b8b47b9b5111e16bb4096d76875eddd": [
+    "sccm\\compliance\\deploy-use\\create-child-configuration-items.md"
   ],
   "3d4ed50ab23c28365b7f4972c4eafbd6ea4adcfc": [
     "sccm\\compliance\\deploy-use\\create-child-configuration-items.md"
   ],
+  "c152969137e4da7e2b7ca14c7500e68a8a8c710b": [
+    "sccm\\compliance\\deploy-use\\create-configuration-baselines.md"
+  ],
   "45b7c10974d24eb8f25f024760071c020cff9b60": [
     "sccm\\compliance\\deploy-use\\create-configuration-baselines.md"
+  ],
+  "91b9029e7d024139254764c131530a8d3d7b4445": [
+    "sccm\\compliance\\deploy-use\\create-configuration-items.md"
   ],
   "260bc9876767fef2fe37e034ac01d9bdb5b530a9": [
     "sccm\\compliance\\deploy-use\\create-configuration-items.md"
   ],
+  "00390dfad6f7d70862d554aced6d4759c87e94d6": [
+    "sccm\\compliance\\deploy-use\\create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md"
+  ],
   "d503153d63de4f14fdab179c7da7b7d9ffae74bf": [
     "sccm\\compliance\\deploy-use\\create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md"
+  ],
+  "99f7ff472e761ac4aa1458d6e2332a0e0c6cea36": [
+    "sccm\\compliance\\deploy-use\\create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client.md"
   ],
   "b0d05f6033f58dd909614f88d273cbaa0893fc2d": [
     "sccm\\compliance\\deploy-use\\create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client.md"
   ],
+  "eb464c5c0abb40082af0033fd7c7fabb03a83d8b": [
+    "sccm\\compliance\\deploy-use\\create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md"
+  ],
   "aa8ba0363817ce2cc183d3f90dbda393f486f759": [
     "sccm\\compliance\\deploy-use\\create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md"
+  ],
+  "46689b834ffe6384b7de221aeac1b74163a9e1f5": [
+    "sccm\\compliance\\deploy-use\\create-configuration-items-for-windows-10-devices-managed-with-the-client.md"
   ],
   "c8483ca2a1e97a82f130764663c7567b327fe6ad": [
     "sccm\\compliance\\deploy-use\\create-configuration-items-for-windows-10-devices-managed-with-the-client.md"
   ],
+  "305806fd36f33e839407875ce51b03bb695cd34e": [
+    "sccm\\compliance\\deploy-use\\create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md"
+  ],
   "0e6032251741b6632bb3b9306147f8b46f2f95f9": [
     "sccm\\compliance\\deploy-use\\create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md"
+  ],
+  "6f0e927ad201a02f206504329963897dacf21dc4": [
+    "sccm\\compliance\\deploy-use\\create-configuration-items-for-windows-phone-devices-managed-without-the-client.md"
   ],
   "a992eb490c3defce1bae58383de512c398362eac": [
     "sccm\\compliance\\deploy-use\\create-configuration-items-for-windows-phone-devices-managed-without-the-client.md"
   ],
+  "a449e23689a901ebb7a6bde5a3d1868f96b34bfa": [
+    "sccm\\compliance\\deploy-use\\create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-client.md"
+  ],
   "23a7532654071427fe03c09c6cd1ec3343237e71": [
     "sccm\\compliance\\deploy-use\\create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-client.md"
+  ],
+  "3323b2a8077df124b82b19aa4b01a39cc725ddf6": [
+    "sccm\\compliance\\deploy-use\\create-remote-connection-profiles.md"
   ],
   "9f93cd6675993c6d083e1430813d8c08795fe056": [
     "sccm\\compliance\\deploy-use\\create-remote-connection-profiles.md"
   ],
+  "b9c23dafa35c8d97829c27289ec4d934d3a31df1": [
+    "sccm\\compliance\\deploy-use\\create-user-data-and-profiles-configuration-items.md"
+  ],
   "36903d51a51d6f54b579b249ee18165a3c5ac497": [
     "sccm\\compliance\\deploy-use\\create-user-data-and-profiles-configuration-items.md"
+  ],
+  "486c44dfc862f71c6ba8e421347aad6b562232a0": [
+    "sccm\\compliance\\deploy-use\\deploy-configuration-baselines.md"
   ],
   "50328fc835a77ac765c84d58f060d0a66efd59dc": [
     "sccm\\compliance\\deploy-use\\deploy-configuration-baselines.md"
   ],
+  "1936577d639fcec4b54e9843e37458ad739903f5": [
+    "sccm\\compliance\\deploy-use\\import-configuration-data.md"
+  ],
   "673fcf99bdb2ba5e40536295dc8f49ddb4800b6b": [
     "sccm\\compliance\\deploy-use\\import-configuration-data.md"
+  ],
+  "cc11e78b654aa7d90966dc359f79bd676eadb659": [
+    "sccm\\compliance\\deploy-use\\management-tasks-for-configuration-data.md"
   ],
   "0b1d738f01df61d47e486d7f015f509ed92f79da": [
     "sccm\\compliance\\deploy-use\\management-tasks-for-configuration-data.md"
   ],
+  "0e3803111284f77a5c0715da7e16aac897a135f2": [
+    "sccm\\compliance\\deploy-use\\monitor-compliance-settings.md"
+  ],
   "7a76c146e28f1e0ed00a230997d299a6daf59d4f": [
     "sccm\\compliance\\deploy-use\\monitor-compliance-settings.md"
+  ],
+  "2886cff533f377dffd0290f293dab1b260b9ca2d": [
+    "sccm\\compliance\\deploy-use\\upgrade-windows-version.md"
   ],
   "d47b8e363259b0632e83c8f12540e05b2bf86b79": [
     "sccm\\compliance\\deploy-use\\upgrade-windows-version.md"
   ],
+  "4b390521cea2d0715a75ff112808fb4b107aaa18": [
+    "sccm\\compliance\\get-started\\get-started-with-compliance-settings.md"
+  ],
   "606bae5c3407f831e3c766f391588ec33fb57168": [
     "sccm\\compliance\\get-started\\get-started-with-compliance-settings.md"
+  ],
+  "a6f18033b0a79424dbc8922dd9ab595a60d12a1b": [
+    "sccm\\compliance\\plan-design\\common-tasks-for-creating-and-deploying-configuration-baselines.md"
   ],
   "43fcf7f62b0dea2dda73b98cecb35dac9c09bdc6": [
     "sccm\\compliance\\plan-design\\common-tasks-for-creating-and-deploying-configuration-baselines.md"
   ],
+  "e6563a5963404b6fe7c52cac3fc6da6c7e0fa606": [
+    "sccm\\compliance\\plan-design\\common-tasks-for-managing-compliance.md"
+  ],
   "968bd7a6f28031d154448f70c188de1cb8b97e31": [
     "sccm\\compliance\\plan-design\\common-tasks-for-managing-compliance.md"
+  ],
+  "08e4f0e6b51b3aa5da67b3531c107b82e8d40946": [
+    "sccm\\compliance\\plan-design\\common-tasks-for-managing-compliance-on-devices-not-running-the-client.md"
   ],
   "3d30bad58a0e756d055f8118d2c06d5843449a43": [
     "sccm\\compliance\\plan-design\\common-tasks-for-managing-compliance-on-devices-not-running-the-client.md"
   ],
+  "7a9ccbab5e3ac5b7e97533a03cfb3a7f71d6f41f": [
+    "sccm\\compliance\\plan-design\\common-tasks-for-managing-compliance-on-devices-with-the-client.md"
+  ],
   "9c64f27853ca81bef444ededdcd8d0fc259396a3": [
     "sccm\\compliance\\plan-design\\common-tasks-for-managing-compliance-on-devices-with-the-client.md"
+  ],
+  "68bf14a9477bd65af388cfd2ac621f259fb341cc": [
+    "sccm\\compliance\\plan-design\\plan-for-and-configure-compliance-settings.md"
   ],
   "7bc9fb68239aaec8c1baef35dbccc080cc86f31b": [
     "sccm\\compliance\\plan-design\\plan-for-and-configure-compliance-settings.md"
   ],
+  "a246e6542c47239f69abef8d7493cbd1dc7c9287": [
+    "sccm\\compliance\\plan-design\\security-and-privacy-for-compliance-settings.md"
+  ],
   "042c39646da4597f7436ab11f00343434127da99": [
     "sccm\\compliance\\plan-design\\security-and-privacy-for-compliance-settings.md"
+  ],
+  "4991bb3a8ec8ca7dbda6d6ab36c08e02007f6982": [
+    "sccm\\compliance\\TOC.md"
   ],
   "c562172c00a20ff0868ff5ae0a1f9f215378c830": [
     "sccm\\compliance\\TOC.md"
   ],
+  "a8c66751056bd6b0d6dac53c34d9c5b1a9d766a1": [
+    "sccm\\compliance\\understand\\ensure-device-compliance.md"
+  ],
   "1e8edcca2b9564cd5094dc15e91370f8dd360152": [
     "sccm\\compliance\\understand\\ensure-device-compliance.md"
+  ],
+  "50b3351fa3fdbd8dbbd2e4b8bc6d73418af5b557": [
+    "sccm\\core\\clients\\deploy\\about-client-installation-properties.md"
   ],
   "3d4367f756831a4712e8fa2c046a207bba112008": [
     "sccm\\core\\clients\\deploy\\about-client-installation-properties.md"
   ],
+  "cfcdebcc67851d03ba743fa3ffd8eedb4657b13e": [
+    "sccm\\core\\clients\\deploy\\about-client-installation-properties-published-to-active-directory-domain-services.md"
+  ],
   "373173f59632630bf65e12a5d43f18cb6a32d376": [
     "sccm\\core\\clients\\deploy\\about-client-installation-properties-published-to-active-directory-domain-services.md"
+  ],
+  "9383cf1aa27c848e37e4b1f37f2c40997221a430": [
+    "sccm\\core\\clients\\deploy\\about-client-settings.md"
   ],
   "f789840c438175719c05c3589197da552f187153": [
     "sccm\\core\\clients\\deploy\\about-client-settings.md"
   ],
+  "7ecaf036a08d6b55ebed0fdcf2fac0725ee14900": [
+    "sccm\\core\\clients\\deploy\\assign-clients-to-a-site.md"
+  ],
   "bcad9937b63ed60f360743fde5763cd41a216196": [
     "sccm\\core\\clients\\deploy\\assign-clients-to-a-site.md"
+  ],
+  "9960bc123b2b5824aba0d25db4f6b5398057d29d": [
+    "sccm\\core\\clients\\deploy\\client-deployment-tasks.md"
   ],
   "3d13296c511fbf7098f2c590942872cd6b1d7b71": [
     "sccm\\core\\clients\\deploy\\client-deployment-tasks.md"
   ],
+  "7d66a7d7ca145f50568a7066301578453bde1ce5": [
+    "sccm\\core\\clients\\deploy\\configure-client-communication-ports.md"
+  ],
   "50f89cead84724293babd91d03b6dedd9e54a6ce": [
     "sccm\\core\\clients\\deploy\\configure-client-communication-ports.md"
+  ],
+  "30d514e5d0914c11aed4ae19226e5512d76990ad": [
+    "sccm\\core\\clients\\deploy\\configure-client-computers-to-find-management-points-by-using-dns-publishing.md"
   ],
   "a6622ee98174af47cf23fc63cc688c8d025be4c6": [
     "sccm\\core\\clients\\deploy\\configure-client-computers-to-find-management-points-by-using-dns-publishing.md"
   ],
+  "7a5a7bd83559a4fb0c9ab6f89eddb2320a9524b6": [
+    "sccm\\core\\clients\\deploy\\configure-client-settings.md"
+  ],
   "5f85b8b8d90bd3cd18e9944f5569557cc7ad58aa": [
     "sccm\\core\\clients\\deploy\\configure-client-settings.md"
+  ],
+  "60c143439aca4c48424d2762ef820b511b177222": [
+    "sccm\\core\\clients\\deploy\\configure-client-status.md"
   ],
   "ba470ab29157db9ffa3bd8d5af2223ffa85fe79c": [
     "sccm\\core\\clients\\deploy\\configure-client-status.md"
   ],
+  "d656c7e43cd276fd17fa80ae343860a4a6ac7ce4": [
+    "sccm\\core\\clients\\deploy\\configure-wake-on-lan.md"
+  ],
   "590984b03247a9b270e191667cb68fdfc7a78868": [
     "sccm\\core\\clients\\deploy\\configure-wake-on-lan.md"
+  ],
+  "89a969b45e15c5634cba3aa441fc5e3591e839a1": [
+    "sccm\\core\\clients\\deploy\\deploy-clients-to-macs.md"
   ],
   "b8cd886cb167a8e45f934cb1a99c16951b23dead": [
     "sccm\\core\\clients\\deploy\\deploy-clients-to-macs.md"
   ],
+  "83f2175663453b877ff096f815cb5d4776254376": [
+    "sccm\\core\\clients\\deploy\\deploy-clients-to-unix-and-linux-servers.md"
+  ],
   "07056889bccc43460990bfc912b525e28fbdc701": [
     "sccm\\core\\clients\\deploy\\deploy-clients-to-unix-and-linux-servers.md"
+  ],
+  "f030ace676e734b32e0b2cce31a7c6b3ed6dfa9a": [
+    "sccm\\core\\clients\\deploy\\deploy-clients-to-windows-computers.md"
   ],
   "2a73a44ba6420e68a628289805c4b5a50bff895a": [
     "sccm\\core\\clients\\deploy\\deploy-clients-to-windows-computers.md"
   ],
+  "e86c060c953a2748edb72b6c95ba4a8dea0b5e3a": [
+    "sccm\\core\\clients\\deploy\\example-scenario-for-deploying-and-managing-clients-on-windows-embedded-devices.md"
+  ],
   "3f191f093d2d4f295b28ba030ea1566c861fc121": [
     "sccm\\core\\clients\\deploy\\example-scenario-for-deploying-and-managing-clients-on-windows-embedded-devices.md"
+  ],
+  "001c4d6ed92f4d45741e9c92e3dd65c189701d95": [
+    "sccm\\core\\clients\\deploy\\linux-and-unix-clients-technical-reference.md"
   ],
   "a10b2ca6f81a60ce480babc832f9158fc3c1aa28": [
     "sccm\\core\\clients\\deploy\\linux-and-unix-clients-technical-reference.md"
   ],
+  "91dd0cc9739642cf8340b525971c8fd5352d1e93": [
+    "sccm\\core\\clients\\deploy\\monitor-client-deployment-status.md"
+  ],
   "33b4aa4fd4dee3055116e2c68e707b2e4f784323": [
     "sccm\\core\\clients\\deploy\\monitor-client-deployment-status.md"
+  ],
+  "a042755a682bbfdae820450f4768d575045a3f0d": [
+    "sccm\\core\\clients\\deploy\\plan\\best-practices-for-client-deployment.md"
   ],
   "4f8e71520726ef9e9f4665bb207beaf8bc743143": [
     "sccm\\core\\clients\\deploy\\plan\\best-practices-for-client-deployment.md"
   ],
+  "932e00a2ffb52769593a361288c5ddd6e3c9bc61": [
+    "sccm\\core\\clients\\deploy\\plan\\client-installation-methods.md"
+  ],
   "f246156766ace6bb1150cacd6b38c9ff5bda641e": [
     "sccm\\core\\clients\\deploy\\plan\\client-installation-methods.md"
+  ],
+  "eb7af0fcbb9a5c2d789b5b99a3f0d57854681391": [
+    "sccm\\core\\clients\\deploy\\plan\\considerations-for-managing-clients-in-a-vdi.md"
   ],
   "c3346be0dc2721dd81cf6d35a275cd8e5642f010": [
     "sccm\\core\\clients\\deploy\\plan\\considerations-for-managing-clients-in-a-vdi.md"
   ],
+  "14ecfd052262edd537116198c1d46cf886d2c241": [
+    "sccm\\core\\clients\\deploy\\plan\\determine-the-site-system-roles-for-clients.md"
+  ],
   "0052b899a72be19435947f897b6d11b250249c2e": [
     "sccm\\core\\clients\\deploy\\plan\\determine-the-site-system-roles-for-clients.md"
+  ],
+  "f01843b18eaa9f1d8e88a6fea071089502185af3": [
+    "sccm\\core\\clients\\deploy\\plan\\determine-whether-to-block-clients.md"
   ],
   "efab4cc8156b255dd3d89f27a4cbdb0a4b45f1ae": [
     "sccm\\core\\clients\\deploy\\plan\\determine-whether-to-block-clients.md"
   ],
+  "97244ee6f393fab57c1996a8f61f9cfe7dc4220a": [
+    "sccm\\core\\clients\\deploy\\plan\\plan-for-managing-internet-based-clients.md"
+  ],
   "9e26c46ead88aa838f95b4b81164ae994b51eac4": [
     "sccm\\core\\clients\\deploy\\plan\\plan-for-managing-internet-based-clients.md"
+  ],
+  "c757f99eefbdfc90995d049b38ac6026deb3d6a1": [
+    "sccm\\core\\clients\\deploy\\plan\\planning-considerations-for-deploying-clients.md"
   ],
   "09e40f6c0c94d0e4619aa0379a28711a1e9406f7": [
     "sccm\\core\\clients\\deploy\\plan\\planning-considerations-for-deploying-clients.md"
   ],
+  "0aa1c49e03ffb0e701a75ce031233e5b55aa5d95": [
+    "sccm\\core\\clients\\deploy\\plan\\planning-for-client-deployment-to-linux-and-unix-computers.md"
+  ],
   "30802bc2a4800685d7c45ab471cfd5c6e9980108": [
     "sccm\\core\\clients\\deploy\\plan\\planning-for-client-deployment-to-linux-and-unix-computers.md"
+  ],
+  "4f15faec425b47eee56f1bd89e82b89c2d72f299": [
+    "sccm\\core\\clients\\deploy\\plan\\planning-for-client-deployment-to-mac-computers.md"
   ],
   "59d5745bdf6e75858250331215a58188f0421c6f": [
     "sccm\\core\\clients\\deploy\\plan\\planning-for-client-deployment-to-mac-computers.md"
   ],
+  "27c6185fe7e17a46fc016cfe508063af283ea1da": [
+    "sccm\\core\\clients\\deploy\\plan\\planning-for-client-deployment-to-windows-embedded-devices.md"
+  ],
   "97726560c7b45ab019d8707a34399496fe61f422": [
     "sccm\\core\\clients\\deploy\\plan\\planning-for-client-deployment-to-windows-embedded-devices.md"
+  ],
+  "f4139715fcf53c6670dc713808a1bdf282e05686": [
+    "sccm\\core\\clients\\deploy\\plan\\plan-wake-up-clients.md"
   ],
   "569990ec2964c3ccc296ddfea53ad063669fe615": [
     "sccm\\core\\clients\\deploy\\plan\\plan-wake-up-clients.md"
   ],
+  "f290c787bbf47e04902a6eca63c6c8f31904530b": [
+    "sccm\\core\\clients\\deploy\\plan\\security-and-privacy-for-clients.md"
+  ],
   "f81bb9840cdef2e9b7f4b4b84db2fa406f593844": [
     "sccm\\core\\clients\\deploy\\plan\\security-and-privacy-for-clients.md"
+  ],
+  "e70bc01720429923b80ab3db0b9206fdc9d77d4d": [
+    "sccm\\core\\clients\\deploy\\prerequisites-for-deploying-clients-to-windows-computers.md"
   ],
   "c526383477c81ce87a3751e57e79b55fdb27250e": [
     "sccm\\core\\clients\\deploy\\prerequisites-for-deploying-clients-to-windows-computers.md"
   ],
+  "74dd0ed0a7a208581c9ffd35f33931fcd4a56f34": [
+    "sccm\\core\\clients\\deploy\\windows-firewall-and-port-settings-for-clients.md"
+  ],
   "783e2efb55451fe7c47b033004875b63f3669788": [
     "sccm\\core\\clients\\deploy\\windows-firewall-and-port-settings-for-clients.md"
+  ],
+  "dd94da1274834fb7577ef3ec2075b75883d102ff": [
+    "sccm\\core\\clients\\manage\\asset-intelligence\\configuring-asset-intelligence.md"
   ],
   "4eeb756fd165b488a6f14b31bff3a6d530d579a6": [
     "sccm\\core\\clients\\manage\\asset-intelligence\\configuring-asset-intelligence.md"
   ],
+  "1f628cf2b4bda5eaef2c20454282acc1c65ae57b": [
+    "sccm\\core\\clients\\manage\\asset-intelligence\\example-asset-intelligence-general-license-import.md"
+  ],
   "7818896602e63eeec79d89ed02a67be7fd8cda1c": [
     "sccm\\core\\clients\\manage\\asset-intelligence\\example-asset-intelligence-general-license-import.md"
+  ],
+  "e60c74743a71c025ba5b69bac43c19aa4ed6d683": [
+    "sccm\\core\\clients\\manage\\asset-intelligence\\example-validation-state-transitions-for-asset-intelligence.md"
   ],
   "aed93773a0baeae5e691e858670a06623650c9e2": [
     "sccm\\core\\clients\\manage\\asset-intelligence\\example-validation-state-transitions-for-asset-intelligence.md"
   ],
+  "3ecf3e041c03cf8ee585ac23ffb1159eaaf403b9": [
+    "sccm\\core\\clients\\manage\\asset-intelligence\\introduction-to-asset-intelligence.md"
+  ],
   "057701b050068173b15526cb01ff21fb31864fa9": [
     "sccm\\core\\clients\\manage\\asset-intelligence\\introduction-to-asset-intelligence.md"
+  ],
+  "1f6475ec882361c3152fa18c172fc7bc9daac332": [
+    "sccm\\core\\clients\\manage\\asset-intelligence\\operations-for-asset-intelligence.md"
   ],
   "a9e3146baad57c71b2878f3508f706bc7229fe52": [
     "sccm\\core\\clients\\manage\\asset-intelligence\\operations-for-asset-intelligence.md"
   ],
+  "c59447c142d623ff17fded2a866142caa92c01bb": [
+    "sccm\\core\\clients\\manage\\asset-intelligence\\prerequisites-for-asset-intelligence.md"
+  ],
   "b802a5e0d25c8312ae1f1320c4fade28ac093233": [
     "sccm\\core\\clients\\manage\\asset-intelligence\\prerequisites-for-asset-intelligence.md"
+  ],
+  "4fdce95e4d57e1c587ac35e1654f1a48b7893acf": [
+    "sccm\\core\\clients\\manage\\asset-intelligence\\security-and-privacy-for-asset-intelligence.md"
   ],
   "096852a07d5e0f63aff1f2c42b7358eaf66b2ee1": [
     "sccm\\core\\clients\\manage\\asset-intelligence\\security-and-privacy-for-asset-intelligence.md"
   ],
+  "dbbe5f5271422083d190fd6167b82bee8b030dcf": [
+    "sccm\\core\\clients\\manage\\collections\\automatically-categorize-devices-into-collections.md"
+  ],
   "857cdc3f609faf518fe68262f4e21fe6701b0948": [
     "sccm\\core\\clients\\manage\\collections\\automatically-categorize-devices-into-collections.md"
+  ],
+  "445c4cd3013c08068a58b1457ecea2be49ddb29c": [
+    "sccm\\core\\clients\\manage\\collections\\best-practices-for-collections.md"
   ],
   "ac378949baabe1959221589c6d55d101de81f553": [
     "sccm\\core\\clients\\manage\\collections\\best-practices-for-collections.md"
   ],
+  "d3b6a2d2bcdc589b6ccb30202d5e3712cace3279": [
+    "sccm\\core\\clients\\manage\\collections\\collections-technical-reference.md"
+  ],
   "2b0b786c8c15e4d3e6a85875b884a352b5e35b5c": [
     "sccm\\core\\clients\\manage\\collections\\collections-technical-reference.md"
+  ],
+  "f2d7321892de50717549ad48a1a03a15d642faff": [
+    "sccm\\core\\clients\\manage\\collections\\create-collections.md"
   ],
   "780a22beaab0f5fc7bb75ac91e378d61b141e503": [
     "sccm\\core\\clients\\manage\\collections\\create-collections.md"
   ],
+  "5e8c546c2491ea652a31eb36b88b731243ceb702": [
+    "sccm\\core\\clients\\manage\\collections\\introduction-to-collections.md"
+  ],
   "5fe754a2e968965e25f6a1afa7eac0bc36ddd5b5": [
     "sccm\\core\\clients\\manage\\collections\\introduction-to-collections.md"
+  ],
+  "e0fe5fc998b503e8148003cdfe265e251b81793c": [
+    "sccm\\core\\clients\\manage\\collections\\manage-collections.md"
   ],
   "6b3e6a8a97996a245f073f2993acb93d3fcaa6a7": [
     "sccm\\core\\clients\\manage\\collections\\manage-collections.md"
   ],
+  "edfe2ddc337c06187f8d3823125a079b33e60679": [
+    "sccm\\core\\clients\\manage\\collections\\operations-and-maintenance-for-collections.md"
+  ],
   "26e80e8deffd3c1732f0e3cbd7780e49961a18f6": [
     "sccm\\core\\clients\\manage\\collections\\operations-and-maintenance-for-collections.md"
+  ],
+  "7b61c50c7bfa1bd56fe77dbe8133d8323f135f12": [
+    "sccm\\core\\clients\\manage\\collections\\planning-for-collections.md"
   ],
   "a0e753b82a4f534d5111cf8096a3e31edcef774d": [
     "sccm\\core\\clients\\manage\\collections\\planning-for-collections.md"
   ],
+  "741ac08c284d633de86e3e29720e2bcb9616f3e2": [
+    "sccm\\core\\clients\\manage\\collections\\prerequisites-for-collections.md"
+  ],
   "5c2b76eac070110a38e2b0a95cb99b05f4a3f3fb": [
     "sccm\\core\\clients\\manage\\collections\\prerequisites-for-collections.md"
+  ],
+  "c49e303a178a87fae7b7bd820bb35f8a5a44a451": [
+    "sccm\\core\\clients\\manage\\collections\\security-and-privacy-for-collections.md"
   ],
   "0f9156756f5b8e6cd99d95fd407fb4bbd6493a74": [
     "sccm\\core\\clients\\manage\\collections\\security-and-privacy-for-collections.md"
   ],
+  "44e805c4c51259a23997becb5b04c1f988d33b3d": [
+    "sccm\\core\\clients\\manage\\collections\\use-maintenance-windows.md"
+  ],
   "cc3ce55ae1355537830c86d8273cbebfc6d7c929": [
     "sccm\\core\\clients\\manage\\collections\\use-maintenance-windows.md"
+  ],
+  "7522894a1d5cab6700e788ffe710813e279353cd": [
+    "sccm\\core\\clients\\manage\\inventory\\configure-hardware-inventory.md"
   ],
   "398333f2dbf0a39daa354296c02b5adcbc1cd4f3": [
     "sccm\\core\\clients\\manage\\inventory\\configure-hardware-inventory.md"
   ],
+  "4452edbb85c2c4ee3ed503c307ea9ce1cab8f506": [
+    "sccm\\core\\clients\\manage\\inventory\\configure-software-inventory.md"
+  ],
   "f0281ceafed401e5f1f0400ee2bb4983889dd118": [
     "sccm\\core\\clients\\manage\\inventory\\configure-software-inventory.md"
+  ],
+  "9841be65e8adaeb9ba2b1c5700cefa051b72add4": [
+    "sccm\\core\\clients\\manage\\inventory\\exclude-folders-from-software-inventory.md"
   ],
   "9199e515d82b414437fc88711c51f413f8b5aefa": [
     "sccm\\core\\clients\\manage\\inventory\\exclude-folders-from-software-inventory.md"
   ],
+  "66dd09a84edfcf6faf499fd4115325cc7d8de13c": [
+    "sccm\\core\\clients\\manage\\inventory\\extend-hardware-inventory.md"
+  ],
   "273c90333fbfc9a948b848ea2ca5892ed2b47753": [
     "sccm\\core\\clients\\manage\\inventory\\extend-hardware-inventory.md"
+  ],
+  "4657077b4b934301f58c7d7953c3cdab06e80621": [
+    "sccm\\core\\clients\\manage\\inventory\\hardware-inventory.md"
   ],
   "b016353fca9d121fc8701334b80420dc606f0349": [
     "sccm\\core\\clients\\manage\\inventory\\hardware-inventory.md"
   ],
+  "b2c30d856d3df770fdbbe78e7e7e7eff6331c8e7": [
+    "sccm\\core\\clients\\manage\\inventory\\hardware-inventory-for-linux-and-unix.md"
+  ],
   "63d3b2353e3e0227c6ab681162b6b09898ea6e65": [
     "sccm\\core\\clients\\manage\\inventory\\hardware-inventory-for-linux-and-unix.md"
+  ],
+  "bf75db025f5a69e25c2718872ac3b63b6e33989f": [
+    "sccm\\core\\clients\\manage\\inventory\\introduction-to-hardware-inventory.md"
   ],
   "a1cb97b5d52775913af8ed279cd250e9754f82cb": [
     "sccm\\core\\clients\\manage\\inventory\\introduction-to-hardware-inventory.md"
   ],
+  "94d99c0257575925e03fe75a85230bf75929d7a6": [
+    "sccm\\core\\clients\\manage\\inventory\\introduction-to-software-inventory.md"
+  ],
   "0ba7f7d2b13d7ec373e1127077c8c8708ef7ebd6": [
     "sccm\\core\\clients\\manage\\inventory\\introduction-to-software-inventory.md"
+  ],
+  "d4e5e0afc90bd1d862cdd7f2b3218640b18f6a3d": [
+    "sccm\\core\\clients\\manage\\inventory\\mobile-device-hardware-inventory-hybrid.md"
   ],
   "218a758c399aed82068bd90c24057134ea0134bf": [
     "sccm\\core\\clients\\manage\\inventory\\mobile-device-hardware-inventory-hybrid.md"
   ],
+  "c2ac5998678d91937d49485dcc8f62f252b7298f": [
+    "sccm\\core\\clients\\manage\\inventory\\operations-and-maintenance-for-hardware-inventory.md"
+  ],
   "ea6ae468de7e1c69651aa8702f36d6fa913a3832": [
     "sccm\\core\\clients\\manage\\inventory\\operations-and-maintenance-for-hardware-inventory.md"
+  ],
+  "db872cb8c9ffbc9ed825168613636d78d7479828": [
+    "sccm\\core\\clients\\manage\\inventory\\security-and-privacy-for-hardware-inventory.md"
   ],
   "52023c59e6b2d1797521a2f6d0830b7c4c4812e5": [
     "sccm\\core\\clients\\manage\\inventory\\security-and-privacy-for-hardware-inventory.md"
   ],
+  "1532bf51d86a82d31c1ac42986d647b196c74164": [
+    "sccm\\core\\clients\\manage\\inventory\\security-and-privacy-for-software-inventory.md"
+  ],
   "fa848372b84b386148d4901aa6a73a0cfc27e671": [
     "sccm\\core\\clients\\manage\\inventory\\security-and-privacy-for-software-inventory.md"
+  ],
+  "4077be215fec37a527a5700a15831efc56a08eee": [
+    "sccm\\core\\clients\\manage\\inventory\\software-inventory.md"
   ],
   "df94db2e9e5ff4e4c4f5720f1ab9a7979f42b5d6": [
     "sccm\\core\\clients\\manage\\inventory\\software-inventory.md"
   ],
+  "72710984bb54c8af0ce5f624fb0b8b2687cf3f3a": [
+    "sccm\\core\\clients\\manage\\inventory\\use-resource-explorer-to-view-hardware-inventory.md"
+  ],
   "8eceeffdd7bc2ae7cb2da33d49870d2cc42545e6": [
     "sccm\\core\\clients\\manage\\inventory\\use-resource-explorer-to-view-hardware-inventory.md"
+  ],
+  "9bb415d00d016150976ad7654f4bae71d5ed18f4": [
+    "sccm\\core\\clients\\manage\\inventory\\use-resource-explorer-to-view-software-inventory.md"
   ],
   "c2d2864a0471682158a611b0f37a8f916a6789fc": [
     "sccm\\core\\clients\\manage\\inventory\\use-resource-explorer-to-view-software-inventory.md"
   ],
+  "28ad26107105e3b3b64f9d556445c308ce39e475": [
+    "sccm\\core\\clients\\manage\\manage-clients.md"
+  ],
   "0fc0d04b72e724f630006d2d8c796e6b1d713606": [
     "sccm\\core\\clients\\manage\\manage-clients.md"
+  ],
+  "cda93f3e0364c9982b1d50311eb8b5724b89d814": [
+    "sccm\\core\\clients\\manage\\manage-clients-for-linux-and-unix-servers.md"
   ],
   "482c59528430245675c40560eb16bbb0d1f65bbd": [
     "sccm\\core\\clients\\manage\\manage-clients-for-linux-and-unix-servers.md"
   ],
-  "3053f663ff7ace8db43e360cb5c58c7e32265ead": [
-    "sccm\\core\\clients\\manage\\media\\client-not-installed.png"
-  ],
-  "27a99000c543d01f58af5204e37b0e90351fff89": [
-    "sccm\\core\\clients\\manage\\media\\offline-status-icon.png",
-    "sccm\\core\\get-started\\media\\offline-status-icon.png"
-  ],
-  "b1d3d1089eb4fba29a4609f7a2c1c0977d2a2623": [
-    "sccm\\core\\clients\\manage\\media\\online-status-icon.png",
-    "sccm\\core\\get-started\\media\\online-status-icon.png"
-  ],
-  "31204ff97d4362cae1739cd56d96ec014cd2824c": [
-    "sccm\\core\\clients\\manage\\media\\unknown-status-icon.png",
-    "sccm\\core\\get-started\\media\\unknown-status-icon.png"
+  "e83b019588b86d1d01ddffa309e5a900c35aa995": [
+    "sccm\\core\\clients\\manage\\monitor-and-manage-clients.md"
   ],
   "015d895c06a6577ab7d00366b8d7a6b271c94117": [
     "sccm\\core\\clients\\manage\\monitor-and-manage-clients.md"
   ],
+  "ac0e9a6f0dadc0c92fbdbbc3593c625f7aec2932": [
+    "sccm\\core\\clients\\manage\\monitor-clients.md"
+  ],
   "a5ed18c056a518a440d6915ecd5b00741ef6384e": [
     "sccm\\core\\clients\\manage\\monitor-clients.md"
+  ],
+  "feb3dc6d47a60fd58b5e479a6286f1bb8f42599f": [
+    "sccm\\core\\clients\\manage\\monitor-clients-for-linux-and-unix-servers.md"
   ],
   "0d13226d51a7d0309a54199b314c20710d7fb7da": [
     "sccm\\core\\clients\\manage\\monitor-clients-for-linux-and-unix-servers.md"
   ],
+  "87546b42d47e0204e9d44dde5b89226160d0948b": [
+    "sccm\\core\\clients\\manage\\power\\administrator-checklist-for-power-management.md"
+  ],
   "ae3f5d537f4fe1f2bde003fc2255290e039625d5": [
     "sccm\\core\\clients\\manage\\power\\administrator-checklist-for-power-management.md"
+  ],
+  "2d86d50de18c40146997eaa9ef0957a2d5db88f4": [
+    "sccm\\core\\clients\\manage\\power\\best-practices-for-power-management.md"
   ],
   "7a9b2be61b410ce1b98980bc04775be2ee40b610": [
     "sccm\\core\\clients\\manage\\power\\best-practices-for-power-management.md"
   ],
+  "8177949e58b3697ff8c8ad0ece59d0359968e492": [
+    "sccm\\core\\clients\\manage\\power\\configuring-power-management.md"
+  ],
   "6e549ff96700757fbf6f15bc4fd2a0c58a82a8f4": [
     "sccm\\core\\clients\\manage\\power\\configuring-power-management.md"
+  ],
+  "bdf3d5b3c5e05315132251c97e5e0bcc8e7c0fb3": [
+    "sccm\\core\\clients\\manage\\power\\create-and-apply-power-plans.md"
   ],
   "1db0323d867c605494a38717a0e8cde7d2fbfb8e": [
     "sccm\\core\\clients\\manage\\power\\create-and-apply-power-plans.md"
   ],
+  "a1d85b4cd8eae885f6f1abc155aee5d72545ed44": [
+    "sccm\\core\\clients\\manage\\power\\introduction-to-power-management.md"
+  ],
   "d942cda5eb6c0b065e0a97376de38cf94b7460fb": [
     "sccm\\core\\clients\\manage\\power\\introduction-to-power-management.md"
+  ],
+  "b97ce9e659568602e0664309d30f12f09459514c": [
+    "sccm\\core\\clients\\manage\\power\\monitor-and-plan-for-power-management.md"
   ],
   "52d50b0dfb46cb5f5a5caa47a5065ef27e85d04e": [
     "sccm\\core\\clients\\manage\\power\\monitor-and-plan-for-power-management.md"
   ],
+  "4dfe27e4e72ec9c0c129e3b058533ee88c748210": [
+    "sccm\\core\\clients\\manage\\power\\operations-and-maintenance-for-power-management.md"
+  ],
   "4bbd2e36c4703df2f4a6531afb65641b0a0f05fe": [
     "sccm\\core\\clients\\manage\\power\\operations-and-maintenance-for-power-management.md"
+  ],
+  "5f63cf8ca059c2390a842379d2a0102d224027e3": [
+    "sccm\\core\\clients\\manage\\power\\planning-for-power-management.md"
   ],
   "91f8b5ada9fe42fe2e8f4013a86c35e02ec8818e": [
     "sccm\\core\\clients\\manage\\power\\planning-for-power-management.md"
   ],
+  "6fe30bc769f47205eef71ed538b4645e66af4177": [
+    "sccm\\core\\clients\\manage\\power\\prerequisites-for-power-management.md"
+  ],
   "93e7f52b5f5c97955f428e5b15f336d88bcc7397": [
     "sccm\\core\\clients\\manage\\power\\prerequisites-for-power-management.md"
+  ],
+  "76de7e6293fa84cae1231b81db1f7b67c781039b": [
+    "sccm\\core\\clients\\manage\\power\\security-and-privacy-for-power-management.md"
   ],
   "d548f58adeee298c8922e549f5a5853b1c40f51e": [
     "sccm\\core\\clients\\manage\\power\\security-and-privacy-for-power-management.md"
   ],
+  "c3e65ebdea8f685417085a892f1291a8b192b0f7": [
+    "sccm\\core\\clients\\manage\\remote-control\\audit-remote-control-usage.md"
+  ],
   "9f315f0e52b77a28e1772a025b4aa1c0dd8f994d": [
     "sccm\\core\\clients\\manage\\remote-control\\audit-remote-control-usage.md"
+  ],
+  "e82d802d289c3f6daf69c34826e4deb44b5d1e5a": [
+    "sccm\\core\\clients\\manage\\remote-control\\configuring-remote-control.md"
   ],
   "580d16b25cf365921117eef1bcd0de72e94ce81c": [
     "sccm\\core\\clients\\manage\\remote-control\\configuring-remote-control.md"
   ],
+  "010cabfccc78541bc6078aaf52636c9a6e78090d": [
+    "sccm\\core\\clients\\manage\\remote-control\\introduction-to-remote-control.md"
+  ],
   "e08d4675aae42cb33252b7a3c5cef3f009c9ac46": [
     "sccm\\core\\clients\\manage\\remote-control\\introduction-to-remote-control.md"
+  ],
+  "ed975fddce0949b2eae362a23a432a6ecbc15eaf": [
+    "sccm\\core\\clients\\manage\\remote-control\\keyboard-shortcuts-for-the-remote-control-viewer.md"
   ],
   "495aa812fabc80db72ea48458cdb23ae105e9949": [
     "sccm\\core\\clients\\manage\\remote-control\\keyboard-shortcuts-for-the-remote-control-viewer.md"
   ],
+  "0efbe8eafbd015a156fc6e9b38dc5da641ee1189": [
+    "sccm\\core\\clients\\manage\\remote-control\\operations-and-maintenance-for-remote-control.md"
+  ],
   "ed0fd952b81560854728c1fdf0cb9e37dfa9d2a4": [
     "sccm\\core\\clients\\manage\\remote-control\\operations-and-maintenance-for-remote-control.md"
+  ],
+  "6cea99d1f66336a58c4e85c8ec37c3c5f62ebbed": [
+    "sccm\\core\\clients\\manage\\remote-control\\planning-for-remote-control.md"
   ],
   "5f1b62e53caa5ce0cc795f5517e1339fe7f0b1c0": [
     "sccm\\core\\clients\\manage\\remote-control\\planning-for-remote-control.md"
   ],
+  "d7418a8a9f988e02814b0bb3e1fd0132ab01ea2c": [
+    "sccm\\core\\clients\\manage\\remote-control\\prerequisites-for-remote-control.md"
+  ],
   "7b39c910c0d273cfc739c9002b74695d76b67126": [
     "sccm\\core\\clients\\manage\\remote-control\\prerequisites-for-remote-control.md"
+  ],
+  "f143d3ed8a703baa141672ace1516e334708738d": [
+    "sccm\\core\\clients\\manage\\remote-control\\remote-control-technical-reference.md"
   ],
   "d442e97a72f68466c0f739417d85fcf5faa8abe4": [
     "sccm\\core\\clients\\manage\\remote-control\\remote-control-technical-reference.md"
   ],
+  "139f339a403efd524df18e33bc13853395c0a143": [
+    "sccm\\core\\clients\\manage\\remote-control\\remotely-administer-a-windows-client-computer.md"
+  ],
   "f3ebed053da011207e822b93ddbd0af7956c531c": [
     "sccm\\core\\clients\\manage\\remote-control\\remotely-administer-a-windows-client-computer.md"
+  ],
+  "4efdfbaf1a75baf860e7d883f37ae9ae6a404cf7": [
+    "sccm\\core\\clients\\manage\\remote-control\\security-and-privacy-for-remote-control.md"
   ],
   "c6714c7ce2f1329721dafd16ee2b5d0c5db7ebb9": [
     "sccm\\core\\clients\\manage\\remote-control\\security-and-privacy-for-remote-control.md"
   ],
+  "9b7a00b5b937270d5f9e5129adf3fe5c5c149c17": [
+    "sccm\\core\\clients\\manage\\remote-control\\technical-reference-for-remote-control.md"
+  ],
   "4a9fb582d7d109bbe5ea902796baed804de28e51": [
     "sccm\\core\\clients\\manage\\remote-control\\technical-reference-for-remote-control.md"
+  ],
+  "85d27d084eeb0816568fa8606b878528c75e5f24": [
+    "sccm\\core\\clients\\manage\\sync-data-microsoft-operations-management-suite.md"
   ],
   "266d461ff530498a6db78b0f90ab802f5c6a0d63": [
     "sccm\\core\\clients\\manage\\sync-data-microsoft-operations-management-suite.md"
   ],
+  "38d4ca3ce1f028e38e540e5515b3872d6890c274": [
+    "sccm\\core\\clients\\manage\\upgrade\\test-client-upgrades.md"
+  ],
   "7cf33e39b0ba57ebccbd4d988b380cfc4cf6ec0d": [
     "sccm\\core\\clients\\manage\\upgrade\\test-client-upgrades.md"
+  ],
+  "6e3140ca6ef171293db0712ebcfcff4c20f7af4d": [
+    "sccm\\core\\clients\\manage\\upgrade\\upgrade-clients.md"
   ],
   "520df85cfa192c12fb59b8d4053333fbaa7af0d6": [
     "sccm\\core\\clients\\manage\\upgrade\\upgrade-clients.md"
   ],
+  "35b7ff59f1d786d0605dc62edab46c0f59bfed76": [
+    "sccm\\core\\clients\\manage\\upgrade\\upgrade-clients-for-linux-and-unix-servers.md"
+  ],
   "da064d63f492bb054c44fcc8e436c7e8e70ffa28": [
     "sccm\\core\\clients\\manage\\upgrade\\upgrade-clients-for-linux-and-unix-servers.md"
+  ],
+  "f0476d1f4ff796f1e401073bb39649a1117ed777": [
+    "sccm\\core\\clients\\manage\\upgrade\\upgrade-clients-for-windows-computers.md"
   ],
   "4f270846358a24554c04e6c9a842ecd0182c2fc5": [
     "sccm\\core\\clients\\manage\\upgrade\\upgrade-clients-for-windows-computers.md"
   ],
+  "43ec3a9485b8fada1087efb8aaef1bc58c314716": [
+    "sccm\\core\\clients\\manage\\upgrade\\upgrade-clients-on-mac-computers.md"
+  ],
   "fc100138204c1d7707e3d57232001d5b75812854": [
     "sccm\\core\\clients\\manage\\upgrade\\upgrade-clients-on-mac-computers.md"
+  ],
+  "6dd650073795b5888655ce42d522322e74aeb6d8": [
+    "sccm\\core\\get-started\\capabilities-in-technical-preview-1511.md"
   ],
   "172fbcb84434d0b514f935eaf30ad225ba9ada9e": [
     "sccm\\core\\get-started\\capabilities-in-technical-preview-1511.md"
   ],
+  "83946dd211582a40b1eb7be58a5ad0bce505f0eb": [
+    "sccm\\core\\get-started\\capabilities-in-technical-preview-1512.md"
+  ],
   "6e927a7eba69927f25dc4fa8be1891a9b57cc2b2": [
     "sccm\\core\\get-started\\capabilities-in-technical-preview-1512.md"
+  ],
+  "378ec70d93ea543dbf4851b2bc389ce9a5bd4196": [
+    "sccm\\core\\get-started\\capabilities-in-technical-preview-1601.md"
   ],
   "145956579490d2f9d999a669e2d3bf7e55f06044": [
     "sccm\\core\\get-started\\capabilities-in-technical-preview-1601.md"
   ],
+  "fc157937c1e5d9beed2698d31b1f9ebb0904c199": [
+    "sccm\\core\\get-started\\capabilities-in-technical-preview-1602.md"
+  ],
   "e0980dd449cb6c8443d5c633a0ce734faf931fd7": [
     "sccm\\core\\get-started\\capabilities-in-technical-preview-1602.md"
+  ],
+  "c2a9b6ee74e376a85d5abdcfbd406171ddf63c8b": [
+    "sccm\\core\\get-started\\capabilities-in-technical-preview-1603.md"
   ],
   "ba6498d78ee8b03df2e05240622e01becd6b7689": [
     "sccm\\core\\get-started\\capabilities-in-technical-preview-1603.md"
   ],
+  "6e1102937aaf62f391ffcbde5ba8d72b02a8c17a": [
+    "sccm\\core\\get-started\\capabilities-in-technical-preview-1604.md"
+  ],
   "218125dc7021fd4ba60772614860153f8c2b207e": [
     "sccm\\core\\get-started\\capabilities-in-technical-preview-1604.md"
+  ],
+  "4c22ef9a56f928048238c3d665783163dac4a80a": [
+    "sccm\\core\\get-started\\capabilities-in-technical-preview-1605.md"
   ],
   "024f2c9d7413bfa78883b45e5ee823d62cd393ef": [
     "sccm\\core\\get-started\\capabilities-in-technical-preview-1605.md"
   ],
+  "dd33ae77be5df08aa575bf8c17f61c4c9c0309fe": [
+    "sccm\\core\\get-started\\capabilities-in-technical-preview-1606.md"
+  ],
   "2e54f9258ce057ef1864c03e0e45f25f67c21b72": [
     "sccm\\core\\get-started\\capabilities-in-technical-preview-1606.md"
+  ],
+  "95f444db4c90bbfc9711947ee54bf1d57410b535": [
+    "sccm\\core\\get-started\\capabilities-in-technical-preview-1607.md"
   ],
   "1fe2a79cff951834cc42ced529ba0f18c9d5ba12": [
     "sccm\\core\\get-started\\capabilities-in-technical-preview-1607.md"
   ],
+  "763d3e445225c60f21fe23fde356213763272a75": [
+    "sccm\\core\\get-started\\capabilities-in-technical-preview-1608.md"
+  ],
   "c92dd26521a414611b2e4ec07cf54b48bd9b5d6d": [
     "sccm\\core\\get-started\\capabilities-in-technical-preview-1608.md"
+  ],
+  "a813860215f79b80113ef1a76ffcb12ccfe4ab5a": [
+    "sccm\\core\\get-started\\capabilities-in-technical-preview-1609.md"
   ],
   "1c8e7662145b6a71cbbea204dbed5d003ecfc5d0": [
     "sccm\\core\\get-started\\capabilities-in-technical-preview-1609.md"
   ],
+  "3d265b1ab33a1ba490b0344ddd6662eaab842e70": [
+    "sccm\\core\\get-started\\evaluate-with-lab-environment.md"
+  ],
   "65ca62ab0ce18fa98e4747ec0ce9f361a4117414": [
     "sccm\\core\\get-started\\evaluate-with-lab-environment.md"
   ],
-  "0be6c72f8f47538348c36b8224db4d10fc8981a0": [
-    "sccm\\core\\get-started\\media\\BG_Fallback.png"
-  ],
-  "ae40752da569c2a19b8e95cd0cf77d02a1ff5aa0": [
-    "sccm\\core\\get-started\\media\\BIOS-to-UEFI-group.png"
-  ],
-  "54605791f0bd73a49f7b6970d3cb41ffb85e0c1c": [
-    "sccm\\core\\get-started\\media\\format-and-partition-disk.png"
-  ],
-  "d1bd8b0cd50e7ecc4784c516925e53c249a960cb": [
-    "sccm\\core\\get-started\\media\\New-Remote-Device-Actions.png"
-  ],
-  "02996321e385c4a37a660a2566c413fddd5b28d5": [
-    "sccm\\core\\get-started\\media\\partition-properties.png"
-  ],
-  "9a521526cfeb06cb0330a6b46039bfbe66732321": [
-    "sccm\\core\\get-started\\media\\Red_X.gif",
-    "sccm\\core\\servers\\deploy\\configure\\media\\Disc_delete_Icon.gif",
-    "sccm\\core\\servers\\manage\\media\\83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif"
-  ],
-  "76f1d75040e1be5d12f3591282c0e64f01c06054": [
-    "sccm\\core\\get-started\\media\\restart-in-windows-pe.png"
-  ],
-  "16218bc782a862e2d082bd4e34c640ca0c58bf95": [
-    "sccm\\core\\get-started\\media\\TechRef_WinDefender.png"
+  "2a28132bc415130656837d013d2fc3585b4886a0": [
+    "sccm\\core\\get-started\\set-up-your-lab.md"
   ],
   "25ee2f92231d4b177e2bdc099c37c263e468069f": [
     "sccm\\core\\get-started\\set-up-your-lab.md"
   ],
+  "d7d564fcb635c3240615847370f26c58e7cedc1a": [
+    "sccm\\core\\get-started\\technical-preview.md"
+  ],
   "07505208efb68e18cdd0de7f0de19471a732126f": [
     "sccm\\core\\get-started\\technical-preview.md"
+  ],
+  "df5167d156e62d19d49ae1160a4c3aa509888db6": [
+    "sccm\\core\\migration\\administrator-checklists-for-migration-planning.md"
   ],
   "91735f6cd3b3f6b253fcfb20cafba7341f36351f": [
     "sccm\\core\\migration\\administrator-checklists-for-migration-planning.md"
   ],
+  "e8569896808ffa2e0ea4b347624ceaf834460bad": [
+    "sccm\\core\\migration\\configuring-source-hierarchies-and-source-sites-for-migration.md"
+  ],
   "71131eca49809366dd7f9d5c024568c4e25caafa": [
     "sccm\\core\\migration\\configuring-source-hierarchies-and-source-sites-for-migration.md"
+  ],
+  "dcf3381781535e4be1e81110dd225dc83a6568a1": [
+    "sccm\\core\\migration\\determine-whether-to-migrate-data.md"
   ],
   "b2d03668791768bb2489bffd09cbd3468fe518d0": [
     "sccm\\core\\migration\\determine-whether-to-migrate-data.md"
   ],
+  "b5cf40c7a65cbc307a265f36c70a2e6521fb24af": [
+    "sccm\\core\\migration\\migrate-data-between-hierarchies.md"
+  ],
   "e7e6253442392d51fa4a0f9591f93261c5cfba8f": [
     "sccm\\core\\migration\\migrate-data-between-hierarchies.md"
+  ],
+  "2a5273a422b0d58eb154f350385dd9fb5ff48be4": [
+    "sccm\\core\\migration\\operations-for-migration.md"
   ],
   "ad645bc5a062d19c794997b2e032fa8e4eebc868": [
     "sccm\\core\\migration\\operations-for-migration.md"
   ],
+  "7f9cd263ce0ca14b9398bc5a6e7a432b8f7cc0bd": [
+    "sccm\\core\\migration\\planning-a-client-migration-strategy.md"
+  ],
   "d46d0c2e4c457e881103cb6a8f27c07f85803cc4": [
     "sccm\\core\\migration\\planning-a-client-migration-strategy.md"
+  ],
+  "e048165cbe89c2ed63eb421b92d42373d39fb38a": [
+    "sccm\\core\\migration\\planning-a-content-deployment-migration-strategy.md"
   ],
   "de3657f54ce0f03bcbdc79699975e5b08922f445": [
     "sccm\\core\\migration\\planning-a-content-deployment-migration-strategy.md"
   ],
+  "9ac92cc728fc53468fc8f16aaf5debd28b6eaec1": [
+    "sccm\\core\\migration\\planning-a-migration-job-strategy.md"
+  ],
   "fb45c539d08038e30a1df7258b8ffbac1f4c132d": [
     "sccm\\core\\migration\\planning-a-migration-job-strategy.md"
+  ],
+  "e88f9eab171393541a0cb918a700b59900519450": [
+    "sccm\\core\\migration\\planning-a-source-hierarchy-strategy.md"
   ],
   "5a2686dbdce031deaaf551944c563d40386c9176": [
     "sccm\\core\\migration\\planning-a-source-hierarchy-strategy.md"
   ],
+  "c763466971ff2803d2a54742bfd18569dce7618d": [
+    "sccm\\core\\migration\\planning-for-migration.md"
+  ],
   "5febdaddb46917c10848ae4db6d24bc98d01a07a": [
     "sccm\\core\\migration\\planning-for-migration.md"
+  ],
+  "dacf4f48aba075e99dea41a72d2a6f2cd8b60c09": [
+    "sccm\\core\\migration\\planning-for-the-migration-of-objects.md"
   ],
   "8082244f90deb225d2d9f6f0626f2f5fc0d2a761": [
     "sccm\\core\\migration\\planning-for-the-migration-of-objects.md"
   ],
+  "afb1d5510bcf0615f84927652f4db092165a960f": [
+    "sccm\\core\\migration\\planning-to-complete-migration.md"
+  ],
   "45bd583f68e8e8c965bbc2a6dfaca11ce9de981c": [
     "sccm\\core\\migration\\planning-to-complete-migration.md"
+  ],
+  "8f60b2cd3f1b9829b9b12a67fbbad9f78affa266": [
+    "sccm\\core\\migration\\planning-to-monitor-migration-activity.md"
   ],
   "c29dc558dc1c8c12c46edbb94097bc4535449102": [
     "sccm\\core\\migration\\planning-to-monitor-migration-activity.md"
   ],
+  "6b49b15401bf5f1cacfd8f60a0475a5714d12a24": [
+    "sccm\\core\\migration\\prerequisites-for-migration.md"
+  ],
   "b28f18063f88af4015afd84db8cecea5ad2865de": [
     "sccm\\core\\migration\\prerequisites-for-migration.md"
+  ],
+  "1852cc64bcd80a6ddf14140dce846fe9d11d5f24": [
+    "sccm\\core\\migration\\security-and-privacy-for-migration.md"
   ],
   "69910757815c7c3486b66bba19e7912fe08405ec": [
     "sccm\\core\\migration\\security-and-privacy-for-migration.md"
   ],
+  "9e6b5371b6ccc211e5c2b2ba9e4dfa8e52d5546f": [
+    "sccm\\core\\misc\\eula\\microsoft-sql-server-2012-native-client.md"
+  ],
   "86078390772ecbd3330763ab90bcea4584a37ffd": [
     "sccm\\core\\misc\\eula\\microsoft-sql-server-2012-native-client.md"
+  ],
+  "01601c225d9472f680785b04b50c26b4cc6231be": [
+    "sccm\\core\\misc\\eula\\microsoft-sql-server-2014-express.md"
   ],
   "5d30baa75c236217d09e38da842cf892f1bd6395": [
     "sccm\\core\\misc\\eula\\microsoft-sql-server-2014-express.md"
   ],
+  "f2e3b2a64af71fd898cffaab31506cf59ca2ecac": [
+    "sccm\\core\\misc\\eula\\microsoft-sql-server-2014-shared-management-objects.md"
+  ],
   "3c1062476fad2d98713826fc8e1b98465945aec9": [
     "sccm\\core\\misc\\eula\\microsoft-sql-server-2014-shared-management-objects.md"
+  ],
+  "5210a26a6b9584aadff174d16585f1b7ae6ba38b": [
+    "sccm\\core\\misc\\eula\\microsoft-sql-server-compact-4.0-service-pack-1-sp1.md"
   ],
   "5e3bfc5bd5cbeeae7bba3ed917fa12cd82aed70f": [
     "sccm\\core\\misc\\eula\\microsoft-sql-server-compact-4.0-service-pack-1-sp1.md"
   ],
+  "564db5f643dfd612ea00d917e5fad7a688b448b5": [
+    "sccm\\core\\misc\\eula\\microsoft-system-center-configuration-manager.md"
+  ],
   "859dbc9e4ac85af64dbdf206eb511ae0905a7758": [
     "sccm\\core\\misc\\eula\\microsoft-system-center-configuration-manager.md"
+  ],
+  "5634a01cc719e4af7320c4525662333783923041": [
+    "sccm\\core\\misc\\eula\\microsoft-system-center-configuration-manager-evaluation.md"
   ],
   "42e70335f293decf3a96dd7c5b02c1e9976cd1b6": [
     "sccm\\core\\misc\\eula\\microsoft-system-center-configuration-manager-evaluation.md"
   ],
+  "ac6eb885d7afb69ae4b1c35dc33a98935ace7fc0": [
+    "sccm\\core\\misc\\eula\\microsoft-system-center-configuration-manager-supplemental-placeholder-eula.md"
+  ],
   "270c628aa8c2f65d3b0332dc1c526ef97863dacd": [
     "sccm\\core\\misc\\eula\\microsoft-system-center-configuration-manager-supplemental-placeholder-eula.md"
+  ],
+  "83a719253640a43b7166d989b895f292d1b45d5c": [
+    "sccm\\core\\misc\\eula\\microsoft-system-center-endpoint-protection-evaluation.md"
   ],
   "ef1b8e1f7fa912a9181a2da93a4ba0da8c344734": [
     "sccm\\core\\misc\\eula\\microsoft-system-center-endpoint-protection-evaluation.md"
   ],
+  "3c5801e377b7c90622cd2549941da116b751ba66": [
+    "sccm\\core\\misc\\eula\\microsoft-system-center-endpoint-protection-supplemental-placeholder-eula.md"
+  ],
   "9fd7822c7004e6ec6d9179320f501da226e1e99c": [
     "sccm\\core\\misc\\eula\\microsoft-system-center-endpoint-protection-supplemental-placeholder-eula.md"
+  ],
+  "91020bf55d2b4b9aaa3760bd3a5962320dc4cfeb": [
+    "sccm\\core\\misc\\eula\\microsoft-system-clr-types-for-microsoft-sql-server-2014.md"
   ],
   "57064b73174256221c88b90b8631cdd111427c67": [
     "sccm\\core\\misc\\eula\\microsoft-system-clr-types-for-microsoft-sql-server-2014.md"
   ],
+  "eec4cf18e85b4be8d7ab423fe4ae086914b184da": [
+    "sccm\\core\\misc\\eula\\sql-server-branded-components-included.md"
+  ],
   "f8de4edb339e071afca8562e74073f02252370e9": [
     "sccm\\core\\misc\\eula\\sql-server-branded-components-included.md"
+  ],
+  "44fd3cefb6ffb50f36653f32093ae763e923fa79": [
+    "sccm\\core\\misc\\eula\\third-party-notices.md"
   ],
   "e80688af8a5a5238d10335d35369d936569f9ac8": [
     "sccm\\core\\misc\\eula\\third-party-notices.md"
   ],
+  "00e7b4814f46d67d79e28701e694a429690e4fad": [
+    "sccm\\core\\misc\\learn-more-about-available-updates.md"
+  ],
   "d34af7d08c1792de33519ac86f5105d9a5951b82": [
     "sccm\\core\\misc\\learn-more-about-available-updates.md"
+  ],
+  "20c53fe8dd66ab00db46088a040666fe09a9ebf3": [
+    "sccm\\core\\misc\\online-documentation.md"
   ],
   "18a10fd816703facb5e30c1aa39340f06b23e847": [
     "sccm\\core\\misc\\online-documentation.md"
   ],
+  "a68d71169bf4fcfa305c1cbfe48498191e4d8677": [
+    "sccm\\core\\misc\\privacy\\privacy-statement.md"
+  ],
   "2d60022786575adfbbbe69f2c6ff828951db6d48": [
     "sccm\\core\\misc\\privacy\\privacy-statement.md"
+  ],
+  "e4105ac424acdea47ed0d0ce799eafc691557595": [
+    "sccm\\core\\misc\\privacy\\privacy-statement-microsoft-operations-management-suite-addendum.md"
   ],
   "20f89e088820dd21822ee696240deb0efbcec64a": [
     "sccm\\core\\misc\\privacy\\privacy-statement-microsoft-operations-management-suite-addendum.md"
   ],
+  "b5340ed53845a78626c6dd9a462668fdf3d405cf": [
+    "sccm\\core\\misc\\privacy\\privacy-statement-mobile-device-addendum.md"
+  ],
   "adfa0bd7f2e4dc9b21a5be60e4cde6db0e206e43": [
     "sccm\\core\\misc\\privacy\\privacy-statement-mobile-device-addendum.md"
+  ],
+  "41e33142462780c0dc94e669ab439d3eb7d7e670": [
+    "sccm\\core\\misc\\system-center-configuration-manager.md"
   ],
   "bcc184ce0d2cdb96b70af8587f43912c40c3dc55": [
     "sccm\\core\\misc\\system-center-configuration-manager.md"
   ],
+  "4cb4b977647676ad31df3d3fd8b641016b262421": [
+    "sccm\\core\\Not-in-TOC.md"
+  ],
   "5a0e86c3a8318eb08ab6e89cfae429dc309e8979": [
     "sccm\\core\\Not-in-TOC.md"
+  ],
+  "0f0a9aecd203596aadf81e645912fa16774f6e8a": [
+    "sccm\\core\\plan-design\\changes\\features-and-capabilities.md"
   ],
   "2068a75b43e98035c6d626a9d681b699ce058d2e": [
     "sccm\\core\\plan-design\\changes\\features-and-capabilities.md"
   ],
+  "700736b3a6daa58dfb7e3e61a9f2918c57f20680": [
+    "sccm\\core\\plan-design\\changes\\removed-and-deprecated-features.md"
+  ],
   "76e09bdb5ff37273749dfa96e4785657b769c982": [
     "sccm\\core\\plan-design\\changes\\removed-and-deprecated-features.md"
+  ],
+  "6ba6e279fb18e832dd0f79d708b20c435d99490b": [
+    "sccm\\core\\plan-design\\changes\\what-has-changed-from-configuration-manager-2012.md"
   ],
   "985b6e8d47d606a1d5dcfc7dc33e69eb4e3a2af5": [
     "sccm\\core\\plan-design\\changes\\what-has-changed-from-configuration-manager-2012.md"
   ],
+  "65f0d1af2809e3198d9a55d0e0332ea601e3aff3": [
+    "sccm\\core\\plan-design\\changes\\whats-new-incremental-versions.md"
+  ],
   "9e1744df8ea8e7391b326f18e87e8058cb202d52": [
     "sccm\\core\\plan-design\\changes\\whats-new-incremental-versions.md"
+  ],
+  "db4460941c5be616d8a0b7c76cb5aafd8a59bab6": [
+    "sccm\\core\\plan-design\\changes\\whats-new-in-version-1602.md"
   ],
   "93d6987e269f1dfc06b40782d64da23a01589cbd": [
     "sccm\\core\\plan-design\\changes\\whats-new-in-version-1602.md"
   ],
+  "628360044701c1722ca370a84a5b407c99792464": [
+    "sccm\\core\\plan-design\\changes\\whats-new-in-version-1606.md"
+  ],
   "4ee53040db8b23690f53cda6efdf6ca1651ec300": [
     "sccm\\core\\plan-design\\changes\\whats-new-in-version-1606.md"
+  ],
+  "d6990ce5c10cc8588f1a36e539271e6f899c88d5": [
+    "sccm\\core\\plan-design\\changes\\whats-new-in-version-1610.md"
   ],
   "9c3451641041f8b4ce0cc4a7a79a577b344a98a2": [
     "sccm\\core\\plan-design\\changes\\whats-new-in-version-1610.md"
   ],
+  "97c0303488725a763e39b0bc9c5dc478bffbd74a": [
+    "sccm\\core\\plan-design\\choose-a-device-management-solution.md"
+  ],
   "27a4e63779b1cec79fd8aed0b8ae090e3c5553e3": [
     "sccm\\core\\plan-design\\choose-a-device-management-solution.md"
+  ],
+  "c7952089546d30abf4bab275302be95c2abbf4ff": [
+    "sccm\\core\\plan-design\\configs\\recommended-hardware.md"
   ],
   "1c2a9d58d8c6cade9fd87a493bfc8c151dd6411b": [
     "sccm\\core\\plan-design\\configs\\recommended-hardware.md"
   ],
+  "e8ec5c1d4bc190b77e9b6ea30bf8d2860b61af35": [
+    "sccm\\core\\plan-design\\configs\\site-and-site-system-prerequisites.md"
+  ],
   "faf39064f310c70104567f81a1a9523c19c64870": [
     "sccm\\core\\plan-design\\configs\\site-and-site-system-prerequisites.md"
+  ],
+  "9a1b1e5e9e7d401e3c14a8603faeaa25a9cfecb6": [
+    "sccm\\core\\plan-design\\configs\\size-and-scale-numbers.md"
   ],
   "9dfdc132c448adec3e08c87c484cd1884d3baf09": [
     "sccm\\core\\plan-design\\configs\\size-and-scale-numbers.md"
   ],
+  "87dc1657343aa790c24edcd034b195e1d04e1011": [
+    "sccm\\core\\plan-design\\configs\\supported-configurations.md"
+  ],
   "98124163765580cd032196eb7719062c34a3b1e6": [
     "sccm\\core\\plan-design\\configs\\supported-configurations.md"
+  ],
+  "d09a4bb7810ea1e03565cfde21e9799ae62d4c1a": [
+    "sccm\\core\\plan-design\\configs\\supported-operating-systems-consoles.md"
   ],
   "3a001301c37ad70708903547971c4b2d32938b2b": [
     "sccm\\core\\plan-design\\configs\\supported-operating-systems-consoles.md"
   ],
+  "a47725202cfcaa3597135d099e7fe35a1f40e7d2": [
+    "sccm\\core\\plan-design\\configs\\supported-operating-systems-for-clients-and-devices.md"
+  ],
   "b99b8a66d1e4c0a13fbc4ff7ad1769ab4e455002": [
     "sccm\\core\\plan-design\\configs\\supported-operating-systems-for-clients-and-devices.md"
+  ],
+  "ec1d634c04c0f349ac4238a6b7205c564976e99e": [
+    "sccm\\core\\plan-design\\configs\\supported-operating-systems-for-site-system-servers.md"
   ],
   "db75e78c0cc34d0751ce5d72252c201d3976d57f": [
     "sccm\\core\\plan-design\\configs\\supported-operating-systems-for-site-system-servers.md"
   ],
+  "ee9e01c0818a4d10c9041a8525e67a162a660e26": [
+    "sccm\\core\\plan-design\\configs\\support-for-active-directory-domains.md"
+  ],
   "19eee280b367b8748d2b8f475faf57a4c9fce726": [
     "sccm\\core\\plan-design\\configs\\support-for-active-directory-domains.md"
+  ],
+  "0f8cb9949ddf7f01af1cbdc47839fac28413dfd9": [
+    "sccm\\core\\plan-design\\configs\\support-for-sql-server-versions.md"
   ],
   "b58f190558c9fae0e4c27e4dbe0bbd7ba28f56f5": [
     "sccm\\core\\plan-design\\configs\\support-for-sql-server-versions.md"
   ],
+  "327e82372ac966f4a74b973688eb7e7e73bcdbc9": [
+    "sccm\\core\\plan-design\\configs\\support-for-virtualization-environments.md"
+  ],
   "8954a7fcb93470bfa50c459eb6f6022c15bceaca": [
     "sccm\\core\\plan-design\\configs\\support-for-virtualization-environments.md"
+  ],
+  "f3c633f74c300b8d85164370535038dcaafc38fe": [
+    "sccm\\core\\plan-design\\configs\\support-for-windows-features-and-networks.md"
   ],
   "09126272c9ba6638127af646ff8bbd9e049d5aad": [
     "sccm\\core\\plan-design\\configs\\support-for-windows-features-and-networks.md"
   ],
+  "887d80ae2ae727b02b955def95ac1b16322fdd47": [
+    "sccm\\core\\plan-design\\diagnostics\\customer-experience-improvement-program-ceip.md"
+  ],
   "55a9e1d4c88109ab194116c6b50f601170ed5d0b": [
     "sccm\\core\\plan-design\\diagnostics\\customer-experience-improvement-program-ceip.md"
+  ],
+  "62274f2a4cd34931851f4cad48f79b96a71d4c4d": [
+    "sccm\\core\\plan-design\\diagnostics\\diagnostics-and-usage-data.md"
   ],
   "b4c1394439347b4cab6740526ff223a0425592bb": [
     "sccm\\core\\plan-design\\diagnostics\\diagnostics-and-usage-data.md"
   ],
+  "6fe5cc80346dd174eef48c4a1ba27d3708513f3d": [
+    "sccm\\core\\plan-design\\diagnostics\\how-diagnostics-and-usage-data-is-collected.md"
+  ],
   "c769b9683cb439a41c6c3dfd953af4be4ddd8e26": [
     "sccm\\core\\plan-design\\diagnostics\\how-diagnostics-and-usage-data-is-collected.md"
+  ],
+  "b7ef3ff305978c757fcbff7e658517bed894d2c2": [
+    "sccm\\core\\plan-design\\diagnostics\\how-diagnostics-and-usage-data-is-used.md"
   ],
   "f721ddd604f5829210ea8d253650e42accd298cc": [
     "sccm\\core\\plan-design\\diagnostics\\how-diagnostics-and-usage-data-is-used.md"
   ],
+  "fea095ac2b4ace289d8670860f715621a85c2ab4": [
+    "sccm\\core\\plan-design\\diagnostics\\levels-of-diagnostic-usage-data-collection-1511.md"
+  ],
   "2066e0c6a182508cf1c360cf0123886c86f4f471": [
     "sccm\\core\\plan-design\\diagnostics\\levels-of-diagnostic-usage-data-collection-1511.md"
+  ],
+  "01e7f4d1d795ecc06dc2cd89adc959bd9c86ed16": [
+    "sccm\\core\\plan-design\\diagnostics\\levels-of-diagnostic-usage-data-collection-1602.md"
   ],
   "b0ad360d5262385ad786b13b652300d84978b66d": [
     "sccm\\core\\plan-design\\diagnostics\\levels-of-diagnostic-usage-data-collection-1602.md"
   ],
+  "e2f61a1dab31090f0d18665ad707005171eb50b4": [
+    "sccm\\core\\plan-design\\diagnostics\\levels-of-diagnostic-usage-data-collection-1606.md"
+  ],
   "5fe3f860542a7bfd6f412374f86b9ddd10cf8aab": [
     "sccm\\core\\plan-design\\diagnostics\\levels-of-diagnostic-usage-data-collection-1606.md"
+  ],
+  "85e14c374b93438eab4c5faa643a176cafde99ea": [
+    "sccm\\core\\plan-design\\diagnostics\\view-diagnostics-and-usage-data.md"
   ],
   "80b1486f35176e96868fb52a567f9837fb51b4e4": [
     "sccm\\core\\plan-design\\diagnostics\\view-diagnostics-and-usage-data.md"
   ],
+  "1a0709506dd2f939a0df48f312e9cac581498aa0": [
+    "sccm\\core\\plan-design\\get-ready.md"
+  ],
   "94d7a953e52c7ba1e5d54ffa4123e0a6cdee96e0": [
     "sccm\\core\\plan-design\\get-ready.md"
+  ],
+  "2bdd1bda5ca33ee81009a885703fac4b592020b1": [
+    "sccm\\core\\plan-design\\hierarchy\\accounts.md"
   ],
   "90562e183fcc7226a9067425c13437610efca640": [
     "sccm\\core\\plan-design\\hierarchy\\accounts.md"
   ],
+  "bfb8f1e62fdfb8ed9b51844e10e60721f5965b1c": [
+    "sccm\\core\\plan-design\\hierarchy\\communications-between-endpoints.md"
+  ],
   "8a79b4eed5efd09a687335bd2208137eb17ebdd3": [
     "sccm\\core\\plan-design\\hierarchy\\communications-between-endpoints.md"
+  ],
+  "1b35d52f301136ffcd4c3d623e8e417a033cbae2": [
+    "sccm\\core\\plan-design\\hierarchy\\content-source-location-scenarios.md"
   ],
   "69f6a30f137c61b10de71ff95e4277ec1d500a01": [
     "sccm\\core\\plan-design\\hierarchy\\content-source-location-scenarios.md"
   ],
+  "04003c34e62d569e3b7b732e8edbe1271782b64b": [
+    "sccm\\core\\plan-design\\hierarchy\\design-a-hierarchy-of-sites.md"
+  ],
   "e8d81c3798caba03a7f2f98c7f696e7d03a06671": [
     "sccm\\core\\plan-design\\hierarchy\\design-a-hierarchy-of-sites.md"
+  ],
+  "07315ce1b90d17cf82dd03b28bc86a6a748747d9": [
+    "sccm\\core\\plan-design\\hierarchy\\fundamental-concepts-for-content-management.md"
   ],
   "52a11013a7e9bbce80ef1f1d5d58ca5b5aef5e5d": [
     "sccm\\core\\plan-design\\hierarchy\\fundamental-concepts-for-content-management.md"
   ],
+  "08f07a5b0b8b07afd00854e2dd60ed93987f0b12": [
+    "sccm\\core\\plan-design\\hierarchy\\international-support.md"
+  ],
   "c3112baa19c777f04a8ac0ba87d9453ca55d9e61": [
     "sccm\\core\\plan-design\\hierarchy\\international-support.md"
+  ],
+  "d5ddba3dbb6233d8036c1473129f4a926d14c200": [
+    "sccm\\core\\plan-design\\hierarchy\\interoperability-between-different-versions.md"
   ],
   "b37e56e01f04942a12057127698bdfe429e30b28": [
     "sccm\\core\\plan-design\\hierarchy\\interoperability-between-different-versions.md"
   ],
+  "1c6d81d6b9b18b14bdab3b9533bfdaa253c6f69d": [
+    "sccm\\core\\plan-design\\hierarchy\\log-files.md"
+  ],
   "121b46c99617df7c47f69f61cfad2bcca9c23999": [
     "sccm\\core\\plan-design\\hierarchy\\log-files.md"
+  ],
+  "b87a8e41779c7e03bf77fc531edc3277aaa8cb12": [
+    "sccm\\core\\plan-design\\hierarchy\\manage-accounts-to-access-content.md"
   ],
   "4c66d4b7cdaa2a81d11ca88768b1ea6d334517a9": [
     "sccm\\core\\plan-design\\hierarchy\\manage-accounts-to-access-content.md"
@@ -760,464 +1436,842 @@
   "311db4f93b63871607ea722949be18a8cc306626": [
     "sccm\\core\\plan-design\\hierarchy\\manage-network-bandwidth.md"
   ],
+  "5d259f31d84d95ca06829a30cc87e0733c9e886a": [
+    "sccm\\core\\plan-design\\hierarchy\\package-transfer-manager.md"
+  ],
   "695efaa5e552c5a5d8799baf820361b8cb6080df": [
     "sccm\\core\\plan-design\\hierarchy\\package-transfer-manager.md"
+  ],
+  "47c744fb2840bd1ca3b7ed471a0a70f0d7293ce4": [
+    "sccm\\core\\plan-design\\hierarchy\\plan-for-site-system-servers-and-site-system-roles.md"
   ],
   "397a6c6fa37b15881cd7740215a6f2e459d7b99b": [
     "sccm\\core\\plan-design\\hierarchy\\plan-for-site-system-servers-and-site-system-roles.md"
   ],
+  "941f0254f32938f71a01ea25f12e7f68f3973ba5": [
+    "sccm\\core\\plan-design\\hierarchy\\plan-for-the-site-database.md"
+  ],
   "4076b195baaf344b46c9596e80b1845af23bf1a3": [
     "sccm\\core\\plan-design\\hierarchy\\plan-for-the-site-database.md"
+  ],
+  "f516c8bb9502d302930647ab645bd707804c1536": [
+    "sccm\\core\\plan-design\\hierarchy\\plan-for-the-sms-provider.md"
   ],
   "e560633fb22c4e70430588aaff304969fefd016b": [
     "sccm\\core\\plan-design\\hierarchy\\plan-for-the-sms-provider.md"
   ],
+  "2ed2f9e55d0a4f42c66f736470a4b5c818564c16": [
+    "sccm\\core\\plan-design\\hierarchy\\ports.md"
+  ],
   "caa34db22c491d90db94edd81ea9c988143e9605": [
     "sccm\\core\\plan-design\\hierarchy\\ports.md"
+  ],
+  "6e41e12c0f6f1670aec6e3ff10a4ca8ce4a2de4d": [
+    "sccm\\core\\plan-design\\hierarchy\\security-and-privacy-for-content-management.md"
   ],
   "796376b593e2a5ea379b5ed584be36c6b230ae63": [
     "sccm\\core\\plan-design\\hierarchy\\security-and-privacy-for-content-management.md"
   ],
+  "b308c69d4e71f70ceceb7bb7f571ff38c2178505": [
+    "sccm\\core\\plan-design\\hierarchy\\security-and-privacy-for-site-administration.md"
+  ],
   "14399b916b07ed92ce05af684447f301d75952f6": [
     "sccm\\core\\plan-design\\hierarchy\\security-and-privacy-for-site-administration.md"
+  ],
+  "d019fb5553c605696595e8dc3f668ca37e0380f6": [
+    "sccm\\core\\plan-design\\hierarchy\\the-content-library.md"
   ],
   "cc01fae5e5e66240c13ebe3fa2b3e9b440f3419d": [
     "sccm\\core\\plan-design\\hierarchy\\the-content-library.md"
   ],
+  "9abce010976e9af57865a4e064bc48de719d4de9": [
+    "sccm\\core\\plan-design\\hierarchy\\understand-how-clients-find-site-resources-and-services.md"
+  ],
   "782920dc2a9814781a2365d243a43e3b38aadd92": [
     "sccm\\core\\plan-design\\hierarchy\\understand-how-clients-find-site-resources-and-services.md"
+  ],
+  "96b40831c8c4f199da42f53cb40f4f89712c8d9a": [
+    "sccm\\core\\plan-design\\hierarchy\\unicode-and-ascii-support.md"
   ],
   "980322aafbbcd50075cdcbb57791cc8ba72ef845": [
     "sccm\\core\\plan-design\\hierarchy\\unicode-and-ascii-support.md"
   ],
+  "58af8f0df90048518fc3ba96fb1b5914badf2dd8": [
+    "sccm\\core\\plan-design\\hierarchy\\use-a-cloud-based-distribution-point.md"
+  ],
   "6fc4a56d98ce897fc6b963529bdad348c8d5b0a1": [
     "sccm\\core\\plan-design\\hierarchy\\use-a-cloud-based-distribution-point.md"
+  ],
+  "3829bcd5b714f9984927efd66f44c96a82863aa8": [
+    "sccm\\core\\plan-design\\hierarchy\\use-a-pull-distribution-point.md"
   ],
   "000c4fe1959d471d33c48ed3711c6ed593e707b4": [
     "sccm\\core\\plan-design\\hierarchy\\use-a-pull-distribution-point.md"
   ],
+  "b421d88668376073da73f6f8bd8cc42cc49026e2": [
+    "sccm\\core\\plan-design\\network\\configure-firewalls-ports-domains.md"
+  ],
   "75e6886bc705e39cce55733474335189864f9e52": [
     "sccm\\core\\plan-design\\network\\configure-firewalls-ports-domains.md"
+  ],
+  "a3b8b5422b2874fe328d49380514611b50b61ff4": [
+    "sccm\\core\\plan-design\\network\\example-deployment-of-pki-certificates.md"
   ],
   "32eeba3f5fd29c0f64b9a092ee53a0810e10f07e": [
     "sccm\\core\\plan-design\\network\\example-deployment-of-pki-certificates.md"
   ],
+  "93102c0a0d60bb207b89da01e68cd411c1297409": [
+    "sccm\\core\\plan-design\\network\\extend-the-active-directory-schema.md"
+  ],
   "17c6d7b4f3c55ed70f87a8b8cf375f6dc4c21e87": [
     "sccm\\core\\plan-design\\network\\extend-the-active-directory-schema.md"
+  ],
+  "166b5ef85936eab296a820ba196c712992de3253": [
+    "sccm\\core\\plan-design\\network\\pki-certificate-requirements.md"
   ],
   "885e0a286e94a25332b688d70de64e2ee747f877": [
     "sccm\\core\\plan-design\\network\\pki-certificate-requirements.md"
   ],
+  "2f458d446b063f7bbce216d62754899e5893a78b": [
+    "sccm\\core\\plan-design\\network\\prepare-windows-servers.md"
+  ],
   "abba883dd915214dd98a781ddf3d73eaf20cc05c": [
     "sccm\\core\\plan-design\\network\\prepare-windows-servers.md"
+  ],
+  "4cfe34c556e17a37bf6a4b45e0ac69bad95ab7db": [
+    "sccm\\core\\plan-design\\network\\proxy-server-support.md"
   ],
   "3a9215186cfe805134b5e19acfa81c757b5e8b8a": [
     "sccm\\core\\plan-design\\network\\proxy-server-support.md"
   ],
+  "1abf598138297576f5d15decdbf173d238939ddc": [
+    "sccm\\core\\plan-design\\network\\schema-extensions.md"
+  ],
   "7a7578512d6c8964e0d3dcc17546aa43470c474d": [
     "sccm\\core\\plan-design\\network\\schema-extensions.md"
+  ],
+  "c9929ad8adf0f8bcc10b560e501e7aed2ca68160": [
+    "sccm\\core\\plan-design\\network\\websites-for-site-system-servers.md"
   ],
   "4e3878ffa32bd5da1c733b4ff6b58d92dc845637": [
     "sccm\\core\\plan-design\\network\\websites-for-site-system-servers.md"
   ],
+  "be02c2f92367718ce612f753873c7fb07c1334ae": [
+    "sccm\\core\\plan-design\\security\\additional-privacy.md"
+  ],
   "bff733aa3fb33539d57987e230f3b4b5a09515e1": [
     "sccm\\core\\plan-design\\security\\additional-privacy.md"
+  ],
+  "3787b1b98405fd79106a5f8b868c11b55c3474c7": [
+    "sccm\\core\\plan-design\\security\\configure-security.md"
   ],
   "dc48b8582785ffd2a2b3f3c775798d88e320cd9a": [
     "sccm\\core\\plan-design\\security\\configure-security.md"
   ],
+  "c65e73cd1cf9536df8e333a78ba6a00804484d9c": [
+    "sccm\\core\\plan-design\\security\\plan-for-security.md"
+  ],
   "36450435fb3b46ef7858e56a49437481794940f3": [
     "sccm\\core\\plan-design\\security\\plan-for-security.md"
+  ],
+  "07be38e235e9868ab39dcc3a2a94d952a4e2711c": [
+    "sccm\\core\\plan-design\\security\\privacy-statement-cmdlet-library.md"
   ],
   "c89a21ed1b2d4da519677b5d2e5c85671f17bb47": [
     "sccm\\core\\plan-design\\security\\privacy-statement-cmdlet-library.md"
   ],
+  "e9dcb61e9956bb19679b2ae8c20e0cc612cc1e60": [
+    "sccm\\core\\plan-design\\security\\security-and-privacy.md"
+  ],
   "ffeb40b3989617ddbdfffa0907d5a4653232ee8f": [
     "sccm\\core\\plan-design\\security\\security-and-privacy.md"
+  ],
+  "0574beba87cd0255e8edd414b6b445719a210053": [
+    "sccm\\core\\plan-design\\security\\security-best-practices-and-privacy-information.md"
   ],
   "1cb0ee04940b192e9fe749bc5c28eb081c6d5141": [
     "sccm\\core\\plan-design\\security\\security-best-practices-and-privacy-information.md"
   ],
+  "cecf461518e17668f87336c746597683bdd84f11": [
+    "sccm\\core\\servers\\deploy\\configure\\about-discovery-methods.md"
+  ],
   "044c3ba729f1e96e5de9507514733430e8002aef": [
     "sccm\\core\\servers\\deploy\\configure\\about-discovery-methods.md"
+  ],
+  "9e56ca74baef048ddcb1564b6228b9033f5d5fe9": [
+    "sccm\\core\\servers\\deploy\\configure\\about-the-service-connection-point.md"
   ],
   "25be46f102f3f46fba6ab415d255461917b3cac0": [
     "sccm\\core\\servers\\deploy\\configure\\about-the-service-connection-point.md"
   ],
+  "26532b7cc3cddc6e2f1d6c16dd837f1d06ae42fe": [
+    "sccm\\core\\servers\\deploy\\configure\\add-site-system-roles.md"
+  ],
   "d5b14cc7574ae4c5cbdbca83b4bfda0ada94f920": [
     "sccm\\core\\servers\\deploy\\configure\\add-site-system-roles.md"
+  ],
+  "7d410e21df25e8c936ec5c12a95ee78731daee50": [
+    "sccm\\core\\servers\\deploy\\configure\\configuration-options-for-site-system-roles.md"
   ],
   "9e85b9ce2873c5afc910773d082567ca0f95c19a": [
     "sccm\\core\\servers\\deploy\\configure\\configuration-options-for-site-system-roles.md"
   ],
+  "163e8ba520306b900650bc0b670f38ed8d2b7afa": [
+    "sccm\\core\\servers\\deploy\\configure\\configure-discovery-methods.md"
+  ],
   "13bdf13a84ca5bc4cdf14b7dfaf842898a8ed9cd": [
     "sccm\\core\\servers\\deploy\\configure\\configure-discovery-methods.md"
+  ],
+  "c820856dde36a263bdd0a844d2a7ed5645c2729f": [
+    "sccm\\core\\servers\\deploy\\configure\\configure-role-based-administration.md"
   ],
   "0f9bf6a9ea67fa8cfde3d7ab013faf5895705c46": [
     "sccm\\core\\servers\\deploy\\configure\\configure-role-based-administration.md"
   ],
+  "4e786ac26aa19de1e063e3bda05c34f2edb1eee4": [
+    "sccm\\core\\servers\\deploy\\configure\\configure-sites-and-hierarchies.md"
+  ],
   "97a180fb05075ff6a8c84d5a9e4410590964e001": [
     "sccm\\core\\servers\\deploy\\configure\\configure-sites-and-hierarchies.md"
+  ],
+  "3aa9e9ac47d1a1b950bf0f6a0d2c0df8d8b735bf": [
+    "sccm\\core\\servers\\deploy\\configure\\custom-locations-for-site-database-files.md"
   ],
   "10ee064af9bc85f499517beff793b8050b853f9c": [
     "sccm\\core\\servers\\deploy\\configure\\custom-locations-for-site-database-files.md"
   ],
+  "5077552d0be06d7bb4b5682111c9d8ab9ad09bb2": [
+    "sccm\\core\\servers\\deploy\\configure\\database-replicas-for-management-points.md"
+  ],
   "2780f03a39cc49ff3e26425f75c1e66eb8b3bf49": [
     "sccm\\core\\servers\\deploy\\configure\\database-replicas-for-management-points.md"
+  ],
+  "b6779f3667dbaa614d7ac187c03eafd53470c47d": [
+    "sccm\\core\\servers\\deploy\\configure\\define-site-boundaries-and-boundary-groups.md"
   ],
   "e3adc36410603760fc959d5cbe854b0249123dd7": [
     "sccm\\core\\servers\\deploy\\configure\\define-site-boundaries-and-boundary-groups.md"
   ],
+  "70866e1e0c1c787d7a59b35b228f5540ec540721": [
+    "sccm\\core\\servers\\deploy\\configure\\deploy-and-manage-content.md"
+  ],
   "7ca715de88a0aa609136ff7c1582f629626149c0": [
     "sccm\\core\\servers\\deploy\\configure\\deploy-and-manage-content.md"
+  ],
+  "d66c188dd55de809b008739b0ed7d814541250f8": [
+    "sccm\\core\\servers\\deploy\\configure\\install-and-configure-distribution-points.md"
   ],
   "dc313528308e95263f23494afacfa8c7f8c7fd11": [
     "sccm\\core\\servers\\deploy\\configure\\install-and-configure-distribution-points.md"
   ],
+  "a56daf3c117cc9e790570101daff928dcff39d57": [
+    "sccm\\core\\servers\\deploy\\configure\\install-cloud-based-distribution-points-in-microsoft-azure.md"
+  ],
   "0e85085e93677b7e5b235a19b5325b32b80f6e83": [
     "sccm\\core\\servers\\deploy\\configure\\install-cloud-based-distribution-points-in-microsoft-azure.md"
+  ],
+  "3483fa5a9f589ad4b39bda00ebe1aeea18e19696": [
+    "sccm\\core\\servers\\deploy\\configure\\install-site-system-roles.md"
   ],
   "8431f265f3391ebb2533435dda89f3e138fa7830": [
     "sccm\\core\\servers\\deploy\\configure\\install-site-system-roles.md"
   ],
+  "4244fa6d170afa9708e0f6c47ed6f402313d9884": [
+    "sccm\\core\\servers\\deploy\\configure\\manage-content-and-content-infrastructure.md"
+  ],
   "13d799e1e6df7014b43315e96f1ec161a0d8e862": [
     "sccm\\core\\servers\\deploy\\configure\\manage-content-and-content-infrastructure.md"
   ],
-  "79f1609eae6f66b0ef4c0ec45121e163eae23173": [
-    "sccm\\core\\servers\\deploy\\configure\\media\\Disc_moveDown_Icon.gif"
-  ],
-  "13d832d0d2d6563a9659d15f85870e943e061741": [
-    "sccm\\core\\servers\\deploy\\configure\\media\\Disc_moveUp_Icon.gif"
-  ],
-  "aaa1e04630069553f14025a6c6bb0f00af8a557d": [
-    "sccm\\core\\servers\\deploy\\configure\\media\\Disc_new_Icon.gif"
-  ],
-  "9ebaa560058fb7127c2952a5e66e32f1eaf4b763": [
-    "sccm\\core\\servers\\deploy\\configure\\media\\Disc-0.gif"
-  ],
-  "fd196722f4a06f039ae4a43c4976c0e2408be450": [
-    "sccm\\core\\servers\\deploy\\configure\\media\\Disc-1.gif"
-  ],
-  "bfdd71a05c8a605c6a970b57889880eab10e05d5": [
-    "sccm\\core\\servers\\deploy\\configure\\media\\Disc-2.gif"
+  "0fced64475bd655232a8312397e73eda5b136e9e": [
+    "sccm\\core\\servers\\deploy\\configure\\monitor-content-you-have-distributed.md"
   ],
   "3e34796b88f3ce2c3293042a7b6083c3a86afe05": [
     "sccm\\core\\servers\\deploy\\configure\\monitor-content-you-have-distributed.md"
   ],
+  "03a786070c8ddb909d6d52792150e79de302e3a9": [
+    "sccm\\core\\servers\\deploy\\configure\\publish-site-data.md"
+  ],
   "5c839405c713031f5dfdb13ca5fe765f7ec2b9ce": [
     "sccm\\core\\servers\\deploy\\configure\\publish-site-data.md"
+  ],
+  "4d05de173419746c0c5b015e3a374280813ba6cb": [
+    "sccm\\core\\servers\\deploy\\configure\\run-discovery.md"
   ],
   "3c0aa2fa1ab96ac89b9333f4ecccfb1b4573b9a1": [
     "sccm\\core\\servers\\deploy\\configure\\run-discovery.md"
   ],
+  "3538344e1d27587d7debc8c72b2b5f3be1b69165": [
+    "sccm\\core\\servers\\deploy\\configure\\select-discovery-methods-to-use.md"
+  ],
   "b5887f18083c175377c9cb47462ba57ee8543574": [
     "sccm\\core\\servers\\deploy\\configure\\select-discovery-methods-to-use.md"
+  ],
+  "d5c52cb74260eb7cda32114a513d9a949ded3c49": [
+    "sccm\\core\\servers\\deploy\\configure\\site-components.md"
   ],
   "3a914ebebe44e4ac71fceba07b52787eb2dda594": [
     "sccm\\core\\servers\\deploy\\configure\\site-components.md"
   ],
+  "8977ddfef0c130a0a27010ebab334433a7f6bcd0": [
+    "sccm\\core\\servers\\deploy\\configure\\sql-server-alwayson-for-a-highly-available-site-database.md"
+  ],
   "81a046f89dbaa0061e6882803d431b855fa2cd74": [
     "sccm\\core\\servers\\deploy\\configure\\sql-server-alwayson-for-a-highly-available-site-database.md"
+  ],
+  "485f7c9d5ec14b85eb732fbe0cf917f610d018f7": [
+    "sccm\\core\\servers\\deploy\\configure\\use-a-sql-server-cluster-for-the-site-database.md"
   ],
   "109ff1e6d59055789548b3b058a0f0a6612d2855": [
     "sccm\\core\\servers\\deploy\\configure\\use-a-sql-server-cluster-for-the-site-database.md"
   ],
+  "0fc1b89ad820aa7559f2309262fd86e78bac515a": [
+    "sccm\\core\\servers\\deploy\\install\\command-line-options-for-setup.md"
+  ],
   "e5ec8245482f63e61b55ae8cd35b1e29aa1507c0": [
     "sccm\\core\\servers\\deploy\\install\\command-line-options-for-setup.md"
+  ],
+  "3b24543cb1ae5fe02a5eec302005866f3f2c76d7": [
+    "sccm\\core\\servers\\deploy\\install\\install-consoles.md"
   ],
   "5855f900eaf7801aabc8d8bdff32da8d3d96ec03": [
     "sccm\\core\\servers\\deploy\\install\\install-consoles.md"
   ],
+  "d1cd8f2ee228f07515486254c9d5d2f93f03a083": [
+    "sccm\\core\\servers\\deploy\\install\\installing-sites.md"
+  ],
   "3fa4887a3d9dd0bf90e75e3f5c05361ddc6dd595": [
     "sccm\\core\\servers\\deploy\\install\\installing-sites.md"
+  ],
+  "dbe1789fd553d5ff0cf9866e2c4e199796103d43": [
+    "sccm\\core\\servers\\deploy\\install\\language-packs.md"
   ],
   "0732194b5fc1ac5918ddace7f67571274be3bbad": [
     "sccm\\core\\servers\\deploy\\install\\language-packs.md"
   ],
+  "8e9c6a6e4ff73e67ac6c6c0baa2f1f996853d338": [
+    "sccm\\core\\servers\\deploy\\install\\list-of-prerequisite-checks.md"
+  ],
   "05da7514ceb90b2169fcc6496c889c9abb5caac9": [
     "sccm\\core\\servers\\deploy\\install\\list-of-prerequisite-checks.md"
+  ],
+  "6ed7c58011f00f4a03dfa39a0fa16d1e087ce118": [
+    "sccm\\core\\servers\\deploy\\install\\prepare-to-install-sites.md"
   ],
   "17b7dfe952e11f72f5fc43eca655c7ff55612487": [
     "sccm\\core\\servers\\deploy\\install\\prepare-to-install-sites.md"
   ],
+  "22429ac41069145d6e76f2f2f46a636f8e1ad9b9": [
+    "sccm\\core\\servers\\deploy\\install\\prerequisite-checker.md"
+  ],
   "daf10cf480738963a5792bce66fc2faa64aeef8b": [
     "sccm\\core\\servers\\deploy\\install\\prerequisite-checker.md"
+  ],
+  "986db107f310de8ec540b514ffa43eab3652c0c3": [
+    "sccm\\core\\servers\\deploy\\install\\prerequisites-for-installing-sites.md"
   ],
   "d5258c0265c7299eee872e487b68e91dbecc1c5d": [
     "sccm\\core\\servers\\deploy\\install\\prerequisites-for-installing-sites.md"
   ],
+  "0466b0fb1d4d67df6ccdf16a1be252df17ec7e32": [
+    "sccm\\core\\servers\\deploy\\install\\release-notes.md"
+  ],
   "13472f6a470b0f4139c85306b20cb57ef99f6fe9": [
     "sccm\\core\\servers\\deploy\\install\\release-notes.md"
+  ],
+  "23890141115327f9fe56bc1ca93e3fdb78a4d2ef": [
+    "sccm\\core\\servers\\deploy\\install\\scenarios-to-streamline-your-installation.md"
   ],
   "19fb75f084cd9b82e36ef6ad4c8ad9420659debc": [
     "sccm\\core\\servers\\deploy\\install\\scenarios-to-streamline-your-installation.md"
   ],
+  "9a268ee280a7ce8614b5b0b34fed4befaa4f4a94": [
+    "sccm\\core\\servers\\deploy\\install\\setup-downloader.md"
+  ],
   "310e0fad5c6fcbf1d0aea3cef3e0ce3f65d7e5b2": [
     "sccm\\core\\servers\\deploy\\install\\setup-downloader.md"
+  ],
+  "943460bf04603a1da9162cf389d3e9d52070c4d9": [
+    "sccm\\core\\servers\\deploy\\install\\setup-reference.md"
   ],
   "f42d345677e30dafd91c2809e6ab42ba6bf852cb": [
     "sccm\\core\\servers\\deploy\\install\\setup-reference.md"
   ],
+  "f4e12b092d4ea94454a69d9c7b7be8884642a401": [
+    "sccm\\core\\servers\\deploy\\install\\uninstall-sites-and-hierarchies.md"
+  ],
   "516201361c36e73eb7235191675b48b532a2bf91": [
     "sccm\\core\\servers\\deploy\\install\\uninstall-sites-and-hierarchies.md"
+  ],
+  "2ae8ad5d239dec59dbb184363ae0c96ae14184d1": [
+    "sccm\\core\\servers\\deploy\\install\\upgrade-an-evaluation-install-to-a-full-install.md"
   ],
   "eb2088e0c0daa8ef7cee729d85605be4c0f12761": [
     "sccm\\core\\servers\\deploy\\install\\upgrade-an-evaluation-install-to-a-full-install.md"
   ],
+  "83cef5bf7c0d37d15a023f3dd53a669e8f0ca216": [
+    "sccm\\core\\servers\\deploy\\install\\upgrade-to-configuration-manager.md"
+  ],
   "84f4bfb57d97e79514876bc57637a1f32d19a339": [
     "sccm\\core\\servers\\deploy\\install\\upgrade-to-configuration-manager.md"
+  ],
+  "6ad4bf1eb6314666d123bf4b0f773399ca1ebbb7": [
+    "sccm\\core\\servers\\deploy\\install\\use-a-command-line-to-install-sites.md"
   ],
   "7216a25fc2f4b6af7883f2b6b7cd7896c931bdd0": [
     "sccm\\core\\servers\\deploy\\install\\use-a-command-line-to-install-sites.md"
   ],
+  "2204e3eef35abb5e57c3a8ceb5cd25792dbec7ed": [
+    "sccm\\core\\servers\\deploy\\install\\use-the-setup-wizard-to-install-sites.md"
+  ],
   "4a98e4ddabd7e8524b9b36d07b3f6db9e31f37eb": [
     "sccm\\core\\servers\\deploy\\install\\use-the-setup-wizard-to-install-sites.md"
+  ],
+  "a46d48b57e954ba2c52c897d1cf8cf1e0dc39e28": [
+    "sccm\\core\\servers\\deploy\\start-using.md"
   ],
   "a08d4e579e8c38eaa3e0e060bc9f7f531af4d020": [
     "sccm\\core\\servers\\deploy\\start-using.md"
   ],
+  "1546e059d9577e3fd1593e66a7fe7ce6921fd168": [
+    "sccm\\core\\servers\\manage\\best-practices-for-reporting.md"
+  ],
   "0a30d1ca35cbdd81b1d26ca4f53cdb9f9cc812bf": [
     "sccm\\core\\servers\\manage\\best-practices-for-reporting.md"
+  ],
+  "d4d3e48aafe9020fa9298d519b2a46154e59d7a5": [
+    "sccm\\core\\servers\\manage\\checklist-for-installing-update-1602.md"
   ],
   "e22eef2c18e0bf70ef4a92fce64160940c95e577": [
     "sccm\\core\\servers\\manage\\checklist-for-installing-update-1602.md"
   ],
+  "e1d343c65314aaaec49aaf404845e775767d3f1d": [
+    "sccm\\core\\servers\\manage\\checklist-for-installing-update-1606.md"
+  ],
   "100a00be2f3b64c555f0dc16d5a834071cfd5ee5": [
     "sccm\\core\\servers\\manage\\checklist-for-installing-update-1606.md"
+  ],
+  "f8921f28f46d8bcc4f5361f5d17371786bdf5532": [
+    "sccm\\core\\servers\\manage\\configuring-reporting.md"
   ],
   "33ed0542609eedd3ccea4fc0f639eb95494b94d3": [
     "sccm\\core\\servers\\manage\\configuring-reporting.md"
   ],
+  "b19516376eb11be1b915bc25950311ff2b6279e4": [
+    "sccm\\core\\servers\\manage\\create-queries.md"
+  ],
   "1a7899324d7523f1ddadd12f7574163416b022a7": [
     "sccm\\core\\servers\\manage\\create-queries.md"
+  ],
+  "5335b6bf1104f7a38fc5694f3657c02605eead90": [
+    "sccm\\core\\servers\\manage\\creating-custom-report-models-in-sql-server-reporting-services.md"
   ],
   "a1c485ad5732bd22e9647a17abb5f8cf06452bf7": [
     "sccm\\core\\servers\\manage\\creating-custom-report-models-in-sql-server-reporting-services.md"
   ],
+  "8e473c0383c7fc692722f2a8a599dbb98caababe": [
+    "sccm\\core\\servers\\manage\\current-branch-versions-supported.md"
+  ],
   "8f820a94e7d120a04c6bbd65a5105f27b84b505f": [
     "sccm\\core\\servers\\manage\\current-branch-versions-supported.md"
+  ],
+  "c493ebc3c09dabedd3de72c33e4360999193360e": [
+    "sccm\\core\\servers\\manage\\data-transfers-between-sites.md"
   ],
   "cbc1baeff522ad504cfedbbfef98cf228edb2269": [
     "sccm\\core\\servers\\manage\\data-transfers-between-sites.md"
   ],
+  "02cfbe07d82a49caf398089e7512411ba5100ca9": [
+    "sccm\\core\\servers\\manage\\download-updates-flowchart.md"
+  ],
   "14f1405ce99841d464b6f4428179bf2737b766e8": [
     "sccm\\core\\servers\\manage\\download-updates-flowchart.md"
+  ],
+  "6f0752ccf922b2cf062c59f55feca70b6bd2a554": [
+    "sccm\\core\\servers\\manage\\health-attestation.md"
   ],
   "8e500576b9007171cb53ab8fe8470295782d7534": [
     "sccm\\core\\servers\\manage\\health-attestation.md"
   ],
+  "eaedb2cef8454d237535f0eaa8f4fd5d26a801d7": [
+    "sccm\\core\\servers\\manage\\hierarchy-maintenance-tool-preinst.exe.md"
+  ],
   "28ee7ba421ebae9cddef4c5c5b3cc65924784579": [
     "sccm\\core\\servers\\manage\\hierarchy-maintenance-tool-preinst.exe.md"
+  ],
+  "769cd35f73e225e212450b7291457e8e32da35e3": [
+    "sccm\\core\\servers\\manage\\install-in-console-updates.md"
   ],
   "7ee30be0d6751ad6076f37d0f263645c389c6f52": [
     "sccm\\core\\servers\\manage\\install-in-console-updates.md"
   ],
+  "ac73fbe0069d9e1d97a303371f870e3f1e117581": [
+    "sccm\\core\\servers\\manage\\introduction-to-queries.md"
+  ],
   "4df298bba1d9fff058d9e59df164b522d0beb614": [
     "sccm\\core\\servers\\manage\\introduction-to-queries.md"
+  ],
+  "c707aceedef9e1c37881532d48b3a65a4adefc1f": [
+    "sccm\\core\\servers\\manage\\introduction-to-reporting.md"
   ],
   "53411f6a10478a08ea6ac53ca5733011f9efdc90": [
     "sccm\\core\\servers\\manage\\introduction-to-reporting.md"
   ],
+  "1ec3f38656baa67877f97259bde6643b98e69175": [
+    "sccm\\core\\servers\\manage\\list-of-reports.md"
+  ],
   "efcecc71da1c0fad91ccf7d3a65c209ff0c65d23": [
     "sccm\\core\\servers\\manage\\list-of-reports.md"
+  ],
+  "911c5d8b4d673eff77ef1d5a36b0ec7d585e05cd": [
+    "sccm\\core\\servers\\manage\\maintenance-tasks.md"
   ],
   "c9e17dd4932eb0718170efcca064ea603952477c": [
     "sccm\\core\\servers\\manage\\maintenance-tasks.md"
   ],
+  "c7070b693864a2bbc370cf5cf02ae6087be5c9f8": [
+    "sccm\\core\\servers\\manage\\manage-queries.md"
+  ],
   "43c0e1ce139680a6c4f6463a46b2419a4e4ced34": [
     "sccm\\core\\servers\\manage\\manage-queries.md"
   ],
-  "7dc049b9b03a4592a42d6fd43eb56c9c62599f24": [
-    "sccm\\core\\servers\\manage\\media\\CM_Servicing_support_timeline.png"
-  ],
-  "d5e4ca3adb9e176d9bf4955f4ac29a354a6f63f8": [
-    "sccm\\core\\servers\\manage\\media\\Flowchart---Download-updates.png"
-  ],
-  "37fef3571b445b768e9b3b6427e83841a7c62e5d": [
-    "sccm\\core\\servers\\manage\\media\\Flowchart---Replicate-updates.png"
+  "ef2b8c6f836811830d5fe6fd07d7e80574ad3129": [
+    "sccm\\core\\servers\\manage\\modify-your-infrastructure.md"
   ],
   "97fb338fc76872ef8215e8aad5ae03c56fd80b6e": [
     "sccm\\core\\servers\\manage\\modify-your-infrastructure.md"
   ],
+  "53e5c61feeaa27760ff7578d5dca33633f53e8c0": [
+    "sccm\\core\\servers\\manage\\monitor-hierarchy-and-replication-infrastructure.md"
+  ],
   "c5b01a9114edaa32e8aa457c163696615495ad04": [
     "sccm\\core\\servers\\manage\\monitor-hierarchy-and-replication-infrastructure.md"
+  ],
+  "6ac3ac42c414294c154ce99a22589d694b4987a6": [
+    "sccm\\core\\servers\\manage\\operations-and-maintenance-for-queries.md"
   ],
   "6fb06292af743c3c47a300dc99d0b91d336a7994": [
     "sccm\\core\\servers\\manage\\operations-and-maintenance-for-queries.md"
   ],
+  "f2c074c131d345dcfc314f78cccdb3a17993d454": [
+    "sccm\\core\\servers\\manage\\operations-and-maintenance-for-reporting.md"
+  ],
   "5870cbb45fcbeed16f63e0e693b095d1a99b7ea1": [
     "sccm\\core\\servers\\manage\\operations-and-maintenance-for-reporting.md"
+  ],
+  "cc94c02c0ddb5d9a049981576a87fc1868c20a10": [
+    "sccm\\core\\servers\\manage\\planning-for-reporting.md"
   ],
   "c97a7176109d58d236eddbe669694c53ccb78717": [
     "sccm\\core\\servers\\manage\\planning-for-reporting.md"
   ],
+  "5227fc92357f73089711fc606c5eeac28ab1a384": [
+    "sccm\\core\\servers\\manage\\prerequisites-for-reporting.md"
+  ],
   "d471ad89f02c7c1dab573d8930d402ae2fc53e86": [
     "sccm\\core\\servers\\manage\\prerequisites-for-reporting.md"
+  ],
+  "6afc88617c50cd809d27dfc1b88a0355e70bcf2f": [
+    "sccm\\core\\servers\\manage\\queries-technical-reference.md"
   ],
   "271795da0c0c5f790358387c34265c350ec80f7d": [
     "sccm\\core\\servers\\manage\\queries-technical-reference.md"
   ],
+  "1b84d3b83927bb88d86076d7ae2736305437f2b1": [
+    "sccm\\core\\servers\\manage\\reference-for-maintenance-tasks.md"
+  ],
   "0021f704bed3ea717c1823188b5064ff993a2ec0": [
     "sccm\\core\\servers\\manage\\reference-for-maintenance-tasks.md"
+  ],
+  "5053caff931c8addeddad2a36d63108b25292b0a": [
+    "sccm\\core\\servers\\manage\\reporting.md"
   ],
   "a3ae6e11a96287cc47d1c7bd21c2ce35509598d3": [
     "sccm\\core\\servers\\manage\\reporting.md"
   ],
+  "386df761026f9ba0399aa1ec818edb2a3eb70c5f": [
+    "sccm\\core\\servers\\manage\\security-and-privacy-for-queries.md"
+  ],
   "933a5504afcc0ebbd60e3384a042b4d7c6e5e41e": [
     "sccm\\core\\servers\\manage\\security-and-privacy-for-queries.md"
+  ],
+  "98b7827e89279a7e54f4753942fee1ab14545e70": [
+    "sccm\\core\\servers\\manage\\security-and-privacy-for-reporting.md"
   ],
   "313fba832cbc10e139ce5d4aed4357bb80290125": [
     "sccm\\core\\servers\\manage\\security-and-privacy-for-reporting.md"
   ],
+  "802bd683e6d35d505c0ea406be150d134a141dfa": [
+    "sccm\\core\\servers\\manage\\the-cd.latest-folder.md"
+  ],
   "d314650afeaefabf69c0aa7b2bfe170d302fbf02": [
     "sccm\\core\\servers\\manage\\the-cd.latest-folder.md"
+  ],
+  "0df431776b16da2b579adc5a1f8d33c03d530462": [
+    "sccm\\core\\servers\\manage\\update-replication-flowchart.md"
   ],
   "ce67afccdb1b3caab113e79b2e74d3bc0dfb2893": [
     "sccm\\core\\servers\\manage\\update-replication-flowchart.md"
   ],
+  "8a59dd8d229b01a658aaf10cd40b2ba68211ef3f": [
+    "sccm\\core\\servers\\manage\\updates.md"
+  ],
   "1d03ed8e88addea9d82dd7708488b63b21bbf191": [
     "sccm\\core\\servers\\manage\\updates.md"
+  ],
+  "5f89f133b97fffe3f9eb14fd2e99a59b431d178c": [
+    "sccm\\core\\servers\\manage\\upgrade-on-premises-infrastructure.md"
   ],
   "fea89c6ac8f16db95f4f8d57359f6bf28c374157": [
     "sccm\\core\\servers\\manage\\upgrade-on-premises-infrastructure.md"
   ],
+  "2b737b6384cf6d85cf43000254e5fae91c7b3523": [
+    "sccm\\core\\servers\\manage\\use-alerts-and-the-status-system.md"
+  ],
   "ea4296f591ef897c1406f6ca168d2e6939536e18": [
     "sccm\\core\\servers\\manage\\use-alerts-and-the-status-system.md"
+  ],
+  "f47f117b4e999ec7d243dc92bfdaaf10e451abe9": [
+    "sccm\\core\\servers\\manage\\use-the-hotfix-installer-to-install-updates.md"
   ],
   "7dfbeeb2fb21da15a31a102968eba681d088ab4b": [
     "sccm\\core\\servers\\manage\\use-the-hotfix-installer-to-install-updates.md"
   ],
+  "b829ae61665e288a941bb9acb4a4190dac1adb32": [
+    "sccm\\core\\servers\\manage\\use-the-service-connection-tool.md"
+  ],
   "c92ef5830c7f92788f8d00f5341aac2d3e5b69ec": [
     "sccm\\core\\servers\\manage\\use-the-service-connection-tool.md"
+  ],
+  "45b1eea07489ab27faf12ebe4890503708269c3a": [
+    "sccm\\core\\servers\\manage\\use-the-update-registration-tool-to-import-hotfixes.md"
   ],
   "b7ec243619b3fc9a0df3a5c56a57c9ad9a020feb": [
     "sccm\\core\\servers\\manage\\use-the-update-registration-tool-to-import-hotfixes.md"
   ],
+  "8af124f39c192c5945714f0c40e58e239d9f51b2": [
+    "sccm\\core\\TOC.md"
+  ],
   "7a32dbbc98ad49bcbc8d9b07a63a8289e3c3b11e": [
     "sccm\\core\\TOC.md"
+  ],
+  "0acae3e4649f4aaabbd3b3c32b7f7a060466f2d1": [
+    "sccm\\core\\understand\\accessibility-features.md"
   ],
   "1ed0aeba652438d777848898587662efbb2642cb": [
     "sccm\\core\\understand\\accessibility-features.md"
   ],
+  "1c2356de713438db3ebfc3298c30685e3a27b89b": [
+    "sccm\\core\\understand\\find-help.md"
+  ],
   "6a372802d75198d569c9de900cad7b0cd64a0501": [
     "sccm\\core\\understand\\find-help.md"
+  ],
+  "5edc1525bfb6ba57f38c3b4df866b3df8cca1bab": [
+    "sccm\\core\\understand\\frequently-asked-questions-about-diagnostics-and-usage-data.md"
   ],
   "7d333c39135da7bff641bd97a008aaa1d6be1788": [
     "sccm\\core\\understand\\frequently-asked-questions-about-diagnostics-and-usage-data.md"
   ],
+  "ecac26e5829d8bfc2a64c8c9e117839f76351535": [
+    "sccm\\core\\understand\\fundamentals.md"
+  ],
   "c44a2ea96d04e1ed0782c8521f679cdc03a27fba": [
     "sccm\\core\\understand\\fundamentals.md"
+  ],
+  "5e771548aef1e35f52382add2cc84edb685f7646": [
+    "sccm\\core\\understand\\fundamentals-of-client-management-tasks.md"
   ],
   "cbcbce2c433f65dec7cf42e5ad3388434d0eaa93": [
     "sccm\\core\\understand\\fundamentals-of-client-management-tasks.md"
   ],
+  "4946930fb41e75e5e883deb01da9e354a1e8c09d": [
+    "sccm\\core\\understand\\fundamentals-of-managing-devices.md"
+  ],
   "94240f575e79cffee7518172d0164b6d971f3933": [
     "sccm\\core\\understand\\fundamentals-of-managing-devices.md"
+  ],
+  "ae455ea8a16bf2a12773c830951e674dc96c24b4": [
+    "sccm\\core\\understand\\fundamentals-of-role-based-administration.md"
   ],
   "3a52ae9f2c28591178c626d5befe3c5ea3fffda1": [
     "sccm\\core\\understand\\fundamentals-of-role-based-administration.md"
   ],
+  "b863b5e3fed1ddc0b9e3209fa512172687c10917": [
+    "sccm\\core\\understand\\fundamentals-of-security.md"
+  ],
   "20ceeba45fbb5616378c68943ea8fcc30c5f5bc0": [
     "sccm\\core\\understand\\fundamentals-of-security.md"
+  ],
+  "4103850047b1c887ab0a2500c2cd458efa61be94": [
+    "sccm\\core\\understand\\fundamentals-of-sites-and-hierarchies.md"
   ],
   "b4e7f3d60f932a81dd56e63eb2df5569ca59a3f4": [
     "sccm\\core\\understand\\fundamentals-of-sites-and-hierarchies.md"
   ],
+  "9d48f1f92c39d4b8c0b93d18fa5eb0a892f7652d": [
+    "sccm\\core\\understand\\introduction.md"
+  ],
   "cb681778756f2fe3dca9987e202ef1ca59ab8251": [
     "sccm\\core\\understand\\introduction.md"
+  ],
+  "3ca6b4230507c29de7230cdb31a1e145d47865ee": [
+    "sccm\\core\\understand\\learn-more-editions.md"
   ],
   "d221225218b0134242ddbcb976d33e4904f64d7a": [
     "sccm\\core\\understand\\learn-more-editions.md"
   ],
-  "ea86b6bd17b6f6aa2576e2603955a1905c42d2ab": [
-    "sccm\\core\\understand\\media\\ClientSettings.gif"
-  ],
-  "9cee2868169aed9133b1e7a97ace71b34331e96b": [
-    "sccm\\core\\understand\\media\\Hierarchy_examples.png"
+  "892f4821b82aba118404e4610f81f15291358641": [
+    "sccm\\core\\understand\\use-cloud-services.md"
   ],
   "301944845acc62a88f318255420d7d6833443c24": [
     "sccm\\core\\understand\\use-cloud-services.md"
   ],
+  "fe7e5ae426b4dfda77786d5815632be738098a1e": [
+    "sccm\\index.md"
+  ],
   "788181927cb758f49a92416976e407df610a9555": [
     "sccm\\index.md"
+  ],
+  "d510d9161c5e04450dff2a10c29da8ae9e8c085e": [
+    "sccm\\mdm\\deploy-use\\bulk-enroll-devices-on-premises-mdm.md"
   ],
   "ddb300a6b1d7b6e7032d40c29a7e3a276bee49b5": [
     "sccm\\mdm\\deploy-use\\bulk-enroll-devices-on-premises-mdm.md"
   ],
+  "aef900e5d70cfd307bd71ed5808245cef57cab2d": [
+    "sccm\\mdm\\deploy-use\\deploy-use-mdm.md"
+  ],
   "8762d58a15037e0e765abc12441a433a090140e8": [
     "sccm\\mdm\\deploy-use\\deploy-use-mdm.md"
+  ],
+  "a8a8b4fbe2bd9f36641ab895c44b5263a71ed98b": [
+    "sccm\\mdm\\deploy-use\\enroll-company-owned-devices.md"
   ],
   "4fca888754eee7f45ff675b7811dec9857cac590": [
     "sccm\\mdm\\deploy-use\\enroll-company-owned-devices.md"
   ],
+  "70b838ded136c0dca33ca4a2f9f2ce91af4122d4": [
+    "sccm\\mdm\\deploy-use\\enroll-devices-on-premises-mdm.md"
+  ],
   "8c99de771c1ecad681a96dc29b6b8a4b5993a574": [
     "sccm\\mdm\\deploy-use\\enroll-devices-on-premises-mdm.md"
+  ],
+  "4e5f51baf0fc3b87947161a9ccfb15eb4090e104": [
+    "sccm\\mdm\\deploy-use\\enroll-devices-with-device-enrollment-manager.md"
   ],
   "994538bd678dafa7d79b47ceaabe8af86b1fbc4f": [
     "sccm\\mdm\\deploy-use\\enroll-devices-with-device-enrollment-manager.md"
   ],
+  "d5ada01ecb200c662f1a7941c814e6938c421a65": [
+    "sccm\\mdm\\deploy-use\\ios-device-enrollment-program-for-hybrid.md"
+  ],
   "29ea227811696a0b758c95e6206f28e4c136d395": [
     "sccm\\mdm\\deploy-use\\ios-device-enrollment-program-for-hybrid.md"
+  ],
+  "0a9bde47fec700b1809e2f086bdfc2ded501c865": [
+    "sccm\\mdm\\deploy-use\\ios-hybrid-enrollment-using-apple-configurator.md"
   ],
   "b819e5979f824d836c77f091027d5695817ecbf6": [
     "sccm\\mdm\\deploy-use\\ios-hybrid-enrollment-using-apple-configurator.md"
   ],
+  "99db56e6d502eaf091ca8e4763c5592b9faf1f0e": [
+    "sccm\\mdm\\deploy-use\\manage-ios-activation-lock.md"
+  ],
   "88f69455d6869645950a57d76c4bdd9db7650ada": [
     "sccm\\mdm\\deploy-use\\manage-ios-activation-lock.md"
+  ],
+  "c6d011e8f6a080ed221c1c736aae842187b196ab": [
+    "sccm\\mdm\\deploy-use\\manage-mobile-devices-with-exchange-activesync.md"
   ],
   "5d84ca0e4454828fddad5ad48d12bce3202f267b": [
     "sccm\\mdm\\deploy-use\\manage-mobile-devices-with-exchange-activesync.md"
   ],
-  "b86daa607f8bdfca2b36b2e9c956dc9872a80e4d": [
-    "sccm\\mdm\\deploy-use\\media\\certExport-WinPhone.jpg"
-  ],
-  "a3713304193d4562fb5784b2e0ec7730ac5e796e": [
-    "sccm\\mdm\\deploy-use\\media\\certmgr-WinPhone_cert.jpg"
-  ],
-  "b74e5b5b5d675cf20177f14710e37f90d6dcb24f": [
-    "sccm\\mdm\\deploy-use\\media\\configmgr-with-exchange.png"
+  "43d67aa664037c6da83260d5ada8e574510a8f7b": [
+    "sccm\\mdm\\deploy-use\\predeclare-devices-with-hardware-id.md"
   ],
   "3563146b861b7d819617e5cb15cb83b6b16c2062": [
     "sccm\\mdm\\deploy-use\\predeclare-devices-with-hardware-id.md"
   ],
+  "ccd46a1a919721962c32b13609fd059e7e4d3024": [
+    "sccm\\mdm\\deploy-use\\set-up-android-hybrid-device-management.md"
+  ],
   "441cc99d24ade23b096596934d21036c04d5b79a": [
     "sccm\\mdm\\deploy-use\\set-up-android-hybrid-device-management.md"
+  ],
+  "b582e65abadcf79c18b8d218a5f309a64fd6b784": [
+    "sccm\\mdm\\deploy-use\\setup-hybrid-mdm.md"
   ],
   "9b7f4b0af390ed945cceac2d5010d66459e41ffe": [
     "sccm\\mdm\\deploy-use\\setup-hybrid-mdm.md"
   ],
+  "81ece7b811a7838b94b70e66d58ca615f45f6a55": [
+    "sccm\\mdm\\deploy-use\\set-up-hybrid-windows.md"
+  ],
   "519dc1a61602d5f086551f9052de88b55111180b": [
     "sccm\\mdm\\deploy-use\\set-up-hybrid-windows.md"
+  ],
+  "6a4afbf34d76bc05300f69193ffd709e2b390efb": [
+    "sccm\\mdm\\deploy-use\\set-up-ios-hybrid-device-management.md"
   ],
   "d044586808b4557470f99cd26acb18dbaa4b0c29": [
     "sccm\\mdm\\deploy-use\\set-up-ios-hybrid-device-management.md"
   ],
+  "30c05689010c460ce5cd47d0ddcc792aa619a592": [
+    "sccm\\mdm\\deploy-use\\set-up-windows-phone-hybrid-enrollment.md"
+  ],
   "6e2f7edf8efdd6473ad1b5660371eec2f06b8faf": [
     "sccm\\mdm\\deploy-use\\set-up-windows-phone-hybrid-enrollment.md"
+  ],
+  "dd928ef3a7d36522d6ac900b990c6091aa354f62": [
+    "sccm\\mdm\\deploy-use\\terms-and-conditions.md"
   ],
   "85df06be808f32c1a91ff88fc94a9b0df494e63b": [
     "sccm\\mdm\\deploy-use\\terms-and-conditions.md"
   ],
+  "bc4e0d4a15fe4b75e03c1262cf17c89bb02e86db": [
+    "sccm\\mdm\\deploy-use\\user-affinity-for-hybrid-managed-devices.md"
+  ],
   "47364d83e92370da2a37304303b6885d5019f533": [
     "sccm\\mdm\\deploy-use\\user-affinity-for-hybrid-managed-devices.md"
+  ],
+  "96b703ba3c226a47d91f57e5c00e3fb060e48439": [
+    "sccm\\mdm\\deploy-use\\user-enroll-devices-on-premises-mdm.md"
   ],
   "bb28d90bb4e6d4b32583f6eb07f8c9e7d985c72b": [
     "sccm\\mdm\\deploy-use\\user-enroll-devices-on-premises-mdm.md"
   ],
+  "9b8999191483a514f668c7e90f5ed63db7c7ade4": [
+    "sccm\\mdm\\deploy-use\\wipe-lock-reset-devices.md"
+  ],
   "2a6845c2d085023146e66e901d1e62eec2c744bc": [
     "sccm\\mdm\\deploy-use\\wipe-lock-reset-devices.md"
+  ],
+  "314c4db83ea41f0162c9cd11194c913158e650ea": [
+    "sccm\\mdm\\get-started\\install-site-system-roles-for-on-premises-mdm.md"
   ],
   "f115da09ff81145113e2fc442cb13ae2923677fe": [
     "sccm\\mdm\\get-started\\install-site-system-roles-for-on-premises-mdm.md"
   ],
+  "fd6d75cd3a748a5b3fd5de1394341eb47d0b4a02": [
+    "sccm\\mdm\\get-started\\preparation-steps-for-on-premises-mdm.md"
+  ],
   "347f41a663eff5faefdaa433891584497d8025ff": [
     "sccm\\mdm\\get-started\\preparation-steps-for-on-premises-mdm.md"
+  ],
+  "5b94eba20572303af04d4458ba5dcc1b065671d5": [
+    "sccm\\mdm\\get-started\\set-up-certificates-on-premises-mdm.md"
   ],
   "1adb0ff98e3a75511b3f67b3ee9c387b29f48a87": [
     "sccm\\mdm\\get-started\\set-up-certificates-on-premises-mdm.md"
   ],
+  "49fdd9c391bc838d3fb64392a32a095c44e5db70": [
+    "sccm\\mdm\\get-started\\set-up-device-enrollment-on-premises-mdm.md"
+  ],
   "73efc683b27c8fa9bb5f98ebe9a1b615631762f1": [
     "sccm\\mdm\\get-started\\set-up-device-enrollment-on-premises-mdm.md"
+  ],
+  "658dbc0700a3e665a2829639e4e5b63309d2d7bb": [
+    "sccm\\mdm\\get-started\\set-up-intune-subscription-on-premises-mdm.md"
   ],
   "6d7affac96ae1b4b49e2a47e723494482bd65213": [
     "sccm\\mdm\\get-started\\set-up-intune-subscription-on-premises-mdm.md"
@@ -1225,509 +2279,812 @@
   "5b24d6e464e6a682ae6f744d9627ff1951dfef12": [
     "sccm\\mdm\\includes\\mdm-supported-devices.md"
   ],
-  "15fababf9a40d55d48960b5bcb5b25b59fc477b1": [
-    "sccm\\mdm\\media\\aad-intune-app.png"
-  ],
-  "0c98be6231e29d8665df1f49c9a34cb4ab84153e": [
-    "sccm\\mdm\\media\\mdm-create-user-collection.png"
-  ],
-  "83c39e9aafeadf050b7d5af588568bcc902fb229": [
-    "sccm\\mdm\\media\\mdm-service-connection-point.png"
-  ],
-  "8a63ea1e7c0e34b524cd58d786f1b50447c941f7": [
-    "sccm\\mdm\\media\\mdm-set-intune.png"
+  "a9329254447656f646b5f57428034cf0cdc28e8a": [
+    "sccm\\mdm\\plan-design\\hybrid-mobile-device-management.md"
   ],
   "c0981494c79c8d4d18ee6b593451c5bf0fcb261e": [
     "sccm\\mdm\\plan-design\\hybrid-mobile-device-management.md"
   ],
+  "7d39fdd49c42cadd5a426c4ad53a92df6ec93c66": [
+    "sccm\\mdm\\plan-design\\plan-hybrid-mobile-device-management.md"
+  ],
   "470a1cca9d4dfc8d7bb9254faa62d1fa0ef9f21d": [
     "sccm\\mdm\\plan-design\\plan-hybrid-mobile-device-management.md"
+  ],
+  "b3200246b4de4439e0f58975f712a68fe1c2a5ac": [
+    "sccm\\mdm\\plan-design\\plan-on-premises-mdm.md"
   ],
   "27aae39d2095681405503db3dca9fff0892713f1": [
     "sccm\\mdm\\plan-design\\plan-on-premises-mdm.md"
   ],
+  "9121785d43707b7669763dab9cd58cc69157e58b": [
+    "sccm\\mdm\\TOC.md"
+  ],
   "28167a5adaa498980c5e437b69c6ff4eff4e7396": [
     "sccm\\mdm\\TOC.md"
+  ],
+  "85e3e9c2586daa0c80557eac9514f004f763a240": [
+    "sccm\\mdm\\understand\\choose-between-standalone-intune-and-hybrid-mobile-device-management.md"
   ],
   "42c786f9ae2e51d1779bf89efba2ee48fdb29738": [
     "sccm\\mdm\\understand\\choose-between-standalone-intune-and-hybrid-mobile-device-management.md"
   ],
+  "d40ef2fbec745f147c8a6dcca1678de6a7e4c868": [
+    "sccm\\mdm\\understand\\hybrid-mobile-device-management.md"
+  ],
   "6a2b5199d885806e6a2322454fdf898747c3dd34": [
     "sccm\\mdm\\understand\\hybrid-mobile-device-management.md"
+  ],
+  "993f8a6025cf5180ca6a6f603a5aef53e5ca0113": [
+    "sccm\\mdm\\understand\\manage-mobile-devices-with-on-premises-infrastructure.md"
   ],
   "abd7e58fa85774a9d935e2b63bddc4a17c18c496": [
     "sccm\\mdm\\understand\\manage-mobile-devices-with-on-premises-infrastructure.md"
   ],
-  "e61950df6b33bb9c3dbaa6d8dfd4152dc78da35f": [
-    "sccm\\mdm\\understand\\media\\hybrid-1.png"
-  ],
-  "e6e64f3cb69c5f39cb0982a501e014bffd6f53f5": [
-    "sccm\\mdm\\understand\\media\\hybrid-2.png"
-  ],
-  "84af8dd482b6f84027e7da837c374e7b3283bace": [
-    "sccm\\mdm\\understand\\media\\hybrid-3.png"
-  ],
-  "ef524b14c615faa950321241aaa76d99c9458d72": [
-    "sccm\\mdm\\understand\\media\\hybrid-4.png"
-  ],
-  "a4b1a2455b9df2d8c598d164cd0c6ce65e4d8aaf": [
-    "sccm\\mdm\\understand\\media\\hybrid-5.png"
-  ],
-  "57732db78a76067c645a7e3a2f7ec9c1e8636abc": [
-    "sccm\\mdm\\understand\\media\\hybrid-6.png"
-  ],
-  "d0a4d32939be85c3291eba609d3e04457e87f83d": [
-    "sccm\\mdm\\understand\\media\\hybrid-7.png"
-  ],
-  "75406f23034ebcb1dfbd8bb4ac8418ac1b129b75": [
-    "sccm\\mdm\\understand\\media\\hybrid-8.png"
-  ],
-  "d99994cc912c560994c973cf2326f1cdfb61a65b": [
-    "sccm\\mdm\\understand\\media\\hybrid-9.png"
-  ],
-  "4cf5264eba406acedd16d21fab4ec89394336ac0": [
-    "sccm\\mdm\\understand\\media\\hybrid-decisions.png"
-  ],
-  "075374ed96fd22728ea4537c2a09f9b9079567d7": [
-    "sccm\\mdm\\understand\\media\\On-premises-conceptual.png"
+  "628113d0e3d049420014ad1dc4498f2359f8b08e": [
+    "sccm\\mdm\\understand\\whats-new-in-hybrid-mobile-device-management.md"
   ],
   "cb95223a2acacb6afbcb72f909297833a03e4347": [
     "sccm\\mdm\\understand\\whats-new-in-hybrid-mobile-device-management.md"
   ],
+  "02e264298424d97d4c8c3e0fa6eb5a288a4813b2": [
+    "sccm\\osd\\deploy-use\\create-a-custom-task-sequence.md"
+  ],
   "7fad99381da364a0a9c005bcbd43da3173369fdd": [
     "sccm\\osd\\deploy-use\\create-a-custom-task-sequence.md"
+  ],
+  "be5a652a1c93afc70e3df3157bbb0ed1d87b0e2d": [
+    "sccm\\osd\\deploy-use\\create-an-image-for-an-oem-in-factory-or-a-local-depot.md"
   ],
   "9c4fc6c6286ed764715ac827f90a0eda4ef784a8": [
     "sccm\\osd\\deploy-use\\create-an-image-for-an-oem-in-factory-or-a-local-depot.md"
   ],
+  "68e626ff502dcf407b68114d3869551001781885": [
+    "sccm\\osd\\deploy-use\\create-a-task-sequence-for-non-operating-system-deployments.md"
+  ],
   "def7560326571fd9fabceef717176c72293f697d": [
     "sccm\\osd\\deploy-use\\create-a-task-sequence-for-non-operating-system-deployments.md"
+  ],
+  "3b161971f09a524405a0ab8a3d5a7832d841f8cd": [
+    "sccm\\osd\\deploy-use\\create-a-task-sequence-to-capture-and-restore-user-state.md"
   ],
   "b18509859be195ed79978a688d2323acd6be3862": [
     "sccm\\osd\\deploy-use\\create-a-task-sequence-to-capture-and-restore-user-state.md"
   ],
+  "30e47362521bab978bdd4bdac3ae2e33d2601b5c": [
+    "sccm\\osd\\deploy-use\\create-a-task-sequence-to-capture-an-operating-system.md"
+  ],
   "a9a8cf7bcd04468edc1ab6af977cc9fc0f22c09e": [
     "sccm\\osd\\deploy-use\\create-a-task-sequence-to-capture-an-operating-system.md"
+  ],
+  "9aa5b7696d86fcd5e95034b86ed39734ba8e6629": [
+    "sccm\\osd\\deploy-use\\create-a-task-sequence-to-install-an-operating-system.md"
   ],
   "416166a007c03ba80bd3e2801a8e070f8e68514d": [
     "sccm\\osd\\deploy-use\\create-a-task-sequence-to-install-an-operating-system.md"
   ],
+  "042c6fe9dc0b53c5b7c9d439babe6c93828ffd19": [
+    "sccm\\osd\\deploy-use\\create-a-task-sequence-to-upgrade-an-operating-system.md"
+  ],
   "e6541b6c89d169f5a13206f081d1d4643b1957ae": [
     "sccm\\osd\\deploy-use\\create-a-task-sequence-to-upgrade-an-operating-system.md"
+  ],
+  "fe3c2175f5e1503c3895b604fdcdcd07f0a07908": [
+    "sccm\\osd\\deploy-use\\create-bootable-media.md"
   ],
   "51ec4c96dfba0ded1c16d61e6aaf8f7d416bbdb7": [
     "sccm\\osd\\deploy-use\\create-bootable-media.md"
   ],
+  "d663e3fc51b1dc1599ac2abaa84570b62ed1d5f9": [
+    "sccm\\osd\\deploy-use\\create-capture-media.md"
+  ],
   "35da57635e2d197cce8578c4a26579600d02c778": [
     "sccm\\osd\\deploy-use\\create-capture-media.md"
+  ],
+  "fdd1af19e144533587dc7575a522c76dd52f803a": [
+    "sccm\\osd\\deploy-use\\create-prestaged-media.md"
   ],
   "16dc4f66528a828076d9d64aca688d9ef9634c14": [
     "sccm\\osd\\deploy-use\\create-prestaged-media.md"
   ],
+  "60ec4a5557be380368d671238350230bbb9535fd": [
+    "sccm\\osd\\deploy-use\\create-stand-alone-media.md"
+  ],
   "a8be8c7587782f5c2df6642b28b12b6545663889": [
     "sccm\\osd\\deploy-use\\create-stand-alone-media.md"
+  ],
+  "e6e99032c4411487ad4b0b299de107f02e16acc7": [
+    "sccm\\osd\\deploy-use\\create-task-sequence-media.md"
   ],
   "c7ba4f2170126f14fabe6a082ebd18d5753be1ea": [
     "sccm\\osd\\deploy-use\\create-task-sequence-media.md"
   ],
+  "de326470a74ca0602a4d4e7ae5076cda1b2263f8": [
+    "sccm\\osd\\deploy-use\\deploy-windows-to-go.md"
+  ],
   "5d7ca47407728ffcbc24027a29106606d679b91f": [
     "sccm\\osd\\deploy-use\\deploy-windows-to-go.md"
+  ],
+  "96283936f1acca00938c02b0929aa3ce2687b25e": [
+    "sccm\\osd\\deploy-use\\install-new-windows-version-new-computer-bare-metal.md"
   ],
   "e46ca3ba757b52e1acaeb0f301fe4d551d0b199a": [
     "sccm\\osd\\deploy-use\\install-new-windows-version-new-computer-bare-metal.md"
   ],
+  "6bd1bcdfe4a0d08aed2e8217e53ce6a43fa27b2e": [
+    "sccm\\osd\\deploy-use\\manage-task-sequences-to-automate-tasks.md"
+  ],
   "b70641e215caa11b3d99c56163e70bbc017d2a2f": [
     "sccm\\osd\\deploy-use\\manage-task-sequences-to-automate-tasks.md"
+  ],
+  "eed38d04c72a53025502e988fd7c8c5356dc4eb8": [
+    "sccm\\osd\\deploy-use\\manage-windows-as-a-service.md"
   ],
   "3ae3784d26d3dfb074ff067e9c4c9aba9b5ee9e6": [
     "sccm\\osd\\deploy-use\\manage-windows-as-a-service.md"
   ],
+  "8f84a895ae9be0f6a431561b25f557c0516ffc68": [
+    "sccm\\osd\\deploy-use\\methods-to-deploy-enterprise-operating-systems.md"
+  ],
   "4f14f3a1ac1914ad50dee619c38bc64b50b64e94": [
     "sccm\\osd\\deploy-use\\methods-to-deploy-enterprise-operating-systems.md"
+  ],
+  "eee00cf759c49f19627eeb1b0ac2a03aac2dbd43": [
+    "sccm\\osd\\deploy-use\\monitor-operating-system-deployments.md"
   ],
   "f7950b39771cf5905bcb3d2b4e1aa19ae85471c2": [
     "sccm\\osd\\deploy-use\\monitor-operating-system-deployments.md"
   ],
+  "a1cf9533de0e8c34cd826865145bd89c4142c363": [
+    "sccm\\osd\\deploy-use\\preprovision-bitlocker-in-windows-pe.md"
+  ],
   "16dff9172187771b6e7c43271b5ffcb3c9a09c24": [
     "sccm\\osd\\deploy-use\\preprovision-bitlocker-in-windows-pe.md"
+  ],
+  "ce2e44e64839d4490b30dcb3389602bf26913d14": [
+    "sccm\\osd\\deploy-use\\refresh-an-existing-computer-with-a-new-version-of-windows.md"
   ],
   "09b866119cf61e2251a421c32cee1b4e1bdfdcf8": [
     "sccm\\osd\\deploy-use\\refresh-an-existing-computer-with-a-new-version-of-windows.md"
   ],
+  "0c5de87111c38b373f3386aa2f4ff8f13e6c77e6": [
+    "sccm\\osd\\deploy-use\\replace-an-existing-computer-and-transfer-settings.md"
+  ],
   "7373b210be768599ae4d271209f5e1c7f50803db": [
     "sccm\\osd\\deploy-use\\replace-an-existing-computer-and-transfer-settings.md"
+  ],
+  "403a955e0d44b8f7dc236df0ee102c2732335bae": [
+    "sccm\\osd\\deploy-use\\scenarios-to-deploy-enterprise-operating-systems.md"
   ],
   "d5c7dad890d70b27fa7774c8c726b8dcca3863d6": [
     "sccm\\osd\\deploy-use\\scenarios-to-deploy-enterprise-operating-systems.md"
   ],
+  "6d695e22242c9f3a0e820774aa58d75dee5dcdc5": [
+    "sccm\\osd\\deploy-use\\upgrade-windows-to-the-latest-version.md"
+  ],
   "0fcfa1ff580de4fee0ab6b368fc7029fe38a4e3e": [
     "sccm\\osd\\deploy-use\\upgrade-windows-to-the-latest-version.md"
+  ],
+  "f4dea75d1d1e6a2c1006887f0d4c4b4eb41594d8": [
+    "sccm\\osd\\deploy-use\\use-a-task-sequence-to-manage-virtual-hard-disks.md"
   ],
   "e53adbcb919477c7e8a2414dc12fa028e1d3f847": [
     "sccm\\osd\\deploy-use\\use-a-task-sequence-to-manage-virtual-hard-disks.md"
   ],
+  "7cc62108f55c5be7a42ba7bf18af5e5fb86ad14f": [
+    "sccm\\osd\\deploy-use\\use-bootable-media-to-deploy-windows-over-the-network.md"
+  ],
   "0b3c8d42aafc4d284f29ea3ae6ca873eae3bb11f": [
     "sccm\\osd\\deploy-use\\use-bootable-media-to-deploy-windows-over-the-network.md"
+  ],
+  "b8ae17afc9f292de01026997a87e8fa96c77d7d8": [
+    "sccm\\osd\\deploy-use\\use-multicast-to-deploy-windows-over-the-network.md"
   ],
   "94718e2e5cbd59673e0679eec9631b2f9067e542": [
     "sccm\\osd\\deploy-use\\use-multicast-to-deploy-windows-over-the-network.md"
   ],
+  "606d0daed7ded866e7cad7ec93ee194cd65168f0": [
+    "sccm\\osd\\deploy-use\\use-pxe-to-deploy-windows-over-the-network.md"
+  ],
   "689163b8fd8b5afb8f71c29ac8725ffd90ae6846": [
     "sccm\\osd\\deploy-use\\use-pxe-to-deploy-windows-over-the-network.md"
+  ],
+  "bd2c855e93c0840b2300822d4b60cdaf90bce932": [
+    "sccm\\osd\\deploy-use\\use-software-center-to-deploy-windows-over-the-network.md"
   ],
   "09474b91acdd210a4e1f47056eb9db6b6aac1a3a": [
     "sccm\\osd\\deploy-use\\use-software-center-to-deploy-windows-over-the-network.md"
   ],
+  "3f699d267035da3e1a02a875a2a4f13e24c0465e": [
+    "sccm\\osd\\deploy-use\\use-stand-alone-media-to-deploy-windows-without-using-the-network.md"
+  ],
   "189df7413d5f0ef4eee1a63e724da7509ee94419": [
     "sccm\\osd\\deploy-use\\use-stand-alone-media-to-deploy-windows-without-using-the-network.md"
+  ],
+  "9e8d91d930854ddcffaf3258e3b5947bd2643a07": [
+    "sccm\\osd\\get-started\\associate-users-with-a-destination-computer.md"
   ],
   "83523efe3972c75f90a483675d16c946ca56a169": [
     "sccm\\osd\\get-started\\associate-users-with-a-destination-computer.md"
   ],
+  "acbb4957d3a41d06a9dff404537bb5a4c853b232": [
+    "sccm\\osd\\get-started\\customize-boot-images.md"
+  ],
   "c989e395022bb8636939b53d82bd4f3f1d355594": [
     "sccm\\osd\\get-started\\customize-boot-images.md"
+  ],
+  "a872fb05b8e1b55fbcebc32968a3e2f774b8d8be": [
+    "sccm\\osd\\get-started\\customize-operating-system-images.md"
   ],
   "52b20b33754378afe031a597b682bc980c3c9d41": [
     "sccm\\osd\\get-started\\customize-operating-system-images.md"
   ],
+  "c9507f92a36971491d86f63f4436359dce2be4ac": [
+    "sccm\\osd\\get-started\\manage-boot-images.md"
+  ],
   "37baef687e6faec33af59ccfcd3b4f262a676dc1": [
     "sccm\\osd\\get-started\\manage-boot-images.md"
+  ],
+  "b152127d3abe4b916f6c32cb2ce0cc6cf8b3050d": [
+    "sccm\\osd\\get-started\\manage-drivers.md"
   ],
   "45c8e82c90e1bbc3abde8718b60144cf4e366b68": [
     "sccm\\osd\\get-started\\manage-drivers.md"
   ],
+  "f250186a5b55a6684bbe7ef640f56e6dc3d81b72": [
+    "sccm\\osd\\get-started\\manage-operating-system-images.md"
+  ],
   "1b1aac4f79a7c557301caf4d0d0474e07214083c": [
     "sccm\\osd\\get-started\\manage-operating-system-images.md"
+  ],
+  "9c5cfd1af0909185e4115f8f8e2ba62ce6421b49": [
+    "sccm\\osd\\get-started\\manage-operating-system-upgrade-packages.md"
   ],
   "80b470c3ff0a39a995f52e8dad509e76de7c07af": [
     "sccm\\osd\\get-started\\manage-operating-system-upgrade-packages.md"
   ],
+  "f4a12c54a0c93751be848ea68d03363369212109": [
+    "sccm\\osd\\get-started\\manage-user-state.md"
+  ],
   "218f5954d33b8e790086439ec2669c839ffa3353": [
     "sccm\\osd\\get-started\\manage-user-state.md"
+  ],
+  "2d7b25f320a8099bf3b96e80858247b93f16cc7f": [
+    "sccm\\osd\\get-started\\prepare-for-operating-system-deployment.md"
   ],
   "1d215e139cd5b676a3166783504735c76e45b9b7": [
     "sccm\\osd\\get-started\\prepare-for-operating-system-deployment.md"
   ],
+  "04596cf7c1e085b179deeddec5c121158bff5f6c": [
+    "sccm\\osd\\get-started\\prepare-for-unknown-computer-deployments.md"
+  ],
   "615b94665a2df017fbb0c1e363ba8c5a190a65b7": [
     "sccm\\osd\\get-started\\prepare-for-unknown-computer-deployments.md"
+  ],
+  "439045b36808188d02f6d79bff32144528c2118e": [
+    "sccm\\osd\\get-started\\prepare-site-system-roles-for-operating-system-deployments.md"
   ],
   "3b2b24dd4406b1c54b84bf58ebd6ddffdecf10ef": [
     "sccm\\osd\\get-started\\prepare-site-system-roles-for-operating-system-deployments.md"
   ],
+  "4667ecf187c327cb0596e603eefe618b7df23df7": [
+    "sccm\\osd\\get-started\\prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md"
+  ],
   "bbbab9b84602b237dd13aed8732cbd3c9dd45462": [
     "sccm\\osd\\get-started\\prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md"
+  ],
+  "1cac2f4a15cbad2b40b06988a1f3c436771a2064": [
+    "sccm\\osd\\plan-design\\infrastructure-requirements-for-operating-system-deployment.md"
   ],
   "c81879fb337a3c64ef5d8a85e6c8786cad72a8d8": [
     "sccm\\osd\\plan-design\\infrastructure-requirements-for-operating-system-deployment.md"
   ],
+  "a88496cca153367fdf2432e08ff79674eb8dc9e7": [
+    "sccm\\osd\\plan-design\\planning-considerations-for-automating-tasks.md"
+  ],
   "0a29954c524d9519b9c0ac57dd8e8c7185a30168": [
     "sccm\\osd\\plan-design\\planning-considerations-for-automating-tasks.md"
+  ],
+  "982ee969a476fd65395fb39a3039c77023ede573": [
+    "sccm\\osd\\plan-design\\planning-for-operating-system-deployment-interoperability.md"
   ],
   "c592dddfc8845488db363f15c4fb47181c7a6527": [
     "sccm\\osd\\plan-design\\planning-for-operating-system-deployment-interoperability.md"
   ],
+  "f5754b81eb1c1acdcc4d6b8080f4f76e38f70407": [
+    "sccm\\osd\\plan-design\\security-and-privacy-for-operating-system-deployment.md"
+  ],
   "ac5329eef340343f444febebbcf4c173689e1031": [
     "sccm\\osd\\plan-design\\security-and-privacy-for-operating-system-deployment.md"
+  ],
+  "6c8357f8298d7b9ada271f31d6a57a589386243f": [
+    "sccm\\osd\\TOC.md"
   ],
   "e6c3199498282e42c75bb2df2ae5153c9e37066a": [
     "sccm\\osd\\TOC.md"
   ],
+  "863ff4fc0d1fa8a7fea491d12e831a2fcc0dbc4f": [
+    "sccm\\osd\\understand\\introduction-to-operating-system-deployment.md"
+  ],
   "bc7eefc5a7b11640ecc14875bb901bacecf96c55": [
     "sccm\\osd\\understand\\introduction-to-operating-system-deployment.md"
+  ],
+  "0d401eaccf568b41c85b532e1ce9640eb3e7ca02": [
+    "sccm\\osd\\understand\\prestart-commands-for-task-sequence-media.md"
   ],
   "487f29c23851030ea246ceff67dfdd5d4f968178": [
     "sccm\\osd\\understand\\prestart-commands-for-task-sequence-media.md"
   ],
+  "948c7ee96e448369b786c587f8663a404df315c8": [
+    "sccm\\osd\\understand\\task-sequence-action-variables.md"
+  ],
   "2ffb87bca798f08941c35be03321a8d4e5839889": [
     "sccm\\osd\\understand\\task-sequence-action-variables.md"
+  ],
+  "9327544c5c7022a1c2d910182ec686c7f64546d9": [
+    "sccm\\osd\\understand\\task-sequence-built-in-variables.md"
   ],
   "fedf8bc59aa9d4b626cfa7f377bf56f7c9403556": [
     "sccm\\osd\\understand\\task-sequence-built-in-variables.md"
   ],
+  "9d63f1dbb3b17fdf3731440266f6678329e2ff8d": [
+    "sccm\\osd\\understand\\task-sequence-steps.md"
+  ],
   "d08ab7fd4ebefd3aec81ff7ac0810207dd42e418": [
     "sccm\\osd\\understand\\task-sequence-steps.md"
+  ],
+  "ec876316a220d9ed49b11641c6beb1281c4f0004": [
+    "sccm\\protect\\deploy-use\\certificate-infrastructure.md"
   ],
   "3c82ba29558e8302e8c444eec79f4284cfe68bb6": [
     "sccm\\protect\\deploy-use\\certificate-infrastructure.md"
   ],
+  "56618b0359a710193cc1547d041c9a974f636481": [
+    "sccm\\protect\\deploy-use\\configure-endpoint-protection.md"
+  ],
   "2927583602c1039d1730a82f652a7fd16f85595e": [
     "sccm\\protect\\deploy-use\\configure-endpoint-protection.md"
+  ],
+  "9dc1ae41cc36a73fa440694a03f98497ec739cc2": [
+    "sccm\\protect\\deploy-use\\create-certificate-profiles.md"
   ],
   "46b727d912d3c5e005921f712d49071ec8562b92": [
     "sccm\\protect\\deploy-use\\create-certificate-profiles.md"
   ],
+  "bb91f4a711699790bb01f48d32183cf1215b1952": [
+    "sccm\\protect\\deploy-use\\create-compliance-policy.md"
+  ],
   "79199edefd174643e08b7d5358814d438583a1c9": [
     "sccm\\protect\\deploy-use\\create-compliance-policy.md"
+  ],
+  "d2f9f5e71a11b5eeb251a993bd4b701658308eee": [
+    "sccm\\protect\\deploy-use\\create-exchange-activesync-profiles.md"
   ],
   "eda5d9988edf105ee339c2489dc73fe15020c163": [
     "sccm\\protect\\deploy-use\\create-exchange-activesync-profiles.md"
   ],
+  "cdbdce183ff7137d524a873fc67aff431647ced3": [
+    "sccm\\protect\\deploy-use\\create-pfx-certificate-profiles.md"
+  ],
   "a3fdd3fd2148e259d80eea7282527ee95080d283": [
     "sccm\\protect\\deploy-use\\create-pfx-certificate-profiles.md"
+  ],
+  "4e9d5217bd06b68073aae9f9d9c79bd634d880cd": [
+    "sccm\\protect\\deploy-use\\create-vpn-profiles.md"
   ],
   "d53683e832e1ca9556165744b346e96d0a2cd301": [
     "sccm\\protect\\deploy-use\\create-vpn-profiles.md"
   ],
+  "a6fcc2360c52cdc7fbe25a3718e24f2e5c1169d0": [
+    "sccm\\protect\\deploy-use\\create-wifi-profiles.md"
+  ],
   "e65974daa5a0a371747c94180a18a9d002aa4fdc": [
     "sccm\\protect\\deploy-use\\create-wifi-profiles.md"
+  ],
+  "13c7ed55f78f9a210e328a27fa76f245bf8edb6e": [
+    "sccm\\protect\\deploy-use\\create-windows-firewall-policies.md"
   ],
   "82e326180f074c0ecf7df3e43ee336411dd717d1": [
     "sccm\\protect\\deploy-use\\create-windows-firewall-policies.md"
   ],
+  "1979f1b01f2f94b201e0d96e8587af9a8a121000": [
+    "sccm\\protect\\deploy-use\\cryptographic-controls-technical-reference.md"
+  ],
   "c2e2c723a09d4609809107659bc946f11abb8760": [
     "sccm\\protect\\deploy-use\\cryptographic-controls-technical-reference.md"
+  ],
+  "edebb67123cccd22ea43d3bc608afb64a4976a3e": [
+    "sccm\\protect\\deploy-use\\deploy-wifi-vpn-email-cert-profiles.md"
   ],
   "181e786a913598e641ae646abee3de412311cb35": [
     "sccm\\protect\\deploy-use\\deploy-wifi-vpn-email-cert-profiles.md"
   ],
+  "d461f95f875632860238d503d7acd7ab8c320d58": [
+    "sccm\\protect\\deploy-use\\device-compliance-policies.md"
+  ],
   "07f0656ca6c421de6c0dca2d5f5137b16c906a1b": [
     "sccm\\protect\\deploy-use\\device-compliance-policies.md"
+  ],
+  "002b68ec1f8a37bdbb77b5ba4be7b0dcea3f3f7c": [
+    "sccm\\protect\\deploy-use\\endpoint-antimalware-firewall.md"
   ],
   "59f83ac8f5d0edc04236e381173d14bc980fa79e": [
     "sccm\\protect\\deploy-use\\endpoint-antimalware-firewall.md"
   ],
+  "f211a26e578b64fb0699d8895d7e875005389507": [
+    "sccm\\protect\\deploy-use\\endpoint-antimalware-policies.md"
+  ],
   "981d60d2c3841b7948721c428a55bab8963ccfa1": [
     "sccm\\protect\\deploy-use\\endpoint-antimalware-policies.md"
+  ],
+  "ee76dc26c92d2390fd366372be9fb1debaf391b0": [
+    "sccm\\protect\\deploy-use\\endpoint-configure-alerts.md"
   ],
   "afca87cbb0de78f8c9abd21942224a2092a17b17": [
     "sccm\\protect\\deploy-use\\endpoint-configure-alerts.md"
   ],
+  "40543ccdbbc02a9f11309064ea018ec9402474b5": [
+    "sccm\\protect\\deploy-use\\endpoint-definitions-configmgr.md"
+  ],
   "f4f184872ad82d587a8b7a9213cad21fbd6aae16": [
     "sccm\\protect\\deploy-use\\endpoint-definitions-configmgr.md"
+  ],
+  "cf0a69692525f0b32699cabe5bca23ff5ef9797c": [
+    "sccm\\protect\\deploy-use\\endpoint-definitions-microsoft-updates.md"
   ],
   "4ff7f14c31b4cb3ce6855dfeb3dfedab1f690bb2": [
     "sccm\\protect\\deploy-use\\endpoint-definitions-microsoft-updates.md"
   ],
+  "7d407cc585d7567ad4c7e3ab4650b17fbd9c3370": [
+    "sccm\\protect\\deploy-use\\endpoint-definitions-network.md"
+  ],
   "3a543f4ee8d730aae04d204256d1a976ecc34089": [
     "sccm\\protect\\deploy-use\\endpoint-definitions-network.md"
+  ],
+  "fa5abe78fd92beefdc134cd3fa661b8884bea3f1": [
+    "sccm\\protect\\deploy-use\\endpoint-definitions-protection-center.md"
   ],
   "774a434372232ae8937fc3ceb1db1c2094fc2aef": [
     "sccm\\protect\\deploy-use\\endpoint-definitions-protection-center.md"
   ],
+  "59ecc54944a2a1517789822581bf07b39153de39": [
+    "sccm\\protect\\deploy-use\\endpoint-definitions-wsus.md"
+  ],
   "2257374415b85abe38db5168dc32ab4daba26cf5": [
     "sccm\\protect\\deploy-use\\endpoint-definitions-wsus.md"
+  ],
+  "5fc418a2cd9fc13e7626b779a8cc303e096c1409": [
+    "sccm\\protect\\deploy-use\\endpoint-definition-updates.md"
   ],
   "5144a02518d88555b0fa27d78fe390308b8cb7a8": [
     "sccm\\protect\\deploy-use\\endpoint-definition-updates.md"
   ],
+  "a17994dca24003c58d582df4e7b8c923fa028186": [
+    "sccm\\protect\\deploy-use\\endpoint-protection.md"
+  ],
   "9eaadce94e3d72589847a7e1decf14f8116406cd": [
     "sccm\\protect\\deploy-use\\endpoint-protection.md"
+  ],
+  "76a7d018747ca6bd112b51f8f67c298416ea784e": [
+    "sccm\\protect\\deploy-use\\endpoint-protection-client-faq.md"
   ],
   "6a9463307e24d9ede9036e36d2967d0698471901": [
     "sccm\\protect\\deploy-use\\endpoint-protection-client-faq.md"
   ],
+  "94f2a321c76e046dd039d8fd80532f93325d2d1a": [
+    "sccm\\protect\\deploy-use\\endpoint-protection-client-help.md"
+  ],
   "6db9d426e1993f31f6e089c300d8026215ba2253": [
     "sccm\\protect\\deploy-use\\endpoint-protection-client-help.md"
+  ],
+  "1fdd8f2f97b669cea5351787ef34c96f78ade124": [
+    "sccm\\protect\\deploy-use\\endpoint-protection-configure.md"
   ],
   "132c09a0ab4032c9d703455dcdc2bdcbdbe6b20a": [
     "sccm\\protect\\deploy-use\\endpoint-protection-configure.md"
   ],
+  "8056f1dbb0d7b79702eb4146b6742a9a1ab5f8bd": [
+    "sccm\\protect\\deploy-use\\endpoint-protection-configure-client.md"
+  ],
   "707c5e20c02ea0bbdf9ed98f572722c5f6bea1cd": [
     "sccm\\protect\\deploy-use\\endpoint-protection-configure-client.md"
+  ],
+  "c2e457d14b018052c70e52a1cd285dd137928b62": [
+    "sccm\\protect\\deploy-use\\endpoint-protection-site-role.md"
   ],
   "5098de0ca1a2580b7a8b1c2f94c7246df2d36072": [
     "sccm\\protect\\deploy-use\\endpoint-protection-site-role.md"
   ],
+  "a840b67e9557be874ead821b91434be9b658ce1e": [
+    "sccm\\protect\\deploy-use\\find-a-pfn-for-per-app-vpn.md"
+  ],
   "d8415ed3245acd1e6edf77c73336446c6689689e": [
     "sccm\\protect\\deploy-use\\find-a-pfn-for-per-app-vpn.md"
+  ],
+  "6ebaef8322173fd22c6251a02e1ff3232bf83e71": [
+    "sccm\\protect\\deploy-use\\introduction-to-certificate-profiles.md"
   ],
   "fc028470a1139f0172c9818b1cd3d3b449bae8e4": [
     "sccm\\protect\\deploy-use\\introduction-to-certificate-profiles.md"
   ],
+  "c6e8c2fab7d5d7056d25e004527a52449ce3f778": [
+    "sccm\\protect\\deploy-use\\introduction-to-email-profiles.md"
+  ],
   "90bbea7cc21248c6ebd1b1a8ce5f2abba6de0a69": [
     "sccm\\protect\\deploy-use\\introduction-to-email-profiles.md"
+  ],
+  "3f5010c04fb8db2fafb2939431f97e2d0554b383": [
+    "sccm\\protect\\deploy-use\\introduction-to-wifi-profiles.md"
   ],
   "9c9db0e42c167c7cd4f9c94360b9f1909c735674": [
     "sccm\\protect\\deploy-use\\introduction-to-wifi-profiles.md"
   ],
+  "c475c560971ab73e8be7671164a010a91bd3f229": [
+    "sccm\\protect\\deploy-use\\manage-access-to-o365-services-for-pcs-managed-by-sccm.md"
+  ],
   "93c76a42a801aef36a026dab570ae841e53e2648": [
     "sccm\\protect\\deploy-use\\manage-access-to-o365-services-for-pcs-managed-by-sccm.md"
+  ],
+  "2dad04cb429ac854b5455c2af051f6f7caaadd66": [
+    "sccm\\protect\\deploy-use\\manage-access-to-services.md"
   ],
   "d0e3e435033ebf9ae30b5451384f969b7b839c7d": [
     "sccm\\protect\\deploy-use\\manage-access-to-services.md"
   ],
+  "61409cf78bef3991d096c5c9615ff667aca9cb43": [
+    "sccm\\protect\\deploy-use\\manage-dynamics-crm-online-access.md"
+  ],
   "5f690818dde68db536340ffecd4e274d0e815500": [
     "sccm\\protect\\deploy-use\\manage-dynamics-crm-online-access.md"
+  ],
+  "c1797910f2b7ceda451c2ccb23f66a4b2bd4b6ff": [
+    "sccm\\protect\\deploy-use\\manage-email-access.md"
   ],
   "2e1b34b208dd8122bb5f678bd1d9f21c314c319b": [
     "sccm\\protect\\deploy-use\\manage-email-access.md"
   ],
+  "84fdd9c1141c7bee5e331eacb136d9dc21837c0f": [
+    "sccm\\protect\\deploy-use\\manage-sharepoint-online-access.md"
+  ],
   "a7df8de38b64a3cfb8b9f9a06f33f7db182cca34": [
     "sccm\\protect\\deploy-use\\manage-sharepoint-online-access.md"
+  ],
+  "a8d0655909c85eb53c2d1eb513586f9733236359": [
+    "sccm\\protect\\deploy-use\\manage-skype-for-business-online-access.md"
   ],
   "155550ba84a6afd24c50c9dddc5ea7b1582dd64d": [
     "sccm\\protect\\deploy-use\\manage-skype-for-business-online-access.md"
   ],
+  "1e4f7a68801e0c00377c3e96a0bf080cf89a3d62": [
+    "sccm\\protect\\deploy-use\\monitor-certificate-profiles.md"
+  ],
   "c06bb26f874cb1ea2db7f0e73ae82e3d7d0d04a7": [
     "sccm\\protect\\deploy-use\\monitor-certificate-profiles.md"
+  ],
+  "8893485e885901cc8af3d44d02064610f542e193": [
+    "sccm\\protect\\deploy-use\\monitor-endpoint-protection.md"
   ],
   "9d4c07db855105dad2407e276672c9dbc349ac0a": [
     "sccm\\protect\\deploy-use\\monitor-endpoint-protection.md"
   ],
+  "cd9d492202dc2a70348bc54b58fa942d8be7002e": [
+    "sccm\\protect\\deploy-use\\monitor-wifi-email-vpn-profiles.md"
+  ],
   "8647e9b301b8e4ab8f274525b819749a89ea1449": [
     "sccm\\protect\\deploy-use\\monitor-wifi-email-vpn-profiles.md"
+  ],
+  "33f47079c1c0aebbffcb2c6ff9d5abacf033ec12": [
+    "sccm\\protect\\deploy-use\\scenarios-endpoint-protection.md"
   ],
   "22c111fa2c7bc5d3998768d730038d8a76a5a64e": [
     "sccm\\protect\\deploy-use\\scenarios-endpoint-protection.md"
   ],
+  "3d07f4c4a8124eb70cd18a77d11aff49d03a3424": [
+    "sccm\\protect\\deploy-use\\troubleshoot-endpoint-client.md"
+  ],
   "093549d3d3f4b3e85d73c0243bd7f05e35061d0c": [
     "sccm\\protect\\deploy-use\\troubleshoot-endpoint-client.md"
+  ],
+  "e78f0e741c6d98cf54e55a2c175259ba9d7ce556": [
+    "sccm\\protect\\deploy-use\\vpn-profiles.md"
   ],
   "01e0a5db62d2b41e0db973b1fdd8196ff054df29": [
     "sccm\\protect\\deploy-use\\vpn-profiles.md"
   ],
+  "f7e309a667a3c0bf25af32e636b86297c7ae002d": [
+    "sccm\\protect\\deploy-use\\windows-defender-advanced-threat-protection.md"
+  ],
   "a13f4f6509ac59ad4663e3227c10e0b686ecdd33": [
     "sccm\\protect\\deploy-use\\windows-defender-advanced-threat-protection.md"
+  ],
+  "f2a853d63407637d4e8ece5d46cd4f0dc717c3de": [
+    "sccm\\protect\\deploy-use\\windows-hello-for-business-settings.md"
   ],
   "a1fc1f192114fea9fd594c42fed592cd0911a5e2": [
     "sccm\\protect\\deploy-use\\windows-hello-for-business-settings.md"
   ],
-  "4bbc76b5e6a221455bd9fefa3f9f1efee5b77c5d": [
-    "sccm\\protect\\media\\CA_compliance_report.png"
-  ],
-  "a33cd943cfbed72c9b43fff77a4bf36b1f485502": [
-    "sccm\\protect\\media\\CA_Win10OSversion.png"
-  ],
-  "cec44005d4b4571b36ae7282b89128029aa717bf": [
-    "sccm\\protect\\media\\ConditionalAccess_SFBFlow.png"
-  ],
-  "8e11b2aa1e985e9c2b9013fae17c305466aea1c8": [
-    "sccm\\protect\\media\\ConditionalAccess_SFBPolicy.png"
-  ],
-  "f39d4bc54eaf9e57d461f92a5aeeccdeff9b0790": [
-    "sccm\\protect\\media\\ConditionalAccess4.png"
-  ],
-  "495a0e184d5b0f7d60292dd23b38e57fdad93e87": [
-    "sccm\\protect\\media\\ConditionalAccess8-1.png"
-  ],
-  "1dde0f9c701974b72ef12e63ecc4ed76f84f053e": [
-    "sccm\\protect\\media\\ConditionalAccess8-2.png"
-  ],
-  "4f3c1dba5f1026b42852909c0bcd8f6414523578": [
-    "sccm\\protect\\media\\ConditionalAccess8-6.png"
-  ],
-  "46e5b00c04e59ca79796d4d1aa580bf8f6fd7050": [
-    "sccm\\protect\\media\\Endpoint-Protection-Workflow.gif"
-  ],
-  "7f8bf512eba1fbfc90371b585e5c75ce9bd3c4b8": [
-    "sccm\\protect\\media\\HybridCondAccessWiz1.PNG"
-  ],
-  "bdcdc0cba73f712faeb3647ed934790913bb5383": [
-    "sccm\\protect\\media\\HybridCondAccessWiz2.PNG"
-  ],
-  "6a86fe479171aedfad9945bf5ec32cdb917d3a11": [
-    "sccm\\protect\\media\\HybridCondAccessWiz3.png"
-  ],
-  "e7856022d7444b91bae346a07a8baffb2f8ceaad": [
-    "sccm\\protect\\media\\HybridCondAccessWiz4.PNG"
-  ],
-  "4d400df60e1df4515d027407089779d881068589": [
-    "sccm\\protect\\media\\HybridOnlineSetupIntune.png"
-  ],
-  "a6a8d2c7c3239985e54745b56857ff7c66dc33eb": [
-    "sccm\\protect\\media\\IntuneSASharePointOnlineCAPolicy.png"
-  ],
-  "1a1bccf04d4ae09877a0c554bea53125e7181efb": [
-    "sccm\\protect\\media\\mdm-browser-ca-android-cert-prompt.png"
-  ],
-  "1d8598d5c0d5b62e8213a1172ba42f801d53c97e": [
-    "sccm\\protect\\media\\mdm-browser-ca-ios-cert-prompt_v2.png"
-  ],
-  "8347ec59d03aebeca9ef3081151ab8cf24174ff1": [
-    "sccm\\protect\\media\\mdm-ca-dynamics-crm-flow-diagram.png"
-  ],
-  "ab891ab721e056098c0dc0c2b620a525977c43a6": [
-    "sccm\\protect\\media\\mdm-ca-dynamics-crm-policy-configuration.png"
+  "066b6325616f5fe779b778265baa114788c76bef": [
+    "sccm\\protect\\plan-design\\planning-for-certificate-template-permissions.md"
   ],
   "84232e2e78fe282691ea0838208b94979291c937": [
     "sccm\\protect\\plan-design\\planning-for-certificate-template-permissions.md"
   ],
+  "c246ac727efa21fab30a81999cc9bad00f20551e": [
+    "sccm\\protect\\plan-design\\planning-for-endpoint-protection.md"
+  ],
   "de16e91a7346ff0396e8cfc6640157a8891fbd17": [
     "sccm\\protect\\plan-design\\planning-for-endpoint-protection.md"
+  ],
+  "8a7134af111cf24258f0f271023be51387c21f00": [
+    "sccm\\protect\\plan-design\\prerequisites-for-certificate-profiles.md"
   ],
   "a5daafba51839711f5265323eaedc9c5ccf3cfe5": [
     "sccm\\protect\\plan-design\\prerequisites-for-certificate-profiles.md"
   ],
+  "0a89dd219ad8cc217be1421bd963098eed147cc8": [
+    "sccm\\protect\\plan-design\\prerequisites-for-email-profiles.md"
+  ],
   "7d84779c1a6a52b7cba3e7d6df063e372a1a9046": [
     "sccm\\protect\\plan-design\\prerequisites-for-email-profiles.md"
+  ],
+  "c103735a0f5fab6b800a7e9fb808221aebb102cb": [
+    "sccm\\protect\\plan-design\\prerequisites-for-wifi-vpn-profiles.md"
   ],
   "1f9fbd50a4b2ba5c8fac19ab924e04860bc91ebf": [
     "sccm\\protect\\plan-design\\prerequisites-for-wifi-vpn-profiles.md"
   ],
+  "6e8b453c9baf03575c4260b52d5f18c75b5c0d8e": [
+    "sccm\\protect\\plan-design\\security-and-privacy-for-certificate-profiles.md"
+  ],
   "862615c467bc24b506cd2d55ad4a1a2f8ed6c69b": [
     "sccm\\protect\\plan-design\\security-and-privacy-for-certificate-profiles.md"
+  ],
+  "49f7f2b780c5e499b5090fafb1a57d4f6b1ac61f": [
+    "sccm\\protect\\plan-design\\security-and-privacy-for-email-profiles.md"
   ],
   "4dc5096745bcffa3525a8c356d720470313c59fc": [
     "sccm\\protect\\plan-design\\security-and-privacy-for-email-profiles.md"
   ],
+  "6d74b8006e6c778c281718446fd51467dc63829a": [
+    "sccm\\protect\\plan-design\\security-and-privacy-for-wifi-vpn-profiles.md"
+  ],
   "91caae4dfba4cb76890b088fe4bffdaf4382a419": [
     "sccm\\protect\\plan-design\\security-and-privacy-for-wifi-vpn-profiles.md"
+  ],
+  "8fd4d73bf300cfe55b061108d9df1d8f5001fb82": [
+    "sccm\\protect\\TOC.md"
   ],
   "e41043c8139b7f55f1a36f22ce84407434268a33": [
     "sccm\\protect\\TOC.md"
   ],
+  "d7e3915c5bb3638e57b0f6debf187beb10dd2519": [
+    "sccm\\protect\\understand\\backup-and-recovery.md"
+  ],
   "ffe54dff66e97b2d2a7a05ffaa586ef029833001": [
     "sccm\\protect\\understand\\backup-and-recovery.md"
+  ],
+  "18475f6f3b1e079ec439effb27af20c3e9a7d802": [
+    "sccm\\protect\\understand\\high-availability-options.md"
   ],
   "7f4f1d8cae5527900ef50ce55c5a640f1bcbfbf1": [
     "sccm\\protect\\understand\\high-availability-options.md"
   ],
+  "318553983a2bf9782016afbc4d0eeb60e1258afb": [
+    "sccm\\protect\\understand\\protect-data-and-site-infrastructure.md"
+  ],
   "dd058aa4d133f9301d801b3e88d42b4f4ed17ade": [
     "sccm\\protect\\understand\\protect-data-and-site-infrastructure.md"
+  ],
+  "b8f221a7de1378cd4a9258ee9729aa7e1dfdc23f": [
+    "sccm\\protect\\understand\\settings-to-manage-high-risk-deployments.md"
   ],
   "7865bcda39073944072e3a58353a2627f05b98e4": [
     "sccm\\protect\\understand\\settings-to-manage-high-risk-deployments.md"
   ],
+  "3ba2ba4eac7216e138c65afb82c1ea69a8b39d9b": [
+    "sccm\\sum\\deploy-use\\add-software-updates-to-an-update-group.md"
+  ],
   "124b032af2c8c4851b0bdc8a2a802550763b278f": [
     "sccm\\sum\\deploy-use\\add-software-updates-to-an-update-group.md"
+  ],
+  "034d67f4cd83ad293bac674f79491ed29efca863": [
+    "sccm\\sum\\deploy-use\\automatically-deploy-software-updates.md"
   ],
   "4fe116173ae6ef76211479e733107822579dcdae": [
     "sccm\\sum\\deploy-use\\automatically-deploy-software-updates.md"
   ],
+  "2492aa06c9c82d03ed1d23d0084bb8cfb0a733a1": [
+    "sccm\\sum\\deploy-use\\deploy-software-updates.md"
+  ],
   "80bf52e8bb7c3685ae612b3f5ab0b35a0cb333f2": [
     "sccm\\sum\\deploy-use\\deploy-software-updates.md"
+  ],
+  "369aa22f627381a37e392d1254998d4b047f915b": [
+    "sccm\\sum\\deploy-use\\download-software-updates.md"
   ],
   "9f352964621af14310ff54a5a7f3c4f932a06606": [
     "sccm\\sum\\deploy-use\\download-software-updates.md"
   ],
+  "12cf594b4be3009db08f848b9f51366def9b846a": [
+    "sccm\\sum\\deploy-use\\example-scenario-deploy-monitor-monthly-security-updates.md"
+  ],
   "590795168722474505a0b223d0a9d58c63e997c5": [
     "sccm\\sum\\deploy-use\\example-scenario-deploy-monitor-monthly-security-updates.md"
+  ],
+  "a3723218539d46e305c0b007addd8f81e8025061": [
+    "sccm\\sum\\deploy-use\\integrate-windows-update-for-business-windows-10.md"
   ],
   "87662ee797e3f3afd956c20d22aca52e77a00486": [
     "sccm\\sum\\deploy-use\\integrate-windows-update-for-business-windows-10.md"
   ],
+  "55cf224e070d7c6f04b17ff113d55fcb12d2a386": [
+    "sccm\\sum\\deploy-use\\manage-office-365-proplus-updates.md"
+  ],
   "e7d847322c9555355105efe52266f4df9ddfd5d9": [
     "sccm\\sum\\deploy-use\\manage-office-365-proplus-updates.md"
+  ],
+  "decd43a9e613a18a9a007bdda9248304cf35ee30": [
+    "sccm\\sum\\deploy-use\\manually-deploy-software-updates.md"
   ],
   "0bb7c2223e1c329d663d777985a92720d361ae0c": [
     "sccm\\sum\\deploy-use\\manually-deploy-software-updates.md"
   ],
+  "d222d946eb14d666b0ea80cb0924c48b3ef420ee": [
+    "sccm\\sum\\deploy-use\\monitor-software-updates.md"
+  ],
   "100733e0fff967da90bb3eceff58d759c76031d3": [
     "sccm\\sum\\deploy-use\\monitor-software-updates.md"
+  ],
+  "7c85180de2733e83f698ffb695af39d376af6112": [
+    "sccm\\sum\\deploy-use\\service-a-server-group.md"
   ],
   "e14472e31cf5341edf4598614f7030e6f0a17342": [
     "sccm\\sum\\deploy-use\\service-a-server-group.md"
   ],
+  "fb9ef52381644287f2b4a88d405069607c4a1cb3": [
+    "sccm\\sum\\deploy-use\\software-updates-maintenance.md"
+  ],
   "9205ea1375449bd8ee29820c4362f71309b6a319": [
     "sccm\\sum\\deploy-use\\software-updates-maintenance.md"
+  ],
+  "961e5d7279c949a639d38569d77fae578bc9ffd8": [
+    "sccm\\sum\\get-started\\configure-classifications-and-products.md"
   ],
   "f56c86f05485394d204206e1bacb6c37aaadb804": [
     "sccm\\sum\\get-started\\configure-classifications-and-products.md"
   ],
+  "f922153a8b050babc1bb2d3c8970d4d590473e6b": [
+    "sccm\\sum\\get-started\\install-a-software-update-point.md"
+  ],
   "0159d8e88ebcfc2f7903ee42752a419984c9d3aa": [
     "sccm\\sum\\get-started\\install-a-software-update-point.md"
+  ],
+  "fb2e6c27b8dca158886e3a0b6aa2f1f12e9f5480": [
+    "sccm\\sum\\get-started\\manage-settings-for-software-updates.md"
   ],
   "3cc6c1c445f3fab87615d4eb09bc64ad1d944f1c": [
     "sccm\\sum\\get-started\\manage-settings-for-software-updates.md"
   ],
+  "77074f77767af17c49cdedacd60433874bfc13fc": [
+    "sccm\\sum\\get-started\\prepare-for-software-updates-management.md"
+  ],
   "12b92b6333babc24336a0fa5d5808f12aa3afcf1": [
     "sccm\\sum\\get-started\\prepare-for-software-updates-management.md"
+  ],
+  "f482ca9595dadeba8ae85b6d9887b8a09ff8f640": [
+    "sccm\\sum\\get-started\\remove-a-software-update-point.md"
   ],
   "66fb4fe8a6fd8e338553b46bf914c1d080f5ba0d": [
     "sccm\\sum\\get-started\\remove-a-software-update-point.md"
   ],
+  "8e2d01ce3a48aa5f73d90ef7963784dd11a4f5ce": [
+    "sccm\\sum\\get-started\\synchronize-software-updates.md"
+  ],
   "9eb082cd7d3cb776b01fbae2f54c8b31cde413cd": [
     "sccm\\sum\\get-started\\synchronize-software-updates.md"
+  ],
+  "ff8155e04dae7457ee4125136fb7ef0338c66bac": [
+    "sccm\\sum\\get-started\\synchronize-software-updates-disconnected.md"
   ],
   "fca3c6d3d00c3516c391b9533b884aeb78a2c78f": [
     "sccm\\sum\\get-started\\synchronize-software-updates-disconnected.md"
@@ -1735,43 +3092,67 @@
   "d347548ca9a7b4f13a61559f60340adc6e5b5a43": [
     "sccm\\sum\\includes\\downloadupdates.md"
   ],
-  "6ddc637767a850a16056b7418b8ea15430f6e590": [
-    "sccm\\sum\\media\\Expired.jpg"
-  ],
-  "3531955e34baf771039a88aaa56087d9bbee9d57": [
-    "sccm\\sum\\media\\Invalid.jpg"
-  ],
-  "c648a3685b3f336d96276a20414c7172b0bedca4": [
-    "sccm\\sum\\media\\MetadataOnly.png"
-  ],
-  "fb7760577e02d163028d51451b7c24de831b0073": [
-    "sccm\\sum\\media\\Normal.jpg"
-  ],
-  "78effb18fe2c6ae8aac8ef23d0b5f50b8d31159c": [
-    "sccm\\sum\\media\\Superseded.jpg"
+  "73d555c48f89bf81f7d1c2c3c445b02dff661a34": [
+    "sccm\\sum\\plan-design\\plan-for-software-updates.md"
   ],
   "e0704415ee34fb3b63cc428ed7c12b2e64fdf6cf": [
     "sccm\\sum\\plan-design\\plan-for-software-updates.md"
   ],
+  "1761467c3fd7705a74725984764f6d777af4a9cd": [
+    "sccm\\sum\\plan-design\\prerequisites-for-software-updates.md"
+  ],
   "d88649031b1274b7054918fc1c2320ef83e1efcf": [
     "sccm\\sum\\plan-design\\prerequisites-for-software-updates.md"
+  ],
+  "a732cb30ab949eca085e5aabe99d089b87d233b2": [
+    "sccm\\sum\\plan-design\\security-and-privacy-for-software-updates.md"
   ],
   "e1c1f509e02af849ad31d004c2ac4c7cd3fcbecc": [
     "sccm\\sum\\plan-design\\security-and-privacy-for-software-updates.md"
   ],
+  "157ced363617a6727dc7b6bf4c396d6d991db557": [
+    "sccm\\sum\\plan-design\\software-updates-best-practices.md"
+  ],
   "e2f8ec141bf3c55275950ae89cbca0a8f3551b07": [
     "sccm\\sum\\plan-design\\software-updates-best-practices.md"
+  ],
+  "b28217f856081b149464aac2e5c84d17acd75ac9": [
+    "sccm\\sum\\TOC.md"
   ],
   "3154c7c0ccbd2e71b1d310f3dcb01e189f1fe10e": [
     "sccm\\sum\\TOC.md"
   ],
+  "e77ca190faaefdf4e7fa418cb57edf2e42bc65bb": [
+    "sccm\\sum\\understand\\software-updates-icons.md"
+  ],
   "f33bee1d174bc3755d606c99cfb6f08308d4c7f9": [
     "sccm\\sum\\understand\\software-updates-icons.md"
+  ],
+  "c90d71397c656cb0c0e6d0dbebc7d15405c1d910": [
+    "sccm\\sum\\understand\\software-updates-introduction.md"
   ],
   "54d7270c4597d10e373886a4dc58dc95cf57ace5": [
     "sccm\\sum\\understand\\software-updates-introduction.md"
   ],
   "adc83b19e793491b1c6ea0fd8b46cd9f32e592fc": [
     "sccm\\toc.md"
+  ],
+  "efccff6e2a0b1708d4124648da4e173d41663bd1": [
+    "sccm\\core\\understand\\convert-to-current-branch.md"
+  ],
+  "bd6eb3455fe1395ad08677922be98ea91c30119f": [
+    "sccm\\core\\understand\\install-the-ltsb.md"
+  ],
+  "a97eb7a637611ba269cf8f16635b8165c19283f1": [
+    "sccm\\core\\understand\\interoperability-client.md"
+  ],
+  "10518b6d7bc76d21b72ea38f7fec91714c59b4f8": [
+    "sccm\\core\\understand\\introduction-to-the-ltsb.md"
+  ],
+  "d82cf94777f59f861e01896aa9c15563084b0307": [
+    "sccm\\core\\understand\\supported-configurations-for-ltsb.md"
+  ],
+  "3957e854e980246c410f7de27caed9d66fc4829f": [
+    "sccm\\core\\understand\\which-branch-should-i-use.md"
   ]
 }
