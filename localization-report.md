@@ -3,9 +3,9 @@
 ## Summary
  Property | Value 
  -------- | ----- 
- Total Files | 620
+ Total Files | 623
 [ Handoff Failed Files ](#handoff-failed-list)| 0
-[ Handoff Success Files ](#handoff-success-list)| 602
+[ Handoff Success Files ](#handoff-success-list)| 605
 [ Archive Failed Files ](#archive-failed-list)| 0
 [ Archive Success Files ](#archive-success-list)| 0
 [ Handback Failed Files ](#handback-failed-list)| 0
@@ -181,7 +181,7 @@
  [sccm\core\get-started\capabilities-in-technical-preview-1601.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/get-started/capabilities-in-technical-preview-1601.md) | HandedOffSuccess | [Details](#378ec70d93ea543dbf4851b2bc389ce9a5bd4196175)
  [sccm\core\get-started\capabilities-in-technical-preview-1602.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/get-started/capabilities-in-technical-preview-1602.md) | HandedOffSuccess | [Details](#fc157937c1e5d9beed2698d31b1f9ebb0904c199176)
  [sccm\core\get-started\capabilities-in-technical-preview-1603.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/get-started/capabilities-in-technical-preview-1603.md) | HandedOffSuccess | [Details](#c2a9b6ee74e376a85d5abdcfbd406171ddf63c8b177)
- [sccm\core\get-started\capabilities-in-technical-preview-1604.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/get-started/capabilities-in-technical-preview-1604.md) | HandedOffSuccess | [Details](#6e1102937aaf62f391ffcbde5ba8d72b02a8c17a178)
+ [sccm\core\get-started\capabilities-in-technical-preview-1604.md](https://github.com/Microsoft/SCCMDocs-pr/blob/275d94b0596f04d2339ffb7aa315b4afdd237678/sccm/core/get-started/capabilities-in-technical-preview-1604.md) | HandedOffSuccess | [Details](#1d42adcf47fb9ccc89e18114914ff893d4080ede178)
  [sccm\core\get-started\capabilities-in-technical-preview-1605.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/get-started/capabilities-in-technical-preview-1605.md) | HandedOffSuccess | [Details](#4c22ef9a56f928048238c3d665783163dac4a80a179)
  [sccm\core\get-started\capabilities-in-technical-preview-1606.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/get-started/capabilities-in-technical-preview-1606.md) | HandedOffSuccess | [Details](#dd33ae77be5df08aa575bf8c17f61c4c9c0309fe180)
  [sccm\core\get-started\capabilities-in-technical-preview-1607.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/get-started/capabilities-in-technical-preview-1607.md) | HandedOffSuccess | [Details](#95f444db4c90bbfc9711947ee54bf1d57410b535181)
@@ -192,15 +192,15 @@
  [sccm\core\get-started\media\BIOS-to-UEFI-group.png](https://github.com/Microsoft/SCCMDocs-pr/blob/e93d1ee547b871731bcff7f8b12cbf9f143bcc30/sccm/core/get-started/media/BIOS-to-UEFI-group.png) | HandedOffSuccess | [Details](#ae40752da569c2a19b8e95cd0cf77d02a1ff5aa0186)
  [sccm\core\get-started\media\format-and-partition-disk.png](https://github.com/Microsoft/SCCMDocs-pr/blob/e93d1ee547b871731bcff7f8b12cbf9f143bcc30/sccm/core/get-started/media/format-and-partition-disk.png) | HandedOffSuccess | [Details](#54605791f0bd73a49f7b6970d3cb41ffb85e0c1c187)
  [sccm\core\get-started\media\New-Remote-Device-Actions.png](https://github.com/Microsoft/SCCMDocs-pr/blob/5a0d64ff61623263e8223968ee5851d8d27e587d/sccm/core/get-started/media/New-Remote-Device-Actions.png) | HandedOffSuccess | [Details](#d1bd8b0cd50e7ecc4784c516925e53c249a960cb188)
- [sccm\core\get-started\media\offline-status-icon.png](https://github.com/Microsoft/SCCMDocs-pr/blob/cf2432896f6a3be4d65f93934c51a944aaf29b8a/sccm/core/get-started/media/offline-status-icon.png) | HandedOffSuccess | [Details](#27a99000c543d01f58af5204e37b0e90351fff89189)
- [sccm\core\get-started\media\online-status-icon.png](https://github.com/Microsoft/SCCMDocs-pr/blob/cf2432896f6a3be4d65f93934c51a944aaf29b8a/sccm/core/get-started/media/online-status-icon.png) | HandedOffSuccess | [Details](#b1d3d1089eb4fba29a4609f7a2c1c0977d2a2623190)
+ [sccm\core\get-started\media\offline-status-icon.png](https://github.com/Microsoft/SCCMDocs-pr/blob/9257ba19a20c9a5b0805ef5a1b7c9aa2a370e161/sccm/core/get-started/media/offline-status-icon.png) | HandedOffSuccess | [Details](#27a99000c543d01f58af5204e37b0e90351fff89189)
+ [sccm\core\get-started\media\online-status-icon.png](https://github.com/Microsoft/SCCMDocs-pr/blob/9257ba19a20c9a5b0805ef5a1b7c9aa2a370e161/sccm/core/get-started/media/online-status-icon.png) | HandedOffSuccess | [Details](#b1d3d1089eb4fba29a4609f7a2c1c0977d2a2623190)
  [sccm\core\get-started\media\partition-properties.png](https://github.com/Microsoft/SCCMDocs-pr/blob/e93d1ee547b871731bcff7f8b12cbf9f143bcc30/sccm/core/get-started/media/partition-properties.png) | HandedOffSuccess | [Details](#02996321e385c4a37a660a2566c413fddd5b28d5191)
  [sccm\core\get-started\media\Red_X.gif](https://github.com/Microsoft/SCCMDocs-pr/blob/5a0d64ff61623263e8223968ee5851d8d27e587d/sccm/core/get-started/media/Red_X.gif) | HandedOffSuccess | [Details](#9a521526cfeb06cb0330a6b46039bfbe66732321192)
  [sccm\core\get-started\media\restart-in-windows-pe.png](https://github.com/Microsoft/SCCMDocs-pr/blob/e93d1ee547b871731bcff7f8b12cbf9f143bcc30/sccm/core/get-started/media/restart-in-windows-pe.png) | HandedOffSuccess | [Details](#76f1d75040e1be5d12f3591282c0e64f01c06054193)
  [sccm\core\get-started\media\TechRef_WinDefender.png](https://github.com/Microsoft/SCCMDocs-pr/blob/5a0d64ff61623263e8223968ee5851d8d27e587d/sccm/core/get-started/media/TechRef_WinDefender.png) | HandedOffSuccess | [Details](#16218bc782a862e2d082bd4e34c640ca0c58bf95194)
- [sccm\core\get-started\media\unknown-status-icon.png](https://github.com/Microsoft/SCCMDocs-pr/blob/cf2432896f6a3be4d65f93934c51a944aaf29b8a/sccm/core/get-started/media/unknown-status-icon.png) | HandedOffSuccess | [Details](#31204ff97d4362cae1739cd56d96ec014cd2824c195)
+ [sccm\core\get-started\media\unknown-status-icon.png](https://github.com/Microsoft/SCCMDocs-pr/blob/9257ba19a20c9a5b0805ef5a1b7c9aa2a370e161/sccm/core/get-started/media/unknown-status-icon.png) | HandedOffSuccess | [Details](#31204ff97d4362cae1739cd56d96ec014cd2824c195)
  [sccm\core\get-started\set-up-your-lab.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/get-started/set-up-your-lab.md) | HandedOffSuccess | [Details](#2a28132bc415130656837d013d2fc3585b4886a0196)
- [sccm\core\get-started\technical-preview.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/get-started/technical-preview.md) | HandedOffSuccess | [Details](#d7d564fcb635c3240615847370f26c58e7cedc1a197)
+ [sccm\core\get-started\technical-preview.md](https://github.com/Microsoft/SCCMDocs-pr/blob/275d94b0596f04d2339ffb7aa315b4afdd237678/sccm/core/get-started/technical-preview.md) | HandedOffSuccess | [Details](#ba197db70c165aae822d6ffa009c3bd9fc094945197)
  [sccm\core\migration\administrator-checklists-for-migration-planning.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/migration/administrator-checklists-for-migration-planning.md) | HandedOffSuccess | [Details](#df5167d156e62d19d49ae1160a4c3aa509888db6198)
  [sccm\core\migration\configuring-source-hierarchies-and-source-sites-for-migration.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/migration/configuring-source-hierarchies-and-source-sites-for-migration.md) | HandedOffSuccess | [Details](#e8569896808ffa2e0ea4b347624ceaf834460bad199)
  [sccm\core\migration\determine-whether-to-migrate-data.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/migration/determine-whether-to-migrate-data.md) | HandedOffSuccess | [Details](#dcf3381781535e4be1e81110dd225dc83a6568a1200)
@@ -247,9 +247,9 @@
  [sccm\core\plan-design\configs\site-and-site-system-prerequisites.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/plan-design/configs/site-and-site-system-prerequisites.md) | HandedOffSuccess | [Details](#e8ec5c1d4bc190b77e9b6ea30bf8d2860b61af35241)
  [sccm\core\plan-design\configs\size-and-scale-numbers.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/plan-design/configs/size-and-scale-numbers.md) | HandedOffSuccess | [Details](#9a1b1e5e9e7d401e3c14a8603faeaa25a9cfecb6242)
  [sccm\core\plan-design\configs\supported-configurations.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/plan-design/configs/supported-configurations.md) | HandedOffSuccess | [Details](#87dc1657343aa790c24edcd034b195e1d04e1011247)
- [sccm\core\plan-design\configs\supported-operating-systems-consoles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/plan-design/configs/supported-operating-systems-consoles.md) | HandedOffSuccess | [Details](#d09a4bb7810ea1e03565cfde21e9799ae62d4c1a248)
- [sccm\core\plan-design\configs\supported-operating-systems-for-clients-and-devices.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md) | HandedOffSuccess | [Details](#a47725202cfcaa3597135d099e7fe35a1f40e7d2249)
- [sccm\core\plan-design\configs\supported-operating-systems-for-site-system-servers.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers.md) | HandedOffSuccess | [Details](#ec1d634c04c0f349ac4238a6b7205c564976e99e250)
+ [sccm\core\plan-design\configs\supported-operating-systems-consoles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/275d94b0596f04d2339ffb7aa315b4afdd237678/sccm/core/plan-design/configs/supported-operating-systems-consoles.md) | HandedOffSuccess | [Details](#bc7273e8ba016cefc2a60dfec7157dd5a020e784248)
+ [sccm\core\plan-design\configs\supported-operating-systems-for-clients-and-devices.md](https://github.com/Microsoft/SCCMDocs-pr/blob/275d94b0596f04d2339ffb7aa315b4afdd237678/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md) | HandedOffSuccess | [Details](#f492c7d3994935c1efc155d95af5d9201cf6b888249)
+ [sccm\core\plan-design\configs\supported-operating-systems-for-site-system-servers.md](https://github.com/Microsoft/SCCMDocs-pr/blob/275d94b0596f04d2339ffb7aa315b4afdd237678/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers.md) | HandedOffSuccess | [Details](#ca7cde1ffba14cb789bd1653ede09a0daecbe394250)
  [sccm\core\plan-design\configs\support-for-active-directory-domains.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/plan-design/configs/support-for-active-directory-domains.md) | HandedOffSuccess | [Details](#ee9e01c0818a4d10c9041a8525e67a162a660e26243)
  [sccm\core\plan-design\configs\support-for-sql-server-versions.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/plan-design/configs/support-for-sql-server-versions.md) | HandedOffSuccess | [Details](#0f8cb9949ddf7f01af1cbdc47839fac28413dfd9244)
  [sccm\core\plan-design\configs\support-for-virtualization-environments.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/plan-design/configs/support-for-virtualization-environments.md) | HandedOffSuccess | [Details](#327e82372ac966f4a74b973688eb7e7e73bcdbc9245)
@@ -277,7 +277,7 @@
  [sccm\core\plan-design\hierarchy\plan-for-site-system-servers-and-site-system-roles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md) | HandedOffSuccess | [Details](#47c744fb2840bd1ca3b7ed471a0a70f0d7293ce4271)
  [sccm\core\plan-design\hierarchy\plan-for-the-site-database.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/plan-design/hierarchy/plan-for-the-site-database.md) | HandedOffSuccess | [Details](#941f0254f32938f71a01ea25f12e7f68f3973ba5272)
  [sccm\core\plan-design\hierarchy\plan-for-the-sms-provider.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider.md) | HandedOffSuccess | [Details](#f516c8bb9502d302930647ab645bd707804c1536273)
- [sccm\core\plan-design\hierarchy\ports.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/plan-design/hierarchy/ports.md) | HandedOffSuccess | [Details](#2ed2f9e55d0a4f42c66f736470a4b5c818564c16274)
+ [sccm\core\plan-design\hierarchy\ports.md](https://github.com/Microsoft/SCCMDocs-pr/blob/275d94b0596f04d2339ffb7aa315b4afdd237678/sccm/core/plan-design/hierarchy/ports.md) | HandedOffSuccess | [Details](#88379195efd1f29dd7d28449bb1371786518e55d274)
  [sccm\core\plan-design\hierarchy\security-and-privacy-for-content-management.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/plan-design/hierarchy/security-and-privacy-for-content-management.md) | HandedOffSuccess | [Details](#6e41e12c0f6f1670aec6e3ff10a4ca8ce4a2de4d275)
  [sccm\core\plan-design\hierarchy\security-and-privacy-for-site-administration.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/plan-design/hierarchy/security-and-privacy-for-site-administration.md) | HandedOffSuccess | [Details](#b308c69d4e71f70ceceb7bb7f571ff38c2178505276)
  [sccm\core\plan-design\hierarchy\the-content-library.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/plan-design/hierarchy/the-content-library.md) | HandedOffSuccess | [Details](#d019fb5553c605696595e8dc3f668ca37e0380f6277)
@@ -285,7 +285,7 @@
  [sccm\core\plan-design\hierarchy\unicode-and-ascii-support.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/plan-design/hierarchy/unicode-and-ascii-support.md) | HandedOffSuccess | [Details](#96b40831c8c4f199da42f53cb40f4f89712c8d9a279)
  [sccm\core\plan-design\hierarchy\use-a-cloud-based-distribution-point.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md) | HandedOffSuccess | [Details](#58af8f0df90048518fc3ba96fb1b5914badf2dd8280)
  [sccm\core\plan-design\hierarchy\use-a-pull-distribution-point.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point.md) | HandedOffSuccess | [Details](#3829bcd5b714f9984927efd66f44c96a82863aa8281)
- [sccm\core\plan-design\network\configure-firewalls-ports-domains.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/plan-design/network/configure-firewalls-ports-domains.md) | HandedOffSuccess | [Details](#b421d88668376073da73f6f8bd8cc42cc49026e2282)
+ [sccm\core\plan-design\network\configure-firewalls-ports-domains.md](https://github.com/Microsoft/SCCMDocs-pr/blob/275d94b0596f04d2339ffb7aa315b4afdd237678/sccm/core/plan-design/network/configure-firewalls-ports-domains.md) | HandedOffSuccess | [Details](#f2164eddb9c785cdb72c1a6ce36dccb27b197005282)
  [sccm\core\plan-design\network\example-deployment-of-pki-certificates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/plan-design/network/example-deployment-of-pki-certificates.md) | HandedOffSuccess | [Details](#a3b8b5422b2874fe328d49380514611b50b61ff4283)
  [sccm\core\plan-design\network\extend-the-active-directory-schema.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/plan-design/network/extend-the-active-directory-schema.md) | HandedOffSuccess | [Details](#93102c0a0d60bb207b89da01e68cd411c1297409284)
  [sccm\core\plan-design\network\pki-certificate-requirements.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/plan-design/network/pki-certificate-requirements.md) | HandedOffSuccess | [Details](#166b5ef85936eab296a820ba196c712992de3253285)
@@ -314,7 +314,7 @@
  [sccm\core\servers\deploy\configure\install-cloud-based-distribution-points-in-microsoft-azure.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure.md) | HandedOffSuccess | [Details](#a56daf3c117cc9e790570101daff928dcff39d57308)
  [sccm\core\servers\deploy\configure\install-site-system-roles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/servers/deploy/configure/install-site-system-roles.md) | HandedOffSuccess | [Details](#3483fa5a9f589ad4b39bda00ebe1aeea18e19696309)
  [sccm\core\servers\deploy\configure\manage-content-and-content-infrastructure.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure.md) | HandedOffSuccess | [Details](#4244fa6d170afa9708e0f6c47ed6f402313d9884310)
- [sccm\core\servers\deploy\configure\media\Disc_delete_Icon.gif](https://github.com/Microsoft/SCCMDocs-pr/blob/cf2432896f6a3be4d65f93934c51a944aaf29b8a/sccm/core/servers/deploy/configure/media/Disc_delete_Icon.gif) | HandedOffSuccess | [Details](#9a521526cfeb06cb0330a6b46039bfbe66732321314)
+ [sccm\core\servers\deploy\configure\media\Disc_delete_Icon.gif](https://github.com/Microsoft/SCCMDocs-pr/blob/9257ba19a20c9a5b0805ef5a1b7c9aa2a370e161/sccm/core/servers/deploy/configure/media/Disc_delete_Icon.gif) | HandedOffSuccess | [Details](#9a521526cfeb06cb0330a6b46039bfbe66732321314)
  [sccm\core\servers\deploy\configure\media\Disc_moveDown_Icon.gif](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/core/servers/deploy/configure/media/Disc_moveDown_Icon.gif) | HandedOffSuccess | [Details](#79f1609eae6f66b0ef4c0ec45121e163eae23173315)
  [sccm\core\servers\deploy\configure\media\Disc_moveUp_Icon.gif](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/core/servers/deploy/configure/media/Disc_moveUp_Icon.gif) | HandedOffSuccess | [Details](#13d832d0d2d6563a9659d15f85870e943e061741316)
  [sccm\core\servers\deploy\configure\media\Disc_new_Icon.gif](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/core/servers/deploy/configure/media/Disc_new_Icon.gif) | HandedOffSuccess | [Details](#aaa1e04630069553f14025a6c6bb0f00af8a557d317)
@@ -363,7 +363,7 @@
  [sccm\core\servers\manage\list-of-reports.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/servers/manage/list-of-reports.md) | HandedOffSuccess | [Details](#1ec3f38656baa67877f97259bde6643b98e69175357)
  [sccm\core\servers\manage\maintenance-tasks.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/servers/manage/maintenance-tasks.md) | HandedOffSuccess | [Details](#911c5d8b4d673eff77ef1d5a36b0ec7d585e05cd358)
  [sccm\core\servers\manage\manage-queries.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/servers/manage/manage-queries.md) | HandedOffSuccess | [Details](#c7070b693864a2bbc370cf5cf02ae6087be5c9f8359)
- [sccm\core\servers\manage\media\83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif](https://github.com/Microsoft/SCCMDocs-pr/blob/cf2432896f6a3be4d65f93934c51a944aaf29b8a/sccm/core/servers/manage/media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif) | HandedOffSuccess | [Details](#9a521526cfeb06cb0330a6b46039bfbe66732321360)
+ [sccm\core\servers\manage\media\83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif](https://github.com/Microsoft/SCCMDocs-pr/blob/9257ba19a20c9a5b0805ef5a1b7c9aa2a370e161/sccm/core/servers/manage/media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif) | HandedOffSuccess | [Details](#9a521526cfeb06cb0330a6b46039bfbe66732321360)
  [sccm\core\servers\manage\media\CM_Servicing_support_timeline.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/core/servers/manage/media/CM_Servicing_support_timeline.png) | HandedOffSuccess | [Details](#7dc049b9b03a4592a42d6fd43eb56c9c62599f24361)
  [sccm\core\servers\manage\media\Flowchart---Download-updates.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/core/servers/manage/media/Flowchart---Download-updates.png) | HandedOffSuccess | [Details](#d5e4ca3adb9e176d9bf4955f4ac29a354a6f63f8362)
  [sccm\core\servers\manage\media\Flowchart---Replicate-updates.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/core/servers/manage/media/Flowchart---Replicate-updates.png) | HandedOffSuccess | [Details](#37fef3571b445b768e9b3b6427e83841a7c62e5d363)
@@ -384,9 +384,9 @@
  [sccm\core\servers\manage\upgrade-on-premises-infrastructure.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/servers/manage/upgrade-on-premises-infrastructure.md) | HandedOffSuccess | [Details](#5f89f133b97fffe3f9eb14fd2e99a59b431d178c378)
  [sccm\core\servers\manage\use-alerts-and-the-status-system.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/servers/manage/use-alerts-and-the-status-system.md) | HandedOffSuccess | [Details](#2b737b6384cf6d85cf43000254e5fae91c7b3523379)
  [sccm\core\servers\manage\use-the-hotfix-installer-to-install-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/servers/manage/use-the-hotfix-installer-to-install-updates.md) | HandedOffSuccess | [Details](#f47f117b4e999ec7d243dc92bfdaaf10e451abe9380)
- [sccm\core\servers\manage\use-the-service-connection-tool.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/servers/manage/use-the-service-connection-tool.md) | HandedOffSuccess | [Details](#b829ae61665e288a941bb9acb4a4190dac1adb32381)
+ [sccm\core\servers\manage\use-the-service-connection-tool.md](https://github.com/Microsoft/SCCMDocs-pr/blob/275d94b0596f04d2339ffb7aa315b4afdd237678/sccm/core/servers/manage/use-the-service-connection-tool.md) | HandedOffSuccess | [Details](#0fc8df75f7595cd980c64585ec8d416fefbd7796381)
  [sccm\core\servers\manage\use-the-update-registration-tool-to-import-hotfixes.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes.md) | HandedOffSuccess | [Details](#45b1eea07489ab27faf12ebe4890503708269c3a382)
- [sccm\core\TOC.md](https://github.com/Microsoft/SCCMDocs-pr/blob/99d9c62491faaf929988608cfec753282e1d791c/sccm/core/TOC.md) | HandedOffSuccess | [Details](#8af124f39c192c5945714f0c40e58e239d9f51b2383)
+ [sccm\core\TOC.md](https://github.com/Microsoft/SCCMDocs-pr/blob/275d94b0596f04d2339ffb7aa315b4afdd237678/sccm/core/TOC.md) | HandedOffSuccess | [Details](#a691c59c1b1bda829f4968037f9bd96247eb607f383)
  [sccm\core\understand\accessibility-features.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/understand/accessibility-features.md) | HandedOffSuccess | [Details](#0acae3e4649f4aaabbd3b3c32b7f7a060466f2d1384)
  [sccm\core\understand\convert-to-current-branch.md](https://github.com/Microsoft/SCCMDocs-pr/blob/835469e78e83bb54c43e530303d27b0918c531e6/sccm/core/understand/convert-to-current-branch.md) | HandedOffSuccess | [Details](#efccff6e2a0b1708d4124648da4e173d41663bd1385)
  [sccm\core\understand\find-help.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/understand/find-help.md) | HandedOffSuccess | [Details](#1c2356de713438db3ebfc3298c30685e3a27b89b386)
@@ -400,11 +400,11 @@
  [sccm\core\understand\install-the-ltsb.md](https://github.com/Microsoft/SCCMDocs-pr/blob/45ef4be7bf0b1c2e99f25ac398265bb71489c17e/sccm/core/understand/install-the-ltsb.md) | HandedOffSuccess | [Details](#bd6eb3455fe1395ad08677922be98ea91c30119f394)
  [sccm\core\understand\interoperability-client.md](https://github.com/Microsoft/SCCMDocs-pr/blob/45ef4be7bf0b1c2e99f25ac398265bb71489c17e/sccm/core/understand/interoperability-client.md) | HandedOffSuccess | [Details](#a97eb7a637611ba269cf8f16635b8165c19283f1395)
  [sccm\core\understand\introduction.md](https://github.com/Microsoft/SCCMDocs-pr/blob/ec70fe24135d243341c1fef5694877ed727cbb19/sccm/core/understand/introduction.md) | HandedOffSuccess | [Details](#9d48f1f92c39d4b8c0b93d18fa5eb0a892f7652d397)
- [sccm\core\understand\introduction-to-the-ltsb.md](https://github.com/Microsoft/SCCMDocs-pr/blob/c0d3e560d0773071231d9dd67801a9aec4612a0a/sccm/core/understand/introduction-to-the-ltsb.md) | HandedOffSuccess | [Details](#10518b6d7bc76d21b72ea38f7fec91714c59b4f8396)
- [sccm\core\understand\learn-more-editions.md](https://github.com/Microsoft/SCCMDocs-pr/blob/c0d3e560d0773071231d9dd67801a9aec4612a0a/sccm/core/understand/learn-more-editions.md) | HandedOffSuccess | [Details](#3ca6b4230507c29de7230cdb31a1e145d47865ee398)
+ [sccm\core\understand\introduction-to-the-ltsb.md](https://github.com/Microsoft/SCCMDocs-pr/blob/275d94b0596f04d2339ffb7aa315b4afdd237678/sccm/core/understand/introduction-to-the-ltsb.md) | HandedOffSuccess | [Details](#7102fa42f0b95b8e2a9f41d2732bb6b0e3e0b6fb396)
+ [sccm\core\understand\learn-more-editions.md](https://github.com/Microsoft/SCCMDocs-pr/blob/275d94b0596f04d2339ffb7aa315b4afdd237678/sccm/core/understand/learn-more-editions.md) | HandedOffSuccess | [Details](#999f7db0e92301c9ed834b8689388f0f90d887df398)
  [sccm\core\understand\media\ClientSettings.gif](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/core/understand/media/ClientSettings.gif) | HandedOffSuccess | [Details](#ea86b6bd17b6f6aa2576e2603955a1905c42d2ab399)
  [sccm\core\understand\media\Hierarchy_examples.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/core/understand/media/Hierarchy_examples.png) | HandedOffSuccess | [Details](#9cee2868169aed9133b1e7a97ace71b34331e96b400)
- [sccm\core\understand\supported-configurations-for-ltsb.md](https://github.com/Microsoft/SCCMDocs-pr/blob/835469e78e83bb54c43e530303d27b0918c531e6/sccm/core/understand/supported-configurations-for-ltsb.md) | HandedOffSuccess | [Details](#d82cf94777f59f861e01896aa9c15563084b0307401)
+ [sccm\core\understand\supported-configurations-for-ltsb.md](https://github.com/Microsoft/SCCMDocs-pr/blob/275d94b0596f04d2339ffb7aa315b4afdd237678/sccm/core/understand/supported-configurations-for-ltsb.md) | HandedOffSuccess | [Details](#25dbdd401d0f6e955e5dcc704a0c756c74c64773401)
  [sccm\core\understand\use-cloud-services.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/understand/use-cloud-services.md) | HandedOffSuccess | [Details](#892f4821b82aba118404e4610f81f15291358641402)
  [sccm\core\understand\which-branch-should-i-use.md](https://github.com/Microsoft/SCCMDocs-pr/blob/bbaaf9ed876f7693ea831be7c787dba904197a62/sccm/core/understand/which-branch-should-i-use.md) | HandedOffSuccess | [Details](#3957e854e980246c410f7de27caed9d66fc4829f403)
  [sccm\index.md](https://github.com/Microsoft/SCCMDocs-pr/blob/f85b5b9840a784c567c94be3fbc01da0dd83c9ac/sccm/index.md) | HandedOffSuccess | [Details](#fe7e5ae426b4dfda77786d5815632be738098a1e405)
@@ -413,213 +413,216 @@
  [sccm\mdm\deploy-use\enroll-company-owned-devices.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/enroll-company-owned-devices.md) | HandedOffSuccess | [Details](#a8a8b4fbe2bd9f36641ab895c44b5263a71ed98b408)
  [sccm\mdm\deploy-use\enroll-devices-on-premises-mdm.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/enroll-devices-on-premises-mdm.md) | HandedOffSuccess | [Details](#70b838ded136c0dca33ca4a2f9f2ce91af4122d4409)
  [sccm\mdm\deploy-use\enroll-devices-with-device-enrollment-manager.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/enroll-devices-with-device-enrollment-manager.md) | HandedOffSuccess | [Details](#4e5f51baf0fc3b87947161a9ccfb15eb4090e104410)
- [sccm\mdm\deploy-use\ios-device-enrollment-program-for-hybrid.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/ios-device-enrollment-program-for-hybrid.md) | HandedOffSuccess | [Details](#d5ada01ecb200c662f1a7941c814e6938c421a65411)
- [sccm\mdm\deploy-use\ios-hybrid-enrollment-using-apple-configurator.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/ios-hybrid-enrollment-using-apple-configurator.md) | HandedOffSuccess | [Details](#0a9bde47fec700b1809e2f086bdfc2ded501c865412)
- [sccm\mdm\deploy-use\manage-ios-activation-lock.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/manage-ios-activation-lock.md) | HandedOffSuccess | [Details](#99db56e6d502eaf091ca8e4763c5592b9faf1f0e413)
- [sccm\mdm\deploy-use\manage-mobile-devices-with-exchange-activesync.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md) | HandedOffSuccess | [Details](#c6d011e8f6a080ed221c1c736aae842187b196ab414)
- [sccm\mdm\deploy-use\media\certExport-WinPhone.jpg](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/deploy-use/media/certExport-WinPhone.jpg) | HandedOffSuccess | [Details](#b86daa607f8bdfca2b36b2e9c956dc9872a80e4d415)
- [sccm\mdm\deploy-use\media\certmgr-WinPhone_cert.jpg](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/deploy-use/media/certmgr-WinPhone_cert.jpg) | HandedOffSuccess | [Details](#a3713304193d4562fb5784b2e0ec7730ac5e796e416)
- [sccm\mdm\deploy-use\media\configmgr-with-exchange.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/deploy-use/media/configmgr-with-exchange.png) | HandedOffSuccess | [Details](#b74e5b5b5d675cf20177f14710e37f90d6dcb24f417)
- [sccm\mdm\deploy-use\predeclare-devices-with-hardware-id.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/predeclare-devices-with-hardware-id.md) | HandedOffSuccess | [Details](#43d67aa664037c6da83260d5ada8e574510a8f7b418)
- [sccm\mdm\deploy-use\set-up-android-hybrid-device-management.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/set-up-android-hybrid-device-management.md) | HandedOffSuccess | [Details](#ccd46a1a919721962c32b13609fd059e7e4d3024419)
- [sccm\mdm\deploy-use\setup-hybrid-mdm.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/setup-hybrid-mdm.md) | HandedOffSuccess | [Details](#b582e65abadcf79c18b8d218a5f309a64fd6b784423)
- [sccm\mdm\deploy-use\set-up-hybrid-windows.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/set-up-hybrid-windows.md) | HandedOffSuccess | [Details](#81ece7b811a7838b94b70e66d58ca615f45f6a55420)
- [sccm\mdm\deploy-use\set-up-ios-hybrid-device-management.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/set-up-ios-hybrid-device-management.md) | HandedOffSuccess | [Details](#6a4afbf34d76bc05300f69193ffd709e2b390efb421)
- [sccm\mdm\deploy-use\set-up-windows-phone-hybrid-enrollment.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/set-up-windows-phone-hybrid-enrollment.md) | HandedOffSuccess | [Details](#30c05689010c460ce5cd47d0ddcc792aa619a592422)
- [sccm\mdm\deploy-use\terms-and-conditions.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/terms-and-conditions.md) | HandedOffSuccess | [Details](#dd928ef3a7d36522d6ac900b990c6091aa354f62424)
- [sccm\mdm\deploy-use\user-affinity-for-hybrid-managed-devices.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/user-affinity-for-hybrid-managed-devices.md) | HandedOffSuccess | [Details](#bc4e0d4a15fe4b75e03c1262cf17c89bb02e86db425)
- [sccm\mdm\deploy-use\user-enroll-devices-on-premises-mdm.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/user-enroll-devices-on-premises-mdm.md) | HandedOffSuccess | [Details](#96b703ba3c226a47d91f57e5c00e3fb060e48439426)
- [sccm\mdm\deploy-use\wipe-lock-reset-devices.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/wipe-lock-reset-devices.md) | HandedOffSuccess | [Details](#9b8999191483a514f668c7e90f5ed63db7c7ade4427)
- [sccm\mdm\get-started\install-site-system-roles-for-on-premises-mdm.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/get-started/install-site-system-roles-for-on-premises-mdm.md) | HandedOffSuccess | [Details](#314c4db83ea41f0162c9cd11194c913158e650ea428)
- [sccm\mdm\get-started\preparation-steps-for-on-premises-mdm.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/get-started/preparation-steps-for-on-premises-mdm.md) | HandedOffSuccess | [Details](#fd6d75cd3a748a5b3fd5de1394341eb47d0b4a02429)
- [sccm\mdm\get-started\set-up-certificates-on-premises-mdm.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/get-started/set-up-certificates-on-premises-mdm.md) | HandedOffSuccess | [Details](#5b94eba20572303af04d4458ba5dcc1b065671d5430)
- [sccm\mdm\get-started\set-up-device-enrollment-on-premises-mdm.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/get-started/set-up-device-enrollment-on-premises-mdm.md) | HandedOffSuccess | [Details](#49fdd9c391bc838d3fb64392a32a095c44e5db70431)
- [sccm\mdm\get-started\set-up-intune-subscription-on-premises-mdm.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/get-started/set-up-intune-subscription-on-premises-mdm.md) | HandedOffSuccess | [Details](#658dbc0700a3e665a2829639e4e5b63309d2d7bb432)
- [sccm\mdm\includes\mdm-supported-devices.md](https://github.com/Microsoft/SCCMDocs-pr/blob/530b93178d1068b54386bc996e90811a0952aad3/sccm/mdm/includes/mdm-supported-devices.md) | HandedOffSuccess | [Details](#5b24d6e464e6a682ae6f744d9627ff1951dfef12433)
- [sccm\mdm\media\aad-intune-app.png](https://github.com/Microsoft/SCCMDocs-pr/blob/4ba4943a740f302ea1f836a35b052557db0ab070/sccm/mdm/media/aad-intune-app.png) | HandedOffSuccess | [Details](#15fababf9a40d55d48960b5bcb5b25b59fc477b1434)
- [sccm\mdm\media\mdm-create-user-collection.png](https://github.com/Microsoft/SCCMDocs-pr/blob/4ba4943a740f302ea1f836a35b052557db0ab070/sccm/mdm/media/mdm-create-user-collection.png) | HandedOffSuccess | [Details](#0c98be6231e29d8665df1f49c9a34cb4ab84153e435)
- [sccm\mdm\media\mdm-service-connection-point.png](https://github.com/Microsoft/SCCMDocs-pr/blob/4ba4943a740f302ea1f836a35b052557db0ab070/sccm/mdm/media/mdm-service-connection-point.png) | HandedOffSuccess | [Details](#83c39e9aafeadf050b7d5af588568bcc902fb229436)
- [sccm\mdm\media\mdm-set-intune.png](https://github.com/Microsoft/SCCMDocs-pr/blob/4ba4943a740f302ea1f836a35b052557db0ab070/sccm/mdm/media/mdm-set-intune.png) | HandedOffSuccess | [Details](#8a63ea1e7c0e34b524cd58d786f1b50447c941f7437)
- [sccm\mdm\plan-design\hybrid-mobile-device-management.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/plan-design/hybrid-mobile-device-management.md) | HandedOffSuccess | [Details](#a9329254447656f646b5f57428034cf0cdc28e8a438)
- [sccm\mdm\plan-design\plan-hybrid-mobile-device-management.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/plan-design/plan-hybrid-mobile-device-management.md) | HandedOffSuccess | [Details](#7d39fdd49c42cadd5a426c4ad53a92df6ec93c66439)
- [sccm\mdm\plan-design\plan-on-premises-mdm.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/plan-design/plan-on-premises-mdm.md) | HandedOffSuccess | [Details](#b3200246b4de4439e0f58975f712a68fe1c2a5ac440)
- [sccm\mdm\TOC.md](https://github.com/Microsoft/SCCMDocs-pr/blob/688c35c5c4641d2b0114efcc995e88f9d78b719e/sccm/mdm/TOC.md) | HandedOffSuccess | [Details](#9121785d43707b7669763dab9cd58cc69157e58b441)
- [sccm\mdm\understand\choose-between-standalone-intune-and-hybrid-mobile-device-management.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management.md) | HandedOffSuccess | [Details](#85e3e9c2586daa0c80557eac9514f004f763a240442)
- [sccm\mdm\understand\hybrid-mobile-device-management.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/understand/hybrid-mobile-device-management.md) | HandedOffSuccess | [Details](#d40ef2fbec745f147c8a6dcca1678de6a7e4c868443)
- [sccm\mdm\understand\manage-mobile-devices-with-on-premises-infrastructure.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md) | HandedOffSuccess | [Details](#993f8a6025cf5180ca6a6f603a5aef53e5ca0113444)
- [sccm\mdm\understand\media\hybrid-1.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/understand/media/hybrid-1.png) | HandedOffSuccess | [Details](#e61950df6b33bb9c3dbaa6d8dfd4152dc78da35f445)
- [sccm\mdm\understand\media\hybrid-2.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/understand/media/hybrid-2.png) | HandedOffSuccess | [Details](#e6e64f3cb69c5f39cb0982a501e014bffd6f53f5446)
- [sccm\mdm\understand\media\hybrid-3.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/understand/media/hybrid-3.png) | HandedOffSuccess | [Details](#84af8dd482b6f84027e7da837c374e7b3283bace447)
- [sccm\mdm\understand\media\hybrid-4.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/understand/media/hybrid-4.png) | HandedOffSuccess | [Details](#ef524b14c615faa950321241aaa76d99c9458d72448)
- [sccm\mdm\understand\media\hybrid-5.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/understand/media/hybrid-5.png) | HandedOffSuccess | [Details](#a4b1a2455b9df2d8c598d164cd0c6ce65e4d8aaf449)
- [sccm\mdm\understand\media\hybrid-6.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/understand/media/hybrid-6.png) | HandedOffSuccess | [Details](#57732db78a76067c645a7e3a2f7ec9c1e8636abc450)
- [sccm\mdm\understand\media\hybrid-7.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/understand/media/hybrid-7.png) | HandedOffSuccess | [Details](#d0a4d32939be85c3291eba609d3e04457e87f83d451)
- [sccm\mdm\understand\media\hybrid-8.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/understand/media/hybrid-8.png) | HandedOffSuccess | [Details](#75406f23034ebcb1dfbd8bb4ac8418ac1b129b75452)
- [sccm\mdm\understand\media\hybrid-9.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/understand/media/hybrid-9.png) | HandedOffSuccess | [Details](#d99994cc912c560994c973cf2326f1cdfb61a65b453)
- [sccm\mdm\understand\media\hybrid-decisions.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/understand/media/hybrid-decisions.png) | HandedOffSuccess | [Details](#4cf5264eba406acedd16d21fab4ec89394336ac0454)
- [sccm\mdm\understand\media\On-premises-conceptual.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/understand/media/On-premises-conceptual.png) | HandedOffSuccess | [Details](#075374ed96fd22728ea4537c2a09f9b9079567d7455)
- [sccm\mdm\understand\whats-new-in-hybrid-mobile-device-management.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management.md) | HandedOffSuccess | [Details](#628113d0e3d049420014ad1dc4498f2359f8b08e456)
- [sccm\osd\deploy-use\create-a-custom-task-sequence.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/create-a-custom-task-sequence.md) | HandedOffSuccess | [Details](#02e264298424d97d4c8c3e0fa6eb5a288a4813b2457)
- [sccm\osd\deploy-use\create-an-image-for-an-oem-in-factory-or-a-local-depot.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/create-an-image-for-an-oem-in-factory-or-a-local-depot.md) | HandedOffSuccess | [Details](#be5a652a1c93afc70e3df3157bbb0ed1d87b0e2d463)
- [sccm\osd\deploy-use\create-a-task-sequence-for-non-operating-system-deployments.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/create-a-task-sequence-for-non-operating-system-deployments.md) | HandedOffSuccess | [Details](#68e626ff502dcf407b68114d3869551001781885458)
- [sccm\osd\deploy-use\create-a-task-sequence-to-capture-and-restore-user-state.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md) | HandedOffSuccess | [Details](#3b161971f09a524405a0ab8a3d5a7832d841f8cd460)
- [sccm\osd\deploy-use\create-a-task-sequence-to-capture-an-operating-system.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/create-a-task-sequence-to-capture-an-operating-system.md) | HandedOffSuccess | [Details](#30e47362521bab978bdd4bdac3ae2e33d2601b5c459)
- [sccm\osd\deploy-use\create-a-task-sequence-to-install-an-operating-system.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/create-a-task-sequence-to-install-an-operating-system.md) | HandedOffSuccess | [Details](#9aa5b7696d86fcd5e95034b86ed39734ba8e6629461)
- [sccm\osd\deploy-use\create-a-task-sequence-to-upgrade-an-operating-system.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md) | HandedOffSuccess | [Details](#042c6fe9dc0b53c5b7c9d439babe6c93828ffd19462)
- [sccm\osd\deploy-use\create-bootable-media.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/create-bootable-media.md) | HandedOffSuccess | [Details](#fe3c2175f5e1503c3895b604fdcdcd07f0a07908464)
- [sccm\osd\deploy-use\create-capture-media.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/create-capture-media.md) | HandedOffSuccess | [Details](#d663e3fc51b1dc1599ac2abaa84570b62ed1d5f9465)
- [sccm\osd\deploy-use\create-prestaged-media.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/create-prestaged-media.md) | HandedOffSuccess | [Details](#fdd1af19e144533587dc7575a522c76dd52f803a466)
- [sccm\osd\deploy-use\create-stand-alone-media.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/create-stand-alone-media.md) | HandedOffSuccess | [Details](#60ec4a5557be380368d671238350230bbb9535fd467)
- [sccm\osd\deploy-use\create-task-sequence-media.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/create-task-sequence-media.md) | HandedOffSuccess | [Details](#e6e99032c4411487ad4b0b299de107f02e16acc7468)
- [sccm\osd\deploy-use\deploy-windows-to-go.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/deploy-windows-to-go.md) | HandedOffSuccess | [Details](#de326470a74ca0602a4d4e7ae5076cda1b2263f8469)
- [sccm\osd\deploy-use\install-new-windows-version-new-computer-bare-metal.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/install-new-windows-version-new-computer-bare-metal.md) | HandedOffSuccess | [Details](#96283936f1acca00938c02b0929aa3ce2687b25e470)
- [sccm\osd\deploy-use\manage-task-sequences-to-automate-tasks.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks.md) | HandedOffSuccess | [Details](#6bd1bcdfe4a0d08aed2e8217e53ce6a43fa27b2e471)
- [sccm\osd\deploy-use\manage-windows-as-a-service.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/manage-windows-as-a-service.md) | HandedOffSuccess | [Details](#eed38d04c72a53025502e988fd7c8c5356dc4eb8472)
- [sccm\osd\deploy-use\methods-to-deploy-enterprise-operating-systems.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/methods-to-deploy-enterprise-operating-systems.md) | HandedOffSuccess | [Details](#8f84a895ae9be0f6a431561b25f557c0516ffc68473)
- [sccm\osd\deploy-use\monitor-operating-system-deployments.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/monitor-operating-system-deployments.md) | HandedOffSuccess | [Details](#eee00cf759c49f19627eeb1b0ac2a03aac2dbd43474)
- [sccm\osd\deploy-use\preprovision-bitlocker-in-windows-pe.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/preprovision-bitlocker-in-windows-pe.md) | HandedOffSuccess | [Details](#a1cf9533de0e8c34cd826865145bd89c4142c363475)
- [sccm\osd\deploy-use\refresh-an-existing-computer-with-a-new-version-of-windows.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/refresh-an-existing-computer-with-a-new-version-of-windows.md) | HandedOffSuccess | [Details](#ce2e44e64839d4490b30dcb3389602bf26913d14476)
- [sccm\osd\deploy-use\replace-an-existing-computer-and-transfer-settings.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/replace-an-existing-computer-and-transfer-settings.md) | HandedOffSuccess | [Details](#0c5de87111c38b373f3386aa2f4ff8f13e6c77e6477)
- [sccm\osd\deploy-use\scenarios-to-deploy-enterprise-operating-systems.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/scenarios-to-deploy-enterprise-operating-systems.md) | HandedOffSuccess | [Details](#403a955e0d44b8f7dc236df0ee102c2732335bae478)
- [sccm\osd\deploy-use\upgrade-windows-to-the-latest-version.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/upgrade-windows-to-the-latest-version.md) | HandedOffSuccess | [Details](#6d695e22242c9f3a0e820774aa58d75dee5dcdc5479)
- [sccm\osd\deploy-use\use-a-task-sequence-to-manage-virtual-hard-disks.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/use-a-task-sequence-to-manage-virtual-hard-disks.md) | HandedOffSuccess | [Details](#f4dea75d1d1e6a2c1006887f0d4c4b4eb41594d8480)
- [sccm\osd\deploy-use\use-bootable-media-to-deploy-windows-over-the-network.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/use-bootable-media-to-deploy-windows-over-the-network.md) | HandedOffSuccess | [Details](#7cc62108f55c5be7a42ba7bf18af5e5fb86ad14f481)
- [sccm\osd\deploy-use\use-multicast-to-deploy-windows-over-the-network.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/use-multicast-to-deploy-windows-over-the-network.md) | HandedOffSuccess | [Details](#b8ae17afc9f292de01026997a87e8fa96c77d7d8482)
- [sccm\osd\deploy-use\use-pxe-to-deploy-windows-over-the-network.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/use-pxe-to-deploy-windows-over-the-network.md) | HandedOffSuccess | [Details](#606d0daed7ded866e7cad7ec93ee194cd65168f0483)
- [sccm\osd\deploy-use\use-software-center-to-deploy-windows-over-the-network.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/use-software-center-to-deploy-windows-over-the-network.md) | HandedOffSuccess | [Details](#bd2c855e93c0840b2300822d4b60cdaf90bce932484)
- [sccm\osd\deploy-use\use-stand-alone-media-to-deploy-windows-without-using-the-network.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/use-stand-alone-media-to-deploy-windows-without-using-the-network.md) | HandedOffSuccess | [Details](#3f699d267035da3e1a02a875a2a4f13e24c0465e485)
- [sccm\osd\get-started\associate-users-with-a-destination-computer.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/get-started/associate-users-with-a-destination-computer.md) | HandedOffSuccess | [Details](#9e8d91d930854ddcffaf3258e3b5947bd2643a07486)
- [sccm\osd\get-started\customize-boot-images.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/get-started/customize-boot-images.md) | HandedOffSuccess | [Details](#acbb4957d3a41d06a9dff404537bb5a4c853b232487)
- [sccm\osd\get-started\customize-operating-system-images.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/get-started/customize-operating-system-images.md) | HandedOffSuccess | [Details](#a872fb05b8e1b55fbcebc32968a3e2f774b8d8be488)
- [sccm\osd\get-started\manage-boot-images.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/get-started/manage-boot-images.md) | HandedOffSuccess | [Details](#c9507f92a36971491d86f63f4436359dce2be4ac489)
- [sccm\osd\get-started\manage-drivers.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/get-started/manage-drivers.md) | HandedOffSuccess | [Details](#b152127d3abe4b916f6c32cb2ce0cc6cf8b3050d490)
- [sccm\osd\get-started\manage-operating-system-images.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/get-started/manage-operating-system-images.md) | HandedOffSuccess | [Details](#f250186a5b55a6684bbe7ef640f56e6dc3d81b72491)
- [sccm\osd\get-started\manage-operating-system-upgrade-packages.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/get-started/manage-operating-system-upgrade-packages.md) | HandedOffSuccess | [Details](#9c5cfd1af0909185e4115f8f8e2ba62ce6421b49492)
- [sccm\osd\get-started\manage-user-state.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/get-started/manage-user-state.md) | HandedOffSuccess | [Details](#f4a12c54a0c93751be848ea68d03363369212109493)
- [sccm\osd\get-started\prepare-for-operating-system-deployment.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/get-started/prepare-for-operating-system-deployment.md) | HandedOffSuccess | [Details](#2d7b25f320a8099bf3b96e80858247b93f16cc7f494)
- [sccm\osd\get-started\prepare-for-unknown-computer-deployments.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/get-started/prepare-for-unknown-computer-deployments.md) | HandedOffSuccess | [Details](#04596cf7c1e085b179deeddec5c121158bff5f6c495)
- [sccm\osd\get-started\prepare-site-system-roles-for-operating-system-deployments.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/get-started/prepare-site-system-roles-for-operating-system-deployments.md) | HandedOffSuccess | [Details](#439045b36808188d02f6d79bff32144528c2118e496)
- [sccm\osd\get-started\prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md) | HandedOffSuccess | [Details](#4667ecf187c327cb0596e603eefe618b7df23df7497)
- [sccm\osd\plan-design\infrastructure-requirements-for-operating-system-deployment.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment.md) | HandedOffSuccess | [Details](#1cac2f4a15cbad2b40b06988a1f3c436771a2064498)
- [sccm\osd\plan-design\planning-considerations-for-automating-tasks.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/plan-design/planning-considerations-for-automating-tasks.md) | HandedOffSuccess | [Details](#a88496cca153367fdf2432e08ff79674eb8dc9e7499)
- [sccm\osd\plan-design\planning-for-operating-system-deployment-interoperability.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/plan-design/planning-for-operating-system-deployment-interoperability.md) | HandedOffSuccess | [Details](#982ee969a476fd65395fb39a3039c77023ede573500)
- [sccm\osd\plan-design\security-and-privacy-for-operating-system-deployment.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/plan-design/security-and-privacy-for-operating-system-deployment.md) | HandedOffSuccess | [Details](#f5754b81eb1c1acdcc4d6b8080f4f76e38f70407501)
- [sccm\osd\TOC.md](https://github.com/Microsoft/SCCMDocs-pr/blob/688c35c5c4641d2b0114efcc995e88f9d78b719e/sccm/osd/TOC.md) | HandedOffSuccess | [Details](#6c8357f8298d7b9ada271f31d6a57a589386243f502)
- [sccm\osd\understand\introduction-to-operating-system-deployment.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/understand/introduction-to-operating-system-deployment.md) | HandedOffSuccess | [Details](#863ff4fc0d1fa8a7fea491d12e831a2fcc0dbc4f503)
- [sccm\osd\understand\prestart-commands-for-task-sequence-media.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/understand/prestart-commands-for-task-sequence-media.md) | HandedOffSuccess | [Details](#0d401eaccf568b41c85b532e1ce9640eb3e7ca02504)
- [sccm\osd\understand\task-sequence-action-variables.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/understand/task-sequence-action-variables.md) | HandedOffSuccess | [Details](#948c7ee96e448369b786c587f8663a404df315c8505)
- [sccm\osd\understand\task-sequence-built-in-variables.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/understand/task-sequence-built-in-variables.md) | HandedOffSuccess | [Details](#9327544c5c7022a1c2d910182ec686c7f64546d9506)
- [sccm\osd\understand\task-sequence-steps.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/understand/task-sequence-steps.md) | HandedOffSuccess | [Details](#9d63f1dbb3b17fdf3731440266f6678329e2ff8d507)
- [sccm\protect\deploy-use\certificate-infrastructure.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/certificate-infrastructure.md) | HandedOffSuccess | [Details](#ec876316a220d9ed49b11641c6beb1281c4f0004508)
- [sccm\protect\deploy-use\configure-endpoint-protection.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/configure-endpoint-protection.md) | HandedOffSuccess | [Details](#56618b0359a710193cc1547d041c9a974f636481509)
- [sccm\protect\deploy-use\create-certificate-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/create-certificate-profiles.md) | HandedOffSuccess | [Details](#9dc1ae41cc36a73fa440694a03f98497ec739cc2510)
- [sccm\protect\deploy-use\create-compliance-policy.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/create-compliance-policy.md) | HandedOffSuccess | [Details](#bb91f4a711699790bb01f48d32183cf1215b1952511)
- [sccm\protect\deploy-use\create-exchange-activesync-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/create-exchange-activesync-profiles.md) | HandedOffSuccess | [Details](#d2f9f5e71a11b5eeb251a993bd4b701658308eee512)
- [sccm\protect\deploy-use\create-pfx-certificate-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/create-pfx-certificate-profiles.md) | HandedOffSuccess | [Details](#cdbdce183ff7137d524a873fc67aff431647ced3513)
- [sccm\protect\deploy-use\create-vpn-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/create-vpn-profiles.md) | HandedOffSuccess | [Details](#4e9d5217bd06b68073aae9f9d9c79bd634d880cd514)
- [sccm\protect\deploy-use\create-wifi-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/create-wifi-profiles.md) | HandedOffSuccess | [Details](#a6fcc2360c52cdc7fbe25a3718e24f2e5c1169d0515)
- [sccm\protect\deploy-use\create-windows-firewall-policies.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/create-windows-firewall-policies.md) | HandedOffSuccess | [Details](#13c7ed55f78f9a210e328a27fa76f245bf8edb6e516)
- [sccm\protect\deploy-use\cryptographic-controls-technical-reference.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/cryptographic-controls-technical-reference.md) | HandedOffSuccess | [Details](#1979f1b01f2f94b201e0d96e8587af9a8a121000517)
- [sccm\protect\deploy-use\deploy-wifi-vpn-email-cert-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/deploy-wifi-vpn-email-cert-profiles.md) | HandedOffSuccess | [Details](#edebb67123cccd22ea43d3bc608afb64a4976a3e518)
- [sccm\protect\deploy-use\device-compliance-policies.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/device-compliance-policies.md) | HandedOffSuccess | [Details](#d461f95f875632860238d503d7acd7ab8c320d58519)
- [sccm\protect\deploy-use\endpoint-antimalware-firewall.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-antimalware-firewall.md) | HandedOffSuccess | [Details](#002b68ec1f8a37bdbb77b5ba4be7b0dcea3f3f7c520)
- [sccm\protect\deploy-use\endpoint-antimalware-policies.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-antimalware-policies.md) | HandedOffSuccess | [Details](#f211a26e578b64fb0699d8895d7e875005389507521)
- [sccm\protect\deploy-use\endpoint-configure-alerts.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-configure-alerts.md) | HandedOffSuccess | [Details](#ee76dc26c92d2390fd366372be9fb1debaf391b0522)
- [sccm\protect\deploy-use\endpoint-definitions-configmgr.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-definitions-configmgr.md) | HandedOffSuccess | [Details](#40543ccdbbc02a9f11309064ea018ec9402474b5524)
- [sccm\protect\deploy-use\endpoint-definitions-microsoft-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-definitions-microsoft-updates.md) | HandedOffSuccess | [Details](#cf0a69692525f0b32699cabe5bca23ff5ef9797c525)
- [sccm\protect\deploy-use\endpoint-definitions-network.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-definitions-network.md) | HandedOffSuccess | [Details](#7d407cc585d7567ad4c7e3ab4650b17fbd9c3370526)
- [sccm\protect\deploy-use\endpoint-definitions-protection-center.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-definitions-protection-center.md) | HandedOffSuccess | [Details](#fa5abe78fd92beefdc134cd3fa661b8884bea3f1527)
- [sccm\protect\deploy-use\endpoint-definitions-wsus.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-definitions-wsus.md) | HandedOffSuccess | [Details](#59ecc54944a2a1517789822581bf07b39153de39528)
- [sccm\protect\deploy-use\endpoint-definition-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-definition-updates.md) | HandedOffSuccess | [Details](#5fc418a2cd9fc13e7626b779a8cc303e096c1409523)
- [sccm\protect\deploy-use\endpoint-protection.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-protection.md) | HandedOffSuccess | [Details](#a17994dca24003c58d582df4e7b8c923fa028186534)
- [sccm\protect\deploy-use\endpoint-protection-client-faq.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-protection-client-faq.md) | HandedOffSuccess | [Details](#76a7d018747ca6bd112b51f8f67c298416ea784e529)
- [sccm\protect\deploy-use\endpoint-protection-client-help.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-protection-client-help.md) | HandedOffSuccess | [Details](#94f2a321c76e046dd039d8fd80532f93325d2d1a530)
- [sccm\protect\deploy-use\endpoint-protection-configure.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-protection-configure.md) | HandedOffSuccess | [Details](#1fdd8f2f97b669cea5351787ef34c96f78ade124532)
- [sccm\protect\deploy-use\endpoint-protection-configure-client.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-protection-configure-client.md) | HandedOffSuccess | [Details](#8056f1dbb0d7b79702eb4146b6742a9a1ab5f8bd531)
- [sccm\protect\deploy-use\endpoint-protection-site-role.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-protection-site-role.md) | HandedOffSuccess | [Details](#c2e457d14b018052c70e52a1cd285dd137928b62533)
- [sccm\protect\deploy-use\find-a-pfn-for-per-app-vpn.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/find-a-pfn-for-per-app-vpn.md) | HandedOffSuccess | [Details](#a840b67e9557be874ead821b91434be9b658ce1e535)
- [sccm\protect\deploy-use\introduction-to-certificate-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/introduction-to-certificate-profiles.md) | HandedOffSuccess | [Details](#6ebaef8322173fd22c6251a02e1ff3232bf83e71536)
- [sccm\protect\deploy-use\introduction-to-email-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/introduction-to-email-profiles.md) | HandedOffSuccess | [Details](#c6e8c2fab7d5d7056d25e004527a52449ce3f778537)
- [sccm\protect\deploy-use\introduction-to-wifi-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/introduction-to-wifi-profiles.md) | HandedOffSuccess | [Details](#3f5010c04fb8db2fafb2939431f97e2d0554b383538)
- [sccm\protect\deploy-use\manage-access-to-o365-services-for-pcs-managed-by-sccm.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md) | HandedOffSuccess | [Details](#c475c560971ab73e8be7671164a010a91bd3f229539)
- [sccm\protect\deploy-use\manage-access-to-services.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/manage-access-to-services.md) | HandedOffSuccess | [Details](#2dad04cb429ac854b5455c2af051f6f7caaadd66540)
- [sccm\protect\deploy-use\manage-dynamics-crm-online-access.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/manage-dynamics-crm-online-access.md) | HandedOffSuccess | [Details](#61409cf78bef3991d096c5c9615ff667aca9cb43541)
- [sccm\protect\deploy-use\manage-email-access.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/manage-email-access.md) | HandedOffSuccess | [Details](#c1797910f2b7ceda451c2ccb23f66a4b2bd4b6ff542)
- [sccm\protect\deploy-use\manage-sharepoint-online-access.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/manage-sharepoint-online-access.md) | HandedOffSuccess | [Details](#84fdd9c1141c7bee5e331eacb136d9dc21837c0f543)
- [sccm\protect\deploy-use\manage-skype-for-business-online-access.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/manage-skype-for-business-online-access.md) | HandedOffSuccess | [Details](#a8d0655909c85eb53c2d1eb513586f9733236359544)
- [sccm\protect\deploy-use\monitor-certificate-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/monitor-certificate-profiles.md) | HandedOffSuccess | [Details](#1e4f7a68801e0c00377c3e96a0bf080cf89a3d62545)
- [sccm\protect\deploy-use\monitor-endpoint-protection.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/monitor-endpoint-protection.md) | HandedOffSuccess | [Details](#8893485e885901cc8af3d44d02064610f542e193546)
- [sccm\protect\deploy-use\monitor-wifi-email-vpn-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/monitor-wifi-email-vpn-profiles.md) | HandedOffSuccess | [Details](#cd9d492202dc2a70348bc54b58fa942d8be7002e547)
- [sccm\protect\deploy-use\scenarios-endpoint-protection.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/scenarios-endpoint-protection.md) | HandedOffSuccess | [Details](#33f47079c1c0aebbffcb2c6ff9d5abacf033ec12548)
- [sccm\protect\deploy-use\troubleshoot-endpoint-client.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/troubleshoot-endpoint-client.md) | HandedOffSuccess | [Details](#3d07f4c4a8124eb70cd18a77d11aff49d03a3424549)
- [sccm\protect\deploy-use\vpn-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/vpn-profiles.md) | HandedOffSuccess | [Details](#e78f0e741c6d98cf54e55a2c175259ba9d7ce556550)
- [sccm\protect\deploy-use\windows-defender-advanced-threat-protection.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/windows-defender-advanced-threat-protection.md) | HandedOffSuccess | [Details](#f7e309a667a3c0bf25af32e636b86297c7ae002d551)
- [sccm\protect\deploy-use\windows-hello-for-business-settings.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/windows-hello-for-business-settings.md) | HandedOffSuccess | [Details](#f2a853d63407637d4e8ece5d46cd4f0dc717c3de552)
- [sccm\protect\media\CA_compliance_report.png](https://github.com/Microsoft/SCCMDocs-pr/blob/1fac5d19e8b08f62b8ef46e7cbebc6f75e804a35/sccm/protect/media/CA_compliance_report.png) | HandedOffSuccess | [Details](#4bbc76b5e6a221455bd9fefa3f9f1efee5b77c5d553)
- [sccm\protect\media\CA_Win10OSversion.png](https://github.com/Microsoft/SCCMDocs-pr/blob/1fac5d19e8b08f62b8ef46e7cbebc6f75e804a35/sccm/protect/media/CA_Win10OSversion.png) | HandedOffSuccess | [Details](#a33cd943cfbed72c9b43fff77a4bf36b1f485502554)
- [sccm\protect\media\ConditionalAccess_SFBFlow.png](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/ConditionalAccess_SFBFlow.png) | HandedOffSuccess | [Details](#cec44005d4b4571b36ae7282b89128029aa717bf559)
- [sccm\protect\media\ConditionalAccess_SFBPolicy.png](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/ConditionalAccess_SFBPolicy.png) | HandedOffSuccess | [Details](#8e11b2aa1e985e9c2b9013fae17c305466aea1c8560)
- [sccm\protect\media\ConditionalAccess4.png](https://github.com/Microsoft/SCCMDocs-pr/blob/1fac5d19e8b08f62b8ef46e7cbebc6f75e804a35/sccm/protect/media/ConditionalAccess4.png) | HandedOffSuccess | [Details](#f39d4bc54eaf9e57d461f92a5aeeccdeff9b0790555)
- [sccm\protect\media\ConditionalAccess8-1.png](https://github.com/Microsoft/SCCMDocs-pr/blob/1fac5d19e8b08f62b8ef46e7cbebc6f75e804a35/sccm/protect/media/ConditionalAccess8-1.png) | HandedOffSuccess | [Details](#495a0e184d5b0f7d60292dd23b38e57fdad93e87556)
- [sccm\protect\media\ConditionalAccess8-2.png](https://github.com/Microsoft/SCCMDocs-pr/blob/1fac5d19e8b08f62b8ef46e7cbebc6f75e804a35/sccm/protect/media/ConditionalAccess8-2.png) | HandedOffSuccess | [Details](#1dde0f9c701974b72ef12e63ecc4ed76f84f053e557)
- [sccm\protect\media\ConditionalAccess8-6.png](https://github.com/Microsoft/SCCMDocs-pr/blob/1fac5d19e8b08f62b8ef46e7cbebc6f75e804a35/sccm/protect/media/ConditionalAccess8-6.png) | HandedOffSuccess | [Details](#4f3c1dba5f1026b42852909c0bcd8f6414523578558)
- [sccm\protect\media\Endpoint-Protection-Workflow.gif](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/Endpoint-Protection-Workflow.gif) | HandedOffSuccess | [Details](#46e5b00c04e59ca79796d4d1aa580bf8f6fd7050561)
- [sccm\protect\media\HybridCondAccessWiz1.PNG](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/HybridCondAccessWiz1.PNG) | HandedOffSuccess | [Details](#7f8bf512eba1fbfc90371b585e5c75ce9bd3c4b8563)
- [sccm\protect\media\HybridCondAccessWiz2.PNG](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/HybridCondAccessWiz2.PNG) | HandedOffSuccess | [Details](#bdcdc0cba73f712faeb3647ed934790913bb5383564)
- [sccm\protect\media\HybridCondAccessWiz3.png](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/HybridCondAccessWiz3.png) | HandedOffSuccess | [Details](#6a86fe479171aedfad9945bf5ec32cdb917d3a11565)
- [sccm\protect\media\HybridCondAccessWiz4.PNG](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/HybridCondAccessWiz4.PNG) | HandedOffSuccess | [Details](#e7856022d7444b91bae346a07a8baffb2f8ceaad566)
- [sccm\protect\media\HybridOnlineSetupIntune.png](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/HybridOnlineSetupIntune.png) | HandedOffSuccess | [Details](#4d400df60e1df4515d027407089779d881068589567)
- [sccm\protect\media\IntuneSASharePointOnlineCAPolicy.png](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/IntuneSASharePointOnlineCAPolicy.png) | HandedOffSuccess | [Details](#a6a8d2c7c3239985e54745b56857ff7c66dc33eb568)
- [sccm\protect\media\mdm-browser-ca-android-cert-prompt.png](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/mdm-browser-ca-android-cert-prompt.png) | HandedOffSuccess | [Details](#1a1bccf04d4ae09877a0c554bea53125e7181efb569)
- [sccm\protect\media\mdm-browser-ca-ios-cert-prompt_v2.png](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/mdm-browser-ca-ios-cert-prompt_v2.png) | HandedOffSuccess | [Details](#1d8598d5c0d5b62e8213a1172ba42f801d53c97e570)
- [sccm\protect\media\mdm-ca-dynamics-crm-flow-diagram.png](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/mdm-ca-dynamics-crm-flow-diagram.png) | HandedOffSuccess | [Details](#8347ec59d03aebeca9ef3081151ab8cf24174ff1571)
- [sccm\protect\media\mdm-ca-dynamics-crm-policy-configuration.png](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/mdm-ca-dynamics-crm-policy-configuration.png) | HandedOffSuccess | [Details](#ab891ab721e056098c0dc0c2b620a525977c43a6572)
- [sccm\protect\media\TechRef_WinDefender.png](https://github.com/Microsoft/SCCMDocs-pr/blob/cf2432896f6a3be4d65f93934c51a944aaf29b8a/sccm/protect/media/TechRef_WinDefender.png) | HandedOffSuccess | [Details](#16218bc782a862e2d082bd4e34c640ca0c58bf95573)
- [sccm\protect\plan-design\planning-for-certificate-template-permissions.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/plan-design/planning-for-certificate-template-permissions.md) | HandedOffSuccess | [Details](#066b6325616f5fe779b778265baa114788c76bef574)
- [sccm\protect\plan-design\planning-for-endpoint-protection.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/plan-design/planning-for-endpoint-protection.md) | HandedOffSuccess | [Details](#c246ac727efa21fab30a81999cc9bad00f20551e575)
- [sccm\protect\plan-design\prerequisites-for-certificate-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/plan-design/prerequisites-for-certificate-profiles.md) | HandedOffSuccess | [Details](#8a7134af111cf24258f0f271023be51387c21f00576)
- [sccm\protect\plan-design\prerequisites-for-email-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/plan-design/prerequisites-for-email-profiles.md) | HandedOffSuccess | [Details](#0a89dd219ad8cc217be1421bd963098eed147cc8577)
- [sccm\protect\plan-design\prerequisites-for-wifi-vpn-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/plan-design/prerequisites-for-wifi-vpn-profiles.md) | HandedOffSuccess | [Details](#c103735a0f5fab6b800a7e9fb808221aebb102cb578)
- [sccm\protect\plan-design\security-and-privacy-for-certificate-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/plan-design/security-and-privacy-for-certificate-profiles.md) | HandedOffSuccess | [Details](#6e8b453c9baf03575c4260b52d5f18c75b5c0d8e579)
- [sccm\protect\plan-design\security-and-privacy-for-email-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/plan-design/security-and-privacy-for-email-profiles.md) | HandedOffSuccess | [Details](#49f7f2b780c5e499b5090fafb1a57d4f6b1ac61f580)
- [sccm\protect\plan-design\security-and-privacy-for-wifi-vpn-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/plan-design/security-and-privacy-for-wifi-vpn-profiles.md) | HandedOffSuccess | [Details](#6d74b8006e6c778c281718446fd51467dc63829a581)
- [sccm\protect\TOC.md](https://github.com/Microsoft/SCCMDocs-pr/blob/688c35c5c4641d2b0114efcc995e88f9d78b719e/sccm/protect/TOC.md) | HandedOffSuccess | [Details](#8fd4d73bf300cfe55b061108d9df1d8f5001fb82582)
- [sccm\protect\understand\backup-and-recovery.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/understand/backup-and-recovery.md) | HandedOffSuccess | [Details](#d7e3915c5bb3638e57b0f6debf187beb10dd2519583)
- [sccm\protect\understand\high-availability-options.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/understand/high-availability-options.md) | HandedOffSuccess | [Details](#18475f6f3b1e079ec439effb27af20c3e9a7d802584)
- [sccm\protect\understand\protect-data-and-site-infrastructure.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/understand/protect-data-and-site-infrastructure.md) | HandedOffSuccess | [Details](#318553983a2bf9782016afbc4d0eeb60e1258afb585)
- [sccm\protect\understand\settings-to-manage-high-risk-deployments.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/understand/settings-to-manage-high-risk-deployments.md) | HandedOffSuccess | [Details](#b8f221a7de1378cd4a9258ee9729aa7e1dfdc23f586)
- [sccm\sum\deploy-use\add-software-updates-to-an-update-group.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/deploy-use/add-software-updates-to-an-update-group.md) | HandedOffSuccess | [Details](#3ba2ba4eac7216e138c65afb82c1ea69a8b39d9b587)
- [sccm\sum\deploy-use\automatically-deploy-software-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/deploy-use/automatically-deploy-software-updates.md) | HandedOffSuccess | [Details](#034d67f4cd83ad293bac674f79491ed29efca863588)
- [sccm\sum\deploy-use\deploy-software-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/deploy-use/deploy-software-updates.md) | HandedOffSuccess | [Details](#2492aa06c9c82d03ed1d23d0084bb8cfb0a733a1589)
- [sccm\sum\deploy-use\download-software-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/deploy-use/download-software-updates.md) | HandedOffSuccess | [Details](#369aa22f627381a37e392d1254998d4b047f915b590)
- [sccm\sum\deploy-use\example-scenario-deploy-monitor-monthly-security-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/deploy-use/example-scenario-deploy-monitor-monthly-security-updates.md) | HandedOffSuccess | [Details](#12cf594b4be3009db08f848b9f51366def9b846a591)
- [sccm\sum\deploy-use\integrate-windows-update-for-business-windows-10.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10.md) | HandedOffSuccess | [Details](#a3723218539d46e305c0b007addd8f81e8025061592)
- [sccm\sum\deploy-use\manage-office-365-proplus-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/deploy-use/manage-office-365-proplus-updates.md) | HandedOffSuccess | [Details](#55cf224e070d7c6f04b17ff113d55fcb12d2a386593)
- [sccm\sum\deploy-use\manually-deploy-software-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/deploy-use/manually-deploy-software-updates.md) | HandedOffSuccess | [Details](#decd43a9e613a18a9a007bdda9248304cf35ee30594)
- [sccm\sum\deploy-use\monitor-software-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/deploy-use/monitor-software-updates.md) | HandedOffSuccess | [Details](#d222d946eb14d666b0ea80cb0924c48b3ef420ee595)
- [sccm\sum\deploy-use\service-a-server-group.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/deploy-use/service-a-server-group.md) | HandedOffSuccess | [Details](#7c85180de2733e83f698ffb695af39d376af6112596)
- [sccm\sum\deploy-use\software-updates-maintenance.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/deploy-use/software-updates-maintenance.md) | HandedOffSuccess | [Details](#fb9ef52381644287f2b4a88d405069607c4a1cb3597)
- [sccm\sum\get-started\configure-classifications-and-products.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/get-started/configure-classifications-and-products.md) | HandedOffSuccess | [Details](#961e5d7279c949a639d38569d77fae578bc9ffd8598)
- [sccm\sum\get-started\install-a-software-update-point.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/get-started/install-a-software-update-point.md) | HandedOffSuccess | [Details](#f922153a8b050babc1bb2d3c8970d4d590473e6b599)
- [sccm\sum\get-started\manage-settings-for-software-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/get-started/manage-settings-for-software-updates.md) | HandedOffSuccess | [Details](#fb2e6c27b8dca158886e3a0b6aa2f1f12e9f5480600)
- [sccm\sum\get-started\prepare-for-software-updates-management.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/get-started/prepare-for-software-updates-management.md) | HandedOffSuccess | [Details](#77074f77767af17c49cdedacd60433874bfc13fc601)
- [sccm\sum\get-started\remove-a-software-update-point.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/get-started/remove-a-software-update-point.md) | HandedOffSuccess | [Details](#f482ca9595dadeba8ae85b6d9887b8a09ff8f640602)
- [sccm\sum\get-started\synchronize-software-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/get-started/synchronize-software-updates.md) | HandedOffSuccess | [Details](#8e2d01ce3a48aa5f73d90ef7963784dd11a4f5ce604)
- [sccm\sum\get-started\synchronize-software-updates-disconnected.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/get-started/synchronize-software-updates-disconnected.md) | HandedOffSuccess | [Details](#ff8155e04dae7457ee4125136fb7ef0338c66bac603)
- [sccm\sum\includes\downloadupdates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/d525a45b67cf7882a348854deea0f14cd0725f6a/sccm/sum/includes/downloadupdates.md) | HandedOffSuccess | [Details](#d347548ca9a7b4f13a61559f60340adc6e5b5a43605)
- [sccm\sum\media\Expired.jpg](https://github.com/Microsoft/SCCMDocs-pr/blob/31c92822e72aa4e8eb9edd0fcea68f2ba5b9afd6/sccm/sum/media/Expired.jpg) | HandedOffSuccess | [Details](#6ddc637767a850a16056b7418b8ea15430f6e590606)
- [sccm\sum\media\Invalid.jpg](https://github.com/Microsoft/SCCMDocs-pr/blob/31c92822e72aa4e8eb9edd0fcea68f2ba5b9afd6/sccm/sum/media/Invalid.jpg) | HandedOffSuccess | [Details](#3531955e34baf771039a88aaa56087d9bbee9d57607)
- [sccm\sum\media\MetadataOnly.png](https://github.com/Microsoft/SCCMDocs-pr/blob/31c92822e72aa4e8eb9edd0fcea68f2ba5b9afd6/sccm/sum/media/MetadataOnly.png) | HandedOffSuccess | [Details](#c648a3685b3f336d96276a20414c7172b0bedca4608)
- [sccm\sum\media\Normal.jpg](https://github.com/Microsoft/SCCMDocs-pr/blob/31c92822e72aa4e8eb9edd0fcea68f2ba5b9afd6/sccm/sum/media/Normal.jpg) | HandedOffSuccess | [Details](#fb7760577e02d163028d51451b7c24de831b0073609)
- [sccm\sum\media\Superseded.jpg](https://github.com/Microsoft/SCCMDocs-pr/blob/31c92822e72aa4e8eb9edd0fcea68f2ba5b9afd6/sccm/sum/media/Superseded.jpg) | HandedOffSuccess | [Details](#78effb18fe2c6ae8aac8ef23d0b5f50b8d31159c610)
- [sccm\sum\plan-design\plan-for-software-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/plan-design/plan-for-software-updates.md) | HandedOffSuccess | [Details](#73d555c48f89bf81f7d1c2c3c445b02dff661a34611)
- [sccm\sum\plan-design\prerequisites-for-software-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/plan-design/prerequisites-for-software-updates.md) | HandedOffSuccess | [Details](#1761467c3fd7705a74725984764f6d777af4a9cd612)
- [sccm\sum\plan-design\security-and-privacy-for-software-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/plan-design/security-and-privacy-for-software-updates.md) | HandedOffSuccess | [Details](#a732cb30ab949eca085e5aabe99d089b87d233b2613)
- [sccm\sum\plan-design\software-updates-best-practices.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/plan-design/software-updates-best-practices.md) | HandedOffSuccess | [Details](#157ced363617a6727dc7b6bf4c396d6d991db557614)
- [sccm\sum\TOC.md](https://github.com/Microsoft/SCCMDocs-pr/blob/6884428ec623d22b5821d6feeaf327b8ace69ea6/sccm/sum/TOC.md) | HandedOffSuccess | [Details](#b28217f856081b149464aac2e5c84d17acd75ac9615)
- [sccm\sum\understand\software-updates-icons.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/understand/software-updates-icons.md) | HandedOffSuccess | [Details](#e77ca190faaefdf4e7fa418cb57edf2e42bc65bb616)
- [sccm\sum\understand\software-updates-introduction.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/understand/software-updates-introduction.md) | HandedOffSuccess | [Details](#c90d71397c656cb0c0e6d0dbebc7d15405c1d910617)
- [sccm\toc.md](https://github.com/Microsoft/SCCMDocs-pr/blob/f59f66ec7548c39b11430211919297def2958a77/sccm/toc.md) | HandedOffSuccess | [Details](#adc83b19e793491b1c6ea0fd8b46cd9f32e592fc618)
+ [sccm\mdm\deploy-use\enroll-hybrid-android.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5298a616272d6bfde5687ecd5a18d00e5d9dd2c4/sccm/mdm/deploy-use/enroll-hybrid-android.md) | HandedOffSuccess | [Details](#8f2424c8727afed02423662800a3f24466de8b8d411)
+ [sccm\mdm\deploy-use\enroll-hybrid-ios-mac.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5298a616272d6bfde5687ecd5a18d00e5d9dd2c4/sccm/mdm/deploy-use/enroll-hybrid-ios-mac.md) | HandedOffSuccess | [Details](#9c26140d8cbebf3c0e4dedf8539da696ae6f2632412)
+ [sccm\mdm\deploy-use\enroll-hybrid-windows.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5298a616272d6bfde5687ecd5a18d00e5d9dd2c4/sccm/mdm/deploy-use/enroll-hybrid-windows.md) | HandedOffSuccess | [Details](#566332d1aef100c110fc159d65a8267911f14166413)
+ [sccm\mdm\deploy-use\ios-device-enrollment-program-for-hybrid.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/ios-device-enrollment-program-for-hybrid.md) | HandedOffSuccess | [Details](#d5ada01ecb200c662f1a7941c814e6938c421a65414)
+ [sccm\mdm\deploy-use\ios-hybrid-enrollment-using-apple-configurator.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/ios-hybrid-enrollment-using-apple-configurator.md) | HandedOffSuccess | [Details](#0a9bde47fec700b1809e2f086bdfc2ded501c865415)
+ [sccm\mdm\deploy-use\manage-ios-activation-lock.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/manage-ios-activation-lock.md) | HandedOffSuccess | [Details](#99db56e6d502eaf091ca8e4763c5592b9faf1f0e416)
+ [sccm\mdm\deploy-use\manage-mobile-devices-with-exchange-activesync.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md) | HandedOffSuccess | [Details](#c6d011e8f6a080ed221c1c736aae842187b196ab417)
+ [sccm\mdm\deploy-use\media\certExport-WinPhone.jpg](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/deploy-use/media/certExport-WinPhone.jpg) | HandedOffSuccess | [Details](#b86daa607f8bdfca2b36b2e9c956dc9872a80e4d418)
+ [sccm\mdm\deploy-use\media\certmgr-WinPhone_cert.jpg](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/deploy-use/media/certmgr-WinPhone_cert.jpg) | HandedOffSuccess | [Details](#a3713304193d4562fb5784b2e0ec7730ac5e796e419)
+ [sccm\mdm\deploy-use\media\configmgr-with-exchange.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/deploy-use/media/configmgr-with-exchange.png) | HandedOffSuccess | [Details](#b74e5b5b5d675cf20177f14710e37f90d6dcb24f420)
+ [sccm\mdm\deploy-use\predeclare-devices-with-hardware-id.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/predeclare-devices-with-hardware-id.md) | HandedOffSuccess | [Details](#43d67aa664037c6da83260d5ada8e574510a8f7b421)
+ [sccm\mdm\deploy-use\set-up-android-hybrid-device-management.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/set-up-android-hybrid-device-management.md) | HandedOffSuccess | [Details](#ccd46a1a919721962c32b13609fd059e7e4d3024422)
+ [sccm\mdm\deploy-use\setup-hybrid-mdm.md](https://github.com/Microsoft/SCCMDocs-pr/blob/07c5f0e69224422184fa3b747653ad134f8996b7/sccm/mdm/deploy-use/setup-hybrid-mdm.md) | HandedOffSuccess | [Details](#8f49e1007402d6f8ed06eef9e1580f8ec978a8eb426)
+ [sccm\mdm\deploy-use\set-up-hybrid-windows.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/set-up-hybrid-windows.md) | HandedOffSuccess | [Details](#81ece7b811a7838b94b70e66d58ca615f45f6a55423)
+ [sccm\mdm\deploy-use\set-up-ios-hybrid-device-management.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/set-up-ios-hybrid-device-management.md) | HandedOffSuccess | [Details](#6a4afbf34d76bc05300f69193ffd709e2b390efb424)
+ [sccm\mdm\deploy-use\set-up-windows-phone-hybrid-enrollment.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/set-up-windows-phone-hybrid-enrollment.md) | HandedOffSuccess | [Details](#30c05689010c460ce5cd47d0ddcc792aa619a592425)
+ [sccm\mdm\deploy-use\terms-and-conditions.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/terms-and-conditions.md) | HandedOffSuccess | [Details](#dd928ef3a7d36522d6ac900b990c6091aa354f62427)
+ [sccm\mdm\deploy-use\user-affinity-for-hybrid-managed-devices.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/user-affinity-for-hybrid-managed-devices.md) | HandedOffSuccess | [Details](#bc4e0d4a15fe4b75e03c1262cf17c89bb02e86db428)
+ [sccm\mdm\deploy-use\user-enroll-devices-on-premises-mdm.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/user-enroll-devices-on-premises-mdm.md) | HandedOffSuccess | [Details](#96b703ba3c226a47d91f57e5c00e3fb060e48439429)
+ [sccm\mdm\deploy-use\wipe-lock-reset-devices.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/wipe-lock-reset-devices.md) | HandedOffSuccess | [Details](#9b8999191483a514f668c7e90f5ed63db7c7ade4430)
+ [sccm\mdm\get-started\install-site-system-roles-for-on-premises-mdm.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/get-started/install-site-system-roles-for-on-premises-mdm.md) | HandedOffSuccess | [Details](#314c4db83ea41f0162c9cd11194c913158e650ea431)
+ [sccm\mdm\get-started\preparation-steps-for-on-premises-mdm.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/get-started/preparation-steps-for-on-premises-mdm.md) | HandedOffSuccess | [Details](#fd6d75cd3a748a5b3fd5de1394341eb47d0b4a02432)
+ [sccm\mdm\get-started\set-up-certificates-on-premises-mdm.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/get-started/set-up-certificates-on-premises-mdm.md) | HandedOffSuccess | [Details](#5b94eba20572303af04d4458ba5dcc1b065671d5433)
+ [sccm\mdm\get-started\set-up-device-enrollment-on-premises-mdm.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/get-started/set-up-device-enrollment-on-premises-mdm.md) | HandedOffSuccess | [Details](#49fdd9c391bc838d3fb64392a32a095c44e5db70434)
+ [sccm\mdm\get-started\set-up-intune-subscription-on-premises-mdm.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/get-started/set-up-intune-subscription-on-premises-mdm.md) | HandedOffSuccess | [Details](#658dbc0700a3e665a2829639e4e5b63309d2d7bb435)
+ [sccm\mdm\includes\mdm-supported-devices.md](https://github.com/Microsoft/SCCMDocs-pr/blob/530b93178d1068b54386bc996e90811a0952aad3/sccm/mdm/includes/mdm-supported-devices.md) | HandedOffSuccess | [Details](#5b24d6e464e6a682ae6f744d9627ff1951dfef12436)
+ [sccm\mdm\media\aad-intune-app.png](https://github.com/Microsoft/SCCMDocs-pr/blob/4ba4943a740f302ea1f836a35b052557db0ab070/sccm/mdm/media/aad-intune-app.png) | HandedOffSuccess | [Details](#15fababf9a40d55d48960b5bcb5b25b59fc477b1437)
+ [sccm\mdm\media\mdm-create-user-collection.png](https://github.com/Microsoft/SCCMDocs-pr/blob/4ba4943a740f302ea1f836a35b052557db0ab070/sccm/mdm/media/mdm-create-user-collection.png) | HandedOffSuccess | [Details](#0c98be6231e29d8665df1f49c9a34cb4ab84153e438)
+ [sccm\mdm\media\mdm-service-connection-point.png](https://github.com/Microsoft/SCCMDocs-pr/blob/4ba4943a740f302ea1f836a35b052557db0ab070/sccm/mdm/media/mdm-service-connection-point.png) | HandedOffSuccess | [Details](#83c39e9aafeadf050b7d5af588568bcc902fb229439)
+ [sccm\mdm\media\mdm-set-intune.png](https://github.com/Microsoft/SCCMDocs-pr/blob/4ba4943a740f302ea1f836a35b052557db0ab070/sccm/mdm/media/mdm-set-intune.png) | HandedOffSuccess | [Details](#8a63ea1e7c0e34b524cd58d786f1b50447c941f7440)
+ [sccm\mdm\plan-design\hybrid-mobile-device-management.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/plan-design/hybrid-mobile-device-management.md) | HandedOffSuccess | [Details](#a9329254447656f646b5f57428034cf0cdc28e8a441)
+ [sccm\mdm\plan-design\plan-hybrid-mobile-device-management.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/plan-design/plan-hybrid-mobile-device-management.md) | HandedOffSuccess | [Details](#7d39fdd49c42cadd5a426c4ad53a92df6ec93c66442)
+ [sccm\mdm\plan-design\plan-on-premises-mdm.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/plan-design/plan-on-premises-mdm.md) | HandedOffSuccess | [Details](#b3200246b4de4439e0f58975f712a68fe1c2a5ac443)
+ [sccm\mdm\TOC.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5298a616272d6bfde5687ecd5a18d00e5d9dd2c4/sccm/mdm/TOC.md) | HandedOffSuccess | [Details](#9c3df5ed669350b3ba38ce9f51c6d3dab449a86a444)
+ [sccm\mdm\understand\choose-between-standalone-intune-and-hybrid-mobile-device-management.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management.md) | HandedOffSuccess | [Details](#85e3e9c2586daa0c80557eac9514f004f763a240445)
+ [sccm\mdm\understand\hybrid-mobile-device-management.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/understand/hybrid-mobile-device-management.md) | HandedOffSuccess | [Details](#d40ef2fbec745f147c8a6dcca1678de6a7e4c868446)
+ [sccm\mdm\understand\manage-mobile-devices-with-on-premises-infrastructure.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md) | HandedOffSuccess | [Details](#993f8a6025cf5180ca6a6f603a5aef53e5ca0113447)
+ [sccm\mdm\understand\media\hybrid-1.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/understand/media/hybrid-1.png) | HandedOffSuccess | [Details](#e61950df6b33bb9c3dbaa6d8dfd4152dc78da35f448)
+ [sccm\mdm\understand\media\hybrid-2.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/understand/media/hybrid-2.png) | HandedOffSuccess | [Details](#e6e64f3cb69c5f39cb0982a501e014bffd6f53f5449)
+ [sccm\mdm\understand\media\hybrid-3.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/understand/media/hybrid-3.png) | HandedOffSuccess | [Details](#84af8dd482b6f84027e7da837c374e7b3283bace450)
+ [sccm\mdm\understand\media\hybrid-4.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/understand/media/hybrid-4.png) | HandedOffSuccess | [Details](#ef524b14c615faa950321241aaa76d99c9458d72451)
+ [sccm\mdm\understand\media\hybrid-5.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/understand/media/hybrid-5.png) | HandedOffSuccess | [Details](#a4b1a2455b9df2d8c598d164cd0c6ce65e4d8aaf452)
+ [sccm\mdm\understand\media\hybrid-6.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/understand/media/hybrid-6.png) | HandedOffSuccess | [Details](#57732db78a76067c645a7e3a2f7ec9c1e8636abc453)
+ [sccm\mdm\understand\media\hybrid-7.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/understand/media/hybrid-7.png) | HandedOffSuccess | [Details](#d0a4d32939be85c3291eba609d3e04457e87f83d454)
+ [sccm\mdm\understand\media\hybrid-8.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/understand/media/hybrid-8.png) | HandedOffSuccess | [Details](#75406f23034ebcb1dfbd8bb4ac8418ac1b129b75455)
+ [sccm\mdm\understand\media\hybrid-9.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/understand/media/hybrid-9.png) | HandedOffSuccess | [Details](#d99994cc912c560994c973cf2326f1cdfb61a65b456)
+ [sccm\mdm\understand\media\hybrid-decisions.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/understand/media/hybrid-decisions.png) | HandedOffSuccess | [Details](#4cf5264eba406acedd16d21fab4ec89394336ac0457)
+ [sccm\mdm\understand\media\On-premises-conceptual.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/understand/media/On-premises-conceptual.png) | HandedOffSuccess | [Details](#075374ed96fd22728ea4537c2a09f9b9079567d7458)
+ [sccm\mdm\understand\whats-new-in-hybrid-mobile-device-management.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management.md) | HandedOffSuccess | [Details](#628113d0e3d049420014ad1dc4498f2359f8b08e459)
+ [sccm\osd\deploy-use\create-a-custom-task-sequence.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/create-a-custom-task-sequence.md) | HandedOffSuccess | [Details](#02e264298424d97d4c8c3e0fa6eb5a288a4813b2460)
+ [sccm\osd\deploy-use\create-an-image-for-an-oem-in-factory-or-a-local-depot.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/create-an-image-for-an-oem-in-factory-or-a-local-depot.md) | HandedOffSuccess | [Details](#be5a652a1c93afc70e3df3157bbb0ed1d87b0e2d466)
+ [sccm\osd\deploy-use\create-a-task-sequence-for-non-operating-system-deployments.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/create-a-task-sequence-for-non-operating-system-deployments.md) | HandedOffSuccess | [Details](#68e626ff502dcf407b68114d3869551001781885461)
+ [sccm\osd\deploy-use\create-a-task-sequence-to-capture-and-restore-user-state.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md) | HandedOffSuccess | [Details](#3b161971f09a524405a0ab8a3d5a7832d841f8cd463)
+ [sccm\osd\deploy-use\create-a-task-sequence-to-capture-an-operating-system.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/create-a-task-sequence-to-capture-an-operating-system.md) | HandedOffSuccess | [Details](#30e47362521bab978bdd4bdac3ae2e33d2601b5c462)
+ [sccm\osd\deploy-use\create-a-task-sequence-to-install-an-operating-system.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/create-a-task-sequence-to-install-an-operating-system.md) | HandedOffSuccess | [Details](#9aa5b7696d86fcd5e95034b86ed39734ba8e6629464)
+ [sccm\osd\deploy-use\create-a-task-sequence-to-upgrade-an-operating-system.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md) | HandedOffSuccess | [Details](#042c6fe9dc0b53c5b7c9d439babe6c93828ffd19465)
+ [sccm\osd\deploy-use\create-bootable-media.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/create-bootable-media.md) | HandedOffSuccess | [Details](#fe3c2175f5e1503c3895b604fdcdcd07f0a07908467)
+ [sccm\osd\deploy-use\create-capture-media.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/create-capture-media.md) | HandedOffSuccess | [Details](#d663e3fc51b1dc1599ac2abaa84570b62ed1d5f9468)
+ [sccm\osd\deploy-use\create-prestaged-media.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/create-prestaged-media.md) | HandedOffSuccess | [Details](#fdd1af19e144533587dc7575a522c76dd52f803a469)
+ [sccm\osd\deploy-use\create-stand-alone-media.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/create-stand-alone-media.md) | HandedOffSuccess | [Details](#60ec4a5557be380368d671238350230bbb9535fd470)
+ [sccm\osd\deploy-use\create-task-sequence-media.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/create-task-sequence-media.md) | HandedOffSuccess | [Details](#e6e99032c4411487ad4b0b299de107f02e16acc7471)
+ [sccm\osd\deploy-use\deploy-windows-to-go.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/deploy-windows-to-go.md) | HandedOffSuccess | [Details](#de326470a74ca0602a4d4e7ae5076cda1b2263f8472)
+ [sccm\osd\deploy-use\install-new-windows-version-new-computer-bare-metal.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/install-new-windows-version-new-computer-bare-metal.md) | HandedOffSuccess | [Details](#96283936f1acca00938c02b0929aa3ce2687b25e473)
+ [sccm\osd\deploy-use\manage-task-sequences-to-automate-tasks.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks.md) | HandedOffSuccess | [Details](#6bd1bcdfe4a0d08aed2e8217e53ce6a43fa27b2e474)
+ [sccm\osd\deploy-use\manage-windows-as-a-service.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/manage-windows-as-a-service.md) | HandedOffSuccess | [Details](#eed38d04c72a53025502e988fd7c8c5356dc4eb8475)
+ [sccm\osd\deploy-use\methods-to-deploy-enterprise-operating-systems.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/methods-to-deploy-enterprise-operating-systems.md) | HandedOffSuccess | [Details](#8f84a895ae9be0f6a431561b25f557c0516ffc68476)
+ [sccm\osd\deploy-use\monitor-operating-system-deployments.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/monitor-operating-system-deployments.md) | HandedOffSuccess | [Details](#eee00cf759c49f19627eeb1b0ac2a03aac2dbd43477)
+ [sccm\osd\deploy-use\preprovision-bitlocker-in-windows-pe.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/preprovision-bitlocker-in-windows-pe.md) | HandedOffSuccess | [Details](#a1cf9533de0e8c34cd826865145bd89c4142c363478)
+ [sccm\osd\deploy-use\refresh-an-existing-computer-with-a-new-version-of-windows.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/refresh-an-existing-computer-with-a-new-version-of-windows.md) | HandedOffSuccess | [Details](#ce2e44e64839d4490b30dcb3389602bf26913d14479)
+ [sccm\osd\deploy-use\replace-an-existing-computer-and-transfer-settings.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/replace-an-existing-computer-and-transfer-settings.md) | HandedOffSuccess | [Details](#0c5de87111c38b373f3386aa2f4ff8f13e6c77e6480)
+ [sccm\osd\deploy-use\scenarios-to-deploy-enterprise-operating-systems.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/scenarios-to-deploy-enterprise-operating-systems.md) | HandedOffSuccess | [Details](#403a955e0d44b8f7dc236df0ee102c2732335bae481)
+ [sccm\osd\deploy-use\upgrade-windows-to-the-latest-version.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/upgrade-windows-to-the-latest-version.md) | HandedOffSuccess | [Details](#6d695e22242c9f3a0e820774aa58d75dee5dcdc5482)
+ [sccm\osd\deploy-use\use-a-task-sequence-to-manage-virtual-hard-disks.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/use-a-task-sequence-to-manage-virtual-hard-disks.md) | HandedOffSuccess | [Details](#f4dea75d1d1e6a2c1006887f0d4c4b4eb41594d8483)
+ [sccm\osd\deploy-use\use-bootable-media-to-deploy-windows-over-the-network.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/use-bootable-media-to-deploy-windows-over-the-network.md) | HandedOffSuccess | [Details](#7cc62108f55c5be7a42ba7bf18af5e5fb86ad14f484)
+ [sccm\osd\deploy-use\use-multicast-to-deploy-windows-over-the-network.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/use-multicast-to-deploy-windows-over-the-network.md) | HandedOffSuccess | [Details](#b8ae17afc9f292de01026997a87e8fa96c77d7d8485)
+ [sccm\osd\deploy-use\use-pxe-to-deploy-windows-over-the-network.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/use-pxe-to-deploy-windows-over-the-network.md) | HandedOffSuccess | [Details](#606d0daed7ded866e7cad7ec93ee194cd65168f0486)
+ [sccm\osd\deploy-use\use-software-center-to-deploy-windows-over-the-network.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/use-software-center-to-deploy-windows-over-the-network.md) | HandedOffSuccess | [Details](#bd2c855e93c0840b2300822d4b60cdaf90bce932487)
+ [sccm\osd\deploy-use\use-stand-alone-media-to-deploy-windows-without-using-the-network.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/use-stand-alone-media-to-deploy-windows-without-using-the-network.md) | HandedOffSuccess | [Details](#3f699d267035da3e1a02a875a2a4f13e24c0465e488)
+ [sccm\osd\get-started\associate-users-with-a-destination-computer.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/get-started/associate-users-with-a-destination-computer.md) | HandedOffSuccess | [Details](#9e8d91d930854ddcffaf3258e3b5947bd2643a07489)
+ [sccm\osd\get-started\customize-boot-images.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/get-started/customize-boot-images.md) | HandedOffSuccess | [Details](#acbb4957d3a41d06a9dff404537bb5a4c853b232490)
+ [sccm\osd\get-started\customize-operating-system-images.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/get-started/customize-operating-system-images.md) | HandedOffSuccess | [Details](#a872fb05b8e1b55fbcebc32968a3e2f774b8d8be491)
+ [sccm\osd\get-started\manage-boot-images.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/get-started/manage-boot-images.md) | HandedOffSuccess | [Details](#c9507f92a36971491d86f63f4436359dce2be4ac492)
+ [sccm\osd\get-started\manage-drivers.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/get-started/manage-drivers.md) | HandedOffSuccess | [Details](#b152127d3abe4b916f6c32cb2ce0cc6cf8b3050d493)
+ [sccm\osd\get-started\manage-operating-system-images.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/get-started/manage-operating-system-images.md) | HandedOffSuccess | [Details](#f250186a5b55a6684bbe7ef640f56e6dc3d81b72494)
+ [sccm\osd\get-started\manage-operating-system-upgrade-packages.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/get-started/manage-operating-system-upgrade-packages.md) | HandedOffSuccess | [Details](#9c5cfd1af0909185e4115f8f8e2ba62ce6421b49495)
+ [sccm\osd\get-started\manage-user-state.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/get-started/manage-user-state.md) | HandedOffSuccess | [Details](#f4a12c54a0c93751be848ea68d03363369212109496)
+ [sccm\osd\get-started\prepare-for-operating-system-deployment.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/get-started/prepare-for-operating-system-deployment.md) | HandedOffSuccess | [Details](#2d7b25f320a8099bf3b96e80858247b93f16cc7f497)
+ [sccm\osd\get-started\prepare-for-unknown-computer-deployments.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/get-started/prepare-for-unknown-computer-deployments.md) | HandedOffSuccess | [Details](#04596cf7c1e085b179deeddec5c121158bff5f6c498)
+ [sccm\osd\get-started\prepare-site-system-roles-for-operating-system-deployments.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/get-started/prepare-site-system-roles-for-operating-system-deployments.md) | HandedOffSuccess | [Details](#439045b36808188d02f6d79bff32144528c2118e499)
+ [sccm\osd\get-started\prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md) | HandedOffSuccess | [Details](#4667ecf187c327cb0596e603eefe618b7df23df7500)
+ [sccm\osd\plan-design\infrastructure-requirements-for-operating-system-deployment.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment.md) | HandedOffSuccess | [Details](#1cac2f4a15cbad2b40b06988a1f3c436771a2064501)
+ [sccm\osd\plan-design\planning-considerations-for-automating-tasks.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/plan-design/planning-considerations-for-automating-tasks.md) | HandedOffSuccess | [Details](#a88496cca153367fdf2432e08ff79674eb8dc9e7502)
+ [sccm\osd\plan-design\planning-for-operating-system-deployment-interoperability.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/plan-design/planning-for-operating-system-deployment-interoperability.md) | HandedOffSuccess | [Details](#982ee969a476fd65395fb39a3039c77023ede573503)
+ [sccm\osd\plan-design\security-and-privacy-for-operating-system-deployment.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/plan-design/security-and-privacy-for-operating-system-deployment.md) | HandedOffSuccess | [Details](#f5754b81eb1c1acdcc4d6b8080f4f76e38f70407504)
+ [sccm\osd\TOC.md](https://github.com/Microsoft/SCCMDocs-pr/blob/688c35c5c4641d2b0114efcc995e88f9d78b719e/sccm/osd/TOC.md) | HandedOffSuccess | [Details](#6c8357f8298d7b9ada271f31d6a57a589386243f505)
+ [sccm\osd\understand\introduction-to-operating-system-deployment.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/understand/introduction-to-operating-system-deployment.md) | HandedOffSuccess | [Details](#863ff4fc0d1fa8a7fea491d12e831a2fcc0dbc4f506)
+ [sccm\osd\understand\prestart-commands-for-task-sequence-media.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/understand/prestart-commands-for-task-sequence-media.md) | HandedOffSuccess | [Details](#0d401eaccf568b41c85b532e1ce9640eb3e7ca02507)
+ [sccm\osd\understand\task-sequence-action-variables.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/understand/task-sequence-action-variables.md) | HandedOffSuccess | [Details](#948c7ee96e448369b786c587f8663a404df315c8508)
+ [sccm\osd\understand\task-sequence-built-in-variables.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/understand/task-sequence-built-in-variables.md) | HandedOffSuccess | [Details](#9327544c5c7022a1c2d910182ec686c7f64546d9509)
+ [sccm\osd\understand\task-sequence-steps.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/understand/task-sequence-steps.md) | HandedOffSuccess | [Details](#9d63f1dbb3b17fdf3731440266f6678329e2ff8d510)
+ [sccm\protect\deploy-use\certificate-infrastructure.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/certificate-infrastructure.md) | HandedOffSuccess | [Details](#ec876316a220d9ed49b11641c6beb1281c4f0004511)
+ [sccm\protect\deploy-use\configure-endpoint-protection.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/configure-endpoint-protection.md) | HandedOffSuccess | [Details](#56618b0359a710193cc1547d041c9a974f636481512)
+ [sccm\protect\deploy-use\create-certificate-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/create-certificate-profiles.md) | HandedOffSuccess | [Details](#9dc1ae41cc36a73fa440694a03f98497ec739cc2513)
+ [sccm\protect\deploy-use\create-compliance-policy.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/create-compliance-policy.md) | HandedOffSuccess | [Details](#bb91f4a711699790bb01f48d32183cf1215b1952514)
+ [sccm\protect\deploy-use\create-exchange-activesync-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/create-exchange-activesync-profiles.md) | HandedOffSuccess | [Details](#d2f9f5e71a11b5eeb251a993bd4b701658308eee515)
+ [sccm\protect\deploy-use\create-pfx-certificate-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/create-pfx-certificate-profiles.md) | HandedOffSuccess | [Details](#cdbdce183ff7137d524a873fc67aff431647ced3516)
+ [sccm\protect\deploy-use\create-vpn-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/create-vpn-profiles.md) | HandedOffSuccess | [Details](#4e9d5217bd06b68073aae9f9d9c79bd634d880cd517)
+ [sccm\protect\deploy-use\create-wifi-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/create-wifi-profiles.md) | HandedOffSuccess | [Details](#a6fcc2360c52cdc7fbe25a3718e24f2e5c1169d0518)
+ [sccm\protect\deploy-use\create-windows-firewall-policies.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/create-windows-firewall-policies.md) | HandedOffSuccess | [Details](#13c7ed55f78f9a210e328a27fa76f245bf8edb6e519)
+ [sccm\protect\deploy-use\cryptographic-controls-technical-reference.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/cryptographic-controls-technical-reference.md) | HandedOffSuccess | [Details](#1979f1b01f2f94b201e0d96e8587af9a8a121000520)
+ [sccm\protect\deploy-use\deploy-wifi-vpn-email-cert-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/deploy-wifi-vpn-email-cert-profiles.md) | HandedOffSuccess | [Details](#edebb67123cccd22ea43d3bc608afb64a4976a3e521)
+ [sccm\protect\deploy-use\device-compliance-policies.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/device-compliance-policies.md) | HandedOffSuccess | [Details](#d461f95f875632860238d503d7acd7ab8c320d58522)
+ [sccm\protect\deploy-use\endpoint-antimalware-firewall.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-antimalware-firewall.md) | HandedOffSuccess | [Details](#002b68ec1f8a37bdbb77b5ba4be7b0dcea3f3f7c523)
+ [sccm\protect\deploy-use\endpoint-antimalware-policies.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-antimalware-policies.md) | HandedOffSuccess | [Details](#f211a26e578b64fb0699d8895d7e875005389507524)
+ [sccm\protect\deploy-use\endpoint-configure-alerts.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-configure-alerts.md) | HandedOffSuccess | [Details](#ee76dc26c92d2390fd366372be9fb1debaf391b0525)
+ [sccm\protect\deploy-use\endpoint-definitions-configmgr.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-definitions-configmgr.md) | HandedOffSuccess | [Details](#40543ccdbbc02a9f11309064ea018ec9402474b5527)
+ [sccm\protect\deploy-use\endpoint-definitions-microsoft-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-definitions-microsoft-updates.md) | HandedOffSuccess | [Details](#cf0a69692525f0b32699cabe5bca23ff5ef9797c528)
+ [sccm\protect\deploy-use\endpoint-definitions-network.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-definitions-network.md) | HandedOffSuccess | [Details](#7d407cc585d7567ad4c7e3ab4650b17fbd9c3370529)
+ [sccm\protect\deploy-use\endpoint-definitions-protection-center.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-definitions-protection-center.md) | HandedOffSuccess | [Details](#fa5abe78fd92beefdc134cd3fa661b8884bea3f1530)
+ [sccm\protect\deploy-use\endpoint-definitions-wsus.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-definitions-wsus.md) | HandedOffSuccess | [Details](#59ecc54944a2a1517789822581bf07b39153de39531)
+ [sccm\protect\deploy-use\endpoint-definition-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-definition-updates.md) | HandedOffSuccess | [Details](#5fc418a2cd9fc13e7626b779a8cc303e096c1409526)
+ [sccm\protect\deploy-use\endpoint-protection.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-protection.md) | HandedOffSuccess | [Details](#a17994dca24003c58d582df4e7b8c923fa028186537)
+ [sccm\protect\deploy-use\endpoint-protection-client-faq.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-protection-client-faq.md) | HandedOffSuccess | [Details](#76a7d018747ca6bd112b51f8f67c298416ea784e532)
+ [sccm\protect\deploy-use\endpoint-protection-client-help.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-protection-client-help.md) | HandedOffSuccess | [Details](#94f2a321c76e046dd039d8fd80532f93325d2d1a533)
+ [sccm\protect\deploy-use\endpoint-protection-configure.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-protection-configure.md) | HandedOffSuccess | [Details](#1fdd8f2f97b669cea5351787ef34c96f78ade124535)
+ [sccm\protect\deploy-use\endpoint-protection-configure-client.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-protection-configure-client.md) | HandedOffSuccess | [Details](#8056f1dbb0d7b79702eb4146b6742a9a1ab5f8bd534)
+ [sccm\protect\deploy-use\endpoint-protection-site-role.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-protection-site-role.md) | HandedOffSuccess | [Details](#c2e457d14b018052c70e52a1cd285dd137928b62536)
+ [sccm\protect\deploy-use\find-a-pfn-for-per-app-vpn.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/find-a-pfn-for-per-app-vpn.md) | HandedOffSuccess | [Details](#a840b67e9557be874ead821b91434be9b658ce1e538)
+ [sccm\protect\deploy-use\introduction-to-certificate-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/introduction-to-certificate-profiles.md) | HandedOffSuccess | [Details](#6ebaef8322173fd22c6251a02e1ff3232bf83e71539)
+ [sccm\protect\deploy-use\introduction-to-email-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/introduction-to-email-profiles.md) | HandedOffSuccess | [Details](#c6e8c2fab7d5d7056d25e004527a52449ce3f778540)
+ [sccm\protect\deploy-use\introduction-to-wifi-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/introduction-to-wifi-profiles.md) | HandedOffSuccess | [Details](#3f5010c04fb8db2fafb2939431f97e2d0554b383541)
+ [sccm\protect\deploy-use\manage-access-to-o365-services-for-pcs-managed-by-sccm.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md) | HandedOffSuccess | [Details](#c475c560971ab73e8be7671164a010a91bd3f229542)
+ [sccm\protect\deploy-use\manage-access-to-services.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/manage-access-to-services.md) | HandedOffSuccess | [Details](#2dad04cb429ac854b5455c2af051f6f7caaadd66543)
+ [sccm\protect\deploy-use\manage-dynamics-crm-online-access.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/manage-dynamics-crm-online-access.md) | HandedOffSuccess | [Details](#61409cf78bef3991d096c5c9615ff667aca9cb43544)
+ [sccm\protect\deploy-use\manage-email-access.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/manage-email-access.md) | HandedOffSuccess | [Details](#c1797910f2b7ceda451c2ccb23f66a4b2bd4b6ff545)
+ [sccm\protect\deploy-use\manage-sharepoint-online-access.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/manage-sharepoint-online-access.md) | HandedOffSuccess | [Details](#84fdd9c1141c7bee5e331eacb136d9dc21837c0f546)
+ [sccm\protect\deploy-use\manage-skype-for-business-online-access.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/manage-skype-for-business-online-access.md) | HandedOffSuccess | [Details](#a8d0655909c85eb53c2d1eb513586f9733236359547)
+ [sccm\protect\deploy-use\monitor-certificate-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/monitor-certificate-profiles.md) | HandedOffSuccess | [Details](#1e4f7a68801e0c00377c3e96a0bf080cf89a3d62548)
+ [sccm\protect\deploy-use\monitor-endpoint-protection.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/monitor-endpoint-protection.md) | HandedOffSuccess | [Details](#8893485e885901cc8af3d44d02064610f542e193549)
+ [sccm\protect\deploy-use\monitor-wifi-email-vpn-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/monitor-wifi-email-vpn-profiles.md) | HandedOffSuccess | [Details](#cd9d492202dc2a70348bc54b58fa942d8be7002e550)
+ [sccm\protect\deploy-use\scenarios-endpoint-protection.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/scenarios-endpoint-protection.md) | HandedOffSuccess | [Details](#33f47079c1c0aebbffcb2c6ff9d5abacf033ec12551)
+ [sccm\protect\deploy-use\troubleshoot-endpoint-client.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/troubleshoot-endpoint-client.md) | HandedOffSuccess | [Details](#3d07f4c4a8124eb70cd18a77d11aff49d03a3424552)
+ [sccm\protect\deploy-use\vpn-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/vpn-profiles.md) | HandedOffSuccess | [Details](#e78f0e741c6d98cf54e55a2c175259ba9d7ce556553)
+ [sccm\protect\deploy-use\windows-defender-advanced-threat-protection.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/windows-defender-advanced-threat-protection.md) | HandedOffSuccess | [Details](#f7e309a667a3c0bf25af32e636b86297c7ae002d554)
+ [sccm\protect\deploy-use\windows-hello-for-business-settings.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/windows-hello-for-business-settings.md) | HandedOffSuccess | [Details](#f2a853d63407637d4e8ece5d46cd4f0dc717c3de555)
+ [sccm\protect\media\CA_compliance_report.png](https://github.com/Microsoft/SCCMDocs-pr/blob/1fac5d19e8b08f62b8ef46e7cbebc6f75e804a35/sccm/protect/media/CA_compliance_report.png) | HandedOffSuccess | [Details](#4bbc76b5e6a221455bd9fefa3f9f1efee5b77c5d556)
+ [sccm\protect\media\CA_Win10OSversion.png](https://github.com/Microsoft/SCCMDocs-pr/blob/1fac5d19e8b08f62b8ef46e7cbebc6f75e804a35/sccm/protect/media/CA_Win10OSversion.png) | HandedOffSuccess | [Details](#a33cd943cfbed72c9b43fff77a4bf36b1f485502557)
+ [sccm\protect\media\ConditionalAccess_SFBFlow.png](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/ConditionalAccess_SFBFlow.png) | HandedOffSuccess | [Details](#cec44005d4b4571b36ae7282b89128029aa717bf562)
+ [sccm\protect\media\ConditionalAccess_SFBPolicy.png](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/ConditionalAccess_SFBPolicy.png) | HandedOffSuccess | [Details](#8e11b2aa1e985e9c2b9013fae17c305466aea1c8563)
+ [sccm\protect\media\ConditionalAccess4.png](https://github.com/Microsoft/SCCMDocs-pr/blob/1fac5d19e8b08f62b8ef46e7cbebc6f75e804a35/sccm/protect/media/ConditionalAccess4.png) | HandedOffSuccess | [Details](#f39d4bc54eaf9e57d461f92a5aeeccdeff9b0790558)
+ [sccm\protect\media\ConditionalAccess8-1.png](https://github.com/Microsoft/SCCMDocs-pr/blob/1fac5d19e8b08f62b8ef46e7cbebc6f75e804a35/sccm/protect/media/ConditionalAccess8-1.png) | HandedOffSuccess | [Details](#495a0e184d5b0f7d60292dd23b38e57fdad93e87559)
+ [sccm\protect\media\ConditionalAccess8-2.png](https://github.com/Microsoft/SCCMDocs-pr/blob/1fac5d19e8b08f62b8ef46e7cbebc6f75e804a35/sccm/protect/media/ConditionalAccess8-2.png) | HandedOffSuccess | [Details](#1dde0f9c701974b72ef12e63ecc4ed76f84f053e560)
+ [sccm\protect\media\ConditionalAccess8-6.png](https://github.com/Microsoft/SCCMDocs-pr/blob/1fac5d19e8b08f62b8ef46e7cbebc6f75e804a35/sccm/protect/media/ConditionalAccess8-6.png) | HandedOffSuccess | [Details](#4f3c1dba5f1026b42852909c0bcd8f6414523578561)
+ [sccm\protect\media\Endpoint-Protection-Workflow.gif](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/Endpoint-Protection-Workflow.gif) | HandedOffSuccess | [Details](#46e5b00c04e59ca79796d4d1aa580bf8f6fd7050564)
+ [sccm\protect\media\HybridCondAccessWiz1.PNG](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/HybridCondAccessWiz1.PNG) | HandedOffSuccess | [Details](#7f8bf512eba1fbfc90371b585e5c75ce9bd3c4b8566)
+ [sccm\protect\media\HybridCondAccessWiz2.PNG](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/HybridCondAccessWiz2.PNG) | HandedOffSuccess | [Details](#bdcdc0cba73f712faeb3647ed934790913bb5383567)
+ [sccm\protect\media\HybridCondAccessWiz3.png](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/HybridCondAccessWiz3.png) | HandedOffSuccess | [Details](#6a86fe479171aedfad9945bf5ec32cdb917d3a11568)
+ [sccm\protect\media\HybridCondAccessWiz4.PNG](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/HybridCondAccessWiz4.PNG) | HandedOffSuccess | [Details](#e7856022d7444b91bae346a07a8baffb2f8ceaad569)
+ [sccm\protect\media\HybridOnlineSetupIntune.png](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/HybridOnlineSetupIntune.png) | HandedOffSuccess | [Details](#4d400df60e1df4515d027407089779d881068589570)
+ [sccm\protect\media\IntuneSASharePointOnlineCAPolicy.png](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/IntuneSASharePointOnlineCAPolicy.png) | HandedOffSuccess | [Details](#a6a8d2c7c3239985e54745b56857ff7c66dc33eb571)
+ [sccm\protect\media\mdm-browser-ca-android-cert-prompt.png](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/mdm-browser-ca-android-cert-prompt.png) | HandedOffSuccess | [Details](#1a1bccf04d4ae09877a0c554bea53125e7181efb572)
+ [sccm\protect\media\mdm-browser-ca-ios-cert-prompt_v2.png](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/mdm-browser-ca-ios-cert-prompt_v2.png) | HandedOffSuccess | [Details](#1d8598d5c0d5b62e8213a1172ba42f801d53c97e573)
+ [sccm\protect\media\mdm-ca-dynamics-crm-flow-diagram.png](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/mdm-ca-dynamics-crm-flow-diagram.png) | HandedOffSuccess | [Details](#8347ec59d03aebeca9ef3081151ab8cf24174ff1574)
+ [sccm\protect\media\mdm-ca-dynamics-crm-policy-configuration.png](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/mdm-ca-dynamics-crm-policy-configuration.png) | HandedOffSuccess | [Details](#ab891ab721e056098c0dc0c2b620a525977c43a6575)
+ [sccm\protect\media\TechRef_WinDefender.png](https://github.com/Microsoft/SCCMDocs-pr/blob/9257ba19a20c9a5b0805ef5a1b7c9aa2a370e161/sccm/protect/media/TechRef_WinDefender.png) | HandedOffSuccess | [Details](#16218bc782a862e2d082bd4e34c640ca0c58bf95576)
+ [sccm\protect\plan-design\planning-for-certificate-template-permissions.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/plan-design/planning-for-certificate-template-permissions.md) | HandedOffSuccess | [Details](#066b6325616f5fe779b778265baa114788c76bef577)
+ [sccm\protect\plan-design\planning-for-endpoint-protection.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/plan-design/planning-for-endpoint-protection.md) | HandedOffSuccess | [Details](#c246ac727efa21fab30a81999cc9bad00f20551e578)
+ [sccm\protect\plan-design\prerequisites-for-certificate-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/plan-design/prerequisites-for-certificate-profiles.md) | HandedOffSuccess | [Details](#8a7134af111cf24258f0f271023be51387c21f00579)
+ [sccm\protect\plan-design\prerequisites-for-email-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/plan-design/prerequisites-for-email-profiles.md) | HandedOffSuccess | [Details](#0a89dd219ad8cc217be1421bd963098eed147cc8580)
+ [sccm\protect\plan-design\prerequisites-for-wifi-vpn-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/plan-design/prerequisites-for-wifi-vpn-profiles.md) | HandedOffSuccess | [Details](#c103735a0f5fab6b800a7e9fb808221aebb102cb581)
+ [sccm\protect\plan-design\security-and-privacy-for-certificate-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/plan-design/security-and-privacy-for-certificate-profiles.md) | HandedOffSuccess | [Details](#6e8b453c9baf03575c4260b52d5f18c75b5c0d8e582)
+ [sccm\protect\plan-design\security-and-privacy-for-email-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/plan-design/security-and-privacy-for-email-profiles.md) | HandedOffSuccess | [Details](#49f7f2b780c5e499b5090fafb1a57d4f6b1ac61f583)
+ [sccm\protect\plan-design\security-and-privacy-for-wifi-vpn-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/plan-design/security-and-privacy-for-wifi-vpn-profiles.md) | HandedOffSuccess | [Details](#6d74b8006e6c778c281718446fd51467dc63829a584)
+ [sccm\protect\TOC.md](https://github.com/Microsoft/SCCMDocs-pr/blob/688c35c5c4641d2b0114efcc995e88f9d78b719e/sccm/protect/TOC.md) | HandedOffSuccess | [Details](#8fd4d73bf300cfe55b061108d9df1d8f5001fb82585)
+ [sccm\protect\understand\backup-and-recovery.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/understand/backup-and-recovery.md) | HandedOffSuccess | [Details](#d7e3915c5bb3638e57b0f6debf187beb10dd2519586)
+ [sccm\protect\understand\high-availability-options.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/understand/high-availability-options.md) | HandedOffSuccess | [Details](#18475f6f3b1e079ec439effb27af20c3e9a7d802587)
+ [sccm\protect\understand\protect-data-and-site-infrastructure.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/understand/protect-data-and-site-infrastructure.md) | HandedOffSuccess | [Details](#318553983a2bf9782016afbc4d0eeb60e1258afb588)
+ [sccm\protect\understand\settings-to-manage-high-risk-deployments.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/understand/settings-to-manage-high-risk-deployments.md) | HandedOffSuccess | [Details](#b8f221a7de1378cd4a9258ee9729aa7e1dfdc23f589)
+ [sccm\sum\deploy-use\add-software-updates-to-an-update-group.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/deploy-use/add-software-updates-to-an-update-group.md) | HandedOffSuccess | [Details](#3ba2ba4eac7216e138c65afb82c1ea69a8b39d9b590)
+ [sccm\sum\deploy-use\automatically-deploy-software-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/deploy-use/automatically-deploy-software-updates.md) | HandedOffSuccess | [Details](#034d67f4cd83ad293bac674f79491ed29efca863591)
+ [sccm\sum\deploy-use\deploy-software-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/deploy-use/deploy-software-updates.md) | HandedOffSuccess | [Details](#2492aa06c9c82d03ed1d23d0084bb8cfb0a733a1592)
+ [sccm\sum\deploy-use\download-software-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/deploy-use/download-software-updates.md) | HandedOffSuccess | [Details](#369aa22f627381a37e392d1254998d4b047f915b593)
+ [sccm\sum\deploy-use\example-scenario-deploy-monitor-monthly-security-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/deploy-use/example-scenario-deploy-monitor-monthly-security-updates.md) | HandedOffSuccess | [Details](#12cf594b4be3009db08f848b9f51366def9b846a594)
+ [sccm\sum\deploy-use\integrate-windows-update-for-business-windows-10.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10.md) | HandedOffSuccess | [Details](#a3723218539d46e305c0b007addd8f81e8025061595)
+ [sccm\sum\deploy-use\manage-office-365-proplus-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/deploy-use/manage-office-365-proplus-updates.md) | HandedOffSuccess | [Details](#55cf224e070d7c6f04b17ff113d55fcb12d2a386596)
+ [sccm\sum\deploy-use\manually-deploy-software-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/deploy-use/manually-deploy-software-updates.md) | HandedOffSuccess | [Details](#decd43a9e613a18a9a007bdda9248304cf35ee30597)
+ [sccm\sum\deploy-use\monitor-software-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/deploy-use/monitor-software-updates.md) | HandedOffSuccess | [Details](#d222d946eb14d666b0ea80cb0924c48b3ef420ee598)
+ [sccm\sum\deploy-use\service-a-server-group.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/deploy-use/service-a-server-group.md) | HandedOffSuccess | [Details](#7c85180de2733e83f698ffb695af39d376af6112599)
+ [sccm\sum\deploy-use\software-updates-maintenance.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/deploy-use/software-updates-maintenance.md) | HandedOffSuccess | [Details](#fb9ef52381644287f2b4a88d405069607c4a1cb3600)
+ [sccm\sum\get-started\configure-classifications-and-products.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/get-started/configure-classifications-and-products.md) | HandedOffSuccess | [Details](#961e5d7279c949a639d38569d77fae578bc9ffd8601)
+ [sccm\sum\get-started\install-a-software-update-point.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/get-started/install-a-software-update-point.md) | HandedOffSuccess | [Details](#f922153a8b050babc1bb2d3c8970d4d590473e6b602)
+ [sccm\sum\get-started\manage-settings-for-software-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/get-started/manage-settings-for-software-updates.md) | HandedOffSuccess | [Details](#fb2e6c27b8dca158886e3a0b6aa2f1f12e9f5480603)
+ [sccm\sum\get-started\prepare-for-software-updates-management.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/get-started/prepare-for-software-updates-management.md) | HandedOffSuccess | [Details](#77074f77767af17c49cdedacd60433874bfc13fc604)
+ [sccm\sum\get-started\remove-a-software-update-point.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/get-started/remove-a-software-update-point.md) | HandedOffSuccess | [Details](#f482ca9595dadeba8ae85b6d9887b8a09ff8f640605)
+ [sccm\sum\get-started\synchronize-software-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/get-started/synchronize-software-updates.md) | HandedOffSuccess | [Details](#8e2d01ce3a48aa5f73d90ef7963784dd11a4f5ce607)
+ [sccm\sum\get-started\synchronize-software-updates-disconnected.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/get-started/synchronize-software-updates-disconnected.md) | HandedOffSuccess | [Details](#ff8155e04dae7457ee4125136fb7ef0338c66bac606)
+ [sccm\sum\includes\downloadupdates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/d525a45b67cf7882a348854deea0f14cd0725f6a/sccm/sum/includes/downloadupdates.md) | HandedOffSuccess | [Details](#d347548ca9a7b4f13a61559f60340adc6e5b5a43608)
+ [sccm\sum\media\Expired.jpg](https://github.com/Microsoft/SCCMDocs-pr/blob/31c92822e72aa4e8eb9edd0fcea68f2ba5b9afd6/sccm/sum/media/Expired.jpg) | HandedOffSuccess | [Details](#6ddc637767a850a16056b7418b8ea15430f6e590609)
+ [sccm\sum\media\Invalid.jpg](https://github.com/Microsoft/SCCMDocs-pr/blob/31c92822e72aa4e8eb9edd0fcea68f2ba5b9afd6/sccm/sum/media/Invalid.jpg) | HandedOffSuccess | [Details](#3531955e34baf771039a88aaa56087d9bbee9d57610)
+ [sccm\sum\media\MetadataOnly.png](https://github.com/Microsoft/SCCMDocs-pr/blob/31c92822e72aa4e8eb9edd0fcea68f2ba5b9afd6/sccm/sum/media/MetadataOnly.png) | HandedOffSuccess | [Details](#c648a3685b3f336d96276a20414c7172b0bedca4611)
+ [sccm\sum\media\Normal.jpg](https://github.com/Microsoft/SCCMDocs-pr/blob/31c92822e72aa4e8eb9edd0fcea68f2ba5b9afd6/sccm/sum/media/Normal.jpg) | HandedOffSuccess | [Details](#fb7760577e02d163028d51451b7c24de831b0073612)
+ [sccm\sum\media\Superseded.jpg](https://github.com/Microsoft/SCCMDocs-pr/blob/31c92822e72aa4e8eb9edd0fcea68f2ba5b9afd6/sccm/sum/media/Superseded.jpg) | HandedOffSuccess | [Details](#78effb18fe2c6ae8aac8ef23d0b5f50b8d31159c613)
+ [sccm\sum\plan-design\plan-for-software-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/plan-design/plan-for-software-updates.md) | HandedOffSuccess | [Details](#73d555c48f89bf81f7d1c2c3c445b02dff661a34614)
+ [sccm\sum\plan-design\prerequisites-for-software-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/plan-design/prerequisites-for-software-updates.md) | HandedOffSuccess | [Details](#1761467c3fd7705a74725984764f6d777af4a9cd615)
+ [sccm\sum\plan-design\security-and-privacy-for-software-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/plan-design/security-and-privacy-for-software-updates.md) | HandedOffSuccess | [Details](#a732cb30ab949eca085e5aabe99d089b87d233b2616)
+ [sccm\sum\plan-design\software-updates-best-practices.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/plan-design/software-updates-best-practices.md) | HandedOffSuccess | [Details](#157ced363617a6727dc7b6bf4c396d6d991db557617)
+ [sccm\sum\TOC.md](https://github.com/Microsoft/SCCMDocs-pr/blob/6884428ec623d22b5821d6feeaf327b8ace69ea6/sccm/sum/TOC.md) | HandedOffSuccess | [Details](#b28217f856081b149464aac2e5c84d17acd75ac9618)
+ [sccm\sum\understand\software-updates-icons.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/understand/software-updates-icons.md) | HandedOffSuccess | [Details](#e77ca190faaefdf4e7fa418cb57edf2e42bc65bb619)
+ [sccm\sum\understand\software-updates-introduction.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/understand/software-updates-introduction.md) | HandedOffSuccess | [Details](#c90d71397c656cb0c0e6d0dbebc7d15405c1d910620)
+ [sccm\toc.md](https://github.com/Microsoft/SCCMDocs-pr/blob/f59f66ec7548c39b11430211919297def2958a77/sccm/toc.md) | HandedOffSuccess | [Details](#adc83b19e793491b1c6ea0fd8b46cd9f32e592fc621)
 
 ## <a name='archive-failed-list'></a> Archive Failed File List
 
@@ -634,27 +637,27 @@
 ## <a name='ignored-list'></a> Ignored File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [.gitignore](https://github.com/Microsoft/SCCMDocs-pr/blob/cf2432896f6a3be4d65f93934c51a944aaf29b8a/.gitignore) | Ignored | [Details](#dfeadfbde4706f02bba578f8ea4119bd9ff409a30)
- [.gitmodules](https://github.com/Microsoft/SCCMDocs-pr/blob/cf2432896f6a3be4d65f93934c51a944aaf29b8a/.gitmodules) | Ignored | [Details](#05d1539deb2bbc5d9d0f7e59fb3bfbfc0f2f7d881)
- [.localization-config](https://github.com/Microsoft/SCCMDocs-pr/blob/cf2432896f6a3be4d65f93934c51a944aaf29b8a/.localization-config) | Ignored | [Details](#d4dfe4915ae6430361739ae1e18cf096793ba22e2)
- [.openpublishing.build.ps1](https://github.com/Microsoft/SCCMDocs-pr/blob/cf2432896f6a3be4d65f93934c51a944aaf29b8a/.openpublishing.build.ps1) | Ignored | [Details](#e859e0b5c31009d0dcf51e70bb00185891fc828f3)
- [.openpublishing.publish.config.json](https://github.com/Microsoft/SCCMDocs-pr/blob/cf2432896f6a3be4d65f93934c51a944aaf29b8a/.openpublishing.publish.config.json) | Ignored | [Details](#83653787f5b441b06c233cb8c82977cc0173b1474)
- [README.md](https://github.com/Microsoft/SCCMDocs-pr/blob/cf2432896f6a3be4d65f93934c51a944aaf29b8a/README.md) | Ignored | [Details](#6ef75f7a117656084a2c6bd85f71bc569317272f5)
- [sccm\apps\get-started\media\App-management-app-properties-page.png](https://github.com/Microsoft/SCCMDocs-pr/blob/cf2432896f6a3be4d65f93934c51a944aaf29b8a/sccm/apps/get-started/media/App-management-app-properties-page.png) | Ignored | [Details](#ae353c47a87c3f2da04aa359fb4a96f99523e7b233)
- [sccm\apps\get-started\media\App-management-requirements-page.png](https://github.com/Microsoft/SCCMDocs-pr/blob/cf2432896f6a3be4d65f93934c51a944aaf29b8a/sccm/apps/get-started/media/App-management-requirements-page.png) | Ignored | [Details](#72b536c8818cbebbb55dc07bdabb6a4e2d83434934)
- [sccm\apps\get-started\media\App-management-wizard-general-information-page.png](https://github.com/Microsoft/SCCMDocs-pr/blob/cf2432896f6a3be4d65f93934c51a944aaf29b8a/sccm/apps/get-started/media/App-management-wizard-general-information-page.png) | Ignored | [Details](#03eccd2b98ab405b0bb497f9add9c4d4b8c38c2735)
- [sccm\apps\get-started\media\App-management-wizard-general-page.png](https://github.com/Microsoft/SCCMDocs-pr/blob/cf2432896f6a3be4d65f93934c51a944aaf29b8a/sccm/apps/get-started/media/App-management-wizard-general-page.png) | Ignored | [Details](#d8d0eb2d7b0a83142f63ecae9465b37f2ecdee7136)
- [sccm\apps\get-started\media\Final-app-graphic.png](https://github.com/Microsoft/SCCMDocs-pr/blob/cf2432896f6a3be4d65f93934c51a944aaf29b8a/sccm/apps/get-started/media/Final-app-graphic.png) | Ignored | [Details](#420d803f705f3c88327bd0abbecc6cc2dfe8b2d437)
- [sccm\breadcrumb\breadcrumb.old](https://github.com/Microsoft/SCCMDocs-pr/blob/cf2432896f6a3be4d65f93934c51a944aaf29b8a/sccm/breadcrumb/breadcrumb.old) | Ignored | [Details](#63b79f9da653f7e4baca3d62a8663bbc3173488042)
- [sccm\compliance\plan-design\media\Compliance-Settings-Wizard---1.png](https://github.com/Microsoft/SCCMDocs-pr/blob/cf2432896f6a3be4d65f93934c51a944aaf29b8a/sccm/compliance/plan-design/media/Compliance-Settings-Wizard---1.png) | Ignored | [Details](#42f59bc518f003a07b6cdffe46e24c44d43ea9ef67)
- [sccm\compliance\plan-design\media\Create-Configuration-Baseline.png](https://github.com/Microsoft/SCCMDocs-pr/blob/cf2432896f6a3be4d65f93934c51a944aaf29b8a/sccm/compliance/plan-design/media/Create-Configuration-Baseline.png) | Ignored | [Details](#e62f82a8f1f20384609e784f4f1b15aa6b54503d68)
- [sccm\compliance\plan-design\media\Deploy-configuration-baselines.png](https://github.com/Microsoft/SCCMDocs-pr/blob/cf2432896f6a3be4d65f93934c51a944aaf29b8a/sccm/compliance/plan-design/media/Deploy-configuration-baselines.png) | Ignored | [Details](#533dd413f5aec04251c6ec991d364e8931a3c5a169)
- [sccm\docfx.json](https://github.com/Microsoft/SCCMDocs-pr/blob/cf2432896f6a3be4d65f93934c51a944aaf29b8a/sccm/docfx.json) | Ignored | [Details](#67485da4b15ee7ef3cc14ac362f9ce074e971b32404)
- [sccm\protect\media\Hello-for-Business-settings.png](https://github.com/Microsoft/SCCMDocs-pr/blob/cf2432896f6a3be4d65f93934c51a944aaf29b8a/sccm/protect/media/Hello-for-Business-settings.png) | Ignored | [Details](#f228d1ecc437f5dc535ab384927d297a06662eeb562)
- [template.md](https://github.com/Microsoft/SCCMDocs-pr/blob/cf2432896f6a3be4d65f93934c51a944aaf29b8a/template.md) | Ignored | [Details](#a6d84da93a4679b38d2a31a28965e16beffa6648619)
+ [.gitignore](https://github.com/Microsoft/SCCMDocs-pr/blob/9257ba19a20c9a5b0805ef5a1b7c9aa2a370e161/.gitignore) | Ignored | [Details](#dfeadfbde4706f02bba578f8ea4119bd9ff409a30)
+ [.gitmodules](https://github.com/Microsoft/SCCMDocs-pr/blob/9257ba19a20c9a5b0805ef5a1b7c9aa2a370e161/.gitmodules) | Ignored | [Details](#05d1539deb2bbc5d9d0f7e59fb3bfbfc0f2f7d881)
+ [.localization-config](https://github.com/Microsoft/SCCMDocs-pr/blob/9257ba19a20c9a5b0805ef5a1b7c9aa2a370e161/.localization-config) | Ignored | [Details](#d4dfe4915ae6430361739ae1e18cf096793ba22e2)
+ [.openpublishing.build.ps1](https://github.com/Microsoft/SCCMDocs-pr/blob/9257ba19a20c9a5b0805ef5a1b7c9aa2a370e161/.openpublishing.build.ps1) | Ignored | [Details](#e859e0b5c31009d0dcf51e70bb00185891fc828f3)
+ [.openpublishing.publish.config.json](https://github.com/Microsoft/SCCMDocs-pr/blob/9257ba19a20c9a5b0805ef5a1b7c9aa2a370e161/.openpublishing.publish.config.json) | Ignored | [Details](#83653787f5b441b06c233cb8c82977cc0173b1474)
+ [README.md](https://github.com/Microsoft/SCCMDocs-pr/blob/9257ba19a20c9a5b0805ef5a1b7c9aa2a370e161/README.md) | Ignored | [Details](#6ef75f7a117656084a2c6bd85f71bc569317272f5)
+ [sccm\apps\get-started\media\App-management-app-properties-page.png](https://github.com/Microsoft/SCCMDocs-pr/blob/9257ba19a20c9a5b0805ef5a1b7c9aa2a370e161/sccm/apps/get-started/media/App-management-app-properties-page.png) | Ignored | [Details](#ae353c47a87c3f2da04aa359fb4a96f99523e7b233)
+ [sccm\apps\get-started\media\App-management-requirements-page.png](https://github.com/Microsoft/SCCMDocs-pr/blob/9257ba19a20c9a5b0805ef5a1b7c9aa2a370e161/sccm/apps/get-started/media/App-management-requirements-page.png) | Ignored | [Details](#72b536c8818cbebbb55dc07bdabb6a4e2d83434934)
+ [sccm\apps\get-started\media\App-management-wizard-general-information-page.png](https://github.com/Microsoft/SCCMDocs-pr/blob/9257ba19a20c9a5b0805ef5a1b7c9aa2a370e161/sccm/apps/get-started/media/App-management-wizard-general-information-page.png) | Ignored | [Details](#03eccd2b98ab405b0bb497f9add9c4d4b8c38c2735)
+ [sccm\apps\get-started\media\App-management-wizard-general-page.png](https://github.com/Microsoft/SCCMDocs-pr/blob/9257ba19a20c9a5b0805ef5a1b7c9aa2a370e161/sccm/apps/get-started/media/App-management-wizard-general-page.png) | Ignored | [Details](#d8d0eb2d7b0a83142f63ecae9465b37f2ecdee7136)
+ [sccm\apps\get-started\media\Final-app-graphic.png](https://github.com/Microsoft/SCCMDocs-pr/blob/9257ba19a20c9a5b0805ef5a1b7c9aa2a370e161/sccm/apps/get-started/media/Final-app-graphic.png) | Ignored | [Details](#420d803f705f3c88327bd0abbecc6cc2dfe8b2d437)
+ [sccm\breadcrumb\breadcrumb.old](https://github.com/Microsoft/SCCMDocs-pr/blob/9257ba19a20c9a5b0805ef5a1b7c9aa2a370e161/sccm/breadcrumb/breadcrumb.old) | Ignored | [Details](#63b79f9da653f7e4baca3d62a8663bbc3173488042)
+ [sccm\compliance\plan-design\media\Compliance-Settings-Wizard---1.png](https://github.com/Microsoft/SCCMDocs-pr/blob/9257ba19a20c9a5b0805ef5a1b7c9aa2a370e161/sccm/compliance/plan-design/media/Compliance-Settings-Wizard---1.png) | Ignored | [Details](#42f59bc518f003a07b6cdffe46e24c44d43ea9ef67)
+ [sccm\compliance\plan-design\media\Create-Configuration-Baseline.png](https://github.com/Microsoft/SCCMDocs-pr/blob/9257ba19a20c9a5b0805ef5a1b7c9aa2a370e161/sccm/compliance/plan-design/media/Create-Configuration-Baseline.png) | Ignored | [Details](#e62f82a8f1f20384609e784f4f1b15aa6b54503d68)
+ [sccm\compliance\plan-design\media\Deploy-configuration-baselines.png](https://github.com/Microsoft/SCCMDocs-pr/blob/9257ba19a20c9a5b0805ef5a1b7c9aa2a370e161/sccm/compliance/plan-design/media/Deploy-configuration-baselines.png) | Ignored | [Details](#533dd413f5aec04251c6ec991d364e8931a3c5a169)
+ [sccm\docfx.json](https://github.com/Microsoft/SCCMDocs-pr/blob/9257ba19a20c9a5b0805ef5a1b7c9aa2a370e161/sccm/docfx.json) | Ignored | [Details](#67485da4b15ee7ef3cc14ac362f9ce074e971b32404)
+ [sccm\protect\media\Hello-for-Business-settings.png](https://github.com/Microsoft/SCCMDocs-pr/blob/9257ba19a20c9a5b0805ef5a1b7c9aa2a370e161/sccm/protect/media/Hello-for-Business-settings.png) | Ignored | [Details](#f228d1ecc437f5dc535ab384927d297a06662eeb565)
+ [template.md](https://github.com/Microsoft/SCCMDocs-pr/blob/9257ba19a20c9a5b0805ef5a1b7c9aa2a370e161/template.md) | Ignored | [Details](#a6d84da93a4679b38d2a31a28965e16beffa6648622)
 
 ## Item Details
-##### <a name='dfeadfbde4706f02bba578f8ea4119bd9ff409a30'></a> Source: [.gitignore](https://github.com/Microsoft/SCCMDocs-pr/blob/cf2432896f6a3be4d65f93934c51a944aaf29b8a/.gitignore)
+##### <a name='dfeadfbde4706f02bba578f8ea4119bd9ff409a30'></a> Source: [.gitignore](https://github.com/Microsoft/SCCMDocs-pr/blob/9257ba19a20c9a5b0805ef5a1b7c9aa2a370e161/.gitignore)
 * Status: Ignored
 * Target File: 
 * Handoff File: 
@@ -666,7 +669,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='05d1539deb2bbc5d9d0f7e59fb3bfbfc0f2f7d881'></a> Source: [.gitmodules](https://github.com/Microsoft/SCCMDocs-pr/blob/cf2432896f6a3be4d65f93934c51a944aaf29b8a/.gitmodules)
+##### <a name='05d1539deb2bbc5d9d0f7e59fb3bfbfc0f2f7d881'></a> Source: [.gitmodules](https://github.com/Microsoft/SCCMDocs-pr/blob/9257ba19a20c9a5b0805ef5a1b7c9aa2a370e161/.gitmodules)
 * Status: Ignored
 * Target File: 
 * Handoff File: 
@@ -678,7 +681,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='d4dfe4915ae6430361739ae1e18cf096793ba22e2'></a> Source: [.localization-config](https://github.com/Microsoft/SCCMDocs-pr/blob/cf2432896f6a3be4d65f93934c51a944aaf29b8a/.localization-config)
+##### <a name='d4dfe4915ae6430361739ae1e18cf096793ba22e2'></a> Source: [.localization-config](https://github.com/Microsoft/SCCMDocs-pr/blob/9257ba19a20c9a5b0805ef5a1b7c9aa2a370e161/.localization-config)
 * Status: Ignored
 * Target File: 
 * Handoff File: 
@@ -690,7 +693,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='e859e0b5c31009d0dcf51e70bb00185891fc828f3'></a> Source: [.openpublishing.build.ps1](https://github.com/Microsoft/SCCMDocs-pr/blob/cf2432896f6a3be4d65f93934c51a944aaf29b8a/.openpublishing.build.ps1)
+##### <a name='e859e0b5c31009d0dcf51e70bb00185891fc828f3'></a> Source: [.openpublishing.build.ps1](https://github.com/Microsoft/SCCMDocs-pr/blob/9257ba19a20c9a5b0805ef5a1b7c9aa2a370e161/.openpublishing.build.ps1)
 * Status: Ignored
 * Target File: 
 * Handoff File: 
@@ -702,7 +705,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='83653787f5b441b06c233cb8c82977cc0173b1474'></a> Source: [.openpublishing.publish.config.json](https://github.com/Microsoft/SCCMDocs-pr/blob/cf2432896f6a3be4d65f93934c51a944aaf29b8a/.openpublishing.publish.config.json)
+##### <a name='83653787f5b441b06c233cb8c82977cc0173b1474'></a> Source: [.openpublishing.publish.config.json](https://github.com/Microsoft/SCCMDocs-pr/blob/9257ba19a20c9a5b0805ef5a1b7c9aa2a370e161/.openpublishing.publish.config.json)
 * Status: Ignored
 * Target File: 
 * Handoff File: 
@@ -714,7 +717,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='6ef75f7a117656084a2c6bd85f71bc569317272f5'></a> Source: [README.md](https://github.com/Microsoft/SCCMDocs-pr/blob/cf2432896f6a3be4d65f93934c51a944aaf29b8a/README.md)
+##### <a name='6ef75f7a117656084a2c6bd85f71bc569317272f5'></a> Source: [README.md](https://github.com/Microsoft/SCCMDocs-pr/blob/9257ba19a20c9a5b0805ef5a1b7c9aa2a370e161/README.md)
 * Status: Ignored
 * Target File: 
 * Handoff File: 
@@ -1050,7 +1053,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='ae353c47a87c3f2da04aa359fb4a96f99523e7b233'></a> Source: [sccm\apps\get-started\media\App-management-app-properties-page.png](https://github.com/Microsoft/SCCMDocs-pr/blob/cf2432896f6a3be4d65f93934c51a944aaf29b8a/sccm/apps/get-started/media/App-management-app-properties-page.png)
+##### <a name='ae353c47a87c3f2da04aa359fb4a96f99523e7b233'></a> Source: [sccm\apps\get-started\media\App-management-app-properties-page.png](https://github.com/Microsoft/SCCMDocs-pr/blob/9257ba19a20c9a5b0805ef5a1b7c9aa2a370e161/sccm/apps/get-started/media/App-management-app-properties-page.png)
 * Status: Ignored
 * Target File: 
 * Handoff File: 
@@ -1062,7 +1065,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='72b536c8818cbebbb55dc07bdabb6a4e2d83434934'></a> Source: [sccm\apps\get-started\media\App-management-requirements-page.png](https://github.com/Microsoft/SCCMDocs-pr/blob/cf2432896f6a3be4d65f93934c51a944aaf29b8a/sccm/apps/get-started/media/App-management-requirements-page.png)
+##### <a name='72b536c8818cbebbb55dc07bdabb6a4e2d83434934'></a> Source: [sccm\apps\get-started\media\App-management-requirements-page.png](https://github.com/Microsoft/SCCMDocs-pr/blob/9257ba19a20c9a5b0805ef5a1b7c9aa2a370e161/sccm/apps/get-started/media/App-management-requirements-page.png)
 * Status: Ignored
 * Target File: 
 * Handoff File: 
@@ -1074,7 +1077,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='03eccd2b98ab405b0bb497f9add9c4d4b8c38c2735'></a> Source: [sccm\apps\get-started\media\App-management-wizard-general-information-page.png](https://github.com/Microsoft/SCCMDocs-pr/blob/cf2432896f6a3be4d65f93934c51a944aaf29b8a/sccm/apps/get-started/media/App-management-wizard-general-information-page.png)
+##### <a name='03eccd2b98ab405b0bb497f9add9c4d4b8c38c2735'></a> Source: [sccm\apps\get-started\media\App-management-wizard-general-information-page.png](https://github.com/Microsoft/SCCMDocs-pr/blob/9257ba19a20c9a5b0805ef5a1b7c9aa2a370e161/sccm/apps/get-started/media/App-management-wizard-general-information-page.png)
 * Status: Ignored
 * Target File: 
 * Handoff File: 
@@ -1086,7 +1089,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='d8d0eb2d7b0a83142f63ecae9465b37f2ecdee7136'></a> Source: [sccm\apps\get-started\media\App-management-wizard-general-page.png](https://github.com/Microsoft/SCCMDocs-pr/blob/cf2432896f6a3be4d65f93934c51a944aaf29b8a/sccm/apps/get-started/media/App-management-wizard-general-page.png)
+##### <a name='d8d0eb2d7b0a83142f63ecae9465b37f2ecdee7136'></a> Source: [sccm\apps\get-started\media\App-management-wizard-general-page.png](https://github.com/Microsoft/SCCMDocs-pr/blob/9257ba19a20c9a5b0805ef5a1b7c9aa2a370e161/sccm/apps/get-started/media/App-management-wizard-general-page.png)
 * Status: Ignored
 * Target File: 
 * Handoff File: 
@@ -1098,7 +1101,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='420d803f705f3c88327bd0abbecc6cc2dfe8b2d437'></a> Source: [sccm\apps\get-started\media\Final-app-graphic.png](https://github.com/Microsoft/SCCMDocs-pr/blob/cf2432896f6a3be4d65f93934c51a944aaf29b8a/sccm/apps/get-started/media/Final-app-graphic.png)
+##### <a name='420d803f705f3c88327bd0abbecc6cc2dfe8b2d437'></a> Source: [sccm\apps\get-started\media\Final-app-graphic.png](https://github.com/Microsoft/SCCMDocs-pr/blob/9257ba19a20c9a5b0805ef5a1b7c9aa2a370e161/sccm/apps/get-started/media/Final-app-graphic.png)
 * Status: Ignored
 * Target File: 
 * Handoff File: 
@@ -1158,7 +1161,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='63b79f9da653f7e4baca3d62a8663bbc3173488042'></a> Source: [sccm\breadcrumb\breadcrumb.old](https://github.com/Microsoft/SCCMDocs-pr/blob/cf2432896f6a3be4d65f93934c51a944aaf29b8a/sccm/breadcrumb/breadcrumb.old)
+##### <a name='63b79f9da653f7e4baca3d62a8663bbc3173488042'></a> Source: [sccm\breadcrumb\breadcrumb.old](https://github.com/Microsoft/SCCMDocs-pr/blob/9257ba19a20c9a5b0805ef5a1b7c9aa2a370e161/sccm/breadcrumb/breadcrumb.old)
 * Status: Ignored
 * Target File: 
 * Handoff File: 
@@ -1458,7 +1461,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='42f59bc518f003a07b6cdffe46e24c44d43ea9ef67'></a> Source: [sccm\compliance\plan-design\media\Compliance-Settings-Wizard---1.png](https://github.com/Microsoft/SCCMDocs-pr/blob/cf2432896f6a3be4d65f93934c51a944aaf29b8a/sccm/compliance/plan-design/media/Compliance-Settings-Wizard---1.png)
+##### <a name='42f59bc518f003a07b6cdffe46e24c44d43ea9ef67'></a> Source: [sccm\compliance\plan-design\media\Compliance-Settings-Wizard---1.png](https://github.com/Microsoft/SCCMDocs-pr/blob/9257ba19a20c9a5b0805ef5a1b7c9aa2a370e161/sccm/compliance/plan-design/media/Compliance-Settings-Wizard---1.png)
 * Status: Ignored
 * Target File: 
 * Handoff File: 
@@ -1470,7 +1473,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='e62f82a8f1f20384609e784f4f1b15aa6b54503d68'></a> Source: [sccm\compliance\plan-design\media\Create-Configuration-Baseline.png](https://github.com/Microsoft/SCCMDocs-pr/blob/cf2432896f6a3be4d65f93934c51a944aaf29b8a/sccm/compliance/plan-design/media/Create-Configuration-Baseline.png)
+##### <a name='e62f82a8f1f20384609e784f4f1b15aa6b54503d68'></a> Source: [sccm\compliance\plan-design\media\Create-Configuration-Baseline.png](https://github.com/Microsoft/SCCMDocs-pr/blob/9257ba19a20c9a5b0805ef5a1b7c9aa2a370e161/sccm/compliance/plan-design/media/Create-Configuration-Baseline.png)
 * Status: Ignored
 * Target File: 
 * Handoff File: 
@@ -1482,7 +1485,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='533dd413f5aec04251c6ec991d364e8931a3c5a169'></a> Source: [sccm\compliance\plan-design\media\Deploy-configuration-baselines.png](https://github.com/Microsoft/SCCMDocs-pr/blob/cf2432896f6a3be4d65f93934c51a944aaf29b8a/sccm/compliance/plan-design/media/Deploy-configuration-baselines.png)
+##### <a name='533dd413f5aec04251c6ec991d364e8931a3c5a169'></a> Source: [sccm\compliance\plan-design\media\Deploy-configuration-baselines.png](https://github.com/Microsoft/SCCMDocs-pr/blob/9257ba19a20c9a5b0805ef5a1b7c9aa2a370e161/sccm/compliance/plan-design/media/Deploy-configuration-baselines.png)
 * Status: Ignored
 * Target File: 
 * Handoff File: 
@@ -2794,11 +2797,11 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='6e1102937aaf62f391ffcbde5ba8d72b02a8c17a178'></a> Source: [sccm\core\get-started\capabilities-in-technical-preview-1604.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/get-started/capabilities-in-technical-preview-1604.md)
+##### <a name='1d42adcf47fb9ccc89e18114914ff893d4080ede178'></a> Source: [sccm\core\get-started\capabilities-in-technical-preview-1604.md](https://github.com/Microsoft/SCCMDocs-pr/blob/275d94b0596f04d2339ffb7aa315b4afdd237678/sccm/core/get-started/capabilities-in-technical-preview-1604.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [capabilities-in-technical-preview-1604.efc551ac4765b4aefbf6febe9967e777294df9ac.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/capabilities-in-technical-preview-1604.efc551ac4765b4aefbf6febe9967e777294df9ac.zh-cn.xlf)
-* Handoff Datetime: 2016-10-12 17:56:06
+* Handoff File: [capabilities-in-technical-preview-1604.efc551ac4765b4aefbf6febe9967e777294df9ac.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/f8ff8cccc0818a8ff9692dd6de6823c47708cc83/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/capabilities-in-technical-preview-1604.efc551ac4765b4aefbf6febe9967e777294df9ac.zh-cn.xlf)
+* Handoff Datetime: 2016-10-13 21:15:48
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
@@ -2930,7 +2933,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='27a99000c543d01f58af5204e37b0e90351fff89189'></a> Source: [sccm\core\get-started\media\offline-status-icon.png](https://github.com/Microsoft/SCCMDocs-pr/blob/cf2432896f6a3be4d65f93934c51a944aaf29b8a/sccm/core/get-started/media/offline-status-icon.png)
+##### <a name='27a99000c543d01f58af5204e37b0e90351fff89189'></a> Source: [sccm\core\get-started\media\offline-status-icon.png](https://github.com/Microsoft/SCCMDocs-pr/blob/9257ba19a20c9a5b0805ef5a1b7c9aa2a370e161/sccm/core/get-started/media/offline-status-icon.png)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [27a99000c543d01f58af5204e37b0e90351fff89.png](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/5ffee00eab6197b21d5193c4ef1965a051fa64ea/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/27a99000c543d01f58af5204e37b0e90351fff89.png)
@@ -2943,7 +2946,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='b1d3d1089eb4fba29a4609f7a2c1c0977d2a2623190'></a> Source: [sccm\core\get-started\media\online-status-icon.png](https://github.com/Microsoft/SCCMDocs-pr/blob/cf2432896f6a3be4d65f93934c51a944aaf29b8a/sccm/core/get-started/media/online-status-icon.png)
+##### <a name='b1d3d1089eb4fba29a4609f7a2c1c0977d2a2623190'></a> Source: [sccm\core\get-started\media\online-status-icon.png](https://github.com/Microsoft/SCCMDocs-pr/blob/9257ba19a20c9a5b0805ef5a1b7c9aa2a370e161/sccm/core/get-started/media/online-status-icon.png)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [b1d3d1089eb4fba29a4609f7a2c1c0977d2a2623.png](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/5ffee00eab6197b21d5193c4ef1965a051fa64ea/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/b1d3d1089eb4fba29a4609f7a2c1c0977d2a2623.png)
@@ -3008,7 +3011,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='31204ff97d4362cae1739cd56d96ec014cd2824c195'></a> Source: [sccm\core\get-started\media\unknown-status-icon.png](https://github.com/Microsoft/SCCMDocs-pr/blob/cf2432896f6a3be4d65f93934c51a944aaf29b8a/sccm/core/get-started/media/unknown-status-icon.png)
+##### <a name='31204ff97d4362cae1739cd56d96ec014cd2824c195'></a> Source: [sccm\core\get-started\media\unknown-status-icon.png](https://github.com/Microsoft/SCCMDocs-pr/blob/9257ba19a20c9a5b0805ef5a1b7c9aa2a370e161/sccm/core/get-started/media/unknown-status-icon.png)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [31204ff97d4362cae1739cd56d96ec014cd2824c.png](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/5ffee00eab6197b21d5193c4ef1965a051fa64ea/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/31204ff97d4362cae1739cd56d96ec014cd2824c.png)
@@ -3033,11 +3036,11 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='d7d564fcb635c3240615847370f26c58e7cedc1a197'></a> Source: [sccm\core\get-started\technical-preview.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/get-started/technical-preview.md)
+##### <a name='ba197db70c165aae822d6ffa009c3bd9fc094945197'></a> Source: [sccm\core\get-started\technical-preview.md](https://github.com/Microsoft/SCCMDocs-pr/blob/275d94b0596f04d2339ffb7aa315b4afdd237678/sccm/core/get-started/technical-preview.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [technical-preview.08907a4af33bb86e48ddf4c2708436f7dcaa4d9f.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/technical-preview.08907a4af33bb86e48ddf4c2708436f7dcaa4d9f.zh-cn.xlf)
-* Handoff Datetime: 2016-10-12 17:56:06
+* Handoff File: [technical-preview.08907a4af33bb86e48ddf4c2708436f7dcaa4d9f.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/f8ff8cccc0818a8ff9692dd6de6823c47708cc83/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/technical-preview.08907a4af33bb86e48ddf4c2708436f7dcaa4d9f.zh-cn.xlf)
+* Handoff Datetime: 2016-10-13 21:15:48
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
@@ -3597,11 +3600,11 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='d09a4bb7810ea1e03565cfde21e9799ae62d4c1a248'></a> Source: [sccm\core\plan-design\configs\supported-operating-systems-consoles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/plan-design/configs/supported-operating-systems-consoles.md)
+##### <a name='bc7273e8ba016cefc2a60dfec7157dd5a020e784248'></a> Source: [sccm\core\plan-design\configs\supported-operating-systems-consoles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/275d94b0596f04d2339ffb7aa315b4afdd237678/sccm/core/plan-design/configs/supported-operating-systems-consoles.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [supported-operating-systems-consoles.805c16d993f102c862766522b5832b97ec6f1b75.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/supported-operating-systems-consoles.805c16d993f102c862766522b5832b97ec6f1b75.zh-cn.xlf)
-* Handoff Datetime: 2016-10-12 17:56:06
+* Handoff File: [supported-operating-systems-consoles.805c16d993f102c862766522b5832b97ec6f1b75.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/f8ff8cccc0818a8ff9692dd6de6823c47708cc83/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/supported-operating-systems-consoles.805c16d993f102c862766522b5832b97ec6f1b75.zh-cn.xlf)
+* Handoff Datetime: 2016-10-13 21:15:48
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
@@ -3609,11 +3612,11 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='a47725202cfcaa3597135d099e7fe35a1f40e7d2249'></a> Source: [sccm\core\plan-design\configs\supported-operating-systems-for-clients-and-devices.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md)
+##### <a name='f492c7d3994935c1efc155d95af5d9201cf6b888249'></a> Source: [sccm\core\plan-design\configs\supported-operating-systems-for-clients-and-devices.md](https://github.com/Microsoft/SCCMDocs-pr/blob/275d94b0596f04d2339ffb7aa315b4afdd237678/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [supported-operating-systems-for-clients-and-devices.1c666a655f97b6cb87f6e838905f2bd5098b26ec.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/supported-operating-systems-for-clients-and-devices.1c666a655f97b6cb87f6e838905f2bd5098b26ec.zh-cn.xlf)
-* Handoff Datetime: 2016-10-12 17:56:06
+* Handoff File: [supported-operating-systems-for-clients-and-devices.1c666a655f97b6cb87f6e838905f2bd5098b26ec.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/f8ff8cccc0818a8ff9692dd6de6823c47708cc83/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/supported-operating-systems-for-clients-and-devices.1c666a655f97b6cb87f6e838905f2bd5098b26ec.zh-cn.xlf)
+* Handoff Datetime: 2016-10-13 21:15:48
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
@@ -3621,11 +3624,11 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='ec1d634c04c0f349ac4238a6b7205c564976e99e250'></a> Source: [sccm\core\plan-design\configs\supported-operating-systems-for-site-system-servers.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers.md)
+##### <a name='ca7cde1ffba14cb789bd1653ede09a0daecbe394250'></a> Source: [sccm\core\plan-design\configs\supported-operating-systems-for-site-system-servers.md](https://github.com/Microsoft/SCCMDocs-pr/blob/275d94b0596f04d2339ffb7aa315b4afdd237678/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [supported-operating-systems-for-site-system-servers.0dfd795e8e8e447e8f6f040291dc17ba84bf9bfa.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/supported-operating-systems-for-site-system-servers.0dfd795e8e8e447e8f6f040291dc17ba84bf9bfa.zh-cn.xlf)
-* Handoff Datetime: 2016-10-12 17:56:06
+* Handoff File: [supported-operating-systems-for-site-system-servers.0dfd795e8e8e447e8f6f040291dc17ba84bf9bfa.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/f8ff8cccc0818a8ff9692dd6de6823c47708cc83/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/supported-operating-systems-for-site-system-servers.0dfd795e8e8e447e8f6f040291dc17ba84bf9bfa.zh-cn.xlf)
+* Handoff Datetime: 2016-10-13 21:15:48
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
@@ -3957,11 +3960,11 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='2ed2f9e55d0a4f42c66f736470a4b5c818564c16274'></a> Source: [sccm\core\plan-design\hierarchy\ports.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/plan-design/hierarchy/ports.md)
+##### <a name='88379195efd1f29dd7d28449bb1371786518e55d274'></a> Source: [sccm\core\plan-design\hierarchy\ports.md](https://github.com/Microsoft/SCCMDocs-pr/blob/275d94b0596f04d2339ffb7aa315b4afdd237678/sccm/core/plan-design/hierarchy/ports.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [ports.1566958a62bcff17aa537f709b14b2748a76cc30.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/ports.1566958a62bcff17aa537f709b14b2748a76cc30.zh-cn.xlf)
-* Handoff Datetime: 2016-10-12 17:56:06
+* Handoff File: [ports.1566958a62bcff17aa537f709b14b2748a76cc30.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/f8ff8cccc0818a8ff9692dd6de6823c47708cc83/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/ports.1566958a62bcff17aa537f709b14b2748a76cc30.zh-cn.xlf)
+* Handoff Datetime: 2016-10-13 21:15:48
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
@@ -4053,11 +4056,11 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='b421d88668376073da73f6f8bd8cc42cc49026e2282'></a> Source: [sccm\core\plan-design\network\configure-firewalls-ports-domains.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/plan-design/network/configure-firewalls-ports-domains.md)
+##### <a name='f2164eddb9c785cdb72c1a6ce36dccb27b197005282'></a> Source: [sccm\core\plan-design\network\configure-firewalls-ports-domains.md](https://github.com/Microsoft/SCCMDocs-pr/blob/275d94b0596f04d2339ffb7aa315b4afdd237678/sccm/core/plan-design/network/configure-firewalls-ports-domains.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [configure-firewalls-ports-domains.ef96c05319fd3ddadf255614653bb2e36dcf6ed1.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/configure-firewalls-ports-domains.ef96c05319fd3ddadf255614653bb2e36dcf6ed1.zh-cn.xlf)
-* Handoff Datetime: 2016-10-12 17:56:06
+* Handoff File: [configure-firewalls-ports-domains.ef96c05319fd3ddadf255614653bb2e36dcf6ed1.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/f8ff8cccc0818a8ff9692dd6de6823c47708cc83/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/configure-firewalls-ports-domains.ef96c05319fd3ddadf255614653bb2e36dcf6ed1.zh-cn.xlf)
+* Handoff Datetime: 2016-10-13 21:15:48
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
@@ -4401,7 +4404,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='9a521526cfeb06cb0330a6b46039bfbe66732321314'></a> Source: [sccm\core\servers\deploy\configure\media\Disc_delete_Icon.gif](https://github.com/Microsoft/SCCMDocs-pr/blob/cf2432896f6a3be4d65f93934c51a944aaf29b8a/sccm/core/servers/deploy/configure/media/Disc_delete_Icon.gif)
+##### <a name='9a521526cfeb06cb0330a6b46039bfbe66732321314'></a> Source: [sccm\core\servers\deploy\configure\media\Disc_delete_Icon.gif](https://github.com/Microsoft/SCCMDocs-pr/blob/9257ba19a20c9a5b0805ef5a1b7c9aa2a370e161/sccm/core/servers/deploy/configure/media/Disc_delete_Icon.gif)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [9a521526cfeb06cb0330a6b46039bfbe66732321.gif](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/5ffee00eab6197b21d5193c4ef1965a051fa64ea/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/9a521526cfeb06cb0330a6b46039bfbe66732321.gif)
@@ -4996,7 +4999,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='9a521526cfeb06cb0330a6b46039bfbe66732321360'></a> Source: [sccm\core\servers\manage\media\83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif](https://github.com/Microsoft/SCCMDocs-pr/blob/cf2432896f6a3be4d65f93934c51a944aaf29b8a/sccm/core/servers/manage/media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)
+##### <a name='9a521526cfeb06cb0330a6b46039bfbe66732321360'></a> Source: [sccm\core\servers\manage\media\83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif](https://github.com/Microsoft/SCCMDocs-pr/blob/9257ba19a20c9a5b0805ef5a1b7c9aa2a370e161/sccm/core/servers/manage/media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [9a521526cfeb06cb0330a6b46039bfbe66732321.gif](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/5ffee00eab6197b21d5193c4ef1965a051fa64ea/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/9a521526cfeb06cb0330a6b46039bfbe66732321.gif)
@@ -5252,11 +5255,11 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='b829ae61665e288a941bb9acb4a4190dac1adb32381'></a> Source: [sccm\core\servers\manage\use-the-service-connection-tool.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/core/servers/manage/use-the-service-connection-tool.md)
+##### <a name='0fc8df75f7595cd980c64585ec8d416fefbd7796381'></a> Source: [sccm\core\servers\manage\use-the-service-connection-tool.md](https://github.com/Microsoft/SCCMDocs-pr/blob/275d94b0596f04d2339ffb7aa315b4afdd237678/sccm/core/servers/manage/use-the-service-connection-tool.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [use-the-service-connection-tool.08863d288023ee0ea5b4b146ad5778361d5aba94.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/use-the-service-connection-tool.08863d288023ee0ea5b4b146ad5778361d5aba94.zh-cn.xlf)
-* Handoff Datetime: 2016-10-12 17:56:06
+* Handoff File: [use-the-service-connection-tool.08863d288023ee0ea5b4b146ad5778361d5aba94.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/f8ff8cccc0818a8ff9692dd6de6823c47708cc83/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/use-the-service-connection-tool.08863d288023ee0ea5b4b146ad5778361d5aba94.zh-cn.xlf)
+* Handoff Datetime: 2016-10-13 21:15:48
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
@@ -5276,11 +5279,11 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='8af124f39c192c5945714f0c40e58e239d9f51b2383'></a> Source: [sccm\core\TOC.md](https://github.com/Microsoft/SCCMDocs-pr/blob/99d9c62491faaf929988608cfec753282e1d791c/sccm/core/TOC.md)
+##### <a name='a691c59c1b1bda829f4968037f9bd96247eb607f383'></a> Source: [sccm\core\TOC.md](https://github.com/Microsoft/SCCMDocs-pr/blob/275d94b0596f04d2339ffb7aa315b4afdd237678/sccm/core/TOC.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [TOC.f11f1505aa0bd5debc11f83cb30faf8e18550f6c.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/TOC.f11f1505aa0bd5debc11f83cb30faf8e18550f6c.zh-cn.xlf)
-* Handoff Datetime: 2016-10-12 17:56:06
+* Handoff File: [TOC.f11f1505aa0bd5debc11f83cb30faf8e18550f6c.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/f8ff8cccc0818a8ff9692dd6de6823c47708cc83/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/TOC.f11f1505aa0bd5debc11f83cb30faf8e18550f6c.zh-cn.xlf)
+* Handoff Datetime: 2016-10-13 21:15:48
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
@@ -5444,11 +5447,11 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='10518b6d7bc76d21b72ea38f7fec91714c59b4f8396'></a> Source: [sccm\core\understand\introduction-to-the-ltsb.md](https://github.com/Microsoft/SCCMDocs-pr/blob/c0d3e560d0773071231d9dd67801a9aec4612a0a/sccm/core/understand/introduction-to-the-ltsb.md)
+##### <a name='7102fa42f0b95b8e2a9f41d2732bb6b0e3e0b6fb396'></a> Source: [sccm\core\understand\introduction-to-the-ltsb.md](https://github.com/Microsoft/SCCMDocs-pr/blob/275d94b0596f04d2339ffb7aa315b4afdd237678/sccm/core/understand/introduction-to-the-ltsb.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [introduction-to-the-ltsb.4440ee914607112e68168837dd9be966ca32f52e.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/introduction-to-the-ltsb.4440ee914607112e68168837dd9be966ca32f52e.zh-cn.xlf)
-* Handoff Datetime: 2016-10-12 17:56:06
+* Handoff File: [introduction-to-the-ltsb.4440ee914607112e68168837dd9be966ca32f52e.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/f8ff8cccc0818a8ff9692dd6de6823c47708cc83/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/introduction-to-the-ltsb.4440ee914607112e68168837dd9be966ca32f52e.zh-cn.xlf)
+* Handoff Datetime: 2016-10-13 21:15:48
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
@@ -5456,11 +5459,11 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='3ca6b4230507c29de7230cdb31a1e145d47865ee398'></a> Source: [sccm\core\understand\learn-more-editions.md](https://github.com/Microsoft/SCCMDocs-pr/blob/c0d3e560d0773071231d9dd67801a9aec4612a0a/sccm/core/understand/learn-more-editions.md)
+##### <a name='999f7db0e92301c9ed834b8689388f0f90d887df398'></a> Source: [sccm\core\understand\learn-more-editions.md](https://github.com/Microsoft/SCCMDocs-pr/blob/275d94b0596f04d2339ffb7aa315b4afdd237678/sccm/core/understand/learn-more-editions.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [learn-more-editions.4b4fda1d2e07c866071dacbbf21fa4d8cadb9cd9.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/learn-more-editions.4b4fda1d2e07c866071dacbbf21fa4d8cadb9cd9.zh-cn.xlf)
-* Handoff Datetime: 2016-10-12 17:56:06
+* Handoff File: [learn-more-editions.4b4fda1d2e07c866071dacbbf21fa4d8cadb9cd9.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/f8ff8cccc0818a8ff9692dd6de6823c47708cc83/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/learn-more-editions.4b4fda1d2e07c866071dacbbf21fa4d8cadb9cd9.zh-cn.xlf)
+* Handoff Datetime: 2016-10-13 21:15:48
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
@@ -5494,11 +5497,11 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='d82cf94777f59f861e01896aa9c15563084b0307401'></a> Source: [sccm\core\understand\supported-configurations-for-ltsb.md](https://github.com/Microsoft/SCCMDocs-pr/blob/835469e78e83bb54c43e530303d27b0918c531e6/sccm/core/understand/supported-configurations-for-ltsb.md)
+##### <a name='25dbdd401d0f6e955e5dcc704a0c756c74c64773401'></a> Source: [sccm\core\understand\supported-configurations-for-ltsb.md](https://github.com/Microsoft/SCCMDocs-pr/blob/275d94b0596f04d2339ffb7aa315b4afdd237678/sccm/core/understand/supported-configurations-for-ltsb.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [supported-configurations-for-ltsb.4765cf969a4e629e2a1cd53a198642248c607c38.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/supported-configurations-for-ltsb.4765cf969a4e629e2a1cd53a198642248c607c38.zh-cn.xlf)
-* Handoff Datetime: 2016-10-12 17:56:06
+* Handoff File: [supported-configurations-for-ltsb.4765cf969a4e629e2a1cd53a198642248c607c38.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/f8ff8cccc0818a8ff9692dd6de6823c47708cc83/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/supported-configurations-for-ltsb.4765cf969a4e629e2a1cd53a198642248c607c38.zh-cn.xlf)
+* Handoff Datetime: 2016-10-13 21:15:48
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
@@ -5530,7 +5533,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='67485da4b15ee7ef3cc14ac362f9ce074e971b32404'></a> Source: [sccm\docfx.json](https://github.com/Microsoft/SCCMDocs-pr/blob/cf2432896f6a3be4d65f93934c51a944aaf29b8a/sccm/docfx.json)
+##### <a name='67485da4b15ee7ef3cc14ac362f9ce074e971b32404'></a> Source: [sccm\docfx.json](https://github.com/Microsoft/SCCMDocs-pr/blob/9257ba19a20c9a5b0805ef5a1b7c9aa2a370e161/sccm/docfx.json)
 * Status: Ignored
 * Target File: 
 * Handoff File: 
@@ -5614,7 +5617,43 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='d5ada01ecb200c662f1a7941c814e6938c421a65411'></a> Source: [sccm\mdm\deploy-use\ios-device-enrollment-program-for-hybrid.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/ios-device-enrollment-program-for-hybrid.md)
+##### <a name='8f2424c8727afed02423662800a3f24466de8b8d411'></a> Source: [sccm\mdm\deploy-use\enroll-hybrid-android.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5298a616272d6bfde5687ecd5a18d00e5d9dd2c4/sccm/mdm/deploy-use/enroll-hybrid-android.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [enroll-hybrid-android.f30072511124e922177d0c6cc3712e2657b4954d.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/f8ff8cccc0818a8ff9692dd6de6823c47708cc83/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/enroll-hybrid-android.f30072511124e922177d0c6cc3712e2657b4954d.zh-cn.xlf)
+* Handoff Datetime: 2016-10-13 21:15:48
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* [Back to Top](#report-top)
+
+##### <a name='9c26140d8cbebf3c0e4dedf8539da696ae6f2632412'></a> Source: [sccm\mdm\deploy-use\enroll-hybrid-ios-mac.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5298a616272d6bfde5687ecd5a18d00e5d9dd2c4/sccm/mdm/deploy-use/enroll-hybrid-ios-mac.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [enroll-hybrid-ios-mac.1a6487d9ff44e587423cbef7e27f0af31e6d936e.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/f8ff8cccc0818a8ff9692dd6de6823c47708cc83/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/enroll-hybrid-ios-mac.1a6487d9ff44e587423cbef7e27f0af31e6d936e.zh-cn.xlf)
+* Handoff Datetime: 2016-10-13 21:15:48
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* [Back to Top](#report-top)
+
+##### <a name='566332d1aef100c110fc159d65a8267911f14166413'></a> Source: [sccm\mdm\deploy-use\enroll-hybrid-windows.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5298a616272d6bfde5687ecd5a18d00e5d9dd2c4/sccm/mdm/deploy-use/enroll-hybrid-windows.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [enroll-hybrid-windows.2ce17edc37c31876ee3bd3ed5f2461e42d1e836c.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/f8ff8cccc0818a8ff9692dd6de6823c47708cc83/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/enroll-hybrid-windows.2ce17edc37c31876ee3bd3ed5f2461e42d1e836c.zh-cn.xlf)
+* Handoff Datetime: 2016-10-13 21:15:48
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* [Back to Top](#report-top)
+
+##### <a name='d5ada01ecb200c662f1a7941c814e6938c421a65414'></a> Source: [sccm\mdm\deploy-use\ios-device-enrollment-program-for-hybrid.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/ios-device-enrollment-program-for-hybrid.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [ios-device-enrollment-program-for-hybrid.8a760abe74e795ebeb7176b51ec969c1f6d70e60.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/ios-device-enrollment-program-for-hybrid.8a760abe74e795ebeb7176b51ec969c1f6d70e60.zh-cn.xlf)
@@ -5626,7 +5665,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='0a9bde47fec700b1809e2f086bdfc2ded501c865412'></a> Source: [sccm\mdm\deploy-use\ios-hybrid-enrollment-using-apple-configurator.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/ios-hybrid-enrollment-using-apple-configurator.md)
+##### <a name='0a9bde47fec700b1809e2f086bdfc2ded501c865415'></a> Source: [sccm\mdm\deploy-use\ios-hybrid-enrollment-using-apple-configurator.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/ios-hybrid-enrollment-using-apple-configurator.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [ios-hybrid-enrollment-using-apple-configurator.74ba582d075de22a8be69bfaf113266e1295b525.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/ios-hybrid-enrollment-using-apple-configurator.74ba582d075de22a8be69bfaf113266e1295b525.zh-cn.xlf)
@@ -5638,7 +5677,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='99db56e6d502eaf091ca8e4763c5592b9faf1f0e413'></a> Source: [sccm\mdm\deploy-use\manage-ios-activation-lock.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/manage-ios-activation-lock.md)
+##### <a name='99db56e6d502eaf091ca8e4763c5592b9faf1f0e416'></a> Source: [sccm\mdm\deploy-use\manage-ios-activation-lock.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/manage-ios-activation-lock.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [manage-ios-activation-lock.d0b58b90f6a95171c8a003f757b397d3af1571b8.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/manage-ios-activation-lock.d0b58b90f6a95171c8a003f757b397d3af1571b8.zh-cn.xlf)
@@ -5650,7 +5689,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='c6d011e8f6a080ed221c1c736aae842187b196ab414'></a> Source: [sccm\mdm\deploy-use\manage-mobile-devices-with-exchange-activesync.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)
+##### <a name='c6d011e8f6a080ed221c1c736aae842187b196ab417'></a> Source: [sccm\mdm\deploy-use\manage-mobile-devices-with-exchange-activesync.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [manage-mobile-devices-with-exchange-activesync.49eea0a33cb13e0fbd4923a9cb7bdd2913058255.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/manage-mobile-devices-with-exchange-activesync.49eea0a33cb13e0fbd4923a9cb7bdd2913058255.zh-cn.xlf)
@@ -5662,7 +5701,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='b86daa607f8bdfca2b36b2e9c956dc9872a80e4d415'></a> Source: [sccm\mdm\deploy-use\media\certExport-WinPhone.jpg](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/deploy-use/media/certExport-WinPhone.jpg)
+##### <a name='b86daa607f8bdfca2b36b2e9c956dc9872a80e4d418'></a> Source: [sccm\mdm\deploy-use\media\certExport-WinPhone.jpg](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/deploy-use/media/certExport-WinPhone.jpg)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [b86daa607f8bdfca2b36b2e9c956dc9872a80e4d.jpg](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/5ffee00eab6197b21d5193c4ef1965a051fa64ea/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/b86daa607f8bdfca2b36b2e9c956dc9872a80e4d.jpg)
@@ -5675,7 +5714,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='a3713304193d4562fb5784b2e0ec7730ac5e796e416'></a> Source: [sccm\mdm\deploy-use\media\certmgr-WinPhone_cert.jpg](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/deploy-use/media/certmgr-WinPhone_cert.jpg)
+##### <a name='a3713304193d4562fb5784b2e0ec7730ac5e796e419'></a> Source: [sccm\mdm\deploy-use\media\certmgr-WinPhone_cert.jpg](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/deploy-use/media/certmgr-WinPhone_cert.jpg)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [a3713304193d4562fb5784b2e0ec7730ac5e796e.jpg](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/5ffee00eab6197b21d5193c4ef1965a051fa64ea/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/a3713304193d4562fb5784b2e0ec7730ac5e796e.jpg)
@@ -5688,7 +5727,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='b74e5b5b5d675cf20177f14710e37f90d6dcb24f417'></a> Source: [sccm\mdm\deploy-use\media\configmgr-with-exchange.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/deploy-use/media/configmgr-with-exchange.png)
+##### <a name='b74e5b5b5d675cf20177f14710e37f90d6dcb24f420'></a> Source: [sccm\mdm\deploy-use\media\configmgr-with-exchange.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/deploy-use/media/configmgr-with-exchange.png)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [b74e5b5b5d675cf20177f14710e37f90d6dcb24f.png](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/5ffee00eab6197b21d5193c4ef1965a051fa64ea/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/b74e5b5b5d675cf20177f14710e37f90d6dcb24f.png)
@@ -5701,7 +5740,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='43d67aa664037c6da83260d5ada8e574510a8f7b418'></a> Source: [sccm\mdm\deploy-use\predeclare-devices-with-hardware-id.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/predeclare-devices-with-hardware-id.md)
+##### <a name='43d67aa664037c6da83260d5ada8e574510a8f7b421'></a> Source: [sccm\mdm\deploy-use\predeclare-devices-with-hardware-id.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/predeclare-devices-with-hardware-id.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [predeclare-devices-with-hardware-id.f6adea8ff8ec7aa57e3545286c0ee350f01e953b.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/predeclare-devices-with-hardware-id.f6adea8ff8ec7aa57e3545286c0ee350f01e953b.zh-cn.xlf)
@@ -5713,7 +5752,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='ccd46a1a919721962c32b13609fd059e7e4d3024419'></a> Source: [sccm\mdm\deploy-use\set-up-android-hybrid-device-management.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/set-up-android-hybrid-device-management.md)
+##### <a name='ccd46a1a919721962c32b13609fd059e7e4d3024422'></a> Source: [sccm\mdm\deploy-use\set-up-android-hybrid-device-management.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/set-up-android-hybrid-device-management.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [set-up-android-hybrid-device-management.e8fa1f786b65f01afc0b1625dd31168a97c9e62d.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/set-up-android-hybrid-device-management.e8fa1f786b65f01afc0b1625dd31168a97c9e62d.zh-cn.xlf)
@@ -5725,11 +5764,11 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='b582e65abadcf79c18b8d218a5f309a64fd6b784423'></a> Source: [sccm\mdm\deploy-use\setup-hybrid-mdm.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/setup-hybrid-mdm.md)
+##### <a name='8f49e1007402d6f8ed06eef9e1580f8ec978a8eb426'></a> Source: [sccm\mdm\deploy-use\setup-hybrid-mdm.md](https://github.com/Microsoft/SCCMDocs-pr/blob/07c5f0e69224422184fa3b747653ad134f8996b7/sccm/mdm/deploy-use/setup-hybrid-mdm.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [setup-hybrid-mdm.a1d6c79c1b0fb4bc30ae78c4d428323f895f1491.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/setup-hybrid-mdm.a1d6c79c1b0fb4bc30ae78c4d428323f895f1491.zh-cn.xlf)
-* Handoff Datetime: 2016-10-12 17:56:06
+* Handoff File: [setup-hybrid-mdm.a1d6c79c1b0fb4bc30ae78c4d428323f895f1491.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/f8ff8cccc0818a8ff9692dd6de6823c47708cc83/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/setup-hybrid-mdm.a1d6c79c1b0fb4bc30ae78c4d428323f895f1491.zh-cn.xlf)
+* Handoff Datetime: 2016-10-13 21:15:48
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
@@ -5737,7 +5776,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='81ece7b811a7838b94b70e66d58ca615f45f6a55420'></a> Source: [sccm\mdm\deploy-use\set-up-hybrid-windows.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/set-up-hybrid-windows.md)
+##### <a name='81ece7b811a7838b94b70e66d58ca615f45f6a55423'></a> Source: [sccm\mdm\deploy-use\set-up-hybrid-windows.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/set-up-hybrid-windows.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [set-up-hybrid-windows.5426a04df13020ca36185b4f5dcb0b1c3724ee61.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/set-up-hybrid-windows.5426a04df13020ca36185b4f5dcb0b1c3724ee61.zh-cn.xlf)
@@ -5749,7 +5788,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='6a4afbf34d76bc05300f69193ffd709e2b390efb421'></a> Source: [sccm\mdm\deploy-use\set-up-ios-hybrid-device-management.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/set-up-ios-hybrid-device-management.md)
+##### <a name='6a4afbf34d76bc05300f69193ffd709e2b390efb424'></a> Source: [sccm\mdm\deploy-use\set-up-ios-hybrid-device-management.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/set-up-ios-hybrid-device-management.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [set-up-ios-hybrid-device-management.ee893574b11ea35e514c52d36ec661fdf87b3780.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/set-up-ios-hybrid-device-management.ee893574b11ea35e514c52d36ec661fdf87b3780.zh-cn.xlf)
@@ -5761,7 +5800,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='30c05689010c460ce5cd47d0ddcc792aa619a592422'></a> Source: [sccm\mdm\deploy-use\set-up-windows-phone-hybrid-enrollment.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/set-up-windows-phone-hybrid-enrollment.md)
+##### <a name='30c05689010c460ce5cd47d0ddcc792aa619a592425'></a> Source: [sccm\mdm\deploy-use\set-up-windows-phone-hybrid-enrollment.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/set-up-windows-phone-hybrid-enrollment.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [set-up-windows-phone-hybrid-enrollment.61ad1813df8391a61c259fce8a5b283f3a4d31e2.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/set-up-windows-phone-hybrid-enrollment.61ad1813df8391a61c259fce8a5b283f3a4d31e2.zh-cn.xlf)
@@ -5773,7 +5812,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='dd928ef3a7d36522d6ac900b990c6091aa354f62424'></a> Source: [sccm\mdm\deploy-use\terms-and-conditions.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/terms-and-conditions.md)
+##### <a name='dd928ef3a7d36522d6ac900b990c6091aa354f62427'></a> Source: [sccm\mdm\deploy-use\terms-and-conditions.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/terms-and-conditions.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [terms-and-conditions.27efd95dd6b8bd4277708626cbb28aa5a3064f74.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/terms-and-conditions.27efd95dd6b8bd4277708626cbb28aa5a3064f74.zh-cn.xlf)
@@ -5785,7 +5824,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='bc4e0d4a15fe4b75e03c1262cf17c89bb02e86db425'></a> Source: [sccm\mdm\deploy-use\user-affinity-for-hybrid-managed-devices.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/user-affinity-for-hybrid-managed-devices.md)
+##### <a name='bc4e0d4a15fe4b75e03c1262cf17c89bb02e86db428'></a> Source: [sccm\mdm\deploy-use\user-affinity-for-hybrid-managed-devices.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/user-affinity-for-hybrid-managed-devices.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [user-affinity-for-hybrid-managed-devices.9e96a352e6419b80a3647a0dacccba3a8716037b.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/user-affinity-for-hybrid-managed-devices.9e96a352e6419b80a3647a0dacccba3a8716037b.zh-cn.xlf)
@@ -5797,7 +5836,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='96b703ba3c226a47d91f57e5c00e3fb060e48439426'></a> Source: [sccm\mdm\deploy-use\user-enroll-devices-on-premises-mdm.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/user-enroll-devices-on-premises-mdm.md)
+##### <a name='96b703ba3c226a47d91f57e5c00e3fb060e48439429'></a> Source: [sccm\mdm\deploy-use\user-enroll-devices-on-premises-mdm.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/user-enroll-devices-on-premises-mdm.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [user-enroll-devices-on-premises-mdm.9c2daa6354bf2ef325b7216583624fd48ac9f170.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/user-enroll-devices-on-premises-mdm.9c2daa6354bf2ef325b7216583624fd48ac9f170.zh-cn.xlf)
@@ -5809,7 +5848,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='9b8999191483a514f668c7e90f5ed63db7c7ade4427'></a> Source: [sccm\mdm\deploy-use\wipe-lock-reset-devices.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/wipe-lock-reset-devices.md)
+##### <a name='9b8999191483a514f668c7e90f5ed63db7c7ade4430'></a> Source: [sccm\mdm\deploy-use\wipe-lock-reset-devices.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/deploy-use/wipe-lock-reset-devices.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [wipe-lock-reset-devices.3dc9288751a8ec4824020aac11f128454553104e.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/wipe-lock-reset-devices.3dc9288751a8ec4824020aac11f128454553104e.zh-cn.xlf)
@@ -5821,7 +5860,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='314c4db83ea41f0162c9cd11194c913158e650ea428'></a> Source: [sccm\mdm\get-started\install-site-system-roles-for-on-premises-mdm.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/get-started/install-site-system-roles-for-on-premises-mdm.md)
+##### <a name='314c4db83ea41f0162c9cd11194c913158e650ea431'></a> Source: [sccm\mdm\get-started\install-site-system-roles-for-on-premises-mdm.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/get-started/install-site-system-roles-for-on-premises-mdm.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [install-site-system-roles-for-on-premises-mdm.ae19b1f7d31f88a68647aed03da4171916ff9fc3.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/install-site-system-roles-for-on-premises-mdm.ae19b1f7d31f88a68647aed03da4171916ff9fc3.zh-cn.xlf)
@@ -5833,7 +5872,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='fd6d75cd3a748a5b3fd5de1394341eb47d0b4a02429'></a> Source: [sccm\mdm\get-started\preparation-steps-for-on-premises-mdm.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/get-started/preparation-steps-for-on-premises-mdm.md)
+##### <a name='fd6d75cd3a748a5b3fd5de1394341eb47d0b4a02432'></a> Source: [sccm\mdm\get-started\preparation-steps-for-on-premises-mdm.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/get-started/preparation-steps-for-on-premises-mdm.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [preparation-steps-for-on-premises-mdm.58e6d37e900f918246829139e4822d9828e507cd.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/preparation-steps-for-on-premises-mdm.58e6d37e900f918246829139e4822d9828e507cd.zh-cn.xlf)
@@ -5845,7 +5884,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='5b94eba20572303af04d4458ba5dcc1b065671d5430'></a> Source: [sccm\mdm\get-started\set-up-certificates-on-premises-mdm.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/get-started/set-up-certificates-on-premises-mdm.md)
+##### <a name='5b94eba20572303af04d4458ba5dcc1b065671d5433'></a> Source: [sccm\mdm\get-started\set-up-certificates-on-premises-mdm.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/get-started/set-up-certificates-on-premises-mdm.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [set-up-certificates-on-premises-mdm.9496ae40ab897cbabb42f883706e57ad2a32643d.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/set-up-certificates-on-premises-mdm.9496ae40ab897cbabb42f883706e57ad2a32643d.zh-cn.xlf)
@@ -5857,7 +5896,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='49fdd9c391bc838d3fb64392a32a095c44e5db70431'></a> Source: [sccm\mdm\get-started\set-up-device-enrollment-on-premises-mdm.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/get-started/set-up-device-enrollment-on-premises-mdm.md)
+##### <a name='49fdd9c391bc838d3fb64392a32a095c44e5db70434'></a> Source: [sccm\mdm\get-started\set-up-device-enrollment-on-premises-mdm.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/get-started/set-up-device-enrollment-on-premises-mdm.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [set-up-device-enrollment-on-premises-mdm.53417d586a156c57e161bd50e39edd19f9a7d618.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/set-up-device-enrollment-on-premises-mdm.53417d586a156c57e161bd50e39edd19f9a7d618.zh-cn.xlf)
@@ -5869,7 +5908,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='658dbc0700a3e665a2829639e4e5b63309d2d7bb432'></a> Source: [sccm\mdm\get-started\set-up-intune-subscription-on-premises-mdm.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/get-started/set-up-intune-subscription-on-premises-mdm.md)
+##### <a name='658dbc0700a3e665a2829639e4e5b63309d2d7bb435'></a> Source: [sccm\mdm\get-started\set-up-intune-subscription-on-premises-mdm.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/get-started/set-up-intune-subscription-on-premises-mdm.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [set-up-intune-subscription-on-premises-mdm.a27df66a3a5245627a814c569a4e3884b145cac9.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/set-up-intune-subscription-on-premises-mdm.a27df66a3a5245627a814c569a4e3884b145cac9.zh-cn.xlf)
@@ -5881,7 +5920,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='5b24d6e464e6a682ae6f744d9627ff1951dfef12433'></a> Source: [sccm\mdm\includes\mdm-supported-devices.md](https://github.com/Microsoft/SCCMDocs-pr/blob/530b93178d1068b54386bc996e90811a0952aad3/sccm/mdm/includes/mdm-supported-devices.md)
+##### <a name='5b24d6e464e6a682ae6f744d9627ff1951dfef12436'></a> Source: [sccm\mdm\includes\mdm-supported-devices.md](https://github.com/Microsoft/SCCMDocs-pr/blob/530b93178d1068b54386bc996e90811a0952aad3/sccm/mdm/includes/mdm-supported-devices.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [mdm-supported-devices.4d016003378261e53ce351e14f15f9136bbf6502.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/5ffee00eab6197b21d5193c4ef1965a051fa64ea/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/mdm-supported-devices.4d016003378261e53ce351e14f15f9136bbf6502.zh-cn.xlf)
@@ -5893,7 +5932,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='15fababf9a40d55d48960b5bcb5b25b59fc477b1434'></a> Source: [sccm\mdm\media\aad-intune-app.png](https://github.com/Microsoft/SCCMDocs-pr/blob/4ba4943a740f302ea1f836a35b052557db0ab070/sccm/mdm/media/aad-intune-app.png)
+##### <a name='15fababf9a40d55d48960b5bcb5b25b59fc477b1437'></a> Source: [sccm\mdm\media\aad-intune-app.png](https://github.com/Microsoft/SCCMDocs-pr/blob/4ba4943a740f302ea1f836a35b052557db0ab070/sccm/mdm/media/aad-intune-app.png)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [15fababf9a40d55d48960b5bcb5b25b59fc477b1.png](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/5ffee00eab6197b21d5193c4ef1965a051fa64ea/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/15fababf9a40d55d48960b5bcb5b25b59fc477b1.png)
@@ -5906,7 +5945,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='0c98be6231e29d8665df1f49c9a34cb4ab84153e435'></a> Source: [sccm\mdm\media\mdm-create-user-collection.png](https://github.com/Microsoft/SCCMDocs-pr/blob/4ba4943a740f302ea1f836a35b052557db0ab070/sccm/mdm/media/mdm-create-user-collection.png)
+##### <a name='0c98be6231e29d8665df1f49c9a34cb4ab84153e438'></a> Source: [sccm\mdm\media\mdm-create-user-collection.png](https://github.com/Microsoft/SCCMDocs-pr/blob/4ba4943a740f302ea1f836a35b052557db0ab070/sccm/mdm/media/mdm-create-user-collection.png)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [0c98be6231e29d8665df1f49c9a34cb4ab84153e.png](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/5ffee00eab6197b21d5193c4ef1965a051fa64ea/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/0c98be6231e29d8665df1f49c9a34cb4ab84153e.png)
@@ -5919,7 +5958,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='83c39e9aafeadf050b7d5af588568bcc902fb229436'></a> Source: [sccm\mdm\media\mdm-service-connection-point.png](https://github.com/Microsoft/SCCMDocs-pr/blob/4ba4943a740f302ea1f836a35b052557db0ab070/sccm/mdm/media/mdm-service-connection-point.png)
+##### <a name='83c39e9aafeadf050b7d5af588568bcc902fb229439'></a> Source: [sccm\mdm\media\mdm-service-connection-point.png](https://github.com/Microsoft/SCCMDocs-pr/blob/4ba4943a740f302ea1f836a35b052557db0ab070/sccm/mdm/media/mdm-service-connection-point.png)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [83c39e9aafeadf050b7d5af588568bcc902fb229.png](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/5ffee00eab6197b21d5193c4ef1965a051fa64ea/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/83c39e9aafeadf050b7d5af588568bcc902fb229.png)
@@ -5932,7 +5971,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='8a63ea1e7c0e34b524cd58d786f1b50447c941f7437'></a> Source: [sccm\mdm\media\mdm-set-intune.png](https://github.com/Microsoft/SCCMDocs-pr/blob/4ba4943a740f302ea1f836a35b052557db0ab070/sccm/mdm/media/mdm-set-intune.png)
+##### <a name='8a63ea1e7c0e34b524cd58d786f1b50447c941f7440'></a> Source: [sccm\mdm\media\mdm-set-intune.png](https://github.com/Microsoft/SCCMDocs-pr/blob/4ba4943a740f302ea1f836a35b052557db0ab070/sccm/mdm/media/mdm-set-intune.png)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [8a63ea1e7c0e34b524cd58d786f1b50447c941f7.png](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/5ffee00eab6197b21d5193c4ef1965a051fa64ea/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/8a63ea1e7c0e34b524cd58d786f1b50447c941f7.png)
@@ -5945,7 +5984,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='a9329254447656f646b5f57428034cf0cdc28e8a438'></a> Source: [sccm\mdm\plan-design\hybrid-mobile-device-management.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/plan-design/hybrid-mobile-device-management.md)
+##### <a name='a9329254447656f646b5f57428034cf0cdc28e8a441'></a> Source: [sccm\mdm\plan-design\hybrid-mobile-device-management.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/plan-design/hybrid-mobile-device-management.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [hybrid-mobile-device-management.7ba886c1912811885944685fd3bba4b09d70f900.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/hybrid-mobile-device-management.7ba886c1912811885944685fd3bba4b09d70f900.zh-cn.xlf)
@@ -5957,7 +5996,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='7d39fdd49c42cadd5a426c4ad53a92df6ec93c66439'></a> Source: [sccm\mdm\plan-design\plan-hybrid-mobile-device-management.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/plan-design/plan-hybrid-mobile-device-management.md)
+##### <a name='7d39fdd49c42cadd5a426c4ad53a92df6ec93c66442'></a> Source: [sccm\mdm\plan-design\plan-hybrid-mobile-device-management.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/plan-design/plan-hybrid-mobile-device-management.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [plan-hybrid-mobile-device-management.2dda143e017f71e42f9bc306e791469757682346.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/plan-hybrid-mobile-device-management.2dda143e017f71e42f9bc306e791469757682346.zh-cn.xlf)
@@ -5969,7 +6008,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='b3200246b4de4439e0f58975f712a68fe1c2a5ac440'></a> Source: [sccm\mdm\plan-design\plan-on-premises-mdm.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/plan-design/plan-on-premises-mdm.md)
+##### <a name='b3200246b4de4439e0f58975f712a68fe1c2a5ac443'></a> Source: [sccm\mdm\plan-design\plan-on-premises-mdm.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/plan-design/plan-on-premises-mdm.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [plan-on-premises-mdm.e26074bb2e6ebcd729ed7d6dfce9777fc87bfcb8.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/plan-on-premises-mdm.e26074bb2e6ebcd729ed7d6dfce9777fc87bfcb8.zh-cn.xlf)
@@ -5981,11 +6020,11 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='9121785d43707b7669763dab9cd58cc69157e58b441'></a> Source: [sccm\mdm\TOC.md](https://github.com/Microsoft/SCCMDocs-pr/blob/688c35c5c4641d2b0114efcc995e88f9d78b719e/sccm/mdm/TOC.md)
+##### <a name='9c3df5ed669350b3ba38ce9f51c6d3dab449a86a444'></a> Source: [sccm\mdm\TOC.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5298a616272d6bfde5687ecd5a18d00e5d9dd2c4/sccm/mdm/TOC.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [TOC.118d3cecc9cdbadabc1a7a188c77128f8658667a.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/TOC.118d3cecc9cdbadabc1a7a188c77128f8658667a.zh-cn.xlf)
-* Handoff Datetime: 2016-10-12 17:56:06
+* Handoff File: [TOC.118d3cecc9cdbadabc1a7a188c77128f8658667a.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/f8ff8cccc0818a8ff9692dd6de6823c47708cc83/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/TOC.118d3cecc9cdbadabc1a7a188c77128f8658667a.zh-cn.xlf)
+* Handoff Datetime: 2016-10-13 21:15:48
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
@@ -5993,7 +6032,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='85e3e9c2586daa0c80557eac9514f004f763a240442'></a> Source: [sccm\mdm\understand\choose-between-standalone-intune-and-hybrid-mobile-device-management.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management.md)
+##### <a name='85e3e9c2586daa0c80557eac9514f004f763a240445'></a> Source: [sccm\mdm\understand\choose-between-standalone-intune-and-hybrid-mobile-device-management.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [choose-between-standalone-intune-and-hybrid-mobile-device-management.fb699c506b51f8482157e13e816a43ce57e6478f.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/choose-between-standalone-intune-and-hybrid-mobile-device-management.fb699c506b51f8482157e13e816a43ce57e6478f.zh-cn.xlf)
@@ -6005,7 +6044,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='d40ef2fbec745f147c8a6dcca1678de6a7e4c868443'></a> Source: [sccm\mdm\understand\hybrid-mobile-device-management.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/understand/hybrid-mobile-device-management.md)
+##### <a name='d40ef2fbec745f147c8a6dcca1678de6a7e4c868446'></a> Source: [sccm\mdm\understand\hybrid-mobile-device-management.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/understand/hybrid-mobile-device-management.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [hybrid-mobile-device-management.b4edda9e4b2c1f61b88aefaad0aa1bad74f5d2f6.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/hybrid-mobile-device-management.b4edda9e4b2c1f61b88aefaad0aa1bad74f5d2f6.zh-cn.xlf)
@@ -6017,7 +6056,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='993f8a6025cf5180ca6a6f603a5aef53e5ca0113444'></a> Source: [sccm\mdm\understand\manage-mobile-devices-with-on-premises-infrastructure.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md)
+##### <a name='993f8a6025cf5180ca6a6f603a5aef53e5ca0113447'></a> Source: [sccm\mdm\understand\manage-mobile-devices-with-on-premises-infrastructure.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [manage-mobile-devices-with-on-premises-infrastructure.8f7c6b85674acea6ca249dc318ed5cae0d1d900d.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/manage-mobile-devices-with-on-premises-infrastructure.8f7c6b85674acea6ca249dc318ed5cae0d1d900d.zh-cn.xlf)
@@ -6029,7 +6068,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='e61950df6b33bb9c3dbaa6d8dfd4152dc78da35f445'></a> Source: [sccm\mdm\understand\media\hybrid-1.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/understand/media/hybrid-1.png)
+##### <a name='e61950df6b33bb9c3dbaa6d8dfd4152dc78da35f448'></a> Source: [sccm\mdm\understand\media\hybrid-1.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/understand/media/hybrid-1.png)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [e61950df6b33bb9c3dbaa6d8dfd4152dc78da35f.png](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/5ffee00eab6197b21d5193c4ef1965a051fa64ea/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/e61950df6b33bb9c3dbaa6d8dfd4152dc78da35f.png)
@@ -6042,7 +6081,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='e6e64f3cb69c5f39cb0982a501e014bffd6f53f5446'></a> Source: [sccm\mdm\understand\media\hybrid-2.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/understand/media/hybrid-2.png)
+##### <a name='e6e64f3cb69c5f39cb0982a501e014bffd6f53f5449'></a> Source: [sccm\mdm\understand\media\hybrid-2.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/understand/media/hybrid-2.png)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [e6e64f3cb69c5f39cb0982a501e014bffd6f53f5.png](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/5ffee00eab6197b21d5193c4ef1965a051fa64ea/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/e6e64f3cb69c5f39cb0982a501e014bffd6f53f5.png)
@@ -6055,7 +6094,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='84af8dd482b6f84027e7da837c374e7b3283bace447'></a> Source: [sccm\mdm\understand\media\hybrid-3.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/understand/media/hybrid-3.png)
+##### <a name='84af8dd482b6f84027e7da837c374e7b3283bace450'></a> Source: [sccm\mdm\understand\media\hybrid-3.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/understand/media/hybrid-3.png)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [84af8dd482b6f84027e7da837c374e7b3283bace.png](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/5ffee00eab6197b21d5193c4ef1965a051fa64ea/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/84af8dd482b6f84027e7da837c374e7b3283bace.png)
@@ -6068,7 +6107,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='ef524b14c615faa950321241aaa76d99c9458d72448'></a> Source: [sccm\mdm\understand\media\hybrid-4.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/understand/media/hybrid-4.png)
+##### <a name='ef524b14c615faa950321241aaa76d99c9458d72451'></a> Source: [sccm\mdm\understand\media\hybrid-4.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/understand/media/hybrid-4.png)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [ef524b14c615faa950321241aaa76d99c9458d72.png](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/5ffee00eab6197b21d5193c4ef1965a051fa64ea/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/ef524b14c615faa950321241aaa76d99c9458d72.png)
@@ -6081,7 +6120,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='a4b1a2455b9df2d8c598d164cd0c6ce65e4d8aaf449'></a> Source: [sccm\mdm\understand\media\hybrid-5.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/understand/media/hybrid-5.png)
+##### <a name='a4b1a2455b9df2d8c598d164cd0c6ce65e4d8aaf452'></a> Source: [sccm\mdm\understand\media\hybrid-5.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/understand/media/hybrid-5.png)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [a4b1a2455b9df2d8c598d164cd0c6ce65e4d8aaf.png](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/5ffee00eab6197b21d5193c4ef1965a051fa64ea/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/a4b1a2455b9df2d8c598d164cd0c6ce65e4d8aaf.png)
@@ -6094,7 +6133,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='57732db78a76067c645a7e3a2f7ec9c1e8636abc450'></a> Source: [sccm\mdm\understand\media\hybrid-6.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/understand/media/hybrid-6.png)
+##### <a name='57732db78a76067c645a7e3a2f7ec9c1e8636abc453'></a> Source: [sccm\mdm\understand\media\hybrid-6.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/understand/media/hybrid-6.png)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [57732db78a76067c645a7e3a2f7ec9c1e8636abc.png](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/5ffee00eab6197b21d5193c4ef1965a051fa64ea/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/57732db78a76067c645a7e3a2f7ec9c1e8636abc.png)
@@ -6107,7 +6146,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='d0a4d32939be85c3291eba609d3e04457e87f83d451'></a> Source: [sccm\mdm\understand\media\hybrid-7.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/understand/media/hybrid-7.png)
+##### <a name='d0a4d32939be85c3291eba609d3e04457e87f83d454'></a> Source: [sccm\mdm\understand\media\hybrid-7.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/understand/media/hybrid-7.png)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [d0a4d32939be85c3291eba609d3e04457e87f83d.png](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/5ffee00eab6197b21d5193c4ef1965a051fa64ea/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/d0a4d32939be85c3291eba609d3e04457e87f83d.png)
@@ -6120,7 +6159,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='75406f23034ebcb1dfbd8bb4ac8418ac1b129b75452'></a> Source: [sccm\mdm\understand\media\hybrid-8.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/understand/media/hybrid-8.png)
+##### <a name='75406f23034ebcb1dfbd8bb4ac8418ac1b129b75455'></a> Source: [sccm\mdm\understand\media\hybrid-8.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/understand/media/hybrid-8.png)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [75406f23034ebcb1dfbd8bb4ac8418ac1b129b75.png](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/5ffee00eab6197b21d5193c4ef1965a051fa64ea/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/75406f23034ebcb1dfbd8bb4ac8418ac1b129b75.png)
@@ -6133,7 +6172,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='d99994cc912c560994c973cf2326f1cdfb61a65b453'></a> Source: [sccm\mdm\understand\media\hybrid-9.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/understand/media/hybrid-9.png)
+##### <a name='d99994cc912c560994c973cf2326f1cdfb61a65b456'></a> Source: [sccm\mdm\understand\media\hybrid-9.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/understand/media/hybrid-9.png)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [d99994cc912c560994c973cf2326f1cdfb61a65b.png](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/5ffee00eab6197b21d5193c4ef1965a051fa64ea/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/d99994cc912c560994c973cf2326f1cdfb61a65b.png)
@@ -6146,7 +6185,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='4cf5264eba406acedd16d21fab4ec89394336ac0454'></a> Source: [sccm\mdm\understand\media\hybrid-decisions.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/understand/media/hybrid-decisions.png)
+##### <a name='4cf5264eba406acedd16d21fab4ec89394336ac0457'></a> Source: [sccm\mdm\understand\media\hybrid-decisions.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/understand/media/hybrid-decisions.png)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [4cf5264eba406acedd16d21fab4ec89394336ac0.png](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/5ffee00eab6197b21d5193c4ef1965a051fa64ea/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/4cf5264eba406acedd16d21fab4ec89394336ac0.png)
@@ -6159,7 +6198,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='075374ed96fd22728ea4537c2a09f9b9079567d7455'></a> Source: [sccm\mdm\understand\media\On-premises-conceptual.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/understand/media/On-premises-conceptual.png)
+##### <a name='075374ed96fd22728ea4537c2a09f9b9079567d7458'></a> Source: [sccm\mdm\understand\media\On-premises-conceptual.png](https://github.com/Microsoft/SCCMDocs-pr/blob/6c671d7b1b9fe74cc61a84b8627aa22068d6ae7b/sccm/mdm/understand/media/On-premises-conceptual.png)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [075374ed96fd22728ea4537c2a09f9b9079567d7.png](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/5ffee00eab6197b21d5193c4ef1965a051fa64ea/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/075374ed96fd22728ea4537c2a09f9b9079567d7.png)
@@ -6172,7 +6211,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='628113d0e3d049420014ad1dc4498f2359f8b08e456'></a> Source: [sccm\mdm\understand\whats-new-in-hybrid-mobile-device-management.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management.md)
+##### <a name='628113d0e3d049420014ad1dc4498f2359f8b08e459'></a> Source: [sccm\mdm\understand\whats-new-in-hybrid-mobile-device-management.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [whats-new-in-hybrid-mobile-device-management.c231940c4ca6d109f3d0d8f7b11fc7eb9b1baa7b.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/whats-new-in-hybrid-mobile-device-management.c231940c4ca6d109f3d0d8f7b11fc7eb9b1baa7b.zh-cn.xlf)
@@ -6184,7 +6223,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='02e264298424d97d4c8c3e0fa6eb5a288a4813b2457'></a> Source: [sccm\osd\deploy-use\create-a-custom-task-sequence.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/create-a-custom-task-sequence.md)
+##### <a name='02e264298424d97d4c8c3e0fa6eb5a288a4813b2460'></a> Source: [sccm\osd\deploy-use\create-a-custom-task-sequence.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/create-a-custom-task-sequence.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [create-a-custom-task-sequence.9307d89b1e5ec7541efb2debad6e14e034c36edc.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/create-a-custom-task-sequence.9307d89b1e5ec7541efb2debad6e14e034c36edc.zh-cn.xlf)
@@ -6196,7 +6235,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='be5a652a1c93afc70e3df3157bbb0ed1d87b0e2d463'></a> Source: [sccm\osd\deploy-use\create-an-image-for-an-oem-in-factory-or-a-local-depot.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/create-an-image-for-an-oem-in-factory-or-a-local-depot.md)
+##### <a name='be5a652a1c93afc70e3df3157bbb0ed1d87b0e2d466'></a> Source: [sccm\osd\deploy-use\create-an-image-for-an-oem-in-factory-or-a-local-depot.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/create-an-image-for-an-oem-in-factory-or-a-local-depot.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [create-an-image-for-an-oem-in-factory-or-a-local-depot.64e1145e2c36ca0c06f5acc160e2cd9ed2e1d2c5.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/create-an-image-for-an-oem-in-factory-or-a-local-depot.64e1145e2c36ca0c06f5acc160e2cd9ed2e1d2c5.zh-cn.xlf)
@@ -6208,7 +6247,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='68e626ff502dcf407b68114d3869551001781885458'></a> Source: [sccm\osd\deploy-use\create-a-task-sequence-for-non-operating-system-deployments.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/create-a-task-sequence-for-non-operating-system-deployments.md)
+##### <a name='68e626ff502dcf407b68114d3869551001781885461'></a> Source: [sccm\osd\deploy-use\create-a-task-sequence-for-non-operating-system-deployments.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/create-a-task-sequence-for-non-operating-system-deployments.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [create-a-task-sequence-for-non-operating-system-deployments.6e304865f6c16aeac73ec453415d4c85886b472b.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/create-a-task-sequence-for-non-operating-system-deployments.6e304865f6c16aeac73ec453415d4c85886b472b.zh-cn.xlf)
@@ -6220,7 +6259,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='3b161971f09a524405a0ab8a3d5a7832d841f8cd460'></a> Source: [sccm\osd\deploy-use\create-a-task-sequence-to-capture-and-restore-user-state.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md)
+##### <a name='3b161971f09a524405a0ab8a3d5a7832d841f8cd463'></a> Source: [sccm\osd\deploy-use\create-a-task-sequence-to-capture-and-restore-user-state.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [create-a-task-sequence-to-capture-and-restore-user-state.a6899c7f6fcf69eccf0edd5ed99579b1f6fa436f.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/create-a-task-sequence-to-capture-and-restore-user-state.a6899c7f6fcf69eccf0edd5ed99579b1f6fa436f.zh-cn.xlf)
@@ -6232,7 +6271,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='30e47362521bab978bdd4bdac3ae2e33d2601b5c459'></a> Source: [sccm\osd\deploy-use\create-a-task-sequence-to-capture-an-operating-system.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/create-a-task-sequence-to-capture-an-operating-system.md)
+##### <a name='30e47362521bab978bdd4bdac3ae2e33d2601b5c462'></a> Source: [sccm\osd\deploy-use\create-a-task-sequence-to-capture-an-operating-system.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/create-a-task-sequence-to-capture-an-operating-system.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [create-a-task-sequence-to-capture-an-operating-system.6c7ccfbbb7f17c7a11ce12ff110ce49d4aa3847c.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/create-a-task-sequence-to-capture-an-operating-system.6c7ccfbbb7f17c7a11ce12ff110ce49d4aa3847c.zh-cn.xlf)
@@ -6244,7 +6283,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='9aa5b7696d86fcd5e95034b86ed39734ba8e6629461'></a> Source: [sccm\osd\deploy-use\create-a-task-sequence-to-install-an-operating-system.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/create-a-task-sequence-to-install-an-operating-system.md)
+##### <a name='9aa5b7696d86fcd5e95034b86ed39734ba8e6629464'></a> Source: [sccm\osd\deploy-use\create-a-task-sequence-to-install-an-operating-system.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/create-a-task-sequence-to-install-an-operating-system.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [create-a-task-sequence-to-install-an-operating-system.d520f905026b001c2935985efbe0912e780e2504.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/create-a-task-sequence-to-install-an-operating-system.d520f905026b001c2935985efbe0912e780e2504.zh-cn.xlf)
@@ -6256,7 +6295,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='042c6fe9dc0b53c5b7c9d439babe6c93828ffd19462'></a> Source: [sccm\osd\deploy-use\create-a-task-sequence-to-upgrade-an-operating-system.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md)
+##### <a name='042c6fe9dc0b53c5b7c9d439babe6c93828ffd19465'></a> Source: [sccm\osd\deploy-use\create-a-task-sequence-to-upgrade-an-operating-system.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [create-a-task-sequence-to-upgrade-an-operating-system.88c09be73b05e47c7f97771f08a139efc3aa9698.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/create-a-task-sequence-to-upgrade-an-operating-system.88c09be73b05e47c7f97771f08a139efc3aa9698.zh-cn.xlf)
@@ -6268,7 +6307,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='fe3c2175f5e1503c3895b604fdcdcd07f0a07908464'></a> Source: [sccm\osd\deploy-use\create-bootable-media.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/create-bootable-media.md)
+##### <a name='fe3c2175f5e1503c3895b604fdcdcd07f0a07908467'></a> Source: [sccm\osd\deploy-use\create-bootable-media.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/create-bootable-media.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [create-bootable-media.32f44370a3ec58152677cbc212517d69418393ea.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/create-bootable-media.32f44370a3ec58152677cbc212517d69418393ea.zh-cn.xlf)
@@ -6280,7 +6319,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='d663e3fc51b1dc1599ac2abaa84570b62ed1d5f9465'></a> Source: [sccm\osd\deploy-use\create-capture-media.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/create-capture-media.md)
+##### <a name='d663e3fc51b1dc1599ac2abaa84570b62ed1d5f9468'></a> Source: [sccm\osd\deploy-use\create-capture-media.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/create-capture-media.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [create-capture-media.8c841f07cca98cdc16d8c9311b3d667ab7d25177.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/create-capture-media.8c841f07cca98cdc16d8c9311b3d667ab7d25177.zh-cn.xlf)
@@ -6292,7 +6331,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='fdd1af19e144533587dc7575a522c76dd52f803a466'></a> Source: [sccm\osd\deploy-use\create-prestaged-media.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/create-prestaged-media.md)
+##### <a name='fdd1af19e144533587dc7575a522c76dd52f803a469'></a> Source: [sccm\osd\deploy-use\create-prestaged-media.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/create-prestaged-media.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [create-prestaged-media.7fe8e1448d533baccc28dc9a10c8a716147c347c.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/create-prestaged-media.7fe8e1448d533baccc28dc9a10c8a716147c347c.zh-cn.xlf)
@@ -6304,7 +6343,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='60ec4a5557be380368d671238350230bbb9535fd467'></a> Source: [sccm\osd\deploy-use\create-stand-alone-media.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/create-stand-alone-media.md)
+##### <a name='60ec4a5557be380368d671238350230bbb9535fd470'></a> Source: [sccm\osd\deploy-use\create-stand-alone-media.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/create-stand-alone-media.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [create-stand-alone-media.72a4f333b62391f84b7e5c861354210368848cd1.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/create-stand-alone-media.72a4f333b62391f84b7e5c861354210368848cd1.zh-cn.xlf)
@@ -6316,7 +6355,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='e6e99032c4411487ad4b0b299de107f02e16acc7468'></a> Source: [sccm\osd\deploy-use\create-task-sequence-media.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/create-task-sequence-media.md)
+##### <a name='e6e99032c4411487ad4b0b299de107f02e16acc7471'></a> Source: [sccm\osd\deploy-use\create-task-sequence-media.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/create-task-sequence-media.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [create-task-sequence-media.0e953ba4f56d797b1e5f583d0b48377e195e38fd.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/create-task-sequence-media.0e953ba4f56d797b1e5f583d0b48377e195e38fd.zh-cn.xlf)
@@ -6328,7 +6367,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='de326470a74ca0602a4d4e7ae5076cda1b2263f8469'></a> Source: [sccm\osd\deploy-use\deploy-windows-to-go.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/deploy-windows-to-go.md)
+##### <a name='de326470a74ca0602a4d4e7ae5076cda1b2263f8472'></a> Source: [sccm\osd\deploy-use\deploy-windows-to-go.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/deploy-windows-to-go.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [deploy-windows-to-go.a233280d5052665b9f4953b764a1e2da1a56a9d1.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/deploy-windows-to-go.a233280d5052665b9f4953b764a1e2da1a56a9d1.zh-cn.xlf)
@@ -6340,7 +6379,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='96283936f1acca00938c02b0929aa3ce2687b25e470'></a> Source: [sccm\osd\deploy-use\install-new-windows-version-new-computer-bare-metal.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/install-new-windows-version-new-computer-bare-metal.md)
+##### <a name='96283936f1acca00938c02b0929aa3ce2687b25e473'></a> Source: [sccm\osd\deploy-use\install-new-windows-version-new-computer-bare-metal.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/install-new-windows-version-new-computer-bare-metal.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [install-new-windows-version-new-computer-bare-metal.e114830b0050174bacfc29a5b9a3b3ca89bbe6f0.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/install-new-windows-version-new-computer-bare-metal.e114830b0050174bacfc29a5b9a3b3ca89bbe6f0.zh-cn.xlf)
@@ -6352,7 +6391,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='6bd1bcdfe4a0d08aed2e8217e53ce6a43fa27b2e471'></a> Source: [sccm\osd\deploy-use\manage-task-sequences-to-automate-tasks.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks.md)
+##### <a name='6bd1bcdfe4a0d08aed2e8217e53ce6a43fa27b2e474'></a> Source: [sccm\osd\deploy-use\manage-task-sequences-to-automate-tasks.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [manage-task-sequences-to-automate-tasks.d019cf076cb0307c434b692fc12e4e405b78a032.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/manage-task-sequences-to-automate-tasks.d019cf076cb0307c434b692fc12e4e405b78a032.zh-cn.xlf)
@@ -6364,7 +6403,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='eed38d04c72a53025502e988fd7c8c5356dc4eb8472'></a> Source: [sccm\osd\deploy-use\manage-windows-as-a-service.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/manage-windows-as-a-service.md)
+##### <a name='eed38d04c72a53025502e988fd7c8c5356dc4eb8475'></a> Source: [sccm\osd\deploy-use\manage-windows-as-a-service.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/manage-windows-as-a-service.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [manage-windows-as-a-service.3b2d42efe231cf8390fcb6da7ef79b7600b2a5f6.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/manage-windows-as-a-service.3b2d42efe231cf8390fcb6da7ef79b7600b2a5f6.zh-cn.xlf)
@@ -6376,7 +6415,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='8f84a895ae9be0f6a431561b25f557c0516ffc68473'></a> Source: [sccm\osd\deploy-use\methods-to-deploy-enterprise-operating-systems.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/methods-to-deploy-enterprise-operating-systems.md)
+##### <a name='8f84a895ae9be0f6a431561b25f557c0516ffc68476'></a> Source: [sccm\osd\deploy-use\methods-to-deploy-enterprise-operating-systems.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/methods-to-deploy-enterprise-operating-systems.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [methods-to-deploy-enterprise-operating-systems.534ad7a61e6b9fd4e58a8be92a2facae0ef7274b.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/methods-to-deploy-enterprise-operating-systems.534ad7a61e6b9fd4e58a8be92a2facae0ef7274b.zh-cn.xlf)
@@ -6388,7 +6427,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='eee00cf759c49f19627eeb1b0ac2a03aac2dbd43474'></a> Source: [sccm\osd\deploy-use\monitor-operating-system-deployments.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/monitor-operating-system-deployments.md)
+##### <a name='eee00cf759c49f19627eeb1b0ac2a03aac2dbd43477'></a> Source: [sccm\osd\deploy-use\monitor-operating-system-deployments.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/monitor-operating-system-deployments.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [monitor-operating-system-deployments.a0c0d544a460efc684db52de1aa4451ed75ef613.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/monitor-operating-system-deployments.a0c0d544a460efc684db52de1aa4451ed75ef613.zh-cn.xlf)
@@ -6400,7 +6439,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='a1cf9533de0e8c34cd826865145bd89c4142c363475'></a> Source: [sccm\osd\deploy-use\preprovision-bitlocker-in-windows-pe.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/preprovision-bitlocker-in-windows-pe.md)
+##### <a name='a1cf9533de0e8c34cd826865145bd89c4142c363478'></a> Source: [sccm\osd\deploy-use\preprovision-bitlocker-in-windows-pe.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/preprovision-bitlocker-in-windows-pe.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [preprovision-bitlocker-in-windows-pe.bffafcdadb71ab2ac708ff7937ab83aa97a4b2a2.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/preprovision-bitlocker-in-windows-pe.bffafcdadb71ab2ac708ff7937ab83aa97a4b2a2.zh-cn.xlf)
@@ -6412,7 +6451,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='ce2e44e64839d4490b30dcb3389602bf26913d14476'></a> Source: [sccm\osd\deploy-use\refresh-an-existing-computer-with-a-new-version-of-windows.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/refresh-an-existing-computer-with-a-new-version-of-windows.md)
+##### <a name='ce2e44e64839d4490b30dcb3389602bf26913d14479'></a> Source: [sccm\osd\deploy-use\refresh-an-existing-computer-with-a-new-version-of-windows.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/refresh-an-existing-computer-with-a-new-version-of-windows.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [refresh-an-existing-computer-with-a-new-version-of-windows.a967366868dcddbb04de2f37cd899d7faeb05c46.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/refresh-an-existing-computer-with-a-new-version-of-windows.a967366868dcddbb04de2f37cd899d7faeb05c46.zh-cn.xlf)
@@ -6424,7 +6463,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='0c5de87111c38b373f3386aa2f4ff8f13e6c77e6477'></a> Source: [sccm\osd\deploy-use\replace-an-existing-computer-and-transfer-settings.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/replace-an-existing-computer-and-transfer-settings.md)
+##### <a name='0c5de87111c38b373f3386aa2f4ff8f13e6c77e6480'></a> Source: [sccm\osd\deploy-use\replace-an-existing-computer-and-transfer-settings.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/replace-an-existing-computer-and-transfer-settings.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [replace-an-existing-computer-and-transfer-settings.26392a3d5da9b50d7b5ad5543e15bb609b4cf3aa.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/replace-an-existing-computer-and-transfer-settings.26392a3d5da9b50d7b5ad5543e15bb609b4cf3aa.zh-cn.xlf)
@@ -6436,7 +6475,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='403a955e0d44b8f7dc236df0ee102c2732335bae478'></a> Source: [sccm\osd\deploy-use\scenarios-to-deploy-enterprise-operating-systems.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/scenarios-to-deploy-enterprise-operating-systems.md)
+##### <a name='403a955e0d44b8f7dc236df0ee102c2732335bae481'></a> Source: [sccm\osd\deploy-use\scenarios-to-deploy-enterprise-operating-systems.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/scenarios-to-deploy-enterprise-operating-systems.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [scenarios-to-deploy-enterprise-operating-systems.5e869fb7603562e1f277c42cb17ab4dbd1088426.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/scenarios-to-deploy-enterprise-operating-systems.5e869fb7603562e1f277c42cb17ab4dbd1088426.zh-cn.xlf)
@@ -6448,7 +6487,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='6d695e22242c9f3a0e820774aa58d75dee5dcdc5479'></a> Source: [sccm\osd\deploy-use\upgrade-windows-to-the-latest-version.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/upgrade-windows-to-the-latest-version.md)
+##### <a name='6d695e22242c9f3a0e820774aa58d75dee5dcdc5482'></a> Source: [sccm\osd\deploy-use\upgrade-windows-to-the-latest-version.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/upgrade-windows-to-the-latest-version.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [upgrade-windows-to-the-latest-version.bc4b65d5fcb7a311f1cfdb094d913adb0d235c0c.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/upgrade-windows-to-the-latest-version.bc4b65d5fcb7a311f1cfdb094d913adb0d235c0c.zh-cn.xlf)
@@ -6460,7 +6499,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='f4dea75d1d1e6a2c1006887f0d4c4b4eb41594d8480'></a> Source: [sccm\osd\deploy-use\use-a-task-sequence-to-manage-virtual-hard-disks.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/use-a-task-sequence-to-manage-virtual-hard-disks.md)
+##### <a name='f4dea75d1d1e6a2c1006887f0d4c4b4eb41594d8483'></a> Source: [sccm\osd\deploy-use\use-a-task-sequence-to-manage-virtual-hard-disks.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/use-a-task-sequence-to-manage-virtual-hard-disks.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [use-a-task-sequence-to-manage-virtual-hard-disks.dd4abd8ab1d950859e33e99ad822ab925181dd26.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/use-a-task-sequence-to-manage-virtual-hard-disks.dd4abd8ab1d950859e33e99ad822ab925181dd26.zh-cn.xlf)
@@ -6472,7 +6511,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='7cc62108f55c5be7a42ba7bf18af5e5fb86ad14f481'></a> Source: [sccm\osd\deploy-use\use-bootable-media-to-deploy-windows-over-the-network.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/use-bootable-media-to-deploy-windows-over-the-network.md)
+##### <a name='7cc62108f55c5be7a42ba7bf18af5e5fb86ad14f484'></a> Source: [sccm\osd\deploy-use\use-bootable-media-to-deploy-windows-over-the-network.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/use-bootable-media-to-deploy-windows-over-the-network.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [use-bootable-media-to-deploy-windows-over-the-network.f5f19bc2df4685687b049891374ff160ee882d97.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/use-bootable-media-to-deploy-windows-over-the-network.f5f19bc2df4685687b049891374ff160ee882d97.zh-cn.xlf)
@@ -6484,7 +6523,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='b8ae17afc9f292de01026997a87e8fa96c77d7d8482'></a> Source: [sccm\osd\deploy-use\use-multicast-to-deploy-windows-over-the-network.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/use-multicast-to-deploy-windows-over-the-network.md)
+##### <a name='b8ae17afc9f292de01026997a87e8fa96c77d7d8485'></a> Source: [sccm\osd\deploy-use\use-multicast-to-deploy-windows-over-the-network.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/use-multicast-to-deploy-windows-over-the-network.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [use-multicast-to-deploy-windows-over-the-network.ad9f37849bcf3d85bc99eb1ea5368e7e455464cb.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/use-multicast-to-deploy-windows-over-the-network.ad9f37849bcf3d85bc99eb1ea5368e7e455464cb.zh-cn.xlf)
@@ -6496,7 +6535,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='606d0daed7ded866e7cad7ec93ee194cd65168f0483'></a> Source: [sccm\osd\deploy-use\use-pxe-to-deploy-windows-over-the-network.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/use-pxe-to-deploy-windows-over-the-network.md)
+##### <a name='606d0daed7ded866e7cad7ec93ee194cd65168f0486'></a> Source: [sccm\osd\deploy-use\use-pxe-to-deploy-windows-over-the-network.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/use-pxe-to-deploy-windows-over-the-network.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [use-pxe-to-deploy-windows-over-the-network.f6fd03adf742ea73503fe93fefc2fd301df3b8e9.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/use-pxe-to-deploy-windows-over-the-network.f6fd03adf742ea73503fe93fefc2fd301df3b8e9.zh-cn.xlf)
@@ -6508,7 +6547,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='bd2c855e93c0840b2300822d4b60cdaf90bce932484'></a> Source: [sccm\osd\deploy-use\use-software-center-to-deploy-windows-over-the-network.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/use-software-center-to-deploy-windows-over-the-network.md)
+##### <a name='bd2c855e93c0840b2300822d4b60cdaf90bce932487'></a> Source: [sccm\osd\deploy-use\use-software-center-to-deploy-windows-over-the-network.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/use-software-center-to-deploy-windows-over-the-network.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [use-software-center-to-deploy-windows-over-the-network.3bcab8cc75393df91cf1ffa64fb6b12fa8f8343f.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/use-software-center-to-deploy-windows-over-the-network.3bcab8cc75393df91cf1ffa64fb6b12fa8f8343f.zh-cn.xlf)
@@ -6520,7 +6559,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='3f699d267035da3e1a02a875a2a4f13e24c0465e485'></a> Source: [sccm\osd\deploy-use\use-stand-alone-media-to-deploy-windows-without-using-the-network.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/use-stand-alone-media-to-deploy-windows-without-using-the-network.md)
+##### <a name='3f699d267035da3e1a02a875a2a4f13e24c0465e488'></a> Source: [sccm\osd\deploy-use\use-stand-alone-media-to-deploy-windows-without-using-the-network.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/deploy-use/use-stand-alone-media-to-deploy-windows-without-using-the-network.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [use-stand-alone-media-to-deploy-windows-without-using-the-network.2da0e58c233f2d548adcab9d971bd1d14eff7370.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/use-stand-alone-media-to-deploy-windows-without-using-the-network.2da0e58c233f2d548adcab9d971bd1d14eff7370.zh-cn.xlf)
@@ -6532,7 +6571,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='9e8d91d930854ddcffaf3258e3b5947bd2643a07486'></a> Source: [sccm\osd\get-started\associate-users-with-a-destination-computer.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/get-started/associate-users-with-a-destination-computer.md)
+##### <a name='9e8d91d930854ddcffaf3258e3b5947bd2643a07489'></a> Source: [sccm\osd\get-started\associate-users-with-a-destination-computer.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/get-started/associate-users-with-a-destination-computer.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [associate-users-with-a-destination-computer.50b916e81fae7ad8a70fd5c1aace728de0939756.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/associate-users-with-a-destination-computer.50b916e81fae7ad8a70fd5c1aace728de0939756.zh-cn.xlf)
@@ -6544,7 +6583,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='acbb4957d3a41d06a9dff404537bb5a4c853b232487'></a> Source: [sccm\osd\get-started\customize-boot-images.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/get-started/customize-boot-images.md)
+##### <a name='acbb4957d3a41d06a9dff404537bb5a4c853b232490'></a> Source: [sccm\osd\get-started\customize-boot-images.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/get-started/customize-boot-images.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [customize-boot-images.58c121872e158155d9bae8d1a3f4293258508e71.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/customize-boot-images.58c121872e158155d9bae8d1a3f4293258508e71.zh-cn.xlf)
@@ -6556,7 +6595,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='a872fb05b8e1b55fbcebc32968a3e2f774b8d8be488'></a> Source: [sccm\osd\get-started\customize-operating-system-images.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/get-started/customize-operating-system-images.md)
+##### <a name='a872fb05b8e1b55fbcebc32968a3e2f774b8d8be491'></a> Source: [sccm\osd\get-started\customize-operating-system-images.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/get-started/customize-operating-system-images.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [customize-operating-system-images.1f9bd42c5fc6150e193fab3d6b604c1295752a28.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/customize-operating-system-images.1f9bd42c5fc6150e193fab3d6b604c1295752a28.zh-cn.xlf)
@@ -6568,7 +6607,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='c9507f92a36971491d86f63f4436359dce2be4ac489'></a> Source: [sccm\osd\get-started\manage-boot-images.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/get-started/manage-boot-images.md)
+##### <a name='c9507f92a36971491d86f63f4436359dce2be4ac492'></a> Source: [sccm\osd\get-started\manage-boot-images.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/get-started/manage-boot-images.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [manage-boot-images.78ff74fa5fb057b64952220c022d9bc44057bffe.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/manage-boot-images.78ff74fa5fb057b64952220c022d9bc44057bffe.zh-cn.xlf)
@@ -6580,7 +6619,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='b152127d3abe4b916f6c32cb2ce0cc6cf8b3050d490'></a> Source: [sccm\osd\get-started\manage-drivers.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/get-started/manage-drivers.md)
+##### <a name='b152127d3abe4b916f6c32cb2ce0cc6cf8b3050d493'></a> Source: [sccm\osd\get-started\manage-drivers.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/get-started/manage-drivers.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [manage-drivers.7ab44e6b70126a898e0f87e2acf60e4834bb0214.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/manage-drivers.7ab44e6b70126a898e0f87e2acf60e4834bb0214.zh-cn.xlf)
@@ -6592,7 +6631,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='f250186a5b55a6684bbe7ef640f56e6dc3d81b72491'></a> Source: [sccm\osd\get-started\manage-operating-system-images.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/get-started/manage-operating-system-images.md)
+##### <a name='f250186a5b55a6684bbe7ef640f56e6dc3d81b72494'></a> Source: [sccm\osd\get-started\manage-operating-system-images.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/get-started/manage-operating-system-images.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [manage-operating-system-images.e054ac6bd467c964624de052c2f5daee2c5715ef.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/manage-operating-system-images.e054ac6bd467c964624de052c2f5daee2c5715ef.zh-cn.xlf)
@@ -6604,7 +6643,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='9c5cfd1af0909185e4115f8f8e2ba62ce6421b49492'></a> Source: [sccm\osd\get-started\manage-operating-system-upgrade-packages.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/get-started/manage-operating-system-upgrade-packages.md)
+##### <a name='9c5cfd1af0909185e4115f8f8e2ba62ce6421b49495'></a> Source: [sccm\osd\get-started\manage-operating-system-upgrade-packages.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/get-started/manage-operating-system-upgrade-packages.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [manage-operating-system-upgrade-packages.ccf44139f6fdda17d54aeb09b3f345019ac46d9c.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/manage-operating-system-upgrade-packages.ccf44139f6fdda17d54aeb09b3f345019ac46d9c.zh-cn.xlf)
@@ -6616,7 +6655,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='f4a12c54a0c93751be848ea68d03363369212109493'></a> Source: [sccm\osd\get-started\manage-user-state.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/get-started/manage-user-state.md)
+##### <a name='f4a12c54a0c93751be848ea68d03363369212109496'></a> Source: [sccm\osd\get-started\manage-user-state.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/get-started/manage-user-state.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [manage-user-state.901617dc7551cf2311f767306d1d9cba5f442afc.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/manage-user-state.901617dc7551cf2311f767306d1d9cba5f442afc.zh-cn.xlf)
@@ -6628,7 +6667,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='2d7b25f320a8099bf3b96e80858247b93f16cc7f494'></a> Source: [sccm\osd\get-started\prepare-for-operating-system-deployment.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/get-started/prepare-for-operating-system-deployment.md)
+##### <a name='2d7b25f320a8099bf3b96e80858247b93f16cc7f497'></a> Source: [sccm\osd\get-started\prepare-for-operating-system-deployment.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/get-started/prepare-for-operating-system-deployment.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [prepare-for-operating-system-deployment.52b9b280e9e4280bae355e42c7e5d70ab1171259.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/prepare-for-operating-system-deployment.52b9b280e9e4280bae355e42c7e5d70ab1171259.zh-cn.xlf)
@@ -6640,7 +6679,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='04596cf7c1e085b179deeddec5c121158bff5f6c495'></a> Source: [sccm\osd\get-started\prepare-for-unknown-computer-deployments.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/get-started/prepare-for-unknown-computer-deployments.md)
+##### <a name='04596cf7c1e085b179deeddec5c121158bff5f6c498'></a> Source: [sccm\osd\get-started\prepare-for-unknown-computer-deployments.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/get-started/prepare-for-unknown-computer-deployments.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [prepare-for-unknown-computer-deployments.5013a9ca54479581f852902c4a60136fa900ad1f.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/prepare-for-unknown-computer-deployments.5013a9ca54479581f852902c4a60136fa900ad1f.zh-cn.xlf)
@@ -6652,7 +6691,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='439045b36808188d02f6d79bff32144528c2118e496'></a> Source: [sccm\osd\get-started\prepare-site-system-roles-for-operating-system-deployments.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/get-started/prepare-site-system-roles-for-operating-system-deployments.md)
+##### <a name='439045b36808188d02f6d79bff32144528c2118e499'></a> Source: [sccm\osd\get-started\prepare-site-system-roles-for-operating-system-deployments.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/get-started/prepare-site-system-roles-for-operating-system-deployments.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [prepare-site-system-roles-for-operating-system-deployments.a37dd4dba52038c9c04d6242755c03550c104080.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/prepare-site-system-roles-for-operating-system-deployments.a37dd4dba52038c9c04d6242755c03550c104080.zh-cn.xlf)
@@ -6664,7 +6703,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='4667ecf187c327cb0596e603eefe618b7df23df7497'></a> Source: [sccm\osd\get-started\prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md)
+##### <a name='4667ecf187c327cb0596e603eefe618b7df23df7500'></a> Source: [sccm\osd\get-started\prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [prepare-windows-pe-peer-cache-to-reduce-wan-traffic.ab14dbd66de1a785896467b520eea517fa16c771.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.ab14dbd66de1a785896467b520eea517fa16c771.zh-cn.xlf)
@@ -6676,7 +6715,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='1cac2f4a15cbad2b40b06988a1f3c436771a2064498'></a> Source: [sccm\osd\plan-design\infrastructure-requirements-for-operating-system-deployment.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment.md)
+##### <a name='1cac2f4a15cbad2b40b06988a1f3c436771a2064501'></a> Source: [sccm\osd\plan-design\infrastructure-requirements-for-operating-system-deployment.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [infrastructure-requirements-for-operating-system-deployment.42cdbd9a034266a78404809a34a5a65fec1cac96.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/infrastructure-requirements-for-operating-system-deployment.42cdbd9a034266a78404809a34a5a65fec1cac96.zh-cn.xlf)
@@ -6688,7 +6727,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='a88496cca153367fdf2432e08ff79674eb8dc9e7499'></a> Source: [sccm\osd\plan-design\planning-considerations-for-automating-tasks.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/plan-design/planning-considerations-for-automating-tasks.md)
+##### <a name='a88496cca153367fdf2432e08ff79674eb8dc9e7502'></a> Source: [sccm\osd\plan-design\planning-considerations-for-automating-tasks.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/plan-design/planning-considerations-for-automating-tasks.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [planning-considerations-for-automating-tasks.888fd73f1b5cfc08e7a68a8083189a908ce12457.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/planning-considerations-for-automating-tasks.888fd73f1b5cfc08e7a68a8083189a908ce12457.zh-cn.xlf)
@@ -6700,7 +6739,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='982ee969a476fd65395fb39a3039c77023ede573500'></a> Source: [sccm\osd\plan-design\planning-for-operating-system-deployment-interoperability.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/plan-design/planning-for-operating-system-deployment-interoperability.md)
+##### <a name='982ee969a476fd65395fb39a3039c77023ede573503'></a> Source: [sccm\osd\plan-design\planning-for-operating-system-deployment-interoperability.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/plan-design/planning-for-operating-system-deployment-interoperability.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [planning-for-operating-system-deployment-interoperability.9b68b29abd0eddccc0e9d4dacf1d657d1d17f33a.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/planning-for-operating-system-deployment-interoperability.9b68b29abd0eddccc0e9d4dacf1d657d1d17f33a.zh-cn.xlf)
@@ -6712,7 +6751,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='f5754b81eb1c1acdcc4d6b8080f4f76e38f70407501'></a> Source: [sccm\osd\plan-design\security-and-privacy-for-operating-system-deployment.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/plan-design/security-and-privacy-for-operating-system-deployment.md)
+##### <a name='f5754b81eb1c1acdcc4d6b8080f4f76e38f70407504'></a> Source: [sccm\osd\plan-design\security-and-privacy-for-operating-system-deployment.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/plan-design/security-and-privacy-for-operating-system-deployment.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [security-and-privacy-for-operating-system-deployment.01a31f8676009576a4ce7f2b59335ca26f7824fa.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/security-and-privacy-for-operating-system-deployment.01a31f8676009576a4ce7f2b59335ca26f7824fa.zh-cn.xlf)
@@ -6724,7 +6763,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='6c8357f8298d7b9ada271f31d6a57a589386243f502'></a> Source: [sccm\osd\TOC.md](https://github.com/Microsoft/SCCMDocs-pr/blob/688c35c5c4641d2b0114efcc995e88f9d78b719e/sccm/osd/TOC.md)
+##### <a name='6c8357f8298d7b9ada271f31d6a57a589386243f505'></a> Source: [sccm\osd\TOC.md](https://github.com/Microsoft/SCCMDocs-pr/blob/688c35c5c4641d2b0114efcc995e88f9d78b719e/sccm/osd/TOC.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [TOC.8e3d18499edb24ee13270aa5548da26be1e7eee5.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/TOC.8e3d18499edb24ee13270aa5548da26be1e7eee5.zh-cn.xlf)
@@ -6736,7 +6775,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='863ff4fc0d1fa8a7fea491d12e831a2fcc0dbc4f503'></a> Source: [sccm\osd\understand\introduction-to-operating-system-deployment.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/understand/introduction-to-operating-system-deployment.md)
+##### <a name='863ff4fc0d1fa8a7fea491d12e831a2fcc0dbc4f506'></a> Source: [sccm\osd\understand\introduction-to-operating-system-deployment.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/understand/introduction-to-operating-system-deployment.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [introduction-to-operating-system-deployment.6ae0671469c44ce1b3f632ae295641f3614fa155.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/introduction-to-operating-system-deployment.6ae0671469c44ce1b3f632ae295641f3614fa155.zh-cn.xlf)
@@ -6748,7 +6787,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='0d401eaccf568b41c85b532e1ce9640eb3e7ca02504'></a> Source: [sccm\osd\understand\prestart-commands-for-task-sequence-media.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/understand/prestart-commands-for-task-sequence-media.md)
+##### <a name='0d401eaccf568b41c85b532e1ce9640eb3e7ca02507'></a> Source: [sccm\osd\understand\prestart-commands-for-task-sequence-media.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/understand/prestart-commands-for-task-sequence-media.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [prestart-commands-for-task-sequence-media.07fa5f5c22bf2448f3c7ff281d60b0185262dfd6.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/prestart-commands-for-task-sequence-media.07fa5f5c22bf2448f3c7ff281d60b0185262dfd6.zh-cn.xlf)
@@ -6760,7 +6799,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='948c7ee96e448369b786c587f8663a404df315c8505'></a> Source: [sccm\osd\understand\task-sequence-action-variables.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/understand/task-sequence-action-variables.md)
+##### <a name='948c7ee96e448369b786c587f8663a404df315c8508'></a> Source: [sccm\osd\understand\task-sequence-action-variables.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/understand/task-sequence-action-variables.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [task-sequence-action-variables.751011105162289312e8067c844bbd06f7731a51.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/task-sequence-action-variables.751011105162289312e8067c844bbd06f7731a51.zh-cn.xlf)
@@ -6772,7 +6811,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='9327544c5c7022a1c2d910182ec686c7f64546d9506'></a> Source: [sccm\osd\understand\task-sequence-built-in-variables.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/understand/task-sequence-built-in-variables.md)
+##### <a name='9327544c5c7022a1c2d910182ec686c7f64546d9509'></a> Source: [sccm\osd\understand\task-sequence-built-in-variables.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/understand/task-sequence-built-in-variables.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [task-sequence-built-in-variables.a6df5bd2ad16cf20a33f5d4b4b6c9f2afd4acff0.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/task-sequence-built-in-variables.a6df5bd2ad16cf20a33f5d4b4b6c9f2afd4acff0.zh-cn.xlf)
@@ -6784,7 +6823,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='9d63f1dbb3b17fdf3731440266f6678329e2ff8d507'></a> Source: [sccm\osd\understand\task-sequence-steps.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/understand/task-sequence-steps.md)
+##### <a name='9d63f1dbb3b17fdf3731440266f6678329e2ff8d510'></a> Source: [sccm\osd\understand\task-sequence-steps.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/osd/understand/task-sequence-steps.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [task-sequence-steps.7ad30d33186e5d087080b2bb6a4ca0811f721673.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/task-sequence-steps.7ad30d33186e5d087080b2bb6a4ca0811f721673.zh-cn.xlf)
@@ -6796,7 +6835,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='ec876316a220d9ed49b11641c6beb1281c4f0004508'></a> Source: [sccm\protect\deploy-use\certificate-infrastructure.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/certificate-infrastructure.md)
+##### <a name='ec876316a220d9ed49b11641c6beb1281c4f0004511'></a> Source: [sccm\protect\deploy-use\certificate-infrastructure.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/certificate-infrastructure.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [certificate-infrastructure.e05f5e4d99224643bce29d8ed9773135f3233985.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/certificate-infrastructure.e05f5e4d99224643bce29d8ed9773135f3233985.zh-cn.xlf)
@@ -6808,7 +6847,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='56618b0359a710193cc1547d041c9a974f636481509'></a> Source: [sccm\protect\deploy-use\configure-endpoint-protection.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/configure-endpoint-protection.md)
+##### <a name='56618b0359a710193cc1547d041c9a974f636481512'></a> Source: [sccm\protect\deploy-use\configure-endpoint-protection.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/configure-endpoint-protection.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [configure-endpoint-protection.fb279d2ec3938f595f21cf71cd70d68fc108cce8.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/configure-endpoint-protection.fb279d2ec3938f595f21cf71cd70d68fc108cce8.zh-cn.xlf)
@@ -6820,7 +6859,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='9dc1ae41cc36a73fa440694a03f98497ec739cc2510'></a> Source: [sccm\protect\deploy-use\create-certificate-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/create-certificate-profiles.md)
+##### <a name='9dc1ae41cc36a73fa440694a03f98497ec739cc2513'></a> Source: [sccm\protect\deploy-use\create-certificate-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/create-certificate-profiles.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [create-certificate-profiles.1d9afe32d15e1532fb261efa1fdcb5fd8e6dcc87.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/create-certificate-profiles.1d9afe32d15e1532fb261efa1fdcb5fd8e6dcc87.zh-cn.xlf)
@@ -6832,7 +6871,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='bb91f4a711699790bb01f48d32183cf1215b1952511'></a> Source: [sccm\protect\deploy-use\create-compliance-policy.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/create-compliance-policy.md)
+##### <a name='bb91f4a711699790bb01f48d32183cf1215b1952514'></a> Source: [sccm\protect\deploy-use\create-compliance-policy.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/create-compliance-policy.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [create-compliance-policy.9ea9c1debf182095405f70e28f56c8770fe2acdf.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/create-compliance-policy.9ea9c1debf182095405f70e28f56c8770fe2acdf.zh-cn.xlf)
@@ -6844,7 +6883,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='d2f9f5e71a11b5eeb251a993bd4b701658308eee512'></a> Source: [sccm\protect\deploy-use\create-exchange-activesync-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/create-exchange-activesync-profiles.md)
+##### <a name='d2f9f5e71a11b5eeb251a993bd4b701658308eee515'></a> Source: [sccm\protect\deploy-use\create-exchange-activesync-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/create-exchange-activesync-profiles.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [create-exchange-activesync-profiles.eeec2f7b44c6eb1cb08ba89bc7c28eaf4c56f512.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/create-exchange-activesync-profiles.eeec2f7b44c6eb1cb08ba89bc7c28eaf4c56f512.zh-cn.xlf)
@@ -6856,7 +6895,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='cdbdce183ff7137d524a873fc67aff431647ced3513'></a> Source: [sccm\protect\deploy-use\create-pfx-certificate-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/create-pfx-certificate-profiles.md)
+##### <a name='cdbdce183ff7137d524a873fc67aff431647ced3516'></a> Source: [sccm\protect\deploy-use\create-pfx-certificate-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/create-pfx-certificate-profiles.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [create-pfx-certificate-profiles.cd650f1881863ca7722dd92e26fd2b435fecff45.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/create-pfx-certificate-profiles.cd650f1881863ca7722dd92e26fd2b435fecff45.zh-cn.xlf)
@@ -6868,7 +6907,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='4e9d5217bd06b68073aae9f9d9c79bd634d880cd514'></a> Source: [sccm\protect\deploy-use\create-vpn-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/create-vpn-profiles.md)
+##### <a name='4e9d5217bd06b68073aae9f9d9c79bd634d880cd517'></a> Source: [sccm\protect\deploy-use\create-vpn-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/create-vpn-profiles.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [create-vpn-profiles.075050a146452cd130df5a75e65e9b0fde2e9c40.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/create-vpn-profiles.075050a146452cd130df5a75e65e9b0fde2e9c40.zh-cn.xlf)
@@ -6880,7 +6919,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='a6fcc2360c52cdc7fbe25a3718e24f2e5c1169d0515'></a> Source: [sccm\protect\deploy-use\create-wifi-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/create-wifi-profiles.md)
+##### <a name='a6fcc2360c52cdc7fbe25a3718e24f2e5c1169d0518'></a> Source: [sccm\protect\deploy-use\create-wifi-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/create-wifi-profiles.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [create-wifi-profiles.7cf738947d1871386a708040418d8cab71cf0923.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/create-wifi-profiles.7cf738947d1871386a708040418d8cab71cf0923.zh-cn.xlf)
@@ -6892,7 +6931,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='13c7ed55f78f9a210e328a27fa76f245bf8edb6e516'></a> Source: [sccm\protect\deploy-use\create-windows-firewall-policies.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/create-windows-firewall-policies.md)
+##### <a name='13c7ed55f78f9a210e328a27fa76f245bf8edb6e519'></a> Source: [sccm\protect\deploy-use\create-windows-firewall-policies.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/create-windows-firewall-policies.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [create-windows-firewall-policies.853601d5292ab776a454730643c07c49a0617772.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/create-windows-firewall-policies.853601d5292ab776a454730643c07c49a0617772.zh-cn.xlf)
@@ -6904,7 +6943,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='1979f1b01f2f94b201e0d96e8587af9a8a121000517'></a> Source: [sccm\protect\deploy-use\cryptographic-controls-technical-reference.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/cryptographic-controls-technical-reference.md)
+##### <a name='1979f1b01f2f94b201e0d96e8587af9a8a121000520'></a> Source: [sccm\protect\deploy-use\cryptographic-controls-technical-reference.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/cryptographic-controls-technical-reference.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [cryptographic-controls-technical-reference.aea529d3d05120b1c11408e601eb52232d8d03c6.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/cryptographic-controls-technical-reference.aea529d3d05120b1c11408e601eb52232d8d03c6.zh-cn.xlf)
@@ -6916,7 +6955,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='edebb67123cccd22ea43d3bc608afb64a4976a3e518'></a> Source: [sccm\protect\deploy-use\deploy-wifi-vpn-email-cert-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/deploy-wifi-vpn-email-cert-profiles.md)
+##### <a name='edebb67123cccd22ea43d3bc608afb64a4976a3e521'></a> Source: [sccm\protect\deploy-use\deploy-wifi-vpn-email-cert-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/deploy-wifi-vpn-email-cert-profiles.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [deploy-wifi-vpn-email-cert-profiles.43cac5468e2fa258bc3ddc22e6b7d721469752d0.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/deploy-wifi-vpn-email-cert-profiles.43cac5468e2fa258bc3ddc22e6b7d721469752d0.zh-cn.xlf)
@@ -6928,7 +6967,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='d461f95f875632860238d503d7acd7ab8c320d58519'></a> Source: [sccm\protect\deploy-use\device-compliance-policies.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/device-compliance-policies.md)
+##### <a name='d461f95f875632860238d503d7acd7ab8c320d58522'></a> Source: [sccm\protect\deploy-use\device-compliance-policies.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/device-compliance-policies.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [device-compliance-policies.76caf74ed46d3fb4f82be3392acd7138f5ddeee9.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/device-compliance-policies.76caf74ed46d3fb4f82be3392acd7138f5ddeee9.zh-cn.xlf)
@@ -6940,7 +6979,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='002b68ec1f8a37bdbb77b5ba4be7b0dcea3f3f7c520'></a> Source: [sccm\protect\deploy-use\endpoint-antimalware-firewall.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-antimalware-firewall.md)
+##### <a name='002b68ec1f8a37bdbb77b5ba4be7b0dcea3f3f7c523'></a> Source: [sccm\protect\deploy-use\endpoint-antimalware-firewall.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-antimalware-firewall.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [endpoint-antimalware-firewall.931912973ac5402cde01bf81e2c4f621250601ff.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/endpoint-antimalware-firewall.931912973ac5402cde01bf81e2c4f621250601ff.zh-cn.xlf)
@@ -6952,7 +6991,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='f211a26e578b64fb0699d8895d7e875005389507521'></a> Source: [sccm\protect\deploy-use\endpoint-antimalware-policies.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-antimalware-policies.md)
+##### <a name='f211a26e578b64fb0699d8895d7e875005389507524'></a> Source: [sccm\protect\deploy-use\endpoint-antimalware-policies.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-antimalware-policies.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [endpoint-antimalware-policies.2467f1e64edfb6f5707a677f81a5d6315064e9b1.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/endpoint-antimalware-policies.2467f1e64edfb6f5707a677f81a5d6315064e9b1.zh-cn.xlf)
@@ -6964,7 +7003,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='ee76dc26c92d2390fd366372be9fb1debaf391b0522'></a> Source: [sccm\protect\deploy-use\endpoint-configure-alerts.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-configure-alerts.md)
+##### <a name='ee76dc26c92d2390fd366372be9fb1debaf391b0525'></a> Source: [sccm\protect\deploy-use\endpoint-configure-alerts.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-configure-alerts.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [endpoint-configure-alerts.e0b847a4f0b6e00bfcc45157f6d2a7546da7f4c9.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/endpoint-configure-alerts.e0b847a4f0b6e00bfcc45157f6d2a7546da7f4c9.zh-cn.xlf)
@@ -6976,7 +7015,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='40543ccdbbc02a9f11309064ea018ec9402474b5524'></a> Source: [sccm\protect\deploy-use\endpoint-definitions-configmgr.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-definitions-configmgr.md)
+##### <a name='40543ccdbbc02a9f11309064ea018ec9402474b5527'></a> Source: [sccm\protect\deploy-use\endpoint-definitions-configmgr.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-definitions-configmgr.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [endpoint-definitions-configmgr.6d438595eee9fa04177834ac953612d5dae68674.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/endpoint-definitions-configmgr.6d438595eee9fa04177834ac953612d5dae68674.zh-cn.xlf)
@@ -6988,7 +7027,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='cf0a69692525f0b32699cabe5bca23ff5ef9797c525'></a> Source: [sccm\protect\deploy-use\endpoint-definitions-microsoft-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-definitions-microsoft-updates.md)
+##### <a name='cf0a69692525f0b32699cabe5bca23ff5ef9797c528'></a> Source: [sccm\protect\deploy-use\endpoint-definitions-microsoft-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-definitions-microsoft-updates.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [endpoint-definitions-microsoft-updates.f4aea77c614a32524b7714c9aff3a0c83ef868a8.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/endpoint-definitions-microsoft-updates.f4aea77c614a32524b7714c9aff3a0c83ef868a8.zh-cn.xlf)
@@ -7000,7 +7039,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='7d407cc585d7567ad4c7e3ab4650b17fbd9c3370526'></a> Source: [sccm\protect\deploy-use\endpoint-definitions-network.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-definitions-network.md)
+##### <a name='7d407cc585d7567ad4c7e3ab4650b17fbd9c3370529'></a> Source: [sccm\protect\deploy-use\endpoint-definitions-network.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-definitions-network.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [endpoint-definitions-network.ae487c9c2bf0b09172b7ec9dcea2d14f7158e9bf.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/endpoint-definitions-network.ae487c9c2bf0b09172b7ec9dcea2d14f7158e9bf.zh-cn.xlf)
@@ -7012,7 +7051,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='fa5abe78fd92beefdc134cd3fa661b8884bea3f1527'></a> Source: [sccm\protect\deploy-use\endpoint-definitions-protection-center.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-definitions-protection-center.md)
+##### <a name='fa5abe78fd92beefdc134cd3fa661b8884bea3f1530'></a> Source: [sccm\protect\deploy-use\endpoint-definitions-protection-center.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-definitions-protection-center.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [endpoint-definitions-protection-center.d94d0f0d90ac8b7a17f8408f3bb9d38b24a72a2e.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/endpoint-definitions-protection-center.d94d0f0d90ac8b7a17f8408f3bb9d38b24a72a2e.zh-cn.xlf)
@@ -7024,7 +7063,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='59ecc54944a2a1517789822581bf07b39153de39528'></a> Source: [sccm\protect\deploy-use\endpoint-definitions-wsus.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-definitions-wsus.md)
+##### <a name='59ecc54944a2a1517789822581bf07b39153de39531'></a> Source: [sccm\protect\deploy-use\endpoint-definitions-wsus.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-definitions-wsus.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [endpoint-definitions-wsus.115f5f0c388c130892c0720fa572f189017c225a.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/endpoint-definitions-wsus.115f5f0c388c130892c0720fa572f189017c225a.zh-cn.xlf)
@@ -7036,7 +7075,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='5fc418a2cd9fc13e7626b779a8cc303e096c1409523'></a> Source: [sccm\protect\deploy-use\endpoint-definition-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-definition-updates.md)
+##### <a name='5fc418a2cd9fc13e7626b779a8cc303e096c1409526'></a> Source: [sccm\protect\deploy-use\endpoint-definition-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-definition-updates.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [endpoint-definition-updates.04ea88a2aa76399de9a2f0a00fb38273241f0a1e.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/endpoint-definition-updates.04ea88a2aa76399de9a2f0a00fb38273241f0a1e.zh-cn.xlf)
@@ -7048,7 +7087,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='a17994dca24003c58d582df4e7b8c923fa028186534'></a> Source: [sccm\protect\deploy-use\endpoint-protection.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-protection.md)
+##### <a name='a17994dca24003c58d582df4e7b8c923fa028186537'></a> Source: [sccm\protect\deploy-use\endpoint-protection.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-protection.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [endpoint-protection.c8bd28b08f714400e8ec887daa13676c65ab8611.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/endpoint-protection.c8bd28b08f714400e8ec887daa13676c65ab8611.zh-cn.xlf)
@@ -7060,7 +7099,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='76a7d018747ca6bd112b51f8f67c298416ea784e529'></a> Source: [sccm\protect\deploy-use\endpoint-protection-client-faq.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-protection-client-faq.md)
+##### <a name='76a7d018747ca6bd112b51f8f67c298416ea784e532'></a> Source: [sccm\protect\deploy-use\endpoint-protection-client-faq.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-protection-client-faq.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [endpoint-protection-client-faq.06790b1369361668c2ac5dd4fbf38c83ebf4c5c8.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/endpoint-protection-client-faq.06790b1369361668c2ac5dd4fbf38c83ebf4c5c8.zh-cn.xlf)
@@ -7072,7 +7111,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='94f2a321c76e046dd039d8fd80532f93325d2d1a530'></a> Source: [sccm\protect\deploy-use\endpoint-protection-client-help.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-protection-client-help.md)
+##### <a name='94f2a321c76e046dd039d8fd80532f93325d2d1a533'></a> Source: [sccm\protect\deploy-use\endpoint-protection-client-help.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-protection-client-help.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [endpoint-protection-client-help.bf7551b76ab2735a1db9eac6a20f050ec9ff0121.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/endpoint-protection-client-help.bf7551b76ab2735a1db9eac6a20f050ec9ff0121.zh-cn.xlf)
@@ -7084,7 +7123,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='1fdd8f2f97b669cea5351787ef34c96f78ade124532'></a> Source: [sccm\protect\deploy-use\endpoint-protection-configure.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-protection-configure.md)
+##### <a name='1fdd8f2f97b669cea5351787ef34c96f78ade124535'></a> Source: [sccm\protect\deploy-use\endpoint-protection-configure.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-protection-configure.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [endpoint-protection-configure.a907c95dc1120af587869c3dfed2705951cd1fb5.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/endpoint-protection-configure.a907c95dc1120af587869c3dfed2705951cd1fb5.zh-cn.xlf)
@@ -7096,7 +7135,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='8056f1dbb0d7b79702eb4146b6742a9a1ab5f8bd531'></a> Source: [sccm\protect\deploy-use\endpoint-protection-configure-client.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-protection-configure-client.md)
+##### <a name='8056f1dbb0d7b79702eb4146b6742a9a1ab5f8bd534'></a> Source: [sccm\protect\deploy-use\endpoint-protection-configure-client.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-protection-configure-client.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [endpoint-protection-configure-client.54685bc670926ee17d87272395151d5c8d914839.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/endpoint-protection-configure-client.54685bc670926ee17d87272395151d5c8d914839.zh-cn.xlf)
@@ -7108,7 +7147,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='c2e457d14b018052c70e52a1cd285dd137928b62533'></a> Source: [sccm\protect\deploy-use\endpoint-protection-site-role.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-protection-site-role.md)
+##### <a name='c2e457d14b018052c70e52a1cd285dd137928b62536'></a> Source: [sccm\protect\deploy-use\endpoint-protection-site-role.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/endpoint-protection-site-role.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [endpoint-protection-site-role.f1ab515074b08c68b5aba56043332779ba79e818.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/endpoint-protection-site-role.f1ab515074b08c68b5aba56043332779ba79e818.zh-cn.xlf)
@@ -7120,7 +7159,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='a840b67e9557be874ead821b91434be9b658ce1e535'></a> Source: [sccm\protect\deploy-use\find-a-pfn-for-per-app-vpn.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/find-a-pfn-for-per-app-vpn.md)
+##### <a name='a840b67e9557be874ead821b91434be9b658ce1e538'></a> Source: [sccm\protect\deploy-use\find-a-pfn-for-per-app-vpn.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/find-a-pfn-for-per-app-vpn.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [find-a-pfn-for-per-app-vpn.d2b2eaef2eaed0c88e4d58fba2ed5a0e84abaf0f.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/find-a-pfn-for-per-app-vpn.d2b2eaef2eaed0c88e4d58fba2ed5a0e84abaf0f.zh-cn.xlf)
@@ -7132,7 +7171,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='6ebaef8322173fd22c6251a02e1ff3232bf83e71536'></a> Source: [sccm\protect\deploy-use\introduction-to-certificate-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/introduction-to-certificate-profiles.md)
+##### <a name='6ebaef8322173fd22c6251a02e1ff3232bf83e71539'></a> Source: [sccm\protect\deploy-use\introduction-to-certificate-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/introduction-to-certificate-profiles.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [introduction-to-certificate-profiles.644958c2adbcd8964528a596c1ad274dfa99523e.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/introduction-to-certificate-profiles.644958c2adbcd8964528a596c1ad274dfa99523e.zh-cn.xlf)
@@ -7144,7 +7183,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='c6e8c2fab7d5d7056d25e004527a52449ce3f778537'></a> Source: [sccm\protect\deploy-use\introduction-to-email-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/introduction-to-email-profiles.md)
+##### <a name='c6e8c2fab7d5d7056d25e004527a52449ce3f778540'></a> Source: [sccm\protect\deploy-use\introduction-to-email-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/introduction-to-email-profiles.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [introduction-to-email-profiles.dbea7220d172f7f87bf031a61aa9a116a904416e.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/introduction-to-email-profiles.dbea7220d172f7f87bf031a61aa9a116a904416e.zh-cn.xlf)
@@ -7156,7 +7195,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='3f5010c04fb8db2fafb2939431f97e2d0554b383538'></a> Source: [sccm\protect\deploy-use\introduction-to-wifi-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/introduction-to-wifi-profiles.md)
+##### <a name='3f5010c04fb8db2fafb2939431f97e2d0554b383541'></a> Source: [sccm\protect\deploy-use\introduction-to-wifi-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/introduction-to-wifi-profiles.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [introduction-to-wifi-profiles.306b694d59e75663a75315050028338d61249486.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/introduction-to-wifi-profiles.306b694d59e75663a75315050028338d61249486.zh-cn.xlf)
@@ -7168,7 +7207,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='c475c560971ab73e8be7671164a010a91bd3f229539'></a> Source: [sccm\protect\deploy-use\manage-access-to-o365-services-for-pcs-managed-by-sccm.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)
+##### <a name='c475c560971ab73e8be7671164a010a91bd3f229542'></a> Source: [sccm\protect\deploy-use\manage-access-to-o365-services-for-pcs-managed-by-sccm.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [manage-access-to-o365-services-for-pcs-managed-by-sccm.015c22416e05639c1cd10e97aee2dfa43f1cb84c.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/manage-access-to-o365-services-for-pcs-managed-by-sccm.015c22416e05639c1cd10e97aee2dfa43f1cb84c.zh-cn.xlf)
@@ -7180,7 +7219,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='2dad04cb429ac854b5455c2af051f6f7caaadd66540'></a> Source: [sccm\protect\deploy-use\manage-access-to-services.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/manage-access-to-services.md)
+##### <a name='2dad04cb429ac854b5455c2af051f6f7caaadd66543'></a> Source: [sccm\protect\deploy-use\manage-access-to-services.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/manage-access-to-services.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [manage-access-to-services.6b0ba7dea0cab0b6f2c0b6c90060b79833e87751.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/manage-access-to-services.6b0ba7dea0cab0b6f2c0b6c90060b79833e87751.zh-cn.xlf)
@@ -7192,7 +7231,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='61409cf78bef3991d096c5c9615ff667aca9cb43541'></a> Source: [sccm\protect\deploy-use\manage-dynamics-crm-online-access.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/manage-dynamics-crm-online-access.md)
+##### <a name='61409cf78bef3991d096c5c9615ff667aca9cb43544'></a> Source: [sccm\protect\deploy-use\manage-dynamics-crm-online-access.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/manage-dynamics-crm-online-access.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [manage-dynamics-crm-online-access.777d8ade1a5a32058f7afc2c4d3567198f716789.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/manage-dynamics-crm-online-access.777d8ade1a5a32058f7afc2c4d3567198f716789.zh-cn.xlf)
@@ -7204,7 +7243,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='c1797910f2b7ceda451c2ccb23f66a4b2bd4b6ff542'></a> Source: [sccm\protect\deploy-use\manage-email-access.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/manage-email-access.md)
+##### <a name='c1797910f2b7ceda451c2ccb23f66a4b2bd4b6ff545'></a> Source: [sccm\protect\deploy-use\manage-email-access.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/manage-email-access.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [manage-email-access.34d3be04cba465f81089bae7324761070da1e57d.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/manage-email-access.34d3be04cba465f81089bae7324761070da1e57d.zh-cn.xlf)
@@ -7216,7 +7255,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='84fdd9c1141c7bee5e331eacb136d9dc21837c0f543'></a> Source: [sccm\protect\deploy-use\manage-sharepoint-online-access.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/manage-sharepoint-online-access.md)
+##### <a name='84fdd9c1141c7bee5e331eacb136d9dc21837c0f546'></a> Source: [sccm\protect\deploy-use\manage-sharepoint-online-access.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/manage-sharepoint-online-access.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [manage-sharepoint-online-access.965355d926126cf19c3cb04c9f3da6521c144d20.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/manage-sharepoint-online-access.965355d926126cf19c3cb04c9f3da6521c144d20.zh-cn.xlf)
@@ -7228,7 +7267,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='a8d0655909c85eb53c2d1eb513586f9733236359544'></a> Source: [sccm\protect\deploy-use\manage-skype-for-business-online-access.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/manage-skype-for-business-online-access.md)
+##### <a name='a8d0655909c85eb53c2d1eb513586f9733236359547'></a> Source: [sccm\protect\deploy-use\manage-skype-for-business-online-access.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/manage-skype-for-business-online-access.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [manage-skype-for-business-online-access.b24a98519a00a43c767398e1baf5e49bf5da413b.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/manage-skype-for-business-online-access.b24a98519a00a43c767398e1baf5e49bf5da413b.zh-cn.xlf)
@@ -7240,7 +7279,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='1e4f7a68801e0c00377c3e96a0bf080cf89a3d62545'></a> Source: [sccm\protect\deploy-use\monitor-certificate-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/monitor-certificate-profiles.md)
+##### <a name='1e4f7a68801e0c00377c3e96a0bf080cf89a3d62548'></a> Source: [sccm\protect\deploy-use\monitor-certificate-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/monitor-certificate-profiles.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [monitor-certificate-profiles.2cd3aa3d770dd1d06a57a35169fef76c92116b08.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/monitor-certificate-profiles.2cd3aa3d770dd1d06a57a35169fef76c92116b08.zh-cn.xlf)
@@ -7252,7 +7291,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='8893485e885901cc8af3d44d02064610f542e193546'></a> Source: [sccm\protect\deploy-use\monitor-endpoint-protection.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/monitor-endpoint-protection.md)
+##### <a name='8893485e885901cc8af3d44d02064610f542e193549'></a> Source: [sccm\protect\deploy-use\monitor-endpoint-protection.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/monitor-endpoint-protection.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [monitor-endpoint-protection.a2fb01452c56cd9cfa4e21f277cbcdbe5c7d18d9.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/monitor-endpoint-protection.a2fb01452c56cd9cfa4e21f277cbcdbe5c7d18d9.zh-cn.xlf)
@@ -7264,7 +7303,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='cd9d492202dc2a70348bc54b58fa942d8be7002e547'></a> Source: [sccm\protect\deploy-use\monitor-wifi-email-vpn-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/monitor-wifi-email-vpn-profiles.md)
+##### <a name='cd9d492202dc2a70348bc54b58fa942d8be7002e550'></a> Source: [sccm\protect\deploy-use\monitor-wifi-email-vpn-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/monitor-wifi-email-vpn-profiles.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [monitor-wifi-email-vpn-profiles.5f6dd4d24dc27891b571e599009d2f6738acf197.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/monitor-wifi-email-vpn-profiles.5f6dd4d24dc27891b571e599009d2f6738acf197.zh-cn.xlf)
@@ -7276,7 +7315,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='33f47079c1c0aebbffcb2c6ff9d5abacf033ec12548'></a> Source: [sccm\protect\deploy-use\scenarios-endpoint-protection.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/scenarios-endpoint-protection.md)
+##### <a name='33f47079c1c0aebbffcb2c6ff9d5abacf033ec12551'></a> Source: [sccm\protect\deploy-use\scenarios-endpoint-protection.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/scenarios-endpoint-protection.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [scenarios-endpoint-protection.04814d23ad2c63fef0e04ec8398f0bf50036c711.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/scenarios-endpoint-protection.04814d23ad2c63fef0e04ec8398f0bf50036c711.zh-cn.xlf)
@@ -7288,7 +7327,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='3d07f4c4a8124eb70cd18a77d11aff49d03a3424549'></a> Source: [sccm\protect\deploy-use\troubleshoot-endpoint-client.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/troubleshoot-endpoint-client.md)
+##### <a name='3d07f4c4a8124eb70cd18a77d11aff49d03a3424552'></a> Source: [sccm\protect\deploy-use\troubleshoot-endpoint-client.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/troubleshoot-endpoint-client.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [troubleshoot-endpoint-client.df71ac4960fe844b036868889b868acf40246e73.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/troubleshoot-endpoint-client.df71ac4960fe844b036868889b868acf40246e73.zh-cn.xlf)
@@ -7300,7 +7339,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='e78f0e741c6d98cf54e55a2c175259ba9d7ce556550'></a> Source: [sccm\protect\deploy-use\vpn-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/vpn-profiles.md)
+##### <a name='e78f0e741c6d98cf54e55a2c175259ba9d7ce556553'></a> Source: [sccm\protect\deploy-use\vpn-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/vpn-profiles.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [vpn-profiles.3b4a5a2095ae488ffbe78b961ad1a06e634e0154.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/vpn-profiles.3b4a5a2095ae488ffbe78b961ad1a06e634e0154.zh-cn.xlf)
@@ -7312,7 +7351,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='f7e309a667a3c0bf25af32e636b86297c7ae002d551'></a> Source: [sccm\protect\deploy-use\windows-defender-advanced-threat-protection.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/windows-defender-advanced-threat-protection.md)
+##### <a name='f7e309a667a3c0bf25af32e636b86297c7ae002d554'></a> Source: [sccm\protect\deploy-use\windows-defender-advanced-threat-protection.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/windows-defender-advanced-threat-protection.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [windows-defender-advanced-threat-protection.e1010423dc22bc3ae700b7f98f43155487dae7b9.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/windows-defender-advanced-threat-protection.e1010423dc22bc3ae700b7f98f43155487dae7b9.zh-cn.xlf)
@@ -7324,7 +7363,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='f2a853d63407637d4e8ece5d46cd4f0dc717c3de552'></a> Source: [sccm\protect\deploy-use\windows-hello-for-business-settings.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/windows-hello-for-business-settings.md)
+##### <a name='f2a853d63407637d4e8ece5d46cd4f0dc717c3de555'></a> Source: [sccm\protect\deploy-use\windows-hello-for-business-settings.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/deploy-use/windows-hello-for-business-settings.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [windows-hello-for-business-settings.0e8adbade5e77ef3aa54c35067d9726600672827.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/windows-hello-for-business-settings.0e8adbade5e77ef3aa54c35067d9726600672827.zh-cn.xlf)
@@ -7336,7 +7375,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='4bbc76b5e6a221455bd9fefa3f9f1efee5b77c5d553'></a> Source: [sccm\protect\media\CA_compliance_report.png](https://github.com/Microsoft/SCCMDocs-pr/blob/1fac5d19e8b08f62b8ef46e7cbebc6f75e804a35/sccm/protect/media/CA_compliance_report.png)
+##### <a name='4bbc76b5e6a221455bd9fefa3f9f1efee5b77c5d556'></a> Source: [sccm\protect\media\CA_compliance_report.png](https://github.com/Microsoft/SCCMDocs-pr/blob/1fac5d19e8b08f62b8ef46e7cbebc6f75e804a35/sccm/protect/media/CA_compliance_report.png)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [4bbc76b5e6a221455bd9fefa3f9f1efee5b77c5d.png](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/5ffee00eab6197b21d5193c4ef1965a051fa64ea/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/4bbc76b5e6a221455bd9fefa3f9f1efee5b77c5d.png)
@@ -7349,7 +7388,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='a33cd943cfbed72c9b43fff77a4bf36b1f485502554'></a> Source: [sccm\protect\media\CA_Win10OSversion.png](https://github.com/Microsoft/SCCMDocs-pr/blob/1fac5d19e8b08f62b8ef46e7cbebc6f75e804a35/sccm/protect/media/CA_Win10OSversion.png)
+##### <a name='a33cd943cfbed72c9b43fff77a4bf36b1f485502557'></a> Source: [sccm\protect\media\CA_Win10OSversion.png](https://github.com/Microsoft/SCCMDocs-pr/blob/1fac5d19e8b08f62b8ef46e7cbebc6f75e804a35/sccm/protect/media/CA_Win10OSversion.png)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [a33cd943cfbed72c9b43fff77a4bf36b1f485502.png](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/5ffee00eab6197b21d5193c4ef1965a051fa64ea/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/a33cd943cfbed72c9b43fff77a4bf36b1f485502.png)
@@ -7362,7 +7401,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='cec44005d4b4571b36ae7282b89128029aa717bf559'></a> Source: [sccm\protect\media\ConditionalAccess_SFBFlow.png](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/ConditionalAccess_SFBFlow.png)
+##### <a name='cec44005d4b4571b36ae7282b89128029aa717bf562'></a> Source: [sccm\protect\media\ConditionalAccess_SFBFlow.png](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/ConditionalAccess_SFBFlow.png)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [cec44005d4b4571b36ae7282b89128029aa717bf.png](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/5ffee00eab6197b21d5193c4ef1965a051fa64ea/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/cec44005d4b4571b36ae7282b89128029aa717bf.png)
@@ -7375,7 +7414,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='8e11b2aa1e985e9c2b9013fae17c305466aea1c8560'></a> Source: [sccm\protect\media\ConditionalAccess_SFBPolicy.png](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/ConditionalAccess_SFBPolicy.png)
+##### <a name='8e11b2aa1e985e9c2b9013fae17c305466aea1c8563'></a> Source: [sccm\protect\media\ConditionalAccess_SFBPolicy.png](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/ConditionalAccess_SFBPolicy.png)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [8e11b2aa1e985e9c2b9013fae17c305466aea1c8.png](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/5ffee00eab6197b21d5193c4ef1965a051fa64ea/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/8e11b2aa1e985e9c2b9013fae17c305466aea1c8.png)
@@ -7388,7 +7427,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='f39d4bc54eaf9e57d461f92a5aeeccdeff9b0790555'></a> Source: [sccm\protect\media\ConditionalAccess4.png](https://github.com/Microsoft/SCCMDocs-pr/blob/1fac5d19e8b08f62b8ef46e7cbebc6f75e804a35/sccm/protect/media/ConditionalAccess4.png)
+##### <a name='f39d4bc54eaf9e57d461f92a5aeeccdeff9b0790558'></a> Source: [sccm\protect\media\ConditionalAccess4.png](https://github.com/Microsoft/SCCMDocs-pr/blob/1fac5d19e8b08f62b8ef46e7cbebc6f75e804a35/sccm/protect/media/ConditionalAccess4.png)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [f39d4bc54eaf9e57d461f92a5aeeccdeff9b0790.png](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/5ffee00eab6197b21d5193c4ef1965a051fa64ea/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/f39d4bc54eaf9e57d461f92a5aeeccdeff9b0790.png)
@@ -7401,7 +7440,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='495a0e184d5b0f7d60292dd23b38e57fdad93e87556'></a> Source: [sccm\protect\media\ConditionalAccess8-1.png](https://github.com/Microsoft/SCCMDocs-pr/blob/1fac5d19e8b08f62b8ef46e7cbebc6f75e804a35/sccm/protect/media/ConditionalAccess8-1.png)
+##### <a name='495a0e184d5b0f7d60292dd23b38e57fdad93e87559'></a> Source: [sccm\protect\media\ConditionalAccess8-1.png](https://github.com/Microsoft/SCCMDocs-pr/blob/1fac5d19e8b08f62b8ef46e7cbebc6f75e804a35/sccm/protect/media/ConditionalAccess8-1.png)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [495a0e184d5b0f7d60292dd23b38e57fdad93e87.png](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/5ffee00eab6197b21d5193c4ef1965a051fa64ea/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/495a0e184d5b0f7d60292dd23b38e57fdad93e87.png)
@@ -7414,7 +7453,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='1dde0f9c701974b72ef12e63ecc4ed76f84f053e557'></a> Source: [sccm\protect\media\ConditionalAccess8-2.png](https://github.com/Microsoft/SCCMDocs-pr/blob/1fac5d19e8b08f62b8ef46e7cbebc6f75e804a35/sccm/protect/media/ConditionalAccess8-2.png)
+##### <a name='1dde0f9c701974b72ef12e63ecc4ed76f84f053e560'></a> Source: [sccm\protect\media\ConditionalAccess8-2.png](https://github.com/Microsoft/SCCMDocs-pr/blob/1fac5d19e8b08f62b8ef46e7cbebc6f75e804a35/sccm/protect/media/ConditionalAccess8-2.png)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [1dde0f9c701974b72ef12e63ecc4ed76f84f053e.png](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/5ffee00eab6197b21d5193c4ef1965a051fa64ea/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/1dde0f9c701974b72ef12e63ecc4ed76f84f053e.png)
@@ -7427,7 +7466,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='4f3c1dba5f1026b42852909c0bcd8f6414523578558'></a> Source: [sccm\protect\media\ConditionalAccess8-6.png](https://github.com/Microsoft/SCCMDocs-pr/blob/1fac5d19e8b08f62b8ef46e7cbebc6f75e804a35/sccm/protect/media/ConditionalAccess8-6.png)
+##### <a name='4f3c1dba5f1026b42852909c0bcd8f6414523578561'></a> Source: [sccm\protect\media\ConditionalAccess8-6.png](https://github.com/Microsoft/SCCMDocs-pr/blob/1fac5d19e8b08f62b8ef46e7cbebc6f75e804a35/sccm/protect/media/ConditionalAccess8-6.png)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [4f3c1dba5f1026b42852909c0bcd8f6414523578.png](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/5ffee00eab6197b21d5193c4ef1965a051fa64ea/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/4f3c1dba5f1026b42852909c0bcd8f6414523578.png)
@@ -7440,7 +7479,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='46e5b00c04e59ca79796d4d1aa580bf8f6fd7050561'></a> Source: [sccm\protect\media\Endpoint-Protection-Workflow.gif](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/Endpoint-Protection-Workflow.gif)
+##### <a name='46e5b00c04e59ca79796d4d1aa580bf8f6fd7050564'></a> Source: [sccm\protect\media\Endpoint-Protection-Workflow.gif](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/Endpoint-Protection-Workflow.gif)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [46e5b00c04e59ca79796d4d1aa580bf8f6fd7050.gif](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/5ffee00eab6197b21d5193c4ef1965a051fa64ea/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/46e5b00c04e59ca79796d4d1aa580bf8f6fd7050.gif)
@@ -7453,7 +7492,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='f228d1ecc437f5dc535ab384927d297a06662eeb562'></a> Source: [sccm\protect\media\Hello-for-Business-settings.png](https://github.com/Microsoft/SCCMDocs-pr/blob/cf2432896f6a3be4d65f93934c51a944aaf29b8a/sccm/protect/media/Hello-for-Business-settings.png)
+##### <a name='f228d1ecc437f5dc535ab384927d297a06662eeb565'></a> Source: [sccm\protect\media\Hello-for-Business-settings.png](https://github.com/Microsoft/SCCMDocs-pr/blob/9257ba19a20c9a5b0805ef5a1b7c9aa2a370e161/sccm/protect/media/Hello-for-Business-settings.png)
 * Status: Ignored
 * Target File: 
 * Handoff File: 
@@ -7465,7 +7504,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='7f8bf512eba1fbfc90371b585e5c75ce9bd3c4b8563'></a> Source: [sccm\protect\media\HybridCondAccessWiz1.PNG](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/HybridCondAccessWiz1.PNG)
+##### <a name='7f8bf512eba1fbfc90371b585e5c75ce9bd3c4b8566'></a> Source: [sccm\protect\media\HybridCondAccessWiz1.PNG](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/HybridCondAccessWiz1.PNG)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [7f8bf512eba1fbfc90371b585e5c75ce9bd3c4b8.PNG](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/5ffee00eab6197b21d5193c4ef1965a051fa64ea/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/7f8bf512eba1fbfc90371b585e5c75ce9bd3c4b8.PNG)
@@ -7478,7 +7517,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='bdcdc0cba73f712faeb3647ed934790913bb5383564'></a> Source: [sccm\protect\media\HybridCondAccessWiz2.PNG](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/HybridCondAccessWiz2.PNG)
+##### <a name='bdcdc0cba73f712faeb3647ed934790913bb5383567'></a> Source: [sccm\protect\media\HybridCondAccessWiz2.PNG](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/HybridCondAccessWiz2.PNG)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [bdcdc0cba73f712faeb3647ed934790913bb5383.PNG](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/5ffee00eab6197b21d5193c4ef1965a051fa64ea/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/bdcdc0cba73f712faeb3647ed934790913bb5383.PNG)
@@ -7491,7 +7530,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='6a86fe479171aedfad9945bf5ec32cdb917d3a11565'></a> Source: [sccm\protect\media\HybridCondAccessWiz3.png](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/HybridCondAccessWiz3.png)
+##### <a name='6a86fe479171aedfad9945bf5ec32cdb917d3a11568'></a> Source: [sccm\protect\media\HybridCondAccessWiz3.png](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/HybridCondAccessWiz3.png)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [6a86fe479171aedfad9945bf5ec32cdb917d3a11.png](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/5ffee00eab6197b21d5193c4ef1965a051fa64ea/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/6a86fe479171aedfad9945bf5ec32cdb917d3a11.png)
@@ -7504,7 +7543,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='e7856022d7444b91bae346a07a8baffb2f8ceaad566'></a> Source: [sccm\protect\media\HybridCondAccessWiz4.PNG](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/HybridCondAccessWiz4.PNG)
+##### <a name='e7856022d7444b91bae346a07a8baffb2f8ceaad569'></a> Source: [sccm\protect\media\HybridCondAccessWiz4.PNG](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/HybridCondAccessWiz4.PNG)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [e7856022d7444b91bae346a07a8baffb2f8ceaad.PNG](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/5ffee00eab6197b21d5193c4ef1965a051fa64ea/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/e7856022d7444b91bae346a07a8baffb2f8ceaad.PNG)
@@ -7517,7 +7556,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='4d400df60e1df4515d027407089779d881068589567'></a> Source: [sccm\protect\media\HybridOnlineSetupIntune.png](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/HybridOnlineSetupIntune.png)
+##### <a name='4d400df60e1df4515d027407089779d881068589570'></a> Source: [sccm\protect\media\HybridOnlineSetupIntune.png](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/HybridOnlineSetupIntune.png)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [4d400df60e1df4515d027407089779d881068589.png](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/5ffee00eab6197b21d5193c4ef1965a051fa64ea/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/4d400df60e1df4515d027407089779d881068589.png)
@@ -7530,7 +7569,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='a6a8d2c7c3239985e54745b56857ff7c66dc33eb568'></a> Source: [sccm\protect\media\IntuneSASharePointOnlineCAPolicy.png](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/IntuneSASharePointOnlineCAPolicy.png)
+##### <a name='a6a8d2c7c3239985e54745b56857ff7c66dc33eb571'></a> Source: [sccm\protect\media\IntuneSASharePointOnlineCAPolicy.png](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/IntuneSASharePointOnlineCAPolicy.png)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [a6a8d2c7c3239985e54745b56857ff7c66dc33eb.png](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/5ffee00eab6197b21d5193c4ef1965a051fa64ea/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/a6a8d2c7c3239985e54745b56857ff7c66dc33eb.png)
@@ -7543,7 +7582,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='1a1bccf04d4ae09877a0c554bea53125e7181efb569'></a> Source: [sccm\protect\media\mdm-browser-ca-android-cert-prompt.png](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/mdm-browser-ca-android-cert-prompt.png)
+##### <a name='1a1bccf04d4ae09877a0c554bea53125e7181efb572'></a> Source: [sccm\protect\media\mdm-browser-ca-android-cert-prompt.png](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/mdm-browser-ca-android-cert-prompt.png)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [1a1bccf04d4ae09877a0c554bea53125e7181efb.png](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/5ffee00eab6197b21d5193c4ef1965a051fa64ea/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/1a1bccf04d4ae09877a0c554bea53125e7181efb.png)
@@ -7556,7 +7595,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='1d8598d5c0d5b62e8213a1172ba42f801d53c97e570'></a> Source: [sccm\protect\media\mdm-browser-ca-ios-cert-prompt_v2.png](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/mdm-browser-ca-ios-cert-prompt_v2.png)
+##### <a name='1d8598d5c0d5b62e8213a1172ba42f801d53c97e573'></a> Source: [sccm\protect\media\mdm-browser-ca-ios-cert-prompt_v2.png](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/mdm-browser-ca-ios-cert-prompt_v2.png)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [1d8598d5c0d5b62e8213a1172ba42f801d53c97e.png](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/5ffee00eab6197b21d5193c4ef1965a051fa64ea/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/1d8598d5c0d5b62e8213a1172ba42f801d53c97e.png)
@@ -7569,7 +7608,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='8347ec59d03aebeca9ef3081151ab8cf24174ff1571'></a> Source: [sccm\protect\media\mdm-ca-dynamics-crm-flow-diagram.png](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/mdm-ca-dynamics-crm-flow-diagram.png)
+##### <a name='8347ec59d03aebeca9ef3081151ab8cf24174ff1574'></a> Source: [sccm\protect\media\mdm-ca-dynamics-crm-flow-diagram.png](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/mdm-ca-dynamics-crm-flow-diagram.png)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [8347ec59d03aebeca9ef3081151ab8cf24174ff1.png](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/5ffee00eab6197b21d5193c4ef1965a051fa64ea/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/8347ec59d03aebeca9ef3081151ab8cf24174ff1.png)
@@ -7582,7 +7621,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='ab891ab721e056098c0dc0c2b620a525977c43a6572'></a> Source: [sccm\protect\media\mdm-ca-dynamics-crm-policy-configuration.png](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/mdm-ca-dynamics-crm-policy-configuration.png)
+##### <a name='ab891ab721e056098c0dc0c2b620a525977c43a6575'></a> Source: [sccm\protect\media\mdm-ca-dynamics-crm-policy-configuration.png](https://github.com/Microsoft/SCCMDocs-pr/blob/3d5b1b7d2d61645911908ad61afcd816118d6659/sccm/protect/media/mdm-ca-dynamics-crm-policy-configuration.png)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [ab891ab721e056098c0dc0c2b620a525977c43a6.png](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/5ffee00eab6197b21d5193c4ef1965a051fa64ea/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/ab891ab721e056098c0dc0c2b620a525977c43a6.png)
@@ -7595,7 +7634,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='16218bc782a862e2d082bd4e34c640ca0c58bf95573'></a> Source: [sccm\protect\media\TechRef_WinDefender.png](https://github.com/Microsoft/SCCMDocs-pr/blob/cf2432896f6a3be4d65f93934c51a944aaf29b8a/sccm/protect/media/TechRef_WinDefender.png)
+##### <a name='16218bc782a862e2d082bd4e34c640ca0c58bf95576'></a> Source: [sccm\protect\media\TechRef_WinDefender.png](https://github.com/Microsoft/SCCMDocs-pr/blob/9257ba19a20c9a5b0805ef5a1b7c9aa2a370e161/sccm/protect/media/TechRef_WinDefender.png)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [16218bc782a862e2d082bd4e34c640ca0c58bf95.png](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/5ffee00eab6197b21d5193c4ef1965a051fa64ea/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/16218bc782a862e2d082bd4e34c640ca0c58bf95.png)
@@ -7608,7 +7647,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='066b6325616f5fe779b778265baa114788c76bef574'></a> Source: [sccm\protect\plan-design\planning-for-certificate-template-permissions.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/plan-design/planning-for-certificate-template-permissions.md)
+##### <a name='066b6325616f5fe779b778265baa114788c76bef577'></a> Source: [sccm\protect\plan-design\planning-for-certificate-template-permissions.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/plan-design/planning-for-certificate-template-permissions.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [planning-for-certificate-template-permissions.ad56813035981828da0ba59285bf96afe19139e2.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/planning-for-certificate-template-permissions.ad56813035981828da0ba59285bf96afe19139e2.zh-cn.xlf)
@@ -7620,7 +7659,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='c246ac727efa21fab30a81999cc9bad00f20551e575'></a> Source: [sccm\protect\plan-design\planning-for-endpoint-protection.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/plan-design/planning-for-endpoint-protection.md)
+##### <a name='c246ac727efa21fab30a81999cc9bad00f20551e578'></a> Source: [sccm\protect\plan-design\planning-for-endpoint-protection.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/plan-design/planning-for-endpoint-protection.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [planning-for-endpoint-protection.8e16dd5a84c2ed950d588d4a7998225998c7f70d.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/planning-for-endpoint-protection.8e16dd5a84c2ed950d588d4a7998225998c7f70d.zh-cn.xlf)
@@ -7632,7 +7671,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='8a7134af111cf24258f0f271023be51387c21f00576'></a> Source: [sccm\protect\plan-design\prerequisites-for-certificate-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/plan-design/prerequisites-for-certificate-profiles.md)
+##### <a name='8a7134af111cf24258f0f271023be51387c21f00579'></a> Source: [sccm\protect\plan-design\prerequisites-for-certificate-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/plan-design/prerequisites-for-certificate-profiles.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [prerequisites-for-certificate-profiles.489c9474c6d80dde9121786fd9a8e435ac0d9171.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/prerequisites-for-certificate-profiles.489c9474c6d80dde9121786fd9a8e435ac0d9171.zh-cn.xlf)
@@ -7644,7 +7683,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='0a89dd219ad8cc217be1421bd963098eed147cc8577'></a> Source: [sccm\protect\plan-design\prerequisites-for-email-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/plan-design/prerequisites-for-email-profiles.md)
+##### <a name='0a89dd219ad8cc217be1421bd963098eed147cc8580'></a> Source: [sccm\protect\plan-design\prerequisites-for-email-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/plan-design/prerequisites-for-email-profiles.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [prerequisites-for-email-profiles.113953bc8d57243ad85f26ad8fd642ba9c64ada0.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/prerequisites-for-email-profiles.113953bc8d57243ad85f26ad8fd642ba9c64ada0.zh-cn.xlf)
@@ -7656,7 +7695,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='c103735a0f5fab6b800a7e9fb808221aebb102cb578'></a> Source: [sccm\protect\plan-design\prerequisites-for-wifi-vpn-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/plan-design/prerequisites-for-wifi-vpn-profiles.md)
+##### <a name='c103735a0f5fab6b800a7e9fb808221aebb102cb581'></a> Source: [sccm\protect\plan-design\prerequisites-for-wifi-vpn-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/plan-design/prerequisites-for-wifi-vpn-profiles.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [prerequisites-for-wifi-vpn-profiles.d3bb1e7702b9c7b30735ab72116cc0d5d1151930.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/prerequisites-for-wifi-vpn-profiles.d3bb1e7702b9c7b30735ab72116cc0d5d1151930.zh-cn.xlf)
@@ -7668,7 +7707,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='6e8b453c9baf03575c4260b52d5f18c75b5c0d8e579'></a> Source: [sccm\protect\plan-design\security-and-privacy-for-certificate-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/plan-design/security-and-privacy-for-certificate-profiles.md)
+##### <a name='6e8b453c9baf03575c4260b52d5f18c75b5c0d8e582'></a> Source: [sccm\protect\plan-design\security-and-privacy-for-certificate-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/plan-design/security-and-privacy-for-certificate-profiles.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [security-and-privacy-for-certificate-profiles.5a34ee4ec409c4d858b6b2b451d0eaa179f59641.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/security-and-privacy-for-certificate-profiles.5a34ee4ec409c4d858b6b2b451d0eaa179f59641.zh-cn.xlf)
@@ -7680,7 +7719,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='49f7f2b780c5e499b5090fafb1a57d4f6b1ac61f580'></a> Source: [sccm\protect\plan-design\security-and-privacy-for-email-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/plan-design/security-and-privacy-for-email-profiles.md)
+##### <a name='49f7f2b780c5e499b5090fafb1a57d4f6b1ac61f583'></a> Source: [sccm\protect\plan-design\security-and-privacy-for-email-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/plan-design/security-and-privacy-for-email-profiles.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [security-and-privacy-for-email-profiles.4be1417cf123f2cc0a5f8630e377fa8e63bf5733.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/security-and-privacy-for-email-profiles.4be1417cf123f2cc0a5f8630e377fa8e63bf5733.zh-cn.xlf)
@@ -7692,7 +7731,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='6d74b8006e6c778c281718446fd51467dc63829a581'></a> Source: [sccm\protect\plan-design\security-and-privacy-for-wifi-vpn-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/plan-design/security-and-privacy-for-wifi-vpn-profiles.md)
+##### <a name='6d74b8006e6c778c281718446fd51467dc63829a584'></a> Source: [sccm\protect\plan-design\security-and-privacy-for-wifi-vpn-profiles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/plan-design/security-and-privacy-for-wifi-vpn-profiles.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [security-and-privacy-for-wifi-vpn-profiles.0ca6257469e3b68eb31186db229dc3d85e1b09aa.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/security-and-privacy-for-wifi-vpn-profiles.0ca6257469e3b68eb31186db229dc3d85e1b09aa.zh-cn.xlf)
@@ -7704,7 +7743,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='8fd4d73bf300cfe55b061108d9df1d8f5001fb82582'></a> Source: [sccm\protect\TOC.md](https://github.com/Microsoft/SCCMDocs-pr/blob/688c35c5c4641d2b0114efcc995e88f9d78b719e/sccm/protect/TOC.md)
+##### <a name='8fd4d73bf300cfe55b061108d9df1d8f5001fb82585'></a> Source: [sccm\protect\TOC.md](https://github.com/Microsoft/SCCMDocs-pr/blob/688c35c5c4641d2b0114efcc995e88f9d78b719e/sccm/protect/TOC.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [TOC.ddc8eb0decd65966403e34fe06c433bed9a62ede.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/TOC.ddc8eb0decd65966403e34fe06c433bed9a62ede.zh-cn.xlf)
@@ -7716,7 +7755,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='d7e3915c5bb3638e57b0f6debf187beb10dd2519583'></a> Source: [sccm\protect\understand\backup-and-recovery.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/understand/backup-and-recovery.md)
+##### <a name='d7e3915c5bb3638e57b0f6debf187beb10dd2519586'></a> Source: [sccm\protect\understand\backup-and-recovery.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/understand/backup-and-recovery.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [backup-and-recovery.5f82aefe6d36bb152dbd183fad209bfb39eebce7.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/backup-and-recovery.5f82aefe6d36bb152dbd183fad209bfb39eebce7.zh-cn.xlf)
@@ -7728,7 +7767,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='18475f6f3b1e079ec439effb27af20c3e9a7d802584'></a> Source: [sccm\protect\understand\high-availability-options.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/understand/high-availability-options.md)
+##### <a name='18475f6f3b1e079ec439effb27af20c3e9a7d802587'></a> Source: [sccm\protect\understand\high-availability-options.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/understand/high-availability-options.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [high-availability-options.78839050559dbeaea6e13fa7b90230a0381786c2.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/high-availability-options.78839050559dbeaea6e13fa7b90230a0381786c2.zh-cn.xlf)
@@ -7740,7 +7779,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='318553983a2bf9782016afbc4d0eeb60e1258afb585'></a> Source: [sccm\protect\understand\protect-data-and-site-infrastructure.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/understand/protect-data-and-site-infrastructure.md)
+##### <a name='318553983a2bf9782016afbc4d0eeb60e1258afb588'></a> Source: [sccm\protect\understand\protect-data-and-site-infrastructure.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/understand/protect-data-and-site-infrastructure.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [protect-data-and-site-infrastructure.93319ca3d456605647725b1626077199ee2fce75.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/protect-data-and-site-infrastructure.93319ca3d456605647725b1626077199ee2fce75.zh-cn.xlf)
@@ -7752,7 +7791,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='b8f221a7de1378cd4a9258ee9729aa7e1dfdc23f586'></a> Source: [sccm\protect\understand\settings-to-manage-high-risk-deployments.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/understand/settings-to-manage-high-risk-deployments.md)
+##### <a name='b8f221a7de1378cd4a9258ee9729aa7e1dfdc23f589'></a> Source: [sccm\protect\understand\settings-to-manage-high-risk-deployments.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/protect/understand/settings-to-manage-high-risk-deployments.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [settings-to-manage-high-risk-deployments.35e04927643799a675418c1718c7555348697d76.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/settings-to-manage-high-risk-deployments.35e04927643799a675418c1718c7555348697d76.zh-cn.xlf)
@@ -7764,7 +7803,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='3ba2ba4eac7216e138c65afb82c1ea69a8b39d9b587'></a> Source: [sccm\sum\deploy-use\add-software-updates-to-an-update-group.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/deploy-use/add-software-updates-to-an-update-group.md)
+##### <a name='3ba2ba4eac7216e138c65afb82c1ea69a8b39d9b590'></a> Source: [sccm\sum\deploy-use\add-software-updates-to-an-update-group.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/deploy-use/add-software-updates-to-an-update-group.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [add-software-updates-to-an-update-group.0407cab580dff5a15297844cc3d8f1a31706e3cd.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/add-software-updates-to-an-update-group.0407cab580dff5a15297844cc3d8f1a31706e3cd.zh-cn.xlf)
@@ -7776,7 +7815,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='034d67f4cd83ad293bac674f79491ed29efca863588'></a> Source: [sccm\sum\deploy-use\automatically-deploy-software-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/deploy-use/automatically-deploy-software-updates.md)
+##### <a name='034d67f4cd83ad293bac674f79491ed29efca863591'></a> Source: [sccm\sum\deploy-use\automatically-deploy-software-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/deploy-use/automatically-deploy-software-updates.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [automatically-deploy-software-updates.e53c692b88f4c7d2175c12ec36090d01ed26befa.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/automatically-deploy-software-updates.e53c692b88f4c7d2175c12ec36090d01ed26befa.zh-cn.xlf)
@@ -7788,7 +7827,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='2492aa06c9c82d03ed1d23d0084bb8cfb0a733a1589'></a> Source: [sccm\sum\deploy-use\deploy-software-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/deploy-use/deploy-software-updates.md)
+##### <a name='2492aa06c9c82d03ed1d23d0084bb8cfb0a733a1592'></a> Source: [sccm\sum\deploy-use\deploy-software-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/deploy-use/deploy-software-updates.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [deploy-software-updates.c398bae116b855dea0afaa5ace2e4b65c2703698.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/deploy-software-updates.c398bae116b855dea0afaa5ace2e4b65c2703698.zh-cn.xlf)
@@ -7800,7 +7839,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='369aa22f627381a37e392d1254998d4b047f915b590'></a> Source: [sccm\sum\deploy-use\download-software-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/deploy-use/download-software-updates.md)
+##### <a name='369aa22f627381a37e392d1254998d4b047f915b593'></a> Source: [sccm\sum\deploy-use\download-software-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/deploy-use/download-software-updates.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [download-software-updates.4577d9107d4f07cc6bd18d60c40a2d92b9561b4a.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/download-software-updates.4577d9107d4f07cc6bd18d60c40a2d92b9561b4a.zh-cn.xlf)
@@ -7812,7 +7851,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='12cf594b4be3009db08f848b9f51366def9b846a591'></a> Source: [sccm\sum\deploy-use\example-scenario-deploy-monitor-monthly-security-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/deploy-use/example-scenario-deploy-monitor-monthly-security-updates.md)
+##### <a name='12cf594b4be3009db08f848b9f51366def9b846a594'></a> Source: [sccm\sum\deploy-use\example-scenario-deploy-monitor-monthly-security-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/deploy-use/example-scenario-deploy-monitor-monthly-security-updates.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [example-scenario-deploy-monitor-monthly-security-updates.2055439a5d51579585c2776f153eea681cca5670.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/example-scenario-deploy-monitor-monthly-security-updates.2055439a5d51579585c2776f153eea681cca5670.zh-cn.xlf)
@@ -7824,7 +7863,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='a3723218539d46e305c0b007addd8f81e8025061592'></a> Source: [sccm\sum\deploy-use\integrate-windows-update-for-business-windows-10.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10.md)
+##### <a name='a3723218539d46e305c0b007addd8f81e8025061595'></a> Source: [sccm\sum\deploy-use\integrate-windows-update-for-business-windows-10.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [integrate-windows-update-for-business-windows-10.d2b6cac29a4d9561783468ffe35830242ac2aa2f.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/integrate-windows-update-for-business-windows-10.d2b6cac29a4d9561783468ffe35830242ac2aa2f.zh-cn.xlf)
@@ -7836,7 +7875,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='55cf224e070d7c6f04b17ff113d55fcb12d2a386593'></a> Source: [sccm\sum\deploy-use\manage-office-365-proplus-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/deploy-use/manage-office-365-proplus-updates.md)
+##### <a name='55cf224e070d7c6f04b17ff113d55fcb12d2a386596'></a> Source: [sccm\sum\deploy-use\manage-office-365-proplus-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/deploy-use/manage-office-365-proplus-updates.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [manage-office-365-proplus-updates.0c43422f1178a9a6170f44dfc8787e9dbdb8d69a.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/manage-office-365-proplus-updates.0c43422f1178a9a6170f44dfc8787e9dbdb8d69a.zh-cn.xlf)
@@ -7848,7 +7887,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='decd43a9e613a18a9a007bdda9248304cf35ee30594'></a> Source: [sccm\sum\deploy-use\manually-deploy-software-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/deploy-use/manually-deploy-software-updates.md)
+##### <a name='decd43a9e613a18a9a007bdda9248304cf35ee30597'></a> Source: [sccm\sum\deploy-use\manually-deploy-software-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/deploy-use/manually-deploy-software-updates.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [manually-deploy-software-updates.598575649da5068d9d5f0ec65486cf66193258ca.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/manually-deploy-software-updates.598575649da5068d9d5f0ec65486cf66193258ca.zh-cn.xlf)
@@ -7860,7 +7899,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='d222d946eb14d666b0ea80cb0924c48b3ef420ee595'></a> Source: [sccm\sum\deploy-use\monitor-software-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/deploy-use/monitor-software-updates.md)
+##### <a name='d222d946eb14d666b0ea80cb0924c48b3ef420ee598'></a> Source: [sccm\sum\deploy-use\monitor-software-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/deploy-use/monitor-software-updates.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [monitor-software-updates.b55078f61692d459e1fdaa84bc691b138347b799.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/monitor-software-updates.b55078f61692d459e1fdaa84bc691b138347b799.zh-cn.xlf)
@@ -7872,7 +7911,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='7c85180de2733e83f698ffb695af39d376af6112596'></a> Source: [sccm\sum\deploy-use\service-a-server-group.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/deploy-use/service-a-server-group.md)
+##### <a name='7c85180de2733e83f698ffb695af39d376af6112599'></a> Source: [sccm\sum\deploy-use\service-a-server-group.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/deploy-use/service-a-server-group.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [service-a-server-group.82d936a8c5bca78864748c52be9e22d33f55b3cc.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/service-a-server-group.82d936a8c5bca78864748c52be9e22d33f55b3cc.zh-cn.xlf)
@@ -7884,7 +7923,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='fb9ef52381644287f2b4a88d405069607c4a1cb3597'></a> Source: [sccm\sum\deploy-use\software-updates-maintenance.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/deploy-use/software-updates-maintenance.md)
+##### <a name='fb9ef52381644287f2b4a88d405069607c4a1cb3600'></a> Source: [sccm\sum\deploy-use\software-updates-maintenance.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/deploy-use/software-updates-maintenance.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [software-updates-maintenance.445e91108c2c9311ebef907599a2536893e43d5d.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/software-updates-maintenance.445e91108c2c9311ebef907599a2536893e43d5d.zh-cn.xlf)
@@ -7896,7 +7935,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='961e5d7279c949a639d38569d77fae578bc9ffd8598'></a> Source: [sccm\sum\get-started\configure-classifications-and-products.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/get-started/configure-classifications-and-products.md)
+##### <a name='961e5d7279c949a639d38569d77fae578bc9ffd8601'></a> Source: [sccm\sum\get-started\configure-classifications-and-products.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/get-started/configure-classifications-and-products.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [configure-classifications-and-products.f59afbba899d899ec1335dfa73e80a42ee7cbb22.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/configure-classifications-and-products.f59afbba899d899ec1335dfa73e80a42ee7cbb22.zh-cn.xlf)
@@ -7908,7 +7947,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='f922153a8b050babc1bb2d3c8970d4d590473e6b599'></a> Source: [sccm\sum\get-started\install-a-software-update-point.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/get-started/install-a-software-update-point.md)
+##### <a name='f922153a8b050babc1bb2d3c8970d4d590473e6b602'></a> Source: [sccm\sum\get-started\install-a-software-update-point.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/get-started/install-a-software-update-point.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [install-a-software-update-point.9fceb376c017ab187a6b616cabd316fc42b0d6c8.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/install-a-software-update-point.9fceb376c017ab187a6b616cabd316fc42b0d6c8.zh-cn.xlf)
@@ -7920,7 +7959,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='fb2e6c27b8dca158886e3a0b6aa2f1f12e9f5480600'></a> Source: [sccm\sum\get-started\manage-settings-for-software-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/get-started/manage-settings-for-software-updates.md)
+##### <a name='fb2e6c27b8dca158886e3a0b6aa2f1f12e9f5480603'></a> Source: [sccm\sum\get-started\manage-settings-for-software-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/get-started/manage-settings-for-software-updates.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [manage-settings-for-software-updates.596e3fc221999a5d8309e3de735d3e3d8ff5823f.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/manage-settings-for-software-updates.596e3fc221999a5d8309e3de735d3e3d8ff5823f.zh-cn.xlf)
@@ -7932,7 +7971,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='77074f77767af17c49cdedacd60433874bfc13fc601'></a> Source: [sccm\sum\get-started\prepare-for-software-updates-management.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/get-started/prepare-for-software-updates-management.md)
+##### <a name='77074f77767af17c49cdedacd60433874bfc13fc604'></a> Source: [sccm\sum\get-started\prepare-for-software-updates-management.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/get-started/prepare-for-software-updates-management.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [prepare-for-software-updates-management.fdb3d58e1f347156376f258d59a5ecc881a02c4d.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/prepare-for-software-updates-management.fdb3d58e1f347156376f258d59a5ecc881a02c4d.zh-cn.xlf)
@@ -7944,7 +7983,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='f482ca9595dadeba8ae85b6d9887b8a09ff8f640602'></a> Source: [sccm\sum\get-started\remove-a-software-update-point.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/get-started/remove-a-software-update-point.md)
+##### <a name='f482ca9595dadeba8ae85b6d9887b8a09ff8f640605'></a> Source: [sccm\sum\get-started\remove-a-software-update-point.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/get-started/remove-a-software-update-point.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [remove-a-software-update-point.01d25af02a9a89db1622cc18fa46153a40b20c15.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/remove-a-software-update-point.01d25af02a9a89db1622cc18fa46153a40b20c15.zh-cn.xlf)
@@ -7956,7 +7995,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='8e2d01ce3a48aa5f73d90ef7963784dd11a4f5ce604'></a> Source: [sccm\sum\get-started\synchronize-software-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/get-started/synchronize-software-updates.md)
+##### <a name='8e2d01ce3a48aa5f73d90ef7963784dd11a4f5ce607'></a> Source: [sccm\sum\get-started\synchronize-software-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/get-started/synchronize-software-updates.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [synchronize-software-updates.6f0d86bb058506adefb814be05ca4e6e8a53ce77.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/synchronize-software-updates.6f0d86bb058506adefb814be05ca4e6e8a53ce77.zh-cn.xlf)
@@ -7968,7 +8007,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='ff8155e04dae7457ee4125136fb7ef0338c66bac603'></a> Source: [sccm\sum\get-started\synchronize-software-updates-disconnected.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/get-started/synchronize-software-updates-disconnected.md)
+##### <a name='ff8155e04dae7457ee4125136fb7ef0338c66bac606'></a> Source: [sccm\sum\get-started\synchronize-software-updates-disconnected.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/get-started/synchronize-software-updates-disconnected.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [synchronize-software-updates-disconnected.6adbd386f93d2282cdaf8f790464f03248d87bfd.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/synchronize-software-updates-disconnected.6adbd386f93d2282cdaf8f790464f03248d87bfd.zh-cn.xlf)
@@ -7980,7 +8019,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='d347548ca9a7b4f13a61559f60340adc6e5b5a43605'></a> Source: [sccm\sum\includes\downloadupdates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/d525a45b67cf7882a348854deea0f14cd0725f6a/sccm/sum/includes/downloadupdates.md)
+##### <a name='d347548ca9a7b4f13a61559f60340adc6e5b5a43608'></a> Source: [sccm\sum\includes\downloadupdates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/d525a45b67cf7882a348854deea0f14cd0725f6a/sccm/sum/includes/downloadupdates.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [downloadupdates.ed17f9113bd571b5b2ce644063ed0afbb448ff3e.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/5ffee00eab6197b21d5193c4ef1965a051fa64ea/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/downloadupdates.ed17f9113bd571b5b2ce644063ed0afbb448ff3e.zh-cn.xlf)
@@ -7992,7 +8031,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='6ddc637767a850a16056b7418b8ea15430f6e590606'></a> Source: [sccm\sum\media\Expired.jpg](https://github.com/Microsoft/SCCMDocs-pr/blob/31c92822e72aa4e8eb9edd0fcea68f2ba5b9afd6/sccm/sum/media/Expired.jpg)
+##### <a name='6ddc637767a850a16056b7418b8ea15430f6e590609'></a> Source: [sccm\sum\media\Expired.jpg](https://github.com/Microsoft/SCCMDocs-pr/blob/31c92822e72aa4e8eb9edd0fcea68f2ba5b9afd6/sccm/sum/media/Expired.jpg)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [6ddc637767a850a16056b7418b8ea15430f6e590.jpg](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/5ffee00eab6197b21d5193c4ef1965a051fa64ea/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/6ddc637767a850a16056b7418b8ea15430f6e590.jpg)
@@ -8005,7 +8044,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='3531955e34baf771039a88aaa56087d9bbee9d57607'></a> Source: [sccm\sum\media\Invalid.jpg](https://github.com/Microsoft/SCCMDocs-pr/blob/31c92822e72aa4e8eb9edd0fcea68f2ba5b9afd6/sccm/sum/media/Invalid.jpg)
+##### <a name='3531955e34baf771039a88aaa56087d9bbee9d57610'></a> Source: [sccm\sum\media\Invalid.jpg](https://github.com/Microsoft/SCCMDocs-pr/blob/31c92822e72aa4e8eb9edd0fcea68f2ba5b9afd6/sccm/sum/media/Invalid.jpg)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [3531955e34baf771039a88aaa56087d9bbee9d57.jpg](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/5ffee00eab6197b21d5193c4ef1965a051fa64ea/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/3531955e34baf771039a88aaa56087d9bbee9d57.jpg)
@@ -8018,7 +8057,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='c648a3685b3f336d96276a20414c7172b0bedca4608'></a> Source: [sccm\sum\media\MetadataOnly.png](https://github.com/Microsoft/SCCMDocs-pr/blob/31c92822e72aa4e8eb9edd0fcea68f2ba5b9afd6/sccm/sum/media/MetadataOnly.png)
+##### <a name='c648a3685b3f336d96276a20414c7172b0bedca4611'></a> Source: [sccm\sum\media\MetadataOnly.png](https://github.com/Microsoft/SCCMDocs-pr/blob/31c92822e72aa4e8eb9edd0fcea68f2ba5b9afd6/sccm/sum/media/MetadataOnly.png)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [c648a3685b3f336d96276a20414c7172b0bedca4.png](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/5ffee00eab6197b21d5193c4ef1965a051fa64ea/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/c648a3685b3f336d96276a20414c7172b0bedca4.png)
@@ -8031,7 +8070,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='fb7760577e02d163028d51451b7c24de831b0073609'></a> Source: [sccm\sum\media\Normal.jpg](https://github.com/Microsoft/SCCMDocs-pr/blob/31c92822e72aa4e8eb9edd0fcea68f2ba5b9afd6/sccm/sum/media/Normal.jpg)
+##### <a name='fb7760577e02d163028d51451b7c24de831b0073612'></a> Source: [sccm\sum\media\Normal.jpg](https://github.com/Microsoft/SCCMDocs-pr/blob/31c92822e72aa4e8eb9edd0fcea68f2ba5b9afd6/sccm/sum/media/Normal.jpg)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [fb7760577e02d163028d51451b7c24de831b0073.jpg](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/5ffee00eab6197b21d5193c4ef1965a051fa64ea/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/fb7760577e02d163028d51451b7c24de831b0073.jpg)
@@ -8044,7 +8083,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='78effb18fe2c6ae8aac8ef23d0b5f50b8d31159c610'></a> Source: [sccm\sum\media\Superseded.jpg](https://github.com/Microsoft/SCCMDocs-pr/blob/31c92822e72aa4e8eb9edd0fcea68f2ba5b9afd6/sccm/sum/media/Superseded.jpg)
+##### <a name='78effb18fe2c6ae8aac8ef23d0b5f50b8d31159c613'></a> Source: [sccm\sum\media\Superseded.jpg](https://github.com/Microsoft/SCCMDocs-pr/blob/31c92822e72aa4e8eb9edd0fcea68f2ba5b9afd6/sccm/sum/media/Superseded.jpg)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [78effb18fe2c6ae8aac8ef23d0b5f50b8d31159c.jpg](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/5ffee00eab6197b21d5193c4ef1965a051fa64ea/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/78effb18fe2c6ae8aac8ef23d0b5f50b8d31159c.jpg)
@@ -8057,7 +8096,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='73d555c48f89bf81f7d1c2c3c445b02dff661a34611'></a> Source: [sccm\sum\plan-design\plan-for-software-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/plan-design/plan-for-software-updates.md)
+##### <a name='73d555c48f89bf81f7d1c2c3c445b02dff661a34614'></a> Source: [sccm\sum\plan-design\plan-for-software-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/plan-design/plan-for-software-updates.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [plan-for-software-updates.916f5f1fe0f556a0dda729ae949e3a5c53bda209.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/plan-for-software-updates.916f5f1fe0f556a0dda729ae949e3a5c53bda209.zh-cn.xlf)
@@ -8069,7 +8108,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='1761467c3fd7705a74725984764f6d777af4a9cd612'></a> Source: [sccm\sum\plan-design\prerequisites-for-software-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/plan-design/prerequisites-for-software-updates.md)
+##### <a name='1761467c3fd7705a74725984764f6d777af4a9cd615'></a> Source: [sccm\sum\plan-design\prerequisites-for-software-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/plan-design/prerequisites-for-software-updates.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [prerequisites-for-software-updates.5b28a515cd1f0f4e8e0228fc9741f99e4a81d832.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/prerequisites-for-software-updates.5b28a515cd1f0f4e8e0228fc9741f99e4a81d832.zh-cn.xlf)
@@ -8081,7 +8120,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='a732cb30ab949eca085e5aabe99d089b87d233b2613'></a> Source: [sccm\sum\plan-design\security-and-privacy-for-software-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/plan-design/security-and-privacy-for-software-updates.md)
+##### <a name='a732cb30ab949eca085e5aabe99d089b87d233b2616'></a> Source: [sccm\sum\plan-design\security-and-privacy-for-software-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/plan-design/security-and-privacy-for-software-updates.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [security-and-privacy-for-software-updates.a4ee76f0cd2ce1d9c057932efd73f442c69492a8.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/security-and-privacy-for-software-updates.a4ee76f0cd2ce1d9c057932efd73f442c69492a8.zh-cn.xlf)
@@ -8093,7 +8132,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='157ced363617a6727dc7b6bf4c396d6d991db557614'></a> Source: [sccm\sum\plan-design\software-updates-best-practices.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/plan-design/software-updates-best-practices.md)
+##### <a name='157ced363617a6727dc7b6bf4c396d6d991db557617'></a> Source: [sccm\sum\plan-design\software-updates-best-practices.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/plan-design/software-updates-best-practices.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [software-updates-best-practices.2f7725938d01f65aa4c1736f938fb25759e71a1e.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/software-updates-best-practices.2f7725938d01f65aa4c1736f938fb25759e71a1e.zh-cn.xlf)
@@ -8105,7 +8144,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='b28217f856081b149464aac2e5c84d17acd75ac9615'></a> Source: [sccm\sum\TOC.md](https://github.com/Microsoft/SCCMDocs-pr/blob/6884428ec623d22b5821d6feeaf327b8ace69ea6/sccm/sum/TOC.md)
+##### <a name='b28217f856081b149464aac2e5c84d17acd75ac9618'></a> Source: [sccm\sum\TOC.md](https://github.com/Microsoft/SCCMDocs-pr/blob/6884428ec623d22b5821d6feeaf327b8ace69ea6/sccm/sum/TOC.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [TOC.28c28ca3f4d207c2afca5637f94861607ef10ac7.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/TOC.28c28ca3f4d207c2afca5637f94861607ef10ac7.zh-cn.xlf)
@@ -8117,7 +8156,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='e77ca190faaefdf4e7fa418cb57edf2e42bc65bb616'></a> Source: [sccm\sum\understand\software-updates-icons.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/understand/software-updates-icons.md)
+##### <a name='e77ca190faaefdf4e7fa418cb57edf2e42bc65bb619'></a> Source: [sccm\sum\understand\software-updates-icons.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/understand/software-updates-icons.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [software-updates-icons.0715f2f11ad31111dd1ba42234b2ef9ae3879b7e.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/software-updates-icons.0715f2f11ad31111dd1ba42234b2ef9ae3879b7e.zh-cn.xlf)
@@ -8129,7 +8168,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='c90d71397c656cb0c0e6d0dbebc7d15405c1d910617'></a> Source: [sccm\sum\understand\software-updates-introduction.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/understand/software-updates-introduction.md)
+##### <a name='c90d71397c656cb0c0e6d0dbebc7d15405c1d910620'></a> Source: [sccm\sum\understand\software-updates-introduction.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5c6cf3c1697b49708aa5192b67b08b700da7dc72/sccm/sum/understand/software-updates-introduction.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [software-updates-introduction.9e7c6ce449e3556cfe9a3f06fb85519ee13dccb1.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/a762d0f39317ca4ded15271ba675f447c9904ce1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/software-updates-introduction.9e7c6ce449e3556cfe9a3f06fb85519ee13dccb1.zh-cn.xlf)
@@ -8141,7 +8180,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='adc83b19e793491b1c6ea0fd8b46cd9f32e592fc618'></a> Source: [sccm\toc.md](https://github.com/Microsoft/SCCMDocs-pr/blob/f59f66ec7548c39b11430211919297def2958a77/sccm/toc.md)
+##### <a name='adc83b19e793491b1c6ea0fd8b46cd9f32e592fc621'></a> Source: [sccm\toc.md](https://github.com/Microsoft/SCCMDocs-pr/blob/f59f66ec7548c39b11430211919297def2958a77/sccm/toc.md)
 * Status: HandedOffSuccess
 * Target File: 
 * Handoff File: [toc.3117f0d5d1cd40d6df4da10f41f37b0eeeec7cf6.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/5ffee00eab6197b21d5193c4ef1965a051fa64ea/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/toc.3117f0d5d1cd40d6df4da10f41f37b0eeeec7cf6.zh-cn.xlf)
@@ -8153,7 +8192,7 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='a6d84da93a4679b38d2a31a28965e16beffa6648619'></a> Source: [template.md](https://github.com/Microsoft/SCCMDocs-pr/blob/cf2432896f6a3be4d65f93934c51a944aaf29b8a/template.md)
+##### <a name='a6d84da93a4679b38d2a31a28965e16beffa6648622'></a> Source: [template.md](https://github.com/Microsoft/SCCMDocs-pr/blob/9257ba19a20c9a5b0805ef5a1b7c9aa2a370e161/template.md)
 * Status: Ignored
 * Target File: 
 * Handoff File: 

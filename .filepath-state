@@ -953,6 +953,9 @@
   "ba6498d78ee8b03df2e05240622e01becd6b7689": [
     "sccm\\core\\get-started\\capabilities-in-technical-preview-1603.md"
   ],
+  "1d42adcf47fb9ccc89e18114914ff893d4080ede": [
+    "sccm\\core\\get-started\\capabilities-in-technical-preview-1604.md"
+  ],
   "6e1102937aaf62f391ffcbde5ba8d72b02a8c17a": [
     "sccm\\core\\get-started\\capabilities-in-technical-preview-1604.md"
   ],
@@ -1000,6 +1003,9 @@
   ],
   "25ee2f92231d4b177e2bdc099c37c263e468069f": [
     "sccm\\core\\get-started\\set-up-your-lab.md"
+  ],
+  "ba197db70c165aae822d6ffa009c3bd9fc094945": [
+    "sccm\\core\\get-started\\technical-preview.md"
   ],
   "d7d564fcb635c3240615847370f26c58e7cedc1a": [
     "sccm\\core\\get-started\\technical-preview.md"
@@ -1283,17 +1289,26 @@
   "98124163765580cd032196eb7719062c34a3b1e6": [
     "sccm\\core\\plan-design\\configs\\supported-configurations.md"
   ],
+  "bc7273e8ba016cefc2a60dfec7157dd5a020e784": [
+    "sccm\\core\\plan-design\\configs\\supported-operating-systems-consoles.md"
+  ],
   "d09a4bb7810ea1e03565cfde21e9799ae62d4c1a": [
     "sccm\\core\\plan-design\\configs\\supported-operating-systems-consoles.md"
   ],
   "3a001301c37ad70708903547971c4b2d32938b2b": [
     "sccm\\core\\plan-design\\configs\\supported-operating-systems-consoles.md"
   ],
+  "f492c7d3994935c1efc155d95af5d9201cf6b888": [
+    "sccm\\core\\plan-design\\configs\\supported-operating-systems-for-clients-and-devices.md"
+  ],
   "a47725202cfcaa3597135d099e7fe35a1f40e7d2": [
     "sccm\\core\\plan-design\\configs\\supported-operating-systems-for-clients-and-devices.md"
   ],
   "b99b8a66d1e4c0a13fbc4ff7ad1769ab4e455002": [
     "sccm\\core\\plan-design\\configs\\supported-operating-systems-for-clients-and-devices.md"
+  ],
+  "ca7cde1ffba14cb789bd1653ede09a0daecbe394": [
+    "sccm\\core\\plan-design\\configs\\supported-operating-systems-for-site-system-servers.md"
   ],
   "ec1d634c04c0f349ac4238a6b7205c564976e99e": [
     "sccm\\core\\plan-design\\configs\\supported-operating-systems-for-site-system-servers.md"
@@ -1460,6 +1475,9 @@
   "e560633fb22c4e70430588aaff304969fefd016b": [
     "sccm\\core\\plan-design\\hierarchy\\plan-for-the-sms-provider.md"
   ],
+  "88379195efd1f29dd7d28449bb1371786518e55d": [
+    "sccm\\core\\plan-design\\hierarchy\\ports.md"
+  ],
   "2ed2f9e55d0a4f42c66f736470a4b5c818564c16": [
     "sccm\\core\\plan-design\\hierarchy\\ports.md"
   ],
@@ -1507,6 +1525,9 @@
   ],
   "000c4fe1959d471d33c48ed3711c6ed593e707b4": [
     "sccm\\core\\plan-design\\hierarchy\\use-a-pull-distribution-point.md"
+  ],
+  "f2164eddb9c785cdb72c1a6ce36dccb27b197005": [
+    "sccm\\core\\plan-design\\network\\configure-firewalls-ports-domains.md"
   ],
   "b421d88668376073da73f6f8bd8cc42cc49026e2": [
     "sccm\\core\\plan-design\\network\\configure-firewalls-ports-domains.md"
@@ -2036,6 +2057,9 @@
   "7dfbeeb2fb21da15a31a102968eba681d088ab4b": [
     "sccm\\core\\servers\\manage\\use-the-hotfix-installer-to-install-updates.md"
   ],
+  "0fc8df75f7595cd980c64585ec8d416fefbd7796": [
+    "sccm\\core\\servers\\manage\\use-the-service-connection-tool.md"
+  ],
   "b829ae61665e288a941bb9acb4a4190dac1adb32": [
     "sccm\\core\\servers\\manage\\use-the-service-connection-tool.md"
   ],
@@ -2047,6 +2071,9 @@
   ],
   "b7ec243619b3fc9a0df3a5c56a57c9ad9a020feb": [
     "sccm\\core\\servers\\manage\\use-the-update-registration-tool-to-import-hotfixes.md"
+  ],
+  "a691c59c1b1bda829f4968037f9bd96247eb607f": [
+    "sccm\\core\\TOC.md"
   ],
   "8af124f39c192c5945714f0c40e58e239d9f51b2": [
     "sccm\\core\\TOC.md"
@@ -2113,6 +2140,9 @@
   ],
   "cb681778756f2fe3dca9987e202ef1ca59ab8251": [
     "sccm\\core\\understand\\introduction.md"
+  ],
+  "999f7db0e92301c9ed834b8689388f0f90d887df": [
+    "sccm\\core\\understand\\learn-more-editions.md"
   ],
   "3ca6b4230507c29de7230cdb31a1e145d47865ee": [
     "sccm\\core\\understand\\learn-more-editions.md"
@@ -2197,6 +2227,9 @@
   ],
   "441cc99d24ade23b096596934d21036c04d5b79a": [
     "sccm\\mdm\\deploy-use\\set-up-android-hybrid-device-management.md"
+  ],
+  "8f49e1007402d6f8ed06eef9e1580f8ec978a8eb": [
+    "sccm\\mdm\\deploy-use\\setup-hybrid-mdm.md"
   ],
   "b582e65abadcf79c18b8d218a5f309a64fd6b784": [
     "sccm\\mdm\\deploy-use\\setup-hybrid-mdm.md"
@@ -2296,6 +2329,9 @@
   ],
   "27aae39d2095681405503db3dca9fff0892713f1": [
     "sccm\\mdm\\plan-design\\plan-on-premises-mdm.md"
+  ],
+  "9c3df5ed669350b3ba38ce9f51c6d3dab449a86a": [
+    "sccm\\mdm\\TOC.md"
   ],
   "9121785d43707b7669763dab9cd58cc69157e58b": [
     "sccm\\mdm\\TOC.md"
@@ -3146,13 +3182,28 @@
   "a97eb7a637611ba269cf8f16635b8165c19283f1": [
     "sccm\\core\\understand\\interoperability-client.md"
   ],
+  "7102fa42f0b95b8e2a9f41d2732bb6b0e3e0b6fb": [
+    "sccm\\core\\understand\\introduction-to-the-ltsb.md"
+  ],
   "10518b6d7bc76d21b72ea38f7fec91714c59b4f8": [
     "sccm\\core\\understand\\introduction-to-the-ltsb.md"
+  ],
+  "25dbdd401d0f6e955e5dcc704a0c756c74c64773": [
+    "sccm\\core\\understand\\supported-configurations-for-ltsb.md"
   ],
   "d82cf94777f59f861e01896aa9c15563084b0307": [
     "sccm\\core\\understand\\supported-configurations-for-ltsb.md"
   ],
   "3957e854e980246c410f7de27caed9d66fc4829f": [
     "sccm\\core\\understand\\which-branch-should-i-use.md"
+  ],
+  "8f2424c8727afed02423662800a3f24466de8b8d": [
+    "sccm\\mdm\\deploy-use\\enroll-hybrid-android.md"
+  ],
+  "9c26140d8cbebf3c0e4dedf8539da696ae6f2632": [
+    "sccm\\mdm\\deploy-use\\enroll-hybrid-ios-mac.md"
+  ],
+  "566332d1aef100c110fc159d65a8267911f14166": [
+    "sccm\\mdm\\deploy-use\\enroll-hybrid-windows.md"
   ]
 }

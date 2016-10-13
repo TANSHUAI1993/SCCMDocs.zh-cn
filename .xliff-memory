@@ -10449,6 +10449,176 @@
       "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\7d66a7d7ca145f50568a7066301578453bde1ce5.e437aeb7a87af8b986015e6a22ea0a5526ad2b5e.xml",
       "LocXliff": null,
       "LocXliffCommit": null
+    },
+    "sccm\\core\\get-started\\capabilities-in-technical-preview-1604.md.efdb0eba7de2e6fae7ccf5b4f237951d97f3ea47.HT": {
+      "SourceFilename": "sccm\\core\\get-started\\capabilities-in-technical-preview-1604.md",
+      "XliffHash": "efdb0eba7de2e6fae7ccf5b4f237951d97f3ea47",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\1d42adcf47fb9ccc89e18114914ff893d4080ede.2fbc4b07a141ac65072e0bbae141c7c2d4794650.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\core\\plan-design\\configs\\supported-operating-systems-for-clients-and-devices.md.649d392db69b3ba087dacf5d9f474eac975b226c.HT": {
+      "SourceFilename": "sccm\\core\\plan-design\\configs\\supported-operating-systems-for-clients-and-devices.md",
+      "XliffHash": "649d392db69b3ba087dacf5d9f474eac975b226c",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\f492c7d3994935c1efc155d95af5d9201cf6b888.3c462184cd1a1ae1e320bb3747dbb5f81d04df68.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\core\\understand\\learn-more-editions.md.05557c6b295e3929d0a657aaac27ea05eeef7fac.HT": {
+      "SourceFilename": "sccm\\core\\understand\\learn-more-editions.md",
+      "XliffHash": "05557c6b295e3929d0a657aaac27ea05eeef7fac",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\999f7db0e92301c9ed834b8689388f0f90d887df.b1b840e56b60d73224029e37cad91613685d76fc.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\core\\servers\\manage\\use-the-service-connection-tool.md.15e621307e8f5f578b1ed84fee7e4d59ea2c42f2.HT": {
+      "SourceFilename": "sccm\\core\\servers\\manage\\use-the-service-connection-tool.md",
+      "XliffHash": "15e621307e8f5f578b1ed84fee7e4d59ea2c42f2",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\0fc8df75f7595cd980c64585ec8d416fefbd7796.5a63e3e8ee5495340705fc9263e7fc5ac8457139.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\mdm\\deploy-use\\enroll-hybrid-android.md.116b32c151f4d71433e2bcf05ec19d8b29331454.HT": {
+      "SourceFilename": "sccm\\mdm\\deploy-use\\enroll-hybrid-android.md",
+      "XliffHash": "116b32c151f4d71433e2bcf05ec19d8b29331454",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\8f2424c8727afed02423662800a3f24466de8b8d.646d2cfbe50384b7e74a2145eb7e1a6607dd8f99.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\core\\plan-design\\configs\\supported-operating-systems-for-site-system-servers.md.0cb478a7072d83446cf6e42ebaeb082cf2d884fc.HT": {
+      "SourceFilename": "sccm\\core\\plan-design\\configs\\supported-operating-systems-for-site-system-servers.md",
+      "XliffHash": "0cb478a7072d83446cf6e42ebaeb082cf2d884fc",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\ca7cde1ffba14cb789bd1653ede09a0daecbe394.9d2af0adb8d20aac18ee207d851fb4a12a1cad6d.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\core\\plan-design\\configs\\supported-operating-systems-consoles.md.b69eee78493ee27648784cbaf943e17e8e07f13f.HT": {
+      "SourceFilename": "sccm\\core\\plan-design\\configs\\supported-operating-systems-consoles.md",
+      "XliffHash": "b69eee78493ee27648784cbaf943e17e8e07f13f",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\bc7273e8ba016cefc2a60dfec7157dd5a020e784.f65037ae5045025dcec7d697f2800da34966d089.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\mdm\\TOC.md.1e1f14c970b8c620ecff1c5f3e1ada4724a4830c.HT": {
+      "SourceFilename": "sccm\\mdm\\TOC.md",
+      "XliffHash": "1e1f14c970b8c620ecff1c5f3e1ada4724a4830c",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\9c3df5ed669350b3ba38ce9f51c6d3dab449a86a.64c5c59f3cfe76128d07a5aaac5cfa0abc44c398.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\core\\TOC.md.a69859f4ce867088cf2881a0a865f3ada0cf8389.HT": {
+      "SourceFilename": "sccm\\core\\TOC.md",
+      "XliffHash": "a69859f4ce867088cf2881a0a865f3ada0cf8389",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\a691c59c1b1bda829f4968037f9bd96247eb607f.db42c08b04d17266ea08a75f63e5e226b22898a8.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\core\\plan-design\\hierarchy\\ports.md.edb58ae4711a75311714b8ad241e7164e226a8e4.HT": {
+      "SourceFilename": "sccm\\core\\plan-design\\hierarchy\\ports.md",
+      "XliffHash": "edb58ae4711a75311714b8ad241e7164e226a8e4",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\88379195efd1f29dd7d28449bb1371786518e55d.58e236f3f722bf5408be91a341eda0490f22a2bc.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\mdm\\deploy-use\\enroll-hybrid-ios-mac.md.0999ead8653bd94133285c1d6b36282c666bc9df.HT": {
+      "SourceFilename": "sccm\\mdm\\deploy-use\\enroll-hybrid-ios-mac.md",
+      "XliffHash": "0999ead8653bd94133285c1d6b36282c666bc9df",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\9c26140d8cbebf3c0e4dedf8539da696ae6f2632.0b38f0bef3326ec64be94750b96f78523006088b.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\core\\plan-design\\network\\configure-firewalls-ports-domains.md.16c8fc001649fb5881765ede3fb193e01b731b3f.HT": {
+      "SourceFilename": "sccm\\core\\plan-design\\network\\configure-firewalls-ports-domains.md",
+      "XliffHash": "16c8fc001649fb5881765ede3fb193e01b731b3f",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\f2164eddb9c785cdb72c1a6ce36dccb27b197005.17df0644e910f6b75e30c737ffe10b9298e13cfe.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\core\\understand\\introduction-to-the-ltsb.md.d250e875c5babae655e0528cc78c878f69ed9947.HT": {
+      "SourceFilename": "sccm\\core\\understand\\introduction-to-the-ltsb.md",
+      "XliffHash": "d250e875c5babae655e0528cc78c878f69ed9947",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\7102fa42f0b95b8e2a9f41d2732bb6b0e3e0b6fb.a54c33a36e9f10a9928147dc47c6127612528c43.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\mdm\\deploy-use\\setup-hybrid-mdm.md.734ca52c8621766612e10a1f7e50e44733bf378d.HT": {
+      "SourceFilename": "sccm\\mdm\\deploy-use\\setup-hybrid-mdm.md",
+      "XliffHash": "734ca52c8621766612e10a1f7e50e44733bf378d",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\8f49e1007402d6f8ed06eef9e1580f8ec978a8eb.477f23111253990357ac335382554e2493bfaca0.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\core\\understand\\supported-configurations-for-ltsb.md.bd2c5c644e04d9525dd751e242e7a851890d1977.HT": {
+      "SourceFilename": "sccm\\core\\understand\\supported-configurations-for-ltsb.md",
+      "XliffHash": "bd2c5c644e04d9525dd751e242e7a851890d1977",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\25dbdd401d0f6e955e5dcc704a0c756c74c64773.ba282a4cb5fb7e41de4910fc4d233b791fd2affa.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\core\\get-started\\technical-preview.md.046363e73045a4e3624645f8198e45dfdaf0841e.HT": {
+      "SourceFilename": "sccm\\core\\get-started\\technical-preview.md",
+      "XliffHash": "046363e73045a4e3624645f8198e45dfdaf0841e",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\ba197db70c165aae822d6ffa009c3bd9fc094945.70017f71d618843bc6ce059593937fc86f66e415.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\mdm\\deploy-use\\enroll-hybrid-windows.md.7e2d96ce9a420128e07d9b987490df90b115dd93.HT": {
+      "SourceFilename": "sccm\\mdm\\deploy-use\\enroll-hybrid-windows.md",
+      "XliffHash": "7e2d96ce9a420128e07d9b987490df90b115dd93",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\566332d1aef100c110fc159d65a8267911f14166.f7b41ff69a53e6712015d703609e2fdde1675203.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
     }
   }
 }
