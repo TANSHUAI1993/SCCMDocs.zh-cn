@@ -10619,6 +10619,36 @@
       "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\566332d1aef100c110fc159d65a8267911f14166.f7b41ff69a53e6712015d703609e2fdde1675203.xml",
       "LocXliff": null,
       "LocXliffCommit": null
+    },
+    "sccm\\core\\understand\\install-the-ltsb.md.34ba443dc6d0a9e2549909105eb8c45b0c81abf3.HT": {
+      "SourceFilename": "sccm\\core\\understand\\install-the-ltsb.md",
+      "XliffHash": "34ba443dc6d0a9e2549909105eb8c45b0c81abf3",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\cb99a8194767fa485e22024435b68688ed4aa0c4.5407567eed3c9d89bbcad93e046f7e02fedae01c.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\core\\get-started\\technical-preview.md.2888d6f125f0675928aa596bd0044c58f4648cb9.HT": {
+      "SourceFilename": "sccm\\core\\get-started\\technical-preview.md",
+      "XliffHash": "2888d6f125f0675928aa596bd0044c58f4648cb9",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\5861c939ef97a28617410d41378ce091b9dff662.e564e80be2cdf12662d4f5c01fdfebb9a7157d93.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\core\\servers\\manage\\install-in-console-updates.md.2e842eaa0773dbe9dcbf70167fdd28e82e052a5b.HT": {
+      "SourceFilename": "sccm\\core\\servers\\manage\\install-in-console-updates.md",
+      "XliffHash": "2e842eaa0773dbe9dcbf70167fdd28e82e052a5b",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\2aa4464bb5e2a457f3adef8889ce1b6a804299cc.5177dfd87d94b55379e630213767b5fe28e5cdef.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
     }
   }
 }

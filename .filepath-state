@@ -1004,6 +1004,9 @@
   "25ee2f92231d4b177e2bdc099c37c263e468069f": [
     "sccm\\core\\get-started\\set-up-your-lab.md"
   ],
+  "5861c939ef97a28617410d41378ce091b9dff662": [
+    "sccm\\core\\get-started\\technical-preview.md"
+  ],
   "ba197db70c165aae822d6ffa009c3bd9fc094945": [
     "sccm\\core\\get-started\\technical-preview.md"
   ],
@@ -1918,6 +1921,9 @@
   ],
   "28ee7ba421ebae9cddef4c5c5b3cc65924784579": [
     "sccm\\core\\servers\\manage\\hierarchy-maintenance-tool-preinst.exe.md"
+  ],
+  "2aa4464bb5e2a457f3adef8889ce1b6a804299cc": [
+    "sccm\\core\\servers\\manage\\install-in-console-updates.md"
   ],
   "769cd35f73e225e212450b7291457e8e32da35e3": [
     "sccm\\core\\servers\\manage\\install-in-console-updates.md"
@@ -3178,6 +3184,9 @@
   ],
   "efccff6e2a0b1708d4124648da4e173d41663bd1": [
     "sccm\\core\\understand\\convert-to-current-branch.md"
+  ],
+  "cb99a8194767fa485e22024435b68688ed4aa0c4": [
+    "sccm\\core\\understand\\install-the-ltsb.md"
   ],
   "bd6eb3455fe1395ad08677922be98ea91c30119f": [
     "sccm\\core\\understand\\install-the-ltsb.md"
