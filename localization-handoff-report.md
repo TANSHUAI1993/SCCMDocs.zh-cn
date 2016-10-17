@@ -1,58 +1,19 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 4
+ Total Files | 1
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [sccm\core\plan-design\changes\removed-and-deprecated-features.md](https://github.com/Microsoft/SCCMDocs-pr/blob/6e5f6b275e82a4c3f47728a4db5c132f227cb977/sccm/core/plan-design/changes/removed-and-deprecated-features.md) | HandedOffSuccess | [Details](#085609a55e4ab837537867d0fc16ec245ed07277233)
- [sccm\core\plan-design\hierarchy\ports.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5a9ff396f9f0a8c0e3b90ce8280770916cf54c1d/sccm/core/plan-design/hierarchy/ports.md) | HandedOffSuccess | [Details](#abdf07a9c1047eedebc47263ab9725db5ed90c40274)
- [sccm\core\servers\deploy\install\upgrade-to-configuration-manager.md](https://github.com/Microsoft/SCCMDocs-pr/blob/fbdf988f51b110c09f53067d9cca09419e0142ec/sccm/core/servers/deploy/install/upgrade-to-configuration-manager.md) | HandedOffSuccess | [Details](#bfc9e5abe63a3e03be91a194d006e6a96ac54f09339)
- [sccm\core\servers\manage\install-in-console-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/7a8352b4ebbfc79482b862698ea02ac895a18f3c/sccm/core/servers/manage/install-in-console-updates.md) | HandedOffSuccess | [Details](#80cb3565a65bff8591f0656dfb347674565d7be3354)
+ [sccm\core\servers\deploy\install\upgrade-to-configuration-manager.md](https://github.com/Microsoft/SCCMDocs-pr/blob/987ccde8487b1972b0aa964cff0d3985854bfbd6/sccm/core/servers/deploy/install/upgrade-to-configuration-manager.md) | HandedOffSuccess | [Details](#cc22f5f4ec084f758c6588ee8b3feb3b1d19aeef339)
 
 ## Item Details
-##### <a name='085609a55e4ab837537867d0fc16ec245ed07277233'></a> Source: [sccm\core\plan-design\changes\removed-and-deprecated-features.md](https://github.com/Microsoft/SCCMDocs-pr/blob/6e5f6b275e82a4c3f47728a4db5c132f227cb977/sccm/core/plan-design/changes/removed-and-deprecated-features.md)
+##### <a name='cc22f5f4ec084f758c6588ee8b3feb3b1d19aeef339'></a> Source: [sccm\core\servers\deploy\install\upgrade-to-configuration-manager.md](https://github.com/Microsoft/SCCMDocs-pr/blob/987ccde8487b1972b0aa964cff0d3985854bfbd6/sccm/core/servers/deploy/install/upgrade-to-configuration-manager.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [removed-and-deprecated-features.9a1a78e1af684ac0ac7f4b27b3dce0888ea79f2a.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/bbaa83d6fb9357734243fb10ba57b2ff5ae3ca95/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/removed-and-deprecated-features.9a1a78e1af684ac0ac7f4b27b3dce0888ea79f2a.zh-cn.xlf)
-* Handoff Datetime: 2016-10-17 17:18:23
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='abdf07a9c1047eedebc47263ab9725db5ed90c40274'></a> Source: [sccm\core\plan-design\hierarchy\ports.md](https://github.com/Microsoft/SCCMDocs-pr/blob/5a9ff396f9f0a8c0e3b90ce8280770916cf54c1d/sccm/core/plan-design/hierarchy/ports.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [ports.1566958a62bcff17aa537f709b14b2748a76cc30.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/bbaa83d6fb9357734243fb10ba57b2ff5ae3ca95/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/ports.1566958a62bcff17aa537f709b14b2748a76cc30.zh-cn.xlf)
-* Handoff Datetime: 2016-10-17 17:18:23
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='bfc9e5abe63a3e03be91a194d006e6a96ac54f09339'></a> Source: [sccm\core\servers\deploy\install\upgrade-to-configuration-manager.md](https://github.com/Microsoft/SCCMDocs-pr/blob/fbdf988f51b110c09f53067d9cca09419e0142ec/sccm/core/servers/deploy/install/upgrade-to-configuration-manager.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [upgrade-to-configuration-manager.c67ad3727bd2d3f1d75b67cfa618b21aeb3164dc.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/bbaa83d6fb9357734243fb10ba57b2ff5ae3ca95/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/upgrade-to-configuration-manager.c67ad3727bd2d3f1d75b67cfa618b21aeb3164dc.zh-cn.xlf)
-* Handoff Datetime: 2016-10-17 17:18:23
-* Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
-* Handback File: 
-* Handback Datetime: 0001-01-01 00:00:00
-* [Back to Top](#report-top)
-
-##### <a name='80cb3565a65bff8591f0656dfb347674565d7be3354'></a> Source: [sccm\core\servers\manage\install-in-console-updates.md](https://github.com/Microsoft/SCCMDocs-pr/blob/7a8352b4ebbfc79482b862698ea02ac895a18f3c/sccm/core/servers/manage/install-in-console-updates.md)
-* Status: HandedOffSuccess
-* Target File: 
-* Handoff File: [install-in-console-updates.ec6470a74a646ecca82059482d066aa15f3b06f2.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/bbaa83d6fb9357734243fb10ba57b2ff5ae3ca95/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/install-in-console-updates.ec6470a74a646ecca82059482d066aa15f3b06f2.zh-cn.xlf)
-* Handoff Datetime: 2016-10-17 17:18:23
+* Handoff File: [upgrade-to-configuration-manager.c67ad3727bd2d3f1d75b67cfa618b21aeb3164dc.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/c0135a9d8f4a86ee0e3ae23f7c0b7024b730e131/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/upgrade-to-configuration-manager.c67ad3727bd2d3f1d75b67cfa618b21aeb3164dc.zh-cn.xlf)
+* Handoff Datetime: 2016-10-17 19:14:40
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00

@@ -10749,6 +10749,16 @@
       "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\abdf07a9c1047eedebc47263ab9725db5ed90c40.87e13f5ba822d1155ffe4360a450bd6cf6405686.xml",
       "LocXliff": null,
       "LocXliffCommit": null
+    },
+    "sccm\\core\\servers\\deploy\\install\\upgrade-to-configuration-manager.md.18ea6390e2864645bd2846bdd8c636ed2fcd82e4.HT": {
+      "SourceFilename": "sccm\\core\\servers\\deploy\\install\\upgrade-to-configuration-manager.md",
+      "XliffHash": "18ea6390e2864645bd2846bdd8c636ed2fcd82e4",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\cc22f5f4ec084f758c6588ee8b3feb3b1d19aeef.6661516e4ae895b914d40582926ca1d5f94c421f.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
     }
   }
 }
