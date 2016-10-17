@@ -9766,7 +9766,7 @@
       "TranslationType": 1,
       "IsArchived": false,
       "ArchivedDateTime": "0001-01-01T00:00:00",
-      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\ec876316a220d9ed49b11641c6beb1281c4f0004.db6ccd01679c84d30e8a1011e1faf961e7b4d1e9.xml",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\9af69a813a1fe2a07e3b7b289e258b2d0b51a6f7.afb3884f5003ce73e184cb5a3fc993281d27df2f.xml",
       "LocXliff": null,
       "LocXliffCommit": null
     },
@@ -9826,7 +9826,7 @@
       "TranslationType": 1,
       "IsArchived": false,
       "ArchivedDateTime": "0001-01-01T00:00:00",
-      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\e78f0e741c6d98cf54e55a2c175259ba9d7ce556.24b39689a56812a5d918eddcf93bbe91116bfc21.xml",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\dda572392884c54b63af09a9fae79c1e73eb3d95.778d89056a8a7f985b412bb1d484af8cc3f6e334.xml",
       "LocXliff": null,
       "LocXliffCommit": null
     },
@@ -10526,7 +10526,7 @@
       "TranslationType": 1,
       "IsArchived": false,
       "ArchivedDateTime": "0001-01-01T00:00:00",
-      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\9007f9905711f1bea5d978ad2d100bc279a5f15f.eae57a00e3cac4867e8ccf3533fc65be87c7cb84.xml",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\74503753f9cd5a0061bbbe50af2b4c42061d0df8.c70ac788a5cef40be9205a55bc8fdce9beb22046.xml",
       "LocXliff": null,
       "LocXliffCommit": null
     },
@@ -10647,6 +10647,66 @@
       "IsArchived": false,
       "ArchivedDateTime": "0001-01-01T00:00:00",
       "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\2aa4464bb5e2a457f3adef8889ce1b6a804299cc.5177dfd87d94b55379e630213767b5fe28e5cdef.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\protect\\deploy-use\\create-certificate-profiles.md.5973e3ddfe5f3b01c0c2ac32bdb301ff4a8dcbcc.HT": {
+      "SourceFilename": "sccm\\protect\\deploy-use\\create-certificate-profiles.md",
+      "XliffHash": "5973e3ddfe5f3b01c0c2ac32bdb301ff4a8dcbcc",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\04fd4cb7eb07e3fbb5d6a9a4604fcca87e440a6f.0c4a7e596b1820ed41e77312c6b27522954cae57.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\core\\clients\\manage\\sync-data-microsoft-operations-management-suite.md.3c2783132923233f7c1d367f148f78c187ce0d3e.HT": {
+      "SourceFilename": "sccm\\core\\clients\\manage\\sync-data-microsoft-operations-management-suite.md",
+      "XliffHash": "3c2783132923233f7c1d367f148f78c187ce0d3e",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\5786f0734ce186601f5173003b9b133ed6ae8b11.023cb35dcad6f788699e4a70a3c853bfdc1b995c.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\protect\\deploy-use\\windows-hello-for-business-settings.md.c5ffe439258505e90c6e3dd8232b327b30cd0ab3.HT": {
+      "SourceFilename": "sccm\\protect\\deploy-use\\windows-hello-for-business-settings.md",
+      "XliffHash": "c5ffe439258505e90c6e3dd8232b327b30cd0ab3",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\96813bb75a7266a6a54a2ae772599d757a024745.b0a350a9f9a86dd329f7a0057c8f20b919aa20cf.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\core\\plan-design\\changes\\whats-new-in-version-1606.md.666f08bcfc5a05f6abffefeaf7d99b104ef7bdce.HT": {
+      "SourceFilename": "sccm\\core\\plan-design\\changes\\whats-new-in-version-1606.md",
+      "XliffHash": "666f08bcfc5a05f6abffefeaf7d99b104ef7bdce",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\8de28e112a2d7faf1d8aca9b7214498e9a65f919.44a34b210d6249b4b7c409153eabee31f5dbaeb9.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\protect\\deploy-use\\create-vpn-profiles.md.6a27194a0eccdfd6081c9b3df7100f010911697c.HT": {
+      "SourceFilename": "sccm\\protect\\deploy-use\\create-vpn-profiles.md",
+      "XliffHash": "6a27194a0eccdfd6081c9b3df7100f010911697c",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\47f7e03ab69ee803eb269525892c19a6a58296d4.c215fca04619c93c6e6f7d05447131a0085f04ec.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\protect\\deploy-use\\Custom VPN profile.md.bb6e80075ad01aad8c8302124e6819ec02fae694.HT": {
+      "SourceFilename": "sccm\\protect\\deploy-use\\Custom VPN profile.md",
+      "XliffHash": "bb6e80075ad01aad8c8302124e6819ec02fae694",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\dc8dc829923468ac4021797091efc97c31324456.4b638ca80106b78f908495f831e39c5e6c94008b.xml",
       "LocXliff": null,
       "LocXliffCommit": null
     }

@@ -887,6 +887,9 @@
   "4a9fb582d7d109bbe5ea902796baed804de28e51": [
     "sccm\\core\\clients\\manage\\remote-control\\technical-reference-for-remote-control.md"
   ],
+  "5786f0734ce186601f5173003b9b133ed6ae8b11": [
+    "sccm\\core\\clients\\manage\\sync-data-microsoft-operations-management-suite.md"
+  ],
   "85d27d084eeb0816568fa8606b878528c75e5f24": [
     "sccm\\core\\clients\\manage\\sync-data-microsoft-operations-management-suite.md"
   ],
@@ -1249,6 +1252,9 @@
   ],
   "93d6987e269f1dfc06b40782d64da23a01589cbd": [
     "sccm\\core\\plan-design\\changes\\whats-new-in-version-1602.md"
+  ],
+  "8de28e112a2d7faf1d8aca9b7214498e9a65f919": [
+    "sccm\\core\\plan-design\\changes\\whats-new-in-version-1606.md"
   ],
   "628360044701c1722ca370a84a5b407c99792464": [
     "sccm\\core\\plan-design\\changes\\whats-new-in-version-1606.md"
@@ -2336,6 +2342,9 @@
   "27aae39d2095681405503db3dca9fff0892713f1": [
     "sccm\\mdm\\plan-design\\plan-on-premises-mdm.md"
   ],
+  "74503753f9cd5a0061bbbe50af2b4c42061d0df8": [
+    "sccm\\mdm\\TOC.md"
+  ],
   "9007f9905711f1bea5d978ad2d100bc279a5f15f": [
     "sccm\\mdm\\TOC.md"
   ],
@@ -2678,6 +2687,9 @@
   "d08ab7fd4ebefd3aec81ff7ac0810207dd42e418": [
     "sccm\\osd\\understand\\task-sequence-steps.md"
   ],
+  "9af69a813a1fe2a07e3b7b289e258b2d0b51a6f7": [
+    "sccm\\protect\\deploy-use\\certificate-infrastructure.md"
+  ],
   "ec876316a220d9ed49b11641c6beb1281c4f0004": [
     "sccm\\protect\\deploy-use\\certificate-infrastructure.md"
   ],
@@ -2689,6 +2701,9 @@
   ],
   "2927583602c1039d1730a82f652a7fd16f85595e": [
     "sccm\\protect\\deploy-use\\configure-endpoint-protection.md"
+  ],
+  "04fd4cb7eb07e3fbb5d6a9a4604fcca87e440a6f": [
+    "sccm\\protect\\deploy-use\\create-certificate-profiles.md"
   ],
   "9dc1ae41cc36a73fa440694a03f98497ec739cc2": [
     "sccm\\protect\\deploy-use\\create-certificate-profiles.md"
@@ -2713,6 +2728,9 @@
   ],
   "a3fdd3fd2148e259d80eea7282527ee95080d283": [
     "sccm\\protect\\deploy-use\\create-pfx-certificate-profiles.md"
+  ],
+  "47f7e03ab69ee803eb269525892c19a6a58296d4": [
+    "sccm\\protect\\deploy-use\\create-vpn-profiles.md"
   ],
   "4e9d5217bd06b68073aae9f9d9c79bd634d880cd": [
     "sccm\\protect\\deploy-use\\create-vpn-profiles.md"
@@ -2930,6 +2948,9 @@
   "093549d3d3f4b3e85d73c0243bd7f05e35061d0c": [
     "sccm\\protect\\deploy-use\\troubleshoot-endpoint-client.md"
   ],
+  "dda572392884c54b63af09a9fae79c1e73eb3d95": [
+    "sccm\\protect\\deploy-use\\vpn-profiles.md"
+  ],
   "e78f0e741c6d98cf54e55a2c175259ba9d7ce556": [
     "sccm\\protect\\deploy-use\\vpn-profiles.md"
   ],
@@ -2941,6 +2962,9 @@
   ],
   "a13f4f6509ac59ad4663e3227c10e0b686ecdd33": [
     "sccm\\protect\\deploy-use\\windows-defender-advanced-threat-protection.md"
+  ],
+  "96813bb75a7266a6a54a2ae772599d757a024745": [
+    "sccm\\protect\\deploy-use\\windows-hello-for-business-settings.md"
   ],
   "f2a853d63407637d4e8ece5d46cd4f0dc717c3de": [
     "sccm\\protect\\deploy-use\\windows-hello-for-business-settings.md"
@@ -3217,5 +3241,8 @@
   ],
   "566332d1aef100c110fc159d65a8267911f14166": [
     "sccm\\mdm\\deploy-use\\enroll-hybrid-windows.md"
+  ],
+  "dc8dc829923468ac4021797091efc97c31324456": [
+    "sccm\\protect\\deploy-use\\Custom VPN profile.md"
   ]
 }
