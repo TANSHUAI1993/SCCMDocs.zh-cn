@@ -10709,6 +10709,46 @@
       "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\dc8dc829923468ac4021797091efc97c31324456.4b638ca80106b78f908495f831e39c5e6c94008b.xml",
       "LocXliff": null,
       "LocXliffCommit": null
+    },
+    "sccm\\core\\servers\\deploy\\install\\upgrade-to-configuration-manager.md.b6465ccc4b88b9216060ea3867cd857f30bf858a.HT": {
+      "SourceFilename": "sccm\\core\\servers\\deploy\\install\\upgrade-to-configuration-manager.md",
+      "XliffHash": "b6465ccc4b88b9216060ea3867cd857f30bf858a",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\bfc9e5abe63a3e03be91a194d006e6a96ac54f09.6ac87d3e1ddfa3e1e384c9b177355f85c1b8c995.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\core\\plan-design\\changes\\removed-and-deprecated-features.md.72c8f5cc3c277154a30fdf0839e610f9ed599b0c.HT": {
+      "SourceFilename": "sccm\\core\\plan-design\\changes\\removed-and-deprecated-features.md",
+      "XliffHash": "72c8f5cc3c277154a30fdf0839e610f9ed599b0c",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\085609a55e4ab837537867d0fc16ec245ed07277.e26bf7d119a71c5e5217db01a57c0c228f24403f.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\core\\servers\\manage\\install-in-console-updates.md.593665ba76d037763d5829aaa3be900f13888cb1.HT": {
+      "SourceFilename": "sccm\\core\\servers\\manage\\install-in-console-updates.md",
+      "XliffHash": "593665ba76d037763d5829aaa3be900f13888cb1",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\80cb3565a65bff8591f0656dfb347674565d7be3.e5cd4bf79ab9a78fbff3f94b5f8f2607644c6a5a.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\core\\plan-design\\hierarchy\\ports.md.4d9be39d69d0ca2d4407f7d657bbf362dd153141.HT": {
+      "SourceFilename": "sccm\\core\\plan-design\\hierarchy\\ports.md",
+      "XliffHash": "4d9be39d69d0ca2d4407f7d657bbf362dd153141",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\abdf07a9c1047eedebc47263ab9725db5ed90c40.87e13f5ba822d1155ffe4360a450bd6cf6405686.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
     }
   }
 }
