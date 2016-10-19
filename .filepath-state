@@ -1469,6 +1469,9 @@
   "695efaa5e552c5a5d8799baf820361b8cb6080df": [
     "sccm\\core\\plan-design\\hierarchy\\package-transfer-manager.md"
   ],
+  "12ac975bbb61dbfd3acd9960e46c4ec3ba5d954c": [
+    "sccm\\core\\plan-design\\hierarchy\\plan-for-site-system-servers-and-site-system-roles.md"
+  ],
   "47c744fb2840bd1ca3b7ed471a0a70f0d7293ce4": [
     "sccm\\core\\plan-design\\hierarchy\\plan-for-site-system-servers-and-site-system-roles.md"
   ],
@@ -1844,6 +1847,9 @@
   "eb2088e0c0daa8ef7cee729d85605be4c0f12761": [
     "sccm\\core\\servers\\deploy\\install\\upgrade-an-evaluation-install-to-a-full-install.md"
   ],
+  "d2e28c752161441fa24f1966542d11f52ad590b9": [
+    "sccm\\core\\servers\\deploy\\install\\upgrade-to-configuration-manager.md"
+  ],
   "cc22f5f4ec084f758c6588ee8b3feb3b1d19aeef": [
     "sccm\\core\\servers\\deploy\\install\\upgrade-to-configuration-manager.md"
   ],
@@ -2084,6 +2090,9 @@
   "7dfbeeb2fb21da15a31a102968eba681d088ab4b": [
     "sccm\\core\\servers\\manage\\use-the-hotfix-installer-to-install-updates.md"
   ],
+  "379f71e41483bcd3ac5a114dc8d99d750f3e9f69": [
+    "sccm\\core\\servers\\manage\\use-the-service-connection-tool.md"
+  ],
   "0fc8df75f7595cd980c64585ec8d416fefbd7796": [
     "sccm\\core\\servers\\manage\\use-the-service-connection-tool.md"
   ],
@@ -2218,6 +2227,9 @@
   ],
   "994538bd678dafa7d79b47ceaabe8af86b1fbc4f": [
     "sccm\\mdm\\deploy-use\\enroll-devices-with-device-enrollment-manager.md"
+  ],
+  "8ca3f5bd1521d847363c9cbf97ee8f93f40584ed": [
+    "sccm\\mdm\\deploy-use\\ios-device-enrollment-program-for-hybrid.md"
   ],
   "d5ada01ecb200c662f1a7941c814e6938c421a65": [
     "sccm\\mdm\\deploy-use\\ios-device-enrollment-program-for-hybrid.md"
@@ -2789,6 +2801,9 @@
   "59f83ac8f5d0edc04236e381173d14bc980fa79e": [
     "sccm\\protect\\deploy-use\\endpoint-antimalware-firewall.md"
   ],
+  "9a495bd5452f1d4621066b1eeed6332bf74f0ecf": [
+    "sccm\\protect\\deploy-use\\endpoint-antimalware-policies.md"
+  ],
   "f211a26e578b64fb0699d8895d7e875005389507": [
     "sccm\\protect\\deploy-use\\endpoint-antimalware-policies.md"
   ],
@@ -2837,6 +2852,9 @@
   "5144a02518d88555b0fa27d78fe390308b8cb7a8": [
     "sccm\\protect\\deploy-use\\endpoint-definition-updates.md"
   ],
+  "7b2df7db549b78e7f8ef9dc0454904d556c3cab1": [
+    "sccm\\protect\\deploy-use\\endpoint-protection.md"
+  ],
   "a17994dca24003c58d582df4e7b8c923fa028186": [
     "sccm\\protect\\deploy-use\\endpoint-protection.md"
   ],
@@ -2866,6 +2884,9 @@
   ],
   "707c5e20c02ea0bbdf9ed98f572722c5f6bea1cd": [
     "sccm\\protect\\deploy-use\\endpoint-protection-configure-client.md"
+  ],
+  "c10be69a839dcf4424d8005c94540ef96870d812": [
+    "sccm\\protect\\deploy-use\\endpoint-protection-site-role.md"
   ],
   "c2e457d14b018052c70e52a1cd285dd137928b62": [
     "sccm\\protect\\deploy-use\\endpoint-protection-site-role.md"
@@ -2993,6 +3014,9 @@
   "84232e2e78fe282691ea0838208b94979291c937": [
     "sccm\\protect\\plan-design\\planning-for-certificate-template-permissions.md"
   ],
+  "66b7913c51b312eb320ab7da26f409aa2db10310": [
+    "sccm\\protect\\plan-design\\planning-for-endpoint-protection.md"
+  ],
   "c246ac727efa21fab30a81999cc9bad00f20551e": [
     "sccm\\protect\\plan-design\\planning-for-endpoint-protection.md"
   ],
@@ -3028,6 +3052,9 @@
   ],
   "4dc5096745bcffa3525a8c356d720470313c59fc": [
     "sccm\\protect\\plan-design\\security-and-privacy-for-email-profiles.md"
+  ],
+  "b9d70018708ab5932a3032134b03aef236ef9fda": [
+    "sccm\\protect\\plan-design\\security-and-privacy-for-wifi-vpn-profiles.md"
   ],
   "6d74b8006e6c778c281718446fd51467dc63829a": [
     "sccm\\protect\\plan-design\\security-and-privacy-for-wifi-vpn-profiles.md"
@@ -3223,6 +3250,9 @@
   ],
   "efccff6e2a0b1708d4124648da4e173d41663bd1": [
     "sccm\\core\\understand\\convert-to-current-branch.md"
+  ],
+  "3df46a00f2208ffa687c8c99ce610266e206eef0": [
+    "sccm\\core\\understand\\install-the-ltsb.md"
   ],
   "cb99a8194767fa485e22024435b68688ed4aa0c4": [
     "sccm\\core\\understand\\install-the-ltsb.md"

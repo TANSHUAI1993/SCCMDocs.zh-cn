@@ -10759,6 +10759,106 @@
       "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\cc22f5f4ec084f758c6588ee8b3feb3b1d19aeef.6661516e4ae895b914d40582926ca1d5f94c421f.xml",
       "LocXliff": null,
       "LocXliffCommit": null
+    },
+    "sccm\\protect\\plan-design\\planning-for-endpoint-protection.md.7fd1f0605cd8ccad51cf24167c6b67528e7063e6.HT": {
+      "SourceFilename": "sccm\\protect\\plan-design\\planning-for-endpoint-protection.md",
+      "XliffHash": "7fd1f0605cd8ccad51cf24167c6b67528e7063e6",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\66b7913c51b312eb320ab7da26f409aa2db10310.0dcfbbab48711a4a864a47c65434956bc561a2c6.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\core\\plan-design\\hierarchy\\plan-for-site-system-servers-and-site-system-roles.md.1113a9370e552428b2eb54be40802f9d38dd5a8d.HT": {
+      "SourceFilename": "sccm\\core\\plan-design\\hierarchy\\plan-for-site-system-servers-and-site-system-roles.md",
+      "XliffHash": "1113a9370e552428b2eb54be40802f9d38dd5a8d",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\12ac975bbb61dbfd3acd9960e46c4ec3ba5d954c.37855e1e5feb051c1f027e80d87c3c948d5dac33.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\protect\\deploy-use\\endpoint-antimalware-policies.md.04adc609e3125cbe3e242bd67bfd3fafe8507898.HT": {
+      "SourceFilename": "sccm\\protect\\deploy-use\\endpoint-antimalware-policies.md",
+      "XliffHash": "04adc609e3125cbe3e242bd67bfd3fafe8507898",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\9a495bd5452f1d4621066b1eeed6332bf74f0ecf.fa2effc2fbadd964ebde1c7100209e6e9cd111a7.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\core\\servers\\deploy\\install\\upgrade-to-configuration-manager.md.08fa4e920746df280c4bafac7cd51122678158c5.HT": {
+      "SourceFilename": "sccm\\core\\servers\\deploy\\install\\upgrade-to-configuration-manager.md",
+      "XliffHash": "08fa4e920746df280c4bafac7cd51122678158c5",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\d2e28c752161441fa24f1966542d11f52ad590b9.970f3cc444af2060067545a92281dc1f059d12c2.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\protect\\deploy-use\\endpoint-protection-site-role.md.367ff75001c7f1f86f270813ff0ab13e9055d543.HT": {
+      "SourceFilename": "sccm\\protect\\deploy-use\\endpoint-protection-site-role.md",
+      "XliffHash": "367ff75001c7f1f86f270813ff0ab13e9055d543",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\c10be69a839dcf4424d8005c94540ef96870d812.b9d6bd86022c3fe487002247fcc905f6d791810f.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\mdm\\deploy-use\\ios-device-enrollment-program-for-hybrid.md.68b2f3c5c290ab6d4c70132b4b090c7245196b70.HT": {
+      "SourceFilename": "sccm\\mdm\\deploy-use\\ios-device-enrollment-program-for-hybrid.md",
+      "XliffHash": "68b2f3c5c290ab6d4c70132b4b090c7245196b70",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\8ca3f5bd1521d847363c9cbf97ee8f93f40584ed.76a91c7dfa3e40359cd961e65474c7782ebf3f1f.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\protect\\plan-design\\security-and-privacy-for-wifi-vpn-profiles.md.f974c1268cc37b8128d1dfc8b2c8f6690adf693d.HT": {
+      "SourceFilename": "sccm\\protect\\plan-design\\security-and-privacy-for-wifi-vpn-profiles.md",
+      "XliffHash": "f974c1268cc37b8128d1dfc8b2c8f6690adf693d",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\b9d70018708ab5932a3032134b03aef236ef9fda.a21703a6e3d37b999a2d08b0f70682826792ce8d.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\core\\servers\\manage\\use-the-service-connection-tool.md.629540de851f430f44a178b8f0da1d309aa1b5bf.HT": {
+      "SourceFilename": "sccm\\core\\servers\\manage\\use-the-service-connection-tool.md",
+      "XliffHash": "629540de851f430f44a178b8f0da1d309aa1b5bf",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\379f71e41483bcd3ac5a114dc8d99d750f3e9f69.3e3040614d5512411fdff7587b16c368f7ca7e58.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\protect\\deploy-use\\endpoint-protection.md.282b998133f97af9ad85f72d1c586bafbf354929.HT": {
+      "SourceFilename": "sccm\\protect\\deploy-use\\endpoint-protection.md",
+      "XliffHash": "282b998133f97af9ad85f72d1c586bafbf354929",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\7b2df7db549b78e7f8ef9dc0454904d556c3cab1.cb0234e346253ac6edb983c0d4759b52cfff44ca.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\core\\understand\\install-the-ltsb.md.554d86a3b9b25901b36c14b0cbe3146b839c1338.HT": {
+      "SourceFilename": "sccm\\core\\understand\\install-the-ltsb.md",
+      "XliffHash": "554d86a3b9b25901b36c14b0cbe3146b839c1338",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\3df46a00f2208ffa687c8c99ce610266e206eef0.0434df6867b00d1859770e172be75726e5c17af4.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
     }
   }
 }
