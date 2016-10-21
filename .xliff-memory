@@ -2266,7 +2266,7 @@
       "TranslationType": 1,
       "IsArchived": false,
       "ArchivedDateTime": "0001-01-01T00:00:00",
-      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\fe7e5ae426b4dfda77786d5815632be738098a1e.ce9437801e123e01aca187f0c5b87e5773986b21.xml",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\c1f4da2644566c076a52886b9a0a3f2998ddbf88.5921c4401943b2a43e0a149929cc224d121a8195.xml",
       "LocXliff": null,
       "LocXliffCommit": null
     },
@@ -10857,6 +10857,66 @@
       "IsArchived": false,
       "ArchivedDateTime": "0001-01-01T00:00:00",
       "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\3df46a00f2208ffa687c8c99ce610266e206eef0.0434df6867b00d1859770e172be75726e5c17af4.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\osd\\understand\\task-sequence-built-in-variables.md.f34ac0c8c8e909f0d770b2160d79ef874ee1d712.HT": {
+      "SourceFilename": "sccm\\osd\\understand\\task-sequence-built-in-variables.md",
+      "XliffHash": "f34ac0c8c8e909f0d770b2160d79ef874ee1d712",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\897ab9567793bbc3c75e240ee12a477af2329660.d4c51e5b0afdc8cdf3fcf228c146e9b7d35bac2d.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\core\\get-started\\technical-preview.md.e6eb41b6973afcce10f03c743d3cadc375ae89c5.HT": {
+      "SourceFilename": "sccm\\core\\get-started\\technical-preview.md",
+      "XliffHash": "e6eb41b6973afcce10f03c743d3cadc375ae89c5",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\53ebbb84e8ede22e7a94d553fe156a3afb884ee0.cdb26ee4e8dd1550ded5508bc1dc46a18db53bf0.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\core\\TOC.md.bd3162f3aa7313f65edbdf4177d64ea00a18c3a1.HT": {
+      "SourceFilename": "sccm\\core\\TOC.md",
+      "XliffHash": "bd3162f3aa7313f65edbdf4177d64ea00a18c3a1",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\21898568df9aa1566c3cbab7fb617bd6bd94fe82.10a05fd5397e2c5317a1693ffbf2fffc5a2f52d3.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\core\\get-started\\capabilities-in-technical-preview-1610.md.55a53371d61e8596c4af0b3b09176eb89dcf0c6b.HT": {
+      "SourceFilename": "sccm\\core\\get-started\\capabilities-in-technical-preview-1610.md",
+      "XliffHash": "55a53371d61e8596c4af0b3b09176eb89dcf0c6b",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\39342e2b718430e5f59e603f94b872bbc8712ea8.e54c82cb39d9d69200eedb27e46bef5c19665c07.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\core\\get-started\\capabilities-in-technical-preview-1608.md.a9d67e4067a5cb3b596a8705599a193e92e48771.HT": {
+      "SourceFilename": "sccm\\core\\get-started\\capabilities-in-technical-preview-1608.md",
+      "XliffHash": "a9d67e4067a5cb3b596a8705599a193e92e48771",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\560e3b99ba4d55449bf695bfd44269feae055e52.e9dcc9c0bf1a1e3a1bafcfa48d77a76ed289902d.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\osd\\understand\\task-sequence-steps.md.f46cc156550eb8cc265e8f1e8bd65456ee88486a.HT": {
+      "SourceFilename": "sccm\\osd\\understand\\task-sequence-steps.md",
+      "XliffHash": "f46cc156550eb8cc265e8f1e8bd65456ee88486a",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\b62b9b89fa9b14acae5c12a67d27997e6efbf74f.42254bc18e78525acf7f65904866ff3f398c33af.xml",
       "LocXliff": null,
       "LocXliffCommit": null
     }

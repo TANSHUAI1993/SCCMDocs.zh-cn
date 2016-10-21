@@ -881,12 +881,6 @@
   "c6714c7ce2f1329721dafd16ee2b5d0c5db7ebb9": [
     "sccm\\core\\clients\\manage\\remote-control\\security-and-privacy-for-remote-control.md"
   ],
-  "9b7a00b5b937270d5f9e5129adf3fe5c5c149c17": [
-    "sccm\\core\\clients\\manage\\remote-control\\technical-reference-for-remote-control.md"
-  ],
-  "4a9fb582d7d109bbe5ea902796baed804de28e51": [
-    "sccm\\core\\clients\\manage\\remote-control\\technical-reference-for-remote-control.md"
-  ],
   "5786f0734ce186601f5173003b9b133ed6ae8b11": [
     "sccm\\core\\clients\\manage\\sync-data-microsoft-operations-management-suite.md"
   ],
@@ -983,6 +977,9 @@
   "1fe2a79cff951834cc42ced529ba0f18c9d5ba12": [
     "sccm\\core\\get-started\\capabilities-in-technical-preview-1607.md"
   ],
+  "560e3b99ba4d55449bf695bfd44269feae055e52": [
+    "sccm\\core\\get-started\\capabilities-in-technical-preview-1608.md"
+  ],
   "763d3e445225c60f21fe23fde356213763272a75": [
     "sccm\\core\\get-started\\capabilities-in-technical-preview-1608.md"
   ],
@@ -1006,6 +1003,9 @@
   ],
   "25ee2f92231d4b177e2bdc099c37c263e468069f": [
     "sccm\\core\\get-started\\set-up-your-lab.md"
+  ],
+  "53ebbb84e8ede22e7a94d553fe156a3afb884ee0": [
+    "sccm\\core\\get-started\\technical-preview.md"
   ],
   "5861c939ef97a28617410d41378ce091b9dff662": [
     "sccm\\core\\get-started\\technical-preview.md"
@@ -1108,114 +1108,6 @@
   ],
   "69910757815c7c3486b66bba19e7912fe08405ec": [
     "sccm\\core\\migration\\security-and-privacy-for-migration.md"
-  ],
-  "9e6b5371b6ccc211e5c2b2ba9e4dfa8e52d5546f": [
-    "sccm\\core\\misc\\eula\\microsoft-sql-server-2012-native-client.md"
-  ],
-  "86078390772ecbd3330763ab90bcea4584a37ffd": [
-    "sccm\\core\\misc\\eula\\microsoft-sql-server-2012-native-client.md"
-  ],
-  "01601c225d9472f680785b04b50c26b4cc6231be": [
-    "sccm\\core\\misc\\eula\\microsoft-sql-server-2014-express.md"
-  ],
-  "5d30baa75c236217d09e38da842cf892f1bd6395": [
-    "sccm\\core\\misc\\eula\\microsoft-sql-server-2014-express.md"
-  ],
-  "f2e3b2a64af71fd898cffaab31506cf59ca2ecac": [
-    "sccm\\core\\misc\\eula\\microsoft-sql-server-2014-shared-management-objects.md"
-  ],
-  "3c1062476fad2d98713826fc8e1b98465945aec9": [
-    "sccm\\core\\misc\\eula\\microsoft-sql-server-2014-shared-management-objects.md"
-  ],
-  "5210a26a6b9584aadff174d16585f1b7ae6ba38b": [
-    "sccm\\core\\misc\\eula\\microsoft-sql-server-compact-4.0-service-pack-1-sp1.md"
-  ],
-  "5e3bfc5bd5cbeeae7bba3ed917fa12cd82aed70f": [
-    "sccm\\core\\misc\\eula\\microsoft-sql-server-compact-4.0-service-pack-1-sp1.md"
-  ],
-  "564db5f643dfd612ea00d917e5fad7a688b448b5": [
-    "sccm\\core\\misc\\eula\\microsoft-system-center-configuration-manager.md"
-  ],
-  "859dbc9e4ac85af64dbdf206eb511ae0905a7758": [
-    "sccm\\core\\misc\\eula\\microsoft-system-center-configuration-manager.md"
-  ],
-  "5634a01cc719e4af7320c4525662333783923041": [
-    "sccm\\core\\misc\\eula\\microsoft-system-center-configuration-manager-evaluation.md"
-  ],
-  "42e70335f293decf3a96dd7c5b02c1e9976cd1b6": [
-    "sccm\\core\\misc\\eula\\microsoft-system-center-configuration-manager-evaluation.md"
-  ],
-  "ac6eb885d7afb69ae4b1c35dc33a98935ace7fc0": [
-    "sccm\\core\\misc\\eula\\microsoft-system-center-configuration-manager-supplemental-placeholder-eula.md"
-  ],
-  "270c628aa8c2f65d3b0332dc1c526ef97863dacd": [
-    "sccm\\core\\misc\\eula\\microsoft-system-center-configuration-manager-supplemental-placeholder-eula.md"
-  ],
-  "83a719253640a43b7166d989b895f292d1b45d5c": [
-    "sccm\\core\\misc\\eula\\microsoft-system-center-endpoint-protection-evaluation.md"
-  ],
-  "ef1b8e1f7fa912a9181a2da93a4ba0da8c344734": [
-    "sccm\\core\\misc\\eula\\microsoft-system-center-endpoint-protection-evaluation.md"
-  ],
-  "3c5801e377b7c90622cd2549941da116b751ba66": [
-    "sccm\\core\\misc\\eula\\microsoft-system-center-endpoint-protection-supplemental-placeholder-eula.md"
-  ],
-  "9fd7822c7004e6ec6d9179320f501da226e1e99c": [
-    "sccm\\core\\misc\\eula\\microsoft-system-center-endpoint-protection-supplemental-placeholder-eula.md"
-  ],
-  "91020bf55d2b4b9aaa3760bd3a5962320dc4cfeb": [
-    "sccm\\core\\misc\\eula\\microsoft-system-clr-types-for-microsoft-sql-server-2014.md"
-  ],
-  "57064b73174256221c88b90b8631cdd111427c67": [
-    "sccm\\core\\misc\\eula\\microsoft-system-clr-types-for-microsoft-sql-server-2014.md"
-  ],
-  "eec4cf18e85b4be8d7ab423fe4ae086914b184da": [
-    "sccm\\core\\misc\\eula\\sql-server-branded-components-included.md"
-  ],
-  "f8de4edb339e071afca8562e74073f02252370e9": [
-    "sccm\\core\\misc\\eula\\sql-server-branded-components-included.md"
-  ],
-  "44fd3cefb6ffb50f36653f32093ae763e923fa79": [
-    "sccm\\core\\misc\\eula\\third-party-notices.md"
-  ],
-  "e80688af8a5a5238d10335d35369d936569f9ac8": [
-    "sccm\\core\\misc\\eula\\third-party-notices.md"
-  ],
-  "00e7b4814f46d67d79e28701e694a429690e4fad": [
-    "sccm\\core\\misc\\learn-more-about-available-updates.md"
-  ],
-  "d34af7d08c1792de33519ac86f5105d9a5951b82": [
-    "sccm\\core\\misc\\learn-more-about-available-updates.md"
-  ],
-  "20c53fe8dd66ab00db46088a040666fe09a9ebf3": [
-    "sccm\\core\\misc\\online-documentation.md"
-  ],
-  "18a10fd816703facb5e30c1aa39340f06b23e847": [
-    "sccm\\core\\misc\\online-documentation.md"
-  ],
-  "a68d71169bf4fcfa305c1cbfe48498191e4d8677": [
-    "sccm\\core\\misc\\privacy\\privacy-statement.md"
-  ],
-  "2d60022786575adfbbbe69f2c6ff828951db6d48": [
-    "sccm\\core\\misc\\privacy\\privacy-statement.md"
-  ],
-  "e4105ac424acdea47ed0d0ce799eafc691557595": [
-    "sccm\\core\\misc\\privacy\\privacy-statement-microsoft-operations-management-suite-addendum.md"
-  ],
-  "20f89e088820dd21822ee696240deb0efbcec64a": [
-    "sccm\\core\\misc\\privacy\\privacy-statement-microsoft-operations-management-suite-addendum.md"
-  ],
-  "b5340ed53845a78626c6dd9a462668fdf3d405cf": [
-    "sccm\\core\\misc\\privacy\\privacy-statement-mobile-device-addendum.md"
-  ],
-  "adfa0bd7f2e4dc9b21a5be60e4cde6db0e206e43": [
-    "sccm\\core\\misc\\privacy\\privacy-statement-mobile-device-addendum.md"
-  ],
-  "41e33142462780c0dc94e669ab439d3eb7d7e670": [
-    "sccm\\core\\misc\\system-center-configuration-manager.md"
-  ],
-  "bcc184ce0d2cdb96b70af8587f43912c40c3dc55": [
-    "sccm\\core\\misc\\system-center-configuration-manager.md"
   ],
   "4cb4b977647676ad31df3d3fd8b641016b262421": [
     "sccm\\core\\Not-in-TOC.md"
@@ -2108,6 +2000,9 @@
   "b7ec243619b3fc9a0df3a5c56a57c9ad9a020feb": [
     "sccm\\core\\servers\\manage\\use-the-update-registration-tool-to-import-hotfixes.md"
   ],
+  "21898568df9aa1566c3cbab7fb617bd6bd94fe82": [
+    "sccm\\core\\TOC.md"
+  ],
   "a691c59c1b1bda829f4968037f9bd96247eb607f": [
     "sccm\\core\\TOC.md"
   ],
@@ -2191,6 +2086,9 @@
   ],
   "301944845acc62a88f318255420d7d6833443c24": [
     "sccm\\core\\understand\\use-cloud-services.md"
+  ],
+  "c1f4da2644566c076a52886b9a0a3f2998ddbf88": [
+    "sccm\\index.md"
   ],
   "fe7e5ae426b4dfda77786d5815632be738098a1e": [
     "sccm\\index.md"
@@ -2702,11 +2600,17 @@
   "2ffb87bca798f08941c35be03321a8d4e5839889": [
     "sccm\\osd\\understand\\task-sequence-action-variables.md"
   ],
+  "897ab9567793bbc3c75e240ee12a477af2329660": [
+    "sccm\\osd\\understand\\task-sequence-built-in-variables.md"
+  ],
   "9327544c5c7022a1c2d910182ec686c7f64546d9": [
     "sccm\\osd\\understand\\task-sequence-built-in-variables.md"
   ],
   "fedf8bc59aa9d4b626cfa7f377bf56f7c9403556": [
     "sccm\\osd\\understand\\task-sequence-built-in-variables.md"
+  ],
+  "b62b9b89fa9b14acae5c12a67d27997e6efbf74f": [
+    "sccm\\osd\\understand\\task-sequence-steps.md"
   ],
   "9d63f1dbb3b17fdf3731440266f6678329e2ff8d": [
     "sccm\\osd\\understand\\task-sequence-steps.md"
@@ -3289,5 +3193,8 @@
   ],
   "dc8dc829923468ac4021797091efc97c31324456": [
     "sccm\\protect\\deploy-use\\Custom VPN profile.md"
+  ],
+  "39342e2b718430e5f59e603f94b872bbc8712ea8": [
+    "sccm\\core\\get-started\\capabilities-in-technical-preview-1610.md"
   ]
 }
