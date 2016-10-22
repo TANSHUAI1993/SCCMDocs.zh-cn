@@ -10919,6 +10919,136 @@
       "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\b62b9b89fa9b14acae5c12a67d27997e6efbf74f.42254bc18e78525acf7f65904866ff3f398c33af.xml",
       "LocXliff": null,
       "LocXliffCommit": null
+    },
+    "sccm\\core\\get-started\\capabilities-in-technical-preview-1603.md.6891a0435dff099cb9d5611517754aae6c17b1c3.HT": {
+      "SourceFilename": "sccm\\core\\get-started\\capabilities-in-technical-preview-1603.md",
+      "XliffHash": "6891a0435dff099cb9d5611517754aae6c17b1c3",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\68a844413e7621ed4436edf6abffc7d8da56337d.398ea4872ea55902c5ab219dc171c7399387df51.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\core\\get-started\\capabilities-in-technical-preview-1610.md.3d6ba6544104d85bb609194ada2b5b475b92ac6e.HT": {
+      "SourceFilename": "sccm\\core\\get-started\\capabilities-in-technical-preview-1610.md",
+      "XliffHash": "3d6ba6544104d85bb609194ada2b5b475b92ac6e",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\865b5078282bf240aa6a2aef5cb2662f2471fb71.5732ef2e1b4383f8a517c7c3275661d2885c7f90.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\core\\get-started\\technical-preview.md.2ab3064a5205d5630e4f7a190a472a81a1d602f7.HT": {
+      "SourceFilename": "sccm\\core\\get-started\\technical-preview.md",
+      "XliffHash": "2ab3064a5205d5630e4f7a190a472a81a1d602f7",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\7641f13f3975a573485fea28019fcd0a1881423e.06eb4e72d830e310f4690689ee8502d9b94f8270.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\core\\get-started\\capabilities-in-technical-preview-1605.md.58a48a7eef6a492a37d243664c9bc10ca3631ce1.HT": {
+      "SourceFilename": "sccm\\core\\get-started\\capabilities-in-technical-preview-1605.md",
+      "XliffHash": "58a48a7eef6a492a37d243664c9bc10ca3631ce1",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\0acc423ae7105179c26a90634e6a396b8eff1eef.fd50c1794716b6844dcc6ee121e944faa70cc4e6.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\core\\get-started\\capabilities-in-technical-preview-1602.md.e2404a8a22a7a2562b502383840b6306b4c942d2.HT": {
+      "SourceFilename": "sccm\\core\\get-started\\capabilities-in-technical-preview-1602.md",
+      "XliffHash": "e2404a8a22a7a2562b502383840b6306b4c942d2",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\6da6b4185b4a9c22df65584e149c0e5f0ce97b6c.e385cd3a19c432580a1c6c6360f8b2093a33f9dc.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\core\\get-started\\capabilities-in-technical-preview-1511.md.7893e2c0dcedd936070f671974e8efa8561552d3.HT": {
+      "SourceFilename": "sccm\\core\\get-started\\capabilities-in-technical-preview-1511.md",
+      "XliffHash": "7893e2c0dcedd936070f671974e8efa8561552d3",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\fbd678188f32e2e2058b7148f14b7f397d63cf3c.36215ca1e04c03a74d2fde4efb52580e083850de.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\core\\get-started\\capabilities-in-technical-preview-1609.md.11b4a022c0d89175afe49ae093528fb2f534376c.HT": {
+      "SourceFilename": "sccm\\core\\get-started\\capabilities-in-technical-preview-1609.md",
+      "XliffHash": "11b4a022c0d89175afe49ae093528fb2f534376c",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\8b006b993e895fc17fdd2c6abe796d38a4d5efc2.9d53188960e1c83eafc3fad6e84129bdbfcf2419.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\core\\get-started\\capabilities-in-technical-preview-1608.md.0326e99ce6fb7b9e915f387d46ff080cf83ab28d.HT": {
+      "SourceFilename": "sccm\\core\\get-started\\capabilities-in-technical-preview-1608.md",
+      "XliffHash": "0326e99ce6fb7b9e915f387d46ff080cf83ab28d",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\b5dfe35944fef5fae44a9262e63f8a8a9078d6c0.742ec6693d948bce0a344daa1dc9f5cdef4fa34f.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\core\\get-started\\capabilities-in-technical-preview-1512.md.9113432c8a787020ac2f1e58adc4a444d8fac435.HT": {
+      "SourceFilename": "sccm\\core\\get-started\\capabilities-in-technical-preview-1512.md",
+      "XliffHash": "9113432c8a787020ac2f1e58adc4a444d8fac435",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\e4a44557d3e1e3272f1736f8438312e440651529.3115a5c3524ce420c4f69ab37026d3ee8c31f7f1.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\core\\get-started\\capabilities-in-technical-preview-1604.md.aab76786dcd1fea1e0ea94df371c4f790e5162d7.HT": {
+      "SourceFilename": "sccm\\core\\get-started\\capabilities-in-technical-preview-1604.md",
+      "XliffHash": "aab76786dcd1fea1e0ea94df371c4f790e5162d7",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\b0e6e703259e3c323d62adc7d154a5ebfa11b5c0.3417564025988347b36842114601c0d7e9e05753.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\core\\get-started\\capabilities-in-technical-preview-1607.md.145a9703875191992fcea95f3caf1cf670d9c1e1.HT": {
+      "SourceFilename": "sccm\\core\\get-started\\capabilities-in-technical-preview-1607.md",
+      "XliffHash": "145a9703875191992fcea95f3caf1cf670d9c1e1",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\a8ce1ec3475c689af465aee56e1346989b08099c.95be902f7e259bf06d2514b0ed8923c0c9212120.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\core\\get-started\\capabilities-in-technical-preview-1606.md.535e179e843322ec13a92ece7b80a9e365956420.HT": {
+      "SourceFilename": "sccm\\core\\get-started\\capabilities-in-technical-preview-1606.md",
+      "XliffHash": "535e179e843322ec13a92ece7b80a9e365956420",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\c5c14009515d8c1f543ea160f1bd57c33a492171.dbed6ebb3224d32bc20c5e7ba27917f5d60fddf5.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\core\\get-started\\capabilities-in-technical-preview-1601.md.def0451fb98310d647be32c8a769f30c61b4cd0c.HT": {
+      "SourceFilename": "sccm\\core\\get-started\\capabilities-in-technical-preview-1601.md",
+      "XliffHash": "def0451fb98310d647be32c8a769f30c61b4cd0c",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\c651a205a273e446457ba420f9a346a2e12643a1.1a9bc86f307964f6143e9c2d8130f38f68324ad8.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
     }
   }
 }

@@ -920,11 +920,17 @@
   "fc100138204c1d7707e3d57232001d5b75812854": [
     "sccm\\core\\clients\\manage\\upgrade\\upgrade-clients-on-mac-computers.md"
   ],
+  "fbd678188f32e2e2058b7148f14b7f397d63cf3c": [
+    "sccm\\core\\get-started\\capabilities-in-technical-preview-1511.md"
+  ],
   "6dd650073795b5888655ce42d522322e74aeb6d8": [
     "sccm\\core\\get-started\\capabilities-in-technical-preview-1511.md"
   ],
   "172fbcb84434d0b514f935eaf30ad225ba9ada9e": [
     "sccm\\core\\get-started\\capabilities-in-technical-preview-1511.md"
+  ],
+  "e4a44557d3e1e3272f1736f8438312e440651529": [
+    "sccm\\core\\get-started\\capabilities-in-technical-preview-1512.md"
   ],
   "83946dd211582a40b1eb7be58a5ad0bce505f0eb": [
     "sccm\\core\\get-started\\capabilities-in-technical-preview-1512.md"
@@ -932,11 +938,17 @@
   "6e927a7eba69927f25dc4fa8be1891a9b57cc2b2": [
     "sccm\\core\\get-started\\capabilities-in-technical-preview-1512.md"
   ],
+  "c651a205a273e446457ba420f9a346a2e12643a1": [
+    "sccm\\core\\get-started\\capabilities-in-technical-preview-1601.md"
+  ],
   "378ec70d93ea543dbf4851b2bc389ce9a5bd4196": [
     "sccm\\core\\get-started\\capabilities-in-technical-preview-1601.md"
   ],
   "145956579490d2f9d999a669e2d3bf7e55f06044": [
     "sccm\\core\\get-started\\capabilities-in-technical-preview-1601.md"
+  ],
+  "6da6b4185b4a9c22df65584e149c0e5f0ce97b6c": [
+    "sccm\\core\\get-started\\capabilities-in-technical-preview-1602.md"
   ],
   "fc157937c1e5d9beed2698d31b1f9ebb0904c199": [
     "sccm\\core\\get-started\\capabilities-in-technical-preview-1602.md"
@@ -944,11 +956,17 @@
   "e0980dd449cb6c8443d5c633a0ce734faf931fd7": [
     "sccm\\core\\get-started\\capabilities-in-technical-preview-1602.md"
   ],
+  "68a844413e7621ed4436edf6abffc7d8da56337d": [
+    "sccm\\core\\get-started\\capabilities-in-technical-preview-1603.md"
+  ],
   "c2a9b6ee74e376a85d5abdcfbd406171ddf63c8b": [
     "sccm\\core\\get-started\\capabilities-in-technical-preview-1603.md"
   ],
   "ba6498d78ee8b03df2e05240622e01becd6b7689": [
     "sccm\\core\\get-started\\capabilities-in-technical-preview-1603.md"
+  ],
+  "b0e6e703259e3c323d62adc7d154a5ebfa11b5c0": [
+    "sccm\\core\\get-started\\capabilities-in-technical-preview-1604.md"
   ],
   "1d42adcf47fb9ccc89e18114914ff893d4080ede": [
     "sccm\\core\\get-started\\capabilities-in-technical-preview-1604.md"
@@ -959,11 +977,17 @@
   "218125dc7021fd4ba60772614860153f8c2b207e": [
     "sccm\\core\\get-started\\capabilities-in-technical-preview-1604.md"
   ],
+  "0acc423ae7105179c26a90634e6a396b8eff1eef": [
+    "sccm\\core\\get-started\\capabilities-in-technical-preview-1605.md"
+  ],
   "4c22ef9a56f928048238c3d665783163dac4a80a": [
     "sccm\\core\\get-started\\capabilities-in-technical-preview-1605.md"
   ],
   "024f2c9d7413bfa78883b45e5ee823d62cd393ef": [
     "sccm\\core\\get-started\\capabilities-in-technical-preview-1605.md"
+  ],
+  "c5c14009515d8c1f543ea160f1bd57c33a492171": [
+    "sccm\\core\\get-started\\capabilities-in-technical-preview-1606.md"
   ],
   "dd33ae77be5df08aa575bf8c17f61c4c9c0309fe": [
     "sccm\\core\\get-started\\capabilities-in-technical-preview-1606.md"
@@ -971,11 +995,17 @@
   "2e54f9258ce057ef1864c03e0e45f25f67c21b72": [
     "sccm\\core\\get-started\\capabilities-in-technical-preview-1606.md"
   ],
+  "a8ce1ec3475c689af465aee56e1346989b08099c": [
+    "sccm\\core\\get-started\\capabilities-in-technical-preview-1607.md"
+  ],
   "95f444db4c90bbfc9711947ee54bf1d57410b535": [
     "sccm\\core\\get-started\\capabilities-in-technical-preview-1607.md"
   ],
   "1fe2a79cff951834cc42ced529ba0f18c9d5ba12": [
     "sccm\\core\\get-started\\capabilities-in-technical-preview-1607.md"
+  ],
+  "b5dfe35944fef5fae44a9262e63f8a8a9078d6c0": [
+    "sccm\\core\\get-started\\capabilities-in-technical-preview-1608.md"
   ],
   "560e3b99ba4d55449bf695bfd44269feae055e52": [
     "sccm\\core\\get-started\\capabilities-in-technical-preview-1608.md"
@@ -985,6 +1015,9 @@
   ],
   "c92dd26521a414611b2e4ec07cf54b48bd9b5d6d": [
     "sccm\\core\\get-started\\capabilities-in-technical-preview-1608.md"
+  ],
+  "8b006b993e895fc17fdd2c6abe796d38a4d5efc2": [
+    "sccm\\core\\get-started\\capabilities-in-technical-preview-1609.md"
   ],
   "a813860215f79b80113ef1a76ffcb12ccfe4ab5a": [
     "sccm\\core\\get-started\\capabilities-in-technical-preview-1609.md"
@@ -1003,6 +1036,9 @@
   ],
   "25ee2f92231d4b177e2bdc099c37c263e468069f": [
     "sccm\\core\\get-started\\set-up-your-lab.md"
+  ],
+  "7641f13f3975a573485fea28019fcd0a1881423e": [
+    "sccm\\core\\get-started\\technical-preview.md"
   ],
   "53ebbb84e8ede22e7a94d553fe156a3afb884ee0": [
     "sccm\\core\\get-started\\technical-preview.md"
@@ -3193,6 +3229,9 @@
   ],
   "dc8dc829923468ac4021797091efc97c31324456": [
     "sccm\\protect\\deploy-use\\Custom VPN profile.md"
+  ],
+  "865b5078282bf240aa6a2aef5cb2662f2471fb71": [
+    "sccm\\core\\get-started\\capabilities-in-technical-preview-1610.md"
   ],
   "39342e2b718430e5f59e603f94b872bbc8712ea8": [
     "sccm\\core\\get-started\\capabilities-in-technical-preview-1610.md"
