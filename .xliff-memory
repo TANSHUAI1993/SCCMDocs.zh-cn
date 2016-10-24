@@ -11049,6 +11049,16 @@
       "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\c651a205a273e446457ba420f9a346a2e12643a1.1a9bc86f307964f6143e9c2d8130f38f68324ad8.xml",
       "LocXliff": null,
       "LocXliffCommit": null
+    },
+    "sccm\\core\\get-started\\capabilities-in-technical-preview-1609.md.2ce868ce519c035ca160e4c4fec6e77f4c359ea9.HT": {
+      "SourceFilename": "sccm\\core\\get-started\\capabilities-in-technical-preview-1609.md",
+      "XliffHash": "2ce868ce519c035ca160e4c4fec6e77f4c359ea9",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\cbf3f9a7b61b4c9894aa03c331a9528e943dce11.988b1105f25302248857715c25ee3c52b2fc3873.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
     }
   }
 }
