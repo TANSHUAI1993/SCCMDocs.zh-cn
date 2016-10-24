@@ -1232,6 +1232,9 @@
   "98124163765580cd032196eb7719062c34a3b1e6": [
     "sccm\\core\\plan-design\\configs\\supported-configurations.md"
   ],
+  "6c07113fd7c30182857b63c15a5e3c47e629636c": [
+    "sccm\\core\\plan-design\\configs\\supported-operating-systems-consoles.md"
+  ],
   "bc7273e8ba016cefc2a60dfec7157dd5a020e784": [
     "sccm\\core\\plan-design\\configs\\supported-operating-systems-consoles.md"
   ],
@@ -1241,6 +1244,9 @@
   "3a001301c37ad70708903547971c4b2d32938b2b": [
     "sccm\\core\\plan-design\\configs\\supported-operating-systems-consoles.md"
   ],
+  "cad301e1375cdec86bc138c2b2ac1c7d451cd377": [
+    "sccm\\core\\plan-design\\configs\\supported-operating-systems-for-clients-and-devices.md"
+  ],
   "f492c7d3994935c1efc155d95af5d9201cf6b888": [
     "sccm\\core\\plan-design\\configs\\supported-operating-systems-for-clients-and-devices.md"
   ],
@@ -1249,6 +1255,9 @@
   ],
   "b99b8a66d1e4c0a13fbc4ff7ad1769ab4e455002": [
     "sccm\\core\\plan-design\\configs\\supported-operating-systems-for-clients-and-devices.md"
+  ],
+  "612c75b1a9e54794ef9cd6ba80692031c16da9cc": [
+    "sccm\\core\\plan-design\\configs\\supported-operating-systems-for-site-system-servers.md"
   ],
   "ca7cde1ffba14cb789bd1653ede09a0daecbe394": [
     "sccm\\core\\plan-design\\configs\\supported-operating-systems-for-site-system-servers.md"

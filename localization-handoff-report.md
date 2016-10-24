@@ -1,19 +1,45 @@
 # <a name='report-top'></a> Localization Handoff Report
 
 ## Summary
- Total Files | 1
+ Total Files | 3
 
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [sccm\core\get-started\capabilities-in-technical-preview-1609.md](https://github.com/Microsoft/SCCMDocs-pr/blob/7174cdcbb35ab645e21adf5225964136afebf7ff/sccm/core/get-started/capabilities-in-technical-preview-1609.md) | HandedOffSuccess | [Details](#cbf3f9a7b61b4c9894aa03c331a9528e943dce11182)
+ [sccm\core\plan-design\configs\supported-operating-systems-consoles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/cd63f092fbb4bd4080e3fe29c2fe9c383e756113/sccm/core/plan-design/configs/supported-operating-systems-consoles.md) | HandedOffSuccess | [Details](#6c07113fd7c30182857b63c15a5e3c47e629636c253)
+ [sccm\core\plan-design\configs\supported-operating-systems-for-clients-and-devices.md](https://github.com/Microsoft/SCCMDocs-pr/blob/cd63f092fbb4bd4080e3fe29c2fe9c383e756113/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md) | HandedOffSuccess | [Details](#cad301e1375cdec86bc138c2b2ac1c7d451cd377254)
+ [sccm\core\plan-design\configs\supported-operating-systems-for-site-system-servers.md](https://github.com/Microsoft/SCCMDocs-pr/blob/cd63f092fbb4bd4080e3fe29c2fe9c383e756113/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers.md) | HandedOffSuccess | [Details](#612c75b1a9e54794ef9cd6ba80692031c16da9cc255)
 
 ## Item Details
-##### <a name='cbf3f9a7b61b4c9894aa03c331a9528e943dce11182'></a> Source: [sccm\core\get-started\capabilities-in-technical-preview-1609.md](https://github.com/Microsoft/SCCMDocs-pr/blob/7174cdcbb35ab645e21adf5225964136afebf7ff/sccm/core/get-started/capabilities-in-technical-preview-1609.md)
+##### <a name='6c07113fd7c30182857b63c15a5e3c47e629636c253'></a> Source: [sccm\core\plan-design\configs\supported-operating-systems-consoles.md](https://github.com/Microsoft/SCCMDocs-pr/blob/cd63f092fbb4bd4080e3fe29c2fe9c383e756113/sccm/core/plan-design/configs/supported-operating-systems-consoles.md)
 * Status: HandedOffSuccess
 * Target File: 
-* Handoff File: [capabilities-in-technical-preview-1609.ceb3d5bac8173b36687f2eb1f4a3f2f6ed6dcf4b.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/468d20531c515c1db8870199fe0492cde4a38fe6/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/capabilities-in-technical-preview-1609.ceb3d5bac8173b36687f2eb1f4a3f2f6ed6dcf4b.zh-cn.xlf)
-* Handoff Datetime: 2016-10-24 16:40:43
+* Handoff File: [supported-operating-systems-consoles.805c16d993f102c862766522b5832b97ec6f1b75.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/1348b55fe86f4f802d4d632db5a7a976b4aaf3c1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/supported-operating-systems-consoles.805c16d993f102c862766522b5832b97ec6f1b75.zh-cn.xlf)
+* Handoff Datetime: 2016-10-24 22:39:47
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* [Back to Top](#report-top)
+
+##### <a name='cad301e1375cdec86bc138c2b2ac1c7d451cd377254'></a> Source: [sccm\core\plan-design\configs\supported-operating-systems-for-clients-and-devices.md](https://github.com/Microsoft/SCCMDocs-pr/blob/cd63f092fbb4bd4080e3fe29c2fe9c383e756113/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [supported-operating-systems-for-clients-and-devices.1c666a655f97b6cb87f6e838905f2bd5098b26ec.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/1348b55fe86f4f802d4d632db5a7a976b4aaf3c1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/supported-operating-systems-for-clients-and-devices.1c666a655f97b6cb87f6e838905f2bd5098b26ec.zh-cn.xlf)
+* Handoff Datetime: 2016-10-24 22:39:47
+* Handoff Reason: Include
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* [Back to Top](#report-top)
+
+##### <a name='612c75b1a9e54794ef9cd6ba80692031c16da9cc255'></a> Source: [sccm\core\plan-design\configs\supported-operating-systems-for-site-system-servers.md](https://github.com/Microsoft/SCCMDocs-pr/blob/cd63f092fbb4bd4080e3fe29c2fe9c383e756113/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers.md)
+* Status: HandedOffSuccess
+* Target File: 
+* Handoff File: [supported-operating-systems-for-site-system-servers.0dfd795e8e8e447e8f6f040291dc17ba84bf9bfa.zh-cn.xlf](https://github.com/Microsoft/SCCMDocs-pr.handoff/blob/1348b55fe86f4f802d4d632db5a7a976b4aaf3c1/ol-handoff/Microsoft/SCCMDocs-pr.zh-cn/live/supported-operating-systems-for-site-system-servers.0dfd795e8e8e447e8f6f040291dc17ba84bf9bfa.zh-cn.xlf)
+* Handoff Datetime: 2016-10-24 22:39:47
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00

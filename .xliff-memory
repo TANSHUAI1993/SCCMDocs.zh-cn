@@ -11059,6 +11059,36 @@
       "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\cbf3f9a7b61b4c9894aa03c331a9528e943dce11.988b1105f25302248857715c25ee3c52b2fc3873.xml",
       "LocXliff": null,
       "LocXliffCommit": null
+    },
+    "sccm\\core\\plan-design\\configs\\supported-operating-systems-for-site-system-servers.md.2fddc8ba3a51e66de2bcbd04172638930e165222.HT": {
+      "SourceFilename": "sccm\\core\\plan-design\\configs\\supported-operating-systems-for-site-system-servers.md",
+      "XliffHash": "2fddc8ba3a51e66de2bcbd04172638930e165222",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\612c75b1a9e54794ef9cd6ba80692031c16da9cc.850684fec3108a8d5b16cc950cb97b3664ac8572.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\core\\plan-design\\configs\\supported-operating-systems-for-clients-and-devices.md.9405c82121a1ac6119aee9666098077bca5f7951.HT": {
+      "SourceFilename": "sccm\\core\\plan-design\\configs\\supported-operating-systems-for-clients-and-devices.md",
+      "XliffHash": "9405c82121a1ac6119aee9666098077bca5f7951",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\cad301e1375cdec86bc138c2b2ac1c7d451cd377.8afc1975a65553af15c4efa606e501daa7fe7462.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\core\\plan-design\\configs\\supported-operating-systems-consoles.md.283345a778684b171027fcacebe26179abf2e014.HT": {
+      "SourceFilename": "sccm\\core\\plan-design\\configs\\supported-operating-systems-consoles.md",
+      "XliffHash": "283345a778684b171027fcacebe26179abf2e014",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\6c07113fd7c30182857b63c15a5e3c47e629636c.1264238fa7796746f1cb6604a24c5d68e01759b2.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
     }
   }
 }
