@@ -2266,7 +2266,7 @@
       "TranslationType": 1,
       "IsArchived": false,
       "ArchivedDateTime": "0001-01-01T00:00:00",
-      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\c1f4da2644566c076a52886b9a0a3f2998ddbf88.5921c4401943b2a43e0a149929cc224d121a8195.xml",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\2ed99aa90915903056ee43074e0d19a1e018b9a4.ef8d87e94970944efc6583116f33041124a9326e.xml",
       "LocXliff": null,
       "LocXliffCommit": null
     },
@@ -6196,7 +6196,7 @@
       "TranslationType": 1,
       "IsArchived": false,
       "ArchivedDateTime": "0001-01-01T00:00:00",
-      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\36f886c0cda39a7b5b4bf58b6d794bf64d27b99c.2f2744d798fe12c496504440db356eee5580e014.xml",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\c54abd1c67d4ef7f5905f2fc84700918550aa074.67987017a7c12a7a01644164f6e944f2469cbccb.xml",
       "LocXliff": null,
       "LocXliffCommit": null
     },
@@ -11147,6 +11147,66 @@
       "IsArchived": false,
       "ArchivedDateTime": "0001-01-01T00:00:00",
       "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\11917672a1369ef9ea884cfda38b4ed3063ff000.7827c277721a4ea22ee286efbcc1742cf061f620.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\core\\TOC.md.82caadb66ecd0857584a1418b5b620744ddd9321.HT": {
+      "SourceFilename": "sccm\\core\\TOC.md",
+      "XliffHash": "82caadb66ecd0857584a1418b5b620744ddd9321",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\ac44c49da98de1dbe5716cd08b3d7a3b80738438.00916577680eb2f5bb4187ec70cd60e758b463d5.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\mdm\\understand\\whats-new-in-hybrid-mobile-device-management.md.4beece324a950075a063e2155f8264f929ed88ea.HT": {
+      "SourceFilename": "sccm\\mdm\\understand\\whats-new-in-hybrid-mobile-device-management.md",
+      "XliffHash": "4beece324a950075a063e2155f8264f929ed88ea",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\3525fba1b75196bddebc89e49f40cbfd3c75d9d0.de44470001abf074e9d80693953e6662750d5cfc.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\mdm\\understand\\whats-new-hybrid-archive.md.252016697be1f32b736e2ce9b9fcd77fc05cca22.HT": {
+      "SourceFilename": "sccm\\mdm\\understand\\whats-new-hybrid-archive.md",
+      "XliffHash": "252016697be1f32b736e2ce9b9fcd77fc05cca22",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\4c0910ae365e1fda7b9747b79e13782a6056c0da.5e7000dc5358a73f9cab4742f91004e19b9a8c0c.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\core\\understand\\introduction-to-the-ltsb.md.6b3927009e337d9b7b9dbe30c38fd8e55276a94e.HT": {
+      "SourceFilename": "sccm\\core\\understand\\introduction-to-the-ltsb.md",
+      "XliffHash": "6b3927009e337d9b7b9dbe30c38fd8e55276a94e",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\926d1b1299e7851bd1d9168237859c5cd7a65abe.fe0c886bcd01d420d9cb3447f7481f0ad9e56bca.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\osd\\understand\\task-sequence-steps.md.baad71902e7e2e6c99cbb04fc8c5b3d329db407e.HT": {
+      "SourceFilename": "sccm\\osd\\understand\\task-sequence-steps.md",
+      "XliffHash": "baad71902e7e2e6c99cbb04fc8c5b3d329db407e",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\538cb9795586115ad8b52b44fb82b50a0abdbaa2.e369612e90eea86062ce50861f10953c7ec7becc.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\protect\\deploy-use\\windows-hello-for-business-settings.md.43d0f1a3253b7fe935166481f6be90a98a4d841a.HT": {
+      "SourceFilename": "sccm\\protect\\deploy-use\\windows-hello-for-business-settings.md",
+      "XliffHash": "43d0f1a3253b7fe935166481f6be90a98a4d841a",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\80f586763d034891aac9b87dcb38120602aa2b85.a67710873f4caa534e8e45e5f3fc259ba650ce6f.xml",
       "LocXliff": null,
       "LocXliffCommit": null
     }
