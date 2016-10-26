@@ -7326,7 +7326,7 @@
       "TranslationType": 1,
       "IsArchived": false,
       "ArchivedDateTime": "0001-01-01T00:00:00",
-      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\7207707ba434c7730d9a0997fed51903cbd17a31.8a86869d438cf3767bf837cc18dd47f0e957fc3f.xml",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\83832465e93997a2893e024c565ee00f471036d1.c0fd719b56985c076e14f16d69983c11a6755b9a.xml",
       "LocXliff": null,
       "LocXliffCommit": null
     },
@@ -11207,6 +11207,76 @@
       "IsArchived": false,
       "ArchivedDateTime": "0001-01-01T00:00:00",
       "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\80f586763d034891aac9b87dcb38120602aa2b85.a67710873f4caa534e8e45e5f3fc259ba650ce6f.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\compliance\\deploy-use\\create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md.e5d76ef979f06bc101b02a30d510e5432137f7bd.HT": {
+      "SourceFilename": "sccm\\compliance\\deploy-use\\create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md",
+      "XliffHash": "e5d76ef979f06bc101b02a30d510e5432137f7bd",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\1691fe56b9c6fb6aa6889a4451985a1bf6c2e1b5.dac6eea3820ac6a808473c69b89095495278ba36.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\core\\clients\\manage\\remote-control\\remotely-administer-a-windows-client-computer.md.1e23a8ebf630e1c0b0a60446bfc01ebaa5fed9c4.HT": {
+      "SourceFilename": "sccm\\core\\clients\\manage\\remote-control\\remotely-administer-a-windows-client-computer.md",
+      "XliffHash": "1e23a8ebf630e1c0b0a60446bfc01ebaa5fed9c4",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\51a9b7269993bfa133382b88792ac94032824eed.3e5e391546032ac883828a594ff6434b41a790aa.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\core\\servers\\manage\\install-in-console-updates.md.6d943d2d43fc11634db60ed6d4369ff780f2c825.HT": {
+      "SourceFilename": "sccm\\core\\servers\\manage\\install-in-console-updates.md",
+      "XliffHash": "6d943d2d43fc11634db60ed6d4369ff780f2c825",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\37b5472bdd43850289778ead77d2a462ec2d52e3.fe337a2c426bde8b9fc99171646da1095add5783.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\core\\TOC.md.5cbb7e1ac5ddccc8763c5403419a8441c094338d.HT": {
+      "SourceFilename": "sccm\\core\\TOC.md",
+      "XliffHash": "5cbb7e1ac5ddccc8763c5403419a8441c094338d",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\af2f4d58a1d3605a420b513707305433573f4c6a.b1c17a1dd809b82c8b6a65d573bde9f91704766f.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\core\\understand\\use-cloud-services.md.327a558e971a630fa015dfe837e74234558dcc74.HT": {
+      "SourceFilename": "sccm\\core\\understand\\use-cloud-services.md",
+      "XliffHash": "327a558e971a630fa015dfe837e74234558dcc74",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\9440123f6f13e19723657e7b4d5627f3a349a3b4.dafe9fe257bfbf414de92105f2e5934c85b66778.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\protect\\deploy-use\\create-vpn-profiles.md.58decd9949c8362048933ea3345466cf9fd6d369.HT": {
+      "SourceFilename": "sccm\\protect\\deploy-use\\create-vpn-profiles.md",
+      "XliffHash": "58decd9949c8362048933ea3345466cf9fd6d369",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\db560e30b20936c5934ed000b71b5d269582229d.ff45d7c09fb05768885962043b8a9a448a21a832.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\core\\servers\\deploy\\install\\use-the-setup-wizard-to-install-sites.md.5fced82e6fb915574a05679d307aac73c1b17062.HT": {
+      "SourceFilename": "sccm\\core\\servers\\deploy\\install\\use-the-setup-wizard-to-install-sites.md",
+      "XliffHash": "5fced82e6fb915574a05679d307aac73c1b17062",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\9552ac1b77acfce6a398ec6e74f1be3686ee15a4.49aaf6dc321ee3d95ebc177ce2b73254e652229d.xml",
       "LocXliff": null,
       "LocXliffCommit": null
     }

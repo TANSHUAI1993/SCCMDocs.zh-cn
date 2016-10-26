@@ -356,6 +356,9 @@
   "c8483ca2a1e97a82f130764663c7567b327fe6ad": [
     "sccm\\compliance\\deploy-use\\create-configuration-items-for-windows-10-devices-managed-with-the-client.md"
   ],
+  "1691fe56b9c6fb6aa6889a4451985a1bf6c2e1b5": [
+    "sccm\\compliance\\deploy-use\\create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md"
+  ],
   "391a8114d6e4e7bc54e39c33d08f9aaa34c62fb6": [
     "sccm\\compliance\\deploy-use\\create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md"
   ],
@@ -1190,24 +1193,6 @@
   "52d50b0dfb46cb5f5a5caa47a5065ef27e85d04e": [
     "sccm\\core\\clients\\manage\\power\\monitor-and-plan-for-power-management.md"
   ],
-  "0172b6851f3403b24555a0bd80ef5da95beb8611": [
-    "sccm\\core\\clients\\manage\\power\\operations-and-maintenance-for-power-management.md"
-  ],
-  "4dfe27e4e72ec9c0c129e3b058533ee88c748210": [
-    "sccm\\core\\clients\\manage\\power\\operations-and-maintenance-for-power-management.md"
-  ],
-  "4bbd2e36c4703df2f4a6531afb65641b0a0f05fe": [
-    "sccm\\core\\clients\\manage\\power\\operations-and-maintenance-for-power-management.md"
-  ],
-  "c955f312e7d22717e5a0b7d15bb976349189662c": [
-    "sccm\\core\\clients\\manage\\power\\planning-for-power-management.md"
-  ],
-  "5f63cf8ca059c2390a842379d2a0102d224027e3": [
-    "sccm\\core\\clients\\manage\\power\\planning-for-power-management.md"
-  ],
-  "91f8b5ada9fe42fe2e8f4013a86c35e02ec8818e": [
-    "sccm\\core\\clients\\manage\\power\\planning-for-power-management.md"
-  ],
   "e83b57997c702779dfa2a198a60c99c7205d7b51": [
     "sccm\\core\\clients\\manage\\power\\prerequisites-for-power-management.md"
   ],
@@ -1262,24 +1247,6 @@
   "495aa812fabc80db72ea48458cdb23ae105e9949": [
     "sccm\\core\\clients\\manage\\remote-control\\keyboard-shortcuts-for-the-remote-control-viewer.md"
   ],
-  "f9ebc39b126ee1944c6abd0a163ce9650b7003b2": [
-    "sccm\\core\\clients\\manage\\remote-control\\operations-and-maintenance-for-remote-control.md"
-  ],
-  "0efbe8eafbd015a156fc6e9b38dc5da641ee1189": [
-    "sccm\\core\\clients\\manage\\remote-control\\operations-and-maintenance-for-remote-control.md"
-  ],
-  "ed0fd952b81560854728c1fdf0cb9e37dfa9d2a4": [
-    "sccm\\core\\clients\\manage\\remote-control\\operations-and-maintenance-for-remote-control.md"
-  ],
-  "8e75db1dd6155a7ba12340bd3c6f6f01fc321baa": [
-    "sccm\\core\\clients\\manage\\remote-control\\planning-for-remote-control.md"
-  ],
-  "6cea99d1f66336a58c4e85c8ec37c3c5f62ebbed": [
-    "sccm\\core\\clients\\manage\\remote-control\\planning-for-remote-control.md"
-  ],
-  "5f1b62e53caa5ce0cc795f5517e1339fe7f0b1c0": [
-    "sccm\\core\\clients\\manage\\remote-control\\planning-for-remote-control.md"
-  ],
   "5e15fc7359787b40ebd138fd79dd72081dd8fb36": [
     "sccm\\core\\clients\\manage\\remote-control\\prerequisites-for-remote-control.md"
   ],
@@ -1288,6 +1255,9 @@
   ],
   "7b39c910c0d273cfc739c9002b74695d76b67126": [
     "sccm\\core\\clients\\manage\\remote-control\\prerequisites-for-remote-control.md"
+  ],
+  "51a9b7269993bfa133382b88792ac94032824eed": [
+    "sccm\\core\\clients\\manage\\remote-control\\remotely-administer-a-windows-client-computer.md"
   ],
   "c94b3263e918b15b9bde884a1047184aced41d8c": [
     "sccm\\core\\clients\\manage\\remote-control\\remotely-administer-a-windows-client-computer.md"
@@ -2627,6 +2597,9 @@
   "7216a25fc2f4b6af7883f2b6b7cd7896c931bdd0": [
     "sccm\\core\\servers\\deploy\\install\\use-a-command-line-to-install-sites.md"
   ],
+  "9552ac1b77acfce6a398ec6e74f1be3686ee15a4": [
+    "sccm\\core\\servers\\deploy\\install\\use-the-setup-wizard-to-install-sites.md"
+  ],
   "1b0f1e594aaf7642a526aab83ea2e1eb2b2b0206": [
     "sccm\\core\\servers\\deploy\\install\\use-the-setup-wizard-to-install-sites.md"
   ],
@@ -2743,6 +2716,9 @@
   ],
   "28ee7ba421ebae9cddef4c5c5b3cc65924784579": [
     "sccm\\core\\servers\\manage\\hierarchy-maintenance-tool-preinst.exe.md"
+  ],
+  "37b5472bdd43850289778ead77d2a462ec2d52e3": [
+    "sccm\\core\\servers\\manage\\install-in-console-updates.md"
   ],
   "387866752ac2f2162326649e4170f08903971c7f": [
     "sccm\\core\\servers\\manage\\install-in-console-updates.md"
@@ -2981,6 +2957,9 @@
   "b7ec243619b3fc9a0df3a5c56a57c9ad9a020feb": [
     "sccm\\core\\servers\\manage\\use-the-update-registration-tool-to-import-hotfixes.md"
   ],
+  "af2f4d58a1d3605a420b513707305433573f4c6a": [
+    "sccm\\core\\TOC.md"
+  ],
   "ac44c49da98de1dbe5716cd08b3d7a3b80738438": [
     "sccm\\core\\TOC.md"
   ],
@@ -3098,6 +3077,9 @@
   "d221225218b0134242ddbcb976d33e4904f64d7a": [
     "sccm\\core\\understand\\learn-more-editions.md"
   ],
+  "9440123f6f13e19723657e7b4d5627f3a349a3b4": [
+    "sccm\\core\\understand\\use-cloud-services.md"
+  ],
   "617c385604a31816018e825c8db8b3955c4c8282": [
     "sccm\\core\\understand\\use-cloud-services.md"
   ],
@@ -3209,15 +3191,6 @@
   "3563146b861b7d819617e5cb15cb83b6b16c2062": [
     "sccm\\mdm\\deploy-use\\predeclare-devices-with-hardware-id.md"
   ],
-  "810b910ecb5fa6f8480ced0465e3da8ae0c3b07b": [
-    "sccm\\mdm\\deploy-use\\set-up-android-hybrid-device-management.md"
-  ],
-  "ccd46a1a919721962c32b13609fd059e7e4d3024": [
-    "sccm\\mdm\\deploy-use\\set-up-android-hybrid-device-management.md"
-  ],
-  "441cc99d24ade23b096596934d21036c04d5b79a": [
-    "sccm\\mdm\\deploy-use\\set-up-android-hybrid-device-management.md"
-  ],
   "44c0947fcb7abdc4369fe0b4f47409b49d068861": [
     "sccm\\mdm\\deploy-use\\setup-hybrid-mdm.md"
   ],
@@ -3229,33 +3202,6 @@
   ],
   "9b7f4b0af390ed945cceac2d5010d66459e41ffe": [
     "sccm\\mdm\\deploy-use\\setup-hybrid-mdm.md"
-  ],
-  "3b441e7ea49fc49de38f39b699d74f0373126dba": [
-    "sccm\\mdm\\deploy-use\\set-up-hybrid-windows.md"
-  ],
-  "81ece7b811a7838b94b70e66d58ca615f45f6a55": [
-    "sccm\\mdm\\deploy-use\\set-up-hybrid-windows.md"
-  ],
-  "519dc1a61602d5f086551f9052de88b55111180b": [
-    "sccm\\mdm\\deploy-use\\set-up-hybrid-windows.md"
-  ],
-  "c6c9cc4a33fe50594a452e8632213a45367563ac": [
-    "sccm\\mdm\\deploy-use\\set-up-ios-hybrid-device-management.md"
-  ],
-  "6a4afbf34d76bc05300f69193ffd709e2b390efb": [
-    "sccm\\mdm\\deploy-use\\set-up-ios-hybrid-device-management.md"
-  ],
-  "d044586808b4557470f99cd26acb18dbaa4b0c29": [
-    "sccm\\mdm\\deploy-use\\set-up-ios-hybrid-device-management.md"
-  ],
-  "b630dd2d8316426cf61a4ddb31f71dfe1143074f": [
-    "sccm\\mdm\\deploy-use\\set-up-windows-phone-hybrid-enrollment.md"
-  ],
-  "30c05689010c460ce5cd47d0ddcc792aa619a592": [
-    "sccm\\mdm\\deploy-use\\set-up-windows-phone-hybrid-enrollment.md"
-  ],
-  "6e2f7edf8efdd6473ad1b5660371eec2f06b8faf": [
-    "sccm\\mdm\\deploy-use\\set-up-windows-phone-hybrid-enrollment.md"
   ],
   "a7b99bed3186ab8ff817ef5f420d7a55d60b1c14": [
     "sccm\\mdm\\deploy-use\\terms-and-conditions.md"
@@ -3341,18 +3287,6 @@
   "5b24d6e464e6a682ae6f744d9627ff1951dfef12": [
     "sccm\\mdm\\includes\\mdm-supported-devices.md"
   ],
-  "c54abd1c67d4ef7f5905f2fc84700918550aa074": [
-    "sccm\\mdm\\plan-design\\hybrid-mobile-device-management.md"
-  ],
-  "36f886c0cda39a7b5b4bf58b6d794bf64d27b99c": [
-    "sccm\\mdm\\plan-design\\hybrid-mobile-device-management.md"
-  ],
-  "a9329254447656f646b5f57428034cf0cdc28e8a": [
-    "sccm\\mdm\\plan-design\\hybrid-mobile-device-management.md"
-  ],
-  "c0981494c79c8d4d18ee6b593451c5bf0fcb261e": [
-    "sccm\\mdm\\plan-design\\hybrid-mobile-device-management.md"
-  ],
   "994de93fbd8f2674a4a46f46b90c11176ceeb849": [
     "sccm\\mdm\\plan-design\\plan-hybrid-mobile-device-management.md"
   ],
@@ -3394,6 +3328,9 @@
   ],
   "42c786f9ae2e51d1779bf89efba2ee48fdb29738": [
     "sccm\\mdm\\understand\\choose-between-standalone-intune-and-hybrid-mobile-device-management.md"
+  ],
+  "83832465e93997a2893e024c565ee00f471036d1": [
+    "sccm\\mdm\\understand\\hybrid-mobile-device-management.md"
   ],
   "7207707ba434c7730d9a0997fed51903cbd17a31": [
     "sccm\\mdm\\understand\\hybrid-mobile-device-management.md"
@@ -3940,6 +3877,9 @@
   ],
   "a3fdd3fd2148e259d80eea7282527ee95080d283": [
     "sccm\\protect\\deploy-use\\create-pfx-certificate-profiles.md"
+  ],
+  "db560e30b20936c5934ed000b71b5d269582229d": [
+    "sccm\\protect\\deploy-use\\create-vpn-profiles.md"
   ],
   "47f7e03ab69ee803eb269525892c19a6a58296d4": [
     "sccm\\protect\\deploy-use\\create-vpn-profiles.md"
