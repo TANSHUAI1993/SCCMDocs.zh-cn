@@ -1430,6 +1430,9 @@
   "2e54f9258ce057ef1864c03e0e45f25f67c21b72": [
     "sccm\\core\\get-started\\capabilities-in-technical-preview-1606.md"
   ],
+  "4d2a9f9b32b898bfe549f2613689c8dbfd22e339": [
+    "sccm\\core\\get-started\\capabilities-in-technical-preview-1607.md"
+  ],
   "92f35c4473a373da4aa3769dbc0a0b3c013912d7": [
     "sccm\\core\\get-started\\capabilities-in-technical-preview-1607.md"
   ],
@@ -2155,6 +2158,9 @@
   ],
   "885e0a286e94a25332b688d70de64e2ee747f877": [
     "sccm\\core\\plan-design\\network\\pki-certificate-requirements.md"
+  ],
+  "acf8a401f1ce67a4d8c905c0126c031b97484271": [
+    "sccm\\core\\plan-design\\network\\prepare-windows-servers.md"
   ],
   "a19efe49ba0eccfdd03de7391489b2fab65bcab5": [
     "sccm\\core\\plan-design\\network\\prepare-windows-servers.md"
@@ -2906,6 +2912,9 @@
   "1d03ed8e88addea9d82dd7708488b63b21bbf191": [
     "sccm\\core\\servers\\manage\\updates.md"
   ],
+  "1239bf81991bb233a9640606bb47f598a70d5e50": [
+    "sccm\\core\\servers\\manage\\upgrade-on-premises-infrastructure.md"
+  ],
   "d486198573229523808065635a06e4ca7e7637db": [
     "sccm\\core\\servers\\manage\\upgrade-on-premises-infrastructure.md"
   ],
@@ -2956,6 +2965,9 @@
   ],
   "b7ec243619b3fc9a0df3a5c56a57c9ad9a020feb": [
     "sccm\\core\\servers\\manage\\use-the-update-registration-tool-to-import-hotfixes.md"
+  ],
+  "d2560fa150d5d441b1109d4848c6c2892a4e8c73": [
+    "sccm\\core\\TOC.md"
   ],
   "af2f4d58a1d3605a420b513707305433573f4c6a": [
     "sccm\\core\\TOC.md"
@@ -3878,6 +3890,9 @@
   "a3fdd3fd2148e259d80eea7282527ee95080d283": [
     "sccm\\protect\\deploy-use\\create-pfx-certificate-profiles.md"
   ],
+  "ccea5cb46bf69dbb88f6fcb217a73c7939be0b02": [
+    "sccm\\protect\\deploy-use\\create-vpn-profiles.md"
+  ],
   "db560e30b20936c5934ed000b71b5d269582229d": [
     "sccm\\protect\\deploy-use\\create-vpn-profiles.md"
   ],
@@ -4624,5 +4639,8 @@
   ],
   "4c0910ae365e1fda7b9747b79e13782a6056c0da": [
     "sccm\\mdm\\understand\\whats-new-hybrid-archive.md"
+  ],
+  "d2cf81c9c827983c4b496e3708b6ee1fb4603056": [
+    "sccm\\core\\understand\\configuration-manager-on-azure.md"
   ]
 }
