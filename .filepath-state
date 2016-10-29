@@ -527,6 +527,9 @@
   "1e8edcca2b9564cd5094dc15e91370f8dd360152": [
     "sccm\\compliance\\understand\\ensure-device-compliance.md"
   ],
+  "3987e6a66f9c0f52da8ce9a8c29e35836d2a2bcb": [
+    "sccm\\core\\clients\\deploy\\about-client-installation-properties.md"
+  ],
   "500d743899a34bfabee9299317ab4b09e583cf00": [
     "sccm\\core\\clients\\deploy\\about-client-installation-properties.md"
   ],
@@ -544,6 +547,9 @@
   ],
   "373173f59632630bf65e12a5d43f18cb6a32d376": [
     "sccm\\core\\clients\\deploy\\about-client-installation-properties-published-to-active-directory-domain-services.md"
+  ],
+  "cbe052891c55dd0c0d58c6e65d783314b0ec8ce9": [
+    "sccm\\core\\clients\\deploy\\about-client-settings.md"
   ],
   "4274897caa8bb116eb39b3610e1fefaf233727bf": [
     "sccm\\core\\clients\\deploy\\about-client-settings.md"
@@ -986,6 +992,9 @@
   "9199e515d82b414437fc88711c51f413f8b5aefa": [
     "sccm\\core\\clients\\manage\\inventory\\exclude-folders-from-software-inventory.md"
   ],
+  "4a42e266c4152145a4a1c291804ff98934671692": [
+    "sccm\\core\\clients\\manage\\inventory\\extend-hardware-inventory.md"
+  ],
   "499f87317e8312fb093798a148a2b44addae9369": [
     "sccm\\core\\clients\\manage\\inventory\\extend-hardware-inventory.md"
   ],
@@ -1093,6 +1102,9 @@
   ],
   "c2d2864a0471682158a611b0f37a8f916a6789fc": [
     "sccm\\core\\clients\\manage\\inventory\\use-resource-explorer-to-view-software-inventory.md"
+  ],
+  "67a814330123a1615a0663872bf4af64e5b81a84": [
+    "sccm\\core\\clients\\manage\\manage-clients.md"
   ],
   "60cda6361b9b8a3a1dba988bd0af85d267b7dfef": [
     "sccm\\core\\clients\\manage\\manage-clients.md"
@@ -1367,6 +1379,9 @@
   "145956579490d2f9d999a669e2d3bf7e55f06044": [
     "sccm\\core\\get-started\\capabilities-in-technical-preview-1601.md"
   ],
+  "25bceb4ab23f9c5e9ba9b7f9bdf028ea21564178": [
+    "sccm\\core\\get-started\\capabilities-in-technical-preview-1602.md"
+  ],
   "aebc507ab8f8c4092fee3e190b9dab56bdce384d": [
     "sccm\\core\\get-started\\capabilities-in-technical-preview-1602.md"
   ],
@@ -1378,6 +1393,9 @@
   ],
   "e0980dd449cb6c8443d5c633a0ce734faf931fd7": [
     "sccm\\core\\get-started\\capabilities-in-technical-preview-1602.md"
+  ],
+  "ab9f71700ff80414f7cb8e79f54fba3262f810ff": [
+    "sccm\\core\\get-started\\capabilities-in-technical-preview-1603.md"
   ],
   "59557ed510dc2d631b7f894eccfff96f282fa982": [
     "sccm\\core\\get-started\\capabilities-in-technical-preview-1603.md"
@@ -1405,6 +1423,9 @@
   ],
   "218125dc7021fd4ba60772614860153f8c2b207e": [
     "sccm\\core\\get-started\\capabilities-in-technical-preview-1604.md"
+  ],
+  "0137d6e2c69480d6de88fbf8fa3450d1699007e5": [
+    "sccm\\core\\get-started\\capabilities-in-technical-preview-1605.md"
   ],
   "4709e3e69708e8e13ecbfca9ec64e942de73db50": [
     "sccm\\core\\get-started\\capabilities-in-technical-preview-1605.md"
@@ -1492,6 +1513,9 @@
   ],
   "25ee2f92231d4b177e2bdc099c37c263e468069f": [
     "sccm\\core\\get-started\\set-up-your-lab.md"
+  ],
+  "2aa78c20c919d04401f663063860df06c5262048": [
+    "sccm\\core\\get-started\\technical-preview.md"
   ],
   "11917672a1369ef9ea884cfda38b4ed3063ff000": [
     "sccm\\core\\get-started\\technical-preview.md"
@@ -1649,6 +1673,33 @@
   "69910757815c7c3486b66bba19e7912fe08405ec": [
     "sccm\\core\\migration\\security-and-privacy-for-migration.md"
   ],
+  "6821fb0ae4fd1ba888b143f9fbec4c7a8d19906c": [
+    "sccm\\core\\misc\\learn-more-about-available-updates.md"
+  ],
+  "00e7b4814f46d67d79e28701e694a429690e4fad": [
+    "sccm\\core\\misc\\learn-more-about-available-updates.md"
+  ],
+  "d34af7d08c1792de33519ac86f5105d9a5951b82": [
+    "sccm\\core\\misc\\learn-more-about-available-updates.md"
+  ],
+  "ff3d67b8d8e038ecd87dac90e65b4c1ab7cb15bc": [
+    "sccm\\core\\misc\\online-documentation.md"
+  ],
+  "20c53fe8dd66ab00db46088a040666fe09a9ebf3": [
+    "sccm\\core\\misc\\online-documentation.md"
+  ],
+  "18a10fd816703facb5e30c1aa39340f06b23e847": [
+    "sccm\\core\\misc\\online-documentation.md"
+  ],
+  "aee3ba5e1014c96a16615988b416c04b51cc64ee": [
+    "sccm\\core\\misc\\system-center-configuration-manager.md"
+  ],
+  "41e33142462780c0dc94e669ab439d3eb7d7e670": [
+    "sccm\\core\\misc\\system-center-configuration-manager.md"
+  ],
+  "bcc184ce0d2cdb96b70af8587f43912c40c3dc55": [
+    "sccm\\core\\misc\\system-center-configuration-manager.md"
+  ],
   "be7638f006b0eac9e58add7e3926532ba7921e8e": [
     "sccm\\core\\plan-design\\changes\\features-and-capabilities.md"
   ],
@@ -1687,6 +1738,9 @@
   ],
   "9e1744df8ea8e7391b326f18e87e8058cb202d52": [
     "sccm\\core\\plan-design\\changes\\whats-new-incremental-versions.md"
+  ],
+  "0803a13bb58f0d02803c34e6a3cb20f5e6ba60b7": [
+    "sccm\\core\\plan-design\\changes\\whats-new-in-version-1602.md"
   ],
   "188d37bb495f2d0adb69e0d9f8f2d71c55c42a61": [
     "sccm\\core\\plan-design\\changes\\whats-new-in-version-1602.md"
@@ -2522,6 +2576,9 @@
   "d5258c0265c7299eee872e487b68e91dbecc1c5d": [
     "sccm\\core\\servers\\deploy\\install\\prerequisites-for-installing-sites.md"
   ],
+  "0b6c49f3c5e817f1dbd40b40c78d89c4a018e0f1": [
+    "sccm\\core\\servers\\deploy\\install\\release-notes.md"
+  ],
   "1a98a824a7c0240f3ead65a83cf10b31c58d45ca": [
     "sccm\\core\\servers\\deploy\\install\\release-notes.md"
   ],
@@ -2723,6 +2780,9 @@
   "28ee7ba421ebae9cddef4c5c5b3cc65924784579": [
     "sccm\\core\\servers\\manage\\hierarchy-maintenance-tool-preinst.exe.md"
   ],
+  "b9721737b4181d8f5e41224c3e2c32ae41647554": [
+    "sccm\\core\\servers\\manage\\install-in-console-updates.md"
+  ],
   "37b5472bdd43850289778ead77d2a462ec2d52e3": [
     "sccm\\core\\servers\\manage\\install-in-console-updates.md"
   ],
@@ -2794,6 +2854,9 @@
   ],
   "97fb338fc76872ef8215e8aad5ae03c56fd80b6e": [
     "sccm\\core\\servers\\manage\\modify-your-infrastructure.md"
+  ],
+  "92ded1197d1dcdd6e5f3a8917718e6232b18bce4": [
+    "sccm\\core\\servers\\manage\\monitor-hierarchy-and-replication-infrastructure.md"
   ],
   "1f892148364560ded9c9b0413ba53589595bf725": [
     "sccm\\core\\servers\\manage\\monitor-hierarchy-and-replication-infrastructure.md"
@@ -4028,6 +4091,9 @@
   "5144a02518d88555b0fa27d78fe390308b8cb7a8": [
     "sccm\\protect\\deploy-use\\endpoint-definition-updates.md"
   ],
+  "30ac6f2ec03a4c0d50de700f9ce77f9e50eaf1e0": [
+    "sccm\\protect\\deploy-use\\endpoint-protection.md"
+  ],
   "3c318449fe828180d20201f69bf587fcbfebfaba": [
     "sccm\\protect\\deploy-use\\endpoint-protection.md"
   ],
@@ -4214,6 +4280,9 @@
   "01e0a5db62d2b41e0db973b1fdd8196ff054df29": [
     "sccm\\protect\\deploy-use\\vpn-profiles.md"
   ],
+  "a4ad2d93ecd994fff00dab33084a734252cac651": [
+    "sccm\\protect\\deploy-use\\windows-defender-advanced-threat-protection.md"
+  ],
   "b590a8df32d4e77c9e148a3fe4bf778445331c56": [
     "sccm\\protect\\deploy-use\\windows-defender-advanced-threat-protection.md"
   ],
@@ -4243,6 +4312,9 @@
   ],
   "84232e2e78fe282691ea0838208b94979291c937": [
     "sccm\\protect\\plan-design\\planning-for-certificate-template-permissions.md"
+  ],
+  "34033e9413a9aa525534d563b94b713dca8ebdf0": [
+    "sccm\\protect\\plan-design\\planning-for-endpoint-protection.md"
   ],
   "bb96319d061f0e014708c98631c80df1c7841449": [
     "sccm\\protect\\plan-design\\planning-for-endpoint-protection.md"
@@ -4639,6 +4711,9 @@
   ],
   "4c0910ae365e1fda7b9747b79e13782a6056c0da": [
     "sccm\\mdm\\understand\\whats-new-hybrid-archive.md"
+  ],
+  "d8f8ea98c4383783c95e6425af29987bdee1429a": [
+    "sccm\\core\\understand\\configuration-manager-on-azure.md"
   ],
   "d2cf81c9c827983c4b496e3708b6ee1fb4603056": [
     "sccm\\core\\understand\\configuration-manager-on-azure.md"
