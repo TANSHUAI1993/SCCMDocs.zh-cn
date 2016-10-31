@@ -2141,6 +2141,9 @@
   "cc01fae5e5e66240c13ebe3fa2b3e9b440f3419d": [
     "sccm\\core\\plan-design\\hierarchy\\the-content-library.md"
   ],
+  "cad4ebd3f8fa275d7d2cad9b2b87c32b971c580d": [
+    "sccm\\core\\plan-design\\hierarchy\\understand-how-clients-find-site-resources-and-services.md"
+  ],
   "8fc556d373135af61cf58cddf28421a6f05fcf23": [
     "sccm\\core\\plan-design\\hierarchy\\understand-how-clients-find-site-resources-and-services.md"
   ],
@@ -2965,6 +2968,9 @@
   ],
   "ce67afccdb1b3caab113e79b2e74d3bc0dfb2893": [
     "sccm\\core\\servers\\manage\\update-replication-flowchart.md"
+  ],
+  "7684c4b9a2a12ed7b9ddcddffe1125b3d47daa36": [
+    "sccm\\core\\servers\\manage\\updates.md"
   ],
   "a23e2fc84b31fc523d67f53583accddd60458f12": [
     "sccm\\core\\servers\\manage\\updates.md"

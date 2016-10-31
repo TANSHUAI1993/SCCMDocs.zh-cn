@@ -16519,6 +16519,26 @@
       "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\ff3d67b8d8e038ecd87dac90e65b4c1ab7cb15bc.3d343859f28d63c1a3937ec80ee819fcf2d30e96.xml",
       "LocXliff": null,
       "LocXliffCommit": null
+    },
+    "sccm\\core\\servers\\manage\\updates.md.01814841c2441747e14087fe569f3bcaff4e950b.HT": {
+      "SourceFilename": "sccm\\core\\servers\\manage\\updates.md",
+      "XliffHash": "01814841c2441747e14087fe569f3bcaff4e950b",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\7684c4b9a2a12ed7b9ddcddffe1125b3d47daa36.a479b748fbac996c930d07bce95b0d6ab39ab712.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
+    },
+    "sccm\\core\\plan-design\\hierarchy\\understand-how-clients-find-site-resources-and-services.md.553153fc7b49bbdae5000aa5d717d4507ee75efb.HT": {
+      "SourceFilename": "sccm\\core\\plan-design\\hierarchy\\understand-how-clients-find-site-resources-and-services.md",
+      "XliffHash": "553153fc7b49bbdae5000aa5d717d4507ee75efb",
+      "TranslationType": 1,
+      "IsArchived": false,
+      "ArchivedDateTime": "0001-01-01T00:00:00",
+      "SkeletonFile": "ol-xliffcache\\Microsoft\\SCCMDocs-pr.zh-cn\\live\\cad4ebd3f8fa275d7d2cad9b2b87c32b971c580d.9180eb89f6571992b7a3af61d379dfcbf53aa785.xml",
+      "LocXliff": null,
+      "LocXliffCommit": null
     }
   }
 }
