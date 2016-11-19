@@ -30,6 +30,12 @@
       "url": "https://github.com/Microsoft/templates.docs.msft.zh-cn",
       "branch": "master",
       "branch_mapping": {}
+    },
+    {
+      "path_to_root": "_repo.en-us",
+      "url": "https://github.com/Microsoft/SCCMDocs-pr",
+      "branch": "live"
     }
-  ]
+  ],
+  "need_generate_pdf_url_template": false
 }
