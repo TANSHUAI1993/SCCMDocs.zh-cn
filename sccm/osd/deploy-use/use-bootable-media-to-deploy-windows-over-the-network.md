@@ -1,0 +1,59 @@
+---
+title: "使用可启动媒体通过网络部署 Windows | Configuration Manager"
+description: "使用 System Center Configuration Manager 中的可启动媒体在启动目标计算机时部署操作系统。"
+ms.custom: na
+ms.date: 10/06/2016
+ms.prod: configuration-manager
+ms.reviewer: na
+ms.suite: na
+ms.technology:
+- configmgr-osd
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: 999b5409-7e72-48d2-8554-4d44427ce383
+caps.latest.revision: 5
+author: Dougeby
+ms.author: dougeby
+manager: angrobe
+translationtype: Human Translation
+ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
+ms.openlocfilehash: f5bdba0f609f51b988dbfdc0b0c8b204405f834a
+
+
+---
+# <a name="use-bootable-media-to-deploy-windows-over-the-network-with-system-center-configuration-manager"></a>使用可启动媒体与 System Center Configuration Manager 一起通过网络部署 Windows
+
+*适用范围：System Center Configuration Manager (Current Branch)*
+
+System Center Configuration Manager 中的可启动媒体允许在启动目标计算机时部署操作系统。 在目标计算机启动时，它从网络中检索任务序列、操作系统映像包和任何其他必需的内容。 由于媒体上未包括该内容，因此，你无需重新创建媒体就能更新内容。  
+
+ 通过在以下操作系统部署方案中使用多播，你可以通过网络部署操作系统：  
+
+-   [使用新版的 Windows 刷新现有的计算机](refresh-an-existing-computer-with-a-new-version-of-windows.md)  
+
+-   [在新计算机（裸机）上安装新版的 Windows](install-new-windows-version-new-computer-bare-metal.md)  
+
+-   [替换现有计算机和传输设置](replace-an-existing-computer-and-transfer-settings.md)  
+
+ 完成其中一个操作系统部署方案中的步骤，然后运行以下部分来使用可启动媒体部署操作系统。  
+
+## <a name="configure-deployment-settings"></a>配置部署设置  
+ 当你使用可启动媒体来启动操作系统部署过程时，必须配置该部署才能使操作系统对媒体可用。 可以在“部署软件向导”的“部署设置”  页面或部署属性的“部署设置”  选项卡上配置这一选项。  对于“可用于以下项目”  设置，请配置下述内容之一：  
+
+-   **Configuration Manager 客户端、媒体和 PXE**  
+
+-   **仅媒体和 PXE**  
+
+-   **仅媒体和 PXE（隐藏）**  
+
+## <a name="create-the-bootable-media"></a>创建可启动媒体  
+ 你可以指定可启动媒体是 U 盘还是 CD/DVD 集。 将启动媒体的计算机必须支持选为可启动驱动器的选项。 有关详细信息，请参阅[创建可启动媒体](create-bootable-media.md)。  
+
+##  <a name="a-namebkmkdeploya-install-the-operating-system-from-bootable-media"></a><a name="BKMK_Deploy"></a> 从可启动媒体安装操作系统  
+ 在计算机的可启动驱动器中插入可启动媒体，然后再启动它以安装操作系统。  
+
+
+
+<!--HONumber=Nov16_HO1-->
+
+

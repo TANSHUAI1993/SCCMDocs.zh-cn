@@ -1,0 +1,366 @@
+---
+title: "报表的操作和维护 | Configuration Manager"
+description: "了解管理 System Center Configuration Manager 中的报表和报表订阅的详细信息。"
+ms.custom: na
+ms.date: 10/06/2016
+ms.prod: configuration-manager
+ms.reviewer: na
+ms.suite: na
+ms.technology:
+- configmgr-other
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: b89bcfbf-f5b6-4fb1-bb5e-a5cc18ec0c78
+caps.latest.revision: 5
+author: Dougeby
+ms.author: dougeby
+manager: angrobe
+translationtype: Human Translation
+ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
+ms.openlocfilehash: 2473aef3b5c9be51f45039735e975d1c0ca86277
+
+
+---
+# <a name="operations-and-maintenance-for-reporting-in-system-center-configuration-manager"></a>System Center Configuration Manager 中报告的操作和维护
+
+*适用范围：System Center Configuration Manager (Current Branch)*
+
+为 System Center Configuration Manager 中的报表准备好基础结构后，通常可以执行多种操作来管理报表和报表订阅。  
+
+##  <a name="a-namebkmkmanagereportsa-manage-configuration-manager-reports"></a><a name="BKMK_ManageReports"></a> 管理 Configuration Manager 报表  
+ Configuration Manager 提供了超过 400 个预定义报表，可帮助收集、组织和呈现有关用户、硬件和软件清单、软件更新、应用程序、站点状态以及组织中其他 Configuration Manager 操作的信息。 你可以按原样使用这些预定义报表，或者你可以修改报表来满足你的需求。 也可以创建基于自定义模型和基于 SQL 的报表来满足需求。 使用以下部分可帮助管理 Configuration Manager 报表。  
+
+###  <a name="a-namebkmkrunreporta-run-a-configuration-manager-report"></a><a name="BKMK_RunReport"></a> 运行 Configuration Manager 报表  
+ 在 Configuration Manager 中的报表存储在 SQL Server Reporting Services，并从 Configuration Manager 站点数据库检索报表中呈现的数据。 您可以访问 Configuration Manager 控制台中或通过使用报表管理器，在 web 浏览器访问的报表。 你可以在对运行 SQL Server Reporting Services 的计算机具有访问权限的任何计算机上打开报表，你必须具有足够的权限才能查看报表。 在运行报表时，报表标题、描述和类别采用本地操作系统的语言显示。  
+
+> [!NOTE]  
+>  在某些非英语语言中，字符可能无法在报表中正确显示。  在此情况下，可以使用基于 Web 的报表管理器或通过远程管理员控制台来查看报表。  
+
+> [!WARNING]  
+>  要运行报表，你必须对为特定对象配置的“站点”  许可和“运行报表”  许可具有“读取”  权限。  
+
+> [!NOTE]  
+>  报表管理器是一种基于 Web 的报表访问和管理工具，可以使用该工具通过 HTTP 连接来管理远程位置上的单一报表服务器实例。 你可以使用报表管理器来执行操作任务，例如，查看报表、修改报表属性以及管理关联的报表订阅。 本主题提供在报表管理器中查看报表和修改报表属性的步骤，但若要了解有关报表管理器提供的其他选项的详细信息，请参阅 SQL Server 2008 联机丛书中的 [报表管理器](http://go.microsoft.com/fwlink/p/?LinkId=224916) 。  
+
+ 使用以下过程运行 Configuration Manager 报表。  
+
+##### <a name="to-run-a-report-in-the-configuration-manager-console"></a>若要在 Configuration Manager 控制台中运行报表  
+
+1.  在 Configuration Manager 控制台中，单击“监视” 。  
+
+2.  在“监视”  工作区中，展开“报表” ，然后单击“报表”  以列出可用报表。  
+
+    > [!IMPORTANT]  
+    >  在此版本的 Configuration Manager 中，“全部内容”报表仅显示包，而不显示应用程序。  
+
+    > [!TIP]  
+    >  如果没有列出报表，请验证是否安装和配置了 Reporting Services 点。 有关详细信息，请参阅[配置报表](configuring-reporting.md)。  
+
+3.  选择要运行的报表，然后在“主页”  选项卡上的“报表组”  部分，单击“运行”  以打开报表。  
+
+4.  如果有必需的参数，请指定这些参数，然后单击“查看报表” 。  
+
+#### <a name="to-run-a-report-in-a-web-browser"></a>在 Web 浏览器中运行报表  
+
+1.  在 Web 浏览器中，输入报表管理器 URL，例如，**http:\/\/Server1\/Reports**。 您可以确定报表管理器 URL 上 **报表管理器 URL** 页在 Reporting Services 配置管理器。  
+
+2.  在报表管理器中，单击 Configuration Manager 的报表文件夹，例如，**ConfigMgr\_CAS**。  
+
+    > [!TIP]  
+    >  如果没有列出报表，请验证是否安装和配置了 Reporting Services 点。 有关详细信息，请参阅[配置报表](configuring-reporting.md)。  
+
+3.  单击要运行的报表的报表类别，然后单击报表的链接。 报表将在报表管理器中打开。  
+
+4.  如果有必需的参数，请指定这些参数，然后单击“查看报表” 。  
+
+###  <a name="a-namebkmkmodifyreportpropertiesa-modify-the-properties-for-a-configuration-manager-report"></a><a name="BKMK_ModifyReportProperties"></a> 修改 Configuration Manager 报表的属性  
+ 在 Configuration Manager 控制台中，可以查看报表的属性（例如报表名称和描述），但若要更改属性，请使用报表管理器。 使用以下过程来修改 Configuration Manager 报表的属性。  
+
+#### <a name="to-modify-report-properties-in-report-manager"></a>在报表管理器中修改报表属性  
+
+1.  在 Web 浏览器中，输入报表管理器 URL，例如，**http:\/\/Server1\/Reports**。 您可以确定报表管理器 URL 上 **报表管理器 URL** 页在 Reporting Services 配置管理器。  
+
+2.  在报表管理器中，单击 Configuration Manager 的报表文件夹，例如，**ConfigMgr\_CAS**。  
+
+    > [!TIP]  
+    >  如果没有列出报表，请验证是否安装和配置了 Reporting Services 点。 有关详细信息，请参阅[配置报表](configuring-reporting.md)  
+
+3.  单击要修改其属性的报表的报表类别，然后单击报表的链接。 报表将在报表管理器中打开。  
+
+4.  单击“属性”  选项卡。 你可以修改报表名称和描述。  
+
+5.  完成后，单击“应用” 。 报表属性保存在报表服务器上，Configuration Manager 控制台将检索报表的更新报表属性。  
+
+###  <a name="a-namebkmkeditreporta-edit-a-configuration-manager-report"></a><a name="BKMK_EditReport"></a> 编辑 Configuration Manager 报表  
+ 如果现有 Configuration Manager 报表未检索必须具有的信息或未提供所需的布局或设计，则可以在报表生成器中编辑该报表。  
+
+> [!NOTE]  
+>  你也可以选择克隆现有报表，方式为：打开报表进行编辑，然后单击“另存为”  将其另存为新报表。  
+
+> [!IMPORTANT]  
+>  对于与你要修改的报表关联的对象，用户帐户必须具有“站点修改”  权限和“修改报表”  权限。  
+
+> [!IMPORTANT]  
+>  Configuration Manager 升级到较新版本时，新报表将覆盖预定义的报表。 如果修改预定义报表，你必须在安装新版本之前备份报表，然后在 Reporting Services 中还原报表。 如果要对预定义报表进行大量更改，请考虑改为创建新报表。 不会覆盖在升级站点之前创建的新报表。  
+
+ 使用以下过程来编辑 Configuration Manager 报表的属性。  
+
+#### <a name="to-edit-report-properties"></a>编辑报表属性  
+
+1.  在 Configuration Manager 控制台中，单击“监视” 。  
+
+2.  在“监视”  工作区中，展开“报表” ，然后单击“报表”  以列出可用报表。  
+
+3.  选择要修改的报表，然后在“主页”  选项卡上的“报表组”  部分，单击“编辑” 。 如果出现提示，请输入你的用户帐户和密码，然后单击“确定” 。 如果计算机上未安装报表生成器，将会提示你进行安装。 单击“运行”  安装修改和创建报表所需的报表生成器。  
+
+4.  在报表生成器中，修改相应的报表设置，然后单击“保存”  以将报表保存到报表服务器。  
+
+###  <a name="a-namebkmkcreatemodelbasedreporta-create-a-model-based-report"></a><a name="BKMK_CreateModelBasedReport"></a> 创建基于模型的报表  
+ 基于模型的报表允许以交互方式选择要包括在报表中的项目。 有关创建自定义报表模型的详细信息，请参阅[在 SQL Server Reporting Services 中为 System Center Configuration Manager 创建自定义报表模型](creating-custom-report-models-in-sql-server-reporting-services.md)。  
+
+> [!IMPORTANT]  
+>  用户帐户必须具有“站点修改”  权限才能创建新报表。 用户只能在其具有“修改报表”  权限的文件夹中创建报表。  
+
+ 使用以下过程来创建基于模型的 Configuration Manager 报表。  
+
+#### <a name="to-create-a-model-based-report"></a>创建基于模型的报表  
+
+1.  在 Configuration Manager 控制台中，单击“监视” 。  
+
+2.  在“监视”  工作区中，展开“报表”  ，并单击“报表” 。  
+
+3.  在“主页”  选项卡上的“创建”  部分，单击“创建报表”  以打开“创建报表向导” 。  
+
+4.  在“信息”  页上，配置下列设置：  
+
+    -   **类型**：选择“基于模型的报表”以使用 Reporting Services 模型在报表生成器中创建报表。  
+
+    -   **名称**：指定报表的名称。  
+
+    -   **描述**：指定报表的描述。  
+
+    -   **服务器**：显示你在其上创建此报表的报表服务器的名称。  
+
+    -   **路径**：单击“浏览”  指定要在其中存储报表的文件夹。  
+
+     单击“下一步” 。  
+
+5.  在“模型选择”  页上的列表中选择要用于创建此报表的可用模型。 当你选择报表模型时，“预览”  部分将显示所选报表模型提供的 SQL Server 视图和实体。  
+
+6.  在“摘要”  页上，检查配置设置。 单击“上一步”以更改设置，或单击“下一步”以在 Configuration Manager 中创建报表。  
+
+7.  在“确认”  页上，单击“关闭”  退出向导，然后打开报表生成器以配置报表设置。 如果出现提示，请输入你的用户帐户和密码，然后单击“确定” 。 如果计算机上未安装报表生成器，将会提示你进行安装。 单击“运行”  安装修改和创建报表所需的报表生成器。  
+
+8.  在 Microsoft 报表生成器中，创建报表布局，选择可用 SQL Server 视图中的数据，向报表中添加参数，诸如此类。 有关使用报表生成器来创建新报表的详细信息，请参阅报表生成器帮助。  
+
+9. 单击“运行”  以运行报表。 验证报表是否提供了预期信息。 如果需要，单击“设计”  返回到“设计”视图以修改报表。  
+
+10. 单击“保存”  将报表保存到报表服务器。 你可以在“监视”  工作区的“报表”  节点中运行和修改新报表。  
+
+###  <a name="a-namebkmkcreatesqlbasedreporta-create-a-sql-based-report"></a><a name="BKMK_CreateSQLBasedReport"></a> 创建基于 SQL 的报表  
+ 基于 SQL 的报表使你能够检索基于报表 SQL 语句的数据。  
+
+> [!IMPORTANT]  
+>  在为自定义报表创建 SQL 语句时，不要直接引用 SQL Server 表， 而是从站点数据库中引用报表 SQL Server 视图\(以 v\_ 开头的视图名称\)。 还可以从站点数据库中引用公共存储过程\(以 sp\_ 开头的存储过程名称\)。  
+
+> [!IMPORTANT]  
+>  用户帐户必须具有“站点修改”  权限才能创建新报表。 用户只能在其具有“修改报表”  权限的文件夹中创建报表。  
+
+ 使用以下过程来创建基于 SQL 的 Configuration Manager 报表。  
+
+#### <a name="to-create-a-sql-based-report"></a>创建基于 SQL 的报表  
+
+1.  在 Configuration Manager 控制台中，单击“监视” 。  
+
+2.  在“监视”  工作区中，展开“报表” ，然后单击“报表” 。  
+
+3.  在“主页”  选项卡上的“创建”  部分，单击“创建报表”  以打开“创建报表向导” 。  
+
+4.  在“信息”  页上，配置下列设置：  
+
+    -   **类型**：选择“基于 SQL 的报表”以使用 SQL 语句在报表生成器中创建报表。  
+
+    -   **名称**：指定报表的名称。  
+
+    -   **描述**：指定报表的描述。  
+
+    -   **服务器**：显示你在其上创建此报表的报表服务器的名称。  
+
+    -   **路径**：单击“浏览”  指定要在其中存储报表的文件夹。  
+
+     单击“下一步” 。  
+
+5.  在“摘要”  页上，检查配置设置。 单击“上一步”以更改设置，或单击“下一步”以在 Configuration Manager 中创建报表。  
+
+6.  在“确认”  页上，单击“关闭”  退出向导并打开报表生成器以配置报表设置。 如果出现提示，请输入你的用户帐户和密码，然后单击“确定” 。 如果计算机上未安装报表生成器，将会提示你进行安装。 单击“运行”  安装修改和创建报表所需的报表生成器。  
+
+7.  在 Microsoft 报表生成器中，为报表提供 SQL 语句或使用可用 SQL Server 视图中的列生成 SQL 语句，向报表中添加参数，诸如此类。  
+
+8.  单击“运行”  以运行报表。 验证报表是否提供了预期信息。 如果需要，单击“设计”  返回到“设计”视图以修改报表。  
+
+9. 单击“保存”  将报表保存到报表服务器。 你可以在“监视”  工作区的“报表”  节点中运行新报表。  
+
+##  <a name="a-namebkmkmanagereportsubscriptionsa-manage-report-subscriptions"></a><a name="BKMK_ManageReportSubscriptions"></a> 管理报表订阅  
+ SQL Server Reporting Services 中的报表订阅使你能够配置按计划的间隔通过电子邮件自动交付指定报表或将指定报表自动交付到文件共享。 使用 System Center 2012 Configuration Manager 中的**创建订阅向导**来配置报表订阅。  
+
+###  <a name="a-namebkmkreportsubscriptionfilesharea-create-a-report-subscription-to-deliver-a-report-to-a-file-share"></a><a name="BKMK_ReportSubscriptionFileShare"></a> 创建报表订阅以向文件共享传递报表  
+ 创建报表订阅以向文件共享传递报表时，会使用指定的格式将报表复制到你指定的文件共享中。 一次只能订阅和请求传递一个报表。  
+
+ 与报表服务器承载和管理的报表不同的是，向共享文件夹传递的报表是静态文件。 对于作为文件系统上的文件存储的报表，为报表定义的交互式功能无效。 交互式功能将呈现为静态元素。 如果报表包含图表，则会使用默认的表示形式。 如果报表链接到另一个报表，则链接呈现为静态文本。 如果想在传递的报表中保留交互式功能，请改用电子邮件传递。 有关电子邮件传递的详细信息，请参阅本主题后面的 [创建报表订阅以通过电子邮件传递报表](#BKMK_ReportSubscriptionEmail) 章节。  
+
+ 在创建使用文件共享传递的订阅时，必须将现有的文件夹指定为目标文件夹。 报表服务器不会在文件系统上创建文件夹。 对于你指定的文件夹，必须可以通过网络连接来访问它。 在指定订阅中的目标文件夹时，请使用 UNC 路径，并且不要在文件夹路径中包含末尾的反斜杠。 例如，目标文件夹的有效 UNC 路径是：\\\\&lt;servername\>\\reportfiles\\operations\\2011。  
+
+ 可以使用各种文件格式（例如 MHTML 或 Excel）来呈现报表。 若要将报表保存为特定的文件格式，请在创建订阅时选择该呈现格式。 例如，选择“Excel”以将报表保存为 Microsoft Excel 文件。 虽然可以选择任何受支持的呈现格式，但在呈现为文件时，某些格式的效果比另一些好。  
+
+ 使用下列过程来创建向文件共享传递报表的报表订阅。  
+
+#### <a name="to-create-a-report-subscription-to-deliver-a-report-to-a-file-share"></a>创建向文件共享传递报表的报表订阅  
+
+1.  在 Configuration Manager 控制台中，单击“监视” 。  
+
+2.  在“监视”  工作区中，展开“报表”  ，然后单击“报表”  以列出可用报表。 可以选择一个报表文件夹，以仅列出与该文件夹关联的报表。  
+
+3.  选择要添加到订阅中的报表，然后在“主页”  选项卡上的“报表组”  部分中，单击“创建订阅”  以打开“创建订阅向导” 。  
+
+4.  在“订阅传递”  页上，配置下列设置：  
+
+    -   报表传递方式：选择“Windows 文件共享”  以向文件共享传递报表。  
+
+    -   **文件名**：指定报表的文件名。 默认情况下，报表文件不包含文件扩展名。 选择“创建时添加文件扩展名”  ，以自动根据呈现格式向此报表添加文件扩展名。  
+
+    -   **路径**：指定想将此报表传递到其中的现有文件夹的 UNC 路径\(例如，\\\\&lt;服务器名称\>\\&lt;服务器共享\>\\&lt;报表文件夹\>\)。  
+
+        > [!NOTE]  
+        >  稍后在此页上指定的用户名必须能够访问此服务器共享，并且必须具有目标文件夹的“写入”权限。  
+
+    -   **呈现格式**：为报表文件选择下列格式之一：  
+
+        -   **具有报表数据的 XML 文件**：使用可扩展标记语言格式保存报表。  
+
+        -   **CSV \(逗号分隔\)**：使用逗号分隔值格式保存报表。  
+
+        -   **TIFF 文件**：使用标记图像文件格式保存报表。  
+
+        -   **Acrobat \(PDF\)文件**：使用 Acrobat 可移植文档格式保存报表。  
+
+        -   **HTML 4.0**：将报表保存为仅在支持 HTML 4.0 的浏览器中才能查看的网页。 Internet Explorer 5 和更高版本支持 HTML 4.0。  
+
+            > [!NOTE]  
+            >  如果报表包含图像，HTML 4.0 格式并不会在文件中包含这些图像。  
+
+        -   **MHTML \(Web 存档\)**：使用 MIME HTML 格式 \(mhtml\) 保存报表（可在多个 Web 浏览器中查看）。  
+
+        -   **RPL 呈现器**：使用报表页面布局 \(RPL\) 格式保存报表。  
+
+        -   **Excel**：将报表保存为 Microsoft Excel 电子表格。  
+
+        -   **Word**：将报表保存为 Microsoft Word 文档。  
+
+    -   **用户名**：指定具有目标服务器共享和文件夹的访问权限的 Windows 用户帐户。 该用户帐户必须能够访问此服务器共享，并且必须具有目标文件夹的“写入”权限。  
+
+    -   **密码**：指定 Windows 用户帐户的密码。 在“确认密码”中，重新输入密码。  
+
+    -   选择下列选项之一，以配置当目标文件夹中存在同名文件时的行为：  
+
+        -   **使用较新版本覆盖现有文件**：指定在报表文件已存在时用新版本覆盖它。  
+
+        -   **不覆盖现有文件**：指定在报表文件已存在时不执行任何操作。  
+
+        -   **添加较新版本时递增文件名**：指定在报表文件已存在时，向新报表的文件名添加一个数字，以将它与其他版本区分开来。  
+
+    -   **描述**：指定报表订阅的描述。  
+
+     单击“下一步” 。  
+
+5.  在“订阅计划”  页上，为报表订阅选择下列传递计划选项之一：  
+
+    -   **使用共享计划**：共享计划是以前定义的计划，可以由其他报表订阅使用。 选中此复选框，然后在列表中选择一个共享计划（如果已指定了任何共享计划的话）。  
+
+    -   **创建新计划**：配置此报表的运行计划，包括间隔、开始时间和日期以及此订阅的结束日期。  
+
+6.  在“订阅参数”  页上，指定在无人参与的情况下运行此报表时所使用的参数。 如果没有为报表指定参数，则不会显示此页。  
+
+7.  在“摘要”  页上，查看报表订阅的设置。 单击“上一步”  以更改设置，或单击“下一步”  以创建报表订阅。  
+
+8.  在“完成”  页上，单击“关闭”  退出向导。 验证是否已成功创建报表订阅。 可以在“监视”  工作区中的“订阅”  节点的“报表”  下查看和修改报表订阅。  
+
+###  <a name="a-namebkmkreportsubscriptionemaila-create-a-report-subscription-to-deliver-a-report-by-email"></a><a name="BKMK_ReportSubscriptionEmail"></a> 创建报表订阅以通过电子邮件传递报表  
+ 在创建报表订阅以通过电子邮件传递报表时，将向你配置的收件人发送电子邮件，而且会将报表包含为附件。 报表服务器不会验证电子邮件地址，也不会从电子邮件服务器获取电子邮件地址。 你必须事先知道要使用的电子邮件地址。 默认情况下，可以将报表通过电子邮件发送到组织内部或外部的任何有效的电子邮件帐户。 可以选择下列一个或全部两个电子邮件传递选项：  
+
+-   发送通知和所生成的报表的超链接。  
+
+-   发送嵌入或附加的报表。 呈现格式和浏览器决定报表是嵌入的还是附加的。 如果浏览器支持 HTML 4.0 和 MHTML，且选择“MHTML\(Web 存档\)”呈现格式，则报表将嵌入到邮件中。 所有其他呈现格式\(CSV、PDF、Word 等\)将报表作为附件传递。 Reporting Services 在发送报表之前不会检查附件或邮件的大小。 如果附件或邮件超过了邮件服务器允许的最大限制值，则不会传递报表。  
+
+> [!IMPORTANT]  
+>  必须在 Reporting Services 中配置电子邮件设置，以便让“电子邮件”  传递选项可用。 有关在 Reporting Services 中配置电子邮件设置的详细信息，请参阅 SQL Server 联机丛书中的 [配置报表服务器以进行电子邮件传递](http://go.microsoft.com/fwlink/p/?LinkId=226668) 。  
+
+ 使用下列过程来创建报表订阅，以使用电子邮件传递报表。  
+
+#### <a name="to-create-a-report-subscription-to-deliver-a-report-by-email"></a>创建报表订阅以通过电子邮件传递报表  
+
+-   在 Configuration Manager 控制台中，单击“监视” 。  
+
+-   在“监视”  工作区中，展开“报表”  ，然后单击“报表”  以列出可用报表。 可以选择一个报表文件夹，以仅列出与该文件夹关联的报表。  
+
+-   选择要添加到订阅中的报表，然后在“主页”  选项卡上的“报表组”  部分中，单击“创建订阅”  以打开“创建订阅向导” 。  
+
+-   在“订阅传递”  页上，配置下列设置：  
+
+    -   **报表传递方式**：选择“电子邮件”，以将报表作为电子邮件的附件传递。  
+
+    -   结束时间：指定有效的电子邮件地址以接收此报表。  
+
+        > [!NOTE]  
+        >  通过用分号来分隔每个电子邮件地址，可以输入多个电子邮件收件人。  
+
+    -   **抄送**：根据需要指定要将此报表复制到的电子邮件地址。  
+
+    -   **密件抄送**：根据需要指定要将此报表的密件副本发送到的电子邮件地址。  
+
+    -   **回复**：指定在收件人回复电子邮件时要使用的回复地址。  
+
+    -   **主题**：指定订阅电子邮件的主题行。  
+
+    -   **优先级**：选择此电子邮件的优先级标记。 请选择“低” 、“普通” 或“高” 。 Microsoft Exchange 使用优先级设置来设置标记，以指示电子邮件的重要性。  
+
+    -   **备注**：指定要添加到订阅电子邮件的正文的文本。  
+
+    -   **描述**：指定此报表订阅的描述。  
+
+    -   **包括链接**：在电子邮件的正文中包括订阅的报表的 URL。  
+
+    -   **包括报表**：指定将报表附加到电子邮件。 在“呈现格式”  列表中指定用于附加报表的格式。  
+
+    -   **呈现格式**：为附加的报表选择下列格式之一：  
+
+        -   **具有报表数据的 XML 文件**：使用可扩展标记语言格式保存报表。  
+
+        -   **CSV \(逗号分隔\)**：使用逗号分隔值格式保存报表。  
+
+        -   **TIFF 文件**：使用标记图像文件格式保存报表。  
+
+        -   **Acrobat \(PDF\)文件**：使用 Acrobat 可移植文档格式保存报表。  
+
+        -   **MHTML \(Web 存档\)**：使用 MIME HTML 格式 \(mhtml\) 保存报表（可在多个 Web 浏览器中查看）。  
+
+        -   **Excel**：将报表保存为 Microsoft Excel 电子表格。  
+
+        -   **Word**：将报表保存为 Microsoft Word 文档。  
+
+-   在“订阅计划”  页上，为报表订阅选择下列传递计划选项之一：  
+
+    -   **使用共享计划**：共享计划是以前定义的计划，可以由其他报表订阅使用。 选中此复选框，然后在列表中选择一个共享计划（如果已指定了任何共享计划的话）。  
+
+    -   **创建新计划**：配置此报表的运行计划，包括间隔、开始时间和日期以及此订阅的结束日期。  
+
+-   在“订阅参数”  页上，指定在无人参与的情况下运行此报表时所使用的参数。 如果没有为报表指定参数，则不会显示此页。  
+
+-   在“摘要”  页上，查看报表订阅的设置。 单击“上一步”  以更改设置，或单击“下一步”  以创建报表订阅。  
+
+-   在“完成”  页上，单击“关闭”  退出向导。 验证是否已成功创建报表订阅。 可以在“监视”  工作区中的“订阅”  节点的“报表”  下查看和修改报表订阅。  
+
+
+
+<!--HONumber=Nov16_HO1-->
+
+
