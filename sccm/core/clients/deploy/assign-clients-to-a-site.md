@@ -44,7 +44,7 @@ ms.openlocfilehash: 3540b178bf8d7c6473b94a7300578ed7cf0dce29
 
  如果客户端无法分配到站点，则客户端软件仍然会安装，但是将不受管理。 如果客户端已安装但尚未分配到站点，或已分配到站点但不能与管理点通信，则客户端会被视为不受管理。  
 
-##  <a name="a-namebkmkmanualassignmenta-using-manual-site-assignment-for-computers"></a><a name="BKMK_ManualAssignment"></a>对计算机使用手动站点分配  
+##  <a name="a-namebkmkmanualassignmenta-using-manual-site-assignment-for-computers"></a><a name="BKMK_ManualAssignment"></a> 对计算机使用手动站点分配  
  可以使用下面两种方法将客户端计算机手动分配到站点：  
 
 -   使用指定站点代码的客户端安装属性。  
@@ -54,7 +54,7 @@ ms.openlocfilehash: 3540b178bf8d7c6473b94a7300578ed7cf0dce29
 > [!NOTE]  
 >  如果将客户端计算机手动分配到不存在的 Configuration Manager 站点代码，则站点分配将失败。 客户端仍然会安装，但是在分配到有效的 Configuration Manager 站点之前不受管理。  
 
-##  <a name="a-namebkmkautomaticassignmenta-using-automatic-site-assignment-for-computers"></a><a name="BKMK_AutomaticAssignment"></a>对计算机使用自动站点分配  
+##  <a name="a-namebkmkautomaticassignmenta-using-automatic-site-assignment-for-computers"></a><a name="BKMK_AutomaticAssignment"></a> 对计算机使用自动站点分配  
  在客户端部署过程中，或者当你在控制面板内揅onfiguration Manager 属性?  的“高级”  选项卡中单击“发现站点”  时，可能会发生自动站点分配。 Configuration Manager 客户端会将其自己的网络位置与在 Configuration Manager 层次结构中配置的边界进行比较。 如果客户端的网络位置在为站点分配启用的边界组内，或者为回退站点配置了层次结构，则会将客户端自动分配给该站点，你不必指定站点代码。  
 
  你可以使用下列一项或多项来配置边界：  
@@ -86,7 +86,7 @@ ms.openlocfilehash: 3540b178bf8d7c6473b94a7300578ed7cf0dce29
 
 -   客户端的网络位置不在 Configuration Manager 层次结构中配置的其中一个边界组之内，并且层次结构没有回退站点。  
 
-##  <a name="a-namebkmksitecompatibilitya-completing-site-assignment-by-checking-site-compatibility"></a><a name="BKMK_SiteCompatibility"></a>通过检查站点兼容性完成站点分配  
+##  <a name="a-namebkmksitecompatibilitya-completing-site-assignment-by-checking-site-compatibility"></a><a name="BKMK_SiteCompatibility"></a> 通过检查站点兼容性完成站点分配  
  在客户端找到分配的站点后，将检查客户端的版本和操作系统以确保 Configuration Manager 站点可以管理该客户端。 例如，Configuration Manager 无法管理 Configuration Manager 2007 客户端、System Center 2012 Configuration Manager 客户端或正在运行 Windows 2000 的客户端。  
 
  然而，如果你将运行 Windows 2000 的客户端分配给 Configuration Manager 站点，则站点分配将失败；当你将 Configuration Manager 2007 客户端或 System Center 2012 Configuration Manager 客户端分配给 Configuration Manager (Current Branch) 站点时，站点分配将继续支持自动客户端升级。 但是，在较旧一代客户端升级到 Configuration Manager (Current Branch) 客户端之前，Configuration Manager 无法使用客户端设置、应用程序或软件更新来管理此客户端。  
@@ -121,7 +121,7 @@ ms.openlocfilehash: 3540b178bf8d7c6473b94a7300578ed7cf0dce29
 
  执行站点兼容性检查的例外情况是为基于 Internet 的管理点配置了客户端时。 在这种情况下，不进行站点兼容性检查。 如果将客户端分配到包含基于 Internet 的站点系统的站点，并指定基于 Internet 的管理点，请确保将客户端分配到正确的站点。 如果错误地将客户端分配到 Configuration Manager 2007 站点、System Center 2012 Configuration Manager 站点或分配到不具有基于 Internet 的站点系统角色的 Configuration Manager 站点，客户端将不受管理。  
 
-##  <a name="a-namebkmklocatingmpsa-locating-management-points"></a><a name="BKMK_LocatingMPs"></a>定位管理点  
+##  <a name="a-namebkmklocatingmpsa-locating-management-points"></a><a name="BKMK_LocatingMPs"></a> 定位管理点  
  将客户端成功分配给站点之后，它将定位站点中的管理点。  
 
  客户端计算机会下载它们可以连接到的站点中管理点的列表。 每当客户端重启、每 25 小时，以及在客户端检测到网络更改（如计算机在网络上先断开然后重新连接）或收到新 IP 地址的情况下，会发生此过程。 此列表包含 Intranet 上的管理点，并指明管理点是通过 HTTP 还是 HTTPS 接受客户端连接。 当客户端计算机在 Internet 上并且客户端仍没有管理点列表时，它会连接到指定的基于 Internet 的管理点以获取管理点的列表。 当客户端具有其分配的站点的管理点列表时，它会选择一个要连接到的管理点：  
@@ -134,15 +134,15 @@ ms.openlocfilehash: 3540b178bf8d7c6473b94a7300578ed7cf0dce29
 
  当客户端从其站点中的管理点下载了客户端策略后，该客户端将随即成为被管理的客户端。  
 
-##  <a name="a-namebkmkdownloadsitesettingsa-downloading-site-settings"></a><a name="BKMK_DownloadSiteSettings"></a>下载站点设置  
+##  <a name="a-namebkmkdownloadsitesettingsa-downloading-site-settings"></a><a name="BKMK_DownloadSiteSettings"></a> 下载站点设置  
  在站点分配成功并且客户端找到管理点之后，使用 Active Directory 域服务检查其站点兼容性的客户端计算机将下载其分配的站点的客户端相关站点设置。 这些设置包括客户端证书选择条件、是否使用证书吊销列表以及客户端请求端口号。 客户端将继续定期检查这些设置。  
 
  当客户端计算机无法从 Active Directory 域服务获取站点设置时，它们会从其管理点下载这些设置。 客户端计算机也可以通过使用客户端请求在进行安装时获取站点设置，或者你可以使用 CCMSetup.exe 和客户端安装属性手动指定站点设置。 有关客户端安装属性的详细信息，请参阅[关于 System Center Configuration Manager 中的客户端安装属性](../../../core/clients/deploy/about-client-installation-properties.md)。  
 
-##  <a name="a-namebkmkdownloadclientsettingsa-downloading-client-settings"></a><a name="BKMK_DownloadClientSettings"></a>下载客户端设置  
+##  <a name="a-namebkmkdownloadclientsettingsa-downloading-client-settings"></a><a name="BKMK_DownloadClientSettings"></a> 下载客户端设置  
  所有客户端均下载默认客户端设置策略或任何合适的自定义客户端设置策略。 软件中心依赖于 Windows 计算机的这些客户端配置策略，并且将通知用户在下载此配置信息之前软件中心无法成功运行。 根据配置的客户端设置，初次下载客户端设置可能需要些时间，并且在此过程完成之前某些客户端管理任务可能无法运行。  
 
-##  <a name="a-namebkmkverifyassignmenta-verifying-site-assignment"></a><a name="BKMK_VerifyAssignment"></a>验证站点分配  
+##  <a name="a-namebkmkverifyassignmenta-verifying-site-assignment"></a><a name="BKMK_VerifyAssignment"></a> 验证站点分配  
  可以使用下面任何一种方法验证站点分配是否成功：  
 
 -   对于 Windows 计算机上的客户端，使用控制面板中的 Configuration Manager 并验证站点代码是否正确显示在“站点”选项卡中。  
@@ -155,7 +155,7 @@ ms.openlocfilehash: 3540b178bf8d7c6473b94a7300578ed7cf0dce29
 
 -   对于客户端计算机，请使用客户端上的 LocationServices.log 文件。  
 
-##  <a name="a-namebkmkroaminga-roaming-to-other-sites"></a><a name="BKMK_Roaming"></a>漫游到其他站点  
+##  <a name="a-namebkmkroaminga-roaming-to-other-sites"></a><a name="BKMK_Roaming"></a> 漫游到其他站点  
  如果将 Intranet 上的客户端计算机分配给主站点，但更改其网络位置以便其在为另一个站点配置的边界组内，则客户端计算机已漫游到另一个站点。 如果此站点是分配的站点的辅助站点，则客户端可以使用辅助站点中的管理点以下载客户端策略以及上载客户端数据，这会避免通过潜在的慢速网络发送此数据。 但是，如果这些客户端漫游到另一个主站点或辅助站点（不是其分配的站点的子站点）的边界中，则这些客户端始终使用其分配的站点中的管理点下载客户端策略以及将数据上载到其站点。  
 
  漫游到其他站点（所有主站点和所有辅助站点）的这些客户端计算机始终可以将其他站点中的管理点用于内容位置请求。 当前站点中的管理点可以为客户端提供具有客户端所请求内容的分发点的列表。  

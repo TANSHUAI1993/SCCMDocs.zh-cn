@@ -144,7 +144,7 @@ ms.openlocfilehash: 5fab3a4834f30d48c5c000a7c95c7006eb8e4785
 
 9. 打开 Configuration Manager 控制台并导航到“管理” >“云服务” > “更新和服务”。 现在即可安装之前导入的更新。 有关安装更新的信息，请参阅[安装 System Center Configuration Manager 在控制台的更新](../../../core/servers/manage/install-in-console-updates.md)。  
 
-## <a name="a-namebkmkcmda-command-line-options"></a><a name="bkmk_cmd"></a>命令行选项  
+## <a name="a-namebkmkcmda-command-line-options"></a><a name="bkmk_cmd"></a> 命令行选项  
  若要查看服务连接点工具的帮助信息，请打开包含该工具的文件夹的命令提示符并运行命令：  **serviceconnectiontool.exe**。  
 
 |命令行选项|详细信息|  

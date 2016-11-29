@@ -232,7 +232,7 @@ System Center Configuration Manager 主站点可以使用数据库副本来减�
 
 3.  将“Windows 身份验证”  设置为“启用” ，然后关闭“Internet Information Services (IIS)管理器” 。  
 
-###  <a name="a-namebkmkdbreplicacerta-step-4--configure-a-self-signed-certificate-for-the-database-replica-server"></a><a name="BKMK_DBReplica_Cert"></a> 步骤 4 - 为数据库副本服务器配置自签名证书  
+###  <a name="a-namebkmkdbreplicacerta-step-4--configure-a-self-signed-certificate-for-the-database-replica-server"></a><a name="BKMK_DBReplica_Cert"></a> 第 4 步 - 配置数据库副本服务器的自签名证书  
  必须在数据库副本服务器上创建自签名证书，并将此证书提供给将使用该数据库副本服务器的每个管理点。  
 
  证书会自动提供给数据库副本服务器上安装的管理点。 但是，要将此证书提供给远程管理点，则必须导出证书，然后将其添加到远程管理点上的可信人员证书存储中。  

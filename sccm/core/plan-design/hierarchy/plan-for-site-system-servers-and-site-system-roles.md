@@ -35,7 +35,7 @@ ms.openlocfilehash: 5f8d051a92cd74938f1a5235b37f02ebe0ff542c
 
  如果配置含代理的站点系统服务器供站点系统角色使用，请参阅 [可以使用代理服务器的站点系统角色](#bkmk_proxy)  
 
-##  <a name="a-namebkmkplanrolesa-site-system-roles"></a><a name="bkmk_planroles"></a> 站点系统角色  
+##  <a name="a-namebkmkplanrolesa-site-system-roles"></a><a name="bkmk_planroles"></a> Site system roles  
  站点系统角色安装在计算机上，为站点提供其他功能。 示例包括：  
 
 -   附加的管理点，以便站点支持更多设备，多达站点支持的容量  

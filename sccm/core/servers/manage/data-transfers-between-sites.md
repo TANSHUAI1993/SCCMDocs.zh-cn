@@ -28,7 +28,7 @@ ms.openlocfilehash: 1abd28aa4ce4f946f6328f8f7924b5f5a81e640c
 System Center Configuration Manager 使用**基于文件的复制**和**数据库复制**在站点之间传输不同类型的信息。  本主题中的内容可帮助你了解 Configuration Manager 如何在站点间移动数据，并了解如何管理你的网络上的数据传输。  
 
 
-##  <a name="a-namebkmkfileroutea-file-based-replication"></a><a name="bkmk_fileroute"></a> 基于文件的复制  
+##  <a name="a-namebkmkfileroutea-file-based-replication"></a><a name="bkmk_fileroute"></a> File-based replication  
  Configuration Manager 使用基于文件的复制在层次结构中的站点之间传输基于文件的数据。 此数据包括诸如以下内容：你要部署到子站点中的分发点的应用程序和包，以及传输到父站点（在其中处理记录）的未处理发现数据记录。  
 
  站点之间基于文件的通信通过 **TCP/IP 端口 445** 使用 **服务器消息块**(SMB) 协议。 你可以指定包括带宽限制和脉冲模式的配置来控制在网络上传输的数据量，并指定计划来控制何时在网络上发送数据。  
@@ -72,7 +72,7 @@ System Center Configuration Manager 使用**基于文件的复制**和**数据�
 
 若要管理站点的发送程序，请在“管理”  工作区中展开“站点配置”  节点，选择“站点”  节点，然后针对要管理的站点单击“属性”  。 单击“发送程序”  选项卡以更改发送程序配置。  
 
-##  <a name="a-namebkmkdbrepa-database-replication"></a><a name="bkmk_dbrep"></a> 数据库复制  
+##  <a name="a-namebkmkdbrepa-database-replication"></a><a name="bkmk_dbrep"></a> Database replication  
 Configuration Manager 数据库复制使用 SQL Server 传输数据，并将站点数据库中所做的更改与存储在层次结构中其他站点上的数据库中的信息合并在一起。  
 
 -   这能让所有站点共享相同的信息  
