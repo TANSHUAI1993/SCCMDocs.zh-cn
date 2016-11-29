@@ -60,10 +60,10 @@ ms.openlocfilehash: e0ba309d8efc34cccce6acc4c59f0c4d218a617a
     > [!NOTE]  
     >  如果在 Configuration Manager 控制台已打开的同时安装 VMM 控制台，必须在 VMM 控制台安装完成后重启 Configuration Manager 控制台。 否则， Configuration Manager 将无法成功连接到 VMM 管理服务器以上传 VHD。  
 
-##  <a name="a-namebkmkcreatevhdstepsa-steps-to-create-a-vhd"></a><a name="BKMK_CreateVHDSteps"></a>创建 VHD 的步骤  
+##  <a name="a-namebkmkcreatevhdstepsa-steps-to-create-a-vhd"></a><a name="BKMK_CreateVHDSteps"></a> 创建 VHD 的步骤  
  要创建 VHD，你必须创建一个包含用于创建 VHD 的步骤的任务序列，然后在“创建虚拟硬盘向导”中使用该任务序列创建 VHD。 以下部分提供了创建 VHD 的步骤。  
 
-###  <a name="a-namebkmkcreatetsa-create-a-task-sequence-for-the-vhd"></a><a name="BKMK_CreateTS"></a>为 VHD 创建任务序列  
+###  <a name="a-namebkmkcreatetsa-create-a-task-sequence-for-the-vhd"></a><a name="BKMK_CreateTS"></a> 为 VHD 创建任务序列  
  你必须创建将包含创建 VHD 的步骤的任务序列。 在“创建任务序列向导”中，你可以选择“将现有的映像包安装到虚拟硬盘”  选项，该选项创建用于创建 VHD 的步骤。 例如，向导将添加所需的下列步骤：在 Windows PE 中重启、对磁盘进行格式化和分区、应用操作系统以及关闭计算机。 当处于完整操作系统中时，你无法创建 VHD。 此外，Configuration Manager 必须等待虚拟机关闭，然后才能完成包。 默认情况下，向导在关闭虚拟机之前将等待 5 分钟。 创建任务序列后，你可以在必要时添加其他步骤。  
 
 > [!IMPORTANT]  
@@ -124,7 +124,7 @@ ms.openlocfilehash: e0ba309d8efc34cccce6acc4c59f0c4d218a617a
 
 10. 完成向导。  
 
-###  <a name="a-namebkmkcreatevhda-create-a-vhd"></a><a name="BKMK_CreateVHD"></a>创建 VHD  
+###  <a name="a-namebkmkcreatevhda-create-a-vhd"></a><a name="BKMK_CreateVHD"></a> 创建 VHD  
  为 VHD 创建任务序列之后，请使用“创建虚拟硬盘向导”来创建 VHD。  
 
 > [!IMPORTANT]  
@@ -182,10 +182,10 @@ ms.openlocfilehash: e0ba309d8efc34cccce6acc4c59f0c4d218a617a
 > [!NOTE]  
 >  Configuration Manager 通过连接到 VHD 的源位置来检索 VHD 的大小。 如果 Configuration Manager 无法访问 VHD 文件，则 VHD 的“大小 (KB)”列中显示 **0**。  
 
-##  <a name="a-namebkmkmodifyvhdstepsa-steps-to-modify-an-existing-vhd"></a><a name="BKMK_ModifyVHDSteps"></a>修改现有 VHD 的步骤  
+##  <a name="a-namebkmkmodifyvhdstepsa-steps-to-modify-an-existing-vhd"></a><a name="BKMK_ModifyVHDSteps"></a> 修改现有 VHD 的步骤  
  要修改 VHD，你必须创建一个包含修改 VHD 所需的步骤的任务序列。 然后，在“修改虚拟硬盘向导”中选择该任务序列。 该向导会将 VHD 连接到虚拟机、在 VHD 中运行任务序列，然后更新 VHD 文件。 以下部分提供了修改 VHD 的步骤。  
 
-###  <a name="a-namebkmkmodifytsa-create-a-task-sequence-to-modify-the-vhd"></a><a name="BKMK_ModifyTS"></a>创建任务序列以修改 VHD  
+###  <a name="a-namebkmkmodifytsa-create-a-task-sequence-to-modify-the-vhd"></a><a name="BKMK_ModifyTS"></a> 创建任务序列以修改 VHD  
  要修改现有的 VHD，必须首先创建一个任务序列。 仅选择修改任务序列所需的步骤。 例如，如果要将应用程序添加到 VHD 中，请创建自定义任务序列，然后仅添加“安装应用程序”步骤。  
 
  使用下列过程来创建任务序列以修改 VHD。  
@@ -224,7 +224,7 @@ ms.openlocfilehash: e0ba309d8efc34cccce6acc4c59f0c4d218a617a
 
 5.  单击“确定”  退出任务序列编辑器。  
 
-###  <a name="a-namebkmkmodifyvhda-modify-a-vhd"></a><a name="BKMK_ModifyVHD"></a>修改 VHD  
+###  <a name="a-namebkmkmodifyvhda-modify-a-vhd"></a><a name="BKMK_ModifyVHD"></a> 修改 VHD  
  为 VHD 创建任务序列之后，请使用“修改虚拟硬盘向导”来修改 VHD。  
 
  使用下列过程来修改 VHD。  
@@ -269,7 +269,7 @@ ms.openlocfilehash: e0ba309d8efc34cccce6acc4c59f0c4d218a617a
     >   
     >  此外，你可以打开 Hyper-V 管理器（如果在计算机上安装了 Hyper-V 管理工具），并连接到向导创建的临时虚拟机以查看正在运行的任务序列。 从该虚拟机中，你可以监视 smsts.log 文件来跟踪任务序列的进度。 如果在完成任务序列步骤时出现问题，你可以使用此日志文件来帮助你解决问题。 smsts.log 文件位于 x: \windows\temp\smstslog\smsts.log（在硬盘格式化前），位于 c:\\_SMSTaskSequence\Logs\Smstslog\（在格式化后）。 任务序列步骤完成后，虚拟机（默认情况下）会在 5 分钟后关闭并被删除。  
 
-##  <a name="a-namebkmkapplyupdatesa-apply-software-updates-to-a-vhd"></a><a name="BKMK_ApplyUpdates"></a>将软件更新应用于 VHD  
+##  <a name="a-namebkmkapplyupdatesa-apply-software-updates-to-a-vhd"></a><a name="BKMK_ApplyUpdates"></a> 将软件更新应用于 VHD  
  我们会定期发布适用于你的 VHD 中的操作系统的新软件更新。 你可以按指定计划将适用的软件更新应用于 VHD。 Configuration Manager 将按指定的计划将所选的软件更新应用于 VHD。  
 
  有关 VHD 的信息存储在站点数据库中，包括在创建 VHD 时应用的软件更新。 自 VHD 最初创建以来已应用于 VHD 的软件更新也存储在站点数据库中。 当你启动向导以将软件更新应用于 VHD 时，向导将检索尚未应用于 VHD 的适用软件更新的列表供你选择。  
@@ -303,7 +303,7 @@ ms.openlocfilehash: e0ba309d8efc34cccce6acc4c59f0c4d218a617a
 
 8.  在“完成”  页上，验证软件更新是否已成功应用于操作系统映像。  
 
-##  <a name="a-namebkmkimporttovmma-import-the-vhd-to-system-center-virtual-machine-manager"></a><a name="BKMK_ImportToVMM"></a>将 VHD 导入到 System Center Virtual Machine Manager  
+##  <a name="a-namebkmkimporttovmma-import-the-vhd-to-system-center-virtual-machine-manager"></a><a name="BKMK_ImportToVMM"></a> 将 VHD 导入到 System Center Virtual Machine Manager  
  System Center VMM 是用于虚拟化数据中心的管理解决方案，使你能够配置和管理虚拟化主机、网络以及存储资源，以便创建虚拟机和服务并将它们部署到你创建的私有云。 在 Configuration Manager 中创建 VHD 之后，可通过使用 VMM 来导入和管理 VHD。  
 
 > [!TIP]  

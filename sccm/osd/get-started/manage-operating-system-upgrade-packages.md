@@ -28,7 +28,7 @@ ms.openlocfilehash: 226e283b5d9a04d2a9e0f3ce6894a82a3683d972
 
 System Center Configuration Manager 中的升级包包含用于在计算机上升级现有操作系统的 Windows 安装程序源文件。 使用以下部分管理 Configuration Manager 中的操作系统升级包。
 
-##  <a name="a-namebkmkaddosupgradepkgsa-add-operating-system-upgrade-packages-to-configuration-manager"></a><a name="BKMK_AddOSUpgradePkgs"></a>将操作系统升级包添加到 Configuration Manager  
+##  <a name="a-namebkmkaddosupgradepkgsa-add-operating-system-upgrade-packages-to-configuration-manager"></a><a name="BKMK_AddOSUpgradePkgs"></a> 将操作系统升级包添加到 Configuration Manager  
  在使用操作系统升级包之前，必须先将该包添加到 Configuration Manager 站点。 使用以下过程将操作系统升级包添加的站点：  
 
 #### <a name="to-add-an-operating-system-upgrade-package"></a>若要添加操作系统升级包  
@@ -59,10 +59,10 @@ System Center Configuration Manager 中的升级包包含用于在计算机上�
 
  你现在可以将操作系统安装程序分发到部署任务序列访问的分发点。  
 
-##  <a name="a-namebkmkdistributebootimagesa-distribute-operating-system-images-to-a-distribution-point"></a><a name="BKMK_DistributeBootImages"></a>将操作系统映像分发到分发点  
+##  <a name="a-namebkmkdistributebootimagesa-distribute-operating-system-images-to-a-distribution-point"></a><a name="BKMK_DistributeBootImages"></a> 将操作系统映像分发到分发点  
  将采用与分发其他内容相同的方式将操作系统映像分发到分发点。 大多数情况下，部署操作系统之前必须将操作系统映像分发到至少一个分发点。 关于分发操作系统映像的步骤，请参阅 [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content)。  
 
-##  <a name="a-namebkmkosupgradepkgapplyupdatesa-apply-software-updates-to-an-operating-system-upgrade-package"></a><a name="BKMK_OSUpgradePkgApplyUpdates"></a>将软件更新应用于操作系统升级包  
+##  <a name="a-namebkmkosupgradepkgapplyupdatesa-apply-software-updates-to-an-operating-system-upgrade-package"></a><a name="BKMK_OSUpgradePkgApplyUpdates"></a> 将软件更新应用于操作系统升级包  
  从 Configuration Manager 版本 1602 开始，可以将新的软件更新应用于操作系统升级包中的操作系统映像。 当然，必须将软件更新基础结构实施到位且已成功同步软件更新后才可以将软件更新应用于升级包。 有关详细信息，请参阅[部署软件更新](../../sum/deploy-use/deploy-software-updates.md)。  
 
  你可以按指定计划将适用的软件更新应用于升级包。 Configuration Manager 按指定计划将选择的软件更新应用于操作系统升级包，然后根据需要将更新的升级包分发到分发点。 有关操作系统升级包的信息存储在站点数据库中，包括在导入时应用的软件更新。 自升级包最初添加以来已应用于升级包的软件更新也存储在站点数据库中。 当你启动向导以将软件更新应用于操作系统升级包时，向导将检索尚未应用于升级包的适用软件更新的列表供你选择。 Configuration Manager 从站点服务器上的内容库中复制软件更新，然后将软件更新应用于操作系统升级包。  

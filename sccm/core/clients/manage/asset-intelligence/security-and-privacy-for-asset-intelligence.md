@@ -28,7 +28,7 @@ ms.openlocfilehash: 85e0b6e3a96852cbf9c8781a3124bff13a6c6fdd
 
 本主题包括有关 System Center Configuration Manager 中资产智能的安全和隐私的信息。  
 
-##  <a name="a-namebkmksecurityaia-security-best-practices-for-asset-intelligence"></a><a name="BKMK_Security_AI"></a>资产智能安全最佳方案  
+##  <a name="a-namebkmksecurityaia-security-best-practices-for-asset-intelligence"></a><a name="BKMK_Security_AI"></a> 资产智能安全最佳方案  
  在使用资产智能时，请使用以下安全最佳方案。  
 
 |最佳安全方案|更多信息|  
@@ -36,7 +36,7 @@ ms.openlocfilehash: 85e0b6e3a96852cbf9c8781a3124bff13a6c6fdd
 |导入许可证文件（Microsoft 批量许可文件或常规许可声明文件）时，请确保文件和通信通道的安全。|在导入过程中，使用 NTFS 文件系统权限来确保只有经授权的用户可以访问许可证文件，并在将数据传输到站点服务器时使用服务器消息块 (SMB) 签名来确保其完整性。|  
 |使用最低权限的原则导入许可证文件。|使用基于角色的管理来向导入许可证文件的管理用户授予管理资产智能权限。 资产管理员的内置角色包括此权限。|  
 
-##  <a name="a-namebkmkprivacyhardwareinventorya-privacy-information-for-asset-intelligence"></a><a name="BKMK_Privacy_HardwareInventory"></a>资产智能的隐私信息  
+##  <a name="a-namebkmkprivacyhardwareinventorya-privacy-information-for-asset-intelligence"></a><a name="BKMK_Privacy_HardwareInventory"></a> 资产智能的隐私信息  
  资产智能扩展 Configuration Manager 的清单功能，帮助提供更高级别的企业资产可见性。 不会自动启用资产智能信息收集。 你可以通过启用硬件清单报表类来修改所收集信息的类型。 有关详细信息，请参阅[配置 System Center Configuration Manager 中的资产智能](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md)。  
 
  资产智能信息按照与清单信息相同的方式存储在 Configuration Manager 数据库中。 当客户端使用 HTTPS 连接到管理点时，在传输到管理点的过程中始终加密数据。 当客户端使用 HTTP 连接时，可以配置对清单数据传输进行签名和加密。 清单数据不会以加密格式存储在数据库中。 信息将保留在数据库中，直到被每 90 天一次的站点维护任务“删除过期的清单历史记录”  删除。 可以配置删除间隔。  

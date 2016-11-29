@@ -29,7 +29,7 @@ ms.openlocfilehash: 82a2ebb830b872f8e6368be75b6d9beb1955ec27
 
  采用以下部分内容，使用新版本的 Windows 来刷新现有计算机。  
 
-##  <a name="a-namebkmkplana-plan"></a><a name="BKMK_Plan"></a>计划  
+##  <a name="a-namebkmkplana-plan"></a><a name="BKMK_Plan"></a> 计划  
 
 -   **规划和实现基础结构要求**  
 
@@ -39,7 +39,7 @@ ms.openlocfilehash: 82a2ebb830b872f8e6368be75b6d9beb1955ec27
 
      当你要从现有计算机捕获设置并将设置还原到新的操作系统时，必须安装状态迁移点。 有关详细信息，请参阅[状态迁移点](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_StateMigrationPoints)。  
 
-##  <a name="a-namebkmkconfigurea-configure"></a><a name="BKMK_Configure"></a>配置  
+##  <a name="a-namebkmkconfigurea-configure"></a><a name="BKMK_Configure"></a> 配置  
 
 1.  **准备启动映像**  
 
@@ -66,7 +66,7 @@ ms.openlocfilehash: 82a2ebb830b872f8e6368be75b6d9beb1955ec27
     > [!NOTE]  
     >  在此方案中，如果捕获并还原了用户设置和文件，你可以选择使用状态迁移点或本地保存这些文件。 有关详细信息，请参阅[管理用户状态](../get-started/manage-user-state.md)。  
 
-##  <a name="a-namebkmkdeploya-deploy"></a><a name="BKMK_Deploy"></a>部署  
+##  <a name="a-namebkmkdeploya-deploy"></a><a name="BKMK_Deploy"></a> 部署  
 
 -   使用下列部署方法之一部署操作系统：  
 

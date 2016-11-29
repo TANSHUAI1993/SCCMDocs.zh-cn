@@ -76,7 +76,7 @@ ms.openlocfilehash: c1838866241c30598346b84cb36b8bf4967bf7f6
 
 -   无法将基于云的分发点配置为请求分发点。  
 
-##  <a name="a-namebkmkprereqsclouddpa-prerequisites-for-cloud-based-distribution-points"></a><a name="BKMK_PrereqsCloudDP"></a>基于云的分发点的先决条件  
+##  <a name="a-namebkmkprereqsclouddpa-prerequisites-for-cloud-based-distribution-points"></a><a name="BKMK_PrereqsCloudDP"></a> 基于云的分发点的先决条件  
  基于云的分发点需要使用下列先决条件：  
 
 -   订阅 Microsoft Azure。  （请参阅本主题中的[关于订阅和证书](#BKMK_CloudDPCerts)）
@@ -91,7 +91,7 @@ ms.openlocfilehash: c1838866241c30598346b84cb36b8bf4967bf7f6
 
 -   客户端必须能够访问 Internet 以使用基于云的分发点。  
 
-##  <a name="a-namebkmkclouddpcosta-cost-of-using-cloud-based-distribution"></a><a name="BKMK_CloudDPCost"></a>使用基于云的分发的成本  
+##  <a name="a-namebkmkclouddpcosta-cost-of-using-cloud-based-distribution"></a><a name="BKMK_CloudDPCost"></a> 使用基于云的分发的成本  
  当使用基于云的分发点时，请规划 Configuration Manager 客户端进行数据存储和下载传输的成本。  
 
  Configuration Manager 包括用于帮助控制成本和监视数据访问的选项：  
@@ -139,7 +139,7 @@ ms.openlocfilehash: c1838866241c30598346b84cb36b8bf4967bf7f6
 
      若要停止云服务，在 Configuration Manager 控制台中，在“管理”工作区中的“云服务”下的“云分发点”节点中选择分发点。 接着，单击“停止服务”  以停止在 Windows Azure 中运行的云服务。  
 
-##  <a name="a-namebkmkclouddpcertsa-about-subscriptions-and-certificates-for-cloud-based-distribution-points"></a><a name="BKMK_CloudDPCerts"></a>关于基于云的分发点的订阅和证书  
+##  <a name="a-namebkmkclouddpcertsa-about-subscriptions-and-certificates-for-cloud-based-distribution-points"></a><a name="BKMK_CloudDPCerts"></a> 关于基于云的分发点的订阅和证书  
  基于云的分发点需要证书，以使 Configuration Manager 能够管理承载分发点的云服务，以及让客户端访问分发点中的内容。 下述内容提供了有关这些证书的概述信息。 有关详细信息，请参阅 [System Center Configuration Manager 的 PKI 证书要求](../../../core/plan-design/network/pki-certificate-requirements.md)。  
 
  **证书**  
@@ -163,7 +163,7 @@ ms.openlocfilehash: c1838866241c30598346b84cb36b8bf4967bf7f6
 
    有关此证书的示例部署，请参阅 [System Center Configuration Manager 的 PKI 证书的分步部署示例：Windows Server 2008 证书颁发机构](/sccm/core/plan-design/network/example-deployment-of-pki-certificates)主题中的*为基于云的分发点部署服务证书*部分。  
 
-##  <a name="a-namebkmktasksa-common-management-tasks-for-cloud-based-distribution-points"></a><a name="bkmk_Tasks"></a>基于云的分发点的常见管理任务  
+##  <a name="a-namebkmktasksa-common-management-tasks-for-cloud-based-distribution-points"></a><a name="bkmk_Tasks"></a> 基于云的分发点的常见管理任务  
 
 -   **站点服务器到基于云的分发点的通信**：安装基于云的分发点时，必须分配一个主站点以管理将内容传输到云服务的方式。 此操作等效于在特定站点上安装分发点站点系统角色。  
 

@@ -34,7 +34,7 @@ ms.openlocfilehash: 1cbba80a73fdd66d84d38e710c02cc79ab972b81
 
 -   [Example WQL Queries](#BKMK_Example)  
 
-##  <a name="a-namebkmkcreatea-how-to-create-queries"></a><a name="BKMK_Create"></a>如何创建查询  
+##  <a name="a-namebkmkcreatea-how-to-create-queries"></a><a name="BKMK_Create"></a> 如何创建查询  
  使用此过程有助于在 Configuration Manager 中创建查询。  
 
 #### <a name="to-create-a-query"></a>若要创建查询  
@@ -88,7 +88,7 @@ ms.openlocfilehash: 1cbba80a73fdd66d84d38e710c02cc79ab972b81
 
 12. 完成向导以创建查询。 新查询显示在“监视”  工作区中的“查询”  节点中。  
 
-##  <a name="a-namebkmkimporta-how-to-import-queries"></a><a name="BKMK_Import"></a>如何导入查询  
+##  <a name="a-namebkmkimporta-how-to-import-queries"></a><a name="BKMK_Import"></a> 如何导入查询  
  使用此过程来帮助将查询导入到 Configuration Manager 中。 有关如何导出查询的信息，请参阅[如何在 System Center Configuration Manager 中管理查询](../../../core/servers/manage/manage-queries.md)。  
 
 #### <a name="to-import-a-query"></a>若要导入查询  
@@ -101,7 +101,7 @@ ms.openlocfilehash: 1cbba80a73fdd66d84d38e710c02cc79ab972b81
 
 4.  查看关于要导入的查询的信息，然后完向导。 新查询显示在“监视”  工作区中的“查询”  节点中。  
 
-##  <a name="a-namebkmkexamplea-example-wql-queries"></a><a name="BKMK_Example"></a>示例 WQL 查询  
+##  <a name="a-namebkmkexamplea-example-wql-queries"></a><a name="BKMK_Example"></a> Example WQL queries  
  本部分包含可在你的层次结构中使用或因其他目的修改的 WMI 查询示例。 要使用这些查询，请单击“查询语句属性”  对话框中的“显示查询语言”  ，然后复制查询并将其粘贴到“查询语句”  字段中。  
 
 > [!TIP]  
@@ -153,7 +153,7 @@ select SMS_R_System.NetbiosName from
 SMS_R_System where SMS_R_System.NetbiosName like "ABC%"  
 ```  
 
-###  <a name="a-namebkmkdevicetypea-devices-of-a-specific-type"></a><a name="BKMK_DeviceType"></a>特定类型的设备  
+###  <a name="a-namebkmkdevicetypea-devices-of-a-specific-type"></a><a name="BKMK_DeviceType"></a> 特定类型的设备  
  设备类型存储在 Configuration Manager 数据库中，在 **sms_r_system** 资源类型和 **AgentEdition** 属性名称下。 使用以下查询来检索与指定设备类型的代理版本匹配的设备：  
 
 ```  

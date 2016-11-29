@@ -59,7 +59,7 @@ ms.openlocfilehash: 7c7fb75ec6be7a24afe2bb8038998fb58b10e331
 
 7.  单击“退出”以关闭 Reporting Services 配置管理器。  
 
-##  <a name="a-namebkmkreportbuilder3a-configure-reporting-to-use-report-builder-30"></a><a name="BKMK_ReportBuilder3"></a>将报表配置为使用报表生成器 3.0  
+##  <a name="a-namebkmkreportbuilder3a-configure-reporting-to-use-report-builder-30"></a><a name="BKMK_ReportBuilder3"></a> 将报表配置为使用报表生成器 3.0  
 
 #### <a name="to-change-the-report-builder-manifest-name-to-report-builder-30"></a>将报表生成器清单名称更改为 Report Builder 3.0 的报表生成器清单名称  
 
@@ -142,7 +142,7 @@ ms.openlocfilehash: 7c7fb75ec6be7a24afe2bb8038998fb58b10e331
     > [!NOTE]  
     >  创建报表文件夹并将报表复制到报表服务器时，Configuration Manager 会确定适合对象的语言。 如果在站点上安装了关联的语言包，则 Configuration Manager 会采用站点报表服务器上运行的操作系统的语言创建对象。 如果该语言不可用，则会用英文创建和显示报表。 在无语言包的站点上安装 Reporting Services 点时，会安装英文报表。 如果在安装 Reporting Services 点之后安装语言包，则必须先卸载然后重新安装 Reporting Services 点，以获得采用合适语言包语言的报表。 有关语言包的详细信息，请参阅 [System Center Configuration Manager 中的语言包](../deploy/install/language-packs.md)。  
 
-###  <a name="a-namebkmkfileinstallationandsecuritya-file-installation-and-report-folder-security-rights"></a><a name="BKMK_FileInstallationAndSecurity"></a>文件安装和报表文件夹安全权限  
+###  <a name="a-namebkmkfileinstallationandsecuritya-file-installation-and-report-folder-security-rights"></a><a name="BKMK_FileInstallationAndSecurity"></a> 文件安装和报表文件夹安全权限  
  Configuration Manager 执行以下操作来安装 Reporting Services 点以及配置 Reporting Services：  
 
 > [!IMPORTANT]  
@@ -172,7 +172,7 @@ ms.openlocfilehash: 7c7fb75ec6be7a24afe2bb8038998fb58b10e331
 
      Configuration Manager 将连接到 Reporting Services，并对 Configuration Manager 和 Reporting Services 根文件夹和特定报表文件夹设置用户权限。 在 Reporting Services 点的初始安装后，Configuration Manager 将每隔 10 分钟连接到 Reporting Services 一次，以验证对报表文件夹配置的用户权限是否为 Configuration Manager 用户设置的关联权限。 在使用 Reporting Services 报表管理器添加用户或修改报表文件夹的用户权限时，Configuration Manager 将使用站点数据库中存储的基于角色的分配覆盖这些更改。 Configuration Manager 还会删除在 Configuration Manager 中不具有报表权限的用户。  
 
-##  <a name="a-namebkmksecurityrolesa-reporting-services-security-roles-for-configuration-manager"></a><a name="BKMK_SecurityRoles"></a>Configuration Manager 的 Reporting Services 安全角色  
+##  <a name="a-namebkmksecurityrolesa-reporting-services-security-roles-for-configuration-manager"></a><a name="BKMK_SecurityRoles"></a> Configuration Manager 的 Reporting Services 安全角色  
  Configuration Manager 安装 Reporting Services 点时，会在 Reporting Services 中添加以下安全角色：  
 
 -   “ConfigMgr 报表用户”：分配有此安全角色的用户只能运行 Configuration Manage 报表。  
@@ -203,7 +203,7 @@ ms.openlocfilehash: 7c7fb75ec6be7a24afe2bb8038998fb58b10e331
 
 7.  打开 Srsrp.log，并从 Reporting Services 点成功安装的时间开始逐句浏览该日志文件。 验证是否创建了报表文件夹、部署了报表并且确认了针对每个文件夹的安全策略。 在安全策略确认的最后一行之后查找“Successfully checked that the SRS web service is healthy on server”（已成功检查 SRS Web 服务在服务器上是否正常）  。  
 
-##  <a name="a-namebkmkcertificatea-configure-a-self-signed-certificate-for-configuration-manager-console-computers"></a><a name="BKMK_Certificate"></a>为 Configuration Manager 控制台计算机配置自签名证书  
+##  <a name="a-namebkmkcertificatea-configure-a-self-signed-certificate-for-configuration-manager-console-computers"></a><a name="BKMK_Certificate"></a> 为 Configuration Manager 控制台计算机配置自签名证书  
  你可以使用许多选项来创作 SQL Server Reporting Services 报表。 在 Configuration Manager 控制台中创建或编辑报表时，Configuration Manage 将打开报表生成器以用作创作环境。 无论如何创作 Configuration Manager 报表，均需一个自签名证书以便向站点数据库服务器进行服务器验证。 Configuration Manager 会将证书自动安装在站点服务器和安装了 SMS 提供程序的计算机上。 因此，当 Configuration Manager 控制台从其中一台计算机中运行时，可以直接通过该控制台创建或编辑报表。 但是，从安装在另一台计算机上的 Configuration Manager 控制台创建或修改报表时，必须从站点服务器导出证书并将其添加到运行 Configuration Manager 控制台的计算机上的**受信任人**证书存储。  
 
 > [!NOTE]  
@@ -280,7 +280,7 @@ ms.openlocfilehash: 7c7fb75ec6be7a24afe2bb8038998fb58b10e331
 ## <a name="upgrading-sql-server"></a>升级 SQL Server  
  升级 SQL Server 以及用作 Reporting Services 点数据源的 SQL Server Reporting Services 后，你可能会在从 Configuration Manager 控制台中运行或编辑报表时遇到错误。 要使报表从 Configuration Manager 控制台中正常工作，必须删除站点的 Reporting Services 点站点系统角色，然后再重新安装。 不过，在升级之后，你可以继续从 Internet 浏览器中成功运行和编辑报表。  
 
-##  <a name="a-namebkmkconfigurereportoptionsa-configure-report-options"></a><a name="BKMK_ConfigureReportOptions"></a>配置报表选项  
+##  <a name="a-namebkmkconfigurereportoptionsa-configure-report-options"></a><a name="BKMK_ConfigureReportOptions"></a> 配置报表选项  
  使用 Configuration Manager 站点的报表选项选择用于管理报表的默认 Reporting Services 点。 尽管一个站点上可以有多个 Reporting Services 点，但只会使用在报表选项中选择的默认报表服务器来管理报表。 使用以下过程来配置站点的报表选项。  
 
 #### <a name="to-configure-report-options"></a>要配置报表选项  

@@ -35,7 +35,7 @@ System Center Configuration Manager 安装程序提供了几个主题的链接�
 
 -   [System Center Configuration Manager 的诊断和使用情况数据](../../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md)  
 
-##  <a name="a-namebkmkstarta-before-you-begin"></a><a name="bkmk_start"></a>开始之前  
+##  <a name="a-namebkmkstarta-before-you-begin"></a><a name="bkmk_start"></a> 在开始之前  
  在安装新的 Configuration Manager 站点之前，请确保已经查看以下信息，这些信息有助于为成功完成部署设计做好准备：  
 
 -   [System Center Configuration Manager 基础知识](../../../../core/understand/fundamentals.md)  
@@ -44,14 +44,14 @@ System Center Configuration Manager 安装程序提供了几个主题的链接�
 
 -   [准备安装 System Center Configuration Manager 站点](prepare-to-install-sites.md)  
 
-##  <a name="a-namebkmkassessa-assess-server-readiness"></a><a name="bkmk_assess"></a>评估服务器准备情况  
+##  <a name="a-namebkmkassessa-assess-server-readiness"></a><a name="bkmk_assess"></a> 评估服务器准备情况  
  在开始安装新站点之前，请确保计划用于站点的站点服务器和远程站点系统服务器（如承载站点数据库的服务器）满足所有必备项配置。 文档库中的下列主题可有所帮助：  
 
 -   [System Center Configuration Manager 支持的配置](../../../../core/plan-design/configs/supported-configurations.md)  
 
 -   [先决条件检查程序](https://technet.microsoft.com/library/mt590813.aspx#bkmk_PreqChk)  
 
-##  <a name="a-namebkmkaddclientsa-clients-for-additional-operating-systems"></a><a name="bkmk_Addclients"></a>其他操作系统的客户端  
+##  <a name="a-namebkmkaddclientsa-clients-for-additional-operating-systems"></a><a name="bkmk_Addclients"></a> 其他操作系统的客户端  
  可从 Microsoft 下载中心为以下操作系统下载 Configuration Manager 的客户端软件：  
 
 -   Mac   (Apple)  
@@ -70,7 +70,7 @@ System Center Configuration Manager 安装程序提供了几个主题的链接�
 
 -   [System Center 2012 Configuration Manager SP1](http://www.microsoft.com/en-pk/download/details.aspx?id=36212)  
 
-##  <a name="a-namebkmkusagea-usage-data-levels-and-settings"></a><a name="bkmk_usage"></a>使用数据级别和设置  
+##  <a name="a-namebkmkusagea-usage-data-levels-and-settings"></a><a name="bkmk_usage"></a> 使用情况的数据级别和设置  
 安装第一个 System Center Configuration Manager 站点时，会在站点服务器上自动安装和配置新站点系统角色“服务连接点”，并具有以下默认设置：  
 
 -   “联机” 模式（也支持脱机模式）  

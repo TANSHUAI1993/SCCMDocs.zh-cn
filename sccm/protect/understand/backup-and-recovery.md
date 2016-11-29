@@ -64,7 +64,7 @@ ms.openlocfilehash: d02dc47b2a9010d035ceecbbc6bf3d544f4dc1f4
 > [!NOTE]  
 >  如果使用 SQL Server AlwaysOn 可用性组托管站点数据库，请根据 [SQL Server AlwaysOn for a highly available site database for System Center Configuration Manager](../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)（通过 SQL Server AlwaysOn 实现适用于 System Center Configuration Manager 的高可用性站点数据库）主题中的[使用 SQL Server AlwaysOn 可用性组时备份和恢复的更改](../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md#bkmk_BnR)部分所述的内容修改备份和恢复计划。  
 
-##  <a name="a-namebkmksitebackupa-back-up-a-configuration-manager-site"></a><a name="BKMK_SiteBackup"></a>备份 Configuration Manager 站点  
+##  <a name="a-namebkmksitebackupa-back-up-a-configuration-manager-site"></a><a name="BKMK_SiteBackup"></a> 备份 Configuration Manager 站点  
  Configuration Manager 包含一个执行以下操作的备份维护任务：  
 
 -   按计划运行  
@@ -86,7 +86,7 @@ ms.openlocfilehash: d02dc47b2a9010d035ceecbbc6bf3d544f4dc1f4
 > [!NOTE]  
 >  Configuration Manager 可以从 Configuration Manager 备份维护任务或从使用另一个进程创建的站点数据库备份来恢复站点数据库。 例如，可以通过作为 Microsoft SQL Server 维护计划一部分创建的备份来还原站点数据库。 可以从使用 System Center 2012 Data Protection Manager (DPM) 创建的备份还原站点数据库。 有关详细信息，请参阅 [使用 Data Protection Manager 备份站点数据库](#BKMK_DPMBackup)。  
 
-###  <a name="a-namebkmkbackupmaintenancetaska-backup-maintenance-task"></a><a name="BKMK_BackupMaintenanceTask"></a>备份维护任务  
+###  <a name="a-namebkmkbackupmaintenancetaska-backup-maintenance-task"></a><a name="BKMK_BackupMaintenanceTask"></a> 备份维护任务  
  可以通过计划预定义的备份站点服务器维护任务来自动完成 Configuration Manager 站点的备份。 你可以备份管理中心站点和主站点，但不支持备份辅助站点或站点系统服务器。 当 Configuration Manager 备份服务运行时，它将按照备份控制文件 (**<ConfigMgrInstallationFolder\>\Inboxes\Smsbkup.box\Smsbkup.ctl**) 中定义的指令进行操作。 你可以修改备份控制文件来更改备份服务的行为。 站点备份状态信息将写入 **Smsbkup.log** 文件。 将在备份站点服务器维护任务属性内指定的目标文件夹中创建此文件。  
 
 
@@ -142,7 +142,7 @@ ms.openlocfilehash: d02dc47b2a9010d035ceecbbc6bf3d544f4dc1f4
     > [!TIP]  
     >  如果备份维护任务失败，你可以通过停止并重启 SMS_SITE_BACKUP 服务来重启备份任务。  
 
-###  <a name="a-namebkmkdpmbackupa-using-data-protection-manager-to-back-up-your-site-database"></a><a name="BKMK_DPMBackup"></a>使用 Data Protection Manager 来备份站点数据库  
+###  <a name="a-namebkmkdpmbackupa-using-data-protection-manager-to-back-up-your-site-database"></a><a name="BKMK_DPMBackup"></a> 使用 Data Protection Manager 来备份站点数据库  
  你可以使用 System Center 2012 Data Protection Manager (DPM) 来备份站点数据库。 你可以在 DPM 中为站点数据库计算机创建一个新保护组。 在创建新保护组向导的“选择组成员”  页上，从数据源列表中选择 SMS 编写器服务，然后选择站点数据库作为适当的成员。 有关使用 DPM 来备份站点数据库的详细信息，请参阅 TechNet 上的 [Data Protection Manager Documentation Library（Data Protection Manager 文档库）](http://go.microsoft.com/fwlink/?LinkId=272772) 。  
 
 > [!IMPORTANT]  
@@ -150,7 +150,7 @@ ms.openlocfilehash: d02dc47b2a9010d035ceecbbc6bf3d544f4dc1f4
 
  还原站点数据库之后，请按照安装程序中的步骤进行操作以恢复站点。 选择“使用已手动恢复的站点数据库”恢复选项以使用通过 Data Protection Manager 恢复的站点数据库。  
 
-###  <a name="a-namebkmkarchivingbackupsnapshota-archiving-the-backup-snapshot"></a><a name="BKMK_ArchivingBackupSnapshot"></a>将备份快照存档  
+###  <a name="a-namebkmkarchivingbackupsnapshota-archiving-the-backup-snapshot"></a><a name="BKMK_ArchivingBackupSnapshot"></a> 将备份快照存档  
  备份站点服务器维护任务第一次运行时将创建一个备份快照，你可以使用该快照在出现故障时恢复站点服务器。 当备份任务在后续周期中再次运行时，它将创建新备份快照，该快照将覆盖以前的快照。 因此，站点只有一个备份快照，并且你无法检索以前的备份快照。  
 
  作为最佳方案，请保留备份快照的多个存档，原因如下：  
@@ -161,7 +161,7 @@ ms.openlocfilehash: d02dc47b2a9010d035ceecbbc6bf3d544f4dc1f4
 
 -   举例来说，如果备份站点服务器维护任务失败，站点将可能根本没有任何备份快照。 由于备份任务会在其开始备份当前数据之前删除以前的备份快照，因此将不具备有效的备份快照。  
 
-###  <a name="a-namebkmkusingafterbackupa-using-the-afterbackupbat-file"></a><a name="BKMK_UsingAfterBackup"></a>使用 AfterBackup.bat 文件  
+###  <a name="a-namebkmkusingafterbackupa-using-the-afterbackupbat-file"></a><a name="BKMK_UsingAfterBackup"></a> 使用 AfterBackup.bat 文件  
  成功备份站点之后，备份站点服务器任务会自动尝试运行一个名为 AfterBackup.bat 的文件。 必须在 <*ConfigMgrInstallationFolder*>\Inboxes\Smsbkup 中手动创建 AfterBackup.bat 文件。 如果 AfterBackup.bat 文件存在并存储在正确的文件夹中，则该文件将在备份任务完成后自动运行。 AfterBackup.bat 文件使你能够在每个备份操作结束时将备份快照存档，并自动执行不属于备份站点服务器维护任务一部分的其他备份后任务。 AfterBackup.bat 文件将存档和备份操作结合，从而确保将每个新备份快照存档。 如果 AfterBackup.bat 文件不存在，备份任务将跳过该文件，不会对备份操作产生影响。 要验证站点备份任务是否成功运行了 AfterBackup.bat 文件，请查看“监视”  工作区的“组件状态”  节点，并查看 SMS_SITE_BACKUP 的状态消息。 如果任务成功启动了 AfterBackup.bat 命令文件，你将看到消息 ID 5040。  
 
 > [!TIP]  
@@ -169,7 +169,7 @@ ms.openlocfilehash: d02dc47b2a9010d035ceecbbc6bf3d544f4dc1f4
 
  尽管 AfterBackup.bat 的预期用途是将备份快照存档，但你可以创建 AfterBackup.bat 文件以在每个备份操作结束时执行其他任务。  
 
-###  <a name="a-namebkmksupplementalbackupa-supplemental-backup-tasks"></a><a name="BKMK_SupplementalBackup"></a>补充备份任务  
+###  <a name="a-namebkmksupplementalbackupa-supplemental-backup-tasks"></a><a name="BKMK_SupplementalBackup"></a> 补充备份任务  
  备份站点服务器维护任务提供站点服务器文件和站点数据库的备份快照，但会存在一些你在创建备份策略时必须考虑的其他未备份项目。 使用下列部分来帮助完成 Configuration Manager 备份策略。  
 
 #### <a name="back-up-custom-reporting-services-reports"></a>备份自定义 Reporting Services 报表  
@@ -218,7 +218,7 @@ ms.openlocfilehash: d02dc47b2a9010d035ceecbbc6bf3d544f4dc1f4
 
 5.  “常规”  选项卡上的“文件夹详细信息”  部分中列出了存储用户状态迁移数据的文件夹。  
 
-##  <a name="a-namebkmkrecoversitea-recover-a-configuration-manager-site"></a><a name="BKMK_RecoverSite"></a>恢复 Configuration Manager 站点  
+##  <a name="a-namebkmkrecoversitea-recover-a-configuration-manager-site"></a><a name="BKMK_RecoverSite"></a> 恢复 Configuration Manager 站点  
  每当 Configuration Manager 站点出现故障或者站点数据库中发生数据丢失时，都需要 Configuration Manager 站点恢复。 修复和重新同步数据是站点恢复的核心任务，并且是防止操作中断所必需的。  
 
 > [!IMPORTANT]  
@@ -239,13 +239,13 @@ ms.openlocfilehash: d02dc47b2a9010d035ceecbbc6bf3d544f4dc1f4
 > [!NOTE]  
 >  还原为数据库副本配置的站点数据库之后，你必须重新配置每个数据库副本（从而重新创建发布和订阅），然后才能使用数据库副本。  
 
-###  <a name="a-namebkmkdeterminerecoveryoptionsa-determine-your-recovery-options"></a><a name="BKMK_DetermineRecoveryOptions"></a>确定恢复选项  
+###  <a name="a-namebkmkdeterminerecoveryoptionsa-determine-your-recovery-options"></a><a name="BKMK_DetermineRecoveryOptions"></a> 确定恢复选项  
  必须为 Configuration Manager 主站点服务器和管理中心站点恢复考虑两个主要方面；即站点服务器和站点数据库。 使用下列部分来帮助你确定必须为恢复方案选择的选项。  
 
 > [!NOTE]  
 >  当以前的站点恢复失败或者你尝试恢复未完全卸载的站点时，你必须从安装程序中选择“卸载 Configuration Manager 站点”  ，之后才可以选择恢复站点。 如果出现故障的站点有子站点，并且必须卸载该站点，则必须从出现故障的站点中手动删除站点数据库，之后再选择“卸载 Configuration Manager 站点”选项，否则卸载过程将失败。  
 
-####  <a name="a-namebkmksiteserverrecoveryoptionsa-site-server-recovery-options"></a><a name="BKMK_SiteServerRecoveryOptions"></a>站点服务器恢复选项  
+####  <a name="a-namebkmksiteserverrecoveryoptionsa-site-server-recovery-options"></a><a name="BKMK_SiteServerRecoveryOptions"></a> 站点服务器恢复选项  
  必须从 Configuration Manager 安装文件夹之外创建的 CD.Latest 文件夹副本中启动安装程序。 然后选择“恢复站点”  选项。 在运行安装程序时，你可以为出现故障的站点服务器使用下列恢复选项：  
 
 -   “使用现有备份恢复站点服务器”：如果具有在站点出现故障之前作为“备份站点服务器”维护任务的一部分在站点服务器上创建的 Configuration Manager 站点服务器的备份，请使用此选项。 将重新安装站点，并基于备份的站点配置站点设置。  
@@ -255,7 +255,7 @@ ms.openlocfilehash: d02dc47b2a9010d035ceecbbc6bf3d544f4dc1f4
 > [!NOTE]  
 >  如果安装程序检测到服务器上的现有 Configuration Manager 站点，可以启动站点恢复，但适用于站点服务器的恢复选项有限。 例如，如果在现有站点服务器上运行安装程序，则在选择恢复时，你可以恢复站点数据库服务器，但用于恢复站点服务器的选项则处于禁用状态。  
 
-####  <a name="a-namebkmksitedatabaserecoveryoptiona-site-database-recovery-options"></a><a name="BKMK_SiteDatabaseRecoveryOption"></a>站点数据库恢复选项  
+####  <a name="a-namebkmksitedatabaserecoveryoptiona-site-database-recovery-options"></a><a name="BKMK_SiteDatabaseRecoveryOption"></a> 站点数据库恢复选项  
  在运行安装程序时，你可以为站点数据库使用下列恢复选项：  
 
 -   “使用备份集恢复站点数据库”：如果具有在站点数据库出现故障之前，作为站点上所运行“备份站点服务器”维护任务的一部分创建的 Configuration Manager 站点数据库的备份，请使用此选项。 如果你具有层次结构，则会从主站点的管理中心站点或管理中心站点的引用主站点中检索在上次站点数据库备份之后对站点数据库所做的更改。 当你恢复独立主站点的站点数据库时，将会丢失上次备份之后所做的站点更改。  
@@ -274,10 +274,10 @@ ms.openlocfilehash: d02dc47b2a9010d035ceecbbc6bf3d544f4dc1f4
 
 -   “跳过数据库恢复”：当 Configuration Manager 站点数据库服务器上未发生数据丢失时使用此选项。 仅当站点数据库所在的计算机不同于你正在恢复的站点服务器时，此选项才有效。  
 
-####  <a name="a-namebkmksqlretentiona-sql-server-change-tracking-retention-period"></a><a name="bkmk_SQLretention"></a>SQL Server 更改跟踪保持期  
+####  <a name="a-namebkmksqlretentiona-sql-server-change-tracking-retention-period"></a><a name="bkmk_SQLretention"></a> SQL Server 更改跟踪保持期  
  系统为 SQL Server 中的站点数据库启用了更改跟踪。 利用更改跟踪，Configuration Manager 可以查询有关在上一个时刻之后对数据库表所做的更改的信息。 保持期指定更改跟踪信息将保留多长时间。 默认情况下，站点数据库被配置为具有 5 天保持期。 恢复站点数据库时，恢复过程在备份处于保持期内或保持期外这两种情况下会以不同方式继续进行。 例如，你的站点数据库服务器出现故障，并且上次备份是在 7 天之前，则它在保持期之外。  
 
-####  <a name="a-namebkmkreinita-process-to-reinitialize-site-or-global-data"></a><a name="bkmk_reinit"></a>继续重新初始化站点或全局数据  
+####  <a name="a-namebkmkreinita-process-to-reinitialize-site-or-global-data"></a><a name="bkmk_reinit"></a> 继续重新初始化站点或全局数据  
  重新初始化站点或全局数据的过程将站点数据库中的现有数据替换为另一个站点数据库中的数据。 例如，当站点 ABC 重新初始化站点 XYZ 中的数据时，会进行以下步骤：  
 
 -   将数据从站点 XYZ 复制到站点 ABC。  
@@ -292,7 +292,7 @@ ms.openlocfilehash: d02dc47b2a9010d035ceecbbc6bf3d544f4dc1f4
 ##### <a name="example-scenario-2"></a>示例方案 2  
  **管理中心站点重新初始化主站点中的站点数据**：恢复过程删除管理中心站点数据库中该主站点的现有站点数据，并将数据替换为从主站点中复制的站点数据。 其他主站点的站点数据不受影响。  
 
-####  <a name="a-namebkmksitedbrecoveryscenariosa-site-database-recovery-scenarios"></a><a name="BKMK_SiteDBRecoveryScenarios"></a>站点数据库恢复方案  
+####  <a name="a-namebkmksitedbrecoveryscenariosa-site-database-recovery-scenarios"></a><a name="BKMK_SiteDBRecoveryScenarios"></a> 站点数据库恢复方案  
  从备份中还原站点数据库之后，Configuration Manager 会尝试还原上次数据库备份之后在站点和全局数据中所做的更改。 下面描述了从备份中还原站点数据库之后 Configuration Manager 启动的操作。  
 
  **恢复的站点是管理中心站点：**  
@@ -357,7 +357,7 @@ ms.openlocfilehash: d02dc47b2a9010d035ceecbbc6bf3d544f4dc1f4
 >   
 >  **ALTER QUEUE [dbo].[ConfigMgrDRSSiteQueue] WITH STATUS = ON**  
 
-###  <a name="a-namebkmkunattendedsiterecoverykeysa-unattended-site-recovery-script-file-keys"></a><a name="BKMK_UnattendedSiteRecoveryKeys"></a>无人参与的站点恢复脚本文件密钥  
+###  <a name="a-namebkmkunattendedsiterecoverykeysa-unattended-site-recovery-script-file-keys"></a><a name="BKMK_UnattendedSiteRecoveryKeys"></a> 无人参与的站点恢复脚本文件密钥  
  要对 Configuration Manager 管理中心站点或主站点执行无人参与恢复，可以创建一个无人参与安装脚本并将安装程序与 /script 命令选项一起使用。 此脚本提供的信息的类型与安装向导提示输入的信息的类型相同，不同的是没有默认设置。 必须为适用于你要使用的恢复类型的安装密钥指定所有值。  
 
  通过将初始化文件与 /script 安装程序命令行选项配合使用，可以以无人参与方式运行 Configuration Manager 安装程序。 Configuration Manager 管理中心站点与主站点恢复支持无人参与安装。 要使用 /script 安装程序命令行选项，你必须创建一个初始化文件并在 /script 安装程序命令行选项后面指定初始化文件名。 只要文件的名称具有 .ini 文件扩展名，文件的名称并不重要。 如果从命令行引用安装程序初始化文件，则必须提供文件的完整路径。 例如，安装程序初始化文件的名称为 setup.ini，并且此文件存储在 C:\setup 文件夹中，则命令行应为：  
@@ -809,7 +809,7 @@ ms.openlocfilehash: d02dc47b2a9010d035ceecbbc6bf3d544f4dc1f4
 
     -   **详细信息：** 指定主站点连接到管理中心站点的最大超时值（以分钟为单位）。 例如，主站点未能连接到管理中心站点，则在达到 WaitForCASTimeout 期间之前，主站点将基于 CASRetryInterval 重新尝试连接到管理中心站点。 你可以指定 0 到 100 的值。  
 
-###  <a name="a-namebkmkpostrecoverya-post-recovery-tasks"></a><a name="BKMK_PostRecovery"></a>恢复后任务  
+###  <a name="a-namebkmkpostrecoverya-post-recovery-tasks"></a><a name="BKMK_PostRecovery"></a> 恢复后任务  
  恢复站点之后，有一些你必须在站点恢复完成之前考虑的恢复后任务。 使用下列部分来帮助你完成站点恢复过程。  
 
 #### <a name="re-enter-user-account-passwords"></a>重新输入用户帐户密码  
@@ -883,7 +883,7 @@ ms.openlocfilehash: d02dc47b2a9010d035ceecbbc6bf3d544f4dc1f4
 #### <a name="update-certificates-used-for-cloud-based-distribution-points"></a>更新用于基于云的分发点的证书  
  Configuration Manager 需要使用管理证书来执行从站点服务器到基于云的分发点的通信。 在站点恢复之后，必须为基于云的分发点更新证书。  
 
-####  <a name="a-namebkmkrecoversecondarysitea-recover-a-secondary-site"></a><a name="BKMK_RecoverSecondarySite"></a>恢复辅助站点  
+####  <a name="a-namebkmkrecoversecondarysitea-recover-a-secondary-site"></a><a name="BKMK_RecoverSecondarySite"></a> 恢复辅助站点  
  Configuration Manager 不支持在辅助站点上进行数据库备份，但支持通过重新安装辅助站点进行恢复。 在 Configuration Manager 辅助站点失败时，必须恢复辅助站点。 可以在 Configuration Manager 控制台的“站点”节点中使用“恢复辅助站点”操作来恢复辅助站点。 与恢复管理中心站点或主站点不同的是，恢复辅助站点不使用备份文件，而是在失败的辅助站点计算机上重新安装辅助站点文件。 然后，使用父主站点中的数据重新初始化辅助站点数据。 在恢复过程中，Configuration Manager 会验证辅助站点计算机上是否存在内容库，以及合适的内容是否可用。 如果辅助站点包含合适的内容，则它将使用现有的内容库。 否则，若要恢复已恢复辅助站点的内容库，则需将内容重新分发或预留到该已恢复站点。 如果拥有不在辅助站点上的分发点，则无需在恢复辅助站点的过程中重新安装分发点。 在恢复辅助站点之后，站点会自动与分发点同步。  
 
  可以在 Configuration Manager 控制台的“站点”节点中使用“显示安装状态”操作来验证辅助站点恢复的状态。  
@@ -894,7 +894,7 @@ ms.openlocfilehash: d02dc47b2a9010d035ceecbbc6bf3d544f4dc1f4
 > [!IMPORTANT]  
 >  在恢复辅助站点的过程中，如果计算机上未安装 SQL Server Express，则 Configuration Manager 并不会安装它。 因此，在恢复辅助站点之前，必须手动安装 SQL Server Express 或 SQL Server。 必须使用在失败前用于辅助站点数据库的同一个 SQL Server 版本和同一个 SQL Server 实例。  
 
-##  <a name="a-namebkmksmswriterservicea-sms-writer-service"></a><a name="BKMK_SMSWriterService"></a>SMS 编写器服务  
+##  <a name="a-namebkmksmswriterservicea-sms-writer-service"></a><a name="BKMK_SMSWriterService"></a> SMS 编写器服务  
  SMS 编写器是一项服务，该服务在备份过程中与卷影复制服务 (VSS) 交互。 SMS 编写器服务必须正在运行，Configuration Manager 站点备份才能成功完成。  
 
 ### <a name="purpose"></a>目的  

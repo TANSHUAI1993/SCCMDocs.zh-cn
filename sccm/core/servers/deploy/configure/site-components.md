@@ -85,7 +85,7 @@ ms.openlocfilehash: a0c2ff2ad2f76e7e769d49674ccf4d3efe6b4f3e
 
 2.  在“主页”  选项卡上的“设置”  组中，单击“配置站点组件”  ，然后选择要配置的站点组件。  
 
-##  <a name="a-namebkmkservicemgra-use-the-configuration-manager-service-manager-to-manage-site-components"></a><a name="BKMK_ServiceMgr"></a>使用 Configuration Manager Service Manager 管理站点组件  
+##  <a name="a-namebkmkservicemgra-use-the-configuration-manager-service-manager-to-manage-site-components"></a><a name="BKMK_ServiceMgr"></a> 使用 Configuration Manager 服务管理器管理站点组件  
 可以使用 Configuration Manager Service Manager 控制 Configuration Manager 服务，和查看任何 Configuration Manager 服务或工作线程（统称为 Configuration Manager 组件）的状态：  
 
 -   Configuration Manager 组件可在任何站点系统上运行。  

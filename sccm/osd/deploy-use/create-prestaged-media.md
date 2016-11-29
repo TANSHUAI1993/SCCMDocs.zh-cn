@@ -36,7 +36,7 @@ System Center Configuration Manager 中的预留媒体是 Windows 映像格式 (
 
  在应用预留媒体后第一次启动计算机时，计算机会启动到 Windows PE 并连接到管理点，以查找将完成操作系统部署过程的任务序列。 你可以指定要作为预留媒体的一部分包含的应用程序、包和驱动程序包。 在部署使用预留媒体的任务序列时，向导会首先检查本地任务序列缓存以查找有效的内容，如果无法找到内容或内容已被修改，则向导会从分发点下载内容。  
 
-##  <a name="a-namebkmkcreateprestagedmediaa-how-to-create-prestaged-media"></a><a name="BKMK_CreatePrestagedMedia"></a>如何创建预留媒体  
+##  <a name="a-namebkmkcreateprestagedmediaa-how-to-create-prestaged-media"></a><a name="BKMK_CreatePrestagedMedia"></a> 如何创建预留媒体  
  在使用“创建任务序列媒体向导”创建预留媒体之前，请确保满足以下所有条件：  
 
 |任务|描述|  

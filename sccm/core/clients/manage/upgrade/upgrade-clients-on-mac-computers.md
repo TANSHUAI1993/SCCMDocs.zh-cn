@@ -64,7 +64,7 @@ ms.openlocfilehash: e2e13d31ccdeba155b4030a78d12b82939394f54
 
  如果不希望使用 Configuration Manager 注册，而希望从 Configuration Manager 独立安装客户端证书，请参阅[配置已升级客户端以使用现有证书](#BKMK_UpgradingClient_MachineEnrollment)。  
 
-##  <a name="a-namebkmkupgradingclientmachineenrollmenta-configure-the-upgraded-client-to-use-an-existing-certificate"></a><a name="BKMK_UpgradingClient_MachineEnrollment"></a>将升级后的客户端配置为使用现有证书  
+##  <a name="a-namebkmkupgradingclientmachineenrollmenta-configure-the-upgraded-client-to-use-an-existing-certificate"></a><a name="BKMK_UpgradingClient_MachineEnrollment"></a> Configure the upgraded client to use an existing certificate  
  运行下列过程以防止“计算机注册向导”运行，并将升级后的客户端配置为使用现有客户端证书。  
 
 -   在 Configuration Manager 控制台中，创建“Mac OS X”类型的配置项目。  

@@ -54,7 +54,7 @@ ms.openlocfilehash: b17720021f797d404a89933939427696dfafd7dc
 
  SQL Server 必须位于站点服务器计算机上  
 
-##  <a name="a-namebkmksqlversionsa-supported-versions-of-sql-server"></a><a name="bkmk_SQLVersions"></a>支持的 SQL Server 版本  
+##  <a name="a-namebkmksqlversionsa-supported-versions-of-sql-server"></a><a name="bkmk_SQLVersions"></a> 支持的 SQL Server 版本  
  在具有多个站点的层次结构中，不同站点可以使用不同版本的 SQL Server 来托管站点数据库，只要你使用 Configuration Manager 支持的 SQL Server 版本。  
 
  System Center Configuration Manager 1511 及更高版本支持以下版本的 SQL Server。  

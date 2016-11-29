@@ -30,7 +30,7 @@ System Center Configuration Manager 中运行 Windows 防火墙的客户端计�
 
  使用下列部分来确定这些管理功能，并了解有关如何为这些例外配置 Windows 防火墙的详细信息。  
 
-##  <a name="a-namebkmkmodifyingwindowsfirewalla-modifying-the-ports-and-programs-permitted-by-windows-firewall"></a><a name="BKMK_ModifyingWindowsFirewall"></a>修改 Windows 防火墙允许的端口和程序  
+##  <a name="a-namebkmkmodifyingwindowsfirewalla-modifying-the-ports-and-programs-permitted-by-windows-firewall"></a><a name="BKMK_ModifyingWindowsFirewall"></a> 修改 Windows 防火墙允许的端口和程序  
  使用下列过程在 Windows 防火墙上为 Configuration Manager 客户端修改端口和程序。  
 
 #### <a name="to-modify-the-ports-and-programs-permitted-by-windows-firewall"></a>修改 Windows 防火墙允许的端口和程序  

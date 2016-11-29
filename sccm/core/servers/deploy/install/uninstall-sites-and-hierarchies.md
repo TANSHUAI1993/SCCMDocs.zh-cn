@@ -39,7 +39,7 @@ ms.openlocfilehash: db203f6b8b76df28b2cd03f5ebd931c520294ba6
 -   删除所有主站点之后，即可以卸载管理中心站点。  
 
 
-##  <a name="a-namebkmkremovesecondarysitea-remove-a-secondary-site-from-a-hierarchy"></a><a name="BKMK_RemoveSecondarysite"></a>从层次结构中删除辅助站点  
+##  <a name="a-namebkmkremovesecondarysitea-remove-a-secondary-site-from-a-hierarchy"></a><a name="BKMK_RemoveSecondarysite"></a> 从层次结构中删除辅助站点  
 你无法将辅助站点转移或重新分配到新的父主站点。 要从层次结构中删除辅助站点，必须将辅助站点从其直接父站点中删除。 在 Configuration Manager 控制台中使用删除辅助站点向导来删除辅助站点。 在删除辅助站点时，你必须指定是删除还是卸载辅助站点：  
 
 -   **卸载辅助站点**：使用此选项以删除可从网络中访问的正常运行的辅助站点。 此选项从辅助站点服务器中卸载 Configuration Manager，然后从 Configuration Manager 层次结构中删除有关站点及其资源的所有信息。 如果 Configuration Manager 在辅助站点安装过程中安装了 SQL Server Express，则 Configuration Manager 将在卸载辅助站点时卸载 SQL Express。 如果 SQL Server Express 是在安装辅助站点之前安装的，则 Configuration Manager 不会卸载 SQL Server Express。  
@@ -81,7 +81,7 @@ ms.openlocfilehash: db203f6b8b76df28b2cd03f5ebd931c520294ba6
 
 8.  在“完成”  页上，单击“关闭”  退出向导。  
 
-##  <a name="a-namebkmkuninstallprimarya-uninstall-a-primary-site"></a><a name="BKMK_UninstallPrimary"></a>卸载主站点  
+##  <a name="a-namebkmkuninstallprimarya-uninstall-a-primary-site"></a><a name="BKMK_UninstallPrimary"></a> 卸载主站点  
 可以运行 Configuration Manager 安装程序来卸载没有关联辅助站点的主站点。 在卸载主站点之前，请考虑下列事项：  
 
 -   如果 Configuration Manager 客户端位于站点上配置的边界内，并且主站点是 Configuration Manager 层次结构的一部分，请考虑在卸载主站点之前将边界添加到层次结构中的另一个主站点。  
@@ -125,7 +125,7 @@ ms.openlocfilehash: db203f6b8b76df28b2cd03f5ebd931c520294ba6
 
 6.  单击“是”以确认卸载 Configuration Manager 主站点。  
 
-##  <a name="a-namebkmkuninstallprimarydistviewsa-uninstall-a-primary-site-that-is-configured-with-distributed-views"></a><a name="BKMK_UninstallPrimaryDistViews"></a>卸载配置有分布式视图的主站点  
+##  <a name="a-namebkmkuninstallprimarydistviewsa-uninstall-a-primary-site-that-is-configured-with-distributed-views"></a><a name="BKMK_UninstallPrimaryDistViews"></a> 卸载配置有分布式视图的主站点  
  在卸载在其指向管理中心站点的复制链接上配置了分布式视图的子主站点之前，你必须在层次结构中禁用分布式视图。 使用以下信息在卸载主站点之前禁用分布式视图。  
 
 #### <a name="to-uninstall-a-primary-site-that-is-configured-with-distributed-views"></a>要卸载配置为具有分布式视图的主站点  
@@ -141,7 +141,7 @@ ms.openlocfilehash: db203f6b8b76df28b2cd03f5ebd931c520294ba6
     > [!IMPORTANT]  
     >  如果你卸载主站点，之后才在每个站点上禁用分布式视图，或者之后主站点才在管理中心站点上成功重新初始化数据，则主站点和管理中心站点之间的数据复制可能会失败。 在这种情况下，你必须为层次结构中的每个链接禁用分布式视图，然后，在数据使用管理中心站点成功重新初始化之后，你可以重新配置分布式视图。  
 
-##  <a name="a-namebkmkuninstallcasa-uninstall-the-central-administration-site"></a><a name="BKMK_UninstallCAS"></a>卸载管理中心站点  
+##  <a name="a-namebkmkuninstallcasa-uninstall-the-central-administration-site"></a><a name="BKMK_UninstallCAS"></a> 卸载管理中心站点  
  可以运行 Configuration Manager 安装程序来卸载没有子主站点的管理中心站点。 使用以下过程来卸载管理中心站点。  
 
 #### <a name="to-uninstall-a-central-administration-site"></a>要卸载管理中心站点  

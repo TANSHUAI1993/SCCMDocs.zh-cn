@@ -28,10 +28,10 @@ ms.openlocfilehash: 12ea958e18a291a1b88e342b204e633d3bdf869f
 
 当使用任务序列将操作系统部署到 System Center Configuration Manager 中的计算机时，该计算机会安装在任务序列中指定的操作系统映像。 若要自定义操作系统映像以使其包含特定的驱动程序、应用程序、软件更新等，需要使用构建和捕获任务序列来构建引用计算机，然后从该引用计算机捕获操作系统映像。 如果已具有可进行捕获的引用计算机，你可以创建用于捕获操作系统的自定义任务序列。 使用以下部分来捕获自定义操作系统。  
 
-##  <a name="a-namebkmkbuildcapturetsa-use-a-task-sequence-to-build-and-capture-a-reference-computer"></a><a name="BKMK_BuildCaptureTS"></a>使用任务序列来构建和捕获引用计算机  
+##  <a name="a-namebkmkbuildcapturetsa-use-a-task-sequence-to-build-and-capture-a-reference-computer"></a><a name="BKMK_BuildCaptureTS"></a> 使用任务序列来构建和捕获引用计算机  
  “构建和捕获”任务序列对引用计算机进行分区和格式化，安装操作系统以及 Configuration Manager 客户端、应用程序和软件更新，然后从引用计算机捕获操作系统。 在分发点上与任务序列（如应用程序）相关联的包必须可用，然后才能创建构建和捕获任务序列。  
 
-###  <a name="a-namebkmkcreatepackagesa-prepare-for-operating-system-deployments"></a><a name="BKMK_CreatePackages"></a>准备操作系统部署  
+###  <a name="a-namebkmkcreatepackagesa-prepare-for-operating-system-deployments"></a><a name="BKMK_CreatePackages"></a> 准备操作系统部署  
  有大量方案可用于将操作系统部署到环境中的计算机。 在大多数情况下，将创建任务序列并在“创建任务序列向导”中选择 **安装现有映像包** 来安装操作系统、迁移用户设置、应用软件更新和安装应用程序。 在创建任务序列以安装操作系统之前，以下方面必须已到位：  
 
 -   **必需**  
@@ -48,7 +48,7 @@ ms.openlocfilehash: 12ea958e18a291a1b88e342b204e633d3bdf869f
 
     -   必须将[应用程序](../../apps/deploy-use/create-applications.md)添加到 Configuration Manager 控制台。  
 
-###  <a name="a-namebkmkcreatebuildcapturetsa-create-a-build-and-capture-task-sequence"></a><a name="BKMK_CreateBuildCaptureTS"></a>创建一个构建和捕获任务序列  
+###  <a name="a-namebkmkcreatebuildcapturetsa-create-a-build-and-capture-task-sequence"></a><a name="BKMK_CreateBuildCaptureTS"></a> 创建一个构建和捕获任务序列  
  使用下列过程使用任务序列构建引用计算机和捕获操作系统。  
 
 #### <a name="to-create-a-task-sequence-that-builds-and-captures-an-operating-system-image"></a>创建用于构建和捕获操作系统映像的任务序列  
@@ -145,7 +145,7 @@ ms.openlocfilehash: 12ea958e18a291a1b88e342b204e633d3bdf869f
 
 -   如果引用计算机不是 Configuration Manager 客户端，或者如果想手动在引用计算机上运行任务序列，则请运行“创建任务序列媒体向导”以创建可启动媒体。 有关如何创建可启动媒体的信息，请参阅[创建可启动媒体](create-bootable-media.md)。  
 
-##  <a name="a-namebkmkcaptureexistingrefcomputera-capture-an-operating-system-image-from-an-existing-reference-computer"></a><a name="BKMK_CaptureExistingRefComputer"></a>从现有引用计算机中捕获操作系统映像  
+##  <a name="a-namebkmkcaptureexistingrefcomputera-capture-an-operating-system-image-from-an-existing-reference-computer"></a><a name="BKMK_CaptureExistingRefComputer"></a> 从现有引用计算机中捕获操作系统映像  
  如果已具有可随时用于捕获的引用计算机，则可以创建用于从引用计算机捕获操作系统的任务序列。 将使用“捕获操作系统映像”  任务序列步骤可从引用计算机捕获一个或多个映像，并将它们存储在指定网络共享上的映像文件 (wim) 文件中。 在 Windows PE 中使用启动映像启动引用计算机，将引用计算机上的每个硬盘驱动器作为 .wim 文件中的单独映像进行捕获。 如果引用计算机有多个驱动器，则生成的 .wim 文件对于每个卷将包含单独的映像。 仅捕获格式化为 NTFS 或 FAT32 的卷。 其他格式的卷和 USB 卷会被忽略。  
 
  使用以下过程从现有引用计算机中捕获操作系统映像。  
@@ -192,7 +192,7 @@ ms.openlocfilehash: 12ea958e18a291a1b88e342b204e633d3bdf869f
 
 -   如果引用计算机不是 Configuration Manager 客户端，或者如果想手动在引用计算机上运行任务序列，则请运行“创建任务序列媒体向导”以创建可启动媒体。 有关如何创建可启动媒体的信息，请参阅[创建可启动媒体](create-bootable-media.md)。  
 
-##  <a name="a-namebkmkbuildandcapturetsexamplea-task-sequence-example-to-build-and-capture-an-operating-system-image"></a><a name="BKMK_BuildandCaptureTSExample"></a>用于构建和捕获操作系统映像的任务序列示例  
+##  <a name="a-namebkmkbuildandcapturetsexamplea-task-sequence-example-to-build-and-capture-an-operating-system-image"></a><a name="BKMK_BuildandCaptureTSExample"></a> 用于构建和捕获操作系统映像的任务序列示例  
  使用下表作为创建任务序列以构建和捕获操作系统映像时的指导。 该表将帮助您决定任务序列步骤的常规顺序，以及如何将这些任务序列步骤组织并构建成逻辑组。 你创建的任务序列可能与此示例有所不同，可以包含更多或较少的任务序列步骤和组。  
 
 > [!IMPORTANT]  
