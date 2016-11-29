@@ -1,0 +1,36 @@
+---
+title: "部署和使用移动设备管理 | System Center Configuration Manager"
+description: "了解使用 System Center Configuration Manager 管理移动设备的不同方式。"
+keywords: 
+author: NathBarn
+ms.author: nathbarn
+manager: angrobe
+ms.date: 10/06/2016
+ms.topic: article
+ms.prod: configuration-manager
+ms.service: 
+ms.technology:
+- configmgr-hybrid
+ms.assetid: 756694f3-4d62-4463-9334-a21991c30ba3
+translationtype: Human Translation
+ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
+ms.openlocfilehash: 4347a305124e023d069aa28499fdc3eb3a7de7ef
+
+---
+
+# <a name="deploy-and-use-mobile-device-management-in-configuration-manager"></a>在 System Center Configuration Manager 中部署和使用移动设备管理
+
+*适用范围：System Center Configuration Manager (Current Branch)*
+
+
+可以使用 System Center Configuration Manager 以不同方式来管理移动设备：
+- [使用 Intune 进行混合移动设备管理](setup-hybrid-mdm.md)
+- [本地移动设备管理](enroll-devices-on-premises-mdm.md)
+- [停用、锁定和重置托管设备](wipe-lock-reset-devices.md)
+- [Exchange ActiveSync 管理](manage-mobile-devices-with-exchange-activesync.md)
+
+
+
+<!--HONumber=Nov16_HO1-->
+
+
