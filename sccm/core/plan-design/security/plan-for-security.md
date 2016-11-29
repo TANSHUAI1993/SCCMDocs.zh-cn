@@ -107,7 +107,7 @@ ms.openlocfilehash: f38d7275a39d16f9e6cf90334a46668fcc860bc1
 
 注册移动设备或 Mac 计算机时，以及针对无线网络设置基于 Intel AMT 的计算机时，你可能也必须导入根 CA 证书，这与站点配置无关。  
 
-###  <a name="a-namebkmkplanningforclientcertificateselectiona-planning-for-pki-client-certificate-selection"></a><a name="BKMK_PlanningForClientCertificateSelection"></a> 规划 PKI 客户端证书选择  
+###  <a name="a-namebkmkplanningforclientcertificateselectiona-planning-for-pki-client-certificate-selection"></a><a name="BKMK_PlanningForClientCertificateSelection"></a> Planning for PKI client certificate selection  
  如果 IIS 站点系统使用 PKI 客户端证书通过 HTTP 进行客户端身份验证，或者通过 HTTPS 进行客户端身份验证和加密，请规划基于 Windows 的客户端选择要用于 Configuration Manager 的证书的方式。  
 
 > [!NOTE]  

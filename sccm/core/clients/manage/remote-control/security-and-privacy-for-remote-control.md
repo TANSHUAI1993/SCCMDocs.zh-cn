@@ -28,7 +28,7 @@ ms.openlocfilehash: 9b36c01e6ea3a5e63523b5e32b151c0b972f9877
 
 本主题包括有关 System Center 2012 Configuration Manager 中远程控制的安全和隐私信息。  
 
-##  <a name="a-namebkmksecurityhardwareinventorya-security-best-practices-for-remote-control"></a><a name="BKMK_Security_HardwareInventory"></a> 远程控制的安全最佳实践  
+##  <a name="a-namebkmksecurityhardwareinventorya-security-best-practices-for-remote-control"></a><a name="BKMK_Security_HardwareInventory"></a> 远程控制安全最佳方案  
  在使用远程控制管理客户端计算机时，请使用下列最佳安全方案。  
 
 |最佳安全方案|更多信息|  

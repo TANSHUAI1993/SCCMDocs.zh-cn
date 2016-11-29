@@ -31,7 +31,7 @@ ms.openlocfilehash: 415ab53796b6f335e3f58ebce4b0bb1b6ecfa45e
 ##  <a name="a-namebkmkviewinformationa-view-asset-intelligence-information"></a><a name="BKMK_ViewInformation"></a> 查看资产智能信息  
  你可以在“资产智能”  主页上和资产智能报表中查看资产智能信息。  
 
-###  <a name="a-namebkmkassetintelligencehomepagea-asset-intelligence-home-page"></a><a name="BKMK_AssetIntelligenceHomePage"></a>“资产智能”主页  
+###  <a name="a-namebkmkassetintelligencehomepagea-asset-intelligence-home-page"></a><a name="BKMK_AssetIntelligenceHomePage"></a> “资产智能”主页  
  “资产智能”  主页显示了资产智能目录信息的摘要仪表板。 在主页上可以查看有关目录同步和清单软件状态的信息。 “资产智能”  主页包含以下部分：  
 
 -   **目录同步**：该部分提供了有关是否启用资产智能、资产智能同步点当前的状态、同步计划、是否导入客户许可证声明、上次状态更新的时间和下次计划更新的时间以及在安装资产智能同步点站点系统之后发生的更改数的信息。  
@@ -96,7 +96,7 @@ ms.openlocfilehash: 415ab53796b6f335e3f58ebce4b0bb1b6ecfa45e
 > [!WARNING]  
 >  System Center Online 在 12 小时内仅接受一次手动同步请求。  
 
-###  <a name="a-namebkmkmanuallysynchronizecataloga-to-manually-synchronize-the-asset-intelligence-catalog"></a><a name="BKMK_ManuallySynchronizeCatalog"></a> 手动同步资产智能目录  
+###  <a name="a-namebkmkmanuallysynchronizecataloga-to-manually-synchronize-the-asset-intelligence-catalog"></a><a name="BKMK_ManuallySynchronizeCatalog"></a> 若要手动同步资产智能目录  
 
 1.  在 Configuration Manager 控制台中，单击“资产和符合性” 。  
 
