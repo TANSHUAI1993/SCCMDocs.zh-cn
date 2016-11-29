@@ -29,7 +29,7 @@ ms.openlocfilehash: ae331ee9f1cc276f64b7f6501b383c67648f72f3
 
  采用以下部分内容，使用新版本的 Windows 来刷新现有计算机。  
 
-##  <a name="a-namebkmkplana-plan"></a><a name="BKMK_Plan"></a>计划  
+##  <a name="a-namebkmkplana-plan"></a><a name="BKMK_Plan"></a> 计划  
 
 -   **规划和实现基础结构要求**  
 
@@ -39,7 +39,7 @@ ms.openlocfilehash: ae331ee9f1cc276f64b7f6501b383c67648f72f3
 
      当你要从现有计算机捕获设置并将设置还原到新的操作系统时，必须安装状态迁移点。 有关详细信息，请参阅[状态迁移点](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_StateMigrationPoints)。  
 
-##  <a name="a-namebkmkconfigurea-configure"></a><a name="BKMK_Configure"></a>配置  
+##  <a name="a-namebkmkconfigurea-configure"></a><a name="BKMK_Configure"></a> 配置  
 
 1.  **准备启动映像**  
 
@@ -66,7 +66,7 @@ ms.openlocfilehash: ae331ee9f1cc276f64b7f6501b383c67648f72f3
     > [!NOTE]  
     >  在此方案中，任务序列对计算机上的硬盘进行格式化和分区。 若要捕获用户设置，必须使用状态迁移点，并在“创建任务序列”向导的“状态迁移”  页面上选择“在状态迁移点上保存用户设置和文件”  。 如果在本地保存用户设置和文件，它们会在硬盘格式化时丢失并且 Configuration Manager 将无法还原设置。 有关详细信息，请参阅[管理用户状态](../get-started/manage-user-state.md)。  
 
-##  <a name="a-namebkmkdeploya-deploy"></a><a name="BKMK_Deploy"></a>部署  
+##  <a name="a-namebkmkdeploya-deploy"></a><a name="BKMK_Deploy"></a> 部署  
 
 -   使用下列部署方法之一部署操作系统：  
 

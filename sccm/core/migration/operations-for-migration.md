@@ -39,7 +39,7 @@ ms.openlocfilehash: 9289dd8983846c27a3f5bd3ae999eed018ae4ccb
 
 -   [完成迁移](#Complete_Migration)  
 
-##  <a name="a-namecreateeditmigrationjobsa-create-and-edit-migration-jobs"></a><a name="Create_Edit_migration_Jobs"></a>创建和编辑迁移作业  
+##  <a name="a-namecreateeditmigrationjobsa-create-and-edit-migration-jobs"></a><a name="Create_Edit_migration_Jobs"></a> 创建和编辑迁移作业  
  使用以下过程来创建数据迁移作业、编辑基于集合的迁移作业的排除列表、配置共享的分发点，以及编辑迁移作业计划。  
 
 > [!NOTE]  
@@ -133,7 +133,7 @@ ms.openlocfilehash: 9289dd8983846c27a3f5bd3ae999eed018ae4ccb
 
 10. 确认设置，然后完成向导。  
 
-###  <a name="a-namebkmkmodifyexclusionlista-to-modify-the-exclusion-list-for-migration"></a><a name="BKMK_Modify_Exclusion_List"></a>修改迁移的排除列表  
+###  <a name="a-namebkmkmodifyexclusionlista-to-modify-the-exclusion-list-for-migration"></a><a name="BKMK_Modify_Exclusion_List"></a> 修改迁移的排除列表  
 
 1.  在 Configuration Manager 控制台中，单击“管理” 。  
 
@@ -167,7 +167,7 @@ ms.openlocfilehash: 9289dd8983846c27a3f5bd3ae999eed018ae4ccb
 
 4.  在迁移作业的属性中，选择“设置”  选项卡，更改迁移作业的运行时间，然后单击“确定” 。  
 
-##  <a name="a-namerunmigrationjobsa-run-migration-jobs"></a><a name="Run_Migration_Jobs"></a>运行迁移作业  
+##  <a name="a-namerunmigrationjobsa-run-migration-jobs"></a><a name="Run_Migration_Jobs"></a> 运行迁移作业  
  使用以下过程来运行尚未启动的迁移作业。  
 
 #### <a name="to-run-migration-jobs"></a>若要运行迁移作业  
@@ -180,7 +180,7 @@ ms.openlocfilehash: 9289dd8983846c27a3f5bd3ae999eed018ae4ccb
 
 4.  单击“是”  立即启动迁移作业。  
 
-##  <a name="a-namebkmkprocupgrdssa-upgrade-or-reassign-a-shared-distribution-point"></a><a name="BKMK_ProcUpgrdSS"></a>升级或重新分配共享的分发点  
+##  <a name="a-namebkmkprocupgrdssa-upgrade-or-reassign-a-shared-distribution-point"></a><a name="BKMK_ProcUpgrdSS"></a> 升级或重新分配共享分发点  
  可以升级从 Configuration Manager 2007 源站点中共享的受支持的分发点，或重新分配从 System Center Configuration Manager 源站点中共享的受支持的分发点，以成为目标层次结构中的分发点。  
 
 > [!IMPORTANT]  
@@ -205,7 +205,7 @@ ms.openlocfilehash: 9289dd8983846c27a3f5bd3ae999eed018ae4ccb
 
 6.  确认设置，然后完成向导。  
 
-##  <a name="a-namemonitormigrationa-monitor-migration-activity-in-the-migration-workspace"></a><a name="Monitor_MIgration"></a>监视“迁移”工作区中的迁移活动  
+##  <a name="a-namemonitormigrationa-monitor-migration-activity-in-the-migration-workspace"></a><a name="Monitor_MIgration"></a> 在“迁移”工作区中监视迁移活动  
  使用以下过程，通过 Configuration Manager 控制台监视迁移。  
 
 #### <a name="to-monitor-migration-activity-in-the-migration-workspace"></a>在“迁移”工作区中监视迁移活动  
@@ -218,10 +218,10 @@ ms.openlocfilehash: 9289dd8983846c27a3f5bd3ae999eed018ae4ccb
 
 4.  在“摘要”  和“作业对象” 选项卡上查看有关所选迁移作业的详细信息和状态。  
 
-##  <a name="a-namebkmkmigrateclientsa-migrate-clients"></a><a name="BKMK_MigrateClients"></a>迁移客户端  
+##  <a name="a-namebkmkmigrateclientsa-migrate-clients"></a><a name="BKMK_MigrateClients"></a> 迁移客户端  
  在层次结构之间迁移客户端数据之后，但在完成迁移之前，计划将客户端迁移到目标层次结构。 层次结构之间客户端的迁移涉及从分配给源层次结构的计算机中卸载 Configuration Manager 客户端软件，然后从目标层次结构中安装 Configuration Manager 客户端软件。 在从目标层次结构中安装客户端时，还会将客户端分配给该层次结构中的主站点。 有关迁移客户端的详细信息，请参阅[在 System Center Configuration Manager 中规划客户端迁移策略](../../core/migration/planning-a-client-migration-strategy.md)。  
 
-##  <a name="a-namecompletemigrationa-complete-migration"></a><a name="Complete_Migration"></a>完成迁移  
+##  <a name="a-namecompletemigrationa-complete-migration"></a><a name="Complete_Migration"></a> 完成迁移  
  使用此过程来完成从源层次结构进行的迁移。  
 
 #### <a name="to-complete-migration"></a>若要完成迁移  

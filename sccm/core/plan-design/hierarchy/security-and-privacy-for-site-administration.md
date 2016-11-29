@@ -27,7 +27,7 @@ ms.openlocfilehash: be8002edb48506286e18b1fb8c09f92f46ff0e10
 
 本主题包括有关 System Center Configuration Manager 站点和层次结构的安全和隐私信息。
 
-##  <a name="a-namebkmksecuritysitesa-security-best-practices-for-site-administration"></a><a name="BKMK_Security_Sites"></a> 站点管理的最佳安全做法  
+##  <a name="a-namebkmksecuritysitesa-security-best-practices-for-site-administration"></a><a name="BKMK_Security_Sites"></a> 站点管理的最佳安全方案  
  使用下列最佳安全做法，帮助保护 System Center Configuration Manager 站点和层次结构的安全。  
 
  **仅从受信任源中运行安装程序，并保护安装程序媒体和站点服务器之间的信道的安全。**  
@@ -175,7 +175,7 @@ Configuration Manager 自动创建和管理这些安全组。 这包括在删除
 
 请尽可能使用支持身份验证访问的邮件服务器，以及使用站点服务器计算机帐户进行身份验证。 如果必须指定用于身份验证的用户帐户，请使用具有最低权限的帐户。  
 
-##  <a name="a-namebkmksecuritysiteservera-security-best-practices-for-the-site-server"></a><a name="BKMK_Security_SiteServer"></a> 站点服务器的最佳安全做法  
+##  <a name="a-namebkmksecuritysiteservera-security-best-practices-for-the-site-server"></a><a name="BKMK_Security_SiteServer"></a> 站点服务器的最佳安全方案  
  使用下列最佳安全做法，帮助保护 Configuration Manager 站点服务器的安全。  
 
  **在成员服务器而不是域控制器上安装 Configuration Manager。**  
@@ -192,7 +192,7 @@ Configuration Manager 自动创建和管理这些安全组。 这包括在删除
 
  有关详细信息，请参阅[使用安装向导安装站点](../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md)主题中的[安装辅助站点](../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md#bkmk_secondary)。  
 
-##  <a name="a-namebkmksecuritysqlservera-security-best-practices-for-sql-server"></a><a name="BKMK_Security_SQLServer"></a> SQL Server 的最佳安全做法  
+##  <a name="a-namebkmksecuritysqlservera-security-best-practices-for-sql-server"></a><a name="BKMK_Security_SQLServer"></a> SQL Server 的最佳安全方案  
  Configuration Manager 使用 SQL Server 作为后端数据库。 如果数据库被泄露，则攻击者可以绕过 Configuration Manager，直接访问 SQL Server，通过 Configuration Manager 启动攻击。 请将对 SQL Server 的攻击视为高风险并且必须相应地进行缓解。  
 
  使用下列最佳安全做法，帮助保护 Configuration Manager SQL Server 的安全。  
@@ -223,7 +223,7 @@ Configuration Manager 自动创建和管理这些安全组。 这包括在删除
 
 -   如果使用域用户帐户安装 SQL Server，请确保针对发布到 Active Directory 域服务的服务主体名称 (SPN) 配置站点服务器计算机帐户。 如果没有 SPN，则 Kerberos 身份验证将失败，并且 Configuration Manager 安装程序将失败。  
 
-##  <a name="a-namebkmksecurityiisa-security-best-practices-for-site-systems-that-run-iis"></a><a name="BKMK_Security_IIS"></a> 运行 IIS 的站点系统的最佳安全做法  
+##  <a name="a-namebkmksecurityiisa-security-best-practices-for-site-systems-that-run-iis"></a><a name="BKMK_Security_IIS"></a> 运行 IIS 的站点系统的最佳安全方案  
 Configuration Manager 中的一些站点系统角色需要 IIS。 保护 IIS 的安全时，这允许 Configuration Manager 正确运行，并且它会减小安全攻击的风险。 当这可行时，请将需要 IIS 的服务器的数量降至最低。 例如，请仅运行支持客户端群所需数目的管理点，并针对基于 Internet 的客户端管理考虑高可用性和网络隔离。  
 
  使用下列最佳安全方案来帮助你保护运行 IIS 的站点系统的安全。  
@@ -289,7 +289,7 @@ Configuration Manager 中的一些站点系统角色需要 IIS。 保护 IIS 的
 
 确定并执行 IIS 服务器版本的最佳方案。 但是，请考虑 Configuration Manager 对特定站点系统角色的任何要求。 有关详细信息，请参阅[站点和站点系统先决条件](../../../core/plan-design/configs/site-and-site-system-prerequisites.md)。  
 
-##  <a name="a-namebkmksecuritymanagementpointa-security-best-practices-for-the-management-point"></a><a name="BKMK_Security_ManagementPoint"></a> 管理点的最佳安全做法  
+##  <a name="a-namebkmksecuritymanagementpointa-security-best-practices-for-the-management-point"></a><a name="BKMK_Security_ManagementPoint"></a> 管理点的最佳安全方案  
  管理点是设备与 Configuration Manager 之间的主要接口。 请将对管理点以及运行该管理点所在的服务器的攻击视为高风险并且必须相应地进行缓解。 应用所有适当的最佳安全方案并监视异常活动。  
 
  使用下列最佳安全做法，帮助保护 Configuration Manager 中管理点的安全。  
@@ -300,7 +300,7 @@ Configuration Manager 中的一些站点系统角色需要 IIS。 保护 IIS 的
 
  如果从早期版本迁移到 System Center Configuration Manager，请尽快将管理点上的客户端软件迁移到 System Center Configuration Manager。  
 
-##  <a name="a-namebkmksecurityfspa-security-best-practices-for-the-fallback-status-point"></a><a name="BKMK_Security_FSP"></a> 回退状态点的最佳安全做法  
+##  <a name="a-namebkmksecurityfspa-security-best-practices-for-the-fallback-status-point"></a><a name="BKMK_Security_FSP"></a> 回退状态点的最佳安全方案  
  如果在 Configuration Manager 中安装回退状态点，请使用下列最佳安全做法。  
 
  有关安装回退状态点时的安全注意事项的详细信息，请参阅 [Determine Whether You Require a Fallback Status Point](../../../core/clients/deploy/plan/determine-the-site-system-roles-for-clients.md#BKMK_Determine_FSP)。  

@@ -118,7 +118,7 @@ Intranet 上的客户端评估其当前网络位置，然后使用该信息确�
 
 7.  单击“确定”  关闭边界属性并保存配置。  
 
-##  <a name="a-namebkmkboundarygroupsa-boundary-groups"></a><a name="BKMK_BoundaryGroups"></a> 边界组  
+##  <a name="a-namebkmkboundarygroupsa-boundary-groups"></a><a name="BKMK_BoundaryGroups"></a> Boundary groups  
  将边界组创建为以逻辑方式对相关的网络位置（边界）进行分组，以便可以更轻松的管理你的基础结构。 你必须将边界分配给边界组，然后才能使用边界组。 客户端使用边界组配置用于：  
 
 -   自动站点分配  

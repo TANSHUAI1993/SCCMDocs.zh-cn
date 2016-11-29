@@ -109,7 +109,7 @@ System Center Configuration Manager 中的资产智能允许使用资产智能�
 > [!NOTE]  
 >  需要资产智能同步点站点系统角色才能连接到 System Center Online。 有关如何安装资产智能同步点的信息，请参阅[在 System Center Configuration Manager 中配置资产智能](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md)。  
 
-##  <a name="a-namebkmkassetintelligencehomepagea-asset-intelligence-home-page"></a><a name="BKMK_AssetIntelligenceHomePage"></a>“资产智能”主页  
+##  <a name="a-namebkmkassetintelligencehomepagea-asset-intelligence-home-page"></a><a name="BKMK_AssetIntelligenceHomePage"></a> “资产智能”主页  
  “资产和符合性”工作区中的“资产智能”节点是 Configuration Manager 中的资产智能主页。 “资产智能”  主页显示资产智能目录信息的摘要仪表板视图。  
 
 > [!NOTE]  

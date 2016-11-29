@@ -52,7 +52,7 @@ ms.openlocfilehash: 59584a5b8953165e7c605c310346a00c4e0d6d51
 |移动设备标识符 (MEID)|Device_ComputerSystem.MEID|  
 |制造商|不适用|  
 |型号|型号名称|  
-|电话号码 <sup>1</sup>|Device_ComputerSystem.PhoneNumber|  
+|电话号码<sup>1</sup>|Device_ComputerSystem.PhoneNumber|  
 |用户载波|Device_ComputerSystem.SubscriberCarrierNetwork|  
 |移动电话技术|Device_ComputerSystem.CellularTechnology|  
 |Wi-Fi MAC|Device_WLAN.WiFiMAC|  
@@ -80,7 +80,7 @@ ms.openlocfilehash: 59584a5b8953165e7c605c310346a00c4e0d6d51
 |移动设备标识符 (MEID)|不适用|  
 |制造商|Device_Info.Manufacturer|  
 |型号|Device_Info.Model|  
-|电话号码 <sup>1</sup>|Device_ComputerSystem.PhoneNumber|  
+|电话号码<sup>1</sup>|Device_ComputerSystem.PhoneNumber|  
 |用户载波|Device_ComputerSystem.SubscriberCarrierNetwork|  
 |移动电话技术|Device_ComputerSystem.CellularTechnology|  
 |Wi-Fi MAC|Device_WLAN.WiFiMAC|  
@@ -105,7 +105,7 @@ ms.openlocfilehash: 59584a5b8953165e7c605c310346a00c4e0d6d51
 |移动设备标识符 (MEID)|不适用|  
 |制造商|Device_ComputerSystem.DeviceManufacturer|  
 |型号|Device_ComputerSystem.DeviceModel|  
-|电话号码 <sup>1</sup>|不适用|  
+|电话号码<sup>1</sup>|不适用|  
 |用户载波|不适用|  
 |移动电话技术|不适用|  
 |Wi-Fi MAC|不适用|  
@@ -130,7 +130,7 @@ ms.openlocfilehash: 59584a5b8953165e7c605c310346a00c4e0d6d51
 |移动设备标识符 (MEID)|不适用|  
 |制造商|Win32_ComputerSystem.Manufacturer|  
 |型号|Win32_ComputerSystem.Model|  
-|电话号码 <sup>1</sup>|不适用|  
+|电话号码<sup>1</sup>|不适用|  
 |用户载波|不适用|  
 |移动电话技术|不适用|  
 |Wi-Fi MAC|Win32_NetworkAdapter.MACAddress|  

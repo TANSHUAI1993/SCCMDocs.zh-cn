@@ -83,7 +83,7 @@ ms.openlocfilehash: 9269c9a9730409253016126a875755edc617a558
         > [!NOTE]  
         >  在任务序列删除旧操作系统后，硬链接引用的用户状态数据保留在计算机上。 这是用于在部署新操作系统时用于还原用户状态的数据。  
 
-##  <a name="a-namebkmkstatemigrationpointa-configure-a-state-migration-point"></a><a name="BKMK_StateMigrationPoint"></a> 配置状态迁移点  
+##  <a name="a-namebkmkstatemigrationpointa-configure-a-state-migration-point"></a><a name="BKMK_StateMigrationPoint"></a> Configure a state migration point  
  状态迁移点在一台计算机上存储捕获的用户状态数据，然后在另一台计算机上还原这些数据。 但是，当你在同一台计算机上捕获操作系统部署的用户设置时（例如在目标计算机上刷新操作系统的部署），你可以通过使用硬链接将数据存储在同一台计算机上或将数据存储在状态迁移点上。 对于某些计算机部署，当你创建状态存储时，Configuration Manager 会自动在状态存储和目标计算机之间创建关联。 你可以使用下列方法来配置状态迁移点以存储用户状态数据：  
 
 -   使用“创建站点系统服务器向导”  为状态迁移点创建一个新站点系统服务器。  
@@ -104,7 +104,7 @@ ms.openlocfilehash: 9269c9a9730409253016126a875755edc617a558
 
  有关状态迁移点以及对其进行配置的步骤的详细信息，请参阅[状态迁移点](prepare-site-system-roles-for-operating-system-deployments.md#BKMK_StateMigrationPoints)。  
 
-##  <a name="a-namebkmkcomputerassociationa-create-a-computer-association"></a><a name="BKMK_ComputerAssociation"></a> 创建计算机关联  
+##  <a name="a-namebkmkcomputerassociationa-create-a-computer-association"></a><a name="BKMK_ComputerAssociation"></a> Create a computer association  
  当你在新硬件上安装操作系统并且想捕获和还原用户数据设置时，请创建计算机关联以定义源计算机和目标计算机之间的关系。 源计算机是 Configuration Manager 管理的现有计算机。 在你将新操作系统部署到目标计算机时，源计算机包含迁移到目标计算机的用户状态。  
 
 > [!NOTE]  

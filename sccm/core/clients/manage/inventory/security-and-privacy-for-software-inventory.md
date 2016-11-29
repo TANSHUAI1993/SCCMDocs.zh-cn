@@ -28,7 +28,7 @@ ms.openlocfilehash: 1e588db325ea6c3e83614892d3bf76d86ed1b041
 
 此主题包含 System Center Configuration Manager 中软件清单的安全和隐私信息。  
 
-##  <a name="a-namebkmksecurityhardwareinventorya-security-best-practices-for-software-inventory"></a><a name="BKMK_Security_HardwareInventory"></a> 软件清单的最佳安全做法  
+##  <a name="a-namebkmksecurityhardwareinventorya-security-best-practices-for-software-inventory"></a><a name="BKMK_Security_HardwareInventory"></a> 软件清单的最佳安全方案  
  在从客户端收集软件清单数据时使用下列最佳安全方案：  
 
 |最佳安全方案|更多信息|  
