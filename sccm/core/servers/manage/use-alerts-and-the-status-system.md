@@ -28,7 +28,7 @@ ms.openlocfilehash: dda2e3af6ae14a949af5c70f300f8c7c6772e1a8
 配置警报，并使用内置状态系统以保持对 System Center Configuration Manager 部署状态的实时了解。  
 
 
-##  <a name="a-namebkmkstatusa-status-system"></a><a name="bkmk_Status"></a>系统状态  
+##  <a name="a-namebkmkstatusa-status-system"></a><a name="bkmk_Status"></a> 系统状态  
  所有主要站点组件都会生成状态消息，以提供有关站点和层次结构操作的反馈。    此信息可以使你保持对不同站点进程的运行状况的了解。 你可以将警报系统调整为忽略已知问题的干扰，同时增加对可能需要你关注的其他问题提前预见性。  
 
  默认情况下，通过使用适用于大多数环境的设置，Configuration Manager 状态系统无需配置即可工作。 不过，可以配置下列几项：  
@@ -55,7 +55,7 @@ ms.openlocfilehash: dda2e3af6ae14a949af5c70f300f8c7c6772e1a8
 
 由于状态系统会为每个站点维护独立的配置，因此必须逐个编辑每个站点。  
 
-###  <a name="a-namebkmkconfigstatusa-procedures-for-configuring-the-status-system"></a><a name="bkmk_configstatus"></a>配置状态系统的过程  
+###  <a name="a-namebkmkconfigstatusa-procedures-for-configuring-the-status-system"></a><a name="bkmk_configstatus"></a> 配置状态系统的过程  
 
 ##### <a name="to-configure-status-summarizers"></a>配置状态摘要生成器  
 
@@ -154,7 +154,7 @@ ms.openlocfilehash: dda2e3af6ae14a949af5c70f300f8c7c6772e1a8
 
 4.  单击" **确定**"。  
 
-###  <a name="a-namebkmkmonitorsystemstatusa-monitor-the-status-system-of-configuration-manager"></a><a name="BKMK_MonitorSystemStatus"></a>监视 Configuration Manager 的状态系统  
+###  <a name="a-namebkmkmonitorsystemstatusa-monitor-the-status-system-of-configuration-manager"></a><a name="BKMK_MonitorSystemStatus"></a> 监视 Configuration Manager 的状态系统  
  Configuration Manager 中的“系统状态”提供了层次结构的一般站点操作和站点服务器操作的概览。 它可以揭示站点系统服务器或组件的操作问题，并且你可以使用系统状态来查看不同 Configuration Manager 操作的特定详细信息。 从 Configuration Manager 控制台中“监视”工作区的“系统状态”节点监视系统状态。  
 
  大多数 Configuration Manager 站点系统角色和组件都会生成状态消息。 状态消息详细信息记录在每个组件操作日志中，但也会提交到站点数据库，在站点数据库中，将对这些详细信息进行汇总，并呈现在每个组件的一般性汇总或站点系统运行状况中。 这些状态消息汇总提供正常操作的信息详情以及警告和错误详细信息。 你可以配置触发警告或错误时的阈值，并对系统进行微调以确保汇总信息忽略与你不相关的已知问题，同时引起对你可能需要调查的服务器或组件操作实际问题的关注。  
@@ -170,19 +170,19 @@ ms.openlocfilehash: dda2e3af6ae14a949af5c70f300f8c7c6772e1a8
 |冲突的记录|使用此节点来查看有关可能具有冲突记录的客户端的状态消息。<br /><br /> Configuration Manager 使用硬件 ID 来尝试标识可能重复的客户端，并发出有关冲突的记录的警报。 例如，如果必须重新安装计算机，则硬件 ID 将相同，但 Configuration Manager 使用的 GUID 可能已更改。|  
 |状态消息查询|使用此节点来查询状态消息以了解特定事件和相关详细信息。 你可以使用状态消息查询来查找与特定事件相关的状态消息。<br /><br /> 通常可使用状态消息查询来确定特定组件、操作或 Configuration Manager 对象的修改时间，以及用于进行修改的帐户。 例如，你可以运行针对“已创建、已修改或已删除的集合”  的内置查询来确定特定集合的创建时间，以及用于创建该集合的用户帐户。|  
 
-####  <a name="a-namebkmkmanagestatusa-manage-site-status-and-component-status"></a><a name="bkmk_managestatus"></a>管理站点状态和组件状态  
+####  <a name="a-namebkmkmanagestatusa-manage-site-status-and-component-status"></a><a name="bkmk_managestatus"></a> 管理站点状态和组件状态  
  使用以下信息来管理站点状态和组件状态：  
 
 -   要为状态系统配置阈值，请参阅 [配置状态系统的过程](#bkmk_configstatus)。  
 
 -   若要管理 Configuration Manager 中的各个组件，请使用 **Configuration Manager Service Manager**。  
 
-####  <a name="a-namebkmkviewa-view-status-messages"></a><a name="bkmk_view"></a>查看状态消息  
+####  <a name="a-namebkmkviewa-view-status-messages"></a><a name="bkmk_view"></a> 查看状态消息  
  你可以查看单独的站点系统服务器和组件的状态消息。  
 
  若要在 Configuration Manager 控制台中查看状态消息，请选择特定站点系统服务器或组件，然后单击“显示消息”。 在查看消息时，你可以选择查看特定消息类型或指定时间段中的消息，并且可以基于状态消息详细信息对结果进行筛选。  
 
-##  <a name="a-namebkmkalertsa-alerts"></a><a name="bkmk_Alerts"></a>警报  
+##  <a name="a-namebkmkalertsa-alerts"></a><a name="bkmk_Alerts"></a> 警报  
  Configuration Manager 警报由在特定情况下发生的某些操作生成。  
 
 -   通常，在发生必须解决的错误时，将会生成警报  
@@ -204,7 +204,7 @@ ms.openlocfilehash: dda2e3af6ae14a949af5c70f300f8c7c6772e1a8
 |配置对警报的电子邮件订阅|请参阅本主题中的 [Management tasks for alerts](#BKMK_Manage) 部分。|  
 |监视器警报|请参阅本主题中的 [监视器警报](#BKMK_MonitorAlerts)|  
 
-###  <a name="a-namebkmkmanagea-management-tasks-for-alerts"></a><a name="BKMK_Manage"></a>管理任务警报  
+###  <a name="a-namebkmkmanagea-management-tasks-for-alerts"></a><a name="BKMK_Manage"></a> Management tasks for alerts  
 
 ##### <a name="to-manage-general-alerts"></a>若要管理常规警报  
 
@@ -288,7 +288,7 @@ ms.openlocfilehash: dda2e3af6ae14a949af5c70f300f8c7c6772e1a8
     > [!NOTE]  
     >  你可以展开“警报”  节点，然后单击其中的“订阅”  节点，删除和编辑“监视”  工作区中的订阅。  
 
-###  <a name="a-namebkmkmonitoralertsa-monitor-alerts"></a><a name="BKMK_MonitorAlerts"></a>监视器警报  
+###  <a name="a-namebkmkmonitoralertsa-monitor-alerts"></a><a name="BKMK_MonitorAlerts"></a> 监视器警报  
  你可以在“监视”  工作区的“警报”  节点中查看警报。 警报具有以下警报状态之一：  
 
 -   “从未触发”：未满足警报的条件。  
