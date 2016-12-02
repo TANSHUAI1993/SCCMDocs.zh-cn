@@ -1,5 +1,5 @@
 ---
-itle: Upgrade clients | Linux UNIX | System Center Configuration Manager
+itle: 'Upgrade clients | Microsoft Docs | Linux UNIX '
 description: "在 System Center Configuration Manager 中升级 Linux 或 UNIX 服务器上的客户端。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: 7d2bb377-1005-4a55-bd1f-b80a6d0b22e1
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: Mtillman
-ms.author: mtillman
+author: nbigman
+ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: dda49b04914b53b56ed36a7bba8368d3c2387cde
+ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
+ms.openlocfilehash: eea9faaac579ecafd67eaac05dc7ee7ca7819db7
 
 
 ---
@@ -64,6 +64,6 @@ ms.openlocfilehash: dda49b04914b53b56ed36a7bba8368d3c2387cde
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO4-->
 
 
