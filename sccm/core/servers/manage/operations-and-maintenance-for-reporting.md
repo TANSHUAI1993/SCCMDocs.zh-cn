@@ -27,10 +27,10 @@ ms.openlocfilehash: 2473aef3b5c9be51f45039735e975d1c0ca86277
 
 为 System Center Configuration Manager 中的报表准备好基础结构后，通常可以执行多种操作来管理报表和报表订阅。  
 
-##  <a name="a-namebkmkmanagereportsa-manage-configuration-manager-reports"></a><a name="BKMK_ManageReports"></a> 管理 Configuration Manager 报表  
+##  <a name="a-namebkmkmanagereportsa-manage-configuration-manager-reports"></a><a name="BKMK_ManageReports"></a>管理 Configuration Manager 报表  
  Configuration Manager 提供了超过 400 个预定义报表，可帮助收集、组织和呈现有关用户、硬件和软件清单、软件更新、应用程序、站点状态以及组织中其他 Configuration Manager 操作的信息。 你可以按原样使用这些预定义报表，或者你可以修改报表来满足你的需求。 也可以创建基于自定义模型和基于 SQL 的报表来满足需求。 使用以下部分可帮助管理 Configuration Manager 报表。  
 
-###  <a name="a-namebkmkrunreporta-run-a-configuration-manager-report"></a><a name="BKMK_RunReport"></a> 运行 Configuration Manager 报表  
+###  <a name="a-namebkmkrunreporta-run-a-configuration-manager-report"></a><a name="BKMK_RunReport"></a>运行 Configuration Manager 报表  
  在 Configuration Manager 中的报表存储在 SQL Server Reporting Services，并从 Configuration Manager 站点数据库检索报表中呈现的数据。 您可以访问 Configuration Manager 控制台中或通过使用报表管理器，在 web 浏览器访问的报表。 你可以在对运行 SQL Server Reporting Services 的计算机具有访问权限的任何计算机上打开报表，你必须具有足够的权限才能查看报表。 在运行报表时，报表标题、描述和类别采用本地操作系统的语言显示。  
 
 > [!NOTE]  
@@ -73,7 +73,7 @@ ms.openlocfilehash: 2473aef3b5c9be51f45039735e975d1c0ca86277
 
 4.  如果有必需的参数，请指定这些参数，然后单击“查看报表” 。  
 
-###  <a name="a-namebkmkmodifyreportpropertiesa-modify-the-properties-for-a-configuration-manager-report"></a><a name="BKMK_ModifyReportProperties"></a> 修改 Configuration Manager 报表的属性  
+###  <a name="a-namebkmkmodifyreportpropertiesa-modify-the-properties-for-a-configuration-manager-report"></a><a name="BKMK_ModifyReportProperties"></a>修改 Configuration Manager 报表的属性  
  在 Configuration Manager 控制台中，可以查看报表的属性（例如报表名称和描述），但若要更改属性，请使用报表管理器。 使用以下过程来修改 Configuration Manager 报表的属性。  
 
 #### <a name="to-modify-report-properties-in-report-manager"></a>在报表管理器中修改报表属性  
@@ -91,7 +91,7 @@ ms.openlocfilehash: 2473aef3b5c9be51f45039735e975d1c0ca86277
 
 5.  完成后，单击“应用” 。 报表属性保存在报表服务器上，Configuration Manager 控制台将检索报表的更新报表属性。  
 
-###  <a name="a-namebkmkeditreporta-edit-a-configuration-manager-report"></a><a name="BKMK_EditReport"></a> 编辑 Configuration Manager 报表  
+###  <a name="a-namebkmkeditreporta-edit-a-configuration-manager-report"></a><a name="BKMK_EditReport"></a>编辑 Configuration Manager 报表  
  如果现有 Configuration Manager 报表未检索必须具有的信息或未提供所需的布局或设计，则可以在报表生成器中编辑该报表。  
 
 > [!NOTE]  
@@ -115,7 +115,7 @@ ms.openlocfilehash: 2473aef3b5c9be51f45039735e975d1c0ca86277
 
 4.  在报表生成器中，修改相应的报表设置，然后单击“保存”  以将报表保存到报表服务器。  
 
-###  <a name="a-namebkmkcreatemodelbasedreporta-create-a-model-based-report"></a><a name="BKMK_CreateModelBasedReport"></a> 创建基于模型的报表  
+###  <a name="a-namebkmkcreatemodelbasedreporta-create-a-model-based-report"></a><a name="BKMK_CreateModelBasedReport"></a>创建基于模型\-的报表  
  基于模型的报表允许以交互方式选择要包括在报表中的项目。 有关创建自定义报表模型的详细信息，请参阅[在 SQL Server Reporting Services 中为 System Center Configuration Manager 创建自定义报表模型](creating-custom-report-models-in-sql-server-reporting-services.md)。  
 
 > [!IMPORTANT]  
@@ -157,7 +157,7 @@ ms.openlocfilehash: 2473aef3b5c9be51f45039735e975d1c0ca86277
 
 10. 单击“保存”  将报表保存到报表服务器。 你可以在“监视”  工作区的“报表”  节点中运行和修改新报表。  
 
-###  <a name="a-namebkmkcreatesqlbasedreporta-create-a-sql-based-report"></a><a name="BKMK_CreateSQLBasedReport"></a> 创建基于 SQL 的报表  
+###  <a name="a-namebkmkcreatesqlbasedreporta-create-a-sql-based-report"></a><a name="BKMK_CreateSQLBasedReport"></a>创建基于 SQL \-的报表  
  基于 SQL 的报表使你能够检索基于报表 SQL 语句的数据。  
 
 > [!IMPORTANT]  
@@ -200,10 +200,10 @@ ms.openlocfilehash: 2473aef3b5c9be51f45039735e975d1c0ca86277
 
 9. 单击“保存”  将报表保存到报表服务器。 你可以在“监视”  工作区的“报表”  节点中运行新报表。  
 
-##  <a name="a-namebkmkmanagereportsubscriptionsa-manage-report-subscriptions"></a><a name="BKMK_ManageReportSubscriptions"></a> 管理报表订阅  
+##  <a name="a-namebkmkmanagereportsubscriptionsa-manage-report-subscriptions"></a><a name="BKMK_ManageReportSubscriptions"></a>管理报表订阅  
  SQL Server Reporting Services 中的报表订阅使你能够配置按计划的间隔通过电子邮件自动交付指定报表或将指定报表自动交付到文件共享。 使用 System Center 2012 Configuration Manager 中的**创建订阅向导**来配置报表订阅。  
 
-###  <a name="a-namebkmkreportsubscriptionfilesharea-create-a-report-subscription-to-deliver-a-report-to-a-file-share"></a><a name="BKMK_ReportSubscriptionFileShare"></a> 创建报表订阅以向文件共享传递报表  
+###  <a name="a-namebkmkreportsubscriptionfilesharea-create-a-report-subscription-to-deliver-a-report-to-a-file-share"></a><a name="BKMK_ReportSubscriptionFileShare"></a>创建报表订阅以向文件共享传递报表  
  创建报表订阅以向文件共享传递报表时，会使用指定的格式将报表复制到你指定的文件共享中。 一次只能订阅和请求传递一个报表。  
 
  与报表服务器承载和管理的报表不同的是，向共享文件夹传递的报表是静态文件。 对于作为文件系统上的文件存储的报表，为报表定义的交互式功能无效。 交互式功能将呈现为静态元素。 如果报表包含图表，则会使用默认的表示形式。 如果报表链接到另一个报表，则链接呈现为静态文本。 如果想在传递的报表中保留交互式功能，请改用电子邮件传递。 有关电子邮件传递的详细信息，请参阅本主题后面的 [创建报表订阅以通过电子邮件传递报表](#BKMK_ReportSubscriptionEmail) 章节。  
@@ -284,7 +284,7 @@ ms.openlocfilehash: 2473aef3b5c9be51f45039735e975d1c0ca86277
 
 8.  在“完成”  页上，单击“关闭”  退出向导。 验证是否已成功创建报表订阅。 可以在“监视”  工作区中的“订阅”  节点的“报表”  下查看和修改报表订阅。  
 
-###  <a name="a-namebkmkreportsubscriptionemaila-create-a-report-subscription-to-deliver-a-report-by-email"></a><a name="BKMK_ReportSubscriptionEmail"></a> 创建报表订阅以通过电子邮件传递报表  
+###  <a name="a-namebkmkreportsubscriptionemaila-create-a-report-subscription-to-deliver-a-report-by-email"></a><a name="BKMK_ReportSubscriptionEmail"></a>创建报表订阅以通过电子邮件传递报表  
  在创建报表订阅以通过电子邮件传递报表时，将向你配置的收件人发送电子邮件，而且会将报表包含为附件。 报表服务器不会验证电子邮件地址，也不会从电子邮件服务器获取电子邮件地址。 你必须事先知道要使用的电子邮件地址。 默认情况下，可以将报表通过电子邮件发送到组织内部或外部的任何有效的电子邮件帐户。 可以选择下列一个或全部两个电子邮件传递选项：  
 
 -   发送通知和所生成的报表的超链接。  

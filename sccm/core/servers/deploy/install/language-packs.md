@@ -27,7 +27,7 @@ ms.openlocfilehash: f44ea59b86ace05e6d495aa4311d01518097daf7
 
 本主题提供有关 System Center Configuration Manager 中的语言支持的技术详细信息。  
 
-##  <a name="a-namebkmksuplanguagepacksa-supported-operating-system-languages"></a><a name="BKMK_SupLanguagePacks"></a> 支持的操作系统语言  
+##  <a name="a-namebkmksuplanguagepacksa-supported-operating-system-languages"></a><a name="BKMK_SupLanguagePacks"></a>支持的操作系统语言  
  通过在管理中心站点和主站点中安装 **服务器语言包** 或 **客户端语言包** ，可以安装支持下列显示语言的功能。 在将安装程序作为先决条件和可再发行文件的下载的一部分运行时，会下载语言包。 在运行安装程序之前，你还可以使用 [Setup Downloader](setup-downloader.md) 来下载这些文件。 在安装站点期间，你从可用的语言包文件中选择要在该站点支持的服务器和客户端语言。  
 
  使用下表将区域设置 ID 对应到你要在服务器或客户端上支持的语言。 有关区域设置 ID 的详细信息，请参阅 MSDN 联机库中的 [Locale IDs Assigned by Microsoft（Microsoft 指定的区域设置 ID）](http://go.microsoft.com/fwlink/p/?LinkId=252609) 。  

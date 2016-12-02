@@ -49,7 +49,7 @@ System Center Configuration Manager 中启动了 PXE 的操作系统部署允许
 
 -   如果你更改启动映像的属性，请将启动映像重新分发到分发点。 有关详细信息，请参阅[分发内容](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content)。  
 
-##  <a name="a-namebkmkpxeexclusionlista-create-an-exclusion-list-for-pxe-deployments"></a><a name="BKMK_PXEExclusionList"></a>创建 PXE 部署的排除列表  
+##  <a name="a-namebkmkpxeexclusionlista-create-an-exclusion-list-for-pxe-deployments"></a><a name="BKMK_PXEExclusionList"></a> 创建 PXE 部署的排除列表  
  当使用 PXE 部署操作系统时，可以在每个分发点上创建排除列表，以忽略排除列表中计算机发出的 PXE 启动请求。 排除列表包含你希望分发点忽略的计算机的 MAC 地址。 这些计算机将不接收 Configuration Manager 用于 PXE 部署的部署任务序列。  
 
  使用以下步骤来创建 PXE 排除列表。  
@@ -71,7 +71,7 @@ System Center Configuration Manager 中启动了 PXE 的操作系统部署允许
 
      进行此注册表更改后，无需重启服务器。  
 
-##  <a name="a-namebkmkramdisktftparamdisk-tftp-block-size-and-window-size"></a><a name="BKMK_RamDiskTFTP"></a>RamDisk TFTP 块大小和窗口大小  
+##  <a name="a-namebkmkramdisktftparamdisk-tftp-block-size-and-window-size"></a><a name="BKMK_RamDiskTFTP"></a> RamDisk TFTP 块大小和窗口大小  
 可以为启用 PXE 的分发点自定义 RamDisk TFTP 块大小和窗口大小（从 Configuration Manager 1606 版本开始）。 如果自定义了网络，则可能导致启动映像下载由于超时错误而失败，因为块大小或窗口大小太大。 通过 RamDisk TFTP 块大小和窗口大小自定义可以在使用 PXE 时优化 TFTP 流量，以满足特定网络要求。 需要在环境中测试自定义设置以确定最高效的设置。 有关详细信息，请参阅[在启用 PXE 的分发点上自定义 RamDisk TFTP 块大小和窗口大小](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_RamDiskTFTP)。
 
 ## <a name="configure-deployment-settings"></a>配置部署设置  

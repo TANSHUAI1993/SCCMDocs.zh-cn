@@ -61,7 +61,7 @@ ms.openlocfilehash: 7fa86796a9acd5e6baedd12f005bec58181f081b
 
  想要发现网络拓扑时，请使用网络发现。 虽然其他发现方法会返回与 Active Directory 域服务相关的信息，并且可以确定客户端的当前网络位置，但它们不会根据网络的子网和路由器拓扑提供基础结构信息。  
 
-##  <a name="a-namebkmkshareda-discovery-data-is-shared-between-sites"></a><a name="bkmk_shared"></a> 发现数据在站点之间共享  
+##  <a name="a-namebkmkshareda-discovery-data-is-shared-between-sites"></a><a name="bkmk_shared"></a>发现数据在站点之间共享  
  Configuration Manager 将发现数据添加到数据库后，将会在层次结构中的所有站点之间快速共享该数据。 由于通常情况下，在层次结构中的多个站点上发现相同信息并无好处，因此请考虑配置一个用于在单一站点上运行的每个发现方法的单一实例，而不是在不同的站点上运行单一方法的多个实例。  
 
  不过，将相同的发现方法指派为在多个站点上运行（每个方法有单独的配置和计划）在某些环境下可能也会有用。 这是因为用以运行发现方法的配置是特定于单一站点的。 这使得能够在一个站点上运行发现，然后将结果与其他站点共享，或者在两个不同的站点上使用相同的方法，其中发现针对本地资源运行且不会尝试从跨 WAN 的位置发现信息。  例如，使用网络发现时通常会很有用，你会指示每个站点发现其本地网络，而不用尝试运行发现跨 WAN 的所有网络位置。 如果的确将相同发现方法的多个实例配置为在不同站点上运行，请仔细规划每个站点的配置，以避免让两个或者更多站点从网络或 Active Directory 中发现相同的资源。 在多个站点上发现相同的位置和资源可能会消耗额外的网络带宽，而且会创建毫无新价值可言却必须仍然由站点服务器处理的重复发现数据记录 (DDR)。  
@@ -77,7 +77,7 @@ ms.openlocfilehash: 7fa86796a9acd5e6baedd12f005bec58181f081b
 |检测信号发现<sup>1</sup>|主站点|  
 |网络发现|主站点<br /><br /> 辅助站点|  
 
- <sup>1</sup> 辅助站点无法配置检测信号发现，但可从客户端接收检测信号 DDR。  
+ <sup>1</sup>辅助站点无法配置检测信号发现，但可从客户端接收检测信号 DDR。  
 
  当辅助站点运行网络发现或接收检测信号发现 DDR 时，它们会通过基于文件的复制将 DDR 传输到其父主站点。 这是因为只有主站点和管理中心站点才能处理 DDR。 有关如何处理 DDR 的详细信息，请参阅[关于发现数据记录](../../../../core/servers/deploy/configure/run-discovery.md#BKMK_DDRs) 。  
 
@@ -102,7 +102,7 @@ ms.openlocfilehash: 7fa86796a9acd5e6baedd12f005bec58181f081b
 
 -   由于每个站点服务器和网络环境都不同，因此请限制你的初始发现配置，并密切监视每个站点服务器，确定它处理所生成的发现数据的能力。  
 
-##  <a name="a-namebkmkbesta-best-practices-for-discovery"></a><a name="bkmk_best"></a> 最佳发现方案  
+##  <a name="a-namebkmkbesta-best-practices-for-discovery"></a><a name="bkmk_best"></a>最佳发现方案  
  **在运行 Active Directory 组发现之前运行 Active Directory 系统发现和 Active Directory 用户发现：**  
 
  当 Active Directory 组发现将以前未发现的用户或计算机标识为组成员时，它会尝试发现该用户或计算机的基本详细信息。 由于 Active Directory 组发现未针对此类型的发现进行优化，此过程可能会导致 Active Directory 组发现运行缓慢。 此外，Active Directory 组发现只会确定有关它发现的用户和计算机的基本详细信息，而不会创建完整的用户或计算机发现记录。 当你运行 Active Directory 系统发现和 Active Directory 用户发现时，每个对象类型的其他 Active Directory 属性将可用，因此 Active Directory 组发现可更有效地运行。  

@@ -35,7 +35,7 @@ System Center Configuration Manager 的更新 1606 作为控制台内部更新�
 
 
 
-## <a name="a-nameupdatesandservicingaupdates-and-servicing"></a><a name="updatesandservicing"></a> 更新和服务
+## <a name="a-nameupdatesandservicingaupdates-and-servicing"></a><a name="updatesandservicing"></a>更新和服务
 
 ### <a name="changes-for-the-updates-and-servicing-node"></a>更新和维护节点的更改
 Configuration Manager 控制台中的更新和服务更改如下：
@@ -81,10 +81,10 @@ Configuration Manager 控制台中的更新和服务更改如下：
 
 
 
-## <a name="a-nameaccessibilitya-accessibility"></a><a name="accessibility"></a> 辅助功能
+## <a name="a-nameaccessibilitya-accessibility"></a><a name="accessibility"></a>辅助功能
 从 1606 版开始，若要在工作区的不同节点之间导航，可输入节点名称的第一个字母。 每按键一次都会将光标移动到以该字母开头的下一个节点，并且在使用屏幕阅读器时，阅读器将读出该节点的名称。 有关辅助功能选项的详细信息，请参阅 [System Center Configuration Manager 中的辅助功能](../../../core/understand/accessibility-features.md)。
 
-## <a name="a-nameadministrationaadministration"></a><a name="administration"></a> 管理
+## <a name="a-nameadministrationaadministration"></a><a name="administration"></a>管理
 Configuration Manager 控制台中的管理更改如下：
 ### <a name="oms-connector"></a>OMS 连接器
 

@@ -65,7 +65,7 @@ ms.openlocfilehash: fc58e77841baedd45649d676e98c736fa91e5bf2
 
  安装向导完成后，SMS 提供程序配置即完成。 在站点的“属性”  对话框的“常规”  选项卡上，你可以验证为站点安装了 SMS 提供程序的计算机。  
 
-##  <a name="a-namebkmkconsolea-manage-the-configuration-manager-console"></a><a name="bkmk_Console"></a>管理 Configuration Manager 控制台。  
+##  <a name="a-namebkmkconsolea-manage-the-configuration-manager-console"></a><a name="bkmk_Console"></a>管理 Configuration Manager 控制台  
  以下是可以执行以管理 Configuration Manager 控制台的任务：  
 
 -   **修改 Configuration Manager 控制台中显示的语言** - 若要修改已安装的语言，请参阅本主题中的[管理 Configuration Manager 控制台语言](#BKMK_ManageConsoleLanguages)。  

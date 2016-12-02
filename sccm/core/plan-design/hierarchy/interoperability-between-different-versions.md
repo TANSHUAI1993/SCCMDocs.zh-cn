@@ -35,7 +35,7 @@ ms.openlocfilehash: db0bf04b73050cb42f8230227c8db6ebfb3c6987
 
 -   [混合版本层次结构中的 Configuration Manager 限制](#bkmk_mixed)  
 
-##  <a name="a-namebkmksupconfiginteropa-interoperability-between-system-center-configuration-manager-and-earlier-product-versions"></a><a name="BKMK_SupConfigInterop"></a> System Center Configuration Manager 和早期产品版本之间的互操作性  
+##  <a name="a-namebkmksupconfiginteropa-interoperability-between-system-center-configuration-manager-and-earlier-product-versions"></a><a name="BKMK_SupConfigInterop"></a> System Center Configuration Manager 和 早期版本之间的互操作性  
  除了在从 System Center 2012 Configuration Manager 升级到 System Center Configuration Manager 或从某一 System Center Configuration Manager 版本升级到较新版本（使用控制台内更新）期间外，不同版本的站点无法同时存在于同一层次结构中。  
 
  因为可以通过现有 System Center 2012 Configuration Manager 站点或者层次结构并排部署一个 System Center Configuration Manager 站点和层次结构，计划阻止其他版本的客户端试图从一个站点加入另一个站点。 例如，如果两个或更多 Configuration Manager 层次结构具有包含相同网络位置的重叠边界（见[有关重叠边界](../../../core/servers/deploy/configure/define-site-boundaries-and-boundary-groups.md#BKMK_BoundaryOverlap)），则最好将每个新客户端分配给特定站点，而不是使用自动站点分配。 有关 System Center 2012 Configuration Manager 中自动站点分配的信息，请参阅 [如何在 System Center Configuration Manager 中将客户端分配到一个站点](../../../core/clients/deploy/assign-clients-to-a-site.md)。  

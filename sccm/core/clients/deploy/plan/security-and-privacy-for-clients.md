@@ -199,7 +199,7 @@ ms.openlocfilehash: ce7bb5194b6cca7ab0fa3829655c4b51f6725097
 
  有关 Exchange Server 连接器要求的最小 cmdlet 的列表，请参阅[使用 System Center Configuration Manager 和 Exchange 管理移动设备](../../../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)。  
 
-##  <a name="a-namebkmkmacsa-security-best-practices-for-macs"></a><a name="bkmk_macs"></a>Mac 的最佳安全方案  
+##  <a name="a-namebkmkmacsa-security-best-practices-for-macs"></a><a name="bkmk_macs"></a> Mac 的最佳安全方案  
  **对于 Mac 计算机：从安全位置中存储和访问客户端源文件。**  
 
  在 Mac 计算机上安装或注册客户端之前 Configuration Manager 不会验证这些客户端源文件是否已被篡改。 请从可信来源下载这些文件并且安全地存储和访问它们。  
@@ -237,7 +237,7 @@ ms.openlocfilehash: ce7bb5194b6cca7ab0fa3829655c4b51f6725097
 
 6.  关闭对话框，并在提示时输入管理员的密码，然后单击“更新设置”。  
 
-##  <a name="a-namebkmksecurityissuesclientsa-security-issues-for-configuration-manager-clients"></a><a name="BKMK_SecurityIssues_Clients"></a>Configuration Manager 客户端的安全问题  
+##  <a name="a-namebkmksecurityissuesclientsa-security-issues-for-configuration-manager-clients"></a><a name="BKMK_SecurityIssues_Clients"></a> Configuration Manager 客户端的安全问题  
  下列安全问题没有缓解措施：  
 
 -   不会对状态消息执行验证  
@@ -282,7 +282,7 @@ ms.openlocfilehash: ce7bb5194b6cca7ab0fa3829655c4b51f6725097
 
      如果 Windows Embedded 设备运行 Windows 7 以前的操作系统，并且用户在已禁用写入筛选器以提交 Configuration Manager 所做更改时尝试登录，则在帐户被锁定之前允许的不正确登录尝试次数实际上会减半。 例如，“帐户锁定阈值”  配置为 6，并且帐户在用户错误键入了其密码 3 次的情况即被锁定，实际上造成了拒绝服务状况。  如果用户必须在这种情况下登录到嵌入式设备，请告诫他们锁定阈值被减少的可能性。  
 
-##  <a name="a-namebkmkprivacycliientsa-privacy-information-for-configuration-manager-clients"></a><a name="BKMK_Privacy_Cliients"></a>Configuration Manager 客户端的隐私信息  
+##  <a name="a-namebkmkprivacycliientsa-privacy-information-for-configuration-manager-clients"></a><a name="BKMK_Privacy_Cliients"></a> Configuration Manager 客户端的隐私信息  
  在部署 Configuration Manager 客户端时，启用客户端设置，以便你能够使用 Configuration Manager 管理功能。 用于配置功能的设置适用于 Configuration Manager 层次结构中的所有客户端，不管它们是直接连接到公司网络、通过远程会话连接还是连接到 Internet 但受 Configuration Manager 支持。  
 
  客户端信息存储在 Configuration Manager 数据库中，不会发送给 Microsoft。 信息保留在该数据库中，而“删除过期的发现数据”  站点维护任务每隔 90 天就会删除这些信息一次。 可以配置删除间隔。  

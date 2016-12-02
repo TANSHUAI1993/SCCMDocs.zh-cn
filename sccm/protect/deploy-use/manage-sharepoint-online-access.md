@@ -130,7 +130,7 @@ Office 桌面应用程序可以访问运行以下系统的电脑上的 SharePoin
 
  准备就绪后，继续 **步骤 3**。  
 
-###  <a name="a-namebkmkonedrivea-step-3-configure-the-sharepoint-online-policy"></a><a name="BKMK_OneDrive"></a> 步骤 3：配置 SharePoint Online 策略  
+###  <a name="a-namebkmkonedrivea-step-3-configure-the-sharepoint-online-policy"></a><a name="BKMK_OneDrive"></a>步骤 3：配置 SharePoint Online 策略  
 
 
  接下来，配置策略以要求只有托管及合规设备才能访问 SharePoint Online。 此策略会存储在 Azure Active Directory 中。

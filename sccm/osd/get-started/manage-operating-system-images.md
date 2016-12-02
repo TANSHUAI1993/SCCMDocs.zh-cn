@@ -56,7 +56,7 @@ Configuration Manager 中的操作系统映像以 Windows 映像 (WIM) 文件格
     -   操作系统安装可能需要更多时间，因为操作系统安装完成后将进行应用安装和其他配置。  
 
 
-##  <a name="a-namebkmkaddosimagesa-add-operating-system-images-to-configuration-manager"></a><a name="BKMK_AddOSImages"></a> 将操作系统映像添加到 Configuration Manager  
+##  <a name="a-namebkmkaddosimagesa-add-operating-system-images-to-configuration-manager"></a><a name="BKMK_AddOSImages"></a>将操作系统映像添加到 Configuration Manager  
  在可以使用操作系统映像之前，必须先将映像添加到 Configuration Manager 站点。 使用以下过程将操作系统映像添加到站点。  
 
 #### <a name="to-add-an-operating-system-image-to-a-site"></a>若要将操作系统映像添加到站点  
@@ -81,10 +81,10 @@ Configuration Manager 中的操作系统映像以 Windows 映像 (WIM) 文件格
 
  现在可以将操作系统映像分发到分发点。  
 
-##  <a name="a-namebkmkdistributebootimagesa-distribute-operating-system-images-to-distribution-points"></a><a name="BKMK_DistributeBootImages"></a> 将操作系统映像分发到分发点  
+##  <a name="a-namebkmkdistributebootimagesa-distribute-operating-system-images-to-distribution-points"></a><a name="BKMK_DistributeBootImages"></a>将操作系统映像分发到分发点  
  将采用与分发其他内容相同的方式将操作系统映像分发到分发点。 大多数情况下，部署操作系统之前必须将操作系统映像分发到至少一个分发点。 关于分发操作系统映像的步骤，请参阅 [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content)。  
 
-##  <a name="a-namebkmkosimagesapplyupdatesa-apply-software-updates-to-an-operating-system-image"></a><a name="BKMK_OSImagesApplyUpdates"></a> 将软件更新应用于操作系统映像  
+##  <a name="a-namebkmkosimagesapplyupdatesa-apply-software-updates-to-an-operating-system-image"></a><a name="BKMK_OSImagesApplyUpdates"></a>将软件更新应用于操作系统映像  
  我们会定期发布适用于你的操作系统映像中的操作系统的新软件更新。 当然，必须将软件更新基础结构实施到位且已成功同步软件更新后才可以将软件更新应用于映像。 有关详细信息，请参阅[部署软件更新](../../sum/deploy-use/deploy-software-updates.md)。  
 
  你可以按指定计划将适用的软件更新应用于映像。 Configuration Manager 按指定计划将选择的软件更新应用于操作系统映像，然后根据需要将更新的映像分发到分发点。 有关操作系统映像的信息存储在站点数据库中，包括在导入时应用的软件更新。 自映像最初添加以来已应用于映像的软件更新也存储在站点数据库中。 当你启动向导以将软件更新应用于操作系统映像时，向导将检索尚未应用于映像的适用软件更新的列表供你选择。 Configuration Manager 从站点服务器上的内容库中复制软件更新，然后将软件更新应用于操作系统映像。  
@@ -115,7 +115,7 @@ Configuration Manager 中的操作系统映像以 Windows 映像 (WIM) 文件格
 
 8.  在“完成”  页上，验证软件更新是否已成功应用于操作系统映像。  
 
-##  <a name="a-namebkmkosimagemulticasta-prepare-the-operating-system-image-for-multicast-deployments"></a><a name="BKMK_OSImageMulticast"></a> 为多播部署准备操作系统映像  
+##  <a name="a-namebkmkosimagemulticasta-prepare-the-operating-system-image-for-multicast-deployments"></a><a name="BKMK_OSImageMulticast"></a>为多播部署准备操作系统映像  
  使用多播部署以允许多台计算机同时下载操作系统映像。 映像通过分发点多播给客户端，而不是让分发点通过单独连接向每个客户端发送映像的副本。 选择[使用多播通过网络部署 Windows](../deploy-use/use-multicast-to-deploy-windows-over-the-network.md) 操作系统部署方法时，必须先将操作系统映像包配置为支持多播，然后才能将操作系统映像分发到启用了多播的分发点。 使用下列过程来为现有操作系统映像包设置多播选项。  
 
 #### <a name="to-modify-an-operating-system-image-package-to-use-multicast"></a>修改操作系统映像包以使用多播  

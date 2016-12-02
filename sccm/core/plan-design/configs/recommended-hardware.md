@@ -31,7 +31,7 @@ ms.openlocfilehash: d5aa39a9551cc872631895bb1664de5a35531854
  请使用以下各部分中的这些信息作为指南来帮助你做好硬件规划，使默认的硬件配置能满足那些使用 Configuration Manager 可用功能的客户端和站点在处理负载方面的要求。  
 
 
-##  <a name="a-namebkmkscalesiesystemsa-site-systems"></a><a name="bkmk_ScaleSieSystems"></a> 站点系统  
+##  <a name="a-namebkmkscalesiesystemsa-site-systems"></a><a name="bkmk_ScaleSieSystems"></a>站点系统  
  本部分介绍用于 Configuration Manager 站点系统的推荐硬件配置，以实现具有以下效果的部署：支持最大数目的客户端，以及使用大部分或全部 Configuration Manager 功能。 支持小于最大数量的客户端且不使用所有可用功能的部署可能需要更少的计算机资源。 通常，限制整个系统的性能的关键因素包括下列因素（按顺序列出）：  
 
 1.  磁盘 I/O 性能  
@@ -42,7 +42,7 @@ ms.openlocfilehash: d5aa39a9551cc872631895bb1664de5a35531854
 
 为了获得最佳性能，请将 RAID 10 配置用于所有数据驱动器以及 1Gbps 以太网  
 
-###  <a name="a-namebkmkscalesiteservera-site-servers"></a><a name="bkmk_ScaleSiteServer"></a> 站点服务器  
+###  <a name="a-namebkmkscalesiteservera-site-servers"></a><a name="bkmk_ScaleSiteServer"></a>站点服务器  
 
 |独立主站点|CPU 核心数|内存 (GB)|SQL Server 的内存分配百分数|  
 |-------------------------------|---------------|---------------|----------------------------------------|  
@@ -59,7 +59,7 @@ ms.openlocfilehash: d5aa39a9551cc872631895bb1664de5a35531854
 
  <sup>1</sup>在同一台计算机上安装站点服务器和 SQL Server 时，部署对站点和客户端支持[调整大小和扩展数量](/sccm/core/plan-design/configs/size-and-scale-numbers)的最大值。 但是，此配置可以限制 [System Center Configuration Manager 的高可用性选项](/sccm/protect/understand/high-availability-options)，像使用 SQL Server 群集那样。  此外，由于支持 SQL Server 和 Configuration Manager 站点服务器所需的 I/O 要求较高，在同一台计算机上运行时，具有更大部署的客户应考虑将配置用于远程 SQL Server 计算机。  
 
-###  <a name="a-namebkmkremotesitesystema-remote-site-system-servers"></a><a name="bkmk_RemoteSiteSystem"></a> 远程站点系统服务器  
+###  <a name="a-namebkmkremotesitesystema-remote-site-system-servers"></a><a name="bkmk_RemoteSiteSystem"></a>远程站点系统服务器  
  下面这些指南用于具有单一站点系统角色的计算机。 当在同一台计算机上安装多个站点系统角色时，请计划实施调整。  
 
 |站点系统角色|CPU 核心数|内存 (GB)|硬盘空间：GB|  
@@ -76,7 +76,7 @@ ms.openlocfilehash: d5aa39a9551cc872631895bb1664de5a35531854
 
 -   将 **WsusPool 专用内存限制** 增加 4 倍，或设置为 **0** （无限制）  
 
-###  <a name="a-namebkmkdiskspacea-disk-space-for-site-systems"></a><a name="bkmk_DiskSpace"></a> 站点系统的磁盘空间  
+###  <a name="a-namebkmkdiskspacea-disk-space-for-site-systems"></a><a name="bkmk_DiskSpace"></a>站点系统的磁盘空间  
  磁盘分配和配置会影响 Configuration Manager 的性能。 由于每个 Configuration Manager 环境都不同，因此，所实现的值可能会不同于下列指南的值。  
 
  为了获得最佳性能，请将每个对象都放在单独、专用的 RAID 卷上。 对于所有数据卷（Configuration Manager 及其数据库文件），请使用 RAID 10 以获得最佳性能。  
@@ -90,7 +90,7 @@ ms.openlocfilehash: d5aa39a9551cc872631895bb1664de5a35531854
 |临时数据库文件（.mdf 和 .ldf）|按需而定|按需而定|按需而定|按需而定|按需而定|按需而定|  
 |内容（分发点共享）|按需而定<sup>1</sup>|按需而定<sup>1</sup>|按需而定<sup>1</sup>|按需而定<sup>1</sup>|按需而定<sup>1</sup>|按需而定<sup>1</sup>|  
 
- <sup>1</sup> 磁盘空间指导未包括位于站点服务器或分发点上的内容库中的内容所需的空间。 有关规划内容库的信息，请参阅[内容库](../../../core/plan-design/hierarchy/the-content-library.md)。  
+ <sup>1</sup>磁盘空间指导未包括位于站点服务器或分发点上的内容库中的内容所需的空间。 有关规划内容库的信息，请参阅[内容库](../../../core/plan-design/hierarchy/the-content-library.md)。  
 
  在规划磁盘空间要求时，除了考虑上述指南之外，另请考虑下列指南：  
 
@@ -109,7 +109,7 @@ ms.openlocfilehash: d5aa39a9551cc872631895bb1664de5a35531854
 
     -   SQL Server 2014 Express：10 GB  
 
-##  <a name="a-namebkmkscaleclienta-clients"></a><a name="bkmk_ScaleClient"></a> 客户端  
+##  <a name="a-namebkmkscaleclienta-clients"></a><a name="bkmk_ScaleClient"></a>客户端  
  本部分确定了通过安装 Configuration Manager 客户端软件进行托管的计算机的推荐硬件配置。  
 
 ### <a name="client-for-windows-computers"></a>Windows 计算机的客户端  
@@ -174,7 +174,7 @@ ms.openlocfilehash: d5aa39a9551cc872631895bb1664de5a35531854
 除 PowerShell 以外，还支持 Windows Management Framework (WMF) 3.0 和 4.0。   
 可以在安装 Configuration Manager 控制台之前或之后安装 PowerShell。  
 
-##  <a name="a-namebkmkscalelaba-lab-deployments"></a><a name="bkmk_ScaleLab"></a> 实验室部署  
+##  <a name="a-namebkmkscalelaba-lab-deployments"></a><a name="bkmk_ScaleLab"></a>实验室部署  
  对 Configuration Manager 的实验室和测试部署使用下列建议的最低硬件配置。 这些建议适用于所有站点类型并可用于最多 100 个客户端：  
 
 |角色|CPU 核心数|内存(GB)|硬盘空间 (GB)|  

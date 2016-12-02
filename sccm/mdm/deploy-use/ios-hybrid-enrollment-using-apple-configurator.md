@@ -27,7 +27,7 @@ ms.openlocfilehash: 19f4880d6e7ba3da2e4bcfe725c1c806ee3b3334
 
 购买 iOS 设备供员工使用的公司可以使用Microsoft Intune 管理这些设备。 可以通过 USB 将 iOS 设备连接到运行 Apple Configurator 的 Mac 电脑上，对 iOS 设备进行预注册。 注册前，必须在 Intune 管理控制台中准备 Intune 公司注册设备配置文件，并将其导出到 Mac 电脑。 注册过程将使设备恢复出厂设置，并通过设置助理过程配置设备。 对于其中有单个用户使用该设备访问公司电子邮件和公司资源（如应用和日期）的专用 iOS 设备，建议按照以下过程进行操作。  
 
-##  <a name="a-namebkmksaea-apple-configurator-enrollment-via-setup-assistant"></a><a name="BKMK_SAE"></a> 通过设置助理进行的 Apple Configurator 注册  
+##  <a name="a-namebkmksaea-apple-configurator-enrollment-via-setup-assistant"></a><a name="BKMK_SAE"></a>通过设置助理进行的 Apple Configurator 注册  
  可以使用 Apple Configurator 恢复 iOS 设备的出厂设置并做好准备，使新用户能够对设备进行设置。  此方法要求你通过 USB 将 iOS 设备连接到 Mac 计算机以设置企业注册，并且假定你使用的是 Apple Configurator 2.0。  
 
  **先决条件**  

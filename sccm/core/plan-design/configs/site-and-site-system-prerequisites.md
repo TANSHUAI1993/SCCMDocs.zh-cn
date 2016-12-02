@@ -121,7 +121,7 @@ ms.openlocfilehash: 0f24fd912b3e65dc0c0074ef1c8f76cc128a716c
 
 -   有关此要求的详细信息，请参阅操作系统部署。  
 
-###  <a name="a-namebkmk2012acwspreqa-application-catalog-website-point"></a><a name="bkmk_2012acwspreq"></a> 应用程序目录网站点  
+###  <a name="a-namebkmk2012acwspreqa-application-catalog-website-point"></a><a name="bkmk_2012acwspreq"></a>应用程序目录网站点  
 **Windows Server 角色和功能：**  
 
 -   .NET Framework 3.5 SP1（或更高版本）  
@@ -156,7 +156,7 @@ ms.openlocfilehash: 0f24fd912b3e65dc0c0074ef1c8f76cc128a716c
 
     -   IIS 6 元数据库兼容性  
 
-###  <a name="a-namebkmk2012acwsitepreqa-application-catalog-web-service-point"></a><a name="bkmk_2012ACwsitepreq"></a> 应用程序目录 Web 服务点  
+###  <a name="a-namebkmk2012acwsitepreqa-application-catalog-web-service-point"></a><a name="bkmk_2012ACwsitepreq"></a>应用程序目录 Web 服务点  
 **Windows Server 角色和功能：**  
 
 -   .NET Framework 3.5 SP1（或更高版本）  
@@ -198,7 +198,7 @@ ms.openlocfilehash: 0f24fd912b3e65dc0c0074ef1c8f76cc128a716c
 
 -   .NET Framework 4.5.2  
 
-###  <a name="a-namebkmk2012crppreqa-certificate-registration-point"></a><a name="bkmk_2012crppreq"></a> 证书注册点  
+###  <a name="a-namebkmk2012crppreqa-certificate-registration-point"></a><a name="bkmk_2012crppreq"></a>证书注册点  
 **Windows Server 角色和功能：**  
 
 -   .NET Framework 4.5.2  
@@ -269,7 +269,7 @@ ms.openlocfilehash: 0f24fd912b3e65dc0c0074ef1c8f76cc128a716c
 
 -   .NET Framework 3.5 SP1（或更高版本）  
 
-###  <a name="a-namebkmk2012enrollpreqa-enrollment-point"></a><a name="bkmk_2012Enrollpreq"></a> 注册点  
+###  <a name="a-namebkmk2012enrollpreqa-enrollment-point"></a><a name="bkmk_2012Enrollpreq"></a>注册点  
 **Windows Server 角色和功能：**  
 
 -   .NET Framework 3.5（或更高版本）  
@@ -309,7 +309,7 @@ ms.openlocfilehash: 0f24fd912b3e65dc0c0074ef1c8f76cc128a716c
 
 -   当此站点系统角色与具有该相同要求的另一站点系统角色并存时，对计算机的该内存要求将不会增加，而是保持为最少 5% 的值。  
 
-###  <a name="a-namebkmk2012enrollproxpreqa-enrollment-proxy-point"></a><a name="bkmk_2012EnrollProxpreq"></a> 注册代理点  
+###  <a name="a-namebkmk2012enrollproxpreqa-enrollment-proxy-point"></a><a name="bkmk_2012EnrollProxpreq"></a>注册代理点  
 **Windows Server 角色和功能：**  
 
 -   .NET Framework 3.5（或更高版本）  
@@ -350,7 +350,7 @@ ms.openlocfilehash: 0f24fd912b3e65dc0c0074ef1c8f76cc128a716c
 
 -   当此站点系统角色与具有该相同要求的另一站点系统角色并存时，对计算机的该内存要求将不会增加，而是保持为最少 5% 的值。  
 
-###  <a name="a-namebkmk2012fsppreqa-fallback-status-point"></a><a name="bkmk_2012FSPpreq"></a> 回退状态点  
+###  <a name="a-namebkmk2012fsppreqa-fallback-status-point"></a><a name="bkmk_2012FSPpreq"></a>回退状态点  
 **需要带有以下添加内容的默认 IIS 配置：**  
 
 -   IIS 6 管理兼容性：  
@@ -501,7 +501,7 @@ ms.openlocfilehash: 0f24fd912b3e65dc0c0074ef1c8f76cc128a716c
 
 -   有关此要求的详细信息，请参阅操作系统部署。  
 
-###  <a name="a-namebkmk2008acwspreqa-application-catalog-website-point"></a><a name="bkmk_2008acwspreq"></a> 应用程序目录网站点  
+###  <a name="a-namebkmk2008acwspreqa-application-catalog-website-point"></a><a name="bkmk_2008acwspreq"></a>应用程序目录网站点  
 **.NET Framework：**  
 
 -   .NET Framework 4.5.2  
@@ -528,7 +528,7 @@ ms.openlocfilehash: 0f24fd912b3e65dc0c0074ef1c8f76cc128a716c
 
     -   IIS 6 元数据库兼容性  
 
-###  <a name="a-namebkmk2008acwsitepreqa-application-catalog-web-service-point"></a><a name="bkmk_2008ACwsitepreq"></a> 应用程序目录 Web 服务点  
+###  <a name="a-namebkmk2008acwsitepreqa-application-catalog-web-service-point"></a><a name="bkmk_2008ACwsitepreq"></a>应用程序目录 Web 服务点  
 **.NET Framework：**  
 
 -   3.5 SP1（或更高版本）  
@@ -564,7 +564,7 @@ ms.openlocfilehash: 0f24fd912b3e65dc0c0074ef1c8f76cc128a716c
 
 -   .NET Framework 4.5.2  
 
-###  <a name="a-namebkmk2008crppreqa-certificate-registration-point"></a><a name="bkmk_2008crppreq"></a> 证书注册点  
+###  <a name="a-namebkmk2008crppreqa-certificate-registration-point"></a><a name="bkmk_2008crppreq"></a>证书注册点  
 **.NET Framework：**  
 
 -   .NET Framework 4.5.2  
@@ -634,7 +634,7 @@ ms.openlocfilehash: 0f24fd912b3e65dc0c0074ef1c8f76cc128a716c
 
 -   .NET Framework 3.5 SP1（或更高版本）  
 
-###  <a name="a-namebkmk2008enrollpreqa-enrollment-point"></a><a name="bkmk_2008Enrollpreq"></a> 注册点  
+###  <a name="a-namebkmk2008enrollpreqa-enrollment-point"></a><a name="bkmk_2008Enrollpreq"></a>注册点  
 **.NET Framework：**  
 
 -   4.5.2  
@@ -661,7 +661,7 @@ ms.openlocfilehash: 0f24fd912b3e65dc0c0074ef1c8f76cc128a716c
 
 -   当此站点系统角色与具有该相同要求的另一站点系统角色并存时，对计算机的该内存要求将不会增加，而是保持为最少 5% 的值。  
 
-###  <a name="a-namebkmk2008enrollproxpreqa-enrollment-proxy-point"></a><a name="bkmk_2008EnrollProxpreq"></a> 注册代理点  
+###  <a name="a-namebkmk2008enrollproxpreqa-enrollment-proxy-point"></a><a name="bkmk_2008EnrollProxpreq"></a>注册代理点  
 **.NET Framework：**  
 
 -   4.5.2  
@@ -688,7 +688,7 @@ ms.openlocfilehash: 0f24fd912b3e65dc0c0074ef1c8f76cc128a716c
 
 -   当此站点系统角色与具有该相同要求的另一站点系统角色并存时，对计算机的该内存要求将不会增加，而是保持为最少 5% 的值。  
 
-###  <a name="a-namebkmk2008fsppreqa-fallback-status-point"></a><a name="bkmk_2008FSPpreq"></a> 回退状态点  
+###  <a name="a-namebkmk2008fsppreqa-fallback-status-point"></a><a name="bkmk_2008FSPpreq"></a>回退状态点  
 **IIS 配置：**需要带有以下添加内容的默认 IIS 配置：  
 
 -   IIS 6 管理兼容性：  

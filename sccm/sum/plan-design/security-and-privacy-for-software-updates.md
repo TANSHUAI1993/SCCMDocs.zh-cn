@@ -26,7 +26,7 @@ ms.openlocfilehash: d1eb920dfed3be06837c2cd4635b61e3964cf0e5
 
 本主题包括有关 System Center Configuration Manager 中软件更新的安全和隐私的信息。  
 
-##  <a name="a-namebkmksecurityhardwareinventorya-security-best-practices-for-software-updates"></a><a name="BKMK_Security_HardwareInventory"></a>软件更新的安全最佳做法  
+##  <a name="a-namebkmksecurityhardwareinventorya-security-best-practices-for-software-updates"></a><a name="BKMK_Security_HardwareInventory"></a> 软件更新的最佳安全方案  
  在将软件更新部署到客户端时，请使用以下最佳安全方案：  
 
 -   不要更改有关软件更新包的默认权限。  

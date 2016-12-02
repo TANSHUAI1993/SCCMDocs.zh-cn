@@ -33,7 +33,7 @@ ms.openlocfilehash: bf3b1e4d87a972f530590bf94e38a5ec66c4fc9a
 以下先决条件适用于将管理中心站点安装为层次结构、独立主站点或子主站点的第一个站点。 如果将管理中心站点作为层次扩展方案的一部分进行安装，请参阅本主题中的[扩展独立主站点](../../../../core/servers/deploy/install/prerequisites-for-installing-sites.md#bkmk_expand
 )。
 
-####  <a name="a-namebkmkprereqpria-prerequisites-to-install-a-primary-site-or-central-administration-site"></a><a name="bkmk_PrereqPri"></a> 安装主站点或管理中心站点的先决条件  
+####  <a name="a-namebkmkprereqpria-prerequisites-to-install-a-primary-site-or-central-administration-site"></a><a name="bkmk_PrereqPri"></a>安装主站点或管理中心站点的先决条件  
 
 -   将安装站点的用户必须具有以下权限：  
 
@@ -65,7 +65,7 @@ ms.openlocfilehash: bf3b1e4d87a972f530590bf94e38a5ec66c4fc9a
   - 站点服务器和站点数据库计算机必须满足所有先决条件配置。 在启动安装程序之前，可以[手动运行先决条件检查程序](../../../../core/servers/deploy/install/prerequisite-checker.md)以识别并修复问题。  
 
 
-## <a name="a-namebkmkexpanda-expanding-a-stand-alone-primary-site"></a><a name="bkmk_expand"></a> 扩展独立主站点
+## <a name="a-namebkmkexpanda-expanding-a-stand-alone-primary-site"></a><a name="bkmk_expand"></a>扩展独立主站点
 在你将独立主站点扩展到带管理中心站点的层次结构之前，独立主站点必须满足下列先决条件：
 
 
@@ -108,7 +108,7 @@ ms.openlocfilehash: bf3b1e4d87a972f530590bf94e38a5ec66c4fc9a
      若要在管理中心站点和主站点之间成功复制数据，Configuration Manager 需要供 SQL Server Service Broker 使用的端口在两个站点之间打开。 在安装管理中心并扩展独立主站点时，先决条件检查不会确定你为 SQL Server Service Broker 指定的端口在主站点上已打开。  
 
 
-## <a name="a-namebkmksecondarya-secondary-sites"></a><a name="bkmk_secondary"></a> 辅助站点
+## <a name="a-namebkmksecondarya-secondary-sites"></a><a name="bkmk_secondary"></a>辅助站点
 以下是安装辅助站点的先决条件：
 -   在 Configuration Manager 控制台中配置辅助站点安装的管理用户必须具有相当于**基础结构管理员**或**完全权限管理员**的安全角色的基于角色的管理权限。  
 

@@ -50,7 +50,7 @@ System Center Configuration Manager 服务连接点是一个站点系统角色�
 
 -   如果将独立主站点扩展到更大的层次结构中，必须从主站点中卸载此角色，然后可将其安装在管理中心站点上。  
 
-##  <a name="a-namebkmkmodesa-modes-of-operation"></a><a name="bkmk_modes"></a> 操作模式  
+##  <a name="a-namebkmkmodesa-modes-of-operation"></a><a name="bkmk_modes"></a>操作模式  
  服务连接点支持两种操作模式：  
 
 -   在“联机模式” 下，服务连接点每 24 小时自动检查更新并下载可用于当前基础结构和产品版本的新更新，使其在 Configuration Manager 控制台中可用  

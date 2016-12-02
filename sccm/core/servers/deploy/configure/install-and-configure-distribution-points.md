@@ -95,7 +95,7 @@ ms.openlocfilehash: dedfcc77cb94ede1abfd65e22f9d3d116b9ed68e
 
 4.  进行所需更改后，请保存设置并关闭分发点属性。  
 
-##  <a name="a-namebkmkmanagea-manage-distribution-point-groups"></a><a name="bkmk_manage"></a> 管理分发点组  
+##  <a name="a-namebkmkmanagea-manage-distribution-point-groups"></a><a name="bkmk_manage"></a>管理分发点组  
  分发点组为内容分发提供分发点的逻辑分组。 使用这些组，你可以从中央位置管理和监视跨多个站点的分发点的内容  
 
 -   可以将层次结构内的任何站点中的一个或多个分发点添加到分发点组  

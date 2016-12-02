@@ -66,7 +66,7 @@ ms.openlocfilehash: aeeb902fad7444534cafa7f9cb984ce8764471b0
 
     -   此站点系统角色的每个实例支持层次结构所支持的最大客户端数。  
 
-## <a name="a-namebkmkrolesa-site-system-roles"></a><a name="bkmk_roles"></a> 站点系统角色    
+## <a name="a-namebkmkrolesa-site-system-roles"></a><a name="bkmk_roles"></a> Site system roles    
 
 **应用程序目录 web 服务点：**  
 
@@ -170,7 +170,7 @@ ms.openlocfilehash: aeeb902fad7444534cafa7f9cb984ce8764471b0
 
 例如，支持 150,000 台台式机和 10,000 个 Mac 或 Windows CE 7.0 客户端的独立主站点仅可额外支持 15,000 台设备。 这些设备可以是基于云的，也可以是使用本地 MDM 管理的。  
 
-###  <a name="a-namebkmkseca-secondary-sites"></a><a name="bkmk_sec"></a> 辅助站点  
+###  <a name="a-namebkmkseca-secondary-sites"></a><a name="bkmk_sec"></a>辅助站点  
 辅助站点支持：  
 
 -   15,000 台台式机（运行 Windows、Linux 和 UNIX 的计算机）  

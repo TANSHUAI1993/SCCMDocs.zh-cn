@@ -370,7 +370,7 @@ Internet 信息服务 (IIS) 是可用来承载 Web 上找到的任何内容的�
     |步骤 15：“客户端通信设置” |确认未选择“所有站点系统角色仅接受来自客户端的 HTTPS 通信” |  
     |步骤 16：“站点系统角色” |输入你的 FQDN，并确认仍未选择“所有站点系统角色仅接受来自客户端的 HTTPS 通信”  。|  
 
-###  <a name="a-namebkmkenablepublaba-enable-publishing-for-the-configuration-manager-site"></a><a name="BKMK_EnablePubLab"></a> 为 Configuration Manager 站点启用发布  
+###  <a name="a-namebkmkenablepublaba-enable-publishing-for-the-configuration-manager-site"></a><a name="BKMK_EnablePubLab"></a>为 Configuration Manager 站点启用发布  
 每个 Configuration Manager 站点将其自己的特定于站点的信息发布到 Active Directory 架构中其域分区内的系统管理容器中。 必须打开 Active Directory 和 Configuration Manager 之间的双向通道以处理此流量。 此外，还将启用林发现以确定 Active Directory 和网络基础结构的某些组件。  
 
 ##### <a name="to-configure-active-directory-forests-for-publishing"></a>针对发布配置 Active Directory 林：  

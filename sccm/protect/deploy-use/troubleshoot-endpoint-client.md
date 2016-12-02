@@ -244,7 +244,7 @@ ms.openlocfilehash: 4d30cd85cb59f8f27704979074470bb06310054b
 
 -   关闭所有应用程序并重新启动计算机。  
 
-### <a name="step-2-make-sure-the-windows-defender-orbr-endpoint-protection-service-is-set-to-automatic-and-is-started"></a>步骤 2：确保â€œWindows Defender”或<br />      “Endpoint Protectionâ€服务设置为自动启动并且已启动  
+### <a name="step-2-make-sure-the-windows-defender-orbr-endpoint-protection-service-is-set-to-automatic-and-is-started"></a>步骤 2：确保â€œWindows Defender”或<br />      “Endpoint Protection”服务设置为自动启动并且已启动  
 
 1.  单击“开始”  ，搜索 **services.msc**，然后按 **Enter**。  
 

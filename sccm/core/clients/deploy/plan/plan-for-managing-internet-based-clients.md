@@ -32,7 +32,7 @@ ms.openlocfilehash: 6e2c5f9dc925601b7a883b9968dc9fefc168fb6b
 
  使用下列部分来帮助你规划基于 Internet 的客户端管理。  
 
-##  <a name="a-namebkmkibcmfeaturesnotsupporteda-features-that-are-not-supported-on-the-internet"></a><a name="BKMK_IBCM_FeaturesNotSupported"></a>Internet 上不支持的功能  
+##  <a name="a-namebkmkibcmfeaturesnotsupporteda-features-that-are-not-supported-on-the-internet"></a><a name="BKMK_IBCM_FeaturesNotSupported"></a> Internet 上不支持的功能  
  并非所有客户端管理功能都适用于 Internet，因此在 Internet 上管理客户端时，有些功能可能不受支持。 不支持 Internet 管理的功能通常依赖于 Active Directory 域服务或不适合用于公用网络，例如网络发现和 LAN 唤醒 (WOL)。  
 
  通过 Internet 管理客户端时，下列功能不受支持：  

@@ -114,7 +114,7 @@ ms.openlocfilehash: 69f2c9c3c098013679e12d8578a780130adb94be
 ###  <a name="a-namebkmksupsecsitea-software-update-point-on-a-secondary-site"></a><a name="BKMK_SUPSecSite"></a> 辅助站点上的软件更新点  
  软件更新点在辅助站点上是可选的。 在辅助站点上安装软件更新点时，WSUS 数据库被配置为父主站点上默认软件更新点的副本。 你只能在辅助站点上安装一个软件更新点。 分配给辅助站点的设备被配置为当辅助站点上未安装软件更新点时使用父站点上的软件更新点。 通常，当分配给辅助站点的设备与父主站点上的软件更新点之间存在受限制的网络带宽时，或者当软件更新点接近容量限制时，你将在辅助站点上安装软件更新点。 在辅助站点中成功安装和配置软件更新点之后，会为分配给该站点的客户端计算机更新站点范围的策略，并且这些计算机将开始使用新软件更新点。  
 
-##  <a name="a-namebkmksupinstallationa-plan-for-software-update-point-installation"></a><a name="BKMK_SUPInstallation"></a> 规划软件更新点安装  
+##  <a name="a-namebkmksupinstallationa-plan-for-software-update-point-installation"></a><a name="BKMK_SUPInstallation"></a>规划软件更新点安装  
  在 Configuration Manager 中创建软件更新点站点系统角色之前，你必须根据 Configuration Manager 基础结构考虑一些要求。 将软件更新点配置为使用 SSL 进行通信时，查看本部分特别重要，因为你必须执行其他步骤，层次结构中的软件更新点才能正常工作。 本部分提供有关成功规划和准备软件更新点安装所必须执行的步骤的信息。  
 
 ###  <a name="a-namebkmksupsystemrequirementsa-requirements-for-the-software-update-point"></a><a name="BKMK_SUPSystemRequirements"></a> 软件更新点的要求  
@@ -137,7 +137,7 @@ ms.openlocfilehash: 69f2c9c3c098013679e12d8578a780130adb94be
 
  在主站点上安装多个软件更新点时，请为同一 Active Directory 林中的每个软件更新点使用同一 WSUS 数据库。 如果共享相同的数据库，则可以极大程度地进行缓解，但不完全排除在客户端切换到新软件更新点时可能会遇到的客户端和网络性能影响。 当客户端切换到与旧软件更新点共享数据库的新软件更新点时，仍然会进行增量扫描，但与 WSUS 服务器具有其自己的数据库的情况相比，扫描工作要少得多。  
 
-####  <a name="a-namebkmkcustomwebsitea-configure-wsus-to-use-a-custom-web-site"></a><a name="BKMK_CustomWebSite"></a> 将 WSUS 配置为使用自定义网站  
+####  <a name="a-namebkmkcustomwebsitea-configure-wsus-to-use-a-custom-web-site"></a><a name="BKMK_CustomWebSite"></a> 配置 WSUS 以使用自定义网站  
  在安装 WSUS 时，可以选择使用现有的 IIS 默认网站或创建自定义的 WSUS 网站。 为 WSUS 创建自定义网站，以便 IIS 在专用的虚拟网站中承载 WSUS 服务，而不是共享由其他 Configuration Manager 站点系统或其他应用程序使用的同一个网站。 尤其是在站点服务器上安装软件更新点站点系统角色时。 在 Windows Server 2012 中运行 WSUS 时，WSUS 被默认配置为针对 HTTP 使用端口 8530，针对 HTTPS 使用端口 8531。 在站点上创建软件更新点时，必须指定这些端口设置。  
 
 ####  <a name="a-namebkmkwsusinfrastructurea-use-an-existing-wsus-infrastructure"></a><a name="BKMK_WSUSInfrastructure"></a> 使用现有的 WSUS 基础结构  
@@ -242,7 +242,7 @@ ms.openlocfilehash: 69f2c9c3c098013679e12d8578a780130adb94be
 > [!WARNING]  
 >  作为最佳方案，请在首次同步软件更新之前清除所有分类。 初次同步之后，请从软件更新点组件属性中选择分类，然后重新启动同步。  
 
-###  <a name="a-namebkmkupdateproductsa-products"></a><a name="BKMK_UpdateProducts"></a> 产品  
+###  <a name="a-namebkmkupdateproductsa-products"></a><a name="BKMK_Update产品"></a> 产品  
  每个软件更新的元数据都定义了更新适用于的一个或多个产品。 产品是指特定版本的操作系统或应用程序。 产品示例是 Microsoft Windows Server 2008。 产品家族是指从中派生单个产品的基本操作系统或应用程序。 产品系列的示例是 Microsoft Windows，而 Microsoft Windows Server 2008 是其成员之一。 可以指定产品系列或产品系列中的各个产品。  
 
  在软件更新适用于多个产品，而且至少选择了一个要同步的产品时，即使没有选择某些产品，所有产品都将出现在 Configuration Manager 控制台中。 例如，Windows Server 2012 是你订阅的唯一操作系统，并且软件更新应用于 Windows Server 2012 和 Windows Server 2012 Datacenter Edition，那么，这两个产品都将位于站点数据库中。  
@@ -269,7 +269,7 @@ ms.openlocfilehash: 69f2c9c3c098013679e12d8578a780130adb94be
 
 -   如果取代软件更新未获准在生产环境中进行部署。  
 
-###  <a name="a-namebkmkupdatelanguagesa-languages"></a><a name="BKMK_UpdateLanguages"></a> 语言  
+###  <a name="a-namebkmkupdatelanguagesa-languages"></a><a name="BKMK_Update语言"></a> 语言  
  软件更新点的语言设置允许你配置为软件更新同步摘要详细信息（软件更新元数据）的语言，以及将为软件更新下载的软件更新文件语言。  
 
 #### <a name="software-update-file"></a>软件更新文件  
