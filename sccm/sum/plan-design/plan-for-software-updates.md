@@ -1,12 +1,12 @@
 ---
 
-title: "规划软件更新 | System Center Configuration Manager"
+title: "规划软件更新 | Microsoft Docs"
 description: "在 System Center Configuration Manager 生产环境中使用软件更新之前，需要规划软件更新点基础结构。"
 keywords: 
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 10/06/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
@@ -14,8 +14,8 @@ ms.technology:
 - configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 69f2c9c3c098013679e12d8578a780130adb94be
+ms.sourcegitcommit: b1c68b233097ef3a744dd25b3fb919660f0b2244
+ms.openlocfilehash: 16415fb54a2cf91747990c94ffea0076effe525b
 
 
 ---
@@ -34,8 +34,16 @@ ms.openlocfilehash: 69f2c9c3c098013679e12d8578a780130adb94be
 
 -   当 WSUS 运行在软件更新点计算机上并且该软件更新点与另一站点系统角色并存时，软件更新点最多可支持 25,000 个客户端。  
 
--   当远程计算机满足 WSUS 支持此数量客户端的要求时，软件更新点最多可支持 150,000 个客户端。   
-    默认情况下，Configuration Manager 不支持将软件更新点配置为 NLB 群集。 但是，可以使用 Configuration Manager SDK 在 NLB 群集上配置最多 4 个软件更新点。  
+-   在远程计算机满足 WSUS 要求、将 WSUS 与 Configuration Manager 配合使用，并进行以下配置时，软件更新点最多可支持 150,000 个客户端：
+
+    IIS 应用程序池：
+    - 将 WsusPool 队列长度增加到 2000
+    - 将 WsusPool 专用内存限制增加 4 倍，或设置为 0（无限制）      
+
+    有关软件更新点的硬件要求的详细信息，请参阅[推荐的站点系统硬件](/sccm/core/plan-design/configs/recommended-hardware#a-namebkmkscalesiesystemsa-site-systems)。
+
+-   默认情况下，Configuration Manager 不支持将软件更新点配置为 NLB 群集。 但是，可以使用 Configuration Manager SDK 在 NLB 群集上配置最多 4 个软件更新点。  
+
 
 ### <a name="capacity-planning-for-software-updates-objects"></a>软件更新对象的容量规划  
  使用下列容量信息来规划软件更新对象。  
@@ -242,7 +250,7 @@ ms.openlocfilehash: 69f2c9c3c098013679e12d8578a780130adb94be
 > [!WARNING]  
 >  作为最佳方案，请在首次同步软件更新之前清除所有分类。 初次同步之后，请从软件更新点组件属性中选择分类，然后重新启动同步。  
 
-###  <a name="a-namebkmkupdateproductsa-products"></a><a name="BKMK_Update产品"></a> 产品  
+###  <a name="a-namebkmkupdateproductsa-products"></a><a name="BKMK_UpdateProducts"></a> 产品  
  每个软件更新的元数据都定义了更新适用于的一个或多个产品。 产品是指特定版本的操作系统或应用程序。 产品示例是 Microsoft Windows Server 2008。 产品家族是指从中派生单个产品的基本操作系统或应用程序。 产品系列的示例是 Microsoft Windows，而 Microsoft Windows Server 2008 是其成员之一。 可以指定产品系列或产品系列中的各个产品。  
 
  在软件更新适用于多个产品，而且至少选择了一个要同步的产品时，即使没有选择某些产品，所有产品都将出现在 Configuration Manager 控制台中。 例如，Windows Server 2012 是你订阅的唯一操作系统，并且软件更新应用于 Windows Server 2012 和 Windows Server 2012 Datacenter Edition，那么，这两个产品都将位于站点数据库中。  
@@ -269,7 +277,7 @@ ms.openlocfilehash: 69f2c9c3c098013679e12d8578a780130adb94be
 
 -   如果取代软件更新未获准在生产环境中进行部署。  
 
-###  <a name="a-namebkmkupdatelanguagesa-languages"></a><a name="BKMK_Update语言"></a> 语言  
+###  <a name="a-namebkmkupdatelanguagesa-languages"></a><a name="BKMK_UpdateLanguages"></a> 语言  
  软件更新点的语言设置允许你配置为软件更新同步摘要详细信息（软件更新元数据）的语言，以及将为软件更新下载的软件更新文件语言。  
 
 #### <a name="software-update-file"></a>软件更新文件  
@@ -300,6 +308,6 @@ ms.openlocfilehash: 69f2c9c3c098013679e12d8578a780130adb94be
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 
