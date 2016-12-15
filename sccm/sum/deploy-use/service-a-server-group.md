@@ -1,11 +1,11 @@
 ---
-title: "为服务器组提供服务 | Configuration Manager"
+title: "为服务器组提供服务 | Microsoft Docs"
 description: "System Center Configuration Manager 控制台提供警报和状态以监视更新和符合性。"
 keywords: 
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 10/06/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
@@ -13,8 +13,8 @@ ms.technology:
 - configmgr-sum
 ms.assetid: 304a83ea-0f72-437d-9688-2e6e0c7526dd
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: da7a5f1d075eb1fcd7c56b713401bb0f985fa487
+ms.sourcegitcommit: 78524abd4c45f0b7402d6f1e85afc60bb72ab0ee
+ms.openlocfilehash: b89cec7cebb5342da32ec8e11a049edad12f1231
 
 
 ---
@@ -47,8 +47,11 @@ ms.openlocfilehash: da7a5f1d075eb1fcd7c56b713401bb0f985fa487
 
 5.  指定是否使用部署前（节点排出）脚本或部署后（节点恢复）脚本。  
 
+    > [!WARNING]
+    > Microsoft 不对自定义脚本进行签名。 维护这些脚本的完整性是你的责任。
+
     > [!TIP]  
-    >以下是可用于测试当前时间写入文本文件的部署前和部署后脚本的示例：  
+    > 以下是可用于测试当前时间写入文本文件的部署前和部署后脚本的示例：  
     >   
     >  **前期部署**  
     >   
@@ -85,6 +88,6 @@ ms.openlocfilehash: da7a5f1d075eb1fcd7c56b713401bb0f985fa487
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

@@ -1,12 +1,12 @@
 ---
 
-title: "手动部署软件更新 | Configuration Manager"
+title: "手动部署软件更新 | Microsoft Docs"
 description: "若要手动部署更新，请从 Configuration Manager 控制台选择更新并进行手动部署，或者将更新添加到一个更新组并部署该组。"
 keywords: 
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 10/06/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
@@ -14,8 +14,8 @@ ms.technology:
 - configmgr-sum
 ms.assetid: 57184274-5fea-4d79-a2b4-22e08ed26daf
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: be845d9f6ad2f92a0235cdb7410654e229448e1b
+ms.sourcegitcommit: 78524abd4c45f0b7402d6f1e85afc60bb72ab0ee
+ms.openlocfilehash: d736715f1f2c92b4c91f156ecb8abe3513811a34
 
 
 ---
@@ -228,29 +228,31 @@ ms.openlocfilehash: be845d9f6ad2f92a0235cdb7410654e229448e1b
         > [!NOTE]  
         >  实际安装截止时间是你配置的特定时间加上随机的一段时间（最多为 2 小时）。 这可以减少目标集合中同时安装部署中软件更新的所有客户端计算机的潜在影响。  
         >   
-        >  你可以配置“计算机代理”  客户端设置和“禁用截止时间随机化”  ，以对所需的软件更新禁用安装随机化延迟。 有关详细信息，请参阅 [Computer Agent](../../core/clients/deploy/about-client-settings.md#a-namebkmkcomputeragentdevicesettingsa-computer-agent)。  
+        >  你可以配置“计算机代理”  客户端设置和“禁用截止时间随机化”  ，以对所需的软件更新禁用安装随机化延迟。 有关详细信息，请参阅 [Computer Agent](../../core/clients/deploy/about-client-settings.md#computer-agent)。  
 
 8.  在“用户体验”页上，请配置下列设置：  
 
     -   “用户通知”：指定是否在配置的“软件可用时间”  在客户端计算机上软件中心中显示软件更新通知，以及是否在客户端计算机上显示用户通知。 在“部署设置”页上将“部署类型”  设置为“可用”  时，你无法选择“在软件中心和所有通知中隐藏” 。  
 
-    -   “截止时间行为”：指定到达软件更新部署的截止时间时要发生的行为。 指定是否安装部署中的软件更新。 另外，指定是否在安装软件更新后执行系统重启而不考虑配置的维护时段。 有关维护时段的详细信息，请参阅[如何使用维护时段](../../core/clients/manage/collections/use-maintenance-windows.md)。  
+    -   **截止时间行为**：仅当部署设置页上的部署类型设置为“必需”时才可用。   
+    指定到达软件更新部署的截止时间时要发生的行为。 指定是否安装部署中的软件更新。 另外，指定是否在安装软件更新后执行系统重启而不考虑配置的维护时段。 有关维护时段的详细信息，请参阅[如何使用维护时段](../../core/clients/manage/collections/use-maintenance-windows.md)。  
 
-    -   “设备重新启动行为”：指定安装软件更新后是否在服务器和工作站上抑制系统重启，以及是否需要重启系统以完成安装。  
+    -   **设备重启行为**：仅当部署设置页上的部署类型设置为“必需”时才可用。    
+    指定安装软件更新后是否在服务器和工作站上抑制系统重启，以及是否需要重启系统以完成安装。  
 
         > [!IMPORTANT]  
-        >  在服务器环境中，或者在不希望默认重启安装软件更新的计算机的情况下，抑制系统重启可能很有用。 但是，执行此操作可能会使计算机处于不安全状态，而允许强制重启有助于确保立即完成软件更新安装。 。  
+        >  在服务器环境中，或者在不希望默认重启安装软件更新的计算机的情况下，抑制系统重启可能很有用。 但是，执行此操作可能会使计算机处于不安全状态，而允许强制重启有助于确保立即完成软件更新安装。
 
     -   **Windows Embedded 设备的写入筛选器处理**：将软件更新部署到启用了写入筛选器的 Windows Embedded 设备时，你可以指定将软件更新安装在临时覆盖区上并稍后提交更改，或者在安装截止时或在维护时段内提交更改。 如果在安装截止时或在维护时段内提交更改，则需要重新启动，而且更改将保留在设备上。  
 
         > [!NOTE]  
         >  将软件更新部署到 Windows Embedded 设备时，确保设备是配置了维护时段的集合的成员。  
 
-     只有在“部署设置”页上将“部署类型”  设置为“必需”  时，才可以配置“截止时间行为”  和“设备重新启动行为”  设置。  
+    - **重启时的软件更新部署重新评估行为**：从 Configuration Manager 版本 1606 开始，选择此设置可配置软件更新部署，使客户端在安装软件更新并重启后立即运行软件更新符合性扫描。 这使客户端可以检查在客户端重新启动之后成为适用状态的其他软件更新，以及随后在相同维护时段期间安装它们（并成为符合状态）。
 
 9. 在“警报”页上，配置 Configuration Manager 和 System Center Operations Manager 为此部署生成警报的方式。 只有在“部署设置”页上将“部署类型”  设置为“必需”  时，才可以配置警报。  
 
-    > [!WARNING]  
+    > [!NOTE]  
     >  你可以从“软件库”  工作区的“软件更新”  节点中查看最新软件更新警报。  
 
 10. 在“下载设置”页上配置下列设置：  
@@ -316,6 +318,6 @@ ms.openlocfilehash: be845d9f6ad2f92a0235cdb7410654e229448e1b
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

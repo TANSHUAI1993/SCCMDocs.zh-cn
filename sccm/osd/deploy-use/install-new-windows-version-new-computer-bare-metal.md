@@ -1,8 +1,8 @@
 ---
-title: "使用 System Center Configuration Manager 在新计算机（裸机）上安装新版本的 Windows"
+title: "使用 System Center Configuration Manager 在新计算机（裸机）上安装新版本的 Windows | Microsoft Docs"
 description: "按照 System Center Configuration Manager 中的这些步骤，使用PXE、OEM 或独立媒体在新计算机上安装操作系统。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: c672595a06a45bec840f17743636ef6f502af49f
+ms.sourcegitcommit: 06ade037c580d64503e6b8b5c3bf31004ab0650b
+ms.openlocfilehash: 93b3d99e7391feefc3d706f15f0fe8f8df3b75ac
 
 
 ---
@@ -29,13 +29,13 @@ ms.openlocfilehash: c672595a06a45bec840f17743636ef6f502af49f
 
  采用以下部分内容，使用新版本的 Windows 来刷新现有计算机。  
 
-##  <a name="a-namebkmkplana-plan"></a><a name="BKMK_Plan"></a>计划  
+##  <a name="a-namebkmkplana-plan"></a><a name="BKMK_Plan"></a> 计划  
 
 -   **规划和实现基础结构要求**  
 
-     在你可以部署操作系统前，有几个必须实施到位的基础结构要求，例如 Windows ADK、Windows 部署服务 (WDS) 以及支持的硬盘配置等。有关详细信息，请参阅[操作系统部署的基础架构要求](../plan-design/infrastructure-requirements-for-operating-system-deployment.md)  
+     在你可以部署操作系统前，有几个必须实施到位的基础结构要求，例如 Windows ADK、Windows 部署服务 (WDS) 以及支持的硬盘配置等。有关详细信息，请参阅[操作系统部署的基础架构要求](../plan-design/infrastructure-requirements-for-operating-system-deployment.md)。
 
-##  <a name="a-namebkmkconfigurea-configure"></a><a name="BKMK_Configure"></a>配置  
+##  <a name="a-namebkmkconfigurea-configure"></a><a name="BKMK_Configure"></a> 配置  
 
 1.  **准备启动映像**  
 
@@ -59,7 +59,7 @@ ms.openlocfilehash: c672595a06a45bec840f17743636ef6f502af49f
 
      使用任务序列以通过网络自动安装操作系统 使用[创建用于安装操作系统的任务序列](create-a-task-sequence-to-install-an-operating-system.md)中的步骤来创建部署操作系统的任务序列。 可能会有有关任务序列的其他注意事项，具体取决于你所选择的部署方法。  
 
-##  <a name="a-namebkmkdeploya-deploy"></a><a name="BKMK_Deploy"></a>部署  
+##  <a name="a-namebkmkdeploya-deploy"></a><a name="BKMK_Deploy"></a> 部署  
 
 -   使用下列部署方法之一部署操作系统：  
 
@@ -81,6 +81,6 @@ ms.openlocfilehash: c672595a06a45bec840f17743636ef6f502af49f
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

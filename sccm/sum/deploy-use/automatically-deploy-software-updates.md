@@ -1,11 +1,11 @@
 ---
-title: "自动部署软件更新 | Configuration Manager"
+title: "自动部署软件更新 | Microsoft Docs"
 description: "通过将新的更新添加到与活动部署关联的更新组中或者使用 ADR，可自动部署软件更新。"
 keywords: 
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 10/06/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
@@ -13,8 +13,8 @@ ms.technology:
 - configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 133f29aa3f515054b23ba70f1a1dfd3eedaa56c8
+ms.sourcegitcommit: 78524abd4c45f0b7402d6f1e85afc60bb72ab0ee
+ms.openlocfilehash: 34b0819957ffcc3711ee354a5b821d78fa7445cb
 
 ---
 
@@ -94,7 +94,7 @@ ms.openlocfilehash: 133f29aa3f515054b23ba70f1a1dfd3eedaa56c8
 
     -   “许可条款设置”：指定是否自动部署具有相关许可条款的软件更新。 某些软件更新包含许可条款，例如 Service Pack。 自动部署软件更新时，未显示许可条款，并且没有接受许可条款的选项。 你可以选择自动部署所有软件更新而不考虑关联的许可条款，或者仅部署无关联许可条款的软件更新。  
 
-        > [!WARNING]  
+        > [!NOTE]  
         >  要查看软件更新的许可条款，你可以在“软件库”  工作区的“所有软件更新”  节点中选择软件更新，然后在“主页”  选项卡上的“更新”  组中单击“查看许可证” 。  
         >   
         >  要查找带相关许可条款的软件更新，你可以将“许可条款”  列添加到“所有软件更新”  节点内的结果窗格中，然后单击列标题以按带许可条款的软件更新进行排序。  
@@ -103,6 +103,9 @@ ms.openlocfilehash: 133f29aa3f515054b23ba70f1a1dfd3eedaa56c8
 
     > [!IMPORTANT]  
     >  ADR 中软件更新的限制为 1000 个软件更新。 要确保在此页上指定的条件所检索到的软件更新不到 1000 项，请考虑对“软件库”  工作区中的“所有软件更新”  节点设置相同的条件。  
+
+    > [!NOTE]
+    > 从 Configuration Manager 版本 1610 开始，可以对自动部署规则中软件更新的内容大小进行筛选。 例如，可以将“内容大小 (KB)”筛选器设置为 **< 2048**，以仅下载小于 2 MB 的软件更新。 使用此筛选器可防止自动下载较大的软件更新，以便在带宽受到限制时更好地支持简化的 Windows 低级别维护。 有关详细信息，请参阅[低级别操作系统上的 Configuration Manager 和简化的 Windows 维护](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/07/configuration-manager-and-simplified-windows-servicing-on-down-level-operating-systems/)。
 
 6.  在“评估计划”页上，指定是否启用 ADR 以按计划运行。 启用后，请单击“自定义”  以设置定期计划。  
 
@@ -137,7 +140,7 @@ ms.openlocfilehash: 133f29aa3f515054b23ba70f1a1dfd3eedaa56c8
         > [!NOTE]  
         >  实际安装截止时间是显示的截止时间加上随机的一段时间（最多为 2 小时）。 这可以减少目标集合中同时安装部署中软件更新的所有客户端计算机的潜在影响。  
         >   
-        >  你可以配置“计算机代理”  客户端设置和“禁用截止时间随机化”  ，以对所需的软件更新禁用安装随机化延迟。 有关详细信息，请参阅 [Computer Agent](../../core/clients/deploy/about-client-settings.md#a-namebkmkcomputeragentdevicesettingsa-computer-agent)。  
+        >  你可以配置“计算机代理”  客户端设置和“禁用截止时间随机化”  ，以对所需的软件更新禁用安装随机化延迟。 有关详细信息，请参阅 [Computer Agent](../../core/clients/deploy/about-client-settings.md#computer-agent)。  
 
 8. 在“用户体验”页上，请配置下列设置：  
 
@@ -155,9 +158,11 @@ ms.openlocfilehash: 133f29aa3f515054b23ba70f1a1dfd3eedaa56c8
         > [!NOTE]  
         >  将软件更新部署到 Windows Embedded 设备时，确保设备是配置了维护时段的集合的成员。  
 
+    - **重启时的软件更新部署重新评估行为**：从 Configuration Manager 版本 1606 开始，选择此设置可配置软件更新部署，使客户端在安装软件更新并重启后立即运行软件更新符合性扫描。 这使客户端可以检查在客户端重新启动之后成为适用状态的其他软件更新，以及随后在相同维护时段期间安装它们（并成为符合状态）。
+
 9. 在“警报”页上，配置 Configuration Manager 和 System Center Operations Manager 为此部署生成警报的方式。  
 
-    > [!WARNING]  
+    > [!NOTE]  
     >  你可以从“软件库”  工作区的“软件更新”  节点中查看最新软件更新警报。  
 
 10. 在“下载设置”页上配置下列设置：  
@@ -209,7 +214,7 @@ ms.openlocfilehash: 133f29aa3f515054b23ba70f1a1dfd3eedaa56c8
 
 15. 在“摘要”页上查看设置。 若要将设置保存到部署模板中，请单击“另存为模板” ，输入名称并选择要包括在模板中的设置，然后单击“保存” 。 若要更改已配置的设置，请单击关联的向导页面，然后更改设置。  
 
-    > [!WARNING]  
+    > [!NOTE]  
     >  模板名称可以包含字母数字 ASCII 字符，以及 **\\** （反斜杠）或 **‘** （单引号）。  
 
 16. 单击“下一步”  以创建 ADR。  
@@ -269,7 +274,7 @@ ms.openlocfilehash: 133f29aa3f515054b23ba70f1a1dfd3eedaa56c8
         > [!NOTE]  
         >  实际安装截止时间是显示的截止时间加上随机的一段时间（最多为 2 小时）。 这可以减少目标集合中同时安装部署中软件更新的所有客户端计算机的潜在影响。  
         >   
-        >  你可以配置“计算机代理”  客户端设置和“禁用截止时间随机化”  ，以对所需的软件更新禁用安装随机化延迟。 有关详细信息，请参阅 [Computer Agent](../../core/clients/deploy/about-client-settings.md#a-namebkmkcomputeragentdevicesettingsa-computer-agent)。  
+        >  你可以配置“计算机代理”  客户端设置和“禁用截止时间随机化”  ，以对所需的软件更新禁用安装随机化延迟。 有关详细信息，请参阅 [Computer Agent](../../core/clients/deploy/about-client-settings.md#computer-agent)。  
 
 6.  在“用户体验”页上，请配置下列设置：  
 
@@ -314,6 +319,6 @@ ms.openlocfilehash: 133f29aa3f515054b23ba70f1a1dfd3eedaa56c8
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

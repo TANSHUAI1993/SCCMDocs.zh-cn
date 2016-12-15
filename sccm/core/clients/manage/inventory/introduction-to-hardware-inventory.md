@@ -1,8 +1,8 @@
 ---
-title: "硬件清单 | System Center Configuration Manager"
+title: "硬件清单 | Microsoft Docs"
 description: "获取 System Center Configuration Manager 中的硬件清单简介。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/05/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 6a0addd31f6e8cd7ef91303cc664d9242c22e0f2
+ms.sourcegitcommit: 08a509cacb711ed6d1ae188d5512a026a12417f2
+ms.openlocfilehash: 61cd30696c28655e5c933a15f8e999293453107a
 
 
 ---
@@ -28,19 +28,19 @@ ms.openlocfilehash: 6a0addd31f6e8cd7ef91303cc664d9242c22e0f2
 
 使用 System Center Configuration Manager 中的硬件清单可收集有关组织中的客户端设备硬件配置的信息。 要收集硬件清单，必须在客户端设置中启用“针对客户端启用硬件清单”  设置。  
 
- 启用硬件清单并且由客户端运行硬件清单周期之后，客户端会将它收集的清单信息发送到客户端站点中的管理点。 随后，管理点将清单信息转发到 Configuration Manager 站点服务器，将清单信息存储在站点数据库中。 硬件清单会根据你在客户端设置中指定的计划在客户端上运行。  
+ 启用硬件清单并且由客户端运行硬件清单周期之后，客户端会将该信息发送到客户端站点中的管理点。 随后，管理点将清单信息转发到 Configuration Manager 站点服务器，将清单信息存储在站点数据库中。 硬件清单会根据你在客户端设置中指定的计划在客户端上运行。  
 
  可使用多种方法来查看 Configuration Manager 收集的硬件清单数据。 这些存储包括以下各项：  
 
--   创建返回基于特定硬件配置的设备的查询。 有关详细信息，请参阅 [System Center Configuration Manager 的查询技术参考](../../../../core/servers/manage/queries-technical-reference.md)。  
+-   [创建返回基于特定硬件配置的设备的查询](../../../../core/servers/manage/queries-technical-reference.md)。  
 
--   创建基于特定硬件配置的基于查询的集合。 基于查询的集合成员身份会按计划自动更新。 可以将集合用于多个任务（包括软件部署）。 有关详细信息，请参阅 [System Center Configuration Manager 的集合技术参考](../../../../core/clients/manage/collections/collections-technical-reference.md)。  
+-   [创建基于特定硬件配置的基于查询的集合](../../../../core/clients/manage/collections/introduction-to-collections.md)。 基于查询的集合成员身份会按计划自动更新。 可以将集合用于多个任务（包括软件部署）。 。  
 
--   运行显示有关组织中硬件配置的特定详细信息的报表。 有关详细信息，请参阅 [System Center Configuration Manager 中的报表](../../../../core/servers/manage/reporting.md)。  
+-   [运行显示有关组织中硬件配置的特定详细信息的报表](../../../../core/servers/manage/reporting.md)。   
 
--   使用资源浏览器查看有关从客户端设备收集的硬件清单的详细信息。 有关详细信息，请参阅[如何使用资源浏览器查看 System Center Configuration Manager 中的硬件清单](../../../../core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md)。  
+-   [使用资源浏览器](../../../../core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md)查看有关从客户端设备收集的硬件清单的详细信息。   
 
- 当硬件清单在客户端设备上运行时，客户端返回的第一批清单数据始终是完整清单。 后续清单信息仅包含增量清单信息。 站点服务器按收到增量清单信息的顺序对它进行处理。 如果缺少客户端的增量清单信息，则站点服务器会拒绝其他增量清单信息，并指示客户端运行完整清单周期。  
+ 当硬件清单在客户端设备上运行时，客户端返回的第一批清单数据始终是完整清单。 后续清单信息仅包含增量清单信息。 站点服务器按收到增量清单信息的顺序对它进行处理。 如果缺少客户端的增量信息，则站点服务器会拒绝其他增量信息，并指示客户端运行完整清单周期。  
 
  Configuration Manager 为双引导计算机提供有限支持。 Configuration Manager 可以发现双引导计算机，但只从在清单周期运行时处于活动状态的操作系统返回清单信息。  
 
@@ -50,16 +50,14 @@ ms.openlocfilehash: 6a0addd31f6e8cd7ef91303cc664d9242c22e0f2
 ## <a name="extending-configuration-manager-hardware-inventory"></a>扩展 Configuration Manager 硬件清单  
  除了 Configuration Manager 中的内置硬件清单，还可以使用以下方法之一来扩展硬件清单以收集其他信息：  
 
-|方法|描述|  
-|------------|-----------------|  
-|从 Configuration Manager 控制台添加和删除清单类|在 Configuration Manager 中，用户可从 Configuration Manager 控制台为硬件清单启用、禁用、添加和删除清单类。|  
-|NOIDMIF 文件|使用 NOIDMIF 文件可收集有关无法由 Configuration Manager 列出清单的客户端设备的信息。 例如，您可能想要收集设备资产编号的信息仅作为在设备上的标签存在。 NOIDMIF 清单会自动与从中收集到它的客户端设备相关联。|  
-|IDMIF 文件|使用 IDMIF 文件收集组织中不与 Configuration Manager 客户端关联的资产的相关信息，例如，投影仪、复印机和网络打印机。|  
+- 可以从 Configuration Manager 控制台为硬件清单启用、禁用、添加和删除清单类。|  
+- 使用 NOIDMIF 文件可收集有关无法由 Configuration Manager 列出清单的客户端设备的信息。 例如，您可能想要收集设备资产编号的信息仅作为在设备上的标签存在。 NOIDMIF 清单是自动与收集从客户端设备相关联。  
+- 使用 IDMIF 文件收集不与 Configuration Manager 客户端关联的资产的相关信息，例如，投影仪、复印机和网络打印机。  
 
  有关使用这些方法扩展 Configuration Manager 硬件清单的详细信息，请参阅[如何在 System Center Configuration Manager 中配置硬件清单](../../../../core/clients/manage/inventory/configure-hardware-inventory.md)。  
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

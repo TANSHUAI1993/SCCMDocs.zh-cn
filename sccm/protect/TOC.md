@@ -1,12 +1,11 @@
-# [了解和探索](understand\protect-data-and-site-infrastructure.md)
+# 了解和探索
 ## [概述](understand\protect-data-and-site-infrastructure.md)
 ## [备份和恢复](understand/backup-and-recovery.md)
 ## [高可用性选项](understand/high-availability-options.md)
 ## [管理高风险部署](understand/settings-to-manage-high-risk-deployments.md)
 
-# [规划和设计](plan-design/prerequisites-for-certificate-profiles.md)
+# 规划和设计
 ## [证书配置文件先决条件](plan-design/prerequisites-for-certificate-profiles.md)
-### [证书基础结构](plan-design/certificate-infrastructure.md)
 ### [证书配置文件的证书模板权限](plan-design/planning-for-certificate-template-permissions.md)
 ### [证书配置文件的安全和隐私](plan-design/security-and-privacy-for-certificate-profiles.md)
 
@@ -22,12 +21,12 @@
 
 ## [证书配置文件的安全和隐私](plan-design/security-and-privacy-for-certificate-profiles.md)
 
-# [部署和使用](deploy-use/vpn-profiles.md)
+# 部署和使用
 ## [VPN 配置文件](deploy-use/vpn-profiles.md)
 ### [创建 VPN 配置文件](deploy-use/create-vpn-profiles.md)
 ### [查找每应用 VPN 的包系列名称 (PFN)](deploy-use/find-a-pfn-for-per-app-vpn.md)
 
-## [Wi-Fi 配置文件](deploy-use/introduction-to-wifi-profiles.md)
+## [Wi-Fi 配置文件](deploy-use/create-wifi-profiles.md)
 ### [创建 Wi-Fi 配置文件](deploy-use/create-wifi-profiles.md)
 
 ## [证书配置文件](deploy-use/introduction-to-certificate-profiles.md)
@@ -69,17 +68,23 @@
 ### [管理 Skype for Business Online 访问权限](deploy-use/manage-skype-for-business-online-access.md)
 ### [管理 Dynamics CRM Online 访问权限](deploy-use/manage-dynamics-crm-online-access.md)
 ### [管理 O365 服务的电脑访问权限](deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)
+## [根据设备、网络和应用程序风险管理访问权限](deploy-use/manage-access-based-on-device-network-app-risk.md)
+### [设置 Lookout 设备威胁防护](deploy-use/set-up-your-subscription-with-lookout.md)
+### [在 Intune 中启用 Lookout](deploy-use/enable-lookout-connection-in-intune.md)
+### [为工作应用部署 Lookout](deploy-use/configure-and-deploy-lookout-for-work-apps.md)
+### [启用设备威胁防护策略](deploy-use/enable-device-threat-protection-rule-compliance-policy.md)
+### [对 Lookout 集成进行故障排除](deploy-use/troubleshoot-lookout-integration.md)
 
 ## [Windows Hello 企业版设置](deploy-use/windows-hello-for-business-settings.md)
 
 ## [条款和条件设置](../mdm/deploy-use/terms-and-conditions.md)
 
-## [监视器保护](deploy-use/monitor-wifi-email-vpn-profiles.md)
+## 监视器保护
 ### [监视 Wi-fi、电子邮件和 VPN 配置文件](deploy-use/monitor-wifi-email-vpn-profiles.md)
 ### [监视证书配置文件](deploy-use/monitor-certificate-profiles.md)
 ### [监视 Endpoint Protection](deploy-use/monitor-endpoint-protection.md)
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "规划站点系统角色 | System Center Configuration Manager"
+title: "规划站点系统角色 | Microsoft Docs"
 description: "在规划 System Center Configuration Manager 层次结构时，请考虑站点系统服务器和站点系统角色。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 5f8d051a92cd74938f1a5235b37f02ebe0ff542c
+ms.sourcegitcommit: 2b00cfcec0959716d69a1605018f33d30287fee9
+ms.openlocfilehash: a2e57aac01fff3c28b4acfcf58bcd786bd3e62c4
 
 
 ---
@@ -72,6 +72,8 @@ ms.openlocfilehash: 5f8d051a92cd74938f1a5235b37f02ebe0ff542c
 -   **证书注册点** - 一种站点系统角色，该角色与运行网络设备注册服务的服务器通信以管理使用简单证书注册协议 (SCEP) 的设备证书请求。  仅主站点和管理中心站点支持此角色。   尽管单一证书注册点可为整个层次结构提供功能，若要帮助平衡证书请求的负载，你可以在一个站点和同一层次结构中的多个站点中安装此角色的多个实例。 当层次结构中存在多个实例时，客户端会随机分配到证书注册点之一。  
 
      每个证书注册点都需要访问网络设备注册服务的单独实例。 你不能将两个或多个证书注册点配置为使用相同的网络设备注册服务。 此外，证书注册点不能安装在运行网络设备注册服务的同一服务器上。  
+
+- **云管理网关连接点** - 用于与[云管理网关](/sccm/core/clients/manage/setup-cloud-management-gateway)进行通信的站点系统角色。 
 
 -   **分发点** - 一种站点系统角色，其中包含供客户端下载的源文件，例如应用程序内容、软件包、软件更新、操作系统映像以及启动映像。 默认情况下，当站点安装时，此角色安装在新主站点和辅助站点的站点服务器计算机上，但其在管理中心站点中不受支持。  你可以在支持的一个站点和同一层次结构中的多个站点中安装此角色的多个实例。  有关详细信息，请参阅 [System Center Configuration Manager 中内容管理的基本概念](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)和[为 System Center Configuration Manager 管理内容和内容基础结构](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。  
 
@@ -150,6 +152,6 @@ ms.openlocfilehash: 5f8d051a92cd74938f1a5235b37f02ebe0ff542c
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

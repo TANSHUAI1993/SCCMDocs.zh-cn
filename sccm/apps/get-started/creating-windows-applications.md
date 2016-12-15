@@ -1,5 +1,5 @@
 ---
-title: "创建 Windows 应用程序 | System Center Configuration Manager"
+title: "创建 Windows 应用程序 | Microsoft Docs"
 description: "请参阅创建和部署适用于 Windows 设备的应用程序时必须考虑的注意事项。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: f776e624c7fff5f52b573e5066a6e7d20396ce91
+ms.sourcegitcommit: 557888d1f1f899e3198c430bbe5ccdd44178f824
+ms.openlocfilehash: 9c80cc42f9ce6775067a89a9f5a63c1bf4a0c7ca
 
 ---
 # <a name="create-windows-applications-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 创建 Windows 应用程序
@@ -27,9 +27,9 @@ ms.openlocfilehash: f776e624c7fff5f52b573e5066a6e7d20396ce91
 除了创建应用程序的其他 System Center Configuration Manager 要求和过程，在创建和部署适用于 Windows 设备的应用程序时还必须考虑以下注意事项。  
 
 ## <a name="general-considerations"></a>一般注意事项  
- Configuration Manager 支持部署以下应用类型：  
+ Configuration Manager 支持部署以下应用文件类型：  
 
-|设备类型|受支持的文件|  
+|设备类型|支持的文件类型|  
 |-----------------|---------------------|  
 |Windows RT 和 Windows RT 8.1|*.appx, \*.appxbundle|  
 |注册为移动设备的 Windows 8.1 和更高版本|*.appx, \*.appxbundle|  
@@ -38,13 +38,13 @@ ms.openlocfilehash: f776e624c7fff5f52b573e5066a6e7d20396ce91
 
 |设备类型|支持的操作|  
 |-----------------|-----------------------|  
-|Windows 8.1 及更高版本|可用、要求。 卸载|  
-|Windows RT|可用、要求、卸载|  
+|Windows 8.1 及更高版本|可用、必需、卸载|  
+|Windows RT|可用、必需、卸载|  
 
 ## <a name="support-for-universal-windows-platform-uwp-apps"></a>对通用 Windows 平台 (UWP) 应用的支持  
- Windows 10 设备安装业务线应用时无需旁加载密钥。 但是，注册表项 **HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\Appx\AllowAllTrustedApps** 必须将值设置为“1”才能启用旁加载。  
+ Windows 10 设备无需旁加载密钥即可安装业务线应用。 但是，若要启用旁加载，注册表项 **HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\Appx\AllowAllTrustedApps** 必须将值设置为“1”。  
 
- 如果未配置此注册表项，Configuration Manager 在你第一次向设备部署应用时会自动将此值设置为 **1**。 如果将此值设置为 **0**，则 Configuration Manager 将无法自动更改此值，业务线应用部署将失败。  
+ 如果未配置此注册表项，Configuration Manager 在第一次向设备部署应用时会自动将此值设置为 **1**。 如果将此值设置为 **0**，则 Configuration Manager 无法自动更改此值，业务线应用部署将失败。  
 
  通用 Windows 平台业务线应用必须使用代码签名证书签名，并且该证书应在应用部署到的每个设备上受信任。 你可以使用内部 PKI 基础结构中的证书，也可以使用设备上安装的第三方公共根证书中的证书。  
 
@@ -59,16 +59,16 @@ ms.openlocfilehash: f776e624c7fff5f52b573e5066a6e7d20396ce91
 
 -   该文件的产品代码和产品版本将用于应用检测。  
 
--   将使用该应用的默认重启行为。 Configuration Manager 不对此进行控制。  
+-   使用该应用的默认重启行为。 Configuration Manager 不对此进行控制。  
 
--   将为单个用户安装每个用户 MSI 包。  
+-   为单个用户安装每用户 MSI 包。  
 
--   将为设备上的所有用户安装每个计算机 MSI 包。  
+-   为设备上的所有用户安装每计算机 MSI 包。  
 
 -   当每个版本的 MSI 产品代码相同时，支持应用更新。  
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

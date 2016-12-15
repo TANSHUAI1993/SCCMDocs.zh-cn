@@ -1,5 +1,5 @@
 ---
-title: "Windows Defender 高级威胁防护 | System Center Configuration Manager"
+title: "Windows Defender 高级威胁防护 | Microsoft Docs"
 description: "了解如何管理和监视 Windows Defender 高级威胁防护，这是一项可帮助企业应对高级安全攻击的新服务。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f777295958e9cbc729e3759d354521c96ae3e8ac
-ms.openlocfilehash: a4ad2d93ecd994fff00dab33084a734252cac651
+ms.sourcegitcommit: 299fada2b6587ace44e635c4f26cc7a482d44843
+ms.openlocfilehash: 880ea4fcb0730f0e9adbc9f142262f241f5df9dc
 
 ---
 # <a name="windows-defender-advanced-threat-protection"></a>Windows Defender 高级威胁防护
@@ -38,9 +38,9 @@ Windows Defender ATP 是 [Windows Security Center](https://securitycenter.window
 
  1.  登录到 [Windows Defender ATP online service](https://securitycenter.windows.com/)（Windows Defender ATP 联机服务）   
 
- 2.  单击“客户端载入”菜单项。  
+ 2.  在“终结点管理”菜单项上单击。  
 
- 3.  选择“System Center Configuration Manager”，然后单击“下载包”。  
+ 3.  选择“System Center Configuration Manager (Current Branch) 版本 1606”，然后单击“下载包”。  
 
  4.  下载压缩的存档 (.zip) 文件并将内容解压缩。
 
@@ -86,7 +86,34 @@ Windows Defender ATP 是 [Windows Security Center](https://securitycenter.window
         -   **未载入** - 策略已应用，但代理尚未报告已载入策略  
 
 
+## <a name="how-to-create-and-deploy-an-offboarding-configuration-file"></a>如何创建和部署载出配置文件  
 
-<!--HONumber=Nov16_HO1-->
+1.  登录到 [Windows Defender ATP online service](https://securitycenter.windows.com/)（Windows Defender ATP 联机服务）   
+
+2.  在“终结点管理”菜单项上单击。  
+
+3.  选择“System Center Configuration Manager (Current Branch) 版本 1606”，然后单击“终结点载出”。  
+
+4.  下载压缩的存档 (.zip) 文件并将内容解压缩。 载出文件的有效期为 30 天。
+
+5.  在 Configuration Manager 控制台中，导航到“资产和符合性” > “概述” > “Endpoint Protection” > “Windows Defender ATP 策略”，然后单击“创建 Windows Defender ATP 策略”。 将打开 Windows Defender ATP 策略向导。  
+
+6.  键入 Windows Defender ATP 策略的**名称**和**说明**，选择“载出”。 单击“下一步” 。  
+
+7.  **浏览**到组织的 Windows Defender ATP 云服务租户提供的配置文件。 单击“下一步” 。  
+
+8.  查看摘要，然后完成该向导。  
+
+9.  通过单击“部署”，现在可以将 Windows Defender ATP 策略部署到托管客户端计算机。  
+
+> [!IMPORTANT]
+> Windows Defender ATP 配置文件包含敏感信息，应保护这些信息的安全。
+
+[Windows Defender 高级威胁防护](https://technet.microsoft.com/itpro/windows/keep-secure/windows-defender-advanced-threat-protection)
+[Windows Defender 高级威胁防护载入问题疑难解答](https://technet.microsoft.com/itpro/windows/keep-secure/troubleshoot-onboarding-windows-defender-advanced-threat-protection)
+
+
+
+<!--HONumber=Dec16_HO1-->
 
 

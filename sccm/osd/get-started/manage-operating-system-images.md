@@ -1,8 +1,8 @@
 ---
-title: "管理操作系统映像 | Configuration Manager"
+title: "管理操作系统映像 | Microsoft Docs"
 description: "在 Configuration Manager 中，了解如何管理存储在 Windows 映像 (WIM) 文件中的操作系统映像。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 3c0801afa6a967faabf186f70685b701ba2a95d8
+ms.sourcegitcommit: 03722ff4f480cd26842e395fe1f7ec8359e2b33e
+ms.openlocfilehash: 6953c3834ca303b949f22436010a87b3da9688dc
 
 
 ---
@@ -85,7 +85,7 @@ Configuration Manager 中的操作系统映像以 Windows 映像 (WIM) 文件格
  将采用与分发其他内容相同的方式将操作系统映像分发到分发点。 大多数情况下，部署操作系统之前必须将操作系统映像分发到至少一个分发点。 关于分发操作系统映像的步骤，请参阅 [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content)。  
 
 ##  <a name="a-namebkmkosimagesapplyupdatesa-apply-software-updates-to-an-operating-system-image"></a><a name="BKMK_OSImagesApplyUpdates"></a>将软件更新应用于操作系统映像  
- 我们会定期发布适用于你的操作系统映像中的操作系统的新软件更新。 当然，必须将软件更新基础结构实施到位且已成功同步软件更新后才可以将软件更新应用于映像。 有关详细信息，请参阅[部署软件更新](../../sum/deploy-use/deploy-software-updates.md)。  
+ 我们会定期发布适用于你的操作系统映像中的操作系统的新软件更新。 必须将软件更新基础结构实施到位，成功同步软件更新，并将软件更新下载到站点服务器上的内容库后才可将软件更新应用于映像。 有关详细信息，请参阅[部署软件更新](../../sum/deploy-use/deploy-software-updates.md)。  
 
  你可以按指定计划将适用的软件更新应用于映像。 Configuration Manager 按指定计划将选择的软件更新应用于操作系统映像，然后根据需要将更新的映像分发到分发点。 有关操作系统映像的信息存储在站点数据库中，包括在导入时应用的软件更新。 自映像最初添加以来已应用于映像的软件更新也存储在站点数据库中。 当你启动向导以将软件更新应用于操作系统映像时，向导将检索尚未应用于映像的适用软件更新的列表供你选择。 Configuration Manager 从站点服务器上的内容库中复制软件更新，然后将软件更新应用于操作系统映像。  
 
@@ -142,6 +142,6 @@ Configuration Manager 中的操作系统映像以 Windows 映像 (WIM) 文件格
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

@@ -1,8 +1,8 @@
 ---
-title: "将 Windows 作为服务进行管理 | Configuration Manager"
+title: "管理 Windows 即服务 | Microsoft Docs"
 description: "System Center Configuration Manager 中的功能可帮助查看环境中 Windows 作为服务的状态，以便你可以让它保持更新。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/07/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 0ed06bb30d1277afa71d1eb2d045ea0ebc87912a
+ms.sourcegitcommit: 3f44505c977b511223a083a960f871371c0ff133
+ms.openlocfilehash: 1885968006ef5be1f507e94e0d33918174b1af12
 
 
 ---
@@ -134,14 +134,15 @@ ms.openlocfilehash: 0ed06bb30d1277afa71d1eb2d045ea0ebc87912a
 
     -   **指定此服务维护服务计划将应用到的 Windows 就绪状态**：选择下列项之一：  
 
-        -   **可以发布(Current Branch)**：  
+        -   **可以发布 (Current Branch)**：在 CB 服务模型中，功能更新在 Microsoft 发布后便可使用。
 
-        -   **可用于业务(Current Branch for Business)**：  
+        -   **可用于业务 (Current Branch for Business)**：CBB 服务分支通常用于广泛部署。 CBB 服务分支中的 Windows 10 客户端会收到与 CB 服务分支中相同的 Windows 10 内部版本，只是时间稍晚。
 
-    -   **Microsoft 发布新升级后，你希望等待多少天再在新环境中进行部署**：  
+    -   **Microsoft 发布新升级后，希望等待多少天再在新环境中进行部署**：如果当前日期晚于发布日期加上为此设置配置的天数，Configuration Manager 将评估是否将升级包含在部署中。
 
     -   在 Configuration Manager 版本 1602 之前，单击“预览”可查看与准备情况状态关联的 Windows 10 更新。  
 
+    有关详细信息，请参阅[服务分支](https://technet.microsoft.com/itpro/windows/manage/waas-overview#servicing-branches)。
 7.  从 Configuration Manager 版本 1602 开始，在“升级”页面上配置搜索条件可筛选将添加到服务计划的升级。 只有满足指定条件的升级项才会添加到关联部署中。  
 
      单击“预览”可查看符合指定条件的升级。  
@@ -168,7 +169,7 @@ ms.openlocfilehash: 0ed06bb30d1277afa71d1eb2d045ea0ebc87912a
         > [!NOTE]  
         >  实际安装截止时间是显示的截止时间加上随机的一段时间（最多为 2 小时）。 这可以减少目标集合中同时在部署中安装软件更新的所有客户端计算机的潜在影响。  
         >   
-        >  你可以配置“计算机代理”  客户端设置，“禁用截止时间随机化”  ，以对所需的更新禁用安装随机化延迟。 有关详细信息，请参阅 [Computer Agent](../../core/clients/deploy/about-client-settings.md#BKMK_ComputerAgentDeviceSettings)。  
+        >  你可以配置“计算机代理”  客户端设置，“禁用截止时间随机化”  ，以对所需的更新禁用安装随机化延迟。 有关详细信息，请参阅 [Computer Agent](../../core/clients/deploy/about-client-settings.md#computer-agent)。  
 
 9. 在“用户体验”页上，请配置下列设置：  
 
@@ -220,7 +221,12 @@ ms.openlocfilehash: 0ed06bb30d1277afa71d1eb2d045ea0ebc87912a
  完成向导后，将会运行维护服务计划。 它会将符合指定条件的更新添加到软件更新组中、将更新下载到站点服务器上的内容库、将更新分发到已配置的分发点，然后将软件更新组部署到目标集合中的客户端。  
 
 ##  <a name="a-namebkmkmodifyservicingplana-modify-a-servicing-plan"></a><a name="BKMK_ModifyServicingPlan"></a> 修改维护服务计划  
- 从 Windows 10 维护服务仪表板创建基本维护服务计划后，或需要更改现有维护服务计划的设置时，可以转到维护服务计划属性。 使用以下过程来修改维护服务计划的属性。  
+从 Windows 10 维护服务仪表板创建基本维护服务计划后，或需要更改现有维护服务计划的设置时，可以转到维护服务计划属性。
+
+> [!NOTE]
+> 创建维护服务计划时，可在向导中不可用的维护计划的属性中配置设置。 向导对以下设置使用默认设置：下载设置、部署设置和警报。  
+
+使用以下过程来修改维护服务计划的属性。  
 
 #### <a name="to-modify-the-properties-of-a-servicing-plan"></a>修改维护服务计划的属性  
 
@@ -228,10 +234,34 @@ ms.openlocfilehash: 0ed06bb30d1277afa71d1eb2d045ea0ebc87912a
 
 2.  在“软件库”工作区中，展开“Windows 10 维护服务” ，单击“维护服务计划” ，然后选择要修改的维护服务计划。  
 
-3.  在“主页”  选项卡上，单击“属性”  以打开所选维护服务计划的属性。  
+3.  在“主页”  选项卡上，单击“属性”  以打开所选维护服务计划的属性。
+
+    以下设置可在向导中未配置的维护服务计划属性中使用：
+
+    - 部署设置 在“部署设置”选项卡上，配置以下设置：  
+
+        -   “部署类型”：指定软件更新部署的部署类型。 选择“必需”  以创建强制性软件更新部署，部署会在配置的安装截止时间之前在客户端上自动安装软件更新。 选择“可用”  以创建可供用户从软件中心中安装的可选软件更新部署。  
+
+            > [!IMPORTANT]  
+            >  创建软件更新部署之后，你稍后无法更改部署的类型。  
+
+            > [!NOTE]  
+            >  部署为“所需”  的软件更新组将在后台下载，并且享有 BITS 设置（如果配置）。  
+            > 但是，部署为“可用”  的软件更新组将在前台下载，并且将忽略 BITS 设置。  
+
+        -   “使用 LAN 唤醒来唤醒所需部署的客户端”：指定在截止时间是否启用 LAN 唤醒，以将唤醒数据包发送到需要部署中的一个或多个软件更新的计算机。 在安装截止时间处于睡眠模式的任何计算机将被唤醒，以便软件更新安装可以启动。 处于睡眠模式且不需要部署中的任何软件更新的客户端不会启动。 默认情况下，此设置未启用，并且只有将“部署类型”  设置为“必需” 时才可用。  
+
+            > [!WARNING]  
+            >  必须针对“LAN 唤醒”配置计算机和网络，然后才能使用此选项。  
+
+        -   “详细信息级别”：指定客户端计算机报告的状态消息的详细信息级别。  
+
+    - 下载设置
+
+    - 警报
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

@@ -1,8 +1,8 @@
 ---
-title: "使用 PXE 通过网络部署 Windows | Configuration Manager"
+title: "使用 PXE 通过网络部署 Windows | Microsoft Docs"
 description: "使用启动了 PXE 的操作系统部署来刷新计算机的操作系统或在一台新的计算机上安装新版本的 Windows。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/07/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 4bb62f7479fafac6b57d42cd048fd5bcec29b0e9
+ms.sourcegitcommit: 3f44505c977b511223a083a960f871371c0ff133
+ms.openlocfilehash: b22cdbd42693078caa47f41182ce73ea881c3515
 
 
 ---
@@ -98,6 +98,8 @@ System Center Configuration Manager 中启动了 PXE 的操作系统部署允许
 ##  <a name="how-is-the-boot-image-selected-for-clients-booting-with-pxe"></a>如何为通过 PXE 启动的客户端选择启动映像？
 当客户端通过 PXE 启动时，Configuration Manager 会提供一个启动映像给该客户端使用。 从 Configuration Manager 版本 1606 开始，Configuration Manager 将使用体系结构精确匹配的启动映像（如果存在）。 如果不存在可用的体系结构精确匹配的启动映像，则 Configuration Manager 会使用具有兼容体系结构的启动映像。 下表提供了有关如何为通过 PXE 启动的客户端选择启动映像的详细信息。
 1. Configuration Manager 会在站点数据库中查找与尝试启动的客户端的 MAC 地址或 SMBIOS 相匹配的系统记录。
+    > [!NOTE]
+    > 如果分配到站点的计算机启动到另一站点的 PXE，则策略对该计算机不可见。 例如，如果已将客户端分配到站点 A，则站点 B 上的管理点和分发点将不能从站点 A 访问策略，且客户端将无法成功进行 PXE 启动。
 2. Configuration Manager 会查找部署到步骤 1 中找到的系统记录中的任务序列。
 3. 在步骤 2 中找到的任务序列列表中，Configuration Manager 会查找与尝试启动的客户端体系结构相匹配的启动映像。 如果找到具有相同体系结构的启动映像，则会使用该启动映像。
 
@@ -105,6 +107,6 @@ System Center Configuration Manager 中启动了 PXE 的操作系统部署允许
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

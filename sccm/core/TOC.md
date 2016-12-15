@@ -1,4 +1,4 @@
-#   [了解和探索](understand/introduction.md)
+#   了解和探索
 ##  [Configuration Manager 简介](understand/introduction.md)
 ### [查找 Configuration Manager 的帮助](understand/find-help.md)
 ### [辅助功能](understand/accessibility-features.md)
@@ -19,13 +19,16 @@
 ##  [有关诊断和使用情况数据的常见问题](understand/frequently-asked-questions-about-diagnostics-and-usage-data.md)
 
 #    [规划和设计](plan-design/get-ready.md)
-##   [产品更改](plan-design/changes/features-and-capabilities.md)
+
+##   产品更改
 ###  [特性和功能](plan-design/changes/features-and-capabilities.md)
 ###  [自 Configuration Manager 2012 以来的更改内容](plan-design/changes/what-has-changed-from-configuration-manager-2012.md)
 ###  [增量版本中的新增功能](plan-design/changes/whats-new-incremental-versions.md)
+###  [版本 1610 中的新增功能](plan-design/changes/whats-new-in-version-1610.md)
 ###  [版本 1606 中的新增功能](plan-design/changes/whats-new-in-version-1606.md)
 ###  [版本 1602 中的新增功能](plan-design/changes/whats-new-in-version-1602.md)
 ###  [已删除和已弃用的功能](plan-design/changes/removed-and-deprecated-features.md)
+
 ##   [支持的配置](plan-design/configs/supported-configurations.md)
 ###  [大小和扩展数量](plan-design/configs/size-and-scale-numbers.md)
 ###  [站点和站点系统先决条件](plan-design/configs/site-and-site-system-prerequisites.md)
@@ -37,6 +40,7 @@
 ###  [对 Active Directory 域的支持](plan-design/configs/support-for-active-directory-domains.md)
 ###  [对 Windows 功能和网络的支持](plan-design/configs/support-for-windows-features-and-networks.md)
 ###  [对虚拟化环境的支持](plan-design/configs/support-for-virtualization-environments.md)
+
 ##   [选择设备管理解决方案](plan-design/choose-a-device-management-solution.md)
 ##   [设计站点层次结构](plan-design/hierarchy/design-a-hierarchy-of-sites.md)
 ###  [规划 SMS 提供程序](plan-design/hierarchy/plan-for-the-sms-provider.md)
@@ -47,25 +51,30 @@
 #### [使用请求分发点](plan-design/hierarchy/use-a-pull-distribution-point.md)
 #### [内容库](plan-design/hierarchy/the-content-library.md)
 #### [管理帐户以访问内容](plan-design/hierarchy/manage-accounts-to-access-content.md)
+#### [用于 Configuration Manager 客户端的对等缓存](plan-design/hierarchy/client-peer-cache.md)
 #### [内容源位置方案](plan-design/hierarchy/content-source-location-scenarios.md)
 #### [包传输管理器](plan-design/hierarchy/package-transfer-manager.md)
 #### [管理用于内容管理的网络带宽](plan-design/hierarchy/manage-network-bandwidth.md)
 #### [内容管理安全和隐私](plan-design/hierarchy/security-and-privacy-for-content-management.md)
 ###  [客户端如何查找资源和设备](plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md)
 ###  [站点管理的安全和隐私](plan-design/hierarchy/security-and-privacy-for-site-administration.md)
+
 ##   [规划网络基础结构](plan-design/network/configure-firewalls-ports-domains.md)
 ###  [扩展 Active Directory 架构](plan-design/network/extend-the-active-directory-schema.md)
 ###  [准备 Windows Servers 以支持站点系统](plan-design/network/prepare-windows-servers.md)
 ###  [站点系统服务器网站](plan-design/network/websites-for-site-system-servers.md)
 ###  [PKI 证书要求](plan-design/network/pki-certificate-requirements.md)
+
 ##   [诊断和使用情况数据](plan-design/diagnostics/diagnostics-and-usage-data.md)
 ###  [如何使用诊断和使用情况数据](plan-design/diagnostics/how-diagnostics-and-usage-data-is-used.md)
 ###  [1511 的诊断数据](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1511.md)
 ###  [1602 的诊断数据](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1602.md)
 ###  [1606 的诊断数据](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1606.md)
+###  [1610 的诊断数据](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1610.md)
 ###  [如何收集诊断和使用情况数据](plan-design/diagnostics/how-diagnostics-and-usage-data-is-collected.md)
 ###  [如何查看诊断和使用情况数据](plan-design/diagnostics/view-diagnostics-and-usage-data.md)
 ###  [客户体验改善计划 (CEIP)](plan-design/diagnostics/customer-experience-improvement-program-ceip.md)
+
 ##   [Configuration Manager 安全和隐私](plan-design/security/security-and-privacy.md)
 ###  [规划安全性](plan-design/security/plan-for-security.md)
 ###  [安全最佳方案和隐私信息](plan-design/security/security-best-practices-and-privacy-information.md)
@@ -73,10 +82,13 @@
 ###  [其他隐私信息](plan-design/security/additional-privacy.md)
 ###  [配置安全性](plan-design/security/configure-security.md)
 
-#    [入门](get-started/evaluate-with-lab-environment.md)
+#    入门
+
 ##   [在实验室中评估 Configuration Manager](get-started/evaluate-with-lab-environment.md)
 ###  [设置实验室](get-started/set-up-your-lab.md)
+
 ##   [技术预览](get-started/technical-preview.md)
+###  [1611 中的功能](get-started/capabilities-in-technical-preview-1611.md)
 ###  [1610 中的功能](get-started/capabilities-in-technical-preview-1610.md)
 ###  [1609 中的功能](get-started/capabilities-in-technical-preview-1609.md)
 ###  [1608 中的功能](get-started/capabilities-in-technical-preview-1608.md)
@@ -89,6 +101,7 @@
 ###  [1601 中的功能](get-started/capabilities-in-technical-preview-1601.md)
 ###  [1512 中的功能](get-started/capabilities-in-technical-preview-1512.md)
 ###  [1511 中的功能](get-started/capabilities-in-technical-preview-1511.md)
+
 ##   [在层次结构之间迁移数据](migration/migrate-data-between-hierarchies.md)
 ###  [制定迁移计划](migration/planning-for-migration.md)
 #### [迁移的先决条件](migration/prerequisites-for-migration.md)
@@ -106,7 +119,8 @@
 ###  [迁移的安全和隐私](migration/security-and-privacy-for-migration.md)
 
 #    [部署服务器和角色](servers/deploy/start-using.md)
-##   [安装基础结构](servers/deploy/install/setup-downloader.md)
+
+##   安装基础结构
 ###  [运行安装程序之前](servers/deploy/install/setup-downloader.md)
 #### [安装程序下载程序](servers/deploy/install/setup-downloader.md)
 #### [先决条件检查程序](servers/deploy/install/prerequisite-checker.md)
@@ -119,6 +133,7 @@
 #### [升级评估版安装](servers/deploy/install/upgrade-an-evaluation-install-to-a-full-install.md)
 #### [升级到 System Center Configuration Manager](servers/deploy/install/upgrade-to-configuration-manager.md)
 #### [用于简化安装的方案](servers/deploy/install/scenarios-to-streamline-your-installation.md)
+
 ##   [卸载站点和层次结构](servers/deploy/configure/configure-sites-and-hierarchies.md)
 ###  [添加站点系统角色](servers/deploy/configure/add-site-system-roles.md)
 #### [安装站点系统角色](servers/deploy/configure/install-site-system-roles.md)
@@ -142,7 +157,7 @@
 ###  [数据库文件的自定义位置](servers/deploy/configure/custom-locations-for-site-database-files.md)
 ###  [配置基于角色的管理](servers/deploy/configure/configure-role-based-administration.md)
 
-#    [管理基础结构](servers/manage/maintenance-tasks.md)
+#    管理基础结构
 ##   [维护任务](servers/manage/maintenance-tasks.md)
 ##   [修改基础结构](servers/manage/modify-your-infrastructure.md)
 ###  [CD.Latest 文件夹](servers/manage/the-cd.latest-folder.md)
@@ -154,10 +169,12 @@
 ###  [使用服务连接工具](servers/manage/use-the-service-connection-tool.md)
 ###  [使用更新注册工具](servers/manage/use-the-update-registration-tool-to-import-hotfixes.md)
 ###  [使用修补程序安装程序](servers/manage/use-the-hotfix-installer-to-install-updates.md)
+###  [用于安装更新 1610 的核对清单](servers/manage/checklist-for-installing-update-1610.md)
 ###  [用于安装更新 1606 的核对清单](servers/manage/checklist-for-installing-update-1606.md)
 ###  [用于安装更新 1602 的核对清单](servers/manage/checklist-for-installing-update-1602.md)
 ###  [当前分支版本支持](servers/manage/current-branch-versions-supported.md)
-##   [监视基础结构](servers/manage/use-alerts-and-the-status-system.md)
+
+##   监视基础结构
 ###  [使用警报和状态系统](servers/manage/use-alerts-and-the-status-system.md)
 ###  [运行状况证明](servers/manage/health-attestation.md)
 ###  [监视层次结构和复制基础结构](servers/manage/monitor-hierarchy-and-replication-infrastructure.md)
@@ -179,8 +196,8 @@
 #### [创建自定义报表模型](servers/manage/creating-custom-report-models-in-sql-server-reporting-services.md)
 #### [报表的安全和隐私](servers/manage/security-and-privacy-for-reporting.md)
 
-#    [部署客户端](clients/deploy/plan/client-installation-methods.md)
-##   [规划客户端部署](clients/deploy/plan/client-installation-methods.md)
+#    部署客户端
+##   规划客户端部署
 ###  [客户端安装方法](clients/deploy/plan/client-installation-methods.md)
 ###  [将客户端部署到 Windows 计算机的先决条件](clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md)
 ###  [确定客户端的站点系统角色](clients/deploy/plan/determine-the-site-system-roles-for-clients.md)
@@ -191,10 +208,9 @@
 ###  [规划在 Mac 计算机上部署客户端](clients/deploy/plan/planning-for-client-deployment-to-mac-computers.md)
 ###  [规划 Windows Embedded 设备的客户端部署](clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md)
 ###  [规划如何唤醒客户端](clients/deploy/plan/plan-wake-up-clients.md)
-###  [基于 Internet 的客户端管理计划](clients/deploy/plan/plan-for-managing-internet-based-clients.md)
 ###  [关于在虚拟桌面基础结构 (VDI) 中管理客户端的注意事项](clients/deploy/plan/considerations-for-managing-clients-in-a-vdi.md)
 
-##   [客户端部署任务](clients/deploy/configure-client-communication-ports.md)
+##   客户端部署任务
 ###  [如何配置客户端通信端口](clients/deploy/configure-client-communication-ports.md)
 ###  [如何配置客户端计算机以使用 DNS 发布查找管理点](clients/deploy/configure-client-computers-to-find-management-points-by-using-dns-publishing.md)
 ###  [如何配置客户端设置](clients/deploy/configure-client-settings.md)
@@ -215,7 +231,13 @@
 ###  [如何管理 Linux 和 UNIX 客户端](clients/manage/manage-clients-for-linux-and-unix-servers.md)
 ###  [将数据同步到 OMS](clients/manage/sync-data-microsoft-operations-management-suite.md)
 
-##   [集合](clients/manage/collections/introduction-to-collections.md)
+##   [在 Internet 上管理客户端](clients/manage/manage-clients-internet.md)
+###  [规划云管理网关](clients/manage/plan-cloud-management-gateway.md)
+###  [设置云管理网关](clients/manage/setup-cloud-management-gateway.md)
+###  [在云管理网关上监视客户端](clients/manage/monitor-clients-cloud-management-gateway.md)
+###  [规划基于 Internet 的客户端管理](clients/manage/plan-internet-based-client-management.md)
+
+##   集合
 ###  [集合简介](clients/manage/collections/introduction-to-collections.md)
 ### [连接的先决条件](clients/manage/collections/prerequisites-for-collections.md)
 ### [集合的最佳实践](clients/manage/collections/best-practices-for-collections.md)
@@ -225,24 +247,24 @@
 ### [如何自动将设备分类到集合](clients/manage/collections/automatically-categorize-devices-into-collections.md)
 ###  [集合的安全和隐私](clients/manage/collections/security-and-privacy-for-collections.md)
 
-##   [硬件清单](clients/manage/inventory/hardware-inventory.md)
+##   硬件清单
 ###  [硬件清单简介](clients/manage/inventory/introduction-to-hardware-inventory.md)
 ###  [如何扩展硬件清单](clients/manage/inventory/extend-hardware-inventory.md)
 ###  [如何配置硬件清单](clients/manage/inventory/configure-hardware-inventory.md)
 ###  [如何为混合部署中的移动设备配置硬件清单](clients/manage/inventory/mobile-device-hardware-inventory-hybrid.md)
-###  [硬件清单的操作和维护](clients/manage/inventory/operations-and-maintenance-for-hardware-inventory.md)
+<!--- ###  [Operations and maintenance for hardware inventory](clients/manage/inventory/hardware-inventory.md) --->
 ###  [如何使用资源浏览器来查看硬件清单](clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md)
 ###  [适用于 Linux 和 UNIX 的硬件清单](clients/manage/inventory/hardware-inventory-for-linux-and-unix.md)
 ###  [硬件清单的安全和隐私](clients/manage/inventory/security-and-privacy-for-hardware-inventory.md)
 
-##   [软件清单](clients/manage/inventory/software-inventory.md)
+##   软件清单
 ###  [软件清单简介](clients/manage/inventory/introduction-to-software-inventory.md)
 ###  [如何从软件清单中排除文件夹](clients/manage/inventory/exclude-folders-from-software-inventory.md)
 ###  [如何配置软件清单](clients/manage/inventory/configure-software-inventory.md)
 ###  [如何使用资源浏览器来查看软件清单](clients/manage/inventory/use-resource-explorer-to-view-software-inventory.md)
 ###  [软件清单的安全和隐私](clients/manage/inventory/security-and-privacy-for-software-inventory.md)
 
-##   [资产智能](clients/manage/asset-intelligence/introduction-to-asset-intelligence.md)
+##   资产智能
 ###  [资产智能简介](clients/manage/asset-intelligence/introduction-to-asset-intelligence.md)
 ###  [资产智能先决条件](clients/manage/asset-intelligence/prerequisites-for-asset-intelligence.md)
 ###  [配置资产智能](clients/manage/asset-intelligence/configuring-asset-intelligence.md)
@@ -251,7 +273,7 @@
 ###  [资产智能的示例验证状态转换](clients/manage/asset-intelligence/example-validation-state-transitions-for-asset-intelligence.md)
 ###  [示例资产智能常规许可证导入文件](clients/manage/asset-intelligence/example-asset-intelligence-general-license-import.md)
 
-##   [远程控制](clients/manage/remote-control/introduction-to-remote-control.md)
+##   远程控制
 ###  [远程控制简介](clients/manage/remote-control/introduction-to-remote-control.md)
 ### [远程控制的先决条件](clients/manage/remote-control/prerequisites-for-remote-control.md)
 ###  [配置远程控制](clients/manage/remote-control/configuring-remote-control.md)
@@ -259,7 +281,7 @@
 ### [如何审核远程控制使用](clients/manage/remote-control/audit-remote-control-usage.md)
 ###  [远程控制的安全和隐私](clients/manage/remote-control/security-and-privacy-for-remote-control.md)
 
-##   [电源管理](clients/manage/power/introduction-to-power-management.md)
+##   电源管理
 ###  [电源管理简介](clients/manage/power/introduction-to-power-management.md)
 ### [电源管理的先决条件](clients/manage/power/prerequisites-for-power-management.md)
 ### [电源管理的最佳方案](clients/manage/power/best-practices-for-power-management.md)
@@ -270,12 +292,14 @@
 ###  [电源管理的安全和隐私](clients/manage/power/security-and-privacy-for-power-management.md)
 
 ##   [升级客户端](clients/manage/upgrade/upgrade-clients.md)
-###  [如何在预生产集合中测试客户端升级](clients/manage/upgrade/test-client-upgrades.md)
-###  [如何升级 Windows 计算机的客户端](clients/manage/upgrade/upgrade-clients-for-windows-computers.md)
-###  [如何升级 Linux 和 UNIX 服务器的客户端](clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md)
-###  [如何升级 Mac 计算机上的客户端](clients/manage/upgrade/upgrade-clients-on-mac-computers.md)
+###  [在预生产集合中测试客户端升级](clients/manage/upgrade/test-client-upgrades.md)
+###  [从升级中排除 Windows 客户端](clients/manage/upgrade/exclude-clients-windows.md)
+###  [升级 Windows 客户端](clients/manage/upgrade/upgrade-clients-for-windows-computers.md)
+###  [升级 Linux 和 UNIX 客户端](clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md)
+###  [升级 Mac 客户端](clients/manage/upgrade/upgrade-clients-on-mac-computers.md)
+###  [升级分析](clients/manage/upgrade/upgrade-analytics.md)
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 
