@@ -39,7 +39,7 @@ ms.openlocfilehash: cd0e74bff29110f5483c7132ba989d9933e7e223
 > [!NOTE]  
 >  不是所有的任务序列操作都与任务序列变量集相关联。 例如，虽然有与启用 BitLocker 操作相关联的变量，但没有与禁用 BitLocker 操作相关联的变量。  
 
-###  <a name="a-namebkmkapplydataimagea-apply-data-image-task-sequence-action-variables"></a><a name="BKMK_ApplyDataImage"></a>应用数据映像任务序列操作变量  
+###  <a name="a-namebkmkapplydataimagea-apply-data-image-task-sequence-action-variables"></a><a name="BKMK_ApplyDataImage"></a> 应用数据映像任务序列操作变量  
  此操作的变量指定 WIM 文件的哪个映像将应用于目标计算机，以及是否在目标分区上删除文件。 有关与这些变量相关联的任务序列步骤的详细信息，请参阅[应用数据映像任务序列步骤](task-sequence-steps.md#BKMK_ApplyDataImage)。  
 
 #### <a name="details"></a>详细信息  
@@ -49,7 +49,7 @@ ms.openlocfilehash: cd0e74bff29110f5483c7132ba989d9933e7e223
 |OSDDataImageIndex<br /><br /> (input)|指定应用于目标计算机上的映像的索引值。|  
 |OSDWipeDestinationPartition<br /><br /> (input)|指定是否删除位于目标分区上的文件。<br /><br /> 有效值：<br /><br /> **“true”** （默认值）<br /><br /> **“false”**|  
 
-###  <a name="a-namebkmkapplydriverpackagea-apply-driver-package-task-sequence-action-variables"></a><a name="BKMK_ApplyDriverPackage"></a>应用驱动程序包任务序列操作变量  
+###  <a name="a-namebkmkapplydriverpackagea-apply-driver-package-task-sequence-action-variables"></a><a name="BKMK_ApplyDriverPackage"></a> 应用驱动程序包任务序列操作变量  
  此操作的变量指定大容量存储驱动程序的安装信息以及是否要安装未签名的驱动程序。 有关与这些变量相关联的任务序列步骤的详细信息，请参阅[应用驱动程序包](task-sequence-steps.md#BKMK_ApplyDriverPackage)。  
 
 #### <a name="details"></a>详细信息  
@@ -93,7 +93,7 @@ ms.openlocfilehash: cd0e74bff29110f5483c7132ba989d9933e7e223
 |OSDInstallEditionIndex<br /><br /> (input)|指定安装的 Windows Vista 或更高版本操作系统的版本。 如果没有指定版本，Windows 安装程序将使用引用的产品密钥来确定安装哪个版本。<br /><br /> 如果以下条件成立，则仅使用零 (0) 值：<br /><br /> -   正在安装 Windows Vista 预装版操作系统<br />-   正在安装批量许可证版或更高版的 Windows Vista，没有指定产品秘钥。<br /><br /> 有效值：<br /><br /> **“0”** （默认）|  
 |OSDTargetSystemDrive (output)|指定包含操作系统文件的分区的驱动器号。|  
 
-###  <a name="a-namebkmkapplywindowssettingsa-apply-windows-settings-task-sequence-action-variables"></a><a name="BKMK_ApplyWindowsSettings"></a>应用 Windows 设置任务序列操作变量  
+###  <a name="a-namebkmkapplywindowssettingsa-apply-windows-settings-task-sequence-action-variables"></a><a name="BKMK_ApplyWindowsSettings"></a> 应用 Windows 设置任务序列操作变量  
  此操作的变量为目标计算机指定 Windows 设置，例如计算机名称、Windows 产品密钥、注册的用户和组织以及本地管理员密码。 有关与这些变量关联的任务序列步骤的详细信息，请参阅[应用 Windows 设置](task-sequence-steps.md#BKMK_ApplyWindowsSettings)。  
 
 #### <a name="details"></a>详细信息  
@@ -146,7 +146,7 @@ ms.openlocfilehash: cd0e74bff29110f5483c7132ba989d9933e7e223
 |OSDImageVersion<br /><br /> (input)|向捕获的操作系统映像分配的用户定义的版本号（可选）。 该版本号存储在 WIM 文件中。 此值可以为字母的任意组合（最大长度为 32 个字符）。|  
 |OSDTargetSystemRoot<br /><br /> (input)|指定引用计算机上已安装操作系统的 Windows 目录的路径。 此操作系统由 Configuration Manager 确认为可进行捕获的受支持操作系统。|  
 
-###  <a name="a-namebkmkcaptureuserstatea-capture-user-state-task-sequence-action-variables"></a><a name="BKMK_CaptureUserState"></a> 捕获获用户状态任务序列操作变量  
+###  <a name="a-namebkmkcaptureuserstatea-capture-user-state-task-sequence-action-variables"></a><a name="BKMK_CaptureUserState"></a> 捕获用户状态任务序列操作变量  
  此操作的变量指定用户状态迁移工具 (USMT) 使用的信息，例如保存用户状态的文件夹、USMT 的命令行选项以及用来控制捕获用户配置文件的配置文件。  有关与这些变量相关联的任务序列步骤的详细信息，请参阅[捕获用户状态](task-sequence-steps.md#BKMK_CaptureUserState)。  
 
 #### <a name="details"></a>详细信息  
@@ -188,7 +188,7 @@ ms.openlocfilehash: cd0e74bff29110f5483c7132ba989d9933e7e223
 |SMSConnectNetworkFolderPassword<br /><br /> (input)|指定用于连接到网络共享的网络密码。|  
 |SMSConnectNetworkFolderPath<br /><br /> (input)|指定连接的网络路径。<br /><br /> 例如：<br /><br /> **"\\\servername\sharename"**|  
 
-###  <a name="a-namebkmkconvertdiska-convert-disk-to-dynamic-task-sequence-action-variables"></a><a name="BKMK_ConvertDisk"></a>将磁盘转换为动态磁盘任务序列操作变量  
+###  <a name="a-namebkmkconvertdiska-convert-disk-to-dynamic-task-sequence-action-variables"></a><a name="BKMK_ConvertDisk"></a> 将磁盘转换为动态磁盘任务序列操作变量  
  此操作的变量指定要从基本磁盘转换到动态磁盘的物理磁盘的编号。 有关与这些变量相关联的任务序列步骤的详细信息，请参阅[将磁盘转换为动态磁盘](task-sequence-steps.md#BKMK_ConvertDisktoDynamic)。  
 
 #### <a name="details"></a>详细信息  
@@ -207,7 +207,7 @@ ms.openlocfilehash: cd0e74bff29110f5483c7132ba989d9933e7e223
 |OSDBitLockerRecoveryPassword<br /><br /> (input)|“启用 BitLocker”  任务序列操作使用指定的值作为恢复密码，而不是生成随机恢复密码。 此值必须是有效的数字 BitLocker 恢复密码。|  
 |OSDBitLockerStartupKey<br /><br /> (input)|“启用 BitLocker”任务序列操作使用受信任的平台模块 (TPM) 作为启动密钥，而不是为密钥管理选项“仅 USB 上的启动密钥” 生成随机启动密钥。 此值必须是一个有效的 256 位 Base-64 编码的 BitLocker 启动密钥。|  
 
-###  <a name="a-namebkmkformatpartitiondiska-format-and-partition-disk-task-sequence-action-variables"></a><a name="BKMK_FormatPartitionDisk"></a> 对磁盘进行格式化和分区的任务序列操作变量  
+###  <a name="a-namebkmkformatpartitiondiska-format-and-partition-disk-task-sequence-action-variables"></a><a name="BKMK_FormatPartitionDisk"></a> 格式化磁盘并分区任务序列操作变量  
  此操作的变量为针对物理磁盘进行格式化和分区指定信息，例如磁盘编号以及分区设置的数组。 有关与这些变量相关联的任务序列步骤的详细信息，请参阅[格式化磁盘并分区](task-sequence-steps.md#BKMK_FormatandPartitionDisk)。  
 
 #### <a name="details"></a>详细信息  
@@ -220,7 +220,7 @@ ms.openlocfilehash: cd0e74bff29110f5483c7132ba989d9933e7e223
 |OSDPartitions<br /><br /> (input)|指定一个分区设置数组；有关在任务序列变量环境中访问数组变量的信息，请参阅 SDK 主题。<br /><br /> 此任务序列变量是一个数组变量。 数组中的每个元素都代表硬盘上单个分区的设置。 通过将数组变量名称与基于零的磁盘分区号及属性名称组合，可以访问为每个分区定义的设置。<br /><br /> 例如，以下变量名称可用于为将由此任务序列操作在硬盘上创建的第一个分区定义属性：<br /><br /> - **OSDPartitions0Type** - 指定分区的类型。 这是必需的属性。 有效值有“主要”、“扩展”、“逻辑”以及“隐藏”。<br />-   **OSDPartitions0FileSystem** - 指定格式化分区时使用的文件系统类型。 这是可选属性；如果未指定任何文件系统，将不会格式化该分区。 有效值有“**FAT32**”和“**NTFS**”。<br />-   **OSDPartitions0Bootable** - 指定分区是否可引导。 这是必需的属性。 如果 MBR 磁盘的该值设置为“**TRUE**”，这将成为活动分区。<br />-   **OSDPartitions0QuickFormat** - 指定使用的格式类型。 这是必需的属性。 如果该值设置为“**TRUE**”，将执行快速格式化，否则将执行完全格式化。<br />-   **OSDPartitions0VolumeName** - 指定格式化时分配给该卷的名称。 这是一个可选属性。<br />-   **OSDPartitions0Size** - 指定分区的大小。 单位由 **OSDPartitions0SizeUnits** 变量指定。 这是一个可选属性。 如果未指定此属性，将使用所有剩余可用空间来创建分区。<br />-   **OSDPartitions0SizeUnits** - 指定解释 **OSDPartitions0Size** 任务序列变量时将使用的单位。 这是一个可选属性。 有效值有“**MB**”（默认值）、“**GB**”和“**百分比**”。<br />-   **OSDPartitions0VolumeLetterVariable** - 创建分区后，分区将始终使用 Windows PE 中的下一可用驱动器号。 使用此可选属性来指定另一任务序列变量的名称，该变量将用来保存新驱动器号，供将来参考。<br /><br /> <br /><br /> 如果将使用此任务序列操作定义多个分区，则第二个分区的属性可以使用变量名称中的下标来定义；例如， **OSDPartitions1Type**、 **OSDPartitions1FileSystem**、 **OSDPartitions1Bootable**、 **OSDPartitions1QuickFormat**和 **OSDPartitions1VolumeName** 等。|  
 |OSDPartitionStyle<br /><br /> (input)|指定对磁盘进行分区时使用的分区类型。 “**MBR**”表示主启动记录分区形式，“**GPT**”表示 GUID 分区表形式。<br /><br /> 有效值：<br /><br /> **“GPT”**<br /><br /> **“MBR”**|  
 
-###  <a name="a-namebkmkinstallsoftwareupdatesa-install-software-updates-task-sequence-action-variables"></a><a name="BKMK_InstallSoftwareUpdates"></a>安装软件更新任务序列操作变量  
+###  <a name="a-namebkmkinstallsoftwareupdatesa-install-software-updates-task-sequence-action-variables"></a><a name="BKMK_InstallSoftwareUpdates"></a> 安装软件更新任务序列操作变量  
  此操作的变量指定是否安装所有的更新或仅安装必备更新。 有关与这些变量相关联的任务序列步骤的详细信息，请参阅[安装软件更新](task-sequence-steps.md#BKMK_InstallSoftwareUpdates)。  
 
 #### <a name="details"></a>详细信息  
@@ -244,7 +244,7 @@ ms.openlocfilehash: cd0e74bff29110f5483c7132ba989d9933e7e223
 |OSDJoinType<br /><br /> (input)|指定目标计算机是否加入 Windows 域或工作组。 若要将目标计算机加入到 Windows 域中，请指定“**0**”。 若要将目标计算机加入到工作组中，请指定“**1**”。<br /><br /> 有效值：<br /><br /> **"0"**<br /><br /> **"1"**|  
 |OSDJoinWorkgroupName<br /><br /> (input)|指定目标计算机加入的工作组的名称。 工作组的名称长度必须介于 1 到 32 个字符之间。<br /><br /> 例如：<br /><br /> **“计帐”**|  
 
-###  <a name="a-namebkmkpreparewindowscapturea-prepare-windows-for-capture-task-sequence-action-variables"></a><a name="BKMK_PrepareWindowsCapture"></a> 捕获Windows 准备任务序列操作变量  
+###  <a name="a-namebkmkpreparewindowscapturea-prepare-windows-for-capture-task-sequence-action-variables"></a><a name="BKMK_PrepareWindowsCapture"></a> 为捕获任务序列操作变量准备 Windows  
  此操作的变量指定用于从目标计算机捕获 Windows 操作系统的信息。 有关与这些变量相关联的任务序列步骤的详细信息，请参阅[准备 ConfigMgr 客户端以便捕获](task-sequence-steps.md#BKMK_PrepareConfigMgrClientforCapture)。  
 
 #### <a name="details"></a>详细信息  

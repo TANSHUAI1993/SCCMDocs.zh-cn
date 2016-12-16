@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: d22f29ad5c5d193e387bd172899902cc1604c8a0
+ms.sourcegitcommit: 783fb4d61aab83ad64b9cec332e90d6c9de59f47
+ms.openlocfilehash: b1ed3011356a794b7b0913a1c8f189230d8957b2
 
 
 ---
@@ -26,7 +26,10 @@ ms.openlocfilehash: d22f29ad5c5d193e387bd172899902cc1604c8a0
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-安装新的 System Center Configuration Manager 层次结构的第一个站点前，应该先了解 Configuration Manager 的可用拓扑、站点的可用类型及其彼此之间的关系以及每个站点类型提供的管理范围。 然后，在考虑了可减少需安装的站点数的内容管理选项后，可以计划能够高效地为你的当前业务需求提供服务，并且可之后进行拓展以满足将来增长的需求的拓扑。  
+安装新的 System Center Configuration Manager 层次结构的第一个站点前，应该先了解 Configuration Manager 的可用拓扑、站点的可用类型及其彼此之间的关系以及每个站点类型提供的管理范围。 然后，在考虑了可减少需安装的站点数的内容管理选项后，可以计划能够高效地为当前业务需求提供服务，并且可之后进行拓展以满足将来增长的需求的拓扑。  
+
+> [!NOTE]
+> 在计划安装新的 Configuration Manager 时，请熟悉[发行说明]( /sccm/core/servers/deploy/install/release-notes)，其中详细说明了活动版本中的当前问题。 此发行说明适用于 Configuration Manager 的所有分支。  但是，当使用[技术预览版分支]( /sccm/core/get-started/technical-preview)时，你将在每个版本的技术预览版文档中发现仅特定于该分支的问题。  
 
 ##  <a name="a-namebkmktopologya-hierarchy-topology"></a><a name="bkmk_topology"></a> 层次结构拓扑  
  层次结构拓扑的范围从单一独立主站点一直到一组连接的主要和辅助站点，该组站点在层次结构顶级（顶层）站点处具有管理中心站点。    
@@ -55,7 +58,7 @@ ms.openlocfilehash: d22f29ad5c5d193e387bd172899902cc1604c8a0
 
  下列部分可帮助你理解何时使用特定站点或内容管理选项来替代其他站点。  
 
-##  <a name="a-namebkmkchoosecasa-determine-when-to-use-a-central-administration-site"></a><a name="BKMK_ChooseCAS"></a> 确定何时使用管理中心站点  
+##  <a name="a-namebkmkchoosecasa-determine-when-to-use-a-central-administration-site"></a><a name="BKMK_ChooseCAS"></a>确定何时使用管理中心站点  
  使用管理中心站点配置层次结构范围设置，以及监视层次结构中的所有站点和对象。 此站点类型不直接管理客户端，但它可协调站点间数据复制，其中包括整个层次结构中的站点和客户端的配置。  
 
 **以下信息可帮助你决定何时安装管理中心站点：**  
@@ -80,7 +83,7 @@ ms.openlocfilehash: d22f29ad5c5d193e387bd172899902cc1604c8a0
 
 -   你可以配置文件复制和数据库复制来控制层次结构中站点之间的通信。 这包括计划站点数据的数据库复制，以及管理用于站点之间基于文件的数据传输的带宽。  
 
-##  <a name="a-namebkmkchoosepriimarya-determine-when-to-use-a-primary-site"></a><a name="BKMK_ChoosePriimary"></a> 确定何时使用主站点  
+##  <a name="a-namebkmkchoosepriimarya-determine-when-to-use-a-primary-site"></a><a name="BKMK_ChoosePriimary"></a>确定何时使用主站点  
  使用主站点来管理客户端。 你可以在管理中心站点下面安装主站点以作为子主站点，也可以作为新层次结构的第一个站点。 安装为层次结构的第一个站点的主站点将创建独立主站点。 子主站点和独立主站点均支持辅助站点作为主站点的子站点。  
 
  出于以下任何原因而考虑使用主站点：  
@@ -106,7 +109,7 @@ ms.openlocfilehash: d22f29ad5c5d193e387bd172899902cc1604c8a0
 
 -   主站点使用数据库复制与其管理中心站点（在安装新站点时会自动配置）直接通信  
 
-##  <a name="a-namebkmkchoosesecondarya-determine-when-to-use-a-secondary-site"></a><a name="BKMK_ChooseSecondary"></a> 确定何时使用辅助站点  
+##  <a name="a-namebkmkchoosesecondarya-determine-when-to-use-a-secondary-site"></a><a name="BKMK_ChooseSecondary"></a>确定何时使用辅助站点  
  使用辅助站点管理跨低带宽网络的部署内容和客户端数据传输。  
 
  你可从管理中心站点或辅助站点的直接父主站点管理辅助站点。 辅助站点必须连接到主站点，并且你无法在不卸载这些辅助站点的情况下将它们移至不同的父站点，然后在新的主站点下将它们作为子站点重新安装。 但是，你可以在两个对等辅助站点之间进行内容路由，以便于管理部署内容的基于文件的复制。 为将客户端数据传输到主站点，辅助站点将使用基于文件的复制。 辅助站点还使用数据库复制与其父主站点进行通信。  
@@ -115,11 +118,11 @@ ms.openlocfilehash: d22f29ad5c5d193e387bd172899902cc1604c8a0
 
 -   你不需要用于管理用户的本地连接点  
 
--   你必须管理指向层次结构中较低级别站点的部署内容传输  
+-   必须管理指向层次结构中较低级别站点的部署内容传输  
 
--   你必须管理发送到层次结构中较高级别站点的客户端信息  
+-   必须管理发送到层次结构中较高级别站点的客户端信息  
 
- 如果不希望安装辅助站点，并具有位于远程位置的客户端，请考虑使用 Windows BranchCache 或安装已为带宽控制和计划而启用的分发点。 你可以使用以下具有或不具有辅助站点的内容管理选项，并且它们可以帮助你减少必须安装的站点和服务器数量。 有关 Configuration Manager 中内容管理选项的信息，请参阅[确定何时使用内容管理选项](#BKMK_ChooseSecondaryorDP)。  
+ 如果不希望安装辅助站点，并具有位于远程位置的客户端，请考虑使用 Windows BranchCache 或安装已为带宽控制和计划而启用的分发点。 可以使用以下具有或不具有辅助站点的内容管理选项，并且它们可以帮助减少必须安装的站点和服务器数量。 有关 Configuration Manager 中内容管理选项的信息，请参阅[确定何时使用内容管理选项](#BKMK_ChooseSecondaryorDP)。  
 
 
 **以下信息帮助你决定何时安装辅助站点：**  
@@ -134,7 +137,7 @@ ms.openlocfilehash: d22f29ad5c5d193e387bd172899902cc1604c8a0
 
 -   辅助站点安装将自动部署位于辅助站点服务器的管理点和分发点  
 
-##  <a name="a-namebkmkchoosesecondaryordpa-determine-when-to-use-content-management-options"></a><a name="BKMK_ChooseSecondaryorDP"></a> 确定何时使用内容管理选项  
+##  <a name="a-namebkmkchoosesecondaryordpa-determine-when-to-use-content-management-options"></a><a name="BKMK_ChooseSecondaryorDP"></a>确定何时使用内容管理选项  
  如果你具有设在远程网络位置的客户端，请考虑使用一个或多个内容管理选项而非一个主站点或辅助站点。 当你使用 Windows BranchCache、配置带宽控制分发点或手动将内容复制到分发点（预留内容）时，通常可以消除安装另一站点的需要。  
 
 
@@ -146,7 +149,7 @@ ms.openlocfilehash: d22f29ad5c5d193e387bd172899902cc1604c8a0
 
  有关 Configuration Manager 中内容管理选项的详细信息，请参阅 [System Center Configuration Manager 中内容管理的基本概念](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)。  
 
-##  <a name="a-namebkmkbeyonda-beyond-hierarchy-topology"></a><a name="bkmk_beyond"></a> 除层次结构拓扑之外  
+##  <a name="a-namebkmkbeyonda-beyond-hierarchy-topology"></a><a name="bkmk_beyond"></a>除层次结构拓扑之外  
  除了初始层次结构拓扑外，还需考虑不同站点的哪些服务或功能将可用（站点系统角色），以及如何在基础结构中管理层次结构范围的配置和功能。 以下为更为常见的注意事项，并会在单独主题中介绍。 应考虑以下内容，因为它们可影响层次结构设计或受层次结构设计影响：  
 
 -   当你准备[使用 System Center Configuration Manager 管理计算机和设备](/sccm/core/clients/manage/manage-clients)时，请考虑所管理的设备是否驻留在本地、在云中或包含用户拥有的设备 (BYOD)。  此外，请考虑如何管理多个管理选项支持的设备，如可以直接通过 Configuration Manager 或通过与 Microsoft Intune 进行集成管理的 Windows 10 计算机。  

@@ -46,7 +46,7 @@ Configuration Manager 的每个版本都支持特定版本的 Windows 评估和�
 
      例如，如果具有 Configuration Manager，则可以利用 Configuration Manager 控制台自定义适用于 Windows 10 的 Windows ADK 中的启动映像（基于 Windows PE 10）。 但是，当支持基于 Windows PE 5 的启动映像时，你必须在不同的计算机中自定义它们，并使用随适用于 Windows 8 的 Windows ADK 一起安装的 DISM 版本。 然后，可以向 Configuration Manager 控制台添加启动映像。  
 
- 本主题中的过程演示如何使用以下 Windows PE 包将 Configuration Manager 所需的可选组件添加到启动映像中：  
+ 本主题中的过程演示如何使用以下 Windows PE 包将 Configuration Manager 所需的可选组件添加到启动映像中：  
 
 -   **WinPE-WMI**：添加 Windows Management Instrumentation (WMI) 支持。  
 

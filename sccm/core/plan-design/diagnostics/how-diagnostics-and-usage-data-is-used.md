@@ -43,7 +43,7 @@ ms.openlocfilehash: 68e2a6b5baeaf9ab9e74e771bbc3d755d1388779
 
 -   基于可用的数据（如功能使用情况或地理位置（时区））进行广告  
 
-##  <a name="a-namebkmkimprovea-examples-of-how-diagnostics-and-usage-data-is-improving-the-product"></a><a name="bkmk_improve"></a>诊断和使用情况数据如何改进产品的示例  
+##  <a name="a-namebkmkimprovea-examples-of-how-diagnostics-and-usage-data-is-improving-the-product"></a><a name="bkmk_improve"></a> 诊断和使用情况数据如何改进产品的示例  
 Microsoft 使用可用数据来改进产品。 以下是如何进行改进的几个示例：  
 
 -   **修订了对较旧服务器操作系统的支持：**  

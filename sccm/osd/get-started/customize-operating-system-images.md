@@ -28,10 +28,10 @@ ms.openlocfilehash: e7e0ecf394297799c2a3d0c14e719182b403e1e8
 
 System Center Configuration Manager 中的操作系统映像是 WIM 文件，并且表示在计算机上成功安装和配置操作系统所需的参考文件和文件夹的压缩集合。 自定义操作系统映像是通过一台引用计算机构建和捕获的。在该计算机上，你配置了所有必需的操作系统文件、支持文件、软件更新、工具和其他软件应用。 由你决定将引用计算机手动配置到何种程度。 你可以通过使用构建和捕获任务序列完全自动完成配置引用计算机的过程，可以手动配置引用计算机的某些方面然后使用任务序列自动完成其余配置，或者可以在不使用任务序列的情况下手动配置引用计算机。 使用以下部分自定义操作系统。
 
-##  <a name="a-namebkmkpreparereferencecomputera-prepare-for-the-reference-computer"></a><a name="BKMK_PrepareReferenceComputer"></a> 准备引用计算机  
+##  <a name="a-namebkmkpreparereferencecomputera-prepare-for-the-reference-computer"></a><a name="BKMK_PrepareReferenceComputer"></a>准备引用计算机  
  在你使用从引用计算机捕获操作系统映像之前，有一些事项需要注意。  
 
-###  <a name="a-namebkmkrefcomputerdecidea-decide-between-an-automated-or-manual-configuration"></a><a name="BKMK_RefComputerDecide"></a> 在自动或手动配置之间作出决定  
+###  <a name="a-namebkmkrefcomputerdecidea-decide-between-an-automated-or-manual-configuration"></a><a name="BKMK_RefComputerDecide"></a>在自动或手动配置之间作出决定  
  下面概述了引用计算机的自动和手动配置的优点和缺点。  
 
 #### <a name="automated-configuration"></a>自动配置  
@@ -66,7 +66,7 @@ System Center Configuration Manager 中的操作系统映像是 WIM 文件，并
 
 -   需要有人员主动参与整个过程。  
 
-###  <a name="a-namebkmkrefcomputerconsiderationsa-considerations-for-the-reference-computer"></a><a name="BKMK_RefComputerConsiderations"></a> 引用计算机的注意事项  
+###  <a name="a-namebkmkrefcomputerconsiderationsa-considerations-for-the-reference-computer"></a><a name="BKMK_RefComputerConsiderations"></a>引用计算机的注意事项  
  下面列出了在配置引用计算机时要考虑的基本项目。  
 
 -   **要部署的操作系统**  
@@ -110,7 +110,7 @@ System Center Configuration Manager 中的操作系统映像是 WIM 文件，并
 
      你可以使用要在从引用计算机中捕获操作系统映像时包括的桌面自定义属性来配置引用计算机。 桌面属性包括墙纸、组织外观方案和标准默认用户配置文件。  
 
-##  <a name="a-namebkmkmanuallybuildreferencea-manually-build-a-reference-computer"></a><a name="BKMK_ManuallyBuildReference"></a> 手动构建引用计算机  
+##  <a name="a-namebkmkmanuallybuildreferencea-manually-build-a-reference-computer"></a><a name="BKMK_ManuallyBuildReference"></a>手动构建引用计算机  
  使用以下过程来手动构建引用计算机。  
 
 > [!NOTE]  
@@ -133,7 +133,7 @@ System Center Configuration Manager 中的操作系统映像是 WIM 文件，并
 
  引用计算机准备就绪之后，使用任务序列从引用计算机捕获操作系统映像。  有关详细步骤，请参阅 [从现有引用计算机中捕获操作系统映像](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md#BKMK_CaptureExistingRefComputer)。  
 
-##  <a name="a-namebkmkusetstobuildreferencea-use-a-task-sequence-to-build-a-reference-computer"></a><a name="BKMK_UseTSToBuildReference"></a> 使用任务序列构建引用计算机  
+##  <a name="a-namebkmkusetstobuildreferencea-use-a-task-sequence-to-build-a-reference-computer"></a><a name="BKMK_UseTSToBuildReference"></a>使用任务序列构建引用计算机  
  你可以通过使用任务序列自动执行创建引用计算机的过程以部署操作系统、驱动程序、应用程序等。  使用以下步骤构建引用计算机，然后从引用计算机捕获操作系统映像。  
 
 -   使用任务序列构建和捕获引用计算机中的操作系统映像。  有关详细步骤，请参阅 [Use a task sequence to build and capture a reference computer](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md#BKMK_BuildCaptureTS)。  

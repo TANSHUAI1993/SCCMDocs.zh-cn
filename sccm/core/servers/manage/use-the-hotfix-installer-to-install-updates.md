@@ -33,7 +33,7 @@ System Center Configuration Manager 的某些更新无法从 Microsoft 云服务
 > [!NOTE]  
 >  本主题提供有关如何安装更新 System Center Configuration Manager 的修补程序的常规指导。 有关特定更新的详细信息，请参阅 Microsoft 支持上该更新的相应知识库 (KB) 文章。  
 
-##  <a name="a-namebkmkoverviewa-overview-of-hotfixes-for-configuration-manager"></a><a name="bkmk_Overview"></a>Configuration Manager 修补程序概述  
+##  <a name="a-namebkmkoverviewa-overview-of-hotfixes-for-configuration-manager"></a><a name="bkmk_Overview"></a> Configuration Manager 修补程序概述  
  Configuration Manager 的修补程序类似于其他 Microsoft 产品（例如 SQL Server）的修补程序，包含一个单独的修复程序或一个捆绑包（多个修复程序的汇总），如 Microsoft 知识库文章中所述。  
 
  单独的更新包含针对特定版本 Configuration Manager 的修补程序的单个重点更新。  
@@ -101,7 +101,7 @@ System Center Configuration Manager 的某些更新无法从 Microsoft 云服务
 |&lt;更新类型\>|这些是 Configuration Manager 的更新类型。 向导会为更新捆绑中包含的每种更新类型创建一个单独的文件夹。 文件夹名称表示更新类型。 它们包括以下内容：<br /><br /> **服务器**：包括对站点服务器、站点数据库服务器和运行 SMS 提供程序的计算机的更新。<br /><br /> **客户端**：包括对 Configuration Manager 客户端的更新。<br /><br /> **AdminConsole**：包括对 Configuration Manager 客户端的更新<br /><br /> 除了上述更新类型之外，向导还会创建一个名为 **SCUP**的文件夹。 此文件夹并不表示更新类型，而是包含更新发布服务器的 .cab 文件。|  
 |&lt;平台\>|这是特定于平台的文件夹。 它包含特定于处理器类型的更新文件。  这些文件夹包括：<br /><br />- x64<br /><br /> - I386|  
 
-##  <a name="a-namebkmkinstalla-how-to-install-updates"></a><a name="bkmk_Install"></a>如何安装更新  
+##  <a name="a-namebkmkinstalla-how-to-install-updates"></a><a name="bkmk_Install"></a> 如何安装更新  
  要安装更新，必须首先在站点服务器上安装更新捆绑。 安装更新捆绑时，会为该更新启动安装向导。 此向导将执行以下操作：  
 
 -   提取更新文件  
@@ -127,7 +127,7 @@ System Center Configuration Manager 的某些更新无法从 Microsoft 云服务
 
  使用下列各部分中的信息在 Configuration Manager 的每个组件上安装更新。  
 
-###  <a name="a-namebkmkserversa-update-servers"></a><a name="bkmk_servers"></a>更新服务器  
+###  <a name="a-namebkmkserversa-update-servers"></a><a name="bkmk_servers"></a> 更新服务器  
  服务器更新可能包括**站点**、**站点数据库**和运行 **SMS 提供程序**实例的计算机的更新：  
 
 ####  <a name="a-namebkmksitea-update-a-site"></a><a name="bkmk_site"></a>更新站点  
@@ -200,7 +200,7 @@ System Center Configuration Manager 的某些更新无法从 Microsoft 云服务
 
 例如，可以使用下列命令行来更新 Configuration Manager 控制台。 此命令行在客户端计算机上运行 MSIEXEC，并且引用更新捆绑在站点服务器上提取的 .msp 文件：**msiexec.exe /p \\\\&lt;ServerName\>\SMS_&lt;SiteCode\>\Hotfix\\&lt;KB Number\>\AdminConsole\\&lt;Platform\>\\&lt;msp\> /L\*v &lt;logfile\>REINSTALLMODE=mous REINSTALL=ALL**  
 
-##  <a name="a-namebkmkdeploya-deploy-updates-for-configuration-manager"></a><a name="BKMK_Deploy"></a>为 Configuration Manager 部署更新  
+##  <a name="a-namebkmkdeploya-deploy-updates-for-configuration-manager"></a><a name="BKMK_Deploy"></a> 为 Configuration Manager 部署更新  
  在站点服务器上安装了更新捆绑之后，可以通过以下三种方法之一将更新部署到其他计算机。  
 
 ###  <a name="a-namebkmkdeployscupa-use-updates-publisher-2011-to-install-updates"></a><a name="BKMK_DeploySCUP"></a>使用 Updates Publisher 2011 安装更新  

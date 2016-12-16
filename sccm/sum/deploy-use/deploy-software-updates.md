@@ -34,7 +34,7 @@ ms.openlocfilehash: b9e922c526750a04b3b7b7b24106fcb8900e73fa
 
 部署软件更新有两个主要方案：手动部署和自动部署。 通常，首先会手动部署软件更新以为客户端计算机创建基线，然后将通过使用自动部署来管理客户端上的软件更新。  
 
-## <a name="a-namebkmkmanualdeploymenta-manually-deploy-software-updates"></a><a name="BKMK_ManualDeployment"></a> 手动部署软件更新
+## <a name="a-namebkmkmanualdeploymenta-manually-deploy-software-updates"></a><a name="BKMK_ManualDeployment"></a>手动部署软件更新
 可以在 Configuration Manager 控制台中选择软件更新并手动启动部署过程。 在创建将管理进行中的每月软件更新部署的自动部署规则之前，你通常将使用此部署方法以用所需的软件更新使客户端计算机保持最新，并部署带外软件更新要求。 以下列表提供手动部署软件更新的一般工作流：  
 
 1. 使用特定要求的软件更新的筛选。 例如，你可以提供条件，以检索在 50 多台客户端设备上所需要的所有安全或严重软件更新。  

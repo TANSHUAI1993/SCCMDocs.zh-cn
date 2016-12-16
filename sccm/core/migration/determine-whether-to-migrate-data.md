@@ -48,7 +48,7 @@ ms.openlocfilehash: 9f18dbe2fb8e8d192a29d028673a907d6f85c07c
 
 -   [不可迁移到 System Center Configuration Manager 的数据](#Cannot_migrate)  
 
-##  <a name="a-namecanmigratea-data-that-you-can-migrate-to-system-center-configuration-manager"></a><a name="Can_Migrate"></a> 可迁移到 System Center Configuration Manager 的数据  
+##  <a name="a-namecanmigratea-data-that-you-can-migrate-to-system-center-configuration-manager"></a><a name="Can_Migrate"></a>可迁移到 System Center Configuration Manager 的数据  
  迁移可从支持的 Configuration Manager 层次结构之间迁移大多数对象。 必须对从支持的 Configuration Manager 2007 版本中迁移的某些对象实例进行修改，以符合 System Center 2012 Configuration Manager 架构和对象格式。 这些修改不影响源站点数据库中的数据。 从受支持版本的 System Center 2012 Configuration Manager 或 System Center Configuration Manager 迁移的对象无需修改。  
 
  下面是基于源层次结构中的 Configuration Manager 版本可迁移的对象。 某些对象（与查询）不会迁移。 如果要继续使用这些不迁移的对象，你必须在新层次结构中重新创建它们。 当你在新层次结构中管理客户端时，会在该层次结构中自动重新创建其他对象（包括某些客户端数据）。  
@@ -157,7 +157,7 @@ ms.openlocfilehash: 9f18dbe2fb8e8d192a29d028673a907d6f85c07c
 
 -   虚拟应用程序包  
 
-##  <a name="a-namecannotmigratea-data-that-you-cannot-migrate-to-system-center-configuration-manager"></a><a name="Cannot_migrate"></a> 不可迁移到 System Center Configuration Manager 的数据  
+##  <a name="a-namecannotmigratea-data-that-you-cannot-migrate-to-system-center-configuration-manager"></a><a name="Cannot_migrate"></a>不可迁移到 System Center Configuration Manager 的数据  
  你无法迁移下列类型的对象：  
 
 -   AMT 客户端设置信息  

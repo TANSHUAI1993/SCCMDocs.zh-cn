@@ -16,8 +16,8 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 5c6cf3c1697b49708aa5192b67b08b700da7dc72
-ms.openlocfilehash: 43d67aa664037c6da83260d5ada8e574510a8f7b
+ms.sourcegitcommit: 6cd640085e90b2945326e3fa942ae9bd7b8f7e24
+ms.openlocfilehash: 2550fef062b5ef508e4c0492a5a9c63ffcb9084a
 
 ---
 # <a name="predeclare-devices-with-imei-or-ios-serial-numbers"></a>预声明具有 IMEI 或 iOS 序列号的设备

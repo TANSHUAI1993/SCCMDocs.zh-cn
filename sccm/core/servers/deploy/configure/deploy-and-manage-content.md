@@ -26,7 +26,7 @@ ms.openlocfilehash: c6bf461a762b8aa51678a17cb7b294c803d05f37
 
 为 System Center Configuration Manager 安装分发点之后，可以开始将内容部署到它们。 通常，内容会在网络上传输到分发点，但是可以通过其他选项使内容到达分发点。 内容传输到分发点之后，可以在分发点上更新、重新分发、删除和验证该内容。  
 
-##  <a name="a-namebkmkdistributea-distribute-content"></a><a name="bkmk_distribute"></a> 分发内容  
+##  <a name="a-namebkmkdistributea-distribute-content"></a><a name="bkmk_distribute"></a>分发内容  
  通常会将内容分发到分发点，以便客户端计算机可以使用。 （对特定部署使用按需内容分发时例外。）分发内容时，Configuration Manager 将内容文件存储在包中，然后将包分发到分发点。 可以分发的内容类型包括：  
 
 -   应用程序部署类型  
@@ -105,7 +105,7 @@ ms.openlocfilehash: c6bf461a762b8aa51678a17cb7b294c803d05f37
 
 9. “确认”  页显示是否已成功将内容分配到分发点。 要监视内容分发，请参阅[使用 System Center Configuration Manager 监视分发的内容](../../../../core/servers/deploy/configure/monitor-content-you-have-distributed.md)。  
 
-##  <a name="a-namebkmkprestagea-use-prestaged-content"></a><a name="bkmk_prestage"></a> 使用预安排内容  
+##  <a name="a-namebkmkprestagea-use-prestaged-content"></a><a name="bkmk_prestage"></a>使用预安排内容  
  你可以预留应用程序和包类型的内容文件：  
 
 -   在 Configuration Manager 控制台中，选择需要的内容，然后使用“创建预留的内容文件向导”创建压缩的预安排内容文件，其中包含所选内容的文件和关联的元数据。  
@@ -130,7 +130,7 @@ ms.openlocfilehash: c6bf461a762b8aa51678a17cb7b294c803d05f37
 
 使用下列部分来预留内容。  
 
-###  <a name="a-namebkmkcreateprestagedcontentfilea-step-1-create-a-prestaged-content-file"></a><a name="BKMK_CreatePrestagedContentFile"></a> 步骤 1：创建预留的内容文件  
+###  <a name="a-namebkmkcreateprestagedcontentfilea-step-1-create-a-prestaged-content-file"></a><a name="BKMK_CreatePrestagedContentFile"></a>步骤 1：创建预留的内容文件  
  你可以创建压缩的预安排内容文件，其中包含在 Configuration Manager 控制台中选择的内容的文件和关联的元数据。 使用以下过程创建预留的内容文件。  
 
 ##### <a name="to-create-a-prestaged-content-file"></a>创建预留的内容文件  
@@ -176,7 +176,7 @@ ms.openlocfilehash: c6bf461a762b8aa51678a17cb7b294c803d05f37
 
 11. 在“完成”  页上，验证是否已成功创建了预留的内容文件，然后单击“关闭” 。  
 
-###  <a name="a-namebkmkassigncontenttodistributionpointa-step-2-assign-the-content-to-distribution-points"></a><a name="BKMK_AssignContentToDistributionPoint"></a> 步骤 2：将内容分配到分发点  
+###  <a name="a-namebkmkassigncontenttodistributionpointa-step-2-assign-the-content-to-distribution-points"></a><a name="BKMK_AssignContentToDistributionPoint"></a>步骤 2：将内容分配到分发点  
  预留内容文件后，请将内容分配到分发点。  
 
 > [!NOTE]  
@@ -238,7 +238,7 @@ ms.openlocfilehash: c6bf461a762b8aa51678a17cb7b294c803d05f37
 
 9. “确认”  页显示是否已成功将内容分配到分发点。 要监视内容分发，请参阅[使用 System Center Configuration Manager 监视分发的内容](../../../../core/servers/deploy/configure/monitor-content-you-have-distributed.md)。  
 
-###  <a name="a-namebkmkexportcontentfromprestagedcontentfilea-step-3-extract-the-content-from-the-prestaged-content-file"></a><a name="BKMK_ExportContentFromPrestagedContentFile"></a> 步骤 3：从预安排内容文件中提取内容  
+###  <a name="a-namebkmkexportcontentfromprestagedcontentfilea-step-3-extract-the-content-from-the-prestaged-content-file"></a><a name="BKMK_ExportContentFromPrestagedContentFile"></a>步骤 3：从预留内容文件中提取内容  
  创建预留内容文件并将内容分配到分发点之后，你可以将内容文件提取到站点服务器或分发点上的内容库。 通常，你已将预留内容文件复制到便携式驱动器（例如 USB 驱动器）或将内容刻录到媒体（例如 DVD），并使其在需要内容的站点服务器或分发点的位置中可用。  
 
  使用以下过程，通过“提取内容”命令行工具从预留内容文件中手动导出内容文件。  
@@ -279,7 +279,7 @@ ms.openlocfilehash: c6bf461a762b8aa51678a17cb7b294c803d05f37
     >   
     > Configuration Manager 不会自动将包版本 2 分发到分发点。 你必须创建包含新文件版本的新预留内容文件，然后提取内容，更新分发点以分发已更改的文件，或者重新分发包中的所有文件。  
 
-###  <a name="a-namebkmkdpsiteservera-how-to-prestage-content-on-a-distribution-point-on-a-site-server"></a><a name="bkmk_dpsiteserver"></a> 如何在站点服务器上的分发点上预留内容  
+###  <a name="a-namebkmkdpsiteservera-how-to-prestage-content-on-a-distribution-point-on-a-site-server"></a><a name="bkmk_dpsiteserver"></a>如何在站点服务器上的分发点上预留内容  
  当在站点服务器上安装分发点时，必须使用以下过程来成功预留内容。 这是因为内容库中已存在这些内容文件。  
 
  如果没有为预安排内容启用分发点，或者如果分发点不在站点服务器上，请参阅本主题中的[使用预安排内容](#bkmk_prestage)部分。  
@@ -305,7 +305,7 @@ ms.openlocfilehash: c6bf461a762b8aa51678a17cb7b294c803d05f37
     > [!NOTE]  
     >  如果分发点位于辅助站点上，则等待至少 10 分钟，然后使用连接到父主站点的 Configuration Manager 控制台将内容分配到辅助站点上的分发点。  
 
-##  <a name="a-namebkmkmanagea-manage-the-content-you-have-distributed"></a><a name="bkmk_manage"></a> 管理已分发的内容  
+##  <a name="a-namebkmkmanagea-manage-the-content-you-have-distributed"></a><a name="bkmk_manage"></a>管理已分发的内容  
  你具有以下用于管理内容的选项：  
 
 **更新内容：**当通过添加新文件或使用较新版本替换现有文件更新了部署的源文件位置时，你可以使用“更新分发点”或“更新内容”操作更新分发点上的内容文件：  

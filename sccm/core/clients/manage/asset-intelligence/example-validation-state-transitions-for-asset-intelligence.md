@@ -28,14 +28,14 @@ ms.openlocfilehash: 72b6c4273c2e9f82b8b30501ad44a1e7985e6d86
 
 System Center Configuration Manager 中的资产智能验证状态不是静态的，可能会因执行的管理操作而变化，这些操作会影响存储在资产智能目录中的数据。 此主题提供了可能的验证状态转换的示例。
 
-##  <a name="a-namebkmkuncategorizediscategorizeda-uncategorized-catalog-item-is-categorized-by-the-administrative-user"></a><a name="BKMK_UncategorizedIsCategorized"></a>管理用户对未分类的目录项目进行分类  
+##  <a name="a-namebkmkuncategorizediscategorizeda-uncategorized-catalog-item-is-categorized-by-the-administrative-user"></a><a name="BKMK_UncategorizedIsCategorized"></a> 管理用户对未分类的目录项目进行分类  
 
 |**状态转换**|**状态转换描述**|  
 |--------------------------|--------------------------------------|  
 |**未分类**|将 System Center Online 或管理用户先前未分类的已列出清单的软件标题输入到资产智能目录中。|  
 |**未分类** 到 **用户定义**|管理用户对未分类的项目进行分类。|  
 
-##  <a name="a-namebkmkcategorizedisrecategorizeda-categorized-catalog-item-is-recategorized-by-the-administrative-user"></a><a name="BKMK_CategorizedIsReCategorized"></a>管理用户对已分类的目录项目进行重新分类  
+##  <a name="a-namebkmkcategorizedisrecategorizeda-categorized-catalog-item-is-recategorized-by-the-administrative-user"></a><a name="BKMK_CategorizedIsReCategorized"></a> 管理用户对已分类的目录项目进行重新分类  
 
 |**状态转换**|**状态转换描述**|  
 |--------------------------|--------------------------------------|  
@@ -45,7 +45,7 @@ System Center Configuration Manager 中的资产智能验证状态不是静态�
 > [!NOTE]  
 >  因为从 System Center Online 获取的分类信息存储在数据库中且不能删除，所以管理用户可以在以后还原为 System Center Online 分类。  
 
-##  <a name="a-namebkmkuserdefinedisrecategorizeda-user-defined-catalog-item-is-recategorized-by-system-center-online"></a><a name="BKMK_UserDefinedIsRecategorized"></a>System Center Online 对用户定义的目录项目进行重新分类  
+##  <a name="a-namebkmkuserdefinedisrecategorizeda-user-defined-catalog-item-is-recategorized-by-system-center-online"></a><a name="BKMK_UserDefinedIsRecategorized"></a> System Center Online 对用户定义的目录项目进行重新分类  
 
 |**状态转换**|**状态转换描述**|  
 |--------------------------|--------------------------------------|  
@@ -59,7 +59,7 @@ System Center Configuration Manager 中的资产智能验证状态不是静态�
 > [!NOTE]  
 >  因为从 System Center Online 获取的分类信息存储在数据库中且不能删除，所以管理用户可以在以后还原为 System Center Online 分类。  
 
-##  <a name="a-namebkmkuncategorizedissubmitteda-uncategorized-catalog-item-is-submitted-to-system-center-online-for-categorization"></a><a name="BKMK_UncategorizedIsSubmitted"></a>将未分类的目录项目提交给 System Center Online 以进行分类  
+##  <a name="a-namebkmkuncategorizedissubmitteda-uncategorized-catalog-item-is-submitted-to-system-center-online-for-categorization"></a><a name="BKMK_UncategorizedIsSubmitted"></a> 将未分类的目录项目提交给 System Center Online 以进行分类  
 
 |**状态转换**|**状态转换描述**|  
 |--------------------------|--------------------------------------|  
@@ -67,7 +67,7 @@ System Center Configuration Manager 中的资产智能验证状态不是静态�
 |**未分类** 到 **挂起**|将未分类的项目提交给 System Center Online 以由管理用户进行分类。|  
 |**挂起** 到 **已验证**|System Center Online 对项目进行分类。 管理用户使用批量目录更新或资产智能目录同步将项目导入资产智能目录。 两项功能都可使用资产智能同步点站点系统角色来完成。|  
 
-##  <a name="a-namebkmkuserdefinedissubmitteda-user-defined-catalog-item-is-submitted-to-system-center-online-for-categorization"></a><a name="BKMK_UserDefinedIsSubmitted"></a>将用户定义的目录项目提交给 System Center Online 以进行分类  
+##  <a name="a-namebkmkuserdefinedissubmitteda-user-defined-catalog-item-is-submitted-to-system-center-online-for-categorization"></a><a name="BKMK_UserDefinedIsSubmitted"></a> 将用户定义的目录项目提交给 System Center Online 以进行分类  
 
 |**状态转换**|**状态转换描述**|  
 |--------------------------|--------------------------------------|  

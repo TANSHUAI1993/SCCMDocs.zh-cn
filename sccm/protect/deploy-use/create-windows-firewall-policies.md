@@ -62,7 +62,7 @@ System Center 2012 Configuration Manager 中的 Endpoint Protection 的防火墙
 
 7.  验证新的 Windows 防火墙策略是否显示在“Windows 防火墙策略”  列表中。  
 
-##  <a name="a-namebkmkassigna-to-deploy-a-windows-firewall-policy"></a><a name="BKMK_Assign"></a> 部署 Windows 防火墙策略  
+##  <a name="a-namebkmkassigna-to-deploy-a-windows-firewall-policy"></a><a name="BKMK_Assign"></a> 若要部署 Windows 防火墙策略  
 
 1.  在 Configuration Manager 控制台中，单击“资产和符合性” 。  
 

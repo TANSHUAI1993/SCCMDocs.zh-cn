@@ -28,7 +28,7 @@ ms.openlocfilehash: 7f83b9d30f933c7b8cc0a527e8a65d321b7ee786
 
 本主题包含有关 System Center Configuration Manager 中的操作系统部署的安全和隐私信息。  
 
-##  <a name="a-namebkmksecurityhardwareinventorya-security-best-practices-for-operating-system-deployment"></a><a name="BKMK_Security_HardwareInventory"></a> 操作系统部署的最佳安全方案  
+##  <a name="a-namebkmksecurityhardwareinventorya-security-best-practices-for-operating-system-deployment"></a><a name="BKMK_Security_HardwareInventory"></a>操作系统部署的最佳安全方案  
  在使用 Configuration Manager 部署操作系统时，请使用以下最佳安全方案：  
 
 -   **实现访问控制来保护可启动媒体**  
@@ -193,7 +193,7 @@ ms.openlocfilehash: 7f83b9d30f933c7b8cc0a527e8a65d321b7ee786
 
      虽然集合变量提供了灵活地部署操作系统的方法，但这可能会导致信息泄露。  
 
-##  <a name="a-namebkmkprivacyhardwareinventorya-privacy-information-for-operating-system-deployment"></a><a name="BKMK_Privacy_HardwareInventory"></a> 操作系统部署的隐私信息  
+##  <a name="a-namebkmkprivacyhardwareinventorya-privacy-information-for-operating-system-deployment"></a><a name="BKMK_Privacy_HardwareInventory"></a>操作系统部署的隐私信息  
  Configuration Manager 除了可用于向没有操作系统的计算机部署操作系统之外，它还可用于在计算机之间迁移用户的文件和设置。 管理员配置要转移的信息，包括个人数据文件、配置的设置和浏览器 Cookie。  
 
  这些信息存储在状态迁移点上，而且在传输和存储期间被加密。 与状态信息关联的新计算机可以检索这些信息。 如果新计算机丢失了用于检索这些信息的密钥，则具有计算机关联实例对象的“查看恢复信息”权限的 Configuration Manager 管理员可以访问这些信息，并将它们与新计算机关联。 在新计算机还原状态信息后，默认情况下它会在一天后删除这些数据。 你可以配置状态迁移点何时删除标记为要删除的数据。 状态迁移信息并不存储在站点数据库中，而且不发送给 Microsoft。  

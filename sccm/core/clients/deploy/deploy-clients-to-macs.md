@@ -56,7 +56,7 @@ ms.openlocfilehash: eae9e76085a95cb09fe01a32fd4b57294bc1cc20
 
 -   [Use a certificate request and installation method that is independent from Configuration Manager](#BKMK_ManualCertifcateInstallation)  
 
-##  <a name="a-nameinstallstepsa-steps-to-install-and-configure-the-client-for-macs"></a><a name="InstallSteps"></a> 为 Mac 安装和配置客户端的步骤  
+##  <a name="a-nameinstallstepsa-steps-to-install-and-configure-the-client-for-macs"></a><a name="InstallSteps"></a>为 Mac 安装和配置客户端的步骤  
 
 > [!IMPORTANT]  
 >  在执行这些步骤之前，请确保 Mac 计算机满足先决条件。 有关详细信息，请参阅 [Mac 支持的操作系统](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#mac-computers)。  
@@ -357,7 +357,7 @@ ms.openlocfilehash: eae9e76085a95cb09fe01a32fd4b57294bc1cc20
 >   
 >  CmDiagnostics 收集的信息会添加到一个 zip 文件中，该文件将保存到计算机的桌面上并且名为 cmdiag-<主机名\>**-**<日期和时间\>.zip。  
 
-####  <a name="a-namebkmkenrollr2a-to-enroll-the-client-by-using-the-mac-computer-enrollment-wizard"></a><a name="BKMK_EnrollR2"></a> 使用“Mac 计算机注册向导”注册客户端  
+####  <a name="a-namebkmkenrollr2a-to-enroll-the-client-by-using-the-mac-computer-enrollment-wizard"></a><a name="BKMK_EnrollR2"></a> To enroll the client by using the Mac Computer Enrollment Wizard  
 
 1.  安装完客户端后，“计算机注册向导”将打开。 单击“下一步”  继续通过欢迎页。  
 
@@ -383,7 +383,7 @@ ms.openlocfilehash: eae9e76085a95cb09fe01a32fd4b57294bc1cc20
 
 3.  单击“下一步”  继续，然后完成向导。  
 
-##  <a name="a-nameuninstallmacclienta-uninstalling-the-mac-client"></a><a name="uninstallMacClient"></a> 卸载 Mac 客户端  
+##  <a name="a-nameuninstallmacclienta-uninstalling-the-mac-client"></a><a name="uninstallMacClient"></a> Uninstalling the Mac client  
  如果要卸载 Mac 客户端，请使用与你从 Web 中下载的 Mac 客户端文件一起提供的 CMUninstall 脚本。 使用以下过程帮助你从 Mac 计算机中卸载 Configuration Manager 客户端。  
 
 #### <a name="to-uninstall-the-mac-client"></a>要卸载 Mac 客户端  
@@ -399,14 +399,14 @@ ms.openlocfilehash: eae9e76085a95cb09fe01a32fd4b57294bc1cc20
 
 3.  如果需要，手动删除 Configuration Manager 所使用的客户端身份验证证书，或将其吊销。 CMUnistall 不会删除或吊销此证书。  
 
-##  <a name="a-namebkmkrenewa-renewing-the-mac-client-certificate"></a><a name="BKMK_Renew"></a> 续订 Mac 客户端证书  
+##  <a name="a-namebkmkrenewa-renewing-the-mac-client-certificate"></a><a name="BKMK_Renew"></a> Renewing the Mac client certificate  
  使用下列方法之一续订 Mac 客户端证书：  
 
 -   [Renewing the Mac client certificate by using the Renew Certificate Wizard](#BKMK_UI)  
 
 -   [Renewing the Mac client certificate manually](#BKMK_Man)  
 
-###  <a name="a-namebkmkuia-renewing-the-mac-client-certificate-by-using-the-renew-certificate-wizard"></a><a name="BKMK_UI"></a> 使用续订证书向导续订 Mac 客户端证书  
+###  <a name="a-namebkmkuia-renewing-the-mac-client-certificate-by-using-the-renew-certificate-wizard"></a><a name="BKMK_UI"></a> Renewing the Mac client certificate by using the Renew Certificate Wizard  
  使用下列过程在 Configuration Manager 中配置和使用续订证书向导。  
 
 ##### <a name="to-renew-the-mac-client-certificate-by-using-the-renew-certificate-wizard"></a>要使用续订证书向导续订 Mac 客户端证书  
@@ -447,7 +447,7 @@ ms.openlocfilehash: eae9e76085a95cb09fe01a32fd4b57294bc1cc20
     > [!NOTE]  
     >  如果向导未打开或者你无意中关闭了向导，请单击“Configuration Manager”  首选项页中的“续订”  以打开向导。  
 
-###  <a name="a-namebkmkmana-renewing-the-mac-client-certificate-manually"></a><a name="BKMK_Man"></a> 手动续订 Mac 客户端证书  
+###  <a name="a-namebkmkmana-renewing-the-mac-client-certificate-manually"></a><a name="BKMK_Man"></a> Renewing the Mac client certificate manually  
  Mac 客户端证书的有效期通常为 1 年。 Configuration Manager 不自动续订其在注册过程中请求的用户证书，因此你必须使用以下程序来手动续订证书。  
 
 > [!IMPORTANT]  
@@ -543,7 +543,7 @@ ms.openlocfilehash: eae9e76085a95cb09fe01a32fd4b57294bc1cc20
 
 17. 重新启动 Mac 计算机。  
 
-##  <a name="a-namebkmkmanualcertifcateinstallationa-use-a-certificate-request-and-installation-method-that-is-independent-from-configuration-manager"></a><a name="BKMK_ManualCertifcateInstallation"></a> 使用与 Configuration Manager 无关的证书请求和安装方法  
+##  <a name="a-namebkmkmanualcertifcateinstallationa-use-a-certificate-request-and-installation-method-that-is-independent-from-configuration-manager"></a><a name="BKMK_ManualCertifcateInstallation"></a> Use a certificate request and installation method that is independent from Configuration Manager  
  但如果不使用 Configuration Manager 注册，请独立于 Configuration Manager 请求和安装客户端证书，配置步骤略微不同：  
 
 1.  执行步骤 1、2、4、6（可选）和 8。  
