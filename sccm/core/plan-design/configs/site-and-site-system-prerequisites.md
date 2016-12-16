@@ -259,7 +259,7 @@ ms.openlocfilehash: 0f24fd912b3e65dc0c0074ef1c8f76cc128a716c
 -   安装和配置 Windows 部署服务 (WDS) Windows 角色  
 
     > [!NOTE]  
-    >  当配置分发点以在运行 Windows Server 2012 或更高版本的服务器上支持 PXE 或多播时，将自动安装和配置 WDS。  
+    >  当配置分发点以在运行 Windows Server 2012 或更高版本的服务器上支持 PXE 或多播时，将自动安装和配置 WDS。  
 
 > [!NOTE]  
 >  分发点站点系统角色不需要后台智能传输服务 (BITS)。 当在分发点计算机上配置 BITS 时，分发点计算机上的 BITS 不利于下载使用 BITS 的客户端内容。  
@@ -623,7 +623,7 @@ ms.openlocfilehash: 0f24fd912b3e65dc0c0074ef1c8f76cc128a716c
 -   安装和配置 Windows 部署服务 (WDS) Windows 角色  
 
     > [!NOTE]  
-    >  当配置分发点以在运行 Windows Server 2012 或更高版本的服务器上支持 PXE 或多播时，将自动安装和配置 WDS。  
+    >  当配置分发点以在运行 Windows Server 2012 或更高版本的服务器上支持 PXE 或多播时，将自动安装和配置 WDS。  
 
 > [!NOTE]  
 >  分发点站点系统角色不需要后台智能传输服务 (BITS)。 当在分发点计算机上配置 BITS 时，分发点计算机上的 BITS 不利于下载使用 BITS 的客户端内容。  

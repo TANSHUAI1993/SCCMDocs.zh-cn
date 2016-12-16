@@ -28,7 +28,7 @@ ms.openlocfilehash: 9e41ba8c0f2aad3eba1cb2a8c4fdbbf6fa558f5e
 
 当在 System Center Configuration Manager 中创建自定义任务序列时，它不包含任何任务序列步骤。 创建任务序列后，必须对其进行编辑，并添加所需的任务序列步骤。  
 
-##  <a name="a-namebkmkcustomtsa-create-a-custom-task-sequence"></a><a name="BKMK_CustomTS"></a>创建自定义任务序列  
+##  <a name="a-namebkmkcustomtsa-create-a-custom-task-sequence"></a><a name="BKMK_CustomTS"></a> 创建自定义任务序列  
  使用下列过程来创建自定义任务序列。  
 
 #### <a name="to-create-a-custom-task-sequence"></a>创建自定义任务序列  

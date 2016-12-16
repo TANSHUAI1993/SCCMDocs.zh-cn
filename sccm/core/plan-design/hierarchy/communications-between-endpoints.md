@@ -256,7 +256,7 @@ Configuration Manager 对不在其站点的站点服务器所在的相同林中�
 
 -   将每个站点配置为将其数据发布到 Active Directory 域服务。 此配置允许该林中的客户端检索站点信息以及查找管理点。 对于无法将 Active Directory 域服务用于服务定位的客户端，可以使用 DNS、WINS 或客户端的分配的管理点。  
 
-###  <a name="a-namebkmkxchangea-put-the-exchange-server-connector-in-a-remote-forest"></a><a name="bkmk_xchange"></a> 将 Exchange Server 连接器置于远程林中  
+###  <a name="a-namebkmkxchangea-put-the-exchange-server-connector-in-a-remote-forest"></a><a name="bkmk_xchange"></a> 将 Exchange Server 连接器放置到远程林中  
 若要支持此方案，请确保名称解析能够跨越林工作（例如，配置 DNS 转发），并且当你配置 Exchange Server 连接器时，请指定 Exchange Server 的 Intranet FQDN。 有关详细信息，请参阅[使用 System Center Configuration Manager 和 Exchange 管理移动设备](../../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)。  
 
 

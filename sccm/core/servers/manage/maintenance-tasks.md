@@ -32,7 +32,7 @@ System Center Configuration Manager 站点和层次结构需要定期维护和�
 
 -   [维护任务](#bkmk_MTs)  
 
-##  <a name="a-namebkmkmtsa-maintenance-tasks"></a><a name="bkmk_MTs"></a> 维护任务  
+##  <a name="a-namebkmkmtsa-maintenance-tasks"></a><a name="bkmk_MTs"></a>维护任务  
  执行定期维护对于确保正确的站点操作非常重要。 请维护维护日志，以记录维护的执行日期、执行者以及关于所执行任务的任何维护相关备注。  
 
 ### <a name="when-to-perform-common-maintenance-tasks"></a>何时执行常见维护任务  
@@ -101,7 +101,7 @@ System Center Configuration Manager 站点和层次结构需要定期维护和�
 
 -   检查站点的总体运行状况  
 
-###  <a name="a-namebkmkusemtsa-maintain-the-operational-health-of-your-site-database"></a><a name="BKMK_UseMTs"></a> 维护站点数据库的操作运行状况  
+###  <a name="a-namebkmkusemtsa-maintain-the-operational-health-of-your-site-database"></a><a name="BKMK_UseMTs"></a>维护站点数据库的操作运行状况  
  当 Configuration Manager 站点和层次结构执行你计划和配置的任务时，站点组件不断将数据添加到 Configuration Manager 数据库中。 随着数据量增大，数据库性能和数据库中的可用存储空间将降低。 你可以将站点维护任务配置为删除不再需要的过时数据。  
 
  Configuration Manager 提供预定义的维护任务，你可以使用这些任务维护 Configuration Manager 数据库的健康状况。 并非所有维护任务都可以在每个站点中使用，默认情况下，一些任务处于启用状态，而某些任务未处于启用状态，所有任务都支持可配置的运行时间计划。  

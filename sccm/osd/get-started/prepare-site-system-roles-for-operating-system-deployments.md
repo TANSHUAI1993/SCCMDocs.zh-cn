@@ -176,7 +176,7 @@ ms.openlocfilehash: a9e682c855d5e1fb26f772b2af5066280e01851f
 
 6.  单击" **确定**"。  
 
-##  <a name="a-namebkmkstatemigrationpointsa-state-migration-point"></a><a name="BKMK_StateMigrationPoints"></a>状态迁移点  
+##  <a name="a-namebkmkstatemigrationpointsa-state-migration-point"></a><a name="BKMK_StateMigrationPoints"></a> 状态迁移点  
  状态迁移点在一台计算机上存储捕获的用户状态数据，然后在另一台计算机上还原这些数据。 但是，当你在同一台计算机上捕获操作系统部署的用户设置时，例如在目标计算机上刷新操作系统的部署，你可以选择是通过使用硬链接还是使用状态迁移点来储存数据在同一台计算机上。 对于某些计算机部署，当你创建状态存储时，Configuration Manager 会自动在状态存储和目标计算机之间创建关联。 在规划状态迁移点时，请考虑以下因素。  
 
 ### <a name="user-state-size"></a>用户状态大小  

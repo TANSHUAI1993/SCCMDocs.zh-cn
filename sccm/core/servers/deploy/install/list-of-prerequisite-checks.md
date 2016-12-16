@@ -186,7 +186,7 @@ ms.openlocfilehash: 96787d5c4ad92d86ad9172fcfacb92fe4138c7ba
 
     -   管理点  
 
-**SQL Server 上的不区分大小写的排序规则** - 验证 SQL Server 安装是否使用不区分大小写的排序规则，例如 SQL_Latin1_General_CP1_CI_AS。  
+**SQL Server 上的不区分大小写的排序规则** - 验证 SQL Server 安装是否使用不区分大小写的排序规则，例如 SQL_Latin1_General_CP1_CI_AS。  
 
 -   **严重性：** 错误  
 
@@ -395,7 +395,7 @@ ms.openlocfilehash: 96787d5c4ad92d86ad9172fcfacb92fe4138c7ba
 
     -   辅助站点  
 
-**所需的 SQL Server 排序规则** - 验证 SQL Server 的实例和 Configuration Manager 站点数据库（如果已安装）是否配置为使用 SQL_Latin1_General_CP1_CI_AS 排序规则，除非正在使用中文版操作系统并且需要 GB18030 支持。  
+**所需的 SQL Server 排序规则** - 验证 SQL Server 的实例和 Configuration Manager 站点数据库（如果已安装）是否配置为使用 SQL_Latin1_General_CP1_CI_AS 排序规则，除非正在使用中文版操作系统并且需要 GB18030 支持。  
 
  有关更改 SQL Server 实例和数据库排序规则的信息，请参阅 SQL Server 2008 R2 联机丛书中的 [设置和更改排序规则](http://go.microsoft.com/fwlink/p/?LinkID=234541) 。  有关启用 GB18030 支持的信息，请参阅 [System Center Configuration Manager 的国际支持](../../../../core/plan-design/hierarchy/international-support.md)。  
 
