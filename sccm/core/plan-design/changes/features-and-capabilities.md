@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: be7638f006b0eac9e58add7e3926532ba7921e8e
+ms.sourcegitcommit: fc40912a3da034ac0e3f84c72593aa4a9df8d057
+ms.openlocfilehash: c558148104b6338e4038bf690491c88e76dfdcaf
 
 
 ---
@@ -60,7 +60,7 @@ ms.openlocfilehash: be7638f006b0eac9e58add7e3926532ba7921e8e
 
  可以使用 Configuration Manager 管理通过 Internet 使用 Microsoft Intune 服务的 iOS、Android（包括 Samsung KNOX）、Windows Phone 和 Windows 设备。
 
- 尽管你使用 Intune 服务，但管理任务也可通过使用服务连接点站点系统角色（可通过 Configuration Manager 控制台获得）完成。 请参阅[使用 System Center Configuration Manager 和 Microsoft Intune 的混合移动设备管理 (MDM)](../../../mdm/plan-design/hybrid-mobile-device-management.md)。  
+ 尽管你使用 Intune 服务，但管理任务也可通过使用服务连接点站点系统角色（可通过 Configuration Manager 控制台获得）完成。 请参阅[使用 System Center Configuration Manager 和 Microsoft Intune 的混合移动设备管理 (MDM)](../../../mdm/understand/hybrid-mobile-device-management.md)。  
 
  **本地移动设备管理**  
 

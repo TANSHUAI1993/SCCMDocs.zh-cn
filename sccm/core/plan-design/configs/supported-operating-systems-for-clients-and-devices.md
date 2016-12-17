@@ -40,7 +40,7 @@ ms.openlocfilehash: 862291f52d5a1bb34fb5483806972fcf70f158a8
 
 **支持的操作系统：**  
 
--  **Windows Server 2016** – 标准版、数据中心版 <sup>1</sup>
+-  **Windows Server 2016** - 标准版、数据中心版 <sup>1</sup>
   - 从 Configuration Manager 版本 1606（或 2016 年 10 月发布的 1606 基线版本）开始，将支持 Windows Server 2016，并提供 KB3186654 中的修补程序汇总。  
 
 
@@ -52,11 +52,11 @@ ms.openlocfilehash: 862291f52d5a1bb34fb5483806972fcf70f158a8
 
 -   **Windows Storage Server 2012** (x64)    
 
--   **带 SP1 的 Windows Server 2008 R2** (x64) – 标准版、企业版、数据中心版 <sup>1</sup>    
+-   **Windows Server 2008 R2 SP1** (x64) - 标准版、企业版、数据中心版 <sup>1</sup>    
 
 -   **Windows Storage Server 2008 R2**（x86、x64）- 工作组、标准版、企业版    
 
--   **Windows Server 2008 with SP2**（x86、x64） — 标准版、企业版、数据中心版  <sup>1</sup>    
+-   **Windows Server 2008 SP2**（x86、x64）- 标准版、企业版、数据中心版 <sup>1</sup>    
 
 -   **Windows 10 企业版 LTSB**（x86、x64）<sup>3</sup>    
 
@@ -303,7 +303,7 @@ ms.openlocfilehash: 862291f52d5a1bb34fb5483806972fcf70f158a8
 -   [Microsoft Intune 中的移动设备管理功能](https://docs.microsoft.com/intune/get-started/choose-how-to-manage-devices)  
 -   [Microsoft Intune 中的 Windows PC 管理功能](https://docs.microsoft.com/intune/get-started/windows-pc-management-capabilities-in-microsoft-intune)  
 
-##  <a name="a-namebkmkonpremosa-on-premises-mobile-device-management"></a><a name="bkmk_OnpremOS"></a> 本地移动设备管理  
+##  <a name="a-namebkmkonpremosa-on-premises-mobile-device-management"></a><a name="bkmk_OnpremOS"></a>本地移动设备管理  
  Configuration Manager 提供有内置功能来管理本地设备，无需安装客户端软件。  有关详细信息，请参阅[在 System Center Configuration Manager 中使用本地基础结构管理移动设备](../../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md)。  
 
  **要求和限制：**  

@@ -35,7 +35,7 @@ ms.openlocfilehash: dc21868f99e17070b25c8b490e86477227a96c8e
 
 使用下列部分管理对等缓存。
 
-##  <a name="a-namebkmkpeercacheobjectsa-objects-stored-on-a-peer-cache-source"></a><a name="BKMK_PeerCacheObjects"></a>对等缓存源上存储的对象  
+##  <a name="a-namebkmkpeercacheobjectsa-objects-stored-on-a-peer-cache-source"></a><a name="BKMK_PeerCacheObjects"></a> 对等缓存源上存储的对象  
  在 Windows PE 中运行时，配置为使用 Windows PE 对等缓存的任务序列可获取以下内容对象：  
 
 -   操作系统映像  
@@ -52,17 +52,17 @@ ms.openlocfilehash: dc21868f99e17070b25c8b490e86477227a96c8e
 
 -   软件更新  
 
-##  <a name="a-namebkmkpeercacheworka-how-does-windows-pe-peer-cache-work"></a><a name="BKMK_PeerCacheWork"></a>Windows PE 对等缓存如何工作？  
+##  <a name="a-namebkmkpeercacheworka-how-does-windows-pe-peer-cache-work"></a><a name="BKMK_PeerCacheWork"></a> Windows PE 对等缓存如何工作？  
  请考虑这样一个场景：一个分支机构没有分发点，但是启用了多个客户端使用 Windows PE 对等缓存。 将配置为使用对等缓存的任务序列部署到多个已配置为属于对等缓存源的客户端。 第一个运行任务序列的客户端将广播对包含内容的对等方的请求。 但未找到此对等方，因此跨 WAN 从分发点获取内容。 客户端安装新的映像，然后将内容存储在其 Configuration Manager 客户端缓存中，这样该客户端可作为其他客户端的对等缓存源。 当下一个客户端运行任务序列时，它将在子网上广播对对等缓存源的请求，而第一个客户端将响应，并提供其缓存的内容。  
 
-##  <a name="a-namebkmkpeercachedeterminea-determine-what-clients-will-be-part-of-the-windows-pe-peer-cache-source"></a><a name="BKMK_PeerCacheDetermine"></a>确定将属于 Windows PE 对等缓存源的客户端  
+##  <a name="a-namebkmkpeercachedeterminea-determine-what-clients-will-be-part-of-the-windows-pe-peer-cache-source"></a><a name="BKMK_PeerCacheDetermine"></a> 确定将属于 Windows PE 对等缓存源的客户端  
  为了帮助你确定可选为 Windows PE 对等缓存源的计算机，你应该考虑以下几个方面：  
 
 -   Windows PE 对等缓存源应为始终开机且可用于对等缓存客户端的台式计算机。  
 
 -   Windows PE 对等缓存具有足以存储映像的客户端缓存大小。  
 
-##  <a name="a-namebkmkpeercacherequirementsa-requirements-for-a-client-to-use-a-windows-pe-peer-cache-source"></a><a name="BKMK_PeerCacheRequirements"></a>使用 Windows PE 对等缓存源的客户端的要求  
+##  <a name="a-namebkmkpeercacherequirementsa-requirements-for-a-client-to-use-a-windows-pe-peer-cache-source"></a><a name="BKMK_PeerCacheRequirements"></a> 使用 Windows PE 对等缓存源的客户端的要求  
  对于使用 Windows PE 对等缓存源的客户端，必须满足以下要求：  
 
 -   Configuration Manager 客户端必须能够通过网络上的以下端口进行通信：  
@@ -78,7 +78,7 @@ ms.openlocfilehash: dc21868f99e17070b25c8b490e86477227a96c8e
 
 -   任务序列部署的部署选项必须配置为“当任务序列需要时在本地下载内容”。  
 
-##  <a name="a-namebkmkpeercacheconfigurea-configure-windows-pe-peer-cache"></a><a name="BKMK_PeerCacheConfigure"></a>配置 Windows PE 对等缓存  
+##  <a name="a-namebkmkpeercacheconfigurea-configure-windows-pe-peer-cache"></a><a name="BKMK_PeerCacheConfigure"></a> 配置 Windows PE 对等缓存  
  以下方法可用于预配包含对等缓存内容的客户端，使其可用作对等缓存源：  
 
 -   如果对等缓存客户端找不到包含内容的对等缓存源，则它将从分发点下载内容。  如果该客户端接收到启用对等缓存的客户端设置，且任务序列配置为保留缓存的内容，则该客户端将成为一个对等缓存源。  
@@ -112,7 +112,7 @@ ms.openlocfilehash: dc21868f99e17070b25c8b490e86477227a96c8e
 
  为设备配置此设置对象后，该设备配置为可用作对等缓存源。 这些设置应部署到潜在的对等缓存客户端，以配置所需的端口和协议。  
 
-###  <a name="a-namebkmkpeercacheconfiguretsa-configure-a-task-sequence-for-windows-pe-peer-cache"></a><a name="BKMK_PeerCacheConfigureTS"></a>为 Windows PE 对等缓存配置任务序列  
+###  <a name="a-namebkmkpeercacheconfiguretsa-configure-a-task-sequence-for-windows-pe-peer-cache"></a><a name="BKMK_PeerCacheConfigureTS"></a> 为 Windows PE 对等缓存配置任务序列  
  配置任务序列时，将以下任务序列变量用作要部署任务序列的集合的集合变量：  
 
 -   **SMSTSPeerDownload**  
@@ -135,7 +135,7 @@ ms.openlocfilehash: dc21868f99e17070b25c8b490e86477227a96c8e
 
  有关详细信息，请参阅[任务序列内置变量](../understand/task-sequence-built-in-variables.md)。  
 
-###  <a name="a-namebkmkpeercachevalidatea-validate-the-success-of-using-windows-pe-peer-cache"></a><a name="BKMK_PeerCacheValidate"></a>验证 PE 对等缓存是否成功  
+###  <a name="a-namebkmkpeercachevalidatea-validate-the-success-of-using-windows-pe-peer-cache"></a><a name="BKMK_PeerCacheValidate"></a> 验证使用 Windows PE 对等缓存是否成功  
  在使用 Windows PE 对等缓存来部署和安装任务序列后，可以通过查看运行任务序列的客户端上的 **smsts.log** 来确认过程中是否成功使用对等缓存。  
 
  在该日志中，查找类似于以下形式的条目，其中 <*SourceServerName*> 用于标识客户端从中获取内容的计算机。 这台计算机应为对等缓存源，而并不是分发点服务器。 其他详细信息将因本地环境和配置而异。  
