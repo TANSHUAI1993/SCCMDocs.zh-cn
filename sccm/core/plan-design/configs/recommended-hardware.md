@@ -44,7 +44,7 @@ ms.openlocfilehash: d5aa39a9551cc872631895bb1664de5a35531854
 
 ###  <a name="a-namebkmkscalesiteservera-site-servers"></a><a name="bkmk_ScaleSiteServer"></a>站点服务器  
 
-|独立主站点|CPU 核心数|内存 (GB)|SQL Server 的内存分配百分数|  
+|独立主站点|CPU 核心数|内存 (GB)|SQL Server 的内存分配百分数|  
 |-------------------------------|---------------|---------------|----------------------------------------|  
 |数据库站点角色在同一服务器上的独立主站点服务器<sup>1</sup>|16|96|80|  
 |具有远程站点数据库的独立主站点服务器|8|16|-|  

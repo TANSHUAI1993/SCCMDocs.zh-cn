@@ -46,7 +46,7 @@ ms.openlocfilehash: 4b286fbca3c71b14e0b82ff421132408df7c6e8b
 
  在你执行这些过程的计算机上，确保已安装了 SQL Server Business Intelligence Development Studio，并且计算机已通过网络连接到 Reporting Services 点服务器。 有关 SQL Server Business Intelligence Development Studio 的详细信息，请参阅 SQL Server 2008 文档。  
 
-###  <a name="a-namebkmkcreatereportmodelprojecta-to-create-the-report-model-project"></a><a name="BKMK_CreateReportModelProject"></a> 创建报表模型项目  
+###  <a name="a-namebkmkcreatereportmodelprojecta-to-create-the-report-model-project"></a><a name="BKMK_CreateReportModelProject"></a> To create the report model project  
 
 1.  在桌面上，单击“开始” ，单击“Microsoft SQL Server 2008” ，然后单击“SQL Server Business Intelligence Development Studio” 。  
 
@@ -63,7 +63,7 @@ ms.openlocfilehash: 4b286fbca3c71b14e0b82ff421132408df7c6e8b
     > [!NOTE]  
     >  如果看不到“解决方案资源管理器”  窗格，请单击“视图” ，然后单击“解决方案资源管理器” 。  
 
-###  <a name="a-namebkmkdefinereportmodeldatasourcea-to-define-the-data-source-for-the-report-model"></a><a name="BKMK_DefineReportModelDataSource"></a> 为报表模型定义数据源  
+###  <a name="a-namebkmkdefinereportmodeldatasourcea-to-define-the-data-source-for-the-report-model"></a><a name="BKMK_DefineReportModelDataSource"></a> To define the data source for the report model  
 
 1.  在“SQL Server Business Intelligence Development Studio”  的“解决方案资源管理器” 窗格中，右键单击“数据源”  以选择“添加新数据源” 。  
 
@@ -92,7 +92,7 @@ ms.openlocfilehash: 4b286fbca3c71b14e0b82ff421132408df7c6e8b
     > [!NOTE]  
     >  要编辑现有数据源的属性，请在“解决方案资源管理器”  窗格的“数据源”  文件夹中双击该数据源，以在数据源设计器中显示数据源属性。  
 
-###  <a name="a-namebkmkdefinereportmodeldatasourceviewa-to-define-the-data-source-view-for-the-report-model"></a><a name="BKMK_DefineReportModelDataSourceView"></a> 为报表模型定义数据源视图  
+###  <a name="a-namebkmkdefinereportmodeldatasourceviewa-to-define-the-data-source-view-for-the-report-model"></a><a name="BKMK_DefineReportModelDataSourceView"></a> To define the data source view for the report model  
 
 1.  在“解决方案资源管理器” 中，右键单击“数据源视图”  以选择“添加新数据源视图” 。  
 
@@ -113,7 +113,7 @@ ms.openlocfilehash: 4b286fbca3c71b14e0b82ff421132408df7c6e8b
 
 8.  单击 **“完成”**。 “Simple_Model.dsv”  数据源视图将显示在“解决方案资源管理器”  的“数据源视图” 文件夹中。  
 
-###  <a name="a-namebkmkcreatereportmodela-to-create-the-report-model"></a><a name="BKMK_CreateReportModel"></a> 创建报表模型  
+###  <a name="a-namebkmkcreatereportmodela-to-create-the-report-model"></a><a name="BKMK_CreateReportModel"></a> To create the report model  
 
 1.  在“解决方案资源管理器” 中，右键单击“报表模型”  以选择“添加新报表模型” 。  
 
@@ -131,7 +131,7 @@ ms.openlocfilehash: 4b286fbca3c71b14e0b82ff421132408df7c6e8b
 
 8.  要退出向导，请单击“完成” 。 报表模型将显示在“设计”窗口中。  
 
-###  <a name="a-namebkmkpublishreportmodela-to-publish-the-report-model-for-use-in-sql-server-reporting-services"></a><a name="BKMK_PublishReportModel"></a> 发布报表模型以在 SQL Server Reporting Services 中使用  
+###  <a name="a-namebkmkpublishreportmodela-to-publish-the-report-model-for-use-in-sql-server-reporting-services"></a><a name="BKMK_PublishReportModel"></a> To publish the report model for use in SQL Server Reporting Services  
 
 1.  在“解决方案资源管理器” 中，右键单击报表模型以选择“部署” 。 对于本例，报表模型为“Simple_Model.smdl” 。  
 
@@ -139,7 +139,7 @@ ms.openlocfilehash: 4b286fbca3c71b14e0b82ff421132408df7c6e8b
 
 3.  单击“文件” ，单击“全部保存” ，然后关闭“SQL Server Business Intelligence Development Studio” 。  
 
-###  <a name="a-namebkmkdeployreportmodela-to-deploy-the-custom-report-model-to-configuration-manager"></a><a name="BKMK_DeployReportModel"></a> 将自定义报表模型部署到 Configuration Manager  
+###  <a name="a-namebkmkdeployreportmodela-to-deploy-the-custom-report-model-to-configuration-manager"></a><a name="BKMK_DeployReportModel"></a> To deploy the custom report model to Configuration Manager  
 
 1.  找到你在其中创建了报表模型项目的文件夹。 例如，%*USERPROFILE*%\Documents\Visual Studio 2008\Projects\\*&lt;项目名称\>。*  
 
@@ -180,7 +180,7 @@ ms.openlocfilehash: 4b286fbca3c71b14e0b82ff421132408df7c6e8b
     > [!IMPORTANT]  
     >  将报表模型文件复制到 Configuration Manager 站点服务器之后，必须退出并重新启动 Configuration Manager 控制台，然后才能在“创建报表向导”中使用报表模型。  
 
-##  <a name="a-nameadvancedreportmodela-steps-for-creating-an-advanced-report-model-in-sql-server-reporting-services"></a><a name="AdvancedReportModel"></a> 在 SQL Server Reporting Services 中创建高级报表模型的步骤  
+##  <a name="a-nameadvancedreportmodela-steps-for-creating-an-advanced-report-model-in-sql-server-reporting-services"></a><a name="AdvancedReportModel"></a> Steps for Creating an Advanced Report Model in SQL Server Reporting Services  
  可以使用以下过程创建一个高级报表模型，站点中的用户可使用该模型根据 Configuration Manager 数据库的多个视图中的数据来构建基于特定模型的报表。 你将创建一个报表模型，该报表模型向报表作者呈现有关客户端计算机以及这些计算机上安装的操作系统的信息。 该信息来自 Configuration Manager 数据库中的以下视图：  
 
 -   **V_R_System**：包含有关发现的计算机和 Configuration Manager 客户端的信息。  

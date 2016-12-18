@@ -45,7 +45,7 @@ ms.openlocfilehash: 43e04a447b03885286c6c7201afb4d1b7a10aa91
 ## <a name="supplemental-procedures-for-configuring-asset-intelligence"></a>配置资产智能的补充过程  
  请将以下信息用于上表中的步骤。  
 
-###  <a name="a-namebkmkenableassetintelligencea-enable-asset-intelligence-hardware-inventory-reporting-classes"></a><a name="BKMK_EnableAssetIntelligence"></a> 启用资产智能硬件清单报表类  
+###  <a name="a-namebkmkenableassetintelligencea-enable-asset-intelligence-hardware-inventory-reporting-classes"></a><a name="BKMK_EnableAssetIntelligence"></a> Enable Asset Intelligence hardware inventory reporting classes  
  要在 Configuration Manager 站点中启用资产智能，必须启用一个或多个资产智能硬件清单报表类。 可以在“资产智能”  主页上，或者在在“管理”  工作区的“客户端设置”  节点中的客户端设置属性中启用这些类。 使用以下过程之一可启用资产智能硬件清单报表类。  
 
 ##### <a name="to-enable-asset-intelligence-hardware-inventory-reporting-classes-from-the-asset-intelligence-home-page"></a>若要从资产智能主页启用资产智能硬件清单报表类  
@@ -85,7 +85,7 @@ ms.openlocfilehash: 43e04a447b03885286c6c7201afb4d1b7a10aa91
 
 7.  单击“确定”  以启用所选资产智能硬件清单报表类。  
 
-###  <a name="a-namebkmkinstallassetintelligencesynchronizationpointa-install-an-asset-intelligence-synchronization-point"></a><a name="BKMK_InstallAssetIntelligenceSynchronizationPoint"></a> 安装资产智能同步点  
+###  <a name="a-namebkmkinstallassetintelligencesynchronizationpointa-install-an-asset-intelligence-synchronization-point"></a><a name="BKMK_InstallAssetIntelligenceSynchronizationPoint"></a> Install an Asset Intelligence Synchronization Point  
  使用下列过程安装资产智能同步点站点系统角色。  
 
 ##### <a name="to-install-an-asset-intelligence-synchronization-point-site-system-role"></a>安装资产智能同步点站点系统角色  
@@ -124,7 +124,7 @@ ms.openlocfilehash: 43e04a447b03885286c6c7201afb4d1b7a10aa91
 
 10. 在新建站点角色向导的“摘要”  页上，检查指定的设置以确保它们正确，然后再继续操作。 要对任何设置进行更改，请单击“上一步”  直到返回适当的页，进行更改，然后返回“摘要”  页。  
 
-###  <a name="a-namebkmkenablesuccesslogoneventsa-enable-auditing-of-success-logon-events"></a><a name="BKMK_EnableSuccessLogonEvents"></a> 启用对成功登录事件的审核  
+###  <a name="a-namebkmkenablesuccesslogoneventsa-enable-auditing-of-success-logon-events"></a><a name="BKMK_EnableSuccessLogonEvents"></a> Enable auditing of success logon events  
  使用以下过程可配置计算机安全策略登录设置以启用成功登录事件的审核。  
 
 ##### <a name="to-enable-success-logon-event-logging-by-using-a-local-security-policy"></a>使用本地安全策略启用成功登录事件日志记录  
@@ -143,7 +143,7 @@ ms.openlocfilehash: 43e04a447b03885286c6c7201afb4d1b7a10aa91
 
 3.  在结果窗格中，双击“审核登录事件” ，确保选中“成功”  复选框，然后单击“确定” 。  
 
-###  <a name="a-namebkmkimportsoftwarelicenseinformationa-import-software-license-information"></a><a name="BKMK_ImportSoftwareLicenseInformation"></a> 导入软件许可证信息  
+###  <a name="a-namebkmkimportsoftwarelicenseinformationa-import-software-license-information"></a><a name="BKMK_ImportSoftwareLicenseInformation"></a> Import software license information  
  以下部分描述了使用导入软件许可证向导将 Microsoft 和常规软件许可证信息导入 Configuration Manager 站点数据库中所需的过程。 在将软件许可证信息从许可证声明文件导入站点数据库中时，站点服务器计算机帐户需要 NTFS 文件系统对用于导入软件许可证信息的文件共享的“完全控制”  权限。  
 
 > [!IMPORTANT]  
@@ -169,7 +169,7 @@ ms.openlocfilehash: 43e04a447b03885286c6c7201afb4d1b7a10aa91
 
 6.  在“摘要”  页上，查看指定的信息以确保其正确无误，然后再继续操作。 要进行更改，请单击“上一步”  返回到“导入”  页。  
 
-###  <a name="a-namebkmkcreategenerallicensestatementa-create-a-general-license-statement-information-file-for-import"></a><a name="BKMK_CreateGeneralLicenseStatement"></a> 创建常规许可证声明信息文件以便导入  
+###  <a name="a-namebkmkcreategenerallicensestatementa-create-a-general-license-statement-information-file-for-import"></a><a name="BKMK_CreateGeneralLicenseStatement"></a> Create a general license statement information file for import  
  还可以使用以逗号分隔 (.csv) 文件格式手动创建的许可证导入文件将常规许可证声明导入资产智能目录中。  
 
 > [!NOTE]  
@@ -226,7 +226,7 @@ ms.openlocfilehash: 43e04a447b03885286c6c7201afb4d1b7a10aa91
 |支持到期日期|日期值格式如下：MM/DD/YYYY|否|购买的支持的结束日期|  
 |注释|最多 255 个字符|否|可选备注|  
 
-###  <a name="a-namebkmkconfiguremaintenancetasksa-configure-asset-intelligence-maintenance-tasks"></a><a name="BKMK_ConfigureMaintenanceTasks"></a> 配置资产智能维护任务  
+###  <a name="a-namebkmkconfiguremaintenancetasksa-configure-asset-intelligence-maintenance-tasks"></a><a name="BKMK_ConfigureMaintenanceTasks"></a> Configure Asset Intelligence maintenance tasks  
  以下维护任务可用于资产智能：  
 
 -   **将应用程序标题与清单信息进行核对**：此维护任务检查软件清单中报告的软件标题是否与资产智能目录中的软件标题一致。 默认情况下，此任务处于启用状态并计划在星期六凌晨 12:00 之后 到凌晨 5:00 之前运行。 此维护任务只能在 Configuration Manager 层次结构中的顶层站点上使用。  

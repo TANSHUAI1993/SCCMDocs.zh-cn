@@ -35,10 +35,10 @@ ms.openlocfilehash: f00defcdb56e37476ac24d8ce25d1dc5fb2f3260
 > [!IMPORTANT]  
 >  若要创建任务序列媒体，必须是从中运行 Configuration Manager 控制台的计算机上的管理员。 如果你不是管理员，则系统会在你启动创建任务序列媒体向导时提示提供管理员凭据。  
 
-##  <a name="a-namebkmkplancapturemediaa-capture-media-for-operating-system-images"></a><a name="BKMK_PlanCaptureMedia"></a> 操作系统映像的捕获媒体  
+##  <a name="a-namebkmkplancapturemediaa-capture-media-for-operating-system-images"></a><a name="BKMK_PlanCaptureMedia"></a>操作系统映像的捕获媒体  
  捕获媒体可让你从引用计算机中捕获操作系统映像。 捕获媒体包含用于启动引用计算机的启动映像，以及用于捕获操作系统映像的任务序列。 有关如何创建捕获媒体的信息，请参阅[使用 System Center Configuration Manager 创建捕获媒体](create-capture-media.md)。  
 
-##  <a name="a-namebkmkplanbootablemediaa-bootable-media-operating-system-deployments"></a><a name="BKMK_PlanBootableMedia"></a> 可启动媒体操作系统部署  
+##  <a name="a-namebkmkplanbootablemediaa-bootable-media-operating-system-deployments"></a><a name="BKMK_PlanBootableMedia"></a>可启动媒体操作系统部署  
  可启动媒体仅包含启动映像、可选的 [预启动命令](../understand/prestart-commands-for-task-sequence-media.md) 及其必需的文件和 Configuration Manager 二进制文件。 在目标计算机启动时，它连接到网络，并从网络中检索任务序列、操作系统映像和任何其他必需的内容。 由于任务序列不在媒体上，因此，你无需重新创建媒体就能更改任务序列或内容。  
 
 > [!IMPORTANT]  
@@ -46,7 +46,7 @@ ms.openlocfilehash: f00defcdb56e37476ac24d8ce25d1dc5fb2f3260
 
  有关如何创建可启动媒体的信息，请参阅[创建可启动媒体](create-bootable-media.md)。  
 
-##  <a name="a-namebkmkplanprestagedmediaa-prestaged-media-operating-system-deployments"></a><a name="BKMK_PlanPrestagedMedia"></a> 预留媒体操作系统部署  
+##  <a name="a-namebkmkplanprestagedmediaa-prestaged-media-operating-system-deployments"></a><a name="BKMK_PlanPrestagedMedia"></a>预留媒体操作系统部署  
  利用预留媒体，你可以在执行设置过程之前将可启动媒体和操作系统映像预留到硬盘上。 预留媒体是 Windows 映像格式 (WIM) 文件，可以由制造商安装在裸机上，也可以安装在未连接到 Configuration Manager 环境的企业暂存中心。  
 
  预留媒体包含用于启动目标计算机的启动映像，以及应用到目标计算机的操作系统映像。 你还可以指定要作为预留媒体的一部分包含的应用程序、包和驱动程序包。 此媒体不包含用于部署操作系统的任务序列。 在部署使用预留媒体的任务序列时，客户端会首先检查本地任务序列缓存以查找有效的内容，如果无法找到内容或内容已被修改，则客户端会从分发点下载内容。  
@@ -58,7 +58,7 @@ ms.openlocfilehash: f00defcdb56e37476ac24d8ce25d1dc5fb2f3260
 
  有关如何创建预留媒体的信息，请参阅[创建预留媒体](create-prestaged-media.md)。  
 
-##  <a name="a-namebkmkplanstandalonemediaa-stand-alone-media-operating-system-deployments"></a><a name="BKMK_PlanStandaloneMedia"></a> 独立媒体操作系统部署  
+##  <a name="a-namebkmkplanstandalonemediaa-stand-alone-media-operating-system-deployments"></a><a name="BKMK_PlanStandaloneMedia"></a>独立媒体操作系统部署  
  独立媒体包含部署操作系统所需的所有内容。 这包括任务序列和所需的任何其他内容。 由于部署操作系统所需的所有内容均存储在独立媒体上，因此，独立媒体所需的磁盘空间将显著大于其他类型的媒体所需的磁盘空间。  
 
  有关如何创建独立媒体的信息，请参阅[创建独立媒体](create-stand-alone-media.md)。  
