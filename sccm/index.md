@@ -336,7 +336,7 @@ ms.openlocfilehash: 690b516b6be4380b566649adacfafcc8f920373c
           <li><a href="https://configurationmanager.uservoice.com/forums/300492-ideas/category/112371-documentation" target="_blank">提供关于本文的反馈</a></li>
           </ul>
           <ul class="column-half">
-          <li><a href="https://technet.microsoft.com/library/gg682129.aspx" target="_blank">System Center 2012 Configuration Manager 文档</a></li>
+          <li><a href="https://technet.microsoft.com/en-us/library/gg682129.aspx" target="_blank">System Center 2012 Configuration Manager 文档</a></li>
           <li><a href="https://social.technet.microsoft.com/Forums/en-US/home?forum=ConfigMgrCBGeneral%2CConfigMgrDeployment%2CConfigMgrMDM%2CConfigMgrMigration%2CConfigMgrCompliance%2CConfigMgrAppManagement%2CConfigMgrPowerShell%2CConfigMgrCBOSD&filter=alltypes&sort=lastpostdesc" target="_blank">Configuration Manager TechNet 论坛</a></li>
           <li><a href="https://www.microsoft.com/en-us/cloud-platform/system-center-configuration-manager" target="_blank">Configuration Manager 产品页面</a></li>
           </ul>
@@ -347,12 +347,13 @@ ms.openlocfilehash: 690b516b6be4380b566649adacfafcc8f920373c
       <p>掌握 Configuration Manager 的最新信息</p>
       <ol class="action-list">
         <li><a href="https://blogs.technet.microsoft.com/enterprisemobility/" target="_blank" class="button-bordered button-translucent">企业移动与安全团队博客</a></li>
-             </ol>
+        <li><a href="https://twitter.com/hashtag/configmgr" target="_blank" class="button-bordered button-translucent">#Twitter 上的 ConfigMgr</a></li>
+      </ol>
     </aside>
 </article>
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Dec16_HO3-->
 
 

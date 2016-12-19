@@ -107,6 +107,6 @@ System Center Configuration Manager 中启动了 PXE 的操作系统部署允许
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Dec16_HO3-->
 
 
