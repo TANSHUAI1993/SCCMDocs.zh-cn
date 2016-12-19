@@ -142,6 +142,6 @@ Configuration Manager 中的操作系统映像以 Windows 映像 (WIM) 文件格
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Dec16_HO3-->
 
 

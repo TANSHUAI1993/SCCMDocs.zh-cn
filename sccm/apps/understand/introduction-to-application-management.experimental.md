@@ -18,8 +18,8 @@ manager: angrobe
 experimental: true
 experiment_id: rob-table-161101
 translationtype: Human Translation
-ms.sourcegitcommit: 57957bfdc4fc51d6ea01a9b91045cb98f3a785d7
-ms.openlocfilehash: 2779a3fb18426d363506f1fd07c4f0f900c30c77
+ms.sourcegitcommit: aa985dcb947803f7bc6d770f80a89a2fe6750681
+ms.openlocfilehash: bec4d6d7008d5eabc7219dc7aaa1198c6e68a4df
 
 
 ---
@@ -132,6 +132,6 @@ ms.openlocfilehash: 2779a3fb18426d363506f1fd07c4f0f900c30c77
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 
