@@ -1,8 +1,8 @@
 ---
-title: "监视 Endpoint Protection |System Center Configuration Manager"
+title: "监视 Endpoint Protection | Microsoft Docs"
 description: "了解如何在 System Center Configuration Manager 层次结构中监视 Endpoint Protection。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/9/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: fb5b247ae3fc031cd0beea21b03a45affe3add68
+ms.sourcegitcommit: 9fcbc0bb9c8ccd4265381ca4db7a363c8ae3b54a
+ms.openlocfilehash: 590d95f82a30167dcc0d5191feaa39ecab2b3136
 
 
 ---
@@ -25,13 +25,13 @@ ms.openlocfilehash: fb5b247ae3fc031cd0beea21b03a45affe3add68
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-可以使用“监视”工作区中的“Endpoint Protection 状态”节点、“资产和符合性”工作区中的“Endpoint Protection”节点以及使用报表，在 Microsoft System Center 2012 Configuration Manager 层次结构中监视 Endpoint Protection。  
+可以使用“监视”工作区中的“安全性”下的“Endpoint Protection 状态”节点，“资产和符合性”工作区中的“Endpoint Protection”节点以及使用报表，在 Microsoft System Center Configuration Manager 层次结构中监视 Endpoint Protection。  
 
-##  <a name="a-namebkmk1a-how-to-monitor-endpoint-protection-by-using-the-endpoint-protection-status-node"></a><a name="BKMK_1"></a> 如何使用“Endpoint Protection 状态”节点监视 Endpoint Protection  
+##  <a name="a-namebkmk1a-how-to-monitor-endpoint-protection-by-using-the-endpoint-protection-status-node"></a><a name="BKMK_1"></a>如何使用“Endpoint Protection 状态”节点监视 Endpoint Protection  
 
 1.  在 Configuration Manager 控制台中，单击“监视” 。  
 
-2.  在“监视”工作区中，单击“Endpoint Protection 状态”。  
+2.  在“监视”工作区中，展开“安全性”，然后单击“Endpoint Protection 状态”。  
 
 3.  在 **集合** 列表中，选择想要查看状态信息的集合。  
 
@@ -47,7 +47,7 @@ ms.openlocfilehash: fb5b247ae3fc031cd0beea21b03a45affe3add68
     > [!IMPORTANT]  
     >  “Endpoint Protection 状态”节点中显示的信息基于上次从 Configuration Manager 数据库汇总的数据，可能不是最新的。 如果想要检索最新数据，则在“主页”选项卡上，单击“运行摘要”，或单击“计划摘要”以调整摘要间隔。  
 
-##  <a name="a-namebkmk2a-how-to-monitor-endpoint-protection-in-the-assets-and-compliance-workspace"></a><a name="BKMK_2"></a> 如何在“资产和符合性”工作区中监视 Endpoint Protection  
+##  <a name="a-namebkmk2a-how-to-monitor-endpoint-protection-in-the-assets-and-compliance-workspace"></a><a name="BKMK_2"></a>如何在“资产和符合性”工作区中监视 Endpoint Protection  
 
 1.  在 Configuration Manager 控制台中，单击“资产和符合性” 。  
 
@@ -59,7 +59,7 @@ ms.openlocfilehash: fb5b247ae3fc031cd0beea21b03a45affe3add68
 
 3.  在 <集合名称\> 列表中，选择一台计算机，然后单击“恶意软件详细信息”选项卡。  
 
-##  <a name="a-namebkmk3a-how-to-monitor-endpoint-protection-by-using-reports"></a><a name="BKMK_3"></a> 如何使用报表监视 Endpoint Protection  
+##  <a name="a-namebkmk3a-how-to-monitor-endpoint-protection-by-using-reports"></a><a name="BKMK_3"></a>如何使用报表监视 Endpoint Protection  
  使用以下报表可帮助查看有关层次结构中的 Endpoint Protection 的信息。 你还可以使用这些报表来帮助针对任何 Endpoint Protection 问题进行故障排除。 有关如何在 Configuration Manager 中配置报表的详细信息，请参阅 [System Center Configuration Manager 中的报表](../../core/servers/manage/reporting.md)和 [System Center Configuration Manager 中的日志文件](../../core/plan-design/hierarchy/log-files.md)。 Endpoint Protection 报表处于 Endpoint Protection 文件夹中。  
 
 |报告名称|描述|  
@@ -84,6 +84,6 @@ ms.openlocfilehash: fb5b247ae3fc031cd0beea21b03a45affe3add68
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,8 +1,8 @@
 ---
-title: "客户端设置 | System Center Configuration Manager"
+title: "客户端设置 | Microsoft Docs"
 description: "通过使用 System Center Configuration Manager 中的管理控制台选择客户端设置。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/12/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 caps.latest.revision: 15
 caps.handback.revision: 0
-author: Mtillman
-ms.author: mtillman
+author: nbigman
+ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f777295958e9cbc729e3759d354521c96ae3e8ac
-ms.openlocfilehash: cbe052891c55dd0c0d58c6e65d783314b0ec8ce9
+ms.sourcegitcommit: 809c7938968b4a6efce6ef37fe7b7baf2c9dd3e7
+ms.openlocfilehash: 1615c183c440b44084651d52bfc50be2d65c2e11
 
 ---
 # <a name="about-client-settings-in-system-center-configuration-manager"></a>关于 System Center Configuration Manager 中的客户端设置
@@ -27,82 +27,92 @@ ms.openlocfilehash: cbe052891c55dd0c0d58c6e65d783314b0ec8ce9
 
 System Center Configuration Manager 中的所有客户端设置在 Configuration Manager 控制台中从“管理”工作区中“客户端设置”节点进行托管。 系统随 Configuration Manager 一起提供了一组默认设置。 如果修改默认的客户端设置，则这些设置将应用于层次结构中的所有客户端。 你也可以配置自定义客户端设置，当将这些设置分配给集合时，它们将替代默认客户端设置。 有关如何配置客户端设置的信息，请参阅 [How to configure client settings in System Center Configuration Manager](../../../core/clients/deploy/configure-client-settings.md)。  
 
- 许多客户端设置具有自解释性。 使用下列部分获取有关在配置之前可能需要一些信息的客户端设置的详细信息。  
+ 许多客户端设置都是不言自明的，但其他的将在此处进行介绍。  
 
-##  <a name="a-namebkmkbitsa-background-intelligent-transfer"></a><a name="BKMK_BITS"></a> 后台智能传输  
+## <a name="background-intelligent-transfer"></a>后台智能传输  
 
 -   **限制 BITS 后台传输的最大网络带宽**  
 
-     如果将此选项配置为“True”或“是”，则 BITS 带宽限制将由 Configuration Manager 客户端使用。  
+   设置为“True”或“是”时，BITS 带宽限制将由客户端使用。  
 
 -   **限制时段开始时间**  
 
-     用本地时间指定 BITS 限制时段将开始的开始时间。  
+   BITS 限制时段的本地开始时间。  
 
 -   **限制时段结束时间**  
 
-     用本地时间指定 BITS 限制时段将结束的结束时间。 如果此值与“限制时段开始时间” 相同，则始终启用 BITS 限制。  
+  BITS 限制时段的本地结束时间。 如果此值与“限制时段开始时间” 相等，则会始终启用 BITS 限制。  
 
 -   **限制时段期间的最大传输速率(Kbps)**  
 
-     指定 Configuration Manager 客户端在指定的 BITS 限制时段内可以使用的最大传输速率 (Kbps)。  
+   指定客户端在限制时段期间可以使用的最大传输速率。  
 
 -   **允许 BITS 在限制时段外下载**  
 
-     选择此选项以允许 BITS 在限制时段外下载。 此选项允许 Configuration Manager 客户端在指定的时段之外使用单独的 BITS 设置。  
+   允许 Configuration Manager 客户端在指定的时段之外使用单独的 BITS 设置。  
 
 -   **限制时段外的最大传输速率(Kbps)**  
 
-     指定 Configuration Manager 客户端在指定的 BITS 限制时段外可以使用的最大传输速率 (Kbps)。 只有选择允许在指定的时段之外使用 BITS 限制时才可以配置此选项。  
+   选择在限制时段之外允许 BITS 限制时，客户端在 BITS 限制时段外将使用的最大传输速率。  
 
-##  <a name="a-namebkmkclientpolicydevicesettingsa-client-policy"></a><a name="BKMK_ClientPolicyDeviceSettings"></a> 客户端策略  
+## <a name="client-cache-settings"></a>客户端缓存设置
+
+- **配置 BranchCache**
+
+  从 1606 版开始，用于设置客户端计算机的 [BranchCache](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#branchcache)。 若要允许客户端上的 BranchCache 缓存，请将“启用 BranchCache”设置为“是”。 
+
+- **配置客户端缓存大小**
+
+  Windows 计算机上的客户端缓存会保存用于安装应用程序和程序的临时文件。 选择“是”以指定“最大缓存大小”（MB 或磁盘百分比）。 如果设置为“否”，则默认大小为 5120 MB。
+
+## <a name="client-policy"></a>客户端策略  
 
 -   **客户端策略轮询间隔(分钟)**  
 
-     指定以下 Configuration Manager 客户端下载客户端策略的频率：  
+   指定以下 Configuration Manager 客户端下载客户端策略的频率：  
 
-    -   Windows 计算机（例如，台式机、服务器、便携计算机）  
+  -   Windows 计算机（例如，台式机、服务器、便携计算机）  
 
-    -   Configuration Manager 注册的移动设备  
+  -   Configuration Manager 注册的移动设备  
 
-    -   Mac 计算机  
+  -   Mac 计算机  
 
-    -   运行 Linux 或 UNIX 的计算机  
+  -   运行 Linux 或 UNIX 的计算机  
 
 -   **在客户端上启用用户策略轮询**  
 
-     将此设置配置为“True”或“是”并且 Configuration Manager 发现了用户，则计算机上的 Configuration Manager 客户端将接收以登录的用户为目标的应用程序和程序。 有关如何发现用户的详细信息，请参阅 [Configuration Manager 中的 Active Directory 用户发现](../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser)。  
+   如果设置为“True”或“是”并且 Configuration Manager [发现了用户](../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser)，则计算机上的客户端将接收以登录的用户为目标的应用程序和程序。  
 
-     由于应用程序目录从站点服务器接收可供用户使用的软件的列表，因此不必将此设置配置为“真”  或“是”  ，用户便可以从应用程序目录中查看和请求应用程序。 但是，如果此设置为“假”  或“否” ，则在用户使用应用程序目录时以下各项将不工作：  
+   由于应用程序目录从站点服务器接收可供用户使用的软件的列表，因此不必将此设置配置为“真”  或“是”  ，用户便可以从应用程序目录中查看和请求应用程序。 但是，如果此设置为“假”  或“否” ，则在用户使用应用程序目录时以下各项将不工作：  
 
-    -   用户无法安装他们在应用程序目录中看到的应用程序。  
+  -   用户无法安装他们在应用程序目录中看到的应用程序。  
 
-    -   用户将看不到有关他们的应用程序批准请求的通知。 相反，他们必须刷新应用程序目录并检查审批状态。  
+  -   用户将看不到有关他们的应用程序批准请求的通知。 相反，他们必须刷新应用程序目录并检查审批状态。  
 
-    -   用户将不会收到发布到应用程序目录的应用程序的修订和更新。 但是，他们会在应用程序目录中看到对应用程序所做更改的信息。  
+  -   用户将不会收到发布到应用程序目录的应用程序的修订和更新。 但是，他们会在应用程序目录中看到对应用程序所做更改的信息。  
 
-    -   如果在客户端应用程序目录中安装应用程序后删除应用程序部署，则客户端最多会对是否安装了应用程序的情况继续检查 2 天。  
+  -   如果在客户端应用程序目录中安装应用程序后删除应用程序部署，则客户端最多会对是否安装了应用程序的情况继续检查 2 天。  
 
-     此外，如果此设置为“假”  或“否” ，则用户将不会收到为用户部署的所需应用程序，也不会收到用户策略中包含的任何其他管理操作。  
+   此外，如果此设置为“假”  或“否” ，则用户将不会收到为用户部署的所需应用程序，也不会收到用户策略中包含的任何其他管理操作。  
 
-     如果用户的计算机在 Intranet 和 Internet 上，则此设置适用于用户；如果你也想对 Internet 启用用户策略，则必须将此设置配置为“真”  或“是”  。  
+   如果用户的计算机在 Intranet 和 Internet 上，则此设置适用于用户；如果你也想对 Internet 启用用户策略，则必须将此设置配置为“真”  或“是”  。  
 
 -   **启用来自 Internet 客户端的用户策略请求**  
 
-     如果为基于 Internet 的客户端管理配置客户端和站点，并且将此选项配置为“真”  或“是”  且以下两个条件都适用，则当用户的计算机在 Internet 上时，用户将收到用户策略：  
+   如果为基于 Internet 的客户端管理配置客户端和站点，并且将此选项配置为“真”  或“是”  且以下两个条件都适用，则当用户的计算机在 Internet 上时，用户将收到用户策略：  
 
-    -   “在客户端上启用用户策略轮询”  客户端设置配置为“真”  或“在客户端上启用用户策略”  配置为“是” 。  
+  -   “在客户端上启用用户策略轮询”  客户端设置配置为“真”  或“在客户端上启用用户策略”  配置为“是” 。  
 
-    -   基于 Internet 的管理点可通过使用 Windows 身份验证（Kerberos 或 NTLM）成功地对用户进行验证。  
+  -   基于 Internet 的管理点可通过使用 Windows 身份验证（Kerberos 或 NTLM）成功地对用户进行验证。  
 
-     如果将此选项保留为“假”  或“否” ，或者任何一个条件失败，则 Internet 上的计算机将仅收到计算机策略。 在此情况下，用户仍然能够查看、请求和安装基于 Internet 的应用程序目录中的应用程序。 如果此设置为“假”  或“否”  ，但“在客户端上启用用户策略轮询”  配置为“真”  或“在客户端上启用用户策略”  配置为“是” ，则在计算机连接到 Intranet 之前，用户将不会收到用户策略。  
+   如果将此选项保留为“假”  或“否” ，或者任何一个条件失败，则 Internet 上的计算机将仅收到计算机策略。 在此情况下，用户仍然能够查看、请求和安装基于 Internet 的应用程序目录中的应用程序。 如果此设置为“假”  或“否”  ，但“在客户端上启用用户策略轮询”  配置为“真”  或“在客户端上启用用户策略”  配置为“是” ，则在计算机连接到 Intranet 之前，用户将不会收到用户策略。  
 
-     有关在 Internet 上管理客户端的详细信息，请参阅 [System Center Configuration Manager 中终结点之间的通信](../../../core/plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan)中的[来自 Internet 或不受信任林的客户端通信的注意事项](../../../core/plan-design/hierarchy/communications-between-endpoints.md)。  
+   有关在 Internet 上管理客户端的详细信息，请参阅 [System Center Configuration Manager 中终结点之间的通信](../../../core/plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan)中的[来自 Internet 或不受信任林的客户端通信的注意事项](../../../core/plan-design/hierarchy/communications-between-endpoints.md)。  
 
-    > [!NOTE]  
-    >  来自用户的应用程序批准请求不需要用户策略或用户身份验证。  
+  > [!NOTE]  
+  >  来自用户的应用程序批准请求不需要用户策略或用户身份验证。  
 
-##  <a name="a-namebkmkcompliancea-compliance-settings"></a><a name="BKMK_Compliance"></a> Compliance Settings  
+##  <a name="compliance-settings"></a>符合性设置  
 
 -   **计划符合性评估**  
 
@@ -110,11 +120,9 @@ System Center Configuration Manager 中的所有客户端设置在 Configuration
 
 -   **启用用户数据和配置文件**  
 
-     如果想要向层次结构中的 Windows 8 计算机部署用户数据和配置文件配置项目，请选择“是”  。  
+     如果想要向层次结构中的 Windows 8 计算机部署[用户数据和配置文件](../../../compliance/deploy-use/create-user-data-and-profiles-configuration-items.md)配置项目，请选择“是”。  
 
-     有关用户数据和配置文件的详细信息，请参阅[如何在 System Center Configuration Manager 中创建用户数据和配置文件配置项目](../../../compliance/deploy-use/create-user-data-and-profiles-configuration-items.md)。  
-
-##  <a name="a-namebkmkcomputeragentdevicesettingsa-computer-agent"></a><a name="BKMK_ComputerAgentDeviceSettings"></a> 计算机代理  
+## <a name="computer-agent"></a>计算机代理  
 
 -   **默认应用程序目录网站点**  
 
@@ -122,7 +130,7 @@ System Center Configuration Manager 中的所有客户端设置在 Configuration
 
     -   如果客户端的站点包含应用程序目录网站点，则从客户端站点中向客户端自动提供应用程序目录网站点。  
 
-    -   防御未授权服务器，因为 Intranet 上被配置为使用 HTTPS 的应用程序目录网站点优先于未被配置为使用 HTTPS 的应用程序目录网站点。  
+    -   防御未授权服务器，因为 Intranet 上配置为使用 HTTPS 的应用程序目录网站点优先于未配置为使用 HTTPS 的应用程序目录网站点。  
 
     -   对基于 Intranet 和 Internet 的客户端管理配置客户端后，如果客户端在 Internet 上，则会为它们提供基于 Internet 的应用程序目录网站点；如果客户端在 Intranet 上，则会为它们提供基于 Intranet 的应用程序目录网站点。  
 
@@ -247,12 +255,17 @@ System Center Configuration Manager 中的所有客户端设置在 Configuration
 
      如果在达到配置的截止时间时必需毫不延迟地安装所需的软件更新，请对此设置选择“是”  。  
 
-##  <a name="a-namebkmkcomputerrestartdevicesettingsa-computer-restart"></a><a name="BKMK_ComputerRestartDeviceSettings"></a> 计算机重新启动  
+-   **部署截止日期后强制的宽限期(小时)** 
+    
+     在某些情况下，可能会希望为用户提供更多时间（超出所配置的任何截止时间）来安装所需的应用程序部署或软件更新。 通常，当一台计算机关闭的时间过长和计算机需要安装大量应用程序或更新部署时，会需要执行这种操作。 例如，如果最终用户刚从假期返回，则他们可能需要等待很长时间，因为安装的应用程序部署已过期。 为了帮助解决此问题，可通过将 Configuration Manager 客户端设置部署到集合来定义强制的宽限期。
+    可以设置 1 到 120 小时之间的宽限期。 此设置与部署属性“根据用户偏好延迟此强制部署”结合使用。 有关详细信息，请参阅[部署应用程序](/sccm/apps/deploy-use/deploy-applications)
+
+##  <a name="computer-restart"></a>计算机重新启动  
  如果指定这些计算机重启设置，请确保重启临时通知间隔的值与最终倒计时间隔的值的持续时间比应用于计算机的最短维护时段还短。  
 
  有关维护时段的详细信息，请参阅[如何在 System Center Configuration Manager 中使用维护时段](../../../core/clients/manage/collections/use-maintenance-windows.md)。  
 
-##  <a name="a-namebkmkendpointprotectiondevicesettingsa-endpoint-protection"></a><a name="BKMK_EndpointProtectionDeviceSettings"></a> Endpoint Protection  
+##  <a name="endpoint-protection"></a>Endpoint Protection  
 
 -   **在客户端计算机上管理 Endpoint Protection 客户端**  
 
@@ -290,7 +303,7 @@ System Center Configuration Manager 中的所有客户端设置在 Configuration
 
      如果希望 Configuration Manager 仅在客户端计算机上安装初始定义更新，请选择“True”或“是”。 此设置可有助于在初次安装定义更新期间避免不必要的网络连接以及减小网络带宽。  
 
-##  <a name="a-namebkmkhardwareinventorydevicesettingsa-hardware-inventory"></a><a name="BKMK_HardwareInventoryDeviceSettings"></a> 硬件清单  
+##  <a name="hardware-inventory"></a>硬件清单  
 
 -   **最大自定义 MIF 文件大小(KB)**  
 
@@ -316,7 +329,7 @@ System Center Configuration Manager 中的所有客户端设置在 Configuration
     > [!NOTE]  
     >  此设置仅在默认客户端设置中可用。  
 
-##  <a name="a-namebkmkmeteredinternetconnetionssettingsa-metered-internet-connections"></a><a name="BKMK_MeteredInternetConnetionsSettings"></a> 按流量计费的 Internet 连接  
+##  <a name="metered-internet-connections"></a>按流量计费的 Internet 连接  
  可以管理 Windows 8 客户端计算机在使用按流量计费的 Internet 连接时如何与 Configuration Manager 站点通信。 Internet 提供商有时根据你在按流量计费的 Internet 连接上发送和接收的数据量计费。  
 
 > [!NOTE]  
@@ -348,7 +361,7 @@ System Center Configuration Manager 中的所有客户端设置在 Configuration
 
     -   **阻止**：Configuration Manager 客户端采用按流量计费的 Internet 连接时不尝试与 Configuration Manager 站点通信。 此为默认值。  
 
-##  <a name="a-namebkmkpowmgmtdevicesettingsa-power-management"></a><a name="BKMK_PowMgmtDeviceSettings"></a> 电源管理  
+##  <a name="power-management"></a>电源管理  
 
 -   **允许用户从电源管理中排除其设备**  
 
@@ -376,7 +389,7 @@ System Center Configuration Manager 中的所有客户端设置在 Configuration
     > [!IMPORTANT]  
     >  此数字必须与站点“属性” 中的数字匹配。 如果在一个位置更改此数字，则不会在其他位置自动更新此数字。  
 
-##  <a name="a-namebkmkremotetoolsdevicesettingsa-remote-tools"></a><a name="BKMK_RemoteToolsDeviceSettings"></a> 远程工具  
+##  <a name="remote-tools"></a>远程工具  
 
 -   **在客户端上启用远程控制** 及描述“脚本未签名” **防火墙例外配置文件**  
 
@@ -460,7 +473,7 @@ System Center Configuration Manager 中的所有客户端设置在 Configuration
 
      如果想要使用网络级别身份验证与运行 Windows Vista 或更高版本的客户端计算机建立远程桌面连接，请选择此更加安全的选项。 网络级别身份验证最初需要较少的远程计算机资源，因为它在建立远程桌面连接之前完成用户身份验证。 此方法更加安全，因为它可以帮助保护计算机不受恶意用户或软件的攻击，并且可减小拒绝服务攻击风险。  
 
-##  <a name="a-namebkmksoftwaredeploymentdevicesettingsa-software-deployment"></a><a name="BKMK_SoftwareDeploymentDeviceSettings"></a> 软件部署  
+## <a name="software-deployment"></a>软件部署  
 
 -   **计划部署的重新评估**  
 
@@ -471,7 +484,7 @@ System Center Configuration Manager 中的所有客户端设置在 Configuration
 
      还可以通过从控制面板中的“Configuration Manager”的“操作”选项卡选择“应用程序部署评估周期”操作，从 Configuration Manager 客户端计算机初始化此操作。  
 
-##  <a name="a-namebkmksoftinventorydevicesettingsa-software-inventory"></a><a name="BKMK_SoftInventoryDeviceSettings"></a> 软件清单  
+##  <a name="software-inventory"></a>软件清单  
 
 -   **清单报告详细信息**  
 
@@ -524,7 +537,7 @@ System Center Configuration Manager 中的所有客户端设置在 Configuration
         >   
         >  “配置客户端设置”  对话框中的“所有收集的文件的最大大小(KB)”  值显示所有收集的文件的最大大小。 达到该大小后，将停止文件收集。 已收集的任何文件都会被保留并发送到站点服务器。  
 
-        > [!IMPORTANT]  
+        > [!IMPORTANT]
         >  如果将软件清单配置为收集许多大文件，则这可能会对网络和站点服务器的性能有负面影响。  
 
          有关如何查看收集的文件的信息，请参阅[如何使用资源浏览器 System Center Configuration Manager 中查看软件清单](../../../core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory.md)。  
@@ -543,7 +556,7 @@ System Center Configuration Manager 中的所有客户端设置在 Configuration
 
     -   清单名称： - 单击“新建”图标以添加一个新清单名称，该名称将在软件清单中被“显示名称”  列表中所选择的名称替代。 你可以添加将替换的多个名称。  
 
-##  <a name="a-namebkmksoftwareupdatesdevicesettinga-software-updates"></a><a name="BKMK_SoftwareUpdatesDeviceSetting"></a> 软件更新  
+##  <a name="software-updates"></a>软件更新  
 
 -   **在客户端上启用软件更新**  
 
@@ -581,7 +594,7 @@ System Center Configuration Manager 中的所有客户端设置在 Configuration
 
      使用此设置可指定前一个设置的时间段。 可以输入介于 1 到 23 个小时和介于 1 到 365 天的值。 默认情况下，此设置将配置为 7 天。  
 
-##  <a name="a-namebkmkuserdeviceaffinitydevicesettingsa-user-and-device-affinity"></a><a name="BKMK_UserDeviceAffinityDeviceSettings"></a> 用户和设备相关性  
+##  <a name="user-and-device-affinity"></a>用户和设备相关性  
 
 -   **用户设备相关性使用情况阈值(分钟)**  
 
@@ -598,23 +611,7 @@ System Center Configuration Manager 中的所有客户端设置在 Configuration
 
      选择“True”或“是”，启用 Configuration Manager 以基于收集的使用情况信息自动创建用户设备相关性。  
 
-## <a name="client-cache-settings"></a>客户端缓存设置
-
-- **配置客户端缓存大小**
-
-  在 Windows 计算机上使用客户端缓存文件夹，保存用于安装应用程序和程序的临时文件。 从版本 1606 开始，选择“是”可指定使用“最大缓存大小”设置的客户端缓存文件夹的大小。 如果设置为“否”，客户端缓存文件夹默认值为 5120 MB。
-
-  客户端安装过程中可设置其他客户端缓存属性。 有关详细信息，请参阅 [Configure the Client Cache for Configuration Manager Clients](../../../core/clients/manage/manage-clients.md#BKMK_ClientCache)。
-
-- **最大缓存大小 (MB)**
-
-  从版本 1606 开始，指定客户端缓存文件夹的最大大小（兆字节）。
-
-- **最大缓存大小（磁盘百分比）**（从版本 1606 开始）
-
-  从版本 1606 开始，指定客户端缓存文件夹的最大大小（磁盘大小百分比）。
-
-##  <a name="a-namebkmkmobiledevicesusersettingsa-mobile-devices"></a><a name="BKMK_MobileDevicesUserSettings"></a> 移动设备  
+##  <a name="mobile-devices"></a>移动设备  
 
 -   **移动设备注册配置文件**  
 
@@ -623,7 +620,7 @@ System Center Configuration Manager 中的所有客户端设置在 Configuration
     > [!IMPORTANT]  
     >  在配置此选项之前，请确保你配置了要用于移动设备注册的证书模板。  
 
-##  <a name="a-namebkmkenrollmentusersettingsa-enrollment"></a><a name="BKMK_注册UserSettings"></a> 注册  
+##  <a name="enrollment"></a>注册  
 
 -   **移动设备注册配置文件**  
 
@@ -632,7 +629,7 @@ System Center Configuration Manager 中的所有客户端设置在 Configuration
     > [!IMPORTANT]  
     >  在配置此选项之前，请确保你配置了要用于移动设备注册或用于 Mac 客户端证书注册的证书模板。  
 
-##  <a name="a-namebkmkuserdeviceaffinityusersettingsa-user-and-device-affinity"></a><a name="BKMK_UserDeviceAffinityUserSettings"></a> 用户和设备相关性  
+## <a name="user-and-device-affinity"></a>用户和设备相关性  
 
 -   **允许用户定义其主要设备**  
 
@@ -640,6 +637,6 @@ System Center Configuration Manager 中的所有客户端设置在 Configuration
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

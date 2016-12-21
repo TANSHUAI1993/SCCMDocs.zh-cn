@@ -1,8 +1,8 @@
 ---
-title: Endpoint Protection | System Center Configuration Manager
+title: Endpoint Protection | Microsoft Docs
 description: "学习如何为 Configuration Manager 层次结构中的客户端计算机管理反恶意软件策略和 Windows 防火墙安全性。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/9/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f777295958e9cbc729e3759d354521c96ae3e8ac
-ms.openlocfilehash: 30ac6f2ec03a4c0d50de700f9ce77f9e50eaf1e0
+ms.sourcegitcommit: 9fcbc0bb9c8ccd4265381ca4db7a363c8ae3b54a
+ms.openlocfilehash: 59313bd6f76433782a79ab3ee9d6240f767fbd76
 
 
 ---
@@ -59,7 +59,7 @@ Windows 10 计算机无需任何其他客户端即可进行 Endpoint Protection 
 
 
 ## <a name="managing-malware-with-endpoint-protection"></a>使用 Endpoint Protection 管理恶意软件  
- Configuration Manager 中的 Endpoint Protection 可用于创建包含 Endpoint Protection 客户端配置设置的反恶意软件策略。 然后可以将这些反恶意软件策略部署到客户端计算机，并在“监视”工作区中的“Endpoint Protection 状态”节点或通过使用 Configuration Manager 报表来监视这些服务器。  
+ Configuration Manager 中的 Endpoint Protection 可用于创建包含 Endpoint Protection 客户端配置设置的反恶意软件策略。 然后可以将这些反恶意软件策略部署到客户端计算机，并在“监视”工作区中“安全性”下的“Endpoint Protection 状态”节点中或通过使用 Configuration Manager 报表来监视这些服务器。  
 
  其他信息：  
 
@@ -112,6 +112,6 @@ Windows 10 计算机无需任何其他客户端即可进行 Endpoint Protection 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

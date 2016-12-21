@@ -1,8 +1,8 @@
 ---
-title: "Scenario Endpoint Protection 保护计算机免受恶意软件侵害 |System Center Configuration Manager"
+title: "方案 - Endpoint Protection 保护计算机免受恶意软件侵害 | Microsoft Docs"
 description: "了解如何在 Configuration Manager 中实现 Endpoint Protection，使计算机免受恶意软件侵害。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/9/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,8 +15,8 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: d4506bbbe3533d6d9c2353f99658352ad1671a2f
+ms.sourcegitcommit: 9fcbc0bb9c8ccd4265381ca4db7a363c8ae3b54a
+ms.openlocfilehash: 2cdc57b766b18a6fdf21ec8748172c12b11b08db
 
 
 ---
@@ -72,12 +72,12 @@ ms.openlocfilehash: d4506bbbe3533d6d9c2353f99658352ad1671a2f
 |John 使用“创建 Windows 防火墙策略向导”，通过为域配置文件配置以下设置来创建策略：<br /><br /> 1) **启用 Windows 防火墙**：“是”<br /><br /> 2)<br />                    ： |请参阅[如何在 System Center Configuration Manager 中为 Endpoint Protection 创建和部署 Windows 防火墙策略](../../protect/deploy-use/create-windows-firewall-policies.md)|  
 |John 将新的防火墙策略部署到先前创建的“Endpoint Protection 保护的所有计算机”集合。|请参阅[如何在 System Center Configuration Manager 中为 Endpoint Protection 创建和部署 Windows 防火墙策略](create-windows-firewall-policies.md)中的“部署 Windows 防火墙策略”|  
 |John 使用 Endpoint Protection 的可用管理任务来管理反恶意软件和 Windows 防火墙策略、在必要时执行计算机按需扫描、强制计算机下载最新的定义并指定当检测到恶意软件时采取的任何进一步操作。|请参阅[如何在 System Center Configuration Manager 中管理 Endpoint Protection 的反恶意软件策略和防火墙设置](endpoint-antimalware-firewall.md)|  
-|John 使用以下方法来监视 Endpoint Protection 的状态和 Endpoint Protection 采取的操作：<br /><br /> 1) 通过使用“监视”工作区中“System Center 2012 Endpoint Protection 状态”节点。<br /><br /> 2)通过使用“资产和符合性”工作区中的“Endpoint Protection”节点。<br /><br /> 3) 通过使用 Configuration Manager 内置报表。|请参阅[如何在 System Center Configuration Manager 中监视 Endpoint Protection](monitor-endpoint-protection.md)|  
+|John 使用以下方法来监视 Endpoint Protection 的状态和 Endpoint Protection 采取的操作：<br /><br /> 1) 通过使用“监视”工作区中“安全性”下的“Endpoint Protection 状态”节点。<br /><br /> 2)通过使用“资产和符合性”工作区中的“Endpoint Protection”节点。<br /><br /> 3) 通过使用 Configuration Manager 内置报表。|请参阅[如何在 System Center Configuration Manager 中监视 Endpoint Protection](monitor-endpoint-protection.md)|  
 
  John 告知经理已成功实施 Endpoint Protection，并且根据指定的业务要求，确认 Woodgrove Bank 的计算机当前受到反恶意软件保护。
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

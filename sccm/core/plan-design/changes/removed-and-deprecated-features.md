@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: c899b4beaa2aae4eb609291dca0e23f3c266627a
-ms.openlocfilehash: 294166af3d5c6062e3508249c767779876b23931
+ms.sourcegitcommit: ffebee1e85008611a9841dc849bea735d15a88c6
+ms.openlocfilehash: 888b6de9fd2b70e8b4f58e32cca7cf5e615d1dca
 
 
 ---
@@ -51,7 +51,8 @@ ms.openlocfilehash: 294166af3d5c6062e3508249c767779876b23931
 |-|-|-|  
 |网络访问保护 (NAP)- 在 System Center 2012 Configuration Manager 中找到|7/10/2015|版本 1511|  
 |带外管理- 在 System Center 2012 Configuration Manager 中找到|10/16/2015|版本 1511|
-|任务序列： <br /> - 将磁盘转换为动态磁盘 <br /> - 安装部署工具 |2016/11/18|对这些任务序列的支持随 2017 年 6 月 1 日后发布的首个更新结束|  
+|任务序列： <br /> - 将磁盘转换为动态磁盘 <br /> - 安装部署工具 |2016/11/18|对这些任务序列的支持随 2017 年 6 月 1 日后发布的首个更新结束|
+|新的软件中心具有富有现代感的全新外观，并且本应仅出现在依赖于 Silverlight 的应用程序目录中的应用（用户可用的应用）现在将出现在“应用程序”选项卡下的软件中心。 应用程序目录仍然可以使用软件中心的“安装状态”  选项卡下的链接进行访问。<br><br>在未来几个月，我们将删除以前版本的软件中心，并且它将不再可用。<br><br>你可以通过启用客户端设置“计算机代理” **计算机代理** > **使用新的软件中心**。<br><br>有关软件中心的详细信息，请参阅[规划和配置 System Center Configuration Manager 中的应用程序管理](https://docs.microsoft.com/sccm/apps/plan-design/plan-for-and-configure-application-management)。|2016/12/13|即将公布| 
 
  **已弃用的服务器操作系统：**  
 
@@ -111,6 +112,6 @@ ms.openlocfilehash: 294166af3d5c6062e3508249c767779876b23931
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -2,7 +2,7 @@
 title: "规划和配置应用程序管理 | Microsoft Docs"
 description: "实现和配置用于在 System Center Configuration Manager 中部署应用程序的所需依赖关系。"
 ms.custom: na
-ms.date: 12/06/2016
+ms.date: 12/13/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f1aaaf1c4fba8613b82d2c7a344a4dab572449a6
-ms.openlocfilehash: e9179a16d6fef73c7e50c3cf1dbfdc41623d1d15
+ms.sourcegitcommit: 7634d5326265d7947a01e5b83374f65911e33aeb
+ms.openlocfilehash: 3ab905192c091cb5ad013c8e0c8590597fb0422a
 
 
 ---
@@ -65,7 +65,11 @@ ms.openlocfilehash: e9179a16d6fef73c7e50c3cf1dbfdc41623d1d15
  无论你选择使用哪个版本，当你在 Windows 电脑上安装 Configuration Manager 客户端时，都会自动安装软件中心。  
 
     > [!TIP]  
-    >  用户看到的软件中心的版本取决于 Configuration Manager 客户端设置。 这样便能根据部署到集合的自定义客户端设置，灵活地控制使用哪个版本。  
+    >  用户看到的软件中心的版本取决于 Configuration Manager 客户端设置。 这样便能根据部署到集合的自定义客户端设置，灵活地控制使用哪个版本。 
+
+    > [!IMPORTANT]
+    > 在未来几个月，我们将删除以前版本的软件中心，并且它将不再可用。
+    > 你可以通过启用客户端设置“计算机代理” **计算机代理** > **使用新的软件中心**。 
 
 ## <a name="steps-to-install-and-configure-the-application-catalog-and-software-center"></a>安装和配置应用程序目录及软件中心的步骤  
 
@@ -130,7 +134,7 @@ ms.openlocfilehash: e9179a16d6fef73c7e50c3cf1dbfdc41623d1d15
     有关详细信息，请搜索 **awebsvcMSI.log** 和 **portlwebMSI.log** 日志文件。  
 
 ###  <a name="step-4-configure-the-client-settings-for-the-application-catalog-and-software-center"></a>步骤 4：为应用程序目录和软件中心配置客户端设置  
- 此过程为应用程序目录和软件中心配置将适用于层次结构中的所有设备的默认客户端设置。 如果希望这些设置仅适用于某些设备，则可以创建自定义客户端设置并将其部署到一个集合，该集合中的设备具有特定设置。 若要深入了解如何创建自定义设备设置，请参阅[如何在 System Center Configuration Manager 中配置客户端设置](../../core/clients/deploy/configure-client-settings.md)一文中的[如何创建和部署自定义客户端设置](../../core/clients/deploy/configure-client-settings.md#BKMK_CustomClientSettings)部分。  
+ 此过程为应用程序目录和软件中心配置将适用于层次结构中的所有设备的默认客户端设置。 如果希望这些设置仅适用于某些设备，则可以创建自定义客户端设置并将其部署到一个集合，该集合中的设备具有特定设置。 若要深入了解如何创建自定义设备设置，请参阅[如何在 System Center Configuration Manager 中配置客户端设置](../../core/clients/deploy/configure-client-settings.md)一文中的[如何创建和部署自定义客户端设置](../../core/clients/deploy/configure-client-settings.md#create-and-deploy-custom-client-settings)部分。  
 
 1.  在 Configuration Manager 控制台中，选择“管理” > “客户端设置” > “默认客户端设置”。  
 
@@ -224,6 +228,6 @@ ms.openlocfilehash: e9179a16d6fef73c7e50c3cf1dbfdc41623d1d15
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

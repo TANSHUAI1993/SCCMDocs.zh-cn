@@ -1,8 +1,8 @@
 ---
-title: "为不使用 System Center Configuration Manager 管理的 iOS 和 Mac OS X 设备创建配置项 | System Center Configuration Manager"
+title: "为不使用 System Center Configuration Manager 管理的 iOS 和 Mac OS X 设备创建配置项目 | Microsoft Docs"
 description: "使用 System Center Configuration Manager iOS 和 Mac OS X 配置项管理 iOS and Mac OS X 设备的设置。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/14/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 34fb20b0d793d4b508d4cfc3b45c76a407ff4299
+ms.sourcegitcommit: d023df79e0bcb7d5583224802976a5059c4ee753
+ms.openlocfilehash: ea4024aaa07d40781663725127d64388055c6501
 
 
 ---
@@ -80,8 +80,11 @@ ms.openlocfilehash: 34fb20b0d793d4b508d4cfc3b45c76a407ff4299
 |**最短密码长度（字符）**|密码的最短长度。|  
 |**密码过期天数**|必须更改密码前的天数。|  
 |**记住的密码数**|防止重复使用以前用过的密码。|  
-|**擦除设备前的失败登录尝试次数**|如果此数目的登录尝试均失败，则擦除该设备。<br>（仅限 iOS）|  
-|**密码复杂性**|选择是否可以指定一个 PIN（例如“1234”），或是否必须提供一个强密码。|  
+|**擦除设备前的失败登录尝试次数**|如果此数目的登录尝试均失败，则擦除该设备。<br>（仅限 iOS）| 
+|**锁定设备前的空闲时间**|指定设备自动锁定之前处于非活动状态的分钟数。|
+|**密码复杂性**|选择是否可以指定一个 PIN（例如“1234”），或是否必须提供一个强密码。|
+|**允许简单密码**|指定可以使用简单密码，如“0000”和“1234”。|
+|**解锁指纹**|允许使用指纹解锁设备。|
 
 ###  <a name="device"></a>设备  
  这些设置适用于 iOS 和 Mac OS X 设备。  
@@ -112,7 +115,7 @@ ms.openlocfilehash: 34fb20b0d793d4b508d4cfc3b45c76a407ff4299
 
 |设置名|详细信息|  
 |------------------|-------------|  
-|**默认浏览器**|用户可以更改默认 Internet 浏览器。|  
+|**允许使用 Web 浏览器**|用户可以使用默认的设备 Web 浏览器。|  
 |**自动填充**|用户可以更改浏览器中的自动完成设置。|  
 |**活动脚本**|浏览器可以运行脚本，如 Active X 脚本。|  
 |**弹出窗口阻止程序**|启用或禁用浏览器弹出窗口阻止程序。|  
@@ -168,8 +171,7 @@ ms.openlocfilehash: 34fb20b0d793d4b508d4cfc3b45c76a407ff4299
 |**允许激活锁定（仅限受监督模式）**|使用此设置可在你管理的**受监督的** iOS 设备上启用 iOS 激活锁定。 有关激活锁定的详细信息，请参阅[管理 iOS 激活锁定](../../mdm/deploy-use/manage-ios-activation-lock.md)。
 |**锁屏控制中心**|控制设备锁定时是否可以访问控制中心应用。|  
 |**锁屏通知视图**|控制设备锁定时是否可以查看通知。|  
-|**锁屏今日视图**|控制设备锁定时是否可以看到今日视图。|  
-|**解锁指纹**|允许使用指纹传感器来解锁设备。|  
+|**锁屏今日视图**|控制设备锁定时是否可以看到今日视图。|   
 
 ###  <a name="data-protection"></a>数据保护  
  这些设置仅适用于 iOS 设备。  
@@ -247,7 +249,7 @@ ms.openlocfilehash: 34fb20b0d793d4b508d4cfc3b45c76a407ff4299
 
     -   **导入** - 导入你已在逗号分隔值文件中指定的应用列表。 在文件中使用格式、应用名称、发布者和应用捆绑 ID。  
 
-2.  完成后单击“下一步” 。  
+2.  完成后单击“下一步” 。 必须将包含合规和不合规应用设置的配置项目部署到用户集合。
 
  你可以使用以下任一报表监视相容和不相容的应用：  
 
@@ -368,6 +370,6 @@ ms.openlocfilehash: 34fb20b0d793d4b508d4cfc3b45c76a407ff4299
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

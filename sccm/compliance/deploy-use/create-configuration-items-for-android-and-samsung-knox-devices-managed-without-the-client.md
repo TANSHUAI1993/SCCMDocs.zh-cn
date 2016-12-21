@@ -1,8 +1,8 @@
 ---
-title: "为没有使用 System Center Configuration Manager 客户端管理的 Android 和 Samsung KNOX 设备创建配置项目 | System Center Configuration Manager"
-description: "使用 System Center Configuration Manager Android 和 Samsung KNOX 配置项目管理设备设置。"
+title: "为没有使用 System Center Configuration Manager 客户端管理的 Android 和 Samsung KNOX 标准版设备创建配置项目 | Microsoft Docs"
+description: "使用 System Center Configuration Manager Android 和 Samsung KNOX 标准版配置项目管理设备的设置。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/14/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,20 +17,18 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 8d676d31d519b7b6099c878d94b4c81f1c972887
+ms.sourcegitcommit: d023df79e0bcb7d5583224802976a5059c4ee753
+ms.openlocfilehash: c699c9c807f864fe161255522a8d694ab71d1a4e
 
 
 ---
-# <a name="create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-system-center-configuration-manager-client"></a>为没有使用 System Center Configuration Manager 客户端管理的 Android 和 Samsung KNOX 设备创建配置项目
+# <a name="create-configuration-items-for-android-and-samsung-knox-standard-devices-managed-without-the-system-center-configuration-manager-client"></a>为没使用 System Center Configuration Manager 客户端管理的 Android 和 Samsung KNOX 标准版设备创建配置项目
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
+使用 System Center Configuration Manager **Android 和 Samsung KNOX** 配置项目管理在 Microsoft Intune 中注册或者由 Configuration Manager 进行本地管理的 Android 和 Samsung KNOX 标准版设备的设置。  
 
-
- 使用 System Center Configuration Manager **Android 和 Samsung KNOX** 配置项目管理在 Microsoft Intune 中注册或者由 Configuration Manager 进行本地管理的 Android 和 Samsung KNOX 设备的设置。  
-
-## <a name="create-an-android-and-samsung-knox-configuration-item"></a>创建 Android 和 Samsung KNOX 配置项目  
+## <a name="create-an-android-and-samsung-knox-standard-configuration-item"></a>创建 Android 和 Samsung KNOX 标准版配置项目  
 
 1.  在 Configuration Manager 控制台中，单击“资产和符合性” > “符合性设置” > “配置项目”。  
 
@@ -42,9 +40,9 @@ ms.openlocfilehash: 8d676d31d519b7b6099c878d94b4c81f1c972887
 
 6.  如果创建并分配类别以帮助在 Configuration Manager 控制台中搜索和筛选配置项目，请单击“类别”。  
 
-7.  在“支持的平台”页面上，选择将评估配置项目的特定 Android 或 Samsung KNOX 平台。  
+7.  在“支持的平台”页面上，选择将评估配置项目的特定 Android 或 Samsung KNOX 标准版平台。  
 
-8.  在“设备设置”页面上，选择要配置的设置组。 请参阅本主题中的 [Android 和 Samsung KNOX 配置项目设置参考](/sccm/compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client#android-and-samsung-knox-configuration-item-settings-reference) 以了解详细信息，然后单击“下一步” 。  
+8.  在“设备设置”页面上，选择要配置的设置组。 请参阅本主题中的 [Android 和 Samsung KNOX 标准版配置项目设置参考](/sccm/compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client#android-and-samsung-knox-configuration-item-settings-reference)，了解详细信息，然后单击“下一步”。  
 
     > [!TIP]  
     >  如果所需设置未列出，请选中“配置默认设置组以外的其他设置” 复选框。  
@@ -72,14 +70,14 @@ ms.openlocfilehash: 8d676d31d519b7b6099c878d94b4c81f1c972887
 
  可以在“资产和符合性”  工作区的“配置项目”  节点中查看新配置项目。  
 
-##  <a name="android-and-samsung-knox-configuration-item-settings-reference"></a>Android 和 Samsung KNOX 配置项目设置参考  
+##  <a name="android-and-samsung-knox-standard-configuration-item-settings-reference"></a>Android 和 Samsung KNOX 标准版配置项目设置参考  
 
 ### <a name="password"></a>Password  
- 这些设置适用于 Android 和 Samsung KNOX 设备。  
+ 这些设置适用于 Android 和 Samsung KNOX 标准版设备。  
 
 |设置|详细信息|  
 |-------------|-------------|  
-|**移动设备上需要密码设置**|支持的设备上需要密码。|  
+|**设备上需要密码设置**|支持的设备上需要密码。|  
 |**最短密码长度（字符）**|密码的最短长度。|  
 |**密码过期天数**|必须更改密码前的天数。|  
 |**记住的密码数**|防止重复使用以前用过的密码。|  
@@ -87,42 +85,83 @@ ms.openlocfilehash: 8d676d31d519b7b6099c878d94b4c81f1c972887
 |**锁定设备前的空闲时间**|选择在未使用设备的情况下设备锁定前的时间。|
 |**密码质量**|选择所需的密码复杂性级别以及是否可以使用生物识别设备。|  
 |**允许 Smart Lock 和其他信任代理**|让你能够控制兼容的 Android 设备上的 Smart Lock 功能。 如果设备处于可信位置（例如当它连接到特定蓝牙设备时，或者在 NFC 标记附近时），则此手机功能（有时称为信任代理）使你可以禁用或绕过设备锁屏界面密码。 可以使用此设置防止最终用户配置 Smart Lock。|
+|指纹解锁 (KNOX 5.0+)|允许用户使用指纹解锁兼容设备。|
 
 ###  <a name="device"></a>设备  
- 这些设置仅适用于 Samsung KNOX 设备。  
+ 这些设置仅适用于 Samsung KNOX 标准版设备。  
 
 |设置名|详细信息|  
-|------------------|-------------|  
+|------------------|-------------|
+|**语音拨号**|启用或禁用设备上的语音拨号功能。|
+|**语音助手**|允许在设备上使用语音助手软件。|
+|**屏幕捕获**|允许用户以图像形式捕捉屏幕内容。|
+|**诊断数据提交**|允许设备向 Google 提交诊断信息。|
+|**地理位置**|允许设备利用位置信息。|
+|**复制和粘贴**|允许设备上的复制和粘贴功能。|  
 |**恢复出厂设置**|允许用户对设备执行恢复出厂设置。|  
-|**应用程序之间的剪贴板共享**|使用剪贴板在应用之间进行复制和粘贴。|  
+|**应用程序之间的剪贴板共享**|使用剪贴板在应用之间进行复制和粘贴。|
+|**蓝牙**|允许使用设备的蓝牙功能。|
+
+### <a name="store"></a>存储
+|设置|详细信息|  
+|-------------|-------------|  
+|**应用商店**|允许在设备上访问 Google Play Store 应用。|
+
+### <a name="browser"></a>浏览器
+|设置|详细信息|  
+|-------------|-------------| 
+|**允许使用 Web 浏览器**|指定是否可以使用设备的默认 Web 浏览器。|
+|**自动填充**|允许使用 Web 浏览器的自动填充功能。|
+|**活动脚本**|允许设备 Web 浏览器使用活动脚本。|
+|**弹出窗口阻止程序**|允许在 Web 浏览器中使用弹出窗口阻止程序。|
+|**Cookie**|允许设备 Web 浏览器使用 cookie。|
 
 ### <a name="cloud"></a>云  
- 这些设置仅适用于 Samsung KNOX 设备。  
+ 这些设置仅适用于 Samsung KNOX 标准版设备。  
 
 |设置|详细信息|  
 |-------------|-------------|  
 |**Google 备份**|允许使用 Google 备份。|  
 |**Google 帐户自动同步**|允许 Google 帐户设置自动同步。|  
 
+
+
 ### <a name="security"></a>安全  
 
 |设置|详细信息|  
 |-------------|-------------|  
-|**照相机**|允许使用设备相机。<br /><br /> 适用于 Android 和 Samsung KNOX 设备。|  
-|**YouTube**|允许在设备上使用 YouTube 应用。<br /><br /> 仅适用于 Samsung KNOX 设备。|  
-|**关机**|允许设备关机。<br /><br /> 仅适用于 Samsung KNOX 设备。|  
+|**SMS 和 MMS 消息**|允许在设备上使用 SMS 和 MMS 消息。|
+|**可移动存储**|允许设备使用可移动存储，如 SD 卡。|
+|**照相机**|允许使用设备相机。<br /><br /> 适用于 Android 和 Samsung KNOX 标准版设备。|  
+|**近场通信 (NFC)**|允许使用近场通信的操作（如果支持）。|
+|**YouTube**|允许在设备上使用 YouTube 应用。<br /><br /> 仅适用于 Samsung KNOX 标准版设备。|  
+|**关机**|允许设备关机。<br /><br /> 仅适用于 Samsung KNOX 标准版设备。| 
+
+### <a name="roaming"></a>漫游 
+|设置|详细信息|  
+|-------------|-------------|
+|**语音漫游**|设备位于移动电话网络时，允许语音漫游。|
+|**数据漫游**|设备位于移动电话网络时，允许数据漫游。|
 
 ### <a name="encryption"></a>加密  
- 这些设置适用于 Android 和 Samsung KNOX 设备。  
+ 这些设置适用于 Android 和 Samsung KNOX 标准版设备。  
 
 |设置|详细信息|  
 |-------------|-------------|  
+|**存储卡加密**|指定是否必须对设备存储卡进行加密。|
 |**设备上的文件加密**|要求对移动设备上的文件进行加密。|  
 
-### <a name="kiosk-mode-samsung-knox-only"></a>站台模式（仅限 Samsung KNOX）  
+### <a name="wireless-communications"></a>无线通信
+|设置|详细信息|  
+|-------------|-------------|
+|**无线网络连接**|允许使用设备的 Wi-Fi 功能。|
+|**Wi-Fi Tethering**|允许在设备上使用 Wi-Fi Tethering。|
+
+
+### <a name="kiosk-mode-samsung-knox-standard-only"></a>展台模式（仅限 Samsung KNOX 标准版）  
  展台模式可让你锁定设备以只允许某些功能工作。 例如，你可以让设备只运行一个指定的托管应用，也可以禁用设备上的音量按钮。 这些设置可用于设备的演示模型，也可用于专门执行一个功能的设备（如销售点设备）。  
 
-#### <a name="to-configure-kiosk-mode-for-a-samsung-knox-device"></a>为 Samsung KNOX 设备配置展台模式  
+#### <a name="to-configure-kiosk-mode-for-a-samsung-knox-standard-device"></a>为 Samsung KNOX 标准版设备配置展台模式  
 
 在“创建配置项目向导”的“为 Samsung KNOX 设备配置展台模式设置”页上，指定以下信息：  
 
@@ -148,7 +187,7 @@ ms.openlocfilehash: 8d676d31d519b7b6099c878d94b4c81f1c972887
     |**移除**|从列表中删除选定的应用。|  
     |**导入**|导入你已在逗号分隔值文件中指定的应用列表。 在文件中使用格式、应用程序名称、发布者和应用 URL。|  
 
-2.  完成后单击“下一步” 。  
+2.  完成后单击“下一步” 。 必须将包含合规和不合规应用设置的配置项目部署到用户集合。
 
  你可以使用以下任一报表监视相容和不相容的应用：  
 
@@ -160,6 +199,6 @@ ms.openlocfilehash: 8d676d31d519b7b6099c878d94b4c81f1c972887
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

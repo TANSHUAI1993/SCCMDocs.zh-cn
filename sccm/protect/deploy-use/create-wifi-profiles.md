@@ -2,7 +2,7 @@
 title: "创建 Wi-Fi 配置文件 | Microsoft Docs"
 description: "了解如何在 System Center Configuration Manager 中使用 Wi-Fi 配置文件为组织中的用户部署无线网络设置。"
 ms.custom: na
-ms.date: 12/04/2016
+ms.date: 12/11/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: e433fc450a2d033c24bc37333dd59fdec41dcdb6
-ms.openlocfilehash: c629d1bf8d17573cdbde783b4ec3264bed3f4b1e
+ms.sourcegitcommit: 22a74f3b12fe4f4559b682a8fcb287863a7686af
+ms.openlocfilehash: 1262cb7d524fdce21f778e2179275bd177e9330f
 
 
 ---
@@ -47,7 +47,7 @@ ms.openlocfilehash: c629d1bf8d17573cdbde783b4ec3264bed3f4b1e
 
 -   运行 iOS 5、iOS 6、iOS 7 和 iOS 8 的 IPad 设备  
 
--   运行版本 4 的 Android 设备  
+-   运行版本 4 或更高版本的 Android 设备
 
 > [!IMPORTANT]  
 >  若要将配置文件部署到 Android、iOS、Windows Phone 和注册的 Windows 8.1 或更高版本设备，这些设备必须在 Microsoft Intune 中注册。 有关如何注册设备的信息，请参阅[在 Intune 中注册设备以进行管理](https://docs.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune)。  
@@ -136,6 +136,6 @@ ms.openlocfilehash: c629d1bf8d17573cdbde783b4ec3264bed3f4b1e
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 
