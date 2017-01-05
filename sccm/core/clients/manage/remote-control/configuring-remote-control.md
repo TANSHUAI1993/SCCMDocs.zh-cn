@@ -2,7 +2,7 @@
 title: "配置远程控制 | Microsoft Docs"
 description: "在 System Center Configuration Manager 中设置远程控制。"
 ms.custom: na
-ms.date: 12/12/2016
+ms.date: 12/26/2016
 ms.prod: configuration-manager
 ms.reviewer: dudeso
 ms.suite: na
@@ -17,8 +17,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 809c7938968b4a6efce6ef37fe7b7baf2c9dd3e7
-ms.openlocfilehash: 6741c6aa11a8a7c868bff36916afe4d066b9924d
+ms.sourcegitcommit: 9206b82eca02877c30eebf146d42bcca7290eb42
+ms.openlocfilehash: 20c28a625adb69f239b9c0e7673e57dd39e8d561
 
 
 ---
@@ -55,6 +55,21 @@ ms.openlocfilehash: 6741c6aa11a8a7c868bff36916afe4d066b9924d
 > 特殊键（如 ~!#@$%,）将不会正确转换。
 
 
-<!--HONumber=Dec16_HO3-->
+## <a name="keyboard-shortcuts-for-the-remote-control-viewer"></a>远程控制查看器的键盘快捷键
+
+|键盘快捷方式|描述|  
+|-----------------------|-----------------|  
+|Alt+Page Up|运行程序方向从左到右之间切换。|  
+|Alt+Page Down|运行程序方向从右到左之间切换。|  
+|Alt+Insert|以打开程序的顺序循环运行。|  
+|Alt+Home|显示“开始”  菜单。|  
+|Ctrl+Alt+End|显示“Windows 安全”对话框 (Ctrl+Alt+Del)。|  
+|Alt+Delete|显示 Windows 菜单。|  
+|Ctrl+Alt+减号（位于数字键盘）|将本地计算机的活动窗口复制到远程计算机剪贴板。|  
+|Ctrl+Alt+加号（位于数字键盘）|将整个本地计算机的活动窗口窗口区复制到远程计算机剪贴板。|  
+
+
+
+<!--HONumber=Dec16_HO5-->
 
 
