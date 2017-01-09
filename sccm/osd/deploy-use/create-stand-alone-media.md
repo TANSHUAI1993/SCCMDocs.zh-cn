@@ -2,7 +2,7 @@
 title: "使用 System Center Configuration Manager 创建独立媒体 | Microsoft Docs"
 description: "使用独立媒体在未连接 Configuration Manager 站点或未使用网络的计算机上部署操作系统。"
 ms.custom: na
-ms.date: 12/06/2016
+ms.date: 12/21/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 06ade037c580d64503e6b8b5c3bf31004ab0650b
-ms.openlocfilehash: b566c101b58774805a6ff103fd0c9ad16603ed34
+ms.sourcegitcommit: 66cd6d099acdd9db2bc913a69993aaf5e17237fe
+ms.openlocfilehash: 411ca1d13778521f7fa0dba71980158477cd0735
 
 
 ---
@@ -47,6 +47,7 @@ Configuration Manager 中的独立媒体包含在未连接 Configuration Manager
 - 任务序列中的下载包内容步骤。 管理点信息在独立媒体上不可用，因此该步骤尝试枚举内容位置将失败。
 - 安装软件更新。
 - 在部署操作系统之前安装软件。
+- 用于非操作系统部署的任务序列。
 - 将用户与目标计算机关联以支持用户设备相关性。
 - 通过“安装包”任务安装动态程序包。
 - 通过“安装应用程序”任务安装动态应用程序。
@@ -106,7 +107,11 @@ Before you run the Create Task Sequence Media Wizard to create media for a CD or
     > [!IMPORTANT]  
     >  On stand-alone media, only the task sequence steps and their variables are encrypted. The remaining content of the media is not encrypted, so do not include any sensitive information in task sequence scripts. Store and implement all sensitive information by using task sequence variables.  
 
-7.  On the **Stand-Alone CD/DVD** page, specify the task sequence that deploys the operating system, and then click **Next**. The wizard lets you select only those task sequences that are associated with a boot image.  
+7.  On the **Stand-Alone CD/DVD** page, specify the task sequence that deploys the operating system, and then click **Next**. Choose **Detect associated application dependencies and add them to this media** to add content to the stand-alone media for application dependencies.
+> [!TIP]
+> If you do not see expected application dependencies, deselect and then reselect the **Detect associated application dependencies and add them to this media** setting to refresh the list.
+
+The wizard lets you select only those task sequences that are associated with a boot image.  
 
 8.  On the **Distribution Points** page, specify the distribution points that contain the content required by the task sequence, and then click **Next**.  
 
@@ -157,6 +162,6 @@ Before you run the Create Task Sequence Media Wizard to create media for a CD or
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO4-->
 
 

@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 8195abd403d94a96d193289ea6e6bf8880d06078
-ms.openlocfilehash: aaa9a80a8429ab315a25862a78d6eb8733fd2e89
+ms.sourcegitcommit: 4a8d98addcd463eb82d8b7100b44254a10d21992
+ms.openlocfilehash: b5f7ad01f7a32d69d0c75b3c80a053f3c020c036
 
 
 ---
@@ -40,7 +40,9 @@ System Center Configuration Manager 服务连接点是一个站点系统角色�
 
     -   标识适用于所使用的 Configuration Manager 版本的 Configuration Manager 更新  
 
-     请参阅 [Usage data levels and settings](../../../../core/servers/deploy/install/setup-reference.md#bkmk_usage)。  
+  有关各级别收集的数据，以及安装角色后如何更改收集级别的信息，请参阅[诊断和使用情况数据](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data)，然后按照所用的 Configuration Manage 版本的链接操作。  
+
+    有关详细信息，请参阅[使用情况数据级别和设置](../../../../core/servers/deploy/install/setup-reference.md#bkmk_usage)。  
 
 -   **下载适用于你的 Configuration Manager 基础结构的更新** - 基于你所上传的使用情况数据，仅适用于你的基础结构的相关更新可用。  
 
@@ -117,6 +119,6 @@ System Center Configuration Manager 服务连接点是一个站点系统角色�
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

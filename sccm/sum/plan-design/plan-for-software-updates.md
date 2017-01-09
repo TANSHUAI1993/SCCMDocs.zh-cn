@@ -6,7 +6,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 12/07/2016
+ms.date: 01/04/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
@@ -14,8 +14,8 @@ ms.technology:
 - configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
 translationtype: Human Translation
-ms.sourcegitcommit: b1c68b233097ef3a744dd25b3fb919660f0b2244
-ms.openlocfilehash: 16415fb54a2cf91747990c94ffea0076effe525b
+ms.sourcegitcommit: 46c8004afee4b18d5c7a2fcc5dac0f7d0d1f823c
+ms.openlocfilehash: 8a5efdce88127c71547c4f5ef85660a2983aa577
 
 
 ---
@@ -82,7 +82,7 @@ ms.openlocfilehash: 16415fb54a2cf91747990c94ffea0076effe525b
 
 2.  客户端按 30 分钟的间隔至少重试四次。 第四次失败后，客户端将再等待两分钟，然后切换到软件更新点列表中的下一个软件更新点。  
 
-3.  成功扫描之后，客户端将继续连接到该软件更新点。  
+3.  客户端将在新的软件更新点完成相同的过程。 成功扫描之后，客户端将继续连接到新的软件更新点。
 
  下面的列表提供了可为软件更新点重试和切换方案考虑的其他信息：  
 
@@ -91,6 +91,13 @@ ms.openlocfilehash: 16415fb54a2cf91747990c94ffea0076effe525b
 -   如果启用了基于 Internet 的客户端管理，并且有多个配置为接受来自 Internet 客户端的通信的软件更新点，则切换过程将按照前面的方案中描述的标准重试过程进行。  
 
 -   如果扫描过程已启动，但客户端在扫描完成之前关闭，则不会将其视为扫描失败，并且不会计入四次重试之一。  
+
+当 Configuration Manager 收到以下任何 Windows 更新代理错误代码时，将使客户端重试连接：  
+
+2149842970, 2147954429, 2149859352, 2149859362, 2149859338, 2149859344, 2147954430, 2147747475, 2149842974, 2149859342, 2149859372, 2149859341, 2149904388, 2149859371, 2149859367, 2149859366, 2149859364, 2149859363, 2149859361, 2149859360, 2149859359, 2149859358, 2149859357, 2149859356, 2149859354, 2149859353, 2149859350, 2149859349, 2149859340, 2149859339, 2149859332, 2149859333, 2149859334, 2149859337, 2149859336, 2149859335
+
+若要查找错误代码的含义，必须将十进制错误代码转换为十六进制，然后在 [Windows Update Agent - Error Codes Wiki](https://social.technet.microsoft.com/wiki/contents/articles/15260.windows-update-agent-error-codes.aspx)（Windows Update 代理 - 错误代码 Wiki）等网站搜索该十六进制值。
+
 
 ###  <a name="a-namebkmkmanuallyswitchsupsamanually-switch-clients-to-a-new-software-update-point"></a><a name="BKMK_ManuallySwitchSUPs"></a>手动将客户端切换到新的软件更新点
 从 Configuration Manager 版本 1606 开始，可以启用使 Configuration Manager 客户端在活动软件更新点出现问题时切换到新软件更新点的选项。 仅当客户端从管理点接收多个软件更新点时，此选项才导致更改。  
@@ -308,6 +315,6 @@ ms.openlocfilehash: 16415fb54a2cf91747990c94ffea0076effe525b
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 
