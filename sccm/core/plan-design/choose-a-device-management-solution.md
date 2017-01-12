@@ -17,8 +17,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f6a6aad6859cf962f6f94fa5385a1dbfae6c7ff2
-ms.openlocfilehash: bea86f7fce6af913339ba0d1b56822ad761af48f
+ms.sourcegitcommit: d56b2a8090dd798bceda63e29df6c6ff4a4afe4e
+ms.openlocfilehash: 792d9b03904193c1c302c2f8373448a44887ed9c
 
 
 ---
@@ -92,7 +92,7 @@ System Center Configuration Manager（也称为 ConfgMgr 或 SCCM）提供用于
 |连接到分发点|是|是|是||  
 |通过 Configuration Manager 进行阻止|是|是|是||  
 |通过 Exchange Server 和 Configuration Manager 进行隔离和阻止||||是|  
-|远程擦除|是|是|是|是|  
+|远程擦除| |是|是|是|  
 
 
 
