@@ -1,5 +1,5 @@
 ---
-title: "Endpoint Protection 的 Windows 防火墙策略 | System Center Configuration Manager"
+title: "Endpoint Protection 的 Windows 防火墙策略 | Microsoft Docs"
 description: "了解如何在 System Center 2012 Configuration Manager 中为 Endpoint Protection 创建和部署防火墙策略。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 98e4c49a19da396389acdd0aa56aee9113ce58c9
+ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
+ms.openlocfilehash: 7a02ae3fb102ab85f98d3b7453fc0736e5a11200
 
 
 ---
@@ -81,6 +81,6 @@ System Center 2012 Configuration Manager 中的 Endpoint Protection 的防火墙
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

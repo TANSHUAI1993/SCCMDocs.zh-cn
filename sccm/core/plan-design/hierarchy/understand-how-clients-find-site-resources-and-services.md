@@ -1,5 +1,5 @@
 ---
-title: "查找站点资源 | System Center Configuration Manager"
+title: "查找站点资源 | Microsoft Docs"
 description: "了解 System Center Configuration Manager 客户端如何以及何时使用服务定位查找站点资源。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 5d718d0f9b8c6121f3124a8ade7507c61b7313f2
-ms.openlocfilehash: cad4ebd3f8fa275d7d2cad9b2b87c32b971c580d
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: b006896091901fab7b141f99f4c95eb22ea61b82
 
 
 ---
@@ -176,7 +176,6 @@ Intranet 上的客户端可将 DNS 用于服务定位。 这要求层次结构�
 **DNS 服务器支持自动更新时**，可以配置 Configuration Manager 以将 Intranet 上的管理点自动发布到 DNS，或者可以将这些记录手动发布到 DNS。 将管理点发布到 DNS 时，会在服务定位 (SRV) 记录中发布其 Intranet FQDN 和端口号。 你可以在“站点管理点组件属性”中配置在站点上进行 DNS 发布。 有关详细信息，请参阅 [System Center Configuration Manager 的站点组件](../../../core/servers/deploy/configure/site-components.md)。  
 
 **将 DNS 区域设置为“仅安全”以进行动态更新时**，仅第一个发布到 DNS 的管理点可以使用默认权限成功进行操作。
-- 可以将托管管理点的每个服务器添加到 DnsAdmins 组，以确保这些管理点有权修改其记录。  
 - 如果只有一个管理点可以成功地发布和修改其 DNS 记录，只要该管理点服务器保持良好运行状况，客户端就可从该管理点获取完整的 MP 列表，然后查找其首选的管理点。
 
 
@@ -251,6 +250,6 @@ Configuration Manager 支持 RFC 2782 以用于服务定位记录，其格式如
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

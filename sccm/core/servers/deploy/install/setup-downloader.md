@@ -1,5 +1,5 @@
 ---
-title: "安装程序下载程序 | System Center Configuration Manager"
+title: "安装程序下载程序 | Microsoft Docs"
 description: "阅读有关此独立应用程序的信息，该应用程序可确保站点安装使用的是当前版本的关键安装文件。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 574e4d450126d2c4411292b6dd52e18049d296f6
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: cbe6ebfa80ff8253ec7ed5ad71852fb5cd7e7d91
 
 ---
 # <a name="setup-downloader-for-system-center-configuration-manager"></a>System Center Configuration Manager 安装程序下载程序
@@ -98,6 +98,6 @@ ms.openlocfilehash: 574e4d450126d2c4411292b6dd52e18049d296f6
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

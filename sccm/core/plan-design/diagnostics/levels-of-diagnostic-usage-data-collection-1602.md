@@ -1,5 +1,5 @@
 ---
-title: "1602 的诊断数据 | System Center Configuration Manager"
+title: "1602 诊断数据 | Microsoft Docs"
 description: "了解 System Center Configuration Manager 版本 1602 收集的诊断和使用情况数据级别。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -34,8 +34,8 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: b38de0ef8886b34ffe091fbfcb185fc42ba66064
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: 0f1be7aec8b15c4c61a325f2afb2caa2332cd31a
 
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1602-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1602 的诊断使用情况数据收集的级别
@@ -51,6 +51,9 @@ System Center Configuration Manager 版本 1602 收集三个级别的诊断和�
 
 ##  <a name="a-namebkmkchangea-how-to-change-the-level"></a><a name="bkmk_change"></a> 如何更改级别
  如果管理员具有基于角色的管理作用域，其中包括对**站点**对象类的**修改**权限，则其可以通过 Configuration Manager 控制台中的诊断和使用情况数据设置更改已收集数据的级别。
+
+
+  要执行此操作，请在“控制台”中，转到“Backstage”选项卡（左上角带下拉箭头的选项卡），然后选择“使用情况数据”，再选择要使用的数据级别。  
 
 ##  <a name="a-namebkmklevel1a-level-1---basic"></a><a name="bkmk_level1"></a> 级别 1 - 基本
  基本级别包括有关层次结构的数据，需要此级别才可帮助改进安装或升级体验，以及帮助确定哪些 Configuration Manager 更新适合你的层次结构。
@@ -313,6 +316,6 @@ System Center Configuration Manager 版本 1602 收集三个级别的诊断和�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

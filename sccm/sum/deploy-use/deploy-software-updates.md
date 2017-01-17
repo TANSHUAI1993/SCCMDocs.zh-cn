@@ -1,5 +1,5 @@
 ---
-title: "部署软件更新 | Configuration Manager"
+title: "部署软件更新 | Microsoft Docs"
 description: "在 Configuration Manager 控制台中选择软件更新以手动启动部署过程或自动部署更新。"
 keywords: 
 author: dougeby
@@ -13,8 +13,8 @@ ms.technology:
 - configmgr-sum
 ms.assetid: 04536d51-3bf7-45e5-b4af-36ceed10583d
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: b9e922c526750a04b3b7b7b24106fcb8900e73fa
+ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
+ms.openlocfilehash: 70a0ad1da03a7ca88df206fec683ab1df2b531e1
 
 ---
 
@@ -77,6 +77,6 @@ The Configuration Manager client downloads the content for required software upd
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

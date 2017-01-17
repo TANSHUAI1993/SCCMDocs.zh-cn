@@ -1,5 +1,5 @@
 ---
-title: "层次结构维护工具 | System Center Configuration Manager"
+title: "层次结构维护工具 | Microsoft Docs"
 description: "了解层次结构维护工具的作用，以及使用它的原因。 包含命令行选项引用。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: e9c386d3f45e29de4ddfcfd3807eb96e3544a3b2
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: f3ddeaadfb1418aeeaacdca47768600c86b59083
 
 
 ---
@@ -127,6 +127,6 @@ ms.openlocfilehash: e9c386d3f45e29de4ddfcfd3807eb96e3544a3b2
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

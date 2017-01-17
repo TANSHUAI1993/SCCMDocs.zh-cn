@@ -1,8 +1,8 @@
 ---
-title: "如何在 System Center Configuration Manager 中创建 VPN 配置文件"
+title: "如何在 System Center Configuration Manager 中创建 VPN 配置文件 | Microsoft Docs"
 description: "了解如何在 System Center Configuration Manager 中创建 VPN 配置文件。"
-ms.custom: na
-ms.date: 10/28/2016
+ms.custom: 
+ms.date: 11/18/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f338e4db-73b5-45ff-92f4-1b89a8ded989
 caps.latest.revision: 15
+author: nbigman
 caps.handback.revision: 0
 ms.author: nbigman
 ms.manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: a65de5feae2ff44f938ce8b7e3c8d23d560bb180
-ms.openlocfilehash: bcea8676c163a8aba1bc7f3364fde52375f52429
+ms.sourcegitcommit: 828e2ac9a3f9bcea1571d24145a1021fdf1091f3
+ms.openlocfilehash: f674aa5502e4b3b45d0eda119419863892d72cff
 
 
 ---
@@ -29,7 +30,7 @@ ms.openlocfilehash: bcea8676c163a8aba1bc7f3364fde52375f52429
 > [!NOTE]  
 >
 > - 有关针对不同设备可用的连接类型，请参阅 [System Center Configuration Manager 中的 VPN 配置文件](../../protect/deploy-use/vpn-profiles.md)。  
-> - 对于第三方 VPN 连接，在部署 VPN 配置文件之前分发 VPN 应用。 如果不部署应用，则将在用户尝试连接到 VPN 时提示他们部署应用。 若要了解如何部署应用，请参阅[使用 System Center Configuration Manager 部署应用程序](../../apps/deploy-use/deploy-applications)。
+> - 对于第三方 VPN 连接，在部署 VPN 配置文件之前分发 VPN 应用。 如果不部署应用，则将在用户尝试连接到 VPN 时提示他们部署应用。 若要了解如何部署应用，请参阅[使用 System Center Configuration Manager 部署应用程序](../../apps/deploy-use/deploy-applications.md)。
 
 ### <a name="start-the-create-vpn-profile-wizard"></a>启动“创建 VPN 配置文件向导”  
 
@@ -131,11 +132,19 @@ ms.openlocfilehash: bcea8676c163a8aba1bc7f3364fde52375f52429
             >  
             >  连接类型为“PPTP”时，运行 iOS 的设备对身份验证方法仅支持“RSA SecurID”和“MSCHAP v2”。 若要避免报告错误，请将单独的 PPTP VPN 配置文件部署到运行 iOS 的设备中。  
 
-               - “条件访问”和“企业数据保护主域”设置，仅当使用 Configuration Manager 而不与 Intune 一起使用时才受支持，可通过选择“高级”来访问。 有关企业数据保护的信息，请参阅 [Create a Windows Information Protection (WIP) policy using Microsoft Intune](https://technet.microsoft.com/en-us/itpro/windows/keep-secure/create-wip-policy-using-intune)（使用 Microsoft Intune 创建 Windows 信息保护 (WIP) 策略）。
-        
-        ![为 VPN 配置条件性访问](../media/vpn-conditional-access.png)
+        - **条件性访问**
+            - 选择“启用此 VPN 连接的条件性访问”可以确保连接到 VPN 的设备在连接前进行了条件性访问合规性测试。 [System Center Configuration Manager 中的设备合规性策略](https://docs.microsoft.com/en-us/sccm/protect/deploy-use/device-compliance-policies.md)中介绍了合规性策略
+            - 选择“启用使用替代证书进行单一登录(SSO)”可以选择除设备合规性 VPN 身份验证证书以外的证书。 如果选择此选项，对于 VPN 客户端应查找的正确证书，请提供 **EKU**（以逗号分隔的列表）和**颁发者哈希**。
 
-        -   对于某些身份验证方法，可以单击“配置”来打开 Windows 属性对话框（如果正在运行 System Center Configuration Manager 控制台的 Windows 版本支持此身份验证方法），然后在其中配置身份验证方法的属性。  
+         - **Windows 信息保护** - 提供企业管理的公司标识，该标识通常是组织的主域，例如 *contoso.com*。 采用“|”字符将域分隔可以指定组织拥有的多个域。 例如，*contoso.com|newcontoso.com*。   
+            有关 Windows 信息保护的信息，请参阅[使用 Microsoft Intune 创建 Windows 信息保护 (WIP) 策略](https://technet.microsoft.com/en-us/itpro/windows/keep-secure/create-wip-policy-using-intune)。   
+
+         ![为 VPN 配置条件性访问](../media/vpn-conditional-access.png)
+
+
+        > [!NOTE]  
+        >
+        >对于某些身份验证方法，可以单击“配置”来打开 Windows 属性对话框（如果正在运行 System Center Configuration Manager 控制台的 Windows 版本支持此身份验证方法），然后在其中配置身份验证方法的属性。  
 
 ### <a name="configure-proxy-settings-for-the-vpn-profile"></a>配置 VPN 配置文件的代理设置  
 
@@ -194,12 +203,12 @@ ms.openlocfilehash: bcea8676c163a8aba1bc7f3364fde52375f52429
 
 ### <a name="next-steps"></a>后续步骤
 
-- 对于第三方 VPN 连接，在部署 VPN 配置文件之前分发 VPN 应用。 如果不部署应用，则将在用户尝试连接到 VPN 时提示他们部署应用。 若要了解如何部署应用，请参阅[使用 System Center Configuration Manager 部署应用程序](../../apps/deploy-use/deploy-applications)。
+- 对于第三方 VPN 连接，在部署 VPN 配置文件之前分发 VPN 应用。 如果不部署应用，则将在用户尝试连接到 VPN 时提示他们部署应用。 若要了解如何部署应用，请参阅[使用 System Center Configuration Manager 部署应用程序](../../apps/deploy-use/deploy-applications.md)。
 
 - 部署 VPN 配置文件，如[如何在 System Center Configuration Manager 中部署配置文件](deploy-wifi-vpn-email-cert-profiles.md)中所述。  
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

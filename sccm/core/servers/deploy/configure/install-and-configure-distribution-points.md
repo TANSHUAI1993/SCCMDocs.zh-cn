@@ -1,5 +1,5 @@
 ---
-title: "管理分发点 | System Center Configuration Manager"
+title: "管理分发点 | Microsoft Docs"
 description: "使用分发点以承载部署到设备和用户的内容（文件和软件）。 此处介绍如何安装和配置这些分发点。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: dedfcc77cb94ede1abfd65e22f9d3d116b9ed68e
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: 8684bf1231ff9d663717b4c9874dac98d50e3647
 
 ---
 # <a name="install-and-configure-distribution-points-for-system-center-configuration-manager"></a>为 System Center Configuration Manager 安装和配置分发点
@@ -26,7 +26,7 @@ ms.openlocfilehash: dedfcc77cb94ede1abfd65e22f9d3d116b9ed68e
 
 安装 System Center Configuration Manager 分发点以承载部署到设备和用户的内容（文件和软件）。 还可以创建分发点组，该组可简化管理分发点以及将内容分发到分发点的方式。  
 
- **安装新的分发点**（使用安装向导）或**管理现有分发点的属性**（编辑分发点属性）时，可以配置大多数的分发点设置。 但是，有一些设置仅在安装或编辑时可用，但不能在同时进行安装和编辑时使用：  
+ **安装新的分发点**（使用安装向导）或**管理现有分发点属性**（通过编辑分发点属性）时，可配置大多数分发点设置。 但是，有一些设置仅在安装或编辑时可用，但不能在同时进行安装和编辑时使用：  
 
 -   **仅在安装分发点时可用的设置：**  
 
@@ -330,9 +330,11 @@ ms.openlocfilehash: dedfcc77cb94ede1abfd65e22f9d3d116b9ed68e
 >  使用计算机的本地时间来指定内容验证计划时，将使用 UTC 在 Configuration Manager 控制台中显示该计划。  
 
 ### <a name="boundary-group"></a>边界组  
-管理为其分配此分发点的边界组。 你可以将边界组关联到分发点。 在内容部署过程中，客户端必须位于与分发点关联的边界组中，才能将其用作内容的源位置。 你可以选中“允许客户端使用此站点系统作为内容的回退源位置”  复选框，以便在没有其他分发点可用时让这些边界组外部的客户端回退并使用分发点作为内容的源位置。  
+管理为其分配此分发点的边界组。 你可以将边界组关联到分发点。 在内容部署过程中，客户端必须位于与分发点关联的边界组中，才能将其用作内容的源位置。
+此外：
+- 对于 1610 前的版本，可选中“允许客户端使用此站点系统作为内容的回退源位置”复选框，以便在没有其他分发点可用时让这些边界组外部的客户端回退并使用分发点作为内容的源位置。 有关边界组的详细信息，请参阅 [1511、1602 和 1606 版的边界组](/sccm/core/servers/deploy/configur/boundary-groups-for-1511-1602-and-1606)；有关首选分发点的信息，请参阅 [System Center Configuration Manager 中内容管理的基本概念](../../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)。
+- 借助 1610 或更高版本，可配置边界组关系，定义客户端为查找内容而回退的时间以及可回退到的边界组。 有关详细信息，请参阅[边界组](/sccm/core/servers/deploy/configur/define-site-boundaries-and-boundary-groups#boundary-groups)。
 
-有关首选分发点的详细信息，请参阅 [System Center Configuration Manager 中内容管理的基本概念](../../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)。  
 
 ### <a name="schedule"></a>计划  
 
@@ -377,6 +379,6 @@ ms.openlocfilehash: dedfcc77cb94ede1abfd65e22f9d3d116b9ed68e
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

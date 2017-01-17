@@ -1,5 +1,5 @@
 ---
-title: "操作系统部署简介 | Configuration Manager"
+title: "操作系统部署简介 | Microsoft Docs"
 description: "请在 Configuration Manager 环境中部署操作系统之前，了解一些概念。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: ece68bd30e31595226f154fd1148b0ee55feceaf
+ms.sourcegitcommit: 55a9f1caedcfa810e9a97e43626e4cf5fdbcfa0d
+ms.openlocfilehash: 2baa6b7dbd66ab41bc9b67e8f43c313be233153c
 
 
 ---
@@ -25,7 +25,7 @@ ms.openlocfilehash: ece68bd30e31595226f154fd1148b0ee55feceaf
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-可以通过不同方式使用 Configuration Manager 部署操作系统。 通过本节中的信息了解如何部署操作系统和自动执行任务。
+可以通过不同方式使用 Configuration Manager 部署操作系统。 通过本节中的信息了解如何部署操作系统和自动执行任务。 
 
 ##  <a name="a-namebkmkosdeploymentprocessa-the-operating-system-deployment-process"></a><a name="BKMK_OSDeploymentProcess"></a> 操作系统部署过程  
  Configuration Manager 提供可用于部署操作系统的一些方法。 无论使用哪种部署方法，都必须执行一些操作：  
@@ -81,7 +81,7 @@ ms.openlocfilehash: ece68bd30e31595226f154fd1148b0ee55feceaf
 ##  <a name="a-namebkmkbootimagesa-boot-images"></a><a name="BKMK_BootImages"></a> 启动映像  
  Configuration Manager 中的启动映像是在操作系统部署过程中使用的 Windows PE (WinPE) 映像。 启动映像用于在 WinPE 中启动计算机，它是用于准备在目标计算机上安装 Windows 的有限组件和服务的最精简操作系统。 Configuration Manager 提供两个启动映像：一个用于支持 x86 平台，另一个用于支持 x64 平台。 这些视为默认启动映像。 创建并添加到 Configuration Manager 的启动映像被视为自定义映像。 更新 Configuration Manager 时，会自动替换默认启动映像。 有关启动映像的详细信息，请参阅[管理启动映像](../get-started/manage-boot-images.md)。  
 
-##  <a name="a-namebkmkosimagesa-operating-system-images"></a><a name="BKMK_OSImages"></a> 操作系统映像  
+##  <a name="a-namebkmkosimagesa-operating--system-images"></a><a name="BKMK_OSImages"></a> 操作系统映像  
  Configuration Manager 中的操作系统映像以 Windows 映像 (WIM) 文件格式存储，代表在计算机上成功安装和配置操作系统所需的引用文件和文件夹的压缩集合。 对于所有操作系统部署方案，必须选择操作系统映像。 你可以使用默认操作系统映像或从你配置的引用计算机生成操作系统映像。 有关详细信息，请参阅[管理操作系统映像](../get-started/manage-operating-system-images.md)。  
 
 ##  <a name="a-namebkmkosupgradepackagesa-operating-system-upgrade-packages"></a><a name="BKMK_OSUpgradePackages"></a> 操作系统升级包  
@@ -135,6 +135,6 @@ ms.openlocfilehash: ece68bd30e31595226f154fd1148b0ee55feceaf
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "将 Long-Term Servicing Branch 升级到 Current Branch | System Center Configuration Manager"
+title: "将 Long-Term Servicing Branch 升级到 Current Branch | Microsoft Docs"
 description: "了解如何将 Long-Term Servicing Branch 站点转换为 Current Branch 站点。"
 ms.custom: na
 ms.date: 10/12/2016
@@ -16,15 +16,15 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 835469e78e83bb54c43e530303d27b0918c531e6
-ms.openlocfilehash: efccff6e2a0b1708d4124648da4e173d41663bd1
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: 37fa8da8b4acc3f22c9c435206eedde58d2754f0
 
 ---
 
 
 # <a name="upgrade-the-long-term-servicing-branch-to-the-current-branch"></a>将 Long-Term Servicing Branch 升级到 Current Branch
 
-*适用范围：System Center Configuration Manager (Long-Term Servicing Branch)* 
+*适用范围：System Center Configuration Manager (Long-Term Servicing Branch)*
 
 请参阅本主题以了解如何将运行 Configuration Manager 的 Long-Term Servicing Branch (LTSB) 的站点和层次结构升级（转换）为 Current Branch。
 
@@ -56,6 +56,6 @@ ms.openlocfilehash: efccff6e2a0b1708d4124648da4e173d41663bd1
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "监视复制 | System Center Configuration Manager"
+title: "监视复制 | Microsoft Docs"
 description: "了解如何使用控制台中的“监视”工作区在 Configuration Manager 中监视基础结构和操作。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f777295958e9cbc729e3759d354521c96ae3e8ac
-ms.openlocfilehash: 92ded1197d1dcdd6e5f3a8917718e6232b18bce4
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: 132803a1aa9aad5c5462686bd656688418e47d07
 
 
 ---
@@ -55,7 +55,7 @@ ms.openlocfilehash: 92ded1197d1dcdd6e5f3a8917718e6232b18bce4
 
 
 
-##  <a name="a-namebkmkmonintormgmttasksa-monitor-common-management-tasks-for-configuration-manager"></a><a name="BKMK_MonintorMgmtTasks"></a> 监视 Configuration Manager 的常用管理任务  
+##  <a name="a-namebkmkmonintormgmttasksa-monitor--common-management-tasks-for-configuration-manager"></a><a name="BKMK_MonintorMgmtTasks"></a> 监视 Configuration Manager 的常用管理任务  
  Configuration Manager 提供从 Configuration Manager 控制台中进行的内置监视。 你可以监视许多任务，其中包括与整个层次结构中的软件更新、电源管理以及内容部署相关的那些任务。  
 
  使用下列信息来帮助你监视常见的 Configuration Manager 任务：  
@@ -245,6 +245,6 @@ Configuration Manager 提供了若干方法来监视层次结构的状态和操�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

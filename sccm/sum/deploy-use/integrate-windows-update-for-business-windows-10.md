@@ -1,6 +1,6 @@
 ---
 
-title: "在 Windows 10 中与 Windows Update for Business 集成 | Configuration Manager"
+title: "在 Windows 10 中与适用于企业的 Windows 更新集成 | Microsoft Docs"
 description: "将可使组织中基于 Windows 10 的设备保持最新状态的 Windows Update for Business 用于连接到 Windows 更新服务的设备。"
 keywords: 
 author: dougeby
@@ -14,8 +14,8 @@ ms.technology:
 - configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: c4c6e50d0e1a34653226369cffdc0bde905398fc
+ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
+ms.openlocfilehash: 8bdbacd54632475ac69a0d0a9a34b2567c3daa13
 
 
 ---
@@ -45,7 +45,7 @@ ms.openlocfilehash: c4c6e50d0e1a34653226369cffdc0bde905398fc
 
 -   使用软件更新基础结构的 Configuration Manager 完整客户端部署将不能用于连接 WUfB 以接收更新的客户端。  
 
-## <a name="identify-clients-that-use-wufb-for-windows-10-updates"></a>标识使用 WUfB for Windows 10 更新的客户端  
+## <a name="identify-clients-that-use--wufb-for-windows-10-updates"></a>标识使用 WUfB for Windows 10 更新的客户端  
  使用以下步骤标识使用 WUfB 以获取 Windows 10 更新和升级的客户端，将这些客户端配置为停止使用 WSUS 来获取更新，并部署客户端代理设置来禁用这些客户端的软件更新工作流。  
 
  **先决条件**  
@@ -69,6 +69,6 @@ ms.openlocfilehash: c4c6e50d0e1a34653226369cffdc0bde905398fc
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

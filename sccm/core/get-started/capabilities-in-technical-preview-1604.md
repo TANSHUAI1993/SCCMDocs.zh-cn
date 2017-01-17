@@ -1,5 +1,5 @@
 ---
-title: "System Center Configuration Manager Technical Preview 1604 版中的功能"
+title: "System Center Configuration Manager Technical Preview 1604 版中的功能 | Microsoft Docs"
 description: "了解 System Center Configuration Manager Technical Preview 1604 版中的可用功能。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 512bbb1c8f2b4811be7770bda5fa2236a2dc7e06
+ms.sourcegitcommit: 3bf44f850722afdb8dfe5922c8ceff11c9b56d08
+ms.openlocfilehash: 7358e310ad672a1a0ba4cbcb6b008506aaaa5d2b
 
 ---
 # <a name="capabilities-in-technical-preview-1604-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1604 版中的功能
@@ -87,7 +87,7 @@ ms.openlocfilehash: 512bbb1c8f2b4811be7770bda5fa2236a2dc7e06
 
 1.  在 Configuration Manager 控制台的“软件库”工作区中，展开“应用程序管理”，然后单击“应用商店应用的许可证信息”。  
 
-2.   **从适用于企业的 Windows 应用商店购买的应用**列表显示了从存储区同步的应用列表。 选择要部署的应用，然后在“主页”选项卡的“创建”组中，单击“创建应用程序”。  
+2.  **从适用于企业的 Windows 应用商店购买的应用**列表显示了从存储区同步的应用列表。 选择要部署的应用，然后在“主页”选项卡的“创建”组中，单击“创建应用程序”。  
 
 3.  将创建包含适用于企业的 Windows 应用商店应用的 Configuration Manager 应用程序。 然后，可以像对任何其他 Configuration Manager 应用程序一样部署并监视此应用程序。  
 
@@ -172,6 +172,6 @@ ms.openlocfilehash: 512bbb1c8f2b4811be7770bda5fa2236a2dc7e06
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

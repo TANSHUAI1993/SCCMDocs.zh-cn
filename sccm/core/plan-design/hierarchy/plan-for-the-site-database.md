@@ -1,5 +1,5 @@
 ---
-title: "规划站点数据库 | System Center Configuration Manager"
+title: "规划站点数据库 | Microsoft Docs"
 description: "规划 System Center Configuration Manager 层次结构时，请考虑站点数据库和站点数据库服务器角色。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 40ebfaa9b82a65a6265f0c031dbbd0bcdb85da6e
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: 012d5b313487640faeebe5b49064c74d41a7edb9
 
 
 ---
@@ -66,6 +66,6 @@ ms.openlocfilehash: 40ebfaa9b82a65a6265f0c031dbbd0bcdb85da6e
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

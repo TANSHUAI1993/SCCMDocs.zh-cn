@@ -1,5 +1,5 @@
 ---
-title: "修补程序安装程序 | System Center Configuration Manager"
+title: "修补程序安装程序 | Microsoft Docs"
 description: "了解何时以及如何通过 Configuration Manager 的修补程序安装更新。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 03940a499416ce4231bda5feb8a2e323abdff578
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: 8ffc7383e895909e6e6c4b8a7875fd5f0df2220e
 
 
 ---
@@ -269,6 +269,6 @@ System Center Configuration Manager 的某些更新无法从 Microsoft 云服务
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

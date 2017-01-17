@@ -1,5 +1,5 @@
 ---
-title: "部署企业操作系统的方法 | Configuration Manager"
+title: "部署企业操作系统的方法 | Microsoft Docs"
 description: "了解可用于在 System Center Configuration Manager 环境中部署企业操作系统的方法。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 40f6f414ff0a2687f250f101acbae775a777bf8a
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: 6cec9275009ac19ad65a03792c1bc4d0c528ea4c
 
 
 ---
@@ -25,7 +25,7 @@ ms.openlocfilehash: 40f6f414ff0a2687f250f101acbae775a777bf8a
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-有多种可用于在 System Center Configuration Manager 环境中部署操作系统的方法。 
+有多种可用于在 System Center Configuration Manager 环境中部署操作系统的方法。
 
 -   [使用 PXE 通过网络部署 Windows](use-pxe-to-deploy-windows-over-the-network.md)  
 
@@ -43,6 +43,6 @@ ms.openlocfilehash: 40f6f414ff0a2687f250f101acbae775a777bf8a
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

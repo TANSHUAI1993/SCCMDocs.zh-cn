@@ -1,8 +1,8 @@
 ---
-title: "监视客户端 | Linux UNIX |System Center Configuration Manager"
+title: "监视客户端 |System Center Configuration Manager | Linux UNIX "
 description: "在 System Center Configuration Manager 中监视 Linux 和 UNIX 服务器上的客户端。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/23/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,12 +12,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d827cf91-b18f-4ee7-b538-24ba6f003ab9
 caps.latest.revision: 6
-author: Mtillman
-ms.author: mtillman
+author: nbigman
+ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 707cb13bcb62848eb42ca824137a645dfd2f9d82
+ms.sourcegitcommit: 620c1caf50b4859afc8f32490ab7945df810aefd
+ms.openlocfilehash: b2b7c88784eed6fbee6ac1f6348d7d6991df1fbb
 
 
 ---
@@ -35,11 +35,10 @@ ms.openlocfilehash: 707cb13bcb62848eb42ca824137a645dfd2f9d82
 
 -   资源浏览器中的清单详细信息  
 
- 以下部分提供关于使用资源浏览器和报表以查看有关 Linux 和 UNIX 服务器的详细信息的信息。  
+ 以下各节描述了如何从资源浏览器和报表中获取这些详细信息。  
 
-##  <a name="a-namebkmkuseresourceexpforlnua-how-to-use-resource-explorer-to-view-inventory-for-linux-and-unix-servers"></a><a name="BKMK_UseResourceExpforLnU"></a> 如何使用资源浏览器查看适用于 Linux 和 UNIX 服务器的清单  
- 可以使用资源浏览器查看 Linux 和 UNIX 服务器上的硬件和已安装软件的详细信息。  
-
+##  <a name="a-namebkmkuseresourceexpforlnua-use-resource-explorer-to-view-inventory-for-linux-and-unix-servers"></a><a name="BKMK_UseResourceExpforLnU"></a> 使用资源浏览器查看适用于 Linux 和 UNIX 服务器的清单  
+ 
  在 Configuration Manager 客户端向 Configuration Manager 站点提交硬件清单后，可以使用资源浏览器查看此信息。 适用于 Linux 和 UNIX 的 Configuration Manager 客户端不会向资源浏览器添加新的清单类或视图。 Linux 和 UNIX 清单数据映射到现有的 WMI 类。 可以使用资源浏览器在基于 Windows 的分类中查看 Linux 和 UNIX 服务器的详细清单信息。  
 
  例如，可以收集在 Linux 和 UNIX 服务器上找到的所有以本机方式安装的程序的列表。 以本机方式安装的程序的示例包括 Linux 中的 **.rpms** 或 Solaris 中的 **.pkgs** 。 在 Linux 或 UNIX 客户端提交清单后，可以在 Configuration Manager 控制台内资源浏览器中查看所有以本机方式安装的 Linux 或 UNIX 程序列表。  
@@ -57,6 +56,6 @@ ms.openlocfilehash: 707cb13bcb62848eb42ca824137a645dfd2f9d82
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

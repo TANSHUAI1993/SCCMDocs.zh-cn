@@ -1,5 +1,5 @@
 ---
-title: "防火墙和域 |System Center Configuration Manager"
+title: "防火墙和域 | Microsoft Docs"
 description: "配置防火墙、端口和域以准备 System Center Configuration Manager 通信。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: cd2da8ea3bf0e1351f791d88af3dcbf95f8d6be8
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: df0622164ae7784ccfedc0f4c3328c42c1d050c3
 
 
 ---
@@ -36,6 +36,6 @@ ms.openlocfilehash: cd2da8ea3bf0e1351f791d88af3dcbf95f8d6be8
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

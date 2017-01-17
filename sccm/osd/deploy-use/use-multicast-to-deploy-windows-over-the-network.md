@@ -1,5 +1,5 @@
 ---
-title: "使用多播通过网络部署 Windows | Configuration Manager"
+title: "使用多播通过网络部署 Windows | Microsoft Docs"
 description: "在 System Center Configuration Manager 环境中使用多播，以便多台计算机可同时下载操作系统映像。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: da83037a28194e3bae1e6afe4d4bca1ce43f2bf6
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: 55266696aa7340fddda3a57ff90e20222ff665a5
 
 
 ---
@@ -46,6 +46,6 @@ ms.openlocfilehash: da83037a28194e3bae1e6afe4d4bca1ce43f2bf6
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

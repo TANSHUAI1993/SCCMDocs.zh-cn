@@ -1,5 +1,5 @@
 ---
-title: "配置发现 | System Center Configuration Manager"
+title: "配置发现 | Microsoft Docs"
 description: "配置发现方法，以在 Configuration Manager 站点运行，从而找到可以从网络基础结构和 Active Directory 管理的资源。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 668da9706bb46e6338e81ed75be5d78ab32561c3
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: 2fcc392ba700f871349200166fac715b73788c16
 
 ---
 # <a name="configure-discovery-methods-for-system-center-configuration-manager"></a>配置 System Center Configuration Manager 的发现方法
@@ -448,6 +448,6 @@ ms.openlocfilehash: 668da9706bb46e6338e81ed75be5d78ab32561c3
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

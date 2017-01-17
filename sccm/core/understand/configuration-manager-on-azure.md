@@ -1,5 +1,5 @@
 ---
-title: "Azure 上的 Configuration Manager |System Center Configuration Manager"
+title: "Azure 上的 Configuration Manager | Microsoft Docs"
 description: "有关在 Azure 环境中使用 Configuration Manager 的信息。"
 ms.custom: na
 ms.date: 10/21/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6d304ddb87b9c9abe37b5dc9cf4252580cbcf048
-ms.openlocfilehash: d8f8ea98c4383783c95e6425af29987bdee1429a
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: 5866c1d9ad88e49b69fa0c863b1ef8748a8c8111
 
 ---
 # <a name="configuration-manager-on-azure---frequently-asked-questions"></a>Azure 上的 Configuration Manager - 常见问题解答
@@ -80,7 +80,7 @@ ms.openlocfilehash: d8f8ea98c4383783c95e6425af29987bdee1429a
 ### <a name="how-can-i-make-my-database-highly-available-can-i-use-azure-sql-database-or-do-i-have-to-use-microsoft-sql-server-in-a-vm"></a>如何让数据库高度可用？ 是否可以使用 Azure SQL 数据库？ 或是否必须在 VM 中使用 Microsoft SQL Server？
 需在 VM 中使用 Microsoft SQL Server。 Configuration Manager 目前不支持 Azure SQL Server。 但 AlwaysOn 可用性组等功能可用于 SQL server。 从 Configuration Manager 版本 1602 开始，正式支持和推荐使用 [AlwaysOn 可用性组](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database)。
 
-### <a name="can-i-use-azure-load-balancers-with-site-system-roles-like-management-points-or-software-update-points"></a>可否将站点系统角色（如管理点或软件更新点）与 Azure 负载均衡器一起使用？
+### <a name="can-i-use-azure-load-balancers-with-site-system-roles-like-management-points--or-software-update-points"></a>可否将站点系统角色（如管理点或软件更新点）与 Azure 负载均衡器一起使用？
 虽然未就 Configuration Manager 与 Azure 负载均衡器的配合使用进行测试，但如果该功能对该应用程序是透明的，将二者配合使用应不会影响正常操作和运行。
 
 
@@ -114,6 +114,9 @@ ms.openlocfilehash: d8f8ea98c4383783c95e6425af29987bdee1429a
 |**最多 25k**       | 站点服务器：F4S </br>数据库服务器：DS12_V2 | 站点服务器：1xP30 </br>数据库服务器：2xP30 |
 |**25k 到 50k**      | 站点服务器：F4S </br>数据库服务器：DS13_V2 | 站点服务器：1xP30 </br>数据库服务器：2xP30 |
 |**50k 到 100k**     | 站点服务器：F8S </br>数据库服务器： DS14_V2 | 站点服务器：2xP30 </br>数据库服务器：3xP30 |
+
+下面显示了 DS14_V2 上 50k 到 100k 客户端的示例配置，其中 3xP30 磁盘位于带区卷中，Configuration Manager 安装和数据库文件具有单独的逻辑卷： ![VM)disks](media/vm_disks.png)  
+
 
 
 ## <a name="user-experience"></a>用户体验
@@ -177,6 +180,6 @@ ms.openlocfilehash: d8f8ea98c4383783c95e6425af29987bdee1429a
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

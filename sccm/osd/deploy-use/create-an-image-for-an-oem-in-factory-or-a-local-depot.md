@@ -1,5 +1,5 @@
 ---
-title: "为工厂中的 OEM 或本地 depot 创建映像| Configuration Manager"
+title: "为工厂中的 OEM 或本地 depot 创建映像 | Microsoft Docs"
 description: "将操作系统部署到未完全预配的计算机时，可使用预留媒体部署减少网络流量。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: d604577fdb9af7c7789840ea6281c371e35c46b0
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: 07aba04fb1b845e389a5f75b115d536136c1569c
 
 
 ---
@@ -58,6 +58,6 @@ ms.openlocfilehash: d604577fdb9af7c7789840ea6281c371e35c46b0
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

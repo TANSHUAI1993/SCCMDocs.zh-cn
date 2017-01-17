@@ -1,5 +1,5 @@
 ---
-title: "操作系统部署的基础结构要求 | Configuration Manager"
+title: "操作系统部署的基础结构要求 | Microsoft Docs"
 description: "使用 System Center 2012 Configuration Manager 部署操作系统前，确保已了解外部依赖关系和产品依赖关系。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: e78cc0d45127df521e362e4cd96b492ddc110a2a
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: 77ac69cecab7aa460001a8d2800e61f20a8565ed
 
 
 ---
@@ -240,6 +240,6 @@ System Center 2012 Configuration Manager 中的操作系统部署具有外部依
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

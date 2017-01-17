@@ -1,5 +1,5 @@
 ---
-title: "电子邮件配置文件简介 | System Center Configuration Manager"
+title: "电子邮件配置文件简介 | Microsoft Docs"
 description: "了解如何使用电子邮件配置文件让用户只需进行最少的设置便可访问其设备上的企业电子邮件。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 83066e1f0e3c6536649e9b74ca13562c9d817619
+ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
+ms.openlocfilehash: b936a0914f8811f755cbb6983fefc063fbc4f97c
 
 
 ---
@@ -38,10 +38,10 @@ ms.openlocfilehash: 83066e1f0e3c6536649e9b74ca13562c9d817619
 
 -   运行 iOS 5、iOS 6、iOS 7 和 iOS 8 的 IPhone 设备  
 
--   运行 iOS 5、iOS 6、iOS 7 和 iOS 8 的 IPhone 设备  
+-   运行 iOS 5、iOS 6、iOS 7 和 iOS 8 的 IPad 设备  
 
 > [!IMPORTANT]  
->  若要将配置文件部署到 iOS、Android、Samsung KNOX、Windows Phone 和 Windows 8.1 或 Windows 10 设备，这些设备必须注册到 Intune。 有关如何注册设备的信息，请参阅 [使用 Microsoft Intune 管理移动设备](https://technet.microsoft.com/en-us/library/dn646962.aspx)。  
+>  若要将配置文件部署到 iOS、Android Samsung KNOX 标准版、Windows Phone 和 Windows 8.1 或 Windows 10 设备，这些设备必须在 Intune 中注册。 有关如何注册设备的信息，请参阅 [使用 Microsoft Intune 管理移动设备](https://technet.microsoft.com/en-us/library/dn646962.aspx)。  
 
  除了在设备上配置电子邮件帐户以外，还可以配置联系人、日历和任务的同步设置。  
 
@@ -49,6 +49,6 @@ ms.openlocfilehash: 83066e1f0e3c6536649e9b74ca13562c9d817619
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

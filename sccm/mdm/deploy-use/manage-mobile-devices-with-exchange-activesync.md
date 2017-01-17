@@ -1,5 +1,5 @@
 ---
-title: "管理移动设备 | System Center Configuration Manager 和 Exchange"
+title: "管理移动设备 | Microsoft Docs"
 description: "通过在 System Center Configuration Manager 中使用 Exchange Server 连接器来管理移动设备。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 18da1455796e265af2adb8852c9f2b610dc672a8
+ms.sourcegitcommit: 0d6479bcc134103e6005159a8ea295a5f359a436
+ms.openlocfilehash: 4a2b60d893e8d430b107a5bc43ec0748177c27c3
 
 
 ---
@@ -27,7 +27,7 @@ ms.openlocfilehash: 18da1455796e265af2adb8852c9f2b610dc672a8
 
 希望使用 Microsoft Exchange ActiveSync 协议管理连接到 Exchange Server（本地或联机）的移动设备，并且无法使用 Configuration Manager 注册这些设备时，请使用 System Center Configuration Manager 中的 Exchange Server 连接器。 可从 Configuration Manager 控制台配置 Exchange 移动设备管理功能，例如远程设备擦除和针对多个 Exchange 服务器的设置控制。  
 
- ![configmgr-with-exchange](../../mdm/deploy-use/media/configmgr-with-exchange.png "configmgr-with-exchange")  
+ ![configmgr&#45;with&#45;exchange](../../mdm/deploy-use/media/configmgr-with-exchange.png "configmgr-with-exchange")  
 
  在使用 Exchange Server 连接器管理移动设备时，此操作不会在移动设备上安装 Configuration Manager 客户端。 因此，某些管理功能受到限制。 例如，你无法在这些设备上安装软件或使用配置项目来配置这些设备。 有关可通过 Configuration Manager 用于移动设备的各种管理功能的详细信息，请参阅[为 System Center Configuration Manager 选择设备管理解决方案](../../core/plan-design/choose-a-device-management-solution.md)。  
 
@@ -138,6 +138,6 @@ ms.openlocfilehash: 18da1455796e265af2adb8852c9f2b610dc672a8
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

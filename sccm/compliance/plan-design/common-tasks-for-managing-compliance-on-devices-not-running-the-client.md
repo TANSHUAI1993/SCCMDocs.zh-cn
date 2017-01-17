@@ -1,5 +1,5 @@
 ---
-title: "在未运行 System Center Configuration Manager 客户端的设备上管理符合性的常见任务 | System Center Configuration Manager"
+title: "在未运行 System Center Configuration Manager 客户端的设备上管理合规性的常见任务 | Microsoft Docs"
 description: "通过完成一些常见方案，了解 System Center Configuration Manager 符合性设置。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: f69250fbe51ea8902a0446a613d66be390ea7434
+ms.sourcegitcommit: f9e939d871e95a3248d8e5d96cb73063a81fd5cf
+ms.openlocfilehash: e24ef149e2a2648c9a7acaedfaa8f0b5bb173ab3
 
 
 ---
@@ -101,7 +101,7 @@ ms.openlocfilehash: f69250fbe51ea8902a0446a613d66be390ea7434
 
  现在便可以通过[使用 System Center Configuration Manager 创建和部署配置基线的常见任务](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md)主题中的信息将创建的配置部署到设备。  
 
-## <a name="scenarios-for-android-and-samsung-knox-devices-managed-without-the-configuration-manager-client"></a>不使用 Configuration Manager 客户端管理的 Android 和 Samsung KNOX 设备的方案  
+## <a name="scenarios-for-android-and-samsung-knox-standard-devices-managed-without-the-configuration-manager-client"></a>不通过 Configuration Manager 客户端托管的 Android 和Samsung KNOX 标准版设备的方案  
 
 ### <a name="scenario-require-a-password-on-all-android-5-devices"></a>方案：在所有 Android 5 设备上要求密码  
  在此场景下，你将为 Android 5 设备创建一个配置项目，需要用户在他们的设备上配置一个包含至少 6 个字符的密码。 此外，如果用户输入不正确密码 5 次，那么设备将被擦除。  
@@ -126,7 +126,6 @@ ms.openlocfilehash: f69250fbe51ea8902a0446a613d66be390ea7434
 
 
 
-
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

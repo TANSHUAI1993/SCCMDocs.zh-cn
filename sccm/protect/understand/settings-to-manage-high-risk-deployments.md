@@ -1,5 +1,5 @@
 ---
-title: "管理高风险部署 | System Center Configuration Manager"
+title: "管理高风险部署 | Microsoft Docs"
 description: "了解如何在 System Center Configuration Manager 中配置站点设置以便在管理员创建高风险部署时警告他们。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: e265c2de8a1d29863d430e0e2b693c69ff4bda10
+ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
+ms.openlocfilehash: 8b5564f39f07a67a3c9278379ed59ca415603d21
 
 
 ---
@@ -62,6 +62,6 @@ ms.openlocfilehash: e265c2de8a1d29863d430e0e2b693c69ff4bda10
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

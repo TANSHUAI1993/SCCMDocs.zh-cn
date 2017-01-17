@@ -1,5 +1,5 @@
 ---
-title: "创建查询 | System Center Configuration Manager"
+title: "创建查询 | Microsoft Docs"
 description: "了解如何在 System Center Configuration Manager 中创建和导入查询。 包括示例查询和提示。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 1cbba80a73fdd66d84d38e710c02cc79ab972b81
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: 89bd798339489071fdb69325c957fefda32621e9
 
 
 ---
@@ -190,6 +190,6 @@ Select SMS_R_System.ClientEdition from SMS_R_System where SMS_R_System.ClientEdi
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

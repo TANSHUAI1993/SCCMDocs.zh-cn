@@ -1,5 +1,5 @@
 ---
-title: "部署 Windows 客户端 | System Center Configuration Manager"
+title: "部署 Windows 客户端 | Microsoft Docs"
 description: "了解如何在 System Center Configuration Manager 中将客户端部署到 Windows 计算机。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -13,12 +13,12 @@ ms.topic: get-started-article
 ms.assetid: 341f0d0b-f907-44cf-9e10-e1b41fc15f82
 caps.latest.revision: 13
 caps.handback.revision: 0
-author: Mtillman
-ms.author: mtillman
+author: nbigman
+ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 5a52386c6327ded3c5a400c7a046a6a12af96bae
+ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
+ms.openlocfilehash: daf9ebae82eb5933e211a08d61f0c82a261d4aa7
 
 
 ---
@@ -31,7 +31,7 @@ ms.openlocfilehash: 5a52386c6327ded3c5a400c7a046a6a12af96bae
  安装 Configuration Manager 客户端之前，请确保准备好所有必备组件，并且已经完成了所有必需的部署配置。 有关详细信息，请参阅[在 System Center Configuration Manager 中将客户端部署到 Windows 计算机的先决条件](../../../core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md)。  
 
 
-##  <a name="a-namebkmkclientpusha-how-to-install-configuration-manager-clients-by-using-client-push"></a><a name="BKMK_ClientPush"></a>如何使用客户端请求安装 Configuration Manager 客户端  
+##  <a name="a-namebkmkclientpusha-how-to-install-clients-with-client-push"></a><a name="BKMK_ClientPush"></a> 如何使用客户端请求来安装客户端  
 
  使用客户端请求安装在 Configuration Manager 发现的计算机上安装 Configuration Manager 客户端软件。 你可以为站点配置客户端请求安装，客户端安装将在站点的配置边界（如果这些边界被配置为边界组）内发现的计算机上自动运行。 或者，你可以运行特定集合或集合内的资源的“客户端请求安装向导”来启动客户端请求安装。  
 
@@ -44,7 +44,7 @@ ms.openlocfilehash: 5a52386c6327ded3c5a400c7a046a6a12af96bae
 > [!IMPORTANT]  
 >  为了继续执行客户端请求，请确保所有先决条件已经准备就绪。 这些条件列于[在 System Center Configuration Manager 中将客户端部署到 Windows 计算机的先决条件](../../../core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md)中的“安装方法依赖关系”部分。  
 
-#### <a name="to-configure-the-site-to-automatically-use-client-push-for-discovered-computers"></a>将站点配置为对发现的计算机自动使用客户端请求  
+### <a name="to-configure-the-site-to-automatically-use-client-push-for-discovered-computers"></a>将站点配置为对发现的计算机自动使用客户端请求
 
 1.  在 Configuration Manager 控制台中，单击“管理”   
 
@@ -87,7 +87,7 @@ ms.openlocfilehash: 5a52386c6327ded3c5a400c7a046a6a12af96bae
     > [!NOTE]  
     >  如果在辅助站点上启用客户端请求安装，请确保将 SMSSITECODE 属性设置为其父主站点的 Configuration Manager 站点名称。 如果已为 Configuration Manager 扩展了 Active Directory 架构，你也可以将此属性设置为“自动”以自动查找正确的站点分配。  
 
-#### <a name="to-use-the-client-push-installation-wizard"></a>使用客户端请求安装向导  
+### <a name="to-use-the-client-push-installation-wizard"></a>使用客户端请求安装向导
 
 1.  在 Configuration Manager 控制台中，单击“管理”   
 
@@ -132,7 +132,7 @@ ms.openlocfilehash: 5a52386c6327ded3c5a400c7a046a6a12af96bae
 > [!NOTE]  
 >  即使站点没有配置客户端请求，你也可以使用向导来安装客户端。  
 
-##  <a name="a-namebkmkclientsupa-how-to-install-configuration-manager-clients-by-using-software-update-based-installation"></a><a name="BKMK_ClientSUP"></a>如何使用基于软件更新的安装来安装 Configuration Manager 客户端  
+##  <a name="a-namebkmkclientsupa-how-to-install-clients-with-software-update-based-installation"></a><a name="BKMK_ClientSUP"></a> 如何使用基于软件更新点的安装来安装客户端  
  基于软件更新的客户端安装将 Configuration Manager 客户端作为其他软件更新发布到软件更新点。 此客户端安装方法可用于在还没有安装 Configuration Manager 客户端的计算机上安装此客户端，或者升级现有 Configuration Manager 客户端。  
 
  如果计算机安装了 Configuration Manager 客户端，则 Configuration Manager 会向此客户端提供用于从中获取软件更新的软件更新点服务器名称和端口。 此信息包含在客户端策略中。  
@@ -151,7 +151,7 @@ ms.openlocfilehash: 5a52386c6327ded3c5a400c7a046a6a12af96bae
 > [!NOTE]  
 >  如果计算机在安装软件后处于等待重新启动状态，则基于软件更新的客户端安装可能会导致计算机重新启动。  
 
-#### <a name="to-configure-a-group-policy-object-in-active-directory-domain-services-to-specify-the-software-update-point-for-client-installation-and-software-updates"></a>将 Active Directory 域服务中的组策略对象配置为指定软件更新点以进行客户端安装和软件更新  
+将 Active Directory 域服务中的组策略对象配置为指定软件更新点以进行客户端安装和软件更新：  
 
 1.  使用组策略管理控制台打开新的或现有的组策略对象。  
 
@@ -174,7 +174,7 @@ ms.openlocfilehash: 5a52386c6327ded3c5a400c7a046a6a12af96bae
 
 6.  将组策略对象分配到想要在其中安装 Configuration Manager 客户端以及接收软件更新的计算机。  
 
-#### <a name="to-publish-the-configuration-manager-client-to-the-software-update-point"></a>将 Configuration Manager 客户端发布到软件更新点  
+### <a name="to-publish-the-configuration-manager-client-to-the-software-update-point"></a>将 Configuration Manager 客户端发布到软件更新点  
 
 1.  在 Configuration Manager 控制台中，单击“管理”   
 
@@ -196,7 +196,7 @@ ms.openlocfilehash: 5a52386c6327ded3c5a400c7a046a6a12af96bae
 > [!NOTE]  
 >  当有新版本时不会自动更新 Configuration Manager 客户端的软件更新。 如果升级包括新客户端版本的站点，则必须重复此过程并在步骤 6 中单击“是”  。  
 
-##  <a name="a-namebkmkclientgpa-how-to-install-configuration-manager-clients-by-using-group-policy"></a><a name="BKMK_ClientGP"></a>如何使用组策略安装 Configuration Manager 客户端  
+##  <a name="a-namebkmkclientgpa-how-to-install-clients-with-group-policy"></a><a name="BKMK_ClientGP"></a> 如何使用组策略安装客户端  
  你可以使用 Active Directory 域服务中的组策略发布或分配要在企业中的计算机上安装的 Configuration Manager 客户端。 使用组策略将 Configuration Manager 客户端分配到计算机时，会在首次启动计算机时安装客户端。 使用组策略发布 Configuration Manager 客户端时，客户端会显示在计算机控制面板的“添加或删除程序”中供用户安装。  
 
  使用 Windows Installer 包 (CCMSetup.msi) 进行基于组策略的安装。 此文件位于 Configuration Manager 站点服务器上的 **&lt;ConfigMgr installation directory\>\bin\i386**文件夹中。 你无法将属性添加到此文件中以修改安装行为：  
@@ -210,7 +210,7 @@ ms.openlocfilehash: 5a52386c6327ded3c5a400c7a046a6a12af96bae
 
  关于如何使用 Active Directory 域服务中的组策略安装软件的信息，请参阅 Windows Server 文档。  
 
-##  <a name="a-namebkmkmanuala-how-to-install-configuration-manager-clients-manually"></a><a name="BKMK_Manual"></a>如何手动安装 Configuration Manager 客户端  
+##  <a name="a-namebkmkmanuala-how-to-install-clients-manually"></a><a name="BKMK_Manual"></a> 如何手动安装客户端  
  你可以使用 CCMSetup.exe 程序在企业计算机上手动安装 Configuration Manager 客户端软件。 可以在站点服务器上或站点中的管理点上 Configuration Manager 安装文件夹的 **Client** 文件夹中找到此程序及其支持文件。 该文件夹以  
 
  \\\\&lt;Site Server Name\>\SMS_&lt;Site Code\>\Client\  
@@ -244,7 +244,7 @@ CCMSetup.exe /mp:SMSMP01 /logon SMSSITECODE=AUTO FSP=SMSFP01
 
  有关所有 CCMSetup.exe 属性的详细信息，请参阅[关于 System Center Configuration Manager 中的客户端安装属性](../../../core/clients/deploy/about-client-installation-properties.md)  
 
-### <a name="examples-for-installing-configuration-manager-clients-manually"></a>手动安装 Configuration Manager 客户端的示例  
+### <a name="examples"></a>示例
  这些示例适用于 Intranet 上的 Active Directory 客户端，使用以下值来表示站点的其他方面：  
 
  **MPSERVER** = 托管管理点的服务器   
@@ -274,14 +274,14 @@ CCMSetup.exe /MP:mpserver.contoso.com /UsePKICert SMSSITECODE=ABC CCMHOSTNAME=se
 > [!NOTE]  
 >  此示例替代 Active Directory 域服务可以提供的自动配置，不要求将客户端的网络位置包括在为客户端分配配置的边界组中。 而安装会指定站点、Intranet 管理点和基于 Internet 的管理点、一个接受来自 Internet 的连接的回退状态点，并使用具有最长有效期的客户端 PKI 证书（如果可用）。  
 
-##  <a name="a-namebkmkclientlogonscripta-how-to-install-configuration-manager-clients-by-using-logon-scripts"></a><a name="BKMK_ClientLogonScript"></a>如何使用登录脚本安装 Configuration Manager 客户端  
+##  <a name="a-namebkmkclientlogonscripta-how-to-install-clients-with-logon-scripts"></a><a name="BKMK_ClientLogonScript"></a> 如何使用登录脚本安装客户端  
  Configuration Manager 支持登录脚本来安装 Configuration Manager 客户端软件。 你可以在登录脚本中使用“CCMSetup.exe”  程序文件来触发客户端安装。  
 
  登录脚本安装使用的方法与手动客户端安装使用的方法相同。 你可以为 CCMSsetup.exe 指定“/logon”  安装属性，如果计算机上已经存在任何版本的客户端，则此属性会阻止安装客户端。 每次运行登录脚本时，此属性会阻止发生客户端重新安装。  
 
  如果未指定使用 **/Source** 属性的安装源，未使用 **/MP** 属性指定要从中获取安装的管理点，并且为 Configuration Manager 扩展了架构并将站点发布到 Active Directory 域服务，则 CCMSetup.exe 可以通过搜索 Active Directory 域服务来查找管理点。 或者，客户端可能会使用 DNS 或 WINS 来查找管理点。  
 
-##  <a name="a-namebkmkclientappa-how-to-install-configuration-manager-clients-by-using-a-package-and-program"></a><a name="BKMK_ClientApp"></a>如何通过使用包和程序来安装 Configuration Manager 客户端  
+##  <a name="a-namebkmkclientappa-how-to-install-clients-with-a-package-and-program"></a><a name="BKMK_ClientApp"></a> 如何使用包和程序安装客户端  
  你可以使用 Configuration Manager 来创建和部署包和程序，以为层次结构中所选择的计算机升级客户端软件。 随 Configuration Manager 一起提供了一个包定义文件，此文件使用常用值填充包属性。 你可以通过指定其他命令行属性来自定义客户端安装的行为。  
 
 > [!NOTE]  
@@ -291,7 +291,7 @@ CCMSetup.exe /MP:mpserver.contoso.com /UsePKICert SMSSITECODE=ABC CCMHOSTNAME=se
 
  使用以下过程创建 Configuration Manager 包和程序，你可以将此包和程序部署到 Configuration Manager 客户端计算机以升级客户端软件。  
 
-#### <a name="to-create-a-package-and-program-for-the-client-software"></a>创建客户端软件的包和程序  
+创建客户端软件的包和程序  
 
 1.  在 Configuration Manager 控制台中，单击“软件库” 。  
 
@@ -314,7 +314,26 @@ CCMSetup.exe /MP:mpserver.contoso.com /UsePKICert SMSSITECODE=ABC CCMHOSTNAME=se
 
 9. 将包分发给你想要承载客户端升级包的所有分发点。 然后，你可以将此包部署到包含想要升级的 Configuration Manager 客户端的计算机集合。  
 
-##  <a name="a-namebkmkclientimagea-how-to-install-configuration-manager-clients-by-using-computer-imaging"></a><a name="BKMK_ClientImage"></a>如何使用计算机映像来安装 Configuration Manager 客户端  
+## <a name="how-to-install-clients-to-mdm-managed-windows-devices-with-intune"></a>如何使用 Intune 将客户端安装到 MDM 托管的 Windows 设备
+
+可以将 Configuration Manager 客户端安装文件部署到使用 Microsoft Intune 注册的计算机。 若要执行此操作，可以使用 Intune 软件发行者创建 Windows Installer (\*.msi) 应用，其中包含客户端安装文件 **ccmsetup.msi**。 然后，向已注册设备部署应用，该操作可安装客户端软件。
+
+若要确保客户端软件安装后，设备仍保持托管状态，设备必须在公司网络中，并且位于 Configuration Manager 站点边界内。 
+
+> [!NOTE]
+> 客户端软件安装后，将从 Intune 取消注册该设备。
+
+### <a name="to-install-clients-with-intune"></a>使用 Intune 安装客户端：
+
+1. 在 Intune 中，[创建应用](/intune/deploy-use/add-apps-for-mobile-devices-in-microsoft-intune)，该应用包含 Configuration Manager 客户端安装文件 **ccmsetup.msi**。
+
+2. 在 Intune 软件发行者中，使用以下命令行参数：
+
+  **CCMSETUPCMD="/MP:&lt;FQDN of management point> SMSMP=&lt;FQDN of management point> SMSSITECODE=&lt;Your site code> DNSSUFFIX=&lt;DNS Suffix of management point>"**
+
+3. 向已注册的 Windows 计算机[部署应用](/intune/deploy-use/deploy-apps-in-microsoft-intune)。
+
+##  <a name="a-namebkmkclientimagea-how-to-install-clients-with-a-computer-image"></a><a name="BKMK_ClientImage"></a> 如何使用计算机映像安装客户端  
  你可以在将用于构建企业计算机的主映像计算机上预安装 Configuration Manager 客户端软件。 要在主计算机上安装客户端，请不要指定客户端的站点代码。 从此主映像中对计算机进行映像时，这些计算机将包含 Configuration Manager 客户端，并且在安装完成时必须完成站点分配。  
 
 > [!IMPORTANT]  
@@ -324,7 +343,7 @@ CCMSetup.exe /MP:mpserver.contoso.com /UsePKICert SMSSITECODE=ABC CCMHOSTNAME=se
 
  如果客户端无法查询 Active Directory 域服务来查找管理点，则它们会使用受信任的根密钥来确定受信任的管理点。 如果所有映像的客户端将与主计算机部署在同一层次结构中，请保留受信任的根密钥。 如果客户端将部署在不同层次结构中，请删除受信任的根密钥，作为最佳方案，请用新的受信任的根密钥预先设置这些客户端。 有关详细信息，请参阅  [Planning for the Trusted Root Key](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForRTK)。  
 
-#### <a name="to-prepare-the-client-computer-for-imaging"></a>准备要映像的客户端计算机  
+### <a name="to-prepare-the-client-computer-for-imaging"></a>准备要映像的客户端计算机  
 
 1.  在主映像计算机上手动安装 Configuration Manager 客户端软件。 有关详细信息，请参阅 [如何手动安装 Configuration Manager 客户端](#BKMK_Manual)。  
 
@@ -341,7 +360,7 @@ CCMSetup.exe /MP:mpserver.contoso.com /UsePKICert SMSSITECODE=ABC CCMHOSTNAME=se
 
 6.  将映像部署到目标计算机。  
 
-##  <a name="a-namebkmkclientworkgroupa-how-to-install-configuration-manager-clients-on-workgroup-computers"></a><a name="BKMK_ClientWorkgroup"></a>如何在工作组计算机上安装 Configuration Manager 客户端  
+##  <a name="a-namebkmkclientworkgroupa-how-to-install-clients-on-workgroup-computers"></a><a name="BKMK_ClientWorkgroup"></a> 如何在工作组计算机上安装客户端  
  Configuration Manager 支持为工作组中的计算机安装客户端。 通过使用 [如何手动安装 Configuration Manager 客户端](#BKMK_Manual)中指定的方法在工作组计算机上安装客户端。  
 
  必须满足以下先决条件才能在工作组计算机上安装 Configuration Manager 客户端：  
@@ -366,7 +385,7 @@ CCMSetup.exe /MP:mpserver.contoso.com /UsePKICert SMSSITECODE=ABC CCMHOSTNAME=se
 
 -   不能将工作组客户端配置为分发点。 Configuration Manager 要求分发点计算机是某个域的成员。  
 
-#### <a name="to-install-the-client-on-workgroup-computers"></a>在工作组计算机上安装客户端  
+### <a name="to-install-the-client-on-workgroup-computers"></a>在工作组计算机上安装客户端  
 
 1.  确保你要在其上安装客户端的计算机满足上述先决条件。  
 
@@ -382,7 +401,7 @@ CCMSetup.exe /MP:mpserver.contoso.com /UsePKICert SMSSITECODE=ABC CCMHOSTNAME=se
     > [!NOTE]  
     >  此示例要求客户端位于在边界组中配置的网络位置上，以便自动站点分配可成功进行。 命令包括一个位于服务器 FSPSERVER 上的回退状态点，以帮助跟踪客户端部署并确定任何客户端通信问题。  
 
-##  <a name="a-namebkmkclientinterneta-how-to-install-configuration-manager-clients-for-internet-based-client-management"></a><a name="BKMK_ClientInternet"></a>如何针对基于 Internet 的客户端管理安装 Configuration Manager 客户端  
+##  <a name="a-namebkmkclientinterneta-how-to-install-clients-for-internet-based-client-management"></a><a name="BKMK_ClientInternet"></a> 如何针对基于 Internet 的客户端管理安装客户端  
  如果 Configuration Manager 站点支持对有时位于 Intranet 有时位于 Internet 上的客户端进行基于 Internet 的客户端管理，则在 Intranet 上安装客户端时，你有两个选择：  
 
 -   你可以在安装客户端（例如，通过使用手动安装或客户端请求进行安装）时包括 Client.msi 属性 CCMHOSTNAME=&lt;基于 Internet 的管理点的 Internet FQDN\>。 在使用此方法时，你还必须将客户端直接分配到站点，并且无法使用自动站点分配。 本主题 [如何手动安装 Configuration Manager 客户端](#BKMK_Manual) 部分中提供了此配置方法的示例。  
@@ -400,7 +419,7 @@ CCMSetup.exe /MP:mpserver.contoso.com /UsePKICert SMSSITECODE=ABC CCMHOSTNAME=se
 
  由于通过 Internet 管理的客户端必须与基于 Internet 的站点系统通信，因此在安装这些客户端之前，请确保它们也安装了公钥基础结构 (PKI) 证书。 你必须独立于 Configuration Manager 安装这些证书。 有关证书要求的详细信息，请参阅 [System Center Configuration Manager 的 PKI 证书要求](../../../core/plan-design/network/pki-certificate-requirements.md)。  
 
-#### <a name="to-install-clients-on-the-internet-by-specifying-ccmsetup-command-line-properties"></a>通过指定 CCMSetup 命令行属性在 Internet 上安装客户端  
+### <a name="to-install-clients-on-the-internet-by-specifying-ccmsetup-command-line-properties"></a>通过指定 CCMSetup 命令行属性在 Internet 上安装客户端  
 
 1.  按照 [如何手动安装 Configuration Manager 客户端](#BKMK_Manual) 部分中的说明操作并始终包括以下内容：  
 
@@ -430,10 +449,10 @@ CCMSetup.exe /MP:mpserver.contoso.com /UsePKICert SMSSITECODE=ABC CCMHOSTNAME=se
     > [!NOTE]  
     >  此示例从 D 驱动器上的一个文件夹中安装客户端源文件（包含使用客户端 PKI 证书以及针对仅限 Internet 的客户端管理使用有效期最长的证书的设置），分配客户端以使用 contoso.com 域中基于 Internet 的管理点（名为 SERVER1）和基于 Internet 的回退状态点，并将客户端分配到 ABC 站点。  
 
-###  <a name="a-namebkmkconfigureibcmmpa-how-to-configure-clients-for-internet-based-client-management-after-client-installation"></a><a name="BKMK_ConfigureIBCM_MP"></a>如何在客户端安装后针对基于 Internet 的客户端管理配置客户端  
+###  <a name="a-namebkmkconfigureibcmmpato-configure-clients-for-internet-based-client-management-after-client-installation"></a><a name="BKMK_ConfigureIBCM_MP"></a> 在客户端安装后针对基于 Internet 的客户端管理配置客户端  
  要在安装客户端之后分配基于 Internet 的管理点，请使用下列过程之一。 第一个过程需要手动配置，因此它适合于少数客户端，而如果你有很多要配置的客户端，则第二个过程更为适合。  
 
-##### <a name="to-configure-clients-for-internet-based-client-management-after-client-installation-by-assigning-the-internet-based-management-point-in-configuration-manager-properties"></a>在客户端安装之后通过在 Configuration Manager 属性中分配基于 Internet 的管理点来针对基于 Internet 的客户端管理配置客户端  
+#### <a name="to-configure-clients-for-internet-based-client-management-after-client-installation-by-assigning-the-internet-based-management-point-in-configuration-manager-properties"></a>在客户端安装之后通过在 Configuration Manager 属性中分配基于 Internet 的管理点来针对基于 Internet 的客户端管理配置客户端  
 
 1.  在客户端计算机上的控制面板中，导航到“Configuration Manager”  ，然后双击以打开其属性。  
 
@@ -446,7 +465,7 @@ CCMSetup.exe /MP:mpserver.contoso.com /UsePKICert SMSSITECODE=ABC CCMHOSTNAME=se
 
 4.  单击" **确定**"。  
 
-##### <a name="to-configure-clients-for-internet-based-client-management-after-client-installation-by-using-a-script"></a>在客户端安装后通过使用脚本来针对基于 Internet 的客户端管理配置客户端  
+#### <a name="to-configure-clients-for-internet-based-client-management-after-client-installation-by-using-a-script"></a>在客户端安装后通过使用脚本来针对基于 Internet 的客户端管理配置客户端  
 
 1.  打开文本编辑器，例如记事本。  
 
@@ -488,7 +507,7 @@ CCMSetup.exe /MP:mpserver.contoso.com /UsePKICert SMSSITECODE=ABC CCMHOSTNAME=se
 
  你可能必须重启客户端以使此脚本中的新设置生效。  
 
-##  <a name="a-namebkmkprovisiona-how-to-provision-client-installation-properties-group-policy-and-software-update-based-client-installation"></a><a name="BKMK_Provision"></a>如何设置客户端安装属性（基于组策略和软件更新的客户端安装）  
+##  <a name="a-namebkmkprovisiona-how-to-provision-client-installation-properties-group-policy-and-software-update-based-client-installation"></a><a name="BKMK_Provision"></a> 如何设置客户端安装属性（基于组策略和软件更新的客户端安装）  
  你可以使用 Windows 组策略，通过 Configuration Manager 客户端安装属性来设置企业中的计算机。 这些属性存储在计算机的注册表中，在安装客户端软件时将读取这些属性。 Configuration Manager 通常不需要此过程。 但是，对于诸如以下一些客户端安装方案，此过程可能是必需的：  
 
 -   你在使用基于组策略设置或软件更新的客户端安装方法，并且尚未为 Configuration Manager 扩展 Active Directory 架构。  
@@ -500,7 +519,7 @@ CCMSetup.exe /MP:mpserver.contoso.com /UsePKICert SMSSITECODE=ABC CCMHOSTNAME=se
 
  Configuration Manager 安装媒体上提供了名为 ConfigMgrInstallation.adm 的组策略管理模板，可以使用该模板通过安装属性来设置客户端计算机。 使用以下过程来配置此模板并将其分配给组织中的计算机。  
 
-#### <a name="to-configure-and-assign-client-installation-properties-by-using-a-group-policy-object"></a>使用组策略对象来配置和分配客户端安装属性  
+### <a name="to-configure-and-assign-client-installation-properties-by-using-a-group-policy-object"></a>使用组策略对象来配置和分配客户端安装属性  
 
 1.  通过使用编辑器（例如 Windows 组策略对象编辑器）将管理模板 ConfigMgrInstallation.adm 导入到新的或现有的组策略对象中。  
 
@@ -519,6 +538,6 @@ CCMSetup.exe /MP:mpserver.contoso.com /UsePKICert SMSSITECODE=ABC CCMHOSTNAME=se
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

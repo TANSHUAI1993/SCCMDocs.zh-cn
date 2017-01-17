@@ -1,5 +1,5 @@
 ---
-title: "将软件更新添加到更新组 | Configuration Manager"
+title: "将软件更新添加到更新组 | Microsoft Docs"
 description: "手动或自动将软件更新添加到环境中的软件更新组。"
 keywords: 
 author: dougeby
@@ -13,8 +13,8 @@ ms.technology:
 - configmgr-sum
 ms.assetid: a0767664-fd60-46a8-9da5-86cc431ce53c
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 9ea0d607028f4ca59f02664a502d5ff2f370aa23
+ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
+ms.openlocfilehash: 620bec75ba61de2146361a86ab61f6f8e6074bcf
 
 ---
 
@@ -61,6 +61,6 @@ ms.openlocfilehash: 9ea0d607028f4ca59f02664a502d5ff2f370aa23
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

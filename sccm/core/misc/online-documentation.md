@@ -1,5 +1,5 @@
 ---
-title: "联机文档 | System Center Configuration Manager"
+title: "联机文档 | Microsoft Docs"
 ms.custom: na
 ms.date: 10/06/2016
 ms.reviewer: na
@@ -8,25 +8,24 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.assetid: 6d665cef-fc67-4686-bcb3-0572c0a3760c
 caps.latest.revision: 5
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: ff3d67b8d8e038ecd87dac90e65b4c1ab7cb15bc
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: 73bb5d4236469746102fd4893c53f20aaee122d5
 
 
 ---
 # <a name="online-documentation-for-system-center-configuration-manager"></a>System Center Configuration Manager 的联机文档
 
-*适用于：System Center Configuration Manager (Current Branch)*
 
 欢迎使用 System Center Configuration Manager文档库。  
-
- 在文档库中查找你使用的产品版本：  
+在文档库中查找你使用的产品版本：  
 
 ## <a name="system-center-configuration-manager-current-branch"></a>System Center Configuration Manager（当前分支）  
 **联机文档** ：你可以在 TechNet 上查看 System Center Configuration Manager 当前分支的联机文档：  
@@ -49,19 +48,14 @@ ms.openlocfilehash: ff3d67b8d8e038ecd87dac90e65b4c1ab7cb15bc
 
 -   [监视和维护 System Center Configuration Manager](https://technet.microsoft.com/library/mt612855.aspx)  
 
--   [System Center Configuration Manager 的技术参考](https://technet.microsoft.com/library/mt634283.aspx)  
-
 -   [System Center Configuration Manager 的安全性和隐私](https://technet.microsoft.com/library/mt622694.aspx)  
 
-**发行说明：** 发行说明包含产品文档中未提供的信息，这些信息可能是成功安装并使用 System Center Configuration Manager 所需要的：  
+**发行说明：**发行说明包含产品文档中未提供的信息，这些信息可能是成功安装并使用 System Center Configuration Manager 所需要的。 请参阅 [System Center Configuration Manager 的发行说明](https://technet.microsoft.com/library/mt592024.aspx)  
 
--   [System Center Configuration Manager 的发行说明](https://technet.microsoft.com/library/mt592024.aspx)  
+**查找帮助：**请参阅[查找使用 System Center Configuration Manager 的帮助](https://technet.microsoft.com/library/mt628521.aspx)：  
 
-**辅助功能：** 请参阅联机主题 [查找有关使用 System Center Configuration Manager 的帮助](https://technet.microsoft.com/library/mt628521.aspx)中的以下部分：  
+**辅助功能：**请参阅 [Configuration Manager 控制台的辅助功能](https://technet.microsoft.com/library/mt628521.aspx)  
 
--   [Configuration Manager 控制台的辅助功能](https://technet.microsoft.com/library/mt628521.aspx#bkmk_aconsole)  
-
--   [Configuration Manager 帮助的辅助功能](https://technet.microsoft.com/library/mt628521.aspx#bkmk_ahelp)  
 
 ## <a name="system-center-configuration-manager-technical-preview"></a>System Center Configuration Manager Technical Preview  
 **联机文档：** 您可以在 TechNet 的以下指南中查看联机文档：  
@@ -111,6 +105,6 @@ ms.openlocfilehash: ff3d67b8d8e038ecd87dac90e65b4c1ab7cb15bc
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

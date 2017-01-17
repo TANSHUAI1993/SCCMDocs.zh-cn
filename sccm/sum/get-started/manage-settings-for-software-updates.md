@@ -1,6 +1,6 @@
 ---
 
-title: "管理软件更新的设置 | Configuration Manager"
+title: "管理软件更新的设置 | Microsoft Docs"
 description: "了解安装软件更新点后适用于你的站点的软件更新的客户端设置。"
 keywords: 
 author: dougeby
@@ -14,8 +14,8 @@ ms.technology:
 - configmgr-sum
 ms.assetid: 0d484c1a-e903-4bff-9e9b-e452c62e38a8
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 4d7ffc12a3626f35a4481a3dcaed40abc0bbdac0
+ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
+ms.openlocfilehash: 7d37f3c5e398c914482c45ab837fe41d00fce8ea
 
 
 ---
@@ -142,6 +142,6 @@ Configuration Manager 还使用此设置来确定是否在配置的维护时段�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

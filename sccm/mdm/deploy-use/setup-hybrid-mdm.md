@@ -1,5 +1,5 @@
 ---
-title: "设置混合 MDM | System Center Configuration Manager 和 Microsoft Intune"
+title: "设置混合 MDM | Microsoft Docs"
 description: "使用 Configuration Manager 和 Intune 设置混合设备注册。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -13,12 +13,12 @@ ms.topic: get-started-article
 ms.assetid: bb95154b-f63e-4491-896e-41d732c802f8
 caps.latest.revision: 34
 caps.handback.revision: 0
-author: NathBarn
-ms.author: nathbarn
+author: mtillman
+ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 44c0947fcb7abdc4369fe0b4f47409b49d068861
+ms.sourcegitcommit: 48b91e88f78752cf7c05162b701ea2ca2f401de3
+ms.openlocfilehash: 85df3df19f01f8ed6f5240851c47afce01a92880
 
 ---
 
@@ -173,6 +173,7 @@ ms.openlocfilehash: 44c0947fcb7abdc4369fe0b4f47409b49d068861
   - [Windows 注册设置](#windows-enrollment-setup)：配置 DNS 并为 Windows 电脑、Windows 10 移动版和 Windows Phone 设备启用注册
   - Android：Android 设备无需附加步骤即可启用注册
 
+启用 MDM 管理后，便可以指定每个用户可注册的设备数量，每个用户最多可注册 15 个设备。
 
 ### <a name="ios-and-mac-enrollment-setup"></a>iOS 和 Mac 注册设置
   以下步骤通过将 Apple MDM 推送证书上传到 Intune 服务来启用 Apple 设备的管理。
@@ -245,7 +246,7 @@ ms.openlocfilehash: 44c0947fcb7abdc4369fe0b4f47409b49d068861
 - [Windows 10 和 Windows 8.1 设备](/sccm/compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client)
 - [Windows Phone 设备](/sccm/compliance/deploy-use/create-configuration-items-for-windows-phone-devices-managed-without-the-client)
 - [iOS 和 Mac 设备](/sccm/compliance/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client)
-- [Android 和 Samsung KNOX 设备](/sccm/compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client)
+- [Android 和 Samsung KNOX Standard 设备](/sccm/compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client)
 
 **应用程序**可以部署到托管设备：
 - [iOS 应用程序](/sccm/apps/get-started/creating-ios-applications)
@@ -273,30 +274,38 @@ ms.openlocfilehash: 44c0947fcb7abdc4369fe0b4f47409b49d068861
 - 用户拥有的 (BYOD) 设备：[告知用户如何注册其设备](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune) - 注册指南对于 Intune 和混合托管设备是相同的
 - 公司拥有的 (COD) 设备：[注册公司拥有的设备](enroll-company-owned-devices.md)提供有关用于注册公司拥有的设备的不同平台特定方法的指导。
 
-### <a name="managing-intune-subscriptions-associated-with-configuration-manager"></a>管理与 Configuration Manager 关联的 Intune 订阅
- 如果将 Microsoft Intune（试用订阅或付费订阅）添加到 Configuration Manager，随后需要切换到不同的 Intune 订阅，则必须先从 Configuration Manager 控制台中同时删除 **Microsoft Intune 订阅**和**服务连接点**，然后才能添加新订阅。
+## <a name="managing-intune-subscriptions-associated-with-configuration-manager"></a>管理与 Configuration Manager 关联的 Intune 订阅
 
-#### <a name="how-to-delete-an-intune-subscription-from-configuration-manager"></a>如何从 Configuration Manager 中删除 Intune 订阅
+如果将 Microsoft Intune（试用订阅或付费订阅）添加到 Configuration Manager，随后需要切换到不同的 Intune 订阅，则必须先从 Configuration Manager 控制台中同时删除 **Microsoft Intune 订阅**和**服务连接点**，然后才能添加新订阅。
 
-1.  在 Configuration Manager 控制台中，单击“管理” 。
+### <a name="how-to-delete-an-intune-subscription-from-configuration-manager"></a>如何从 Configuration Manager 中删除 Intune 订阅
 
-2.  在“管理”工作区中，展开“概述”，转到“云服务”，然后单击“Microsoft Intune 订阅”。
+> [!IMPORTANT]
+>  删除订阅将删除所有内容，包括用户注册、策略和为由 Intune 订阅管理的设备所配置的应用部署。
 
-3.  右键单击“Microsoft Intune 订阅”，然后单击“删除”。 “Microsoft Intune订阅”。
+1.  在 Configuration Manager 控制台中，转到“管理” > “概述” > “云服务” > “Microsoft Intune 订阅”。
 
-    > [!IMPORTANT]
-    >  所有内容（包括为 Intune 评估订阅配置的用户注册、策略和应用部署）都会丢失。
+2.  右键单击列出的“Microsoft Intune 订阅”，然后单击“删除”。
 
-4.  在“管理”工作区中，展开“概述”，转到“站点配置”，然后选择“服务器和站点系统角色”。
-
-5.  选择承载“服务连接点”角色的服务器。
-
-6.  在“站点系统角色”列表中，选择“服务连接点”，然后在功能区中单击“删除角色”。 确认要删除角色。 服务连接点会删除。
-
-7.  现在可以创建新服务连接点、将新 Intune 订阅添加到 Configuration Manager 以及将 Configuration Manager 设置为 MDM 机构。
+3.   在向导中，依次单击“从 Configuration Manager 中删除 Microsoft Intune 订阅”、“下一步”，然后再次单击“下一步”以删除订阅。
 
 
+### <a name="how-to-remove-the-service-connection-point-role"></a>如何删除服务连接点角色
 
-<!--HONumber=Nov16_HO1-->
+1.  转到“管理” > “概述” > “站点配置” > “服务器和站点系统角色”。
+
+2.  选择承载“服务连接点”角色的服务器。
+
+3.  在“站点系统角色”列表中，选择“服务连接点”，然后在功能区中单击“删除角色”。 确认要删除角色。 服务连接点会删除。
+
+现在可以创建新服务连接点、将新 Intune 订阅添加到 Configuration Manager 以及将 Configuration Manager 设置为 MDM 机构。
+
+### <a name="how-to-change-mdm-authority-to-intune"></a>如何将 MDM 机构更改为 Intune
+
+从 1610 版开始，可以将 Intune MDM 机构从 Configuration Manager 切换为 Intune。 即将发布此功能的相关信息。
+
+
+
+<!--HONumber=Dec16_HO3-->
 
 

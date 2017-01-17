@@ -1,8 +1,8 @@
 ---
-title: "将 Windows 设备升级到新版本 | System Center Configuration Manager"
+title: "将 Windows 设备升级到新版本 | Microsoft Docs"
 description: "将运行 Windows 10 桌面版、Windows 10 移动版或 Windows 10 全息版的设备自动升级到较新版本。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/18/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 7ee088f6da266742e7836499a7f0e072bf446a62
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: f14dfb77be7b53e74d53e0c1fc7e7f1731952d40
 
 
 ---
@@ -35,12 +35,13 @@ System Center Configuration Manager **版本升级策略**可以将运行以下�
 - Windows 10 全息版
 
 支持下列升级路径：
+
 - 从 Windows 10 专业版到 Windows 10 企业版
 - 从 Windows 10 家庭版到 Windows 10 教育版
 - 从 Windows 10 移动版到 Windows 10 移动企业版
 - 从 Windows 10 全息专业版到 Windows 10 全息企业版
 
-设备必须在 Microsoft Intune 中进行注册。 此功能当前与运行 Configuration Manager 客户端软件的电脑不兼容，也不与由本地 MDM 管理的电脑兼容。
+设备必须在 Microsoft Intune 中注册或运行 Configuration Manager 客户端软件。 此策略当前不兼容本地 MDM 管理的电脑。
 
 ## <a name="before-you-start"></a>开始之前  
  在开始将设备升级至最新版本之前，你将需要以下内容之一：  
@@ -78,7 +79,7 @@ System Center Configuration Manager **版本升级策略**可以将运行以下�
 
 6.  完成向导。  
 
- 新策略会显示在“资产和符合性”  工作区的“Windows 10 版本升级”  节点中。  
+新策略会显示在“资产和符合性”  工作区的“Windows 10 版本升级”  节点中。  
 
 ## <a name="deploy-the-edition-upgrade-policy"></a>部署版本升级策略  
 
@@ -86,14 +87,14 @@ System Center Configuration Manager **版本升级策略**可以将运行以下�
 
 3.  选择你想部署的 Windows 10 版本升级策略，然后在“主页”  选项卡上的“部署”  组中，单击“部署” 。  
 
-4.  在“部署 Windows 10 版本升级”  对话框中，选择你想要为其部署策略以及评估该策略的计划的用户或设备集合，然后单击“确定” 。  
+4.  在“部署 Windows 10 版本升级”对话框中，选择要为其部署策略的集合和评估该策略的计划，然后单击“确定”。 对于 Configuration Manager 客户端管理的电脑，必须将策略部署到设备集合。 对于已注册 Intune 的电脑，可以将策略部署到用户或设备集合。 
 
- 可从“监视”  工作区的“部署”  节点监视才创建的部署。  
+可从“监视”  工作区的“部署”  节点监视才创建的部署。  
 
- 一旦该策略应用到目标 Windows 电脑，该电脑将在两小时内重启以应用该升级。 确保通知所有要向其部署策略，或计划在其业余时间运行该策略的用户。
+ 该策略应用到目标 Windows 电脑并进行评估后，该电脑将在两小时内重启以应用升级。 确保通知所有要向其部署策略，或计划在其业余时间运行该策略的用户。
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

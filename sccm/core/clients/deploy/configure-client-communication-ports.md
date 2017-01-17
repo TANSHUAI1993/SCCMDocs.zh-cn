@@ -1,5 +1,5 @@
 ---
-title: "配置客户端通信端口 | System Center Configuration Manager"
+title: "配置客户端通信端口 | Microsoft Docs"
 description: "在 System Center Configuration Manager 设置客户端通信端口。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -13,12 +13,12 @@ ms.topic: get-started-article
 ms.assetid: 406bbdbf-ab4a-4121-a68b-154f96ea14ec
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: Mtillman
-ms.author: mtillman
+author: nbigman
+ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: a9eb4b84d2d6573155df26e18ebd2e136f4380c4
+ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
+ms.openlocfilehash: 12e7b8e96dc29a97dc9f81b43618fd7d0faeb1bb
 
 
 ---
@@ -78,6 +78,6 @@ ms.openlocfilehash: a9eb4b84d2d6573155df26e18ebd2e136f4380c4
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

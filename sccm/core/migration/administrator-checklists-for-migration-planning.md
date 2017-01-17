@@ -1,5 +1,5 @@
 ---
-title: "迁移清单 | System Center Configuration Manager"
+title: "迁移清单 | Microsoft Docs"
 description: "使用管理员清单有助于规划 System Center Configuration Manager 的迁移策略。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: f3912de04aa3e6196137a7034753013c35180d64
+ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
+ms.openlocfilehash: 285d1111502ec25b3b75a64d834b65b6898128e8
 
 
 ---
@@ -147,7 +147,7 @@ ms.openlocfilehash: f3912de04aa3e6196137a7034753013c35180d64
 
     例如，在迁移内容时，无论使用哪个迁移作业，都必须分配目标层次结构中的站点来负责管理该内容。 分配的站点将访问内容的原始源文件位置，并负责将该内容分发到目标层次结构中的分发点。  
 
-    有关详细信息，请参阅 [Create and Edit Migration Jobs for System Center Configuration Manager](../../core/migration/operations-for-migration.md#create_edit_migration_jobs) 主题中的 [Operations for migrating to System Center Configuration Manager](../../core/migration/operations-for-migration.md) 部分。  
+    有关详细信息，请参阅 [Create and Edit Migration Jobs for System Center Configuration Manager](../../core/migration/operations-for-migration.md#Create_Edit_migration_Jobs) 主题中的 [Operations for migrating to System Center Configuration Manager](../../core/migration/operations-for-migration.md) 部分。  
 
 -   **将客户端迁移到目标层次结构：**  
 
@@ -167,7 +167,7 @@ ms.openlocfilehash: f3912de04aa3e6196137a7034753013c35180d64
 
     还可以升级在辅助站点服务器上共存的 Configuration Manager 2007 分发点。 这将删除辅助站点，并导致目标层次结构中只有一个分发点。  
 
-    有关共享的分发点的信息，请参阅 [Share Distribution Points Between Source and Destination Hierarchies](../../core/migration/planning-a-content-deployment-migration-strategy.md#about_shared_dps_in_migrations) 主题中的 [Planning a content deployment migration strategy in System Center Configuration Manager](../../core/migration/planning-a-content-deployment-migration-strategy.md) 部分。  
+    有关共享的分发点的信息，请参阅 [Share Distribution Points Between Source and Destination Hierarchies](../../core/migration/planning-a-content-deployment-migration-strategy.md#About_Shared_DPs_in_Migration) 主题中的 [Planning a content deployment migration strategy in System Center Configuration Manager](../../core/migration/planning-a-content-deployment-migration-strategy.md) 部分。  
 
 -   **完成迁移：**  
 
@@ -175,6 +175,6 @@ ms.openlocfilehash: f3912de04aa3e6196137a7034753013c35180d64
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

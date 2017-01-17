@@ -1,5 +1,5 @@
 ---
-title: "请求分发点 | System Center Configuration Manager"
+title: "请求分发点 | Microsoft Docs"
 description: "了解通过 System Center Configuration Manager 使用请求分发点的配置和限制相关信息。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6cd640085e90b2945326e3fa942ae9bd7b8f7e24
-ms.openlocfilehash: c1c476b69e955058d315af9853e18bd3b71de723
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: f94d928244699c1c926dca05823f0029c588c7f1
 
 
 ---
@@ -111,10 +111,9 @@ System Center Configuration Manager 的请求分发点是一个标准分发点�
 
 ## <a name="see-also"></a>另请参阅  
  [System Center Configuration Manager 中内容管理的基础知识](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management)   
- 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

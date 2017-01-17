@@ -1,5 +1,5 @@
 ---
-title: "修改基础结构 | System Center Configuration Manager"
+title: "修改基础结构 | Microsoft Docs"
 description: "了解如何更改所部署的 Configuration Manager 基础结构或执行可对其产生影响的操作。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: fc58e77841baedd45649d676e98c736fa91e5bf2
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: fa9881e06abd410438fe5985151309c45f337802
 
 
 ---
@@ -172,6 +172,8 @@ ms.openlocfilehash: fc58e77841baedd45649d676e98c736fa91e5bf2
 -   “配置访问权限” ：在将站点数据库转移到新计算机时，将站点服务器的计算机帐户添加到运行 SQL Server 的计算机上的“本地管理员”  组。 如果为站点数据库使用 SQL Server 群集，你必须将该计算机帐户添加到每台 Windows Server 群集节点计算机的“本地管理员”  组。  
 
 -   **启用公共语言运行时 (CLR) 集成：**  在将数据库转移到 SQL Server 上的新实例或新 SQL Server 计算机时，你必须启用公共语言运行时 (CLR) 集成。 若要启用 CLR，请使用“SQL Server Management Studio”连接到承载站点数据库的 SQL Server 实例，并以查询形式运行以下存储过程：**sp_configure 'clr enabled',1; reconfigure**。  
+-  **确保新的 SQL Server 具有访问备份位置的权限：**数据库移到新的服务器（包括 SQL Server AlwaysOn 可用性组或 SQL Server 群集）后，将 UNC 用于存储站点数据库备份时，应确保新 SQL Server 的计算机帐户具有对 UNC 位置的**写入**权限。  
+
 
 > [!IMPORTANT]  
 >  在转移具有一个或多个管理点数据库副本的数据库之前，你必须先删除数据库副本。 完成数据库转移后，你可以重新配置数据库副本。 有关详细信息，请参阅 [Database replicas for management points for System Center Configuration Manager](../../../core/servers/deploy/configure/database-replicas-for-management-points.md)。  
@@ -369,6 +371,6 @@ SQL 服务器文档可帮助你 [手动注册 SPN](https://technet.microsoft.com
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

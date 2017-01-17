@@ -1,5 +1,5 @@
 ---
-title: "System Center Configuration Manager 隐私声明 – Configuration Manager Cmdlet 库"
+title: "System Center Configuration Manager 隐私声明 - Configuration Manager Cmdlet 库 | Microsoft Docs"
 description: "了解 Microsoft 如何收集和使用与 System Center Configuration Manager Cmdlet 库相关的数据。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 88d11aaed4a0e6575cb859f5dfc3ac425bd2bf38
+ms.sourcegitcommit: 767d0594eb871462df038997ea3b7e29615e05f7
+ms.openlocfilehash: 10d8e8948d66a6b9b74e16a02cfbfc4ced66596c
 
 
 ---
@@ -49,31 +49,10 @@ System Center Configuration Manager Cmdlet 库允许你通过使用 Windows Powe
 
  “使用数据”设置的更改特定于在其中进行更改的计算机。  
 
- 有关如何配置“使用数据”（集合）的信息，请参见 [System Center Configuration Manager Cmdlet 库文档](https://technet.microsoft.com/en-us/library/dn958404.aspx)。  
-
-## <a name="update-check"></a>更新检查  
- **此功能的作用：**   
-System Center Configuration Manager Cmdlet 库每天都会自动检查库更新，并通知你下载更新的库。  
-
- **收集、处理或传输的信息：**   
-Cmdlet 库更新检查将从 Microsoft 下载中心下载一个小文本文件，以执行版本检查。   此文件不存储在本地。  Cmdlet 库不会自动升级软件。  
-
- **信息的用途：**   
-我们利用此信息来提高所提供产品和服务的质量、安全性和完整性。  
-
- **选择/控制：**   
-“更新检查”功能默认处于启用状态。  System Center Configuration Manager Cmdlet 库包括以下 cmdlet 来控制更新通知功能：  
-
--   `Get-CMCmdletUpdateCheck` 获取更新功能配置，并将指示系统策略是否会重写用户策略。  
-
--   `Send-CMCmdletUpdateCheck` 允许执行计划外的更新检查。 计划外的检查不考虑策略设置。  
-
--   `Set-CMCmdletUpdateCheck` 在每个用户或每个系统的基础上配置更新检查设置。 你必须以管理员身份运行才能设置系统设置。  
-
- 有关如何配置更新的详细信息，请查看 [System Center Configuration Manager Cmdlet 库文档](https://technet.microsoft.com/en-us/library/dn958404.aspx)。  
+ 有关如何配置“使用数据”（集合）的信息，请参见 [System Center Configuration Manager Cmdlet 库文档](https://technet.microsoft.com/en-us/library/dn958404.aspx)。   
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

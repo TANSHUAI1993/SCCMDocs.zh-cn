@@ -1,5 +1,5 @@
 ---
-title: "使用 Configuration Manager 进行混合部署的 iOS 设备注册计划 (DEP) 注册"
+title: "使用 Configuration Manager 进行混合部署的 iOS 设备注册计划 (DEP) 注册 | Microsoft Docs"
 description: "在 Configuration Manager 中使用 Intune 为混合部署启用 iOS 设备注册计划 (DEP) 注册。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -12,12 +12,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 78d44adc-9b1c-4bc6-b72d-e93873916ea6
 caps.latest.revision: 9
-author: NathBarn
-ms.author: nathbarn
+author: mtillman
+ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 730b0e6b0ad9eb0ee3bf58c9419920c3a28a27d1
+ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
+ms.openlocfilehash: 0421589d928a88eee6f4629726fbd0171aba7436
 
 ---
 # <a name="ios-device-enrollment-program-dep-enrollment-for-hybrid-deployments-with-configuration-manager"></a>使用 Configuration Manager 进行混合部署的 iOS 设备注册计划 (DEP) 注册
@@ -91,22 +91,18 @@ ms.openlocfilehash: 730b0e6b0ad9eb0ee3bf58c9419920c3a28a27d1
 
             -   **禁用** - 允许从“设置”菜单中删除管理配置文件  
 
-            -   启用 -（需要**准备模式** = **受到监督**）禁用可能允许删除管理配置文件的 iOS 设置  
+            -   **启用** -（需要**准备模式** = **受到监督**）禁用可能允许删除管理配置文件的 iOS 设置  
 
     3.  在“设置助理”页上，配置自定义第一次打开设备时启动的 iOS 设置助理的设置，然后单击“下一步”。 这些设置包括：  
-
         -   **密码** - 在激活过程中提示输入密码。 始终需要密码，除非设备将受到保护，或以某种其他方式（即限制设备只可使用一个应用的展台模式）控制访问权限。  
-
         -   **定位服务** - 如果启用，在激活过程中设置助理会提示此服务  
-
         -   **还原** - 如果启用，在激活过程中设置助理会提示进行 iCloud 备份  
-
         -   **Apple ID** - 下载 iOS App Store 应用（包括由 Intune 安装的应用）时需要 Apple ID。 如果启用，Intune 在没有 ID 的情况下尝试安装应用时，iOS 将提示用户提供 Apple ID。  
-
         -   **条款和条件** - 如果启用，在激活过程中设置助理会提示用户接受 Apple 的条款和条件  
-
+        -   **Touch ID** - 如果启用，在激活过程中设置助理会提示此服务
+        -   **Apple Pay** - 如果启用，在激活过程中设置助理会提示此服务
+        -   **缩放** - 如果启用，在激活过程中设置助理会提示此服务
         -   **Siri** - 如果启用，在激活过程中设置助理会提示此服务  
-
         -   **向 Apple 发送诊断数据** - 如果启用，在激活过程中设置助理会提示此服务  
 
     4.  在“附加管理”页上，指定 USB 连接是否可用于附加管理设置。 当选择“需要证书” 时，你必须导入 Apple Configurator 管理证书以供此配置文件使用。  设置为“禁止”可阻止通过 Apple Configurator 与 iTunes 或管理同步文件。 Microsoft 建议设置为“禁止”，从 Apple Configurator 中导出任何进一步的配置，然后部署为自定义 iOS 配置文件，而不是使用此设置允许带或不带证书的手动部署。  
@@ -128,6 +124,6 @@ ms.openlocfilehash: 730b0e6b0ad9eb0ee3bf58c9419920c3a28a27d1
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "如何管理 Linux 和 UNIX 客户端 | System Center Configuration Manager"
+title: "管理 Linux 和 UNIX 客户端 | Microsoft Docs"
 description: "在 System Center Configuration Manager 中管理 Linux 和 UNIX 服务器上的客户端。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: 948664f2-239d-47a8-92fc-f8efeebd5796
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: Mtillman
-ms.author: mtillman
+author: nbigman
+ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: d10b6876058d19d3a9a750a59267913d15793574
+ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
+ms.openlocfilehash: d3a44d516bb1e2766a7a10b62d52405eecef31fc
 
 
 ---
@@ -86,6 +86,6 @@ ms.openlocfilehash: d10b6876058d19d3a9a750a59267913d15793574
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

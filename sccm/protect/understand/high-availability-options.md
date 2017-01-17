@@ -1,5 +1,5 @@
 ---
-title: "高可用性 | System Center Configuration Manager"
+title: "高可用性 | Microsoft Docs"
 description: "了解如何使用维持高可用性服务的选项部署 System Center Configuration Manager。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 7d8dff8779fbf146a57f753dee9f98488fa5fa61
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: d3e9afb90cdc85bc7299626b642c52be659e3bdf
 
 ---
 # <a name="high-availability-options-for-system-center-configuration-manager"></a>System Center Configuration Manager 的高可用性选项
@@ -153,7 +153,7 @@ ms.openlocfilehash: 7d8dff8779fbf146a57f753dee9f98488fa5fa61
 
  每个应用程序目录站点系统角色都提供了与该站点系统角色的其他实例相同的信息，而不管此站点服务器角色在层次结构中处于哪个位置。 因此，如果客户端提出对应用程序目录的请求，而你为“自动检测”配置了“默认应用程序目录网站点”设备客户端设置，则可以将客户端定向到可用的实例。 根据客户端的当前网络位置，会优先选择本地应用程序目录站点系统服务器。  
 
- 有关此客户端设置和自动检测如何工作的详细信息，请参阅[关于 System Center Configuration Manager 中的客户端设置](../../core/clients/deploy/about-client-settings.md)主题中的[计算机代理](../../core/clients/deploy/about-client-settings.md#BKMK_ComputerAgentDeviceSettings)部分。  
+ 有关此客户端设置和自动检测如何工作的详细信息，请参阅[关于 System Center Configuration Manager 中的客户端设置](../../core/clients/deploy/about-client-settings.md)主题中的[计算机代理](../../core/clients/deploy/about-client-settings.md#computer-agent)部分。  
 
 ##  <a name="a-namebkmkclienta-high-availability-for-clients"></a><a name="bkmk_client"></a>客户端的高可用性  
  **客户端操作具有自主性：**  
@@ -264,6 +264,6 @@ ms.openlocfilehash: 7d8dff8779fbf146a57f753dee9f98488fa5fa61
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

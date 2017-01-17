@@ -1,5 +1,5 @@
 ---
-title: "安全基础知识 | System Center Configuration Manager"
+title: "安全基础知识 | Microsoft Docs"
 description: "了解有关 System Center Configuration Manager 的安全性层的信息。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: cb84efcaac281aa8c9338cd69ce32054ea775de3
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: b4d12eaadaf0324515f6ae595a737f576bd5076c
 
 
 ---
@@ -73,6 +73,6 @@ System Center Configuration Manager 的安全性包括若干层。 第一层是�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

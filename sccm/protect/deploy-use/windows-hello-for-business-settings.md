@@ -1,5 +1,5 @@
 ---
-title: "Windows Hello 企业版设置 | System Center Configuration Manager"
+title: "Windows Hello 企业版设置 | Microsoft Docs"
 description: "了解如何将 Windows Hello 企业版与 System Center Configuration Manager 集成。"
 ms.custom: na
 ms.date: 10/10/2016
@@ -16,8 +16,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 2a45cfb3e00d8078fbf45bdc8a2668b7dd0a62c6
-ms.openlocfilehash: 80f586763d034891aac9b87dcb38120602aa2b85
+ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
+ms.openlocfilehash: 1f254ee31bae1c3d7b1506e68c40baf78793bf66
 
 
 ---
@@ -109,7 +109,7 @@ ms.openlocfilehash: 80f586763d034891aac9b87dcb38120602aa2b85
 
 请注意，除此配置外，还必须部署证书配置文件，如[配置证书配置文件](#configure-a-certificate-profile)中所述。
 
-### <a name="recommended-approach---configure-a-windows-hello-for-business-profile"></a>推荐方法 - 配置 Windows Hello 企业版配置文件  
+### <a name="recommended-approach----configure-a-windows-hello-for-business-profile"></a>推荐方法 - 配置 Windows Hello 企业版配置文件  
 
 在管理员控制台的“公司资源访问”下，右键单击“Windows Hello 企业版配置文件”，然后选择“新建”以启动配置文件向导。 提供向导请求的设置，在最终页上查看并确认设置，然后单击“关闭”。 设置的示例可能如下所示：  
 
@@ -166,6 +166,6 @@ powershell.exe -ExecutionPolicy Bypass -NoLogo -NoProfile -Command "& {New-ItemP
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

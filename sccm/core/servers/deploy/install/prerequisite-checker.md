@@ -1,5 +1,5 @@
 ---
-title: "先决条件检查程序 | System Center Configuration Manager"
+title: "先决条件检查程序 | Microsoft Docs"
 description: "了解如何使用先决条件检查程序识别并修复会阻止安装实际站点或站点系统角色的问题。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 4c2322ed0805b5f087409ec487ebec9d7c4f10d5
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: f30d7a451f47a3ab1efe6f7ac9c3e0151b8cda96
 
 ---
 # <a name="prerequisite-checker-for-system-center-configuration-manager"></a>System Center Configuration Manager 的先决条件检查程序
@@ -91,7 +91,7 @@ ms.openlocfilehash: 4c2322ed0805b5f087409ec487ebec9d7c4f10d5
 
 2.  输入  **prereqchk.exe /LOCAL** 以启动先决条件检查程序，并在服务器上运行所有先决条件检查。  
 
-## <a name="run-prerequisite-checker-from-a-command-prompt-for-specified-options"></a>针对指定选项，从命令提示符运行先决条件检查程序  
+## <a name="run-prerequisite-checker-from-a-command-prompt--for-specified-options"></a>针对指定选项，从命令提示符运行先决条件检查程序  
 
 1.  打开命令提示符窗口并将目录更改为以下位置之一：  
 
@@ -216,6 +216,6 @@ ms.openlocfilehash: 4c2322ed0805b5f087409ec487ebec9d7c4f10d5
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

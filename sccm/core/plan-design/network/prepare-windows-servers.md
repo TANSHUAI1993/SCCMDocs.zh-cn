@@ -1,5 +1,5 @@
 ---
-title: "准备 Windows Server | System Center Configuration Manager"
+title: "准备 Windows Server | Microsoft Docs"
 description: "确保计算机满足用作 System Center Configuration Manager 的站点服务器或站点系统服务器的先决条件。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f0a1cc32285fcb792c3f4cdec616668474708404
-ms.openlocfilehash: acf8a401f1ce67a4d8c905c0126c031b97484271
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: bd89f97f4252ddea2d1bf7ab329417477c77868d
 
 
 ---
@@ -42,11 +42,8 @@ ms.openlocfilehash: acf8a401f1ce67a4d8c905c0126c031b97484271
 -   **NET Framework**：包括  
 
     -   ASP.NET  
-
     -   HTTP 激活  
-
     -   非 HTTP 激活  
-
     -   WCF 服务  
 
     不同的站点系统角色需要不同版本的 .NET Framework。  
@@ -68,61 +65,37 @@ ms.openlocfilehash: acf8a401f1ce67a4d8c905c0126c031b97484271
  -   **网络设备注册服务**（在 Active Directory 证书服务之下）：此 Windows 角色是在 Configuration Manager 中使用证书配置文件的先决条件。  
 
  -   **Web 服务器 IIS**：包括：  
-
     -   常见 HTTP 功能 >  
-
         -   HTTP 重定向  
-
     -   应用程序开发 >  
-
         -   .NET 扩展性  
-
         -   ASP.NET  
-
         -   ISAPI 扩展  
-
         -   ISAPI 筛选器  
-
     -   管理工具 >  
-
         -   IIS 6 管理兼容性  
-
         -   IIS 6 元数据库兼容性  
-
         -   IIS 6 WMI 兼容性  
-
     -   安全 >  
-
         -   请求筛选  
-
         -   Windows 身份验证  
 
  下列站点系统角色使用一个或多个列出的 IIS 配置：  
-
     -   应用程序目录 Web 服务点  
-
     -   应用程序目录网站点  
-
     -   分发点  
-
     -   注册点  
-
     -   注册代理点  
-
     -   回退状态点  
-
     -   管理点  
-
     -   软件更新点  
-
-    -   状态迁移点  
+    -   状态迁移点     
 
     需要的最低 IIS 版本为随站点服务器的操作系统一起提供的版本。  
 
     除了这些 IIS 配置之外，你可能还需要配置 [分发点的 IIS 请求筛选](#BKMK_IISFiltering)。  
 
 -   **Windows 部署服务**：此角色用于操作系统部署。  
-
 -   **Windows Server 更新服务**：部署软件更新时将需要此角色。  
 
 ##  <a name="a-namebkmkiisfilteringa-iis-request-filtering-for-distribution-points"></a><a name="BKMK_IISFiltering"></a>分发点的 IIS 请求筛选  
@@ -133,11 +106,8 @@ ms.openlocfilehash: acf8a401f1ce67a4d8c905c0126c031b97484271
  此外，Configuration Manager 将下列文件扩展名用于包和应用程序。 确保你的请求筛选配置不会阻止这些文件扩展名：  
 
 -   .PCK  
-
 -   .PKG  
-
 -   .STA  
-
 -   .TAR  
 
 例如，软件部署的源文件可能包含名为 **bin**的文件夹，或者包含具有 **.mdb** 文件扩展名的文件。  
@@ -167,12 +137,12 @@ ms.openlocfilehash: acf8a401f1ce67a4d8c905c0126c031b97484271
 **分发点：**分发点需要以下 HTTP 谓词：
  - GET
  - HEAD
- - PROFIND
+ - PROPFIND
 
 有关配置请求筛选的信息，请参阅 TechNet 上的[IIS 中的配置请求筛选](https://technet.microsoft.com/library/hh831621.aspx#Verbs)或适用于托管管理点的 Windows Server 版本的类似文档。
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

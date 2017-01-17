@@ -1,5 +1,5 @@
 ---
-title: "更新 | System Center Configuration Manager"
+title: "更新 | Microsoft Docs"
 description: "了解称为**更新与维护服务**的控制台中服务方法，该方法可轻松找到并安装建议的更新。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: cfb523c6198e4ac2782de6fa8a8654050a283ca7
-ms.openlocfilehash: 7684c4b9a2a12ed7b9ddcddffe1125b3d47daa36
+ms.sourcegitcommit: 6e964f015d5f007311f46f51126b31e181abd0ec
+ms.openlocfilehash: e7b19b6e1f4720c0bdc69ef7f78366fd5d3414d0
 
 
 ---
@@ -38,6 +38,8 @@ System Center Configuration Manager 使用称为“更新与维护服务”的�
 
 -   [使用修补程序安装程序为 System Center Configuration Manager 安装更新](../../../core/servers/manage/use-the-hotfix-installer-to-install-updates.md)  
 
+> [!TIP]  
+> 如果使用 Technical Preview 分支，请参阅[System Center Configuration Manager Technical Preview](/sccm/core/get-started/technical-preview) 了解特定于该分支的其他信息。
 
 ##  <a name="a-namebkmkbaselinesa-baseline-and-update-versions"></a><a name="bkmk_Baselines"></a> 基准和更新版本  
  System Center Configuration Manager 当前分支的初始版本为版本 1511。 以下是基准版本：  
@@ -72,12 +74,13 @@ Configuration Manager 的某些更新可用作现有基础结构的控制台中�
 |**1602**<br /><br /> 5.00.8355.1000|2016 年 3 月 11 日|否|是|
 |**1606**<br /><br /> 5.00.8412.1000|2016/7/22|否|是|
 |**1606** 和 1606 修补程序汇总 (KB3186654) </br></br>5.00.8412.1307（注释 1） |2016/10/12|是|否|
+|**1610**<br /><br /> 5.00.8458.1000|2016/11/18|否|是|
 （注释 1）此 1606 基线介质作为 Microsoft System Center 2016 或 System Center Configuration Manager（Current Branch 和 Long-Term Servicing Branch 1606）版的一部分提供。
 
 若要检查 Configuration Manager 站点的版本，请在控制台中，转至控制台左上角的 **“关于 System Center Configuration Manager”** ，新站点和控制台版本将会显示在那里。  
 
 ##  <a name="a-namebkmkinconsolea-in-console-updates-and-servicing"></a><a name="bkmk_inconsole"></a> 控制台中更新和服务  
- 使用 System Center Configuration Manager 的生产就绪安装（也称为当前分支）时，可以通过“更新与维护服务”渠道提供你安装的大部分更新。 此方法标识、下载并提供适用于你当前基础结构版本和配置的更新，并且仅包含 Microsoft 针对所有客户建议的更新。   
+ 使用 System Center Configuration Manager 的生产就绪型安装（也称为当前分支）时，通过“更新和维护服务”渠道可提供安装的大部分更新。 此方法标识、下载并提供适用于你当前基础结构版本和配置的更新，并且仅包含 Microsoft 针对所有客户建议的更新。   
  其中包括:  
 
 -   新版本，如版本 1602  
@@ -130,16 +133,16 @@ Configuration Manager 的某些更新可用作现有基础结构的控制台中�
 
 请使用以下两种方法中的一种手动安装这些修补程序：  
 
--   **更新注册工具：**使用此工具，可手动将修补程序导入 Configuration Manager 控制台，然后可以根据需要在控制台中安装自动发现的控制台中更新。 此方法适用于使用以下文件名结构的更新： **.update.exe**.  此类修补程序的完整文件名类似于：**&lt;产品\>-&lt;产品版本\>-&lt;知识库文章 ID\>-ConfigMgr.Update.exe**  
+-   **更新注册工具：**使用此工具，可手动将修补程序导入 Configuration Manager 控制台，然后可以根据需要在控制台中安装自动发现的控制台中更新。 此方法适用于使用以下文件名结构的更新： **.update.exe**.  此类修补程序的完整文件名类似于：**&lt;产品\>-&lt;产品版本\>-&lt;知识库文章 ID\>-ConfigMgr.Update.exe**。  
 
-     有关详细信息，请参阅[使用更新注册工具将修补程序导入 System Center Configuration Manager](../../../core/servers/manage/use-the-update-registration-tool-to-import-hotfixes.md)  
+     有关详细信息，请参阅[使用更新注册工具将修补程序导入 System Center Configuration Manager](../../../core/servers/manage/use-the-update-registration-tool-to-import-hotfixes.md)。  
 
--   **修补程序安装工具：** 此工具用于手动安装无法使用控制台中方法安装的修补程序。 此方法用于使用以下文件名结构的修补程序：**&lt;产品\>-&lt;产品版本\>-&lt;知识库文章 ID\>-&lt;平台\>-&lt;语言\>.exe**  
+-   **修补程序安装工具：** 此工具用于手动安装无法使用控制台中方法安装的修补程序。 此方法用于使用如下文件名结构的修补程序：**&lt;产品\>-&lt;产品版本\>-&lt;知识库文章 ID\>-&lt;平台\>-&lt;语言\>.exe**。
 
-     有关详细信息，请参阅[使用修补程序安装程序为 System Center Configuration Manager 安装更新](../../../core/servers/manage/use-the-hotfix-installer-to-install-updates.md)  
+     有关详细信息，请参阅[使用修补程序安装程序为 System Center Configuration Manager 安装更新](../../../core/servers/manage/use-the-hotfix-installer-to-install-updates.md)。
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

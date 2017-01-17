@@ -1,5 +1,5 @@
 ---
-title: "推荐硬件 | System Center Configuration Manager"
+title: "推荐的硬件 | Microsoft Docs"
 description: "获取硬件建议，有助于在基本部署以上扩展 System Center Configuration Manager 环境。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: d5aa39a9551cc872631895bb1664de5a35531854
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: 3155c877a14f99e054cfa7ca4afaa73bae3f8cac
 
 
 ---
@@ -185,6 +185,6 @@ ms.openlocfilehash: d5aa39a9551cc872631895bb1664de5a35531854
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

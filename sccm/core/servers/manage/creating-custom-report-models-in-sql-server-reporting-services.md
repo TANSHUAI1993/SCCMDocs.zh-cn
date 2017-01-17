@@ -1,5 +1,5 @@
 ---
-title: "创建自定义报表 | System Center Configuration Manager"
+title: "创建自定义报表 | Microsoft Docs"
 description: "定义报表模型以满足你的业务需求，然后将报表模型部署到 Configuration Manager。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 4b286fbca3c71b14e0b82ff421132408df7c6e8b
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: 9951dd9333ebef00c7acd5d72b20a02382e3206c
 
 
 ---
@@ -425,6 +425,6 @@ ms.openlocfilehash: 4b286fbca3c71b14e0b82ff421132408df7c6e8b
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

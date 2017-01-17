@@ -1,5 +1,5 @@
 ---
-title: "配置硬件清单 | System Center Configuration Manager"
+title: "配置硬件清单 | Microsoft Docs"
 description: "在 System Center Configuration Manager 中设置所有客户端或某个集合的硬件清单。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 41bf42228e41785a05359c08e8dfedae48d50e30
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: f39714e53e1b38c162e2c0418356d223432fdd87
 
 
 ---
@@ -51,7 +51,7 @@ ms.openlocfilehash: 41bf42228e41785a05359c08e8dfedae48d50e30
 
     -   **硬件清单计划** - 指定客户端收集硬件清单的间隔。 使用默认值为“7 天”  ，或单击“日程安排”  以配置自定义间隔。  
 
-7.  配置所需的任何其他客户端设置。 有关可以配置的硬件清单客户端设置的列表，请参阅[关于 System Center Configuration Manager 中的客户端设置](../../../../core/clients/deploy/about-client-settings.md)主题中的[硬件清单](../../../../core/clients/deploy/about-client-settings.md#BKMK_HardwareInventoryDeviceSettings)部分。  
+7.  配置所需的任何其他客户端设置。 有关可以配置的硬件清单客户端设置的列表，请参阅[关于 System Center Configuration Manager 中的客户端设置](../../../../core/clients/deploy/about-client-settings.md)主题中的[硬件清单](../../../../core/clients/deploy/about-client-settings.md#hardware-inventory)部分。  
 
 8.  单击“确定”  来关闭“默认设置”  对话框。  
 
@@ -59,6 +59,6 @@ ms.openlocfilehash: 41bf42228e41785a05359c08e8dfedae48d50e30
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

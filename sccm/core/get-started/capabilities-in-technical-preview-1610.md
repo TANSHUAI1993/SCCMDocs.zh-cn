@@ -1,5 +1,5 @@
 ---
-title: "System Center Configuration Manager Technical Preview 1610 版中的功能"
+title: "System Center Configuration Manager Technical Preview 1610 中的功能 | Microsoft Docs"
 description: "了解 System Center Configuration Manager Technical Preview 1610 版中的可用功能。"
 ms.custom: na
 ms.date: 10/21/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: c9fe6961a63495d08a3e58e3ddf46c5d316e2613
-ms.openlocfilehash: 865b5078282bf240aa6a2aef5cb2662f2471fb71
+ms.sourcegitcommit: 3bf44f850722afdb8dfe5922c8ceff11c9b56d08
+ms.openlocfilehash: 6ffcb33e94f942fc9400457d3f16b65e12332956
 
 ---
 # <a name="capabilities-in-technical-preview-1610-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1610 版中的功能
@@ -82,7 +82,6 @@ Technical Preview 1610 引入了一种新设置，可用于排除客户端集合
 > [!NOTE]
 > 尽管用户界面声明无法通过任何方法升级客户端，但仍有两种方法可用于替代这些设置。 可使用客户端请求安装和手动客户端安装替代此配置。 有关更多详细信息，请参阅以下部分。
 
-
 ### <a name="how-to-upgrade-a-client-that-is-in-an-excluded-collection"></a>如何升级排除集合中的客户端
 只要某个集合被配置为排除，则只能通过上述两种方法中的一种来升级集合成员的客户端软件，它会替代排除设置：
  - **客户端请求安装** – 可以使用“客户端请求安装”来升级排除集合中的客户端。 由于该操作被视为管理员的意图，因此可以此升级客户端，而无需将整个集合从排除设置中删除。       
@@ -92,12 +91,80 @@ Technical Preview 1610 引入了一种新设置，可用于排除客户端集合
 
 有关客户端安装方法的详细信息，请参阅[如何在 System Center Configuration Manager 中将客户端部署到 Windows 计算机](/sccm/core/clients/deploy/deploy-clients-to-windows-computers)。
 
+## <a name="windows-defender-configuration-settings"></a>Windows Defender 配置设置
+
+现在可以在 Configuration Manager 控制台中，使用配置项目在注册有 Intune 的 Windows 10 计算机上配置 Windows Defender 客户端设置。
+
+具体而言，可配置以下 Windows Defender 设置：
+- 允许实时监视
+- 允许行为监视
+- 启用网络检查系统
+- 扫描所有下载
+- 允许脚本扫描
+- 监视文件和程序活动
+  - 受监视的文件
+- 跟踪已解决的恶意软件的天数
+- 允许客户端 UI 访问
+- 计划系统扫描
+  - 计划日期
+  - 计划时间
+- 计划每日一次快速扫描
+  - 计划时间
+- 在扫描存档文件期间限制 CPU 使用率
+- 扫描电子邮件
+- 扫描可移动驱动器
+- 扫描映射驱动器
+- 扫描从网络共享打开的文件
+- 签名更新间隔
+- 允许云保护
+- 提示用户提供示例
+- 潜在风险性应用程序检测
+- 排除的文件/文件夹
+- 排除的文件扩展名
+- 排除的进程
+
+> [!NOTE]
+> 仅可在运行 Windows 10 十一月更新 (1511) 及更高版本的客户端计算机上配置这些设置。
+
+### <a name="try-it-out"></a>试试看！
+
+1.  在 Configuration Manager 控制台中，转到“资产和合规性” > “概述” > “合规性设置” > >“配置项”，然后创建新的“配置项”。
+2.  输入名称，然后在**不通过 Configuration Manager 客户端托管的设备的设置**下选择“Windows 8.1 和 Windows 10”，然后单击“下一步”。
+3.  确保在“支持平台”页面上选中“所有 Windows 10 (64 位)”和“所有 Windows 10 (32位)”，然后单击“下一步”。
+4.  选择 **Windows Defender** 设置组，然后单击“下一步”。
+5.  在此页上配置所需设置，然后单击“下一步”。
+6.  完成向导。
+7.  将此配置项添加到配置基线，并将此基线部署到运行 Windows 10 十一月更新 (1511) 或更高版本的计算机。
+
+> [!NOTE]
+> 请记住，在部署配置基线时选中“修正不符合要求的设置”复选框。
+
+## <a name="request-policy-sync-from-administrator-console"></a>从管理员控制台请求策略同步
+
+现在可从 Configuration Manager 控制台对移动设备请求策略同步，而无需从设备本身请求同步。 同步请求状态信息可用作设备视图中的新列，称为**远程同步状态**。 状态也会在每个移动设备的“属性”对话框的“发现数据”部分中显示。
+
+### <a name="try-it-out"></a>试试看！
+
+1.  在 Configuration Manager 控制台中，转到“资产和合规性” > “概览”>“设备”。
+2.  在“远程设备操作”菜单中，选择“发送同步请求”。
+
+同步可能需要 5 到 10 分钟。 策略中的任何更改都将同步到设备。 可以在“设备”视图的“远程同步状态”列或设备的“属性”对话框中跟踪同步请求的状态。
+
+## <a name="additional-security-role-support"></a>其他安全角色支持
+
+除了完全权限管理员之外，以下内置安全角色现在对“所有企业拥有的设备”节点中的项具有完全访问权限，包括**预声明设备**、**iOS 注册配置文件**以及 **Windows 注册配置文件**：•   **资产管理员** •   **公司资源资产管理员**
+
+对 Configuration Manager 控制台中这些区域的只读访问权限仍授予给**只读分析员**角色。
+
+## <a name="conditional-access-for-windows-10-vpn-profiles"></a>Windows 10 VPN 配置文件的条件访问
+
+现在可要求在 Azure Active Directory 中注册的 Windows 10 设备符合要求，以通过在 Configuration Manager 控制台中创建的 Windows 10 VPN 配置文件具有 VPN 访问权限。 这可通过 VPN 配置文件向导中“身份验证方法”页上新的“对此 VPN 连接启用条件性访问”复选框，和 Windows 10 VPN 配置文件的 VPN 配置文件属性来实现。 如果对配置文件启用条件性访问，还可以对单一登录身份验证指定一个单独的证书。
 
 ## <a name="see-also"></a>另请参阅
 [System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

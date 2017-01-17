@@ -1,8 +1,8 @@
 ---
-title: "保护数据和站点基础结构 | System Center Configuration Manager"
+title: "保护数据和站点基础结构 | Microsoft Docs"
 description: "了解如何通过 System Center Configuration Manager 保护组织资源免遭泄露或恶意攻击。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/27/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 366a3626e2ab4894bbb515176890d508761b6561
+ms.sourcegitcommit: 593fbd0587d54490246f48ae54f666bac6b7830d
+ms.openlocfilehash: c80750358d64cf87f8a3ce3a4c4f4030a9dfd742
 
 
 ---
@@ -26,7 +26,7 @@ ms.openlocfilehash: 366a3626e2ab4894bbb515176890d508761b6561
 *适用范围：System Center Configuration Manager (Current Branch)*
 
 
-建议让用户能够安全访问你组织的资源，从而使基础结构和数据免于泄露或受恶意攻击。 这些主题中的信息描述了如何允许这种访问，以及如何帮助保护你组织的资源。  
+建议让用户能够安全访问你组织的资源，从而使基础结构和数据免于泄露或受恶意攻击。 这些主题中的信息描述了如何使用 System Center Configuration Manager（也称 ConfigMgr 或 SCCM）启用这种访问，以及如何帮助保护你组织的资源。  
 
 -   你可以通过使用 VPN 配置文件来启用 VPN 连接，从而让你的用户花费最少的精力就能连接到公司资源。 通过[ System Center Configuration Manager 中的 VPN 配置文件](../deploy-use/vpn-profiles.md)，了解更多信息。  
 
@@ -44,6 +44,6 @@ ms.openlocfilehash: 366a3626e2ab4894bbb515176890d508761b6561
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "软件清单安全隐私 | System Center Configuration Manager"
+title: "软件清单安全和隐私 | Microsoft Docs"
 description: "获取 System Center Configuration Manager 中软件清单的安全和隐私信息。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 1e588db325ea6c3e83614892d3bf76d86ed1b041
+ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
+ms.openlocfilehash: 2144dfa87f40fcb2195f7278a21b47e05d6d6f38
 
 
 ---
@@ -53,7 +53,7 @@ ms.openlocfilehash: 1e588db325ea6c3e83614892d3bf76d86ed1b041
  默认情况下，客户端设置中启用了软件清单。  
 
 ##  <a name="a-namebkmkprivacyhardwareinventorya-privacy-information-for-software-inventory"></a><a name="BKMK_Privacy_HardwareInventory"></a> 软件清单的隐私信息  
- 硬件清单允许检索 Configuration Manager 客户端上注册表和 WMI 中存储的任何信息。 软件清单允许发现指定类型的所有文件或从客户端收集任何指定文件。 通过扩展硬件和软件清单并添加新的许可证管理功能，资产智能增强了清单功能。  
+ 硬件清单允许检索 Configuration Manager 客户端上注册表和 WMI 中存储的任何信息。 软件清单允许您发现具有指定类型的所有文件或从客户端收集任何指定的文件。 通过扩展硬件和软件清单并添加新的许可证管理功能，资产智能增强了清单功能。  
 
  默认情况下，客户端设置中启用了硬件清单，并且收集的 WMI 信息由你选择的选项确定。 默认情况下，软件清单处于启用状态，但默认情况下不收集文件。 尽管你可以选择启用硬件清单报告类，但资产智能数据集合会自动启用。  
 
@@ -63,6 +63,6 @@ ms.openlocfilehash: 1e588db325ea6c3e83614892d3bf76d86ed1b041
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

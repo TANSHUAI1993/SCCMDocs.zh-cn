@@ -1,5 +1,5 @@
 ---
-title: "自动将设备分类到集合 | System Center Configuration Manager"
+title: "自动将设备分类到集合 | Microsoft Docs"
 description: "使用 System Center Configuration Manager 自动将设备分类到集合。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 6e1e8c1da1209be03d4a1377dcc0c9ce9478a216
+ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
+ms.openlocfilehash: d5ef7260bcc2ab9cc56d8fed530a406aa1045c5a
 
 ---
 # <a name="automatically-categorize-devices-into-collections-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 自动将设备分类到集合
@@ -49,7 +49,7 @@ ms.openlocfilehash: 6e1e8c1da1209be03d4a1377dcc0c9ce9478a216
 
 ## <a name="change-the-category-of-a-device"></a>更改设备的类别
 
-1.  在 Configuration Manager 控制台的“资产和符合性”工作区中，扩展“概述”，然后单击“设备”。
+1.  在 Configuration Manager 控制台的“资产和符合性”工作区中，展开“概述”，然后单击“设备”。
 2.  从“设备”列表选择一个设备，然后在“主页”选项卡上的“设备”组中，单击“更改类别”。
 3.  在“编辑设备类别”对话框框中，选择将应用于此设备的类别，然后单击“确定”。
 
@@ -64,6 +64,6 @@ ms.openlocfilehash: 6e1e8c1da1209be03d4a1377dcc0c9ce9478a216
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

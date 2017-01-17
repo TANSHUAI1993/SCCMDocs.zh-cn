@@ -1,5 +1,5 @@
 ---
-title: "准备操作系统部署的站点系统角色 | Configuration Manager"
+title: "为操作系统部署准备站点系统角色 | Microsoft Docs"
 description: "在 System Center Configuration Manager 中部署操作系统之前，请配置站点系统角色。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: a9e682c855d5e1fb26f772b2af5066280e01851f
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: 1069a18eecbc5f53b74ad89e166e6f2c7b180693
 
 
 ---
@@ -222,6 +222,6 @@ ms.openlocfilehash: a9e682c855d5e1fb26f772b2af5066280e01851f
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

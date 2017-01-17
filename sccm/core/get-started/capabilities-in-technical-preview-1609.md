@@ -1,5 +1,5 @@
 ---
-title: "System Center Configuration Manager Technical Preview 1609 中的功能"
+title: "System Center Configuration Manager Technical Preview 1609 版中的功能 | Microsoft Docs"
 description: "了解 System Center Configuration Manager Technical Preview 版本 1609 中的可用功能。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: cc9c04409a6eb040ac49ca6eeeab5f65c4517d17
+ms.sourcegitcommit: 3bf44f850722afdb8dfe5922c8ceff11c9b56d08
+ms.openlocfilehash: 4ab022eda3367c79dbe698b6dab7017cb25b5e3a
 
 ---
 # <a name="capabilities-in-technical-preview-1609-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1609 中的功能
@@ -457,6 +457,6 @@ Configuration Manager 1609 Technical Preview 引入了一个新的仪表板。 �
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "创建和应用电源计划 | System Center Configuration Manager"
+title: "创建并应用电源计划 | Microsoft Docs"
 description: "在 System Center Configuration Manager 中创建和应用电源计划。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 18017c64aa6e6769a1ea0921274d05625e99610d
+ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
+ms.openlocfilehash: de81da31b524cebe8e820766a64ecc5fdb7e4771
 
 
 ---
@@ -115,6 +115,6 @@ ms.openlocfilehash: 18017c64aa6e6769a1ea0921274d05625e99610d
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

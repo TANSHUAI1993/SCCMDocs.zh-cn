@@ -1,5 +1,5 @@
 ---
-title: "服务连接工具 | System Center Configuration Manager"
+title: "服务连接工具 | Microsoft Docs"
 description: "了解该工具使你能够连接到 Configuration Manager 云服务以手动上传使用情况信息。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 5fab3a4834f30d48c5c000a7c95c7006eb8e4785
+ms.sourcegitcommit: b4642186e42745640f088b7046e70019616935ea
+ms.openlocfilehash: 9a5cd5ce3ce6868b44768d3cbe7b7c594f44d42c
 
 
 ---
@@ -29,7 +29,10 @@ ms.openlocfilehash: 5fab3a4834f30d48c5c000a7c95c7006eb8e4785
 
  该工具使你能够连接到 Configuration Manager 云服务以手动上载你层次结构的使用情况信息和下载更新。 必须上载使用情况数据才能启用云服务以为你的部署提供正确的更新。  
 
- **使用服务连接工具的先决条件：**  
+## <a name="prerequisites-for-using-the-service-connection-tool"></a>使用服务连接工具的先决条件
+以下为先决条件和已知问题。
+
+**先决条件：**
 
 -   已安装服务连接点，并将它设置为“脱机，按需连接”。  
 
@@ -50,26 +53,6 @@ ms.openlocfilehash: 5fab3a4834f30d48c5c000a7c95c7006eb8e4785
 
 
 -   你将需要具有可存储文件和更新的足够可用空间的 U 盘，或需要另一种方法以在服务连接点计算机与有权访问 Internet 的计算机之间传输文件。 （此方案假设你的站点和托管计算机未直接连接到 Internet。）  
-
-**使用服务连接工具主要有三个步骤：**  
-
-1.  **准备**：此步骤将使用情况数据放入 .cab 文件中并将其存储在 U 盘上（或指定的替代传输位置）。  
-
-2.  **连接**：此步骤将使你在连接到 Internet 的远程计算机上运行该工具以上传数据和下载更新。  
-
-3.  **导入**：此步骤会将 Configuration Manager 的更新导入你的站点，以便可以从 Configuration Manager 控制台查看并安装更新。  
-
-从版本 1606 开始，当连接到 Microsoft 时，可以一次性上传多个 .cab 文件（每个文件来自不同的层次结构），并指定代理服务器和代理服务器的用户。   
-
-**若要上传多个 .cab 文件，请执行以下操作：**
- -  将从独立的层次结构中导出的每个 .cab 文件放在同一文件夹中。 每个文件的名称必须是唯一的，如有必要，可以手动重命名。
- -  然后，当运行命令将数据上传到 Microsoft 时，指定包含 .cab 文件的文件夹。 （在更新 1606 之前，每次仅可以从一个层次结构上传数据，并且此工具需要你指定文件夹中的 .cab 文件的名称。）
- -  然后，在层次结构的服务连接点上运行导入任务时，此工具仅自动导入该层次结构的数据。  
-
-**若要指定代理服务器，请执行以下操作：**  
-可以使用以下可选参数来指定代理服务器（有关使用这些参数的详细信息可在本主题的命令行参数部分中找到）：
-  - **-proxyserveruri [FQDN_of_proxy_sever]**  使用此参数指定要用于此连接的代理服务器。
-  -  **-proxyusername [username]**  当必须为代理服务器指定用户时，请使用此参数。
 
 
 
@@ -98,7 +81,30 @@ ms.openlocfilehash: 5fab3a4834f30d48c5c000a7c95c7006eb8e4785
 
 你还需要将 ServiceConnectionTool 文件夹及其所有内容复制到 U 盘中，或者采用其他方法使它在步骤 3 和 4 即将使用的计算机上可用。  
 
-#### <a name="to-use-the-service-connection-tool"></a>若要使用服务连接点工具  
+### <a name="overview"></a>概述
+**使用服务连接工具主要有三个步骤：**  
+
+1.  **准备**：此步骤将使用情况数据放入 .cab 文件中并将其存储在 U 盘上（或指定的替代传输位置）。  
+
+2.  **连接**：此步骤将使你在连接到 Internet 的远程计算机上运行该工具以上传数据和下载更新。  
+
+3.  **导入**：此步骤会将 Configuration Manager 的更新导入你的站点，以便可以从 Configuration Manager 控制台查看并安装更新。  
+
+从版本 1606 开始，当连接到 Microsoft 时，可以一次性上传多个 .cab 文件（每个文件来自不同的层次结构），并指定代理服务器和代理服务器的用户。   
+
+**若要上传多个 .cab 文件，请执行以下操作：**
+ -  将从独立的层次结构中导出的每个 .cab 文件放在同一文件夹中。 每个文件的名称必须是唯一的，如有必要，可以手动重命名。
+ -  然后，当运行命令将数据上传到 Microsoft 时，指定包含 .cab 文件的文件夹。 （在更新 1606 之前，每次仅可以从一个层次结构上传数据，并且此工具需要你指定文件夹中的 .cab 文件的名称。）
+ -  然后，在层次结构的服务连接点上运行导入任务时，此工具仅自动导入该层次结构的数据。  
+
+**若要指定代理服务器，请执行以下操作：**  
+可以使用以下可选参数来指定代理服务器（有关使用这些参数的详细信息可在本主题的命令行参数部分中找到）：
+  - **-proxyserveruri [FQDN_of_proxy_sever]**  使用此参数指定要用于此连接的代理服务器。
+  -  **-proxyusername [username]**  当必须为代理服务器指定用户时，请使用此参数。
+
+
+
+### <a name="to-use-the-service-connection-tool"></a>若要使用服务连接点工具  
 
 1.  在承载服务连接点的计算机上：  
 
@@ -156,6 +162,6 @@ ms.openlocfilehash: 5fab3a4834f30d48c5c000a7c95c7006eb8e4785
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

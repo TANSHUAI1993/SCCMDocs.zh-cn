@@ -1,5 +1,5 @@
 ---
-title: "安装站点系统角色| System Center Configuration Manager"
+title: "安装站点系统角色 | Microsoft Docs"
 description: "向导帮助用户将站点系统角色添加到站点中的现有站点系统服务器或新的站点系统服务器。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 780ef516ddc641d53e1d2d4a5f559795cfd22cbb
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: 9c930db61139fd089554591f4ca0aa2271fb2289
 
 ---
 # <a name="install-site-system-roles-for-system-center-configuration-manager"></a>安装 System Center Configuration Manager 的站点系统角色
@@ -84,6 +84,6 @@ System Center Configuration Manager 控制台具有可用于安装站点系统�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

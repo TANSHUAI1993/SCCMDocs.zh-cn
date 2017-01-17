@@ -1,5 +1,5 @@
 ---
-title: "创建 Exchange ActiveSync 电子邮件配置文件 | System Center Configuration Manager"
+title: "创建 Exchange ActiveSync 电子邮件配置文件 | Microsoft Docs"
 description: "了解如何在 System Center Configuration Manager 中创建和配置适用于 Microsoft Intune 的电子邮件配置文件。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 613ed15742322e2eb90eec3c9f493e3b1755d93a
+ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
+ms.openlocfilehash: 3ff5d53464c61e0dc1836d032bcb3815bae05d1f
 
 
 ---
@@ -39,10 +39,10 @@ ms.openlocfilehash: 613ed15742322e2eb90eec3c9f493e3b1755d93a
 
 -   运行 iOS 5、iOS 6、iOS 7 和 iOS 8 的 IPhone 设备  
 
--   运行 iOS 5、iOS 6、iOS 7 和 iOS 8 的 IPhone 设备  
+-   运行 iOS 5、iOS 6、iOS 7 和 iOS 8 的 IPad 设备  
 
 > [!IMPORTANT]  
->  若要将配置文件部署到 iOS、Android、Samsung KNOX、Windows Phone 和 Windows 8.1 或 Windows 10 设备，这些设备必须注册到 Intune。 有关如何注册设备的信息，请参阅 [使用 Microsoft Intune 管理移动设备](https://technet.microsoft.com/en-us/library/dn646962.aspx)。  
+>  若要将配置文件部署到 iOS、Android Samsung KNOX 标准版、Windows Phone 和 Windows 8.1 或 Windows 10 设备，这些设备必须在 Intune 中注册。 有关如何注册设备的信息，请参阅 [使用 Microsoft Intune 管理移动设备](https://technet.microsoft.com/en-us/library/dn646962.aspx)。  
 
  除了在设备上配置电子邮件帐户以外，还可以配置联系人、日历和任务的同步设置。  
 
@@ -57,7 +57,7 @@ ms.openlocfilehash: 613ed15742322e2eb90eec3c9f493e3b1755d93a
 
 2.  在“资产和符合性”  工作区中，展开“符合性设置” ，展开“公司资源访问” ，然后单击“电子邮件配置文件” 。  
 
-3.  在“主页”  选项卡上的“创建”  组中，单击“创建 Exchange ActiveSync 配置文件” 。 
+3.  在“主页”  选项卡上的“创建”  组中，单击“创建 Exchange ActiveSync 配置文件” 。
 
 4.  按照该向导的说明操作   
 
@@ -173,7 +173,7 @@ ms.openlocfilehash: 613ed15742322e2eb90eec3c9f493e3b1755d93a
         -   **任务**  
 
 ###  <a name="specify-supported-platforms-for-the-exchange-activesync-email-profile"></a>指定 Exchange ActiveSync 电子邮件配置文件受支持的平台。  
- 
+
 1.  在  “创建 Exchange ActiveSync 电子邮件配置文件向导”的“受支持的平台”页上，选择将安装电子邮件配置文件的操作系统，或单击“全部选择”以在所有可用的操作系统上安装电子邮件配置文件  。  
 
 2.  完成向导。
@@ -182,6 +182,6 @@ ms.openlocfilehash: 613ed15742322e2eb90eec3c9f493e3b1755d93a
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

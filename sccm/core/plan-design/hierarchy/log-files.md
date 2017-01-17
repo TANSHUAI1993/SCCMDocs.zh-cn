@@ -1,8 +1,8 @@
 ---
-title: "日志文件 | System Center Configuration Manager"
+title: "Configuration Manager 的日志文件 | Microsoft Docs"
 description: "使用日志文件解决 System Center Configuration Manager 层次结构中的问题。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/01/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: cb27f2f2a6e0b0e3d6fca2d616d8ab806b74f9df
+ms.sourcegitcommit: f36cdecd96d50bd62892b262024e43d64f7c8205
+ms.openlocfilehash: 5b7afc3e00bc8ee317b8d8c3660808c465758f91
 
 
 ---
@@ -70,6 +70,8 @@ ms.openlocfilehash: cb27f2f2a6e0b0e3d6fca2d616d8ab806b74f9df
 
     -   [证书注册](#BKMK_CertificateEnrollment)  
 
+    - [云管理网关](#cloud-management-gateway)
+
     -   [符合性设置和公司资源访问](#BKMK_CompSettingsLog)  
 
     -   [Configuration Manager 控制台](#BKMK_ConsoleLog)  
@@ -105,6 +107,8 @@ ms.openlocfilehash: cb27f2f2a6e0b0e3d6fca2d616d8ab806b74f9df
     -   [软件更新](#BKMK_SU_NAPLog)  
 
     -   [LAN 唤醒](#BKMK_WOLLog)  
+
+    -   [Windows 10 维护服务](#BKMK_WindowsServicingLog)
 
     -   [Windows 更新代理](#BKMK_WULog)  
 
@@ -503,6 +507,15 @@ ms.openlocfilehash: cb27f2f2a6e0b0e3d6fca2d616d8ab806b74f9df
 |BgbHttpProxy.log|记录通知 HTTP 代理在使用 HTTP 将客户端的消息转播到通知服务器或从中转播该消息时的活动。|客户端|  
 |CCMNotificationAgent.log|记录通知代理的活动（例如客户端到服务器通信）以及有关已接收并分派给其他客户端代理的任务的信息。|客户端|  
 
+### <a name="cloud-management-gateway"></a>云管理网关
+
+下表列出的日志文件包含与云管理网关相关的信息。
+
+|日志名称|说明|带有日志文件的计算机|  
+|--------------|-----------------|----------------------------|  
+|CloudMgr.log|记录有关部署云管理网关服务、正在进行的服务状态，以及与服务相关联的使用情况数据的详细信息。|站点系统服务器|
+|SMS_Cloud_ProxyConnector.log|记录有关设置云管理网关服务和云管理网关连接点之间的连接的详细信息。|站点系统服务器|
+
 ###  <a name="a-namebkmkcompsettingsloga-compliance-settings-and-company-resource-access"></a><a name="BKMK_CompSettingsLog"></a>符合性设置和公司资源访问  
  下表列出的日志文件包含与符合性设置和公司资源访问相关的信息。  
 
@@ -535,6 +548,7 @@ ms.openlocfilehash: cb27f2f2a6e0b0e3d6fca2d616d8ab806b74f9df
 |PrestageContent.log|记录有关在远程预留分发点上使用 ExtractContent.exe 工具的详细信息。 此工具提取已导出到文件的内容。|站点系统角色|  
 |SMSdpmon.log|记录有关在分发点上配置的分发点运行状况监视计划任务的详细信息。|站点系统角色|  
 |smsdpprov.log|记录有关提取从主站点接收的压缩文件的详细信息。 此日志由远程分发点的 WMI 提供程序生成。|未与站点服务器共存的分发点计算机。|  
+
 
 ###  <a name="a-namebkmkdiscoveryloga-discovery"></a><a name="BKMK_DiscoveryLog"></a>发现  
 下表列出的日志文件包含与发现相关的信息。  
@@ -731,11 +745,10 @@ ms.openlocfilehash: cb27f2f2a6e0b0e3d6fca2d616d8ab806b74f9df
 |Statesys.log|记录对移动设备管理消息的处理。|主站点和管理中心站点|  
 
 ###  <a name="a-namebkmksunaploga-software-updates"></a><a name="BKMK_SU_NAPLog"></a>软件更新  
- 下表列出了包含有关软件更新信息的日志文件。  此外，某些详细信息仍与网络访问保护有关，该网络访问保护功能对 System Center Configuration Manager 不再可用。  
+ 下表列出了包含有关软件更新信息的日志文件。  
 
 |日志名称|说明|带有日志文件的计算机|  
 |--------------|-----------------|----------------------------|  
-|ccmcca.log|记录有关根据 Configuration Manager NAP 策略处理对符合性评估进行的处理的详细信息，且包含对符合性所需的每个软件更新的修正进行的处理。|客户端|  
 |Ccmperf.log|记录与数据维护和捕获（与客户端性能计数器相关）关联的活动。|客户端|  
 |PatchDownloader.log|记录有关从更新源将软件更新下载到站点服务器上的下载目的地的过程的详细信息。|承载从中启动下载的 Configuration Manager 控制台的计算机|  
 |PolicyEvaluator.log|记录有关客户端计算机上的策略评估的详细信息，其中包括来自软件更新的策略。|客户端|  
@@ -743,13 +756,6 @@ ms.openlocfilehash: cb27f2f2a6e0b0e3d6fca2d616d8ab806b74f9df
 |ScanAgent.log|记录有关软件更新的扫描请求、WSUS 位置和相关操作的详细信息。|客户端|  
 |SdmAgent.log|记录有关对修正和符合性进行的跟踪的详细信息。 但是，软件更新日志文件 Updateshandler.log 可提供有关安装符合性所需的软件更新的更详细信息。<br /><br /> 此日志文件与符合性设置共享。|客户端|  
 |ServiceWindowManager.log|记录有关维护时段评估的详细信息。|客户端|  
-|smssha.log|Configuration Manager 网络访问保护客户端的主要日志文件，它包含来自两个 Configuration Manager 组件（位置服务 (LS) 和配置符合性代理 (CCA)）的运行状况信息的合并声明。 此日志文件还包含有关 Configuration Manager 系统健康代理与操作系统 NAP 代理之间以及 Configuration Manager 系统健康代理与配置符合性代理和位置服务之间的交互信息。 它提供有关 NAP 代理是否成功启动、健康声明数据和健康声明响应的信息。|客户端|  
-|Smsshv.log|这是系统健康验证程序点的主要日志文件，它记录系统健康验证程序服务的基本操作，例如初始化进度。|站点系统服务器|  
-|Smsshvadcacheclient.log|记录有关从 Active Directory 域服务检索 Configuration Manager 运行状况引用的详细信息。|站点系统服务器|  
-|SmsSHVCacheStore.log|记录有关缓存存储（用于保存从 Active Directory 域服务检索到的 Configuration Manager NAP 运行状况引用）的详细信息，例如从存储中读取和从本地缓存存储文件中清除条目。 缓存存储不可配置。|站点系统服务器|  
-|smsSHVQuarValidator.log|记录客户端健康声明信息和处理操作。 若要获取完整信息，请在以下位置中将注册表项 **LogLevel** 从 1 更改为 0：**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMSSHV\Logging\\@GLOBAL**|站点系统服务器|  
-|smsshvregistrysettings.log|记录服务运行时对系统健康验证程序组件配置所做的任何动态更改。|站点系统服务器|  
-|SMSSHVSetup.log|记录安装系统健康验证程序点是成功还是失败（含失败原因）。|站点系统服务器|  
 |SmsWusHandler.log|记录有关 Microsoft 更新清单工具的扫描过程的详细信息。|客户端|  
 |StateMessage.log|记录有关创建并发送到管理点的软件更新状态消息的详细信息。|客户端|  
 |SUPSetup.log|记录有关软件更新点安装的详细信息。 当软件更新点安装完成后，会向此日志文件写入 **Installation was successful** 。|站点系统服务器|  
@@ -765,12 +771,37 @@ ms.openlocfilehash: cb27f2f2a6e0b0e3d6fca2d616d8ab806b74f9df
  下表列出了包含与使用 LAN 唤醒相关的信息的日志文件。  
 
 > [!NOTE]  
->  当使用唤醒代理对 LAN 唤醒进行补充时，则会在客户端上记录此活动。 例如，请参阅本主题的[客户端操作](#BKMK_ClientOpLogs)部分中的 CcmExec.log 和 SleepAgent_&lt;domain\>@SYSTEM_0.log。  
+>  使用唤醒代理对 LAN 唤醒进行补充时，会在客户端上记录此活动。 例如，请参阅本主题的[客户端操作](#BKMK_ClientOpLogs)部分中的 CcmExec.log 和 SleepAgent_&lt;domain\>@SYSTEM_0.log。  
 
 |日志名称|说明|带有日志文件的计算机|  
 |--------------|-----------------|----------------------------|  
 |wolcmgr.log|记录有关需要向哪些客户端发送唤醒数据包、发送的唤醒数据包的数量和重试唤醒数据包的次数的详细信息。|站点服务器|  
 |wolmgr.log|包含有关唤醒过程的详细信息，例如何时唤醒为 LAN 唤醒配置的部署。|站点服务器|  
+
+###  <a name="a-namebkmkwindowsservicinglogawindows-10-servicing"></a><a name="BKMK_WindowsServicingLog"></a>Windows 10 维护服务  
+ 下表列出了包含与 Windows 10 维护服务相关的信息的日志文件。  
+
+|日志名称|说明|带有日志文件的计算机|  
+|--------------|-----------------|----------------------------|  
+|Ccmperf.log|记录与数据维护和捕获（与客户端性能计数器相关）关联的活动。|客户端|  
+|CcmRepair.log|记录客户端代理的维修活动。|客户端|
+|PatchDownloader.log|记录有关从更新源将软件更新下载到站点服务器上的下载目的地的过程的详细信息。|承载从中启动下载的 Configuration Manager 控制台的计算机|  
+|PolicyEvaluator.log|记录有关客户端计算机上的策略评估的详细信息，其中包括来自软件更新的策略。|客户端|  
+|RebootCoordinator.log|记录有关安装软件更新后在客户端计算机上协调系统重新启动的过程的详细信息。|客户端|  
+|ScanAgent.log|记录有关软件更新的扫描请求、WSUS 位置和相关操作的详细信息。|客户端|  
+|SdmAgent.log|记录有关对修正和符合性进行的跟踪的详细信息。 但是，软件更新日志文件 Updateshandler.log 可提供有关安装符合性所需的软件更新的更详细信息。<br /><br /> 此日志文件与符合性设置共享。|客户端|  
+|ServiceWindowManager.log|记录有关维护时段评估的详细信息。|客户端|  
+|setupact.log|在 Windows 安装过程中发生的大多数错误的主日志文件。 该日志文件位于 *%windir%\$Windows.~BT\sources\panther* 文件夹。|客户端|
+|SmsWusHandler.log|记录有关 Microsoft 更新清单工具的扫描过程的详细信息。|客户端|  
+|StateMessage.log|记录有关创建并发送到管理点的软件更新状态消息的详细信息。|客户端|  
+|SUPSetup.log|记录有关软件更新点安装的详细信息。 当软件更新点安装完成后，会向此日志文件写入 **Installation was successful** 。|站点系统服务器|  
+|UpdatesDeployment.log|记录有关客户端上的部署的详细信息，包括软件更新激活、评估和强制执行。 详细日志记录显示有关与客户端用户界面交互的其他信息。|客户端|  
+|UpdatesHandler.log|记录有关软件更新符合性扫描以及在客户端上下载和安装软件更新的详细信息。|客户端|  
+|UpdatesStore.log|记录有关在符合性扫描周期中接受评估的软件更新的符合性状态的详细信息。|客户端|  
+|WCM.log|记录有关的详细信息，涉及到软件更新点配置，以及为了获取订阅的更新类别、分类和语言而与 Windows Server Update Services (WSUS) 服务器建立的连接。|站点服务器|  
+|WSUSCtrl.log|记录有关站点的配置、数据库连接和 WSUS 服务器健康状况的详细信息。|站点系统服务器|  
+|wsyncmgr.log|记录有关软件更新同步过程的详细信息。|站点服务器|  
+|WUAHandler.log|记录有关客户端上的搜索软件更新的 Windows 更新代理的详细信息。|客户端|  
 
 ###  <a name="a-namebkmkwuloga-windows-update-agent"></a><a name="BKMK_WULog"></a> Windows 更新代理  
  下表列出了包含与 Windows 更新代理相关的信息的日志文件。  
@@ -789,6 +820,6 @@ ms.openlocfilehash: cb27f2f2a6e0b0e3d6fca2d616d8ab806b74f9df
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

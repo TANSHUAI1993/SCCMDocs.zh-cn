@@ -1,5 +1,5 @@
 ---
-title: "配置报表 | System Center Configuration Manager"
+title: "配置报表 | Microsoft Docs"
 description: "阅读有关如何在 Configuration Manager 层次结构中设置报表，包括 SQL Server Reporting Services 的信息。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 7c7fb75ec6be7a24afe2bb8038998fb58b10e331
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: aed95333b6509b0aa7061f23969381f1ce8aff7f
 
 
 ---
@@ -298,6 +298,6 @@ ms.openlocfilehash: 7c7fb75ec6be7a24afe2bb8038998fb58b10e331
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

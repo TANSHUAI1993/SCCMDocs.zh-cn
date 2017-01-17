@@ -1,5 +1,5 @@
 ---
-title: "运行发现 | System Center Configuration Manager"
+title: "运行发现 | Microsoft Docs"
 description: "阅读发现过程和发现数据记录的概述。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: d73b493318b0a1938d42265ec03369015365addb
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: 1d225b9f904215280feef5efd4283cbd51f84577
 
 
 ---
@@ -90,6 +90,6 @@ DDR 文件由 .ddr 扩展名标识，大小通常约为 1 KB。
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "查看软件清单 | 资源浏览器 | System Center Configuration Manager"
+title: "查看软件清单 | Microsoft Docs | 资源浏览器"
 description: "使用资源浏览器查看 System Center Configuration Manager 中的软件清单。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: b4ecb27cfb119ae80d1ed7d90d84c61a87b183c8
+ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
+ms.openlocfilehash: a15c593bed4fe7ecce22990bbdcecc8dc2ed2962
 
 
 ---
@@ -60,6 +60,6 @@ ms.openlocfilehash: b4ecb27cfb119ae80d1ed7d90d84c61a87b183c8
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

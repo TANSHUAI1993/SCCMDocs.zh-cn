@@ -1,5 +1,5 @@
 ---
-title: "配置硬件清单 | 移动设备 |System Center Configuration Manager"
+title: "配置硬件清单 | Microsoft Docs | 移动设备"
 description: "配置通过 Microsoft Intune 和 System Center Configuration Manager 注册的移动设备的硬件清单。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 59584a5b8953165e7c605c310346a00c4e0d6d51
+ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
+ms.openlocfilehash: 6db22a2ddce1afb471cf8b603c6d98f7f0acbc15
 
 
 ---
@@ -141,6 +141,6 @@ ms.openlocfilehash: 59584a5b8953165e7c605c310346a00c4e0d6d51
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

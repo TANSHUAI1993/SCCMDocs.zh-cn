@@ -1,8 +1,8 @@
 ---
-title: "如何为使用 System Center Configuration Manager 客户端管理的 Windows 10 设备创建配置项目 | System Center Configuration Manager"
+title: "如何为使用 System Center Configuration Manager 客户端管理的 Windows 10 设备创建配置项目 | Microsoft Docs"
 description: "使用 System Center Configuration Manager Windows 10 配置项目管理由 Configuration Manager 客户端管理的 Windows 10 计算机的设置。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/18/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: d5248e7262f758c2de2a1deaf42282d4e77e3e0c
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: 2b24570aa2e9d9aa45584842011dcd49c6e5e8cc
 
 
 ---
@@ -125,7 +125,7 @@ ms.openlocfilehash: d5248e7262f758c2de2a1deaf42282d4e77e3e0c
 |**病毒保护**|要求必须安装并配置防病毒软件。|  
 |**病毒保护签名为最新**|要求设备上的防病毒软件的签名文件必须保持最新状态。|  
 
-### <a name="windows-information-protection-formerly-enterprise-data-protection"></a>Windows 信息保护（以前称为企业数据保护）
+### <a name="windows-information-protection"></a>Windows 信息保护
 
 随着企业中员工拥有的设备的增加，通过应用和服务（例如电子邮件、社交媒体和公有云，但这是不受企业的控制的）产生意外的数据泄漏的风险也不断增加。 例如，当员工通过他们的个人电子邮件帐户发送最新的工程图、复制产品信息并粘贴到推文中，或将正在处理的销售报表保存到其公有云存储时。
 
@@ -137,6 +137,6 @@ Windows 信息保护 (WIP) 帮助防范此可能的数据泄漏而不会妨碍�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

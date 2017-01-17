@@ -1,5 +1,5 @@
 ---
-title: "使用 System Center Configuration Manager 客户端在设备上管理符合性的常见任务 | System Center Configuration Manager"
+title: "使用 System Center Configuration Manager 客户端在设备上管理符合性的常见任务 | Microsoft Docs"
 description: "通过完成一些常见方案，了解 System Center Configuration Manager 符合性设置。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 9be045df8433463d01d6cfca9271f230b5bf991d
+ms.sourcegitcommit: f9e939d871e95a3248d8e5d96cb73063a81fd5cf
+ms.openlocfilehash: feadb8b5b75832e914dfe62bd2d486e5bac1458d
 
 
 ---
@@ -113,6 +113,6 @@ ms.openlocfilehash: 9be045df8433463d01d6cfca9271f230b5bf991d
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

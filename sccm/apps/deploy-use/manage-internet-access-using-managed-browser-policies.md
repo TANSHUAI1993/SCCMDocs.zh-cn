@@ -1,5 +1,5 @@
 ---
-title: "使用托管浏览器策略管理 Internet 访问 | System Center Configuration Manager"
+title: "使用托管浏览器策略管理 Internet 访问 | Microsoft Docs"
 description: "部署 Intune Managed Browser 来管理和限制 Internet 访问。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: e5efee7b94f5c61a610fd9f9fa278c992f9c64b8
+ms.sourcegitcommit: dcdaec52c9eafba3f7ce569f0dabb98921b4dc0a
+ms.openlocfilehash: f870a98fa9e839df16d0ca9deb96a18128f35ba6
 
 
 ---
@@ -26,10 +26,10 @@ ms.openlocfilehash: e5efee7b94f5c61a610fd9f9fa278c992f9c64b8
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-在 System Center Configuration Manager 中，可以部署 Intune Managed Browser（这是一款 Web 浏览应用程序），还可将应用程序与托管浏览器策略关联。 托管浏览器策略可配置允许列表或阻止列表，用于限制托管浏览器用户可以访问的网站。  
-  
- 由于此应用是托管应用，因此你还可以向其应用移动应用程序管理策略，如控制使用剪切、复制和粘贴，阻止屏幕捕获，以及确保用户单击的内容链接仅在其他托管应用中打开。 有关详细信息，请参阅[使用移动应用程序管理策略保护应用](../../apps/deploy-use/protect-apps-using-mam-policies.md)。  
-  
+在 System Center Configuration Manager 中，可以部署 Intune Managed Browser（这是一款 Web 浏览应用程序），还可将应用程序与托管浏览器策略关联。 托管浏览器策略可设置允许列表或阻止列表，用于限制托管浏览器用户可以访问的网站。  
+
+ 由于此应用是托管应用，因此还可以对其应用移动应用程序管理策略，如控制剪切、复制和粘贴的使用。 这样可阻止屏幕捕获，并且还可确保内容的链接仅在其他托管应用中打开。 有关详细信息，请参阅[使用移动应用程序管理策略保护应用](../../apps/deploy-use/protect-apps-using-mam-policies.md)。  
+
 > [!IMPORTANT]  
 >  如果用户自行安装托管浏览器，则该浏览器将不受任何所指定策略的管理。 若要确保浏览器由 Configuration Manager 管理，则用户必须先卸载该应用，然后才可以将其作为托管应用部署给这些用户。  
 
@@ -41,52 +41,52 @@ ms.openlocfilehash: e5efee7b94f5c61a610fd9f9fa278c992f9c64b8
 
 > [!NOTE]  
 >  若要了解详细信息和下载 Intune Managed Browser 应用，请参阅 [iTunes](https://itunes.apple.com/us/app/microsoft-intune-managed-browser/id943264951?mt=8)（对于 iOS）和 [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.intune.mam.managedbrowser&hl=en)（对于 Android）。  
-  
+
 ## <a name="create-a-managed-browser-policy"></a>创建托管浏览器策略  
 
-1.  在 Configuration Manager 控制台中，单击“软件库” > “应用程序管理” > “应用程序管理策略”。  
+1.  在 Configuration Manager 控制台中，选择“软件库” > “应用程序管理” > “应用程序管理策略”。  
 
-3.  在“主页”  选项卡的“创建”  组中，单击“创建应用程序管理策略” 。  
+3.  在“主页”选项卡的“创建”组中，选择“创建应用程序管理策略”。  
 
-4.  在“常规”  页上，输入策略的名称和说明，然后单击“下一步” 。  
+4.  在“常规”页上，输入策略的名称和说明，然后选择“下一步”。  
 
-5.  在“策略类型”  页上，依次选择平台和策略类型的“托管浏览器”  ，然后单击“下一步” 。  
+5.  在“策略类型”页上，依次选择平台和策略类型的“托管浏览器”，然后选择“下一步”。  
 
      在“托管浏览器”  页上，选择下列选项之一：  
 
     -   **仅允许托管浏览器打开下面列出的 URL** – 指定托管浏览器可以打开的 URL 列表。  
 
-    -   **阻止托管浏览器打开下面列出的 URL** – 指定将阻止托管浏览器打开的 URL 列表。  
+    -   **阻止托管浏览器打开下列 URL** – 指定将阻止托管浏览器打开的 URL 列表。  
 
     > [!NOTE]  
     >  不能在相同的托管浏览器策略中同时包括允许的 URL 和阻止的 URL。  
 
-     有关可以指定的 URL 格式的详细信息，请参阅本主题中的 **允许的 URL 和阻止的 URL 的格式** 。  
+     有关可以指定的 URL 格式的详细信息，请参阅本文中允许的 URL 和阻止的 URL 的格式。  
 
     > [!NOTE]  
-    >  “常规”  策略类型可让你修改你部署的应用的功能，以帮助其符合公司的合规性和安全策略。 例如，可以限制受限应用中的剪切、复制和粘贴操作。 有关常规策略类型的详细信息，请参阅[使用移动应用程序管理策略保护应用](../../apps/deploy-use/protect-apps-using-mam-policies.md)。  
+    >  通过“常规”策略类型可以更改部署的应用的功能，以帮助其符合公司的合规性和安全策略。 例如，可以限制受限应用中的剪切、复制和粘贴操作。 有关常规策略类型的详细信息，请参阅[使用移动应用程序管理策略保护应用](../../apps/deploy-use/protect-apps-using-mam-policies.md)。  
 
-6.  完成向导。  
+6.  完成该向导。  
 
- 新策略显示在“软件库”  工作区的“应用程序管理策略”  节点中。  
+新策略显示在“软件库”  工作区的“应用程序管理策略”  节点中。  
 
 ## <a name="create-a-software-deployment-for-the-managed-browser-app"></a>创建托管浏览器应用的软件部署  
  在创建托管浏览器策略后，可以创建托管浏览器应用的软件部署类型。 必须关联托管浏览器应用的常规和托管浏览器策略。  
-  
+
  有关详细信息，请参阅[创建应用程序](../../apps/deploy-use/create-applications.md)。  
-  
+
 ## <a name="security-and-privacy-for-the-managed-browser"></a>托管浏览器的安全和隐私  
 
--   在 iOS 设备上，如果用户访问的网站的证书已过期或不受信任，则无法打开该网站。  
+-   在 iOS 设备上，如果网站的证书已过期或不受信任，则无法打开该网站。  
 
--   托管浏览器不使用用户在设备上对内置浏览器进行的设置。 这是因为托管浏览器无权访问这些设置。  
+-   托管浏览器不使用用户在设备上对内置浏览器进行的设置。 托管浏览器无权访问这些设置。  
 
--   如果在与托管浏览器关联的移动应用程序管理策略中配置 **“访问需要简单 PIN”** 或 **“访问需要公司凭据”** 选项，并且用户单击身份验证页上的帮助链接，则他们可以浏览任何 Internet 站点，而无论这些网站是否已添加到托管浏览器策略中的阻止列表。  
+-   如果在与托管浏览器关联的移动应用程序管理策略中设置“访问需要简单 PIN”或“访问需要公司凭据”选项，则用户可以单击身份验证页上的“帮助”，然后转到任何站点 - 即使站点已添加到托管浏览器策略中的阻止列表。  
 
 -   托管浏览器仅能在直接访问站点时阻止访问。 使用中间服务（例如翻译服务）访问站点时，该策略则无法阻止访问。  
 
 ## <a name="reference-information"></a>参考信息  
-  
+
 ###  <a name="url-format-for-allowed-and-blocked-urls"></a>允许的 URL 和阻止的 URL 的格式  
 
 使用以下信息来了解有关指定允许和阻止列表中的 URL 时允许使用的格式和通配符。  
@@ -140,7 +140,7 @@ ms.openlocfilehash: e5efee7b94f5c61a610fd9f9fa278c992f9c64b8
 
 > [!NOTE]  
 >  始终允许 *.microsoft.com。  
-  
+
 ### <a name="how-conflicts-between-the-allow-and-block-list-are-resolved"></a>允许和阻止列表之间的冲突的解决方式  
  如果向一个设备部署多个托管浏览器策略，并且出现设置冲突，则将评估模式（允许或阻止）以及 URL 列表中的冲突。 发生冲突时，以下行为适用：  
 
@@ -154,6 +154,6 @@ ms.openlocfilehash: e5efee7b94f5c61a610fd9f9fa278c992f9c64b8
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

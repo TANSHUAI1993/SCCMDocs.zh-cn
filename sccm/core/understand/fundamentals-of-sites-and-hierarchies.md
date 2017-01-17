@@ -1,8 +1,8 @@
 ---
-title: "站点和层次结构的基础知识 | System Center Configuration Manager"
+title: "站点和层次结构基础知识 | Microsoft Docs"
 description: "获取有关 System Center Configuration Manager 站点和层次结构的基本信息。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/08/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 07e10ead8d4b147a4a96b1e5189597e1ac4d4f52
+ms.sourcegitcommit: 1b64b5f6e208b85a5ec2ef02bab34afee451c484
+ms.openlocfilehash: cda27b9478e915bca99f5784ec6bcbedc989e841
 
 
 ---
@@ -69,6 +69,6 @@ System Center Configuration Manager 部署必须安装在 Active Directory 域�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

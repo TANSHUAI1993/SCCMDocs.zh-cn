@@ -1,5 +1,5 @@
 ---
-title: "辅助功能 | System Center Configuration Manager"
+title: "辅助功能 | Microsoft Docs"
 description: "了解使 System Center Configuration Manager 可供残疾人使用的功能。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: dd5dfb749e101b6fa19ac3c20c110085d3c2416e
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: d238b0d7af7636c08bdfa28974f4c9453d6a415c
 
 ---
 # <a name="accessibility-features-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的辅助功能
@@ -111,6 +111,6 @@ ms.openlocfilehash: dd5dfb749e101b6fa19ac3c20c110085d3c2416e
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

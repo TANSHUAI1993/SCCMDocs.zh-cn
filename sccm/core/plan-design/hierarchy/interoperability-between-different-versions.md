@@ -1,5 +1,5 @@
 ---
-title: "各版本之间的互操作性 | System Center Configuration Manager"
+title: "Configuration Manager 版本之间的互操作性 | Microsoft Docs"
 description: "了解如何避免同一网络上多个 System Center Configuration Manager 层次结构之间发生冲突。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: db0bf04b73050cb42f8230227c8db6ebfb3c6987
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: 32182f06a90d768c40e29ed8a8e89cb45114bd15
 
 
 ---
@@ -61,12 +61,12 @@ ms.openlocfilehash: db0bf04b73050cb42f8230227c8db6ebfb3c6987
 
  为了防止在两个层次结构有重叠的边界时将客户端意外地分配到错误的站点，请配置 Configuration Manager 客户端安装参数以将客户端分配到特定站点。  
 
-##  <a name="a-namebkmkmixeda-configuration-manager-limitations-in-a-mixed-version-hierarchy"></a><a name="bkmk_mixed"></a> 混合版本层次结构中的 Configuration Manager 限制  
+##  <a name="a-namebkmkmixeda-configuration-manager-limitations--in-a-mixed-version-hierarchy"></a><a name="bkmk_mixed"></a> 混合版本层次结构中的 Configuration Manager 限制  
  在升级 System Center Configuration Manager 站点的过程中，有时不同的站点会位于不同的版本中。  例如，可能会将管理中心站点升级到新版本，但由于站点维护窗口，需要一段时间以后才能升级一个或多个主站点。  
 
  当单一层次结构中的不同站点使用不同版本时，某些功能不可用。 这可能会影响在 Configuration Manager 控制台中管理 Configuration Manager 对象的方式，并影响客户端可用的功能。 通常，无法在站点上或通过运行较低 Service Pack 版本的客户端访问 Configuration Manager 较新版本中的功能。  
 
-### <a name="limitations-when-upgrading-configuration-manager"></a>升级 Configuration Manager 的限制  
+### <a name="limitations-when-upgrading--configuration-manager"></a>升级 Configuration Manager 的限制  
 
 |对象|详细信息|  
 |------------|-------------|  
@@ -85,6 +85,6 @@ ms.openlocfilehash: db0bf04b73050cb42f8230227c8db6ebfb3c6987
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

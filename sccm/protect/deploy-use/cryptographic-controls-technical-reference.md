@@ -1,5 +1,5 @@
 ---
-title: "加密控件技术参考 | System Center Configuration Manager"
+title: "加密控制技术参考 | Microsoft Docs"
 description: "了解有关在 System Center Configuration Manager 中签名和加密如何帮助防范来自数据读取的攻击。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 354289f980836f10ebfc770b2408ba02dcb0eecb
+ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
+ms.openlocfilehash: 0f76ed3dd74a80d9e22cfa743e5aa484f6cd7d97
 
 
 ---
@@ -284,7 +284,6 @@ System Center Configuration Manager 使用签名和加密帮助保护 Configurat
 
 
 
-
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

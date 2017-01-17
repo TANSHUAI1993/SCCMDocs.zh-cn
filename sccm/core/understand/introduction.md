@@ -1,5 +1,5 @@
 ---
-title: "简介 | System Center Configuration Manager"
+title: "简介 | Microsoft Docs"
 description: "获取基本信息，作为对 System Center Configuration Manager 的简介。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 46aa1fdf49dcdacb9d5e53963a0f799e5f0a1754
+ms.sourcegitcommit: b0b2f72d4b1eae3aa5b860a210ac3a4259e17069
+ms.openlocfilehash: 3bbbb6a00883a5e489696387fad9224fdc2082ba
 
 
 ---
@@ -27,7 +27,7 @@ ms.openlocfilehash: 46aa1fdf49dcdacb9d5e53963a0f799e5f0a1754
 
 System Center Configuration Manager 属于 Microsoft System Center 管理解决方案套件的一部分，有助于在本地和云中管理设备和用户。  
 
-**Configuration Manager 可帮助：**   
+**Configuration Manager 有助于：**   
 -   减少手动任务并让你专注处理高价值项目，从而提高 IT 工作效率和效率  
 -   最大程度实现硬件和软件投资  
 -   在适当的时间提供正确的软件，从而提高最终用户的工作效率  
@@ -222,6 +222,6 @@ Configuration Manager 也可使用：
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

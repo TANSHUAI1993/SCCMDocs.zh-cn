@@ -1,5 +1,5 @@
 ---
-title: "配置 LAN 唤醒 | System Center Configuration Manager"
+title: "配置 LAN 唤醒 | Microsoft Docs"
 description: "在 System Center Configuration Manager 中选择 LAN 唤醒设置。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -12,12 +12,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b475a0c8-85d6-4cc4-b11f-32c0cc98239e
 caps.latest.revision: 7
-author: Mtillman
-ms.author: mtillman
+author: nbigman
+ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: b8274f9da1ec82aebf43115236f2409995a0052b
+ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
+ms.openlocfilehash: 09f8bc7ee04ff64934030f825a791bc043341963
 
 ---
 # <a name="how-to-configure-wake-on-lan-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中配置 LAN 唤醒
@@ -47,7 +47,7 @@ ms.openlocfilehash: b8274f9da1ec82aebf43115236f2409995a0052b
 1. 在 Configuration Manager 控制台中，转到“管理”>“客户端设置”。
 2. 单击“默认客户端设置”，然后单击“属性”。
 3. 选择“电源管理”，然后对“启用唤醒代理”选择“是”。
-4. 查看并在必要时配置其他唤醒代理设置。 有关这些设置的详细信息，请参阅[电源管理设置](../../../core/clients/deploy/about-client-settings.md#BKMK_PowMgmtDeviceSettings)。
+4. 查看并在必要时配置其他唤醒代理设置。 有关这些设置的详细信息，请参阅[电源管理设置](../../../core/clients/deploy/about-client-settings.md#power-management)。
 5. 单击“确定”关闭对话框，再单击“确定”关闭“默认客户端设置”对话框。
 
 你可以使用以下 LAN 唤醒报表来监视唤醒代理的安装和配置：
@@ -60,6 +60,6 @@ ms.openlocfilehash: b8274f9da1ec82aebf43115236f2409995a0052b
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

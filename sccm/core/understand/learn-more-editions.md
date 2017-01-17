@@ -1,5 +1,5 @@
 ---
-title: "了解有关许可和分支的详细信息 | System Center Configuration Manager"
+title: "了解有关授权和分支的详细情况 | Microsoft Docs"
 description: "请使用本主题，了解有关 2016 年 10 月发行的 System Center Configuration Manager（包括 Current Branch 1606 版、Long-Term Servicing Branch (LTSB) 和 Current Branch 的评估安装）的可用安装选项的许可要求。"
 ms.custom: na
 ms.date: 10/12/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 473d4f9a39898ff5a664013f91ab95e58cd6d161
-ms.openlocfilehash: 726c10fc536f9612bdf46090ef653388a5cfc969
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: d51a602de9e0cf85d80c74c034613002682e52ea
 
 ---
 
@@ -116,6 +116,6 @@ LTSB 以 Current Branch 1606 版为基础，具有以下限制：
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

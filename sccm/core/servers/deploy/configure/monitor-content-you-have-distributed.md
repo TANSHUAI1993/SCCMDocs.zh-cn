@@ -1,5 +1,5 @@
 ---
-title: "监视内容 | System Center Configuration Manager"
+title: "监视内容 | Microsoft Docs"
 description: "了解如何使用 Configuration Manager 控制台监视分发的内容。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 402c06ed92bbfe509206d3e7800e41e90c5d3a38
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: 9a5d2c3a3c6bdca05b5b00fa4d746c437a56ef89
 
 ---
 # <a name="monitor-content-you-have-distributed-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 监视分发的内容
@@ -27,13 +27,9 @@ ms.openlocfilehash: 402c06ed92bbfe509206d3e7800e41e90c5d3a38
 使用 System Center Configuration Manager 控制台监视分发的内容，包括：  
 
 -   与关联的分发点相关的所有包类型的状态  
-
 -   包中内容的内容验证状态  
-
 -   分配给特定分发点组的内容的状态  
-
 -   分配给分发点的内容的状态  
-
 -   每个分发点（内容验证、PXE 和多播）可选功能的状态。  
 
 > [!NOTE]  
@@ -43,37 +39,27 @@ ms.openlocfilehash: 402c06ed92bbfe509206d3e7800e41e90c5d3a38
  “监视”  工作区中的“内容状态”  节点提供有关内容包的信息。 在 Configuration Manager 控制台中，你可以查看如下信息：  
 
 -   包名称  
-
 -   类型  
-
 -   已将包发送到多少个分发点  
-
 -   符合性比率  
-
 -   创建包的时间  
-
 -   包 ID  
-
 -   源版本  
 
 还可找到任何包的详细状态信息以及该包的分发状态，包括：  
 
 -   失败次数  
-
 -   挂起的分发  
-
 -   安装次数  
 
 还可管理仍在向分发点进行的分发或未能成功向分发点分发内容的分发：  
 
 -   当你在“内容状态”  节点的“正在进行”  选项卡或“错误”  选项卡的“资产详细信息”  窗格中查看针对分发点的分发作业的部署状态消息时，可以使用取消或重新分发内容的适用选项。  
-
 -   此外，作业详细信息显示当你在“正在进行”  选项卡上查看作业详细信息时已完成作业的百分比，并显示当你查看“错误”  选项卡中的作业的详细信息时的作业剩余重试次数以及距下一次重试还有多长时间。  
 
 当你取消尚未完成的部署时，用于传输该内容的分发作业将停止：  
 
 -   部署的状态随后将更新以指示分发失败并且被用户操作取消。  
-
 -   这个新状态出现在“错误”  选项卡中。  
 
 > [!TIP]  
@@ -124,23 +110,16 @@ ms.openlocfilehash: 402c06ed92bbfe509206d3e7800e41e90c5d3a38
 “监视”  工作区中的“分发点组状态”  节点提供有关分发点组的信息。 你可以查看如下信息：  
 
 -   分发点组名称  
-
 -   描述  
-
 -   属于分发点组成员的分发点数  
-
 -   已分发到组的包数  
-
 -   分发点组状态  
-
 -   符合性比率  
 
 你还可以查看以下项目的详细状态信息：  
 
 -   分发点组错误，  
-
 -   正在进行的分发数  
-
 -   已成功分发的数量  
 
 #### <a name="to-monitor-distribution-point-group-status"></a>监视分发点组状态  
@@ -171,8 +150,18 @@ ms.openlocfilehash: 402c06ed92bbfe509206d3e7800e41e90c5d3a38
 
 4.  在结果窗格中，单击“详细信息”  选项卡。 此时会显示分发点的状态信息。  
 
+## <a name="client-data-sources-dashboard"></a>客户端数据源仪表板
+从 1610 版起，可以使用“客户端数据源”仪表板，来帮助了解环境中[对等缓存](/sccm/core/plan-design/hierarchy/client-peer-cache)的使用。 此仪表板在控制台中将不可见，直至客户端使用对等缓存下载内容并将该信息报告回站点之后。 根据报告间隔，最长可能需要 24 小时。
+
+> [!TIP]  
+> 1610 版本中，对等缓存和“客户端数据源”仪表板均为预发行功能。 若要启用这些功能，请参阅[使用更新中的预发行功能](/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease)。
+
+在控制台中，转到“监视” > “客户端状态” > “客户端数据源”。 在此处可以选择要应用于仪表板的时间段。 然后在显示中，可以选择要查看其信息的边界组或包。 查看信息时，可以将鼠标悬停在表面上方，以查看有关不同内容或策略源的更多详细信息。  
+
+还可以使用新报表“客户端数据源 - 摘要”查看每个边界组的客户端数据源摘要。
 
 
-<!--HONumber=Nov16_HO1-->
+
+<!--HONumber=Dec16_HO3-->
 
 

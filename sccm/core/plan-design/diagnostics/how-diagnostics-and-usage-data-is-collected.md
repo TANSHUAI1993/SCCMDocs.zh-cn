@@ -1,5 +1,5 @@
 ---
-title: "诊断数据集合 | System Center Configuration Manager"
+title: "诊断数据集合 | Microsoft Docs"
 description: "了解 System Center Configuration Manager 如何收集关于其自身的诊断和使用情况数据。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 89292a11d003edd9e3a0eeb7fd367265a6b150b6
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: f0a992139ad1bc516df2f6ea947509e3e4a77c54
 
 
 ---
@@ -37,6 +37,6 @@ ms.openlocfilehash: 89292a11d003edd9e3a0eeb7fd367265a6b150b6
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

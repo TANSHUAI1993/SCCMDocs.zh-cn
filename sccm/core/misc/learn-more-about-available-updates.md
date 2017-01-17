@@ -1,5 +1,5 @@
 ---
-title: "了解有关更新 | System Center Configuration Manager"
+title: "了解更新 | Microsoft Docs"
 ms.custom: na
 ms.date: 10/06/2016
 ms.reviewer: na
@@ -8,7 +8,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.assetid: 1fa7d0d9-4bb5-4475-82ff-0d5da4a3da61
 caps.latest.revision: 4
 author: Brenduns
@@ -16,8 +17,8 @@ ms.author: brenduns
 manager: angrobe
 robots: noindex,nofollow
 translationtype: Human Translation
-ms.sourcegitcommit: ec1528e18ec2831c7b7363ba1e8f0fa9e8a3b82d
-ms.openlocfilehash: 6821fb0ae4fd1ba888b143f9fbec4c7a8d19906c
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: c94b0a9ba5694948ff6f14c568e776de20207b01
 
 
 ---
@@ -31,6 +32,6 @@ ms.openlocfilehash: 6821fb0ae4fd1ba888b143f9fbec4c7a8d19906c
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "维护任务参考 | System Center Configuration Manager"
+title: "维护任务参考 | Microsoft Docs"
 description: "阅读每个 System Center Configuration Manager 站点维护任务的详细信息，以及是否默认启用这些任务。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: f88282736c5e1fd3560745933f4c8e2a2268ea77
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: 7aee7c89c2857bc59beff7f140f06c4ac82f4294
 
 
 ---
@@ -279,6 +279,6 @@ ms.openlocfilehash: f88282736c5e1fd3560745933f4c8e2a2268ea77
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "使用 System Center Configuration Manager 部署 Windows to Go"
+title: "使用 System Center Configuration Manager 部署 Windows to Go | Microsoft Docs"
 description: "了解如何在 System Center Configuration Manager 中设置 Windows To Go 以创建从外部驱动器启动的 Windows To Go 工作区。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 104355185c5bbb4c15f3b9cc80cf8fa0e529cf6d
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: a8b1a42c43438553cfbb62328bed933378bb344c
 
 
 ---
@@ -450,7 +450,9 @@ ms.openlocfilehash: 104355185c5bbb4c15f3b9cc80cf8fa0e529cf6d
 
     -   **在没有本地分发点可用的情况下使用远程分发点**：指定客户端是否可以使用慢速和不可靠网络上的分发点来下载任务序列所需的内容。  
 
-    -   **允许所有客户端使用内容的回退源位置**：指定是否允许客户端在首选分发点上没有内容时回退并使用非首选分发点作为内容的源位置。  
+    -   **允许客户端使用内容源位置回退**：
+        - 版本 1610 之前，可选中“允许内容源位置回退”复选框，以便在没有其他分发点可用时让这些边界组外部的客户端回退并使用分发点作为内容的源位置。
+        - 从 1610 版起，用户不能再配置“允许内容源位置回退”。  取而代之的是，可配置边界组之间的关系，以确定客户端何时可以开始搜索有效内容源位置的其他边界组。 
 
 11. 完成向导。  
 
@@ -468,6 +470,6 @@ ms.openlocfilehash: 104355185c5bbb4c15f3b9cc80cf8fa0e529cf6d
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

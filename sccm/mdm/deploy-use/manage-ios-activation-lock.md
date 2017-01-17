@@ -1,8 +1,8 @@
 ---
-title: "管理 iOS 激活锁定 | System Center Configuration Manager"
+title: "管理 iOS 激活锁定 | Microsoft Docs"
 description: "使用 System Center Configuration Manager 管理 iOS 激活锁定。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/15/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 33125f9147afcac09c0f7a9a9c2522726c2eb99b
+ms.sourcegitcommit: a25c6b409ea6501ead762fabb8cc11c62c84885d
+ms.openlocfilehash: cf98bbb9dee6142e8b085dbffcadb3ed712adcb9
 
 
 ---
@@ -107,6 +107,6 @@ Configuration Manager 可以以下两种方法帮助你管理激活锁定：
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

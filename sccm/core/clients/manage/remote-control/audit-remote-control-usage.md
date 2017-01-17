@@ -1,5 +1,5 @@
 ---
-title: "审核远程控制使用 | System Center Configuration Manager"
+title: "审核远程控制使用 | Microsoft Docs"
 description: "审核 System Center Configuration Manager 中的远程控制使用。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 1a23f37cfc67edb6ed097adb7e58342c9929a8fc
+ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
+ms.openlocfilehash: e3082e1d608f60a539fc58b0129132e33c8af833
 
 
 ---
@@ -64,6 +64,6 @@ ms.openlocfilehash: 1a23f37cfc67edb6ed097adb7e58342c9929a8fc
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

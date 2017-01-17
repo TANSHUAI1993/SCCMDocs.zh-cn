@@ -1,17 +1,17 @@
-# [了解](understand/introduction-to-operating-system-deployment.md)
+# 了解和探索
 ## [操作系统部署简介](understand/introduction-to-operating-system-deployment.md)
 ## [任务序列步骤](understand/task-sequence-steps.md)
 ## [任务序列操作变量](understand/task-sequence-action-variables.md)
 ## [任务序列内置变量](understand/task-sequence-built-in-variables.md)
 ## [任务序列媒体的预启动命令](understand/prestart-commands-for-task-sequence-media.md)
 
-# [规划和设计](plan-design/infrastructure-requirements-for-operating-system-deployment.md)
+# 规划和设计
 ## [操作系统部署的基础架构要求](plan-design/infrastructure-requirements-for-operating-system-deployment.md)
 ## [自动执行任务的规划注意事项](plan-design/planning-considerations-for-automating-tasks.md)
 ## [操作系统部署的安全和隐私](plan-design/security-and-privacy-for-operating-system-deployment.md)
 ## [规划操作系统部署互操作性](plan-design/planning-for-operating-system-deployment-interoperability.md)
 
-# [入门](get-started/prepare-site-system-roles-for-operating-system-deployments.md)
+# 入门
 ## [为操作系统部署准备站点系统角色](get-started/prepare-site-system-roles-for-operating-system-deployments.md)
 ## [准备操作系统部署](get-started/prepare-for-operating-system-deployment.md)
 ### [管理启动映像](get-started/manage-boot-images.md)
@@ -28,7 +28,7 @@
 
 ## [准备 Windows PE 对等缓存来减少 WAN 流量](get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md)
 
-# [部署和使用](deploy-use/scenarios-to-deploy-enterprise-operating-systems.md)
+# 部署和使用
 ## [部署企业版操作系统的方案](deploy-use/scenarios-to-deploy-enterprise-operating-systems.md)
 ### [将 Windows 升级到最新版本](deploy-use/upgrade-windows-to-the-latest-version.md)
 ### [使用新版的 Windows 刷新现有的计算机](deploy-use/refresh-an-existing-computer-with-a-new-version-of-windows.md)
@@ -54,8 +54,10 @@
 ### [创建用于捕获和还原用户状态的任务序列](deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md)
 ### [使用任务序列管理虚拟硬盘](deploy-use/use-a-task-sequence-to-manage-virtual-hard-disks.md)
 
-## [创建自定义任务序列](deploy-use/create-a-custom-task-sequence.md)
+## [自定义任务序列应用方案](deploy-use/custom-task-sequence-scenarios.md)
+### [创建自定义任务序列](deploy-use/create-a-custom-task-sequence.md)
 ### [创建用于非操作系统部署的任务序列](deploy-use/create-a-task-sequence-for-non-operating-system-deployments.md)
+### [管理 BIOS 转换为 UEFI 所采用的任务序列步骤](deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md)
 
 ## [创建任务序列媒体](deploy-use/create-task-sequence-media.md)
 ### [创建独立媒体](deploy-use/create-stand-alone-media.md)
@@ -64,6 +66,6 @@
 ### [创建捕获媒体](deploy-use/create-capture-media.md)
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

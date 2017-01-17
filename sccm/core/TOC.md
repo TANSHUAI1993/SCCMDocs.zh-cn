@@ -87,7 +87,8 @@
 ##   [在实验室中评估 Configuration Manager](get-started/evaluate-with-lab-environment.md)
 ###  [设置实验室](get-started/set-up-your-lab.md)
 
-##   [技术预览](get-started/technical-preview.md)
+##   [技术预览](get-started/technical-preview.md) 
+###  [1612 中的功能](get-started/capabilities-in-technical-preview-1612.md)
 ###  [1611 中的功能](get-started/capabilities-in-technical-preview-1611.md)
 ###  [1610 中的功能](get-started/capabilities-in-technical-preview-1610.md)
 ###  [1609 中的功能](get-started/capabilities-in-technical-preview-1609.md)
@@ -300,6 +301,6 @@
 ###  [升级分析](clients/manage/upgrade/upgrade-analytics.md)
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

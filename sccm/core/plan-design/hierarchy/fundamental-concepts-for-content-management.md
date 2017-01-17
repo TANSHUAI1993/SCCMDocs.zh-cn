@@ -1,5 +1,5 @@
 ---
-title: "内容管理基础知识 | System Center Configuration Manager"
+title: "内容管理基础知识 | Microsoft Docs"
 description: "在 System Center Configuration Manager 中使用工具和选项管理部署内容。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 27342ef83d877c31f39bc232e3e19e37b78e62da
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: 577d7e3acc27e3b50e22fc42d5db2f68d9cdde29
 
 
 ---
@@ -39,16 +39,16 @@ System Center Configuration Manager 支持工具和选项的一个可靠系统�
 
      此帐户还由请求分发点用于从远程林中的源分发点获取内容  
 
--   **包访问帐户** - 默认情况下，Configuration Manager 向通用访问帐户“用户”和“管理员”授予对分发点上内容的访问权限。 但是，你可以配置其他权限来限制访问。 请参阅&lt;管理帐户以访问包内容\>  
+-   **包访问帐户** - 默认情况下，Configuration Manager 向通用访问帐户“用户”和“管理员”授予对分发点上内容的访问权限。 但是，你可以配置其他权限来限制访问。   
 
 -   **多播连接帐户** - 用于操作系统部署  
 
-有关这些帐户的详细信息，请参阅[管理帐户以访问内容](../../../core/plan-design/hierarchy/manage-accounts-to-access-content.md)
+有关这些帐户的详细信息，请参阅[管理帐户以访问内容](../../../core/plan-design/hierarchy/manage-accounts-to-access-content.md)。
 
 ## <a name="bandwidth-throttling-and-scheduling"></a>带宽限制和计划  
  限制和计划选项均可帮助你控制将内容从站点服务器分发到分发点的时间。 这类似于站点到站点基于文件的复制的带宽控制，但二者又没有直接关系。  
 
- 有关详细信息，请参阅[管理网络带宽](/sccm/core/plan-design/hierarchy/manage-network-bandwidth)
+ 有关详细信息，请参阅[管理网络带宽](/sccm/core/plan-design/hierarchy/manage-network-bandwidth)。
 
 ## <a name="binary-differential-replication"></a>二进制差异复制  
  二进制差异复制 (BDR) 是分发点的必备条件，它有时称为增量复制，在将以前部署的内容的更新分发到其他站点或远程分发点时，将自动将其用于减少带宽使用。  
@@ -75,14 +75,18 @@ System Center Configuration Manager 支持工具和选项的一个可靠系统�
 
 -   这样，相同子网上的后续客户端不必从分发点下载内容，该内容将跨多个客户端进行分发以便将来传输。  
 
+## <a name="peer-cache"></a>对等缓存
+从 1610 版起，可通过客户端“对等缓存”管理对远程客户端内容的部署。 对等缓存是内置 Configuration Manager 解决方案，供客户端用于直接从本地缓存将内容与其他客户端共享。
 
+将启用对等缓存的客户端设置部署到集合后，该集合的成员可以充当同一边界组中其他客户端的对等内容源。
 
+有关详细信息，请参阅[用于 Configuration Manager 客户端的对等缓存](/sccm/core/plan-design/hierarchy/client-peer-cache)。
 
 
 ## <a name="windows-pe-peer-cache"></a>Windows PE 对等缓存
 在 System Center Configuration Manager 中部署新的操作系统时，运行任务序列的计算机可使用 Windows PE 对等缓存从本地对等计算机（对等缓存源）中获取内容，而无需从分发点下载内容。 这有助于最大限度减小没有本地分发点的分支机构场景中的广域网 (WAN) 流量。
 
-有关详细信息，请参阅 [Windows PE 对等缓存](../../../osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md)
+有关详细信息，请参阅 [Windows PE 对等缓存](../../../osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md)。
 
 
 ## <a name="client-locations"></a>客户端位置  
@@ -94,7 +98,7 @@ System Center Configuration Manager 支持工具和选项的一个可靠系统�
 
     -   仅当本地分发点不可用时，才将基于云的分发点用于回退  
 
--   **Internet** ：  
+-   **Internet**：  
 
     -   要求分发点接受 HTTPS  
 
@@ -111,7 +115,7 @@ System Center Configuration Manager 支持工具和选项的一个可靠系统�
 ## <a name="content-library"></a>内容库  
  内容的单实例存储，Configuration Manager 使用它来减少分发内容的组合正文的总体大小。  
 
-了解关于[内容库](../../../core/plan-design/hierarchy/the-content-library.md)的详细信息
+了解关于[内容库](../../../core/plan-design/hierarchy/the-content-library.md)的详细信息。
 
 
 ## <a name="distribution-point"></a>分发点  
@@ -119,9 +123,9 @@ System Center Configuration Manager 支持工具和选项的一个可靠系统�
 
  基本（非专用）分发点通常称为标准分发点。  标准分发点有两种变体需要特别注意：  
 
--   **请求分发点** - 分发点的一种变体，其中分发点从另一个分发点（源分发点）获取内容，获取方式类似于客户端从分发点下载内容。 请求分发点可帮助你在站点服务器必须将内容直接分发给每个分发点时避免可能出现的网络带宽瓶颈。  [结合使用请求分发点与 System Center Configuration Manager](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point)  
+-   **请求分发点** - 分发点的一种变体，其中分发点从另一个分发点（源分发点）获取内容，获取方式类似于客户端从分发点下载内容。 请求分发点有助于在站点服务器必须将内容直接分发给每个分发点时避免可能出现的网络带宽瓶颈。  [结合使用请求分发点与 System Center Configuration Manager](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point)。
 
--   **基于云的分发点** - 安装在 Microsoft Azure 中的分发点的变体。 [结合使用基于云的分发点与 System Center Configuration Manager](../../../core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md)  
+-   **基于云的分发点** - 安装在 Microsoft Azure 中的分发点的变体。 [结合使用基于云的分发点与 System Center Configuration Manager](../../../core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md)。  
 
 
 标准分发点支持一系列的配置和功能，如限制和计划、PXE 和多播或预留内容。  
@@ -137,7 +141,7 @@ System Center Configuration Manager 支持工具和选项的一个可靠系统�
 ## <a name="distribution-point-group"></a>分发点组  
  可以简化内容分发的分发点逻辑分组。  
 
- 有关详细信息，请参阅[管理分发点组](../../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_manage)
+ 有关详细信息，请参阅[管理分发点组](../../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_manage)。
 
 ## <a name="distribution-point-priority"></a>分发点优先级  
  分发点优先级值取决于它将以前的部署传输到该分发点所花费的时间。  
@@ -155,18 +159,29 @@ System Center Configuration Manager 支持工具和选项的一个可靠系统�
 >  请求分发点也使用优先级的概念来对其源分发点的序列进行排序。  
 >   
 >  -   针对分发点的内容传输的分发点优先级与请求分发点在从源分发点中搜索内容时使用的优先级不同  
-> -   有关详细信息，请参阅[将请求分发点用于 System Center Configuration Manager](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point)  
+>  -   有关详细信息，请参阅[结合使用请求分发点与 System Center Configuration Manager](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point)。  
 
 
 ## <a name="fallback"></a>回退  
- 回退设置与 **首选分发点** 的使用和客户端使用的内容源位置相关。  
+ 从 1610 版起，关于客户端如何查找含有内容的分发点的几个概念已经发生了变化，其中包括回退。 请使用以下适用于所使用版本的信息：
+
+**1610 和更高版本：**   
+对于无法从与其当前边界组关联的分发点找到内容的客户端，可进行回退，以使用与临近边界组关联的内容源位置。 若要实现回退，临近边界组与客户端的当前边界组必须存在定义的关系。 此关系包含配置的时间，无法在本地找到内容的客户端必须在此时间后才能在其搜索中包含来自临近边界组的内容源。
+
+不再使用首选分发点概念，且无法再使用或执行“允许回退内容源位置”设置。
+
+有关详细信息，请参阅[边界组](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups)。
+
+
+**1511、1602 和 1606 版：**   
+回退设置与 **首选分发点** 的使用和客户端使用的内容源位置相关。
 
 -   默认情况下，客户端仅从（与客户端的边界组关联的）首选分发点下载内容  
 
 -   但是，当分发点配置为“允许客户端使用此站点系统作为内容的回退源位置”时，该分发点仅可作为有效的内容源提供给任何无法从其首选分发点之一获取部署的客户端。  
 
 
-有关不同的内容位置和回退方案的信息，请参阅[内容源位置方案](../../../core/plan-design/hierarchy/content-source-location-scenarios.md)。
+有关其他内容位置和回退方案的信息，请参阅[内容源位置方案](../../../core/plan-design/hierarchy/content-source-location-scenarios.md)。 有关边界组的信息，请参阅[1511、1602 和 1606 版的边界组](/sccm/core/servers/deploy/configure/boundary-groups-for-1511-1602-and-1606)。
 
 ## <a name="network-bandwidth"></a>网络带宽  
  可以使用以下选项，帮助管理分发内容时所使用的网络带宽量：  
@@ -175,19 +190,26 @@ System Center Configuration Manager 支持工具和选项的一个可靠系统�
 
 -   使用计划和限制：此配置有助于控制将内容分发到分发点的时间和方式。  
 
-有关详细信息，请参阅[管理网络带宽](/sccm/core/plan-design/hierarchy/manage-network-bandwidth)
+有关详细信息，请参阅[管理网络带宽](/sccm/core/plan-design/hierarchy/manage-network-bandwidth)。
 
 ## <a name="network-connection-speed-to-content-source"></a>到内容源的网络连接速度  
+从 1610 版起，关于客户端如何查找含有内容的分发点的几个概念已经发生了变化，其中包括连接到内容源的网络连接速度。 请使用以下适用于所使用版本的信息：
+
+**1610 和更高版本：**   
+不再使用将分发点定义为“快”或“慢”的网络连接速度。 相反，每个与边界组相关联的站点系统都将视为相同的系统。
+
+有关详细信息，请参阅[边界组](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups)。
+
+
+**1511、1602 和 1606 版：**   
+
  你可以配置边界组中每个分发点的网络连接速度：  
 
 -   客户端在连接到分发点时使用此值  
-
 -   默认情况下，网络连接速度配置为 **快**，但也可将其设置为 **慢**  
-
 -   **网络连接速度** 和部署配置确定当客户端位于关联的边界组中时是否能从分发点下载内容  
 
-
-有关不同的内容位置和回退方案的信息，请参阅[内容源位置方案](../../../core/plan-design/hierarchy/content-source-location-scenarios.md)。  
+有关其他内容位置和回退方案的信息，请参阅[内容源位置方案](../../../core/plan-design/hierarchy/content-source-location-scenarios.md)。 有关边界组的信息，请参阅[1511、1602 和 1606 版的边界组](/sccm/core/servers/deploy/configure/boundary-groups-for-1511-1602-and-1606)。
 
 ## <a name="on-demand-content-distribution"></a>按需内容分发  
  可为个别应用程序和包（部署）设置的一个选项，用于启用向首选分发点进行按需内容分发。  
@@ -198,34 +220,36 @@ System Center Configuration Manager 支持工具和选项的一个可靠系统�
 
 -   尽管这会触发 Configuration Manager 将内容自动分发到客户端首选分发点，但客户端仍可在其首选分发点接收到部署之前从其他分发点获取该内容。 当出现这种情况时，该内容将会显示在该分发点上，供搜寻该部署的下一个客户端使用  
 
+如果使用 1610 或更高版本，请参阅[边界组](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups)。
+如果使用1511、1602 或 1606 版，请参阅[内容源位置方案](../../../core/plan-design/hierarchy/content-source-location-scenarios.md)了解有关其他内容位置和回退方案的信息。  
 
-有关不同的内容位置和回退方案的信息，请参阅[内容源位置方案](../../../core/plan-design/hierarchy/content-source-location-scenarios.md)。  
 
 
 ## <a name="package-transfer-manager"></a>包传输管理器  
  将内容传输到其他计算机上分发点的站点服务器组件。  
 
- 了解关于[包传输管理器](../../../core/plan-design/hierarchy/package-transfer-manager.md)的详细信息  
+ 了解关于[包传输管理器](../../../core/plan-design/hierarchy/package-transfer-manager.md)的详细信息。  
 
 ## <a name="preferred-distribution-point"></a>首选分发点  
- 与客户端当前边界组关联的分发点。  
+ 首选分发点包括与客户端的当前边界组关联的所有分发点。  
 
  你可以选择将每个分发点关联到一个或多个边界组：  
 
 -   这种关联帮助客户端标识它可以从其中下载内容的分发点  
-
 -   默认情况下，客户端只能从首选分发点下载内容  
 
 
-有关不同的内容位置和回退方案的信息，请参阅[内容源位置方案](../../../core/plan-design/hierarchy/content-source-location-scenarios.md)。  
+更多相关信息：
+ - 如果使用 1610 或更高版本，请参阅[边界组](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups)。
+ - 如果使用 1511、1602 或 1606 版，请参阅[内容源位置方案](../../../core/plan-design/hierarchy/content-source-location-scenarios.md)。
 
 ## <a name="prestage-content"></a>预留内容  
  此进程可将内容传输到分发点，而不依赖 Configuration Manager 通过网络分发内容。  
 
- 有关详细信息，请参阅[管理网络带宽](/sccm/core/plan-design/hierarchy/manage-network-bandwidth)
+ 有关详细信息，请参阅[管理网络带宽](/sccm/core/plan-design/hierarchy/manage-network-bandwidth)。
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

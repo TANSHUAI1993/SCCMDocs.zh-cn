@@ -1,5 +1,5 @@
 ---
-title: "替换现有计算机和传输设置 | Configuration Manager"
+title: "替换现有计算机和传输设置 | Microsoft Docs"
 description: "在 Configuration Manager 中，从部署方法中进行选择，如可启动媒体、多播或软件中心，以将现有计算机替换成新计算机。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 82a2ebb830b872f8e6368be75b6d9beb1955ec27
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: 243433980e1720fd468d52a4a61f2c3a8e3659b5
 
 
 ---
@@ -86,6 +86,6 @@ ms.openlocfilehash: 82a2ebb830b872f8e6368be75b6d9beb1955ec27
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

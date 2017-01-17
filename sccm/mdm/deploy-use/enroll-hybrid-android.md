@@ -1,5 +1,5 @@
 ---
-title: "使用 System Center Configuration Manager 和 Microsoft Intune 设置 Android 混合设备管理"
+title: "使用 System Center Configuration Manager 和 Microsoft Intune 设置 Android 混合设备管理 | Microsoft Docs"
 description: "使用 Configuration Manager 和 Intune 准备管理 Android 移动设备。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -13,12 +13,12 @@ ms.topic: get-started-article
 ms.assetid: c517fe34-0130-465b-a020-bdb555878778
 caps.latest.revision: 9
 caps.handback.revision: 0
-author: NathBarn
-ms.author: nathbarn
+author: mtillman
+ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: fa189e812a2e3104cb337ccf40c693621745ee53
+ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
+ms.openlocfilehash: ab892174643e7565ad9a74abc4f83f2f152669bd
 
 
 ---
@@ -26,7 +26,7 @@ ms.openlocfilehash: fa189e812a2e3104cb337ccf40c693621745ee53
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-对于 System Center Configuration Manager，用户可以从 Google Play 中下载 Android 公司门户应用以注册 Android（包括 Samsung KNOX）设备。 利用 Android 公司门户应用，你可以管理符合性设置、擦除或删除 Android 设备、部署应用以及收集软件和硬件清单。 如果 Android 设备上未安装 Android 公司门户应用，则你不会拥有所有的管理功能，如清单和符合性设置，但是你仍然可以将应用部署到 Android 设备。  
+对于 System Center Configuration Manager，用户可以从 Google Play 中下载 Android 公司门户应用以注册 Android（包括 Samsung KNOX 标准版）设备。 利用 Android 公司门户应用，你可以管理符合性设置、擦除或删除 Android 设备、部署应用以及收集软件和硬件清单。 如果 Android 设备上未安装 Android 公司门户应用，则你不会拥有所有的管理功能，如清单和符合性设置，但是你仍然可以将应用部署到 Android 设备。  
 
 ## <a name="prepare-to-manage-android-mobile-devices-with-configuration-manager-and-intune"></a>使用 Configuration Manager 和 Intune 准备管理 Android 移动设备  
  以下步骤可让 Configuration Manager 管理 Android 设备。  
@@ -45,6 +45,6 @@ ms.openlocfilehash: fa189e812a2e3104cb337ccf40c693621745ee53
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "监视客户端 | System Center Configuration Manager"
+title: "监视客户端 | Microsoft Docs"
 description: "了解有关如何在 System Center Configuration Manager 中监视客户端的详细指南。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -12,12 +12,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2c8f57cf-1968-48de-87fb-4897432ed6e0
 caps.latest.revision: 23
-author: Mtillman
-ms.author: mtillman
+author: nbigman
+ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 9961932a35a685626c021613d69f9b223f781d46
+ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
+ms.openlocfilehash: d3b7e917ccf841f8f5687b0afa5acaf151730ba6
 
 
 ---
@@ -112,6 +112,6 @@ ms.openlocfilehash: 9961932a35a685626c021613d69f9b223f781d46
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

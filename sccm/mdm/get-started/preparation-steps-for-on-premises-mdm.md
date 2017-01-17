@@ -1,5 +1,5 @@
 ---
-title: "准备步骤 | 本地 MDM |System Center Configuration Manager"
+title: "准备步骤 | Microsoft Docs | 本地 MDM"
 description: "准备在 System Center Configuration Manager 中通过本地移动设备管理对设备进行管理。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 21bac2eae1aaea5bbd5897fcd4eb2aa11538aac7
+ms.sourcegitcommit: 0d6479bcc134103e6005159a8ea295a5f359a436
+ms.openlocfilehash: a5c9fa5994f9b7bd13fe53edb6998609852b98ca
 
 
 ---
@@ -47,6 +47,6 @@ ms.openlocfilehash: 21bac2eae1aaea5bbd5897fcd4eb2aa11538aac7
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

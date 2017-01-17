@@ -1,5 +1,5 @@
 ---
-title: "创建用于捕获和还原用户状态的任务序列 | Configuration Manager"
+title: "创建用于捕获和还原用户状态的任务序列 | Microsoft Docs"
 description: "使用 System Center Configuration Manager 任务序列捕获和还原操作系统部署方案中的用户状态数据。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 4b3a3bf206dc273eabf88c680ca00688b6183115
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: fdfbdd1acb1190ca7de9cff2b4b7f916d8dc1272
 
 
 ---
@@ -172,6 +172,6 @@ ms.openlocfilehash: 4b3a3bf206dc273eabf88c680ca00688b6183115
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

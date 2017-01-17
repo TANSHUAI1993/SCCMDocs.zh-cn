@@ -1,5 +1,5 @@
 ---
-title: "迁移内容 |System Center Configuration Manager"
+title: "迁移内容 | Microsoft Docs"
 description: "将数据迁移到 System Center Configuration Manager 目标层次结构中时，使用分发点来管理内容。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: aa88f18247b49995bff4a4a6f5fd1e1ed70ca214
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: c96fa0995b5de87f50e1146b338058f26daeb624
 
 
 ---
@@ -188,8 +188,23 @@ ms.openlocfilehash: aa88f18247b49995bff4a4a6f5fd1e1ed70ca214
 
  为重新分配分发点，目标层次结构会使用配置的“源站点访问帐户”从源站点的 SMS 提供程序收集数据。 有关必需的权限和附加的先决条件的信息，请参阅 [System Center Configuration Manager 中迁移的先决条件](../../core/migration/prerequisites-for-migration.md)。  
 
+## <a name="migrate-multiple-shared-distribution-points-at-the-same-time"></a>同时迁移多个共享分发点
+从 1610 版起，可以通过该选项**重新分配分发点**以便 Configuration Manager 可同时并行处理最多 50 个共享分发点的重新分配。 这包括支持的源站点中运行以下项的共享分发点：  
+- Configuration Manager 2007
+- System Center 2012 Configuration Manager
+- System Center 2012 R2 Configuration Manager
+- System Center Configuration Manager Current Branch 站点
+
+重新分配分发点时，必须将每个分发点限定为已升级或已重新分配。 所涉及操作和过程的名称（升级或重新分配）取决于源站点运行的 Configuration Manager 版本。 但无论是已升级还是已重新分配，其最终结果是相同的：分发点及其内容就地分配给其中一个 Current Branch 站点。
+
+1610 版之前，Configuration Manager 一次只能处理一个分发点。 现在可以随意重新分配多个分发点，但会出现以下警告：  
+- 尽管不可选择要重新分配的多个分发点，但有多个分发点排队等候处理时，Configuration Manager 将采用并行处理，而不会等待当前处理完成后才开始下一个。  
+- 默认情况下，最多可同时并行处理 50 个分发点。 第一个分发点的重新分配完成后，Configuration Manager 将开始处理第 51 个，依次类推。  
+- 使用 Configuration Manager SDK 时，可以修改 **SharedDPImportThreadLimit** 属性以调整 Configuration Manager 可以并行处理重新分配的分发点数量。
+
+
 ##  <a name="a-nameaboutmigratingcontenta-content-ownership-when-migrating-content"></a><a name="About_Migrating_Content"></a> 迁移内容时的内容所有权  
- 在为部署迁移内容时，你必须将内容对象分配给目标层次结构中的站点。 此站点随后将成为目标层次结构中该内容的所有者。 尽管目标层次结构的顶层站点是实际迁移内容元数据的站点，但却是分配的站点在网络上访问内容的原始源文件。  
+ 在为部署迁移内容时，你必须将内容对象分配给目标层次结构中的站点。 此站点随后将成为目标层次结构中该内容的所有者。 尽管目标层次结构的顶层站点是迁移内容元数据的站点，但却是分配的站点在网络上访问内容的原始源文件。  
 
  为了最大程度地减少迁移内容时使用的网络带宽，请考虑将内容的所有权转让给目标层次结构中的站点，该站点在网络上与源层次结构中的内容位置接近。 由于有关目标层次结构中的内容的信息是全局共享的，因此该信息将在每个站点上可用。  
 
@@ -197,6 +212,6 @@ ms.openlocfilehash: aa88f18247b49995bff4a4a6f5fd1e1ed70ca214
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

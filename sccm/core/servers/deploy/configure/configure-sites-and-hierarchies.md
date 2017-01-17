@@ -1,5 +1,5 @@
 ---
-title: "配置站点 |System Center Configuration Manager"
+title: "配置站点 | Microsoft Docs"
 description: "查阅此清单以确保你考虑到会同时影响站点和层次结构的最常见配置。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 470efc428045398588345f4546eb27831837715c
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: a6936dac2159118b192a930eecb4595b0f4d4a59
 
 
 ---
@@ -55,6 +55,6 @@ ms.openlocfilehash: 470efc428045398588345f4546eb27831837715c
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Windows 客户端部署的先决条件 | System Center Configuration Manager"
+title: "Windows 客户端部署先决条件 | Microsoft Docs"
 description: "了解在 System Center Configuration Manager 中将客户端部署到 Windows 计算机的先决条件。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -13,12 +13,12 @@ ms.topic: get-started-article
 ms.assetid: 1a2a9b48-a95b-4643-b00c-b3079584ae2e
 caps.latest.revision: 16
 caps.handback.revision: 0
-author: Mtillman
-ms.author: mtillman
+author: nbigman
+ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 03ae6de34742ed0030e42c13639ef853d6b2bedc
+ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
+ms.openlocfilehash: cbcffea0fe2b4c8a05d3a835ff1193b528e55762
 
 
 ---
@@ -58,7 +58,7 @@ ms.openlocfilehash: 03ae6de34742ed0030e42c13639ef853d6b2bedc
 |Microsoft Core XML Services (MSXML) 版本 6.20.5002 或更高版本|要求支持在 Windows 中处理 XML 文档。|  
 |Microsoft 远程差分压缩 (RDC)|需要该项以优化网络上的数据传输。|  
 |Microsoft Visual C++ 2013 可再发行组件版本 12.0.21005.1|需要该项以支持客户端操作。 客户端计算机上安装此更新后，可能需要重新启动才能完成安装。|  
-|Microsoft Visual C++ 2005 可再发行组件版本 8.0.50727.42|需要该项以支持 Microsoft SQL Server Compact 操作。|  
+|Microsoft Visual C++ 2005 可再发行组件版本 8.0.50727.42|对于 1606 或更早版本，需要该项以支持 Microsoft SQL Server Compact 操作。|  
 |Windows 映像 API 6.0.6001.18000|需要该项以允许 Configuration Manager 管理 Windows 映像 (.wim) 文件。|  
 |Microsoft 策略平台 1.2.3514.0|需要该项以允许客户端评估符合性设置。|  
 |Microsoft Silverlight 5.1.41212.0（从 Configuration Manager 版本 1602 开始）|需要该项以支持应用程序目录网站用户体验。|  
@@ -238,6 +238,6 @@ ms.openlocfilehash: 03ae6de34742ed0030e42c13639ef853d6b2bedc
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

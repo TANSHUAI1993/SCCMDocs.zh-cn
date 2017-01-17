@@ -1,5 +1,5 @@
 ---
-title: "用于软件更新图标 | Configuration Manager"
+title: "用于软件更新的图标 | Microsoft Docs"
 description: "Configuration Manager 控制台包含指示已同步更新或软件更新组的状态的图标。"
 keywords: 
 author: dougeby
@@ -13,8 +13,8 @@ ms.technology:
 - configmgr-sum
 ms.assetid: 63c5ef72-5715-4d86-85a2-71beba469fab
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 48b0296809400805bdba9e6ebd163a0c39b37968
+ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
+ms.openlocfilehash: 04c5ccc53263b2672096b564695a636bfb28d952
 
 
 ---
@@ -28,7 +28,7 @@ ms.openlocfilehash: 48b0296809400805bdba9e6ebd163a0c39b37968
  同步后的软件更新由以下其中一个图标表示。  
 
 ### <a name="normal-icon"></a>“正常”图标  
- ![图标](../media/Normal.jpg "Normal icon") 带有绿色箭头的图标表示正常的软件更新。  
+ ![图标](../media/Normal.jpg "“正常”图标") 带有绿色箭头的图标表示正常的软件更新。  
 
  **描述：**  
 
@@ -39,7 +39,7 @@ ms.openlocfilehash: 48b0296809400805bdba9e6ebd163a0c39b37968
  没有操作问题。  
 
 ### <a name="expired-icon"></a>“被取代”图标  
- ![图标](../media/Expired.jpg "Expired icon") 带有黑色 X 的图标表示过期的软件更新。 当软件更新显示在 Configuration Manager 控制台中时，也可以通过查看软件更新的“已过期”列来识别过期的软件更新。  
+ ![图标](../media/Expired.jpg "“已过期”图标") 带有黑色 X 的图标表示过期的软件更新。 当软件更新显示在 Configuration Manager 控制台中时，也可以通过查看软件更新的“已过期”列来识别过期的软件更新。  
 
  **描述：**  
 
@@ -50,7 +50,7 @@ ms.openlocfilehash: 48b0296809400805bdba9e6ebd163a0c39b37968
  没有操作问题。
 
 ### <a name="superseded-icon"></a>“被取代”图标  
- ![图标](../media/Superseded.jpg "Superseded icon") 带有黄色星号的图标表示被取代的软件更新。 当软件更新显示在 Configuration Manager 控制台中时，也可以通过查看软件更新的“被取代”列来识别被取代的软件更新。  
+ ![图标](../media/Superseded.jpg "“被取代”图标") 带有黄色星号的图标表示被取代的软件更新。 当软件更新显示在 Configuration Manager 控制台中时，也可以通过查看软件更新的“被取代”列来识别被取代的软件更新。  
 
  **描述：**  
 
@@ -69,7 +69,7 @@ ms.openlocfilehash: 48b0296809400805bdba9e6ebd163a0c39b37968
  如果可能，将用于取代的软件更新而不是被取代的更新部署到客户端计算机上。 你可以在软件更新属性中的“取代信息”  选项卡上显示用于取代软件更新的软件更新列表。  
 
 ### <a name="invalid-icon"></a>“无效”图标  
- ![图标](../media/Invalid.jpg "Invalid icon") 带有红色 X 的图标表示无效的软件更新。  
+ ![图标](../media/Invalid.jpg "“无效”图标") 带有红色 X 的图标表示无效的软件更新。  
 
  **描述：**  
 
@@ -84,7 +84,7 @@ ms.openlocfilehash: 48b0296809400805bdba9e6ebd163a0c39b37968
  当软件更新缺少内容时，客户端将无法安装软件更新，直到内容在分发点上可用。 你可以通过使用“重新分发”  操作，将内容重新分发到分发点。 当在父站点创建的部署中缺少软件更新的内容时，必须将软件更新复制或重新分发到子站点上。 有关内容重新分发的详细信息，请参阅[管理已分发的内容](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_manage)。  
 
 ### <a name="metadata-only-icon"></a>“仅元数据”图标
- ![图标](../media/MetadataOnly.png "Metadata-only icon") 带有蓝色箭头的图标表示仅元数据软件更新。
+ ![图标](../media/MetadataOnly.png "“仅元数据”图标") 带有蓝色箭头的图标表示仅元数据软件更新。
 
  **描述：**  
 
@@ -98,28 +98,28 @@ ms.openlocfilehash: 48b0296809400805bdba9e6ebd163a0c39b37968
  软件更新组由以下其中一个图标表示。  
 
 ### <a name="normal-icon"></a>“正常”图标  
- ![图标](../media/Normal.jpg "Normal icon") 带有绿色箭头的图标表示仅包含正常的软件更新的软件更新组。  
+ ![图标](../media/Normal.jpg "“正常”图标") 带有绿色箭头的图标表示仅包含正常软件更新的软件更新组。  
 
  **操作问题：**  
 
  没有操作问题。  
 
 ### <a name="expired-icon"></a>“被取代”图标  
- ![图标](../media/Expired.jpg "Expired icon") 带有黑色 X 的图标表示包含一个或多个过期的软件更新的软件更新组。  
+ ![图标](../media/Expired.jpg "“已过期”图标") 带有黑色 X 的图标表示包含一个或多个过期的软件更新的软件更新组。  
 
  **操作问题：**  
 
  如果可能，删除或替换软件更新组中过期的软件更新。  
 
 ### <a name="superseded-icon"></a>“被取代”图标  
- ![图标](../media/Superseded.jpg "Superseded icon") 带有黄色星号的图标表示包含一个或多个被取代的软件更新的软件更新组。  
+ ![图标](../media/Superseded.jpg "“被取代”图标") 带有黄色星号的图标表示包含一个或多个被取代的软件更新的软件更新组。  
 
  **操作问题：**  
 
  如果可能，将软件更新组中被取代的软件更新替换为用于取代的软件更新。  
 
 ### <a name="invalid-icon"></a>“无效”图标  
- ![图标](../media/Invalid.jpg "Invalid icon") 带有红色 X 的图标表示包含一个或多个无效的软件更新的软件更新组。  
+ ![图标](../media/Invalid.jpg "“无效”图标") 带有红色 X 的图标表示包含一个或多个无效的软件更新的软件更新组。  
 
  **操作问题：**  
 
@@ -127,6 +127,6 @@ ms.openlocfilehash: 48b0296809400805bdba9e6ebd163a0c39b37968
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

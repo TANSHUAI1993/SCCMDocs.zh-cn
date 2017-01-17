@@ -1,5 +1,5 @@
 ---
-title: "将 Windows 升级到最新版本 | Configuration Manager"
+title: "将 Windows 升级到最新版本 | Microsoft Docs"
 description: "了解如何在 Configuration Manager 中使用独立媒体或软件中心，将操作系统从 Windows 7 或更高版本升级到 Windows 10。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: b44258255345c2e5488846736ddc1df48a147616
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: 147841212dbb85dd9d4ee7c8a79ca7869584fd99
 
 
 ---
@@ -88,6 +88,6 @@ ms.openlocfilehash: b44258255345c2e5488846736ddc1df48a147616
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

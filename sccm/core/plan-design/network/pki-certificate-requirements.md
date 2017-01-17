@@ -1,8 +1,8 @@
 ---
-title: "PKI 证书要求 | System Center Configuration Manager"
+title: "PKI 证书要求 | Microsoft Docs"
 description: "查找 System Center Configuration Manager 可能需要的 PKI 证书的要求。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/07/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: fbc85f65e4ad952d40161e6f6282bb6c0796662b
+ms.sourcegitcommit: db0642e95bbd7e704d2052aa1e0f5c27cd7bf568
+ms.openlocfilehash: 00c3c355fc43eff18b86112b0b9272cbcdf38e85
 
 
 ---
@@ -32,7 +32,7 @@ ms.openlocfilehash: fbc85f65e4ad952d40161e6f6282bb6c0796662b
 -   对于 Windows Server 2008： [Windows Server 2008 中的 Active Directory 证书服务](http://go.microsoft.com/fwlink/p/?LinkId=115018)  
 
 > [!IMPORTANT]  
->  自 2017 年 1 月 1 日起生效， Windows 将不再信任使用 SHA-1 签名的证书。  建议颁发使用 SHA-2 签名的新服务器和客户端身份验证证书。  
+>  自 2017 年 1 月 1 日起生效， Windows 将不再信任使用 SHA-1 签名的证书。  建议颁发使用 SHA-2（包括 SHA-256）签名的新服务器和客户端身份验证证书。  
 >   
 >  有关此更改的详细信息（以及可能的截止日期更新），请关注以下博客文章： [Windows Enforcement of Authenticode Code Signing and Timestamping（Windows 对于签名和时间戳强制使用验证码）](http://social.technet.microsoft.com/wiki/contents/articles/32288.windows-enforcement-of-authenticode-code-signing-and-timestamping.aspx)  
 
@@ -86,6 +86,6 @@ ms.openlocfilehash: fbc85f65e4ad952d40161e6f6282bb6c0796662b
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

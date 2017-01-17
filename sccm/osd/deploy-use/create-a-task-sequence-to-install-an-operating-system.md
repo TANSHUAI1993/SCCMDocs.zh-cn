@@ -1,5 +1,5 @@
 ---
-title: "创建任务序列来安装操作系统 | Configuration Manager"
+title: "创建用于安装操作系统的任务序列 | Microsoft Docs"
 description: "在 System Center Configuration Manager 中使用任务序列，自动在目标计算机上安装操作系统映像和其他内容。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 5c2823ddfc873864b7617d730e14742b7451ef0f
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: 41aa6cf69a746f0ab67d804f1ee0c70db05d65ee
 
 
 ---
@@ -159,6 +159,6 @@ ms.openlocfilehash: 5c2823ddfc873864b7617d730e14742b7451ef0f
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

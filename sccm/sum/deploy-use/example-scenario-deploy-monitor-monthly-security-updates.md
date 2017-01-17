@@ -1,6 +1,6 @@
 ---
 
-title: "部署和监视安全软件更新的示例方案 | Configuration Manager"
+title: "部署和监视安全软件更新的示例方案 | Microsoft Docs"
 description: "请使用此示例方案以了解如何在 Configuration Manager 中使用软件更新以部署和监视 Microsoft 每月发布的安全软件更新。"
 keywords: 
 author: dougeby
@@ -14,8 +14,8 @@ ms.technology:
 ms.service: 
 ms.assetid: c32f757a-02da-43f2-b055-5cfd097d8c43
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: cd03ddda0a39704a5715f7ed8d620daaefb57653
+ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
+ms.openlocfilehash: 0e6e2b3a9455bb6eda437eb1325aaaadb3d83420
 
 
 
@@ -96,6 +96,6 @@ John 已成功完成每月的安全软件更新部署。 他继续监视和报�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

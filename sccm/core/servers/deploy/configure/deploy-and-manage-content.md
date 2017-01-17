@@ -1,5 +1,5 @@
 ---
-title: "部署内容 | System Center Configuration Manager"
+title: "部署内容 | Microsoft Docs"
 description: "为 System Center Configuration Manager 安装分发点之后，下面介绍如何开始将内容部署到它们。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: c6bf461a762b8aa51678a17cb7b294c803d05f37
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: 36b08285ef78d0acb9ba9c44abe2d57e311d44b3
 
 ---
 # <a name="deploy-and-manage-content-for-system-center-configuration-manager"></a>为 System Center Configuration Manager 部署和管理内容
@@ -307,43 +307,19 @@ ms.openlocfilehash: c6bf461a762b8aa51678a17cb7b294c803d05f37
 
 ##  <a name="a-namebkmkmanagea-manage-the-content-you-have-distributed"></a><a name="bkmk_manage"></a>管理已分发的内容  
  你具有以下用于管理内容的选项：  
+ - [更新内容](#update-content)
+ - [重新分发内容](#redistribute-content)
+ - [删除内容](#remove-content)
+ - [验证内容](#validate-content)
 
-**更新内容：**当通过添加新文件或使用较新版本替换现有文件更新了部署的源文件位置时，你可以使用“更新分发点”或“更新内容”操作更新分发点上的内容文件：  
-
+### <a name="update-content"></a>更新内容
+当通过添加新文件或使用较新版本替换现有文件更新了部署的源文件位置时，可以使用“更新分发点”或“更新内容”操作更新分发点上的内容文件：  
 -   内容文件将从源文件路径复制到拥有包内容源的站点上的内容库  
-
 -   包版本将递增  
-
 -   站点服务器上和分发点上内容库的每个实例仅更新已更改的文件  
 
 > [!WARNING]  
 >  应用程序的包版本始终为 1。 当你更新应用程序部署类型的内容时，Configuration Manager 将为该部署类型创建新的内容 ID，并且包将引用该新内容 ID。  
-
-**重新分发内容：**你可以重新分发包以将包中的所有内容文件复制到分发点或分发点组，从而覆盖现有文件。  
-
- 使用此操作来修复包中的内容文件或在初始分发失败时重新发送内容。 可通过以下项目重新分发包：  
-
--   包属性  
-
--   分发点属性  
-
--   分发点组属性。  
-
-**删除内容：**不再需要分发点上的内容时，可以删除分发点上的内容文件。  
-
--   包属性  
-
--   分发点属性  
-
--   分发点组属性。  
-
- 但是，如果内容与分发到相同分发点上的另一个包关联，则无法删除此内容。 可通过以下项目删除内容：  
-
-**验证内容：**内容验证过程验证分发点上内容文件的完整性。 你可以按计划启用内容验证，或者可以从分发点和包的属性中手动启动内容验证。  
-
- 当内容验证过程开始时，Configuration Manager 将验证分发点上的内容文件，且如果文件哈希并非分发点上的文件所需的，则 Configuration Manager 将创建一个可在“监视”工作区查看的状态消息。  
-
- 有关配置内容验证计划的详细信息，请参阅[为 System Center Configuration Manager 安装和配置分发点](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md)主题中的[分发点配置](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_configs)。  
 
 #### <a name="to-update-content-on-distribution-points"></a>更新分发点上的内容  
 
@@ -372,6 +348,16 @@ ms.openlocfilehash: c6bf461a762b8aa51678a17cb7b294c803d05f37
 
     > [!NOTE]  
     >  在更新启动映像的内容时，管理分发点向导将打开。 查看“摘要”  页上的信息，然后完成向导以更新内容。  
+
+### <a name="redistribute-content"></a>重新分发内容
+你可以重新分发包以将包中的所有内容文件复制到分发点或分发点组，从而覆盖现有文件。  
+
+ 使用此操作来修复包中的内容文件或在初始分发失败时重新发送内容。 可通过以下项目重新分发包：  
+
+-   包属性  
+-   分发点属性  
+-   分发点组属性。  
+
 
 #### <a name="to-redistribute-content-from-package-properties"></a>从包属性中重新分发内容  
 
@@ -420,6 +406,23 @@ ms.openlocfilehash: c6bf461a762b8aa51678a17cb7b294c803d05f37
     > [!IMPORTANT]  
     >  包中的内容会重新分发到分发点组内的所有分发点。  
 
+
+#### <a name="use-the-sdk-to-force-replication-of-content"></a>使用 SDK 强制复制内容
+可以使用 Configuration Manager SDK 的 **RetryContentReplication** Windows Management Instrumentation (WMI) 类方法强制分发管理器将内容从源位置复制到内容库中。  
+
+仅在正常的内容复制出现问题（通常使用控制台的监视节点来确认）之后必须重新分发内容时，使用此方法强制进行复制。   
+
+有关此 SDK 选项的详细信息，请参阅 MSDN.Microsoft.com 上的 [RetryContentReplication Method in Class SMS_CM_UpdatePackages](https://msdn.microsoft.com/library/mt762092(CMSDK.16).aspx)（SMS_CM_UpdatePackages 类中的 RetryContentReplication 方法）。
+
+### <a name="remove-content"></a>删除内容
+不再需要分发点上的内容时，可以删除分发点上的内容文件。  
+
+-   包属性  
+-   分发点属性  
+-   分发点组属性。  
+
+但是，如果内容与分发到相同分发点上的另一个包关联，则无法删除此内容。  
+
 #### <a name="to-remove-package-content-files-from-distribution-points"></a>从分发点中删除包内容文件  
 
 1.  在 Configuration Manager 控制台中，单击“软件库” 。  
@@ -464,6 +467,15 @@ ms.openlocfilehash: c6bf461a762b8aa51678a17cb7b294c803d05f37
 
 4.  单击“内容”  选项卡，选择要删除的内容，单击“删除” ，然后单击“确定” 。  
 
+
+### <a name="validate-content"></a>验证内容
+内容验证过程验证分发点上内容文件的完整性。 你可以按计划启用内容验证，或者可以从分发点和包的属性中手动启动内容验证。  
+
+ 当内容验证过程开始时，Configuration Manager 将验证分发点上的内容文件，且如果文件哈希并非分发点上的文件所需的，则 Configuration Manager 将创建一个可在“监视”工作区查看的状态消息。  
+
+ 有关配置内容验证计划的详细信息，请参阅[为 System Center Configuration Manager 安装和配置分发点](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md)主题中的[分发点配置](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_configs)。  
+
+
 #### <a name="to-initiate-content-validation-for-all-content-on-a-distribution-point"></a>启动对分发点上所有内容的内容验证  
 
 1.  在 Configuration Manager 控制台中，单击“管理” 。  
@@ -504,6 +516,6 @@ ms.openlocfilehash: c6bf461a762b8aa51678a17cb7b294c803d05f37
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

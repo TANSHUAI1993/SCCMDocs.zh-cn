@@ -1,5 +1,5 @@
 ---
-title: "报表 | Configuration Manager"
+title: "报告 | Microsoft Docs"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 12676f8cb483128820c0a8a92ca73ee550322bb2
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: cebc48180144ae0d711ff09d16be7c37ec237cfa
 
 
 ---
@@ -42,6 +42,6 @@ System Center Configuration Manager 中的报表功能提供了一组工具和�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

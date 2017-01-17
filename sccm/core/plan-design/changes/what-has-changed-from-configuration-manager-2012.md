@@ -1,5 +1,5 @@
 ---
-title: "自 Configuration Manager 2012 以来的更改| System Center Configuration Manager "
+title: "自 Configuration Manager 2012 以来的更改 | Microsoft Docs "
 description: "识别与 System Center 2012 Configuration Manager 相比，System Center Configuration Manger 中更改的内容和新功能。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 0f3b68fb17920b0abacc1428c8763ec8c06e6b22
+ms.sourcegitcommit: 828e2ac9a3f9bcea1571d24145a1021fdf1091f3
+ms.openlocfilehash: 3ede76bd60372dcef2b1b3230577ee3c3f1e2dcd
 
 
 ---
@@ -140,7 +140,7 @@ ms.openlocfilehash: 0f3b68fb17920b0abacc1428c8763ec8c06e6b22
 
     -   未使用 Configuration Manager 客户端管理的 iOS 和 Mac OS X 设备  
 
-    -   未使用 Configuration Manager 客户端管理的 Android 和 Samsung KNOX 设备  
+    -   未使用 Configuration Manager 客户端管理的 Android 和 Samsung KNOX 标准版设备  
 
      请参阅[如何在 System Center Configuration Manager 中创建配置项目](../../../compliance/deploy-use/create-configuration-items.md)。  
 
@@ -158,7 +158,7 @@ ms.openlocfilehash: 0f3b68fb17920b0abacc1428c8763ec8c06e6b22
 
 -   添加了设备注册管理器角色，以帮助管理大量设备  
 
-有关 Configuration Manager 和 Intune 的移动设备管理功能的详细信息，请参阅 [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../../mdm/plan-design/hybrid-mobile-device-management.md)（System Center Configuration Manager 和 Microsoft Intune 的混合移动设备管理 (MDM)）。  
+有关 Configuration Manager 和 Intune 的移动设备管理功能的详细信息，请参阅 [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../../mdm/understand/hybrid-mobile-device-management.md)（System Center Configuration Manager 和 Microsoft Intune 的混合移动设备管理 (MDM)）。  
 
 ## <a name="on-premises-mobile-device-management"></a>本地移动设备管理  
  通过 System Center Configuration Manager，现在可使用本地 Configuration Manager 基础结构管理移动设备。 所有设备管理和管理数据都在本地处理并且不是 Microsoft Intune 或其他云设备的一部分。 此类型的设备管理不需要客户端软件，因为 Configuration Manager 用于管理设备的功能是内置于设备操作系统中的。  
@@ -167,6 +167,6 @@ ms.openlocfilehash: 0f3b68fb17920b0abacc1428c8763ec8c06e6b22
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

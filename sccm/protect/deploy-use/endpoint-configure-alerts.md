@@ -1,5 +1,5 @@
 ---
-title: "配置 Endpoint Protection 警报 |System Center Configuration Manager"
+title: "配置 Endpoint Protection 警报 | Microsoft Docs"
 description: "了解如何在 Microsoft System Center 2012 Configuration Manager 中配置 Endpoint Protection 警报。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,13 +16,13 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 38abfd1823972f8fea9966d74ae7c00a48baeb8b
+ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
+ms.openlocfilehash: 7ade196766d036f5dbca2b39efad380c7895847c
 
 
 ---
 
-#  <a name="configure-alerts-for-endpoint-protection-in-configuration-manager"></a>在 Configuration Manager 中为 Endpoint Protectio 配置警报
+#  <a name="configure-alerts-for-endpoint-protection-in-configuration-manager"></a>在 Configuration Manager 中为 Endpoint Protection 配置警报
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
@@ -98,6 +98,6 @@ ms.openlocfilehash: 38abfd1823972f8fea9966d74ae7c00a48baeb8b
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

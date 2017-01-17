@@ -1,5 +1,5 @@
 ---
-title: "应使用哪一个分支 |System Center Configuration Manager"
+title: "应该使用哪一个分支 | Microsoft Docs"
 description: "了解 System Center Configuration Manager 可用分支之间的差异。"
 ms.custom: na
 ms.date: 10/12/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: bbaaf9ed876f7693ea831be7c787dba904197a62
-ms.openlocfilehash: 3957e854e980246c410f7de27caed9d66fc4829f
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: 153caaead350479441d1a94ccaed1b9f3f6c5ffe
 
 
 ---
@@ -74,7 +74,12 @@ LTSB 不会收到提供新功能或更新现有功能的控制台中更新。 �
 若要将 LTSB 作为新站点或作为来自受支持的 Configuration Manager 2012 站点的升级对其进行安装，请使用版本 1606 [基线介质](/sccm/core/servers/manage/updates#baseline-and-update-versions)，该基线介质以 DVD 形式随附在 System Center 2016 或 System Center Configuration Manager (Current Branch and Long-Term Servicing Branch 1606) 版本中。 可以使用基线介质安装运行 Current Branch 版本 1606 的新站点或运行 Long-Term Servicing Branch 的新站点。
 
 > [!TIP]  
-> 若要了解有关 System Center 2016 的信息，请参阅 [System Center 2016 文档](https://technet.microsoft.com/system-center-docs/System-Center-2016)。 本文档还说明如何获取 System Center 2016（需要 Microsoft 许可证协议或类似权限）。  也可以从 [TechNet 评估中心](https://www.microsoft.com/evalcenter/evaluate-system-center-technical-preview)获取 System Center 2016 评估版。
+> 若要了解有关 System Center 2016 的信息，请参阅 [System Center 2016 文档](https://technet.microsoft.com/system-center-docs/system-center)。 本文档还说明如何获取 System Center 2016（需要 Microsoft 许可证协议或类似权限）。
+
+> 若要在批量许可服务中心 (VLSC) 查找 System Center Configuration Manager 版本 1606，请转到 [VLSC] 的“下载和密钥”选项卡 (https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx)，搜索 *system center config*，然后选择“System Center Config Mgr（当前分支和 LTSB 1606）”。
+
+>
+ 也可以从 [TechNet 评估中心](https://www.microsoft.com/evalcenter/evaluate-system-center-technical-preview)获取 System Center 2016 评估版。
 
 **LTSB 的功能：**
 -   接收提供关键安全修补程序的控制台中更新。
@@ -137,6 +142,6 @@ Technical Preview 适用于在实验室环境中了解和试用为 Configuration
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

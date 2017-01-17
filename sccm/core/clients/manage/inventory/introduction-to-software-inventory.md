@@ -1,5 +1,5 @@
 ---
-title: "软件清单 | System Center Configuration Manager"
+title: "软件清单 | Microsoft Docs"
 description: "获取 System Center Configuration Manager 中的软件清单简介。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 8d664616e222119f7821a70a7c8f9cdbfca38538
+ms.sourcegitcommit: a468ce93e9536fe3f6bf0fc191ff9764dd1c3343
+ms.openlocfilehash: 401ba6e37d740310d49ab9e96112ce576d7130e4
 
 
 ---
@@ -34,7 +34,7 @@ ms.openlocfilehash: 8d664616e222119f7821a70a7c8f9cdbfca38538
 
 -   创建基于你指定的文件返回设备的查询（这些文件可在设备上找到）。 有关详细信息，请参阅 [System Center Configuration Manager 的查询技术参考](../../../../core/servers/manage/queries-technical-reference.md)。  
 
--   创建基于你指定的文件的基于查询的集合（这些文件可在设备上找到）。 基于查询的集合成员身份会按计划自动更新。 可以使用多个任务的集合，如软件部署。 有关详细信息，请参阅 [System Center Configuration Manager 的集合技术参考](../../../../core/clients/manage/collections/collections-technical-reference.md)。  
+-   创建基于你指定的文件的基于查询的集合（这些文件可在设备上找到）。 基于查询的集合成员身份会按计划自动更新。 可以使用多个任务的集合，如软件部署。 有关详细信息，请参阅 [System Center Configuration Manager 中的集合简介](../../../../core/clients/manage/collections/introduction-to-collections.md)。  
 
 -   运行报表，该报表可显示贵组织中设备上的文件的特定详细信息。 有关详细信息，请参阅 [System Center Configuration Manager 中的报表](../../../../core/servers/manage/reporting.md)。  
 
@@ -54,6 +54,7 @@ ms.openlocfilehash: 8d664616e222119f7821a70a7c8f9cdbfca38538
 
 |平台|个人拥有设备|公司拥有设备|  
 |--------------|---------------------------------|--------------------------------|  
+|Windows 10（不带 Configuration Manager 客户端）|仅托管应用|仅托管应用| 
 |Windows 8.1（不带 Configuration Manager 客户端）|仅托管应用|仅托管应用|  
 |Windows Phone 8|仅托管应用|仅托管应用|  
 |Windows RT|仅托管应用|仅托管应用|  
@@ -62,6 +63,6 @@ ms.openlocfilehash: 8d664616e222119f7821a70a7c8f9cdbfca38538
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

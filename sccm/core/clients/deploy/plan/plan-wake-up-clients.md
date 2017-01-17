@@ -1,5 +1,5 @@
 ---
-title: "唤醒客户端 |System Center Configuration Manager"
+title: "唤醒客户端 | Microsoft Docs"
 description: "计划如何在 System Center Configuration Manager 中唤醒客户端。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -12,12 +12,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 52ee82b2-0b91-4829-89df-80a6abc0e63a
 caps.latest.revision: 6
-author: Mtillman
-ms.author: mtillman
+author: nbigman
+ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 154908fd78f0e6c96a8f51026f040bf45dd47979
+ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
+ms.openlocfilehash: 12ee719a6a8b072fab27d083aeb2b8439484058d
 
 ---
 # <a name="plan-how-to-wake-up-clients-in-system-center-configuration-manager"></a>计划如何在 System Center Configuration Manager 中唤醒客户端
@@ -99,6 +99,6 @@ ms.openlocfilehash: 154908fd78f0e6c96a8f51026f040bf45dd47979
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

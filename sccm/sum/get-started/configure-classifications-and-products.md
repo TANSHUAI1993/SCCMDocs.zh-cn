@@ -1,6 +1,6 @@
 ---
 
-title: "配置要同步的分类和产品 | System Center Configuration Manager"
+title: "配置要同步的分类和产品 | Microsoft Docs"
 description: "按照以下步骤在 Configuration Manager 控制台中配置要同步的分类和产品。"
 keywords: 
 author: dougeby
@@ -14,8 +14,8 @@ ms.technology:
 - configmgr-sum
 ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 46cf461c92348e1a90533518355f2b5982ae5770
+ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
+ms.openlocfilehash: 6add66e625c790b65edf64216c2262a5d082f820
 
 
 
@@ -71,6 +71,6 @@ ms.openlocfilehash: 46cf461c92348e1a90533518355f2b5982ae5770
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

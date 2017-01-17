@@ -1,5 +1,5 @@
 ---
-title: "System Center Configuration Manager 的安全最佳方案和隐私信息"
+title: "System Center Configuration Manager 的最佳安全做法和隐私信息 | Microsoft Docs"
 description: "查找可提供 System Center Configuration Manager 的安全最佳方案和隐私信息的资源。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: dc9a98a10453c87ba05d6e32dc7e648a95c391cd
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: 40d8a4f818d1d8fcaf3f87a810a391768d902bf2
 
 
 ---
@@ -71,6 +71,6 @@ ms.openlocfilehash: dc9a98a10453c87ba05d6e32dc7e648a95c391cd
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

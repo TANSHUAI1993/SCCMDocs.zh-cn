@@ -1,5 +1,5 @@
 ---
-title: "LTSB 支持的配置 | System Center Configuration Manager"
+title: "LTSB 支持的配置 | Microsoft Docs"
 description: "了解哪些操作系统和相关产品可配合 System Center Configuration Manager 的 Long-Term Servicing Branch 一起运作。"
 ms.custom: na
 ms.date: 10/12/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 275d94b0596f04d2339ffb7aa315b4afdd237678
-ms.openlocfilehash: 25dbdd401d0f6e955e5dcc704a0c756c74c64773
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: 573115e54d734d492ca776a040bad804a792ada6
 
 
 ---
@@ -333,6 +333,6 @@ LTSB 支持以下版本的 SQL Server，以托管站点数据库和报表点。 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

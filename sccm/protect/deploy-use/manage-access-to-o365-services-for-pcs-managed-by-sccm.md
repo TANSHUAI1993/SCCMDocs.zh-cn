@@ -1,8 +1,8 @@
 ---
-title: "管理托管电脑对 O365 服务的访问 | System Center Configuration Manager"
+title: "为托管的电脑管理对 O365 服务的访问 | Microsoft Docs"
 description: "了解如何为由 System Center Configuration Manager 管理的电脑配置条件访问。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/18/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,12 +12,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ccdb424a-b603-4ccc-af36-558924248022
 caps.latest.revision: 15
-author: karthikaraman
-ms.author: karaman
+author: andredm7
+ms.author: andredm
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 5c6cf3c1697b49708aa5192b67b08b700da7dc72
-ms.openlocfilehash: c475c560971ab73e8be7671164a010a91bd3f229
+ms.sourcegitcommit: c13c6268fa76ade7feb0981f9c4a6e325e393aca
+ms.openlocfilehash: da5fcd65d7af8d73aa23f4a7d96cd8fc6e48f9dc
 
 
 ---
@@ -30,7 +30,7 @@ ms.openlocfilehash: c475c560971ab73e8be7671164a010a91bd3f229
  从 Configuration Manager 的版本 1602 开始，可以为 System Center Configuration Manager 管理的电脑配置条件访问。  
 
 > [!IMPORTANT]  
->  这是更新 1602 和更新 1606 中提供的预发布功能。 预发行功能包含在产品中，用于在生产环境中进行早期测试，但不应将其视为生产就绪。 有关详细信息，请参阅[使用更新中的预发行功能](../../core/servers/manage/install-in-console-updates.md#bkmk_prerelease)。
+>  这是更新 1602、更新 1606 和更新 1610 中提供的预发布功能。 预发行功能包含在产品中，用于在生产环境中进行早期测试，但不应将其视为生产就绪。 有关详细信息，请参阅[使用更新中的预发行功能](../../core/servers/manage/install-in-console-updates.md#bkmk_prerelease)。
 > - 安装更新 1602 之后，功能类型显示为已发行，即使它是预发行。
 > - 如果随后从 1602 更新到 1606，则功能类型显示为已发行，即使它仍保持预发行。
 > - 如果从版本 1511 直接更新到 1606，则功能类型显示为预发行。
@@ -96,16 +96,16 @@ ms.openlocfilehash: c475c560971ab73e8be7671164a010a91bd3f229
 
  Active Directory 安全用户组 这些用户组应同步到 Azure Active Directory。 你还可以在 Office 365 管理中心或 Intune 帐户门户中配置这些组。  
 
- 你可以在每个策略中指定两种组类型：  
+ 可以在每个策略中指定两种组类型。 ：  
 
--   **目标组** - 策略应用到的用户组  
+-   **目标组** - 策略应用到的用户组。 同一个组应同时用于合规性和条件访问策略。  
 
 -   **被免除的组** - 从策略中免除的用户组（可选）  
     如果用户位于两个组中，则会将其从策略中免除。  
 
      仅会评估设定为条件访问策略的目标的组。  
 
-### <a name="step-3-create-a-conditional-access-policy-for-exchange-online-and-sharepoint-online"></a>步骤 3。  为 Exchange Online 和 SharePoint Online 创建条件访问策略  
+### <a name="step-3--create-a-conditional-access-policy-for-exchange-online-and-sharepoint-online"></a>步骤 3。  为 Exchange Online 和 SharePoint Online 创建条件访问策略  
 
 1.  在 Configuration Manager 控制台中，单击“资产和符合性” 。  
 
@@ -126,7 +126,7 @@ ms.openlocfilehash: c475c560971ab73e8be7671164a010a91bd3f229
 6.  在“目标组” 下，单击“修改”  以选择将应用策略的 Azure Active Directory 安全组。  
 
     > [!NOTE]  
-    >  应用条件访问策略的用户组还应该应用合规性策略。  
+    >  同一安全用户组应用于部署合规性策略，目标组应用于条件访问策略。  
 
      在“免除组” 下，可以选择“修改”  以选择从此策略中免除的 Azure Active Directory 安全组。  
 
@@ -148,6 +148,6 @@ ms.openlocfilehash: c475c560971ab73e8be7671164a010a91bd3f229
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

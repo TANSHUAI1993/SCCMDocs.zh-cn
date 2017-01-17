@@ -1,5 +1,5 @@
 ---
-title: "安装向导 | System Center Configuration Manager"
+title: "安装向导 | Microsoft Docs"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -15,8 +15,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: ffcdf4285d5f182e8d625200989f65c748bc2067
-ms.openlocfilehash: 9552ac1b77acfce6a398ec6e74f1be3686ee15a4
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: 28ce074469469b6a7c1c456da051b5f8dea43dbb
 
 ---
 # <a name="use-the-setup-wizard-to-install-system-center-configuration-manager-sites"></a>使用安装向导安装 System Center Configuration Manager 站点
@@ -28,7 +28,7 @@ ms.openlocfilehash: 9552ac1b77acfce6a398ec6e74f1be3686ee15a4
 
 若要安装辅助站点，必须在 Configuration Manager 控制台内安装该站点。  辅助站点不支持脚本化的命令行安装。
 
-## <a name="a-namebkmkprimarya-install-a-central-administration-site-or-primary-site"></a><a name="bkmk_primary"></a>安装管理中心站点或主站点
+## <a name="a-namebkmkprimarya--install-a-central-administration-site-or-primary-site"></a><a name="bkmk_primary"></a>安装管理中心站点或主站点
 使用下列过程安装管理中心站点、主站点，或将评估站点升级到完全许可的 Configuration Manager 站点。   
 
 开始安装站点前，先熟悉以下文章中的详细信息：
@@ -37,7 +37,7 @@ ms.openlocfilehash: 9552ac1b77acfce6a398ec6e74f1be3686ee15a4
 
 如果正在安装管理中心站点（作为站点扩展方案的一部分），请在执行以下步骤前查看本主题中的[扩展独立主站点](../../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md#bkmk_expand)部分。
 
-### <a name="a-namebkmkinstallpria-to-install-a-primary-or-central-administration-site"></a><a name="bkmk_installpri"></a>安装主站点或管理中心站点
+### <a name="a-namebkmkinstallpria---to-install-a-primary-or-central-administration-site"></a><a name="bkmk_installpri"></a>安装主站点或管理中心站点
 
 1.  在想要安装该站点的计算机上，运行 **&lt;InstallationMedia\>\SMSSETUP\BIN\X64\Setup.exe** 以启动“System Center Configuration Manager 安装向导”。  
 
@@ -389,6 +389,6 @@ ms.openlocfilehash: 9552ac1b77acfce6a398ec6e74f1be3686ee15a4
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

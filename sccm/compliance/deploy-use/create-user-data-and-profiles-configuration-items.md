@@ -1,5 +1,5 @@
 ---
-title: "创建用户数据和配置文件配置项目 | System Center Configuration Manager"
+title: "创建用户数据和配置文件配置项目 | Microsoft Docs"
 description: "在 System Center Configuration Manager 中使用数据和配置文件配置项目来管理文件夹重定向、脱机文件和漫游配置文件。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: f9d0986fe1275bc6cb855be6ca7fa34bc289feca
+ms.sourcegitcommit: f9e939d871e95a3248d8e5d96cb73063a81fd5cf
+ms.openlocfilehash: 85b984d739dc9f9d2046186b381eff54ba687c66
 
 
 ---
@@ -120,6 +120,6 @@ System Center Configuration Manager 中的用户数据和配置文件配置项�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

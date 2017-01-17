@@ -1,5 +1,5 @@
 ---
-title: "网络共享中的 Endpoint Protection 恶意软件定义 | System Center Configuration Manager"
+title: "网络共享中的 Endpoint Protection 恶意软件定义 | Microsoft Docs"
 ms.custom: na
 ms.date: 10/05/2016
 ms.prod: configuration-manager
@@ -15,8 +15,8 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 5c6cf3c1697b49708aa5192b67b08b700da7dc72
-ms.openlocfilehash: fa5abe78fd92beefdc134cd3fa661b8884bea3f1
+ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
+ms.openlocfilehash: f562bf051e4561053b45bef5363eb960d83bbdd1
 
 
 ---
@@ -39,6 +39,6 @@ ms.openlocfilehash: fa5abe78fd92beefdc134cd3fa661b8884bea3f1
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

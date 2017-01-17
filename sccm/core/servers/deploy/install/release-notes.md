@@ -1,5 +1,5 @@
 ---
-title: "发行说明 | System Center Configuration Manager"
+title: "发行说明 | Microsoft Docs"
 description: "有关产品中尚未解决或 Microsoft 知识库文章中未涵盖的紧急问题，请参阅这些说明。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f777295958e9cbc729e3759d354521c96ae3e8ac
-ms.openlocfilehash: 0b6c49f3c5e817f1dbd40b40c78d89c4a018e0f1
+ms.sourcegitcommit: ea723a6694feb2c9584b35498aa9c3519383f08d
+ms.openlocfilehash: a9dc046a54c15d9d299664cd1f2a149383f53489
 
 
 ---
@@ -35,16 +35,31 @@ ms.openlocfilehash: 0b6c49f3c5e817f1dbd40b40c78d89c4a018e0f1
 
 ## <a name="setup-and-upgrade"></a>安装和升级  
 
+### <a name="when-installing-a-long-term-service-branch-site-using-version-1606-a-current-branch-site-is-installed"></a>使用版本 1606 安装 Long-Term Service Branch 站点时，将安装 Current Branch 站点
+使用 2016 年 10 月发布的 1606 版基线介质安装 Long-Term Servicing Branch (LTSB) 站点时，安装程序将改为安装 Current Branch 站点。 这是由于未选择使用站点安装来安装服务连接点这一选项。
+
+ - 虽然服务连接点不是必需的，但在安装 LTSB 站点时必须选择它。
+
+安装完成之后，可以卸载该服务连接点。  但必须拥有一个处于脱机或联机模式的服务连接点，才能提交遥测数据，并同时为 Current Branch 和 LTSB 站点获取安全更新。
+
+如果你的站点安装为 Current Branch 站点，但本意是想安装 LTSB，那么可以卸载该站点，然后重新安装它。 或者，可以致电 [Microsoft 帮助和支持](http://go.microsoft.com/fwlink/?LinkId=243064)寻求帮助。  
+
+要确定安装的是哪个分支，请在控制台中，转到“管理” > “站点配置” > “站点”，然后打开“层次结构设置”。 将站点转换为 Current Branch 站点的选项仅在站点运行 LTSB 时可用。  
+
+**解决方法：**  无。   
 
 
-### <a name="the-sql-server-backup-model-in-use-by-configuration-manager-can-change-from-full-to-simple"></a>Configuration Manager 使用中的 SQL Server 备份模型可以从完整模型更改为简单模型  
+
+
+
+### <a name="the--sql-server-backup-model-in-use-by-configuration-manager-can-change-from-full-to-simple"></a>Configuration Manager 使用中的 SQL Server 备份模型可以从完整模型更改为简单模型  
  当你升级到 System Center Configuration Manager 版本 1511 时，Configuration Manager 使用的 SQL Server 备份模型可以从完整更改为简单。  
 
 -   如果你使用具有完整备份模型自定义 SQL Server 备份任务（而不是 Configuration Manager 的内置备份任务）时，升级可以将你的备份模型从完整更改为简单。  
 
 **解决方法**：升级到版本 1511 后，查看你的 SQL Server 配置，并将其还原为完整（如果必要）。  
 
-### <a name="when-you-add-a-service-window-to-a-new-site-server-service-windows-that-were-configured-for-another-site-server-are-deleted"></a>向新站点服务器添加服务时段时，将删除为另一个站点服务器配置的服务时段  
+### <a name="when-you-add-a-service-window-to-a-new-site-server-service-windows-that-were---configured-for-another-site-server-are-deleted"></a>向新站点服务器添加服务时段时，将删除为另一个站点服务器配置的服务时段  
  使用 System Center Configuration Manager 版本 1511 的服务时段时，只能为层次结构中的单个站点服务器配置服务时段。 在一个服务器上配置服务时段之后，当你随后在第二个站点服务器上配置服务时段时，将静默删除第一个站点服务器上的服务时段，而不会出现警告和错误。  
 
 **解决方法**：从 [Microsoft 知识库文章 3142341](http://support.microsoft.com/kb/3142341) 安装修补程序。 为 System Center Configuration Manager 安装 1602 更新时此问题也会得到解决。  
@@ -120,6 +135,32 @@ System Center Configuration Manager 版本 1602 引入了两项预发行功能�
 **解决方法：**使用以下方法之一：
  - 在安装过程中，从 Microsoft 选择下载使用最新的 redist 文件，而不是 CD.Latest 文件夹中包含的 redist 文件。
  - 手动删除 *cd.latest\redist\languagepack\zhh* 文件夹，然后再次运行安装程序。
+
+### <a name="service-connection-tool-throws-an-exception-when-sql-server-is-remote-or-when-shared-memory-is-disabled"></a>当 SQL 服务器处于远程状态，或共享内存被禁用时，服务连接工具将引发异常
+从版本 1606 开始，当下列情况之一存在时，服务连接工具将引发异常：  
+ -  站点数据库远离承载服务连接点的计算机，并使用非标准端口（1433 以外的端口）
+ -  站点数据库与服务连接点位于同一服务器上，但禁用了 SQL 协议**共享内存**
+
+异常类似于以下示例：
+ - *未处理的异常：System.Data.SqlClient.SqlException：与 SQL Server 建立连接时发生与网络相关或特定于实例的错误。找不到或无法访问服务器。验证实例名称是否正确，且 SQL Server 是否配置为允许远程连接。（提供程序：命名管道提供程序，错误：40 - 无法打开到 SQL Server 的连接）--*
+
+**解决方法**：在使用该工具期间，必须修改承载服务连接点的服务器的注册表，以包含有关 SQL Server 端口的信息：
+
+   1.   在使用该工具之前，请编辑以下注册表项，并将正在使用的端口号添加到 SQL Server 的名称：
+    - 项：   HKLM\Microsoft\SMS\COMPONENTS\SMS_DMP_UPLOADER\
+      - 值：&lt;SQL Server 名称>
+    - 添加：**,&lt;PORT>**
+
+    例如，要将端口 *15001* 添加到名为 *testserver.test.net* 的服务器，则结果项为：***HKLM\Software\Microsoft\SMS\COMPONENTS\SMS_DMP_UPLOADER\testserver.test.net,15001***
+
+   2.   将端口添加到注册表后，该工具应能正常运作。  
+
+   3.   工具使用完成后，对于 **-connect** 和 **-import** 步骤，请将注册表项更改回原始值。  
+
+
+
+
+
 
 ## <a name="backup-and-recovery"></a>备份和恢复
 ### <a name="pre-production-client-is-not-available-after-a-site-restore"></a>预生产客户端在站点还原后不可用
@@ -250,6 +291,6 @@ System Center Configuration Manager 版本 1602 引入了两项预发行功能�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

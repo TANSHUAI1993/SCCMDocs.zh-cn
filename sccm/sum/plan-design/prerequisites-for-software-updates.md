@@ -1,5 +1,5 @@
 ---
-title: "软件更新的先决条件 | Configuration Manager"
+title: "软件更新的先决条件 | Microsoft Docs"
 description: "了解 System Center Configuration Manager 中软件更新的先决条件。"
 keywords: 
 author: dougeby
@@ -13,8 +13,8 @@ ms.technology:
 - configmgr-sum
 ms.assetid: fdf05118-162a-411e-b72e-386b9dc9a5e1
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: fe56129c09b8936ba59181add86acb239111fea7
+ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
+ms.openlocfilehash: 179f076f228daa5adf612275a822cd379b0ce1e3
 
 
 ---
@@ -78,7 +78,7 @@ ms.openlocfilehash: fe56129c09b8936ba59181add86acb239111fea7
 
 -   [软件更新的客户端设置](../get-started/manage-settings-for-software-updates.md#a-namebkmkclientsettingsa-client-settings-for-software-updates)。  
 
--   [软件更新客户端设置](../../core/clients/deploy/about-client-settings.md#a-namebkmksoftwareupdatesdevicesettinga-software-updates)主题。  
+-   [软件更新客户端设置](../../core/clients/deploy/about-client-settings.md#software-updates)主题。  
 
 ### <a name="reporting-services-point"></a>Reporting Services 点  
  Reporting Services 点站点系统角色可以显示软件更新的报表。 此角色是可选的，但建议使用它。 有关如何创建 Reporting Services 点的详细信息，请参阅[配置报表](../../core/servers/manage/configuring-reporting.md)。  
@@ -114,6 +114,6 @@ ms.openlocfilehash: fe56129c09b8936ba59181add86acb239111fea7
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "监视客户端部署状态 | System Center Configuration Manager"
+title: "监视客户端部署状态 | Microsoft Docs"
 description: "在 System Center Configuration Manager 中监视客户端部署状态。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -13,12 +13,12 @@ ms.topic: get-started-article
 ms.assetid: 20a573b3-53cb-4ed5-bae1-7542f533ed20
 caps.latest.revision: 11
 caps.handback.revision: 0
-author: Mtillman
-ms.author: mtillman
+author: nbigman
+ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 495c95b6add90619881291a551f394511d9eb36d
+ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
+ms.openlocfilehash: 3bc82535955d937e5620ef2963ccc29bfd0124e3
 
 
 ---
@@ -33,9 +33,7 @@ ms.openlocfilehash: 495c95b6add90619881291a551f394511d9eb36d
 
  在控制台的“监视”工作区中，可以监视指定集合内发生的客户端部署的以下状态：  
 
--   未启动   
-
--   是否满足条件  
+-   合规  
 
 -   正在进行  
 
@@ -60,7 +58,7 @@ ms.openlocfilehash: 495c95b6add90619881291a551f394511d9eb36d
  若要了解有关预生产客户端部署的详细信息，请参阅[如何在 System Center Configuration Manager 中的预生产集合中测试客户端升级](../../../core/clients/manage/upgrade/test-client-upgrades.md)。
 
  > [!NOTE]
- > 即使在已成功部署客户端时，托管预生产集合中站点系统角色的计算机上的部署状态也可能被报告为“未启动”。 当你将客户端提升为生产时，则会正常报告部署状态。   
+ > 即使在已成功部署客户端时，托管预生产集合中站点系统角色的计算机上的部署状态也可能被报告为“不符合”。 当你将客户端提升为生产时，则会正常报告部署状态。   
 
  若要监视已部署客户端的状态，请参阅[如何在 System Center Configuration Manager 中监视客户端](../../../core/clients/manage/monitor-clients.md)  
 
@@ -68,6 +66,6 @@ ms.openlocfilehash: 495c95b6add90619881291a551f394511d9eb36d
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

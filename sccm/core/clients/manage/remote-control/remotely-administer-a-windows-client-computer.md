@@ -1,8 +1,8 @@
 ---
-title: "远程管理 Windows 计算机 | System Center Configuration Manager"
+title: "远程管理 Windows 计算机 | Microsoft Docs"
 description: "使用 System Center Configuration Manager 管理远程 Windows 客户端计算机。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/16/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 02c11420d3b05ad4eaae31d9413b66459751da70
-ms.openlocfilehash: 51a9b7269993bfa133382b88792ac94032824eed
+ms.sourcegitcommit: 08afca8b422474639cbdb860e555fe0da27361a4
+ms.openlocfilehash: dd794de867e1d0db47be9dc21a6d494087f76bc1
 
 
 ---
@@ -26,29 +26,25 @@ ms.openlocfilehash: 51a9b7269993bfa133382b88792ac94032824eed
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-使用以下过程远程管理 System Center Configuration Manager 中的计算机。  
-
- 在开始使用远程控制之前，请确保已经查看了以下主题的信息：  
+在开始使用远程控制之前，请确保已经查看了以下主题的信息：  
 
 -   [System Center Configuration Manager 中远程控制的先决条件](../../../../core/clients/manage/remote-control/prerequisites-for-remote-control.md)  
 
 -   [配置 System Center Configuration Manager 中的远程控制](../../../../core/clients/manage/remote-control/configuring-remote-control.md)  
 
- 可以使用以下三种方法之一来启动 Configuration Manager 远程控制查看器：  
+以下是启动远程控制查看器的三种方式：  
 
--   使用 Configuration Manager 控制台。  
+-   在 Configuration Manager 控制台中。  
 
--   在 Windows 命令提示符处。  
+-   在 Windows 命令提示符中。  
 
--   在运行 Configuration Manager 控制台的计算机上的 Windows“启动”菜单中（从“Microsoft System Center 2012”程序组）。  
+-   在运行 Configuration Manager 控制台的计算机上的 Windows“开始”菜单中（从“Microsoft System Center”程序组）。  
 
 ### <a name="to-remotely-administer-a-client-computer-from-the-configuration-manager-console"></a>若要从 Configuration Manager 控制台中远程管理客户端计算机  
 
-1.  在 Configuration Manager 控制台中，单击“资产和符合性” 。  
+1.  在 Configuration Manager 控制台中，依次选择“资产和符合性” > “设备”或“设备集合”。  
 
-2.  在“资产和符合性”  工作区中，单击“设备”  或“设备集合” 。  
-
-3.  选择要远程管理的计算机，然后在“主页”  选项卡上的“设备”  组中，单击“启动” ，然后单击“远程控制” 。  
+3.  选择要远程管理的计算机，然后在“主页”选项卡上的“设备”组中，选择“启动” > “远程控制”。  
 
     > [!IMPORTANT]  
     >  如果将“提示用户进行远程控制”  客户端设置权限设置为“真” ，直至远程计算机上的用户同意远程控制提示后才会启动连接。 有关详细信息，请参阅[配置 System Center Configuration Manager 中的远程控制](../../../../core/clients/manage/remote-control/configuring-remote-control.md)。  
@@ -67,7 +63,7 @@ ms.openlocfilehash: 51a9b7269993bfa133382b88792ac94032824eed
         > [!NOTE]  
         >  当断开远程控制会话的连接时，将删除正在查看的计算机上 Windows 剪贴板的内容。  
 
-    -   **视图 - 全屏** - 最大化显示“Configuration Manager 远程控制”窗口以填满所有可用的显示空间。  
+    -   **视图 - 全屏** - 最大化显示“Configuration Manager 远程控制”窗口。  
 
         > [!NOTE]  
         >  要退出全屏显示模式，请按 Ctrl + Alt + Break。  
@@ -85,11 +81,9 @@ ms.openlocfilehash: 51a9b7269993bfa133382b88792ac94032824eed
 
     -   **操作 - 锁定远程键盘和鼠标** - 锁定远程键盘和鼠标以阻止用户操作远程计算机。  
 
-    -   **帮助 - 关于远程控制** - 显示有关远程控制查看器当前版本的信息。  
+    -   **帮助 - 关于远程控制** - 显示查看器的当前版本。  
 
 5.  远程计算机上的用户在单击 Windows 通知区域中的 Configuration Manager“远程控制”图标或远程控制会话栏上的图标时可以查看有关远程控制会话的详细信息。  
-
-6.  当不再需要远程控制会话时，请使用前面介绍的方法之一来结束远程控制会话。  
 
 ### <a name="to-start-the-remote-control-viewer-from-the-windows-command-line"></a>若要从 Windows 命令行中启动远程控制查看器  
 
@@ -99,13 +93,13 @@ ms.openlocfilehash: 51a9b7269993bfa133382b88792ac94032824eed
     >  CmRcViewer.exe 支持以下命令行选项：  
     >   
     >  -   *<Address\>* - 指定要连接的客户端计算机的 NetBIOS 名称、完全限定域名 (FQDN) 或 IP 地址。  
-    > -   *<Site Server Name\>* - 指定要向其发送与远程控制会话相关的状态消息的 System Center 2012 Configuration Manager 站点服务器的名称。  
+    > -   *<Site Server Name\>* - 指定要向其发送与远程控制会话相关的状态消息的 System Center Configuration Manager 站点服务器的名称。  
     > -   **/?** - 显示远程控制查看器的命令行选项。  
     >   
     >  **示例：CmRcViewer.exe** <Address\> <\\\Site Server Name>  
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

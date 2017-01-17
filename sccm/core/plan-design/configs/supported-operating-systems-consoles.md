@@ -1,5 +1,5 @@
 ---
-title: "控制台支持 | System Center Configuration Manager 控制台"
+title: "控制台支持 | Microsoft Docs"
 description: "了解 System Center Configuration Manager 控制台支持的操作系统。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 8f00645d1c6e080747e72dd53ba0e4e11b836651
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: 1e00199e4c819bc4a12896db5d427efa986dc84e
 
 ---
 # <a name="supported-operating-systems-for-system-center-configuration-manager-consoles"></a>System Center Configuration Manager 控制台支持的操作系统
@@ -47,6 +47,6 @@ ms.openlocfilehash: 8f00645d1c6e080747e72dd53ba0e4e11b836651
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

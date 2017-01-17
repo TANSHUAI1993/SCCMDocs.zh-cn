@@ -1,5 +1,5 @@
 ---
-title: "使用 System Center Configuration Manager 和 Microsoft Intune 设置 iOS 和 Mac 混合设备管理"
+title: "使用 System Center Configuration Manager 和 Microsoft Intune 设置 iOS 和 Mac 混合设备管理 | Microsoft Docs"
 description: "使用 System Center Configuration Manager 和 Microsoft Intune 设置 iOS 设备管理。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -13,12 +13,12 @@ ms.topic: get-started-article
 ms.assetid: 5eae4400-58ca-4c71-804c-6a585cd3df5d
 caps.latest.revision: 10
 caps.handback.revision: 0
-author: NathBarn
-ms.author: nathbarn
+author: mtillman
+ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 3754f0e49d8393aed51bb6519af99b9eb728402f
+ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
+ms.openlocfilehash: 74c75653e69154ced18d5bc713b1d9b89e88ae64
 
 
 ---
@@ -70,6 +70,6 @@ ms.openlocfilehash: 3754f0e49d8393aed51bb6519af99b9eb728402f
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "自动执行任务的规划注意事项 | Configuration Manager"
+title: "自动执行任务的规划注意事项 | Microsoft Docs"
 description: "在 System Center Configuration Manager 中自动执行任务之前进行规划。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: a439d847adb129a341b33be8e1a1674c72184e77
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: 830f715b688cc9929a179da94eba9c81de8db11a
 
 
 ---
@@ -183,7 +183,7 @@ ms.openlocfilehash: a439d847adb129a341b33be8e1a1674c72184e77
 > [!TIP]  
 >  任务序列会将包 ID 和预启动命令行（包括任何任务序列变量的值）写入到运行 Configuration Manager 控制台的计算机上的 CreateTSMedia.log 日志文件。 你可以查看此日志文件以验证任务序列变量的值。  
 
-##  <a name="a-namebkmktscreatea-create-a-task-sequence"></a><a name="BKMK_TSCreate"></a> 创建任务序列  
+##  <a name="a-namebkmktscreatea-create-a--task-sequence"></a><a name="BKMK_TSCreate"></a> 创建任务序列  
  你可以通过创建任务序列向导创建任务序列。 此向导可以创建执行特定任务的内置任务序列，或创建可执行许多不同任务的自定义任务序列。  
 
  例如，你可以创建构建并捕获引用计算机的操作系统映像包的任务序列、在目标计算机上安装现有操作系统映像包，或者创建执行自定义任务的任务序列。 可以使用自定义任务序列执行特殊的操作系统部署。  
@@ -326,6 +326,6 @@ ms.openlocfilehash: a439d847adb129a341b33be8e1a1674c72184e77
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

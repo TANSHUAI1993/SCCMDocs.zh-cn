@@ -1,8 +1,8 @@
 ---
-title: "管理客户端 | System Center Configuration Manager"
+title: "管理客户端 | Microsoft Docs"
 description: "了解如何在 System Center Configuration Manager 中管理客户端。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/18/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,12 +12,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3986a992-c175-4b6f-922e-fc561e3d7cb7
 caps.latest.revision: 17
-author: Mtillman
-ms.author: mtillman
+author: nbigman
+ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f777295958e9cbc729e3759d354521c96ae3e8ac
-ms.openlocfilehash: 67a814330123a1615a0663872bf4af64e5b81a84
+ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
+ms.openlocfilehash: dfdb5a95b672d3858d094750625cb5f6ef50700d
 
 
 ---
@@ -160,7 +160,7 @@ ms.openlocfilehash: 67a814330123a1615a0663872bf4af64e5b81a84
 
         若要查看设备列表中的所有权值，可能需要右键单击任意列标题并选择“设备所有者”将列添加到视图中。
 
-         有关详细信息，请参阅[使用 System Center Configuration Manager 和 Microsoft Intune 的混合移动设备管理 (MDM)](../../../mdm/plan-design/hybrid-mobile-device-management.md)。  
+         有关详细信息，请参阅[使用 System Center Configuration Manager 和 Microsoft Intune 的混合移动设备管理 (MDM)](../../../mdm/understand/hybrid-mobile-device-management.md)。  
 
 ##  <a name="a-namebkmkmanagingclientsdevicecollectionsnodea-manage-clients-from-the-device-collections-node"></a><a name="BKMK_ManagingClients_DeviceCollectionsNode"></a> 通过“设备集合”节点管理客户端  
  使用下列过程和下表，以便通过“资产和符合性”  工作区中的“设备集合”  节点来管理集合中的设备。  
@@ -239,7 +239,7 @@ Configuration Manager 客户端会在接收部署之后立即下载所需软件�
     -   SMSCACHESIZE  
 
         > [!NOTE]
-        > 对于版本 1606，请使用 Configuration Manager 控制台中“客户端设置”的可用缓存大小设置而不是 SMSCACHESIZE。 有关详细信息，请参阅[客户端缓存设置](../../../core/clients/deploy/about-client-settings.md#Client-Cache-Settings)。
+        > 对于版本 1606，请使用 Configuration Manager 控制台中“客户端设置”的可用缓存大小设置而不是 SMSCACHESIZE。 有关详细信息，请参阅[客户端缓存设置](../../../core/clients/deploy/about-client-settings.md#client-cache-settings)。
 
 有关如何使用 CCMSetup.exe 的这些命令行属性的详细信息，请参阅[关于 System Center Configuration Manager 中的客户端安装属性](../../../core/clients/deploy/about-client-installation-properties.md)。  
 
@@ -264,7 +264,7 @@ Configuration Manager 客户端会在接收部署之后立即下载所需软件�
     -   SMSCACHESIZE  
 
         > [!NOTE]
-        > 对于版本 1606，请使用 Configuration Manager 控制台中“客户端设置”的可用缓存大小设置而不是 SMSCACHESIZE。 有关详细信息，请参阅[客户端缓存设置](../../../core/clients/deploy/about-client-settings.md#Client-Cache-Settings)。
+        > 对于版本 1606，请使用 Configuration Manager 控制台中“客户端设置”的可用缓存大小设置而不是 SMSCACHESIZE。 有关详细信息，请参阅[客户端缓存设置](../../../core/clients/deploy/about-client-settings.md#client-cache-settings)。
 
        有关如何使用 CCMSetup.exe 的这些命令行属性的详细信息，请参阅[关于 System Center Configuration Manager 中的客户端安装属性](../../../core/clients/deploy/about-client-installation-properties.md)。  
 
@@ -323,6 +323,7 @@ Configuration Manager 客户端会在接收部署之后立即下载所需软件�
 
  Configuration Manager 能够通过使用计算机帐户的 Windows 身份验证或来自受信任来源的 PKI 证书解决冲突时，将为你自动解决冲突。 但是，Configuration Manager 无法解决冲突时，它将使用层次结构设置，该设置会在检测到重复的硬件 ID 时自动合并记录（默认设置），或允许你决定何时合并、阻止或创建新客户端记录。 如果决定手动管理重复记录，则必须通过使用 Configuration Manager 控制台手动解决冲突的记录。  
 
+
 #### <a name="to-change-the-hierarchy-setting-for-managing-conflicting-records"></a>更改用于管理冲突的记录的层次结构设置  
 
 1.  在 Configuration Manager 控制台中，单击“管理”   
@@ -351,6 +352,18 @@ Configuration Manager 客户端会在接收部署之后立即下载所需软件�
     -   选择“新建” 为冲突的客户端记录创建新记录。  
 
     -   选择“阻止” 为冲突的客户端记录创建新记录，但将其标记为已阻止。  
+
+## <a name="manage-duplicate-hardware-identifiers"></a>管理重复的硬件标识符
+从 Configuration Manager 版本 1610 开始，可以提供 Configuration Manager 为实现 PXE 启动和客户端注册而将忽略的硬件 ID 列表。 这可以帮助解决两个常见问题。
+
+1. 许多新设备（如 Surface Pro 3）不包含板载以太网端口。 为部署操作系统，通常会使用 USB 转以太网适配器来建立有线连接。 但是，出于成本和一般可用性的考虑，这些适配器通常会共享使用。 由于此适配器的 MAC 地址用于标识设备，因此在每次部署之间若无额外的管理员操作，重用适配器就会出现问题。 现在，在 Current Branch 版本为 1610 的 Configuration Manager 中，可排除此适配器的 MAC 地址，以便在此种情况下轻松重用该适配器。
+2. 虽然 SMBIOS ID 应该是唯一的硬件标识符，但是某些特殊硬件设备自身具有重复 ID。 尽管不像上述的 USB 转以太网适配器情景那样普遍，但是硬件 ID 列表也可用于解决此问题。
+
+#### <a name="to-add-hardware-identifiers-for-configuration-manager-to-ignore"></a>添加 Configuration Manager 要忽略的硬件标识符  
+1. 在 Configuration Manager 控制台中，转到“管理” > “概述” > “站点配置” > “站点”。
+2. 在“主页”  选项卡上的“站点”  组中，单击“层次结构设置” 。
+3. 转到“客户端批准和冲突的记录”选项卡。
+4. 单击“重复硬件标识符”部分中的“添加”，以添加新的硬件标识符。
 
 ##  <a name="a-namebkmkpolicyretrievala-initiate-policy-retrieval-for-a-configuration-manager-client"></a><a name="BKMK_PolicyRetrieval"></a> 为 Configuration Manager 客户端启动策略检索  
  Windows Configuration Manager 客户端按配置为客户端设置的计划下载其客户端策略。 但是，有时你希望从客户端中启动临时策略检索（例如，在故障排除情况下或在进行测试时）。  
@@ -440,6 +453,6 @@ Configuration Manager 客户端会在接收部署之后立即下载所需软件�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,8 +1,8 @@
 ---
-title: "客户端安装方法 | System Center Configuration Manager"
+title: "客户端安装方法 | Microsoft Docs"
 description: "了解 System Center Configuration Manager 的客户端安装方法。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/23/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ ms.topic: get-started-article
 ms.assetid: 51b5964b-374d-4abc-8619-414a9fffad2d
 caps.latest.revision: 9
 caps.handback.revision: 0
-author: Mtillman
-ms.author: mtillman
+author: nbigman
+ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 169e7871bc1fbc83964ecb17e277d64ce4fd472c
+ms.sourcegitcommit: 593fbd0587d54490246f48ae54f666bac6b7830d
+ms.openlocfilehash: a7d5a04cf34c49246f768f9a4757c5da3b4db31a
 
 
 ---
@@ -26,9 +26,7 @@ ms.openlocfilehash: 169e7871bc1fbc83964ecb17e277d64ce4fd472c
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-可以使用不同的方法在企业的 Windows 设备、UNIX/Linux 服务器以及 Mac 计算机上安装 System Center Configuration Manager 客户端软件。 可以按照自己的要求使用这些方法中的一种或其任意组合。  
-
- 以下部分概述了每种客户端安装方法的优点和缺点，以帮助你确定哪种方法最适合贵组织。  
+可使用不同的方法来安装 Configuration Manager（也称为 ConfigMgr 或 SCCM）客户端软件。 可使用一种方法或多种方法的组合。 在本主题中，你可以阅读每种方法的相关内容，从而了解最适合组织的方法。  
 
 ## <a name="client-push-installation"></a>客户端请求安装  
 
@@ -150,6 +148,6 @@ ms.openlocfilehash: 169e7871bc1fbc83964ecb17e277d64ce4fd472c
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "System Center Configuration Manager 隐私声明 – Configuration Manager Cmdlet 库"
+title: "System Center Configuration Manager 隐私声明 - 其他信息 | Microsoft Docs"
 description: "了解 Microsoft 如何收集和使用来自 System Center Configuration Manager 部署的数据。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -36,8 +36,8 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: bcac4e2b6f8377a27417cb2519814ad9e74ee542
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: 613b7dbf81de84129e113468d554d8430cbc3182
 
 ---
 # <a name="additional-information-about-privacy-for-system-center-configuration-manager"></a>关于 System Center Configuration Manager 隐私的其他信息
@@ -97,7 +97,7 @@ Microsoft Cloud Protection Service 不会有意收集个人信息。 就算 Micr
 
 有关收集的数据的其他详情，请参阅此产品文档 [http://go.microsoft.com/fwlink/?LinkId=823547](http://go.microsoft.com/fwlink/?LinkId=823547)。
 
-## <a name="site-hierarchy-geographical-view-with-bing-maps"></a>站点层次结构 - 包含 Bing 地图的地理视图
+## <a name="site-hierarchy--geographical-view-with-bing-maps"></a>站点层次结构 - 包含 Bing 地图的地理视图
 站点层次结构 - 地理视图允许用户使用 Microsoft Bing 地图提供的地图查看 Configuration Manager 物理服务器拓扑。 为了启用此功能，会将你提供的位置信息从服务器发送到 Bing 地图 Web 服务。
 
 Microsoft 使用该信息来运行和改进 Microsoft Bing 地图以及其他 Microsoft 站点和服务。 有关详细信息，请参阅 Microsoft 隐私声明 http://go.microsoft.com/fwlink/?LinkId=823548。
@@ -114,6 +114,6 @@ Microsoft 使用该信息来运行和改进 Microsoft Bing 地图以及其他 Mi
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

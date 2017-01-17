@@ -1,5 +1,5 @@
 ---
-title: "Wi-Fi 和 VPN 配置文件的安全性和隐私 |System Center Configuration Manager"
+title: "Wi-Fi 和 VPN 配置文件安全和隐私 | Microsoft Docs"
 description: "了解在 System Center Configuration Manager 中管理设备的 Wi-Fi 和 VPN 配置文件的安全最佳做法。"
 ms.custom: na
 ms.date: 10/19/2016
@@ -17,8 +17,8 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 32dff36aa8027b0563b999e7fe6ef41d0eb79020
-ms.openlocfilehash: b9d70018708ab5932a3032134b03aef236ef9fda
+ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
+ms.openlocfilehash: fb168e3af33648e06c2c6be77ddd7d0c1f65d95d
 
 
 ---
@@ -29,7 +29,7 @@ ms.openlocfilehash: b9d70018708ab5932a3032134b03aef236ef9fda
 
 本主题包括有关 System Center Configuration Manager 中 Wi-Fi 和 VPN 配置文件的安全性和隐私的信息。  
 
-##  <a name="a-namebkmksecurityremoteconnectionsa-security-best-practices-for-wi-fi-and-vpn-profiles"></a><a name="BKMK_Security_RemoteConnections"></a> Wi-Fi 和 VPN 配置文件的安全最佳做法  
+##  <a name="a-namebkmksecurityremoteconnectionsa-security-best-practices-for-wi-fi--and-vpn-profiles"></a><a name="BKMK_Security_RemoteConnections"></a> Wi-Fi 和 VPN 配置文件的安全最佳做法  
  在管理设备的 Wi-Fi 和 VPN 配置文件时，请使用下列安全最佳做法。  
 
 |最佳安全方案|更多信息|  
@@ -45,6 +45,6 @@ ms.openlocfilehash: b9d70018708ab5932a3032134b03aef236ef9fda
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

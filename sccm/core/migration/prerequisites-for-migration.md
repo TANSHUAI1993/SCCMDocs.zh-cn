@@ -1,5 +1,5 @@
 ---
-title: "迁移的先决条件 | System Center Configuration Manager"
+title: "迁移先决条件 | Microsoft Docs"
 description: "了解支持的 Configuration Manager 版本、支持的源站点语言和迁移所需的配置。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 1b310aeee487087e79c2d0fd6469f8f63b932045
+ms.sourcegitcommit: 6cbb790df47c9a87514b0233e2d0c12dd6f23ee9
+ms.openlocfilehash: 70e2531076abedc1381b6e3bccf15b5afe27b465
 
 
 ---
@@ -113,13 +113,6 @@ ms.openlocfilehash: 1b310aeee487087e79c2d0fd6469f8f63b932045
 
      此外，要共享 System Center 2012 Configuration Manager 或 System Center Configuration Manager 源站点中的分发点，“源站点帐户”（此帐户访问源站点服务器的 SMS 提供程序）必须具有对源站点上“站点”对象的“修改”权限。 通过使用基于角色的管理来向帐户授予此权限。 有关如何使用基于角色的管理的信息，请参阅 [Fundamentals of role-based administration for System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md)。  
 
--   **共享分发点：**  
-
-     要成功共享源站点中的任何分发点，目标层次结构中的至少一个主站点或管理中心站点必须为客户端请求使用与源站点一样的端口号。 有关客户端请求端口的信息，请参阅[如何在 System Center Configuration Manager 中配置客户端通信端口](../../core/clients/deploy/configure-client-communication-ports.md)  
-
-     对于每个源站点，只会共享在使用 FQDN 配置的站点系统服务器上安装的分发点。  
-
-     此外，要共享 System Center 2012 Configuration Manager 或 System Center Configuration Manager 源站点中的分发点，“源站点帐户”（此帐户访问源站点服务器的 SMS 提供程序）必须具有对源站点上“站点”对象的“修改”权限。 通过使用基于角色的管理来向帐户授予此权限。 有关如何使用基于角色的管理的信息，请参阅 [Fundamentals of role-based administration for System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md)。  
 
 -   **升级或重新分配分发点：**  
 
@@ -133,6 +126,6 @@ ms.openlocfilehash: 1b310aeee487087e79c2d0fd6469f8f63b932045
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

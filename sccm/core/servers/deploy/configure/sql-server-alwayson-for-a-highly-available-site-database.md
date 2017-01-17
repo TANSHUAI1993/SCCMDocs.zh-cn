@@ -1,5 +1,5 @@
 ---
-title: SQL Server AlwaysOn | System Center Configuration Manager
+title: SQL Server AlwaysOn | Microsoft Docs
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -15,8 +15,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 570e651d486a6120eb062ef845930445596054da
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: 9d4d0c741418af29edc586a5d629fc61f86da426
 
 
 ---
@@ -152,15 +152,7 @@ ms.openlocfilehash: 570e651d486a6120eb062ef845930445596054da
 
      请参阅 SQL Server 文档中的[查看或更改数据库的恢复模式](https://msdn.microsoft.com/library/ms189272\(v=sql.120\).aspx)。 （可用性组仅支持“完整”）。  
 
-3.  使用 SQL Server 创建站点数据库的完整备份，然后：  
-
-    -   如果当前站点数据库服务器不再是可用性组的成员，或将不用作可用性组的初始主要副本，则将站点数据库的副本还原到将提供可用性组主要副本的服务器。  
-
-    -   如果当前站点数据库服务器将为可用性组的成员，请计划使用此服务器作为可用性组的主要副本成员。 执行此操作时，不需要将站点数据库的副本还原到此服务器或其他服务器。  
-
-    有关如何完成此步骤的信息，请参阅 SQL Server 文档中的[创建完整数据库备份](https://msdn.microsoft.com/library/ms187510\(v=sql.120\).aspx)和[还原数据库备份 (SQL Server Management Studio)](https://msdn.microsoft.com/library/ms177429\(v=sql.120\).aspx)。  
-
-4.  在将托管组的主要副本的服务器上，使用“新建可用性组向导”创建可用性组。 在向导中：  
+3.  在将托管组的主要副本的服务器上，使用“新建可用性组向导”创建可用性组。 在向导中：  
 
     -   在“选择数据库”页面上，为你的 Configuration Manager 站点选择数据库  
 
@@ -174,15 +166,15 @@ ms.openlocfilehash: 570e651d486a6120eb062ef845930445596054da
 
     有关详细信息，请参阅 SQL Server 文档中的[使用可用性组向导](https://msdn.microsoft.com/library/hh403415\(v=sql.120\).aspx)。  
 
-5.  配置可用性组后，为主要副本上的站点数据库配置“TRUSTWORTHY”属性，然后“启用 CLR 集成”。 有关如何配置这些项目的信息，请参阅 SQL Server 文档中的 [TRUSTWORTHY 数据库属性](https://msdn.microsoft.com/library/ms187861\(v=sql.120\).aspx)和[启用 CLR 集成](https://msdn.microsoft.com/library/ms131048\(v=sql.120\).aspx)。  
+4.  配置可用性组后，为主要副本上的站点数据库配置“TRUSTWORTHY”属性，然后“启用 CLR 集成”。 有关如何配置这些项目的信息，请参阅 SQL Server 文档中的 [TRUSTWORTHY 数据库属性](https://msdn.microsoft.com/library/ms187861\(v=sql.120\).aspx)和[启用 CLR 集成](https://msdn.microsoft.com/library/ms131048\(v=sql.120\).aspx)。  
 
-6.  执行以下操作以配置可用性组中的每个辅助副本：  
+5.  执行以下操作以配置可用性组中的每个辅助副本：  
 
     1.  将当前主要副本手动故障转移到辅助副本。 请参阅 SQL Server 文档中的 [执行可用性组的计划手动故障转移](https://msdn.microsoft.com/library/hh231018\(v=sql.120\).aspx) 。  
 
     2.  为新增主要副本上的数据库配置 **TRUSTWORTHY** 属性，然后 **启用 CLR 集成**。  
 
-7.  将所有副本提升为主要副本并配置数据库后，即可将该可用性组与 Configuration Manager 配合使用。  
+6.  将所有副本提升为主要副本并配置数据库后，即可将该可用性组与 Configuration Manager 配合使用。  
 
 
 
@@ -220,15 +212,13 @@ ms.openlocfilehash: 570e651d486a6120eb062ef845930445596054da
 
 2.  通过运行 **Preinst.exe /stopsite** 停止 Configuration Manager 站点，请参阅 [System Center Configuration Manager 的层次结构维护工具 (Preinst.exe)](../../../../core/servers/manage/hierarchy-maintenance-tool-preinst.exe.md)。  
 
-3.  使用 SQL Server 创建主要副本中站点数据库的备份，然后将该备份还原到新的辅助副本服务器。 请参阅 SQL Server 文档库中的 [创建完整数据库备份](https://msdn.microsoft.com/library/ms187510\(v=sql.120\).aspx) 以及 [还原数据库备份 (SQL Server Management Studio)](https://msdn.microsoft.com/library/ms177429\(v=sql.120\).aspx) 。  
-
-4.  配置每个辅助副本。 为可用性组中的每个辅助副本执行以下操作：  
+3.  配置每个辅助副本。 为可用性组中的每个辅助副本执行以下操作：  
 
     1.  将主要副本手动故障转移到新的辅助副本。 请参阅 SQL Server 文档中的 [执行可用性组的计划手动故障转移](https://msdn.microsoft.com/library/hh231018\(v=sql.120\).aspx) 。  
 
     2.  将新服务器上数据库配置为“Trustworthy”，并启用 CLR 集成。 请参阅 SQL Server 文档中的 [TRUSTWORTHY 数据库属性](https://msdn.microsoft.com/library/ms187861\(v=sql.120\).aspx) 和  [启用 CLR 集成](https://msdn.microsoft.com/library/ms131048\(v=sql.120\).aspx)。  
 
-5.  通过启动站点组件管理器 (**sitecomp**) 和 **SMS_Executive** 服务重启站点。  
+4.  通过启动站点组件管理器 (**sitecomp**) 和 **SMS_Executive** 服务重启站点。  
 
 #### <a name="to-remove-a-replica-member-from-the-availability-group"></a>从可用性组删除副本成员  
 
@@ -270,6 +260,6 @@ ms.openlocfilehash: 570e651d486a6120eb062ef845930445596054da
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

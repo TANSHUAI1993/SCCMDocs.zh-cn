@@ -1,5 +1,5 @@
 ---
-title: "基于角色的管理基础知识 | System Center Configuration Manager"
+title: "基于角色的管理基础知识 | Microsoft Docs"
 description: "使用基于角色的管理来控制对 Configuration Manager 和管理对象的管理访问权限。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 3e70794144caa5a1993cc65089b1076476fc6106
+ms.sourcegitcommit: 6cf3ac76ea3fb9c9b093ed4927255102930bbe26
+ms.openlocfilehash: 5bdfe43c86d5b700c50b4d55d2f3bbb15bb504e9
 
 
 ---
@@ -78,7 +78,7 @@ ms.openlocfilehash: 3e70794144caa5a1993cc65089b1076476fc6106
 > [!TIP]  
 >  在 Configuration Manager 控制台中，可以查看内置的安全角色和创建的自定义安全角色的列表（包括它们的描述）。 若要这样做，请在“管理”  工作区中展开“安全” ，然后选择“安全角色” 。  
 
- 每个安全角色都有针对不同对象类型的特定权限。 例如，“应用程序管理员”  安全角色具有下列针对应用程序的权限：“批准” 、“创建” 、“删除” 、“修改” 、“修改文件夹” 、“移动对象” 、“读取/部署” 、“设置安全作用域” 。 无法更改内置安全角色的权限，但可以复制角色，进行更改，然后将所做的更改另存为新的自定义安全角色。 还可以导入从另一个层次结构（例如测试网络）中导出的安全角色。 查看安全角色及其权限，以确定是使用内置的安全角色还是必须创建自己的自定义安全角色。  
+ 每个安全角色都有针对不同对象类型的特定权限。 例如，“应用程序 MMM”安全角色具有下列针对应用程序的权限：“批准”、“创建”、“删除”、“修改”、“修改文件夹”、“移动对象”、“读取/部署”、“设置安全作用域”。 无法更改内置安全角色的权限，但可以复制角色，进行更改，然后将所做的更改另存为新的自定义安全角色。 还可以导入从另一个层次结构（例如测试网络）中导出的安全角色。 查看安全角色及其权限，以确定是使用内置的安全角色还是必须创建自己的自定义安全角色。  
 
  **使用下列步骤帮助你规划安全角色：**  
 
@@ -212,6 +212,6 @@ ms.openlocfilehash: 3e70794144caa5a1993cc65089b1076476fc6106
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

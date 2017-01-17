@@ -1,5 +1,5 @@
 ---
-title: "Current Branch 版本 | System Center Configuration Manager"
+title: "Current Branch 版本 | Microsoft Docs"
 description: "查看 System Center Configuration Manager 的版本历史记录，并了解有关提供的各个服务阶段。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ ms.author: brenduns
 manager: angrobe
 robots: noindex,nofollow
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 2308e1f8bde4a93329dfe6ce96d781fcac1b495a
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: fecbdfa9ad99ca36f419cdda19a14b58f9f2b316
 
 ---
 # <a name="support-for-system-center-configuration-manager-current-branch-versions"></a>对 System Center Configuration Manager Current Branch 版本的支持
@@ -31,7 +31,7 @@ Microsoft 计划每年发布几次 System Center Configuration Manager Current B
 
 -   安全更新（仅限）服务阶段 - 发布新的 Current Branch 版本之后，对较旧分支的支持会减少为仅在十二 (12) 个月支持生命周期的剩余时间内提供安全更新（如图 1 所示）。  
 
- ![CM 维护支持时间线](../../../core/servers/manage/media/CM_Servicing_support_timeline.png "CM_Servicing_support_timeline")  
+ ![CM 维护服务支持时间线](../../../core/servers/manage/media/CM_Servicing_support_timeline.png "CM_Servicing_support_timeline")  
 图 1. Current Branch 服务支持的示例。
 
 > [!NOTE]  
@@ -44,9 +44,12 @@ Microsoft 计划每年发布几次 System Center Configuration Manager Current B
 |1511|2015 年 12 月 8 日|2016 年 12 月 8 日|  
 |1602|2016 年 3 月 11 日|2017 年 3 月 11 日|
 |1606|2016/7/22|2017 年 7 月 22 日|
+|1610|2016/11/18|11/18/2017|
+
+有关作为控制台中更新或基准的版本号和可用性的信息，请参阅[基准和更新版本](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)。
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

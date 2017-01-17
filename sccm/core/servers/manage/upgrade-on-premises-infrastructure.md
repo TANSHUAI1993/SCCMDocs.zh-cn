@@ -1,5 +1,5 @@
 ---
-title: "升级本地基础结构 | System Center Configuration Manager"
+title: "升级本地基础结构 | Microsoft Docs"
 description: "了解如何升级基础结构（例如 SQL Server）和站点系统的站点操作系统。"
 ms.custom: na
 ms.date: 10/28/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: c8115fba0722fc902e60ce201d8a9914036c1245
-ms.openlocfilehash: 1239bf81991bb233a9640606bb47f598a70d5e50
+ms.sourcegitcommit: 8b4c80aa092369ec251757d82a1b4bb2863aa96a
+ms.openlocfilehash: f3742dcb930444bab7eb02374fd77ebd0e455734
 
 
 ---
@@ -78,7 +78,7 @@ ms.openlocfilehash: 1239bf81991bb233a9640606bb47f598a70d5e50
 3. 展开“根”下的树形，选择“SMS”节点，然后单击“安全”。  确保“SMS 管理员”组具有下列权限：
   -     启用帐户
   -     远程启用
-4. 接下来，在 SMS 节点下的“安全”选项卡上，选择 **site_<sitecode>** 节点，然后单击“安全”。 确保“SMS 管理员”组具有下列权限：
+4. 接下来，在 SMS 节点下的“安全”选项卡上，选择 **site_&lt;sitecode>** 节点，然后单击“安全”。 确保“SMS 管理员”组具有下列权限：
   -   执行方法
   -   提供程序写入
   -   启用帐户
@@ -176,6 +176,19 @@ ms.openlocfilehash: 1239bf81991bb233a9640606bb47f598a70d5e50
  2. 升级辅助站点，然后再升级辅助站点的父主站点。
  3. 最后升级父主站点。 这包括向管理中心站点报告的子主站点和是层次结构的顶层站点的独立主站点。
 
+**SQL Server 基数估计级别和站点数据库：**   
+从 SQL Server 早期版本升级站点数据库时，如果现有 SQL基数估计 (CE) 级别是此 SQL Server 实例允许的最小级别，则数据库会保留此级别。 使用兼容级别低于允许级别的数据库升级 SQL Server 会自动将数据库设置为 SQL 允许的最低兼容级别。
+
+下表列出了 Configuration Manager 站点数据库的建议兼容级别：
+
+|SQL Server 版本 | 受支持的兼容级别 |推荐级别|
+|----------------|--------------------|--------|
+| SQL Server 2016| 130, 120, 110, 100 | 130|
+| SQL Server 2014| 120, 110, 100      | 110|
+
+若要标识站点数据库使用的 SQL Server CE 兼容级别，请在站点数据库服务器上运行以下 SQL 查询：**SELECT name, compatibility_level FROM sys.databases**
+
+ 有关 SQL CE 兼容级别及其设置方法的详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](https://msdn.microsoft.com/library/bb510680.aspx)。
 
 
 **有关 SQL Server 的详细信息，请参阅 TechNet 上的 SQL Server 文档：**  
@@ -196,6 +209,6 @@ ms.openlocfilehash: 1239bf81991bb233a9640606bb47f598a70d5e50
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

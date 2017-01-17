@@ -1,5 +1,5 @@
 ---
-title: "电源管理的最佳方案 | System Center Configuration Manager"
+title: "电源管理的最佳实践 | Microsoft Docs"
 description: "获取 System Center Configuration Manager 中电源管理的最佳方案。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: f5ddb52585166a3855d18f06aa13e31ea3483c44
+ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
+ms.openlocfilehash: d3cc24c7923141f039dcda26ac27489cb0143e89
 
 
 ---
@@ -85,6 +85,6 @@ ms.openlocfilehash: f5ddb52585166a3855d18f06aa13e31ea3483c44
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

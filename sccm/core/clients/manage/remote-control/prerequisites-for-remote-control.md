@@ -1,5 +1,5 @@
 ---
-title: "远程控制先决条件 | System Center Configuration Manager"
+title: "远程控制先决条件 | Microsoft Docs"
 description: "获取在 System Center Configuration Manager 中远程控制的先决条件。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 5e15fc7359787b40ebd138fd79dd72081dd8fb36
+ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
+ms.openlocfilehash: eafa0d85935c2009cc63d17b06ed83a4666d7fac
 
 
 ---
@@ -68,6 +68,6 @@ System Center Configuration Manager 中的远程控制具有外部依赖关系�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

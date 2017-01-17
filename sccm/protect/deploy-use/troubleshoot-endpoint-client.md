@@ -1,5 +1,5 @@
 ---
-title: "对 Windows Defender 或 Endpoint Protection 客户端进行故障排除 | System Center Configuration Manager"
+title: "对 Windows Defender 或 Endpoint Protection 客户端进行故障排除 | Microsoft Docs"
 description: "了解如何对 Windows Defender 和 Endpoint Protection 进行故障排除。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 4d30cd85cb59f8f27704979074470bb06310054b
+ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
+ms.openlocfilehash: eda5eb85aada88b77166582bb116cc680b2c0631
 
 
 ---
@@ -236,7 +236,7 @@ ms.openlocfilehash: 4d30cd85cb59f8f27704979074470bb06310054b
  **症状**  
 
  会接收到一条消息，通知你 â€œ**Windows Defender 或**  
- **Endpoint Protection 未监视计算机，因为程序的服务已停止。应该立即重新启动该程序。**  
+ **Endpoint Protection 未监视计算机，因为程序的服务已停止。应该立即重启该程序。**  
 
  **解决方案**  
 
@@ -244,7 +244,7 @@ ms.openlocfilehash: 4d30cd85cb59f8f27704979074470bb06310054b
 
 -   关闭所有应用程序并重新启动计算机。  
 
-### <a name="step-2-make-sure-the-windows-defender-orbr-endpoint-protection-service-is-set-to-automatic-and-is-started"></a>步骤 2：确保â€œWindows Defender”或<br />      “Endpoint Protection”服务设置为自动启动并且已启动  
+### <a name="step-2-make-sure-the-windows-defender-orbr-------endpoint-protection-service-is-set-to-automatic-and-is-started"></a>步骤 2：确保â€œWindows Defender”或<br />      “Endpoint Protection”服务设置为自动启动并且已启动  
 
 1.  单击“开始”  ，搜索 **services.msc**，然后按 **Enter**。  
 
@@ -325,6 +325,6 @@ ms.openlocfilehash: 4d30cd85cb59f8f27704979074470bb06310054b
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

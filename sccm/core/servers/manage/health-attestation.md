@@ -1,5 +1,5 @@
 ---
-title: "运行状况证明 | System Center Configuration Manager"
+title: "运行状况证明 | Microsoft Docs"
 description: "了解可在 Configuration Manager 控制台中查看的设备运行状况证明功能。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 7f3c95983f28d58bd0503570df9dc3b229059e82
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: 937a168f79168b3e3a3a578513814abb2b368d9f
 
 
 ---
@@ -85,6 +85,6 @@ ms.openlocfilehash: 7f3c95983f28d58bd0503570df9dc3b229059e82
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

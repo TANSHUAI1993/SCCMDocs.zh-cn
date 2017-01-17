@@ -1,5 +1,5 @@
 ---
-title: "配置证书基础结构 |System Center Configuration Manager"
+title: "配置证书基础结构 | Microsoft Docs"
 description: "了解如何在 System Center Configuration Manager 中配置证书注册。"
 ms.custom: na
 ms.date: 10/10/2016
@@ -17,8 +17,8 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0fbce476b8a9b91a88354fb4abfadfd2526ca5e8
-ms.openlocfilehash: 9af69a813a1fe2a07e3b7b289e258b2d0b51a6f7
+ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
+ms.openlocfilehash: 56e0a1923305c5134386623b1e306b8ebd013d53
 
 ---
 # <a name="certificate-infrastructure"></a>证书基础结构
@@ -194,6 +194,6 @@ ms.openlocfilehash: 9af69a813a1fe2a07e3b7b289e258b2d0b51a6f7
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

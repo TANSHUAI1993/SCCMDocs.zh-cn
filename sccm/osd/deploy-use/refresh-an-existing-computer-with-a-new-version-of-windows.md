@@ -1,5 +1,5 @@
 ---
-title: "使用新版本的 Windows 刷新现有的计算机 | Configuration Manager"
+title: "使用新版 Windows 刷新现有计算机 | Microsoft Docs"
 description: "可以使用 Configuration Manager 中的几种办法来分区和格式化（擦除）现有计算机和在计算机上安装新操作系统。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: ae331ee9f1cc276f64b7f6501b383c67648f72f3
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: b247cbb68ed63a8eb99715a248686d68a28c53e2
 
 
 ---
@@ -90,6 +90,6 @@ ms.openlocfilehash: ae331ee9f1cc276f64b7f6501b383c67648f72f3
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

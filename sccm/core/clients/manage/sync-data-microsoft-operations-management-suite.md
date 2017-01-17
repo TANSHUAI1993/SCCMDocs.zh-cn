@@ -1,5 +1,5 @@
 ---
-title: "同步数据 | Microsoft Operations Management Suite | System Center Configuration Manager"
+title: "同步数据 | Microsoft Docs | Microsoft Operations Management Suite "
 description: "将数据从 System Center Configuration Manager 同步到 Microsoft Operations Management Suite。"
 ms.custom: na
 ms.date: 10/13/2016
@@ -16,8 +16,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0fbce476b8a9b91a88354fb4abfadfd2526ca5e8
-ms.openlocfilehash: 5786f0734ce186601f5173003b9b133ed6ae8b11
+ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
+ms.openlocfilehash: 0d8944bef9578a41b529a2d53b5a4d0094eaa21c
 
 ---
 # <a name="sync-data-from-configuration-manager-to-the-microsoft-operations-management-suite"></a>将数据从 Configuration Manager 同步到 Microsoft Operations Management Suite
@@ -54,6 +54,6 @@ ms.openlocfilehash: 5786f0734ce186601f5173003b9b133ed6ae8b11
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

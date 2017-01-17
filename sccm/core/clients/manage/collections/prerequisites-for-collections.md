@@ -1,5 +1,5 @@
 ---
-title: "集合先决条件 | System Center Configuration Manager"
+title: "集合先决条件 | Microsoft Docs"
 description: "在 System Center Configuration Manager 中获取使用集合的先决条件。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 99ddc0ba39778db4e8e45d6e954894464c7e047c
+ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
+ms.openlocfilehash: 81342ab0d064e3f2da19126819bdd048270a4320
 
 
 ---
@@ -37,6 +37,6 @@ System Center Configuration Manager 中的集合仅包含产品内部的依赖�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

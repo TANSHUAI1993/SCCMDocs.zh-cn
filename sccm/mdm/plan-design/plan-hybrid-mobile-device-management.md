@@ -1,5 +1,5 @@
 ---
-title: "规划混合 MDM | System Center Configuration Manager"
+title: "规划混合 MDM | Microsoft Docs"
 description: "使用 System Center Configuration Manager 和 Microsoft Intune 规划混合移动设备管理。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -13,12 +13,12 @@ ms.topic: get-started-article
 ms.assetid: bb95154b-f63e-4491-896e-41d732c802f8
 caps.latest.revision: 34
 caps.handback.revision: 0
-author: NathBarn
-ms.author: nathbarn
+author: mtillman
+ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 994de93fbd8f2674a4a46f46b90c11176ceeb849
+ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
+ms.openlocfilehash: 11e24eb24fdb563dd0be4f413b11622ceecab67b
 
 ---
 # <a name="plan-for-hybrid-mobile-device-management-mdm-with-system-center-configuration-manager-and-microsoft-intune"></a>使用 System Center Configuration Manager 和 Microsoft Intune 规划混合移动设备管理 (MDM)
@@ -37,6 +37,6 @@ ms.openlocfilehash: 994de93fbd8f2674a4a46f46b90c11176ceeb849
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

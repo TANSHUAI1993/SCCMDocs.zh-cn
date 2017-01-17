@@ -1,6 +1,6 @@
 ---
 
-title: "从断开连接的软件更新点同步软件更新 | Configuration Manager"
+title: "从断开连接的软件更新点同步软件更新 | Microsoft Docs"
 description: "按照以下过程可验证导出服务器、导出更新和导入更新元数据上的软件更新同步是否已成功。"
 keywords: 
 author: dougeby
@@ -14,8 +14,8 @@ ms.technology:
 - configmgr-sum
 ms.assetid: 1a997c30-8e71-4be5-89ee-41efb2c8d199
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: f821433d017f2e14f874eca359df0f38e896ab69
+ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
+ms.openlocfilehash: 73a54ddb896bfa7fb770e02d188a262230762c7f
 
 
 
@@ -111,6 +111,6 @@ ms.openlocfilehash: f821433d017f2e14f874eca359df0f38e896ab69
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

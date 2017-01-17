@@ -1,5 +1,5 @@
 ---
-title: "增量版本 | System Center Configuration Manager"
+title: "增量版本 | Microsoft Docs"
 description: "了解如何安装和管理 System Center Configuration Manager 更新。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 2b3fe48d0c878063886618d4390e6f5f53f311af
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: afc73be528c3ac4a35b72631e4479338e127e4dc
 
 ---
 # <a name="whats-new-in-system-center-configuration-manager-incremental-versions"></a>System Center Configuration Manager 增量版本中的新增功能
@@ -36,6 +36,7 @@ ms.openlocfilehash: 2b3fe48d0c878063886618d4390e6f5f53f311af
  这些更新版本是了解 System Center Configuration Manager 安装的增量版本以及了解能在部署中启用哪些功能的关键。
 
  System Center Configuration Manager Current Branch 的初始版本也称为版本 1511。 自此初始版本后，其他更新可用。 使用以下链接来发现每个版本的新增功能：
+  - [版本 1610 中的新增功能](../../../core/plan-design/changes/whats-new-in-version-1610.md)
   - [版本 1606 中的新增功能](../../../core/plan-design/changes/whats-new-in-version-1606.md)
   - [版本 1602 中的新增功能](../../../core/plan-design/changes/whats-new-in-version-1602.md)
 
@@ -44,6 +45,6 @@ ms.openlocfilehash: 2b3fe48d0c878063886618d4390e6f5f53f311af
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,6 +1,6 @@
 ---
 
-title: "管理软件更新同步 | Configuration Manager"
+title: "管理软件更新同步 | Microsoft Docs"
 description: "使用以下步骤可计划软件更新同步、手动启动软件更新同步，以及监视软件更新同步。"
 keywords: 
 author: dougeby
@@ -14,8 +14,8 @@ ms.technology:
 - configmgr-sum
 ms.assetid: ea8698c4-9df5-4cf5-8b62-ab93115b4769
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: a720a38962aee33f0d6a7c9ca447dd98d7e0c24e
+ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
+ms.openlocfilehash: e68170a16a6a908e035247ed9c0f3cc6cdbe1983
 
 
 
@@ -83,6 +83,6 @@ ms.openlocfilehash: a720a38962aee33f0d6a7c9ca447dd98d7e0c24e
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

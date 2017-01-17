@@ -1,5 +1,5 @@
 ---
-title: Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune
+title: "使用 System Center Configuration Manager 和 Microsoft Intune 的混合移动设备管理 (MDM) | Microsoft Docs"
 description: "了解使用 System Center Configuration Manager 和 Microsoft Intune 的混合移动设备管理 (MDM)。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -13,12 +13,12 @@ ms.topic: get-started-article
 ms.assetid: bb95154b-f63e-4491-896e-41d732c802f8
 caps.latest.revision: 34
 caps.handback.revision: 0
-author: NathBarn
-ms.author: nathbarn
+author: mtillman
+ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 22e673122f0f664d1240c11451b7e6db78481b26
-ms.openlocfilehash: 83832465e93997a2893e024c565ee00f471036d1
+ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
+ms.openlocfilehash: caedfa2f89daf9ebad72602161dd618f0d18b4ab
 
 ---
 # <a name="hybrid-mobile-device-management-mdm-with-system-center-configuration-manager-and-microsoft-intune"></a>Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune
@@ -66,7 +66,7 @@ ms.openlocfilehash: 83832465e93997a2893e024c565ee00f471036d1
 
 | **方法** |  **擦除** |  **相关性**    |   **锁定** | **详细信息**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**[BYOD](#byod)** | 否|    是 |   否 | [更多](../deploy-use/setup-hybrid-mdm.md#set-up-device-management)|
+|**[BYOD](#byod)** | 否|    是 |   否 | [更多](../deploy-use/setup-hybrid-mdm.md#windows-enrollment-setup)|
 |**[DEM](#dem)**|   否 |否 |否  |[更多](../deploy-use/enroll-devices-with-device-enrollment-manager.md)|
 
 关于可帮助用户找到正确方法的一系列问题，请参阅[选择如何注册设备](/intune/get-started/choose-how-to-enroll-devices1)。
@@ -117,6 +117,6 @@ Configuration Manager 混合 MDM 可以管理以下设备平台：
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

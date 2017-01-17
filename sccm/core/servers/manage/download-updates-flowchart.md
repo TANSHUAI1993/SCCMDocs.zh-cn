@@ -1,5 +1,5 @@
 ---
-title: "流程图 - 下载更新 | System Center Configuration Manager"
+title: "流程图 - 下载更新 | Microsoft Docs"
 description: "查看具有在线服务连接点的站点下载控制台内部更新的过程。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 96872f92c8c8e76467740a8bb269c172f47be641
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: cd2ef0f0d694937b760d514c2a6a24973810a2b2
 
 
 ---
@@ -31,6 +31,6 @@ ms.openlocfilehash: 96872f92c8c8e76467740a8bb269c172f47be641
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "CD.Latest 文件夹 | System Center Configuration Manager"
+title: "CD.Latest 文件夹 | Microsoft Docs"
 description: "了解有关新的更新过程的详细信息，该过程会从 Configuration Manager 控制台内部将更新传递到产品。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: fc63227aa4345fb58e7efc15abd55071fb33e5d5
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: dcf56f6b82f89e81d636ea920f36133e245cbb1e
 
 
 ---
@@ -28,6 +28,8 @@ ms.openlocfilehash: fc63227aa4345fb58e7efc15abd55071fb33e5d5
 System Center Configuration Manager 引入一种新的更新过程，该过程会从 Configuration Manager 控制台内部将更新传递到产品。 为了支持这种更新 Configuration Manager 的新方法，创建了一个名为 **CD.Latest** 的新文件夹，其中包含用于站点的更新版本的 Configuration Manager 安装文件副本。  
 
 从更新 1606 开始，CD.Latest 文件夹包含一个名为 **Redist** 的文件夹，该文件夹包含安装程序下载和使用的可再发行文件。 这些文件与在该 CD.Latest 文件夹中找到的 Configuration Manager 文件的版本相匹配。 当从 CD.Latest 文件夹运行安装程序时，必须使用与该安装程序的版本相匹配的文件。 为此，可以指示安装程序从 Microsoft 下载新文件和当前文件，或指示安装程序使用包含在 CD.Latest 文件夹中的 Redist 文件夹中的文件。
+
+但基线媒体（例如 2016 年 10 月发布的 1606 基线版本）不包含 Redist 文件夹。 只有在安装控制台中更新后才会创建 Redist 文件夹。 同时，从基线媒体安装站点时，请使用所用 Redist 文件夹。  
 
 > [!TIP]
 > 如果尚未安装版本 1606，则必须确保使用的 redist 文件是最新文件。 如果你最近没有下载 redist 文件，请计划允许安装程序从 Microsoft 执行该操作。   
@@ -61,6 +63,6 @@ System Center Configuration Manager 引入一种新的更新过程，该过程�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

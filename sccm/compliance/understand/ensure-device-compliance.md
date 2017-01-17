@@ -1,5 +1,5 @@
 ---
-title: "确保设备的合规性 | System Center Configuration Manager"
+title: "确保设备合规性 | Microsoft Docs"
 description: "使用 System Center Configuration Manager 管理组织中设备的配置和合规性。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 70104ac6e8fa19e222ef93c28e5fe33e9093af79
+ms.sourcegitcommit: f9e939d871e95a3248d8e5d96cb73063a81fd5cf
+ms.openlocfilehash: f7ecfe550d2e28579ea873442b2a68dc1c7c5483
 
 
 ---
@@ -74,6 +74,6 @@ System Center Configuration Manager 中的符合性设置提供了管理组织�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

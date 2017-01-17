@@ -1,5 +1,5 @@
 ---
-title: "规划客户端迁移 | System Center Configuration Manager"
+title: "规划客户端迁移 | Microsoft Docs"
 description: "了解将客户端从源层次结构迁移到 System Center Configuration Manager 目标层次结构的任务。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 6044f9b8116687fca80deeea87abd4652f773db0
+ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
+ms.openlocfilehash: 11da338af9d7dd4d6f9c5fc1c6c62e277139f852
 
 
 ---
@@ -43,7 +43,7 @@ ms.openlocfilehash: 6044f9b8116687fca80deeea87abd4652f773db0
 -   **System Center 2012 Configuration Manager 或更高版本的层次结构：**在产品版本相同的层次结构之间迁移客户端时，客户端软件不会更改或升级。 而是会从源层次结构重新分配到目标层次结构中的站点。  
 
     > [!NOTE]  
-    >  如果层次结构的产品版本不支持迁移到目标层次结构，请将源层次结构中的所有站点和客户端升级到兼容的产品版本。 源层次结构升级到支持的产品版本后，你可以在层次结构之间进行迁移。 有关详细信息，请参阅 [System Center Configuration Manager 中迁移的先决条件](../../core/migration/prerequisites-for-migration.md)主题中的[迁移支持的 Configuration Manager 版本](../../core/migration/prerequisites-for-migration.md#BKMK_supportedmigrationversions)部分。  
+    >  如果层次结构的产品版本不支持迁移到目标层次结构，请将源层次结构中的所有站点和客户端升级到兼容的产品版本。 源层次结构升级到支持的产品版本后，你可以在层次结构之间进行迁移。 有关详细信息，请参阅 [System Center Configuration Manager 中迁移的先决条件](../../core/migration/prerequisites-for-migration.md)主题中的[迁移支持的 Configuration Manager 版本](../../core/migration/prerequisites-for-migration.md#BKMK_SupportedMigrationVersions)部分。  
 
 使用以下信息来帮助你规划客户端迁移：  
 
@@ -98,13 +98,13 @@ ms.openlocfilehash: 6044f9b8116687fca80deeea87abd4652f773db0
 
 此外，你可能必须重新安装某些应用程序。  
 
-##  <a name="a-nameplanningforinventorydatamigrationa-plan-for-inventory-and-compliance-data-during-migration"></a><a name="Planning_for_Inventory_data_migration"></a> 在迁移过程中规划清单和符合性数据  
+##  <a name="a-nameplanningforinventorydatamigrationa-plan-for--inventory-and-compliance-data-during-migration"></a><a name="Planning_for_Inventory_data_migration"></a> 在迁移过程中规划清单和符合性数据  
 当你将客户端迁移到目标层次结构时，不会保存客户端清单和符合性数据， 而是会在客户端第一次将其信息发送到为其分配的站点时在目标层次结构中重新创建此信息。 为了帮助减少产生的网络带宽需求和服务器处理，请考虑分阶段迁移少量的客户端，而不是一次迁移大量的客户端。  
 
  此外，你无法从源层次结构迁移硬件清单的自定义项。 你必须独立于迁移将这些自定义项引入目标层次结构。 有关如何扩展硬件清单的信息，请参阅[如何在 System Center Configuration Manager 中配置硬件清单](../../core/clients/manage/inventory/configure-hardware-inventory.md)。  
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

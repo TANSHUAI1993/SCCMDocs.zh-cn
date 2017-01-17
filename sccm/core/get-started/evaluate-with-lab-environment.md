@@ -1,5 +1,5 @@
 ---
-title: "通过构建你自己的实验室环境来评估 System Center Configuration Manager"
+title: "通过构建你自己的实验室环境来评估 System Center Configuration Manager | Microsoft Docs"
 description: "创建实验室环境来评估 System Center Configuration Manager 在组织中的使用情况。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 363e6a929b72e027d5fff7584905fb552dc695b0
+ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
+ms.openlocfilehash: e72acbe0a2f5592b5bdf9a3612db62bfb066fadf
 
 
 ---
@@ -64,12 +64,12 @@ ms.openlocfilehash: 363e6a929b72e027d5fff7584905fb552dc695b0
 
 -   在 [System Center Configuration Manager 的基于角色的管理基础](../../core/understand/fundamentals-of-role-based-administration.md)中，可以了解安全角色的重要性  
 
--   理解这些[内容管理的概念](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#bkmk_Concepts)，以此来了解与内容管理相关的特定概念  
+-   理解这些[内容管理的概念](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)，以此来了解与内容管理相关的特定概念  
 
 -   [了解客户端如何为 System Center Configuration Manager 查找站点资源和服务](../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md)，以便成功支持部署中的所有日常操作  
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

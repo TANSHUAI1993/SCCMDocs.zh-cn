@@ -1,5 +1,5 @@
 ---
-title: "System Center Configuration Manager 的安全性和隐私"
+title: "System Center Configuration Manager 的安全性和隐私 | Microsoft Docs"
 description: "查找有关 System Center Configuration Manager 的安全性和隐私的资源。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: f29a3453cb52872a87b34aecf95e5f152f4882fc
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: a0cc96d1bde1ab895a4560d89dbc162f34a8443b
 
 
 ---
@@ -76,6 +76,6 @@ ms.openlocfilehash: f29a3453cb52872a87b34aecf95e5f152f4882fc
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

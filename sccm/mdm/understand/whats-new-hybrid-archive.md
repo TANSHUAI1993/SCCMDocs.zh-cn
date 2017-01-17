@@ -1,5 +1,5 @@
 ---
-title: "存档 | 混合 MDM 的新增功能 | Microsoft Intune | System Center Configuration Manager"
+title: "归档混合 MDM 的新增功能 | Microsoft Docs"
 description: "System Center Configuration Manager 和 Intune 的混合部署过去可用的移动设备管理功能的存档"
 ms.custom: na
 ms.date: 10/25/2016
@@ -16,8 +16,8 @@ ms.author: mtillman
 manager: angrobe
 ROBOTS: NOINDEX, NOFOLLOW
 translationtype: Human Translation
-ms.sourcegitcommit: bfc4baefbdddc5125c38272f2087d214151c91d5
-ms.openlocfilehash: 4c0910ae365e1fda7b9747b79e13782a6056c0da
+ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
+ms.openlocfilehash: 086b350005e9665e8b91c11e664563f9687aca27
 
 ---
 # <a name="past-hybrid-features-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager 和 Microsoft Intune 过去的混合功能
@@ -146,7 +146,7 @@ ms.openlocfilehash: 4c0910ae365e1fda7b9747b79e13782a6056c0da
 
 - **预声明具有 IMEI 或 iOS 序列号的公司拥有的设备**
 
-  现在，可通过导入公司拥有的设备的国际移动设备识别 (IMEI) 码对此类设备进行识别。 可上传包含设备 IMEI 码的逗号分隔值 (.csv) 文件，或者手动输入设备信息。  还可以导入 iOS 设备的序列号。  有关详细信息，请参阅 [System Center Configuration Manager Technical Preview 1605 中的功能](/sccm/core/get-started/capabilities-in-technical-preview-1605)中的[预声明具有 IMEI 或 iOS 序列号的公司拥有的设备](../../core/get-started/capabilities-in-technical-preview-1605.md#pre-declare-corporate-owned-devices-with-with-imei-or-ios-serial-number)。  
+  现在，可通过导入公司拥有的设备的国际移动设备识别 (IMEI) 码对此类设备进行识别。 可上传包含设备 IMEI 码的逗号分隔值 (.csv) 文件，或者手动输入设备信息。  还可以导入 iOS 设备的序列号。  有关详细信息，请参阅 [System Center Configuration Manager Technical Preview 1605 中的功能](/sccm/core/get-started/capabilities-in-technical-preview-1605)中的[预声明具有 IMEI 或 iOS 序列号的公司拥有的设备](../../core/get-started/capabilities-in-technical-preview-1605.md#BKMK_IMEI)。  
 
 - **Windows 信息保护 (WIP)**
 
@@ -202,7 +202,7 @@ ms.openlocfilehash: 4c0910ae365e1fda7b9747b79e13782a6056c0da
 
 - **适用于 Android 设备的 SmartLock 设置**
 
-  一个新设置已添加到“Android 和 Samsung KNOX”配置项目，此设置使用户可以在兼容的 Android 设备上控制 SmartLock 功能。  可以使用此设置防止最终用户配置 SmartLock。 有关详细信息，请参阅 [System Center Configuration Manager Technical Preview 1604 中的功能](/sccm/core/get-started/capabilities-in-technical-preview-1604.md)中的[适用于 Android 设备的 SmartLock 设置](/sccm/get-started/capabilities-in-technical-preview-1604#smartlock-setting-for-android-devices)。  
+  已向“Android 和 Samsung KNOX 标准版”配置项目添加了一个新设置，通过此设置可在兼容的 Android 设备上控制 SmartLock 功能。  可以使用此设置防止最终用户配置 SmartLock。 有关详细信息，请参阅 [System Center Configuration Manager Technical Preview 1604 中的功能](/sccm/core/get-started/capabilities-in-technical-preview-1604.md)中的[适用于 Android 设备的 SmartLock 设置](/sccm/get-started/capabilities-in-technical-preview-1604#smartlock-setting-for-android-devices)。  
 
 ### <a name="new-in-configuration-manager-current-branch"></a>Configuration Manager (Current Branch) 中的新增功能  
  2016 年 4 月版本的 Configuration Manager (Current Branch) 中没有新增的混合功能。  
@@ -283,9 +283,9 @@ ms.openlocfilehash: 4c0910ae365e1fda7b9747b79e13782a6056c0da
 
   可在 Configuration Manage 控制台的“应用程序”节点中找到这些应用。 关于部署应用程序的详细信息，请参阅[如何使用 System Center Configuration Manager 部署应用程序](../../apps/deploy-use/deploy-applications.md)。  
 
-- **Android Samsung KNOX 设备的展台模式设置**
+- **Android Samsung KNOX 标准版设备的展台模式设置**
 
-  展台模式可让你锁定设备以只允许某些功能工作。  从 Configuration Manager (Current Branch) 的版本 1602 开始，现在可指定 Samsung KNOX 设备的展台模式设置。 有关详细信息，请参阅[如何为没有使用 System Center Configuration Manager 客户端管理的 Android 和 Samsung KNOX 设备创建配置项目](/sccm/compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client)。  
+  展台模式可让你锁定设备以只允许某些功能工作。  从 1602 版 Configuration Manager (Current Branch) 起，可为 Samsung KNOX 标准版设备指定展台模式设置。 有关详细信息，请参阅[如何为未使用 System Center Configuration Manager 客户端管理的 Android 和 Samsung KNOX 标准版设备创建配置项目](/sccm/compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client)。  
 
 - **iOS 激活锁定**
 
@@ -293,6 +293,6 @@ ms.openlocfilehash: 4c0910ae365e1fda7b9747b79e13782a6056c0da
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

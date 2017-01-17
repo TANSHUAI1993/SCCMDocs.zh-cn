@@ -1,5 +1,5 @@
 ---
-title: "部署 Wi-Fi、VPN、电子邮件和证书配置文件 | System Center Configuration Manager"
+title: "部署 Wi-Fi、VPN、电子邮件和证书配置文件 | Microsoft Docs"
 description: "了解如何在 System Center Configuration Manager 中部署 Wi-Fi、VPN、电子邮件和证书配置文件。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 7e13c52c135850b1f449cf91bc81425208d16551
+ms.sourcegitcommit: c2e3aef41e9a890d136039f85777ab07284e5c27
+ms.openlocfilehash: 70372d5df13034b48f3e43b766776442f1be5823
 
 ---
 # <a name="deploy-profiles-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中部署配置文件
@@ -40,10 +40,10 @@ ms.openlocfilehash: 7e13c52c135850b1f449cf91bc81425208d16551
 > -   [如何在 System Center Configuration Manager 中创建证书配置文件](create-certificate-profiles.md)    
 
 > [!IMPORTANT]  
->  在删除 Wi-Fi 配置文件部署时，不会从客户端设备中删除 Wi-Fi 配置文件。 如果要从设备中删除配置文件，你必须将其手动删除。
+>  删除 VPN 配置文件部署时，不会从客户端设备中将其删除。 如果要从设备中删除配置文件，你必须将其手动删除。
 >   
 
-## <a name="deploying-profiles"></a>部署配置文件  
+## <a name="deploying--profiles"></a>部署配置文件  
 
 
 1.  在 System Center Configuration Manager 控制台中，选择“资产和符合性”。  
@@ -75,6 +75,6 @@ ms.openlocfilehash: 7e13c52c135850b1f449cf91bc81425208d16551
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

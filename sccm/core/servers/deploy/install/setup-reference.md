@@ -1,5 +1,5 @@
 ---
-title: "安装参考 | System Center Configuration Manager"
+title: "安装参考 | Microsoft Docs"
 description: "查看此参考可帮助做好 Configuration Manager 站点或层次结构安装准备。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 06bab7e01fee2c0b030a2879fa67fd455bf668fe
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: a1f13fcde27baf7d0245682292134f08c4f9f8e6
 
 
 ---
@@ -99,6 +99,6 @@ System Center Configuration Manager 安装程序提供了几个主题的链接�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

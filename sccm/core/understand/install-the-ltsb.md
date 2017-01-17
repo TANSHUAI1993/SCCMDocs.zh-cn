@@ -1,5 +1,5 @@
 ---
-title: "使用 1606 基线介质安装站点 | System Center Configuration Manager"
+title: "安装使用 1606 基线介质的站点 | Microsoft Docs"
 description: "了解如何使用 1606 基线介质来安装或升级 System Center Configuration Manager 站点。"
 ms.custom: na
 ms.date: 10/12/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 5e97fbcdc21022e98b4cbdb198273dfe544a561f
-ms.openlocfilehash: 3df46a00f2208ffa687c8c99ce610266e206eef0
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: a80095fb3b227653126a028ab4ab8f4e2dbd612b
 
 
 ---
@@ -83,7 +83,7 @@ LTSB 不支持卸载站点系统角色：
   **密钥名称：SABranchOptions**
    -    **SSActive = 1**
    - ** = 1**
- 
+
 
 > [!IMPORTANT]  
 > **SABranchOptions** 只适用于从基线介质运行安装程序。 它不适用于从站点（之前使用 1606 版基线介质安装的站点）CD.Latest 文件夹运行安装程序。
@@ -148,6 +148,6 @@ CD.Latest 文件夹中的介质不受以下内容支持：
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

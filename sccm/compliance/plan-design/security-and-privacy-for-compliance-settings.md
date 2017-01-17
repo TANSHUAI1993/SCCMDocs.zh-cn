@@ -1,5 +1,5 @@
 ---
-title: "符合性设置的安全和隐私 | System Center Configuration Manager"
+title: "符合性设置的安全和隐私 | Microsoft Docs"
 description: "了解 System Center Configuration Manager 中符合性设置的安全最佳方案。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 93b0f19cade91a987900c128fdbd80bb68bc186f
+ms.sourcegitcommit: f9e939d871e95a3248d8e5d96cb73063a81fd5cf
+ms.openlocfilehash: e7dc554ffcd23978eed44819b525f6cc239b2135
 
 
 ---
@@ -45,6 +45,6 @@ ms.openlocfilehash: 93b0f19cade91a987900c128fdbd80bb68bc186f
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

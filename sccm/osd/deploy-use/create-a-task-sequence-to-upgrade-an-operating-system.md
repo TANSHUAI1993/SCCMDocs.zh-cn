@@ -1,5 +1,5 @@
 ---
-title: "创建任务序列来升级操作系统 | Configuration Manager"
+title: "创建用于升级操作系统的任务序列 | Microsoft Docs"
 description: "System Center Configuration Manager 中的任务序列可自动将操作系统从 Windows 7 或更高版本升级到 Windows 10。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: fe70a3bfddcc0638a27eccb04324c4e6e2ace1d4
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: 32af7da62bfe767a21a891338bd778ebf45f2685
 
 
 ---
@@ -94,6 +94,6 @@ ms.openlocfilehash: fe70a3bfddcc0638a27eccb04324c4e6e2ace1d4
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

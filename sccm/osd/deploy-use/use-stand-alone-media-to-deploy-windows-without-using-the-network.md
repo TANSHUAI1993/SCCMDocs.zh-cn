@@ -1,5 +1,5 @@
 ---
-title: "使用独立媒体部署 Windows 而不使用网络 | Configuration Manager"
+title: "使用独立媒体部署 Windows，而不使用网络 | Microsoft Docs"
 description: "对于带宽受到限制或作为更新、安装或升级计算机选项的操作系统，可使用 Configuration Manager 中的独立媒体进行部署。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: f09359b2c565f259ddd0dab01812bafcaecff60a
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: 30ae794381c6894e11b21a8167d0af60463c5279
 
 
 ---
@@ -82,6 +82,6 @@ System Center Configuration Manager 中的独立媒体包含在计算机上部�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

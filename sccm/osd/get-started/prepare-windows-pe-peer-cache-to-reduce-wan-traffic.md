@@ -1,5 +1,5 @@
 ---
-title: "准备 Windows PE 对等缓存以减少 WAN 流量 | Configuration Manager"
+title: "准备 Windows PE 对等缓存来减少 WAN 流量 | Microsoft Docs"
 description: "Windows PE 对等缓存适用于 Windows PE，在没有本地分发点的情况下，可从本地对等缓存中获取内容并将 WAN 流量降到最低。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: dc21868f99e17070b25c8b490e86477227a96c8e
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: 814c6133a30b1116d05aaeafddb0dfb7fe2a390e
 
 
 ---
@@ -52,17 +52,17 @@ ms.openlocfilehash: dc21868f99e17070b25c8b490e86477227a96c8e
 
 -   软件更新  
 
-##  <a name="a-namebkmkpeercacheworka-how-does-windows-pe-peer-cache-work"></a><a name="BKMK_PeerCacheWork"></a> Windows PE 对等缓存如何工作？  
+##  <a name="a-namebkmkpeercacheworka-how-does--windows-pe-peer-cache-work"></a><a name="BKMK_PeerCacheWork"></a> Windows PE 对等缓存如何工作？  
  请考虑这样一个场景：一个分支机构没有分发点，但是启用了多个客户端使用 Windows PE 对等缓存。 将配置为使用对等缓存的任务序列部署到多个已配置为属于对等缓存源的客户端。 第一个运行任务序列的客户端将广播对包含内容的对等方的请求。 但未找到此对等方，因此跨 WAN 从分发点获取内容。 客户端安装新的映像，然后将内容存储在其 Configuration Manager 客户端缓存中，这样该客户端可作为其他客户端的对等缓存源。 当下一个客户端运行任务序列时，它将在子网上广播对对等缓存源的请求，而第一个客户端将响应，并提供其缓存的内容。  
 
-##  <a name="a-namebkmkpeercachedeterminea-determine-what-clients-will-be-part-of-the-windows-pe-peer-cache-source"></a><a name="BKMK_PeerCacheDetermine"></a> 确定将属于 Windows PE 对等缓存源的客户端  
+##  <a name="a-namebkmkpeercachedeterminea-determine-what--clients-will-be-part-of-the-windows-pe-peer-cache-source"></a><a name="BKMK_PeerCacheDetermine"></a> 确定将属于 Windows PE 对等缓存源的客户端  
  为了帮助你确定可选为 Windows PE 对等缓存源的计算机，你应该考虑以下几个方面：  
 
 -   Windows PE 对等缓存源应为始终开机且可用于对等缓存客户端的台式计算机。  
 
 -   Windows PE 对等缓存具有足以存储映像的客户端缓存大小。  
 
-##  <a name="a-namebkmkpeercacherequirementsa-requirements-for-a-client-to-use-a-windows-pe-peer-cache-source"></a><a name="BKMK_PeerCacheRequirements"></a> 使用 Windows PE 对等缓存源的客户端的要求  
+##  <a name="a-namebkmkpeercacherequirementsa-requirements-for-a-client-to-use-a--windows-pe-peer-cache-source"></a><a name="BKMK_PeerCacheRequirements"></a> 使用 Windows PE 对等缓存源的客户端的要求  
  对于使用 Windows PE 对等缓存源的客户端，必须满足以下要求：  
 
 -   Configuration Manager 客户端必须能够通过网络上的以下端口进行通信：  
@@ -144,6 +144,6 @@ ms.openlocfilehash: dc21868f99e17070b25c8b490e86477227a96c8e
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

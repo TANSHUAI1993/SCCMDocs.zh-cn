@@ -1,5 +1,5 @@
 ---
-title: "System Center Configuration Manager 基础知识 | System Center Configuration Manager"
+title: "System Center Configuration Manager 基础知识 | Microsoft Docs"
 description: "了解 System Center Configuration Manager 的基础概念。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 99dbc744e01b7f21f1decc2df40c09de11b0731e
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: b808e9089aabe3895892ecf3caf1610478361172
 
 ---
 # <a name="fundamentals-of-system-center-configuration-manager"></a>System Center Configuration Manager 基础知识
@@ -50,6 +50,6 @@ ms.openlocfilehash: 99dbc744e01b7f21f1decc2df40c09de11b0731e
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

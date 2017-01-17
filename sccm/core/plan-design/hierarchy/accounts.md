@@ -1,5 +1,5 @@
 ---
-title: "帐户 | System Center Configuration Manager"
+title: "Configuration Manager 使用的帐户 | Microsoft Docs"
 description: "在 System Center Configuration Manager 中标识和管理 Windows 组和帐户。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: c3e19bd216523cc75b9a22672d030bb528b32555
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: fe573ebce2868686dd3156f4a3661dc8b85bc948
 
 
 ---
@@ -347,6 +347,6 @@ Configuration Manager 使用此组来授予查看软件清单所收集的文件�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

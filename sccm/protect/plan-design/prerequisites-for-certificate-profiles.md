@@ -1,8 +1,8 @@
 ---
-title: "证书配置文件先决条件 | System Center Configuration Manager"
+title: "证书配置文件先决条件 | Microsoft Docs"
 description: "了解 System Center Configuration Manager 中的证书配置文件及其外部依赖项和产品内依赖关系。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/27/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: ba42385eb31fffd9f74b35108e71a1ae5a9c71f7
+ms.sourcegitcommit: 593fbd0587d54490246f48ae54f666bac6b7830d
+ms.openlocfilehash: 08fb30da2060728142648f13846be737f98f2276
 
 
 ---
@@ -26,7 +26,7 @@ ms.openlocfilehash: ba42385eb31fffd9f74b35108e71a1ae5a9c71f7
 *适用范围：System Center Configuration Manager (Current Branch)*
 
 
-System Center Configuration Manager 中的证书配置文件具有外部依赖项和产品内依赖关系。  
+System Center Configuration Manager（也称为 ConfigMgr 或 SCCM）中的证书配置文件具有外部依赖项和产品内依赖关系。  
 
 ## <a name="dependencies-external-to-configuration-manager"></a>Configuration Manager 的外部依赖关系  
 
@@ -49,6 +49,6 @@ System Center Configuration Manager 中的证书配置文件具有外部依赖�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

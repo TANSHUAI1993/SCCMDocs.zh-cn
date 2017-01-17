@@ -1,5 +1,5 @@
 ---
-title: "System Center Configuration Manager Technical Preview 1608 版中的功能"
+title: "System Center Configuration Manager Technical Preview 1608 版中的功能 | Microsoft Docs"
 description: "了解 System Center Configuration Manager Technical Preview 1608 版中的可用功能。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 4d548f097f0d0b80ca314384c345f9bcd08fbc14
+ms.sourcegitcommit: 3bf44f850722afdb8dfe5922c8ceff11c9b56d08
+ms.openlocfilehash: c41409e957f43aee3be994ab3e702232c7dfe6ea
 
 ---
 # <a name="capabilities-in-technical-preview-1608-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1608 版中的功能
@@ -65,6 +65,6 @@ ms.openlocfilehash: 4d548f097f0d0b80ca314384c345f9bcd08fbc14
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

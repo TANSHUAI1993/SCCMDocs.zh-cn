@@ -1,5 +1,5 @@
 ---
-title: "控制台内更新 | System Center Configuration Manager"
+title: "控制台中更新 | Microsoft Docs"
 description: "System Center Configuration Manager 与 Microsoft 云服务同步，以获取可以从控制台中进行安装的更新。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f777295958e9cbc729e3759d354521c96ae3e8ac
-ms.openlocfilehash: b9721737b4181d8f5e41224c3e2c32ae41647554
+ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
+ms.openlocfilehash: 1b7063d45c6dc9b42e5002f684043a8e846416a2
 
 
 ---
@@ -51,11 +51,11 @@ System Center Configuration Manager 与 Microsoft 云服务同步，以获取随
 
 -   服务连接点用于上载有关你站点的使用情况信息。 此信息可帮助 Microsoft 云服务标识你基础结构的当前版本可用的更新。 有关详细信息，请参阅 [System Center Configuration Manager 的诊断和使用情况数据](../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md)  
 
--   服务连接点用于使用 Microsoft Intune 管理设备和使用 Configuration Manager 管理本地移动设备。 有关详细信息，请参阅[使用 System Center Configuration Manager 和 Microsoft Intune 的混合移动设备管理 (MDM)](../../../mdm/plan-design/hybrid-mobile-device-management.md)。  
+-   服务连接点用于使用 Microsoft Intune 管理设备和使用 Configuration Manager 管理本地移动设备。 有关详细信息，请参阅[使用 System Center Configuration Manager 和 Microsoft Intune 的混合移动设备管理 (MDM)](../../../mdm/understand/hybrid-mobile-device-management.md)。  
 
 若要更好地理解什么情况会下载更新，请参阅：  
 
--   [流程图 - 下载 System Center Configuration Manager 的更新](../../../core/servers/manage/download-updates-flowchart.md)。  
+-   [流程图 - 下载 System Center Configuration Manager 的更新](../../../core/servers/manage/download-updates-flowchart.md)
 
 -   [流程图 - 更新 System Center Configuration Manager 的副本](../../../core/servers/manage/update-replication-flowchart.md)  
 
@@ -69,7 +69,7 @@ System Center Configuration Manager 与 Microsoft 云服务同步，以获取随
     - 具有此安全角色和具有对 **默认** 安全作用域访问权限的用户可以查看更新、安装更新并在安装过程中启用功能，以及查看各个功能（以前已安装更新但未启用该功能）。
 
 - 具有**读取** 权限的 **只读分析员** ：
-  -  具有此安全角色和具有对 **默认** 作用域访问权限的用户可以查看更新，但不能安装它们，并且可以查看各个功能（已安装更新但未启用此功能）。
+  -  具有此安全角色，从 1511 版升级到 1606 版或对**默认**作用域有访问权限的用户可以查看更新，但不能安装它们，并且可以查看各个功能（已安装更新但未启用此功能）。
 
 **更新和维护所需的权限汇总：**   
   - 使用分配有安全角色（包括具有 **修改** 和 **读取** 权限的 **更新包** 类）的帐户。
@@ -98,15 +98,16 @@ System Center Configuration Manager 与 Microsoft 云服务同步，以获取随
 
 -   从 1511 更新到 1602：请参阅 [1602 的安装更新清单](../../../core/servers/manage/checklist-for-installing-update-1602.md)
 
-- 从 1511 或1602 更新到 1606：请参阅 [1606 的安装更新清单](../../../core/servers/manage/checklist-for-installing-update-1606.md)  
+- 从 1511 或 1602 更新到 1606：请参阅 [1606 的安装更新清单](../../../core/servers/manage/checklist-for-installing-update-1606.md)  
 
+- 从 1511、1602 或 1606 更新到 1610：请参阅 [1610 的安装更新清单](../../../core/servers/manage/checklist-for-installing-update-1610.md)  
 
 ###  <a name="a-namebkmkstep2a-step-2-test-the-database-upgrade-before-installing-an-update"></a><a name="bkmk_step2"></a> 步骤 2：安装更新之前测试数据库升级  
 在层次结构中安装新的更新（如更新 1602）之前，应测试站点数据库的升级。 用于对将更新安装到站点数据库备份进行测试的命令行选项的名称是 **testdbupgrade**。  
 
 与 Configuration Manager 的早期版本不同，如果安装更新失败，则无需执行站点恢复，而应重试安装更新。 因此，虽然与过去的产品版本相比，数据库的测试升级不太重要，不过这仍然是建议步骤。  
 
-##### <a name="to-run-testdbupgrade-before-installing-an-update"></a>安装更新之前运行 testdbupgrade  
+#### <a name="to-run-testdbupgrade-before-installing-an-update"></a>安装更新之前运行 testdbupgrade  
 
 1.  从运行计划更新的版本的站点的 **CD.Latest** 文件夹获取一组源文件。 这可能需要首先在运行该版本的 System Center Configuration Manager 实验室或测试环境中安装站点。  
 
@@ -136,13 +137,13 @@ System Center Configuration Manager 与 Microsoft 云服务同步，以获取随
 ###  <a name="a-namebkmkstep3a-step-3-run-the-prerequisite-checker-before-installing-an-update"></a><a name="bkmk_step3"></a> 步骤 3：安装更新之前运行先决条件检查程序  
 安装更新之前，请考虑运行针对该更新的先决条件检查。 如果在安装更新之前运行先决条件检查：  
 
--   更新文件会在实际安装更新之前复制到其他站点  
+-   更新文件会在安装更新之前复制到其他站点  
 
 -   选择安装更新时，先决条件检查会再次自动运行  
 
 以后在安装更新时，你可以选择配置更新以忽略先决条件检查警告。  
 
-##### <a name="to-run-the-prerequisite-checker-before-installing-an-update"></a>安装更新之前运行先决条件检查程序  
+#### <a name="to-run-the-prerequisite-checker-before-installing-an-update"></a>安装更新之前运行先决条件检查程序  
 
 1.  在 Configuration Manager 控制台中，转到“管理” > “云服务” > “更新与维护服务”。  
 
@@ -208,12 +209,13 @@ System Center Configuration Manager 与 Microsoft 云服务同步，以获取随
 -   在 Configuration Manager 控制台中：转到“监视” > “概述” > “更新与维护服务”节点。 此节点仅显示当前正在安装的更新包的安装状态。  
 
     从版本 1606 开始，为便于监视，将更新包安装划分为以下几个阶段。 对于每个阶段，现在提供了更多详细信息，包括要查看有关详细信息的日志文件：  
-    -   **下载** （这仅适用于安装服务连接点站点系统角色所在的顶层站点）
+    -   **下载**（此阶段仅适用于已安装服务连接点站点系统角色所在的顶层站点）
     -   **复制**
-    - **先决条件检查**
-    - **安装**
+    -   **先决条件检查**
+    -   **安装**
+    -   **安装后**（此阶段适用于 1610 以及之后的版本）
 
--   可以查看 **&lt;ConfigMgr_Installation_Directory>\Logs\\** 中的 **CMUpdate.log** 文件  
+-   可以查看 **&lt;ConfigMgr_Installation_Directory>\Logs** 中的 **CMUpdate.log** 文件  
 
 **4.更新安装完成时**  
 第一个站点更新完成安装之后：  
@@ -311,7 +313,7 @@ System Center Configuration Manager 与 Microsoft 云服务同步，以获取随
 **其他配置：** 查看在启动更新之前进行的更改，然后将这些配置还原到站点和层次结构。  
 
 ##  <a name="a-namebkmkoptionsa-enable-optional-features-from-updates"></a><a name="bkmk_options"></a> 启用更新中的可选功能  
-当安装的更新包含一个或多个可选功能时，你可以选择在层次结构中启用这些功能。  可以在更新安装时执行此操作，或在以后返回到控制台并启用可选功能时执行此操作。
+当安装的更新包含一个或多个可选功能时，你可以选择在层次结构中启用这些功能。  可以在安装更新时执行此操作，或在稍后返回控制台并启用可选功能时执行此操作。
 
 若要查看可用功能及其状态，请在控制台中导航到“管理” > “云服务” > “更新和维护” > “功能”。
 
@@ -332,7 +334,7 @@ System Center Configuration Manager 与 Microsoft 云服务同步，以获取随
 当你的层次结构运行版本 1606 或更高版本，然后再安装包含预发行功能的更新时，这些功能和此次更新包含的常规功能在更新和维护向导中可见：
   - **如果同意：** 安装更新时，可以启用更新和维护向导中的预发行功能。 为此，请选择预发行功能，就像选择任何其他功能那样。     
 
-    你也可以之后从控制台的“管理” > “云服务” > “更新与维护” > “功能”节点启用预发行功能。 为此，请在“功能”节点中选择要该功能，然后单击“开启”。 （你同意之前，此选项将灰显且不可用。）  
+    也可以之后从控制台的“管理” > “云服务” > “更新和维护服务” > “功能”节点启用预发行功能。 为此，请在“功能”节点中选择要该功能，然后单击“开启”。 （你同意之前，此选项将灰显且不可用。）  
   -   **如果不同意：** 安装更新时，预发行功能在更新和维护向导中可见，但将灰显且不能启用。 安装更新之后，你可以在功能节点中查看这些功能，但不可启用它们（直到你在层次结构设置同意）。
 
  > [!TIP]
@@ -344,8 +346,11 @@ System Center Configuration Manager 与 Microsoft 云服务同步，以获取随
 
  |功能                    |添加为预发行功能 |添加为完整版功能 |  
 |----------------------------|---------------------|------------------------|
+| 用于向客户端进行内容分发的对等缓存 |  [版本 1610](/sccm/core/plan-design/hierarchy/client-peer-cache) |![尚未发行](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
+| 云管理网关 |  [版本 1610](/sccm/core/clients/manage/plan-cloud-management-gateway) |![尚未发行](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
+| 客户端数据源仪表板 |  [版本 1610](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed#client-data-sources-dashboard) |![尚未发行](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 | Microsoft Operations Management Suite (OMS) 连接器  | [版本 1606](../../../core/clients/manage/sync-data-microsoft-operations-management-suite.md) |![尚未发行](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-| 维护群集感知集合（为服务器组提供服务）| [版本 1602](../../../core/get-started/capabilities-in-technical-preview-1605.md#bkmk_servergroups)|![尚未发行](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
+| 维护群集感知集合（为服务器组提供服务）| [版本 1602](../../../core/get-started/capabilities-in-technical-preview-1605.md#BKMK_ServerGroups)|![尚未发行](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 |对由 System Center Configuration Manager 管理的电脑进行条件访问 | [版本 1602](../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)     |![尚未发行](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)                        |
 
 
@@ -369,10 +374,10 @@ System Center Configuration Manager 与 Microsoft 云服务同步，以获取随
 
 -   对于在 Configuration Manager 控制台中查看更新，你的帐户缺少正确的基于角色的管理权限。
 
-    有关查看更新并从控制台启用功能所需权限的信息，请参阅此主题中[管理更新的权限](../../../core/servers/manage/install-in-console-updates.md#Permissions-to-view-and-manage-updates-and-features)。
+    有关查看更新并从控制台启用功能所需权限的信息，请参阅此主题中[管理更新的权限](../../../core/servers/manage/install-in-console-updates.md#permissions-to-view-and-manage-updates-and-features)。
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "System Center Configuration Manager Technical Preview 1605 版中的功能"
+title: "System Center Configuration Manager Technical Preview 1605 版中的功能 | Microsoft Docs"
 description: "了解 System Center Configuration Manager Technical Preview 1605 版中的可用功能。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ ms.author: brenduns
 manager: angrobe
 robots: noindex,nofollow
 translationtype: Human Translation
-ms.sourcegitcommit: f777295958e9cbc729e3759d354521c96ae3e8ac
-ms.openlocfilehash: 0137d6e2c69480d6de88fbf8fa3450d1699007e5
+ms.sourcegitcommit: 3bf44f850722afdb8dfe5922c8ceff11c9b56d08
+ms.openlocfilehash: 06741d03e208c6f5c8093130780dcdc8f0fcfbf7
 
 ---
 # <a name="capabilities-in-technical-preview-1605-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1605 版中的功能
@@ -273,7 +273,7 @@ ms.openlocfilehash: 0137d6e2c69480d6de88fbf8fa3450d1699007e5
 
 -   “应用程序”选项卡已被拆分为三个单独的“更新”、“操作系统”（这两者之前位于“筛选器”列表中）和“应用程序”选项卡。  
 
-##  <a name="a-namebkmkservergroupsa-service-a-server-group"></a><a name="BKMK_ServerGroups"></a>维护服务器组  
+##  <a name="a-namebkmkservergroupsa-service-a--server-group"></a><a name="BKMK_ServerGroups"></a>维护服务器组  
  System Center Configuration Manager Technical Preview 版本 1511 中有一个创建集合的功能，其中集合中的所有设备组成了一个服务器组。 而且，在将软件更新部署到服务器组中时，可以部署要使用的服务器组设置、控制在任何给定时间内更新的计算机百分比，以及配置要运行自定义操作的前期部署和后期部署 PowerShell 脚本。  
 
  System Center Configuration Manager Technical Preview 1605 版中新增了在服务器组中按定义的指定顺序更新计算机的功能，添加了增强型监视，以便在服务器组中查看计算机的状态，并提供了清除部署锁定的功能，当在客户端无法安装软件更新并阻止其他客户端安装其软件更新时，此功能会非常有用。  
@@ -472,6 +472,6 @@ ms.openlocfilehash: 0137d6e2c69480d6de88fbf8fa3450d1699007e5
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

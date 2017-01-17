@@ -1,5 +1,5 @@
 ---
-title: "自定义启动映像 | Configuration Manager"
+title: "自定义启动映像 | Microsoft Docs"
 description: "了解使用 Configuration Manager 或部署映像服务和管理 (DISM) 命令行工具自定义启动映像的几种方式。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 5b78d68087bb5513723e1cc25291f7776d48f7b5
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: 9312ad976986f97293d294c12161f78e5d6fee1e
 
 
 ---
@@ -303,6 +303,6 @@ Configuration Manager 的每个版本都支持特定版本的 Windows 评估和�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

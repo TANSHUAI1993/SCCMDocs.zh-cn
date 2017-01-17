@@ -1,5 +1,5 @@
 ---
-title: "电源管理的管理员清单 | System Center Configuration Manager"
+title: "电源管理的管理员清单 | Microsoft Docs"
 description: "使用管理员清单，有助于规划和实现 System Center Configuration Manager 中的电源管理。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 6d594334040a98c5f661b95b8a0b48a61d391b0c
+ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
+ms.openlocfilehash: e6a7a0b853be930b558cdd739b90285ebb8538e7
 
 
 ---
@@ -83,6 +83,6 @@ ms.openlocfilehash: 6d594334040a98c5f661b95b8a0b48a61d391b0c
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

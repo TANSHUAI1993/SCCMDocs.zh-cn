@@ -1,5 +1,5 @@
 ---
-title: "System Center Configuration Manager Technical Preview 1511 版中的功能"
+title: "System Center Configuration Manager Technical Preview 1511 版中的功能 | Microsoft Docs"
 description: "了解 System Center Configuration Manager Technical Preview 1511 版中的可用功能。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 4616ba44485e4c528297441f1cf99e25add2dcf3
+ms.sourcegitcommit: 3bf44f850722afdb8dfe5922c8ceff11c9b56d08
+ms.openlocfilehash: 8ef43a2f10a7ef1cbb101f6737c606c72ccdce4f
 
 ---
 # <a name="capabilities-in-technical-preview-1511-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1511 版中的功能
@@ -147,7 +147,7 @@ ms.openlocfilehash: 4616ba44485e4c528297441f1cf99e25add2dcf3
 
 3.  提供此信息后，使用常规过程和配置完成安装。  
 
-##  <a name="a-namebkmkclusterserverupdatesa-service-a-server-cluster"></a><a name="BKMK_ClusterServerUpdates"></a>为服务器群集提供服务  
+##  <a name="a-namebkmkclusterserverupdatesa-service-a--server-cluster"></a><a name="BKMK_ClusterServerUpdates"></a>为服务器群集提供服务  
 现在，你可以创建包含群集中的服务器的集合，然后配置将在你向群集部署更新时使用的群集设置。 你可以在任何给定时间控制处于联机状态的服务器的百分比，还可将预先部署和后期部署 PowerShell 脚本配置为运行自定义操作。  
 
 **此版本的已知问题：**  
@@ -208,6 +208,6 @@ ms.openlocfilehash: 4616ba44485e4c528297441f1cf99e25add2dcf3
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

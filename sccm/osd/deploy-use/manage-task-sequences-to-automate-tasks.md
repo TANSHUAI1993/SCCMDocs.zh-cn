@@ -1,5 +1,5 @@
 ---
-title: "管理任务序列以自动执行任务 | Configuration Manager"
+title: "管理任务序列来自动执行任务 | Microsoft Docs"
 description: "可以创建、编辑、部署、导入和导出任务序列，以在 System Center Configuration Manager 环境中对其进行管理。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 04e4e8193d427289a3b84a14efe18511bf5c9731
+ms.sourcegitcommit: d04d28bbd5116a841c0872cf3f9ca18783dddc78
+ms.openlocfilehash: 417b31fa1feb6d0f674f14ef9e5c7cebd7013916
 
 
 ---
@@ -237,6 +237,8 @@ ms.openlocfilehash: 04e4e8193d427289a3b84a14efe18511bf5c9731
 
 -   不会导出任务序列中存储的密码。 如果导出和导入包含密码的任务序列，则必须编辑导入的任务序列，并重新指定任何密码。 请确保为[加入域或工作组](../understand/task-sequence-steps.md#BKMK_JoinDomainorWorkgroup)、[连接到网络文件夹](../understand/task-sequence-steps.md#BKMK_ConnectToNetworkFolder)和[运行命令行](../understand/task-sequence-steps.md#BKMK_RunCommandLine)操作指定密码。  
 
+- 使用“设置动态变量”步骤导出任务序列时，将不会为配置了“机密值”设置的变量导出值。 导入任务序列后，必须重新输入这些变量的值。
+
 -   作为一种最佳方案，如果你具有多个主站点，请在管理中心站点导入任务序列。  
 
  使用下列步骤导出和导入任务序列。  
@@ -367,6 +369,6 @@ ms.openlocfilehash: 04e4e8193d427289a3b84a14efe18511bf5c9731
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

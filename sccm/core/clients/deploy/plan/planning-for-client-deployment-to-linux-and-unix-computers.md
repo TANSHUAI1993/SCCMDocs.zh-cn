@@ -1,5 +1,5 @@
 ---
-title: "规划 Linux 和 UNIX 计算机的客户端部署 | System Center Configuration Manager"
+title: "规划将客户端部署到 Linux 和 UNIX 计算机 | Microsoft Docs"
 description: "在 System Center Configuration Manager 中规划 Linux 和 UNIX 计算机的客户端部署。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -13,12 +13,12 @@ ms.topic: get-started-article
 ms.assetid: 44153689-70e8-42ad-9ae8-17ae35f6a2e3
 caps.latest.revision: 9
 caps.handback.revision: 0
-author: Mtillman
-ms.author: mtillman
+author: nbigman
+ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 7d541d3afc86e1bb887a61d5b8cabce9aef9af57
+ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
+ms.openlocfilehash: dad941d5984fc7e0b43954b14c3966bb2632ad05
 
 
 ---
@@ -312,6 +312,6 @@ ms.openlocfilehash: 7d541d3afc86e1bb887a61d5b8cabce9aef9af57
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

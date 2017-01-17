@@ -1,5 +1,5 @@
 ---
-title: "迁移对象 |System Center Configuration Manager"
+title: "迁移对象 | Microsoft Docs"
 description: "了解如何在 System Center Configuration Manager 环境中规划跨层次结构的对象迁移。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 243b1eeac2536e3e63e9f8cbe132d36ea2aba39a
+ms.sourcegitcommit: 5e3d3f4194b06442e34c10988a20fe9ca40ac5d7
+ms.openlocfilehash: 182610aa98bf39ab809657991ec8befc4743ab19
 
 
 ---
@@ -189,6 +189,6 @@ Configuration Manager 不支持迁移报表。 实际上，它使用 SQL Server 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

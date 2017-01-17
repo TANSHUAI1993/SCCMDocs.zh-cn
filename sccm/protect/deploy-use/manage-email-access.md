@@ -1,5 +1,5 @@
 ---
-title: "管理电子邮件访问 | System Center Configuration Manager"
+title: "管理电子邮件访问 | Microsoft Docs"
 description: "了解如何使用 System Center Configuration Manager 条件访问管理对 Exchange 电子邮件的访问。"
 ms.custom: na
 ms.date: 10/04/2016
@@ -12,12 +12,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4544088a-4752-4e3a-aa0a-049f10d8f178
 caps.latest.revision: 24
-author: karthikaraman
-ms.author: karaman
+author: andredm7
+ms.author: andredm
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 5c6cf3c1697b49708aa5192b67b08b700da7dc72
-ms.openlocfilehash: c1797910f2b7ceda451c2ccb23f66a4b2bd4b6ff
+ms.sourcegitcommit: c13c6268fa76ade7feb0981f9c4a6e325e393aca
+ms.openlocfilehash: 0bbe25598f38f9cf3c15375748fee09c43dfb928
 
 
 ---
@@ -37,7 +37,7 @@ ms.openlocfilehash: c1797910f2b7ceda451c2ccb23f66a4b2bd4b6ff
 
 你可以从以下平台上的内置电子邮件客户端控制对 Exchange Online 和 Exchange 内部部署的访问：  
 
--   Android 4.0 及更高版本、Samsung Knox 标准版 4.0 及更高版本  
+-   Android 4.0 及更高版本、Samsung KNOX 标准版 4.0 及更高版本  
 
 -   iOS 7.1 及更高版本  
 
@@ -91,7 +91,7 @@ Office 桌面应用程序可以访问运行以下系统的电脑上的 Exchange 
 
  在以下平台上，你可以从设备内置 Exchange ActiveSync 电子邮件客户端阻止对 Exchange 电子邮件的访问：  
 
--   Android 4.0 及更高版本、Samsung Knox 标准版 4.0 及更高版本  
+-   Android 4.0 及更高版本、Samsung KNOX 标准版 4.0 及更高版本  
 
 -   iOS 7.1 及更高版本  
 
@@ -363,6 +363,6 @@ Office 桌面应用程序可以访问运行以下系统的电脑上的 Exchange 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

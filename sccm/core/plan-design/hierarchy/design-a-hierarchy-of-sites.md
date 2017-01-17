@@ -1,5 +1,5 @@
 ---
-title: "设计层次结构 | System Center Configuration Manager"
+title: "设计层次结构 | Microsoft Docs"
 description: "了解 System Center Configuration Manager 的可用拓扑和管理选项以便你可以规划站点层次结构。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 783fb4d61aab83ad64b9cec332e90d6c9de59f47
-ms.openlocfilehash: b1ed3011356a794b7b0913a1c8f189230d8957b2
+ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
+ms.openlocfilehash: 000acfec2cd61cc2d69e1bbd555b10fc22a40318
 
 
 ---
@@ -173,7 +173,7 @@ ms.openlocfilehash: b1ed3011356a794b7b0913a1c8f189230d8957b2
 
 -   [规划 System Center Configuration Manager 中的安全性](../../../core/plan-design/security/plan-for-security.md)  
 
--   当在站点内部署内容时，则为[Managing network bandwidth](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#bkmk_bandwidth) 。  
+-   当在站点内部署内容时，则为[Managing network bandwidth](../../../core/plan-design/hierarchy/manage-network-bandwidth.md) 。  
 
 
 **考虑跨站点和层次结构的配置：**  
@@ -188,6 +188,6 @@ ms.openlocfilehash: b1ed3011356a794b7b0913a1c8f189230d8957b2
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "使用可启动媒体通过网络部署 Windows | Configuration Manager"
+title: "使用可启动媒体通过网络部署 Windows | Microsoft Docs"
 description: "使用 System Center Configuration Manager 中的可启动媒体在启动目标计算机时部署操作系统。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: f5bdba0f609f51b988dbfdc0b0c8b204405f834a
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: beb730efbe4d9bae7c4c97f4e587c8919bd79049
 
 
 ---
@@ -49,11 +49,11 @@ System Center Configuration Manager 中的可启动媒体允许在启动目标�
 ## <a name="create-the-bootable-media"></a>创建可启动媒体  
  你可以指定可启动媒体是 U 盘还是 CD/DVD 集。 将启动媒体的计算机必须支持选为可启动驱动器的选项。 有关详细信息，请参阅[创建可启动媒体](create-bootable-media.md)。  
 
-##  <a name="a-namebkmkdeploya-install-the-operating-system-from-bootable-media"></a><a name="BKMK_Deploy"></a> 从可启动媒体安装操作系统  
+##  <a name="a-namebkmkdeploya-install-the-operating-system-from--bootable-media"></a><a name="BKMK_Deploy"></a> 从可启动媒体安装操作系统  
  在计算机的可启动驱动器中插入可启动媒体，然后再启动它以安装操作系统。  
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

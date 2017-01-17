@@ -1,5 +1,5 @@
 ---
-title: "监视电子邮件、Wi-Fi 和 VPN 配置文件 | System Center Configuration Manager"
+title: "监视电子邮件、Wi-Fi 和 VPN 配置文件 | Microsoft Docs"
 description: "了解如何在 System Center Configuration Manager 中监视电子邮件、Wi-Fi 和 VPN 配置文件的符合性状态。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 9ae359deaacb88804379622fa96e5fdb0e03b6bf
+ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
+ms.openlocfilehash: 73d941633d270cf9628f8be14e1e56f3c78624b6
 
 
 ---
@@ -70,6 +70,6 @@ ms.openlocfilehash: 9ae359deaacb88804379622fa96e5fdb0e03b6bf
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

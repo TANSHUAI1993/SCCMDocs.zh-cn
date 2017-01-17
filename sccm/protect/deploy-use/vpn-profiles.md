@@ -1,8 +1,8 @@
 ---
-title: "System Center Configuration Manager 中的 VPN 配置文件 | System Center Configuration Manager"
+title: "System Center Configuration Manager 中的 VPN 配置文件 | Microsoft Docs"
 description: "了解如何使用 System Center Configuration Manager 中的 VPN 配置文件将 VPN 设置部署到组织中的用户。"
 ms.custom: na
-ms.date: 10/10/2016
+ms.date: 11/27/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0fbce476b8a9b91a88354fb4abfadfd2526ca5e8
-ms.openlocfilehash: dda572392884c54b63af09a9fae79c1e73eb3d95
+ms.sourcegitcommit: 593fbd0587d54490246f48ae54f666bac6b7830d
+ms.openlocfilehash: 0ff83aed4d5e19806a8c69f4b45e39a6156dee7e
 
 
 ---
@@ -27,7 +27,7 @@ ms.openlocfilehash: dda572392884c54b63af09a9fae79c1e73eb3d95
 *适用范围：System Center Configuration Manager (Current Branch)*
 
 
-使用 System Center Configuration Manager 中的 VPN 配置文件将 VPN 设置部署到组织中的用户。 通过部署这些设置，你可以最大限度减少最终用户连接到公司网络资源需要进行的工作。  
+使用 System Center Configuration Manager（也称为 ConfigMgr 或 SCCM）中的 VPN 配置文件将 VPN 设置部署到组织中的用户。 通过部署这些设置，你可以最大限度减少最终用户连接到公司网络资源需要进行的工作。  
 
  例如，你想要用连接到公司网络上的文件共享所需的设置来设置所有运行 IOS 操作系统的设备。 你可以创建一个 VPN 配置文件，在其中包含连接到公司网络所需的设置，然后将此配置文件部署到你的层次结构中使用运行 IOS 的设备的所有用户。 IOS 设备用户可在可用网络列表中看到 VPN 连接，并可通过最少量的工作连接到此网络。  
 
@@ -76,6 +76,6 @@ ms.openlocfilehash: dda572392884c54b63af09a9fae79c1e73eb3d95
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

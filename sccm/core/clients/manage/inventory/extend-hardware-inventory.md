@@ -1,5 +1,5 @@
 ---
-title: "扩展硬件清单 | System Center Configuration Manager"
+title: "扩展硬件清单 | Microsoft Docs"
 description: "了解扩展 System Center Configuration Manager 中的硬件清单的方法。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f777295958e9cbc729e3759d354521c96ae3e8ac
-ms.openlocfilehash: 4a42e266c4152145a4a1c291804ff98934671692
+ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
+ms.openlocfilehash: cf325aec385f570b297f753f37c2c39abe93154f
 
 
 ---
@@ -163,7 +163,7 @@ System Center Configuration Manager 硬件清单通过使用 Windows Management 
 8.  在“导出”  对话框中，指定想要将类导出到的托管对象格式 (MOF) 文件，然后单击“保存” 。  
 
 ## <a name="how-to-use-management-information-files-mif-files-to-extend-hardware-inventory"></a>如何使用管理信息文件（MIF 文件）扩展硬件清单  
- 使用管理信息格式 (MIF) 文件扩展 Configuration Manager 从客户端收集的硬件清单信息。 在硬件清单过程中，存储在 MIF 文件中的信息被添加到客户端清单报表并存储在站点数据库中，使用站点数据库中数据的方式可以与使用默认客户端清单数据的方式相同。 有两种类型的 MIF 文件，文件 NOIDMIF 和 IDMIF。 
+ 使用管理信息格式 (MIF) 文件扩展 Configuration Manager 从客户端收集的硬件清单信息。 在硬件清单过程中，存储在 MIF 文件中的信息被添加到客户端清单报表并存储在站点数据库中，使用站点数据库中数据的方式可以与使用默认客户端清单数据的方式相同。 有两种类型的 MIF 文件，文件 NOIDMIF 和 IDMIF。
 
 > [!IMPORTANT]  
 >  必须为 MIF 文件创建或导入类信息，才能将其中数据添加到 Configuration Manager 数据库。 有关详细信息，请参阅本主题中的 [若要添加新的清单类](#BKMK_Add) 和 [若要导入硬件清单类](#BKMK_Import) 部分。  
@@ -181,11 +181,11 @@ System Center Configuration Manager 硬件清单通过使用 Windows Management 
 
  创建 IDMIF 文件后，将此存储在文件夹中 *%windir%***\System32\CCM\Inventory\Idmifs** 客户端计算机上的文件夹。 Configuration Manager 将在下一个计划的硬件清单周期中从此文件收集信息。 您必须声明通过添加或将其导入该文件中包含的信息的新类。  
 
-> [!NOTE] 
+> [!NOTE]
 > MIF 文件可能包含大量数据，收集这些数据可能对你网站的性能产生负面影响。 仅在需要时启用 MIF 收集，并在硬件清单设置中配置“最大自定义 MIF 文件大小 (KB)”选项。 有关详细信息，请参阅 [System Center Configuration Manager 中的硬件清单简介](introduction-to-hardware-inventory.md)。
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

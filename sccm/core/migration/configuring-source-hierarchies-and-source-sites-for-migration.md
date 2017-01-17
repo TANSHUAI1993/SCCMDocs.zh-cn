@@ -1,5 +1,5 @@
 ---
-title: "迁移源层次结构 | System Center Configuration Manager"
+title: "迁移源层次结构 | Microsoft Docs"
 description: "配置源层次结构和源站点，使用户可以将数据迁移到 System Center Configuration Manager 环境。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 75b1515f85787cefc60d98d6f6affa3a447a39f2
+ms.sourcegitcommit: 5e3d3f4194b06442e34c10988a20fe9ca40ac5d7
+ms.openlocfilehash: 1ecac05cb7aba822047bbc519d8a0ca316c600a5
 
 
 ---
@@ -107,6 +107,6 @@ ms.openlocfilehash: 75b1515f85787cefc60d98d6f6affa3a447a39f2
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

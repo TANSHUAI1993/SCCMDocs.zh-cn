@@ -1,5 +1,5 @@
 ---
-title: "使用 System Center Configuration Manager，通过远程擦除、锁定或密码重置功能保护数据"
+title: "使用 System Center Configuration Manager，通过远程擦除、锁定或密码重置功能保护数据 | Microsoft Docs"
 description: "使用 System Center Configuration Manager，通过完全擦除、选择性擦除、远程锁定或密码重置功能保护设备数据。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: 770da7bd-02dd-474a-9604-93ff1ea0c1e4
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: NathBarn
-ms.author: nathbarn
+author: mtillman
+ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 49a2220616bb6c6734643885bf969245e4c67c77
+ms.sourcegitcommit: 828e2ac9a3f9bcea1571d24145a1021fdf1091f3
+ms.openlocfilehash: d3dd55b496a124c478f1cf2880a096e2fbdd9145
 
 ---
 # <a name="protect-data-with-remote-wipe-lock-or-passcode-reset-using-system-center-configuration-manager"></a>使用 System Center Configuration Manager，通过远程擦除、锁定或密码重置功能保护数据
@@ -65,9 +65,9 @@ Configuration Manager 提供选择性擦除、完全擦除、远程锁定以及�
 |管理代理|删除管理配置文件。|  
 |电子邮件配置文件|对于由 Intune 预配的电子邮件配置文件，将删除电子邮件帐户和电子邮件。|  
 
- **Android 和 Android Samsung KNOX**  
+ **Android 和 Android Samsung KNOX 标准版**  
 
-|注销设备时删除的内容|Android|Samsung KNOX|  
+|注销设备时删除的内容|Android|Samsung KNOX 标准版|  
 |--------------------------------------------|-------------|------------------|  
 |使用 Configuration Manager 和 Intune 安装的公司应用及关联数据。|保留已安装的应用和数据。|卸载应用。|  
 |VPN 和 Wi-Fi 配置文件|删除。|删除。|  
@@ -243,10 +243,10 @@ Configuration Manager 提供选择性擦除、完全擦除、远程锁定以及�
 
 ## <a name="see-also"></a>另请参阅  
  [设备数据管理的 Windows 选择性擦除](http://technet.microsoft.com/library/dn486874.aspx)   
- [使用 System Center Configuration Manager 和 Microsoft Intune 的混合移动设备管理 (MDM)](../../mdm/plan-design/hybrid-mobile-device-management.md)
+ [使用 System Center Configuration Manager 和 Microsoft Intune 的混合移动设备管理 (MDM)](../../mdm/understand/hybrid-mobile-device-management.md)
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

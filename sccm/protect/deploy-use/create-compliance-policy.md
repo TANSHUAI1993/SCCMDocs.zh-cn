@@ -1,8 +1,8 @@
 ---
-title: "创建和部署设备合规性策略 | System Center Configuration Manager"
+title: "创建和部署设备合规性策略 | Microsoft Docs"
 description: "了解如何在 System Center Configuration Manager 中创建和部署设备合规性策略。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/15/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,13 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0cba232e-319f-4ae6-9ffa-4cd76c8bcb29
 caps.latest.revision: 
-author: karthikaraman
-ms.author: karaman
+author: andredm7
+ms.author: andredm
 manager: angrobe
 robots: noindex
 translationtype: Human Translation
-ms.sourcegitcommit: 5c6cf3c1697b49708aa5192b67b08b700da7dc72
-ms.openlocfilehash: bb91f4a711699790bb01f48d32183cf1215b1952
+ms.sourcegitcommit: c13c6268fa76ade7feb0981f9c4a6e325e393aca
+ms.openlocfilehash: 4cc7148be602367b579d63535a4938919bacf829
 
 ---
 
@@ -79,7 +79,7 @@ ms.openlocfilehash: bb91f4a711699790bb01f48d32183cf1215b1952
 
 ## <a name="monitor-the-compliance-policy"></a>监视合规性策略
 
-#### <a name="to-view-compliance-results-in-the-configuration-manager-console"></a>在 Configuration Manager 控制台查看符合性结果
+### <a name="to-view-compliance-results-in-the-configuration-manager-console"></a>在 Configuration Manager 控制台查看符合性结果
 
 1.  在 Configuration Manager 控制台中，单击“监视” 。
 
@@ -98,6 +98,14 @@ ms.openlocfilehash: bb91f4a711699790bb01f48d32183cf1215b1952
     -   “不符合性”：显示基于受影响资产数量的策略内所有不符合规则的列表。 你可以单击规则以在“资产和符合性”  工作区的“用户”  或“设备”  节点下创建一个临时节点，其中包含不符合此规则的所有用户或设备。 当你选择某个用户或设备时，“资产详细信息”  窗格将显示受所选问题影响的用户或设备。 双击列表中的用户或设备以显示有关问题的进一步信息。
 
     -   “未知”：显示没有为所选策略部署报告符合性的所有用户和设备的列表，以及设备的当前客户端状态。
+
+### <a name="to-view-intune-compliance-policies-charts"></a>查看 Intune 合规性策略图表
+1. 从 Configuration Manager 的 1610 版开始，在 Configuration Manager 控制台中，单击“监视”。
+2. 在“监视”工作区中，转到“概述” > “符合性设置” >  “合规性策略”。
+3. 将显示以下图表：
+    - **设备的总体合规性**：显示设备针对所有合规性策略的总体合规性。
+    - **不合规的主要原因**：显示设备不合规的主要策略。
+4. 单击任意图表中的某个分区了解该类别中的设备列表。
 
 ### <a name="to-view-a-health-attestation-report"></a>查看运行状况证明报告
 
@@ -214,10 +222,8 @@ ms.openlocfilehash: bb91f4a711699790bb01f48d32183cf1215b1952
   **在以下设备上受支持：**
   * Windows 10 和 Windows 10 移动版
 
-  
 
 
-
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

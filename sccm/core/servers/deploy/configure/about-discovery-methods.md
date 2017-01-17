@@ -1,5 +1,5 @@
 ---
-title: "发现方法 |System Center Configuration Manager"
+title: "发现方法 | Microsoft Docs"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -15,8 +15,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 8bb71e477bb9a265b3485bd3ef8232f6e9933a37
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: 223ebc3009b33c43818636a9e19b9b482619550b
 
 ---
 # <a name="about-discovery-methods-for-system-center-configuration-manager"></a>有关 System Center Configuration Manager 的发现方法
@@ -501,6 +501,6 @@ Active Directory 组发现不支持可通过使用 Active Directory 系统发现
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

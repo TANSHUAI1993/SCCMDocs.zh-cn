@@ -1,5 +1,5 @@
 ---
-title: "规划 Endpoint Protection |System Center Configuration Manager"
+title: "规划 Endpoint Protection | Microsoft Docs"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -14,8 +14,8 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f777295958e9cbc729e3759d354521c96ae3e8ac
-ms.openlocfilehash: 34033e9413a9aa525534d563b94b713dca8ebdf0
+ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
+ms.openlocfilehash: 927732150b99bbe362a3ed36976b49a716efc14c
 
 
 ---
@@ -124,6 +124,6 @@ Configuration Manager 中的 Endpoint Protection 可用于创建包含 Endpoint 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "资产智能简介 | System Center Configuration Manager"
+title: "资产智能简介 | Microsoft Docs"
 description: "获取 System Center Configuration Manager 中的资产智能简介。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 59f96a3ae906319ea285c7b3627d170b9bb0fdaf
+ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
+ms.openlocfilehash: 6a851ddfeee78574fbb0b1eff0c7cc518a7bb598
 
 
 ---
@@ -209,6 +209,6 @@ System Center Configuration Manager 中的资产智能允许使用资产智能�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

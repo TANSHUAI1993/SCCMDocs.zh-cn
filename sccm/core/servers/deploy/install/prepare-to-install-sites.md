@@ -1,5 +1,5 @@
 ---
-title: "准备安装站点 | System Center Configuration Manager"
+title: "安装站点的准备工作 | Microsoft Docs"
 description: "请阅读这些详细信息，以节省安装多个站点的时间并防止出现错误。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 6f240f1da4561c05bee974b78f43bfcdba591df6
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: 0534d1eb587cb01f35d811d72ddfe6ceb07e5b7c
 
 ---
 # <a name="prepare-to-install-system-center-configuration-manager-sites"></a>准备安装 System Center Configuration Manager 站点
@@ -73,7 +73,7 @@ ms.openlocfilehash: 6f240f1da4561c05bee974b78f43bfcdba591df6
 
 
 
-## <a name="a-namebkmktasksa-common-tasks-to-complete-before-starting-an-install"></a><a name="bkmk_tasks"></a>开始安装前要完成的常见任务
+## <a name="a-namebkmktasksa--common-tasks-to-complete-before-starting-an-install"></a><a name="bkmk_tasks"></a>开始安装前要完成的常见任务
 -   了解用于部署的层次结构拓扑    
      （请参阅[设计 System Center Configuration Manager 的站点层次结构](../../../../core/plan-design/hierarchy/design-a-hierarchy-of-sites.md)）  
 
@@ -90,7 +90,7 @@ ms.openlocfilehash: 6f240f1da4561c05bee974b78f43bfcdba591df6
 
 
 
-## <a name="a-namebkmksitecodesa-about-site-names-and-site-codes"></a><a name="bkmk_sitecodes"></a>关于站点名称和站点代码
+## <a name="a-namebkmksitecodesa--about-site-names-and-site-codes"></a><a name="bkmk_sitecodes"></a>关于站点名称和站点代码
 站点代码和站点名称用于标识和管理 Configuration Manager 层次结构中的站点。 在 Configuration Manager 控制台中，站点代码和名称以 &lt;site code\> - &lt;site name\> 的格式显示。 在层次结构中使用的每个站点代码必须是唯一的。 如果已为 Configuration Manager 扩展了 Active Directory 架构，并且站点正在发布数据，则在 Active Directory 林中使用的站点代码必须是唯一的，即使这些代码在不同的 Configuration Manager 层次结构中使用或已在以前安装的 Configuration Manager 中使用过。 在部署层次结构之前，请务必仔细规划站点代码和名称。
 
 ### <a name="specify-a-site-code-and-site-name"></a>指定站点代码和名称
@@ -126,7 +126,7 @@ ms.openlocfilehash: 6f240f1da4561c05bee974b78f43bfcdba591df6
     -   Configuration Manager 不支持将子主站点移出层次结构，以创建独立主站点或将其附加到不同的层次结构。 相反，首先需要卸载子主站点，然后重新将它安装为新的独立主站点或不同层次结构的管理中心站点的子主站点。  
 
 
-## <a name="a-namebkmkoptionalstepsa-optional-steps-to-run-before-starting-setup"></a><a name="bkmk_optionalsteps"></a>开始安装前要运行的可选步骤
+## <a name="a-namebkmkoptionalstepsa--optional-steps-to-run-before-starting-setup"></a><a name="bkmk_optionalsteps"></a>开始安装前要运行的可选步骤
 **可以手动运行[安装程序下载程序](../../../../core/servers/deploy/install/setup-downloader.md)**为 Configuration Manager 下载已更新的安装文件。
 
 要运行安装程序的计算机未连接到 Internet 时，或者需要安装多个站点服务器时，请考虑使用安装程序下载程序更新安装程序下载安装程序文件所需的更新：
@@ -148,6 +148,6 @@ ms.openlocfilehash: 6f240f1da4561c05bee974b78f43bfcdba591df6
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

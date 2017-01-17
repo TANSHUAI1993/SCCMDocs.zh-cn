@@ -1,5 +1,5 @@
 ---
-title: "阻止客户端 | System Center Configuration Manager"
+title: "阻止客户端 | Microsoft Docs"
 description: "使用 System Center Configuration Manager 阻止客户端访问以实现系统安全性。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -12,12 +12,12 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 54ef5fbb-521d-4ca5-a1c5-61e6f538d71e
 caps.latest.revision: 8
-author: Mtillman
-ms.author: mtillman
+author: nbigman
+ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: bbb541d62c0d8f6d7deb602aaf962e81d4e2b13a
+ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
+ms.openlocfilehash: c1b3b3e7fe756ce3e0c82ffc15693999d8e817d2
 
 
 ---
@@ -74,6 +74,6 @@ ms.openlocfilehash: bbb541d62c0d8f6d7deb602aaf962e81d4e2b13a
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

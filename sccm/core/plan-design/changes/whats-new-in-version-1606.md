@@ -1,5 +1,5 @@
 ---
-title: "1606 中的新功能 | System Center Configuration Manager"
+title: "1606 中的新增功能 | Microsoft Docs"
 description: "获取有关 System Center Configuration Manager 的 1606 版中引入的更改和新功能的详细信息。"
 ms.custom: na
 ms.date: 10/09/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0fbce476b8a9b91a88354fb4abfadfd2526ca5e8
-ms.openlocfilehash: 8de28e112a2d7faf1d8aca9b7214498e9a65f919
+ms.sourcegitcommit: f6e34e39d267f3bba26d6aa6a912eb4ba4aa3ab2
+ms.openlocfilehash: 16d10bdf1ddd810800e776c33f3f059899b7f92b
 
 ---
 # <a name="what39s-new-in-version-1606-of-system-center-configuration-manager"></a>System Center Configuration Manager 1606 版中的新增功能
@@ -164,11 +164,11 @@ OMS 连接器是一种预发行功能。 若要启用此功能，请参阅[使�
 ## <a name="compliance-settings"></a>符合性设置
 
 ### <a name="smart-lock-setting-for-android-devices"></a>适用于 Android 设备的 Smart Lock 设置
-已将“允许 Smart Lock 和其他信任代理”这一新设置添加到 Android 和 Samsung KNOX 配置项目。
+已将“允许 Smart Lock 和其他信任代理”这一新设置添加到 Android 和 Samsung KNOX Standard 配置项目。
 
 此设置允许控制兼容的 Android 设备上的 Smart Lock 功能。 如果设备处于可信位置（例如当它连接到特定蓝牙设备时，或者在 NFC 标记附近时），则此手机功能（有时称为信任代理）使你可以禁用或绕过设备锁屏界面密码。 可以使用此设置防止最终用户配置 Smart Lock。
 
-有关详细信息，请参阅[如何为没有使用 System Center Configuration Manager 客户端管理的 Android 和 Samsung KNOX 设备创建配置项目](../../../compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md)。
+有关详细信息，请参阅[如何为未使用 System Center Configuration Manager 客户端管理的 Android 和 Samsung KNOX 标准版设备创建配置项目](../../../compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md)。
 
 ## <a name="device-configuration-and-protection"></a>设备配置和保护
 
@@ -218,13 +218,13 @@ Endpoint Protection 可以帮助管理和监视 Windows Defender 高级威胁防
 
 现在，可以仅使用本地基础架构启用对 Windows 10 电脑的运行状况证明服务监视，使没有 Internet 访问权限的计算机可以报告设备运行状况证明 (DHA)。
 
-有关详细信息，请参阅 [System Center Configuration Manager 的运行状况证明](../../../core/servers/manage/health-attestation.md#How-to-enable-Health-Attestation-service-communication-on-Configuration-Manager-client-computers)。  
+有关详细信息，请参阅 [System Center Configuration Manager 的运行状况证明](../../../core/servers/manage/health-attestation.md#how-to-enable-health-attestation-service-communication-on-configuration-manager-client-computers)。  
 
 ## <a name="remote-control"></a>远程控制
 在远程控制会话中从共享剪贴板传输内容前，允许最终用户选择接受或拒绝文件传输。 最终用户在每个会话中只需要授予一次权限，而查看者无法授予自己继续文件传输的权限。 可以在“管理”工作区中找到此新设置，然后导航到“客户端设置”，在“默认设置”中打开“远程工具”窗格。
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

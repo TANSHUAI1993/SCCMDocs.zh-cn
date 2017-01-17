@@ -1,5 +1,5 @@
 ---
-title: "迁移作业规划 |System Center Configuration Manager"
+title: "迁移作业规划 | Microsoft Docs"
 description: "使用迁移作业来配置要迁移到 System Center Configuration Manager 环境的数据。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -18,8 +18,8 @@ ms.author: brenduns
 manager: angrobe
 robots: noindex
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 21e00064a8ecad3dd1c24b7f02bd0a8a8c36924f
+ms.sourcegitcommit: 5e3d3f4194b06442e34c10988a20fe9ca40ac5d7
+ms.openlocfilehash: 4e1ad4e8a043d1a6ede5dc88ca6b6c703f46e9da
 
 
 ---
@@ -226,7 +226,7 @@ ms.openlocfilehash: 21e00064a8ecad3dd1c24b7f02bd0a8a8c36924f
 ### <a name="data-selection"></a>数据选择  
  在创建集合迁移作业时，你必须选择一个或多个集合。 在你选择集合之后，创建迁移作业向导将显示与集合关联的对象。 默认情况下会迁移与所选集合关联的所有对象，但你可以清除不希望使用该作业迁移的对象。 当你清除具有从属对象的对象时，这些从属对象也将被清除。 会将所有清除的对象添加到排除列表。 将来的迁移作业将不会自动选择排除列表中的对象。 你必须手动编辑排除列表以删除要为在将来创建的迁移作业中的迁移自动选择的对象。  
 
-### <a name="site-ownership-for-migrated-content"></a>已迁移内容的站点所有权  
+### <a name="site-ownership-for--migrated-content"></a>已迁移内容的站点所有权  
  在为部署迁移内容时，你必须将内容对象分配给目标层次结构中的站点。 此站点随后将成为目标层次结构中该内容的所有者。 尽管目标层次结构的顶层站点是实际迁移内容元数据的站点，但却是分配的站点在网络上访问内容的原始源文件。  
 
  为了最大限度地减少迁移期间使用的网络带宽，请考虑将内容的所有权转让给最近的可用站点。 由于有关内容的信息是在 System Center Configuration Manager 中全局共享的，因此该信息将在每个站点上可用。  
@@ -322,6 +322,6 @@ ms.openlocfilehash: 21e00064a8ecad3dd1c24b7f02bd0a8a8c36924f
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

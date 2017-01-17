@@ -1,5 +1,5 @@
 ---
-title: "电源管理安全和隐私 | System Center Configuration Manager"
+title: "电源管理的安全和隐私 | Microsoft Docs"
 description: "获取 System Center Configuration Manager 中电源管理的安全和隐私信息。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 26880f6682e2bdf61cb7f29416e5dfded3559e8e
+ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
+ms.openlocfilehash: f72059973057e707f58cb6b7aa495226b6c1962c
 
 
 ---
@@ -40,6 +40,6 @@ ms.openlocfilehash: 26880f6682e2bdf61cb7f29416e5dfded3559e8e
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,12 +1,12 @@
 ---
 
-title: "监视软件更新 | Configuration Manager"
+title: "监视软件更新 | Microsoft Docs"
 description: "System Center Configuration Manager 控制台提供警报和状态以监视更新和符合性。"
 keywords: 
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 10/06/2016
+ms.date: 11/10/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
@@ -14,8 +14,8 @@ ms.technology:
 - configmgr-sum
 ms.assetid: 9afd7b0f-5c8e-48bc-9a65-1f7d74103688
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: fe41807cebf87f4e6bab47e41db0ffe7cc83c5d1
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: 956ef263a1c178b5ab5926705859f4b2d0ae5bc7
 
 ---
 # <a name="monitor-software-updates-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中监视软件更新
@@ -23,6 +23,9 @@ ms.openlocfilehash: fe41807cebf87f4e6bab47e41db0ffe7cc83c5d1
 *适用范围：System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager 提供了许多方式来帮助你监视软件更新对象、过程和符合性信息。 使用以下部分可监视软件更新。
+
+## <a name="software-updates-dashboard"></a>软件更新仪表板
+从 Configuration Manager 版本 1610 开始，可以使用软件更新仪表板查看组织中设备的当前符合性状态，并快速分析数据以确定哪些设备处于风险中。 若要查看仪表板，请导航到“监视” > “概述” > “安全性” > “软件更新仪表板”。   
 
 ##  <a name="a-namebkmksualertsa-alerts-for-software-updates"></a><a name="BKMK_SUAlerts"></a> 软件更新的警报  
  可以配置软件更新的警报，以便在软件更新部署的符合性级别低于已配置的百分比时通知管理用户。 可以在下列位置中配置软件更新部署的警报：  
@@ -98,6 +101,6 @@ System Center Configuration Manager 提供了许多方式来帮助你监视软�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

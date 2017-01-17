@@ -1,5 +1,5 @@
 ---
-title: "查找帮助 | System Center Configuration Manager"
+title: "查找帮助 | Microsoft Docs"
 description: "查找有关 System Center Configuration Manager 的其他信息的资源。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 30d2e51635969dbdfc58b959a11c2bcfb8fc7128
-ms.openlocfilehash: 07509457fcc699440649b2540065f1f3619c9a5e
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: 6c864cc443801d2a21e06b7d2e7a4784c52ffc1e
 
 
 ---
@@ -79,6 +79,6 @@ ms.openlocfilehash: 07509457fcc699440649b2540065f1f3619c9a5e
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

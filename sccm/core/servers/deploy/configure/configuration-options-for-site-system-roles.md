@@ -1,5 +1,5 @@
 ---
-title: "站点系统角色选项 |System Center Configuration Manager"
+title: "站点系统角色选项 | Microsoft Docs"
 description: "可参阅本文以详细了解那些不一定易于理解的 Configuration Manager 站点系统角色。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: a3c370dedc23e2eda38bd942b1d5bed91bdc3876
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: 2ff7c8b35538cf475aad665b29a95304d794c4ff
 
 ---
 # <a name="configuration-options-for-site-system-roles-for-system-center-configuration-manager"></a>System Center Configuration Manager 站点系统角色的配置选项
@@ -65,15 +65,12 @@ System Center Configuration Manager 站点系统角色的大多数配置选项�
  有关如何为多播部署配置分发点的信息，请参阅[使用多播与 System Center Configuration Manager 一起通过网络部署 Windows](../../../../osd/deploy-use/use-multicast-to-deploy-windows-over-the-network.md)。  
 
  **在 Configuration Manager 要求的情况下安装和配置 IIS**  
-
  选择此选项以让 Configuration Manager 在站点系统上安装和配置 IIS（如果尚未安装）。 必须在所有分发点上安装 IIS，并且你必须选择此设置才能在向导中继续。  
 
  **站点系统安装帐户**  
-
  对于站点服务器上安装的分发点，只支持使用站点服务器的计算机帐户作为站点系统安装帐户。  
 
  **创建自签名证书或导入 PKI 客户端证书**  
-
  此证书有两个用途：  
 
 1.  在分发点发送状态消息之前，该证书向管理点验证分发点。  
@@ -93,12 +90,12 @@ System Center Configuration Manager 站点系统角色的大多数配置选项�
 有关证书要求的详细信息，请参阅 [System Center Configuration Manager 的 PKI 证书要求](../../../../core/plan-design/network/pki-certificate-requirements.md)。 有关此证书的示例部署，请参阅 [System Center Configuration Manager 的 PKI 证书的分步部署示例：Windows Server 2008 证书颁发机构](/sccm/core/plan-design/network/example-deployment-of-pki-certificates)主题中的*为分发点部署客户端证书*部分。  
 
 **为预安排内容启用此分发点**  
-
 选中此复选框以便为预留内容启用分发点。 如果选中此复选框，你可以在分发内容时配置分发行为。 你可以选择是始终在分发点上预留内容、为包预留初始内容但在内容有更新时使用正常内容分发过程，还是为包中的内容始终使用正常内容分发过程。  
 
 **边界组**  
-
- 你可以将边界组关联到分发点。 在内容部署过程中，客户端必须位于与分发点关联的边界组中，才能将其用作内容的源位置。 你可以选中“允许内容源位置回退”  复选框，以便在没有其他分发点可用时让这些边界组外部的客户端回退并使用分发点作为内容的源位置。  
+ 你可以将边界组关联到分发点。 在内容部署过程中，客户端必须位于与分发点关联的边界组中，才能将其用作内容的源位置。
+ - **版本 1610 之前**，可选择“允许内容源位置回退”复选框，以便在没有其他分发点可用时让这些边界组外部的客户端回退并使用分发点作为内容的源位置。
+ - **从 1610 版起**，用户不能再配置“允许内容源位置回退”。  但可以配置边界组之间的关系，以确定客户端何时可以开始搜索有效内容源位置的其他边界组。
 
 ##  <a name="a-namebkmkenrollmentpointa-enrollment-point"></a><a name="BKMK_Enrollment_Point"></a>注册点  
 注册点用于安装 Mac 计算机，并用于注册通过本地移动设备管理来进行管理的设备。 有关详细信息，请参阅以下内容：  
@@ -108,7 +105,6 @@ System Center Configuration Manager 站点系统角色的大多数配置选项�
 -   [用户如何在 System Center Configuration Manager 中向本地移动设备管理注册设备](../../../../mdm/deploy-use/user-enroll-devices-on-premises-mdm.md)  
 
 **允许的连接**  
-
  HTTPS 设置是自动选择的，并且需要服务器上的 PKI 证书以向注册代理点和带外服务点进行服务器身份验证，以及通过 SSL 对数据进行加密。 有关证书要求的详细信息，请参阅 [System Center Configuration Manager 的 PKI 证书要求](../../../../core/plan-design/network/pki-certificate-requirements.md)。  
 
  有关服务器证书部署的示例以及有关如何在 IIS 中配置该证书的信息，请参阅 *System Center Configuration Manager 的 PKI 证书的分步部署示例：Windows Server 2008 证书颁发机构*主题中的[为运行 IIS 的站点系统部署 Web 服务器证书](/sccm/core/plan-design/network/example-deployment-of-pki-certificates)部分。  
@@ -117,14 +113,12 @@ System Center Configuration Manager 站点系统角色的大多数配置选项�
 有关如何为移动设备配置注册代理点的信息，请参阅[用户如何在 System Center Configuration Manager 中向本地移动设备管理注册设备](../../../../mdm/deploy-use/user-enroll-devices-on-premises-mdm.md)。  
 
 **客户端连接**  
-
  HTTPS 设置是自动选择的，并且需要服务器上的 PKI 证书以向 Configuration Manager 注册的移动设备和 Mac 计算机进行服务器身份验证，并通过安全套接字层 (SSL) 对数据进行加密。 有关证书要求的详细信息，请参阅 [System Center Configuration Manager 的 PKI 证书要求](../../../../core/plan-design/network/pki-certificate-requirements.md)。  
 
  有关服务器证书部署的示例以及有关如何在 IIS 中配置该证书的信息，请参阅 *System Center Configuration Manager 的 PKI 证书的分步部署示例：Windows Server 2008 证书颁发机构*主题中的[为运行 IIS 的站点系统部署 Web 服务器证书](/sccm/core/plan-design/network/example-deployment-of-pki-certificates)部分。  
 
 ##  <a name="a-namebkmkfallbackstatuspointa-fallback-status-point"></a><a name="BKMK_Fallback_Status_Point"></a>回退状态点  
 “状态消息数量”和“限制间隔(秒)”  
-
 尽管这些选项的默认设置（10,000 条状态消息和 3,600 秒的限制间隔）对于大多数情况已经足够，但在以下条件都成立时，你可能必须更改这些设置：  
 
 -   回退状态点仅接受来自 Intranet 的连接。  
@@ -161,6 +155,6 @@ System Center Configuration Manager 站点系统角色的大多数配置选项�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

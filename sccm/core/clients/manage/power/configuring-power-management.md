@@ -1,5 +1,5 @@
 ---
-title: "配置电源管理 | System Center Configuration Manager"
+title: "配置电源管理 | Microsoft Docs"
 description: "在 System Center Configuration Manager 中设置电源管理。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: ca1277ba0c2be68a393da930769151e25e997210
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: e111ac2545dd9e0b96a50c10246bb75d286a737a
 
 
 ---
@@ -47,7 +47,7 @@ ms.openlocfilehash: ca1277ba0c2be68a393da930769151e25e997210
 
     -   **允许的设备的电源管理** – 从下拉列表中，选择“真”  以启用电源管理。  
 
-7.  配置所需的客户端设置。 关于可以配置的电源管理客户端设置的列表，请参阅 [关于 System Center Configuration Manager 中的电源管理](../../../../core/clients/deploy/about-client-settings.md#BKMK_PowMgmtDeviceSettings)主题中的[电源管理](../../../../core/clients/deploy/about-client-settings.md)部分。  
+7.  配置所需的客户端设置。 关于可以配置的电源管理客户端设置的列表，请参阅 [关于 System Center Configuration Manager 中的电源管理](../../../../core/clients/deploy/about-client-settings.md#power-management)主题中的[电源管理](../../../../core/clients/deploy/about-client-settings.md)部分。  
 
 8.  单击“确定”  以关闭“默认客户端设置”  对话框。  
 
@@ -88,6 +88,6 @@ ms.openlocfilehash: ca1277ba0c2be68a393da930769151e25e997210
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

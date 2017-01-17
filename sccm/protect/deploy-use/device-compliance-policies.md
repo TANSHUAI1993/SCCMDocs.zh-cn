@@ -1,5 +1,5 @@
 ---
-title: "设备合规性策略 | System Center Configuration Manager"
+title: "设备合规性策略 | Microsoft Docs"
 description: "了解如何在 System Center Configuration Manager 中管理合规性策略以使设备符合条件访问策略。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -12,13 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 353ec99a-9982-4dab-ae21-d7fb595b3c50
 caps.latest.revision: 22
-author: karthikaraman
-ms.author: karaman
+author: andredm7
+ms.author: andredm
 manager: angrobe
 robots: noindex
 translationtype: Human Translation
-ms.sourcegitcommit: 5c6cf3c1697b49708aa5192b67b08b700da7dc72
-ms.openlocfilehash: d461f95f875632860238d503d7acd7ab8c320d58
+ms.sourcegitcommit: c13c6268fa76ade7feb0981f9c4a6e325e393aca
+ms.openlocfilehash: fd5830fef3759def7806dbbe1802872df19ca939
 
 ---
 # <a name="device-compliance-policies-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的设备合规性策略
@@ -72,6 +72,6 @@ System Center Configuration Manager 中的**合规性策略**定义设备必须�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

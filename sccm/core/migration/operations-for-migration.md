@@ -1,5 +1,5 @@
 ---
-title: "迁移操作 | System Center Configuration Manager"
+title: "迁移操作 | Microsoft Docs"
 description: "创建并运行作业，将数据和客户端迁移到 System Center Configuration Manager。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 9289dd8983846c27a3f5bd3ae999eed018ae4ccb
+ms.sourcegitcommit: 5e3d3f4194b06442e34c10988a20fe9ca40ac5d7
+ms.openlocfilehash: 3b5fc05542125454e224df73344cb29cb5f502ef
 
 
 ---
@@ -246,6 +246,6 @@ ms.openlocfilehash: 9289dd8983846c27a3f5bd3ae999eed018ae4ccb
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

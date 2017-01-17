@@ -1,5 +1,5 @@
 ---
-title: "为使用 System Center Configuration Manager 管理的设备创建配置项目 | System Center Configuration Manager"
+title: "使用 System Center Configuration Manager 客户端管理的设备配置项目 | Microsoft Docs"
 description: "了解如何配置使用 System Center Configuration Manager 客户端管理的 Windows 和 Mac 设备。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 4d8947fc9708c8c6d05a4507ef67501efade91d5
+ms.sourcegitcommit: f9e939d871e95a3248d8e5d96cb73063a81fd5cf
+ms.openlocfilehash: 683f1103bae7dcd3c7450f2b42ac7b3969c376e3
 
 
 ---
@@ -36,6 +36,6 @@ ms.openlocfilehash: 4d8947fc9708c8c6d05a4507ef67501efade91d5
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "任务序列内置变量 | Configuration Manager"
+title: "任务序列内置变量 | Microsoft Docs"
 description: "任务序列内置变量提供有关任务序列运行环境的信息，并且这些变量在整个任务序列期间均适用。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 4b1014bc9a5c17dd571e69e7f5bfdae060a3eb55
+ms.sourcegitcommit: c9fb0fa46058c773eec6ac23999357d35d9f970f
+ms.openlocfilehash: a75adebfe2bbec8f6fe5206561530a720c0bfbf1
 
 
 ---
@@ -27,7 +27,7 @@ ms.openlocfilehash: 4b1014bc9a5c17dd571e69e7f5bfdae060a3eb55
 *适用范围：System Center Configuration Manager (Current Branch)*
 
 
- System Center Configuration Manager 提供的任务序列内置变量。 内置变量提供有关任务序列的运行环境的信息，并且它们的值可在整个任务序列可用。 通常，在任务序列中运行步骤前初始化内置变量。 例如，内置变量 **_SMSTSLogPath** 是一个环境变量，指定任务序列运行时，Configuration Manager 组件用于写入日志文件的路径；任何任务序列步骤均可以访问此环境变量。 但是，有些变量（如 _SMSTSCurrentActionName）在执行每个步骤前都要进行评估。 内置变量的值通常是只读的。 对于名称以下划线开头的内置变量，值是只读的。  
+ System Center Configuration Manager 提供的任务序列内置变量。 内置变量提供有关任务序列的运行环境的信息，并且它们的值可在整个任务序列可用。 通常，在任务序列中运行步骤前初始化内置变量。 例如，内置变量 **_SMSTSLogPath** 是一个环境变量，指定任务序列运行时，Configuration Manager 组件用于写入日志文件的路径；任何任务序列步骤均可以访问此环境变量。 但是，有些变量（如 &#95;SMSTSCurrentActionName）在执行每个步骤前都要进行评估。 内置变量的值通常是只读的。 对于名称以下划线开头的内置变量，值是只读的。  
 
 ## <a name="task-sequence-built-in-variable-list"></a>任务序列内置变量列表  
  下面的列表描述了 Configuration Manager 中可用的内置变量：  
@@ -67,9 +67,11 @@ ms.openlocfilehash: 4b1014bc9a5c17dd571e69e7f5bfdae060a3eb55
 |_SMSTSUseSSL|指定任务序列是否使用 SSL 与 Configuration Manager 管理点通信。 如果你的站点在纯模式下运行，则将此值设置为“true” 。|  
 |_SMSTSWTG|指定计算机是否作为 Windows To Go 设备运行。|  
 |OSDPreserveDriveLetter|从 Configuration Manager 版本 1606 开始，已弃用此任务序列变量。 在操作系统部署期间，默认情况下，Windows 安装程序会确定要使用的最佳驱动器号（通常为 C:）。 <br /><br />在以前的版本中，OSDPreverveDriveLetter 变量决定当将此图像应用到目标计算机时，任务序列是否使用在操作系统映像 WIM 文件中捕获的驱动器号。 你可以将此变量的值设置为“False”  以使用为“应用操作系统”  任务序列步骤中的“目标”  设置指定的位置。 有关详细信息，请参阅 [Apply Operating System Image](task-sequence-steps.md#BKMK_ApplyOperatingSystemImage)。|  
+|OSDSetupAdditionalUpgradeOptions|从 Configuration Manager 版本 1602 开始，此变量可用于指定 Windows 安装程序升级的其他选项。
 |SMSTSAssignmentsDownloadInterval|使用此变量可指定客户端自上次尝试（未返回策略）下载策略到再次尝试之前所等待的秒数。 默认情况下，客户端将等待 **0** 秒，然后再重试。<br /><br /> 可以使用媒体或 PXE 中的预启动命令来设置此变量。|  
 |SMSTSAssignmentsDownloadRetry|此变量用于指定客户端在初次尝试下载策略而未找到策略之后将再次尝试下载该策略的次数。 默认情况下，客户端将重试 **0** 次。<br /><br /> 可以使用媒体或 PXE 中的预启动命令来设置此变量。|  
 |SMSTSAssignUsersMode|指定任务序列如何将用户与目标计算机关联。 将该变量设置为以下值之一。<br /><br /> -   自动：当任务序列将操作系统部署到目标计算机时，它会在指定的用户和目标计算机之间创建关系。<br />-   挂起：任务序列创建指定的用户和目标计算机之间的关系，但在设置关系前需等待来自管理用户的批准。<br />-   禁用：当任务序列部署操作系统时，它不会将用户与目标计算机关联。|  
+|SMSTSDownloadAbortCode|此变量包含（在 SMSTSDownloadProgram 变量中指定的）外部程序下载程序的中止代码值。 如果程序返回的错误代码等于 SMSTSDownloadAbortCode 变量的值，则内容下载失败，且未尝试其他下载方法。
 |SMSTSDownloadProgram|使用此变量为任务序列指定替换内容提供程序，即用于下载内容的下载程序（而非默认的 Configuration Manager 下载程序）。 作为内容下载过程的一部分，任务序列会检查此变量，以了解是否指定了下载程序。 如果已指定，则任务序列会运行指定的程序来执行下载。|  
 |SMSTSDownloadRetryCount|使用此变量来指定 Configuration Manager 尝试从分发点下载内容的次数。 默认情况下，客户端将重试 **2** 次。|  
 |SMSTSDownloadRetryDelay|使用此变量来指定 Configuration Manager 重新尝试从分发点下载内容前等待的秒数。 默认情况下，客户端将在重试之前等待 **15** 秒。|  
@@ -80,7 +82,7 @@ ms.openlocfilehash: 4b1014bc9a5c17dd571e69e7f5bfdae060a3eb55
 |SMSTSMPListRequestTimeout|使用此变量指定任务序列在利用定位服务检索管理点列表失败后重新尝试安装应用程序或软件更新前等待的毫秒数。 默认情况下，60,000 毫秒（60 秒）后，它重试此步骤，最多三次。 此变量仅适用于安装应用程序和安装软件更新任务序列步骤。|  
 |SMSTSMPListRequestTimeoutEnabled|使用此变量启用重复的 MPList 请求，以便在客户端不在 Intranet 上时刷新客户端。 <br />默认情况下，此变量设置为 True。 当客户端位于 Internet 上时，可以将此变量设置为 False 以避免不必要的延迟。 此变量仅适用于安装应用程序和安装软件更新任务序列步骤。|  
 |SMSTSPeerDownload|使用此变量可使客户端能够使用 Windows PE 对等缓存。<br /><br /> 例如：<br /><br /> SMSTSPeerDownload  = **TRUE** 可启用此功能。|  
-|SMSTSPeerRequestPort|将此变量用于 Windows PE 对等缓存可指定在不使用客户端设置中配置的默认端口（8003 和 8004）时，要用于初始广播的自定义网络端口。|  
+|SMSTSPeerRequestPort|将此变量用于 Windows PE 对等缓存可指定在不使用客户端设置中配置的默认端口 (8004) 时，要用于初始广播的自定义网络端口。|  
 |SMSTSPersistContent|使用此变量可临时将内容保存在任务序列缓存中。|  
 |SMSTSPostAction|指定任务序列完成后运行的命令。 例如，你可使用此变量指定任务序列将操作系统部署到设备后，在嵌入的设备上启用写筛选器的脚本。|  
 |SMSTSPreferredAdvertID|强制运行目标计算机上的特定目标部署。 可通过媒体或 PXE 的预启动命令对其进行设置。 如果设置此变量，则任务序列覆盖任何必需的部署。|  
@@ -95,6 +97,6 @@ ms.openlocfilehash: 4b1014bc9a5c17dd571e69e7f5bfdae060a3eb55
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

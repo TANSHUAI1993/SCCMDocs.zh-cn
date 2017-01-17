@@ -1,8 +1,8 @@
 ---
-title: "虚拟化支持 | System Center Configuration Manager"
+title: "虚拟化环境的支持 | Microsoft Docs"
 description: "获取在虚拟化环境中安装 System Center Configuration Manager 客户端和站点系统的要求"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/30/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: be32ccee17bc4829888d42dfff3f2818f4fc2810
+ms.sourcegitcommit: 13df135828e383e666bfc11051011207245a774c
+ms.openlocfilehash: 1c00324d2e7cc9a082ba837b29879e3a778d0c54
 
 
 ---
@@ -59,11 +59,13 @@ Configuration Manager 无法管理虚拟机，除非虚拟机处于联机状态�
 
 如果网络 System Center Configuration Manager 要求以及支持的配置和硬件要求适用于在物理公司网络中安装 Configuration Manager 内部部署，则这些要求也适用于在 Microsoft Azure 中进行安装。  
 
+有关详细信息，请参阅 [Azure 上的 Configuration Manager - 常见问题解答](/sccm/core/understand/configuration-manager-on-azure)。
+
 > [!IMPORTANT]  
 >  Configuration Manager 站点和在 Azure 虚拟机中运行的客户端与安装内部部署遵循相同的许可证要求。  
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

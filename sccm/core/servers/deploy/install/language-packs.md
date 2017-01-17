@@ -1,5 +1,5 @@
 ---
-title: "语言包 | System Center Configuration Manager"
+title: "语言包 | Microsoft Docs"
 description: "了解 System Center Configuration Manager 中可用的语言支持。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: f44ea59b86ace05e6d495aa4311d01518097daf7
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: 35d1008752a3275febef46b8817e97afdb91d580
 
 
 ---
@@ -96,6 +96,6 @@ ms.openlocfilehash: f44ea59b86ace05e6d495aa4311d01518097daf7
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

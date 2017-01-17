@@ -1,5 +1,5 @@
 ---
-title: Terms and Conditions in System Center Configuration Manager
+title: "System Center Configuration Manager 中的条款和条件 | Microsoft Docs"
 description: "向 System Center Configuration Manager 中的用户组部署条款和条件。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -12,12 +12,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4d3f9e6b-4d71-4fc4-9b91-47f1bfbd8c70
 caps.latest.revision: 9
-author: NathBarn
-ms.author: nathbarn
+author: mtillman
+ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: a7b99bed3186ab8ff817ef5f420d7a55d60b1c14
+ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
+ms.openlocfilehash: 2f8b14bef14d82584fd2bf6cdd05018bdd463ce4
 
 
 ---
@@ -89,7 +89,7 @@ ms.openlocfilehash: a7b99bed3186ab8ff817ef5f420d7a55d60b1c14
 
      在“部署状态”屏幕中，可选择状态选项卡以查看具有该状态的用户。 可单击“运行摘要”以在整个层次结构中更新数据。 单击“刷新”以在控制台中更新数据  
 
-## <a name="to-view-a-terms-and-conditions-report"></a>查看条款和条件报告  
+## <a name="to-view--a-terms-and-conditions-report"></a>查看条款和条件报告  
 
 1.  在 Configuration Manager 控制台中，转至“监视” > “概述” > “报告” > “报表”。  
 
@@ -122,6 +122,6 @@ ms.openlocfilehash: a7b99bed3186ab8ff817ef5f420d7a55d60b1c14
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

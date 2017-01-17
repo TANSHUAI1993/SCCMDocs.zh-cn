@@ -1,5 +1,5 @@
 ---
-title: "终结点之间的通信 | System Center Configuration Manager"
+title: "终结点之间的通信 | Microsoft Docs"
 description: "了解 System Center Configuration Manager 站点系统和组件如何跨网络通信。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: bf485456b4d8f0bffe956006b2a8b3dd8c17a5db
+ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
+ms.openlocfilehash: 7ab79fb69188fa5fe6b89b070829ec0f918137b9
 
 
 ---
@@ -148,7 +148,7 @@ Configuration Manager 也支持与站点服务器不在相同 Active Directory �
 
     -   [为 Configuration Manager 客户端管理冲突的记录](../../../core/clients/manage/manage-clients.md#BKMK_ConflictingRecords)  
 
-    -   [网络访问帐户](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#bkmk_NAA)  
+    -   [网络访问帐户](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#accounts-used-for-content-management)  
 
     -   [如何在工作组计算机上安装 Configuration Manager 客户端](../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientWorkgroup)  
 
@@ -261,6 +261,6 @@ Configuration Manager 对不在其站点的站点服务器所在的相同林中�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

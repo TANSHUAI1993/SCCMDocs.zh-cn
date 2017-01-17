@@ -1,5 +1,5 @@
 ---
-title: "System Center Configuration Manager Technical Preview 1512 版中的功能"
+title: "System Center Configuration Manager Technical Preview 1512 版中的功能 | Microsoft Docs"
 description: "了解 System Center Configuration Manager Technical Preview 1512 版中的可用功能。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 1d97e7646adbb02a03b33b5efc56c1658364956e
+ms.sourcegitcommit: 3bf44f850722afdb8dfe5922c8ceff11c9b56d08
+ms.openlocfilehash: ea6cb27fc229854ba7c1c39bb735ed9b9a88bb61
 
 ---
 # <a name="capabilities-in-technical-preview-1512-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1512 版中的功能
@@ -83,7 +83,7 @@ ms.openlocfilehash: 1d97e7646adbb02a03b33b5efc56c1658364956e
 
          例如，下面显示了启用时由管理员设置的 Windows 10 中的 Windows Defender 设置，并且不允许用户对其进行修改：  
 
-         ![TechRef_WinDefender](../../core/get-started/media/TechRef_WinDefender.png "TechRef_WinDefender")  
+         ![TechRef&#95;WinDefender](../../core/get-started/media/TechRef_WinDefender.png "TechRef_WinDefender")  
 
     此外，Endpoint Protection 反恶意软件政策的“排除设置”部分中的现有“排除文件和文件夹”设置已改进为允许设备排除。 例如，你现在可以将以下内容指定为排除项： **\device\mvfs** （适用于 Multiversion 文件系统）。 策略不会验证设备路径；将 Endpoint Protection 策略提供给客户端上必须能够解释设备字符串的反恶意软件引擎。  
 
@@ -93,6 +93,6 @@ ms.openlocfilehash: 1d97e7646adbb02a03b33b5efc56c1658364956e
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

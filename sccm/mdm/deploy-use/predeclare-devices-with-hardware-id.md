@@ -1,8 +1,8 @@
 ---
-title: "预声明具有 IMEI 或 iOS 序列号的设备"
+title: "预声明具有 IMEI 或 iOS 序列号的设备 | Microsoft Docs"
 description: "预声明具有 IMEI 或 iOS 序列号的公司拥有的设备。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/16/2016
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -12,57 +12,80 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ddb4c68e-e7f7-475a-89e2-7379a86e44c4
 caps.latest.revision: 3
-author: NathBarn
-ms.author: nathbarn
+author: mtillman
+ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6cd640085e90b2945326e3fa942ae9bd7b8f7e24
-ms.openlocfilehash: 2550fef062b5ef508e4c0492a5a9c63ffcb9084a
+ms.sourcegitcommit: 0fd410a6572acce685dc6cdb954c1c2d97d5ed8b
+ms.openlocfilehash: 2aa9c8c65904e573b6a81ac865e09d1cf2458509
 
 ---
 # <a name="predeclare-devices-with-imei-or-ios-serial-numbers"></a>预声明具有 IMEI 或 iOS 序列号的设备
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-可通过导入公司拥有设备的国际移动设备识别 (IMEI) 码或 iOS 序列号对此类设备进行识别。 可上传包含设备 IMEI 码的逗号分隔值 (.csv) 文件，或者手动输入设备信息。  导入的信息将设置在设备列表中作为“公司”注册的设备的“所有权”。 访问该服务的每位用户仍需要 Intune 许可证。  
+可通过导入公司拥有设备的国际移动设备识别 (IMEI) 码或 iOS 序列号对此类设备进行识别。 可上传包含设备 IMEI 码的逗号分隔值 (.csv) 文件，或者手动输入设备信息。  导入的信息将设置在设备列表中注册为“公司”的设备的“所有权”。 访问该服务的每位用户仍需要 Intune 许可证。  
 
-## <a name="predeclare-corporate-owned-devices-with-imei-or-ios-serial-number"></a>预声明具有 IMEI 或 iOS 序列号的公司拥有的设备
+## <a name="how-to-predeclare-corporate-owned-devices"></a>如何预声明公司拥有的设备
 
-1.  在 Configuration Manager 控制台中，导航到“资产和符合性”>“概述”>“公司拥有的所有设备”>“预声明设备”，然后单击“添加预声明设备”。 将打开“预声明设备”向导。
-2.  指定添加设备信息的方式：
-     -  上传包含 IMEI 号码和详细信息的 .csv 文件
-     -  手动添加 IMEI 号码和详细信息。 若要手动输入信息，请键入 IMEI 号码或 iOS 序列号和设备的详细信息。
+1.  在 Configuration Manager 控制台中，转至“资产和符合性” > “概述” > “所有公司拥有的设备” > “预声明设备”。
 
-      对于已上传的文件，浏览到包含信息的 .csv 文件，以预声明公司拥有的设备。 该文件必须具有以下格式，仅提供指导的顶行除外。 每一行必须包含 IMEI 号码或 iOS 序列号。 只能预声明 iOS 设备的序列号；IMEI 号码用于其他设备平台。 此表格包含示例数据：
-      | IMEI #  | iOS 序列 #  | 操作系统 | 详细信息 |
-      | :------------ |:---------------|:-----|:-----|
-      | 123456789012345    |   | WINDOWS | 公司拥有的 Windows 设备|
-      |       | A1B2C3D4E5C6 |   iOS |  公司拥有的 iOS 设备|
-      | 223456789012345 | E6D5C4B3A210 |   iOS |    另一台 iOS 设备|
-      | 323456789012345 |        |   iOS |  第三台 iOS 设备|
-      | 123456789012346 |         |   Android |     公司拥有的 Android 设备|
+2.  单击“创建预声明的设备”。 将打开“创建预声明设备”向导。
 
-    .Csv 文件中不能包含标题行。 上例中仅包括用于阐述的标题。
+3.  选择添加设备信息的方式：
 
-    **列支持以下值：**    
-      - 第 1 列：不含空格的 IMEI 号码
-      - 第 2 列：iOS 序列号
-      - 第 3 列：设备的操作系统：
-         - IOS - 所有 iOS 设备
-         - WINDOWS - 包括 Windows Phone、Windows 10 Mobile 和 Windows 电脑
-         - ANDROID - 所有 Android 设备
-      - 第 4 列 - 详细信息（可选）- Configuration Manager 控制台中显示的其他设备信息。 1024 个字符限制。
+     -  **上传包含 IMEI 或序列号和详细信息的 CSV 文件**
+
+        对于此选项，单击“浏览”，指定包含信息的 .csv 文件，以预声明公司拥有的设备。 .csv 文件格式必须正确。 有关详细信息，请参阅[上传的 .csv 文件的格式](#format-for-uploading-csv-files)。
+
+     -  **手动添加 IMEI 或序列号和详细信息**
+
+        若要手动输入信息，请键入 IMEI 号码或 iOS 序列号和设备的详细信息。 在继续操作前请更正所有错误或警告。
 
     单击“下一步” 。
 
-3. 查看文件导入的结果。 如果之前已导入设备编号，Configuration Manager 将显示这些设备和替换**详细信息**。 选择希望重写其详细信息的设备。 设备详细信息只能通过重新导入设备标识或序列号来修改。 单击“下一步”继续，或单击“返回”保存更新后的详细信息，然后完成向导。
+4. 如果已上传 .csv 文件，查看文件导入的结果。 如果之前已导入设备编号，Configuration Manager 将显示这些设备和替换**详细信息**。 选择希望重写其详细信息的设备。 设备详细信息只能通过重新导入设备标识或序列号来修改。
 
-4. 如果导入中包括 iOS 序列号，则必须为这些设备分配注册配置文件。 从提供的配置文件列表中选择“待分配的注册配置文件”，然后单击“下一步”。
+  如果选择手动输入编号，请填写要预声明的设备表单。
 
-5. 单击“下一步”查看摘要，然后完成向导。
+  单击 **“下一步”** 以继续。
+
+4. 如果列表中包含 iOS 序列号，请从提供的配置文件列表中选择“待分配的注册配置文件”，然后单击“下一步”。
+
+5. 单击“下一步”查看详细信息，然后再次单击“下一步”上传数据。
+
+6. 单击“关闭”完成操作。
+
+## <a name="format-for-uploading-csv-files"></a>上传的 .csv 文件的格式
+
+通过 IMEI 或序列号来标识设备的 .csv 文件必须拥有以下格式（仅用于提供指导的顶行除外）。 每一行必须包含 IMEI 号码或 iOS 序列号。 只能预声明 iOS 设备的序列号；IMEI 号码用于其他设备平台。 此表格包含示例数据：
+
+| IMEI #  | iOS 序列 #  | 操作系统 | 详细信息 |
+|------------ |---------------|-----|-----|
+| 123456789012345    |   | WINDOWS | 公司拥有的 Windows 设备|
+|   | A1B2C3D4E5C6 | IOS |  公司拥有的 iOS 设备|
+| 223456789012345 | E6D5C4B3A210 |   IOS |  另一台 iOS 设备|
+| 323456789012345 |        |   IOS |    第三台 iOS 设备|
+| 123456789012346 |         |   ANDROID |   公司拥有的 Android 设备|
+
+.Csv 文件中不能包含标题行。 以下示例显示 CSV 格式的相同示例数据：
+
+```
+123456789012345,,WINDOWS,Company-owned Windows device
+,A1B2C3D4E5C6,IOS,Company-owned iOS device
+223456789012345,E6D5C4B3A210,IOS,Another iOS device
+323456789012345,,IOS,A third iOS device
+123456789012346,,ANDROID,Company-owned Android device
+```
+
+.csv 文件中的列支持以下值：
+
+| 列 1 | 列 2 | 列 3 | 第 4 列 |
+|---|---|---|---|
+|不含空格的 IMEI 号码 | iOS 序列号 | IOS、WINDOWS 或 ANDROID | 可选设备详细信息（不超过 1024 个字符） |
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

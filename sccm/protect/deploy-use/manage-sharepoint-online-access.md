@@ -1,5 +1,5 @@
 ---
-title: "管理 SharePoint Online 访问 | System Center Configuration Manager"
+title: "管理 SharePoint Online 访问 | Microsoft Docs"
 description: "了解如何使用 System Center Configuration Manager SharePoint Online 条件访问策略管理对 OneDrive 的访问。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: c1b3fb75-f3ab-4886-9421-d81da7ef589d
 caps.latest.revision: 11
 caps.handback.revision: 0
-author: karthikaraman
-ms.author: karaman
+author: andredm7
+ms.author: andredm
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 5c6cf3c1697b49708aa5192b67b08b700da7dc72
-ms.openlocfilehash: 84fdd9c1141c7bee5e331eacb136d9dc21837c0f
+ms.sourcegitcommit: c13c6268fa76ade7feb0981f9c4a6e325e393aca
+ms.openlocfilehash: 73fd4e26a16184cfb7f1535aa2e70911884ffdcc
 
 
 ---
@@ -204,6 +204,6 @@ Office 桌面应用程序可以访问运行以下系统的电脑上的 SharePoin
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

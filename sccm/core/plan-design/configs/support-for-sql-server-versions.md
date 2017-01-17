@@ -1,8 +1,8 @@
 ---
-title: "SQL Server 支持 | System Center Configuration Manager"
+title: "支持 SQL Server | Microsoft Docs"
 description: "获取托管 System Center Configuration Manager 站点数据库的 SQL Server 版本和配置要求。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: b17720021f797d404a89933939427696dfafd7dc
+ms.sourcegitcommit: 814feb4e833230285b4092a8feb6f11a75f2e4f6
+ms.openlocfilehash: ecf790893a5604250810310cfdb09c4cff7d97b6
 
 
 ---
@@ -29,7 +29,6 @@ ms.openlocfilehash: b17720021f797d404a89933939427696dfafd7dc
 
 ##  <a name="a-namebkmkinstancesa-sql-server-instances-and-locations"></a><a name="bkmk_Instances"></a> SQL Server 实例和位置  
  **管理中心站点和主站点：**  
-
 站点数据库必须使用 SQL Server 的完整安装。  
 
  SQL Server 的位置可以是：  
@@ -49,22 +48,26 @@ ms.openlocfilehash: b17720021f797d404a89933939427696dfafd7dc
 
 
  **辅助站点：**  
+ 站点数据库可以使用完整安装的 SQL Server 或 SQL Server Express 的默认实例。  
 
- 站点数据库可以使用 SQL Server 完整安装的默认实例，或 SQL Server Express  
-
- SQL Server 必须位于站点服务器计算机上  
+ SQL Server 必须位于站点服务器计算机上。  
 
 ##  <a name="a-namebkmksqlversionsa-supported-versions-of-sql-server"></a><a name="bkmk_SQLVersions"></a> 支持的 SQL Server 版本  
  在具有多个站点的层次结构中，不同站点可以使用不同版本的 SQL Server 来托管站点数据库，只要你使用 Configuration Manager 支持的 SQL Server 版本。  
 
- System Center Configuration Manager 1511 及更高版本支持以下版本的 SQL Server。  
+ 除非另行指定，System Center Configuration Manager 版本 1511 及更高版本支持以下版本的 SQL Server。  
 
 > [!IMPORTANT]  
 >  为管理中心站点上的数据库使用 SQL Server Standard 会限制层次结构可支持的客户端总数。 请参阅[调整大小和扩展数量](../../../core/plan-design/configs/size-and-scale-numbers.md)。
 
-### <a name="sql-server-2016---standard-enterprise"></a>SQL Server 2016 - 标准版、企业版  
+### <a name="sql-server-2016-sp1---standard-enterprise"></a>SQL Server 2016 SP1 - Standard、Enterprise  
+可将此版本的 SQL Server 与以下产品的非最低累计更新版本一起使用：  
 
-支持与 1606 版配合使用。   
+-   管理中心站点  
+-   主站点  
+-   辅助站点  
+
+### <a name="sql-server-2016---standard-enterprise"></a>SQL Server 2016 - 标准版、企业版  
 可将此版本的 SQL Server 与以下产品的非最低累计更新版本一起使用：  
 
 -   管理中心站点  
@@ -73,8 +76,6 @@ ms.openlocfilehash: b17720021f797d404a89933939427696dfafd7dc
 
 
 ### <a name="sql-server-2014-sp2---standard-enterprise"></a>SQL Server 2014 SP2 – 标准版、企业版  
-
-支持与 1511 版及更高版本配合使用。  
 可将此版本的 SQL Server 与以下产品的非最低累计更新版本一起使用：  
 
 -   管理中心站点  
@@ -84,8 +85,6 @@ ms.openlocfilehash: b17720021f797d404a89933939427696dfafd7dc
 
 
 ### <a name="sql-server-2014-sp1---standard-enterprise"></a>SQL Server 2014 SP1 - 标准版、企业版  
-
-支持与 1511 版及更高版本配合使用。  
  可将此版本的 SQL Server 与以下产品的非最低累计更新版本一起使用：  
 
 -   管理中心站点  
@@ -94,8 +93,6 @@ ms.openlocfilehash: b17720021f797d404a89933939427696dfafd7dc
 
 
 ### <a name="sql-server-2012-sp3---standard-enterprise"></a>SQL Server 2012 SP3 - 标准版、企业版  
-
-支持与 1511 版及更高版本配合使用。  
  可将此版本的 SQL Server 与以下产品的非最低累计更新版本一起使用：  
 
 -   管理中心站点  
@@ -103,9 +100,7 @@ ms.openlocfilehash: b17720021f797d404a89933939427696dfafd7dc
 -   辅助站点  
 
 
-### <a name="sql-server-2012-sp2---standard-enterprise"></a>SQL Server 2012 SP2 - 标准版、企业版  
-
-支持与 1511 版及更高版本配合使用。  
+### <a name="sql-server-2012-sp2---standard-enterprise"></a>SQL Server 2012 SP2 - 标准版、企业版   
  可将此版本的 SQL Server 与以下产品的非最低累计更新版本一起使用：  
 
 -   管理中心站点  
@@ -113,41 +108,41 @@ ms.openlocfilehash: b17720021f797d404a89933939427696dfafd7dc
 -   辅助站点  
 
 
-### <a name="sql-server-2008-r2-sp3---standard-enterprise-datacenter"></a>SQL Server 2008 R2 SP3 – 标准版、企业版、数据中心版  
-
-支持与 1511 版及更高版本配合使用。    
+### <a name="sql-server-2008-r2-sp3---standard-enterprise-datacenter"></a>SQL Server 2008 R2 SP3 – 标准版、企业版、数据中心版     
 可将此版本的 SQL Server 与以下产品的非最低累计更新版本一起使用：  
 
 -   管理中心站点  
 -   主站点  
 -   辅助站点  
 
-### <a name="sql-server-2016-express"></a>SQL Server 2016 Express
-支持与 1606 版配合使用。  
+
+
+### <a name="sql-server-2016-express-sp1"></a>SQL Server 2016 Express SP1  
 可将此版本的 SQL Server 与以下产品的非最低累计更新版本一起使用：
 -   辅助站点
 
-### <a name="sql-server-2014-express-sp2"></a>SQL Server 2014 Express SP2  
-支持与 1511 版及更高版本配合使用。  
+### <a name="sql-server-2016-express"></a>SQL Server 2016 Express
+可将此版本的 SQL Server 与以下产品的非最低累计更新版本一起使用：
+-   辅助站点
+
+
+### <a name="sql-server-2014-express-sp2"></a>SQL Server 2014 Express SP2   
 可将此版本的 SQL Server 与以下产品的非最低累计更新版本一起使用：  
 
 -   辅助站点  
 
 
-### <a name="sql-server-2014-express-sp1"></a>SQL Server 2014 Express SP1  
- 支持与 1511 版及更高版本配合使用。   
+### <a name="sql-server-2014-express-sp1"></a>SQL Server 2014 Express SP1   
  可将此版本的 SQL Server 与以下产品的非最低累计更新版本一起使用：  
 
 -   辅助站点  
 
 ### <a name="sql-server-2012-express-sp3"></a>SQL Server 2012 Express SP3  
-支持与 1511 版及更高版本配合使用。   
 可将此版本的 SQL Server 与以下产品的非最低累计更新版本一起使用：  
 
 -   辅助站点  
 
-### <a name="sql-server-2012-express-sp2"></a>SQL Server 2012 Express SP2  
- 支持与 1511 版及更高版本配合使用。  
+### <a name="sql-server-2012-express-sp2"></a>SQL Server 2012 Express SP2   
  可将此版本的 SQL Server 与以下产品的非最低累计更新版本一起使用：  
 
 -   辅助站点  
@@ -187,12 +182,10 @@ ms.openlocfilehash: b17720021f797d404a89933939427696dfafd7dc
     -   主站点：至少 8 千兆字节 (GB)  
     -   辅助站点：至少 4 千兆字节 (GB)  
 
- **SQL 嵌套触发器：**  
-
- 必须启用[SQL 嵌套触发器](http://go.microsoft.com/fwlink/?LinkId=528802) 。  
+**SQL 嵌套触发器：**  
+必须启用 [SQL 嵌套触发器](http://go.microsoft.com/fwlink/?LinkId=528802) 。  
 
  **SQL Server CLR 集成**  
-
   站点数据库要求启用 SQL Server 公共语言运行时 (CLR)。 这在 Configuration Manager 安装时会自动启用。 有关 CLR 的详细信息，请参阅 [SQL Server CLR 集成简介](https://msdn.microsoft.com/library/ms254498\(v=vs.110\).aspx)  
 
 ##  <a name="a-namebkmkoptionala-optional-configurations-for-sql-server"></a><a name="bkmk_optional"></a> SQL Server 可选配置  
@@ -220,6 +213,10 @@ ms.openlocfilehash: b17720021f797d404a89933939427696dfafd7dc
 **SQL Server Reporting Services：**  
 需要安装使你可以运行报表的 Reporting Services 点。  
 
+> [!IMPORTANT]  
+> 将以前版本的 SQL Server 升级后，可能会看到以下错误：“报表生成器不存在”。    
+> 要解决此问题，必须重新安装 Reporting Services 点站点系统角色。
+
 **SQL Server 端口：**  
 对于与 SQL Server 数据库引擎的通信和站点间复制，可以使用默认的 SQL Server 端口配置，也可以指定自定义端口：  
 
@@ -242,6 +239,6 @@ ms.openlocfilehash: b17720021f797d404a89933939427696dfafd7dc
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

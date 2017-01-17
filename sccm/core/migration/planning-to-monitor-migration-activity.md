@@ -1,5 +1,5 @@
 ---
-title: "监视迁移 | System Center Configuration Manager"
+title: "监视迁移 | Microsoft Docs"
 description: "了解如何使用 Configuration Manager 控制台来监视迁移作业的进度和成功情况。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: f8b577366cd2438aed21759e18f034642ceae5e3
+ms.sourcegitcommit: 5e3d3f4194b06442e34c10988a20fe9ca40ac5d7
+ms.openlocfilehash: 896807ec2c4be2835094a27add59d4cc09e93add
 
 
 ---
@@ -42,6 +42,6 @@ ms.openlocfilehash: f8b577366cd2438aed21759e18f034642ceae5e3
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

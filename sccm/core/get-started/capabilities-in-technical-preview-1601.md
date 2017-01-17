@@ -1,5 +1,5 @@
 ---
-title: "System Center Configuration Manager Technical Preview 1601 版中的功能"
+title: "System Center Configuration Manager Technical Preview 1601 版中的功能 | Microsoft Docs"
 description: "了解 System Center Configuration Manager Technical Preview 1601 版中的可用功能。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: be158c1d893a1c1aae19c6cf2fd3a678a59d4f9e
+ms.sourcegitcommit: 3bf44f850722afdb8dfe5922c8ceff11c9b56d08
+ms.openlocfilehash: 7321645f17a143afe2fd848f45511a374de78c4b
 
 ---
 # <a name="capabilities-in-technical-preview-1601-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1601 版中的功能
@@ -211,8 +211,8 @@ ms.openlocfilehash: be158c1d893a1c1aae19c6cf2fd3a678a59d4f9e
 
  有关详细信息，请参阅[如何为不使用 System Center Configuration Manager 客户端管理的 Windows 8.1 和 Windows 10 设备创建配置项目](../../compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md)。  
 
-### <a name="android---kiosk-mode-for-samsung-knoxbr-hybrid"></a>Android - Samsung KNOX 的展台模式<br />混合  
- 你可以使用展台模式锁定设备，从而只允许某些功能运行。 例如，你可以让设备只运行一个指定的托管应用，也可以禁用设备上的音量按钮。 这些设置可用于设备的演示模型，也可用于专门执行一个功能的设备（如销售点设备）。 这些设置不适用于 **Windows 8.1 和 Windows 10** 配置项目中的 Samsung KNOX 设备（设置仅适用于 Windows 10 设备）。  
+### <a name="android---kiosk-mode-for-samsung-knox-standardbr-hybrid"></a>Android - Samsung KNOX 标准版的展台模式<br />混合  
+ 你可以使用展台模式锁定设备，从而只允许某些功能运行。 例如，你可以让设备只运行一个指定的托管应用，也可以禁用设备上的音量按钮。 这些设置可用于设备的演示模型，也可用于专门执行一个功能的设备（如销售点设备）。 这些设置不适用于 **Windows 8.1 和 Windows 10** 配置项目中的 Samsung KNOX 标准版设备（设置仅适用于 Windows 10 设备）。  
 
  要查看这些新设置，请在“创建配置项目”向导的配置项目“设备设置”页面中选择“展台模式 - Samsung KNOX”。  
 
@@ -220,6 +220,6 @@ ms.openlocfilehash: be158c1d893a1c1aae19c6cf2fd3a678a59d4f9e
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

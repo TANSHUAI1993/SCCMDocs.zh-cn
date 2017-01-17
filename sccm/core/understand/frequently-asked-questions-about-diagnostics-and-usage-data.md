@@ -1,5 +1,5 @@
 ---
-title: "诊断数据常见问题 | System Center Configuration Manager"
+title: "诊断数据常见问题解答 | Microsoft Docs"
 description: "查找有关 System Center Configuration Manager 的诊断和使用情况数据的常见问题。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: f5d0bf6215e827b58dcbc4a64c509c2f07b44815
+ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
+ms.openlocfilehash: 856ee34621816155d4ad95ed7240cf585e322486
 
 
 ---
@@ -57,6 +57,6 @@ ms.openlocfilehash: f5d0bf6215e827b58dcbc4a64c509c2f07b44815
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

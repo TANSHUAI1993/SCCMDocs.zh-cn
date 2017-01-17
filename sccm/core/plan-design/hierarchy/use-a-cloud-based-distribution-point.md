@@ -1,5 +1,5 @@
 ---
-title: "基于云的分发点 | System Center Configuration Manager"
+title: "基于云的分发点 | Microsoft Docs"
 description: "了解有关配合使用 System Center Configuration Manager 和基于云的分发点的配置和限制。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: c1838866241c30598346b84cb36b8bf4967bf7f6
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: 840f7be09f234d598bc7856d53e278665808fef1
 
 
 ---
@@ -215,6 +215,6 @@ ms.openlocfilehash: c1838866241c30598346b84cb36b8bf4967bf7f6
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

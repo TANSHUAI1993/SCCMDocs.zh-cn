@@ -1,5 +1,5 @@
 ---
-title: "Active Directory 架构 | System Center Configuration Manager"
+title: "发布和 Active Directory 架构 | Microsoft Docs"
 description: "为 System Center Configuration Manager 扩展 Active Directory 架构，以简化部署和配置客户端的过程。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,12 +17,12 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: d4cdaa646265b2d05ec93aeaefaf3a6e7a2c269f
+ms.sourcegitcommit: 2083a2ca7a199771f26981cdbe04e4e2ef6e8958
+ms.openlocfilehash: 3bd18e2de76d886b275c80d0dce3b824f2598008
 
 
 ---
-# <a name="extend-the-active-directory-schema-for-system-center-configuration-manager"></a>扩展 System Center Configuration Manager 的 Active Directory 架构
+# <a name="prepare-active-directory-for-site-publishing"></a>为站点发布准备 Active Directory
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
@@ -70,7 +70,7 @@ ms.openlocfilehash: d4cdaa646265b2d05ec93aeaefaf3a6e7a2c269f
 
 3.  通过查看上一步中使用的命令行所创建的日志文件，可以验证架构扩展是否成功。  
 
-## <a name="step-2-create-the-system-management-container-and-grant-sites-permissions-to-the-container"></a>步骤 2。  创建系统管理容器，并向该容器授予站点权限  
+## <a name="step-2--create-the-system-management-container-and-grant-sites-permissions-to-the-container"></a>步骤 2。  创建系统管理容器，并向该容器授予站点权限  
  扩展架构之后，必须在 Active Directory 域服务 (AD DS) 中创建名为“系统管理”的容器：  
 
 -   在具有将向 Active Directory 发布数据的主站点或辅助站点的每个域中创建一次此容器  
@@ -114,6 +114,6 @@ ms.openlocfilehash: d4cdaa646265b2d05ec93aeaefaf3a6e7a2c269f
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,8 +1,8 @@
 ---
-title: "任务序列步骤 | Configuration Manager"
+title: "任务序列步骤 | Microsoft Docs"
 description: "了解可添加到 Configuration Manager 任务序列的任务序列步骤。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/07/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 2a45cfb3e00d8078fbf45bdc8a2668b7dd0a62c6
-ms.openlocfilehash: 538cb9795586115ad8b52b44fb82b50a0abdbaa2
+ms.sourcegitcommit: 3f44505c977b511223a083a960f871371c0ff133
+ms.openlocfilehash: 6e324eb97c0e803d382371ace541a4b9f96e6ba3
 
 
 ---
@@ -153,7 +153,7 @@ ms.openlocfilehash: 538cb9795586115ad8b52b44fb82b50a0abdbaa2
 
  使用操作系统映像时，“应用操作系统映像”  步骤将执行以下操作。  
 
-1.  删除目标卷上的所有内容，除了 _SMSTSUserStatePath 任务序列变量指定的文件夹中的文件之外。  
+1.  除了 &#95;SMSTSUserStatePath 任务序列变量所指定文件夹中的文件之外，删除目标卷上的所有内容。  
 
 2.  将指定的 .wim 文件的内容提取到指定目标分区。  
 
@@ -169,7 +169,7 @@ ms.openlocfilehash: 538cb9795586115ad8b52b44fb82b50a0abdbaa2
 
  使用操作系统安装包时，“应用操作系统映像”  步骤将执行以下操作。  
 
-1.  删除目标卷上的所有内容，除了 _SMSTSUserStatePath 任务序列变量指定的文件夹中的文件之外。  
+1.  除了 &#95;SMSTSUserStatePath 任务序列变量所指定文件夹中的文件之外，删除目标卷上的所有内容。  
 
 2.  准备答案文件：  
 
@@ -627,7 +627,7 @@ ms.openlocfilehash: 538cb9795586115ad8b52b44fb82b50a0abdbaa2
 
 -   若要动态下载适用的驱动程序包，请使用两个“下载包内容”  步骤以及检测每个驱动程序包的相应硬件类型的条件。 将每个“下载包内容”  步骤配置为使用相同的变量，并将该变量用于“升级操作系统”  步骤的驱动程序部分中的“分步内容”  值。  
 
- 此步骤仅可在标准操作系统中运行。 不可在 Windows PE 中运行。  
+标准操作系统或 Windows PE 中均可运行此步骤。 但是，WinPE 中不支持将包保存在 Configuration Manager 客户端缓存中选项。
 
 ### <a name="details"></a>详细信息  
  在此步骤的“属性”  选项卡上，可以配置此部分描述的设置。  
@@ -1062,8 +1062,12 @@ Configuration Manager 版本 1606 中引入了一个新的任务序列变量 SMS
 
  域\帐户  
 
-##  <a name="a-namebkmkprepareconfigmgrclientforcapturea-prepare-configmgr-client-for-capture"></a><a name="BKMK_PrepareConfigMgrClientforCapture"></a>准备 ConfigMgr 客户端以便捕获  
- 通过执行以下任务，使用“准备 ConfigMgr 客户端以便捕获”步骤来获取引用计算机上的 Configuration Manager 客户端，并准备该客户端以便在映像进程期间进行捕获：  
+## <a name="a-namebkmkprepareconfigmgrclientforcapturea-prepare-configmgr-client-for-capture"></a><a name="BKMK_PrepareConfigMgrClientforCapture"></a>准备 ConfigMgr 客户端以便捕获  
+使用“准备 ConfigMgr 客户端以便捕获”步骤来删除 Configuration Manager 客户端，或配置引用计算机上的客户端，使其准备在映像化过程中进行捕获。
+
+从 Configuration Manager 版本 1610 开始，“准备 ConfigMgr 客户端”一步将完全删除 Configuration Manager 客户端，而不是仅删除密钥信息。 任务序列每次部署捕获的操作系统映像时，都将安装新的 Configuration Manager 客户端。  
+
+在 Configuration Manager 版本 1610 之前，此步骤执行以下任务：  
 
 -   从 Windows 目录的 smscfg.ini 文件中删除客户端配置属性部分。 这些属性包括客户端特定信息，如 Configuration Manager GUID 及其他客户端标识符。  
 
@@ -1458,19 +1462,19 @@ Configuration Manager 版本 1606 中引入了一个新的任务序列变量 SMS
 
  任务序列自动设置以下只读任务序列变量：  
 
--   _SMSTSMake  
+ -   &#95;SMSTSMake  
 
--   _SMSTSModel  
+ -   &#95;SMSTSModel  
 
--   _SMSTSMacAddresses  
+ -   &#95;SMSTSMacAddresses  
 
--   _SMSTSIPAddresses  
+ -   &#95;SMSTSIPAddresses  
 
--   _SMSTSSerialNumber  
+ -   &#95;SMSTSSerialNumber  
 
--   _SMSTSAssetTag  
+ -   &#95;SMSTSAssetTag  
 
--   _SMSTSUUID  
+ -   &#95;SMSTSUUID  
 
  标准操作系统或 Windows PE 中均可运行此步骤。 有关任务序列变量的详细信息，请参阅[任务序列操作变量](task-sequence-action-variables.md)。  
 
@@ -1485,32 +1489,34 @@ Configuration Manager 版本 1606 中引入了一个新的任务序列变量 SMS
 
 -   指定运行步骤必须满足的条件。  
 
- **Name**  
+**Name**  
  此任务序列步骤的用户定义的短名称。  
 
- **描述**  
+**描述**  
  有关此步骤所采取操作的更详细信息。  
 
- **动态规则和变量**  
+**动态规则和变量**  
  若要设置动态变量以在任务序列中使用，可以添加一条规则，然后为你为规则指定的每个变量指定一个值，或者添加一个或多个变量进行设置，而不添加规则。 添加规则时，可以从以下规则类别中进行选择：  
 
--   **计算机：**使用此规则类别可评估资产标记、UUID、序列号或 MAC 地址的值。 你可以设置多个值，如果任何一个值为 true，则该规则将评估为 true。 例如，如果序列号是 5892087，无论 MAC 地址是否等于 26-78-13-5A-A4-22，以下规则都将评估为 true。  
+ -   **计算机：**使用此规则类别可评估资产标记、UUID、序列号或 MAC 地址的值。 你可以设置多个值，如果任何一个值为 true，则该规则将评估为 true。 例如，如果序列号是 5892087，无论 MAC 地址是否等于 26-78-13-5A-A4-22，以下规则都将评估为 true。  
 
      `IF Serial Number = 5892087 OR MAC address = 26-78-13-5A-A4-22 THEN`  
 
 -   **位置：**使用此规则类别可评估默认网关的值。  
 
--   **品牌和型号：**使用此规则类别可评估计算机的品牌和型号的值。 品牌和型号均必须评估为 true，规则才能评估为 true。  
+-   **品牌和型号：**使用此规则类别可评估计算机的品牌和型号的值。 品牌和型号均必须评估为 true，规则才能评估为 true。   
+
+    从 Configuration Manager 版本 1610 开始，用户可以将星号 (*****) 和问号 (**?**) 指定为通配符，其中 ***** 匹配多个字符和 **?** 匹配单一字符。 例如，字符串 "DELL*900?" 将匹配 DELL-ABC-9001 和 DELL9009。
 
 -   **任务序列变量：**使用此规则类别可添加要评估的任务序列变量、条件和值。 当为变量设置的值符合指定条件时，规则评估为 true。  
 
- 你可以指定将为评估为 true 的规则设置的一个或多个变量，或者设置变量而不使用规则。 你可以从现有变量选择或创建自定义变量。  
+你可以指定将为评估为 true 的规则设置的一个或多个变量，或者设置变量而不使用规则。 你可以从现有变量选择或创建自定义变量。  
 
--   **现有任务序列变量：**使用此设置可从现有任务序列变量的列表中选择一个或多个变量。 不可选择数组变量。  
+ -   **现有任务序列变量：**使用此设置可从现有任务序列变量的列表中选择一个或多个变量。 不可选择数组变量。  
 
--   **自定义任务序列变量：**使用此设置可定义自定义任务序列变量。 你也可指定现有任务序列变量。 这有助于指定现有变量数组，如 OSDAdapter，因为变量数组不在现有任务序列变量的列表中。  
+ -   **自定义任务序列变量：**使用此设置可定义自定义任务序列变量。 你也可指定现有任务序列变量。 这有助于指定现有变量数组，如 OSDAdapter，因为变量数组不在现有任务序列变量的列表中。  
 
- 为规则选择变量后，必须为每个变量提供一个值。 规则评估为 true 时，则变量设置为指定的值。 对于每个变量，可以选择“机密值”  来隐藏该变量的值。 默认情况下，某些现有变量隐藏值，例如 OSDCaptureAccountPassword 任务序列变量。  
+为规则选择变量后，必须为每个变量提供一个值。 规则评估为 true 时，则变量设置为指定的值。 对于每个变量，可以选择“机密值”  来隐藏该变量的值。 默认情况下，某些现有变量隐藏值，例如 OSDCaptureAccountPassword 任务序列变量。  
 
 > [!IMPORTANT]  
 >  使用“设置动态变量”步骤导入任务序列并为变量的值选择“机密值”  时，导入该任务序列时将删除该值。 因此，导入任务序列后你必须重新输入动态变量的值。  
@@ -1690,6 +1696,6 @@ Configuration Manager 版本 1606 中引入了一个新的任务序列变量 SMS
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

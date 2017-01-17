@@ -1,5 +1,5 @@
 ---
-title: "管理驱动程序 | Configuration Manager"
+title: "管理驱动程序 | Microsoft Docs"
 description: "使用 Configuration Manager 驱动程序目录导入设备驱动程序、在包中为驱动程序分组，然后这些将包分发到各个分发点。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 82cddeb0f2f5210f8bf246b0c757e15815f78669
+ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
+ms.openlocfilehash: 361a18b7da8249fc6cccc333f39313a52dd8ab88
 
 
 ---
@@ -198,7 +198,7 @@ System Center Configuration Manager 提供了驱动程序目录，可用于管�
 
  使用下列过程来添加或删除启动映像中的设备驱动程序。  
 
-#### <a name="to-modify-the-device-drivers-associated-with-a-boot-image"></a>若要修改与启动映像关联的设备驱动程序  
+#### <a name="to-modify-the--device-drivers-associated-with-a-boot-image"></a>若要修改与启动映像关联的设备驱动程序  
 
 1.  在 Configuration Manager 控制台中，单击“软件库” 。  
 
@@ -278,6 +278,6 @@ System Center Configuration Manager 提供了驱动程序目录，可用于管�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

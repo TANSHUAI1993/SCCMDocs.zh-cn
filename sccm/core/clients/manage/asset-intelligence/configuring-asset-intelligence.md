@@ -1,5 +1,5 @@
 ---
-title: "配置资产智能 | System Center Configuration Manager"
+title: "配置资产智能 | Microsoft Docs"
 description: "在 System Center Configuration Manager 中设置资产智能"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 43e04a447b03885286c6c7201afb4d1b7a10aa91
+ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
+ms.openlocfilehash: ed62dd273dfa5896c0bc0a8f6216755f44ce3513
 
 
 ---
@@ -260,6 +260,6 @@ ms.openlocfilehash: 43e04a447b03885286c6c7201afb4d1b7a10aa91
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "设置你的 System Center Configuration Manager 实验室"
+title: "设置 System Center Configuration Manager 实验室 | Microsoft Docs"
 description: "设置实验室以便使用模拟现实活动评估 Configuration Manager。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: ea084f30a1a6ec731e97cec46448d0ffbfca42e0
+ms.sourcegitcommit: 3bf44f850722afdb8dfe5922c8ceff11c9b56d08
+ms.openlocfilehash: 36e5307449bd843156307598ccdde717b4b59be3
 
 
 ---
@@ -29,7 +29,7 @@ ms.openlocfilehash: ea084f30a1a6ec731e97cec46448d0ffbfca42e0
 遵循本主题中的指导原则将使你能够设置实验室以使用模拟现实活动评估 Configuration Manager。  
 
 ##  <a name="a-namebkmklabcorea-core-components"></a><a name="BKMK_LabCore"></a> 核心组件  
- 为 System Center Configuration Manager 中设置环境需要一些核心组件支持安装 Configuration Manager。  
+ 为 System Center Configuration Manager 中设置环境需要一些核心组件支持安装 Configuration Manager。    
 
 -   **该实验室环境使用 Windows Server 2012 R2**，我们将在其中安装 System Center Configuration Manager。  
 
@@ -401,6 +401,6 @@ Internet 信息服务 (IIS) 是可用来承载 Web 上找到的任何内容的�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

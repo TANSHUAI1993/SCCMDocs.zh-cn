@@ -1,5 +1,5 @@
 ---
-title: "备份和恢复 | System Center Configuration Manager"
+title: "备份和恢复 | Microsoft Docs"
 description: "了解 System Center Configuration Manager 中出现故障或数据丢失时如何备份和恢复站点。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: d02dc47b2a9010d035ceecbbc6bf3d544f4dc1f4
+ms.sourcegitcommit: 828e2ac9a3f9bcea1571d24145a1021fdf1091f3
+ms.openlocfilehash: ce73be3a9fa3876c587bbd7b7cb05acd36c2687e
 
 
 ---
@@ -114,9 +114,9 @@ ms.openlocfilehash: d02dc47b2a9010d035ceecbbc6bf3d544f4dc1f4
     -   **站点服务器和 SQL Server 上的本地驱动器**：指定将站点的备份文件存储在站点服务器本地驱动器上的指定路径中，并将站点数据库的备份文件存储在站点数据库服务器本地驱动器上的指定路径中。 你必须在备份任务运行之前创建本地文件夹。 站点服务器的计算机帐户必须具有你在站点服务器上创建的文件夹的 **“写入”** NTFS 权限。 SQL Server 的计算机帐户必须具有你在站点数据库服务器上创建的文件夹的 **“写入”** NTFS 权限。 只有在站点服务器未安装站点数据库时，此选项才可用。  
 
     > [!NOTE]  
-    >    - 只有在你指定备份目标的 UNC 路径时，用于浏览到备份目标的选项才可用。
+    >   - 只有在你指定备份目标的 UNC 路径时，用于浏览到备份目标的选项才可用。
 
-    >- 用于备份目标的文件夹名称或共享名称不支持使用 Unicode 字符。  
+    > - 用于备份目标的文件夹名称或共享名称不支持使用 Unicode 字符。  
 
 
 6.  为站点备份任务配置计划。 作为最佳方案，请考虑活动工作时间外的备份计划。 如果有层次结构，请考虑使用一周至少运行两次的计划，以确保在出现站点故障时保留最大量的数据。  
@@ -190,7 +190,7 @@ ms.openlocfilehash: d02dc47b2a9010d035ceecbbc6bf3d544f4dc1f4
  验证是否在站点服务器的文件系统备份中包括了内容库和包源位置。  
 
 #### <a name="back-up-custom-software-updates"></a>备份自定义软件更新  
-     System Center Updates Publisher 2011 is a stand-alone tool that lets you publish custom software updates to Windows Server Update Services (WSUS), synchronize the software updates to Configuration Manager, assess software updates compliance, and deploy the custom software updates to clients. Updates Publisher uses a local database for its software update repository. When you use Updates Publisher to manage custom software updates, determine whether you have to include the Updates Publisher database in your backup plan. For more information about Updates Publisher, see [System Center Updates Publisher 2011](http://go.microsoft.com/fwlink/p/?LinkId=228726) in the System Center TechCenter Library.  
+ System Center Updates Publisher 2011 是一种独立工具，通过该工具可将自定义软件更新发布到 Windows Server Update Services (WSUS)、将软件更新同步到 Configuration Manager、评估软件更新符合性，并将自定义软件更新部署到客户端。 Updates Publisher 为其软件更新存储库使用本地数据库。 使用 Updates Publisher 管理自定义软件更新时，请确定是否必须在备份计划中包括 Updates Publisher 数据库。 有关 Updates Publisher 的详细信息，请参阅 System Center TechCenter 库中的 [System Center Updates Publisher 2011](http://go.microsoft.com/fwlink/p/?LinkId=228726) 。  
 
  使用下列过程来备份 Updates Publisher 数据库。  
 
@@ -206,7 +206,7 @@ ms.openlocfilehash: d02dc47b2a9010d035ceecbbc6bf3d544f4dc1f4
 ### <a name="user-state-migration-data"></a>用户状态迁移数据  
  在希望保留当前操作系统的用户状态的操作系统部署方案中，可以使用 Configuration Manager 任务序列来捕获和还原用户状态数据。 状态迁移点的属性中列出了存储用户状态数据的文件夹。 在站点服务器备份维护任务中，不会备份此用户状态迁移数据。 作为备份计划的一部分，你必须手动备份指定用于存储用户状态迁移数据的文件夹。   
 
-##### <a name="to-determine-the-folders-used-to-store-user-state-migration-data"></a>确定用于存储用户状态迁移数据的文件夹  
+#### <a name="to-determine-the-folders-used-to-store-user-state-migration-data"></a>确定用于存储用户状态迁移数据的文件夹  
 
 1.  在 Configuration Manager 控制台中，单击“管理” 。  
 
@@ -384,7 +384,7 @@ ms.openlocfilehash: d02dc47b2a9010d035ceecbbc6bf3d544f4dc1f4
 
     -   **详细信息：** 恢复管理中心站点  
 
- **RecoveryOptions**  
+**RecoveryOptions**  
 
 -   **项名称：** ServerRecoveryOptions  
 
@@ -454,7 +454,7 @@ ms.openlocfilehash: d02dc47b2a9010d035ceecbbc6bf3d544f4dc1f4
 
     -   **详细信息：** 指定站点数据库备份集的路径。 如果为 **ServerRecoveryOptions** 项配置了值 **1** 或 **4** ，并为 **DatabaseRecoveryOptions** 项配置了值 **10** ，则需要 **BackupLocation** 项。  
 
- **选项**  
+**选项**  
 
 -   **项名称：** ProductID  
 
@@ -549,7 +549,7 @@ ms.openlocfilehash: d02dc47b2a9010d035ceecbbc6bf3d544f4dc1f4
 
     -   **详细信息：** 指定是否加入客户体验改善计划。  
 
- **SQLConfigOptions**  
+**SQLConfigOptions**  
 
 -   **项名称：** SQLServerName  
 
@@ -597,7 +597,7 @@ ms.openlocfilehash: d02dc47b2a9010d035ceecbbc6bf3d544f4dc1f4
 
     -   **详细信息：** 恢复主站点  
 
- **RecoveryOptions**  
+**RecoveryOptions**  
 
 -   **项名称：** ServerRecoveryOptions  
 
@@ -653,7 +653,7 @@ ms.openlocfilehash: d02dc47b2a9010d035ceecbbc6bf3d544f4dc1f4
 
     -   **详细信息：** 指定站点数据库备份集的路径。 如果为 **ServerRecoveryOptions** 项配置了值 **1** 或 **4** ，并为 **DatabaseRecoveryOptions** 项配置了值 **10** ，则需要 **BackupLocation** 项。  
 
- **选项**  
+**选项**  
 
 -   **项名称：** ProductID  
 
@@ -748,7 +748,7 @@ ms.openlocfilehash: d02dc47b2a9010d035ceecbbc6bf3d544f4dc1f4
 
     -   **详细信息：** 指定是否加入客户体验改善计划。  
 
- **SQLConfigOptions**  
+**SQLConfigOptions**  
 
 -   **项名称：** SQLServerName  
 
@@ -783,7 +783,7 @@ ms.openlocfilehash: d02dc47b2a9010d035ceecbbc6bf3d544f4dc1f4
 
     -   **详细信息：** 指定 SQL Server 使用的 SQL Server Service Broker (SSB) 端口。 通常，SSB 配置为使用 TCP 端口 4022，但也支持其他端口。 你必须指定在发生故障之前使用的相同 SSB 端口。  
 
- **层次结构扩展选项**  
+**层次结构扩展选项**  
 
 -   **项名称：** CCARSiteServer  
 
@@ -839,7 +839,7 @@ ms.openlocfilehash: d02dc47b2a9010d035ceecbbc6bf3d544f4dc1f4
  在站点服务器恢复之后，必须重新输入为站点指定的 Windows 旁加载密钥，因为这些密钥在站点恢复过程中已重置。 重新输入旁加载密钥后，将在 Configuration Manager 控制台中重置 Windows 旁加载密钥的“已使用激活数”列中的计数。 例如，假设在站点失败之前，针对设备已经使用的密钥数将“激活总数”计数设置为“100”，将“已使用激活数”设置为“90”。 在站点恢复之后，“激活总数”  列仍显示“100” ，但“已使用激活数”  列错误地显示“0” 。 然而，在 10 个新设备使用旁加载密钥之后，将没有剩余的旁加载密钥，下一个设备将无法应用旁加载密钥。  
 
 #### <a name="recreate-the-microsoft-intune-subscription"></a>重新创建 Microsoft Intune 订阅  
- 如果在重新制作站点服务器计算机的映像后恢复 Configuration Manager 站点服务器，将不会还原 Microsoft Intune 订阅。 恢复站点后必须重新创建订阅。 有关详细信息，请参阅 [Configuring the Microsoft Intune subscription](../../mdm/plan-design/hybrid-mobile-device-management.md#bkmk_witsub)。  
+ 如果在重新制作站点服务器计算机的映像后恢复 Configuration Manager 站点服务器，将不会还原 Microsoft Intune 订阅。 恢复站点后必须重新创建订阅。 有关详细信息，请参阅 [Configuring the Microsoft Intune subscription](../../mdm/deploy-use/setup-hybrid-mdm.md#step-3-configure-intune-subscription)。  
 
 #### <a name="configure-ssl-for-site-system-roles-that-use-iis"></a>为使用 IIS 的站点系统角色配置 SSL  
  当你恢复运行 IIS 并且在发生故障之前针对 HTTPS 进行了配置的站点系统时，你必须重新配置 IIS 以使用 Web 服务器证书。  
@@ -913,6 +913,6 @@ ms.openlocfilehash: d02dc47b2a9010d035ceecbbc6bf3d544f4dc1f4
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

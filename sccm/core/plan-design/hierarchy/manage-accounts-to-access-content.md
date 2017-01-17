@@ -1,5 +1,5 @@
 ---
-title: "访问内容的帐户 | System Center Configuration Manager"
+title: "管理帐户以访问内容 | Microsoft Docs"
 description: "了解有关客户端用于访问 System Center Configuration Manager 内容的帐户的信息。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: c7d5dc2767621ac2e494d24af07ca20513d6d63f
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: 4bf8dbd007f2ff122d1447ffcb2a963579034033
 
 ---
 # <a name="manage-accounts-to-access-content-in-system-center-configuration-manager"></a>管理帐户以访问 System Center Configuration Manager 中的内容
@@ -120,6 +120,6 @@ ms.openlocfilehash: c7d5dc2767621ac2e494d24af07ca20513d6d63f
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 
