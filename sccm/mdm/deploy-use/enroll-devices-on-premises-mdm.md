@@ -1,6 +1,6 @@
 ---
 
-title: "注册设备 | MDM System Center | Configuration Manager"
+title: "注册设备 | Microsoft Docs | MDM 系统中心"
 description: "了解在 System Center Configuration Manager 中为本地移动设备管理注册设备的方法。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 911139148a18b2d5044962406a0847cdc97ab9d6
+ms.sourcegitcommit: 0d6479bcc134103e6005159a8ea295a5f359a436
+ms.openlocfilehash: 9ecfef871b9082aad4c8f0cf933f963efd57c292
 
 
 ---
@@ -47,6 +47,6 @@ ms.openlocfilehash: 911139148a18b2d5044962406a0847cdc97ab9d6
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

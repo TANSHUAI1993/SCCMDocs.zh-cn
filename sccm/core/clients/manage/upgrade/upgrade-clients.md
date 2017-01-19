@@ -1,5 +1,5 @@
 ---
-title: "升级客户端 | System Center Configuration Manager"
+title: "升级客户端 | Microsoft Docs"
 description: "获取有关如何在 System Center Configuration Manager 中升级客户端的信息。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -12,12 +12,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 446c83b5-c292-4e74-ba19-0792ac6b3472
 caps.latest.revision: 8
-author: Mtillman
-ms.author: mtillman
+author: nbigman
+ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 1571d31af1e2697c5ecbdc709a3eea9d6e28dbf0
+ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
+ms.openlocfilehash: c9794b9770e6fa5665af547d6b36559f85ade691
 
 
 ---
@@ -153,6 +153,6 @@ ms.openlocfilehash: 1571d31af1e2697c5ecbdc709a3eea9d6e28dbf0
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

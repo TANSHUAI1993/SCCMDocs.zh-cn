@@ -1,5 +1,5 @@
 ---
-title: "部署 PKI 证书 | System Center Configuration Manager"
+title: "部署 PKI 证书 | Microsoft Docs"
 description: "按照分步示例，了解创建和部署 System Center Configuration Manager 使用的 PKI 证书的过程。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 49dfa303453b26a64c1495a1259674e0d8a6bde2
+ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
+ms.openlocfilehash: 2db82f0572df9519b3119d4dca4f4626ae09d936
 
 
 ---
@@ -785,6 +785,6 @@ ms.openlocfilehash: 49dfa303453b26a64c1495a1259674e0d8a6bde2
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

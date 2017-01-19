@@ -1,5 +1,5 @@
 ---
-title: "规划本地 MDM | System Center Configuration Manager"
+title: "规划本地 MDM | Microsoft Docs"
 description: "在 System Center Configuration Manager 中规划本地移动设备管理以管理移动设备。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 6bc3bf68d098fec7b6ac976d8e7ee7a7d71fab6a
+ms.sourcegitcommit: 0d6479bcc134103e6005159a8ea295a5f359a436
+ms.openlocfilehash: cc5b04dc41b13993fca35f202437b71e96bc9cdd
 
 
 ---
@@ -40,7 +40,7 @@ ms.openlocfilehash: 6bc3bf68d098fec7b6ac976d8e7ee7a7d71fab6a
 > -   Windows 10 移动版  
 > -   Windows 10 移动企业版   
 
-##  <a name="a-namebkmkintunea-use-of-the-microsoft-intune-subscription"></a><a name="bkmk_intune"></a>使用 Microsoft Intune 订阅  
+##  <a name="a-namebkmkintunea-use-of-the--microsoft-intune-subscription"></a><a name="bkmk_intune"></a>使用 Microsoft Intune 订阅  
  若要开始使用本地移动设备管理，你需要 Microsoft Intune 订阅。 仅跟踪设备授权时需要订阅，订阅不用于管理或储存设备的管理信息。 所有管理均由你组织的企业使用本地 Configuration Manager 基础结构来进行。  
 
 > [!IMPORTANT]  
@@ -122,6 +122,6 @@ ms.openlocfilehash: 6bc3bf68d098fec7b6ac976d8e7ee7a7d71fab6a
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

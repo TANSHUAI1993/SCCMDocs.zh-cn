@@ -1,5 +1,5 @@
 ---
-title: "内容源位置 | System Center Configuration Manager"
+title: "内容源位置 | Microsoft Docs"
 description: "了解如何设置 System Center Configuration Manager，使客户端在慢速网络上查找内容。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,15 +16,22 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 667010fedb37770d4105fc30f098a231292969fd
+ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
+ms.openlocfilehash: b0f54daecfc3e958d3196f3f0b08606725d86c39
 
 ---
 # <a name="content-source-location-scenarios-in-system-center-configuration-manager"></a>System Center Configuration Manager 中内容源位置方案
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager 支持将几个设置结合起来，以便定义网络较慢时，客户端查找内容的方式和位置。 可能的组合会影响客户端使用内容位置，在首选内容的源不可用时它们可以使用回退位置。  
+在 1610 版之前，System Center Configuration Manager 支持将几个设置结合起来，以便定义网络较慢时，客户端查找内容的方式和位置。 可能的组合会影响客户端使用内容位置，在首选内容的源不可用时它们可以使用回退位置。  
+
+> [!IMPORTANT]  
+> **如果站点运行版本 1511、1602 或 1606**，则本主题中的信息适用于用户的基础结构。 另请参阅[版本 1511、1602 和 1606 的边界组](/sccm/core/servers/deploy/configure/boundary-groups-for-1511-1602-and-1606)，了解特定于这些版本的 Configuration Manager 的边界组的信息。
+>
+> **如果站点运行版本 1610 或更高版本**，请根据[边界组](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups)中的信息，了解客户端如何查找包含可用内容的分发点。
+
+
 
 
 
@@ -58,7 +65,7 @@ System Center Configuration Manager 支持将几个设置结合起来，以便�
 
 -   **允许回退**：未启用  
 
--   **慢速网络的部署行为：**：任何部署  
+-   **慢速网络的部署行为**：任何部署  
 
 
 **详细信息：**（按需包分发的包配置与此方案无关）  
@@ -114,7 +121,7 @@ System Center Configuration Manager 支持将几个设置结合起来，以便�
 
 -   **允许回退**：未启用  
 
--   **慢速网络的部署行为：**：任何部署  
+-   **慢速网络的部署行为**：任何部署  
 
 
 **详细信息：**  
@@ -174,7 +181,7 @@ System Center Configuration Manager 支持将几个设置结合起来，以便�
 
 -   **允许回退**：未启用  
 
--   **慢速网络的部署行为：**：任何部署  
+-   **慢速网络的部署行为**：任何部署  
 
 
 **详细信息：**  
@@ -249,6 +256,6 @@ System Center Configuration Manager 支持将几个设置结合起来，以便�
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

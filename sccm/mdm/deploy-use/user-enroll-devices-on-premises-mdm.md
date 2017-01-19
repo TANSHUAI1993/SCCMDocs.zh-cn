@@ -1,5 +1,5 @@
 ---
-title: "用户如何在 System Center Configuration Manager 中向本地移动设备管理注册设备"
+title: "用户如何在 System Center Configuration Manager 中向本地移动设备管理注册设备 | Microsoft Docs"
 description: "了解用户如何在 System Center Configuration Manager 中向本地移动设备管理注册设备。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: e390da9377adfb7f32687c6c01b35a51a3bd495b
+ms.sourcegitcommit: 0d6479bcc134103e6005159a8ea295a5f359a436
+ms.openlocfilehash: 6fdf9d0b01805b341838b3dc7f0368a4f70e1d08
 
 
 ---
@@ -83,6 +83,6 @@ ms.openlocfilehash: e390da9377adfb7f32687c6c01b35a51a3bd495b
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 

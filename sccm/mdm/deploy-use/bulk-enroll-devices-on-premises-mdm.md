@@ -1,6 +1,6 @@
 ---
 
-title: "批量注册设备 | 本地 MDM | System Center Configuration Manager"
+title: "批量注册设备 | Microsoft Docs | 本地 MDM"
 description: "在 System Center Configuration Manager 中自动向本地移动设备管理批量注册设备。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -18,8 +18,8 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1134bb2f04152288e72d40b1b1083f415cb4e900
-ms.openlocfilehash: 92f30335c412fb1ddf790de7218bb4b704562298
+ms.sourcegitcommit: 0d6479bcc134103e6005159a8ea295a5f359a436
+ms.openlocfilehash: ef68a9f998ea6ff9628e01f6ac622711de68375d
 
 
 ---
@@ -168,6 +168,6 @@ ms.openlocfilehash: 92f30335c412fb1ddf790de7218bb4b704562298
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO3-->
 
 
