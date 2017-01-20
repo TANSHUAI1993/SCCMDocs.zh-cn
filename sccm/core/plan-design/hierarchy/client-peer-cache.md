@@ -2,7 +2,7 @@
 title: "客户端对等缓存 | System Center Configuration Manager"
 description: "使用 System Center Configuration Manager 部署内容时，将对等缓存用于客户端内容源位置。"
 ms.custom: na
-ms.date: 1/3/2017
+ms.date: 1/9/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: e2a72fd9fb9ae5e64b7eb92e1d2106162fc7ea5d
-ms.openlocfilehash: 599ba03a1934b9feb030f27c827625c2c9471d8e
+ms.sourcegitcommit: f3e8cb3a7a4c1de9b8e9866ed192a8a0a7aec106
+ms.openlocfilehash: 86129a7fd5bfac676b5f03336cf97d07747b48d1
 
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>用于 Configuration Manager 客户端的对等缓存
@@ -48,6 +48,8 @@ ms.openlocfilehash: 599ba03a1934b9feb030f27c827625c2c9471d8e
 
 
 ## <a name="requirements-and-considerations-for-peer-cache"></a>对等缓存的要求和注意事项
+- 任何支持作为 Configuration Manager 客户端的 Windows 操作系统都支持对等缓存。 对等缓存不支持非 Windows 操作系统。
+
 - 必须使用对每个客户端上的缓存文件夹具有**完全控制**的**网络访问帐户**来配置站点。 默认情况下，这是 ***%windir%\ccmcache***。
 
 - 客户端只能传输来自其当前边界组中的对等缓存客户端中的内容。
@@ -67,6 +69,6 @@ ms.openlocfilehash: 599ba03a1934b9feb030f27c827625c2c9471d8e
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Jan17_HO2-->
 
 
