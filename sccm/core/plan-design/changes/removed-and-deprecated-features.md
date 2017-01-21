@@ -2,7 +2,7 @@
 title: "弃用的功能 | Microsoft Docs"
 description: "了解有关 System Center Configuration Manager 不再支持的功能、产品和操作系统的信息。"
 ms.custom: na
-ms.date: 12/29/2016
+ms.date: 1/5/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 16781e281676c8c1092108d16beaf7e0b16d45a7
-ms.openlocfilehash: e788a3c54e3620db92f1cc3e8246e5469189a802
+ms.sourcegitcommit: f912bb82b8d753f01b15f96eec5099c3f92abe75
+ms.openlocfilehash: 18b411b05dd6fc9b572e1d3d201876172bb40d07
 
 
 ---
@@ -52,6 +52,7 @@ ms.openlocfilehash: e788a3c54e3620db92f1cc3e8246e5469189a802
 |带外管理- 在 System Center 2012 Configuration Manager 中找到|2015 年 10 月 16 日|版本 1511|
 |任务序列： <br /> - 将磁盘转换为动态磁盘 <br /> - 安装部署工具 |2016 年 11 月 18 日|对这些任务序列的支持随 2017 年 6 月 1 日后发布的首个更新结束。|
 |软件中心将呈现新式外观。 并且本应仅出现在依赖于 Silverlight 的应用程序目录中的应用（用户可用的应用）现在将出现在“应用程序”选项卡中的软件中心。 应用程序目录仍然可以通过软件中心的“安装状态”选项卡中的链接进行访问。<br><br>在未来几个月，以前版本的软件中心将不再可用。<br><br>你可以通过启用客户端设置“计算机代理” > “使用新的软件中心”来使用新的软件中心。<br><br>有关软件中心的详细信息，请参阅[规划和配置 System Center Configuration Manager 中的应用程序管理](https://docs.microsoft.com/sccm/apps/plan-design/plan-for-and-configure-application-management)。|2016 年 12 月 13 日|即将公布|
+|利用 Configuration Manager 管理虚拟硬盘 (VHD)。 </br></br>这包括去除使用任务序列创建新 VHD 或管理 VHD 的选项，以及去除 Configuration Manager 控制台的虚拟硬盘节点。 </br></br>去除这种支持后，虽然现有 VHD 将不被删除，但再也无法从 Configuration Manager 控制台内访问。  |2017 年 1 月 6 日 |对 VHD 的支持将在 2017 年 6 月 1 日后随首个更新的发布而结束。|
 
 
 1511 版 System Center Configuration Manager 发布中删除的功能的其他信息如下：
@@ -111,7 +112,6 @@ ms.openlocfilehash: e788a3c54e3620db92f1cc3e8246e5469189a802
 
 
 
-
-<!--HONumber=Dec16_HO5-->
+<!--HONumber=Jan17_HO1-->
 
 
