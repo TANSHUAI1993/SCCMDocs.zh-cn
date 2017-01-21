@@ -1,0 +1,167 @@
+---
+title: "部署应用程序 | Microsoft Docs"
+description: "使用 System Center Configuration Manager 为应用程序创建部署类型或模拟部署。"
+ms.custom: na
+ms.date: 10/06/2016
+ms.prod: configuration-manager
+ms.reviewer: na
+ms.suite: na
+ms.technology:
+- configmgr-app
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: 2629c376-ec43-4f0e-a78b-4223cc9302bf
+caps.latest.revision: 10
+caps.handback.revision: 0
+author: robstackmsft
+ms.author: robstack
+manager: angrobe
+translationtype: Human Translation
+ms.sourcegitcommit: 7be9abadeb51d4f9e862f69c332756b19ce3e110
+ms.openlocfilehash: a52bef3c8d12ffe2d9b13dc79cbc8950d3f36aea
+
+
+---
+# <a name="deploy-applications-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 部署应用程序
+
+*适用范围：System Center Configuration Manager (Current Branch)*
+
+ 你至少必须为应用程序创建一种部署类型，然后才能部署 System Center Configuration Manager 应用程序。 有关创建应用程序和部署类型的详细信息，请参阅[创建应用程序](../../apps/deploy-use/create-applications.md)。
+
+ 还可以模拟应用程序部署。 此类型的部署在不安装或卸载应用程序的情况下测试将它部署到计算机的适用性。 模拟部署将评估部署类型的检测方法、要求和依赖关系，然后在“监视”工作区的“部署”节点中报告结果。 有关详细信息，请参阅[模拟应用程序部署](../../apps/deploy-use/simulate-application-deployments.md)。
+
+> [!IMPORTANT]
+>  可部署（安装或卸载）所需应用程序，但不能部署包或软件更新。 已注册 MDM 的设备也不支持模拟部署、用户体验或计划设置。
+
+## <a name="deploy-an-application"></a>部署应用程序
+
+1.  在 Configuration Manager 控制台中，转到“软件库” > “应用程序管理” > “应用程序”。
+
+2.  在“应用程序”  列表中，选择要部署的应用程序。 然后，在 **主页** 选项卡上，在 **部署** 组中，单击 **部署**。
+
+### <a name="specify-general-information-about-the-deployment"></a>指定关于部署的常规信息
+
+在“部署软件”向导的“常规”页上，指定以下信息：
+
+- **软件**--此信息显示要部署的应用程序。 你可以单击“浏览”  以选择其他应用程序。
+- **集合**--单击“浏览”选择要在其中部署应用程序的集合。
+- **使用与此集合关联的默认分发点组**--如果要将应用程序内容存储在集合的默认分发点组上，请选择此选项。 如果未将所选集合与分发点组关联，则此选项为灰色。
+- **为依赖关系自动分发内容**--如果启用了此选项，并且应用程序中的任何部署类型若包含依赖关系，则也会将从属应用程序内容发送到分发点。
+
+    >[!IMPORTANT]
+    > 如果在部署了主应用程序之后更新从属应用程序，则不会自动分发依赖项的任何新内容。
+
+- **备注(可选)** – 根据需要输入此部署的描述。
+
+### <a name="specify-content-options-for-the-deployment"></a>为部署指定内容选项
+
+在“内容”页上，单击“添加”将与此部署关联的内容添加到分发点或分发点组。 如果在“常规”页上选择了“使用与此集合关联的默认分发点”，则会自动填充此选项，并且只有“应用程序管理员”安全角色的成员才能对其进行修改。
+
+### <a name="specify-deployment-settings"></a>指定部署设置
+
+在“部署软件”向导的“部署设置”页上，指定以下信息：
+
+- **操作**--从下拉列表，选择此部署的用途，“安装”或“卸载”应用程序。
+
+    > [!NOTE]
+    >  如果将应用程序部署到设备两次，一次使用“安装”  操作，一次使用“卸载” 操作，则使用“安装”  操作的应用程序部署将优先。
+
+你不能在创建部署之后更改部署的操作。
+
+- **目的**--从下拉列表，选择以下任一选项：
+    - **可用**--如果将应用程序部署到用户，则用户将在软件中心看到发布的应用程序，并可根据需要进行安装。
+    - **必需**--依据计划自动部署应用程序。 如果应用程序部署状态未隐藏，则使用该应用程序的所有人均可跟踪其部署状态，并于截止时间前从软件中心安装该应用程序。
+
+    > [!NOTE]   
+    >  将部署操作设置为“卸载” 时，部署目的将自动设置为“必需”  ，并且无法更改。  
+
+- **无论用户是否登录都按计划进行自动部署**--如果部署到用户，请选择此选项以将应用程序部署到用户的主要设备。 在该部署运行之前，此设置不需要用户登录。 如果用户必须提供输入才能完成安装，请勿选择此选项。 只有当部署的目的是“必须” 时，此选项才可用。
+
+
+- **发送唤醒数据包**--如果将部署目的设置为“必需”，并选择了此选项，则会在安装部署前向计算机发送一个唤醒数据包。 此包可在安装截止时将计算机从休眠中唤醒。 必须针对“LAN 唤醒”配置计算机和网络，然后才能使用此选项。
+- **允许客户端使用按流量计费的 Internet 连接在安装截止时间之后下载内容，这可能会导致附加成本**--只有当部署目的是“必需”时，此选项才可用。
+- **如果用户请求此应用程序，则需要管理员批准**--如果选择了此选项，则管理员必须批准针对该应用程序的任何用户请求，然后才能安装应用程序。 如果部署目的为“必需”或者应用程序部署到了设备集合，则此选项为灰色。
+
+    > [!NOTE]
+    >  应用程序批准请求显示在“软件库”  工作区中“应用程序管理”  下的“批准请求”  节点中。 如果请求未在 45 天内获批准，则会将其删除。 此外，重新安装 Configuration Manager 客户端可能会取消任何挂起的批准请求。
+    > 批准安装应用程序后，可在 Configuration Manager 控制台单击“拒绝”（在批准前该按钮为灰色），选择拒绝该请求。
+    > 此操作不会从任何设备卸载应用程序，但会阻止用户从软件中心安装应用程序的新副本。
+
+
+
+- **自动升级此应用程序的任何取代版本**--如果选择此选项，则会使用取代应用程序升级应用程序的任何取代版本。
+
+### <a name="specify-scheduling-settings-for-the-deployment"></a>为部署指定计划设置
+
+在“部署软件”向导的“计划”页上，设置何时部署此应用程序或将其提供给客户端设备。
+视部署操作设置为“可用”  还是“必需” 而定，此页上的选项将有所不同。
+
+在某些情况下，可能会希望为用户提供更多时间（超出所设置的任何截止时间）来安装所需的应用程序部署或软件更新。 通常，当一台计算机关闭的时间过长且需要安装大量更新或应用程序部署时，会需要执行这种操作。 例如，如果用户刚从假期返回，则他们可能需要等待很长时间，因为安装的应用程序部署已过期。 为了帮助解决此问题，现在可通过将 Configuration Manager 客户端设置部署到集合来定义强制的宽限期。
+
+若要配置宽限期，请执行以下操作：
+
+- 在客户端设置的“计算机代理”页上，将“部署截止时间后强制的宽限期(小时)”这一新属性的值配置为介于 **1** 和 **120** 小时之间。
+- 在新的所需应用程序部署中的“计划”页上，或在现有部署属性中，选中复选框“根据用户首选项延迟此部署的强制执行，延迟时间以客户端设置中定义的宽限期为依据”。 选中了此复选框并针对其中部署了客户端设置的设备的所有部署都将使用此强制宽限期。
+
+到达应用程序安装截止时间后，将在用户配置的第一个非业务窗口内安装该应用程序，用户以该宽限期为依据配置了该窗口。 但是，用户仍可打开软件中心并在任何所需时间安装该应用程序。 一旦过了宽限期，对于未完成的部署，强制将恢复为正常行为。
+
+如果部署的应用程序取代另一个应用程序，则可以设置安装截止时间，届时用户将收到新应用程序。 使用“安装截止时间”设置执行此操作，升级具有被取代应用程序的用户。
+
+### <a name="specify-user-experience-settings-for-the-deployment"></a>为部署指定用户体验设置
+
+
+在“部署软件”向导的“用户体验”页上，指定有关用户如何与应用程序安装交互的信息。
+
+将应用程序部署到启用了写入筛选器的 Windows Embedded 设备时，你可以指定将应用程序安装在临时覆盖上并稍后提交更改，或者在安装截止时或在维护时段内提交更改。 如果在安装截止时或维护时段内提交更改，则必须重启设备。 设备上将保留这些更改。
+
+>[!NOTE]
+    >  将应用程序部署到 Windows Embedded 设备时，确保设备是配置了维护时段的集合的成员。 有关在将应用程序部署到 Windows Embedded 设备时使用的维护时段的详细信息，请参阅[创建 Windows Embedded 应用程序](../../apps/get-started/creating-windows-embedded-applications.md)主题。
+
+    >  The options **Software Installation** and **System restart (if required to complete the installation)** are not used if the deployment purpose is set to **Available**. You can also configure the level of notification a user sees when the application is installed.
+
+### <a name="specify-alert-options-for-the-deployment"></a>为部署指定警报选项
+
+在“部署软件”向导的“警报”页上，设置 Configuration Manager 和 System Center Operations Manager 为此部署生成警报的方式。 你可以配置用于报告警报的阈值，并在部署持续时间内关闭报告。
+
+### <a name="associate-the-deployment-with-an-ios-app-configuration-policy"></a>将该部署与 iOS 应用配置策略关联
+
+在“应用配置策略”页上，单击“新建”，将此部署与 iOS 应用配置策略（如果已创建策略）相关联。 有关此类型策略的详细信息，请参阅[使用应用配置策略配置 iOS 应用](../../apps/deploy-use/configure-ios-apps-with-app-configuration-policies.md)。
+
+### <a name="finish-up"></a>完成
+
+在“部署软件”向导的“摘要”页上，查看此部署将进行的操作，然后单击“下一步”完成向导。
+
+新部署将显示在“监视”  工作区的“部署”  节点中的“部署”  列表中。 你可以从应用程序详细信息窗格的“部署”  选项卡中编辑此部署的属性或删除部署。
+
+## <a name="delete-an-application-deployment"></a>删除应用程序部署
+
+1.  在 Configuration Manager 控制台中，转到“软件库” > “应用程序管理” > “应用程序”。
+
+3.  在“应用程序”列表中，选择其中含有要删除的部署的应用程序。
+
+4.  在 <application name\> 列表的“部署”选项卡中，选择要删除的应用程序部署。 然后，在“部署”选项卡的“部署”组中，单击“删除” 。
+
+ 删除应用程序部署时，不会删除已安装的应用程序的任何实例。 要删除这些应用程序，必须使用“卸载”将应用程序部署到计算机。 如果删除应用程序部署，或从部署到的集合中删除资源，则应用程序将不再显示在软件中心中。
+
+## <a name="user-notifications-for-required-deployments"></a>所需部署的用户通知
+通过“暂停并提醒我”设置收到所需软件后，可从下面的下拉值列表中进行选择：
+- **以后**--指定根据“客户端代理”设置中配置的通知设置安排通知。
+- **固定时间**--指定在选定时间后再次显示通知。 例如，如果选择 30 分钟，则通知将在 30 分钟后再次显示。
+
+![客户端代理设置中的计算机代理页](media/ComputerAgentSettings.png)
+
+最长暂停时间始终基于沿部署时间轴推移的客户端代理设置中配置的通知值。 例如，如果将“计算机代理”页上的“部署截止时间大于 24 小时，请提醒用户，提醒间隔时间（小时）为”设置配置为 10 小时，且对话框启动时距离截止时间超过 24 小时，则会出现一组暂停选项，暂停时间最多不超过 10 小时。 随着截止时间的临近，对话框显示的选项会变少，与部署时间轴的每个组件的相关客户端代理设置相一致。
+
+此外，对于高风险部署，如用于部署操作系统的任务序列，用户会更频繁地收到通知。 这不是临时性的任务栏通知，每次通知需要维护关键软件时，计算机上都会显示与下方类似的对话框：
+
+![所需软件对话框](media/client-toast-notification.png)
+
+## <a name="for-more-information"></a>更多相关信息：
+- [用于管理高风险部署的设置](../../protect/understand/settings-to-manage-high-risk-deployments.md)
+- [如何配置客户端设置](../../core/clients/deploy/configure-client-settings.md)
+
+
+
+<!--HONumber=Dec16_HO3-->
+
+
