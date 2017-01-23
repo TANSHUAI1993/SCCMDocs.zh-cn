@@ -1,8 +1,8 @@
 ---
 title: "更新 | Microsoft Docs"
-description: "了解称为**更新与维护服务**的控制台中服务方法，该方法可轻松找到并安装建议的更新。"
+description: "了解称为“更新与维护服务”的控制台中服务方法，该方法可轻松找到并安装建议的更新。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/11/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6e964f015d5f007311f46f51126b31e181abd0ec
-ms.openlocfilehash: e7b19b6e1f4720c0bdc69ef7f78366fd5d3414d0
+ms.sourcegitcommit: 5314bcb434b5b540f80cdfe32002df7b8fed6195
+ms.openlocfilehash: 52d5ad7a348e0489f43ac6cb46af930499ef6cf2
 
 
 ---
@@ -26,7 +26,11 @@ ms.openlocfilehash: e7b19b6e1f4720c0bdc69ef7f78366fd5d3414d0
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager 使用称为“更新与维护服务”的控制台中服务方法，可轻松为 Configuration Manager 基础结构找到并安装建议的更新。 此控制台中服务方法由带外更新补充，例如适用于需要解决其环境特定问题的客户的修补程序。  
+System Center Configuration Manager 使用称为“更新和维护服务”的控制台中服务方法，可轻松为 Configuration Manager 基础结构找到并安装建议的更新。 此控制台中服务方法由带外更新补充，例如适用于需要解决其环境特定问题的客户的修补程序。  
+
+> [!TIP]
+> 管理 System Center Configuration Manager 站点和层次结构基础结构时，术语“升级”、“更新”和“安装”用于描述三种不同概念。 若要了解每个术语的使用方法，请参阅[有关升级、更新和安装](/sccm/core/understand/upgrade-update-install)。
+
 
  **以下主题可帮助了解如何为 System Center Configuration Manager 查找和安装不同更新类型：**  
 
@@ -38,17 +42,18 @@ System Center Configuration Manager 使用称为“更新与维护服务”的�
 
 -   [使用修补程序安装程序为 System Center Configuration Manager 安装更新](../../../core/servers/manage/use-the-hotfix-installer-to-install-updates.md)  
 
-> [!TIP]  
-> 如果使用 Technical Preview 分支，请参阅[System Center Configuration Manager Technical Preview](/sccm/core/get-started/technical-preview) 了解特定于该分支的其他信息。
+
+如果使用 Technical Preview 分支，请参阅[System Center Configuration Manager Technical Preview](/sccm/core/get-started/technical-preview) 了解特定于该分支的其他信息。
+
 
 ##  <a name="a-namebkmkbaselinesa-baseline-and-update-versions"></a><a name="bkmk_Baselines"></a> 基准和更新版本  
- System Center Configuration Manager 当前分支的初始版本为版本 1511。 以下是基准版本：  
+ System Center Configuration Manager Current Branch 的初始版本为版本 1511，即基准版本。 最近版本 1606 作为基准版本发布：  
 
 -   在新的层次结构中安装新站点时，请使用最新的基准版本。  
 
 -   必须使用基准版本从 System Center 2012 Configuration Manager 升级。  
 
--   我们会定期发布新的基准版本。 使用较新的基准版本来安装新的层次结构时，请避免先安装原始 1511 基准版本，再升级基础结构。  
+-   我们会定期发布其他基准版本。 使用最新基准版本安装新的层次结构时，应避免安装过期版本的 Configuration Manager，然后升级基础结构以使其保持最新状态。  
 
 安装基准版本之后，其他版本的 Configuration Manager 都可用作控制台中更新。 控制台中更新可将你的基础结构更新为最新版本的 Configuration Manager。  
 
@@ -115,7 +120,7 @@ Configuration Manager 的某些更新可用作现有基础结构的控制台中�
 
 -   它将自动运行先决条件检查。 也可以先运行此检查，再开始安装。  
 
--   它自动在管理中心站点（如果有）和主站点上安装。 可以通过使用[站点服务器的服务时段](../../../core/servers/manage/install-in-console-updates.md#bkmk_ServiceWindow)控制允许每个主站点服务器更新其基础结构的时间。  
+-   它自动在管理中心站点（如果有）和主站点上安装。 可以通过使用[站点服务器的服务时段](../../../core/servers/manage/service-windows.md)控制允许每个主站点服务器更新其基础结构的时间。  
 
 -   站点服务器更新后，受影响的所有站点系统角色 （包括 SMS 提供程序的实例）会自动更新。 站点安装更新后，Configuration Manager 控制台还会提示控制台用户更新控制台。  
 
@@ -143,6 +148,6 @@ Configuration Manager 的某些更新可用作现有基础结构的控制台中�
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO2-->
 
 

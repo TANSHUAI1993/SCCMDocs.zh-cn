@@ -4,6 +4,7 @@
 ### [辅助功能](understand/accessibility-features.md)
 ##  [Configuration Manager 基础知识](understand/fundamentals.md)
 ### [站点和层次结构基础知识](understand/fundamentals-of-sites-and-hierarchies.md)
+#### [关于站点和层次结构基础结构的升级、更新和安装](understand/upgrade-update-install.md)
 ### [管理设备的基础知识](understand/fundamentals-of-managing-devices.md)
 ### [客户端管理基础](understand/fundamentals-of-client-management-tasks.md)
 ### [安全基础知识](understand/fundamentals-of-security.md)
@@ -60,7 +61,7 @@
 ###  [站点管理的安全和隐私](plan-design/hierarchy/security-and-privacy-for-site-administration.md)
 
 ##   [规划网络基础结构](plan-design/network/configure-firewalls-ports-domains.md)
-###  [扩展 Active Directory 架构](plan-design/network/extend-the-active-directory-schema.md)
+###  [准备 Active Directory 架构](plan-design/network/extend-the-active-directory-schema.md)
 ###  [准备 Windows Servers 以支持站点系统](plan-design/network/prepare-windows-servers.md)
 ###  [站点系统服务器网站](plan-design/network/websites-for-site-system-servers.md)
 ###  [PKI 证书要求](plan-design/network/pki-certificate-requirements.md)
@@ -87,7 +88,7 @@
 ##   [在实验室中评估 Configuration Manager](get-started/evaluate-with-lab-environment.md)
 ###  [设置实验室](get-started/set-up-your-lab.md)
 
-##   [技术预览](get-started/technical-preview.md) 
+##   [技术预览](get-started/technical-preview.md)
 ###  [1612 中的功能](get-started/capabilities-in-technical-preview-1612.md)
 ###  [1611 中的功能](get-started/capabilities-in-technical-preview-1611.md)
 ###  [1610 中的功能](get-started/capabilities-in-technical-preview-1610.md)
@@ -122,7 +123,8 @@
 #    [部署服务器和角色](servers/deploy/start-using.md)
 
 ##   安装基础结构
-###  [运行安装程序之前](servers/deploy/install/setup-downloader.md)
+###  [获取安装媒体](servers/deploy/install/get-install-media.md)
+###  运行安装程序之前
 #### [安装程序下载程序](servers/deploy/install/setup-downloader.md)
 #### [先决条件检查程序](servers/deploy/install/prerequisite-checker.md)
 ###  [安装站点](servers/deploy/install/installing-sites.md)
@@ -167,6 +169,7 @@
 ###  [安装控制台内部更新](servers/manage/install-in-console-updates.md)
 #### [流程图 - 下载更新](servers/manage/download-updates-flowchart.md)
 #### [流程图 - 更新复制](servers/manage/update-replication-flowchart.md)
+###  [站点服务器的服务时段](servers/manage/service-windows.md)
 ###  [使用服务连接工具](servers/manage/use-the-service-connection-tool.md)
 ###  [使用更新注册工具](servers/manage/use-the-update-registration-tool-to-import-hotfixes.md)
 ###  [使用修补程序安装程序](servers/manage/use-the-hotfix-installer-to-install-updates.md)
@@ -218,6 +221,7 @@
 ###  [如何配置 LAN 唤醒](clients/deploy/configure-wake-on-lan.md)
 ###  [如何部署客户端到 Windows 计算机](clients/deploy/deploy-clients-to-windows-computers.md)
 ###  [如何将客户端部署到 UNIX 和 Linux 服务器](clients/deploy/deploy-clients-to-unix-and-linux-servers.md)
+###  [将客户端部署到 Mac 的准备工作](clients/deploy/prepare-to-deploy-mac-clients.md)
 ###  [如何将客户端部署到 Mac](clients/deploy/deploy-clients-to-macs.md)
 ###  [如何向站点分配客户端](clients/deploy/assign-clients-to-a-site.md)
 ###  [如何配置客户端状态](clients/deploy/configure-client-status.md)
@@ -231,6 +235,7 @@
 ###  [如何管理客户端](clients/manage/manage-clients.md)
 ###  [如何管理 Linux 和 UNIX 客户端](clients/manage/manage-clients-for-linux-and-unix-servers.md)
 ###  [将数据同步到 OMS](clients/manage/sync-data-microsoft-operations-management-suite.md)
+###  [维护 Mac 客户端](clients/manage/maintain-mac-clients.md)
 
 ##   [在 Internet 上管理客户端](clients/manage/manage-clients-internet.md)
 ###  [规划云管理网关](clients/manage/plan-cloud-management-gateway.md)
@@ -260,7 +265,6 @@
 
 ##   软件清单
 ###  [软件清单简介](clients/manage/inventory/introduction-to-software-inventory.md)
-###  [如何从软件清单中排除文件夹](clients/manage/inventory/exclude-folders-from-software-inventory.md)
 ###  [如何配置软件清单](clients/manage/inventory/configure-software-inventory.md)
 ###  [如何使用资源浏览器来查看软件清单](clients/manage/inventory/use-resource-explorer-to-view-software-inventory.md)
 ###  [软件清单的安全和隐私](clients/manage/inventory/security-and-privacy-for-software-inventory.md)
@@ -301,6 +305,6 @@
 ###  [升级分析](clients/manage/upgrade/upgrade-analytics.md)
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO2-->
 
 

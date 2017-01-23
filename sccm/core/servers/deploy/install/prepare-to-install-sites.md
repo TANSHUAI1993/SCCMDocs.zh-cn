@@ -2,7 +2,7 @@
 title: "安装站点的准备工作 | Microsoft Docs"
 description: "请阅读这些详细信息，以节省安装多个站点的时间并防止出现错误。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/11/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: 0534d1eb587cb01f35d811d72ddfe6ceb07e5b7c
+ms.sourcegitcommit: 0d0735c170820259ac8bb6706aac7cc5569a1628
+ms.openlocfilehash: 42a7ae3b3c1064fe7cc7def9fdc3649e0d0829b2
 
 ---
 # <a name="prepare-to-install-system-center-configuration-manager-sites"></a>准备安装 System Center Configuration Manager 站点
@@ -25,11 +25,11 @@ ms.openlocfilehash: 0534d1eb587cb01f35d811d72ddfe6ceb07e5b7c
 *适用范围：System Center Configuration Manager (Current Branch)*
 
 若要准备成功部署一个或多个 System Center Configuration Manager 站点，请熟悉本文中有关步骤的详细信息。 这些步骤可以节省安装多个站点的时间，并有助于防止漏掉步骤从而导致需要重新安装一个或多个站点。
- > [!TIP]
- >  以下方案类似于安装 System Center Configuration Manager current branch 站点，但仍存在区别：
- > -  **升级**：安装 System Center Configuration Manager 以从 System Center 2012 Configuration Manager **升级**，请参阅[升级到 System Center Configuration Manager](../../../../core/servers/deploy/install/upgrade-to-configuration-manager.md)
- > -  **更新**：使用控制台中更新将新的**更新版本**安装到现有的 System Center Configuration Manager 站点，请参阅 [System Center Configuration Manager 的更新](../../../../core/servers/manage/updates.md)
- > -  **迁移**：若要将**数据**从其他 Configuration Manager 层次结构迁移到当前的 Configuration Manager 层次结构，请参阅[计划迁移到 System Center Configuration Manager](../../../../core/migration/planning-for-migration.md)
+
+> [!TIP]
+> 管理 System Center Configuration Manager 站点和层次结构基础结构时，术语“升级”、“更新”和“安装”用于描述三种不同概念。 若要了解每个术语的使用方法，请参阅[有关升级、更新和安装](/sccm/core/understand/upgrade-update-install)。
+
+
 
 
 
@@ -148,6 +148,6 @@ ms.openlocfilehash: 0534d1eb587cb01f35d811d72ddfe6ceb07e5b7c
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO2-->
 
 

@@ -2,7 +2,7 @@
 title: "控制台中更新 | Microsoft Docs"
 description: "System Center Configuration Manager 与 Microsoft 云服务同步，以获取可以从控制台中进行安装的更新。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/11/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
-ms.openlocfilehash: 1b7063d45c6dc9b42e5002f684043a8e846416a2
+ms.sourcegitcommit: 0d0735c170820259ac8bb6706aac7cc5569a1628
+ms.openlocfilehash: 00d9738a271ba47abcbf3c4b427a05910a0c2355
 
 
 ---
@@ -69,7 +69,7 @@ System Center Configuration Manager 与 Microsoft 云服务同步，以获取随
     - 具有此安全角色和具有对 **默认** 安全作用域访问权限的用户可以查看更新、安装更新并在安装过程中启用功能，以及查看各个功能（以前已安装更新但未启用该功能）。
 
 - 具有**读取** 权限的 **只读分析员** ：
-  -  具有此安全角色，从 1511 版升级到 1606 版或对**默认**作用域有访问权限的用户可以查看更新，但不能安装它们，并且可以查看各个功能（已安装更新但未启用此功能）。
+  -  具有此安全角色和具有对 **默认** 作用域访问权限的用户可以查看更新，但不能安装它们，并且可以查看各个功能（已安装更新但未启用此功能）。
 
 **更新和维护所需的权限汇总：**   
   - 使用分配有安全角色（包括具有 **修改** 和 **读取** 权限的 **更新包** 类）的帐户。
@@ -162,7 +162,7 @@ System Center Configuration Manager 与 Microsoft 云服务同步，以获取随
 
  我们建议你计划在正常营业时间之外为每个站点安装更新，此时安装更新的过程以及用于重新安装站点组件和站点系统角色的操作对业务运营的影响最小。  
 
--   管理中心站点完成更新安装之后，子主站点会自动启动更新。 这是建议的默认进程。 但可以使用[站点服务器的服务时段](#bkmk_ServiceWindow)控制主站点安装更新的时间。  
+-   管理中心站点完成更新安装之后，子主站点会自动启动更新。 这是建议的默认进程。 但可以使用[站点服务器的服务时段](/sccm/core/servers/manage/service-windows)控制主站点安装更新的时间。  
 
 -   在主父站点更新完成之后，必须从 Configuration Manager 控制台中手动更新辅助站点。 不支持辅助站点服务器的自动更新。  
 
@@ -355,16 +355,6 @@ System Center Configuration Manager 与 Microsoft 云服务同步，以获取随
 
 
 
-
-##  <a name="a-namebkmkservicewindowa-service-windows-for-site-servers"></a><a name="bkmk_ServiceWindow"></a> 站点服务器的服务时段  
-在站点服务器上，可以配置服务时段以控制 Configuration Manager 的基础结构更新可应用于此站点服务器的时间。  每个站点服务器支持多个时段，时段允许用于安装基础结构更新，更新由为该站点服务器配置的所有时段的组合决定。  
-
-**配置服务时段：**  
-
-1.  在 Configuration Manager 控制台中，打开“管理” > “站点配置” > “站点”，然后选择要在其中配置服务时段的站点服务器。  
-
-2.  接下来，编辑站点服务器“属性”，然后选择“服务时段”选项卡，此时你可以在其中为该站点服务器设置一个或多个服务时段。  
-
 ##  <a name="a-namebkmkfaqa-why-dont-i-see-certain-updates-in-my-console"></a><a name="bkmk_faq"></a>为什么我在控制台中看不到某些更新？  
  如果你在成功与 Microsoft 云服务同步之后在控制台中找不到特定更新或任何更新，这可能是因为：  
 
@@ -378,6 +368,6 @@ System Center Configuration Manager 与 Microsoft 云服务同步，以获取随
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO2-->
 
 

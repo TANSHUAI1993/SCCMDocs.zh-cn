@@ -2,7 +2,7 @@
 title: "管理分发点 | Microsoft Docs"
 description: "使用分发点以承载部署到设备和用户的内容（文件和软件）。 此处介绍如何安装和配置这些分发点。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/9/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
-ms.openlocfilehash: 8684bf1231ff9d663717b4c9874dac98d50e3647
+ms.sourcegitcommit: cae118d2f28eea3bc47e344ca6f2ba8192f031c2
+ms.openlocfilehash: 160c3c94c822bc78e2d61b7a51d130b47f4c204e
 
 ---
 # <a name="install-and-configure-distribution-points-for-system-center-configuration-manager"></a>为 System Center Configuration Manager 安装和配置分发点
@@ -175,6 +175,8 @@ ms.openlocfilehash: 8684bf1231ff9d663717b4c9874dac98d50e3647
 
     > [!NOTE]  
     >  此选项仅在安装新分发点时可用  
+
+- **对此分发点启用和配置 BranchCache：**选择此设置以允许 Configuration Manager 在分发点服务器上配置 Windows BranchCache。  有关配合使用 Windows BranchCache 与 System Center Configuration Manager 的详细信息，请参阅*对 System Center Configuration Manager 中 Windows 功能和网络的支持*中的 [BranchCache](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#a-namebkmkbranchcachea-branchcache)。
 
 -   **配置客户端设备与分发点的通信方式：**无论是使用 HTTP 还是 HTTPS，都有一些优点和缺点。 有关详细信息，请参阅 [System Center Configuration Manager 中内容管理的基本概念](../../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)中的*安全最佳实践*。  
 
@@ -379,6 +381,6 @@ ms.openlocfilehash: 8684bf1231ff9d663717b4c9874dac98d50e3647
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO2-->
 
 

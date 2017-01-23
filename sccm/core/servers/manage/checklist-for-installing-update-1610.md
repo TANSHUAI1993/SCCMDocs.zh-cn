@@ -2,7 +2,7 @@
 title: "1610 的清单 | System Center Configuration Manager"
 description: "了解更新到 System Center Configuration Manager 版本 1610 之前需要执行的操作。"
 ms.custom: na
-ms.date: 11/18/2016
+ms.date: 1/7/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -16,15 +16,15 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0c7d32a80559a4aa684ea1533cd36d0ef977fbfc
-ms.openlocfilehash: 25bffa256cbe70fb590eccb641c94f572f618ef3
+ms.sourcegitcommit: 0d0735c170820259ac8bb6706aac7cc5569a1628
+ms.openlocfilehash: 3ad5ca180759769bc22300eb406df4f606bfbd13
 
 ---
 # <a name="checklist-for-installing-update-1610-for-system-center-configuration-manager"></a>用于为 System Center Configuration Manager 安装更新 1610 的清单
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-使用 System Center Configuration Manager 的 Current Branch 时，可安装版本 1610 的控制台内部更新，从版本 1606 更新层次结构。 如果层次结构运行版本 1511、1602 或 1606，则可更新到版本 1610。 
+使用 System Center Configuration Manager 的 Current Branch 时，可安装版本 1610 的控制台内部更新，从版本 1606 更新层次结构。 如果层次结构运行版本 1511、1602 或 1606，则可更新到版本 1610。
 
 若要获取版本 1610 的更新，必须在层次结构的顶层站点上使用服务连接点站点系统角色。 其可处于联机或脱机模式。 层次结构从 Microsoft 下载更新包之后，它会在“管理”&gt;“概述”&gt;“云服务”&gt;“更新和维护服务”下的控制台中显示。
 
@@ -45,7 +45,7 @@ ms.openlocfilehash: 25bffa256cbe70fb590eccb641c94f572f618ef3
 **站点：**  
 只能在层次结构的顶层站点上安装更新 1610。 这意味着会从管理中心站点（如果有）或从独立主站点启动安装。 更新安装在顶层站点后，子站点具有以下更新行为：
 
--   管理中心站点完成更新安装之后，子主站点会自动安装更新。 可以使用服务时段控制站点安装更新的时间。 版本 1606 之前，服务时段被称为维护时段。 有关详细信息，请参阅[站点服务器的服务时段](https://docs.microsoft.com/en-us/sccm/core/servers/manage/install-in-console-updates#bkmk_ServiceWindow)。
+-   管理中心站点完成更新安装之后，子主站点会自动安装更新。 可以使用服务时段控制站点安装更新的时间。 版本 1606 之前，服务时段被称为维护时段。 有关详细信息，请参阅[站点服务器的服务时段](/sccm/core/servers/manage/service-windows)。
 
 -   在主父站点完成更新安装之后，必须从 Configuration Manager 控制台中手动更新辅助站点。 不支持辅助站点服务器的自动更新。
 
@@ -143,7 +143,7 @@ Configuration Manager 不支持辅助站点备份，也不支持辅助站点数�
 **计划使用服务时段控制站点服务器安装更新的时间：**   
 可以使用服务时段定义应用于主站点服务器的时间段，在此期间可以安装该站点的更新。
 
-这可以帮助你控制层次结构中的站点安装更新的时间。 版本 1606 之前，服务时段被称为维护时段。 有关详细信息，请参阅[站点服务器的服务时段](/sccm/core/servers/manage/install-in-console-updates#bkmk_servicewindow)。
+这可以帮助你控制层次结构中的站点安装更新的时间。 版本 1606 之前，服务时段被称为维护时段。 有关详细信息，请参阅[站点服务器的服务时段](/sccm/core/servers/manage/service-windows)。
 
 **运行安装程序必备组件检查程序：**   
 当更新在控制台中列为**可用**时，可以独立运行必备组件检查程序，然后再安装更新。 （在站点上安装更新时，会再次运行必备组件检查程序。）
@@ -162,6 +162,6 @@ Configuration Manager 不支持辅助站点备份，也不支持辅助站点数�
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO2-->
 
 

@@ -2,7 +2,7 @@
 title: "升级到 System Center Configuration Manager | Microsoft Docs"
 description: "了解从运行 System Center 2012 Configuration Manager 的站点和层次结构成功进行就地升级的步骤。"
 ms.custom: na
-ms.date: 12/16/2016
+ms.date: 1/11/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6cf3ac76ea3fb9c9b093ed4927255102930bbe26
-ms.openlocfilehash: d4e6a4c128ae077d2a3cb2883d80b6bf71b7f458
+ms.sourcegitcommit: 0d0735c170820259ac8bb6706aac7cc5569a1628
+ms.openlocfilehash: 27d18a7c5b13f488cafb36ace2e437fe6a50c598
 
 
 ---
@@ -29,6 +29,8 @@ ms.openlocfilehash: d4e6a4c128ae077d2a3cb2883d80b6bf71b7f458
 
  在从 System Center 2012 Configuration Manager 升级之前，必须准备站点，需要删除可能会阻止成功升级的特定配置，然后在涉及多个站点时需要按照升级顺序操作。  
 
+ > [!TIP]
+ > 管理 System Center Configuration Manager 站点和层次结构基础结构时，术语“升级”、“更新”和“安装”用于描述三种不同概念。 若要了解每个术语的使用方法，请参阅[有关升级、更新和安装](/sccm/core/understand/upgrade-update-install)。
 
 ##  <a name="a-namebkmkpatha-in-place-upgrade-paths"></a><a name="bkmk_path"></a> 就地升级路径  
 **升级到 1606 版本**  
@@ -386,6 +388,6 @@ Configuration Manager 不支持辅助站点备份，也不支持辅助站点数�
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO2-->
 
 
