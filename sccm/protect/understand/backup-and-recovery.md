@@ -1,64 +1,67 @@
----
-title: "备份和恢复 | Microsoft Docs"
-description: "了解 System Center Configuration Manager 中出现故障或数据丢失时如何备份和恢复站点。"
-ms.custom: na
-ms.date: 10/06/2016
-ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: f7832d83-9ae2-4530-8a77-790e0845e12f
-caps.latest.revision: 22
-author: Brenduns
-ms.author: brenduns
-manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 828e2ac9a3f9bcea1571d24145a1021fdf1091f3
-ms.openlocfilehash: ce73be3a9fa3876c587bbd7b7cb05acd36c2687e
-
 
 ---
-# <a name="backup-and-recovery-for-system-center-configuration-manager"></a>System Center Configuration Manager 的备份和恢复
+title: "备份和恢复 | Microsoft Docs" description: "了解 System Center Configuration Manager 中出现故障或数据丢失时如何备份和恢复站点。"
+ms.custom: na ms.date: 1/3/2017 ms.prod: configuration-manager ms.reviewer: na ms.suite: na ms.technology:
+  - configmgr-other ms.tgt_pltfrm: na ms.topic: article ms.assetid: f7832d83-9ae2-4530-8a77-790e0845e12f -caps.latest.revision: 22 -author: Brenduns ms.author: brendunsmanager: angrobe
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+----
 
-准备备份和恢复方法，以避免数据丢失。 对于 Configuration Manager 站点，备份和恢复方法可有助于更快地恢复站点和层次结构，并保持最小程度的数据丢失。 本主题中的内容可以帮助备份站点，并在出现故障或数据丢失时恢复站点。  
 
--   [备份 Configuration Manager 站点](#BKMK_SiteBackup)  
+-# System Center Configuration Manager 的备份和恢复*适用对象：System Center Configuration Manager (Current Branch)*
 
-    -   [备份维护任务](#BKMK_BackupMaintenanceTask)  
+-准备备份和恢复方法，以避免数据丢失。 对于 Configuration Manager 站点，备份和恢复方法可有助于更快地恢复站点和层次结构，并保持最小程度的数据丢失。 本主题中的内容可以帮助备份站点，并在出现故障或数据丢失时恢复站点。   
 
-    -   [使用 Data Protection Manager 来备份站点数据库](#BKMK_DPMBackup)  
+- [备份 Configuration Manager 站点](#BKMK_SiteBackup)   
 
-    -   [将备份快照存档](#BKMK_ArchivingBackupSnapshot)  
+  - [备份维护任务](#BKMK_BackupMaintenanceTask)   
 
-    -   [使用 AfterBackup.bat 文件](#BKMK_UsingAfterBackup)  
+  - [使用 Data Protection Manager 来备份站点数据库](#BKMK_DPMBackup)   
 
-    -   [补充备份任务](#BKMK_SupplementalBackup)  
+  -  [将备份快照存档](#BKMK_ArchivingBackupSnapshot)   
 
--   [恢复 Configuration Manager 站点](#BKMK_RecoverSite)  
+  -  [将备份快照存档](#BKMK_ArchivingBackupSnapshot)   
 
-    -   [确定恢复选项](#BKMK_DetermineRecoveryOptions)  
+  -  [使用 AfterBackup.bat 文件](#BKMK_UsingAfterBackup)   
 
-        -   [站点服务器恢复选项](#BKMK_SiteServerRecoveryOptions)  
+  -  [使用 AfterBackup.bat 文件](#BKMK_UsingAfterBackup)   
 
-        -   [站点数据库恢复选项](#BKMK_SiteDatabaseRecoveryOption)  
+  -  [补充备份任务](#BKMK_SupplementalBackup)   
 
-        -   [SQL Server 更改跟踪保持期](#bkmk_SQLretention)  
+-  [恢复 Configuration Manager 站点](#BKMK_RecoverSite)   
 
-        -   [继续重新初始化站点或全局数据](#bkmk_reinit)  
+  -   [确定恢复选项](#BKMK_DetermineRecoveryOptions)   
 
-        -   [站点数据库恢复方案](#BKMK_SiteDBRecoveryScenarios)  
+         -   [站点服务器恢复选项](#BKMK_SiteServerRecoveryOptions)   
 
-    -   [无人参与的站点恢复脚本文件密钥](#BKMK_UnattendedSiteRecoveryKeys)  
+         -   [站点服务器恢复选项](#BKMK_SiteServerRecoveryOptions)   
 
-    -   [恢复后任务](#BKMK_PostRecovery)  
+         -   [站点数据库恢复选项](#BKMK_SiteDatabaseRecoveryOption)   
 
-    -   [恢复辅助站点](#BKMK_RecoverSecondarySite)  
+         -  [站点数据库恢复选项](#BKMK_SiteDatabaseRecoveryOption)   
 
+         -   [SQL Server 更改跟踪保持期](#bkmk_SQLretention)   
+
+         -   [SQL Server 更改跟踪保持期](#bkmk_SQLretention)   
+
+         -   [继续重新初始化站点或全局数据](#bkmk_reinit)   
+
+         -   [继续重新初始化站点或全局数据](#bkmk_reinit)   
+
+         -   [站点数据库恢复方案](#BKMK_SiteDBRecoveryScenarios)  
+
+         -   [站点数据库恢复方案](#BKMK_SiteDBRecoveryScenarios)  
+
+  -   [无人参与的站点恢复脚本文件密钥](#BKMK_UnattendedSiteRecoveryKeys)  
+
+  -   [无人参与的站点恢复脚本文件密钥](#BKMK_UnattendedSiteRecoveryKeys)  
+
+  -   [恢复后任务](#BKMK_PostRecovery)  
+
+  -   [恢复后任务](#BKMK_PostRecovery)  
+
+  -   [恢复辅助站点](#BKMK_RecoverSecondarySite)  
+
+  -   [恢复辅助站点](#BKMK_RecoverSecondarySite)  
 -   [SMS 编写器服务](#BKMK_SMSWriterService)  
 
 > [!NOTE]  
@@ -214,16 +217,16 @@ ms.openlocfilehash: ce73be3a9fa3876c587bbd7b7cb05acd36c2687e
 
 3.  选择承载状态迁移角色的站点系统，然后在“站点系统角色”中选择“状态迁移点”。  
 
-4.  在“站点角色”  选项卡上的“属性”  组中，单击“属性” 。  
 
+4.  在“站点角色”  选项卡上的“属性”  组中，单击“属性” 。  
 5.  “常规”  选项卡上的“文件夹详细信息”  部分中列出了存储用户状态迁移数据的文件夹。  
 
-##  <a name="a-namebkmkrecoversitea-recover-a-configuration-manager-site"></a><a name="BKMK_RecoverSite"></a> 恢复 Configuration Manager 站点  
+
  每当 Configuration Manager 站点出现故障或者站点数据库中发生数据丢失时，都需要 Configuration Manager 站点恢复。 修复和重新同步数据是站点恢复的核心任务，并且是防止操作中断所必需的。  
 
 > [!IMPORTANT]  
 >  当恢复站点的数据库时：  
->   
+
 >  -   必须使用相同版本的 SQL Server。 例如，不支持还原在 SQL Server 2012 到 SQL Server 2014 上运行的数据库。 同样，也不支持还原在 SQL Server 2014 标准版和 SQL Server 2014 企业版上运行的站点数据库。  
 > -   不能将 SQL Server 设置为 **单用户模式**。  
 > -   确保 .MDF 和 .LDF 文件有效。 恢复站点时，不对正在还原的文件的状态进行检查。  
@@ -233,7 +236,7 @@ ms.openlocfilehash: ce73be3a9fa3876c587bbd7b7cb05acd36c2687e
 
 > [!IMPORTANT]  
 >  如果从站点服务器上的“开始”菜单中运行 Configuration Manager 安装程序，则“恢复站点”选项不可用。  
->   
+
 >  如果在进行备份之前，从 Configuration Manager 控制台内安装任何更新，则无法通过从安装媒体或从 Configuration Manager 安装路径中使用安装程序来成功重装该站点。  
 
 > [!NOTE]  
@@ -243,7 +246,6 @@ ms.openlocfilehash: ce73be3a9fa3876c587bbd7b7cb05acd36c2687e
  必须为 Configuration Manager 主站点服务器和管理中心站点恢复考虑两个主要方面；即站点服务器和站点数据库。 使用下列部分来帮助你确定必须为恢复方案选择的选项。  
 
 > [!NOTE]  
->  当以前的站点恢复失败或者你尝试恢复未完全卸载的站点时，你必须从安装程序中选择“卸载 Configuration Manager 站点”  ，之后才可以选择恢复站点。 如果出现故障的站点有子站点，并且必须卸载该站点，则必须从出现故障的站点中手动删除站点数据库，之后再选择“卸载 Configuration Manager 站点”选项，否则卸载过程将失败。  
 
 ####  <a name="a-namebkmksiteserverrecoveryoptionsa-site-server-recovery-options"></a><a name="BKMK_SiteServerRecoveryOptions"></a> 站点服务器恢复选项  
  必须从 Configuration Manager 安装文件夹之外创建的 CD.Latest 文件夹副本中启动安装程序。 然后选择“恢复站点”  选项。 在运行安装程序时，你可以为出现故障的站点服务器使用下列恢复选项：  
@@ -275,7 +277,11 @@ ms.openlocfilehash: ce73be3a9fa3876c587bbd7b7cb05acd36c2687e
 -   “跳过数据库恢复”：当 Configuration Manager 站点数据库服务器上未发生数据丢失时使用此选项。 仅当站点数据库所在的计算机不同于你正在恢复的站点服务器时，此选项才有效。  
 
 ####  <a name="a-namebkmksqlretentiona-sql-server-change-tracking-retention-period"></a><a name="bkmk_SQLretention"></a> SQL Server 更改跟踪保持期  
- 系统为 SQL Server 中的站点数据库启用了更改跟踪。 利用更改跟踪，Configuration Manager 可以查询有关在上一个时刻之后对数据库表所做的更改的信息。 保持期指定更改跟踪信息将保留多长时间。 默认情况下，站点数据库被配置为具有 5 天保持期。 恢复站点数据库时，恢复过程在备份处于保持期内或保持期外这两种情况下会以不同方式继续进行。 例如，你的站点数据库服务器出现故障，并且上次备份是在 7 天之前，则它在保持期之外。  
+ 系统为 SQL Server 中的站点数据库启用了更改跟踪。 利用更改跟踪，Configuration Manager 可以查询有关在上一个时刻之后对数据库表所做的更改的信息。 保持期指定更改跟踪信息将保留多长时间。 默认情况下，站点数据库被配置为具有 5 天保持期。 恢复站点数据库时，恢复过程在备份处于保持期内或保持期外这两种情况下会以不同方式继续进行。 例如，你的站点数据库服务器出现故障，并且上次备份是在 7 天之前，则它在保持期之外。
+
+ 有关 SQL Server 更改跟踪内部机制的详细信息，请参阅以下 SQL Server 团队博客：[Change Tracking Cleanup - part 1](https://blogs.msdn.microsoft.com/sql_server_team/change-tracking-cleanup-part-1)（更改跟踪清除 - 第 1 部分）和 [Change Tracking Cleanup - part 2](https://blogs.msdn.microsoft.com/sql_server_team/change-tracking-cleanup-part-2)（更改跟踪清除 - 第 2 部分）。
+
+
 
 ####  <a name="a-namebkmkreinita-process-to-reinitialize-site-or-global-data"></a><a name="bkmk_reinit"></a> 继续重新初始化站点或全局数据  
  重新初始化站点或全局数据的过程将站点数据库中的现有数据替换为另一个站点数据库中的数据。 例如，当站点 ABC 重新初始化站点 XYZ 中的数据时，会进行以下步骤：  
@@ -839,7 +845,7 @@ ms.openlocfilehash: ce73be3a9fa3876c587bbd7b7cb05acd36c2687e
  在站点服务器恢复之后，必须重新输入为站点指定的 Windows 旁加载密钥，因为这些密钥在站点恢复过程中已重置。 重新输入旁加载密钥后，将在 Configuration Manager 控制台中重置 Windows 旁加载密钥的“已使用激活数”列中的计数。 例如，假设在站点失败之前，针对设备已经使用的密钥数将“激活总数”计数设置为“100”，将“已使用激活数”设置为“90”。 在站点恢复之后，“激活总数”  列仍显示“100” ，但“已使用激活数”  列错误地显示“0” 。 然而，在 10 个新设备使用旁加载密钥之后，将没有剩余的旁加载密钥，下一个设备将无法应用旁加载密钥。  
 
 #### <a name="recreate-the-microsoft-intune-subscription"></a>重新创建 Microsoft Intune 订阅  
- 如果在重新制作站点服务器计算机的映像后恢复 Configuration Manager 站点服务器，将不会还原 Microsoft Intune 订阅。 恢复站点后必须重新创建订阅。 有关详细信息，请参阅 [Configuring the Microsoft Intune subscription](../../mdm/deploy-use/setup-hybrid-mdm.md#step-3-configure-intune-subscription)。  
+ 如果在重新制作站点服务器计算机的映像后恢复 Configuration Manager 站点服务器，将不会还原 Microsoft Intune 订阅。 恢复站点后必须重新连接订阅。  不要创建新的 APN 要求，而改为上传当前有效的 .pem 文件，此文件在上一次配置或续订 iOS 管理时上传。 有关详细信息，请参阅 [Configuring the Microsoft Intune subscription](../../mdm/deploy-use/setup-hybrid-mdm.md#step-3-configure-intune-subscription)。  
 
 #### <a name="configure-ssl-for-site-system-roles-that-use-iis"></a>为使用 IIS 的站点系统角色配置 SSL  
  当你恢复运行 IIS 并且在发生故障之前针对 HTTPS 进行了配置的站点系统时，你必须重新配置 IIS 以使用 Web 服务器证书。  
@@ -912,7 +918,6 @@ ms.openlocfilehash: ce73be3a9fa3876c587bbd7b7cb05acd36c2687e
  VSS 是一组 COM API，它实现一个框架，以允许在系统上的应用程序继续写入卷时执行所有卷备份。 VSS 提供一个一致的接口，在用于更新磁盘上的数据的用户应用程序（SMS 编写器服务）和用于备份应用程序的用户应用程序（备份管理器服务）之间实现协作。 有关 VSS 的详细信息，请参阅 Windows Server TechCenter 中的 [Volume Shadow Copy Service（卷影复制服务）](http://go.microsoft.com/fwlink/p/?LinkId=241968) 主题。  
 
 
-
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 
