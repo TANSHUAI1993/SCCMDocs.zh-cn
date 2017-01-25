@@ -99,7 +99,7 @@ ms.openlocfilehash: a2e57aac01fff3c28b4acfcf58bcd786bd3e62c4
 
 -   **Reporting Services 点** - 一种与 SQL Server Reporting Services 集成的站点系统角色，用于为 Configuration Manager 创建和管理报表。 主站点和管理中心站点上支持此角色，可以在支持的站点中安装此角色的多个实例。 有关详细信息，请参阅[规划 System Center Configuration Manager 中的报告](../../../core/servers/manage/planning-for-reporting.md)。  
 
--   **服务连接点** - 一种站点系统角色，可以与 Microsoft Intune 和本地 MDM 配合使用以管理移动设备。 此角色还会上传站点的使用情况数据，并需要它以便在 Configuration Manager 控制台中提供 Configuration Manager 更新。 层次结构仅支持此角色的单一实例，并且它必须位于层次结构的顶层站点（管理中心站点或独立主站点）。 如果将独立主站点扩展到更大的层次结构中，必须从主站点中卸载此角色，然后可将其安装在管理中心站点上。 有关详细信息，请参阅 [About the service connection point in System Center Configuration Manager](../../../core/servers/deploy/configure/about-the-service-connection-point.md)。  
+-   **服务连接点** - 一种站点系统角色，可以与 Microsoft Intune 和本地 MDM 配合使用以管理移动设备。 此角色还会上传站点的使用情况数据，并需要它以便在 Configuration Manager 控制台中提供 Configuration Manager 更新。 层次结构仅支持此角色的单一实例，并且它必须位于层次结构的顶层站点（管理中心站点或独立主站点）。 如果将独立主站点扩展到更大的层次结构中，必须从主站点中卸载此角色，然后可将其安装在管理中心站点上。 有关详细信息，请参阅[关于 System Center Configuration Manager 服务连接点](../../../core/servers/deploy/configure/about-the-service-connection-point.md)。  
 
 -   **软件更新点** - 与 Windows Server Update Services (WSUS) 集成以便向 Configuration Manager 客户端提供软件更新的站点系统角色。 所有站点都支持此角色：  
 
@@ -152,6 +152,6 @@ ms.openlocfilehash: a2e57aac01fff3c28b4acfcf58bcd786bd3e62c4
 
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 
