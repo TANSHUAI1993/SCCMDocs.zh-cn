@@ -9,7 +9,7 @@
       "build_output_subfolder": "sccm",
       "locale": "zh-cn",
       "version": 0,
-      "open_to_public_contributors": false,
+      "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content",
         "ManagedReference": "Content",
@@ -23,6 +23,8 @@
   "branches_to_filter": [
     "live-oldev"
   ],
+  "git_repository_url_open_to_public_contributors": "https://github.com/Microsoft/SCCMDocs.zh-cn",
+  "git_repository_branch_open_to_public_contributors": "live",
   "skip_source_output_uploading": false,
   "dependent_repositories": [
     {
