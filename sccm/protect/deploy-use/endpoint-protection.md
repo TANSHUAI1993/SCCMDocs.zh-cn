@@ -2,7 +2,7 @@
 title: Endpoint Protection | Microsoft Docs
 description: "学习如何为 Configuration Manager 层次结构中的客户端计算机管理反恶意软件策略和 Windows 防火墙安全性。"
 ms.custom: na
-ms.date: 12/9/2016
+ms.date: 01/17/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,12 +16,12 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 9fcbc0bb9c8ccd4265381ca4db7a363c8ae3b54a
-ms.openlocfilehash: 59313bd6f76433782a79ab3ee9d6240f767fbd76
+ms.sourcegitcommit: 0fa837c68eb073d2ceaf48c938137a94141a102e
+ms.openlocfilehash: dd08e9ae6827e5f59eaf3414adbcc8667bc75140
 
 
 ---
-# <a name="endpoint-protection-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的 Endpoint Protection
+# <a name="endpoint-protection"></a>Endpoint Protection
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
@@ -108,10 +108,20 @@ Windows 10 计算机无需任何其他客户端即可进行 Endpoint Protection 
 
  不能从 Configuration Manager 控制台对这些产品进行管理。 然而，安装文件将提供 System Center Operations Manager 管理包，这让你可以通过使用 Operations Manager 来管理客户端。  
 
+### <a name="how-to-get-the-endpoint-protection-client-for-mac-computers-and-linux-servers"></a>如何获取适用于 Mac 计算机和 Linux 服务器的 Endpoint Protection 客户端
+
+使用以下步骤下载包含适用于 Mac 计算机和 Linux 服务器的 Endpoint Protection 客户端软件和文档的映像文件。
+1. 登录到 [Microsoft 批量许可服务中心](https://www.microsoft.com/licensing/servicecenter/default.aspx)。
+2. 选择网站顶部的“下载和密钥”选项卡。
+3. 筛选产品 **System Center Endpoint Protection (Current Branch)**。
+4. 单击链接以**下载**
+5. 单击“继续” 。 应能看到若干文件，其中一个名为：**System Center Endpoint Protection (current branch - version 1606) for Linux OS and Macintosh OS Multilanguage   32/64 bit   1507 MB ISO**。
+6. 单击箭头图标，下载该文件。 文件名为 **SW_DVD5_Sys_Ctr_Endpnt_Prtctn_1606_MultiLang_EptProt_Lin_Mac_MLF_X21-30777.ISO**。
+
  有关如何安装和管理适用于 Linux 和 Mac 计算机的 Endpoint Protection 客户端，请使用这些产品随附的文档，该文档位于“文档”  文件夹。
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 
