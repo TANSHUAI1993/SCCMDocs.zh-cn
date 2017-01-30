@@ -1,15 +1,33 @@
+---
+title: "备份和恢复 | Microsoft Docs"
+description: "了解 System Center Configuration Manager 中出现故障或数据丢失时如何备份和恢复站点。"
+ms.custom: na
+ms.date: 1/3/2017
+ms.prod: configuration-manager
+ms.reviewer: na
+ms.suite: na
+ms.technology:
+- configmgr-other
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: f7832d83-9ae2-4530-8a77-790e0845e12f
+caps.latest.revision: 22
+author: Brenduns
+ms.author: brenduns
+manager: angrobe
+translationtype: Human Translation
+ms.sourcegitcommit: 8d638d7e8f203ff2501a09918ab3424706d1261f
+ms.openlocfilehash: 17a87fee7d22bd2bcfd074670339e66a64972863
 
 ---
-title: "备份和恢复 | Microsoft Docs" description: "了解 System Center Configuration Manager 中出现故障或数据丢失时如何备份和恢复站点。"
-ms.custom: na ms.date: 1/3/2017 ms.prod: configuration-manager ms.reviewer: na ms.suite: na ms.technology:
-  - configmgr-other ms.tgt_pltfrm: na ms.topic: article ms.assetid: f7832d83-9ae2-4530-8a77-790e0845e12f -caps.latest.revision: 22 -author: Brenduns ms.author: brendunsmanager: angrobe
 
-----
+# <a name="backup-and-recovery"></a>备份和恢复 
+
+*适用范围：System Center Configuration Manager (Current Branch)*
+
+准备备份和恢复方法，以避免数据丢失。 对于 Configuration Manager 站点，备份和恢复方法可有助于更快地恢复站点和层次结构，并保持最小程度的数据丢失。 本主题中的内容可以帮助备份站点，并在出现故障或数据丢失时恢复站点。  
 
 
--# System Center Configuration Manager 的备份和恢复*适用对象：System Center Configuration Manager (Current Branch)*
-
--准备备份和恢复方法，以避免数据丢失。 对于 Configuration Manager 站点，备份和恢复方法可有助于更快地恢复站点和层次结构，并保持最小程度的数据丢失。 本主题中的内容可以帮助备份站点，并在出现故障或数据丢失时恢复站点。   
 
 - [备份 Configuration Manager 站点](#BKMK_SiteBackup)   
 
@@ -18,10 +36,6 @@ ms.custom: na ms.date: 1/3/2017 ms.prod: configuration-manager ms.reviewer: na m
   - [使用 Data Protection Manager 来备份站点数据库](#BKMK_DPMBackup)   
 
   -  [将备份快照存档](#BKMK_ArchivingBackupSnapshot)   
-
-  -  [将备份快照存档](#BKMK_ArchivingBackupSnapshot)   
-
-  -  [使用 AfterBackup.bat 文件](#BKMK_UsingAfterBackup)   
 
   -  [使用 AfterBackup.bat 文件](#BKMK_UsingAfterBackup)   
 
@@ -33,35 +47,20 @@ ms.custom: na ms.date: 1/3/2017 ms.prod: configuration-manager ms.reviewer: na m
 
          -   [站点服务器恢复选项](#BKMK_SiteServerRecoveryOptions)   
 
-         -   [站点服务器恢复选项](#BKMK_SiteServerRecoveryOptions)   
-
          -   [站点数据库恢复选项](#BKMK_SiteDatabaseRecoveryOption)   
 
-         -  [站点数据库恢复选项](#BKMK_SiteDatabaseRecoveryOption)   
-
          -   [SQL Server 更改跟踪保持期](#bkmk_SQLretention)   
-
-         -   [SQL Server 更改跟踪保持期](#bkmk_SQLretention)   
-
-         -   [继续重新初始化站点或全局数据](#bkmk_reinit)   
 
          -   [继续重新初始化站点或全局数据](#bkmk_reinit)   
 
          -   [站点数据库恢复方案](#BKMK_SiteDBRecoveryScenarios)  
 
-         -   [站点数据库恢复方案](#BKMK_SiteDBRecoveryScenarios)  
-
   -   [无人参与的站点恢复脚本文件密钥](#BKMK_UnattendedSiteRecoveryKeys)  
-
-  -   [无人参与的站点恢复脚本文件密钥](#BKMK_UnattendedSiteRecoveryKeys)  
-
-  -   [恢复后任务](#BKMK_PostRecovery)  
 
   -   [恢复后任务](#BKMK_PostRecovery)  
 
   -   [恢复辅助站点](#BKMK_RecoverSecondarySite)  
 
-  -   [恢复辅助站点](#BKMK_RecoverSecondarySite)  
 -   [SMS 编写器服务](#BKMK_SMSWriterService)  
 
 > [!NOTE]  
@@ -918,6 +917,7 @@ ms.custom: na ms.date: 1/3/2017 ms.prod: configuration-manager ms.reviewer: na m
  VSS 是一组 COM API，它实现一个框架，以允许在系统上的应用程序继续写入卷时执行所有卷备份。 VSS 提供一个一致的接口，在用于更新磁盘上的数据的用户应用程序（SMS 编写器服务）和用于备份应用程序的用户应用程序（备份管理器服务）之间实现协作。 有关 VSS 的详细信息，请参阅 Windows Server TechCenter 中的 [Volume Shadow Copy Service（卷影复制服务）](http://go.microsoft.com/fwlink/p/?LinkId=241968) 主题。  
 
 
-<!--HONumber=Jan17_HO3-->
+
+<!--HONumber=Jan17_HO4-->
 
 
