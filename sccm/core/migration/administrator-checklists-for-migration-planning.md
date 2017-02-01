@@ -2,7 +2,7 @@
 title: "迁移清单 | Microsoft Docs"
 description: "使用管理员清单有助于规划 System Center Configuration Manager 的迁移策略。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
-ms.openlocfilehash: 285d1111502ec25b3b75a64d834b65b6898128e8
+ms.sourcegitcommit: 5e6e8a18a8fc705c993177b3c5b4113a351a45a4
+ms.openlocfilehash: 36f7c37e4da3f2bce64a25d266dae57d9fe98c36
 
 
 ---
@@ -26,13 +26,7 @@ ms.openlocfilehash: 285d1111502ec25b3b75a64d834b65b6898128e8
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-使用以下管理员清单有助于规划 System Center Configuration Manager 的迁移策略：  
-
--   [针对迁移规划的管理员清单](#Checklist_Migraiton_Planning)  
-
--   [针对层次结构迁移的管理员清单](#Checklist_Hierarchy_for_migration)  
-
--   [针对迁移的管理员清单](#Checklisit_Migration)  
+使用以下管理员清单有助于规划 System Center Configuration Manager 的迁移策略。
 
 ##  <a name="a-namechecklistmigraitonplanninga-administrator-checklist-for-migration-planning"></a><a name="Checklist_Migraiton_Planning"></a>针对迁移规划的管理员清单  
  使用以下清单来执行迁移前的规划步骤。  
@@ -50,9 +44,7 @@ ms.openlocfilehash: 285d1111502ec25b3b75a64d834b65b6898128e8
 
     有关详细信息，请参阅 [System Center Configuration Manager 的基于角色的管理基础](../../core/understand/fundamentals-of-role-based-administration.md)。  
 
--   **评估网络和 Active Directory 拓扑：**  
-
-    查看现有的域结构和网络拓扑，并考虑它们如何影响层次结构的设计和迁移任务。  
+-   **评估网络和 Active Directory 拓扑：**查看现有的域结构和网络拓扑，并考虑它们如何影响层次结构的设计和迁移任务。  
 
 -   **最终确定目标层次结构的设计：**  
 
@@ -72,7 +64,7 @@ ms.openlocfilehash: 285d1111502ec25b3b75a64d834b65b6898128e8
 
 -   **规划客户端迁移策略：**  
 
-    制定计划以使用受控的方法来迁移客户端，此方法在你将客户端迁移到目标层次结构时限制网络带宽和服务器处理要求。 有关规划客户端迁移策略的详细信息，请参阅 [Planning a client migration strategy in System Center Configuration Manager](../../core/migration/planning-a-client-migration-strategy.md)。  
+    制定计划以使用受控的方法来迁移客户端，此方法在你将客户端迁移到目标层次结构时限制网络带宽和服务器处理要求。 有关规划客户端迁移策略的详细信息，请参阅[在 System Center Configuration Manager 中规划客户端迁移策略](../../core/migration/planning-a-client-migration-strategy.md)。  
 
 -   **规划清单和符合性数据：**  
 
@@ -97,7 +89,7 @@ ms.openlocfilehash: 285d1111502ec25b3b75a64d834b65b6898128e8
 
     为了准备迁移，需要安装和配置包含一个主站点的 System Center Configuration Manager 目标层次结构。 例如：  
 
-    -   安装一个管理中心站点，然后安装至少一个子主站点  
+    -   安装一个管理中心站点，然后安装至少一个子主站点。  
 
     -   如果未计划使用管理中心站点，则安装一个独立主站点。  
 
@@ -108,17 +100,17 @@ ms.openlocfilehash: 285d1111502ec25b3b75a64d834b65b6898128e8
 
 -   **在目标层次结构中安装和配置其他站点系统角色：**  
 
-    配置你需要的其他站点系统角色和站点系统。  
+    配置所需的其他站点系统角色和站点系统。  
 
--   **在目标层次结构中验证操作功能：**  
+-   **在目标层次结构中检查操作功能：**  
 
     检查下列项目：  
 
     -   如果目标层次结构包含多个站点，则确认数据库复制在站点之间有效。 数据库复制不适用于独立主站点。  
 
-    -   验证所有已安装的站点系统角色是否正常工作。  
+    -   检查所有已安装的站点系统角色是否正常工作。  
 
-    -   验证安装到目标层次结构中的 Configuration Manager 客户端是否可以成功地与为它们分配的站点通信。  
+    -   检查安装到目标层次结构中的 Configuration Manager 客户端是否可以成功地与为它们分配的站点通信。  
 
 
 ##  <a name="a-namechecklisitmigrationa-administrator-checklist-for-migration"></a><a name="Checklisit_Migration"></a>针对迁移的管理员清单  
@@ -126,11 +118,11 @@ ms.openlocfilehash: 285d1111502ec25b3b75a64d834b65b6898128e8
 
 -   **在目标层次结构中启用迁移：**  
 
-    通过指定源层次结构的顶层站点来配置源层次结构。 有关指定源站点的详细信息，请参阅 [Planning a source hierarchy strategy in System Center Configuration Manager](../../core/migration/planning-a-source-hierarchy-strategy.md)。  
+    通过指定源层次结构的顶层站点来配置源层次结构。 有关指定源站点的详细信息，请参阅[在 System Center Configuration Manager 中规划源层次结构策略](../../core/migration/planning-a-source-hierarchy-strategy.md)。  
 
 -   **在源层次结构运行 Configuration Manager 2007 SP2 时，选择并配置源层次结构中的其他站点：**  
 
-    对于 Configuration Manager 2007 SP2 源层次结构中你想向其收集数据的每个其他站点，必须配置用于数据收集的凭据。 在配置每个源站点时，数据收集过程会立即开始，并在整个迁移期间持续进行，直到你停止收集该站点的数据为止。 数据收集确保你可以从源层次结构中迁移自上次数据收集过程之后更新或新创建的对象。  
+    对于 Configuration Manager 2007 SP2 源层次结构中你想向其收集数据的每个其他站点，必须配置用于数据收集的凭据。 在配置每个源站点时，数据收集过程会立即开始，并在整个迁移期间持续进行，直到停止收集该站点的数据为止。 数据收集确保你可以从源层次结构中迁移自上次数据收集过程之后更新或新创建的对象。
 
     > [!NOTE]  
     >  在源层次结构运行 System Center 2012 Configuration Manager 或更高版本时，无需配置其他源站点。  
@@ -139,7 +131,7 @@ ms.openlocfilehash: 285d1111502ec25b3b75a64d834b65b6898128e8
 
     可以在两个层次结构之间共享分发点，以使目标层次结构中的客户端可以使用你迁移的对象的内容。 这确保了两个层次结构中的客户端仍然可以使用相同的内容，而且你可以在停止收集数据和完成迁移之前保留这些内容。  
 
-    有关共享的分发点的信息，请参阅 *Share Distribution Points Between Source and Destination Hierarchies* 主题中的 [Planning a content deployment migration strategy in System Center Configuration Manager](../../core/migration/planning-a-content-deployment-migration-strategy.md) 部分。  
+    有关共享的分发点的信息，请参阅[在 System Center Configuration Manager 中规划内容部署迁移策略](../../core/migration/planning-a-content-deployment-migration-strategy.md)中的[在源和目标层次结构之间共享分发点](../../core/migration/planning-a-content-deployment-migration-strategy.md#About_Shared_DPs_in_Migration)。  
 
 -   **创建并运行迁移作业，以迁移与源层次结构中的客户端关联的对象：**  
 
@@ -147,13 +139,13 @@ ms.openlocfilehash: 285d1111502ec25b3b75a64d834b65b6898128e8
 
     例如，在迁移内容时，无论使用哪个迁移作业，都必须分配目标层次结构中的站点来负责管理该内容。 分配的站点将访问内容的原始源文件位置，并负责将该内容分发到目标层次结构中的分发点。  
 
-    有关详细信息，请参阅 [Create and Edit Migration Jobs for System Center Configuration Manager](../../core/migration/operations-for-migration.md#Create_Edit_migration_Jobs) 主题中的 [Operations for migrating to System Center Configuration Manager](../../core/migration/operations-for-migration.md) 部分。  
+    有关详细信息，请参阅[迁移到 System Center Configuration Manager 的操作](../../core/migration/operations-for-migration.md)中的[为 System Center Configuration Manager 创建和编辑迁移作业](../../core/migration/operations-for-migration.md#Create_Edit_migration_Jobs)。  
 
 -   **将客户端迁移到目标层次结构：**  
 
     迁移客户端的过程取决于迁移方案：  
 
-    -   在迁移具有与目标层次结构不同的客户端版本的客户端时，客户端软件必须升级。 升级需要删除当前的 Configuration Manager 客户端，然后安装与目标站点匹配的新客户端版本。  
+    -   在迁移与目标层次结构具有不同客户端版本的客户端时，必须升级客户端软件。 升级需要删除当前的 Configuration Manager 客户端，然后安装与目标站点匹配的新客户端版本。  
 
     -   在迁移具有与目标层次结构的版本匹配的客户端版本的客户端时，客户端不会升级或重新安装， 而是重新分配到目标层次结构中的主站点。  
 
@@ -163,11 +155,11 @@ ms.openlocfilehash: 285d1111502ec25b3b75a64d834b65b6898128e8
 
 -   **升级或重新分配共享分发点：**  
 
-    当不再必须支持源层次结构中的客户端时，可以升级 Configuration Manager 2007 源站点中的共享分发点，或重新分配 System Center 2012 Configuration Manager 或 System Center Configuration Manager 源站点中的共享分发点。 在升级或重新分配分发点时，站点系统角色传输到目标层次结构中的主站点，同时会从源层次结构的源站点中删除该分发点。 在升级或重新分配共享的分发点时，内容保留在分发点计算机上，并且你不必将内容重新部署到目标层次结构中的新分发点。  
+    当不再必须支持源层次结构中的客户端时，可以升级 Configuration Manager 2007 源站点中的共享分发点，或重新分配 System Center 2012 Configuration Manager 或 System Center Configuration Manager 源站点中的共享分发点。 在升级或重新分配分发点时，站点系统角色传输到目标层次结构中的主站点，同时会从源层次结构的源站点中删除该分发点。 在升级或重新分配共享的分发点时，内容保留在分发点计算机上，并且不必将内容重新部署到目标层次结构中的新分发点。  
 
     还可以升级在辅助站点服务器上共存的 Configuration Manager 2007 分发点。 这将删除辅助站点，并导致目标层次结构中只有一个分发点。  
 
-    有关共享的分发点的信息，请参阅 [Share Distribution Points Between Source and Destination Hierarchies](../../core/migration/planning-a-content-deployment-migration-strategy.md#About_Shared_DPs_in_Migration) 主题中的 [Planning a content deployment migration strategy in System Center Configuration Manager](../../core/migration/planning-a-content-deployment-migration-strategy.md) 部分。  
+    有关共享的分发点的信息，请参阅[在 System Center Configuration Manager 中规划内容部署迁移策略](../../core/migration/planning-a-content-deployment-migration-strategy.md)中的[在源和目标层次结构之间共享分发点](../../core/migration/planning-a-content-deployment-migration-strategy.md#About_Shared_DPs_in_Migration)。  
 
 -   **完成迁移：**  
 
@@ -175,6 +167,6 @@ ms.openlocfilehash: 285d1111502ec25b3b75a64d834b65b6898128e8
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

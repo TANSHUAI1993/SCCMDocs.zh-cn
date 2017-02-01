@@ -17,8 +17,8 @@ author: mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 48b91e88f78752cf7c05162b701ea2ca2f401de3
-ms.openlocfilehash: 85df3df19f01f8ed6f5240851c47afce01a92880
+ms.sourcegitcommit: 0a6cb36aad455b38db628f26b97e1b4c00adc741
+ms.openlocfilehash: 12ef5c1faf5fe5780ddb7c12cfe6d533e9785f6d
 
 ---
 
@@ -46,7 +46,12 @@ ms.openlocfilehash: 85df3df19f01f8ed6f5240851c47afce01a92880
 [查看 Intune 文档 >](https://docs.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune)
 
 ## <a name="step-1-create-an-mdm-collection"></a>步骤 1：创建 MDM 集合
-需要 Configuration Manager 用户集合以指定可以向管理中注册设备的用户。 只有用户集合才能作为目标，因为 Intune 许可证会分配给用户。 为进行测试，可以设置**直接规则**并添加可以注册设备的特定用户。 在 Configuration Manager 控制台中，选择“资产和符合性” > “用户集合”，单击“主页”选项卡 >“创建”组，然后单击“创建用户集合”。 若要实现更广泛的分发，应使用**查询规则**定义用户。 有关集合的详细信息，请参阅[如何创建集合](https://technet.microsoft.com/library/mt629371.aspx)。
+需要 Configuration Manager 用户集合以指定可以向管理中注册设备的用户。 由于 Intune 许可证由用户进行分配，所以只能使用用户集合（而非设备集合）。
+
+> [!NOTE]
+> 若要向 Intune 注册设备，无需在 Office 365 门户或 Azure Active Directory 门户中向用户分配许可证。 只需在与 Intune 订阅（在一个[后续步骤](#step-3-configure-intune-subscription)中）关联的集合中包括用户即可。
+
+为进行测试，可以设置**直接规则**并添加可以注册设备的特定用户。 在 Configuration Manager 控制台中，选择“资产和符合性” > “用户集合”，单击“主页”选项卡 >“创建”组，然后单击“创建用户集合”。 若要实现更广泛的分发，应使用**查询规则**定义用户。 有关集合的详细信息，请参阅[如何创建集合](https://technet.microsoft.com/library/mt629371.aspx)。
 
 ![为 MDM 创建用户集合](../media/mdm-create-user-collection.png)
 

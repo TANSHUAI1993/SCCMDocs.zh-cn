@@ -2,7 +2,7 @@
 title: "规划客户端迁移 | Microsoft Docs"
 description: "了解将客户端从源层次结构迁移到 System Center Configuration Manager 目标层次结构的任务。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/30/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,12 +16,12 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
-ms.openlocfilehash: 11da338af9d7dd4d6f9c5fc1c6c62e277139f852
+ms.sourcegitcommit: ac4576035fda943e38d960dd425d44b7a6ef6a01
+ms.openlocfilehash: b52ca4059dfeed08cabf1f75319da40d6499622f
 
 
 ---
-# <a name="planning-a-client-migration-strategy-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中规划客户端迁移策略
+# <a name="plan-a-client-migration-strategy-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中规划客户端迁移策略
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
@@ -36,14 +36,14 @@ ms.openlocfilehash: 11da338af9d7dd4d6f9c5fc1c6c62e277139f852
 -   [在迁移过程中规划清单和符合性数据](#Planning_for_Inventory_data_migration)  
 
 ##  <a name="a-nameplanningforclientagentmigrationa-plan-to-migrate-clients-to-the-destination-hierarchy"></a><a name="Planning_for_Client_Agent_Migration"></a> 规划将客户端迁移到目标层次结构  
- 从源层次结构中迁移客户端时，客户端计算机上的客户端软件将更新以与目标层次结构的产品版本匹配：  
+ 从源层次结构中迁移客户端时，客户端计算机上的客户端软件将升级，以与目标层次结构的产品版本匹配。  
 
 -   **Configuration Manager 2007 源层次结构：**从运行受支持版本的 Configuration Manager 源层次结构中迁移客户端时，客户端软件将升级到目标层次结构的客户端版本。  
 
 -   **System Center 2012 Configuration Manager 或更高版本的层次结构：**在产品版本相同的层次结构之间迁移客户端时，客户端软件不会更改或升级。 而是会从源层次结构重新分配到目标层次结构中的站点。  
 
     > [!NOTE]  
-    >  如果层次结构的产品版本不支持迁移到目标层次结构，请将源层次结构中的所有站点和客户端升级到兼容的产品版本。 源层次结构升级到支持的产品版本后，你可以在层次结构之间进行迁移。 有关详细信息，请参阅 [System Center Configuration Manager 中迁移的先决条件](../../core/migration/prerequisites-for-migration.md)主题中的[迁移支持的 Configuration Manager 版本](../../core/migration/prerequisites-for-migration.md#BKMK_SupportedMigrationVersions)部分。  
+    >  如果层次结构的产品版本不支持迁移到目标层次结构，请将源层次结构中的所有站点和客户端升级到兼容的产品版本。 源层次结构升级到支持的产品版本后，你可以在层次结构之间进行迁移。 有关详细信息，请参阅 [System Center Configuration Manager 中迁移的先决条件](../../core/migration/prerequisites-for-migration.md)中的[迁移支持的 Configuration Manager 版本](../../core/migration/prerequisites-for-migration.md#BKMK_SupportedMigrationVersions)。  
 
 使用以下信息来帮助你规划客户端迁移：  
 
@@ -53,7 +53,7 @@ ms.openlocfilehash: 11da338af9d7dd4d6f9c5fc1c6c62e277139f852
 
 -   在迁移客户端之前，请运行迁移作业以迁移客户端将在目标层次结构中使用的信息。  
 
--   升级的客户端将保留其部署运行历史记录，以防止部署不必要地在目标层次结构中重新运行：  
+-   升级的客户端保留其部署的运行历史记录。 这可以防止部署在目标层次结构中进行不必要的重新运行。  
 
     -   对于 Configuration Manager 2007 客户端，会保留播发运行历史记录。  
 
@@ -67,7 +67,7 @@ ms.openlocfilehash: 11da338af9d7dd4d6f9c5fc1c6c62e277139f852
 
 可以在 Configuration Manager 控制台“管理”工作区的“迁移”节点中监视客户端迁移进程。  
 
-将客户端迁移到目标层次结构后，你将不再能够使用源层次结构管理该设备，并且应考虑从源层次结构中删除客户端。 尽管这不是迁移层次结构时必须进行的操作，但它可帮助防止在源层次结构报表中标识已迁移的客户端，或不正确地计算迁移过程中两个层次结构之间的资源数量。 例如，当已迁移客户端保留在源站点数据库中时，如果计算机现在由目标层次结构管理，则运行的软件更新报表可能会不正确地将该计算机标识为不受管理的资源。  
+将客户端迁移到目标层次结构后，将不再能够使用源层次结构管理该设备，并且应考虑从源层次结构中删除客户端。 尽管这不是迁移层次结构时必须进行的操作，但它可帮助防止在源层次结构报表中标识已迁移的客户端，或不正确地计算迁移过程中两个层次结构之间的资源数量。 例如，当已迁移客户端保留在源站点数据库中时，如果计算机现在由目标层次结构管理，则运行的软件更新报表可能会不正确地将该计算机标识为不受管理的资源。  
 
 ##  <a name="a-nameplanningforclientdatamigrationa-plan-to-handle-data-maintained-on-clients-during-migration"></a><a name="Planning_for_Client_Data_Migration"></a> 规划在迁移过程中处理客户端中保留的数据  
 将客户端从其源层次结构迁移到目标层次结构时，某些信息在迁移之后会保留在设备上，而其他信息则在设备上不可用。  
@@ -105,6 +105,6 @@ ms.openlocfilehash: 11da338af9d7dd4d6f9c5fc1c6c62e277139f852
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

@@ -2,7 +2,7 @@
 title: "特性和功能 | Microsoft Docs"
 description: "了解 System Center Configuration Manager 的主要管理功能。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
-ms.openlocfilehash: 851029368d97312ef2766505f933eac72d6950e5
+ms.sourcegitcommit: 53b27dcb5c8bb670556fe4cee9e990619a9a63e9
+ms.openlocfilehash: 4691f43dccdf73936107f4635321897b9779bead
 
 
 ---
@@ -32,7 +32,7 @@ ms.openlocfilehash: 851029368d97312ef2766505f933eac72d6950e5
 
  **应用程序管理**  
 
- 提供一组工具和资源，这些工具和资源可帮助你创建、管理、部署和监视一系列你管理的不同设备的应用程序。 此外，Configuration Manager 提供了一些工具，这些工具有助于保护用户的应用中的公司数据。 请参阅[应用程序管理简介](/sccm/apps/understand/introduction-to-application-management)。
+ 提供一组工具和资源，这些工具和资源可帮助你创建、管理、部署和监视一系列你管理的不同设备的应用程序。 此外，Configuration Manager 提供了一些工具，这些工具有助于保护用户应用中的公司数据。 请参阅[应用程序管理简介](/sccm/apps/understand/introduction-to-application-management)。
 
  **公司资源访问**  
 
@@ -40,7 +40,7 @@ ms.openlocfilehash: 851029368d97312ef2766505f933eac72d6950e5
 
  **符合性设置**  
 
- 提供一组工具和资源，这些工具和资源可帮助你在企业中评估、跟踪和修正客户端设备的配置符合性。  此外，你还可以使用符合性设置来配置你管理的设备上的一系列功能和安全设置。 请参阅[使用 System Center Configuration Manager 确保设备的合规性](../../../compliance/understand/ensure-device-compliance.md)。  
+ 提供一组工具和资源，这些工具和资源可帮助你在企业中评估、跟踪和修正客户端设备的配置符合性。 此外，你还可以使用符合性设置来配置你管理的设备上的一系列功能和安全设置。 请参阅[使用 System Center Configuration Manager 确保设备的合规性](../../../compliance/understand/ensure-device-compliance.md)。  
 
  **Endpoint Protection**  
 
@@ -58,17 +58,17 @@ ms.openlocfilehash: 851029368d97312ef2766505f933eac72d6950e5
 
 **使用 Microsoft Intune 进行移动设备管理**  
 
- 可以使用 Configuration Manager 管理通过 Internet 使用 Microsoft Intune 服务的 iOS、Android（包括 amsung KNOX 标准版）、Windows Phone 和 Windows 设备。
+ Configuration Manager 可用于通过 Internet 使用 Microsoft Intune 服务来管理 iOS、Android（包括 Samsung KNOX 标准版）、Windows Phone 和 Windows 设备。
 
  尽管你使用 Intune 服务，但管理任务也可通过使用服务连接点站点系统角色（可通过 Configuration Manager 控制台获得）完成。 请参阅[使用 System Center Configuration Manager 和 Microsoft Intune 的混合移动设备管理 (MDM)](../../../mdm/understand/hybrid-mobile-device-management.md)。  
 
  **本地移动设备管理**  
 
- 使用本地 Configuration Manager 基础结构和内置于设备平台的管理功能（而不是依靠单独安装的 Configuration Manager 客户端）注册、管理电脑和移动设备。 当前支持管理 Windows 10 企业版和 Windows 10 移动版设备。  请参阅[在 System Center Configuration Manager 中使用本地基础结构管理移动设备](../../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md)。  
+ 使用本地 Configuration Manager 基础结构和内置于设备平台的管理功能（而不是依靠单独安装的 Configuration Manager 客户端）注册、管理电脑和移动设备。 当前支持管理 Windows 10 企业版和 Windows 10 移动版设备。 请参阅[在 System Center Configuration Manager 中使用本地基础结构管理移动设备](../../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md)。  
 
  **操作系统部署**  
 
- 提供工具以创建操作系统映像。 随后可使用这些映像，通过 PXE 启动或可启动媒体（例如 CD 集、DVD 或 USB 闪存驱动器）将它们部署到 Configuration Manager 管理的计算机以及不受管理的计算机。 请参阅 [System Center Configuration Manager 中的操作系统部署简介](../../../osd/understand/introduction-to-operating-system-deployment.md)。  
+ 提供工具以创建操作系统映像。 随后可使用这些映像通过 PXE 启动或可启动媒体（例如 CD 集、DVD 或 USB 闪存驱动器）将操作系统部署到计算机。 请注意，这适用于 Configuration Manager 管理的计算机，以及不受管理的计算机。 请参阅 [System Center Configuration Manager 中的操作系统部署简介](../../../osd/understand/introduction-to-operating-system-deployment.md)。  
 
  **电源管理**  
 
@@ -76,11 +76,11 @@ ms.openlocfilehash: 851029368d97312ef2766505f933eac72d6950e5
 
  **查询**  
 
- 提供工具以检索有关层次结构中的资源的信息，以及有关清单数据和状态消息的信息。 你可以使用此信息为软件部署及配置设置报告或定义设备或用户的集合。 请参阅 [System Center Configuration Manager 中的查询简介](../../../core/servers/manage/introduction-to-queries.md)。  
+ 提供工具以检索有关层次结构中的资源的信息，以及有关清单数据和状态消息的信息。 可以使用此信息为软件部署及配置设置报告或定义设备或用户的集合。 请参阅 [System Center Configuration Manager 中的查询简介](../../../core/servers/manage/introduction-to-queries.md)。  
 
  **远程连接配置文件**  
 
- 提供了一组工具和资源，帮助你为机构中的设备创建、部署和监视远程连接设置。 通过部署这些设置，你可以最大程度地减少最终用户连接到公司网络上他们的计算机所需的工作。 请参阅[在 System Center Configuration Manager 中使用远程连接配置文件](/sccm/compliance/deploy-use/create-remote-connection-profiles)。  
+ 提供了一组工具和资源，帮助你为组织中的设备创建、部署和监视远程连接设置。 通过部署这些设置，你可以最大程度地减少用户连接到公司网络上他们的计算机所需的工作。 请参阅[在 System Center Configuration Manager 中使用远程连接配置文件](/sccm/compliance/deploy-use/create-remote-connection-profiles)。  
 
  **用户数据和配置文件配置项目**  
 
@@ -104,6 +104,6 @@ ms.openlocfilehash: 851029368d97312ef2766505f933eac72d6950e5
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

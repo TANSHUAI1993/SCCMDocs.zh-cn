@@ -2,7 +2,7 @@
 title: "大小和扩展 | Microsoft Docs"
 description: "确定需要用来支持 System Center Configuration Manager 环境中设备的站点系统角色和站点的数量。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/30/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
-ms.openlocfilehash: 453d934d693d58e98cf800988dff702400daaf95
+ms.sourcegitcommit: f9c43e26758d5171a6ef56e827b4b054ebc8a5e5
+ms.openlocfilehash: c7ad33339e65e6e00e88f98d6e13baceb98dae77
 
 ---
 # <a name="size-and-scale-numbers-for-system-center-configuration-manager"></a>System Center Configuration Manager 的大小和扩展数量
@@ -26,15 +26,16 @@ ms.openlocfilehash: 453d934d693d58e98cf800988dff702400daaf95
 
 
 
-每个 System Center Configuration Manager 部署存在可支持的站点、站点系统角色和设备的最大数量。 这些数量因层次结构（使用的站点的类型和数量）和部署的站点系统角色而异。  下列主题中的信息可帮助确定用于支持环境中需管理的设备的站点系统角色和站点的数量。
+每个 System Center Configuration Manager 部署存在可支持的站点、站点系统角色和设备的最大数量。 这些数量因层次结构（使用的站点的类型和数量）和部署的站点系统角色而异。  以下几个方面的信息可帮助确定用于支持环境中需管理的设备的站点系统角色和站点的数量。
 
-将本主题中的信息和以下文章中的信息一起使用：
+将本主题中的信息和以下文章中的信息结合使用：
 -   [推荐硬件](../../../core/plan-design/configs/recommended-hardware.md)
 -   [站点系统服务器支持的操作系统](../../../core/plan-design/configs/supported-operating-systems-for-site-system-servers.md)  
 -   [客户端和设备支持的操作系统](../../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md)
 -   [站点和站点系统先决条件](../../../core/plan-design/configs/site-and-site-system-prerequisites.md)
 
-本文中的这些支持数量基于为 Configuration Manager 使用推荐的硬件。 如果未使用推荐的硬件，站点系统的性能会下降并且可能无法满足规定的支持级别。
+
+以下的支持数量基于对 Configuration Manager 使用推荐的硬件，并对所有可用的 Configuration Manager 功能使用默认配置。 如果不使用推荐的硬件，或者使用更高的自定义配置（例如运行硬件或软件清单的频率超过七天一次的默认频率），站点系统的性能可能会下降，并且可能无法满足所述的支持级别。
 
 ##  <a name="a-namebkmksitesystemscalea-site-types"></a><a name="bkmk_SiteSystemScale"></a>站点类型  
  **管理中心站点：**  
@@ -98,7 +99,7 @@ ms.openlocfilehash: 453d934d693d58e98cf800988dff702400daaf95
 > [!WARNING]  
 >  一个分发点可以支持的客户端实际数取决于网络速度和分发点计算机的硬件配置。  
 >   
->  一个源分发点可以支持的请求分发点数同样取决于网络速度和源分发点计算机的硬件配置，但还会受已部署的内容量的影响。 这是因为与客户端不同的是，客户端通常在不同的时间通过部署窗口访问内容，而所有请求分发点在同一时间请求内容，并可以请求所有可用内容而不仅仅是适用于它们的内容，客户端将仅请求适用于它们的内容。 当太多处理负载放置在源分发点上时，这会导致将内容分发到你的环境中的预期分发点出现意外延迟。  
+>  一个源分发点可以支持的请求分发点数同样取决于网络速度和源分发点计算机的硬件配置， 但这一数量还受已部署的内容量的影响。 这是因为与客户端不同的是，客户端通常在部署期间的不同时间访问内容，而所有请求分发点在同一时间请求内容 - 并可以请求所有可用内容，而不仅仅是适用于它们的内容，客户端则仅请求适用于它们的内容。 当太多处理负载放置在源分发点上时，将会导致将内容分发到你的环境中的预期分发点出现意外延迟。  
 
 
 **回退状态点：**  
@@ -120,9 +121,9 @@ ms.openlocfilehash: 453d934d693d58e98cf800988dff702400daaf95
 
 -   安装在站点服务器上的软件更新点最多可支持 25,000 个客户端。  
 
--   当远程计算机满足 WSUS 支持此数量客户端的要求时，远离站点服务器的软件更新点最多可支持 150,000 个客户端。  
+-   当远程计算机满足 Windows Server Update Services (WSUS) 支持此数量客户端的要求时，远离站点服务器的软件更新点最多可支持 150,000 个客户端。  
 
--   默认情况下，Configuration Manager 不支持将软件更新点配置为 NLB 群集。 但是，可以使用 Configuration Manager SDK 在 NLB 群集上配置最多 4 个软件更新点。  
+-   默认情况下，Configuration Manager 不支持将软件更新点配置为网络负载平衡 (NLB) 群集。 但是，可以使用 Configuration Manager SDK 在 NLB 群集上配置最多 4 个软件更新点。  
 
 ##  <a name="a-namebkmkclientnumbersa-client-numbers-for-sites-and-hierarchies"></a><a name="bkmk_clientnumbers"></a>站点和层次结构的客户端数量  
  使用以下信息来确定站点中或层次结构中可以支持多少客户端和哪些客户端类型。  
@@ -134,13 +135,13 @@ ms.openlocfilehash: 453d934d693d58e98cf800988dff702400daaf95
 
 -   运行 Mac 和 Windows CE 7.0 的 25,000 台设备  
 
--   下列情况之一，具体取决于你的部署支持移动设备管理的方式：  
+-   下列情况之一，具体取决于你的部署支持移动设备管理 (MDM) 的方式：  
 
     -   使用本地 MDM 管理的 100,000 台设备  
 
     -   300,000 台基于云的设备  
 
- 例如，在集成 Microsoft Intune 时，层次结构中可以支持 700,000 台台式机、最多 25,000 个 Mac 和 Windows CE 7.0 客户端和最多 300,000 台基于云的设备，总共 1,025,000 台设备。  如果你支持通过本地 MDM 管理的设备，那么层次结构支持的设备总数为 825,000 台设备。  
+ 例如，在集成 Microsoft Intune 时，层次结构中可以支持 700,000 台台式机、最多 25,000 个 Mac 和 Windows CE 7.0 和最多 300,000 台基于云的设备 - 总共 1,025,000 台设备。 如果支持通过本地 MDM 管理的设备，那么层次结构支持的设备总数为 825,000 台设备。  
 
 > [!IMPORTANT]  
 >  在管理中心站点使用标准版 SQL Server 的层次结构中，层次结构最多可支持 50,000 台台式机和设备。 在独立主站点上使用的 SQL Server 版本不限制该站点容量，以便其支持最大的规定客户端数量。  
@@ -149,9 +150,9 @@ ms.openlocfilehash: 453d934d693d58e98cf800988dff702400daaf95
 ###  <a name="a-namebkmkchipria-child-primary-site"></a><a name="bkmk_chipri"></a>子主站点  
 包含管理中心站点的层次结构中的每个子主站点支持：  
 
--   总共 150,000 台客户端和设备，不局限于特定组或类型，只要不超过层次结构所支持的数量  
+-   总共 150,000 台客户端和设备，不局限于特定组或类型，只要不超过层次结构所支持的数量。  
 
-例如，一个支持 25,000 台（因为这是一个层次结构的上限数量）运行 Mac 和 Windows CE 7.0 的计算机的主站点，则还可支持 125,000 个台式计算机，这就使支持的设备总数达到支持的子主站点上限数量 - 150,000。
+例如，一个支持 25,000 台（因为这是一个层次结构的上限数量）运行 Mac 和 Windows CE 7.0 的计算机的主站点，还可支持 125,000 个台式计算机。 这就使支持的设备总数达到子主站点支持的上限数量 - 150,000。
 
 ###  <a name="a-namebkmkpria-stand-alone-primary-site"></a><a name="bkmk_pri"></a>独立主站点  
 独立主站点支持下列数量的设备：  
@@ -160,7 +161,7 @@ ms.openlocfilehash: 453d934d693d58e98cf800988dff702400daaf95
 
     -   150,000 台台式机（运行 Windows、Linux 和 UNIX 的计算机）  
 
-    -   运行 Mac 和 Windows CE 7.0 的 25,000 台设备  
+    -   运行 Mac 和 Windows CE 7.0 的 25,000 台设备
 
     -   下列情况之一，具体取决于你的部署支持移动设备管理的方式：  
 
@@ -168,7 +169,7 @@ ms.openlocfilehash: 453d934d693d58e98cf800988dff702400daaf95
 
         -   150,000 台基于云的设备  
 
-例如，支持 150,000 台台式机和 10,000 个 Mac 或 Windows CE 7.0 客户端的独立主站点仅可额外支持 15,000 台设备。 这些设备可以是基于云的，也可以是使用本地 MDM 管理的。  
+例如，支持 150,000 台台式机和 10,000 个 Mac 或 Windows CE 7.0 的独立主站点仅可额外支持 15,000 台设备。 这些设备可以是基于云的，也可以是使用本地 MDM 管理的。  
 
 ###  <a name="a-namebkmkseca-secondary-sites"></a><a name="bkmk_sec"></a>辅助站点  
 辅助站点支持：  
@@ -176,7 +177,7 @@ ms.openlocfilehash: 453d934d693d58e98cf800988dff702400daaf95
 -   15,000 台台式机（运行 Windows、Linux 和 UNIX 的计算机）  
 
 ###  <a name="a-namebkmkmpa-management-points"></a><a name="bkmk_mp"></a>管理点  
-每个管理可以支持以下数目的设备：  
+每个管理点可以支持以下数目的设备：  
 
 -   总数不超过 25,000 的客户端和设备  
 
@@ -184,12 +185,12 @@ ms.openlocfilehash: 453d934d693d58e98cf800988dff702400daaf95
 
     -   下列之一（不能两种都包含）：  
 
-        -   10,000 台使用本地 MDM 管理的设备  
+        -   使用本地 MDM 管理的 10,000 台设备  
 
-        -   10,000 台运行 Mac 和 Windows CE 7.0 的设备  
+        -   10,000 台运行 Mac 和 Windows CE 7.0 客户端的设备
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

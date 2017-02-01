@@ -1,7 +1,7 @@
 ---
 title: "规划云管理网关 | Microsoft Docs"
 description: 
-ms.date: 11/22/2016
+ms.date: 12/19/2016
 ms.prod: configuration-manager
 ms.technology:
 - configmgr-client
@@ -10,8 +10,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1f8fbd8a16548ab2c34f5d3dac2b439f3908cea9
-ms.openlocfilehash: e6befef692518a5622250af1c71d517b435f9058
+ms.sourcegitcommit: 1df2d8bcd73633ac1d37cc3ef31343be9c5bc95d
+ms.openlocfilehash: 6e2895565e868eb80a8f4f4b46b8a28eb4961e28
 
 ---
 
@@ -19,11 +19,11 @@ ms.openlocfilehash: e6befef692518a5622250af1c71d517b435f9058
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-从版本 1610 开始，云管理网关提供一种简单的方法来管理 Internet 上的 Configuration Manager 客户端。 云管理网关服务部署到 Microsoft Azure 且需要 Azure 订阅，它使用名为云管理网关连接点的新角色连接到本地 Configuration Manager 基础结构。 服务完全部署并配置好后，客户端可以访问本地 Configuration Manager 站点系统角色，而不管它们是连接到内部专用网络还是 Internet 上。
+从版本 1610 开始，云管理网关提供一种简单的方法来管理 Internet 上的 Configuration Manager 客户端。 云管理网关服务会部署到 Microsoft Azure 并需要 Azure 订阅。 会使用一个名为云管理网关连接点的新角色将该服务连接到本地 Configuration Manager 基础结构。 部署并配置好后，客户端可以访问本地 Configuration Manager 站点系统角色，而不管它们是在内部专用网络上还是在 Internet 上。
 
 使用 Configuration Manager 控制台将服务部署到 Azure，添加云管理网关连接点角色，并配置站点系统角色以允许云管理网关通信。 云管理网关服务目前只支持管理点和软件更新点角色。
 
-需要用客户端证书和安全套接字层 (SSL) 证书来进行计算机身份验证和加密不同服务层之间的通信。 通常，客户端计算机通过组策略实施接收客户端证书。 若要加密客户端和托管角色的站点系统服务器之间的通信，需要从 CA 创建自定义 SSL 证书。 除了这两种证书类型，还需要在 Azure 上设置管理证书以允许 Configuration Manager 部署云管理网关服务。
+需要用客户端证书和安全套接字层 (SSL) 证书来进行计算机身份验证和加密不同服务层之间的通信。 通常，客户端计算机通过组策略实施接收客户端证书。 若要加密客户端和托管角色的站点系统服务器之间的通信，需要从 CA 创建自定义 SSL 证书。 还需要在 Azure 上设置管理证书以允许 Configuration Manager 部署云管理网关服务。
 
 ## <a name="requirements-for-cloud-management-gateway"></a>云管理网关的要求
 
@@ -35,36 +35,25 @@ ms.openlocfilehash: e6befef692518a5622250af1c71d517b435f9058
 
 -   Azure 管理证书 - 用于通过 Azure 对 Configuration Manager 进行身份验证。
 
-## <a name="limitations-of-cloud-management-gateway"></a>云管理网关的限制
+## <a name="specifications-for-cloud-management-gateway"></a>云管理网关的规范
 
--   云管理网关只支持管理点和软件更新点角色。
-
+- 云管理网关的每个实例支持 4,000 个客户端。
+- 建议创建至少两个云管理网关的实例，以提高可用性。
+- 云管理网关只支持管理点和软件更新点角色。
 -   云管理网关目前不支持 Configuration Manager 中的以下功能：
 
     -   使用客户端推送的客户端部署和升级
-
     -   自动站点分配
-
     -   用户策略
-
     -   应用程序目录（包括软件审批请求）
-
     -   完整的操作系统部署 (OSD)
-
     -   Configuration Manager 控制台
-
     -   远程工具
-
     -   报表网站
-
     -   LAN 唤醒
-
     -   Mac、Linux 和 UNIX 客户端
-
     -   Azure 资源管理器
-
     -   对等缓存
-
     -   本地移动设备管理
 
 ## <a name="cost-of-cloud-management-gateway"></a>云管理网关的费用

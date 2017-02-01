@@ -17,8 +17,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 21eeba4d35f19930f26ed820295d6f142adae1ac
-ms.openlocfilehash: 6c63d63c5b5a7fc1406027dd9380ea799c1aa318
+ms.sourcegitcommit: d7265aec46474ba7fc317ddb5e20b91b7b134585
+ms.openlocfilehash: 36f6eb3fe48e904adf4d04450906fada9b477246
 
 ---
 # <a name="about-client-settings-in-system-center-configuration-manager"></a>关于 System Center Configuration Manager 中的客户端设置
@@ -328,7 +328,11 @@ System Center Configuration Manager 中的所有客户端设置在 Configuration
     -   NOIDMIF 文件应位于 Windows\System32\CCM\Inventory\Noidmif 文件夹中。  
 
     > [!NOTE]  
-    >  此设置仅在默认客户端设置中可用。  
+    >  此设置仅在默认客户端设置中可用。 
+
+-   **最大随机延迟**
+
+    硬件信息的集合可在长达两个小时内处于随机状态，以便不会在所有客户端上同时发生操作。 可以设置最大延迟，以便限制操作发生的时段。      
 
 ##  <a name="metered-internet-connections"></a>按流量计费的 Internet 连接  
  可以管理 Windows 8 客户端计算机在使用按流量计费的 Internet 连接时如何与 Configuration Manager 站点通信。 Internet 提供商有时根据你在按流量计费的 Internet 连接上发送和接收的数据量计费。  
@@ -640,6 +644,6 @@ System Center Configuration Manager 中的所有客户端设置在 Configuration
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

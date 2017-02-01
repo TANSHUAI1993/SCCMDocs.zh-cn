@@ -2,7 +2,7 @@
 title: "对 Windows 功能的支持 | Microsoft Docs"
 description: "了解 System Center Configuration Manager 支持的 Windows 和网络功能。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
-ms.openlocfilehash: 29e4f8a70b56b772a54ee858a392533780ccbaf9
+ms.sourcegitcommit: 086efdd180ba3de12f84cabfa6c2abca1fe57537
+ms.openlocfilehash: 3315098f271a5b365914772943094c33f63f25c4
 
 
 ---
@@ -30,27 +30,29 @@ ms.openlocfilehash: 29e4f8a70b56b772a54ee858a392533780ccbaf9
 
 
 ##  <a name="a-namebkmkbranchcachea-branchcache"></a><a name="bkmk_branchcache"></a> BranchCache  
-已在 Configuration Manager 中集成了 Windows BranchCache。 你可以在应用程序的部署类型上、在包和任务序列的部署上配置 BranchCache 设置。  
+已将 Windows BranchCache 与 Configuration Manager 集成。 你可以在应用程序的部署类型上、在包和任务序列的部署上配置 BranchCache 设置。  
 
 当满足 BranchCache 的所有要求后，此功能允许远程位置处的客户端从具有当前内容缓存的本地客户端中获取内容。  
 
-例如，当第一台启用 BranchCache 的客户端计算机从配置为 BranchCache 服务器的分发点请求内容时，客户端计算机将下载内容并对其进行缓存。 然后，此内容可供请求此相同内容的相同子网上的客户端使用，这些客户端也会缓存该内容。 这样，相同子网上的后续客户端不必从分发点下载内容，该内容将跨多个客户端进行分发以便将来传输。  
+例如，当第一台启用 BranchCache 的客户端计算机从配置为 BranchCache 服务器的分发点请求内容时，客户端计算机将下载内容并对其进行缓存。 然后，此内容可用于请求此内容的同一子网上的客户端。
+
+这些客户端也会缓存内容。 这样，相同子网上的后续客户端不必从分发点下载内容，该内容将跨多个客户端进行分发以便将来传输。  
 
 **使用 Configuration Manager 支持 BranchCache：**  
 
 -   将 **Windows BranchCache** 功能添加到配置为分发点的站点系统服务器。  
 
-    -   服务器上的分发点配置为支持 BranchCache 无需其他配置  
+    -   配置为支持 BranchCache 的服务器上的分发点无需其他配置。  
 
-    -   你不能向基于云的分发点添加 Windows BranchCache，但基于云的分发点支持针对 Windows BranchCache 配置的客户端下载内容  
+    -   无法向基于云的分发点添加 Windows BranchCache，但基于云的分发点支持针对 Windows BranchCache 配置的客户端下载内容。  
 
 **若要使客户端能够使用 BranchCache：**  
 
--   必须针对 BranchCache 分布模式配置可支持 BranchCache 的客户端  
+-   必须针对 BranchCache 分布模式配置可支持 BranchCache 的客户端。  
 
--   必须启用用于 BITS 客户端设置的操作系统设置以支持 BranchCache  
+-   必须启用用于 BITS 客户端设置的操作系统设置以支持 BranchCache。  
 
-**Windows BranchCache 支持以下客户端操作系统：**  
+**Configuration Manager 支持以下客户端操作系统用于 Windows BranchCache：**  
 
 |操作系统|支持详细信息|  
 |----------------------|---------------------|  
@@ -58,7 +60,7 @@ ms.openlocfilehash: 29e4f8a70b56b772a54ee858a392533780ccbaf9
 |Windows 8|默认情况下支持|  
 |Windows 8.1|默认情况下支持|  
 |Windows 10|默认情况下支持|  
-|带 SP2 的 Windows Server 2008|**需要 BITS 4.0** - 你可以使用软件更新或软件分发在 Configuration Manager 客户端上安装 BITS 4.0 版本。 有关 BITS 4.0 版本的详细信息，请参阅 [Windows Management Framework](http://go.microsoft.com/fwlink/p/?LinkId=181979)。<br /><br /> 此操作系统中，BranchCache 客户端功能不支持用于从网络运行的软件分发或 SMB 文件传输。 此外，此操作系统不能将 BranchCache 功能用于基于云的分发点。|  
+|带 SP2 的 Windows Server 2008|**需要 BITS 4.0**：可使用软件更新或软件分发在 Configuration Manager 客户端上安装 BITS 4.0 版本。 有关 BITS 4.0 版本的详细信息，请参阅 [Windows Management Framework](http://go.microsoft.com/fwlink/p/?LinkId=181979)。<br /><br /> 此操作系统中，BranchCache 客户端功能不支持用于从网络运行的软件分发或 SMB 文件传输。 此外，此操作系统不能将 BranchCache 功能用于基于云的分发点。|  
 |Windows Server 2008 R2|默认情况下支持|  
 |Windows Server 2012|默认情况下支持|  
 |Windows Server 2012 R2|默认情况下支持|  
@@ -71,7 +73,7 @@ Configuration Manager 提供对工作组中的客户端的支持。
 -   Configuration Manager 支持将客户端从工作组移动到域，或者从域移动到工作组。 有关详细信息，请参阅[如何在 System Center Configuration Manager 中将客户端部署到 Windows 计算机](../../../core/clients/deploy/deploy-clients-to-windows-computers.md)主题中的[如何在工作组计算机上安装 Configuration Manager 客户端](../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientWorkgroup)。  
 
 > [!NOTE]  
->  尽管所有工作组中的客户端受支持，但所有站点系统必须是受支持的 Active Directory 域的成员  
+>  尽管工作组中的客户端都受支持，但所有站点系统必须是受支持的 Active Directory 域的成员。  
 
 
 ##  <a name="a-namebkmmkdatadedupa-data-deduplication"></a><a name="bkmmk_datadedup"></a> 重复数据删除  
@@ -89,13 +91,13 @@ Configuration Manager 在以下操作系统上支持将重复数据删除用于�
 ##  <a name="a-namebkmkdaa-directaccess"></a><a name="bkmk_DA"></a> DirectAccess  
 Configuration Manager 支持 Windows Server 2008 R2 中的 DirectAccess 功能，以便站点系统服务器和客户端之间的通信。  
 
--   当满足了 DirectAccess 的所有要求后，则通过使用此功能，Internet 上的 Configuration Manager 客户端可以与其分配的站点通信，就好像在 Intranet 上一样。  
+-   当满足了 DirectAccess 的所有要求后，DirectAccess 允许 Internet 上的 Configuration Manager 客户端与其分配的站点通信，就好像在 Intranet 上一样。  
 
 -   对于由服务器启动的操作（如远程控制和客户端请求安装），启动的计算机（如站点服务器）必须运行 IPv6，并且必须在所有介入性网络设备上支持该协议。  
 
 Configuration Manager 在 DirectAccess 上不支持以下内容：  
 
--   部署操作系统  
+-   操作系统部署  
 
 -   Configuration Manager 站点之间的通信  
 
@@ -120,7 +122,9 @@ Configuration Manager 在 DirectAccess 上不支持以下内容：
  在 Configuration Manager 中不支持网络地址转换 (NAT)，除非站点支持位于 Internet 上的客户端且客户端检测到它连接到 Internet。 有关基于 Internet 的客户端管理的详细信息，请参阅 [System Center Configuration Manager 中基于 Internet 的客户端管理计划](../../../core/clients/deploy/plan/plan-for-managing-internet-based-clients.md)。  
 
 ##  <a name="a-namebkmkstoragea-specialized-storage-technology"></a><a name="bkmk_storage"></a> 专用存储技术  
- Configuration Manager 与在安装了 Configuration Manager 组件的操作系统版本的 Windows 硬件兼容列表上经过认证的任何硬件配合使用。 站点服务器角色需要 NTFS 文件系统才能设置目录和文件权限。 因为 Configuration Manager 假定它具有逻辑驱动器的完全所有权，因此在单独计算机上运行的站点系统不能共享任何存储技术上的逻辑分区。 但是，每台计算机可以使用共享存储设备的同一物理分区上的单独逻辑分区。  
+ Configuration Manager 与在安装了 Configuration Manager 组件的操作系统版本的 Windows 硬件兼容列表上经过认证的任何硬件配合使用。
+
+站点服务器角色需要 NTFS 文件系统才能设置目录和文件权限。 因为 Configuration Manager 假定它具有逻辑驱动器的完全所有权，因此在单独计算机上运行的站点系统不能共享任何存储技术上的逻辑分区。 但是，每台计算机可以使用共享存储设备的同一物理分区上的单独逻辑分区。  
 
  **支持注意事项：**  
 
@@ -134,6 +138,6 @@ Configuration Manager 在 DirectAccess 上不支持以下内容：
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

@@ -2,7 +2,7 @@
 title: "升级客户端 | Microsoft Docs | Windows "
 description: "在 System Center Configuration Manager 中升级 Windows 计算机上的客户端。"
 ms.custom: na
-ms.date: 11/18/2016
+ms.date: 01/01/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 828e2ac9a3f9bcea1571d24145a1021fdf1091f3
-ms.openlocfilehash: 8a3028a562aa657ea39a0f5ff763311db6def00a
+ms.sourcegitcommit: 52d2e088b8db3c2e9a0af640ca3db72b9fd7af60
+ms.openlocfilehash: a35724a5b839b47904c46361709f248e432eff1e
 
 
 ---
@@ -101,6 +101,6 @@ ms.openlocfilehash: 8a3028a562aa657ea39a0f5ff763311db6def00a
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

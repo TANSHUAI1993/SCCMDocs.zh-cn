@@ -2,7 +2,7 @@
 title: "对 Windows Defender 或 Endpoint Protection 客户端进行故障排除 | Microsoft Docs"
 description: "了解如何对 Windows Defender 和 Endpoint Protection 进行故障排除。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 01/03/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
-ms.openlocfilehash: eda5eb85aada88b77166582bb116cc680b2c0631
+ms.sourcegitcommit: 1432568286605d29683416885d7aa522c649016e
+ms.openlocfilehash: fde190f141fb55462755119b533519d05af3f3c3
 
 
 ---
@@ -29,80 +29,14 @@ ms.openlocfilehash: eda5eb85aada88b77166582bb116cc680b2c0631
 
 如果你遇到有关 Windows Defender 或者 Endpoint Protection 的问题，请联系你的安全管理员以获得支持。 你也可以尝试对以下问题进行故障排除：  
 
+-   [更新 Windows Defender 或 Endpoint Protection](#update-windows-defender-or-endpoint-protection)  
+-   [启动 Windows Defender 或 Endpoint Protection 服务](#starting-windows-defender-or-endpoint-protection-service)  
+-   [Internet 连接问题](#internet-connection-issues)  
+-   [](#detected-threat-cant-be-remediated)无法解决检测到的威胁  
 -   [安装 Endpoint Protection 客户端](#install-the-endpoint-protection-client)  
 
--   [更新 Windows Defender 或 Endpoint Protection](#update-windows-defender-or-endpoint-protection)  
-
--   [启动 Windows Defender 或 Endpoint Protection 服务](#starting-windows-defender-or-endpoint-protection-service)  
-
--   [Internet 连接问题](#internet-connection-issues)  
-
--   [](#detected-threat-cant-be-remediated)无法解决检测到的威胁  
-
-##  <a name="install-the-endpoint-protection-client"></a>安装 Endpoint Protection 客户端  
-
-> [!NOTE]  
->  Windows Defender 随操作系统安装在 Windows 10 PC 上。  
-
- **症状**  
-
- 安装由于未知原因失败，或者你收到具有以下错误代码的错误消息：0x80070643、0X8007064A、0x8004FF2E、0x8004FF01、0x8004FF07、0x80070002、0x8007064C、0x8004FF00、0x80070001、0x80070656、0x8004FF40、0xC0000156、0x8004FF41 0x8004FF0B、0x8004FF11、0x80240022、0x8004FF04、0x80070660、0x800106B5、0x80070715、0x80070005、0x8004EE00、0x8007003、0x800B0100、0x8007064E 或 0x8007007E。  
-
- 如果计算机运行的是 Windows XP Service Pack 2 (SP2)，将会看到下列一条或多条错误消息：  
-
--   安装向导缺少完成安装所需的筛选器管理器汇总包。  
-
--   KB914882 安装错误，安装程序无法更新 Windows XP 文件，因为系统上安装的语言不同于更新语言。  
-
- **原因**  
-
- Endpoint Protection 无法安装在运行其他安全程序的计算机上。 有时，即使你删除其他安全程序，但是它们并未完全卸载。 你必须运行正版的 Windows 操作系统才能安装 Endpoint Protection。  
-
- **解决方案**  
-
-> [!IMPORTANT]  
->  解决此问题时需要重新启动计算机。 可将此页面设为书签（将其标记为收藏页面）以更轻松地再次找到本主题，或者打印此页面以方便参考。  
-
-### <a name="step-1-remove-any-existing-security-programs"></a>步骤 1：删除所有的现有安全程序  
-
-1.  完全卸载所有的现有 Internet 安全程序。  
-
-2.  重新启动计算机。  
-
-3.  重新安装 Endpoint Protection。 如果这样做不能解决问题，请继续执行下一步骤。  
-
-### <a name="step-2-ensure-that-the-windows-installer-service-is-running"></a>步骤 2：确保 Windows Installer 服务正在运行  
-
-1.  单击“开始”  ，搜索 **services.msc**，然后按 **Enter**。  
-
-2.  右键单击“Windows Installer” ，然后单击“启动” 。 如果“启动”  不可用，但是“停止”  和“重新启动”  选项可用，则表明服务已经启动。  
-
-3.  在“服务”  页上的“文件”  菜单中，单击“退出” 。  
-
-4.  单击“开始” 。 在“搜索程序和文件”  框中，键入 **命令提示符**。 右键单击“命令提示符” ，然后单击“以管理员身份运行” 。  
-
-5.  键入 **MSIEXEC /REGSERVER**，然后按 **Enter**。  
-
-    > [!NOTE]  
-    >  没有此命令成功还是失败的指示。  
-
-6.  重新安装 Endpoint Protection。 如果这样做不能解决问题，请继续执行下一步骤。  
-
-### <a name="step-3-start-windows-in-selective-startup-mode"></a>步骤 3：在“选择性启动”模式下启动 Windows  
-
-1.  单击“开始”  ，搜索 **msconfig**，然后按 **Enter**。  
-
-2.  在“一般”  选项卡上，单击“有选择的启动” ，然后清除“加载启动项”  复选框。  
-
-3.  在“服务”  选项卡上，选中“隐藏所有 Microsoft 服务”  复选框，然后清除列表中剩余的所有服务的复选框。  
-
-4.  单击“确定” ，然后单击“重新启动”  以重新启动计算机。  
-
-5.  尝试重新安装 Endpoint Protection。  
-
 ##  <a name="update-windows-defender-or-endpoint-protection"></a>更新 Windows Defender 或 Endpoint Protection  
- Windows Defender 或   
-      Endpoint Protection 会自动与 Microsoft Update 一同运行，以便确保保持最新的病毒和间谍软件定义。  
+ Windows Defender 或 Endpoint Protection 会自动与 Microsoft Update 一同运行，以便确保你保持最新的病毒和间谍软件定义。  
 
  **症状**  
 
@@ -156,15 +90,13 @@ ms.openlocfilehash: eda5eb85aada88b77166582bb116cc680b2c0631
 
 5.  单击" **确定**"。  
 
-6.  打开 Windows Defender 或  
-          Endpoint Protection。 单击“更新”  选项卡，然后单击“更新” 。  
+6.  打开 Windows Defender 或 Endpoint Protection。 单击“更新”  选项卡，然后单击“更新” 。  
 
 7.  如果问题仍然存在，请继续执行下一步。  
 
 ### <a name="step-3-ensure-that-the-date-and-time-are-set-correctly-on-your-computer"></a>步骤 3：确保你的计算机上的日期和时间设置正确  
 
-1.  打开 Windows Defender 或  
-          Endpoint Protection。  
+1.  打开 Windows Defender 或 Endpoint Protection。  
 
 2.  如果你收到的错误消息中包含代码 0x80072f8f，那么该问题很可能是由你的计算机上不正确的日期或时间设置引起的。  
 
@@ -206,9 +138,9 @@ ms.openlocfilehash: eda5eb85aada88b77166582bb116cc680b2c0631
 
      **Cd\\**  
 
-     **Cd program files\microsoft security essentials**  
+     **Cd program files\windows defender**  
 
-     **Mpcmdrun â€“removedefinitions â€“all**  
+     **Mpcmdrun -RemoveDefinitions -all**  
 
      **Exit**  
 
@@ -244,7 +176,7 @@ ms.openlocfilehash: eda5eb85aada88b77166582bb116cc680b2c0631
 
 -   关闭所有应用程序并重新启动计算机。  
 
-### <a name="step-2-make-sure-the-windows-defender-orbr-------endpoint-protection-service-is-set-to-automatic-and-is-started"></a>步骤 2：确保â€œWindows Defender”或<br />      “Endpoint Protection”服务设置为自动启动并且已启动  
+### <a name="step-2-make-sure-the-windows-defender-orbr-------endpoint-protection-service-is-set-to-automatic-and-is-started"></a>步骤 2：确保“Windows Defender”或<br />      “Endpoint Protection”服务设置为自动启动并且已启动  
 
 1.  单击“开始”  ，搜索 **services.msc**，然后按 **Enter**。  
 
@@ -318,6 +250,70 @@ ms.openlocfilehash: eda5eb85aada88b77166582bb116cc680b2c0631
 
 -   如果你不确定文件的来源，最佳解决方法之一是对计算机运行完全扫描。 完全扫描可能需要一段时间才能完成，但是 Windows Defender 或 Endpoint Protection 可以通过完全扫描查找感染源并清理感染源。  
 
+##  <a name="install-the-endpoint-protection-client"></a>安装 Endpoint Protection 客户端  
+
+> [!NOTE]  
+>  Windows Defender 随操作系统安装在 Windows 10 PC 上。  
+
+ **症状**  
+
+ 安装由于未知原因失败，或者你收到具有以下错误代码的错误消息：0x80070643、0X8007064A、0x8004FF2E、0x8004FF01、0x8004FF07、0x80070002、0x8007064C、0x8004FF00、0x80070001、0x80070656、0x8004FF40、0xC0000156、0x8004FF41 0x8004FF0B、0x8004FF11、0x80240022、0x8004FF04、0x80070660、0x800106B5、0x80070715、0x80070005、0x8004EE00、0x8007003、0x800B0100、0x8007064E 或 0x8007007E。  
+
+ 如果计算机运行的是 Windows XP Service Pack 2 (SP2)，将会看到下列一条或多条错误消息：  
+
+-   安装向导缺少完成安装所需的筛选器管理器汇总包。  
+
+-   KB914882 安装错误，安装程序无法更新 Windows XP 文件，因为系统上安装的语言不同于更新语言。  
+
+ **原因**  
+
+ Endpoint Protection 无法安装在运行其他安全程序的计算机上。 有时，即使你删除其他安全程序，但是它们并未完全卸载。 你必须运行正版的 Windows 操作系统才能安装 Endpoint Protection。  
+
+ **解决方案**  
+
+> [!IMPORTANT]  
+>  解决此问题时需要重新启动计算机。 可将此页面设为书签（将其标记为收藏页面）以更轻松地再次找到本主题，或者打印此页面以方便参考。  
+
+### <a name="step-1-remove-any-existing-security-programs"></a>步骤 1：删除所有的现有安全程序  
+**仅 Endpoint Protection**
+
+1.  完全卸载所有的现有 Internet 安全程序。  
+
+2.  重新启动计算机。  
+
+3.  重新安装 Endpoint Protection。 如果这样做不能解决问题，请继续执行下一步骤。  
+
+### <a name="step-2-ensure-that-the-windows-installer-service-is-running"></a>步骤 2：确保 Windows Installer 服务正在运行  
+
+1.  单击“开始”  ，搜索 **services.msc**，然后按 **Enter**。  
+
+2.  右键单击“Windows Installer” ，然后单击“启动” 。 如果“启动”  不可用，但是“停止”  和“重新启动”  选项可用，则表明服务已经启动。  
+
+3.  在“服务”  页上的“文件”  菜单中，单击“退出” 。  
+
+4.  单击“开始”，然后搜索“命令提示符”。 右键单击“命令提示符” ，然后单击“以管理员身份运行” 。  
+
+5.  键入 **MSIEXEC /REGSERVER**，然后按 **Enter**。  
+
+    > [!NOTE]  
+    >  没有此命令成功还是失败的指示。  
+
+6.  重新安装 Endpoint Protection。 如果这样做不能解决问题，请继续执行下一步骤。  
+
+### <a name="step-3-start-windows-in-selective-startup-mode"></a>步骤 3：在“选择性启动”模式下启动 Windows  
+
+1.  单击“开始”  ，搜索 **msconfig**，然后按 **Enter**。  
+
+2.  在“一般”  选项卡上，单击“有选择的启动” ，然后清除“加载启动项”  复选框。  
+
+3.  在“服务”  选项卡上，选中“隐藏所有 Microsoft 服务”  复选框，然后清除列表中剩余的所有服务的复选框。  
+
+4.  单击“确定” ，然后单击“重新启动”  以重新启动计算机。  
+
+5.  尝试重新安装 Endpoint Protection。  
+
+
+
 ### <a name="see-also"></a>另请参阅  
  [Endpoint Protection 客户端的常见问题](../../protect/deploy-use/endpoint-protection-client-faq.md)   
 
@@ -325,6 +321,6 @@ ms.openlocfilehash: eda5eb85aada88b77166582bb116cc680b2c0631
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

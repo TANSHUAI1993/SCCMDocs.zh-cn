@@ -2,7 +2,7 @@
 title: "管理帐户以访问内容 | Microsoft Docs"
 description: "了解有关客户端用于访问 System Center Configuration Manager 内容的帐户的信息。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/4/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
-ms.openlocfilehash: 4bf8dbd007f2ff122d1447ffcb2a963579034033
+ms.sourcegitcommit: 4d34a272a93100426cccd2308c5b3b0b0ae94a60
+ms.openlocfilehash: ee83aa6fdbd1a82384a4684055ed72620a3f474e
 
 ---
 # <a name="manage-accounts-to-access-content-in-system-center-configuration-manager"></a>管理帐户以访问 System Center Configuration Manager 中的内容
@@ -30,7 +30,7 @@ ms.openlocfilehash: 4bf8dbd007f2ff122d1447ffcb2a963579034033
 
      此帐户还由请求分发点用于从远程林中的源分发点获取内容  
 
--   **包访问帐户** – 默认情况下，Configuration Manager 向通用访问帐户“用户”和“管理员”授予对分发点上内容的访问权限。 但是，你可以配置其他权限来限制访问。  
+-   **包访问帐户** - 默认情况下，Configuration Manager 向名为“用户”和“管理员”的内置帐户授予对分发点上内容的访问权限。 可以配置其他权限来限制访问。  
 
 -   **多播连接帐户** – 用于操作系统部署。  
 
@@ -120,6 +120,6 @@ ms.openlocfilehash: 4bf8dbd007f2ff122d1447ffcb2a963579034033
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 
