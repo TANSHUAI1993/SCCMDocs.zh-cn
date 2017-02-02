@@ -52,7 +52,7 @@ Configuration Manager 中的独立媒体包含在未连接 Configuration Manager
 - 通过“安装包”任务安装动态程序包。
 - 通过“安装应用程序”任务安装动态应用程序。
 
-如果用于部署操作系统的任务序列包括[安装包](../../osd/understand/task-sequence-steps.md#BKMK_InstallPackage)步骤，并且在管理中心站点创建独立媒体，则可能发生错误。 管理中心站点并没有在执行任务序列期间启用软件分发代理所需的必要客户端配置策略。 在 CreateTsMedia.log 文件中可能会出现以下错误：<br /><br /> “WMI method SMS_TaskSequencePackage.GetClientConfigPolicies failed (0x80041001)”<br /><br /> 对于包含“安装包”步骤的独立媒体，必须在启用了软件分发代理的主站点上创建独立媒体，或者必须在任务序列中的[安装 Windows 和 ConfigMgr](../understand/task-sequence-steps.md#BKMK_RunCommandLine) 步骤之后和第一个“安装包”[](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr)步骤之前添加一个“运行命令行”步骤。 “运行命令行”  步骤运行 WMIC 命令，以便在第一个安装包步骤运行之前启用软件分发代理。 可以在“运行命令行”  任务序列步骤中使用以下命令：<br /><br />
+如果用于部署操作系统的任务序列包括[安装包](../../osd/understand/task-sequence-steps.md#BKMK_InstallPackage)步骤，并且在管理中心站点创建独立媒体，则可能发生错误。 管理中心站点并没有在执行任务序列期间启用软件分发代理所需的必要客户端配置策略。 在 CreateTsMedia.log 文件中可能会出现以下错误：<br /><br /> “WMI method SMS_TaskSequencePackage.GetClientConfigPolicies failed (0x80041001)”<br /><br /> 对于包含**安装包**步骤的独立媒体，必须在启用了软件分发代理的主站点上创建独立媒体，或者必须在任务序列中的 [安装 Windows 和 ConfigMgr](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) 步骤之后和第一个**安装包**步骤之前添加一个[运行命令行](../understand/task-sequence-steps.md#BKMK_RunCommandLine)步骤。 “运行命令行”  步骤运行 WMIC 命令，以便在第一个安装包步骤运行之前启用软件分发代理。 可以在“运行命令行”  任务序列步骤中使用以下命令：<br /><br />
 ```WMIC /namespace:\\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE
 ```
 
