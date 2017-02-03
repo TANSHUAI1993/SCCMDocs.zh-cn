@@ -284,6 +284,6 @@ System Center Configuration Manager 版本 1511 收集三个级别的诊断和�
 
 
 
-<!--HONumber=Dec16_HO5-->
+<!--HONumber=Feb17_HO1-->
 
 
