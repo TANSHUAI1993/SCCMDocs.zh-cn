@@ -2,7 +2,7 @@
 title: "诊断数据集合 | Microsoft Docs"
 description: "了解 System Center Configuration Manager 如何收集关于其自身的诊断和使用情况数据。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
-ms.openlocfilehash: f0a992139ad1bc516df2f6ea947509e3e4a77c54
+ms.sourcegitcommit: 24a233516058e645df2a43623855665b97b041b0
+ms.openlocfilehash: 9c0165212fe34f460be2ce870d0542b616f3bc4d
 
 
 ---
@@ -27,7 +27,7 @@ ms.openlocfilehash: f0a992139ad1bc516df2f6ea947509e3e4a77c54
 
 若要为 System Center Configuration Manager 收集诊断和使用情况数据，每个主站点每周都会运行 SQL Server 查询。 在多站点层次结构中，数据会复制到管理中心站点。  
 
-在层次机构的顶层站点上，服务连接点站点系统角色在检查更新时提交此信息。 数据的传输方式取决于服务连接点的模式：  
+在层次机构的顶层站点上，服务连接点站点系统角色在检查更新时提交此信息。 服务连接点的模式决定数据的传输方式：  
 
 -   **在联机模式下：** 每周自动从服务连接点向云服务发送一次诊断和使用情况数据。  
 
@@ -37,6 +37,6 @@ ms.openlocfilehash: f0a992139ad1bc516df2f6ea947509e3e4a77c54
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

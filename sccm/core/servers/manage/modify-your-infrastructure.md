@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
-ms.openlocfilehash: fa9881e06abd410438fe5985151309c45f337802
+ms.sourcegitcommit: 52d2e088b8db3c2e9a0af640ca3db72b9fd7af60
+ms.openlocfilehash: a5228c4984347be4b115bfa5563791fa2fb7319c
 
 
 ---
@@ -371,6 +371,6 @@ SQL 服务器文档可帮助你 [手动注册 SPN](https://technet.microsoft.com
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

@@ -2,7 +2,7 @@
 title: "支持的站点系统服务器 | Microsoft Docs"
 description: "了解可用来托管 System Center Configuration Manager 站点或站点系统角色的 Windows 版本。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,12 +16,12 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: d23b98b362fb016c53974f851c48fa7200d2b2e3
-ms.openlocfilehash: b7c24dee94bca4ce69e0ba8f33129a0b21819d13
+ms.sourcegitcommit: bebbeebba76ab5cf0c517fcb00b7b6a516a08e3e
+ms.openlocfilehash: 12fe730d924979eec2ef55ea80a1fa90b7b47464
 
 
 ---
-# <a name="supported-operating-systems-for-system-center-configuration-manager--site-system-servers"></a>System Center Configuration Manager 站点系统服务器支持的操作系统
+# <a name="supported-operating-systems-for-system-center-configuration-manager-site-system-servers"></a>System Center Configuration Manager 站点系统服务器支持的操作系统
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
@@ -36,7 +36,7 @@ ms.openlocfilehash: b7c24dee94bca4ce69e0ba8f33129a0b21819d13
 
 
 
-## <a name="windows-server-2016-----standard-datacenter"></a>Windows Server 2016 - 标准版、数据中心版
+## <a name="windows-server-2016-standard-and-datacenter"></a>Windows Server 2016：标准版和数据中心版
 从 Configuration Manager 版本 1606（或 2016 年 10 月发布的 1606 基线版本）开始，将支持 Windows Server 2016，并提供 KB3186654 中的修补程序汇总。
 
 **站点服务器：**  
@@ -59,7 +59,7 @@ ms.openlocfilehash: b7c24dee94bca4ce69e0ba8f33129a0b21819d13
 
 -   分发点  
 
-     分发点支持多种不同的配置，每个具有不同的要求，并且在某些情况下不仅支持服务器上的安装，还支持客户端操作系统上的安装。 有关分发点可用选项的详细信息，请参阅[为 System Center Configuration Manager 管理内容和内容基础结构](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。  
+     分发点支持多种不同的配置，每种配置都有不同的要求。 在某些情况下，这些配置不仅支持在服务器上安装，而且支持在客户端操作系统上安装。 有关分发点可用选项的详细信息，请参阅[为 System Center Configuration Manager 管理内容和内容基础结构](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。  
 
 -   Endpoint Protection 点  
 
@@ -85,7 +85,7 @@ ms.openlocfilehash: b7c24dee94bca4ce69e0ba8f33129a0b21819d13
 
 -   状态迁移点
 
-## <a name="windows-server-2012-r2-x64---standard-datacenter"></a>Windows Server 2012 R2 (x64) - 标准版、数据中心版  
+## <a name="windows-server-2012-r2-x64-standard-and-datacenter"></a>Windows Server 2012 R2 (x64)：标准版和数据中心版  
 **站点服务器：**  
 
 -   管理中心站点  
@@ -106,7 +106,7 @@ ms.openlocfilehash: b7c24dee94bca4ce69e0ba8f33129a0b21819d13
 
 -   分发点  
 
-     分发点支持多种不同的配置，每个具有不同的要求，并且在某些情况下不仅支持服务器上的安装，还支持客户端操作系统上的安装。 有关分发点可用选项的详细信息，请参阅[为 System Center Configuration Manager 管理内容和内容基础结构](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。  
+     分发点支持多种不同的配置，每种配置都有不同的要求。 在某些情况下，这些配置不仅支持在服务器上安装，而且支持在客户端操作系统上安装。 有关分发点可用选项的详细信息，请参阅[为 System Center Configuration Manager 管理内容和内容基础结构](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。  
 
 -   Endpoint Protection 点  
 
@@ -132,7 +132,7 @@ ms.openlocfilehash: b7c24dee94bca4ce69e0ba8f33129a0b21819d13
 
 -   状态迁移点  
 
-## <a name="windows-server-2012-x64---standard-datacenter"></a>Windows Server 2012 (x64) - 标准版、数据中心版  
+## <a name="windows-server-2012-x64-standard-and-datacenter"></a>Windows Server 2012 (x64)：标准版和数据中心版  
 **站点服务器：**  
 
 -   管理中心站点  
@@ -153,7 +153,7 @@ ms.openlocfilehash: b7c24dee94bca4ce69e0ba8f33129a0b21819d13
 
 -   分发点  
 
-     分发点支持多种不同的配置，每个具有不同的要求，并且在某些情况下不仅支持服务器上的安装，还支持客户端操作系统上的安装。 有关分发点可用选项的详细信息，请参阅[为 System Center Configuration Manager 管理内容和内容基础结构](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。  
+     分发点支持多种不同的配置，每种配置都有不同的要求。 在某些情况下，这些配置不仅支持在服务器上安装，而且支持在客户端操作系统上安装。 有关分发点可用选项的详细信息，请参阅[为 System Center Configuration Manager 管理内容和内容基础结构](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。  
 
 -   Endpoint Protection 点  
 
@@ -179,8 +179,8 @@ ms.openlocfilehash: b7c24dee94bca4ce69e0ba8f33129a0b21819d13
 
 -   状态迁移点  
 
-## <a name="windows-server-2008-r2-with-sp1-x64-----standard-enterprise-datacenter"></a>带 SP1 的 Windows Server 2008 R2 (x64) – 标准版、企业版、数据中心版  
- 根据 [Microsoft 支持生命周期](https://support.microsoft.com/lifecycle)提供的详细信息，Windows Server 2008 R2 现处于外延支持，不再处于主流支持。 有关将来对这些操作系统作为具有 Configuration Manager 的站点系统服务器的支持的详细信息，请参阅 [System Center Configuration Manager 的已删除和已弃用的功能](../../../core/plan-design/changes/removed-and-deprecated-features.md)。  
+## <a name="windows-server-2008-r2-with-sp1-x64-standard-enterprise-and-datacenter"></a>Windows Server 2008 R2 SP1 (x64)：标准版、企业版和数据中心版  
+ 根据 [Microsoft 支持生命周期](https://support.microsoft.com/lifecycle)中的详细信息，Windows Server 2008 R2 现处于外延支持，不再处于主流支持。 若要详细了解将来对这些操作系统作为具有 Configuration Manager 的站点系统服务器的支持，请参阅 [System Center Configuration Manager 的已删除和已弃用的功能](../../../core/plan-design/changes/removed-and-deprecated-features.md)。  
 
 **站点服务器：**  
 
@@ -202,7 +202,7 @@ ms.openlocfilehash: b7c24dee94bca4ce69e0ba8f33129a0b21819d13
 
 -   分发点  
 
-     分发点支持多种不同的配置，每个具有不同的要求，并且在某些情况下不仅支持服务器上的安装，还支持客户端操作系统上的安装。 有关分发点可用选项的详细信息，请参阅[为 System Center Configuration Manager 管理内容和内容基础结构](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。  
+     分发点支持多种不同的配置，每种配置都有不同的要求。 在某些情况下，这些配置不仅支持在服务器上安装，而且支持在客户端操作系统上安装。 有关分发点可用选项的详细信息，请参阅[为 System Center Configuration Manager 管理内容和内容基础结构](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。  
 
 -   Endpoint Protection 点  
 
@@ -228,8 +228,8 @@ ms.openlocfilehash: b7c24dee94bca4ce69e0ba8f33129a0b21819d13
 
 -   状态迁移点  
 
-## <a name="windows-server-2008-with-sp2-x86-x64---standard-enterprise-datacenter"></a>Windows Server 2008 SP2 (x86, x64) - 标准版、企业版、数据中心版  
- 根据 [Microsoft 支持生命周期](https://support.microsoft.com/lifecycle)提供的详细信息，Windows Server 2008 现处于外延支持，不再处于主流支持。 有关将来对这些操作系统作为具有 Configuration Manager 的站点系统服务器的支持的详细信息，请参阅 [System Center Configuration Manager 的已删除和已弃用的功能](../../../core/plan-design/changes/removed-and-deprecated-features.md)。  
+## <a name="windows-server-2008-with-sp2-x86-x64-standard-enterprise-and-datacenter"></a>Windows Server 2008 SP2（x86、x64）：标准版、企业版和数据中心版  
+ 根据 [Microsoft 支持生命周期](https://support.microsoft.com/lifecycle)中的详细信息，Windows Server 2008 现处于外延支持，不再处于主流支持。 若要详细了解将来对这些操作系统作为具有 Configuration Manager 的站点系统服务器的支持，请参阅 [System Center Configuration Manager 的已删除和已弃用的功能](../../../core/plan-design/changes/removed-and-deprecated-features.md)。  
 
 **站点服务器：**  
 
@@ -255,7 +255,7 @@ ms.openlocfilehash: b7c24dee94bca4ce69e0ba8f33129a0b21819d13
 
     -   此操作系统上的分发点受 PXE 支持，但它们不支持 EFI 模式下客户端计算机的网络启动。 支持具有 BIOS 或具有旧模式下的 EFI 启动的客户端计算机。  
 
-    -   分发点支持多种不同的配置，每个具有不同的要求，并且在某些情况下不仅支持服务器上的安装，还支持客户端操作系统上的安装。 有关分发点可用选项的详细信息，请参阅[为 System Center Configuration Manager 管理内容和内容基础结构](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。  
+    -   分发点支持多种不同的配置，每种配置都有不同的要求。 在某些情况下，这些配置不仅支持在服务器上安装，而且支持在客户端操作系统上安装。 有关分发点可用选项的详细信息，请参阅[为 System Center Configuration Manager 管理内容和内容基础结构](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。  
 
 -   Endpoint Protection 点  
 
@@ -281,7 +281,7 @@ ms.openlocfilehash: b7c24dee94bca4ce69e0ba8f33129a0b21819d13
 
 -   状态迁移点  
 
-## <a name="windows-10-x86-x64---pro-enterprise"></a>Windows 10（x86、x64）– 专业版、企业版  
+## <a name="windows-10-x86-x64-pro-and-enterprise"></a>Windows 10（x86、x64）：专业版和企业版  
 **站点系统服务器：**  
 
 -   分发点  
@@ -290,9 +290,9 @@ ms.openlocfilehash: b7c24dee94bca4ce69e0ba8f33129a0b21819d13
 
     -   此操作系统版本上的分发点不支持多播。  
 
-    -   分发点支持多种不同的配置，每个具有不同的要求，并且在某些情况下不仅支持服务器上的安装，还支持客户端操作系统上的安装。 有关分发点可用选项的详细信息，请参阅[为 System Center Configuration Manager 管理内容和内容基础结构](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。  
+    -   分发点支持多种不同的配置，每种配置都有不同的要求。 在某些情况下，这些配置不仅支持在服务器上安装，而且支持在客户端操作系统上安装。 有关分发点可用选项的详细信息，请参阅[为 System Center Configuration Manager 管理内容和内容基础结构](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。  
 
-## <a name="windows-81-x86-x64---professional-enterprise"></a>Windows 8.1（x86、x64）– 专业版、企业版  
+## <a name="windows-81-x86-x64-professional-and-enterprise"></a>Windows 8.1（x86、x64）：专业版和企业版  
 **站点系统服务器：**  
 
 -   分发点  
@@ -301,9 +301,9 @@ ms.openlocfilehash: b7c24dee94bca4ce69e0ba8f33129a0b21819d13
 
     -   此操作系统版本上的分发点不支持多播。  
 
-    -   分发点支持多种不同的配置，每个具有不同的要求，并且在某些情况下不仅支持服务器上的安装，还支持客户端操作系统上的安装。 有关分发点可用选项的详细信息，请参阅[为 System Center Configuration Manager 管理内容和内容基础结构](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。  
+    -   分发点支持多种不同的配置，每种配置都有不同的要求。 在某些情况下，这些配置不仅支持在服务器上安装，而且支持在客户端操作系统上安装。 有关分发点可用选项的详细信息，请参阅[为 System Center Configuration Manager 管理内容和内容基础结构](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。  
 
-## <a name="windows-8-x86-x64---professional-enterprise-distribution-point"></a>Windows 8（x86、 x64）– 专业版，企业分发点  
+## <a name="windows-8-x86-x64-professional-and-enterprise"></a>Windows 8（x86、x64）：专业版和企业版
 **站点系统服务器：**  
 
 -   分发点  
@@ -312,9 +312,9 @@ ms.openlocfilehash: b7c24dee94bca4ce69e0ba8f33129a0b21819d13
 
     -   此操作系统版本上的分发点不支持多播。  
 
-    -   分发点支持多种不同的配置，每个具有不同的要求，并且在某些情况下不仅支持服务器上的安装，还支持客户端操作系统上的安装。 有关分发点可用选项的详细信息，请参阅[为 System Center Configuration Manager 管理内容和内容基础结构](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。  
+    -   分发点支持多种不同的配置，每种配置都有不同的要求。 在某些情况下，这些配置不仅支持在服务器上安装，而且支持在客户端操作系统上安装。 有关分发点可用选项的详细信息，请参阅[为 System Center Configuration Manager 管理内容和内容基础结构](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。  
 
-## <a name="windows-7-with-sp1-x86-x64---professional-enterprise-ultimate"></a>带 SP1 的 Windows 7（x86、x64）– 专业版、企业版、旗舰版  
+## <a name="windows-7-with-sp1-x86-x64-professional-enterprise-and-ultimate"></a>Windows 7 SP1（x86、x64）：专业版、企业版和旗舰版  
 **站点系统服务器：**  
 
 -   分发点  
@@ -323,24 +323,24 @@ ms.openlocfilehash: b7c24dee94bca4ce69e0ba8f33129a0b21819d13
 
     -   此操作系统版本上的分发点不支持多播。  
 
-    -   分发点支持多种不同的配置，每个具有不同的要求，并且在某些情况下不仅支持服务器上的安装，还支持客户端操作系统上的安装。 有关分发点可用选项的详细信息，请参阅[为 System Center Configuration Manager 管理内容和内容基础结构](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。  
+    -   分发点支持多种不同的配置，每种配置都有不同的要求。 在某些情况下，这些配置不仅支持在服务器上安装，而且支持在客户端操作系统上安装。 有关分发点可用选项的详细信息，请参阅[为 System Center Configuration Manager 管理内容和内容基础结构](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。  
 
 ## <a name="the-server-core-installation-of-windows-server-2012"></a>Windows Server 2012 的 Server Core 安装  
- 除了上述操作系统之外，支持将 Windows Server 2012 的 Server Core 安装用作具有以下限制的分发点：  
+ 除了之前列出的操作系统之外，还支持将 Windows Server 2012 的服务器核心安装用作具有以下限制的分发点：  
 
--   仅支持 x64  
+-   仅支持 64 位版本。  
 
--   此操作系统上的分发点不支持 PXE 或多播  
+-   此操作系统上的分发点不支持 PXE 或多播。
 
 ## <a name="the-server-core-installation-of-windows-server-2012-r2"></a>Windows Server 2012 R2 的 Server Core 安装  
- 除了上述操作系统之外，支持将 Windows Server 2012 R2 的 Server Core 安装用作具有以下限制的分发点：  
+ 除了之前列出的操作系统之外，还支持将 Windows Server 2012 R2 的服务器核心安装用作具有以下限制的分发点：  
 
--   仅支持 x64  
+-   仅支持 x64 位版本。
 
--   此操作系统上的分发点不支持 PXE 或多播  
+-   此操作系统上的分发点不支持 PXE 或多播。  
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

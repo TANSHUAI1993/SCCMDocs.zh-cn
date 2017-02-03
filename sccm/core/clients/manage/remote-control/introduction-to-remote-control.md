@@ -2,7 +2,7 @@
 title: "远程控制 | Microsoft Docs"
 description: "获取 System Center Configuration Manager 中的远程控制简介。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/26/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
-ms.openlocfilehash: 00c9e6bff02d534af2be975e0d5d41bcf0e7cb1c
+ms.sourcegitcommit: 9206b82eca02877c30eebf146d42bcca7290eb42
+ms.openlocfilehash: 47bfeec5bd5d9b843e9064560d0cd0b14bd7d6a1
 
 
 ---
@@ -26,9 +26,9 @@ ms.openlocfilehash: 00c9e6bff02d534af2be975e0d5d41bcf0e7cb1c
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-使用 System Center Configuration Manager 中的远程控制可远程管理、提供协助或查看层次结构中的任何客户端计算机。 可以使用远程控制来解决客户端计算机上的硬件和软件配置问题，并在需要访问用户计算机时提供支持人员支持。 Configuration Manager 支持对工作组计算机以及加入 Active Directory 域的计算机的远程控制。  
+使用远程控制可远程管理、提供协助或查看层次结构中的任何客户端计算机。 可使用远程控制来解决客户端计算机上的硬件和软件配置问题，并提供支持。 Configuration Manager 支持远程控制工作组计算机和加入域的计算机。  
 
- 此外，Configuration Manager 允许用户通过配置客户端设置，从 Configuration Manager 控制台运行 Windows 远程桌面和远程协助。  
+使用 Configuration Manager，还可通过配置客户端设置，从 Configuration Manager 控制台运行 Windows 远程桌面和远程协助。  
 
 > [!NOTE]  
 >  在以下情况下，无法建立从 Configuration Manager 控制台到客户端计算机的远程协助会话：  
@@ -40,6 +40,6 @@ ms.openlocfilehash: 00c9e6bff02d534af2be975e0d5d41bcf0e7cb1c
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

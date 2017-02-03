@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 8b4c80aa092369ec251757d82a1b4bb2863aa96a
-ms.openlocfilehash: f3742dcb930444bab7eb02374fd77ebd0e455734
+ms.sourcegitcommit: 4a8d98addcd463eb82d8b7100b44254a10d21992
+ms.openlocfilehash: b79346968edf88443f8e30691aa4baec7b81699f
 
 
 ---
@@ -26,7 +26,11 @@ ms.openlocfilehash: f3742dcb930444bab7eb02374fd77ebd0e455734
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-使用以下信息来帮助升级运行 System Center Configuration Manager 的基础结构。  
+使用本主题中的信息来帮助升级运行 System Center Configuration Manager 的服务器基础结构。  
+
+ - 如果想要从早期版本的 Configuration Manager 升级到 System Center Configuration Manager，请参阅[升级到 System Center Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)。
+
+- 如果想要将 System Center Configuration Manager 基础结构更新为新版本，请参阅 [System Center Configuration Manager 的更新](/sccm/core/servers/manage/updates)。
 
 ##  <a name="a-namebkmksupconfigupgradesitesrva-upgrade-site-operating-system-of-site-systems"></a><a name="BKMK_SupConfigUpgradeSiteSrv"></a>升级站点系统的站点操作系统  
  Configuration Manager 在以下情况中支持托管站点服务器的服务器操作系统和托管任何站点系统角色的远程服务器操作系统的就地升级：  
@@ -209,6 +213,6 @@ ms.openlocfilehash: f3742dcb930444bab7eb02374fd77ebd0e455734
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

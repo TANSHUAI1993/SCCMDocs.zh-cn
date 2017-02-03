@@ -2,7 +2,7 @@
 title: "查看硬件清单 | Microsoft Docs | 资源浏览器"
 description: "使用资源浏览器查看 System Center Configuration Manager 中的硬件清单。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 01/03/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
-ms.openlocfilehash: 2cd138b3bbb437d84f0ff7c2aeef869518bd817d
+ms.sourcegitcommit: 05c27c7aa36e0b4236867766dab36125c31467b3
+ms.openlocfilehash: 6265ee70b70a715862b1651d2f3760bef096ee8a
 
 
 ---
@@ -30,11 +30,11 @@ ms.openlocfilehash: 2cd138b3bbb437d84f0ff7c2aeef869518bd817d
 > [!NOTE]  
 >  资源浏览器不会显示数据的硬件清单周期已在运行之前客户端上您要连接到任何库存量。  
 
- Configuration Manager 中的资源浏览器包含与硬件清单相关的以下部分：  
+ 资源浏览器具有与硬件清单相关的以下部分：  
 
--   **硬件** - 包含从指定的 Configuration Manager 客户端设备收集的最新硬件清单。 您可以查看库存物料 **工作站状态** 来发现设备上次执行硬件清单的日期和时间。  
+-   **硬件** - 包含从指定客户端设备收集的最新的硬件清单。  **工作站状态**具有设备上次执行硬件清单的日期和时间。  
 
--   **硬件历史记录** - 包含自上次执行硬件清单以来已更改的清单项的历史记录。 列表中的每项都包含一个“当前”节点以及一个或多个 *<date\>* 节点。 您可以比较当前节点为要发现客户端计算机的硬件清单中已更改的项的历史节点之一中的信息。  
+-   **硬件历史记录** - 包含自上次执行硬件清单以来已更改的清单项的历史记录。 每项都包含一个“当前”节点以及一个或多个 *<date\>* 节点。 可以将当前节点中的信息与某个历史节点相比较，以查找已更改的项。  
 
     > [!NOTE]  
     >  Configuration Manager 会按“删除过期的清单历史记录”站点维护任务中指定的天数保留硬件清单历史记录  
@@ -44,18 +44,15 @@ ms.openlocfilehash: 2cd138b3bbb437d84f0ff7c2aeef869518bd817d
 
 ### <a name="how-to-run-resource-explorer-from-the-configuration-manager-console"></a>如何从 Configuration Manager 控制台运行资源浏览器  
 
-1.  在 Configuration Manager 控制台中，单击“资产和符合性” 。  
+1.  在 Configuration Manager 控制台中，选择“资产和符合性” > “设备”，或打开显示设备的任何集合。  
 
-2.  在“资产和符合性”  工作区中，单击“设备”  或打开显示设备的任何集合。  
+3.  选择包含想要查看的清单的计算机，然后在“主页”选项卡 >“设备”组中，选择“启动” >  “资源浏览器”。   
 
-3.  单击包含想要查看的清单的计算机，然后在“主页”  选项卡上的“设备”  组中，单击“启动”  ，然后单击“资源浏览器” 。 **资源浏览器** 窗口将打开。  
-
-4.  可以右键单击“资源浏览器”窗口右窗格中的任意项，然后单击“属性”以打开 <item name\>“属性”对话框，从而有助于以更加易读的格式查看收集的清单信息。  
-
-5.  当完成后，请关闭“资源浏览器”  窗口。  
+4.  右键单击“资源浏览器”窗口右窗格中的任意项，然后选择“属性”以打开 *<item name\>*“属性”对话框，以可读性更强的格式查看收集的清单信息。  
 
 
 
-<!--HONumber=Dec16_HO3-->
+
+<!--HONumber=Jan17_HO1-->
 
 

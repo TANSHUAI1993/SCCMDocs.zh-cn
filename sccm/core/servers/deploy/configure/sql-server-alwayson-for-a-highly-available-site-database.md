@@ -1,7 +1,7 @@
 ---
 title: SQL Server AlwaysOn | Microsoft Docs
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/4/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,8 +15,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: 9d4d0c741418af29edc586a5d629fc61f86da426
+ms.sourcegitcommit: 4d34a272a93100426cccd2308c5b3b0b0ae94a60
+ms.openlocfilehash: 5fb6bc0bca5ee590000fd30bd46c765871cf5220
 
 
 ---
@@ -98,9 +98,12 @@ ms.openlocfilehash: 9d4d0c741418af29edc586a5d629fc61f86da426
 
  **与 System Center Configuration Manager 配合使用的 AlwaysOn 可用性组的要求：**  
 
--   可用性组中的每个节点（或副本）必须运行由 System Center Configuration Manager 支持的 SQL Server 版本  
+-  *版本*：可用性组中的每个节点（或副本）必须运行由 System Center Configuration Manager 支持的 SQL Server 版本。 如果 SQL Server 支持，可用性组的不同节点可以运行不同版本的 SQL Server。   
 
--   此可用性组必须具有一个主副本，并且可以具有最多两个同步辅助副本  
+- *版本*：必须使用 SQL Server 企业版。  SQL Server 2016 标准版引入了 Basic 可用性组（Configuration Manager 不支持此组）。
+
+
+-   此可用性组必须具有一个主副本，并且可以具有最多两个同步辅助副本。  
 
 -  将数据库添加到某一可用性组后，必须将主副本故障转移到辅助副本（使其成为新的主副本），然后对数据库进行以下配置：
     - 启用 Trustworthy：等于 True
@@ -131,7 +134,9 @@ ms.openlocfilehash: 9d4d0c741418af29edc586a5d629fc61f86da426
         >  System Center Configuration Manager 设置为“自动故障转移”时，支持使用可用性组副本。 但是，当运行安装程序以指定使用可用性组中站点数据库，以及安装 Configuration Manager 的任何更新（不仅是适用于站点数据库的更新）时，必须设置“手动故障转移”。  
 
   **可用性组的限制**
-   - 可用性组仅可用于站点数据库，不支持软件更新数据库或报表数据库   
+   - 不支持 Basic 可用性组（随 SQL Server 2016 标准版引入）。 这是因为 Basic 可用性组不支持对次要副本的读取访问，这是与 Configuration Manager 配合使用的要求。 有关详细信息，请参阅 [Basic 可用性组（AlwaysOn 可用性组）](https://msdn.microsoft.com/en-us/library/mt614935.aspx)。
+
+   - 可用性组仅可用于站点数据库，不支持软件更新数据库或报表数据库。   
    - 使用可用性组时，必须将报表点手动配置为使用当前主副本，而非可用性组侦听器。 如果主副本故障转移到另一个副本，则必须将报表点重新配置为使用新的主副本。  
    - 在安装更新（例如版本 1606）之前，请确保将可用性组设置为手动故障转移。 站点更新后，可以将故障转移还原为自动故障转移。
 
@@ -260,6 +265,6 @@ ms.openlocfilehash: 9d4d0c741418af29edc586a5d629fc61f86da426
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

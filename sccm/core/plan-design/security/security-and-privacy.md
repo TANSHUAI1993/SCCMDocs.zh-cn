@@ -2,7 +2,7 @@
 title: "System Center Configuration Manager 的安全性和隐私 | Microsoft Docs"
 description: "查找有关 System Center Configuration Manager 的安全性和隐私的资源。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
-ms.openlocfilehash: a0cc96d1bde1ab895a4560d89dbc162f34a8443b
+ms.sourcegitcommit: b470aee50669bcded176d55d8b1496768d1f3cde
+ms.openlocfilehash: de9df79c7adc24b415fd1be6e45a42aec7e16f9a
 
 
 ---
@@ -25,11 +25,11 @@ ms.openlocfilehash: a0cc96d1bde1ab895a4560d89dbc162f34a8443b
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-本主题包括 System Center Configuration Manager 的安全和隐私相关资源。  
+本文包括 System Center Configuration Manager 的安全和隐私相关资源。  
 
  继续操作之前，请确保了解 [System Center Configuration Manager 的基础知识](../../../core/understand/fundamentals.md)。 如果已安装 System Center Configuration Manager，请为实施确定设计决策。 你可能会发现 Configuration Manager 的规划和部署内容很有用。  
 
- 请参阅下列主题，以了解该产品中与安全性相关的功能：  
+ 请参阅以下文章，以了解该产品中与安全性相关的功能：  
 
 -   [System Center Configuration Manager 中操作系统部署的安全和隐私](../../../osd/plan-design/security-and-privacy-for-operating-system-deployment.md)  
 
@@ -59,7 +59,7 @@ ms.openlocfilehash: a0cc96d1bde1ab895a4560d89dbc162f34a8443b
 
 
 
- **安全和隐私主题：**  
+ **安全和隐私文章：**  
 
 -   [规划 System Center Configuration Manager 中的安全性](../../../core/plan-design/security/plan-for-security.md)  
 
@@ -76,6 +76,6 @@ ms.openlocfilehash: a0cc96d1bde1ab895a4560d89dbc162f34a8443b
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

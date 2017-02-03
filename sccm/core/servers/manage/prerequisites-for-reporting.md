@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: ae750188b0258122d8561b163a5ecd85c4179f18
+ms.sourcegitcommit: 59e63cf223424f9930524e3ed3833c30dc9ca9a7
+ms.openlocfilehash: f43764acd13b0257481614fc79aebecac75542d7
 
 
 ---
@@ -50,21 +50,22 @@ System Center Configuration Manager 中的报表具有产品外部依赖关系�
 
 |SQL Server 版本|Reporting Services 点|  
 |------------------------|------------------------------|  
-|SQL Server 2008 SP2（至少包含累积更新 9）<br /><br /> -   Standard<br />-   Enterprise<br />-   Datacenter|?|  
-|SQL Server 2008 SP3（至少包含累积更新 4）<br /><br /> -   Standard<br />-   Enterprise<br />-   Datacenter|?|  
-|SQL Server 2008 R2 SP1（至少包含累积更新 6）<br /><br /> -   Standard<br />-   Enterprise<br />-   Datacenter|?|  
-|SQL Server 2008 R2 SP2<br /><br /> -   Standard<br />-   Enterprise<br />-   Datacenter|?|  
+|SQL Server 2008 SP2（至少包含累积更新 9）<br /><br /> -   Standard<br />-   Enterprise<br />-   Datacenter|是|  
+|SQL Server 2008 SP3（至少包含累积更新 4）<br /><br /> -   Standard<br />-   Enterprise<br />-   Datacenter|是|  
+|SQL Server 2008 R2 SP1（至少包含累积更新 6）<br /><br /> -   Standard<br />-   Enterprise<br />-   Datacenter|是|  
+|SQL Server 2008 R2 SP2<br /><br /> -   Standard<br />-   Enterprise<br />-   Datacenter|是|  
 |SQL Server Express 2008 R2 SP1（至少包含累积更新 4）|不支持|  
 |SQL Server Express 2008 R2 SP2|不支持|  
-|SQL Server 2012（至少包含累积更新 2）<br /><br /> -   Standard<br />-   Enterprise|?|  
-|SQL Server 2012 SP1（没有最低累积更新）<br /><br /> -   Standard<br />-   Enterprise|?|  
-|SQL Server 2014<br /><br /> -   Standard<br />-   Enterprise|?|  
-
+|SQL Server 2012（至少包含累积更新 2）<br /><br /> -   Standard<br />-   Enterprise|是|  
+|SQL Server 2012 SP1（没有最低累积更新）<br /><br /> -   Standard<br />-   Enterprise|是|  
+|SQL Server 2016<br /><br /> -   Standard<br />-   Enterprise|是|
+|SQL Server 2016<br /><br /> -   Standard<br />-   Enterprise|是|
+|SQL Server 2016 SP1<br /><br /> -   Standard<br />-   Enterprise|是|
 ## <a name="next-steps"></a>后续步骤
 [报表的操作和维护](operations-and-maintenance-for-reporting.md)
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

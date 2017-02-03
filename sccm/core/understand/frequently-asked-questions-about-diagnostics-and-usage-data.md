@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: 856ee34621816155d4ad95ed7240cf585e322486
+ms.sourcegitcommit: 4a8d98addcd463eb82d8b7100b44254a10d21992
+ms.openlocfilehash: 7d252fbbdc23ff676b87643408caf977f5636b67
 
 
 ---
@@ -28,7 +28,9 @@ ms.openlocfilehash: 856ee34621816155d4ad95ed7240cf585e322486
 以下是有关 System Center Configuration Manager 的诊断和使用情况数据的常见问题：  
 
 ###  <a name="a-namebkmkoffa-how-do-i-turn-off-telemetry"></a><a name="bkmk_off"></a> 如何关闭遥测？  
- 需要定期更新 Configuration Manager 的 current branch，以支持新版本的 Windows 10 和 Microsoft Intune。 Microsoft 至少需要基本级别的诊断和使用情况数据来使产品保持最新状态、改进更新体检以及提高产品的质量和安全性。  
+不支持关闭遥测。 但是，可以选择收集的遥测数据级别，并在提交遥测数据时在脱机模式下使用服务连接点来帮助管理。
+
+需要定期更新 Configuration Manager 的 current branch，以支持新版本的 Windows 10 和 Microsoft Intune。 Microsoft 至少需要基本级别的诊断和使用情况数据来使产品保持最新状态、改进更新体检以及提高产品的质量和安全性。
 
 ###  <a name="a-namebkmkretentiona-what-is-the-data-retention-period"></a><a name="bkmk_retention"></a> 数据保留期为多久？  
  诊断和使用数据的保留期为一年。  
@@ -44,6 +46,7 @@ ms.openlocfilehash: 856ee34621816155d4ad95ed7240cf585e322486
  - [1511 的诊断数据](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1511)
  - [1602 的诊断数据](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1602)
  - [1606 的诊断数据](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1606)
+ - [1610 的诊断数据](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1610)
 
 
 ###  <a name="a-namebkmktablesa-can-you-see-data-in-custom-tables"></a><a name="bkmk_tables"></a> 可以查看自定义表中的数据吗？  
@@ -57,6 +60,6 @@ ms.openlocfilehash: 856ee34621816155d4ad95ed7240cf585e322486
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

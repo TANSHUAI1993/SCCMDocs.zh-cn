@@ -17,8 +17,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: 3bc82535955d937e5620ef2963ccc29bfd0124e3
+ms.sourcegitcommit: 52d2e088b8db3c2e9a0af640ca3db72b9fd7af60
+ms.openlocfilehash: 0ca218e4276699dd9029308e1d8ac524563da7c5
 
 
 ---
@@ -66,6 +66,6 @@ ms.openlocfilehash: 3bc82535955d937e5620ef2963ccc29bfd0124e3
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

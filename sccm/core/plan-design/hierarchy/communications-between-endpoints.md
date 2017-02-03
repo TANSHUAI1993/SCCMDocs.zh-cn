@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
-ms.openlocfilehash: 7ab79fb69188fa5fe6b89b070829ec0f918137b9
+ms.sourcegitcommit: 2ac9f98dc7b455d3b72d794d4311863186ed53ef
+ms.openlocfilehash: cd94f9ccc7e196b30e5dc7ae9368d073b7cff5d2
 
 
 ---
@@ -27,7 +27,7 @@ ms.openlocfilehash: 7ab79fb69188fa5fe6b89b070829ec0f918137b9
 
 
 ##  <a name="a-nameplanningintra-sitecoma-communications-between-site-systems-in-a-site"></a><a name="Planning_Intra-site_Com"></a> 站点中站点系统间的通信  
- 当 Configuration Manager 站点系统或组件跨网络与站点中的其他站点系统或 Configuration Manager 组件通信时，它们将根据你配置站点的方式使用以下其中一项：  
+ 当 Configuration Manager 站点系统或组件跨网络与站点中的其他站点系统或 Configuration Manager 组件通信时，它们将根据你配置站点的方式使用以下其中一项协议：  
 
 -   服务器消息块 (SMB)  
 
@@ -35,7 +35,7 @@ ms.openlocfilehash: 7ab79fb69188fa5fe6b89b070829ec0f918137b9
 
 -   HTTPS  
 
-除了站点服务器与分发点之间的通信之外，随时都可能发生站点中服务器与服务器的通信，并且不使用任何机制来控制网络带宽。 因为你无法控制站点系统之间的通信，所以请确保在具有良好连接和快速网络的位置中安装站点系统服务器。  
+除了站点服务器与分发点之间的通信之外，随时都可能发生站点中服务器与服务器的通信，并且不使用任何机制来控制网络带宽。 因为你无法控制站点系统之间的通信，请确保在具有快速和良好连接网络的位置中安装站点系统服务器。  
 
 若要帮助你管理从站点服务器到分发点的内容传输：  
 
@@ -43,44 +43,44 @@ ms.openlocfilehash: 7ab79fb69188fa5fe6b89b070829ec0f918137b9
 
 -   你可以安装一个分发点作为预留的分发点。 预留的分发点允许你使用手动放在分发点服务器上的内容，并且不需要在网络中传输内容文件。  
 
-有关详细信息,请参阅[管理用于内容管理的网络带宽](manage-network-bandwidth.md)。
+有关详细信息，请参阅[管理用于内容管理的网络带宽](manage-network-bandwidth.md)。
 
 
 ##  <a name="a-nameplanningclienttositesystema-communications-from-clients-to-site-systems-and-services"></a><a name="Planning_Client_to_Site_System"></a> 从客户端到站点系统和服务的通信  
 客户端启动与站点系统角色、Active Directory 域服务以及联机服务的通信。 若要启用这些通信，防火墙必须允许客户端与其通信的终结点之间的网络流量。 终结点包括：  
 
--   **应用程序目录网站点** -（支持 HTTP 和 HTTPS 通信）  
+-   **应用程序目录网站点**：支持 HTTP 和 HTTPS 通信
 
--   **基于云的资源**，例如 Microsoft Azure 和 Microsoft Intune  
+-   **基于云的资源**：包括 Microsoft Azure 和 Microsoft Intune  
 
--   **Configuration Manager 策略模块 (NDES)** -（支持 HTTP 和 HTTPS 通信）  
+-   **Configuration Manager 策略模块 (NDES)**：支持 HTTP 和 HTTPS 通信
 
--   **分发点** -（支持 HTTP 和 HTTPS 通信，且基于云的分发点需要 HTTPS）  
+-   **分发点**：支持 HTTP 和 HTTPS 通信，且基于云的分发点需要 HTTPS  
 
--   **回退状态点** -（支持 HTTP 通信）  
+-   **回退状态点**：支持 HTTP 通信  
 
--   **管理点** -（支持 HTTP 和 HTTPS 通信）  
+-   **管理点**：支持 HTTP 和 HTTPS 通信  
 
 -   **Microsoft 更新**  
 
--   **软件更新点** -（支持 HTTP 和 HTTPS 通信）  
+-   **软件更新点**：支持 HTTP 和 HTTPS 通信  
 
--   **状态迁移点** -（支持 HTTP 和 HTTPS 通信）  
+-   **状态迁移点**：支持 HTTP 和 HTTPS 通信  
 
 -   **各种域服务**  
 
-客户端必须先使用服务定位找出支持客户端协议（HTTP 或 HTTPS）的站点系统角色，然后才可与站点系统角色通信。 默认情况下，客户端使用提供给它们的最安全的方法：  
+客户端必须先使用服务定位找出支持客户端协议（HTTP 或 HTTPS）的站点系统角色，然后才可与站点系统角色通信。 默认情况下，客户端使用提供给它们的最安全方法：  
 
 -   要使用 HTTPS，你必须具有公钥基础结构 (PKI) 并且必须在客户端和服务器上安装 PKI 证书。 有关如何使用证书的信息，请参阅 [System Center Configuration Manager 的 PKI 证书要求](../../../core/plan-design/network/pki-certificate-requirements.md)。  
 
--   在部署使用 Internet 信息服务 (IIS) 并支持来自客户端的通信的站点系统角色时，必须指定客户端是否使用 HTTP 或 HTTPS 连接到站点系统。 如果使用 HTTP，还必须考虑签名和加密选项。 有关详细信息，请参阅 [Plan for Security 中的 System Center Configuration Manager](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForSigningEncryption) 中的 [Plan for security 中的 System Center Configuration Manager](../../../core/plan-design/security/plan-for-security.md)。  
+-   在部署使用 Internet 信息服务 (IIS) 并支持来自客户端的通信的站点系统角色时，必须指定客户端是否使用 HTTP 或 HTTPS 连接到站点系统。 如果使用 HTTP，还必须考虑签名和加密选项。 有关详细信息，请参阅[在 System Center Configuration Manager 中规划安全性](../../../core/plan-design/security/plan-for-security.md)中的[规划签名和加密](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForSigningEncryption)。  
 
 有关按客户端进行的服务定位的信息，请参阅[了解客户端如何查找 System Center Configuration Manager 的站点资源和服务](../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md)。  
 
-有关与这些终结点通信时客户端所使用的端口和协议的详细信息，请参阅 [System Center Configuration Manager 中使用的端口](../../../core/plan-design/hierarchy/ports.md)  
+有关与这些终结点通信时客户端所使用的端口和协议的详细信息，请参阅 [System Center Configuration Manager 中使用的端口](../../../core/plan-design/hierarchy/ports.md)。  
 
 ###  <a name="a-namebkmkclientspana-considerations-for-client-communications-from-the-internet-or-an-untrusted-forest"></a><a name="BKMK_clientspan"></a> 来自 Internet 或不受信任林的客户端通信的注意事项  
-下列安装在主站点上的站点系统角色支持来自不受信任的位置（如 Internet 或不受信任的林）的客户端连接（辅助站点不支持来自不受信任位置的客户端连接）：  
+下列安装在主站点上的站点系统角色支持来自不受信任的位置（如 Internet 或不受信任的林）的客户端连接。 （辅助站点不支持来自不受信任位置的客户端连接）：  
 
 -   应用程序目录网站点  
 
@@ -97,7 +97,7 @@ ms.openlocfilehash: 7ab79fb69188fa5fe6b89b070829ec0f918137b9
 -   软件更新点  
 
 **关于面向 Internet 的站点系统：**   
-虽然客户端和站点系统服务器的林之间不需要信任，但当包含面向 Internet 的站点系统的林信任包含用户帐户的林时，如果启用“客户端策略”客户端设置“启用来自 Internet 客户端的用户策略请求”，则此配置对 Internet 上的设备支持基于用户的策略。  
+客户端的林和站点系统服务器的林之间不需要信任。 但当包含面向 Internet 的站点系统的林信任包含用户帐户的林时，如果启用“客户端策略”客户端设置“启用来自 Internet 客户端的用户策略请求”，则此配置对 Internet 上的设备支持基于用户的策略。  
 
 例如，以下配置说明了当基于 Internet 的客户端管理支持 Internet 上设备的用户策略时：  
 
@@ -110,14 +110,14 @@ ms.openlocfilehash: 7ab79fb69188fa5fe6b89b070829ec0f918137b9
 > [!NOTE]  
 >  如果 Kerberos 身份验证失败，则会自动尝试 NTLM 身份验证。  
 
-如上一个示例所示，当使用 Web 代理服务器（如 ISA 服务器和前端威胁管理网关）将基于 Internet 的站点系统发布到 Internet 时，可以将这些系统放置在 Intranet 中。 可以仅为 Internet 客户端连接配置这些站点系统，或者可以为 Internet 和 Intranet 客户端连接配置这些站点系统。 使用 Web 代理服务器时，可以针对到 SSL 的安全套接字层 (SSL) 桥接或 SSL 隧道来配置它：  
+如上一个示例所示，当使用 Web 代理服务器（如 ISA 服务器和前端威胁管理网关）将基于 Internet 的站点系统发布到 Internet 时，可以将这些系统放置在 Intranet 中。 可以仅为 Internet 客户端连接配置这些站点系统，或者可以为 Internet 和 Intranet 客户端连接配置这些站点系统。 使用 Web 代理服务器时，可以针对到 SSL 的安全套接字层 (SSL) 桥接或 SSL 隧道来配置它，如下所示：  
 
 -   **到 SSL 的 SSL 桥接：**   
     为基于 Internet 的客户端管理使用代理 Web 服务器时建议的配置是到 SSL 的 SSL 桥接，此配置使用 SSL 终止操作和身份验证。 必须使用计算机身份验证对客户端计算机进行身份验证，使用用户身份验证对移动设备旧客户端进行身份验证。 通过 Configuration Manager 注册的移动设备不支持 SSL 桥接。  
 
      代理 Web 服务器上的 SSL 终止的优点是：在将来自 Internet 的数据包转发到内部网络之前，会对该数据包进行检测。 代理 Web 服务器将对来自客户端的连接进行验证，将其终止，然后建立一个新的经身份验证的连接，连接到基于 Internet 的站点系统。 当 Configuration Manager 客户端使用代理 Web 服务器时，客户端标识（客户端 GUID）安全地包含在数据包有效负载内，因而管理点不会将代理 Web 服务器视为客户端。 Configuration Manager 中不支持 HTTP 到 HTTPS 的桥接，或 HTTPS 到 HTTP 的桥接。  
 
--   **隧道**：   
+-   隧道：   
     如果代理 Web 服务器无法支持 SSL 桥接的要求，或者想对通过 Configuration Manager 注册的移动设备配置 Internet 支持，则也支持 SSL 隧道。 这是一项安全性较差的选项，因为来自 Internet 的 SSL 数据包会在不终止 SSL 的情况下转发到站点系统，因此无法检测其是否包含恶意内容。 使用 SSL 隧道时，代理 Web 服务器不需要证书。  
 
 ##  <a name="a-nameplancomx-foresta-communications-across-active-directory-forests"></a><a name="Plan_Com_X-Forest"></a> 跨 Active Directory 林的通信  
@@ -142,11 +142,11 @@ Configuration Manager 也支持与站点服务器不在相同 Active Directory �
 
     -   将工作组客户端配置为使用网络访问帐户，以便这些计算机可以从分发点中检索内容。  
 
-    -   为工作组客户端提供替代机制以查找管理点。 你可以使用 DNS 发布或 WINS，或者可以直接分配管理点。 这是因为这些客户端无法从 Active Directory 域服务中检索站点信息。  
+    -   为工作组客户端提供替代机制以查找管理点。 可以使用 DNS 发布或 WINS，或者可以直接分配管理点。 这是因为这些客户端无法从 Active Directory 域服务中检索站点信息。  
 
     此内容库中的相关资源：  
 
-    -   [为 Configuration Manager 客户端管理冲突的记录](../../../core/clients/manage/manage-clients.md#BKMK_ConflictingRecords)  
+    -   [为 Configuration Manager 客户端管理冲突记录](../../../core/clients/manage/manage-clients.md#BKMK_ConflictingRecords)  
 
     -   [网络访问帐户](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#accounts-used-for-content-management)  
 
@@ -164,7 +164,7 @@ Configuration Manager 也支持与站点服务器不在相同 Active Directory �
 > [!NOTE]  
 >  子站点可以是主站点（其中，管理中心站点为父站点）或辅助站点。  
 
-Configuration Manager 中的站点间通信使用数据库复制和基于文件的传输。 在安装站点时，必须指定帐户以在指定服务器上安装该站点。 此帐户还建立并维护站点之间的通信。  
+Configuration Manager 中的站点间通信使用数据库复制和基于文件的传输。 在安装站点时，必须指定用于在指定服务器上安装该站点的帐户。 此帐户还建立并维护站点之间的通信。  
 
 当站点成功安装并启动基于文件的传输和数据库复制之后，你不必为站点通信进行任何其他配置。  
 
@@ -191,11 +191,11 @@ Configuration Manager 中的站点间通信使用数据库复制和基于文件�
 
 -   该应用程序目录 Web 服务点是唯一的例外。  仅在站点服务器所在的同一个林中受支持。  
 
-当站点系统角色接受来自 Internet 的连接时，作为最佳安全方案，请在林边界为站点服务器提供保护的位置（例如，在外围网络中）安装这些站点系统角色。  
+-   当站点系统角色接受来自 Internet 的连接时，作为最佳安全方案，请在林边界为站点服务器提供保护的位置（例如，在外围网络中）安装这些站点系统角色。  
 
 **若要在位于不受信任的林中的计算机上安装站点系统角色：**  
 
--   必须指定用于安装站点系统角色的“站点系统安装帐户”  。 此帐户必须具有本地管理凭据才能连接到指定的计算机，然后在该计算机上安装站点系统角色。  
+-   必须指定用于安装站点系统角色的“站点系统安装帐户”。 （该帐户必须具有要连接的本地管理凭据。）然后在指定计算机上安装站点系统角色。  
 
 -   必须选择站点系统选项“要求站点服务器启动到此站点系统的连接” 。 这需要站点服务器建立到站点系统服务器的连接以传输数据。 这会阻止不受信任位置中的计算机与信任的网络中的站点服务器联系。 这些连接使用“站点系统安装帐户” 。  
 
@@ -221,7 +221,7 @@ Configuration Manager 中的站点间通信使用数据库复制和基于文件�
 
 管理点和注册点站点系统角色均将连接到站点数据库。  
 
--   默认情况下，在安装这些站点系统角色时，Configuration Manager 会将新站点系统服务器的计算机帐户配置为该站点系统角色的连接帐户，并将该帐户添加到合适的 SQL Server 数据库角色中。  
+-   默认情况下，在安装这些站点系统角色时，Configuration Manager 会将新站点系统服务器的计算机帐户配置为该站点系统角色的连接帐户，然后将该帐户添加到合适的 SQL Server 数据库角色中。  
 
 -   在不受信任的域中安装这些站点系统角色时，你必须配置站点系统角色连接帐户以使站点系统角色能够从数据库中获取信息。  
 
@@ -233,20 +233,20 @@ Configuration Manager 中的站点间通信使用数据库复制和基于文件�
 
 在规划其他林中的站点系统角色时，请考虑以下其他信息：  
 
--   如果运行 Windows 防火墙，请配置合适的防火墙配置文件，以传递站点数据库服务器与随远程站点系统角色一起安装的计算机之间的通信。 有关防火墙配置文件的信息，请参阅 [了解防火墙配置文件](http://go.microsoft.com/fwlink/p/?LinkId=233629)。  
+-   如果运行 Windows 防火墙，请配置合适的防火墙配置文件，以传递站点数据库服务器与随远程站点系统角色一起安装的计算机之间的通信。 有关防火墙配置文件的信息，请参阅[了解防火墙配置文件](http://go.microsoft.com/fwlink/p/?LinkId=233629)。  
 
 -   当基于 Internet 的管理点信任包含用户帐户的林时，支持用户策略。 当不存在信任时，仅支持计算机策略。  
 
 #### <a name="communication-between-clients-and-site-system-roles-when-the-clients-are-not-in-the-same-active-directory-forest-as-their-site-server"></a>当客户端与其站点服务器不在相同 Active Directory 林中时客户端与站点系统角色之间的通信  
 Configuration Manager 对不在其站点的站点服务器所在的相同林中的客户端支持以下方案：  
 
--   客户端的林与站点服务器的林之间存在双向林信任  
+-   客户端的林与站点服务器的林之间存在双向林信任。  
 
--   站点系统角色服务器与客户端在相同林中  
+-   站点系统角色服务器与客户端在相同林中。  
 
--   客户端在与站点服务器之间没有双向林信任的域计算机上，客户端林中未安装站点系统角色  
+-   客户端在与站点服务器之间没有双向林信任的域计算机上，客户端林中未安装站点系统角色。  
 
--   客户端在工作组计算机上  
+-   客户端在工作组计算机上。  
 
 当加入域的计算机上的客户端的站点已发布到其 Active Directory 林时，这些客户端可以将 Active Directory 域服务用于服务定位。  
 
@@ -261,6 +261,6 @@ Configuration Manager 对不在其站点的站点服务器所在的相同林中�
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

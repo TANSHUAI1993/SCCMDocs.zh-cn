@@ -2,7 +2,7 @@
 title: CEIP | Microsoft Docs
 description: "了解 System Center Configuration Manager 的客户体验改善计划设置。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
-ms.openlocfilehash: 76d268adda39b7d30f91d640ded81df85ba300d3
+ms.sourcegitcommit: 24a233516058e645df2a43623855665b97b041b0
+ms.openlocfilehash: dddb6d960269a0d7655597cd9a1ccb31b382853c
 
 
 ---
@@ -25,18 +25,18 @@ ms.openlocfilehash: 76d268adda39b7d30f91d640ded81df85ba300d3
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-在 System Center Configuration Manager 控制台的安装过程中，你可以选择参与**客户体验改善计划** (CEIP)。 尽管 CEIP 在默认情况下处于关闭状态，但如果之前已启用，则它将保持启用状态。  
+在 System Center Configuration Manager 控制台的安装过程中，可以选择参与**客户体验改善计划** (CEIP)。 尽管 CEIP 在默认情况下处于关闭状态，但如果之前已启用，则它将保持启用状态。  
 
 -   CEIP 独立于 [System Center Configuration Manager 的诊断和使用情况数据](../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md)。  
 
--   CEIP 基于控制台，收集用户界面中每个元素的单击次数等数据。  
+-   CEIP 基于控制台，可以收集用户界面中每个元素的选择次数等数据。  
 
 -   在线阅读 [CEIP 隐私声明](https://www.microsoft.com/products/ceip/en-us/privacypolicy.mspx)。  
 
-可在安装控制台时更改 CEIP 设置。 在控制台中，转到“控制台 Backstage”选项卡（左上角带下拉箭头的选项卡），并选择“客户体验改善计划”以更改设置。  
+可在安装控制台时更改 CEIP 设置。 在控制台中，转到“控制台的 Backstage”选项卡（左上角带下拉箭头的选项卡），并选择“客户体验改善计划”以更改设置。  
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

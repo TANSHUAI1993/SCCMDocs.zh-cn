@@ -15,8 +15,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 54089ac8aa95154534d010bee8c7e2cbd70d1c7e
-ms.openlocfilehash: 30838ed3ad045f781a748f96c874bf543ea05462
+ms.sourcegitcommit: c92d88517b4e1d54add489a53cd34b0f23be0c4c
+ms.openlocfilehash: 04951b3ed50206941850ddcc893fcf9c9596f89f
 
 
 ---
@@ -28,7 +28,8 @@ ms.openlocfilehash: 30838ed3ad045f781a748f96c874bf543ea05462
 
 1. 在捕获文件和设置之后，并在安装操作系统之前，创建新的任务序列组。 例如，在“捕获文件和设置”组之后创建名为“BIOS-to-UEFI”的组。
 2. 在新组的“选项”选项卡中，添加一个新的任务序列变量作为条件，其中 **_SMSTSBootUEFI** ** 不等于** **true**。 这样可以在计算机已处于 UEFI 模式时，防止运行组中的步骤。
-![BIOS 转 UEFI 组](../../core/get-started/media/BIOS-to-UEFI-group.png)
+
+   ![BIOS 转 UEFI 组](../../core/get-started/media/BIOS-to-UEFI-group.png)
 3. 在新组中，添加“重启计算机”任务序列步骤。 在“指定重启后要运行的内容”中，选择“已选择分配给此任务序列的启动映像”以在 Windows PE 中启动计算机。  
 4. 在“选项”选项卡中，添加一个任务序列变量作为条件，其中 **_SMSTSInWinPE 等于 false**。 这样在计算机已处于 Windows PE 时，防止运行此步骤。
 
@@ -36,14 +37,16 @@ ms.openlocfilehash: 30838ed3ad045f781a748f96c874bf543ea05462
 5. 添加一个步骤以启动 OEM 工具，该工具可将固件从 BIOS 转换到 UEFI。 这通常是**运行命令行**任务序列步骤，其中有一个命令行可以启动 OEM 工具。
 6.  添加“格式化磁盘并分区”任务序列步骤，用于对硬盘进行分区和格式化。 在该步骤中，执行以下操作：
     1.  创建 FAT32 分区，该分区在安装操作系统之前将转换为 UEFI。 为“磁盘类型”选择“GPT”。
-    ![格式化磁盘并分区步骤](../../core/get-started/media/format-and-partition-disk.png)
+
+       ![格式化磁盘并分区步骤](../media/format-and-partition-disk.png)
     2.  转到 FAT32 分区的属性。 在“变量”字段中输入“TSUEFIDrive”。 当任务序列检测到此变量时，它将为 UEFI 转换做准备，准备就绪后会重启计算机。
-    ![分区属性](../../core/get-started/media/partition-properties.png)
+
+       ![分区属性](../../core/get-started/media/partition-properties.png)
     3. 创建 NTFS 分区，任务序列引擎使用此分区保存其状态和存储日志文件。
-6.  添加“重启计算机”任务序列步骤。 在“指定重启后要运行的内容”中，选择“已选择分配给此任务序列的启动映像”以在 Windows PE 中启动计算机。  
+7.  添加“重启计算机”任务序列步骤。 在“指定重启后要运行的内容”中，选择“已选择分配给此任务序列的启动映像”以在 Windows PE 中启动计算机。  
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

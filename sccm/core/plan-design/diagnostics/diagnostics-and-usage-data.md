@@ -2,7 +2,7 @@
 title: "诊断和使用情况数据 | Microsoft Docs"
 description: "了解 System Center Configuration Manager 收集的关于其自身的诊断和使用情况数据。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3d113c55726efe674b79ef5ecb26aac8c893cba2
-ms.openlocfilehash: ac3395c82cb570960bf2c3b98cd06e282e64b1a5
+ms.sourcegitcommit: 24a233516058e645df2a43623855665b97b041b0
+ms.openlocfilehash: 54ec4886eaad6999cdf3ffff7411942859f1a5b2
 
 
 ---
@@ -33,9 +33,9 @@ System Center Configuration Manager 收集有关自身的诊断和使用情况�
 > [!NOTE]  
 >  Configuration Manager 仅从站点 SQL Server 数据库收集数据，而不会直接从客户端或站点服务器收集数据。  
 
- 有关详细信息，请参见 [System Center Configuration Manager 隐私声明](http://go.microsoft.com/fwlink/?LinkID=626527)。  
+ 有关详细信息，请参阅 [System Center Configuration Manager 隐私声明](http://go.microsoft.com/fwlink/?LinkID=626527)。  
 
- 可在以下主题中详细了解 System Center Configuration Manager 的诊断和使用数据：  
+ 可在以下文章中详细了解 System Center Configuration Manager 的诊断和使用数据：  
 
 -   [如何将诊断和使用情况数据用于 System Center Configuration Manager](../../../core/plan-design/diagnostics/how-diagnostics-and-usage-data-is-used.md)  
 
@@ -58,6 +58,6 @@ System Center Configuration Manager 收集有关自身的诊断和使用情况�
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

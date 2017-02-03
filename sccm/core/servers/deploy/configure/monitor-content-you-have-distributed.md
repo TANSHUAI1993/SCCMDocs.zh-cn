@@ -2,7 +2,7 @@
 title: "监视内容 | Microsoft Docs"
 description: "了解如何使用 Configuration Manager 控制台监视分发的内容。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/4/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
-ms.openlocfilehash: 9a5d2c3a3c6bdca05b5b00fa4d746c437a56ef89
+ms.sourcegitcommit: 4d34a272a93100426cccd2308c5b3b0b0ae94a60
+ms.openlocfilehash: 60f30fd6477f1ee8755e50ceb9cc17d43ef8ea68
 
 ---
 # <a name="monitor-content-you-have-distributed-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 监视分发的内容
@@ -156,12 +156,21 @@ ms.openlocfilehash: 9a5d2c3a3c6bdca05b5b00fa4d746c437a56ef89
 > [!TIP]  
 > 1610 版本中，对等缓存和“客户端数据源”仪表板均为预发行功能。 若要启用这些功能，请参阅[使用更新中的预发行功能](/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease)。
 
-在控制台中，转到“监视” > “客户端状态” > “客户端数据源”。 在此处可以选择要应用于仪表板的时间段。 然后在显示中，可以选择要查看其信息的边界组或包。 查看信息时，可以将鼠标悬停在表面上方，以查看有关不同内容或策略源的更多详细信息。  
+在控制台中，转到“监视” > “客户端状态” > “客户端数据源”。 在此处可以选择要应用于仪表板的时间段。 然后在显示中，可以选择要查看其信息的边界组或包。 查看信息时，可以将鼠标悬停在表面上方，以查看有关不同内容或策略源的更多详细信息。
+
+详细信息:  
+- **客户端内容源**：显示客户端从其处获取内容的源。
+- **分发点**：显示属于所选边界组的分发点的数量。
+- **使用分发点的客户端**：显示所选边界组中使用了分发点来获取内容的客户端的数量。
+- **对等缓存源**：对于所选的边界组，显示已报出曾进行过下载操作的对等缓存源的数量。
+- “使用对等的客户端”：是所选边界组中的客户端数，显示使用对等缓存源来获取内容的客户端数。
+
+
 
 还可以使用新报表“客户端数据源 - 摘要”查看每个边界组的客户端数据源摘要。
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 
