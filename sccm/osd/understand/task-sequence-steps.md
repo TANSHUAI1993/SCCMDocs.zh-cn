@@ -2,7 +2,7 @@
 title: "任务序列步骤 | Microsoft Docs"
 description: "了解可添加到 Configuration Manager 任务序列的任务序列步骤。"
 ms.custom: na
-ms.date: 12/07/2016
+ms.date: 01/04/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3f44505c977b511223a083a960f871371c0ff133
-ms.openlocfilehash: 6e324eb97c0e803d382371ace541a4b9f96e6ba3
+ms.sourcegitcommit: 46c8004afee4b18d5c7a2fcc5dac0f7d0d1f823c
+ms.openlocfilehash: 2898afdea131f4114bc645cb11a2c6ffacb42417
 
 
 ---
@@ -1377,7 +1377,7 @@ Configuration Manager 版本 1606 中引入了一个新的任务序列变量 SMS
  当在命令行上指定了目标计算机上尚不存在的文件或程序时，请选择此选项以指定包含合适的文件的 Configuration Manager 包。 此包不需要程序。 如果指定的文件在目标计算机上，则不需要此选项。  
 
  **超时**  
- 指定表示 Configuration Manager 将允许命令行运行的时间长度的值。 此值的范围为 10 分钟至 999 分钟。 默认值为 15 分钟。  
+ 指定表示 Configuration Manager 将允许命令行运行的时间长度的值。 此值的范围为 1 分钟至 999 分钟。 默认值为 15 分钟。  
 
  默认情况下禁用此选项。  
 
@@ -1696,6 +1696,6 @@ Configuration Manager 版本 1606 中引入了一个新的任务序列变量 SMS
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

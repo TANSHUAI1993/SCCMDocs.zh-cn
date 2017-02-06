@@ -2,7 +2,7 @@
 title: "创建可启动媒体 | Microsoft Docs"
 description: "Configuration Manager 中的可启动媒体有助于更轻松地安装新版本的 Windows 或替换计算机和传输设置。"
 ms.custom: na
-ms.date: 12/06/2016
+ms.date: 12/21/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 03722ff4f480cd26842e395fe1f7ec8359e2b33e
-ms.openlocfilehash: a7bdad82dc55b4c0fe7d892ef34cc6aa0dfbf476
+ms.sourcegitcommit: 66cd6d099acdd9db2bc913a69993aaf5e17237fe
+ms.openlocfilehash: 0a4c2b41f899f6e243e7eb825082514114226a8f
 
 
 ---
@@ -47,7 +47,7 @@ Configuration Manager 中的可启动媒体包含启动映像、可选的预启�
 
  使用以下过程来创建可启动媒体。  
 
-#### <a name="to-create-bootable-media"></a>创建可启动媒体  
+### <a name="to-create-bootable-media"></a>创建可启动媒体  
 
 1.  在 Configuration Manager 控制台中，单击“软件库” 。  
 
@@ -146,11 +146,18 @@ Configuration Manager 中的可启动媒体包含启动映像、可选的预启�
 
 10. 完成向导。  
 
+## <a name="create-bootable-media-on-a-usb-drive-from-a-network-share"></a>在 USB 驱动器上从网络共享创建可启动媒体
+当闪存驱动器未连接到运行 Configuration Manager 控制台的计算机时，可借助此部分信息在闪存驱动器上创建可启动媒体。 若要在 USB 驱动器上创建可启动媒体，可创建任务序列启动媒体、装载 ISO 并将文件从 ISO 传输到 USB 驱动器。
+
+1. [创建任务序列启动媒体](#to-create-task-boobable-media)。 在“媒体类型”页上，选择“CD/DVD 集”。 向导会将输出文件写入到指定位置。 例如：**\\\servername\folder\outputfile.iso**。  
+2. 准备可移动的 USB 驱动器。 该驱动器必须经过格式化处理并且为可启动的空驱动器。
+3. 从共享位置装载 ISO，并将文件从 ISO 传输到 USB 驱动器。
+
 ## <a name="next-steps"></a>后续步骤  
 [使用可启动媒体通过网络部署 Windows](use-bootable-media-to-deploy-windows-over-the-network.md)  
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO4-->
 
 

@@ -2,7 +2,7 @@
 title: "如何为使用 System Center Configuration Manager 客户端管理的 Mac OS X设备创建配置项目 | Microsoft Docs"
 description: "使用 System Center Configuration Manager Mac OS X 配置项目管理对 Mac OS X 设备的设置。"
 ms.custom: na
-ms.date: 11/18/2016
+ms.date: 12/27/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
-ms.openlocfilehash: f3d08d7f8efb592383e1099850665a2e9f3b2b5f
+ms.sourcegitcommit: 8bbc0d0132fa4276ade8914d5ac3945ef1d12a4b
+ms.openlocfilehash: be7a9464ef4ac6042a46652a325583a355f23846
 
 
 ---
@@ -54,7 +54,11 @@ ms.openlocfilehash: f3d08d7f8efb592383e1099850665a2e9f3b2b5f
 
              例如，如果您想要编辑的 Safari Web 浏览器设置，则可能会使用 **com.apple.Safari.plist**。  
 
-        -   **密钥** – 指定要在 Mac 计算机上的符合性评估的键的名称。 使用以下语法：*/<dictionary\>/<keyname\>*。  
+        -   **密钥** – 指定要在 Mac 计算机上的符合性评估的键的名称。 使用以下语法： 
+        
+            ```
+            */<dictionary\>/<keyname\>*.  
+            ```     
 
             > [!IMPORTANT]  
             >  键名区分大小写，如果这些名称与 Mac 计算机上的键名不同，将不会对它们进行评估。 而且，无法在指定键名后对其进行编辑。 如果您需要编辑的项名称，删除并重新创建该设置。  
@@ -173,6 +177,6 @@ ms.openlocfilehash: f3d08d7f8efb592383e1099850665a2e9f3b2b5f
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

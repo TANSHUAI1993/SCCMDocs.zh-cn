@@ -2,7 +2,7 @@
 title: "配置硬件清单 | Microsoft Docs | 移动设备"
 description: "配置通过 Microsoft Intune 和 System Center Configuration Manager 注册的移动设备的硬件清单。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/26/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
-ms.openlocfilehash: 6db22a2ddce1afb471cf8b603c6d98f7f0acbc15
+ms.sourcegitcommit: 9206b82eca02877c30eebf146d42bcca7290eb42
+ms.openlocfilehash: be954724587e68e92e5d8f5cecd712dfd5df278e
 
 
 ---
@@ -25,9 +25,9 @@ ms.openlocfilehash: 6db22a2ddce1afb471cf8b603c6d98f7f0acbc15
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-在 System Center Configuration Manager 中，可以使用 Microsoft Intune 连接器收集 iOS、Android 和 Windows 设备上的硬件清单。 有关如何配置硬件清单的信息，请参阅[如何在 System Center Configuration Manager 中扩展硬件清单](../../../../core/clients/manage/inventory/extend-hardware-inventory.md)。  
+在 Configuration Manager 中，可以使用 Microsoft Intune 连接器收集 iOS、Android 和 Windows 设备上的硬件清单。 有关如何配置硬件清单的信息，请参阅[如何在 System Center Configuration Manager 中扩展硬件清单](../../../../core/clients/manage/inventory/extend-hardware-inventory.md)。  
 
- 若要了解如何向 Microsoft Intune 注册设备的信息，请参阅[使用 Microsoft Intune 管理移动设备](https://technet.microsoft.com/en-us/library/dn646962.aspx)。  
+ 若要了解如何在 Microsoft Intune 中注册设备的信息，请参阅[使用 Microsoft Intune 管理移动设备](https://technet.microsoft.com/en-us/library/dn646962.aspx)。  
 
 ## <a name="hardware-inventory-for-mobile-devices"></a>移动设备的硬件清单  
  下表列出了跨常用移动平台可用于硬件清单的清单类。  
@@ -141,6 +141,6 @@ ms.openlocfilehash: 6db22a2ddce1afb471cf8b603c6d98f7f0acbc15
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

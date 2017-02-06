@@ -5,7 +5,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 11/10/2016
+ms.date: 01/04/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
@@ -13,8 +13,8 @@ ms.technology:
 - configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
 translationtype: Human Translation
-ms.sourcegitcommit: 5415bfa0ac4af14891a9445cdeab6a4509fffc38
-ms.openlocfilehash: 630ccdf7b7f45a88586c9ab530c164985267bec9
+ms.sourcegitcommit: 46c8004afee4b18d5c7a2fcc5dac0f7d0d1f823c
+ms.openlocfilehash: fb2fc409c2f734816e4f3bf93d61a748d957ebf0
 
 ---
 
@@ -50,7 +50,7 @@ ms.openlocfilehash: 630ccdf7b7f45a88586c9ab530c164985267bec9
 - On the lower-right side of the dashboard, click **Create Client Agent Settings** to open Client Agent settings. For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings).
 --->
 
-#### <a name="to-deploy-office-365-updates-with-configuration-manager"></a>使用 Configuration Manager 部署 Office 365 更新
+## <a name="deploy-office-365-updates-with-configuration-manager"></a>使用 Configuration Manager 部署 Office 365 更新
 使用以下步骤通过 Configuration Manager 部署 Office 365 更新：
 
 1.  在本主题的**使用 Configuration Manager 管理 Office 365 客户端更新的要求**部分，验证使用 Configuration Manager 管理 Office 365 客户端更新的[要求](https://technet.microsoft.com/library/mt628083.aspx)。  
@@ -69,11 +69,45 @@ ms.openlocfilehash: 630ccdf7b7f45a88586c9ab530c164985267bec9
 
 4. [将 Office 365 更新部署](deploy-software-updates.md)到客户端。  
 
+<!--  ## Add other languages for Office 365 update downloads
+Beginning in Configuration Manager version 1610, you can add support for Configuration Manager to download updates for any languages supported by Office 365 regardless of whether they are supported in Configuration Manager.
+
+### To add support to download updates for additional languages
+Use the following procedure on the central administration site, or stand-alone primary site, where the software update point site system role is installed.
+1. From a command prompt, type *wbemtest* as an administrative user to open the Windows Management Instrumentation Tester.
+2. Click **Connect**, and then type *root\sms\site_<siteCode>*.
+3. Click **Query**, and then run the following query:
+   *select &#42; from SMS_SCI_Component where componentname ="SMS_WSUS_CONFIGURATION_MANAGER"*
+4. Double-click the object with the site code for the central administration site or stand-alone primary site.
+
+5. Browse the properties for View Embedded.
+3). Find the SMS_EmbeddedProperty instance with the PropertyName of "AdditionalUpdateLanguagesForO365"
+4). Set Value2 to be additional languages, e.g.:  pt-pt,af-za,nn-no, and save
+5). Right click to download an O365 update, choose languages from UI
+6). Verify that the language packs got downloaded including the UI specified ones plus the SDK specified ones. Admin can check the content package share specified to verify this.
+-->
+
+<!-- ## Change the update channel after you enable Office 365 clients to receive updates from Configuration Manager
+To change the update channel after you enable Office 365 clients to receive updates from Configuration Manager, you must distribute a registry key value change to Office 365 clients using group policy. Change the **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration\CDNBaseUrl** registry key to use one of the following values:
+
+- Current Channel:  
+  **CDNBaseUrl** = http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60
+
+- Deferred Channel:  
+  **CDNBaseUrl** = http://officecdn.microsoft.com/pr/7ffbc6bf-bc32-4f92-8982-f9dd17fd3114
+
+- First Release for Current Channel:  
+  **CDNBaseUrl** = http://officecdn.microsoft.com/pr/64256afe-f5d9-4f86-8936-8840a6a4f5be
+
+- First Release for Deferred Channel:  
+  **CDNBaseUrl** = http://officecdn.microsoft.com/pr/b8f9b850-328d-4355-9145-c59439a0c4cf
+-->
+
 <!--- ## Next steps
 Use the Office 365 Client Management dashboard in Configuration Manager to review Office 365 client information and deploy Office 365 apps. For details, see [Manage Office 365 apps](manage-office-365-apps.md). --->
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

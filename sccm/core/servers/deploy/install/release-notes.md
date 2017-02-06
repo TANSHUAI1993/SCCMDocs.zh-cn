@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: ea723a6694feb2c9584b35498aa9c3519383f08d
-ms.openlocfilehash: a9dc046a54c15d9d299664cd1f2a149383f53489
+ms.sourcegitcommit: c6358d65609605bfef3ac533f4caa0df1cfce0c5
+ms.openlocfilehash: 73208c8e9ec15e96a6caaf20b74c1f94d92a8975
 
 
 ---
@@ -247,6 +247,12 @@ System Center Configuration Manager 版本 1602 引入了两项预发行功能�
 **解决方法**：    
 创建维护计划后，打开维护计划的属性，转到“评估计划”选项卡，选择“按计划运行此规则”，单击“自定义”，然后创建自定义计划。 例如，你可以将维护计划设置为每 60 天运行一次。  
 
+### <a name="when-a-high-risk-deployment-dialog-is-visible-to-a-user-subsequent-high-risk-dialogs-with-a-sooner-deadline-are-not-displayed"></a>对用户显示高风险部署对话框时，不会显示截止时间较早的后续高风险对话框
+为用户创建并部署高风险任务部署后，会向用户显示一个高风险对话框。 如果用户不关闭该对话框，你可创建并部署另一个高风险部署（截止时间早于第一个对话框），用户在关闭原始对话框之前不会收到更新的对话框。 部署仍将运行至配置的截止时间。
+
+**解决方法**：  
+用户必须在关闭第一个高风险部署对话框后，才能查看下一个高风险部署对话框。
+
 ## <a name="mobile-device-management"></a>移动设备管理  
 
 ### <a name="cannot-create-an-enrollment-profile-on-a-primary-site"></a>无法在主站点上创建注册配置文件  
@@ -291,6 +297,6 @@ System Center Configuration Manager 版本 1602 引入了两项预发行功能�
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Dec16_HO5-->
 
 

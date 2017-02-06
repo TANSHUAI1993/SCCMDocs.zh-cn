@@ -2,7 +2,7 @@
 title: "System Center Configuration Manager Technical Preview 1612 中的功能 | Microsoft Docs"
 description: "了解 System Center Configuration Manager Technical Preview（版本 1612）中的可用功能。"
 ms.custom: na
-ms.date: 12/16/2016
+ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.technology:
 - configmgr-other
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 15d442ba52b991ea7888d0113610fe4800424f8d
-ms.openlocfilehash: f0421efbc01443288d3591fa9748a8f71fef8a0d
+ms.sourcegitcommit: e7075eb675353be130fdcc867d9e4dd1009dab35
+ms.openlocfilehash: 2de36316b20b2a7b2937d767e618f4fec1affb69
 
 ---
 # <a name="capabilities-in-technical-preview-1612-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1612 中的功能
@@ -67,6 +67,7 @@ ms.openlocfilehash: f0421efbc01443288d3591fa9748a8f71fef8a0d
   - 位于默认或命名的实例上
   - 位于 SQL Server 群集上。 尽管此配置应可正常工作，但尚未经过测试，因此支持人员正尽其最大努力。
   - 与站点数据库或 Reporting Services 点数据库共存时。 但是，我们建议在单独的服务器上进行安装。  
+- 用作 *Reporting Services 点帐户*的帐户必须具有对数据仓库数据库的 **db_datareader** 权限。  
 - SQL Server AlwaysOn 可用性组上不支持该数据库。
 
 ### <a name="install-the-data-warehouse"></a>安装数据仓库
@@ -100,6 +101,8 @@ ms.openlocfilehash: f0421efbc01443288d3591fa9748a8f71fef8a0d
   - **同步时间间隔（分钟）** - 以分钟为单位指定一个值。 到时间间隔后，会开始新的同步。 支持范围为 60 到 1440 分钟（24 小时）。
   - **计划** - 指定同步进行的天数。
 
+**报表点访问**：   
+安装数据仓库角色后，请确保用作 *Reporting Services 点帐户*的帐户具有对数据仓库数据库的 **db_datareader** 权限。
 
 #### <a name="troubleshoot-installation-and-data-synchronization"></a>安装和数据同步故障排除
 使用以下日志，调查数据仓库服务点安装或数据同步方面的问题：
@@ -313,6 +316,6 @@ Azure Active Directory (AD) 载入会创建一个其他云服务使用的 Config
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 
