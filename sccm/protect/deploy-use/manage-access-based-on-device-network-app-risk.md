@@ -12,8 +12,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4c0e6824-2dfe-4700-b817-d5631e0eb872
 caps.latest.revision: 
-author: nathbarn
-ms.author: nathbarn
+author: andredm7
+ms.author: andredm
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: c13c6268fa76ade7feb0981f9c4a6e325e393aca
@@ -93,11 +93,11 @@ SCCM 中的合规性策略现在包含针对 Lookout Mobile Threat Protection �
 
 ## <a name="next-steps"></a>后续步骤
 以下是实现此解决方案必须执行的主要步骤：
-1.  [使用 Lookout 移动威胁保护设置订阅](set-up-your-subscription-with-lookout.md)
-2.  [在 Intune 中启用 Lookout MTP 连接](enable-lookout-connection-in-intune.md)
+1.    [使用 Lookout 移动威胁保护设置订阅](set-up-your-subscription-with-lookout.md)
+2.    [在 Intune 中启用 Lookout MTP 连接](enable-lookout-connection-in-intune.md)
 3.  [配置和部署 Lookout for Work 应用程序](configure-and-deploy-lookout-for-work-apps.md)
-4.  [配置合规性策略](enable-device-threat-protection-rule-compliance-policy.md)
-5.  [对 Lookout 集成进行故障排除](troubleshoot-lookout-integration.md)
+4.    [配置合规性策略](enable-device-threat-protection-rule-compliance-policy.md)
+5.    [对 Lookout 集成进行故障排除](troubleshoot-lookout-integration.md)
 
 
 
