@@ -16,8 +16,8 @@ author: mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: 808327495c66f4e6ad86ab144455014171a453b2
+ms.sourcegitcommit: d242c9ae0ca6e3a3f3bee3a93176b9ab802319ae
+ms.openlocfilehash: a75cba2a6bb280c29f300c8ef2d3fbfbc7a558d2
 
 
 ---
@@ -75,6 +75,8 @@ Windows 注册选项包括：
 ### <a name="create-dns-alias-for-device-enrollment"></a>创建 DNS 别名以进行设备注册  
  通过在设备注册期间自动填充服务器名称，DNS 别名（CNAME 记录类型）可让用户更轻松地注册其设备。 若要创建 DNS 别名（CNAME 记录类型），必须在公司的 DNS 记录中配置 CNAME，将发送给公司域名中的 URL 的请求重定向到 Microsoft 的云服务服务器。  例如，贵公司的域为 contoso.com，则应在 DNS 中创建将 EnterpriseEnrollment.contoso.com 重定向到 EnterpriseEnrollment-s.manage.microsoft.com 的 CNAME。  
 
+ 虽然可选择性创建 CNAME DNS 条目，但 CNAME 记录可简化用户的注册。 如果找不到注册 CNAME 记录，系统会提示用户手动输入 MDM 服务器名称 [https://enrollment.manage.microsoft.com](https://enrollment.manage.microsoft.com)。
+
 |类型|主机名|指向|  
 |----------|---------------|---------------|  
 |CNAME|EnterpriseEnrollment.company_domain.com|EnterpriseEnrollment-s.manage.microsoft.com|  
@@ -118,6 +120,6 @@ Windows 注册选项包括：
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 
