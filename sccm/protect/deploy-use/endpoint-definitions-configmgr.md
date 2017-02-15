@@ -2,7 +2,7 @@
 title: "Endpoint Protection 恶意软件定义 | Microsoft Docs"
 description: "了解如何配置 Configuration Manager 软件更新以将定义更新交付到客户端计算机。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

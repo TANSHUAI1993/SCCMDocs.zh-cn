@@ -2,7 +2,7 @@
 title: "网络共享中的 Endpoint Protection 恶意软件定义 | Microsoft Docs"
 description: "了解如何从 Microsoft 手动下载最新定义更新，然后将客户端配置为下载这些定义。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

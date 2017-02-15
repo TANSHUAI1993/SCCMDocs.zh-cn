@@ -2,7 +2,7 @@
 title: "网络共享中的 Endpoint Protection 恶意软件定义 | Microsoft Docs"
 description: "了解如何可以实现从 Microsoft 更新为 Configuration Manager 下载 Endpoint Protection 的恶意软件定义。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
