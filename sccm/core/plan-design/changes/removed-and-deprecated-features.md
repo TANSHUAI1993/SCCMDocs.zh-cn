@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f912bb82b8d753f01b15f96eec5099c3f92abe75
-ms.openlocfilehash: 18b411b05dd6fc9b572e1d3d201876172bb40d07
+ms.sourcegitcommit: 1948e2914fff91f156dd8956c018ff0fabcda2f9
+ms.openlocfilehash: 3a1edd1b59676e59d4bfcd4c01a23f7a04f91f4f
 
 
 ---
@@ -50,6 +50,7 @@ ms.openlocfilehash: 18b411b05dd6fc9b572e1d3d201876172bb40d07
 |-|-|-|  
 |网络访问保护 (NAP)- 在 System Center 2012 Configuration Manager 中找到|2015 年 10 月|版本 1511|  
 |带外管理- 在 System Center 2012 Configuration Manager 中找到|2015 年 10 月 16 日|版本 1511|
+|任务序列： <br /> - OSDPreserveDriveLetter  <br /><br /> 现在，在操作系统部署期间，默认情况下，Windows 安装程序会确定要使用的最佳驱动器号（通常为 C:）。 如果想要指定使用另一个驱动器，可以在“应用操作系统”任务序列步骤中更改位置。 转到“选择要应用此操作系统的位置”设置，选择“特定逻辑驱动器号”，然后选择要使用的驱动器。 |2016 年 6 月 20 日 |版本 1606 |
 |任务序列： <br /> - 将磁盘转换为动态磁盘 <br /> - 安装部署工具 |2016 年 11 月 18 日|对这些任务序列的支持随 2017 年 6 月 1 日后发布的首个更新结束。|
 |软件中心将呈现新式外观。 并且本应仅出现在依赖于 Silverlight 的应用程序目录中的应用（用户可用的应用）现在将出现在“应用程序”选项卡中的软件中心。 应用程序目录仍然可以通过软件中心的“安装状态”选项卡中的链接进行访问。<br><br>在未来几个月，以前版本的软件中心将不再可用。<br><br>你可以通过启用客户端设置“计算机代理” > “使用新的软件中心”来使用新的软件中心。<br><br>有关软件中心的详细信息，请参阅[规划和配置 System Center Configuration Manager 中的应用程序管理](https://docs.microsoft.com/sccm/apps/plan-design/plan-for-and-configure-application-management)。|2016 年 12 月 13 日|即将公布|
 |利用 Configuration Manager 管理虚拟硬盘 (VHD)。 </br></br>这包括去除使用任务序列创建新 VHD 或管理 VHD 的选项，以及去除 Configuration Manager 控制台的虚拟硬盘节点。 </br></br>去除这种支持后，虽然现有 VHD 将不被删除，但再也无法从 Configuration Manager 控制台内访问。  |2017 年 1 月 6 日 |对 VHD 的支持将在 2017 年 6 月 1 日后随首个更新的发布而结束。|
@@ -112,6 +113,6 @@ ms.openlocfilehash: 18b411b05dd6fc9b572e1d3d201876172bb40d07
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Feb17_HO2-->
 
 

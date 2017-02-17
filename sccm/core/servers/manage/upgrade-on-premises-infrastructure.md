@@ -2,7 +2,7 @@
 title: "升级本地基础结构 | Microsoft Docs"
 description: "了解如何升级基础结构（例如 SQL Server）和站点系统的站点操作系统。"
 ms.custom: na
-ms.date: 10/28/2016
+ms.date: 2/2/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 4a8d98addcd463eb82d8b7100b44254a10d21992
-ms.openlocfilehash: b79346968edf88443f8e30691aa4baec7b81699f
+ms.sourcegitcommit: 83c8492191f40fc4d582562268db0d58a0f9cdde
+ms.openlocfilehash: a5d8496d98bd7f202ffbe8859981e94457ffa5c4
 
 
 ---
@@ -32,7 +32,7 @@ ms.openlocfilehash: b79346968edf88443f8e30691aa4baec7b81699f
 
 - 如果想要将 System Center Configuration Manager 基础结构更新为新版本，请参阅 [System Center Configuration Manager 的更新](/sccm/core/servers/manage/updates)。
 
-##  <a name="a-namebkmksupconfigupgradesitesrva-upgrade-site-operating-system-of-site-systems"></a><a name="BKMK_SupConfigUpgradeSiteSrv"></a>升级站点系统的站点操作系统  
+##  <a name="a-namebkmksupconfigupgradesitesrva-upgrade-the-operating-system-of-site-systems"></a><a name="BKMK_SupConfigUpgradeSiteSrv"></a>升级站点系统的操作系统  
  Configuration Manager 在以下情况中支持托管站点服务器的服务器操作系统和托管任何站点系统角色的远程服务器操作系统的就地升级：  
 
 -   如果生成的 Windows 服务包级别仍受 Configuration Manager 支持，则会就地升级到更高版本的 Windows Server 服务包。  
@@ -213,6 +213,6 @@ ms.openlocfilehash: b79346968edf88443f8e30691aa4baec7b81699f
 
 
 
-<!--HONumber=Dec16_HO5-->
+<!--HONumber=Feb17_HO1-->
 
 

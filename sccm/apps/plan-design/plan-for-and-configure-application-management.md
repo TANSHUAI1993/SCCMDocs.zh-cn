@@ -2,7 +2,7 @@
 title: "规划和配置应用程序管理 | Microsoft Docs"
 description: "实现和配置用于在 System Center Configuration Manager 中部署应用程序的所需依赖关系。"
 ms.custom: na
-ms.date: 12/13/2016
+ms.date: 02/03/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 7634d5326265d7947a01e5b83374f65911e33aeb
-ms.openlocfilehash: 3ab905192c091cb5ad013c8e0c8590597fb0422a
+ms.sourcegitcommit: 50c08d63e7220a47d21dcbdcd7abafba7c7f5f75
+ms.openlocfilehash: 4eca69f54ec0bca5f1f972d3814ceb87d4a30d67
 
 
 ---
@@ -33,7 +33,7 @@ ms.openlocfilehash: 3ab905192c091cb5ad013c8e0c8590597fb0422a
 |------------------|----------------------|  
 |在运行应用程序目录网站点、应用程序目录 Web 服务点、管理点和分发点的站点系统服务器上，需要安装 Internet Information Services (IIS)。|有关此要求的详细信息，请参阅[支持的配置](../../core/plan-design/configs/supported-configurations.md)。|  
 |Configuration Manager 注册的移动设备|在对应用程序进行代码签名以将其部署到移动设备时，如果使用版本 3 模 (**Windows Server 2008, Enterprise Edition**) 生成了证书，请勿使用此证书。 此证书模板创建的证书与用于移动设备的 Configuration Manager 应用程序不兼容。<br /><br /> 如果使用 Active Directory 证书服务对移动设备应用程序进行代码签名，请勿使用版本 3 证书模板。|  
-|如果想自动创建用户设备相关性，必须将客户端配置为审核登录事件。|Configuration Manager 将从客户端计算机上的本地安全策略中读取以下两个设置，以确定自动创建的用户设备相关性：<br /><br /><ul><li> **审核帐户登录事件**</li><li>**审核登录事件**</li></ul> 若要自动在用户和设备之间创建关系，请确保在客户端计算机上启用这两个设置。 可以使用 Windows 组策略来配置这两个设置。|  
+|如果想自动创建用户设备相关性，必须将客户端配置为审核登录事件。|Configuration Manager 客户端从电脑的安全事件日志中读取类型为“成功”的登录事件，以确定自动的用户设备相关性。  通过以下两个审核策略，启用这些事件：<br>**审核帐户登录事件**<br>**审核登录事件**<br>若要自动在用户和设备之间创建关系，请确保在客户端计算机上启用这两个设置。 可以使用 Windows 组策略来配置这两个设置。|  
 
 ## <a name="configuration-manager-dependencies"></a>Configuration Manager 依赖关系   
 
@@ -79,7 +79,7 @@ ms.openlocfilehash: 3ab905192c091cb5ad013c8e0c8590597fb0422a
 |步骤|详细信息|更多信息|  
 |-----------|-------------|----------------------|  
 |**步骤 1：** 如果你将使用 HTTPS 连接，请确保已将 Web 服务器证书部署到站点系统服务器。|将 Web 服务器证书部署到将运行应用程序目录网站点和应用程序目录 Web 服务点的站点系统服务器。<br /><br /> 此外，如果希望客户端从 Internet 中使用应用程序目录，请将 Web 服务器证书部署到至少一个管理点站点系统服务器，并针对来自 Internet 的客户端连接对其进行配置。|有关证书要求的详细信息，请参阅 [PKI 证书要求](../../core/plan-design/network/pki-certificate-requirements.md)。|  
-|**步骤 2：** 如果你将使用客户端 PKI 证书连接到管理点，请将客户端身份验证证书部署到客户端计算机。|尽管客户端不必使用客户端 PKI 证书来连接到应用程序目录，但它们必须连接到管理点，然后才能使用应用程序目录。 在以下情况下，你必须将客户端身份验证证书部署到客户端计算机：<br /><br /><ul><li>Intranet 中的所有管理点只接受 HTTPS 客户端连接。</li><li>客户端将从 Internet　连接到应用程序目录。</li></ul>|有关证书要求的详细信息，请参阅 [PKI 证书要求](../../core/plan-design/network/pki-certificate-requirements.md)。|  
+|**步骤 2：** 如果你将使用客户端 PKI 证书连接到管理点，请将客户端身份验证证书部署到客户端计算机。|尽管客户端不使用客户端 PKI 证书来连接到应用程序目录，但它们必须连接到管理点，然后才能使用应用程序目录。 在以下情况下，你必须将客户端身份验证证书部署到客户端计算机：<br /><br /><ul><li>Intranet 中的所有管理点只接受 HTTPS 客户端连接。</li><li>客户端将从 Internet　连接到应用程序目录。</li></ul>|有关证书要求的详细信息，请参阅 [PKI 证书要求](../../core/plan-design/network/pki-certificate-requirements.md)。|  
 |**步骤 3：** 安装和配置应用程序目录 Web 服务点和应用程序目录网站。|必须将这两个站点系统角色安装在同一站点中。 你不必将它们安装在同一站点系统服务器上或安装在同一 Active Directory 林中。 但是，应用程序目录 Web 服务点必须位于站点数据库所在的林中。|有关站点系统角色布局的详细信息，请参阅[规划站点系统服务器和站点系统角色](../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md)。<br /><br /> 要配置应用程序目录 Web 服务点和应用程序目录网站点，请参阅**步骤 3：安装和配置应用程序目录站点系统角色**。|  
 |**步骤 4：** 为应用程序目录和软件中心配置客户端设置。|如果希望所有用户具有相同设置，请配置默认客户端设置。 否则，请为特定集合配置自定义客户端设置。|有关客户端设置的详细信息，请参阅[关于客户端设置](../../core/clients/deploy/about-client-settings.md)。<br /><br /> 若要详细了解如何配置这些客户端设置，请参阅**步骤 4：为应用程序目录和软件中心配置客户端设置**。|  
 |**步骤 5：** 验证应用程序目录是否可正常运行。|可以从浏览器或软件中心中直接使用应用程序目录。|请参阅**步骤 5：验证应用程序目录是否可正常运行**。|  
@@ -112,7 +112,7 @@ ms.openlocfilehash: 3ab905192c091cb5ad013c8e0c8590597fb0422a
 
 1.  在 Configuration Manager 控制台中，选择“管理” > “站点配置” > “服务器和站点系统角色”，然后选择要用于应用程序目录的服务器。  
 
-3.  在“主页”选项卡上的“创建”组中，选择“添加站点系统角色”。  
+3.  在“主页”选项卡上的“服务器”组中，选择“添加站点系统角色”。  
 
 4.  在“常规”页上，指定站点系统的常规设置，然后选择“下一步”。  
 
@@ -228,6 +228,6 @@ ms.openlocfilehash: 3ab905192c091cb5ad013c8e0c8590597fb0422a
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO1-->
 
 

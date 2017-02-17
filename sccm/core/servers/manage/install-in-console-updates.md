@@ -2,7 +2,7 @@
 title: "控制台中更新 | Microsoft Docs"
 description: "System Center Configuration Manager 与 Microsoft 云服务同步，以获取可以从控制台中进行安装的更新。"
 ms.custom: na
-ms.date: 1/11/2017
+ms.date: 2/1/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0d0735c170820259ac8bb6706aac7cc5569a1628
-ms.openlocfilehash: 00d9738a271ba47abcbf3c4b427a05910a0c2355
+ms.sourcegitcommit: 2f90f3204b3c31caaed1359e11451285b21eef50
+ms.openlocfilehash: b3a58503ea4d49825e93ea3a2e9bfedf975145e6
 
 
 ---
@@ -354,8 +354,9 @@ System Center Configuration Manager 与 Microsoft 云服务同步，以获取随
 |对由 System Center Configuration Manager 管理的电脑进行条件访问 | [版本 1602](../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)     |![尚未发行](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)                        |
 
 
+## <a name="known-issues"></a>已知问题
 
-##  <a name="a-namebkmkfaqa-why-dont-i-see-certain-updates-in-my-console"></a><a name="bkmk_faq"></a>为什么我在控制台中看不到某些更新？  
+###  <a name="a-namebkmkfaqa-why-dont-i-see-certain-updates-in-my-console"></a><a name="bkmk_faq"></a>为什么我在控制台中看不到某些更新？  
  如果你在成功与 Microsoft 云服务同步之后在控制台中找不到特定更新或任何更新，这可能是因为：  
 
 -   更新需要基础结构不使用的配置，或者当前产品版本不满足接收更新的先决条件。  
@@ -366,8 +367,21 @@ System Center Configuration Manager 与 Microsoft 云服务同步，以获取随
 
     有关查看更新并从控制台启用功能所需权限的信息，请参阅此主题中[管理更新的权限](../../../core/servers/manage/install-in-console-updates.md#permissions-to-view-and-manage-updates-and-features)。
 
+### <a name="why-do-i-see-two-updates-for-version-1610"></a>为什么版本 1610 有两个更新
+在控制台中查看更新时，可能会看到安装版本 1610 的两个更新。 这些更新的日期不同。 如果存在下列情况之一，则会出现此情况：   
+-   在版本 1610 可用后，安装了较早的版本（如 1606）
+
+-   你的层次结构运行的是版本 1511 或 1602，而你尚无法下载版本 1606
+
+版本 1610 有两个更新版本，这是因为在对一些文件二进制进行了一些次要更改后，又重新发布了此更新。 这些更改不会影响 Configuration Manager 的功能，也不会影响到更新。
+
+当控制台中的这两个更新都可用时，建议安装具有最新日期的更新。 但是，由于两个更新都提供了相同的功能，因此，如果已安装了其中一个，则无需再执行进一步操作。
+-   如果先前安装了较旧的更新，则无需再安装较新的更新。 但是，如果在安装了首次更新后又安装了新的更新，则存在问题的二进制将进行更新，除此之外，其他都保持不变，并且无需再执行额外的操作。
+
+-   如果先前安装了最新的更新，然后安装较旧的更新，则无需执行额外的操作。 这是因为已安装的较新的二进制不会被来自最初更新中这些相同的二进制所覆盖。
 
 
-<!--HONumber=Jan17_HO2-->
+
+<!--HONumber=Feb17_HO1-->
 
 

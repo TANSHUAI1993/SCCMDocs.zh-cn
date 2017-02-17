@@ -2,7 +2,7 @@
 title: "将 Long-Term Servicing Branch 升级到 Current Branch | Microsoft Docs"
 description: "了解如何将 Long-Term Servicing Branch 站点转换为 Current Branch 站点。"
 ms.custom: na
-ms.date: 10/12/2016
+ms.date: 2/8/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: 37fa8da8b4acc3f22c9c435206eedde58d2754f0
+ms.sourcegitcommit: 60631bc0346bd78d704e7129bb755af504c59b1b
+ms.openlocfilehash: 6e7edc85630d22c5bbba1ff66bd1199903db76db
 
 ---
 
@@ -32,12 +32,12 @@ ms.openlocfilehash: 37fa8da8b4acc3f22c9c435206eedde58d2754f0
 
 如果拥有多个站点，则只需转换层次结构的顶层站点。 在转换顶层站点后：
 - 子主站点也会自动进行转换。
--   必须从 Configuration Manager 控制台中手动更新辅助站点。
+-    必须从 Configuration Manager 控制台中手动更新辅助站点。
 
-## <a name="run-setup-to-convert"></a>运行安装程序进行转换
+## <a name="run-setup-to-convert-the-long-term-servicing-branch"></a>运行安装程序转换 Long-Term Servicing Branch
 在层次结构的顶层站点上，可以从合格的基线媒体运行 Configuration Manager 安装程序并选择“站点维护”。  然后当授权页出现时，为 Current Branch 选择选项并完成向导。
 
-完成后，站点将转换为 Current Branch，并可以使用以前不可用的特性和功能。
+站点转换为 Current Branch 后，可以使用以前不可用的功能。
 
 > [!NOTE]  
 > 合格的基线媒体是具有等于或高于 LTSB 安装版本的媒体。
@@ -46,16 +46,17 @@ ms.openlocfilehash: 37fa8da8b4acc3f22c9c435206eedde58d2754f0
 
 关于基线版本的列表，请参阅 **Configuration Manager 的更新**中的[基线和更新版本](/sccm/core/servers/manage/updates)。
 
-## <a name="use-the-configuration-manager-console-to-convert"></a>使用 Configuration Manager 控制台进行转换
+## <a name="use-the-configuration-manager-console-to-convert-the-long-term-servicing-branch"></a>使用 Configuration Manager 控制台转换 Long-Term Servicing Branch
 如果站点运行 LTSB，则可以使用 Configuration Manager 控制台中的以下选项将站点转换为 Current Branch：
 
  1. 在控制台中，转到“管理” > “站点配置” > “站点”，然后打开“层次结构设置”。  
- 2. 选择选项将站点转换为 Current Branch，然后单击“应用”。  
 
-完成后，站点将转换为 Current Branch，并可以使用以前不可用的特性和功能。
+ 2. 选择选项将站点转换为 Current Branch，然后选择“应用”。  
+
+站点转换为 Current Branch 后，可以使用以前不可用的功能。
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

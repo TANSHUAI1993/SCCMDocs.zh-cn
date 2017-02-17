@@ -2,7 +2,7 @@
 title: "规划 SMS 提供程序 | Microsoft Docs"
 description: "了解 SMS 提供程序如何帮助你管理 System Center Configuration Manager。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
-ms.openlocfilehash: 9b766575739246e05d5affbfeade3c31de95ef98
+ms.sourcegitcommit: 11ac851696ce52642412ca29e4873679d50cf398
+ms.openlocfilehash: 547dc39d5659c7c2e6f1ca670caddc127dbf22c4
 
 
 ---
@@ -25,20 +25,19 @@ ms.openlocfilehash: 9b766575739246e05d5affbfeade3c31de95ef98
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-若要管理 System Center Configuration Manager，可使用连接到 **SMS 提供程序**的实例的 Configuration Manager 控制台。 默认情况下，SMS 提供程序会在站点安装期间安装在管理中心站点或主站点上。  
+若要管理 System Center Configuration Manager，可使用连接到 **SMS 提供程序**的实例的 Configuration Manager 控制台。 默认情况下，当安装管理中心站点或主站点时，SMS 提供程序会安装在站点服务器上。 
 
 
 ##  <a name="a-namebkmkplansmsprova-about-the-sms-provider"></a><a name="BKMK_PlanSMSProv"></a> 关于 SMS 提供程序  
  SMS 提供程序是 Windows Management Instrumentation (WMI) 提供程序，它分配对站点中 Configuration Manager 数据库的“读取”和“写入”访问权限：  
 
--   “SMS 管理员”   组提供对 SMS 提供程序的访问权限。 Configuration Manager 自动在站点服务器和每台 SMS 提供程序计算机上创建此安全组。  
-
--   每个管理中心站点和主站点上都必须至少具有一个 SMS 提供程序。  你可以根据需要安装其他提供程序。  
+-   每个管理中心站点和主站点上都必须至少具有一个 SMS 提供程序。 你可以根据需要安装其他提供程序。  
+-   “SMS 管理员”安全组提供对 SMS 提供程序的访问权限。 Configuration Manager 在站点服务器和安装了 SMS 提供程序实例的每台计算机上自动创建此组。  
 
 -   辅助站点不支持 SMS 提供程序。  
 
 
-每个 Configuration Manager 控制台、资源浏览器、工具和自定义脚本都使用 SMS 提供程序，以便 Configuration Manager 管理用户可以访问存储在数据库中的信息。 SMS 提供程序不与 Configuration Manager 客户端交互。 当 Configuration Manager 控制台连接至站点时，Configuration Manager 控制台会查询站点服务器上的 WMI 以查找要使用的 SMS 提供程序的实例。  
+Configuration Manager 管理用户使用 SMS 提供程序访问存储在数据库中的信息。 若要执行此操作，管理员可使用 Configuration Manager 控制台、资源浏览器、工具和自定义脚本。 SMS 提供程序不与 Configuration Manager 客户端交互。 当 Configuration Manager 控制台连接至站点时，Configuration Manager 控制台会查询站点服务器上的 WMI 以查找要使用的 SMS 提供程序的实例。  
 
  SMS 提供程序帮助强制实施 Configuration Manager 安全性。 它仅返回正在运行 Configuration Manager 控制台的管理用户有权查看的信息。  
 
@@ -47,11 +46,11 @@ ms.openlocfilehash: 9b766575739246e05d5affbfeade3c31de95ef98
 
  若要了解如何管理 SMS 提供程序，请参阅 [Modify your System Center Configuration Manager infrastructure](../../../core/servers/manage/modify-your-infrastructure.md#BKMK_ManageSMSprovider) 中的 [Manage the SMS Provider](../../../core/servers/manage/modify-your-infrastructure.md)。  
 
- **要安装 SMS 提供程序的必备组件：**  
+## <a name="prerequisites-to-install-the-sms-provider"></a>要安装 SMS 提供程序的先决条件  
 
  支持 SMS 提供程序：  
 
--   计算机必须在具有站点服务器和站点数据库站点系统双向信任的域中。  
+-   计算机必须在具有站点服务器和站点数据库站点系统双向信任关系的域中。  
 
 -   计算机不能具有不同站点中的站点系统角色。  
 
@@ -62,7 +61,7 @@ ms.openlocfilehash: 9b766575739246e05d5affbfeade3c31de95ef98
 -   计算机至少必须有 650 MB 的可用磁盘空间，以支持与 SMS 提供程序一起安装的 Windows 自动部署工具包 (Windows ADK) 组件。 有关 Windows ADK 和 SMS 提供程序的详细信息，请参阅本主题中的 [针对 SMS 提供程序的操作系统部署要求](#BKMK_WAIKforSMSProv) 。  
 
 ##  <a name="a-namebkmklocationa-sms-provider-locations"></a><a name="bkmk_location"></a> SMS 提供程序位置  
- 安装站点时，安装会为站点自动安装第一个 SMS 提供程序。 你可以为 SMS 提供程序指定以下任何支持的位置：  
+ 安装站点时，会为站点自动安装第一个 SMS 提供程序。 你可以为 SMS 提供程序指定以下任何支持的位置：  
 
 -   站点服务器计算机  
 
@@ -71,7 +70,7 @@ ms.openlocfilehash: 9b766575739246e05d5affbfeade3c31de95ef98
 -   未承载 SMS 提供程序的服务器类计算机，或者不同站点中的站点系统角色  
 
 
-要查看站点中安装的每个 SMS 提供程序的位置，请查看站点“属性”  对话框的“常规”  选项卡。  
+要查看站点中安装的每个 SMS 提供程序的位置，请选择站点“属性”对话框的“常规”选项卡。  
 
  每个 SMS 提供程序支持多个请求中的同时连接。 对这些连接的仅有的限制是 SMS 提供程序计算机上可用的服务器连接数目，以及满足连接请求的 SMS 提供程序计算机上可用资源。  
 
@@ -79,8 +78,7 @@ ms.openlocfilehash: 9b766575739246e05d5affbfeade3c31de95ef98
 
  使用以下信息确定在每个支持的位置上安装 SMS 提供程序的优缺点：  
 
-
-**Configuration Manager 站点服务器**  
+ **Configuration Manager 站点服务器**  
 
 -   **优点：**  
 
@@ -105,7 +103,7 @@ ms.openlocfilehash: 9b766575739246e05d5affbfeade3c31de95ef98
 
     -   SMS 提供程序使用可以专门用于站点数据库操作的系统和网络资源。  
 
-    -   当站点数据库承载于 SQL Server 的群集实例上时，此位置不是选项。  
+    -   当站点数据库托管于 SQL Server 的群集实例上时，不能使用此位置。  
 
 
 **站点服务器或站点数据库计算机之外的计算机**  
@@ -118,7 +116,7 @@ ms.openlocfilehash: 9b766575739246e05d5affbfeade3c31de95ef98
 
 -   **缺点：**  
 
-    -   由于与站点服务器和站点数据库计算机协调需要额外的网络流量，因此 SMS 提供程序的性能可能会降低。  
+    -   由于与站点服务器和站点数据库计算机协调需要额外的网络活动，因此 SMS 提供程序的性能可能会降低。  
 
     -   此服务器必须始终可供站点数据库计算机以及安装了 Configuration Manager 控制台的所有计算机访问。  
 
@@ -127,7 +125,9 @@ ms.openlocfilehash: 9b766575739246e05d5affbfeade3c31de95ef98
 ##  <a name="a-namebkmksmsprovlanguagesa-about-sms-provider-languages"></a><a name="BKMK_SMSProvLanguages"></a> 关于 SMS 提供程序语言  
  SMS 提供程序的操作与安装它的计算机的显示语言无关。  
 
- 当管理用户或 Configuration Manager 使用 SMS 提供程序处理请求数据时，SMS 提供程序尝试返回格式与请求计算机的操作系统语言匹配的数据。 SMS 提供程序未将信息从一种语言翻译成另一种语言。 相反，在 Configuration Manager 控制台中返回要显示的数据时，数据的显示语言取决于对象的源和存储类型。  
+ 当管理用户或 Configuration Manager 使用 SMS 提供程序处理请求数据时，SMS 提供程序尝试返回格式与请求计算机的操作系统语言匹配的数据。
+
+它尝试匹配语言的方式颇为间接。 SMS 提供程序未将信息从一种语言翻译成另一种语言。 相反，在 Configuration Manager 控制台中返回要显示的数据时，数据的显示语言取决于对象的源和存储类型。  
 
  当对象的数据存储在数据库中时，将能够使用的语言取决于下列各项：  
 
@@ -138,22 +138,22 @@ ms.openlocfilehash: 9b766575739246e05d5affbfeade3c31de95ef98
 ##  <a name="a-namebkmkmultismsprova-use-multiple-sms-providers"></a><a name="BKMK_MultiSMSProv"></a> 使用多个 SMS 提供程序  
  站点完成安装后，你可以为站点安装其他 SMS 提供程序。 要安装其他 SMS 提供程序，请在站点服务器上运行 Configuration Manager 安装程序。 如果满足以下任一条件，请考虑安装其他 SMS 提供程序：  
 
--   你将具有运行 Configuration Manager 控制台并同时连接到站点的大量管理用户。  
+-   将会有许多管理用户在运行 Configuration Manager 控制台的同时连接到站点。  
 
 -   你将使用可能引入 SMS 提供程序频繁调用的 Configuration Manager SDK 或其他产品。  
 
 -   你想要确保 SMS 提供程序的高可用性。  
 
 
-在站点上安装多个 SMS 提供程序并且进行连接请求时，站点不确定地分配每个新连接请求以使用安装的 SMS 提供程序。 你无法指定要用于特定连接会话的 SMS 提供程序位置。  
+在站点上安装多个 SMS 提供程序并且进行连接请求时，站点随机分配每个新连接请求以使用安装的 SMS 提供程序。 你无法指定要用于特定连接会话的 SMS 提供程序位置。  
 
 > [!NOTE]  
->  请考虑每个 SMS 提供程序位置的优缺点，并将这些注意事项与你无法控制将用于每个新连接的 SMS 提供程序的信息进行比较。  
+>  请考虑每个 SMS 提供程序位置的优缺点。 由于你无法控制哪个 SMS 提供程序用于每个新连接，请在这些因素中做出权衡。  
 
-例如，首次将 Configuration Manager 控制台连接至站点时，连接会查询站点服务器上的 WMI 以不确定地查找控制台将使用的 SMS 提供程序的实例。 在 Configuration Manager 控制台会话结束之前，Configuration Manager 控制台仍使用 SMS 提供程序的此特定实例。 如果会话由于 SMS 提供程序计算机在网络上变得不可用而终止，那么在重新连接 Configuration Manager 控制台时，站点会不确定地将 SMS 提供程序计算机分配给新连接会话。 可以分配给不可用的同一 SMS 提供程序计算机。 如果出现这种情况，则在分配可用的 SMS 提供程序计算机之前，可以尝试重新连接 Configuration Manager 控制台。  
+例如，首次将 Configuration Manager 控制台连接至站点时，连接会查询站点服务器上的 WMI 以查找控制台将使用的 SMS 提供程序的实例。 在 Configuration Manager 控制台会话结束之前，Configuration Manager 控制台仍使用 SMS 提供程序的此特定实例。 如果会话由于 SMS 提供程序计算机在网络上变得不可用而终止，那么在重新连接 Configuration Manager 控制台时，站点会重复识别要连接到的 SMS 提供程序的实例的任务。 可以分配给不可用的同一 SMS 提供程序计算机。 如果出现这种情况，则在分配可用的 SMS 提供程序计算机之前，可以尝试重新连接 Configuration Manager 控制台。  
 
 ##  <a name="a-namebkmkaboutsmsadminsa-about-the-sms-admins-group"></a><a name="BKMK_AboutSMSAdmins"></a> 关于 SMS 管理员组  
- 你可以使用“SMS 管理员”组为管理用户提供 SMS 提供程序访问权限。 安装站点时会在站点服务器上自动创建此组，并且会在安装 SMS 提供程序的每台计算机上自动创建此组。 关于“SMS 管理员”组的其他信息：  
+ 你可以使用“SMS 管理员”组为管理用户提供 SMS 提供程序访问权限。 安装站点时会在站点服务器上自动创建此组，并且会在安装 SMS 提供程序的每台计算机上自动创建此组。 以下是关于“SMS 管理员”组的其他信息：  
 
 -   当计算机为成员服务器时，会作为本地组来创建 SMS 管理员组。  
 
@@ -166,10 +166,10 @@ ms.openlocfilehash: 9b766575739246e05d5affbfeade3c31de95ef98
 
 当用户成功连接到 SMS 提供程序之后，基于角色的管理会确定用户可以访问或管理的 Configuration Manager 资源。  
 
-你可以使用 WMI 控件 MMC 管理单元来查看和配置 SMS 管理员组权限。 默认情况下，“Everyone”  具有“执行方法” 、“提供程序写入” 和“启用帐户”  权限。 当用户连接到 SMS 提供程序之后，会根据 Configuration Manager 控制台中定义的基于角色的管理安全权限向用户授予对站点数据库中的数据的访问权限。 SMS 管理员组被显式授予 **Root\SMS** 命名空间上的“启用帐户”  和“远程启用”  权限。  
+你可以使用 WMI 控件 MMC 管理单元来查看和配置 SMS 管理员组权限。 默认情况下，“Everyone”  具有“执行方法” 、“提供程序写入” 和“启用帐户”  权限。 当用户连接到 SMS 提供程序之后，会根据 Configuration Manager 控制台中定义的基于角色的管理安全权限向用户授予对站点数据库中的数据的访问权限。 SMS 管理员组被明确授予对 **Root\SMS** 命名空间的“启用帐户”和“远程启用”权限。  
 
 > [!NOTE]  
->  使用远程 Configuration Manager 控制台的每个管理用户需要站点服务器计算机和 SMS 提供程序计算机上的“远程激活”DCOM 权限。 虽然可以将这些权限授予任何用户或组，但最佳方案是将这些权限授予“SMS 管理员”组以简化管理。 有关详细信息，请参阅 [Configure DCOM permissions for remote Configuration Manager consoles](../../../core/servers/manage/modify-your-infrastructure.md#BKMK_ConfigDCOMforRemoteConsole) 主题中的 [Modify your System Center Configuration Manager infrastructure](../../../core/servers/manage/modify-your-infrastructure.md) 部分。  
+>  使用远程 Configuration Manager 控制台的每个管理用户需要站点服务器计算机和 SMS 提供程序计算机上的“远程激活”DCOM 权限。 虽然可以将这些权限授予任何用户或组，但建议将这些权限授予“SMS 管理员”组以简化管理。 有关详细信息，请参阅 [Configure DCOM permissions for remote Configuration Manager consoles](../../../core/servers/manage/modify-your-infrastructure.md#BKMK_ConfigDCOMforRemoteConsole) 主题中的 [Modify your System Center Configuration Manager infrastructure](../../../core/servers/manage/modify-your-infrastructure.md) 部分。  
 
 
 ##  <a name="a-namebkmksmsprovnamespacea-about-the-sms-provider-namespace"></a><a name="BKMK_SMSProvNamespace"></a> 关于 SMS 提供程序命名空间  
@@ -178,29 +178,31 @@ SMS 提供程序的结构由 WMI 架构来定义。 架构命名空间描述 SMS
 |Namespace|描述|  
 |---------------|-----------------|  
 |Root\SMS\site_*&lt;site code\>*|Configuration Manager 控制台、资源浏览器、Configuration Manager 工具和脚本广泛使用的 SMS 提供程序。|  
-|Root\SMS\SMS_ProviderLocation|为站点提供 SMS 提供程序计算机的位置。|  
+|Root\SMS\SMS_ProviderLocation|站点的 SMS 提供程序计算机的位置。|  
 |Root\CIMv2|清点硬件和软件期间针对 WMI 命名空间信息清点的位置。|  
 |Root\CCM|Configuration Manager 客户端配置策略和客户端数据。|  
 |root\CIMv2\SMS|清单客户端代理收集的清单报告类别的位置。 这些设置由客户端在计算机策略评估期间编译，而且基于计算机的客户端设置的配置。|  
 
 ##  <a name="a-namebkmkwaikforsmsprova-operating-system-deployment-requirements-for-the-sms-provider"></a><a name="BKMK_WAIKforSMSProv"></a> 针对 SMS 提供程序的操作系统部署要求  
-SMS 提供程序需要在运行 SMS 提供程序的计算机上安装下列外部依赖项，以便你能够通过 Configuration Manager 控制台来使用操作系统部署任务功能：  
+安装 SMS 提供程序实例的计算机必须具备使用的 Configuration Manager 版本所需的 Windows ADK 版本。  
 
--   Windows 评估和部署工具包 8.1  
+ -   例如，1511 版本的 Configuration Manager 需要 Windows ADK 的 Windows 10 RTM (10.0.10240) 版本。  
 
- 在管理操作系统部署时，Windows ADK 允许 SMS 提供程序完成不同的任务，包括：  
+ -   有关此要求的详细信息，请参阅[操作系统部署的基础架构要求](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment)。  
 
--   查看 WIM 文件详细信息  
+在管理操作系统部署时，Windows ADK 允许 SMS 提供程序完成不同的任务，比如：  
 
--   将驱动程序文件添加到现有的启动映像中  
+-   查看 WIM 文件详细信息。  
 
--   创建启动 .ISO 文件  
+-   将驱动程序文件添加到现有的启动映像中。  
+
+-   创建启动 .ISO 文件。  
 
 
 在安装 SMS 提供程序的每台计算机上，安装 Windows ADK 可能需要最多 650 MB 的可用磁盘空间。 Configuration Manager 需要如此高的磁盘空间来安装 Windows PE 启动映像。  
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

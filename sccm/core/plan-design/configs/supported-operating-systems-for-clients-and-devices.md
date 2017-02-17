@@ -2,7 +2,7 @@
 title: "支持的客户端和设备 | Microsoft Docs"
 description: "了解 System Center Configuration Manager 对客户端和设备支持的操作系统。"
 ms.custom: na
-ms.date: 01/06/2017
+ms.date: 2/6/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 591a43d2243724cd784b5a3eb4779ceaf86a2ecb
-ms.openlocfilehash: 65e995c7e72dd3602ea6b19af8563aeb155bd86c
+ms.sourcegitcommit: 4688b4b12a7afa5fcfdc0e42f984271d98f10316
+ms.openlocfilehash: d2d888edf51d46a2dd13ef6b7ed39c066179a088
 
 ---
 # <a name="supported-operating-systems-for-clients-and-devices-for-system-center-configuration-manager"></a>System Center Configuration Manager 的客户端和设备支持的操作系统
@@ -39,7 +39,7 @@ ms.openlocfilehash: 65e995c7e72dd3602ea6b19af8563aeb155bd86c
 **支持的操作系统：**  
 
 -  **Windows Server 2016**：标准版、数据中心版 <sup>1</sup>
-  - 从 Configuration Manager 版本 1606（或 2016 年 10 月发布的 1606 基线版本）开始，支持 Windows Server 2016，并提供 KB3186654 中的修补程序汇总。  
+  - 从 Configuration Manager 版本 1606（或 2016 年 10 月发布的 1606 基准版本）开始，支持该操作系统，并提供 KB3186654 中的修补程序汇总。  
 
 
 -   **Windows Server 2012 R2** (x64)：标准版、数据中心版 <sup>1</sup>    
@@ -65,6 +65,10 @@ ms.openlocfilehash: 65e995c7e72dd3602ea6b19af8563aeb155bd86c
 -   **Windows 8**（x86、x64）：专业版、企业版    
 
 -   **Windows 7 SP1**（x86、x64）：专业版、企业版和旗舰版    
+
+-   **Windows Server 2016 (x64) 的 Server Core 安装** <sup>2</sup>
+  - 从版本 1606（或 2016 年 10 月发布的 1606 基准版本）开始，支持该操作系统，并提供 KB3186654 中的修补程序汇总。 但是，此操作系统不支持使用 Endpoint Protection。
+
 
 -   **Windows Server 2012 R2 (x64) 的 Server Core 安装** <sup>2</sup>    
 
@@ -348,6 +352,6 @@ Configuration Manager 支持连接到 Exchange Server 的设备的有限管理�
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Feb17_HO1-->
 
 

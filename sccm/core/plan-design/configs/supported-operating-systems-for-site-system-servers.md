@@ -2,7 +2,7 @@
 title: "支持的站点系统服务器 | Microsoft Docs"
 description: "了解可用来托管 System Center Configuration Manager 站点或站点系统角色的 Windows 版本。"
 ms.custom: na
-ms.date: 1/3/2017
+ms.date: 2/1/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: bebbeebba76ab5cf0c517fcb00b7b6a516a08e3e
-ms.openlocfilehash: 12fe730d924979eec2ef55ea80a1fa90b7b47464
+ms.sourcegitcommit: 4688b4b12a7afa5fcfdc0e42f984271d98f10316
+ms.openlocfilehash: bb017e575e0318b73cc5ea4e27fd33b1e9c2a02a
 
 
 ---
@@ -37,7 +37,7 @@ ms.openlocfilehash: 12fe730d924979eec2ef55ea80a1fa90b7b47464
 
 
 ## <a name="windows-server-2016-standard-and-datacenter"></a>Windows Server 2016：标准版和数据中心版
-从 Configuration Manager 版本 1606（或 2016 年 10 月发布的 1606 基线版本）开始，将支持 Windows Server 2016，并提供 KB3186654 中的修补程序汇总。
+从带有 KB3186654 中的修补程序汇总的版本 1606（或 2016 年 10 月发布的 1606 基线版本）开始，以下各项支持该操作系统：
 
 **站点服务器：**  
 
@@ -325,12 +325,12 @@ ms.openlocfilehash: 12fe730d924979eec2ef55ea80a1fa90b7b47464
 
     -   分发点支持多种不同的配置，每种配置都有不同的要求。 在某些情况下，这些配置不仅支持在服务器上安装，而且支持在客户端操作系统上安装。 有关分发点可用选项的详细信息，请参阅[为 System Center Configuration Manager 管理内容和内容基础结构](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。  
 
-## <a name="the-server-core-installation-of-windows-server-2012"></a>Windows Server 2012 的 Server Core 安装  
- 除了之前列出的操作系统之外，还支持将 Windows Server 2012 的服务器核心安装用作具有以下限制的分发点：  
 
--   仅支持 64 位版本。  
+## <a name="the-server-core-installation-of-windows-server-2016"></a>Windows Server 2016 的 Server Core 安装
+从包含自 KB3186654 以来的修补程序汇总的版本 1606（或发布于 2016 年 10 月的 1606 的基准版本）开始，支持将此操作系统用作具有以下限制的分发点：  
+  -   仅支持 x64 位版本。
+  -   此操作系统上的分发点不支持 PXE 或多播。  
 
--   此操作系统上的分发点不支持 PXE 或多播。
 
 ## <a name="the-server-core-installation-of-windows-server-2012-r2"></a>Windows Server 2012 R2 的 Server Core 安装  
  除了之前列出的操作系统之外，还支持将 Windows Server 2012 R2 的服务器核心安装用作具有以下限制的分发点：  
@@ -339,8 +339,15 @@ ms.openlocfilehash: 12fe730d924979eec2ef55ea80a1fa90b7b47464
 
 -   此操作系统上的分发点不支持 PXE 或多播。  
 
+## <a name="the-server-core-installation-of-windows-server-2012"></a>Windows Server 2012 的 Server Core 安装  
+ 除了之前列出的操作系统之外，还支持将 Windows Server 2012 的服务器核心安装用作具有以下限制的分发点：  
+
+-   仅支持 64 位版本。  
+
+-   此操作系统上的分发点不支持 PXE 或多播。
 
 
-<!--HONumber=Jan17_HO1-->
+
+<!--HONumber=Feb17_HO1-->
 
 

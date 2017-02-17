@@ -2,10 +2,10 @@
 title: "升级分析 | System Center Configuration Manager"
 description: "将升级分析与 Configuration Manager 进行集成。 在管理控制台中访问升级兼容性数据。 设定要升级或修正的设备。"
 keywords: 
-author: nbigman
-ms.author: nbigman
+author: brenduns
+ms.author: brenduns
 manager: angerobe
-ms.date: 11/23/2016
+ms.date: 12/3/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
@@ -13,8 +13,8 @@ ms.technology:
 - configmgr-client
 ms.assetid: 68407ab8-c205-44ed-9deb-ff5714451624
 translationtype: Human Translation
-ms.sourcegitcommit: bf28164fc2594d2557db5626a6f52c32ad99a1fe
-ms.openlocfilehash: fa90fa0da348e7cca186ff8066c7a9fa98c57cf5
+ms.sourcegitcommit: 831d8a66c827d246069c7415cdce7a7c4bb95b33
+ms.openlocfilehash: 07747b86bad0d1ce6302521093fc3c4433c59325
 
 
 ---
@@ -73,13 +73,13 @@ Upgrade Analytics 部署脚本可执行以下操作：
 - 设置商用 ID 键 + CommercialDataOptIn + RequestAllAppraiserVersions 键。  
 - 验证用户计算机是否可向 Microsoft 发送数据。  
 - 检查计算机是否正在等待重启。   
-- 确认是否已安装最新版本的知识库包 10.0.x（需要 10.0.14348 或后续版本）。  
+- 确认是否已安装最新版本的知识库包 10.0.x（需要 10.0.14913 或后续版本）。  
 - 如果已启用，开启详细模式进行故障排除。  
 - 开始收集 Microsoft 评估组织的升级准备情况所需的遥测数据。  
 - 如果启用，则在 cmd 窗口中显示脚本的进度以向你展示问题（每个步骤是成功还是失败）和/或写入到日志文件。  
-  
+
 ### <a name="to-run-the-upgrade-analytics-deployment-script"></a>运行 Upgrade Analytics 部署脚本：  
-  
+
 1. 下载 [Upgrade Analytics 部署脚本](https://go.microsoft.com/fwlink/?LinkID=822966&clcid=0x409)并提取 UpgradeAnalytics.zip。 仅当计划在故障排除模式下运行脚本时，才需要“诊断”文件夹中的文件。  
 2. 在 RunConfig.bat 中编辑这些参数：  
 - 日志信息的存储位置。 示例：%SystemDrive%\UADiagnostics。 可以将日志信息存储在远程文件共享或本地目录中。 如果阻止脚本为给定路径创建日志文件，则它将使用 Windows 目录在驱动器中创建日志文件。  
@@ -90,12 +90,12 @@ Upgrade Analytics 部署脚本可执行以下操作：
     - logMode = 2 仅在文件中记录  
     - 若要进行故障排除，请将 **isVerboseLogging** 设置为 **$true**，以生成有助于诊断问题的日志信息。 默认情况下，**isVerboseLogging** 设置为 **$false**。 确保诊断文件夹安装在与脚本相同的目录中以使用此模式。  
     - 请在用户需要重启计算机时通知用户。 默认情况下，此选项设置为关闭。  
-  
+
 3. 在 RunConfig.bat 中完成编辑参数后，请以管理员身份运行脚本。  
-  
-  
+
+
 ## <a name="view-microsoft-upgrade-analytics-properties-in-configuration-manager"></a>在 Configuration Manager 中查看 Microsoft Upgrade Analytics 属性  
-  
+
 1.  在 Configuration Manager 控制台中，导航到“云服务”，然后选择“OMS 连接器”以打开“OMS 连接属性”页。  
 
 2.  该页中有两个选项卡：
@@ -113,6 +113,6 @@ Upgrade Analytics 部署脚本可执行以下操作：
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

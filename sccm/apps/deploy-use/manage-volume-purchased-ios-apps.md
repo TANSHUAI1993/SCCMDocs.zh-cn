@@ -2,7 +2,7 @@
 title: "管理批量采购的 iOS 应用 | Microsoft Docs"
 description: "部署、管理和跟踪通过 iOS App Store 购买的应用的许可证。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 02/08/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 828e2ac9a3f9bcea1571d24145a1021fdf1091f3
-ms.openlocfilehash: cd9edf61d151ac8334ace0bf668fa4c919d8c75b
+ms.sourcegitcommit: 191e01f6b8a1ef2b9e193abd62d7981e6c977c1d
+ms.openlocfilehash: fb771bc94f49f25cfe01ff67c88572c8f2b18909
 
 
 ---
@@ -91,7 +91,7 @@ ms.openlocfilehash: cd9edf61d151ac8334ace0bf668fa4c919d8c75b
 1.  在 Configuration Manager 控制台中，选择“软件库” > “应用程序管理” > “应用商店应用的许可证信息”。  
 
 3.  选择要部署的应用，然后在“主页”选项卡的“创建”组中，选择“创建应用程序”。
-所创建的 Configuration Manager 应用程序包含适用于企业的 Windows 应用商店应用。 然后，可以像对任何其他 Configuration Manager 应用程序一样部署并监视此应用程序。
+创建的 Configuration Manager 应用程序包含你购买的 iOS 应用。 然后，可以像对任何其他 Configuration Manager 应用程序一样部署并监视此应用程序。
 
     > [!IMPORTANT]  
     > 必须选择部署目的为“必需”。 当前不支持可用的安装。
@@ -111,6 +111,6 @@ ms.openlocfilehash: cd9edf61d151ac8334ace0bf668fa4c919d8c75b
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO2-->
 
 

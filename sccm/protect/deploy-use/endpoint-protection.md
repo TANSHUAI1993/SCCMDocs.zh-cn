@@ -2,7 +2,7 @@
 title: Endpoint Protection | Microsoft Docs
 description: "学习如何为 Configuration Manager 层次结构中的客户端计算机管理反恶意软件策略和 Windows 防火墙安全性。"
 ms.custom: na
-ms.date: 01/17/2017
+ms.date: 02/6/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0fa837c68eb073d2ceaf48c938137a94141a102e
-ms.openlocfilehash: dd08e9ae6827e5f59eaf3414adbcc8667bc75140
+ms.sourcegitcommit: 4688b4b12a7afa5fcfdc0e42f984271d98f10316
+ms.openlocfilehash: 90e6d82e7fd1ff0ad4f1d616cc23201769fe26e2
 
 
 ---
@@ -38,7 +38,7 @@ System Center Configuration Manager 中的 Endpoint Protection 支持为 Configu
 
 -   发送电子邮件通知、使用控制台中的监视、查看报表，以在客户端计算机上检测到恶意软件时，通知管理用户  
 
-Windows 10 计算机无需任何其他客户端即可进行 Endpoint Protection 管理。 在 Windows 8.1 和早期版本的计算机上，除安装 Configuration Manager 客户端之外，Endpoint Protection 还需安装自己的客户端。 这样 Endpoint Protection 才能管理。 Endpoint Protection 客户端具有以下功能：  
+从 Windows 10 和 Windows Server 2016 起，计算机无需任何其他的客户端即可进行 Endpoint Protection 管理。 在 Windows 8.1 和早期版本的计算机上，除安装 Configuration Manager 客户端之外，Endpoint Protection 还需安装自己的客户端。 Endpoint Protection 客户端具有以下功能：  
 
 -   恶意软件与间谍软件检测和修正  
 
@@ -122,6 +122,6 @@ Windows 10 计算机无需任何其他客户端即可进行 Endpoint Protection 
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO1-->
 
 
