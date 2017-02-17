@@ -1,5 +1,5 @@
 ---
-title: "使用 System Center Configuration Manager 客户端在设备上管理符合性的常见任务 | Microsoft Docs"
+title: "客户端托管的设备的常见符合性管理任务 - Configuration Manager | Microsoft Docs"
 description: "通过完成一些常见方案，了解 System Center Configuration Manager 符合性设置。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f9e939d871e95a3248d8e5d96cb73063a81fd5cf
-ms.openlocfilehash: feadb8b5b75832e914dfe62bd2d486e5bac1458d
+ms.sourcegitcommit: 991eff171dce95590a7f050e0d3b07f98c0224b3
+ms.openlocfilehash: 2012ab5e55da8d707fd668e0163b42fe7d56c72f
 
 
 ---
@@ -83,25 +83,25 @@ ms.openlocfilehash: feadb8b5b75832e914dfe62bd2d486e5bac1458d
 
 4.  在“创建设置”  对话框的“常规”  选项卡上，配置以下信息：  
 
-    -    >   
+    -   **名称** > **示例设置**  
 
-    -    >   
+    -   **设置类型** > **注册表值**  
 
-    -    >  “整数”（因为该值仅包含一个数字）  
+    -   **数据类型** > **整数** （因为该值仅包含一个数字）  
 
-    -    >   
+    -   **Hive** > **HKEY_LOCAL_MACHINE**  
 
-    -    >   
+    -   **密钥** > **SOFTWARE\Woodgrove\LOB App\Configuration\Configuration1**  
 
-    -    >  （必需值）  
+    -   **值** > **1** （必需值）  
 
 5.  在  “创建设置”对话框的“符合性规则”  选项卡上，单击“新建” ，然后在“创建规则”  对话框中，配置以下信息：  
 
-    -    >   
+    -   **名称** > **规则示例**  
 
     -   **所选设置** – 验证所选设置是否为“示例设置” 。  
 
-    -    >   
+    -   **规则类型** > **值**  
 
     -   **设置必须符合以下规则** – 验证设置名称是否正确，并配置选项以指定设置值必须等于“1” 。  
 
@@ -113,6 +113,6 @@ ms.openlocfilehash: feadb8b5b75832e914dfe62bd2d486e5bac1458d
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 
