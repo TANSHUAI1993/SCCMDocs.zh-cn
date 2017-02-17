@@ -36,7 +36,7 @@
 ### [加密控制技术参考](deploy-use/cryptographic-controls-technical-reference.md)
 
 ## [Endpoint Protection](deploy-use/endpoint-protection.md)
-### [配置 Endpoint Protection](deploy-use/configure-endpoint-protection.md)
+### [配置 Endpoint Protection](deploy-use/endpoint-protection-configure.md)
 #### [站点系统角色](deploy-use/endpoint-protection-site-role.md)
 #### [警报](deploy-use/endpoint-configure-alerts.md)
 #### [定义更新](deploy-use/endpoint-definition-updates.md)
@@ -85,6 +85,6 @@
 ### [监视 Endpoint Protection](deploy-use/monitor-endpoint-protection.md)
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO3-->
 
 
