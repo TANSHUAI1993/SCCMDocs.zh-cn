@@ -1,8 +1,8 @@
 ---
-title: "System Center Configuration Manager Technical Preview 1606 版中的功能 | Microsoft Docs"
+title: "Technical Preview 1606 Configuration Manager 中的功能"
 description: "了解 System Center Configuration Manager Technical Preview 中的可用功能，1606 版。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology:
 - configmgr-other
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3bf44f850722afdb8dfe5922c8ceff11c9b56d08
-ms.openlocfilehash: 6bc3087768d8455a6ca6beb77a3afc8f313eb831
+ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
+ms.openlocfilehash: a84d3ab55066d26c3199ea374d8beb472d66f43f
 
 ---
 # <a name="capabilities-in-technical-preview-1606-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 版本 1606 中的功能
@@ -225,10 +225,16 @@ Configuration Manager 需要 Azure 管理证书来访问 Azure API 和配置云�
 
 ### <a name="set-the-configuration-manager-client-setting-to-manage-the-office-365-client-agent"></a>设置 Configuration Manager 客户端设置以管理 Office 365 客户端代理
 1.  在 Configuration Manager 控制台中，单击“管理” > “概述” > “客户端设置”。
-1. 打开相应的设备设置以启用客户端代理。 有关默认客户端设置和自定义客户端设置的详细信息，请参阅[如何在 System Center Configuration Manager 中配置客户端设置](../../core/clients/deploy/configure-client-settings.md)。
-2. 单击“软件更新”，并针对“启用 Office 365 客户端代理的管理”设置选择“是”。
+2. 打开相应的设备设置以启用客户端代理。 有关默认客户端设置和自定义客户端设置的详细信息，请参阅[如何在 System Center Configuration Manager 中配置客户端设置](../../core/clients/deploy/configure-client-settings.md)。
+3. 单击“软件更新”，并针对“启用 Office 365 客户端代理的管理”设置选择“是”。  
+
+
 ## <a name="a-nameosdpreservedriveletterathe-osdpreservedriveletter-task-sequence-variable-has-been-deprecated"></a><a name="osdpreservedriveletter"></a>已弃用 OSDPreserveDriveLetter 任务序列变量
-OSDPreserveDriveLetter 任务序列变量决定当将此图像应用到目标计算机时，任务序列是否使用在操作系统映像 WIM 文件中捕获的驱动器号。 Technical Preview 1606 中已弃用此任务序列变量。 现在，在操作系统部署期间，默认情况下，Windows 安装程序会确定要使用的最佳驱动器号（通常为 C:）。 如果想要指定使用另一个驱动器，可以在“应用操作系统”任务序列步骤中更改位置。 转到“选择要应用此操作系统的位置”设置，选择“特定逻辑驱动器号”，然后选择要使用的驱动器。 目标计算机上必须存在分配有该号的驱动器。
+OSDPreserveDriveLetter 任务序列变量决定当将此图像应用到目标计算机时，任务序列是否使用在操作系统映像 WIM 文件中捕获的驱动器号。
+- Technical Preview 1606 中已弃用此任务序列变量。
+
+现在，在操作系统部署期间，默认情况下，Windows 安装程序会确定要使用的最佳驱动器号（通常为 C:）。 如果想要指定使用另一个驱动器，可以在“应用操作系统”任务序列步骤中更改位置。 转到“选择要应用此操作系统的位置”设置，选择“特定逻辑驱动器号”，然后选择要使用的驱动器。 目标计算机上必须存在分配有该号的驱动器。 
+
 ## <a name="a-nameupdatesandservicingachanges-for-the-updates-and-servicing-node"></a><a name="updatesandservicing"></a>更新和服务节点的更改
 Technical Preview 1606 版中做了几处更改，适用于 Configuration Manager 控制台中的更新与服务：
 - **节点名称更改：**
@@ -261,6 +267,6 @@ Technical Preview 1606 版中做了几处更改，适用于 Configuration Manage
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "发行说明 | Microsoft Docs"
+title: "发行说明 - Configuration Manager | Microsoft Docs"
 description: "有关产品中尚未解决或 Microsoft 知识库文章中未涵盖的紧急问题，请参阅这些说明。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: c6358d65609605bfef3ac533f4caa0df1cfce0c5
-ms.openlocfilehash: 73208c8e9ec15e96a6caaf20b74c1f94d92a8975
+ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
+ms.openlocfilehash: 9e853c8fda236125717c3912f6f3cb02d6dd1058
 
 
 ---
@@ -297,6 +297,6 @@ System Center Configuration Manager 版本 1602 引入了两项预发行功能�
 
 
 
-<!--HONumber=Dec16_HO5-->
+<!--HONumber=Jan17_HO4-->
 
 

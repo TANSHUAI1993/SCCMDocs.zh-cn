@@ -1,5 +1,5 @@
 ---
-title: "安装站点系统角色 | Microsoft Docs | 本地 MDM"
+title: "为本地 MDM 安装角色 - Configuration Manager | Microsoft Docs"
 description: "在 System Center Configuration Manager 中为本地移动设备管理安装站点系统角色。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,8 +16,8 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0d6479bcc134103e6005159a8ea295a5f359a436
-ms.openlocfilehash: 7f3b733390554b8dc149751d8a5dfc3ed3af43bf
+ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
+ms.openlocfilehash: 916b971f851f968f6534ac834bd3182cc61614aa
 
 
 ---
@@ -74,6 +74,6 @@ ms.openlocfilehash: 7f3b733390554b8dc149751d8a5dfc3ed3af43bf
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

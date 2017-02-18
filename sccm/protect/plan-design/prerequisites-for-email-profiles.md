@@ -1,5 +1,5 @@
 ---
-title: "电子邮件配置文件先决条件 | Microsoft Docs"
+title: "电子邮件配置文件的先决条件 | Microsoft Docs"
 description: "了解 System Center Configuration Manager 中的电子邮件配置文件及其在产品外部和内部的依赖关系。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,12 +17,12 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
-ms.openlocfilehash: a41bec089897717a7e73e751d58275af9e0a5fa3
+ms.sourcegitcommit: 0fa837c68eb073d2ceaf48c938137a94141a102e
+ms.openlocfilehash: bdb7f78480f73bc4559c4ff49ecb7b047581780a
 
 
 ---
-# <a name="prerequisites-for-email-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager 中电子邮件配置文件的先决条件
+# <a name="email-profile-prerequisites"></a>电子邮件配置文件先决条件
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
@@ -43,6 +43,6 @@ System Center Configuration Manager 中的电子邮件配置文件在产品外�
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

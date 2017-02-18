@@ -1,5 +1,5 @@
 ---
-title: "管理电子邮件访问 | Microsoft Docs"
+title: "通过 Configuration Manager 管理 Exchange 电子邮件访问权限 | Microsoft Docs"
 description: "了解如何使用 System Center Configuration Manager 条件访问管理对 Exchange 电子邮件的访问。"
 ms.custom: na
 ms.date: 10/04/2016
@@ -16,12 +16,12 @@ author: andredm7
 ms.author: andredm
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: c13c6268fa76ade7feb0981f9c4a6e325e393aca
-ms.openlocfilehash: 0bbe25598f38f9cf3c15375748fee09c43dfb928
+ms.sourcegitcommit: 0fa837c68eb073d2ceaf48c938137a94141a102e
+ms.openlocfilehash: 26179c0c92773dc0b69be500c165a52e15afc6fd
 
 
 ---
-# <a name="manage-email-access-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中管理对电子邮件的访问
+# <a name="manage-email-access"></a>管理电子邮件访问权限 
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
@@ -237,7 +237,7 @@ Office 桌面应用程序可以访问运行以下系统的电脑上的 Exchange 
 6.  在使用新式验证的 Outlook 和其他应用的“应用程序访问”下，可选择将访问仅限为对每个平台合规的设备。  Windows 设备必须已加入域或在 Intune 中注册并且符合。  
 
     > [!TIP]  
-    > “新式验证” **** 允许基于 Active Directory 身份验证库 (ADAL) 登录到 Office 客户端。  
+    >  “新式验证” 允许基于 Active Directory 身份验证库 (ADAL) 登录到 Office 客户端。  
     >   
     >  -   基于 ADAL 的身份验证使 Office 客户端能够实现基于浏览器的身份验证（也称为被动身份验证）。  为了进行身份验证，用户将被导向登录网页。  
     > -   这种全新的登录方法实现了新的方案，如基于“设备符合性”  以及“多重身份验证”  执行情况的条件访问。  
@@ -363,6 +363,6 @@ Office 桌面应用程序可以访问运行以下系统的电脑上的 Exchange 
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

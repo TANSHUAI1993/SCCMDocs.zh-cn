@@ -1,5 +1,5 @@
 ---
-title: "为 System Center Configuration Manager 选择设备管理解决方案 | Microsoft Docs"
+title: "选择设备管理解决方案 - Configuration Manager | Microsoft Docs"
 description: "了解 System Center Configuration Manager 提供的用于管理电脑、服务器和设备的解决方案。"
 ms.custom: na
 ms.date: 12/08/2016
@@ -17,8 +17,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: d56b2a8090dd798bceda63e29df6c6ff4a4afe4e
-ms.openlocfilehash: 792d9b03904193c1c302c2f8373448a44887ed9c
+ms.sourcegitcommit: 06cafc8f7934cde738a87ac1a1da585a9d4e2a99
+ms.openlocfilehash: 534a15279bff96d93ffb6564eeac2835f57f5645
 
 
 ---
@@ -89,13 +89,13 @@ System Center Configuration Manager（也称为 ConfgMgr 或 SCCM）提供用于
 |软件部署|是|是|是||  
 |利用回退状态点进行监视|是||||  
 |连接到管理点|是||是||  
-|连接到分发点|是|是|是||  
+|连接到分发点|是||是||  
 |通过 Configuration Manager 进行阻止|是|是|是||  
 |通过 Exchange Server 和 Configuration Manager 进行隔离和阻止||||是|  
 |远程擦除| |是|是|是|  
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Feb17_HO2-->
 
 

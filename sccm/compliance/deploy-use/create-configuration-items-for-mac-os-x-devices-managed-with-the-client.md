@@ -1,5 +1,5 @@
 ---
-title: "如何为使用 System Center Configuration Manager 客户端管理的 Mac OS X设备创建配置项目 | Microsoft Docs"
+title: "为客户端托管的 Mac 创建配置项 - Configuration Manager | Microsoft Docs"
 description: "使用 System Center Configuration Manager Mac OS X 配置项目管理对 Mac OS X 设备的设置。"
 ms.custom: na
 ms.date: 12/27/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 8bbc0d0132fa4276ade8914d5ac3945ef1d12a4b
-ms.openlocfilehash: be7a9464ef4ac6042a46652a325583a355f23846
+ms.sourcegitcommit: 35e48666f4d1a2363304650f960531fd0630a291
+ms.openlocfilehash: 60d147986425e7a3048d57b5b7412feab12efafd
 
 
 ---
@@ -54,8 +54,8 @@ ms.openlocfilehash: be7a9464ef4ac6042a46652a325583a355f23846
 
              例如，如果您想要编辑的 Safari Web 浏览器设置，则可能会使用 **com.apple.Safari.plist**。  
 
-        -   **密钥** – 指定要在 Mac 计算机上的符合性评估的键的名称。 使用以下语法： 
-        
+        -   **密钥** – 指定要在 Mac 计算机上的符合性评估的键的名称。 使用以下语法：
+
             ```
             */<dictionary\>/<keyname\>*.  
             ```     
@@ -177,6 +177,6 @@ ms.openlocfilehash: be7a9464ef4ac6042a46652a325583a355f23846
 
 
 
-<!--HONumber=Dec16_HO5-->
+<!--HONumber=Jan17_HO4-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: "条件访问 | Microsoft Docs"
+title: "在 Configuration Manager 中管理对服务的访问 | Microsoft Docs"
 description: "了解如何在 System Center Configuration Manager 中使用条件访问来帮助保护电子邮件和其他服务。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -16,13 +16,13 @@ author: andredm7
 ms.author: andredm
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: c13c6268fa76ade7feb0981f9c4a6e325e393aca
-ms.openlocfilehash: d33a515ad2bf0a7fb8680447f2bf83544f2eb30f
+ms.sourcegitcommit: 0fa837c68eb073d2ceaf48c938137a94141a102e
+ms.openlocfilehash: 011d9345f6f2ec05b23fb574d9ab71d43ede7f69
 
 
 ---
 
-# <a name="manage-access-to-services-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中管理对服务的访问
+# <a name="manage-access-to-services"></a>管理对服务的访问
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
@@ -184,6 +184,6 @@ Exchange 内部部署支持的条件性访问：
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

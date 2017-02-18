@@ -1,5 +1,5 @@
 ---
-title: "为不使用 System Center Configuration Manager 管理的 iOS 和 Mac OS X 设备创建配置项目 | Microsoft Docs"
+title: "为不使用客户端的 iOS 和 Mac 创建配置项 - Configuration Manager | Microsoft Docs"
 description: "使用 System Center Configuration Manager iOS 和 Mac OS X 配置项管理 iOS and Mac OS X 设备的设置。"
 ms.custom: na
 ms.date: 12/14/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: d023df79e0bcb7d5583224802976a5059c4ee753
-ms.openlocfilehash: ea4024aaa07d40781663725127d64388055c6501
+ms.sourcegitcommit: 35e48666f4d1a2363304650f960531fd0630a291
+ms.openlocfilehash: 0614753a68e98675ccae99b792b03481f4ca7ab1
 
 
 ---
@@ -80,7 +80,7 @@ ms.openlocfilehash: ea4024aaa07d40781663725127d64388055c6501
 |**最短密码长度（字符）**|密码的最短长度。|  
 |**密码过期天数**|必须更改密码前的天数。|  
 |**记住的密码数**|防止重复使用以前用过的密码。|  
-|**擦除设备前的失败登录尝试次数**|如果此数目的登录尝试均失败，则擦除该设备。<br>（仅限 iOS）| 
+|**擦除设备前的失败登录尝试次数**|如果此数目的登录尝试均失败，则擦除该设备。<br>（仅限 iOS）|
 |**锁定设备前的空闲时间**|指定设备自动锁定之前处于非活动状态的分钟数。|
 |**密码复杂性**|选择是否可以指定一个 PIN（例如“1234”），或是否必须提供一个强密码。|
 |**允许简单密码**|指定可以使用简单密码，如“0000”和“1234”。|
@@ -370,6 +370,6 @@ ms.openlocfilehash: ea4024aaa07d40781663725127d64388055c6501
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

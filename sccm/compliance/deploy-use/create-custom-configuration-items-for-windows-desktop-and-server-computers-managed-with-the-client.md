@@ -1,5 +1,5 @@
 ---
-title: "为使用 System Center Configuration Manager 客户端管理的 Windows 台式机和服务器计算机创建自定义配置项目 | Microsoft Docs"
+title: "为客户端托管的 Windows 计算机创建配置项 - Configuration Manager | Microsoft Docs"
 description: "使用自定义 Windows 台式机和服务器配置项目管理 Windows 计算机和服务器的设置。"
 ms.custom: na
 ms.date: 11/18/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
-ms.openlocfilehash: f5509d1ffb88bc128f7be6c74e6b65dc33605c9e
+ms.sourcegitcommit: 991eff171dce95590a7f050e0d3b07f98c0224b3
+ms.openlocfilehash: e55883471fde63036c91b315ed6db6dceb315207
 
 
 ---
@@ -359,6 +359,6 @@ ms.openlocfilehash: f5509d1ffb88bc128f7be6c74e6b65dc33605c9e
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

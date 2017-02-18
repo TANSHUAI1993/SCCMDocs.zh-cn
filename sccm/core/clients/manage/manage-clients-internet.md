@@ -1,6 +1,6 @@
 ---
-title: "管理客户端 | Internet | 云管理网关 | Microsoft Docs"
-description: 
+title: "在 Internet 上管理客户端 - Configuration Manager | Microsoft Docs"
+description: "了解如何通过云管理网关和 Configuration Manager 中的基于 Internet 的客户端管理来管理客户端。"
 ms.date: 11/18/2016
 ms.prod: configuration-manager
 ms.technology:
@@ -10,8 +10,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: e71ae1f654fcf3dd8c57a299c727588eed26ccac
+ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
+ms.openlocfilehash: 6104107429184f31df12db84089f41df1ef81539
 
 ---
 
@@ -73,6 +73,6 @@ Configuration Manager 提供两种方法来管理连接了 Internet 的客户端
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

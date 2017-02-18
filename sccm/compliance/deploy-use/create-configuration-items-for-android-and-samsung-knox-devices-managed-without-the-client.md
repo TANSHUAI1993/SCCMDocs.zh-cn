@@ -1,5 +1,5 @@
 ---
-title: "为没有使用 System Center Configuration Manager 客户端管理的 Android 和 Samsung KNOX 标准版设备创建配置项目 | Microsoft Docs"
+title: "为 Android 和 Samsung KNOX 标准版创建配置项 - Configuration Manager | Microsoft Docs"
 description: "使用 System Center Configuration Manager Android 和 Samsung KNOX 标准版配置项目管理设备的设置。"
 ms.custom: na
 ms.date: 12/14/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: d023df79e0bcb7d5583224802976a5059c4ee753
-ms.openlocfilehash: c699c9c807f864fe161255522a8d694ab71d1a4e
+ms.sourcegitcommit: 35e48666f4d1a2363304650f960531fd0630a291
+ms.openlocfilehash: 12f5db5839fe66fb07d7055af45f8020abd43e24
 
 
 ---
@@ -109,7 +109,7 @@ ms.openlocfilehash: c699c9c807f864fe161255522a8d694ab71d1a4e
 
 ### <a name="browser"></a>浏览器
 |设置|详细信息|  
-|-------------|-------------| 
+|-------------|-------------|
 |**允许使用 Web 浏览器**|指定是否可以使用设备的默认 Web 浏览器。|
 |**自动填充**|允许使用 Web 浏览器的自动填充功能。|
 |**活动脚本**|允许设备 Web 浏览器使用活动脚本。|
@@ -135,9 +135,9 @@ ms.openlocfilehash: c699c9c807f864fe161255522a8d694ab71d1a4e
 |**照相机**|允许使用设备相机。<br /><br /> 适用于 Android 和 Samsung KNOX 标准版设备。|  
 |**近场通信 (NFC)**|允许使用近场通信的操作（如果支持）。|
 |**YouTube**|允许在设备上使用 YouTube 应用。<br /><br /> 仅适用于 Samsung KNOX 标准版设备。|  
-|**关机**|允许设备关机。<br /><br /> 仅适用于 Samsung KNOX 标准版设备。| 
+|**关机**|允许设备关机。<br /><br /> 仅适用于 Samsung KNOX 标准版设备。|
 
-### <a name="roaming"></a>漫游 
+### <a name="roaming"></a>漫游
 |设置|详细信息|  
 |-------------|-------------|
 |**语音漫游**|设备位于移动电话网络时，允许语音漫游。|
@@ -199,6 +199,6 @@ ms.openlocfilehash: c699c9c807f864fe161255522a8d694ab71d1a4e
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

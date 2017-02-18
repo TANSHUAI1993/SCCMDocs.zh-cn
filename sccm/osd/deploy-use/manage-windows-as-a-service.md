@@ -1,8 +1,8 @@
 ---
-title: "管理 Windows 即服务 | Microsoft Docs"
-description: "System Center Configuration Manager 中的功能可帮助查看环境中 Windows 作为服务的状态，以便你可以让它保持更新。"
+title: "管理 Windows 即服务 - Configuration Manager | Microsoft Docs"
+description: "使用 Configuration Manager 查看 Windows 即服务的状态，创建服务计划以形成部署环，以及在 Windows 10 客户端即将结束支持时查看警报。"
 ms.custom: na
-ms.date: 12/21/2016
+ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 66cd6d099acdd9db2bc913a69993aaf5e17237fe
-ms.openlocfilehash: 79e13074db18a617c7e3fceedaa143dbece90a3d
+ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
+ms.openlocfilehash: b3859bc01c37dab04275028585e892f927606025
 
 
 ---
@@ -65,7 +65,7 @@ ms.openlocfilehash: 79e13074db18a617c7e3fceedaa143dbece90a3d
 
 -   **“Windows 10 环”磁贴**：按分支和就绪状态提供 Windows 10 的细分。 LTSB 段将全部为 LTSB 版本（而第一个磁贴将分解特定版本。 例如，Windows 10 LTSB 2015）。 “可以发布”  段对应于 CB，而“可用于业务”  段为 CBB。  
 
--   **“创建服务计划”磁贴**：提供创建维护服务计划的快速方法。 指定名称、集合（仅显示从小到大的前 10 个集合）、部署包（仅显示最近修改的前 10 个包）和就绪状态。 其他设置使用默认值。 单击“高级设置”  以启动“创建维护服务计划向导”，可在该向导中配置所有服务计划设置。  
+-   **“创建服务计划”磁贴**：提供创建维护服务计划的快速方法。 指定名称、集合（仅显示从小到大的前&10; 个集合）、部署包（仅显示最近修改的前&10; 个包）和就绪状态。 其他设置使用默认值。 单击“高级设置”  以启动“创建维护服务计划向导”，可在该向导中配置所有服务计划设置。  
 
 -   **“已过期”磁贴**：显示运行已超过其使用期限的 Windows 10 版本的设备的百分比。 Configuration Manager 从服务连接点下载的元数据确定百分比，并将其与发现数据比较。 超过其使用期限的内部版本将不再接收月度累计更新（包括安全更新）。 应将此类别中的计算机升级到下一个内部版本。 Configuration Manager 将进一成为整数。 例如，如果你有 10,000 台计算机而只有一台运行已过期的内部版本，则该磁贴将显示 1%。  
 
@@ -98,7 +98,7 @@ ms.openlocfilehash: 79e13074db18a617c7e3fceedaa143dbece90a3d
 > [!NOTE]  
 >  可以使用任务序列来为每个 Windows 10 内部版本部署升级，但这样做需要进行更多手动操作。 你需要将更新的源文件作为操作系统升级包导入，然后创建任务序列并将其部署到适当计算机组。 但是，任务序列提供其他自定义选项，如部署前和部署后操作。  
 
- 可以从 Windows 10 维护服务仪表板创建基本维护服务计划。 指定名称、集合（仅显示从小到大的前 10 个集合）、部署包（仅显示最近修改的前 10 个包）和准备情况状态后，Configuration Manager 将使用其他设置的默认值创建维护服务计划。 也可以启动“创建维护服务计划向导”来配置所有设置。 使用“创建使用维护服务计划向导”，通过以下过程创建维护服务计划。  
+ 可以从 Windows 10 维护服务仪表板创建基本维护服务计划。 指定名称、集合（仅显示从小到大的前&10; 个集合）、部署包（仅显示最近修改的前&10; 个包）和准备情况状态后，Configuration Manager 将使用其他设置的默认值创建维护服务计划。 也可以启动“创建维护服务计划向导”来配置所有设置。 使用“创建使用维护服务计划向导”，通过以下过程创建维护服务计划。  
 
 > [!NOTE]  
 >  从 Configuration Manager 版本 1602 开始，可以管理高风险部署的行为。 高风险部署是自动安装、可能产生意外结果的部署。 例如，其用途为 **必需** 部署 Windows 10 的任务序列被认为是高风险部署。 有关详细信息，请参阅[用于管理高风险部署的设置](../../protect/understand/settings-to-manage-high-risk-deployments.md)。  
@@ -277,6 +277,6 @@ ms.openlocfilehash: 79e13074db18a617c7e3fceedaa143dbece90a3d
 
 
 
-<!--HONumber=Dec16_HO4-->
+<!--HONumber=Jan17_HO4-->
 
 

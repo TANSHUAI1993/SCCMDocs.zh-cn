@@ -1,12 +1,12 @@
 ---
 
-title: "从断开连接的软件更新点同步软件更新 | Microsoft Docs"
-description: "按照以下过程可验证导出服务器、导出更新和导入更新元数据上的软件更新同步是否已成功。"
+title: "不使用 Internet 连接同步更新 - Configuration Manager | Microsoft Docs"
+description: "在断开 Internet 连接的顶层软件更新点上运行软件更新同步。"
 keywords: 
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 10/06/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
@@ -14,8 +14,8 @@ ms.technology:
 - configmgr-sum
 ms.assetid: 1a997c30-8e71-4be5-89ee-41efb2c8d199
 translationtype: Human Translation
-ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
-ms.openlocfilehash: 73a54ddb896bfa7fb770e02d188a262230762c7f
+ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
+ms.openlocfilehash: fd9c1e9418ff1956c6ef98753e23a293440179be
 
 
 
@@ -111,6 +111,6 @@ ms.openlocfilehash: 73a54ddb896bfa7fb770e02d188a262230762c7f
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

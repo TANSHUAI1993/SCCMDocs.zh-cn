@@ -1,6 +1,6 @@
 ---
-title: "部署 Lookout for Work 应用 | System Center Configuration Manager"
-description: "配置和部署 Lookout for Work 应用。"
+title: "配置和部署 Lookout for Work 应用 | Microsoft Docs"
+description: "有关如何为 Android 和 iOS 设备配置和部署 Lookout for Work 应用的说明。"
 ms.custom: na
 ms.date: 11/18/2016
 ms.prod: configuration-manager
@@ -12,16 +12,16 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: dfdbfee6-4b9b-4d53-816a-62bbc3a43b6e
 caps.latest.revision: 
-author: nathbarn
-ms.author: nathbarn
+author: andredm7
+ms.author: andredm
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: c13c6268fa76ade7feb0981f9c4a6e325e393aca
-ms.openlocfilehash: 947393796043dcc3916a5f8e09898bb8a7cd347d
+ms.sourcegitcommit: 0fa837c68eb073d2ceaf48c938137a94141a102e
+ms.openlocfilehash: 5e7d67855dc7929b19ec1ae32457aa11700be56e
 
 
 ---
-# <a name="configure-and-deploy-lookout-for-work-apps"></a>配置和部署 Lookout for Work 应用
+# <a name="deploy-lookout-for-work-apps"></a>部署 Lookout for Work 应用
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
@@ -92,6 +92,6 @@ ms.openlocfilehash: 947393796043dcc3916a5f8e09898bb8a7cd347d
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

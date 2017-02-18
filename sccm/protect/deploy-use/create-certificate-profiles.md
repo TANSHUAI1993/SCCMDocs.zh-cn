@@ -1,5 +1,5 @@
 ---
-title: "创建证书配置文件 | Microsoft Docs"
+title: "如何创建 SCEP 证书配置文件 | Microsoft Docs"
 description: "了解如何在 System Center Configuration Manager 中使用证书配置文件为受管理设备预配所需的证书。"
 ms.custom: na
 ms.date: 11/22/2016
@@ -17,12 +17,12 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: fdf0915d937e9555ef4f84797f70391dbf2543d3
-ms.openlocfilehash: 4293cb586046791c0a75c913794cb223b6823a8f
+ms.sourcegitcommit: 0fa837c68eb073d2ceaf48c938137a94141a102e
+ms.openlocfilehash: cb9351fc63e49af611c494ec82a6c8651afae30f
 
 
 ---
-# <a name="how-to-create-scep-certificate-profiles-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中创建 SCEP 证书配置文件
+# <a name="create-certificate-profiles"></a>创建证书配置文件
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
@@ -150,7 +150,7 @@ ms.openlocfilehash: 4293cb586046791c0a75c913794cb223b6823a8f
 
  -   **证书有效期**：如果对发证 CA 运行允许自定义有效期的 certutil - setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE 命令，则可以指定证书过期之前剩余的时间量。 有关此命令的详细信息，请参阅主题 [Certificate infrastructure in System Center Configuration Manager](../../protect/deploy-use/certificate-infrastructure.md)（System Center Configuration Manager 中的证书基础结构）。  
 
-   你可以指定比指定证书模板中的有效期小的值，但不能指定较大的值。 例如，证书模板中的证书有效期为 2 年，则你可以指定值 1 年，但不能指定值 5 年。 该值还必须小于发证 CA 证书的剩余有效期。  
+   你可以指定比指定证书模板中的有效期小的值，但不能指定较大的值。 例如，证书模板中的证书有效期为&2; 年，则你可以指定值&1; 年，但不能指定值&5; 年。 该值还必须小于发证 CA 证书的剩余有效期。  
 
  -   **密钥使用情况**：指定证书的密钥使用情况选项。 可从以下选项中进行选择：  
 
@@ -187,6 +187,6 @@ ms.openlocfilehash: 4293cb586046791c0a75c913794cb223b6823a8f
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

@@ -1,8 +1,8 @@
 ---
-title: "System Center Configuration Manager Technical Preview 1610 中的功能 | Microsoft Docs"
+title: "Technical Preview 1610 Configuration Manager 中的功能"
 description: "了解 System Center Configuration Manager Technical Preview 1610 版中的可用功能。"
 ms.custom: na
-ms.date: 10/21/2016
+ms.date: 01/23/2017
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3bf44f850722afdb8dfe5922c8ceff11c9b56d08
-ms.openlocfilehash: 6ffcb33e94f942fc9400457d3f16b65e12332956
+ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
+ms.openlocfilehash: 59633ce68e2bb2d722900215751f345d6d098721
 
 ---
 # <a name="capabilities-in-technical-preview-1610-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1610 版中的功能
@@ -148,7 +148,7 @@ Technical Preview 1610 引入了一种新设置，可用于排除客户端集合
 1.  在 Configuration Manager 控制台中，转到“资产和合规性” > “概览”>“设备”。
 2.  在“远程设备操作”菜单中，选择“发送同步请求”。
 
-同步可能需要 5 到 10 分钟。 策略中的任何更改都将同步到设备。 可以在“设备”视图的“远程同步状态”列或设备的“属性”对话框中跟踪同步请求的状态。
+同步可能需要&5; 到&10; 分钟。 策略中的任何更改都将同步到设备。 可以在“设备”视图的“远程同步状态”列或设备的“属性”对话框中跟踪同步请求的状态。
 
 ## <a name="additional-security-role-support"></a>其他安全角色支持
 
@@ -165,6 +165,6 @@ Technical Preview 1610 引入了一种新设置，可用于排除客户端集合
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

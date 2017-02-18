@@ -1,5 +1,5 @@
 ---
-title: "配合使用 Configuration Manager 和 Apple Configurator 进行的 iOS 混合注册 | Microsoft Docs"
+title: "注册 iOS 设备 Apple Configurator - Configuration Manager | Microsoft Docs"
 descriptions: Pre-enroll iOS devices by using Apple Configurator with Configuration Manager.
 ms.custom: na
 ms.date: 12/16/2016
@@ -16,8 +16,8 @@ author: mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0fd410a6572acce685dc6cdb954c1c2d97d5ed8b
-ms.openlocfilehash: 33aebbbe0dc59fc9dcc8bee79d1465566403d204
+ms.sourcegitcommit: 991eff171dce95590a7f050e0d3b07f98c0224b3
+ms.openlocfilehash: 6c6e9edbc7b2fca3d1be4feabb238efab80465fa
 
 
 ---
@@ -139,6 +139,6 @@ ms.openlocfilehash: 33aebbbe0dc59fc9dcc8bee79d1465566403d204
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

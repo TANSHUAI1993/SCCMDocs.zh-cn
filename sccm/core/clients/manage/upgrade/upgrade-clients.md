@@ -1,8 +1,8 @@
 ---
-title: "升级客户端 | Microsoft Docs"
+title: "升级客户端 - Configuration Manager | Microsoft Docs"
 description: "获取有关如何在 System Center Configuration Manager 中升级客户端的信息。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 01/01/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: c9794b9770e6fa5665af547d6b36559f85ade691
+ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
+ms.openlocfilehash: 56a3ec8ddfaaa233b41347da0ff853fdf92c275c
 
 
 ---
@@ -25,10 +25,10 @@ ms.openlocfilehash: c9794b9770e6fa5665af547d6b36559f85ade691
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-可以使用不同的方法在企业的 Windows 计算机、UNIX 和 Linux 服务器以及 Mac 计算机上升级 System Center Configuration Manager 客户端软件。 以下部分概述了每种客户端升级方法的优点和缺点，以帮助你确定哪种方法最适合你的组织。  
+可以使用不同的方法在 Windows 计算机、UNIX 和 Linux 服务器以及 Mac 计算机上升级 System Center Configuration Manager 客户端软件。 以下是每种方法的优缺点。  
 
 > [!TIP]  
->  如果是从以前版本的 Configuration Manager（例如 Configuration Manager 2007 或 System Center 2012 Configuration Manager）升级服务器基础结构，我们建议你先完成服务器升级（包括安装所有当前分支更新），然后再升级 Configuration Manager 客户端。   最新的当前分支更新包括最新版本的客户端，因此最好是在所有要使用的 Configuration Manager 更新都安装完成后再执行客户端升级。  
+>  如果是从以前版本的 Configuration Manager（例如 Configuration Manager 2007 或 System Center 2012 Configuration Manager）升级服务器基础结构，我们建议你先完成服务器升级（包括安装所有当前分支更新），然后再升级 Configuration Manager 客户端。 这样，你还将具有最新版本的客户端软件。  
 
 ## <a name="group-policy-installation"></a>组策略安装  
  **支持的客户端平台：** Windows  
@@ -45,11 +45,10 @@ ms.openlocfilehash: c9794b9770e6fa5665af547d6b36559f85ade691
 
  **缺点**  
 
--   如果升级大量客户端，可能会导致网络流量很高。  
+-   如果升级大量客户端，则会导致较高的网络流量。  
 
--   如果没有为 Configuration Manager 扩展 Active Directory 架构，则必须使用组策略设置将客户端安装属性添加到站点中的计算机。  
+-   如果没有为 Configuration Manager 扩展 Active Directory 架构，则必须使用[组策略设置](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientGP)将客户端安装属性添加到站点中的计算机。  
 
- 有关详细信息，请参阅[如何使用组策略安装 Configuration Manager 客户端](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientGP)。  
 
 ## <a name="logon-script-installation"></a>登录脚本安装  
  **支持的客户端平台：** Windows  
@@ -64,9 +63,9 @@ ms.openlocfilehash: c9794b9770e6fa5665af547d6b36559f85ade691
 
  **缺点**  
 
--   如果在短时间内升级大量客户端，可能会导致网络流量很高。  
+-   如果在短时间内升级大量客户端，则会导致较高的网络流量。  
 
--   如果用户并非经常登录到网络，则可能需要很长时间才能升级到所有客户端计算机。  
+-   如果用户并非经常登录到网络，则可能需要很长时间才能升级所有客户端计算机。  
 
  有关详细信息，请参阅[如何使用登录脚本安装 Configuration Manager 客户端](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientLogonScript)。  
 
@@ -97,7 +96,7 @@ ms.openlocfilehash: c9794b9770e6fa5665af547d6b36559f85ade691
  **支持的客户端平台：** Windows  
 
 > [!NOTE]  
->  使用此方法无法升级 Configuration Manager 2007 客户端。 在此情况下，可以从 Configuration Manager 2007 站点中以包的形式部署 Configuration Manager 客户端，或者可以使用自动客户端升级，这种方法可自动创建和部署包含客户端最新版本的包。  
+>  无法使用此方法升级 Configuration Manager 2007 客户端。 在此情况下，可以从 Configuration Manager 2007 站点中以包的形式部署 Configuration Manager 客户端，或者可以使用自动客户端升级，这种方法可自动创建和部署包含客户端最新版本的包。  
 
  **优点**  
 
@@ -105,7 +104,7 @@ ms.openlocfilehash: c9794b9770e6fa5665af547d6b36559f85ade691
 
  **缺点**  
 
--   将客户端分发到大型集合时，可能会导致网络流量很高。  
+-   将客户端分发到大型集合时，可能会导致较高的网络流量。  
 
 -   只能用于在已发现并分配到站点的计算机上升级客户端软件。  
 
@@ -114,7 +113,7 @@ ms.openlocfilehash: c9794b9770e6fa5665af547d6b36559f85ade691
 ## <a name="automatic-client-upgrade"></a>自动客户端升级  
 
 > [!NOTE]  
->  可用于将 Configuration Manager 2007 客户端升级到 System Center Configuration Manager 客户端。 Configuration Manager 2007 客户端可分配给 Configuration Manager 站点，但无法执行除自动客户端升级外的任何操作。  
+>  可用于将 Configuration Manager 2007 客户端升级到 System Center Configuration Manager 客户端。 Configuration Manager 2007 客户端可分配给 Configuration Manager 站点，但无法执行自动客户端升级外的任何操作。  
 
  **支持的客户端平台：** Windows  
 
@@ -122,7 +121,7 @@ ms.openlocfilehash: c9794b9770e6fa5665af547d6b36559f85ade691
 
 -   可用于自动让站点中的客户端的版本保持最新。  
 
--   需要管理用户进行的管理最少。  
+-   所需管理最少。  
 
  **缺点**  
 
@@ -153,6 +152,6 @@ ms.openlocfilehash: c9794b9770e6fa5665af547d6b36559f85ade691
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

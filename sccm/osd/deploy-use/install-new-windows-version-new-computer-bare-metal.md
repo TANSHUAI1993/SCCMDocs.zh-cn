@@ -1,8 +1,8 @@
 ---
-title: "使用 System Center Configuration Manager 在新计算机（裸机）上安装新版本的 Windows | Microsoft Docs"
-description: "按照 System Center Configuration Manager 中的这些步骤，使用PXE、OEM 或独立媒体在新计算机上安装操作系统。"
+title: "在新计算机上安装 Windows - Configuration Manager | Microsoft Docs"
+description: "通过 PXE、OEM 或独立介质在新计算机（裸机）上使用 Configuration Manager 安装操作系统。"
 ms.custom: na
-ms.date: 12/06/2016
+ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 06ade037c580d64503e6b8b5c3bf31004ab0650b
-ms.openlocfilehash: 93b3d99e7391feefc3d706f15f0fe8f8df3b75ac
+ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
+ms.openlocfilehash: 584dad7d8b05a2da9f7a66b73028ae99ff1a594f
 
 
 ---
@@ -27,7 +27,7 @@ ms.openlocfilehash: 93b3d99e7391feefc3d706f15f0fe8f8df3b75ac
 
 本主题提供了在 System Center Configuration Manager 中在新计算机上安装操作系统的常规步骤。 对于此方案，可以从许多不同的部署方法中选择，如 PXE、OEM、或独立媒体。 如果不确定这是否是正确的操作系统部署方案，请参阅[部署企业版操作系统的方案](scenarios-to-deploy-enterprise-operating-systems.md)。  
 
- 采用以下部分内容，使用新版本的 Windows 来刷新现有计算机。  
+采用以下部分内容，使用新版本的 Windows 来刷新现有计算机。  
 
 ##  <a name="a-namebkmkplana-plan"></a><a name="BKMK_Plan"></a> 计划  
 
@@ -81,6 +81,6 @@ ms.openlocfilehash: 93b3d99e7391feefc3d706f15f0fe8f8df3b75ac
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

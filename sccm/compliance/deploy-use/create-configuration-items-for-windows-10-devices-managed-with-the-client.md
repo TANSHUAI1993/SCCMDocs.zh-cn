@@ -1,5 +1,5 @@
 ---
-title: "如何为使用 System Center Configuration Manager 客户端管理的 Windows 10 设备创建配置项目 | Microsoft Docs"
+title: "为客户端托管的 Windows 10 创建配置项 - Configuration Manager | Microsoft Docs"
 description: "使用 System Center Configuration Manager Windows 10 配置项目管理由 Configuration Manager 客户端管理的 Windows 10 计算机的设置。"
 ms.custom: na
 ms.date: 11/18/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
-ms.openlocfilehash: 2b24570aa2e9d9aa45584842011dcd49c6e5e8cc
+ms.sourcegitcommit: 35e48666f4d1a2363304650f960531fd0630a291
+ms.openlocfilehash: 030cc33d98c81f3a6d5dff2d4c011e03fff12dc2
 
 
 ---
@@ -137,6 +137,6 @@ Windows 信息保护 (WIP) 帮助防范此可能的数据泄漏而不会妨碍�
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

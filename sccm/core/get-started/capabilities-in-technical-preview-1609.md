@@ -1,8 +1,8 @@
 ---
-title: "System Center Configuration Manager Technical Preview 1609 版中的功能 | Microsoft Docs"
+title: "Technical Preview 1609 Configuration Manager 中的功能"
 description: "了解 System Center Configuration Manager Technical Preview 版本 1609 中的可用功能。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 01/23/2017
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3bf44f850722afdb8dfe5922c8ceff11c9b56d08
-ms.openlocfilehash: 4ab022eda3367c79dbe698b6dab7017cb25b5e3a
+ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
+ms.openlocfilehash: 89a41c8a3137d0e54011ddf9a1d9b4894ecb7df8
 
 ---
 # <a name="capabilities-in-technical-preview-1609-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1609 中的功能
@@ -325,7 +325,7 @@ Upgrade Analytics 使你能够评估和分析设备的准备情况以及与 Wind
 -   副本由每个现有的边界组组成，这些边界组包含配置为慢速连接的站点服务器。 新组的名称为 ***\<original boundary group name>-Slow-Tmp***：  
     -   包含快速连接的站点系统会保留在原始边界组中。
     -   包含慢速连接的站点系统副本将添加到边界组副本中。 配置为慢速的原始站点系统仍处于原始边界组中，以便保持向后兼容性，但不从该边界组使用它。
-    -   此边界组副本不具有与之相关联的边界。 但是，已在原始组和将回退时间设置为 0 的新边界组副本之间创建回退链接。
+    -   此边界组副本不具有与之相关联的边界。 但是，已在原始组和将回退时间设置为&0; 的新边界组副本之间创建回退链接。
 
  下表列出了可从原始部署设置和分发点配置组合期望的新回退行为：
 
@@ -457,6 +457,6 @@ Configuration Manager 1609 Technical Preview 引入了一个新的仪表板。 �
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

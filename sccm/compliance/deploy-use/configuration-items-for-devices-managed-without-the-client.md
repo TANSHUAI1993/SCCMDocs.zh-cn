@@ -1,5 +1,5 @@
 ---
-title: "不使用 System Center Configuration Manager 客户端管理的设备配置项目 | Microsoft Docs"
+title: "不使用客户端的设备的配置项 - Configuration Manager | Microsoft Docs"
 description: "为不由 System Center Configuration Manager 客户端管理的 Windows、Mac 以及其他设备创建配置项目。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f9e939d871e95a3248d8e5d96cb73063a81fd5cf
-ms.openlocfilehash: 4a66ddf8b26b9cb81a7399063a51e3fea236c5eb
+ms.sourcegitcommit: 35e48666f4d1a2363304650f960531fd0630a291
+ms.openlocfilehash: 6f0cd1532385f40feaac424877cfcb5f31d35868
 
 
 ---
@@ -38,6 +38,6 @@ ms.openlocfilehash: 4a66ddf8b26b9cb81a7399063a51e3fea236c5eb
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

@@ -1,8 +1,8 @@
 ---
-title: "管理启动映像 | Microsoft Docs"
+title: "管理启动映像 - Configuration Manager | Microsoft Docs"
 description: "在 Configuration Manager 中，了解如何管理在操作系统部署过程中使用的 Windows PE 启动映像。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
-ms.openlocfilehash: 8c41c39a7f984be2612ae882d3bc08d92278dba6
+ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
+ms.openlocfilehash: 3b7125e782b60853e750aeb7ba923490e46a76b0
 
 
 ---
@@ -251,6 +251,6 @@ Configuration Manager 中的一个启动映像是在操作系统部署过程中�
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

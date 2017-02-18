@@ -1,5 +1,5 @@
 ---
-title: "监视客户端 | 云管理网关 | Microsoft Docs"
+title: "监视云管理网关 - Configuration Manager | Microsoft Docs"
 description: 
 ms.date: 11/18/2016
 ms.prod: configuration-manager
@@ -10,8 +10,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: 2753efaca58447417cf0671645e737d052f0849b
+ms.sourcegitcommit: ef12c9b966a1b83b61243311b30e1a925c20d2e3
+ms.openlocfilehash: 4475205c37c20631a189e0c315dc48e288c15ba6
 
 ---
 
@@ -59,6 +59,6 @@ ms.openlocfilehash: 2753efaca58447417cf0671645e737d052f0849b
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

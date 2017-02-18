@@ -1,5 +1,5 @@
 ---
-title: "为没使用 System Center Configuration Manager 客户端管理的 Windows 8.1 和 Windows 10 设备创建配置项目 | Microsoft Docs"
+title: "为 Windows 10 创建配置项 - 不使用客户端 - Configuration Manager | Microsoft Docs"
 description: "使用 System Center Configuration Manager Windows 10 配置项目，管理 Windows 10 计算机的设置。"
 ms.custom: na
 ms.date: 12/08/2016
@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 8f6e6fd1d2a9a6352c9191ea7e2a1f9c6f6e2199
-ms.openlocfilehash: 7efde8dda724d71775313290b13a6aad2f9a7d6c
+ms.sourcegitcommit: 35e48666f4d1a2363304650f960531fd0630a291
+ms.openlocfilehash: 4c34ace72905b286c3582f09993bd897a87cce45
 
 
 ---
@@ -74,7 +74,7 @@ ms.openlocfilehash: 7efde8dda724d71775313290b13a6aad2f9a7d6c
 ##  <a name="windows-81-and-windows-10-configuration-item-settings-reference"></a>Windows 8.1 和 Windows 10 配置项目设置参考  
 
 ### <a name="password"></a>Password  
- 
+
 |设置|详细信息|  
 |-------------|-------------|  
 |**设备上需要密码设置**|支持的设备上需要密码。|  
@@ -100,8 +100,8 @@ ms.openlocfilehash: 7efde8dda724d71775313290b13a6aad2f9a7d6c
 |**蓝牙**|允许使用设备的蓝牙功能。|  
 |**蓝牙可发现模式**|允许其他蓝牙设备发现此设备。<br>（仅 Windows 10）|  
 |**蓝牙广告**|允许使用蓝牙广告。<br> （仅 Windows 10）|  
-|**语音录制**|允许使用设备的语音录制功能。<br>（仅 Windows 10）| 
-|**Cortana**|启用或禁用 Cortana 语音助手。| 
+|**语音录制**|允许使用设备的语音录制功能。<br>（仅 Windows 10）|
+|**Cortana**|启用或禁用 Cortana 语音助手。|
 
 ### <a name="email-management"></a>电子邮件管理  
 
@@ -153,7 +153,7 @@ ms.openlocfilehash: 7efde8dda724d71775313290b13a6aad2f9a7d6c
 |**转至 Intranet 站点以获取单字条目**|启用或禁用以下设置：如果输入的有效站点名称前没有“HTTP:”，则允许 Internet Explorer 自动转至 Intranet 站点|  
 |**企业模式菜单选项**|允许用户从 Internet Explorer 的“工具”  菜单中激活和停用企业模式。|  
 |**记录报告位置 (URL)**|指定启用企业模式时将登录的受访网站的 URL。|  
-|**企业模式站点列表位置 (URL)**|指定活动状态下将使用企业模式的网站列表的位置。| 
+|**企业模式站点列表位置 (URL)**|指定活动状态下将使用企业模式的网站列表的位置。|
 
 ### <a name="microsoft-edge"></a>Microsoft Edge  
  这些设置适用于运行 Windows 10 及更高版本的设备。  
@@ -175,7 +175,7 @@ ms.openlocfilehash: 7efde8dda724d71775313290b13a6aad2f9a7d6c
  这些设置适用于运行 Windows 10 十一月更新 (1511) 及更高版本的设备。  
 
 |设置名|详细信息|  
-|------------------|-------------| 
+|------------------|-------------|
 |**允许实时监视**|启用对恶意软件、间谍软件和其他不需要的软件的实时扫描。|
 |**允许行为监视**|允许 Defender 在设备上检查是否有某些已知模式的可疑活动。|
 |**启用网络检查系统**|网络检查系统 (NIS) 通过使用来自 Microsoft Endpoint Protection 中心的已知漏洞签名来帮助检测和阻止恶意流量，从而帮助保护设备免受基于网络的攻击。|
@@ -201,7 +201,7 @@ ms.openlocfilehash: 7efde8dda724d71775313290b13a6aad2f9a7d6c
 |**文件扩展名排除**|向排除列表添加一个或多个如 jpg 或 txt 等文件拓展名。 任何带有这些扩展名的文件都不会包含在任何实时或计划扫描中。|
 |**过程排除**|向排除列表添加一个或多个类型为 .exe、.com 或 .scr 的过程。 这些过程不会包含在任何实时或计划扫描中。|
 
- 
+
 
 ###  <a name="cloud"></a>云  
 
@@ -244,9 +244,9 @@ ms.openlocfilehash: 7efde8dda724d71775313290b13a6aad2f9a7d6c
 |**漫游时的设备管理**|允许设备在漫游时由 Configuration Manager 管理。<br>（仅 Windows 10）|  
 |**漫游时的软件下载**|允许在漫游时下载应用和软件。<br>（仅 Windows 10）|  
 |**漫游时的电子邮件下载**|允许在漫游时下载电子邮件。<br>（仅 Windows 10）|  
-|**数据漫游**|允许在访问数据时进行网络之间的漫游。| 
+|**数据漫游**|允许在访问数据时进行网络之间的漫游。|
 |**通过移动电话网络使用 VPN**|控制设备在连接到移动电话网络时是否能够访问 VPN 连接。<br>（仅 Windows 10）|
-|**通过在移动电话网络中漫游时使用 VPN**|控制设备在移动电话网络中漫游时是否能够访问 VPN 连接。<br>（仅 Windows 10）| 
+|**通过在移动电话网络中漫游时使用 VPN**|控制设备在移动电话网络中漫游时是否能够访问 VPN 连接。<br>（仅 Windows 10）|
 
 ###  <a name="encryption"></a>加密  
 
@@ -287,7 +287,7 @@ ms.openlocfilehash: 7efde8dda724d71775313290b13a6aad2f9a7d6c
 |**代理服务器设置**|根据需要为“HTTP”  、“WAP”  和“套接字” 指定“服务器”  和“端口” 设置。|  
 |**启用 802.1X 网络访问**|如果要通过指定一种 EAP 类型来保护连接，请选择此选项。|  
 |**EAP 类型**|选择要使用的 EAP 类型：<br>- **PEAP**<br>- **智能卡或证书**|  
- 
+
 
 ### <a name="certificates"></a>证书  
  允许导入证书以安装到移动设备上。  
@@ -356,11 +356,11 @@ ms.openlocfilehash: 7efde8dda724d71775313290b13a6aad2f9a7d6c
 |------------------|-------------|  
 |**传感器检测到房间内有人时允许屏幕自动唤醒**|允许设备在其传感器检测到房间内有人时自动唤醒。|  
 |**无线投影需要 PIN**|指定是否必须先输入 PIN，然后才能使用设备的无线投影功能。|  
-|**维护时段**|配置可以对设备进行更新的时段。 可以配置该时段的开始时间和持续时间（1-5 小时）。| 
+|**维护时段**|配置可以对设备进行更新的时段。 可以配置该时段的开始时间和持续时间（1-5 小时）。|
 |**Azure Operational Insights**|Azure Operational Insights 是 Microsoft Operations Manager 套件的一部分，可收集、存储和分析来自 Windows 10 Team 设备的日志文件数据。<br>若要连接到 Azure Operational Insights，必须指定“工作区 ID”和“工作区密钥”。|
 |**Miracast 无线投影**|如果想让 Windows 10 Team 设备使用已启用 Miracast 的设备进行投影，请启用此选项。<br>若要启用此选项，请从“选择 Miracast 频道”中选择用于投影内容的 Miracast 频道。|
 |**显示在“欢迎”屏幕上的会议信息**|如果启用此选项，可以选择要在“欢迎”屏幕上显示的“会议”磁贴中的信息。 你可以：<br>- “仅显示组织者和时间”<br>- “显示组织者、时间和主题(私人会议隐藏主题)”|
-|**锁屏背景图像 URL**|启用此设置以在 Windows 10 Team 设备上的“欢迎”屏幕上显示来自指定 URL 的自定义背景。<br>图像必须为 PNG 格式，且 URL 必须以 **https://** 开头。| 
+|**锁屏背景图像 URL**|启用此设置以在 Windows 10 Team 设备上的“欢迎”屏幕上显示来自指定 URL 的自定义背景。<br>图像必须为 PNG 格式，且 URL 必须以 **https://** 开头。|
 
 ### <a name="windows-information-protection"></a>Windows 信息保护
  这些设置仅适用于运行 Windows 10 的设备。
@@ -393,7 +393,6 @@ Windows 信息保护 (WIP) 帮助防范此可能的数据泄漏而不会妨碍�
 
 
 
-
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 

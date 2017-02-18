@@ -17,8 +17,8 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0d6479bcc134103e6005159a8ea295a5f359a436
-ms.openlocfilehash: cc5b04dc41b13993fca35f202437b71e96bc9cdd
+ms.sourcegitcommit: cec595d473ca2459e43a7fa1c70b7668a8a48986
+ms.openlocfilehash: d529a058968cf99dce77997844b33ff5dc7c0004
 
 
 ---
@@ -43,8 +43,8 @@ ms.openlocfilehash: cc5b04dc41b13993fca35f202437b71e96bc9cdd
 ##  <a name="a-namebkmkintunea-use-of-the--microsoft-intune-subscription"></a><a name="bkmk_intune"></a>使用 Microsoft Intune 订阅  
  若要开始使用本地移动设备管理，你需要 Microsoft Intune 订阅。 仅跟踪设备授权时需要订阅，订阅不用于管理或储存设备的管理信息。 所有管理均由你组织的企业使用本地 Configuration Manager 基础结构来进行。  
 
-> [!IMPORTANT]  
->  Configuration Manager 不支持同时将 Microsoft Intune 和本地 Configuration Manager 基础结构作为管理机构使用。 因此，设置 Intune 订阅以用于本地管理时，实际上禁用了 Intune 管理。  
+ > [!NOTE]  
+ > 从版本 1610 开始，Configuration Manager 支持同时使用 Microsoft Intune 和本地 Configuration Manager 基础结构管理移动设备。   
 
  如果你的站点拥有具 Internet 连接性的设备，可使用 Intune 服务通知设备检查设备管理点是否有策略更新。 Intune 的这种用法仅限用于对面向 Internet 的设备进行通知。 无 Internet 连接（且不能由 Intune 连接）的设备依靠配置的轮询间隔来签入站点系统角色，从而实现管理功能。  
 
@@ -122,6 +122,6 @@ ms.openlocfilehash: cc5b04dc41b13993fca35f202437b71e96bc9cdd
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 
