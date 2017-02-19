@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 5314bcb434b5b540f80cdfe32002df7b8fed6195
-ms.openlocfilehash: 52d5ad7a348e0489f43ac6cb46af930499ef6cf2
+ms.sourcegitcommit: 816c6bd33e42b70bbafed0dea7624bc5a5421544
+ms.openlocfilehash: 55d4f1805937405c4101f5b814875818d2aa72c0
 
 
 ---
@@ -73,13 +73,13 @@ Configuration Manager 的某些更新可用作现有基础结构的控制台中�
 
 以下版本的 Configuration Manager 可用作基准和/或更新：  
 
-|版本|可用日期|Baseline|控制台中更新|  
-|-------------|-----------------------|--------------|------------------------|  
-|**1511**<br /><br /> 5.00.8325.1000|2015 年 12 月 8 日|是|否|  
-|**1602**<br /><br /> 5.00.8355.1000|2016 年 3 月 11 日|否|是|
-|**1606**<br /><br /> 5.00.8412.1000|2016/7/22|否|是|
-|**1606** 和 1606 修补程序汇总 (KB3186654) </br></br>5.00.8412.1307（注释 1） |2016/10/12|是|否|
-|**1610**<br /><br /> 5.00.8458.1000|2016/11/18|否|是|
+|版本|可用日期|[支持结束日期](/sccm/core/servers/manage/current-branch-versions-supported) |Baseline|控制台中更新|  
+|-------------|-----------|------------|--------------|------------------------|  
+| 1511 <br /><br /> 5.00.8325.1000|2015 年&12; 月&8; 日| 2016 年&12; 月&8; 日|是|否|  
+|[1602](/sccm/core/plan-design/changes/whats-new-in-version-1602)<br /><br /> 5.00.8355.1000|2016 年&3; 月&11; 日| 2017 年&3; 月&11; 日|否|是|
+|[1606](/sccm/core/plan-design/changes/whats-new-in-version-1606)<br /><br /> 5.00.8412.1000|2016/7/22| 2017 年&7; 月&22; 日|否|是|
+|[1606](/sccm/core/plan-design/changes/whats-new-in-version-1606) 和 1606 修补程序汇总 (KB3186654) </br></br>5.00.8412.1307（注释 1） |2016/10/12| 2017 年&7; 月&22; 日|是|否|
+|[1610](/sccm/core/plan-design/changes/whats-new-in-version-1610)<br /><br /> 5.00.8458.1000|2016/11/18| 11/18/2017|否|是|
 （注释 1）此 1606 基线介质作为 Microsoft System Center 2016 或 System Center Configuration Manager（Current Branch 和 Long-Term Servicing Branch 1606）版的一部分提供。
 
 若要检查 Configuration Manager 站点的版本，请在控制台中，转至控制台左上角的 **“关于 System Center Configuration Manager”** ，新站点和控制台版本将会显示在那里。  
@@ -148,6 +148,6 @@ Configuration Manager 的某些更新可用作现有基础结构的控制台中�
 
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Feb17_HO1-->
 
 

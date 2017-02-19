@@ -2,7 +2,7 @@
 title: "Configuration Manager 版本之间的互操作性 | Microsoft Docs"
 description: "了解如何避免同一网络上多个 System Center Configuration Manager 层次结构之间发生冲突。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 1/30/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
-ms.openlocfilehash: 32182f06a90d768c40e29ed8a8e89cb45114bd15
+ms.sourcegitcommit: f9886d9d83cd23ddd294d5af5eed3ec00946a4f4
+ms.openlocfilehash: 8a4c52f6adb18c7e170ea87764cc38c3bbfbf9ca
 
 
 ---
@@ -81,10 +81,10 @@ ms.openlocfilehash: 32182f06a90d768c40e29ed8a8e89cb45114bd15
 |互操作性环境|更多信息|  
 |----------------------------------|----------------------|  
 |同时具有 System Center 2012 Configuration Manager 和 System Center Configuration Manager 的环境|若要管理 Configuration Manager 站点，控制台及其连接到的站点必须运行相同版本的 Configuration Manager。 例如，无法使用 System Center 2012 Configuration Manager 控制台管理 System Center Configuration Manager 站点，反之亦然。<br /><br /> 不支持在同一计算机上安装 System Center 2012 Configuration Manager 控制台和 System Center Configuration Manager 控制台。|  
-|具有 System Center Configuration Manager 的多个版本的环境|System Center Configuration Manager 不支持在某一计算机上安装多个 Configuration Manager 控制台。 若要使用特定于 System Center Configuration Manager 的不同版本的多个控制台，必须在单独的计算机上安装不同的控制台。<br /><br /> 在升级层次结构中的站点过程中，你可以将控制台连接到运行更新的版本的站点，并查看关于该层次结构中其他站点的信息。 但是，不建议使用此配置，因为控制台版本和 Configuration Manager 站点版本之间的差异可能导致数据问题，且某些在最新产品版本中可用的功能在控制台中不可用。|  
+|具有 System Center Configuration Manager 的多个版本的环境|System Center Configuration Manager 不支持在某一计算机上安装多个 Configuration Manager 控制台。 若要使用特定于 System Center Configuration Manager 的不同版本的多个控制台，必须在单独的计算机上安装不同的控制台。<br /><br /> 在将层次结构中的站点更新到新版本的过程中，你可以将控制台连接到运行更新的版本的站点，并查看关于该层次结构中其他站点的信息。 但是，不建议使用此配置，因为控制台版本和 Configuration Manager 站点版本之间的差异可能导致数据问题，且某些在最新产品版本中可用的功能在控制台中不可用。 <br /></br />使用的控制台的版本与站点版本不匹配时，不支持对站点进行管理。 这样可能会导致数据丢失，并会将你的站点置于风险之中。 例如，不支持使用版本为 1610 的控制台来管理运行版本 1606 的站点。 |
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO5-->
 
 

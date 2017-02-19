@@ -2,7 +2,7 @@
 title: "Azure 上的 Configuration Manager | Microsoft Docs"
 description: "有关在 Azure 环境中使用 Configuration Manager 的信息。"
 ms.custom: na
-ms.date: 01/04/2017
+ms.date: 01/30/2017
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6638d6e17d0eaeef731cce45e8cf5c827d6e0dfe
-ms.openlocfilehash: 4d953eedc7d5cceb8767dab8850cacb1e007194d
+ms.sourcegitcommit: 264e009952db34a6f4929ecb70dc6857117ce4fe
+ms.openlocfilehash: e8798adc0e479417c682450d181611284c148e6d
 
 ---
 # <a name="configuration-manager-on-azure---frequently-asked-questions"></a>Azure 上的 Configuration Manager - 常见问题解答
@@ -92,7 +92,7 @@ ms.openlocfilehash: 4d953eedc7d5cceb8767dab8850cacb1e007194d
 一般情况下，计算能力（CPU 和内存）需满足[用于 System Center Configuration Manager 的推荐硬件](/sccm/core/plan-design/configs/recommended-hardware)。 但常规计算机硬件与 Azure VM 之间有些区别，尤其涉及到这些虚拟机使用的磁盘时。  使用的虚拟机的大小取决于环境的规模，这里有一些建议：
 - 对于任何大规模的生产部署，建议使用“S”级 Azure VM。 这是因为这些 VM 可利用高级存储磁盘。  非“S”级 VM 使用 Blob 存储，通常不符合可接受的生产体验所需的性能要求。
 - 对于较大的规模，应使用多个高级存储磁盘，并在 Windows 磁盘管理控制台中将其进行分区以获得最大 IOPS。  
-- 建议在初始站点部署期间使用较好的或多个高级磁盘（如使用 P30 而不是 P20，使用 2 个 P30 而不是 1 个 P30）。 之后，如果站点因额外负荷需要增加 VM 的大小，则可利用较大 VM 提供的额外 CPU 和内存空间。 此外，已配置好的磁盘也可充分利用较大 VM 所允许的额外 IOPS 吞吐量。
+- 建议在初始站点部署期间使用较好的或多个高级磁盘（如使用 P30 而不是 P20，在带区卷中使用 2 个 P30 而不是 1 个 P30）。 之后，如果站点因额外负荷需要增加 VM 的大小，则可利用较大 VM 提供的额外 CPU 和内存空间。 此外，已配置好的磁盘也可充分利用较大 VM 所允许的额外 IOPS 吞吐量。
 
 
 
@@ -102,18 +102,18 @@ ms.openlocfilehash: 4d953eedc7d5cceb8767dab8850cacb1e007194d
 
 | 桌面客户端    |建议的 VM 大小|建议的磁盘空间|
 |--------------------|-------------------|-----------------|
-|**最多 25k**       |   DS4_V2          |2xP30            |
-|**25k 到 50k**      |   DS13_V2         |2xP30            |
-|**50k 到 100k**     |   DS14_V2         |3xP30            |
+|**最多 25k**       |   DS4_V2          |2xP30（带区）  |
+|**25k 到 50k**      |   DS13_V2         |2xP30（带区）  |
+|**50k 到 100k**     |   DS14_V2         |3xP30（带区）  |
 
 
 **远程站点数据库** - 主站点或管理中心站点的站点数据库位于远程服务器上：
 
 | 桌面客户端    |建议的 VM 大小|建议的磁盘空间 |
 |--------------------|-------------------|------------------|
-|**最多 25k**       | 站点服务器：F4S </br>数据库服务器：DS12_V2 | 站点服务器：1xP30 </br>数据库服务器：2xP30 |
-|**25k 到 50k**      | 站点服务器：F4S </br>数据库服务器：DS13_V2 | 站点服务器：1xP30 </br>数据库服务器：2xP30 |
-|**50k 到 100k**     | 站点服务器：F8S </br>数据库服务器： DS14_V2 | 站点服务器：2xP30 </br>数据库服务器：3xP30 |
+|**最多 25k**       | 站点服务器：F4S </br>数据库服务器：DS12_V2 | 站点服务器：1xP30 </br>数据库服务器：2xP30（带区）  |
+|**25k 到 50k**      | 站点服务器：F4S </br>数据库服务器：DS13_V2 | 站点服务器：1xP30 </br>数据库服务器：2xP30（带区）   |
+|**50k 到 100k**     | 站点服务器：F8S </br>数据库服务器： DS14_V2 | 站点服务器：2xP30（带区）   </br>数据库服务器：3xP30（带区）   |
 
 下面显示了 DS14_V2 上 50k 到 100k 客户端的示例配置，其中 3xP30 磁盘位于带区卷中，Configuration Manager 安装和数据库文件具有单独的逻辑卷： ![VM)disks](media/vm_disks.png)  
 
@@ -139,7 +139,7 @@ ms.openlocfilehash: 4d953eedc7d5cceb8767dab8850cacb1e007194d
 
 
 ### <a name="while-i-am-ok-with-the-limitations-of-cloud-based-distribution-points-i-dont-want-to-put-my-management-point-into-a-dmz-even-though-that-is-needed-to-support-my-internet-based-clients-do-i-have-any-other-options"></a>我了解并能接受基于云的分发点的限制，但不想将管理点置于 DMZ 内，即使这是支持基于 Internet 的客户端所需的。 是否有其他选择？
-可以！ 在 Configuration Manager 1610 版本中，我们引入了[云管理网关](/sccm/core/clients/manage/manage-clients-internet#cloud-management-gateway)作为预发行功能。 （此功能最先出现在 Technical Preview 1606 版本中，用作[云代理服务](/sccm/core/get-started/capabilities-in-technical-preview-1606#a-namecloudproxyacloud-proxy-service-for-managing-clients-on-the-internet)）。 
+可以！ 在 Configuration Manager 1610 版本中，我们引入了[云管理网关](/sccm/core/clients/manage/manage-clients-internet#cloud-management-gateway)作为预发行功能。 （此功能最先出现在 Technical Preview 1606 版本中，用作[云代理服务](/sccm/core/get-started/capabilities-in-technical-preview-1606#a-namecloudproxyacloud-proxy-service-for-managing-clients-on-the-internet)）。
 
 **云管理网关**提供一种简单的方法来管理 Internet 上的 Configuration Manager 客户端。 该服务部署到 Microsoft Azure 且需要 Azure 订阅，它使用名为云管理网关连接点的新角色连接到本地 Configuration Manager 基础结构。 部署并配置好该服务后，客户端便可以访问本地 Configuration Manager 站点系统角色，而不管它们是连接到内部专用网络还是 Internet 上。
 
@@ -182,6 +182,6 @@ ms.openlocfilehash: 4d953eedc7d5cceb8767dab8850cacb1e007194d
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Jan17_HO5-->
 
 

@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 8e0090bd671e2c566447579974a38474c2f898ea
-ms.openlocfilehash: 1ca51e256ea2f406f393e4b0d3634ea0f6f637bc
+ms.sourcegitcommit: a8cb3c9850b183eec156c37a181c04088b71805e
+ms.openlocfilehash: 40837306816639ff8cea8930fec75b05edc5164a
 
 
 ---
@@ -72,9 +72,9 @@ ms.openlocfilehash: 1ca51e256ea2f406f393e4b0d3634ea0f6f637bc
 
 -   “完全权限管理员”授予 Configuration Manager 中的所有权限。  
 
--   “资产分析师”授予管理用户查看使用资产智能、软件清单、硬件清单和软件计数收集的数据的权限。 管理用户可以创建计数规则以及资产智能类别、家族和标签。  
+-   “资产管理器”授予管理以下项目的权限：资产智能同步点、资产智能报告类、软件清单、硬件清单和计数规则。  
 
--   “软件更新管理员”授予定义和部署软件更新的权限。 与此角色关联的管理用户可以创建集合、软件更新组、部署和模板，以及设置网络访问保护 (NAP) 的软件更新。  
+-   “软件更新管理员”授予定义和部署软件更新的权限。 与此角色关联的管理用户可以创建集合、软件更新组、部署和模板。  
 
 > [!TIP]  
 >  在 Configuration Manager 控制台中，可以查看内置的安全角色和创建的自定义安全角色的列表（包括它们的描述）。 若要查看角色，请在“管理”工作区中展开“安全”然后选择“安全角色”。  
@@ -215,6 +215,6 @@ ms.openlocfilehash: 1ca51e256ea2f406f393e4b0d3634ea0f6f637bc
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Jan17_HO5-->
 
 
