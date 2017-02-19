@@ -2,7 +2,7 @@
 title: "LTSB 支持的配置 | Microsoft Docs"
 description: "了解哪些操作系统和相关产品可配合 System Center Configuration Manager 的 Long-Term Servicing Branch 一起运作。"
 ms.custom: na
-ms.date: 10/12/2016
+ms.date: 1/12/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: 573115e54d734d492ca776a040bad804a792ada6
+ms.sourcegitcommit: 12aa9f0a1ad4ce8acf0b914e9911bb50ba887919
+ms.openlocfilehash: 5b2ab25d7f645ea9eada81d241ef14168b017304
 
 
 ---
@@ -36,57 +36,57 @@ ms.openlocfilehash: 573115e54d734d492ca776a040bad804a792ada6
 **将来支持的限制：**LTSB 对未来的服务器和客户端操作系统及产品依赖项提供有限的支持。 已针对发布生命期确定 LTSB 平台列表：
 
 **Windows：**
-- 仅支持用于 Windows 的质量和安全更新
-- 不会对 Current Branch (CB)、Current Branches for Business (CBB) 或 LTSB of Windows 10 添加任何支持
--   不对 Windows Server 新的主版本提供支持
+- 仅支持用于 Windows 的质量和安全更新。
+- 不为 Windows 10 的 Current Branch (CB)、Current Branches for Business (CBB) 或 LTSB 添加任何支持。
+-   不对 Windows Server 新的主版本提供支持。
 
 **SQL Server：**
-- SQL Server 将仅支持质量和安全更新或次要升级（如服务包）
-- 不对 SQL Server 新的主版本提供支持  
+- SQL Server 仅支持质量和安全更新或次要升级（如服务包）。
+- 不对 SQL Server 新的主版本提供支持。  
 
 ## <a name="site-systems-and-servers"></a>站点系统和服务器
 LTSB 支持使用以下 Windows 计算机操作系统作为站点系统。  每个操作系统都具有与[站点系统服务器支持的操作系统](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers)中的同一条目相同的要求和限制。  例如，Windows 2012 R2 的服务器核心安装必须为 x64 版本，仅支持托管分发点，且不支持 PXE 或多播。
 
 **支持的操作系统：**
-- **Windows Server 2016**
-- **Windows Server 2012** (x64) - 标准版、数据中心版
-- **Windows Server 2008 R2 SP1** (x64) - 标准版、企业版、数据中心版
-- **Windows Server 2008 SP2**（x86、x64）- 标准版、企业版、数据中心版
-- **Windows 10 企业版 2015 长期服务**（x86、x64）
-- **Windows 10 企业版 2016 长期服务**（x86、x64）
-- **Windows 8.1**（x86、x64）- 专业版、企业版
-- **Windows 7 SP1**（x86、x64）- 专业版、企业版、旗舰版
-- **Windows Server 2012 的服务器核心安装**
-- **Windows Server 2012 R2 的服务器核心安装**  
+- Windows Server 2016
+- Windows Server 2012 (x64)：标准版、数据中心版
+- Windows Server 2008 R2 SP1 (x64)：标准版、企业版、数据中心版
+- Windows Server 2008 SP2（x86、x64）：标准版、企业版、数据中心版
+- Windows 10 企业版 2015 长期服务（x86、x64）
+- Windows 10 企业版 2016 长期服务（x86、x64）
+- Windows 8.1（x86、x64）：专业版、企业版
+- Windows 7 SP1（x86、x64）：专业版、企业版、旗舰版
+- Windows Server 2012 的服务器核心安装
+- Windows Server 2012 R2 的服务器核心安装  
 
 ## <a name="client-management"></a>客户端管理
-以下各节确定可以使用 LTSB 管理的客户端操作系统。 LTSB 不支持新增操作系统作为支持的客户端。
+以下各节介绍可以使用 LTSB 管理的客户端操作系统。 LTSB 不支持新增操作系统作为支持的客户端。
 
 ### <a name="windows-computers"></a>Windows 计算机
 可以使用 LTSB，通过包括在 Configuration Manager 中的 Configuration Manager 客户端软件，管理以下 Windows 计算机操作系统。 有关详细信息，请参阅[如何在 System Center Configuration Manager 中向 Windows 计算机部署客户端](/sccm/core/clients/deploy/deploy-clients-to-windows-computers)。
 
 **支持的操作系统：**
-- **Windows Server 2016**
-- **Windows Server 2012 R2** (x64) - 标准版、数据中心版（注释 1）
-- **Windows Server 2012** (x64) - 标准版、数据中心版（注释 1）
-- **Windows Storage Server 2012 R2** (x64)
-- **Windows Storage Server 2012** (x64)
-- **Windows Server 2008 R2 SP1** (x64) - 标准版、企业版、数据中心版（注释 1）
-- **Windows Storage Server 2008 R2**（x86、x64）- 工作组、标准版、企业版
-- **Windows Server 2008 SP2**（x86、x64）- 标准版、企业版、数据中心版（注释 1）
-- **Windows 10 企业版 2015 长期服务**（x86、x64）
-- **Windows 10 企业版 2016 长期服务**（x86、x64）
-- **Windows 8.1**（x86、x64）- 专业版、企业版
-- **Windows 7 SP1**（x86、x64）- 专业版、企业版、旗舰版
-- **Windows Server 2012 R2 的服务器核心安装** (x64)（注释 2）
-- **Windows Server 2012 的服务器核心安装** (x64)（注释 2）
-- **Windows Server 2008 R2 SP1 的服务器核心安装** (x64)
-- **Windows Server 2008 SP2 的服务器核心安装**（x86、x64）
+- Windows Server 2016
+- Windows Server 2012 R2 (x64)：标准版、数据中心版（注释 1）
+- Windows Server 2012 (x64)：标准版、数据中心版（注释 1）
+- Windows Storage Server 2012 R2 (x64)
+- Windows Storage Server 2012 (x64)
+- Windows Server 2008 R2 SP1 (x64)：标准版、企业版、数据中心版（注释 1）
+- Windows Storage Server 2008 R2（x86、x64）：工作组、标准版、企业版
+- Windows Server 2008 SP2（x86、x64）：标准版、企业版、数据中心版（注释 1）
+- Windows 10 企业版 2015 长期服务（x86、x64）
+- Windows 10 企业版 2016 长期服务（x86、x64）
+- Windows 8.1（x86、x64）：专业版、企业版
+- Windows 7 SP1（x86、x64）：专业版、企业版、旗舰版
+- Windows Server 2012 R2 的服务器核心安装 (x64)（注释 2）
+- Windows Server 2012 的服务器核心安装 (x64)（注释 2）
+- Windows Server 2008 R2 SP1 的服务器核心安装 (x64)
+- Windows Server 2008 SP2 的服务器核心安装（x86、x64）
 
 **（注释 1）**Configuration Manager 支持数据中心版本，但未经认证。  
-**（注释 2）**若要支持客户端请求安装，运行此操作系统版本的计算机必须运行文件和存储服务服务器角色的文件服务器角色服务。 有关在服务器核心计算机上安装 Windows 功能的信息，请参阅 Windows Server 2012 TechNet 库中的“在 Server Core 服务器上安装服务器角色和功能”。
+**（注释 2）**若要支持客户端请求安装，运行此操作系统版本的计算机必须运行文件和存储服务服务器角色的文件服务器角色服务。 有关在 Server Core 计算机上安装 Windows 功能的详细信息，请参阅 Windows Server 2012 TechNet 库中的[在 Server Core 服务器上安装服务器角色和功能](https://technet.microsoft.com/library/jj574158(v=ws.11).aspx)。
 
-### <a name="windows-embedded"></a>Windows Embedded：
+### <a name="windows-embedded"></a>Windows Embedded
 可以在设备上安装客户端软件，使用 LTSB 管理以下 Windows Embedded 设备。  有关详细信息，请参阅[在 System Center Configuration Manager 中规划对 Windows Embedded 设备的客户端部署](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices)。
 
 **要求和限制：**  
@@ -103,26 +103,26 @@ LTSB 支持使用以下 Windows 计算机操作系统作为站点系统。  每�
 
 -   应用程序目录不受任何 Windows Embedded 设备支持。  
 
--   在能够监视基于 Windows XP 的 Windows Embedded 设备上检测到的恶意软件之前，必须在嵌入式设备上安装 Microsoft Windows WMI 脚本包。 使用 Windows Embedded Target Designer 安装此包。 必须存在文件 **WBEMDISP.DLL** 和 **WBEMDISP.TLB** 且必须在嵌入式设备上的 **%windir%\System32\WBEM** 文件夹中注册，以确保报告检测到的恶意软件。  
+-   在能够监视基于 Windows XP 的 Windows Embedded 设备上检测到的恶意软件之前，必须在嵌入式设备上安装 Microsoft Windows WMI 脚本包。 使用 Windows Embedded Target Designer 安装此包。 文件 *WBEMDISP.DLL* 和 *WBEMDISP.TLB* 必须存在并在嵌入式设备上的 %windir%\System32\WBEM 文件夹中注册，以确保报告检测到的恶意软件。  
 
 **支持的操作系统：**  
--   **Windows 10 企业版 2016 长期服务**（x86、x64）  
--   **Windows 10 企业版 2015 长期服务**（x86、x64）  
--   **Windows Embedded 8.1 Industry**（x86、x64）    
--   **Windows Thin PC**（x86、x64）    
--   **Windows Embedded POSReady 7**（x86、x64）    
--   **Windows Embedded Standard 7 SP1**（x86、x64）    
--   **Windows Embedded POSReady 2009** (x86)   
--   **Windows Embedded Standard 2009** (x86)  
+-   Windows 10 企业版 2016 长期服务（x86、x64）  
+-   Windows 10 企业版 2015 长期服务（x86、x64）  
+-   Windows Embedded 8.1 Industry（x86、x64）    
+-   Windows Thin PC（x86、x64）    
+-   Windows Embedded POSReady 7（x86、x64）    
+-   Windows Embedded Standard 7 SP1（x86、x64）    
+-   Windows Embedded POSReady 2009 (x86)   
+-   Windows Embedded Standard 2009 (x86)  
 
 ### <a name="windows-ce"></a>Windows CE  
  可以使用 Configuration Manager 包括的 Configuration Manager 移动设备旧客户端管理 Windows CE 设备。  
 
-**要求和限制**  
+**要求和限制：**  
 
--   移动设备客户端需要 0.78 MB 的存储空间以安装该客户端。 移动设备上的日志记录可能需要高达 256 KB 的额外存储空间。    
+-   移动设备客户端需要 0.78 MB 的存储空间来安装该客户端。 移动设备可能需要最多 256 KB 的额外存储空间用于登录。    
 
--   这些移动设备的功能因平台和客户端类型而异。 有关 Configuration Manager 对于移动设备旧客户端所支持的管理功能的详细信息，请参阅[为 System Center Configuration Manager 选择设备管理解决方案](/sccm/core/plan-design/choose-a-device-management-solution)。  
+-   这些移动设备的功能因平台和客户端类型而异。 有关 Configuration Manager 对于移动设备旧客户端所支持的管理功能类型的信息，请参阅[为 System Center Configuration Manager 选择设备管理解决方案](/sccm/core/plan-design/choose-a-device-management-solution)。  
 
 **支持的操作系统：**  
 
@@ -143,23 +143,23 @@ LTSB 支持使用以下 Windows 计算机操作系统作为站点系统。  每�
 ### <a name="mac-computers"></a>Mac 计算机  
  可以使用 LTSB，通过用于 Mac 的 Configuration Manager 客户端来管理 Mac OS X 计算机。
 
-Mac 客户端安装包未与 Configuration Manager 媒体一同提供。 可以将其作为其他操作系统的客户端的一部分，从 [Microsoft 下载中心](http://go.microsoft.com/fwlink/?LinkID=525184)下载。  
+Mac 客户端安装包未与 Configuration Manager 媒体一同提供。 可以将其作为“其他操作系统的客户端”的一部分，从 [Microsoft 下载中心](http://go.microsoft.com/fwlink/?LinkID=525184)下载。  
 
-对 Mac 操作系统的支持限于本节中列出的这些操作系统，并不包括其他可能受 Current Branch 适用的 Mac 客户端安装包的将来更新支持的操作系统。
+对 Mac 操作系统的支持仅限于本节中列出的这些操作系统。 支持不包括其他可能受 Current Branch 适用的 Mac 客户端安装包的将来更新支持的操作系统。
 
 有关详细信息，请参阅[如何在 System Center Configuration Manager 中将客户端部署到 Mac](/sccm/core/clients/deploy/deploy-clients-to-macs)。
 
 **支持的版本：**  
--   **Mac OS X 10.9** (Mavericks)  
--   **Mac OS X 10.10** (Yosemite)  
--   **Mac OS X 10.11** (El Capitan)  
+-   Mac OS X 10.9 (Mavericks)  
+-   Mac OS X 10.10 (Yosemite)  
+-   Mac OS X 10.11 (El Capitan)  
 
 ## <a name="linux-and-unix-servers"></a>Linux 和 UNIX 服务器
 可使用 LTSB，通过适用于 Linux 和 UNIX 的 Configuration Manager 客户端管理 Linux 和 UNIX 服务器。
 
-Linux 和 UNIX 客户端安装包未与 Configuration Manager 媒体一同提供。 可以将其作为其他操作系统的客户端的一部分，从 [Microsoft 下载中心](http://go.microsoft.com/fwlink/?LinkID=525184)下载。 除了客户端安装包，客户端下载内容还包括在每台计算机上管理客户端安装的“install”脚本。
+Linux 和 UNIX 客户端安装包未与 Configuration Manager 媒体一同提供。 可以将其作为“其他操作系统的客户端”的一部分，从 [Microsoft 下载中心](http://go.microsoft.com/fwlink/?LinkID=525184)下载。 除了客户端安装包，客户端下载内容还包括在每台计算机上管理客户端安装的“install”脚本。
 
-对 Linux 和 UNIX 操作系统的支持限于本节中列出的这些操作系统，并不包括其他可能受 Current Branch 适用的 Linux 和 UNIX 客户端包的将来更新支持的操作系统。
+对 Linux 和 UNIX 操作系统的支持仅限于本节中列出的这些操作系统。 支持不包括其他可能受 Current Branch 适用的 Linux 和 UNIX 客户端安装包的将来更新支持的操作系统。
 
 **要求和限制：**  
 
@@ -266,18 +266,18 @@ Linux 和 UNIX 客户端安装包未与 Configuration Manager 媒体一同提供
 |版本 14.04 LTS x64|ccm-Universalx64.&lt;build\>.tar|  
 
 ### <a name="exchange-server-connector"></a>Exchange Server 连接器
- LTSB 支持连接到 Exchange Server 的设备的有限管理，无需安装客户端软件。 有关详细信息，请参阅[使用 System Center Configuration Manager 和 Exchange 管理移动设备](/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync)。
+ LTSB 支持连接到 Exchange Server 实例的设备的有限管理，无需安装客户端软件。 有关详细信息，请参阅[使用 System Center Configuration Manager 和 Exchange 管理移动设备](/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync)。
 
  **要求和限制：**  
 
--   当使用连接到运行 Exchange Server 或 Exchange Online 的服务器、使用支持 Exchange Active Sync (EAS) 的设备的 Exchange Server 连接器时，Configuration Manager 提供对移动设备的有限管理。  
+-   Configuration Manager 提供对移动设备的有限管理。 当使用连接到运行 Exchange Server 或 Exchange Online 的服务器、支持 Exchange Active Sync (EAS) 的设备的 Exchange Server 连接器时，便可使用有限管理。  
 
--   有关 Configuration Manager 对于 Exchange Server 连接器管理的移动设备所支持的管理功能详细信息，请参阅[为 System Center Configuration Manager 选择设备管理解决方案](/sccm/core/plan-design/choose-a-device-management-solution)。  
+-   有关 Configuration Manager 对于 Exchange Server 连接器管理的移动设备所支持的管理功能的详细信息，请参阅[为 System Center Configuration Manager 选择设备管理解决方案](/sccm/core/plan-design/choose-a-device-management-solution)。  
 
 **支持的 Exchange Server 版本：**  
--   **Exchange Server 2010 SP1**  
--   **Exchange Server 2010 SP2**  
--   **Exchange Server 2013**  
+-   Exchange Server 2010 SP1  
+-   Exchange Server 2010 SP2  
+-   Exchange Server 2013  
 
 > [!NOTE]
 > LTSB 不支持管理通过联机服务（如 Exchange Online (Office 365)）连接的设备。
@@ -287,40 +287,42 @@ Linux 和 UNIX 客户端安装包未与 Configuration Manager 媒体一同提供
 LTSB 支持以下操作系统运行 Configuration Manager 控制台。 托管控制台的每台计算机都必须具有最低为 4.5.2 的 .NET Framework 版本，Windows 10 除外，它要求的最低版本为 .NET Framework 4.6。
 
 **支持的操作系统：**
-- **Windows Server 2016**
-- **Windows Server 2012 R2** (x64) - 标准版、数据中心版
-- **Windows Server 2012** (x64) - 标准版、数据中心版
-- **Windows Server 2008 R2 SP1** (x64) - 标准版、企业版、数据中心版
-- **Windows Server 2008 SP2**（x86、x64）- 标准版、企业版、数据中心版
-- **Windows 10 企业版 2016 长期服务**（x86、x64）
-- **Windows 10 企业版 2015 长期服务**（x86、x64）
-- **Windows 8.1**（x86、x64）- 专业版、企业版 Windows 7 SP1**（x86、x64） - 专业版、企业版、旗舰版
+- Windows Server 2016
+- Windows Server 2012 R2 (x64)：标准版、数据中心版
+- Windows Server 2012 (x64)：标准版、数据中心版
+- Windows Server 2008 R2 SP1 (x64)：标准版、企业版、数据中心版
+- Windows Server 2008 SP2（x86、x64）：标准版、企业版、数据中心版
+- Windows 10 企业版 2016 长期服务（x86、x64）
+- Windows 10 企业版 2015 长期服务（x86、x64）
+- Windows 8.1（x86、x64）：专业版、企业版
+- Windows 7 SP1（x86、x64）：专业版、企业版、旗舰版
+
 
 ## <a name="sql-server-versions-supported-for-the-site-database-and-reporting-point"></a>站点数据库和报表点支持的 SQL Server 版本
 LTSB 支持以下版本的 SQL Server，以托管站点数据库和报表点。 对于支持的每个版本，用于 Current Branch 的 [SQL Server 版本支持](/sccm/core/plan-design/configs/support-for-sql-server-versions)中出现的相同配置要求和限制适用于 LTSB。  这包括 SQL Server 群集或 SQL Server AlwaysOn 可用性组的使用。  
 
 **支持的版本：**
 
-- **SQL Server 2016** - 标准版、企业版
-- **SQL Server 2014 SP2** - 标准版、企业版
-- **SQL Server 2014 SP1** - 标准版、企业版
-- **SQL Server 2012 SP3** - 标准版、企业版
-- **SQL Server 2012 SP2** - 标准版、企业版
-- **SQL Server 2008 R2 SP3** - 标准版、企业版、数据中心版
-- **SQL Server 2016 Express**
-- **SQL Server 2014 Express SP2**
-- **SQL Server 2014 Express SP1**
-- **SQL Server 2012 Express SP3**
-- **SQL Server 2012 Express SP2**
+- SQL Server 2016：标准版、企业版
+- SQL Server 2014 SP2：标准版、企业版
+- SQL Server 2014 SP1：标准版、企业版
+- SQL Server 2012 SP3：标准版、企业版
+- SQL Server 2012 SP2：标准版、企业版
+- SQL Server 2008 R2 SP3：标准版、企业版、数据中心版
+- SQL Server 2016 Express
+- SQL Server 2014 Express SP2
+- SQL Server 2014 Express SP1
+- SQL Server 2012 Express SP3
+- SQL Server 2012 Express SP2
 
 ## <a name="support-for-active-directory-domains"></a>对 Active Directory 域的支持
 所有 LTSB 站点系统必须均为受支持的 Windows Active Directory 域的成员。 对 Active Directory 域的支持与[对 Active Directory 域的支持](/sccm/core/plan-design/configs/support-for-active-directory-domains)中显示的域具有相同的要求和限制，但限于以下域功能级别：
 
 **支持的级别：**
-- **Windows Server 2008**
-- **Windows Server 2008 R2**
-- **Windows Server 2012**
-- **Windows Server 2012 R2**
+- Windows Server 2008
+- Windows Server 2008 R2
+- Windows Server 2012
+- Windows Server 2012 R2
 
 ## <a name="additional-support-topics-that-apply-to-the-long-term-servicing-branch"></a>适用于 Long-Term Servicing Branch 的其他支持主题
 以下 Current Branch 主题中的信息适用于 LTSB：
@@ -333,6 +335,6 @@ LTSB 支持以下版本的 SQL Server，以托管站点数据库和报表点。 
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO2-->
 
 

@@ -2,7 +2,7 @@
 title: "Long-Term Servicing Branch 简介 | Microsoft Docs"
 description: "了解 System Center Configuration Manager 的 Long-Term Servicing Branch。"
 ms.custom: na
-ms.date: 10/12/2016
+ms.date: 1/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: c681068768eda992b570a10b5f1b25c6ff1e1e79
+ms.sourcegitcommit: a86546eb513a2ef6f95013178b141fb1833ea8ab
+ms.openlocfilehash: fa4d7dd2e1edbbc0b136ebfc27560f20ab63c12e
 
 
 ---
@@ -53,9 +53,9 @@ LTSB 是 Configuration Manager 的基于 Current Branch 1606 版的不同分支�
 ## <a name="features-that-are-not-available-in-the-ltsb-of-configuration-manager"></a>Configuration Manager 的 LTSB 不提供的功能
 与 Current Branch 相比，LTSB 具有以下支持限制：
 
-- 不接收新功能的更新。
+- 不接收新功能的更新
 - 不支持添加 Microsoft Intune 订阅，即阻止使用：
-  - 混合 MDM 配置中的 Intune
+  - 配置为混合移动设备管理 (MDM) 的 Intune
   - 本地 MDM
 -   不支持使用 Windows 10 服务仪表板和服务计划，并且不支持 Windows 10 Current Branch (CB) 和 Current Branch for Business (CBB)
 - 不支持 Windows 10 LTSB 和 Windows Server 的未来版本
@@ -72,16 +72,16 @@ LTSB 是 Configuration Manager 的基于 Current Branch 1606 版的不同分支�
 ## <a name="documentation-for-the-ltsb"></a>LTSB 文档
 由于 LTSB 基于版本 1606 Current Branch，所以用于 LTSB 的文档是[适用于 Current Branch 的联机文档](https://docs.microsoft.com/sccm/)，其中包含特定于 LTSB 的警告和限制，如以下主题所述：  
 
--   [Long-Term Servicing Branch 简介](introduction-to-the-ltsb.md) -（本主题）
+-   [Long-Term Servicing Branch 简介](introduction-to-the-ltsb.md)：（本主题）。
 
--   [我应使用 Configuration Manager 的哪一个分支](which-branch-should-i-use.md) – 通过有关 System Center Configuration Manager 的不同分支的信息，确定需要安装的最佳分支。
+-   [我应使用 Configuration Manager 的哪一个分支](which-branch-should-i-use.md)：通过有关 System Center Configuration Manager 的不同分支的信息，确定需要安装的最佳分支。
 
--   [安装 Long-Term Servicing Branch](install-the-ltsb.md) - 如何安装新的 LTSB 站点，或将 System Center 2012 Configuration Manager 站点升级到 LTSB。
+-   [安装 Long-Term Servicing Branch](install-the-ltsb.md)：如何安装新的 LTSB 站点，或将 System Center 2012 Configuration Manager 站点升级到 LTSB。
 
--   [将 Long-Term Servicing Branch 升级到 Current Branch](convert-to-current-branch.md) – 如何将 LTSB 安装转换为 Current Branch 安装。
+-   [将 Long-Term Servicing Branch 升级到 Current Branch](convert-to-current-branch.md)：如何将 LTSB 安装转换为 Current Branch 安装。
 
--   [System Center Configuration Manager 的许可和分支](learn-more-editions.md) – 有关 System Center Configuration Manager 的软件保障和相关许可证要求的信息。
--   [Long-Term Servicing Branch 的支持配置](supported-configurations-for-ltsb.md) - 可配合 LTSB 使用的操作系统和相关产品（如 SQL Server）的版本和要求。
+-   [System Center Configuration Manager 的许可和分支](learn-more-editions.md)：有关 System Center Configuration Manager 的软件保障和相关许可证要求的信息。
+-   [Long-Term Servicing Branch 的支持配置](supported-configurations-for-ltsb.md)：可配合 LTSB 使用的操作系统和相关产品（如 SQL Server）的版本和要求。
 
 
 为帮助区分特定的文档适用于哪个分支，请使用以下指南：  
@@ -90,7 +90,7 @@ LTSB 是 Configuration Manager 的基于 Current Branch 1606 版的不同分支�
 -   为区分不适用于 LTSB 的主题部分，对于 Current Branch 版本 1606 后引入的功能和更改，使用“从版本 1610 开始”字样标明。 由于这些功能和更改是 Current Branch 1606 版后引入的，因此 LTSB 中不提供。
 
 ### <a name="similarities-between-the-current-branch-and-the-ltsb"></a>Current Branch 和 LTSB 之间的相似之处
-由于 LTSB 基于 Current Branch 1606 版（某些例外情况除外，如 Intune 集成和与云相关的功能），规划、部署、配置和管理两个分支的大多数任务是相同的。
+由于 LTSB 基于 Current Branch 1606 版（某些例外情况除外，如 Intune 集成和与云相关的功能），规划部署、配置和管理两个分支的大多数任务是相同的。
 
 例如，LTSB 和 Current Branch 支持相同的站点数、站点类型、客户端以及一般基础结构。 因此，可以使用站点中的指南以及适用于 Current Branch 的层次结构规划和设计主题。 同样，对于这两个分支都支持的功能（如软件更新或操作系统部署），可以使用 Current Branch 文档中相关部分的指南（其中警告对于 Current Branch 1606 版之后引入的更改无访问权）。
 
@@ -108,7 +108,7 @@ LTSB 是 Configuration Manager 的基于 Current Branch 1606 版的不同分支�
 ### <a name="updates-and-servicing-of-the-ltsb"></a>LTSB 的更新和服务
 LTSB 中仅提供作为控制台中更新的关键安全更新。
 
-但是，控制台中显示后续 Current Branch 版本的定期更新信息。 由于不会向 LTSB 提供这些更新，因此不能下载和安装这些更新。
+控制台中显示后续 Current Branch 版本的定期更新信息，但不向 LTSB 提供这些信息。 无法下载和安装它们。
 
 若要支持关键安全修补程序的控制台中更新，LTSB 站点要求使用[服务连接点](/sccm/core/servers/deploy/configure/about-the-service-connection-point)。 可以在脱机或联机模式下配置此站点系统角色，这与在 Current Branch 中相同。 与 Current Branch 相同，LTSB 会收集并提交遥测和使用情况数据。
 
@@ -117,7 +117,7 @@ LTSB 支持使用修补程序安装程序和更新注册工具，这与 Current 
 有关更新和服务的常规信息，请参阅 [Configuration Manager 的更新](/sccm/core/servers/manage/updates)。
 
 ### <a name="changes-for-site-expansion-and-the-cdlatest-folder"></a>站点扩展和 CD.Latest 文件夹的更改
-如果运行 LTSB 且要通过安装新的管理中心站点扩展独立主站点，必须使用 1606 版基线介质中的安装程序和源文件。  （对于 Current Branch，运行 CD.Latest 文件夹中的安装程序并使用此文件夹中的源文件。）
+如果运行 LTSB 且要通过安装新的管理中心站点扩展独立主站点，必须使用 1606 版基线介质中的安装程序和源文件。  对于 Current Branch，运行 CD.Latest 文件夹中的安装程序并使用此文件夹中的源文件。
 
 虽然不从 CD.Latest 文件夹运行安装文件用于站点扩展，但仍将 CD.Latest 文件夹用于站点恢复，并且当第一个 LTSB 是管理中心站点时，仍安装新的子主站点。
 
@@ -126,6 +126,6 @@ LTSB 支持使用修补程序安装程序和更新注册工具，这与 Current 
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO2-->
 
 

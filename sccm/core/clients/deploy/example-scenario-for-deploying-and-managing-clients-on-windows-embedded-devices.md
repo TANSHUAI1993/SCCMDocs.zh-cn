@@ -2,7 +2,7 @@
 title: "示例方案 - 部署 Windows Embedded 客户端 | Microsoft Docs"
 description: "请参阅在 Windows Embedded 设备上部署和管理 System Center Configuration Manager 客户端的示例方案。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 01/12/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: 7b5cd35b22b610902628142d9cc52b8f3d54069d
+ms.sourcegitcommit: a650ad8e7b1f9468dd04165a3e43a89387b5d696
+ms.openlocfilehash: b07af49e2fecf6cc41258c87794ca7952206bb8a
 
 
 ---
@@ -25,11 +25,11 @@ ms.openlocfilehash: 7b5cd35b22b610902628142d9cc52b8f3d54069d
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-此方案中演示了如何使用 System Center Configuration Manager 管理启用了写入筛选器的 Windows Embedded 设备。如果嵌入式设备不支持写入筛选器，则这些设备将用作标准 Configuration Manager 客户端，并且你无需执行此方案中管理写入筛选器所需的步骤。  
+此方案演示了如何使用 Configuration Manager 管理启用了写入筛选器的 Windows Embedded 设备。如果嵌入设备不支持写入筛选器，则这些设备将用作标准 Configuration Manager 客户端，这些过程将不适用。  
 
- Coho Vineyard & Winery 正在开设一家访客中心，并对运行 Windows Embedded 来运行交互式演示文稿的网亭很感兴趣。 新访客中心的建筑距离 IT 部门很远，因此能够以远程方式管理网亭很重要。 除了安装运行交互式演示文稿的软件外，这些设备还必须运行最新的反恶意软件保护软件以符合公司安全策略。 为了确保访客始终可使用交互式演示文稿，网亭必须一周运行 7 天，在访客中心开放时没有停机时间。  
+Coho Vineyard & Winery 正在开设一家访客中心，需要运行 Windows Embedded 的网亭来运行交互式演示文稿。 新访客中心的建筑距离 IT 部门不近，因此必须可远程管理网亭。 除了运行演示文稿的软件外，这些设备还必须运行最新的反恶意软件保护软件以符合公司安全策略。 网亭必须每周全天候运行，且在访客中心开放时没有停机时间。  
 
- Coho Vineyard & Winery 已运行 Configuration Manager 来管理其网络上的设备。 Configuration Manager 配置为运行 Endpoint Protection 并安装软件更新和应用程序。 但是，由于 IT 团队以前未管理过 Windows Embedded 设备，因此 Configuration Manager 管理员 Jane 运行一个试点来管理位于公司接待大厅中的两个网亭。 如果试点在远程管理这些设备方面取得成功，则访客中心网亭的采购订单就可得到批准。  
+ Coho 已运行 Configuration Manager 来管理其网络上的设备。 Configuration Manager 配置为运行 Endpoint Protection 并安装软件更新和应用程序。 但是，由于 IT 团队以前未管理过 Windows Embedded 设备，因此 Configuration Manager 管理员 Jane 运行一个试点来管理接待大厅中的两个网亭。   
 
  为了管理这些启用了写入筛选器的 Windows Embedded 设备，Jane 执行以下步骤来安装 Configuration Manager 客户端，通过使用 Endpoint Protection 保护客户端，并安装交互式演示文稿软件。  
 
@@ -70,7 +70,7 @@ ms.openlocfilehash: 7b5cd35b22b610902628142d9cc52b8f3d54069d
 
      Jane 知道，客户端安装并将其状态发送回站点始终会花很长时间。 因此，她等待一段时间，之后确认客户端已成功安装、分配到站点，并显示为她为 Windows Embedded 设备创建的集合中的客户端。  
 
-     为了进一步确认，她在 Windows Embedded 设备上的“控制面板”中检查 Configuration Manager 的属性，并将其与站点管理的标准 Windows 计算机进行比较。 例如，在“组件”  选项卡上，“硬件清单代理”  显示“已启用” ，并且在“操作”  选项卡上有 11 项可用操作，其中包括“应用程序部署评估周期”  和“发现数据收集周期” 。  
+     为了进一步确认，她在设备的“控制面板”中检查 Configuration Manager 的属性，并将其与站点管理的标准 Windows 计算机进行比较。 例如，在“组件”  选项卡上，“硬件清单代理”  显示“已启用” ，并且在“操作”  选项卡上有 11 项可用操作，其中包括“应用程序部署评估周期”  和“发现数据收集周期” 。  
 
      Jane 确信客户端已成功安装、分配并且正在从管理点接收客户端策略，然后按照 OEM 的说明手动启用写入筛选器。  
 
@@ -182,6 +182,6 @@ ms.openlocfilehash: 7b5cd35b22b610902628142d9cc52b8f3d54069d
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Jan17_HO3-->
 
 
