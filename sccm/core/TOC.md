@@ -17,10 +17,10 @@
 ### [将 Long-Term Servicing Branch 升级到 Current Branch](understand/convert-to-current-branch.md)
 ##  [使用云服务](understand/use-cloud-services.md)
 ### [Azure 上的 Configuration Manager](understand/configuration-manager-on-azure.md)
-##  [有关诊断和使用情况数据的常见问题](understand/frequently-asked-questions-about-diagnostics-and-usage-data.md)
+##  [产品和许可常见问题解答](understand/product-and-licensing-faq.md)
+##  [诊断和使用情况数据常见问题解答](understand/frequently-asked-questions-about-diagnostics-and-usage-data.md)
 
 #    [规划和设计](plan-design/get-ready.md)
-
 ##   产品更改
 ###  [特性和功能](plan-design/changes/features-and-capabilities.md)
 ###  [自 Configuration Manager 2012 以来的更改内容](plan-design/changes/what-has-changed-from-configuration-manager-2012.md)
@@ -89,6 +89,7 @@
 ###  [设置实验室](get-started/set-up-your-lab.md)
 
 ##   [技术预览](get-started/technical-preview.md)
+###  [1701 中的功能](get-started/capabilities-in-technical-preview-1701.md)
 ###  [1612 中的功能](get-started/capabilities-in-technical-preview-1612.md)
 ###  [1611 中的功能](get-started/capabilities-in-technical-preview-1611.md)
 ###  [1610 中的功能](get-started/capabilities-in-technical-preview-1610.md)
@@ -258,7 +259,6 @@
 ###  [如何扩展硬件清单](clients/manage/inventory/extend-hardware-inventory.md)
 ###  [如何配置硬件清单](clients/manage/inventory/configure-hardware-inventory.md)
 ###  [如何为混合部署中的移动设备配置硬件清单](clients/manage/inventory/mobile-device-hardware-inventory-hybrid.md)
-<!--- ###  [Operations and maintenance for hardware inventory](clients/manage/inventory/hardware-inventory.md) --->
 ###  [如何使用资源浏览器来查看硬件清单](clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md)
 ###  [适用于 Linux 和 UNIX 的硬件清单](clients/manage/inventory/hardware-inventory-for-linux-and-unix.md)
 ###  [硬件清单的安全和隐私](clients/manage/inventory/security-and-privacy-for-hardware-inventory.md)
@@ -305,6 +305,6 @@
 ###  [升级分析](clients/manage/upgrade/upgrade-analytics.md)
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Feb17_HO3-->
 
 
