@@ -46,7 +46,7 @@ System Center Configuration Manager 可管理两大类设备：
  - 组策略。
 
  - 在计算机上手动安装。
- - 包括属于要部署的操作系统映像的客户端。  
+ - 将客户端包含在要部署的操作系统映像中。  
 
 
  安装客户端后，可以通过使用集合来简化管理设备的工作。 集合是创建的设备或用户组，以便作为一个组对其进行管理。 例如，你可能希望在通过 Configuration Manager 注册的所有移动设备上安装移动设备应用程序。 如果是这种情况，可使用“所有移动设备”集合。  
@@ -78,10 +78,10 @@ System Center Configuration Manager 可管理两大类设备：
                 [如何在 System Center Configuration Manager 中配置客户端设置](../../core/clients/deploy/configure-client-settings.md)和[关于 System Center Configuration Manager 中的客户端设置](../../core/clients/deploy/about-client-settings.md)。
 
 ## <a name="managing-devices-without-the-configuration-manager-client"></a>不使用 Configuration Manager 客户端而管理设备  
- Configuration Manager 支持管理未安装客户端软件且不由 Intune 管理的设备。 有关详细信息，请参阅[在 System Center Configuration Manager 中使用本地基础结构管理移动设备](../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md)和[使用 System Center Configuration Manager 和 Exchange 管理移动设备](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)。  
+ Configuration Manager 支持管理未安装客户端软件且不由 Intune 管理的一些设备。 有关详细信息，请参阅[在 System Center Configuration Manager 中使用本地基础结构管理移动设备](../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md)和[使用 System Center Configuration Manager 和 Exchange 管理移动设备](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)。  
 
 ## <a name="user-based-management"></a>基于用户的管理  
- Configuration Manager 支持 Active Directory 域服务用户的集合。 使用用户集合时，可以在属于所用集合成员的所有计算机上安装软件。 若要确保要部署的软件仅在指定为用户主要设备的设备上安装，请设置用户设备相关性。 用户可以有一个或多个主设备。  
+ Configuration Manager 支持 Active Directory 域服务用户的集合。 使用用户集合时，可以在该集合成员使用的所有计算机上安装软件。 若要确保要部署的软件仅在指定为用户主要设备的设备上安装，请设置用户设备相关性。 用户可以有一个或多个主设备。  
 
  用户可对其软件部署体验进行控制的一种方式是使用**软件中心**客户端接口。 **软件中心**自动安装在客户端计算机上，并通过“开始”菜单运行。 **软件中心**使用户能管理自己的软件，以及执行下列任务：  
 
@@ -96,7 +96,7 @@ System Center Configuration Manager 可管理两大类设备：
 -   配置电源管理的选项（如果管理员设置了此项）。  
 
 
- 通过**软件中心**中的链接，用户可以连接到**应用程序目录**，在该目录中，用户可以浏览、安装和请求软件。 此外，**应用程序目录**使用户能够配置某些首选项设置、擦除其移动设备，以及为用户设备相关性指定主设备（如果允许此设置）。   
+ 通过**软件中心**中的链接，用户可以连接到**应用程序目录**，在该目录中，用户可以浏览、安装和请求软件。 此外，**应用程序目录**还可用于配置首选项设置、擦除移动设备，以及为用户设备相关性指定主设备（如果设置此项）。   
 
  用户还可通过浏览器 Intranet 或 Internet 会话访问**应用程序目录**。  
 

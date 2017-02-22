@@ -1,5 +1,5 @@
 ---
-title: "将客户端软件部署到 Macs 的准备工作 | Microsoft Docs"
+title: "将客户端软件部署到 Mac 的准备工作 | Microsoft Docs"
 description: "将 Configuration Manager 客户端部署到 Mac 计算机前的配置任务。"
 ms.custom: na
 ms.date: 01/02/2017
@@ -22,7 +22,7 @@ ms.openlocfilehash: 9f51c15adaa850eb8343601ddcd13046480fc9c0
 
 ---
 
-# <a name="prepare-to-deploy-client-software-to-macs"></a>将客户端软件部署到 Macs 的准备工作
+# <a name="prepare-to-deploy-client-software-to-macs"></a>将客户端软件部署到 Mac 的准备工作
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
@@ -30,7 +30,7 @@ ms.openlocfilehash: 9f51c15adaa850eb8343601ddcd13046480fc9c0
 
 ## <a name="mac-prerequisites"></a>Mac 先决条件
 
-Mac 客户端安装包未与 Configuration Manager 媒体一同提供。 可从 [Microsoft 下载中心](http://go.microsoft.com/fwlink/?LinkID=525184)下载**其他操作系统适用的客户端**。  
+Mac 客户端安装包未与 Configuration Manager 媒体一同提供。 可从 [Microsoft 下载中心](http://go.microsoft.com/fwlink/?LinkID=525184)下载**适用于其他操作系统的客户端**。  
 
 **支持的版本：**  
 
@@ -51,7 +51,7 @@ Mac 客户端安装包未与 Configuration Manager 媒体一同提供。 可从 
 -   **Mac OS X 10.12** (macOS Sierra)  
 
 ## <a name="certificate-requirements"></a>证书要求
-Mac 计算机安装和管理客户端需要公钥基础结构 (PKI) 证书。 PKI 证书通过使用手动身份验证和加密的数据传输来保护 Mac 计算机和 Configuration Manager 站点之间的通信的安全。 Configuration Manager 可通过将 Microsoft 证书服务与企业证书颁发机构 (CA)、Configuration Manager 注册点和注册代理点站点系统角色一起使用，从而请求和安装用户客户端证书。 或者，如果证书满足 Configuration Manager 的要求，你可以独立于 Configuration Manager 请求和安装计算机证书。   
+在 Mac 计算机上安装和管理客户端需要公钥基础结构 (PKI) 证书。 PKI 证书通过使用手动身份验证和加密的数据传输来保护 Mac 计算机和 Configuration Manager 站点之间的通信的安全。 Configuration Manager 可通过将 Microsoft 证书服务与企业证书颁发机构 (CA)、Configuration Manager 注册点和注册代理点站点系统角色一起使用，从而请求和安装用户客户端证书。 或者，如果证书满足 Configuration Manager 的要求，你可以独立于 Configuration Manager 请求和安装计算机证书。   
   
 Configuration Manager Mac 客户端始终执行证书吊销检查。 不能禁用此功能。  
   
