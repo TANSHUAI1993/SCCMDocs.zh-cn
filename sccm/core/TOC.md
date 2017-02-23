@@ -35,6 +35,7 @@
 ###  [站点和站点系统先决条件](plan-design/configs/site-and-site-system-prerequisites.md)
 ###  [站点系统服务器支持的操作系统](plan-design/configs/supported-operating-systems-for-site-system-servers.md)
 ###  [客户端和设备支持的操作系统](plan-design/configs/supported-operating-systems-for-clients-and-devices.md)
+###  [支持 Windows 10 客户端](plan-design/configs/support-for-windows-10.md)
 ###  [控制台支持的操作系统](plan-design/configs/supported-operating-systems-consoles.md)
 ###  [推荐硬件](plan-design/configs/recommended-hardware.md)
 ###  [支持 SQL Server 版本](plan-design/configs/support-for-sql-server-versions.md)
@@ -89,6 +90,7 @@
 ###  [设置实验室](get-started/set-up-your-lab.md)
 
 ##   [技术预览](get-started/technical-preview.md)
+<!-- ###  [Capabilities in 1702](get-started/capabilities-in-technical-preview-1702.md) -->
 ###  [1701 中的功能](get-started/capabilities-in-technical-preview-1701.md)
 ###  [1612 中的功能](get-started/capabilities-in-technical-preview-1612.md)
 ###  [1611 中的功能](get-started/capabilities-in-technical-preview-1611.md)
@@ -305,6 +307,6 @@
 ###  [升级分析](clients/manage/upgrade/upgrade-analytics.md)
 
 
-<!--HONumber=Feb17_HO3-->
+<!--HONumber=Feb17_HO4-->
 
 
