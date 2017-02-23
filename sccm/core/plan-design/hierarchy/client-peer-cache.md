@@ -1,3 +1,4 @@
+
 ---
 title: "客户端对等缓存 | System Center Configuration Manager"
 description: "使用 System Center Configuration Manager 部署内容时，将对等缓存用于客户端内容源位置。"
@@ -16,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6aaa833c1301cf82f7d8df3bc13f0a6936fc6e9d
-ms.openlocfilehash: 96b3a72a7beb31396813ae468ae3eeacc845b582
+ms.sourcegitcommit: 2dd898c9b022c6f0bc243623835af0eece94128f
+ms.openlocfilehash: 95d1671501f672e1d5abe3f0fbbd7d2dfb21e0a3
 
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>用于 Configuration Manager 客户端的对等缓存
@@ -51,8 +52,6 @@ ms.openlocfilehash: 96b3a72a7beb31396813ae468ae3eeacc845b582
 ## <a name="requirements-and-considerations-for-peer-cache"></a>对等缓存的要求和注意事项
 - 任何支持作为 Configuration Manager 客户端的 Windows 操作系统都支持对等缓存。 对等缓存不支持非 Windows 操作系统。
 
-- 必须使用对每个客户端上的缓存文件夹具有**完全控制**的**网络访问帐户**来配置站点。 默认情况下，这是 ***%windir%\ccmcache***。
-
 - 客户端只能传输来自其当前边界组中的对等缓存客户端中的内容。
 
 -     因为对等缓存内容源的当前边界由该客户端上次提交的硬件清单决定，所以漫游到网络位置且在其他边界组中的客户端可能仍被视为其以前的边界组成员，以符合对等缓存的目的。 这可能导致提供给客户端的对等缓存内容源不在其直接网络位置中。 建议排除可能有此配置的客户端作为对等缓存源加入。
@@ -70,6 +69,6 @@ ms.openlocfilehash: 96b3a72a7beb31396813ae468ae3eeacc845b582
 
 
 
-<!--HONumber=Feb17_HO2-->
+<!--HONumber=Feb17_HO4-->
 
 
