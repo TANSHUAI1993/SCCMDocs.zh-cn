@@ -2,7 +2,7 @@
 title: "Endpoint Protection 客户端的常见问题 | Microsoft Docs"
 description: "获取有关 Windows Defender 和 Endpoint Protection 常见问题的解答。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
-ms.openlocfilehash: f0352e59390ade7212a64cf0de883bbb1ca28bab
+ms.sourcegitcommit: 017bd5b899b364fc832c721d63cc7dbad0a11671
+ms.openlocfilehash: b88bc5f734b85527b81e5848deb0617db4c8dfbc
 
 
 ---
@@ -29,39 +29,23 @@ ms.openlocfilehash: f0352e59390ade7212a64cf0de883bbb1ca28bab
 此 FAQ 针对其 IT 管理员已将 Windows Defender 或 Endpoint Protection 部署到其托管计算机的计算机用户。 此处的内容可能不适用于其他反恶意软件。 Microsoft System Center Endpoint Protection 管理 Windows 10 上的 Windows Defender。 它还可以部署和管理 Windows 10 之前版本的计算机上的 Endpoint Protection 客户端。 虽然本文对 Windows Defender 进行了介绍，但是其信息也适用于 Endpoint Protection。  
 
 -   [为什么需要防病毒和反间谍软件？](#why-do-i-need-antivirus-and-antispyware-software)  
-
--   [如何判断计算机是否感染恶意软件？](#how-can-i-tell-if-my-computer-is-infected-with-malicious-software)  
-
+-   [如何判断计算机是否感染恶意软件？](#how-can-i-tell-if-my-computer-is-infected-with-malicious-software)
+-   [如何查找 Windows Defender 版本？](#how-can-i-find-the-version-of-windows-defender)
 -   [如果 Windows Defender 或 Endpoint Protection 在我的计算机上检测到恶意软件，我该怎么办？](#what-should-i-do-if-windows-defender-or-endpoint-protection-detects-software-on-my-computer)  
-
 -   [什么是病毒？](#what-is-a-virus)  
-
 -   [什么是间谍软件？](#what-is-spyware)  
-
 -   [病毒、间谍软件和其他可能有害的软件之间的区别是什么？](#hat-s-the-difference-between-viruses-spyware-and-other-potentially-harmful-software)  
-
 -   [病毒、间谍软件以及其他可能不需要的软件来自哪里？](#where-do-viruses-spyware-and-other-potentially-unwanted-software-come-from)  
-
 -   [我是否会在不知情的情况下获取恶意软件？](#can-i-get-malicious-software-without-knowing-it)  
-
 -   [为什么在安装软件之前查看许可证协议很重要？](#why-is-it-important-to-review-license-agreements-before-installing-software)  
-
 -   [Endpoint Protection 和 Windows Defender 之间的区别是什么？](#what-s-the-difference-between-endpoint-protection-and-windows-defender)  
-
 -   [Windows Defender 为什么没有检测到 cookie？](#why-doesn-t-windows-defender-detect-cookies)  
-
 -   [如何防止恶意软件？](#how-can-i-prevent-malware)  
-
 -   [病毒和间谍软件的定义是什么？](#what-are-virus-and-spyware-definitions)  
-
 -   [如何使病毒和间谍软件定义保持最新？](#how-do-i-keep-virus-and-spyware-definitions-up-to-date)  
-
 -   [如何删除或还原 Windows Defender 或 Endpoint Protection 隔离的项目？](#how-do-i-remove-or-restore-items-quarantined-by-windows-defender-or-endpoint-protection)  
-
 -   [什么是实时保护？](#what-is-real-time-protection)  
-
 -   [如何知道 Windows Defender 或 Endpoint Protection 正在我的计算机上运行？](#how-do-i-know-that-windows-defender-or-endpoint-protection-is-running-on-my-computer)
-
 -   [如何设置 Windows Defender 或 Endpoint Protection 警报？](#how-to-set-up-windows-defender-or-endpoint-protection-alerts)  
 
 ##  <a name="why-do-i-need-antivirus-and-antispyware-software"></a>为什么需要防病毒和反间谍软件？  
@@ -104,6 +88,9 @@ ms.openlocfilehash: f0352e59390ade7212a64cf0de883bbb1ca28bab
 -   你的计算机运行速度突然比平时慢很多。 并非所有计算机的性能问题都是由恶意软件引起的，但是恶意软件，尤其是间谍软件可引起显著的更改。  
 
 即使你未发现任何症状，你的计算机上也可能有恶意软件。 此类型软件可以在你不知情或未经你同意的情况下收集有关你和你的计算机的信息。 为了帮助保护你的隐私和你的计算机，你应该时刻运行 Windows Defender 或 Endpoint Protection。  
+
+## <a name="how-can-i-find-the-version-of-windows-defender"></a>如何查找 Windows Defender 版本？
+ 若要查看在计算机上运行的 Windows Defender 版本，请打开 Windows Defender（单击“开始”，然后搜索 **Windows Defender**，单击“设置”，然后滚动到 Windows Defender 设置底部可查找**版本信息**。
 
 ##  <a name="what-should-i-do-if-windows-defender-or-endpoint-protection-detects-malicious-software-on-my-computer"></a>如果 Windows Defender 或 Endpoint Protection 在我的计算机上检测到恶意软件，我该怎么办？  
 
@@ -216,7 +203,7 @@ ms.openlocfilehash: f0352e59390ade7212a64cf0de883bbb1ca28bab
 
 ##  <a name="what-is-real-time-protection"></a>什么是实时保护？  
 
- 通过实时保护可以使 Windows Defender 时刻监视你的计算机，并且当潜在威胁如病毒和间谍软件尝试自行安装或在你的计算机上运行时向你发出警报。 由于此功能是 Windows Defender 帮助保护你的计算机所采取的方法的重要组成部分，因此需确保实时保护始终处于打开状态。 如果实时保护被关闭，Windows Defender 会通知你，并将计算机的状态更改为“面临风险”。  
+ 通过实时保护可以使 Windows Defender 时刻监视你的计算机，并且当潜在威胁如病毒和间谍软件尝试自行安装或在你的计算机上运行时向你发出警报。 由于此功能是 Windows Defender 帮助保护你的计算机所采取的方法的重要组成部分，因此需确保实时保护始终处于打开状态。 如果实时保护被关闭，Windows Defender 会发出通知，并将计算机的状态更改为“面临风险”。  
 
  每当实时保护检测到威胁或潜在威胁时，Windows Defender 会显示一条通知。 你可从以下选项中进行选择：  
 
@@ -279,6 +266,6 @@ ms.openlocfilehash: f0352e59390ade7212a64cf0de883bbb1ca28bab
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO3-->
 
 

@@ -2,7 +2,7 @@
 title: "Endpoint Protection 客户端帮助 | Microsoft Docs"
 description: "了解 Endpoint Protection 中的功能和改进功能，它们可用于更好地帮助保护计算机免受威胁。"
 ms.custom: na
-ms.date: 01/03/2017
+ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1432568286605d29683416885d7aa522c649016e
-ms.openlocfilehash: ef2d8b540856b395575b99de79fa463de5d133ac
+ms.sourcegitcommit: 017bd5b899b364fc832c721d63cc7dbad0a11671
+ms.openlocfilehash: 212c73fcb947c3b56da6055bf47fe078301ad90d
 
 
 ---
@@ -29,14 +29,12 @@ ms.openlocfilehash: ef2d8b540856b395575b99de79fa463de5d133ac
 此版本的 Windows Defender 或 Endpoint Protection 包括以下功能，这些功能有助于帮助保护计算机免受威胁：  
 
 -   **Windows 防火墙集成。** Endpoint Protection 设置允许你打开或关闭 Windows 防火墙。  
-
 -   **网络检查系统。** 此功能通过检查网络流量以便及时阻止利用已知的基于网络的漏洞，从而增强实时保护。  
-
 -   **保护引擎。** 实时保护可查找恶意软件并阻止其在电脑上安装或运行。 更新后的引擎可增强检测和清理功能并提高性能。  
 
 Windows Defender 默认为 Windows 10 操作系统的一部分。  在早期版本的 Windows 中，你的管理员可以使用管理软件提供 Windows Defender 或 Endpoint Protection。
 
-有关故障排除的帮助，请参阅[对 Windows Defender 或 Endpoint Protection 客户端进行故障排除](troubleshoot-endpoint-client.md)。 有关新功能的列表，请参阅 [Windows Defender 客户端中的新增功能](https://support.microsoft.com/help/29276/windows-10-whats-new-in-windows-defender)。
+还可找到 [Windows Defender 和 Endpoint Protection 常见问题](endpoint-protection-client-faq.md)列表。 有关故障排除的帮助，请参阅[对 Windows Defender 或 Endpoint Protection 客户端进行故障排除](troubleshoot-endpoint-client.md)。 有关新功能的列表，请参阅 [Windows Defender 客户端中的新增功能](https://support.microsoft.com/help/29276/windows-10-whats-new-in-windows-defender)。
 
 ## <a name="windows-firewall-integration"></a>Windows 防火墙集成  
  Windows 防火墙可以帮助阻止攻击者或恶意软件通过 Internet 或网络访问你的计算机。 现在，当你安装 Endpoint Protection 时，安装向导会验证是否已打开 Windows 防火墙。 如果你是有意关闭 Windows 防火墙的，则可以通过清除相应的复选框来避免打开它。 你可以随时通过控制面板中的“系统和安全”设置来更改 Windows 防火墙设置。  
@@ -60,11 +58,10 @@ Windows Defender 设置可启用有助于保护电脑免受恶意软件攻击的
 
 ### <a name="see-also"></a>另请参阅  
  [Endpoint Protection 客户端的常见问题](endpoint-protection-client-faq.md)   
-
  [对 Windows Defender 或 Endpoint Protection 客户端进行故障排除](troubleshoot-endpoint-client.md)
 
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Feb17_HO3-->
 
 

@@ -2,7 +2,7 @@
 title: "配置 Endpoint Protection | Microsoft Docs"
 description: "了解如何将 Configuration Manager 设置为更新和分发 Windows Defender 的恶意软件定义。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,13 +16,13 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 180d05d3493f8c4288ad4bf640da15bd599c2072
-ms.openlocfilehash: 783d8352e3e1f06af3a5d8534b4fa811f36fdc17
+ms.sourcegitcommit: 017bd5b899b364fc832c721d63cc7dbad0a11671
+ms.openlocfilehash: 92ab3f7470fd977e5f849bea54aca1a7ef460562
 
 
 ---
 
-# <a name="configure-endpoint-protection-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中配置 Endpoint Protection
+# <a name="configure-endpoint-protection"></a>配置 Endpoint Protection
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
@@ -39,14 +39,14 @@ ms.openlocfilehash: 783d8352e3e1f06af3a5d8534b4fa811f36fdc17
 
 |步骤|详细信息|  
 |-----------|-------------|  
-|**步骤 1：**创建 Endpoint Protection 点站点系统角色|必须先安装 Endpoint Protection 点站点系统角色，然后才能使用 Endpoint Protection。 必须将其仅安装在一个站点系统服务器上，并且必须将其安装在管理中心站点或独立主站点上层次结构的顶部。 请参阅[步骤 1：创建 Endpoint Protection 点站点系统角色](../../protect/deploy-use/configure-endpoint-protection.md)。|  
-|**步骤 2：**为 Endpoint Protection 配置警报|当特定事件发生（如恶意软件感染）时，警报将通知管理员。 警报显示在“监视”  工作区的“警报”  节点中，或（可选）可通过电子邮件发送至指定用户。 请参阅[步骤 2：为 Endpoint Protection 配置警报](../../protect/deploy-use/configure-endpoint-protection.md)。|  
-|**步骤 3：**为 Endpoint Protection 客户端配置定义更新源。|可以将 Endpoint Protection 配置为使用各种源来下载定义更新。 请参阅[步骤 3：为 Endpoint Protection 配置定义更新](../../protect/deploy-use/configure-endpoint-protection.md)。|  
-|**步骤 4：** 配置默认反恶意软件策略并创建任何自定义反恶意软件策略。|在安装 Endpoint Protection 客户端时，将应用默认反恶意软件策略。 在部署客户端的 60 分钟内将默认应用已部署的任何自定义策略。 部署 Endpoint Protection 客户端前请确保已配置了反恶意软件策略。请参阅[如何在 System Center Configuration Manager 中为 Endpoint Protection 创建和部署反恶意软件策略](../../protect/deploy-use/endpoint-antimalware-policies.md)。|  
-|**步骤 5：** 为 Endpoint Protection 配置自定义客户端设置。|使用自定义客户端设置为层次结构中计算机的集合配置 Endpoint Protection 设置。<br /><br /> 注意：除非确定要将这些设置应用于层次结构中的所有计算机，否则请不要配置默认 Endpoint Protection 客户端设置。 请参阅[步骤 5：为 Endpoint Protection 配置自定义客户端设置](../../protect/deploy-use/configure-endpoint-protection.md)。|  
+|**步骤 1：**[创建 Endpoint Protection 点站点系统角色](endpoint-protection-site-role.md)|必须先安装 Endpoint Protection 点站点系统角色，然后才能使用 Endpoint Protection。 必须将其仅安装在一个站点系统服务器上，并且必须将其安装在管理中心站点或独立主站点上层次结构的顶部。 |  
+|**步骤 2：**[为 Endpoint Protection 配置警报](endpoint-configure-alerts.md)|当特定事件发生（如恶意软件感染）时，警报将通知管理员。 警报显示在“监视”  工作区的“警报”  节点中，或（可选）可通过电子邮件发送至指定用户。 |  
+|**步骤 3：**[为 Endpoint Protection 客户端配置定义更新源](endpoint-definition-updates.md)|可以将 Endpoint Protection 配置为使用各种源来下载定义更新。 |  
+|**步骤 4：**[配置默认反恶意软件策略并创建自定义反恶意软件策略](endpoint-antimalware-policies.md)|在安装 Endpoint Protection 客户端时，将应用默认反恶意软件策略。 在部署客户端的 60 分钟内将默认应用已部署的任何自定义策略。 请确保在部署之前配置反恶意软件策略 Endpoint Protection 客户端。请参阅 |  
+|**步骤 5：**[为 Endpoint Protection 配置自定义客户端设置](endpoint-protection-configure-client.md)|使用自定义客户端设置为层次结构中计算机的集合配置 Endpoint Protection 设置。<br /><br /> 注意：除非确定要将这些设置应用于层次结构中的所有计算机，否则请不要配置默认 Endpoint Protection 客户端设置。 |  
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO3-->
 
 

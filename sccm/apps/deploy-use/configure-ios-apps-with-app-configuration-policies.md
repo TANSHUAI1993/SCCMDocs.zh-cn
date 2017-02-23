@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: cabd1083a6d7c49ef1bc46c6ec35cffd6d858344
-ms.openlocfilehash: fccf655110c2ed7689c128a0a619838d18b3355a
+ms.sourcegitcommit: 72157aa0e94b99eb947fdd9891b7e91c1001ea22
+ms.openlocfilehash: 64964834b63167e1f78c44410396b8e18735875e
 
 
 ---
@@ -55,9 +55,10 @@ ms.openlocfilehash: fccf655110c2ed7689c128a0a619838d18b3355a
 4. 在“iOS 策略”页上，选择设置配置策略信息的方式：
   - **指定名称和值对**。 可以将此选项用于不使用嵌套的属性列表文件。
 
-      指定名称和值对**
+      指定名称和值对
         1. 若要添加新的值对，请选择“新建”。
-        2. 在“添加名称/值对”对话框中，指定以下内容：        - **类型**。 从列表中，选择要指定的值的类型。
+        2. 在“添加名称/值对”对话框中，指定以下内容：
+            - **类型**。 从列表中，选择要指定的值的类型。
             - **名称**。 输入要为其指定值的属性列表键的名称。
             - **值**。 输入将应用于所输入的键的值。
 
@@ -69,8 +70,9 @@ ms.openlocfilehash: fccf655110c2ed7689c128a0a619838d18b3355a
 
       若要了解有关 XML 属性列表的详细信息，请参阅 iOS 开发人员库中的[了解 XML 属性列表](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/PropertyLists/UnderstandXMLPlist/UnderstandXMLPlist.html)。
 
-            The format of the XML property list varies depending on the app you are configuring. Contact the app supplier for details about the format to use.
-            Intune supports the following data types in a property list:
+        The format of the XML property list varies depending on the app you are configuring. Contact the app supplier for details about the format to use.
+        Intune supports the following data types in a property list:
+
             ```
             <integer>
             <real>
@@ -79,8 +81,9 @@ ms.openlocfilehash: fccf655110c2ed7689c128a0a619838d18b3355a
             <dict>
             <true /> or <false />
             ```
-            For more information about data types, see [About Property Lists](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/PropertyLists/AboutPropertyLists/AboutPropertyLists.html) in the iOS Developer Library.
-            Intune also supports the following token types in the property list:
+    有关数据类型的详细信息，请参阅 iOS 开发人员库中的[关于属性列表](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/PropertyLists/AboutPropertyLists/AboutPropertyLists.html)。
+    Intune 还支持属性列表中的以下令牌类型：
+    
             ```
             {{userprincipalname}} - (Example: John@contoso.com)
             {{mail}} - (Example: John@contoso.com)
@@ -139,6 +142,6 @@ ms.openlocfilehash: fccf655110c2ed7689c128a0a619838d18b3355a
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO3-->
 
 

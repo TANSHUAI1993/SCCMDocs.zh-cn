@@ -2,7 +2,7 @@
 title: "混合 MDM 的新增功能 | Microsoft Docs"
 description: "了解 System Center Configuration Manager 和 Intune 的混合部署可用的新移动设备管理功能。"
 ms.custom: na
-ms.date: 01/12/2017
+ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 07578e3aaa93a06a2fa90e72de2b7c71ce2a14b9
-ms.openlocfilehash: f405514402d7140e26bff6da5e8c2759a80b8a7f
+ms.sourcegitcommit: 7972aa2c39f5b86e69087b1ed5a1c3b50ba69940
+ms.openlocfilehash: f74bd019b5403f3f5702795279759270261ce4db
 
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager 和 Microsoft Intune 的混合移动设备管理中的新增功能
@@ -35,6 +35,20 @@ ms.openlocfilehash: f405514402d7140e26bff6da5e8c2759a80b8a7f
 |**Microsoft Intune 中的新增功能** | 一般情况下，此类别列出的所有功能应适用于所有 Configuration Manager 版本（包括 System Center 2012 R2 Configuration Manager 版本），因为这些功能仅需要 Intune 服务，不需要 Configuration Manager 中的其他功能。|
 |**Configuration Manager Technical Preview 中的新增功能**| 此类别下列出的所有功能仅适用于指定的 Technical Preview 版本。 若要试用这些功能，必须安装功能说明中指定的 Technical Preview 版本。 有关详细信息，请参阅 [System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)。|
 |**Configuration Manager (Current Branch) 中的新增功能**| 此类别下列出的所有功能仅适用于指定的 Configuration Manager (Current Branch) 版本，例如版本 1511 或 1602。 如果要为混合部署使用较旧版本的 Configuration Manager，则必须升级到功能说明中指定的 Configuration Manager (Current Branch) 版本。 有关详细信息，请参阅[升级到 System Center Configuration Manager](../../core/servers/deploy/install/upgrade-to-configuration-manager.md)。|
+
+## <a name="new-hybrid-features-in-february-2017"></a>2017 年 2 月版本中的新增混合功能
+
+### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
+
+2017 年 2 月推出的以下 Intune 功能适用于混合部署：
+
+- **公司门户网站现代化**
+
+  公司门户网站支持面向没有托管设备的用户的应用。 该网站使用新的对比色配色方案、动态插图和“汉堡菜单”（其中包含支持人员详细联系信息和现有托管设备的信息），这与其他 Microsoft 产品和服务保持一致。 对登录页面进行了重新组织，以突出用户可用的应用，并且会循环播放精选应用和最近更新的应用。 可在“UI更新”[](/intune/whats-new/whats-new-in-intune-app-ui)页面上找到前后对照的图片。
+
+- **适用于 Windows 设备的新 MDM 服务器地址**
+
+  用于注册 Windows 和 Windows Phone 设备的 MDM 服务器地址已从 manage.microsoft.com 更改为 enrollment.manage.microsoft.com。 注册 Windows 或/和 Windows Phone 设备时如果出现提示，请通知用户使用 enrollment.manage.microsoft.com 作为 MDM 服务器地址。 对于 DNS 中将 EnterpriseEnrollment.contoso.com 重定向到 manage.microsoft.com 的 CNAME，此更新还需要将其替换为 DNS 中将 EnterpriseEnrollment.contoso.com 重定向到 EnterpriseEnrollment-s.manage.microsoft.com 的 CNAME。 有关此更改的其他信息，请访问 http://aka.ms/intuneenrollsvrchange。 
 
 ## <a name="new-hybrid-features-in-january-2017"></a>2017 年 1 月版本中的新增混合功能
 
@@ -71,20 +85,20 @@ ms.openlocfilehash: f405514402d7140e26bff6da5e8c2759a80b8a7f
 
   Android 版公司门户应用现已在中国推出。 由于中国地区没有 Google Play 商店，Android 设备必须从中国的应用市场获取应用。 可从以下商店下载 Android 版公司门户应用：
 
-  - [百度](https://go.microsoft.com/fwlink/?linkid=836946)
-  - [华为](https://go.microsoft.com/fwlink/?linkid=836948)
-  - [腾讯](https://go.microsoft.com/fwlink/?linkid=836949)
-  - [豌豆荚](https://go.microsoft.com/fwlink/?linkid=836950)
-  - [小米](https://go.microsoft.com/fwlink/?linkid=836947)
+  -    [百度](https://go.microsoft.com/fwlink/?linkid=836946)
+  -    [华为](https://go.microsoft.com/fwlink/?linkid=836948)
+  -    [腾讯](https://go.microsoft.com/fwlink/?linkid=836949)
+  -    [豌豆荚](https://go.microsoft.com/fwlink/?linkid=836950)
+  -    [小米](https://go.microsoft.com/fwlink/?linkid=836947)
 
   Android 版公司门户应用使用 Google Play Services 与 Microsoft Intune 服务进行通信。 由于 Google Play Services 尚未在中国推出，因此执行以下任何任务最长可能需要 8 个小时才能完成。
 
   | Configuration Manager 管理控制台 | Android 适用的 Intune 公司门户应用 | Intune 公司门户网站 |
-  |----|----|----|      
-  | 停用/擦除（删除所有数据）   | 删除远程设备 | 删除设备（本地和远程） |
-  | 停用/擦除（删除公司数据）   | 重置设备 | 重置设备|
+  |----|----|----|        
+  | 停用/擦除（删除所有数据）    | 删除远程设备 | 删除设备（本地和远程） |
+  | 停用/擦除（删除公司数据）    | 重置设备 | 重置设备|
   | 新的或更新的应用部署 | 安装可用的业务线应用 | 设备密码重置|
-  | 远程锁定 | | |
+  | 远程锁定    | | |
   | 密码重置 | | |        
 
 
@@ -153,9 +167,9 @@ Configuration Manager (Current Branch) 1610 版本中还包括以下其他混合
 如果运行 Configuration Manager 2012 SP1 或 R2 RTM 的混合部署，建议在 2017 年 4 月 10 日前升级到 Configuration Manager (Current Branch) 或 Configuration Manager 2012（R2 SP1 或 SP2）的最新支持 Service Pack，以避免服务中断。
 
 其他资源：
--   [升级到 System Center Configuration Manager (Current Branch)](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)
--   [计划升级到 System Center 2012 R2 Configuration Manager SP1](https://technet.microsoft.com/library/jj822981.aspx#BKMK_PlanningR2SP1Upgrade)
--   [计划升级到 System Center 2012 Configuration Manager SP2](https://technet.microsoft.com/library/jj822981.aspx#BKMK_PlanningSP2Upgrade)
+-    [升级到 System Center Configuration Manager (Current Branch)](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)
+-    [计划升级到 System Center 2012 R2 Configuration Manager SP1](https://technet.microsoft.com/library/jj822981.aspx#BKMK_PlanningR2SP1Upgrade)
+-    [计划升级到 System Center 2012 Configuration Manager SP2](https://technet.microsoft.com/library/jj822981.aspx#BKMK_PlanningSP2Upgrade)
 
 ### <a name="windows-phone-8-company-portal-upload-deprecated"></a>已弃用的 Windows Phone 8 公司门户上传
 2016 年 10 月 25 日
@@ -170,6 +184,6 @@ Configuration Manager (Current Branch) 1610 版本中还包括以下其他混合
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

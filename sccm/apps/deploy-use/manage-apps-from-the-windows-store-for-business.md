@@ -2,7 +2,7 @@
 title: "管理来自适用于企业的 Windows 应用商店的应用 | Microsoft Docs"
 description: "使用 System Center Configuration Manager 管理并部署来自适用于企业的 Windows 应用商店的应用"
 ms.custom: na
-ms.date: 11/19/2016
+ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,15 +16,15 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3847a85c11d7b72b84095ba9add563bdf5c49a75
-ms.openlocfilehash: 605cdd01d767dda3467198f5e6539448f9b559f6
+ms.sourcegitcommit: f955b5aadfc617e08d5d933dee8e42de838f83c0
+ms.openlocfilehash: bf2937f5ba86db19d9cb40e2c98cbb8ba365f7eb
 
 ---
 # <a name="manage-apps-from-the-windows-store-for-business-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 管理来自适用于企业的 Windows 应用商店的应用
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-在[适用于企业的 Windows 应用商店](https://www.microsoft.com/business-store)中可以为组织查找并采购 Windows 应用（单个或批量）。 通过将应用商店连接到 Configuration Manager，可以同步已使用 Configuration Manager 购买的应用列表，在 Configuration Manager 控制台中查看这些应用，并像部署任何其他应用一样部署它们。
+在[适用于企业的 Windows 应用商店](https://www.microsoft.com/business-store)中可以为组织查找并采购 Windows 应用（单个或批量）。 通过将应用商店连接到 Configuration Manager，可以同步使用 Configuration Manager 购买的应用列表，在 Configuration Manager 控制台中查看这些应用，并像部署任何其他应用一样部署它们。
 
 
 ## <a name="online-and-offline-apps"></a>联机和脱机应用
@@ -74,9 +74,9 @@ Because this is a pre-release feature, before you can connect Configuration Mana
 > [!IMPORTANT]
 > 在 Configuration Manager和适用于企业的 Windows 应用商店之间设置连接时，必须提供保存从应用商店同步的应用内容的文件夹。
 若要确保此文件夹是安全的且可将其内容部署到设备，请确保以下权限就位：
--   安装服务连接点站点系统角色（层次结构中的顶级站点）的计算机必须具有使用 **Computer$** 帐户时指定的文件夹的读取和写入权限。
--   应用作者必须具有所指定文件夹的读取权限。
--   托管 SMS 提供程序实例的每台计算机的 **Computer$** 帐户必须能够使用所指定的文件夹。
+-    安装服务连接点站点系统角色（层次结构中的顶级站点）的计算机必须具有使用 **Computer$** 帐户时指定的文件夹的读取和写入权限。
+-    应用作者必须具有所指定文件夹的读取权限。
+-    托管 SMS 提供程序实例的每台计算机的 **Computer$** 帐户必须能够使用所指定的文件夹。
 
 
 在 Azure Active Directory 中，将 Configuration Manager 注册为 Web 应用程序或 Web API 管理工具。 这会为你提供以后将需要的客户端 ID。
@@ -98,6 +98,9 @@ Because this is a pre-release feature, before you can connect Configuration Mana
 5.  选择刚导入的应用程序旁边的“激活”。
 6.  如果要允许购买脱机许可的应用程序，则在“管理”>“帐户信息”页面上选择“显示脱机许可的应用”。
 
+> [!Note]
+> 在以前，如果使用多个管理工具部署 Windows 商业应用商店的应用，只能将其中一种工具关联到 Windows 商业应用商店。 现在可将多种管理工具与该应用商店关联，例如 Intune 和 Configuration Manager。
+
 将应用商店帐户添加到 Configuration Manager。
 
 1. 请确保已从适用于企业的 Windows 应用商店购买至少一个应用。 在 Configuration Manager 控制台的“管理”工作区中，展开“云服务”，然后选择“适用于企业的 Windows 应用商店”。
@@ -107,10 +110,10 @@ Because this is a pre-release feature, before you can connect Configuration Mana
 
 更改将在供用户下载的应用程序目录中显示的应用语言。
 
-1.  在 Configuration Manager 控制台的“管理”工作区中，选择“云服务” > “更新和维护服务” > “适用于企业的 Windows 应用商店”。
-2.  选择适用于企业的 Windows 应用商店的帐户，然后选择“属性”。
-3.  选择“语言”选项卡。
-4.  添加或删除应用程序目录中将显示的语言。 选择可供用户使用的默认应用程序目录语言。
+1.    在 Configuration Manager 控制台的“管理”工作区中，选择“云服务” > “更新和维护服务” > “适用于企业的 Windows 应用商店”。
+2.    选择适用于企业的 Windows 应用商店的帐户，然后选择“属性”。
+3.    选择“语言”选项卡。
+4.    添加或删除应用程序目录中将显示的语言。 选择可供用户使用的默认应用程序目录语言。
 
 >[!IMPORTANT]
 >在此版本中，如果要更改将进行同步的语言，必须先重启站点服务器上的 SMS Executive 服务，语言设置才会生效。
@@ -118,17 +121,17 @@ Because this is a pre-release feature, before you can connect Configuration Mana
 
 修改 Azure Active Directory 中的客户端密钥。
 
-1.  在 Configuration Manager 控制台的“管理”工作区中，选择“云服务” > “更新和维护服务” > “适用于企业的 Windows 应用商店”。
-2.  选择适用于企业的 Windows 应用商店的帐户，然后选择“属性”。
-3.  在“适用于企业的 Windows 应用商店的帐户属性”对话框中的“客户端密钥”字段中输入新的密钥，然后选择“验证”。 验证后，选择“应用”，然后关闭此对话框。
+1.    在 Configuration Manager 控制台的“管理”工作区中，选择“云服务” > “更新和维护服务” > “适用于企业的 Windows 应用商店”。
+2.    选择适用于企业的 Windows 应用商店的帐户，然后选择“属性”。
+3.    在“适用于企业的 Windows 应用商店的帐户属性”对话框中的“客户端密钥”字段中输入新的密钥，然后选择“验证”。 验证后，选择“应用”，然后关闭此对话框。
 
-## <a name="synch-apps-from-the-store-with-configuration-manager"></a>使用 Configuration Manager 同步应用商店中的应用
+## <a name="sync-apps-from-the-store-with-configuration-manager"></a>使用 Configuration Manager 同步应用商店中的应用
 
 每隔 24 小时同步一次，或使用以下过程启动即时同步：
 
 1. 在 Configuration Manager 控制台的“管理”工作区中，选择“云服务” > “更新和维护服务” > “适用于企业的 Windows 应用商店”。
-3.  在“主页”选项卡的“同步”组中，选择“立即同步”。
-4.  购买的应用将出现在“应用程序管理”工作区的“应用商店应用的许可证信息”节点中。
+3.    在“主页”选项卡的“同步”组中，选择“立即同步”。
+4.    购买的应用将出现在“应用程序管理”工作区的“应用商店应用的许可证信息”节点中。
 
 
 ## <a name="create-and-deploy-a-configuration-manager-application-from-a-windows-store-for-business-app"></a>从适用于企业的 Windows 应用商店应用创建和部署 Configuration Manager 应用程序
@@ -150,6 +153,6 @@ Because this is a pre-release feature, before you can connect Configuration Mana
 
 
 
-<!--HONumber=Dec16_HO3-->
+<!--HONumber=Feb17_HO3-->
 
 

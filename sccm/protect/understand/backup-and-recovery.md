@@ -16,12 +16,12 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 8d638d7e8f203ff2501a09918ab3424706d1261f
-ms.openlocfilehash: 17a87fee7d22bd2bcfd074670339e66a64972863
+ms.sourcegitcommit: 3aa9f2e4d3f7210981b5b84942485de11fe15cb2
+ms.openlocfilehash: a7e052bc0e1c354b75a7f95afdd266ed742ce689
 
 ---
 
-# <a name="backup-and-recovery"></a>备份和恢复 
+# <a name="backup-and-recovery"></a>备份和恢复
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
@@ -89,7 +89,7 @@ ms.openlocfilehash: 17a87fee7d22bd2bcfd074670339e66a64972863
 >  Configuration Manager 可以从 Configuration Manager 备份维护任务或从使用另一个进程创建的站点数据库备份来恢复站点数据库。 例如，可以通过作为 Microsoft SQL Server 维护计划一部分创建的备份来还原站点数据库。 可以从使用 System Center 2012 Data Protection Manager (DPM) 创建的备份还原站点数据库。 有关详细信息，请参阅 [使用 Data Protection Manager 备份站点数据库](#BKMK_DPMBackup)。  
 
 ###  <a name="a-namebkmkbackupmaintenancetaska-backup-maintenance-task"></a><a name="BKMK_BackupMaintenanceTask"></a> 备份维护任务  
- 可以通过计划预定义的备份站点服务器维护任务来自动完成 Configuration Manager 站点的备份。 你可以备份管理中心站点和主站点，但不支持备份辅助站点或站点系统服务器。 当 Configuration Manager 备份服务运行时，它将按照备份控制文件 (**<ConfigMgrInstallationFolder\>\Inboxes\Smsbkup.box\Smsbkup.ctl**) 中定义的指令进行操作。 你可以修改备份控制文件来更改备份服务的行为。 站点备份状态信息将写入 **Smsbkup.log** 文件。 将在备份站点服务器维护任务属性内指定的目标文件夹中创建此文件。  
+ 可以通过计划预定义的备份站点服务器维护任务来自动完成 Configuration Manager 站点的备份。 你可以备份管理中心站点和主站点，但不支持备份辅助站点或站点系统服务器。 当 Configuration Manager 备份服务运行时，它将按照备份控制文件 (**&lt;ConfigMgrInstallationFolder\>\Inboxes\Smsbkup.box\Smsbkup.ctl**) 中定义的指令进行操作。 你可以修改备份控制文件来更改备份服务的行为。 站点备份状态信息将写入 **Smsbkup.log** 文件。 将在备份站点服务器维护任务属性内指定的目标文件夹中创建此文件。  
 
 
 ##### <a name="to-enable-the-site-backup-maintenance-task"></a>启用站点备份维护任务  
@@ -116,7 +116,7 @@ ms.openlocfilehash: 17a87fee7d22bd2bcfd074670339e66a64972863
     -   **站点服务器和 SQL Server 上的本地驱动器**：指定将站点的备份文件存储在站点服务器本地驱动器上的指定路径中，并将站点数据库的备份文件存储在站点数据库服务器本地驱动器上的指定路径中。 你必须在备份任务运行之前创建本地文件夹。 站点服务器的计算机帐户必须具有你在站点服务器上创建的文件夹的 **“写入”** NTFS 权限。 SQL Server 的计算机帐户必须具有你在站点数据库服务器上创建的文件夹的 **“写入”** NTFS 权限。 只有在站点服务器未安装站点数据库时，此选项才可用。  
 
     > [!NOTE]  
-    >   - 只有在你指定备份目标的 UNC 路径时，用于浏览到备份目标的选项才可用。
+    >    - 只有在你指定备份目标的 UNC 路径时，用于浏览到备份目标的选项才可用。
 
     > - 用于备份目标的文件夹名称或共享名称不支持使用 Unicode 字符。  
 
@@ -139,7 +139,7 @@ ms.openlocfilehash: 17a87fee7d22bd2bcfd074670339e66a64972863
 
     -   如果将备份站点服务器维护任务配置为在备份失败的情况下创建警报，你可以检查“监视”  工作区中的“警报”  节点来了解备份失败情况。  
 
-    -   在 <*ConfigMgrInstallationFolder*>\Logs 中，查看 Smsbkup.log 以了解警告和错误。 站点备份成功完成后，你将看到 `Backup completed` ，时间戳和消息 ID 为 `STATMSG: ID=5035`。  
+    -   在 &lt;*ConfigMgrInstallationFolder*>\Logs 中，查看 Smsbkup.log 以了解警告和错误。 站点备份成功完成后，你将看到 `Backup completed` ，时间戳和消息 ID 为 `STATMSG: ID=5035`。  
 
     > [!TIP]  
     >  如果备份维护任务失败，你可以通过停止并重启 SMS_SITE_BACKUP 服务来重启备份任务。  
@@ -164,7 +164,7 @@ ms.openlocfilehash: 17a87fee7d22bd2bcfd074670339e66a64972863
 -   举例来说，如果备份站点服务器维护任务失败，站点将可能根本没有任何备份快照。 由于备份任务会在其开始备份当前数据之前删除以前的备份快照，因此将不具备有效的备份快照。  
 
 ###  <a name="a-namebkmkusingafterbackupa-using-the-afterbackupbat-file"></a><a name="BKMK_UsingAfterBackup"></a> 使用 AfterBackup.bat 文件  
- 成功备份站点之后，备份站点服务器任务会自动尝试运行一个名为 AfterBackup.bat 的文件。 必须在 <*ConfigMgrInstallationFolder*>\Inboxes\Smsbkup 中手动创建 AfterBackup.bat 文件。 如果 AfterBackup.bat 文件存在并存储在正确的文件夹中，则该文件将在备份任务完成后自动运行。 AfterBackup.bat 文件使你能够在每个备份操作结束时将备份快照存档，并自动执行不属于备份站点服务器维护任务一部分的其他备份后任务。 AfterBackup.bat 文件将存档和备份操作结合，从而确保将每个新备份快照存档。 如果 AfterBackup.bat 文件不存在，备份任务将跳过该文件，不会对备份操作产生影响。 要验证站点备份任务是否成功运行了 AfterBackup.bat 文件，请查看“监视”  工作区的“组件状态”  节点，并查看 SMS_SITE_BACKUP 的状态消息。 如果任务成功启动了 AfterBackup.bat 命令文件，你将看到消息 ID 5040。  
+ 成功备份站点之后，备份站点服务器任务会自动尝试运行一个名为 AfterBackup.bat 的文件。 必须在 &lt;*ConfigMgrInstallationFolder*>\Inboxes\Smsbkup 中手动创建 AfterBackup.bat 文件。 如果 AfterBackup.bat 文件存在并存储在正确的文件夹中，则该文件将在备份任务完成后自动运行。 AfterBackup.bat 文件使你能够在每个备份操作结束时将备份快照存档，并自动执行不属于备份站点服务器维护任务一部分的其他备份后任务。 AfterBackup.bat 文件将存档和备份操作结合，从而确保将每个新备份快照存档。 如果 AfterBackup.bat 文件不存在，备份任务将跳过该文件，不会对备份操作产生影响。 要验证站点备份任务是否成功运行了 AfterBackup.bat 文件，请查看“监视”  工作区的“组件状态”  节点，并查看 SMS_SITE_BACKUP 的状态消息。 如果任务成功启动了 AfterBackup.bat 命令文件，你将看到消息 ID 5040。  
 
 > [!TIP]  
 >  要创建 AfterBackup.bat 文件以将站点服务器备份文件存档，必须在该批处理文件中使用复制命令工具，例如 Robocopy。 例如，你可以创建 AfterBackup.bat 文件，并在第一行上添加下列类似内容： `Robocopy E:\ConfigMgr_Backup \\ServerName\ShareName\ConfigMgr_Backup /MIR`。 有关 Robocopy 的详细信息，请参阅 [Robocopy](http://go.microsoft.com/fwlink/p/?LinkId=228408) 命令行参考网页。  
@@ -220,7 +220,7 @@ ms.openlocfilehash: 17a87fee7d22bd2bcfd074670339e66a64972863
 4.  在“站点角色”  选项卡上的“属性”  组中，单击“属性” 。  
 5.  “常规”  选项卡上的“文件夹详细信息”  部分中列出了存储用户状态迁移数据的文件夹。  
 
-
+## <a name="recover-a-configuration-manager-site"></a>恢复 Configuration Manager 站点
  每当 Configuration Manager 站点出现故障或者站点数据库中发生数据丢失时，都需要 Configuration Manager 站点恢复。 修复和重新同步数据是站点恢复的核心任务，并且是防止操作中断所必需的。  
 
 > [!IMPORTANT]  
@@ -433,7 +433,7 @@ ms.openlocfilehash: 17a87fee7d22bd2bcfd074670339e66a64972863
 
     -   **是否必需：** 可能  
 
-    -   **值：**<ReferenceSiteFQDN\>  
+    -   **值：**&lt;ReferenceSiteFQDN\>  
 
     -   **详细信息：** 指定在数据库备份早于更改跟踪保持期或者在没有备份的情况下恢复站点时，管理中心站点用于恢复全局数据的引用主站点。  
 
@@ -447,7 +447,7 @@ ms.openlocfilehash: 17a87fee7d22bd2bcfd074670339e66a64972863
 
     -   **是否必需：** 否  
 
-    -   **值：**<PathToSiteServerBackupSet\>  
+    -   **值：**&lt;PathToSiteServerBackupSet\>  
 
     -   **详细信息：** 指定站点服务器备份集的路径。 当 **ServerRecoveryOptions** 设置的值为 **1** 或 **2**时，此项是可选的。 为 **SiteServerBackupLocation** 项指定值以使用站点备份来恢复站点。 如果未指定值，则会重新安装站点，而不是从备份集中还原站点。  
 
@@ -455,7 +455,7 @@ ms.openlocfilehash: 17a87fee7d22bd2bcfd074670339e66a64972863
 
     -   **是否必需：** 可能  
 
-    -   **值：**<PathToSiteDatabaseBackupSet\>  
+    -   &lt;PathToSiteDatabaseBackupSet\>  
 
     -   **详细信息：** 指定站点数据库备份集的路径。 如果为 **ServerRecoveryOptions** 项配置了值 **1** 或 **4** ，并为 **DatabaseRecoveryOptions** 项配置了值 **10** ，则需要 **BackupLocation** 项。  
 
@@ -477,7 +477,7 @@ ms.openlocfilehash: 17a87fee7d22bd2bcfd074670339e66a64972863
 
     -   **是否必需：** 是  
 
-    -   **值：**<Site code\>  
+    -   **值：**&lt;Site code\>  
 
     -   **详细信息：** 三个字母数字字符，用于唯一标识层次结构中的站点。 你必须指定在发生故障之前站点使用的站点代码。  
 
@@ -493,7 +493,7 @@ ms.openlocfilehash: 17a87fee7d22bd2bcfd074670339e66a64972863
 
     -   **是否必需：** 是  
 
-    -   **值：** <*ConfigMgrInstallationPath*>  
+    -   &lt;*ConfigMgrInstallationPath*>  
 
     -   **详细信息：**指定 Configuration Manager 程序文件的安装文件夹。  
 
@@ -504,7 +504,7 @@ ms.openlocfilehash: 17a87fee7d22bd2bcfd074670339e66a64972863
 
     -   **是否必需：** 是  
 
-    -   **值：** <SMS Provider 的 FQDN>  
+    -   **值：**&lt;SMS 提供程序的 FQDN>  
 
     -   **详细信息：** 指定将托管 SMS 提供程序的服务器的 FQDN。 你必须指定在发生故障之前承载 SMS 提供程序的服务器。  
 
@@ -526,7 +526,7 @@ ms.openlocfilehash: 17a87fee7d22bd2bcfd074670339e66a64972863
 
     -   **是否必需：** 是  
 
-    -   **值：** <*PathToSetupPrerequisiteFiles*>  
+    -   **值：**&lt;*PathToSetupPrerequisiteFiles*>  
 
     -   **详细信息：** 指定安装程序必备文件的路径。 根据 **PrerequisiteComp** 值，安装程序将使用此路径来存储已下载文件或查找以前下载的文件。  
 
@@ -558,9 +558,9 @@ ms.openlocfilehash: 17a87fee7d22bd2bcfd074670339e66a64972863
 
 -   **项名称：** SQLServerName  
 
-    -   **是否必需：**是  
+    -   **是否必需：** 是  
 
-    -   **值：**<SQLServerName\>  
+    -   **值：***&lt;SQLServerName\>*  
 
     -   **详细信息：**运行将托管站点数据库的 SQL Server 的服务器名称或群集实例名称。 你必须指定在发生故障之前承载站点数据库的同一服务器。  
 
@@ -574,7 +574,7 @@ ms.openlocfilehash: 17a87fee7d22bd2bcfd074670339e66a64972863
 
          对话框内的“操作”  
 
-         <InstanceName\>\\<SiteDatabaseName\>  
+         *&lt;InstanceName\>*\\*&lt;SiteDatabaseName\>*  
 
     -   **详细信息：**要创建或用于安装管理中心站点数据库的 SQL Server 数据库的名称。 你必须指定在发生故障之前使用的同一数据库名称。  
 
@@ -585,7 +585,7 @@ ms.openlocfilehash: 17a87fee7d22bd2bcfd074670339e66a64972863
 
     -   **是否必需：** 否  
 
-    -   **值：** <*SSBPortNumber*>  
+    -   **值：**&lt;*SSBPortNumber*>  
 
     -   **详细信息：** 指定 SQL Server 使用的 SQL Server Service Broker (SSB) 端口。 通常，SSB 配置为使用 TCP 端口 4022，但也支持其他端口。 你必须指定在发生故障之前使用的相同 SSB 端口。  
 
@@ -646,7 +646,7 @@ ms.openlocfilehash: 17a87fee7d22bd2bcfd074670339e66a64972863
 
     -   **是否必需：** 否  
 
-    -   **值：**<PathToSiteServerBackupSet\>  
+    -   **值：**&lt;PathToSiteServerBackupSet\>  
 
     -   **详细信息：** 指定站点服务器备份集的路径。 当 **ServerRecoveryOptions** 设置的值为 **1** 或 **2**时，此项是可选的。 为 **SiteServerBackupLocation** 项指定值以使用站点备份来恢复站点。 如果未指定值，则会重新安装站点，而不是从备份集中还原站点。  
 
@@ -654,7 +654,7 @@ ms.openlocfilehash: 17a87fee7d22bd2bcfd074670339e66a64972863
 
     -   **是否必需：** 可能  
 
-    -   **值：**<PathToSiteDatabaseBackupSet\>  
+    -   &lt;PathToSiteDatabaseBackupSet\>  
 
     -   **详细信息：** 指定站点数据库备份集的路径。 如果为 **ServerRecoveryOptions** 项配置了值 **1** 或 **4** ，并为 **DatabaseRecoveryOptions** 项配置了值 **10** ，则需要 **BackupLocation** 项。  
 
@@ -676,7 +676,7 @@ ms.openlocfilehash: 17a87fee7d22bd2bcfd074670339e66a64972863
 
     -   **是否必需：** 是  
 
-    -   **值：**<Site code\>  
+    -   **值：**&lt;Site code\>  
 
     -   **详细信息：** 三个字母数字字符，用于唯一标识层次结构中的站点。 你必须指定在发生故障之前站点使用的站点代码。  
 
@@ -692,7 +692,7 @@ ms.openlocfilehash: 17a87fee7d22bd2bcfd074670339e66a64972863
 
     -   **是否必需：** 是  
 
-    -   **值：** <*ConfigMgrInstallationPath*>  
+    -   &lt;*ConfigMgrInstallationPath*>  
 
     -   **详细信息：**指定 Configuration Manager 程序文件的安装文件夹。  
 
@@ -703,7 +703,7 @@ ms.openlocfilehash: 17a87fee7d22bd2bcfd074670339e66a64972863
 
     -   **是否必需：** 是  
 
-    -   **值：** <SMS Provider 的 FQDN>  
+    -   **值：**&lt;SMS 提供程序的 FQDN>  
 
     -   **详细信息：** 指定将托管 SMS 提供程序的服务器的 FQDN。 你必须指定在发生故障之前承载 SMS 提供程序的服务器。  
 
@@ -725,7 +725,7 @@ ms.openlocfilehash: 17a87fee7d22bd2bcfd074670339e66a64972863
 
     -   **是否必需：** 是  
 
-    -   **值：** <*PathToSetupPrerequisiteFiles*>  
+    -   **值：**&lt;*PathToSetupPrerequisiteFiles*>  
 
     -   **详细信息：** 指定安装程序必备文件的路径。 根据 **PrerequisiteComp** 值，安装程序将使用此路径来存储已下载文件或查找以前下载的文件。  
 
@@ -757,9 +757,9 @@ ms.openlocfilehash: 17a87fee7d22bd2bcfd074670339e66a64972863
 
 -   **项名称：** SQLServerName  
 
-    -   **是否必需：**是  
+    -   **是否必需：** 是  
 
-    -   **值：**<SQLServerName\>  
+    -   **值：***&lt;SQLServerName\>*  
 
     -   **详细信息：**运行将托管站点数据库的 SQL Server 的服务器名称或群集实例名称。 你必须指定在发生故障之前承载站点数据库的同一服务器。  
 
@@ -773,7 +773,7 @@ ms.openlocfilehash: 17a87fee7d22bd2bcfd074670339e66a64972863
 
          对话框内的“操作”  
 
-         <InstanceName\>\\<SiteDatabaseName\>  
+         *&lt;InstanceName\>*\\*&lt;SiteDatabaseName\>*  
 
     -   **详细信息：**要创建或用于安装管理中心站点数据库的 SQL Server 数据库的名称。 你必须指定在发生故障之前使用的同一数据库名称。  
 
@@ -784,7 +784,7 @@ ms.openlocfilehash: 17a87fee7d22bd2bcfd074670339e66a64972863
 
     -   **是否必需：** 否  
 
-    -   **值：** <*SSBPortNumber*>  
+    -   **值：**&lt;*SSBPortNumber*>  
 
     -   **详细信息：** 指定 SQL Server 使用的 SQL Server Service Broker (SSB) 端口。 通常，SSB 配置为使用 TCP 端口 4022，但也支持其他端口。 你必须指定在发生故障之前使用的相同 SSB 端口。  
 
@@ -794,7 +794,7 @@ ms.openlocfilehash: 17a87fee7d22bd2bcfd074670339e66a64972863
 
     -   **是否必需：** 可能  
 
-    -   **值：** <*SiteCodeForCentralAdministrationSite*>  
+    -   **值：** &lt;SiteCodeForCentralAdministrationSite>  
 
     -   **详细信息：**指定主站点加入 Configuration Manager 层次结构时将要附加到的管理中心站点。 如果在发生故障之前主站点已附加到管理中心站点，则此设置为必需。 你必须指定在发生故障之前用于管理中心站点的站点代码。  
 
@@ -802,7 +802,7 @@ ms.openlocfilehash: 17a87fee7d22bd2bcfd074670339e66a64972863
 
     -   **是否必需：** 否  
 
-    -   **值：** <*Interval*>  
+    -   **值：**&lt;Interval>  
 
     -   **详细信息：** 指定连接失败后尝试连接到管理中心站点的重试间隔（以分钟为单位）。 例如，如果连接到管理中心站点失败，则主站点将等待你为 CASRetryInterval 指定的分钟数，然后重新尝试连接。  
 
@@ -810,7 +810,7 @@ ms.openlocfilehash: 17a87fee7d22bd2bcfd074670339e66a64972863
 
     -   **是否必需：** 否  
 
-    -   **值：** <*Timeout*>  
+    -   **值：** &lt;Timeout>  
 
     -   **详细信息：** 指定主站点连接到管理中心站点的最大超时值（以分钟为单位）。 例如，主站点未能连接到管理中心站点，则在达到 WaitForCASTimeout 期间之前，主站点将基于 CASRetryInterval 重新尝试连接到管理中心站点。 你可以指定 0 到 100 的值。  
 
@@ -903,7 +903,7 @@ ms.openlocfilehash: 17a87fee7d22bd2bcfd074670339e66a64972863
  SMS 编写器是一项服务，该服务在备份过程中与卷影复制服务 (VSS) 交互。 SMS 编写器服务必须正在运行，Configuration Manager 站点备份才能成功完成。  
 
 ### <a name="purpose"></a>目的  
- SMS 编写器向 VSS 服务注册，并绑定到其接口和事件。 当 VSS 广播事件时，或者，如果它将特定通知发送到 SMS 编写器，SMS 编写器将响应通知并执行适当的操作。 SMS 编写器可读取位于 <*ConfigMgr Installation Path*>\inboxes\smsbkup.box 中的备份控制文件 (smsbkup.ctl)，并确定要备份的文件和数据。 SMS 编写器根据此信息以及 SMS 注册表项和子项中的特定数据生成由不同部分组成的元数据。 当请求元数据时，它将元数据发送到 VSS。 然后，VSS 将元数据发送到请求应用程序，即 Configuration Manager 备份管理器。 备份管理器选择备份的数据并通过 VSS 将此数据发送到 SMS 编写器。 SMS 编写器执行适当的步骤来为备份做好准备。 稍后，当 VSS 准备获取快照时，它将发送事件，SMS 编写器停止所有 Configuration Manager 服务，并确保在创建快照时 Configuration Manager 活动已冻结。 完成快照后，SMS 编写器重启服务和活动。  
+ SMS 编写器向 VSS 服务注册，并绑定到其接口和事件。 当 VSS 广播事件时，或者，如果它将特定通知发送到 SMS 编写器，SMS 编写器将响应通知并执行适当的操作。 SMS 编写器可读取位于 &lt;*ConfigMgr Installation Path*>\inboxes\smsbkup.box 中的备份控制文件 (smsbkup.ctl)，并确定要备份的文件和数据。 SMS 编写器根据此信息以及 SMS 注册表项和子项中的特定数据生成由不同部分组成的元数据。 当请求元数据时，它将元数据发送到 VSS。 然后，VSS 将元数据发送到请求应用程序，即 Configuration Manager 备份管理器。 备份管理器选择备份的数据并通过 VSS 将此数据发送到 SMS 编写器。 SMS 编写器执行适当的步骤来为备份做好准备。 稍后，当 VSS 准备获取快照时，它将发送事件，SMS 编写器停止所有 Configuration Manager 服务，并确保在创建快照时 Configuration Manager 活动已冻结。 完成快照后，SMS 编写器重启服务和活动。  
 
  将自动安装 SMS 编写器服务。 当 VSS 应用程序请求备份或还原时，该服务必须正在运行。  
 
@@ -918,6 +918,6 @@ ms.openlocfilehash: 17a87fee7d22bd2bcfd074670339e66a64972863
 
 
 
-<!--HONumber=Feb17_HO1-->
+<!--HONumber=Feb17_HO2-->
 
 
