@@ -2,7 +2,7 @@
 title: "配置资产智能 | Microsoft Docs"
 description: "在 System Center Configuration Manager 中设置资产智能"
 ms.custom: na
-ms.date: 12/28/2016
+ms.date: 2/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,8 +13,8 @@ ms.topic: get-started-article
 ms.assetid: 08e0382d-de05-4a76-ba5c-7223173f7066
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: andredm7
+ms.author: andredm
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 8a5dc7361da34f3e6b926acd35c72c0c0767ce70
@@ -224,7 +224,7 @@ ms.openlocfilehash: 27566be49a673bebca6ac3621e692fad65523ca4
 
 4.  在“主页”选项卡上的“设置”组中，选择“站点维护”。 选择一项任务，然后选择“编辑”，以修改设置。 
 
-    我们建议将时间段设置为该站点的非高峰期。 时间段是可以在其间运行任务的时间间隔。 时间段由在“任务属性”  对话框中指定的“在下列时间之后开始”  和“最晚开始时间”  定义。  
+      我们建议将时间段设置为该站点的非高峰期。 时间段是可以在其间运行任务的时间间隔。 时间段由在“任务属性”  对话框中指定的“在下列时间之后开始”  和“最晚开始时间”  定义。  
 
     可以通过选择当前日期并将“在下列时间之后开始”  设置为当前时间之后的几分钟，来立即启动任务。  
 

@@ -2,7 +2,7 @@
 title: "使用维护时段 | Microsoft Docs"
 description: "使用集合和维护时段在 System Center Configuration Manager 中有效管理客户端。"
 ms.custom: na
-ms.date: 01/03/2017
+ms.date: 02/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,8 +13,8 @@ ms.topic: article
 ms.assetid: 4564ebcb-41a8-4eb0-afdb-2e1f0795cfa2
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: andredm7
+ms.author: andredm
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 05c27c7aa36e0b4236867766dab36125c31467b3

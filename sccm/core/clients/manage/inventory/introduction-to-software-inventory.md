@@ -2,7 +2,7 @@
 title: "软件清单 | Microsoft Docs"
 description: "获取 System Center Configuration Manager 中的软件清单简介。"
 ms.custom: na
-ms.date: 12/26/2016
+ms.date: 2/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,8 +13,8 @@ ms.topic: get-started-article
 ms.assetid: 79eb49da-cd2b-4ffc-b355-b595aeba3aea
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: andredm7
+ms.author: andredm
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 9206b82eca02877c30eebf146d42bcca7290eb42

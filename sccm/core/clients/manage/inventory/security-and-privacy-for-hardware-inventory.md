@@ -2,7 +2,7 @@
 title: "硬件清单安全和隐私 | Microsoft Docs"
 description: "获取 System Center Configuration Manager 中硬件清单的安全和隐私信息。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,8 +12,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 62e20d86-db6d-4a1f-b14a-905a9de31698
 caps.latest.revision: 6
-author: nbigman
-ms.author: nbigman
+author: andredm7
+ms.author: andredm
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53

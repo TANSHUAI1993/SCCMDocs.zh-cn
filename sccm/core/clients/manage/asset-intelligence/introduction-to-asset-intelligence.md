@@ -2,7 +2,7 @@
 title: "资产智能简介 | Microsoft Docs"
 description: "获取 System Center Configuration Manager 中的资产智能简介。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 2/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,8 +13,8 @@ ms.topic: get-started-article
 ms.assetid: 0bdfdef5-390f-4099-8bde-de51d9a89175
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: andredm7
+ms.author: andredm
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53

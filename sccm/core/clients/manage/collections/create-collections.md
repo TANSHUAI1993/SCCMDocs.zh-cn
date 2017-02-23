@@ -2,7 +2,7 @@
 title: "创建集合 | Microsoft Docs"
 description: "在 System Center Configuration Manager 中创建集合以更轻松地管理用户和设备的分组。"
 ms.custom: na
-ms.date: 12/27/2016
+ms.date: 2/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,8 +13,8 @@ ms.topic: article
 ms.assetid: 1401a35e-4312-4d3b-8ceb-0abbb10d4f05
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: andredm7
+ms.author: andredm
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 9555a16d97224a1cf49a426ab225468b07403f60
