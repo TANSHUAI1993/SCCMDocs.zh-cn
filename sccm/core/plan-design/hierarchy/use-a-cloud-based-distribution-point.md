@@ -2,7 +2,7 @@
 title: "基于云的分发点 | Microsoft Docs"
 description: "了解有关配合使用 System Center Configuration Manager 和基于云的分发点的配置和限制。"
 ms.custom: na
-ms.date: 2/14/2017
+ms.date: 2/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 8800a497a8c1e26b89ad3817ee2c15258bd1d5c5
-ms.openlocfilehash: f9164eeb19027366525ebc41640c82de3a606e4d
+ms.sourcegitcommit: 97051d9c65ef5ea28c94468b24863120624e8de0
+ms.openlocfilehash: b78b3b20a8b317a242cd06f9fda6326f41673915
 
 
 ---
@@ -185,9 +185,7 @@ ms.openlocfilehash: f9164eeb19027366525ebc41640c82de3a606e4d
 
 3.  当首选分发点或远程分发点不可用时，则客户端可能会回退以从基于云的分发点中获取内容。  
 
-    > [!NOTE]  
-        >  Internet 上接收基于 Internet 的分发点和基于云的分发点作为部署内容位置的客户端仅尝试从基于 Internet 的分发点中检索内容。 如果 Internet 上的客户端无法从基于 Internet 的分发点中检索内容，则客户端不尝试访问从基于云的分发点。  
-
+    
 
   当客户端使用基于云的分发点作为内容位置时，客户端使用 Configuration Manager 访问令牌自行向基于云的分发点进行身份验证。 如果客户端信任 Configuration Manager 基于云的分发点证书，则客户端可以下载请求的内容。  
 
@@ -217,6 +215,6 @@ ms.openlocfilehash: f9164eeb19027366525ebc41640c82de3a606e4d
 
 
 
-<!--HONumber=Feb17_HO3-->
+<!--HONumber=Feb17_HO4-->
 
 
