@@ -2,7 +2,7 @@
 title: "规划和配置应用程序管理 | Microsoft Docs"
 description: "实现和配置用于在 System Center Configuration Manager 中部署应用程序的所需依赖关系。"
 ms.custom: na
-ms.date: 02/03/2017
+ms.date: 02/09/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 50c08d63e7220a47d21dcbdcd7abafba7c7f5f75
-ms.openlocfilehash: 4eca69f54ec0bca5f1f972d3814ceb87d4a30d67
+ms.sourcegitcommit: 1c43c4968f93985515249ddb117269f8ed61302a
+ms.openlocfilehash: 46cc3fcfd9516cf1c124e24b50d0aac0cb0025dc
 
 
 ---
@@ -127,7 +127,7 @@ ms.openlocfilehash: 4eca69f54ec0bca5f1f972d3814ceb87d4a30d67
 
     状态消息：使用组件“SMS_PORTALWEB_CONTROL_MANAGER”  和“SMS_AWEBSVC_CONTROL_MANAGER” 。  
 
-    例如，“SMS_PORTALWEB_CONTROL_MANAGER”  的状态 ID“1015”  确认站点组件管理器已成功安装在应用程序目录网站点上。  
+    例如，“SMS_PORTALWEB_CONTROL_MANAGER”的状态 ID“1015”确认站点组件管理器已成功安装在应用程序目录网站点上。  
 
     日志文件：搜索 **SMSAWEBSVCSetup.log** 和 **SMSPORTALWEBSetup.log**。  
 
@@ -228,6 +228,6 @@ ms.openlocfilehash: 4eca69f54ec0bca5f1f972d3814ceb87d4a30d67
 
 
 
-<!--HONumber=Feb17_HO1-->
+<!--HONumber=Feb17_HO2-->
 
 

@@ -2,7 +2,7 @@
 title: "升级本地基础结构 | Microsoft Docs"
 description: "了解如何升级基础结构（例如 SQL Server）和站点系统的站点操作系统。"
 ms.custom: na
-ms.date: 2/2/2017
+ms.date: 2/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 83c8492191f40fc4d582562268db0d58a0f9cdde
-ms.openlocfilehash: a5d8496d98bd7f202ffbe8859981e94457ffa5c4
+ms.sourcegitcommit: 2e711cce2435957f3e85dad08f17260e1a224fc2
+ms.openlocfilehash: c6448932e91a02984ca57cef0b75c10ea3f43fa1
 
 
 ---
@@ -37,14 +37,14 @@ ms.openlocfilehash: a5d8496d98bd7f202ffbe8859981e94457ffa5c4
 
 -   如果生成的 Windows 服务包级别仍受 Configuration Manager 支持，则会就地升级到更高版本的 Windows Server 服务包。  
 -   就地升级：
-    - 从 Windows Server 2012 R2 到 Windows Server 2016（[查看其他详细信息](#upgrade-windows-server-2012-r2-to-2016)）
-    - 从 Windows Server 2012 到 Windows Server 2012 R2（[查看其他详细信息](#upgrade-windows-server-2012-to-windows-server-2012-r2)）
-    - 使用 Configuration Manager 版本 1602 或更高版本时，也支持将 Windows Server 2008 R2 升级到 Windows Server 2012 R2（[查看其他详细信息](#upgrade-windows-server-2008-r2-to-windows-server-2012-r2)）
+    - 从 Windows Server 2012 R2 到 Windows Server 2016（[查看其他详细信息](#upgrade-windows-server-2012-r2-to-2016)）。
+    - 从 Windows Server 2012 到 Windows Server 2012 R2（[查看其他详细信息](#upgrade-windows-server-2012-to-windows-server-2012-r2)）。
+    - 使用 Configuration Manager 版本 1602 或更高版本时，也支持将 Windows Server 2008 R2 升级到 Windows Server 2012 R2（[查看其他详细信息](#upgrade-windows-server-2008-r2-to-windows-server-2012-r2)）。
 
     > [!WARNING]  
-    >  升级到 Windows Server 2012 R2 之前， **必须从服务器中卸载 WSUS 3.2** 。  
+    >  升级到 Windows Server 2012 R2 之前， *必须从服务器中卸载 WSUS 3.2* 。  
     >   
-    >  有关此关键步骤的信息，请参阅 Windows Server 文档中 [Windows Server 更新服务概述](https://technet.microsoft.com/library/hh852345.aspx) 中的“新增和更改的功能”部分。  
+    >  有关此关键步骤的信息，请参阅 Windows Server 文档中 [Windows Server Update Services 概述](https://technet.microsoft.com/library/hh852345.aspx)中的“新增和更改的功能”部分。  
 
 若要升级服务器，请使用要升级到的目标操作系统所提供的升级过程。  参阅以下内容：
   -  Windows Server 文档中的 [Windows Server 2012 R2 的升级选项](https://technet.microsoft.com/library/dn303416.aspx)。  
@@ -54,35 +54,35 @@ ms.openlocfilehash: a5d8496d98bd7f202ffbe8859981e94457ffa5c4
 此操作系统升级方案需满足以下条件：
 
 **升级之前：**  
--   删除 System Center Endpoint Protection (SCEP) 客户端。 Windows Server 2016 具有内置的 Windows Defender，它会代替 SCEP 客户端。 SCEP 客户端的存在会阻止升级到 Windows Server 2016。
+-     删除 System Center Endpoint Protection (SCEP) 客户端。 Windows Server 2016 具有内置的 Windows Defender，它会代替 SCEP 客户端。 SCEP 客户端的存在会阻止升级到 Windows Server 2016。
 
 **升级之后：**
--   确保 Windows Defender 已启用、设置为自动启动且正在运行。
--   确保正在运行以下 Configuration Manager 服务：
+-     确保 Windows Defender 已启用、设置为自动启动且正在运行。
+-     确保正在运行以下 Configuration Manager 服务：
   -     SMS_EXECUTIVE
   -     SMS_SITE_COMPONENT_MANAGER
 
 
--   确保针对以下站点系统角色，**Windows Process Activation** 和 **WWW/W3svc** 服务已启用、设置为自动启动且正在运行（升级期间会禁用这些服务）：
+-     确保针对以下站点系统角色，**Windows Process Activation** 和 **WWW/W3svc** 服务已启用、设置为自动启动且正在运行（升级期间会禁用这些服务）：
   -     站点服务器
   -     管理点
   -     应用程序目录 Web 服务点
   -     应用程序目录网站点
 
 
--   确保每个托管站点系统角色的服务器将继续满足在该服务器上运行的[站点系统角色的所有先决条件](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)。 例如，可能需要重新安装 BITS、WSUS 或为 IIS 配置特定设置。
+-     确保每个托管站点系统角色的服务器将继续满足所有在该服务器上运行的[站点系统角色的先决条件](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)。 例如，可能需要重新安装 BITS、WSUS 或为 IIS 配置特定设置。
 
-  恢复缺少的先决条件后，再次重新启动该服务器，以确保所有服务已启动并可操作。
+  恢复缺少的先决条件后，再次重启该服务器，以确保所有服务已启动并可操作。
 
 **远程 Configuration Manager 控制台的已知问题：**  
-将托管 SMS_Provider 实例的站点服务器或服务器升级到 Windows Server 2016 后，管理员用户可能无法将 Configuration Manager 控制台连接到该站点。 若要解决此问题，必须手动还原 WMI 中 SMS 管理员组的权限。 必须在此站点服务器以及每个托管 SMS 提供程序实例的远程服务器上设置权限：
+将托管 SMS_Provider 实例的站点服务器或服务器升级到 Windows Server 2016 后，管理员用户可能无法将 Configuration Manager 控制台连接到该站点。 若要解决此问题，必须手动还原 WMI 中 SMS 管理员组的权限。 必须在此站点服务器以及每个托管 SMS_Provider 实例的远程服务器上设置权限：
 
 1. 在适用的服务器上，打开 Microsoft 管理控制台 (MMC)，为“WMI 控件”添加管理单元，然后选择“本地计算机”。
 2. 在 MMC 中，打开“WMI 控件(本地)”的“属性”，然后选择“安全”选项卡。
-3. 展开“根”下的树形，选择“SMS”节点，然后单击“安全”。  确保“SMS 管理员”组具有下列权限：
+3. 展开“根”下的树形，选择“SMS”节点，然后选择“安全”。  确保“SMS 管理员”组具有下列权限：
   -     启用帐户
   -     远程启用
-4. 接下来，在 SMS 节点下的“安全”选项卡上，选择 **site_&lt;sitecode>** 节点，然后单击“安全”。 确保“SMS 管理员”组具有下列权限：
+4. 在“SMS”节点下的“安全”选项卡上，选择“**site_**&lt;*sitecode*>”节点，然后选择“安全”。 确保“SMS 管理员”组具有下列权限：
   -   执行方法
   -   提供程序写入
   -   启用帐户
@@ -95,7 +95,7 @@ ms.openlocfilehash: a5d8496d98bd7f202ffbe8859981e94457ffa5c4
 -  不同于支持的其他方案，此方案升级前没有特别的注意事项。
 
 **升级之后：**
-  - 请确保针对以下站点系统角色，Windows 部署服务已启动，且正在运行（升级期间会停止该服务）：
+  -    请确保针对以下站点系统角色，Windows 部署服务已启动，且正在运行（升级期间会停止该服务）：
     - 站点服务器
     - 管理点
     - 应用程序目录 Web 服务点
@@ -103,25 +103,25 @@ ms.openlocfilehash: a5d8496d98bd7f202ffbe8859981e94457ffa5c4
 
 
   -     确保针对以下站点系统角色，**Windows Process Activation** 和 **WWW/W3svc** 服务已启用、设置为自动启动且正在运行（升级期间会禁用这些服务）：
-    -   站点服务器
-    -   管理点
-    -   应用程序目录 Web 服务点
-    -   应用程序目录网站点
+    -     站点服务器
+    -     管理点
+    -     应用程序目录 Web 服务点
+    -     应用程序目录网站点
 
 
-  -     确保每个托管站点系统角色的服务器将继续满足在该服务器上运行的[站点系统角色的所有先决条件](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)。 例如，可能需要重新安装 BITS、WSUS 或为 IIS 配置特定设置。
+  -     确保每个托管站点系统角色的服务器将继续满足所有在该服务器上运行的[站点系统角色的先决条件](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)。 例如，可能需要重新安装 BITS、WSUS 或为 IIS 配置特定设置。
 
-  恢复缺少的先决条件后，再次重新启动该服务器，以确保所有服务已启动并可操作。
+  恢复缺少的先决条件后，再次重启该服务器，以确保所有服务已启动并可操作。
 
 ### <a name="upgrade-windows-server-2008-r2-to-windows-server-2012-r2"></a>将 Windows Server 2008 R2 升级到 Windows Server 2012 R2
 此操作系统升级方案需满足以下条件：  
 
 **升级之前：**
--   卸载 WSUS 3.2。  
+-     卸载 WSUS 3.2。  
     将服务器操作系统升级到 Windows Server 2012 R2 之前，必须从服务器中卸载 WSUS 3.2。 有关此关键步骤的信息，请参阅 Windows Server 文档中 Windows Server 更新服务概述中的“新增和更改的功能”部分。
 
 **升级之后：**
-  - 请确保针对以下站点系统角色，Windows 部署服务已启动，且正在运行（升级期间会停止该服务）：
+  -    请确保针对以下站点系统角色，Windows 部署服务已启动，且正在运行（升级期间会停止该服务）：
     - 站点服务器
     - 管理点
     - 应用程序目录 Web 服务点
@@ -129,15 +129,15 @@ ms.openlocfilehash: a5d8496d98bd7f202ffbe8859981e94457ffa5c4
 
 
   -     确保针对以下站点系统角色，**Windows Process Activation** 和 **WWW/W3svc** 服务已启用、设置为自动启动且正在运行（升级期间会禁用这些服务）：
-    -   站点服务器
-    -   管理点
-    -   应用程序目录 Web 服务点
-    -   应用程序目录网站点
+    -     站点服务器
+    -     管理点
+    -     应用程序目录 Web 服务点
+    -     应用程序目录网站点
 
 
   -     确保每个托管站点系统角色的服务器将继续满足在该服务器上运行的[站点系统角色的所有先决条件](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)。 例如，可能需要重新安装 BITS、WSUS 或为 IIS 配置特定设置。
 
-  恢复缺少的先决条件后，再次重新启动该服务器，以确保所有服务已启动并可操作。
+  恢复缺少的先决条件后，再次重启该服务器，以确保所有服务已启动并可操作。
 
 
 ### <a name="unsupported-upgrade-scenarios"></a>不支持的升级方案
@@ -158,7 +158,7 @@ ms.openlocfilehash: a5d8496d98bd7f202ffbe8859981e94457ffa5c4
 -   Windows 10 的内部版本到内部版本服务升级。  有关详细信息，请参阅[使用 System Center Configuration Manager 将 Windows 作为服务进行管理](../../../osd/deploy-use/manage-windows-as-a-service.md)。  
 
 ##  <a name="a-namebkmksupconfigupgradedbsrva-upgrade-sql-server-on-the-site-database-server"></a><a name="BKMK_SupConfigUpgradeDBSrv"></a>升级站点数据库服务器上的 SQL Server  
-  Configuration Manager 在站点数据库服务器上支持将 SQL Server 从受支持的 SQL 版本就地升级。 以下为 Configuration Manager 支持的 SQL Server 升级方案以及每个方案的要求的详细信息。
+  Configuration Manager 在站点数据库服务器上支持将 SQL Server 从受支持的 SQL 版本就地升级。 本节中的 SQL Server 升级方案均受 Configuration Manager 支持，并且包括每个方案的要求。
 
  有关 Configuration Manager 支持的 SQL Server 版本的详细信息，请参阅[对 System Center Configuration Manager 的 SQL Server 版本支持](../../../core/plan-design/configs/support-for-sql-server-versions.md)。  
 
@@ -181,7 +181,7 @@ ms.openlocfilehash: a5d8496d98bd7f202ffbe8859981e94457ffa5c4
  3. 最后升级父主站点。 这包括向管理中心站点报告的子主站点和是层次结构的顶层站点的独立主站点。
 
 **SQL Server 基数估计级别和站点数据库：**   
-从 SQL Server 早期版本升级站点数据库时，如果现有 SQL基数估计 (CE) 级别是此 SQL Server 实例允许的最小级别，则数据库会保留此级别。 使用兼容级别低于允许级别的数据库升级 SQL Server 会自动将数据库设置为 SQL 允许的最低兼容级别。
+从 SQL Server 早期版本升级站点数据库时，如果现有 SQL基数估计 (CE) 级别是此 SQL Server 实例允许的最小级别，则数据库会保留此级别。 使用兼容级别低于允许级别的数据库升级 SQL Server 会自动将数据库设置为 SQL Server 允许的最低兼容级别。
 
 下表列出了 Configuration Manager 站点数据库的建议兼容级别：
 
@@ -195,9 +195,9 @@ ms.openlocfilehash: a5d8496d98bd7f202ffbe8859981e94457ffa5c4
  有关 SQL CE 兼容级别及其设置方法的详细信息，请参阅 [ALTER DATABASE 兼容级别 (Transact-SQL)](https://msdn.microsoft.com/library/bb510680.aspx)。
 
 
-**有关 SQL Server 的详细信息，请参阅 TechNet 上的 SQL Server 文档：**  
--   [升级到 SQL Server 2014](http://technet.microsoft.com/library/ms143393\(v=sql.120)  
+有关 SQL Server 的详细信息，请参阅 TechNet 上的 SQL Server 文档：
 -   [升级到 SQL Server 2012](http://technet.microsoft.com/library/ms143393\(v=sql.110)
+-   [升级到 SQL Server 2014](http://technet.microsoft.com/library/ms143393\(v=sql.120)  
 -   [升级到 SQL Server 2016](https://technet.microsoft.com/library/bb677622(v=sql.130))
 
 
@@ -213,6 +213,6 @@ ms.openlocfilehash: a5d8496d98bd7f202ffbe8859981e94457ffa5c4
 
 
 
-<!--HONumber=Feb17_HO1-->
+<!--HONumber=Feb17_HO3-->
 
 

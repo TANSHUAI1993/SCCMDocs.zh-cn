@@ -17,8 +17,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: d3e6f011527f05b35e411af52d723f459aad66ca
-ms.openlocfilehash: 99b218f23ff8ad0fbac9dbdc28c46829e6800f85
+ms.sourcegitcommit: 3a24fe53cc243294694b779fad4c3ab83ca2ecb7
+ms.openlocfilehash: ae2cc7030c1fc404dcc7392b8c3067fc0f8cafc0
 
 
 ---
@@ -83,7 +83,7 @@ System Center Configuration Manager 服务连接点是一个站点系统角色�
 -   站点服务器上的分发管理器使用该站点系统安装帐户来传输服务连接点的更新。
 
 ##  <a name="a-namebkmkurlsa-internet-access-requirements"></a><a name="bkmk_urls"></a> Internet 访问要求  
-若要启用操作，托管服务连接点的计算机以及该计算机与 Internet 之间的任何防火墙必须通过**端口 TCP 443** 和**端口 TCP 443** 与以下 Internet 位置进行通信。 服务连接点也支持使用 Web 代理（具有或不具有身份验证皆可）来使用这些位置。  
+若要启用操作，托管服务连接点的计算机以及该计算机与 Internet 之间的任何防火墙必须通过**端口 TCP 443** 和**端口 TCP 443** 与以下 Internet 位置进行通信。 服务连接点也支持使用 Web 代理（具有或不具有身份验证皆可）来使用这些位置。  如果需要配置 Web 代理帐户，请参阅：[System Center Configuration Manager 中的代理服务器支持](/sccm/core/plan-design/network/proxy-server-support)。
 
 **更新和维护服务**  
 
@@ -121,6 +121,6 @@ System Center Configuration Manager 服务连接点是一个站点系统角色�
 
 
 
-<!--HONumber=Feb17_HO1-->
+<!--HONumber=Feb17_HO3-->
 
 
