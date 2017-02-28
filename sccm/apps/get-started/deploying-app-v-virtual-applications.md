@@ -2,7 +2,7 @@
 title: "部署 App-V 虚拟应用程序 | Microsoft Docs"
 description: "请参阅创建和部署虚拟应用程序时必须考虑的注意事项。"
 ms.custom: na
-ms.date: 11/07/2016
+ms.date: 02/16/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0469aad1482c0619794c91bc530d8ec981e8f136
-ms.openlocfilehash: bc79cd157003cc7dcb63f925293c79fe477dd809
+ms.sourcegitcommit: c73373e6f2f28f8ddc197695e4b4e3488c9c1f5b
+ms.openlocfilehash: 0808edbb9a0433dd658d37e8d005c89a4778735c
+ms.lasthandoff: 02/17/2017
 
 
 ---
@@ -66,7 +67,13 @@ ms.openlocfilehash: bc79cd157003cc7dcb63f925293c79fe477dd809
      还必须使用知识库文章 [2645225](http://go.microsoft.com/fwlink/p/?LinkId=237322) 中所述的修补程序来更新 App-V 4.6 SP1 客户端，才能成功部署虚拟应用程序。  
 
 -   **App-V 5、App-V 5.0 SP1、App-V 5.0 SP2、App-V 5.0 SP3 和 App-V 5.1**：对于 App-V 5.0 SP2，必须安装[修补程序包 5](https://support.microsoft.com/en-us/kb/2963211) 或使用 App-V 5.0 SP3。  
--   **App-V 5.2**：这内置于 Windows 10 （周年更新和更高版本）中。
+-   **App-V 5.2**：这内置于 Windows 10 企业版（周年更新及更高版本）中。
+
+有关 Windows 10 的 App-V 的详细信息，请参阅下列主题：
+
+- [App-V 中的新增功能](https://technet.microsoft.com/itpro/windows/manage/appv-about-appv)
+- [适用于 Windows 10 的 App-V 入门](https://technet.microsoft.com/itpro/windows/manage/appv-getting-started)
+- [Upgrading to App-V for Windows 10 from an existing installation](https://technet.microsoft.com/itpro/windows/manage/appv-upgrading-to-app-v-for-windows-10-from-an-existing-installation)（从现有安装产品升级为适用于 Windows 10 的 APP-V）
 
 ##  <a name="steps-to-manage-app-v-virtual-applications"></a>管理 APP-V 虚拟应用程序的步骤  
  要管理 App-V 虚拟应用程序，请按照以下步骤操作：  
@@ -119,7 +126,7 @@ Configuration Manager 支持以下两种方法来向客户端传递虚拟应用�
 |在首次部署虚拟应用程序之后，Configuration Manager 将在客户端上开始管理虚拟应用程序。 此后，Configuration Manager 必须管理计算机上的所有 App-V 应用程序。|无更多信息。|  
 |将内容分发到合适的分发点以启用应用程序本地传递。|请参阅[管理内容和内容基础结构](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。|  
 |将应用程序部署到 Configuration Manager 客户端。<br /><br /> 如果使用不创建清单 XML 文件的 Sequencer 的早期版本创建了 App-V 应用程序，则可以在较新版本的 Sequencer 中打开和保存此应用程序以创建文件。 使用 Configuration Manager 部署虚拟应用程序需要此文件。<br /><br /> App-V 支持使用 Sequencer 的 SoftGrid 4.1 SP1 或 4.2 版本创建的虚拟应用程序包。<br /><br /> 如果以前在本地安装了应用程序，则在部署应用程序虚拟版本之前必须卸载它们。|请参阅[部署应用程序](../../apps/deploy-use/deploy-applications.md)。|  
-|System Center Configuration Manager 不再支持使用包含虚拟应用程序的包和程序。 从 Configuration Manager 2007 迁移到 System Center Configuration Manager 时，Configuration Manager 会将这些包转换为应用程序。<br /><br /> Configuration Manager 2007 播发将转换为以下部署类型：<br /><br /> - 迁移无播发的 App-V 包：使用默认部署类型设置的一个部署类型。<br /><br /> - 迁移具有一个播发的 App-V 包：使用与 Configuration Manager 2007 播发相同的设置的 <br />                一个部署类型。<br /><br /> - 迁移具有多个播发的 App-V 包：每个 <br />                Configuration Manager 2007 播发一个部署类型，该类型使用对应播发的设置。|请参阅[规划将 Configuration Manager 对象迁移到 System Center Configuration Manager](../../core/migration/planning-for-the-migration-of-objects.md)。|  
+|System Center Configuration Manager 不再支持使用包含虚拟应用程序的包和程序。 从 Configuration Manager 2007 迁移到 System Center Configuration Manager 时，Configuration Manager 会将这些包转换为应用程序。<br /><br /> Configuration Manager 2007 播发将转换为以下部署类型：<br /><br /> - 迁移无播发的 App-V 包：使用默认部署类型设置的一个部署类型。<br /><br /> - 迁移具有一个播发的 App-V 包：使用与 Configuration Manager&2007; 播发相同的设置的 <br />                一个部署类型。<br /><br /> - 迁移具有多个播发的 App-V 包：每个 <br />                Configuration Manager 2007 播发一个部署类型，该类型使用对应播发的设置。|请参阅[规划将 Configuration Manager 对象迁移到 System Center Configuration Manager](../../core/migration/planning-for-the-migration-of-objects.md)。|  
 
 ##  <a name="migrating-app-v-5-connection-groups-to-configuration-manager-virtual-environments"></a>将 App-V 5 连接组迁移到 Configuration Manager 虚拟环境  
 Configuration Manager 中的 App-V 虚拟环境允许所部署的虚拟应用程序在客户端计算机上共享相同的文件系统和注册表。 这意味着这些应用程序可以互相共享数据（这与标准的虚拟应用程序不同）。 在安装应用程序时，或者在客户端接下来评估已安装的应用程序时，会在客户端计算机上创建或更改虚拟环境。 虚拟环境类似于独立 APP-V 5 中的连接组。  
@@ -206,9 +213,4 @@ Configuration Manager 支持 App-V 5 共享内容存储功能。 有关详细信
 Configuration Manager 会在日志文件中记录有关虚拟应用程序部署的信息。 有关虚拟应用程序和 Configuration Manager 应用程序管理所使用的日志文件的信息，请参阅 [System Center Configuration Manager 中的日志文件](../../core/plan-design/hierarchy/log-files.md)。  
 
 对于 Windows Vista、Windows 7 和 Windows 8，可以在 C:\ProgramData\Microsoft\Application Virtualization Client 中查找 App-V 客户端的日志。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

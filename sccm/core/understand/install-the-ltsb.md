@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0c084e9f630a96c7b22c3dbdd72e18ad4a86926d
-ms.openlocfilehash: 9631b5622fec19e0248eb919bc8bd876152f66d7
+ms.sourcegitcommit: 1a3460143628ef297c99c364ded7ebea86d270dd
+ms.openlocfilehash: c266bb753ea69785b674508647c3857b2218cb77
+ms.lasthandoff: 02/18/2017
 
 
 ---
@@ -29,7 +30,7 @@ ms.openlocfilehash: 9631b5622fec19e0248eb919bc8bd876152f66d7
 
 如果使用 1606 版基线介质，安装（或升级到）的站点为：
 - Current Branch 站点，等效于先使用 1511 版基线介质安装，然后再更新为 1606 版和 1606 修补程序汇总 (KB3186654) 的站点。
--   LTSB 站点，等效于运行 1606 版和 1606 修补程序汇总 (KB3186654) 的 Current Branch 站点。 基线介质已包括修补程序汇总。  但是，LTSB 不支持 Current Branch 中可用的所有功能，如 [System Center Configuration Manager 的 Long-Term Servicing Branch 简介](introduction-to-the-ltsb.md)中所述。
+-    LTSB 站点，等效于运行 1606 版和 1606 修补程序汇总 (KB3186654) 的 Current Branch 站点。 基线介质已包括修补程序汇总。  但是，LTSB 不支持 Current Branch 中可用的所有功能，如 [System Center Configuration Manager 的 Long-Term Servicing Branch 简介](introduction-to-the-ltsb.md)中所述。
 
 如果不熟悉 System Center Configuration Manager 的不同分支，请参阅[应使用 Configuration Manager 的哪一个分支](which-branch-should-i-use.md)。
 
@@ -70,7 +71,7 @@ ms.openlocfilehash: 9631b5622fec19e0248eb919bc8bd876152f66d7
 使用无人参与的脚本安装许可的分支时，必须向脚本的“选项”部分添加以下部分、密钥名称和值。 不需要使用这些值来编写 Current Branch 评估版的安装的脚本：  
 
  **SABranchOptions**
--   **密钥名称：SSActive**
+-     **密钥名称：SAActive**
   - 值：0 或 1。  
   - 详细信息：0 表示安装 Current Branch 的未经许可的评估版，1 表示安装许可的版本。   
 
@@ -81,7 +82,7 @@ ms.openlocfilehash: 9631b5622fec19e0248eb919bc8bd876152f66d7
 例如，若要安装许可的 Current Branch.版本，请使用：
 
   **密钥名称：SABranchOptions**
-   -    **SSActive = 1**
+   -    **SAActive = 1**
    - ** = 1**
 
 
@@ -97,7 +98,7 @@ ms.openlocfilehash: 9631b5622fec19e0248eb919bc8bd876152f66d7
 使用 1606 基线介质安装任一分支的新站点时，请使用[安装 System Center Configuration Manager 站点](/sccm/core/servers/deploy/install/installing-sites)主题中的站点规划、准备和安装过程，并考虑以下安装注意事项：
 
 - 在安装期间，必须选择想要安装的 Configuration Manager 分支，这样才能为软件保障协议指定详细信息。
--   新的脚本化安装。 有关详细信息，请参阅本文章前文中的“新的脚本化安装选项”。
+-    新的脚本化安装。 有关详细信息，请参阅本文章前文中的“新的脚本化安装选项”。
 
 ## <a name="expand-a-stand-alone-primary-site"></a>扩展独立主站点
 可以扩展运行 LTSB 的独立主站点。  此过程与安装 Current Branch 站点的过程并无二致，但需注意一点：
@@ -111,7 +112,7 @@ ms.openlocfilehash: 9631b5622fec19e0248eb919bc8bd876152f66d7
 
 **升级到 Current Branch：**
 - 在安装期间，必须选择 Current Branch，这样才能为软件保障协议指定详细信息。
--   新的脚本化安装。 有关详细信息，请参阅本文章前文中的“新的脚本化安装选项”。
+-     新的脚本化安装。 有关详细信息，请参阅本文章前文中的“新的脚本化安装选项”。
 
 **升级到 LTSB：**  
 - 升级前清单中要遵循的附加步骤。
@@ -147,9 +148,4 @@ CD.Latest 文件夹中的介质不受以下内容支持：
 若要在运行 LTSB 的站点上进行备份、恢复或运行站点维护，请使用 [System Center Configuration Manager 的备份和恢复](/sccm/protect/understand/backup-and-recovery)中的指南和步骤。  
 
 使用 LTSB 站点备份 CD.Latest 文件夹中的 Configuration Manager 安装程序。
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

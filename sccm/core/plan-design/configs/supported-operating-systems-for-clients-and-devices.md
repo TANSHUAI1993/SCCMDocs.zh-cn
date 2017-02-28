@@ -16,8 +16,9 @@ author: nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 4688b4b12a7afa5fcfdc0e42f984271d98f10316
-ms.openlocfilehash: d2d888edf51d46a2dd13ef6b7ed39c066179a088
+ms.sourcegitcommit: bdd7961d9126dc6f3c1ae1fec1842c862e8a7c6d
+ms.openlocfilehash: 12633a7b9f799ffc74e0ee657e091595ed7eaf67
+ms.lasthandoff: 02/22/2017
 
 ---
 # <a name="supported-operating-systems-for-clients-and-devices-for-system-center-configuration-manager"></a>System Center Configuration Manager 的客户端和设备支持的操作系统
@@ -34,13 +35,13 @@ ms.openlocfilehash: d2d888edf51d46a2dd13ef6b7ed39c066179a088
 -   不支持在根以外的其他帐户下的计算机上安装或运行适用于 Linux 或 UNIX 的 Configuration Manager 客户端，或适用于 Mac 的客户端。 这样做可能会阻止关键服务正常运行。  
 
 ##  <a name="windows-computers"></a>Windows 计算机  
- 可以使用 Configuration Manager 包括的 Configuration Manager 客户端管理 Windows 计算机。 有关详细信息，请参阅[如何在 System Center Configuration Manager 中向 Windows 计算机部署客户端](../../../core/clients/deploy/deploy-clients-to-windows-computers.md)。  
+ 可以使用包括在 Configuration Manager 中的 Configuration Manager 客户端，管理以下 Windows 操作系统。 有关详细信息，请参阅[如何在 System Center Configuration Manager 中向 Windows 计算机部署客户端](../../../core/clients/deploy/deploy-clients-to-windows-computers.md)。  
 
 **支持的操作系统：**  
 
+
 -  **Windows Server 2016**：标准版、数据中心版 <sup>1</sup>
   - 从 Configuration Manager 版本 1606（或 2016 年 10 月发布的 1606 基准版本）开始，支持该操作系统，并提供 KB3186654 中的修补程序汇总。  
-
 
 -   **Windows Server 2012 R2** (x64)：标准版、数据中心版 <sup>1</sup>    
 
@@ -56,9 +57,8 @@ ms.openlocfilehash: d2d888edf51d46a2dd13ef6b7ed39c066179a088
 
 -   **Windows Server 2008 SP2**（x86、x64）：标准版、企业版、数据中心版 <sup>1</sup>    
 
--   **Windows 10 企业版 LTSB**（x86、x64）<sup>3</sup>    
-
--   **Windows 10**（x86、x64）：专业版、企业版    
+-   **Windows 10**：专业版、企业版  
+   有关不同 Configuration Manager 版本支持的不同 Windows 10 发布版本的相关详细信息，请参阅[对 Windows 10 各版本的支持](/sccm/core/plan-design/configs/support-for-windows-10)。
 
 -   **Windows 8.1**（x86、x64）：专业版、企业版    
 
@@ -83,7 +83,6 @@ ms.openlocfilehash: d2d888edf51d46a2dd13ef6b7ed39c066179a088
 
  <sup>2</sup> 若要支持客户端请求安装，运行此操作系统版本的计算机必须运行文件的文件服务器角色服务和存储服务服务器角色。 有关在 Server Core 计算机上安装 Windows 功能的详细信息，请参阅 Windows Server 2012 TechNet 库中的[在 Server Core 服务器上安装服务器角色和功能](http://go.microsoft.com/fwlink/p/?LinkId=299359)。  
 
- <sup>3</sup> 使用此操作系统要求 Configuration Manager 1602 版或更高版本。  
 
 ##  <a name="windows-embedded-computers"></a>Windows Embedded 计算机  
  可以通过在设备上安装 Configuration Manager 客户端软件管理 Windows Embedded 设备。  有关详细信息，请参阅[在 System Center Configuration Manager 中规划对 Windows Embedded 设备的客户端部署](../../../core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md)。  
@@ -349,9 +348,4 @@ Configuration Manager 支持连接到 Exchange Server 的设备的有限管理�
 -   **Exchange Server 2013**  
 
 -   **Exchange Online (Office 365)**：这包括 Business Productivity Online Standard Suite  
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

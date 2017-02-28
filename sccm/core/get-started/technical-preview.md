@@ -2,7 +2,7 @@
 title: System Center Configuration Manager Technical Preview | Microsoft Docs
 description: "了解可让你试用 System Center Configuration Manager 中的新功能和新特性的 Technical Preview 版本。"
 ms.custom: na
-ms.date: 1/20/2017
+ms.date: 2/1/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 916c39133ec3796b9cff97c3c3bdb49dcbb6d7e7
-ms.openlocfilehash: defff3d720363cfb066b120e2b8f58d643a87699
+ms.sourcegitcommit: 4b1daa727477b1273cdbee1bc7e3ac8af5911ff0
+ms.openlocfilehash: 4703178c5ce3e23cb9d2e4557466fcec571c2983
+ms.lasthandoff: 02/22/2017
 
 
 ---
@@ -29,7 +30,7 @@ ms.openlocfilehash: defff3d720363cfb066b120e2b8f58d643a87699
 
  由于这是技术预览版，因此详细信息和功能可能有所更改。  
 
- 本主题包含适用于所有的技术预览版本的信息，并且列出了每个新功能及功能首次在其中出现的技术预览版本，例如，版本 1512 表示 2015 年 12 月。 这些功能的详细信息将专门在各预览版本的单独主题中详细介绍。  
+ 本主题包含适用于所有的技术预览版本的信息，并且列出了每个新功能及功能首次在其中出现的技术预览版本，例如，版本 1701 表示 2017 年 1 月。 这些功能的详细信息将专门在各预览版本的单独主题中详细介绍。  
 
  有关 Configuration Manager 的 Current Branch 中新增功能的信息，请参阅 [System Center Configuration Manager 中的新增功能](/sccm/core/plan-design/changes/what-has-changed-from-configuration-manager-2012)。
 
@@ -37,7 +38,7 @@ ms.openlocfilehash: defff3d720363cfb066b120e2b8f58d643a87699
 
 ##  <a name="a-namebkmkreqsa-requirements-and-limitations-for-the-technical-preview"></a><a name="bkmk_reqs"></a> Technical Preview 的要求和限制  
 
-> [!IMPORTANT]  
+> [!IMPORTANT]     
 >  Technical Preview 仅授权用于实验室环境。  Microsoft 可能无法提供支持服务，预览软件中某些功能可能不可用。 此外，相对于面向市场提供的软件，预览版软件可能采用简化的或不同的安全性、隐私性、可访问性、可用性和可靠性标准。  
 
  有关大多数产品先决条件，请使用 [System Center Configuration Manager 支持的配置](../../core/plan-design/configs/supported-configurations.md)中的信息。 以下是适用于技术预览版本的例外情况：  
@@ -50,24 +51,22 @@ ms.openlocfilehash: defff3d720363cfb066b120e2b8f58d643a87699
 
 -   仅支持以下 SQL Server 版本：  
 
-    -   带累积更新 2 的 SQL Server 2012 或更高版本  
+    -   SQL Server 2016（不带 Service Pack）及更高版本
+    -   SQL Server 2014（不带 Service Pack）及更高版本
+    -   SQL Server 2012（带 Service Pack 2）或更高版本
 
-    -   SQL Server 2014  
 
 -   站点最多支持 10 个客户端，这些客户端必须在以下操作系统之一上运行：  
 
-    -   Windows 7  
+      -   Windows 10  
+      -   Windows 8.1  
+      -   Windows 8  
+      -   Windows 7  
 
-    -   Windows 8  
-
-    -   Windows 8.1  
-
-    -   Windows 10  
 
 -   仅支持以下安装标志（开关）：  
 
     -   **/Silent**  
-
     -   **/testdbupgrade**  
 
 -   Technical Preview 的每个特定版本的详细信息中会随附其他限制或要求（如果适用）  
@@ -81,7 +80,9 @@ ms.openlocfilehash: defff3d720363cfb066b120e2b8f58d643a87699
 ##  <a name="a-namebkmkinstalla-install-and-update-the-technical-preview"></a><a name="bkmk_install"></a> 安装并更新技术预览版  
  System Center Configuration Manager Technical Preview 与 System Center Configuration Manager 的当前版本是不同的。  
 
- 若要使用技术预览版，必须先安装技术预览版内部版本的 **基线版本** 。 安装基线版本之后，可使用 **控制台内部更新** 来升级此内部版本，以便使用最新预览版使你的安装程序保持最新。     通常，每个月都会提供新版本的 Technical Preview。  
+ 若要使用技术预览版，必须先安装技术预览版内部版本的 **基线版本** 。 安装基线版本之后，可使用 **控制台内部更新** 来升级此内部版本，以便使用最新预览版使你的安装程序保持最新。     通常，每个月都会提供新版本的 Technical Preview。
+
+每个预览版的支持时间在发布三个后续版本后结束。 也就是说，发布 1702 版时，将不再支持 1610 版，但是仍支持 1611、1612 和 1701 版。 但如果不再支持上一个基线版本（如 1610 版），仍然支持安装新的 Technical Preview 站点，只要之后将该安装产品更新为受支持的版本即可。
 
 > [!TIP]  
 >  当你将更新安装到技术预览版时，即可将预览安装更新到此新的技术预览版。    技术预览版安装绝不会升级到当前的分支安装，也不会从当前分支版本获取更新。  
@@ -91,13 +92,7 @@ ms.openlocfilehash: defff3d720363cfb066b120e2b8f58d643a87699
 
 -   **Technical Preview 1610** - Configuration Manager Technical Preview 1610 可作为 Configuration Manager Technical Preview 的控制台中更新，以及作为 [TechNet 评估中心](https://www.microsoft.com/en-us/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview)网站中提供的新基线版本。
 
--   **Technical Preview 1603** 作为 **System Center Technical Preview 5** 的一部分 - Configuration Manager Technical Preview 1603 可作为 Configuration Manager Technical Preview 的控制台中更新，以及作为随 System Center Technical Preview 5 附带的新基线版本提供。    只有随 System Center Technical Preview 5 附带的版本才能用于基线安装。  
 
-     关于[来自 System Center Technical Preview 5 的 Configuration Manager Technical Preview](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview) 的基线版本：  
-
-    -   安装程序和 Configuration Manager 控制台列出的版本均为 System Center Configuration Manager Technical Preview 1603。  
-
-    -   此基线版本的作用与 Configuration Manager Technical Preview 1603 一样（包括对控制台中更新的支持）。  
 
 
 ##  <a name="a-namebkmktpfeedbacka-providing-feedback"></a><a name="BKMK_TPFeedback"></a> 提供反馈  
@@ -105,26 +100,7 @@ ms.openlocfilehash: defff3d720363cfb066b120e2b8f58d643a87699
 
  此外，如果你对于想要看到的新功能有任何想法，也请让我们知道。 若要提交新的想法，并为他人提交的想法投票，请 [访问我们的用户之声页面](http://configurationmanager.uservoice.com)。  
 
-##  <a name="a-namebdmktpknownissuesa-general-changes-introduced-in-technical-previews"></a><a name="bdmk_tpknownissues"></a> 技术预览版中引入的一般性更改  
-
--   **Technical Preview 1603：**  
-
-    -   从 Technical Preview 1603 开始，可以配置软件更新部署，以便让客户端在客户端安装软件更新并重新启动之后立即运行软件更新符合性扫描。 这使客户端可以检查在客户端重新启动之后成为适用状态的其他软件更新，以及随后在相同维护时段期间安装它们（并成为符合状态）。  
-
-         若要为部署配置这一项，请在部署软件更新向导的“用户体验”页上，选择选项“如果此部署中的任何更新需要重新启动系统，则在重新启动之后运行更新部署评估周期”。  
-
-    -   从 Technical Preview 1603 开始，SMSTSRebootDelay 任务序列变量的行为已更改。 SMSTSRebootDelay 变量指定在计算机重新启动之前要等待多少秒。 如果此变量没有设置为 0，则任务序列管理器将在重新启动之前显示通知对话框。  
-        为此变量配置值时，该值会一直保持到配置新值。 所有后续计算机重新启动的延迟都具有相同值。 在 Configuration Manager 版本 1602 及更早版本中，该变量会在计算机重启之后重置为默认值（30 秒）。   有关详细信息，请参阅 [Task sequence built-in variables in System Center Configuration Manager](../../osd/understand/task-sequence-built-in-variables.md)。
-
--   “Technical Preview 1602” ：从 Technical Preview 1602 开始，你可以将运行 Windows 2008 Server R2 的站点系统服务器的操作系统就地升级为 Windows 2012 Server R2。  使用 Windows Server 2012 R2 升级过程时，在升级后不需要运行 Configuration Manager 站点服务器还原。  有关升级过程，请参阅 [Windows Server 2012 R2 的升级选项](https://technet.microsoft.com/library/dn303416.aspx)。  
-
-    > [!WARNING]  
-    >  升级到 Windows Server 2012 R2 之前， **必须从服务器中卸载 WSUS 3.2** 。  
-    >   
-    >  有关此关键步骤的信息，请参阅 Windows Server 文档中 [Windows Server 更新服务概述](https://technet.microsoft.com/library/hh852345.aspx) 中的“新增和更改的功能”部分。  
-
--   “Technical Preview 1601” ：默认情况下，在安装时，服务连接点设置为联机模式，且不支持更改为脱机模式。  
-
+<!--   ##  <a name="bdmk_tpknownissues"></a> General changes introduced in Technical Previews    -->
 
 
 
@@ -212,26 +188,12 @@ ms.openlocfilehash: defff3d720363cfb066b120e2b8f58d643a87699
  |对软件中心的改进|[Tech Preview 1603](capabilities-in-technical-preview-1603.md#BKMK_SC1603)|[版本 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#application-management)|  
  |对远程控制的改进|[Tech Preview 1603](capabilities-in-technical-preview-1603.md#BKMK_RC1603)|[版本 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#remote-control)|  
  |在启用 PXE 的分发点上自定义 RamDisk TFTP 块大小和窗口大小|[Tech Preview 1603](capabilities-in-technical-preview-1603.md#BKMK_RamDiskTFTP)|[版本 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#operating-system-deployment)|  
- |对移动设备管理的改进|[Tech Preview 1602](capabilities-in-technical-preview-1602.md#BKMK_MDM)|[版本 1602](/sccm/mdm/deploy-use/manage-ios-activation-lock) |  
- |版本 1602 中对软件中心的改进|[Tech Preview 1602](capabilities-in-technical-preview-1602.md#BKMK_SC1601)| [版本 1602](/sccm/core/plan-design/changes/whats-new-in-version-1602#client-management)|  
- |对 Windows 10 维护服务的改进|[Tech Preview 1602](capabilities-in-technical-preview-1602.md#BKMK_Win10Servicing)|[版本 1602](/sccm/core/plan-design/changes/whats-new-in-version-1602#operating-system-deployment) |  
- |对 Microsoft Intune 集成的改进|[Tech Preview 1601](capabilities-in-technical-preview-1601.md#bkmk_hybrid1)|[版本 1602](/sccm/core/plan-design/changes/whats-new-in-version-1602#conditional-access)|  
- |客户端联机状态|[Tech Preview 1601](capabilities-in-technical-preview-1601.md#bkmk_clientStatus)|[版本 1602](/sccm/core/clients/manage/monitor-clients)|
- |对应用程序管理的改进|[Tech Preview 1601](capabilities-in-technical-preview-1601.md#bkmk_appmgmt1601)|[版本 1602](/sccm/core/plan-design/changes/whats-new-in-version-1602#application-management)|  
- |对合规性设置的改进|[Tech Preview 1601](capabilities-in-technical-preview-1601.md#bkmk_compliance1601)|[版本 1602](/sccm/core/plan-design/changes/whats-new-in-version-1602#compliance-settings)|  
- |设备运行状况证明|[Tech Preview 1512](capabilities-in-technical-preview-1512.md#bkmk_devicehealth)|[版本 1602](/sccm/core/servers/manage/health-attestation))|
- |条款和条件的控制台中监视|[Tech Preview 1512](capabilities-in-technical-preview-1512.md#bkmk_viewterms)|[版本 1602](/sccm/mdm/deploy-use/terms-and-conditions)|  
- |Endpoint Protection 策略设置的改进|[Tech Preview 1512](capabilities-in-technical-preview-1512.md#bkmk_EPpolicy)|[版本 1602](/sccm/protect/deploy-use/endpoint-antimalware-policies)|  
- |在 Windows 10 中与 Windows Update for Business 集成|[Tech Preview 1511](capabilities-in-technical-preview-1511.md#BKMK_WUfB)|[版本 1602](/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10)|  
- |通过 System Center Configuration Manager 管理 Office 365 ProPlus 客户端更新|[Tech Preview 1511](capabilities-in-technical-preview-1511.md#BKMK_Office365ProPlus)|[版本 1602](/sccm/sum/deploy-use/manage-office-365-proplus-updates)|  
- |支持 SQL Server AlwaysOn，实现数据库的高度可用性|[Tech Preview 1511](capabilities-in-technical-preview-1511.md#BKMK_AlwasyOn)|[版本 1602](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database)|  
- |为服务器群集提供服务|[Tech Preview 1511](capabilities-in-technical-preview-1511.md#BKMK_ClusterServerUpdates)|[版本 1606](/sccm/sum/deploy-use/service-a-server-group)|  
+
+
+ 当 Current Branch 的最低支持版本提供 technical preview 版本的所有功能时，将从此表删除该预览版本的详细信息。
+
+
 ## <a name="see-also"></a>另请参阅  
 [System Center Configuration Manager 中的新增功能](/sccm/core/plan-design/changes/whats-new-incremental-versions)  
  [System Center Configuration Manager 简介](../../core/understand/introduction.md)
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

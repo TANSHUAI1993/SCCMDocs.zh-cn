@@ -17,8 +17,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
-ms.openlocfilehash: 3b7125e782b60853e750aeb7ba923490e46a76b0
+ms.sourcegitcommit: 4edf7d09d39fa22fb5812aecc88febd763001eba
+ms.openlocfilehash: 369aa062d0f38eedebc0a7c351a7ce67b53d199b
+ms.lasthandoff: 02/21/2017
 
 
 ---
@@ -29,9 +30,9 @@ ms.openlocfilehash: 3b7125e782b60853e750aeb7ba923490e46a76b0
 Configuration Manager 中的一个启动映像是在操作系统部署过程中使用的 [Windows PE (WinPE)](https://msdn.microsoft.com/library/windows/hardware/dn938389%28v=vs.85%29.aspx) 映像。 启动映像用于在 WinPE 中启动计算机，它是用于准备在目标计算机上安装 Windows 的有限组件和服务的最精简操作系统。  使用下列部分来管理启动映像。
 
 ##  <a name="a-namebkmkbootimagedefaulta-default-boot-images"></a><a name="BKMK_BootImageDefault"></a>默认启动映像  
- Configuration Manager 提供两个默认启动映像：一个用于支持 x86 平台，另一个用于支持 x64 平台。 这些映像存储在以下路径中：\\\\*servername*>\SMS_<*sitecode*>\osd\boot\\<*x64 or i386*。  
+ Configuration Manager 提供两个默认启动映像：一个用于支持 x86 平台，另一个用于支持 x64 平台。 这些映像存储在以下路径中：\\\\*servername*>\SMS_<*sitecode*>\osd\boot\\<*x64*> or <*i386*>。  
 
- 将 Configuration Manager 升级到新版本时，Configuration Manager 可能会将此位置中的默认启动映像以及基于默认启动映像的自定义启动映像替换为更新的文件。 更新启动映像（包括驱动程序）时，在站点上对默认启动映像配置的选项（如可选组件）会转入。 源驱动程序对象必须有效（包括驱动程序源文件），否则驱动程序不会添加到站点上的已更新启动映像。 不基于默认启动映像的其他启动映像（即使基于相同的 Windows ADK 版本）不会更新。 更新启动映像之后，需要将它们重新分发到分发点。 使用启动映像的任何媒体都需要重新创建。 如果不希望自动更新自定义默认启动映像，则应将它们存储在不同位置。  
+ 将 Configuration Manager 升级到新版本时，Configuration Manager 可能会将此位置中的默认启动映像以及基于默认启动映像的自定义启动映像替换为更新的文件。 更新启动映像（包括驱动程序）时，在站点上对默认启动映像配置的选项（如可选组件）会转入。 源驱动程序对象必须有效（包括驱动程序源文件），否则驱动程序不会添加到站点上的已更新启动映像。 不基于默认启动映像的其他启动映像（即使基于相同的 Windows ADK 版本）不会更新。 更新启动映像之后，需要将它们重新分发到分发点。 使用启动映像的任何媒体都需要重新创建。 如果不希望自动更新自定义/默认启动映像，则应将它们存储在不同位置。  
 
  向已添加到“软件库”的所有启动映像中添加了 Configuration Manager 跟踪日志工具。 处于 WinPE 中时，可以通过从命令提示符键入 **CMTrace** 以启动 Configuration Manager 跟踪日志工具。  
 
@@ -248,9 +249,4 @@ Configuration Manager 中的一个启动映像是在操作系统部署过程中�
 1.  在更新启动映像之前，验证合适的任务序列资源文件 (tsres.dll) 是否位于站点服务器上的相应语言文件夹中。 例如，英语资源文件位于以下位置：<*ConfigMgrInstallationFolder*>\OSD\bin\x64\00000409\tsres.dll。  
 
 2.  将作为预启动命令一部分的 SMSTSLanguageFolder 环境变量设置为合适的语言 ID。 必须使用十进制而不是十六进制来指定语言 ID。 例如，若要将语言 ID 设置为英语，则应为文件夹名称指定十进制值 1033 而不是十六进制值 00000409。  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 
