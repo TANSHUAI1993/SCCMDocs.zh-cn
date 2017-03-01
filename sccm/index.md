@@ -15,8 +15,9 @@ ms.suite: ems
 ms.assetid: a89ecd55-fe24-4f40-86c4-8a91dd683a1c
 toc_rel: /sccm/toc.json
 translationtype: Human Translation
-ms.sourcegitcommit: a10fb140adfc1109a49760d601b5fca3d93d4b39
-ms.openlocfilehash: 690b516b6be4380b566649adacfafcc8f920373c
+ms.sourcegitcommit: fd507d0e034eb8ba97181b8e0491d0b1108a7dbe
+ms.openlocfilehash: 8987d5b00eb3c7fccfb0f9186169871d02da6a04
+ms.lasthandoff: 02/28/2017
 
 ---
 # <a name="system-center-configuration-manager-documentation"></a>System Center Configuration Manager 文档
@@ -30,11 +31,11 @@ ms.openlocfilehash: 690b516b6be4380b566649adacfafcc8f920373c
     </section>
 
     <section id="featured" class="container">
-      <h2 class="section-heading"><span class="icon icon-warning"></span> 特色内容</h2>
+      <h2 class="section-heading"><span class="icon icon-warning"></span>特色内容</h2>
       <div class="features row">
         <ul class="column column-half">
           <li><a href="/sccm/core/understand/introduction">Configuration Manager 简介</a></li>
-          <li><a href="/sccm/core/get-started/evaluate-with-lab-environment">通过构建你自己的实验室环境来评估 System Center Configuration Manager</a></li>
+          <li><a href="/sccm/core/get-started/evaluate-with-lab-environment">通过构建自己的实验室环境来评估 System Center Configuration Manager</a></li>
           <li><a href="/sccm/core/plan-design/changes/whats-new-in-version-1610">System Center Configuration Manager 版本 1610 的新增功能</a></li>
         </ul>
         <ul class="column column-half">
@@ -351,9 +352,4 @@ ms.openlocfilehash: 690b516b6be4380b566649adacfafcc8f920373c
       </ol>
     </aside>
 </article>
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

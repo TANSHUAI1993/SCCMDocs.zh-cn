@@ -90,7 +90,7 @@
 ###  [设置实验室](get-started/set-up-your-lab.md)
 
 ##   [技术预览](get-started/technical-preview.md)
-<!-- ###  [Capabilities in 1702](get-started/capabilities-in-technical-preview-1702.md) -->
+###  [1702 中的功能](get-started/capabilities-in-technical-preview-1702.md)
 ###  [1701 中的功能](get-started/capabilities-in-technical-preview-1701.md)
 ###  [1612 中的功能](get-started/capabilities-in-technical-preview-1612.md)
 ###  [1611 中的功能](get-started/capabilities-in-technical-preview-1611.md)
@@ -305,8 +305,3 @@
 ###  [升级 Linux 和 UNIX 客户端](clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md)
 ###  [升级 Mac 客户端](clients/manage/upgrade/upgrade-clients-on-mac-computers.md)
 ###  [升级分析](clients/manage/upgrade/upgrade-analytics.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-
