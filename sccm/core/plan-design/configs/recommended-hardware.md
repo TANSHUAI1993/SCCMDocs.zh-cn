@@ -2,7 +2,7 @@
 title: "推荐的硬件 | Microsoft Docs"
 description: "获取硬件建议，有助于在基本部署以上扩展 System Center Configuration Manager 环境。"
 ms.custom: na
-ms.date: 12/30/2016
+ms.date: 2/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: d61c726d9690a1ec512b8dbab74b0f760012c880
-ms.openlocfilehash: 7caee70c327d84f1e016c689f824d843ccdb3b42
+ms.sourcegitcommit: 63ee782a718cf4a66ffe25b022aa317f3e45784c
+ms.openlocfilehash: 6701d5f21e8511ec9cf4fe7bc5804b3e2fdc4c71
+ms.lasthandoff: 02/28/2017
 
 
 ---
@@ -49,12 +50,12 @@ ms.openlocfilehash: 7caee70c327d84f1e016c689f824d843ccdb3b42
 |数据库站点角色在同一服务器上的独立主站点服务器<sup>1</sup>|16|96|80|  
 |具有远程站点数据库的独立主站点服务器|8|16|-|  
 |独立主站点的远程数据库服务器|16|64|90|  
-|数据库站点角色在同一服务器上的管理中心站点服务器<sup>1</sup>|16|96|80|  
+|数据库站点角色在同一服务器上的管理中心站点服务器<sup>1</sup>|20|128|80|  
 |具有远程站点数据库的管理中心站点服务器|8|16|-|  
 |管理中心站点的远程数据库服务器|16|96|90|  
 |数据库站点角色在同一服务器上的子主站点|16|96|80|  
 |具有远程站点数据库的子主站点服务器|8|16|-|  
-|子主站点的远程数据库服务器|16|64|90|  
+|子主站点的远程数据库服务器|16|72|90|  
 |辅助站点服务器|8|16|-|  
 
  <sup>1</sup>在同一台计算机上安装站点服务器和 SQL Server 时，部署对站点和客户端支持[调整大小和缩放数量](/sccm/core/plan-design/configs/size-and-scale-numbers)的最大值。 但是，此配置可以限制 [System Center Configuration Manager 的高可用性选项](/sccm/protect/understand/high-availability-options)，像使用 SQL Server 群集那样。 此外，由于支持 SQL Server 和 Configuration Manager 站点服务器所需的 I/O 要求较高，因此在同一台计算机上运行二者时，如果部署较大，最好考虑将配置用于远程 SQL Server 计算机。  
@@ -184,9 +185,4 @@ ms.openlocfilehash: 7caee70c327d84f1e016c689f824d843ccdb3b42
 |站点和数据库服务器|2 - 4|7 - 12|100|  
 |站点系统服务器|1 - 4|2 - 4|50|  
 |客户端|1 - 2|1 - 3|30|  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 
