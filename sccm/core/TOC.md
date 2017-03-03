@@ -304,4 +304,4 @@
 ###  [升级 Windows 客户端](clients/manage/upgrade/upgrade-clients-for-windows-computers.md)
 ###  [升级 Linux 和 UNIX 客户端](clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md)
 ###  [升级 Mac 客户端](clients/manage/upgrade/upgrade-clients-on-mac-computers.md)
-###  [升级分析](clients/manage/upgrade/upgrade-analytics.md)
+###  [升级准备情况](clients/manage/upgrade/upgrade-analytics.md)
