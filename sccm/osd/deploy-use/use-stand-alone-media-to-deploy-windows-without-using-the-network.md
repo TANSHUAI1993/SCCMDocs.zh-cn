@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
 ms.openlocfilehash: 30ae794381c6894e11b21a8167d0af60463c5279
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -61,7 +62,7 @@ System Center Configuration Manager 中的独立媒体包含在计算机上部�
 >   
 >  `"WMI method SMS_TaskSequencePackage.GetClientConfigPolicies failed (0x80041001)"`
 >   
->  对于包含“安装包”步骤的独立媒体，必须在启用了软件分发代理的主站点上创建独立媒体，或者必须在任务序列中的[安装 Windows 和 ConfigMgr](../understand/task-sequence-steps.md#BKMK_RunCommandLine) 步骤之后和第一个“安装包”[](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr)步骤之前添加一个“运行命令行”步骤。 “运行命令行”  步骤运行 WMIC 命令，以便在第一个安装包步骤运行之前启用软件分发代理。 可以在“运行命令行”  任务序列步骤中使用以下命令：  
+>  对于包含 **安装包**步骤的独立媒体，必须在启用了软件分发代理的主站点上创建独立媒体，或者必须在任务序列中的 [安装 Windows 和 ConfigMgr](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) 步骤之后和第一个**安装包** 步骤之前添加一个[运行命令行](../understand/task-sequence-steps.md#BKMK_RunCommandLine) 步骤。 “运行命令行”  步骤运行 WMIC 命令，以便在第一个安装包步骤运行之前启用软件分发代理。 可以在“运行命令行”  任务序列步骤中使用以下命令：  
 >   
 >  **命令行**：**WMIC /namespace:\\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE**  
 
@@ -79,9 +80,4 @@ System Center Configuration Manager 中的独立媒体包含在计算机上部�
 
 ## <a name="install-the-operating-system-from-stand-alone-media"></a>从独立媒体安装操作系统  
  在计算机的可启动驱动器中插入独立媒体，然后再启动它以安装操作系统。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

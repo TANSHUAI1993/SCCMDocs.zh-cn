@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: c13c6268fa76ade7feb0981f9c4a6e325e393aca
 ms.openlocfilehash: f29d5834b82dd8888cff56fb0ad8024629f829ab
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -69,7 +70,7 @@ Lookout 支持人员创建企业帐户后，你可以登录到 Lookout 控制台
 
 如果遇到登录问题，请参阅[疑难解答文章]()。
 
-接下来的步骤概述了在“Lookout 控制台”[](https://aad.lookout.com)内完成 Lookout 设置必须执行的任务。
+接下来的步骤概述了在 [Lookout 控制台](https://aad.lookout.com) 内完成 Lookout 设置必须执行的任务。
 
 ### <a name="step-2-configure-the-intune-connector"></a>步骤 2：配置 Intune 连接器
 
@@ -90,7 +91,7 @@ Lookout 支持人员创建企业帐户后，你可以登录到 Lookout 控制台
 
 ![Intune 连接器注册页面的屏幕截图](../media/lookout-enrollment.png)
 
-最佳做法是使用时间增量的默认值（即 5 分钟）来检查新设备。
+最佳做法是使用时间增量的默认值（即&5; 分钟）来检查新设备。
 
 >[!IMPORTANT]
 > 显示名称区分大小写。  请使用“显示名称”，如 Azure 门户安全组的“属性”页所示。 注意在下面的图片中，安全组的“属性”页上的显示名称区分大小写。  标题全部显示为小写，不应将其用于进入 Lookout 控制台。
@@ -129,9 +130,4 @@ Lookout 设备威胁保护会对各种移动威胁进行分类。 [Lookout 威�
 设置完成后，Lookout 设备威胁保护会轮询对应于指定注册组的 Azure AD 设备。  可在设备模块上找到已注册设备的相关信息。  设备的初始状态显示为待定。  安装、打开并激活 Lookout for Work 应用后，设备状态将发生更改。  有关如何将 Lookout for Work 应用推送到设备的详细信息，请参阅[配置并部署 Lookout for Work 应用](configure-and-deploy-lookout-for-work-apps.md)主题。
 ## <a name="next-steps"></a>后续步骤
 [启用 Lookout MTP 连接 Intune](enable-lookout-connection-in-intune.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 
