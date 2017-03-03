@@ -19,6 +19,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
 ms.openlocfilehash: e9320e40b8e5031ffa3da5e5149c7da718cc87d5
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -170,11 +171,11 @@ ms.openlocfilehash: e9320e40b8e5031ffa3da5e5149c7da718cc87d5
 
 9. 仅当引用计算机上安装了 Configuration Manager 客户端时才使用此步骤。  
 
-     依次单击“添加”和“映像”，然后单击“准备 ConfigMgr 客户端以便捕获”[](../understand/task-sequence-steps.md#BKMK_PrepareConfigMgrClientforCapture)。 此任务序列步骤在引用计算机上获得 Configuration Manager 客户端，并且准备该客户端用于进行捕获（这是映像创建过程的一部分）。  
+     依次单击**添加**和**映像**，然后单击[准备 ConfigMgr 客户端以便捕获](../understand/task-sequence-steps.md#BKMK_PrepareConfigMgrClientforCapture)。 此任务序列步骤在引用计算机上获得 Configuration Manager 客户端，并且准备该客户端用于进行捕获（这是映像创建过程的一部分）。  
 
-10. 依次单击“添加”和“映像”，然后单击“准备 Windows 以便捕获”[](../understand/task-sequence-steps.md#BKMK_PrepareWindowsforCapture)。 此任务序列操作运行 Sysprep，然后将计算机重新启动到为该任务序列指定的 Windows PE 启动映像。 要使此操作成功完成，引用计算机不可加入域。  
+10. 依次单**添加**和**映像**，然后单击[准备 Windows 以便捕获](../understand/task-sequence-steps.md#BKMK_PrepareWindowsforCapture)。 此任务序列操作运行 Sysprep，然后将计算机重新启动到为该任务序列指定的 Windows PE 启动映像。 要使此操作成功完成，引用计算机不可加入域。  
 
-11. 依次单击“添加”和“映像”，然后单击“捕获操作系统映像”[](../understand/task-sequence-steps.md#BKMK_CaptureOperatingSystemImage)。  此任务序列步骤将仅从 Windows PE 运行，以捕获引用计算机上的硬盘驱动器。 对任务序列步骤配置下列设置。  
+11. 依次单击**添加**和**映像**，然后单击[捕获操作系统映像](../understand/task-sequence-steps.md#BKMK_CaptureOperatingSystemImage)。  此任务序列步骤将仅从 Windows PE 运行，以捕获引用计算机上的硬盘驱动器。 对任务序列步骤配置下列设置。  
 
     -   “名称” 和“描述” : Optionally, you can change the name of the task sequence step 和“描述” provide a description.  
 
@@ -232,9 +233,4 @@ ms.openlocfilehash: e9320e40b8e5031ffa3da5e5149c7da718cc87d5
 
 ## <a name="next-steps"></a>后续步骤  
 [部署企业版操作系统的方法](methods-to-deploy-enterprise-operating-systems.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 
