@@ -16,6 +16,7 @@ ms.assetid: b099a645-6434-498f-a408-1d438e394396
 translationtype: Human Translation
 ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
 ms.openlocfilehash: 1d9911274fd76942131054231cdcc2bcebbd3fcb
+ms.lasthandoff: 12/16/2016
 
 
 
@@ -95,7 +96,7 @@ ms.openlocfilehash: 1d9911274fd76942131054231cdcc2bcebbd3fcb
     > [!NOTE]  
     >  如果软件更新点与 Internet 之间存在防火墙，则可能需要将防火墙配置为接受用于 WSUS 网站的 HTTP 和 HTTPS 端口。 你也可以选择将防火墙上的访问权限局限于受限制的域。 有关如何规划支持软件更新的防火墙的详细信息，请参阅 [Configure firewalls](../plan-design/plan-for-software-updates.md#BKMK_ConfigureFirewalls)。  
 
--   **从上游数据源位置同步**：使用此设置以从上游同步源同步软件更新元数据。 系统会将子主站点和辅助站点自动配置为将父站点 URL 用于此设置。 你可以选择将从现有的 WSUS 服务器同步软件更新。 指定 URL，如 https://WSUSServer:8531，其中 8531 是用于连接到 WSUS 服务器的端口。  
+-   **从上游数据源位置同步**：使用此设置以从上游同步源同步软件更新元数据。 系统会将子主站点和辅助站点自动配置为将父站点 URL 用于此设置。 你可以选择将从现有的 WSUS 服务器同步软件更新。 指定 URL，如 https://WSUSServer:8531 ，其中 8531 是用于连接到 WSUS 服务器的端口。  
 
 -   “不要从 Microsoft 更新或上游数据源同步”：使用此设置以在顶层站点上的软件更新点从 Ineternet 断开连接时手动同步软件更新。 有关详细信息，请参阅[从断开连接的软件更新点中同步软件更新](synchronize-software-updates-disconnected.md)。  
 
@@ -151,9 +152,4 @@ ms.openlocfilehash: 1d9911274fd76942131054231cdcc2bcebbd3fcb
 在 Configuration Manager 层次结构中的顶层站点，开始安装软件更新点。 重复该主题中的步骤，在子级站点上安装软件更新点。
 
 安装软件更新点后，请转到[同步软件更新](synchronize-software-updates.md)。
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 
