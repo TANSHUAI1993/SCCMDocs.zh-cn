@@ -11,12 +11,9 @@
 # 部署和使用
 
 ## [创建应用程序](deploy-use/create-applications.md)
-### [创建 iOS 应用程序](get-started/creating-ios-applications.md)
 ### [创建 Mac 计算机应用程序](get-started/creating-mac-computer-applications.md)
 ### [创建 Windows 应用程序](get-started/creating-windows-applications.md)
-### [创建 Windows Phone 应用程序](get-started/creating-windows-phone-applications.md)
 ### [创建 Linux 和 UNIX 服务器应用程序](get-started/creating-linux-and-unix-server-applications.md)
-### [创建 Android 应用程序](get-started/creating-android-applications.md)
 ### [创建 Windows Embedded 应用程序](get-started/creating-windows-embedded-applications.md)
 ### [创建全局条件](deploy-use/create-global-conditions.md)
 ### [包和程序](deploy-use/packages-and-programs.md)
@@ -33,21 +30,10 @@
 ## 管理应用程序
 ### [管理任务](deploy-use/management-tasks-applications.md)
 ### [用户设备相关性](deploy-use/link-users-and-devices-with-user-device-affinity.md)
-### [iOS 应用配置策略](deploy-use/configure-ios-apps-with-app-configuration-policies.md)
-### [iOS 批量采购的应用](deploy-use/manage-volume-purchased-ios-apps.md)
 ### [适用于企业批量采购应用的 Windows 应用商店](deploy-use/manage-apps-from-the-windows-store-for-business.md)
 ### [App-V 虚拟环境](deploy-use/create-app-v-virtual-environments.md)
-
-## 保护应用
-### [移动应用程序管理策略](deploy-use/protect-apps-using-mam-policies.md)
-### [托管浏览器策略](deploy-use/manage-internet-access-using-managed-browser-policies.md)
 
 ## 更新和停用应用程序
 ### [更新和停用应用程序](deploy-use/update-and-retire-applications.md)
 ### [修订和取代应用程序](deploy-use/revise-and-supersede-applications.md)
 ### [卸载应用程序](deploy-use/uninstall-applications.md)
-
-
-<!--HONumber=Dec16_HO3-->
-
-
