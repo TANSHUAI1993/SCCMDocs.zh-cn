@@ -68,12 +68,13 @@
 ### [管理 Skype for Business Online 访问权限](deploy-use/manage-skype-for-business-online-access.md)
 ### [管理 Dynamics CRM Online 访问权限](deploy-use/manage-dynamics-crm-online-access.md)
 ### [管理 O365 服务的电脑访问权限](deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)
-## [根据设备、网络和应用程序风险管理访问权限](deploy-use/manage-access-based-on-device-network-app-risk.md)
-### [设置 Lookout 设备威胁防护](deploy-use/set-up-your-subscription-with-lookout.md)
-### [在 Intune 中启用 Lookout](deploy-use/enable-lookout-connection-in-intune.md)
-### [为工作应用部署 Lookout](deploy-use/configure-and-deploy-lookout-for-work-apps.md)
-### [启用设备威胁防护策略](deploy-use/enable-device-threat-protection-rule-compliance-policy.md)
-### [对 Lookout 集成进行故障排除](deploy-use/troubleshoot-lookout-integration.md)
+## [根据设备、网络和应用程序风险管理访问权限](deploy-use/configuration-manager-mobile-threat-defense.md)
+### [在 Configuration Manager 中查询](deploy-use/lookout-mobile-threat-defense-in-configuration-manager.md)
+#### [设置 Lookout 设备威胁防护](deploy-use/set-up-your-subscription-with-lookout.md)
+#### [在 Intune 中启用 Lookout](deploy-use/enable-lookout-connection-in-intune.md)
+#### [为工作应用部署 Lookout](deploy-use/configure-and-deploy-lookout-for-work-apps.md)
+#### [启用设备威胁防护策略](deploy-use/enable-device-threat-protection-rule-compliance-policy.md)
+#### [对 Lookout 集成进行故障排除](deploy-use/troubleshoot-lookout-integration.md)
 
 ## [Windows Hello 企业版设置](deploy-use/windows-hello-for-business-settings.md)
 
@@ -83,8 +84,3 @@
 ### [监视 Wi-fi、电子邮件和 VPN 配置文件](deploy-use/monitor-wifi-email-vpn-profiles.md)
 ### [监视证书配置文件](deploy-use/monitor-certificate-profiles.md)
 ### [监视 Endpoint Protection](deploy-use/monitor-endpoint-protection.md)
-
-
-<!--HONumber=Feb17_HO3-->
-
-
