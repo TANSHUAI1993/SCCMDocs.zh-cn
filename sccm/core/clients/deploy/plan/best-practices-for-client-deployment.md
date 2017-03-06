@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: a933d69c-5feb-4b2b-84e8-56b3b64d5947
 caps.latest.revision: 11
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 9206b82eca02877c30eebf146d42bcca7290eb42
 ms.openlocfilehash: 9c2fd7cea178716f81571856608ce517049a3e8d
+ms.lasthandoff: 12/30/2016
 
 
 ---
@@ -78,9 +79,4 @@ ms.openlocfilehash: 9c2fd7cea178716f81571856608ce517049a3e8d
  如果可以选择要启用的写入筛选器类型，请选择基于文件的写入筛选器，并配置例外以在设备下次重启之前保持客户端状态和清单数据，以在 Configuration Manager 客户端上提高网络和 CPU 效率。 有关写入筛选器的详细信息，请参阅   [在 System Center Configuration Manager 中计划 Windows Embedded 设备的客户端部署](../../../../core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md)。  
 
  有关主站点可支持的最大 Windows Embedded 客户端数量的详细信息，请参阅[客户端和设备支持的操作系统](../../../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md)。  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

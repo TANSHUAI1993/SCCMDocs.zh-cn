@@ -13,12 +13,13 @@ ms.topic: article
 ms.assetid: 98feaa06-64b1-4e86-a122-93017c97cd4f
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: Nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 8a5dc7361da34f3e6b926acd35c72c0c0767ce70
 ms.openlocfilehash: 74a0a4274965891869caf838550cd9465b46fd51
+ms.lasthandoff: 12/30/2016
 
 
 ---
@@ -80,9 +81,4 @@ ms.openlocfilehash: 74a0a4274965891869caf838550cd9465b46fd51
 
 
  有关如何在 System Center Configuration Manager 中配置报表的详细信息，请参阅 [System Center Configuration Manager 中的报表](../../core/servers/manage/reporting.md)。  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

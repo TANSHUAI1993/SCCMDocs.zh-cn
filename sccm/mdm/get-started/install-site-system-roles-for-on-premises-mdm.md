@@ -2,7 +2,7 @@
 title: "为本地 MDM 安装角色 - Configuration Manager | Microsoft Docs"
 description: "在 System Center Configuration Manager 中为本地移动设备管理安装站点系统角色。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
 ms.openlocfilehash: 916b971f851f968f6534ac834bd3182cc61614aa
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -71,9 +72,4 @@ ms.openlocfilehash: 916b971f851f968f6534ac834bd3182cc61614aa
      这会将该管理点有效地变为设备管理点。  
 
  添加站点系统角色并将其配置用于管理新式设备后，需要将承载该角色的服务器配置为受信任终结点，以便注册托管设备并与之通信。 有关详细信息，请参阅 [为 System Center Configuration Manager 中的本地移动设备管理的受信任通信设置证书](../../mdm/get-started/set-up-certificates-on-premises-mdm.md)。  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

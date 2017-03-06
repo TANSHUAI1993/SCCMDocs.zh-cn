@@ -2,7 +2,7 @@
 title: "向设备注册管理器注册设备 - Configuration Manager | Microsoft Docs"
 description: "使用 System Center Configuration Manager 向设备注册管理器注册企业拥有的设备。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 991eff171dce95590a7f050e0d3b07f98c0224b3
 ms.openlocfilehash: b356d2351b8a28bdca78176fdf0ff3c913a36bd3
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -89,9 +90,4 @@ ms.openlocfilehash: b356d2351b8a28bdca78176fdf0ff3c913a36bd3
 -   已删除的设备注册管理员帐户凭据仍无法擦除或停用设备  
 
 -   已删除的设备注册管理员帐户与注册的设备的关系仍存在，但不可以注册任何其他设备
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 caps.latest.revision: 15
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: a1fc9f2db7c9c2b40d986bb39a0b27d6cc699987
 ms.openlocfilehash: 454828d64b5643e57da4cff3aa3f671e8cd157b1
+ms.lasthandoff: 01/05/2017
 
 ---
 # <a name="about-client-installation-properties-in-system-center-configuration-manager"></a>关于 System Center Configuration Manager 中的客户端安装属性
@@ -582,9 +583,4 @@ CCMSetup 放弃下载客户端安装文件之前将尝试的时间长度 - 以�
 |2.5.4.42|G 或 GN 或 GivenName|给定名称|  
 |2.5.4.43|I 或 Initials|缩写|  
 |2.5.29.17|（没有值）|使用者可选名称|  
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 110b65b3-2202-466f-bb5d-e5ee282506fc
 caps.latest.revision: 5
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 593fbd0587d54490246f48ae54f666bac6b7830d
 ms.openlocfilehash: dbdc74cc2f94553745eb50aeadf6d33a54064c6b
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -36,9 +37,4 @@ ms.openlocfilehash: dbdc74cc2f94553745eb50aeadf6d33a54064c6b
 -   [如何在 System Center Configuration Manager 中管理客户端](../../../core/clients/manage/manage-clients.md)  
 
 -   [如何在 System Center Configuration Manager 中管理 Linux 和 UNIX 服务器的客户端](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md)  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

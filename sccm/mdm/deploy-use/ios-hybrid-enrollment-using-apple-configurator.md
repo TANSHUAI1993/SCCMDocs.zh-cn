@@ -2,7 +2,7 @@
 title: "注册 iOS 设备 Apple Configurator - Configuration Manager | Microsoft Docs"
 descriptions: Pre-enroll iOS devices by using Apple Configurator with Configuration Manager.
 ms.custom: na
-ms.date: 12/16/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 991eff171dce95590a7f050e0d3b07f98c0224b3
 ms.openlocfilehash: 6c6e9edbc7b2fca3d1be4feabb238efab80465fa
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -136,9 +137,4 @@ ms.openlocfilehash: 6c6e9edbc7b2fca3d1be4feabb238efab80465fa
 ## <a name="step-5-distribute-devices"></a>步骤 5：分发设备
 
 设备现已准备好企业注册。 关闭设备电源，并将它们分发给用户。 开启设备后，设置助理将启动并提示用户输入其工作或学校帐户以便开始注册。
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

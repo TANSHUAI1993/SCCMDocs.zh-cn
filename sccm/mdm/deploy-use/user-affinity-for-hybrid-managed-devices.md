@@ -2,7 +2,7 @@
 title: "Configuration Manager 中混合托管设备的用户关联 | Microsoft Docs"
 description: "配置 Configuration Manager 中托管设备的用户关联。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
 ms.openlocfilehash: 74dcc0f4e680893db804956615248b7e1230d2b5
+ms.lasthandoff: 12/16/2016
 
 ---
 # <a name="user-affinity-for-hybrid-managed-devices-in-configuration-manager"></a>Configuration Manager 中混合托管设备的用户关联
@@ -53,9 +54,4 @@ ms.openlocfilehash: 74dcc0f4e680893db804956615248b7e1230d2b5
 
 ##  <a name="a-namebkmknouaa-managed-devices-without-user-affinity"></a><a name="BKMK_noUA"></a>不具有用户关联的托管设备  
  配置为“无用户关联”的设备不支持公司门户，因此不能安装该应用。 公司门户适用于具有企业凭据的用户，并且需要访问个性化企业资源（例如邮件）的权限。 注册为“无用户关联”的设备并不具有专用的用户登录。 展台、销售点 (POS) 或共享实用程序设备是注册为“无用户关联”的设备的典型用例。 如果需要用户关联，注册设备前请确保设备的注册配置文件选中“用户关联”。 若要更改设备的关联状态，必须停用并重新注册设备。
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

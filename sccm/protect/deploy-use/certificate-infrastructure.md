@@ -13,12 +13,13 @@ ms.topic: get-started-article
 ms.assetid: 29ae59b7-2695-4a0f-a9ff-4f29222f28b3
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: Nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
 ms.openlocfilehash: 56e0a1923305c5134386623b1e306b8ebd013d53
+ms.lasthandoff: 12/16/2016
 
 ---
 # <a name="certificate-infrastructure"></a>证书基础结构
@@ -191,9 +192,4 @@ ms.openlocfilehash: 56e0a1923305c5134386623b1e306b8ebd013d53
  既然已完成了配置步骤来安装网络设备注册服务及依赖关系、证书注册点以及 System Center Configuration Manager 策略模块，便可开始通过创建和部署证书配置文件将证书部署到用户和设备。 有关如何创建证书配置文件的详细信息，请参阅[如何在 System Center Configuration Manager 中创建证书配置文件](../../protect/deploy-use/create-certificate-profiles.md)。  
 
  如果想要卸载 System Center Configuration Manager 策略模块，请使用控制面板中的“程序和功能”。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

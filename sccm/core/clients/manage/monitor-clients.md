@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2c8f57cf-1968-48de-87fb-4897432ed6e0
 caps.latest.revision: 23
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
 ms.openlocfilehash: 85afe010e734d20ae1f1479b3edd166c54cc8fd2
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -109,9 +110,4 @@ ms.openlocfilehash: 85afe010e734d20ae1f1479b3edd166c54cc8fd2
 |验证客户端 WMI 提供程序是否正常|重新启动 Windows Management Instrumentation 服务|仅在运行 Windows Server 2003、Windows XP（64 位）或更早版本的计算机上执行此客户端检查的修正。|  
 |验证唤醒代理服务（ConfigMgr 唤醒代理）是否正在运行|启动 ConfigMgr 唤醒代理服务|仅当“电源管理” 时进行此客户端检查：在受支持的客户端操作系统上，将“启用唤醒代理”  客户端设置设置为“是”  。|  
 |验证唤醒代理服务（ConfigMgr 唤醒代理）启动类型是否为自动|将 ConfigMgr 唤醒代理服务启动类型重置为自动|仅当“电源管理” 时进行此客户端检查：在受支持的客户端操作系统上，将“启用唤醒代理”  客户端设置设置为“是”  。|  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

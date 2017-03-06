@@ -13,12 +13,13 @@ ms.topic: article
 ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 caps.latest.revision: 15
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: d7265aec46474ba7fc317ddb5e20b91b7b134585
 ms.openlocfilehash: 36f6eb3fe48e904adf4d04450906fada9b477246
+ms.lasthandoff: 12/30/2016
 
 ---
 # <a name="about-client-settings-in-system-center-configuration-manager"></a>关于 System Center Configuration Manager 中的客户端设置
@@ -641,9 +642,4 @@ System Center Configuration Manager 中的所有客户端设置在 Configuration
 -   **允许用户定义其主要设备**  
 
      指定是否允许用户在应用程序目录的“我的设备”选项卡上标识他们自己的主要设备。  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

@@ -13,12 +13,13 @@ ms.topic: article
 ms.assetid: 29350919-6a25-446b-a0da-05e8914fbb26
 caps.latest.revision: 4
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 9206b82eca02877c30eebf146d42bcca7290eb42
 ms.openlocfilehash: 47bfeec5bd5d9b843e9064560d0cd0b14bd7d6a1
+ms.lasthandoff: 12/30/2016
 
 
 ---
@@ -37,9 +38,4 @@ ms.openlocfilehash: 47bfeec5bd5d9b843e9064560d0cd0b14bd7d6a1
 > -   运行 Configuration Manager 控制台的计算机在运行 Windows XP Service Pack 3，但主计算机未运行 Windows XP Service Pack 3。 有关详细信息，请参阅 Windows 远程协助文档。  
 
  可以从 Windows 命令提示符窗口或从 Windows“开始”菜单，从 Configuration Manager 控制台中的任何设备集合启动远程控制会话。  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

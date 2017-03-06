@@ -6,12 +6,13 @@ ms.prod: configuration-manager
 ms.technology:
 - configmgr-client
 ms.assetid: c667d6af-80c4-485f-910c-896c0171fd00
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
 ms.openlocfilehash: 6104107429184f31df12db84089f41df1ef81539
+ms.lasthandoff: 01/24/2017
 
 ---
 
@@ -70,9 +71,4 @@ Configuration Manager 提供两种方法来管理连接了 Internet 的客户端
 -   必须向 Internet 公开基础结构。
 
 有关详细信息，请参阅[规划基于 Internet 的客户端管理](plan-internet-based-client-management.md)。
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

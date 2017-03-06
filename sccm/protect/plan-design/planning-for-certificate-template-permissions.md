@@ -13,12 +13,13 @@ ms.topic: get-started-article
 ms.assetid: eab0e09d-b09e-4c14-ab14-c5f87472522e
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: Nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
 ms.openlocfilehash: 3c3725678561c32fce316ed1209ac8fe73a0eed1
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -62,9 +63,4 @@ ms.openlocfilehash: 3c3725678561c32fce316ed1209ac8fe73a0eed1
     -   在承载证书注册点的站点系统服务器上，创建下列 DWORD 注册表项以具有值 1：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SCCM\CRP\SkipTemplateCheckOnlyIfAccountAccessDenied  
 
 3.  在颁发 CA 的证书模板属性内的“安全”  选项卡上，添加一个或多个安全组以向用户或设备帐户授予“读取”和“注册”权限。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

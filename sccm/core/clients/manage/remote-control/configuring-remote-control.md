@@ -13,12 +13,13 @@ ms.topic: article
 ms.assetid: 45affc27-aa11-4249-9493-082ac23a3a3d
 caps.latest.revision: 4
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 9206b82eca02877c30eebf146d42bcca7290eb42
 ms.openlocfilehash: 20c28a625adb69f239b9c0e7673e57dd39e8d561
+ms.lasthandoff: 12/30/2016
 
 
 ---
@@ -67,9 +68,4 @@ ms.openlocfilehash: 20c28a625adb69f239b9c0e7673e57dd39e8d561
 |Alt+Delete|显示 Windows 菜单。|  
 |Ctrl+Alt+减号（位于数字键盘）|将本地计算机的活动窗口复制到远程计算机剪贴板。|  
 |Ctrl+Alt+加号（位于数字键盘）|将整个本地计算机的活动窗口窗口区复制到远程计算机剪贴板。|  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

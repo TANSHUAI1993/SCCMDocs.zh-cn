@@ -2,7 +2,7 @@
 title: "管理移动设备 | Microsoft Docs"
 description: "通过在 System Center Configuration Manager 中使用 Exchange Server 连接器来管理移动设备。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 0d6479bcc134103e6005159a8ea295a5f359a436
 ms.openlocfilehash: 4a2b60d893e8d430b107a5bc43ec0748177c27c3
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -135,9 +136,4 @@ ms.openlocfilehash: 4a2b60d893e8d430b107a5bc43ec0748177c27c3
     -   要确认站点组件管理器已成功安装了 Exchange Server 连接器，请查找“SMS_EXCHANGE_CONNECTOR”  组件的状态 ID“1015”  。 举例来说，如果 Configuration Manager 由于指定的客户端访问服务器计算机脱机而无法成功安装连接器，Configuration Manager 将每 60 分钟重试一次安装，直至安装成功或者删除 Exchange Server 连接器为止。  
 
     -   在站点服务器计算机上，搜索 SiteComp.log 文件，然后在该日志文件中搜索 `Component SMS_EXCHANGE_CONNECTOR flagged for installation`。 随后会以下列文本记录安装成功： `STATMSG: ID=1015`。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3986a992-c175-4b6f-922e-fc561e3d7cb7
 caps.latest.revision: 17
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 19e111e0cb174f11ad08f98d2516e52c4c183d86
 ms.openlocfilehash: a079824ba96897bbd3f9475efcaea81804858171
+ms.lasthandoff: 01/05/2017
 
 
 ---
@@ -408,9 +409,4 @@ Configuration Manager 客户端会在接收部署之后立即下载所需软件�
     -   打开命令提示符，然后键入：**cscript &lt;path\filename.vbs>**。  
 
 5.  在“Windows 脚本宿主”对话框中，选择“确定”。  
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

@@ -2,7 +2,7 @@
 title: "管理 iOS 激活锁定 | Microsoft Docs"
 description: "使用 System Center Configuration Manager 管理 iOS 激活锁定。"
 ms.custom: na
-ms.date: 12/15/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: a25c6b409ea6501ead762fabb8cc11c62c84885d
 ms.openlocfilehash: cf98bbb9dee6142e8b085dbffcadb3ed712adcb9
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -104,9 +105,4 @@ Configuration Manager 可以以下两种方法帮助你管理激活锁定：
     - 设备属性对话框中设备的发现数据。
     - “设备”视图中“激活锁定绕过状态”列（默认情况下隐藏此列）。
     - 细节窗格的“摘要”选项卡中的“远程设备操作信息”部分（当设备处于选中状态）。
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

@@ -11,12 +11,13 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4cd6031f-8844-4d0b-8166-b24d6528a94e
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
 ms.openlocfilehash: 6451ce59e01254d96ca4aa9bbe07cde829fae9ce
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -53,9 +54,4 @@ ms.openlocfilehash: 6451ce59e01254d96ca4aa9bbe07cde829fae9ce
   如果尝试在不使用此开关的情况下手动升级排除集合中的客户端，客户端将不会安装新的客户端软件。 有关详细信息，请参阅[如何手动安装 Configuration Manager 客户端](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Manual)。
 
 有关客户端安装方法的详细信息，请参阅[如何在 System Center Configuration Manager 中将客户端部署到 Windows 计算机](/sccm/core/clients/deploy/deploy-clients-to-windows-computers)。
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

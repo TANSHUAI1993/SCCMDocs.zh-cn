@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 0317fd02-3721-4634-b18b-7c976a4e92bf
 caps.latest.revision: 9
-author: Nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 593fbd0587d54490246f48ae54f666bac6b7830d
 ms.openlocfilehash: 08fb30da2060728142648f13846be737f98f2276
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -46,9 +47,4 @@ System Center Configuration Manager（也称为 ConfigMgr 或 SCCM）中的证�
 |运行 Active Directory 证书服务的网络设备注册服务角色服务的服务器上安装的 System Center Configuration Manager 策略模块|若要部署证书配置文件，则必须安装 System Center Configuration Manager 策略模块。 可以在 System Center Configuration Manager 安装媒体上找到此策略模块。|  
 |发现数据|证书使用者和使用者可选名称的值由 System Center Configuration Manager 提供，并从通过发现收集到的信息中检索：<br /><br /> 关于用户证书：Active Directory 用户发现<br /><br /> 关于计算机证书：Active Directory 系统发现和网络发现|  
 |用于管理证书配置文件的特定安全权限|你必须具有下列安全权限才能管理公司资源访问设置，例如证书配置文件、Wi-Fi 配置文件和 VPN 配置文件：<br /><br /> 若要查看和管理证书配置文件的警报和报表：需要对“警报” 对象的“创建” 、“删除” 、“修改” 、“修改报表” 、“读取”  和“运行报表”  权限。<br /><br /> 若要创建和管理证书配置文件：需要“证书配置文件” 对象的“创作策略” 、“修改报表”  、“读取”  和“运行报表”  权限。<br /><br /> 若要管理 Wi-Fi、证书和 VPN 配置文件部署：需要对“集合” 对象的“部署配置策略” 、“修改客户端状态警报” 、“读取”  和“读取资源”  。<br /><br /> 若要管理所有配置策略：需要对“配置策略” 对象的“创建” 、“删除” 、“修改”  、“读取”  和“设置安全作用域”  权限。<br /><br /> 若要运行与证书配置文件相关的查询：需要对“查询”  对象的“读取”  权限。<br /><br /> 若要在 System Center Configuration Manager 控制台中查看证书配置文件信息：需要对“站点”对象的“读取”权限。<br /><br /> 若要查看证书配置文件的状态消息：需要对“状态消息”  对象的“读取”  权限。<br /><br /> 若要创建和修改受信任的 CA 证书配置文件：需要对“受信任的 CA 证书配置文件” 对象的“创作策略” 、“修改报表”  、“读取”  和“运行报表”  权限。<br /><br /> 若要创建和管理 VPN 配置文件：需要对“VPN 配置文件” 对象的“创作策略” 、“修改报表”  、“读取”  和“运行报表”  权限。<br /><br /> 若要创建和管理 Wi-Fi 配置文件：需要对“Wi-Fi 配置文件” 对象的“创作策略” 、“修改报表”  、“读取”  和“运行报表”  权限。<br /><br /> **公司资源访问管理器**安全角色包括在 System Center Configuration Manager 中管理证书配置文件所需的这些权限。 有关详细信息，请参阅 **Configure role-based administration** 主题中的 [Configure security in System Center Configuration Manager](../../core/plan-design/security/configure-security.md) 部分。|  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

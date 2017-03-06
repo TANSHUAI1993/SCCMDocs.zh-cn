@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 52ee82b2-0b91-4829-89df-80a6abc0e63a
 caps.latest.revision: 6
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
 ms.openlocfilehash: 12ee719a6a8b072fab27d083aeb2b8439484058d
+ms.lasthandoff: 12/16/2016
 
 ---
 # <a name="plan-how-to-wake-up-clients-in-system-center-configuration-manager"></a>计划如何在 System Center Configuration Manager 中唤醒客户端
@@ -96,9 +97,4 @@ ms.openlocfilehash: 12ee719a6a8b072fab27d083aeb2b8439484058d
 
 > [!WARNING]  
 >  与子网定向广播相关的安全风险：攻击者可能会从伪造的源地址向定向广播地址发送 Internet 控制消息协议 (ICMP) 回显请求连续流，这可能会使主机回复该源地址。 此类型的拒绝服务攻击通常叫做 Smurf 攻击，通常可以通过不启用子网定向广播得到缓解。
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

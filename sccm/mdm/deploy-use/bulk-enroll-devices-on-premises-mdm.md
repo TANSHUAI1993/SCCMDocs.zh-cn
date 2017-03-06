@@ -3,7 +3,7 @@
 title: "批量注册设备 | Microsoft Docs | 本地 MDM"
 description: "在 System Center Configuration Manager 中自动向本地移动设备管理批量注册设备。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -20,6 +20,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 0d6479bcc134103e6005159a8ea295a5f359a436
 ms.openlocfilehash: ef68a9f998ea6ff9628e01f6ac622711de68375d
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -165,9 +166,4 @@ ms.openlocfilehash: ef68a9f998ea6ff9628e01f6ac622711de68375d
 -   启动 Configuration Manager 控制台。  
 
 -   单击“关闭”  >  > 所需的站点系统角色之间进行受信任的通信需要此根证书。 列表中将显示已注册的设备。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

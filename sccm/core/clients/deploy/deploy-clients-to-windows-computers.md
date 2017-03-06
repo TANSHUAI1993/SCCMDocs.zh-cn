@@ -13,12 +13,13 @@ ms.topic: get-started-article
 ms.assetid: 341f0d0b-f907-44cf-9e10-e1b41fc15f82
 caps.latest.revision: 13
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 9555a16d97224a1cf49a426ab225468b07403f60
 ms.openlocfilehash: 0e5e624fdfc2b5ee5b497d1063bd4e2d15df578b
+ms.lasthandoff: 12/30/2016
 
 
 ---
@@ -472,8 +473,3 @@ CCMSetup.exe /MP:mpserver.contoso.com /UsePKICert SMSSITECODE=ABC CCMHOSTNAME=se
 
 ### <a name="see-also"></a>另请参阅
 [System Center Configuration Manager 中的客户端安装方法](../../../core/clients/deploy/plan/client-installation-methods.md)
-
-
-<!--HONumber=Dec16_HO5-->
-
-

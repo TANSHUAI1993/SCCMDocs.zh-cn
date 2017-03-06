@@ -13,12 +13,13 @@ ms.topic: article
 ms.assetid: 101d7d4d-92db-419d-b2ae-3c1c1dea68e9
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: bc610b495047c49853c0a8f478cbf2773c0d3603
 ms.openlocfilehash: e50095ef618ec40a51c29ef2c8116f8e07401bd1
+ms.lasthandoff: 12/16/2016
 
 ---
 # <a name="about-client-installation-properties-published-to-active-directory-domain-services"></a>关于发布到 Active Directory 域服务的客户端安装属性
@@ -125,9 +126,4 @@ ms.openlocfilehash: e50095ef618ec40a51c29ef2c8116f8e07401bd1
 -   被分配至未发布到 Active Directory 域服务的 Configuration Manager 站点的客户端。  
 
 -   在位于 Internet 上时安装的客户端。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

@@ -2,7 +2,7 @@
 title: "本地移动设备管理 (MDM) | Microsoft Docs"
 description: "了解本地移动设备管理 - System Center Configuration Manager 中的设备管理解决方案。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 0d6479bcc134103e6005159a8ea295a5f359a436
 ms.openlocfilehash: cbd33bf3cf7d623d9ba7a657d4ca7d746d7e79da
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -50,9 +51,4 @@ System Center Configuration Manager 本地移动设备管理是一个设备管�
 -   [在 System Center Configuration Manager 中为本地移动设备管理注册设备](../deploy-use/enroll-devices-on-premises-mdm.md)  
 
      了解如何进行注册、用户如何注册其自己的设备，以及如何使用注册包批量注册设备。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

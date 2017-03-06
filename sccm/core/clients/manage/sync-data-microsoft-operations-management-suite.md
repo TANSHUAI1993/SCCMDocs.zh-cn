@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 33bcf8b3-a6b6-4fc9-bb59-70a9621b2b0d
 caps.latest.revision: 9
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: 0d8944bef9578a41b529a2d53b5a4d0094eaa21c
+ms.lasthandoff: 12/16/2016
 
 ---
 # <a name="sync-data-from-configuration-manager-to-the-microsoft-operations-management-suite"></a>将数据从 Configuration Manager 同步到 Microsoft Operations Management Suite
@@ -51,9 +52,4 @@ ms.openlocfilehash: 0d8944bef9578a41b529a2d53b5a4d0094eaa21c
 2.  该页中有两个选项卡：
   * “Azure Active Directory”选项卡显示“租户”、“客户端 ID”、“客户端机密密钥的过期”，使你可以在客户端密钥到期时**验证****客户端密钥**。
   * “OMS 连接属性”选项卡上显示“Azure 订阅”、“Azure 资源组”、“Operations Management Suite 工作区”和 **Operations Management Suite 可以获取其数据的设备集合**的列表。 使用“添加”和“删除”按钮可修改允许使用的集合。
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

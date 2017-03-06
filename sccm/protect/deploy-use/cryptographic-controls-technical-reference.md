@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0c63dcc5-a1bd-4037-959a-2e6ba0fd1b2c
 caps.latest.revision: 6
-author: Nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
 ms.openlocfilehash: 0f76ed3dd74a80d9e22cfa743e5aa484f6cd7d97
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -281,9 +282,4 @@ System Center Configuration Manager 使用签名和加密帮助保护 Configurat
 
 ##  <a name="about-ssl-vulnerabilities"></a>有关 SSL 漏洞  
  我们建议禁用 SSL 3.0，启用 TLS 1.1 和 1.2 以及重新排序 TLS 相关密码套件，以提高 Configuration Manager 服务器的安全性。 你可以在 [此知识库文章](https://support.microsoft.com/en-us/kb/245030/)中了解如何执行这些操作。 此操作不会影响 Configuration Manager 的功能。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

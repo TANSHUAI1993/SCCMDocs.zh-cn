@@ -13,12 +13,13 @@ ms.topic: article
 ms.assetid: 948664f2-239d-47a8-92fc-f8efeebd5796
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 9206b82eca02877c30eebf146d42bcca7290eb42
 ms.openlocfilehash: 7a5ff0e75b8cdac68e3854c4f5aba01a7d423e9b
+ms.lasthandoff: 12/30/2016
 
 
 ---
@@ -79,9 +80,4 @@ ms.openlocfilehash: 7a5ff0e75b8cdac68e3854c4f5aba01a7d423e9b
 |importPFX|使用此选项可指定证书，以替换客户端当前使用的证书。<br /><br /> 使用 **-importPFX**时，还必须使用 **-password** 命令行参数来提供与 PKCS#12 文件关联的密码。<br /><br /> 使用 **-rootcerts** 可指定任何其他根证书要求。<br /><br /> 示例：**certutil -importPFX &lt;Path to the PKCS#12 certificate> -password &lt;Certificate password\> [-rootcerts &lt;comma-separated list of certificates>]**|  
 |-importsitecert|使用此选项可更新管理服务器上的站点服务器签名证书。<br /><br /> 示例：**certutil -importsitecert &lt;Path to the DER certificate\>**|  
 |-importcrl|使用此选项可通过一个或多个 CRL 文件路径更新客户端上的 CRL。<br /><br /> 示例：**certutil -importcrl &lt;comma separated CRL file paths\>**|  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

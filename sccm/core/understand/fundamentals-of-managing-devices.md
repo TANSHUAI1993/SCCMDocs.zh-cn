@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2bca3db9-115a-451d-8c93-f073ceefe0c7
 caps.latest.revision: 6
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: a71e37060937f40bcb1bdb1c6165b7799fc72675
 ms.openlocfilehash: a9847e67ab1935fb66824945637ff683c006bdbe
+ms.lasthandoff: 12/30/2016
 
 
 ---
@@ -99,9 +100,4 @@ System Center Configuration Manager 可管理两大类设备：
  通过**软件中心**中的链接，用户可以连接到**应用程序目录**，在该目录中，用户可以浏览、安装和请求软件。 此外，**应用程序目录**还可用于配置首选项设置、擦除移动设备，以及为用户设备相关性指定主设备（如果设置此项）。   
 
  用户还可通过浏览器 Intranet 或 Internet 会话访问**应用程序目录**。  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

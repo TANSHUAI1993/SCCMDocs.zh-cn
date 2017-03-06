@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e46ad501-5d73-44ac-92de-0de14ef72b83
 caps.latest.revision: 12
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: c74b553ab76a2b77b0d893151351132da05a640d
 ms.openlocfilehash: 76ce5f413f406088862fb310bbea24140317ca06
+ms.lasthandoff: 01/04/2017
 
 
 ---
@@ -324,9 +325,4 @@ ms.openlocfilehash: 76ce5f413f406088862fb310bbea24140317ca06
 ### <a name="see-also"></a>另请参阅
 
 [维护 Mac 客户端](/sccm/core/clients/manage/maintain-mac-clients)
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

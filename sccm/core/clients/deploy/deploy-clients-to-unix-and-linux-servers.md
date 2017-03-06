@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 15a4e323-9f42-4fea-bb14-f2b905d1f77c
 caps.latest.revision: 9
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
 ms.openlocfilehash: 0e5f65552045e9cef06f5286b0087153751c79b0
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -237,9 +238,4 @@ ms.openlocfilehash: 0e5f65552045e9cef06f5286b0087153751c79b0
  适用于 Linux 和 UNIX 的 Configuration Manager 客户端将在客户端安装时联系此管理点。 如果客户端无法联系管理点，客户端软件将不断重试直到成功。  
 
  有关客户端如何查找管理点的详细信息，请参阅 [Locating Management Points](../../../core/clients/deploy/assign-clients-to-a-site.md#BKMK_LocatingMPs)。
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

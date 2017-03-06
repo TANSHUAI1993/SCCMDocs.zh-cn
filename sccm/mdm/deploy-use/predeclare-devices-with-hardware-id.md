@@ -2,7 +2,7 @@
 title: "预声明具有 IMEI 或 iOS 序列号的设备 | Microsoft Docs"
 description: "预声明具有 IMEI 或 iOS 序列号的公司拥有的设备。"
 ms.custom: na
-ms.date: 12/16/2016
+ms.date: 03/05/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 0fd410a6572acce685dc6cdb954c1c2d97d5ed8b
 ms.openlocfilehash: 2aa9c8c65904e573b6a81ac865e09d1cf2458509
+ms.lasthandoff: 12/17/2016
 
 ---
 # <a name="predeclare-devices-with-imei-or-ios-serial-numbers"></a>预声明具有 IMEI 或 iOS 序列号的设备
@@ -28,17 +29,17 @@ ms.openlocfilehash: 2aa9c8c65904e573b6a81ac865e09d1cf2458509
 
 ## <a name="how-to-predeclare-corporate-owned-devices"></a>如何预声明公司拥有的设备
 
-1.  在 Configuration Manager 控制台中，转至“资产和符合性” > “概述” > “所有公司拥有的设备” > “预声明设备”。
+1.    在 Configuration Manager 控制台中，转至“资产和符合性” > “概述” > “所有公司拥有的设备” > “预声明设备”。
 
 2.  单击“创建预声明的设备”。 将打开“创建预声明设备”向导。
 
-3.  选择添加设备信息的方式：
+3.    选择添加设备信息的方式：
 
-     -  **上传包含 IMEI 或序列号和详细信息的 CSV 文件**
+     -    **上传包含 IMEI 或序列号和详细信息的 CSV 文件**
 
         对于此选项，单击“浏览”，指定包含信息的 .csv 文件，以预声明公司拥有的设备。 .csv 文件格式必须正确。 有关详细信息，请参阅[上传的 .csv 文件的格式](#format-for-uploading-csv-files)。
 
-     -  **手动添加 IMEI 或序列号和详细信息**
+     -    **手动添加 IMEI 或序列号和详细信息**
 
         若要手动输入信息，请键入 IMEI 号码或 iOS 序列号和设备的详细信息。 在继续操作前请更正所有错误或警告。
 
@@ -63,10 +64,10 @@ ms.openlocfilehash: 2aa9c8c65904e573b6a81ac865e09d1cf2458509
 | IMEI #  | iOS 序列 #  | 操作系统 | 详细信息 |
 |------------ |---------------|-----|-----|
 | 123456789012345    |   | WINDOWS | 公司拥有的 Windows 设备|
-|   | A1B2C3D4E5C6 | IOS |  公司拥有的 iOS 设备|
-| 223456789012345 | E6D5C4B3A210 |   IOS |  另一台 iOS 设备|
-| 323456789012345 |        |   IOS |    第三台 iOS 设备|
-| 123456789012346 |         |   ANDROID |   公司拥有的 Android 设备|
+|   | A1B2C3D4E5C6 | IOS |     公司拥有的 iOS 设备|
+| 223456789012345 | E6D5C4B3A210 |   IOS |     另一台 iOS 设备|
+| 323456789012345 |        |   IOS |     第三台 iOS 设备|
+| 123456789012346 |         |   ANDROID |     公司拥有的 Android 设备|
 
 .Csv 文件中不能包含标题行。 以下示例显示 CSV 格式的相同示例数据：
 
@@ -83,9 +84,4 @@ ms.openlocfilehash: 2aa9c8c65904e573b6a81ac865e09d1cf2458509
 | 列 1 | 列 2 | 列 3 | 第 4 列 |
 |---|---|---|---|
 |不含空格的 IMEI 号码 | iOS 序列号 | IOS、WINDOWS 或 ANDROID | 可选设备详细信息（不超过 1024 个字符） |
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

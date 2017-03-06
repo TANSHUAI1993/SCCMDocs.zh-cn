@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 41dcc259-f147-4420-bff2-b65bdf8cff77
 caps.latest.revision: 7
-author: Nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 8a5dc7361da34f3e6b926acd35c72c0c0767ce70
 ms.openlocfilehash: d51670b47aab77cc4e630a6aeaa0744f916bf3b9
+ms.lasthandoff: 12/30/2016
 
 
 ---
@@ -99,9 +100,4 @@ System Center Configuration Manager 的一个典型方案是，在连接使用 E
 -   设备在 System Center Configuration Manager 层次结构中受阻止。  
 
  为了吊销证书，站点服务器会将吊销命令发送至证书颁发机构。 吊销原因是“停止操作” 。  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

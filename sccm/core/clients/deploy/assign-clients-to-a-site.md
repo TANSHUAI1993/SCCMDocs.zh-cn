@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: ba9b623f-6e86-4006-93f2-83d563de0cd0
 caps.latest.revision: 10
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 08afca8b422474639cbdb860e555fe0da27361a4
 ms.openlocfilehash: d8f25e849a8456f1658c4c7da32be733282bbde8
+ms.lasthandoff: 12/16/2016
 
 ---
 # <a name="how-to-assign-clients-to-a-site-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中将客户端分配到一个站点
@@ -162,9 +163,4 @@ Configuration Manager 注册的移动设备客户端只连接到其分配的站�
  漫游到其他站点（所有主站点和所有辅助站点）的这些客户端计算机始终可以将其他站点中的管理点用于内容位置请求。 当前站点中的管理点可以为客户端提供具有客户端所请求内容的分发点的列表。  
 
  对于为仅通过 Internet 进行管理而配置的客户端计算机，以及由 Configuration Manager 注册的移动设备和 Mac 计算机，这些客户端仅与向其分配的站点中的管理点通信。 这些客户端从来不会与辅助站点中的管理点或者其他主站点中的管理点通信。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 
