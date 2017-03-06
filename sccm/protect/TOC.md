@@ -31,7 +31,6 @@
 
 ## [证书配置文件](deploy-use/introduction-to-certificate-profiles.md)
 ### [创建证书配置文件](deploy-use/create-certificate-profiles.md)
-### [创建 PFX 证书配置文件](deploy-use/create-pfx-certificate-profiles.md)
 ### [配置证书基础结构](deploy-use/certificate-infrastructure.md)
 ### [加密控制技术参考](deploy-use/cryptographic-controls-technical-reference.md)
 
@@ -56,25 +55,7 @@
 ### [Endpoint Protection 客户端帮助](deploy-use/endpoint-protection-client-help.md)
 ### [客户端问题疑难解答](deploy-use/troubleshoot-endpoint-client.md)
 
-## [电子邮件配置文件](deploy-use/introduction-to-email-profiles.md)
-### [创建电子邮件配置文件](deploy-use/create-exchange-activesync-profiles.md)
-### [部署 Wi-fi、VPN、电子邮件和证书配置文件](deploy-use/deploy-wifi-vpn-email-cert-profiles.md)
-
-## [管理对服务的访问](deploy-use/manage-access-to-services.md)
-### [设备合规性策略](deploy-use/device-compliance-policies.md)
-### [创建设备合规性策略](deploy-use/create-compliance-policy.md)
-### [管理电子邮件访问权限](deploy-use/manage-email-access.md)
-### [管理 SharePoint Online 访问权限](deploy-use/manage-sharepoint-online-access.md)
-### [管理 Skype for Business Online 访问权限](deploy-use/manage-skype-for-business-online-access.md)
-### [管理 Dynamics CRM Online 访问权限](deploy-use/manage-dynamics-crm-online-access.md)
-### [管理 O365 服务的电脑访问权限](deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)
-## [根据设备、网络和应用程序风险管理访问权限](deploy-use/configuration-manager-mobile-threat-defense.md)
-### [在 Configuration Manager 中查询](deploy-use/lookout-mobile-threat-defense-in-configuration-manager.md)
-#### [设置 Lookout 设备威胁防护](deploy-use/set-up-your-subscription-with-lookout.md)
-#### [在 Intune 中启用 Lookout](deploy-use/enable-lookout-connection-in-intune.md)
-#### [为工作应用部署 Lookout](deploy-use/configure-and-deploy-lookout-for-work-apps.md)
-#### [启用设备威胁防护策略](deploy-use/enable-device-threat-protection-rule-compliance-policy.md)
-#### [对 Lookout 集成进行故障排除](deploy-use/troubleshoot-lookout-integration.md)
+## [部署 Wi-fi、VPN、电子邮件和证书配置文件](deploy-use/deploy-wifi-vpn-email-cert-profiles.md)
 
 ## [Windows Hello 企业版设置](deploy-use/windows-hello-for-business-settings.md)
 
