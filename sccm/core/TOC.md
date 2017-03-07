@@ -120,8 +120,7 @@
 #### [规划迁移监视](migration/planning-to-monitor-migration-activity.md)
 #### [规划完成迁移](migration/planning-to-complete-migration.md)
 ###  [配置源层次结构和源站点](migration/configuring-source-hierarchies-and-source-sites-for-migration.md)
-###  [迁移操作](migration/operations-for-migration.md)
-###  [迁移的安全和隐私](migration/security-and-privacy-for-migration.md)
+###  [迁移操作](migration/operations-for-migration.md)###  [有关迁移的安全和隐私](migration/security-and-privacy-for-migration.md)
 
 #    [部署服务器和角色](servers/deploy/start-using.md)
 
@@ -172,14 +171,20 @@
 ###  [安装控制台内部更新](servers/manage/install-in-console-updates.md)
 #### [流程图 - 下载更新](servers/manage/download-updates-flowchart.md)
 #### [流程图 - 更新复制](servers/manage/update-replication-flowchart.md)
+###  [预发行功能](servers/manage/pre-release-features.md)
 ###  [站点服务器的服务时段](servers/manage/service-windows.md)
 ###  [使用服务连接工具](servers/manage/use-the-service-connection-tool.md)
 ###  [使用更新注册工具](servers/manage/use-the-update-registration-tool-to-import-hotfixes.md)
 ###  [使用修补程序安装程序](servers/manage/use-the-hotfix-installer-to-install-updates.md)
+<!-- 
+###  [Checklist for installing update 1702](servers/manage/checklist-for-installing-update-1702.md)
+-->
 ###  [用于安装更新 1610 的核对清单](servers/manage/checklist-for-installing-update-1610.md)
 ###  [用于安装更新 1606 的核对清单](servers/manage/checklist-for-installing-update-1606.md)
-###  [用于安装更新 1602 的核对清单](servers/manage/checklist-for-installing-update-1602.md)
-###  [当前分支版本支持](servers/manage/current-branch-versions-supported.md)
+<!-- Deprecated from Content:
+###  [Checklist for installing update 1602](servers/manage/checklist-for-installing-update-1602.md)
+###  [Support for current branch versions](servers/manage/current-branch-versions-supported.md)  
+-->
 
 ##   监视基础结构
 ###  [使用警报和状态系统](servers/manage/use-alerts-and-the-status-system.md)
@@ -202,6 +207,7 @@
 #### [报表的操作和维护](servers/manage/operations-and-maintenance-for-reporting.md)
 #### [创建自定义报表模型](servers/manage/creating-custom-report-models-in-sql-server-reporting-services.md)
 #### [报表的安全和隐私](servers/manage/security-and-privacy-for-reporting.md)
+###  [数据仓库](servers/manage/data-warehouse.md)
 
 #    部署客户端
 ##   规划客户端部署
@@ -260,7 +266,6 @@
 ###  [硬件清单简介](clients/manage/inventory/introduction-to-hardware-inventory.md)
 ###  [如何扩展硬件清单](clients/manage/inventory/extend-hardware-inventory.md)
 ###  [如何配置硬件清单](clients/manage/inventory/configure-hardware-inventory.md)
-###  [如何为混合部署中的移动设备配置硬件清单](clients/manage/inventory/mobile-device-hardware-inventory-hybrid.md)
 ###  [如何使用资源浏览器来查看硬件清单](clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md)
 ###  [适用于 Linux 和 UNIX 的硬件清单](clients/manage/inventory/hardware-inventory-for-linux-and-unix.md)
 ###  [硬件清单的安全和隐私](clients/manage/inventory/security-and-privacy-for-hardware-inventory.md)
