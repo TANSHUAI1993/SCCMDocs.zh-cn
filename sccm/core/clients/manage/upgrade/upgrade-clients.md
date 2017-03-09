@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
 ms.openlocfilehash: 56a3ec8ddfaaa233b41347da0ff853fdf92c275c
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -149,9 +150,4 @@ ms.openlocfilehash: 56a3ec8ddfaaa233b41347da0ff853fdf92c275c
 -   只能用于升级客户端软件，不能用于安装新客户端。  
 
  [如何在 System Center Configuration Manager 中的预生产集合中测试客户端升级](../../../../core/clients/manage/upgrade/test-client-upgrades.md)  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 
