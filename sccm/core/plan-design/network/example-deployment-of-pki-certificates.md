@@ -2,7 +2,7 @@
 title: "部署 PKI 证书 | Microsoft Docs"
 description: "按照分步示例，了解创建和部署 System Center Configuration Manager 使用的 PKI 证书的方法。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 3417ff88-7177-4a0d-8967-ab21fe7eba17
 caps.latest.revision: 11
-author: Nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: efd4f5617568b8bff5de78d29d82202f798f8920
-ms.openlocfilehash: 97b7eb8e4d9555090cc145688116d424a56efdda
+ms.sourcegitcommit: 2a62ef64bf4e08d7027d10827d35d648bdbbeefe
+ms.openlocfilehash: 21fe718835bbbaa6382e0f0a87784e01e4c35283
+ms.lasthandoff: 02/14/2017
 
 
 ---
@@ -56,7 +57,7 @@ ms.openlocfilehash: 97b7eb8e4d9555090cc145688116d424a56efdda
 
  [部署 Mac 计算机的客户端证书](#BKMK_MacClient_SP1)  
 
-##  <a name="a-namebkmktestnetworkenvironmenta-test-network-requirements"></a><a name="BKMK_testnetworkenvironment"></a>测试网络要求  
+##  <a name="BKMK_testnetworkenvironment"></a>测试网络要求  
  分步说明具有以下要求：  
 
 -   测试网络运行 Windows Server 2008 的 Active Directory 域服务并且是作为单个域、单个林安装的。  
@@ -69,7 +70,7 @@ ms.openlocfilehash: 97b7eb8e4d9555090cc145688116d424a56efdda
 
 -   可以使用根域管理员帐户或企业域管理员帐户登录，然后使用此帐户来完成本示例部署中的所有过程。  
 
-##  <a name="a-namebkmkoverview2008a-overview-of-the-certificates"></a><a name="BKMK_overview2008"></a>证书的概述  
+##  <a name="BKMK_overview2008"></a>证书的概述  
  下表列出了 System Center Configuration Manager 可能需要的 PKI 证书类型，并描述了这些证书的使用方式。  
 
 |证书要求|证书描述|  
@@ -82,7 +83,7 @@ ms.openlocfilehash: 97b7eb8e4d9555090cc145688116d424a56efdda
 |Intel AMT 的证书|三个与基于 Intel AMT 的计算机的带外管理相关的证书：<ul><li>主动管理技术 (AMT) 设置证书</li><li>AMT Web 服务器证书</li><li>（可选）802.1X 有线或无线网络的客户端身份验证证书</li></ul>AMT 预配证书必须安装在带外服务点计算机上 System Center Configuration Manager 的外部，然后才能在带外服务点属性中选择安装的证书。 AMT Web 服务器证书和客户端身份验证证书在 AMT 设置和管理过程中安装，并且在带外管理组件属性中选择配置的证书模板。<br /><br /> 有关设置这些证书的步骤，请参阅本主题中的[为 AMT 部署证书](#BKMK_AMT2008_cm2012)。|  
 |Mac 计算机的客户端证书|在使用 System Center Configuration Manager 注册并选择配置的证书模板作为移动设备客户端设置时，可以从 Mac 计算机中请求并安装此证书。<br /><br /> 有关设置此证书的步骤，请参阅本主题中的[部署 Mac 计算机的客户端证书](#BKMK_MacClient_SP1)。|  
 
-##  <a name="a-namebkmkwebserver2008cm2012a-deploy-the-web-server-certificate-for-site-systems-that-run-iis"></a><a name="BKMK_webserver2008_cm2012"></a>为运行 IIS 的站点系统部署 Web 服务器证书  
+##  <a name="BKMK_webserver2008_cm2012"></a>为运行 IIS 的站点系统部署 Web 服务器证书  
  此证书部署包含以下过程：  
 
 -   在证书颁发机构创建和颁发 Web 服务器证书模板  
@@ -91,7 +92,7 @@ ms.openlocfilehash: 97b7eb8e4d9555090cc145688116d424a56efdda
 
 -   将 IIS 配置为使用 Web 服务器证书  
 
-###  <a name="a-namebkmkwebserver22008a-create-and-issue-the-web-server-certificate-template-on-the-certification-authority"></a><a name="BKMK_webserver22008"></a>在证书颁发机构创建和颁发 Web 服务器证书模板  
+###  <a name="BKMK_webserver22008"></a>在证书颁发机构创建和颁发 Web 服务器证书模板  
  此过程为 System Center Configuration Manager 站点系统创建证书模板并将其添加到证书颁发机构。  
 
 ##### <a name="to-create-and-issue-the-web-server-certificate-template-on-the-certification-authority"></a>在证书颁发机构创建和颁发 Web 服务器证书模板  
@@ -125,7 +126,7 @@ ms.openlocfilehash: 97b7eb8e4d9555090cc145688116d424a56efdda
 
 13. 如果不需要创建和颁发其他证书，请关闭“证书颁发机构”。  
 
-###  <a name="a-namebkmkwebserver32008a-request-the-web-server-certificate"></a><a name="BKMK_webserver32008"></a>申请 Web 服务器证书  
+###  <a name="BKMK_webserver32008"></a>申请 Web 服务器证书  
  此过程允许你指定将在站点系统服务器属性中设置的 Intranet 和 Internet FQDN 值，然后将 Web 服务器证书安装到运行 IIS 的成员服务器上。  
 
 ##### <a name="to-request-the-web-server-certificate"></a>申请 Web 服务器证书  
@@ -175,7 +176,7 @@ ms.openlocfilehash: 97b7eb8e4d9555090cc145688116d424a56efdda
 
 16. 关闭“证书（本地计算机）” 。  
 
-###  <a name="a-namebkmkwebserver42008a-configure-iis-to-use-the-web-server-certificate"></a><a name="BKMK_webserver42008"></a>将 IIS 配置为使用 Web 服务器证书  
+###  <a name="BKMK_webserver42008"></a>将 IIS 配置为使用 Web 服务器证书  
  此过程将安装的证书绑定到 IIS 的“默认网站” 。  
 
 ##### <a name="to-set-up-iis-to-use-the-web-server-certificate"></a>将 IIS 设置为使用 Web 服务器证书  
@@ -200,12 +201,9 @@ ms.openlocfilehash: 97b7eb8e4d9555090cc145688116d424a56efdda
 > [!IMPORTANT]  
 >  在此计算机上安装 System Center Configuration Manager 站点系统服务器时，请确保在站点系统属性中指定与请求证书时所指定的 FQDN 相同的 FQDN。  
 
-##  <a name="a-namebkmkclouddp2008cm2012a-deploy-the-service-certificate-for-cloud-based-distribution-points"></a><a name="BKMK_clouddp2008_cm2012"></a>为基于云的分发点部署服务证书  
+##  <a name="BKMK_clouddp2008_cm2012"></a>为基于云的分发点部署服务证书  
 
-> [!NOTE]  
->  基于云的分发点的服务证书适用于 System Center Configuration Manager SP1 和更高版本。  
-
- 此证书部署包含以下过程：  
+此证书部署包含以下过程：  
 
 -   [在证书颁发机构创建和颁发自定义 Web 服务器证书模板](#BKMK_clouddpcreating2008)  
 
@@ -213,7 +211,7 @@ ms.openlocfilehash: 97b7eb8e4d9555090cc145688116d424a56efdda
 
 -   [为基于云的分发点导出自定义 Web 服务器证书](#BKMK_clouddpexporting2008)  
 
-###  <a name="a-namebkmkclouddpcreating2008a-create-and-issue-a-custom-web-server-certificate-template-on-the-certification-authority"></a><a name="BKMK_clouddpcreating2008"></a>在证书颁发机构创建和颁发自定义 Web 服务器证书模板  
+###  <a name="BKMK_clouddpcreating2008"></a>在证书颁发机构创建和颁发自定义 Web 服务器证书模板  
  此过程创建基于 Web 服务器证书模板的自定义证书模板。 此证书适用于 System Center Configuration Manager 基于云的分发点，并且私钥必须可导出。 创建了证书模板后，会将其添加到证书颁发机构。  
 
 > [!NOTE]  
@@ -256,7 +254,7 @@ ms.openlocfilehash: 97b7eb8e4d9555090cc145688116d424a56efdda
 
 13. 如果不必创建和颁发其他证书，请关闭“证书颁发机构”。  
 
-###  <a name="a-namebkmkclouddprequesting2008a-request-the-custom-web-server-certificate"></a><a name="BKMK_clouddprequesting2008"></a>申请自定义 Web 服务器证书  
+###  <a name="BKMK_clouddprequesting2008"></a>申请自定义 Web 服务器证书  
  此过程将申请自定义 Web 服务器证书并随后将其安装到将运行站点服务器的成员服务器上。  
 
 ##### <a name="to-request-the-custom-web-server-certificate"></a>申请自定义 Web 服务器证书  
@@ -298,7 +296,7 @@ ms.openlocfilehash: 97b7eb8e4d9555090cc145688116d424a56efdda
 
 17. 关闭“证书（本地计算机）” 。  
 
-###  <a name="a-namebkmkclouddpexporting2008a-export-the-custom-web-server-certificate-for-cloud-based-distribution-points"></a><a name="BKMK_clouddpexporting2008"></a>为基于云的分发点导出自定义 Web 服务器证书  
+###  <a name="BKMK_clouddpexporting2008"></a>为基于云的分发点导出自定义 Web 服务器证书  
  此过程将自定义 Web 服务器证书导出为文件，以便在创建基于云的分发点时可将其导入。  
 
 ##### <a name="to-export-the-custom-web-server-certificate-for-cloud-based-distribution-points"></a>为基于云的分发点导出自定义 Web 服务器证书  
@@ -326,7 +324,7 @@ ms.openlocfilehash: 97b7eb8e4d9555090cc145688116d424a56efdda
 
  证书现在已准备好，可在你创建基于云的分发点时导入。  
 
-##  <a name="a-namebkmkclient2008cm2012a-deploy-the-client-certificate-for-windows-computers"></a><a name="BKMK_client2008_cm2012"></a>为 Windows 计算机部署客户端证书  
+##  <a name="BKMK_client2008_cm2012"></a>为 Windows 计算机部署客户端证书  
  此证书部署包含以下过程：  
 
 -   在证书颁发机构创建和颁发工作站身份验证证书模板  
@@ -335,7 +333,7 @@ ms.openlocfilehash: 97b7eb8e4d9555090cc145688116d424a56efdda
 
 -   自动注册工作站身份验证证书并验证其在计算机上的安装  
 
-###  <a name="a-namebkmkclient02008a-create-and-issue-the-workstation-authentication-certificate-template-on-the-certification-authority"></a><a name="BKMK_client02008"></a>在证书颁发机构创建和颁发工作站身份验证证书模板  
+###  <a name="BKMK_client02008"></a>在证书颁发机构创建和颁发工作站身份验证证书模板  
  此过程为 System Center Configuration Manager 客户端计算机创建证书模板并将其添加到证书颁发机构。  
 
 ##### <a name="to-create-and-issue-the-workstation-authentication-certificate-template-on-the-certification-authority"></a>在证书颁发机构创建和颁发工作站身份验证证书模板  
@@ -361,7 +359,7 @@ ms.openlocfilehash: 97b7eb8e4d9555090cc145688116d424a56efdda
 
 9. 如果不需要创建和颁发其他证书，请关闭“证书颁发机构”。  
 
-###  <a name="a-namebkmkclient12008a-configure-autoenrollment-of-the-workstation-authentication-template-by-using-group-policy"></a><a name="BKMK_client12008"></a>使用组策略配置工作站身份验证模板的自动注册  
+###  <a name="BKMK_client12008"></a>使用组策略配置工作站身份验证模板的自动注册  
  此过程将设置组策略以使其在计算机上自动注册客户端证书。  
 
 ##### <a name="to-set-up-autoenrollment-of-the-workstation-authentication-template-by-using-group-policy"></a>若要使用组策略设置工作站身份验证模板的自动注册  
@@ -385,7 +383,7 @@ ms.openlocfilehash: 97b7eb8e4d9555090cc145688116d424a56efdda
 
 8.  关闭“组策略管理” 。  
 
-###  <a name="a-namebkmkclient22008a-automatically-enroll-the-workstation-authentication-certificate-and-verify-its-installation-on-computers"></a><a name="BKMK_client22008"></a>自动注册工作站身份验证证书并验证其在计算机上的安装  
+###  <a name="BKMK_client22008"></a>自动注册工作站身份验证证书并验证其在计算机上的安装  
  此过程在计算机上安装客户端证书，并验证安装。  
 
 ##### <a name="to-automatically-enroll-the-workstation-authentication-certificate-and-verify-its-installation-on-the-client-computer"></a>自动注册工作站身份验证证书并验证其在客户端计算机上的安装  
@@ -419,7 +417,7 @@ ms.openlocfilehash: 97b7eb8e4d9555090cc145688116d424a56efdda
 
  计算机现在已设置 System Center Configuration Manager 客户端证书。  
 
-##  <a name="a-namebkmkclientdistributionpoint2008cm2012a-deploy-the-client-certificate-for-distribution-points"></a><a name="BKMK_clientdistributionpoint2008_cm2012"></a>为分发点部署客户端证书  
+##  <a name="BKMK_clientdistributionpoint2008_cm2012"></a>为分发点部署客户端证书  
 
 > [!NOTE]  
 >  由于证书要求相同，此证书还可用于不使用 PXE 启动的媒体映像。  
@@ -432,7 +430,7 @@ ms.openlocfilehash: 97b7eb8e4d9555090cc145688116d424a56efdda
 
 -   为分发点导出客户端证书  
 
-###  <a name="a-namebkmkclientdistributionpoint02008a-create-and-issue-a-custom-workstation-authentication-certificate-template-on-the-certification-authority"></a><a name="BKMK_clientdistributionpoint02008"></a>在证书颁发机构创建和颁发自定义工作站身份验证证书模板  
+###  <a name="BKMK_clientdistributionpoint02008"></a>在证书颁发机构创建和颁发自定义工作站身份验证证书模板  
  此过程为 System Center Configuration Manager 分发点创建自定义证书模板，以便可导出私钥，并将该证书模板添加到证书颁发机构。  
 
 > [!NOTE]  
@@ -473,7 +471,7 @@ ms.openlocfilehash: 97b7eb8e4d9555090cc145688116d424a56efdda
 
 12. 如果不必创建和颁发其他证书，请关闭“证书颁发机构”。  
 
-###  <a name="a-namebkmkclientdistributionpoint12008a-request-the-custom-workstation-authentication-certificate"></a><a name="BKMK_clientdistributionpoint12008"></a>申请自定义工作站身份验证证书  
+###  <a name="BKMK_clientdistributionpoint12008"></a>申请自定义工作站身份验证证书  
  此过程申请自定义客户端证书，然后将其安装到运行 IIS 并将设置为分发点的成员服务器上。  
 
 ##### <a name="to-request-the-custom-workstation-authentication-certificate"></a>申请自定义工作站身份验证证书  
@@ -504,7 +502,7 @@ ms.openlocfilehash: 97b7eb8e4d9555090cc145688116d424a56efdda
 
 13. 不要关闭“证书（本地计算机）” 。  
 
-###  <a name="a-namebkmkexportclientdistributionpoint22008a-export-the-client-certificate-for-distribution-points"></a><a name="BKMK_exportclientdistributionpoint22008"></a>为分发点导出客户端证书  
+###  <a name="BKMK_exportclientdistributionpoint22008"></a>为分发点导出客户端证书  
  此过程将自定义工作站身份验证证书导出为文件，以便可将其导入分发点属性。  
 
 ##### <a name="to-export-the-client-certificate-for-distribution-points"></a>为分发点导出客户端证书  
@@ -535,7 +533,7 @@ ms.openlocfilehash: 97b7eb8e4d9555090cc145688116d424a56efdda
 > [!TIP]  
 >  在为不使用 PXE 启动的操作系统部署设置媒体映像，并且用于安装映像的任务序列必须与需要 HTTPS 客户端连接的管理点联系时，你可以使用同一证书文件。  
 
-##  <a name="a-namebkmkmobiledevices2008cm2012a-deploy-the-enrollment-certificate-for-mobile-devices"></a><a name="BKMK_mobiledevices2008_cm2012"></a>为移动设备部署注册证书  
+##  <a name="BKMK_mobiledevices2008_cm2012"></a>为移动设备部署注册证书  
  此证书部署包含一个用于在证书颁发机构创建和颁发注册证书模板的单一过程。  
 
 ### <a name="create-and-issue-the-enrollment-certificate-template-on-the-certification-authority"></a>在证书颁发机构创建和颁发注册证书模板  
@@ -570,7 +568,7 @@ ms.openlocfilehash: 97b7eb8e4d9555090cc145688116d424a56efdda
 
  移动设备注册证书模板现在已准备好，当你在客户端设置中设置移动设备注册配置文件时即可选择。  
 
-##  <a name="a-namebkmkamt2008cm2012a-deploy-the-certificates-for-amt"></a><a name="BKMK_AMT2008_cm2012"></a>为 AMT 部署证书  
+##  <a name="BKMK_AMT2008_cm2012"></a>为 AMT 部署证书  
  此证书部署包含以下过程：  
 
 -   创建、颁发和安装 AMT 设置证书  
@@ -579,7 +577,7 @@ ms.openlocfilehash: 97b7eb8e4d9555090cc145688116d424a56efdda
 
 -   为 802.1X 基于 AMT 的计算机创建和颁发客户端身份验证证书  
 
-###  <a name="a-namebkmkamtprovisioning2008a-create-issue-and-install-the-amt-provisioning-certificate"></a><a name="BKMK_AMTprovisioning2008"></a>创建、颁发和安装 AMT 设置证书  
+###  <a name="BKMK_AMTprovisioning2008"></a>创建、颁发和安装 AMT 设置证书  
  在通过内部根 CA 的证书指纹设置基于 AMT 的计算机时，使用内部 CA 创建设置证书。 如果不是这种情况，并且必须使用外部证书颁发机构，请使用颁发 AMT 设置证书的公司提供的说明，这些说明通常涉及到从公司的公共网站中申请证书。 还可以在此处找到所选外部 CA 的详细说明：[Intel vPro Expert Center：Microsoft vPro Manageability 网站](http://go.microsoft.com/fwlink/?LinkId=132001)。  
 
 > [!IMPORTANT]  
@@ -735,14 +733,11 @@ ms.openlocfilehash: 97b7eb8e4d9555090cc145688116d424a56efdda
 
  客户端身份验证证书模板现在已准备好向基于 AMT 的计算机颁发用于 802.1X 客户端身份验证的证书。 在带外管理组件属性中选择该证书模板。  
 
-##  <a name="a-namebkmkmacclientsp1a-deploy-the-client-certificate-for-mac-computers"></a><a name="BKMK_MacClient_SP1"></a>部署 Mac 计算机的客户端证书  
+##  <a name="BKMK_MacClient_SP1"></a>部署 Mac 计算机的客户端证书  
 
-> [!NOTE]  
->  Mac 计算机的客户端证书适用于 System Center Configuration Manager SP1 和更高版本。  
+此证书部署包含一个用于在证书颁发机构创建和颁发注册证书模板的单一过程。  
 
- 此证书部署包含一个用于在证书颁发机构创建和颁发注册证书模板的单一过程。  
-
-###  <a name="a-namebkmkmacclientcreatingissuinga-create-and-issue-a-mac-client-certificate-template-on-the-certification-authority"></a><a name="BKMK_MacClient_CreatingIssuing"></a>在证书颁发机构创建和颁发 Mac 客户端证书模板  
+###  <a name="BKMK_MacClient_CreatingIssuing"></a>在证书颁发机构创建和颁发 Mac 客户端证书模板  
  本过程为 System Center Configuration Manager Mac 计算机创建自定义证书模板，并将该证书模板添加到证书颁发机构。  
 
 > [!NOTE]  
@@ -782,9 +777,4 @@ ms.openlocfilehash: 97b7eb8e4d9555090cc145688116d424a56efdda
 13. 如果不必创建和颁发其他证书，请关闭“证书颁发机构”。  
 
  现在，在你为注册设置客户端设置时，可以选择 Mac 客户端证书模板。
-
-
-
-<!--HONumber=Jan17_HO2-->
-
 
