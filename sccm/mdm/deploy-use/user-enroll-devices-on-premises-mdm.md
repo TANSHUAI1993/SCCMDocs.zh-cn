@@ -2,7 +2,7 @@
 title: "用户如何向本地 MDM 注册设备 - Configuration Manager | Microsoft Docs"
 description: "了解用户如何在 System Center Configuration Manager 中向本地移动设备管理注册设备。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 991eff171dce95590a7f050e0d3b07f98c0224b3
-ms.openlocfilehash: 43a30709473939829d82d822503537d448159a1c
+ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
+ms.openlocfilehash: 7d852843d0d3fe7c9ab0947c4b396cee0a92c754
+ms.lasthandoff: 03/06/2017
 
 
 ---
@@ -45,7 +46,7 @@ ms.openlocfilehash: 43a30709473939829d82d822503537d448159a1c
 
 -   [验证设备注册](#bkmk_verify)  
 
-##  <a name="a-namebkmkenrolldeska-enroll-a-windows-10-computer"></a><a name="bkmk_enrollDesk"></a> 注册 Windows 10 计算机  
+##  <a name="bkmk_enrollDesk"></a> 注册 Windows 10 计算机  
 
 1.  在 Windows 10 计算机上，转到“设置” 。  
 
@@ -59,7 +60,7 @@ ms.openlocfilehash: 43a30709473939829d82d822503537d448159a1c
 
 6.  单击“跳过”  以记住登录信息，不久过后将连接设备。  
 
-##  <a name="a-namebkmkenrollmoba-enroll-a-windows-10-mobile-device"></a><a name="bkmk_enrollMob"></a> 注册 Windows 10 移动版设备  
+##  <a name="bkmk_enrollMob"></a> 注册 Windows 10 移动版设备  
 
 1.  在 Windows 10 移动版设备上，转到“设置” 。  
 
@@ -71,18 +72,10 @@ ms.openlocfilehash: 43a30709473939829d82d822503537d448159a1c
 
 5.  在下一个屏幕上，输入你的工作电子邮件地址和密码，然后单击“登录” 。 不久过后，设备将完成注册。 单击“Done”（完成） 。  
 
-##  <a name="a-namebkmkverifya-verify-device-enrollment"></a><a name="bkmk_verify"></a> 验证设备注册  
+##  <a name="bkmk_verify"></a> 验证设备注册  
  可以在 Configuration Manager 控制台中验证是否已成功注册设备。  
 
 1.  启动 Configuration Manager 控制台。  
 
 2.  单击“关闭”  >  > 所需的站点系统角色之间进行受信任的通信需要此根证书。 列表中将显示已注册的设备。  
-
-## <a name="see-also"></a>另请参阅  
- [在 System Center Configuration Manager 中为本地移动设备管理注册设备](../../mdm/deploy-use/enroll-devices-on-premises-mdm.md)
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

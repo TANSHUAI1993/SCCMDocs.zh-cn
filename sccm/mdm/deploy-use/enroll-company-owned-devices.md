@@ -2,7 +2,7 @@
 title: "注册公司拥有的设备 - Configuration Manager | Microsoft Docs"
 description: "了解使用 Configuration Manager 注册公司拥有的设备以用于混合部署的不同方法。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,9 @@ author: mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 991eff171dce95590a7f050e0d3b07f98c0224b3
-ms.openlocfilehash: b797bf2c180478f6a9ee5a7228e8eb94194285ff
+ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
+ms.openlocfilehash: f0b503d8c9eba2dd1b6eb4c41ec40c001b727326
+ms.lasthandoff: 03/06/2017
 
 
 ---
@@ -45,12 +46,4 @@ ms.openlocfilehash: b797bf2c180478f6a9ee5a7228e8eb94194285ff
  ## <a name="predeclare-devices-with-imei-or-ios-serial-numbers"></a>预声明具有 IMEI 或 iOS 序列号的设备
 
 可通过导入公司拥有设备的国际移动设备识别 (IMEI) 码或 iOS 序列号对此类设备进行识别。 可上传包含设备 IMEI 码的逗号分隔值 (.csv) 文件，或者手动输入设备信息。  请参阅[使用硬件 ID 号预声明设备](../../mdm/deploy-use/predeclare-devices-with-hardware-id.md)。
-
-## <a name="see-also"></a>另请参阅  
- [使用 System Center Configuration Manager 和 Microsoft Intune 的混合移动设备管理 (MDM)](https://docs.microsoft.com/sccm/mdm/understand/hybrid-mobile-device-management)
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

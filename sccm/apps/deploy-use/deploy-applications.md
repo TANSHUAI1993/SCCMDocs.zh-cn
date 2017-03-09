@@ -17,8 +17,9 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 7be9abadeb51d4f9e862f69c332756b19ce3e110
-ms.openlocfilehash: a52bef3c8d12ffe2d9b13dc79cbc8950d3f36aea
+ms.sourcegitcommit: cb42b6f324dc0019c2109be4d91e0eab4dca4d70
+ms.openlocfilehash: 8c54bc455828712c7f9ea297f26c98c41848cf9c
+ms.lasthandoff: 03/08/2017
 
 
 ---
@@ -84,8 +85,8 @@ ms.openlocfilehash: a52bef3c8d12ffe2d9b13dc79cbc8950d3f36aea
 
     > [!NOTE]
     >  应用程序批准请求显示在“软件库”  工作区中“应用程序管理”  下的“批准请求”  节点中。 如果请求未在 45 天内获批准，则会将其删除。 此外，重新安装 Configuration Manager 客户端可能会取消任何挂起的批准请求。
-    > 批准安装应用程序后，可在 Configuration Manager 控制台单击“拒绝”（在批准前该按钮为灰色），选择拒绝该请求。
-    > 此操作不会从任何设备卸载应用程序，但会阻止用户从软件中心安装应用程序的新副本。
+    >  批准安装应用程序后，可在 Configuration Manager 控制台单击“拒绝”（在批准前该按钮为灰色），选择拒绝该请求。
+    >  此操作不会从任何设备卸载应用程序，但会阻止用户从软件中心安装应用程序的新副本。
 
 
 
@@ -116,8 +117,7 @@ ms.openlocfilehash: a52bef3c8d12ffe2d9b13dc79cbc8950d3f36aea
 
 >[!NOTE]
     >  将应用程序部署到 Windows Embedded 设备时，确保设备是配置了维护时段的集合的成员。 有关在将应用程序部署到 Windows Embedded 设备时使用的维护时段的详细信息，请参阅[创建 Windows Embedded 应用程序](../../apps/get-started/creating-windows-embedded-applications.md)主题。
-
-    >  The options **Software Installation** and **System restart (if required to complete the installation)** are not used if the deployment purpose is set to **Available**. You can also configure the level of notification a user sees when the application is installed.
+    > 如果部署目的设置为“可用”  ，则不使用选项“软件安装”  和“系统重新启动(如果要求完成安装)” 。 你还可以配置在安装应用程序时用户看到的通知的级别。
 
 ### <a name="specify-alert-options-for-the-deployment"></a>为部署指定警报选项
 
@@ -159,9 +159,4 @@ ms.openlocfilehash: a52bef3c8d12ffe2d9b13dc79cbc8950d3f36aea
 ## <a name="for-more-information"></a>更多相关信息：
 - [用于管理高风险部署的设置](../../protect/understand/settings-to-manage-high-risk-deployments.md)
 - [如何配置客户端设置](../../core/clients/deploy/configure-client-settings.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

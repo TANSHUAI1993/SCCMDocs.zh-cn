@@ -16,14 +16,15 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f83dc12aab96ad76a62582fc2f2fe3e0b99b3b67
-ms.openlocfilehash: efda1a8f010bb0125ef726d0b960317a4fdc4f28
+ms.sourcegitcommit: 8728d9f2ae63282a8f58b20105e488fb1a5ef55b
+ms.openlocfilehash: 4c94e4de5bbfe621492e8682c9424a48eb38196d
+ms.lasthandoff: 03/03/2017
 
 ---
 # <a name="install-and-configure-distribution-points-for-system-center-configuration-manager"></a>为 System Center Configuration Manager 安装和配置分发点
 
 *适用范围：System Center Configuration Manager (Current Branch)*
-
+ 
 安装 System Center Configuration Manager 分发点以承载部署到设备和用户的内容（文件和软件）。 还可以创建分发点组，该组可简化管理分发点以及将内容分发到分发点的方式。  
 
  安装新的分发点（使用安装向导）或管理现有分发点属性（通过编辑分发点属性）时，可配置大多数分发点设置。 有几个设置仅安装或编辑时才可用，但无法同时可用：  
@@ -44,7 +45,7 @@ ms.openlocfilehash: efda1a8f010bb0125ef726d0b960317a4fdc4f28
 
     -   **为分发点的数据传输配置计划**  
 
-##  <a name="a-namebkmkinstalla-install-a-distribution-point"></a><a name="bkmk_install"></a>安装分发点  
+##  <a name="bkmk_install"></a>安装分发点  
  你必须将站点系统服务器指定为分发点，然后才能将内容提供给客户端计算机使用。 你可以将分发点站点角色添加到新站点系统服务器，或将站点角色添加到现有站点系统服务器。  
 
  安装新的分发点时，可使用安装向导来帮助完成可用设置的配置。 开始之前，请注意以下问题：  
@@ -95,7 +96,7 @@ ms.openlocfilehash: efda1a8f010bb0125ef726d0b960317a4fdc4f28
 
 4.  进行所需更改后，请保存设置并关闭分发点属性。  
 
-##  <a name="a-namebkmkmanagea-manage-distribution-point-groups"></a><a name="bkmk_manage"></a>管理分发点组  
+##  <a name="bkmk_manage"></a>管理分发点组  
  分发点组为内容分发提供分发点的逻辑分组。 使用这些组，可以从中央位置管理和监视跨多个站点的分发点的内容。 请记住以下几点：
 
 -   可以将层次结构内的任何站点中的一个或多个分发点添加到分发点组。  
@@ -159,7 +160,7 @@ ms.openlocfilehash: efda1a8f010bb0125ef726d0b960317a4fdc4f28
 
 3.  在“可用分发点组”中，选择要将所选分发点添加为其成员的分发点组，然后选择“确定”。  
 
-##  <a name="a-namebkmkconfigsa-configure-a-distribution-point"></a><a name="bkmk_configs"></a>配置分发点  
+##  <a name="bkmk_configs"></a>配置分发点  
  各分发点支持各种不同的配置。 但是，并非所有分发点类型都支持所有配置。 例如，基于云的分发点不支持为 PXE 或多播启用的内容部署。 可在以下主题中找到有关特定限制的信息：  
 
 -   [结合使用基于云的分发点与 System Center Configuration Manager](../../../../core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md)  
@@ -343,9 +344,9 @@ ms.openlocfilehash: efda1a8f010bb0125ef726d0b960317a4fdc4f28
 
 此外：
 
-- 对于 1610 前的版本，可选中“允许客户端使用此站点系统作为内容的回退源位置”复选框，以便在没有其他分发点可用时让这些边界组外部的客户端回退并使用分发点作为内容的源位置。 有关边界组的详细信息，请参阅 [1511、1602 和 1606 版的边界组](/sccm/core/servers/deploy/configur/boundary-groups-for-1511-1602-and-1606)。 有关首选分发点的信息，请参阅 [System Center Configuration Manager 中内容管理的基本概念](../../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)。
+- 对于 1610 前的版本，可选中“允许客户端使用此站点系统作为内容的回退源位置”复选框，以便在没有其他分发点可用时让这些边界组外部的客户端回退并使用分发点作为内容的源位置。 有关边界组的详细信息，请参阅 [1511、1602 和 1606 版的边界组](/sccm/core/servers/deploy/configure/boundary-groups-for-1511-1602-and-1606)。 有关首选分发点的信息，请参阅 [System Center Configuration Manager 中内容管理的基本概念](../../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)。
 
-- 借助 1610 或更高版本，可配置边界组关系，定义客户端为查找内容而回退的时间以及可回退到的边界组。 有关详细信息，请参阅[边界组](/sccm/core/servers/deploy/configur/define-site-boundaries-and-boundary-groups#boundary-groups)。
+- 借助 1610 或更高版本，可配置边界组关系，定义客户端为查找内容而回退的时间以及可回退到的边界组。 有关详细信息，请参阅[边界组](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups)。
 
 
 ### <a name="schedule"></a>计划  
@@ -388,9 +389,4 @@ ms.openlocfilehash: efda1a8f010bb0125ef726d0b960317a4fdc4f28
 -   **脉冲模式**：此选项指定发送到分发点的数据块的大小。 你也可以指定在两次发送各个数据块之间的时间延迟。 如果必须在连接到分发点的极低带宽网络上发送数据，请使用此选项。 例如，你可能有每五秒发送 1 KB 数据的约束，而不管某个给定时间的链接速度或其使用率如何。  
 
 -   **限制为按小时指定的最大传输速率**：指定此设置以让站点仅使用你配置的时间百分比将数据发送到分发点。 如果使用此选项，Configuration Manager 将不会确定网络可用带宽，而是划分可发送数据的时间。 然后在一个短时间段内发送数据，之后的几个时间段则不发送数据。 例如，如果最大速率设置为 **50%**，Configuration Manager 传输数据一段时间后，在相同的时间内不发送任何数据。 不会管理实际数据量大小或数据块大小， 而只会管理发送数据期间的时间量。  
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 
