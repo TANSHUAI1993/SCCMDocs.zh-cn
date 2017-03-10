@@ -12,8 +12,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 71c44250-626e-482c-8794-434c6aeb2fb1
 caps.latest.revision: 6
-author: mtillman
-ms.author: mtillman
+author: andredm7
+ms.author: andredm
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
