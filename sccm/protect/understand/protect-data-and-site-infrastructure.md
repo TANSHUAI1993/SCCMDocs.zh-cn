@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2117f786-d521-4790-9e8d-ec096c63c9d7
 caps.latest.revision: 8
-author: Nbigman
-ms.author: nbigman
+author: Robstack
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 593fbd0587d54490246f48ae54f666bac6b7830d
-ms.openlocfilehash: c80750358d64cf87f8a3ce3a4c4f4030a9dfd742
+ms.sourcegitcommit: 8679df3f8a3b692391537bacd6144a4f2fae357b
+ms.openlocfilehash: d527cb4bfb55ca50c8d2a0fed7c427af5747fe99
+ms.lasthandoff: 02/09/2017
 
 
 ---
@@ -30,7 +31,7 @@ ms.openlocfilehash: c80750358d64cf87f8a3ce3a4c4f4030a9dfd742
 
 -   你可以通过使用 VPN 配置文件来启用 VPN 连接，从而让你的用户花费最少的精力就能连接到公司资源。 通过[ System Center Configuration Manager 中的 VPN 配置文件](../deploy-use/vpn-profiles.md)，了解更多信息。  
 
--   Wi-Fi 配置文件提供了一组工具和资源，帮助你为组织中的设备创建、部署和监视无线网络设置。 通过部署这些设置，你可以最大程度地减少最终用户连接到公司无线网络所需执行的工作。 通过 [System Center Configuration Manager 中的 Wi-Fi 配置文件](../deploy-use/introduction-to-wifi-profiles.md)，了解更多信息。  
+-   Wi-Fi 配置文件提供了一组工具和资源，帮助你为组织中的设备创建、部署和监视无线网络设置。 通过部署这些设置，你可以最大程度地减少最终用户连接到公司无线网络所需执行的工作。 通过 [System Center Configuration Manager 中的 Wi-Fi 配置文件](/sccm/protect/deploy-use/create-wifi-profiles)，了解更多信息。  
 
 -   [System Center Configuration Manager 中的证书配置文件](../deploy-use/introduction-to-certificate-profiles.md)描述了如何为用户设备配置连接到公司资源所需的凭据。  
 
@@ -41,9 +42,4 @@ ms.openlocfilehash: c80750358d64cf87f8a3ce3a4c4f4030a9dfd742
 -   电子邮件配置文件提供了一套工具和资源，以帮助你在设备上创建、部署和监视电子邮件设置。 这使用户无需进行任何设置便访问其个人设备上的企业电子邮件。 通过 [System Center Configuration Manager 中的电子邮件配置文件](../deploy-use/introduction-to-email-profiles.md)了解更多信息。  
 
 -   Configuration Manager 允许集成 Windows Hello 企业版（之前是 Microsoft Passport for Work），它是使用 Active Directory 或 Azure Active Directory 帐户取代密码、智能卡或虚拟智能卡进行登录的一种替代方法。 在 [System Center Configuration Manager 中的 Windows Hello 企业版设置](../deploy-use/windows-hello-for-business-settings.md)中了解详细信息。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

@@ -1,10 +1,10 @@
 ---
-title: "配置 Endpoint Protection | Microsoft Docs"
+title: "创建 Endpoint Protection 点站点系统角色 | Microsoft Docs"
 description: "了解如何将 Endpoint Protection 配置为管理 Configuration Manager 客户端计算机上的安全和恶意软件。"
 defintion: 
 definition: 
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 02/14/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -18,8 +18,9 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
-ms.openlocfilehash: 4639203bf5e90486ce4b97abc2fc4f54eae3afe9
+ms.sourcegitcommit: 017bd5b899b364fc832c721d63cc7dbad0a11671
+ms.openlocfilehash: 884b5f2ec3f1aa273128dfeaaf88d969c9d8669d
+ms.lasthandoff: 02/15/2017
 
 
 ---
@@ -60,11 +61,6 @@ ms.openlocfilehash: 4639203bf5e90486ce4b97abc2fc4f54eae3afe9
 
 8.  完成向导。
 
-> [!div class="button"]
-[下一步 >](endpoint-configure-alerts.md)
-
-> [!div class="button"]
-[返回 >](endpoint-protection-configure.md)
 
 ## <a name="existing-site-system-server"></a>现有站点系统服务器
 
@@ -89,15 +85,4 @@ ms.openlocfilehash: 4639203bf5e90486ce4b97abc2fc4f54eae3afe9
     >  此选项配置默认使用的云保护服务（以前称为 MAPS）设置。 然后可以为你配置的每个反恶意软件策略配置自定义设置。 有关详细信息，请参阅[如何在 System Center Configuration Manager 中为 Endpoint Protection 创建和部署反恶意软件策略](endpoint-antimalware-policies.md)。
 
 8.  完成向导。
-
-> [!div class="button"]
-[下一步 >](endpoint-configure-alerts.md)
-
-> [!div class="button"]
-[返回 >](endpoint-protection-configure.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 
