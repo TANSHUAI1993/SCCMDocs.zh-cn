@@ -176,7 +176,7 @@
 ###  [使用服务连接工具](servers/manage/use-the-service-connection-tool.md)
 ###  [使用更新注册工具](servers/manage/use-the-update-registration-tool-to-import-hotfixes.md)
 ###  [使用修补程序安装程序](servers/manage/use-the-hotfix-installer-to-install-updates.md)
-<!-- 
+<!--
 ###  [Checklist for installing update 1702](servers/manage/checklist-for-installing-update-1702.md)
 -->
 ###  [用于安装更新 1610 的核对清单](servers/manage/checklist-for-installing-update-1610.md)
@@ -185,6 +185,8 @@
 ###  [Checklist for installing update 1602](servers/manage/checklist-for-installing-update-1602.md)
 ###  [Support for current branch versions](servers/manage/current-branch-versions-supported.md)  
 -->
+###  [当前分支版本支持](servers/manage/current-branch-versions-supported.md)  
+
 
 ##   监视基础结构
 ###  [使用警报和状态系统](servers/manage/use-alerts-and-the-status-system.md)
