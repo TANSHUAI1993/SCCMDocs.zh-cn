@@ -2,7 +2,7 @@
 title: "监视 Endpoint Protection 状态 | Microsoft Docs"
 description: "了解如何在 System Center Configuration Manager 层次结构中监视 Endpoint Protection。"
 ms.custom: na
-ms.date: 12/9/2016
+ms.date: 03/13/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 0fa837c68eb073d2ceaf48c938137a94141a102e
 ms.openlocfilehash: 99e266e44f718d97c2a6e61e8e6816752751ed7b
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -27,7 +28,7 @@ ms.openlocfilehash: 99e266e44f718d97c2a6e61e8e6816752751ed7b
 
 可以使用“监视”工作区中的“安全性”下的“Endpoint Protection 状态”节点，“资产和符合性”工作区中的“Endpoint Protection”节点以及使用报表，在 Microsoft System Center Configuration Manager 层次结构中监视 Endpoint Protection。  
 
-##  <a name="a-namebkmk1a-how-to-monitor-endpoint-protection-by-using-the-endpoint-protection-status-node"></a><a name="BKMK_1"></a>如何使用“Endpoint Protection 状态”节点监视 Endpoint Protection  
+##  <a name="BKMK_1"></a>如何使用“Endpoint Protection 状态”节点监视 Endpoint Protection  
 
 1.  在 Configuration Manager 控制台中，单击“监视” 。  
 
@@ -47,7 +48,7 @@ ms.openlocfilehash: 99e266e44f718d97c2a6e61e8e6816752751ed7b
     > [!IMPORTANT]  
     >  “Endpoint Protection 状态”节点中显示的信息基于上次从 Configuration Manager 数据库汇总的数据，可能不是最新的。 如果想要检索最新数据，则在“主页”选项卡上，单击“运行摘要”，或单击“计划摘要”以调整摘要间隔。  
 
-##  <a name="a-namebkmk2a-how-to-monitor-endpoint-protection-in-the-assets-and-compliance-workspace"></a><a name="BKMK_2"></a>如何在“资产和符合性”工作区中监视 Endpoint Protection  
+##  <a name="BKMK_2"></a>如何在“资产和符合性”工作区中监视 Endpoint Protection  
 
 1.  在 Configuration Manager 控制台中，单击“资产和符合性” 。  
 
@@ -59,7 +60,7 @@ ms.openlocfilehash: 99e266e44f718d97c2a6e61e8e6816752751ed7b
 
 3.  在 <集合名称\> 列表中，选择一台计算机，然后单击“恶意软件详细信息”选项卡。  
 
-##  <a name="a-namebkmk3a-how-to-monitor-endpoint-protection-by-using-reports"></a><a name="BKMK_3"></a>如何使用报表监视 Endpoint Protection  
+##  <a name="BKMK_3"></a>如何使用报表监视 Endpoint Protection  
  使用以下报表可帮助查看有关层次结构中的 Endpoint Protection 的信息。 你还可以使用这些报表来帮助针对任何 Endpoint Protection 问题进行故障排除。 有关如何在 Configuration Manager 中配置报表的详细信息，请参阅 [System Center Configuration Manager 中的报表](../../core/servers/manage/reporting.md)和 [System Center Configuration Manager 中的日志文件](../../core/plan-design/hierarchy/log-files.md)。 Endpoint Protection 报表处于 Endpoint Protection 文件夹中。  
 
 |报告名称|描述|  
@@ -81,9 +82,4 @@ ms.openlocfilehash: 99e266e44f718d97c2a6e61e8e6816752751ed7b
 |**允许**|管理用户选择允许包含要运行的恶意软件的软件。|  
 |**不执行任何操作**|Endpoint Protection 对恶意软件不执行任何操作。 如果重新启动计算机后检测到恶意软件和不能再检测到恶意软件 ； 这可能会发生例如，如果映射的网络驱动器上检测到的恶意软件是不重新连接时在计算机重新启动。|  
 |**已阻止**|Endpoint Protection 已阻止恶意软件运行。 这可能是如果发现计算机上的进程是包含恶意软件。|
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 
