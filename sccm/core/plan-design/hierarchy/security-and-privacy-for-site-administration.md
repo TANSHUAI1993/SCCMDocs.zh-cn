@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 168650cca28fe1331e48ea5e8e025e110dda835f
-ms.openlocfilehash: 4ca43db385ea97d5d026c50a799b783096c05d36
-ms.lasthandoff: 03/01/2017
+ms.sourcegitcommit: f9097014c7e988ec8e139e518355c4efb19172b3
+ms.openlocfilehash: a60b8c103a303dcae0bd66f3060d5a8f17d1cef9
+ms.lasthandoff: 03/04/2017
 
 
 ---
@@ -306,7 +306,8 @@ Configuration Manager 中的一些站点系统角色需要 IIS。 通过保护 I
 ##  <a name="BKMK_Security_FSP"></a>回退状态点的最佳安全做法  
  如果在 Configuration Manager 中安装回退状态点，请使用下列最佳安全做法。  
 
- 若要深入了解安装回退状态点时的安全注意事项，请参阅[确定是否需要回退状态点](../../../core/clients/deploy/plan/determine-the-site-system-roles-for-clients.md#BKMK_Determine_FSP)。  
+ 有关安装回退状态点时的安全注意事项的详细信息，请参阅 [Determine Whether You Require a Fallback Status Point](../../../core/clients/deploy/plan/determine-the-site-system-roles-for-clients.md#determine-if-you-need-a-fallback-status-point)。  
+
 
 **不要在站点系统上运行其他站点系统角色，也不要在域控制器上安装回退状态点。**  
 
