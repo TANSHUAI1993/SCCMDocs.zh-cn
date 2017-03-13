@@ -2,7 +2,7 @@
 title: "Endpoint Protection 的 Windows 防火墙策略 | Microsoft Docs"
 description: "了解如何在 System Center 2012 Configuration Manager 中为 Endpoint Protection 创建和部署防火墙策略。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/07/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
 ms.openlocfilehash: 7a02ae3fb102ab85f98d3b7453fc0736e5a11200
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -62,7 +63,7 @@ System Center 2012 Configuration Manager 中的 Endpoint Protection 的防火墙
 
 7.  验证新的 Windows 防火墙策略是否显示在“Windows 防火墙策略”  列表中。  
 
-##  <a name="a-namebkmkassigna-to-deploy-a-windows-firewall-policy"></a><a name="BKMK_Assign"></a> 若要部署 Windows 防火墙策略  
+##  <a name="BKMK_Assign"></a> 若要部署 Windows 防火墙策略  
 
 1.  在 Configuration Manager 控制台中，单击“资产和符合性” 。  
 
@@ -78,9 +79,4 @@ System Center 2012 Configuration Manager 中的 Endpoint Protection 的防火墙
 
     > [!IMPORTANT]  
     >  将 Windows 防火墙策略部署到一个集合时，会在 2 小时内按随机顺序向计算机应用此策略，以避免网络满溢。
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 
