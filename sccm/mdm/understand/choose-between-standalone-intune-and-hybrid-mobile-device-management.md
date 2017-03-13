@@ -2,7 +2,7 @@
 title: "选择 Intune 独立版或混合 MDM | Microsoft Docs"
 description: "选择是使用 Intune 和 Configuration Manager 部署混合移动设备管理还是运行 Intune 独立版。"
 ms.custom: na
-ms.date: 11/07/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,9 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: a5c9e312641d91ff297fbcfa6066a93c2a0e1ee0
-ms.openlocfilehash: 3480484a96e96a191b4f02208fcf838db5cb6ba7
+ms.sourcegitcommit: 84e3896dd05a8c157f4e94625b0eca60aacc11d3
+ms.openlocfilehash: 8f2625aadfd0aed92d9922c7e3c0d3d166a78cdd
+ms.lasthandoff: 02/25/2017
 
 ---
 # <a name="choose-between-microsoft-intune-standalone-and-hybrid-mobile-device-management-with-system-center-configuration-manager"></a>在 Microsoft Intune 独立版与使用 System Center Configuration Manager 实现的混合移动设备管理之间做出选择
@@ -44,16 +45,11 @@ Intune 独立版是仅涉及云而不涉及本地资源的 MDM 解决方案，�
 
 -   基于角色的访问控制 - 基于分配的角色限制对管理功能的访问。
 
--   缩放 - 部署和管理超过 50,000 台移动设备。
+-   缩放 - 部署和管理超过 100,000 台移动设备。
 
 -   单一管理平台 – 使用同一控制台管理传统电脑客户端和 Intune 管理的设备。
 
 如果正在开始计划 Intune 部署，并且有为期几个月的试验、验收测试和部署时段，则可考虑选择 Intune 独立版，同时了解云服务的更新将包含更多功能。 2017 年上半年，Intune 独立版将接收更新，提供使用 Configuration Manager 的混合部署的大部分高级功能。 Intune 独立版将很快移动到 Microsoft Azure 云平台，它将具有增强的可扩展性、通过 Azure 门户基于角色的访问、自定义报表和通过 Azure 图形 API 的编程访问。
 
 可从混合模式版本切换到 Intune 独立版本，或从独立版本切换到混合版本，但需要 Microsoft 支持和操作的帮助。 还需要在管理机构更改后取消注册并重新注册所有设备。  Microsoft 正致力于改善未来服务更新中切换配置的体验。
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

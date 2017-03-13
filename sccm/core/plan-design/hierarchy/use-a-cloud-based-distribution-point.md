@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 97051d9c65ef5ea28c94468b24863120624e8de0
-ms.openlocfilehash: b78b3b20a8b317a242cd06f9fda6326f41673915
+ms.sourcegitcommit: 3eab8e62ace29c0fcb24d47ec7e398d807347a38
+ms.openlocfilehash: a1d701c77afb4d6317d8a137fdf46422063df085
+ms.lasthandoff: 02/28/2017
 
 
 ---
@@ -62,7 +63,7 @@ ms.openlocfilehash: b78b3b20a8b317a242cd06f9fda6326f41673915
 
 基于云的分发点具有下列限制：  
 
--   你不能使用基于云的分发点来承载软件更新包。  
+-  使用具有修补程序 KB4010155 的 1610 版之前，不能使用基于云的分发点来承载软件更新包。 1610 版之后的下一 Current Branch 版本将支持此选项，且无需安装此修补程序。  
 
 -   无法将基于云的分发点用于 PXE 或启用多播的部署。  
 
@@ -76,7 +77,7 @@ ms.openlocfilehash: b78b3b20a8b317a242cd06f9fda6326f41673915
 
 -   无法将基于云的分发点配置为请求分发点。  
 
-##  <a name="a-namebkmkprereqsclouddpa-prerequisites-for-cloud-based-distribution-points"></a><a name="BKMK_PrereqsCloudDP"></a> 基于云的分发点的先决条件  
+##  <a name="BKMK_PrereqsCloudDP"></a> 基于云的分发点的先决条件  
  基于云的分发点需要使用下列先决条件：  
 
 -   Azure 订阅（请参阅本主题中的[关于订阅和证书](#BKMK_CloudDPCerts)）。
@@ -91,7 +92,7 @@ ms.openlocfilehash: b78b3b20a8b317a242cd06f9fda6326f41673915
 
 -   客户端必须能够访问 Internet 以使用基于云的分发点。  
 
-##  <a name="a-namebkmkclouddpcosta-cost-of-using-cloud-based-distribution"></a><a name="BKMK_CloudDPCost"></a> 使用基于云的分发的成本  
+##  <a name="BKMK_CloudDPCost"></a> 使用基于云的分发的成本  
  当使用基于云的分发点时，请规划 Configuration Manager 客户端进行数据存储和下载传输的成本。  
 
  Configuration Manager 包括用于帮助控制成本和监视数据访问的选项：  
@@ -139,7 +140,7 @@ ms.openlocfilehash: b78b3b20a8b317a242cd06f9fda6326f41673915
 
      若要停止云服务，在 Configuration Manager 控制台中，在“管理”工作区中的“云服务”下的“云分发点”节点中选择分发点。 接着，选择“停止服务”以停止在 Azure 中运行的云服务。  
 
-##  <a name="a-namebkmkclouddpcertsa-about-subscriptions-and-certificates-for-cloud-based-distribution-points"></a><a name="BKMK_CloudDPCerts"></a> 关于基于云的分发点的订阅和证书  
+##  <a name="BKMK_CloudDPCerts"></a> 关于基于云的分发点的订阅和证书  
  基于云的分发点需要证书，以使 Configuration Manager 能够管理承载分发点的云服务，以及让客户端访问分发点中的内容。 以下信息对这些证书进行了概述。 有关详细信息，请参阅 [System Center Configuration Manager 的 PKI 证书要求](../../../core/plan-design/network/pki-certificate-requirements.md)。  
 
  **证书**  
@@ -163,7 +164,7 @@ ms.openlocfilehash: b78b3b20a8b317a242cd06f9fda6326f41673915
 
    有关此证书的示例部署，请参阅 [System Center Configuration Manager 的 PKI 证书的分步部署示例：Windows Server 2008 证书颁发机构](/sccm/core/plan-design/network/example-deployment-of-pki-certificates)主题中的**为基于云的分发点部署服务证书**部分。  
 
-##  <a name="a-namebkmktasksa-common-management-tasks-for-cloud-based-distribution-points"></a><a name="bkmk_Tasks"></a> 基于云的分发点的常见管理任务  
+##  <a name="bkmk_Tasks"></a> 基于云的分发点的常见管理任务  
 
 -   **站点服务器到基于云的分发点的通信**：安装基于云的分发点时，必须分配一个主站点以管理将内容传输到云服务的方式。 此操作等效于在特定站点上安装分发点站点系统角色。  
 
@@ -185,7 +186,7 @@ ms.openlocfilehash: b78b3b20a8b317a242cd06f9fda6326f41673915
 
 3.  当首选分发点或远程分发点不可用时，则客户端可能会回退以从基于云的分发点中获取内容。  
 
-    
+
 
   当客户端使用基于云的分发点作为内容位置时，客户端使用 Configuration Manager 访问令牌自行向基于云的分发点进行身份验证。 如果客户端信任 Configuration Manager 基于云的分发点证书，则客户端可以下载请求的内容。  
 
@@ -212,9 +213,4 @@ ms.openlocfilehash: b78b3b20a8b317a242cd06f9fda6326f41673915
 -   **卸载基于云的分发点**：若要卸载基于云的分发点，可在 Configuration Manager 控制台中选择该分发点，然后选择“删除”。  
 
     从层次结构中删除基于云的分发点时，Configuration Manager 会从 Azure 中的云服务中删除内容。  
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 
