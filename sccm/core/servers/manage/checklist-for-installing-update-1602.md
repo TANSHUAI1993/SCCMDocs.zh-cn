@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: a2e2bc5e873c48283d18ea6eaa5d1bb351f2a033
-ms.openlocfilehash: 1c3149b4c0247377ad556b6fe594047a6f14b989
+ms.sourcegitcommit: 30af3326578d39c6d995672071705bcaeb877e4d
+ms.openlocfilehash: e73055707454bc052b753c5e74be9674d6aa5b8c
+ms.lasthandoff: 02/23/2017
 
 
 ---
@@ -112,7 +113,7 @@ ms.openlocfilehash: 1c3149b4c0247377ad556b6fe594047a6f14b989
 -   如果在主站点上对管理点使用数据库副本，请在创建站点数据库备份之前禁用复制。  
 
 Configuration Manager 不支持辅助站点备份，也不支持辅助站点数据库的测试升级。   
-请勿在生产站点数据库上运行测试数据库升级。 执行此任务会升级站点数据库，并可能导致你的站点无法运行。 有关详细信息，请参阅[升级到 System Center Configuration Manager](../../../core/servers/deploy/install/upgrade-to-configuration-manager.md) 中的[测试站点数据库升级](../../../core/servers/deploy/install/upgrade-to-configuration-manager.md#bkmk_test)部分。  
+请勿在生产站点数据库上运行测试数据库升级。 执行此任务会升级站点数据库，并可能导致你的站点无法运行。 有关详细信息，请参阅**安装控制台内部更新前**中的[步骤 2：在安装更新前测试数据库升级](/sccm/core/servers/manage/install-in-console-updates#bkmk_step2)。  
 
  **规划客户端试点：**安装更新客户端的更新后，可以在新的客户端更新部署和升级所有活动的客户端之前在预生产中对其进行测试。   
 
@@ -136,9 +137,4 @@ Configuration Manager 不支持辅助站点备份，也不支持辅助站点数�
 
 ## <a name="see-also"></a>另请参阅  
  [System Center Configuration Manager 的更新](../../../core/servers/manage/updates.md)
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

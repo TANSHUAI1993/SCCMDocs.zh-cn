@@ -17,8 +17,9 @@ ms.author: andredm
 manager: angrobe
 robots: noindex
 translationtype: Human Translation
-ms.sourcegitcommit: c13c6268fa76ade7feb0981f9c4a6e325e393aca
-ms.openlocfilehash: 4cc7148be602367b579d63535a4938919bacf829
+ms.sourcegitcommit: b1295fff41d99b0bd6fc00ccab7a4b8bbdb60866
+ms.openlocfilehash: dda0916fac15cf768ecc2a44fda3b8939bcd048e
+ms.lasthandoff: 02/27/2017
 
 ---
 
@@ -218,12 +219,14 @@ ms.openlocfilehash: 4cc7148be602367b579d63535a4938919bacf829
   - **启用安全启动：**启用安全启动后，会将系统强制启动为工厂信任的状态。 并且启用安全启动后，用于启动计算机的核心组件必须具有制造设备的组织所信任的正确的加密签名。 UEFI 固件将在对此进行验证后才允许计算机启动。 如果有任何文件被篡改，破坏了其签名，则系统将不会启动。
   - **启用开机初期启动的反恶意软件（此设置仅适用于电脑）：**开机初期启动的反恶意软件 (ELAM) 在网络中的计算机启动后、第三方驱动程序初始化之前，对计算机提供保护。<br />默认关闭此规则。
 
+- **不能在设备上安装的应用：**如果用户安装的应用来自管理员非符合性应用列表，则该应用将在尝试访问公司电子邮件时受阻。 将应用添加到管理员定义的非符合性列表时，此规则要求输入应用名称和应用 ID。 也可添加应用发布者，但并非必需。
+
+  **在以下设备上受支持：**
+  * iOS 6+
+  * Android 4.0+
+  * Samsung KNOX 标准版 4.0+
+
   有关 HAS 服务工作原理的详细信息，请参阅 [运行状况证明 CSP](https://msdn.microsoft.com/library/dn934876.aspx)。
   **在以下设备上受支持：**
   * Windows 10 和 Windows 10 移动版
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

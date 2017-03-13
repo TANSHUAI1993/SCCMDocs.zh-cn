@@ -2,7 +2,7 @@
 title: System Center Configuration Manager Technical Preview | Microsoft Docs
 description: "了解可让你试用 System Center Configuration Manager 中的新功能和新特性的 Technical Preview 版本。"
 ms.custom: na
-ms.date: 2/1/2017
+ms.date: 2/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 4b1daa727477b1273cdbee1bc7e3ac8af5911ff0
-ms.openlocfilehash: 4703178c5ce3e23cb9d2e4557466fcec571c2983
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: 0d1f8eb9274dde96eb4295c007c0f49036d1a3de
+ms.openlocfilehash: e140ef9daad9fb4105cea543115af19a4378c903
+ms.lasthandoff: 02/27/2017
 
 
 ---
@@ -36,7 +36,7 @@ ms.lasthandoff: 02/22/2017
 
 
 
-##  <a name="a-namebkmkreqsa-requirements-and-limitations-for-the-technical-preview"></a><a name="bkmk_reqs"></a> Technical Preview 的要求和限制  
+##  <a name="bkmk_reqs"></a> Technical Preview 的要求和限制  
 
 > [!IMPORTANT]     
 >  Technical Preview 仅授权用于实验室环境。  Microsoft 可能无法提供支持服务，预览软件中某些功能可能不可用。 此外，相对于面向市场提供的软件，预览版软件可能采用简化的或不同的安全性、隐私性、可访问性、可用性和可靠性标准。  
@@ -77,7 +77,7 @@ ms.lasthandoff: 02/22/2017
 
 -   不支持从此预览版升级到生产版本（当前分支）。 但是，更新可用于预览版本时，可以从 Configuration Manager 控制台的“更新和与维护服务”节点查找并安装它们。 有关控制台中升级过程的视频，请观看 youtube.com 上的 [Installing ConfigMgr Update Packages（安装 ConfigMgr 更新包）](https://www.youtube.com/embed/KBd_EGFbUT8) 。  
 
-##  <a name="a-namebkmkinstalla-install-and-update-the-technical-preview"></a><a name="bkmk_install"></a> 安装并更新技术预览版  
+##  <a name="bkmk_install"></a> 安装并更新技术预览版  
  System Center Configuration Manager Technical Preview 与 System Center Configuration Manager 的当前版本是不同的。  
 
  若要使用技术预览版，必须先安装技术预览版内部版本的 **基线版本** 。 安装基线版本之后，可使用 **控制台内部更新** 来升级此内部版本，以便使用最新预览版使你的安装程序保持最新。     通常，每个月都会提供新版本的 Technical Preview。
@@ -95,7 +95,7 @@ ms.lasthandoff: 02/22/2017
 
 
 
-##  <a name="a-namebkmktpfeedbacka-providing-feedback"></a><a name="BKMK_TPFeedback"></a> 提供反馈  
+##  <a name="BKMK_TPFeedback"></a> 提供反馈  
  我们希望收到有关技术预览版的反馈。 若要提交关于每个预览版中的功能的反馈，请使用指向我们的反馈表的链接，该反馈表位于 Microsoft Connect 站点上的 [Configuration Manager 反馈计划](https://connect.microsoft.com/ConfigurationManagervnext/Feedback) 页中。  
 
  此外，如果你对于想要看到的新功能有任何想法，也请让我们知道。 若要提交新的想法，并为他人提交的想法投票，请 [访问我们的用户之声页面](http://configurationmanager.uservoice.com)。  
@@ -105,11 +105,23 @@ ms.lasthandoff: 02/22/2017
 
 
 
-##  <a name="a-namebkmktpcapsa-capabilities-delivered-in-technical-previews"></a><a name="bkmk_tpCaps"></a> 技术预览版中提供的功能  
+##  <a name="bkmk_tpCaps"></a> 技术预览版中提供的功能  
  以下是每个 Configuration Manager Technical Preview 提供的功能。  从某一技术预览版开始提供的功能，在其后的版本中将保持可用。 同样，已添加到 System Center Configuration Manager 发行版本 (Current Branch) 的功能在后续的 Technical Preview 中将保持可用。  请单击查看每个预览版本的内容，了解有关特定功能的详细信息。  
 
  |功能|Technical Preview 版本|Current Branch 版本|  
  |----------------|---------------------|--------------------|
+ |iOS 设备的新符合性设置|[Tech Preview 1702](capabilities-in-technical-preview-1702.md#new-compliance-settings-for-ios-devices)|![未添加](media/Red_X.gif)|
+ |创建具有 S/MIME 支持的 PFX 证书|[Tech Preview 1702](capabilities-in-technical-preview-1702.md#create-pfx-certificates-with-s-mime-support)|![未添加](media/Red_X.gif)|
+ |在安装应用程序之前检查运行的可执行文件|[Tech Preview 1702](capabilities-in-technical-preview-1702.md#check-for-running-executable-files-before-installing-an-application)|![未添加](media/Red_X.gif)|
+ |从 Configuration Manager 控制台发送反馈 | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#send-feedback-from-the-configuration-manager-console)    |![未添加](media/Red_X.gif)  |
+ |更新和维护服务的更改  | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#changes-for-updates-and-servicing)  |![未添加](media/Red_X.gif) |
+ |对等缓存功能改进  | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#peer-cache-improvements) |![未添加](media/Red_X.gif)|
+ |使用 Azure Active Directory  | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#azurediscovery) |![未添加](media/Red_X.gif)|
+ |条件性访问设备符合性策略改进 | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#conditional-access-device-compliance-policy-improvements) |![未添加](media/Red_X.gif)|
+ |反恶意软件客户端版本警报 | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#antimalware-client-version-alert) |![未添加](media/Red_X.gif)|
+ |Windows Update for Business 更新的符合性评估 | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#compliance-assessment-for-windows-update-for-business-updates) |![未添加](media/Red_X.gif)|
+ |针对影响重大的任务序列，改进软件中心设置和消息通知| [Tech Preview 1702](capabilities-in-technical-preview-1702.md#improvements-to-software-center-settings-and-notification-messages-for-high-impact-task-sequences) |![未添加](media/Red_X.gif)|
+ |Android for Work 支持| [Tech Preview 1702](capabilities-in-technical-preview-1702.md#android-for-work-support) |![未添加](media/Red_X.gif)|
  |软件更新点的边界组改进 | [Tech Preview 1701](capabilities-in-technical-preview-1701.md#boundary-groups-improvements-for-software-update-points)    |![未添加](media/Red_X.gif)  |
  |硬件清单将收集 UEFI 信息 | [Tech Preview 1701](capabilities-in-technical-preview-1701.md#hardware-inventory-collects-uefi-information)|![未添加](media/Red_X.gif)  |
  |对操作系统部署的改进| [Tech Preview 1701](capabilities-in-technical-preview-1701.md#improvements-to-operating-system-deployment)|![未添加](media/Red_X.gif)  |

@@ -17,8 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
-ms.openlocfilehash: d51a602de9e0cf85d80c74c034613002682e52ea
+ms.sourcegitcommit: a0d4eb601948aa3abb12409f3475d69cacf4a6aa
+ms.openlocfilehash: 90e16b316872cb370c9c2e645f46ac12afab7107
+ms.lasthandoff: 02/28/2017
 
 ---
 
@@ -26,7 +27,7 @@ ms.openlocfilehash: d51a602de9e0cf85d80c74c034613002682e52ea
 
 *适用范围：System Center Configuration Manager (Current Branch) 和 (Long-Term Servicing Branch)*
 
-请使用本主题，了解有关 2016 年 10 月发行的 System Center Configuration Manager 1606 版（包括 Current Branch 1606 版、Long-Term Servicing Branch (LTSB) 和 Current Branch 1606 版的评估安装）的可用安装选项的许可要求。
+参阅本主题，了解 System Center Configuration Manager 1606 版本 2016 年 10 月发行版中提供的安装选项的许可要求。 这些安装选项包括 Current Branch 版本 1606、Long-Term Servicing Branch (LTSB) 和Current Branch 版本 1606 的评估安装。
 
 **许可概述：**   
 自 2016 年 10 月 1 日起，具有 System Center Configuration Manager 许可证上可用的软件保障 (SA) 或同等订阅权限的客户，有权使用 System Center Configuration Manager 的 2016 年 10 月发行的版本 1606。 自 2016 年 10 月 1 日起（含），对 System Center Configuration Manager 具有权限的客户在安装时将会发现两个已许可的选项：Current Branch 和 Long-Term Servicing Branch (LTSB)。
@@ -37,7 +38,7 @@ ms.openlocfilehash: d51a602de9e0cf85d80c74c034613002682e52ea
 
 
 ## <a name="system-center-configuration-manager-licensed-branches"></a>System Center Configuration Manager 已许可的分支  
-本主题参考软件保障协议（或等效订阅权限），此协议是授予安装和使用 Configuration Manager 权限的 Microsoft 许可协议。
+本主题参考软件保障协议（或等效订阅权限），此协议是授予 Configuration Manager 安装和使用权限的 Microsoft 许可协议。
 
 
 |分支|许可|详细信息|
@@ -51,22 +52,22 @@ ms.openlocfilehash: d51a602de9e0cf85d80c74c034613002682e52ea
 
 ## <a name="licensed-branches"></a>许可的分支
 自 2016 年 10 月 1 日起，具有 System Center Configuration Manager 许可证上可用的软件保障 (SA) 或同等订阅权限的客户，有权使用 System Center Configuration Manager 的 2016 年 10 月发行的版本 1606。 自 2016 年 10 月 1 日起（含），对 System Center Configuration Manager 1606 版具有权限的客户在安装时将会发现两个许可选项：
--   **Current Branch**
--   **Long-Term Servicing Branch (LTSB)**
+-    **Current Branch**
+-    **Long-Term Servicing Branch (LTSB)**
 
 
 有关详细信息，请参阅上节中的表。
 
 
 ## <a name="software-assurance-agreements-and-system-center-configuration-manager"></a>软件保障协议和 System Center Configuration Manager
-自 2016 年 10 月 1 日起（含），System Center Configuration Manager 许可证上的软件保障或等效订阅权限的状态决定可安装和使用的分支。
+自 2016 年 10 月 1 日起（包含当日），System Center Configuration Manager 许可证上的软件保障或等效订阅权限的状态决定可安装和使用的分支。
 
 
 ### <a name="software-assurance-and-the-current-branch"></a>软件保障和 Current Branch
 System Center Configuration Manager Current Branch 的使用权限可以由以下提供：
--  **System Center：**具有 System Center Standard 上的可用 SA 或数据中心许可证的客户可安装和使用 System Center Configuration Manager 的 Current Branch 选项。
+-  **System Center：**如果客户具有 System Center Standard 上的可用 SA 或数据中心许可证，则可安装和使用 System Center Configuration Manager 的 Current Branch 选项。
 
--  **System Center Configuration Manager：**具有 System Center Configuration Manager 许可证上的可用 SA 或等效订阅权限的客户可安装和使用 System Center Configuration Manager 的 Current Branch 选项。
+-  **System Center Configuration Manager：**如果客户具有 System Center Configuration Manager 许可证上的可用 SA 或等效订阅权限，则可安装和使用 System Center Configuration Manager 的 Current Branch 选项。
 
 自 2016 年 10 月 1 日起（含），如果具有 System Center Configuration Manager 许可证上的可用 SA（或等效订阅权限）：
 - 可以安装并使用 Current Branch。
@@ -74,7 +75,7 @@ System Center Configuration Manager Current Branch 的使用权限可以由以�
 
 ### <a name="software-assurance-and-the-ltsb"></a>软件保障和 LTSB
  自 2016 年 10 月 1 日起（含），如果具有 System Center Configuration Manager 许可证上的可用 SA（或等效订阅权限）：
- - 可以安装并使用 LTSB。 对 System Center Configuration Manager 具有永久权限或者允许 SA 或订阅失效的客户，可以在失效时安装当前的 System Center Configuration Manager LTSB 版本。
+ - 可以安装并使用 LTSB。 如果客户对 System Center Configuration Manager 具有永久权限或者允许 SA 或订阅失效，则其可在失效时安装当前的 System Center Configuration Manager LTSB 版本。
 
 LTSB 以 Current Branch 1606 版为基础，具有以下限制：
   - 不支持将 Current Branch 转换为 LTSB。 如果当前拥有 Current Branch 站点，必须将 LTSB 作为新站点安装。  
@@ -83,15 +84,15 @@ LTSB 以 Current Branch 1606 版为基础，具有以下限制：
 
 
 ### <a name="software-assurance-expiration-date"></a>软件保障到期日期
-从 2016 年 10 月发布的 System Center Configuration Manager 的 1606 版基线介质开始，可以指定软件保障协议的到期日期。 若要执行此操作，可以使用“软件保障到期日期”，这是当运行 Configuration Manager 安装程序或稍后从 Configuration Manager 控制台中可指定为方便的提醒的可选值。
+从 2016 年 10 月发布的 System Center Configuration Manager 的 1606 版基线介质开始，可以指定软件保障协议的到期日期。 “软件保障到期日期”是一个可选值，可在运行 Configuration Manager 安装程序时或稍后从 Configuration Manager 控制台中指定该值。
 
 >  [!NOTE]   
->  Microsoft 不会验证输入的到期日期，且不会将此日期用作许可证验证。  相反，可以使用该日期作为到期日期提醒。 这很有用，因为 Configuration Manager 定期检查在线提供的新软件更新，而软件保障许可证应为最新状态，以便有资格使用这些额外的更新。    
+>  Microsoft 不会验证指定的到期日期，且不使用此日期验证许可证。  相反，可以使用该日期作为到期日期提醒。 这很有用，因为 Configuration Manager 会定期检查在线提供的新软件更新，而软件保障许可证应为最新状态，才有资格使用这些额外的更新。    
 
 **指定日期：**
-- 从 System Center Configuration Manager 1606 版基线介质运行安装程序时，可以在安装向导的“产品密钥”页指定值。
+- 通过 System Center Configuration Manager 1606 版基线介质运行安装程序时，可在安装向导的“产品密钥”页指定该值。
 
-- 还可以在 Configuration Manager 控制台中的“层次结构设置属性”的“许可”选项卡上指定此日期。
+- 可在 Configuration Manager 控制台的“层次结构设置属性”的“许可”选项卡上指定此值。
 
 有关软件保障许可和 System Center Configuration Manager 的 Current Branch 的详细信息，请参阅 [System Center Configuration Manager 的许可和分支](/sccm/core/understand/learn-more-editions)。
 
@@ -113,9 +114,4 @@ LTSB 以 Current Branch 1606 版为基础，具有以下限制：
 - 可在此查看可用的软件保障协议（从约 43 秒开始）：[https://www.microsoft.com/showcase/video.aspx?uuid=fe1846cb-1d26-49fc-b064-57b25dcc31a0](https://www.microsoft.com/showcase/video.aspx?uuid=fe1846cb-1d26-49fc-b064-57b25dcc31a0)。
 
 - 如何获取 VLSC 的权限：[https://www.microsoft.com/showcase/video.aspx?uuid=ac4ed1ca-d0a9-43cd-89fa-74ccb555dec4](https://www.microsoft.com/showcase/video.aspx?uuid=ac4ed1ca-d0a9-43cd-89fa-74ccb555dec4)。  可以将 VLSC 读取和写入权限委派给组织中的其他人。
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

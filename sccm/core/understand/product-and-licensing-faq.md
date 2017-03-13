@@ -2,7 +2,7 @@
 title: "产品和许可常见问题解答 | Microsoft Docs"
 description: "查找 System Center Configuration Manager 产品和许可常见问题的答案。"
 ms.custom: na
-ms.date: 2/17/2017
+ms.date: 2/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 81689631899b626bd33df8853cf82646d7e57afc
-ms.openlocfilehash: 47e35018902c424dc492025bb08bd4df4d81fcbe
-ms.lasthandoff: 02/18/2017
+ms.sourcegitcommit: d8f1a1a5757bbc3e2b0c17b1a89fbd56bbae6019
+ms.openlocfilehash: c1a276ad1ed6d10d286ab389ab3f05ec780c4e58
+ms.lasthandoff: 03/01/2017
 
 
 ---
@@ -32,16 +32,15 @@ ms.lasthandoff: 02/18/2017
 有关 System Center Configuration Manager 功能的详细信息，请参阅 Microsoft [System Center Configuration Manager](https://www.microsoft.com/cloud-platform/system-center-configuration-manager) 产品页
 
 
-## <a name="details"></a>详细信息
-System Center Configuration Manager 是….
 
-## <a name="faq"></a>FAQ
+
+## <a name="system-center-configuration-manager-licensing-faq"></a>System Center Configuration Manager 授权常见问题解答
 
 1.    **什么是 Current Branch (CB)？**   
 Current Branch 是提供活动服务模型的 System Center Configuration Manager 生产就绪版本。 这种服务模型类似于使用 Windows 10 或 Windows Server 2016 Nano Server 安装选项。 此方法支持以“云节奏”迁移并希望加快创新速度的客户。 通过 Current Branch 服务模型，System Center Configuration Manager 客户可继续接收新功能。 因此，只有具有 System Center Configuration Manager 许可证上的可用软件保障或等效订阅权限的客户可安装和使用 System Center Configuration Manager 的 Current Branch。
 
 2.    **什么是 Long Term Servicing Branch (LTSB)？**  
-Long-Term Servicing Branch 是 System Center Configuration Manager 的生产就绪版本，适用于允许软件保障或等效订阅权限失效的客户。 与 Current Branch 相比，LTSB 的[功能缩减](/sccm/core/understand/introduction-to-the-ltsb#features-that-are-not-available-in-the-ltsb-of-configuration-manager)。 允许软件保障或等效订阅权限失效的客户必须卸载 System Center Configuration Manager 的 Current Branch。 然后对 System Center Configuration Manager 具有永久许可权限的客户，可以在失效时安装并使用最新版本的 System Center Configuration Manager 的 LTSB 版本。
+Long-Term Servicing Branch 是 System Center Configuration Manager 的生产就绪版本，适用于允许软件保障或等效订阅权限过期的客户。 与 Current Branch 相比，LTSB 的[功能缩减](/sccm/core/understand/introduction-to-the-ltsb#features-that-are-not-available-in-the-ltsb-of-configuration-manager)。 允许软件保障或等效订阅权限过期的客户必须卸载 System Center Configuration Manager 的 Current Branch。 如果客户对 System Center Configuration Manager 具有永久许可权限，则可在过期时安装并使用 System Center Configuration Manager 最新版的 LTSB 版本。
 
 3.    **我知道许可内容中使用 SA 和 L&SA。它们在 System Center Configuration Manager 中的含义是什么？**    
 SA（软件保障）和 L&SA（许可证和软件保障）是授权使用 System Center Configuration Manager 的许可选项。 SA 选项适用于从之前的协议续订 SA 范围的客户。 L&SA 选项适用于购买新的许可证和 SA 范围的客户。

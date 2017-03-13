@@ -2,7 +2,7 @@
 title: "升级到 System Center Configuration Manager | Microsoft Docs"
 description: "了解从运行 System Center 2012 Configuration Manager 的站点和层次结构成功进行就地升级的步骤。"
 ms.custom: na
-ms.date: 1/11/2017
+ms.date: 2/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0d0735c170820259ac8bb6706aac7cc5569a1628
-ms.openlocfilehash: 27d18a7c5b13f488cafb36ace2e437fe6a50c598
+ms.sourcegitcommit: 30af3326578d39c6d995672071705bcaeb877e4d
+ms.openlocfilehash: 8af2a797ad4e87d870bb27873a7428e96f63b76d
+ms.lasthandoff: 02/23/2017
 
 
 ---
@@ -32,7 +33,7 @@ ms.openlocfilehash: 27d18a7c5b13f488cafb36ace2e437fe6a50c598
  > [!TIP]
  > 管理 System Center Configuration Manager 站点和层次结构基础结构时，术语“升级”、“更新”和“安装”用于描述三种不同概念。 若要了解每个术语的使用方法，请参阅[有关升级、更新和安装](/sccm/core/understand/upgrade-update-install)。
 
-##  <a name="a-namebkmkpatha-in-place-upgrade-paths"></a><a name="bkmk_path"></a> 就地升级路径  
+##  <a name="bkmk_path"></a> 就地升级路径  
 **升级到 1606 版本**  
 2016 年 12 月 15 日，为添加对其他升级方案的支持，已发布版本 1606 的基线媒体。 此新版本支持将以下版本升级到 System Center Configuration Manager 版本 1606 的完整许可版本：  
 -   System Center Configuration Manager 版本 1606 的评估版安装
@@ -69,7 +70,7 @@ ms.openlocfilehash: 27d18a7c5b13f488cafb36ace2e437fe6a50c598
 
 -   不支持从 Technical Preview 迁移到完整许可版本。  
 
-##  <a name="a-namebkmkchecklista-upgrade-checklists"></a><a name="bkmk_checklist"></a> 升级清单  
+##  <a name="bkmk_checklist"></a> 升级清单  
  下列清单可帮助计划成功升级到 System Center Configuration Manager。  
 
 ### <a name="before-you-upgrade"></a>升级准备工作  
@@ -227,7 +228,7 @@ Configuration Manager 不支持辅助站点备份，也不支持辅助站点数�
 
 有关如何升级现有客户端和如何安装新客户端的信息，请参阅[如何在 System Center Configuration Manager 中升级 Windows 计算机的客户端](../../../../core/clients/manage/upgrade/upgrade-clients-for-windows-computers.md)。  
 
-##  <a name="a-namebkmkconsiderationsa-considerations-for-upgrading"></a><a name="bkmk_considerations"></a> 升级注意事项  
+##  <a name="bkmk_considerations"></a> 升级注意事项  
 **自动操作**：  
 升级到 System Center Configuration Manager 时，会自动执行下列操作：  
 
@@ -249,13 +250,15 @@ Configuration Manager 不支持辅助站点备份，也不支持辅助站点数�
 
 -   **软件中心：**  
     下列软件中心项目被重置为它们的默认值：  
-    -   “工作信息” 被重置为周一到周五从凌晨 5:00  到晚上 10:00  Monday 到晚上 10:00 Friday.  
+    -   “工作信息” 被重置为周一到周五从凌晨&5;:00  到晚上&10;:00  Monday 到晚上&10;:00 Friday.  
     -   “计算机维护”  的值被设置为“当我的计算机处于演示模式时暂停软件中心活动” 。  
     -   “远程控制”  的值被设置为分配到计算机的客户端设置中的值。  
 -   **软件更新摘要计划：**  
      软件更新或软件更新组的自定义摘要计划被重置为默认值（1 小时）。 升级完成后，请将自定义摘要值重置为所需的频率。  
 
-##  <a name="a-namebkmktesta-test-the-site-database-upgrade"></a><a name="bkmk_test"></a> 测试站点数据库升级  
+##  <a name="bkmk_test"></a> 测试站点数据库升级  
+以下信息仅适用于将先前版本（如 System Center 2012 Configuration Manager）升级到 System Center Configuration Manager。 如果你的站点已运行 System Center Configuration Manager，且正在安装新的更新，请参阅**安装控制台内部更新前**中的[步骤 2：在安装更新前测试数据库升级](/sccm/core/servers/manage/install-in-console-updates#bkmk_step2)。
+
 在升级站点之前，请针对升级测试该站点的数据库副本。  
 
 若要针对升级测试数据库，请首先将站点数据库的副本还原到未承载 Configuration Manager 站点的 SQL Server 实例。 用于承载数据库副本的 SQL Server 版本必须是作为数据库副本源的 Configuration Manager 版本支持的 SQL Server 版本。  
@@ -298,7 +301,7 @@ Configuration Manager 不支持辅助站点备份，也不支持辅助站点数�
 
 成功升级站点数据库的副本后，请继续执行 Configuration Manager 站点及其站点数据库的升级。  
 
-##  <a name="a-namebkmkupgradea-upgrade-sites"></a><a name="bkmk_upgrade"></a> 升级站点  
+##  <a name="bkmk_upgrade"></a> 升级站点  
 完成站点的升级前配置、测试了数据库副本上站点数据库的升级，并下载了计划安装的 Service Pack 版本的先决条件文件和语言包后，即已准备好升级 Configuration Manager 站点。  
 
 在升级层次结构中的站点时，将会先升级层次结构的顶层站点。 此顶层站点是管理中心站点或独立主站点。 管理中心站点的升级完成后，你可以按任何所需顺序升级子主站点。 升级主站点之后，可以升级该站点的子辅助站点，或在升级任何辅助站点之前升级其他主站点。  
@@ -378,16 +381,11 @@ Configuration Manager 不支持辅助站点备份，也不支持辅助站点数�
 
 辅助站点升级将在后台进行。 升级完成后，可以在 Configuration Manager 控制台中确认状态。 要确认状态，请选择辅助站点服务器，然后在“主页”  选项卡上的“站点”  组中单击“显示安装状态” 。  
 
-##  <a name="a-namebkmkpostupgradea-perform-post-upgrade-tasks"></a><a name="BKMK_PostUpgrade"></a> 执行升级后任务  
+##  <a name="BKMK_PostUpgrade"></a> 执行升级后任务  
 将站点升级到新的 Service Pack 后，你可能必须完成其他任务以完成升级或重新配置站点。 这些任务可能包括升级 Configuration Manager 客户端或 Configuration Manager 控制台、重新启用管理点的数据库副本，或者还原所使用的并且在 Service Pack 升级后未保留的 Configuration Manager 功能的设置。  
 
 **辅助站点的已知问题：**  
 - **升级到版本 1511 时：**若要确保辅助站点上的客户端可以从辅助站点（代理管理点）找到管理点，请将管理点手动添加到还包含辅助站点上的分发点的边界组。  
 
 - **升级到版本 1606 或更高版本时：**代理管理点会自动添加到包含辅助站点上的分发点的边界组。
-
-
-
-<!--HONumber=Jan17_HO2-->
-
 

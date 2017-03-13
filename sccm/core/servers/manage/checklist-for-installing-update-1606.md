@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 7847396fa2ec79a6044c41c1b53572a81692ec8e
-ms.openlocfilehash: 8ab8e504c3881c4dc07ffb569a1f440f4318d689
+ms.sourcegitcommit: 30af3326578d39c6d995672071705bcaeb877e4d
+ms.openlocfilehash: b0def6eb962d243a7ea5910b8d56bbb448b3a2e4
+ms.lasthandoff: 02/23/2017
 
 ---
 # <a name="checklist-for-installing-update-1606-for-system-center-configuration-manager"></a>用于为 System Center Configuration Manager 安装更新 1606 的清单
@@ -124,7 +125,7 @@ System Center Configuration Manager Current Branch 的版本 1606 是一项更�
 
 Configuration Manager 不支持辅助站点备份，也不支持辅助站点数据库的测试升级。   
 
-请勿在生产站点数据库上运行测试数据库升级。 执行此任务会升级站点数据库，并可能导致你的站点无法运行。 有关详细信息，请参阅[升级到 System Center Configuration Manager](../../../core/servers/deploy/install/upgrade-to-configuration-manager.md) 中的[测试站点数据库升级](../../../core/servers/deploy/install/upgrade-to-configuration-manager.md#bkmk_test)部分。  
+请勿在生产站点数据库上运行测试数据库升级。 执行此任务会升级站点数据库，并可能导致你的站点无法运行。 有关详细信息，请参阅**安装控制台内部更新前需执行的操作**中的[步骤 2：在安装更新前测试数据库升级](/sccm/core/servers/manage/install-in-console-updates#bkmk_step2)。
 
  **规划客户端试点：**安装更新客户端的更新后，可以在新的客户端更新部署和升级所有活动的客户端之前在预生产中对其进行测试。   
 
@@ -147,9 +148,4 @@ Configuration Manager 不支持辅助站点备份，也不支持辅助站点数�
   我们建议计划在正常业务时间之外为每个站点安装更新，此时安装更新的过程以及其重新安装站点组件和站点系统角色的操作对业务运营的影响最小。
 
 有关详细信息，请参阅 [ System Center Configuration Manager 的更新](../../../core/servers/manage/updates.md)。  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 
