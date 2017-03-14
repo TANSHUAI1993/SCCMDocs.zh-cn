@@ -12,8 +12,8 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: aba688d9-fd5b-4c42-8cb4-f7e1b161ef50
 caps.latest.revision: 8
-author: Mtillman
-ms.author: mtillman
+author: andredm7
+ms.author: andredm
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 0d6479bcc134103e6005159a8ea295a5f359a436
