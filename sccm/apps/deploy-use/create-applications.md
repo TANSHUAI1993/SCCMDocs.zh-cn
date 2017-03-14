@@ -17,8 +17,9 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 5155cacf8c8747f2fc439208e7adabdfcaaafb63
-ms.openlocfilehash: 066ac5e676091850d04c330f22ebcfbadb787914
+ms.sourcegitcommit: f9097014c7e988ec8e139e518355c4efb19172b3
+ms.openlocfilehash: da86fc2f61ce8229fb0d3f58a4f8a24d1514b30e
+ms.lasthandoff: 03/04/2017
 
 
 ---
@@ -35,6 +36,9 @@ System Center Configuration Manager 应用程序具有将软件部署到设备�
 -   手动创建应用程序并稍后添加部署类型。  
 
 -   从文件导入应用程序。  
+
+> [!NOTE]  
+>  [针对移动设备创建应用程序](../../mdm/deploy-use/create-applications.md)详细介绍了如何创建 iOS、Windows Phone 和 Android 应用程序。  
 
 使用下列步骤创建 Configuration Manager 应用程序和部署类型。  
 
@@ -357,7 +361,7 @@ System Center Configuration Manager 应用程序具有将软件部署到设备�
  依赖关系定义在安装部署类型之前必须先安装的另一应用程序中的部署类型。 可以将相关部署类型设置为在安装部署类型之前自动安装。  
 
 > [!IMPORTANT]  
->  在某些情况下，部署类型依赖于同时具有依赖关系的部署类型。 链中受支持的依赖关系链的最大数量为 5。  
+>  在某些情况下，部署类型依赖于同时具有依赖关系的部署类型。 链中受支持的依赖关系链的最大数量为&5;。  
 
 1.  在“创建部署类型向导”的“依赖关系”页上，如果要指定在安装此部署类型之前必须安装的部署类型，请选择“添加”。  
 
@@ -465,9 +469,4 @@ System Center Configuration Manager 应用程序具有将软件部署到设备�
 |**Mac OS X**|通过你使用 CMAppUtil 工具创建的 .cmmac 文件为 Mac 计算机创建部署类型。<br /><br /> 仅适用于运行 Configuration Manager 客户端的 Mac 计算机。|  
 |**Web 应用程序**|创建一个部署类型，该部署类型指定指向 Web 应用程序的链接。 该部署类型在用户的设备上安装 Web 应用程序的快捷方式。<br /><br /> 如果已在你管理的 iOS 或 Android 设备上安装了 Intune 托管浏览器，则可以确保用户只能使用托管浏览器打开应用。 为此，请在指定应用链接时使用以下格式之一，方法是将 **http:** 替换为 **http-intunemam:** 或将 **https:** 替换为 **https-intunemam:**<br /><br /> - **http-intunemam://<path to web app\>**<br /><br /> - **https-intunemam://<path to web app\>**<br /><br /> 可以使用 Configuration Manager 应用程序要求确保将要与托管浏览器关联的应用仅安装到 iOS 和 Android 设备。<br /><br /> 有关 Intune 托管浏览器的详细信息，请参阅[使用托管浏览器策略管理 Internet 访问](../../apps/deploy-use/manage-internet-access-using-managed-browser-policies.md)。|  
 |**通过 MDM 的 Windows Installer (\*.msi)**|此安装程序类型允许你创建基于 Windows Installer 的应用，并将其部署到运行 Windows 10 的 PC。<br /><br /> 使用此安装程序类型时，需要考虑下列注意事项：<br><br>- 只能上载扩展名为 .msi 的单个文件。<br /><br /> - 该文件的产品代码和产品版本将用于应用检测。<br /><br /> - 将使用该应用的默认重启行为。 Configuration Manager 不对此进行控制。<br /><br /> - 将为单个用户安装每个用户 MSI 包。<br /><br /> - 将为设备上的所有用户安装每个计算机 MSI 包。<br /><br /> - 当前仅为设备上的所有用户安装双模式 MSI 包。<br /><br /> - 当每个版本的 MSI 产品代码相同时，支持应用更新。|  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

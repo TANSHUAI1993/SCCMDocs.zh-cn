@@ -1,8 +1,8 @@
 ---
-title: "设置证书 | Microsoft Docs | 本地 MDM"
+title: "设置证书 | Microsoft Docs"
 description: "为 System Center Configuration Manager 中的本地移动设备管理设置受信任通信的证书。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0d6479bcc134103e6005159a8ea295a5f359a436
-ms.openlocfilehash: d7aaad9298308b588f1bc13027082bf07066a3c2
+ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
+ms.openlocfilehash: ef35e98ccae0c708cd12767eef9f923f211849fb
+ms.lasthandoff: 03/06/2017
 
 
 ---
@@ -49,7 +50,7 @@ System Center Configuration Manager 本地移动设备管理需要为与托管�
 
 -   [导出根与 Web 服务器证书的根相同的证书](#bkmk_exportCert)  
 
-##  <a name="a-namebkmkconfigcaa-configure-the-certification-authority-ca-for-crl-publishing"></a><a name="bkmk_configCa"></a>为 CRL 发布配置证书颁发机构 (CA)  
+##  <a name="bkmk_configCa"></a>为 CRL 发布配置证书颁发机构 (CA)  
  默认情况下，证书颁发机构 (CA) 使用基于 LDAP 的证书吊销列表 (CRL)，此列表允许已加入域的设备的连接。 必须将基于 HTTP 的 CRL 添加到 CA，以使具有从 CA 颁发的证书的未加入域设备受信任。 托管 Configuration Manager 站点系统角色的服务器和注册本地移动设备管理的设备之间的 SSL 通信需要这些证书。  
 
  按照以下步骤配置 CA，以自动发布用于颁发证书的 CRL 信息，证书允许已加入域和未加入域的设备的受信任连接。  
@@ -76,7 +77,7 @@ System Center Configuration Manager 本地移动设备管理需要为与托管�
 
 8.  在“发布 CRL”对话框中，选择“仅增量 CRL”，然后单击“确定”。  
 
-##  <a name="a-namebkmkcerttempla-create-the-web-server-certificate-template-on-the-ca"></a><a name="bkmk_certTempl"></a>在 CA 上创建 Web 服务器证书模板  
+##  <a name="bkmk_certTempl"></a>在 CA 上创建 Web 服务器证书模板  
  在 CA 上发布新的 CRL 后，下一步是创建 Web 服务器证书模板。 为托管注册点、注册代理点、分发点和设备管理点站点系统角色的服务器颁发证书需要此模板。 这些服务器将是站点系统角色和已注册设备之间受信任通信的 SSL 终结点。    请按照以下步骤来创建证书模板：  
 
 1.  创建一个名为 **ConfigMgr MDM 服务器**的安全组，该组包含运行站点系统的服务器，而站点系统需要与已注册设备之间的受信任通信。  
@@ -113,7 +114,7 @@ System Center Configuration Manager 本地移动设备管理需要为与托管�
 
 12. 在“启用证书模板”对话框中，选择刚创建的新模板 **ConfigMgr MDM Web 服务器**，然后单击“确定”。  
 
-##  <a name="a-namebkmkrequestcerta-request-the-web-server-certificate-for-each-site-system-role"></a><a name="bkmk_requestCert"></a>为每个站点系统角色请求 Web 服务器证书  
+##  <a name="bkmk_requestCert"></a>为每个站点系统角色请求 Web 服务器证书  
  注册本地移动设备管理的设备必须信任托管注册点、注册代理点、分发点和设备管理点的 SSL 终结点。  下列步骤说明如何对 IIS 请求 Web 服务器证书。 对于托管本地移动设备管理所需的其中一个站点系统角色的每个服务器（SSL 终结点），都必须执行此操作。  
 
 1.  在主站点服务器上，使用管理员权限打开命令提示符，键入 **MMC** 并按 **Enter**。  
@@ -132,7 +133,7 @@ System Center Configuration Manager 本地移动设备管理需要为与托管�
 
  因为每个服务器都需要唯一的 Web 服务器证书，所以需要对托管本地移动设备管理所需的其中一个站点系统角色的每个服务器重复此过程。  如果一个服务器托管了所有站点系统角色，则只需要请求一个 Web 服务器证书。  
 
-##  <a name="a-namebkmkbindcerta-bind-the-certificate-to-the-web-server"></a><a name="bkmk_bindCert"></a>将证书绑定到 Web 服务器  
+##  <a name="bkmk_bindCert"></a>将证书绑定到 Web 服务器  
  现在需要将新证书绑定到托管本地移动设备管理所需的站点系统角色的每个站点系统服务器的 Web 服务器。 对于托管注册点和注册代理点站点系统角色的每个服务器，请执行以下步骤。 如果一个服务器托管了所有的站点系统角色，则只需要执行一次以下步骤。 对于分发点和设备管理点站点系统角色则无需执行此任务，因为它们在注册过程中会自动获得所需的证书。  
 
 1.  在托管注册点、注册代理点、分发点或设备管理点的服务器上，单击“开始” > “管理工具” > “IIS 管理器”。  
@@ -145,7 +146,7 @@ System Center Configuration Manager 本地移动设备管理需要为与托管�
 
 5.  在 IIS 管理器控制台的“连接”下，选择 Web 服务器，然后在右侧的操作面板中，单击“重新启动”。  
 
-##  <a name="a-namebkmkexportcerta-export-the-certificate-with-the-same-root-as-the-web-server-certificate"></a><a name="bkmk_exportCert"></a>导出根与 Web 服务器证书的根相同的证书  
+##  <a name="bkmk_exportCert"></a>导出根与 Web 服务器证书的根相同的证书  
  Active Directory 证书服务通常会在所有已加入域的设备上从 CA 安装所需证书。 但是未加入域的设备如果没有来自根 CA 的证书，则不能与站点系统角色通信。 若要获取设备与站点系统角色通信所需的证书，可以从绑定到 Web 服务器的证书中导出证书。  
 
  请按照下列步骤导出 Web 服务器的证书的根证书。  
@@ -171,9 +172,4 @@ System Center Configuration Manager 本地移动设备管理需要为与托管�
      单击“下一步” 。  
 
 9. 检查设置，然后单击“完成”。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

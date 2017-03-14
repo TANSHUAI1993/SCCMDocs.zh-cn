@@ -1,8 +1,8 @@
 ---
-title: "设置 Intune 订阅 | Microsoft Docs | 本地"
+title: "设置 Intune 订阅 | Microsoft Docs"
 description: "在 System Center Configuration Manager 中为本地移动设备管理设置 Intune 订阅。"
 ms.custom: na
-ms.date: 11/18/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 828e2ac9a3f9bcea1571d24145a1021fdf1091f3
-ms.openlocfilehash: 2cc9f59d9d32d149aa477ba61afba0094f302fc4
+ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
+ms.openlocfilehash: f86eac30ed0eada92ddbd25891d1693ae55b4851
+ms.lasthandoff: 03/06/2017
 
 
 ---
@@ -38,7 +39,7 @@ System Center Configuration Manager 本地移动设备管理需要 Microsoft Int
  需要 Intune 才能使本地移动设备管理正常运行。 只需针对试用或付费订阅进行[注册](http://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/)，然后转到下一步，将订阅添加到 Configuration Manager。  
 
 ##  <a name="add-the-intune-subscription-to-configuration-manager"></a>将 Intune 订阅添加到 Configuration Manager  
- 若要将订阅添加到 Configuration Manager，请按照使用 Intune 为移动设备管理添加订阅的相同基本步骤进行添加。 阅读以下有关特定差异的说明，然后使用[创建 Microsoft Intune 订阅](../deploy-use/setup-hybrid-mdm.md#step-3-configure-intune-subscription)中的指示。  
+ 若要将订阅添加到 Configuration Manager，请按照使用 Intune 为移动设备管理添加订阅的相同基本步骤进行添加。 阅读以下有关特定差异的说明，然后使用[创建 Microsoft Intune 订阅](../deploy-use/setup-hybrid-mdm.md#configure-intune-subscription)中的指示。  
 
 > [!NOTE]  
 >  添加 Intune 订阅时，请记住以下内容：  
@@ -67,9 +68,4 @@ System Center Configuration Manager 本地移动设备管理需要 Microsoft Int
 5.  如果打算管理 Windows 10 桌面计算机，请右键单击“Microsoft Intune 订阅” ，单击“配置平台” ，然后单击“启用Windows 注册” 。  
 
 6.  单击“启用 Windows 注册” 旁边的复选框，然后单击“确定” 。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

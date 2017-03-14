@@ -13,12 +13,13 @@ ms.topic: article
 ms.assetid: 321b19b2-a093-4b8f-995f-41f74b886eb5
 caps.latest.revision: 13
 caps.handback.revision: 0
-author: Nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0fa837c68eb073d2ceaf48c938137a94141a102e
-ms.openlocfilehash: 7d42ec89300d4eb6b02bafb3f83d341f8e3ca0c0
+ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
+ms.openlocfilehash: f1ae976899de1fd3efcbde0c7268f071a5d0218b
+ms.lasthandoff: 03/06/2017
 
 
 ---
@@ -39,15 +40,9 @@ ms.openlocfilehash: 7d42ec89300d4eb6b02bafb3f83d341f8e3ca0c0
 
 -   运行 Windows RT 8.1 的设备  
 
--   运行 Windows Phone 8.1 的设备  
-
 -   运行 Windows 10 桌面或移动版的设备  
 
--   运行 iOS 5、iOS 6、iOS 7 和 iOS 8 的 IPhone 设备  
-
--   运行 iOS 5、iOS 6、iOS 7 和 iOS 8 的 IPad 设备  
-
--   运行版本 4 或更高版本的 Android 设备
+如需深入了解如何在 System Center Configuration Manager 中使用 Wi-Fi 配置文件将无线网络设置部署到移动设备用户，请参阅[针对移动设备创建 Wi-Fi 配置文件](../../mdm/deploy-use/create-wifi-profiles.md)。
 
 > [!IMPORTANT]  
 >  若要将配置文件部署到 Android、iOS、Windows Phone 和注册的 Windows 8.1 或更高版本设备，这些设备必须在 Microsoft Intune 中注册。 有关如何注册设备的信息，请参阅[在 Intune 中注册设备以进行管理](https://docs.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune)。  
@@ -92,7 +87,7 @@ ms.openlocfilehash: 7d42ec89300d4eb6b02bafb3f83d341f8e3ca0c0
     >  安全类型：“WPA2 企业”  或“WPA2 个人”   
     > 加密类型：“AES”  或“TKIP”   
     > EAP 类型：“智能卡或其他证书”  或“PEAP”   
-  
+
     > 仅限 Android 设备，不支持安全类型“WPA – 个人”、“WPA2 – 个人”和“WEP”。  
 
 2.  选择无线网络使用的加密方法。  
@@ -133,9 +128,4 @@ ms.openlocfilehash: 7d42ec89300d4eb6b02bafb3f83d341f8e3ca0c0
 
 ### <a name="next-steps"></a>后续步骤
  有关如何部署 Wi-Fi 配置文件的信息，请参阅[如何在 System Center Configuration Manager 中部署 Wi-Fi 配置文件](deploy-wifi-vpn-email-cert-profiles.md)。  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

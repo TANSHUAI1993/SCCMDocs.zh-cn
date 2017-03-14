@@ -2,7 +2,7 @@
 title: "使用 System Center Configuration Manager 和 Microsoft Intune 设置 Windows 混合设备管理 | Microsoft Docs"
 description: "使用 System Center Configuration Manager 和 Microsoft Intune 设置 Windows 设备管理。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,9 @@ author: mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 76cb0c41865859fd410a187435d73c6a23b0c57e
-ms.openlocfilehash: 7b53b094eeb1d59d052c63831eeab0e10edb5913
+ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
+ms.openlocfilehash: a4fc4a16c78b0eaa0dcefdd596b049eacf1d255b
+ms.lasthandoff: 03/06/2017
 
 
 ---
@@ -31,7 +32,7 @@ ms.openlocfilehash: 7b53b094eeb1d59d052c63831eeab0e10edb5913
 Windows 注册选项包括：
 
 - [使用 Azure AD 进行自动注册](#azure-active-directory-enrollment)
-- [Windows 电脑](#set-up-windows-device-enrollment)
+- [Windows 电脑](#configure-windows-pc-enrollment)
 - [Windows 10 移动版和 Windows Phone 设备](#enable-windows-phone-devices)
 
 ## <a name="azure-active-directory-enrollment"></a>Azure Active Directory 注册
@@ -118,8 +119,6 @@ Windows 注册选项包括：
 
   设置完成后，需要让用户知道如何注册其设备。 请参阅[用户需要了解的有关设备注册的内容](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune)。 此信息适用于 Microsoft Intune 和 Configuration Manager 托管的移动设备。  
 
-
-
-<!--HONumber=Feb17_HO2-->
-
+  > [!div class="button"]
+  [< 上一步](create-service-connection-point.md)  [下一步 >](set-up-additional-management.md)
 

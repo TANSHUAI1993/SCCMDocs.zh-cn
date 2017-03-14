@@ -17,8 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 2dd898c9b022c6f0bc243623835af0eece94128f
-ms.openlocfilehash: 95d1671501f672e1d5abe3f0fbbd7d2dfb21e0a3
+ms.sourcegitcommit: f9097014c7e988ec8e139e518355c4efb19172b3
+ms.openlocfilehash: 895b8ae58a9fda3fd22f58d77129053df09c4ccb
+ms.lasthandoff: 03/04/2017
 
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>用于 Configuration Manager 客户端的对等缓存
@@ -28,7 +29,7 @@ ms.openlocfilehash: 95d1671501f672e1d5abe3f0fbbd7d2dfb21e0a3
 从 System Center Configuration Manager 版本 1610 开始，可以使用**对等缓存**来帮助管理向远程位置中客户端的内容部署。 对等缓存是内置 Configuration Manager 解决方案，使客户端能够直接从本地缓存将内容与其他客户端共享。   
 
 > [!TIP]  
-> 1610 版本中，对等缓存和“客户端数据源”仪表板均为预发行功能。 若要启用这些功能，请参阅[使用更新中的预发行功能](/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease)。
+> 如 1610 版本中所述，对等缓存和“客户端数据源”仪表板均为预发行功能。 若要启用这些功能，请参阅[使用更新中的预发行功能](/sccm/core/servers/manage/pre-release-features)。
 
  -     通过客户端设置，可以使客户端能够使用对等缓存。
  -     若要共享内容，对等缓存客户端必须都是查找该内容的客户端当前边界组的成员。 客户端使用回退来查找相邻边界组中的内容时，相邻边界组中的对等缓存客户端不包括在可用内容源位置的池中。 有关当前边界组和相邻边界组的详细信息，请参阅[边界组](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups##a-namebkmkboundarygroupsa-boundary-groups)。
@@ -66,9 +67,4 @@ ms.openlocfilehash: 95d1671501f672e1d5abe3f0fbbd7d2dfb21e0a3
   -  **用于从对等中下载内容的端口 (HTTP/HTTPS)**
 
 在启用了对等缓存的每台计算机上，如果 Windows 防火墙正在使用中，则 Configuration Manager 会将其配置为允许使用所配置的端口。
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

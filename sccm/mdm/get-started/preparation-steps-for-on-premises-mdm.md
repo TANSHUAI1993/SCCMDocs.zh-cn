@@ -1,8 +1,8 @@
 ---
-title: "准备步骤 | Microsoft Docs | 本地 MDM"
+title: "准备步骤 | Microsoft Docs"
 description: "准备在 System Center Configuration Manager 中通过本地移动设备管理对设备进行管理。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,9 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0d6479bcc134103e6005159a8ea295a5f359a436
-ms.openlocfilehash: a5c9fa5994f9b7bd13fe53edb6998609852b98ca
+ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
+ms.openlocfilehash: 2ba11c8e2d8214ce9aca7c887fcb539b38da4e84
+ms.lasthandoff: 03/06/2017
 
 
 ---
@@ -44,9 +45,4 @@ ms.openlocfilehash: a5c9fa5994f9b7bd13fe53edb6998609852b98ca
 -   [在 System Center Configuration Manager 中为本地移动设备管理设置设备注册](../../mdm/get-started/set-up-device-enrollment-on-premises-mdm.md)  
 
      在此任务中，向用户授予注册计算机和设备的权限，并在设备（通常是未加入域的设备）上安装受信任的根证书，以允许 HTTPS 连接到站点系统服务。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

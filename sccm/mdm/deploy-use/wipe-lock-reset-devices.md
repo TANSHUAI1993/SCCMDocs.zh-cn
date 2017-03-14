@@ -2,7 +2,7 @@
 title: "使用 System Center Configuration Manager，通过远程擦除、锁定或密码重置功能保护数据 | Microsoft Docs"
 description: "使用 System Center Configuration Manager，通过完全擦除、选择性擦除、远程锁定或密码重置功能保护设备数据。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 828e2ac9a3f9bcea1571d24145a1021fdf1091f3
-ms.openlocfilehash: d3dd55b496a124c478f1cf2880a096e2fbdd9145
+ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
+ms.openlocfilehash: 3aa4c2ad3568cc6ced70a65141a2c103af8b740f
+ms.lasthandoff: 03/06/2017
 
 ---
 # <a name="protect-data-with-remote-wipe-lock-or-passcode-reset-using-system-center-configuration-manager"></a>使用 System Center Configuration Manager，通过远程擦除、锁定或密码重置功能保护数据
@@ -241,12 +242,6 @@ Configuration Manager 提供选择性擦除、完全擦除、远程锁定以及�
 
 3.  单击“设备组”  中的“远程设备操作” ，然后选择“显示远程锁定状态” 。  
 
-## <a name="see-also"></a>另请参阅  
- [设备数据管理的 Windows 选择性擦除](http://technet.microsoft.com/library/dn486874.aspx)   
- [使用 System Center Configuration Manager 和 Microsoft Intune 的混合移动设备管理 (MDM)](../../mdm/understand/hybrid-mobile-device-management.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
+### <a name="see-also"></a>另请参阅  
+ [Windows Selective Wipe for Device Data Management](http://technet.microsoft.com/library/dn486874.aspx)（设备数据管理的 Windows 选择性擦除）   
 

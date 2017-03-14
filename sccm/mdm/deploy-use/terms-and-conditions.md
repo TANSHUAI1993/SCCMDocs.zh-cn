@@ -2,7 +2,7 @@
 title: "System Center Configuration Manager 中的条款和条件 | Microsoft Docs"
 description: "向 System Center Configuration Manager 中的用户组部署条款和条件。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,12 +16,13 @@ author: mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: 2f8b14bef14d82584fd2bf6cdd05018bdd463ce4
+ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
+ms.openlocfilehash: d8235db376fc62a7ac00d6e5a27823710630eca6
+ms.lasthandoff: 03/06/2017
 
 
 ---
-# <a name="terms-and-conditions-in-system-center-configuration-manager"></a>Terms and Conditions in System Center Configuration Manager
+# <a name="add-terms-and-conditions-with-system-center-configuration-manager"></a>通过 System Center Configuration Manager 添加条款和条件
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
@@ -120,8 +121,6 @@ ms.openlocfilehash: 2f8b14bef14d82584fd2bf6cdd05018bdd463ce4
 
      我们建议增加版本号，并在条款和条件发生重大变更时要求用户接受。 如果修改错别字或更改格式设置，则维持当前版本号。
 
-
-
-<!--HONumber=Dec16_HO3-->
-
+> [!div class="button"]
+ [< 上一步](configure-intune-subscription.md)  [下一步 >](create-service-connection-point.md)
 

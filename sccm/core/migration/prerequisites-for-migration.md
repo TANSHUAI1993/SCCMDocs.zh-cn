@@ -2,7 +2,7 @@
 title: "迁移先决条件 | Microsoft Docs"
 description: "了解支持的 Configuration Manager 版本、支持的源站点语言和迁移所需的配置。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 3/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6cbb790df47c9a87514b0233e2d0c12dd6f23ee9
-ms.openlocfilehash: 70e2531076abedc1381b6e3bccf15b5afe27b465
+ms.sourcegitcommit: ee7f69bd65152deffb2456d9807e1e8fee8802ec
+ms.openlocfilehash: cd90f5462ac4bb4c0a2021e6d5dde65161b9c5f6
+ms.lasthandoff: 03/07/2017
 
 
 ---
@@ -36,19 +37,22 @@ ms.openlocfilehash: 70e2531076abedc1381b6e3bccf15b5afe27b465
 
 -   [迁移所需的配置](#BKMK_Required_Configurations)  
 
-##  <a name="a-namebkmksupportedmigrationversionsa-versions-of-configuration-manager-that-are-supported-for-migration"></a><a name="BKMK_SupportedMigrationVersions"></a> 迁移支持的 Configuration Manager 版本  
+##  <a name="BKMK_SupportedMigrationVersions"></a> 迁移支持的 Configuration Manager 版本  
  可以从运行以下任何版本的 Configuration Manager 的源层次结构迁移数据：  
 
--   Configuration Manager 2007 SP2（对于迁移，不考虑使用源站点上的 Configuration Manager 2007 R2 或 R3。 只要源站点运行 SP2，则支持将安装有 R2 或 R3 加载项的站点迁移到 System Center Configuration Manager）  
+-   Configuration Manager 2007 SP2（对于迁移，不考虑使用源站点上的 Configuration Manager 2007 R2 或 R3。 只要源站点运行 SP2，就会支持将安装有 R2 或 R3 加载项的站点迁移到 System Center Configuration Manager）。  
 
--   System Center 2012 Configuration Manager SP2 或 System Center 2012 R2 Configuration Manager SP1  
+-   System Center 2012 Configuration Manager SP2 或 System Center 2012 R2 Configuration Manager SP1。  
 
     > [!TIP]  
     >  除迁移外，还可以将运行 System Center 2012 Configuration Manager 的站点就地升级到 System Center Configuration Manager。  
 
--   相同或更低版本的 System Center Configuration Manager 的 System Center Configuration Manager 层次结构  
+-   相同或更低版本的 System Center Configuration Manager 的 System Center Configuration Manager 层次结构。  
 
-##  <a name="a-namebkmksorcesitelanguagea-source-site-languages-that-are-supported-for-migration"></a><a name="BKMK_SorceSiteLanguage"></a> 迁移支持的源站点语言  
+  例如，如果具有运行 System Center Configuration Manager 1606 的目标层次结构，则可以使用迁移复制运行 1606 或 1602 版本的源层次结构中的数据。 但是不能迁移运行 1610 版的源层次结构中的数据。  
+
+
+##  <a name="BKMK_SorceSiteLanguage"></a> 迁移支持的源站点语言  
  在 Configuration Manager 层次结构之间迁移数据时，数据将采用 System Center Configuration Manager 的语言中性格式存储在目标层次结构中。 由于 Configuration Manager2007 不采用语言中性格式存储数据，因此在从 Configuration Manager2007 迁移的过程中，迁移过程必须将对象转换为此格式。 因此，迁移只支持安装有以下语言的 Configuration Manager 2007 源站点：  
 
 -   英语  
@@ -69,7 +73,7 @@ ms.openlocfilehash: 70e2531076abedc1381b6e3bccf15b5afe27b465
 
 从 System Center 2012 Configuration Manager 或 System Center Configuration Manager 层次结构中迁移数据时，没有源站点语言限制。 源站点数据库中的对象已采用语言中性格式。  
 
-##  <a name="a-namebkmkrequiredconfigurationsa-required-configurations-for-migration"></a><a name="BKMK_Required_Configurations"></a> 迁移所需的配置  
+##  <a name="BKMK_Required_Configurations"></a> 迁移所需的配置  
 下面列出了使用迁移所需的配置以及迁移操作：  
 
 -   **在 Configuration Manager 控制台中配置、运行和监视迁移：**  
@@ -123,9 +127,4 @@ ms.openlocfilehash: 70e2531076abedc1381b6e3bccf15b5afe27b465
     -   若要重新分配 System Center 2012 Configuration Manager 或 System Center Configuration Manager 分发点，该帐户必须对源站点上的“站点”对象具有“修改”权限。 通过使用基于角色的管理来向帐户授予此权限。 有关如何使用基于角色的管理的信息，请参阅 [Fundamentals of role-based administration for System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md)。  
 
      若要成功将分发点升级或重新分配到新层次结构，为源层次结构中用于管理分发点的站点上的客户端请求配置的端口必须与为将用于管理分发点的目标站点上的客户端请求配置的端口匹配。 有关客户端请求端口的信息，请参阅[如何在 System Center Configuration Manager 中配置客户端通信端口](../../core/clients/deploy/configure-client-communication-ports.md)。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

@@ -2,7 +2,7 @@
 title: "维护任务参考 | Microsoft Docs"
 description: "阅读每个 System Center Configuration Manager 站点维护任务的详细信息，以及是否默认启用这些任务。"
 ms.custom: na
-ms.date: 2/7/2017
+ms.date: 3/8/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6e19d1239cb61b570203fdd13563d5f8c5afc6ad
-ms.openlocfilehash: d2e53e7c0cd0dd1a97d3620a14a15369e1d7e0ec
+ms.sourcegitcommit: dcbcd57b95f304f007e92ebe2b9aeefb4b579662
+ms.openlocfilehash: 92d3c215569916a5557309d7f488aa88f387da92
+ms.lasthandoff: 03/09/2017
 
 
 ---
@@ -52,6 +53,11 @@ ms.openlocfilehash: d2e53e7c0cd0dd1a97d3620a14a15369e1d7e0ec
 -   **主站点**：已启用    
 -   辅助站点：不可用  
 
+**删除旧的客户端下载历史记录**：使用此任务可删除有关客户端使用的下载源的历史数据。 下载源信息用于填充[客户端数据源仪表板](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed#client-data-sources-dashboard)。  
+-  管理中心站点 - 不可用
+-     **主站点** - 已启用
+-  辅助站点 - 不可用
+
 **删除过期的客户端操作**：使用此任务从站点数据库中删除客户端操作的所有过期数据。 例如，其中包括过期或到期的客户端通知数据（例如下载计算机或用户策略的请求）和 Endpoint Protection 数据（例如客户端的管理用户运行扫描或下载更新定义的请求）。
 
 -   **管理中心站点**：已启用    
@@ -63,6 +69,12 @@ ms.openlocfilehash: d2e53e7c0cd0dd1a97d3620a14a15369e1d7e0ec
 -   **管理中心站点**：已启用   
 -   **主站点**：已启用    
 -   辅助站点：不可用  
+
+**删除旧的云管理网关通信数据**：使用此任务可从站点数据库删除所有关于通过[云管理网关](/sccm/core/clients/manage/plan-cloud-management-gateway)传递的旧的通信数据。 例如，这包括关于请求数、请求总字节数、总响应字节数、失败请求数和最大并发请求数的数据。  
+- **管理中心站点** - 已启用
+- **主站点** - 已启用
+- 辅助站点 - 不可用
+
 
 **删除过期的收集文件**：使用此任务从数据库中删除有关收集的文件的过期信息。 此任务还从所选站点内的站点服务器文件夹结构中删除收集的文件。 默认情况下，会在站点服务器上的 **Inboxes\sinv.box\FileCol** 目录中存储收集的文件的五个最新副本。 有关详细信息，请参阅 [System Center Configuration Manager 中的软件清单简介](/sccm/core/clients/manage/inventory/introduction-to-software-inventory)。  
 
@@ -227,6 +239,11 @@ ms.openlocfilehash: d2e53e7c0cd0dd1a97d3620a14a15369e1d7e0ec
 -   **主站点**：已启用    
 -   辅助站点：不可用  
 
+**删除孤立客户端部署状态记录**：使用此任务可定期清除包含客户端部署状态信息的表。 此任务将清除与已过时或已解除授权的设备关联的记录。  
+-   **管理中心站点**：已启用    
+-   **主站点**：已启用    
+-   辅助站点：不可用 
+
 **删除未使用的应用程序修订版本**：使用此任务删除不再被引用的应用程序修订版本。 有关详细信息，请参阅[如何在 System Center Configuration Manager 中修订和取代应用程序](../../../apps/deploy-use/revise-and-supersede-applications.md)。  
 
 -   管理中心站点：不可用    
@@ -288,9 +305,4 @@ ms.openlocfilehash: d2e53e7c0cd0dd1a97d3620a14a15369e1d7e0ec
 -   管理中心站点：不可用    
 -   **主站点**：已启用    
 -   辅助站点：不可用  
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

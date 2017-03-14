@@ -17,8 +17,9 @@ author: andredm7
 ms.author: andredm
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 9206b82eca02877c30eebf146d42bcca7290eb42
-ms.openlocfilehash: c9956dd4ef94a1b109d761e44e42f512c42eb8d2
+ms.sourcegitcommit: f9097014c7e988ec8e139e518355c4efb19172b3
+ms.openlocfilehash: 969f2d28649853ddc95860fe72597d6d2c9a94e9
+ms.lasthandoff: 03/04/2017
 
 
 ---
@@ -36,7 +37,7 @@ ms.openlocfilehash: c9956dd4ef94a1b109d761e44e42f512c42eb8d2
 
 -   创建[基于查询的集合](../../../../core/clients/manage/collections/introduction-to-collections.md)，此集合包括具有特定文件的设备。   
 
--   [运行报表](../../../../core/servers/manage/reporting.md)，此报表提供有关设备上文件的详细信息。 
+-   [运行报表](../../../../core/servers/manage/reporting.md)，此报表提供有关设备上文件的详细信息。
 
 -   使用[资源浏览器](../../../../core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory.md)查看已列出清单并从客户端设备收集的文件的详细信息。   
 
@@ -44,27 +45,5 @@ ms.openlocfilehash: c9956dd4ef94a1b109d761e44e42f512c42eb8d2
 
  Configuration Manager 可以发现双引导计算机，但只从在清单运行时处于活动状态的操作系统返回清单信息。  
 
-## <a name="software-inventory-for-mobile-devices-enrolled-with-microsoft-intune"></a>Microsoft Intune 注册的移动设备的软件清单  
- 可针对移动设备上安装的应用收集清单。 是否将应用加入清单将取决于设备归公司所有还是归个人所有。 对于个人设备，仅将通过 Microsoft Intune 管理的应用加入清单。  
-
-> [!NOTE]  
->  会将移动设备上安装的应用的清单作为[硬件清单](../../../../core/clients/manage/inventory/mobile-device-hardware-inventory-hybrid.md)过程的一部分进行收集。  
-
- 下方列出了适用于个人拥有设备或公司拥有设备的应用清单。  
-
-|平台|个人拥有设备|公司拥有设备|  
-|--------------|---------------------------------|--------------------------------|  
-|Windows 10（不带 Configuration Manager 客户端）|仅托管应用|仅托管应用| 
-|Windows 8.1（不带 Configuration Manager 客户端）|仅托管应用|仅托管应用|  
-|Windows Phone 8|仅托管应用|仅托管应用|  
-|Windows RT|仅托管应用|仅托管应用|  
-|iOS|仅托管应用|设备上安装的所有应用|  
-|Android|仅托管应用|设备上安装的所有应用|  
-
-
-
-
-
-<!--HONumber=Dec16_HO5-->
-
+**移动设备：**有关在移动设备上收集安装的应用清单，请参阅[使用 Microsoft Intune 注册的移动设备的软件清单](../../../../mdm/deploy-use/software-inventory-mobile-devices.md)。
 
