@@ -2,7 +2,7 @@
 title: "控制台中更新 | Microsoft Docs"
 description: "System Center Configuration Manager 与 Microsoft 云服务同步，以获取可以从控制台中进行安装的更新。"
 ms.custom: na
-ms.date: 2/23/2017
+ms.date: 3/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: a0d4eb601948aa3abb12409f3475d69cacf4a6aa
-ms.openlocfilehash: a2bf28c724f8e07f32a30ab5e0b832b46cf362bb
-ms.lasthandoff: 02/28/2017
+ms.sourcegitcommit: f9097014c7e988ec8e139e518355c4efb19172b3
+ms.openlocfilehash: eafa95922485066632a5da522e6c3de69b45050f
+ms.lasthandoff: 03/04/2017
 
 
 ---
@@ -33,7 +33,7 @@ System Center Configuration Manager 与 Microsoft 云服务同步，以获取更
 
 -   在 **联机模式**下，服务连接点会自动连接到 Microsoft 云服务并下载适用的更新。  
 
-     默认情况下，Configuration Manager 会每 24 小时检查一次新的更新。 从 1602 版本开始，还可以通过在 Configuration Manager 控制台的“管理” > “云服务” > “更新和维护服务”节点中选择“检查更新”，来立即检查更新。  
+     默认情况下，Configuration Manager 会每 24 小时检查一次新的更新。 还可以通过在 Configuration Manager 控制台的“管理” > “云服务” > “更新和维护服务”节点中选择“检查更新”，来立即检查更新。  
 
 -   在“脱机模式”下，服务连接点不会连接到 Microsoft 云服务。 必须手动[使用适用于 System Center Configuration Manager 的服务连接工具](../../../core/servers/manage/use-the-service-connection-tool.md)来下载可用的更新，然后将其导入。  
 
@@ -44,7 +44,7 @@ System Center Configuration Manager 与 Microsoft 云服务同步，以获取更
 
 -   未安装的更新显示为“可用”。
 
--   已安装的更新显示为“已安装”。  从 1606 版本开始，仅显示最近安装的更新。 可以在功能区上选择“历史记录”按钮，以查看以前安装的更新。
+-   已安装的更新显示为“已安装”。  仅显示最近安装的更新。 可以在功能区上选择“历史记录”按钮，以查看以前安装的更新。
 
 
 
@@ -61,7 +61,7 @@ System Center Configuration Manager 与 Microsoft 云服务同步，以获取更
 -   [流程图 - 更新 System Center Configuration Manager 的副本](../../../core/servers/manage/update-replication-flowchart.md)  
 
 ## <a name="assign-permissions-to-view-and-manage-updates-and-features"></a>分配查看和管理更新和功能的权限
-安装更新 1606 之前，若要在控制台中查看更新，用户必须分配有安全角色，该角色在权限组 **站点** 中包括 **读取**权限并且安全作用域为 **全部**。 从更新 1606 开始，名为**更新包**的基于角色的管理安全类将授予查看和管理 Configuration Manager 控制台中更新的访问权限。    
+用户若要在控制台中查看更新，必须为其分配基于角色并且包含名为“更新包”的安全类的管理安全角色。 此类授予访问权限以在 Configuration Manager 控制台中查看和管理更新。    
 
 **更新包类的信息：**  
 默认情况下， **更新包** (SMS_CM_Updatepackages) 是以下具有列出权限的内置安全角色的一部分：
@@ -95,13 +95,10 @@ System Center Configuration Manager 与 Microsoft 云服务同步，以获取更
 ###  <a name="bkmk_step1"></a> 步骤 1：查看更新清单  
 若要了解开始更新前执行的操作，请查看适用的更新清单：
 
--   从[升级到 System Center Configuration Manager](../../../core/servers/deploy/install/upgrade-to-configuration-manager.md) 升级到 1511。    
+- 更新到 1606：请参阅 [1606 的安装更新清单](../../../core/servers/manage/checklist-for-installing-update-1606.md)。  
 
--   从 1511 更新到 1602：请参阅 [1602 的安装更新清单](../../../core/servers/manage/checklist-for-installing-update-1602.md)。
-
-- 从 1511 或 1602 更新到 1606：请参阅 [1606 的安装更新清单](../../../core/servers/manage/checklist-for-installing-update-1606.md)。  
-
-- 从 1511、1602 或 1606 更新到 1610：请参阅 [1610 的安装更新清单](../../../core/servers/manage/checklist-for-installing-update-1610.md)。  
+- 从 1606 更新到 1610：请参阅 [1610 的安装更新清单](../../../core/servers/manage/checklist-for-installing-update-1610.md)。  
+<!--- Update to 1702 from either 1606 or 1610: See [Checklist for installing update 1702](../../../core/servers/manage/checklist-for-installing-update-1702.md). -->  
 
 ###  <a name="bkmk_step2"></a> 步骤 2：安装更新之前测试数据库升级  
 此步骤中的信息仅适用于为 System Center Configuration Manager 站点安装*更新*。 如果要将 System Center 2012 Configuration Manager 站点*升级*到 System Center Configuration Manager，请参阅[测试站点数据库升级](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager#a-namebkmktesta-test-the-site-database-upgrade)。
@@ -172,7 +169,7 @@ System Center Configuration Manager 与 Microsoft 云服务同步，以获取更
 
 -   在站点更新之后使用 Configuration Manager 控制台时，系统会提示用户更新控制台。  
 
--  站点服务器成功完成安装更新后，它将自动更新所有合适的站点系统角色。  唯一需要注意的是分发点。 将更新安装到已运行 1606 版或更高版本的站点时，所有分发点不再同时脱机安装更新。 而站点服务器使用站点的内容分发设置，一次性将更新分发到分发点的子集。 结果只有某些分发点脱机以安装更新。 这允许尚未开始更新或已完成更新的分发点保持联机状态，并能够向客户端提供内容。
+-  站点服务器成功完成安装更新后，它将自动更新所有合适的站点系统角色。  唯一需要注意的是分发点。 安装更新时，所有分发点不会重新安装，分发点将处于脱机状态以便同时更新。 而站点服务器使用站点的内容分发设置，一次性将更新分发到分发点的子集。 结果只有某些分发点脱机以安装更新。 这允许尚未开始更新或已完成更新的分发点保持联机状态，并能够向客户端提供内容。
 
 
 ###  <a name="bkmk_overview"></a> 控制台内部更新安装的概述  
@@ -185,7 +182,7 @@ System Center Configuration Manager 与 Microsoft 云服务同步，以获取更
     -   先决条件警告也可以停止更新安装。 重试更新安装之前，应解决警告。 有关详细信息，请参阅[重试失败更新的安装](#bkmk_retry)。  
     -   选择选项“忽略任何先决条件检查警告并安装此更新，无论是否缺少要求”，为更新安装设置忽略先决条件警告的条件。 这样，更新安装才能继续。 如果不选择此选项，则在遇到警告时会停止更新安装。 除非以前为站点运行了先决条件检查并解决了先决条件警告，否则不建议使用此选项。  
 
-      从 1606 版本开始，“管理”和“监视”这两个工作区中的“更新和维护服务”节点都包括功能区上一个名为“忽略先决条件警告”的按钮。 当因先决条件检查警告而导致无法完成更新包安装时，可以使用此按钮。 例如，如果不使用“忽略先决条件警告”的选项安装更新（从更新向导中），更新安装停止并出现先决条件警告状态，但没有发生错误，那么之后可以在功能区选择“忽略先决条件警告”来触发自动继续忽略先决条件警告的更新安装。 使用此选项时，几分钟后将自动继续更新安装。
+      在“管理”和“监视”这两个工作区中，“更新和服务服务”节点都在功能区上包含了一个名为“忽略先决条件警告”的按钮。 当因先决条件检查警告而导致无法完成更新包安装时，可以使用此按钮。 例如，如果不使用“忽略先决条件警告”的选项安装更新（从更新向导中），更新安装停止并出现先决条件警告状态，但没有发生错误，那么之后可以在功能区选择“忽略先决条件警告”来触发自动继续忽略先决条件警告的更新安装。 使用此选项时，几分钟后将自动继续更新安装。
 
 
 
@@ -211,7 +208,7 @@ System Center Configuration Manager 与 Microsoft 云服务同步，以获取更
 
 -   在 Configuration Manager 控制台中：转到“监视” > “概述” > “更新与维护服务”节点。 此节点仅显示当前正在安装的更新包的安装状态。  
 
-    从版本 1606 开始，为便于监视，将更新包安装划分为以下几个阶段。 对于每个阶段，提供了更多详细信息，包括要查看有关详细信息的日志文件：  
+  为便于监视，将更新包安装划分为以下几个阶段。 对于每个阶段，提供了更多详细信息，包括要查看有关详细信息的日志文件：  
     -   **下载**（此阶段仅适用于已安装服务连接点站点系统角色所在的顶层站点。）
     -   **复制**
     -   **先决条件检查**
@@ -323,36 +320,7 @@ System Center Configuration Manager 与 Microsoft 云服务同步，以获取更
 当功能不可选时，它会自动安装，不会出现在“功能”节点中。  
 
 ##  <a name="bkmk_prerelease"></a> 使用更新中的预发行功能
-预发行功能包含在产品中，用于在生产环境中进行早期测试，但不应将其视为生产就绪。 从 1606 开始，必须同意使用 System Center Configuration Manager 中的预发行功能，然后才可以选择并启用它们。  
-
-同意是对每个层次结构执行的一次性操作，不能撤消。 除非用户同意，否则不能启用 1606 版或更高版本的更新版本中涵盖的新的预发行功能。
-
-若要同意，则在控制台中转到“管理” > “站点配置” > “站点”，然后选择“层次结构设置”。 在“常规”选项卡上，选择“同意使用预发行功能”。
-
- > [!NOTE]
- > 如果安装更新 1606 之前启用了更新 1602 的预发行功能，即使不同意使用预发行功能，安装 1606 后也可使用这些功能。
-
-当你的层次结构运行版本 1606 或更高版本，然后再安装包含预发行功能的更新时，这些功能和此次更新包含的常规功能在更新和维护向导中可见：
-  - **如果同意：** 安装更新时，可以启用更新和维护向导中的预发行功能。 为此，请选择预发行功能，就像选择任何其他功能那样。     
-
-    也可以之后从控制台的“管理” > “云服务” > “更新和维护服务” > “功能”节点启用预发行功能。 在“功能”节点选择该功能，然后选择“开启”。 （除非用户同意，否则此选项为灰显。）  
-  -   **如果不同意：**安装更新时，预发行功能在更新和维护服务向导中可见，但将灰显且不能启用。 安装更新之后，可以在“功能”节点中查看这些功能，但在“层次结构设置”中同意这样做之前不能启用它们。
-
- > [!TIP]
- > 安装 1606 版更新时，1606 版更新中包含的预发行功能在更新和维护向导中不可见，且此时不可启用。 安装 1606 版更新后，可以查看“功能”节点中涵盖的预发行功能。
-
-如果在独立主站点中同意这样做，并通过安装新的管理中心站点扩展层次结构，则还必须在管理中心站点也同意这样做。
-
-**可以使用以下预发行功能：**
-
- |功能                    |添加为预发行功能 |添加为完整版功能 |  
-|----------------------------|---------------------|------------------------|
-| 用于向客户端进行内容分发的对等缓存 |  [版本 1610](/sccm/core/plan-design/hierarchy/client-peer-cache) |![尚未发行](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-| 云管理网关 |  [版本 1610](/sccm/core/clients/manage/plan-cloud-management-gateway) |![尚未发行](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-| 客户端数据源仪表板 |  [版本 1610](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed#client-data-sources-dashboard) |![尚未发行](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-| Microsoft Operations Management Suite 连接器  | [版本 1606](../../../core/clients/manage/sync-data-microsoft-operations-management-suite.md) |![尚未发行](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-| 维护群集感知集合（为服务器组提供服务）| [版本 1602](../../../core/get-started/capabilities-in-technical-preview-1605.md#BKMK_ServerGroups)|![尚未发行](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-|对由 System Center Configuration Manager 管理的电脑进行条件访问 | [版本 1602](../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)     |![尚未发行](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)                        |
+预发行功能是指 Current Branch 中随附的功能，用于在生产环境中的早期测试。 这些功能不应被视为可进行生产，但可以在生产环境中使用。 若要了解有关预发行功能的详细信息，包括如何在环境中启用这些功能，请参阅[预发行功能](/sccm/core/servers/manage/pre-release-features)。                |
 
 
 ## <a name="known-issues"></a>已知问题

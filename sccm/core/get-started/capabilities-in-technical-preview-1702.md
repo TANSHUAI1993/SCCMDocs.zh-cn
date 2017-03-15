@@ -16,16 +16,14 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 619899aaf8bde36e2bd62b5ba8a037b8580df198
-ms.openlocfilehash: 58b343aed6ea1d846801aca5e0a95200df1acc94
-ms.lasthandoff: 03/01/2017
+ms.sourcegitcommit: ee7f69bd65152deffb2456d9807e1e8fee8802ec
+ms.openlocfilehash: dd28c8218c77686884bdcff508080185cae97489
+ms.lasthandoff: 03/07/2017
 
 ---
 # <a name="capabilities-in-technical-preview-1702-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1702 中的功能
 
 *适用范围：System Center Configuration Manager (Technical Preview)*
-
-
 
 本文介绍了 System Center Configuration Manager Technical Preview（版本 1702）中的可用功能。 可以安装此版本以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。 在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。    
 
@@ -323,7 +321,7 @@ Android for Work 是独立于 Android 的平台，你需要决定对支持工作
 #### <a name="approve-and-deploy-android-for-work-apps"></a>批准和部署 Android for Work 应用
 使用以下步骤在 Play for Work 应用商店中批准应用，将其同步到 Configuration Manager 控制台，然后将其部署到托管的 Android for Work 设备中。 若要将应用部署到用户的工作配置文件中，需要在 Play for Work 中批准该应用，然后将应用与 Configuration Manager 控制台同步。
 
-1. 打开浏览器并转到：http://www.play.com/work
+1. 打开浏览器并转到：https://play.google.com/work。
 2. 使用绑定到你的 Intune 租户的 Google 管理员帐户登录。
 3. 浏览要在你的环境中部署的应用，然后对每个应用单击“批准”。
 4. 在 Configuration Manager 控制台中，转到“管理员” > “概述” > “云服务” > “Android for Work”，然后单击“同步”。

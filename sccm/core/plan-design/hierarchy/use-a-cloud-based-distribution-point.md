@@ -2,7 +2,7 @@
 title: "基于云的分发点 | Microsoft Docs"
 description: "了解有关配合使用 System Center Configuration Manager 和基于云的分发点的配置和限制。"
 ms.custom: na
-ms.date: 2/24/2017
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3eab8e62ace29c0fcb24d47ec7e398d807347a38
-ms.openlocfilehash: a1d701c77afb4d6317d8a137fdf46422063df085
-ms.lasthandoff: 02/28/2017
+ms.sourcegitcommit: f9097014c7e988ec8e139e518355c4efb19172b3
+ms.openlocfilehash: 489f38d3f88391e42b5271c03151203d22b26d9e
+ms.lasthandoff: 03/04/2017
 
 
 ---
@@ -63,7 +63,7 @@ ms.lasthandoff: 02/28/2017
 
 基于云的分发点具有下列限制：  
 
--  使用具有修补程序 KB4010155 的 1610 版之前，不能使用基于云的分发点来承载软件更新包。 1610 版之后的下一 Current Branch 版本将支持此选项，且无需安装此修补程序。  
+-  使用具有修补程序 KB4010155 的 1610 版之前，不能使用基于云的分发点来承载软件更新包。 从 1702 及更高版本开始，此问题已得到解决。  
 
 -   无法将基于云的分发点用于 PXE 或启用多播的部署。  
 

@@ -13,9 +13,9 @@ ms.technology:
 - configmgr-client
 ms.assetid: 68407ab8-c205-44ed-9deb-ff5714451624
 translationtype: Human Translation
-ms.sourcegitcommit: 460089ce58910b68eb0a613bce0166754850844b
-ms.openlocfilehash: 9361c66228cf54eb1daf8138cd03fc8f6139f48d
-ms.lasthandoff: 03/01/2017
+ms.sourcegitcommit: dcbcd57b95f304f007e92ebe2b9aeefb4b579662
+ms.openlocfilehash: 986d0446209f6e7eac1b681066d1b2e2305e1975
+ms.lasthandoff: 03/09/2017
 
 
 ---
@@ -49,7 +49,7 @@ Upgrade Readiness 是 Microsoft Operations Management Suite (OMS) 中的解决�
 
 ### <a name="create-the-connection"></a>创建连接
 
-1.  在 Configuration Manager 控制台中，选择“管理” > “云服务” > “Upgrade Readiness 连接器” > “创建 Upgrade Readiness 连接”以启动“添加 Upgrade Readiness 连接向导”。
+1.  在 Configuration Manager 控制台中，选择“管理” > “云服务” > “Upgrade Readiness 连接器” > “创建 Upgrade Analytics 连接”以启动“添加 Upgrade Analytics 连接向导”。
 3.  在“Azure Active Directory”屏幕上，提供“租户”、“客户端 ID”以及“客户端密钥”，然后选择“下一步”。
 4.  在“Upgrade Readiness”屏幕上，填写“Azure 订阅”、“Azure 资源组”和“Operations Management Suite 工作区”，提供连接设置。
 5.  在“摘要”屏幕上验证连接设置，然后选择“下一步”。

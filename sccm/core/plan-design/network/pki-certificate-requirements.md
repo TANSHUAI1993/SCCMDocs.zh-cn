@@ -16,9 +16,9 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: b90519f6f6e3599cd34f5cf93b476739ec17847b
-ms.openlocfilehash: 64ed5982cfd1de6ec135f02c84b9396266001b42
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: dcbcd57b95f304f007e92ebe2b9aeefb4b579662
+ms.openlocfilehash: 991bf551899d810a55a30f1a833de28db6295cf4
+ms.lasthandoff: 03/09/2017
 
 
 ---
@@ -33,8 +33,11 @@ ms.lasthandoff: 02/24/2017
 -   对于 Windows Server 2008： [Windows Server 2008 中的 Active Directory 证书服务](http://go.microsoft.com/fwlink/p/?LinkId=115018)  
 
 > [!IMPORTANT]  
->  自 2017 年 2 月 14 日起生效， Windows 不再信任使用 SHA-1 签名的某些证书。 相关信息，可参阅 [Windows Enforcement of SHA1 certificates](http://social.technet.microsoft.com/wiki/contents/articles/32288.windows-enforcement-of-sha1-certificates.aspx)（Windows 针对 SHA1 证书的强制措施）。 通常，建议颁发使用 SHA-2（包括 SHA-256 和 SHA-512 等）签名的新服务器和客户端身份验证证书。
-> 此外，建议所有面向 Internet 的服务均使用 SHA-2 证书。 例如，如果购买用于云管理网关的公用证书，请确保购买 SHA-2 证书。
+> 自 2017 年 2 月 14 日起生效， Windows 不再信任使用 SHA-1 签名的某些证书。 System Center Configuration Manager 支持 SHA-2 证书，使用 SHA-2 证书可以确保至关重要的安全性。 因此，我们建议：
+> - 颁发使用 SHA-2（包括 SHA-256 和 SHA-512 等）的新服务器和客户端身份验证证书。
+> - 所有面向 Internet 的服务均使用 SHA-2 证书。 例如，如果购买用于云管理网关的公用证书，请确保购买 SHA-2 证书。  
+>
+> 在大多数情况下，对 SHA-2 证书的更改不会影响操作。 有关详细信息，请参阅 [Windows Enforcement of SHA1 certificates](http://social.technet.microsoft.com/wiki/contents/articles/32288.windows-enforcement-of-sha1-certificates.aspx)（Windows 针对 SHA1 证书的强制措施）。
 
  除了 System Center Configuration Manager 在移动设备和 Mac 计算机上注册的客户端证书、Microsoft Intune 为管理移动设备自动创建的证书以及 System Center Configuration Manager 在基于 AMT 的计算机上安装的证书以外，可以使用任何 PKI 来创建、部署和管理以下证书。 但是，当你使用 Active Directory 证书服务和证书模板时，可以使用此 Microsoft PKI 解决方案轻松地管理证书。 使用以下各表中的“要使用的 Microsoft 证书模板”  列来确定最符合证书要求的证书模板。 基于模板的证书只能由运行于服务器操作系统的企业版或数据中心版（例如 Windows Server 2008 Enterprise 和 Windows Server 2008 Datacenter）上的企业证书颁发机构颁发。  
 
