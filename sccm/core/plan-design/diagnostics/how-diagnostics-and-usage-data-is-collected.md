@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 24a233516058e645df2a43623855665b97b041b0
 ms.openlocfilehash: 9c0165212fe34f460be2ce870d0542b616f3bc4d
+ms.lasthandoff: 12/30/2016
 
 
 ---
@@ -31,12 +32,7 @@ ms.openlocfilehash: 9c0165212fe34f460be2ce870d0542b616f3bc4d
 
 -   **在联机模式下：** 每周自动从服务连接点向云服务发送一次诊断和使用情况数据。  
 
--   **在脱机模式下：** 使用服务连接工具手动传输诊断和使用情况数据。 有关详细信息，请参阅 [Use the Service Connection Tool for System Center Configuration Manager](../../../core/servers/manage/use-the-service-connection-tool.md)。  
+-   **在脱机模式下：** 使用服务连接工具手动传输诊断和使用情况数据。 有关详细信息，请参阅 [关于 System Center Configuration Manager 服务连接点](../../../core/servers/manage/use-the-service-connection-tool.md)。  
 
-有关详细信息，请参阅 [About the service connection point in System Center Configuration Manager](../../../core/servers/deploy/configure/about-the-service-connection-point.md)。  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
+有关详细信息，请参阅 [关于 System Center Configuration Manager 服务连接点](../../../core/servers/deploy/configure/about-the-service-connection-point.md)。  
 
