@@ -29,7 +29,7 @@ ms.lasthandoff: 01/21/2017
 
 在准备 Configuration Manager 基础结构以处理本地移动设备管理之前，请考虑以下要求。
 
-##  <a name="a-namebkmkdevicesa-supported-devices"></a><a name="bkmk_devices"></a>支持的设备  
+##  <a name="bkmk_devices"></a>支持的设备  
  本地移动设备管理允许你使用内置于设备操作系统的管理功能来管理移动设备。  该管理功能基于开放移动联盟 (OMA) 设备管理 (DM) 标准，许多设备平台都使用此标准来允许对设备进行管理。  我们将它们称为“新式设备”（在文档和 Configuration Manager 控制台用户界面中），以将它们与其他需要 Configuration Manager 客户端来进行管理的设备区别开来。  
 
  > [!NOTE]  
@@ -37,11 +37,11 @@ ms.lasthandoff: 01/21/2017
 >   
 >  -   Windows 10 企业版  
 > -   Windows 10 专业版  
-> -   Windows 10 协同版（自 Configuration Manager 版本 1602 起）  
+> -   Windows 10 协同版\(自 Configuration Manager 版本 1602 起\)  
 > -   Windows 10 移动版  
 > -   Windows 10 移动企业版   
 
-##  <a name="a-namebkmkintunea-use-of-the--microsoft-intune-subscription"></a><a name="bkmk_intune"></a>使用 Microsoft Intune 订阅  
+##  <a name="bkmk_intune"></a>使用 Microsoft Intune 订阅  
  若要开始使用本地移动设备管理，你需要 Microsoft Intune 订阅。 仅跟踪设备授权时需要订阅，订阅不用于管理或储存设备的管理信息。 所有管理均由你组织的企业使用本地 Configuration Manager 基础结构来进行。  
 
  > [!NOTE]  
@@ -54,7 +54,7 @@ ms.lasthandoff: 01/21/2017
 
  有关如何设置 Intune 订阅的信息，请参阅[在 System Center Configuration Manager 中为本地移动设备管理设置 Microsoft Intune 订阅](../../mdm/get-started/set-up-intune-subscription-on-premises-mdm.md)。  
 
-##  <a name="a-namebkmkrolesa-required-site-system-roles"></a><a name="bkmk_roles"></a>所需站点系统角色  
+##  <a name="bkmk_roles"></a>所需站点系统角色  
  本地移动设备管理需要至少一个以下站点系统角色：  
 
 -   **注册代理点** ，用于支持注册请求。  
@@ -69,11 +69,11 @@ ms.lasthandoff: 01/21/2017
 
  这些站点系统角色可以安装在单个站点系统服务器上，或者根据组织的需要分别运行在不同的服务器上。 用于本地移动设备管理的每个站点系统服务器都必须配置为 HTTPS 终结点，以便与受信任的设备通信。 有关详细信息，请参阅 [所需受信任的通信](#bkmk_trustedComs)。  
 
- 有关规划站点系统角色的详细信息，请参阅 [Plan for site system servers and site system roles for System Center Configuration Manager](../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md)。  
+ 有关规划站点系统角色的详细信息，请参阅 [为 System Center Configuration Manager 规划站点系统服务器和站点系统角色](../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md)。  
 
- 有关如何添加所需站点系统角色的详细信息，请参阅 [Install site system roles for On-premises Mobile Device Management in System Center Configuration Manager](../../mdm/get-started/install-site-system-roles-for-on-premises-mdm.md)。  
+ 有关如何添加所需站点系统角色的详细信息，请参阅 [在 System Center Configuration Manager 中为本地移动设备管理安装站点系统角色](../../mdm/get-started/install-site-system-roles-for-on-premises-mdm.md)。  
 
-##  <a name="a-namebkmktrustedcomsa-required-trusted-communications"></a><a name="bkmk_trustedComs"></a>所需受信任的通信  
+##  <a name="bkmk_trustedComs"></a>所需受信任的通信  
  本地移动设备管理要求启用站点系统角色以进行 HTTPS 通信。 根据需要，你可以使用企业的证书颁发机构 (CA) 在服务器和设备之间建立受信任的连接，或者使用公开发布的 CA 作为受信任的颁发机构。  无论哪种方式，你都需要在托管所需站点系统角色的站点系统服务器上用 IIS 配置 Web 服务器证书，并且需要在要连接到那些服务器的设备上安装该 CA 的根证书。  
 
  如果你使用企业的 CA 建立受信任的通信，则需要执行下列任务：  
@@ -106,7 +106,7 @@ ms.lasthandoff: 01/21/2017
 
  有关详细信息，请参阅 [Set up certificates for trusted communications for On-premises Mobile Device Management in System Center Configuration Manager](../../mdm/get-started/set-up-certificates-on-premises-mdm.md)。  
 
-##  <a name="a-namebkmkenrollmenta-enrollment-considerations"></a><a name="bkmk_enrollment"></a>注册注意事项  
+##  <a name="bkmk_enrollment"></a>注册注意事项  
  若要为本地移动设备管理启用设备注册，必须向用户授予注册权限，且其设备必须能够与承载所需站点系统角色的站点系统服务器实现受信任的通信。  
 
  可以通过在 Configuration Manager 客户端设置中设置注册配置文件，来授予用户注册权限。 你可以使用默认客户端设置将注册配置文件推送到所有已发现的用户；或者在自定义客户端设置中设置注册配置文件，并将设置推送到一个或多个用户集合。  
