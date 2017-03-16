@@ -19,6 +19,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
 ms.openlocfilehash: 132803a1aa9aad5c5462686bd656688418e47d07
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -29,7 +30,7 @@ ms.openlocfilehash: 132803a1aa9aad5c5462686bd656688418e47d07
 若要在 System Center Configuration Manager 中监视基础结构和操作，请使用 Configuration Manager 控制台中的“监视”工作区。  
 
 > [!NOTE]  
->  此位置的例外是“迁移”，迁移是从“管理”  工作区的“迁移”  节点中直接监视的。 有关详细信息，请参阅 [Operations for migrating to System Center Configuration Manager](../../../core/migration/operations-for-migration.md)。  
+>  此位置的例外是“迁移”，迁移是从“管理”  工作区的“迁移”  节点中直接监视的。 有关详细信息，请参阅 [用于迁移到 System Center Configuration Manager 的操作](../../../core/migration/operations-for-migration.md)。  
 
  除了使用 Configuration Manager 控制台进行监视，还可以使用 Configuration Manager 报表，或查看 Configuration Manager 组件的 Configuration Manager 日志文件。 有关使用报表的详细信息，请参阅 [System Center Configuration Manager 中的报表](../../../core/servers/manage/reporting.md)。 有关日志文件的详细信息，请参阅 [System Center Configuration Manager 中的日志文件](../../../core/plan-design/hierarchy/log-files.md)。  
 
@@ -55,7 +56,7 @@ ms.openlocfilehash: 132803a1aa9aad5c5462686bd656688418e47d07
 
 
 
-##  <a name="a-namebkmkmonintormgmttasksa-monitor--common-management-tasks-for-configuration-manager"></a><a name="BKMK_MonintorMgmtTasks"></a> 监视 Configuration Manager 的常用管理任务  
+##  <a name="BKMK_MonintorMgmtTasks"></a> 监视 Configuration Manager 的常用管理任务  
  Configuration Manager 提供从 Configuration Manager 控制台中进行的内置监视。 你可以监视许多任务，其中包括与整个层次结构中的软件更新、电源管理以及内容部署相关的那些任务。  
 
  使用下列信息来帮助你监视常见的 Configuration Manager 任务：  
@@ -87,10 +88,10 @@ ms.openlocfilehash: 132803a1aa9aad5c5462686bd656688418e47d07
  请参阅[在 System Center Configuration Manager 中监视软件更新](../../../sum/deploy-use/monitor-software-updates.md)。  
 
 
-##  <a name="a-namebkmkmonitorinfrastructurea-monitor-hierarchy-infrastructure-for-configuration-manager"></a><a name="BKMK_MonitorInfrastructure"></a> 监视 Configuration Manager 的层次结构基础结构  
+##  <a name="BKMK_MonitorInfrastructure"></a> 监视 Configuration Manager 的层次结构基础结构  
 Configuration Manager 提供了若干方法来监视层次结构的状态和操作。 你可以检查整个层次结构中站点的系统状态、通过站点层次结构或地理视图监视站点内复制、针对数据库复制监视站点之间的复制链接，并使用复制链接分析器工具来修正复制问题。  
 
-###  <a name="a-namebkmkshnodea-about-the-site-hierarchy-node"></a><a name="BKMK_SH_Node"></a> 关于站点层次结构节点  
+###  <a name="BKMK_SH_Node"></a> 关于站点层次结构节点  
 “监视”工作区中的“站点层次结构”节点提供 Configuration Manager 层次结构和站点间链接的概述。 你可以使用两个视图：  
 
 -   **层次结构关系图**：此视图将层次结构显示为一个拓扑图，该拓扑图经过简化，仅显示重要信息。  
@@ -126,13 +127,13 @@ Configuration Manager 提供了若干方法来监视层次结构的状态和操�
 
      在指定位置时，你可以使用“位置”  框来搜索层次结构中的特定站点。 选中站点后，在“位置”  列中输入城市名或街道地址作为位置。 Configuration Manager 使用必应地图解析位置。  
 
-###  <a name="a-namebkmkmonitorreplinksandstatussa-how-to-monitor-database-replication-links-and-replication-status"></a><a name="BKMK_MonitorRepLinksAndStatuss"></a> 如何监视数据库复制链接和复制状态  
+###  <a name="BKMK_MonitorRepLinksAndStatuss"></a> 如何监视数据库复制链接和复制状态  
  除了可从“监视”  工作区“站点层次结构”  节点访问的高层详细信息。 还可在使用“监视”  工作区中的“数据复制”  节点时监视数据库复制的详细信息。 从“数据库复制”中，你可以监视站点之间的复制链接的状态，以及你的 Configuration Manager 控制台所连接到的站点上的复制组的初始化详细信息和复制详细信息。  
 
 > [!TIP]  
 >  尽管“数据库复制”  节点还出现在“管理”  工作区的“层次结构配置”  节点下，但你无法从该位置中查看数据库复制链接的复制状态。  
 
-####  <a name="a-namebkmkmonitorreplicationlinksa-replication-link-status"></a><a name="BKMK_MonitorReplicationLinks"></a> 复制链接状态  
+####  <a name="BKMK_MonitorReplicationLinks"></a> 复制链接状态  
 站点之间的数据库复制涉及到若干组信息的复制，称为复制组。 每个复制组都使用不同的复制优先级进行复制。 默认情况下，无法修改复制组中包含的数据以及复制的频率。  
 
  当复制链接处于活动状态，并且没有失败或降级状态时，所有复制组都将及时进行复制。 如果一个或多个复制组在预期的时间段中无法完成复制，则链接将显示为降级。 降级的链接仍然起作用，但你应对其进行监视以确保其恢复为活动状态，或对其进行调查以确保不会出现其他降级或复制失败情况。  
@@ -149,7 +150,7 @@ Configuration Manager 提供了若干方法来监视层次结构的状态和操�
 
  当父站点正在升级到新的 Service Pack，并且你从子站点中查看链接状态时，链接状态将显示为活动。 升级之后，在子站点也升级到与父站点相同的 Service Pack 之前，如果从父站点中进行查看，链接状态将显示为活动，如果从子站点中进行查看，链接状态将显示为正在配置。  
 
-####  <a name="a-namebkmkmonitorreplicationstatusa-replication-status"></a><a name="BKMK_MonitorReplicationStatus"></a> 复制状态  
+####  <a name="BKMK_MonitorReplicationStatus"></a> 复制状态  
  你可以使用“监视”  工作区的“数据库复制”  节点来查看复制链接的复制状态，并查看复制链接上每个站点中的站点数据库的详细信息。 你还可以查看有关复制组的详细信息。 要查看详细信息，请选择复制链接，然后为要查看的复制状态选择相应的选项卡。 下面是有关复制状态的不同选项卡的详细信息。  
 
  **摘要**  
@@ -190,7 +191,7 @@ Configuration Manager 提供了若干方法来监视层次结构的状态和操�
 > [!TIP]  
 >  站点数据的复制组只会从子站点发送到父站点。 全局数据的复制组则以双向方式复制。  
 
-###  <a name="a-namebkmkrlaa-about-the-replication-link-analyzer"></a><a name="BKMK_RLA"></a> 关于复制链接分析器  
+###  <a name="BKMK_RLA"></a> 关于复制链接分析器  
  Configuration Manager 包括**复制链接分析器**，你使用该分析器来分析和修复复制问题。 你可以使用复制链接分析器在复制失败以及复制停止工作但尚未报告为失败时修正复制链接故障。 复制链接分析器可用于修正 Configuration Manager 层次结构中以下计算机之间的复制问题（复制故障的方向并不重要）：  
 
 -   站点服务器和站点数据库服务器之间。  
@@ -229,7 +230,7 @@ Configuration Manager 提供了若干方法来监视层次结构的状态和操�
 
 -   随着 System Center Configuration Manager 1511 版本的发布，复制链接分析器针对从 System Center 2012 Configuration Manager 升级的主站点会产生 SQL Server Service Broker 证书错误。 这是因为 1511 版本引入的证书名称发生更改，而复制链接分析器尚未对其进行更新。 可以安全忽略这些错误。  
 
-###  <a name="a-namebkmkprocsformonitoringreplicationa-procedures-for-monitoring-database-replication"></a><a name="BKMK_ProcsforMonitoringReplication"></a> 用于监视数据库复制的过程  
+###  <a name="BKMK_ProcsforMonitoringReplication"></a> 用于监视数据库复制的过程  
 
 ##### <a name="to-monitor-high-level-site-to-site-database-replication-status"></a>监视高级别站点到站点数据库复制状态    
 1.  在 Configuration Manager 控制台中，单击“监视” 。  
@@ -242,9 +243,4 @@ Configuration Manager 提供了若干方法来监视层次结构的状态和操�
 1.  在 Configuration Manager 控制台中，单击“监视” 。  
 
 2.  在“监视”  工作区中，单击“数据库复制” ，然后选择要监视的链接的复制链接。 然后，在工作区中选择相应的选项卡以查看有关该链接的复制状态的不同详细信息。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 
