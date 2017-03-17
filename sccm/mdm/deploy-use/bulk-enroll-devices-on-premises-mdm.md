@@ -8,7 +8,7 @@ ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
 ms.technology:
-- configmgr-client
+- configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: b36f5e4a-2b57-4d18-83f6-197081ac2a0a
@@ -54,14 +54,14 @@ ms.lasthandoff: 12/16/2016
 
 -   [验证设备的注册](#bkmk_verifyEnroll)  
 
-##  <a name="a-namebkmkcreatecerta-create-a-certificate-profile"></a><a name="bkmk_createCert"></a> 创建一份证书配置文件  
+##  <a name="bkmk_createCert"></a> 创建一份证书配置文件  
  注册程序包的主要组件是一个证书配置文件，用于自动将受信任的根证书设置到正在注册的设备。  设备和本地移动设备管理所需的站点系统角色之间进行受信任的通信需要此根证书。 如果没有根证书，在该设备和承载注册点、注册代理点、分发点和设备管理点站点系统角色的服务器之间的 HTTPS 连接中，该设备将不受信任。  
 
  作为准备系统以用于本地移动设备管理这一操作的一部分，要导出可用于注册程序包的证书配置文件的根证书。 有关如何获得受信任的根证书的说明，请参阅[导出根与 Web 服务器证书的根相同的证书](../../mdm/get-started/set-up-certificates-on-premises-mdm.md#bkmk_exportCert)。  
 
  使用导出的根证书创建一个证书配置文件。 有关说明，请参阅[如何在 System Center Configuration Manager 中创建证书配置文件](../../protect/deploy-use/create-certificate-profiles.md)。  
 
-##  <a name="a-namecreatewifia-create-a-wi-fi-profile"></a><a name="CreateWifi"></a> 创建 Wi-fi 配置文件  
+##  <a name="CreateWifi"></a> 创建 Wi-fi 配置文件  
  用于批量注册的包的另一个组件是 Wi-Fi 配置文件。 在配置了网络设置之前，某些设备可能不具有支持注册所需的网络连接。 在注册程序包中包含一个 Wi-Fi 配置文件可为设备提供一种建立网络连接的方式。  
 
  若要在 Configuration Manager 中创建 Wi-Fi 配置文件，请按照[如何在 System Center Configuration Manager 中创建 Wi-Fi 配置文件](../../protect/deploy-use/create-wifi-profiles.md)中的说明进行操作。  
@@ -78,7 +78,7 @@ ms.lasthandoff: 12/16/2016
 >
 > - 尽管 Configuration Manager 在 Wi-Fi 配置文件中有针对代理服务器信息的设置，但在注册设备时不会配置代理。 如果需要对已注册设备设置代理服务器，可以在设备注册后使用配置项目部署设置，或使用 Windows 映像和配置设计器 (ICD) 创建第二个包以部署在批量注册程序包旁边。
 
-##  <a name="a-namebkmkcreateenrolla-create-an-enrollment-profile"></a><a name="bkmk_createEnroll"></a> 创建注册配置文件  
+##  <a name="bkmk_createEnroll"></a> 创建注册配置文件  
  注册配置文件允许你指定设备注册时所需的设置，包括将受信任的根证书动态设置到设备的证书配置文件和在需要时将配置网络设置的 Wi-Fi 配置文件。  
 
  创建注册配置文件之前，请确保你具有证书配置文件并创建了 Wi-Fi 配置文件（如果需要）。 有关详细信息，请参阅 [创建一份证书配置文件](#bkmk_createCert) 和 [创建 Wi-fi 配置文件](#CreateWifi)。  
@@ -104,7 +104,7 @@ ms.lasthandoff: 12/16/2016
 
 8.  确认注册配置文件的设置，然后单击“下一步”。 单击“关闭”  以退出向导。  
 
-##  <a name="a-namebkmkcreateppkga-create-an-enrollment-package-ppkg-file"></a><a name="bkmk_createPpkg"></a> 创建一个注册程序包 (ppkg) 文件  
+##  <a name="bkmk_createPpkg"></a> 创建一个注册程序包 (ppkg) 文件  
  注册程序包是用于为本地移动设备管理批量注册设备的文件。  必须使用 Configuration Manager 创建此文件。 可以使用 Windows 映像和配置设计器 (ICD) 创建类似类型的程序包，但只有在 Configuration Manager 中创建的程序包可用于为本地移动设备管理完成整个设备注册过程。 使用 Windows ICD 创建的包只提供注册所需的用户主体名称 (UPN)，而不执行实际的注册过程。  
 
  创建注册程序包的过程需要适用于 Windows 10 的 Windows 评估和部署工具包 (ADK)。  请确保已在运行 Configuration Manager 控制台的服务器上安装了版本号为 1511 的 Windows ADK。 更多详细信息，请参阅 [下载适用于 Windows 10 的工具包和工具](https://msdn.microsoft.com/windows/hardware/dn913721.aspx)中的 ADK 部分。  
@@ -125,7 +125,7 @@ ms.lasthandoff: 12/16/2016
 
 4.  单击" **确定**"。  
 
-##  <a name="a-namebkmkgetppkga-use-the-package-to-bulk-enroll-a-device"></a><a name="bkmk_getPpkg"></a> 使用程序包批量注册设备  
+##  <a name="bkmk_getPpkg"></a> 使用程序包批量注册设备  
  在通过全新体验 (OOBE) 过程对设备进行设置之前和之后，可以使用程序包注册设备。   还可将注册程序包包含为原始设备制造商 (OEM) 设置包的一部分。  
 
  包必须以物理方式传递给要将其用于批量注册的设备。 你可以以各种方式将注册程序包传递给设备，具体取决于你的需要，其中包括以下方式：  
@@ -160,7 +160,7 @@ ms.lasthandoff: 12/16/2016
 
 6.  单击该帐户，然后单击“同步”，从而使用 Configuration Manager 启动管理。  
 
-##  <a name="a-namebkmkverifyenrolla-verify-enrollment-of-device"></a><a name="bkmk_verifyEnroll"></a> 验证设备的注册  
+##  <a name="bkmk_verifyEnroll"></a> 验证设备的注册  
  可以在 Configuration Manager 控制台中验证是否已成功注册设备。  
 
 -   启动 Configuration Manager 控制台。  
