@@ -19,6 +19,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
 ms.openlocfilehash: 1069a18eecbc5f53b74ad89e166e6f2c7b180693
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -28,12 +29,12 @@ ms.openlocfilehash: 1069a18eecbc5f53b74ad89e166e6f2c7b180693
 
 若要在 System Center Configuration Manager 中部署操作系统，首先必须准备以下站点系统角色，这些角色要求具有特定配置并考虑特定注意事项。
 
-##  <a name="a-namebkmkdistributionpointsa-distribution-points"></a><a name="BKMK_DistributionPoints"></a> 分发点  
+##  <a name="BKMK_DistributionPoints"></a> 分发点  
  分发点站点系统角色包含供客户端下载的源文件，例如应用程序内容、软件更新、操作系统映像以及启动映像。 你可以通过使用带宽、限制和计划选项来控制内容分发。  
 
  有足够的分发点支持部署到计算机的操作系统非常重要。 将这些分发点放置在你的层次结构中的规划也同样重要。 可在[管理内容和内容基础结构](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)中找到这一规划的大部分信息。 但是，有一些特定于操作系统部署的分发点的其他规划注意事项。  
 
-###  <a name="a-namebkmkadditionalplanninga-additional-planning-considerations-for-distribution-points"></a><a name="BKMK_AdditionalPlanning"></a> 分发点的其他规划注意事项  
+###  <a name="BKMK_AdditionalPlanning"></a> 分发点的其他规划注意事项  
  以下为分发点要考虑的其他规划事项：  
 
 -   **如何避免不需要的操作系统部署?**  
@@ -54,7 +55,7 @@ ms.openlocfilehash: 1069a18eecbc5f53b74ad89e166e6f2c7b180693
 
      可以将操作系统部署到分发点，但必须从其他分发点接收操作系统映像。  
 
-###  <a name="a-namebkmkpxedistributionpointa-configuring-distribution-points-to-accept-pxe-requests"></a><a name="BKMK_PXEDistributionPoint"></a> 配置分发点以接受 PXE 请求  
+###  <a name="BKMK_PXEDistributionPoint"></a> 配置分发点以接受 PXE 请求  
  要将操作系统部署到发出 PXE 启动请求的 Configuration Manager 客户端，必须配置一个或多个分发点以接受 PXE 请求。 配置分发点后，此分发点将响应 PXE 启动请求，并确定要执行的适当部署操作。
 
 > [!IMPORTANT]  
@@ -97,7 +98,7 @@ ms.openlocfilehash: 1069a18eecbc5f53b74ad89e166e6f2c7b180693
 
 11. 单击“确定”  更新分发点的属性。  
 
-###  <a name="a-namebkmkramdisktftpa-customize-the-ramdisk-tftp-block-size-and-window-size-on-pxe-enabled-distribution-points"></a><a name="BKMK_RamDiskTFTP"></a> 在启用 PXE 的分发点上自定义 RamDisk TFTP 块大小和窗口大小  
+###  <a name="BKMK_RamDiskTFTP"></a> 在启用 PXE 的分发点上自定义 RamDisk TFTP 块大小和窗口大小  
 可以为启用 PXE 的分发点自定义 RamDisk TFTP 块大小和窗口大小（从 Configuration Manager 1606 版本开始）。 如果自定义了网络，则可能导致启动映像下载由于超时错误而失败，因为块大小或窗口大小太大。 通过 RamDisk TFTP 块大小和窗口大小自定义可以在使用 PXE 时优化 TFTP 流量，以满足特定网络要求。   
 需要在环境中测试自定义设置以确定最高效的设置。  
 
@@ -133,7 +134,7 @@ ms.openlocfilehash: 1069a18eecbc5f53b74ad89e166e6f2c7b180693
  默认值为 4096 (4k)。  
 
 
-###  <a name="a-namebkmkdpmulticasta-configure-distribution-points-to-support-multicast"></a><a name="BKMK_DPMulticast"></a> 配置分发点以支持多播  
+###  <a name="BKMK_DPMulticast"></a> 配置分发点以支持多播  
  当多个客户端可能同时下载同一个操作系统映像时，多播是一种可以在分发点上使用的网络优化方法。 使用多播时，多台计算机可以同时下载操作系统映像，因为映像已由分发点多播，而不必使分发点通过单独连接向每个客户端发送数据的副本。 必须至少配置一个分发点以支持多播。 有关详细信息，请参阅[使用多播通过网络部署 Windows](../deploy-use/use-multicast-to-deploy-windows-over-the-network.md)。  
 
  在部署操作系统之前，你必须配置分发点以支持多播。 使用下列过程来修改现有分发点以支持多播。 有关如何安装新分发点的信息，请参阅[安装和配置分发点](../../core/servers/deploy/configure/install-and-configure-distribution-points.md)。
@@ -176,7 +177,7 @@ ms.openlocfilehash: 1069a18eecbc5f53b74ad89e166e6f2c7b180693
 
 6.  单击" **确定**"。  
 
-##  <a name="a-namebkmkstatemigrationpointsa-state-migration-point"></a><a name="BKMK_StateMigrationPoints"></a> 状态迁移点  
+##  <a name="BKMK_StateMigrationPoints"></a> 状态迁移点  
  状态迁移点在一台计算机上存储捕获的用户状态数据，然后在另一台计算机上还原这些数据。 但是，当你在同一台计算机上捕获操作系统部署的用户设置时，例如在目标计算机上刷新操作系统的部署，你可以选择是通过使用硬链接还是使用状态迁移点来储存数据在同一台计算机上。 对于某些计算机部署，当你创建状态存储时，Configuration Manager 会自动在状态存储和目标计算机之间创建关联。 在规划状态迁移点时，请考虑以下因素。  
 
 ### <a name="user-state-size"></a>用户状态大小  
@@ -219,9 +220,4 @@ ms.openlocfilehash: 1069a18eecbc5f53b74ad89e166e6f2c7b180693
 -   状态迁移点是否仅响应还原用户状态数据的请求。 如果启用此选项，你将无法使用状态迁移点来存储用户状态数据。  
 
  有关安装站点系统角色的步骤，请参阅[添加站点系统角色](../../core/servers/deploy/configure/add-site-system-roles.md)。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 
