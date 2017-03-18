@@ -36,6 +36,7 @@ translation.priority.ht:
 translationtype: Human Translation
 ms.sourcegitcommit: 34a4c3d0d641c4ab03e068c6dad78300057861bd
 ms.openlocfilehash: 4c7717e4f5a20c5c8d20fef21d0c67172b3198bd
+ms.lasthandoff: 03/16/2017
 
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1511-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1511 的诊断使用情况数据收集的级别
@@ -47,13 +48,13 @@ System Center Configuration Manager 版本 1511 收集三个级别的诊断和�
 > [!IMPORTANT]  
 >  Configuration Manager 不会收集基本或增强级别的站点代码、站点名称、IP 地址、用户名、计算机名、物理地址或电子邮件地址。 在完全级别收集的信息没有目的性，即可能包括在日志文件或内存快照等高级诊断信息中。 Microsoft 不会使用此信息来识别你的身份、与你联系或进行广告宣传。  
 
-##  <a name="a-namebkmkchangea-how-to-change-the-level"></a><a name="bkmk_change"></a> 如何更改级别  
+##  <a name="bkmk_change"></a> 如何更改级别  
  如果管理员具有基于角色的管理作用域，其中包括对**站点**对象类的**修改**权限，则其可以通过 Configuration Manager 控制台中的“诊断和使用数据”设置更改已收集数据的级别。
 
  要执行此操作，请在控制台中，转到“后台”选项卡（左上角带下拉箭头的选项卡），选择“使用情况数据”，然后选择要使用的数据级别。  
 
 
-##  <a name="a-namebkmklevel1a-level-1---basic"></a><a name="bkmk_level1"></a> 级别 1 - 基本  
+##  <a name="bkmk_level1"></a> 级别 1 - 基本  
  基本级别包括层次结构相关数据、帮助改进安装或升级体验所需的数据，以及帮助确定哪些 Configuration Manager 更新适合你的层次结构的数据。  
 
  从 System Center Configuration Manager 版本 1511 开始，此级别包括以下内容：  
@@ -94,7 +95,7 @@ System Center Configuration Manager 版本 1511 收集三个级别的诊断和�
 
 -   遥测统计信息（运行时间、运行时和错误）  
 
-##  <a name="a-namebkmklevel2a-level-2---enhanced"></a><a name="bkmk_level2"></a> 级别 2 - 增强  
+##  <a name="bkmk_level2"></a> 级别 2 - 增强  
 安装完成后，默认级别为增强级别。 此级别包括在基本级别收集的数据、特定于功能的数据（频率和持续使用时间）、Configuration Manager 客户端设置（组件名称、状态和轮询间隔等特定设置）和有关软件更新的基本信息。  
 
 此级别为 Microsoft 提供对将来版本的产品和服务进行有用改进所需的最小数据，因此是推荐的级别。 此级别不收集对象名称（站点、用户、计算机或对象）、有关安全相关对象的详细信息或需要软件更新的系统计数等漏洞。  
@@ -251,7 +252,7 @@ System Center Configuration Manager 版本 1511 收集三个级别的诊断和�
 
     -   集合（按类型）计数  
 
-##  <a name="a-namebkmklevel3a-level-3---full"></a><a name="bkmk_level3"></a> 级别 3 - 完全  
+##  <a name="bkmk_level3"></a> 级别 3 - 完全  
 完全级别包括基本和增强级别的所有数据。 它还包括有关 Endpoint Protection、更新符合性百分比和软件更新信息的其他信息。 此级别还可包括系统文件和内存快照（可能包含捕获时存在于内存或日志文件中的个人信息）等高级诊断信息。  
 
 从 System Center Configuration Manager 版本 1511 开始，此级别包括以下内容：  
@@ -281,9 +282,4 @@ System Center Configuration Manager 版本 1511 收集三个级别的诊断和�
 -   软件更新扫描成功百分比  
 
 -   上次软件更新扫描后的最小/最大/平均小时数  
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 
