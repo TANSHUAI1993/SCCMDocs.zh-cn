@@ -19,6 +19,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: a8959c72608a1531fb323176c33a848a4a669b1c
 ms.openlocfilehash: dface33392c2a2a662522656eabf0936b52b28fc
+ms.lasthandoff: 12/30/2016
 
 
 ---
@@ -42,7 +43,7 @@ ms.openlocfilehash: dface33392c2a2a662522656eabf0936b52b28fc
 
 -   可以将数据从多个源站点移到目标层次结构中的单个站点。  
 
-##  <a name="a-namebkmkmigrationconceptsa-concepts-for-migration"></a><a name="BKMK_MigrationConcepts"></a> 有关迁移的概念  
+##  <a name="BKMK_MigrationConcepts"></a> 有关迁移的概念  
  使用迁移时可能遇到以下概念和术语。  
 
 |概念或术语|更多信息|  
@@ -52,11 +53,11 @@ ms.openlocfilehash: dface33392c2a2a662522656eabf0936b52b28fc
 |目标层次结构|一个 System Center Configuration Manager 层次结构，迁移在其中运行以从源层次结构导入数据。|  
 |数据收集|确定源层次结构中可迁移到目标层次结构的信息的持续过程。 Configuration Manager 将按计划检查源层次结构，以确定对源层次结构中先前迁移的信息和目标层次结构中可能需要更新的信息的任何更改。<br /><br /> 有关详细信息，请参阅[在 System Center Configuration Manager 中规划源层次结构策略](../../core/migration/planning-a-source-hierarchy-strategy.md)中的[数据收集](../../core/migration/planning-a-source-hierarchy-strategy.md#BKMK_Data_Gathering)。|  
 |迁移作业|配置要迁移的特定对象，然后管理将这些对象迁移到目标层次结构的过程。<br /><br /> 有关详细信息，请参阅[在 System Center Configuration Manager 中规划迁移作业策略](../../core/migration/planning-a-migration-job-strategy.md)|  
-|客户端迁移|将客户端使用的信息从源站点的数据库传输到目标层次结构的数据库的过程。 在进行此数据迁移之后，将设备上的客户端软件升级到目标层次结构中的客户端软件版本。<br /><br /> 有关详细信息，请参阅 [Planning a client migration strategy in System Center Configuration Manager](../../core/migration/planning-a-client-migration-strategy.md)。|  
+|客户端迁移|将客户端使用的信息从源站点的数据库传输到目标层次结构的数据库的过程。 在进行此数据迁移之后，将设备上的客户端软件升级到目标层次结构中的客户端软件版本。<br /><br /> 有关详细信息，请参阅 [在 System Center Configuration Manager 中规划客户端迁移策略](../../core/migration/planning-a-client-migration-strategy.md)。|  
 |共享的分发点|源层次结构中的分发点，它们在迁移期间与目标层次结构共享。<br /><br /> 在迁移期间，分配到目标层次结构中的站点的客户端可以从共享的分发点中获得内容。<br /><br /> 有关详细信息，请参阅[在 System Center Configuration Manager 中规划内容部署迁移策略](../../core/migration/planning-a-content-deployment-migration-strategy.md)中的[在源和目标层次结构之间共享分发点](../../core/migration/planning-a-content-deployment-migration-strategy.md#About_Shared_DPs_in_Migration)。|  
 |监视迁移|监视迁移活动的过程。 通过“管理” 工作区中的“迁移”节点监视迁移的进度和成功情况。<br /><br /> 有关详细信息，请参阅[在 System Center Configuration Manager 中规划监视迁移活动](../../core/migration/planning-to-monitor-migration-activity.md)。|  
 |停止收集数据|停止从源站点收集数据的过程。 如果不再具有要从源层次结构迁移的数据，或者，如果要暂停与迁移相关的活动，则可以将目标层次结构配置为停止从该源层次结构收集数据。<br /><br /> 有关详细信息，请参阅[在 System Center Configuration Manager 中规划源层次结构策略](../../core/migration/planning-a-source-hierarchy-strategy.md)中的[数据收集](../../core/migration/planning-a-source-hierarchy-strategy.md#BKMK_Data_Gathering)。|  
-|清理迁移数据|通过从目标层次结构数据库中删除有关迁移的信息来完成从源层次结构进行的迁移的过程。<br /><br /> 有关详细信息，请参阅 [Planning to complete migration in System Center Configuration Manager](../../core/migration/planning-to-complete-migration.md)。|  
+|清理迁移数据|通过从目标层次结构数据库中删除有关迁移的信息来完成从源层次结构进行的迁移的过程。<br /><br /> 有关详细信息，请参阅 [计划完成 System Center Configuration Manager 中迁移](../../core/migration/planning-to-complete-migration.md)。|  
 
 ## <a name="typical-workflow-for-migration"></a>迁移的典型工作流  
 设置迁移的工作流：
@@ -75,7 +76,7 @@ ms.openlocfilehash: dface33392c2a2a662522656eabf0936b52b28fc
 
 从 Configuration Manager 源层次结构中迁移了不再用于管理环境的数据之后，可以解除该源层次结构和基础结构的授权。  
 
-##  <a name="a-namebkmkmigrationscenariosa-migration-scenarios"></a><a name="BKMK_MigrationScenarios"></a> 迁移方案  
+##  <a name="BKMK_MigrationScenarios"></a> 迁移方案  
  Configuration Manager 支持以下迁移方案。  
 
 > [!NOTE]  
@@ -110,9 +111,4 @@ ms.openlocfilehash: dface33392c2a2a662522656eabf0936b52b28fc
 
 ## <a name="see-also"></a>另请参阅  
  [开始使用 System Center Configuration Manager](../../core/servers/deploy/start-using.md)
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 
