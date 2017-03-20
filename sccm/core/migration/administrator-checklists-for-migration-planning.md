@@ -19,6 +19,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 5e6e8a18a8fc705c993177b3c5b4113a351a45a4
 ms.openlocfilehash: 36f7c37e4da3f2bce64a25d266dae57d9fe98c36
+ms.lasthandoff: 12/30/2016
 
 
 ---
@@ -28,7 +29,7 @@ ms.openlocfilehash: 36f7c37e4da3f2bce64a25d266dae57d9fe98c36
 
 使用以下管理员清单有助于规划 System Center Configuration Manager 的迁移策略。
 
-##  <a name="a-namechecklistmigraitonplanninga-administrator-checklist-for-migration-planning"></a><a name="Checklist_Migraiton_Planning"></a>针对迁移规划的管理员清单  
+##  <a name="Checklist_Migraiton_Planning"></a>针对迁移规划的管理员清单  
  使用以下清单来执行迁移前的规划步骤。  
 
 -   **评估当前环境：**  
@@ -37,7 +38,7 @@ ms.openlocfilehash: 36f7c37e4da3f2bce64a25d266dae57d9fe98c36
 
 -   **查看可以通过你使用的 Configuration Manager 版本实现的功能和变化，并使用此信息帮助你设计目标层次结构：**  
 
-    有关详细信息，请参阅 [Fundamentals of System Center Configuration Manager](../../core/understand/fundamentals.md) 和 [What's new in System Center Configuration Manager](../../core/plan-design/changes/what-has-changed-from-configuration-manager-2012.md)。  
+    有关详细信息，请参阅 [System Center Configuration Manager 基础知识](../../core/understand/fundamentals.md) 和 [System Center Configuration Manager 中的新增功能](../../core/plan-design/changes/what-has-changed-from-configuration-manager-2012.md)。  
 
 
 -   **确定要用于基于角色的管理的管理安全模型：**  
@@ -76,7 +77,7 @@ ms.openlocfilehash: 36f7c37e4da3f2bce64a25d266dae57d9fe98c36
 
     确定何时迁移对象和客户端。 在迁移完成后，可以计划解除源层次结构中的站点服务器的授权。  
 
-##  <a name="a-namechecklisthierarchyformigrationa-administrator-checklist-for-hierarchy-migration"></a><a name="Checklist_Hierarchy_for_migration"></a>针对层次结构迁移的管理员清单  
+##  <a name="Checklist_Hierarchy_for_migration"></a>针对层次结构迁移的管理员清单  
 使用以下清单帮助你在开始迁移之前规划目标层次结构。  
 
 -   **确定要在目标层次结构中使用的计算机：**  
@@ -113,7 +114,7 @@ ms.openlocfilehash: 36f7c37e4da3f2bce64a25d266dae57d9fe98c36
     -   检查安装到目标层次结构中的 Configuration Manager 客户端是否可以成功地与为它们分配的站点通信。  
 
 
-##  <a name="a-namechecklisitmigrationa-administrator-checklist-for-migration"></a><a name="Checklisit_Migration"></a>针对迁移的管理员清单  
+##  <a name="Checklisit_Migration"></a>针对迁移的管理员清单  
 使用以下清单帮助将数据从源层次结构迁移到目标层次结构。  
 
 -   **在目标层次结构中启用迁移：**  
@@ -164,9 +165,4 @@ ms.openlocfilehash: 36f7c37e4da3f2bce64a25d266dae57d9fe98c36
 -   **完成迁移：**  
 
     在从源层次结构中的所有站点迁移了数据和客户端且升级了适用的分发点之后，就可以完成迁移。 若要完成迁移，请停止为源层次结构中的每个源站点收集数据。 之后，可以删除不需要的迁移信息，并解除源层次结构的基础结构的授权。 有关详细信息，请参阅 [Planning to complete migration in System Center Configuration Manager](../../core/migration/planning-to-complete-migration.md)。  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 
