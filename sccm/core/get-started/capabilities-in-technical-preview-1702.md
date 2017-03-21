@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: ee7f69bd65152deffb2456d9807e1e8fee8802ec
-ms.openlocfilehash: dd28c8218c77686884bdcff508080185cae97489
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: 8f4ec982a54cf3cefef310268a54850e70e2e63a
+ms.openlocfilehash: 3bdbcd1a3c64a1d50f2f6219b2a5e17d60979864
+ms.lasthandoff: 03/13/2017
 
 ---
 # <a name="capabilities-in-technical-preview-1702-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1702 中的功能
@@ -313,6 +313,10 @@ Android for Work 是独立于 Android 的平台，你需要决定对支持工作
   - **将所有设备作为 Android 设备管理** -（已禁用）所有 Android 设备（包括支持 Android for Work 的设备）均将注册为传统的 Android 设备
   - **将受支持设备作为 Android for Work 设备管理** -（已启用）将支持 Android for Work 的所有设备均注册为 Android for Work 设备。 任何不支持 Android for Work 的 Android 设备均将注册为传统的 Android 设备。
   - **仅针对这些组中的用户将受支持设备作为 Android for Work 设备管理** -（测试中）可使 Android for Work 管理面向有限的一组用户。 只有注册支持 Android for Work 的设备的所选组的成员能注册为 Android for Work 设备。 其他所有成员均注册为 Android 设备。
+  
+> [!NOTE]
+> 一个已知的问题将阻止“仅为这些组中的用户将受支持设备作为 Android for Work 设备管理”选项按预期方式正常运行。 指定 Azure AD 组中的用户设备将注册为 Android 而不是 Android for Work。 若要测试 Android for Work，必须使用“将所有受支持设备作为 Android for Work 管理”。
+
 
   若要启用 Android for Work 注册，必须选择底部的两个选择之一。 “仅为这些组中的用户将受支持设备作为 Android for Work 设备管理”选项要求首先设置 Azure Active Directory 安全组。
 
@@ -350,4 +354,7 @@ Android for Work 具有配置项的两个设置组：
 只能选择性擦除注册为 Android for Work 的设备，因为你只管理工作配置文件。 这可防止擦除个人配置文件。 在 Android for Work 设备上执行选择性擦除将删除工作配置文件（包括所有应用和数据）并注销设备。
 
 若要选择性擦除 Android for Work 设备，请在 Configuration Manager 控制台中使用[选择性擦除过程](https://docs.microsoft.com/sccm/mdm/deploy-use/wipe-lock-reset-devices#selective-wipe)。
+
+#### <a name="known-issues-for-android-for-work"></a>Android for Work 的已知问题
+**在 Android for Work 电子邮件配置文件中配置同步计划将导致无法部署它们**：Android for Work 电子邮件配置文件的 ConfigMgr UI 中的其中一个选项就是“计划”。 在其他平台上，这将使管理员可以配置一个计划，以将电子邮件和其他电子邮件帐户数据同步到移动设备（计划将被部署到该移动设备）。 但是，它不适用于 Android for Work 电子邮件配置文件，并选择“未配置”之外的任何选项将导致配置文件不会部署到任何设备。
 

@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 30af3326578d39c6d995672071705bcaeb877e4d
-ms.openlocfilehash: 8af2a797ad4e87d870bb27873a7428e96f63b76d
-ms.lasthandoff: 02/23/2017
+ms.sourcegitcommit: 8f4ec982a54cf3cefef310268a54850e70e2e63a
+ms.openlocfilehash: 49e3a9d6f4b8e1afbb76fcba33a7fb58e5a6b13f
+ms.lasthandoff: 03/13/2017
 
 
 ---
@@ -60,7 +60,7 @@ ms.lasthandoff: 02/23/2017
 
 
 > [!TIP]  
->  从 System Center 2012 Configuration Manager 版本升级时，或许能够简化升级过程。 有关详细信息，请参阅以下内容：  
+>  从 System Center 2012 Configuration Manager 版本升级到 Current Branch 时，或许能够简化升级过程。 有关详细信息，请参阅以下内容：  
 >   
 >  -   [System Center Configuration Manager 更新](../../../../core/servers/manage/updates.md)中的[基准和更新版本](../../../../core/servers/manage/updates.md#bkmk_Baselines)  
 >  -   [System Center Configuration Manager 的 CD.Latest 文件夹](../../../../core/servers/manage/the-cd.latest-folder.md)  
@@ -263,7 +263,7 @@ Configuration Manager 不支持辅助站点备份，也不支持辅助站点数�
 
 若要针对升级测试数据库，请首先将站点数据库的副本还原到未承载 Configuration Manager 站点的 SQL Server 实例。 用于承载数据库副本的 SQL Server 版本必须是作为数据库副本源的 Configuration Manager 版本支持的 SQL Server 版本。  
 
-接下来，在还原站点数据库之后，在 SQL Server 计算机上，使用 ** /TESTDBUPGRADE ** 命令行选项从 System Center Configuration Manager 的源媒体文件夹中运行 Configuration Manager 安装程序。  
+接下来，在还原站点数据库之后，在 SQL Server 计算机上，使用 **/TESTDBUPGRADE** 命令行选项从 System Center Configuration Manager 的源媒体文件夹中运行 Configuration Manager 安装程序。  
 
 -   有关如何创建和还原站点数据库备份的信息，请参阅[适用于安装程序的命令行选项](../../../../core/servers/deploy/install/command-line-options-for-setup.md)。  
 -   有关 **/TESTDBUPGRADE** 命令行选项的信息，请参阅[适用于安装程序的命令行选项](../../../../core/servers/deploy/install/command-line-options-for-setup.md) 中的表。  

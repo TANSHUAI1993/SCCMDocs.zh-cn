@@ -17,9 +17,9 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: d7265aec46474ba7fc317ddb5e20b91b7b134585
-ms.openlocfilehash: 36f6eb3fe48e904adf4d04450906fada9b477246
-ms.lasthandoff: 12/30/2016
+ms.sourcegitcommit: 289db441899359f3bf3abe5d38896c7acd2045b6
+ms.openlocfilehash: 5eaca19f2b21b1c62b956d2a44d492d3ddd6d10a
+ms.lasthandoff: 03/10/2017
 
 ---
 # <a name="about-client-settings-in-system-center-configuration-manager"></a>关于 System Center Configuration Manager 中的客户端设置
@@ -333,7 +333,7 @@ System Center Configuration Manager 中的所有客户端设置在 Configuration
 
 -   **最大随机延迟**
 
-    硬件信息的集合可在长达两个小时内处于随机状态，以便不会在所有客户端上同时发生操作。 可以设置最大延迟，以便限制操作发生的时段。      
+    硬件信息的集合可在长达四个小时内处于随机状态，这样便不会在所有的客户端上同时发生操作。 可以设置最大延迟，以便限制操作发生的时段。      
 
 ##  <a name="metered-internet-connections"></a>按流量计费的 Internet 连接  
  可以管理 Windows 8 客户端计算机在使用按流量计费的 Internet 连接时如何与 Configuration Manager 站点通信。 Internet 提供商有时根据你在按流量计费的 Internet 连接上发送和接收的数据量计费。  
@@ -505,7 +505,7 @@ System Center Configuration Manager 中的所有客户端设置在 Configuration
 
     -   选择“新建”图标，将新文件类型添加到清单。 然后在“清单文件属性”对话框中，指定以下信息：  
 
-        -   **名称**：提供要列出清单的文件的名称。 可使用 **\** 字符来表示任何文本字符串，使用 **?** 字符来表示任何单一字符。例如，若要列出扩展名为 .doc 的所有文件的清单，请指定文件名 **\*.doc**。  
+        -   **名称**：提供要列出清单的文件的名称。 可使用 **\** 字符来表示任何文本字符串，使用**?**字符来表示任何单一字符。例如，若要列出扩展名为 .doc 的所有文件的清单，请指定文件名**\*.doc**。  
 
         -   **位置**：选择“设置”，打开“路径属性”对话框。 可配置软件清单以在所有客户端硬盘中搜索指定的文件，搜索指定的路径（例如 **C:\Folder**）或搜索指定的变量（例如 *%windir%*）。 还可以搜索指定路径下面的所有子文件夹。  
 
@@ -528,7 +528,7 @@ System Center Configuration Manager 中的所有客户端设置在 Configuration
 
     -   在“收集的文件属性”  对话框中，提供以下信息：  
 
-        -   **名称**：为要收集的文件提供名称。 可使用 **\** 字符来表示任何文本字符串，使用 **?** 字符来表示任何单一字符。  
+        -   **名称**：为要收集的文件提供名称。 可使用 **\** 字符来表示任何文本字符串，使用**?** 字符来表示任何单一字符。  
 
         -   **位置**：选择“设置”，打开“路径属性”对话框。 可配置软件清单以在所有客户端硬盘中搜索要收集的文件，搜索指定的路径（例如 **C:\Folder**）或搜索指定的变量（例如 *%windir%*）。 还可以搜索指定路径下面的所有子文件夹。  
 

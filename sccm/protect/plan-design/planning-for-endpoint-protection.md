@@ -1,7 +1,7 @@
 ---
 title: "规划 Endpoint Protection | Microsoft Docs"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/07/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,8 +14,9 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
-ms.openlocfilehash: 927732150b99bbe362a3ed36976b49a716efc14c
+ms.sourcegitcommit: 8f4ec982a54cf3cefef310268a54850e70e2e63a
+ms.openlocfilehash: 6c4273dae99ec8db2cf827f463b973e876d0d35b
+ms.lasthandoff: 03/13/2017
 
 
 ---
@@ -92,11 +93,7 @@ Configuration Manager 中的 Endpoint Protection 可用于创建包含 Endpoint 
  ![Endpoint Protection 工作流](../media/Endpoint-Protection-Workflow.gif)
 
 ## <a name="endpoint-protection-client-for-mac-computers-and-linux-servers"></a>适用于 Mac 计算机和 Linux 服务器的 Endpoint Protection 客户端  
- System Center 2012 包括适用于 Linux 和 Mac 计算机的 Endpoint Protection 客户端。 这些客户端未提供 Configuration Manager；相反，必须从 [Microsoft 批量许可服务中心](https://www.microsoft.com/licensing/servicecenter/default.aspx)下载以下产品。  
-
--   适用于 Mac 的 System Center 2012 Endpoint Protection  
-
--   适用于 Linux 的 System Center 2012 Endpoint Protection  
+ System Center 包括适用于 Linux 和 Mac 计算机的 Endpoint Protection 客户端。 这些客户端未提供 Configuration Manager；相反，必须从 [Microsoft 批量许可服务中心](https://www.microsoft.com/licensing/servicecenter/default.aspx)下载以下产品。  
 
 > [!IMPORTANT]  
 >  你必须是 Microsoft 批量许可客户才能下载适用于 Linux 和 Mac 的 Endpoint Protection 安装文件。  
@@ -114,16 +111,9 @@ Configuration Manager 中的 Endpoint Protection 可用于创建包含 Endpoint 
  在配置自定义客户端设置时，可以执行以下操作：  
 
 -   自定义您的组织的不同部分的反恶意软件和安全设置。  
-
 -   将 Endpoint Protection 部署到整个层次结构前，在一小组计算机上测试运行 Endpoint Protection 的影响。  
-
 -   向集合中逐渐添加更多客户端，以分阶段部署 Endpoint Protection 客户端。  
 
 ### <a name="distributing-definition-updates-by-using-software-updates"></a>通过使用软件更新的分发定义更新  
  如果使用 Configuration Manager 软件更新来分发定义更新，请考虑将定义更新放在不包含其他软件更新的包中。 这会使定义更新包的大小较小这使得它能够复制到更快地分发点。
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

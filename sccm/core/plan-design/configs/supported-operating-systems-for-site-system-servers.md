@@ -2,7 +2,7 @@
 title: "支持的站点系统服务器 | Microsoft Docs"
 description: "了解可用来托管 System Center Configuration Manager 站点或站点系统角色的 Windows 版本。"
 ms.custom: na
-ms.date: 2/1/2017
+ms.date: 3/9/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 4688b4b12a7afa5fcfdc0e42f984271d98f10316
-ms.openlocfilehash: bb017e575e0318b73cc5ea4e27fd33b1e9c2a02a
+ms.sourcegitcommit: 477ffa5d61d2dfaedf8a3a1f5687e2d72698ad28
+ms.openlocfilehash: f175e11d9402e7c57c45edb4d5bbe969de5dcdf7
+ms.lasthandoff: 03/10/2017
 
 
 ---
@@ -231,24 +232,9 @@ ms.openlocfilehash: bb017e575e0318b73cc5ea4e27fd33b1e9c2a02a
 ## <a name="windows-server-2008-with-sp2-x86-x64-standard-enterprise-and-datacenter"></a>Windows Server 2008 SP2（x86、x64）：标准版、企业版和数据中心版  
  根据 [Microsoft 支持生命周期](https://support.microsoft.com/lifecycle)中的详细信息，Windows Server 2008 现处于外延支持，不再处于主流支持。 若要详细了解将来对这些操作系统作为具有 Configuration Manager 的站点系统服务器的支持，请参阅 [System Center Configuration Manager 的已删除和已弃用的功能](../../../core/plan-design/changes/removed-and-deprecated-features.md)。  
 
-**站点服务器：**  
-
--   管理中心站点  
-
--   主站点  
-
--   辅助站点  
+除分发点和拉取分发点外，站点服务器或站点系统角色均不支持此操作系统。 你可以继续使用操作系统作为分发点，直到此支持被宣布弃用或者此操作系统的扩展支持期到期为止。 有关详细信息，请参阅 [Installation of System Center Configuration Manager CB and LTSB fails on Windows Server 2008](https://support.microsoft.com/help/4015095)（在 Windows Server 2008 上安装 System Center Configuration Manager CB 和 LTSB 失败）。
 
 **站点系统服务器：**  
-
--   应用程序目录 Web 服务点  
-
--   应用程序目录网站点  
-
--   资产智能同步点  
-
--   证书注册点  
-
 -   分发点  
 
     -   此操作系统上的分发点不支持多播。  
@@ -257,29 +243,7 @@ ms.openlocfilehash: bb017e575e0318b73cc5ea4e27fd33b1e9c2a02a
 
     -   分发点支持多种不同的配置，每种配置都有不同的要求。 在某些情况下，这些配置不仅支持在服务器上安装，而且支持在客户端操作系统上安装。 有关分发点可用选项的详细信息，请参阅[为 System Center Configuration Manager 管理内容和内容基础结构](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。  
 
--   Endpoint Protection 点  
 
--   注册点  
-
--   注册代理点  
-
--   回退状态点  
-
--   管理点
-
--   Reporting Services 点  
-
--   服务连接点  
-
--   站点数据库服务器  
-
-     只读域控制器 (RODC) 上不支持站点数据库服务器。 有关详细信息，请参阅 Microsoft 知识库中的 [You may encounter problems when installing SQL Server on a domain controller（在域控制器上安装 SQL Server 时可能会遇到问题）](http://go.microsoft.com/fwlink/p/?LinkId=264856) 。 此外，任何域控制器上都不支持辅助站点服务器。  
-
--   SMS_Provider  
-
--   软件更新点  
-
--   状态迁移点  
 
 ## <a name="windows-10-x86-x64-pro-and-enterprise"></a>Windows 10（x86、x64）：专业版和企业版  
 **站点系统服务器：**  
@@ -345,9 +309,4 @@ ms.openlocfilehash: bb017e575e0318b73cc5ea4e27fd33b1e9c2a02a
 -   仅支持 64 位版本。  
 
 -   此操作系统上的分发点不支持 PXE 或多播。
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

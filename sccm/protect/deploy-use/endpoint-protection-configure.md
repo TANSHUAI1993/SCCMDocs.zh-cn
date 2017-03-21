@@ -16,8 +16,9 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 017bd5b899b364fc832c721d63cc7dbad0a11671
-ms.openlocfilehash: 92ab3f7470fd977e5f849bea54aca1a7ef460562
+ms.sourcegitcommit: a8218e23743dafaf8ff1166142cf2dcca1212133
+ms.openlocfilehash: 6917644d6719a1ca636713aa5aebf277927123c8
+ms.lasthandoff: 03/14/2017
 
 
 ---
@@ -42,11 +43,6 @@ ms.openlocfilehash: 92ab3f7470fd977e5f849bea54aca1a7ef460562
 |**步骤 1：**[创建 Endpoint Protection 点站点系统角色](endpoint-protection-site-role.md)|必须先安装 Endpoint Protection 点站点系统角色，然后才能使用 Endpoint Protection。 必须将其仅安装在一个站点系统服务器上，并且必须将其安装在管理中心站点或独立主站点上层次结构的顶部。 |  
 |**步骤 2：**[为 Endpoint Protection 配置警报](endpoint-configure-alerts.md)|当特定事件发生（如恶意软件感染）时，警报将通知管理员。 警报显示在“监视”  工作区的“警报”  节点中，或（可选）可通过电子邮件发送至指定用户。 |  
 |**步骤 3：**[为 Endpoint Protection 客户端配置定义更新源](endpoint-definition-updates.md)|可以将 Endpoint Protection 配置为使用各种源来下载定义更新。 |  
-|**步骤 4：**[配置默认反恶意软件策略并创建自定义反恶意软件策略](endpoint-antimalware-policies.md)|在安装 Endpoint Protection 客户端时，将应用默认反恶意软件策略。 在部署客户端的 60 分钟内将默认应用已部署的任何自定义策略。 请确保在部署之前配置反恶意软件策略 Endpoint Protection 客户端。请参阅 |  
+|**步骤 4：**[配置默认反恶意软件策略并创建自定义反恶意软件策略](endpoint-antimalware-policies.md)|在安装 Endpoint Protection 客户端时，将应用默认反恶意软件策略。 在部署客户端的 60 分钟内将默认应用已部署的任何自定义策略。 请确保在部署 Endpoint Protection 客户端之前已配置了反恶意软件策略。 |  
 |**步骤 5：**[为 Endpoint Protection 配置自定义客户端设置](endpoint-protection-configure-client.md)|使用自定义客户端设置为层次结构中计算机的集合配置 Endpoint Protection 设置。<br /><br /> 注意：除非确定要将这些设置应用于层次结构中的所有计算机，否则请不要配置默认 Endpoint Protection 客户端设置。 |  
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

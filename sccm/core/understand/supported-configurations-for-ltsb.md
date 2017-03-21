@@ -2,7 +2,7 @@
 title: "LTSB 支持的配置 | Microsoft Docs"
 description: "了解哪些操作系统和相关产品可配合 System Center Configuration Manager 的 Long-Term Servicing Branch 一起运作。"
 ms.custom: na
-ms.date: 1/12/2017
+ms.date: 3/9/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 12aa9f0a1ad4ce8acf0b914e9911bb50ba887919
-ms.openlocfilehash: 5b2ab25d7f645ea9eada81d241ef14168b017304
+ms.sourcegitcommit: 477ffa5d61d2dfaedf8a3a1f5687e2d72698ad28
+ms.openlocfilehash: 78dcbf76f21a286506b9c605e2c176714736935b
+ms.lasthandoff: 03/10/2017
 
 
 ---
@@ -38,7 +39,7 @@ ms.openlocfilehash: 5b2ab25d7f645ea9eada81d241ef14168b017304
 **Windows：**
 - 仅支持用于 Windows 的质量和安全更新。
 - 不为 Windows 10 的 Current Branch (CB)、Current Branches for Business (CBB) 或 LTSB 添加任何支持。
--   不对 Windows Server 新的主版本提供支持。
+-    不对 Windows Server 新的主版本提供支持。
 
 **SQL Server：**
 - SQL Server 仅支持质量和安全更新或次要升级（如服务包）。
@@ -51,13 +52,15 @@ LTSB 支持使用以下 Windows 计算机操作系统作为站点系统。  每�
 - Windows Server 2016
 - Windows Server 2012 (x64)：标准版、数据中心版
 - Windows Server 2008 R2 SP1 (x64)：标准版、企业版、数据中心版
-- Windows Server 2008 SP2（x86、x64）：标准版、企业版、数据中心版
+- Windows Server 2008 SP2（x86、x64）：标准版、企业版、数据中心版（请参阅注释 1）
 - Windows 10 企业版 2015 长期服务（x86、x64）
 - Windows 10 企业版 2016 长期服务（x86、x64）
 - Windows 8.1（x86、x64）：专业版、企业版
 - Windows 7 SP1（x86、x64）：专业版、企业版、旗舰版
 - Windows Server 2012 的服务器核心安装
-- Windows Server 2012 R2 的服务器核心安装  
+- Windows Server 2012 R2 的服务器核心安装    
+
+*注释 1*：除分发点和拉取分发点外，站点服务器或站点系统角色均不支持此操作系统。 你可以继续使用操作系统作为分发点，直到此支持被宣布弃用或者此操作系统的扩展支持期到期为止。 有关详细信息，请参阅 [Installation of System Center Configuration Manager CB and LTSB fails on Windows Server 2008](https://support.microsoft.com/help/4015095)（在 Windows Server 2008 上安装 System Center Configuration Manager CB 和 LTSB 失败）。
 
 ## <a name="client-management"></a>客户端管理
 以下各节介绍可以使用 LTSB 管理的客户端操作系统。 LTSB 不支持新增操作系统作为支持的客户端。
@@ -332,9 +335,4 @@ LTSB 支持以下版本的 SQL Server，以托管站点数据库和报表点。 
 - [推荐硬件](/sccm/core/plan-design/configs/recommended-hardware)
 - [对 Windows 功能和网络的支持](/sccm/core/plan-design/configs/support-for-windows-features-and-networks)
 - [对虚拟化环境的支持](/sccm/core/plan-design/configs/support-for-virtualization-environments)
-
-
-
-<!--HONumber=Jan17_HO2-->
-
 

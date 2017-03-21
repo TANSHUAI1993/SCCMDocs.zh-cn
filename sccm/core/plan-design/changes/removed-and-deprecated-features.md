@@ -2,7 +2,7 @@
 title: "弃用的功能 | Microsoft Docs"
 description: "了解有关 System Center Configuration Manager 不再支持的功能、产品和操作系统的信息。"
 ms.custom: na
-ms.date: 1/5/2017
+ms.date: 3/9/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1948e2914fff91f156dd8956c018ff0fabcda2f9
-ms.openlocfilehash: 3a1edd1b59676e59d4bfcd4c01a23f7a04f91f4f
+ms.sourcegitcommit: 477ffa5d61d2dfaedf8a3a1f5687e2d72698ad28
+ms.openlocfilehash: cb57a8699081415af7e2e9dc29b0a321f100823d
+ms.lasthandoff: 03/10/2017
 
 
 ---
@@ -58,14 +59,14 @@ ms.openlocfilehash: 3a1edd1b59676e59d4bfcd4c01a23f7a04f91f4f
 
 1511 版 System Center Configuration Manager 发布中删除的功能的其他信息如下：
 
-###  <a name="a-namebkmkamta-out-of-band-management"></a><a name="bkmk_amt"></a>带外管理  
+###  <a name="bkmk_amt"></a>带外管理  
  通过 Configuration Manager，已删除 Configuration Manager 控制台中基于 AMT 的计算机的本机支持。  
 
 -   使用[适用于 Microsoft System Center Configuration Manager 的 Intel SCS 外接程序](http://www.intel.com/content/www/us/en/software/setup-configuration-software.html)时，基于 AMT 的计算机保持完全托管。 使用外接程序可以在 Configuration Manager 能够合并这些更改之前使用用于管理 AMT 的最新功能，同时删除引入的限制。  
 
 -   System Center 2012 Configuration Manager 中的带外管理不受此更改的影响。  
 
-###  <a name="a-namebkmknapa-network-access-protection"></a><a name="bkmk_nap"></a>网络访问保护  
+###  <a name="bkmk_nap"></a>网络访问保护  
  System Center Configuration Manager 已不再支持网络访问保护。 该功能已在 Windows Server 2012 R2 中弃用并从 Windows 10 中删除。  
 
  有关网络访问保护备选方案，请参阅 *网络策略和访问服务概述* 的 [已弃用功能](https://technet.microsoft.com/library/hh831683.aspx)部分。  
@@ -76,10 +77,10 @@ ms.openlocfilehash: 3a1edd1b59676e59d4bfcd4c01a23f7a04f91f4f
 
 |**操作系统**|**首次宣布弃用**|**删除的支持** |  
 |-|-|-|  
-|Windows Server 2008|2015 年 10 月|此支持随 2016 年 12 月 31 日发布的首个更新结束（请参阅注释 1）。|  
+|Windows Server 2008|2015 年 10 月|1511 </br></br>删除了作为站点系统的支持。 （请参阅注释 1）。|  
 |Windows Server 2008 R2|2015 年 10 月|此支持随 2016 年 12 月 31 日发布的首个更新结束（请参阅注释 2）。|  
 
--   注释 1：支持结束后，站点服务器或大多数站点系统角色将不再支持此操作系统。 但是，分发点站点系统角色（包括请求分发点）仍会继续支持此操作系统，直至正式宣布此支持弃用或此操作系统的扩展支持期过期。  
+-   注释 1：除分发点和拉取分发点外，站点服务器或站点系统角色均不支持此操作系统。 你可以继续使用操作系统作为分发点，直到此支持被宣布弃用或者此操作系统的扩展支持期到期为止。 有关详细信息，请参阅 [Installation of System Center Configuration Manager CB and LTSB fails on Windows Server 2008](https://support.microsoft.com/help/4015095)（在 Windows Server 2008 上安装 System Center Configuration Manager CB 和 LTSB 失败）。 
 
 -   注释 2：支持结束后，站点服务器或大多数站点系统角色将不再支持此操作系统。 但是，状态迁移点和分发点站点系统角色（包括请求分发点、PXE 和多播）仍会继续支持此操作系统，直至正式宣布弃用此支持或此操作系统的扩展支持期过期。 从版本 1602 开始，可以对站点服务器的操作系统进行就地升级，从 Windows Server 2008 R2 升级到 Windows Server 2012 R2。  
 
@@ -110,9 +111,4 @@ ms.openlocfilehash: 3a1edd1b59676e59d4bfcd4c01a23f7a04f91f4f
 |-|-|-|  
 |SQL Server 2008|2015 年 10 月|版本 1511|  
 |SQL Server 2008 R2|2015 年 10 月|此支持随 2016 年 12 月 31 日发布的首个更新结束。|  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

@@ -2,7 +2,7 @@
 title: "使用 System Center Configuration Manager 和 Microsoft Intune 设置 Windows 混合设备管理 | Microsoft Docs"
 description: "使用 System Center Configuration Manager 和 Microsoft Intune 设置 Windows 设备管理。"
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 03/09/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,13 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: dc1f70f5-64ab-42ab-aa91-d3858803e12f
 caps.latest.revision: 9
-author: mtillman
-ms.author: mtillman
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: a4fc4a16c78b0eaa0dcefdd596b049eacf1d255b
-ms.lasthandoff: 03/06/2017
+ms.sourcegitcommit: a8218e23743dafaf8ff1166142cf2dcca1212133
+ms.openlocfilehash: 996d01d3c5d5be4544246a5f321f67b60a8f5508
+ms.lasthandoff: 03/14/2017
 
 
 ---
@@ -26,99 +26,80 @@ ms.lasthandoff: 03/06/2017
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-可以结合 Intune 使用 Configuration Manager 来管理台式机、笔记本电脑和其他将 Windows 作为移动设备运行的设备。 可设置 Azure Active Directory，使其允许自动注册 Windows 电脑。 还可配置 Configuration Manager 来简化使用公司门户应用进行注册的过程。
+本主题介绍 IT 管理员如何能通过 Configuration Manager 和 Microsoft Intune 使用户可以管理 Windows 电脑和移动设备。 有两种可用的注册方法：
+-  用户将其帐户与设备连接时自动注册 Azure Active Directory (AD)
+- 通过安装和登录公司门户应用进行注册
 
+## <a name="choose-how-to-enroll-windows-devices"></a>选择注册 Windows 设备的方式
 
-Windows 注册选项包括：
+两个因素决定注册 Windows 设备的方式：
+- **是否使用 Azure Active Directory Premium？** <br>[Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) 随附企业移动性 + 安全性和其他许可计划。
+- **将注册什么版本的 Windows？** <br>可通过添加工作或学校帐户自动注册 Windows 10 设备。 早期版本必须使用公司门户应用进行注册。
 
-- [使用 Azure AD 进行自动注册](#azure-active-directory-enrollment)
-- [Windows 电脑](#configure-windows-pc-enrollment)
-- [Windows 10 移动版和 Windows Phone 设备](#enable-windows-phone-devices)
+||**Azure AD Premium**|**其他 AD**|
+|----------|---------------|---------------|  
+|**Windows 10**|[自动注册](#automatic-enrollment) |[公司门户注册](#company-portal-enrollment)|
+|**早期 Windows 版本**|[公司门户注册](#company-portal-enrollment)|[公司门户注册](#company-portal-enrollment)|
 
-## <a name="azure-active-directory-enrollment"></a>Azure Active Directory 注册
+## <a name="automatic-enrollment"></a>自动注册
 
-通过添加工作或学校帐户并同意接受管理，自动注册可让用户在 Intune 中注册公司拥有的电脑或个人 Windows 10 电脑和 Windows 10 移动设备。 在后台注册用户设备并加入 Azure Active Directory。 注册后，可以通过 Intune 管理设备。
+通过添加工作或学校帐户并同意接受管理，自动注册可让用户注册公司拥有的或个人的 Windows 10 设备。 在后台，用户设备将注册并与 Azure Active Directory 连接。 注册后，可以通过 Intune 管理设备。 托管设备仍可使用公司门户来执行任务，但无需安装它以使设备成为已注册状态。
 
 **先决条件**
 - Azure Active Directory Premium 订阅（[试用订阅](http://go.microsoft.com/fwlink/?LinkID=816845)）
 - Microsoft Intune 订阅
 
+### <a name="configure-automatic-enrollment"></a>配置自动注册
 
-### <a name="configure-automatic-mdm-enrollment"></a>配置自动进行 MDM 注册
+1. 登录 [Azure 门户](https://manage.windowsazure.com)，导航到左窗格中的“Active Directory”节点，然后选择目录。
+2. 选择“配置”选项卡并滚动到名为“设备”的部分。
+3. 为“用户可以加入工作区的设备”选择“全部”。
+4. 选择你想要按每个用户授权的设备的最大数目。
 
-1. 在 [Azure 管理门户](https://manage.windowsazure.com) (https://manage.windowsazure.com) 中，导航到 **Active Directory** 节点并选择所需目录。
+默认情况下，不会为该服务启用双重身份验证。 但是，在注册设备时，建议启用双重身份验证。 在为该服务请求双重身份验证之前，必须在 Azure Active Directory 中配置一个双重身份验证提供程序并为你的用户帐户配置多重身份验证。 请参阅[Azure 多重身份验证服务器入门](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-cloud)。
 
-2. 单击“应用程序” 选项卡，会在应用程序列表看到“Microsoft Intune”。
+## <a name="company-portal-enrollment"></a>公司门户注册
+最终用户或[设备注册管理器](enroll-devices-with-device-enrollment-manager.md)可通过安装公司门户，然后使用工作凭据登录以注册 Windows 设备。 为了简化最终用户的注册，你应该当向 DNS 注册添加 CNAME。
 
-    ![Azure AD 应用和 Microsoft Intune](../media/aad-intune-app.png)
+### <a name="enable-windows-device-management"></a>启用 Windows 设备管理
+若要针对电脑或移动设备启用 Windows 设备管理，请按照以下步骤进行操作：
 
-3. 单击“Microsoft Intune”的箭头将出现一个页面，可在其中配置 Microsoft Intune。
-
-4. 单击“配置”即可开始使用 Microsoft Intune 配置自动进行 MDM 注册。
-
-5. 指定 Intune 的 URL：
-
-  - **MDM 注册 URL** – 使用默认值。
-  - **MDM 使用条款 URL** – 使用默认值。 注册设备时，此 URL 将显示用户的使用条款。
-  - **MDM 合规性 URL** – 使用默认值。 如果发现设备不合规，此 URL 中将显示一条“访问被拒”的消息。 该 URL 指向一个页面，用户可从此页面了解其设备不合规的原因以及使其设备符合合规性策略的方法。
-
-6.  指定应由 Microsoft Intune 管理的用户设备。 这些用户的 Windows 10 设备将自动注册，以使用 Microsoft Intune 进行管理。
-
-  - **所有**
-  - **组**
-  - **无**
-
-7. 选择“保存”。
-
-## <a name="configure-windows-pc-enrollment"></a>配置 Windows 电脑注册
- 若要启用 Windows 移动设备管理，需要启用操作系统的管理。  还可以添加 DNS CNAME，以简化用户注册。
+1.  在为任何平台设置注册前，必须先完成[设置混合 MDM](setup-hybrid-mdm.md) 中的先决条件和过程。  
+2.  在 Configuration Manager 控制台中的“管理”工作区中，转到“概述” > “云服务” > “Microsoft Intune 订阅”。  
+3.  在功能区中，单击“配置平台”，然后选择 Windows 平台：
+    - 对于 Windows 电脑和笔记本电脑，请选择“Windows”，然后执行以下步骤：
+      1. 在“常规”选项卡上，单击“启用 Windows 注册”复选框。
+      2. 如果使用证书进行代码签名并部署公司门户应用，请浏览到“代码签名证书”。 设备用户还可以从 Windows 应用商店安装公司门户应用，或者你可以在没有代码签名的情况下部署来自适用于企业的 Windows 应用商店中的应用。
+      3. 你还可以配置 [Windows Hello 企业版设置](windows-hello-for-business-settings.md)。
+    - 对于 Windows 手机和平板电脑，请选择“Windows Phone”，然后执行以下步骤：
+      1. 在“常规”选项卡上，单击“Windows Phone 8.1 和 Windows 10 移动版”复选框。 不再支持 Windows Phone 8.0。
+      2. 如果你的组织需要旁加载公司应用，你可以上传所需的令牌或文件。 有关旁加载应用的详细信息，请参阅[创建 Windows 应用](https://docs.microsoft.com/sccm/apps/get-started/creating-windows-applications)。
+        - **应用程序注册令牌**
+        - **.pfx 文件**
+        - **无**：如果使用 Symantec 证书，则可以指定“在 Symantec 证书到期前显示警报”。
+4. 单击“确定”  关闭对话框。  若要使用公司门户简化注册过程，你应该为创建 DNS 别名以进行设备注册。 然后可以告知用户如何注册其设备。
 
 ### <a name="create-dns-alias-for-device-enrollment"></a>创建 DNS 别名以进行设备注册  
- 通过在设备注册期间自动填充服务器名称，DNS 别名（CNAME 记录类型）可让用户更轻松地注册其设备。 若要创建 DNS 别名（CNAME 记录类型），必须在公司的 DNS 记录中配置 CNAME，将发送给公司域名中的 URL 的请求重定向到 Microsoft 的云服务服务器。  例如，贵公司的域为 contoso.com，则应在 DNS 中创建将 EnterpriseEnrollment.contoso.com 重定向到 EnterpriseEnrollment-s.manage.microsoft.com 的 CNAME。  
+DNS 别名（CNAME 记录类型）使用户能更轻松地通过连接到服务注册其设备，而无需用户输入服务器地址。 若要创建 DNS 别名（CNAME 记录类型），必须在公司的 DNS 记录中配置 CNAME，将发送给公司域名中的 URL 的请求重定向到 Microsoft 的云服务服务器。  例如，贵公司的域为 contoso.com，则应在 DNS 中创建将 EnterpriseEnrollment.contoso.com 重定向到 EnterpriseEnrollment-s.manage.microsoft.com 的 CNAME。  
 
  虽然可选择性创建 CNAME DNS 条目，但 CNAME 记录可简化用户的注册。 如果找不到注册 CNAME 记录，系统会提示用户手动输入 MDM 服务器名称 enrollment.manage.microsoft.com。
 
-|类型|主机名|指向|  
-|----------|---------------|---------------|  
-|CNAME|EnterpriseEnrollment.company_domain.com|EnterpriseEnrollment-s.manage.microsoft.com|  
-|CNAME|EnterpriseRegistration.company_domain.com|EnterpriseRegistration.windows.net|  
-### <a name="to-enable-enrollment-for-windows-devices"></a>若要启用 Windows 设备的注册  
+|类型|主机名|指向|TTL|  
+|----------|---------------|---------------|---|
+|CNAME|EnterpriseEnrollment.company_domain.com|EnterpriseEnrollment-s.manage.microsoft.com| 1 小时|
 
-1.  **先决条件** - 在为任何平台安装注册前，必须先完成[安装混合 MDM](setup-hybrid-mdm.md) 中的先决条件和过程。  
+如果具有多个 UPN 后缀，你需要为每个域名创建一个 CNAME，并将每个 CNAME 指向 EnterpriseEnrollment-s.manage.microsoft.com。 例如，如果 Contoso 的用户使用 name@contoso.com，但也使用 name@us.contoso.com 和 name@eu.constoso.com 作为其电子邮件/UPN，则 Contoso DNS 管理员需要创建以下 CNAME。
 
-2.  在 Configuration Manager 控制台中的“管理”工作区中，转到“云服务” > “Microsoft Intune 订阅”。  
+|类型|主机名|指向|TTL|  
+|----------|---------------|---------------|---|
+|CNAME|EnterpriseEnrollment.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com|1 小时|
+|CNAME|EnterpriseEnrollment.us.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com|1 小时|
+|CNAME|EnterpriseEnrollment.eu.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com| 1 小时|
 
-    > [!WARNING]  
-    >  如果其他 Configuration Manager 对话框处于打开状态，请在继续执行此过程之前将其关闭。  
+## <a name="tell-users-how-to-enroll-devices"></a>告知用户如何注册设备  
 
-3.  在“主页”  选项卡上，单击“配置平台” ，然后单击“Windows” 。  
+ 设置完成后，需要让用户知道如何注册其设备。 有关指南，请参阅[需要使用户了解的有关设备注册的内容](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune)。 可以将用户定向到[在 Intune 中注册 Windows 设备](https://docs.microsoft.com/intune/enduser/enroll-your-device-in-intune-windows)。 此信息适用于 Microsoft Intune 和 Configuration Manager 托管的移动设备。
 
-4.  在“常规”  选项卡上，选择“启用 Windows 注册” 。  
-
- 设置完成后，需要让用户知道如何注册其设备。 请参阅[用户需要了解的有关设备注册的内容](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune)。 此信息适用于 Microsoft Intune 和 Configuration Manager 托管的移动设备。
-
-## <a name="enable-windows-phone-devices"></a>启用 Windows Phone 管理设备  
-  如果你的用户将只注册 Windows Phone 8.1 和更高版本的设备，且你将不会把业务线应用部署到 Windows Phone 设备，则无需 Symantec 证书。 在启用 Windows Phone 注册之后，应指导用户从 Windows Phone 应用商店安装公司门户应用以注册其设备。  
-
-  为将进行管理的 Windows Phone 设备完成以下步骤。  
-
-### <a name="to-enable-enrollment-for-windows-phone-81-and-later-devices"></a>若要启用 Windows Phone 8.1 以及更高版本设备的注册  
-
- 1.  **先决条件** - 在为任何平台安装注册前，必须先完成[安装混合 MDM](setup-hybrid-mdm.md) 中的先决条件和过程。  
-
- 2.  在 Configuration Manager 控制台中的“管理”工作区中，转到“云服务” > “Microsoft Intune 订阅”。  
-
-     > [!WARNING]  
-     >  如果其他 Configuration Manager 对话框处于打开状态，请在继续执行此过程之前将其关闭。  
-
- 3.  在“主页”  选项卡上，单击“配置平台” ，然后单击“Windows Phone” 。  
-
- 4.  在“常规”选项卡上，选择“Windows Phone 8.1 和 Windows 10 移动版”。 你可以上传 AET .xml 文件数据或 .pfx 文件以支持公司门户的部署，也可以指导用户从 Windows Phone 应用商店中下载公司门户。  
-
-      单击" **确定**"。  
-
-  设置完成后，需要让用户知道如何注册其设备。 请参阅[用户需要了解的有关设备注册的内容](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune)。 此信息适用于 Microsoft Intune 和 Configuration Manager 托管的移动设备。  
-
-  > [!div class="button"]
-  [< 上一步](create-service-connection-point.md)  [下一步 >](set-up-additional-management.md)
+> [!div class="button"]
+[< 上一步](create-service-connection-point.md)  [下一步 >](set-up-additional-management.md)
 
