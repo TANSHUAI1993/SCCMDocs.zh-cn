@@ -2,7 +2,7 @@
 title: "使用 System Center Configuration Manager 确认域名要求 | Microsoft Docs"
 description: "使用 System Center Configuration Manager 确认域名要求。"
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 03/21/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,8 +13,8 @@ ms.topic: article
 ms.assetid: 522c2e82-20eb-4f38-859b-d55640b24e32
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: mtillman
-ms.author: mtillman
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
@@ -51,6 +51,6 @@ ms.lasthandoff: 03/06/2017
 
      如果没有使用 AD FS，则必须为每个用户设置 Microsoft Online 密码。
 
-     > [!div class="button"]
-     [< 上一步](create-mdm-collection.md)  [下一步 >](configure-intune-subscription.md)
+> [!div class="button"]
+[< 上一步](create-mdm-collection.md)  [下一步 >](configure-intune-subscription.md)
 
