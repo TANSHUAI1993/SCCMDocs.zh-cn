@@ -19,6 +19,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 2e711cce2435957f3e85dad08f17260e1a224fc2
 ms.openlocfilehash: c6448932e91a02984ca57cef0b75c10ea3f43fa1
+ms.lasthandoff: 02/15/2017
 
 
 ---
@@ -32,7 +33,7 @@ ms.openlocfilehash: c6448932e91a02984ca57cef0b75c10ea3f43fa1
 
 - 如果想要将 System Center Configuration Manager 基础结构更新为新版本，请参阅 [System Center Configuration Manager 的更新](/sccm/core/servers/manage/updates)。
 
-##  <a name="a-namebkmksupconfigupgradesitesrva-upgrade-the-operating-system-of-site-systems"></a><a name="BKMK_SupConfigUpgradeSiteSrv"></a>升级站点系统的操作系统  
+##  <a name="BKMK_SupConfigUpgradeSiteSrv"></a>升级站点系统的操作系统  
  Configuration Manager 在以下情况中支持托管站点服务器的服务器操作系统和托管任何站点系统角色的远程服务器操作系统的就地升级：  
 
 -   如果生成的 Windows 服务包级别仍受 Configuration Manager 支持，则会就地升级到更高版本的 Windows Server 服务包。  
@@ -148,7 +149,7 @@ ms.openlocfilehash: c6448932e91a02984ca57cef0b75c10ea3f43fa1
 
 
 
-##  <a name="a-namebkmksupconfigupgradeclienta-upgrade-the-operating-system-of-configuration-manager-clients"></a><a name="BKMK_SupConfigUpgradeClient"></a>升级 Configuration Manager 客户端的操作系统  
+##  <a name="BKMK_SupConfigUpgradeClient"></a>升级 Configuration Manager 客户端的操作系统  
  以下情况中，Configuration Manager 支持就地升级 Configuration Manager 客户端的操作系统：  
 
 -   如果生成的服务包级别仍受 Configuration Manager 支持，则会就地升级到更高版本的 Windows 服务包。  
@@ -157,7 +158,7 @@ ms.openlocfilehash: c6448932e91a02984ca57cef0b75c10ea3f43fa1
 
 -   Windows 10 的内部版本到内部版本服务升级。  有关详细信息，请参阅[使用 System Center Configuration Manager 将 Windows 作为服务进行管理](../../../osd/deploy-use/manage-windows-as-a-service.md)。  
 
-##  <a name="a-namebkmksupconfigupgradedbsrva-upgrade-sql-server-on-the-site-database-server"></a><a name="BKMK_SupConfigUpgradeDBSrv"></a>升级站点数据库服务器上的 SQL Server  
+##  <a name="BKMK_SupConfigUpgradeDBSrv"></a>升级站点数据库服务器上的 SQL Server  
   Configuration Manager 在站点数据库服务器上支持将 SQL Server 从受支持的 SQL 版本就地升级。 本节中的 SQL Server 升级方案均受 Configuration Manager 支持，并且包括每个方案的要求。
 
  有关 Configuration Manager 支持的 SQL Server 版本的详细信息，请参阅[对 System Center Configuration Manager 的 SQL Server 版本支持](../../../core/plan-design/configs/support-for-sql-server-versions.md)。  
@@ -196,8 +197,8 @@ ms.openlocfilehash: c6448932e91a02984ca57cef0b75c10ea3f43fa1
 
 
 有关 SQL Server 的详细信息，请参阅 TechNet 上的 SQL Server 文档：
--   [升级到 SQL Server 2012](http://technet.microsoft.com/library/ms143393\(v=sql.110)
--   [升级到 SQL Server 2014](http://technet.microsoft.com/library/ms143393\(v=sql.120)  
+-   [升级到 SQL Server 2012](http://technet.microsoft.com/library/ms143393\(v=sql.110))
+-   [升级到 SQL Server 2014](http://technet.microsoft.com/library/ms143393\(v=sql.120))  
 -   [升级到 SQL Server 2016](https://technet.microsoft.com/library/bb677622(v=sql.130))
 
 
@@ -210,9 +211,4 @@ ms.openlocfilehash: c6448932e91a02984ca57cef0b75c10ea3f43fa1
 
 > [!NOTE]  
 >  在管理中心站点上将使用的 SQL Server 版本从 Standard Edition 更改为 Datacenter 或 Enterprise Edition 时，限制层次结构支持的客户端数量的数据库分区不会更改。
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 
