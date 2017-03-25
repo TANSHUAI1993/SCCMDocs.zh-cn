@@ -19,6 +19,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 1432568286605d29683416885d7aa522c649016e
 ms.openlocfilehash: fde190f141fb55462755119b533519d05af3f3c3
+ms.lasthandoff: 01/04/2017
 
 
 ---
@@ -32,7 +33,7 @@ ms.openlocfilehash: fde190f141fb55462755119b533519d05af3f3c3
 -   [更新 Windows Defender 或 Endpoint Protection](#update-windows-defender-or-endpoint-protection)  
 -   [启动 Windows Defender 或 Endpoint Protection 服务](#starting-windows-defender-or-endpoint-protection-service)  
 -   [Internet 连接问题](#internet-connection-issues)  
--   [](#detected-threat-cant-be-remediated)无法解决检测到的威胁  
+-   [无法解决检测到的威胁](#detected-threat-cant-be-remediated)  
 -   [安装 Endpoint Protection 客户端](#install-the-endpoint-protection-client)  
 
 ##  <a name="update-windows-defender-or-endpoint-protection"></a>更新 Windows Defender 或 Endpoint Protection  
@@ -318,9 +319,4 @@ ms.openlocfilehash: fde190f141fb55462755119b533519d05af3f3c3
  [Endpoint Protection 客户端的常见问题](../../protect/deploy-use/endpoint-protection-client-faq.md)   
 
  [Endpoint Protection 客户端帮助](../../protect/deploy-use/endpoint-protection-client-help.md)
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 
