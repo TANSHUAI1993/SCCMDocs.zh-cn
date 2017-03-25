@@ -19,6 +19,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
 ms.openlocfilehash: 94eeddd161448aff6e1c7afa542b0cbef1ad4d77
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -29,7 +30,7 @@ ms.openlocfilehash: 94eeddd161448aff6e1c7afa542b0cbef1ad4d77
 以下任务序列步骤可添加到 Configuration Manager 任务序列中。 有关编辑任务序列的信息，请参阅 [Edit a task sequence](../deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_ModifyTaskSequence)。  
 
 
-##  <a name="a-namebkmkapplydataimagea-apply-data-image-task-sequence-step"></a><a name="BKMK_ApplyDataImage"></a>应用数据映像任务序列步骤  
+##  <a name="BKMK_ApplyDataImage"></a>应用数据映像任务序列步骤  
  使用“应用数据映像”  任务序列步骤将数据映像复制到指定目标分区。  
 
  此步骤仅可在 Windows PE 中运行。 不能在标准操作系统中运行。 有关此操作的任务序列变量的详细信息，请参阅[任务序列操作变量](task-sequence-action-variables.md)。  
@@ -71,7 +72,7 @@ ms.openlocfilehash: 94eeddd161448aff6e1c7afa542b0cbef1ad4d77
  **应用映像之前删除分区中的所有内容**  
  指定在安装映像之前目标分区上的所有文件将被删除。 如果不删除分区内容，则此步骤可用于将其他内容应用到以前的目标分区。  
 
-##  <a name="a-namebkmkapplydriverpackagea-apply-driver-package"></a><a name="BKMK_ApplyDriverPackage"></a>应用驱动程序包  
+##  <a name="BKMK_ApplyDriverPackage"></a>应用驱动程序包  
  使用“应用驱动程序包”  任务序列步骤可下载驱动程序包中的所有驱动程序，并将其安装在 Windows 操作系统上。
 
  “应用驱动程序包”  任务序列步骤使 Windows 可以使用驱动程序包中的所有设备驱动程序。 此步骤可以添加到“应用操作系统”   与“安装 Windows 和 ConfigMgr”  步骤之间的任务序列，使驱动程序包中的设备驱动程序可以用于 Windows。 通常，“应用驱动程序包”  步骤位于“自动应用驱动程序”  任务序列步骤之后。 “应用驱动程序包”  任务序列步骤也可以与独立媒体部署方案配合使用。  
@@ -114,7 +115,7 @@ ms.openlocfilehash: 94eeddd161448aff6e1c7afa542b0cbef1ad4d77
  **在 Windows 版本上对未签名的驱动程序执行允许的无人参与安装**  
  选择此选项以允许 Windows 安装没有在引用计算机上签名的驱动程序。  
 
-##  <a name="a-namebkmkapplynetworksettingsa-apply-network-settings-step"></a><a name="BKMK_ApplyNetworkSettings"></a>应用网络设置步骤  
+##  <a name="BKMK_ApplyNetworkSettings"></a>应用网络设置步骤  
  使用“应用网络设置”  任务序列步骤指定目标计算机的网络或工作组配置信息。 指定值以适当的答案文件格式进行存储，以供 Windows 安装程序在运行“安装 Windows 和 ConfigMgr”  任务序列步骤时使用。  
 
  标准操作系统或 Windows PE 中均可运行此任务序列步骤。 有关此操作的任务序列变量的详细信息，请参阅 [Apply Network Settings Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_ApplyNetworkSettings)。  
@@ -148,7 +149,7 @@ ms.openlocfilehash: 94eeddd161448aff6e1c7afa542b0cbef1ad4d77
  **适配器设置**  
  指定计算机中每个网络适配器的网络配置。 单击  “新建”打开  “网络设置”对话框，然后指定网络设置。 如果在之前的  “捕获网络设置”任务序列步骤中已捕获网络设置，之前的设置会应用到网络适配器，不会应用在此步骤中指定的设置。 如果先前没有捕获网络设置，在“应用网络设置”  步骤中指定的设置将以 Windows 设备枚举顺序应用到网络适配器。  
 
-##  <a name="a-namebkmkapplyoperatingsystemimagea-apply-operating-system-image"></a><a name="BKMK_ApplyOperatingSystemImage"></a>应用操作系统映像  
+##  <a name="BKMK_ApplyOperatingSystemImage"></a>应用操作系统映像  
  使用“应用操作系统映像”  任务序列步骤在目标计算机上安装操作系统。 此任务序列步骤会根据使用操作系统映像还是操作系统安装包来执行一组操作，以安装操作系统。  
 
  使用操作系统映像时，“应用操作系统映像”  步骤将执行以下操作。  
@@ -231,7 +232,7 @@ ms.openlocfilehash: 94eeddd161448aff6e1c7afa542b0cbef1ad4d77
 
 -   **变量中存储的逻辑驱动器号** - 指定包含 Windows PE 分配给分区的驱动器号的任务序列变量。 对于“格式化磁盘并分区”  任务序列操作，此变量通常在“分区属性”  对话框的“高级”部分中设置。  
 
-##  <a name="a-namebkmkapplywindowssettingsa-apply-windows-settings"></a><a name="BKMK_ApplyWindowsSettings"></a>应用 Windows 设置  
+##  <a name="BKMK_ApplyWindowsSettings"></a>应用 Windows 设置  
  使用“应用 Windows 设置”  任务序列步骤配置目标计算机的 Windows 设置。 指定值以适当的答案文件格式进行存储，以供 Windows 安装程序在运行“安装 Windows 和 ConfigMgr”  任务序列步骤时使用。  
 
  此任务序列步骤仅可在 Windows PE 中运行。 不能在标准操作系统中运行。 有关此操作的任务序列变量的详细信息，请参阅 [Apply Windows Settings Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_ApplyWindowsSettings)。  
@@ -277,7 +278,7 @@ ms.openlocfilehash: 94eeddd161448aff6e1c7afa542b0cbef1ad4d77
  **时区**  
  指定要在目标计算机上配置的时区。 “捕获 Windows 设置”  任务序列步骤所捕获的值可以替代此值。  
 
-##  <a name="a-namebkmkautoapplydriversa-auto-apply-drivers"></a><a name="BKMK_AutoApplyDrivers"></a>自动应用驱动程序  
+##  <a name="BKMK_AutoApplyDrivers"></a>自动应用驱动程序  
  使用“自动应用驱动程序”  任务序列步骤匹配驱动程序，并将其作为操作系统部署的一部分进行安装。  
 
  “自动应用驱动程序”  任务序列步骤执行以下操作：  
@@ -336,7 +337,7 @@ ms.openlocfilehash: 94eeddd161448aff6e1c7afa542b0cbef1ad4d77
 > [!IMPORTANT]  
 >  此选项不适用于不能配置驱动程序签名策略的操作系统。  
 
-##  <a name="a-namebkmkcapturenetworksettingsa-capture-network-settings"></a><a name="BKMK_CaptureNetworkSettings"></a>捕获网络设置  
+##  <a name="BKMK_CaptureNetworkSettings"></a>捕获网络设置  
  使用“捕获网络设置”  任务序列步骤从运行该任务序列的计算机捕获 Microsoft 网络设置。 这些设置保存在任务序列变量中，将替代在“应用网络设置”  任务序列步骤中配置的默认设置。  
 
  此任务序列步骤仅可在标准操作系统中运行。 不可在 Windows PE 中运行。 有关此操作的任务序列变量的详细信息，请参阅 [Capture Network Settings Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_CaptureNetworkSettings)。  
@@ -364,7 +365,7 @@ ms.openlocfilehash: 94eeddd161448aff6e1c7afa542b0cbef1ad4d77
  **迁移网络适配器配置**  
  捕获目标计算机的网络适配器配置。 捕获的信息包括全局网络设置、适配器数量以及与每个适配器关联的网络设置。 这些设置包括与 DNS、WINS、IP 和端口筛选器关联的设置。  
 
-##  <a name="a-namebkmkcaptureoperatingsystemimagea-capture-operating-system-image"></a><a name="BKMK_CaptureOperatingSystemImage"></a>捕获操作系统映像  
+##  <a name="BKMK_CaptureOperatingSystemImage"></a>捕获操作系统映像  
  使用“捕获操作系统映像”  任务序列步骤可从引用计算机捕获一个或多个映像，并将它们存储在指定网络共享上的 WIM 文件中。 随后可以使用添加操作系统映像包向导将此 .WIM 文件导入 Configuration Manager 中，以便它可用于基于映像的操作系统部署。  
 
  引用计算机上的每个卷（驱动器）是作为 .wim 文件中的单独映像捕获的。 如果引用计算机有多个卷，则生成的 WIM 文件对于每个卷将包含单独的映像。 仅捕获格式化为 NTFS 或 FAT32 的卷。 其他格式的卷和 USB 卷会被忽略。  
@@ -407,7 +408,7 @@ ms.openlocfilehash: 94eeddd161448aff6e1c7afa542b0cbef1ad4d77
  **捕获操作系统映像帐户**  
  你必须输入对你指定的网络共享具有访问权限的 Windows 帐户。 单击“设置”  以指定该 Windows 帐户的名称。  
 
-##  <a name="a-namebkmkcaptureuserstatea-capture-user-state"></a><a name="BKMK_CaptureUserState"></a>捕获用户状态  
+##  <a name="BKMK_CaptureUserState"></a>捕获用户状态  
  使用“捕获用户状态”  任务序列步骤来通过用户状态迁移工具 (USMT) 从运行该任务序列的计算机捕获用户状态和设置。 此任务序列步骤与“还原用户状态”  任务序列步骤一起使用。 通过 USMT 3.0.1 和更高版本，此选项始终使用由 Configuration Manager 生成并管理的加密密钥加密 USMT 状态存储。  
 
  有关部署操作系统时管理用户状态的详细信息，请参阅[管理用户状态](../get-started/manage-user-state.md)。  
@@ -473,7 +474,7 @@ ms.openlocfilehash: 94eeddd161448aff6e1c7afa542b0cbef1ad4d77
  **使用卷影复制服务 (VSS) 进行捕获**  
  通过此选项，你可捕获即使锁定由其他应用程序编辑的文件。  
 
-##  <a name="a-namebkmkcapturewindowssettingsa-capture-windows-settings"></a><a name="BKMK_CaptureWindowsSettings"></a>捕获 Windows 设置  
+##  <a name="BKMK_CaptureWindowsSettings"></a>捕获 Windows 设置  
  使用“捕获 Windows 设置”  任务序列步骤从运行该任务序列的计算机捕获 Windows 设置。 这些设置保存在任务序列变量中，将替代在“应用 Windows 设置”  任务序列步骤中配置的默认设置。  
 
  Windows PE 或标准操作系统中均可运行此任务序列步骤。 有关此操作的任务序列变量的详细信息，请参阅 [Capture Windows Settings Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_CaptureWindowsSettings)。  
@@ -504,7 +505,7 @@ ms.openlocfilehash: 94eeddd161448aff6e1c7afa542b0cbef1ad4d77
  **迁移时区**  
  选择此选项以捕获计算机上的时区设置。  
 
-##  <a name="a-namebkmkcheckreadinessa-check-readiness"></a><a name="BKMK_CheckReadiness"></a>检查准备情况  
+##  <a name="BKMK_CheckReadiness"></a>检查准备情况  
  使用“检查准备情况”  任务序列步骤验证目标计算机是否满足指定部署必备条件。  
 
 ### <a name="details"></a>详细信息  
@@ -536,7 +537,7 @@ ms.openlocfilehash: 94eeddd161448aff6e1c7afa542b0cbef1ad4d77
  **确保要刷新的当前 OS**  
  选择此设置，验证目标计算机上安装的操作系统是否满足你指定的要求。 默认情况下，使用值 **CLIENT**选择此设置。  
 
-##  <a name="a-namebkmkconnecttonetworkfoldera-connect-to-network-folder"></a><a name="BKMK_ConnectToNetworkFolder"></a>连接到网络文件夹  
+##  <a name="BKMK_ConnectToNetworkFolder"></a>连接到网络文件夹  
  使用“连接到网络文件夹”  任务序列操作来创建到共享网络文件夹的连接。  
 
  标准操作系统或 Windows PE 中均可运行此任务序列步骤。 有关此操作的任务序列变量的详细信息，请参阅 [Connect to Network Folder Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_ConnecttoNetworkFolder)。  
@@ -552,7 +553,7 @@ ms.openlocfilehash: 94eeddd161448aff6e1c7afa542b0cbef1ad4d77
 
 -   指定运行步骤必须满足的条件。  
 
-##  <a name="a-namebkmkconvertdisktodynamica-convert-disk-to-dynamic"></a><a name="BKMK_ConvertDisktoDynamic"></a>将磁盘转换为动态磁盘  
+##  <a name="BKMK_ConvertDisktoDynamic"></a>将磁盘转换为动态磁盘  
  使用“将磁盘转换为动态磁盘”  任务序列步骤将物理磁盘从基本磁盘类型转换为动态磁盘类型。  
 
  标准操作系统或 Windows PE 中均可运行此步骤。 有关此操作的任务序列变量的详细信息，请参阅 [Convert Disk to Dynamic Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_ConvertDisk)。  
@@ -577,7 +578,7 @@ ms.openlocfilehash: 94eeddd161448aff6e1c7afa542b0cbef1ad4d77
  **磁盘编号**  
  将被转换的磁盘的物理磁盘编号。  
 
-##  <a name="a-namebkmkdisablebitlockera-disable-bitlocker"></a><a name="BKMK_DisableBitLocker"></a>禁用 BitLocker  
+##  <a name="BKMK_DisableBitLocker"></a>禁用 BitLocker  
  使用“禁用 BitLocker”  任务序列步骤可在当前操作系统驱动器或特定驱动器上禁用 BitLocker 加密。 此操作使得密钥保护程序在硬盘驱动器上以明文形式显示，但是不会解密该驱动器的内容。 因此，此操作几乎立刻完成。  
 
 > [!NOTE]  
@@ -610,7 +611,7 @@ ms.openlocfilehash: 94eeddd161448aff6e1c7afa542b0cbef1ad4d77
  **特定驱动器**  
  在特定驱动器上禁用 BitLocker。 使用下拉列表指定禁用 BitLocker 的驱动器。  
 
-##  <a name="a-namebkmkdownloadpackagecontenta-download-package-content"></a><a name="BKMK_DownloadPackageContent"></a>下载包内容  
+##  <a name="BKMK_DownloadPackageContent"></a>下载包内容  
  使用“下载包内容”  任务序列步骤下载以下任意一种包类型：  
 
 -   操作系统映像  
@@ -664,7 +665,7 @@ ms.openlocfilehash: 94eeddd161448aff6e1c7afa542b0cbef1ad4d77
  **如果包下载失败，继续下载列表中的其他包**  
  指定如果包下载失败，将转到列表中的下一个包并开始下载。  
 
-##  <a name="a-namebkmkenablebitlockera-enable-bitlocker"></a><a name="BKMK_EnableBitLocker"></a>启用 BitLocker  
+##  <a name="BKMK_EnableBitLocker"></a>启用 BitLocker  
  使用“启用 BitLocker”  任务序列步骤在硬盘上的至少两个分区中启用 BitLocker 加密。 第一个活动分区包含 Windows 启动代码。 另一个分区包含操作系统。 启动分区必须保持为未加密状态。  
 
  在 Windows PE 中，使用“预设置 BitLocker”  任务序列步骤可在驱动器上启用 BitLocker。 有关详细信息，请参阅本主题中的 [预设置 BitLocker](#BKMK_PreProvisionBitLocker) 部分。  
@@ -738,7 +739,7 @@ ms.openlocfilehash: 94eeddd161448aff6e1c7afa542b0cbef1ad4d77
 
  加密大型硬盘时，加密过程可能需要数小时才能完成。 不选择此选项将允许立即处理任务序列。  
 
-##  <a name="a-namebkmkformatandpartitiondiska-format-and-partition-disk"></a><a name="BKMK_FormatandPartitionDisk"></a>格式化磁盘并分区  
+##  <a name="BKMK_FormatandPartitionDisk"></a>格式化磁盘并分区  
  使用“格式化磁盘并分区”  任务序列步骤对目标计算机上的特定磁盘进行格式化和分区。  
 
 > [!IMPORTANT]  
@@ -791,7 +792,7 @@ ms.openlocfilehash: 94eeddd161448aff6e1c7afa542b0cbef1ad4d77
 
  要删除分区，请选择要删除的分区，然后单击“删除” 。  
 
-##  <a name="a-namebkmkinstallapplicationa-install-application"></a><a name="BKMK_InstallApplication"></a>安装应用程序  
+##  <a name="BKMK_InstallApplication"></a>安装应用程序  
  使用“安装应用程序”  任务序列步骤将应用程序作为任务序列的一部分进行安装。 此步骤可以安装任务序列步骤指定或任务序列变量动态列表指定的一组应用程序。 此步骤运行时，应用程序安装会立即开始而不等待策略轮询间隔。  
 
  安装的应用程序必须满足以下条件：  
@@ -872,7 +873,7 @@ ms.openlocfilehash: 94eeddd161448aff6e1c7afa542b0cbef1ad4d77
  **如果应用程序失败，继续安装列表中的其他应用程序**  
  此设置指定在单个应用程序安装失败时该步骤继续。 如果指定了此设置，任务序列将不考虑返回的任何安装错误而继续。 如果未指定此设置，则在安装失败时任务序列将立即终止。  
 
-##  <a name="a-namebkmkinstalldeploymenttoolsa-install-deployment-tools"></a><a name="BKMK_InstallDeploymentTools"></a>安装部署工具  
+##  <a name="BKMK_InstallDeploymentTools"></a>安装部署工具  
  使用“安装部署工具”任务序列步骤来安装包含 Sysprep 部署工具的 Configuration Manager 包。  
 
 ### <a name="details"></a>详细信息  
@@ -901,7 +902,7 @@ ms.openlocfilehash: 94eeddd161448aff6e1c7afa542b0cbef1ad4d77
 
 -   Windows Server 2003 SP2  
 
-##  <a name="a-namebkmkinstallpackagea-install-package"></a><a name="BKMK_InstallPackage"></a>安装包
+##  <a name="BKMK_InstallPackage"></a>安装包
 
  使用“安装包”  任务序列步骤将软件作为任务序列的一部分进行安装。 此步骤运行时，安装会立即开始而不等待策略轮询间隔。  
 
@@ -981,7 +982,7 @@ ms.openlocfilehash: 94eeddd161448aff6e1c7afa542b0cbef1ad4d77
  **如果软件包安装失败，则继续安装列表中的其他包**  
  此设置指定在单个软件包安装失败时该步骤继续。 如果指定了此设置，任务序列将不考虑返回的任何安装错误而继续。 如果未指定此设置，则在安装失败时任务序列将立即终止。  
 
-##  <a name="a-namebkmkinstallsoftwareupdatesa-install-software-updates"></a><a name="BKMK_InstallSoftwareUpdates"></a>安装软件更新  
+##  <a name="BKMK_InstallSoftwareUpdates"></a>安装软件更新  
  使用“安装软件更新”  任务序列在目标计算机上安装软件更新。 在运行此任务序列步骤时，才会评估目标计算机是否有适用的软件更新。 那时，会与其他 Configuration Manager 托管客户端一样评估目标计算机是否有合适的软件更新。 特别是，此步骤只会安装目标为计算机当前所属集合的软件更新。  
 >  [!IMPORTANT]
 >使用安装软件更新任务序列步骤时，强烈建议安装最新版的 Windows 更新代理以实现更好的性能。
@@ -1027,7 +1028,7 @@ ms.openlocfilehash: 94eeddd161448aff6e1c7afa542b0cbef1ad4d77
 Configuration Manager 版本 1606 中引入了一个新的任务序列变量 SMSTSSoftwareUpdateScanTimeout，以使你能够控制安装软件更新任务序列步骤中的软件更新扫描的超时时间。 默认值为 30 分钟。 有关详细信息，请参阅[任务序列内置变量](task-sequence-built-in-variables.md)。
 
 
-##  <a name="a-namebkmkjoindomainorworkgroupa-join-domain-or-workgroup"></a><a name="BKMK_JoinDomainorWorkgroup"></a>加入域或工作组  
+##  <a name="BKMK_JoinDomainorWorkgroup"></a>加入域或工作组  
  使用“加入域或工作组”  任务序列步骤将目标计算机添加到工作组或域中。  
 
  此任务序列步骤仅可在标准操作系统中运行。 不可在 Windows PE 中运行。 有关此任务序列操作的任务序列变量的信息，请参阅 [Join Domain or Workgroup Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_JoinDomainWorkgroup)。  
@@ -1062,7 +1063,7 @@ Configuration Manager 版本 1606 中引入了一个新的任务序列变量 SMS
 
  域\帐户  
 
-## <a name="a-namebkmkprepareconfigmgrclientforcapturea-prepare-configmgr-client-for-capture"></a><a name="BKMK_PrepareConfigMgrClientforCapture"></a>准备 ConfigMgr 客户端以便捕获  
+## <a name="BKMK_PrepareConfigMgrClientforCapture"></a>准备 ConfigMgr 客户端以便捕获  
 使用“准备 ConfigMgr 客户端以便捕获”步骤来删除 Configuration Manager 客户端，或配置引用计算机上的客户端，使其准备在映像化过程中进行捕获。
 
 从 Configuration Manager 版本 1610 开始，“准备 ConfigMgr 客户端”一步将完全删除 Configuration Manager 客户端，而不是仅删除密钥信息。 任务序列每次部署捕获的操作系统映像时，都将安装新的 Configuration Manager 客户端。  
@@ -1100,7 +1101,7 @@ Configuration Manager 版本 1606 中引入了一个新的任务序列变量 SMS
  **描述**  
  有关此步骤所采取操作的更详细信息。  
 
-##  <a name="a-namebkmkpreparewindowsforcapturea-prepare-windows-for-capture"></a><a name="BKMK_PrepareWindowsforCapture"></a>准备 Windows 以便捕获  
+##  <a name="BKMK_PrepareWindowsforCapture"></a>准备 Windows 以便捕获  
  使用“准备 Windows 以便捕获”  任务序列步骤指定在引用计算机上捕获操作系统映像时要使用的 Sysprep 选项。 此任务序列操作运行 Sysprep，然后将计算机重新启动到为该任务序列指定的 Windows PE 启动映像。 要使此操作成功完成，引用计算机不可加入域。  
 
  此任务序列步骤仅可在标准操作系统中运行。 不可在 Windows PE 中运行。 有关此任务序列操作的任务序列变量的信息，请参阅 [Prepare Windows for Capture Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_PrepareWindowsCapture)。  
@@ -1128,7 +1129,7 @@ Configuration Manager 版本 1606 中引入了一个新的任务序列变量 SMS
  **不重置激活标志**  
  选择此选项以阻止 Sysprep 重置产品激活标志。  
 
-##  <a name="a-namebkmkpreprovisionbitlockera-pre-provision-bitlocker"></a><a name="BKMK_PreProvisionBitLocker"></a>预设置 BitLocker  
+##  <a name="BKMK_PreProvisionBitLocker"></a>预设置 BitLocker  
  在 Windows PE 中，使用“预设置 BitLocker”  任务序列步骤可在驱动器上启用 BitLocker。 由于仅加密使用的磁盘空间，因此加密时间要短得多。 安装操作系统后，使用 [启用 BitLocker](#BKMK_EnableBitLocker) 任务序列步骤应用密钥管理选项。 此步骤仅可在 Windows PE 中运行。 不能在标准操作系统中运行。  
 
 > [!IMPORTANT]  
@@ -1157,7 +1158,7 @@ Configuration Manager 版本 1606 中引入了一个新的任务序列变量 SMS
  **对于没有 TPM 或 未启用 TPM 的计算机跳过此步骤**  
  选择此选项以在计算机硬件不支持 TPM 或未启用 TPM 时跳过驱动器加密。 例如，可在将操作系统部署到虚拟机时使用此选项。  
 
-##  <a name="a-namebkmkreleasestatestorea-release-state-store"></a><a name="BKMK_ReleaseStateStore"></a>发布状态存储  
+##  <a name="BKMK_ReleaseStateStore"></a>发布状态存储  
  使用“发布状态存储”  任务序列步骤通知状态迁移点捕获或还原操作已完成。 此步骤与“请求状态存储” 、“捕获用户状态” 和“还原用户状态”  任务序列步骤一起使用，以使用状态迁移点和用户状态迁移工具 (USMT) 迁移用户状态数据。  
 
  有关部署操作系统时管理用户状态的详细信息，请参阅[管理用户状态](../get-started/manage-user-state.md)。  
@@ -1188,7 +1189,7 @@ Configuration Manager 版本 1606 中引入了一个新的任务序列变量 SMS
  **描述**  
  有关此步骤所采取操作的更详细信息。  
 
-##  <a name="a-namebkmkrequeststatestorea-request-state-store"></a><a name="BKMK_RequestStateStore"></a>请求状态存储  
+##  <a name="BKMK_RequestStateStore"></a>请求状态存储  
  使用“请求状态存储”  任务序列步骤在从计算机捕获状态或将状态还原到计算机时请求访问状态迁移点。  
 
  有关部署操作系统时管理用户状态的详细信息，请参阅[管理用户状态](../get-started/manage-user-state.md)。  
@@ -1236,7 +1237,7 @@ Configuration Manager 版本 1606 中引入了一个新的任务序列变量 SMS
  **如果计算机帐户无法连接到状态存储，请使用网络访问帐户。**  
  指定如果 Configuration Manager 客户端无法使用计算机帐户访问 SMP 状态存储，Configuration Manager 网络访问帐户凭据将用于连接到状态迁移点。 此选项的安全性较低，因为其他计算机可能使用该网络访问帐户访问你的已存储状态，但如果目标计算机不可加入域，则可能需要此选项。  
 
-##  <a name="a-namebkmkrestartcomputera-restart-computer"></a><a name="BKMK_RestartComputer"></a>重新启动计算机  
+##  <a name="BKMK_RestartComputer"></a>重新启动计算机  
  使用“重新启动计算机”  任务序列步骤重新启动运行该任务序列的计算机。 重新启动之后，计算机将自动地继续运行任务序列中的下一个步骤。  
 
  标准操作系统或 Windows PE 中均可运行此步骤。 有关此任务序列操作的任务序列变量的详细信息，请参阅[重新启动计算机任务序列操作变量](task-sequence-action-variables.md#BKMK_RestartComputer)。  
@@ -1273,7 +1274,7 @@ Configuration Manager 版本 1606 中引入了一个新的任务序列变量 SMS
  **消息显示超时**  
  指定在目标计算机重新启动之前给定用户的时间（秒）。 默认时间为&60; 秒。  
 
-##  <a name="a-namebkmkrestoreuserstatea-restore-user-state"></a><a name="BKMK_RestoreUserState"></a>还原用户状态  
+##  <a name="BKMK_RestoreUserState"></a>还原用户状态  
  使用  “还原用户状态”任务序列步骤来启动用户状态迁移工具 (USMT) 将用户状态和设置还原到目标计算机。 此任务序列步骤与“捕获用户状态”  任务序列步骤配合使用。  
 
  有关部署操作系统时管理用户状态的详细信息，请参阅[管理用户状态](../get-started/manage-user-state.md)。  
@@ -1283,7 +1284,7 @@ Configuration Manager 版本 1606 中引入了一个新的任务序列变量 SMS
   “还原用户状态”任务序列步骤提供对最常用 USMT 选项的受限子网的控制。 其他命令行选项可使用 OSDMigrateAdditionalRestoreOptions 任务序列变量指定。  
 
 > [!IMPORTANT]  
->  如果使用“还原用户状态”  任务序列步骤执行与操作系统部署方案无关的任务，请在紧随“还原用户状态” [](#BKMK_RestartComputer) 任务序列步骤之后添加 **Restart Computer** 任务序列步骤。  
+>  如果使用 **还原用户状态** 任务序列步骤执行与操作系统部署方案无关的任务，请在紧随 **还原用户状态** 任务序列步骤之后添加 [Restart Computer](#BKMK_RestartComputer) 任务序列步骤。  
 
  此任务序列步骤仅可在标准操作系统中运行。 不可在 Windows PE 中运行。 有关此任务序列操作的任务序列变量的信息，请参阅 [Restore User State Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_RestoreUserState)。  
 
@@ -1322,7 +1323,7 @@ Configuration Manager 版本 1606 中引入了一个新的任务序列变量 SMS
  **启用详细日志记录**  
  启用此选项以生成更详细的日志文件信息。 当还原状态时，将生成日志 Loadstate.log 并默认存储在 \windows\system32\ccm\logs 文件夹的任务序列日志文件夹中。  
 
-##  <a name="a-namebkmkruncommandlinea-run-command-line"></a><a name="BKMK_RunCommandLine"></a>运行命令行  
+##  <a name="BKMK_RunCommandLine"></a>运行命令行  
  使用“运行命令行”  任务序列步骤来运行指定命令行。  
 
  标准操作系统或 Windows PE 中均可运行此步骤。 有关此任务序列操作的任务序列变量的信息，请参阅 [Run Command Line Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_RunCommand)。  
@@ -1396,7 +1397,7 @@ Configuration Manager 版本 1606 中引入了一个新的任务序列变量 SMS
 > [!IMPORTANT]  
 >  如果指定用户帐户的“运行命令行”  任务序列操作在 Windows PE 中执行，则该操作可能失败，因为 Windows PE 无法加入域。 该失败将记录在 smsts.log 文件中。  
 
-##  <a name="a-namebkmkrunpowershellscripta-run-powershell-script"></a><a name="BKMK_RunPowerShellScript"></a>运行 PowerShell 脚本  
+##  <a name="BKMK_RunPowerShellScript"></a>运行 PowerShell 脚本  
  使用“运行 PowerShell 脚本”  任务序列步骤运行指定的 PowerShell 脚本。  
 
  标准操作系统或 Windows PE 中均可运行此步骤。 若要在 Windows PE 中运行此步骤，必须在启动映像中启用 PowerShell。 你可以从启动映像属性中的“可选组件”  选项卡中启用 Windows PowerShell (WinPE-PowerShell)。 有关如何修改启动映像的详细信息，请参阅[管理启动映像](../get-started/manage-boot-images.md)。  
@@ -1453,7 +1454,7 @@ Configuration Manager 版本 1606 中引入了一个新的任务序列变量 SMS
 > [!IMPORTANT]  
 >  PowerShell 1.0 不支持未定义和旁路执行策略。  
 
-##  <a name="a-namebkmksetdynamicvariablesa-set-dynamic-variables"></a><a name="BKMK_SetDynamicVariables"></a>设置动态变量  
+##  <a name="BKMK_SetDynamicVariables"></a>设置动态变量  
  使用“设置动态变量”  任务序列步骤执行以下操作：  
 
 1.  从计算机和它所在的环境中收集信息，然后使用该信息设置指定的任务序列变量。  
@@ -1521,7 +1522,7 @@ Configuration Manager 版本 1606 中引入了一个新的任务序列变量 SMS
 > [!IMPORTANT]  
 >  使用“设置动态变量”步骤导入任务序列并为变量的值选择“机密值”  时，导入该任务序列时将删除该值。 因此，导入任务序列后你必须重新输入动态变量的值。  
 
-##  <a name="a-namebkmksettasksequencevariablea-set-task-sequence-variable"></a><a name="BKMK_SetTaskSequenceVariable"></a>设置任务序列变量  
+##  <a name="BKMK_SetTaskSequenceVariable"></a>设置任务序列变量  
  使用“设置任务序列变量”  任务序列步骤来设置与该任务序列配合使用的变量的值。  
 
  标准操作系统或 Windows PE 中均可运行此步骤。 任务序列变量由任务序列操作读取，并指定这些操作的行为。 有关特定任务序列变量的详细信息，请参阅[任务序列操作变量](task-sequence-action-variables.md)。  
@@ -1549,7 +1550,7 @@ Configuration Manager 版本 1606 中引入了一个新的任务序列变量 SMS
  **值**  
  与任务序列变量相关联的值。 此值可以是 %<varname\>% 语法中的另一个任务序列变量。  
 
-##  <a name="a-namebkmksetupwindowsandconfigmgra-setup-windows-and-configmgr"></a><a name="BKMK_SetupWindowsandConfigMgr"></a>安装 Windows 和 ConfigMgr  
+##  <a name="BKMK_SetupWindowsandConfigMgr"></a>安装 Windows 和 ConfigMgr  
  使用“安装 Windows 和 ConfigMgr”  任务序列步骤执行从 Windows PE 到新操作系统的转移。 此任务序列步骤是在部署任何操作系统时都必需的部分。 该步骤会将 Configuration Manager 客户端安装到新操作系统中，并为任务序列在新操作系统中继续执行做好准备。  
 
  此步骤仅可在 Windows PE 中运行。 不能在标准操作系统中运行。 有关此任务序列操作的任务序列变量的详细信息，请参阅[安装 Windows 和 ConfigMgr 任务序列操作变量](task-sequence-action-variables.md#BKMK_SetupWindows)。  
@@ -1629,7 +1630,7 @@ Configuration Manager 版本 1606 中引入了一个新的任务序列变量 SMS
 
  你可以指定要在客户端安装过程中使用命令行选项。 例如，你可以输入 **/skipprereq: silverlight.exe** 以通知 CCMSetup.exe 不安装 Microsoft Silverlight 必备组件。 有关 CCMSetup.exe 的可用命令行选项的详细信息，请参阅[关于客户端安装属性](../../core/clients/deploy/about-client-installation-properties.md)。  
 
-##  <a name="a-namebkmkupgradeosa-upgrade-operating-system"></a><a name="BKMK_UpgradeOS"></a>升级操作系统  
+##  <a name="BKMK_UpgradeOS"></a>升级操作系统  
  使用“升级操作系统”  任务序列步骤将现有的 Windows 7、Windows 8、Windows 8.1 或 Windows 10 操作系统升级到 Windows 10。  
 
  此任务序列步骤仅可在标准操作系统中运行。 不可在 Windows PE 中运行。  
@@ -1693,9 +1694,4 @@ Configuration Manager 版本 1606 中引入了一个新的任务序列变量 SMS
  指定安装程序是否执行动态更新操作，如搜索、下载和安装更新（对应于 /DynamicUpdate 命令行选项）。 此设置与 Configuration Manager 软件更新不兼容，但使用 WSUS（独立）或 Windows Update 来处理更新时可启用它。  
 
  **替代策略并使用默认的 Microsoft Update：**选择此设置以实时临时替代本地策略，运行动态更新操作，并让计算机从 Windows Update 中获取更新。  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 
