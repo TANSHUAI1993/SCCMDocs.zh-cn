@@ -15,9 +15,11 @@ caps.latest.revision: 6
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
+robots: noindex,nofollow
 translationtype: Human Translation
 ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
 ms.openlocfilehash: 6e737d06563b256010f302af4e805eb6812524e2
+ms.lasthandoff: 01/24/2017
 
 ---
 # <a name="capabilities-in-technical-preview-1602-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1602 版中的功能
@@ -28,7 +30,7 @@ ms.openlocfilehash: 6e737d06563b256010f302af4e805eb6812524e2
 
  以下是可以试用的此版本的新功能。  
 
-##  <a name="a-namebkmkmdma-improvements-to-mobile-device-management"></a><a name="BKMK_MDM"></a>对移动设备管理的改进  
+##  <a name="BKMK_MDM"></a>对移动设备管理的改进  
 
 ### <a name="ios-activation-lock"></a>iOS 激活锁定  
  System Center Configuration Manager 可以帮助你管理 iOS 激活锁定，这是适用于 iOS 7.1 及更高版本设备的“查找我的 iPhone”应用的功能。 当设备上使用了“查到我的 iPhone”应用时，激活锁定自动启用。 启用后，任何人都必须先输入用户的 Apple ID 和密码，然后才能执行以下操作：  
@@ -43,12 +45,12 @@ ms.openlocfilehash: 6e737d06563b256010f302af4e805eb6812524e2
 
  有关详细信息，请参阅[通过 Configuration Manager 的绕过激活锁定帮助保护 iOS 设备](/sccm/mdm/deploy-use/manage-ios-activation-lock)  
 
-##  <a name="a-namebkmksc1601a-improvements-to-software-center-in-version-1602"></a><a name="BKMK_SC1601"></a>版本 1602 中对软件中心的改进  
+##  <a name="BKMK_SC1601"></a>版本 1602 中对软件中心的改进  
 
 ### <a name="refresh-pc-machine-and-user-policy-from-software-center"></a>从软件中心刷新 PC 计算机和用户策略  
  已将新选项“同步策略”添加到软件中心的“选项” > “计算机维护”页面，该操作可让电脑刷新其 Configuration Manager 计算机和用户策略。  
 
-##  <a name="a-namebkmkwin10servicinga-improvements-to-windows-10-servicing"></a><a name="BKMK_Win10Servicing"></a>对 Windows 10 维护服务的改进  
+##  <a name="BKMK_Win10Servicing"></a>对 Windows 10 维护服务的改进  
  在 1602 Technical Preview 中，我们为 Windows 10 维护服务添加了以下改进：  
 
 -   用于维护服务计划的新的筛选器选项。  现在可以筛选“语言”、“必需”和“标题”。 只有满足指定条件的升级项才会添加到关联部署中。  
@@ -58,9 +60,4 @@ ms.openlocfilehash: 6e737d06563b256010f302af4e805eb6812524e2
 -   可用的 Windows 10 升级现在仅显示在 Configuration Manager 控制台的“Windows 10 维护服务” \ “所有 Windows 10 更新”节点中。 这些更新不再显示在“软件更新” \ “所有软件更新”节点中。  
 
 -   启动 Windows 10 升级包的最终用户将会收到一个提示对话框，告知用户将升级自己的操作系统。  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

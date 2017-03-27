@@ -15,9 +15,11 @@ caps.latest.revision: 6
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
+robots: noindex,nofollow
 translationtype: Human Translation
 ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
 ms.openlocfilehash: 7fff6f2807a679b621b736b8ad0b6561fb37affe
+ms.lasthandoff: 01/24/2017
 
 ---
 # <a name="capabilities-in-technical-preview-1512-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1512 版中的功能
@@ -28,7 +30,7 @@ ms.openlocfilehash: 7fff6f2807a679b621b736b8ad0b6561fb37affe
 
  以下是可以试用的此版本的新功能。  
 
-##  <a name="a-namebkmkdevicehealtha-device-health-attestation"></a><a name="bkmk_devicehealth"></a> 设备运行状况证明  
+##  <a name="bkmk_devicehealth"></a> 设备运行状况证明  
  从 Technical Preview 1512 开始，管理员可以在 Configuration Manager 中查看 Windows 10 设备运行状况证明的状态。  此功能适用于 Configuration Manager 和带 Microsoft Intune 的 Configuration Manager。 设备运行状况证明让管理员能够确保客户端计算机具有可信 BIOS、TPM 和启动软件配置。 为了支持设备运行状况证明，客户端设备必须运行 Win10 并启用 TPM 2。 设备运行状况证明显示为以下各项启用的设备数：  
 
 -   开机初期启动的反恶意软件  
@@ -43,7 +45,7 @@ ms.openlocfilehash: 7fff6f2807a679b621b736b8ad0b6561fb37affe
 
 若要预览设备运行状况证明视图，请在 Configuration Manager 中转到“监视”工作区，单击“安全”节点，然后单击“运行状况证明”。  
 
-##  <a name="a-namebkmkviewtermsa-in-console-monitoring-for-terms-and-conditions"></a><a name="bkmk_viewterms"></a>条款和条件的控制台中监视  
+##  <a name="bkmk_viewterms"></a>条款和条件的控制台中监视  
 从 Technical Preview 1512 开始，如果将 Configuration Manager 与 Microsoft Intune 集成，便可以使用 Configuration Manager 查看已接受和未接受你的 IT 部门所配置条款和条件的用户。  
 
 **查看摘要信息：**  
@@ -56,7 +58,7 @@ ms.openlocfilehash: 7fff6f2807a679b621b736b8ad0b6561fb37affe
 
 2.  在控制台底部，选择“部署”选项卡并选择部署，然后单击“查看状态”。  
 
-##  <a name="a-namebkmkeppolicya-improvements-to-endpoint-protection-policy-settings"></a><a name="bkmk_EPpolicy"></a>对 Endpoint Protection 策略设置的改进  
+##  <a name="bkmk_EPpolicy"></a>对 Endpoint Protection 策略设置的改进  
 在 1512 Technical Preview 中，我们在 Endpoint Protection 反恶意软件策略中添加了以下新设置：  
 
 -   实时保护：**在下载时和安装前阻止可能不需要的应用程序**  
@@ -90,9 +92,4 @@ ms.openlocfilehash: 7fff6f2807a679b621b736b8ad0b6561fb37affe
 **使用 Endpoint Protection 策略的先决条件：**  
 
 必须先使用 Endpoint Protection 客户端设置安装并管理 Endpoint Protection 客户端，才能使用 Endpoint Protection 策略。 该操作使用适用于 Windows 7、Windows 8、Windows 8.1 的 System Center Endpoint Protection 客户端或适用于 Windows 10 的托管 Windows Defender 完成。 请参阅 [System Center Configuration Manager 中的 Endpoint Protection](../../protect/deploy-use/endpoint-protection.md)。  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

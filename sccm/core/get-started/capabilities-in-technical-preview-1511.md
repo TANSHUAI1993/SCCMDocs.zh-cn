@@ -15,9 +15,11 @@ caps.latest.revision: 5
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
+robots: noindex,nofollow
 translationtype: Human Translation
 ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
 ms.openlocfilehash: 2e0338267ea9fdc639d57f93adda1e46aea80eec
+ms.lasthandoff: 01/24/2017
 
 ---
 # <a name="capabilities-in-technical-preview-1511-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1511 版中的功能
@@ -28,7 +30,7 @@ ms.openlocfilehash: 2e0338267ea9fdc639d57f93adda1e46aea80eec
 
 以下是可以试用的此版本的新功能。  
 
-##  <a name="a-namebkmkwufba-integration-with-windows-update-for-business-in-windows-10"></a><a name="BKMK_WUfB"></a>在 Windows 10 中与 Windows Update for Business 集成  
+##  <a name="BKMK_WUfB"></a>在 Windows 10 中与 Windows Update for Business 集成  
  现在 Configuration Manager 能够区分通过 Windows Update for Business (WUfB) 直接连接的 Windows 10 计算机与连接到 WSUS 以获取 Windows 10 更新和升级的计算机。  对于通过 WUfB 连接的计算机，更新和升级可以按照管理用户通过组策略或 MDM 策略设置的频率来进行管理，这些更新/升级可以直接从 WUfB 进行安装。    
 对于通过 WUfB 连接的计算机，Configuration Manager 无法报告符合性状态（包括 Windows 更新或定义更新）。 Configuration Manager 也无法将 Microsoft 更新或第三方更新部署到这些计算机。  
 
@@ -52,7 +54,7 @@ ms.openlocfilehash: 2e0338267ea9fdc639d57f93adda1e46aea80eec
 
 5.  通过 WUfB 进行管理的计算机会在符合性状态中显示 **未知** ，不会计入总体符合性百分比中。  
 
-##  <a name="a-namebkmkoffice365proplusa-managing-office-365-proplus-client-update-through-system-center-configuration-manager"></a><a name="BKMK_Office365ProPlus"></a>通过 System Center Configuration Manager 管理 Office 365 ProPlus 客户端更新  
+##  <a name="BKMK_Office365ProPlus"></a>通过 System Center Configuration Manager 管理 Office 365 ProPlus 客户端更新  
  Configuration Manager 现在能够使用 Configuration Manager 软件更新管理工作流来管理 Office 365 客户端更新。    
 当 Microsoft 向 Windows Server 更新服务 (WSUS) 发布新的 Office 365 桌面客户端更新时，如果 Office 365 更新配置为目录同步的一部分，则 Configuration Manager 能够将更新同步到其目录。  Configuration Manager 站点服务器会下载 Office 365 客户端更新并将包分发到 Configuration Manager 分发点。  Configuration Manager 客户端随后会告知 Office 365 桌面客户端在何处获取更新以及何时启动更新安装过程。  
 
@@ -71,7 +73,7 @@ ms.openlocfilehash: 2e0338267ea9fdc639d57f93adda1e46aea80eec
 
  有关详细步骤，请参阅 [使用 System Center Configuration Manager Technical Preview 管理 Office 365 客户端更新](https://technet.microsoft.com/library/mt628083.aspx)。  
 
-##  <a name="a-namebkmkalwasyona-support-for-sql-server-alwayson-for-highly-available-databases"></a><a name="BKMK_AlwasyOn"></a>支持 SQL Server AlwaysOn，实现数据库的高度可用性  
+##  <a name="BKMK_AlwasyOn"></a>支持 SQL Server AlwaysOn，实现数据库的高度可用性  
  Configuration Manager 现在支持使用 SQL Server AlwaysOn 可用性组托管站点数据库。  在安装新站点时，可以指示安装程序使用可用性组，而不是普通的 SQL Server 实例。  
 
 > [!NOTE]  
@@ -147,7 +149,7 @@ ms.openlocfilehash: 2e0338267ea9fdc639d57f93adda1e46aea80eec
 
 3.  提供此信息后，使用常规过程和配置完成安装。  
 
-##  <a name="a-namebkmkclusterserverupdatesa-service-a--server-cluster"></a><a name="BKMK_ClusterServerUpdates"></a>为服务器群集提供服务  
+##  <a name="BKMK_ClusterServerUpdates"></a>为服务器群集提供服务  
 现在，你可以创建包含群集中的服务器的集合，然后配置将在你向群集部署更新时使用的群集设置。 你可以在任何给定时间控制处于联机状态的服务器的百分比，还可将预先部署和后期部署 PowerShell 脚本配置为运行自定义操作。  
 
 **此版本的已知问题：**  
@@ -205,9 +207,4 @@ ms.openlocfilehash: 2e0338267ea9fdc639d57f93adda1e46aea80eec
 1.  将[软件更新部署](https://technet.microsoft.com/library/gg712304.aspx)到服务器群集集合。  
 
 2.  [监视软件更新部署](https://technet.microsoft.com/library/gg712304.aspx)。  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

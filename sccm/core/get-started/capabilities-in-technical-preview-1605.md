@@ -15,10 +15,11 @@ caps.latest.revision: 36
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-robots: noindex,nofollow
 translationtype: Human Translation
 ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
 ms.openlocfilehash: 3af395b84dd6878af9b846b438049e55baf9472e
+ms.lasthandoff: 01/24/2017
+
 
 ---
 # <a name="capabilities-in-technical-preview-1605-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1605 版中的功能
@@ -35,7 +36,7 @@ ms.openlocfilehash: 3af395b84dd6878af9b846b438049e55baf9472e
 
  **以下是可以试用的此版本的新功能。**  
 
-##  <a name="a-namebkmkperappvpna-per-app-vpn-for-windows-10-devices"></a><a name="BKMK_PerAppVPN"></a> Windows 10 设备的每应用 VPN  
+##  <a name="BKMK_PerAppVPN"></a> Windows 10 设备的每应用 VPN  
  对于配合使用 Configuration Manager 和 Intune 管理的 Windows 10 设备，可添加一个应用列表，此列表可自动打开通过 Configuration Manager 管理控制台配置的 VPN 连接。 可以选择对这些应用限制 VPN 通信，也可以继续允许通过 VPN 连接进行所有通信。  
 
  **要求**：  
@@ -44,17 +45,17 @@ ms.openlocfilehash: 3af395b84dd6878af9b846b438049e55baf9472e
 
 -   Windows 10 VPN 配置文件至少已部署到一台设备  
 
-##  <a name="a-namebkmkinstallsua-improvements-to-the-install-software-updates-task-sequence"></a><a name="BKMK_InstallSU"></a>安装软件更新任务序列的改进  
+##  <a name="BKMK_InstallSU"></a>安装软件更新任务序列的改进  
  已对“安装软件更新”任务序列进行以下改进：  
 
 -   提供了一个新的任务序列变量 SMSTSSoftwareUpdateScanTimeout，用于控制“安装软件更新”任务序列步骤中软件更新扫描的超时时间。 默认值为 30 分钟。  
 
 -   已对日志记录进行改进。 Smsts.log 日志文件包含引用其他日志文件的新日志条目，有助于在软件更新安装过程中解决问题。  
 
-##  <a name="a-namebkmkprepareconfigmgrclienta-improvements-to-the-prepare-configmgr-client-for-capture-task-sequence-step"></a><a name="BKMK_PrepareConfigMgrClient"></a>准备 ConfigMgr 客户端以便捕获任务序列步骤的改进  
+##  <a name="BKMK_PrepareConfigMgrClient"></a>准备 ConfigMgr 客户端以便捕获任务序列步骤的改进  
  “准备 ConfigMgr 客户端”一步现在将完全删除 Configuration Manager 客户端，而不是仅删除密钥信息。 任务序列每次部署捕获的操作系统映像时，都将安装新的 Configuration Manager 客户端。  
 
-##  <a name="a-namebkmkgracea-grace-period-for-required-application-deployments"></a><a name="BKMK_Grace"></a>应用程序部署所需的宽限期  
+##  <a name="BKMK_Grace"></a>应用程序部署所需的宽限期  
  在某些情况下，可能会希望为用户提供更多时间（超出所配置的任何截止时间）来安装所需的应用程序部署。 例如，如果最终用户刚从假期返回，则他们可能需要等待很长时间，因为安装的应用程序部署已过期。 但是，他们仍可以在任何想要的时候立即安装应用程序。  
 
  为了帮助解决此问题，现在可通过将 Configuration Manager 客户端设置部署到集合来定义**宽限期**。  
@@ -71,7 +72,7 @@ ms.openlocfilehash: 3af395b84dd6878af9b846b438049e55baf9472e
 
  已将类似的选项添加到软件更新部署向导、自动部署规则向导和属性页中。 但是，这些选项当前都未在此技术预览中实现。  
 
-##  <a name="a-namebkmkremotea-new-experience-for-remote-device-actions"></a><a name="BKMK_Remote"></a>远程设备操作的新体验  
+##  <a name="BKMK_Remote"></a>远程设备操作的新体验  
  已改进从 Configuration Manager 控制台执行远程设备操作的体验。  
 现在，常见操作（如“停用/擦除”、“重置密码”、“远程锁定”和“不使用激活锁”）可在从“资产和合规性”工作区访问的“远程设备操作”菜单中找到。  
 
@@ -87,7 +88,7 @@ ms.openlocfilehash: 3af395b84dd6878af9b846b438049e55baf9472e
 
  有关 iOS 绕过激活锁的详细信息，请参阅[通过 Configuration Manager 的绕过激活锁帮助保护 iOS 设备](/sccm/mdm/deploy-use/manage-ios-activation-lock)，特别是 **Configuration Manager Technical Preview 中绕过激活锁的当前已知问题**部分。  
 
-##  <a name="a-namebkmkwsfba-windows-store-for-business-apps"></a><a name="BKMK_WSFB"></a>适用于企业的 Windows 应用商店应用  
+##  <a name="BKMK_WSFB"></a>适用于企业的 Windows 应用商店应用  
  在[适用于企业的 Windows 应用商店](https://www.microsoft.com/business-store)中可以为组织查找并采购应用（单个或批量）。 通过将应用商店连接到 Configuration Manager，可从 Configuration Manager 控制台管理批量采购的应用，例如：  
 
 -   可以将采购的应用列表与 Configuration Manager 同步  
@@ -158,7 +159,7 @@ ms.openlocfilehash: 3af395b84dd6878af9b846b438049e55baf9472e
 >   
 >  当前无法使用 Configuration Manager 部署联机许可应用。  
 
-##  <a name="a-namebkmkvpp2a-general-improvements-for-volume-purchased-apps"></a><a name="BKMK_VPP2"></a>批量采购应用的一般改进  
+##  <a name="BKMK_VPP2"></a>批量采购应用的一般改进  
 
 -   在此版本中，来自适用于企业的 Windows 应用商店和 iOS 应用商店的批量采购应用已合并为同一个视图，即**应用商店应用的许可证信息**。  
 
@@ -170,14 +171,14 @@ ms.openlocfilehash: 3af395b84dd6878af9b846b438049e55baf9472e
 
 -   在 Configuration Manager 控制台中，用于获取和上传批量采购的应用的 Apple VPP 令牌的位置已更改。 你现在可以在“云服务” > “Apple 批量采购计划令牌”节点下的“管理”工作区中执行此操作。  
 
-##  <a name="a-namebkmkvppa-enterprise-data-protection-edp"></a><a name="BKMK_VPP"></a>企业数据保护 (EDP)  
+##  <a name="BKMK_VPP"></a>企业数据保护 (EDP)  
  你可创建配置项目来部署企业数据保护 (EDP) 策略，包括选择受保护的应用、EDP 保护级别和在网络上查找企业数据的方法。 有关 EDP 的详细信息，请参阅下列主题：  
 
 -   [使用企业数据保护 (EDP) 保护公司数据](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-edp)  
 
 -   [使用 System Center Configuration Manager 创建和部署企业数据保护 (EDP) 策略](https://technet.microsoft.com/itpro/windows/keep-secure/create-edp-policy-using-sccm)  
 
-##  <a name="a-namebkmkenda-end-users-can-install-apps-from-the-company-portal"></a><a name="BKMK_End"></a>最终用户可从公司门户安装应用  
+##  <a name="BKMK_End"></a>最终用户可从公司门户安装应用  
  System Center Configuration Manager 版本 1511 中引入了本地 MDM。 在以前的版本中，你可以将应用程序部署到 MDM 托管的 Windows 10 设备，部署目的在于为本地 MDM 托管设备提供**必需**的安装。  
 
  在此版本中，你现在可以部署应用，部署目的在于使这些应用对本地 MDM 托管的 Windows 10 计算机用户**可用**，并且用户现在可以从公司门户自行安装这些应用。
@@ -268,12 +269,12 @@ ms.openlocfilehash: 3af395b84dd6878af9b846b438049e55baf9472e
 
      打开公司门户后，将看到名为 **System Center Configuration Manager** 的身份验证对话框，指定用户用以登录的 Active Directory 凭据（以 user@domain 或域\用户的形式）。  
 
-##  <a name="a-namebkmksw1a-new-tabs-for-updates-and-operating-systems-in-software-center"></a><a name="BKMK_SW1"></a>软件中心中的更新和操作系统的新选项卡  
+##  <a name="BKMK_SW1"></a>软件中心中的更新和操作系统的新选项卡  
  在此版本中，已进行以下更改以改进软件中心应用程序的布局：  
 
 -   “应用程序”选项卡已被拆分为三个单独的“更新”、“操作系统”（这两者之前位于“筛选器”列表中）和“应用程序”选项卡。  
 
-##  <a name="a-namebkmkservergroupsa-service-a--server-group"></a><a name="BKMK_ServerGroups"></a>维护服务器组  
+##  <a name="BKMK_ServerGroups"></a>维护服务器组  
  System Center Configuration Manager Technical Preview 版本 1511 中有一个创建集合的功能，其中集合中的所有设备组成了一个服务器组。 而且，在将软件更新部署到服务器组中时，可以部署要使用的服务器组设置、控制在任何给定时间内更新的计算机百分比，以及配置要运行自定义操作的前期部署和后期部署 PowerShell 脚本。  
 
  System Center Configuration Manager Technical Preview 1605 版中新增了在服务器组中按定义的指定顺序更新计算机的功能，添加了增强型监视，以便在服务器组中查看计算机的状态，并提供了清除部署锁定的功能，当在客户端无法安装软件更新并阻止其他客户端安装其软件更新时，此功能会非常有用。  
@@ -340,7 +341,7 @@ ms.openlocfilehash: 3af395b84dd6878af9b846b438049e55baf9472e
 
 2.  在“主页”选项卡的“部署”组中，单击“清除服务器组部署锁定”。 当客户端未能安装软件更新并阻止其他客户端安装其软件更新时，可以手动清除部署锁定。  
 
-##  <a name="a-namebkmkatpa-support-for-windows-defender-advanced-threat-protection-service"></a><a name="BKMK_ATP"></a>支持 Windows Defender 高级威胁防护服务  
+##  <a name="BKMK_ATP"></a>支持 Windows Defender 高级威胁防护服务  
  Windows Defender 高级威胁防护 (ATP) 是一种新服务，可帮助企业检测、调查其网络上的高级攻击并对此做出响应。 了解有关 [Windows Defender ATP](https://blogs.windows.com/windowsexperience/2016/03/01/announcing-windows-defender-advanced-threat-protection) 的详细信息。 Configuration Manager 有助于你载入和监视托管的 Windows 10 周年纪念版客户端设备。  
 
 ### <a name="try-it-now"></a>立即试试看！  
@@ -407,7 +408,7 @@ ms.openlocfilehash: 3af395b84dd6878af9b846b438049e55baf9472e
 
         -   **未载入** - 策略已应用，但代理尚未报告载入策略  
 
-##  <a name="a-namebkmkdhaa-on-premises-device-health-attestation"></a><a name="BKMK_DHA"></a>本地设备运行状况证明  
+##  <a name="BKMK_DHA"></a>本地设备运行状况证明  
  Windows 10 设备的运行状况证明现在可以配置为使用本地基础结构进行通信。 管理员可以指定是通过云还是本地资源进行报告。 如果为运行状况证明报告选择“本地”，则可以为服务指定 URL。 这使无法进行 Internet 访问的客户端电脑可以启用和管理使用运行状况证明的设备。  
 
 ### <a name="enable-health-attestation-for-on-premises-devices"></a>为本地设备启用运行状况证明  
@@ -417,10 +418,10 @@ ms.openlocfilehash: 3af395b84dd6878af9b846b438049e55baf9472e
 
 2.  指定**本地运行状况证明服务 URL**，然后单击“确定”。  
 
-##  <a name="a-namebkmkrestartoptionsa-new-restart-options-for-windows-10-clients-after-software-update-installation"></a><a name="BKMK_RestartOptions"></a>在软件更新安装之后重启 Windows 10 客户端的新选项  
+##  <a name="BKMK_RestartOptions"></a>在软件更新安装之后重启 Windows 10 客户端的新选项  
  当需要重启的软件更新已使用 Configuration Manager 进行部署并且已安装在一台计算机上时，将计划挂起的重启并显示重启对话框。 当前，对于 Windows 8 和更高版本，如果使用 Windows 电源选项（而不是从重启对话框）关闭或重启计算机，计算机重启后“重启”对话框仍然保留并且计算机在配置的截止时间仍将需要重启。 在此技术预览中，只要 Configuration Manager 软件更新存在挂起的重启，Windows 10 计算机上的 Windows 电源选项中就将出现“更新并重启”和“更新并关闭”选项。 使用这些选项中的某一个后，计算机重启后将不再显示重启对话框。  
 
-##  <a name="a-namebkmkimeia-pre-declare-corporate-owned-devices-with-imei-or-ios-serial-number"></a><a name="BKMK_IMEI"></a>预声明具有 IMEI 或 iOS 序列号的公司拥有的设备  
+##  <a name="BKMK_IMEI"></a>预声明具有 IMEI 或 iOS 序列号的公司拥有的设备  
  现在，可通过导入公司拥有的设备的国际移动设备识别 (IMEI) 码对此类设备进行识别。 可上传包含设备 IMEI 码的逗号分隔值 (.csv) 文件，或者手动输入设备信息。  还可以导入 iOS 设备的序列号。  导入的信息将用于设置注册为“公司”的设备的所有权。  访问该服务的每位用户仍需要 Intune 许可证。  
 
 ### <a name="try-it-out"></a>试试看！  
@@ -469,9 +470,4 @@ ms.openlocfilehash: 3af395b84dd6878af9b846b438049e55baf9472e
      单击“下一步” 。  
 
 4.  查看文件导入的结果。 以前导入的 IMEI 或序列号会将其详细信息更新为新的详细信息。  单击“下一步”继续，或单击“返回”保存更新后的详细信息，然后完成向导。  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

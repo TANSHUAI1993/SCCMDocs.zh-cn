@@ -36,6 +36,7 @@ translation.priority.ht:
 translationtype: Human Translation
 ms.sourcegitcommit: 688e05aae0e0b15b54835f8d64a98487f4d7b64d
 ms.openlocfilehash: 82bcd1a9fe22bf7ecc2dc5765f64f5198494152e
+ms.lasthandoff: 12/30/2016
 
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1610-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1610 的诊断使用情况数据收集的级别
@@ -50,73 +51,71 @@ System Center Configuration Manager 版本 1610 收集三个级别的诊断和�
 > [!IMPORTANT]
 >  Configuration Manager 不会收集基本或增强级别的站点代码、站点名称、IP 地址、用户名、计算机名、物理地址或电子邮件地址。 在完全级别收集的信息没有目的性，即可能包括在日志文件或内存快照等高级诊断信息中。 Microsoft 不会使用此信息来识别你的身份、与你联系或进行广告宣传。
 
-##  <a name="a-namebkmkchangea-how-to-change-the-level"></a><a name="bkmk_change"></a> 如何更改级别
+##  <a name="bkmk_change"></a> 如何更改级别
  如果管理员具有基于角色的管理作用域，其中包括对**站点**对象类的**修改**权限，则其可以通过 Configuration Manager 控制台中的“诊断和使用数据”设置更改已收集数据的级别。
 
 从 1610 版起，可在控制台中导航至“管理” > “概述” > “站点配置” > “站点”，更改数据集合级别。 打开“层次结构设置”，然后选择要使用的数据级别。  
 
-##  <a name="a-namebkmklevel1a-level-1---basic"></a><a name="bkmk_level1"></a> 级别 1 - 基本
+##  <a name="bkmk_level1"></a> 级别 1 - 基本
  基本级别包括层次结构相关数据、帮助改进安装或升级体验所需的数据，以及帮助确定哪些 Configuration Manager 更新适合你的层次结构的数据。
 
  对于 System Center Configuration Manager 版本 1610，此级别包括以下内容：
 
 
- -   安装程序信息：
-      - 内部版本、安装类型、语言包、启用的功能  
+-   安装程序信息：
+       - 内部版本、安装类型、语言包、启用的功能  
 
-      -   更新包部署状态和错误、下载进度和先决条件错误  
+       - 更新包部署状态和错误、下载进度和先决条件错误     
 
-      -  升级后脚本的版本
+       - 升级后脚本的版本
 
-      -  更新快速通道的使用
+       - 更新快速通道的使用
 
-    -  ***[新增]*** 预发布版本使用、安装程序媒体类型、分支类型
+    - ***[新增]*** 预发布版本使用、安装程序媒体类型、分支类型
 
     - ***[新增]***软件保障到期日期
 
+- 数据库性能指标（复制处理信息、按处理器和磁盘使用情况排在前面的 SQL Server 存储过程）
 
--   数据库性能指标（复制处理信息、按处理器和磁盘使用情况排在前面的 SQL Server 存储过程）
+- 基本数据库配置（处理器、群集配置和分布式视图配置）
 
--   基本数据库配置（处理器、群集配置和分布式视图配置）
+- Configuration Manager 数据库架构（所有对象定义的哈希）
 
--   Configuration Manager 数据库架构（所有对象定义的哈希）
+- Configuration Manager 客户端版本和操作系统版本的计数
 
--   Configuration Manager 客户端版本和操作系统版本的计数
+- 托管设备操作系统和 Exchange Connector 所设置策略的计数
 
--   托管设备操作系统和 Exchange Connector 所设置策略的计数
+- 客户端语言和区域设置计数
 
--   客户端语言和区域设置计数
+- Windows 10 设备（按分支和内部版本）计数
 
--   Windows 10 设备（按分支和内部版本）计数
+- 基本 Configuration Manager 站点层次结构数据（站点列表、类型、版本、状态、客户端计数和时区）
 
--   基本 Configuration Manager 站点层次结构数据（站点列表、类型、版本、状态、客户端计数和时区）
+- 基本站点系统服务器信息（使用的站点系统角色、Internet 和 SSL 状态、操作系统、处理器，以及物理计算机或虚拟机）
 
--   基本站点系统服务器信息（使用的站点系统角色、Internet 和 SSL 状态、操作系统、处理器，以及物理计算机或虚拟机）
+- 基本用户发现统计信息（用户发现计数和最小/最大/平均组大小）
 
--   基本用户发现统计信息（用户发现计数和最小/最大/平均组大小）
+- 基本 Endpoint Protection 信息（反恶意软件客户端版本）
 
--   基本 Endpoint Protection 信息（反恶意软件客户端版本）
+- 基本应用程序和部署类型计数（应用总数、包含多个部署类型的应用总数、包含依赖项的应用总数、被取代的应用总数和使用中的部署技术数）
 
--   基本应用程序和部署类型计数（应用总数、包含多个部署类型的应用总数、包含依赖项的应用总数、被取代的应用总数和使用中的部署技术数）
+- 基本操作系统部署 (OSD) 计数（图像）
 
--   基本操作系统部署 (OSD) 计数（图像）
+- 分发点和管理点类型以及基本配置信息（受保护、预留、PXE、多播、SSL 状态、请求/对等分发点、启用 MDM、启用 SSL 等。）
 
--   分发点和管理点类型以及基本配置信息（受保护、预留、PXE、多播、SSL 状态、请求/对等分发点、启用 MDM、启用 SSL 等。）
+- 遥测统计信息（运行时间、运行时、错误）
 
--   遥测统计信息（运行时间、运行时、错误）
+- 配置的遥测级别、模式（联机或脱机）和快速更新配置
 
--  配置的遥测级别、模式（联机或脱机）和快速更新配置
+- 网络发现的使用（启用或禁用）
+- 管理控制台：
 
--  网络发现的使用（启用或禁用）
--  管理控制台：
-
-     -  有关控制台连接的统计信息（操作系统版本、语言、SKU 和体系结构、系统内存、逻辑处理器计数、连接站点 ID、已安装的 .NET 版本和控制台语言包）    
-
+     - 有关控制台连接的统计信息（操作系统版本、语言、SKU 和体系结构、系统内存、逻辑处理器计数、连接站点 ID、已安装的 .NET 版本和控制台语言包）    
 
 - SQL 版本、服务包级别、版本、排序规则 ID 和字符集
 
 
-##  <a name="a-namebkmklevel2a-level-2---enhanced"></a><a name="bkmk_level2"></a> 级别 2 - 增强
+##  <a name="bkmk_level2"></a> 级别 2 - 增强
 安装完成后，默认级别为增强级别。 此级别包括在基本级别收集的数据，以及特定于功能的数据（频率和持续使用时间）、Configuration Manager 客户端设置（组件名称、状态和轮询间隔等特定设置）和有关软件更新的基本信息。
 
 此级别为 Microsoft 提供对将来版本的产品和服务进行有用改进所需的最小数据，因此是推荐的级别。 此级别不收集对象名称（站点、用户、计算机或对象）、安全相关对象的详细信息或需要软件更新的系统计数等漏洞。
@@ -265,7 +264,7 @@ System Center Configuration Manager 版本 1610 收集三个级别的诊断和�
 
     -   为 Endpoint Protection 功能配置的警报数  
 
-    -   高级威胁防护 (ATP) 策略（策略计数和是否已部署策略）
+    -     高级威胁防护 (ATP) 策略（策略计数和是否已部署策略）
 
 
 - **迁移：**
@@ -393,7 +392,7 @@ System Center Configuration Manager 版本 1610 收集三个级别的诊断和�
 
 
 
-##  <a name="a-namebkmklevel3a-level-3---full"></a><a name="bkmk_level3"></a> 级别 3 - 完全
+##  <a name="bkmk_level3"></a> 级别 3 - 完全
 完全级别包括基本和增强级别的所有数据。 它还包括有关 Endpoint Protection、更新符合性百分比和软件更新信息的其他信息。  此级别还可包括系统文件和内存快照（可能包含捕获时存在于内存或日志文件中的个人信息）等高级诊断信息。
 
 对于 System Center Configuration Manager 版本 1610，此级别包括以下内容：
@@ -438,9 +437,4 @@ System Center Configuration Manager 版本 1610 收集三个级别的诊断和�
 -   详细的客户端部署安装错误
 
 - ***[新增]*** 适用于企业的 Windows 应用商店应用程序详细信息（已同步的应用程序的非聚合列表，包括 AppID、联机或脱机状态，以及购买的许可证总数）
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

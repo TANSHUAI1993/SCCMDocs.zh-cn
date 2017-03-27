@@ -15,9 +15,11 @@ caps.latest.revision: 8
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
+robots: noindex,nofollow
 translationtype: Human Translation
 ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
 ms.openlocfilehash: 1d3adcf3310d88b1266388aa03ae5ea03e23f2a5
+ms.lasthandoff: 01/24/2017
 
 ---
 # <a name="capabilities-in-technical-preview-1603-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1603 版中的功能
@@ -34,7 +36,7 @@ ms.openlocfilehash: 1d3adcf3310d88b1266388aa03ae5ea03e23f2a5
 
  **以下是可以试用的此版本的新功能。**  
 
-##  <a name="a-namebkmksc1603a-improvements-to-software-center"></a><a name="BKMK_SC1603"></a>对软件中心的改进  
+##  <a name="BKMK_SC1603"></a>对软件中心的改进  
 
 ### <a name="new-tiled-view-for-apps"></a>应用的新平铺视图  
  最终用户现在可以在软件中心的“应用程序”选项卡中选择应用列表或应用的平铺视图。  
@@ -42,7 +44,7 @@ ms.openlocfilehash: 1d3adcf3310d88b1266388aa03ae5ea03e23f2a5
 ### <a name="select-multiple-updates-in-software-center"></a>在软件中心中选择多个更新  
  在软件中心的“更新”选项卡中，现在可以选择多个更新，或选择“全部更新”以开始同时安装多个更新。  
 
-##  <a name="a-namebkmkrc1603a-improvements-to-remote-control"></a><a name="BKMK_RC1603"></a>对远程控制的改进  
+##  <a name="BKMK_RC1603"></a>对远程控制的改进  
 
 ### <a name="limit-shared-clipboard-access-in-a-remote-control-session"></a>在远程控制会话中限制共享剪贴板访问  
  现在可以启用新的远程工具客户端设置“提示用户提供共享剪贴板文件传输权限”，以在远程控制会话中限制对共享剪贴板的访问。  
@@ -51,7 +53,7 @@ ms.openlocfilehash: 1d3adcf3310d88b1266388aa03ae5ea03e23f2a5
 
  这会如同以前一样为最终用户添加一层保护，如果向查看者授予了最终用户计算机的完全控制，则他们能够采用对最终用户完全透明的方式，使用共享剪贴板将文件从会话传输到其本地计算机。  
 
-##  <a name="a-namebkmkramdisktftpa-customize-the-ramdisk-tftp-block-size-and-window-size-on-pxe-enabled-distribution-points"></a><a name="BKMK_RamDiskTFTP"></a> 在启用 PXE 的分发点上自定义 RamDisk TFTP 块大小和窗口大小  
+##  <a name="BKMK_RamDiskTFTP"></a> 在启用 PXE 的分发点上自定义 RamDisk TFTP 块大小和窗口大小  
  在 1603 Technical Preview 中，可以为启用 PXE 的分发点自定义 RamDisk TFTP 块大小和窗口大小。 如果自定义了网络，则可能导致启动映像下载由于超时错误而失败，因为块大小或窗口大小太大。 通过 RamDisk TFTP 块大小和窗口大小自定义可以在使用 PXE 时优化 TFTP 流量，以满足特定网络要求。   
 需要在环境中测试自定义设置以确定最高效的设置。  
 
@@ -91,9 +93,4 @@ ms.openlocfilehash: 1d3adcf3310d88b1266388aa03ae5ea03e23f2a5
      **值**：&lt;customized block size\>  
 
  默认值为 4096 (4k)。  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

@@ -15,9 +15,11 @@ caps.latest.revision: 8
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
+robots: noindex,nofollow
 translationtype: Human Translation
 ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
 ms.openlocfilehash: d36de897e6407ec7431d4dbe24ad04423aee2ca1
+ms.lasthandoff: 01/24/2017
 
 ---
 # <a name="capabilities-in-technical-preview-1604-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1604 版中的功能
@@ -28,7 +30,7 @@ ms.openlocfilehash: d36de897e6407ec7431d4dbe24ad04423aee2ca1
 
  以下是可以试用的此版本的新功能。  
 
-##  <a name="a-namebkmkwindowsvppa-manage-volume-purchased-apps-from-the-windows-store-for-business"></a><a name="BKMK_WindowsVPP"></a>管理从适用于企业的 Windows 应用商店批量采购的应用  
+##  <a name="BKMK_WindowsVPP"></a>管理从适用于企业的 Windows 应用商店批量采购的应用  
  在[适用于企业的 Windows 应用商店](https://www.microsoft.com/en-us/business-store)中可以为组织查找并采购应用（单个或批量）。 通过将应用商店连接到 Configuration Manager，可从 Configuration Manager 控制台管理批量采购的应用，例如：  
 
 -   可以将采购的应用列表与 Configuration Manager 同步  
@@ -91,10 +93,10 @@ ms.openlocfilehash: d36de897e6407ec7431d4dbe24ad04423aee2ca1
 
 3.  将创建包含适用于企业的 Windows 应用商店应用的 Configuration Manager 应用程序。 然后，可以像对任何其他 Configuration Manager 应用程序一样部署并监视此应用程序。  
 
-##  <a name="a-namebkmkpfwa-improvements-to-microsoft-passport-for-work-management"></a><a name="BKMK_PFW"></a> 对 Microsoft Passport for Work 管理的改进  
+##  <a name="BKMK_PFW"></a> 对 Microsoft Passport for Work 管理的改进  
  现在可以将 Passport for Work 策略部署到由 Configuration Manager客户端管理的已加入域的 Windows 10 设备。  
 
-##  <a name="a-namebkmkswitchsupa-option-for-clients-to-switch-to-a-new-software-update-point"></a><a name="bkmk_switchsup"></a>供客户端切换到新软件更新点的选项  
+##  <a name="bkmk_switchsup"></a>供客户端切换到新软件更新点的选项  
  在 1604 Technical Preview 中，可以启用 Configuration Manager 供客户端在活动软件更新点出现问题时切换到新软件更新点的选项。 对于此选项，必须在主站点上有多个软件更新点可用。 在设备集合上启用此选项，在启用之后，当集合中的客户端未能成功连接到活动的软件更新点时，将在下一次扫描时查找另一个软件更新点。 根据 WSUS 配置设置（更新分类、产品等），切换到新的软件更新点将会产生额外的网络流量。 因此，应仅当需要时才使用此选项。  
 
 #### <a name="to-enable-the-option-to-switch-software-update-points"></a>启用切换软件更新点的选项  
@@ -106,7 +108,7 @@ ms.openlocfilehash: d36de897e6407ec7431d4dbe24ad04423aee2ca1
 > [!NOTE]  
 >  此选项只在具有多个软件更新点的站点上可用。  
 
-##  <a name="a-namebkmkpeercachea-client-settings-to-manage-client-cache-settings-and-client-peer-cache"></a><a name="bkmk_peercache"></a>用于管理客户端缓存设置和客户端对等缓存的客户端设置  
+##  <a name="bkmk_peercache"></a>用于管理客户端缓存设置和客户端对等缓存的客户端设置  
  技术预览版 1604 引入了影响客户端缓存使用的两个新设备客户端设置。 这两个设置可以单独使用，但是在用于客户端设置的同一个属性表中配置，可结合使用以帮助管理将内容部署到远程位置的客户端。  
 
 -   第一个设置是**客户端对等缓存**，这是内置 Configuration Manager 解决方案，供客户端用于直接从本地缓存将内容与其他客户端共享。 若要使对等缓存客户端可以共享内容，它们必须是相同边界组的成员。 对等缓存不会代替其他解决方案（如 BranchCache）的使用，而是并行工作以便提供更多选项，用于扩展传统内容部署解决方案（如分发点）。  
@@ -146,7 +148,7 @@ ms.openlocfilehash: d36de897e6407ec7431d4dbe24ad04423aee2ca1
     > [!NOTE]  
     >  若要使用技术预览版和单个分发点完成此任务，请将该分发点配置为对所有客户端的网络位置是慢速的。 然后将内容分发给单个客户端。  该客户端获取内容之后，可以将内容分发给其他客户端，这些客户端应首先查找本地对等方以用作内容源，然后再从客户端位置被视为慢速的分发点。  
 
-##  <a name="a-namebkmkpassporta-support-for-passport-for-work-as-a-ksp"></a><a name="bkmk_passport"></a>支持将 Passport for Work 作为 KSP  
+##  <a name="bkmk_passport"></a>支持将 Passport for Work 作为 KSP  
  System Center Configuration Manager 允许集成 Microsoft Passport for Work，它是使用 Active Directory 或 Azure Active Directory 帐户取代密码、智能卡或虚拟智能卡进行登录的一种替代方法。  
 通过 Passport，你可以使用“用户手势”取代密码进行登录。 用户手势可以是简单 PIN、Windows Hello 等生物识别身份验证或指纹读取器等外部设备。  
 
@@ -156,7 +158,7 @@ ms.openlocfilehash: d36de897e6407ec7431d4dbe24ad04423aee2ca1
 
 当用户创建 Passport PIN 时，Windows 会发送通知，Configuration Manager 会侦听该通知。  这使 Configuration Manager 可以快速了解哪些用户创建了 Passport PIN。 如果 Passport 在证书配置文件中用作密钥存储提供程序，则 Configuration Manager 随后还可以向这些用户颁发新证书。  
 
-##  <a name="a-namebkmkonpremdhaa-on-premises-device-health-attestation"></a><a name="bkmk_onpremdha"></a>本地设备运行状况证明  
+##  <a name="bkmk_onpremdha"></a>本地设备运行状况证明  
  Windows 10 设备的运行状况证明现在可以配置为使用本地基础结构进行通信。  管理员可以指定是通过云还是本地资源进行报告。  如果为运行状况证明报告选择“本地”，则可以为服务指定 URI。 这使无法进行 Internet 访问的客户端电脑可以启用和管理使用运行状况证明的设备。  
 
 #### <a name="enable-health-attestation-for-on-premises-devices"></a>为本地设备启用运行状况证明  
@@ -167,11 +169,6 @@ ms.openlocfilehash: d36de897e6407ec7431d4dbe24ad04423aee2ca1
 
 若要进行尝试，请使用客户端代理设置配置本地运行状况证明服务。  
 
-##  <a name="a-namebkmksmarta-smartlock-setting-for-android-devices"></a><a name="BKMK_Smart"></a>适用于 Android 设备的 SmartLock 设置  
+##  <a name="BKMK_Smart"></a>适用于 Android 设备的 SmartLock 设置  
  一个新设置“允许 SmartLock 和其他信任代理”已添加到“Android 和 Samsung KNOX”配置项目，这使用户可以在兼容的 Android 设备上控制 SmartLock 功能。 如果设备处于可信位置（例如当它连接到特定蓝牙设备时，或者在 NFC 标记附近时），则此手机功能（有时称为信任代理）使你可以禁用或绕过设备锁屏界面密码。 可以使用此设置防止最终用户配置 SmartLock。  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

@@ -15,11 +15,11 @@ caps.latest.revision: 13
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
+robots: NOINDEX, NOFOLLOW
 translationtype: Human Translation
 ms.sourcegitcommit: 30af3326578d39c6d995672071705bcaeb877e4d
 ms.openlocfilehash: e73055707454bc052b753c5e74be9674d6aa5b8c
 ms.lasthandoff: 02/23/2017
-
 
 ---
 # <a name="checklist-for-installing-update-1602-for-system-center-configuration-manager"></a>为 System Center Configuration Manager 安装更新 1602 的清单

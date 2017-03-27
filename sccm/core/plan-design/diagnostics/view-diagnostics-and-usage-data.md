@@ -2,7 +2,7 @@
 title: "查看诊断数据 | Microsoft Docs"
 description: "查看诊断和使用情况数据，确保 System Center Configuration Manager 层次结构中未包含敏感信息。"
 ms.custom: na
-ms.date: 12/29/2016
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 688e05aae0e0b15b54835f8d64a98487f4d7b64d
 ms.openlocfilehash: fcd7ac43f7b2d2c92d6aadd7c490f198ac99e5e6
+ms.lasthandoff: 12/30/2016
 
 
 ---
@@ -36,7 +37,7 @@ ms.openlocfilehash: fcd7ac43f7b2d2c92d6aadd7c490f198ac99e5e6
 
 当服务连接点处于脱机模式时，可以使用服务连接工具将当前诊断和使用情况数据导出到逗号分隔值 (CSV) 文件中。 使用 **-Export** 参数在服务连接点上运行服务连接工具。  
 
-##  <a name="a-namebkmkhashesa-one-way-hashes"></a><a name="bkmk_hashes"></a>单向哈希  
+##  <a name="bkmk_hashes"></a>单向哈希  
 某些数据包含由随机字母数字字符构成的字符串。 Configuration Manager 使用 SHA-256 算法（此算法使用单向哈希）来确保不会收集可能敏感的数据。 该算法让数据仍可用于关联和比较方面的用途。 例如，单向哈希是根据每个表名进行捕获，而不是在站点数据库中收集表的名称。 这可确保由用户或其他产品附加设备创建的任何自定义表名称不可见。 然后，对于在默认情况下随产品一起提供的 SQL 表名称，我们可以执行相同的单向哈希，并对比两个查询的结果，以确定数据库架构距离产品默认设置的偏差。 比较结果可用于改进需要更改 SQL 架构的更新。  
 
 查看原始数据时，每行数据中将显示一个常见哈希值。 这是层次结构 ID。 此哈希值用于在不识别客户或来源的情况下确保数据与同一层次结构关联。  
@@ -66,9 +67,4 @@ ms.openlocfilehash: fcd7ac43f7b2d2c92d6aadd7c490f198ac99e5e6
     $result = [Convert]::ToBase64String($hashedBytes)    
     return $result   
     ```  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

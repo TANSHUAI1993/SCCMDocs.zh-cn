@@ -15,9 +15,11 @@ caps.latest.revision: 7
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
+robots: noindex,nofollow
 translationtype: Human Translation
 ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
 ms.openlocfilehash: 4da12425382c5d64602b2728e0e661c8cb89a5e4
+ms.lasthandoff: 01/24/2017
 
 ---
 # <a name="capabilities-in-technical-preview-1601-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1601 版中的功能
@@ -59,7 +61,7 @@ ms.openlocfilehash: 4da12425382c5d64602b2728e0e661c8cb89a5e4
 
 **以下是可以试用的此版本的新功能。**  
 
-##  <a name="a-namebkmkhybrid1a-improvements-to-microsoft-intune-integration"></a><a name="bkmk_hybrid1"></a>对 Microsoft Intune 集成的改进  
+##  <a name="bkmk_hybrid1"></a>对 Microsoft Intune 集成的改进  
 在 1601 技术预览版中，我们添加了对以下功能的支持：  
 
 ### <a name="improvements-to-conditional-access"></a>对条件访问的改进  
@@ -125,7 +127,7 @@ ms.openlocfilehash: 4da12425382c5d64602b2728e0e661c8cb89a5e4
 
      要使用此选项，请转到本地 Exchange 的“配置条件访问策略向导”的“常规”页面。  
 
-##  <a name="a-namebkmkclientstatusa-client-online-status"></a><a name="bkmk_clientStatus"></a>客户端联机状态  
+##  <a name="bkmk_clientStatus"></a>客户端联机状态  
 从技术预览 1601 版开始，可以在 Configuration Manager 控制台上一眼识别客户端是联机还是脱机。 通过控制台设备列表中已更新的图标和列，你可以评估你的环境中客户端的状态，由此识别问题区域及其他需要你注意的问题。  
 
 如果客户端当前连接到 Configuration Manager 管理点站点系统角色，则处于联机状态。 只要管理点接收到来自客户端的类似于 ping 的消息，客户端就处于联机状态。 如果管理点有 5 分钟左右未接收到一条消息，则客户端的状态更改为脱机。  
@@ -158,7 +160,7 @@ ms.openlocfilehash: 4da12425382c5d64602b2728e0e661c8cb89a5e4
 
  要显示客户端状态的最新更改，请刷新控制台。  
 
-##  <a name="a-namebkmkappmgmt1601a-improvements-to-application-management"></a><a name="bkmk_appmgmt1601"></a>对应用程序管理的改进  
+##  <a name="bkmk_appmgmt1601"></a>对应用程序管理的改进  
  在 1601 技术预览版中，我们添加了对以下功能的支持：  
 
 ### <a name="manage-volume-purchased-apps-for-ios-devices"></a>管理批量采购的适用于 iOS 设备的应用程序  
@@ -194,7 +196,7 @@ ms.openlocfilehash: 4da12425382c5d64602b2728e0e661c8cb89a5e4
 
 -   在“部署软件”向导的“应用程序配置策略”页面，将创建的应用程序配置策略与应用程序中兼容的部署类型相关联。  
 
-##  <a name="a-namebkmkcompliance1601a-improvements-to-compliance-settings"></a><a name="bkmk_compliance1601"></a>对合规性设置的改进  
+##  <a name="bkmk_compliance1601"></a>对合规性设置的改进  
  在 1601 技术预览版中，我们添加了对以下功能的支持：  
 
 ### <a name="microsoft-edge-browser-settings"></a>Microsoft Edge 浏览器设置  
@@ -217,9 +219,4 @@ ms.openlocfilehash: 4da12425382c5d64602b2728e0e661c8cb89a5e4
  要查看这些新设置，请在“创建配置项目”向导的配置项目“设备设置”页面中选择“展台模式 - Samsung KNOX”。  
 
  有关详细信息，请参阅[如何为不使用 System Center Configuration Manager 客户端管理的 Windows 8.1 和 Windows 10 设备创建配置项目](../../compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md)。  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 
