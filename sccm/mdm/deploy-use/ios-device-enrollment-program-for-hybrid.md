@@ -16,9 +16,9 @@ author: mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 991eff171dce95590a7f050e0d3b07f98c0224b3
-ms.openlocfilehash: 4222ca27e19ade46d53f8cd4598643ddd4fd5c8f
-ms.lasthandoff: 01/24/2017
+ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
+ms.openlocfilehash: 2ace86cc842d6a3a5b2114c4e4c33c2d65c2f256
+ms.lasthandoff: 03/21/2017
 
 ---
 # <a name="ios-device-enrollment-program-dep-enrollment-for-hybrid-deployments-with-configuration-manager"></a>使用 Configuration Manager 进行混合部署的 iOS 设备注册计划 (DEP) 注册
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/24/2017
 ###  <a name="enable-dep-enrollment-in-configuration-manager-with-intune"></a>使用 Intune 在 Configuration Manager 中启用 DEP 注册  
 
 1.  **开始使用 Configuration Manager 管理 iOS 设备**   
-    在能够注册 iOS 设备注册计划 (DEP) 设备之前，必须完成[设置混合移动设备管理](../../mdm/deploy-use/setup-hybrid-mdm.md)的步骤，包括[支持 iOS 注册的步骤](../deploy-use/setup-hybrid-mdm.md#ios-and-mac-enrollment-setup)。
+    在能够注册 iOS 设备注册计划 (DEP) 设备之前，必须完成[设置混合移动设备管理](../../mdm/deploy-use/setup-hybrid-mdm.md)的步骤，包括[支持 iOS 注册的步骤](../deploy-use/enroll-hybrid-ios-mac.md)。
 
 2.  **创建 DEP 令牌请求**   
     在 Configuration Manager 控制台中的“管理”工作区中，展开“层次结构配置”，再展开“云服务”，然后单击“Windows Intune 订阅”。 单击“主页”选项卡上的“创建 DEP 令牌请求”，单击“浏览”指定 DEP 令牌请求的下载位置，然后单击“下载”。 将 DEP 令牌请求 (.pem) 文件保存到本地。 .pem 文件用于从 Apple 设备注册计划门户请求信任令牌 (.p7m)。  

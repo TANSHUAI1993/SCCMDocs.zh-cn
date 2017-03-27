@@ -17,9 +17,9 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 1cbe1d8f34b0a7482232488e907190a7a9cadf30
-ms.lasthandoff: 03/06/2017
+ms.sourcegitcommit: 8c7bf901caa49c8585a9ed3913d4a5a2aac57013
+ms.openlocfilehash: 74083f65d906fde967081229b244df24e9e08e0a
+ms.lasthandoff: 03/21/2017
 
 
 ---
@@ -47,7 +47,7 @@ ms.lasthandoff: 03/06/2017
 
  除了在设备上配置电子邮件帐户以外，还可以配置联系人、日历和任务的同步设置。  
 
- 创建电子邮件配置文件时，可以添加各种安全设置，其中包括已通过使用 System Center Configuration Manager 证书配置文件预配的身份、加密和签名证书。 有关证书配置文件的详细信息，请参阅 [System Center Configuration Manager 中的证书配置文件](introduction-to-certificate-profiles.md)。    
+ 创建电子邮件配置文件时，可以添加各种安全设置，其中包括已通过使用 System Center Configuration Manager 证书配置文件预配的身份、加密和签名证书。 有关证书配置文件的详细信息，请参阅 [System Center Configuration Manager 中的证书配置文件](create-pfx-certificate-profiles.md)。    
 
 
 ## <a name="create-a-new-exchange-activesync-email-profile"></a>创建新的 Exchange ActiveSync 电子邮件配置文件  
@@ -101,7 +101,7 @@ ms.lasthandoff: 03/06/2017
     -   **标识证书：** 单击“选择”  ，然后选择用于标识的证书。  
 
         > [!NOTE]  
-        >  你必须首先将身份证书配置为简单证书注册协议 (SCEP) 证书配置文件，才能选择身份证书。 有关证书配置文件的详细信息，请参阅 [System Center Configuration Manager 中的证书配置文件](introduction-to-certificate-profiles.md)。  
+        >  你必须首先将身份证书配置为简单证书注册协议 (SCEP) 证书配置文件，才能选择身份证书。 有关证书配置文件的详细信息，请参阅 [System Center Configuration Manager 中的证书配置文件](create-pfx-certificate-profiles.md)。  
 
          此选项只有在选择了“身份验证方法”  下的“证书” 才可用。  
 
@@ -110,14 +110,14 @@ ms.lasthandoff: 03/06/2017
     -   **加密证书：** 单击“选择”  ，然后选择用于加密的证书。 此选项仅适用于 iOS 设备。  
 
         > [!NOTE]  
-        >  你必须首先将加密证书配置为简单证书注册协议 (SCEP) 证书配置文件，才能选择加密证书。 有关证书配置文件的详细信息，请参阅 [System Center Configuration Manager 中的证书配置文件](introduction-to-certificate-profiles.md)。  
+        >  你必须首先将加密证书配置为简单证书注册协议 (SCEP) 证书配置文件，才能选择加密证书。 有关证书配置文件的详细信息，请参阅 [System Center Configuration Manager 中的证书配置文件](create-pfx-certificate-profiles.md)。  
 
          仅当你选中“使用 S/MIME”时，此选项才可用 。  
 
     -   **签名证书：** 单击“选择”  ，然后选择用于签名的证书。 此选项仅适用于 iOS 设备。  
 
         > [!NOTE]  
-        >  你必须首先将签名证书配置为简单证书注册协议 (SCEP) 证书配置文件，才能选择签名证书。 有关证书配置文件的详细信息，请参阅 [System Center Configuration Manager 中的证书配置文件](introduction-to-certificate-profiles.md)。  
+        >  你必须首先将签名证书配置为简单证书注册协议 (SCEP) 证书配置文件，才能选择签名证书。 有关证书配置文件的详细信息，请参阅 [System Center Configuration Manager 中的证书配置文件](create-pfx-certificate-profiles.md)。  
 
          仅当你选中“使用 S/MIME”时，此选项才可用 。  
 

@@ -16,9 +16,9 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 2bacc7cb9a903fa5fde7c8867f516b04847e1172
-ms.lasthandoff: 03/06/2017
+ms.sourcegitcommit: 8c7bf901caa49c8585a9ed3913d4a5a2aac57013
+ms.openlocfilehash: 7ac2baeb3c10ce90eb643fa28a953186b571d037
+ms.lasthandoff: 03/21/2017
 
 
 ---
@@ -34,7 +34,7 @@ ms.lasthandoff: 03/06/2017
 
 -   可以使用 Configuration Manager 来控制用户能够和不能用于登录的手势。  
 
--   可在 Windows Hello 企业版密钥存储提供程序 (KSP) 中存储身份验证证书。 有关详细信息，请参阅[证书配置文件](introduction-to-certificate-profiles.md)。  
+-   可在 Windows Hello 企业版密钥存储提供程序 (KSP) 中存储身份验证证书。 有关详细信息，请参阅[证书配置文件](create-pfx-certificate-profiles.md)。  
 
 - 可将 Windows Hello 企业版策略部署到运行 Configuration Manager 客户端的已加入域的 Windows 10 设备。 [在已加入域的 Windows 10 设备上配置 Windows Hello 企业版](../../protect/deploy-use/windows-hello-for-business-settings.md#configure-windows-hello-for-business-on-domain-joined-windows-10-devices)中介绍了此配置。 搭配使用 Configuration Manager 和 Intune（混合）时，可在 Windows 10 和 Windows 10 移动设备上配置这些设置，但不能在运行 Configuration Manager 客户端的已加入域的设备上进行配置。   
 

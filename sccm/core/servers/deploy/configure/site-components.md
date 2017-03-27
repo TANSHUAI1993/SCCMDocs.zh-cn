@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 9e170271e1b690289085e80eeff453219bc24010
-ms.openlocfilehash: 9a61162cb992c1947a4ad52b51710740a1b6c4c6
-ms.lasthandoff: 02/28/2017
+ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
+ms.openlocfilehash: 83550fbf0ef1f9adb0bb2c51a4f3c26a7500d352
+ms.lasthandoff: 03/21/2017
 
 
 ---
@@ -69,7 +69,7 @@ ms.lasthandoff: 02/28/2017
     -   Configuration Manager 中管理点的指定完全限定域名 (FQDN) 在 DNS 中具有主机条目（A 或 AAA 记录）。  
 
     > [!WARNING]  
-    >  为了使客户端能够查找 DNS 中发布的管理点，必须将客户端分配给特定站点（而不是使用自动站点分配）。 将这些客户端设置为使用具有其管理点的域后缀的站点代码。 有关详细信息，请参阅[如何在 System Center Configuration Manager 中将客户端分配到一个站点](../../../../core/clients/deploy/assign-clients-to-a-site.md)中的[定位管理点](../../../../core/clients/deploy/assign-clients-to-a-site.md#BKMK_LocatingMPs)。  
+    >  为了使客户端能够查找 DNS 中发布的管理点，必须将客户端分配给特定站点（而不是使用自动站点分配）。 将这些客户端设置为使用具有其管理点的域后缀的站点代码。 有关详细信息，请参阅[如何在 System Center Configuration Manager 中将客户端分配到一个站点](/sccm/core/clients/deploy/assign-clients-to-a-site)中的[定位管理点](/sccm/core/clients/deploy/assign-clients-to-a-site#locating-management-points)。  
 
      如果 Configuration Manager 客户端无法使用 Active Directory 域服务或 DNS 在 Intranet 上查找管理点，它们将使用 [WINS](../../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md#bkmk_wins)。 如果为站点安装的第一个管理点设置为接受 Intranet 上的 HTTP 客户端连接，则它将自动发布到 WINS。  
 

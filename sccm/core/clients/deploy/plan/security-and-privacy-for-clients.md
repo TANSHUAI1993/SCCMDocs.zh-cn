@@ -13,12 +13,13 @@ ms.topic: get-started-article
 ms.assetid: c1d71899-308f-49d5-adfa-3a3ec0163ed8
 caps.latest.revision: 10
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: 6e76c3ae104c0561a5c7b178823b7a48761518fe
+ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
+ms.openlocfilehash: 192c3685092df6310b7129877c7fb5dfd9ef7ad5
+ms.lasthandoff: 03/21/2017
 
 
 ---
@@ -28,7 +29,7 @@ ms.openlocfilehash: 6e76c3ae104c0561a5c7b178823b7a48761518fe
 
 本文包含 System Center Configuration Manager 中的客户端以及 Exchange Server 连接器所管理的移动设备的安全和隐私信息：  
 
-##  <a name="a-namebkmksecuritycliientsa-security-best-practices-for-clients"></a><a name="BKMK_Security_Cliients"></a>客户端的最佳安全方案  
+##  <a name="BKMK_Security_Cliients"></a>客户端的最佳安全方案  
  当 Configuration Manager 从运行 Configuration Manager 客户端的设备接受数据时，这将带来客户端可能会攻击站点的风险。 例如，它们会发送格式不正确的清单或尝试将站点系统过载。 仅将 Configuration Manager 客户端部署到信任的设备。 此外，使用下列最佳安全方案来帮助站点免遭未授权或被侵害的设备威胁：  
 
  **使用公钥基础结构 (PKI) 证书与运行 IIS 的站点系统建立客户端通信。**  
@@ -146,7 +147,7 @@ ms.openlocfilehash: 6e76c3ae104c0561a5c7b178823b7a48761518fe
 
  此客户端设置允许 Configuration Manager 客户端能够运行未签名的 PowerShell 脚本，这可能会使得恶意软件能够在客户端计算机上运行。 如果你必须选择此选项，请使用自定义客户端设置并仅将其分配到必须运行未签名的 PowerShell 脚本的客户端计算机。  
 
-##  <a name="a-namebkmkmobilea-security-best-practices-for-mobile-devices"></a><a name="bkmk_mobile"></a>移动设备的最佳安全方案  
+##  <a name="bkmk_mobile"></a>移动设备的最佳安全方案  
  **对于你使用 Configuration Manager 注册并将在 Internet 上支持的移动设备：安装外围网络中的注册代理点和 Intranet 中的注册点**  
 
  此角色分隔可帮助注册点防御攻击。 如果注册点受到侵害，攻击者可能会获得身份验证证书，并且可能会偷窃注册了移动设备的用户的凭据。  
@@ -199,7 +200,7 @@ ms.openlocfilehash: 6e76c3ae104c0561a5c7b178823b7a48761518fe
 
  有关 Exchange Server 连接器要求的最小 cmdlet 的列表，请参阅[使用 System Center Configuration Manager 和 Exchange 管理移动设备](../../../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)。  
 
-##  <a name="a-namebkmkmacsa-security-best-practices-for-macs"></a><a name="bkmk_macs"></a> Mac 的最佳安全方案  
+##  <a name="bkmk_macs"></a> Mac 的最佳安全方案  
  **对于 Mac 计算机：从安全位置中存储和访问客户端源文件。**  
 
  在 Mac 计算机上安装或注册客户端之前 Configuration Manager 不会验证这些客户端源文件是否已被篡改。 请从可信来源下载这些文件并且安全地存储和访问它们。  
@@ -208,7 +209,7 @@ ms.openlocfilehash: 6e76c3ae104c0561a5c7b178823b7a48761518fe
 
  为了确保业务连续性，请监视和跟踪用于 Mac 计算机的证书的有效期。 Configuration Manager 不支持此证书的自动续订，并且会警告你证书即将过期。 有效期通常为 1 年。  
 
- 有关如何续订证书的信息，请参阅  [Renewing the Mac Client Certificate Manually](../../../../core/clients/deploy/deploy-clients-to-macs.md#BKMK_Man)。  
+ 有关如何续订证书的信息，请参阅  [Renewing the Mac Client Certificate Manually](../../../../core/clients/deploy/deploy-clients-to-macs.md#renewing-the-mac-client-certificate)。  
 
  **对于 Mac 计算机：考虑配置受信任的根 CA 证书，以使其仅对于 SSL 协议受信任，从而防止权限提升。**  
 
@@ -237,7 +238,7 @@ ms.openlocfilehash: 6e76c3ae104c0561a5c7b178823b7a48761518fe
 
 6.  关闭对话框，并在提示时输入管理员的密码，然后单击“更新设置”。  
 
-##  <a name="a-namebkmksecurityissuesclientsa-security-issues-for-configuration-manager-clients"></a><a name="BKMK_SecurityIssues_Clients"></a> Configuration Manager 客户端的安全问题  
+##  <a name="BKMK_SecurityIssues_Clients"></a> Configuration Manager 客户端的安全问题  
  下列安全问题没有缓解措施：  
 
 -   不会对状态消息执行验证  
@@ -282,7 +283,7 @@ ms.openlocfilehash: 6e76c3ae104c0561a5c7b178823b7a48761518fe
 
      如果 Windows Embedded 设备运行 Windows 7 以前的操作系统，并且用户在已禁用写入筛选器以提交 Configuration Manager 所做更改时尝试登录，则在帐户被锁定之前允许的不正确登录尝试次数实际上会减半。 例如，“帐户锁定阈值”  配置为 6，并且帐户在用户错误键入了其密码 3 次的情况即被锁定，实际上造成了拒绝服务状况。  如果用户必须在这种情况下登录到嵌入式设备，请告诫他们锁定阈值被减少的可能性。  
 
-##  <a name="a-namebkmkprivacycliientsa-privacy-information-for-configuration-manager-clients"></a><a name="BKMK_Privacy_Cliients"></a> Configuration Manager 客户端的隐私信息  
+##  <a name="BKMK_Privacy_Cliients"></a> Configuration Manager 客户端的隐私信息  
  在部署 Configuration Manager 客户端时，启用客户端设置，以便你能够使用 Configuration Manager 管理功能。 用于配置功能的设置适用于 Configuration Manager 层次结构中的所有客户端，不管它们是直接连接到公司网络、通过远程会话连接还是连接到 Internet 但受 Configuration Manager 支持。  
 
  客户端信息存储在 Configuration Manager 数据库中，不会发送给 Microsoft。 信息保留在该数据库中，而“删除过期的发现数据”  站点维护任务每隔 90 天就会删除这些信息一次。 可以配置删除间隔。  
@@ -299,15 +300,10 @@ ms.openlocfilehash: 6e76c3ae104c0561a5c7b178823b7a48761518fe
 
  在安装包含客户端状态检查的 Configuration Manager 客户端时，请考虑你的隐私要求。  
 
-##  <a name="a-namebkmkprivacyexchangeconnectora-privacy-information-for-mobile-devices-that-are-managed-with-the-exchange-server-connector"></a><a name="BKMK_Privacy_ExchangeConnector"></a>使用 Exchange Server 连接器管理的移动设备的隐私信息  
+##  <a name="BKMK_Privacy_ExchangeConnector"></a>使用 Exchange Server 连接器管理的移动设备的隐私信息  
  Exchange Server 连接器通过使用 ActiveSync 协议查找和管理连接到 Exchange Server（本地或托管）的设备。 Exchange Server 连接器找到的记录存储在 Configuration Manager 数据库中。 信息是从 Exchange Server 中收集的。 它不包含移动设备发送到 Exchange Server 的内容中的任何其他信息。  
 
  不会将移动设备信息发送到 Microsoft。 移动设备信息储会存在 Configuration Manager 数据库中。 信息保留在该数据库中，而“删除过期的发现数据”  站点维护任务每隔 90 天就会删除这些信息一次。 可以配置删除间隔。  
 
  在安装和配置 Exchange Server 连接器之前，请考虑你的隐私要求。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 
