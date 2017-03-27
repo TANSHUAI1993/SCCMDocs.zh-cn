@@ -1,9 +1,9 @@
 ---
 title: "设置云管理网关 | Microsoft Docs"
 description: 
-author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
-ms.author: nbigman
 ms.date: 12/14/2016
 ms.topic: article
 ms.prod: configuration-manager
@@ -14,6 +14,7 @@ ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
 translationtype: Human Translation
 ms.sourcegitcommit: 2bcc5d9dde1f1a2d9c33575d6c463e281ac818e8
 ms.openlocfilehash: 61b8cd8458718b9a54edb129739c619f947ac380
+ms.lasthandoff: 12/16/2016
 
 ---
 
@@ -221,9 +222,4 @@ Configuration Manager 需要 Azure 管理证书来访问 Azure API 和配置云�
 ## <a name="next-steps"></a>后续步骤
 
 [监视云管理网关的客户端](monitor-clients-cloud-management-gateway.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

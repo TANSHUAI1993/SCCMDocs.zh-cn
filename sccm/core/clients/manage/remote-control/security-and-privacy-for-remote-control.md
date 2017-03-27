@@ -13,12 +13,13 @@ ms.topic: article
 ms.assetid: 272ee86b-d3d9-4fd9-b5c4-73e490e1a1e4
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: 342a58d2b7439f721381beb43188594b5278043d
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -28,7 +29,7 @@ ms.openlocfilehash: 342a58d2b7439f721381beb43188594b5278043d
 
 本主题包括有关 System Center 2012 Configuration Manager 中远程控制的安全和隐私信息。  
 
-##  <a name="a-namebkmksecurityhardwareinventorya-security-best-practices-for-remote-control"></a><a name="BKMK_Security_HardwareInventory"></a> 远程控制安全最佳方案  
+##  <a name="BKMK_Security_HardwareInventory"></a> 远程控制安全最佳方案  
  在使用远程控制管理客户端计算机时，请使用下列最佳安全方案。  
 
 |最佳安全方案|更多信息|  
@@ -54,7 +55,7 @@ ms.openlocfilehash: 342a58d2b7439f721381beb43188594b5278043d
 
      如果复制远程控制的二进制文件而不是安装 Configuration Manager 控制台，然后在命令提示符下运行远程控制，则不会发送审核消息。  
 
-##  <a name="a-namebkmkprivacyhardwareinventorya-privacy-information-for-remote-control"></a><a name="BKMK_Privacy_HardwareInventory"></a> 远程控制的隐私信息  
+##  <a name="BKMK_Privacy_HardwareInventory"></a> 远程控制的隐私信息  
  远程控制允许查看 Configuration Manager 客户端计算机上的活动会话，可能也可以查看存储在这些计算机上的任何信息。 默认情况下不启用远程控制。  
 
  虽然你可以将远程控制配置为提供明确通知，并在开始远程控制会话之前获得用户的同意，不过它还是可能在不经用户同意或用户不知情的情况下监视用户。 可以配置“仅查看”访问级别以便无法对远程控制进行任何更改，也可以配置“完全控制”。 连接的管理员的帐户会显示在远程控制会话中，以帮助用户识别连接到其计算机的人员。  
@@ -62,9 +63,4 @@ ms.openlocfilehash: 342a58d2b7439f721381beb43188594b5278043d
  默认情况下，Configuration Manager 会向本地管理员组授予远程控制权限。  
 
  在配置远程控制之前，请考虑隐私要求。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

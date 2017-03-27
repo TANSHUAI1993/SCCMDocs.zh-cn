@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 10049c89-b37c-472b-b317-ce4f56cd4be7
 caps.latest.revision: 8
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: a650ad8e7b1f9468dd04165a3e43a89387b5d696
 ms.openlocfilehash: b07af49e2fecf6cc41258c87794ca7952206bb8a
+ms.lasthandoff: 01/17/2017
 
 
 ---
@@ -179,9 +180,4 @@ Coho Vineyard & Winery 正在开设一家访客中心，需要运行 Windows Emb
     -   已安装并自动运行交互式演示文稿软件，可供访客使用。  
 
 14. 在完成此初始设置之后，仅在访客中心关闭时，才会执行更新可能要求的重新启动操作。  
-
-
-
-<!--HONumber=Jan17_HO3-->
-
 

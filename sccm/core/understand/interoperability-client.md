@@ -12,13 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 600086d5-bd9e-4ac1-8ace-c7a62de80dc2
 caps.latest.revision: 0
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 Robots: NOINDEX,NOFOLLOW
 translationtype: Human Translation
 ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
 ms.openlocfilehash: 30d0177dc7fcc7f39d00c48067130d587435bf2d
+ms.lasthandoff: 12/16/2016
 
 ---
 # <a name="use-the-client-software-from-the-version-1606-baseline-media-for-extended-interoperability-with-future-versions-of-a-current-branch-site"></a>使用版本 1606 基线媒体中的客户端软件，实现与 Current Branch 站点未来版本的扩展互操作性
@@ -42,23 +43,18 @@ Current Branch 站点必须运行版本 1606 或更高版本。
 计划在客户端到期之前，在使用 Current Branch 管理的设备上更新扩展互操作性客户端。 为此，需从 Microsoft 下载新版本的客户端，然后将该更新的客户端软件部署到使用当前扩展互操作性客户端的设备上。
 
 **扩展互操作性客户端的限制：**
--   扩展互操作性客户端软件的更新不可通过控制台内更新进行。 部署已更新客户端软件的相关详细信息将在发布已更新的客户端时提供。
+-     扩展互操作性客户端软件的更新不可通过控制台内更新进行。 部署已更新客户端软件的相关详细信息将在发布已更新的客户端时提供。
 
 ## <a name="identify-the-client-version-you-use"></a>标识所使用的客户端版本
 以下是可用于 Current Branch 和 LTSB 的主要客户端版本：
 
 |客户端版本|Branch 和版本 |  
 |----------------|---------------------|
-|5.00.8325.xxxx |   - Current Branch 1511|
-|5.00.8355.xxxx |- Current Branch 1602|
-|5.00.8412.1307 |- Current Branch 1606 </br> - Current Branch 1606 和 1606 修补程序汇总 (KB3186654)</br>- 版本 1606 基线媒体中的扩展互操作性客户端|  
+|5.00.8325.xxxx |    - Current Branch 1511|
+|5.00.8355.xxxx    |- Current Branch 1602|
+|5.00.8412.1307    |- Current Branch 1606 </br> - Current Branch 1606 和 1606 修补程序汇总 (KB3186654)</br>- 版本 1606 基线媒体中的扩展互操作性客户端|  
 
 可在客户端中 Configuration Manager 控制面板小程序的“常规”选项卡上查看客户端版本。
 
 在小组件的“组件”选项卡上，某些组件显示不同的值。 例如，对于客户端版本 8412.1307，某些组件可能被列为 5.00.8412.**1000** 或 5.00.8412.**1006**。  某些组件的最后四位数会有所不同，这是正常的，并不表示组件更新到当前客户端版本失败。
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

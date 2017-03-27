@@ -13,12 +13,13 @@ ms.topic: article
 ms.assetid: 7d2bb377-1005-4a55-bd1f-b80a6d0b22e1
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
 ms.openlocfilehash: eea9faaac579ecafd67eaac05dc7ee7ca7819db7
+ms.lasthandoff: 12/19/2016
 
 
 ---
@@ -61,9 +62,4 @@ ms.openlocfilehash: eea9faaac579ecafd67eaac05dc7ee7ca7819db7
      例如，使用以下命令行来运行脚本：**at -f /tmp/upgrade.sh -m now + 5 minutes**  
 
  客户端成功计划要运行的 **upgrade.sh** 脚本后，客户端将提交一条状态消息，指示软件部署已成功完成。 但是在延迟后，实际客户端安装随后由计算机进行管理。 客户端升级完成后，通过检查客户端计算机上的 **/var/opt/microsoft/scxcm.log** 文件来验证安装。 此外，可以通过在 Configuration Manager 控制台中“资产和符合性”工作区的“设备”节点中查看客户端的详细信息，确认客户端是否已安装并与站点通信。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

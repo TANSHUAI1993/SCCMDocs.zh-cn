@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 54ef5fbb-521d-4ca5-a1c5-61e6f538d71e
 caps.latest.revision: 8
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
 ms.openlocfilehash: c1b3b3e7fe756ce3e0c82ffc15693999d8e817d2
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -36,7 +37,7 @@ ms.openlocfilehash: c1b3b3e7fe756ce3e0c82ffc15693999d8e817d2
 
  如果站点系统接受 HTTPS 客户端连接，而且公钥基础结构 (PKI) 支持证书吊销列表 (CRL)，则始终考虑将证书吊销作为预防证书泄漏的主要防线。 在 Configuration Manager 中阻止客户端为保护层次结构提供第二道防线。  
 
-##  <a name="a-namebkmkblockvscrla-considerations-for-blocking-clients"></a><a name="BKMK_Block_vs_CRL"></a> 阻止客户端的注意事项  
+##  <a name="BKMK_Block_vs_CRL"></a> 阻止客户端的注意事项  
 
 -   此选项可用于 HTTP 和 HTTPS 客户端连接，但其安全性在客户端使用 HTTP 连接到站点系统时会受到限制。  
 
@@ -71,9 +72,4 @@ ms.openlocfilehash: c1b3b3e7fe756ce3e0c82ffc15693999d8e817d2
 
     > [!NOTE]  
     >  通过在 IIS 中配置证书信任列表 (CTL)，可以进一步防止未知的客户端对运行 IIS 的站点系统的损害。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

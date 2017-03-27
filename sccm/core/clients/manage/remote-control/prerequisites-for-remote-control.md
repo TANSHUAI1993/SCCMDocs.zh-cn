@@ -13,12 +13,13 @@ ms.topic: article
 ms.assetid: c1b2057e-b74f-43fa-a293-763a8f866d3d
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: eafa0d85935c2009cc63d17b06ed83a4666d7fac
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -65,9 +66,4 @@ System Center Configuration Manager 中的远程控制具有外部依赖关系�
 |必须为客户端启用远程控制|默认情况下，安装 Configuration Manager时，不启用远程控制。 有关如何启用和配置远程控制的信息，请参阅[在 System Center Configuration Manager 中配置远程控制](../../../../core/clients/manage/remote-control/configuring-remote-control.md)。|  
 |Reporting Services 点|在远程控制的报表前，必须先安装 Reporting Services 点站点系统角色。 有关详细信息，请参阅 [System Center Configuration Manager 中的报表](../../../../core/servers/manage/reporting.md)。|  
 |管理远程控制的安全权限|若要访问集合资源并从 Configuration Manager 控制台中启动远程控制会话：“控制 AMT”、“读取”、“读取资源”以及“集合”对象的“远程控制”权限。<br /><br /> “远程工具操作人员”安全角色包括这些在 Configuration Manager 中管理远程控制所需要的权限。<br /><br /> 有关详细信息，请参阅[为 System Center Configuration Manager 配置基于角色的管理](../../../../core/servers/deploy/configure/configure-role-based-administration.md)。<br /><br /> 此外，还必须通过使用“远程工具”  客户端设置中的“远程控制和远程协助允许的查看者”  选项将你想授予使用远程控制和远程协助权限的用户添加到远程控制允许的查看列表当中。|  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

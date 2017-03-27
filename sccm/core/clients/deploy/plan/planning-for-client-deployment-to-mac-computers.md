@@ -13,12 +13,13 @@ ms.topic: get-started-article
 ms.assetid: 8d15ae3f-de42-461f-a907-c43873da22d2
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
 ms.openlocfilehash: d8ccfee895f5fd3649fb4bef4a62fd790cce7ea8
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -109,9 +110,4 @@ ms.openlocfilehash: d8ccfee895f5fd3649fb4bef4a62fd790cce7ea8
 -   客户端状态客户端检查和修正  
 
  有关如何安装和配置 Configuration Manager Mac 客户端的详细信息，请参阅[如何在 System Center Configuration Manager 中将客户端部署到 Mac](../../../../core/clients/deploy/deploy-clients-to-macs.md)。
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

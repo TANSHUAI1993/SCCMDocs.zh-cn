@@ -13,12 +13,13 @@ ms.topic: get-started-article
 ms.assetid: 984e8d92-7327-4b08-9228-0c955e6ac778
 caps.latest.revision: 9
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: db0642e95bbd7e704d2052aa1e0f5c27cd7bf568
 ms.openlocfilehash: d918008bed43fa95413a067e08bd6694e1ab5472
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -88,8 +89,3 @@ ms.openlocfilehash: d918008bed43fa95413a067e08bd6694e1ab5472
 
 
  
-
-
-<!--HONumber=Dec16_HO3-->
-
-

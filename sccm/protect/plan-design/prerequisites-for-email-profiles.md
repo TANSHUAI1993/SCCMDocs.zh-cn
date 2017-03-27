@@ -13,12 +13,13 @@ ms.topic: get-started-article
 ms.assetid: dccf0b73-43bd-4545-8914-114168ebad36
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: Nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 0fa837c68eb073d2ceaf48c938137a94141a102e
 ms.openlocfilehash: bdb7f78480f73bc4559c4ff49ecb7b047581780a
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -40,9 +41,4 @@ System Center Configuration Manager 中的电子邮件配置文件在产品外�
 |依赖关系|更多信息|  
 |----------------|----------------------|  
 |Active directory 中的邮件属性|如果想要通过使用用户的主 SMTP 地址生成电子邮件配置文件中的用户电子邮件地址，则此地址必须存在于 Active Directory 的“邮件”属性中。<br /><br /> 有关详细信息，请参阅 Windows Server 文档。|
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 03cec407-0f9f-454f-a360-b005af738d29
 caps.latest.revision: 6
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
 ms.openlocfilehash: 9eadb91a575323b4c36af14962f370046ea513ce
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -57,9 +58,4 @@ System Center Configuration Manager 中的客户端必须找到管理点才能�
 2.  在“站点”  选项卡上，指定管理点的 DNS 后缀，然后单击“确定” 。  
 
      如果站点具有多个管理点，而且这些管理点位于多个域中，则仅指定一个域。 在客户端连接到此域中的管理点时，它们下载可用管理点的列表（将包含其他域中的管理点）。
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

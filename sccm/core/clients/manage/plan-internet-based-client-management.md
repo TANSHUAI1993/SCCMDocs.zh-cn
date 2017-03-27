@@ -13,12 +13,13 @@ ms.topic: get-started-article
 ms.assetid: 83a7c934-3b11-435d-ba22-cbc274951e83
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 828e2ac9a3f9bcea1571d24145a1021fdf1091f3
 ms.openlocfilehash: 82867e77840e14e9b8170801ea3c4a9f399c9890
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -32,7 +33,7 @@ ms.openlocfilehash: 82867e77840e14e9b8170801ea3c4a9f399c9890
 
  使用下列部分来帮助你规划基于 Internet 的客户端管理。  
 
-##  <a name="a-namebkmkibcmfeaturesnotsupporteda-features-that-are-not-supported-on-the-internet"></a><a name="BKMK_IBCM_FeaturesNotSupported"></a> Internet 上不支持的功能  
+##  <a name="BKMK_IBCM_FeaturesNotSupported"></a> Internet 上不支持的功能  
  并非所有客户端管理功能都适用于 Internet，因此在 Internet 上管理客户端时，有些功能可能不受支持。 不支持 Internet 管理的功能通常依赖于 Active Directory 域服务或不适合用于公用网络，例如网络发现和 LAN 唤醒 (WOL)。  
 
  通过 Internet 管理客户端时，下列功能不受支持：  
@@ -53,7 +54,7 @@ ms.openlocfilehash: 82867e77840e14e9b8170801ea3c4a9f399c9890
 
  如果你具有配置为接受 Internet 连接的软件更新点，则 Internet 上基于 Configuration Manager Internet 的客户端始终会对此软件更新点进行扫描，以确定是否需要软件更新。 但是，如果这些客户端在 Internet 上，则它们首先会尝试从 Microsoft 更新下载软件更新，而不是从基于 Internet 的分发点中下载。 只有在此下载失败的情况下，它们之后才会尝试从基于 Internet 的分发点下载所需的软件更新。 未针对基于 Internet 的客户端管理进行配置的客户端不能从 Microsoft 更新下载软件更新，而必须使用 Configuration Manager 分发点。  
 
-##  <a name="a-namebkmkplanforinternetsitesystemsa-considerations-for-client-communications-from-the-internet-or-untrusted-forest"></a><a name="BKMK_PlanforInternetSiteSystems"></a>来自 Internet 或不受信任林的客户端通信的注意事项  
+##  <a name="BKMK_PlanforInternetSiteSystems"></a>来自 Internet 或不受信任林的客户端通信的注意事项  
  下列安装在主站点上的站点系统角色支持来自不受信任的位置（如 Internet 或不受信任的林）的客户端连接（辅助站点不支持来自不受信任位置的客户端连接）：  
 
 -   应用程序目录网站点  
@@ -94,7 +95,7 @@ ms.openlocfilehash: 82867e77840e14e9b8170801ea3c4a9f399c9890
 -   隧道：   
     如果代理 Web 服务器无法支持 SSL 桥接的要求，或者想对通过 Configuration Manager 注册的移动设备配置 Internet 支持，则也支持 SSL 隧道。 这是一项安全性较差的选项，因为来自 Internet 的 SSL 数据包会在不终止 SSL 的情况下转发到站点系统，因此无法检测其是否包含恶意内容。 使用 SSL 隧道时，代理 Web 服务器不需要证书。  
 
-##  <a name="a-namebkmkplanforinternetclientsa-planning-for-internet-based-clients"></a><a name="BKMK_PlanforInternetClients"></a>规划基于 Internet 的客户端  
+##  <a name="BKMK_PlanforInternetClients"></a>规划基于 Internet 的客户端  
  你必须确定是为 Intranet 和 Internet 上的管理还是为仅限 Internet 客户端管理配置将通过 Internet 管理的客户端计算机。 只能在安装客户端计算机期间配置客户端管理选项。 如果过后改变了主意，则必须重新安装客户端。  
 
 > [!NOTE]  
@@ -114,7 +115,7 @@ ms.openlocfilehash: 82867e77840e14e9b8170801ea3c4a9f399c9890
 
  在基于 Internet 的客户端管理和 Intranet 客户端管理之间自动切换的优点是：当客户端计算机连接到 Intranet 时可自动使用所有 Configuration Manager 功能，当客户端计算机连接到 Internet 时，可继续使用基本管理功能对其进行管理。 此外，在 Internet 上开始的下载可以在 Intranet 上无缝地继续，反之亦然。  
 
-##  <a name="a-namebkmkprerequisitsforinternetclientmgmta-prerequisites-for-internet-based-client-management"></a><a name="BKMK_PrerequisitsForInternetClientMgmt"></a>基于 Internet 的客户端管理的先决条件  
+##  <a name="BKMK_PrerequisitsForInternetClientMgmt"></a>基于 Internet 的客户端管理的先决条件  
  Configuration Manager 中基于 Internet 的客户端管理具有以下外部依赖项：  
 
 -   将在 Internet 上管理的客户端必须具有 Internet 连接。  
@@ -196,9 +197,4 @@ ms.openlocfilehash: 82867e77840e14e9b8170801ea3c4a9f399c9890
      有关支持这些要求的配置信息，请参阅防火墙或代理服务器文档。  
 
      关于使用 Internet 中客户端连接的软件更新点时的类似通信要求，请参阅 Windows Server Update Services (WSUS) 的文档。 例如，对于 Windows Server 2003 上的 WSUS，请参阅安全设置的部署附录： [附录 D：安全设置](http://go.microsoft.com/fwlink/p/?LinkId=143368)。
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

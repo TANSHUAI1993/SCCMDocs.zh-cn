@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d827cf91-b18f-4ee7-b538-24ba6f003ab9
 caps.latest.revision: 6
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
 ms.openlocfilehash: e9965373db17a752c8ae7fddb5f91fa1df912d49
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -37,7 +38,7 @@ ms.openlocfilehash: e9965373db17a752c8ae7fddb5f91fa1df912d49
 
  以下各节描述了如何从资源浏览器和报表中获取这些详细信息。  
 
-##  <a name="a-namebkmkuseresourceexpforlnua-use-resource-explorer-to-view-inventory-for-linux-and-unix-servers"></a><a name="BKMK_UseResourceExpforLnU"></a> 使用资源浏览器查看适用于 Linux 和 UNIX 服务器的清单  
+##  <a name="BKMK_UseResourceExpforLnU"></a> 使用资源浏览器查看适用于 Linux 和 UNIX 服务器的清单  
 
  在 Configuration Manager 客户端向 Configuration Manager 站点提交硬件清单后，可以使用资源浏览器查看此信息。 适用于 Linux 和 UNIX 的 Configuration Manager 客户端不会向资源浏览器添加新的清单类或视图。 Linux 和 UNIX 清单数据映射到现有的 WMI 类。 可以使用资源浏览器在基于 Windows 的分类中查看 Linux 和 UNIX 服务器的详细清单信息。  
 
@@ -45,7 +46,7 @@ ms.openlocfilehash: e9965373db17a752c8ae7fddb5f91fa1df912d49
 
  有关如何使用资源浏览器的信息，请参阅[如何使用资源浏览器在 System Center Configuration Manager 中查看硬件清单](../../../core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md)。  
 
-##  <a name="a-namebkmkusereportsforlnua-how-to-use-reports-to-view-information-for-linux-and-unix-servers"></a><a name="BKMK_UseReportsforLnU"></a> 如何使用报表来查看 Linux 和 UNIX 服务器的信息  
+##  <a name="BKMK_UseReportsforLnU"></a> 如何使用报表来查看 Linux 和 UNIX 服务器的信息  
  Configuration Manager 的报表包括来自 Linux 和 UNIX 服务器的信息以及来自基于 Windows 的计算机的信息。 无需其他配置就可将 Linux 和 UNIX 数据集成到报表中。  
 
  例如，如果运行名为“操作系统版本计数”的报表，该报表会显示不同操作系统的列表和运行每个操作系统的客户端数目。 报表基于运行于不同操作系统的不同 Configuration Manager 客户端所发送的硬件清单信息。  
@@ -53,9 +54,4 @@ ms.openlocfilehash: e9965373db17a752c8ae7fddb5f91fa1df912d49
  还可以创建特定于 Linux 和 UNIX 服务器数据的自定义报表。 硬件清单类“操作系统”  的“标题”  属性的是一个有用的属性，可用于在报表查询中标识特定的操作系统。  
 
  有关 Configuration Manager 中报表的信息，请参阅 [System Center Configuration Manager 中的报表](../../../core/servers/manage/reporting.md)。  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

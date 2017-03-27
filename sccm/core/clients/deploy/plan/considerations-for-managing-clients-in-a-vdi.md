@@ -13,12 +13,13 @@ ms.topic: get-started-article
 ms.assetid: abd45393-d84e-4583-bc80-74bbb3709577
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
 ms.openlocfilehash: 58251f6a4eebac4cba9f3d51f8d0aaad068c3ab8
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -48,9 +49,4 @@ System Center Configuration Manager 支持在以下虚拟桌面基础结构 (VDI
 >  除了处于维护模式的 Windows Embedded 客户端之外，未在虚拟化环境中运行的 Configuration Manager 客户端也使用此随机化延迟。 如果具有许多部署的客户端，则此行为有助于避免网络带宽高峰，并且可以在 Configuration Manager 站点系统（如管理点和站点服务器）上减少 CPU 处理要求。 延迟间隔因 Configuration Manager 功能而异。  
 >   
 >  默认情况下，使用以下客户端设置为所需软件更新和所需应用程序部署禁用了随机延迟：“计算机代理” ：“禁用截止时间随机性” 
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

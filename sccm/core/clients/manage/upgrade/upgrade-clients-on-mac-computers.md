@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 74c60941-5eae-4905-9e58-252bdb39df96
 caps.latest.revision: 10
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
 ms.openlocfilehash: 6bdc5cca01bf5a79a6177d7cf1de96b8ff2c2305
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -64,7 +65,7 @@ ms.openlocfilehash: 6bdc5cca01bf5a79a6177d7cf1de96b8ff2c2305
 
  如果不希望使用 Configuration Manager 注册，而希望从 Configuration Manager 独立安装客户端证书，请参阅[配置已升级客户端以使用现有证书](#BKMK_UpgradingClient_MachineEnrollment)。  
 
-##  <a name="a-namebkmkupgradingclientmachineenrollmenta-configure-the-upgraded-client-to-use-an-existing-certificate"></a><a name="BKMK_UpgradingClient_MachineEnrollment"></a> Configure the upgraded client to use an existing certificate  
+##  <a name="BKMK_UpgradingClient_MachineEnrollment"></a> Configure the upgraded client to use an existing certificate  
  运行下列过程以防止“计算机注册向导”运行，并将升级后的客户端配置为使用现有客户端证书。  
 
 -   在 Configuration Manager 控制台中，创建“Mac OS X”类型的配置项目。  
@@ -102,9 +103,4 @@ ms.openlocfilehash: 6bdc5cca01bf5a79a6177d7cf1de96b8ff2c2305
 -   将配置项添加到配置基线，然后将该配置基线部署到独立 Configuration Manager 安装证书的所有 Mac 计算机。  
 
  有关如何为 Mac 计算机创建和部署配置项目的详细信息，请参阅[如何为使用 System Center Configuration Manager 客户端管理的 Mac OS X 设备创建配置项目](../../../../compliance/deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md)和[如何在 System Center Configuration Manager 中部署配置基线](../../../../compliance/deploy-use/deploy-configuration-baselines.md)。  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

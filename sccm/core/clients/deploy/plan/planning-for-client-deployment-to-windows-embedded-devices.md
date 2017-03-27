@@ -13,12 +13,13 @@ ms.topic: get-started-article
 ms.assetid: 038e61f9-f49d-41d1-9a9f-87bec9e00d5d
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
 ms.openlocfilehash: 0f6a6719c4c9bc1e67be11adf5206a7672624fa0
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -108,9 +109,4 @@ ms.openlocfilehash: 0f6a6719c4c9bc1e67be11adf5206a7672624fa0
 >   
 >      -   Windows Embedded Standard 7（64 位）  
 >     -   Windows Embedded POSReady 7（64 位）
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

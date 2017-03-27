@@ -12,12 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e5a8c79f-5791-49c5-8055-086d742e5559
 caps.latest.revision: 6
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
 ms.openlocfilehash: 4a10d3a59aa6417857abc163dd5416f167049f65
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -43,9 +44,4 @@ ms.openlocfilehash: 4a10d3a59aa6417857abc163dd5416f167049f65
 |Solaris 11|启动：<br /><br /> **svcadm enable -s svc:/application/management/omiserver**<br /><br /> **svcadm enable -s svc:/application/management/ccmexecd**<br /><br /> 停止：<br /><br /> **svcadm disable -s svc:/application/management/ccmexecd**<br /><br /> **svcadm disable -s svc:/application/management/omiserver**|  
 |AIX|启动：<br /><br /> **startsrc -s omiserver**<br /><br /> **startsrc -s ccmexec**<br /><br /> 停止：<br /><br /> **stopsrc -s ccmexec**<br /><br /> **stopsrc -s omiserver**|  
 |HP-UX|启动： **/sbin/init.d/ccmexecd start**<br /><br /> 停止： **/sbin/init.d/ccmexecd stop**<br /><br /> 重启： **/sbin/init.d/ccmexecd restart**|  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 
