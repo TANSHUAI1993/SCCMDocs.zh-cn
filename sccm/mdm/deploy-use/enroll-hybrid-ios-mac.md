@@ -13,8 +13,8 @@ ms.topic: get-started-article
 ms.assetid: 5eae4400-58ca-4c71-804c-6a585cd3df5d
 caps.latest.revision: 10
 caps.handback.revision: 0
-author: mtillman
-ms.author: mtillman
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
@@ -69,6 +69,6 @@ ms.lasthandoff: 03/06/2017
 
  设置完成后，需要让用户知道如何注册其设备。 请参阅[用户需要了解的有关设备注册的内容](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune)。 此信息适用于 Microsoft Intune 和 Configuration Manager 托管的移动设备。
 
- > [!div class="button"]
- [< 上一步](create-service-connection-point.md)  [下一步 >](set-up-additional-management.md)
+> [!div class="button"]
+[< 上一步](create-service-connection-point.md)  [下一步 >](set-up-additional-management.md)
 
