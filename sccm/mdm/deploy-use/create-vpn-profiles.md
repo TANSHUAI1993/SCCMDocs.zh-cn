@@ -17,9 +17,9 @@ author: mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 32190ec39af2cf1568b3d57c2c2f25d9ff2f9e20
-ms.lasthandoff: 03/06/2017
+ms.sourcegitcommit: 8c7bf901caa49c8585a9ed3913d4a5a2aac57013
+ms.openlocfilehash: 82f7db908f83d69a86c82ed97b845ff84e78f8b3
+ms.lasthandoff: 03/21/2017
 
 ---
 # <a name="vpn-profiles-on-mobile-devices-in-system-center-configuration-manager"></a>System Center Configuration Manager 中移动设备上的 VPN 配置文件
@@ -32,8 +32,8 @@ ms.lasthandoff: 03/06/2017
 
  在创建 VPN 配置文件时，你可以纳入各种各样的安全设置，其中包括已通过使用 System Center Configuration Manager 证书配置文件预配的服务器验证和客户端身份验证证书。 有关证书配置文件的详细信息，请参阅 [System Center Configuration Manager 中的证书配置文件](../../protect/deploy-use/introduction-to-certificate-profiles.md)。  
 
- ## <a name="vpn-profiles-when-using-configuration-manager-together-with-intune"></a>配合使用 Configuration Manager 和 Intune 时的 VPN 配置文件 
- 
+ ## <a name="vpn-profiles-when-using-configuration-manager-together-with-intune"></a>配合使用 Configuration Manager 和 Intune 时的 VPN 配置文件
+
  若要将配置文件部署到 iOS、Android、Windows Phone 和 Windows 8.1 设备，必须将这些设备注册到 Microsoft Intune。 其他平台上的设备也可以注册到 Intune。 有关如何注册的信息，请参阅[使用 Microsoft Intune 管理移动设备](https://technet.microsoft.com/en-us/library/dn646962.aspx)。 下表显示了每个设备平台支持的连接类型：  
 
  |连接类型|iOS 和 Mac OS X|Android|Windows 8.1|Windows RT|Windows RT 8.1|Windows Phone 8.1|Windows 10 桌面和移动版|  
@@ -91,7 +91,7 @@ ms.lasthandoff: 03/06/2017
 
         -   **每次登录时记住用户凭据**：记住用户凭据，这样用户不必在每次连接时都输入凭据。  
 
-        -   **选择用于客户端身份验证的客户端证书** - 选择之前创建的客户端 [SCEP 证书](introduction-to-certificate-profiles.md)，它将用于对 VPN 连接进行身份验证。   
+        -   **选择用于客户端身份验证的客户端证书** - 选择之前创建的客户端 [SCEP 证书](create-pfx-certificate-profiles.md)，它将用于对 VPN 连接进行身份验证。   
 
             > [!NOTE]  
             >  对于 iOS 设备，所选择的 SCEP 配置文件将嵌入 VPN 配置文件中。 对于其他平台，将添加适用性规则以确保如果该证书不存在或不符合要求，不会安装 VPN 配置文件。  
