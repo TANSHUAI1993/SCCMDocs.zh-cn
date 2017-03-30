@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 34dded3a8caf8c2be0313bc012cbd8ad2a909fad
-ms.openlocfilehash: 20bcc1cd909eec13eaca0a6de66806bd496f729d
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: b330c97a0853d1673f1cf7e0691891b72407fa51
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="capabilities-in-technical-preview-1701-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1701 中的功能
@@ -40,25 +41,25 @@ ms.openlocfilehash: 20bcc1cd909eec13eaca0a6de66806bd496f729d
 - 正在寻找新软件更新点的客户端将尝试使用与其当前边界组关联的软件更新点。
 - 如果客户端无法获取当前软件更新点，并无法从当前边界组找到软件更新点，客户端会使用“回退”行为扩展可使用的软件更新点的可用池。    
 
-若要深入了解边界组，请参阅 Current Branch 内容中的[边界组](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#BKMK_BoundaryGroups)。
+若要深入了解边界组，请参阅 Current Branch 内容中的[边界组](/sccm/core/servers/deploy/configure/boundary-groups)。
 
-但是在此预览版中，仅部分实现了软件更新点的边界组。 可添加软件更新点和配置包含软件更新点的邻居边界组，但是尚不支持软件更新点的回退时间，并且在启动回退前，客户端需要等待&2; 个小时。
+但是在此预览版中，仅部分实现了软件更新点的边界组。 可添加软件更新点和配置包含软件更新点的邻居边界组，但是尚不支持软件更新点的回退时间，并且在启动回退前，客户端需要等待 2 个小时。
 
 下面介绍了此 Technical Preview 中软件更新点的行为：  
 
--   **新客户端使用边界组选择软件更新点，**安装版本 1701 后所安装的客户端从那些与客户端边界组关联的软件更新点中选取一个。
+-    **新客户端使用边界组选择软件更新点，**安装版本 1701 后所安装的客户端从那些与客户端边界组关联的软件更新点中选取一个。
 
   这将替代以前的行为，即客户端从共享客户端林的软件更新点列表中随机选取一个。   
 
--   **以前安装的客户端继续使用当前的软件更新点，直到它们回退找到新的软件更新点。**
+-    **以前安装的客户端继续使用当前的软件更新点，直到它们回退找到新的软件更新点。**
 回退前，以前安装的客户端以及已具有软件更新点的客户端将继续使用该软件更新点。 这包括未与客户端当前边界组关联的软件更新点。 它们不会直接尝试从当前边界组查找和使用软件更新点。
 
   仅在客户端无法获取其当前软件更新点和启动回退时，已具有软件更新点的客户端才会开始使用这个新边界组行为。
 切换到新行为时发生这种延迟是故意为之的。 原因在于软件更新点的更改可导致网络带宽的大量使用，因为客户端会与新软件更新点同步数据。 过渡中的延迟有助于在所有客户端同时切换到新软件更新点时避免网络饱和。
 
--   **回退时间配置：**此 Technical Preview 中不支持配置客户端启动回退以搜索新软件更新点的时间。 这包括配置“回退时间(以分钟为单位)”和“从不回退”，可以针对不同边界组关系进行配置。
+-    **回退时间配置：**此 Technical Preview 中不支持配置客户端启动回退以搜索新软件更新点的时间。 这包括配置“回退时间(以分钟为单位)”和“从不回退”，可以针对不同边界组关系进行配置。
 
-  但是，客户端可将客户端尝试连接到其当前软件更新点的当前行为保留&2; 小时，然后再启动回退以查找可用的新软件更新点。
+  但是，客户端可将客户端尝试连接到其当前软件更新点的当前行为保留 2 小时，然后再启动回退以查找可用的新软件更新点。
 
   客户端使用回退时，将使用回退的边界组配置创建可用软件更新点的池。 该池包括客户端当前边界组、邻居边界组和客户端站点默认边界组中的所有软件更新点。
 
@@ -132,9 +133,9 @@ ms.openlocfilehash: 20bcc1cd909eec13eaca0a6de66806bd496f729d
     &lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
     &lt;value>https://login.microsoftonline.com/&lt;/value>
 
-2.  保存包含这两种更改的文件后，请在同一台计算机上重启 Configuration Manager 控制台，然后使用该控制台安装 OMS 连接器。 若要安装连接器，请使用[将数据从 Configuration Manager 同步到 Microsoft Operations Management Suite](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite) 中的信息，选择 Microsoft Azure 政府云上的 **Microsoft Operations Management Suite**。
+2.    保存包含这两种更改的文件后，请在同一台计算机上重启 Configuration Manager 控制台，然后使用该控制台安装 OMS 连接器。 若要安装连接器，请使用[将数据从 Configuration Manager 同步到 Microsoft Operations Management Suite](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite) 中的信息，选择 Microsoft Azure 政府云上的 **Microsoft Operations Management Suite**。
 
-3.  OMS 连接器安装后，使用任何连接到站点的控制台时，可使用与政府云的连接。
+3.    OMS 连接器安装后，使用任何连接到站点的控制台时，可使用与政府云的连接。
 
 ## <a name="android-and-ios-versions-are-no-longer-targetable-in-creation-wizards-for-hybrid-mdm"></a>在混合 MDM 的创建向导中，不再以 Android 和 iOS 版本为目标
 
@@ -157,9 +158,4 @@ ms.openlocfilehash: 20bcc1cd909eec13eaca0a6de66806bd496f729d
 由于此更改，混合部署可为 Android 和 iOS 新版本更快提供支持，无需新的 Configuration Manager 版本或扩展。 Intune 独立版中支持新版本后，用户就可将其移动设备升级到此版本。
 
 为防止从 Configuration Manager 先前版本升级时出现问题，移动操作系统版本仍在这些项的属性页中可用。 如果仍需以特定版本为目标，可创建新项，然后在新创建的项的属性页上指定目标版本。
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

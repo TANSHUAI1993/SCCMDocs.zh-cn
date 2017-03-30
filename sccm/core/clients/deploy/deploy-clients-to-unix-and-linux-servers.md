@@ -16,9 +16,9 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: 0e5f65552045e9cef06f5286b0087153751c79b0
-ms.lasthandoff: 12/16/2016
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: b63367dbaacde60a364e9da6afca65383b635840
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -34,14 +34,14 @@ ms.lasthandoff: 12/16/2016
 
  安装客户端后，在 Configuration Manager 控制台指定客户端设置，从而用和配置基于 Windows 的客户端相同的方式配置客户端代理。 有关详细信息，请参阅  [Client settings for Linux and UNIX servers](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ClientSettingsforLnU)。  
 
-##  <a name="a-namebkmkaboutinstallpackagesa-about-client-installation-packages-and-the-universal-agent"></a><a name="BKMK_AboutInstallPackages"></a> 有关客户端安装包和通用代理  
+##  <a name="BKMK_AboutInstallPackages"></a> 有关客户端安装包和通用代理  
  若要在特定平台上安装适用于 Linux 和 UNIX 的客户端，你必须对要安装客户端的计算机使用合适的客户端安装包。 合适的客户端安装包是从 [Microsoft 下载中心](http://go.microsoft.com/fwlink/?LinkID=525184)下载的每个客户端的一部分。 除了客户端安装包，客户端下载内容还包括在每台计算机上管理客户端安装的 **install** 脚本。  
 
  在安装客户端时，可以使用相同的过程和命令行属性而不考虑您使用的客户端安装包。  
 
- 有关适用于 Linux 和 UNIX 的每个版本的 Configuration Manager 客户端支持的操作系统、平台和客户端安装包的详细信息，请参阅 [Linux 和 UNIX 服务器](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#bkmk_LinuxOS)。  
+ 有关适用于 Linux 和 UNIX 的每个版本的 Configuration Manager 客户端支持的操作系统、平台和客户端安装包的详细信息，请参阅 [Linux 和 UNIX 服务器](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices#linux-and-unix-servers)。  
 
-##  <a name="a-namebkmkinstalllnuclienta-install-the-client-on-linux-and-unix-servers"></a><a name="BKMK_InstallLnUClient"></a> 在 Linux 和 UNIX 服务器上安装客户端  
+##  <a name="BKMK_InstallLnUClient"></a> 在 Linux 和 UNIX 服务器上安装客户端  
  若要安装适用于 Linux 和 UNIX 的客户端，请在每个 Linux 或 UNIX 的计算机上运行脚本。 该脚本命名为 **安装** ，同时支持命令行属性，修改安装行为和引用客户端安装包。 安装脚本和客户端安装包必须位于客户端上。 客户端安装程序包中包含针对特定 Linux 或 UNIX 的操作系统和平台的 Configuration Manager 客户端文件。
 每个客户端安装包包含所有必需的文件以完成客户端安装并与不同的是基于 Windows 的计算机，不会下载其他文件从管理点或其他源位置。  
 
@@ -72,7 +72,7 @@ ms.lasthandoff: 12/16/2016
 
      示例：ccm-Universal-x64.&lt;build\>.tar  
 
-###  <a name="a-namebkmktoinstalllnuclinenta-to-install-the-configuration-manager-client-on-linux-and-unix-servers"></a><a name="BKMK_ToInstallLnUClinent"></a> 若要在 Linux 和 UNIX 服务器上安装 Configuration Manager 客户端  
+###  <a name="BKMK_ToInstallLnUClinent"></a> 若要在 Linux 和 UNIX 服务器上安装 Configuration Manager 客户端  
 
 1.  在 Windows 计算机上，为你想要管理的 [Linux 或 UNIX 服务器下载合适的客户端文件](http://go.microsoft.com/fwlink/?LinkID=525184) 。  
 
@@ -91,7 +91,7 @@ ms.lasthandoff: 12/16/2016
 
 6.  脚本运行后，通过查看“/var/opt/microsoft/scxcm.log”  文件验证安装 。 此外，可以通过在 Configuration Manager 控制台中“资产和符合性”工作区的“设备”节点中查看客户端的详细信息，确认客户端是否已安装并与站点通信。  
 
-###  <a name="a-namebkmkcmdlineinstalllnuclienta-command-line-properties-for-installing-the-client-on-linux-and-unix-servers"></a><a name="BKMK_CmdLineInstallLnUClient"></a> 在 Linux 和 UNIX 服务器上安装客户端的命令行属性  
+###  <a name="BKMK_CmdLineInstallLnUClient"></a> 在 Linux 和 UNIX 服务器上安装客户端的命令行属性  
  以下属性可用于修改安装脚本的行为：  
 
 > [!NOTE]  
@@ -117,7 +117,8 @@ ms.lasthandoff: 12/16/2016
 
      可选。 指定通过 FQDN，客户端用于提交状态消息的回退状态点服务器。  
 
-     有关回退状态点的详细信息，请参阅 [Determine Whether You Require a Fallback Status Point](../../../core/clients/deploy/plan/determine-the-site-system-roles-for-clients.md#BKMK_Determine_FSP) 。  
+     有关回退状态点的详细信息，请参阅 [Determine Whether You Require a Fallback Status Point](/sccm/core/clients/deploy/plan/determine-the-site-system-roles-for-clients#determine-if-you-need-a-fallback-status-point) 。  
+
 
 -   **-dir &lt;directory\>**  
 
@@ -216,14 +217,14 @@ ms.lasthandoff: 12/16/2016
 
      示例：-rootcerts &lt;Full path and file name\>,&lt;Full path and file name\>  
 
-###  <a name="a-namebkmkuninstalllnuclienta-uninstalling-the-client-from-linux-and-unix-servers"></a><a name="BKMK_UninstallLnUClient"></a> 从 Linux 和 UNIX 服务器上卸载客户端  
+###  <a name="BKMK_UninstallLnUClient"></a> 从 Linux 和 UNIX 服务器上卸载客户端  
  若要卸载适用于 Linux 和 UNIX 的 Configuration Manager 客户端，请使用卸载实用工具 **uninstall**。 默认情况下，此文件位于 **/选择/microsoft/configmgr/bin/** 客户端计算机上的文件夹。 这将卸载命令不支持任何命令行参数，并且将删除所有从服务器向客户端软件相关的文件。  
 
  若要卸载客户端，请使用下面的命令行: **/opt/microsoft/configmgr/bin/uninstall**  
 
  安装适用于 Linux 和 UNIX 的 Configuration Manager 客户端后，你不需要重新启动计算机。  
 
-##  <a name="a-namebkmkconfiglnuclientcommuincationsa-configure-request-ports-for-the-client-for-linux-and-unix"></a><a name="BKMK_ConfigLnUClientCommuincations"></a> 适用于 Linux 和 UNIX 客户端配置请求端口  
+##  <a name="BKMK_ConfigLnUClientCommuincations"></a> 适用于 Linux 和 UNIX 客户端配置请求端口  
  与基于 Windows 的客户端类似，适用于 Linux 和 UNIX 的 Configuration Manager 客户端使用 HTTP 和 HTTPS 与 Configuration Manager 站点系统通信。 Configuration Manager 客户端用于通信的端口称为请求端口。  
 
  当你安装适用于 Linux 和 UNIX 的 Configuration Manager 客户端时，你可以通过指定 **-httpport** 和 **-httpsport** 安装属性更改客户端默认请求端口 。 当未指定的安装属性和自定义的值时，客户端将使用默认值。 默认值为 **80** 对于 HTTP 流量和 **443** HTTPS 通信。  
@@ -232,10 +233,10 @@ ms.lasthandoff: 12/16/2016
 
  有关客户端通信端口号的详细信息，请参阅[如何在 System Center Configuration Manager 中配置客户端通信端口](../../../core/clients/deploy/configure-client-communication-ports.md)。  
 
-##  <a name="a-namebkmkconfigclientmpa-configure-the-client-for-linux-and-unix-to-locate-management-points"></a><a name="BKMK_ConfigClientMP"></a> 配置客户端适用于 Linux 和 UNIX 来查找管理点  
+##  <a name="BKMK_ConfigClientMP"></a> 配置客户端适用于 Linux 和 UNIX 来查找管理点  
  在安装适用于 Linux 和 UNIX 的 Configuration Manager 客户端时，必须指定用作初始联系点的管理点。  
 
  适用于 Linux 和 UNIX 的 Configuration Manager 客户端将在客户端安装时联系此管理点。 如果客户端无法联系管理点，客户端软件将不断重试直到成功。  
 
- 有关客户端如何查找管理点的详细信息，请参阅 [Locating Management Points](../../../core/clients/deploy/assign-clients-to-a-site.md#BKMK_LocatingMPs)。
+ 有关客户端如何查找管理点的详细信息，请参阅 [Locating Management Points](/sccm/core/clients/deploy/assign-clients-to-a-site#locating-management-points)。
 

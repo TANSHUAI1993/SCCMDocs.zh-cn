@@ -18,9 +18,9 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0d6479bcc134103e6005159a8ea295a5f359a436
-ms.openlocfilehash: ef68a9f998ea6ff9628e01f6ac622711de68375d
-ms.lasthandoff: 12/16/2016
+ms.sourcegitcommit: 3b1451edaed69a972551bd060293839aa11ec8b2
+ms.openlocfilehash: be9596537e9c80a6d78aa0685d33382bfd242afe
+ms.lasthandoff: 03/28/2017
 
 
 ---
@@ -31,14 +31,15 @@ ms.lasthandoff: 12/16/2016
 
 相较于要求用户输入其凭据以注册设备的用户注册，System Center Configuration Manager 本地移动设备管理中的批量注册是自动化程度更高的注册设备的方式。  批量注册使用注册程序包在注册过程中对设备进行身份验证。 包（.ppkg 文件）中包含证书配置文件和可选的 Wi-Fi 配置文件（设备需要 intranet 连接以支持注册时选择）。  
 
- > [!NOTE]  
+> [!NOTE]  
 >  Configuration Manager 的 Current Branch 支持针对运行以下操作系统的设备的本地移动设备管理中的注册：  
 >   
->  -   Windows 10 企业版  
+> -  Windows 10 企业版  
 > -   Windows 10 专业版  
-> -   Windows 10 协同版（自 Configuration Manager 版本 1602 起）  
+> -   Windows 10 协同版  
 > -   Windows 10 移动版  
 > -   Windows 10 移动企业版
+> -   Windows 10 IoT 企业版   
 
 以下任务说明了如何为本地移动设备管理批量注册电脑和设备：  
 

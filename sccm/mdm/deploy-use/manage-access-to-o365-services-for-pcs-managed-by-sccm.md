@@ -16,9 +16,9 @@ author: andredm7
 ms.author: andredm
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: b7c55ce5629565cb1e3aede6680ef1796f56cb20
-ms.lasthandoff: 03/06/2017
+ms.sourcegitcommit: 23b1d24e908d04b64c3bbfa518793a44e696d468
+ms.openlocfilehash: e9028a54e538b4ec987dbaeb5ba1ee22ad091728
+ms.lasthandoff: 03/29/2017
 
 
 ---
@@ -51,7 +51,7 @@ ms.lasthandoff: 03/06/2017
 
 -   Windows 8.1  
 
--   尚不完全支持 Windows 10。  如果你尝试设置为对 Windows 10 电脑进行的条件访问，则可能会遇到一些问题。  有关更多详细信息，请参阅 [已知问题](#bkmk_KnownIssues) 。  
+-   Windows 10 
 
 ## <a name="configure-conditional-access"></a>配置条件访问  
  若要设置条件访问，必须先创建合规性策略并配置条件访问策略。 为电脑配置条件访问策略时，可以要求电脑符合合规性策略，以便能够访问 Exchange Online 和 SharePoint Online 服务。  
@@ -135,15 +135,16 @@ ms.lasthandoff: 03/06/2017
 
  因不合规而被阻止的最终用户将在 System Center Configuration Manager 软件中心查看合规性信息，并且在纠正合规性问题之后启动新的策略评估。  
 
-##  <a name="bkmk_KnownIssues"></a> 已知问题  
- 使用此功能时，可能会遇到以下问题：  
+<!---
+##  <a name="bkmk_KnownIssues"></a> Known issues  
+ You may see the following issues when using this feature:  
 
--   在此 1602 更新中，不强制执行 5 天合规性。 即使最终用户设备上的合规性检查发生在 5 天多前，用户仍然可以访问 Office 365 和 SharePoint Online。  
+-   In this 1602 update,  the 5 day compliance is not enforced. Even if compliance check on the end-user's device has happened more than 5 days ago, users still can access Office 365 and SharePoint online.  
 
--   设备不符合合规性策略时，不会自动显示原因。 最终用户必须转到新的软件中心才能查找不符合的原因。 原因显示在软件中心的设备合规性部分中。  
+-   When a device is not compliant with the compliance policy, the reason is not automatically displayed. The end- user must go to the new Software Center to find the reason for non-compliance. The reason is displayed in the Device compliance section of the Software Center.  
 
--   尝试访问 O365 和/或 SharePoint Online 资源时，Windows 10 用户可能会遇到多次访问失败。 请注意，对于 Windows 10，不完全支持条件访问。  
-
+-   Windows 10 users may see multiple access failures when trying to reach O365 and/or SharePoint online resources. Note that conditional access is not fully supported for Windows 10.  
+--->
 ### <a name="see-also"></a>另请参阅  
  [使用 System Center Configuration Manager 保护数据和站点基础结构](../../protect/understand/protect-data-and-site-infrastructure.md)
 
