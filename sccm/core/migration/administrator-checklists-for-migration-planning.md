@@ -152,7 +152,7 @@ ms.lasthandoff: 12/30/2016
 
     在将客户端迁移到目标层次结构时，客户端与它以前被你迁移到该目标层次结构的数据关联。  
 
-    有关详细信息，请参阅 [Planning a client migration strategy in System Center Configuration Manager](../../core/migration/planning-a-client-migration-strategy.md)。  
+    有关详细信息，请参阅 [在 System Center Configuration Manager 中规划客户端迁移策略](../../core/migration/planning-a-client-migration-strategy.md)。  
 
 -   **升级或重新分配共享分发点：**  
 
@@ -164,5 +164,5 @@ ms.lasthandoff: 12/30/2016
 
 -   **完成迁移：**  
 
-    在从源层次结构中的所有站点迁移了数据和客户端且升级了适用的分发点之后，就可以完成迁移。 若要完成迁移，请停止为源层次结构中的每个源站点收集数据。 之后，可以删除不需要的迁移信息，并解除源层次结构的基础结构的授权。 有关详细信息，请参阅 [Planning to complete migration in System Center Configuration Manager](../../core/migration/planning-to-complete-migration.md)。  
+    在从源层次结构中的所有站点迁移了数据和客户端且升级了适用的分发点之后，就可以完成迁移。 若要完成迁移，请停止为源层次结构中的每个源站点收集数据。 之后，可以删除不需要的迁移信息，并解除源层次结构的基础结构的授权。 有关详细信息，请参阅 [计划完成 System Center Configuration Manager 中迁移](../../core/migration/planning-to-complete-migration.md)。  
 
