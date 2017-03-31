@@ -17,9 +17,9 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: cec595d473ca2459e43a7fa1c70b7668a8a48986
-ms.openlocfilehash: d529a058968cf99dce77997844b33ff5dc7c0004
-ms.lasthandoff: 01/21/2017
+ms.sourcegitcommit: 507bad02c6e028f09a8b0c8a566ac55f7c3942a5
+ms.openlocfilehash: 544c3bea0c7df96887ee1717f061c39c64b82d01
+ms.lasthandoff: 03/22/2017
 
 
 ---
@@ -35,11 +35,12 @@ ms.lasthandoff: 01/21/2017
  > [!NOTE]  
 >  Configuration Manager 的 Current Branch 支持针对运行以下操作系统的设备的本地移动设备管理中的注册：  
 >   
->  -   Windows 10 企业版  
+> -  Windows 10 企业版  
 > -   Windows 10 专业版  
 > -   Windows 10 协同版\(自 Configuration Manager 版本 1602 起\)  
 > -   Windows 10 移动版  
-> -   Windows 10 移动企业版   
+> -   Windows 10 移动企业版
+> -   Windows 10 IoT 企业版   
 
 ##  <a name="bkmk_intune"></a>使用 Microsoft Intune 订阅  
  若要开始使用本地移动设备管理，你需要 Microsoft Intune 订阅。 仅跟踪设备授权时需要订阅，订阅不用于管理或储存设备的管理信息。 所有管理均由你组织的企业使用本地 Configuration Manager 基础结构来进行。  

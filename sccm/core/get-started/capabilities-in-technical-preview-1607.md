@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
-ms.openlocfilehash: 54fc16c104ab25f3650ad1c38a2044abaee96a31
+ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
+ms.openlocfilehash: 4717e0f8eef01501fb5b5790e855c476c1ca4590
+ms.lasthandoff: 03/21/2017
 
 ---
 # <a name="capabilities-in-technical-preview-1607-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1607 版中的功能
@@ -29,7 +30,7 @@ ms.openlocfilehash: 54fc16c104ab25f3650ad1c38a2044abaee96a31
 
 **以下是可以试用的此版本的新功能。**  
 
-## <a name="a-namedmpeditionaimprovements-to-the-windows-10-edition-upgrade-policy"></a><a name="dmp_edition"></a>对 Windows 10 版本升级策略的改进
+## <a name="dmp_edition"></a>对 Windows 10 版本升级策略的改进
 
 在此版本中，已对此策略进行了以下改进：
 
@@ -59,7 +60,7 @@ Configuration Manager 版本 1602 中引入了软件中心的自定义品牌。 
 
 2. 如果已安装应用程序目录网站点站点服务器角色，则软件中心将显示在应用程序目录网站点站点服务器角色属性中指定的组织名称和颜色。 有关详细信息，请参阅[应用程序目录网站点的配置选项](../../core/servers/deploy/configure/configuration-options-for-site-system-roles.md#BKMK_ApplicationCatalog_Website)。
 
-3. 如果已配置 Microsoft Intune 订阅并将其连接到 Configuration Manager 环境，则软件中心将显示 Intune 订阅属性中指定的组织名称、颜色和公司徽标。 有关详细信息，请参阅 [Configuring the Microsoft Intune subscription](../../mdm/deploy-use/setup-hybrid-mdm.md#step-3-configure-intune-subscription)。
+3. 如果已配置 Microsoft Intune 订阅并将其连接到 Configuration Manager 环境，则软件中心将显示 Intune 订阅属性中指定的组织名称、颜色和公司徽标。 有关详细信息，请参阅[配置 Microsoft Intune 订阅](/mdm/deploy-use/configure-intune-subscription)。
 
 ## <a name="use-the-same-network-adapter-for-multiple-pxe-initiated-deployments"></a>对多个 PXE 启动的部署使用相同的网络适配器
 在 Technical Preview 版本 1607 中，当使用以太网适配器映射多个设备（如在多个设备上使用的 USB 以太网适配器）时，可以启用允许输入以太网适配器的硬件标识符的新设置。 在执行 PXE 安装和客户端注册时，Configuration Manager 忽略列表中的硬件标识符。
@@ -76,9 +77,4 @@ Configuration Manager 版本 1602 中引入了软件中心的自定义品牌。 
 2. 在“主页”  选项卡上的“站点”  组中，单击“层次结构设置” 。
 3. 转到“客户端批准和冲突的记录”选项卡。
 4. 单击“重复硬件标识符”部分中的“添加”，以添加新的硬件标识符。
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

@@ -2,7 +2,7 @@
 title: "升级到 System Center Configuration Manager | Microsoft Docs"
 description: "了解从运行 System Center 2012 Configuration Manager 的站点和层次结构成功进行就地升级的步骤。"
 ms.custom: na
-ms.date: 2/23/2017
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 8f4ec982a54cf3cefef310268a54850e70e2e63a
-ms.openlocfilehash: 49e3a9d6f4b8e1afbb76fcba33a7fb58e5a6b13f
-ms.lasthandoff: 03/13/2017
+ms.sourcegitcommit: 6424fb07802b62820b4dc78a58ab30d3b956abef
+ms.openlocfilehash: ca07b46db0967ca03cc5e858b835d2c2108f1210
+ms.lasthandoff: 03/17/2017
 
 
 ---
@@ -34,6 +34,7 @@ ms.lasthandoff: 03/13/2017
  > 管理 System Center Configuration Manager 站点和层次结构基础结构时，术语“升级”、“更新”和“安装”用于描述三种不同概念。 若要了解每个术语的使用方法，请参阅[有关升级、更新和安装](/sccm/core/understand/upgrade-update-install)。
 
 ##  <a name="bkmk_path"></a> 就地升级路径  
+
 **升级到 1606 版本**  
 2016 年 12 月 15 日，为添加对其他升级方案的支持，已发布版本 1606 的基线媒体。 此新版本支持将以下版本升级到 System Center Configuration Manager 版本 1606 的完整许可版本：  
 -   System Center Configuration Manager 版本 1606 的评估版安装
@@ -78,8 +79,8 @@ ms.lasthandoff: 03/13/2017
 
 查看正在用于承载站点系统角色的服务器操作系统：  
 
--   System Center 2012 Configuration Manager 支持的某些较旧操作系统不受 System Center Configuration Manager 支持，必须重定位或删除这些操作系统上的站点系统角色，然后才进行升级  
--   Configuration Manager 的先决条件检查程序不在站点服务器或远程计算机上验证站点系统角色的先决条件  
+-   System Center 2012 Configuration Manager 支持的某些较旧操作系统不受 System Center Configuration Manager 支持，必须重定位或删除这些操作系统上的站点系统角色，然后才进行升级。 请参阅[站点系统服务器支持的操作系统](../../../../core/plan-design/configs/supported-operating-systems-for-site-system-servers.md)文档。   
+-   Configuration Manager 的先决条件检查程序不在站点服务器或远程站点系统上验证站点系统角色的先决条件  
 
 查看承载站点系统角色的每台计算机所需的先决条件组件：  
 

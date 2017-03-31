@@ -16,9 +16,9 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: c74b553ab76a2b77b0d893151351132da05a640d
-ms.openlocfilehash: 76ce5f413f406088862fb310bbea24140317ca06
-ms.lasthandoff: 01/04/2017
+ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
+ms.openlocfilehash: 9cab5b91a94e8bf2ad96a8a706f46c58e2a3d712
+ms.lasthandoff: 03/21/2017
 
 
 ---
@@ -28,7 +28,7 @@ ms.lasthandoff: 01/04/2017
 
 本主题介绍在 Mac 计算机上部署和维护 Configuration Manager 客户端的方法。 若要了解将客户端部署到 Mac 计算机之前需要配置的内容，请参阅[将客户端软件部署到 Macs 的准备工作](/sccm/core/clients/deploy/prepare-to-deploy-mac-clients)。
 
-当你为 Mac 计算机安装新客户端时，你可能还需要安装 Configuration Manager 更新以反映 Configuration Manager 控制台中的新客户端信息。 
+当你为 Mac 计算机安装新客户端时，你可能还需要安装 Configuration Manager 更新以反映 Configuration Manager 控制台中的新客户端信息。
 
 在这些过程中，有两个选项可用于安装客户端证书。 在[将客户端软件部署到 Macs 的准备工作](/sccm/core/clients/deploy/prepare-to-deploy-mac-clients#certificate-requirements)中阅读用于 Macs 的客户端证书的相关详细信息。  
 
@@ -84,7 +84,7 @@ ms.lasthandoff: 01/04/2017
 >  有关 Configuration Manager 客户端设置的详细信息，请参阅[如何在 System Center Configuration Manager 中配置客户端设置](../../../core/clients/deploy/configure-client-settings.md)。  
 
 ## <a name="download-the-client-source-files-for-macs"></a>为 Mac 下载客户端源文件  
-  
+
 1.  下载 Mac OS X 客户端文件包“ConfigmgrMacClient.msi” 并将其保存在运行 Windows 的计算机上。  
 
      Configuration Manager 安装媒体上不提供此文件。 可以从 [Microsoft Download Center（Microsoft 下载中心）](http://go.microsoft.com/fwlink/?LinkID=525184)下载此文件。  
@@ -95,7 +95,7 @@ ms.lasthandoff: 01/04/2017
 
 4.  在 Mac 计算机上，运行 Macclient.dmg 文件以将文件提取到本地磁盘上的文件夹中。  
 
-5.  在此文件夹中，请确保提取 Ccmsetup 和 CMClient.pkg 文件，并且创建一个包含 CMDiagnostics、CMUninstall、CMAppUtil 和 CMEnroll 工具的名称为“工具”的文件夹。 
+5.  在此文件夹中，请确保提取 Ccmsetup 和 CMClient.pkg 文件，并且创建一个包含 CMDiagnostics、CMUninstall、CMAppUtil 和 CMEnroll 工具的名称为“工具”的文件夹。
 
     -  **Ccmsetup**：在 Mac 计算机上安装 Configuration Manager 客户端。  
 
@@ -108,7 +108,7 @@ ms.lasthandoff: 01/04/2017
     -   **CMEnroll**：请求和安装 Mac 计算机的客户端证书，以便以后可以安装 Configuration Manager 客户端。   
 
 ## <a name="install-the-client-and-then-enroll-the-client-certificate-on-the-mac"></a>在 Mac 上安装客户端，然后注册客户端证书  
-  
+
 可以使用 [Mac 计算机注册向导](#enroll-the-client-with-the-mac-computer-enrollment-wizard)注册单个客户端。
 
 有关可实现注册多个客户端的自动化操作，请使用 [CMEnroll 工具](#client-and-certificate-automation-with-cmenroll)。   
@@ -124,7 +124,7 @@ ms.lasthandoff: 01/04/2017
 
         -   “域\名称”。 例如：“contoso\mnorth”  
 
-        -   'user@domain'。 例如： 'mnorth@contoso.com'  
+        -   'user@domain'. 例如：“mnorth@contoso.com”  
 
             > [!IMPORTANT]  
             >  使用电子邮件地址填充“用户名”字段时，Configuration Manager 将自动使用该电子邮件地址的域名和注册代理点服务器的默认名称填充“服务器名称”字段。 如果此域名和服务器名称与注册代理点服务器的名称不匹配，请告知用户在注册其 Mac 计算机时要使用的正确名称。  
@@ -156,7 +156,7 @@ ms.lasthandoff: 01/04/2017
 
     -   “域\名称”。 例如：“contoso\mnorth”  
 
-    -   'user@domain'。 例如： 'mnorth@contoso.com'  
+    -   'user@domain'. 例如：“mnorth@contoso.com”  
 
      用户名和对应的密码必须与被授予 Mac 客户端证书模板的“读取”和“注册”权限的 Active Directory 用户帐户匹配。  
 
@@ -196,12 +196,12 @@ ms.lasthandoff: 01/04/2017
 > -   Configuration Manager 客户端安装创建的物料清单 (BOM) 文件和属性列表 (.plist) 文件。  
 > -   /Library/Application Support/Microsoft/CCM/Logs 文件夹的内容。  
 >   
->  CmDiagnostics 收集的信息会添加到一个 zip 文件中，该文件将保存到计算机的桌面上并且名为 cmdiag-<主机名\>**-**<日期和时间\>.zip。  
+>  CmDiagnostics 收集的信息会添加到一个 zip 文件中，该文件将保存到计算机的桌面上并且名为 cmdiag-*<主机名\>***-***&gt;日期和时间\>*.zip。***
 
 
 ##  <a name="use-a-certificate-request-and-installation-method-that-is-independent-from-configuration-manager"></a>使用与 Configuration Manager 无关的证书请求和安装方法  
 
-首先，执行[将客户端软件部署到 Macs 的准备工作](/sccm/core/clients/deploy/prepare-to-deploy-mac-clients)中的这些特定任务： 
+首先，执行[将客户端软件部署到 Macs 的准备工作](/sccm/core/clients/deploy/prepare-to-deploy-mac-clients)中的这些特定任务：
 
 1. [将 Web 服务器证书部署到站点系统服务器](/sccm/core/clients/deploy/prepare-to-deploy-mac-clients#deploy-a-web-server-certificate-to-site-system-servers)
 

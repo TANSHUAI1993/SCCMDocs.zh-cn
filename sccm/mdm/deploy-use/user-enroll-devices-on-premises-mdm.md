@@ -17,9 +17,9 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 7d852843d0d3fe7c9ab0947c4b396cee0a92c754
-ms.lasthandoff: 03/06/2017
+ms.sourcegitcommit: 507bad02c6e028f09a8b0c8a566ac55f7c3942a5
+ms.openlocfilehash: 8c7438c2cc0bc66654eb3e74de10553df53181d9
+ms.lasthandoff: 03/22/2017
 
 
 ---
@@ -29,14 +29,15 @@ ms.lasthandoff: 03/06/2017
 
 借助 System Center Configuration Manager 本地移动设备管理，如果用户已获得注册权限（通过更新客户端设置的方式）并且设备已安装所需的根证书以与承载所需站点系统角色的服务器进行受信任的通信，则可以注册设备。 有关如何设置注册的详细信息，请参阅 [Set up device enrollment for On-premises Mobile Device Management in System Center Configuration Manager](../../mdm/get-started/set-up-device-enrollment-on-premises-mdm.md)（在 System Center Configuration Manager 中为本地移动设备管理设置设备注册）。  
 
- > [!NOTE]  
+> [!NOTE]  
 >  Configuration Manager 的 Current Branch 支持针对运行以下操作系统的设备的本地移动设备管理中的注册：  
 >   
->  -  Windows 10 企业版  
+> -  Windows 10 企业版  
 > -   Windows 10 专业版  
-> -   Windows 10 协同版（自 Configuration Manager 版本 1602 起）  
+> -   Windows 10 协同版\(自 Configuration Manager 版本 1602 起\)  
 > -   Windows 10 移动版  
 > -   Windows 10 移动企业版
+> -   Windows 10 IoT 企业版   
 
 以下任务说明了如何注册和验证本地移动设备管理的计算机和设备的注册：  
 

@@ -2,7 +2,7 @@
 title: "Configuration Manager 使用的端口 | Microsoft Docs"
 description: "了解有关 System Center Configuration Manager 用于连接的必需的和可自定义端口。"
 ms.custom: na
-ms.date: 3/1/2017
+ms.date: 3/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,9 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6bfc5c0e3c0bdc8408ad2dd2a7807ef3e018ef60
-ms.openlocfilehash: 8cd1c5363ba05dbb35ca5a0daf32979dd8b51b19
-ms.lasthandoff: 03/01/2017
+ms.sourcegitcommit: 4c2906c2a963e0ae92e3c0d223afb7a47377526a
+ms.openlocfilehash: ffc2adb34427aa62f4a377e887c2ff54d47abeff
+ms.lasthandoff: 03/20/2017
 
 
 ---
@@ -603,6 +603,14 @@ Configuration Manager 不允许您为以下通信类型配置端口：
     -   SQL Server 服务，默认为端口 TCP 1433。  
 
 -   SQL Server 数据库引擎与各种 Configuration Manager 站点系统角色之间的“站点内通信”默认使用端口 TCP 1433。  
+
+- Configuration Manager 使用相同的端口和协议与承载站点数据库的每个 SQL 可用性组副本进行通信，就像该副本是独立的 SQL Server 实例。
+
+使用 Azure 且站点数据库位于内部或外部负载均衡器后面时，在每个副本上配置以下防火墙异常，并为以下端口添加负载均衡规则：
+ - SQL over TCP: TCP 1433
+ - SQL Server Service Broker: TCP 4022
+ - 服务器消息块 (SMB): TCP 445
+ - RPC 终结点映射程序: TCP 135
 
 > [!WARNING]  
 >  Configuration Manager 不支持动态端口。 由于 SQL Server 命名实例默认情况下使用动态端口来连接到数据库引擎，因此，在使用命名实例时，必须手动配置要用于站点内通信的静态端口。  

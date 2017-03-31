@@ -17,9 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: dcbcd57b95f304f007e92ebe2b9aeefb4b579662
-ms.openlocfilehash: 92d3c215569916a5557309d7f488aa88f387da92
-ms.lasthandoff: 03/09/2017
+ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
+ms.openlocfilehash: c3ca3b895d54b6dc886068b92b39d0d95c466de2
+ms.lasthandoff: 03/21/2017
 
 
 ---
@@ -207,6 +207,11 @@ ms.lasthandoff: 03/09/2017
 -   **主站点**：已启用    
 -   辅助站点：不可用  
 
+**删除过期 MDM 批量注册包记录**：注册证书过期后使用此任务删除旧的批量注册证书和对应的配置文件。 有关详细信息，请参阅[创建证书配置文件](/sccm/protect/deploy-use/create-certificate-profiles)。
+-   **管理中心站点**：已启用
+-   **主站点**：已启用
+-   辅助站点：不可用
+
 **删除非活动的客户端发现数据**：使用此任务从数据库中删除非活动的客户端发现数据。 当客户端标记为过时并且由针对客户端状态所做的配置进行标记时，会将客户端标记为不活动。
 
 此任务仅针对作为 Configuration Manager 客户端的资源运行。 它不同于删除任何过期的发现数据记录的“删除过期的发现数据”任务。 在站点运行此任务时，它会从层次结构内所有站点的数据库中删除数据。 有关详细信息，请参阅 [How to configure client status in System Center Configuration Manager](../../../core/clients/deploy/configure-client-status.md)。  
@@ -242,7 +247,7 @@ ms.lasthandoff: 03/09/2017
 **删除孤立客户端部署状态记录**：使用此任务可定期清除包含客户端部署状态信息的表。 此任务将清除与已过时或已解除授权的设备关联的记录。  
 -   **管理中心站点**：已启用    
 -   **主站点**：已启用    
--   辅助站点：不可用 
+-   辅助站点：不可用
 
 **删除未使用的应用程序修订版本**：使用此任务删除不再被引用的应用程序修订版本。 有关详细信息，请参阅[如何在 System Center Configuration Manager 中修订和取代应用程序](../../../apps/deploy-use/revise-and-supersede-applications.md)。  
 

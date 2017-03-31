@@ -16,9 +16,9 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: bdd7961d9126dc6f3c1ae1fec1842c862e8a7c6d
-ms.openlocfilehash: 12633a7b9f799ffc74e0ee657e091595ed7eaf67
-ms.lasthandoff: 02/22/2017
+ms.sourcegitcommit: 507bad02c6e028f09a8b0c8a566ac55f7c3942a5
+ms.openlocfilehash: 4afba7b7702aa12b1cfcaf454e23b0dfb3274e7f
+ms.lasthandoff: 03/22/2017
 
 ---
 # <a name="supported-operating-systems-for-clients-and-devices-for-system-center-configuration-manager"></a>System Center Configuration Manager 的客户端和设备支持的操作系统
@@ -309,28 +309,30 @@ ms.lasthandoff: 02/22/2017
 -   [Microsoft Intune 中的移动设备管理功能](https://docs.microsoft.com/intune/get-started/choose-how-to-manage-devices)  
 -   [Microsoft Intune 中的 Windows PC 管理功能](https://docs.microsoft.com/intune/get-started/windows-pc-management-capabilities-in-microsoft-intune)  
 
-##  <a name="a-namebkmkonpremosa-on-premises-mobile-device-management"></a><a name="bkmk_OnpremOS"></a>本地移动设备管理  
+##  <a name="bkmk_OnpremOS"></a>本地移动设备管理  
  Configuration Manager 提供内置功能来管理本地设备，无需安装客户端软件。  有关详细信息，请参阅[在 System Center Configuration Manager 中使用本地基础结构管理移动设备](../../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md)。  
 
  **要求和限制：**  
 
--   必须在层次结构顶层站点上配置**服务连接点**  
+-   必须在层次结构顶层站点上配置**服务连接点**。  
 
 **支持的操作系统：**  
 
--   **Windows 10 Pro**（x86、x64）  
+- **Windows 10 Pro**（x86、x64）  
 
--   **Windows 10 Pro Enterprise**（x86、x64）  
+- **Windows 10 Pro Enterprise**（x86、x64）  
 
--   **Windows 10 IoT 企业版**（x86、x64）
+- **Windows 10 IoT 企业版**（x86、x64）
 
--   **Windows 10 移动版**  
+- **Windows 10 移动版**  
 
--   **Windows 10 移动企业版**  
+- **Windows 10 移动企业版**  
 
--  **Windows 10 IoT 移动企业版**
+- **Windows 10 IoT 移动企业版**
 
-##  <a name="a-namebkmkexsrvconosa-exchange-server-connector"></a><a name="bkmk_ExSrvConOS"></a> Exchange Server 连接器  
+- **Surface Hub 的 Windows 10 协同版**
+
+##  <a name="bkmk_ExSrvConOS"></a> Exchange Server 连接器  
 Configuration Manager 支持连接到 Exchange Server 的设备的有限管理，无需安装 Configuration Manager 客户端。 有关详细信息，请参阅[使用 System Center Configuration Manager 和 Exchange 管理移动设备](../../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)。  
 
  **要求和限制：**  

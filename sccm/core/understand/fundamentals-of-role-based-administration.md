@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: a8cb3c9850b183eec156c37a181c04088b71805e
-ms.openlocfilehash: 40837306816639ff8cea8930fec75b05edc5164a
+ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
+ms.openlocfilehash: ddf2ad1cae51c1e36df5a6d86822e2b9abe604e2
+ms.lasthandoff: 03/21/2017
 
 
 ---
@@ -65,7 +66,7 @@ ms.openlocfilehash: 40837306816639ff8cea8930fec75b05edc5164a
 > [!IMPORTANT]  
 >  站点间复制的延迟可能会阻止站点收到基于角色的管理的变化。 有关如何监视站点间数据库复制的信息，请参阅 [System Center Configuration Manager 中站点间的数据传输](../../core/servers/manage/data-transfers-between-sites.md)主题。  
 
-##  <a name="a-namebkmkplanrolesa-security-roles"></a><a name="bkmk_Planroles"></a> 安全角色  
+##  <a name="bkmk_Planroles"></a> 安全角色  
  安全角色用于向管理用户授予安全权限。 安全角色是安全权限的组合，你将这些权限分配给管理用户，以便他们能够执行管理任务。 这些安全权限定义管理用户可以执行的管理操作，以及为特定对象类型授予的权限。 最佳安全方案是分配提供最低权限的安全角色。  
 
  Configuration Manager 具有多个内置的安全角色，能支持常见的管理任务组合，而且用户可以创建自己的自定义安全角色，以满足特定业务需求。 内置安全角色的示例：  
@@ -79,7 +80,7 @@ ms.openlocfilehash: 40837306816639ff8cea8930fec75b05edc5164a
 > [!TIP]  
 >  在 Configuration Manager 控制台中，可以查看内置的安全角色和创建的自定义安全角色的列表（包括它们的描述）。 若要查看角色，请在“管理”工作区中展开“安全”然后选择“安全角色”。  
 
- 每个安全角色都有针对不同对象类型的特定权限。 例如，“应用程序 MMM”安全角色具有下列针对应用程序的权限：“批准”、“创建”、“删除”、“修改”、“修改文件夹”、“移动对象”、“读取/部署”、“设置安全作用域”。
+ 每个安全角色都有针对不同对象类型的特定权限。 例如，“应用程序作者”安全角色具有下列针对应用程序的权限：“批准”、“创建”、“删除”、“修改”、“修改文件夹”、“移动对象”、“读取”、“运行报告”和“设置安全作用域”。
 
  无法更改内置安全角色的权限，但可以复制角色，进行更改，然后将所做的更改另存为新的自定义安全角色。 还可以导入从另一个层次结构（例如测试网络）中导出的安全角色。 查看安全角色及其权限，以确定是使用内置的安全角色还是必须创建自己的自定义安全角色。  
 
@@ -95,7 +96,7 @@ ms.openlocfilehash: 40837306816639ff8cea8930fec75b05edc5164a
 
 有关如何创建和配置安全角色以实现基于角色的管理的信息，请参阅[为 System Center Configuration Manager 配置基于角色的管理](../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_CreateSecRole)主题中的[创建自定义安全角色](../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ConfigSecRole)和[配置安全角色](../../core/servers/deploy/configure/configure-role-based-administration.md)。  
 
-##  <a name="a-namebkmkplancola-collections"></a><a name="bkmk_planCol"></a> 集合  
+##  <a name="bkmk_planCol"></a> 集合  
  集合指定管理用户可以查看或管理的用户和计算机资源。 例如，若要使管理用户能够部署应用程序或运行远程控制，必须将它们分配到相应的安全角色，此角色授予对包含这些资源的集合的访问权限。 可以选择用户或设备的集合。  
 
  有关集合的详细信息，请参阅 [System Center Configuration Manager 中的集合简介](../../core/clients/manage/collections/introduction-to-collections.md)。  
@@ -112,7 +113,7 @@ ms.openlocfilehash: 40837306816639ff8cea8930fec75b05edc5164a
 
 有关如何配置集合以实现基于角色的管理的信息，请参阅[为 System Center Configuration Manager 配置基于角色的管理](../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ConfigColl)主题中的[配置集合以管理安全性](../../core/servers/deploy/configure/configure-role-based-administration.md)。  
 
-##  <a name="a-namebkmkplanscopea-security-scopes"></a><a name="bkmk_PlanScope"></a> 安全作用域  
+##  <a name="bkmk_PlanScope"></a> 安全作用域  
  使用安全作用域为管理用户提供对安全对象的访问。 安全作用域是作为一个组分配给管理用户的安全对象的命名集。 必须将所有安全对象分配到一个或多个安全作用域。 Configuration Manager 具有两个内置安全作用域：  
 
 -   “全部”内置的安全作用域授予对所有作用域的访问权限。 无法将对象分配到此安全作用域。  
@@ -212,9 +213,4 @@ ms.openlocfilehash: 40837306816639ff8cea8930fec75b05edc5164a
 -   不同的管理用户需要对某个对象类型的一些实例进行不同的访问。 例如，一组管理用户需要特定软件更新组的“读取”权限，而另一组管理用户需要其他软件更新组的“修改”和“删除”权限。 请为这些软件更新组创建不同的安全作用域。  
 
 有关如何配置安全作用域以实现基于角色的管理的信息，请参阅[为 System Center Configuration Manager 配置基于角色的管理](../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ConfigSecScope)主题中的[配置对象的安全作用域](../../core/servers/deploy/configure/configure-role-based-administration.md)。  
-
-
-
-<!--HONumber=Jan17_HO5-->
-
 

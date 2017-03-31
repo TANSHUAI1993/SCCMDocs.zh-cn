@@ -2,7 +2,7 @@
 title: "使用 System Center Configuration Manager 和 Microsoft Intune 设置 Windows 混合设备管理 | Microsoft Docs"
 description: "使用 System Center Configuration Manager 和 Microsoft Intune 设置 Windows 设备管理。"
 ms.custom: na
-ms.date: 03/09/2017
+ms.date: 03/17/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: nathbarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: a8218e23743dafaf8ff1166142cf2dcca1212133
-ms.openlocfilehash: 996d01d3c5d5be4544246a5f321f67b60a8f5508
-ms.lasthandoff: 03/14/2017
+ms.sourcegitcommit: 6424fb07802b62820b4dc78a58ab30d3b956abef
+ms.openlocfilehash: 4189fe34efc2ae134150a89791dc10bbab1b9d02
+ms.lasthandoff: 03/17/2017
 
 
 ---

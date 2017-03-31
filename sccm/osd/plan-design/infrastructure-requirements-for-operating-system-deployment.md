@@ -16,8 +16,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
-ms.openlocfilehash: 77ac69cecab7aa460001a8d2800e61f20a8565ed
+ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
+ms.openlocfilehash: 562e81df12e46a2332aa5e4de8b7c9e5819bde80
+ms.lasthandoff: 03/21/2017
 
 
 ---
@@ -27,7 +28,7 @@ ms.openlocfilehash: 77ac69cecab7aa460001a8d2800e61f20a8565ed
 
 System Center 2012 Configuration Manager 中的操作系统部署具有外部依赖关系和产品内依赖关系。 使用以下部分的内容帮助你准备操作系统的部署。  
 
-##  <a name="a-namebkmkexternaldependenciesa-dependencies-external-to-configuration-manager"></a><a name="BKMK_ExternalDependencies"></a> Configuration Manager 的外部依赖关系  
+##  <a name="BKMK_ExternalDependencies"></a> Configuration Manager 的外部依赖关系  
  下面提供了有关在 Configuration Manager 中部署操作系统所需的外部工具、安装工具包和操作系统的信息。  
 
 ### <a name="windows-adk-for-windows-10"></a>适用于 Windows 10 的 Windows ADK  
@@ -104,7 +105,7 @@ System Center 2012 Configuration Manager 中的操作系统部署具有外部依
 ### <a name="windows-device-drivers"></a>Windows 设备驱动程序  
  当你在目标计算机上安装操作系统，以及使用启动映像来运行 Windows PE 时，可以使用 Windows 设备驱动程序。 有关设备驱动程序的详细信息，请参阅[管理驱动程序](../get-started/manage-drivers.md)。  
 
-##  <a name="a-namebkmkinternaldependenciesa-configuration-manager-dependencies"></a><a name="BKMK_InternalDependencies"></a> Configuration Manager 依赖关系  
+##  <a name="BKMK_InternalDependencies"></a> Configuration Manager 依赖关系  
  下面提供了有关 Configuration Manager 操作系统部署先决条件的信息。  
 
 ### <a name="operating-system-image"></a>操作系统映像  
@@ -124,10 +125,10 @@ System Center 2012 Configuration Manager 中的操作系统部署具有外部依
  有关如何安装分发点和管理内容的详细信息，请参阅[管理内容和内容基础结构](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。  
 
 ### <a name="pxe-enabled-distribution-point"></a>已启用 PXE 的分发点  
- 要部署 PXE 启动的部署，你必须将分发点配置为接受来自客户端的 PXE 请求。 有关如何配置分发点的详细信息，请参阅 [分发点配置](../../core/servers/deploy/configure/install-and-configure-distribution-points.md#a-namebkmkconfigsa-distribution-point-configurations) 并查找表中的 PXE 配置类别。  
+ 要部署 PXE 启动的部署，你必须将分发点配置为接受来自客户端的 PXE 请求。 有关如何配置分发点的详细信息，请参阅[配置分发点](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#pxe)。  
 
 ### <a name="multicast-enabled-distribution-point"></a>启用多播的分发点  
- 要使用多播优化操作系统部署，你必须配置分发点以支持多播。 有关如何配置分发点的详细信息，请参阅 [分发点配置](../../core/servers/deploy/configure/install-and-configure-distribution-points.md#a-namebkmkconfigsa-distribution-point-configurations) 并查找表中的多播配置类别。  
+ 要使用多播优化操作系统部署，你必须配置分发点以支持多播。 有关如何配置分发点的详细信息，请参阅[配置分发点](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#multicast)。   
 
 ### <a name="state-migration-point"></a>状态迁移点  
  在为并排部署和全新部署捕获和还原用户状态数据时，你必须配置状态迁移点以便将用户状态数据存储在另一台计算机上。  
@@ -162,7 +163,7 @@ System Center 2012 Configuration Manager 中的操作系统部署具有外部依
 ### <a name="security-scopes-for-operating-system-deployments"></a>操作系统部署的安全作用域  
  使用安全作用域来向管理用户提供对操作系统部署中所使用的安全对象（例如操作系统和启动映像、驱动程序包以及任务序列包）的访问权限。 有关详细信息，请参阅 [安全作用域](../../core/understand/fundamentals-of-role-based-administration.md#bkmk_PlanScope)。  
 
-##  <a name="a-namebkmkwdsa-windows-deployment-services"></a><a name="BKMK_WDS"></a> Windows 部署服务  
+##  <a name="BKMK_WDS"></a> Windows 部署服务  
  必须在配置为支持 PXE 或多播的分发点所在的服务器上安装 Windows 部署服务 (WDS)。 WDS 包括在服务器的操作系统中。 对于 PXE 部署，WDS 是执行 PXE 启动的服务。 如果为 PXE 安装和启用了分发点，则 Configuration Manager 会将一个使用 WDS PXE 启动功能的提供程序安装到 WDS 中。  
 
 > [!NOTE]  
@@ -176,7 +177,7 @@ System Center 2012 Configuration Manager 中的操作系统部署具有外部依
 
 -   如果在远程服务器上安装提供程序，则必须在站点服务器和远程提供程序上安装 WDS。  
 
-###  <a name="a-namebkmkwdsanddhcpa-considerations-when-you-have-wds-and-dhcp-on-the-same-server"></a><a name="BKMK_WDSandDHCP"></a> WDS 和 DHCP 在同一个服务器上时的注意事项  
+###  <a name="BKMK_WDSandDHCP"></a> WDS 和 DHCP 在同一个服务器上时的注意事项  
  如果计划在运行 DHCP 的服务器上共同承载分发点，请考虑以下配置问题。  
 
 -   必须具有正常运行的 DHCP 服务器和活动作用域。 Windows 部署服务使用需要 DHCP 服务器的 PXE。  
@@ -208,10 +209,10 @@ System Center 2012 Configuration Manager 中的操作系统部署具有外部依
     > [!NOTE]  
     >  此外，如果服务器上需要 DHCP 授权，则需要在服务器上打开 DHCP 客户端端口 68。  
 
-##  <a name="a-namebkmksupportedosa-supported-operating-systems"></a><a name="BKMK_SupportedOS"></a> 支持的操作系统  
+##  <a name="BKMK_SupportedOS"></a> 支持的操作系统  
  所有 Windows 操作系统（在[客户端和设备支持的操作系统](../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md)中列为受支持的操作系统）都支持用于操作系统部署。  
 
-##  <a name="a-namebkmksupporteddiskconfiga-supported-disk-configurations"></a><a name="BKMK_SupportedDiskConfig"></a> 支持的磁盘配置  
+##  <a name="BKMK_SupportedDiskConfig"></a> 支持的磁盘配置  
  下表显示了引用计算机和目标计算机上 Configuration Manager 操作系统部署支持的硬盘配置组合。  
 
 |引用计算机硬盘配置|目标计算机硬盘配置|  
@@ -237,9 +238,4 @@ System Center 2012 Configuration Manager 中的操作系统部署具有外部依
 
 ## <a name="next-steps"></a>后续步骤
 [准备操作系统部署](../get-started/prepare-for-operating-system-deployment.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 
