@@ -25,9 +25,12 @@
 ###  [特性和功能](plan-design/changes/features-and-capabilities.md)
 ###  [自 Configuration Manager 2012 以来的更改内容](plan-design/changes/what-has-changed-from-configuration-manager-2012.md)
 ###  [增量版本中的新增功能](plan-design/changes/whats-new-incremental-versions.md)
+###  [版本 1702 中的新增功能](plan-design/changes/whats-new-in-version-1702.md)
 ###  [版本 1610 中的新增功能](plan-design/changes/whats-new-in-version-1610.md)
 ###  [版本 1606 中的新增功能](plan-design/changes/whats-new-in-version-1606.md)
-###  [版本 1602 中的新增功能](plan-design/changes/whats-new-in-version-1602.md)
+<!--
+###  [What's new in version 1602](plan-design/changes/whats-new-in-version-1602.md)
+-->
 ###  [已删除和已弃用的功能](plan-design/changes/removed-and-deprecated-features.md)
 
 ##   [支持的配置](plan-design/configs/supported-configurations.md)
@@ -52,6 +55,7 @@
 #### [使用基于云的分发点](plan-design/hierarchy/use-a-cloud-based-distribution-point.md)
 #### [使用请求分发点](plan-design/hierarchy/use-a-pull-distribution-point.md)
 #### [内容库](plan-design/hierarchy/the-content-library.md)
+#### [内容库清理工具](plan-design/hierarchy/content-library-cleanup-tool.md)
 #### [管理帐户以访问内容](plan-design/hierarchy/manage-accounts-to-access-content.md)
 #### [用于 Configuration Manager 客户端的对等缓存](plan-design/hierarchy/client-peer-cache.md)
 #### [内容源位置方案](plan-design/hierarchy/content-source-location-scenarios.md)
@@ -69,10 +73,13 @@
 
 ##   [诊断和使用情况数据](plan-design/diagnostics/diagnostics-and-usage-data.md)
 ###  [如何使用诊断和使用情况数据](plan-design/diagnostics/how-diagnostics-and-usage-data-is-used.md)
-###  [1511 的诊断数据](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1511.md)
-###  [1602 的诊断数据](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1602.md)
-###  [1606 的诊断数据](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1606.md)
+###  [1702 的诊断数据](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1702.md)
 ###  [1610 的诊断数据](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1610.md)
+###  [1606 的诊断数据](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1606.md)
+<!--
+###  [Diagnostic data for 1511](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1511.md)
+###  [Diagnostic data for 1602](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1602.md)
+-->
 ###  [如何收集诊断和使用情况数据](plan-design/diagnostics/how-diagnostics-and-usage-data-is-collected.md)
 ###  [如何查看诊断和使用情况数据](plan-design/diagnostics/view-diagnostics-and-usage-data.md)
 ###  [客户体验改善计划 (CEIP)](plan-design/diagnostics/customer-experience-improvement-program-ceip.md)
@@ -90,6 +97,7 @@
 ###  [设置实验室](get-started/set-up-your-lab.md)
 
 ##   [技术预览](get-started/technical-preview.md)
+###  [1703 中的功能](get-started/capabilities-in-technical-preview-1703.md)
 ###  [1702 中的功能](get-started/capabilities-in-technical-preview-1702.md)
 ###  [1701 中的功能](get-started/capabilities-in-technical-preview-1701.md)
 ###  [1612 中的功能](get-started/capabilities-in-technical-preview-1612.md)
@@ -102,10 +110,12 @@
 ###  [1605 中的功能](get-started/capabilities-in-technical-preview-1605.md)
 ###  [1604 中的功能](get-started/capabilities-in-technical-preview-1604.md)
 ###  [1603 中的功能](get-started/capabilities-in-technical-preview-1603.md)
-###  [1602 中的功能](get-started/capabilities-in-technical-preview-1602.md)
-###  [1601 中的功能](get-started/capabilities-in-technical-preview-1601.md)
-###  [1512 中的功能](get-started/capabilities-in-technical-preview-1512.md)
-###  [1511 中的功能](get-started/capabilities-in-technical-preview-1511.md)
+<!--
+###  [Capabilities in 1602](get-started/capabilities-in-technical-preview-1602.md)
+###  [Capabilities in 1601](get-started/capabilities-in-technical-preview-1601.md)
+###  [Capabilities in 1512](get-started/capabilities-in-technical-preview-1512.md)
+###  [Capabilities in 1511](get-started/capabilities-in-technical-preview-1511.md)
+-->
 
 ##   [在层次结构之间迁移数据](migration/migrate-data-between-hierarchies.md)
 ###  [制定迁移计划](migration/planning-for-migration.md)
@@ -120,7 +130,8 @@
 #### [规划迁移监视](migration/planning-to-monitor-migration-activity.md)
 #### [规划完成迁移](migration/planning-to-complete-migration.md)
 ###  [配置源层次结构和源站点](migration/configuring-source-hierarchies-and-source-sites-for-migration.md)
-###  [迁移操作](migration/operations-for-migration.md)###  [有关迁移的安全和隐私](migration/security-and-privacy-for-migration.md)
+###  [迁移操作](migration/operations-for-migration.md)
+###  [迁移的安全和隐私](migration/security-and-privacy-for-migration.md)
 
 #    [部署服务器和角色](servers/deploy/start-using.md)
 
@@ -134,6 +145,7 @@
 #### [安装站点的先决条件](servers/deploy/install/prerequisites-for-installing-sites.md)
 #### [使用安装向导](servers/deploy/install/use-the-setup-wizard-to-install-sites.md)
 #### [使用命令行](servers/deploy/install/use-a-command-line-to-install-sites.md)
+##### [命令行选项](servers/deploy/install/command-line-options-for-setup.md)
 #### [安装控制台](servers/deploy/install/install-consoles.md)
 #### [升级评估版安装](servers/deploy/install/upgrade-an-evaluation-install-to-a-full-install.md)
 #### [升级到 System Center Configuration Manager](servers/deploy/install/upgrade-to-configuration-manager.md)
@@ -157,6 +169,8 @@
 #### [选择发现方法](servers/deploy/configure/select-discovery-methods-to-use.md)
 #### [配置发现方法](servers/deploy/configure/configure-discovery-methods.md)
 ###  [站点边界和边界组](servers/deploy/configure/define-site-boundaries-and-boundary-groups.md)
+#### [边界](servers/deploy/configure/boundaries.md)
+#### [边界组](servers/deploy/configure/boundary-groups.md)
 ###  [使用 SQL Server AlwaysOn](servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)
 ###  [使用 SQL Server 群集](servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md)
 ###  [数据库文件的自定义位置](servers/deploy/configure/custom-locations-for-site-database-files.md)
@@ -164,6 +178,7 @@
 
 #    管理基础结构
 ##   [维护任务](servers/manage/maintenance-tasks.md)
+###  [维护任务参考](servers/manage/reference-for-maintenance-tasks.md)
 ##   [修改基础结构](servers/manage/modify-your-infrastructure.md)
 ###  [CD.Latest 文件夹](servers/manage/the-cd.latest-folder.md)
 ##   [升级本地基础结构](servers/manage/upgrade-on-premises-infrastructure.md)
@@ -176,14 +191,11 @@
 ###  [使用服务连接工具](servers/manage/use-the-service-connection-tool.md)
 ###  [使用更新注册工具](servers/manage/use-the-update-registration-tool-to-import-hotfixes.md)
 ###  [使用修补程序安装程序](servers/manage/use-the-hotfix-installer-to-install-updates.md)
-<!--
-###  [Checklist for installing update 1702](servers/manage/checklist-for-installing-update-1702.md)
--->
+###  [安装更新程序 1702 的核对清单](servers/manage/checklist-for-installing-update-1702.md)
 ###  [用于安装更新 1610 的核对清单](servers/manage/checklist-for-installing-update-1610.md)
 ###  [用于安装更新 1606 的核对清单](servers/manage/checklist-for-installing-update-1606.md)
-<!-- Deprecated from Content:
+<!-- Deprecated from Content - still published but out of TOC:
 ###  [Checklist for installing update 1602](servers/manage/checklist-for-installing-update-1602.md)
-###  [Support for current branch versions](servers/manage/current-branch-versions-supported.md)  
 -->
 ###  [当前分支版本支持](servers/manage/current-branch-versions-supported.md)  
 
