@@ -25,7 +25,7 @@ ms.lasthandoff: 03/21/2017
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-公司可以通过 Apple 的设备注册计划购买 iOS 设备，然后使用 Microsoft Intune 管理它们。 要利用 Apple 设备注册计划 (DEP) 管理企业所有的 iOS 设备，公司必须完成 Apple 所要求的步骤以加入该计划并通过该计划获取设备。 该过程的详细信息，可以通过以下网站获得：  [https://deploy进行管理。apple进行管理。com](https://deploy.apple.com)进行管理。 该程序的优点包括免手动设置设备，无需通过 USB 将每个设备连接到计算机。  
+公司可以通过 Apple 的设备注册计划购买 iOS 设备，然后使用 Microsoft Intune 管理它们。 要利用 Apple 设备注册计划 (DEP) 管理企业所有的 iOS 设备，公司必须完成 Apple 所要求的步骤以加入该计划并通过该计划获取设备。 该过程的详细信息，可以通过以下网站获得：  [https://deploy.apple.com](https://deploy.apple.com)进行管理。 该程序的优点包括免手动设置设备，无需通过 USB 将每个设备连接到计算机。  
 
  在你可以通过 DEP 注册企业所有的 iOS 设备之前，你需要从 Apple 获得 DEP 令牌。 此令牌允许 Intune 同步有关你的企业所拥有的且加入了 DEP 的设备的信息。 它还允许 Intune 将注册配置文件上传到 Apple 并将设备分配到这些配置文件。  
 
