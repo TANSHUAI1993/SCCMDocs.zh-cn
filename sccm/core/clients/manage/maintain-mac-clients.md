@@ -128,7 +128,7 @@ ms.lasthandoff: 01/04/2017
 
     -   **选择的设置：**选择“浏览”，然后选择先前指定的发现脚本。  
 
-    -   在“以下值”  字段中，输入 **The domain/default pair of (com.microsoft.ccmclient, SMSID) does not exist**。  
+    -   在**“以下值”** 字段中，输入 **“域/默认值对 (com.microsoft.ccmclient, SMSID) 不存在”**。  
 
     -   启用“当此设置不符合时运行指定的修正脚本” 选项。  
 
