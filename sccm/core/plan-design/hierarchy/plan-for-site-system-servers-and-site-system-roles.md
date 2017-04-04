@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: a93ea730c39cce9dc46036f5aa6ece4a62679d0f
 ms.openlocfilehash: 0d16d362b798c194645f987088ba8a95a7be3f19
+ms.lasthandoff: 02/15/2017
 
 
 ---
@@ -28,14 +29,14 @@ ms.openlocfilehash: 0d16d362b798c194645f987088ba8a95a7be3f19
 每个安装的 System Center Configuration Manager 站点都包括一个站点服务器，该服务器是一个**站点系统服务器**。 该站点还可以包括远离站点服务器的计算机上的其他站点系统服务器。 站点系统服务器（站点服务器或远程站点系统服务器）支持 **站点系统角色**。
 
 
-##  <a name="a-namebkmksiteserversa-site-system-servers"></a><a name="bkmk_siteservers"></a> 站点系统服务器  
+##  <a name="bkmk_siteservers"></a> 站点系统服务器  
  在计算机上安装站点系统角色时，该计算机将成为站点系统服务器。 在每个站点上，可以安装一个或多个其他站点系统服务器。 还可以选择不安装其他站点系统服务器并直接在站点服务器计算机上运行所有站点系统角色。 每个站点系统服务器支持一个或多个站点系统角色。 其他服务器可以通过分担站点系统角色加在服务器上的 CPU 处理负载，从而帮助扩展站点的功能和容量。  
 
  考虑添加站点系统服务器时，请确保服务器满足用于实现所需用途的先决条件。 在具有足够带宽的网路位置上添加该服务器以与所需终结点通信也是个好办法，所需终结点包括站点服务器、域资源、基于云的位置、站点系统服务器和客户端。）  
 
  如果配置含代理的站点系统服务器供站点系统角色使用，请参阅[可以使用代理服务器的站点系统角色](#bkmk_proxy)。  
 
-##  <a name="a-namebkmkplanrolesa-site-system-roles"></a><a name="bkmk_planroles"></a> Site system roles  
+##  <a name="bkmk_planroles"></a> Site system roles  
  站点系统角色安装在计算机上，为站点提供其他功能。 示例包括：  
 
 -   附加的管理点，以便站点支持更多设备，多达站点支持的容量。  
@@ -118,7 +119,7 @@ ms.openlocfilehash: 0d16d362b798c194645f987088ba8a95a7be3f19
 
 -   **系统健康验证程序点**。 尽管此站点系统角色将在 Configuration Manager 控制台中保持可见，但不再使用该角色。  
 
-###  <a name="a-namebkmkproxya-site-system-roles-that-can-use-a-proxy-server"></a><a name="bkmk_proxy"></a> 可以使用代理服务器的站点系统角色  
+###  <a name="bkmk_proxy"></a> 可以使用代理服务器的站点系统角色  
  某些 Configuration Manager 站点系统角色需要连接到 Internet，当托管该角色的站点系统服务器配置为需要使用代理服务器时，将使用代理服务器。 通常，此连接在安装了站点系统角色的计算机的“系统”上下文中建立。 连接不能使用用于典型用户帐户的代理配置。 如果需要代理服务器来完成与 Internet 的连接，必须将计算机设置为使用代理服务器：  
 
 -   在安装站点系统角色时，可以设置代理服务器。  
@@ -152,9 +153,4 @@ ms.openlocfilehash: 0d16d362b798c194645f987088ba8a95a7be3f19
  有关软件更新点的代理服务器的详细信息，请参阅[安装软件更新点](../../../sum/get-started/install-a-software-update-point.md)主题中的“代理服务器设置”部分。  
 
 -   **服务连接点**。 设置为处于联机状态（不脱机）时，此站点系统角色将连接到 Microsoft Intune 和 Microsoft 云服务。  
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 
