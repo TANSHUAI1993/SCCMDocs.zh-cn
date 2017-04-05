@@ -4,9 +4,9 @@ hide_bc: true
 title: "System Center Configuration Manager 文档"
 description: "了解如何使用 System Center Configuration Manager。"
 translationtype: Human Translation
-ms.sourcegitcommit: cc2df80d3da39fd8c7810db8ed3515b6c0b9b948
-ms.openlocfilehash: b925c758139d3e4d62d0acd41085b8b4d249b153
-ms.lasthandoff: 02/28/2017
+ms.sourcegitcommit: 70034213442f4c3d5a28ab65c2ceb51aa64320ad
+ms.openlocfilehash: 93ab707045f5f8de36e3acb862f82239b0eda34c
+ms.lasthandoff: 03/31/2017
 
 ---
 <div id="main" class="v2">
@@ -630,7 +630,7 @@ ms.lasthandoff: 02/28/2017
                 </ul>
             </li>
             <li>
-                <a href="#social">社交</a>
+                <a href="#social">社区</a>
                 <ul id="social">
                     <li>
                         <a href="#social-all">全部</a>
@@ -727,3 +727,4 @@ ms.lasthandoff: 02/28/2017
         </ul>
     </div>
 </div>
+
