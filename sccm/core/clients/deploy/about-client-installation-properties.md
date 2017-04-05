@@ -27,7 +27,7 @@ ms.lasthandoff: 01/05/2017
 
 使用 System Center Configuration Manager CCMSetup.exe 命令手动安装 Configuration Manager 客户端。  
 
-##  <a name="a-nameaboutccmsetupa-about-ccmsetupexe"></a><a name="aboutCCMSetup"></a> 关于 CCMSetup.exe  
+##  <a name="aboutCCMSetup"></a> 关于 CCMSetup.exe  
  CCMSetup.exe 命令从管理点或源位置下载所需的文件以安装客户端。 这些文件可能包括：  
 
 -   安装客户端软件的 Windows Installer 包 Client.msi。  
@@ -217,7 +217,7 @@ CCMSetup 放弃下载客户端安装文件之前将尝试的时间长度 - 以�
 > [!NOTE]  
 >  对于此版本，“ClientUI”  是 **/ExcludeFeatures** 属性唯一支持的值。  
 
-##  <a name="a-nameccmsetupreturncodesa-ccmsetupexe-return-codes"></a><a name="ccmsetupReturnCodes"></a> CCMSetup.exe 返回代码  
+##  <a name="ccmsetupReturnCodes"></a> CCMSetup.exe 返回代码  
  CCMSetup.exe 命令完成时提供以下返回代码。 若要进行故障排除，请查看客户端计算机上的 ccmsetup.log 文件，以获取返回代码的上下文以及其他详细信息。  
 
 |返回代码|含义|  
@@ -229,7 +229,7 @@ CCMSetup 放弃下载客户端安装文件之前将尝试的时间长度 - 以�
 |9|先决条件评估失败|  
 |10|安装程序清单哈希验证失败|  
 
-##  <a name="a-nameclientmsipropsa-clientmsi-properties"></a><a name="clientMsiProps"></a> client.msi 属性  
+##  <a name="clientMsiProps"></a> client.msi 属性  
  下面的属性可修改 client.msi 的安装行为。 如果使用客户端请求安装方法，则也可以在“客户端请求安装属性”  对话框的“客户端”  选项卡中指定这些属性。  
 
 ### <a name="ccmadmins"></a>CCMADMINS  
@@ -563,7 +563,7 @@ CCMSetup 放弃下载客户端安装文件之前将尝试的时间长度 - 以�
 
  示例：`CCMSetup.exe SMSSITECODE=XZY`  
 
-##  <a name="a-namebkmkattributevaluesa-supported-attribute-values-for-the-pki-certificate-selection-criteria"></a><a name="BKMK_attributevalues"></a> 对于 PKI 证书选择条件支持的属性值  
+##  <a name="BKMK_attributevalues"></a> 对于 PKI 证书选择条件支持的属性值  
  对于 PKI 证书选择条件，Configuration Manager 支持 下列属性值：  
 
 |OID 属性|可分辨名称属性|属性定义|  
