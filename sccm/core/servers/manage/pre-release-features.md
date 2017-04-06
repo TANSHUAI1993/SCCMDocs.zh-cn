@@ -2,7 +2,7 @@
 title: "预发行功能 | Microsoft Docs"
 description: "System Center Configuration Manager 中的预发行功能"
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 3/29/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,13 +16,13 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f9097014c7e988ec8e139e518355c4efb19172b3
-ms.openlocfilehash: c164ae7ca17a3a7d96b010f41b5ecf72ab34976b
-ms.lasthandoff: 03/04/2017
+ms.sourcegitcommit: 6accec2d356861b273b25ba2b6338d9684a46ff6
+ms.openlocfilehash: c1c8cf505bbc5cab1b6dfb7637eda4a87941c722
+ms.lasthandoff: 03/29/2017
 
 
 ---
-# <a name="pre-release-feaures-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的预发行功能
+# <a name="pre-release-features-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的预发行功能
 *适用范围：System Center Configuration Manager (Current Branch)*
 
  预发行功能是指 Current Branch 中随附的功能，用于在生产环境中的早期测试。 这些功能不应被视为可进行生产，但可以在生产环境中使用。
@@ -39,8 +39,8 @@ ms.lasthandoff: 03/04/2017
 安装包含预发行功能的更新时，这些功能和此次更新包含的常规功能在“更新与维护服务向导”中可见：
   - **如果同意：** 安装更新时，可以启用更新和维护向导中的预发行功能。 为此，请选择预发行功能，就像选择任何其他功能那样。     
 
-    也可以之后从控制台的“管理” > “云服务” > “更新和维护服务” > “功能”节点启用预发行功能。 在“功能”节点选择该功能，然后选择“开启”。 （除非用户同意，否则此选项为灰显。）  
-  -   **如果不同意：**安装更新时，预发行功能在“更新与维护服务向导”中可见，但将灰显且不能启用。 安装更新之后，可以在“功能”节点中查看这些功能，但在“层次结构设置”中同意这样做之前不能启用它们。
+    也可以之后从控制台的“管理” > “更新和服务” > “功能”节点启用预发行功能。 在“功能”节点选择该功能，然后选择“开启”。 除非用户同意，否则此选项为灰显。 （在版本 1702 之前，“更新和服务”在“管理” > “云服务”下。）
+  -   **如果不同意：**安装更新时，预发行功能在“更新和服务向导”中可见，但将灰显且不能启用。 安装更新之后，可以在“功能”节点中查看这些功能，但在“层次结构设置”中同意这样做之前不能启用它们。
 
 如果在独立主站点中同意这样做，并通过安装新的管理中心站点扩展层次结构，则还必须在管理中心站点也同意这样做。
 
@@ -48,11 +48,12 @@ ms.lasthandoff: 03/04/2017
 
  |功能          |添加为预发行功能 | 添加为完整版功能|  
 |------------------|---------------------|---------------------|
+| 在安装应用程序之前检查运行的可执行文件  |   [版本 1702](/sccm/apps/deploy-use/deploy-applications#how-to-check-for-running-executable-files-before-installing-an-application) |![尚未发行](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 | 数据仓库服务点  |  [版本 1702](/sccm/core/servers/manage/data-warehouse) |![尚未发行](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 | 用于向客户端进行内容分发的对等缓存 |  [版本 1610](/sccm/core/plan-design/hierarchy/client-peer-cache) |![尚未发行](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 | 云管理网关 |  [版本 1610](/sccm/core/clients/manage/plan-cloud-management-gateway) |![尚未发行](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 | 客户端数据源仪表板 |  [版本 1610](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed#client-data-sources-dashboard) |![尚未发行](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 | Microsoft Operations Management Suite 连接器  | [版本 1606](../../../core/clients/manage/sync-data-microsoft-operations-management-suite.md) |![尚未发行](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 | 维护群集感知集合（为服务器组提供服务）| [版本 1602](../../../core/get-started/capabilities-in-technical-preview-1605.md#BKMK_ServerGroups)|![尚未发行](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-|对由 System Center Configuration Manager 管理的电脑进行条件访问 | [版本 1602](../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)     |![尚未发行](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)                        |
+|对由 System Center Configuration Manager 管理的电脑进行条件访问 | [版本 1602](../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)     | [版本 1702](/sccm/mdm/deploy-use/manage-access-to-services)                     |
 

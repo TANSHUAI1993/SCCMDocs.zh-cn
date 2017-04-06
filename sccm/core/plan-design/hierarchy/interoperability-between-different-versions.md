@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1b458284961171f11acc3e84f82749addc1b6afb
-ms.openlocfilehash: 890cc72f7ca0619b48ceae7c3a8c731a62341ef7
-ms.lasthandoff: 02/28/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 28593d271603ff9775425327996d844d7ed358cd
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/28/2017
 
  因为可通过现有 System Center 2012 Configuration Manager 站点或者层次结构并排部署 System Center Configuration Manager 站点和层次结构，所以建议计划阻止其中某版本的客户端加入另一版本中的站点。
 
-例如，如果两个或更多 Configuration Manager 层次结构具有包含相同网络位置的重叠边界（详见[有关重叠边界](../../../core/servers/deploy/configure/define-site-boundaries-and-boundary-groups.md#BKMK_BoundaryOverlap)），则最好将每个新客户端分配给特定站点，而不是使用自动站点分配。 有关 System Center 2012 Configuration Manager 中自动站点分配的信息，请参阅 [如何在 System Center Configuration Manager 中将客户端分配到一个站点](../../../core/clients/deploy/assign-clients-to-a-site.md)。  
+例如，如果两个或更多 Configuration Manager 层次结构具有包含相同网络位置的重叠边界（详见[重叠边界](/sccm/core/servers/deploy/configure/boundary-groups#overlapping-boundaries)），则最好将每个新客户端分配给特定站点，而不是使用自动站点分配。 有关 System Center 2012 Configuration Manager 中自动站点分配的信息，请参阅 [如何在 System Center Configuration Manager 中将客户端分配到一个站点](../../../core/clients/deploy/assign-clients-to-a-site.md)。  
 
  此外，无法在托管 System Center Configuration Manager 站点系统角色的计算机上通过 System Center 2012 Configuration Manager 安装客户端，也无法在托管 System Center 2012 Configuration Manager 站点系统角色的计算机上安装 System Center Configuration Manager 客户端。  
 

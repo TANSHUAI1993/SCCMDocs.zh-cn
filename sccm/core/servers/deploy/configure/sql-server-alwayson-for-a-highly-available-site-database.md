@@ -15,8 +15,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 4d34a272a93100426cccd2308c5b3b0b0ae94a60
-ms.openlocfilehash: 5fb6bc0bca5ee590000fd30bd46c765871cf5220
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: aaaab003ddd22f18160d4be63cfeab3a7e7f6b03
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -25,18 +26,28 @@ ms.openlocfilehash: 5fb6bc0bca5ee590000fd30bd46c765871cf5220
 *适用范围：System Center Configuration Manager (Current Branch)*
 
 
-
  从 System Center Configuration Manager 1602 版开始，可以使用 SQL Server [AlwaysOn 可用性组](https://msdn.microsoft.com/library/hh510230\(v=sql.120\).aspx)承载主站点和管理中心站点上的站点数据库作为高可用性和灾难恢复解决方案。 可在本地或在 Microsoft Azure 中托管可用性组。  
 
  使用 Microsoft Azure 托管可用性组时，可将 SQL Server AlwaysOn 可用性组用于 Azure 可用性集，从而进一步提升站点数据库的可用性。 有关 Azure 可用性集的详细信息，请参阅 [管理虚拟机的可用性](https://azure.microsoft.com/documentation/articles/virtual-machines-windows-manage-availability/)。  
 
- 以下是支持可用性组的方案：  
+ Configuration Manager 支持在位于内部或外部负载均衡器后面的 SQL 可用性组上承载站点数据库。 除了在每个副本上配置防火墙例外，还需要为以下端口添加负载均衡规则：
+  - SQL over TCP: TCP 1433
+  - SQL Server Service Broker: TCP 4022
+  - 服务器消息块 (SMB): TCP 445
+  - RPC 终结点映射程序: TCP 135
+
+
+以下是支持可用性组的方案：  
 
 -   可以将站点数据库移到可用性组的默认实例  
 
 -   可以从托管站点数据库的可用性组添加或删除副本成员  
 
 -   可以将站点数据库从可用性组移到独立 SQL Server 的默认实例或命名实例  
+
+> [!Important]  
+> 在混合配置中将 Microsoft Intune 与 Configuration Manager 结合使用时，从可用性组来回移动站点数据库将触发数据与云重新同步。 此问题无法避免。 
+
 
 
 > [!NOTE]  
@@ -78,7 +89,7 @@ ms.openlocfilehash: 5fb6bc0bca5ee590000fd30bd46c765871cf5220
     - **允许任何只读连接**
 
 
-##  <a name="a-namebkmkbnra-changes-for-backup-and-recovery-when-you-use-a-sql-server-alwayson-availability-group"></a><a name="bkmk_BnR"></a> 当你使用 SQL Server AlwaysOn 可用性组时，备份和恢复的更改  
+##  <a name="bkmk_BnR"></a> 当你使用 SQL Server AlwaysOn 可用性组时，备份和恢复的更改  
  **备份：**  
 
  当站点数据库在某一可用性组中运行时，应继续运行内置“备份站点”服务器维护任务来备份常规 Configuration Manager 设置和文件，但不要计划使用由该备份创建的 .MDF 或 .LDF 文件。 相反，计划通过使用 SQL Server 直接备份站点数据库。  
@@ -93,7 +104,7 @@ ms.openlocfilehash: 5fb6bc0bca5ee590000fd30bd46c765871cf5220
 
  有关备份和恢复的详细信息，请参阅 [System Center Configuration Manager 的备份和恢复](../../../../protect/understand/backup-and-recovery.md)。  
 
-##  <a name="a-namebkmkcreatea-configure-an-availability-group-for-use-with-configuration-manager"></a><a name="bkmk_create"></a> 配置与 Configuration Manager 配合使用的可用性组  
+##  <a name="bkmk_create"></a> 配置与 Configuration Manager 配合使用的可用性组  
  在开始下列过程之前，请熟悉完成此配置所需的 SQL Server 过程，以及配置与 Configuration Manager 配合使用的可用性组的以下详细信息。  
 
  **与 System Center Configuration Manager 配合使用的 AlwaysOn 可用性组的要求：**  
@@ -118,8 +129,7 @@ ms.openlocfilehash: 5fb6bc0bca5ee590000fd30bd46c765871cf5220
     >     ALTER DATABASE cm_ABC SET TRUSTWORTHY ON;  
     >     USE cm_ABC  
     >     EXEC sp_changedbowner 'sa'  
-    >     Exec sp_configure 'max text repl size (B)', 2147483647
-    >     reconfigure
+    >     Exec sp_configure 'max text repl size (B)', 2147483647 reconfigure
 
 
 
@@ -185,7 +195,7 @@ ms.openlocfilehash: 5fb6bc0bca5ee590000fd30bd46c765871cf5220
 
 
 
-##  <a name="a-namebkmkdirecta-move-a-site-database-to-an-availability-group"></a><a name="bkmk_direct"></a> 将站点数据库移至可用性组中  
+##  <a name="bkmk_direct"></a> 将站点数据库移至可用性组中  
  可以将以前安装的站点的站点数据库移到可用性组。 必须首先创建可用性组，然后在可用性组中配置用于操作的数据库。  
 
  若要完成此过程，运行 Configuration Manager 安装程序的用户帐户必须是可用性组成员计算机上“本地管理员”组的成员。  
@@ -208,7 +218,7 @@ ms.openlocfilehash: 5fb6bc0bca5ee590000fd30bd46c765871cf5220
 
 5.  为新的数据库位置提供此信息后，使用常规过程和配置完成安装。  
 
-##  <a name="a-namebkmkchangea-add-or-remove-members-of-an-active-availability-group"></a><a name="bkmk_change"></a> 添加或删除活动可用性组的成员  
+##  <a name="bkmk_change"></a> 添加或删除活动可用性组的成员  
  Configuration Manager 使用可用性组中托管的站点数据库后，可删除副本成员或添加其他副本成员（不超过一个主节点和两个辅助节点）。  
 
 #### <a name="to-add-a-new-replica-member"></a>添加新的副本成员  
@@ -229,7 +239,7 @@ ms.openlocfilehash: 5fb6bc0bca5ee590000fd30bd46c765871cf5220
 
 -   请使用 SQL Server 文档中 [从可用性组删除辅助副本](https://msdn.microsoft.com/library/hh213149\(v=sql.120\).aspx) 中的信息。  
 
-##  <a name="a-namebkmkremovea-move-the-site-database-from-an-availability-group-back-to-a-single-instance-sql-server"></a><a name="bkmk_remove"></a> 将站点数据库从可用性组移回单个实例 SQL Server  
+##  <a name="bkmk_remove"></a> 将站点数据库从可用性组移回单个实例 SQL Server  
  不再需要在可用性组中托管站点数据库时，请使用以下过程。  
 
 #### <a name="to-move-the-site-database-from-an-availability-group-back-to-a-single-instance-sql-server"></a>将站点数据库从可用性组移回单个实例 SQL Server  
@@ -262,9 +272,4 @@ ms.openlocfilehash: 5fb6bc0bca5ee590000fd30bd46c765871cf5220
 9. 为新的数据库位置提供此信息后，使用常规过程和配置完成安装。 安装完成后，站点将重启并开始使用新的数据库位置。  
 
 10. 若要清理原为可用性组成员的服务器，请按照 SQL Server 文档中 [删除可用性组](https://msdn.microsoft.com/library/ff878113\(v=sql.120\).aspx) 中的指导进行操作。
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 
