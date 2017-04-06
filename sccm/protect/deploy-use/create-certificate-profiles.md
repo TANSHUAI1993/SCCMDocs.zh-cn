@@ -2,7 +2,7 @@
 title: "如何创建 SCEP 证书配置文件 | Microsoft Docs"
 description: "了解如何在 System Center Configuration Manager 中使用证书配置文件为受管理设备预配所需的证书。"
 ms.custom: na
-ms.date: 11/22/2016
+ms.date: 03/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,11 +17,13 @@ author: Nbigman
 ms.author: nbigman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0fa837c68eb073d2ceaf48c938137a94141a102e
-ms.openlocfilehash: cb9351fc63e49af611c494ec82a6c8651afae30f
+ms.sourcegitcommit: aa8924a013ebdbee888cab33001fddbe7ad2d67e
+ms.openlocfilehash: 80a716f5a42a81e5550eb1b5c7f14534e14a4fb7
+ms.lasthandoff: 03/30/2017
 
 
 ---
+
 # <a name="create-certificate-profiles"></a>创建证书配置文件
 
 *适用范围：System Center Configuration Manager (Current Branch)*
@@ -56,7 +58,7 @@ ms.openlocfilehash: cb9351fc63e49af611c494ec82a6c8651afae30f
 
 -   **简单证书注册协议 (SCEP) 设置**：如果要通过使用简单证书注册协议和网络设备注册服务角色服务为用户或设备请求证书，请选择此证书配置文件类型。
 
--   **个人信息交换 PKCS #12 (PFX) 设置导入**：选择此项以导入 PFX 证书。 若要了解有关 PFX 证书创建的详细信息，请参阅 [Create PFX certificate profiles](../../protect/deploy-use/create-pfx-certificate-profiles.md)（创建 PFX 证书配置文件）。
+-   **个人信息交换 PKCS #12 (PFX) 设置 - 导入**：选择此项可导入 PFX 证书。 若要了解有关 PFX 证书创建的详细信息，请参阅 [Create PFX certificate profiles](../../protect/deploy-use/create-pfx-certificate-profiles.md)（创建 PFX 证书配置文件）。
 
 
 
@@ -150,7 +152,7 @@ ms.openlocfilehash: cb9351fc63e49af611c494ec82a6c8651afae30f
 
  -   **证书有效期**：如果对发证 CA 运行允许自定义有效期的 certutil - setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE 命令，则可以指定证书过期之前剩余的时间量。 有关此命令的详细信息，请参阅主题 [Certificate infrastructure in System Center Configuration Manager](../../protect/deploy-use/certificate-infrastructure.md)（System Center Configuration Manager 中的证书基础结构）。  
 
-   你可以指定比指定证书模板中的有效期小的值，但不能指定较大的值。 例如，证书模板中的证书有效期为&2; 年，则你可以指定值&1; 年，但不能指定值&5; 年。 该值还必须小于发证 CA 证书的剩余有效期。  
+   你可以指定比指定证书模板中的有效期小的值，但不能指定较大的值。 例如，证书模板中的证书有效期为 2 年，则你可以指定值 1 年，但不能指定值 5 年。 该值还必须小于发证 CA 证书的剩余有效期。  
 
  -   **密钥使用情况**：指定证书的密钥使用情况选项。 可从以下选项中进行选择：  
 
@@ -183,10 +185,7 @@ ms.openlocfilehash: cb9351fc63e49af611c494ec82a6c8651afae30f
 ###  <a name="specify-supported-platforms-for-the-certificate-profile"></a>为证书配置文件指定支持的平台  
 
 1. 在“创建证书配置文件向导”的“支持的平台”  页上，选择将在其中安装证书配置文件的操作系统。 或者，单击“全选”  以将证书配置文件安装到所有可用操作系统。
-2. 查看向导的“摘要”页面，并选择“完成”。 新的证书配置文件会显示在“资产和符合性”工作区的“证书配置文件”节点中，并已准备好部署到用户或设备，如 [How to deploy profiles in System Center Configuration Manager](deploy-wifi-vpn-email-cert-profiles.md)（如何在 System Center Configuration Manager 中部署配置文件）中所述。  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
-
+2. 查看向导的“摘要”页面，并选择“完成”。 
+ 
+ 
+新的证书配置文件会显示在“资产和符合性”工作区的“证书配置文件”节点中，并已准备好部署到用户或设备，如 [How to deploy profiles in System Center Configuration Manager](deploy-wifi-vpn-email-cert-profiles.md)（如何在 System Center Configuration Manager 中部署配置文件）中所述。  

@@ -17,9 +17,9 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 06cafc8f7934cde738a87ac1a1da585a9d4e2a99
-ms.openlocfilehash: 534a15279bff96d93ffb6564eeac2835f57f5645
-ms.lasthandoff: 02/09/2017
+ms.sourcegitcommit: 3eb48942c1259d2aa1b3c200fad73b39b11c0b8c
+ms.openlocfilehash: 9989ea1bf4cb74a6286ebae9de7614ed622de5b6
+ms.lasthandoff: 03/30/2017
 
 
 ---
@@ -36,7 +36,7 @@ System Center Configuration Manager（也称为 ConfgMgr 或 SCCM）提供用于
 
 ###  <a name="manage-devices-with-the-configuration-manager-client"></a>使用 Configuration Manager 客户端管理设备  
 
-此选项要求在设备上安装 Configuration Manager 客户端应用程序，提供用于管理电脑、服务器和环境中的其他设备的大多数功能。 有关详细信息，请参阅 [System Center Configuration Manager 中的客户端安装方法](/sccm/core/client/deploy/plan/client-installation-methods)。  
+此选项要求在设备上安装 Configuration Manager 客户端应用程序，提供用于管理电脑、服务器和环境中的其他设备的大多数功能。 有关详细信息，请参阅 [System Center Configuration Manager 中的客户端安装方法](/sccm/core/clients/deploy/plan/client-installation-methods)。  
 
 ###  <a name="manage-devices-with-on-premises-configuration-manager-infrastructure"></a>使用本地 Configuration Manager 基础结构管理设备  
 
@@ -76,7 +76,7 @@ System Center Configuration Manager（也称为 ConfgMgr 或 SCCM）提供用于
 
  有关支持的平台的完整列表，请参阅 [System Center Configuration Manager 客户端和设备支持的操作系统](configs\supported-operating-systems-for-clients-and-devices.md)。
 
-##  <a name="a-namebkmkcomp2a-compare-mobile-device-management-solutions-based-on-management-functionality"></a><a name="bkmk_comp2"></a> 根据管理功能比较移动设备管理解决方案  
+##  <a name="bkmk_comp2"></a> 根据管理功能比较移动设备管理解决方案  
 
 |管理功能|带 Configuration Manager 客户端|带 Microsoft Intune 的 Configuration Manager（混合）|本地移动设备管理|带 Exchange 的 Configuration Manager|  
 |------------------------------|-------------------------------------------|-------------------------------------------------------------------|-------------------------------|-----------------------------------------|  

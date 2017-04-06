@@ -17,9 +17,9 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: c90e5ebc2aca3f2133227fa59057aad8db3713f4
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: aa8924a013ebdbee888cab33001fddbe7ad2d67e
+ms.openlocfilehash: a0353c49360cd99bc92b4546e12a52c3d13d1d14
+ms.lasthandoff: 03/30/2017
 
 
 ---
@@ -105,10 +105,6 @@ ms.lasthandoff: 03/27/2017
 
     -   **使用 S/MIME**（仅适用于 iOS 设备）- 使用 S/MIME 加密发送传出电子邮件。 选择从以下选项：
 
-        -   **签名证书：** 单击“选择”  ，然后选择用于签名的证书。 此选项仅适用于 iOS 设备。  
-
-            > [!NOTE]  
-            >  必须首先将签名证书配置为简单证书注册协议 (SCEP) 或 PFX 证书配置文件，才能选择签名证书。 有关证书配置文件的详细信息，请参阅 [System Center Configuration Manager 中的证书配置文件](/sccm/protect/deploy-use/introduction-to-certificate-profiles)。  
 
         -   **加密证书：** 单击“选择”  ，然后选择用于加密的证书。 此选项仅适用于 iOS 设备。 只能选择 PFX 证书用作加密证书。
 
