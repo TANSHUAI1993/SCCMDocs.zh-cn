@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: b4642186e42745640f088b7046e70019616935ea
 ms.openlocfilehash: 9a5cd5ce3ce6868b44768d3cbe7b7c594f44d42c
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -150,7 +151,7 @@ ms.openlocfilehash: 9a5cd5ce3ce6868b44768d3cbe7b7c594f44d42c
 
 9. 打开 Configuration Manager 控制台并导航到“管理” >“云服务” > “更新和服务”。 现在即可安装之前导入的更新。 有关安装更新的信息，请参阅[安装 System Center Configuration Manager 在控制台的更新](../../../core/servers/manage/install-in-console-updates.md)。  
 
-## <a name="a-namebkmkcmda-command-line-options"></a><a name="bkmk_cmd"></a> 命令行选项  
+## <a name="bkmk_cmd"></a> 命令行选项  
  若要查看服务连接点工具的帮助信息，请打开包含该工具的文件夹的命令提示符并运行命令：  **serviceconnectiontool.exe**。  
 
 |命令行选项|详细信息|  
@@ -159,9 +160,4 @@ ms.openlocfilehash: 9a5cd5ce3ce6868b44768d3cbe7b7c594f44d42c
 |**-connect -usagedatasrc [drive:][path] -updatepackdest [drive:][path] -proxyserveruri [FQDN of proxy server] -proxyusername [username]** <br /> <br /> 如果使用 1606 之前的 Configuration Manager 版本，则必须指定 .cab 文件的名称，并且不能使用代理服务器的选项。  支持的命令参数是： <br /> **-connect -usagedatasrc [drive:][path][filename] -updatepackdest [drive:][path]** |此命令连接到 Configuration Manager 云服务以从指定位置上传使用情况数据 .cab 文件并下载可用的更新包和控制台内容。 代理服务器的选项是可选选项。<br /><br /> 在可连接到 Internet 的计算机上以 **本地管理员** 身份运行此命令。<br /><br /> 连接时不使用代理服务器的示例： **-connect -usagedatasrc D:\USB\ -updatepackdest D:\USB\UpdatePacks** <br /><br /> 连接时使用代理服务器的示例： **-connect -usagedatasrc D:\USB\Usagedata.cab -updatepackdest D:\USB\UpdatePacks -proxyserveruri itgproxy.redmond.corp.microsoft.com -proxyusername Meg** <br /><br /> 如果使用 1606 之前的版本，则必须为 .cab 文件指定文件名称，并且不能指定代理服务器。 使用以下示例命令行： **-connect -usagedatasrc D:\USB\Usagedata.cab -updatepackdest D:\USB\UpdatePacks**|      
 |**-import -updatepacksrc [drive:][path]**|此命令会将之前下载的更新包和控制台内容导入到 Configuration Manager 控制台中。<br /><br /> 在承载服务连接点的服务器上以 **本地管理员** 身份运行此命令。<br /><br /> 示例：  **-import -updatepacksrc D:\USB\UpdatePacks**|  
 |**-export -dest [drive:][path][filename.csv]**|此命令会将使用情况数据导出为 .csv 文件，然后你可以进行查看。<br /><br /> 在承载服务连接点的服务器上以 **本地管理员** 身份运行此命令。<br /><br /> 示例： **-export -dest D:\USB\usagedata.csv**|  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 
