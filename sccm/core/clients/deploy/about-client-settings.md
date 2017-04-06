@@ -2,7 +2,7 @@
 title: "客户端设置 | Microsoft Docs"
 description: "通过使用 System Center Configuration Manager 中的管理控制台选择客户端设置。"
 ms.custom: na
-ms.date: 12/12/2016
+ms.date: 03/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,9 +17,9 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 289db441899359f3bf3abe5d38896c7acd2045b6
-ms.openlocfilehash: 5eaca19f2b21b1c62b956d2a44d492d3ddd6d10a
-ms.lasthandoff: 03/10/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: bd2cf7b0df4a1f50c006e8280bf59ea91f1b4477
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="about-client-settings-in-system-center-configuration-manager"></a>关于 System Center Configuration Manager 中的客户端设置
@@ -329,7 +329,7 @@ System Center Configuration Manager 中的所有客户端设置在 Configuration
     -   NOIDMIF 文件应位于 Windows\System32\CCM\Inventory\Noidmif 文件夹中。  
 
     > [!NOTE]  
-    >  此设置仅在默认客户端设置中可用。 
+    >  此设置仅在默认客户端设置中可用。
 
 -   **最大随机延迟**
 
@@ -601,6 +601,12 @@ System Center Configuration Manager 中的所有客户端设置在 Configuration
 -   **在此时间段内截止的所有挂起的部署在一定时间内也将进行安装。**  
 
      使用此设置可指定前一个设置的时间段。 可以输入介于 1 到 23 个小时和介于 1 到 365 天的值。 默认情况下，此设置将配置为 7 天。  
+
+-   **在客户端上启用快速安装文件的安装**
+
+-   **用于为快速安装文件下载内容的端口**
+
+-   **再次启用 Office 365 客户端的管理** 使用此设置启用 Office 365 客户端代理的管理。 将值设置为“是”时，此程序可用于配置 Office 365 安装设置、从 Office 内容传送网络 (CDN) 下载文件，以及将文件部署为 Configuration Manager 中的应用程序。
 
 ##  <a name="user-and-device-affinity"></a>用户和设备相关性  
 

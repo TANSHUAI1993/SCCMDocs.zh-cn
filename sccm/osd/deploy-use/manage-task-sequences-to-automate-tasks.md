@@ -2,7 +2,7 @@
 title: "管理任务序列来自动执行任务 | Microsoft Docs"
 description: "可以创建、编辑、部署、导入和导出任务序列，以在 System Center Configuration Manager 环境中对其进行管理。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: d04d28bbd5116a841c0872cf3f9ca18783dddc78
-ms.openlocfilehash: 417b31fa1feb6d0f674f14ef9e5c7cebd7013916
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 113fa73bf0bd1b3b8a4754eb1e96549c520d7995
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -29,7 +30,7 @@ ms.openlocfilehash: 417b31fa1feb6d0f674f14ef9e5c7cebd7013916
 
  使用下列部分来管理任务序列。
 
-##  <a name="a-namebkmkcreatetasksequencea-create-task-sequences"></a><a name="BKMK_CreateTaskSequence"></a> 创建任务序列  
+##  <a name="BKMK_CreateTaskSequence"></a> 创建任务序列  
  通过使用创建任务序列向导来创建任务序列。 此向导可创建下列类型的任务序列：  
 
 |任务序列类型|更多信息|  
@@ -41,7 +42,13 @@ ms.openlocfilehash: 417b31fa1feb6d0f674f14ef9e5c7cebd7013916
 |[用于管理虚拟硬盘的任务序列](use-a-task-sequence-to-manage-virtual-hard-disks.md)|此任务序列类型包含创建 VHD 的步骤，其中包括安装可从 Configuration Manager 控制台发布到 System Center Virtual Machine Manager (VMM) 的操作系统和应用程序。|  
 |[自定义任务序列](create-a-custom-task-sequence.md)|此任务序列类型不会添加任何步骤到任务序列。 创建任务序列后必须对任务序列进行编辑并向其添加步骤。|  
 
-##  <a name="a-namebkmkmodifytasksequencea-edit-a-task-sequence"></a><a name="BKMK_ModifyTaskSequence"></a> 编辑任务序列  
+## <a name="return-to-previous-page-when-a-task-sequence-fails"></a>任务序列失败时返回上一页
+从 Configuration Manager 版本 1702 开始，你可以在运行任务序列并出现故障时返回上一页。 在此版本之前，出现故障时必须重启任务序列。 例如，可在以下应用场景中使用“上一页”按钮：
+
+- 当计算机在 Windows PE 中启动时，任务序列可用之前可能会先显示任务序列启动对话框。 在此应用场景中单击“下一步”时，会显示任务序列的最后一页，同时显示一条消息告知无可用的任务序列。 现在，可单击“上一页”以再次搜索可用任务序列。 在出现可用任务序列之前，可重复此过程。
+- 运行任务序列但分发点上尚无可用从属内容包时，任务序列会失败。 现在，用户可以分发缺失的内容（如果尚未分发），或等待分发点上出现可用内容，然后单击“上一页”使任务序列再次搜索内容。
+
+##  <a name="BKMK_ModifyTaskSequence"></a> 编辑任务序列  
  你可以通过添加或删除任务序列步骤、添加或删除任务序列组或者更改步骤的顺序来修改任务序列。 使用以下过程来修改现有任务序列。  
 
 > [!IMPORTANT]  
@@ -71,7 +78,53 @@ ms.openlocfilehash: 417b31fa1feb6d0f674f14ef9e5c7cebd7013916
 
  有关可用的任务序列步骤列表，请参阅[任务序列步骤](../understand/task-sequence-steps.md)。  
 
-##  <a name="a-namebkmkdistributetsa-distribute-content-referenced-by-a-task-sequence"></a><a name="BKMK_DistributeTS"></a> 分发任务序列引用的内容  
+## <a name="configure-high-impact-task-sequence-settings"></a>配置影响重大的任务序列设置
+从 Configuration Manager 版本 1702 开始，你可以将任务序列设置为“影响重大”，并自定义用户在运行任务序列时收到的消息。
+
+### <a name="set-a-task-sequence-as-a-high-impact-task-sequence"></a>将任务序列设置为影响重大的任务序列
+使用下列过程将任务序列设置为“影响重大”。
+> [!NOTE]
+> 任何符合特定条件的任务序列都将自动定义为“影响重大”。 有关详细信息，请参阅[管理高风险部署](http://docs.microsoft.com/sccm/protect/understand/settings-to-manage-high-risk-deployments)。
+
+1. 在 Configuration Manager 控制台中，转到“软件库” > “操作系统” > “任务序列”。
+2. 选择要编辑的任务序列，然后单击“属性”。
+3. 在“用户通知”选项卡上，选择“这是影响重大的任务序列”。
+
+### <a name="create-a-custom-notification-for-high-risk-deployments"></a>创建高风险部署的自定义通知
+使用以下过程为影响重大的部署创建自定义通知。
+1. 在 Configuration Manager 控制台中，转到“软件库” > “操作系统” > “任务序列”。
+2. 选择要编辑的任务序列，然后单击“属性”。
+3. 在“用户通知”选项卡上，选择“使用自定义文本”。
+>  [!NOTE]
+>  只能在已选择“这是影响重大的任务序列”时设置用户通知文本。
+
+4. 配置下列设置（每个文本框最多 255 个字符）：
+
+  **用户通知标题文本**：指定在软件中心用户通知上显示的蓝色文本。 例如，在默认用户通知中，本部分包含类似“确认想要升级此计算机上的操作系统”的内容。
+
+  **用户通知消息文本**：三个文本框提供自定义通知的正文。 所有文本框都需要添加文本。
+  - 第一个文本框：指定文本的主要正文，通常包含针对用户的说明。 例如，在默认用户通知中，本部分包含类似“操作系统升级可能需要一些时间，并且计算机可能会多次重启”的内容。
+  - 第二个文本框：指定文本主要正文下的粗体文本。 例如，在默认用户通知中，本部分包含类似“此就地升级将安装新的操作系统并自动迁移你的应用、数据和设置”的内容。
+  - 第三个文本框：指定粗体文本下的最后一行文本。 例如，在默认用户通知中，本部分包含类似“单击‘安装’以开始。 否则，单击‘取消’”的内容。   
+
+  假设在属性中配置以下自定义通知。
+
+    ![任务序列的的自定义通知](..\media\user-notification.png)
+
+    当最终用户从软件中心打开安装时，将显示以下通知消息。
+
+    ![任务序列的的自定义通知](..\media\user-notification-enduser.png)
+
+### <a name="configure-software-center-properties"></a>配置软件中心属性
+使用以下过程配置软件中心中显示的任务序列的详细信息。 这些详细信息仅供参考。  
+1. 在 Configuration Manager 控制台中，转到“软件库” > “操作系统” > “任务序列”。
+2. 选择要编辑的任务序列，然后单击“属性”。
+3. 在“常规”选项卡上，可使用软件中心的以下设置：
+  - **需要重启**：让用户了解安装期间是否需要重新启动。
+  - **下载大小(MB)**：指定任务序列在软件中心中显示多少兆字节。  
+  - **预计运行时间(分钟)**：指定任务序列在软件中心中显示的预计运行时间（以分钟为单位）。
+
+##  <a name="BKMK_DistributeTS"></a> 分发任务序列引用的内容  
  在客户端运行引用内容的任务序列之前，必须将该内容分发到分发点。 你可以随时选择任务序列并分发其内容，以便为分发建立一个新的引用包列表。 如果使用更新的内容更改任务序列，在内容可供客户端使用之前必须重新分发此内容。 使用以下过程来分发任务序列引用的内容。  
 
 #### <a name="to-distribute-referenced-content-to-distribution-points"></a>将引用的内容分发到分发点  
@@ -97,7 +150,7 @@ ms.openlocfilehash: 417b31fa1feb6d0f674f14ef9e5c7cebd7013916
 
  可以预留任务序列中引用的内容。 Configuration Manager 创建压缩的预安排内容文件，该文件包含所选内容的文件、关联依赖项和关联元数据。 然后，你可以在站点服务器、辅助站点或分发点中手动导入内容。 有关如何预留内容文件的详细信息，请参阅[预留内容](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkprestagea-use-prestaged-content)。  
 
-##  <a name="a-namebkmkdeploytsa-deploy-a-task-sequence"></a><a name="BKMK_DeployTS"></a> 部署任务序列  
+##  <a name="BKMK_DeployTS"></a> 部署任务序列  
  使用以下过程将任务序列部署到集合中的计算机。  
 
 > [!WARNING]  
@@ -230,7 +283,7 @@ ms.openlocfilehash: 417b31fa1feb6d0f674f14ef9e5c7cebd7013916
 
 11. 完成向导。  
 
-##  <a name="a-namebkmkexportimporta-export-and-import-task-sequences"></a><a name="BKMK_ExportImport"></a> 导出和导入任务序列  
+##  <a name="BKMK_ExportImport"></a> 导出和导入任务序列  
  你可以导出和导入包含或不包含其相关对象（如操作系统映像包、启动映像、客户端代理包、驱动程序包以及具有依赖关系的应用程序）的任务序列。  
 
  导出和导入任务序列时，请考虑下列各项。  
@@ -297,7 +350,7 @@ ms.openlocfilehash: 417b31fa1feb6d0f674f14ef9e5c7cebd7013916
 
  导入任务序列之后，请编辑任务序列以指定原始任务序列中的任何密码。 出于安全原因，不会导出密码。  
 
-##  <a name="a-namebkmkcreatetsvariablesa-create-task-sequence-variables-for-computers-and-collections"></a><a name="BKMK_CreateTSVariables"></a> 为计算机和集合创建任务序列变量  
+##  <a name="BKMK_CreateTSVariables"></a> 为计算机和集合创建任务序列变量  
  可以为计算机和集合定义自定义的任务序列变量。 为计算机定义的变量称为特定于计算机的任务序列变量。 为集合定义的变量称为特定于集合的任务序列变量。 如果有冲突，特定于计算机的变量优先于特定于集合的变量。 这就意味着，分配到特定计算机的任务序列变量会自动获得比分配到包含该计算机的集合的变量更高的优先级。  
 
  例如，集合 ABC 获分配一个变量，而作为集合 ABC 的成员的计算机 XYZ 获分配一个同名的变量，那么，分配到计算机 XYZ 的变量具有比分配到集合 ABC 的变量更高的优先级。  
@@ -342,7 +395,7 @@ ms.openlocfilehash: 417b31fa1feb6d0f674f14ef9e5c7cebd7013916
 
 6.  将所有变量添加到集合之后，单击“确定” 。  
 
-##  <a name="a-namebkmkadditionalactionstsa-additional-actions-to-manage-task-sequences"></a><a name="BKMK_AdditionalActionsTS"></a> 用于管理任务序列的其他操作  
+##  <a name="BKMK_AdditionalActionsTS"></a> 用于管理任务序列的其他操作  
  在使用下列过程选择任务序列时，可以使用其他操作来管理任务序列。  
 
 #### <a name="to-select-a-task-sequence-to-manage"></a>选择要管理的任务序列  
@@ -366,9 +419,4 @@ ms.openlocfilehash: 417b31fa1feb6d0f674f14ef9e5c7cebd7013916
 
 ## <a name="next-steps"></a>后续步骤
 [部署企业版操作系统的方案](scenarios-to-deploy-enterprise-operating-systems.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

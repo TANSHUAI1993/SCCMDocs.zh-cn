@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3c8f968276cb6d412a4a06cb70f1c8e45e91c605
-ms.openlocfilehash: cd53f093056fbaa2ef6fd88d5451b7698f296569
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: bcb14a2be312d4d8a4a9c235652c7bf971a7a976
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="capabilities-in-technical-preview-1612-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1612 中的功能
@@ -182,9 +183,15 @@ ms.openlocfilehash: cd53f093056fbaa2ef6fd88d5451b7698f296569
 
 
 ### <a name="run-the-tool"></a>运行该工具
-若要运行该工具，使用管理命令提示符打开包含 **ContentLibraryCleanup.exe** 的文件夹。  
+要运行该工具，请执行以下操作：
+1. 使用管理命令提示符打开包含 **ContentLibraryCleanup.exe** 的文件夹。  
+2. 接下来，输入包含所需命令行开关和可选开关的命令行。
 
-接下来，输入包含所需命令行开关和可选开关的命令行。
+**已知问题** 运行该工具时，当任何程序包或部署失败或正在进行时，可能会返回以下错误：
+-  *System.InvalidOperationException：由于程序包 <packageID> 未完全安装，因此无法清理此内容库。*
+
+**解决方法：** 无。 当内容正在进行处理或部署失败时，该工具无法可靠地识别孤立的文件。 因此，该工具将不允许你清理内容，直到该问题解决。
+
 
 
 ### <a name="command-line-switches"></a>命令行开关  
@@ -314,9 +321,4 @@ Azure Active Directory (AD) 载入会创建一个其他云服务使用的 Config
 ## <a name="change-to-configuring-multi-factor-authentication-for-device-enrollment"></a>更改为配置多重身份验证以进行设备注册
 
 现在，可为在 Azure 门户中进行设备注册设置多重身份验证 (MFA)，Configuration Manager 控制台中已删除 MFA 选项。 有关设置注册 MFA 的详细信息，请参阅 [Microsoft Intune 主题](https://docs.microsoft.com/en-us/intune/deploy-use/multi-factor-authentication-azure-active-directory)。
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

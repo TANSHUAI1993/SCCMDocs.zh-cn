@@ -2,7 +2,7 @@
 title: "同步数据 | Microsoft Docs | Microsoft Operations Management Suite "
 description: "将数据从 System Center Configuration Manager 同步到 Microsoft Operations Management Suite。"
 ms.custom: na
-ms.date: 10/13/2016
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,40 +16,95 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
-ms.openlocfilehash: 0d8944bef9578a41b529a2d53b5a4d0094eaa21c
-ms.lasthandoff: 12/16/2016
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 3acfaa2cf8c64ece5cef65b80372067336d6a815
+ms.lasthandoff: 03/27/2017
 
 ---
+
+
 # <a name="sync-data-from-configuration-manager-to-the-microsoft-operations-management-suite"></a>将数据从 Configuration Manager 同步到 Microsoft Operations Management Suite
+
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-可以使用 Microsoft Operations Management Suite (OMS) 连接器将数据（如集合）从 System Center Configuration Manager 同步到 OMS。 这使得 Configuration Manager 部署中的数据在 OMS 中可见。
+可以使用 Microsoft Operations Management Suite (OMS) 连接器将数据（如集合）从 System Center Configuration Manager 同步到 Microsoft Azure 中的 OMS Log Analytics。 这使得 Configuration Manager 部署中的数据在 OMS 中可见。
+> [!TIP]
+> OMS 连接器是一种预发行功能。 若要了解详细信息，请参阅[使用更新中的预发行功能](/sccm/core/servers/manage/pre-release-features)。
 
-## <a name="add-an-oms-connection-to-configuration-manager"></a>将 OMS 连接添加到 Configuration Manager
+从版本 1702 开始，你可以使用 OMS 连接器连接到 Microsoft Azure Government 云上的一个 OMS 工作区。 这要求你先修改配置文件，然后才能安装 OMS 连接器。 请参阅本主题中的[将 OMS 连接器与 Azure Government 云结合使用](#fairfaxconfig)。
 
-要添加 OMS 连接，Configuration Manager 环境必须先在[联机模式](https://azure.microsoft.com/en-us/documentation/articles/resource-group-create-service-principal-portal/)下配置 [服务连接点](../../../core/servers/deploy/configure/about-the-service-connection-point.md)。 将 OMS 连接添加到环境时，它还会在运行此站点系统角色的计算机上安装 Microsoft Monitoring Agent。
-1.  在“管理”工作区中，选择“OMS 连接器”。 在功能区中，单击“创建 Operations Management Suite 连接”。 这会打开“Operation Management Suite Wizard 连接向导”。 选择“下一步”。
-2.  在“常规”屏幕上，确认你具有以下信息，然后选择“下一步”。
+## <a name="prerequisites"></a>先决条件
+- 在 Configuration Manager 中安装 OMS 连接器之前，必须为 Configuration Manager 提供对 OMS 的访问权限。 具体而言，你必须授予*参与者*对 Azure *资源组*的访问权限，其中包含 OMS Log Analytics 工作区。 执行此操作的过程会被记录在 Log Analytics 内容中。 请参阅 OMS 文档中的[为 Configuration Manager 提供对 OMS 的访问权限](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#provide-configuration-manager-with-permissions-to-oms)。
 
-    * 将 Configuration Manager 注册为“Web 应用程序和/或 Web API”管理工具，你会具有[来自此注册的客户端 ID](https://azure.microsoft.com/documentation/articles/active-directory-integrating-applications/)。
-    * 在 Azure Active Directory 中，为已注册的管理工具创建客户端密钥。
-    * 在 Azure 管理门户中，向已注册的 Web 应用提供访问 OMS 的权限，如[向 Configuration Manager 提供 OMS 权限](https://azure.microsoft.com/en-us/documentation/articles/log-analytics-sccm/#provide-configuration-manager-with-permissions-to-oms)中所述。
+- 必须在托管[联机模式](/sccm/core/servers/deploy/configure/about-the-service-connection-point#a-namebkmkmodesa-modes-of-operation)下的[服务连接点](/sccm/core/servers/deploy/configure/about-the-service-connection-point)的计算机上安装 OMS 连接器。
 
-3.  在“Azure Active Directory”屏幕上，通过提供配置“租户”、“客户端 ID”和“客户端密钥”来向 OMS 配置连接设置，然后选择“下一步”。
-4.  在“OMS 连接配置”屏幕上，通过填写“Azure 订阅”、“Azure 资源组”和“Operations Management Suite 工作区”，来提供连接设置。
-5.  在“摘要”屏幕上验证连接设置，然后选择“下一步”。 “进度”屏幕会显示连接状态，然后应“完成”。
+  如果你已将 OMS 连接到独立主站点并打算将管理中心站点添加到你的环境，必须删除当前连接，然后在新的管理中心站点重新配置连接器。
 
-> [!NOTE]
-> 必须将 OMS 连接到层次结构中的顶层站点。 如果将 OMS 连接到独立主站点，然后将管理中心站点添加到环境，则必须删除 OMS 连接并在新层次结构中重新创建。
+- 必须为在服务连接点上安装的 OMS 安装 Microsoft Monitoring Agent 以及 OMS 连接器。  必须将代理和 OMS 连接器配置为使用相同的 **OMS 工作区**。 若要安装代理，请参阅 OMS 文档中的[下载并安装代理](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#download-and-install-the-agent)。
+
+- 安装连接器和代理后，必须配置 OMS 以使用 Configuration Manager 数据。  为此，请在 OMS 门户中[导入 Configuration Manager 集合](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#import-collections)。
+
+
+
+## <a name="install-the-oms-connector"></a>安装 OMS 连接器  
+1. 在 Configuration Manager 控制台中，配置你的[层次结构以使用预发行功能](/sccm/core/servers/manage/pre-release-features)，然后启用 OMS 连接器。  
+
+2. 接下来，转到“管理” > “云服务” > “OMS 连接器”。 在功能区中，单击“创建 Operations Management Suite 连接”。 这会打开“Operation Management Suite Wizard 连接向导”。 选择“下一步”。  
+
+
+3.    在“常规”页上，确认你具有以下信息，然后选择“下一步”。  
+  - 将 Configuration Manager 注册为“Web 应用程序和/或 Web API”管理工具，你会具有[来自此注册的客户端 ID](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications)。  
+  - 在 Azure Active Directory 中，为已注册的管理工具创建客户端密钥。  
+
+  - 在 Azure 管理门户中，向已注册的 Web 应用提供访问 OMS 的权限，如[向 Configuration Manager 提供 OMS 权限](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#provide-configuration-manager-with-permissions-to-oms)中所述。  
+
+4.    在“Azure Active Directory”页上，通过提供“租户”、“客户端 ID”和“客户端密钥”来配置 OMS 的连接设置，然后选择“下一步”。  
+
+5.    在“OMS 连接配置”页上，通过填写“Azure 订阅”、“Azure 资源组”和“Operations Management Suite 工作区”，来提供连接设置。  工作区必须匹配为在服务连接点上安装的 Microsoft 管理代理配置的工作区。  
+
+6.    在“摘要”页上验证连接设置，然后选择“下一步”。 “进度”页会显示连接状态，然后应单击“完成”。
 
 将 Configuration Manager 链接到 OMS 之后，可以添加或删除集合，以及查看 OMS 连接的属性。
 
-## <a name="viewing-microsoft-operations-management-suite-connection-properties-in-configuration-manager"></a>在 Configuration Manager 中查看 Microsoft Operations Management Suite 连接属性
+## <a name="verify-the-oms-connector-properties"></a>验证 OMS 连接器属性
+1.    在 Configuration Manager 控制台中，转到“管理” > “云服务”，然后选择“OMS 连接器”以打开“OMS 连接”页**。
+2.    该页中有两个选项卡：
+  - **Azure Active Directory：**   
+    此选项卡显示“租户”、“客户端 ID”、“客户端机密密钥到期日期”，使你可以验证客户端密钥是否到期。
 
-1.  导航到“云服务”，然后选择“OMS 连接器”以打开“OMS 连接属性”页。
-2.  该页中有两个选项卡：
-  * “Azure Active Directory”选项卡显示“租户”、“客户端 ID”、“客户端机密密钥的过期”，使你可以在客户端密钥到期时**验证****客户端密钥**。
-  * “OMS 连接属性”选项卡上显示“Azure 订阅”、“Azure 资源组”、“Operations Management Suite 工作区”和 **Operations Management Suite 可以获取其数据的设备集合**的列表。 使用“添加”和“删除”按钮可修改允许使用的集合。
+  - **OMS 连接属性：**  
+    此选项卡显示“Azure 订阅”、“Azure 资源组”、“Operations Management Suite 工作区”和“Operations Management Suite 可以获取有关数据的设备集合”列表。 使用“添加”和“删除”按钮可修改允许使用的集合。
+
+## <a name="fairfaxconfig"> </a>将 OMS 连接器与 Azure Government 云结合使用
+
+
+1.  在任何安装了 Configuration Manager 控制台的计算机上，编辑以下配置文件，使其指向政府云：***&lt;CM 安装路径>\AdminConsole\bin\Microsoft.configurationManagmenet.exe.config***
+
+  **编辑：**
+
+    将设置名称 FairFaxArmResourceID 的值更改为等于“https://management.usgovcloudapi.net/”
+
+   - **原始：**
+      &lt;setting name="FairFaxArmResourceId" serializeAs="String">   
+      &lt;value>&lt;/value>   
+      &lt;/setting>
+
+   - **编辑后：**     
+      &lt;setting name="FairFaxArmResourceId" serializeAs="String"> &lt;value>https://management.usgovcloudapi.net/&lt;/value>  
+      &lt;/setting>
+
+  将设置名称 FairFaxAuthorityResource 的值更改为等于“https://login.microsoftonline.com/”
+
+  - **原始：**
+    &lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
+    &lt;value>&lt;/value>
+
+    - **编辑后：**
+    &lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
+    &lt;value>https://login.microsoftonline.com/&lt;/value>
+
+2.    保存包含这两种更改的文件后，请在同一台计算机上重启 Configuration Manager 控制台，然后使用该控制台安装 OMS 连接器。 若要安装连接器，请使用[将数据从 Configuration Manager 同步到 Microsoft Operations Management Suite](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite) 中的信息，选择 Microsoft Azure 政府云上的 **Microsoft Operations Management Suite**。
+
+3.    OMS 连接器安装后，使用任何连接到站点的控制台时，可使用与政府云的连接。
 

@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f9097014c7e988ec8e139e518355c4efb19172b3
-ms.openlocfilehash: eafa95922485066632a5da522e6c3de69b45050f
-ms.lasthandoff: 03/04/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 3b50ada9f63e41d1b6f01009c141b8f361f5180e
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -33,14 +33,14 @@ System Center Configuration Manager 与 Microsoft 云服务同步，以获取更
 
 -   在 **联机模式**下，服务连接点会自动连接到 Microsoft 云服务并下载适用的更新。  
 
-     默认情况下，Configuration Manager 会每 24 小时检查一次新的更新。 还可以通过在 Configuration Manager 控制台的“管理” > “云服务” > “更新和维护服务”节点中选择“检查更新”，来立即检查更新。  
+     默认情况下，Configuration Manager 会每 24 小时检查一次新的更新。 还可以通过在 Configuration Manager 控制台的“管理” > “更新和维护服务”节点中选择“检查更新”，来立即检查更新。 （在版本 1702 之前，此节点在“管理” > “云服务”下。）
 
 -   在“脱机模式”下，服务连接点不会连接到 Microsoft 云服务。 必须手动[使用适用于 System Center Configuration Manager 的服务连接工具](../../../core/servers/manage/use-the-service-connection-tool.md)来下载可用的更新，然后将其导入。  
 
 > [!NOTE]  
 >  除了在与 Microsoft 云服务同步时获取的更新之外，使用 [更新注册工具](http://technet.microsoft.com/library/mt691544.aspx) 安装的带外修复也会导入控制台中，随后可以在控制台中选择它们进行安装。  
 
-对更新进行同步后，可以通过转至“管理” > “云服务” > “更新和维护服务”节点，在 Configuration Manager 控制台中查看它们：  
+对更新进行同步后，可以通过转至“管理” > “更新和维护服务”节点，在 Configuration Manager 控制台中查看它们：  
 
 -   未安装的更新显示为“可用”。
 
@@ -98,7 +98,8 @@ System Center Configuration Manager 与 Microsoft 云服务同步，以获取更
 - 更新到 1606：请参阅 [1606 的安装更新清单](../../../core/servers/manage/checklist-for-installing-update-1606.md)。  
 
 - 从 1606 更新到 1610：请参阅 [1610 的安装更新清单](../../../core/servers/manage/checklist-for-installing-update-1610.md)。  
-<!--- Update to 1702 from either 1606 or 1610: See [Checklist for installing update 1702](../../../core/servers/manage/checklist-for-installing-update-1702.md). -->  
+
+- 从 1606 或 1610 更新到 1702：请参阅 [1702 更新的安装清单](../../../core/servers/manage/checklist-for-installing-update-1702.md)。
 
 ###  <a name="bkmk_step2"></a> 步骤 2：安装更新之前测试数据库升级  
 此步骤中的信息仅适用于为 System Center Configuration Manager 站点安装*更新*。 如果要将 System Center 2012 Configuration Manager 站点*升级*到 System Center Configuration Manager，请参阅[测试站点数据库升级](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager#a-namebkmktesta-test-the-site-database-upgrade)。
@@ -146,7 +147,7 @@ System Center Configuration Manager 与 Microsoft 云服务同步，以获取更
 
 #### <a name="to-run-the-prerequisite-checker-before-installing-an-update"></a>安装更新之前运行先决条件检查程序  
 
-1.  在 Configuration Manager 控制台中，转到“管理” > “云服务” > “更新与维护服务”。  
+1.  在 Configuration Manager 控制台中，转到“管理” > “更新与维护服务”。   
 
 2.  右键单击要对其运行先决条件检查的更新包。  
 
@@ -203,7 +204,7 @@ System Center Configuration Manager 与 Microsoft 云服务同步，以获取更
 **3.在安装更新时监视更新进度**  
 使用以下操作可监视进度：  
 
--   在 Configuration Manager 控制台中：转到“管理” > “云服务” > “更新与维护服务”。 此节点显示所有更新包的安装状态。
+-   在 Configuration Manager 控制台中：“管理” > “更新与维护服务”节点。 此节点显示所有更新包的安装状态。
 
 
 -   在 Configuration Manager 控制台中：转到“监视” > “概述” > “更新与维护服务”节点。 此节点仅显示当前正在安装的更新包的安装状态。  
@@ -241,7 +242,7 @@ System Center Configuration Manager 与 Microsoft 云服务同步，以获取更
 控制台更新完成之后，可以验证控制台和站点版本是否正确。 转至控制台左上角的“关于 System Center Configuration Manager”。  
 
 ###  <a name="bkmk_toptier"></a> 在顶层站点上启动更新安装  
-在层次结构的顶层站点上，在 Configuration Manager 控制台中，转到“管理” > “云服务” > “更新和维护服务”，选择“可用”更新，然后单击“安装更新包”。  
+在层次结构的顶层站点上，在 Configuration Manager 控制台中，转到“管理” > “更新和维护服务”，选择“可用”更新，然后单击“安装更新包”。  
 
 ###  <a name="bkmk_secondary"></a> 在辅助站点上启动更新安装  
 更新辅助站点父主站点之后，随后可以从 Configuration Manager 控制台中更新辅助站点。  为此，请使用“升级辅助站点向导”。  
@@ -268,7 +269,7 @@ System Center Configuration Manager 与 Microsoft 云服务同步，以获取更
     -   安装失败
     -   内容复制到站点失败   
 
-    转到“管理” > “云服务” > “更新和维护服务”，选择更新并选择下列选项之一：  
+    转到“管理” > “更新和维护服务”，选择更新并选择下列选项之一：  
 
     -   **重试** - 从该节点运行**重试**时，将再次开始更新安装，并自动忽略先决条件警告。 如果之前复制失败，它还将重新复制更新的内容。
     - **忽略先决条件警告** - 从版本 1606 开始，如果由于警告而导致更新安装停止，则可以选择“忽略先决条件警告”。 此操作将允许继续安装更新（几分钟后），并使用“忽略先决条件警告”的选项。   
@@ -315,7 +316,7 @@ System Center Configuration Manager 与 Microsoft 云服务同步，以获取更
 ##  <a name="bkmk_options"></a> 启用更新中的可选功能  
 当安装的更新包含一个或多个可选功能时，你可以选择在层次结构中启用这些功能。  可以在安装更新时执行此操作，或者可以稍后返回控制台并启用可选功能。
 
-若要查看可用功能及其状态，请在控制台中导航到“管理” > “云服务” > “更新和维护” > “功能”。
+若要查看可用功能及其状态，请在控制台中导航到“管理” > “更新和维护服务” > “功能”。
 
 当功能不可选时，它会自动安装，不会出现在“功能”节点中。  
 

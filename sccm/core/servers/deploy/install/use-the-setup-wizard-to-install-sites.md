@@ -1,7 +1,7 @@
 ---
 title: "安装向导 | Microsoft Docs"
 ms.custom: na
-ms.date: 2/28/2017
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,9 +15,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 37865f1f3dc959ee8acf8ab06df5cae6e07e4257
-ms.openlocfilehash: 97eb95c1c6ac31ce9bca22df13bcc4f248026298
-ms.lasthandoff: 03/01/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 2f1bc62a4695d60dc4679e479797ee84cd4ddee4
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="use-the-setup-wizard-to-install-system-center-configuration-manager-sites"></a>使用安装向导安装 System Center Configuration Manager 站点
@@ -240,7 +240,7 @@ ms.lasthandoff: 03/01/2017
 
 -   在“站点安装”页上，选择扩展独立主站点的选项。  
 
-若要扩展独立主站点，请使用本文前面部分介绍的*[安装主站点或管理中心站点](../../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md#bkmk_installpri)*过程。
+若要扩展独立主站点，请首先查看[扩展站点的先决条件](/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#bkmk_expand)，然后使用本文前面部分介绍的过程 *[ 安装主站点或管理中心站点 ](../../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md#bkmk_installpri)*。
 
 
 ## <a name="bkmk_secondary"></a>安装辅助站点

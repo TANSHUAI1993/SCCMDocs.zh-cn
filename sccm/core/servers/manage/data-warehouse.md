@@ -2,7 +2,7 @@
 title: "数据仓库 | Microsoft Docs"
 description: "System Center Configuration Manager 的数据仓库服务点和数据库"
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 3/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f9097014c7e988ec8e139e518355c4efb19172b3
-ms.openlocfilehash: 176d1116c910306f70d9acf934ad90340bcc4fcd
-ms.lasthandoff: 03/04/2017
+ms.sourcegitcommit: 3c2a07f560e0aa3d2beb7cc50e71c98ac45c27e1
+ms.openlocfilehash: 9239f6e749c368835e8594ca2d07378d8555b99e
+ms.lasthandoff: 03/28/2017
 
 
 ---
@@ -54,6 +54,13 @@ ms.lasthandoff: 03/04/2017
   - SQL Server AlwaysOn 可用性组：不支持此配置。
   - SQL Server 群集：不支持 SQL Server 故障转移群集。 这是因为数据仓库数据库尚未在 SQL Server 故障转移群集上进行深入测试。
   - 当数据仓库数据库是站点服务器数据库的远程数据库时，必须具有单独的 SQL Server（用于托管数据库）许可证。
+
+> [!IMPORTANT]  
+> 当运行数据仓库服务点或托管数据仓库数据库的计算机运行以下任一语言时，不支持数据仓库：
+> - JPN – 日语
+> - KOR – 朝鲜语
+> - CHS - 简体中文
+> - CHT – 繁体中文 此问题将在后续版本中解决。
 
 
 ## <a name="install-the-data-warehouse"></a>安装数据仓库

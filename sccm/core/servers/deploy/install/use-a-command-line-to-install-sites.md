@@ -2,7 +2,7 @@
 title: "命令行安装 | Microsoft Docs"
 description: "了解如何在命令提示符处运行 System Center Configuration Manager 安装程序来安装多个站点。"
 ms.custom: na
-ms.date: 3/1/2017
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 34e24deb90a39bf655a2e24d16cdbe07528e6193
-ms.openlocfilehash: 0fb8ba4bb3d4abe66f71cc83312281cecbb92c41
-ms.lasthandoff: 03/01/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: fefa5f3aa12d82b66a251cf0525475496e1e35cf
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="use-a-command-line-to-install-system-center-configuration-manager-sites"></a>使用命令行安装 System Center Configuration Manager 站点
@@ -33,7 +33,7 @@ ms.lasthandoff: 03/01/2017
 -   **从命令提示符处安装管理中心站点或主站点**  
   查看[适用于安装程序的命令行选项](../../../../core/servers/deploy/install/command-line-options-for-setup.md)
 
- -  **修改管理中心站点或主站点中使用的语言**  
+-  **修改管理中心站点或主站点中使用的语言**  
     若要从命令提示符处修改站点上安装的语言（包括用于移动设备的语言），必须：  
 
      -   从站点服务器上的 **&lt;ConfigMgrInstallationPath\>\Bin\X64** 运行安装程序，
@@ -44,7 +44,7 @@ ms.lasthandoff: 03/01/2017
 
     若要创建语言脚本文件，请使用[用于管理语言的命令行选项](../../../../core/servers/deploy/install/command-line-options-for-setup.md#bkmk_Lang)中的信息  
 
- -  **将安装脚本文件用于无人参与的站点安装或站点恢复**  
+-  **将安装脚本文件用于无人参与的站点安装或站点恢复**  
     可使用安装脚本从命令提示符运行安装程序，并可运行无人参与的站点安装。 还可以使用此选项来恢复站点。    
 
     若要将脚本用于安装程序：  
@@ -58,7 +58,7 @@ ms.lasthandoff: 03/01/2017
     -   标识    
     -   选项    
     -   SQLConfigOptions    
-    -   HierarchyOptions    
+      -   HierarchyOptions    
     -   CloudConnectorOptions   
 
     若要恢复站点，还必须包括脚本文件的以下部分：  
@@ -66,12 +66,11 @@ ms.lasthandoff: 03/01/2017
     -   标识  
     -   恢复
 
-    有关备份和恢复的详细信息，请参阅[在 Configuration Manager 中备份和恢复](../../../../protect/understand/backup-and-recovery.md)主题的[无人参与的站点恢复脚本文件密钥](../../../../protect/understand/backup-and-recovery.md#BKMK_UnattendedSiteRecoveryKeys)。  
+有关备份和恢复的详细信息，请参阅[在 Configuration Manager 中备份和恢复](../../../../protect/understand/backup-and-recovery.md)主题的[无人参与的站点恢复脚本文件密钥](../../../../protect/understand/backup-and-recovery.md#BKMK_UnattendedSiteRecoveryKeys)。  
 
-    若要了解将在无人参与的安装脚本文件中使用的一系列密钥和值，请查看[无人参与的安装程序脚本文件密钥](../../../../core/servers/deploy/install/command-line-options-for-setup.md#bkmk_Unattended)。  
+若要了解将在无人参与的安装脚本文件中使用的一系列密钥和值，请查看[无人参与的安装程序脚本文件密钥](../../../../core/servers/deploy/install/command-line-options-for-setup.md#bkmk_Unattended)。  
 
 ## <a name="about-the-command-line-script-file"></a>关于命令行脚本文件  
-
  对于无人参与的 Configuration Manager 安装，可使用命令行选项 **/SCRIPT** 运行安装程序，并指定包含安装选项的脚本文件。 使用此方法支持以下任务：  
 
 -   安装管理中心站点  
@@ -81,6 +80,18 @@ ms.lasthandoff: 03/01/2017
 
 > [!NOTE]  
 >  你无法使用无人参与脚本文件将评估版站点升级为 Configuration Manager 的许可版安装。  
+
+### <a name="the-cdlatest-key-name"></a>CDLatest 密钥名称
+使用 CD.Latest 文件夹中的介质运行以下四个安装选项的脚本化安装时，你的脚本必须包含值为 **1** 的 **CDLatest** 密钥：
+- 安装新的管理中心站点
+- 安装新的主站点
+- 恢复管理中心站点
+- 恢复主站点 
+
+该值不支持用于从 Microsoft 批量许可站点中获取的安装介质。
+请参阅[命令行选项](/sccm/core/servers/deploy/install/command-line-options-for-setup)获取有关如何在脚本文件中使用此密钥名称的信息。
+
+
 
 ### <a name="create-the-script"></a>创建脚本
 [使用用户界面运行安装程序以安装站点](../../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md)时会自动创建安装脚本。  在向导的“摘要”页上确认设置时，会发生以下情况：  

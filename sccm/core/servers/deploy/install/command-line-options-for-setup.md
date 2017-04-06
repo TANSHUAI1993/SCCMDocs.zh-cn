@@ -2,7 +2,7 @@
 title: "安装程序命令行选项 | Microsoft Docs"
 description: "使用本文中的信息从命令行配置脚本或安装 System Center Configuration Manager。"
 ms.custom: na
-ms.date: 13/2017
+ms.date: 03/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 36b1ab794bb1dc80c673bd41dae11f46053f3be3
-ms.openlocfilehash: 55f9fe5c05cd09b9291b6370200c9fbe15699e7d
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 04fe7b3e674287c4255563ab4a308e54d0b6c3aa
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="command-line-options-for-setup-in-system-center-configuration-manager"></a>System Center Configuration Manager 中适用于安装程序的命令行选项
@@ -27,7 +28,7 @@ ms.openlocfilehash: 55f9fe5c05cd09b9291b6370200c9fbe15699e7d
 
  使用以下信息从命令行配置脚本或安装 System Center Configuration Manager。  
 
-##  <a name="a-namebkmksetupa-command-line-options-for-setup"></a><a name="bkmk_setup"></a>适用于安装程序的命令行选项  
+##  <a name="bkmk_setup"></a>适用于安装程序的命令行选项  
  **/DEINSTALL**  
  卸载站点。 必须从站点服务器计算机中运行安装程序。  
 
@@ -68,7 +69,7 @@ ms.openlocfilehash: 55f9fe5c05cd09b9291b6370200c9fbe15699e7d
  **/MANAGELANGS <*语言脚本路径*>**  
  管理安装在以前安装的站点上的语言。要使用此选项，必须从站点服务器上的 **<*Configuration Manager 安装路径*>\BIN\X64** 中运行安装程序，并提供包含语言设置的语言脚本文件的位置。 有关语言安装程序脚本文件中可用的语言选项的详细信息，请参阅本主题中的[用于管理语言的命令行选项](#bkmk_Lang)部分。  
 
-##  <a name="a-namebkmklanga-command-line-options-to-manage-languages"></a><a name="bkmk_Lang"></a> 用于管理语言的命令行选项  
+##  <a name="bkmk_Lang"></a> 用于管理语言的命令行选项  
  **标识**  
 
 -   **项名称：**Action  
@@ -145,7 +146,7 @@ ms.openlocfilehash: 55f9fe5c05cd09b9291b6370200c9fbe15699e7d
 
     -   **详细信息：** 指定安装程序必备文件的路径。 根据 **PrerequisiteComp** 值，安装程序将使用此路径来存储已下载文件或查找以前下载的文件。  
 
-##  <a name="a-namebkmkunattendeda-unattended-setup-script-file-keys"></a><a name="bkmk_Unattended"></a>无人参与安装程序脚本文件项  
+##  <a name="bkmk_Unattended"></a>无人参与安装程序脚本文件项  
  使用下列部分来帮助你为无人参与安装程序创建脚本。 列表显示了可用的安装程序脚本项、其对应的值、是否需要它们、它们用于哪种安装类型以及项的简要描述。  
 
 ### <a name="unattended-install-for-a-central-administration-site"></a>中心管理站点的无人参与安装  
@@ -161,13 +162,21 @@ ms.openlocfilehash: 55f9fe5c05cd09b9291b6370200c9fbe15699e7d
 
     -   **详细信息：**安装管理中心站点。  
 
+-   **密钥名称：**CDLatest  
+
+    -   **必备：**是（仅在使用 CD.Latest 文件夹中的介质时）。    
+
+    -   **值：**1。1 以外的任何值均视为不使用 CD.Latest。
+
+    -   **详细信息：**从 CD.Latest 文件夹中的介质运行安装程序时，你的脚本必须包含该密钥和值，以安装主站点或管理中心站点，或恢复主站点或管理中心站点。 该值将告知安装程序当前使用介质形式 CD.Latest。
+
 **选项**  
 
 -   **项名称：**ProductID  
 
     -   **是否必需：** 是  
 
-    -   **值：** <*xxxxx-xxxxx-xxxxx-xxxxx-xxxxx*> * 或* Eval  
+    -   **值：** <*xxxxx-xxxxx-xxxxx-xxxxx-xxxxx*> *或* Eval  
 
     -   **详细信息：**指定 Configuration Manager 安装产品密钥，包括短划线。 输入 **Eval** 以安装 Configuration Manager 的评估版。  
 
@@ -399,13 +408,21 @@ ms.openlocfilehash: 55f9fe5c05cd09b9291b6370200c9fbe15699e7d
 
     -   **详细信息：**安装主站点。  
 
+-   **密钥名称：**CDLatest  
+
+    -   **必备：**是（仅在使用 CD.Latest 文件夹中的介质时）。    
+
+    -   **值：**1。1 以外的任何值均视为不使用 CD.Latest。
+
+    -   **详细信息：**从 CD.Latest 文件夹中的介质运行安装程序时，你的脚本必须包含该密钥和值，以安装主站点或管理中心站点，或恢复主站点或管理中心站点。 该值将告知安装程序当前使用介质形式 CD.Latest。
+
 **选项**  
 
 -   **项名称：**ProductID  
 
     -   **是否必需：** 是  
 
-    -   **值：** <*xxxxx-xxxxx-xxxxx-xxxxx-xxxxx*> * 或* Eval  
+    -   **值：** <*xxxxx-xxxxx-xxxxx-xxxxx-xxxxx*> *或* Eval  
 
     -   **详细信息：**指定 Configuration Manager 安装产品密钥，包括短划线。 输入 **Eval** 以安装 Configuration Manager 的评估版。  
 
@@ -717,6 +734,14 @@ ms.openlocfilehash: 55f9fe5c05cd09b9291b6370200c9fbe15699e7d
 
     -   **详细信息：**恢复管理中心站点。  
 
+-   **密钥名称：**CDLatest  
+
+    -   **必备：**是（仅在使用 CD.Latest 文件夹中的介质时）。    
+
+    -   **值：**1。1 以外的任何值均视为不使用 CD.Latest。
+
+    -   **详细信息：**从 CD.Latest 文件夹中的介质运行安装程序时，你的脚本必须包含该密钥和值，以安装主站点或管理中心站点，或恢复主站点或管理中心站点。 该值将告知安装程序当前使用介质形式 CD.Latest。
+
 **RecoveryOptions**  
 
 -   **项名称：**ServerRecoveryOptions  
@@ -789,7 +814,7 @@ ms.openlocfilehash: 55f9fe5c05cd09b9291b6370200c9fbe15699e7d
 
     -   **是否必需：** 是  
 
-    -   **值：** <*xxxxx-xxxxx-xxxxx-xxxxx-xxxxx*> * 或* Eval  
+    -   **值：** <*xxxxx-xxxxx-xxxxx-xxxxx-xxxxx*> *或* Eval  
 
     -   **详细信息：**指定 Configuration Manager 安装产品密钥，包括短划线。 输入 **Eval** 以安装 Configuration Manager 的评估版。  
 
@@ -978,6 +1003,14 @@ ms.openlocfilehash: 55f9fe5c05cd09b9291b6370200c9fbe15699e7d
     -   **值：** <*RecoverPrimarySite*>  
 
     -   **详细信息：**恢复主站点。  
+
+-   **密钥名称：**CDLatest  
+
+    -   **必备：**是（仅在使用 CD.Latest 文件夹中的介质时）。    
+
+    -   **值：**1。1 以外的任何值均视为不使用 CD.Latest。
+
+    -   **详细信息：**从 CD.Latest 文件夹中的介质运行安装程序时，你的脚本必须包含该密钥和值，以安装主站点或管理中心站点，或恢复主站点或管理中心站点。 该值将告知安装程序当前使用介质形式 CD.Latest。    
 
 **RecoveryOptions**  
 
@@ -1243,9 +1276,4 @@ ms.openlocfilehash: 55f9fe5c05cd09b9291b6370200c9fbe15699e7d
     -   **值：** <*端口号*>  
 
     -   **详细信息：**指定要用于代理端口的端口号。  
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

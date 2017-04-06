@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 139dcf9bc2a9bd253592b969b6f9d814ffcdfd8e
-ms.openlocfilehash: 6b24d775fe4ca78dfba9645b81096f9228864d99
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 640cdc67f301a81a45bf27f95eb03cbc8754a9aa
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -26,10 +27,10 @@ ms.openlocfilehash: 6b24d775fe4ca78dfba9645b81096f9228864d99
 *适用范围：System Center Configuration Manager (Current Branch)*
 
 本主题中的信息特定于通过 1511、1602 和 1606 版 System Center Configuration Manager 使用边界组。
-如果使用的是 1610 或更高版本，请参阅*定义站点边界和边界组或 System Center Configuration Manager* 中的[边界组](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#a-namebkmkboundarygroupsa-boundary-group/)，以了解如何使用重新设计的边界组。  
+如果你使用的是版本 1610 或更高版本，请参阅[配置边界组](/sccm/core/servers/deploy/configure/boundary-groups)，以了解有关使用重新设计的边界组的信息。  
 
 
-##  <a name="a-namebkmkboundarygroupsa-boundary-groups"></a><a name="BKMK_BoundaryGroups"></a> Boundary groups  
+##  <a name="BKMK_BoundaryGroups"></a> Boundary groups  
  将边界组创建为以逻辑方式对相关的网络位置（边界）进行分组，以便可以更轻松的管理你的基础结构。 你必须将边界分配给边界组，然后才能使用边界组。 客户端使用边界组配置用于：  
 
 -   自动站点分配  
@@ -122,7 +123,7 @@ ms.openlocfilehash: 6b24d775fe4ca78dfba9645b81096f9228864d99
 
  下列部分提供了有关边界组配置的其他详细信息。  
 
-###  <a name="a-namebkmkboundarysiteassignmenta-about-site-assignment"></a><a name="BKMK_BoundarySiteAssignment"></a> 有关站点分配  
+###  <a name="BKMK_BoundarySiteAssignment"></a> 有关站点分配  
  可以使用客户端的分配的站点设置每个边界组。  
 
 -   使用自动站点分配的新安装的客户端将加入具有客户端当前网络位置的边界组的分配的站点。  
@@ -137,7 +138,7 @@ ms.openlocfilehash: 6b24d775fe4ca78dfba9645b81096f9228864d99
 
 有关客户端站点分配的详细信息，请参阅[如何在 System Center Configuration Manager 中将客户端分配到一个站点](../../../../core/clients/deploy/assign-clients-to-a-site.md)中的[对计算机使用自动站点分配](../../../../core/clients/deploy/assign-clients-to-a-site.md#BKMK_AutomaticAssignment)。  
 
-###  <a name="a-namebkmkboundarycontentlocationa-about-content-location"></a><a name="BKMK_BoundaryContentLocation"></a> 有关内容位置  
+###  <a name="BKMK_BoundaryContentLocation"></a> 有关内容位置  
  可以使用一个或多个分发点和状态迁移点设置每个边界组，并可将相同的分发点和状态迁移点与多个边界组关联。  
 
 -   **在软件分发过程中**，客户端请求用于部署内容的位置。 Configuration Manager 将向客户端发送包括客户端当前网络位置的每个边界组关联的分发点列表。  
@@ -146,7 +147,7 @@ ms.openlocfilehash: 6b24d775fe4ca78dfba9645b81096f9228864d99
 
 此行为使客户端能够选择从中传输内容或状态迁移信息的最近的服务器。  
 
-###  <a name="a-namebkmkpreferredmpa-about-preferred-management-points"></a><a name="BKMK_PreferredMP"></a> 关于首选管理点  
+###  <a name="BKMK_PreferredMP"></a> 关于首选管理点  
  首选管理点使客户端能够识别与其当前网络位置（边界）关联的管理点。  
 
 -   客户端先尝试使用其分配的站点中的首选管理点，然后再使用其分配的站点中未设置为首选的管理点。  
@@ -158,7 +159,7 @@ ms.openlocfilehash: 6b24d775fe4ca78dfba9645b81096f9228864d99
 > [!NOTE]  
 >  当客户端漫游时（例如，笔记本电脑转至远程办公地点，并更改其网络位置），在该客户端尝试使用其分配的站点中的管理点（其中包括首选管理点）之前，它可能会使用来自其新位置的本地站点中的管理点（或代理管理点）。  有关详细信息，请参阅[了解客户端如何查找 System Center Configuration Manager 的站点资源和服务](../../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md)。  
 
-###  <a name="a-namebkmkboundaryoverlapa-about-overlapping-boundaries"></a><a name="BKMK_BoundaryOverlap"></a> 有关重叠边界  
+###  <a name="BKMK_BoundaryOverlap"></a> 有关重叠边界  
  Configuration Manager 对于内容位置支持重叠边界配置：  
 
 -   **当客户端请求内容**，并且客户端网络位置属于多个边界组时，Configuration Manager 将向客户端发送具有内容的所有分发点的列表。  
@@ -167,15 +168,10 @@ ms.openlocfilehash: 6b24d775fe4ca78dfba9645b81096f9228864d99
 
 此行为使客户端能够选择从中传输内容或状态迁移信息的最近的服务器。  
 
-###  <a name="a-namebkmkboudnarynetworkspeeda-about-network-connection-speed"></a><a name="BKMK_BoudnaryNetworkSpeed"></a> 有关网络连接速度  
+###  <a name="BKMK_BoudnaryNetworkSpeed"></a> 有关网络连接速度  
  可以为边界组中的每个站点系统服务器设置网络连接速度。 此设置适用于基于此边界组的配置连接到站点系统的客户端。 同一站点系统服务器在不同的边界组中可设置不同的连接速度。  
 
  默认情况下，网络连接速度设置为“快”，但可将其更改为“慢”。 网络连接速度和部署配置会检查当客户端位于关联的边界组中时它是否能从分发点下载内容。  
 
  有关网络连接速度配置如何影响客户端获取内容的方式的详细信息，请参阅[内容源位置方案](../../../../core/plan-design/hierarchy/content-source-location-scenarios.md)。  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

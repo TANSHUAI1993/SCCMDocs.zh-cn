@@ -2,7 +2,7 @@
 title: "Windows 客户端部署先决条件 | Microsoft Docs"
 description: "了解在 System Center Configuration Manager 中将客户端部署到 Windows 计算机的先决条件。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/5/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,9 +17,9 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: cbcffea0fe2b4c8a05d3a835ff1193b528e55762
-ms.lasthandoff: 12/16/2016
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 7ed1b9e6802cc20defcb92a8e536983fd757bd29
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/16/2016
 > [!NOTE]  
 >  本文中显示的软件版本号仅列出所需的最低版本号。  
 
-##  <a name="a-namebkmkprereqscomputersa-prerequisites-for-computer-clients"></a><a name="BKMK_prereqs_computers"></a>计算机客户端的先决条件  
+##  <a name="BKMK_prereqs_computers"></a>计算机客户端的先决条件  
  使用下列信息来确定在计算机上安装 Configuration Manager 客户端时的先决条件。  
 
 ### <a name="dependencies-external-to-configuration-manager"></a>Configuration Manager 的外部依赖关系  
@@ -65,9 +65,10 @@ ms.lasthandoff: 12/16/2016
 |Microsoft Silverlight 5.1.41212.0（从 Configuration Manager 版本 1602 开始）|需要该项以支持应用程序目录网站用户体验。|  
 |Microsoft .NET Framework 版本 4.5.2|需要该项以支持客户端操作。 如果没有安装 Microsoft .NET Framework 4.5 或更高版本，那么将自动将其安装在客户端计算机上。 有关详细信息，请参阅[有关 Microsoft .NET Framework 版本 4.5.2 的其他详细信息](#dotNet)。|  
 |Microsoft SQL Server Compact 3.5 SP2 组件|需要该项以存储与客户端操作相关的信息。|  
-|Microsoft Windows 映像组件|对于 64 位计算机，适用于 Windows Server 2003 或 Windows XP SP2 的 Microsoft .NET Framework 4.0 需要该组件。|  
+|Microsoft Windows 映像组件|对于 64 位计算机，适用于 Windows Server 2003 或 Windows XP SP2 的 Microsoft .NET Framework 4.0 需要该组件。|
+|Microsoft Intune 电脑软件客户端|你不能在同一台电脑上运行 Intune 电脑软件客户端和 Configuration Manager 客户端。 在安装 Configuration Manager 客户端之前，请确保删除 Intune 客户端。|
 
-####  <a name="a-namedotneta-additional-details-about-microsoft-net-framework-version-452"></a><a name="dotNet"></a>有关 Microsoft .NET Framework 版本 4.5.2 的其他详细信息  
+####  <a name="dotNet"></a>有关 Microsoft .NET Framework 版本 4.5.2 的其他详细信息  
 
 > [!NOTE]  
 >  对 .NET 4.0、4.5 和 4.5.1 的支持已于 2016 年 1 月 12 日过期。 有关详细信息，请参阅 support.microsoft.com 处的 [Microsoft .NET Framework 支持生命周期策略常见问题解答](https://support.microsoft.com/gp/framework_faq?WT.mc_id=azurebg_email_Trans_943_NET452_Update)。  
@@ -162,7 +163,7 @@ ms.lasthandoff: 12/16/2016
 ### <a name="firewall-requirements"></a>防火墙要求  
  如果站点系统服务器与你想要在其上安装 Configuration Manager 客户端的计算机之间存在防火墙，请参阅 [System Center Configuration Manager 中客户端的 Windows 防火墙和端口设置](../../../core/clients/deploy/windows-firewall-and-port-settings-for-clients.md)。  
 
-##  <a name="a-namebkmkprereqsmobiledevicesa-prerequisites-for-mobile-device-clients"></a><a name="BKMK_prereqs_mobiledevices"></a>移动设备客户端的先决条件  
+##  <a name="BKMK_prereqs_mobiledevices"></a>移动设备客户端的先决条件  
  使用下列信息来确定在移动设备上安装 Configuration Manager 客户端和使用 Configuration Manager 注册这些设备时的先决条件。  
 
 ### <a name="dependencies-external-to-configuration-manager"></a>Configuration Manager 的外部依赖关系  

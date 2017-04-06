@@ -2,7 +2,7 @@
 title: "创建 PFX 证书配置文件 | Microsoft Docs"
 description: "了解如何使用 System Center Configuration Manager 中的 PFX 文件生成支持加密数据交换的用户特定证书。"
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 03/30/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,9 +17,9 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: eddecee8886296fb6132d7477afebbfc7fd280d1
-ms.lasthandoff: 03/06/2017
+ms.sourcegitcommit: 3b1451edaed69a972551bd060293839aa11ec8b2
+ms.openlocfilehash: 2495cef2442706b343bac6d510946c1226b64cfc
+ms.lasthandoff: 03/28/2017
 
 
 ---
@@ -29,37 +29,29 @@ ms.lasthandoff: 03/06/2017
 
 证书配置文件使用 Active Directory 证书服务和网络设备注册服务角色设置托管设备的身份验证证书，以便用户能够无缝地访问公司资源。 例如，可以创建和部署证书配置文件来为用户提供必要的证书，从而启动 VPN 和无线连接。
 
-如需了解创建和配置证书配置文件的一般信息，请参阅[证书配置文件](../../protect/deploy-use/introduction-to-certificate-profiles.md)。 本主题重点介绍了与移动设备管理有关的证书配置文件特定信息。
+[证书配置文件](../../protect/deploy-use/introduction-to-certificate-profiles.md)提供有关创建和配置证书配置文件的一般信息。 本主题强调了有关与 PFX 证书相关的证书配置文件的一些具体信息。
 
-- 证书配置文件通过企业证书颁发机构 (CA) 为运行 iOS、Windows 8.1、Windows RT 8.1、Windows 10 桌面和移动版以及 Android 的设备注册和续订证书。 这些证书随后可用于 Wi-Fi 和 VPN 连接。
+-  Configuration Manager 支持将证书部署到不同的证书存储，具体情况视要求、设备类型和操作系统而定。 以下设备支持使用 Intune 进行注册：
 
--  若要部署使用 SCEP 的证书配置文件，必须在运行 Windows Server 2012 R2（包含 Active Directory 证书服务角色和有效的 NDES）的服务器上安装 NDES 策略模块，在需要证书的设备中可以访问该模块。 例如，对于通过 Microsoft Intunee 注册的设备，则要求 NDES 可从 Internet 在外围子网（也称为 DMZ）中访问。
-
--  Configuration Manager 支持将证书部署到不同的证书存储，具体情况视要求、设备类型和操作系统而定。 支持下列设备和操作系统：
- -   Windows RT 8.1  
- -   Windows 8.1  
- -   Windows Phone 8.1  
- -   Windows 10 桌面和移动版  
  -   iOS  
- -   Android  
- > [!IMPORTANT]  
- >  若要将配置文件部署到 Android、iOS、Windows Phone 和注册的 Windows 8.1 或更高版本设备，这些设备必须[在 Microsoft Intune 中注册](https://technet.microsoft.com/en-us/library/dn646962.aspx)。   
 
 - 有关其他先决条件，请参阅[证书配置文件先决条件](../../protect/plan-design/prerequisites-for-certificate-profiles.md)。
 
 ## <a name="pfx-certificate-profiles"></a>PFX 证书配置文件
-System Center Configuration Manager 允许你将个人信息交换 (.pfx) 文件设置到用户设备。 PFX 文件可以用于生成特定于用户的证书以支持加密数据交换。 可在 Configuration Manager 中创建 PFX 证书或将其导入。 通过 System Center Configuration Manager，可将导入或新建的 PFX 证书部署到 iOS、Android 和 Windows 10 设备。 然后可将这些文件部署到多个设备，以支持基于用户的 PKI 通信。  
+System Center Configuration Manager 允许你将个人信息交换 (.pfx) 文件设置到用户设备。 PFX 文件可以用于生成特定于用户的证书以支持加密数据交换。 可在 Configuration Manager 中创建 PFX 证书或将其导入。
 
 > [!TIP]  
 >  描述此过程的分步演练会出现在 [如何在 Configuration Manager 中创建和部署 PFX 证书配置文件](http://blogs.technet.com/b/karanrustagi/archive/2015/09/01/how-to-create-and-deploy-pfx-certificate-profiles-in-configuration-manager.aspx)。  
 
-### <a name="create-and-deploy-a-personal-information-exchange-pfx-certificate-profile"></a>创建和部署个人信息交换 (PFX) 证书配置文件  
+## <a name="create-and-deploy-a-personal-information-exchange-pfx-certificate-profile"></a>创建和部署个人信息交换 (PFX) 证书配置文件  
+
+### <a name="get-started"></a>入门
 
 1.  在 System Center Configuration Manager 控制台中，单击“资产和符合性”。  
 
 2.  在“资产和符合性”  工作区中，展开“符合性设置” ，展开“公司资源访问” ，然后单击“证书配置文件” 。  
 
-3.  在“主页”  选项卡上的“创建”  组中，单击“创建证书配置文件” 。 “创建证书配置文件”  向导打开。  
+3.  在“主页”  选项卡上的“创建”  组中，单击“创建证书配置文件” 。
 
 4.  在“创建证书配置文件”向导的“常规”  页上  ，指定下列信息：  
 
@@ -67,39 +59,23 @@ System Center Configuration Manager 允许你将个人信息交换 (.pfx) 文件
 
     -   **说明**：提供对证书配置文件进行概述，以及可帮助在 System Center Configuration Manager 控制台中识别该证书配置文件的其他相关信息的描述。 最多可以使用 256 个字符。  
 
-    -   **指定想要创建的证书配置文件类型**：选择下列证书配置文件类型之一：  
+    -   **指定想要创建的证书配置文件的类型**：对于 PFX 证书，请选择以下项之一：  
 
-        -   **受信任的 CA 证书**：如果要部署受信任的根证书颁发机构 (CA) 或中间 CA 证书以在用户或设备必须验证另一台设备时形成证书信任链，请选择此证书配置文件类型。 例如，设备可能是远程身份验证拨入用户服务 (RADIUS) 服务器或虚拟专用网 (VPN) 服务器。 你还必须配置受信任的 CA 证书配置文件，然后才能创建 SCEP 证书配置文件。 在这种情况下，受信任的 CA 证书必须是将向用户或设备颁发证书的 CA 的受信任的根证书。  
+        -   **个人信息交换 PKCS #12 (PFX) 设置 - 导入**：选择此项可导入 PFX 证书。  
+        -   **个人信息交换 PKCS #12 (PFX) 设置 - 创建**：选择此项可创建新的 PFX 证书。
 
-        -   **简单证书注册协议 (SCEP) 设置**：如果要通过使用简单证书注册协议和网络设备注册服务角色服务为用户或设备请求证书，请选择此证书配置文件类型。  
+### <a name="import-a-pfx-certificate"></a>导入 PFX 证书
 
-        -   **个人信息交换 PKCS #12 (PFX) 设置导入**：选择此项以导入 PFX 证书。  
+要导入 PFX 证书，将需要 Configuration Manager SDK。 你为用户导入的任何证书都将部署到用户注册的任何设备。
 
-5.  在“创建证书配置文件”  向导的“证书属性”窗口  中，指定 PFX 证书将储存在目标设备上的什么位置。  
-
-    -   **如果存在受信任的平台模块 (TPM) 则安装到该处**  
-
-    -   **安装到受信任的平台模块 (TPM)，否则失败**  
-
-    -   **安装到软件密钥存储提供程序**  
-
-     单击“下一步” 。  
-
-6.  在“创建证书配置文件”  向导的“支持的平台”  窗口中，指定可接收导入的 PFX 文件的操作系统或平台。  
-
-    -   **Windows 10**  
-
-    -   **iPhone**  
-
-    -   **iPad**  
-
-    -   **Android**  
-
-7.  单击“下一步” ，查看“摘要”  页，然后关闭向导。  
-
-8.  “证书配置文件”  工作区现在推出包含 PFX 文件的证书配置文件。 在  工作区中，转至“符合性设置”  >  >  ，右键单击将新证书部署到用户集合。  
-
-9. 使用从下载中心 ([http://go.microsoft.com/fwlink/?LinkId=613525](http://go.microsoft.com/fwlink/?LinkId=613525)获得的适用于 Windows 8.1 的 SDK，部署创建 PFX 脚本。 Configuration Manager 2012 SP2 中添加的创建 PFX 脚本向该 SDK 添加 SMS_ClientPfxCertificate 类。 此类包括以下方法：  
+1. 在“创建证书配置文件向导”的“PFX 证书”页上，指定证书将存储在其部署设备上的位置：
+    -     **如果存在受信任的平台模块 (TPM) 则安装到该处**  
+    -   **安装到受信任的平台模块 (TPM)，否则失败** 
+    -   **安装到 Windows Hello 企业版，否则会失败** 
+    -   **安装到软件密钥存储提供程序** 
+2. 单击“下一步” 。 
+3. 在向导的“支持的平台”页上，选择要安装此证书的设备平台，然后单击“下一步”。
+4. 使用从下载中心 ([http://go.microsoft.com/fwlink/?LinkId=613525](http://go.microsoft.com/fwlink/?LinkId=613525)获得的适用于 Windows 8.1 的 SDK，部署创建 PFX 脚本。 Configuration Manager 2012 SP2 中添加的创建 PFX 脚本向该 SDK 添加 SMS_ClientPfxCertificate 类。 此类包括以下方法：  
 
     -   ImportForUser  
 
@@ -107,7 +83,7 @@ System Center Configuration Manager 允许你将个人信息交换 (.pfx) 文件
 
      示例脚本：  
 
-    ```  
+```  
     $EncryptedPfxBlob = "<blob>"  
     $Password = "abc"  
     $ProfileName = "PFX_Profile_Name"  
@@ -122,20 +98,47 @@ System Center Configuration Manager 允许你将个人信息交换 (.pfx) 文件
         $NewEntry.UserName = $UserName  
     $Resource = $WMIConnection.psbase.InvokeMethod("ImportForUser",$NewEntry,$null)  
 
-    ```  
+```  
 
-     必须为你的脚本修改以下脚本变量：  
+必须为你的脚本修改以下脚本变量：  
 
-    -   <blob\> = PFX base64 加密的 blob  
+   -   blob\ = PFX base64 加密的 blob  
+   -   $Password = PFX 文件的密码  
+   -   $ProfileName = PFX 配置文件的名称  
+   -   ComputerName = 主机名   
 
-    -   $Password = PFX 文件的密码  
+### <a name="create-a-new-pfx-certificate"></a>创建新的 PFX 证书
 
-    -   $ProfileName = PFX 配置文件的名称  
+创建和部署 PFX 证书时，将在用户注册的所有设备上安装同一证书。
 
-    -   ComputerName = 主机名  
+1. 在向导的“支持的平台”页上，选择要安装此证书的设备平台，然后单击“下一步”。
+2. 在向导的“证书颁发机构”页上，配置以下项：
+    - **主站点** - 选择要从中选择证书颁发机构的 Configuration Manager 主站点。
+    - **证书颁发机构** - 选择主站点后，从列表中选择所需的证书颁发机构，然后单击“下一步”。
+3. 在向导的“PFX 证书”页上，配置以下值：
+    - **续订阈值 (%)** - 指定设备请求续订证书之前剩余的证书生存期的百分比。
+    - **证书模板名称** - 单击“浏览”选择已添加到颁发 CA 的证书模板的名称。 要成功浏览到证书模板，用于运行 Configuration Manager 控制台的用户帐户必须具有证书模板的“读取”权限。 或者，键入证书模板的名称。 
+    - **使用者名称格式** - 从列表中，选择 Configuration Manager 自动创建证书请求中的使用者名称的方式。 如果证书用于用户，还可包含使用者名称中的用户电子邮件地址。 选择“公用名称”或“完全可分辨名称”。
+    - **使用者可选名称** - 指定 Configuration Manager 自动创建证书请求中使用者可选名称 (SAN) 的值的方式。 例如，你选择了用户证书类型，则可以在使用者可选名称中包括用户主体名称 (UPN)。 选择：
+        - **电子邮件地址** 
+        - **用户主体名称 (UPN)** 
+    - **证书有效期** - 
+    - **Windows 密钥存储提供者**（仅当你选择 Windows 作为支持的平台时才显示）- 
+        -     **如果存在受信任的平台模块 (TPM) 则安装到该处**  
+        -   **安装到受信任的平台模块 (TPM)，否则失败** 
+        -   **安装到 Windows Hello 企业版，否则失败** 
+        -   **安装到软件密钥存储提供程序** 
+4. 单击“下一步” 。
 
-### <a name="see-also"></a>另请参阅
+### <a name="finish-up"></a>完成
+
+1.  单击“下一步” ，查看“摘要”  页，然后关闭向导。  
+2.  “证书配置文件”  工作区现在推出包含 PFX 文件的证书配置文件。 
+3.  要部署配置文件，请在“资产和符合性”工作区中打开“符合性设置”  > “公司资源访问” > “证书配置文件”，右键单击所需的证书，然后单击“部署”。 
+
+
+
+## <a name="see-also"></a>另请参阅
 [创建新的证书配置文件](../../protect/deploy-use/create-certificate-profiles.md#create-a-new-certificate-profile)，此文档将引导你完成创建证书配置文件向导。
 
 [部署 Wi-Fi、VPN、电子邮件和证书配置文件](../../protect/deploy-use/deploy-wifi-vpn-email-cert-profiles.md)，此文档介绍了有关部署证书配置文件的信息。
-

@@ -17,9 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 766120f5ca79f279a513b62c35a2374c859b253a
-ms.openlocfilehash: 079be3c97e4239f8c5293bed5a2ce13abfbe7798
-ms.lasthandoff: 03/15/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 238e460885b6490b3744690640f9ff040902b35f
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -116,7 +116,8 @@ System Center Configuration Manager 支持工具和选项的一个可靠系统�
 ## <a name="content-library"></a>内容库  
  内容库是内容的单实例存储，Configuration Manager 使用它来减少分发内容的组合正文的总体大小。  
 
-深入了解[内容库](../../../core/plan-design/hierarchy/the-content-library.md)。
+- 深入了解[内容库](../../../core/plan-design/hierarchy/the-content-library.md)。
+- 使用[内容库清理工具](/sccm/core/plan-design/hierarchy/content-library-cleanup-tool)删除不再与应用程序关联的内容。  
 
 
 ## <a name="distribution-points"></a>分发点  

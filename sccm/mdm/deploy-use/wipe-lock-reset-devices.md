@@ -2,7 +2,7 @@
 title: "使用 System Center Configuration Manager，通过远程擦除、锁定或密码重置功能保护数据 | Microsoft Docs"
 description: "使用 System Center Configuration Manager，通过完全擦除、选择性擦除、远程锁定或密码重置功能保护设备数据。"
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 03/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,13 +13,13 @@ ms.topic: article
 ms.assetid: 770da7bd-02dd-474a-9604-93ff1ea0c1e4
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: mtillman
-ms.author: mtillman
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 3aa4c2ad3568cc6ced70a65141a2c103af8b740f
-ms.lasthandoff: 03/06/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: ef020a0409c1f1a68f76ecadc9885801e6c1ad4e
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="protect-data-with-remote-wipe-lock-or-passcode-reset-using-system-center-configuration-manager"></a>使用 System Center Configuration Manager，通过远程擦除、锁定或密码重置功能保护数据
@@ -77,19 +77,22 @@ Configuration Manager 提供选择性擦除、完全擦除、远程锁定以及�
 |管理代理|撤销设备管理员权限。|撤销设备管理员权限。|  
 |电子邮件配置文件|不适用。|对于由 Intune 预配的电子邮件配置文件，将删除电子邮件帐户和电子邮件。|  
 
+**Android for Work**
+
+在 Android for Work 设备上执行选择性擦除将删除该设备上的工作配置文件以及工作配置文件中的的所有数据、应用和设置。 这将在 Configuration Manager 和 Intune 中停用对该设备的管理。 Android for Work 不支持完全擦除。
+
  **Windows 10、Windows 8.1、Windows RT 8.1 和 Windows RT**  
 
-|注销设备时删除的内容|Windows 10、Windows 8.1 和 Windows RT 8.1|Windows RT|  
-|---------------------------------|-------------|-----------|
-|使用 Configuration Manager 和 Intune 安装的公司应用及关联数据。|将卸载应用并删除旁加载密钥。 使用 Windows 选择性擦除的应用将吊销加密密钥，并且数据将不再可访问。|将删除旁加载密钥，但应用保持安装状态。|  
-|VPN 和 Wi-Fi 配置文件|删除。|不适用。|  
-|证书|删除并吊销。|不适用。|  
-|设置|删除要求。||  
-|管理代理|不适用。 管理代理是内置的。|不适用。 管理代理是内置的。|  
-|电子邮件配置文件|删除启用了 EFS 的电子邮件，包括 Windows 电子邮件的邮件应用以及附件。|不适用。|  
+|注销设备时删除的内容|Windows 10、Windows 8.1 和 Windows RT 8.1|  
+|---------------------------------|-------------|
+|使用 Configuration Manager 和 Intune 安装的公司应用及关联数据。|将卸载应用并删除旁加载密钥。 使用 Windows 选择性擦除的应用将吊销加密密钥，并且数据将不再可访问。|  
+|VPN 和 Wi-Fi 配置文件|删除。|  
+|证书|删除并吊销。|  
+|设置|删除要求。|
+|管理代理|不适用。 管理代理是内置的。|  
+|电子邮件配置文件|删除启用了 EFS 的电子邮件，包括 Windows 电子邮件的邮件应用以及附件。|  
 
- **Windows 10 移动版、Windows Phone 8.0 和 Windows Phone 8.1**  
-
+ **Windows 10 移动版、Windows Phone 8.0 和 Windows Phone 8.1**
 
  |注销设备时删除的内容|Windows 10 移动版、Windows Phone 8 和 Windows Phone 8.1|  
 |-|-|
@@ -102,53 +105,29 @@ Configuration Manager 提供选择性擦除、完全擦除、远程锁定以及�
  还从 Windows 10 移动版和 Windows Phone 8.1 设备删除了以下设置：  
 
 -   需要密码才可解锁移动设备  
-
 -   允许简单密码  
-
 -   最短密码长度  
-
 -   所需的密码类型  
-
 -   密码过期（天数）  
-
 -   记住密码历史记录  
-
 -   擦除设备前允许的重复登录失败次数  
-
 -   需要提供密码之前处于非活动状态的分钟数  
-
 -   所需密码类型 - 最小字符集数  
-
 -   允许照相机  
-
 -   需要对移动设备加密  
-
 -   允许可移动存储  
-
 -   允许 Web 浏览器  
-
 -   允许应用程序商店  
-
 -   允许屏幕捕获  
-
 -   允许地理位置  
-
 -   允许 Microsoft 帐户  
-
 -   允许复制和粘贴  
-
 -   允许 Wi-Fi tethering  
-
 -   允许自动连接到免费 Wi-Fi 热点  
-
 -   允许 Wi-Fi 热点报告  
-
 -   允许恢复出厂设置  
-
 -   允许蓝牙  
-
 -   允许 NFC  
-
 -   允许 Wi-Fi  
 
 ### <a name="to-initiate-a-remote-wipe-from-the-configuration-manager-console"></a>从 Configuration Manager 控制台启动远程擦除  
@@ -192,10 +171,11 @@ Configuration Manager 提供选择性擦除、完全擦除、远程锁定以及�
 |平台|密码重置|  
 |--------------|--------------------|  
 |iOS|支持以便清除设备中的密码。 不创建新的临时密码。|  
-|Android|支持并且创建临时密码。|  
+|Android|支持并且创建临时密码。|
+|Android for Work | 不支持|
 |Windows 10|此时不受支持。|  
 |Windows Phone 8 和 Windows Phone 8.1|支持|  
-|Windows RT 8.1 和 Windows RT|不支持|  
+|Windows RT 8.1 |不支持|  
 |Windows 8.1|不支持|  
 
 ### <a name="to-reset-the-passcode-on-a-mobile-device-remotely-in-configuration-manager"></a>在 Configuration Manager 中远程重置移动设备上的密码  
@@ -223,7 +203,7 @@ Configuration Manager 提供选择性擦除、完全擦除、远程锁定以及�
 |Android|支持|  
 |Windows 10|此时不受支持。|  
 |Windows Phone 8 和 Windows Phone 8.1|支持|  
-|Windows RT 8.1 和 Windows RT|如果设备的当前用户是注册设备的相同用户，则支持。|  
+|Windows RT 8.1 |如果设备的当前用户是注册设备的相同用户，则支持。|  
 |Windows 8.1|如果设备的当前用户是注册设备的相同用户，则支持。|  
 
 ### <a name="to-lock-a-mobile-device-remotely-through-the-configuration-manager-console"></a>通过 Configuration Manager 控制台远程锁定移动设备  

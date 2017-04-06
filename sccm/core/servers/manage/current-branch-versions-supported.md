@@ -17,8 +17,9 @@ ms.author: brenduns
 manager: angrobe
 robots: noindex,nofollow
 translationtype: Human Translation
-ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
-ms.openlocfilehash: fecbdfa9ad99ca36f419cdda19a14b58f9f2b316
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 0286416807656fcf623260c7e95a703e39f6a275
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="support-for-system-center-configuration-manager-current-branch-versions"></a>对 System Center Configuration Manager Current Branch 版本的支持
@@ -41,15 +42,14 @@ Microsoft 计划每年发布几次 System Center Configuration Manager Current B
 
 |版本|可用日期|支持结束日期|  
 |-------------|-----------------------|----------------------|  
-|1511|2015 年 12 月 8 日|2016 年 12 月 8 日|  
-|1602|2016 年 3 月 11 日|2017 年 3 月 11 日|
-|1606|2016/7/22|2017 年 7 月 22 日|
+|1702|3/27/2017|3/27/2018|
 |1610|2016/11/18|11/18/2017|
+|1606|2016/7/22|2017 年 7 月 22 日|
+|1602|2016 年 3 月 11 日|2017 年 3 月 11 日|
+|1511|2015 年 12 月 8 日|2016 年 12 月 8 日|  
+
+
+
 
 有关作为控制台中更新或基准的版本号和可用性的信息，请参阅[基准和更新版本](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)。
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

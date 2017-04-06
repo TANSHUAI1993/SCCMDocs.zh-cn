@@ -17,9 +17,9 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
-ms.openlocfilehash: 3c3725678561c32fce316ed1209ac8fe73a0eed1
-ms.lasthandoff: 12/16/2016
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 832be8c9fda727804f57e83768cd8799db722c67
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/16/2016
 
 -   “读取”（针对运行 System Center Configuration Manager 控制台的帐户）  
 
- 有关这些安全权限的详细信息，请参阅[步骤 1：安装和配置网络设备注册服务及依赖关系](../deploy-use/certificate-infrastructure.md#step-1-install-and-configure-the-network-device-enrollment-service-and-dependencies)。  
+ 有关这些安全权限的详细信息，请参阅[配置证书基础结构](../deploy-use/certificate-infrastructure.md)。  
 
  当你使用此默认配置时，用户和设备无法通过证书模板直接请求证书，所有请求必须由网络设备注册服务发起。 此限制非常重要，因为对于证书使用者，这些证书模板必须配置为包含“在请求中提供”  ，这意味着，如果恶意用户或泄露的设备请求了证书，则存在假冒的风险。 在默认配置中，网络设备注册服务必须发起此类请求。 但是，如果运行网络设备注册服务的服务已泄露，则这种假冒风险仍然存在。 为了帮助避免这种风险，请为网络设备注册服务和运行此角色服务的计算机遵循所有最佳安全方案。  
 

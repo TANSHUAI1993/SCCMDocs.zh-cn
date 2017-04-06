@@ -2,7 +2,7 @@
 title: "Azure 上的 Configuration Manager | Microsoft Docs"
 description: "有关在 Azure 环境中使用 Configuration Manager 的信息。"
 ms.custom: na
-ms.date: 01/30/2017
+ms.date: 03/27/2017
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 264e009952db34a6f4929ecb70dc6857117ce4fe
-ms.openlocfilehash: e8798adc0e479417c682450d181611284c148e6d
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 5276ad999fc871496d79e6efff34d5edc6335380
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="configuration-manager-on-azure---frequently-asked-questions"></a>Azure 上的 Configuration Manager - 常见问题解答
@@ -39,11 +40,11 @@ ms.openlocfilehash: e8798adc0e479417c682450d181611284c148e6d
 
 ### <a name="what-areas-should-i-pay-attention-to-when-considering-a-move-of-my-configuration-manager-infrastructure-to-azure"></a>当考虑将 Configuration Manager 基础结构转移到 Azure 时应考虑哪些方面？
 问得好，以下是做决定时应考虑的最重要的方面，本主题分别通过不同的部分对各方面进行了探讨：
-1.  网络
-2.  可用性
-3.  性能
-4.  成本
-5.  用户体验
+1.    网络
+2.    可用性
+3.    性能
+4.    成本
+5.    用户体验
 
 ## <a name="networking"></a>网络
 ### <a name="what-about-networking-requirements-should-i-use-expressroute-or-an-azure-vpn-gateway"></a>有些什么网络要求？应使用 ExpressRoute 还是 Azure VPN 网关？
@@ -145,8 +146,8 @@ ms.openlocfilehash: e8798adc0e479417c682450d181611284c148e6d
 
 接着可以开始在环境中使用云管理网关，并向我们提供反馈以帮助优化该服务。 有关预发行功能的信息，请参阅[使用更新中的预发行功能](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkprereleasea-use-pre-release-features-from-updates)。
 
-### <a name="i-also-heard-that-you-have-another-new-feature-called-peer-cache-in-the-technical-preview-version-1604-is-that-different-than-branchcache-which-one-should-i-choose"></a>我还听说，在 Technical Preview 版本 1604 中有名为“对等缓存”的另一个新功能。 此功能是否与 BranchCache 不同？ 应选择哪一种？
-是的，完全不同。 [对等缓存](/sccm/core/get-started/capabilities-in-technical-preview-1604#bkmk_peercache)是 100% 本机 Configuration Manager 技术，而 BranchCache 是 Windows 的一个功能。 两者各有各自的用途；BranchCache 使用广播来查找所需的内容，而“对等缓存”则使用 Configuration Manager 常规分发工作流和边界组设置。
+### <a name="i-also-heard-that-you-have-another-new-feature-called-peer-cache-introduced-as-a-pre-release-feature-in-version-1610-is-that-different-than-branchcache-which-one-should-i-choose"></a>我还听说，在版本 1610 中引入了另一个名为“对等缓存”的新功能作为预发布功能。 此功能是否与 BranchCache 不同？ 应选择哪一种？
+是的，完全不同。 [对等缓存](/sccm/core/plan-design/hierarchy/client-peer-cache)是 100% 本机 Configuration Manager 技术，而 BranchCache 是 Windows 的一个功能。 两者各有各自的用途；BranchCache 使用广播来查找所需的内容，而“对等缓存”则使用 Configuration Manager 常规分发工作流和边界组设置。
 
 可以将任何客户端配置为对等缓存源。 然后，当管理点提供有关内容源位置的客户端信息时，它们会提供分发点和任何包含客户端所需内容的对等缓存源的详细信息。
 
@@ -179,9 +180,4 @@ ms.openlocfilehash: e8798adc0e479417c682450d181611284c148e6d
  - Express Route 详情：http://azure.microsoft.com/documentation/articles/expressroute-introduction/
 
  
-
-
-
-<!--HONumber=Jan17_HO5-->
-
 

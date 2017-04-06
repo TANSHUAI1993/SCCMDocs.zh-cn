@@ -2,7 +2,7 @@
 title: "备份和恢复 | Microsoft Docs"
 description: "了解 System Center Configuration Manager 中出现故障或数据丢失时如何备份和恢复站点。"
 ms.custom: na
-ms.date: 1/3/2017
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
-ms.openlocfilehash: 67441d0c19114f628e8b4308f58165ba67c738df
-ms.lasthandoff: 03/21/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: ea6668ee7ee6b209b659426a0dc2c0be605ceaf1
+ms.lasthandoff: 03/27/2017
 
 ---
 
@@ -110,9 +110,9 @@ ms.lasthandoff: 03/21/2017
     > [!IMPORTANT]  
     >  为了帮助防止篡改备份文件，请将文件存储在安全的位置。 最安全的备份路径是本地驱动器，因此你可以在文件夹上设置 NTFS 文件系统权限。 Configuration Manager 不会对备份路径中存储的备份数据进行加密。  
 
-    -   **站点服务器上用于站点数据和数据库的本地驱动器**：指定将站点和站点数据库的备份文件存储在站点服务器本地磁盘驱动器上的指定路径中。 你必须在备份任务运行之前创建本地文件夹。   站点服务器上的本地系统帐户必须具有站点服务器备份的本地文件夹的 **“写入”** NTFS 文件系统权限。 运行 SQL Server 的计算机上的本地系统帐户必须具有站点数据库备份文件夹的 **“写入”** NTFS 权限。  
+    -   **站点服务器上用于站点数据和数据库的本地驱动器**：指定将站点和站点数据库的备份文件存储在站点服务器本地磁盘驱动器上的指定路径中。 你必须在备份任务运行之前创建本地文件夹。 站点服务器上的本地系统帐户必须具有站点服务器备份的本地文件夹的 **“写入”** NTFS 文件系统权限。 运行 SQL Server 的计算机上的本地系统帐户必须具有站点数据库备份文件夹的 **“写入”** NTFS 权限。  
 
-    -   “站点数据和数据库的网络路径（UNC 名称）”；指定将站点和站点数据库的备份文件存储在指定 UNC 路径中。 在运行备份任务前，必须创建共享。站点服务器的计算机帐户以及 SQL Server 的计算机帐户（如果 SQL Server 安装在另一台计算机上）必须具有共享网络文件夹的**写入** NTFS 和共享权限。  
+    -   “站点数据和数据库的网络路径（UNC 名称）”；指定将站点和站点数据库的备份文件存储在指定 UNC 路径中。 你必须在备份任务运行之前创建共享。 站点服务器的计算机帐户以及 SQL Server 的计算机帐户（如果 SQL Server 安装在另一台计算机上）必须具有共享网络文件夹的 **“写入”** NTFS 和共享权限。  
 
     -   **站点服务器和 SQL Server 上的本地驱动器**：指定将站点的备份文件存储在站点服务器本地驱动器上的指定路径中，并将站点数据库的备份文件存储在站点数据库服务器本地驱动器上的指定路径中。 你必须在备份任务运行之前创建本地文件夹。 站点服务器的计算机帐户必须具有你在站点服务器上创建的文件夹的 **“写入”** NTFS 权限。 SQL Server 的计算机帐户必须具有你在站点数据库服务器上创建的文件夹的 **“写入”** NTFS 权限。 只有在站点服务器未安装站点数据库时，此选项才可用。  
 
@@ -390,6 +390,14 @@ ms.lasthandoff: 03/21/2017
 
     -   **详细信息：** 恢复管理中心站点  
 
+-   **密钥名称：**CDLatest  
+
+    -   **必备：**是（仅在使用 CD.Latest 文件夹中的介质时）。    
+
+    -   **值：**1。1 以外的任何值均视为不使用 CD.Latest。
+
+    -   **详细信息：**从 CD.Latest 文件夹中的介质运行安装程序时，你的脚本必须包含该密钥和值，以安装主站点或管理中心站点，或恢复主站点或管理中心站点。 该值将告知安装程序当前使用介质形式 CD.Latest。  
+
 **RecoveryOptions**  
 
 -   **项名称：** ServerRecoveryOptions  
@@ -602,6 +610,14 @@ ms.lasthandoff: 03/21/2017
     -   **值：** RecoverPrimarySite  
 
     -   **详细信息：** 恢复主站点  
+
+-   **密钥名称：**CDLatest  
+
+    -   **必备：**是（仅在使用 CD.Latest 文件夹中的介质时）。    
+
+    -   **值：**1。1 以外的任何值均视为不使用 CD.Latest。
+
+    -   **详细信息：**从 CD.Latest 文件夹中的介质运行安装程序时，你的脚本必须包含该密钥和值，以安装主站点或管理中心站点，或恢复主站点或管理中心站点。 该值将告知安装程序当前使用介质形式 CD.Latest。
 
 **RecoveryOptions**  
 

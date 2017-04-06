@@ -2,7 +2,7 @@
 title: "管理 Windows 即服务 - Configuration Manager | Microsoft Docs"
 description: "使用 Configuration Manager 查看 Windows 即服务的状态，创建服务计划以形成部署环，以及在 Windows 10 客户端即将结束支持时查看警报。"
 ms.custom: na
-ms.date: 01/23/2017
+ms.date: 03/26/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
-ms.openlocfilehash: b3859bc01c37dab04275028585e892f927606025
+ms.sourcegitcommit: 23b1d24e908d04b64c3bbfa518793a44e696d468
+ms.openlocfilehash: 87c3a35f4688c505f9b659a1bfe62f7a04cc7f11
+ms.lasthandoff: 03/29/2017
 
 
 ---
@@ -32,7 +33,7 @@ ms.openlocfilehash: b3859bc01c37dab04275028585e892f927606025
 
  使用以下部分将 Windows 作为服务进行管理。
 
-##  <a name="a-namebkmkprerequisitesa-prerequisites"></a><a name="BKMK_Prerequisites"></a> 先决条件  
+##  <a name="BKMK_Prerequisites"></a> 先决条件  
  要在 Windows 10 维护服务仪表板中查看数据，必须执行以下操作：  
 
 -   Windows 10 计算机必须搭配使用 Configuration Manager 软件更新和 Windows Server Update Services (WSUS) 以进行软件更新管理。 当计算机使用适用于企业的 Windows 更新（或 Windows 预览体验）进行软件更新管理时，将不在 Windows 10 维护服务计划中评估计算机。 有关详细信息，请参阅 [Integration with Windows Update for Business in Windows 10](../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md)。  
@@ -58,14 +59,14 @@ ms.openlocfilehash: b3859bc01c37dab04275028585e892f927606025
 
 -   必须配置和同步软件更新。 必须先选择“升级”分类并同步软件更新，才能在 Configuration Manager 控制台中使用 Windows 10 功能升级。 有关详细信息，请参阅[准备软件更新管理](../../sum/get-started/prepare-for-software-updates-management.md)。  
 
-##  <a name="a-namebkmkservicingdashboarda-windows-10-servicing-dashboard"></a><a name="BKMK_ServicingDashboard"></a> Windows 10 维护服务仪表板  
+##  <a name="BKMK_ServicingDashboard"></a> Windows 10 维护服务仪表板  
  Windows 10 维护服务仪表板提供了有关环境中的 Windows 10 计算机和活动维护服务计划的信息以及符合性信息等。 Windows 10 维护服务仪表板中的数据依赖于安装服务连接点。 该仪表板具有以下磁贴：  
 
 -   **“Windows 10 使用情况”磁贴**：提供 Windows 10 公共内部版本的细分。 将 Windows 预览体验内部版本和对你的站点为未知的任何内部版本列为 **其他** 。 服务连接点将下载告知其 Windows 内部版本的元数据，然后将此数据与发现数据进行比较。  
 
 -   **“Windows 10 环”磁贴**：按分支和就绪状态提供 Windows 10 的细分。 LTSB 段将全部为 LTSB 版本（而第一个磁贴将分解特定版本。 例如，Windows 10 LTSB 2015）。 “可以发布”  段对应于 CB，而“可用于业务”  段为 CBB。  
 
--   **“创建服务计划”磁贴**：提供创建维护服务计划的快速方法。 指定名称、集合（仅显示从小到大的前&10; 个集合）、部署包（仅显示最近修改的前&10; 个包）和就绪状态。 其他设置使用默认值。 单击“高级设置”  以启动“创建维护服务计划向导”，可在该向导中配置所有服务计划设置。  
+-   **“创建服务计划”磁贴**：提供创建维护服务计划的快速方法。 指定名称、集合（仅显示从小到大的前 10 个集合）、部署包（仅显示最近修改的前 10 个包）和就绪状态。 其他设置使用默认值。 单击“高级设置”  以启动“创建维护服务计划向导”，可在该向导中配置所有服务计划设置。  
 
 -   **“已过期”磁贴**：显示运行已超过其使用期限的 Windows 10 版本的设备的百分比。 Configuration Manager 从服务连接点下载的元数据确定百分比，并将其与发现数据比较。 超过其使用期限的内部版本将不再接收月度累计更新（包括安全更新）。 应将此类别中的计算机升级到下一个内部版本。 Configuration Manager 将进一成为整数。 例如，如果你有 10,000 台计算机而只有一台运行已过期的内部版本，则该磁贴将显示 1%。  
 
@@ -91,14 +92,14 @@ ms.openlocfilehash: b3859bc01c37dab04275028585e892f927606025
 
  当升级符合条件时，维护服务计划会将升级添加到部署包并将包分发到分发点，然后基于在维护服务计划中配置的设置将升级部署到集合。  你可以在 Windows 10 维护服务仪表板上的“服务计划监视”磁贴中监视部署。 有关详细信息，请参阅[监视软件更新](../../sum/deploy-use/monitor-software-updates.md)。  
 
-##  <a name="a-namebkmkservicingplana-windows-10-servicing-plan"></a><a name="BKMK_ServicingPlan"></a> Windows 10 维护服务计划  
+##  <a name="BKMK_ServicingPlan"></a> Windows 10 维护服务计划  
  部署 Windows 10 CB 时，可以创建一个或多个维护服务计划，以定义你的环境中所需的部署环，然后在 Windows 10 维护服务仪表板中监视它们。   
 维护服务计划仅使用“升级”软件更新分类，而不使用 Windows 10 的累积更新。 这些更新将仍需要使用软件更新工作流进行部署。  维修服务计划的最终用户体验与软件更新体验相同，包括你在维护服务计划中配置的设置。  
 
 > [!NOTE]  
 >  可以使用任务序列来为每个 Windows 10 内部版本部署升级，但这样做需要进行更多手动操作。 你需要将更新的源文件作为操作系统升级包导入，然后创建任务序列并将其部署到适当计算机组。 但是，任务序列提供其他自定义选项，如部署前和部署后操作。  
 
- 可以从 Windows 10 维护服务仪表板创建基本维护服务计划。 指定名称、集合（仅显示从小到大的前&10; 个集合）、部署包（仅显示最近修改的前&10; 个包）和准备情况状态后，Configuration Manager 将使用其他设置的默认值创建维护服务计划。 也可以启动“创建维护服务计划向导”来配置所有设置。 使用“创建使用维护服务计划向导”，通过以下过程创建维护服务计划。  
+ 可以从 Windows 10 维护服务仪表板创建基本维护服务计划。 指定名称、集合（仅显示从小到大的前 10 个集合）、部署包（仅显示最近修改的前 10 个包）和准备情况状态后，Configuration Manager 将使用其他设置的默认值创建维护服务计划。 也可以启动“创建维护服务计划向导”来配置所有设置。 使用“创建使用维护服务计划向导”，通过以下过程创建维护服务计划。  
 
 > [!NOTE]  
 >  从 Configuration Manager 版本 1602 开始，可以管理高风险部署的行为。 高风险部署是自动安装、可能产生意外结果的部署。 例如，其用途为 **必需** 部署 Windows 10 的任务序列被认为是高风险部署。 有关详细信息，请参阅[用于管理高风险部署的设置](../../protect/understand/settings-to-manage-high-risk-deployments.md)。  
@@ -137,6 +138,8 @@ ms.openlocfilehash: b3859bc01c37dab04275028585e892f927606025
         -   **可以发布 (Current Branch)**：在 CB 服务模型中，功能更新在 Microsoft 发布后便可使用。
 
         -   **可用于业务 (Current Branch for Business)**：CBB 服务分支通常用于广泛部署。 CBB 服务分支中的 Windows 10 客户端会收到与 CB 服务分支中相同的 Windows 10 内部版本，只是时间稍晚。
+
+        有关维护分支和最适合你的选项的详细信息，请参阅[维护分支](https://technet.microsoft.com/itpro/windows/manage/waas-overview#servicing-branches)。
 
     -   **Microsoft 发布新升级后，希望等待多少天再在新环境中进行部署**：如果当前日期晚于发布日期加上为此设置配置的天数，Configuration Manager 将评估是否将升级包含在部署中。
 
@@ -203,7 +206,7 @@ ms.openlocfilehash: b3859bc01c37dab04275028585e892f927606025
 
     4.  “发送优先级”：指定部署包的发送优先级。 Configuration Manager 在将包发送到分发点时将使用部署包的发送优先级。 部署包按优先级顺序发送：高、中或低。 具有相同优先级的包按照其创建顺序发送。 如果没有囤积，则将立即处理包，而不考虑其优先级。  
 
-11. 在“分发点”页上，指定将承载更新文件的分发点或分发点组。 有关分发点的详细信息，请参阅 [Distribution point configurations](../../core/servers/deploy/configure/install-and-configure-distribution-points.md#a-namebkmkconfigsa-distribution-point-configurations)。  
+11. 在“分发点”页上，指定将承载更新文件的分发点或分发点组。 有关分发点的详细信息，请参阅[配置分发点](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_configs)。
 
     > [!NOTE]  
     >  只有当你在创建新的软件更新部署包时才能使用本页。  
@@ -220,7 +223,7 @@ ms.openlocfilehash: b3859bc01c37dab04275028585e892f927606025
 
  完成向导后，将会运行维护服务计划。 它会将符合指定条件的更新添加到软件更新组中、将更新下载到站点服务器上的内容库、将更新分发到已配置的分发点，然后将软件更新组部署到目标集合中的客户端。  
 
-##  <a name="a-namebkmkmodifyservicingplana-modify-a-servicing-plan"></a><a name="BKMK_ModifyServicingPlan"></a> 修改维护服务计划  
+##  <a name="BKMK_ModifyServicingPlan"></a> 修改维护服务计划  
 从 Windows 10 维护服务仪表板创建基本维护服务计划后，或需要更改现有维护服务计划的设置时，可以转到维护服务计划属性。
 
 > [!NOTE]
@@ -256,17 +259,17 @@ ms.openlocfilehash: b3859bc01c37dab04275028585e892f927606025
 
     -   “详细信息级别”：指定客户端计算机报告的状态消息的详细信息级别。  
 
-   **下载设置**：在“下载设置”选项卡上，配置以下设置：  
+    **下载设置**：在“下载设置”选项卡上，配置以下设置：  
 
-    -   指定当客户端连接到慢速网络或正在使用回退内容位置时是否将下载和安装软件更新。  
+    - 指定当客户端连接到慢速网络或正在使用回退内容位置时是否将下载和安装软件更新。  
 
-    -   指定当软件更新的内容在首选分发点上不可用时客户端是否下载和安装回退分发点中的软件更新。  
+    - 指定当软件更新的内容在首选分发点上不可用时客户端是否下载和安装回退分发点中的软件更新。  
 
     -   **允许客户端与同一子网上的其他客户端共享内容**：指定是否为内容下载启用 BranchCache。 有关 BranchCache 的详细信息，请参阅[内容管理的基本概念](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#branchcache)。  
 
     -   指定在分发点上没有软件更新的情况下是否让客户端从 Microsoft 更新下载软件更新。
-    > [!IMPORTANT]
-    > 不要将此设置用于 Windows 10 维护服务更新。 Configuration Manager（至少到版本 1610）将无法从 Microsoft 更新下载 Windows 10 维护服务更新。
+        > [!IMPORTANT]
+        > 不要将此设置用于 Windows 10 维护服务更新。 Configuration Manager（至少到版本 1610）将无法从 Microsoft 更新下载 Windows 10 维护服务更新。
 
     -   指定是否允许客户端在安装截止日期之后下载内容（如果客户端使用按流量计费的 Internet 连接）。 Internet 提供商有时根据你在按流量计费的 Internet 连接上发送和接收的数据量计费。   
 
@@ -274,9 +277,4 @@ ms.openlocfilehash: b3859bc01c37dab04275028585e892f927606025
 
     > [!NOTE]  
     >  你可以从“软件库”  工作区的“软件更新”  节点中查看最新软件更新警报。  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

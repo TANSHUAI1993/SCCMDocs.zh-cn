@@ -2,7 +2,7 @@
 title: "Configuration Manager 的日志文件 | Microsoft Docs"
 description: "使用日志文件解决 System Center Configuration Manager 层次结构中的问题。"
 ms.custom: na
-ms.date: 1/12/2017
+ms.date: 3/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: be5fd67e37b6ac7b20903e2e0678c1880715ab07
-ms.openlocfilehash: 1e7706156c9226aacf70e6dedb26a0edc93720d1
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: b991b4ea27e66c233b04f8e65a412404521d89a6
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -114,12 +115,12 @@ ms.openlocfilehash: 1e7706156c9226aacf70e6dedb26a0edc93720d1
 
     -   [WSUS 服务器](#BKMK_WSUSLog)  
 
-##  <a name="a-namebkmkaboutlogsa-about-configuration-manager-log-files"></a><a name="BKMK_AboutLogs"></a>关于 Configuration Manager 日志文件  
+##  <a name="BKMK_AboutLogs"></a>关于 Configuration Manager 日志文件  
  Configuration Manager 中的大多数进程将操作信息写入专用于该进程的日志文件。 通过 **.log** 或 **.lo_** 文件扩展名标识这些日志文件。 Configuration Manager 将写入 .log 文件，直到该日志达到其最大大小。 当日志已满时，会将 .log 文件复制到名称相同但扩展名为 .lo_ 的文件，并且进程或组件将继续写入 .log 文件。 当 .log 文件再次达到其最大大小时，将覆盖 .lo_ 文件，并且该过程将重复。 某些组件会通过将日期和时间戳追加到日志文件名并保留 .log 扩展名来建立日志文件历史记录。 有关最大大小和 .lo_ 文件使用的例外情况是适用于 Linux 和 UNIX 的客户端。 有关适用于 Linux 和 UNIX 的客户端如何使用日志文件的信息，请参阅本主题中的[管理适用于 Linux 和 UNIX 的客户端中的日志文件](#BKMK_ManageLinuxLogs)。  
 
  若要查看日志，可以使用 Configuration Manager 日志查看器工具 CMTrace，该工具位于 Configuration Manager 源媒体的 \\SMSSetup\\Tools 文件夹中。 向已添加到“软件库”的所有启动映像中添加 CMTrace 工具。  
 
-###  <a name="a-namebkmklogoptionsa-configure-logging-options-by-using-configuration-manager-service-manager"></a><a name="BKMK_LogOptions"></a>使用 Configuration Manager 服务管理器配置日志记录选项  
+###  <a name="BKMK_LogOptions"></a>使用 Configuration Manager 服务管理器配置日志记录选项  
  在 Configuration Manager 中，可更改日志文件存储位置和日志文件大小。  
 
  若要修改日志文件大小、更改日志文件名称和位置或强制多个组件写入单一日志文件，可执行以下步骤。  
@@ -135,13 +136,13 @@ ms.openlocfilehash: 1e7706156c9226aacf70e6dedb26a0edc93720d1
 7.  在“Configuration Manager 组件日志记录”  对话框中，为所选内容完成可用配置选项。  
 8.  选择“确定”保存配置。  
 
-###  <a name="a-namebkmkloglocationa-find-configuration-manager-logs"></a><a name="BKMK_LogLocation"></a>查找 Configuration Manager 日志  
+###  <a name="BKMK_LogLocation"></a>查找 Configuration Manager 日志  
 Configuration Manager 日志文件存储在多个位置中，该位置取决于创建日志文件的进程以及站点系统的配置。 由于计算机上的日志位置可能有所不同，因此如果需要对特定方案进行故障排除，请使用搜索功能在 Configuration Manager 计算机上查找相关日志文件。  
 
-##  <a name="a-namebkmkclientlogsa-configuration-manager-client-logs"></a><a name="BKMK_ClientLogs"></a>Configuration Manager 客户端日志  
+##  <a name="BKMK_ClientLogs"></a>Configuration Manager 客户端日志  
 下列部分列出与客户端操作和客户端安装相关的日志文件。  
 
-###  <a name="a-namebkmkclientoplogsa-client-operations"></a><a name="BKMK_ClientOpLogs"></a>客户端操作  
+###  <a name="BKMK_ClientOpLogs"></a>客户端操作  
 下表列出了位于 Configuration Manager 客户端的日志文件。  
 
 |日志名称|说明|  
@@ -204,7 +205,7 @@ Configuration Manager 日志文件存储在多个位置中，该位置取决于�
 |wakeprxy-install.log|记录当客户端接收客户端设置选项以打开唤醒代理时的安装信息。|  
 |wakeprxy-uninstall.log|记录有关在客户端接收客户端设置选项以关闭唤醒代理时卸载唤醒代理的信息（如果以前打开了唤醒代理）。|  
 
-###  <a name="a-namebkmkclientinstallloga-client-installation-log-files"></a><a name="BKMK_ClientInstallLog"></a>客户端安装日志文件  
+###  <a name="BKMK_ClientInstallLog"></a>客户端安装日志文件  
  下表列出的日志文件包含与 Configuration Manager 客户端安装相关的信息。  
 
 |日志名称|说明|  
@@ -214,7 +215,7 @@ Configuration Manager 日志文件存储在多个位置中，该位置取决于�
 |CcmRepair.log|记录客户端代理的维修活动。|  
 |client.msi.log|记录 client.msi 执行的安装任务。 可用于排除客户端安装问题或删除问题。|  
 
-###  <a name="a-namebkmklogfilesforlnua-client-for-linux-and-unix"></a><a name="BKMK_LogFilesforLnU"></a>适用于 Linux 和 UNIX 的客户端  
+###  <a name="BKMK_LogFilesforLnU"></a>适用于 Linux 和 UNIX 的客户端  
  适用于 Linux 和 UNIX 的 Configuration Manager 客户端将信息记录在以下日志文件中。  
 
 > [!TIP]  
@@ -253,14 +254,14 @@ Configuration Manager 日志文件存储在多个位置中，该位置取决于�
 
 在正常操作情况下，使用“错误”日志级别。 此日志级别创建最小的日志文件。 随着日志级别从“错误”提升至“警告”、“信息”直至“跟踪”，由于会将更多数据写入文件，因此将生成更大的日志文件。  
 
-####  <a name="a-namebkmkmanagelinuxlogsa-manage-log-files-for-the-linux-and-unix-client"></a><a name="BKMK_ManageLinuxLogs"></a>管理适用于 Linux 和 UNIX 客户端的日志文件  
+####  <a name="BKMK_ManageLinuxLogs"></a>管理适用于 Linux 和 UNIX 客户端的日志文件  
 适用于 Linux 和 UNIX 的客户端不限制客户端日志文件的最大大小，该客户端也不会将其 .log 文件的内容自动复制到另一个文件，例如 .lo_ 文件。 如果要控制日志文件的最大大小，请实施一个过程来管理独立于适用于 Linux 和 UNIX 的 Configuration Manager 客户端的日志文件。  
 
 例如，可以使用标准 Linux 和 UNIX 命令 **logrotate** 来管理客户端日志文件的大小和轮换。 适用于 Linux 和 UNIX 的 Configuration Manager 客户端具有接口，该接口使 **logrotate** 能够在日志轮换完成时通知客户端，以便客户端将日志记录恢复到日志文件。  
 
 有关 **logrotate**的信息，请参阅你使用的 Linux 和 UNIX 分发版的文档。  
 
-###  <a name="a-namebkmklogfilesformaca-client-for-mac-computers"></a><a name="BKMK_LogfilesforMac"></a>适用于 Mac 计算机的客户端  
+###  <a name="BKMK_LogfilesforMac"></a>适用于 Mac 计算机的客户端  
 适用于 Mac 计算机的 Configuration Manager 客户端将信息记录在以下日志文件中。  
 
 |日志名称|详细信息|  
@@ -272,10 +273,10 @@ Configuration Manager 日志文件存储在多个位置中，该位置取决于�
 
 站点系统服务器上的日志文件 SMS_DM.log 也会记录 Mac 计算机与为移动设备和 Mac 计算机设置的管理点之间的通信。  
 
-##  <a name="a-namebkmkserverlogsa-configuration-manager-site-server-log-files"></a><a name="BKMK_ServerLogs"></a> Configuration Manager 站点服务器日志文件  
+##  <a name="BKMK_ServerLogs"></a> Configuration Manager 站点服务器日志文件  
  下列部分列出在站点服务器上或者与特定站点系统角色相关的日志文件。  
 
-###  <a name="a-namebkmksitesiteserverloga-site-server-and-site-system-server-logs"></a><a name="BKMK_SiteSiteServerLog"></a>站点服务器和站点系统服务器日志  
+###  <a name="BKMK_SiteSiteServerLog"></a>站点服务器和站点系统服务器日志  
  下表列出 Configuration Manager 站点服务器和站点系统服务器上的日志文件。  
 
 |日志名称|说明|带有日志文件的计算机|  
@@ -350,7 +351,7 @@ Configuration Manager 日志文件存储在多个位置中，该位置取决于�
 |statmgr.log|记录将所有状态消息写入到数据库的操作。|站点服务器|  
 |swmproc.log|记录对计数文件和设置的处理。|站点服务器|  
 
-###  <a name="a-namebkmksiteinstallloga-site-server-installation-log-files"></a><a name="BKMK_SiteInstallLog"></a>站点服务器安装日志文件  
+###  <a name="BKMK_SiteInstallLog"></a>站点服务器安装日志文件  
  下表列出了包含与站点安装相关的信息的日志文件。  
 
 |日志名称|说明|带有日志文件的计算机|  
@@ -361,7 +362,7 @@ Configuration Manager 日志文件存储在多个位置中，该位置取决于�
 |SMS_BOOTSTRAP.log|记录有关启动辅助站点安装过程的进度的信息。 实际安装过程的详细信息包含在 ConfigMgrSetup.log 中。|站点服务器|  
 |smstsvc.log|记录有关安装、使用和删除某 Windows 服务的信息，此服务的用途是，使用启动连接的服务器的计算机帐户来测试服务器之间的网络连接和权限。|站点服务器和站点系统服务器|  
 
-###  <a name="a-namebkmkfsploga-fallback-status-point-log-files"></a><a name="BKMK_FSPLog"></a>回退状态点日志文件  
+###  <a name="BKMK_FSPLog"></a>回退状态点日志文件  
  下表列出了包含与回退状态点相关的信息的日志文件。  
 
 |日志名称|说明|带有日志文件的计算机|  
@@ -370,7 +371,7 @@ Configuration Manager 日志文件存储在多个位置中，该位置取决于�
 |fspMSI.log|记录由回退状态点安装生成的消息。|站点系统服务器|  
 |fspmgr.log|记录回退状态点站点系统角色的活动。|站点系统服务器|  
 
-###  <a name="a-namebkmkmploga-management-point-log-files"></a><a name="BKMK_MPLog"></a>管理点日志文件  
+###  <a name="BKMK_MPLog"></a>管理点日志文件  
  下表列出了包含与管理点相关的信息的日志文件。  
 
 |日志名称|说明|带有日志文件的计算机|  
@@ -395,7 +396,7 @@ Configuration Manager 日志文件存储在多个位置中，该位置取决于�
 |mpMSI.log|记录有关管理点安装的详细信息。|站点服务器|  
 |MPSetup.log|记录管理点安装包装过程|站点服务器|  
 
-###  <a name="a-namebkmksuploga-software-update-point-log-files"></a><a name="BKMK_SUPLog"></a>软件更新点日志文件  
+###  <a name="BKMK_SUPLog"></a>软件更新点日志文件  
  下表列出了包含与软件更新点相关的信息的日志文件。  
 
 |日志名称|说明|带有日志文件的计算机|  
@@ -409,10 +410,10 @@ Configuration Manager 日志文件存储在多个位置中，该位置取决于�
 |wsyncmgr.log|记录有关软件更新同步过程的详细信息。|站点系统服务器|  
 |WUSSyncXML.log|记录有关 Microsoft 更新清单工具的同步过程的详细信息。|配置为 Microsoft 更新清单工具的同步主机的客户端计算机|  
 
-##  <a name="a-namebkmkfunctionlogsa-log-files-for-configuration-manager-functionality"></a><a name="BKMK_FunctionLogs"></a> Configuration Manager 功能的日志文件  
+##  <a name="BKMK_FunctionLogs"></a> Configuration Manager 功能的日志文件  
  下列部分列出了与 Configuration Manager 功能相关的日志文件。  
 
-###  <a name="a-namebkmkappmanageloga-application-management"></a><a name="BKMK_AppManageLog"></a>应用程序管理  
+###  <a name="BKMK_AppManageLog"></a>应用程序管理  
  下表列出了包含与应用程序管理相关的信息的日志文件。  
 
 |日志名称|说明|带有日志文件的计算机|  
@@ -441,7 +442,7 @@ Configuration Manager 日志文件存储在多个位置中，该位置取决于�
 |colleval.log|记录有关集合计算器创建、更改和删除集合时的详细信息。|站点服务器|  
 |execmgr.log|记录有关包和运行的任务序列的详细信息。|客户端|  
 
-###  <a name="a-namebkmkailoga-asset-intelligence"></a><a name="BKMK_AILog"></a>资产智能  
+###  <a name="BKMK_AILog"></a>资产智能  
  下表列出的日志文件包含与资产智能相关的信息。  
 
 |日志名称|描述|带有日志文件的计算机|  
@@ -454,7 +455,7 @@ Configuration Manager 日志文件存储在多个位置中，该位置取决于�
 |ManagedProvider.log|记录有关发现具有关联软件标识标志的软件的详细信息。 也记录与硬件清单相关的活动。|站点系统服务器|  
 |MVLSImport.log|记录有关导入的许可文件处理的详细信息。|站点系统服务器|  
 
-###  <a name="a-namebkmkbnrloga-backup-and-recovery"></a><a name="BKMK_BnRLog"></a>备份和恢复  
+###  <a name="BKMK_BnRLog"></a>备份和恢复  
  下表列出的日志文件包含与备份和恢复操作（包括站点重置以及站点更改为 SMS 提供程序）相关的信息。  
 
 |日志名称|说明|带有日志文件的计算机|  
@@ -464,7 +465,7 @@ Configuration Manager 日志文件存储在多个位置中，该位置取决于�
 |smssqlbkup.log|记录站点数据库备份过程的输出（如果 SQL Server 安装在不是站点服务器的服务器上）。|站点数据库服务器|  
 |Smswriter.log|记录有关备份过程使用的 Configuration Manager VSS 编写器的状态的信息。|站点服务器|  
 
-###  <a name="a-namebkmkcertificateenrollmenta-certificate-enrollment"></a><a name="BKMK_CertificateEnrollment"></a>证书注册  
+###  <a name="BKMK_CertificateEnrollment"></a>证书注册  
  下表列出的 Configuration Manager 日志文件包含与证书注册相关的信息。 证书注册在运行网络设备注册服务的服务器上使用证书注册点和 Configuration Manager 策略模块。  
 
 |日志名称|说明|带有日志文件的计算机|  
@@ -486,7 +487,7 @@ Configuration Manager 日志文件存储在多个位置中，该位置取决于�
     > [!NOTE]  
     >  此文件位于网络设备注册服务帐户配置文件的文件夹中，例如，位于 C:\Users\SCEPSvc 中。 有关如何为网络设备注册服务启用日志记录的详细信息，请参阅 TechNet wiki 上 Active Directory 证书服务 (AD CS) 文章内“网络设备注册服务 (NDES)”中的 [Enable Logging（启用日志记录）](http://go.microsoft.com/fwlink/?LinkId=320576) 部分。  
 
-###  <a name="a-namebkmkbgba-client-notification"></a><a name="BKMK_BGB"></a>客户端通知  
+###  <a name="BKMK_BGB"></a>客户端通知  
  下表列出的日志文件包含与客户端通知相关的信息。  
 
 |日志名称|说明|带有日志文件的计算机|  
@@ -502,12 +503,22 @@ Configuration Manager 日志文件存储在多个位置中，该位置取决于�
 
 下表列出的日志文件包含与云管理网关相关的信息。
 
-|日志名称|说明|带有日志文件的计算机|  
-|--------------|-----------------|----------------------------|  
-|CloudMgr.log|记录有关部署云管理网关服务、正在进行的服务状态，以及与服务相关联的使用数据的详细信息。|站点系统服务器|
+||||
+|-|-|-|
+|日志名称|说明|带有日志文件的计算机|
+|CloudMgr.log|记录有关部署云管理网关服务、正在进行的服务状态，以及与服务相关联的使用数据的详细信息。<br>你可以配置日志记录级别编辑注册表 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\COMPONENTS\SMS_CLOUD_SERVICES_MANAGER\Logging level**|站点系统服务器上的 **SMS/Logs** 文件夹|
+|CMGSetup.log 或 CMG-*RoleInstanceID*-CMGSetup.log<sup>1</sup>|记录有关云管理网关部署（Azure 中的本地部署）的第二阶段的详细信息<br>你可以使用“Azure 门户\云服务配置”选项卡上的设置“跟踪级别”（“信息”（默认）、“详细”、“错误”）配置日志记录级别。|你的 Azure 服务器上的 **%approot%\logs**，或站点系统服务器上的 SMS/Logs 文件夹|
+|CMGHttpHandler.log 或 CMG-*RoleInstanceID*- CMGHttpHandler.log<sup>1</sup>|记录有关云管理网关 http 处理程序与 Azure 中的 Internet Information Services 绑定的详细信息<br>你可以使用“Azure 门户\云服务配置”选项卡上的设置“跟踪级别”（“信息”（默认）、“详细”、“错误”）配置日志记录级别。|你的 Azure 服务器上的 **%approot%\logs**，或站点系统服务器上的 SMS/Logs 文件夹|
+|CMGService.log 或 CMG-*RoleInstanceID*- CMGService.log<sup>1</sup>|记录有关 Azure 中云管理网关服务核心组件的详细信息<br>你可以使用“Azure 门户\云服务配置”选项卡上的设置“跟踪级别”（“信息”（默认）、“详细”、“错误”）配置日志记录级别。|你的 Azure 服务器上的 **%approot%\logs**，或站点系统服务器上的 SMS/Logs 文件夹|
 |SMS_Cloud_ProxyConnector.log|记录有关设置云管理网关服务和云管理网关连接点之间的连接的详细信息。|站点系统服务器|
 
-###  <a name="a-namebkmkcompsettingsloga-compliance-settings-and-company-resource-access"></a><a name="BKMK_CompSettingsLog"></a>符合性设置和公司资源访问  
+<sup>1</sup> 这些是云服务管理器每 5 分钟从 Azure 存储同步的本地 Configuration Manager 日志文件。 云管理网关将每 5 分钟将日志推送到 Azure 存储。 所以最大延迟为 10 分钟。 详细的开关将影响本地日志和远程日志。
+
+- 对于部署疑难解答，请使用 **CloudMgr.log** 和 **CMGSetup.log**。
+- 对于服务运行状况疑难解答，请使用 **CMGService.log** 和 **SMS_Cloud_ProxyConnector.log**。
+- 对于客户端流量疑难解答，请使用 **CMGHttpHandler.log**、**CMGService.log** 和 **SMS_Cloud_ProxyConnector.log**。
+
+###  <a name="BKMK_CompSettingsLog"></a>符合性设置和公司资源访问  
  下表列出的日志文件包含与符合性设置和公司资源访问相关的信息。  
 
 |日志名称|说明|带有日志文件的计算机|  
@@ -518,7 +529,7 @@ Configuration Manager 日志文件存储在多个位置中，该位置取决于�
 |DCMReporting.log|记录有关为配置项目将策略平台结果报告到状态消息中的信息。|客户端|  
 |DcmWmiProvider.log|记录有关从 WMI 中读取配置项目 synclet 的信息。|客户端|  
 
-###  <a name="a-namebkmkconsoleloga-configuration-manager-console"></a><a name="BKMK_ConsoleLog"></a> Configuration Manager 控制台  
+###  <a name="BKMK_ConsoleLog"></a> Configuration Manager 控制台  
  下表列出的日志文件包含与 Configuration Manager 控制台相关的信息。  
 
 |日志名称|说明|带有日志文件的计算机|  
@@ -527,7 +538,7 @@ Configuration Manager 日志文件存储在多个位置中，该位置取决于�
 |SmsAdminUI.log|记录有关 Configuration Manager 控制台的操作的信息。|运行 Configuration Manager 控制台的计算机|  
 |SMSProv.log|记录 SMS 提供程序所执行的活动。 Configuration Manager 控制台活动使用 SMS 提供程序。|站点服务器或站点系统服务器|  
 
-###  <a name="a-namebkmkcontentloga-content-management"></a><a name="BKMK_ContentLog"></a>内容管理  
+###  <a name="BKMK_ContentLog"></a>内容管理  
  下表列出的日志文件包含与内容管理相关的信息。  
 
 |日志名称|说明|带有日志文件的计算机|  
@@ -541,7 +552,7 @@ Configuration Manager 日志文件存储在多个位置中，该位置取决于�
 |smsdpprov.log|记录有关提取从主站点接收的压缩文件的详细信息。 此日志由远程分发点的 WMI 提供程序生成。|未与站点服务器共置的分发点计算机|  
 
 
-###  <a name="a-namebkmkdiscoveryloga-discovery"></a><a name="BKMK_DiscoveryLog"></a>发现  
+###  <a name="BKMK_DiscoveryLog"></a>发现  
 下表列出的日志文件包含与发现相关的信息。  
 
 |日志名称|说明|带有日志文件的计算机|  
@@ -554,7 +565,7 @@ Configuration Manager 日志文件存储在多个位置中，该位置取决于�
 |InventoryAgent.log|记录客户端上的硬件清单、软件清单和检测信号发现操作的活动。|客户端|  
 |netdisc.log|记录网络发现操作。|站点服务器|  
 
-###  <a name="a-namebkmkeploga-endpoint-protection"></a><a name="BKMK_EPLog"></a> Endpoint Protection  
+###  <a name="BKMK_EPLog"></a> Endpoint Protection  
  下表列出的日志文件包含与 Endpoint Protection 相关的信息。  
 
 |日志名称|说明|带有日志文件的计算机|  
@@ -564,7 +575,7 @@ Configuration Manager 日志文件存储在多个位置中，该位置取决于�
 |EPMgr.log|监视 Endpoint Protection 站点系统角色的状态。|站点系统服务器|  
 |EPSetup.log|提供有关安装 Endpoint Protection 站点系统角色的信息。|站点系统服务器|  
 
-###  <a name="a-namebkmkextensionsa-extensions"></a><a name="BKMK_Extensions"></a>扩展  
+###  <a name="BKMK_Extensions"></a>扩展  
  下表列出的日志文件包含与扩展相关的信息。  
 
 |日志名称|说明|带有日志文件的计算机|  
@@ -573,7 +584,7 @@ Configuration Manager 日志文件存储在多个位置中，该位置取决于�
 |FeatureExtensionInstaller.log|在 Configuration Manager 控制台启用或禁用各个扩展时，记录有关其安装和删除的信息。|运行 Configuration Manager 控制台的计算机|  
 |SmsAdminUI.log|记录 Configuration Manager 控制台活动。|运行 Configuration Manager 控制台的计算机|  
 
-###  <a name="a-namebkmkinventoryloga-inventory"></a><a name="BKMK_InventoryLog"></a>清单  
+###  <a name="BKMK_InventoryLog"></a>清单  
  下表列出的日志文件包含与处理清单数据相关的信息。  
 
 |日志名称|说明|带有日志文件的计算机|  
@@ -582,24 +593,24 @@ Configuration Manager 日志文件存储在多个位置中，该位置取决于�
 |invproc.log|记录从辅助站点到其父站点的 MIF 文件转发。|辅助站点服务器|  
 |sinvproc.log|将有关软件清单数据的处理信息记录到站点数据库。|站点服务器|  
 
-###  <a name="a-namebkmkmeteringloga-metering"></a><a name="BKMK_MeteringLog"></a>计费  
+###  <a name="BKMK_MeteringLog"></a>计费  
  下表列出的日志文件包含与计数相关的信息。  
 
 |日志名称|说明|带有日志文件的计算机|  
 |--------------|-----------------|----------------------------|  
 |mtrmgr.log|监视所有软件计数过程。|站点服务器|  
 
-###  <a name="a-namebkmkmigrationloga-migration"></a><a name="BKMK_MigrationLog"></a>迁移  
+###  <a name="BKMK_MigrationLog"></a>迁移  
  下表列出的日志文件包含与迁移相关的信息。  
 
 |日志名称|说明|带有日志文件的计算机|  
 |--------------|-----------------|----------------------------|  
 |migmctrl.log|记录有关涉及到迁移作业、共享分发点和分发点升级的迁移操作的信息。|Configuration Manager 层次结构中的顶层站点，以及每个子主站点。<br /><br /> 在多主站点的层次结构中，使用在管理中心站点中创建的日志文件。|  
 
-###  <a name="a-namebkmkmdmloga-mobile-devices"></a><a name="BKMK_MDMLog"></a>移动设备  
+###  <a name="BKMK_MDMLog"></a>移动设备  
  下列部分列出的日志文件包含与管理移动设备相关的信息。  
 
-####  <a name="a-namebkmkenrollmentloga-enrollment"></a><a name="BKMK_EnrollmentLog"></a>注册  
+####  <a name="BKMK_EnrollmentLog"></a>注册  
  下表列出的日志包含与移动设备注册相关的信息。  
 
 |日志名称|说明|带有日志文件的计算机|  
@@ -613,14 +624,14 @@ Configuration Manager 日志文件存储在多个位置中，该位置取决于�
 |enrollmentservice.log|记录注册代理点和注册点之间的通信。|站点系统服务器|  
 |SMS_DM.log|记录移动设备、Mac 计算机与为移动设备和 Mac 计算机启用的管理点之间的通信。|站点系统服务器|  
 
-####  <a name="a-namebkmkexchsrvloga-exchange-server-connector"></a><a name="BKMK_ExchSrvLog"></a> Exchange Server 连接器  
+####  <a name="BKMK_ExchSrvLog"></a> Exchange Server 连接器  
  以下日志包含与 Exchange Server 连接器相关的信息。  
 
 |日志名称|说明|带有日志文件的计算机|  
 |--------------|-----------------|----------------------------|  
 |easdisc.log|记录 Exchange Server 连接器的活动和状态。|站点服务器|  
 
-####  <a name="a-namebkmkmdlegloga-mobile-device-legacy"></a><a name="BKMK_MDLegLog"></a>移动设备旧客户端  
+####  <a name="BKMK_MDLegLog"></a>移动设备旧客户端  
  下表列出的日志包含与移动设备旧客户端相关的信息。  
 
 |日志名称|说明|带有日志文件的计算机|  
@@ -644,7 +655,7 @@ Configuration Manager 日志文件存储在多个位置中，该位置取决于�
 |DmSvc.log|记录移动设备旧客户端与为移动设备启用的管理点的客户端通信。|客户端|  
 |FspIsapi.log|记录有关从移动设备旧客户端和客户端计算机到回退状态点的通信的详细信息。|站点系统服务器|  
 
-###  <a name="a-namebkmkosdloga-operating-system-deployment"></a><a name="BKMK_OSDLog"></a>操作系统部署  
+###  <a name="BKMK_OSDLog"></a>操作系统部署  
  下表列出的日志文件包含与操作系统部署相关的信息。  
 
 |日志名称|说明|带有日志文件的计算机|  
@@ -681,21 +692,21 @@ Configuration Manager 日志文件存储在多个位置中，该位置取决于�
 |loadstate.log|记录有关用户状态迁移工具 (USMT) 和还原用户状态数据的详细信息。|客户端|  
 |scanstate.log|记录有关用户状态迁移工具 (USMT) 和捕获用户状态数据的详细信息。|客户端|  
 
-###  <a name="a-namebkmkpowermgmtloga-power-management"></a><a name="BKMK_PowerMgmtLog"></a>电源管理  
+###  <a name="BKMK_PowerMgmtLog"></a>电源管理  
  下表列出了包含与电源管理相关的信息的日志文件。  
 
 |日志名称|说明|带有日志文件的计算机|  
 |--------------|-----------------|----------------------------|  
 |Pwrmgmt.log|记录有关客户端计算机上的电源管理活动的详细信息，包括电源管理客户端代理执行的监视活动和设置实施活动。|客户端|  
 
-###  <a name="a-namebkmkrcloga-remote-control"></a><a name="BKMK_RCLog"></a>远程控制  
+###  <a name="BKMK_RCLog"></a>远程控制  
  下表列出了包含与远程控制相关的信息的日志文件。  
 
 |日志名称|说明|带有日志文件的计算机|  
 |--------------|-----------------|----------------------------|  
 |CMRcViewer.log|记录有关远程控制查看者的活动的详细信息。|运行远程控制查看器的计算机上的 %temp% 文件夹中|  
 
-###  <a name="a-namebkmkreportloga-reporting"></a><a name="BKMK_ReportLog"></a>报表  
+###  <a name="BKMK_ReportLog"></a>报表  
  下表列出的 Configuration Manager 日志文件包含与报表相关的信息。  
 
 |日志名称|说明|带有日志文件的计算机|  
@@ -704,7 +715,7 @@ Configuration Manager 日志文件存储在多个位置中，该位置取决于�
 |srsrpMSI.log|记录来自 MSI 输出的 Reporting Services 点安装过程的详细结果。|站点系统服务器|  
 |srsrpsetup.log|记录 Reporting Services 点安装过程的结果。|站点系统服务器|  
 
-###  <a name="a-namebkmkrbaloga-role-based-administration"></a><a name="BKMK_RBALog"></a>基于角色的管理  
+###  <a name="BKMK_RBALog"></a>基于角色的管理  
  下表列出了包含与管理基于角色的管理相关的信息的日志文件。  
 
 |日志名称|说明|带有日志文件的计算机|  
@@ -712,7 +723,7 @@ Configuration Manager 日志文件存储在多个位置中，该位置取决于�
 |hman.log|记录有关站点配置更改以及将站点信息发布到 Active Directory 域服务的信息。|站点服务器|  
 |SMSProv.log|记录 WMI 提供程序对站点数据库的访问。|带有 SMS 提供程序的计算机|  
 
-###  <a name="a-namebkmkwitloga-service-connection-point"></a><a name="BKMK_WITLog"></a>服务连接点  
+###  <a name="BKMK_WITLog"></a>服务连接点  
  下表列出了包含与服务连接点相关的信息的日志文件。  
 
 |日志名称|说明|带有日志文件的计算机|  
@@ -735,7 +746,7 @@ Configuration Manager 日志文件存储在多个位置中，该位置取决于�
 |SrvBoot.log|记录关于服务连接点安装程序服务的详细信息。|具有服务连接点的计算机|  
 |Statesys.log|记录对移动设备管理消息的处理。|主站点和管理中心站点|  
 
-###  <a name="a-namebkmksunaploga-software-updates"></a><a name="BKMK_SU_NAPLog"></a>软件更新  
+###  <a name="BKMK_SU_NAPLog"></a>软件更新  
  下表列出了包含有关软件更新信息的日志文件。  
 
 |日志名称|说明|带有日志文件的计算机|  
@@ -758,7 +769,7 @@ Configuration Manager 日志文件存储在多个位置中，该位置取决于�
 |wsyncmgr.log|记录有关软件更新同步过程的详细信息。|站点服务器|  
 |WUAHandler.log|记录有关客户端上的搜索软件更新的 Windows 更新代理的详细信息。|客户端|  
 
-###  <a name="a-namebkmkwolloga-wake-on-lan"></a><a name="BKMK_WOLLog"></a> LAN 唤醒  
+###  <a name="BKMK_WOLLog"></a> LAN 唤醒  
  下表列出了包含与使用 LAN 唤醒相关的信息的日志文件。  
 
 > [!NOTE]  
@@ -769,7 +780,7 @@ Configuration Manager 日志文件存储在多个位置中，该位置取决于�
 |wolcmgr.log|记录有关需要向哪些客户端发送唤醒数据包、发送的唤醒数据包的数量和重试唤醒数据包的次数的详细信息。|站点服务器|  
 |wolmgr.log|包含有关唤醒过程的详细信息，例如何时唤醒为 LAN 唤醒配置的部署。|站点服务器|  
 
-###  <a name="a-namebkmkwindowsservicinglogawindows-10-servicing"></a><a name="BKMK_WindowsServicingLog"></a>Windows 10 维护服务  
+###  <a name="BKMK_WindowsServicingLog"></a>Windows 10 维护服务  
  下表列出了包含与 Windows 10 维护服务相关的信息的日志文件。  
 
 |日志名称|说明|带有日志文件的计算机|  
@@ -794,23 +805,18 @@ Configuration Manager 日志文件存储在多个位置中，该位置取决于�
 |wsyncmgr.log|记录有关软件更新同步过程的详细信息。|站点服务器|  
 |WUAHandler.log|记录有关客户端上的搜索软件更新的 Windows 更新代理的详细信息。|客户端|  
 
-###  <a name="a-namebkmkwuloga-windows-update-agent"></a><a name="BKMK_WULog"></a> Windows 更新代理  
+###  <a name="BKMK_WULog"></a> Windows 更新代理  
  下表列出了包含与 Windows 更新代理相关的信息的日志文件。  
 
 |日志名称|说明|带有日志文件的计算机|  
 |--------------|-----------------|----------------------------|  
 |WindowsUpdate.log|记录有关的详细信息，涉及到 Windows 更新代理何时连接到 WSUS 服务器并为符合性评估检索软件更新，以及代理组件是否有更新。|客户端|  
 
-###  <a name="a-namebkmkwsusloga-wsus-server"></a><a name="BKMK_WSUSLog"></a> WSUS 服务器  
+###  <a name="BKMK_WSUSLog"></a> WSUS 服务器  
  下表列出了包含与 WSUS 服务器相关的信息的日志文件。  
 
 |日志名称|说明|带有日志文件的计算机|  
 |--------------|-----------------|----------------------------|  
 |Change.log|记录有关已更改的 WSUS 服务器数据库信息的详细信息。|WSUS 服务器|  
 |SoftwareDistribution.log|记录有关从已配置的更新源同步到 WSUS 服务器数据库的软件更新的详细信息。|WSUS 服务器|  
-
-
-
-<!--HONumber=Jan17_HO2-->
-
 

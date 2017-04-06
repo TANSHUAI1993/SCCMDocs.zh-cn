@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 477ffa5d61d2dfaedf8a3a1f5687e2d72698ad28
-ms.openlocfilehash: f175e11d9402e7c57c45edb4d5bbe969de5dcdf7
-ms.lasthandoff: 03/10/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 86109f7186422c2b29ee933e827a7d14123e5792
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -182,6 +182,11 @@ ms.lasthandoff: 03/10/2017
 
 ## <a name="windows-server-2008-r2-with-sp1-x64-standard-enterprise-and-datacenter"></a>Windows Server 2008 R2 SP1 (x64)：标准版、企业版和数据中心版  
  根据 [Microsoft 支持生命周期](https://support.microsoft.com/lifecycle)中的详细信息，Windows Server 2008 R2 现处于外延支持，不再处于主流支持。 若要详细了解将来对这些操作系统作为具有 Configuration Manager 的站点系统服务器的支持，请参阅 [System Center Configuration Manager 的已删除和已弃用的功能](../../../core/plan-design/changes/removed-and-deprecated-features.md)。  
+
+ 从 Configuration Manager 版本 1702 开始，此操作系统不支持站点服务器或大部分站点系统角色，但仍会继续支持状态迁移点和分发点站点系统角色（包括请求分发点、PXE 和多播）。
+ 
+ 1702 之前的版本继续支持使用以下服务器。
+
 
 **站点服务器：**  
 

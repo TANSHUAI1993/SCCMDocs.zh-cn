@@ -2,7 +2,7 @@
 title: "使用 System Center Configuration Manager 创建独立媒体 | Microsoft Docs"
 description: "使用独立媒体在未连接 Configuration Manager 站点或未使用网络的计算机上部署操作系统。"
 ms.custom: na
-ms.date: 12/21/2016
+ms.date: 03/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,9 +17,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: ee7f69bd65152deffb2456d9807e1e8fee8802ec
-ms.openlocfilehash: 708525604c3f40cf75b5408c3666193186b7cf50
-ms.lasthandoff: 03/07/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: d4689545ce2be5c16a65b24489f30028a0f90f94
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -97,32 +97,37 @@ WMIC /namespace:\\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDist
 
     -   如果选择“CD/DVD 集” ，请指定媒体的容量以及输出文件的名称和路径。 向导会将输出文件写入到此位置。 例如：**\\\servername\folder\outputfile.iso**  
 
-         如果媒体的容量太小，无法存储整个内容，则会创建多个文件，从而必须将内容存储在多张 CD 或 DVD 上。 当需要多个媒体时，Configuration Manager 会在创建的每个输出文件的名称中添加序号。 此外，如果将应用程序与操作系统一起部署，而单个媒体无法容纳应用程序，则 Configuration Manager 会将应用程序存储到多个媒体中。 在运行独立媒体时，Configuration Manager 会提示用户提供下一个存储了应用程序的媒体。  
+         如果媒体的容量太小，无法存储整个内容，则会创建多个文件，从而必须将内容存储在多张 CD 或 DVD 上。 当需要多个媒体时，Configuration Manager 会在创建的每个输出文件的名称中添加序号。 此外，如果将应用程序与操作系统一起部署，而单个媒体无法容纳应用程序，则 Configuration Manager 会将应用程序存储到多个媒体中。 在运行独立媒体时，Configuration Manager 会提示用户提供下一个存储了应用程序的媒体。   
 
-        > [!IMPORTANT]  
-        >  如果选择现有的 .iso 映像，任务序列媒体向导将在你进入向导的下一页后立即从驱动器或共享中删除该映像。 即使随后取消该向导，也会删除这个现有的映像。  
+         > [!IMPORTANT]  
+         >  如果选择现有的 .iso 映像，任务序列媒体向导将在你进入向导的下一页后立即从驱动器或共享中删除该映像。 即使随后取消该向导，也会删除这个现有的映像。  
 
      单击“下一步” 。  
 
-6.  在“安全”  页上，输入强密码来帮助保护媒体，然后单击“下一步” 。 如果指定了密码，则必须提供密码才能使用媒体。  
+6.  在“安全”页，从以下设置中进行选择，然后单击“下一步”：
+    - **使用密码保护媒体**：输入强密码来帮助保护媒体。 如果指定了密码，则必须提供密码才能使用媒体。  
 
-    > [!IMPORTANT]  
-    >  在独立媒体上，只会加密任务序列步骤及其变量。 不会加密媒体的其余内容，因此，请勿在任务序列脚本中包含任何敏感信息。 请使用任务序列变量来存储和提供所有敏感信息。  
+        > [!IMPORTANT]  
+        >  在独立媒体上，只会加密任务序列步骤及其变量。 不会加密媒体的其余内容，因此，请勿在任务序列脚本中包含任何敏感信息。 请使用任务序列变量来存储和提供所有敏感信息。  
 
+    - **为此独立媒体选择有效日期范围**（从版本 1702 开始）：在媒体上设置可选的开始和到期日期。 默认情况下，这些设置处于禁用状态。 独立介质运行前，该日期将与计算机上的系统时间进行比较。 如果系统时间早于开始时间或晚于过期时间，则独立介质不会启动。 也可通过使用 New-CMStandaloneMedia PowerShell cmdlet 启用这些选项。
 7.  在“独立 CD/DVD”  页上，指定将部署操作系统的任务序列，然后单击“下一步” 。 选择“检测关联的应用程序依赖项并将其添加到此媒体”以将内容添加到应用程序依赖项的独立媒体中。
-> [!TIP]
-> 如果你未看到想要的应用程序依赖项，请取消选中并重新选择“检测关联的应用程序项并将其添加到此媒体”设置以刷新列表。
+    > [!TIP]
+    > 如果你未看到想要的应用程序依赖项，请取消选中并重新选择“检测关联的应用程序项并将其添加到此媒体”设置以刷新列表。
 
-向导允许你仅选择那些与启动映像关联的任务序列。  
+    向导允许你仅选择那些与启动映像关联的任务序列。  
 
-8.  在“分发点”  页上，指定包含任务序列所需的内容的分发点，然后单击“下一步” 。  
+8. 在“选择应用程序”页（从版本 1702 开始），指定应用程序内容以作为媒体文件的一部分内容，然后单击“下一步”。
+9. 在“选择程序包”页（从版本 1702 开始），指定程序包内容以作为媒体文件的一部分，然后单击“下一步”。
+10. 在“选择驱动程序包”页（从版本 1702 开始），指定驱动程序包内容以作为媒体文件的一部分，然后单击“下一步”。
+11.  在“分发点”  页上，指定包含任务序列所需的内容的分发点，然后单击“下一步” 。  
 
      Configuration Manager 将仅显示具有内容的分发点。 必须先将与任务序列（启动映像、操作系统映像等）相关联的所有内容分发到至少一个分发点上，然后才能继续操作。 在分发内容后，可以重新启动向导或删除在此页上已选定的分发点，转到前一页，然后返回到“分发点”  页面以刷新分发点列表。 有关分发内容的详细信息，请参阅[任务序列引用的分发内容](manage-task-sequences-to-automate-tasks.md#BKMK_DistributeTS)。 有关分发点和内容管理的详细信息，请参阅[为 System Center Configuration Manager 管理内容和内容基础结构](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。  
 
     > [!NOTE]  
     >  必须具有对分发点上的内容库的“读取”  访问权限。  
 
-9. 在“自定义”  页上，指定以下信息，然后单击“下一步” 。  
+12. 在“自定义”  页上，指定以下信息，然后单击“下一步” 。  
 
     -   指定任务序列用于部署操作系统的变量。  
 
@@ -133,7 +138,7 @@ WMIC /namespace:\\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDist
         > [!TIP]  
         >  在任务序列媒体创建过程中，任务序列会将包 ID 和预启动命令行（包括任何任务序列变量的值）写入到运行 Configuration Manager 控制台的计算机上的 CreateTSMedia.log 日志文件。 你可以查看此日志文件以验证任务序列变量的值。  
 
-10. 完成向导。  
+13. 完成向导。  
 
  在目标文件夹中创建独立媒体文件 (.iso)。 如果选择了“独立 CD/DVD”，现在可以将输出文件复制到一组 CD 或 DVD。  
 

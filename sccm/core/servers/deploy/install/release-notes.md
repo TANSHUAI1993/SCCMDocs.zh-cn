@@ -2,7 +2,7 @@
 title: "发行说明 - Configuration Manager | Microsoft Docs"
 description: "有关产品中尚未解决或 Microsoft 知识库文章中未涵盖的紧急问题，请参阅这些说明。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 3/27/27
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
-ms.openlocfilehash: 9e853c8fda236125717c3912f6f3cb02d6dd1058
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: aca3525fc143b281f41c3d9bd20bb93b1d91f6ce
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -35,7 +36,27 @@ ms.openlocfilehash: 9e853c8fda236125717c3912f6f3cb02d6dd1058
 
 ## <a name="setup-and-upgrade"></a>安装和升级  
 
+### <a name="after-you-update-a-configuration-manager-console-using-consolesetupexe-from-the-site-server-folder-recent-language-pack-changes-are-not-available"></a>使用站点服务器文件夹中的 ConsoleSetup.exe 更新 Configuration Manager 控制台后，最近的语言包更改不可用
+<!--  SMS 486420  Applicability should be 1610 and 1702.  -->
+通过使用站点服务器安装文件夹中的 ConsoleSetup.exe 对控制台运行就地更新后，最近安装的语言包可能不可用。 此错误发生在以下情况下：
+- 你的站点运行版本 1610 或 1702。
+- 通过站点服务器安装文件夹中的 ConsoleSetup.exe 就地更新控制台。
+
+出现此问题时，重新安装的控制台不会使用配置的最新语言包集。 没有返回任何错误，但控制台可用的语言包将不会更改。  
+
+**解决方法：**卸载当前控制台，然后作为新安装重新安装控制台。 你可以使用站点服务器安装文件夹中的 ConsoleSetup.exe。 在安装过程中，请确保选择你要使用的语言包文件。
+
+
+### <a name="with-version-1702-the-default-site-boundary-group-is-configured-for-use-for-site-assignment"></a>使用版本 1702，默认站点边界组配置为用于站点分配
+<!--  SMS 486380   Applicability should only be to 1702. -->
+使用版本 1702，默认站点边界组参考选项卡选中“将此边界组用于站点分配”，将站点列为“分配的站点”并变灰，以使配置无法编辑或删除。
+
+**解决方法：** 无。 你可以忽略此设置。 虽然该组已启用站点分配，但默认站点边界组不用于站点分配。 使用 1702，此配置确保默认站点边界组与正确的站点相关联。
+
+
+
 ### <a name="when-installing-a-long-term-service-branch-site-using-version-1606-a-current-branch-site-is-installed"></a>使用版本 1606 安装 Long-Term Service Branch 站点时，将安装 Current Branch 站点
+<!-- Consider move to core content  -->
 使用 2016 年 10 月发布的 1606 版基线介质安装 Long-Term Servicing Branch (LTSB) 站点时，安装程序将改为安装 Current Branch 站点。 这是由于未选择使用站点安装来安装服务连接点这一选项。
 
  - 虽然服务连接点不是必需的，但在安装 LTSB 站点时必须选择它。
@@ -50,21 +71,19 @@ ms.openlocfilehash: 9e853c8fda236125717c3912f6f3cb02d6dd1058
 
 
 
-
-
 ### <a name="the--sql-server-backup-model-in-use-by-configuration-manager-can-change-from-full-to-simple"></a>Configuration Manager 使用中的 SQL Server 备份模型可以从完整模型更改为简单模型  
+<!-- Confirm applicability for upgrade to later baselines. 1511 is out of support. 1606 is minmum supported baseline  -->
+
  当你升级到 System Center Configuration Manager 版本 1511 时，Configuration Manager 使用的 SQL Server 备份模型可以从完整更改为简单。  
 
 -   如果你使用具有完整备份模型自定义 SQL Server 备份任务（而不是 Configuration Manager 的内置备份任务）时，升级可以将你的备份模型从完整更改为简单。  
 
 **解决方法**：升级到版本 1511 后，查看你的 SQL Server 配置，并将其还原为完整（如果必要）。  
 
-### <a name="when-you-add-a-service-window-to-a-new-site-server-service-windows-that-were---configured-for-another-site-server-are-deleted"></a>向新站点服务器添加服务时段时，将删除为另一个站点服务器配置的服务时段  
- 使用 System Center Configuration Manager 版本 1511 的服务时段时，只能为层次结构中的单个站点服务器配置服务时段。 在一个服务器上配置服务时段之后，当你随后在第二个站点服务器上配置服务时段时，将静默删除第一个站点服务器上的服务时段，而不会出现警告和错误。  
 
-**解决方法**：从 [Microsoft 知识库文章 3142341](http://support.microsoft.com/kb/3142341) 安装修补程序。 为 System Center Configuration Manager 安装 1602 更新时此问题也会得到解决。  
 
 ### <a name="an-update-is-stuck-with-a-state-of-downloading-in-the-updates-and-servicing-node-of-the-configuration-manager-console"></a>在 Configuration Manager 控制台的更新和服务节点内，更新停滞在正在下载的状态  
+<!-- Source bug pending. Consider move to core content.  -->
 在通过联机服务连接点自动下载更新时，更新可能会停滞在正在下载的状态。 当更新的下载处于停滞状态时，与下列内容类似的条目将会出现在指示的日志文件中：  
 
 DMPdownloader 日志：  
@@ -83,50 +102,10 @@ ConfigMgrSetup.log
 
 -   **状态值**：设为 **146944** 十进制或者 **0x00023e00** 十六进制  
 
-### <a name="pre-release-features-introduced-in-system-center-configuration-manager-1602"></a>System Center Configuration Manager 1602 中引入的预发行功能  
-
-预发行功能包含在产品中，用于在生产环境中进行早期测试，但不应将其视为生产就绪。  
-
-从更新 1606 开始，在可以使用预发行功能前必须表示许可。 有关详细信息，请参阅[使用更新中的预发行功能](../../../../core/servers/manage/install-in-console-updates.md)。
-
-System Center Configuration Manager 版本 1602 引入了两项预发行功能：  
-
--   对由 System Center Configuration Manager 管理的电脑进行条件访问。 有关详细信息，请参阅[管理对由 System Center Configuration Manager 管理的电脑的 O365 服务的访问](../../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)。
-    - 安装更新 1602 之后，功能类型显示为已发行，即使它是预发行。
-    - 如果随后从 1602 更新到 1606，则功能类型显示为已发行，即使它仍保持预发行。
-    - 如果从版本 1511 直接更新到 1606，则功能类型显示为预发行。
-
-
--   维护群集感知集合。 有关详细信息，请参阅 [Technical Preview 1605 for System Center Configuration Manager 中的功能](../../../../core/get-started/capabilities-in-technical-preview-1605.md)中的[为服务器组提供服务](../../../../core/get-started/capabilities-in-technical-preview-1605.md#BKMK_ServerGroups)。  
-
-
-
-
-### <a name="recovery-options-for-a-secondary-site-are-not-available-in-the-console"></a>辅助站点的恢复选项在控制台中不可用  
-恢复辅助站点失败后，“恢复辅助站点”选项可能在 Configuration Manager 控制台中不再可用。  
-
-此问题对 System Center Configuration Manager 版本 1511 和 1602 有所影响，预计会在将来的更新中得到解决。  
-
-**解决方法**：使用以下方法之一来恢复（重新安装）辅助站点：  
-
--   使用 **Preinst.exe** 和 **/delsite** 命令删除辅助站点，然后重新安装辅助站点。 有关 Preinst.exe 的信息，请参阅 [System Center Configuration Manager 的层次结构维护工具 (Preinst.exe)](../../../../core/servers/manage/hierarchy-maintenance-tool-preinst.exe.md)  
-
--   运行以下脚本以启动辅助站点恢复。 在要恢复的辅助站点的主父站点的数据库上运行此脚本：  
-
-    ```  
-    declare @SiteCode NVARCHAR(3)=N'<replace with secondary site code>'   
-
-    UPDATE Sites SET Status = 9  
-                    , DetailedStatus = 3  
-    FROM Sites WHERE SiteCode = @SiteCode  
-
-    UPDATE SCP SET SCP.Value1 = 9  
-                    , SCP.Value2 = N'3'  
-    FROM SC_SiteDefinition_Property SCP INNER JOIN SC_SiteDefinition SC ON SC.SiteNumber = SCP.SiteNumber  
-    WHERE SC.SiteCode = @SiteCode AND SCP.[Name] = N'Requested Status'  
-  ```  
 
 ###  <a name="setup-fails-when-using-redist-files-from-the-cdlatest-folder-with-a-manifest-verification-error"></a>使用 CD.Latest 文件夹中的 redist 文件时出现清单验证错误，安装失败
+<!-- Source bug pending  -->
+
 从为版本 1606 创建的 CD.Latest 文件夹运行安装程序并使用该 CD.Latest 文件夹中包含的 redist 文件时，将导致安装失败，Configuration Manager 安装日志中显示以下错误：
 
   - 错误：针对 defaultcategories.dll 的文件哈希检查失败
@@ -138,77 +117,38 @@ System Center Configuration Manager 版本 1602 引入了两项预发行功能�
 
 ### <a name="service-connection-tool-throws-an-exception-when-sql-server-is-remote-or-when-shared-memory-is-disabled"></a>当 SQL 服务器处于远程状态，或共享内存被禁用时，服务连接工具将引发异常
 从版本 1606 开始，当下列情况之一存在时，服务连接工具将引发异常：  
- -  站点数据库远离承载服务连接点的计算机，并使用非标准端口（1433 以外的端口）
- -  站点数据库与服务连接点位于同一服务器上，但禁用了 SQL 协议**共享内存**
+ -    站点数据库远离承载服务连接点的计算机，并使用非标准端口（1433 以外的端口）
+ -     站点数据库与服务连接点位于同一服务器上，但禁用了 SQL 协议**共享内存**
 
 异常类似于以下示例：
  - *未处理的异常：System.Data.SqlClient.SqlException：与 SQL Server 建立连接时发生与网络相关或特定于实例的错误。找不到或无法访问服务器。验证实例名称是否正确，且 SQL Server 是否配置为允许远程连接。（提供程序：命名管道提供程序，错误：40 - 无法打开到 SQL Server 的连接）--*
 
 **解决方法**：在使用该工具期间，必须修改承载服务连接点的服务器的注册表，以包含有关 SQL Server 端口的信息：
 
-   1.   在使用该工具之前，请编辑以下注册表项，并将正在使用的端口号添加到 SQL Server 的名称：
+   1.    在使用该工具之前，请编辑以下注册表项，并将正在使用的端口号添加到 SQL Server 的名称：
     - 项：   HKLM\Microsoft\SMS\COMPONENTS\SMS_DMP_UPLOADER\
       - 值：&lt;SQL Server 名称>
     - 添加：**,&lt;PORT>**
 
     例如，要将端口 *15001* 添加到名为 *testserver.test.net* 的服务器，则结果项为：***HKLM\Software\Microsoft\SMS\COMPONENTS\SMS_DMP_UPLOADER\testserver.test.net,15001***
 
-   2.   将端口添加到注册表后，该工具应能正常运作。  
+   2.    将端口添加到注册表后，该工具应能正常运作。  
 
-   3.   工具使用完成后，对于 **-connect** 和 **-import** 步骤，请将注册表项更改回原始值。  
-
-
+   3.    工具使用完成后，对于 **-connect** 和 **-import** 步骤，请将注册表项更改回原始值。  
 
 
 
 
-## <a name="backup-and-recovery"></a>备份和恢复
-### <a name="pre-production-client-is-not-available-after-a-site-restore"></a>预生产客户端在站点还原后不可用
-有了版本 1602，在你使用预生产客户端并从备份中还原层次结构的顶层站点时，预生产客户端版本将在站点还原后不可用。  
-
-**解决方法：**还原层次结构中的顶层站点后，必须手动复制预生产客户端文件，以便 Configuration Manager 可对其进行处理和还原以供使用：
-1. 在顶层站点服务器计算机上，将 *&lt;CM_Install_Location\>\\Client* 文件夹的内容复制到 *&lt;CM_Install_Location\>\\StagingClient* 文件夹。
-
-2. 创建一个名为 **client.acu** 的空文件并将此文件复制或粘贴到站点服务器上的 *&lt;CM_Install_Location\>\\Inboxes\\hman.box* 文件夹中。 （此文件可以是已重命名的文本文件，只要它不再具有 txt 扩展名）。 将此文件置于 hman.box 文件夹后，站点服务器上的层次结构管理器将启动并处理客户端文件以及还原预生产客户端文件以供使用。
-
-此问题已在版本 1606 中解决。
+<!-- No current Backup and Recovery relenotes
+## Backup and recovery
+-->
 
 
-## <a name="client-deployment-and-upgrade"></a>客户端部署和升级  
+<!-- No current  Client deployment and upgrade relenotes
+## Client deployment and upgrade  
+-->
 
-### <a name="expansion-to-central-administration-site-stops-automatic-client-upgrades"></a>扩展到管理中心站点会停止自动客户端升级  
-仅在 1511 版本中，不能为从主站点扩展到中心管理站点的任意站点运行自动客户端升级。 站点扩展后，客户端升级包上的权威站点未正确设置为新的中心管理站点，这会阻止自动客户端升级的成功运行。 此问题仅存在于在 1511 版本中。 在 1602 及更高版本中，此问题已得到解决。  
 
-**解决方法：**在管理中心站点数据库上运行以下 SQL 脚本。 运行该脚本后，自动客户端升级应该会开始正常运行。  
-
-  ```  
-  DECLARE @RootSite AS NVARCHAR(3)  
-  DECLARE @SourceServer AS NVARCHAR(255)  
-  DECLARE @FullClientPkgSource AS NVARCHAR(255)  
-  DECLARE @UpgradePkgSource AS NVARCHAR(255)  
-
-  SELECT @RootSite = SiteCode, @SourceServer = SiteServer  
-  FROM sites  
-  WHERE ISNULL(ReportToSite, N'') = N''  
-
-  SELECT @FullClientPkgSource = N'\\' + @SourceServer + N'\SMS_' + @RootSite + N'\Client'  
-  SELECT @UpgradePkgSource = N'\\' + @SourceServer + N'\SMS_' + @RootSite + N'\ClientUpgrade'  
-
-  UPDATE SMSPackages_G  
-  SET Source = @FullClientPkgSource, SourceSite = @RootSite  
-  WHERE PkgID IN  
-      (SELECT FullPackageID FROM ClientDeploymentSettings)  
-
-  UPDATE SMSPackages_G  
-  SET Source = @UpgradePkgSource, SourceSite = @RootSite  
-  WHERE PkgID IN  
-      (SELECT UpgradePackageID FROM ClientDeploymentSettings)  
-
-  UPDATE ProgramOffers_G  
-  SET SourceSite = @RootSite  
-  WHERE OfferID IN  
-      (SELECT UpgradeAdvertisementID FROM ClientDeploymentSettings)  
-  ```  
 
 ## <a name="operating-system-deployment"></a>操作系统部署  
 
@@ -294,9 +234,4 @@ System Center Configuration Manager 版本 1602 引入了两项预发行功能�
 此问题影响对带更新版 1602 的 **Exchange 本地**进行 System Center Configuration Manager 条件性访问，预计会在将来的更新中得到解决。  
 
 **解决方法：**在“免除集合”页上选择“用户集合”之前，将“用户集合”添加到“目标集合”页，或者确保不会将同一“用户集合”添加到“目标集合”和“免除集合”中。
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

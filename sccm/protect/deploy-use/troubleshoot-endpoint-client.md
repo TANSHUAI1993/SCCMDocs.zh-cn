@@ -17,9 +17,9 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1432568286605d29683416885d7aa522c649016e
-ms.openlocfilehash: fde190f141fb55462755119b533519d05af3f3c3
-ms.lasthandoff: 01/04/2017
+ms.sourcegitcommit: 6accec2d356861b273b25ba2b6338d9684a46ff6
+ms.openlocfilehash: 1b096e71f5131214fb4e235e84d0b7f63e566831
+ms.lasthandoff: 03/29/2017
 
 
 ---
@@ -168,8 +168,7 @@ ms.lasthandoff: 01/04/2017
 ##  <a name="starting-windows-defender-or-endpoint-protection-service"></a>启动 Windows Defender 或 Endpoint Protection 服务  
  **症状**  
 
- 会接收到一条消息，通知你 â€œ**Windows Defender 或**  
- **Endpoint Protection 未监视计算机，因为程序的服务已停止。应该立即重启该程序。**  
+ 你收到一条消息，通知你“**Windows Defender 或 Endpoint Protection 未监视你的计算机，因为该程序的服务已停止。应该立即重新启动该程序。**” 
 
  **解决方案**  
 
@@ -177,7 +176,7 @@ ms.lasthandoff: 01/04/2017
 
 -   关闭所有应用程序并重新启动计算机。  
 
-### <a name="step-2-make-sure-the-windows-defender-orbr-------endpoint-protection-service-is-set-to-automatic-and-is-started"></a>步骤 2：确保“Windows Defender”或<br />      “Endpoint Protection”服务设置为自动启动并且已启动  
+### <a name="step-2-make-sure-the-windows-defender-or-endpoint-protection-service-is-set-to-automatic-and-is-started"></a>步骤 2：确保“Windows Defender”或“Endpoint Protection 服务”设置为自动，并且已启动  
 
 1.  单击“开始”  ，搜索 **services.msc**，然后按 **Enter**。  
 

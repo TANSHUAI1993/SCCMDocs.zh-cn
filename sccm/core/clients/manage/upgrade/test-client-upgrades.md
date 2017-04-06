@@ -2,7 +2,7 @@
 title: "测试客户端升级预生产集合 | Microsoft Docs"
 description: "在 System Center Configuration Manager 中的预生产集合中测试客户端升级。"
 ms.custom: na
-ms.date: 12/12/2016
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,9 +17,9 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 52d2e088b8db3c2e9a0af640ca3db72b9fd7af60
-ms.openlocfilehash: 250c9312b932670c408554f3968ae43ae4f3dbaa
-ms.lasthandoff: 01/03/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 533c8e8b30519d83b8fc7a9d204d51e76974c4b1
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -57,7 +57,7 @@ ms.lasthandoff: 01/03/2017
 
 ##  <a name="to-install-a-configuration-manager-update-that-includes-a-new-version-of-the-client"></a>若要安装包括新版本客户端的 Configuration Manager 更新  
 
-1.  在 Configuration Manager 控制台中，打开“管理” > “云服务” > “更新和服务”，选择“可用”更新，然后选择“安装更新包”  
+1.  在 Configuration Manager 控制台中，打开“管理” > “更新和服务”，选择“可用”更新，然后选择“安装更新包”。 （在版本 1702 之前，“更新和服务”在“管理” > “云服务”下。）
 
      有关安装更新的详细信息，请参阅 [System Center Configuration Manager 的更新](../../../../core/servers/manage/updates.md)  
 
@@ -72,7 +72,7 @@ ms.lasthandoff: 01/03/2017
 
 ##  <a name="to-promote-the-new-client-to-production"></a>若要将新客户端提升至生产  
 
-1.  在 Configuration Manager 控制台中，打开“管理” > “云服务” > “更新和服务”，选择“提升预生产客户端”。
+1.  在 Configuration Manager 控制台中，打开“管理” > “更新和服务”，然后选择“提升预生产客户端”。 （在版本 1702 之前，“更新和服务”在“管理” > “云服务”下。）
 
     > [!TIP]
     > 在控制台中通过“监视” > 客户端状态” > “预生产客户端部署”监视客户端部署时，还可使用“提升预生产客户端”按钮。

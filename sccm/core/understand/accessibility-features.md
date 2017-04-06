@@ -2,7 +2,7 @@
 title: "辅助功能 | Microsoft Docs"
 description: "了解使 System Center Configuration Manager 可供残疾人使用的功能。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 3/27/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: bf0ca29a68cb8fbbcacc2acd148c06abf08c5cab
-ms.openlocfilehash: ca1207b8d48ca66096d1bbe674541223c033d895
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 98599b3c188c9e9b508fea79ecf9a2b2348e9288
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="accessibility-features-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的辅助功能
@@ -28,7 +29,7 @@ ms.openlocfilehash: ca1207b8d48ca66096d1bbe674541223c033d895
 System Center Configuration Manager 包含可供残疾人使用的功能。
 
 
-## <a name="a-namebkmkaconsolea-accessibility-features-for-the-configuration-manager-console"></a><a name="bkmk_aconsole"></a>Configuration Manager 控制台的辅助功能  
+## <a name="bkmk_aconsole"></a>Configuration Manager 控制台的辅助功能  
 -   要访问工作区，请使用以下键盘快捷方式：  
 
 |工作区|键盘快捷方式|  
@@ -44,16 +45,16 @@ System Center Configuration Manager 包含可供残疾人使用的功能。
 
 -   要访问工作区中的其他区域，请使用 Tab 键和 Shift+Tab 键。 要在工作区区域（如功能区）内导航，请使用箭头键。  
 
--   当焦点在树节点中时，若要访问地址栏，请使用&3; 次 Shift+Tab。  
+-   当焦点在树节点中时，若要访问地址栏，请使用 3 次 Shift+Tab。  
 
--   在向导或属性页上，可以使用键盘快捷方式在方框之间移动。 按住 Alt 键的同时按下划线字符 (Alt+_) 可以选择特定框。  
+-   在向导或属性页上，可以使用键盘快捷方式在方框之间移动。 按住 Alt 键的同时按下划线字符 (Alt+_) 可以选择特定框。     
 
- -  从 1606 版开始，若要导航到工作区的不同节点，需输入节点名称的第一个字母。 每次按键都会将光标移动到以该字母开头的下一节点。 如果使用屏幕阅读器，阅读器会读出该节点的名称。
+-  若要导航到工作区的不同节点，需输入节点名称的第一个字母。 每次按键都会将光标移动到以该字母开头的下一节点。 如果使用屏幕阅读器，阅读器会读出该节点的名称。
 
 > [!NOTE]  
 >  本节中的信息可能仅适用于在美国获得 Microsoft 产品许可的用户。 如果在美国以外的国家/地区获得本产品，可以使用软件包附带的子公司信息卡或访问 [Microsoft 辅助功能网站](http://go.microsoft.com/fwlink/?LinkId=8431)，获取 Microsoft 支持服务的联系信息。 可与你所在地的子公司联系，了解本节中描述的产品和服务的类型在你所在地区是否可用。 辅助功能的相关信息具有其他语言（包括日语和法语）版本。  
 
-##  <a name="a-namebkmkahelpa-accessibility-features-for-configuration-manager-help"></a><a name="bkmk_ahelp"></a>Configuration Manager 帮助的辅助功能  
+##  <a name="bkmk_ahelp"></a>Configuration Manager 帮助的辅助功能  
  Configuration Manager 帮助中包括的功能适用于范围更广的用户（包括行动不便和低视力人群，或其他残疾人群）。  
 
 |若要执行此操作|使用此键盘快捷方式|  
@@ -108,9 +109,4 @@ System Center Configuration Manager 包含可供残疾人使用的功能。
 
     > [!NOTE]  
     >  如果在“帮助”窗口中更改帮助主题的字体，则更改还会影响 Windows Internet Explorer 中的网页的字体。  
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

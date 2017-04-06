@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 26a362b4e5f25414178cae6843869a54eb99028c
-ms.openlocfilehash: b190b6116fba8080ad4e144e4e349e0926d1340b
-ms.lasthandoff: 03/01/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: ef044af5f6b32e4161d54c0ab1fb2ef2d245264b
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -36,7 +36,7 @@ ms.lasthandoff: 03/01/2017
 >  [!TIP]
 > Current Branch 还可作为无需许可证的评估版进行安装。 评估版可使用 180 天，并支持升级到 Current Branch 的许可版。
 
-Current Branch 一年更新几次，更新时提供新的功能。 每个更新版本在其发布后一年内受支持。 必须在&1; 年期限到期之前或到期日当天升级到 Current Branch 的较新版本。 较新版本的更新以控制台内更新的形式提供。
+Current Branch 一年更新几次，更新时提供新的功能。 每个更新版本在其发布后一年内受支持。 必须在 1 年期限到期之前或到期日当天升级到 Current Branch 的较新版本。 较新版本的更新以控制台内更新的形式提供。
 
 若要将 Current Branch 作为新站点进行安装，或者安装为来自 System Center 2012 Configuration Manager Service Pack 2 或 System Center 2012 R2 Configuration Manager Service Pack 1 的升级，则需要使用 System Center Configuration Manager 的[基线介质](/sccm/core/servers/manage/updates#baseline-and-update-versions)，该介质以 DVD 形式随附在 System Cener 2016 中，或者作为 System Center Configuration Manager 的一部分单独发行。 对此介质的访问权取决于 System Center Configuration Manager 的许可方式。
 
@@ -58,7 +58,7 @@ Current Branch 一年更新几次，更新时提供新的功能。 每个更新�
 - 支持从以前版本的 Configuration Manager 升级。
 - 支持安装评估版本，以后可以升级到完全许可的安装。
 
-Current Branch 的初始版本是版本 1511。 后续更新包括版本 1602 和 1606 等。 各版本的有效期为&1; 年，Microsoft 建议在最新版本发布后立即更新。 较旧版本最多可使用一年，之后需要更新到较新版本，也可跳过更新，直接安装最新的可用版本。 由于每个版本是累积更新，因此如果跳过更新并安装最新版本，仍可获取来自以前版本的所有功能和改进。
+Current Branch 的初始版本是版本 1511。 后续更新包括版本 1602 和 1606 等。 各版本的有效期为 1 年，Microsoft 建议在最新版本发布后立即更新。 较旧版本最多可使用一年，之后需要更新到较新版本，也可跳过更新，直接安装最新的可用版本。 由于每个版本是累积更新，因此如果跳过更新并安装最新版本，仍可获取来自以前版本的所有功能和改进。
 
 有关详细信息，请参阅[对 Current Branch 版本的支持](/sccm/core/servers/manage/current-branch-versions-supported)。
 
@@ -70,7 +70,7 @@ Current Branch 的初始版本是版本 1511。 后续更新包括版本 1602 �
 ##  <a name="long-term-servicing-branch-of-system-center-configuration"></a>System Center Configuration Manager 的 Long-Term Servicing Branch
 这是获得许可且适用于生产的分支，面向正在使用 Current Branch 且允许其 Configuration Manager 软件保障 (SA) 或等效订阅权限在 2016 年 10 月 1 日后过期的 Configuration Manager 客户。 有关软件保障和许可选项的详细信息，请参阅 [System Center Configuration Manager 的许可和分支](learn-more-editions.md)。
 
-LTSB 不会收到提供新功能或更新现有功能的控制台中更新。 但是，提供了关键安全修补程序。
+LTSB 基于版本 1606。 该分支不会收到提供新功能或更新现有功能的控制台中更新。 但是，提供了关键安全修补程序。 若要安装 LTSB，你必须使用版本 1606 [基线介质](/sccm/core/servers/manage/updates#baseline-and-update-versions)，基线介质以 DVD 形式随附在 System Center 2016 或 System Center Configuration Manager 中。
 
 若要将 LTSB 作为新站点或作为来自受支持的 Configuration Manager 2012 站点的升级对其进行安装，请使用版本 1606 [基线介质](/sccm/core/servers/manage/updates#baseline-and-update-versions)，该基线介质以 DVD 形式随附在 System Center 2016 或 System Center Configuration Manager (Current Branch and Long-Term Servicing Branch 1606) 版本中。 可使用基线介质安装运行 Current Branch 版本 1606 的新站点或运行 Long-Term Servicing Branch 的新站点。
 

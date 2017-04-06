@@ -2,7 +2,7 @@
 title: "证书配置文件简介 | Microsoft Docs"
 description: "了解 System Center Configuration Manager 中的证书配置文件如何与 Active Directory 证书服务一起使用。"
 ms.custom: na
-ms.date: 12/28/2016
+ms.date: 03/30/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,12 +16,13 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 8a5dc7361da34f3e6b926acd35c72c0c0767ce70
-ms.openlocfilehash: d51670b47aab77cc4e630a6aeaa0744f916bf3b9
-ms.lasthandoff: 12/30/2016
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: ba1d5b04cb0cb0284525e295a6086a3c0ac67e9f
+ms.lasthandoff: 03/27/2017
 
 
 ---
+
 # <a name="introduction-to-certificate-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的证书配置文件简介
 
 *适用范围：System Center Configuration Manager (Current Branch)*
@@ -46,10 +47,10 @@ ms.lasthandoff: 12/30/2016
 ## <a name="types-of-certificate-profiles"></a>证书配置文件的类型  
  有 3 种类型的证书配置文件：  
 
--   “可信 CA 证书” - 允许部署受信任的根 CA 或中间 CA 证书，以便在设备必须验证服务器时形成证书信任链。  
+-   **可信 CA 证书** - 可部署受信任的根 CA 或中间 CA 证书，以便在设备必须验证服务器时形成证书信任链。  
 
--   **简单证书注册协议 (SCEP)** - 允许通过在运行 Windows Server 2012 R2 的服务器上使用 SCEP 协议和网络设备注册服务，为设备或用户请求一个证书。
--   -   **个人信息交换 (.pfx)** - 允许为设备或用户请求一个 .pfx（又称 PKCS #12）证书。
+-   **简单证书注册协议 (SCEP)** - 可通过在运行 Windows Server 2012 R2 的服务器上使用 SCEP 协议和网络设备注册服务，为设备或用户请求一个证书。
+-   **个人信息交换 (.pfx)** - 可为设备或用户请求一个 .pfx（又称 PKCS #12）证书。
 
     > [!NOTE]  
     >  必须创建**受信任的 CA 证书**类型的证书配置文件，然后才能创建**简单证书注册协议 (SCEP)** 证书配置文件。  
@@ -100,4 +101,3 @@ System Center Configuration Manager 的一个典型方案是，在连接使用 E
 -   设备在 System Center Configuration Manager 层次结构中受阻止。  
 
  为了吊销证书，站点服务器会将吊销命令发送至证书颁发机构。 吊销原因是“停止操作” 。  
-

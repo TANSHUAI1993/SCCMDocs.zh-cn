@@ -2,7 +2,7 @@
 title: "配置证书基础结构 | Microsoft Docs"
 description: "了解如何在 System Center Configuration Manager 中配置证书注册。"
 ms.custom: na
-ms.date: 10/10/2016
+ms.date: 03/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,36 +17,28 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
-ms.openlocfilehash: 56e0a1923305c5134386623b1e306b8ebd013d53
-ms.lasthandoff: 12/16/2016
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 859a8da10f55e314b205b7a4a415a1d2a60a920a
+ms.lasthandoff: 03/27/2017
 
 ---
+
 # <a name="certificate-infrastructure"></a>证书基础结构
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
+以下是有关如何在 System Center Configuration Manager 中配置证书的步骤、详情及更多信息。 在开始之前，请检查 [System Center Configuration Manager 中证书配置文件先决条件](../../protect/plan-design/prerequisites-for-certificate-profiles.md)中列出的所有先决条件。  
 
- 以下是有关如何在 System Center Configuration Manager 中配置证书注册的步骤、详情及更多信息。 在开始之前，请检查 [System Center Configuration Manager 中证书配置文件先决条件](../../protect/plan-design/prerequisites-for-certificate-profiles.md)中列出的所有先决条件。  
+使用以下步骤配置 SCEP 或 PFX 证书的基础结构。
 
- 完成这些步骤并验证了安装后，你可以配置和部署证书配置文件。 有关详细信息，请参阅[如何在 System Center Configuration Manager 中创建证书配置文件](../../protect/deploy-use/create-certificate-profiles.md)。  
+## <a name="step-1---install-and-configure-the-network-device-enrollment-service-and-dependencies-for-scep-certificates-only"></a>步骤 1 - 安装和配置网络设备注册服务及依赖关系（仅用于 SCEP 证书）
 
-
-**步骤 1：**安装和配置网络设备注册服务及依赖关系。 Active Directory 证书服务 (AD CS) 的网络设备注册服务角色服务必须在 Windows Server 2012 R2 操作系统上运行。
-     **重要提示：**必须完成一些其他配置步骤，然后才能通过 System Center Configuration Manager 使用网络设备注册服务。
-**步骤 2：**安装和配置证书注册点。 你至少必须安装一个证书注册点。 此注册点可以在管理中心站点或主站点中。
-**步骤 3：**安装 System Center Configuration Manager 策略模块。 在运行网络设备注册服务的服务器上安装策略模块。
-
-## <a name="supplemental-procedures-to-configure-certificate-enrollment-in-configuration-manager"></a>在 Configuration Manager 中配置证书注册的补充过程  
- 如果上表中的步骤需要执行补充过程，请使用以下信息。  
-
-###  <a name="step-1-install-and-configure-the-network-device-enrollment-service-and-dependencies"></a>步骤 1：安装和配置网络设备注册服务及依赖关系  
  你必须安装和配置用于 Active Directory 证书服务 (AD CS) 的网络设备注册服务角色服务、更改有关证书模板的安全权限、部署公钥基础结构 (PKI) 客户端身份验证证书、编辑注册表以增加 Internet Information Services (IIS) 默认 URL 大小限制。 必要时还必须配置证书颁发机构 (CA) 以允许自定义有效期。  
 
 > [!IMPORTANT]  
 >  在配置 System Center Configuration Manager 以使用网络设备注册服务之前，请验证网络设备注册服务的安装和配置。 如果这些依赖关系未正常工作，那么使用 System Center Configuration Manager 诊断证书注册将有困难。  
 
-##### <a name="to-install-and-configure-the-network-device-enrollment-service-and-dependencies"></a>安装和配置网络设备注册服务及依赖关系  
+### <a name="to-install-and-configure-the-network-device-enrollment-service-and-dependencies"></a>安装和配置网络设备注册服务及依赖关系  
 
 1.  在运行 Windows Server 2012 R2 的服务器上，安装和配置用于 Active Directory 证书服务服务器角色的网络设备注册服务角色服务。 有关详细信息，请参阅 TechNet 上 Active Directory 证书服务库中的 [Network Device Enrollment Service Guidance（网络设备注册服务指导）](http://go.microsoft.com/fwlink/p/?LinkId=309016) 。  
 
@@ -107,10 +99,12 @@ ms.lasthandoff: 12/16/2016
 
 8.  使用下列链接作为示例，验证网络设备注册服务是否工作： **https://server.contoso.com/certsrv/mscep/mscep.dll**。 你应会看到内置的网络设备注册服务网页。 此网页说明服务是什么，并且说明了网络设备使用该 URL 来提交证书请求。  
 
- 既然配置了网络设备注册服务和依赖关系，即可安装和配置证书注册点。  
+ 既然配置了网络设备注册服务和依赖关系，即可安装和配置证书注册点。
 
-###  <a name="step-2-install-and-configure-the-certificate-registration-point"></a>步骤 2：安装和配置证书注册点  
- 必须至少在 System Center Configuration Manager 层次结构中安装和配置一个证书注册点，并且可以在管理中心站点或主站点中安装此站点系统角色。  
+
+## <a name="step-2---install-and-configure-the-certificate-registration-point"></a>步骤 2 - 安装和配置证书注册点。
+
+必须至少在 System Center Configuration Manager 层次结构中安装和配置一个证书注册点，并且可以在管理中心站点或主站点中安装此站点系统角色。  
 
 > [!IMPORTANT]  
 >  在安装证书注册点之前，请参阅 **站点系统要求** 主题中的 [Supported configurations for System Center Configuration Manager](../../core/plan-design/configs/supported-configurations.md) 部分，了解证书注册点的操作系统要求和依赖关系。  
@@ -127,18 +121,23 @@ ms.lasthandoff: 12/16/2016
 
 5.  在“代理”  页上，单击“下一步” 。 证书注册点不使用 Internet 代理设置。  
 
-6.  在“系统角色选择”  页上，从可用角色列表中选择“证书注册点”  ，然后单击“下一步” 。  
+6.  在“系统角色选择”  页上，从可用角色列表中选择“证书注册点”  ，然后单击“下一步” 。 
 
-7.  在“证书注册点”  页上，接受或更改默认设置，然后单击“添加” 。  
+8. 在“证书注册模式”页上，选择是要此证书注册点“处理 SCEP 证书请求”，还是“处理 PFX 证书请求”。 证书注册点无法同时处理两种请求，但是，如果使用两种证书类型，则可以创建多个证书注册点。
 
+7.  在“证书注册点设置”页上，你的设置取决于证书注册点将处理的证书类型：
+    -   如果选择“处理 SCEP 证书请求”，请配置以下内容：
+        -   证书注册点的**网站名称**、**HTTPS 端口号**和**虚拟应用程序名称**。 这些字段使用默认值自动填充。 
+        -   **网络设备注册服务和根 CA 证书的 URL** -单击“添加”，然后在“添加 URL 和根 CA 证书”对话框中，指定以下内容：
+            - **网络设备注册服务的 URL**：采用以下格式指定 URL：https://*<server_FQDN>*/certsrv/mscep/mscep.dll。 例如，如果运行网络设备注册服务的服务器的 FQDN 为 server1.contoso.com，请键入 **https://server1.contoso.com/certsrv/mscep/mscep.dll**。
+            - **根 CA 证书**：浏览到并选择你在 **步骤 1：安装和配置网络设备注册服务及依赖关系**中创建和保存的 .cer 证书文件。 此根 CA 证书允许证书注册点验证 System Center Configuration Manager 策略模块将使用的客户端身份验证证书。  
+    - 如果选择了“处理 PFX 证书请求”，则配置以下内容：
+        - **证书颁发机构 (CA) 和连接到每个 CA 所需的帐户** - 单击“添加”，然后在“添加证书颁发机构和帐户”对话框中，指定以下内容：
+            - **证书颁发机构服务器名称** - 输入你的证书颁发机构服务器的名称。
+            - **证书颁发机构帐户** - 单击“设置”选择或创建在证书颁发机构的模板中具有注册权限的帐户。
+        - **证书注册点连接帐户** - 选择或创建将证书注册点连接到 Configuration Manager 数据库的帐户。 或者，你可以使用托管证书注册点的计算机的本地计算机帐户。
+        - **Active Directory 证书发布帐户** - 选择一个帐户或创建一个新帐户，用于将证书发布到 Active Directory 中的用户对象。
 8.  在“添加 URL 和根 CA 证书”  对话框中，指定下列各项，然后单击“确定” ：  
-
-    1.  **网络设备注册服务的 URL**：采用以下格式指定 URL：https://*<server_FQDN>*/certsrv/mscep/mscep.dll。 例如，如果运行网络设备注册服务的服务器的 FQDN 为 server1.contoso.com，请键入 **https://server1.contoso.com/certsrv/mscep/mscep.dll**。  
-
-    2.  **根 CA 证书**：浏览到并选择你在 **步骤 1：安装和配置网络设备注册服务及依赖关系**中创建和保存的 .cer 证书文件。 此根 CA 证书允许证书注册点验证 System Center Configuration Manager 策略模块将使用的客户端身份验证证书。  
-
-    > [!NOTE]  
-    >  如果使用多个运行网络设备注册服务的服务器，请单击“添加”  指定其他服务器的详细信息。  
 
 9. 单击“下一步”  并完成向导。  
 
@@ -155,10 +154,10 @@ ms.lasthandoff: 12/16/2016
     > [!TIP]  
     >  此证书不会立即出现在此文件夹中。 在 System Center Configuration Manager 将文件复制到此位置之前，你可能需要等待一会（例如，半个小时）。  
 
- 既然已安装和配置了证书注册点，便可开始为网络设备注册服务安装 System Center Configuration Manager 策略模块。  
 
-###  <a name="step-3-install-the-configuration-manager-policy-module"></a>步骤 3：安装 Configuration Manager 策略模块  
- 必须在**步骤 2：安装和配置证书注册点**中指定的每台服务器上安装和配置 System Center Configuration Manager 策略模块，将其作为证书注册点属性中的**网络设备注册服务的 URL**。  
+## <a name="step-3----install-the-system-center-configuration-manager-policy-module-for-scep-certificates-only"></a>步骤 3 - 安装 System Center Configuration Manager 策略模块（仅用于 SCEP 证书）。
+
+必须在**步骤 2：安装和配置证书注册点**中指定的每台服务器上安装和配置 System Center Configuration Manager 策略模块，将其作为证书注册点属性中的**网络设备注册服务的 URL**。  
 
 ##### <a name="to-install-the-policy-module"></a>安装策略模块  
 
@@ -168,7 +167,7 @@ ms.lasthandoff: 12/16/2016
 
     -   PolicyModuleSetup.exe  
 
-     此外，如果安装媒体上有 LanguagePack 文件夹，请复制此文件夹及其内容。  
+    此外，如果安装媒体上有 LanguagePack 文件夹，请复制此文件夹及其内容。  
 
 2.  从临时文件夹中，运行 PolicyModuleSetup.exe 以启动 System Center Configuration Manager 策略模块安装向导。  
 
@@ -189,7 +188,8 @@ ms.lasthandoff: 12/16/2016
 
 9. 单击“下一步”  并完成向导。  
 
- 既然已完成了配置步骤来安装网络设备注册服务及依赖关系、证书注册点以及 System Center Configuration Manager 策略模块，便可开始通过创建和部署证书配置文件将证书部署到用户和设备。 有关如何创建证书配置文件的详细信息，请参阅[如何在 System Center Configuration Manager 中创建证书配置文件](../../protect/deploy-use/create-certificate-profiles.md)。  
+ 如果想要卸载 System Center Configuration Manager 策略模块，请使用控制面板中的“程序和功能”。 
 
- 如果想要卸载 System Center Configuration Manager 策略模块，请使用控制面板中的“程序和功能”。  
+ 
+现在已经完成了配置步骤，你已经准备好通过创建和部署证书配置文件为用户和设备部署证书。 有关如何创建证书配置文件的详细信息，请参阅[如何在 System Center Configuration Manager 中创建证书配置文件](../../protect/deploy-use/create-certificate-profiles.md)。  
 

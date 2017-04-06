@@ -17,9 +17,9 @@ author: mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 84f21f2e86212bc3fb6a505ff62c886e62b77d52
-ms.lasthandoff: 03/06/2017
+ms.sourcegitcommit: 23b1d24e908d04b64c3bbfa518793a44e696d468
+ms.openlocfilehash: 50aea2afaf34974ca92ac58b6569bff56403a9ab
+ms.lasthandoff: 03/29/2017
 
 ---
 # <a name="apply-settings-to-ios-apps-with-app-configuration-policies-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中将设置应用于使用应用配置策略的 iOS 应用
@@ -70,8 +70,9 @@ ms.lasthandoff: 03/06/2017
 
       若要了解有关 XML 属性列表的详细信息，请参阅 iOS 开发人员库中的[了解 XML 属性列表](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/PropertyLists/UnderstandXMLPlist/UnderstandXMLPlist.html)。
 
-            The format of the XML property list varies depending on the app you are configuring. Contact the app supplier for details about the format to use.
-            Intune supports the following data types in a property list:
+根据你所配置的应用，XML 属性列表的格式可能有所不同。 如需了解要使用格式的详细信息，请联系应用供应商。
+Intune 支持属性列表中的以下数据类型：
+            
             ```
             <integer>
             <real>
@@ -80,8 +81,9 @@ ms.lasthandoff: 03/06/2017
             <dict>
             <true /> or <false />
             ```
-            For more information about data types, see [About Property Lists](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/PropertyLists/AboutPropertyLists/AboutPropertyLists.html) in the iOS Developer Library.
-            Intune also supports the following token types in the property list:
+有关数据类型的详细信息，请参阅 iOS 开发人员库中的[关于属性列表](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/PropertyLists/AboutPropertyLists/AboutPropertyLists.html)。
+Intune 还支持属性列表中的以下令牌类型：
+            
             ```
             {{userprincipalname}} - (Example: John@contoso.com)
             {{mail}} - (Example: John@contoso.com)
@@ -92,11 +94,11 @@ ms.lasthandoff: 03/06/2017
             {{username}} - (Example: John Doe)
             {{serialnumber}} - (Example: F4KN99ZUG5V2) for iOS devices
             {{serialnumberlast4digits}} - (Example: G5V2) for iOS devices
-
-            The {{ and }} characters are used by token types only and must not be used for other purposes.
             ```
 
-      2.  若要导入以前创建的 XML 文件，请选择“选择文件”。
+{{ 和 }} 字符仅供令牌类型使用，且不能用于其他目的。
+            
+5. 若要导入以前创建的 XML 文件，请选择“选择文件”。
 6. 选择“下一步”。 如果 XML 代码中存在错误，则必须在继续之前更正这些错误。
 7. 完成向导中的步骤。
 

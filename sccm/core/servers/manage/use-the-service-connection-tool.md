@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: b4642186e42745640f088b7046e70019616935ea
-ms.openlocfilehash: 9a5cd5ce3ce6868b44768d3cbe7b7c594f44d42c
-ms.lasthandoff: 12/16/2016
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 7a9c5bb9890b00cf3485998aa46286c890429cc0
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -149,7 +149,9 @@ ms.lasthandoff: 12/16/2016
 
 8.  导入完成后，可以关闭命令提示符。 （仅导入适用的层次结构的更新）。  
 
-9. 打开 Configuration Manager 控制台并导航到“管理” >“云服务” > “更新和服务”。 现在即可安装之前导入的更新。 有关安装更新的信息，请参阅[安装 System Center Configuration Manager 在控制台的更新](../../../core/servers/manage/install-in-console-updates.md)。  
+9. 打开 Configuration Manager 控制台并导航到“管理” > “更新和服务”。 现在即可安装之前导入的更新。 （在版本 1702 之前，“更新和服务”在“管理” > “云服务”下。）
+
+ 有关安装更新的信息，请参阅[安装 System Center Configuration Manager 在控制台的更新](../../../core/servers/manage/install-in-console-updates.md)。  
 
 ## <a name="bkmk_cmd"></a> 命令行选项  
  若要查看服务连接点工具的帮助信息，请打开包含该工具的文件夹的命令提示符并运行命令：  **serviceconnectiontool.exe**。  

@@ -17,9 +17,9 @@ author: andredm7
 ms.author: andredm
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: ad9ea7b29e03bb514fe23fdf761b312c85c16714
-ms.lasthandoff: 03/06/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: bcaa2a9b5474e06bf344dc4fd47dbb160ea36297
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="device-compliance-policies-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的设备合规性策略
@@ -40,22 +40,24 @@ System Center Configuration Manager 中的**合规性策略**定义设备必须�
 
 -   设备是否已越狱或取得 root 权限  
 
--   设备上的电子邮件是否由 Intune 策略管理，或者设备是否被 Windows 设备运行状况证明服务报告为不正常。  
+-   设备上的电子邮件是否由 Intune 策略管理，或者设备是否被 Windows 设备运行状况证明服务报告为不正常。
+-   无法在设备上安装的应用。
 
 
  将符合性策略部署到用户集合。 将合规性策略部署到用户后，会对所有用户设备检查合规性。  
 
  下表列出了合规性策略支持的设备类型，也列出了当该策略与条件访问策略一起使用时托管不符合合规性的设置的方式。  
 
-|规则|Windows 8.1 及更高版本|Windows Phone 8.1 及更高版本|iOS 6.0 及更高版本|Android 4.0 及更高版本、Samsung KNOX 标准版 4.0 及更高版本|  
+|规则|Windows 8.1 及更高版本|Windows Phone 8.1 及更高版本|iOS 6.0 及更高版本|Android 4.0 及更高版本、Samsung KNOX Standard 4.0 及更高版本、Android for Work|  
 |----------|---------------------------|---------------------------------|-----------------------|---------------------------|-----------------------------------------|  
 |**PIN 或密码配置**|已修正|已修正|已修正|已隔离|  
-|**设备加密**|不适用|已修正|已修正（通过设置 PIN）|已隔离|  
+|**设备加密**|不适用|已修正|已修正（通过设置 PIN）|已隔离<br>（Android for Work 始终加密）|  
 |**已越狱或取得 root 权限的设备**|不适用|不适用|已隔离（非设置）|已隔离（非设置）|  
 |**电子邮件配置文件**|不适用|不适用|已隔离|不适用|  
 |**最低操作系统版本**|已隔离|已隔离|已隔离|已隔离|  
 |**最高操作系统版本**|已隔离|已隔离|已隔离|已隔离|  
 |**设备运行状况证明（1602 更新）**|设置不适用于 Windows 8.1<br /><br /> Windows 10 和 Windows 10 移动版已隔离。|不适用|不适用|不适用|  
+|**不能安装的应用**|不适用|不适用|已隔离|已隔离|
 
  **修正** = 法规遵从性由设备操作系统强制执行（例如，强制用户设置 PIN）。  设置永远不会不符合要求。  
 

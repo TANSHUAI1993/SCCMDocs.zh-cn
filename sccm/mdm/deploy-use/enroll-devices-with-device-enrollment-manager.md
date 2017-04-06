@@ -2,7 +2,7 @@
 title: "向设备注册管理器注册设备 - Configuration Manager | Microsoft Docs"
 description: "使用 System Center Configuration Manager 向设备注册管理器注册企业拥有的设备。"
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 03/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,13 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2905f26e-7859-497d-b995-5ff48261efa2
 caps.latest.revision: 8
-author: mtillman
-ms.author: mtillman
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 991eff171dce95590a7f050e0d3b07f98c0224b3
-ms.openlocfilehash: b356d2351b8a28bdca78176fdf0ff3c913a36bd3
-ms.lasthandoff: 01/24/2017
+ms.sourcegitcommit: 7573590763c68a4c97d388be1e64054c318da9cc
+ms.openlocfilehash: 8c491636925670732e6af67d8c1c741e4793ef96
+ms.lasthandoff: 03/24/2017
 
 
 ---
@@ -26,27 +26,23 @@ ms.lasthandoff: 01/24/2017
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-组织可以使用 System Center Configuration Manager 和 Intune 来管理大量具有单一用户帐户的移动设备。 *设备注册管理器*帐户是有权注册五个以上设备的特殊 Intune 帐户。  
+组织可以使用 Intune 来管理大量带有单一用户帐户的移动设备。 *设备注册管理器* (DEM) 帐户是专用的用户帐户，可注册最多 1,000 台设备。 将现有用户添加到要为其提供专用 DEM 功能的 DEM 帐户。 每个已注册的设备使用单个许可证。 我们建议你将通过此帐户注册的设备作为没有用户关联性的共享设备使用，而不是个人专用设备。  
 
 ## <a name="enroll-corporate-owned-devices-with-the-device-enrollment-manager"></a>使用设备注册管理器注册企业自有设备  
  你可以指定存储管理员或主管，例如，允许用户执行下列操作的设备注册管理员用户帐户：  
 
--   注册设备以进行管理  
-
+-   最多可注册 1000 个设备以进行管理  
 -   使用公司门户应用安装公司应用  
-
--   安装和卸载软件  
-
 -   配置对公司数据的访问权限  
-
 
 以下限制适用于使用设备注册管理器帐户管理的设备：
 
 - 存储管理员无法从公司门户重置设备。  
--  无法加入工作区或已加入 Azure Active Directory 的设备。 这可防止这些设备使用条件性访问。
+- 无法加入工作区或已加入 Azure Active Directory 的设备。 这可防止这些设备使用条件性访问。
 -  若要将公司应用部署到使用设备注册管理器管理的设备，则需要将公司门户应用作为**必需的安装**到设备注册管理器的用户帐户。 然后，设备注册管理器可以启动公司门户应用来安装其他应用。
 - 为了提高性能，公司门户应用仅显示本地设备。 仅管理员可以从 Configuration Manager 控制台远程管理其他的 DEM 设备
 - 设备注册管器帐户不能使用公司门户网站。 打开公司门户应用。
+- （仅限 iOS）如果你使用 DEM 来注册 iOS 设备，则无法使用 Apple Configurator 或 Apple 设备注册计划 (DEP) 来注册设备。
 
  **设备注册管理器的示例方案：**   
 一家餐厅想为服务员提供销售点平板电脑，为厨房员工提供订单监视器。 员工无需访问公司数据或作为用户登录。 Intune 管理员创建设备注册管理员帐户并使用该帐户注册公司自有设备。 或者，管理员也可以将设备注册管理员凭据交给餐厅经理，允许他或她注册和管理设备。  

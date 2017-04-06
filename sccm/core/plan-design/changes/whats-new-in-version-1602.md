@@ -1,5 +1,5 @@
 ---
-title: "System Center Configuration Manager 1602 版本中的新增功能 | Microsoft Docs"
+title: "System Center Configuration Manager 版本 1602 中的新功能 | Microsoft Docs"
 description: "获取有关 System Center Configuration Manager 的 1602 版中引入的更改和新功能的详细信息。"
 ms.custom: na
 ms.date: 12/30/2016
@@ -15,9 +15,11 @@ caps.latest.revision: 3
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
+robots: noindex,nofollow
 translationtype: Human Translation
-ms.sourcegitcommit: 221228890b12bd6875de51e17a1124303b318201
-ms.openlocfilehash: 0314513bed65457c63508bfe2212e3e52d8d03da
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 9a548f43625a907173e7b967d26356bd80f1c5d9
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="what39s-new-in-version-1602-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1602 中的新增功能
@@ -38,7 +40,7 @@ System Center Configuration Manager 的更新 1602 作为控制台内部更新�
 
 ## <a name="site-infrastructure"></a>站点基础结构  
 
-###  <a name="a-namebkmkupgradeosa-in-place-upgrade-the-operating-system-of-site-servers-that-run-windows-server-2008-r2"></a><a name="bkmk_UpgradeOS"></a>就地升级运行 Windows Server 2008 R2 的站点服务器的操作系统  
+###  <a name="bkmk_UpgradeOS"></a>就地升级运行 Windows Server 2008 R2 的站点服务器的操作系统  
  运行版本 1602 或更高版本的 Configuration Manager 站点支持站点服务器的操作系统从 Windows Server 2008 R2 就地升级到 Windows Server 2012 R2。  
 
 > [!WARNING]  
@@ -48,7 +50,7 @@ System Center Configuration Manager 的更新 1602 作为控制台内部更新�
 
  若要升级服务器，请使用 Windows Server 2012 R2 升级过程。 升级后不需要运行 Configuration Manager 站点服务器还原。 有关升级过程，请参阅 Windows Server 文档中的 [Windows Server 2012 R2 的升级选项](https://technet.microsoft.com/library/dn303416.aspx)。  
 
-###  <a name="a-namebkmkaoaga-sql-server-alwayson-availability-groups"></a><a name="bkmk_AOAG"></a> SQL Server AlwaysOn 可用性组  
+###  <a name="bkmk_AOAG"></a> SQL Server AlwaysOn 可用性组  
  使用 SQL Server AlwaysOn 可用性组，以承载主站点和管理中心站点上的站点数据库作为高可用性和灾难恢复解决方案。  
 
  有关详细信息，请参阅[通过 SQL Server AlwaysOn 实现适用于 System Center Configuration Manager 的高可用性站点数据库](../../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)。  
@@ -218,9 +220,4 @@ Configuration Manager 可以请求运行 iOS 7.1 和更高版本的已监管设�
 -   **不合规**：用户已接受某版本的条款和条件，但未接受最新版本。  
 
 -   **未知**：用户从未接受条款和条件，包括不具有已注册设备的用户。  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

@@ -1,9 +1,8 @@
-
 ---
 title: "客户端对等缓存 | System Center Configuration Manager"
 description: "使用 System Center Configuration Manager 部署内容时，将对等缓存用于客户端内容源位置。"
 ms.custom: na
-ms.date: 2/13/2017
+ms.date: 3/27/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -17,11 +16,12 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f9097014c7e988ec8e139e518355c4efb19172b3
-ms.openlocfilehash: 895b8ae58a9fda3fd22f58d77129053df09c4ccb
-ms.lasthandoff: 03/04/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 5298f1c836c1a872862b0e972180ac0c99c59751
+ms.lasthandoff: 03/27/2017
 
 ---
+
 # <a name="peer-cache-for-configuration-manager-clients"></a>用于 Configuration Manager 客户端的对等缓存
 
 *适用范围：System Center Configuration Manager (Current Branch)*
@@ -31,11 +31,14 @@ ms.lasthandoff: 03/04/2017
 > [!TIP]  
 > 如 1610 版本中所述，对等缓存和“客户端数据源”仪表板均为预发行功能。 若要启用这些功能，请参阅[使用更新中的预发行功能](/sccm/core/servers/manage/pre-release-features)。
 
+## <a name="overview"></a>概述
  -     通过客户端设置，可以使客户端能够使用对等缓存。
  -     若要共享内容，对等缓存客户端必须都是查找该内容的客户端当前边界组的成员。 客户端使用回退来查找相邻边界组中的内容时，相邻边界组中的对等缓存客户端不包括在可用内容源位置的池中。 有关当前边界组和相邻边界组的详细信息，请参阅[边界组](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups##a-namebkmkboundarygroupsa-boundary-groups)。
  - 未启用对等缓存但与启用了对等缓存的客户端一同位于当前边界组的客户端可以从启用了对等缓存的客户端处获取内容。  
  - Configuration Manager 客户端缓存中保留的每种类型的内容均可使用对等缓存提供给其他客户端。
  -    对等缓存不会代替其他解决方案（如 BranchCache）的使用，而是并行工作以便提供更多选项，用于扩展传统内容部署解决方案（如分发点）。 这是一种无需依赖于 BranchCache 的自定义解决方案，因此即使不启用或不使用 Windows BranchCache，此解决方案依然可正常运作。
+
+### <a name="operations"></a>操作
 
 将启用对等缓存的客户端设置部署到集合后，该集合的成员可以充当同一边界组中其他客户端的对等内容源：
  -    充当对等内容源的客户端会将可用缓存内容列表提交到其管理点。
@@ -45,9 +48,42 @@ ms.lasthandoff: 03/04/2017
 > [!NOTE]
 > 如果发生了向内容的相邻边界组的回退，则相邻边界组中的对等缓存内容源位置将不会添加到潜在内容源位置的客户端池中。  
 
-虽然可以让所有客户端都加入对等缓存，但最佳做法还是仅选择最适合作为对等缓存源的那些客户端。  可以根据客户端的底盘类型、磁盘空间、网络连接等评估客户端的适用性。 有关可帮助选择要用于对等缓存的最佳客户端的详细信息，请参阅[这篇由 Microsoft 顾问撰写的博客](https://blogs.technet.microsoft.com/setprice/2016/06/29/pe-peer-cache-custom-reporting-examples/)。
 
+虽然可以让所有客户端都加入为对等缓存源，但最佳做法还是仅选择最适合作为对等缓存源的那些客户端。  可以根据客户端的底盘类型、磁盘空间、网络连接等评估客户端的适用性。 有关可帮助选择要用于对等缓存的最佳客户端的详细信息，请参阅[这篇由 Microsoft 顾问撰写的博客](https://blogs.technet.microsoft.com/setprice/2016/06/29/pe-peer-cache-custom-reporting-examples/)。
+
+**对对等缓存源的有限访问权限**  
+从版本 1702 开始，当对等缓存源计算机满足以下任一条件时，对等缓存源计算机将拒绝对内容的请求：  
+  -  处于低电量模式。
+  -  请求内容时 CPU 负载超过 80%。
+  -  磁盘 I/O 的 AvgDiskQueueLength 超过 10。
+  -  该计算机没有其他可用连接。   
+
+使用 System Center Configuration Manager SDK 时，可以使用对等源功能的客户端配置服务器 WMI 类 (*SMS_WinPEPeerCacheConfig*) 配置这些设置。
+
+如果计算机拒绝对内容的请求，请求计算机会继续在其可用内容源位置池中的备用源中搜索内容。   
+
+
+
+### <a name="monitoring"></a>monitoring   
 为了帮助了解对等缓存的使用，可以查看“客户端数据源”仪表板。 请参阅[客户端数据源仪表板](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed#client-data-sources-dashboard)。
+
+从版本 1702 开始，可以使用以下三个报表来查看对等缓存使用。 在控制台中，转到“监视” > “报表” > “报表”。 所有报表均为一种类型的**软件分发内容**：
+1.  **对等缓存源内容拒绝**：  
+使用此报告来了解边界组中对等缓存源拒绝内容请求的频率。
+ - **已知问题：**在向下钻取结果（如 *MaxCPULoad* 或 *MaxDiskIO*）时，可能会收到一个错误，表明找不到该报表或详细信息。 若要解决此问题，请使用以下两个直接显示结果的报表。 
+
+2. **按条件的对等缓存源内容拒绝**：  
+使用此报告来了解指定边界组的拒绝详细信息或拒绝类型。 你可指定
+
+  - **已知问题：**不能从可用的参数中进行选择，而必须手动输入。 输入*边界组名称*和*拒绝类型*的值，如第一个报表所示。 例如，对于*拒绝类型*，你可以输入 *MaxCPULoad* 或 *MaxDiskIO*。
+
+3. **对等缓存源内容拒绝详细信息**：   
+  使用此报告来了解在被拒绝时所请求的内容。
+
+ - **已知问题：**不能从可用的参数中进行选择，而必须手动输入。 输入在第一个报表（对等缓存源内容拒绝）中显示的*拒绝类型*值，然后输入你希望了解相关详细信息的内容源的*资源 ID*。  查找内容源的资源 ID：  
+
+    1. 在第二个报表（按条件的对等缓存源内容拒绝）的结果中查找显示为*对等缓存源*的计算机名称。  
+    2. 接下来，转到“资产和合规性” > “设备”，然后搜索该计算机名称。 使用资源 ID 列中的值。  
 
 
 ## <a name="requirements-and-considerations-for-peer-cache"></a>对等缓存的要求和注意事项

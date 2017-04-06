@@ -16,8 +16,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
-ms.openlocfilehash: 32af7da62bfe767a21a891338bd778ebf45f2685
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 88a72259bca79f2fa985e86cb57ec7a974bad24d
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -27,7 +28,7 @@ ms.openlocfilehash: 32af7da62bfe767a21a891338bd778ebf45f2685
 
 在 System Center Configuration Manager 中使用任务序列，自动在目标计算机上将操作系统从 Windows 7 或更高版本升级到 Windows 10。 你创建一个任务序列，该任务序列引用要安装在目标计算机上的操作系统映像，以及要安装的任何其他附加内容（例如应用程序或软件更新）。 用于升级操作系统的任务序列属于[将 Windows 升级到最新版本](upgrade-windows-to-the-latest-version.md)方案的一部分。  
 
-##  <a name="a-namebkmkupgradeosa-create-a-task-sequence-to-upgrade-an-operating-system"></a><a name="BKMK_UpgradeOS"></a>创建用于升级操作系统的任务序列  
+##  <a name="BKMK_UpgradeOS"></a>创建用于升级操作系统的任务序列  
  若要将计算机上的操作系统升级到 Windows 10，你可以创建一个任务序列，并在“创建任务序列向导”中选择 **从升级包升级操作系统** 。 该向导将添加一些步骤，用于升级操作系统、应用软件更新和安装应用程序。 在创建任务序列之前，必须部署以下内容：  
 
 -   **必需**  
@@ -70,6 +71,42 @@ ms.openlocfilehash: 32af7da62bfe767a21a891338bd778ebf45f2685
 
 9. 完成向导。  
 
+
+
+## <a name="configure-pre-cache-content"></a>配置预先缓存内容
+从版本 1702 开始，对于可用的部署和任务序列，可选择使用预先缓存功能，让客户端在用户安装内容之前仅下载相关内容。
+> [!TIP]  
+> 在 1702 版本中引入，预先缓存是一项预发行功能。 若要启用此功能，请参阅[使用更新中的预发行功能](/sccm/core/servers/manage/pre-release-features)。
+
+例如，假设要部署 Windows 10 就地升级任务序列，只想为所有用户提供单个任务序列，并且具有多个体系结构和/或语言。 在版本 1702 之前，如果创建可用部署，然后用户在软件中心中单击“安装”，则将在此时下载内容。 这在安装准备启动之前增加了额外时间。 另外，将下载任务序列中引用的所有内容。 这包括所有语言和体系结构的操作系统升级包。 如果每个包大小都约为 3 GB，则下载包可能会很大。
+
+借助预先缓存内容，用户可选择允许客户端在收到部署后立即下载适用的内容。 因此，当用户在软件中心中单击“安装”时，内容便已就绪，并且安装可以快速启动，因为内容位于本地硬盘上。
+
+### <a name="to-configure-the-pre-cache-feature"></a>配置预先缓存功能
+
+1. 为特定体系结构和语言创建操作系统升级包。 在包的“数据源”选项卡上指定体系结构和语言。 对于语言，使用十进制转换（例如，英语的十进制为 1033，其十六进制等效项是 0x0409）。 有关详细信息，请参阅[创建用于升级操作系统的任务序列](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system)。
+
+    体系结构和语言值用于匹配将在下一步中创建的任务序列步骤条件，以确定是否应预先缓存操作系统升级包。
+2. 为不同的语言和体系结构创建具有条件步骤的任务序列。 例如，对于英语版本，可创建如下所示的步骤：
+
+    ![预先缓存属性](../media/precacheproperties2.png)
+
+    ![预先缓存选项](../media/precacheoptions2.png)  
+
+3. 部署任务序列。 对于预先缓存功能，请配置以下各项：
+    - 在“常规”选项卡上，选择“此任务序列的预下载内容”。
+    - 在“部署设置”选项卡上，配置任务序列，将“目的”配置为“可用”。 如果创建**所需**部署，预先缓存功能将不起作用。
+    - 在“计划”选项卡上，对于“当此部署可用时进行计划”设置，选择将来的某一时间，以便在部署对用户可用之前为客户端提供足够的时间来预先缓存内容。 例如，可将可用时间设置为未来 3 小时，以便有足够的时间来预先缓存内容。  
+    - 在“分发点”选项卡上，配置“部署选项”设置。 如果用户开始安装之前，该内容未预先缓存到客户端，则使用这些设置。
+
+
+### <a name="user-experience"></a>用户体验
+- 客户端收到部署策略时，将开始预先缓存内容。 这包括所有引用的内容（任何其他包类型），并且仅包括基于任务序列中设置的条件匹配客户端的操作系统升级包。
+- 部署对用户可用时（部署的“计划”选项卡上的设置），将显示一条通知，告知用户有关新部署的信息以及该部署在软件中心中可见。 用户可转到软件中心并单击“安装”以开始安装。
+- 如果内容未完全预先缓存，则它将使用部署的“部署选项”选项卡上指定的设置。 建议在创建部署和用户可使用部署之间保留足够的时间，以允许客户端预先缓存内容。
+
+
+
 ## <a name="download-package-content-task-sequence-step"></a>下载包内容的任务序列步骤  
  在以下方案中，可先使用[下载包内容](../understand/task-sequence-steps.md#BKMK_DownloadPackageContent)步骤，再使用**升级操作系统**步骤：  
 
@@ -91,9 +128,4 @@ ms.openlocfilehash: 32af7da62bfe767a21a891338bd778ebf45f2685
 
 ## <a name="folder-and-files-removed-after-computer-restart"></a>重启计算机后删除文件夹和文件  
  用于将操作系统升级到 Windows 10 的任务序列和任务序列中的所有其他步骤完成后，重启计算机后将删除后处理和回滚脚本。  这些脚本文件不包含敏感信息。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

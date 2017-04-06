@@ -17,9 +17,9 @@ ms.author: andredm
 manager: angrobe
 robots: noindex
 translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 58375a7f23109bbb2e304c17312f3438aa683cb2
-ms.lasthandoff: 03/06/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 6832bb6c6a26be76720938154942a5eb99022785
+ms.lasthandoff: 03/27/2017
 
 ---
 
@@ -48,17 +48,12 @@ ms.lasthandoff: 03/06/2017
     * **严重** - 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告**严重**这一故障严重性。
     * **事件严重** - 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告**严重**这一故障严重性。 应用程序事件日志中也会以 Windows 事件的形式记录此严重性级别。|      
 
-5.  在“受支持的平台”  页上，选择将在其上评估符合性策略的设备平台，或者单击“选择全部”  以选择所有设备平台。
+5.  在“受支持的平台”  页上，选择将在其上评估符合性策略的设备平台，或者单击“选择全部”  以选择所有设备平台。 受支持的平台包括：Windows 7、8.1、10、Windows Server 2008 R2、2012、2012 R2 和 2016。
 
 6.  在“规则”  页上，定义一个或多个规则，这些规则定义设备为评估为合规而必需具有的配置。 当创建符合性策略时，会默认启用某些规则，但你可以编辑或删除这些规则。 有关所有规则的完整列表，请参阅本主题后面的**合规性策略规则**部分。
 
 > [!NOTE]  
->  在 Windows PC 上，Windows 操作系统版本 8.1 被报告为 6.3 而非 8.1。    对于 Windows，如果操作系统版本规则设置为 Windows 8.1，则该设备将报告为不符合要求，即使该设备具有 Windows 操作系统 8.1 也是如此。 确保针对最低和最高操作系统规则设置正确的 Windows“报告”  版本。 版本号必须与 winver 命令返回的版本一致。 Windows Phone 不具有此问题，版本按预期报告为 8.1。  
->   
->  使用 Windows 10 操作系统的 Windows PC 的版本应设置为 "10.0"+ winver 命令返回的 OS 内部版本号。 例如，可以为与 10.0.10586 类似的版本号。  
-> Windows 10 Mobile 没有这样的问题。  
->   
->  ![CA&#95;Win10OSversion](media/CA_Win10OSversion.png)  
+>  在 Windows PC 上，Windows 操作系统版本 8.1 被报告为 6.3 而非 8.1。    对于 Windows，如果操作系统版本规则设置为 Windows 8.1，则该设备将报告为不符合要求，即使该设备具有 Windows 操作系统 8.1 也是如此。 确保针对最低和最高操作系统规则设置正确的 Windows“报告”  版本。 版本号必须与 winver 命令返回的版本一致。 Windows Phone 不具有此问题，版本按预期报告为 8.1。 使用 Windows 10 操作系统的 Windows PC 的版本应设置为 "10.0"+ **winver** 命令返回的 OS 内部版本号。
 
 7.  在向导的“摘要”  页上，查看已作出的设置，然后完成向导。
 
@@ -99,6 +94,36 @@ ms.lasthandoff: 03/06/2017
     -   “不符合性”：显示基于受影响资产数量的策略内所有不符合规则的列表。 你可以单击规则以在“资产和符合性”  工作区的“用户”  或“设备”  节点下创建一个临时节点，其中包含不符合此规则的所有用户或设备。 当你选择某个用户或设备时，“资产详细信息”  窗格将显示受所选问题影响的用户或设备。 双击列表中的用户或设备以显示有关问题的进一步信息。
 
     -   “未知”：显示没有为所选策略部署报告符合性的所有用户和设备的列表，以及设备的当前客户端状态。
+
+### <a name="to-monitor-the-individual-compliance-status"></a>监视单个符合性状态
+
+你还可以看到各个设备状态：
+
+1.  在 Configuration Manager 控制台中，单击“资产和符合性”工作区。
+
+2.  单击“设备”。
+3.  右键单击某一列以启用更多的列。
+
+可以添加以下列：
+
+- **Azure Active Directory 设备 ID：**AAD 中设备的唯一标识符。
+
+- **符合性错误详细信息：**端到端流程出现问题时的错误消息详细信息。 如果此列为空，则表示未发现错误，并成功报告符合性状态。
+
+- **符合性错误位置：**提供符合性失败位置的详细信息。 如果此列为空，则表示未发现错误，并成功报告符合性状态。 符合性过程可能会失败的示例： 
+    - ConfigMgr 客户端
+    - 管理点
+    - Intune
+    - Azure Active Directory
+<br></br>
+- **符合性评估时间：**上次检查符合性的时间。
+
+- **符合性设定时间：**上次符合性更新到 Azure Active Directory 的时间。
+
+- **条件性访问符合性：**计算机是否符合条件性访问策略。
+
+> [!IMPORTANT]
+> 默认情况下，这些列不会显示。
 
 ### <a name="to-view-intune-compliance-policies-charts"></a>查看 Intune 合规性策略图表
 1. 从 Configuration Manager 的 1610 版开始，在 Configuration Manager 控制台中，单击“监视”。
@@ -222,4 +247,29 @@ ms.lasthandoff: 03/06/2017
   有关 HAS 服务工作原理的详细信息，请参阅 [运行状况证明 CSP](https://msdn.microsoft.com/library/dn934876.aspx)。
   **在以下设备上受支持：**
   * Windows 10 和 Windows 10 移动版
+
+- **不能在设备上安装的应用：**如果用户安装的应用来自管理员非符合性应用列表，则该应用将在尝试访问公司电子邮件和支持条件性访问的其他公司资源时受阻。 将应用添加到管理员定义的非符合性列表时，此规则要求输入应用名称和应用 ID。 也可添加应用发布者，但并非必需。
+    - **在以下设备上受支持：**
+      * iOS 6+
+      * Android 4.0+
+      * Samsung KNOX 标准版 4.0+
+
+#### <a name="whats-app-id"></a>应用 ID 是什么？
+
+应用 ID 是唯一标识 Apple 和 Google 应用程序服务中的应用的标识符。 例如，com.contoso.myapp。
+
+#### <a name="find-app-ids"></a>查找应用 ID
+
+- **Outlook Web Access (OWA)**
+    - 你可以在 Google Play 商店 URL 中查找应用 ID，用于创建应用：
+        - 示例应用 ID：***…?id=com.companyname.appname&hl=en***
+
+- **Android**
+    - 在 iTunes 应用商店 URL 中查找 **ID#**，示例：***/id875948587?mt=8***
+    - 在 Web 浏览器中导航至以下 URL，使用刚刚找到的 ID# 替换数字： 
+        - https://itunes.apple.com/lookup?id=875948587
+    - 下载并打开文本文件
+    - 搜索文本“*bundleid*”
+    - 应用 ID 示例：“*bundleId*”：“*com.companyname.appname*” 
+
 

@@ -2,7 +2,7 @@
 title: "证书配置文件先决条件 | Microsoft Docs"
 description: "了解 System Center Configuration Manager 中的证书配置文件及其外部依赖项和产品内依赖关系。"
 ms.custom: na
-ms.date: 11/27/2016
+ms.date: 03/29/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 593fbd0587d54490246f48ae54f666bac6b7830d
-ms.openlocfilehash: 08fb30da2060728142648f13846be737f98f2276
-ms.lasthandoff: 12/16/2016
+ms.sourcegitcommit: 23b1d24e908d04b64c3bbfa518793a44e696d468
+ms.openlocfilehash: fba52ee305fe67418f2fe544bfe94d10467236d0
+ms.lasthandoff: 03/29/2017
 
 
 ---
@@ -27,14 +27,14 @@ ms.lasthandoff: 12/16/2016
 *适用范围：System Center Configuration Manager (Current Branch)*
 
 
-System Center Configuration Manager（也称为 ConfigMgr 或 SCCM）中的证书配置文件具有外部依赖项和产品内依赖关系。  
+System Center Configuration Manager 中的证书配置文件具有外部依赖项和产品内依赖关系。  
 
 ## <a name="dependencies-external-to-configuration-manager"></a>Configuration Manager 的外部依赖关系  
 
 |依赖关系|更多信息|  
 |----------------|----------------------|  
 |运行 Active Directory 证书服务 (AD CS) 的企业证书颁发机构 (CA)。<br /><br /> 若要吊销证书，层次结构顶部站点服务器的计算机帐户需要有针对 Configuration Manager 中证书配置文件所使用的各证书模板的 *颁发和管理证书* 权限。 或者，对证书管理器授予权限，使其可授予对该 CA 所使用的所有证书模板的权限。<br /><br /> 支持证书请求的管理程序审批。 但是，必须为证书使用者的“在请求中提供”配置用于颁发证书的证书模板，使 System Center Configuration Manager 能够自动提供此值。|有关 Active Directory 证书服务的详细信息，请参阅 Windows Server 文档。<br /><br /> 对于 Windows Server 2012： [Active Directory 证书服务概述](http://go.microsoft.com/fwlink/p/?LinkId=286744)<br /><br /> 对于 Windows Server 2008： [Windows Server 2008 中的 Active Directory 证书服务](http://go.microsoft.com/fwlink/p/?LinkId=115018)|  
-|Active Directory 证书服务的网络设备注册服务角色服务（在 Windows Server 2012 R2 上运行）。<br /><br /> 此外：<br /><br /> 对于客户端与网络设备注册服务之间的通信，不支持除 TCP 443（用于 HTTPS）或 TCP 80（用于 HTTP）外的端口号。<br /><br /> 运行网络设备注册服务的服务器与颁发 CA 必须位于不同的服务器上。|System Center Configuration Manager 与 Windows Server 2012 R2 中的网络设备注册服务通信，以生成并验证简单证书注册协议 (SCEP) 请求。<br /><br /> 如果要向通过 Internet 连接的用户或设备（例如由 Microsoft Intune 管理的移动设备）颁发证书，则这些设备必须能够通过 Internet 访问运行网络设备注册服务的服务器。 例如，将服务器安装在外围网络（也称为 DMZ、隔离区和外围子网）中。<br /><br /> 如果运行网络设备注册服务的服务器和颁发 CA 之间有防火墙，则必须配置该防火墙以允许两个服务器之间的通信流量 (DCOM)。 此防火墙也要求适用于运行 System Center Configuration Manager 站点服务器的服务器以及颁发 CA，使 System Center Configuration Manager 可以吊销证书。<br /><br /> 如果将网络设备注册服务配置为需要 SSL（一种最佳安全方案），请确保连接设备可访问证书吊销列表 (CRL) 以验证服务器证书。<br /><br /> 有关 Windows Server 2012 R2 中的网络设备注册服务的详细信息，请参阅 [Using a Policy Module with the Network Device Enrollment Service（将策略模块与网络设备注册服务配合使用）](http://go.microsoft.com/fwlink/p/?LinkId=328657)。|  
+|Active Directory 证书服务的网络设备注册服务角色服务（在 Windows Server 2012 R2 上运行）。<br /><br /> 此外：<br /><br /> 对于客户端与网络设备注册服务之间的通信，不支持除 TCP 443（用于 HTTPS）或 TCP 80（用于 HTTP）外的端口号。<br /><br /> 运行网络设备注册服务的服务器与颁发 CA 必须位于不同的服务器上。|System Center Configuration Manager 与 Windows Server 2012 R2 中的网络设备注册服务通信，以生成并验证简单证书注册协议 (SCEP) 请求。<br /><br /> 如果要向通过 Internet 连接的用户或设备（例如由 Microsoft Intune 管理的移动设备）颁发证书，则这些设备必须能够通过 Internet 访问运行网络设备注册服务的服务器。 例如，将服务器安装在外围网络（也称为 DMZ、隔离区和外围子网）中。<br /><br /> 如果运行网络设备注册服务的服务器和颁发 CA 之间有防火墙，则必须配置该防火墙以允许两个服务器之间的通信流量 (DCOM)。 此防火墙也要求适用于运行 System Center Configuration Manager 站点服务器的服务器以及颁发 CA，使 System Center Configuration Manager 可以吊销证书。<br /><br /> 如果网络设备注册服务配置为需要 SSL（一种最佳安全方案），请确保连接设备可访问证书吊销列表 (CRL) 以验证服务器证书。<br /><br /> 有关 Windows Server 2012 R2 中的网络设备注册服务的详细信息，请参阅 [Using a Policy Module with the Network Device Enrollment Service（将策略模块与网络设备注册服务配合使用）](http://go.microsoft.com/fwlink/p/?LinkId=328657)。|  
 |如果颁发 CA 运行 Windows Server 2008 R2，则服务器对于 SCEP 续订请求需要一个修补程序。|如果颁发 CA 计算机上尚未安装此修补程序，请安装该修补程序。 有关详细信息，请参阅 Microsoft 知识库文章 [2483564：Renewal request for an SCEP certificate fails in Windows Server 2008 R2 if the certificate is managed by using NDES（如果使用 NDES 管理证书，则 SCEP 证书续订请求将在 Windows Server 2008 R2 中失败）](http://go.microsoft.com/fwlink/?LinkId=311945) 。|  
 |PKI 客户端身份验证证书和导出的根 CA 证书。|此证书验证运行向 System Center Configuration Manager 网络设备注册服务的服务器。<br /><br /> 有关详细信息，请参阅 [System Center Configuration Manager 的 PKI 证书要求](../../core/plan-design/network/pki-certificate-requirements.md)。|  
 |支持的设备操作系统。|你可以将证书配置文件部署到运行 iOS、Windows 8.1、Windows RT 8.1、Windows 10 和 Android 操作系统的设备。|  

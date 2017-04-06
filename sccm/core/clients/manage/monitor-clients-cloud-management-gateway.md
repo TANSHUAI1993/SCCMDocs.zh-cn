@@ -1,17 +1,18 @@
 ---
 title: "监视云管理网关 - Configuration Manager | Microsoft Docs"
 description: 
-ms.date: 11/18/2016
+ms.date: 03/28/2017
 ms.prod: configuration-manager
 ms.technology:
 - configmgr-client
 ms.assetid: 15f72f80-9850-40ce-9c3a-443ba04b6a03
-author: nbigman
-ms.author: nbigman
+author: arob98
+ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: ef12c9b966a1b83b61243311b30e1a925c20d2e3
-ms.openlocfilehash: 4475205c37c20631a189e0c315dc48e288c15ba6
+ms.sourcegitcommit: 199096db7a23fb14db98b95e75246ed254848ab7
+ms.openlocfilehash: df32a7d95799d8ae685fd66e2d9ddf25e32b37d0
+ms.lasthandoff: 03/27/2017
 
 ---
 
@@ -49,16 +50,5 @@ ms.openlocfilehash: 4475205c37c20631a189e0c315dc48e288c15ba6
 
 ## <a name="monitor-logs"></a>监视日志
 
-云管理网关服务在以下日志文件中生成条目：
-
--   **Cloudmgr.log** – 包含用于部署云管理网关服务、正在进行的服务状态和与服务相关联的使用情况数据的条目。
-
--   **SMS\_Cloud\_ProxyConnector.log** – 包含用于设置云管理网关服务和云管理网关连接点之间的连接的条目。
-
-有关详细信息，请参阅 [Configuration Manager 日志](/sccm/core/plan-design/hierarchy/log-files)。
-
-
-
-<!--HONumber=Jan17_HO4-->
-
+云管理网关服务在多个日志文件中生成条目。 有关详细信息，请参阅 [Configuration Manager 日志](/sccm/core/plan-design/hierarchy/log-files)。
 

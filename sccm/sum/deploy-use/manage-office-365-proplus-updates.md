@@ -5,7 +5,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 02/03/2017
+ms.date: 03/24/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
@@ -13,22 +13,24 @@ ms.technology:
 - configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
 translationtype: Human Translation
-ms.sourcegitcommit: 5ab49481a78eda044350addab86ee6f8ef1c0946
-ms.openlocfilehash: fe8bf45970e34af0795a5a9a4c3aa985e446784d
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 016580dc6ee3c5268833db941d42416a976d201c
+ms.lasthandoff: 03/27/2017
 
 ---
 
-# <a name="manage-office-365-proplus-updates-with-configuration-manager"></a>使用 Configuration Manager 管理 Office 365 ProPlus 更新
+# <a name="manage-office-365-proplus-with-configuration-manager"></a>使用 Configuration Manager 管理 Office 365 ProPlus
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
+Configuration Manager 同步 Office 365 客户端更新，并使它们可部署到安装了 Office 365 的客户端。 从 Configuration Manager 1610 开始，可以从 Office 365 客户端管理仪表板查看 Office 365 客户端信息。
+
 从 Configuration Manager 版本 1602 开始，Configuration Manager 能够使用软件更新管理工作流管理 Office 365 客户端。 当 Microsoft 将新的 Office 365 客户端更新发布到 Office 内容交付网络 (CDN) 时，Microsoft 还会将更新包发布到 Windows Server 更新服务 (WSUS)。 将 Office 365 客户端更新从 WSUS 目录同步到站点服务器之后，更新可部署到客户端。
+
+从版本 1702 开始，可以从 Office 365 客户端管理仪表板启动 Office 365 安装程序，使首次 Office 365 应用安装体验更简单。 该向导可让你配置 Office 365 安装设置、从 Office 内容交付网络 (CDN) 下载文件以及创建并部署脚本应用程序的内容。
 
 ## <a name="office-365-client-management-dashboard"></a>Office 365 客户端管理仪表板  
 自 Configuration Manager 1610 版起，可在 Configuration Manager 控制台中使用 Office 365 客户端管理仪表板。 若要查看该仪表板，请转到“软件库” > “概述” > “Office 365 客户端管理”。
-
-<!--- >[!NOTE]
->In the **What's New** workspace in the Configuration Manager console, the new dashboard is incorrectly named **Office 365 Servicing dashboard**. --->
 
 仪表板显示以下内容的图表：
 
@@ -56,12 +58,6 @@ Office 365 客户端管理仪表板中显示的数据来自硬件清单。 在�
 7.  单击 **确定** 以保存所做的更改并关闭 **硬件清单类** 对话框。  
 报告硬件清单后，Office 365 客户端管理仪表板将开始显示数据。
 
-<!---
- On the upper-right side of the dashboard, click **Office 365 Installer** to start the Office 365 Client Installation Wizard to deploy Office 365 apps to clients. For details, see [Deploy Office 365 apps to clients](#deploy-office-365-apps-to-clients).
-- On the middle-right side of the dashboard, click **Create an ADR** to open the Automatic Deployment Rule Wizard to create a new automatic deployment rule (ADR). To create an ADR for Office 365 apps, select **Office 365 Client** when you choose the product. For more information, see [Automatically deploy software updates](/sccm/sum/deploy-use/automatically-deploy-software-updates).
-- On the lower-right side of the dashboard, click **Create Client Agent Settings** to open Client Agent settings. For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings).
---->
-
 ## <a name="deploy-office-365-updates-with-configuration-manager"></a>使用 Configuration Manager 部署 Office 365 更新
 使用以下步骤通过 Configuration Manager 部署 Office 365 更新：
 
@@ -79,6 +75,10 @@ Office 365 客户端管理仪表板中显示的数据来自硬件清单。 在�
     - 方法 2：使用 Office 部署工具或组策略从 Configuration Manager [启用 Office 365 客户端以接收更新](https://technet.microsoft.com/library/mt628083.aspx#BKMK_EnableClient)。  
 
 4. [将 Office 365 更新部署](deploy-software-updates.md)到客户端。   
+
+> [!Important]
+> 如果 Office 365 客户端有多种语言，但你要下载部分语言的更新，更新安装将失败。 例如，假设你有带有 en-us 和 de-de 的 Office 365 客户端。 在站点服务器上，你只可以针对适用的 Office 365 更新下载和部署 en-us 内容。 当用户从软件中心启动此更新的安装时，更新将在下载内容时挂起。 你必须下载并部署与 Office 365 客户端相同的语言的更新。  
+
 
 ## <a name="add-other-languages-for-office-365-update-downloads"></a>为 Office 365 更新下载添加其他语言
 从 Configuration Manager 版本 1610 开始，你可以添加对 Configuration Manager 的支持，以下载受 Office 365 支持的任何语言的更新，无论它们是否在 Configuration Manager 中受支持。
@@ -121,11 +121,50 @@ Office 365 客户端管理仪表板中显示的数据来自硬件清单。 在�
 - 延期频道的首次发布：  
   **CDNBaseUrl** = http&#58;//officecdn.microsoft.com/pr/b8f9b850-328d-4355-9145-c59439a0c4cf
 
+## <a name="deploy-office-365-apps"></a>部署 Office 365 应用  
+从版本 1702 开始，可以从 Office 365 客户端管理仪表板启动 Office 365 安装程序，使首次 Office 365 应用安装体验更简单。 该向导可让你配置 Office 365 安装设置、从 Office 内容交付网络 (CDN) 下载文件以及创建并部署文件的脚本应用程序。
+
+这特别有用，因为 Office 365 更新不适用于未安装 Office 365 的客户端。 在版本 1702 之前，要第一次在客户端中安装 Office 365 应用，你需要手动下载 Office 365 部署工具 (ODT) 和 Office 365 安装源文件（包括你需要的所有语言包），并生成指定正确的 Office 版本和通道的 Configuration.xml。 然后，你需要创建和部署旧包或脚本应用程序，使客户端安装 Office 365 应用。
+
+> [!NOTE]
+> - 运行 Office 365 安装程序的计算机必须具有 Internet 访问权限。  
+> - 运行 Office 365 安装程序的用户必须对向导中提供的文件位置共享具有**读取**和**写入**权限。
+> - 如果收到 404 下载错误，将以下文件复制到用户的 %temp%文件夹中：
+>    - [releasehistory.xml](http://officecdn.microsoft.com.edgesuite.net/wsus/releasehistory.cab)
+>    - [o365client_32bit.xml](http://officecdn.microsoft.com/pr/wsus/ofl.cab)  
+> - 使用 Office 365 安装程序创建和部署 Office 365 应用程序后，默认情况下，Configuration Manager 不会管理 Office 更新。 若要允许 Office 365 客户端从 Configuration Manager 接收更新，请参阅[使用 Configuration Manager 部署 Office 365 更新](#deploy-office-365-updates-with-configuration-manager)。
+
+### <a name="to-deploy-office-365-apps-to-clients-from-the-office-365-client-management-dashboard"></a>从 Office 365 客户端管理仪表板将 Office 365 应用程序部署到客户端
+1. 在 Configuration Manager 控制台中，导航到“软件库” > “概述” > “Office 365 客户端管理”。
+2. 单击右上方窗格中的“Office 365 安装程序”。 将打开 Office 365 客户端安装向导。
+3. 在“应用程序设置”页上，提供应用的名称和说明，输入文件的下载位置，然后单击“下一步”。 请注意，必须采用 &#92;&#92;*server*&#92;*share* 形式指定位置。
+4. 在“导入客户端设置”页上，选择是从现有的 XML 配置文件导入 Office 365 客户端设置还是手动指定设置，然后单击“下一步”。  
+
+    如果具有现有的配置文件，请输入文件的位置并跳到步骤 7。 请注意，必须采用 &#92;&#92;*server*&#92;*share*&#92;*filename*.XML 形式指定位置。
+5. 在“客户端产品”页上，依次选择使用的 Office 365 套件、想要包括的应用程序、应包括的任何其他 Office 产品，然后单击“下一步”。
+6. 在“客户端设置”页上，选择要包括的设置，然后单击“下一步”。
+7. 在“部署”页上，选择是否部署该应用程序，然后单击“下一步”。  
+如果选择不部署向导中的包，请跳到步骤 9。
+8. 像配置典型应用程序那样，配置该向导页的其余部分。 有关详细信息，请参阅[创建和部署应用程序](/sccm/apps/get-started/create-and-deploy-an-application)。
+9. 完成向导。
+10. 可以在 Configuration Manager 中从“软件库” > “概述” > “应用程序管理” > “应用程序”部署或编辑应用程序，就像部署或编辑任何其他应用程序一样。   
+
+> [!IMPORTANT]
+> 在 Configuration Manager 中使用 Office 365 应用程序向导创建和部署的 Office 365 应用不会由 Configuration Manager 自动管理，除非启用软件更新客户端代理设置“再次启用 Office 365 客户端管理”。 有关详细信息，请参阅[关于客户端设置](/sccm/core/clients/deploy/about-client-settings)。
+
+>[!NOTE]
+>部署 Office 365 应用后，可以创建自动部署规则以维护该应用。 若要创建 Office 365 应用的自动部署规则，请单击 Office 365 客户端管理仪表板中的“创建 ADR”，然后在选择选择该产品时选择“Office 365 客户端”。 有关详细信息，请参阅[自动部署软件更新](/sccm/sum/deploy-use/automatically-deploy-software-updates)。
+
+<!--- You can create an Office 365 app without using the Office 365 Installation Wizard. To do this, you use the Office 2016 Deployment Tool (ODT) to download Office installation source files to a network share, generate Configure.xml that specifies the correct Office version and channel, and so on. Then, create an app for the files using the normal app management process.
+> [!Note]
+> The Office 365 Installation Wizard was introduced in Configuration Manager version 1702 and provides an easy way to create Office 365 apps.
+
+- [Download the Office 2016 Deployment Tool](http://aka.ms/ODT2016) from the Microsoft Download Center.  
+- Review the [configuration options for the Office Deployment Tool](https://technet.microsoft.com/library/jj219426.aspx).
+
+You can create an application just as you would with any other application in Configuration Manager from **Software Library** > **Overview** > **Application Management** > **Applications**. For details, see [Create and deploy an application](/sccm/apps/get-started/create-and-deploy-an-application).
+--->
+
 <!--- ## Next steps
 Use the Office 365 Client Management dashboard in Configuration Manager to review Office 365 client information and deploy Office 365 apps. For details, see [Manage Office 365 apps](manage-office-365-apps.md). --->
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

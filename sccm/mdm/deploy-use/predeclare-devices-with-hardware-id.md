@@ -2,7 +2,7 @@
 title: "预声明具有 IMEI 或 iOS 序列号的设备 | Microsoft Docs"
 description: "预声明具有 IMEI 或 iOS 序列号的公司拥有的设备。"
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 03/24/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -12,13 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ddb4c68e-e7f7-475a-89e2-7379a86e44c4
 caps.latest.revision: 3
-author: mtillman
-ms.author: mtillman
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 0fd410a6572acce685dc6cdb954c1c2d97d5ed8b
-ms.openlocfilehash: 2aa9c8c65904e573b6a81ac865e09d1cf2458509
-ms.lasthandoff: 12/17/2016
+ms.sourcegitcommit: 7573590763c68a4c97d388be1e64054c318da9cc
+ms.openlocfilehash: 4fe6741481c79ed4e4496846152902d6d8ca1f96
+ms.lasthandoff: 03/24/2017
 
 ---
 # <a name="predeclare-devices-with-imei-or-ios-serial-numbers"></a>预声明具有 IMEI 或 iOS 序列号的设备
@@ -26,6 +26,8 @@ ms.lasthandoff: 12/17/2016
 *适用范围：System Center Configuration Manager (Current Branch)*
 
 可通过导入公司拥有设备的国际移动设备识别 (IMEI) 码或 iOS 序列号对此类设备进行识别。 可上传包含设备 IMEI 码的逗号分隔值 (.csv) 文件，或者手动输入设备信息。  导入的信息将设置在设备列表中注册为“公司”的设备的“所有权”。 访问该服务的每位用户仍需要 Intune 许可证。  
+
+为公司拥有的 iOS 设备上载序列号时，它们必须与公司注册配置文件成对使用。 然后，必须使用 Apple 的设备注册程序 (DEP) 或 Apple 配置器注册这些设备，以使其显示为公司所有。 
 
 ## <a name="how-to-predeclare-corporate-owned-devices"></a>如何预声明公司拥有的设备
 

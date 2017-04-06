@@ -2,7 +2,7 @@
 title: "任务序列内置变量 | Microsoft Docs"
 description: "任务序列内置变量提供有关任务序列运行环境的信息，并且这些变量在整个任务序列期间均适用。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 03/26/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: c9fb0fa46058c773eec6ac23999357d35d9f970f
-ms.openlocfilehash: a75adebfe2bbec8f6fe5206561530a720c0bfbf1
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: a3e6cca8d58055cc2d54aff3cb70a276fb40e829
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -51,7 +52,7 @@ ms.openlocfilehash: a75adebfe2bbec8f6fe5206561530a720c0bfbf1
 |_SMSTSMachineName|存储并指定计算机名称。 存储任务序列将用于记录所有状态消息的计算机的名称。 要更改新操作系统中的计算机名称，请使用“OSDComputerName”  变量。<br /><br /> 例如：<br /><br /> **ABC**|  
 |_SMSTSMDataPath|指定由 SMSTSLocalDataDrive 变量定义的路径。 当在启动任务序列前定义 SMSTSLocalDataDrive 时，例如设置集合变量，启动任务序列后，Configuration Manager 将定义 _SMSTSMDataPath 变量。|  
 |_SMSTSMediaType|指定用于启动安装的媒体类型。 媒体类型示例有启动媒体、完全媒体、PXE 和预暂存媒体。|  
-|_SMSTSMP|存储 Configuration Manager 管理点的名称或 IP 地址。|  
+|_SMSTSMP|存储 Configuration Manager 管理点的 URL 或 IP 地址。|  
 |_SMSTSMPPort|存储 Configuration Manager 管理点的管理点端口号。<br /><br /> 例如：<br /><br /> **80**|  
 |_SMSTSOrgName|存储在任务序列进度用户界面对话框中显示的品牌标题名称。<br /><br /> 例如：<br /><br /> **XYZ Organization**|  
 |_SMSTSOSUpgradeActionReturnCode|存储从安装程序返回的用于指示成功或失败的退出代码值。  此变量在任务序列步骤“操作系统升级”任务序列步骤过程中进行设置。 这可与 /Compat Windows 10 安装程序命令行选项结合使用。<br /><br /> 例如：<br /><br /> 在 /Compat 完成时，可以根据失败或成功退出代码在后续步骤中执行操作。 成功时，可以启动升级。 或者，可以在环境中设置一个标记（例如，添加文件或设置注册表项），该标记随后可以用于创建准备好进行升级或是在升级之前需要执行操作的计算机集合。|  
@@ -79,6 +80,7 @@ ms.openlocfilehash: a75adebfe2bbec8f6fe5206561530a720c0bfbf1
 |TSErrorOnWarning|使用此变量指定任务序列引擎是否将应用程序安装任务序列步骤检测到的警告视为错误。 由于未满足要求而导致一个或多个应用程序或所需的依赖项未安装时，任务序列将 _TSAppInstallStatus 变量设置为 **Warning** 。 当你将 TSErrorOnWarning 变量设置为 **True** 且 _TSAppInstallStatus 变量设置为 Warning 时，它被视为错误。 值 **False** 是默认行为。|  
 |SMSTSLanguageFolder|使用此变量可更改语言中性启动映像的显示语言。|  
 |SMSTSLocalDataDrive|指定运行任务序列时临时文件保存在目标计算机的位置。<br /><br /> 此变量必须在任务序列开始前设置，例如通过设置集合变量。 任务序列启动后，Configuration Manager 定义 _SMSTSMDataPath 变量。|  
+|SMSTSMP|使用此变量指定 Configuration Manager 管理点的 URL 或 IP 地址。|  
 |SMSTSMPListRequestTimeout|使用此变量指定任务序列在利用定位服务检索管理点列表失败后重新尝试安装应用程序或软件更新前等待的毫秒数。 默认情况下，60,000 毫秒（60 秒）后，它重试此步骤，最多三次。 此变量仅适用于安装应用程序和安装软件更新任务序列步骤。|  
 |SMSTSMPListRequestTimeoutEnabled|使用此变量启用重复的 MPList 请求，以便在客户端不在 Intranet 上时刷新客户端。 <br />默认情况下，此变量设置为 True。 当客户端位于 Internet 上时，可以将此变量设置为 False 以避免不必要的延迟。 此变量仅适用于安装应用程序和安装软件更新任务序列步骤。|  
 |SMSTSPeerDownload|使用此变量可使客户端能够使用 Windows PE 对等缓存。<br /><br /> 例如：<br /><br /> SMSTSPeerDownload  = **TRUE** 可启用此功能。|  
@@ -94,9 +96,4 @@ ms.openlocfilehash: a75adebfe2bbec8f6fe5206561530a720c0bfbf1
 |SMSTSSoftwareUpdateScanTimeout| 让你能够在执行[安装软件更新](task-sequence-steps.md#BKMK_InstallSoftwareUpdates)任务序列步骤期间控制软件更新扫描的超时。 例如，如果有大量要安装的软件更新，你可能会增加默认值。 默认值为 30 分钟。 |
 |SMSTSUDAUsers|指定目标计算机的主要用户。 通过使用以下格式指定用户。 使用逗号 (，) 分隔多个用户。<br /><br /> 例如：<br /><br /> **domain\user1、domain\user2、domain\user3**<br /><br /> 有关如何将用户与目标计算机关联的详细信息，请参阅[将用户与目标计算机关联](../get-started/associate-users-with-a-destination-computer.md)。|  
 |SMSTSWaitForSecondReboot|从 Configuration Manager 版本 1602 开始，可使用这一可选的任务序列变量在软件更新安装需要两次重启时帮助控制客户端行为。 必须在[安装软件更新](task-sequence-steps.md#BKMK_InstallSoftwareUpdates)步骤之前设置此变量，以防软件更新安装的第二次重启导致任务序列失败。<br /><br /> 设置 SMSTSWaitForSecondReboot 的值（以秒为单位），指定安装软件更新步骤期间，任务序列在计算机重启时的暂停时长，预留充足的时间，以防还有第二次重启。 <br />例如，将 SMSTSWaitForSecondReboot 设置为 600，即重启后任务序列将暂停 10 分钟，然后运行其他任务序列步骤。 当单个安装软件更新任务序列步骤中需安装数百个软件更新时，这一功能十分有用。|  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

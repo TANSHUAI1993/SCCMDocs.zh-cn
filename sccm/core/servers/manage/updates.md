@@ -2,7 +2,7 @@
 title: "更新 | Microsoft Docs"
 description: "了解称为“更新与维护服务”的控制台中服务方法，该方法可轻松找到并安装建议的更新。"
 ms.custom: na
-ms.date: 1/11/2017
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 816c6bd33e42b70bbafed0dea7624bc5a5421544
-ms.openlocfilehash: 55d4f1805937405c4101f5b814875818d2aa72c0
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: bd72d17e463cb65e79b78613b631b0267b2b26a0
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -46,8 +47,8 @@ System Center Configuration Manager 使用称为“更新和维护服务”的�
 如果使用 Technical Preview 分支，请参阅[System Center Configuration Manager Technical Preview](/sccm/core/get-started/technical-preview) 了解特定于该分支的其他信息。
 
 
-##  <a name="a-namebkmkbaselinesa-baseline-and-update-versions"></a><a name="bkmk_Baselines"></a> 基准和更新版本  
- System Center Configuration Manager Current Branch 的初始版本为版本 1511，即基准版本。 最近版本 1606 作为基准版本发布：  
+##  <a name="bkmk_Baselines"></a> 基准和更新版本  
+ System Center Configuration Manager Current Branch 的初始版本为版本 1511，即基准版本。 较新的基准版本是 1606。
 
 -   在新的层次结构中安装新站点时，请使用最新的基准版本。  
 
@@ -73,22 +74,25 @@ Configuration Manager 的某些更新可用作现有基础结构的控制台中�
 
 以下版本的 Configuration Manager 可用作基准和/或更新：  
 
-|版本|可用日期|[支持结束日期](/sccm/core/servers/manage/current-branch-versions-supported) |Baseline|控制台中更新|  
+|版本 |可用日期|[支持结束日期](/sccm/core/servers/manage/current-branch-versions-supported) |Baseline|控制台中更新|  
 |-------------|-----------|------------|--------------|------------------------|  
-| 1511 <br /><br /> 5.00.8325.1000|2015 年&12; 月&8; 日| 2016 年&12; 月&8; 日|是|否|  
-|[1602](/sccm/core/plan-design/changes/whats-new-in-version-1602)<br /><br /> 5.00.8355.1000|2016 年&3; 月&11; 日| 2017 年&3; 月&11; 日|否|是|
-|[1606](/sccm/core/plan-design/changes/whats-new-in-version-1606)<br /><br /> 5.00.8412.1000|2016/7/22| 2017 年&7; 月&22; 日|否|是|
-|[1606](/sccm/core/plan-design/changes/whats-new-in-version-1606) 和 1606 修补程序汇总 (KB3186654) </br></br>5.00.8412.1307（注释 1） |2016/10/12| 2017 年&7; 月&22; 日|是|否|
+|[1702](/sccm/core/plan-design/changes/whats-new-in-version-1702)<br /><br /> 5.00.8498.1000|3/27/2017| 3/27/2018|否|是|
 |[1610](/sccm/core/plan-design/changes/whats-new-in-version-1610)<br /><br /> 5.00.8458.1000|2016/11/18| 11/18/2017|否|是|
+|[1606](/sccm/core/plan-design/changes/whats-new-in-version-1606)<br /><br /> 5.00.8412.1000|2016/7/22| 2017 年 7 月 22 日|否|是|
+|[1606](/sccm/core/plan-design/changes/whats-new-in-version-1606) 和 1606 修补程序汇总 (KB3186654) </br></br>5.00.8412.1307（注释 1） |2016/10/12| 2017 年 7 月 22 日|是|否|
+| 1602<br /><br /> 5.00.8355.1000|2016 年 3 月 11 日| 2017 年 3 月 11 日|否|是|
+| 1511 <br /><br /> 5.00.8325.1000|2015 年 12 月 8 日| 2016 年 12 月 8 日|是|否|  
+
+
 （注释 1）此 1606 基线介质作为 Microsoft System Center 2016 或 System Center Configuration Manager（Current Branch 和 Long-Term Servicing Branch 1606）版的一部分提供。
 
 若要检查 Configuration Manager 站点的版本，请在控制台中，转至控制台左上角的 **“关于 System Center Configuration Manager”** ，新站点和控制台版本将会显示在那里。  
 
-##  <a name="a-namebkmkinconsolea-in-console-updates-and-servicing"></a><a name="bkmk_inconsole"></a> 控制台中更新和服务  
+##  <a name="bkmk_inconsole"></a> 控制台中更新和服务  
  使用 System Center Configuration Manager 的生产就绪型安装（也称为当前分支）时，通过“更新和维护服务”渠道可提供安装的大部分更新。 此方法标识、下载并提供适用于你当前基础结构版本和配置的更新，并且仅包含 Microsoft 针对所有客户建议的更新。   
  其中包括:  
 
--   新版本，如版本 1602  
+-   新版本，如版本 1610  
 
 -   更新，包括当前版本的新功能  
 
@@ -131,7 +135,7 @@ Configuration Manager 的某些更新可用作现有基础结构的控制台中�
 > [!NOTE]  
 >  System Center Configuration Manager (Current Branch) 的生产版本、Long-Term Servicing Branch 和 Technical Preview for System Center Configuration Manager 是不同的版本。 因此，适用于一个分支的更新无法作为其他分支的控制台中更新。 有关可用分支的详细信息，请参阅[我应使用 Configuration Manager 的哪一个分支？](/sccm/core/understand/which-branch-should-i-use)
 
-##  <a name="a-namebkmkoutofbanda-out-of-band-hotfixes"></a><a name="bkmk_outofband"></a> 带外修补程序  
+##  <a name="bkmk_outofband"></a> 带外修补程序  
 一些修补程序在发布时的可用性受到限制，用于解决特定的问题，或者虽然适用于所有客户，但不能使用控制台中方法进行安装。 这些修补程序在带外提供，Microsoft 云服务不会发现。  
 
 通常情况下，可从 Microsoft 客户支持服务、知识库文章或 [System Center Configuration Manager 团队博客](https://blogs.technet.microsoft.com/configmgrteam)了解带外修补程序，以寻求修复或解决 Configuration Manager 部署问题的方法。  
@@ -145,9 +149,4 @@ Configuration Manager 的某些更新可用作现有基础结构的控制台中�
 -   **修补程序安装工具：** 此工具用于手动安装无法使用控制台中方法安装的修补程序。 此方法用于使用如下文件名结构的修补程序：**&lt;产品\>-&lt;产品版本\>-&lt;知识库文章 ID\>-&lt;平台\>-&lt;语言\>.exe**。
 
      有关详细信息，请参阅[使用修补程序安装程序为 System Center Configuration Manager 安装更新](../../../core/servers/manage/use-the-hotfix-installer-to-install-updates.md)。
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

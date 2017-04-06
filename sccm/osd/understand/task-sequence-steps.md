@@ -2,7 +2,7 @@
 title: "任务序列步骤 - Configuration Manager | Microsoft Docs"
 description: "了解可添加到 Configuration Manager 任务序列的任务序列步骤。"
 ms.custom: na
-ms.date: 01/23/2017
+ms.date: 03/26/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,9 +17,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
-ms.openlocfilehash: 94eeddd161448aff6e1c7afa542b0cbef1ad4d77
-ms.lasthandoff: 01/24/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 071d758f1015d16217a54fe26df5f8f948c818a3
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -660,7 +660,7 @@ ms.lasthandoff: 01/24/2017
 -   **自定义路径**  
 
  **将路径另存为变量**  
- 可以将路径另存为一个可在另一任务序列步骤中使用的变量。 当有多个包时，Configuration Manager 会向变量名称中添加数字后缀。 例如，如果你指定变量 %*mycontent*% 作为自定义变量，它就是用于存储所有引用内容（可以是多个包）的根目录。 当引用子序列步骤中的变量时（如升级操作系统），会为该变量添加数字后缀。 在本例中，%*mycontent01*% 或 %*mycontent02*%，其中的数字对应于包在此步骤中列出的顺序。  
+ 可以将路径另存为一个可在另一任务序列步骤中使用的变量。 Configuration Manager 向变量名称中添加数字后缀。 例如，如果你指定变量 %*mycontent*% 作为自定义变量，它就是用于存储所有引用内容（可以是多个包）的根目录。 引用该变量时，将向变量添加数字后缀。 例如，对于第一个包，将引用 %*mycontent01*% 变量。 在子序列步骤（如升级操作系统）中引用变量时，将使用 %*mycontent02*% 或 %*mycontent03*%，其中的数字对应步骤中所列出的包的顺序。  
 
  **如果包下载失败，继续下载列表中的其他包**  
  指定如果包下载失败，将转到列表中的下一个包并开始下载。  
@@ -1272,7 +1272,7 @@ Configuration Manager 版本 1606 中引入了一个新的任务序列变量 SMS
  输入在目标计算机重新启动之前向用户显示的通知消息。  
 
  **消息显示超时**  
- 指定在目标计算机重新启动之前给定用户的时间（秒）。 默认时间为&60; 秒。  
+ 指定在目标计算机重新启动之前给定用户的时间（秒）。 默认时间为 60 秒。  
 
 ##  <a name="BKMK_RestoreUserState"></a>还原用户状态  
  使用  “还原用户状态”任务序列步骤来启动用户状态迁移工具 (USMT) 将用户状态和设置还原到目标计算机。 此任务序列步骤与“捕获用户状态”  任务序列步骤配合使用。  

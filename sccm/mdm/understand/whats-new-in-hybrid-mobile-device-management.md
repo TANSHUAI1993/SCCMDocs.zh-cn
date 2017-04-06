@@ -1,8 +1,8 @@
 ---
-title: "混合 MDM 的新增功能 | Microsoft Docs"
-description: "了解 System Center Configuration Manager 和 Intune 的混合部署可用的新移动设备管理功能。"
+title: "Configuration Manager 的混合 MDM 中的新增功能 | Microsoft Docs"
+description: "了解 Configuration Manager 和 Intune 的混合部署可用的新移动设备管理功能。"
 ms.custom: na
-ms.date: 02/14/2017
+ms.date: 03/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 58c64b2e02e5e5eb54cb50a468502ba6f1e4f0c1
-ms.lasthandoff: 03/06/2017
+ms.sourcegitcommit: 3c2a07f560e0aa3d2beb7cc50e71c98ac45c27e1
+ms.openlocfilehash: cc3e4055ce6b648e4554773518fc928cfb51c5f3
+ms.lasthandoff: 03/28/2017
 
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager 和 Microsoft Intune 的混合移动设备管理中的新增功能
@@ -36,6 +36,93 @@ ms.lasthandoff: 03/06/2017
 |**Microsoft Intune 中的新增功能** | 一般情况下，此类别列出的所有功能应适用于所有 Configuration Manager 版本（包括 System Center 2012 R2 Configuration Manager 版本），因为这些功能仅需要 Intune 服务，不需要 Configuration Manager 中的其他功能。|
 |**Configuration Manager Technical Preview 中的新增功能**| 此类别下列出的所有功能仅适用于指定的 Technical Preview 版本。 若要试用这些功能，必须安装功能说明中指定的 Technical Preview 版本。 有关详细信息，请参阅 [System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)。|
 |**Configuration Manager (Current Branch) 中的新增功能**| 此类别下列出的所有功能仅适用于指定的 Configuration Manager (Current Branch) 版本，例如版本 1511 或 1602。 如果要为混合部署使用较旧版本的 Configuration Manager，则必须升级到功能说明中指定的 Configuration Manager (Current Branch) 版本。 有关详细信息，请参阅[升级到 System Center Configuration Manager](../../core/servers/deploy/install/upgrade-to-configuration-manager.md)。|
+
+## <a name="new-hybrid-features-in-march-2017"></a>2017 年 3 月版本中的新增混合功能
+
+### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
+
+2017 年 3 月推出的以下 Intune 功能适用于混合部署：
+
+- **Android 适用的公司门户应用的最新用户体验**
+
+  Android 适用的公司门户应用的用户界面具有更新式的外观。 值得注意的更新有：
+
+  - 颜色：“公司门户”选项卡的颜色与 IT 定义的品牌颜色相同。
+  - 应用：在“应用”选项卡中，更新了“特色应用”和“所有应用”按钮。
+  - 搜索：在“应用”选项卡中，“搜索”按钮是浮动的操作按钮。
+  - 导航应用：“所有应用”视图以选项卡形式呈现出“特色”、“所有”和“分类”视图，便于导航。
+  - 支持：更新了“我的设备”和“联系 IT”选项卡，以改善可读性。
+
+  有关这些更改的详细信息，请参阅 [Intune 最终用户应用的 UI 更新](/intune/enduser/whats-new-in-intune-app-ui)。
+
+- **Windows 10 公司门户的签名脚本**
+
+  如果需要下载和旁加载 Windows 10 公司门户应用，现在可以使用脚本为你的组织简化应用签名过程。  若要下载该脚本及其使用说明，请参阅 TechNet 库中的 [Microsoft Intune Signing Script for Windows 10 Company Portal](https://aka.ms/win10cpscript)（Windows 10 公司门户适用的 Microsoft Intune 签名脚本）。 有关此公告的详细信息，请参阅 Intune 支持团队博客上的 [Updating your Windows 10 Company Portal app](https://blogs.technet.microsoft.com/intunesupport/2017/03/13/updating-your-windows-10-company-portal-app/)（更新 Windows 10 公司门户应用）。
+
+- **改进了对中国的 Android 用户的支持**
+
+  由于中国地区没有 Google Play 商店，Android 设备必须从中国的应用商店获取应用。 公司门户通过重定向中国的 Android 用户，从本地应用商店下载公司门户和 Outlook 应用来支持此工作流。 启用条件性访问策略后，将同时改善有关移动设备管理和移动应用程序管理的用户体验。 以下中文应用商店可以提供 Android 适用的公司门户和 Outlook 应用：
+
+  - [百度](https://go.microsoft.com/fwlink/?linkid=836946)
+  - [小米](https://go.microsoft.com/fwlink/?linkid=836947)
+  - [腾讯](https://go.microsoft.com/fwlink/?linkid=836949)
+  - [华为](https://go.microsoft.com/fwlink/?linkid=836948)
+  - [豌豆荚](https://go.microsoft.com/fwlink/?linkid=836950)
+
+- **请确保公司门户应用处于最新状态**
+
+  2016 年 12 月，我们发布了更新，当一组用户在注册 iOS、Android、Windows 8.1+ 或 Windows Phone 8.1+ 设备时，该更新将执行多重身份验证 (MFA)。 如果没有 Android (v5.0.3419.0+) 和 iOS (v2.1.17+) 适用的某些基准版本的公司门户应用，此功能将无法运行。
+
+  Intune 的管理功能在不断改进，并且很多改进对所有支持平台上的公司门户应用的更新进行了协调。 因此，建议保留安装在设备上的最新版本的公司门户应用，以便利用 Intune 中的改进功能并获得最佳的用户体验。
+
+  >[!Tip]
+  > 让用户将其设备设置为从相应的应用商店中自动更新应用。 如果通过网络共享提供 Android 公司门户应用，则可从 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=49140)下载最新版本。
+
+- **Microsoft Teams 现已在 iOS 和 Android 上启用了 MAM**
+
+  iOS 和 Android 适用的 Microsoft Teams 应用现已启用了 Intune 移动应用管理 (MAM) 功能，因此你可帮助团队跨设备自由工作，同时确保每个环节的对话和公司数据均受保护。 有关详细信息，请参阅企业移动性和安全性博客中的 [Microsoft Teams 公告](https://blogs.technet.microsoft.com/enterprisemobility/2017/03/14/microsoft-teams-is-now-generally-available-and-mam-enabled-on-ios-and-android/)。
+
+### <a name="new-in-configuration-manager-current-branch"></a>Configuration Manager (Current Branch) 中的新增功能
+
+以下功能以前可在 Configuration Manager Technical Preview 版本中使用，现在可在 Intune 和 Configuration Manager (Current Branch) 1702 版本的混合部署中使用。
+
+- [Android for Work 支持](/sccm/core/plan-design/changes/whats-new-in-version-1702##android-for-work-support)
+- [针对不符合应用的符合性设置](/sccm/core/plan-design/changes/whats-new-in-version-1702#conditional-access-device-compliance-policy-improvements)
+- [PFX 证书创建和分发以及 S/MIME 支持](/sccm/core/plan-design/changes/whats-new-in-version-1702#improvements-to-certificate-profiles)
+- [混合 MDM 的创建向导中，Android 和 iOS 版本不再作为目标](/sccm/core/plan-design/changes/whats-new-in-version-1702#android-and-ios-versions-are-no-longer-targetable-in-creation-wizards-for-hybrid-mdm)
+
+Configuration Manager (Current Branch) 1702 版本中还包括以下其他混合功能：
+
+- **对 Apple Volume Purchase Program (VPP) 改进的支持**
+
+  - 你现在可以将已授权的应用部署到设备以及用户。 根据应用对设备授权的支持能力，合适的许可证将在部署时按以下方式声明：
+
+    | Configuration Manager 版本 | 应用是否支持设备授权？ | 部署集合类型 | 已声明的许可证 |
+    |-|-|-|-|
+    |早于 1702|是|用户|用户许可证|
+    |早于 1702|否|用户|用户许可证|
+    |早于 1702|是|设备|用户许可证|
+    |早于 1702|否|设备|用户许可证|
+    |1702 及更高版本|是|用户|用户许可证|
+    |1702 及更高版本|否|用户|用户许可证|
+    |1702 及更高版本|是|设备|设备许可证|
+    |1702 及更高版本|否|设备|用户许可证|
+
+  - 此外，你现在可以部署并跟踪你从 iOS Volume Purchase Program 教育版购买的应用。
+
+  - 你现在可以将多个 Apple 批量采购程序令牌与 Configuration Manager 相关联。
+
+  有关批量购买的 iOS 应用的详细信息，请参阅[管理批量购买的 iOS 应用](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps)。
+
+- **对适用于企业的 Windows 应用商店中的业务线应用程序的支持**
+
+  现在可以同步来自适用于企业的 Windows 应用商店的自定义业务线应用程序。
+
+- **新移动威胁防御监视工具**
+
+    现在你可以采用新的方法通过移动威胁防御服务提供程序来监视合规性状态。
+
+    有关详细信息，请参阅[如何监视移动威胁防御合规性](/sccm/mdm/deploy-use/monitor-mobile-threat-defense-compliance)。
 
 ## <a name="new-hybrid-features-in-february-2017"></a>2017 年 2 月版本中的新增混合功能
 
@@ -55,15 +142,19 @@ ms.lasthandoff: 03/06/2017
 
 - **Android for Work 支持**
 
-  在使用 Configuration Manager Technical Preview 1702 的混合 MDM 环境中，现可使用 Android for Work 管理 Android 设备。 受支持的 Android 设备现可注册为 Android for Work 设备，从而在相关设备上创建工作配置文件，其中可在该设备上部署 Play for Work 批准的应用。 还可为这些设备配置和部署配置项、符合性策略和资源访问配置文件。
+  在使用 Configuration Manager Technical Preview 1702 的混合 MDM 环境中，现可使用 Android for Work 管理 Android 设备。 受支持的 Android 设备现可注册为 Android for Work 设备，从而在相关设备上创建工作配置文件，其中可在该设备上部署 Play for Work 批准的应用。 还可为这些设备配置和部署配置项、符合性策略和资源访问配置文件。 有关详细信息，请参阅 [Android for Work 支持](/sccm/core/get-started/capabilities-in-technical-preview-1702#android-for-work-support)。
 
 - **针对不符合应用的符合性设置**
 
-  现可在符合性策略中创建面向 Android 和 iOS 应用的不符合应用规则。 如果设备安装了指定应用程序，则根据部署的条件性访问策略，它们将被标记为“不符合”且不可再访问公司资源。
+  现可在符合性策略中创建面向 Android 和 iOS 应用的不符合应用规则。 如果设备安装了指定应用程序，则根据部署的条件性访问策略，它们将被标记为“不符合”且不可再访问公司资源。 有关详细信息，请参阅[条件性访问设备符合性策略改进](/sccm/core/get-started/capabilities-in-technical-preview-1702#conditional-access-device-compliance-policy-improvements)。
 
 - **PFX 证书创建和分发以及 S/MIME 支持**
 
-  现可在混合环境中为用户创建和部署 PFX 证书。 随后，这些证书可用于用户已注册的设备的 S/MIME 电子邮件加密和解密。
+  现可在混合环境中为用户创建和部署 PFX 证书。 随后，这些证书可用于用户已注册的设备的 S/MIME 电子邮件加密和解密。 有关详细信息，请参阅[创建支持 S MIME 的 PFX 证书](/sccm/core/get-started/capabilities-in-technical-preview-1702#create-pfx-certificates-with-s-mime-support)。
+
+- **对其他 iOS 配置设置的支持**
+   
+    你现在有 42 个其他 iOS 设置，可配置为配置项的一部分。 已为受监督的 iOS 设备添加大部分设置（总共 35 个设置）。 有关详细信息，请参阅 [iOS 设备的新符合性设置](/sccm/core/get-started/capabilities-in-technical-preview-1702#new-compliance-settings-for-ios-devices)。
 
 ## <a name="new-hybrid-features-in-january-2017"></a>2017 年 1 月版本中的新增混合功能
 

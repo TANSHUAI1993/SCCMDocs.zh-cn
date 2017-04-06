@@ -6,7 +6,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 03/01/2017
+ms.date: 03/28/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
@@ -14,9 +14,9 @@ ms.technology:
 - configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
 translationtype: Human Translation
-ms.sourcegitcommit: f9097014c7e988ec8e139e518355c4efb19172b3
-ms.openlocfilehash: 505c60409d14a1c5617333ab57caa3cd44195dc6
-ms.lasthandoff: 03/04/2017
+ms.sourcegitcommit: 3c2a07f560e0aa3d2beb7cc50e71c98ac45c27e1
+ms.openlocfilehash: 2a4fa6dcf8691875f5b262d6dc7bf1522d91acfd
+ms.lasthandoff: 03/28/2017
 
 
 ---
@@ -79,9 +79,12 @@ ms.lasthandoff: 03/04/2017
 -   “基于 Internet 的客户端”：接收配置为仅允许来自 Internett 的连接的软件更新点的列表，或接收允许 Internet 和 Intranet 客户端连接的软件更新点的列表。  
 
 ###  <a name="BKMK_SUPSwitching"></a> 软件更新点切换  
- 如果站点上有多个软件更新点，然后一个软件更新点失败或变得不可用，则客户端将连接到其他软件更新点并继续扫描最新的软件更新。 为客户端第一次分配了软件更新点后，会将该客户端一直分配给该软件更新点，除非它无法在该软件更新点上扫描软件更新。  
+> [!NOTE]
+> 从版本 1702 开始，客户端使用边界组查找新的软件更新点，并在其当前软件更新点不再可用时回退并查找新的软件更新点。 可以向不同的边界组添加各个软件更新点，以控制客户端可以找到哪些服务器。 有关详细信息，请参阅[配置边界组](/sccm/core/servers/deploy/configure/boundary-groups)主题中的[软件更新点](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points)。
 
- 软件更新扫描可能会失败，并出现很多不同的重试和非重试错误代码。 如果扫描失败并出现重试错误代码，则客户端将启动重试过程以在软件更新点上扫描软件更新。 导致重试错误代码的高级别情况通常是因为 WSUS 服务器不可用或暂时超负荷。 客户端在无法扫描软件更新时将使用下列过程：  
+如果站点上有多个软件更新点，然后一个软件更新点失败或变得不可用，则客户端将连接到其他软件更新点并继续扫描最新的软件更新。 为客户端第一次分配了软件更新点后，会将该客户端一直分配给该软件更新点，除非它无法在该软件更新点上扫描软件更新。  
+
+软件更新扫描可能会失败，并出现很多不同的重试和非重试错误代码。 如果扫描失败并出现重试错误代码，则客户端将启动重试过程以在软件更新点上扫描软件更新。 导致重试错误代码的高级别情况通常是因为 WSUS 服务器不可用或暂时超负荷。 客户端在无法扫描软件更新时将使用下列过程：  
 
 1.  客户端按其计划的时间扫描软件更新、在其通过客户端上的控制面板启动时进行扫描，或通过使用 SDK 进行扫描。 如果扫描失败，客户端将等待 30 分钟再重试扫描，并使用相同的软件更新点。  
 
@@ -145,7 +148,8 @@ ms.lasthandoff: 03/04/2017
 -   有关 Configuration Manager 站点系统支持的配置的详细信息，请参阅[站点和站点系统先决条件](../../core/plan-design/configs/site-and-site-system-prerequisites.md)。  
 
 ###  <a name="BKMK_PlanningForWSUS"></a> 规划 WSUS 安装  
- 软件更新要求在为软件更新点站点系统角色配置的所有站点系统服务器上安装 WSUS 的支持版本。 此外，如果你未在站点服务器上安装软件更新点，则必须在站点服务器计算机上安装 WSUS 管理控制台（如果尚未安装该控制台）。 这允许站点服务器与软件更新点上运行的 WSUS 通信。  
+
+软件更新要求在为软件更新点站点系统角色配置的所有站点系统服务器上安装 WSUS 的支持版本。 此外，如果你未在站点服务器上安装软件更新点，则必须在站点服务器计算机上安装 WSUS 管理控制台（如果尚未安装该控制台）。 这允许站点服务器与软件更新点上运行的 WSUS 通信。  
 
  在 Windows Server 2012 上使用 WSUS 时，必须将其他权限配置为允许 Configuration Manager 中的“WSUS Configuration Manager”连接到 WSUS 以执行定期运行状况检查。 选择下列选项之一以配置权限：  
 
@@ -161,9 +165,9 @@ ms.lasthandoff: 03/04/2017
  在安装 WSUS 时，可以选择使用现有的 IIS 默认网站或创建自定义的 WSUS 网站。 为 WSUS 创建自定义网站，以便 IIS 在专用的虚拟网站中承载 WSUS 服务，而不是共享由其他 Configuration Manager 站点系统或其他应用程序使用的同一个网站。 尤其是在站点服务器上安装软件更新点站点系统角色时。 在 Windows Server 2012 中运行 WSUS 时，WSUS 被默认配置为针对 HTTP 使用端口 8530，针对 HTTPS 使用端口 8531。 在站点上创建软件更新点时，必须指定这些端口设置。  
 
 ####  <a name="BKMK_WSUSInfrastructure"></a> 使用现有的 WSUS 基础结构  
- 安装 Configuration Manager 之前，你可以使用在环境中处于活动状态的 WSUS 服务器。 配置软件更新点时，必须指定同步设置。 Configuration Manager 连接至在软件更新点运行的 WSUS 并使用相同设置配置 WSUS 服务器。 如果 WSUS 服务器以前与未配置为软件更新点同步设置的产品或分类同步，则会对 WSUS 数据库中的所有软件更新元数据同步产品和分类的软件更新元数据，而与软件更新点的同步设置无关。 这可能会导致站点数据库中出现意外的软件更新元数据。 直接在 WSUS 管理控制台中添加产品或分类然后立即启动同步时，你将遇到相同的行为方式。 默认情况下， Configuration Manager 每小时会连接到软件更新点上运行的 WSUS，并重置在 Configuration Manager 外修改的任何设置。  
+ 安装 Configuration Manager 之前，可以选择在环境中处于活动状态的 WSUS 服务器，以用作软件更新点。 配置软件更新点时，必须指定同步设置。 Configuration Manager 连接至在软件更新点服务器运行的 WSUS 服务器并使用相同设置配置 WSUS。 如果 WSUS 服务器以前与未配置为软件更新点同步设置的产品或分类同步，则会对 WSUS 数据库中的所有软件更新元数据同步产品和分类的软件更新元数据，而与软件更新点配置的同步设置无关。 这可能会导致站点数据库中出现意外的软件更新元数据。 直接在 WSUS 管理控制台中添加产品或分类然后立即启动同步时，你将遇到相同的行为方式。 默认情况下，Configuration Manager 每小时会连接到软件更新点上的 WSUS，并重置在 Configuration Manager 外修改的任何设置。 未满足你在同步设置中指定的产品和分类要求的软件更新被设置为过期，然后会从站点数据库中删除。
 
- 未满足你在同步设置中指定的产品和分类要求的软件更新被设置为过期，然后会从站点数据库中删除。  
+ 将 WSUS 服务器配置为软件更新点时，将无法再将其用作独立 WSUS 服务器。 如果需要不由 Configuration Manager 管理的单独的独立 WSUS 服务器，则必须在其他服务器上配置它。 
 
 ####  <a name="BKMK_WSUSAsReplica"></a> 将 WSUS 配置为副本服务器  
  在主站点服务器上创建软件更新点站点系统角色时，你无法使用配置为副本的 WSUS 服务器。 将 WSUS 服务器配置为副本时，Configuration Manager 无法配置 WSUS 服务器，WSUS 同步也会失败。 在辅助站点上创建软件更新点时，Configuration Manager 会将 WSUS 配置为在父主站点中软件更新点上运行的 WSUS 的副本服务器。 在主站点中安装的第一个软件更新点为默认的软件更新点。 站点中的其他软件更新点被配置为默认软件更新点的副本。  

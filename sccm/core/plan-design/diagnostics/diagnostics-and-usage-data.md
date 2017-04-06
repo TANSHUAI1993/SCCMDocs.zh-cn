@@ -2,7 +2,7 @@
 title: "诊断和使用情况数据 | Microsoft Docs"
 description: "了解 System Center Configuration Manager 收集的关于其自身的诊断和使用情况数据。"
 ms.custom: na
-ms.date: 12/29/2016
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 24a233516058e645df2a43623855665b97b041b0
-ms.openlocfilehash: 54ec4886eaad6999cdf3ffff7411942859f1a5b2
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: 4a4b7c9c0d40b6bd3ea2f318e37d744f1a0cc084
+ms.lasthandoff: 03/27/2017
 
 
 ---
@@ -40,10 +41,14 @@ System Center Configuration Manager 收集有关自身的诊断和使用情况�
 -   [如何将诊断和使用情况数据用于 System Center Configuration Manager](../../../core/plan-design/diagnostics/how-diagnostics-and-usage-data-is-used.md)  
 
 -   诊断使用情况数据收集的级别：
-    - [1511 的诊断数据](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1511)
-    - [1602 的诊断数据](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1602)
-    - [1606 的诊断数据](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1606)  
+    - [1702 的诊断数据](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1702)      
     - [1610 的诊断数据](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1610)  
+    - [1606 的诊断数据](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1606)    
+
+<!--
+    - [Diagnostic data for 1602](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1602)
+    - [Diagnostic data for  1511](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1511)
+-->
 
 -   [System Center Configuration Manager 如何收集诊断和使用情况数据](../../../core/plan-design/diagnostics/how-diagnostics-and-usage-data-is-collected.md)  
 
@@ -55,9 +60,4 @@ System Center Configuration Manager 收集有关自身的诊断和使用情况�
 
 ## <a name="see-also"></a>另请参阅  
  [关于 System Center Configuration Manager 中的服务连接点](../../../core/servers/deploy/configure/about-the-service-connection-point.md)
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

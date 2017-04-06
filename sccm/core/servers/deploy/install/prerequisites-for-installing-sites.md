@@ -2,7 +2,7 @@
 title: "站点的先决条件 | Microsoft Docs"
 description: "了解安装不同类型的 System Center Configuration Manager 站点所需的先决条件。"
 ms.custom: na
-ms.date: 3/1/2017
+ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: b6c570d8addbe7df5aace461ee725a7df1d35a31
-ms.openlocfilehash: 76c8bb6d0922fad996e27c04a86cb9b4ad32a810
-ms.lasthandoff: 03/01/2017
+ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
+ms.openlocfilehash: ff89d4aea6be871e64e0a788f054ba4cadb3e51d
+ms.lasthandoff: 03/27/2017
 
 ---
 # <a name="prerequisites-for-installing-system-center-configuration-manager-sites"></a>安装 System Center Configuration Manager 站点的先决条件
@@ -60,14 +60,14 @@ ms.lasthandoff: 03/01/2017
 - 站点服务器和站点数据库计算机必须满足所有先决条件配置。 在启动安装程序之前，可[手动运行必备组件检查程序](../../../../core/servers/deploy/install/prerequisite-checker.md)以识别并修复问题。  
 
 
-### <a name="bkmk_expand"></a>扩展独立主站点
+### <a name="bkmk_expand"></a> 扩展独立主站点的先决条件
 在你将独立主站点扩展到带管理中心站点的层次结构之前，独立主站点必须满足下列先决条件：
 
--   **必须安装与独立主站点的版本匹配的新管理中心站点安装介质（包含源文件）**
+-   **必须使用与独立主站点版本匹配的 CD.Latest 文件夹（其中包含源文件）中的介质来安装新的管理中心站点安装**
 
-     为确保版本匹配，请使用位于独立主站点的 [CD.Latest](../../../../core/servers/manage/the-cd.latest-folder.md) 文件夹中的源文件来安装新站点。
+ 要确保版本匹配，请使用独立主站点上 [CD.Latest 文件夹](/sccm/core/servers/manage/the-cd.latest-folder)中找到的源文件。
 
-     若要详细了解用于安装不同站点的适当源文件，请参阅[安装站点的准备工作](../../../../core/servers/deploy/install/prepare-to-install-sites.md)主题中的[不同类型站点的安装选项](../../../../core/servers/deploy/install/prepare-to-install-sites.md#bkmk_options)。
+ 若要详细了解用于安装不同站点的适当源文件，请参阅[安装站点的准备工作](../../../../core/servers/deploy/install/prepare-to-install-sites.md)主题中的[不同类型站点的安装选项](../../../../core/servers/deploy/install/prepare-to-install-sites.md#bkmk_options)。
 
 
 -   **无法将独立主站点配置为从另一 Configuration Manager 层次结构迁移数据**  
