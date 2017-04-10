@@ -45,7 +45,7 @@ ms.lasthandoff: 03/04/2017
 |---------------------|-----------------|----------------|--------------------|----------------|  
 |**Cisco AnyConnect**|否|否|否|否|  
 |**Pulse Secure**|是|否|是|是|  
-|** F5 Edge Client**|是|否|是|是|  
+|**F5 Edge Client**|是|否|是|是|  
 |**Dell SonicWALL Mobile Connect**|是|否|是|是|  
 |**Check Point Mobile VPN**|是|否|是|是|  
 |**Microsoft SSL (SSTP)**|是|是|是|否|  
