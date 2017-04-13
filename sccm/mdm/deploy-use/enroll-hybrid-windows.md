@@ -16,9 +16,9 @@ author: nathbarn
 ms.author: nathbarn
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6424fb07802b62820b4dc78a58ab30d3b956abef
-ms.openlocfilehash: 4189fe34efc2ae134150a89791dc10bbab1b9d02
-ms.lasthandoff: 03/17/2017
+ms.sourcegitcommit: 4bf5cc25c4ffb89df620b02044f43a13adc1443e
+ms.openlocfilehash: c87841ee1b30ebbcbbe8cd06309d909c38c01fdf
+ms.lasthandoff: 04/06/2017
 
 
 ---
@@ -26,12 +26,27 @@ ms.lasthandoff: 03/17/2017
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-本主题介绍 IT 管理员如何能通过 Configuration Manager 和 Microsoft Intune 使用户可以管理 Windows 电脑和移动设备。 有两种可用的注册方法：
--  用户将其帐户与设备连接时自动注册 Azure Active Directory (AD)
-- 通过安装和登录公司门户应用进行注册
+本主题介绍 IT 管理员如何能通过 Configuration Manager 和 Microsoft Intune 使用户可以管理 Windows 电脑和移动设备。
+
+## <a name="enable-windows-device-management"></a>启用 Windows 设备管理
+若要针对电脑或移动设备启用 Windows 设备管理，请按照以下步骤进行操作：
+
+1.  在为任何平台设置注册前，必须先完成[设置混合 MDM](setup-hybrid-mdm.md) 中的先决条件和过程。  
+2.  在 Configuration Manager 控制台中的“管理”工作区中，转到“概述” > “云服务” > “Microsoft Intune 订阅”。  
+3.  在功能区中，单击“配置平台”，然后选择 Windows 平台：
+    - 对于 Windows 电脑和笔记本电脑，请选择“Windows”，然后执行以下步骤：
+      1. 在“常规”选项卡上，单击“启用 Windows 注册”复选框。
+      2. 如果使用证书进行代码签名并部署公司门户应用，请浏览到“代码签名证书”。 设备用户还可以从 Windows 应用商店安装公司门户应用，或者你可以在没有代码签名的情况下部署来自适用于企业的 Windows 应用商店中的应用。
+      3. 你还可以配置 [Windows Hello 企业版设置](windows-hello-for-business-settings.md)。
+    - 对于 Windows 手机和平板电脑，请选择“Windows Phone”，然后执行以下步骤：
+      1. 在“常规”选项卡上，单击“Windows Phone 8.1 和 Windows 10 移动版”复选框。 不再支持 Windows Phone 8.0。
+      2. 如果你的组织需要旁加载公司应用，你可以上传所需的令牌或文件。 有关旁加载应用的详细信息，请参阅[创建 Windows 应用](https://docs.microsoft.com/sccm/apps/get-started/creating-windows-applications)。
+        - **应用程序注册令牌**
+        - **.pfx 文件**
+        - **无**：如果使用 Symantec 证书，则可以指定“在 Symantec 证书到期前显示警报”。
+4. 单击“确定”  关闭对话框。  若要使用公司门户简化注册过程，你应该为创建 DNS 别名以进行设备注册。 然后可以告知用户如何注册其设备。
 
 ## <a name="choose-how-to-enroll-windows-devices"></a>选择注册 Windows 设备的方式
-
 两个因素决定注册 Windows 设备的方式：
 - **是否使用 Azure Active Directory Premium？** <br>[Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) 随附企业移动性 + 安全性和其他许可计划。
 - **将注册什么版本的 Windows？** <br>可通过添加工作或学校帐户自动注册 Windows 10 设备。 早期版本必须使用公司门户应用进行注册。
@@ -58,31 +73,11 @@ ms.lasthandoff: 03/17/2017
 
 默认情况下，不会为该服务启用双重身份验证。 但是，在注册设备时，建议启用双重身份验证。 在为该服务请求双重身份验证之前，必须在 Azure Active Directory 中配置一个双重身份验证提供程序并为你的用户帐户配置多重身份验证。 请参阅[Azure 多重身份验证服务器入门](https://docs.microsoft.com/azure/multi-factor-authentication/multi-factor-authentication-get-started-cloud)。
 
-## <a name="company-portal-enrollment"></a>公司门户注册
-最终用户或[设备注册管理器](enroll-devices-with-device-enrollment-manager.md)可通过安装公司门户，然后使用工作凭据登录以注册 Windows 设备。 为了简化最终用户的注册，你应该当向 DNS 注册添加 CNAME。
-
-### <a name="enable-windows-device-management"></a>启用 Windows 设备管理
-若要针对电脑或移动设备启用 Windows 设备管理，请按照以下步骤进行操作：
-
-1.  在为任何平台设置注册前，必须先完成[设置混合 MDM](setup-hybrid-mdm.md) 中的先决条件和过程。  
-2.  在 Configuration Manager 控制台中的“管理”工作区中，转到“概述” > “云服务” > “Microsoft Intune 订阅”。  
-3.  在功能区中，单击“配置平台”，然后选择 Windows 平台：
-    - 对于 Windows 电脑和笔记本电脑，请选择“Windows”，然后执行以下步骤：
-      1. 在“常规”选项卡上，单击“启用 Windows 注册”复选框。
-      2. 如果使用证书进行代码签名并部署公司门户应用，请浏览到“代码签名证书”。 设备用户还可以从 Windows 应用商店安装公司门户应用，或者你可以在没有代码签名的情况下部署来自适用于企业的 Windows 应用商店中的应用。
-      3. 你还可以配置 [Windows Hello 企业版设置](windows-hello-for-business-settings.md)。
-    - 对于 Windows 手机和平板电脑，请选择“Windows Phone”，然后执行以下步骤：
-      1. 在“常规”选项卡上，单击“Windows Phone 8.1 和 Windows 10 移动版”复选框。 不再支持 Windows Phone 8.0。
-      2. 如果你的组织需要旁加载公司应用，你可以上传所需的令牌或文件。 有关旁加载应用的详细信息，请参阅[创建 Windows 应用](https://docs.microsoft.com/sccm/apps/get-started/creating-windows-applications)。
-        - **应用程序注册令牌**
-        - **.pfx 文件**
-        - **无**：如果使用 Symantec 证书，则可以指定“在 Symantec 证书到期前显示警报”。
-4. 单击“确定”  关闭对话框。  若要使用公司门户简化注册过程，你应该为创建 DNS 别名以进行设备注册。 然后可以告知用户如何注册其设备。
 
 ### <a name="create-dns-alias-for-device-enrollment"></a>创建 DNS 别名以进行设备注册  
 DNS 别名（CNAME 记录类型）使用户能更轻松地通过连接到服务注册其设备，而无需用户输入服务器地址。 若要创建 DNS 别名（CNAME 记录类型），必须在公司的 DNS 记录中配置 CNAME，将发送给公司域名中的 URL 的请求重定向到 Microsoft 的云服务服务器。  例如，贵公司的域为 contoso.com，则应在 DNS 中创建将 EnterpriseEnrollment.contoso.com 重定向到 EnterpriseEnrollment-s.manage.microsoft.com 的 CNAME。  
 
- 虽然可选择性创建 CNAME DNS 条目，但 CNAME 记录可简化用户的注册。 如果找不到注册 CNAME 记录，系统会提示用户手动输入 MDM 服务器名称 enrollment.manage.microsoft.com。
+虽然可选择性创建 CNAME DNS 条目，但 CNAME 记录可简化用户的注册。 如果找不到注册 CNAME 记录，系统会提示用户手动输入 MDM 服务器名称 enrollment.manage.microsoft.com。
 
 |类型|主机名|指向|TTL|  
 |----------|---------------|---------------|---|
