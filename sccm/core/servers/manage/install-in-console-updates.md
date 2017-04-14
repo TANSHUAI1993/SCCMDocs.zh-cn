@@ -2,7 +2,7 @@
 title: "控制台中更新 | Microsoft Docs"
 description: "System Center Configuration Manager 与 Microsoft 云服务同步，以获取可以从控制台中进行安装的更新。"
 ms.custom: na
-ms.date: 3/7/2017
+ms.date: 4/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 3b50ada9f63e41d1b6f01009c141b8f361f5180e
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: 32f7fc4ef9c8e8d3c2ec8eeaf9a3174bad992ffb
+ms.openlocfilehash: 18c199e78750eadc06b9635fa6104d36c2ac018d
+ms.lasthandoff: 04/08/2017
 
 
 ---
@@ -319,6 +319,10 @@ System Center Configuration Manager 与 Microsoft 云服务同步，以获取更
 若要查看可用功能及其状态，请在控制台中导航到“管理” > “更新和维护服务” > “功能”。
 
 当功能不可选时，它会自动安装，不会出现在“功能”节点中。  
+
+
+启用新功能或预发行功能时，配置管理器层次结构管理器 (HMAN) 必须在该功能可用之前处理更改。 更改的处理通常是即时的，但根据 HMAN 处理周期，最长需要 30 分钟才能完成。 处理更改后，必须重新启动控制台，然后才能查看与该功能相关的新 UI。
+
 
 ##  <a name="bkmk_prerelease"></a> 使用更新中的预发行功能
 预发行功能是指 Current Branch 中随附的功能，用于在生产环境中的早期测试。 这些功能不应被视为可进行生产，但可以在生产环境中使用。 若要了解有关预发行功能的详细信息，包括如何在环境中启用这些功能，请参阅[预发行功能](/sccm/core/servers/manage/pre-release-features)。                |

@@ -2,7 +2,7 @@
 title: "使用 System Center Configuration Manager 创建预留媒体 | Microsoft Docs"
 description: "在 System Center Configuration Manager 中创建预留媒体来简化几个方案中的 Windows 部署。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 04/11/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
-ms.openlocfilehash: 56cfc5837adf986e5d2bf4a73ef9de3b1f60b4f9
+ms.sourcegitcommit: ae9488a34c6b1e04397c4875de4b3bc607f7116c
+ms.openlocfilehash: 33abf3853d912d423e427db4d35fb4a16167164e
+ms.lasthandoff: 04/11/2017
 
 
 ---
@@ -36,7 +37,7 @@ System Center Configuration Manager 中的预留媒体是 Windows 映像格式 (
 
  在应用预留媒体后第一次启动计算机时，计算机会启动到 Windows PE 并连接到管理点，以查找将完成操作系统部署过程的任务序列。 你可以指定要作为预留媒体的一部分包含的应用程序、包和驱动程序包。 在部署使用预留媒体的任务序列时，向导会首先检查本地任务序列缓存以查找有效的内容，如果无法找到内容或内容已被修改，则向导会从分发点下载内容。  
 
-##  <a name="a-namebkmkcreateprestagedmediaa-how-to-create-prestaged-media"></a><a name="BKMK_CreatePrestagedMedia"></a> 如何创建预留媒体  
+##  <a name="BKMK_CreatePrestagedMedia"></a> 如何创建预留媒体  
  在使用“创建任务序列媒体向导”创建预留媒体之前，请确保满足以下所有条件：  
 
 |任务|描述|  
@@ -47,7 +48,7 @@ System Center Configuration Manager 中的预留媒体是 Windows 映像格式 (
 |目标计算机上的硬盘驱动器|在将预留媒体暂存到计算机的硬盘驱动器上之前，必须对目标计算机的硬盘驱动器进行格式化。 如果在应用媒体时硬盘驱动器未格式化，则部署操作系统的任务序列将在尝试启动目标计算机时失败。|  
 
 > [!NOTE]  
->  “创建任务序列媒体向导”在媒体上设置下列任务序列变量条件： **_SMSTSMedia = OEMMedia**。 你可以在任务序列中使用此条件。  
+>  “创建任务序列媒体向导”在媒体上设置以下任务序列变量条件：**_SMSTSMediaType = OEMMedia**。 你可以在任务序列中使用此条件。  
 
  使用以下过程来创建预留媒体。  
 
@@ -143,9 +144,4 @@ System Center Configuration Manager 中的预留媒体是 Windows 映像格式 (
 
 ## <a name="next-steps"></a>后续步骤
 [部署企业版操作系统的方案](scenarios-to-deploy-enterprise-operating-systems.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

@@ -2,7 +2,7 @@
 title: "服务连接工具 | Microsoft Docs"
 description: "了解该工具使你能够连接到 Configuration Manager 云服务以手动上传使用情况信息。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 4/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 7a9c5bb9890b00cf3485998aa46286c890429cc0
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: 32f7fc4ef9c8e8d3c2ec8eeaf9a3174bad992ffb
+ms.openlocfilehash: 0da80521bf223a765c3731f8ad59623d85a4c9fa
+ms.lasthandoff: 04/08/2017
 
 
 ---
@@ -26,9 +26,9 @@ ms.lasthandoff: 03/27/2017
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-当 Configuration Manager 站点系统服务器未连接到 Internet 但你仍想保持 Configuration Manager 的最新更新时，请使用 **服务连接工具** 。  
+当服务连接点处于脱机模式，或当 Configuration Manager 站点系统服务器未连接到 Internet 时，请使用**服务连接工具**。 该工具有助于随时更新网站的 Configuration Manager 最新更新。  
 
- 该工具使你能够连接到 Configuration Manager 云服务以手动上载你层次结构的使用情况信息和下载更新。 必须上载使用情况数据才能启用云服务以为你的部署提供正确的更新。  
+运行时，该工具手动连接到 Configuration Manager 云服务，以上传层次结构的使用情况信息并下载更新。 必须上载使用情况数据才能启用云服务以为你的部署提供正确的更新。  
 
 ## <a name="prerequisites-for-using-the-service-connection-tool"></a>使用服务连接工具的先决条件
 以下为先决条件和已知问题。
@@ -85,11 +85,11 @@ ms.lasthandoff: 03/27/2017
 ### <a name="overview"></a>概述
 **使用服务连接工具主要有三个步骤：**  
 
-1.  **准备**：此步骤将使用情况数据放入 .cab 文件中并将其存储在 U 盘上（或指定的替代传输位置）。  
+1.  **准备**：此步骤在托管服务连接点的计算机上运行。 工具运行时，将使用情况数据放入 .cab 文件中并将其存储在 U 盘上（或指定的替代传输位置）。  
 
-2.  **连接**：此步骤将使你在连接到 Internet 的远程计算机上运行该工具以上传数据和下载更新。  
+2.  **连接**：此步骤中，在连接到 Internet 的远程计算机上运行该工具，以便上传使用情况数据和后续下载更新。  
 
-3.  **导入**：此步骤会将 Configuration Manager 的更新导入你的站点，以便可以从 Configuration Manager 控制台查看并安装更新。  
+3.  **导入**：此步骤在托管服务连接点的计算机上运行。 工具运行时，导入下载的内容并将其添加到站点，然后你就可以从 Configuration Manager 控制台查看和安装这些更新。  
 
 从版本 1606 开始，当连接到 Microsoft 时，可以一次性上传多个 .cab 文件（每个文件来自不同的层次结构），并指定代理服务器和代理服务器的用户。   
 

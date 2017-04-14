@@ -16,9 +16,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 88a72259bca79f2fa985e86cb57ec7a974bad24d
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: d7b13f3dea5a3ae413ca6b8150ec24e1632a4d4d
+ms.openlocfilehash: e63b639836bc38a030a051e80db4b057ab75a0b0
+ms.lasthandoff: 04/12/2017
 
 
 ---
@@ -74,7 +74,7 @@ ms.lasthandoff: 03/27/2017
 
 
 ## <a name="configure-pre-cache-content"></a>配置预先缓存内容
-从版本 1702 开始，对于可用的部署和任务序列，可选择使用预先缓存功能，让客户端在用户安装内容之前仅下载相关内容。
+从版本 1702 开始，对于任务序列的可用部署，可选择使用预先缓存功能，让客户端在用户安装内容之前仅下载相关内容。
 > [!TIP]  
 > 在 1702 版本中引入，预先缓存是一项预发行功能。 若要启用此功能，请参阅[使用更新中的预发行功能](/sccm/core/servers/manage/pre-release-features)。
 

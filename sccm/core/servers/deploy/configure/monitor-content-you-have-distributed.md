@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3b387d78e03cc2d1c535e52016d2de4945328f72
-ms.openlocfilehash: c51cf3b3b7563a82db40405677c2edfb6de47cf1
+ms.sourcegitcommit: d7b13f3dea5a3ae413ca6b8150ec24e1632a4d4d
+ms.openlocfilehash: 7496c8bf11d058c94bc36fd28e9557b6470b61f1
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="monitor-content-you-have-distributed-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 监视分发的内容
@@ -35,7 +36,7 @@ ms.openlocfilehash: c51cf3b3b7563a82db40405677c2edfb6de47cf1
 > [!NOTE]  
 >  Configuration Manager 仅监视分发点上位于内容库中的内容。 而不会监视存储在分发点上的包或自定义共享中的内容。  
 
-##  <a name="a-namebkmkcontentstatusa-content-status-monitoring"></a><a name="BKMK_ContentStatus"></a> 内容状态监视  
+##  <a name="BKMK_ContentStatus"></a> 内容状态监视  
  “监视”  工作区中的“内容状态”  节点提供有关内容包的信息。 在 Configuration Manager 控制台中，你可以查看如下信息：  
 
 -   包名称。  
@@ -151,12 +152,12 @@ ms.openlocfilehash: c51cf3b3b7563a82db40405677c2edfb6de47cf1
 4.  在结果窗格中，单击“详细信息”  选项卡。 此时会显示分发点的状态信息。  
 
 ## <a name="client-data-sources-dashboard"></a>客户端数据源仪表板
-从 1610 版起，可以使用“客户端数据源”仪表板，来帮助了解环境中[对等缓存](/sccm/core/plan-design/hierarchy/client-peer-cache)的使用。 客户端使用对等缓存下载内容并将该信息报告回站点之前，此仪表板在控制台中不可见。 此过程最多可能需要 24 小时。
+从 1610 版起，可以使用“客户端数据源”仪表板，来帮助了解环境中[对等缓存](/sccm/core/plan-design/hierarchy/client-peer-cache)的使用。 客户端下载内容后，仪表板将开始显示数据，并将该信息报告给网站。 此过程最多可能需要 24 小时。
 
 > [!TIP]  
-> 1610 版本中，对等缓存和“客户端数据源”仪表板均为预发行功能。 若要启用这些功能，请参阅[使用更新中的预发行功能](/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease)。
+> 1610 版本中，对等缓存和“客户端数据源”仪表板均为预发行功能。 若要启用这些功能，请参阅[使用更新中的预发行功能](/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease)。 “客户端数据源”仪表板仅在启用时才可见。 从启用到开始显示数据，最长需要 24 小时。 
 
-在控制台中，转到“监视” > “客户端状态” > “客户端数据源”。 在此处可以选择要应用于仪表板的时间段。 然后在显示中，可以选择要查看其信息的边界组或包。 查看信息时，可以将鼠标悬停在表面上方，以查看有关不同内容或策略源的更多详细信息。
+在控制台中，转到“监视” > “分发状态” > “客户端数据源”。 在此处可以选择要应用于仪表板的时间段。 然后在显示中，可以选择要查看其信息的边界组或包。 查看信息时，可以将鼠标悬停在表面上方，以查看有关不同内容或策略源的更多详细信息。
 
 这些详细信息包括以下内容：  
 - **客户端内容源**：显示客户端从其处获取内容的源。
@@ -168,9 +169,4 @@ ms.openlocfilehash: c51cf3b3b7563a82db40405677c2edfb6de47cf1
 
 
 还可以使用新报表“客户端数据源 - 摘要”查看每个边界组的客户端数据源摘要。
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

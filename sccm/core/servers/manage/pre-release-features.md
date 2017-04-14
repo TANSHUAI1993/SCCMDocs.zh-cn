@@ -2,7 +2,7 @@
 title: "预发行功能 | Microsoft Docs"
 description: "System Center Configuration Manager 中的预发行功能"
 ms.custom: na
-ms.date: 3/29/2017
+ms.date: 4/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6accec2d356861b273b25ba2b6338d9684a46ff6
-ms.openlocfilehash: c1c8cf505bbc5cab1b6dfb7637eda4a87941c722
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 32f7fc4ef9c8e8d3c2ec8eeaf9a3174bad992ffb
+ms.openlocfilehash: a7ebfea849afcaf236d7e630aad2c7f3f1807a23
+ms.lasthandoff: 04/08/2017
 
 
 ---
@@ -43,6 +43,8 @@ ms.lasthandoff: 03/29/2017
   -   **如果不同意：**安装更新时，预发行功能在“更新和服务向导”中可见，但将灰显且不能启用。 安装更新之后，可以在“功能”节点中查看这些功能，但在“层次结构设置”中同意这样做之前不能启用它们。
 
 如果在独立主站点中同意这样做，并通过安装新的管理中心站点扩展层次结构，则还必须在管理中心站点也同意这样做。
+
+ 启用预发行功能时，配置管理器层次结构管理器 (HMAN) 必须在该功能可用之前处理更改。 更改的处理通常是即时的，但根据 HMAN 处理周期，最长需要 30 分钟才能完成。 处理更改后，必须重新启动控制台，然后才能查看与该功能相关的新 UI。
 
 **可以使用以下预发行功能：**
 

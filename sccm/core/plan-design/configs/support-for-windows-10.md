@@ -16,9 +16,9 @@ author: brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6accec2d356861b273b25ba2b6338d9684a46ff6
-ms.openlocfilehash: 188c6b1d7ae7768bb4075688d7d47607ee83be17
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 2cdd25343cf68a79067a317b820572491a3633a2
+ms.openlocfilehash: 84d6fdcec2c539f0fd3043f01d18e165da8c52c9
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="support-for-windows-10-as-a-client-of-system-center-configuration-manager"></a>支持 Windows 10 作为 System Center Configuration Manager 的客户端
@@ -43,8 +43,9 @@ Windows 版本发布后，Configuration Manager 会尽快为每个新的 Windows
 |1507 <br />（*请参见版本*）            |![支持](media/green_check.png) |![支持](media/green_check.png) |![支持](media/green_check.png) |
 |1511 (CB)、(CBB)<br />（*请参见版本*） |![支持](media/green_check.png) |![支持](media/green_check.png) |![支持](media/green_check.png) |
 |企业版 2016 长期服务                   |![支持](media/green_check.png) |![支持](media/green_check.png) |![支持](media/green_check.png) |
-|1607 (CB)    <br />（*请参见版本*）      |![后向兼容](media/blue_compat.png) |![支持](media/green_check.png) |![支持](media/green_check.png) |
-|1607 (CBB)    <br />（*请参见版本*）      |![不支持](media/Red_X.png)   |![支持](media/green_check.png) |![支持](media/green_check.png) |
+|1607 (CB)    <br />周年更新<br />（*请参见版本*）      |![后向兼容](media/blue_compat.png) |![支持](media/green_check.png) |![支持](media/green_check.png) |
+|1607 (CBB)    <br />周年更新<br />（*请参见版本*）      |![不支持](media/Red_X.png)   |![支持](media/green_check.png) |![支持](media/green_check.png) |
+|1703 (CBB)    <br />创意者更新<br />（*请参见版本*）      |![不支持](media/Red_X.png)   |![不支持](media/Red_X.png) |![后向兼容](media/blue_compat.png) |
 
 
 

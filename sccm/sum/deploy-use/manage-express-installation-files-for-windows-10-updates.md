@@ -13,9 +13,9 @@ ms.technology:
 - configmgr-sum
 ms.assetid: b8d8af88-e8ac-4deb-921b-975e2d2afd80
 translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 459ad5a428102b5e040bec2eaf2a70fc89789dff
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: d7b13f3dea5a3ae413ca6b8150ec24e1632a4d4d
+ms.openlocfilehash: fcdcbcde61402b47871d51deba32d23867a78370
+ms.lasthandoff: 04/12/2017
 
 ---
 
@@ -23,7 +23,8 @@ ms.lasthandoff: 03/27/2017
 从 Configuration Manager 版本 1702 起，Configuration Manager 支持 Windows 10 更新的快速安装文件。 如果使用支持版本的 Windows 10，可通过 Configuration Manager 设置只下载本月的 Windows 10 累积更新和上月更新之间的更改。 在没有快速安装文件的情况下，Configuration Manager 每个月都会下载完整的 Windows 10 累积更新（包括先前月份的所有更新）。 使用快速安装文件，所需下载文件更小，在客户端上安装更快速。
 
 > [!IMPORTANT]
-> 尽管 Configuration Manager 版本 1702 中支持快速安装文件的设置已可用，但此操作系统客户端支持仅在 Windows 10 版本 1607 中可用，并随附 Windows 更新代理更新。 2017 年 4 月 11 日（星期二的修补程序）发布的更新中包含此更新。 <!--For more information about these updates, see [support article 4015217](http://support.microsoft.com/kb/4015217).--> 未来的更新将利用此快速安装文件，以获得更小的下载文件。 不包含此更新的 Windows 10 版本 1607 和之前版本不支持快速安装文件。
+> 尽管 Configuration Manager 版本 1702 中支持快速安装文件的设置已可用，但此操作系统客户端支持仅在 Windows 10 版本 1607 中可用，并随附 Windows 更新代理更新。 2017 年 4 月 11 日（星期二的修补程序）发布的更新中包含此更新。 若要详细了解这些更新，请参阅[支持文章 4015217](http://support.microsoft.com/kb/4015217)。 未来的更新将利用此快速安装文件，以获得更小的下载文件。 不包含此更新的 Windows 10 版本 1607 和之前版本不支持快速安装文件。
+
 
 ### <a name="to-enable-the-download-of-express-installation-files-for-windows-10-updates-on-the-server"></a>在服务器上启用 Windows 10 更新的快速安装文件下载
 若要开始同步 Windows 10 快速安装文件的元数据，则必须在软件更新点属性中将其启用。
