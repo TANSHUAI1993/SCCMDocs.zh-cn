@@ -2,7 +2,7 @@
 title: "创建 PFX 证书配置文件 | Microsoft Docs"
 description: "了解如何使用 System Center Configuration Manager 中的 PFX 文件生成支持加密数据交换的用户特定证书。"
 ms.custom: na
-ms.date: 03/30/2017
+ms.date: 04/04/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,9 +17,9 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3b1451edaed69a972551bd060293839aa11ec8b2
-ms.openlocfilehash: 2495cef2442706b343bac6d510946c1226b64cfc
-ms.lasthandoff: 03/28/2017
+ms.sourcegitcommit: 26feb0b166beb7e48cb800a5077d00dbc3eec51a
+ms.openlocfilehash: 27435316c6e47531ff989bc8956ca0c874131a0e
+ms.lasthandoff: 04/04/2017
 
 
 ---
@@ -38,7 +38,7 @@ ms.lasthandoff: 03/28/2017
 - 有关其他先决条件，请参阅[证书配置文件先决条件](../../protect/plan-design/prerequisites-for-certificate-profiles.md)。
 
 ## <a name="pfx-certificate-profiles"></a>PFX 证书配置文件
-System Center Configuration Manager 允许你将个人信息交换 (.pfx) 文件设置到用户设备。 PFX 文件可以用于生成特定于用户的证书以支持加密数据交换。 可在 Configuration Manager 中创建 PFX 证书或将其导入。
+System Center Configuration Manager 允许将个人信息交换 (.pfx) 文件导入到用户设备，然后进行设置。 PFX 文件可以用于生成特定于用户的证书以支持加密数据交换。
 
 > [!TIP]  
 >  描述此过程的分步演练会出现在 [如何在 Configuration Manager 中创建和部署 PFX 证书配置文件](http://blogs.technet.com/b/karanrustagi/archive/2015/09/01/how-to-create-and-deploy-pfx-certificate-profiles-in-configuration-manager.aspx)。  
@@ -59,10 +59,10 @@ System Center Configuration Manager 允许你将个人信息交换 (.pfx) 文件
 
     -   **说明**：提供对证书配置文件进行概述，以及可帮助在 System Center Configuration Manager 控制台中识别该证书配置文件的其他相关信息的描述。 最多可以使用 256 个字符。  
 
-    -   **指定想要创建的证书配置文件的类型**：对于 PFX 证书，请选择以下项之一：  
+    -   **指定想要创建的证书配置文件的类型**：对于 PFX 证书，请选择：  
 
         -   **个人信息交换 PKCS #12 (PFX) 设置 - 导入**：选择此项可导入 PFX 证书。  
-        -   **个人信息交换 PKCS #12 (PFX) 设置 - 创建**：选择此项可创建新的 PFX 证书。
+       
 
 ### <a name="import-a-pfx-certificate"></a>导入 PFX 证书
 
@@ -71,7 +71,7 @@ System Center Configuration Manager 允许你将个人信息交换 (.pfx) 文件
 1. 在“创建证书配置文件向导”的“PFX 证书”页上，指定证书将存储在其部署设备上的位置：
     -     **如果存在受信任的平台模块 (TPM) 则安装到该处**  
     -   **安装到受信任的平台模块 (TPM)，否则失败** 
-    -   **安装到 Windows Hello 企业版，否则会失败** 
+    -   **安装到 Windows Hello 企业版，否则失败** 
     -   **安装到软件密钥存储提供程序** 
 2. 单击“下一步” 。 
 3. 在向导的“支持的平台”页上，选择要安装此证书的设备平台，然后单击“下一步”。
@@ -107,28 +107,7 @@ System Center Configuration Manager 允许你将个人信息交换 (.pfx) 文件
    -   $ProfileName = PFX 配置文件的名称  
    -   ComputerName = 主机名   
 
-### <a name="create-a-new-pfx-certificate"></a>创建新的 PFX 证书
 
-创建和部署 PFX 证书时，将在用户注册的所有设备上安装同一证书。
-
-1. 在向导的“支持的平台”页上，选择要安装此证书的设备平台，然后单击“下一步”。
-2. 在向导的“证书颁发机构”页上，配置以下项：
-    - **主站点** - 选择要从中选择证书颁发机构的 Configuration Manager 主站点。
-    - **证书颁发机构** - 选择主站点后，从列表中选择所需的证书颁发机构，然后单击“下一步”。
-3. 在向导的“PFX 证书”页上，配置以下值：
-    - **续订阈值 (%)** - 指定设备请求续订证书之前剩余的证书生存期的百分比。
-    - **证书模板名称** - 单击“浏览”选择已添加到颁发 CA 的证书模板的名称。 要成功浏览到证书模板，用于运行 Configuration Manager 控制台的用户帐户必须具有证书模板的“读取”权限。 或者，键入证书模板的名称。 
-    - **使用者名称格式** - 从列表中，选择 Configuration Manager 自动创建证书请求中的使用者名称的方式。 如果证书用于用户，还可包含使用者名称中的用户电子邮件地址。 选择“公用名称”或“完全可分辨名称”。
-    - **使用者可选名称** - 指定 Configuration Manager 自动创建证书请求中使用者可选名称 (SAN) 的值的方式。 例如，你选择了用户证书类型，则可以在使用者可选名称中包括用户主体名称 (UPN)。 选择：
-        - **电子邮件地址** 
-        - **用户主体名称 (UPN)** 
-    - **证书有效期** - 
-    - **Windows 密钥存储提供者**（仅当你选择 Windows 作为支持的平台时才显示）- 
-        -     **如果存在受信任的平台模块 (TPM) 则安装到该处**  
-        -   **安装到受信任的平台模块 (TPM)，否则失败** 
-        -   **安装到 Windows Hello 企业版，否则失败** 
-        -   **安装到软件密钥存储提供程序** 
-4. 单击“下一步” 。
 
 ### <a name="finish-up"></a>完成
 

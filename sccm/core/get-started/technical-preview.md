@@ -2,7 +2,7 @@
 title: System Center Configuration Manager Technical Preview | Microsoft Docs
 description: "了解可让你试用 System Center Configuration Manager 中的新功能和新特性的 Technical Preview 版本。"
 ms.custom: na
-ms.date: 3/28/2017
+ms.date: 4/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: f326eb961be400187c2dcadd564a7e344dc4b175
-ms.openlocfilehash: 66b57ec07ebaffd63791741c0ac038d14ab5f367
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 9b31fab8fa93195c60e9026e2df99311aa6e328f
+ms.openlocfilehash: 61d4b7017769609caf8fcb8fcdd510f5a0b5b712
+ms.lasthandoff: 04/03/2017
 
 
 ---
@@ -85,15 +85,16 @@ ms.lasthandoff: 03/29/2017
 
  若要使用技术预览版，必须先安装技术预览版内部版本的 **基线版本** 。 安装基线版本之后，可使用 **控制台内部更新** 来升级此内部版本，以便使用最新预览版使你的安装程序保持最新。     通常，每个月都会提供新版本的 Technical Preview。
 
-每个预览版的支持时间在发布三个后续版本后结束。 也就是说，发布 1702 版时，将不再支持 1610 版，但是仍支持 1611、1612 和 1701 版。 但如果不再支持上一个基线版本（如 1610 版），仍然支持安装新的 Technical Preview 站点（直到新基线版本可用），只要之后将该安装产品更新为受支持的版本即可。
+每个预览版的支持时间在发布三个后续版本后结束。 也就是说，发布 1702 版时，将不再支持 1610 版，但是仍支持 1611、1612 和 1701 版。 如果基线版本不再受支持（如 1610 版），仍然支持安装新的 Technical Preview 站点（直到新基线版本可用），只要之后将该安装产品更新为受支持的版本即可。 更新时，如果控制台中未显示可用的最新版本，请更新到提供的最新版本，然后重复此过程直至可安装 Technical Preview 的最新版本。
 
 > [!TIP]  
 >  当你将更新安装到技术预览版时，即可将预览安装更新到此新的技术预览版。    技术预览版安装绝不会升级到当前的分支安装，也不会从当前分支版本获取更新。  
 
- **Technical Preview 的活动基线版本：**  
- 可以在基线版本发布后的 1 年内安装此基线版本。 但是，在安装新的技术预览站点时，我们建议使用可用的最新基线版本。
+**Technical Preview 的活动基线版本：**  
+可以在基线版本发布后的 1 年内安装此基线版本。 但是，在安装新的技术预览站点时，我们建议使用可用的最新基线版本。
+-  **Technical Preview 1703** - Configuration Manager Technical Preview 1703 可作为 Configuration Manager Technical Preview 的控制台中更新，以及作为 TechNet 评估中心网站中提供的新基线版本。
 
--   **Technical Preview 1610** - Configuration Manager Technical Preview 1610 可作为 Configuration Manager Technical Preview 的控制台中更新，以及作为 [TechNet 评估中心](https://www.microsoft.com/en-us/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview)网站中提供的基线版本。
+-  **Technical Preview 1610** - Configuration Manager Technical Preview 1610 可同时用作 Configuration Manager Technical Preview 的控制台内更新和基线版本。 如果具有用于安装 1610 的媒体，建议下载版本 1703 并改为安装该版本。
 
 
 
@@ -113,6 +114,13 @@ ms.lasthandoff: 03/29/2017
 
  |功能|Technical Preview 版本|Current Branch 版本|  
  |----------------|---------------------|--------------------|
+ |将批量采购的 iOS 应用部署到设备集合|[Tech Preview 1703](capabilities-in-technical-preview-1703.md#deploy-volume-purchased-ios-apps-to-device-collections)|[版本 1702](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps)|
+ |指向软件中心中应用程序的直接链接|[Tech Preview 1703](capabilities-in-technical-preview-1703.md#direct-links-to-applications-in-software-center)|![未添加](media/Red_X.gif)
+ |Configuration Manager Windows 客户端计算机的 PFX 证书|[Tech Preview 1703](capabilities-in-technical-preview-1703.md#pfx-certificates-for-configuration-manager-windows-client-computers)|![未添加](media/Red_X.gif)|
+ |配置 Azure 服务向导|[Tech Preview 1703](capabilities-in-technical-preview-1703.md#configure-azure-services-wizard)|![未添加](media/Red_X.gif)|
+ |在操作系统升级任务序列中从 BIOS 转换为 UEFI| [Tech Preview 1703](capabilities-in-technical-preview-1703.md#convert-from-bios-to-uefi-during-an-in-place-upgrade) |[版本 1702](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion#convert-from-bios-to-uefi-during-an-in-place-upgrade)|
+ |可折叠的任务序列组| [Tech Preview 1703](capabilities-in-technical-preview-1703.md#collapsible-task-sequence-groups) |![未添加](media/Red_X.gif)|
+ |用于配置 Windows Analytics for Upgrade Readiness 的客户端设置 | [Tech Preview 1703](capabilities-in-technical-preview-1703.md#client-settings-to-configure-windows-analytics-for-upgrade-readiness) |![未添加](media/Red_X.gif)|
  |iOS 设备的新符合性设置|[Tech Preview 1702](capabilities-in-technical-preview-1702.md#new-compliance-settings-for-ios-devices)|[版本 1702](/sccm/mdm/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client)|
  |创建具有 S/MIME 支持的 PFX 证书|[Tech Preview 1702](capabilities-in-technical-preview-1702.md#create-pfx-certificates-with-s-mime-support)|[版本 1702](/sccm/mdm/deploy-use/create-pfx-certificate-profiles)|
  |在安装应用程序之前检查运行的可执行文件|[Tech Preview 1702](capabilities-in-technical-preview-1702.md#check-for-running-executable-files-before-installing-an-application)|[版本 1702](/sccm/apps/deploy-use/deploy-applications)|

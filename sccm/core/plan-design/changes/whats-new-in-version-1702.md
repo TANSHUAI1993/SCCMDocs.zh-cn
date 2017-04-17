@@ -2,7 +2,7 @@
 title: "新版本 1702 |Microsoft Docs"
 description: "获取有关 System Center Configuration Manager 的 1702 版中引入的更改和新功能的详细信息。"
 ms.custom: na
-ms.date: 3/28/2017
+ms.date: 3/31/2017
 ms.reviewer: na
 ms.suite: na
 ms.technology:
@@ -14,9 +14,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 15debff961c872ed90c1365d4f8e9946fbc70cdc
-ms.openlocfilehash: 10e0c2108594253a8e6cb39bc47f84c72c073e6c
-ms.lasthandoff: 03/29/2017
+ms.sourcegitcommit: 70034213442f4c3d5a28ab65c2ceb51aa64320ad
+ms.openlocfilehash: 9332278e960051caf6875f45212af644e2ea7890
+ms.lasthandoff: 03/31/2017
 
 ---
 # <a name="what39s-new-in-version-1702-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1702 中的新增功能
@@ -28,9 +28,9 @@ System Center Configuration Manager Current Branch 的更新 1702 作为控制�
 > [!TIP]  
 > 若要安装新站点，必须使用 Configuration Manager 的基准版本。  
 >  了解详细信息：    
->  -   [安装新站点](https://technet.microsoft.com/library/mt590197.aspx)  
->  -   [在站点上安装更新](https://technet.microsoft.com/library/mt607046.aspx)  
->  -   [基准和更新版本](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)  
+>   - [安装新站点](https://technet.microsoft.com/library/mt590197.aspx)  
+>   - [在站点上安装更新](https://technet.microsoft.com/library/mt607046.aspx)  
+>   - [基准和更新版本](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)  
 
 以下各节提供有关 Configuration Manager 版本 1702 中引入的更改和新功能的详细信息。  
 
@@ -192,7 +192,7 @@ System Center Configuration Manager Current Branch 的更新 1702 作为控制�
 从版本 1702 开始，对于可用的部署和任务序列，可以选择使用预先缓存内容。 借助预先缓存内容，用户可选择允许客户端在收到部署后立即下载适用的内容。 因此，当用户在软件中心中单击“安装”时，内容便已就绪，并且安装可以快速启动，因为内容位于本地硬盘上。 有关详细信息，请参阅[配置预先缓存内容](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content)。
 
 ### <a name="convert-from-bios-to-uefi-during-an-in-place-upgrade"></a>在就地升级过程中从 BIOS 转换到 UEFI
-Windows 10 创意者更新引入了一个简单的转换工具，它可以自动执行对启用了 UEFI 的硬件的硬盘进行重新分区的过程，并将转换工具集成到 Windows 7 到 Windows 10 就地升级过程中。 将此工具与你的操作系统升级任务序列和将固件从 BIOS 转换到 UEFI 的 OCM 工具组合使用时，可以在 Windows 10 创意者更新的就地升级过程中将你的计算机从 BIOS 转换到 UEFI。 有关详细信息，请参阅[管理 BIOS 转换为 UEFI 所采用的任务序列步骤](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion#convert-from-bios-to-uefi-during-an-in-place-upgrade)。
+Windows 10 创意者更新引入了一个简单的转换工具，可自动执行对用于启用 UEFI 的硬件的硬盘重新分区的过程，并将该转换工具集成到 Windows 7 到 Windows 10 的就地升级过程中。 将此工具与你的操作系统升级任务序列和将固件从 BIOS 转换到 UEFI 的 OCM 工具组合使用时，可以在 Windows 10 创意者更新的就地升级过程中将你的计算机从 BIOS 转换到 UEFI。 有关详细信息，请参阅[管理 BIOS 转换为 UEFI 所采用的任务序列步骤](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion#convert-from-bios-to-uefi-during-an-in-place-upgrade)。
 
 ### <a name="improvements-to-the-install-applications-task-sequence-step"></a>对“安装应用程序任务”序列步骤的改进
 此版本引入了以下改进：
@@ -216,6 +216,8 @@ Windows 10 创意者更新引入了一个简单的转换工具，它可以自动
 ### <a name="default-boot-image-source-path-can-no-longer-be-changed"></a>默认启动映像源路径无法再进行更改
 默认启动映像由 Configuration Manager 托管，并且无法再在 Configuration Manager 控制台中或通过使用 Configuration Manager SDK 更改默认启动映像源路径。 可继续为自定义启动映像配置自定义源路径。
 
+### <a name="default-boot-images-are-regenerated-after-upgrading-configuration-manager-to-a-new-version"></a>Configuration Manager 升级到新版本后将重新生成默认启动映像
+从此版本开始，如果升级 Windows ADK 版本，然后使用更新和服务安装 Configuration Manager 的最新版本，Configuration Manager 将重新生成默认启动映像。 这包括已更新的 Windows ADK 中的新 Window PE 版本、新版本的 Configuration Manager 客户端、驱动程序、自定义项等。不会修改自定义启动映像。 有关详细信息，请参阅[管理启动映像](/sccm/osd/get-started/manage-boot-images#BKMK_BootImageDefault)。
 
 ## <a name="software-updates"></a>软件更新
 
@@ -268,19 +270,9 @@ Windows 10 创意者更新引入了一个简单的转换工具，它可以自动
 - [Android for Work 的合规性策略](/sccm/mdm/deploy-use/create-compliance-policy)
 
 
-### <a name="improvements-to-certificate-profiles"></a>证书配置文件的改进
-
-现在，可以创建支持 S/MIME 的 PFX 证书配置文件，并将其部署到用户。  然后这些证书可以用于用户已注册的所有 iOS 设备中的 S/MIME 加密和登录。
-有关详细信息，请参阅[如何创建 PFX 证书配置文件](/sccm/mdm/deploy-use/create-pfx-certificate-profiles)和 [Exchange ActiveSync 电子邮件配置文件](/sccm/mdm/deploy-use/create-exchange-activesync-profiles)。
-
-此外，现在还可对多个证书注册点站点系统角色指定多个证书颁发机构 (CA)，然后分配哪些 CA 处理证书配置文件中的请求。
-有关详细信息，请参阅[证书基础结构](/sccm/protect/deploy-use/certificate-infrastructure)。
-
-证书的这些新功能当前为预发布版，可能会有所变动。
-
 ### <a name="deploy-volume-purchased-ios-apps-to-device-collections"></a>将批量采购的 iOS 应用部署到设备集合
 
-现在可以将已授权的应用程序部署到设备以及用户。 具体取决于应用支持设备授权的能力，合适的许可证将在部署时按以下方式声明：
+现在可以将已授权的应用程序部署到设备以及用户。 根据应用对设备授权的支持能力，合适的许可证将在部署时按以下方式声明：
 
 |||||
 |-|-|-|-|

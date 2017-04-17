@@ -16,9 +16,9 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3c2a07f560e0aa3d2beb7cc50e71c98ac45c27e1
-ms.openlocfilehash: cc3e4055ce6b648e4554773518fc928cfb51c5f3
-ms.lasthandoff: 03/28/2017
+ms.sourcegitcommit: 3eb48942c1259d2aa1b3c200fad73b39b11c0b8c
+ms.openlocfilehash: 51560360a0cb7ecb4a2b0d7eaeb4fdd62d6afc13
+ms.lasthandoff: 03/30/2017
 
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager 和 Microsoft Intune 的混合移动设备管理中的新增功能
@@ -81,6 +81,16 @@ ms.lasthandoff: 03/28/2017
 - **Microsoft Teams 现已在 iOS 和 Android 上启用了 MAM**
 
   iOS 和 Android 适用的 Microsoft Teams 应用现已启用了 Intune 移动应用管理 (MAM) 功能，因此你可帮助团队跨设备自由工作，同时确保每个环节的对话和公司数据均受保护。 有关详细信息，请参阅企业移动性和安全性博客中的 [Microsoft Teams 公告](https://blogs.technet.microsoft.com/enterprisemobility/2017/03/14/microsoft-teams-is-now-generally-available-and-mam-enabled-on-ios-and-android/)。
+
+### <a name="new-in-configuration-manager-technical-preview-1703"></a>Configuration Manager Technical Preview 1703 中的新增功能
+
+- **对 Apple Volume Purchase Program 方案的额外支持**
+
+   从 Technical Preview 1703 开始，现可支持以下 Volume Purchase Program (VPP) 方案：
+
+   - 设备许可 - 对于支持设备许可且部署到设备集合的应用，每个设备仅需要一个许可证。  以前，设备上每位用户都需要一个许可证。 有关详细信息，请参阅[将批量采购的 iOS 应用部署到设备集合](/sccm/core/get-started/capabilities-in-technical-preview-1703#deploy-volume-purchased-ios-apps-to-device-collections)。
+   - 将多个 VPP 令牌用于单个混合租户，且同时将两个令牌均用于管理 VPP 应用。
+   - 使用 VPP 教育令牌，且可区分企业和教育令牌。
 
 ### <a name="new-in-configuration-manager-current-branch"></a>Configuration Manager (Current Branch) 中的新增功能
 

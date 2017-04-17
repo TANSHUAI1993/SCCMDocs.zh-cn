@@ -17,9 +17,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 4edf7d09d39fa22fb5812aecc88febd763001eba
-ms.openlocfilehash: 369aa062d0f38eedebc0a7c351a7ce67b53d199b
-ms.lasthandoff: 02/21/2017
+ms.sourcegitcommit: 0cf2ac6440588ccf4848baa7a195f78e8675447d
+ms.openlocfilehash: c6a1eb9ccaee45eb242fb320cb6b492d1a39d349
+ms.lasthandoff: 04/11/2017
 
 
 ---
@@ -29,19 +29,33 @@ ms.lasthandoff: 02/21/2017
 
 Configuration Manager 中的一个启动映像是在操作系统部署过程中使用的 [Windows PE (WinPE)](https://msdn.microsoft.com/library/windows/hardware/dn938389%28v=vs.85%29.aspx) 映像。 启动映像用于在 WinPE 中启动计算机，它是用于准备在目标计算机上安装 Windows 的有限组件和服务的最精简操作系统。  使用下列部分来管理启动映像。
 
-##  <a name="a-namebkmkbootimagedefaulta-default-boot-images"></a><a name="BKMK_BootImageDefault"></a>默认启动映像  
- Configuration Manager 提供两个默认启动映像：一个用于支持 x86 平台，另一个用于支持 x64 平台。 这些映像存储在以下路径中：\\\\*servername*>\SMS_<*sitecode*>\osd\boot\\<*x64*> or <*i386*>。  
+## <a name="BKMK_BootImageDefault"></a>默认启动映像
+Configuration Manager 提供两个默认启动映像：一个用于支持 x86 平台，另一个用于支持 x64 平台。 这些映像存储在以下路径中：\\\\*servername*>\SMS_<*sitecode*>\osd\boot\\<*x64*> or <*i386*>。 将根据所采用的操作更新或重新生成默认启动映像。
 
- 将 Configuration Manager 升级到新版本时，Configuration Manager 可能会将此位置中的默认启动映像以及基于默认启动映像的自定义启动映像替换为更新的文件。 更新启动映像（包括驱动程序）时，在站点上对默认启动映像配置的选项（如可选组件）会转入。 源驱动程序对象必须有效（包括驱动程序源文件），否则驱动程序不会添加到站点上的已更新启动映像。 不基于默认启动映像的其他启动映像（即使基于相同的 Windows ADK 版本）不会更新。 更新启动映像之后，需要将它们重新分发到分发点。 使用启动映像的任何媒体都需要重新创建。 如果不希望自动更新自定义/默认启动映像，则应将它们存储在不同位置。  
+**使用更新和服务安装 Configuration Manager 的最新版本** 从版本 1702 开始，如果升级 Windows ADK 版本，然后使用更新和服务安装最新版本的 Configuration Manager，Configuration Manager 将重新生成默认启动映像。 这包括已更新的 Windows ADK 中的新 Window PE 版本、新版本的 Configuration Manager 客户端、驱动程序、自定义项等。不会修改自定义启动映像。
 
- 向已添加到“软件库”的所有启动映像中添加了 Configuration Manager 跟踪日志工具。 处于 WinPE 中时，可以通过从命令提示符键入 **CMTrace** 以启动 Configuration Manager 跟踪日志工具。  
+在版本 1702 之前，Configuration Manager 会使用客户端组件、驱动程序、自定义项等更新现有启动映像 (boot.wim)，但不会使用 Windows ADK 中的最新版本 Windows PE。 必须手动修改启动映像才能使用 Windows ADK 的最新版本。
 
-##  <a name="a-namebkmkbootimagecustoma-customize-a-boot-image"></a><a name="BKMK_BootImageCustom"></a>自定义启动映像  
+**从 Configuration Manager 2012 升级到 Configuration Manager Current Branch (CB)** 通过使用安装过程从 Configuration Manager 2012 升级到 Configuration Manager CB 时，Configuration Manager 将重新生成默认启动映像。 这包括已更新的 Windows ADK 中的新 Window PE 版本、新版本的 Configuration Manager 客户端，且所有自定义项保持不变。 不会修改自定义启动映像。
+
+**使用启动映像更新分发点** 从 Configuration Manager 控制台中的“启动映像”节点使用“更新分发点”操作时，Configuration Manager 将使用客户端组件、驱动程序、自定义项等更新默认启动映像，但不会使用 Windows ADK 中的最新版本 Windows PE。 不会修改自定义启动映像。
+
+此外，对于上述任一操作，请考虑以下内容：
+- 源驱动程序对象必须有效（包括驱动程序源文件），否则驱动程序不会添加到站点上的启动映像。
+- 不会修改不基于默认启动映像的启动映像（即使使用相同的 Windows ADK 版本）。
+- 必须将已修改的启动映像重新分发到分发点。
+- 必须重新创建要使用修改后的启动映像的媒体。
+- 如果不希望自动更新自定义/默认启动映像，请勿将它们存储在默认位置。
+
+> [!NOTE]
+> 向已添加到“软件库”的所有启动映像中添加了 Configuration Manager 跟踪日志工具。 处于 Windows PE 中时，可以通过从命令提示符键入 **CMTrace** 以启动 Configuration Manager 跟踪日志工具。  
+
+##  <a name="BKMK_BootImageCustom"></a>自定义启动映像  
  Configuration Manager 控制台基于来自受支持的 Windows ADK 版本中的 Windows PE 版本时，可从 Configuration Manager 控制台自定义启动映像或[修改启动映像](#BKMK_ModifyBootImages)。 使用新版本升级站点并且安装新版本的 Windows ADK 时，不会使用新版本的 Windows ADK 更新自定义启动映像（不在默认启动映像位置）。 发生这种情况时，你不再能够在 Configuration Manager 控制台中自定义启动映像。 但是，它们将继续如同升级之前一样正常工作。  
 
  当启动映像基于站点上安装的不同版本的 Windows ADK 时，你必须使用其他方法自定义启动映像，如使用 Windows AIK 和 Windows ADK 中的部署映像服务和管理 (DISM) 命令行工具。 有关详细信息，请参阅[自定义启动映像](customize-boot-images.md)。  
 
-##  <a name="a-namebkmkaddbootimagesa-add-a-boot-image"></a><a name="BKMK_AddBootImages"></a>添加启动映像  
+##  <a name="BKMK_AddBootImages"></a>添加启动映像  
 
  在站点安装过程中，Configuration Manager 会自动添加 Windows ADK 支持版本中基于 WinPE 版本的启动映像。 根据 Configuration Manager 的版本，你能够添加 Windows ADK 支持版本中基于不同 WinPE 版本的启动映像。  如果尝试添加包含不受支持的 WinPE 版本的启动映像，则会发生错误。  
 
@@ -96,7 +110,7 @@ Configuration Manager 中的一个启动映像是在操作系统部署过程中�
 > [!NOTE]  
 >  在 Configuration Manager 控制台中选择“启动映像”节点时，“大小(KB)”列会显示每个启动映像的解压缩大小。 但是，Configuration Manager 通过网络发送启动映像时，会发送映像的压缩副本，该副本通常远小于“大小(KB)”列中所列的大小。  
 
-##  <a name="a-namebkmkdistributebootimagesa-distribute-boot-images-to-a-distribution-point"></a><a name="BKMK_DistributeBootImages"></a>将启动映像分发到分发点  
+##  <a name="BKMK_DistributeBootImages"></a>将启动映像分发到分发点  
  将采用与分发其他内容相同的方式将启动映像分发到分发点。 大多数情况下，部署操作系统并创建媒体之前，必须将启动映像分发到至少一个分发点。  
 
 > [!NOTE]  
@@ -110,7 +124,7 @@ Configuration Manager 中的一个启动映像是在操作系统部署过程中�
 
  关于分发启动映像的步骤，请参阅 [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content)。  
 
-##  <a name="a-namebkmkmodifybootimagesa-modify-a-boot-image"></a><a name="BKMK_ModifyBootImages"></a>修改启动映像  
+##  <a name="BKMK_ModifyBootImages"></a>修改启动映像  
  你可在映像中添加或删除设备驱动程序，或编辑与启动映像关联的属性。 你可添加或删除的设备驱动程序包括网络适配器或大容量存储设备驱动程序。 在修改启动映像时，请考虑以下因素：  
 
 -   在将设备驱动程序添加到启动映像之前，你必须将这些驱动程序导入驱动程序目录并启用它们。  
@@ -212,7 +226,7 @@ Configuration Manager 中的一个启动映像是在操作系统部署过程中�
 
 6.  配置了属性后，单击“确定” 。  
 
-##  <a name="a-namebkmkbootimagepxea-configure-a-boot-image-to-deploy-from-a-pxe-enabled-distribution-point"></a><a name="BKMK_BootImagePXE"></a>配置一个启动映像以从启用 PXE 的分发点部署  
+##  <a name="BKMK_BootImagePXE"></a>配置一个启动映像以从启用 PXE 的分发点部署  
  在为 PXE 操作系统部署使用启动映像之前，必须将启动映像配置为从启用 PXE 的分发点部署。  
 
 #### <a name="to-configure-a-boot-image-to-deploy-from-a-pxe-enabled-distribution-point"></a>若要配置一个启动映像以从启用 PXE 的分发点部署  
@@ -232,7 +246,7 @@ Configuration Manager 中的一个启动映像是在操作系统部署过程中�
 
 6.  配置了属性后，单击“确定” 。  
 
-##  <a name="a-namebkmkbootimagelanguagea-configure-multiple-languages-for-boot-image-deployment"></a><a name="BKMK_BootImageLanguage"></a>为启动映像部署配置多种语言  
+##  <a name="BKMK_BootImageLanguage"></a>为启动映像部署配置多种语言  
  语言中性的启动映像。 这样一来，在处于 WinPE 中时，如果将来自 Windows PE 可选组件的合适语言支持包括在内，并且设置了合适的任务序列变量以指示可以显示的语言，则你可以使用一个以多种语言显示任务序列文本的启动映像。 无论是哪个 Configuration Manager 版本，部署的操作系统的语言都独立于在处于 WinPE 中时显示的语言。 向用户显示的语言根据下列说明来确定：  
 
 -   在用户从现有的操作系统运行任务序列时，Configuration Manager 会自动使用为用户配置的语言。 在规定的部署截止时间导致任务序列自动运行时，Configuration Manager 会使用操作系统的语言。  

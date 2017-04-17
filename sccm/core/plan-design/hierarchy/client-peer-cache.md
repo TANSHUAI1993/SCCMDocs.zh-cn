@@ -2,7 +2,7 @@
 title: "客户端对等缓存 | System Center Configuration Manager"
 description: "使用 System Center Configuration Manager 部署内容时，将对等缓存用于客户端内容源位置。"
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 4/4/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 5298f1c836c1a872862b0e972180ac0c99c59751
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: 26feb0b166beb7e48cb800a5077d00dbc3eec51a
+ms.openlocfilehash: dcd05d7d120f8997562da7d92b38c8b52a512357
+ms.lasthandoff: 04/04/2017
 
 ---
 
@@ -70,7 +70,7 @@ ms.lasthandoff: 03/27/2017
 从版本 1702 开始，可以使用以下三个报表来查看对等缓存使用。 在控制台中，转到“监视” > “报表” > “报表”。 所有报表均为一种类型的**软件分发内容**：
 1.  **对等缓存源内容拒绝**：  
 使用此报告来了解边界组中对等缓存源拒绝内容请求的频率。
- - **已知问题：**在向下钻取结果（如 *MaxCPULoad* 或 *MaxDiskIO*）时，可能会收到一个错误，表明找不到该报表或详细信息。 若要解决此问题，请使用以下两个直接显示结果的报表。 
+ - **已知问题：**在向下钻取结果（如 *MaxCPULoad* 或 *MaxDiskIO*）时，可能会收到一个错误，表明找不到该报表或详细信息。 若要解决此问题，请使用以下两个直接显示结果的报表。
 
 2. **按条件的对等缓存源内容拒绝**：  
 使用此报告来了解指定边界组的拒绝详细信息或拒绝类型。 你可指定
@@ -87,9 +87,11 @@ ms.lasthandoff: 03/27/2017
 
 
 ## <a name="requirements-and-considerations-for-peer-cache"></a>对等缓存的要求和注意事项
-- 任何支持作为 Configuration Manager 客户端的 Windows 操作系统都支持对等缓存。 对等缓存不支持非 Windows 操作系统。
+-   任何支持作为 Configuration Manager 客户端的 Windows 操作系统都支持对等缓存。 对等缓存不支持非 Windows 操作系统。
 
-- 客户端只能传输来自其当前边界组中的对等缓存客户端中的内容。
+-   客户端只能传输来自其当前边界组中的对等缓存客户端中的内容。
+
+-   客户端在其中使用对等缓存的每个站点必须使用[网络访问帐户](/sccm/core/plan-design/hierarchy/manage-accounts-to-access-content#a-namebkmknaaa-network-access-account)进行配置。 对等缓存源计算机使用该帐户对来自对等方的下载请求进行身份验证，且该帐户仅需要域用户权限即可完成此目的。
 
 -     因为对等缓存内容源的当前边界由该客户端上次提交的硬件清单决定，所以漫游到网络位置且在其他边界组中的客户端可能仍被视为其以前的边界组成员，以符合对等缓存的目的。 这可能导致提供给客户端的对等缓存内容源不在其直接网络位置中。 建议排除可能有此配置的客户端作为对等缓存源加入。
 
