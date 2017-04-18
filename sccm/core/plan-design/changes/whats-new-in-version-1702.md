@@ -14,16 +14,16 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 70034213442f4c3d5a28ab65c2ceb51aa64320ad
-ms.openlocfilehash: 9332278e960051caf6875f45212af644e2ea7890
-ms.lasthandoff: 03/31/2017
+ms.sourcegitcommit: d7b13f3dea5a3ae413ca6b8150ec24e1632a4d4d
+ms.openlocfilehash: 3e97184dc923cd3972c23252c1bc001edb73fe3f
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="what39s-new-in-version-1702-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1702 中的新增功能
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager Current Branch 的更新 1702 作为控制台内更新提供，用于运行版本 1606 或 1610 的以前安装的站点。
+System Center Configuration Manager Current Branch 的更新 1702 作为控制台内更新提供，用于运行版本 1602, 1606 或 1610 的以前安装的站点。
 
 > [!TIP]  
 > 若要安装新站点，必须使用 Configuration Manager 的基准版本。  
