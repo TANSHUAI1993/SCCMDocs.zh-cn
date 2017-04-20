@@ -67,6 +67,7 @@
 
 ##   [规划网络基础结构](plan-design/network/configure-firewalls-ports-domains.md)
 ###  [准备 Active Directory 架构](plan-design/network/extend-the-active-directory-schema.md)
+#### [架构扩展](plan-design/network/schema-extensions.md)
 ###  [准备 Windows Servers 以支持站点系统](plan-design/network/prepare-windows-servers.md)
 ###  [站点系统服务器网站](plan-design/network/websites-for-site-system-servers.md)
 ###  [PKI 证书要求](plan-design/network/pki-certificate-requirements.md)
@@ -138,8 +139,10 @@
 ##   安装基础结构
 ###  [获取安装媒体](servers/deploy/install/get-install-media.md)
 ###  运行安装程序之前
+#### [安装程序参考](servers/deploy/install/setup-reference.md)
 #### [安装程序下载程序](servers/deploy/install/setup-downloader.md)
 #### [先决条件检查程序](servers/deploy/install/prerequisite-checker.md)
+#### [先决条件检查](servers/deploy/install/list-of-prerequisite-checks.md)
 ###  [安装站点](servers/deploy/install/installing-sites.md)
 #### [安装站点的准备工作](servers/deploy/install/prepare-to-install-sites.md)
 #### [安装站点的先决条件](servers/deploy/install/prerequisites-for-installing-sites.md)
@@ -150,6 +153,7 @@
 #### [升级评估版安装](servers/deploy/install/upgrade-an-evaluation-install-to-a-full-install.md)
 #### [升级到 System Center Configuration Manager](servers/deploy/install/upgrade-to-configuration-manager.md)
 #### [用于简化安装的方案](servers/deploy/install/scenarios-to-streamline-your-installation.md)
+#### [卸载站点和层次结构](servers/deploy/install/uninstall-sites-and-hierarchies.md)
 
 ##   [卸载站点和层次结构](servers/deploy/configure/configure-sites-and-hierarchies.md)
 ###  [添加站点系统角色](servers/deploy/configure/add-site-system-roles.md)
@@ -171,10 +175,24 @@
 ###  [站点边界和边界组](servers/deploy/configure/define-site-boundaries-and-boundary-groups.md)
 #### [边界](servers/deploy/configure/boundaries.md)
 #### [边界组](servers/deploy/configure/boundary-groups.md)
+#### [1610 之前的版本的边界组](servers/deploy/configure/boundary-groups-for-1511-1602-and-1606.md)
 ###  [使用 SQL Server AlwaysOn](servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)
 ###  [使用 SQL Server 群集](servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md)
 ###  [数据库文件的自定义位置](servers/deploy/configure/custom-locations-for-site-database-files.md)
 ###  [配置基于角色的管理](servers/deploy/configure/configure-role-based-administration.md)
+##   技术参考
+###  [帐户](plan-design/hierarchy/accounts.md)
+###  [终结点之间的通信](plan-design/hierarchy/communications-between-endpoints.md)
+###  [层次结构维护工具](servers/manage/hierarchy-maintenance-tool-preinst.exe.md)
+###  [国际支持](plan-design/hierarchy/international-support.md)
+###  [不同版本之间的互操作性](plan-design/hierarchy/interoperability-between-different-versions.md)
+###  [语言包](servers/deploy/install/language-packs.md)
+###  [日志文件](plan-design/hierarchy/log-files.md)
+###  [端口](plan-design/hierarchy/ports.md)
+###  [代理服务器支持](plan-design/network/proxy-server-support.md)
+###  [发行说明](servers/deploy/install/release-notes.md)
+###  [Unicode 和 ASCII 支持](plan-design/hierarchy/unicode-and-ascii-support.md)
+
 
 #    管理基础结构
 ##   [维护任务](servers/manage/maintenance-tasks.md)
