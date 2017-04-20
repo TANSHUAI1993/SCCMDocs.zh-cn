@@ -2,7 +2,7 @@
 title: "创建 Linux 和 UNIX 服务器应用程序 | Microsoft Docs"
 description: "请参阅创建和部署适用于 Linux 和 Unix 设备的应用程序时必须考虑的注意事项。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 04/13/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,9 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: b599a58f25a868c638b7ee00cefff80b2f71244e
-ms.openlocfilehash: f4373c888434aa6cd22e5f9b871e172cc50a7d30
+ms.sourcegitcommit: 4b9261db93c9bf72c492e3c9be5b30f81835134a
+ms.openlocfilehash: 72ebd8bd29b5ecdd817631e447291c04f49d9808
+ms.lasthandoff: 04/13/2017
 
 
 ---
@@ -145,7 +146,7 @@ ms.openlocfilehash: f4373c888434aa6cd22e5f9b871e172cc50a7d30
 
     -   **限制时段期间的最大传输速率(Kbps)**  
 
-    -   **限制时段期间的最大传输速率(Kbps)**  
+    -   **限制时段外的最大传输速率(Kbps)**  
 
 下列后台智能传输配置不受支持，适用于 Linux 和 UNIX 的客户端将忽略这些设置：  
 
@@ -164,9 +165,4 @@ ms.openlocfilehash: f4373c888434aa6cd22e5f9b871e172cc50a7d30
 
 > [!TIP]  
 >  如果你要部署的软件位于 Linux 或 UNIX 服务器可访问的网络文件系统 (NFS) 共享上，则无需使用分发点来下载包。 相反，当你创建包时，不要选中“此包包含源文件” 复选框。 然后，当你配置程序时，请指定适当的命令行以直接访问 NFS 装入点上的包。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

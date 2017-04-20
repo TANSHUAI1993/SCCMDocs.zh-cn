@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: e9d6f53961c4eb410a56774443e357cca7c18dcc
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: dda2f4c01078fbbd174cbcb30357554c24f6abeb
+ms.openlocfilehash: 0fea1dece0768a2b7bcd3fcedc2288ea2d52e73d
+ms.lasthandoff: 04/17/2017
 
 
 ---
@@ -45,7 +45,7 @@ Intranet 上的客户端评估其当前网络位置，然后使用该信息确�
 
 **开始使用：**
 - 首先，[将网络位置定义为边界](/sccm/core/servers/deploy/configure/boundaries)。
-- 然后继续[配置边界组](/sccm/core/servers/deploy/configure/boundary-groups)，将这些边界中的客户端与它们可以使用的站点系统服务器相关联。 
+- 然后继续[配置边界组](/sccm/core/servers/deploy/configure/boundary-groups)，将这些边界中的客户端与它们可以使用的站点系统服务器相关联。
 
 
 
