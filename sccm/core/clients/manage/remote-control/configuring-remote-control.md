@@ -2,7 +2,7 @@
 title: "配置远程控制 | Microsoft Docs"
 description: "在 System Center Configuration Manager 中设置远程控制。"
 ms.custom: na
-ms.date: 12/26/2016
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: dudeso
 ms.suite: na
@@ -13,8 +13,8 @@ ms.topic: article
 ms.assetid: 45affc27-aa11-4249-9493-082ac23a3a3d
 caps.latest.revision: 4
 caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 9206b82eca02877c30eebf146d42bcca7290eb42

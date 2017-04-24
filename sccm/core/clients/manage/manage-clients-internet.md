@@ -1,13 +1,13 @@
 ---
 title: "在 Internet 上管理客户端 - Configuration Manager | Microsoft Docs"
 description: "了解如何通过云管理网关和 Configuration Manager 中的基于 Internet 的客户端管理来管理客户端。"
-ms.date: 11/18/2016
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.technology:
 - configmgr-client
 ms.assetid: c667d6af-80c4-485f-910c-896c0171fd00
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b

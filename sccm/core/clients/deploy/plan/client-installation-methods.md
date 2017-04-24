@@ -2,7 +2,7 @@
 title: "客户端安装方法 | Microsoft Docs"
 description: "了解 System Center Configuration Manager 的客户端安装方法。"
 ms.custom: na
-ms.date: 11/23/2016
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,8 +13,8 @@ ms.topic: get-started-article
 ms.assetid: 51b5964b-374d-4abc-8619-414a9fffad2d
 caps.latest.revision: 9
 caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 593fbd0587d54490246f48ae54f666bac6b7830d

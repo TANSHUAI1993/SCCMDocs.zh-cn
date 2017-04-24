@@ -2,7 +2,7 @@
 title: "向站点分配客户端 | Microsoft Docs"
 description: "在 System Center Configuration Manager 中将客户端分配给站点。"
 ms.custom: na
-ms.date: 12/16/2016
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,8 +12,8 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: ba9b623f-6e86-4006-93f2-83d563de0cd0
 caps.latest.revision: 10
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 08afca8b422474639cbdb860e555fe0da27361a4
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/16/2016
 > [!NOTE]  
 >  如果将客户端计算机手动分配到不存在的 Configuration Manager 站点代码，则站点分配将失败。   
 
-##  <a name="a-namebkmkautomaticassignmenta-using-automatic-site-assignment-for-computers"></a><a name="BKMK_AutomaticAssignment"></a> 对计算机使用自动站点分配  
+##  <a name="BKMK_AutomaticAssignment"></a> 对计算机使用自动站点分配  
  在客户端部署过程中，或者当你在控制面板内揅onfiguration Manager 属性?  的“高级”  选项卡中单击“发现站点”  时，可能会发生自动站点分配。 Configuration Manager 客户端会将其自己的网络位置与在 Configuration Manager 层次结构中配置的边界进行比较。 如果客户端的网络位置在为站点分配启用的边界组内，或者为回退站点配置了层次结构，则会将客户端自动分配给该站点，你不必指定站点代码。  
 
  你可以使用下列一项或多项来配置边界：  

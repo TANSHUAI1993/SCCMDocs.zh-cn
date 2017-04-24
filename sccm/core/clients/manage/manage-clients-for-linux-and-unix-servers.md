@@ -2,7 +2,7 @@
 title: "管理 Linux 和 UNIX 客户端 | Microsoft Docs"
 description: "在 System Center Configuration Manager 中管理 Linux 和 UNIX 服务器上的客户端。"
 ms.custom: na
-ms.date: 12/26/2016
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,8 +13,8 @@ ms.topic: article
 ms.assetid: 948664f2-239d-47a8-92fc-f8efeebd5796
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 9206b82eca02877c30eebf146d42bcca7290eb42
@@ -29,7 +29,7 @@ ms.lasthandoff: 12/30/2016
 
 当使用 System Center Configuration Manager 管理 Linux 和 UNIX 服务器时，可以配置集合、维护时段和客户端设置，以帮助管理服务器。 此外，尽管适用于 Linux 和 UNIX 的 Configuration Manager 客户端没有用户界面，但可以强制客户端手动轮询客户端策略。
 
-##  <a name="a-namebkmkcollectionsforlnua-collections-of-linux-and-unix-servers"></a><a name="BKMK_CollectionsforLnU"></a> Collections of Linux and UNIX servers  
+##  <a name="BKMK_CollectionsforLnU"></a> Collections of Linux and UNIX servers  
  使用集合管理 Linux 和 UNIX 服务器组的方式与使用集合管理其他客户端类型的方式相同。 集合可以是直接成员身份集合，也可以是基于查询的集合（用于确定客户端操作系统、硬件配置或有关站点数据库中存储的客户端的其他详细信息）。 例如，你可以使用包括 Linux 和 UNIX 服务器的集合来管理下列各项：  
 
 -   客户端设置  
@@ -48,10 +48,10 @@ ms.lasthandoff: 12/30/2016
 
  在为 Linux 和 UNIX 服务器生成自定义集合时，请包含成员身份规则查询，并在这些查询中包括操作系统特性的 Caption 特性。 有关创建集合的信息，请参阅[如何在 System Center Configuration Manager 中创建集合](../../../core/clients/manage/collections/create-collections.md)。  
 
-##  <a name="a-namebkmkmaintenancewindowsforlnua-maintenance-windows-for-linux-and-unix-servers"></a><a name="BKMK_MaintenanceWindowsforLnU"></a> Maintenance windows for Linux and UNIX servers  
+##  <a name="BKMK_MaintenanceWindowsforLnU"></a> Maintenance windows for Linux and UNIX servers  
  Linux 和 UNIX 服务器的 Configuration Manager 客户端支持使用[维护时段](../../../core/clients/manage/collections/use-maintenance-windows.md)。 与对基于 Windows 的客户端的支持相比，此支持并无变化。  
 
-##  <a name="a-namebkmkclientsettingsforlnua-client-settings-for-linux-and-unix-servers"></a><a name="BKMK_ClientSettingsforLnU"></a> Client settings for Linux and UNIX servers  
+##  <a name="BKMK_ClientSettingsforLnU"></a> Client settings for Linux and UNIX servers  
  可使用与配置其他客户端设置相同的方式配置适用于 Linux 和 UNIX 服务器的[客户端设置](../../../core/clients/deploy/configure-client-settings.md)。  
 
  默认情况下， **默认客户端代理设置** 适用于 Linux 和 UNIX 服务器。 还可以创建自定义客户端设置，并将其部署到特定客户端的集合中。  
@@ -60,7 +60,7 @@ ms.lasthandoff: 12/30/2016
 
  例如，Linux 和 UNIX 服务器会忽略启用并配置了远程控制设置的自定义客户端设备设置，因为 Linux 和 UNIX 客户端不支持远程控制。  
 
-##  <a name="a-namebkmkpolicyforlnua-computer-policy-for-linux-and-unix-servers"></a><a name="BKMK_PolicyforLnU"></a> Computer policy for Linux and UNIX servers  
+##  <a name="BKMK_PolicyforLnU"></a> Computer policy for Linux and UNIX servers  
  Linux 和 UNIX 服务器的客户端定期轮询其站点中的计算机策略，以了解请求的配置，并检查部署。  
 
  也可以强制 Linux 或 UNIX 服务器的客户端立即轮询计算机策略。 为此，请使用服务器上的**根**凭据运行以下命令：**/opt/microsoft/configmgr/bin/ccmexec -rs policy**  
@@ -70,7 +70,7 @@ ms.lasthandoff: 12/30/2016
 > [!NOTE]  
 >  Linux 和 UNIX 的 Configuration Manager 客户端从不请求或处理用户策略。  
 
-##  <a name="a-namebkmkmanagelinuxcertsa-how-to-manage-certificates-on-the-client-for-linux-and-unix"></a><a name="BKMK_ManageLinuxCerts"></a> How to manage certificates on the client for Linux and UNIX  
+##  <a name="BKMK_ManageLinuxCerts"></a> How to manage certificates on the client for Linux and UNIX  
  安装适用于 Linux 和 UNIX 的客户端后，你可以使用 **certutil** 工具来更新包含新 PKI 证书的客户端，并导入新的证书吊销列表 (CRL)。 安装适用于 Linux 和 UNIX 的客户端时，将此工具放置在 **/opt/microsoft/configmgr/bin/certutil** 中。 
 
  若要管理证书，请使用以下选项之一在每个客户端上运行 certutil：  

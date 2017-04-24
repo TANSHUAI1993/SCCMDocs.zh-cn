@@ -2,7 +2,7 @@
 title: "自动将设备分类到集合 | Microsoft Docs"
 description: "使用 System Center Configuration Manager 自动将设备分类到集合。"
 ms.custom: na
-ms.date: 01/07/2016
+ms.date: 04/23/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -18,6 +18,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 05c27c7aa36e0b4236867766dab36125c31467b3
 ms.openlocfilehash: b1bac05e9335dd757b8f499f97daea24e0f4acbd
+ms.lasthandoff: 01/03/2017
 
 ---
 # <a name="automatically-categorize-devices-into-collections-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 自动将设备分类到集合
@@ -55,9 +56,4 @@ ms.openlocfilehash: b1bac05e9335dd757b8f499f97daea24e0f4acbd
 如果“设备类别” 列未显示，请在“设备”列（如“名称”）中右键单击其中一个列标题，然后选择“设备类别”。
 
 如果将某个设备分配到某个类别，随后又删除该类别，则“按用户在 Microsoft Intune 中注册的设备的列表”报表将在“设备类别”列显示 GUID，而不显示类别名称。
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

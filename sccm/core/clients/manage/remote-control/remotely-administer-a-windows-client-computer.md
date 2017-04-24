@@ -2,7 +2,7 @@
 title: "远程管理 Windows 计算机 | Microsoft Docs"
 description: "使用 System Center Configuration Manager 管理远程 Windows 客户端计算机。"
 ms.custom: na
-ms.date: 12/16/2016
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,8 +13,8 @@ ms.topic: article
 ms.assetid: 3c9648c4-645e-4e47-ae10-2da817b8c83b
 caps.latest.revision: 5
 caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 08afca8b422474639cbdb860e555fe0da27361a4

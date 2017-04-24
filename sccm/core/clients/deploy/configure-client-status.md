@@ -2,7 +2,7 @@
 title: "配置客户端状态 | Microsoft Docs"
 description: "在 System Center Configuration Manager 中选择客户端状态设置。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,8 +13,8 @@ ms.topic: get-started-article
 ms.assetid: a2275ba2-c83d-43e7-90ed-418963a707fe
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
@@ -29,7 +29,7 @@ ms.lasthandoff: 12/16/2016
 
 在可以监视 System Center Configuration Manager 客户端状态和修正所发现的问题之前，必须配置站点，以指定用于将客户端标记为不活动的参数，以及配置选项以便在客户端的活动程度低于指定的阈值时向你发出警报。 还可以禁止计算机自动修正客户端状态发现的任何问题。  
 
-##  <a name="a-namebkmk1a-to-configure-client-status"></a><a name="BKMK_1"></a>配置客户端状态  
+##  <a name="BKMK_1"></a>配置客户端状态  
 
 1.  在 Configuration Manager 控制台中，单击“监视” 。  
 
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/16/2016
 
 5.  单击“确定”  以保存属性和关闭“客户端状态设置属性”  对话框。  
 
-##  <a name="a-namebkmkschedulea-to-configure-the-schedule-for-client-status"></a><a name="BKMK_Schedule"></a>配置客户端状态的计划  
+##  <a name="BKMK_Schedule"></a>配置客户端状态的计划  
 
 1.  在 Configuration Manager 控制台中，单击“监视” 。  
 
@@ -67,7 +67,7 @@ ms.lasthandoff: 12/16/2016
     > [!NOTE]  
     >  如果更改客户端状态更新的计划，则此更新将在下一次计划的客户端状态更新（对于以前配置的计划而言）之后才会生效。  
 
-##  <a name="a-namebkmk2a-to-configure-alerts-for-client-status"></a><a name="BKMK_2"></a>配置客户端状态的警报  
+##  <a name="BKMK_2"></a>配置客户端状态的警报  
 
 1.  在 Configuration Manager 控制台中，单击“资产和符合性” 。  
 
@@ -95,7 +95,7 @@ ms.lasthandoff: 12/16/2016
 
 7.  单击“确定”关闭“&lt;集合名称\>”的“属性”对话框。  
 
-##  <a name="a-namebkmk3a-to-exclude-computers-from-automatic-remediation"></a><a name="BKMK_3"></a>禁止计算机自动修正问题  
+##  <a name="BKMK_3"></a>禁止计算机自动修正问题  
 
 1.  在要禁止其自动修正问题的客户端计算机上打开注册表编辑器。  
 

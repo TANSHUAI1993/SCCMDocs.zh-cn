@@ -2,7 +2,7 @@
 title: "示例方案 - 部署 Windows Embedded 客户端 | Microsoft Docs"
 description: "请参阅在 Windows Embedded 设备上部署和管理 System Center Configuration Manager 客户端的示例方案。"
 ms.custom: na
-ms.date: 01/12/2016
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

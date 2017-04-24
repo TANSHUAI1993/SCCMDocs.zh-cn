@@ -2,7 +2,7 @@
 title: "监视 Linux/UNIX 客户端 - Configuration Manager | Microsoft Docs"
 description: "在 System Center Configuration Manager 中监视 Linux 和 UNIX 服务器上的客户端。"
 ms.custom: na
-ms.date: 11/23/2016
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,8 +12,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d827cf91-b18f-4ee7-b538-24ba6f003ab9
 caps.latest.revision: 6
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b

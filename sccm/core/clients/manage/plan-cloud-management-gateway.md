@@ -1,13 +1,13 @@
 ---
 title: "规划云管理网关 | Microsoft Docs"
 description: 
-ms.date: 03/28/2017
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.technology:
 - configmgr-client
 ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9

@@ -2,7 +2,7 @@
 title: "管理客户端 | Microsoft Docs"
 description: "了解如何在 System Center Configuration Manager 中管理客户端。"
 ms.custom: na
-ms.date: 01/04/2017
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,8 +12,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3986a992-c175-4b6f-922e-fc561e3d7cb7
 caps.latest.revision: 17
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 19e111e0cb174f11ad08f98d2516e52c4c183d86
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/05/2017
 >   
 >  使用 Configuration Manager 控制台中的“客户端”列来确定是否安装了 Configuration Manager 客户端，以便可以从 Configuration Manager 控制台对其进行管理。  
 
-##  <a name="a-namebkmkmanagingclientsdevicesnodea-manage-clients-from-the-devices-node"></a><a name="BKMK_ManagingClients_DevicesNode"></a> 通过“设备”节点管理客户端  
+##  <a name="BKMK_ManagingClients_DevicesNode"></a> 通过“设备”节点管理客户端  
 
 请注意：其中某些选项可能不可用，具体取决于设备类型。  
 
@@ -153,7 +153,7 @@ ms.lasthandoff: 01/05/2017
 
          有关详细信息，请参阅[使用 System Center Configuration Manager 和 Microsoft Intune 的混合移动设备管理 (MDM)](../../../mdm/understand/hybrid-mobile-device-management.md)。  
 
-##  <a name="a-namebkmkmanagingclientsdevicecollectionsnodea-manage-clients-from-the-device-collections-node"></a><a name="BKMK_ManagingClients_DeviceCollectionsNode"></a> 通过“设备集合”节点管理客户端  
+##  <a name="BKMK_ManagingClients_DeviceCollectionsNode"></a> 通过“设备集合”节点管理客户端  
   可在“设备”节点中的单台设备或多台设备上执行的许多任务也可在集合上执行。 这会将操作自动应用于集合中的所有合格设备。 请注意：这会生成大量网络数据包，并增加站点服务器上的 CPU 使用率。  
 
   在执行集合级别客户端管理任务之前，请考虑集合中有多少设备、这些设备是否通过低带宽网络连接进行连接，以及对于所有设备任务将花费多长时间完成。 开始后，无法从控制台中停止任务。  
@@ -186,7 +186,7 @@ ms.lasthandoff: 01/05/2017
 
          客户端通知任务显示在“监视”  工作区的“客户端操作”  节点中。  
 
-##  <a name="a-namebkmkclientcachea-configure-the-client-cache-for-configuration-manager-clients"></a><a name="BKMK_ClientCache"></a> 为 Configuration Manager 客户端配置客户端缓存  
+##  <a name="BKMK_ClientCache"></a> 为 Configuration Manager 客户端配置客户端缓存  
 客户端缓存会存储客户端安装应用程序和程序时的临时文件。 软件更新也使用客户端缓存，但软件更新不受配置的缓存大小所限，并且将始终尝试下载到缓存。 可在手动安装 Configuration Manager 客户端时、使用客户端请求安装时或在安装客户端之后配置客户端缓存设置，例如大小和位置。
 
 自 Configuration Manager 1606 版开始，可使用 Configuration Manager 控制台中的客户端设置来指定缓存文件夹大小。   
@@ -275,7 +275,7 @@ Configuration Manager 客户端会在接收部署之后立即下载所需软件�
 
      在下载下一个客户端策略时，Configuration Manager 客户端将使用这些设置配置缓存大小。
 
-##  <a name="a-namebkmkuninstalclienta-uninstall-the-configuration-manager-client"></a><a name="BKMK_UninstalClient"></a> 卸载 Configuration Manager 客户端  
+##  <a name="BKMK_UninstalClient"></a> 卸载 Configuration Manager 客户端  
  可通过将 **CCMSetup.exe** 与 **/Uninstall** 属性一起使用从计算机卸载 Windows Configuration Manager 客户端软件。 在单独的计算机上从命令提示符运行 CCMSetup.exe，或部署包和程序为计算机集合卸载客户端。  
 
 > [!WARNING]  
@@ -290,7 +290,7 @@ Configuration Manager 客户端会在接收部署之后立即下载所需软件�
 > [!NOTE]  
 >  卸载过程不会在屏幕上显示结果。 要验证客户端卸载是否成功，请检查客户端计算机上 *%windir%\ ccmsetup* 文件夹中的日志文件 **CCMSetup.log**。  
 
-##  <a name="a-namebkmkconflictingrecordsa-manage-conflicting-records-for-configuration-manager-clients"></a><a name="BKMK_ConflictingRecords"></a> 为 Configuration Manager 客户端管理冲突的记录  
+##  <a name="BKMK_ConflictingRecords"></a> 为 Configuration Manager 客户端管理冲突的记录  
  Configuration Manager 使用硬件 ID 来尝试标识可能重复的客户端，并发出有关冲突的记录的警报。 例如，若重新安装计算机，则硬件 ID 将相同，但 Configuration Manager 使用的 GUID 可能已更改。  
 
  Configuration Manager 能够通过使用计算机帐户的 Windows 身份验证或来自受信任来源的 PKI 证书解决冲突时，会自动解决冲突。 但是，Configuration Manager 无法解决冲突时，它将使用层次结构设置，该设置会在检测到重复的硬件 ID 时自动合并记录（默认设置），或允许你决定何时合并、阻止或创建新客户端记录。 如果决定手动管理重复记录，则必须在 Configuration Manager 控制台中手动解决冲突的记录。  
@@ -326,7 +326,7 @@ Configuration Manager 客户端会在接收部署之后立即下载所需软件�
 2. 在“主页”选项卡上的“站点”组中，选择“层次结构设置”。
 3. 在“客户端批准和冲突的记录”选项卡上的“复制硬件标识符”部分，选择“添加”以添加新的硬件标识符。
 
-##  <a name="a-namebkmkpolicyretrievala-initiate-policy-retrieval-for-a-configuration-manager-client"></a><a name="BKMK_PolicyRetrieval"></a> 为 Configuration Manager 客户端启动策略检索  
+##  <a name="BKMK_PolicyRetrieval"></a> 为 Configuration Manager 客户端启动策略检索  
  Windows Configuration Manager 客户端按配置为客户端设置的计划下载其客户端策略。 然而，有时可能需要从客户端启动临时策略检索，例如，进行故障排除或测试时。  
 
 可使用以下方法启动策略检索：

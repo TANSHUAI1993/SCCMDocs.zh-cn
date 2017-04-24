@@ -2,7 +2,7 @@
 title: "规划将客户端部署到 Linux 和 UNIX 计算机 | Microsoft Docs"
 description: "在 System Center Configuration Manager 中规划 Linux 和 UNIX 计算机的客户端部署。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,8 +13,8 @@ ms.topic: get-started-article
 ms.assetid: 44153689-70e8-42ad-9ae8-17ae35f6a2e3
 caps.latest.revision: 9
 caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
@@ -47,10 +47,10 @@ ms.lasthandoff: 12/16/2016
 
  使用本文中的信息来帮助规划要部署适用于 Linux 和 UNIX 的 Configuration Manager 客户端。  
 
-##  <a name="a-namebkmkclientdeployprereqforlnua-prerequisites-for-client-deployment-to-linux-and-unix-servers"></a><a name="BKMK_ClientDeployPrereqforLnU"></a>客户端部署到 Linux 和 UNIX 服务器的必备条件  
+##  <a name="BKMK_ClientDeployPrereqforLnU"></a>客户端部署到 Linux 和 UNIX 服务器的必备条件  
  使用以下信息来确定您必须具有到成功的必备组件安装适用于 Linux 和 UNIX 的客户端。  
 
-###  <a name="a-namebkmkclientdeployexternalforlnua-dependencies-external-to-configuration-manager"></a><a name="BKMK_ClientDeployExternalforLnU"></a> Configuration Manager 的外部依赖关系：  
+###  <a name="BKMK_ClientDeployExternalforLnU"></a> Configuration Manager 的外部依赖关系：  
  下表描述了所需的 UNIX 和 Linux 操作系统和程序包依赖关系。  
 
  **Red Hat Enterprise Linux ES 版本 4**  
@@ -249,15 +249,15 @@ ms.lasthandoff: 12/16/2016
 
  有关客户端通信和请求端口的详细信息，请参阅  [Configure the Client for Linux and UNIX to Locate Management Points](../../../../core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md#BKMK_ConfigClientMP)。  
 
-##  <a name="a-namebkmkplanningforcommunicationsforlnua-planning-for-communication-across-forest-trusts-for-linux-and-unix-servers"></a><a name="BKMK_PlanningforCommunicationsforLnU"></a>为 Linux 和 UNIX 服务器规划跨林信任的通信  
+##  <a name="BKMK_PlanningforCommunicationsforLnU"></a>为 Linux 和 UNIX 服务器规划跨林信任的通信  
  使用 Configuration Manager 管理的 Linux 和 UNIX 服务器作为工作组客户端运行并且需要与工作组中基于 Windows 的客户端相似的配置。 有关来自工作组中的计算机的通信的信息，请参阅 [System Center Configuration Manager 中终结点之间的通信](../../../../core/plan-design/hierarchy/communications-between-endpoints.md)主题中的[跨 Active Directory 林的通信](../../../../core/plan-design/hierarchy/communications-between-endpoints.md#Plan_Com_X-Forest)部分。  
 
-###  <a name="a-namebkmkservicelocationforlnua-service-location-by-the-client-for-linux-and-unix"></a><a name="BKMK_ServiceLocationforLnU"></a>适用于 Linux 和 UNIX 客户端的服务位置  
+###  <a name="BKMK_ServiceLocationforLnU"></a>适用于 Linux 和 UNIX 客户端的服务位置  
  查找为客户端提供服务的站点系统服务器的任务称为服务位置。 与不同的是基于 Windows 的客户端，适用于 Linux 和 UNIX 客户端不使用 Active Directory 用于服务定位。 此外，适用于 Linux 和 UNIX 的 Configuration Manager 客户端不支持指定管理点的域后缀的客户端属性。 相反，客户端了解到关于从已知的管理点时安装客户端软件分配给客户端提供服务的其他站点系统服务器。  
 
  有关服务定位的详细信息，请参阅[了解客户端如何查找 System Center Configuration Manager 的站点资源和服务](../../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md)中的[服务定位和客户端如何确定向其分配的管理点](../../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md#BKMK_Plan_Service_Location)。  
 
-##  <a name="a-namebkmksecurityforlnua-planning-for-security-and-certificates-for-linux-and-unix-servers"></a><a name="BKMK_SecurityforLnU"></a>规划 Linux 和 UNIX 服务器的安全性和证书  
+##  <a name="BKMK_SecurityforLnU"></a>规划 Linux 和 UNIX 服务器的安全性和证书  
  为了与 Configuration Manager 站点进行安全且通过身份验证的通信，适用于 Linux 和 UNIX 的 Configuration Manager 客户端使用与适用于 Windows 的 Configuration Manager 客户端相同的模型进行通信。  
 
  安装 Linux 和 UNIX 客户端时，可以向客户端分配 PKI 证书，使它能够使用 HTTPS 与 Configuration Manager 站点进行通信。 如果未分配的 PKI 证书，客户端创建自签名的证书和仅通过 HTTP 进行通信。  
@@ -270,21 +270,21 @@ ms.lasthandoff: 12/16/2016
 
  有关如何在 Configuration Manager 使用证书的信息，请参阅 [System Center Configuration Manager 的 PKI 证书要求](../../../../core/plan-design/network/pki-certificate-requirements.md)。  
 
-###  <a name="a-namebkmkaboutcertsforlnua-about-certificates-for-use-by-linux-and-unix-servers"></a><a name="BKMK_AboutCertsforLnU"></a>关于 Linux 和 UNIX 服务器使用的证书  
+###  <a name="BKMK_AboutCertsforLnU"></a>关于 Linux 和 UNIX 服务器使用的证书  
  适用于 Linux 和 UNIX 的 Configuration Manager 客户端使用与基于 Windows 的客户端相同的自签名证书或 X.509 PKI 证书。 管理 Linux 和 UNIX 客户端时，Configuration Manager 站点系统的 PKI 要求没有任何更改。  
 
  用于与 Configuration Manager 站点系统通信的 Linux 和 UNIX 客户端的证书必须为公钥证书标准 (PKCS#12) 格式，并且必须知道密码，以便在指定 PKI 证书时可以将它指定给客户端。  
 
  适用于 Linux 和 UNIX 的 Configuration Manager 客户端支持单个 PKI 证书，不支持多个证书。 因此，为 Configuration Manager 站点配置的证书选择条件不适用。  
 
-###  <a name="a-namebkmkconfigcertsforlnua-configuring-certificates-for-linux-and-unix-servers"></a><a name="BKMK_ConfigCertsforLnU"></a>为 Linux 和 UNIX 服务器配置证书  
+###  <a name="BKMK_ConfigCertsforLnU"></a>为 Linux 和 UNIX 服务器配置证书  
  若要将适用于 Linux 和 UNIX 服务器的 Configuration Manager 客户端配置为使用 HTTPS 通信，必须在安装该客户端时将其配置为使用 PKI 证书。 无法设置之前的客户端软件安装的证书。  
 
  在安装时使用 PKI 证书的客户端，您使用命令行参数 **-UsePKICert** 指定位置和包含 PKI 证书的 PKCS #12 文件的名称。 此外，您必须使用命令行参数 **-certpw** 来指定证书的密码。  
 
  如果未指定 **-UsePKICert**, ，客户端生成自签名的证书并尝试通过仅使用 HTTP 与站点系统服务器进行通信。  
 
-##  <a name="a-namebkmknosha-256a-about-linux-and-unix-operating-systems-that-do-not-support-sha-256"></a><a name="BKMK_NoSHA-256"></a>关于不支持 SHA-256 的 Linux 和 UNIX 操作系统  
+##  <a name="BKMK_NoSHA-256"></a>关于不支持 SHA-256 的 Linux 和 UNIX 操作系统  
  作为 Configuration Manager 客户端受到支持的以下 Linux 和 UNIX 操作系统发布了不支持 SHA-256 的 OpenSSL 版本：  
 
 -   Red Hat Enterprise Linux 版本 4 (x86/x64)  

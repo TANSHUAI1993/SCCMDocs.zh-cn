@@ -2,7 +2,7 @@
 title: "电源管理的安全和隐私 | Microsoft Docs"
 description: "获取 System Center Configuration Manager 中电源管理的安全和隐私信息。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -19,6 +19,7 @@ manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: f72059973057e707f58cb6b7aa495226b6c1962c
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -37,9 +38,4 @@ ms.openlocfilehash: f72059973057e707f58cb6b7aa495226b6c1962c
  电源使用情况信息存储在 Configuration Manager 数据库中，不会发送给 Microsoft。 详细信息在数据库中保留 31 天，摘要信息保留 13 个月。 不能配置删除时间间隔。  
 
  在配置电源管理之前，请考虑隐私要求。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

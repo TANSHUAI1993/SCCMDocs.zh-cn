@@ -2,7 +2,7 @@
 title: "UNIX/Linux 客户端组件服务和命令 | Microsoft Docs"
 description: "了解 System Center Configuration Manager 中 Linux 和 UNIX 客户端的组件服务和命令。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na

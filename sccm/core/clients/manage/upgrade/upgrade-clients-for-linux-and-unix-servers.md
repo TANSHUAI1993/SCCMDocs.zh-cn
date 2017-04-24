@@ -2,7 +2,7 @@
 itle: 'Upgrade clients | Microsoft Docs | Linux UNIX '
 description: "在 System Center Configuration Manager 中升级 Linux 或 UNIX 服务器上的客户端。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,8 +13,8 @@ ms.topic: article
 ms.assetid: 7d2bb377-1005-4a55-bd1f-b80a6d0b22e1
 caps.latest.revision: 6
 caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d

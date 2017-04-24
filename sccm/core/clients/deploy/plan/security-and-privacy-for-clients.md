@@ -2,7 +2,7 @@
 title: "客户端安全和隐私 | Microsoft Docs"
 description: "了解 System Center Configuration Manager 中客户端的安全和隐私。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,8 +13,8 @@ ms.topic: get-started-article
 ms.assetid: c1d71899-308f-49d5-adfa-3a3ec0163ed8
 caps.latest.revision: 10
 caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f

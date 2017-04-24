@@ -2,7 +2,7 @@
 title: "System Center Configuration Manager 的客户端部署任务 | Microsoft Docs"
 description: "了解如何在 System Center Configuration Manager 中部署和配置客户端。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
