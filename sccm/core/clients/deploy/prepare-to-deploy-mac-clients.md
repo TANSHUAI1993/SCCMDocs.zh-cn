@@ -2,7 +2,7 @@
 title: "将客户端软件部署到 Mac 的准备工作 | Microsoft Docs"
 description: "将 Configuration Manager 客户端部署到 Mac 计算机前的配置任务。"
 ms.custom: na
-ms.date: 01/02/2017
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: aaroncz
 ms.suite: na
@@ -12,8 +12,8 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2285a953-6a86-4ed5-97dd-cd57b02bc1ee
 caps.latest.revision: 12
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 0900e45115f02861c33fe2abdb046d11fdef3474

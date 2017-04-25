@@ -1,13 +1,13 @@
 ---
 title: "监视云管理网关 - Configuration Manager | Microsoft Docs"
 description: 
-ms.date: 03/28/2017
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.technology:
 - configmgr-client
 ms.assetid: 15f72f80-9850-40ce-9c3a-443ba04b6a03
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
 ms.sourcegitcommit: 199096db7a23fb14db98b95e75246ed254848ab7
