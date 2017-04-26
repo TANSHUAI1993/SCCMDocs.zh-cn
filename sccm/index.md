@@ -4,9 +4,9 @@ hide_bc: true
 title: "System Center Configuration Manager 文档"
 description: "了解如何使用 System Center Configuration Manager。"
 translationtype: Human Translation
-ms.sourcegitcommit: 9b31fab8fa93195c60e9026e2df99311aa6e328f
-ms.openlocfilehash: bc760899e054b60ad6e2f404f0408b2b55cccacd
-ms.lasthandoff: 04/03/2017
+ms.sourcegitcommit: f37eb16960545fd1b1ae31acb8c2f830d4028dc5
+ms.openlocfilehash: 6a4079f2c89130ce4bbd24b0015f0b873021f9b6
+ms.lasthandoff: 04/24/2017
 
 ---
 <div id="main" class="v2">
@@ -122,9 +122,10 @@ ms.lasthandoff: 04/03/2017
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardText">
-                                                <h3>配置管理器 SDK</h3>
-                                                <p><a href="/sccm/develop/core/understand/configuration-manager-programming-fundamentals">Configuration Manager 编程基础知识</a></p>
-                                                <p><a href="/sccm/develop/reference/configuration-manager-reference">Configuration Manager 参考</a></p>
+                                                <h3>其他版本和分支</h3>
+                                                <p><a href="/sccm/core/get-started/technical-preview">Technical Preview of System Center Configuration Manager</a></p>
+                                                <p><a href="/sccm/core/understand/introduction-to-the-ltsb">System Center Configuration Manager 的 Long-Term Servicing Branch</a></p>
+                                                <p><a href="https://technet.microsoft.com/library/gg682144.aspx">System Center 2012/2012 R2 Configuration Manager</a></p>
                                             </div>
                                         </div>
                                     </div>
