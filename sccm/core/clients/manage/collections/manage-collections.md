@@ -2,7 +2,7 @@
 title: "管理集合 | Microsoft Docs"
 description: "在 System Center Configuration Manager 中执行常见集合管理任务。"
 ms.custom: na
-ms.date: 2/22/2017
+ms.date: 4/25/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: andredm7
 ms.author: andredm
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
-ms.openlocfilehash: b41b50c75f1b89c8fc712b53988bd8e24813106d
+ms.sourcegitcommit: d94acac84f052a01de9d9c9f65f237c0006c45b8
+ms.openlocfilehash: 4d44f98eb0755619cdd2101203a13725186b835b
+ms.lasthandoff: 04/26/2017
 
 
 ---
@@ -40,7 +41,7 @@ ms.openlocfilehash: b41b50c75f1b89c8fc712b53988bd8e24813106d
 |---------------------|-------------|----------------------|  
 |**显示成员**|显示身为“设备”  节点下临时节点中所选集合的成员的所有资源。|无更多信息。|  
 |**添加所选项**|提供了下列选项，可执行以下操作之一：<br /><br /> - <br />                    **将所选项添加到现有设备集合** - 将打开“选择集合”对话框，可以从中选择想要将所选集合的成员添加到的集合。 使用“包括集合”  成员身份规则可将所选集合包括在此集合中。<br /><br /> - **将所选项添加到新的设备集合** - 将打开“创建设备集合向导”，可以在其中创建新的集合。 使用“包括集合”  成员身份规则可将所选集合包括在此集合中。|[如何在 System Center Configuration Manager 中创建集合](../../../../core/clients/manage/collections/create-collections.md)|  
-|**安装客户端**|将打开“安装客户端向导”，它使用客户端推送安装在所选集合中的所有计算机上安装 Configuration Manager 客户端。|[System Center Configuration Manager 的客户端部署任务](../../../../core/clients/deploy/client-deployment-tasks.md)|  
+|**安装客户端**|将打开“安装客户端向导”，它使用客户端推送安装在所选集合中的所有计算机上安装 Configuration Manager 客户端。|[如何部署客户端到 Windows 计算机](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md)|  
 |**管理相关性请求**|将打开“管理用户设备相关性请求”  对话框，你可以在其中批准或拒绝挂起的请求，以为所选集合中的设备建立用户设备相关性。|[在 System Center Configuration Manager 中将用户和设备与用户设备关联相链接](../../../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md)|  
 |**清除所需的 PXE 部署**|从所选集合的所有成员中清除任何所需的 PXE 启动部署。|[操作系统部署简介](../../../../osd/understand/introduction-to-operating-system-deployment.md)|  
 |**更新成员身份**|评估所选集合的成员身份。 对于具有很多成员的集合，此更新可能需要一些时间才能完成。 使用“刷新”  操作，在更新完成后将显示更新为新的集合成员。|无更多信息。|  
@@ -71,7 +72,7 @@ ms.openlocfilehash: b41b50c75f1b89c8fc712b53988bd8e24813106d
 |**模拟部署**|打开“模拟应用程序部署向导”  ，在其中你无需安装或卸载应用程序就能测试应用程序部署的结果。|[如何使用 System Center Configuration Manager 模拟应用程序部署](../../../../apps/deploy-use/simulate-application-deployments.md)|  
 |**部署**|显示下列选项：<br /><br /> - **应用程序** - 将打开“部署软件向导”，可以在其中选择和配置所选集合的应用程序部署。<br /><br /> - <br />                    **程序** - 将打开“部署软件向导”  ，你可以在其中选择和配置所选集合的包和程序部署。<br /><br /> - **配置基线** - 将打开“部署配置基线”对话框，可以在其中配置部署所选集合的一个或多个配置基线。|[如何使用 System Center Configuration Manager 部署应用程序](../../../../apps/deploy-use/deploy-applications.md)<br /><br /> [System Center Configuration Manager 中的包和程序](../../../../apps/deploy-use/packages-and-programs.md)<br /><br /> [如何在 System Center Configuration Manager 中部署配置基线](../../../../compliance/deploy-use/deploy-configuration-baselines.md)|  
 
-##  <a name="a-namebkmkcollpropa-collection-properties"></a><a name="BKMK_CollProp"></a> 集合属性  
+##  <a name="BKMK_CollProp"></a> 集合属性  
  打开集合的“属性”  对话框，即可查看和配置集合的以下属性。  
 
 |选项卡名称|更多信息|  
@@ -85,9 +86,4 @@ ms.openlocfilehash: b41b50c75f1b89c8fc712b53988bd8e24813106d
 |**分发点组**|让你能够将一个或多个分发点组关联到所选集合的成员。 有关详细信息，请参阅[管理 System Center Configuration Manager 的内容和内容基础结构](../../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。|  
 |**安全**|显示可通过关联角色和安全作用域访问所选集合的管理用户。|  
 |**监视器**|让你能够配置何时对于客户端状态和 Endpoint Protection 生成警报。 有关详细信息，请参阅[如何在 System Center Configuration Manager 中配置客户端状态](../../../../core/clients/deploy/configure-client-status.md)和[如何在 System Center Configuration Manager 中监视 Endpoint Protection](../../../../protect/deploy-use/monitor-endpoint-protection.md)。|  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

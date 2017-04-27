@@ -17,9 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
-ms.openlocfilehash: c3ca3b895d54b6dc886068b92b39d0d95c466de2
-ms.lasthandoff: 03/21/2017
+ms.sourcegitcommit: d94acac84f052a01de9d9c9f65f237c0006c45b8
+ms.openlocfilehash: a2d4420c2274a9b1ceb47ffd267849fdb5a55a61
+ms.lasthandoff: 04/26/2017
 
 
 ---
@@ -141,13 +141,13 @@ ms.lasthandoff: 03/21/2017
 **删除过期的日志数据**：使用此任务从数据库中删除用于故障排除的过期日志数据。 此数据与 Configuration Manager 组件操作无关。  
 
 > [!IMPORTANT]  
-> 默认情况下，此任务每天将在每个站点运行。 在管理中心站点和主站点，此任务会删除存在时间大于 30 天的数据。 在辅助站点使用 SQL Server Express 时，请确保此任务每天都运行并删除已&7; 天不活动的数据。  
+> 默认情况下，此任务每天将在每个站点运行。 在管理中心站点和主站点，此任务会删除存在时间大于 30 天的数据。 在辅助站点使用 SQL Server Express 时，请确保此任务每天都运行并删除已 7 天不活动的数据。  
 
 -   **管理中心站点**：已启用    
 -   **主站点**：已启用    
 -   **辅助站点**：已启用  
 
-**删除过期的通知任务历史记录**：使用此任务从站点数据库中删除指定时间内未更新的有关客户端通知任务的信息。 有关客户端通知的详细信息，请参阅 [System Center Configuration Manager 的客户端部署任务](../../../core/clients/deploy/client-deployment-tasks.md)。  
+**删除过期的通知任务历史记录**：使用此任务从站点数据库中删除指定时间内未更新的有关客户端通知任务的信息。 有关客户端通知的详细信息，请参阅 [System Center Configuration Manager 的客户端部署任务](../../../core/clients/manage/monitor-clients.md)。  
 
 -   管理中心站点：不可用    
 -   **主站点**：已启用    
@@ -159,7 +159,7 @@ ms.lasthandoff: 03/21/2017
 -   **主站点**：已启用    
 -   **辅助站点**：已启用  
 
-**删除过期的密码记录**：在层次结构的顶层站点中使用此任务删除有关 Android 和 Windows Phone 设备的密码重置的过期数据。 密码重置数据已加密，但包含设备的 PIN。 默认情况下启用此任务，并删除超过&1; 天的数据。  
+**删除过期的密码记录**：在层次结构的顶层站点中使用此任务删除有关 Android 和 Windows Phone 设备的密码重置的过期数据。 密码重置数据已加密，但包含设备的 PIN。 默认情况下启用此任务，并删除超过 1 天的数据。  
 
 -   **管理中心站点**：已启用    
 -   **主站点**：已启用    
