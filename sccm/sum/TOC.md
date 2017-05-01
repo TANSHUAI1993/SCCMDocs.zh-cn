@@ -5,6 +5,7 @@
 # 规划和设计
 ## [规划软件更新](plan-design/plan-for-software-updates.md)
 ## [软件更新的先决条件](plan-design/prerequisites-for-software-updates.md)
+## [软件更新的最佳方案](plan-design/software-updates-best-practices.md)
 ## [软件更新的安全和隐私](plan-design/security-and-privacy-for-software-updates.md)
 
 # 入门
@@ -28,10 +29,6 @@
 ## [软件更新维护](deploy-use/software-updates-maintenance.md)
 ## [维护服务器组](deploy-use/service-a-server-group.md)
 ## [管理 Office 365 ProPlus 更新](deploy-use/manage-office-365-proplus-updates.md)
+## [管理 Windows 10 更新的快速安装文件](deploy-use/manage-express-installation-files-for-windows-10-updates.md)
 ## [在 Windows 10 中与适用于企业的 Windows 更新集成](deploy-use/integrate-windows-update-for-business-windows-10.md)
 ## [部署安全更新的示例方案](deploy-use/example-scenario-deploy-monitor-monthly-security-updates.md)
-
-
-<!--HONumber=Dec16_HO3-->
-
-

@@ -54,6 +54,7 @@
 ### [Endpoint Protection 方案](deploy-use/scenarios-endpoint-protection.md)
 ### [Endpoint Protection 客户端帮助](deploy-use/endpoint-protection-client-help.md)
 ### [客户端问题疑难解答](deploy-use/troubleshoot-endpoint-client.md)
+### [Windows Defender FAQ](deploy-use/endpoint-protection-client-faq.md)
 ### [Device Guard 设置](deploy-use/use-device-guard-with-configuration-manager.md)
 
 ## [部署 Wi-fi、VPN、电子邮件和证书配置文件](deploy-use/deploy-wifi-vpn-email-cert-profiles.md)

@@ -58,14 +58,10 @@
 ### [创建自定义任务序列](deploy-use/create-a-custom-task-sequence.md)
 ### [创建用于非操作系统部署的任务序列](deploy-use/create-a-task-sequence-for-non-operating-system-deployments.md)
 ### [管理 BIOS 转换为 UEFI 所采用的任务序列步骤](deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md)
+### [预先设置 Windows PE 中的 BitLocker](deploy-use/preprovision-bitlocker-in-windows-pe.md)
 
 ## [创建任务序列媒体](deploy-use/create-task-sequence-media.md)
 ### [创建独立媒体](deploy-use/create-stand-alone-media.md)
 ### [创建预留媒体](deploy-use/create-prestaged-media.md)
 ### [创建可启动媒体](deploy-use/create-bootable-media.md)
 ### [创建捕获媒体](deploy-use/create-capture-media.md)
-
-
-<!--HONumber=Dec16_HO3-->
-
-
