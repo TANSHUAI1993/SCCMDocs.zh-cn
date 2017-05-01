@@ -1,8 +1,8 @@
 ---
-title: "将 Windows 设备升级到新版本 | Microsoft Docs"
-description: "将运行 Windows 10 桌面版、Windows 10 移动版或 Windows 10 全息版的设备自动升级到较新版本。"
+title: "使用 Configuration Manager 将 Windows 设备升级到不同版本 | Microsoft Docs"
+description: "使用 Configuration Manager 将运行 Windows 10 桌面版、Windows 10 移动版或 Windows 10 全息版的设备自动升级到不同版本。"
 ms.custom: na
-ms.date: 11/18/2016
+ms.date: 04/18/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,8 +17,9 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
-ms.openlocfilehash: f14dfb77be7b53e74d53e0c1fc7e7f1731952d40
+ms.sourcegitcommit: 4eee9731a4a27328c47c0d15931cab28cf520a18
+ms.openlocfilehash: cfde0a43947013bbd3a1093688cee19fe309fd03
+ms.lasthandoff: 04/18/2017
 
 
 ---
@@ -28,7 +29,7 @@ ms.openlocfilehash: f14dfb77be7b53e74d53e0c1fc7e7f1731952d40
 *适用范围：System Center Configuration Manager (Current Branch)*
 
 
-System Center Configuration Manager **版本升级策略**可以将运行以下任一 Windows 10 版本的设备自动升级至较新的版本：
+System Center Configuration Manager **版本升级策略**可以将运行以下任一 Windows 10 版本的设备自动升级至不同版本：
 
 - Windows 10 桌面版
 - Windows 10 移动版
@@ -92,9 +93,4 @@ System Center Configuration Manager **版本升级策略**可以将运行以下�
 可从“监视”  工作区的“部署”  节点监视才创建的部署。  
 
  该策略应用到目标 Windows 电脑并进行评估后，该电脑将在两小时内重启以应用升级。 确保通知所有要向其部署策略，或计划在其业余时间运行该策略的用户。
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

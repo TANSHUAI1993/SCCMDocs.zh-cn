@@ -17,9 +17,9 @@ author: arob98
 ms.author: angrobe
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: aa8924a013ebdbee888cab33001fddbe7ad2d67e
-ms.openlocfilehash: a0353c49360cd99bc92b4546e12a52c3d13d1d14
-ms.lasthandoff: 03/30/2017
+ms.sourcegitcommit: 761c3f58f7c57d8f87ee802da37821895062546d
+ms.openlocfilehash: bcf337d2abbcd5aad0f99098f6afd4a73ada3a0b
+ms.lasthandoff: 04/19/2017
 
 
 ---
@@ -28,7 +28,7 @@ ms.lasthandoff: 03/30/2017
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-将电子邮件配置文件与 Microsoft Intune 配合使用，可以通过使用 Exchange ActiveSync 来对设备进行电子邮件配置文件和限制的预配。 这使用户只需进行最少的设置便可访问其设备上的企业电子邮件。  
+通过使用 Microsoft Intune 和 Exchange ActiveSync，可以使用电子邮件配置文件和限制设置设备。 这使用户只需进行最少的设置便可访问其设备上的企业电子邮件。  
 
  你可以使用电子邮件配置文件配置下列设备类型：  
 
@@ -37,142 +37,143 @@ ms.lasthandoff: 03/30/2017
 - Windows Phone 8.0
 - 运行 iOS 5、iOS 6、iOS 7 和 iOS 8 的 iPhone  
 - 运行 iOS 5、iOS 6、iOS 7 和 iOS 8 的 iPad  
-- Samsung KNOX 标准版 4 及更高版本
+- Samsung KNOX 标准版（4 和更高版本）
 - Android for Work
 
-若要向设备部署电子邮件配置文件，必须在 Intune 中对其注册。 有关如何注册设备的信息，请参阅 [使用 Microsoft Intune 管理移动设备](https://technet.microsoft.com/en-us/library/dn646962.aspx)。
+若要向设备部署电子邮件配置文件，必须在 Intune 中注册这些设备。 有关如何注册设备的信息，请参阅 [使用 Microsoft Intune 管理移动设备](https://technet.microsoft.com/en-us/library/dn646962.aspx)。
 
->[!NOTE]
->Intune 提供两个 Android for Work 电子邮件配置文件，分别用于 Gmail 和 Nine Work 电子邮件应用。 这些应用在 Google Play 商店中提供，支持与 Exchange 的连接。 若要启用电子邮件连接，请将其中一个电子邮件应用部署到用户的设备，然后创建并部署相应的配置文件。 Nine Work 等电子邮件应用可能需付费使用。 若有任何问题，请查看应用的许可详细信息或与应用公司联系。
+> [!NOTE]
+> Intune 提供两个 Android for Work 电子邮件配置文件，分别用于 Gmail 电子邮件应用和 Nine Work 电子邮件应用。 这些应用在 Google Play 商店中提供，支持与 Exchange 的连接。 若要启用电子邮件连接，请将其中一个电子邮件应用部署到用户的设备，然后创建并部署相应的配置文件。 Nine Work 等电子邮件应用可能需付费使用。 若有任何问题，请查看应用的许可详细信息或与应用公司联系。
 
  除了在设备上配置电子邮件帐户以外，还可以配置联系人、日历和任务的同步设置。  
 
- 创建电子邮件配置文件时，可以添加各种安全设置，其中包括已通过使用 System Center Configuration Manager 证书配置文件预配的身份、加密和签名证书。 有关证书配置文件的详细信息，请参阅 [System Center Configuration Manager 中的证书配置文件](/sccm/protect/deploy-use/introduction-to-certificate-profiles)。    
+ 在创建电子邮件配置文件时，你可以纳入各种各样的安全设置。 这些设置包括使用 System Center Configuration Manager 证书配置文件设置的用于标识、加密和签名的证书。 有关证书配置文件的详细信息，请参阅 [System Center Configuration Manager 中的证书配置文件](/sccm/protect/deploy-use/introduction-to-certificate-profiles)。    
 
-## <a name="create-a-new-exchange-activesync-email-profile"></a>创建新的 Exchange ActiveSync 电子邮件配置文件  
+## <a name="create-an-exchange-activesync-email-profile"></a>创建 Exchange ActiveSync 电子邮件配置文件  
 
-启动“创建 Exchange ActiveSync 电子邮件配置文件向导”  
+若要创建配置文件，请使用“创建 Exchange ActiveSync 电子邮件配置文件向导”。 
 
-1.  在 Configuration Manager 控制台中，单击“资产和符合性” 。  
+1.  在 Configuration Manager 控制台中，选择“资产和符合性”。  
 
-2.  在“资产和符合性”  工作区中，展开“符合性设置” ，展开“公司资源访问” ，然后单击“电子邮件配置文件” 。  
+2.  在“资产和符合性”工作区中，展开“符合性设置”，展开“公司资源访问”，然后选择“电子邮件配置文件”。  
 
-3.  在“主页”选项卡上的“创建”组中，单击“创建 Exchange ActiveSync 电子邮件配置文件”。
+3.  在“主页”选项卡上的“创建”组中，选择“创建 Exchange ActiveSync 电子邮件配置文件”以启动向导。
+
 4.  在向导的“常规”页上，配置下列信息：
-    - **名称** - 提供电子邮件配置文件的描述性名称。
-    - **说明** -（可选）提供电子邮件配置文件的说明，帮助你在 Configuration Manager 控制台中识别它。
-    - **此电子邮件配置文件适用于 Android for Work** - 如果你仅向 Android for Work 设备部署此电子邮件配置文件，则选择此选项。 如果选中此复选框，则不显示“支持的平台”向导页。 仅配置 Android for Work 电子邮件配置文件。
-4.  在  “创建 Exchange ActiveSync 电子邮件配置文件向导”的“Exchange ActiveSync”页上，指定以下信息：  
 
-    -   **Exchange ActiveSync 主机：** 指定托管 Exchange ActiveSync 服务的公司 Exchange Server 的主机名。  
+    - **名称**。 提供电子邮件配置文件的描述性名称。
 
-    -   **帐户名称：** 指定电子邮件帐户的显示名，因为它将在用户的设备上显示。  
+    - **说明**。 （可选）提供电子邮件配置文件的说明，帮助你在 Configuration Manager 控制台中识别它。
 
-    -   **帐户用户名：** 选择电子邮件帐户用户名在客户端设备上的配置方式。 你可以从下拉列表中选择下列选项之一：  
+    - **此电子邮件配置文件适用于 Android for Work**。 如果要将此电子邮件配置文件仅部署到 Android for Work 设备，则选择此选项。 如果选中此框，则不显示“支持的平台”向导页。 仅配置 Android for Work 电子邮件配置文件。
 
-        -   **用户主体名称** - 使用完整的用户主体名登录 Exchange。  
+4.  在向导的“Exchange ActiveSync”页上，指定下列信息：  
 
-        -   **AccountName** 使用来自 Active Directory 的完整用户帐户名称
+    -   **Exchange ActiveSync 主机**。 指定托管 Exchange ActiveSync 服务的公司 Exchange Server 的主机名。  
 
-        -   **主 SMTP 地址** - 使用用户主 SMTP 地址登录 Exchange。  
+    -   **帐户名称**。 指定电子邮件帐户的显示名称与用户设备上显示的一样。  
 
-    -   **电子邮件地址：** 选择每个客户端设备上的用户的电子邮件地址的生成方式。 你可以从下拉列表中选择下列选项之一：  
+    -   **帐户用户名**。 选择电子邮件帐户用户名在客户端设备上的配置方式。 你可以从下拉列表中选择下列选项之一：  
 
-        -   **主 SMTP 地址** - 使用用户主 SMTP 地址登录 Exchange。  
+        -   **用户主体名称**。 使用完整的用户主体名称登录到 Exchange。  
 
-        -   **用户主体名称** - 使用完整的用户主体名称作为电子邮件地址。  
+        -   **AccountName**。 使用来自 Active Directory 的完整用户帐户名称。
 
-    -   **帐户域：** 你可以选择以下选项之一：  
+        -   **主 SMTP 地址**。 使用用户的主 SMTP 地址登录到 Exchange。  
+
+    -   **电子邮件地址**。 选择每个客户端设备上的用户的电子邮件地址的生成方式。 你可以从下拉列表中选择下列选项之一：  
+
+        -   **主 SMTP 地址**。 使用用户的主 SMTP 地址登录到 Exchange。  
+
+        -   **用户主体名称**。 使用完整的用户主体名称作为电子邮件地址。  
+
+    -   **帐户域**。 选择下列选项之一：  
 
         -   **从 Active Directory 获得**  
 
         -   **自定义**  
 
-         仅当  “sAMAccountName”在“帐户用户名”  下拉列表中选中时，此字段适用。  
+         仅当“sAMAccountName”在“帐户用户名”下拉列表中选中时，此字段适用。  
 
-    -   **身份验证方法：** 选择将用于对 Exchange ActiveSync 进行身份验证的以下身份验证方法之一：  
+    -   **身份验证方法**。 选择将用于对 Exchange ActiveSync 进行身份验证的以下身份验证方法之一：  
 
-        -   **证书** - 身份证书将用于 Exchange ActiveSync 连接的身份验证。  
+        -   **证书**。 身份证书将用于 Exchange ActiveSync 连接的身份验证。  
 
-        -   **用户名和密码** - 设备用户必须提供密码以连接到 Exchange ActiveSync（用户名配置为电子邮件配置文件的一部分）。  
+        -   **用户名和密码**。 设备用户必须提供密码才能连接到 Exchange ActiveSync。 （用户名将被配置为电子邮件配置文件的一部分）  
 
-    -   **标识证书：** 单击“选择”  ，然后选择用于标识的证书。  
+    -   **身份证书**。 选择“选择”，然后选择用于标识的证书。  
 
         > [!NOTE]  
-        >  你必须首先将身份证书配置为简单证书注册协议 (SCEP) 证书配置文件，才能选择身份证书。 有关证书配置文件的详细信息，请参阅 [System Center Configuration Manager 中的证书配置文件](/sccm/protect/deploy-use/introduction-to-certificate-profiles)。  
+        > 你必须首先将身份证书配置为简单证书注册协议 (SCEP) 证书配置文件，然后才能选择身份证书。 有关证书配置文件的详细信息，请参阅 [System Center Configuration Manager 中的证书配置文件](/sccm/protect/deploy-use/introduction-to-certificate-profiles)。  
 
-         此选项只有在选择了“身份验证方法”  下的“证书” 才可用。  
+         此选项只有在选择了“身份验证方法”下的“证书”才可用。  
 
-    -   **使用 S/MIME**（仅适用于 iOS 设备）- 使用 S/MIME 加密发送传出电子邮件。 选择从以下选项：
+    -   **使用 S/MIME**。 发送使用 S/MIME 加密的传出电子邮件。 此选项仅适用于 iOS 设备。 选择从以下选项：
 
-
-        -   **加密证书：** 单击“选择”  ，然后选择用于加密的证书。 此选项仅适用于 iOS 设备。 只能选择 PFX 证书用作加密证书。
+        -   **加密证书**。 选择“选择”，然后选择用于加密的证书。 只能选择 PFX 证书用作加密证书。
 
         如果同时选择了加密证书和签名证书，则这些证书必须都为 PFX 格式。
 
         > [!NOTE]  
-        >  必须首先将证书配置为简单证书注册协议 (SCEP) 或 PFX 证书配置文件，才能选择证书。 有关证书配置文件的详细信息，请参阅 [System Center Configuration Manager 中的证书配置文件](/sccm/protect/deploy-use/introduction-to-certificate-profiles)。  
+        > 必须首先将证书配置为 (SCEP) 或 PFX 证书配置文件，然后才能选择证书。 有关证书配置文件的详细信息，请参阅 [System Center Configuration Manager 中的证书配置文件](/sccm/protect/deploy-use/introduction-to-certificate-profiles)。  
 
+## <a name="configure-synchronization-settings-for-the-exchange-activesync-email-profile"></a>配置 Exchange ActiveSync 电子邮件配置文件的同步设置  
 
+在  “创建 Exchange ActiveSync 电子邮件配置文件向导”的“配置同步设置”页上，指定以下信息：  
 
+-   **计划**。 选择设备同步 Exchange Server 的数据所依据的计划。 此选项仅适用于 Windows Phone 设备。 选择：  
 
-###   <a name="configure-synchronization-settings-for-the-exchange-activesync-email-profile"></a>配置 Exchange ActiveSync 电子邮件配置文件的同步设置。  
+    -   **未配置**。 未执行同步计划。 这允许用户配置其自己的同步计划。  
 
-1.  在  “创建 Exchange ActiveSync 电子邮件配置文件向导”的“配置同步设置”页上，指定以下信息：  
+    -   **消息到达时**。 电子邮件和日历项等数据将在其到达时自动同步。  
 
-    -   **计划：** 选择设备同步 Exchange Server 的数据所依据的计划。 此选项仅适用于 Windows Phone 设备。 选择：  
+    -   **15 分钟**。 电子邮件和日历项等数据每隔 15 分钟自动同步。  
 
-        -   **未配置** - 未执行同步计划。 这允许用户配置其自己的同步计划。  
+    -   **30 分钟**。 电子邮件和日历项等数据每隔 30 分钟自动同步。  
 
-        -   **消息到达时** - 电子邮件和日历项等数据将在其到达时自动同步。  
+    -   **60 分钟**。 电子邮件和日历项等数据每隔 60 分钟自动同步。  
 
-        -   **15 分钟** - 电子邮件和日历项等数据每隔 15 分钟自动同步。  
+    -   **手动**。 设备用户必须手动启动同步。  
 
-        -   **30 分钟** - 电子邮件和日历项等数据每隔 30 分钟自动同步。  
+-   **要同步电子邮件的天数**。 从下拉列表中，选择你想要同步的电子邮件的天数。 选择下列值之一：  
 
-        -   **60 分钟** - 电子邮件和日历项等数据每隔 60 分钟自动同步。  
+    -   **未配置**。 不会执行该设置。 这允许用户配置下载到其设备的电子邮件数量。  
 
-        -   **手动** - 必须由设备用户手动启动同步。  
+    -   **不受限制**。 同步所有可用电子邮件。  
 
-    -   **要同步的电子邮件天数：** 从下拉列表中，选择你要同步的电子邮件的天数。 选择下列值之一：  
+    -   **1 天**  
 
-        -   **未配置** - 不会执行该设置。 这允许用户配置下载到其设备的电子邮件数量。  
+    -   **3 天**  
 
-        -   **无限制** - 同步所有可用的电子邮件。  
+    -   **1 周**  
 
-        -   **1 天**  
+    -   **2 周**  
 
-        -   **3 天**  
+    -   **1 个月**  
 
-        -   **1 周**  
+-   **允许将消息转移到其他电子邮件帐户**。 选择此选项可允许用户在其设备上配置的不同帐户之间转移电子邮件信息。 此选项仅适用于 iOS 设备。  
 
-        -   **2 周**  
+-   **允许从第三方应用程序发送电子邮件**。 选择此选项可允许用户从非默认设置的特定第三方电子邮件应用程序发送电子邮件。 此选项仅适用于 iOS 设备。  
 
-        -   **1 个月**  
+-   **同步最近使用的电子邮件地址**。 选择此选项可同步最近在此设备上使用的电子邮件地址的列表。 此选项仅适用于 iOS 设备。  
 
-    -   **允许将消息移动到其他电子邮件帐户** - 通过选择此选项，用户可在其设备上已配置的不同帐户间移动电子邮件消息。 此选项仅适用于 iOS 设备。  
+-   **使用 SSL**。 选择此选项可在发送电子邮件、接收电子邮件以及与 Exchange Server 通信时使用安全套接字层 (SSL) 通信。  
 
-    -   **允许从第三方应用程序发送电子邮件** - 通过选择此选项，用户可从某些非默认的第三方电子邮件应用程序发送电子邮件。 此选项仅适用于 iOS 设备。  
+-   **要同步的内容类型**。 请选择想要同步到设备的内容类型。 此选项仅适用于 Windows Phone 设备。 选择：  
 
-    -   **同步最近使用的电子邮件地址** - 选择此选项可同步设备上最近使用的电子邮件地址的列表。 此选项仅适用于 iOS 设备。  
+    -   **Email**  
 
-    -   **使用 SSL** - 选择此选项可在发送电子邮件、接收电子邮件以及与 Exchange Server 通信时使用安全套接字层 (SSL) 通信。  
+    -   **联系人**  
 
-    -   **要同步的内容类型：** 选择要同步到设备的内容类型。 此选项仅适用于 Windows Phone 设备。 选择：  
+    -   **日历**  
 
-        -   **Email**  
+    -   **任务**  
 
-        -   **联系人**  
+## <a name="specify-supported-platforms-for-the-exchange-activesync-email-profile"></a>指定 Exchange ActiveSync 电子邮件配置文件受支持的平台  
 
-        -   **日历**  
+1.  在“创建 Exchange ActiveSync 电子邮件配置文件向导”的“受支持的平台”页上，选择将在其上安装电子邮件配置文件的操作系统。 或者，选择“全选”以将电子邮件配置文件安装在所有可用操作系统上。  
 
-        -   **任务**  
-
-###  <a name="specify-supported-platforms-for-the-exchange-activesync-email-profile"></a>指定 Exchange ActiveSync 电子邮件配置文件受支持的平台。  
-
-1.  在  “创建 Exchange ActiveSync 电子邮件配置文件向导”的“受支持的平台”页上，选择将安装电子邮件配置文件的操作系统，或单击“全部选择”以在所有可用的操作系统上安装电子邮件配置文件  。  
-
-2.  完成向导。
+2.  完成该向导。
 
 有关如何部署 Exchange ActiveSync 电子邮件配置文件的信息，请参阅[如何在 System Center Configuration Manager 中部署配置文件](../../protect/deploy-use/deploy-wifi-vpn-email-cert-profiles.md)。  
 

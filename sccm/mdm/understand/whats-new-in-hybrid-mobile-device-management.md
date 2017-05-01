@@ -16,9 +16,9 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3eb48942c1259d2aa1b3c200fad73b39b11c0b8c
-ms.openlocfilehash: 51560360a0cb7ecb4a2b0d7eaeb4fdd62d6afc13
-ms.lasthandoff: 03/30/2017
+ms.sourcegitcommit: 761c3f58f7c57d8f87ee802da37821895062546d
+ms.openlocfilehash: 489defeae18c219fe2f717d5caa1f15bcdaf07cf
+ms.lasthandoff: 04/19/2017
 
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager 和 Microsoft Intune 的混合移动设备管理中的新增功能
@@ -37,11 +37,31 @@ ms.lasthandoff: 03/30/2017
 |**Configuration Manager Technical Preview 中的新增功能**| 此类别下列出的所有功能仅适用于指定的 Technical Preview 版本。 若要试用这些功能，必须安装功能说明中指定的 Technical Preview 版本。 有关详细信息，请参阅 [System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)。|
 |**Configuration Manager (Current Branch) 中的新增功能**| 此类别下列出的所有功能仅适用于指定的 Configuration Manager (Current Branch) 版本，例如版本 1511 或 1602。 如果要为混合部署使用较旧版本的 Configuration Manager，则必须升级到功能说明中指定的 Configuration Manager (Current Branch) 版本。 有关详细信息，请参阅[升级到 System Center Configuration Manager](../../core/servers/deploy/install/upgrade-to-configuration-manager.md)。|
 
-## <a name="new-hybrid-features-in-march-2017"></a>2017 年 3 月版本中的新增混合功能
+## <a name="april-2017"></a>2017 年 4 月
 
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
 
-2017 年 3 月推出的以下 Intune 功能适用于混合部署：
+- **适用于 Managed Browser 的 MyApps**
+
+  现在 Microsoft MyApps 改进了 Managed Browser 内部的支持。 不作为管理目标的 Managed Browser 用户将直接转至 MyApps 服务，这些用户可以在其中访问管理员预配的 SaaS 应用。 作为 Intune 管理目标的用户将可以继续从内置 Managed Browser 书签访问 MyApps。
+
+- **Managed Browser 和公司门户的新图标**
+
+  Managed Browser 将获得该应用的 Android 和 iOS 版的更新图标。 新图标将包含更新的 Intune 徽章，使其与企业移动性 + 安全性 (EM+S) 中的其他应用更为一致。 可以在 [Intune 应用 UI 页中的新增功能](/intune/whats-new/whats-new-in-intune-app-ui.md)中查看 Managed Browser 的新图标。
+
+  公司门户还将获得该应用的 Android、iOS 和 Windows 版的更新图标，以改进与 EM+S 中的其他应用的一致性。 这些图标将于四月至五月底逐步在平台上发布。
+
+- **Android 公司门户中的登录进度指示器**
+
+  用户启动或重启应用时，Android 公司门户应用的更新程序将显示登录进度指示器。 允许用户访问应用前，指示器将经历以下新状态：开始是“正在连接...”，然后是“正在登录...”，接下来是“正在查看安全要求...”。 可以在 [Intune 应用 UI 页中的新增功能](/intune/whats-new/whats-new-in-intune-app-ui.md)中查看适用于 Android 的公司门户应用的新屏幕。
+
+- **阻止应用访问 SharePoint Online**
+
+    现在可以创建基于应用的条件访问策略来阻止未向其实施应用保护策略的应用访问 [SharePoint Online](/InTune/deploy-use/mam-ca-for-sharepoint-online)。 在基于应用的条件访问方案中，可以指定想要让其具备使用 Azure 门户访问 SharePoint Online 的权限的应用。
+
+## <a name="march-2017"></a>2017 年 3 月
+
+### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
 
 - **Android 适用的公司门户应用的最新用户体验**
 
@@ -53,7 +73,7 @@ ms.lasthandoff: 03/30/2017
   - 导航应用：“所有应用”视图以选项卡形式呈现出“特色”、“所有”和“分类”视图，便于导航。
   - 支持：更新了“我的设备”和“联系 IT”选项卡，以改善可读性。
 
-  有关这些更改的详细信息，请参阅 [Intune 最终用户应用的 UI 更新](/intune/enduser/whats-new-in-intune-app-ui)。
+  有关这些更改的详细信息，请参阅 [Intune 最终用户应用的 UI 更新](/intune/whats-new/whats-new-in-intune-app-ui)。
 
 - **Windows 10 公司门户的签名脚本**
 
@@ -134,11 +154,9 @@ Configuration Manager (Current Branch) 1702 版本中还包括以下其他混合
 
     有关详细信息，请参阅[如何监视移动威胁防御合规性](/sccm/mdm/deploy-use/monitor-mobile-threat-defense-compliance)。
 
-## <a name="new-hybrid-features-in-february-2017"></a>2017 年 2 月版本中的新增混合功能
+## <a name="february-2017"></a>2017 年 2 月
 
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
-
-2017 年 2 月推出的以下 Intune 功能适用于混合部署：
 
 - **公司门户网站现代化**
 
@@ -166,11 +184,9 @@ Configuration Manager (Current Branch) 1702 版本中还包括以下其他混合
    
     你现在有 42 个其他 iOS 设置，可配置为配置项的一部分。 已为受监督的 iOS 设备添加大部分设置（总共 35 个设置）。 有关详细信息，请参阅 [iOS 设备的新符合性设置](/sccm/core/get-started/capabilities-in-technical-preview-1702#new-compliance-settings-for-ios-devices)。
 
-## <a name="new-hybrid-features-in-january-2017"></a>2017 年 1 月版本中的新增混合功能
+## <a name="january-2017"></a>2017 年 1 月
 
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
-
-2017 年 1 月推出的以下 Intune 功能适用于混合部署：
 
 - **Android 7.1.1 支持**
 
@@ -187,11 +203,9 @@ Configuration Manager (Current Branch) 1702 版本中还包括以下其他混合
   从用于混合移动设备管理 (MDM) 的 Technical Preview 1701 开始，创建用于 Intune 托管设备的新策略和配置文件时，不再需要将特定版本的 Android 和 iOS 作为目标。 得益于此更改，混合部署可为新的 Android 和 iOS 版本更快地提供支持，无需新的 Configuration Manager 版本或扩展。 有关详细信息，请参阅 [Android 和 iOS 版本不再作为创建向导中的目标](/sccm/core/get-started/capabilities-in-technical-preview-1701#android-and-ios-versions-are-no-longer-targetable-in-creation-wizards-for-hybrid-mdm)。
 
 
-## <a name="new-hybrid-features-in-december-2016"></a>2016 年 12 月版本中的新增混合功能
+## <a name="december-2016"></a>2016 年 12 月
 
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
-
-2016 年 12 月推出的以下 Intune 功能适用于混合部署：
 
 - **注册移动到 Azure 门户时的多重身份验证**
 
@@ -218,11 +232,9 @@ Configuration Manager (Current Branch) 1702 版本中还包括以下其他混合
   | 密码重置 | | |        
 
 
-## <a name="new-hybrid-features-in-november-2016"></a>2016 年 11 月版本中的新增混合功能
+## <a name="november-2016"></a>2016 年 11 月
 
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
-
-2016 年 11 月推出的以下 Intune 功能适用于混合部署：
 
 - **适用于 Windows 10 设备的新 Microsoft Intune 公司门户**
 

@@ -17,9 +17,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
-ms.openlocfilehash: 1069a18eecbc5f53b74ad89e166e6f2c7b180693
-ms.lasthandoff: 12/16/2016
+ms.sourcegitcommit: 761c3f58f7c57d8f87ee802da37821895062546d
+ms.openlocfilehash: 11c0f169afebdb071fefb5ce300fd1ae3481a94f
+ms.lasthandoff: 04/19/2017
 
 
 ---
@@ -116,7 +116,7 @@ ms.lasthandoff: 12/16/2016
 
      **类型**：REG_DWORD  
 
-     **值**：<customized window size\>  
+     **值**：&lt;自定义窗口大小>  
 
  默认值为 1（1 个数据块填满窗口）  
 
@@ -129,7 +129,7 @@ ms.lasthandoff: 12/16/2016
 
      **类型**：REG_DWORD  
 
-     **值**：<customized block size\>  
+     **值**：&lt;自定义块大小>  
 
  默认值为 4096 (4k)。  
 

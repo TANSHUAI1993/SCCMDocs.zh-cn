@@ -13,13 +13,13 @@ ms.topic: article
 ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 caps.latest.revision: 15
 caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: bd2cf7b0df4a1f50c006e8280bf59ea91f1b4477
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: 4eee9731a4a27328c47c0d15931cab28cf520a18
+ms.openlocfilehash: d1d2ec7c053d13ebaeb00d0dfeb126716b5f7ae5
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="about-client-settings-in-system-center-configuration-manager"></a>关于 System Center Configuration Manager 中的客户端设置
@@ -505,7 +505,7 @@ System Center Configuration Manager 中的所有客户端设置在 Configuration
 
     -   选择“新建”图标，将新文件类型添加到清单。 然后在“清单文件属性”对话框中，指定以下信息：  
 
-        -   **名称**：提供要列出清单的文件的名称。 可使用 **\** 字符来表示任何文本字符串，使用**?**字符来表示任何单一字符。例如，若要列出扩展名为 .doc 的所有文件的清单，请指定文件名**\*.doc**。  
+        -   **名称**：提供要列出清单的文件的名称。 你可以使用 **\** 字符来表示任何文本字符串，使用 **?** 字符来表示任何单一字符。 例如，若要列出扩展名为 .doc 的所有文件的清单，请指定文件名 **\*.doc**。  
 
         -   **位置**：选择“设置”，打开“路径属性”对话框。 可配置软件清单以在所有客户端硬盘中搜索指定的文件，搜索指定的路径（例如 **C:\Folder**）或搜索指定的变量（例如 *%windir%*）。 还可以搜索指定路径下面的所有子文件夹。  
 
@@ -528,7 +528,7 @@ System Center Configuration Manager 中的所有客户端设置在 Configuration
 
     -   在“收集的文件属性”  对话框中，提供以下信息：  
 
-        -   **名称**：为要收集的文件提供名称。 可使用 **\** 字符来表示任何文本字符串，使用**?** 字符来表示任何单一字符。  
+        -   **名称**：为要收集的文件提供名称。 你可以使用 **\** 字符来表示任何文本字符串，使用 **?** 字符来表示任何单一字符。  
 
         -   **位置**：选择“设置”，打开“路径属性”对话框。 可配置软件清单以在所有客户端硬盘中搜索要收集的文件，搜索指定的路径（例如 **C:\Folder**）或搜索指定的变量（例如 *%windir%*）。 还可以搜索指定路径下面的所有子文件夹。  
 

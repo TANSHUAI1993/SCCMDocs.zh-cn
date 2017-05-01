@@ -2,7 +2,7 @@
 title: "安装参考 | Microsoft Docs"
 description: "查看此参考可帮助做好 Configuration Manager 站点或层次结构安装准备。"
 ms.custom: na
-ms.date: 2/7/2017
+ms.date: 4/18/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,8 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: fc9c8c1e6d57e886e5208d8b8968cb936c269a01
-ms.openlocfilehash: beddcdb0349af4d232cd75ae742f02074abc350d
+ms.sourcegitcommit: 761c3f58f7c57d8f87ee802da37821895062546d
+ms.openlocfilehash: 739461a6cca0fd67431093524c1e8158afd80d0f
+ms.lasthandoff: 04/19/2017
 
 
 ---
@@ -27,25 +28,21 @@ ms.openlocfilehash: beddcdb0349af4d232cd75ae742f02074abc350d
 
 System Center Configuration Manager 安装程序提供了几个主题的链接，以下部分对相关内容进行了详细介绍。 此处提供的信息有助于准备安装 Configuration Manager 站点或层次结构，且有助于为某些必须在安装过程中做出的决定做好准备。  
 
--   [在开始之前](#bkmk_start)  
--   [评估服务器准备情况](#bkmk_assess)  
--   [其他操作系统的客户端](#bkmk_Addclients)  
--   [System Center Configuration Manager 的诊断和使用情况数据](../../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md)  
 
-##  <a name="a-namebkmkstarta-before-you-begin"></a><a name="bkmk_start"></a> 在开始之前  
+##  <a name="bkmk_start"></a> 在开始之前  
 在安装新的 Configuration Manager 站点之前，请确保已经查看以下信息，这些信息有助于为成功完成部署设计做好准备：  
 
 -   [System Center Configuration Manager 基础知识](../../../../core/understand/fundamentals.md)  
 -   [System Center Configuration Manager 基础结构规划](../../../plan-design/network/configure-firewalls-ports-domains.md)  
 -   [准备安装 System Center Configuration Manager 站点](prepare-to-install-sites.md)  
 
-##  <a name="a-namebkmkassessa-assess-server-readiness"></a><a name="bkmk_assess"></a> 评估服务器准备情况  
+##  <a name="bkmk_assess"></a> 评估服务器准备情况  
 在开始安装新站点之前，请确保计划用于站点的站点服务器和远程站点系统服务器（如承载站点数据库的服务器）满足所有必备项配置。 文档库中的下列主题可有所帮助：  
 
 -   [System Center Configuration Manager 支持的配置](../../../../core/plan-design/configs/supported-configurations.md)  
 -   [先决条件检查程序](prerequisite-checker.md)  
 
-##  <a name="a-namebkmkaddclientsa-clients-for-additional-operating-systems"></a><a name="bkmk_Addclients"></a> 其他操作系统的客户端  
+##  <a name="bkmk_Addclients"></a> 其他操作系统的客户端  
 可从 Microsoft 下载中心为以下操作系统下载 Configuration Manager 的客户端软件：  
 
 -   Mac   (Apple)  
@@ -54,12 +51,9 @@ System Center Configuration Manager 安装程序提供了几个主题的链接�
 
 使用以下链接下载所使用的 Configuration Manager 版本的客户端：  
 
--   [System Center Configuration Manager（当前分支）](http://www.microsoft.com/download/details.aspx?id=47719)  
--   [System Center 2012 R2 Configuration Manager SP1 和 System Center 2012 Configuration Manager SP2](http://go.microsoft.com/fwlink/?LinkID=626550)  
--   [System Center 2012 R2 Configuration Manager](http://go.microsoft.com/fwlink/?LinkID=316448)  
--   [System Center 2012 Configuration Manager SP1](http://www.microsoft.com/en-pk/download/details.aspx?id=36212)  
+-   请参阅 [Microsoft System Center Configuration Manager - 适用于其他操作系统的客户端](http://www.microsoft.com/download/details.aspx?id=47719)  
 
-##  <a name="a-namebkmkusagea-usage-data-levels-and-settings"></a><a name="bkmk_usage"></a> 使用情况的数据级别和设置  
+##  <a name="bkmk_usage"></a> 使用情况的数据级别和设置  
 安装第一个 System Center Configuration Manager 站点时，Configuration Manager 会在站点服务器上自动安装和配置新站点系统角色“服务连接点”。 服务连接点具有以下默认设置：  
 
 -   “联机”模式（也提供脱机模式）  
@@ -82,10 +76,5 @@ System Center Configuration Manager 安装程序提供了几个主题的链接�
 
 有关详细信息（包括各级别所收集详情的披露），请参阅 [System Center Configuration Manager 的诊断和使用情况数据](../../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md)。  
 
-[System Center Configuration Manager 隐私声明](http://go.microsoft.com/fwlink/?LinkID=626527)
-
-
-
-<!--HONumber=Feb17_HO2-->
-
+若要在线查看 System Center Configuration Manager 隐私声明，请转到 [http://go.microsoft.com/fwlink/?LinkID=626527](http://go.microsoft.com/fwlink/?LinkID=626527)。
 

@@ -2,7 +2,7 @@
 title: "升级到 System Center Configuration Manager | Microsoft Docs"
 description: "了解从运行 System Center 2012 Configuration Manager 的站点和层次结构成功进行就地升级的步骤。"
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 4/19/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 6424fb07802b62820b4dc78a58ab30d3b956abef
-ms.openlocfilehash: ca07b46db0967ca03cc5e858b835d2c2108f1210
-ms.lasthandoff: 03/17/2017
+ms.sourcegitcommit: 761c3f58f7c57d8f87ee802da37821895062546d
+ms.openlocfilehash: e75413d0b03681bf7244bd3917cd6099394ee3c9
+ms.lasthandoff: 04/19/2017
 
 
 ---
@@ -75,6 +75,9 @@ ms.lasthandoff: 03/17/2017
  下列清单可帮助计划成功升级到 System Center Configuration Manager。  
 
 ### <a name="before-you-upgrade"></a>升级准备工作  
+
+**检查 System Center 2012 Configuration Manager 环境**并按照 KB4018655：[由于反复重试任务 Configuration Manager 客户端每五个小时重新安装一次并可能导致客户端意外升级](https://support.microsoft.com/help/4018655)中详细介绍的方式解决问题。
+
 **确保计算机环境符合升级到 System Center Configuration Manager 所需的支持配置**：  
 
 查看正在用于承载站点系统角色的服务器操作系统：  
@@ -251,7 +254,7 @@ Configuration Manager 不支持辅助站点备份，也不支持辅助站点数�
 
 -   **软件中心：**  
     下列软件中心项目被重置为它们的默认值：  
-    -   “工作信息” 被重置为周一到周五从凌晨&5;:00  到晚上&10;:00  Monday 到晚上&10;:00 Friday.  
+    -   “工作信息” 被重置为周一到周五从凌晨 5:00  到晚上 10:00  Monday 到晚上 10:00 Friday.  
     -   “计算机维护”  的值被设置为“当我的计算机处于演示模式时暂停软件中心活动” 。  
     -   “远程控制”  的值被设置为分配到计算机的客户端设置中的值。  
 -   **软件更新摘要计划：**  
@@ -264,7 +267,7 @@ Configuration Manager 不支持辅助站点备份，也不支持辅助站点数�
 
 若要针对升级测试数据库，请首先将站点数据库的副本还原到未承载 Configuration Manager 站点的 SQL Server 实例。 用于承载数据库副本的 SQL Server 版本必须是作为数据库副本源的 Configuration Manager 版本支持的 SQL Server 版本。  
 
-接下来，在还原站点数据库之后，在 SQL Server 计算机上，使用 **/TESTDBUPGRADE** 命令行选项从 System Center Configuration Manager 的源媒体文件夹中运行 Configuration Manager 安装程序。  
+接下来，在还原站点数据库之后，在 SQL Server 计算机上，使用  **/TESTDBUPGRADE**  命令行选项从 System Center Configuration Manager 的源媒体文件夹中运行 Configuration Manager 安装程序。  
 
 -   有关如何创建和还原站点数据库备份的信息，请参阅[适用于安装程序的命令行选项](../../../../core/servers/deploy/install/command-line-options-for-setup.md)。  
 -   有关 **/TESTDBUPGRADE** 命令行选项的信息，请参阅[适用于安装程序的命令行选项](../../../../core/servers/deploy/install/command-line-options-for-setup.md) 中的表。  

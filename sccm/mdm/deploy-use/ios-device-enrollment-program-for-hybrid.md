@@ -16,9 +16,9 @@ author: mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
-ms.openlocfilehash: 2ace86cc842d6a3a5b2114c4e4c33c2d65c2f256
-ms.lasthandoff: 03/21/2017
+ms.sourcegitcommit: 4eee9731a4a27328c47c0d15931cab28cf520a18
+ms.openlocfilehash: 555da7187b505a926731350d16787bc02d28dad3
+ms.lasthandoff: 04/18/2017
 
 ---
 # <a name="ios-device-enrollment-program-dep-enrollment-for-hybrid-deployments-with-configuration-manager"></a>使用 Configuration Manager 进行混合部署的 iOS 设备注册计划 (DEP) 注册
@@ -75,12 +75,14 @@ ms.lasthandoff: 03/21/2017
             > 具有用户关联的 DEP 要求启用 ADFS WS-Trust 1.3 用户名/混合终结点以请求用户令牌。
 
             -   **无用户关联**：该设备不与用户关联。 将此隶属关系用于无需访问本地用户数据即可执行任务的设备。 需要用户关联的应用无法运行。  
+             ![DEP 配置文件名称、说明和“用户关联”提示的屏幕截图](../media/dep-general.png)
 
-    2.  在“设备注册计划”  页上，指定以下信息，然后单击“下一步” 。  
+    2.  在“设备注册计划设置”页上，指定以下信息，然后单击“下一步”。  
 
         -   **部门**：用户在激活过程中点击“关于配置”时显示此信息。  
 
-        -   **支持电话号码**：用户在激活过程中单击“需要帮助”按钮时显示。  
+        -   **支持电话号码**：用户在激活过程中单击“需要帮助”按钮时显示。
+       ![向 iOS 设备分配 DEP 配置文件的屏幕截图](../media/dep-settings.png)
 
         -   **准备模式**：在激活过程中设置此状态，且只能通过恢复设备出厂设置更改：  
 
@@ -105,6 +107,7 @@ ms.lasthandoff: 03/21/2017
         -   **缩放** - 如果启用，在激活过程中设置助理会提示此服务
         -   **Siri** - 如果启用，在激活过程中设置助理会提示此服务  
         -   **向 Apple 发送诊断数据** - 如果启用，在激活过程中设置助理会提示此服务  
+        ![向 iOS 设备分配 DEP 配置文件的屏幕截图](../media/dep-setup-assistant.png)
 
     4.  在“附加管理”页上，指定 USB 连接是否可用于附加管理设置。 当选择“需要证书” 时，你必须导入 Apple Configurator 管理证书以供此配置文件使用。  设置为“禁止”可阻止通过 Apple Configurator 与 iTunes 或管理同步文件。 Microsoft 建议设置为“禁止”，从 Apple Configurator 中导出任何进一步的配置，然后部署为自定义 iOS 配置文件，而不是使用此设置允许带或不带证书的手动部署。  
 
@@ -118,8 +121,11 @@ ms.lasthandoff: 03/21/2017
     转到 [设备注册计划门户](https://deploy.apple.com) (https://deploy.apple.com) 并使用你的公司 Apple ID 登录。 转到“部署计划” > “设备注册计划” > “管理设备”。 指定“选择设备”的方式，提供设备信息，并按设备“序列号”、“订单编号”或“上传 CSV 文件”指定详细信息。 接下来，选择“分配到服务器”并选择在步骤 3 中指定的 <*ServerName*>，然后单击“确定”。  
 
 3.  **同步 DEP 管理的设备**   
-    在“资产和符合性”工作区中，转到“所有公司拥有的设备” > “iOS” > “设备信息”。 在“主页”选项卡上，单击“DEP 同步”。 会向 Apple 发送同步请求。 同步完成后，将显示 DEP 管理的设备。 在打开设备并运行设置助理以注册设备之前，托管设备的“注册状态”  将一直显示为“未连接”  。  
+    在“资产和符合性”工作区中，转到“所有公司拥有的设备” > “预声明设备”。 在“主页”选项卡上，单击“DEP 同步”。 会向 Apple 发送同步请求。 同步完成后，将显示 DEP 管理的设备。
 
-4.  **将设备分配给用户**   
-    现在可以将你的企业拥有的设备给予用户。 打开 iOS 设备时，它将注册为由 Intune 管理。
+4.  **分配 DEP 配置文件**<br>在“资产和符合性”工作区中，转到“公司拥有的所有设备” > “iOS” > “注册配置文件”。 选择 DEP 注册配置文件，然后在“主页”选项卡中单击“分配给设备”。 选择要使用此注册配置文件的设备，单击“添加”，然后单击“确定”。   
+     ![向 iOS 设备分配 DEP 配置文件的屏幕截图](../media/dep-assign-profile.png)
+
+5.  **将设备分配给用户**   
+    现在可以将你的企业拥有的设备给予用户。 在打开设备并运行设置助理以注册设备之前，托管设备的“注册状态”  将一直显示为“未连接”  。 打开 iOS 设备时，它将注册为由 Intune 管理。
 

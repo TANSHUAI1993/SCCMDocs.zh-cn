@@ -2,7 +2,7 @@
 title: "先决条件检查 | Microsoft Docs"
 description: "查看 System Center Configuration Manager 的可用先决条件检查。 包括安全权限检查"
 ms.custom: na
-ms.date: 3/1/2017
+ms.date: 4/17/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,16 +16,16 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 496c1444822a4601fad67f421115a609e976386d
-ms.openlocfilehash: 5a8f4a84ef5b4ccb4434ca8eb260c1c7899207ab
-ms.lasthandoff: 03/01/2017
+ms.sourcegitcommit: dda2f4c01078fbbd174cbcb30357554c24f6abeb
+ms.openlocfilehash: 14834f62ffaa8fcba5ddb7536a0b76e18b557e53
+ms.lasthandoff: 04/17/2017
 
 ---
 # <a name="list-of-prerequisite-checks-for-system-center-configuration-manager"></a>System Center Configuration Manager 的先决条件检查列表
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-下列部分详细介绍了可用的先决条件检查。 
+下列部分详细介绍了可用的先决条件检查。
 
 有关使用先决条件检查程序的信息，请参阅[先决条件检查程序](prerequisite-checker.md)。  
 
@@ -104,7 +104,7 @@ ms.lasthandoff: 03/01/2017
 |**已安装 Windows 部署工具**|检查是否安装了适用于 Windows 10 的 Windows ADK 的 Windows 部署工具组件。|错误|SMS 提供程序|
 |**Windows 故障转移群集**|检查具有管理点或分发点的计算机是否并非 Windows 群集的一部分。|错误|管理点<br>分发点|
 |**已安装 Windows 预安装环境**|检查是否安装了适用于 Windows 10 的 Windows ADK 的 Windows 预安装环境组件。|错误|SMS 提供程序|
-|**Windows 远程管理 (WinRM)&1;.1 版**|验证主站点服务器或 Configuration Manage 控制台计算机上是否安装了 WinRM 1.1 以运行带外管理控制台。 有关如何下载 WinRM 1.1 的详细信息，请参阅 Microsoft 知识库 [文章 936059](https://support.microsoft.com/en-us/kb/936059) 。|警告|主站点、 <br>Configuration Manager 控制台|
+|**Windows 远程管理 (WinRM) 1.1 版**|验证主站点服务器或 Configuration Manage 控制台计算机上是否安装了 WinRM 1.1 以运行带外管理控制台。 有关如何下载 WinRM 1.1 的详细信息，请参阅 Microsoft 知识库 [文章 936059](https://support.microsoft.com/en-us/kb/936059) 。|警告|主站点、 <br>Configuration Manager 控制台|
 |**站点服务器上的 WSUS**|验证站点服务器上是否安装了 Windows Server Update Services (WSUS) 3.0 Service Pack 2 (SP2)。 在不是站点服务器上的计算机上使用软件更新点时，必须在站点服务器上安装 WSUS 管理控制台。 有关 WSUS 的详细信息，请参阅 [Windows Server 更新服务](http://go.microsoft.com/fwlink/p/?LinkID=79477)。|警告|管理中心站点、 <br>主站点|  
 
 ##  <a name="BKMK_Requirements"></a> 针对系统需求的先决条件检查  
@@ -117,7 +117,7 @@ ms.lasthandoff: 03/01/2017
 |**域成员身份**|验证 Configuration Manager 计算机是否为 Windows 域的成员。|错误|管理中心站点、 <br>主站点、 <br>辅助站点、 <br>SMS 提供程序、 <br>SQL Server|
 |**域成员身份**|验证 Configuration Manager 计算机是否为 Windows 域的成员。|警告|管理点、 <br>分发点|
 |**站点服务器上的 FAT 驱动器**|检查是否已使用 FAT 文件系统格式化了磁盘驱动器。 为提高安全性，在使用 NTFS 文件系统格式化的磁盘驱动器上安装站点服务器组件。|警告|主站点|
-|**站点服务器上的可用磁盘空间**|为安装站点服务器，站点服务器计算机至少必须有 5 GB 的可用磁盘空间。 如果将 SMS 提供程序站点系统角色安装在同一台计算机上，则必须有 1 GB 的额外可用空间。|错误|管理中心站点、 <br>主站点、 <br>辅助站点|
+|**站点服务器上的可用磁盘空间**|为安装站点服务器，站点服务器计算机至少必须有 15 GB 的可用磁盘空间。 如果将 SMS 提供程序站点系统角色安装在同一台计算机上，则必须有 1 GB 的额外可用空间。|错误|管理中心站点、 <br>主站点、 <br>辅助站点|
 |**正在等待系统重启**|检查在你运行安装程序之前另一个程序是否需要重启服务器。|错误|管理中心站点、 <br>主站点、 <br>辅助站点、 <br>Configuration Manager 控制台、 <br>SMS 提供程序、 <br>SQL Server、 <br>管理点、 <br>分发点|
 |**只读域控制器**|只读域控制器 (RODC) 上不支持站点数据库服务器和辅助站点服务器。 有关详细信息，请参阅 Microsoft 知识库中的 [You may encounter problems when installing SQL Server on a domain controller](http://go.microsoft.com/fwlink/p/?LinkId=264856)（在域控制器上安装 SQL Server 时可能会遇到的问题）。|错误|管理中心站点、 <br>主站点、 <br>辅助站点|
 |**架构扩展**|确定 Active Directory 域服务架构是否已扩展，如果已扩展，则确定所使用的架构扩展的版本。 对于站点服务器安装，不要求进行 Configuration Manager Active Directory 架构扩展，但是建议执行此操作以便充分使用 Configuration Manager 的所有功能。 有关扩展架构的优势的详细信息，请参阅[为站点发布准备 Active Directory](../../../../core/plan-design/network/extend-the-active-directory-schema.md)。|警告|管理中心站点、 <br>主站点|

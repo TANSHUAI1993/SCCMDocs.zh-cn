@@ -17,9 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: aca3525fc143b281f41c3d9bd20bb93b1d91f6ce
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: 761c3f58f7c57d8f87ee802da37821895062546d
+ms.openlocfilehash: 44338c705e308896c5203be239c160a8220369a8
+ms.lasthandoff: 04/19/2017
 
 
 ---
@@ -234,4 +234,11 @@ ConfigMgrSetup.log
 此问题影响对带更新版 1602 的 **Exchange 本地**进行 System Center Configuration Manager 条件性访问，预计会在将来的更新中得到解决。  
 
 **解决方法：**在“免除集合”页上选择“用户集合”之前，将“用户集合”添加到“目标集合”页，或者确保不会将同一“用户集合”添加到“目标集合”和“免除集合”中。
+
+## <a name="endpoint-protection"></a>Endpoint Protection
+<!--  Product Studio bug 485370 added by Nathbarn 04 19 2017 -->
+### <a name="antimalware-policy-fails-to-apply-on-windows-server-2016-core"></a>反恶意软件政策无法应用于 Windows Server 2016 Core
+反恶意软件政策无法应用于 Windows Server 2016 Core。  错误代码为 0x80070002。  ConfigSecurityPolicy.exe 缺少依赖项。
+
+**解决方法：**  无。  可以管理员身份使用组策略管理 Windows Server 2016 Core 的设置。
 
