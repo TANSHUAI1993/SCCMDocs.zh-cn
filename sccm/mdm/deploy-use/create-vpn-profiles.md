@@ -13,13 +13,13 @@ ms.topic: article
 ms.assetid: 45388103-2410-4c7e-b4cf-73a1bda485fc
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: mtillman
-ms.author: mtillman
+author: lleonard-msft
+ms.author: alleonar
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 8c7bf901caa49c8585a9ed3913d4a5a2aac57013
-ms.openlocfilehash: 82f7db908f83d69a86c82ed97b845ff84e78f8b3
-ms.lasthandoff: 03/21/2017
+ms.sourcegitcommit: 699b79b68440b61904a9053e5004318a2a248bfd
+ms.openlocfilehash: 8adc41a30bf12a91a272029db49e50ba003d3e9c
+ms.lasthandoff: 04/25/2017
 
 ---
 # <a name="vpn-profiles-on-mobile-devices-in-system-center-configuration-manager"></a>System Center Configuration Manager 中移动设备上的 VPN 配置文件
@@ -75,10 +75,10 @@ ms.lasthandoff: 03/21/2017
 
     -   **身份验证方法**：选择 VPN 连接将使用的身份验证方法。 可用的方法视连接类型而定，如此表中所示。  
 
-        |身份验证方法|支持的连接类型|  
+        |身份验证方法|支持的&nbsp;连接&nbsp;类型|  
         |---------------------------|--------------------------------|  
-        |**证书**<br /><br /> **注意：** 如果使用客户端证书对 RADIUS 服务器（例如网络策略服务器）进行验证，则证书中的“使用者可选名称”必须设置为“用户主体名称”。|- <br />                            Cisco AnyConnect<br /><br /> - Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - Check Point Mobile VPN|  
-        |**用户名和密码**|- <br />                            脉冲安全<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - Check Point Mobile VPN|  
+        |**证书**<br /><br /> **注意：**<br />- 如果客户端证书对 RADIUS 服务器（例如网络策略服务器）进行身份验证，则证书中的使用者可选名称必须设置为用户主体名称。<br/><br />- 对于 Android 部署，选择 EKU 标识符和证书颁发者指纹哈希值。  否则，用户必须手动选择相应的证书。  |- Cisco AnyConnect<br /><br /> - Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - Check Point Mobile VPN|  
+        |**用户名和密码**|- Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - Check Point Mobile VPN|  
         |**Microsoft EAP-TTLS**|- Microsoft SSL (SSTP)<br /><br /> - Microsoft Automatic<br /><br /> - PPTP<br /><br /> - IKEv2<br /><br /> - L2TP|  
         |**Microsoft 受保护的 EAP (PEAP)**|- Microsoft SSL (SSTP)<br /><br /> - Microsoft Automatic<br /><br /> - IKEv2<br /><br /> - PPTP<br /><br /> - L2TP|  
         |**Microsoft 受保护的密码 (EAP-MSCHAP v2)**|- Microsoft SSL (SSTP)<br /><br /> - Microsoft Automatic<br /><br /> - IKEv2<br /><br /> - PPTP<br /><br /> - L2TP|  
@@ -109,18 +109,15 @@ ms.lasthandoff: 03/21/2017
 
          ![为 VPN 配置条件性访问](media/vpn-conditional-access.png)
 
+         受运行 Configuration Manager 的 Windows 版本和所选的授权方法支持时，可以单击“配置”打开“Windows 属性”对话框并配置身份验证方法属性。  如果禁用“配置”，请使用备选方法配置身份验证方法属性。
 
-> [!NOTE]  
-> 对于某些身份验证方法，可以单击“配置”来打开 Windows 属性对话框（如果正在运行 Configuration Manager 控制台的 Windows 版本支持此身份验证方法），然后在其中配置身份验证方法属性。  
-
-
-1.  在“创建 VPN 配置文件向导”  的“代理设置” 页上，如果 VPN 连接使用代理服务器，请选中“配置此 VPN 配置文件的代理设置”  复选框。 然后提供代理服务器信息。 有关详细信息，请参阅 Windows Server 文档。  
+2.  在“创建 VPN 配置文件向导”  的“代理设置” 页上，如果 VPN 连接使用代理服务器，请选中“配置此 VPN 配置文件的代理设置”  复选框。 然后提供代理服务器信息。 有关详细信息，请参阅 Windows Server 文档。  
 
     > [!NOTE]  
     >  在 Windows 8.1 计算机上，VPN 配置文件将不会显示代理服务器信息，直至使用该计算机连接到 VPN。  
 
 
-2. 进一步配置 DNS 设置（如果需要）  
+3. 进一步配置 DNS 设置（如果需要）  
  在“配置自动 VPN 连接”页上，可以配置以下内容：  
 
     -   **按需启用 VPN**：如果想要进一步配置 Windows Phone 8.1 设备的 DNS 设置，请使用此选项。 此设置仅适用于 Windows Phone 8.1 设备，并且只能在将要部署到 Windows Phone 8.1 设备的 VPN 配置文件上启用。
@@ -153,9 +150,9 @@ ms.lasthandoff: 03/21/2017
     >  如果未选择“通过 VPN 连接发送所有网络流量”  选项并且 VPN 连接使用拆分隧道，则在配置路由或连接特定的 DNS 后缀时可以自动打开 VPN 连接。  
 
 
-1. 在“创建 VPN 配置文件向导”  的“支持的平台” 页上，选择将在其中安装 VPN 配置文件的操作系统，或单击“全选”  以将 VPN 配置文件安装在所有可用的操作系统。  
+4. 在“创建 VPN 配置文件向导”  的“支持的平台” 页上，选择将在其中安装 VPN 配置文件的操作系统，或单击“全选”  以将 VPN 配置文件安装在所有可用的操作系统。  
 
-2. 完成向导。 新的 VPN 配置文件将显示在“资产和符合性”  工作区的“VPN 配置文件”  节点中。  
+5. 完成向导。 新的 VPN 配置文件将显示在“资产和符合性”  工作区的“VPN 配置文件”  节点中。  
 
 
 **部署：**有关部署 VPN 配置文件的信息，请参阅[部署 Wi-Fi、VPN、电子邮件和证书配置文件](../../protect/deploy-use/deploy-wifi-vpn-email-cert-profiles.md)。

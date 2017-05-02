@@ -2,7 +2,7 @@
 title: "Configuration Manager 的混合 MDM 中的新增功能 | Microsoft Docs"
 description: "了解 Configuration Manager 和 Intune 的混合部署可用的新移动设备管理功能。"
 ms.custom: na
-ms.date: 03/28/2017
+ms.date: 04/21/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 761c3f58f7c57d8f87ee802da37821895062546d
-ms.openlocfilehash: 489defeae18c219fe2f717d5caa1f15bcdaf07cf
-ms.lasthandoff: 04/19/2017
+ms.sourcegitcommit: ae008c91a7387ba76f2bfac13f8feb489a0cc558
+ms.openlocfilehash: 0af5ae68353fcf1db846e2e27f3391fe87dcfc42
+ms.lasthandoff: 04/21/2017
 
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager 和 Microsoft Intune 的混合移动设备管理中的新增功能
@@ -57,7 +57,13 @@ ms.lasthandoff: 04/19/2017
 
 - **阻止应用访问 SharePoint Online**
 
-    现在可以创建基于应用的条件访问策略来阻止未向其实施应用保护策略的应用访问 [SharePoint Online](/InTune/deploy-use/mam-ca-for-sharepoint-online)。 在基于应用的条件访问方案中，可以指定想要让其具备使用 Azure 门户访问 SharePoint Online 的权限的应用。
+  现在可以创建基于应用的条件访问策略来阻止未向其实施应用保护策略的应用访问 [SharePoint Online](/InTune/deploy-use/mam-ca-for-sharepoint-online)。 在基于应用的条件访问方案中，可以指定想要让其具备使用 Azure 门户访问 SharePoint Online 的权限的应用。
+
+### <a name="new-in-configuration-manager-technical-preview-1704"></a>Configuration Manager Technical Preview 1704 中的新变化
+
+- **使用应用配置策略配置 Android 应用**
+
+  当用户在 Android for Work 设备上运行应用时，可以在 System Center Configuration Manager (Configuration Manager) 中使用应用配置策略分发预配置的设置。 Android 应用配置策略仅适用于运行 Android for Work 的设备，并可应用于 Play for Work 商店中获批的应用。 若要了解如何试用此功能，请参阅[使用应用配置策略配置 Android 应用](/sccm/core/get-started/capabilities-in-technical-preview-1704#configure-android-apps-with-app-configuration-policies)。
 
 ## <a name="march-2017"></a>2017 年 3 月
 

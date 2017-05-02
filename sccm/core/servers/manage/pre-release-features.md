@@ -2,7 +2,7 @@
 title: "预发行功能 | Microsoft Docs"
 description: "System Center Configuration Manager 中的预发行功能"
 ms.custom: na
-ms.date: 4/13/2017
+ms.date: 4/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,16 +16,16 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 329de5ffb6eb1403c02cd1db634c32f045e82488
-ms.openlocfilehash: c9896d53061b11f249f32f118620524c6a270ec9
-ms.lasthandoff: 04/14/2017
+ms.sourcegitcommit: 690d03d9c8c49a815bd318df549d7401a855bc5d
+ms.openlocfilehash: b12fcb3c372c34ee47306a9b536c3d0c4764b8be
+ms.lasthandoff: 04/24/2017
 
 
 ---
 # <a name="pre-release-features-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的预发行功能
 *适用范围：System Center Configuration Manager (Current Branch)*
 
- 预发行功能是指 Current Branch 中随附的功能，用于在生产环境中的早期测试。 这些功能不应被视为可进行生产，但可以在生产环境中使用。
+预发行功能是指 Current Branch 中随附的功能，用于在生产环境中的早期测试。 这些功能完全受支持，但仍在开发过程中，所以在从预发行类别中划出之前，可能会有所变更。
 
  若要使用预发行功能，必须在 Configuration Manager 控制台中同意使用预发行功能，然后才可选择并启用它们。  
 

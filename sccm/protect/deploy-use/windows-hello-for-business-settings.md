@@ -2,7 +2,7 @@
 title: "Windows Hello 企业版设置 | Microsoft Docs"
 description: "了解如何将 Windows Hello 企业版与 System Center Configuration Manager 集成。"
 ms.custom: na
-ms.date: 03/28/2017
+ms.date: 04/25/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,9 +16,9 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: c9a6842958e6fa3f740caabbaf20aabb9df4e8a8
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: 699b79b68440b61904a9053e5004318a2a248bfd
+ms.openlocfilehash: 75def95561feb35f2f060f0daa72291983324d4f
+ms.lasthandoff: 04/25/2017
 
 
 ---
@@ -28,7 +28,9 @@ ms.lasthandoff: 03/27/2017
 
 通过 System Center Configuration Manager，可与 Windows Hello 企业版（以前为 Microsoft Passport for Windows）集成，其为 Windows 10 设备的替代登录方法。 Hello 企业版使用 Active Directory 或 Azure Active Directory 帐户来替代密码、智能卡或虚拟智能卡。  
 
-在 Hello 企业版中，可以使用“用户手势”取代密码进行登录。 用户手势可以是简单的 PIN、生物识别身份验证或指纹读取器等外部设备。  
+在 Hello 企业版中，可以使用“用户手势”取代密码进行登录。 用户手势可以是简单的 PIN、生物识别身份验证或指纹读取器等外部设备。
+
+[查找有关 Windows Hello for Business 的详细信息](https://docs.microsoft.com/windows/access-protection/hello-for-business/hello-identity-verification)
 
  Configuration Manager 通过两种方式与 Windows Hello 企业版集成：  
 
@@ -47,7 +49,7 @@ ms.lasthandoff: 03/27/2017
 
 请注意，除此配置外，还必须部署证书配置文件，如[配置证书配置文件](#configure-a-certificate-profile)中所述。
 
-## <a name="recommended-approach----configure-a-windows-hello-for-business-profile"></a>推荐方法 - 配置 Windows Hello 企业版配置文件  
+## <a name="configure-a-windows-hello-for-business-profile"></a>配置 Windows Hello for Business 配置文件  
 
 在 Configuration Manager 控制台的“公司资源访问”下，右键单击“Windows Hello 企业版配置文件”，然后选择“新建”以启动配置文件向导。 提供向导请求的设置，在最终页上查看并确认设置，然后单击“关闭”。 设置的示例可能如下所示：  
 
@@ -82,7 +84,7 @@ ms.lasthandoff: 03/27/2017
 ## <a name="configure-windows-hello-for-business-by-deploying-a-powershell-script-with-configuration-manager"></a>通过使用 Configuration Manager 部署 PowerShell 脚本来配置 Windows Hello 企业版    
 可使用 Configuration Manager 应用程序管理来创建和部署以下 PowerShell 脚本。    
 
-**powershell.exe -ExecutionPolicy Bypass -NoLogo -NoProfile -Command "& {New-ItemProperty "HKLM:\Software\Policies\Microsoft\PassportForWork" -Name "Enabled" -Value 1 -PropertyType "DWord" -Force}"** 
+**powershell.exe -ExecutionPolicy Bypass -NoLogo -NoProfile -Command "& {New-ItemProperty "HKLM:\Software\Policies\Microsoft\PassportForWork" -Name "Enabled" -Value 1 -PropertyType "DWord" -Force}" ** 
 
 有关 Configuration Manager 应用程序管理的详细信息，请参阅 [System Center Configuration Manager 中的应用程序管理简介](/sccm/apps/understand/introduction-to-application-management)。  
 
@@ -111,8 +113,7 @@ ms.lasthandoff: 03/27/2017
 
  有关详细信息，请参阅[证书配置文件](introduction-to-certificate-profiles.md)。  
 
-## <a name="see-also"></a>另请参阅  
- [使用 System Center Configuration Manager 保护数据和站点基础结构](../../protect/understand/protect-data-and-site-infrastructure.md)
 
- [使用 Windows Hello 企业版管理身份验证](https://technet.microsoft.com/itpro/windows/keep-secure/manage-identity-verification-using-microsoft-passport)。  
+
+
 
