@@ -2,7 +2,7 @@
 title: "测试客户端升级预生产集合 | Microsoft Docs"
 description: "在 System Center Configuration Manager 中的预生产集合中测试客户端升级。"
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,13 +13,13 @@ ms.topic: article
 ms.assetid: 49ef2ed2-2e15-4637-8b63-1d5b7f9c17e1
 caps.latest.revision: 10
 caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 533c8e8b30519d83b8fc7a9d204d51e76974c4b1
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: 690d03d9c8c49a815bd318df549d7401a855bc5d
+ms.openlocfilehash: 7edd3e46b4813dd50df7d01b367f8e73bb350a7d
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -54,6 +54,9 @@ ms.lasthandoff: 03/27/2017
 
 ![测试客户端升级](media/test-client-upgrades.png)
 
+>[!NOTE]
+>要更改这些设置，你的帐户必须是**完全权限管理员**安全角色和**所有**安全范围的成员。
+
 
 ##  <a name="to-install-a-configuration-manager-update-that-includes-a-new-version-of-the-client"></a>若要安装包括新版本客户端的 Configuration Manager 更新  
 
@@ -80,4 +83,7 @@ ms.lasthandoff: 03/27/2017
 2.  查看生产和预生产中的客户端版本，确保已指定正确的预生产集合，然后依次单击“提升”、“是”。  
 
 3.  对话框关闭后，更新的客户端版本将替代在你的层次结构中使用的客户端版本。 然后可以为整个站点升级客户端。 有关详细信息，请参阅[如何在 System Center Configuration Manager 中升级 Windows 计算机的客户端](../../../../core/clients/manage/upgrade/upgrade-clients-for-windows-computers.md)。  
+
+>[!NOTE]
+>要启用预生产客户端，或者将预生产客户端升级到生产客户端，你的帐户必须是安全角色的成员，该角色具有**读取**和**修改**  **Update Packages** 对象的权限。
 

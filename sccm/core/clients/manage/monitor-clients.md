@@ -2,7 +2,7 @@
 title: "监视客户端 - Configuration Manager | Microsoft Docs"
 description: "了解有关如何在 System Center Configuration Manager 中监视客户端的详细指南。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,13 +12,13 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2c8f57cf-1968-48de-87fb-4897432ed6e0
 caps.latest.revision: 23
-author: arob98
-ms.author: angrobe
+author: robstackmsft
+ms.author: robstack
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
-ms.openlocfilehash: 85afe010e734d20ae1f1479b3edd166c54cc8fd2
-ms.lasthandoff: 01/24/2017
+ms.sourcegitcommit: 690d03d9c8c49a815bd318df549d7401a855bc5d
+ms.openlocfilehash: 08a4d9b29871b49e3118aef949572cef64940f96
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -29,7 +29,7 @@ ms.lasthandoff: 01/24/2017
 
  在站点中的 Windows 计算机和设备上安装 System Center Configuration Manager 客户端应用程序后，即可在 Configuration Manager 控制台中监视其运行状况和活动。  
 
-##  <a name="a-namebkmkabouta-about-client-status"></a><a name="bkmk_about"></a> 关于客户端状态  
+##  <a name="bkmk_about"></a> 关于客户端状态  
  Configuration Manager 提供以下类型的信息作为客户端状态：  
 
 -   **客户端联机状态** - 从 Configuration Manager 1602 版开始，此状态可指示计算机是否处于联机状态。 如果计算机连接到其已分配的管理点，则将其视为联机。  为指示客户端处于联机状态，它将向管理点发送类似 ping 的消息。 如果管理点在 5 分钟左右未收到消息，则将客户端视为处于脱机状态。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 01/24/2017
 
      你可以将修正配置为不在特定计算机（例如关键业务服务器）上运行。 此外，如果想要评估其他项，则可以使用 Configuration Manager 符合性设置提供全面的解决方案，以监视组织中计算机的总体健康状况、活动和符合性。 有关符合性设置的详细信息，请参阅[在 System Center Configuration Manager 中规划和配置符合性设置](../../../compliance/plan-design/plan-for-and-configure-compliance-settings.md)。  
 
-##  <a name="a-namebkmkindstatusa-monitor-the-status-of-individual-clients"></a><a name="bkmk_indStatus"></a> 监视单个客户端的状态  
+##  <a name="bkmk_indStatus"></a> 监视单个客户端的状态  
 
 1.  在 Configuration Manager 控制台中，单击“资产和符合性” > “设备”或者在“设备集合”下选择一个集合。  
 
@@ -65,7 +65,7 @@ ms.lasthandoff: 01/24/2017
 
 3.  单击列表窗格中的单个客户端可以在详细信息窗格中查看更多状态，包括有关客户端活动和客户端检查的信息。  
 
-##  <a name="a-namebkmkallstatusa-monitor-the-status-of-all-clients"></a><a name="bkmk_allStatus"></a> 监视所有客户端的状态  
+##  <a name="bkmk_allStatus"></a> 监视所有客户端的状态  
 
 1.  在 Configuration Manager 控制台中，单击“监视” > “客户端状态”。 在控制台的此页面中，可查看整个站点内客户端活动和客户端检查的总体统计信息。  还可通过选择不同的集合来更改信息的范围。  
 
@@ -77,7 +77,7 @@ ms.lasthandoff: 01/24/2017
 
  你可以将警报配置为在以下情况下通知你：客户端检查结果或客户端活跃状况低于集合中客户端的指定百分比，或者修正针对指定百分比的客户端失败。 有关如何配置客户端状态的信息，请参阅[如何在 System Center Configuration Manager 中配置客户端状态](../../../core/clients/deploy/configure-client-status.md)。  
 
-##  <a name="a-namebkmkclienthealtha-checks-and-remediations-made-by-client-check"></a><a name="BKMK_ClientHealth"></a> 客户端检查进行的检查和修正  
+##  <a name="BKMK_ClientHealth"></a> 客户端检查进行的检查和修正  
  客户端检查可以执行以下检查和修正。  
 
 |客户端检查|修正操作|更多信息|  
@@ -110,4 +110,7 @@ ms.lasthandoff: 01/24/2017
 |验证客户端 WMI 提供程序是否正常|重新启动 Windows Management Instrumentation 服务|仅在运行 Windows Server 2003、Windows XP（64 位）或更早版本的计算机上执行此客户端检查的修正。|  
 |验证唤醒代理服务（ConfigMgr 唤醒代理）是否正在运行|启动 ConfigMgr 唤醒代理服务|仅当“电源管理” 时进行此客户端检查：在受支持的客户端操作系统上，将“启用唤醒代理”  客户端设置设置为“是”  。|  
 |验证唤醒代理服务（ConfigMgr 唤醒代理）启动类型是否为自动|将 ConfigMgr 唤醒代理服务启动类型重置为自动|仅当“电源管理” 时进行此客户端检查：在受支持的客户端操作系统上，将“启用唤醒代理”  客户端设置设置为“是”  。|  
+
+## <a name="client-deployment-log-files"></a>客户端部署日志文件
+有关客户端部署和管理操作使用的日志文件的信息，请参阅 [System Center Configuration Manager 中的日志文件](/sccm/core/plan-design/hierarchy/log-files#BKMK_ClientLogs)。
 

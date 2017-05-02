@@ -17,9 +17,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 4c2906c2a963e0ae92e3c0d223afb7a47377526a
-ms.openlocfilehash: ffc2adb34427aa62f4a377e887c2ff54d47abeff
-ms.lasthandoff: 03/20/2017
+ms.sourcegitcommit: 690d03d9c8c49a815bd318df549d7401a855bc5d
+ms.openlocfilehash: 78caa69e10f5d386daab1e61e484d4d134469708
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -552,13 +552,13 @@ Configuration Manager 不允许您为以下通信类型配置端口：
 
 2.  **可用的备用端口**：可在 Configuration Manager 中为此值定义备用端口。 如果定义了自定义端口，则为 IPsec 策略或为配置防火墙定义 IP 筛选器信息时将替代该自定义端口。  
 
-3.  **Windows Server Update Services (WSUS)**：WSUS 可在默认网站（端口 80）或自定义网站（端口 8530）上安装。  
+3.  **Windows Server Update Services (WSUS)**：可以安装 WSUS 以使用端口 80/443 或端口 8530/8531 进行客户端通信。 在 Windows Server 2012 或 Windows Server 2016 中运行 WSUS 时，WSUS 被默认配置为针对 HTTP 使用端口 8530，针对 HTTPS 使用端口 8531。  
 
      安装后，可更改端口。 不必在整个站点层次结构中使用相同的端口号。  
 
     -   如果 HTTP 端口为 80，则 HTTPS 端口必须为 443。  
 
-    -   如果 HTTP 端口为其他端口，则 HTTPS 端口号必须大于等于 1，例如 8530 或 8531。  
+    -   如果 HTTP 端口为其他端口，则 HTTPS 端口号必须大于等于 1，例如 8530 和 8531。   
 
     > [!NOTE]  
     >  在配置使用 HTTPS 的软件更新点时，还必须打开 HTTP 端口。 未加密的数据（如特定更新的 EULA）使用 HTTP 端口。  

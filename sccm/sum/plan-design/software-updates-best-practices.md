@@ -14,8 +14,9 @@ ms.technology:
 - configmgr-sum
 ms.assetid: 6d20389a-9de2-4a64-bced-9fc4fa519174
 translationtype: Human Translation
-ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
-ms.openlocfilehash: ea365491dd334980693375fbb7730653af9cd8e4
+ms.sourcegitcommit: d94acac84f052a01de9d9c9f65f237c0006c45b8
+ms.openlocfilehash: 5df20f3703442de1be6220ca2770e182e330c036
+ms.lasthandoff: 04/26/2017
 
 
 
@@ -41,7 +42,7 @@ ms.openlocfilehash: ea365491dd334980693375fbb7730653af9cd8e4
  当 Configuration Manager 和 WSUS 数据库使用同一 SQL Server 并共享 SQL Server 的同一实例时，将无法轻松确定两个应用程序之间的资源使用情况。 如果为 Configuration Manager 和 WSUS 使用不同的 SQL Server 实例，将可以更轻松地解决和诊断每个应用程序可能发生的资源使用问题。  
 
 ### <a name="specify-the-store-updates-locally-setting-for-the-wsus-installation"></a>为 WSUS 安装指定“本地存储更新”设置  
- 当安装 WSUS 3.0 时，选择“本地存储更新”  设置。 如果选择此设置，则会在同步过程中下载与软件更新关联的许可条款，并存储在 WSUS 服务器的本地硬盘驱动器上。 如果未选择此设置，则客户端计算机可能无法扫描具有许可条款的软件更新的软件更新符合性。 当你安装软件更新点时，WSUS Synchronization Manager 默认情况下将每隔 60 分钟验证一次是否启用了此设置。  
+ 当安装 WSUS 时，选择“本地存储更新”设置。 如果选择此设置，则会在同步过程中下载与软件更新关联的许可条款，并存储在 WSUS 服务器的本地硬盘驱动器上。 如果未选择此设置，则客户端计算机可能无法扫描具有许可条款的软件更新的软件更新符合性。 当你安装软件更新点时，WSUS Synchronization Manager 默认情况下将每隔 60 分钟验证一次是否启用了此设置。  
 
 ## <a name="operational-best-practices"></a>操作最佳方案  
  在使用软件更新时，请使用下列最佳方案：  
@@ -57,9 +58,4 @@ ms.openlocfilehash: ea365491dd334980693375fbb7730653af9cd8e4
 
 ## <a name="see-also"></a>另请参阅  
  [在 System Center Configuration Manager 中规划软件更新](../../sum/plan-design/plan-for-software-updates.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

@@ -17,9 +17,9 @@ author: Dougeby
 ms.author: dougeby
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: a3e6cca8d58055cc2d54aff3cb70a276fb40e829
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: ae008c91a7387ba76f2bfac13f8feb489a0cc558
+ms.openlocfilehash: f5feccc4f810e1a94bb7dcdd5ad507d84b9c3b4a
+ms.lasthandoff: 04/21/2017
 
 
 ---
@@ -76,6 +76,11 @@ ms.lasthandoff: 03/27/2017
 |SMSTSDownloadProgram|使用此变量为任务序列指定替换内容提供程序，即用于下载内容的下载程序（而非默认的 Configuration Manager 下载程序）。 作为内容下载过程的一部分，任务序列会检查此变量，以了解是否指定了下载程序。 如果已指定，则任务序列会运行指定的程序来执行下载。|  
 |SMSTSDownloadRetryCount|使用此变量来指定 Configuration Manager 尝试从分发点下载内容的次数。 默认情况下，客户端将重试 **2** 次。|  
 |SMSTSDownloadRetryDelay|使用此变量来指定 Configuration Manager 重新尝试从分发点下载内容前等待的秒数。 默认情况下，客户端将在重试之前等待 **15** 秒。|  
+|SMSTSDriverReceiveTimeOut|使用此变量指定到服务器的连接超时之前的秒数。|
+|SMSTSDriverRequestConnectTimeOut|在自动应用驱动程序任务序列步骤期间请求驱动程序目录时，使用此变量指定等待 HTTP 服务器连接的秒数。 如果连接时间超过超时设置，则取消该请求。 默认情况下，超时时间设置为 60 秒。|  
+|SMSTSDriverRequestReceiveTimeOut|在自动应用驱动程序任务序列步骤期间，使用此变量指定等待驱动程序目录响应的秒数。 如果连接时间超过超时设置，则取消该请求。 默认情况下，超时时间设置为 480 秒。|
+|SMSTSDriverRequestResolveTimeOut|在自动应用驱动程序任务序列步骤期间请求驱动程序目录时，使用此变量指定等待 HTTP 名称解析的秒数。 如果连接时间超过超时设置，则取消该请求。 默认情况下，超时时间设置为 60 秒。|
+|SMSTSDriverRequestSendTimeOut|在自动应用驱动程序任务序列步骤期间发送驱动程序目录请求时，使用此变量指定要使用的秒数。 如果该请求用时比超时设置更长，则取消该请求。 默认情况下，超时时间设置为 60 秒。|
 |SMSTSErrorDialogTimeout|当任务序列中发生错误时，显示对话框，在此变量指定的秒数后自动关闭。 默认情况下，该对话框将在 **900** 秒（15 分钟）后自动关闭。|  
 |TSErrorOnWarning|使用此变量指定任务序列引擎是否将应用程序安装任务序列步骤检测到的警告视为错误。 由于未满足要求而导致一个或多个应用程序或所需的依赖项未安装时，任务序列将 _TSAppInstallStatus 变量设置为 **Warning** 。 当你将 TSErrorOnWarning 变量设置为 **True** 且 _TSAppInstallStatus 变量设置为 Warning 时，它被视为错误。 值 **False** 是默认行为。|  
 |SMSTSLanguageFolder|使用此变量可更改语言中性启动映像的显示语言。|  

@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 9cbda4db3c8fcd0bc039e9bb0f490af519b7d04b
-ms.lasthandoff: 03/27/2017
+ms.sourcegitcommit: d94acac84f052a01de9d9c9f65f237c0006c45b8
+ms.openlocfilehash: 5fbf1a2605b4915a2f592875a5ac88368160ce87
+ms.lasthandoff: 04/26/2017
 
 
 ---

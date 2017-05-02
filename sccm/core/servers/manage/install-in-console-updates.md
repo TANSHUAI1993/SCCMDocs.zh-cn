@@ -16,9 +16,9 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 translationtype: Human Translation
-ms.sourcegitcommit: 32f7fc4ef9c8e8d3c2ec8eeaf9a3174bad992ffb
-ms.openlocfilehash: 18c199e78750eadc06b9635fa6104d36c2ac018d
-ms.lasthandoff: 04/08/2017
+ms.sourcegitcommit: d94acac84f052a01de9d9c9f65f237c0006c45b8
+ms.openlocfilehash: 29a55948a1897e1345ba14ec685b9288a844feaa
+ms.lasthandoff: 04/26/2017
 
 
 ---
@@ -325,7 +325,7 @@ System Center Configuration Manager 与 Microsoft 云服务同步，以获取更
 
 
 ##  <a name="bkmk_prerelease"></a> 使用更新中的预发行功能
-预发行功能是指 Current Branch 中随附的功能，用于在生产环境中的早期测试。 这些功能不应被视为可进行生产，但可以在生产环境中使用。 若要了解有关预发行功能的详细信息，包括如何在环境中启用这些功能，请参阅[预发行功能](/sccm/core/servers/manage/pre-release-features)。                |
+预发行功能是指 Current Branch 中随附的功能，用于在生产环境中的早期测试。 这些功能不应被视为可进行生产，但可以在生产环境中使用。 若要了解有关预发行功能的详细信息，包括如何在环境中启用这些功能，请参阅[预发行功能](/sccm/core/servers/manage/pre-release-features)。             
 
 
 ## <a name="known-issues"></a>已知问题

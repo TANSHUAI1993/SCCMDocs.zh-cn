@@ -14,9 +14,9 @@ ms.technology:
 - configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
 translationtype: Human Translation
-ms.sourcegitcommit: 3c2a07f560e0aa3d2beb7cc50e71c98ac45c27e1
-ms.openlocfilehash: 2a4fa6dcf8691875f5b262d6dc7bf1522d91acfd
-ms.lasthandoff: 03/28/2017
+ms.sourcegitcommit: 690d03d9c8c49a815bd318df549d7401a855bc5d
+ms.openlocfilehash: 703adc87b9498e39a1db71b94f1bc1a05a4889ec
+ms.lasthandoff: 04/24/2017
 
 
 ---
@@ -162,12 +162,12 @@ ms.lasthandoff: 03/28/2017
  在主站点上安装多个软件更新点时，请为同一 Active Directory 林中的每个软件更新点使用同一 WSUS 数据库。 如果共享相同的数据库，则可以极大程度地进行缓解，但不完全排除在客户端切换到新软件更新点时可能会遇到的客户端和网络性能影响。 当客户端切换到与旧软件更新点共享数据库的新软件更新点时，仍然会进行增量扫描，但与 WSUS 服务器具有其自己的数据库的情况相比，扫描工作要少得多。  
 
 ####  <a name="BKMK_CustomWebSite"></a> 配置 WSUS 以使用自定义网站  
- 在安装 WSUS 时，可以选择使用现有的 IIS 默认网站或创建自定义的 WSUS 网站。 为 WSUS 创建自定义网站，以便 IIS 在专用的虚拟网站中承载 WSUS 服务，而不是共享由其他 Configuration Manager 站点系统或其他应用程序使用的同一个网站。 尤其是在站点服务器上安装软件更新点站点系统角色时。 在 Windows Server 2012 中运行 WSUS 时，WSUS 被默认配置为针对 HTTP 使用端口 8530，针对 HTTPS 使用端口 8531。 在站点上创建软件更新点时，必须指定这些端口设置。  
+ 在安装 WSUS 时，可以选择使用现有的 IIS 默认网站或创建自定义的 WSUS 网站。 为 WSUS 创建自定义网站，以便 IIS 在专用的虚拟网站中承载 WSUS 服务，而不是共享由其他 Configuration Manager 站点系统或其他应用程序使用的同一个网站。 尤其是在站点服务器上安装软件更新点站点系统角色时。 在 Windows Server 2012 或 Windows Server 2016 中运行 WSUS 时，WSUS 被默认配置为针对 HTTP 使用端口 8530，针对 HTTPS 使用端口 8531。 在站点上创建软件更新点时，必须指定这些端口设置。  
 
 ####  <a name="BKMK_WSUSInfrastructure"></a> 使用现有的 WSUS 基础结构  
  安装 Configuration Manager 之前，可以选择在环境中处于活动状态的 WSUS 服务器，以用作软件更新点。 配置软件更新点时，必须指定同步设置。 Configuration Manager 连接至在软件更新点服务器运行的 WSUS 服务器并使用相同设置配置 WSUS。 如果 WSUS 服务器以前与未配置为软件更新点同步设置的产品或分类同步，则会对 WSUS 数据库中的所有软件更新元数据同步产品和分类的软件更新元数据，而与软件更新点配置的同步设置无关。 这可能会导致站点数据库中出现意外的软件更新元数据。 直接在 WSUS 管理控制台中添加产品或分类然后立即启动同步时，你将遇到相同的行为方式。 默认情况下，Configuration Manager 每小时会连接到软件更新点上的 WSUS，并重置在 Configuration Manager 外修改的任何设置。 未满足你在同步设置中指定的产品和分类要求的软件更新被设置为过期，然后会从站点数据库中删除。
 
- 将 WSUS 服务器配置为软件更新点时，将无法再将其用作独立 WSUS 服务器。 如果需要不由 Configuration Manager 管理的单独的独立 WSUS 服务器，则必须在其他服务器上配置它。 
+ 将 WSUS 服务器配置为软件更新点时，将无法再将其用作独立 WSUS 服务器。 如果需要不由 Configuration Manager 管理的单独的独立 WSUS 服务器，则必须在其他服务器上配置它。
 
 ####  <a name="BKMK_WSUSAsReplica"></a> 将 WSUS 配置为副本服务器  
  在主站点服务器上创建软件更新点站点系统角色时，你无法使用配置为副本的 WSUS 服务器。 将 WSUS 服务器配置为副本时，Configuration Manager 无法配置 WSUS 服务器，WSUS 同步也会失败。 在辅助站点上创建软件更新点时，Configuration Manager 会将 WSUS 配置为在父主站点中软件更新点上运行的 WSUS 的副本服务器。 在主站点中安装的第一个软件更新点为默认的软件更新点。 站点中的其他软件更新点被配置为默认软件更新点的副本。  
