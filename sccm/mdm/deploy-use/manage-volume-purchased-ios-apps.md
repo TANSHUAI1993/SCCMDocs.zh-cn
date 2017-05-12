@@ -2,7 +2,7 @@
 title: "管理批量采购的 iOS 应用 | Microsoft Docs"
 description: "部署、管理和跟踪通过 iOS App Store 购买的应用的许可证。"
 ms.custom: na
-ms.date: 03/28/2017
+ms.date: 05/03/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,10 +16,11 @@ caps.handback.revision: 0
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 3c2a07f560e0aa3d2beb7cc50e71c98ac45c27e1
-ms.openlocfilehash: a63acf0d80edba1e965ba8ea99fe90edb8aa2faf
-ms.lasthandoff: 03/28/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: c6a6137fa978e1ea28aefea2aea4e29ba661efd6
+ms.openlocfilehash: 55f1204b088a7b636a90561f20aa41c7de72bc05
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/04/2017
 
 ---
 # <a name="manage-volume-purchased-ios-apps-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 管理批量购买的 iOS 应用
@@ -112,7 +113,7 @@ ms.lasthandoff: 03/28/2017
 
  从**应用商店的许可证信息**节点创建应用时，该应用将与你所选的应用的令牌的许可证相关联。  例如，可能在节点中看到同一个应用的两个版本。 这是因为，应用的每个版本都与不同的 Apple VPP 令牌相关联。  然后，可以从每个令牌创建应用，并单独对其部署。
 
- 若要回收许可证，必须将部署操作为“卸载” 。 应用卸载后，将回收许可证。  
+ 若要回收许可证，必须新建应用部署，并且将部署操作设置为“卸载”。 不能更改原始部署中的部署操作。 应用卸载后，将回收许可证。  
 
 ## <a name="step-3---monitor-ios-vpp-apps"></a>步骤 3 - 监视 iOS VPP 应用  
  “软件库”工作区的“应用商店应用的许可证信息”节点显示了批量采购的 iOS 应用的信息。 该信息包括每个应用拥有的许可证总数，以及已部署的许可证数量。 此外，该视图显示应用关联了哪个 VPP 令牌及其类型

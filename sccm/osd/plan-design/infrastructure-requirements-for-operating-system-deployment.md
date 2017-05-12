@@ -15,10 +15,11 @@ caps.latest.revision: 24
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
-ms.openlocfilehash: 562e81df12e46a2332aa5e4de8b7c9e5819bde80
-ms.lasthandoff: 03/21/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 065b1fcb25d7c7845b6f26e757b36e7fb97ce013
+ms.openlocfilehash: ef4536578456c13de5afaa5cd1977d2e6b4b6bd1
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/10/2017
 
 
 ---
@@ -52,6 +53,9 @@ System Center 2012 Configuration Manager 中的操作系统部署具有外部依
 -   [面向 IT 专业人员的适用于 Windows 10 方案的 Windows ADK](https://technet.microsoft.com/library/mt280162\(v=vs.85\).aspx)  
 
 -   [下载适用于 Windows 10 的 Windows ADK](https://msdn.microsoft.com/windows/hardware/dn913721.aspx#adkwin10)  
+
+-   [支持 Windows 10](/sccm/core/plan-design/configs/support-for-windows-10)  
+
 
 ### <a name="user-state-migration-tool-usmt"></a>用户状态迁移工具 (USMT)  
  Configuration Manager 使用包含 USMT 10 源文件的 USMT 包在操作系统部署过程中捕获和还原用户状态。 位于顶层站点的 Configuration Manager 安装程序将自动创建 USMT 包。 USMT 10 可以捕获 Windows 7、Windows 8、Windows 8.1 和 Windows 10 中的用户状态。 在适用于 Windows 10 的 Windows 评估和部署工具包 (Windows ADK) 中分发 USMT 10。  

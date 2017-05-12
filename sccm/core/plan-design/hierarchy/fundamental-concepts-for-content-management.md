@@ -2,7 +2,7 @@
 title: "内容管理基础知识 | Microsoft Docs"
 description: "在 System Center Configuration Manager 中使用工具和选项管理部署内容。"
 ms.custom: na
-ms.date: 3/15/2017
+ms.date: 05/04/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,10 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 238e460885b6490b3744690640f9ff040902b35f
-ms.lasthandoff: 03/27/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 212628639300e9c361f7cee61b3df6b1cb6874ce
+ms.openlocfilehash: f73dde64e0e8a0fc49f45b3afb3b8f00c926a820
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/05/2017
 
 
 ---
@@ -29,9 +30,12 @@ ms.lasthandoff: 03/27/2017
 
 System Center Configuration Manager 支持工具和选项的一个可靠系统，用于管理部署为应用程序、包、软件更新和操作系统部署的内容。  
 
- 所部署的内容将同时存储在站点服务器和分发点站点系统服务器上。 在不同位置间进行传输时，此内容将需要大量的网络带宽。 为了有效地规划和使用内容管理基础结构，建议了解可用的选项和配置，然后考虑如何使用它们在最大限度上适应你的网络环境并满足内容部署需求。  
+所部署的内容将同时存储在站点服务器和分发点站点系统服务器上。 在不同位置间进行传输时，此内容将需要大量的网络带宽。 为了有效地规划和使用内容管理基础结构，建议了解可用的选项和配置，然后考虑如何使用它们在最大限度上适应你的网络环境并满足内容部署需求。  
 
-下面是内容管理的关键概念。 当概念需要额外或复杂的信息时，将提供链接以将你转到这些详细信息。  
+> [!TIP]    
+> 可以详细了解内容分发流程，并获取有关如何诊断和解决常见内容分发问题的帮助。 请参阅 support.microsoft.com 上的[了解和排查 Microsoft Configuration Manager 中的内容分发问题](https://support.microsoft.com/help/4000401/content-distribution-in-mcm)。
+
+下面介绍了内容管理的重要概念。 当概念需要额外或复杂的信息时，将提供链接以将你转到这些详细信息。
 
 ## <a name="accounts-used-for-content-management"></a>用于内容管理的帐户  
  以下帐户可用于内容管理：  

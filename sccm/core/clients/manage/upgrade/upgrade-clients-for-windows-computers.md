@@ -2,7 +2,7 @@
 title: "升级客户端 | Microsoft Docs"
 description: "在 System Center Configuration Manager 中升级 Windows 计算机上的客户端。"
 ms.custom: na
-ms.date: 04/23/2017
+ms.date: 05/04/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,10 +16,11 @@ caps.handback.revision: 0
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: a5b59a1d31d897473262edcd0912ef0fcbedd100
-ms.lasthandoff: 03/06/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 212628639300e9c361f7cee61b3df6b1cb6874ce
+ms.openlocfilehash: 98b8c92e4dad3cef1ed3701b9c0f9111eb9941ea
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/05/2017
 
 
 ---
@@ -98,5 +99,8 @@ ms.lasthandoff: 03/06/2017
 
 8.  如果想要将客户端安装包复制到针对预留内容启用的分发点，请单击“向针对预留内容启用的分发点自动分发客户端安装包” 。  
 
-9. 单击“确定”  以保存设置并关闭“层次结构设置属性”  对话框。 客户端下次下载策略时将收到这些设置。  
+9. 单击“确定”  以保存设置并关闭“层次结构设置属性”  对话框。 客户端下次下载策略时将收到这些设置。
+
+>[!NOTE]
+>客户端升级按已配置的任意 Configuration Manager 维护时段进行。
 

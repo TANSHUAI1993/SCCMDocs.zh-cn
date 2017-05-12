@@ -15,10 +15,11 @@ caps.latest.revision:
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: fa5919b72114d71e1fbad74418c662d199827690
-ms.lasthandoff: 03/27/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 212628639300e9c361f7cee61b3df6b1cb6874ce
+ms.openlocfilehash: 8edf83a0f761dfc16274ce49c3aa2b878c7fe6cd
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/05/2017
 
 
 ---
@@ -68,10 +69,11 @@ ms.lasthandoff: 03/27/2017
 |**威胁状态**| 是 | 设备上威胁的当前状态。 可能的状态：**激活**、**已解决**或**已忽略：**表示用户忽略了设备上的威胁，但是威胁仍然存在。 |
 |**威胁类型**| 是 | 威胁的移动威胁防御合作伙伴类型。 可能的值：**应用**、**文件**或**操作系统** |
 |**AAD 帐户 ID**| 否 | Azure Active Directory 唯一标识符。 |
-|**分类**| 是 | 移动威胁防御合作伙伴提供了威胁的分类。 可能的值：**Root Enabler、Riskware、Adware、Chargeware、DataLeak、Trojan、Worm、Virus、Exploit、Backdoor、Bot、AppDropper、ClickFraud、Spam、Spyware、SurveillanceWare、Vulnerability、Unknown、RootJailbrake、Connectivity、TollFraud、SideloadedApp** |
+|**分类**| 是 | 移动威胁防御合作伙伴提供了威胁的分类。 可取值：**Root Enabler、Riskware、Adware、Chargeware、DataLeak、Trojan、Worm、Virus、Exploit、Backdoor、Bot、AppDropper、ClickFraud、Spam、Spyware、SurveillanceWare、Vulnerability、Unknown、Root Jailbrake、Connectivity、TollFraud、SideloadedApp** |
 |**设备 ID**| 否 | Azure Active Directory 对象 ID，表示包含威胁信息的已联接的设备的工作区。 |
 |**威胁 ID**| 否 | 移动威胁防御合作伙伴生成的威胁的唯一标识符。 威胁 ID 用于跟踪解析。 |
 |**威胁 URL**| 否 | 如果存在，则威胁 URL 链接回此特定威胁的移动威胁防御合作伙伴的管理控制台视图。 |
 
 > [!TIP] 
 > 请确保启用**默认情况下可见**的列，以查看有关你的设备的移动威胁防御符合性状态的详细信息。
+

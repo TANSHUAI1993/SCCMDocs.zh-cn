@@ -2,7 +2,7 @@
 title: "测试客户端升级预生产集合 | Microsoft Docs"
 description: "在 System Center Configuration Manager 中的预生产集合中测试客户端升级。"
 ms.custom: na
-ms.date: 04/23/2017
+ms.date: 05/04/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,10 +16,11 @@ caps.handback.revision: 0
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 690d03d9c8c49a815bd318df549d7401a855bc5d
-ms.openlocfilehash: 7edd3e46b4813dd50df7d01b367f8e73bb350a7d
-ms.lasthandoff: 04/24/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 212628639300e9c361f7cee61b3df6b1cb6874ce
+ms.openlocfilehash: 572ef13883f7930e69ec1f1f53c9bfe029898c81
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/05/2017
 
 
 ---
@@ -38,7 +39,7 @@ ms.lasthandoff: 04/24/2017
 
 2.  安装包括新版本客户端的 Configuration Manager 更新。  
 
-3.  将新客户端提升至生产。  
+3.  将新客户端提升为生产客户端。  
 
 ##  <a name="to-configure-automatic-client-upgrades-to-use-a-pre-production-collection"></a>配置自动客户端升级以使用预生产集合  
 
@@ -86,4 +87,5 @@ ms.lasthandoff: 04/24/2017
 
 >[!NOTE]
 >要启用预生产客户端，或者将预生产客户端升级到生产客户端，你的帐户必须是安全角色的成员，该角色具有**读取**和**修改**  **Update Packages** 对象的权限。
+>客户端升级按已配置的任意 Configuration Manager 维护时段进行。
 

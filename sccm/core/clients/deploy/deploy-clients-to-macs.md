@@ -2,7 +2,7 @@
 title: "部署 Mac 客户端 | Microsoft Docs"
 description: "了解如何在 System Center Configuration Manager 中将客户端部署到 Mac 计算机。"
 ms.custom: na
-ms.date: 04/23/2017
+ms.date: 05/04/2017
 ms.prod: configuration-manager
 ms.reviewer: aaroncz
 ms.suite: na
@@ -15,10 +15,11 @@ caps.latest.revision: 12
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
-ms.openlocfilehash: 9cab5b91a94e8bf2ad96a8a706f46c58e2a3d712
-ms.lasthandoff: 03/21/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: c6a6137fa978e1ea28aefea2aea4e29ba661efd6
+ms.openlocfilehash: 6ce212c6745b70a47553891e5dbc124b4c4e50fa
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/04/2017
 
 
 ---
@@ -34,7 +35,10 @@ ms.lasthandoff: 03/21/2017
 
 -   通过使用 [CMEnroll 工具](#install-the-client-and-then-enroll-the-client-certificate-on-the-mac)注册 Configuration Manager。 注册过程不支持自动证书续订，因此你必须在安装的证书过期之前重新注册 Mac 计算机。    
 
--   [使用与 Configuration Manager 无关的证书请求和安装方法](#use-a-certificate-request-and-installation-method-that-is-independent-from-configuration-manager)。  
+-   [使用与 Configuration Manager 无关的证书请求和安装方法](#use-a-certificate-request-and-installation-method-that-is-independent-from-configuration-manager)。 
+
+>[!IMPORTANT]
+>  若要将客户端部署到运行 macOS Sierra 的设备上，必须正确配置管理点证书的使用者名称（例如，使用管理点服务器的 FQDN）。
 
 
 ## <a name="configure-client-settings-for-enrollment"></a>配置客户端设置以进行注册  
@@ -299,7 +303,7 @@ ms.lasthandoff: 03/21/2017
 
     -   **选择的设置：**选择“浏览”，然后选择先前指定的发现脚本。  
 
-    -   在“以下值”  字段中，输入 **The domain/default pair of (com.microsoft.ccmclient, SMSID) does not exist**。  
+    -   在**“以下值”** 字段中，输入 **“域/默认值对 (com.microsoft.ccmclient, SMSID) 不存在”**。  
 
     -   启用“当此设置不符合时运行指定的修正脚本” 选项。  
 
@@ -322,7 +326,7 @@ ms.lasthandoff: 03/21/2017
 17. 重启。  
 
 
-### <a name="see-also"></a>另请参阅
+## <a name="see-also"></a>另请参阅
 
 [维护 Mac 客户端](/sccm/core/clients/manage/maintain-mac-clients)
 
