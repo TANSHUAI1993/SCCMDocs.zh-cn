@@ -438,8 +438,3 @@
 ### [如何确定播发状态](core/servers/manage/how-to-determine-advertisement-status.md)
 
 # [Configuration Manager 参考](reference/configuration-manager-reference.md)
-
-
-<!--HONumber=Jan17_HO3-->
-
-
