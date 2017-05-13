@@ -2,7 +2,7 @@
 title: "推荐的硬件 | Microsoft Docs"
 description: "获取硬件建议，有助于在基本部署以上扩展 System Center Configuration Manager 环境。"
 ms.custom: na
-ms.date: 3/30/2017
+ms.date: 05/04/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,10 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 8d3791bcf737e63308155787ed23c9cc84e7e99c
-ms.openlocfilehash: fd9f5b25a1e40b5f0df823dcbe9c13a77c534c59
-ms.lasthandoff: 03/31/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 212628639300e9c361f7cee61b3df6b1cb6874ce
+ms.openlocfilehash: 8dac6df60b07461d6410d305723b3f03fb09fa16
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/05/2017
 
 
 ---
@@ -49,7 +50,7 @@ ms.lasthandoff: 03/31/2017
 |-------------------------------|---------------|---------------|----------------------------------------|  
 |数据库站点角色在同一服务器上的独立主站点服务器<sup>1</sup>|16|96|80|  
 |具有远程站点数据库的独立主站点服务器|8|16|-|  
-|独立主站点的远程数据库服务器|16|64|90|  
+|独立主站点的远程数据库服务器|16|72|90|  
 |数据库站点角色在同一服务器上的管理中心站点服务器<sup>1</sup>|20|128|80|  
 |具有远程站点数据库的管理中心站点服务器|8|16|-|  
 |管理中心站点的远程数据库服务器|16|96|90|  
