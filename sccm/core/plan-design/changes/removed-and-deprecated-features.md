@@ -16,9 +16,10 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
 ms.openlocfilehash: 57b9ab13bda0bb5fa5139e52a4c55ef9524e4097
+ms.contentlocale: zh-cn
 ms.lasthandoff: 03/27/2017
 
 
@@ -104,7 +105,7 @@ ms.lasthandoff: 03/27/2017
 |任务序列： <br /> - 将磁盘转换为动态磁盘 <br /> - 安装部署工具 |2016 年 11 月 18 日|对这些任务序列的支持随 2017 年 6 月 1 日后发布的首个更新结束。|
 |软件中心将呈现新式外观。 并且本应仅出现在依赖于 Silverlight 的应用程序目录中的应用（用户可用的应用）现在将出现在“应用程序”选项卡中的软件中心。 应用程序目录仍然可以通过软件中心的“安装状态”选项卡中的链接进行访问。<br><br>在未来几个月，以前版本的软件中心将不再可用。<br><br>你可以通过启用客户端设置“计算机代理” > “使用新的软件中心”来使用新的软件中心。<br><br>有关软件中心的详细信息，请参阅[规划和配置 System Center Configuration Manager 中的应用程序管理](https://docs.microsoft.com/sccm/apps/plan-design/plan-for-and-configure-application-management)。|2016 年 12 月 13 日|即将公布|
 |利用 Configuration Manager 管理虚拟硬盘 (VHD)。 </br></br>这包括去除使用任务序列创建新 VHD 或管理 VHD 的选项，以及去除 Configuration Manager 控制台的虚拟硬盘节点。 </br></br>去除这种支持后，虽然现有 VHD 将不被删除，但再也无法从 Configuration Manager 控制台内访问。  |2017 年 1 月 6 日 |对 VHD 的支持将在 2017 年 6 月 1 日后随首个更新的发布而结束。|
-|System Center Configuration Manager 升级评估工具。 </br></br>升级评估工具依赖于 System Center Configuration Manager 和应用程序兼容性工具包 (ACT) 6.x。 ACT 的最终版本随附在 Windows 10 v1511 ADK 中。 由于不再对 ACT 进行任何更新，因此将停止对升级评估工具的支持。 </br></br>升级评估工具将由[升级准备](/sccm/core/clients/manage/upgrade/upgrade-analytics)功能取代。 弃用通知已于 2016 年 9 月 12 日添加到 ](https://www.microsoft.com/download/details.aspx?id=37145)UAT 的下载页面[。 |9/12/2016  | 2017 年 7 月 11 日 |  
+|System Center Configuration Manager 升级评估工具。 </br></br>升级评估工具依赖于 System Center Configuration Manager 和应用程序兼容性工具包 (ACT) 6.x。 ACT 的最终版本随附在 Windows 10 v1511 ADK 中。 由于不再对 ACT 进行任何更新，因此将停止对升级评估工具的支持。 </br></br>升级评估工具将由[升级准备](/sccm/core/clients/manage/upgrade/upgrade-analytics)功能取代。 弃用通知已于 2016 年 9 月 12 日添加到 [UAT 的下载页面](https://www.microsoft.com/download/details.aspx?id=37145)。 |9/12/2016  | 2017 年 7 月 11 日 |  
 
 
 <br></br>
