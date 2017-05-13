@@ -2,7 +2,7 @@
 title: "定义边界组 | Microsoft Docs"
 description: "了解将客户端链接到 System Center Configuration Manager 中的站点系统的边界组。"
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 05/02/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,10 +15,11 @@ caps.latest.revision: 10
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 8da48e89e8376cc23109faa1c74b29a64699aa87
-ms.lasthandoff: 03/27/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 90775fcf2549080a43e9c1606caa79d9eb90a89c
+ms.openlocfilehash: cb5c8f8f91857bf5f9377a9f871f0d9d9b0cc939
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/03/2017
 
 
 ---
@@ -111,6 +112,8 @@ ms.lasthandoff: 03/27/2017
 从版本 1702 开始，客户端使用边界组查找新的软件更新点。 可以向不同的边界组添加单个软件更新点，以控制客户端可以找到哪些服务器。
 
 在更新 1702 之前的版本时，所有现有的软件更新点将被添加到每个站点上的默认站点边界组。 这将保持更新前行为，其中客户端从为层次结构配置的可用软件更新点的池中更新点。  将保持此行为直到你通过控制选择和回退行为选择将单个软件更新点添加到不同的边界组。
+
+如果安装运行版本 1702 或更高版本的新网站，必须先将软件更新点分配给边界组，然后客户端才能查找并使用它们。
 
 
 软件更新点的回退配置和其他站点系统角色一样，但有以下注意事项：

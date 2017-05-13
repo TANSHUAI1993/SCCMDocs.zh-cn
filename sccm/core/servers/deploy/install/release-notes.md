@@ -16,10 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 761c3f58f7c57d8f87ee802da37821895062546d
-ms.openlocfilehash: 44338c705e308896c5203be239c160a8220369a8
-ms.lasthandoff: 04/19/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 7a6c89254d01f4074e5c170b20338686178ebdd3
+ms.openlocfilehash: 59946d1328be1606ba7c4dab647e814c1b4e638a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/28/2017
 
 
 ---
@@ -216,6 +217,12 @@ ConfigMgrSetup.log
 当管理员将一组条款部署至多个用户集合，而用户是这些集合中多个集合的成员时，该用户打开公司门户时将看到相同条款的多个副本。  例如，如果名为“SampleUser”的用户是两个不同的用户集合的成员，两个集合分别称为“CompanyEmployeesFTE”和“CompanyEmployeesNA”，并且向 CompanyEmployeesFTE 和 CompanyEmployeesNA 均部署了名为“CompanyTerms”的条款和条件，则 SampleUser 将在条款接受页面看到两组相同的 CompanyTerms。 由于用户只可接受或拒绝所有条款，因此不存在接受状态不明确的风险（即用户同时接受和拒绝条款）。 对于每位用户的每组条款，条款和条件接受报表将仅包括一行，因此报表中没有错误。 唯一的影响是用户会在接受页面看到两组条款。  
 
 **解决方法**：确保每个用户只包含在条款部署到的一个集合中。  
+
+### <a name="android-for-work-email-profiles-that-use-certificate-authentication-are-not-applied-to-devices"></a>使用证书身份验证的 Android for Work 电子邮件配置文件无法应用于设备
+<!--  487657 -->
+创建 Android for Work 电子邮件配置文件时，有两个身份验证选项。 一个是“用户名和密码”选项，另一个是“证书”选项。 暂无法使用“证书”选项。 如果创建配置文件时使用的身份验证方法设置为“证书”，那么配置文件无法应用于设备，系统会提示用户手动输入电子邮件帐户详细信息。
+
+**解决方法**：无。 管理员必须使用“用户名和密码”选项，或必须等待此问题得到解决。
 
 ## <a name="reports-and-monitoring"></a>报告和监视  
 

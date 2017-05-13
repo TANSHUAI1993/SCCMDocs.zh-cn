@@ -2,7 +2,7 @@
 title: "更新 | Microsoft Docs"
 description: "了解称为“更新与维护服务”的控制台中服务方法，该方法可轻松找到并安装建议的更新。"
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 05/02/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,10 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: bd72d17e463cb65e79b78613b631b0267b2b26a0
-ms.lasthandoff: 03/27/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 90775fcf2549080a43e9c1606caa79d9eb90a89c
+ms.openlocfilehash: a33960fb89b71c0f8128e21a5054f5b63cfc6b17
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/03/2017
 
 
 ---
@@ -48,7 +49,7 @@ System Center Configuration Manager 使用称为“更新和维护服务”的�
 
 
 ##  <a name="bkmk_Baselines"></a> 基准和更新版本  
- System Center Configuration Manager Current Branch 的初始版本为版本 1511，即基准版本。 较新的基准版本是 1606。
+ System Center Configuration Manager Current Branch 的初始版本为版本 1511，即基准版本。 更高基线版本包括版本 1606 和 1702：
 
 -   在新的层次结构中安装新站点时，请使用最新的基准版本。  
 
@@ -76,7 +77,7 @@ Configuration Manager 的某些更新可用作现有基础结构的控制台中�
 
 |版本 |可用日期|[支持结束日期](/sccm/core/servers/manage/current-branch-versions-supported) |Baseline|控制台中更新|  
 |-------------|-----------|------------|--------------|------------------------|  
-|[1702](/sccm/core/plan-design/changes/whats-new-in-version-1702)<br /><br /> 5.00.8498.1000|3/27/2017| 3/27/2018|否|是|
+|[1702](/sccm/core/plan-design/changes/whats-new-in-version-1702)<br /><br /> 5.00.8498.1000|3/27/2017| 3/27/2018|是|是|
 |[1610](/sccm/core/plan-design/changes/whats-new-in-version-1610)<br /><br /> 5.00.8458.1000|2016/11/18| 11/18/2017|否|是|
 |[1606](/sccm/core/plan-design/changes/whats-new-in-version-1606)<br /><br /> 5.00.8412.1000|2016/7/22| 2017 年 7 月 22 日|否|是|
 |[1606](/sccm/core/plan-design/changes/whats-new-in-version-1606) 和 1606 修补程序汇总 (KB3186654) </br></br>5.00.8412.1307（注释 1） |2016/10/12| 2017 年 7 月 22 日|是|否|

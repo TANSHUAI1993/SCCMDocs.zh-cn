@@ -15,10 +15,11 @@ caps.latest.revision: 3
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 7573590763c68a4c97d388be1e64054c318da9cc
-ms.openlocfilehash: 4fe6741481c79ed4e4496846152902d6d8ca1f96
-ms.lasthandoff: 03/24/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: e6833951db27b227a3ca22925e9d9f4c3fc443fc
+ms.openlocfilehash: e8606b8a9268a0a0668b75070cf35894f4794123
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/04/2017
 
 ---
 # <a name="predeclare-devices-with-imei-or-ios-serial-numbers"></a>预声明具有 IMEI 或 iOS 序列号的设备
@@ -27,7 +28,7 @@ ms.lasthandoff: 03/24/2017
 
 可通过导入公司拥有设备的国际移动设备识别 (IMEI) 码或 iOS 序列号对此类设备进行识别。 可上传包含设备 IMEI 码的逗号分隔值 (.csv) 文件，或者手动输入设备信息。  导入的信息将设置在设备列表中注册为“公司”的设备的“所有权”。 访问该服务的每位用户仍需要 Intune 许可证。  
 
-为公司拥有的 iOS 设备上载序列号时，它们必须与公司注册配置文件成对使用。 然后，必须使用 Apple 的设备注册程序 (DEP) 或 Apple 配置器注册这些设备，以使其显示为公司所有。 
+为公司拥有的 iOS 设备上载序列号时，它们必须与公司注册配置文件成对使用。 然后，必须使用 Apple 的设备注册程序 (DEP) 或 Apple 配置器注册这些设备，以使其显示为公司所有。
 
 ## <a name="how-to-predeclare-corporate-owned-devices"></a>如何预声明公司拥有的设备
 
@@ -61,7 +62,7 @@ ms.lasthandoff: 03/24/2017
 
 ## <a name="format-for-uploading-csv-files"></a>上传的 .csv 文件的格式
 
-通过 IMEI 或序列号来标识设备的 .csv 文件必须拥有以下格式（仅用于提供指导的顶行除外）。 每一行必须包含 IMEI 号码或 iOS 序列号。 只能预声明 iOS 设备的序列号；IMEI 号码用于其他设备平台。 此表格包含示例数据：
+通过 IMEI 或序列号来标识设备的 .csv 文件必须拥有以下格式（仅用于提供指导的顶行除外）。 每一行都必须包含 ID 号，即 IMEI 号码或 iOS 序列号。 可以同时添加两种号码。 IMEI 号码可用于 Android、iOS 和 Windows 设备。 还支持 iOS 序列号。  此表格包含示例数据：
 
 | IMEI #  | iOS 序列 #  | 操作系统 | 详细信息 |
 |------------ |---------------|-----|-----|

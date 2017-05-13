@@ -2,7 +2,7 @@
 title: "1702 的清单 | System Center Configuration Manager"
 description: "了解更新到 System Center Configuration Manager 版本 1702 之前需要执行的操作。"
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 05/02/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -15,10 +15,11 @@ caps.latest.revision: 7
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: dd54a5668f8df73b0724f5c15a1a6a83f8fe8496
-ms.lasthandoff: 03/27/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 90775fcf2549080a43e9c1606caa79d9eb90a89c
+ms.openlocfilehash: c4ace452d62d4fa08f4457cb1735718ca4bd016d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/03/2017
 
 ---
 # <a name="checklist-for-installing-update-1702-for-system-center-configuration-manager"></a>用于为 System Center Configuration Manager 安装更新 1702 的清单
@@ -27,11 +28,14 @@ ms.lasthandoff: 03/27/2017
 
 使用 System Center Configuration Manager 的 Current Branch 时，可安装版本 1702 的控制台内部更新，从之前的版本更新层次结构。
 
+> [!TIP]  
+版本 1702 也可用作[基线介质](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)，可用于安装新层次结构的第一个网站。
+
 若要获取版本 1702 的更新，必须在层次结构的顶层站点上使用服务连接点站点系统角色。 其可处于联机或脱机模式。 层次结构从 Microsoft 下载更新包之后，可在“管理”&gt;“概述”&gt;“云服务”&gt;“更新和维护服务”下的控制台中找到它。
 
 -   当更新列为“可用”时，此更新即可准备安装。 安装版本 1702, 之前，请查看以下[关于安装更新 1702](#about-installing-update-1702) 和[清单](#checklist)的信息，了解在开始更新之前要进行的配置。
 
--   如果更新显示为“正在下载”且未更改，请查看 **hman.log** 和 **dmpdownloader.log** 是否有误。
+-   如果更新显示为“正在下载”且未更改，请查看  **hman.log**  和  **dmpdownloader.log**  是否有误。
 
     -   如果 dmpdownloader.log 指示 dmpdownloader 进程处于睡眠状态并且正在等待检查更新之前的间隔，你可以重新启动站点服务器上的 **SMS_Executive** 服务，以重新下载更新的再分发文件。
 

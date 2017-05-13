@@ -2,7 +2,7 @@
 title: "支持的 SQL Server 版本 | Microsoft Docs"
 description: "获取托管 System Center Configuration Manager 站点数据库的 SQL Server 版本和配置要求。"
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 05/01/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,10 +15,11 @@ caps.latest.revision: 21
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: ea9edf6392c41e31276900454cd78ce4bc32be7b
-ms.lasthandoff: 03/27/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d5a6fdc9a526c4fc3a9027dcedf1dd66a6fff5a7
+ms.openlocfilehash: fa7f232fd385f742bb11c6596c954d87c2da87a8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/02/2017
 
 
 ---
@@ -54,10 +55,15 @@ ms.lasthandoff: 03/27/2017
  SQL Server 必须位于站点服务器计算机上。  
 
 ##  <a name="bkmk_SQLVersions"></a> 支持的 SQL Server 版本  
- 在具有多个站点的层次结构中，不同站点可以使用不同版本的 SQL Server 来托管站点数据库，只要 Configuration Manager 支持你使用的 SQL Server 版本。  
+ 在含有多个网站的层次结构中，只要满足以下条件，各个网站就可以使用不同版本的 SQL Server 托管网站数据库：
+ -  Configuration Manager 支持你使用的 SQL Server 版本。
+ -  Microsoft 仍支持你使用的 SQL Server 版本。
+ -  SQL Server 支持在两个 SQL Server 版本之间进行复制。  例如，[SQL Server 不支持在 SQL Server 2008 R2 和 SQL Server 2016 之间进行复制](https://docs.microsoft.com/sql/relational-databases/replication/deprecated-features-in-sql-server-replication)。
+
+
 
  除非另行指定，System Center Configuration Manager 的所有活动版本均支持以下版本的 SQL Server。 如果支持新的 SQL Server 版本或添加 Service Pack，则将显示添加该支持的 Configuration Manager 版本。 同样，如果弃用支持，则查找有关受影响的 Configuration Manager 版本的详细信息。   
- 
+
 对特定 SQL Server Service Pack 的支持包括该 Service Pack 的累积更新，除非累积更新中断该基本 Service Pack 版本的向后兼容性。 如果没有另行说明 Service Pack 版本，则支持是针对不带 Service Pack 的 SQL Server 版本。 将来，如果针对该版本发布 Service Pack，单独的支持声明将在支持该新的 Service Pack 版本前宣布。
 
 
@@ -245,8 +251,8 @@ SQL Server Reporting Services 是安装可运行报表的 Reporting Services 点
 有关演示如何将 SQL Server 配置为使用指定的端口的示例，请参阅 SQL Server TechNet 库中的 [如何：将服务器配置为侦听特定的 TCP 端口 (SQL Server Configuration Manager)](http://go.microsoft.com/fwlink/p/?LinkID=226349) 。  
 
 ## <a name="upgrade-options-for-sql-server"></a>SQL Server 的升级选项
-如果需要升级你的 SQL Server 版本，我们建议使用以下方法（难度从简单到复杂）。
-1. [SQL Server 就地升级](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#a-namebkmksupconfigupgradedbsrva-upgrade-sql-server-on-the-site-database-server)（推荐）。
-2. 在新的计算机上安装新的 SQL Server 版本，然后[使用 Configuration Manager 安装程序的数据库移动选项](/sccm/core/servers/manage/modify-your-infrastructure#a-namebkmkdbconfiga-modify-the-site-database-configuration)将你的站点服务器指向新的 SQL Server。
+如果需要升级 SQL Server 版本，建议采用以下由易到难的方法。
+1. [就地升级 SQL Server](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#a-namebkmksupconfigupgradedbsrva-upgrade-sql-server-on-the-site-database-server)（推荐）。
+2. 在新计算机上安装新版本的 SQL Server，然后使用 Configuration Manager 设置的[数据库移动选项](/sccm/core/servers/manage/modify-your-infrastructure#a-namebkmkdbconfiga-modify-the-site-database-configuration)将站点服务器指向新的 SQL Server。
 3. 使用[备份和恢复](/sccm/protect/understand/backup-and-recovery)。
 

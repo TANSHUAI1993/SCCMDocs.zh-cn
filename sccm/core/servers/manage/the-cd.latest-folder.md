@@ -2,7 +2,7 @@
 title: "CD.Latest 文件夹 | Microsoft Docs"
 description: "了解有关新的更新过程的详细信息，该过程会从 Configuration Manager 控制台内部将更新传递到产品。"
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 05/02/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,10 +15,11 @@ caps.latest.revision: 6
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: d94acac84f052a01de9d9c9f65f237c0006c45b8
-ms.openlocfilehash: 5fbf1a2605b4915a2f592875a5ac88368160ce87
-ms.lasthandoff: 04/26/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 90775fcf2549080a43e9c1606caa79d9eb90a89c
+ms.openlocfilehash: 5c39e09b44500fa2f356f83579bb2fb2c1d0e937
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/03/2017
 
 
 ---
@@ -41,7 +42,7 @@ System Center Configuration Manager 引入一种新的更新过程，该过程�
 
 -   运行内置 Configuration Manager 备份任务：在指定备份文件夹位置下创建或更新该文件夹。  
 
--  从版本 1606 开始，在安装新站点时使用基线介质（如版本 1606）创建 CD.Latest 文件夹。
+-  自版本 1606 起，在使用基线介质（如版本 1606 或 1702）安装新网站时，将会创建 CD.Latest 文件夹。
 
 对于以下各项支出 CD.Latest 文件夹中的源文件：  
 

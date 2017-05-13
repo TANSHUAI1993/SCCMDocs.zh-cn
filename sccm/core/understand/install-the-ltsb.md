@@ -1,8 +1,8 @@
 ---
 title: "安装使用 1606 基线介质的站点 | Microsoft Docs"
-description: "了解如何使用 1606 基线介质来安装或升级 System Center Configuration Manager 站点。"
+description: "安装或升级到 System Center Configuration Manager 的 LTSB。"
 ms.custom: na
-ms.date: 10/12/2016
+ms.date: 05/01/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,10 +15,11 @@ caps.latest.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 1a3460143628ef297c99c364ded7ebea86d270dd
-ms.openlocfilehash: c266bb753ea69785b674508647c3857b2218cb77
-ms.lasthandoff: 02/18/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31819a1df4e63e1114682490a9b3c3b4e5c99cfa
+ms.openlocfilehash: 39653604ba5fd8e1fe9dd4d42889221d983f9bec
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/02/2017
 
 
 ---
@@ -26,13 +27,18 @@ ms.lasthandoff: 02/18/2017
 
 *适用范围：System Center Configuration Manager (Current Branch) 和 (Long-Term Servicing Branch)*
 
-通过本主题，了解如何使用 Microsoft System Center 2016 或 System Center Configuration Manager (Current Branch 和 Long-Term Servicing Branch 1606) 发行版中的 1606 版基线介质运行 Configuration Manager 安装程序。 可以使用此介质安装新的站点，或从 System Center 2012 Configuration Manager Service Pack 2 或 System Center 2012 R2 Configuration Manager Service Pack 1 升级。 安装过程中，可以选择安装 Current Branch 或 Long-Term Servicing Branch (LTSB)。
+运行 Configuration Manager 的版本 1606 基线媒体中的安装程序时，可以安装 System Center Configuration Manager 的 Long-Term Servicing Branch 或 Current branch 网站。
+
+此基线介质以 DVD 形式提供，包含在 Microsoft System Center 2016 或 System Center Configuration Manager（Current Branch 和 Long-Term Servicing Branch 1606）版本中。 若要了解有关基线介质的信息，请参阅[基线和更新版本](/sccm/core/servers/manage/updates#baseline-and-udpate-versions)。
+
 
 如果使用 1606 版基线介质，安装（或升级到）的站点为：
 - Current Branch 站点，等效于先使用 1511 版基线介质安装，然后再更新为 1606 版和 1606 修补程序汇总 (KB3186654) 的站点。
 -    LTSB 站点，等效于运行 1606 版和 1606 修补程序汇总 (KB3186654) 的 Current Branch 站点。 基线介质已包括修补程序汇总。  但是，LTSB 不支持 Current Branch 中可用的所有功能，如 [System Center Configuration Manager 的 Long-Term Servicing Branch 简介](introduction-to-the-ltsb.md)中所述。
 
 如果不熟悉 System Center Configuration Manager 的不同分支，请参阅[应使用 Configuration Manager 的哪一个分支](which-branch-should-i-use.md)。
+
+
 
 
 ## <a name="changes-to-setup-with-the-1606-baseline-media"></a>1606 基线介质中安装程序的更改
@@ -83,7 +89,7 @@ ms.lasthandoff: 02/18/2017
 
   **密钥名称：SABranchOptions**
    -    **SAActive = 1**
-   - ** = 1**
+   -  **= 1**
 
 
 > [!IMPORTANT]  
@@ -98,6 +104,7 @@ ms.lasthandoff: 02/18/2017
 使用 1606 基线介质安装任一分支的新站点时，请使用[安装 System Center Configuration Manager 站点](/sccm/core/servers/deploy/install/installing-sites)主题中的站点规划、准备和安装过程，并考虑以下安装注意事项：
 
 - 在安装期间，必须选择想要安装的 Configuration Manager 分支，这样才能为软件保障协议指定详细信息。
+- 同一层次结构中的所有网站必须运行同一分支。 不支持在不同的站点具有混合使用 LTSB 和 Current Branch 的层次结构。
 -    新的脚本化安装。 有关详细信息，请参阅本文章前文中的“新的脚本化安装选项”。
 
 ## <a name="expand-a-stand-alone-primary-site"></a>扩展独立主站点

@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 991eff171dce95590a7f050e0d3b07f98c0224b3
-ms.openlocfilehash: e55883471fde63036c91b315ed6db6dceb315207
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 31819a1df4e63e1114682490a9b3c3b4e5c99cfa
+ms.openlocfilehash: e040c6b3a951d1bdf5a46dd82f1bd92b45c2e71d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/02/2017
 
 
 ---
@@ -52,7 +54,7 @@ ms.openlocfilehash: e55883471fde63036c91b315ed6db6dceb315207
 
  Configuration Manager 中的检测方法包含用于检测应用程序是否在计算机上安装的规则。 此检测发生之前针对符合性评估配置项目。 若要检测是否安装了应用程序，则可以检测到该应用程序的 Windows Installer 文件是否存在，请使用自定义脚本，或者选择 **始终假设安装应用程序** 来评估法规遵从性而不考虑是否安装了该应用程序的配置项目。  
 
- 使用这些过程来配置 System Center 2012 Configuration Manager 中的检测方法。  
+ 请按这些过程操作，在 System Center Configuration Manager 中配置检测方法。  
 
 ### <a name="to-detect-an-application-installation-by-using-the-windows-installer-file"></a>若要通过使用 Windows Installer 文件中检测应用程序安装  
 
@@ -356,9 +358,4 @@ ms.openlocfilehash: e55883471fde63036c91b315ed6db6dceb315207
 
 ## <a name="complete-the-wizard"></a>完成向导  
  在向导的“摘要”  页上，查看将执行的操作，然后完成向导。 新的配置项目显示在 **配置项目** 中的节点 **资产和符合性** 工作区。  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

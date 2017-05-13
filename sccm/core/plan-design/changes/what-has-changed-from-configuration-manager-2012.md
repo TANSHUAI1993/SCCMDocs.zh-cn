@@ -2,7 +2,7 @@
 title: "自 Configuration Manager 2012 以来的更改 | Microsoft Docs "
 description: "识别与 System Center 2012 Configuration Manager 相比，System Center Configuration Manger 中更改的内容和新功能。"
 ms.custom: na
-ms.date: 12/30/2016
+ms.date: 05/02/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,10 +15,11 @@ caps.latest.revision: 51
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 6b1a4584ebcd4dadd983677b714486402c93e190
-ms.lasthandoff: 03/27/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 90775fcf2549080a43e9c1606caa79d9eb90a89c
+ms.openlocfilehash: 0a3eb93a99533a1569d8f72ca01d6dfcdc75da20
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/03/2017
 
 
 ---
@@ -38,7 +39,7 @@ ms.lasthandoff: 03/27/2017
 -   不在产品名中使用年份或产品标识符，与 Configuration Manager 2007 或 System Center 2012 Configuration Manager 等过去版本不同。
 
 -   支持增量产品内更新，也称为更新版本。 初始版本是版本 1511。 一年发布几次作为控制台内更新的后续版本，如版本 1610。
--   使用基线版本安装。 1511 是原始的基线版本，而新的基线版本也会不定期发布，如 1606。 基线版本可用于安装新的 System Center Configuration Manager 站点和层次结构，或从 Configuration Manager 2012 支持的版本升级。
+-   使用基线版本安装。 1511 是原始的基线版本，而新的基线版本也会不定期发布，如 1702。 基线版本可用于安装新的 System Center Configuration Manager 站点和层次结构，或从 Configuration Manager 2012 支持的版本升级。
 
 
 
@@ -49,7 +50,7 @@ ms.lasthandoff: 03/27/2017
  某些版本仅可用作（Configuration Manager 控制台内）现有站点的更新，而不能用于安装新的 Configuration Manager 站点。   
 例如，仅可从 Configuration Manager 控制台获取 1610 更新。 它用于更新已运行 System Center Configuration Manager 版本的站点。
 
-我们还会定期发布更新版本（如更新 1606）作为新的基线版本。 此类更新可用于在无需以较旧的基线版本（如 1511）开始的情况下安装新的层次结构，并且将版本升级到最新版本。
+我们还会定期发布更新版本（如更新 1702）作为新的基线版本。 此类更新可用于在无需以较旧的基线版本（如 1511）开始的情况下安装新的层次结构，并且将版本升级到最新版本。
 
 
 有关使用更新的详细信息，请参阅 [System Center Configuration Manager 的更新](../../../core/servers/manage/updates.md)。  

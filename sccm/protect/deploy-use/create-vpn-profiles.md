@@ -16,10 +16,11 @@ author: lleonard-msft
 caps.handback.revision: 0
 ms.author: alleonar
 ms.manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: ae008c91a7387ba76f2bfac13f8feb489a0cc558
-ms.openlocfilehash: d4616ce1e0d8f38b74f03b9e7f089feebe2d087d
-ms.lasthandoff: 04/21/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 7a6c89254d01f4074e5c170b20338686178ebdd3
+ms.openlocfilehash: 359fcfd9754fb5c81763bc44cac45376ea3ab0b8
+ms.contentlocale: zh-cn
+ms.lasthandoff: 04/28/2017
 
 
 ---
@@ -55,7 +56,7 @@ ms.lasthandoff: 04/21/2017
 
      此表提供了可供选择的连接类型。 请参阅 VPN 服务器文档以了解更多信息。
 
-|选项          | 更多信息| 连接类型|  
+| &nbsp;&nbsp;选项&nbsp;&nbsp; | 更多信息 | &nbsp;&nbsp;连接&nbsp;类型&nbsp;&nbsp; |  
 |----------------|----------------------|---------------------|  
 |**领域**     |想要使用的身份验证领域。 身份验证领域是“脉冲安全”连接类型使用的身份验证资源的分组。|脉冲安全|    
 |**角色**        |有权访问此连接的用户角色。 |脉冲安全|  
@@ -66,7 +67,7 @@ ms.lasthandoff: 04/21/2017
 |**连接到公司 Wi-Fi 网络时不使用 VPN**  |设备连接到公司 Wi-Fi 网络时，将不使用 VPN 连接。|- Cisco AnyConnect<br /><br /> - Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - Check Point Mobile VPN<br /><br /> - Microsoft SSL (SSTP)<br /><br /> - Microsoft Automatic<br /><br /> - IKEv2<br /><br /> - L2TP|  
 |**连接到家庭 Wi-Fi 网络时绕过 VPN**  |设备连接到家庭 Wi-Fi 网络时，将不使用 VPN 连接。|All|  
 |**每个应用 VPN （iOS 7 及更高版本，Mac OS X 10.9 及更高版本）** |将此 VPN 连接与 iOS 应用相关联，以便在运行该应用时打开连接。 可在部署它时将 VPN 配置文件与应用关联。|- Cisco AnyConnect<br /><br /> - Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - Check Point Mobile VPN|  
-|**自定义 XML（可选）** |指定配置 VPN 连接的自定义 XML 命令。<br /><br /> 例如：<br /><br /> 对于“Pulse Secure”：<br /><br /> **&lt;pulse-schema>&lt;isSingleSignOnCredential>true&lt;/isSingleSignOnCredential\>&lt;/pulse-schema>**<br /><br /> 对于“CheckPoint Mobile VPN”：<br /><br /> **&lt;CheckPointVPN port="443" name="CheckPointSelfhost" sso="true" debug="3">**<br /><br /> 对于“Dell SonicWALL Mobile Connect”：<br /><br /> **&lt;MobileConnect\><br />&nbsp; &nbsp; &lt;Compression\>false&lt;/Compression\><br />&nbsp; &nbsp; &lt;debugLogging\>True&lt;/debugLogging\><br />&nbsp; &nbsp; &lt;packetCapture\>False&lt;/packetCapture\>&lt;/MobileConnect\>**<br /><br /> 对于“F5 Edge Client”：<br /><br /> **&lt;f5-vpn-conf>&lt;single-sign-on-credential>&lt;/f5-vpn-conf>**<br /><br /> 有关如何编写自定义 XML 命令的详细信息，请参阅每个制造商 VPN 文档。|- Cisco AnyConnect<br /><br /> - Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - Check Point Mobile VPN|  
+|**自定义 XML（可选）** |指定配置 VPN 连接的自定义 XML 命令。<br /><br /> 例如：<br /><br /> 对于“Pulse Secure”：<br /><br /> **&lt;pulse-schema><br /> &nbsp; &lt;isSingleSignOnCredential>true&lt;/isSingleSignOnCredential\><br />&lt;/pulse-schema>**<br /><br /> 对于“CheckPoint Mobile VPN”：<br /><br /> **&lt;CheckPointVPN <br /> &nbsp; port="443" name="CheckPointSelfhost" <br /> &nbsp; sso="true" <br /> &nbsp; debug="3"<br />/>**<br /><br /> 对于“Dell SonicWALL Mobile Connect”：<br /><br /> **&lt;MobileConnect\><br />&nbsp; &nbsp; &lt;Compression\>false&lt;/Compression\><br />&nbsp; &nbsp; &lt;debugLogging\>True&lt;/debugLogging\><br />&nbsp; &nbsp; &lt;packetCapture\>False&lt;/packetCapture\><br />&lt;/MobileConnect\>**<br /><br /> 对于“F5 Edge Client”：<br /><br /> **&lt;f5-vpn-conf>&lt;single-sign-on-credential>&lt;/f5-vpn-conf>**<br /><br /> 有关如何编写自定义 XML 命令的详细信息，请参阅每个制造商 VPN 文档。|- Cisco AnyConnect<br /><br /> - Pulse Secure<br /><br /> - F5 Edge Client<br /><br /> - Dell SonicWALL Mobile Connect<br /><br /> - Check Point Mobile VPN|  
 
 > [!NOTE]  
 >  有关特定于针对移动设备创建 VPN 配置文件的信息，请参阅[创建 VPN 配置文件](../../mdm/deploy-use/create-vpn-profiles.md)  

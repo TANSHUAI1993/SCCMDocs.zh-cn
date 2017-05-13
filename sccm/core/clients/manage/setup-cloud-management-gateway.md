@@ -4,17 +4,18 @@ description:
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.date: 04/23/2017
+ms.date: 05/01/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
 ms.technology:
 - configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-translationtype: Human Translation
-ms.sourcegitcommit: 2bcc5d9dde1f1a2d9c33575d6c463e281ac818e8
-ms.openlocfilehash: 61b8cd8458718b9a54edb129739c619f947ac380
-ms.lasthandoff: 12/16/2016
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d5a6fdc9a526c4fc3a9027dcedf1dd66a6fff5a7
+ms.openlocfilehash: 97e1bc6585cee0ff433da0ec0b60b9604cb7348f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/02/2017
 
 ---
 
@@ -24,13 +25,27 @@ ms.lasthandoff: 12/16/2016
 
 从 1610 版开始，在 Configuration Manager 中设置云管理网关的过程包括以下步骤：
 
-## <a name="step-1-create-a-custom-ssl-certificate"></a>步骤 1：创建自定义 SSL 证书
+## <a name="step-1-configure-required-certificates"></a>第 1 步：配置必需证书
 
-采用针对基于云的分发点的同一方法，为云管理网关创建自定义 SSL 证书。 按照[为基于云的分发点部署服务证书](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_clouddp2008_cm2012)中的说明，但以不同方式执行以下操作：
+## <a name="option-1-preferred---use-the-server-authentication-certificate-from-a-public-and-globally-trusted-certificate-provider-like-verisign"></a>选项 1（首选）- 使用受信任的全球公共证书提供程序（如 VeriSign）提供的服务器身份验证证书
 
--   在设置新证书模板时，向为 Configuration Manager 服务器设置的安全组提供**读取**和**注册**权限。
+如果使用此方法，客户端会自动信任证书，无需自行创建自定义 SSL 证书。
 
--  请求自定义 Web 服务器证书时，为以 **cloudapp.net** 结尾的证书公用名称提供 FQDN（以便在 Azure 公有云上使用云管理网关），或为以 **usgovcloudapp.net** 结尾的证书公用名词提供 FQDN（以便用于 Azure 政府云）。
+1. 在组织的公共域名服务 (DNS) 中创建规范名称记录 (CNAME)，以便将云管理网关服务的别名创建为公共证书使用的易记名称。
+例如，Contoso 将云管理网关服务命名为 **GraniteFalls**，在 Azure 中的命名为 **GraniteFalls.CloudApp.Net**。 在 Contoso 的公共 DNS contoso.com 命名空间中，DNS 管理员为实际主机名 **GraniteFalls.CloudApp.net** 新建 **GraniteFalls.Contoso.com** 的 CNAME 记录。
+2. 接下来，使用 CNAME 别名的公用名称 (CN) 向公共提供程序请求获取服务器身份验证证书。
+例如，Contoso 对证书 CN 使用 **GraniteFalls.Contoso.com**。
+3. 使用此证书在 Configuration Manager 控制台中创建云管理网关服务。
+    - 为此云服务（从“证书文件”）添加服务器证书时，在“创建云管理网关向导”的“设置”页上，该向导会从证书 CN 中提取主机名作为服务名称，然后将其附加到 **cloudapp.net**（或 Azure 美国政府云的 **usgovcloudapp.net**）中作为服务 FQDN，以便在 Azure 中创建服务。
+例如，在 Contoso 中创建云管理网关时，从证书 CN 中提取主机名 **GraniteFalls**，以便将 Azure 中的实际服务创建为 **GraniteFalls.CloudApp.net**。
+
+### <a name="option-2---create-a-custom-ssl-certificate-for-cloud-management-gateway-in-the-same-way-as-for-a-cloud-based-distribution-point"></a>选项 2 - 为云管理网关创建自定义 SSL 证书，方法与为基于云的分发点创建时相同
+
+采用针对基于云的分发点的同一方法，为云管理网关创建自定义 SSL 证书。 按照[为基于云的分发点部署服务证书](/sccm/core/plan-design/network/example-deployment-of-pki-certificates)中的说明，但以不同方式执行以下操作：
+
+- 设置新证书模板时，向为 Configuration Manager 服务器设置的安全组授予“读取”****和“注册”权限。
+- 请求自定义 Web 服务器证书时，为以 **cloudapp.net** 结尾的证书公用名称提供 FQDN（以便在 Azure 公有云上使用云管理网关），或为以 **usgovcloudapp.net** 结尾的证书公用名词提供 FQDN（以便用于 Azure 政府云）。
+
 
 ## <a name="step-2-export-the-client-certificates-root"></a>步骤 2：导出客户端证书的根
 
