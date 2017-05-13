@@ -2,7 +2,7 @@
 title: "升级到 System Center Configuration Manager | Microsoft Docs"
 description: "了解从运行 System Center 2012 Configuration Manager 的站点和层次结构成功进行就地升级的步骤。"
 ms.custom: na
-ms.date: 4/19/2017
+ms.date: 05/02/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,10 +15,11 @@ caps.latest.revision: 21
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 761c3f58f7c57d8f87ee802da37821895062546d
-ms.openlocfilehash: e75413d0b03681bf7244bd3917cd6099394ee3c9
-ms.lasthandoff: 04/19/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d940fd1bbf96767d44f8c55315e814be55a83897
+ms.openlocfilehash: 9e58ab8dd892adf25429564adfd6f86849ddcbdf
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/08/2017
 
 
 ---
@@ -35,6 +36,14 @@ ms.lasthandoff: 04/19/2017
 
 ##  <a name="bkmk_path"></a> 就地升级路径  
 
+**升级到版本 1702**   
+如果具有版本 1702 基线介质，可以将下列版本升级到 System Center Configuration Manager 版本 1702 的完整许可版本：   
+-      System Center Configuration Manager 版本 1702 的评估版安装
+-      System Center 2012 Configuration Manager Service Pack 1
+-      System Center 2012 Configuration Manager Service Pack 2
+-      System Center 2012 R2 Configuration Manager
+-      System Center 2012 R2 Configuration Manager Service Pack 1
+
 **升级到 1606 版本**  
 2016 年 12 月 15 日，为添加对其他升级方案的支持，已发布版本 1606 的基线媒体。 此新版本支持将以下版本升级到 System Center Configuration Manager 版本 1606 的完整许可版本：  
 -   System Center Configuration Manager 版本 1606 的评估版安装
@@ -49,15 +58,16 @@ ms.lasthandoff: 04/19/2017
 -   System Center 2012 Configuration Manager Service Pack 2
 -   System Center 2012 R2 Configuration Manager Service Pack 1
 
-**升级到版本 1511**  
-如果具有 1511 版基线媒体，可将以下版本升级到 System Center Configuration Manager 版本 1511 的完整许可版本：  
--   System Center Configuration Manager 版本 1511 的评估版安装
--   System Center Configuration Manager 的候选发布版安装  
--   System Center 2012 Configuration Manager Service Pack 1  
--   System Center 2012 Configuration Manager Service Pack 2  
+<!-- Version 1511 has now dropped out of support
+**Upgrade to version 1511**  
+When you have version 1511 baseline media, you can upgrade the following to a fully licensed  version of System Center Configuration Manager version 1511:  
+-   An evaluation install of System Center Configuration Manager version 1511
+-   A release candidate install of System Center Configuration Manager  
+-   System Center 2012 Configuration Manager with Service Pack 1  
+-   System Center 2012 Configuration Manager with Service Pack 2  
 -   System Center 2012 R2 Configuration Manager  
--   System Center 2012 R2 Configuration Manager Service Pack 1  
-
+-   System Center 2012 R2 Configuration Manager with Service Pack 1  
+-->
 
 
 > [!TIP]  
