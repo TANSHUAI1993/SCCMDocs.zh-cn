@@ -16,10 +16,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 90775fcf2549080a43e9c1606caa79d9eb90a89c
-ms.openlocfilehash: cb5c8f8f91857bf5f9377a9f871f0d9d9b0cc939
+ms.sourcegitcommit: d940fd1bbf96767d44f8c55315e814be55a83897
+ms.openlocfilehash: 5684fd4fbfd0ffb8f3ffbcfa122eef3dafd77327
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/03/2017
+ms.lasthandoff: 05/08/2017
 
 
 ---
@@ -111,7 +111,7 @@ ms.lasthandoff: 05/03/2017
 ## <a name="software-update-points"></a>软件更新点
 从版本 1702 开始，客户端使用边界组查找新的软件更新点。 可以向不同的边界组添加单个软件更新点，以控制客户端可以找到哪些服务器。
 
-在更新 1702 之前的版本时，所有现有的软件更新点将被添加到每个站点上的默认站点边界组。 这将保持更新前行为，其中客户端从为层次结构配置的可用软件更新点的池中更新点。  将保持此行为直到你通过控制选择和回退行为选择将单个软件更新点添加到不同的边界组。
+在更新 1702 之前的版本时，所有现有的软件更新点将被添加到每个站点上的默认站点边界组。 这将保持更新前行为，其中客户端从为层次结构配置的可用软件更新点的池中更新点。  将保持此行为直到你为控制选择和回退行为选择将单个软件更新点添加到不同的边界组。
 
 如果安装运行版本 1702 或更高版本的新网站，必须先将软件更新点分配给边界组，然后客户端才能查找并使用它们。
 
