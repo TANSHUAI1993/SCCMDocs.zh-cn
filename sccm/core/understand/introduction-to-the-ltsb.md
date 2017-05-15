@@ -16,10 +16,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 31819a1df4e63e1114682490a9b3c3b4e5c99cfa
-ms.openlocfilehash: 90ba9937cf4ea708a3b5fa69c5975fdf906feeaa
+ms.sourcegitcommit: d940fd1bbf96767d44f8c55315e814be55a83897
+ms.openlocfilehash: 91c1ca860069c6ebe0d20230c4620bf3f68735a2
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/02/2017
+ms.lasthandoff: 05/08/2017
 
 
 ---
@@ -32,6 +32,8 @@ System Center Configuration Manager 的 Long-Term Servicing Branch (LTSB) 是 Co
 
 LTSB 是在 Configuration Manager 版本 1606 基础之上构建而成，与 Configuration Manager 的 Current Branch 相比，它减少了功能。
 
+ > [!TIP]   
+ > 如果查找有关 **Windows 服务器**的分支的信息，请参阅 [Windows Server 2016 的新 Current Branch for Business 服务选项]( https://blogs.technet.microsoft.com/windowsserver/2016/07/12/windows-server-2016-new-current-branch-for-business-servicing-option/)。
 
 ## <a name="features-that-are-not-available-in-the-ltsb-of-configuration-manager"></a>Configuration Manager 的 LTSB 不提供的功能
 Configuration Manager 的 Current Branch 支持以下功能，但 LTSB 并不支持这些功能：
@@ -67,7 +69,7 @@ LTSB 是在 Current Branch 版本 1606 基础之上构建而成。 若要查找�
 
 对 System Center Configuration Manager 具有永久权限或者允许 SA 或订阅在 10 月 1 日之后失效的客户，可以在失效时安装当前的 System Center Configuration Manager LTSB 版本。
 
-[单击此处可查看通过 Microsoft 批量许可计划购买的产品的完整条款和条件](http://go.microsoft.com/fwlink/?LinkId=800052)
+[可在此处](http://go.microsoft.com/fwlink/?LinkId=800052)找到通过 Microsoft 批量许可计划购买的产品的完整条款和条件。
 
 请参阅 [System Center Configuration Manager 的许可和分支](learn-more-editions.md)，详细了解 Configuration Manager 分支的许可。
 
