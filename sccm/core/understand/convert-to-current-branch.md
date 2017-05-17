@@ -15,9 +15,11 @@ caps.latest.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 60631bc0346bd78d704e7129bb755af504c59b1b
 ms.openlocfilehash: 6e7edc85630d22c5bbba1ff66bd1199903db76db
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 ---
 
@@ -54,9 +56,4 @@ ms.openlocfilehash: 6e7edc85630d22c5bbba1ff66bd1199903db76db
  2. 选择选项将站点转换为 Current Branch，然后选择“应用”。  
 
 站点转换为 Current Branch 后，可以使用以前不可用的功能。
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

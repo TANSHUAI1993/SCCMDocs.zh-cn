@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 31819a1df4e63e1114682490a9b3c3b4e5c99cfa
 ms.openlocfilehash: 33b188f4a9c14091429d1f49e07f1f17fbf98516
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/02/2017
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="create--software-updates-and-update-bundles-with-updates-publisher"></a>使用 Updates Publisher 创建软件更新和更新捆绑包

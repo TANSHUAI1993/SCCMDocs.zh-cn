@@ -15,9 +15,11 @@ caps.latest.revision: 8
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 11ac851696ce52642412ca29e4873679d50cf398
 ms.openlocfilehash: 547dc39d5659c7c2e6f1ca670caddc127dbf22c4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -28,7 +30,7 @@ ms.openlocfilehash: 547dc39d5659c7c2e6f1ca670caddc127dbf22c4
 若要管理 System Center Configuration Manager，可使用连接到 **SMS 提供程序**的实例的 Configuration Manager 控制台。 默认情况下，当安装管理中心站点或主站点时，SMS 提供程序会安装在站点服务器上。 
 
 
-##  <a name="a-namebkmkplansmsprova-about-the-sms-provider"></a><a name="BKMK_PlanSMSProv"></a> 关于 SMS 提供程序  
+##  <a name="BKMK_PlanSMSProv"></a> 关于 SMS 提供程序  
  SMS 提供程序是 Windows Management Instrumentation (WMI) 提供程序，它分配对站点中 Configuration Manager 数据库的“读取”和“写入”访问权限：  
 
 -   每个管理中心站点和主站点上都必须至少具有一个 SMS 提供程序。 你可以根据需要安装其他提供程序。  
@@ -60,7 +62,7 @@ Configuration Manager 管理用户使用 SMS 提供程序访问存储在数据�
 
 -   计算机至少必须有 650 MB 的可用磁盘空间，以支持与 SMS 提供程序一起安装的 Windows 自动部署工具包 (Windows ADK) 组件。 有关 Windows ADK 和 SMS 提供程序的详细信息，请参阅本主题中的 [针对 SMS 提供程序的操作系统部署要求](#BKMK_WAIKforSMSProv) 。  
 
-##  <a name="a-namebkmklocationa-sms-provider-locations"></a><a name="bkmk_location"></a> SMS 提供程序位置  
+##  <a name="bkmk_location"></a> SMS 提供程序位置  
  安装站点时，会为站点自动安装第一个 SMS 提供程序。 你可以为 SMS 提供程序指定以下任何支持的位置：  
 
 -   站点服务器计算机  
@@ -122,7 +124,7 @@ Configuration Manager 管理用户使用 SMS 提供程序访问存储在数据�
 
     -   此位置可以使用以其他方式专供其他服务使用的系统资源。  
 
-##  <a name="a-namebkmksmsprovlanguagesa-about-sms-provider-languages"></a><a name="BKMK_SMSProvLanguages"></a> 关于 SMS 提供程序语言  
+##  <a name="BKMK_SMSProvLanguages"></a> 关于 SMS 提供程序语言  
  SMS 提供程序的操作与安装它的计算机的显示语言无关。  
 
  当管理用户或 Configuration Manager 使用 SMS 提供程序处理请求数据时，SMS 提供程序尝试返回格式与请求计算机的操作系统语言匹配的数据。
@@ -135,7 +137,7 @@ Configuration Manager 管理用户使用 SMS 提供程序访问存储在数据�
 
 -   系统使用用于创建对象的语言在数据库中存储管理用户创建的对象。 这些对象以此相同的语言在 Configuration Manager 控制台中显示。 它们无法被 SMS 提供程序转换，并且没有多语言选项。  
 
-##  <a name="a-namebkmkmultismsprova-use-multiple-sms-providers"></a><a name="BKMK_MultiSMSProv"></a> 使用多个 SMS 提供程序  
+##  <a name="BKMK_MultiSMSProv"></a> 使用多个 SMS 提供程序  
  站点完成安装后，你可以为站点安装其他 SMS 提供程序。 要安装其他 SMS 提供程序，请在站点服务器上运行 Configuration Manager 安装程序。 如果满足以下任一条件，请考虑安装其他 SMS 提供程序：  
 
 -   将会有许多管理用户在运行 Configuration Manager 控制台的同时连接到站点。  
@@ -152,7 +154,7 @@ Configuration Manager 管理用户使用 SMS 提供程序访问存储在数据�
 
 例如，首次将 Configuration Manager 控制台连接至站点时，连接会查询站点服务器上的 WMI 以查找控制台将使用的 SMS 提供程序的实例。 在 Configuration Manager 控制台会话结束之前，Configuration Manager 控制台仍使用 SMS 提供程序的此特定实例。 如果会话由于 SMS 提供程序计算机在网络上变得不可用而终止，那么在重新连接 Configuration Manager 控制台时，站点会重复识别要连接到的 SMS 提供程序的实例的任务。 可以分配给不可用的同一 SMS 提供程序计算机。 如果出现这种情况，则在分配可用的 SMS 提供程序计算机之前，可以尝试重新连接 Configuration Manager 控制台。  
 
-##  <a name="a-namebkmkaboutsmsadminsa-about-the-sms-admins-group"></a><a name="BKMK_AboutSMSAdmins"></a> 关于 SMS 管理员组  
+##  <a name="BKMK_AboutSMSAdmins"></a> 关于 SMS 管理员组  
  你可以使用“SMS 管理员”组为管理用户提供 SMS 提供程序访问权限。 安装站点时会在站点服务器上自动创建此组，并且会在安装 SMS 提供程序的每台计算机上自动创建此组。 以下是关于“SMS 管理员”组的其他信息：  
 
 -   当计算机为成员服务器时，会作为本地组来创建 SMS 管理员组。  
@@ -172,7 +174,7 @@ Configuration Manager 管理用户使用 SMS 提供程序访问存储在数据�
 >  使用远程 Configuration Manager 控制台的每个管理用户需要站点服务器计算机和 SMS 提供程序计算机上的“远程激活”DCOM 权限。 虽然可以将这些权限授予任何用户或组，但建议将这些权限授予“SMS 管理员”组以简化管理。 有关详细信息，请参阅 [Configure DCOM permissions for remote Configuration Manager consoles](../../../core/servers/manage/modify-your-infrastructure.md#BKMK_ConfigDCOMforRemoteConsole) 主题中的 [Modify your System Center Configuration Manager infrastructure](../../../core/servers/manage/modify-your-infrastructure.md) 部分。  
 
 
-##  <a name="a-namebkmksmsprovnamespacea-about-the-sms-provider-namespace"></a><a name="BKMK_SMSProvNamespace"></a> 关于 SMS 提供程序命名空间  
+##  <a name="BKMK_SMSProvNamespace"></a> 关于 SMS 提供程序命名空间  
 SMS 提供程序的结构由 WMI 架构来定义。 架构命名空间描述 SMS 提供程序架构内 Configuration Manager 数据的位置。 下表包含 SMS 提供程序使用的一些常见命名空间。  
 
 |Namespace|描述|  
@@ -183,7 +185,7 @@ SMS 提供程序的结构由 WMI 架构来定义。 架构命名空间描述 SMS
 |Root\CCM|Configuration Manager 客户端配置策略和客户端数据。|  
 |root\CIMv2\SMS|清单客户端代理收集的清单报告类别的位置。 这些设置由客户端在计算机策略评估期间编译，而且基于计算机的客户端设置的配置。|  
 
-##  <a name="a-namebkmkwaikforsmsprova-operating-system-deployment-requirements-for-the-sms-provider"></a><a name="BKMK_WAIKforSMSProv"></a> 针对 SMS 提供程序的操作系统部署要求  
+##  <a name="BKMK_WAIKforSMSProv"></a> 针对 SMS 提供程序的操作系统部署要求  
 安装 SMS 提供程序实例的计算机必须具备使用的 Configuration Manager 版本所需的 Windows ADK 版本。  
 
  -   例如，1511 版本的 Configuration Manager 需要 Windows ADK 的 Windows 10 RTM (10.0.10240) 版本。  
@@ -200,9 +202,4 @@ SMS 提供程序的结构由 WMI 架构来定义。 架构命名空间描述 SMS
 
 
 在安装 SMS 提供程序的每台计算机上，安装 Windows ADK 可能需要最多 650 MB 的可用磁盘空间。 Configuration Manager 需要如此高的磁盘空间来安装 Windows PE 启动映像。  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

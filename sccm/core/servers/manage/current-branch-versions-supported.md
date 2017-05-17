@@ -16,10 +16,11 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: noindex,nofollow
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
 ms.openlocfilehash: 0286416807656fcf623260c7e95a703e39f6a275
-ms.lasthandoff: 03/27/2017
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="support-for-system-center-configuration-manager-current-branch-versions"></a>对 System Center Configuration Manager Current Branch 版本的支持

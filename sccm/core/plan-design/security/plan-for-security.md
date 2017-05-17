@@ -16,9 +16,10 @@ caps.handback.revision: 0
 author: arob98
 ms.author: angrobe
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: af06fb10d905e3fe447c6cd6ed35dac10488161f
 ms.openlocfilehash: 1bf519ad4593f6a08d7dc393f9fab91c70b51b25
+ms.contentlocale: zh-cn
 ms.lasthandoff: 01/05/2017
 
 
@@ -27,7 +28,7 @@ ms.lasthandoff: 01/05/2017
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-##  <a name="a-namebkmkplanningforcertificatesa-plan-for-certificates-self-signed-and-pki"></a><a name="BKMK_PlanningForCertificates"></a> 规划证书（自签名和 PKI）  
+##  <a name="BKMK_PlanningForCertificates"></a> 规划证书（自签名和 PKI）  
  Configuration Manager 组合使用自签名证书和公钥基础结构 (PKI) 证书。  
 
  作为最佳安全方案，请尽可能使用 PKI 证书。 有关 PKI 证书要求的详细信息，请参阅 [System Center Configuration Manager 的 PKI 证书要求](../../../core/plan-design/network/pki-certificate-requirements.md)。 Configuration Manager 请求 PKI 证书时，如在移动设备注册和 Intel 主动管理技术 (AMT) 设置过程中，必须使用 Active Directory 域服务和企业证书颁发机构。 对于其他 PKI 证书，必须独立于 Configuration Manager 部署和管理它们。  
@@ -61,7 +62,7 @@ ms.lasthandoff: 01/05/2017
 
 3.  将 Client.msi 属性 **SMSSIGNCERT=**&lt;完整路径和文件名\> 与 CCMSetup.exe 配合使用来安装客户端。  
 
-###  <a name="a-namebkmkplanningforcrlsa-plan-for-pki-certificate-revocation"></a><a name="BKMK_PlanningForCRLs"></a> 规划 PKI 证书吊销  
+###  <a name="BKMK_PlanningForCRLs"></a> 规划 PKI 证书吊销  
 将 PKI 证书用于 Configuration Manager 时，请规划客户端和服务器是否将使用证书吊销列表 (CRL) 来验证连接计算机上的证书以及如何进行。 CRL 是证书颁发机构 (CA) 创建并签名的文件，它包含 CA 曾经颁发但已吊销的证书列表。 CA 管理员可以吊销证书，例如，如果颁发的证书已确定或者疑似遭盗用。  
 
 > [!IMPORTANT]  
@@ -79,7 +80,7 @@ ms.lasthandoff: 01/05/2017
 
 -   对配置为使用 PKI 证书的每个站点系统连接检查 CRL 的这一要求高于以下要求：较快的连接、在客户端上进行高效处理，以及客户端找不到 CRL 时，无法连接服务器的风险。  
 
-###  <a name="a-namebkmkplanningforrootcasa-plan-for-the-pki-trusted-root-certificates-and-the-certificate-issuers-list"></a><a name="BKMK_PlanningForRootCAs"></a> 规划 PKI 受信任的根证书和证书颁发者列表  
+###  <a name="BKMK_PlanningForRootCAs"></a> 规划 PKI 受信任的根证书和证书颁发者列表  
 如果 IIS 站点系统使用 PKI 客户端证书通过 HTTP 进行客户端身份验证，或者通过 HTTPS 进行客户端身份验证和加密，则可能必须以站点属性形式导入根 CA 证书。 以下为这两个方案：  
 
 -   使用 Configuration Manager 部署操作系统，管理点仅接受 HTTPS 客户端连接。  
@@ -101,7 +102,7 @@ ms.lasthandoff: 01/05/2017
 
 注册移动设备或 Mac 计算机时，以及针对无线网络设置基于 Intel AMT 的计算机时，可能也必须导入根 CA 证书，这与站点配置无关。  
 
-###  <a name="a-namebkmkplanningforclientcertificateselectiona-plan-for-pki-client-certificate-selection"></a><a name="BKMK_PlanningForClientCertificateSelection"></a> 规划 PKI 客户端证书选择  
+###  <a name="BKMK_PlanningForClientCertificateSelection"></a> 规划 PKI 客户端证书选择  
  如果 IIS 站点系统使用 PKI 客户端证书通过 HTTP 进行客户端身份验证，或者通过 HTTPS 进行客户端身份验证和加密，请规划 Windows 客户端选择要用于 Configuration Manager 的证书的方式。  
 
 > [!NOTE]  
@@ -175,7 +176,7 @@ ms.lasthandoff: 01/05/2017
 
 有关如何配置客户端证书设置的信息，请参阅[配置 System Center Configuration Manager 中的安全性](../../../core/plan-design/security/configure-security.md)一文中的[为客户端 PKI 证书配置设置](../../../core/plan-design/security/configure-security.md#BKMK_ConfigureClientPKI)部分。  
 
-###  <a name="a-namebkmkplanningforpkitransitiona-plan-a-transition-strategy-for-pki-certificates-and-internet-based-client-management"></a><a name="BKMK_PlanningForPKITransition"></a> 规划 PKI 证书和基于 Internet 的客户端管理的过渡策略  
+###  <a name="BKMK_PlanningForPKITransition"></a> 规划 PKI 证书和基于 Internet 的客户端管理的过渡策略  
 利用 Configuration Manager 中灵活的配置选项，可逐步过渡客户端和站点，以使用 PKI 证书帮助保护客户端端点的安全。 PKI 证书提供更好的安全性，还可让用户管理 Internet 客户端。  
 
 由于 Configuration Manager 中配置选项数量的缘故，因此无法使用单一方法来过渡站点以使所有客户端都使用 HTTPS 连接。 但是，可以按照下列步骤作为指导：  
@@ -223,7 +224,7 @@ ms.lasthandoff: 01/05/2017
 
  如果按照此计划逐渐引入 PKI 证书（首先针对仅通过 HTTP 进行的身份验证，然后针对通过 HTTPS 进行的身份验证和加密），则可以减少客户端不受管理的风险。 此外，将得益于 Configuration Manager 支持的最高安全性。  
 
-##  <a name="a-namebkmkplanningforrtka-plan-for-the-trusted-root-key"></a><a name="BKMK_PlanningForRTK"></a> 规划受信任的根密钥  
+##  <a name="BKMK_PlanningForRTK"></a> 规划受信任的根密钥  
 Configuration Manager 受信任的根密钥提供了一种机制供 Configuration Manager 客户端验证站点系统是否属于其层次结构。 每个站点服务器都会生成站点交换密钥以与其他站点通信。 层次结构内顶层站点中的站点交换密钥称为受信任的根密钥。  
 
 Configuration Manager 中受信任的根密钥的功能类似于公钥基础结构中的根证书，因为将沿层次结构向下进一步信任受信任根密钥的私钥所签名的任何内容。 例如，通过使用受信任的根密钥对的私钥对管理点证书进行签名，并复制可供客户端使用的受信任根密钥对的私钥，客户端可以区分位于其层次结构中的管理点以及不在其层次结构中的管理点。 客户端使用 Windows Management Instrumentation (WMI) 将受信任的根密钥的副本存储在 **root\ccm\locationservices** 命名空间中。  
@@ -295,7 +296,7 @@ Configuration Manager 中受信任的根密钥的功能类似于公钥基础结�
 
 9. 在“TrustedRootKey=@对象编辑器”对话框内的“属性”部分中，向下滚动到“TrustedRootKey CIM_STRING”。 右列中的字符串是受信任的根密钥。 验证它是否与文件 &lt;Configuration Manager 目录\>**\bin\mobileclient.tcf** 中的 **SMSPublicRootKey** 值匹配。  
 
-##  <a name="a-namebkmkplanningforsigningencryptiona-plan-for-signing-and-encryption"></a><a name="BKMK_PlanningForSigningEncryption"></a> 规划签名和加密  
+##  <a name="BKMK_PlanningForSigningEncryption"></a> 规划签名和加密  
  使用 PKI 证书进行所有客户端通信时，不必规划签名和加密以帮助保护客户端数据通信。 但是，如果将运行 IIS 的任何站点系统设置为允许 HTTP 客户端连接，则必须确定如何帮助保护站点客户端通信。  
 
  为了帮助保护客户端发送到管理点的数据，可以要求对数据进行签名。 此外，你可以要求使用 SHA-256 算法对使用 HTTP 的客户端中所有已签名数据进行签名。 虽然此设置更安全，但除非所有客户端都支持 SHA-256，否则不要启用此选项。 许多操作系统都本机支持 SHA-256，但较早的操作系统可能需要更新或修补程序。 例如，运行 Windows Server 2003 SP2 的计算机必须安装 [知识库文章 938397](http://go.microsoft.com/fwlink/p/?LinkId=226666)中引用的修补程序。  
@@ -304,7 +305,7 @@ Configuration Manager 中受信任的根密钥的功能类似于公钥基础结�
 
  有关如何配置签名和加密设置的详细信息，请参阅[配置 System Center Configuration Manager 中的安全性](../../../core/plan-design/security/configure-security.md)一文中的[配置签名和加密](../../../core/plan-design/security/configure-security.md#BKMK_ConfigureSigningEncryption)部分。  
 
-##  <a name="a-namebkmkplanningforrbaa-plan-for-role-based-administration"></a><a name="BKMK_PlanningForRBA"></a> 规划基于角色的管理  
+##  <a name="BKMK_PlanningForRBA"></a> 规划基于角色的管理  
  有关此信息，请参阅 [System Center Configuration Manager 基于角色的管理基础](../../../core/understand/fundamentals-of-role-based-administration.md)。  
 
 ### <a name="see-also"></a>另请参阅

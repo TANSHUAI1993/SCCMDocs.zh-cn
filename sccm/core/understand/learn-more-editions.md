@@ -16,10 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a0d4eb601948aa3abb12409f3475d69cacf4a6aa
 ms.openlocfilehash: 90e16b316872cb370c9c2e645f46ac12afab7107
-ms.lasthandoff: 02/28/2017
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 ---
 

@@ -16,10 +16,11 @@ caps.handback.revision: 0
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
 ms.openlocfilehash: e54478a03807c939ffa64ff39a21ef6f9ea4ae2d
-ms.lasthandoff: 03/06/2017
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="hybrid-mobile-device-management-mdm-with-system-center-configuration-manager-and-microsoft-intune"></a>使用 System Center Configuration Manager 和 Microsoft Intune 的混合移动设备管理 (MDM)

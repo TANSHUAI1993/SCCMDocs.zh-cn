@@ -16,10 +16,11 @@ caps.handback.revision: 0
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
 ms.openlocfilehash: bc7bb99bc526ed0bbaaad15fc9af39fa8b7c3893
-ms.lasthandoff: 03/06/2017
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="manage-applications-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中管理应用程序

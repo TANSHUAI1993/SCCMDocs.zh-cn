@@ -15,9 +15,11 @@ caps.latest.revision: 21
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
 ms.openlocfilehash: 2d7ec9cc626f3ccfded990cf8ba392c4979adfee
+ms.contentlocale: zh-cn
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -173,9 +175,4 @@ ms.openlocfilehash: 2d7ec9cc626f3ccfded990cf8ba392c4979adfee
 完成前面的步骤后，即可针对映像准备引用计算机。 有关 Configuration Manager 中操作系统部署的详细信息，请参阅[使用 System Center Configuration Manager 管理操作系统映像](/sccm/osd/get-started/manage-operating-system-images)。
 
 在部署包含 Endpoint Protection 客户端软件的映像时，Endpoint Protection 客户端将自动向计算机所分配到的 Configuration Manager 站点报告信息，并且会下载和应用适用于客户端计算机的策略。
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

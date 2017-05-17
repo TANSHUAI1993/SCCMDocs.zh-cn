@@ -12,10 +12,11 @@ ms.service:
 ms.technology:
 - configmgr-sum
 ms.assetid: b8d8af88-e8ac-4deb-921b-975e2d2afd80
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: d7b13f3dea5a3ae413ca6b8150ec24e1632a4d4d
 ms.openlocfilehash: fcdcbcde61402b47871d51deba32d23867a78370
-ms.lasthandoff: 04/12/2017
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 ---
 

@@ -15,10 +15,11 @@ caps.latest.revision: 3
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 34e24deb90a39bf655a2e24d16cdbe07528e6193
 ms.openlocfilehash: b72148ecc16141843178cbd220fe021fab8be992
-ms.lasthandoff: 03/01/2017
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="setup-downloader-for-system-center-configuration-manager"></a>System Center Configuration Manager 安装程序下载程序

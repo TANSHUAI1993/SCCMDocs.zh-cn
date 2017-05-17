@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9555a16d97224a1cf49a426ab225468b07403f60
 ms.openlocfilehash: e28fdeae809cadf78017dd2920e3f1a9484ec8a3
+ms.contentlocale: zh-cn
+ms.lasthandoff: 12/30/2016
 
 
 ---
@@ -44,7 +46,7 @@ ms.openlocfilehash: e28fdeae809cadf78017dd2920e3f1a9484ec8a3
 
  有关为运行 Linux 和 UNIX 的计算机创建集合的信息，请参阅 [How to manage clients for Linux and UNIX servers in System Center Configuration Manager](../../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md)（如何在 System Center Configuration Manager 中管理 Linux 和 UNIX 服务器的客户端）。  
 
-##  <a name="a-namebkmk1a-to-create-a-device-collection"></a><a name="BKMK_1"></a> 若要创建设备集合  
+##  <a name="BKMK_1"></a> 若要创建设备集合  
 
 1.  在 Configuration Manager 控制台中，选择“资产和符合性” > “设备集合”。  
 
@@ -120,7 +122,7 @@ ms.openlocfilehash: e28fdeae809cadf78017dd2920e3f1a9484ec8a3
 > [!NOTE]  
 >  必须刷新或重新加载 Configuration Manager 控制台才能查看集合成员。 但是，直到进行首次计划更新，或是如果为集合手动选择“更新成员身份”之后，成员才会出现在集合中。 可能需要几分钟时间才能完成集合更新。  
 
-##  <a name="a-namebkmk2a-to-create-a-user-collection"></a><a name="BKMK_2"></a> 若要创建用户集合  
+##  <a name="BKMK_2"></a> 若要创建用户集合  
 
 1.  在 Configuration Manager 控制台中，选择“资产和符合性” > “用户集合”。  
 
@@ -192,7 +194,7 @@ ms.openlocfilehash: e28fdeae809cadf78017dd2920e3f1a9484ec8a3
 > [!NOTE]  
 >  必须刷新或重新加载 Configuration Manager 控制台才能查看集合成员。 但是，直到进行首次计划更新，或是你为集合手动选择“更新成员身份”  之后，成员才会出现在集合中。 可能需要几分钟时间才能完成集合更新。  
 
-##  <a name="a-namebkmk3a-to-import-a-collection"></a><a name="BKMK_3"></a> 若要导入集合  
+##  <a name="BKMK_3"></a> 若要导入集合  
 
 1.  在 Configuration Manager 控制台中，依次选择“资产和符合性” > “用户集合”或“设备集合”。  
 
@@ -206,9 +208,4 @@ ms.openlocfilehash: e28fdeae809cadf78017dd2920e3f1a9484ec8a3
     >  要导入的文件必须已从运行与此相同的 Configuration Manager 版本的站点导出。 有关导出集合的详细信息，请参阅[如何在 System Center Configuration Manager 中管理集合](../../../../core/clients/manage/collections/manage-collections.md)。  
 
 6.  完成向导以导入集合。 新集合会显示在“资产和符合性”  工作区的“用户集合”  或“设备集合”  节点中。 刷新或重新加载 Configuration Manager 控制台才能查看新导入的集合的集合成员。  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

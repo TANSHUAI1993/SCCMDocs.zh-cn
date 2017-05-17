@@ -15,10 +15,11 @@ caps.latest.revision:
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 266897b7ac674a369931e8ed63ff464edc10c9d8
 ms.openlocfilehash: 298d879638a2d20d421b19752cb5f20f6725df14
-ms.lasthandoff: 03/03/2017
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 
 ---

@@ -15,10 +15,11 @@ caps.latest.revision: 2
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
 ms.openlocfilehash: 5276ad999fc871496d79e6efff34d5edc6335380
-ms.lasthandoff: 03/27/2017
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="configuration-manager-on-azure---frequently-asked-questions"></a>Azure 上的 Configuration Manager - 常见问题解答

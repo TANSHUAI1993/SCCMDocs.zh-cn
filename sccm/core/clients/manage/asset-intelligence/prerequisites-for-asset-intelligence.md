@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: 156d6679817b81ca27fbd2b8836431396e1e6b23
+ms.contentlocale: zh-cn
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -48,9 +50,4 @@ System Center Configuration Manager 中的资产智能具有外部依赖关系�
 |软件计数客户端代理依赖关系|若干资产智能软件报表均依赖于软件计数客户端代理提供数据。 有关启用软件计数客户端代理的信息，请参阅[在 System Center Configuration Manager 中使用软件计数监视应用使用情况](../../../../apps/deploy-use/monitor-app-usage-with-software-metering.md)。<br /><br /> 下列资产智能报表依赖于软件计数客户端代理提供数据：<br /><br /> -   软件 07A - 按计算机数列出的最近使用过的可执行文件<br />-   软件 07B - 最近使用过指定的可执行文件的计算机<br />-   软件 07C - 特定计算机上最近使用的可执行文件<br />-   软件 08A - 按用户数列出的最近使用过的可执行文件<br />-   软件 08B - 最近使用过指定的可执行文件的用户<br />-   软件 08C - 按特定用户列出的最近使用过的可执行文件|  
 |资产智能硬件清单报表类先决条件|Configuration Manager 中的资产智能报表依赖于特定的硬件清单报表类。 在硬件清单报表类已启用并且客户端基于这些类报告了硬件清单之前，关联资产智能报表不包含任何数据。 可以启用以下硬件清单报表类以支持资产智能报表要求：<br /><br /> -   SMS_SystemConsoleUsage<sup>1</sup><br />-   SMS_SystemConsoleUser<sup>1</sup><br />-   SMS_InstalledSoftware<br />-   SMS_AutoStartSoftware<br />-   SMS_BrowserHelperObject<br />-   Win32_USBDevice<br />-   SMS_InstalledExecutable<br />-   SMS_SoftwareShortcut<br />-   SoftwareLicensingService<br />-   SoftwareLicensingProduct<br />-   SMS_SoftwareTag<br /><br /> <sup>1</sup> 默认情况下， **SMS_SystemConsoleUsage** 和 **SMS_SystemConsoleUser** 资产智能硬件清单报表类处于启用状态。<br /><br /> 可以在 Configuration Manager 控制台的“资产和符合性”工作区中，在单击“资产智能”节点时编辑资产智能硬件清单报表类。 有关详细信息，请参阅[在 System Center Configuration Manager 中配置资产智能](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md)主题的[启用资产智能硬件清单报表类](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md#BKMK_EnableAssetIntelligence)部分。|  
 |Reporting Services 点|必须先安装 Reporting Services 点站点系统角色才能显示软件更新报表。 有关创建 Reporting Services 点的详细信息，请参阅 [在 Configuration Manager 中配置报表](http://go.microsoft.com/fwlink/p/?LinkId=232661)。|  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

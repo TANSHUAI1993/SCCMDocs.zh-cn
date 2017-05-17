@@ -15,10 +15,11 @@ caps.latest.revision: 12
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: ae9488a34c6b1e04397c4875de4b3bc607f7116c
 ms.openlocfilehash: 33abf3853d912d423e427db4d35fb4a16167164e
-ms.lasthandoff: 04/11/2017
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 
 ---

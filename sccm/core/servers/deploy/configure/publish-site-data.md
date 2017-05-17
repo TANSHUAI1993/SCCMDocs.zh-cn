@@ -15,9 +15,11 @@ caps.latest.revision: 8
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: e7629fdf7fdf615fa27894158c3d101432c95a04
 ms.openlocfilehash: bcfb002c503485f03ba27d7346acb61d0d3c6087
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -71,9 +73,4 @@ ms.openlocfilehash: bcfb002c503485f03ba27d7346acb61d0d3c6087
     >  如果允许站点发布到林，则必须为 Configuration Manager 扩展该林的 Active Directory 架构。 Active Directory 林帐户必须对该林中的“系统”容器拥有“完全控制”权限。  
 
 5.  完成配置此林以用于 Active Directory 林发现的操作后，单击 **OK** 保存配置。  
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

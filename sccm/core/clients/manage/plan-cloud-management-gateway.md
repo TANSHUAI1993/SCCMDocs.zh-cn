@@ -9,9 +9,10 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
 ms.openlocfilehash: c61769cc97c320452c9ee27a924cb01480e6f33d
+ms.contentlocale: zh-cn
 ms.lasthandoff: 03/27/2017
 
 ---

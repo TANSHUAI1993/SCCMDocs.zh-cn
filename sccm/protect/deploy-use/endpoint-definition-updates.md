@@ -16,9 +16,11 @@ caps.latest.revision: 21
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
 ms.openlocfilehash: 9085a4daed409eeff4c95e5c467f123d0a38147a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 12/16/2016
 
 
 
@@ -73,9 +75,4 @@ ms.openlocfilehash: 9085a4daed409eeff4c95e5c467f123d0a38147a
 -   从 Microsoft 恶意软件防护中心分发的更新 - 此方法将从 Microsoft 恶意软件防护中心下载定义更新。
 
 -   [来自 UNC 文件共享的更新](endpoint-definitions-network.md) - 使用此方法，你可以将最新的定义和引擎更新保存到网络共享上。 然后客户端便可访问网络以安装更新。
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

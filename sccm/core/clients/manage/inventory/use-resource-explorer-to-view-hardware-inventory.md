@@ -15,9 +15,11 @@ caps.latest.revision: 7
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 05c27c7aa36e0b4236867766dab36125c31467b3
 ms.openlocfilehash: 6265ee70b70a715862b1651d2f3760bef096ee8a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 01/03/2017
 
 
 ---
@@ -49,10 +51,5 @@ ms.openlocfilehash: 6265ee70b70a715862b1651d2f3760bef096ee8a
 3.  选择包含想要查看的清单的计算机，然后在“主页”选项卡 >“设备”组中，选择“启动” >  “资源浏览器”。   
 
 4.  右键单击“资源浏览器”窗口右窗格中的任意项，然后选择“属性”以打开 *<item name\>*“属性”对话框，以可读性更强的格式查看收集的清单信息。  
-
-
-
-
-<!--HONumber=Jan17_HO1-->
 
 

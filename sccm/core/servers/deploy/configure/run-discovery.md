@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 7b6674f331c82cc7899b8661cf38b9d3022cf21b
 ms.openlocfilehash: 647826e9d340d3ef97abab0dba51041a3727dedc
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -64,7 +66,7 @@ ms.openlocfilehash: 647826e9d340d3ef97abab0dba51041a3727dedc
 
 -   部署客户端设置和相关配置。
 
-##  <a name="a-namebkmkddrsa-about-discovery-data-records"></a><a name="BKMK_DDRs"></a>关于发现数据记录  
+##  <a name="BKMK_DDRs"></a>关于发现数据记录  
  DDR 是由发现方法创建的文件。 它们包含可在 Configuration Manager 中管理的资源的信息，如计算机、用户和（某些情况下的）网络基础结构。 将在主站点或管理中心站点上对它们进行处理。 在 DDR 中的资源信息进入数据库后，即会删除该 DDR，并且信息将以全局数据的形式复制到层次结构中的所有站点。  
 
  处理 DDR 的站点取决于它包含的信息：  
@@ -87,9 +89,4 @@ DDR 文件由 .ddr 扩展名标识，大小通常约为 1 KB。
 -   [选择 System Center Configuration Manager 要使用的发现方法](../../../../core/servers/deploy/configure/select-discovery-methods-to-use.md)  
 
 在对要使用的方法有所了解之后，可在[配置 System Center Configuration Manager 的发现方法](../../../../core/servers/deploy/configure/configure-discovery-methods.md)中找到每个方法的设置指南。  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

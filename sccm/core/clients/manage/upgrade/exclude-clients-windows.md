@@ -14,9 +14,10 @@ ms.assetid: 4cd6031f-8844-4d0b-8166-b24d6528a94e
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
 ms.openlocfilehash: 6451ce59e01254d96ca4aa9bbe07cde829fae9ce
+ms.contentlocale: zh-cn
 ms.lasthandoff: 12/16/2016
 
 

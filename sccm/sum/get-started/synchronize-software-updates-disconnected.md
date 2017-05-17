@@ -13,9 +13,11 @@ ms.service:
 ms.technology:
 - configmgr-sum
 ms.assetid: 1a997c30-8e71-4be5-89ee-41efb2c8d199
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
 ms.openlocfilehash: fd9c1e9418ff1956c6ef98753e23a293440179be
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 
 
@@ -108,9 +110,4 @@ ms.openlocfilehash: fd9c1e9418ff1956c6ef98753e23a293440179be
 在首次同步软件更新后，或有新的可用分类或产品时，必须[配置新的分类和产品](configure-classifications-and-products.md)以便通过新条件同步软件更新。
 
 通过所需的条件同步软件更新后，[管理软件更新的设置](manage-settings-for-software-updates.md)。  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

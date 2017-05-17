@@ -15,9 +15,11 @@ caps.latest.revision: 10
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a181171cc1a92ec4519f4e4b34ca3274a0aa0440
 ms.openlocfilehash: 1c9e7ada6a8aa228b30e58865baae0f6e529e6af
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -35,7 +37,7 @@ System Center Configuration Manager 客户端使用名为*服务定位*的进程
 
 
 
-##  <a name="a-namebkmkfunda-fundamentals-of-service-location"></a><a name="bkmk_fund"></a> Fundamentals of service location  
+##  <a name="bkmk_fund"></a> Fundamentals of service location  
  使用服务定位查找可与之通信的管理点时，客户端会评估其当前网络位置、通信协议首选项和分配的站点。  
 
  **客户端与管理点进行通信从而实现以下几点：**  
@@ -56,7 +58,7 @@ System Center Configuration Manager 客户端使用名为*服务定位*的进程
 
 -   在部署使用 Internet 信息服务 (IIS) 并支持来自客户端的通信的站点系统角色时，必须指定客户端是否使用 HTTP 或 HTTPS 连接到站点系统。 如果使用 HTTP，还必须考虑签名和加密选项。 有关详细信息，请参阅[在 System Center Configuration Manager 中规划安全性](../../../core/plan-design/security/plan-for-security.md)中的[规划签名和加密](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForSigningEncryption)。  
 
-##  <a name="a-namebkmkplanservicelocationa-service-location-and-how-clients-determine-their-assigned-management-point"></a><a name="BKMK_Plan_Service_Location"></a>服务定位和客户端如何确定向其分配的管理点  
+##  <a name="BKMK_Plan_Service_Location"></a>服务定位和客户端如何确定向其分配的管理点  
 客户端首次被分配给主站点时，它会选择此站点的默认管理点。 主站点支持多个管理点，且每个客户端将管理点独立标识为其默认的管理点。 此默认管理点之后将成为客户端的分配管理点。 （还可以使用客户端安装命令，在安装时为客户端设置分配的管理点。）  
 
 客户端基于客户端当前网络位置和边界组配置，选择要与之通信的管理点。 即使已分配有管理点，这仍可能不是客户端使用的管理点。  
@@ -83,7 +85,7 @@ System Center Configuration Manager 客户端使用名为*服务定位*的进程
 
 对于没有针对 Internet 进行配置的客户端，不会向其提供仅面向 Internet 的管理点。 针对 Internet 配置的工作组客户端仅与面向 Internet 的管理点通信。  
 
-##  <a name="a-namebkmkmplista-the-mp-list"></a><a name="BKMK_MPList"></a> MP 列表  
+##  <a name="BKMK_MPList"></a> MP 列表  
 MP 列表是客户端的首选服务定位源，因为它是客户端先前标识的按优先级排列的管理点列表。 在客户端更新列表时，每个客户端都会根据其网络位置对此列表进行排序，然后此列表会本地存储在客户端上的 WMI 中。  
 
 ### <a name="building-the-initial-mp-list"></a>生成初始 MP 列表  
@@ -134,7 +136,7 @@ MP 列表是客户端的首选服务定位源，因为它是客户端先前标�
 
 随后客户端会随机选择要使用的新管理点。  
 
-##  <a name="a-namebkmkada-active-directory"></a><a name="bkmk_ad"></a> Active Directory  
+##  <a name="bkmk_ad"></a> Active Directory  
 加入域的客户端可以将 AD DS 用于服务定位。 这要求站点 [将数据发布到 Active Directory](http://technet.microsoft.com/library/hh696543.aspx)。  
 
 当以下所有条件为 true 时，客户端可将 AD DS 用于服务定位：  
@@ -145,7 +147,7 @@ MP 列表是客户端的首选服务定位源，因为它是客户端先前标�
 
 如果客户端在 AD DS 中找不到用于服务定位的管理点，那么它会尝试使用 DNS。  
 
-##  <a name="a-namebkmkdnsa-dns"></a><a name="bkmk_dns"></a> DNS  
+##  <a name="bkmk_dns"></a> DNS  
 Intranet 上的客户端可将 DNS 用于服务定位。 这要求层次结构中至少有一个站点将有关管理点的信息发布到 DNS。  
 
 当以下任意条件为 true 时，请考虑将 DNS 用于服务定位：
@@ -243,15 +245,10 @@ Configuration Manager 支持服务定位记录的 RFC 2782。 这些记录格式
 
 为 Intranet 上每个要发布到 DNS 的管理点重复这些步骤。  
 
-##  <a name="a-namebkmkwinsa-wins"></a><a name="bkmk_wins"></a> WINS  
+##  <a name="bkmk_wins"></a> WINS  
 当其他服务定位机制失败时，客户端可通过检查 WINS 来查找初始管理点。  
 
 默认情况下，主站点在站点上将针对 HTTP 配置的第一个管理点和针对 HTTPS 配置的第一个管理点发布到 WINS。  
 
 如果你不希望客户端在 WINS 中找到 HTTP 管理点，则使用 CCMSetup.exe Client.msi 属性 **SMSDIRECTORYLOOKUP=NOWINS**配置客户端。  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

@@ -15,9 +15,11 @@ caps.latest.revision: 31
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
 ms.openlocfilehash: a84d3ab55066d26c3199ea374d8beb472d66f43f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 01/24/2017
 
 ---
 # <a name="capabilities-in-technical-preview-1606-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 版本 1606 中的功能
@@ -36,7 +38,7 @@ ms.openlocfilehash: a84d3ab55066d26c3199ea374d8beb472d66f43f
 
 **以下是可以试用的此版本的新功能。**  
 
-## <a name="a-namedmpcategorya-automatically-categorize-devices-into-collections"></a><a name="dmp_category"></a>自动将设备分类到集合
+## <a name="dmp_category"></a>自动将设备分类到集合
 可创建设备类别，可将其用于配合使用 Microsoft Intune 和 Configuration Manager 时自动在设备集合中放置设备。 然后要求用户在 Intune 中注册设备时选择某个设备类别。 此外，还可以从 Configuration Manager 控制台中更改设备的类别。
 
 **重要提示：**此功能适用于 **2016 年 6** 月版本的 Microsoft Intune。 试用这些过程前，请确保已更新到此版本。
@@ -59,7 +61,7 @@ ms.openlocfilehash: a84d3ab55066d26c3199ea374d8beb472d66f43f
 2.  从“设备”列表选择一个设备，然后在“主页”选项卡上的“设备”组中，单击“更改类别”。
 3.  在“编辑设备类别”对话框框中，选择将应用于此设备的类别，然后单击“确定”。
 
-## <a name="a-namedmpgracea-enforcement-grace-period-for-required-application-and-software-update-deployments"></a><a name="dmp_grace"></a>所需的应用程序和软件更新部署的强制宽限期
+## <a name="dmp_grace"></a>所需的应用程序和软件更新部署的强制宽限期
 
 在某些情况下，可能会希望为用户提供更多时间（超出所配置的任何截止时间）来安装所需的应用程序部署或软件更新。 通常，当一台计算机关闭的时间过长和计算机需要安装大量应用程序或更新部署时，会需要执行这种操作。
 例如，如果最终用户刚从假期返回，则他们可能需要等待很长时间，因为安装的应用程序部署已过期。
@@ -76,7 +78,7 @@ ms.openlocfilehash: a84d3ab55066d26c3199ea374d8beb472d66f43f
 如果配置强制宽限期，并选中该复选框，则当到达应用程序安装截止时间后，将在用户按照宽限期配置的第一个非业务窗口中安装该应用程序。 但是，用户仍可打开软件中心并在任何所需时间安装该应用程序。 一旦过了宽限期，对于未完成的部署，强制将恢复为正常行为。
 已将类似的选项添加到软件更新部署向导、自动部署规则向导和属性页中。
 
-##  <a name="a-namedmpdevgausing-configuration-manager-as-a-managed-installer-with-device-guard"></a><a name="dmp_devg"></a>通过 Device Guard 将 Configuration Manager 用作托管的安装程序
+##  <a name="dmp_devg"></a>通过 Device Guard 将 Configuration Manager 用作托管的安装程序
 
 “设备保护”是 Windows 10 的一种功能，它使用硬件和软件功能严格控制什么可以在设备上运行。
 
@@ -101,7 +103,7 @@ ms.openlocfilehash: a84d3ab55066d26c3199ea374d8beb472d66f43f
 - [设备保护认证和符合性](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-certification-and-compliance)
 - [设备保护部署指南](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-deployment-guide)
 
- ##  <a name="a-namedmponprema-multiple-device-management-points-for-on-premises-mobile-device-management"></a><a name="dmp_onprem"></a>本地移动设备管理的多个设备管理点  
+ ##  <a name="dmp_onprem"></a>本地移动设备管理的多个设备管理点  
  借助 Technical Preview 1606，本地移动设备管理 (MDM) 可支持Windows 10 周年更新中的新功能，该功能会自动将已注册设备配置为具有多个可供使用的设备管理点。 此功能允许设备在其正常使用的设备管理点不可用时回退到另一个设备管理点。 此功能仅适用于安装了 Windows 10 周年更新的电脑。  
 
 ### <a name="try-it-out"></a>试试看！  
@@ -112,7 +114,7 @@ ms.openlocfilehash: a84d3ab55066d26c3199ea374d8beb472d66f43f
 
 有关如何准备站点和注册设备以实现本地移动设备管理，请参阅[使用 System Center Configuration Manager 中的本地基础结构管理移动设备](../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md)。  
 
-## <a name="a-namecloudproxyacloud-proxy-service-for-managing-clients-on-the-internet"></a><a name="cloud_proxy"></a>用于管理 Internet 上客户端的云代理服务
+## <a name="cloud_proxy"></a>用于管理 Internet 上客户端的云代理服务
 
 云代理服务提供一种简单方法来管理 Internet 上的 Configuration Manager 客户端。 该服务部署到 Microsoft Azure 且需要 Azure 订阅，它使用名为云代理连接点的新角色连接到本地 Configuration Manager 基础结构。 服务完全部署并配置好后，客户端可以访问本地 Configuration Manager 站点系统角色，而不管它们是连接到内部专用网络还是 Internet 上。
 
@@ -217,7 +219,7 @@ Configuration Manager 需要 Azure 管理证书来访问 Azure API 和配置云�
 
 客户端拥有云代理服务的新位置信息后，请尝试检查已不在内部专用网络上但具有 Internet 访问权限的客户端的状态。 还可以通过后列方式监视云代理服务通信：转到“管理”>“云服务”>“云代理服务”，在列表窗格中选择服务，然后查看详细信息窗格中的通信信息。   
 
-## <a name="a-namemanageo365amanage-the-office-365-client-agent-in-configuration-manager"></a><a name="manage_o365"></a>在 Configuration Manager 中管理 Office 365 客户端代理  
+## <a name="manage_o365"></a>在 Configuration Manager 中管理 Office 365 客户端代理  
 
 从 Technical Preview 1606 开始，可以使用 Configuration Manager 客户端代理设置而非组策略，来使 Office 365 客户端接收来自 Configuration Manager 的更新。 配置此设置和部署 Office 365 更新后，Configuration Manager 客户端代理将与 Office 365 客户端代理通信，从分发点下载 Office 365 更新并进行安装。 Configuration Manager 还会获取客户端代理设置的清单。
 
@@ -229,13 +231,13 @@ Configuration Manager 需要 Azure 管理证书来访问 Azure API 和配置云�
 3. 单击“软件更新”，并针对“启用 Office 365 客户端代理的管理”设置选择“是”。  
 
 
-## <a name="a-nameosdpreservedriveletterathe-osdpreservedriveletter-task-sequence-variable-has-been-deprecated"></a><a name="osdpreservedriveletter"></a>已弃用 OSDPreserveDriveLetter 任务序列变量
+## <a name="osdpreservedriveletter"></a>已弃用 OSDPreserveDriveLetter 任务序列变量
 OSDPreserveDriveLetter 任务序列变量决定当将此图像应用到目标计算机时，任务序列是否使用在操作系统映像 WIM 文件中捕获的驱动器号。
 - Technical Preview 1606 中已弃用此任务序列变量。
 
 现在，在操作系统部署期间，默认情况下，Windows 安装程序会确定要使用的最佳驱动器号（通常为 C:）。 如果想要指定使用另一个驱动器，可以在“应用操作系统”任务序列步骤中更改位置。 转到“选择要应用此操作系统的位置”设置，选择“特定逻辑驱动器号”，然后选择要使用的驱动器。 目标计算机上必须存在分配有该号的驱动器。 
 
-## <a name="a-nameupdatesandservicingachanges-for-the-updates-and-servicing-node"></a><a name="updatesandservicing"></a>更新和服务节点的更改
+## <a name="updatesandservicing"></a>更新和服务节点的更改
 Technical Preview 1606 版中做了几处更改，适用于 Configuration Manager 控制台中的更新与服务：
 - **节点名称更改：**
 
@@ -264,9 +266,4 @@ Technical Preview 1606 版中做了几处更改，适用于 Configuration Manage
 -   **重命名的预生产选项：**
 
     在“更新和服务”节点中，名为“客户端选项”的按钮现重命名为“提升预生产客户端”。
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

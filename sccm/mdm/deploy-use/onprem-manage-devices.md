@@ -16,10 +16,11 @@ caps.handback.revision: 0
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
 ms.openlocfilehash: 92009c96ccc5f4124b300873ff77088ea1712c19
-ms.lasthandoff: 03/06/2017
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="manage-devices-for-on-premises-mobile-device-management"></a>在本地移动设备管理中管理设备

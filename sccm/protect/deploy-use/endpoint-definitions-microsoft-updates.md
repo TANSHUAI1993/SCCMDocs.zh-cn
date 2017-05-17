@@ -15,9 +15,11 @@ caps.latest.revision: 21
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
 ms.openlocfilehash: 344f551a370378620d3d11870993a77e60f9f685
+ms.contentlocale: zh-cn
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -46,9 +48,4 @@ ms.openlocfilehash: 344f551a370378620d3d11870993a77e60f9f685
 
 > [!div class="button"]
 [返回 >](endpoint-configure-alerts.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

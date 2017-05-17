@@ -16,10 +16,11 @@ caps.handback.revision: 0
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
 ms.openlocfilehash: 2e0b3cd1070d0f8adb1219acd33c3126d2758a49
-ms.lasthandoff: 03/06/2017
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="manage-an-intune-subscription-associated-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 管理 Intune 订阅

@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
 ms.openlocfilehash: 5acf800ff5aebd849e294393337755145a60cca5
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -30,7 +32,7 @@ ms.openlocfilehash: 5acf800ff5aebd849e294393337755145a60cca5
 
 -   [创建用于捕获操作系统的任务序列](create-a-task-sequence-to-capture-an-operating-system.md)  
 
-##  <a name="a-namebkmkcreatecapturemediaa-how-to-create-capture-media"></a><a name="BKMK_CreateCaptureMedia"></a> 如何创建捕获媒体  
+##  <a name="BKMK_CreateCaptureMedia"></a> 如何创建捕获媒体  
  使用捕获媒体从引用计算机中捕获操作系统映像。 捕获媒体包含用于启动引用计算机的启动映像，以及用于捕获操作系统映像的任务序列。
 
 通过使用创建任务序列媒体向导来创建捕获媒体。 在运行向导之前，请确保满足下列所有条件：  
@@ -80,9 +82,4 @@ ms.openlocfilehash: 5acf800ff5aebd849e294393337755145a60cca5
         >  你必须对分发点上的内容库具有“读取”访问权限。  
 
 7.  完成向导。  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

@@ -15,9 +15,11 @@ caps.latest.revision: 6
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 6cf291d79c1c5d9540f809fcb00e7ab48e0c3d3b
 ms.openlocfilehash: 177a30a30f6b8579fa1956d28581d4f9d3a11838
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -27,21 +29,21 @@ ms.openlocfilehash: 177a30a30f6b8579fa1956d28581d4f9d3a11838
 
 以下是有关 System Center Configuration Manager 的诊断和使用情况数据的常见问题：  
 
-###  <a name="a-namebkmkoffa-how-do-i-turn-off-telemetry"></a><a name="bkmk_off"></a> 如何关闭遥测？  
+###  <a name="bkmk_off"></a> 如何关闭遥测？  
 无法关闭遥测。 但是，你可以选择所收集的遥测数据的级别。 此外，还可以在脱机模式下使用服务连接点来帮助管理遥测数据的提交时间。
 
 需要定期更新 Configuration Manager 的 Current Branch，以支持新版本的 Windows 10 和 Microsoft Intune。 Microsoft 至少需要基本级别的诊断和使用情况数据来使产品保持最新状态、改进更新体检以及提高产品的质量和安全性。
 
-###  <a name="a-namebkmkretentiona-what-is-the-data-retention-period"></a><a name="bkmk_retention"></a> 数据保留期为多久？  
+###  <a name="bkmk_retention"></a> 数据保留期为多久？  
  诊断和使用数据的保留期为一年。  
 
-###  <a name="a-namebkmkupdatea-is-diagnostics-and-usage-data-sent-when-installing-or-updating-the-product"></a><a name="bkmk_update"></a> 安装或更新产品时是否发送了诊断和使用情况数据？  
+###  <a name="bkmk_update"></a> 安装或更新产品时是否发送了诊断和使用情况数据？  
  否。 仅当安装站点且可对其进行操作之后，才发送诊断和使用情况数据。  
 
-###  <a name="a-namebkmkfrequencya-how-frequently-is-the-data-sent"></a><a name="bkmk_frequency"></a> 发送数据的频率是多高？  
+###  <a name="bkmk_frequency"></a> 发送数据的频率是多高？  
  SQL 存储过程每七天（自安装站点之日起）运行一次。 在联机模式下，服务连接点配置为在查询运行后上传数据。 在脱机模式下，管理员使用服务连接工具上传数据。 （注意：安装站点后七天之内，数据最初不可脱机使用。）  
 
-###  <a name="a-namebkmknetworka-can-the-data-be-used-to-form-a-network-map"></a><a name="bkmk_network"></a> 可否将数据用于形成网络映射？  
+###  <a name="bkmk_network"></a> 可否将数据用于形成网络映射？  
  如 System Center Configuration Manager 的诊断使用情况数据收集的级别描述中所示，站点详细信息包括每个站点中的时区信息。 此信息使你能够深入了解层次结构中站点广泛的地理位置和全球分布。 但是，不会收集网络详细信息（例如 IP 地址或更详细的地理位置信息）。
  - [1511 的诊断数据](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1511)
  - [1602 的诊断数据](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1602)
@@ -49,17 +51,12 @@ ms.openlocfilehash: 177a30a30f6b8579fa1956d28581d4f9d3a11838
  - [1610 的诊断数据](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1610)
 
 
-###  <a name="a-namebkmktablesa-can-you-see-data-in-custom-tables"></a><a name="bkmk_tables"></a> 可以查看自定义表中的数据吗？  
+###  <a name="bkmk_tables"></a> 可以查看自定义表中的数据吗？  
  否。 通过 SQL 存储过程，针对数据库中的默认产品表收集诊断和使用情况数据（所有表都带有前缀 **TEL_**）。 作为 SQL 架构检测查询的一部分，对所有表名称进行了哈希处理，以便与已知默认值进行比较。 这可以确定数据库（由默认值扩展而来的数据库架构）中存在自定义表，但不能确定这些表中包含的任何数据。  
 
-###  <a name="a-namebkmkdatabasesa-can-you-see-names-of-other-databases-or-can-you-see-data-in-other-databases"></a><a name="bkmk_databases"></a>你能看到其他数据库的名称或其他数据库中的数据吗？  
+###  <a name="bkmk_databases"></a>你能看到其他数据库的名称或其他数据库中的数据吗？  
  否。 用于收集数据的存储过程仅限于站点数据库。  
 
 ## <a name="see-also"></a>另请参阅  
  [System Center Configuration Manager 的诊断和使用情况数据](../../core/plan-design/diagnostics/diagnostics-and-usage-data.md)
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

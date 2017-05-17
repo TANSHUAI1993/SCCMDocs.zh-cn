@@ -16,10 +16,11 @@ caps.handback.revision: 0
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 26feb0b166beb7e48cb800a5077d00dbc3eec51a
 ms.openlocfilehash: 27435316c6e47531ff989bc8956ca0c874131a0e
-ms.lasthandoff: 04/04/2017
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 
 ---

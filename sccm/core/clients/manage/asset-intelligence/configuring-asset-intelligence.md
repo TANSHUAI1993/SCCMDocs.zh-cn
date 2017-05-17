@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 8a5dc7361da34f3e6b926acd35c72c0c0767ce70
 ms.openlocfilehash: 27566be49a673bebca6ac3621e692fad65523ca4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 12/30/2016
 
 
 ---
@@ -39,7 +41,7 @@ ms.openlocfilehash: 27566be49a673bebca6ac3621e692fad65523ca4
 - **步骤 6**：[配置资产智能维护任务](#BKMK_ConfigureMaintenanceTasks) 
 
 
-###  <a name="a-namebkmkenableassetintelligencea-enable-asset-intelligence-hardware-inventory-reporting-classes"></a><a name="BKMK_EnableAssetIntelligence"></a> Enable Asset Intelligence hardware inventory reporting classes  
+###  <a name="BKMK_EnableAssetIntelligence"></a> Enable Asset Intelligence hardware inventory reporting classes  
  要在 Configuration Manager 站点中启用资产智能，必须启用一个或多个资产智能硬件清单报表类。 可以在“资产智能”  主页上，或者在在“管理”  工作区的“客户端设置”  节点中的客户端设置属性中启用这些类。 使用以下过程之一。  
 
 ##### <a name="to-enable-asset-intelligence-hardware-inventory-reporting-classes-from-the-asset-intelligence-home-page"></a>若要从资产智能主页启用资产智能硬件清单报表类  
@@ -70,7 +72,7 @@ ms.openlocfilehash: 27566be49a673bebca6ac3621e692fad65523ca4
     >  在客户端扫描并返回硬件清单之前，依赖于使用此过程启用的硬件清单类的资产智能报表不会显示数据。  
   
 
-###  <a name="a-namebkmkinstallassetintelligencesynchronizationpointa-install-an-asset-intelligence-synchronization-point"></a><a name="BKMK_InstallAssetIntelligenceSynchronizationPoint"></a> Install an Asset Intelligence Synchronization Point  
+###  <a name="BKMK_InstallAssetIntelligenceSynchronizationPoint"></a> Install an Asset Intelligence Synchronization Point  
 
 资产智能同步点站点系统角色用于将 Configuration Manager 站点与 System Center Online 连接以同步资产智能目录信息。 只能将资产智能同步点安装在位于 Configuration Manager 层次结构顶层站点中的站点系统上，并且需要使用 TCP 端口 443 访问 Internet 以与 System Center Online 进行同步。
 
@@ -110,7 +112,7 @@ ms.openlocfilehash: 27566be49a673bebca6ac3621e692fad65523ca4
 
 10. 完成向导 
 
-###  <a name="a-namebkmkenablesuccesslogoneventsa-enable-auditing-of-success-logon-events"></a><a name="BKMK_EnableSuccessLogonEvents"></a> Enable auditing of success logon events  
+###  <a name="BKMK_EnableSuccessLogonEvents"></a> Enable auditing of success logon events  
  四个资产智能报表显示从客户端计算机上的 Windows 安全事件日志收集的信息。 下面介绍了如何配置计算机安全策略登录设置以启用对成功登录事件的审核。  
 
 ##### <a name="to-enable-success-logon-event-logging-by-using-a-local-security-policy"></a>使用本地安全策略启用成功登录事件日志记录  
@@ -129,7 +131,7 @@ ms.openlocfilehash: 27566be49a673bebca6ac3621e692fad65523ca4
 
 3.  在结果窗格中，双击“审核登录事件”，确保选中“成功”复选框，然后选择“确定”。  
 
-###  <a name="a-namebkmkimportsoftwarelicenseinformationa-import-software-license-information"></a><a name="BKMK_ImportSoftwareLicenseInformation"></a> Import software license information  
+###  <a name="BKMK_ImportSoftwareLicenseInformation"></a> Import software license information  
  以下部分描述了使用导入软件许可证向导将 Microsoft 和常规软件许可证信息导入 Configuration Manager 站点数据库中所需的过程。 在将软件许可证信息从许可证声明文件导入站点数据库中时，站点服务器计算机帐户需要 NTFS 文件系统对用于导入软件许可证信息的文件共享的“完全控制”  权限。  
 
 > [!IMPORTANT]  
@@ -153,7 +155,7 @@ ms.openlocfilehash: 27566be49a673bebca6ac3621e692fad65523ca4
 
 6. 完成向导。  
 
-###  <a name="a-namebkmkcreategenerallicensestatementa-create-a-general-license-statement-information-file-for-import"></a><a name="BKMK_CreateGeneralLicenseStatement"></a> Create a general license statement information file for import  
+###  <a name="BKMK_CreateGeneralLicenseStatement"></a> Create a general license statement information file for import  
  还可以使用以逗号分隔 (.csv) 文件格式手动创建的许可证导入文件将常规许可证声明导入资产智能目录中。  
 
 > [!NOTE]  
@@ -209,7 +211,7 @@ ms.openlocfilehash: 27566be49a673bebca6ac3621e692fad65523ca4
 |支持到期日期|日期值格式如下：MM/DD/YYYY|否|购买的支持的结束日期|  
 |注释|最多 255 个字符|否|可选备注|  
 
-###  <a name="a-namebkmkconfiguremaintenancetasksa-configure-asset-intelligence-maintenance-tasks"></a><a name="BKMK_ConfigureMaintenanceTasks"></a> Configure Asset Intelligence maintenance tasks  
+###  <a name="BKMK_ConfigureMaintenanceTasks"></a> Configure Asset Intelligence maintenance tasks  
  以下维护任务可用于资产智能：  
 
 -   **将应用程序标题与清单信息进行核对**：检查软件清单中报告的软件标题是否与资产智能目录中的软件标题一致。 默认情况下，此任务处于启用状态并计划在星期六凌晨 12:00 之后 到凌晨 5:00 之前运行。 此维护任务只能在 Configuration Manager 层次结构中的顶层站点上使用。  
@@ -232,9 +234,4 @@ ms.openlocfilehash: 27566be49a673bebca6ac3621e692fad65523ca4
 
     > [!NOTE]  
     >  如果初次尝试时任务无法运行，Configuration Manager 会尝试重新运行任务，直至任务成功运行，或直至可以在其间运行任务的时间段已过去。  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

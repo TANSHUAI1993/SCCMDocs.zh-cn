@@ -19,7 +19,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: c6a6137fa978e1ea28aefea2aea4e29ba661efd6
 ms.openlocfilehash: b3bb72f81812705b4654e268025074402e89a7cb
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/04/2017
+ms.lasthandoff: 05/17/2017
 
 
 ---

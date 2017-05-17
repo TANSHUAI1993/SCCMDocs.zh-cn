@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 05c27c7aa36e0b4236867766dab36125c31467b3
 ms.openlocfilehash: 80d5a13ea5d40150ddd537251e837083e649ac52
+ms.contentlocale: zh-cn
+ms.lasthandoff: 01/03/2017
 
 
 ---
@@ -52,7 +54,7 @@ Configuration.mof 文件用于定义要通过客户端上的硬件清单列出�
 ## <a name="procedures-to-extend-hardware-inventory"></a>扩展硬件清单的过程  
 这些过程帮助您配置硬件清单的默认客户端设置和它们适用于层次结构中的所有客户端。 如果希望这些设置仅应用于某些客户端，请创建自定义客户端设备设置，并将它分配给特定客户端的集合。 请参阅[如何在 System Center Configuration Manager 中配置客户端设置](../../../../core/clients/deploy/configure-client-settings.md)。  
 
-###  <a name="a-namebkmkenablea-to-enable-or-disable-existing-inventory-classes"></a><a name="BKMK_Enable"></a> 若要启用或禁用现有清单类  
+###  <a name="BKMK_Enable"></a> 若要启用或禁用现有清单类  
 
 1.  在 Configuration Manager 控制台中，选择“管理” > “客户端设置” > “默认客户端设置”。  
 
@@ -68,7 +70,7 @@ Configuration.mof 文件用于定义要通过客户端上的硬件清单列出�
     >  将新类添加到 Configuration Manager 硬件清单时，收集和发送到站点服务器的清单文件的大小将增加。 这可能会对你的网络和 Configuration Manager 站点的性能产生负面影响。 启用您想要收集的清单类。  
 
 
-###  <a name="a-namebkmkadda-to-add-a-new-inventory-class"></a><a name="BKMK_Add"></a> 若要添加新的清单类  
+###  <a name="BKMK_Add"></a> 若要添加新的清单类  
 
 只能从最高级别服务器层次结构中并通过修改默认客户端设置中添加清单类。 当创建自定义设备设置此选项不可用。
 
@@ -101,7 +103,7 @@ Configuration.mof 文件用于定义要通过客户端上的硬件清单列出�
      完成属性配置后，单击“确定”关闭“类限定符”对话框和其他打开的对话框。 
 
 
-###  <a name="a-namebkmkimporta-to-import-hardware-inventory-classes"></a><a name="BKMK_Import"></a> 若要导入硬件清单类  
+###  <a name="BKMK_Import"></a> 若要导入硬件清单类  
 
 当您修改默认客户端设置时，只可以导入清单类。 但是，您可以使用自定义客户端设置导入不包含架构更改，例如，更改从现有类的属性的信息 **True** 到 **False**。  
 
@@ -117,7 +119,7 @@ Configuration.mof 文件用于定义要通过客户端上的硬件清单列出�
 
 8.  在“导入”对话框中，选择想要导入的托管对象格式 (MOF) 文件，然后选择“确定”。 查看要导入的项，然后单击“导入”。  
 
-###  <a name="a-namebkmkexporta-to-export-hardware-inventory-classes"></a><a name="BKMK_Export"></a> 若要导出硬件清单类  
+###  <a name="BKMK_Export"></a> 若要导出硬件清单类  
 
 1.  在 Configuration Manager 控制台中，选择“管理” > “客户端设置” > “默认客户端设置”。  
 
@@ -140,7 +142,7 @@ Configuration.mof 文件用于定义要通过客户端上的硬件清单列出�
 > [!IMPORTANT]  
 >  必须为 MIF 文件创建或导入类信息，才能将其中数据添加到 Configuration Manager 数据库。 有关详细信息，请参阅本主题中的 [若要添加新的清单类](#BKMK_Add) 和 [若要导入硬件清单类](#BKMK_Import) 部分。  
 
-###  <a name="a-namebkmknoidmifa-to-create-noidmif-files"></a><a name="BKMK_NOIDMIF"></a> 若要创建 NOIDMIF 文件  
+###  <a name="BKMK_NOIDMIF"></a> 若要创建 NOIDMIF 文件  
  NOIDMIF 文件可用于将信息添加到通常不能被 Configuration Manager 收集且与特定客户端设备相关联的客户端硬件清单。 例如，许多公司用一个资产编号标记组织中的每台计算机，然后对其进行手动分类。 创建 NOIDMIF 文件时，可将此信息添加到 Configuration Manager 数据库并用于查询和报告。 有关创建 NOIDMIF 文件的信息，请参阅 Configuration Manager SDK 文档。  
 
 > [!IMPORTANT]  
@@ -148,16 +150,11 @@ Configuration.mof 文件用于定义要通过客户端上的硬件清单列出�
 
  创建 NOIDMIF 文件后，将其存储在每个客户端上的 *%Windir%***\System32\CCM\Inventory\Noidmifs** 文件夹中。 Configuration Manager 将在下一个计划的硬件清单周期中从此文件夹中的 NODMIF 文件收集信息。  
 
-###  <a name="a-namebkmkidmifa-to-create-idmif-files"></a><a name="BKMK_IDMIF"></a> 若要创建 IDMIF 文件  
+###  <a name="BKMK_IDMIF"></a> 若要创建 IDMIF 文件  
  IDMIF 文件可用于将有关资产（通常不能被 Configuration Manager 列出清单并且不与特定客户端设备相关联）的信息添加到 Configuration Manager 数据库。 例如，可以使用 IDMIFS 收集有关投影仪、DVD 播放机、复印机或不包含 Configuration Manager 客户端的其他设备的信息。 有关创建 IDMIF 文件的信息，请参阅 Configuration Manager SDK 文档。  
 
  创建 IDMIF 文件后，将其存储在客户端计算机上的 *%Windir%***\System32\CCM\Inventory\Idmifs** 文件夹中。 Configuration Manager 将在下一个计划的硬件清单周期中从此文件收集信息。 您必须声明通过添加或将其导入该文件中包含的信息的新类。  
 
 > [!NOTE]
 > MIF 文件可能包含大量数据，收集这些数据可能对你网站的性能产生负面影响。 仅在需要时启用 MIF 收集，并在硬件清单设置中配置“最大自定义 MIF 文件大小 (KB)”选项。 有关详细信息，请参阅 [System Center Configuration Manager 中的硬件清单简介](introduction-to-hardware-inventory.md)。
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

@@ -16,10 +16,11 @@ caps.handback.revision: 0
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
 ms.openlocfilehash: ad4b923bd6d3e8acfe799a4ebe2adec737939d75
-ms.lasthandoff: 03/06/2017
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="verify-mdm-configuration-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 验证 MDM 配置

@@ -15,9 +15,11 @@ caps.latest.revision: 15
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5f1efaa776079b21d52b9936273380e9bb8963e9
 ms.openlocfilehash: 862f420c063cb44c419d4904fbb4696efb739758
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -52,9 +54,4 @@ ms.openlocfilehash: 862f420c063cb44c419d4904fbb4696efb739758
 |配置管理点的数据库副本|配置数据库副本，以减少管理点在处理来自客户端的请求时放在站点数据库服务器上的 CPU 负载。 有关详细信息，请参阅 [System Center Configuration Manager 管理点的数据库副本](../../../../core/servers/deploy/configure/database-replicas-for-management-points.md)。|  
 |配置 SQL Server AlwaysOn 可用性组以承载站点数据库|从版本 1602 开始，可将可用性组配置为高可用性和灾难恢复解决方案，以承载主站点和管理中心站点上的站点数据库。 有关详细信息，请参阅[通过 SQL Server AlwaysOn 实现适用于 System Center Configuration Manager 的高可用性站点数据库](../../../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)。|  
 |修改站点之间的复制|请参阅 [System Center Configuration Manager 中的站点间数据传输](../../../../core/servers/manage/data-transfers-between-sites.md)以了解有关以下主题：<br /><br /> 在辅助站点之间配置[基于文件的复制](../../../../core/servers/manage/data-transfers-between-sites.md#bkmk_fileroute)<br /><br /> 配置[数据库复制链接](../../../../core/servers/manage/data-transfers-between-sites.md#bkmk_Dblinks)<br /><br /> 配置[分布式视图](../../../../core/servers/manage/data-transfers-between-sites.md#bkmk_distviews)|  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

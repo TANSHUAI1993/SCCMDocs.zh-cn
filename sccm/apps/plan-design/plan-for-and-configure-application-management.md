@@ -15,9 +15,11 @@ caps.latest.revision: 13
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 1c43c4968f93985515249ddb117269f8ed61302a
 ms.openlocfilehash: 46cc3fcfd9516cf1c124e24b50d0aac0cb0025dc
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -225,9 +227,4 @@ ms.openlocfilehash: 46cc3fcfd9516cf1c124e24b50d0aac0cb0025dc
 
 > [!WARNING]  
 >  安装了应用程序目录站点系统角色后，从软件中心选择“从应用程序目录中查找其他应用程序”链接时，将不会立即看到应用程序目录。 在客户端下一次下载其客户端策略后，或在安装了应用程序目录站点系统角色后最多 25 个小时内，将可以从软件中心中使用应用程序目录。  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

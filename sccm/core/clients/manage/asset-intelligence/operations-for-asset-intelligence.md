@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: 6bfbfbcce6ef5c38164e161d197f5a3fb4b4e353
+ms.contentlocale: zh-cn
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -28,10 +30,10 @@ ms.openlocfilehash: 6bfbfbcce6ef5c38164e161d197f5a3fb4b4e353
 
 本主题包含的信息可帮助在 System Center Configuration Manager 层次结构中管理典型的资产智能任务：  
 
-##  <a name="a-namebkmkviewinformationa-view-asset-intelligence-information"></a><a name="BKMK_ViewInformation"></a> 查看资产智能信息  
+##  <a name="BKMK_ViewInformation"></a> 查看资产智能信息  
  你可以在“资产智能”  主页上和资产智能报表中查看资产智能信息。  
 
-###  <a name="a-namebkmkassetintelligencehomepagea-asset-intelligence-home-page"></a><a name="BKMK_AssetIntelligenceHomePage"></a> “资产智能”主页  
+###  <a name="BKMK_AssetIntelligenceHomePage"></a> “资产智能”主页  
  “资产智能”  主页显示了资产智能目录信息的摘要仪表板。 在主页上可以查看有关目录同步和清单软件状态的信息。 “资产智能”  主页包含以下部分：  
 
 -   **目录同步**：该部分提供了有关是否启用资产智能、资产智能同步点当前的状态、同步计划、是否导入客户许可证声明、上次状态更新的时间和下次计划更新的时间以及在安装资产智能同步点站点系统之后发生的更改数的信息。  
@@ -49,7 +51,7 @@ ms.openlocfilehash: 6bfbfbcce6ef5c38164e161d197f5a3fb4b4e353
 
 2.  在“资产和符合性”  工作区中，单击“资产智能” 。 将显示资产智能报表。  
 
-###  <a name="a-namebkmkassetintelligencereportsa-asset-intelligence-reports"></a><a name="BKMK_AssetIntelligenceReports"></a> 资产智能报表  
+###  <a name="BKMK_AssetIntelligenceReports"></a> 资产智能报表  
  总共有 60 多个资产智能报表，这些报表显示了由资产智能收集的信息。 大多数报表都是链接至更具针对性的报表，你可以从中查询常规信息以及向下钻取更多详细信息。 资产智能报表位于 Configuration Manager 控制台，“监视”工作区中的“报表”节点下。 这些报表提供有关硬件、许可证管理和软件的信息。 有关 Configuration Manager 中报表的详细信息，请参阅 [System Center Configuration Manager 中的报表](../../../../core/servers/manage/reporting.md)。  
 
 > [!NOTE]  
@@ -68,7 +70,7 @@ ms.openlocfilehash: 6bfbfbcce6ef5c38164e161d197f5a3fb4b4e353
 
 3.  选择你希望运行的资产智能报表，然后在“主页”  选项卡上的“报表组”  组中，单击“运行” 。  
 
-##  <a name="a-namebkmksynchronizethecataloga-synchronize-the-asset-intelligence-catalog"></a><a name="BKMK_SynchronizeTheCatalog"></a> 同步资产智能目录  
+##  <a name="BKMK_SynchronizeTheCatalog"></a> 同步资产智能目录  
  你可以将本地资产智能目录与 System Center Online 同步以检索最新的软件标题分类。 当你手动请求将目录与 System Center Online 同步时，可能需要 15 分钟或者更长时间才能完成与 System Center Online 同步的过程。 同步成功完成时，Configuration Manager 会将“资产智能”主页上的“上次成功更新时间”设置更新成与当前时间相一致。  
 
 > [!NOTE]  
@@ -96,7 +98,7 @@ ms.openlocfilehash: 6bfbfbcce6ef5c38164e161d197f5a3fb4b4e353
 > [!WARNING]  
 >  System Center Online 在 12 小时内仅接受一次手动同步请求。  
 
-###  <a name="a-namebkmkmanuallysynchronizecataloga-to-manually-synchronize-the-asset-intelligence-catalog"></a><a name="BKMK_ManuallySynchronizeCatalog"></a> 若要手动同步资产智能目录  
+###  <a name="BKMK_ManuallySynchronizeCatalog"></a> 若要手动同步资产智能目录  
 
 1.  在 Configuration Manager 控制台中，单击“资产和符合性” 。  
 
@@ -104,10 +106,10 @@ ms.openlocfilehash: 6bfbfbcce6ef5c38164e161d197f5a3fb4b4e353
 
 3.  在“主页”  选项卡上的“创建”  组中，单击“同步” ，再单击“同步资产智能目录” ，然后单击“确定” 。  
 
-##  <a name="a-namebkmkcustomizecataloga-customize-the-asset-intelligence-catalog"></a><a name="BKMK_CustomizeCatalog"></a> 自定义资产智能目录  
+##  <a name="BKMK_CustomizeCatalog"></a> 自定义资产智能目录  
  从 System Center Online 接收到的资产智能目录分类信息存储在站点数据库中，权限为只读且不能修改或删除。 然而，你可以创建、修改并删除自定义软件类别、软件系列、软件标签以及硬件要求目录信息。 对于现有或用户定义的软件标题信息，你可以使用自定义分类数据，而不使用由 System Center Online 提供的信息。 当你更改或添加分类信息时，目录信息将被视为用户定义的信息。 用户定义的分类信息存储在与已验证的目录信息不同的数据库表中。  
 
-###  <a name="a-namebkmksoftwarecategoriesa-software-categories"></a><a name="BKMK_SoftwareCategories"></a> 软件类别  
+###  <a name="BKMK_SoftwareCategories"></a> 软件类别  
  资产智能软件类别可用于对已列出清单的软件标题进行广泛的分类，也可用作更具体的软件家族的高级别分组。 例如，软件类别可以是能源公司，而该软件类别中的软件家族可以是石油和天然气或水力电气。 在资产智能目录中预定义了许多软件类别，并且可以创建其他用户定义的类别以进一步定义已列出清单的软件。 所有预定义软件类别的验证状态始终为“已验证” ，而添加到资产智能目录的自定义软件类别信息则为“用户定义” 。  
 
  使用以下过程创建用户定义的软件类别。  
@@ -131,7 +133,7 @@ ms.openlocfilehash: 6bfbfbcce6ef5c38164e161d197f5a3fb4b4e353
 
 6.  在“完成”  页上，单击“关闭”  退出向导。  
 
-###  <a name="a-namebkmksoftwarefamiliesa-software-families"></a><a name="BKMK_SoftwareFamilies"></a> 软件家族  
+###  <a name="BKMK_SoftwareFamilies"></a> 软件家族  
  资产智能软件家族可用于进一步定义软件类别中的已列出清单的软件标题。 例如，软件类别可以是能源公司，而该软件类别中的软件家族可以是石油和天然气或水力电气。 可以在资产智能目录中预定义许多软件系列，并且还可以创建其他用户定义的系列以进一步定义清单软件。 所有预定义的软件系列的验证状态始终为“已验证” ，而添加到资产智能目录的自定义软件家族信息则为“用户定义” 。  
 
  使用以下过程创建用户定义的软件系列。  
@@ -153,7 +155,7 @@ ms.openlocfilehash: 6bfbfbcce6ef5c38164e161d197f5a3fb4b4e353
 
 6.  在“完成”  页上，单击“关闭”  退出向导。  
 
-###  <a name="a-namebkmksoftwarelabelsa-software-labels"></a><a name="BKMK_SoftwareLabels"></a> 软件标签  
+###  <a name="BKMK_SoftwareLabels"></a> 软件标签  
  你可以通过资产智能自定义软件标签创建筛选器，然后用筛选器对软件标题进行分组并通过使用资产智能报表查看它们。 例如，你可以创建被称为共享件的软件标签，将它与大量的应用程序相关联，然后运行报表以显示共享件软件标签的所有标题。 所有你添加到资产智能目录中的自定义软件标签的验证状态为“用户定义”  。  
 
  使用以下过程创建用户定义的自定义标签。  
@@ -175,7 +177,7 @@ ms.openlocfilehash: 6bfbfbcce6ef5c38164e161d197f5a3fb4b4e353
 
 6.  在“完成”  页上，单击“关闭”  退出向导。  
 
-###  <a name="a-namebkmkhardwarerequirementsa-hardware-requirements"></a><a name="BKMK_HardwareRequirements"></a> 硬件要求  
+###  <a name="BKMK_HardwareRequirements"></a> 硬件要求  
  对软件标题进行软件部署前，可使用硬件要求信息来验证计算机是否满足软件标题的硬件要求。 资产智能目录中预定义了许多硬件要求，你可以创建新的用户定义的硬件要求信息以满足自定义要求。 所有预定义的硬件要求的验证状态始终为“已验证” ，而添加到资产智能目录的用户定义的硬件要求信息为“用户定义” 。  
 
 > [!IMPORTANT]  
@@ -211,7 +213,7 @@ ms.openlocfilehash: 6bfbfbcce6ef5c38164e161d197f5a3fb4b4e353
 
 6.  在“完成”  页上，单击“关闭”  退出向导。  
 
-###  <a name="a-namebkmkmodifycategorizationa-modify-categorization-information-for-inventoried-software"></a><a name="BKMK_ModifyCategorization"></a> 修改清单软件的分类信息  
+###  <a name="BKMK_ModifyCategorization"></a> 修改清单软件的分类信息  
  使用特定分类信息（例如产品名称、供应商、软件类别以及软件系列）配置资产智能目录中预定义的软件。 当预定义的分类信息不满足你的要求时，你可以在软件标题的属性中修改该信息。 当你修改预定义软件的分类信息时，软件的验证状态会从“已验证”  更改为“用户定义” 。  
 
 > [!IMPORTANT]  
@@ -265,7 +267,7 @@ ms.openlocfilehash: 6bfbfbcce6ef5c38164e161d197f5a3fb4b4e353
 
 6.  当你还原资产智能目录中存在的软件分类信息时，验证状态会从“用户定义”  更改为“已验证” 。 当你还原资产智能目录中不存在的软件时，验证状态会从“用户定义”  更改为“未分类” 。  
 
-##  <a name="a-namebkmkrequestcatalogupdatea-request-a-catalog-update-for-uncategorized-software-titles"></a><a name="BKMK_RequestCatalogUpdate"></a> 为未分类的软件标题请求目录更新  
+##  <a name="BKMK_RequestCatalogUpdate"></a> 为未分类的软件标题请求目录更新  
  可以将未分类的软件标题信息提交至 System Center Online 以供研究和分类。 提交了未分类的软件标题，并且客户对相同软件标题至少进行了 4 次分类请求之后，研究人员会进行标识、分类，然后将软件标题分类信息提供给所有正在使用 System Center Online 的客户。 Microsoft 会对具有最多分类请求的软件标题指定最高优先级。 自定义软件和业务线应用程序不大可能接收类别，作为最佳做法，不应将这些软件标题发送给 Microsoft 进行分类。  
 
  当软件标题信息提交至 System Center Online 以供分类时，下列条件适用：  
@@ -308,7 +310,7 @@ ms.openlocfilehash: 6bfbfbcce6ef5c38164e161d197f5a3fb4b4e353
     > [!NOTE]  
     >  提交至 System Center Online 进行分类的软件在管理中心站点上具有验证状态为“挂起”  的软件在子主站点上仍然会显示为“未分类”  的验证状态。  
 
-##  <a name="a-namebkmkresolvesoftwaredetailsa-resolve-software-details-conflicts"></a><a name="BKMK_ResolveSoftwareDetails"></a> 解决软件详细信息冲突  
+##  <a name="BKMK_ResolveSoftwareDetails"></a> 解决软件详细信息冲突  
  System Center Online 与现有软件详细信息存在冲突，因此在其已收到最近更新的软件分类详细信息之后，你可以选择如何解决该冲突。 当前具有冲突的软件的验证状态为“可更新” 。 在解决软件详细信息冲突之后，根据你指定的设置，软件分类信息将保留在资产智能目录中。 在解决冲突之后，对于相同软件分类值，软件详细信息冲突不会再次发生，除非 System Center Online 值发生变化。  
 
  使用以下过程解决软件详细信息冲突。  
@@ -336,9 +338,4 @@ ms.openlocfilehash: 6bfbfbcce6ef5c38164e161d197f5a3fb4b4e353
     -   **用已下载的 System Center Online 值覆盖本地编辑的目录信息值**：通过用从 System Center Online 获得的新信息覆盖现有的资产智能目录软件分类信息来解决软件详细信息冲突。 当你选择此设置时，软件标题状态会从“可更新”  更改为“已验证” 。  
 
      单击“确定”  保存冲突解决。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

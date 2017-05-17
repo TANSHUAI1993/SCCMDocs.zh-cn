@@ -15,9 +15,11 @@ caps.latest.revision: 15
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
 ms.openlocfilehash: c22e29da8036d69db917205f28a19a69281a64db
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="capabilities-in-technical-preview-1608-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1608 版中的功能
@@ -49,7 +51,7 @@ ms.openlocfilehash: c22e29da8036d69db917205f28a19a69281a64db
 
 ### <a name="filter-the-software-display"></a>筛选软件显示
 定义父子关系后，可以筛选视图以仅显示父软件或不具备定义关系的软件。 这将隐藏被设为另一个已列出清单软件的子级的所有软件。 为此，请执行以下操作：
-   1.   在搜索栏中选择“添加条件”
+   1.    在搜索栏中选择“添加条件”
    2. 选择“父软件”，然后将条件值更改为“空”，然后单击“搜索”。
 
 现在屏幕将仅显示父软件项目，或不具备定义关系的软件。 只属于另一标题的子级的软件将不会显示。
@@ -62,9 +64,4 @@ ms.openlocfilehash: c22e29da8036d69db917205f28a19a69281a64db
 > [!NOTE]
 >
 > 特殊键（如 ~!#@$%,）将不会正确转换。
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

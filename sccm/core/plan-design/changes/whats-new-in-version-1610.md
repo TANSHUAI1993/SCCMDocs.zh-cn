@@ -15,9 +15,11 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ROBOTS: NOINDEX, NOFOLLOW
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 831d8a66c827d246069c7415cdce7a7c4bb95b33
 ms.openlocfilehash: 19e3099773f887129374413482702de3f4b0a36f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="what39s-new-in-version-1610-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1610 的新增功能
@@ -314,9 +316,4 @@ Microsoft 与 Lookout 的移动威胁防护解决方案集成，通过检测设�
 
 #### <a name="device-capability-settings"></a>设备功能设置
 - **允许自动连接到免费 Wi-Fi 热点**
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

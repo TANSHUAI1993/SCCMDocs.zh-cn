@@ -13,14 +13,16 @@ ms.service:
 ms.technology:
 - configmgr-sum
 ms.assetid: 57184274-5fea-4d79-a2b4-22e08ed26daf
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 78524abd4c45f0b7402d6f1e85afc60bb72ab0ee
 ms.openlocfilehash: d736715f1f2c92b4c91f156ecb8abe3513811a34
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 
 ---
 
-#  <a name="a-namebkmkmanualdeploya-manually-deploy-software-updates"></a><a name="BKMK_ManualDeploy"></a> 手动部署软件更新  
+#  <a name="BKMK_ManualDeploy"></a> 手动部署软件更新  
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
@@ -28,7 +30,7 @@ ms.openlocfilehash: d736715f1f2c92b4c91f156ecb8abe3513811a34
 
  以下部分提供手动部署软件更新的步骤。  
 
-##  <a name="a-namebkmk1searchcriteriaa-step-1-specify-search-criteria-for-software-updates"></a><a name="BKMK_1SearchCriteria"></a> 步骤 1：指定软件更新的搜索条件  
+##  <a name="BKMK_1SearchCriteria"></a> 步骤 1：指定软件更新的搜索条件  
  Configuration Manager 控制台中可能会显示数千个软件更新。 手动部署软件更新的工作流中的第一步是标识想要部署的软件更新。 例如，你可以提供条件，以检索在 50 多台客户端设备上所需要的具有“安全”  或“严重”  软件更新分类的所有软件更新。  
 
 > [!IMPORTANT]  
@@ -54,7 +56,7 @@ ms.openlocfilehash: d736715f1f2c92b4c91f156ecb8abe3513811a34
     > [!TIP]  
     >  你可以选择在“搜索”  选项卡上以及在“保存”  组中保存筛选条件。  
 
-##  <a name="a-namebkmk2updategroupa-step-2-create-a-software-update-group-that-contains-the-software-updates"></a><a name="BKMK_2UpdateGroup"></a> 步骤 2：创建包含软件更新的软件更新组  
+##  <a name="BKMK_2UpdateGroup"></a> 步骤 2：创建包含软件更新的软件更新组  
  软件更新组提供了一种有效方法，供你在准备部署过程中组织软件更新。 可将软件更新手动添加到软件更新组，或者，Configuration Manager 可以使用 ADR 将软件更新自动添加到新的或现有的软件更新组。 使用以下过程将软件更新手动添加到新软件更新组中。  
 
 #### <a name="to-manually-add-software-updates-to-a-new-software-update-group"></a>将软件更新手动添加到新软件更新组中  
@@ -73,7 +75,7 @@ ms.openlocfilehash: d736715f1f2c92b4c91f156ecb8abe3513811a34
 
 7.  选择软件更新组，在“主页”  选项卡内的“更新”  组中，单击“显示成员”  以显示组中所包含的软件更新的列表。  
 
-##  <a name="a-namebkmk3downloadcontenta-step-3-download-the-content-for-the-software-update-group"></a><a name="BKMK_3DownloadContent"></a> 步骤 3：下载软件更新组的内容  
+##  <a name="BKMK_3DownloadContent"></a> 步骤 3：下载软件更新组的内容  
  根据需要，在部署软件更新之前，你可以下载包含在软件更新组中的软件更新的内容。 你可以选择执行此操作，以便能够在部署软件更新之前验证内容在分发点上是否可用。 这将有助于你避免内容交付的任何意外问题。 你可以跳过此步骤，内容将在部署过程中下载和复制到分发点。 使用以下过程下载软件更新组中的软件更新的内容。  
 
 
@@ -160,7 +162,7 @@ ms.openlocfilehash: d736715f1f2c92b4c91f156ecb8abe3513811a34
 
 4. 在“主页”  选项卡上的“内容”  组中，单击“查看状态” 。  
 
-##  <a name="a-namebkmk4deployupdategroupa-step-4-deploy-the-software-update-group"></a><a name="BKMK_4DeployUpdateGroup"></a> 步骤 4：部署软件更新组  
+##  <a name="BKMK_4DeployUpdateGroup"></a> 步骤 4：部署软件更新组  
  确定想要部署的软件更新并将这些软件更新添加到软件更新组中之后，你可以手动部署软件更新组中的软件更新。 使用以下过程手动部署软件更新组中的软件更新。  
 
 #### <a name="to-manually-deploy-the-software-updates-in-a-software-update-group"></a>手动部署软件更新组中的软件更新  
@@ -315,9 +317,4 @@ ms.openlocfilehash: d736715f1f2c92b4c91f156ecb8abe3513811a34
 
 ## <a name="next-steps"></a>后续步骤
 [监视软件更新](monitor-software-updates.md)
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

@@ -15,9 +15,11 @@ caps.latest.revision: 5
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 860815010068422f2d8854ed2d574c24cc386891
 ms.openlocfilehash: 63a3c2ef66c80d1da9b50e67166a2196cf1b081b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="configure-discovery-methods-for-system-center-configuration-manager"></a>配置 System Center Configuration Manager 的发现方法
@@ -44,7 +46,7 @@ ms.openlocfilehash: 63a3c2ef66c80d1da9b50e67166a2196cf1b081b
 4.  选择“确定”保存配置。  
 
 
-##  <a name="a-namebkmkconfigadforestdisca-configure-active-directory-forest-discovery"></a><a name="BKMK_ConfigADForestDisc"></a>配置 Active Directory 林发现  
+##  <a name="BKMK_ConfigADForestDisc"></a>配置 Active Directory 林发现  
 若要完成 Active Directory 林发现的配置，必须在两个位置中配置设置：  
 
 -   在“发现方法”节点中，可以：
@@ -98,7 +100,7 @@ ms.openlocfilehash: 63a3c2ef66c80d1da9b50e67166a2196cf1b081b
 
 4.  完成配置此林以用于 Active Directory 林发现的操作后，选择“确定”保存配置。  
 
-##  <a name="a-namebkmkconfigaddiscgenerala-configure-active-directory-discovery-for-computers-users-or-groups"></a><a name="BKMK_ConfigADDiscGeneral"></a>为计算机、用户或组配置 Active Directory 发现  
+##  <a name="BKMK_ConfigADDiscGeneral"></a>为计算机、用户或组配置 Active Directory 发现  
  使用下列部分中的信息来配置计算机、用户或组的发现。 将使用这些发现方法：  
 
 -   Active Directory 组发现  
@@ -210,7 +212,7 @@ ms.openlocfilehash: 63a3c2ef66c80d1da9b50e67166a2196cf1b081b
 
 8.  完成为此站点配置 Active Directory 用户发现的操作后，选择“确定”保存配置。  
 
-##  <a name="a-namebkmkconfighbdisca-configure-heartbeat-discovery"></a><a name="BKMK_ConfigHBDisc"></a>配置检测信号发现  
+##  <a name="BKMK_ConfigHBDisc"></a>配置检测信号发现  
  默认情况下，检测信号发现在安装 Configuration Manager 主站点时启用。 因此，若不想使用每隔&7; 天的默认设置，只需配置有关客户端将检测信号发现数据记录发送到管理点的频率的计划。  
 
 > [!NOTE]  
@@ -226,10 +228,10 @@ ms.openlocfilehash: 63a3c2ef66c80d1da9b50e67166a2196cf1b081b
 
 4.  配置客户端提交检测信号发现数据记录的频率，然后选择“确定”保存配置。  
 
-##  <a name="a-namebkmkconfignetworkdisca-configure-network-discovery"></a><a name="BKMK_ConfigNetworkDisc"></a>配置网络发现  
+##  <a name="BKMK_ConfigNetworkDisc"></a>配置网络发现  
  使用下列部分中的信息来帮助你配置网络发现。  
 
-###  <a name="a-namebkmkaboutconfignetworkdisca-about-configuring-network-discovery"></a><a name="BKMK_AboutConfigNetworkDisc"></a>关于配置网络发现  
+###  <a name="BKMK_AboutConfigNetworkDisc"></a>关于配置网络发现  
  在配置网络发现之前，你必须了解以下各项：  
 
 -   网络发现的可用级别  
@@ -244,14 +246,14 @@ ms.openlocfilehash: 63a3c2ef66c80d1da9b50e67166a2196cf1b081b
 
  例如，可能会希望发现使用特定 SNMP 共同体名称的所有简单网络管理协议 (SNMP) 设备。 此外，对于同一发现轮次，你可以禁用针对特定子网的发现。 当发现运行时，网络发现不会发现你已禁用的子网上具有指定共同体名称的 SNMP 设备。  
 
-####  <a name="a-namebkmkdeterminenettopologya-determine-your-network-topology"></a><a name="BKMK_DetermineNetTopology"></a>确定网络拓扑  
+####  <a name="BKMK_DetermineNetTopology"></a>确定网络拓扑  
  你可以使用仅拓扑发现来映射你的网络。 这种类型的发现不会发现潜在客户端。 仅拓扑网络发现依赖于 SNMP。  
 
  映射网络拓扑时，必须在“网络发现属性”对话框中的“SNMP”选项卡上配置“最大跃点数”。 只需一些跃点，便可以帮助控制运行发现时使用的网络带宽。 在发现网络的更多内容时，可以增加跃点数以更好地了解网络拓扑。  
 
  了解网络拓扑后，可以配置网络发现的其他属性， 以在使用可用配置限制网络发现能够搜索的网络段时发现潜在的客户端及其操作系统。  
 
-####  <a name="a-namebkmklimitbysubneta-limit-searches-by-using-subnets"></a><a name="BKMK_LimitBySubnet"></a>使用子网限制搜索  
+####  <a name="BKMK_LimitBySubnet"></a>使用子网限制搜索  
  可以将网络发现配置为在发现运行期间搜索特定子网。 默认情况下，网络发现会搜索运行发现的服务器的子网。 配置和启用的任何其他子网仅适用于 SNMP 和动态主机配置协议 (DHCP) 搜索选项。 当网络发现搜索域时，子网配置未对其进行限制。  
 
  如果你在“网络发现属性”  对话框中的“子网”  选项卡上指定一个或多个子网，则仅搜索标记为“已启用”  的子网。  
@@ -264,7 +266,7 @@ ms.openlocfilehash: 63a3c2ef66c80d1da9b50e67166a2196cf1b081b
 
 -   基于域的查询可以发现位于子网上的资源。  
 
-####  <a name="a-namebkmksearchbydomaina-search-a-specific-domain"></a><a name="BKMK_SearchByDomain"></a>搜索特定域  
+####  <a name="BKMK_SearchByDomain"></a>搜索特定域  
  可以将网络发现配置为在发现运行期间搜索特定域或一组域。 默认情况下，网络发现会搜索运行发现的服务器的本地域。  
 
  如果你在“网络发现属性”  对话框中的“域”  选项卡上指定一个或多个域，则仅搜索标记为“已启用”  的域。  
@@ -277,7 +279,7 @@ ms.openlocfilehash: 63a3c2ef66c80d1da9b50e67166a2196cf1b081b
 
 -   DHCP 服务器仍然能够以位于域中的资源的列表形式予以回复。  
 
-####  <a name="a-namebkmklimitbysnmpnamea-limit-searches-by-using-snmp-community-names"></a><a name="BKMK_LimitBySNMPname"></a>使用 SNMP 共同体名称限制搜索  
+####  <a name="BKMK_LimitBySNMPname"></a>使用 SNMP 共同体名称限制搜索  
  可以将网络发现配置为在发现运行期间搜索特定 SNMP 共同体或一组共同体。 默认情况下，为使用配置了“公共”  共同体名称。  
 
  网络发现使用共同体名称来获得对路由器（SNMP 设备）的访问权。 路由器可以向网络发现提供有关链接到第一个路由器的其他路由器和子网的信息。  
@@ -290,7 +292,7 @@ ms.openlocfilehash: 63a3c2ef66c80d1da9b50e67166a2196cf1b081b
 > [!NOTE]  
 >  除了使用 SNMP 共同体名称之外，还可以指定特定 SNMP 设备的 IP 地址或可解析名称。 可使用“网络发现属性”对话框的“SNMP 设备”选项卡来执行此操作。  
 
-####  <a name="a-namebkmksearchbydhcpa-search-a-specific-dhcp-server"></a><a name="BKMK_SearchByDHCP"></a>搜索特定的 DHCP 服务器  
+####  <a name="BKMK_SearchByDHCP"></a>搜索特定的 DHCP 服务器  
  可以将网络发现配置为使用特定 DHCP 服务器或多个服务器在发现运行期间发现 DHCP 客户端。  
 
  网络发现搜索你在“网络发现属性”  对话框中的“DHCP”  选项卡上指定的每个 DHCP 服务器。 如果正在运行发现的服务器从 DHCP 服务器中租赁其 IP 地址，则可以通过选中“包括要将站点服务器配置为使用的 DHCP 服务器”复选框将发现配置为搜索该 DHCP 服务器。  
@@ -298,7 +300,7 @@ ms.openlocfilehash: 63a3c2ef66c80d1da9b50e67166a2196cf1b081b
 > [!NOTE]  
 >  为了在网络发现中成功配置 DHCP 服务器，你的环境必须支持 IPv4。 你无法将网络发现配置为使用本机 IPv6 环境中的 DHCP 服务器。  
 
-###  <a name="a-namebkmkhowtoconfignetdisca-how-to-configure-network-discovery"></a><a name="BKMK_HowToConfigNetDisc"></a>如何配置网络发现  
+###  <a name="BKMK_HowToConfigNetDisc"></a>如何配置网络发现  
  使用以下过程首先仅发现网络拓扑，然后使用一个或多个可用的网络发现选项将网络发现配置为发现潜在客户端。  
 
 ##### <a name="to-determine-your-network-topology"></a>确定网络拓扑  
@@ -407,7 +409,7 @@ ms.openlocfilehash: 63a3c2ef66c80d1da9b50e67166a2196cf1b081b
 
 12. 选择“确定”保存配置。  
 
-###  <a name="a-namebkmkhowtoverifynetdisca-how-to-verify-that-network-discovery-has-finished"></a><a name="BKMK_HowToVerifyNetDisc"></a>如何验证网络发现是否已完成  
+###  <a name="BKMK_HowToVerifyNetDisc"></a>如何验证网络发现是否已完成  
  完成网络发现所需的时间可能因多种因素而异。 这些因素可能包括以下一项或多项：  
 
 -   你的网络规模  
@@ -454,9 +456,4 @@ ms.openlocfilehash: 63a3c2ef66c80d1da9b50e67166a2196cf1b081b
     -   描述： **此组件已启动**  
 
     此信息验证是否已启动网络发现。 如果没有此信息，请重新计划网络发现。  
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

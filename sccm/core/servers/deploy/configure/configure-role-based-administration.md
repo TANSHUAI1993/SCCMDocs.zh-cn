@@ -15,9 +15,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 1defe96163f1bb70f586619ad89098c6f0e6c665
 ms.openlocfilehash: 3eea3a6e5f23808570ded4be3bd7412954518b96
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -44,7 +46,7 @@ ms.openlocfilehash: 3eea3a6e5f23808570ded4be3bd7412954518b96
 
 -   [修改管理用户的管理作用域](#BKMK_ModAdminUser)  
 
-##  <a name="a-namebkmkcreatesecrolea-create-custom-security-roles"></a><a name="BKMK_CreateSecRole"></a> 创建自定义安全角色  
+##  <a name="BKMK_CreateSecRole"></a> 创建自定义安全角色  
  Configuration Manager 提供若干内置安全角色。 如果需要其他安全角色，你可以通过创建现有安全角色的副本然后对该副本进行修改来创建自定义安全角色。 可创建自定义安全角色，向管理用户授予他们需要的但未包含在当前已分配安全角色中的其他安全权限。 通过使用自定义安全角色，你可以只向管理用户授予他们需要的权限，并避免分配会授予超出其所需的权限的安全角色。  
 
  使用下列过程，通过使用现有安全角色作为模板来创建一个新安全角色。  
@@ -83,7 +85,7 @@ ms.openlocfilehash: 3eea3a6e5f23808570ded4be3bd7412954518b96
             > [!NOTE]  
             >  导入安全角色之后，你可以编辑安全角色属性来更改与安全角色关联的对象权限。  
 
-##  <a name="a-namebkmkconfigsecrolea-configure-security-roles"></a><a name="BKMK_ConfigSecRole"></a> 配置安全角色  
+##  <a name="BKMK_ConfigSecRole"></a> 配置安全角色  
  为安全角色定义的安全权限组称为安全操作分配。 安全操作分配表示对象类型以及可用于每个对象类型的操作的组合。 可为任何自定义安全角色修改可用的安全操作，但无法修改 Configuration Manager 提供的内置安全角色。  
 
  使用下列过程来修改安全角色的安全操作。  
@@ -109,7 +111,7 @@ ms.openlocfilehash: 3eea3a6e5f23808570ded4be3bd7412954518b96
 
 8.  完成配置安全操作分配后，选择“确定”，保存新安全角色。  
 
-##  <a name="a-namebkmkconfigsecscopea-configure-security-scopes-for-an-object"></a><a name="BKMK_ConfigSecScope"></a> 配置对象的安全作用域  
+##  <a name="BKMK_ConfigSecScope"></a> 配置对象的安全作用域  
  通过对象（而不是安全作用域）管理对象的安全作用域关联。 安全作用域支持的唯一直接配置是更改其名称和描述。 要在查看安全作用域属性时更改安全作用域的名称和描述，你必须具有“安全作用域”  安全对象的“修改”  权限。  
 
  在 Configuration Manager 中创建新对象时，新对象与每个与帐户安全角色关联的安全作用域相关联，当这些安全角色提供“创建”权限或“设置安全作用域”权限时，该帐户用于创建对象。 只有在创建对象后，才能更改与之关联的安全作用域。  
@@ -131,14 +133,14 @@ ms.openlocfilehash: 3eea3a6e5f23808570ded4be3bd7412954518b96
     > [!NOTE]  
     >  在创建新对象时，你可以将对象分配给多个安全作用域。 若要修改与对象关联的安全作用域的数量，必须在创建对象之后更改此分配。  
 
-##  <a name="a-namebkmkconfigcolla-configure-collections-to-manage-security"></a><a name="BKMK_ConfigColl"></a> 配置集合来管理安全性  
+##  <a name="BKMK_ConfigColl"></a> 配置集合来管理安全性  
  没有用于为基于角色的管理配置集合的过程。 集合不具有基于角色的管理配置。 作为替代，会在配置管理用户时将集合分配给管理用户。 用户已分配安全角色中启用的集合安全操作可确定管理用户对集合和集合资源（集合成员）所拥有的权限。  
 
  如果管理用户拥有某个集合的权限，则对于限制为该集合的集合，他们也拥有权限。 例如，组织使用一个名为“所有台式机”的集合，并且有一个名为“所有北美台式机”集合，该集合限制为“所有台式机”集合。 如果管理用户拥有“所有台式机”的权限，则他们也拥有“所有北美台式机”集合的那些相同权限。
 
  此外，管理用户不能在直接分配给他们的集合上使用“删除”或“修改”权限。 但是，他们可在限于该集合的集合上使用这些权限。 在之前的示例中，管理用户可以删除或修改“所有北美台式机”集合，但无法删除或修改“所有台式机”集合。  
 
-##  <a name="a-namebkmkcreateadminusera-create-a-new-administrative-user"></a><a name="BKMK_Create_AdminUser"></a> 创建新管理用户  
+##  <a name="BKMK_Create_AdminUser"></a> 创建新管理用户  
  要授予个人或安全组成员访问权限以管理 Configuration Manager，请在 Configuration Manager 中创建一个管理用户，并指定 Windows 帐户“用户”或“用户组”。 必须为 Configuration Manager 中的每个管理用户分配至少一个安全角色和一个安全作用域。 你还可以分配集合来限制管理用户的管理作用域。  
 
  使用以下过程来创建新的管理用户。  
@@ -173,7 +175,7 @@ ms.openlocfilehash: 3eea3a6e5f23808570ded4be3bd7412954518b96
 
     -   如果选择了“仅指定安全作用域或集合中的安全对象”，则可选择“添加”，选择其他集合和安全作用域。 或者选择列表中的一个或多个对象，然后选择“删除”，将其删除。 选择“确定”完成此过程。  
 
-##  <a name="a-namebkmkmodadminusera-modify-the-administrative-scope-of-an-administrative-user"></a><a name="BKMK_ModAdminUser"></a> 修改管理用户的管理作用域  
+##  <a name="BKMK_ModAdminUser"></a> 修改管理用户的管理作用域  
  你可以通过添加或删除与管理用户关联的安全角色、安全作用域和集合来修改该用户的管理作用域。 必须将每个管理用户与至少一个安全角色和一个安全作用域关联。 你可能必须将一个或多个集合分配到用户的管理作用域。 大多数安全角色都与集合交互，如果没有分配的集合，将无法正常工作。  
 
  当你修改管理用户时，你可以更改有关安全对象如何与分配的安全角色关联的行为。 你可选择的三个行为如下所示：  
@@ -300,9 +302,4 @@ ms.openlocfilehash: 3eea3a6e5f23808570ded4be3bd7412954518b96
 
     > [!CAUTION]  
     >  如果安全角色向管理用户授予集合部署权限，则这些管理用户可从他们具有对象“读取”  权限的任何安全作用域中分发对象，即使该安全作用域与其他安全角色关联。  
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

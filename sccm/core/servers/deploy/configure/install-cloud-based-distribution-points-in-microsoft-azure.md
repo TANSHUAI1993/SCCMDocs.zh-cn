@@ -15,10 +15,11 @@ caps.latest.revision: 7
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f96905f50f879b843f98cb57c8a755aa856fb381
 ms.openlocfilehash: 39b35cccf78bba4e69a7de0ca3a5a8dc516201e3
-ms.lasthandoff: 03/01/2017
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="install-cloud-based-distribution-points-in-microsoft-azure-for-system-center-configuration-manager"></a>在 Microsoft Azure 中安装 System Center Configuration Manager 基于云的分发点

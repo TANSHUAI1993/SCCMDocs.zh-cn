@@ -15,9 +15,10 @@ caps.latest.revision: 4
 author: Mtillman
 ms.author: mtillman
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
 ms.openlocfilehash: 2ba11c8e2d8214ce9aca7c887fcb539b38da4e84
+ms.contentlocale: zh-cn
 ms.lasthandoff: 03/06/2017
 
 

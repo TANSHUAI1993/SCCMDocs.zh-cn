@@ -15,10 +15,11 @@ caps.latest.revision: 5
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 73c34d40d70fb3ae5f8702f3d5f1e5b51a1b28a7
 ms.openlocfilehash: 829f2d44a9b8d203a5b753ebb6d8f759b1a05111
-ms.lasthandoff: 03/01/2017
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="prepare-to-install-system-center-configuration-manager-sites"></a>准备安装 System Center Configuration Manager 站点

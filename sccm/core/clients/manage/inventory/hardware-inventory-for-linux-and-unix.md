@@ -15,9 +15,11 @@ caps.latest.revision: 6
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: cb1ac4f33b9ef291050a3406291b8cc1f112b586
+ms.contentlocale: zh-cn
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -44,7 +46,7 @@ ms.openlocfilehash: cb1ac4f33b9ef291050a3406291b8cc1f112b586
 > [!TIP]  
 >  你可以使用“操作系统”  类的“标题”  值标识查询和集合中的不同 Linux 和 UNIX 操作系统。  
 
-##  <a name="a-namebkmkconfighardwareforlnua-configuring-hardware-inventory-for-linux-and-unix-servers"></a><a name="BKMK_ConfigHardwareforLnU"></a> 配置适用于 Linux 和 UNIX 服务器的硬件清单  
+##  <a name="BKMK_ConfigHardwareforLnU"></a> 配置适用于 Linux 和 UNIX 服务器的硬件清单  
  可以使用默认客户端设置或创建自定义客户端设备设置来配置硬件清单。 当使用自定义客户端设备设置时，可以配置你希望仅从你的 Linux 和 UNIX 服务器中收集的类和属性。 还可以指定自定义计划确定何时从你的 Linux 和 UNIX 服务器中收集完整清单和增量清单。  
 
  适用于 Linux 和 UNIX 的客户端支持以下在 Linux 和 UNIX 服务器上可用的硬件清单类：  
@@ -75,7 +77,7 @@ ms.openlocfilehash: cb1ac4f33b9ef291050a3406291b8cc1f112b586
 
  并非这些清单类的所有属性都在 Configuration Manager 中的 Linux 和 UNIX 计算机上启用。  
 
-##  <a name="a-namebkmkoperationsforhardwareforlnua-operations-for-hardware-inventory"></a><a name="BKMK_OperationsforHardwareforLnU"></a> 硬件清单的操作  
+##  <a name="BKMK_OperationsforHardwareforLnU"></a> 硬件清单的操作  
  从你的 Linux 和 UNIX 服务器上收集硬件清单后，可以使用与查看收集自其它计算机的清单一样的方式查看和使用此信息：  
 
 -   使用资源浏览器查看有关 Linux 和 UNIX 服务器硬件清单的详细信息  
@@ -92,7 +94,7 @@ ms.openlocfilehash: cb1ac4f33b9ef291050a3406291b8cc1f112b586
 
  针对硬件清单的操作会输入到客户端日志文件，“scxcm.log” 。  
 
-##  <a name="a-namebkmkcustomhinvforlinuxa-how-to-use-open-management-infrastructure-to-create-custom-hardware-inventory"></a><a name="BKMK_CustomHINVforLinux"></a> 如何使用开放式管理基础结构来创建自定义硬件清单  
+##  <a name="BKMK_CustomHINVforLinux"></a> 如何使用开放式管理基础结构来创建自定义硬件清单  
  适用于 Linux 和 UNIX 的客户端支持可以使用开放式管理基础结构 (OMI) 创建的自定义硬件清单。 若要完成此操作，可以使用下列步骤：  
 
 1.  通过使用 OMI 源创建自定义清单提供程序  
@@ -101,12 +103,12 @@ ms.openlocfilehash: cb1ac4f33b9ef291050a3406291b8cc1f112b586
 
 3.  使 Configuration Manager 支持新的提供程序  
 
-###  <a name="a-namebkmklinuxprovidera-create-a-custom-hardware-inventory-provider-for-linux-and-unix-computers"></a><a name="BKMK_LinuxProvider"></a> 创建适用于 Linux 和 UNIX 计算机的自定义硬件清单提供程序。  
+###  <a name="BKMK_LinuxProvider"></a> 创建适用于 Linux 和 UNIX 计算机的自定义硬件清单提供程序。  
  若要创建适用于 Linux 和 UNIX 的 Configuration Manager 客户端的自定义硬件清单提供程序，请使用 **OMI 源-v.1.0.6** 并按照 OMI 入门指南中的说明进行操作。 此过程包括创建托管对象格式 (MOF) 文件，该文件用于定义新提供程序的架构。 随后，将 MOF 文件导入 Configuration Manager 以支持新自定义清单类。  
 
  OMI 源-v.1.0.6 和 OMI 入门指南均可以从 [开放组](http://go.microsoft.com/fwlink/p/?LinkId=262317) 网站下载。 可以在 OpenGroup.org 网站上的以下 web 页面中的“文档”  选项卡上找到这些下载内容： [开放式管理基础结构 (OMI)](http://go.microsoft.com/fwlink/p/?LinkId=286805)。  
 
-###  <a name="a-namebkmkaddprovidertolinuxa-configure-each-computer-that-runs-linux-or-unix-with-the-custom-hardware-inventory-provider"></a><a name="BKMK_AddProvidertoLinux"></a> 使用自定义硬件清单提供程序对每个运行 Linux 或 UNIX 的计算机进行配置：  
+###  <a name="BKMK_AddProvidertoLinux"></a> 使用自定义硬件清单提供程序对每个运行 Linux 或 UNIX 的计算机进行配置：  
  创建自定义清单提供程序后，必须在具有你想收集的清单的每个计算机上复制并注册提供程序库文件。  
 
 1.  将提供程序库复制到想要从中收集清单的每个 Linux 和 UNIX 计算机。 提供程序库的名称类似于： **XYZ_MyProvider.so**  
@@ -120,13 +122,8 @@ ms.openlocfilehash: cb1ac4f33b9ef291050a3406291b8cc1f112b586
 > [!TIP]  
 >  使用软件分发来部署自定义提供程序和在每个 Linux 和 UNIX 客户端计算机上注册自定义提供程序。  
 
-###  <a name="a-namebkmkaddlinuxprovidertocma-enable-the-new-inventory-class-in-configuration-manager"></a><a name="BKMK_AddLinuxProvidertoCM"></a> 在 Configuration Manager 中启用新清单类：  
+###  <a name="BKMK_AddLinuxProvidertoCM"></a> 在 Configuration Manager 中启用新清单类：  
  必须首先导入用于定义自定义提供程序架构的托管对象格式 (MOF) 文件，Configuration Manager 才可以报告由 Linux 和 UNIX 计算机上的新提供程序报告的清单。  
 
  若要将自定义 MOF 文件导入 Configuration Manager，请参阅[如何在 System Center Configuration Manager 中配置硬件清单](../../../../core/clients/manage/inventory/configure-hardware-inventory.md)。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

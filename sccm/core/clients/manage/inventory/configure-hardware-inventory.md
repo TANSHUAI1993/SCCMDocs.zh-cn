@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 05c27c7aa36e0b4236867766dab36125c31467b3
 ms.openlocfilehash: deed112cca011b3b410c1197b7abf0f36a864f3c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 01/03/2017
 
 
 ---
@@ -48,9 +50,4 @@ ms.openlocfilehash: deed112cca011b3b410c1197b7abf0f36a864f3c
 7.  配置所需的其他[硬件清单客户端设置](../../../../core/clients/deploy/about-client-settings.md#hardware-inventory)。  
 
 当客户端设备下一次下载客户端策略时，会使用这些设置对它们进行配置。 要为单个客户端启动策略检索，请参阅 [How to manage clients in System Center Configuration Manager](../../../../core/clients/manage/manage-clients.md)。  
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

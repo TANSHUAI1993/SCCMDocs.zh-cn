@@ -12,9 +12,11 @@ ms.service:
 ms.technology:
 - configmgr-sum
 ms.assetid: a0767664-fd60-46a8-9da5-86cc431ce53c
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 4e44e2b8f6baf020c3b7742bafd607082ffacaa4
 ms.openlocfilehash: 02e30ba48f3564fa8a31f21793c145054e02e002
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 ---
 
@@ -58,9 +60,4 @@ ms.openlocfilehash: 02e30ba48f3564fa8a31f21793c145054e02e002
 6.  单击“软件更新组”  节点以显示软件更新组。  
 
 7.  选择软件更新组，并在“主页”  选项卡中的“更新”  组中单击“显示成员”  ，以显示软件更新组中所包括的软件更新列表。  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

@@ -14,10 +14,11 @@ ms.assetid: e318e705-20f2-417d-8cde-7dfe661b2fa7
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: ae008c91a7387ba76f2bfac13f8feb489a0cc558
 ms.openlocfilehash: d7caee47ca74064630e09c1bdb94187af256d4b4
-ms.lasthandoff: 04/21/2017
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="capabilities-in-technical-preview-1704-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1704 中的功能

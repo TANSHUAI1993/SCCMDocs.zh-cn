@@ -15,9 +15,11 @@ caps.latest.revision: 8
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
 ms.openlocfilehash: 584dad7d8b05a2da9f7a66b73028ae99ff1a594f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -29,13 +31,13 @@ ms.openlocfilehash: 584dad7d8b05a2da9f7a66b73028ae99ff1a594f
 
 采用以下部分内容，使用新版本的 Windows 来刷新现有计算机。  
 
-##  <a name="a-namebkmkplana-plan"></a><a name="BKMK_Plan"></a> 计划  
+##  <a name="BKMK_Plan"></a> 计划  
 
 -   **规划和实现基础结构要求**  
 
      在你可以部署操作系统前，有几个必须实施到位的基础结构要求，例如 Windows ADK、Windows 部署服务 (WDS) 以及支持的硬盘配置等。有关详细信息，请参阅[操作系统部署的基础架构要求](../plan-design/infrastructure-requirements-for-operating-system-deployment.md)。
 
-##  <a name="a-namebkmkconfigurea-configure"></a><a name="BKMK_Configure"></a> 配置  
+##  <a name="BKMK_Configure"></a> 配置  
 
 1.  **准备启动映像**  
 
@@ -59,7 +61,7 @@ ms.openlocfilehash: 584dad7d8b05a2da9f7a66b73028ae99ff1a594f
 
      使用任务序列以通过网络自动安装操作系统 使用[创建用于安装操作系统的任务序列](create-a-task-sequence-to-install-an-operating-system.md)中的步骤来创建部署操作系统的任务序列。 可能会有有关任务序列的其他注意事项，具体取决于你所选择的部署方法。  
 
-##  <a name="a-namebkmkdeploya-deploy"></a><a name="BKMK_Deploy"></a> 部署  
+##  <a name="BKMK_Deploy"></a> 部署  
 
 -   使用下列部署方法之一部署操作系统：  
 
@@ -78,9 +80,4 @@ ms.openlocfilehash: 584dad7d8b05a2da9f7a66b73028ae99ff1a594f
 -   **监视任务序列部署**  
 
      若要监视用于安装操作系统的任务序列部署，请参阅[监视操作系统部署](monitor-operating-system-deployments.md)。  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

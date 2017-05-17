@@ -16,9 +16,10 @@ caps.handback.revision: 0
 author: arob98
 ms.author: angrobe
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 0fa837c68eb073d2ceaf48c938137a94141a102e
 ms.openlocfilehash: bdb7f78480f73bc4559c4ff49ecb7b047581780a
+ms.contentlocale: zh-cn
 ms.lasthandoff: 01/24/2017
 
 

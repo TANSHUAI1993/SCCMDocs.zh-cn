@@ -15,10 +15,11 @@ caps.latest.revision: 9
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f72317cefab5ce8cad13b3120c3c93c856fa40b7
 ms.openlocfilehash: 4b6be888be2ad6c1f5e7c0be33d9830bb870114e
-ms.lasthandoff: 02/28/2017
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="select-discovery-methods-to-use-for-system-center-configuration-manager"></a>选择 System Center Configuration Manager 要使用的发现方法

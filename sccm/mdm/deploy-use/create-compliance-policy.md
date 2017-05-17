@@ -16,10 +16,11 @@ author: andredm7
 ms.author: andredm
 manager: angrobe
 robots: noindex
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 216d288aa7b7f2b98df86f59355d879366dcd44d
 ms.openlocfilehash: 4baa6e0fe009f5f7dc33f5ab4adb1ec5e5c5271b
-ms.lasthandoff: 04/26/2017
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 ---
 

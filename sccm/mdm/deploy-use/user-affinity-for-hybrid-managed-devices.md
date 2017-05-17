@@ -15,9 +15,10 @@ caps.latest.revision: 6
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
 ms.openlocfilehash: 74dcc0f4e680893db804956615248b7e1230d2b5
+ms.contentlocale: zh-cn
 ms.lasthandoff: 12/16/2016
 
 ---
@@ -27,7 +28,7 @@ ms.lasthandoff: 12/16/2016
 
 配置公司拥有的设备的配置文件时，管理员可以指定托管设备是否可以具有“用户关联”（用于标识设备的特定用户）。  
 
-##  <a name="a-namebkmkioscpa-managed-devices-with-user-affinity"></a><a name="BKMK_iOSCP"></a>具有用户关联的托管设备  
+##  <a name="BKMK_iOSCP"></a>具有用户关联的托管设备  
  配置了“用户关联”的设备可以安装和运行公司门户应用，以下载应用和管理设备。 用户收到设备后，必须完成一些其他步骤，以便完成设置助理并安装公司门户应用。  
 
 #### <a name="how-to-enroll-ios-devices-with-user-affinity"></a>如何注册具有用户关联的 iOS 设备  
@@ -52,6 +53,6 @@ ms.lasthandoff: 12/16/2016
 
 8.  注册现已完成。 现在你可以使用此设备的完整功能集。  
 
-##  <a name="a-namebkmknouaa-managed-devices-without-user-affinity"></a><a name="BKMK_noUA"></a>不具有用户关联的托管设备  
+##  <a name="BKMK_noUA"></a>不具有用户关联的托管设备  
  配置为“无用户关联”的设备不支持公司门户，因此不能安装该应用。 公司门户适用于具有企业凭据的用户，并且需要访问个性化企业资源（例如邮件）的权限。 注册为“无用户关联”的设备并不具有专用的用户登录。 展台、销售点 (POS) 或共享实用程序设备是注册为“无用户关联”的设备的典型用例。 如果需要用户关联，注册设备前请确保设备的注册配置文件选中“用户关联”。 若要更改设备的关联状态，必须停用并重新注册设备。
 

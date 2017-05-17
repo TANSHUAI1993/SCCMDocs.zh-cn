@@ -16,10 +16,11 @@ caps.handback.revision: 0
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 4eee9731a4a27328c47c0d15931cab28cf520a18
 ms.openlocfilehash: d1d2ec7c053d13ebaeb00d0dfeb126716b5f7ae5
-ms.lasthandoff: 04/18/2017
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="about-client-settings-in-system-center-configuration-manager"></a>关于 System Center Configuration Manager 中的客户端设置

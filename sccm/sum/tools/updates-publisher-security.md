@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 31819a1df4e63e1114682490a9b3c3b4e5c99cfa
 ms.openlocfilehash: c43af95a539a9284e4e49822b284783e02f9fa21
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/02/2017
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="manage-certificates-and-security-for-updates-publisher"></a>管理 Updates Publisher 中的证书和安全性

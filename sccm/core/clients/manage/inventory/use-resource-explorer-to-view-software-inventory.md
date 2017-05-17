@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 9206b82eca02877c30eebf146d42bcca7290eb42
 ms.openlocfilehash: 6189726bbcade8229e0b2e929ebedeefdbf266a4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 12/30/2016
 
 
 ---
@@ -53,9 +55,4 @@ ms.openlocfilehash: 6189726bbcade8229e0b2e929ebedeefdbf266a4
 
 4.  可以右键单击“资源浏览器”窗口右窗格中的任意项，然后选择“属性”，以可读性更强的格式查看收集的清单信息。  
  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 

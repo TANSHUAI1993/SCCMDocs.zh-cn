@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 37e4f27fcea0bbdd39c9fd3ab38aa46e3059f73a
 ms.openlocfilehash: d9dff97126c34a726677de60dd7647370c553b6e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -26,7 +28,7 @@ ms.openlocfilehash: d9dff97126c34a726677de60dd7647370c553b6e
 # <a name="manage-network-bandwidth-for-content"></a>管理用于内容的网络带宽
 为帮助管理用于 System Center Configuration Manager 内容管理过程的网络带宽，可以使用内置控件进行计划和限制。 也可以使用预留内容。 以下几部分详细说明了这些选项。
 
-##  <a name="a-namebkmkplanningforthrottlingascheduling-and-throttling"></a><a name="BKMK_PlanningForThrottling"></a>计划和限制  
+##  <a name="BKMK_PlanningForThrottling"></a>计划和限制  
 
  创建包、更改内容的源路径或者更新分发点上的内容时，文件会从源路径复制到站点服务器上的内容库中。 然后，会从站点服务器上的内容库中将内容复制到分发点上的内容库中。 如果已更新内容源文件并分发源文件，则 Configuration Manager 仅检索新文件或更新的文件，然后将其发送到分发点。
 
@@ -41,7 +43,7 @@ ms.openlocfilehash: d9dff97126c34a726677de60dd7647370c553b6e
 
 有关详细信息，请参阅[为 System Center Configuration Manager 安装和配置分发点](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points)。  
 
-##  <a name="a-namebkmkprestagingcontentaprestaged-content"></a><a name="BKMK_PrestagingContent"></a>预安排内容  
+##  <a name="BKMK_PrestagingContent"></a>预安排内容  
  可以预留内容，以便在分发内容之前将内容文件添加到站点服务器或分发点上的内容库。 由于内容文件已在内容库中，因此，当分发内容时，不会通过网络传输内容文件。 你可以预留应用程序和包类型的内容文件。  
 
 在 Configuration Manager 控制台中，选择想要预留的内容，然后使用“创建预留内容文件向导”。 这会创建压缩的预留内容文件，该文件包含内容的文件和关联元数据。 然后，你可以在站点服务器或分发点中手动导入内容。 请注意以下几点：  
@@ -58,7 +60,7 @@ ms.openlocfilehash: d9dff97126c34a726677de60dd7647370c553b6e
 
 -   对包中的内容始终使用标准内容分发流程。  
 
-###  <a name="a-namebkmkdeterminetoprestagecontentadetermine-whether-to-prestage-content"></a><a name="BKMK_DetermineToPrestageContent"></a>确定是否预留内容  
+###  <a name="BKMK_DetermineToPrestageContent"></a>确定是否预留内容  
  考虑在下列情况下为应用程序和包预留内容：  
 
 -   **解决从站点服务器到分发点的网络带宽限制问题。** 如果计划和限制仍不足以解决带宽问题，请考虑在分发点上预留内容。 每个分发点都具有“为预留内容启用此分发点”设置，可在分发点属性中选择此设置。 如果你启用此选项，则会将分发点标识为预留的分发点，并且你可以选择如何按包来管理内容。  
@@ -75,9 +77,4 @@ ms.openlocfilehash: d9dff97126c34a726677de60dd7647370c553b6e
     >  前面的选项适用于单个包，并且仅在分发点被标识为预留时使用。 未被标识为预留的分发点将忽略这些设置。 在此情况下，内容始终通过网络从站点服务器分发到分发点。  
 
 -   **在站点服务器上还原内容库。** 当站点服务器失败时，关于内容库中所包含的包和应用程序的信息会在还原过程中还原到站点数据库，但在此过程中不会还原内容库文件。 如果没有用于还原内容库的文件系统备份，可以从包含必须具有的包和应用程序的其他站点来创建预留的内容文件。 然后在还原的站点服务器上提取预留的内容文件。 有关站点服务器备份和恢复的详细信息，请参阅 [System Center Configuration Manager 的备份和恢复](/sccm/protect/understand/backup-and-recovery)。  
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

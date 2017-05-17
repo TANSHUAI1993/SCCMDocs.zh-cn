@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 05c27c7aa36e0b4236867766dab36125c31467b3
 ms.openlocfilehash: c0b4fcda6599ed91fe2393b97bdcec6cdfba9b7c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 01/03/2017
 
 
 ---
@@ -70,9 +72,4 @@ ms.openlocfilehash: c0b4fcda6599ed91fe2393b97bdcec6cdfba9b7c
 7.  从“将此计划应用到”下拉列表中进行选择。  
 
 8.  选择“确定”，然后关闭“&lt;集合名称\>属性”对话框。  
-
-
-
-<!--HONumber=Jan17_HO1-->
-
 

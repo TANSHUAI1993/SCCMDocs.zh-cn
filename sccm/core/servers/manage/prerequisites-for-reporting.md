@@ -16,10 +16,11 @@ caps.handback.revision: 0
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 70034213442f4c3d5a28ab65c2ceb51aa64320ad
 ms.openlocfilehash: 2e624eb2ea061a4eb7d92365410fada335640224
-ms.lasthandoff: 03/31/2017
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 
 ---

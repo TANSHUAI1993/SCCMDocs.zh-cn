@@ -15,10 +15,11 @@ caps.latest.revision: 5
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: dda2f4c01078fbbd174cbcb30357554c24f6abeb
 ms.openlocfilehash: 7659d5789b8ce4e9e0b585a331c8f68869c9492d
-ms.lasthandoff: 04/17/2017
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="monitor-content-you-have-distributed-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 监视分发的内容

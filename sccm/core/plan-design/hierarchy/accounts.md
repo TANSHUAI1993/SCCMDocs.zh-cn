@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 72263ec5e7104924a1ca46dc2000be9f8568599f
 ms.openlocfilehash: a776667cc9f24bd4a468afea76e466c34ce66864
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -344,9 +346,4 @@ Configuration Manager 使用此组来授予查看软件清单所收集的文件�
 >  要限制此帐户的作用域。 例如，为每个任务序列创建不同的任务序列运行方式帐户，以便在某个帐户受到侵害时，只会损害该帐户能够访问的客户端计算机。  
 >   
 >  如果命令行需要计算机上的管理权限，请考虑在所有将运行任务序列的计算机上为任务序列运行方式帐户单独创建一个本地管理员帐户。 不再需要该帐户时请立即将其删除。  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

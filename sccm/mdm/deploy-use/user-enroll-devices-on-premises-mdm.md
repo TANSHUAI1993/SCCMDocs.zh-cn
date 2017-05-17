@@ -16,10 +16,11 @@ caps.handback.revision: 0
 author: Mtillman
 ms.author: mtillman
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 507bad02c6e028f09a8b0c8a566ac55f7c3942a5
 ms.openlocfilehash: 8c7438c2cc0bc66654eb3e74de10553df53181d9
-ms.lasthandoff: 03/22/2017
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 
 ---

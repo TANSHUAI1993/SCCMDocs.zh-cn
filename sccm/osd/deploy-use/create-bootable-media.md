@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
 ms.openlocfilehash: 9032698fa12bf453041ea06bf330d3b4687c2a97
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -32,7 +34,7 @@ Configuration Manager 中的可启动媒体包含启动映像、可选的预启�
 
 -   [替换现有计算机和传输设置](replace-an-existing-computer-and-transfer-settings.md)  
 
-##  <a name="a-namebkmkcreatebootablemediaa-create-bootable-media"></a><a name="BKMK_CreateBootableMedia"></a> 创建可启动媒体  
+##  <a name="BKMK_CreateBootableMedia"></a> 创建可启动媒体  
  当你启动至可启动媒体时，目标计算机会启动、连接到网络，并从网络中检索指定任务序列、操作系统映像和任何其他必需的内容。 由于任务序列不在媒体上，因此，你无需重新创建媒体就能更改任务序列或内容。 可启动媒体上的包并未加密。 必须采取适当的安全措施（例如向媒体添加密码），以确保未经授权的用户不能访问包内容。  
 
  在使用“创建任务序列媒体向导”创建可启动媒体之前，请确保满足以下所有条件：  
@@ -155,9 +157,4 @@ Configuration Manager 中的可启动媒体包含启动映像、可选的预启�
 
 ## <a name="next-steps"></a>后续步骤  
 [使用可启动媒体通过网络部署 Windows](use-bootable-media-to-deploy-windows-over-the-network.md)  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

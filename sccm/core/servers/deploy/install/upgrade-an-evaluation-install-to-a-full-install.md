@@ -15,9 +15,11 @@ caps.latest.revision: 3
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: d1bf0fdc3e735eb31492476fd46f008620150c0b
 ms.openlocfilehash: 8f951805c2fc25059965c15c94934c0f8546735c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="upgrade-an-evaluation-installation-of-system-center-configuration-manager-to-a-full-installation"></a>将 System Center Configuration Manager 的评估版安装升级到完整安装
@@ -52,9 +54,4 @@ ms.openlocfilehash: 8f951805c2fc25059965c15c94934c0f8546735c
 
     > [!NOTE]  
     >  与升级的站点保持连接的 Configuration Manager 控制台的标题栏可能会指明站点仍为评估版本，直到将控制台重新连接到该站点为止。  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

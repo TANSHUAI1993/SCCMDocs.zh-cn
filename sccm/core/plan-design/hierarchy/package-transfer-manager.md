@@ -15,9 +15,11 @@ caps.latest.revision: 3
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 099345d59891841a336cbada896ec349751fecd3
 ms.openlocfilehash: 54e54409a1792c7e28620a5e3cea3e8d8695c7d4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="package-transfer-manager-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的包传输管理器
@@ -87,9 +89,4 @@ ms.openlocfilehash: 54e54409a1792c7e28620a5e3cea3e8d8695c7d4
     -   **标准分发点：**当包传输管理器将文件传输到每个指定的远程分发点后，它将验证分发点上内容的哈希。 然后通知分发管理器分发已完成。  
 
     -   **请求分发点：**在请求分发点完成内容下载后，该分发点会验证内容的哈希。 然后将状态消息提交至站点管理点以指明成功。 如果 60 分钟后未收到此状态，会再次唤醒包传输管理器。 它会检查请求分发点以确认请求分发点是否已下载内容。 如果内容下载正在进行，则包传输管理器将再休眠 60 分钟，之后再次与请求分发点核对。 此循环将持续，直至请求分发点完成内容传输。  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

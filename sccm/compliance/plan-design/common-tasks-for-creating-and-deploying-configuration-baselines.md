@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 991eff171dce95590a7f050e0d3b07f98c0224b3
 ms.openlocfilehash: 5682cacb43af5bf9248446f1c35b08f137bdae9d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -90,9 +92,4 @@ ms.openlocfilehash: 5682cacb43af5bf9248446f1c35b08f137bdae9d
  如果想要快速了解此部署的合规性统计信息，请在“监视”  工作区中，单击“部署” 。 在屏幕底部，可看到“合规性统计信息”  图表。  
 
  有关如何监视配置基线的详细信息，请参阅[监视符合性设置](../../compliance/deploy-use/monitor-compliance-settings.md)  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

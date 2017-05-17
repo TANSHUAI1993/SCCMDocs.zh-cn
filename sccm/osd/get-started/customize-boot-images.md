@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
 ms.openlocfilehash: ab2ecb64c9c80b4effed79ba08769c99473db0c4
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -300,9 +302,4 @@ Configuration Manager 的每个版本都支持特定版本的 Windows 评估和�
     3.  单击在步骤 3 中标识的启动映像。  
 
     4.  在“主页”  选项卡上的“部署”  组中，单击“更新分发点” 。  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

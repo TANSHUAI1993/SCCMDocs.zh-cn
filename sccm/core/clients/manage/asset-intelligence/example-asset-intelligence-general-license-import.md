@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: 6ee39d311108253ece1c9d60c25ac06017867c1f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -40,9 +42,4 @@ ms.openlocfilehash: 6ee39d311108253ece1c9d60c25ac06017867c1f
 |软件标题 8|软件发布者|1.08|英语|1|采购编号|经销商名称|10/10/2010|0|10/10/2012|注释|  
 |软件标题 9|软件发布者|1.09|英语|1|采购编号|经销商名称|10/10/2010|0|10/10/2012|注释|  
 |软件标题 10|软件发布者|1.10|英语|1|采购编号|经销商名称|10/10/2010|0|10/10/2012|注释|  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

@@ -15,9 +15,11 @@ caps.latest.revision: 8
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 991eff171dce95590a7f050e0d3b07f98c0224b3
 ms.openlocfilehash: 2012ab5e55da8d707fd668e0163b42fe7d56c72f
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -110,9 +112,4 @@ ms.openlocfilehash: 2012ab5e55da8d707fd668e0163b42fe7d56c72f
 6.  完成向导以创建配置项目。  
 
  现在可以使用[用于创建和部署配置基线的常见任务](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md)主题中的信息将创建的配置部署到设备。  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

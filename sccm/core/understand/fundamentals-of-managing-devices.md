@@ -15,9 +15,10 @@ caps.latest.revision: 6
 author: arob98
 ms.author: angrobe
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: a71e37060937f40bcb1bdb1c6165b7799fc72675
 ms.openlocfilehash: a9847e67ab1935fb66824945637ff683c006bdbe
+ms.contentlocale: zh-cn
 ms.lasthandoff: 12/30/2016
 
 

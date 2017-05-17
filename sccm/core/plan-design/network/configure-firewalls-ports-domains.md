@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: bd20983eeca47bdd63e0385440e6c8d64901b902
 ms.openlocfilehash: 4a2a8f96a900a2c4959ae3ff59232771ece95991
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -34,9 +36,4 @@ ms.openlocfilehash: 4a2a8f96a900a2c4959ae3ff59232771ece95991
 |站点服务器和客户端可能需要使用的**域和服务**。|Configuration Manager 功能可能需要站点服务器和客户端有权访问 Internet 上的特定服务和域，如 Windowsudpate.microsoft.com 或 Microsoft Intune 服务。<br /><br /> 如果将使用 Microsoft Intune 管理移动设备，那么还必须设置对 [Intune 所需的端口和域](https://docs.microsoft.com/en-us/intune/get-started/network-infrastructure-requirements-for-microsoft-intune)的访问权限。|  
 |用于站点系统服务器和用于客户端通信的**代理服务器** 。 你可以对不同的站点系统服务器和客户端指定单独的代理服务器。|因为这些配置是在安装站点系统角色或客户端时所做的，因此只需注意代理服务器配置，以供将来配置站点系统角色和客户端时参考。<br /><br /> 如果不能确定你的部署是否将需要使用代理服务器，请查看 [System Center Configuration Manager 中的代理服务器支持](../../../core/plan-design/network/proxy-server-support.md)以了解可以使用代理服务器的站点系统角色和客户端操作的相关信息。|   
 |  
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

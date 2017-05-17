@@ -15,9 +15,11 @@ caps.latest.revision: 4
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: d31fecdb71b498864df2bce7403a4290ea9700ae
 ms.openlocfilehash: 0fa9f431c00476d71b2b08f92f914d76636d1a27
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="the-content-library-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的内容库
@@ -64,9 +66,4 @@ Configuration Manager 复制内容文件时，会将文件复制到优先级最�
 -   若要防止在特定驱动器上安装内容库，请在创建内容库前先创建一个名为 **no_sms_on_drive.sms** 的空文件，然后将该文件复制到驱动器的根文件夹。  
 
 -   创建内容库之后，请使用 System Center 2012 R2 Configuration Manager 工具套件中的**内容库传输工具**来管理内容库的位置。 可以从 [Microsoft Download Center（Microsoft 下载中心）](http://go.microsoft.com/fwlink/?LinkId=279566)下载此工具包。  
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

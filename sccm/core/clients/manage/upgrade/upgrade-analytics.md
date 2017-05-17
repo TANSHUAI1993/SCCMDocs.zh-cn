@@ -12,10 +12,11 @@ ms.service:
 ms.technology:
 - configmgr-client
 ms.assetid: 68407ab8-c205-44ed-9deb-ff5714451624
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: dcbcd57b95f304f007e92ebe2b9aeefb4b579662
 ms.openlocfilehash: 986d0446209f6e7eac1b681066d1b2e2305e1975
-ms.lasthandoff: 03/09/2017
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 
 ---

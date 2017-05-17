@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
 ms.openlocfilehash: 87ab9925717a307cbda3cea1f2e470ae012fa067
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -28,10 +30,10 @@ ms.openlocfilehash: 87ab9925717a307cbda3cea1f2e470ae012fa067
 
 System Center Configuration Manager 提供了驱动程序目录，可用于管理 Configuration Manager 环境中的 Windows 设备驱动程序。 可以使用此驱动程序目录将设备驱动程序导入到 Configuration Manager，将它们按包分组，以及将这些包分发到分发点，以便在部署操作系统时可以访问这些包。 当在目标计算机上安装完整的操作系统时，以及在使用启动映像来安装 Windows PE 时，可以使用设备驱动程序。 Windows 设备驱动程序由安装信息文件 (INF) 文件和支持设备所需的任何其他文件组成。 在部署操作系统时，Configuration Manager 将从其 INF 文件中获得设备的硬件和平台信息。 使用以下方法来管理 Configuration Manager 环境中的驱动程序。
 
-##  <a name="a-namebkmkdrivercategoriesa-device-driver-categories"></a><a name="BKMK_DriverCategories"></a> 设备驱动程序类别  
+##  <a name="BKMK_DriverCategories"></a> 设备驱动程序类别  
  在导入设备驱动程序时，可以将设备驱动程序分配到某个类别。 借助设备驱动程序类别，可以在驱动程序目录中将要使用的相似设备驱动程序组合在一起。 例如，可以将所有网络适配器设备驱动程序分配到特定的类别。 然后，在创建包含 [Auto Apply Drivers](../understand/task-sequence-steps.md#BKMK_AutoApplyDrivers) 步骤的任务序列时，可以指定设备驱动程序的特定类别。 Configuration Manager 随后会扫描硬件，从该类别中选择适用的驱动程序以暂存在系统上，以供 Windows 安装程序使用。  
 
-##  <a name="a-namebkmkmanagingdriverpackagesa-driver-packages"></a><a name="BKMK_ManagingDriverPackages"></a> 驱动程序包  
+##  <a name="BKMK_ManagingDriverPackages"></a> 驱动程序包  
  你可以将类似的设备驱动程序分组到包中，以帮助简化操作系统部署。 例如，你可以决定为你网络中的每个计算机制造商创建一个驱动程序包。 在将驱动程序直接导入到“驱动程序包”  节点中的驱动程序目录时，可以创建一个驱动程序包。 在创建驱动程序包之后，必须将其分发到 Configuration Manager 客户端计算机可以从中安装必需的驱动程序的分发点。 请考虑下列各项：  
 
 -   在创建驱动程序包时，包的源位置必须指向其他驱动程序包并未使用的空的网络共享，而且 SMS 提供程序必须具有该位置的读取和写入权限。  
@@ -42,7 +44,7 @@ System Center Configuration Manager 提供了驱动程序目录，可用于管�
 
  使用下列部分来创建和管理驱动程序包。  
 
-###  <a name="a-namecreatingdriverpackagesa-create-a-driver-package"></a><a name="CreatingDriverPackages"></a> 创建驱动程序包  
+###  <a name="CreatingDriverPackages"></a> 创建驱动程序包  
  使用下列过程来创建新的驱动程序包。  
 
 > [!IMPORTANT]  
@@ -74,7 +76,7 @@ System Center Configuration Manager 提供了驱动程序目录，可用于管�
 
  如果“驱动程序包”  节点包含若干包，你可以向节点中添加文件夹将包分隔为逻辑组。  
 
-###  <a name="a-namebkmkpackageactionsa-additional-actions-for-driver-packages"></a><a name="BKMK_PackageActions"></a> 驱动程序包的其他操作  
+###  <a name="BKMK_PackageActions"></a> 驱动程序包的其他操作  
  如果从“驱动程序包”  节点中选择一个或多个驱动程序包，你可以执行其他操作来管理驱动程序包。 这些操作包括下列各项：  
 
 |操作|说明|  
@@ -87,10 +89,10 @@ System Center Configuration Manager 提供了驱动程序目录，可用于管�
 |**更新分发点**|更新存储包的所有分发点上的设备驱动程序包。 此操作只会复制在上次分发点之后已更改的内容。|  
 |**Properties**|打开“属性”  对话框，你可以在其中查看和更改设备驱动程序的内容及属性。 例如，可以更改设备驱动程序的名称和描述，启用设备驱动程序，以及指定设备驱动程序可以在哪些平台上运行。|  
 
-##  <a name="a-namebkmkdevicedriversa-device-drivers"></a><a name="BKMK_DeviceDrivers"></a> 设备驱动程序  
+##  <a name="BKMK_DeviceDrivers"></a> 设备驱动程序  
  你可以在目标计算机上安装设备驱动程序，而不将它们包含在正在部署的操作系统映像中。 Configuration Manager 提供包含对导入 Configuration Manager 的所有设备驱动程序的引用的驱动程序目录。 此驱动程序目录位于“软件库”  工作区中并且包含以下两个节点：“驱动程序”  和“驱动程序包” 。 “驱动程序”  节点列出了已导入到驱动程序目录的所有驱动程序。 使用此节点发现关于每个导入的驱动程序的详细信息，修改驱动程序包中或启动映像包中的驱动程序，启用或禁用驱动程序，以及执行其他操作。  
 
-###  <a name="a-namebkmkimportdriversa-import-device-drivers-into-the-driver-catalog"></a><a name="BKMK_ImportDrivers"></a> 将设备驱动程序导入驱动程序目录  
+###  <a name="BKMK_ImportDrivers"></a> 将设备驱动程序导入驱动程序目录  
  必须将设备驱动程序导入到驱动程序目录，然后才能在部署操作系统时使用它们。 为了更好地管理设备驱动程序，请仅导入你计划作为操作系统部署的一部分安装的那些设备驱动程序。 但是，也可以在驱动程序目录中存储设备驱动程序的多个版本，以便在网络上的硬件设备要求改变时轻松升级现有的设备驱动程序。  
 
  在设备驱动程序的导入过程中， Configuration Manager 将读取提供程序、类、版本、签名、支持的硬件以及与设备关联的支持的平台信息。 默认情况下，驱动程序按照它支持的第一个硬件设备命名；不过，你可以稍后重命名设备驱动程序。 支持的平台列表以驱动程序的 INF 文件中的信息为基础。 由于此信息的准确性可能有所不同，因此请在将支持的设备驱动程序导入驱动程序目录后对其进行手动验证。  
@@ -166,7 +168,7 @@ System Center Configuration Manager 提供了驱动程序目录，可用于管�
 
 8.  完成向导。  
 
-###  <a name="a-namebkmkmodifydriverpackagea-manage-device-drivers-in-a-driver-package"></a><a name="BKMK_ModifyDriverPackage"></a> 管理驱动程序包中的设备驱动程序  
+###  <a name="BKMK_ModifyDriverPackage"></a> 管理驱动程序包中的设备驱动程序  
  使用下列过程来修改驱动程序包和启动映像。 要添加或删除设备驱动程序，请在“驱动程序”  节点中找到驱动程序，然后编辑所选驱动程序与之关联的包或启动映像。  
 
 #### <a name="to-modify-the-device-drivers-in-a-driver-package"></a>若要更改驱动程序包中的设备驱动程序  
@@ -187,7 +189,7 @@ System Center Configuration Manager 提供了驱动程序目录，可用于管�
 
      单击" **确定**"。  
 
-###  <a name="a-namebkmkmanagedriversbootimagea-manage-device-drivers-in-a-boot-image"></a><a name="BKMK_ManageDriversBootImage"></a> 管理启动映像中的设备驱动程序  
+###  <a name="BKMK_ManageDriversBootImage"></a> 管理启动映像中的设备驱动程序  
  可以将已导入到驱动程序目录的 Windows 设备驱动程序添加到启动映像。 在将设备驱动程序添加到启动映像时，请使用以下准则：  
 
 -   仅将大容量存储和网络适配器设备驱动程序添加到启动映像，因为通常并不需要其他类型的驱动程序。 不需要的驱动程序会不必要地增加启动映像的大小。  
@@ -228,7 +230,7 @@ System Center Configuration Manager 提供了驱动程序目录，可用于管�
 
 7.  单击" **确定**"。  
 
-###  <a name="a-namebkmkdriveractionsa-additional-actions-for-device-drivers"></a><a name="BKMK_DriverActions"></a> 设备驱动程序的其他操作  
+###  <a name="BKMK_DriverActions"></a> 设备驱动程序的其他操作  
  如果从“驱动程序”  节点中选择一个或多个设备驱动程序，你可以执行其他操作来管理设备驱动程序。 这些操作包括下列各项：  
 
 |操作|说明|  
@@ -240,7 +242,7 @@ System Center Configuration Manager 提供了驱动程序目录，可用于管�
 |**移动**|将设备驱动程序移动到“驱动程序”  节点中的另一个文件夹。|  
 |**Properties**|打开“属性”  对话框，你可以在其中查看和更改设备驱动程序的属性。 例如，可以更改设备驱动程序的名称和描述，启用设备驱动程序，以及指定设备驱动程序可以在哪些平台上运行。|  
 
-##  <a name="a-namebkmktsdriversa-use-task-sequences-to-install-device-drivers"></a><a name="BKMK_TSDrivers"></a> 使用任务序列安装设备驱动程序  
+##  <a name="BKMK_TSDrivers"></a> 使用任务序列安装设备驱动程序  
  任务序列可用于自动执行部署操作系统的过程。 任务序列中的每个步骤都能执行特定的操作，例如安装设备驱动程序。 在部署操作系统时，可以使用以下两个任务序列步骤来安装设备驱动程序：  
 
 -   [Auto Apply Drivers](../understand/task-sequence-steps.md#BKMK_AutoApplyDrivers)：此步骤能让你自动匹配和安装作为操作系统部署一部分的设备驱动程序。 可以将此任务序列步骤配置为对于检测到的每个硬件设备仅安装最匹配的驱动程序，或者指定此任务序列步骤为检测到的每个硬件设备安装所有兼容的驱动程序，然后让 Windows 安装程序选择最佳的驱动程序。 此外，可以指定设备驱动程序的类别，以限制可用于此步骤的驱动程序。  
@@ -249,7 +251,7 @@ System Center Configuration Manager 提供了驱动程序目录，可用于管�
 
  在使用这两个任务序列步骤时，还可以指定如何在部署操作系统的计算机上安装设备驱动程序。 有关详细信息，请参阅[管理任务序列以自动执行任务](../deploy-use/manage-task-sequences-to-automate-tasks.md)。  
 
-##  <a name="a-namebkmkinstallingdevicediriverstsa-use-task-sequences-to-install-device-drivers-on-computers"></a><a name="BKMK_InstallingDeviceDiriversTS"></a> 使用任务序列在计算机上安装设备驱动程序  
+##  <a name="BKMK_InstallingDeviceDiriversTS"></a> 使用任务序列在计算机上安装设备驱动程序  
  使用下列过程在操作系统部署期间安装设备驱动程序。  
 
 #### <a name="use-a-task-sequence-to-install-device-drivers"></a>使用任务序列安装设备驱动程序  
@@ -273,11 +275,6 @@ System Center Configuration Manager 提供了驱动程序目录，可用于管�
 
  有关创建用于安装操作系统的任务序列的详细信息，请参阅[创建用于安装操作系统的任务序列](../deploy-use/create-a-task-sequence-to-install-an-operating-system.md)。  
 
-##  <a name="a-namebkmkdriverreportsa-driver-management-reports"></a><a name="BKMK_DriverReports"></a> 驱动程序管理报表  
+##  <a name="BKMK_DriverReports"></a> 驱动程序管理报表  
  通过使用“驱动程序管理”  报表类别中的几个报表，可以确定有关驱动程序目录中的设备驱动程序的常规信息。 有关报表的详细信息，请参阅[报表](../../core/servers/manage/reporting.md)。
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

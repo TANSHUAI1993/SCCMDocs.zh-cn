@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: dd102603356864add4084c6881c39bebcbd635f2
 ms.openlocfilehash: 9b97dedb5d2be0bd2e47260033e6e4361467dc4e
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -34,7 +36,7 @@ ms.openlocfilehash: 9b97dedb5d2be0bd2e47260033e6e4361467dc4e
 
 本文中的信息概述了支持 System Center Configuration Manager 站点系统所需的 Windows 配置类型。 有关特定站点系统角色配置的详细信息，请参阅[站点和站点系统先决条件](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)。
 
-##  <a name="a-namebkmkwinfeaturesa-windows-features-and-roles"></a><a name="BKMK_WinFeatures"></a>Windows 功能和角色  
+##  <a name="BKMK_WinFeatures"></a>Windows 功能和角色  
  在计算机上设置 Windows 功能和角色时，可能需要重新启动计算机以完成该配置。 因此，一个不错的做法是，安装 Configuration Manager 站点或站点系统服务器之前，先确定要承载特定站点系统角色的计算机。
 ### <a name="features"></a>功能  
  以下 Windows 功能是某些站点系统服务器必需的，且应在该计算机上安装站点系统角色之前进行设置。  
@@ -98,7 +100,7 @@ ms.openlocfilehash: 9b97dedb5d2be0bd2e47260033e6e4361467dc4e
 -   **Windows 部署服务**：此角色用于操作系统部署。  
 -   **Windows Server 更新服务**：部署软件更新时将需要此角色。  
 
-##  <a name="a-namebkmkiisfilteringa-iis-request-filtering-for-distribution-points"></a><a name="BKMK_IISFiltering"></a>分发点的 IIS 请求筛选  
+##  <a name="BKMK_IISFiltering"></a>分发点的 IIS 请求筛选  
  默认情况下，IIS 使用请求筛选来阻止 HTTP 或 HTTPS 通信访问多个文件扩展名和文件夹位置。 在分发点上，这会阻止客户端下载含有被阻止的扩展名或文件夹位置的包。  
 
  如果包源文件含有在 IIS 中被请求筛选配置阻止的扩展名，则必须将请求筛选设置为不阻止这些扩展名。 这可通过在你的分发点计算机上的 IIS 管理器中 [编辑请求筛选功能](https://technet.microsoft.com/library/hh831621.aspx) 来完成。  
@@ -140,9 +142,4 @@ ms.openlocfilehash: 9b97dedb5d2be0bd2e47260033e6e4361467dc4e
  - PROPFIND
 
 有关如何配置请求筛选的信息，请参阅 TechNet 上的[IIS 中的配置请求筛选](https://technet.microsoft.com/library/hh831621.aspx#Verbs)或适用于托管管理点的 Windows Server 版本的类似文档。
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

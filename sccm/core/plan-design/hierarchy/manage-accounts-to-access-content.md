@@ -15,9 +15,11 @@ caps.latest.revision: 4
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: e592a732259147ee71d404a68982c28e5138e243
 ms.openlocfilehash: 0e982d08d54af39b13f553fc531a200f921e94a6
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="manage-accounts-to-access-content-in-system-center-configuration-manager"></a>管理帐户以访问 System Center Configuration Manager 中的内容
@@ -34,7 +36,7 @@ ms.openlocfilehash: 0e982d08d54af39b13f553fc531a200f921e94a6
 
 -   **多播连接帐户**。 用于操作系统部署。  
 
-##  <a name="a-namebkmknaaa-network-access-account"></a><a name="bkmk_NAA"></a>网络访问帐户  
+##  <a name="bkmk_NAA"></a>网络访问帐户  
  客户端计算机无法使用其本地计算机帐户访问分发点上的内容时，它们则会使用网络访问帐户。 例如，这适用于来自不受信任的域中的工作组客户端和计算机。 当安装操作系统的计算机在域上还没有计算机帐户时，也可能会在操作系统部署过程中使用此帐户。  
 
 -   客户端仅使用网络访问帐户来访问网络上的资源。  
@@ -66,7 +68,7 @@ ms.openlocfilehash: 0e982d08d54af39b13f553fc531a200f921e94a6
 
 3.  选择“网络访问帐户”选项卡。 设置一个或多个帐户，然后选择“确定”。  
 
-##  <a name="a-namebkmkpaaa-package-access-accounts"></a><a name="bkmk_Paa"></a>包访问帐户  
+##  <a name="bkmk_Paa"></a>包访问帐户  
  可使用包访问帐户设置 NTFS 文件系统权限，以指定可以访问分发点上的包内容的用户和用户组。 默认情况下，Configuration Manager 仅向通用的“用户”和“管理员”帐户授予访问权限。 但是，你可以通过使用其他的 Windows 帐户或组来控制客户端计算机的访问权限。 移动设备不使用包访问帐户，因为这些设备始终会匿名检索包内容。  
 
  默认情况下，当 Configuration Manager 将包中的内容文件复制到分发点时，它会授予对本地“用户”组的“读取”权限以及对本地“管理”组的“完全控制”权限。 所需的实际权限取决于包。 如果你的客户端在工作组或不受信任的林中，则那些客户端会使用网络访问帐户访问包内容。 请使用定义的包访问帐户来确保网络访问帐户具有对包的权限。  
@@ -102,7 +104,7 @@ ms.openlocfilehash: 0e982d08d54af39b13f553fc531a200f921e94a6
     > [!NOTE]  
     >  为帐户添加用户名且 Configuration Manager 发现具有该名称的本地用户帐户和域用户帐户时，Configuration Manager 将为域用户帐户设置访问权限。  
 
-##  <a name="a-namebkmkmultia-multicast-connection-account"></a><a name="bkmk_multi"></a>多播连接帐户  
+##  <a name="bkmk_multi"></a>多播连接帐户  
  为多播设置的分发点使用多播连接帐户从站点数据库中读取信息。  
 
 -   指定为多播设置 Configuration Manager 数据库连接时要使用的帐户。  
@@ -119,9 +121,4 @@ ms.openlocfilehash: 0e982d08d54af39b13f553fc531a200f921e94a6
 
 > [!IMPORTANT]  
 >  不要授予此帐户交互式登录权限。  
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

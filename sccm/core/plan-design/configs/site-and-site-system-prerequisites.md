@@ -15,9 +15,11 @@ caps.latest.revision: 5
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 42549b98dd7f418cc3f4543198aaeb90ea8a3efd
 ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="site-and-site-system-prerequisites-for-system-center-configuration-manager"></a>System Center Configuration Manager 的站点和站点系统先决条件
@@ -33,7 +35,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 > [!NOTE]  
 >  2016 年 1 月，对 .NET Framework 4.0、4.5 和 4.5.1 的支持过期。 有关详细信息，请参阅 support.microsoft.com 处的 [Microsoft .NET Framework 支持生命周期策略常见问题解答](https://support.microsoft.com/gp/framework_faq?WT.mc_id=azurebg_email_Trans_943_NET452_Update)。  
 
-## <a name="a-namebkmkgeneralprerewqa-general-site-server-requirements-and-limitations"></a><a name="bkmk_generalprerewq"></a>常规站点服务器要求和限制
+## <a name="bkmk_generalprerewq"></a>常规站点服务器要求和限制
 **以下内容适用于所有站点系统服务器：**
 
 -   每个站点系统服务器必须使用 64 位操作系统。 唯一的例外是分发点站点系统角色，它可以安装在某些 32 位操作系统上。  
@@ -54,8 +56,8 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   不支持更改任意 Configuration Manager 服务的启动类型或“登录身份”设置。 这样做可能会阻止关键服务正常运行。  
 
-##  <a name="a-namebkmk2012prereqa-prerequisites-for-windows-server-2012-and-later-operating-systems"></a><a name="bkmk_2012Prereq"></a> Windows Server 2012 和更高版本操作系统的先决条件  
-###  <a name="a-namebkmk2012sspreqa-site-server-central-administration-site-and-primary-site"></a><a name="bkmk_2012sspreq"></a>站点服务器：管理中心站点和主站点  
+##  <a name="bkmk_2012Prereq"></a> Windows Server 2012 和更高版本操作系统的先决条件  
+###  <a name="bkmk_2012sspreq"></a>站点服务器：管理中心站点和主站点  
   **Windows Server 角色和功能：**  
 
 -   .NET Framework 3.5 SP1（或更高版本）  
@@ -78,7 +80,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   管理中心站点和主站点需要适用的可再发行文件的 x86 和 x64 版本。  
 
-###  <a name="a-namebkmk2012secpreqa-site-server-secondary-site"></a><a name="bkmk_2012secpreq"></a>站点服务器：辅助站点  
+###  <a name="bkmk_2012secpreq"></a>站点服务器：辅助站点  
 **Windows Server 角色和功能：**  
 
 -   .NET Framework 3.5 SP1（或更高版本）  
@@ -99,7 +101,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   请确保辅助站点服务器满足这些站点系统角色的先决条件。  
 
-###  <a name="a-namebkmk2012dbpreqa-database-server"></a><a name="bkmk_2012dbpreq"></a>数据库服务器  
+###  <a name="bkmk_2012dbpreq"></a>数据库服务器  
 **远程注册表服务：**  
 
 -   在安装 Configuration Manager 站点的过程中，必须在托管站点数据库的计算机上启用远程注册表服务。  
@@ -112,7 +114,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   如果选择让 Configuration Manager 将 SQL Server Express 作为辅助站点安装的一部分安装，请确保计算机满足运行 SQL Server Express 的要求。  
 
-###  <a name="a-namebkmk2012smsprovpreqa-sms-provider-server"></a><a name="bkmk_2012smsprovpreq"></a> SMS 提供程序服务器  
+###  <a name="bkmk_2012smsprovpreq"></a> SMS 提供程序服务器  
 **Windows ADK：**  
 
 -   安装 SMS 提供程序实例的计算机必须具备要安装或升级到的 Configuration Manager 版本所需的 Windows ADK 版本。  
@@ -121,7 +123,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   有关此要求的详细信息，请参阅[操作系统部署的基础架构要求](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment)。  
 
-###  <a name="a-namebkmk2012acwspreqa-application-catalog-website-point"></a><a name="bkmk_2012acwspreq"></a>应用程序目录网站点  
+###  <a name="bkmk_2012acwspreq"></a>应用程序目录网站点  
 **Windows Server 角色和功能：**  
 
 -   .NET Framework 3.5 SP1（或更高版本）  
@@ -156,7 +158,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
     -   IIS 6 元数据库兼容性  
 
-###  <a name="a-namebkmk2012acwsitepreqa-application-catalog-web-service-point"></a><a name="bkmk_2012ACwsitepreq"></a>应用程序目录 Web 服务点  
+###  <a name="bkmk_2012ACwsitepreq"></a>应用程序目录 Web 服务点  
 **Windows Server 角色和功能：**  
 
 -   .NET Framework 3.5 SP1（或更高版本）  
@@ -193,12 +195,12 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   当此站点系统角色与具有该相同要求的另一站点系统角色并存时，对计算机的该内存要求将不会增加，而是保持为最少 5% 的值。  
 
-###  <a name="a-namebkmk2012aipreqa-asset-intelligence-synchronization-point"></a><a name="bkmk_2012AIpreq"></a>资产智能同步点  
+###  <a name="bkmk_2012AIpreq"></a>资产智能同步点  
 **Windows Server 角色和功能：**  
 
 -   .NET Framework 4.5.2  
 
-###  <a name="a-namebkmk2012crppreqa-certificate-registration-point"></a><a name="bkmk_2012crppreq"></a>证书注册点  
+###  <a name="bkmk_2012crppreq"></a>证书注册点  
 **Windows Server 角色和功能：**  
 
 -   .NET Framework 4.5.2：  
@@ -219,7 +221,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
     -   IIS 6 WMI 兼容性  
 
-###  <a name="a-namebkmk2012dppreqa-distribution-point"></a><a name="bkmk_2012dppreq"></a>分发点  
+###  <a name="bkmk_2012dppreq"></a>分发点  
 **Windows Server 角色和功能：**  
 
 -   远程差分压缩  
@@ -264,12 +266,12 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 > [!NOTE]  
 > 分发点站点系统角色不需要后台智能传输服务 (BITS)。 在分发点计算机上配置 BITS 时，不使用分发点计算机上的 BITS 来辅助通过使用 BITS 的客户端下载内容。  
 
-###  <a name="a-namebkmk2012epppreqa-endpoint-protection-point"></a><a name="bkmk_2012EPPpreq"></a> Endpoint Protection 点  
+###  <a name="bkmk_2012EPPpreq"></a> Endpoint Protection 点  
 **Windows Server 角色和功能：**  
 
 -   .NET Framework 3.5 SP1（或更高版本）  
 
-###  <a name="a-namebkmk2012enrollpreqa-enrollment-point"></a><a name="bkmk_2012Enrollpreq"></a>注册点  
+###  <a name="bkmk_2012Enrollpreq"></a>注册点  
 **Windows Server 角色和功能：**  
 
 -   .NET Framework 3.5（或更高版本）  
@@ -309,7 +311,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   当此站点系统角色与具有该相同要求的另一站点系统角色并存时，对计算机的该内存要求将不会增加，而是保持为最少 5% 的值。  
 
-###  <a name="a-namebkmk2012enrollproxpreqa-enrollment-proxy-point"></a><a name="bkmk_2012EnrollProxpreq"></a>注册代理点  
+###  <a name="bkmk_2012EnrollProxpreq"></a>注册代理点  
 **Windows Server 角色和功能：**  
 
 -   .NET Framework 3.5（或更高版本）  
@@ -350,14 +352,14 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   当此站点系统角色与具有该相同要求的另一站点系统角色并存时，对计算机的该内存要求将不会增加，而是保持为最少 5% 的值。  
 
-###  <a name="a-namebkmk2012fsppreqa-fallback-status-point"></a><a name="bkmk_2012FSPpreq"></a>回退状态点  
+###  <a name="bkmk_2012FSPpreq"></a>回退状态点  
 需要带有以下添加内容的默认 IIS 配置：  
 
 -   IIS 6 管理兼容性：  
 
     -   IIS 6 元数据库兼容性  
 
-###  <a name="a-namebkmk2012mppreqa-management-point"></a><a name="bkmk_2012MPpreq"></a>管理点  
+###  <a name="bkmk_2012MPpreq"></a>管理点  
 **Windows Server 角色和功能：**  
 
 -   .NET Framework 4.5.2  
@@ -380,7 +382,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
     -   IIS 6 WMI 兼容性  
 
-###  <a name="a-namebkmk2012rspointa-reporting-services-point"></a><a name="bkmk_2012RSpoint"></a> Reporting Services 点  
+###  <a name="bkmk_2012RSpoint"></a> Reporting Services 点  
 **Windows Server 角色和功能：**  
 
 -   .NET Framework 4.5.2  
@@ -393,7 +395,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   此外，只要其他 System Center 产品不具有对共享 SQL Server 实例的限制，则你使用的实例可与其他 System Center 产品共享。  
 
-###  <a name="a-namebkmkscppreqa-service-connection-point"></a><a name="bkmk_SCPpreq"></a>服务连接点  
+###  <a name="bkmk_SCPpreq"></a>服务连接点  
 **Windows Server 角色和功能：**  
 
 -   .NET Framework 4.5.2  
@@ -406,7 +408,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   站点系统角色需要 x64 版本。  
 
-###  <a name="a-namebkmk2012suppreqa-software-update-point"></a><a name="bkmk_2012SUPpreq"></a>软件更新点  
+###  <a name="bkmk_2012SUPpreq"></a>软件更新点  
 **Windows Server 角色和功能：**  
 
 -   .NET Framework 3.5 SP1（或更高版本）  
@@ -424,7 +426,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 ### <a name="state-migration-point"></a>状态迁移点  
 需要默认 IIS 配置。  
 
-##  <a name="a-namebkmk2008a-prerequisites-for-windows-server-2008-r2-and-windows-server-2008"></a><a name="bkmk_2008"></a> Windows Server 2008 R2 和 Windows Server 2008 的先决条件  
+##  <a name="bkmk_2008"></a> Windows Server 2008 R2 和 Windows Server 2008 的先决条件  
 如 [Microsoft 支持生命周期](https://support.microsoft.com/lifecycle)中的详细信息所述，Windows Server 2008 和 Windows Server 2008 R2 现处于外延支持，不再处于主流支持。 若要详细了解将来对这些操作系统作为具有 Configuration Manager 的站点系统服务器的支持，请参阅 [System Center Configuration Manager 的已删除和已弃用的功能](../../../core/plan-design/changes/removed-and-deprecated-features.md)。  
 
 **下列内容适用于所有 .NET Framework 要求：**  
@@ -435,7 +437,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   可以在站点系统服务器上将 WCF 激活配置为 .NET Framework Windows 功能的一部分。 例如，在 Windows Server 2008 R2 上运行“添加功能向导”以在该服务器上安装其他功能。 在“选择功能”页上，依次展开“NET Framework 3.5.1 功能”、“WCF 激活”，然后选中“HTTP 激活”和“非 HTTP 激活”复选框来启用这些选项。  
 
-###  <a name="a-namebkmk2008sspreqa-site-server-central-administration-site-and-primary-site"></a><a name="bkmk_2008sspreq"></a>站点服务器：管理中心站点和主站点  
+###  <a name="bkmk_2008sspreq"></a>站点服务器：管理中心站点和主站点  
 **.NET Framework：**  
 
 -   .NET Framework 3.5 SP1（或更高版本）  
@@ -460,7 +462,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   管理中心站点和主站点需要适用的可再发行文件的 x86 和 x64 版本。  
 
-###  <a name="a-namebkmk2008secpreqa-site-server-secondary-site"></a><a name="bkmk_2008secpreq"></a>站点服务器：辅助站点  
+###  <a name="bkmk_2008secpreq"></a>站点服务器：辅助站点  
 **.NET Framework：**  
 
 -   .NET Framework 3.5 SP1（或更高版本）  
@@ -479,7 +481,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   请确保辅助站点服务器满足这些站点系统角色的先决条件。  
 
-###  <a name="a-namebkmk2008dbpreqa-database-server"></a><a name="bkmk_2008dbpreq"></a>数据库服务器  
+###  <a name="bkmk_2008dbpreq"></a>数据库服务器  
 **远程注册表服务：**  
 
 -   在安装 Configuration Manager 站点的过程中，必须在托管站点数据库的计算机上启用远程注册表服务。  
@@ -492,7 +494,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   如果选择让 Configuration Manager 将 SQL Server Express 作为辅助站点安装的一部分安装，请确保计算机满足运行 SQL Server Express 的要求。  
 
-###  <a name="a-namebkmk2008smsprovpreqa-sms-provider-server"></a><a name="bkmk_2008smsprovpreq"></a> SMS 提供程序服务器  
+###  <a name="bkmk_2008smsprovpreq"></a> SMS 提供程序服务器  
 **Windows ADK：**  
 
 -   安装 SMS 提供程序实例的计算机必须具备要安装或升级到的 Configuration Manager 版本所需的 Windows ADK 版本。  
@@ -501,7 +503,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   有关此要求的详细信息，请参阅[操作系统部署的基础架构要求](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment)。  
 
-###  <a name="a-namebkmk2008acwspreqa-application-catalog-website-point"></a><a name="bkmk_2008acwspreq"></a>应用程序目录网站点  
+###  <a name="bkmk_2008acwspreq"></a>应用程序目录网站点  
 **.NET Framework：**  
 
 -   .NET Framework 4.5.2  
@@ -530,7 +532,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
     -   IIS 6 元数据库兼容性  
 
-###  <a name="a-namebkmk2008acwsitepreqa-application-catalog-web-service-point"></a><a name="bkmk_2008ACwsitepreq"></a>应用程序目录 Web 服务点  
+###  <a name="bkmk_2008ACwsitepreq"></a>应用程序目录 Web 服务点  
 **.NET Framework：**  
 
 -   .NET Framework 3.5 SP1（或更高版本）  
@@ -563,12 +565,12 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   当此站点系统角色与具有该相同要求的另一站点系统角色并存时，对计算机的该内存要求将不会增加，而是保持为最少 5% 的值。  
 
-###  <a name="a-namebkmk2008aipreqa-asset-intelligence-synchronization-point"></a><a name="bkmk_2008AIpreq"></a>资产智能同步点  
+###  <a name="bkmk_2008AIpreq"></a>资产智能同步点  
 **.NET Framework：**  
 
 -   .NET Framework 4.5.2  
 
-###  <a name="a-namebkmk2008crppreqa-certificate-registration-point"></a><a name="bkmk_2008crppreq"></a>证书注册点  
+###  <a name="bkmk_2008crppreq"></a>证书注册点  
 **.NET Framework：**  
 
 -   .NET Framework 4.5.2  
@@ -585,7 +587,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
     -   IIS 6 WMI 兼容性  
 
-###  <a name="a-namebkmk2008dppreqa-distribution-point"></a><a name="bkmk_2008dppreq"></a>分发点  
+###  <a name="bkmk_2008dppreq"></a>分发点  
 **IIS 配置：**
 
 可使用默认 IIS 配置或自定义配置。 若要使用自定义 IIS 配置，必须启用 IIS 的以下选项：  
@@ -637,12 +639,12 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 > 分发点站点系统角色不需要后台智能传输服务 (BITS)。 在分发点计算机上配置 BITS 时，不使用分发点计算机上的 BITS 来辅助通过使用 BITS 的客户端下载内容。  
 
 
-###  <a name="a-namebkmk2008epppreqa-endpoint-protection-point"></a><a name="bkmk_2008EPPpreq"></a> Endpoint Protection 点  
+###  <a name="bkmk_2008EPPpreq"></a> Endpoint Protection 点  
 **.NET Framework：**  
 
 -   .NET Framework 3.5 SP1（或更高版本）  
 
-###  <a name="a-namebkmk2008enrollpreqa-enrollment-point"></a><a name="bkmk_2008Enrollpreq"></a>注册点  
+###  <a name="bkmk_2008Enrollpreq"></a>注册点  
 **.NET Framework：**  
 
 -   .NET Framework 4.5.2  
@@ -671,7 +673,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   当此站点系统角色与具有该相同要求的另一站点系统角色并存时，对计算机的该内存要求将不会增加，而是保持为最少 5% 的值。  
 
-###  <a name="a-namebkmk2008enrollproxpreqa-enrollment-proxy-point"></a><a name="bkmk_2008EnrollProxpreq"></a>注册代理点  
+###  <a name="bkmk_2008EnrollProxpreq"></a>注册代理点  
 **.NET Framework：**  
 
 -   .NET Framework 4.5.2  
@@ -700,7 +702,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   当此站点系统角色与具有该相同要求的另一站点系统角色并存时，对计算机的该内存要求将不会增加，而是保持为最少 5% 的值。  
 
-###  <a name="a-namebkmk2008fsppreqa-fallback-status-point"></a><a name="bkmk_2008FSPpreq"></a>回退状态点  
+###  <a name="bkmk_2008FSPpreq"></a>回退状态点  
 **IIS 配置：**
 
 需要带有以下添加内容的默认 IIS 配置：  
@@ -709,7 +711,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
     -   IIS 6 元数据库兼容性  
 
-###  <a name="a-namebkmk2008mppreqa-management-point"></a><a name="bkmk_2008MPpreq"></a>管理点  
+###  <a name="bkmk_2008MPpreq"></a>管理点  
 **.NET Framework：**  
 
 -   .NET Framework 4.5.2  
@@ -750,7 +752,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   BITS 服务器扩展（和自动选择的选项），或后台智能传输服务 (BITS)（和自动选择的选项）  
 
-###  <a name="a-namebkmk2008rspointa-reporting-services-point"></a><a name="bkmk_2008RSpoint"></a> Reporting Services 点  
+###  <a name="bkmk_2008RSpoint"></a> Reporting Services 点  
 **.NET Framework：**  
 
 -   .NET Framework 4.5.2  
@@ -763,7 +765,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   此外，只要其他 System Center 产品不具有对共享 SQL Server 实例的限制，则你使用的实例可与其他 System Center 产品共享。  
 
-###  <a name="a-namebkmk2008scppreqa-service-connection-point"></a><a name="bkmk_2008SCPpreq"></a>服务连接点  
+###  <a name="bkmk_2008SCPpreq"></a>服务连接点  
 **.NET Framework：**  
 
 -   .NET Framework 4.5.2  
@@ -776,7 +778,7 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   站点系统角色需要 x64 版本。  
 
-###  <a name="a-namebkmk2008suppreqa-software-update-point"></a><a name="bkmk_2008SUPpreq"></a>软件更新点  
+###  <a name="bkmk_2008SUPpreq"></a>软件更新点  
 **.NET Framework：**  
 
 -   .NET Framework 3.5 SP1（或更高版本）  
@@ -793,13 +795,8 @@ ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
 
 -   有关详细信息，请参阅 [System Center Configuration Manager 的软件更新计划](../../../sum/plan-design/plan-for-software-updates.md)。
 
-###  <a name="a-namebkmk2008smppreqa-state-migration-point"></a><a name="bkmk_2008SMPpreq"></a>状态迁移点  
+###  <a name="bkmk_2008SMPpreq"></a>状态迁移点  
 **IIS 配置：**
 
 需要默认 IIS 配置。  
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
 ms.openlocfilehash: a543b945c4727540faa064c068b175ef63cb5a4b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -55,9 +57,4 @@ ms.openlocfilehash: a543b945c4727540faa064c068b175ef63cb5a4b
 - 使用 IDMIF 文件收集不与 Configuration Manager 客户端关联的资产的相关信息，例如，投影仪、复印机和网络打印机。  
 
  有关使用这些方法扩展 Configuration Manager 硬件清单的详细信息，请参阅[如何在 System Center Configuration Manager 中配置硬件清单](../../../../core/clients/manage/inventory/configure-hardware-inventory.md)。  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

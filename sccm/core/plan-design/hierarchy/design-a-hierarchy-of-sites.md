@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 35e48666f4d1a2363304650f960531fd0630a291
 ms.openlocfilehash: e346e83b0ae0dc7a612cef7a7b9fb1fdb42236bc
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -32,7 +34,7 @@ ms.openlocfilehash: e346e83b0ae0dc7a612cef7a7b9fb1fdb42236bc
 > [!NOTE]
 > 在计划安装新的 Configuration Manager 时，请熟悉[发行说明]( /sccm/core/servers/deploy/install/release-notes)，其中详细说明了活动版本中的当前问题。 此发行说明适用于 Configuration Manager 的所有分支。  但是，在使用[技术预览版分支]( /sccm/core/get-started/technical-preview)时，你将在每个版本的技术预览版文档中发现仅针对该分支的问题。  
 
-##  <a name="a-namebkmktopologya-hierarchy-topology"></a><a name="bkmk_topology"></a> 层次结构拓扑  
+##  <a name="bkmk_topology"></a> 层次结构拓扑  
  层次结构拓扑的范围从单一独立主站点一直到一组连接的主要和辅助站点，该组站点在层次结构顶级（顶层）站点处具有管理中心站点。   在层次结构中所用的站点类型和计数的关键驱动程序通常是你必须支持的设备的类型和数量，如下所示：   
 
  **独立主站点：**在单一主站点可支持所有设备和用户的管理时，使用独立主站点（请参阅[调整大小和扩展数量](/sccm/core/plan-design/configs/size-and-scale-numbers)）。 如果不同的地理位置可由单一主站点成功地提供服务，则该拓扑也成功。  若要帮助管理网络流量，可以使用首选的管理点和精心规划的内容基础结构（请参阅 [System Center Configuration Manager 中内容管理的基本概念](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)）。  
@@ -57,7 +59,7 @@ ms.openlocfilehash: e346e83b0ae0dc7a612cef7a7b9fb1fdb42236bc
 
  下列部分可帮助你理解何时使用特定站点或内容管理选项来替代其他站点。  
 
-##  <a name="a-namebkmkchoosecasa-determine-when-to-use-a-central-administration-site"></a><a name="BKMK_ChooseCAS"></a>确定何时使用管理中心站点  
+##  <a name="BKMK_ChooseCAS"></a>确定何时使用管理中心站点  
  使用管理中心站点配置层次结构范围设置，以及监视层次结构中的所有站点和对象。 此站点类型不直接管理客户端，但它可协调站点间数据复制，其中包括整个层次结构中的站点和客户端的配置。  
 
 **以下信息可帮助你决定何时安装管理中心站点：**  
@@ -82,7 +84,7 @@ ms.openlocfilehash: e346e83b0ae0dc7a612cef7a7b9fb1fdb42236bc
 
 -   你可以配置文件复制和数据库复制来控制层次结构中站点之间的通信。 这包括计划站点数据的数据库复制，以及管理用于站点之间基于文件的数据传输的带宽。  
 
-##  <a name="a-namebkmkchoosepriimarya-determine-when-to-use-a-primary-site"></a><a name="BKMK_ChoosePriimary"></a>确定何时使用主站点  
+##  <a name="BKMK_ChoosePriimary"></a>确定何时使用主站点  
  使用主站点来管理客户端。 你可以在管理中心站点下面安装主站点以作为子主站点，也可以作为新层次结构的第一个站点。 安装为层次结构的第一个站点的主站点将创建独立主站点。 子主站点和独立主站点均支持辅助站点作为主站点的子站点。  
 
  出于以下任何原因而考虑使用主站点：  
@@ -108,7 +110,7 @@ ms.openlocfilehash: e346e83b0ae0dc7a612cef7a7b9fb1fdb42236bc
 
 -   主站点使用数据库复制与其管理中心站点（在安装新站点时会自动配置）直接通信。  
 
-##  <a name="a-namebkmkchoosesecondarya-determine-when-to-use-a-secondary-site"></a><a name="BKMK_ChooseSecondary"></a>确定何时使用辅助站点  
+##  <a name="BKMK_ChooseSecondary"></a>确定何时使用辅助站点  
  使用辅助站点管理跨低带宽网络的部署内容和客户端数据传输。  
 
  你可从管理中心站点或辅助站点的直接父主站点管理辅助站点。 辅助站点必须连接到主站点，并且你无法在不卸载这些辅助站点的情况下将它们移至不同的父站点，然后在新的主站点下将它们作为子站点重新安装。
@@ -138,7 +140,7 @@ ms.openlocfilehash: e346e83b0ae0dc7a612cef7a7b9fb1fdb42236bc
 
 -   辅助站点安装将自动部署位于辅助站点服务器的管理点和分发点。  
 
-##  <a name="a-namebkmkchoosesecondaryordpa-determine-when-to-use-content-management-options"></a><a name="BKMK_ChooseSecondaryorDP"></a>确定何时使用内容管理选项  
+##  <a name="BKMK_ChooseSecondaryorDP"></a>确定何时使用内容管理选项  
  如果你具有设在远程网络位置的客户端，请考虑使用一个或多个内容管理选项而非一个主站点或辅助站点。 当你使用 Windows BranchCache、配置带宽控制分发点或手动将内容复制到分发点（预留内容）时，通常可以消除安装另一站点的需要。  
 
 
@@ -150,7 +152,7 @@ ms.openlocfilehash: e346e83b0ae0dc7a612cef7a7b9fb1fdb42236bc
 
  有关 Configuration Manager 中内容管理选项的详细信息，请参阅 [System Center Configuration Manager 中内容管理的基本概念](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)。  
 
-##  <a name="a-namebkmkbeyonda-beyond-hierarchy-topology"></a><a name="bkmk_beyond"></a>除层次结构拓扑之外  
+##  <a name="bkmk_beyond"></a>除层次结构拓扑之外  
  除了初始层次结构拓扑外，还需考虑不同站点的哪些服务或功能将可用（站点系统角色），以及如何在基础结构中管理层次结构范围的配置和功能。 以下常见的注意事项会在单独主题中进行介绍。 这些注意事项很重要，因为它们可影响层次结构设计或受层次结构设计影响：  
 
 -   当你准备[使用 System Center Configuration Manager 管理计算机和设备](/sccm/core/clients/manage/manage-clients)时，请考虑所管理的设备是在本地，在云中还是包括用户拥有的设备 (BYOD)。  此外，请考虑如何管理多个管理选项支持的设备，例如可以直接通过 Configuration Manager 或通过与 Microsoft Intune 进行集成管理的 Windows 10 计算机。  
@@ -186,9 +188,4 @@ ms.openlocfilehash: e346e83b0ae0dc7a612cef7a7b9fb1fdb42236bc
 -   [System Center Configuration Manager 中的站点间数据传输](../../../core/servers/manage/data-transfers-between-sites.md)  
 
 -   [System Center Configuration Manager 的基于角色的管理基础](../../../core/understand/fundamentals-of-role-based-administration.md)
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

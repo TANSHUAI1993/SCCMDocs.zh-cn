@@ -15,9 +15,10 @@ caps.latest.revision: 9
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
 ms.openlocfilehash: b63367dbaacde60a364e9da6afca65383b635840
+ms.contentlocale: zh-cn
 ms.lasthandoff: 03/27/2017
 
 

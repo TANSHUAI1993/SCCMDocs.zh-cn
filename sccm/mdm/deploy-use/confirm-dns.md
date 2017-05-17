@@ -16,9 +16,10 @@ caps.handback.revision: 0
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
 ms.openlocfilehash: 51dc2cec2138c13f413853727ab956b2871d47b0
+ms.contentlocale: zh-cn
 ms.lasthandoff: 03/06/2017
 
 ---

@@ -15,9 +15,11 @@ caps.latest.revision: 8
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 05c27c7aa36e0b4236867766dab36125c31467b3
 ms.openlocfilehash: fd4c6fd85d12592b3d4f57a48cf6da6c7a668615
+ms.contentlocale: zh-cn
+ms.lasthandoff: 01/03/2017
 
 
 ---
@@ -63,10 +65,5 @@ ms.openlocfilehash: fd4c6fd85d12592b3d4f57a48cf6da6c7a668615
 
 ### <a name="custom-collections"></a>自定义集合  
  在 Configuration Manager 中创建自定义集合时，由一个或多个集合规则确定该集合的成员身份，如[如何在 System Center Configuration Manager 中创建集合](../../../../core/clients/manage/collections/create-collections.md)中所述。 
-
-
-
-
-<!--HONumber=Jan17_HO1-->
 
 

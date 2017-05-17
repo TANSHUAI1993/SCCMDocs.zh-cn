@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
 ms.openlocfilehash: a0bd86587669c32377b1eafa6a890d37e10ac3f6
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -37,7 +39,7 @@ ms.openlocfilehash: a0bd86587669c32377b1eafa6a890d37e10ac3f6
  使用以下部分可帮助你捕获和还原用户数据。
 
 
-##  <a name="a-namebkmkstoringuserdataa-store-user-state-data"></a><a name="BKMK_StoringUserData"></a> 存储用户状态数据  
+##  <a name="BKMK_StoringUserData"></a> 存储用户状态数据  
  捕获用户状态时，可以在目标计算机或状态迁移点上存储用户状态数据。 要将用户状态存储在用户状态迁移点上，你必须使用承载状态迁移点站点系统角色的 Configuration Manager 站点系统服务器。 要将用户状态存储在目标计算机上，你必须配置任务序列以便使用链接以本地方式存储数据。  
 
 > [!NOTE]  
@@ -54,7 +56,7 @@ ms.openlocfilehash: a0bd86587669c32377b1eafa6a890d37e10ac3f6
 
 -   你可以指定可用于将用户数据还原到其原始位置的硬链接。 在此方案中，删除旧操作系统时，用户状态数据会保留在驱动器上。 然后，在部署新操作系统之后， **还原** 任务序列使用硬链接将用户状态数据还原到其原始位置。  
 
-###  <a name="a-namebkmkuserdatasmpa-store-user-data-on-a-state-migration-point"></a><a name="BKMK_UserDataSMP"></a> 在状态迁移点上存储用户数据  
+###  <a name="BKMK_UserDataSMP"></a> 在状态迁移点上存储用户数据  
  要将用户状态数据存储在状态迁移点上，必须执行下列操作：  
 
 1.  用于存储用户状态数据的[Configure a state migration point](#BKMK_StateMigrationPoint) 。  
@@ -71,7 +73,7 @@ ms.openlocfilehash: a0bd86587669c32377b1eafa6a890d37e10ac3f6
 
     -   [发布状态存储](../understand/task-sequence-steps.md#BKMK_ReleaseStateStore)，通知状态迁移点捕获或还原操作已完成。  
 
-###  <a name="a-namebkmkuserdatadestinationa-store-user-data-locally"></a><a name="BKMK_UserDataDestination"></a> 在本地存储用户数据  
+###  <a name="BKMK_UserDataDestination"></a> 在本地存储用户数据  
  若要在本地存储用户状态数据，必须执行以下操作：  
 
 -   [创建用于捕获和还原用户状态的任务序列](../deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md)。 具体而言，必须添加下列任务序列步骤以从计算机捕获用户数据，并通过使用硬链接将用户数据还原到一台计算机，  
@@ -83,7 +85,7 @@ ms.openlocfilehash: a0bd86587669c32377b1eafa6a890d37e10ac3f6
         > [!NOTE]  
         >  在任务序列删除旧操作系统后，硬链接引用的用户状态数据保留在计算机上。 这是用于在部署新操作系统时用于还原用户状态的数据。  
 
-##  <a name="a-namebkmkstatemigrationpointa-configure-a-state-migration-point"></a><a name="BKMK_StateMigrationPoint"></a> Configure a state migration point  
+##  <a name="BKMK_StateMigrationPoint"></a> Configure a state migration point  
  状态迁移点在一台计算机上存储捕获的用户状态数据，然后在另一台计算机上还原这些数据。 但是，当你在同一台计算机上捕获操作系统部署的用户设置时（例如在目标计算机上刷新操作系统的部署），你可以通过使用硬链接将数据存储在同一台计算机上或将数据存储在状态迁移点上。 对于某些计算机部署，当你创建状态存储时，Configuration Manager 会自动在状态存储和目标计算机之间创建关联。 你可以使用下列方法来配置状态迁移点以存储用户状态数据：  
 
 -   使用“创建站点系统服务器向导”  为状态迁移点创建一个新站点系统服务器。  
@@ -104,7 +106,7 @@ ms.openlocfilehash: a0bd86587669c32377b1eafa6a890d37e10ac3f6
 
  有关状态迁移点以及对其进行配置的步骤的详细信息，请参阅[状态迁移点](prepare-site-system-roles-for-operating-system-deployments.md#BKMK_StateMigrationPoints)。  
 
-##  <a name="a-namebkmkcomputerassociationa-create-a-computer-association"></a><a name="BKMK_ComputerAssociation"></a> Create a computer association  
+##  <a name="BKMK_ComputerAssociation"></a> Create a computer association  
  当你在新硬件上安装操作系统并且想捕获和还原用户数据设置时，请创建计算机关联以定义源计算机和目标计算机之间的关系。 源计算机是 Configuration Manager 管理的现有计算机。 在你将新操作系统部署到目标计算机时，源计算机包含迁移到目标计算机的用户状态。  
 
 > [!NOTE]  
@@ -128,11 +130,6 @@ ms.openlocfilehash: a0bd86587669c32377b1eafa6a890d37e10ac3f6
 
     -   **捕获并还原指定的用户帐户**：此设置仅捕获和还原指定的帐户。 如果选择此设置，你无法创建与同一源计算机的多个关联。  
 
-##  <a name="a-namebkmkmigrationfailsa-restore-user-state-data-when-an-operating-system-deployment-fails"></a><a name="BKMK_MigrationFails"></a> 在操作系统部署失败时还原用户状态数据  
+##  <a name="BKMK_MigrationFails"></a> 在操作系统部署失败时还原用户状态数据  
  如果操作系统部署失败，请使用 USMT 10.0 LoadState 功能检索在部署过程中捕获的用户状态数据。 这包括存储在状态迁移点上的数据，或者以本地方式保存在目标计算机上的数据。 有关此 USMT 功能的详细信息，请参阅 [LoadState 语法](https://technet.microsoft.com/library/mt299188\(v=vs.85\).aspx)。  
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

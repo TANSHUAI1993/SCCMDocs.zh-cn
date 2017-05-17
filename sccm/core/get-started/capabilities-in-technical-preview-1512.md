@@ -16,9 +16,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: noindex,nofollow
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
 ms.openlocfilehash: 7fff6f2807a679b621b736b8ad0b6561fb37affe
+ms.contentlocale: zh-cn
 ms.lasthandoff: 01/24/2017
 
 ---

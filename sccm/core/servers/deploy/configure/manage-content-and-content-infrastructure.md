@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: e30538ed925af66e8b7459eb4add9dd992c1ae19
 ms.openlocfilehash: b0f297fddca4252f106dee9d3d5d8911a347825b
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -33,9 +35,4 @@ ms.openlocfilehash: b0f297fddca4252f106dee9d3d5d8911a347825b
 -   [为 System Center Configuration Manager 部署和管理内容](../../../../core/servers/deploy/configure/deploy-and-manage-content.md)。 内容部署将文件和软件传输到整个网络中的分发点服务器。 除了简单传输之外，可以预安排内容，这是可以帮助避免过度使用网络带宽的方法。 本主题中的信息有助于执行发送该内容或有效地使用预安排内容的基本任务。  
 
 -   [使用 System Center Configuration Manager 监视分发的内容](../../../../core/servers/deploy/configure/monitor-content-you-have-distributed.md)。 部署内容时，可以监视其在基础结构之间的状态。 还可以重新分发未能访问分发点的内容，或取消仍在进行的分发。 本主题中的信息将帮助你了解如何监视内容，包括如何在内容传输失败时解决某些问题。  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

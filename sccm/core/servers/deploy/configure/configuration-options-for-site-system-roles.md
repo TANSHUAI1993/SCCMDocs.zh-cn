@@ -15,9 +15,11 @@ caps.latest.revision: 5
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: fff93794afdfa9f890b1f06d6c330d8cffc5796c
 ms.openlocfilehash: b4db5d86cc0ed020ed176feb2e8f1f9dc51a2280
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="configuration-options-for-site-system-roles-for-system-center-configuration-manager"></a>System Center Configuration Manager 站点系统角色的配置选项
@@ -26,7 +28,7 @@ ms.openlocfilehash: b4db5d86cc0ed020ed176feb2e8f1f9dc51a2280
 
 System Center Configuration Manager 站点系统角色的大多数配置选项都不言自明，或在对其进行配置时于向导或对框中予以了解释。 以下部分介绍站点系统角色，这些角色具有可能需要额外信息的设置。  
 
-##  <a name="a-namebkmkapplicationcatalogwebsitea-application-catalog-website-point"></a><a name="BKMK_ApplicationCatalog_Website"></a>应用程序目录网站点  
+##  <a name="BKMK_ApplicationCatalog_Website"></a>应用程序目录网站点  
  有关如何为应用程序目录设置应用程序目录网站点的信息，请参阅[规划和配置 System Center Configuration Manager 中的应用程序管理](../../../../apps/plan-design/plan-for-and-configure-application-management.md)。  
 
  **客户端连接**  
@@ -45,7 +47,7 @@ System Center Configuration Manager 站点系统角色的大多数配置选项�
 
  输入用户在应用程序目录中看到的名称。 此品牌信息有助于用户将此网站识别为受信任的源。  
 
-##  <a name="a-namebkmkapplicationcatalogwebservicea-application-catalog-web-service-point"></a><a name="BKMK_ApplicationCatalog_WebService"></a>应用程序目录 Web 服务点  
+##  <a name="BKMK_ApplicationCatalog_WebService"></a>应用程序目录 Web 服务点  
  有关如何为应用程序目录设置应用程序目录 Web 服务点的信息，请参阅[规划和配置 System Center Configuration Manager 中的应用程序管理](../../../../apps/plan-design/plan-for-and-configure-application-management.md)。  
 
  **HTTPS**  
@@ -54,10 +56,10 @@ System Center Configuration Manager 站点系统角色的大多数配置选项�
 
  有关服务器证书部署的示例以及有关如何在 IIS 中配置该证书的信息，请参阅 *System Center Configuration Manager 的 PKI 证书的分步部署示例：Windows Server 2008 证书颁发机构*主题中的[为运行 IIS 的站点系统部署 Web 服务器证书](/sccm/core/plan-design/network/example-deployment-of-pki-certificates)部分。  
 
-##  <a name="a-namebkmkcertificateregistrationpointa-certificate-registration-point"></a><a name="BKMK_CertificateRegistrationPoint"></a>证书注册点  
+##  <a name="BKMK_CertificateRegistrationPoint"></a>证书注册点  
  有关如何设置证书注册点的详细信息，请参阅[证书配置文件简介](/sccm/protect/deploy-use/introduction-to-certificate-profiles)。  
 
-##  <a name="a-namebkmkdistributionpointa-distribution-point"></a><a name="BKMK_Distribution_Point"></a>分发点  
+##  <a name="BKMK_Distribution_Point"></a>分发点  
  若要深入了解如何为内容部署设置分发点，请参阅[为 System Center Configuration Manager 管理内容和内容基础结构](../../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。  
 
  若要深入了解如何为 PXE 部署设置分发点，请参阅[使用 PXE 与 System Center Configuration Manager 一起通过网络部署 Windows](../../../../osd/deploy-use/use-pxe-to-deploy-windows-over-the-network.md)。  
@@ -97,7 +99,7 @@ System Center Configuration Manager 站点系统角色的大多数配置选项�
  - 版本 1610 之前，可选中“允许内容源位置回退”复选框，以便在没有其他分发点可用时让这些边界组外部的客户端回退并使用分发点作为内容的源位置。
  - **从 1610 版起**，用户不能再配置“允许内容源位置回退”。  但可以设置边界组之间的关系，以检查客户端何时可以开始搜索有效内容源位置的其他边界组。
 
-##  <a name="a-namebkmkenrollmentpointa-enrollment-point"></a><a name="BKMK_Enrollment_Point"></a>注册点  
+##  <a name="BKMK_Enrollment_Point"></a>注册点  
 注册点用于安装 Mac 计算机，并用于注册通过本地移动设备管理来进行管理的设备。 有关详细信息，请参阅以下内容：  
 
 -   [如何在 System Center Configuration Manager 中将客户端部署到 Mac](../../../../core/clients/deploy/deploy-clients-to-macs.md)  
@@ -109,7 +111,7 @@ System Center Configuration Manager 站点系统角色的大多数配置选项�
 
  有关服务器证书部署的示例以及有关如何在 IIS 中配置该证书的信息，请参阅 *System Center Configuration Manager 的 PKI 证书的分步部署示例：Windows Server 2008 证书颁发机构*主题中的[为运行 IIS 的站点系统部署 Web 服务器证书](/sccm/core/plan-design/network/example-deployment-of-pki-certificates)部分。  
 
-##  <a name="a-namebkmkenrollmentproxypointa-enrollment-proxy-point"></a><a name="BKMK_Enrollment_Proxy_Point"></a>注册代理点  
+##  <a name="BKMK_Enrollment_Proxy_Point"></a>注册代理点  
 若要深入了解如何为移动设备设置注册代理点，请参阅[用户如何在 System Center Configuration Manager 中向本地移动设备管理注册设备](../../../../mdm/deploy-use/user-enroll-devices-on-premises-mdm.md)。  
 
 **客户端连接**  
@@ -117,7 +119,7 @@ System Center Configuration Manager 站点系统角色的大多数配置选项�
 
  有关服务器证书部署的示例以及有关如何在 IIS 中配置该证书的信息，请参阅 *System Center Configuration Manager 的 PKI 证书的分步部署示例：Windows Server 2008 证书颁发机构*主题中的[为运行 IIS 的站点系统部署 Web 服务器证书](/sccm/core/plan-design/network/example-deployment-of-pki-certificates)部分。  
 
-##  <a name="a-namebkmkfallbackstatuspointa-fallback-status-point"></a><a name="BKMK_Fallback_Status_Point"></a>回退状态点  
+##  <a name="BKMK_Fallback_Status_Point"></a>回退状态点  
 “状态消息数量”和“限制间隔(秒)”  
 尽管这些选项的默认设置（10,000 条状态消息和 3,600 秒的限制间隔）对于大多数情况已经足够，但在以下条件都成立时，你可能必须更改这些设置：  
 
@@ -152,9 +154,4 @@ System Center Configuration Manager 站点系统角色的大多数配置选项�
 -   你发现，当前限制设置会在站点服务器上造成 CPU 高使用率。  
 
 除非你了解后果，否则请不要更改回退状态点限制设置的设置。 例如，如果将限制设置提高到很高，则站点服务器上的 CPU 使用率可能会提高到很高，从而减慢所有站点操作的速度。  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

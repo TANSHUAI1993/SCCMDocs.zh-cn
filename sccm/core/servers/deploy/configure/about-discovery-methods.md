@@ -14,9 +14,11 @@ caps.latest.revision: 8
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 81d7516b814d2db74d4d857871071c8911755754
 ms.openlocfilehash: 6e53f501281e31f2b7df54b9740eac970f108257
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="about-discovery-methods-for-system-center-configuration-manager"></a>有关 System Center Configuration Manager 的发现方法
@@ -25,7 +27,7 @@ ms.openlocfilehash: 6e53f501281e31f2b7df54b9740eac970f108257
 
 System Center Configuration Manager 发现方法可以在网络上找到不同设备，或从 Active Directory 找到设备和用户。 若要有效地使用发现方法，应了解及其可用配置和限制。  
 
-##  <a name="a-namebkmkaboutforesta-active-directory-forest-discovery"></a><a name="bkmk_aboutForest"></a> Active Directory 林发现  
+##  <a name="bkmk_aboutForest"></a> Active Directory 林发现  
  **可配置：**是  
 
  **默认启用：**否  
@@ -78,7 +80,7 @@ Active Directory 林发现操作记录在下列日志中：
 
 有关如何配置此发现方法的详细信息，请参阅[为 System Center Configuration Manager 配置发现方法](../../../../core/servers/deploy/configure/configure-discovery-methods.md)。  
 
-##  <a name="a-namebkmkaboutgroupa-active-directory-group-discovery"></a><a name="bkmk_aboutGroup"></a> Active Directory 组发现  
+##  <a name="bkmk_aboutGroup"></a> Active Directory 组发现  
 **可配置：**是  
 
 **默认启用：**否  
@@ -120,7 +122,7 @@ Active Directory 组发现不支持可通过使用 Active Directory 系统发现
 
 有关如何配置此发现方法的详细信息，请参阅[为 System Center Configuration Manager 配置发现方法](../../../../core/servers/deploy/configure/configure-discovery-methods.md)。  
 
-##  <a name="a-namebkmkaboutsystema-active-directory-system-discovery"></a><a name="bkmk_aboutSystem"></a> Active Directory 系统发现  
+##  <a name="bkmk_aboutSystem"></a> Active Directory 系统发现  
 **可配置：**是  
 
 **默认启用：**否  
@@ -158,7 +160,7 @@ Active Directory 组发现不支持可通过使用 Active Directory 系统发现
 
 有关如何配置此发现方法的详细信息，请参阅[为 System Center Configuration Manager 配置发现方法](../../../../core/servers/deploy/configure/configure-discovery-methods.md)。  
 
-##  <a name="a-namebkmkaboutusera-active-directory-user-discovery"></a><a name="bkmk_aboutUser"></a> Active Directory 用户发现  
+##  <a name="bkmk_aboutUser"></a> Active Directory 用户发现  
 **可配置：**是  
 
 **默认启用：**否  
@@ -188,7 +190,7 @@ Active Directory 组发现不支持可通过使用 Active Directory 系统发现
 
 有关如何配置此发现方法的详细信息，请参阅[为 System Center Configuration Manager 配置发现方法](../../../../core/servers/deploy/configure/configure-discovery-methods.md)。  
 
-##  <a name="a-namebkmkaboutheartbeata-heartbeat-discovery"></a><a name="bkmk_aboutHeartbeat"></a>检测信号发现  
+##  <a name="bkmk_aboutHeartbeat"></a>检测信号发现  
 **可配置：**是  
 
 **默认启用：**是  
@@ -224,7 +226,7 @@ Active Directory 组发现不支持可通过使用 Active Directory 系统发现
 
 有关如何配置此发现方法的详细信息，请参阅[为 System Center Configuration Manager 配置发现方法](../../../../core/servers/deploy/configure/configure-discovery-methods.md)。  
 
-##  <a name="a-namebkmkaboutnetworka-network-discovery"></a><a name="bkmk_aboutNetwork"></a>网络发现  
+##  <a name="bkmk_aboutNetwork"></a>网络发现  
 **可配置：**是  
 
 **默认启用：**否  
@@ -268,7 +270,7 @@ Active Directory 组发现不支持可通过使用 Active Directory 系统发现
 > [!NOTE]  
 >  复杂的网络和低带宽连接可能导致网络发现运行缓慢并生成大量的网络流量。 作为一种最佳方案，请仅在其他发现方法找不到你必须发现的资源时，才运行网络发现。 例如，你必须发现工作组计算机，则使用网络发现。 其他发现方法不发现工作组计算机。  
 
-###  <a name="a-namebkmknetdisclevelsa-levels-of-network-discovery"></a><a name="BKMK_NetDiscLevels"></a>网络发现的级别  
+###  <a name="BKMK_NetDiscLevels"></a>网络发现的级别  
 配置网络发现时，你可以指定以下三个发现级别之一：  
 
 |发现的级别|详细信息|  
@@ -281,7 +283,7 @@ Active Directory 组发现不支持可通过使用 Active Directory 系统发现
 
  例如，在首次使用网络发现时，你可以仅从此拓扑级别开始标识网络基础结构。 然后，可以将网络发现重新配置为发现对象及其设备操作系统。 还可以通过配置设置，将网络发现限制在某个特定范围的网段内。 如此一来，就能在所需的网络位置中发现对象，从而避免不必要的网络流量，并且还可以从边缘路由器或网络外部发现对象。  
 
-###  <a name="a-namebkmknetdiscoptionsa-network-discovery-options"></a><a name="BKMK_NetDiscOptions"></a>网络发现选项  
+###  <a name="BKMK_NetDiscOptions"></a>网络发现选项  
 要启用网络发现以搜索 IP 可寻址的设备，必须配置以下一个或多个选项以指定如何查询设备。  
 
 > [!NOTE]  
@@ -329,7 +331,7 @@ Active Directory 组发现不支持可通过使用 Active Directory 系统发现
 
 -   你必须将网络发现配置为使用设备的共同体名称，否则设备将拒绝基于 SNMP 的查询。  
 
-###  <a name="a-namebkmklimitnetdisca-limiting-network-discovery"></a><a name="BKMK_LimitNetDisc"></a>限制网络发现  
+###  <a name="BKMK_LimitNetDisc"></a>限制网络发现  
 当网络发现在网络边缘上查询 SNMP 设备时，它可以标识关于在中间网络之外的子网和 SNMP 设备的信息。 使用以下信息，通过配置发现可以与其通信的 SNMP 设备以及指定要查询的网络段，可以限制网络发现。  
 
 **子网：**  
@@ -374,12 +376,12 @@ Active Directory 组发现不支持可通过使用 Active Directory 系统发现
 > [!WARNING]  
 >  路由器跃点数每增加一个都可能大幅增加可发现的资源数，并增加网络发现所使用的网络带宽。  
 
-##  <a name="a-namebkmkaboutservera-server-discovery"></a><a name="bkmk_aboutServer"></a>服务器发现  
+##  <a name="bkmk_aboutServer"></a>服务器发现  
 **可配置：**否  
 
 除了用户可配置的发现方法之外，Configuration Manager 还使用名为**服务器发现** (SMS_WINNT_SERVER_DISCOVERY_AGENT) 的进程。 此发现方法为作为站点系统的计算机（如配置为管理点的计算机）创建资源记录。  
 
-##  <a name="a-namebkmkshareda-common-features-of-active-directory-group-discovery-system-discovery-and-user-discovery"></a><a name="bkmk_shared"></a>Active Directory 组发现、系统发现和用户发现的常用功能  
+##  <a name="bkmk_shared"></a>Active Directory 组发现、系统发现和用户发现的常用功能  
 本部分提供以下发现方法常见功能的相关信息：  
 
 -   Active Directory 组发现  
@@ -421,7 +423,7 @@ Active Directory 组发现不支持可通过使用 Active Directory 系统发现
 
 -   [搜索自定义的 Active Directory 属性](#bkmk_customAD)  
 
-###  <a name="a-namebkmkdeltaa-delta-discovery"></a><a name="bkmk_delta"></a>增量发现  
+###  <a name="bkmk_delta"></a>增量发现  
 适用于：  
 
 -   Active Directory 组发现  
@@ -450,7 +452,7 @@ Active Directory 组发现不支持可通过使用 Active Directory 系统发现
 
 你在每个发现方法的属性中的“轮询计划”  选项卡上配置增量发现。  
 
-###  <a name="a-namebkmkstalelogona-filter-stale-computer-records-by-domain-logon"></a><a name="bkmk_stalelogon"></a>按域登录名筛选过期计算机记录  
+###  <a name="bkmk_stalelogon"></a>按域登录名筛选过期计算机记录  
 适用于：  
 
 -   Active Directory 组发现  
@@ -472,7 +474,7 @@ Active Directory 组发现不支持可通过使用 Active Directory 系统发现
 > [!WARNING]  
 >  如果配置此筛选，并且**按计算机密码筛选过期记录**，则会从发现中排除满足任一筛选器条件的计算机。  
 
-###  <a name="a-namebkmkstalepassworda-filter-stale-records-by-computer-password"></a><a name="bkmk_stalepassword"></a>按计算机密码筛选过期记录  
+###  <a name="bkmk_stalepassword"></a>按计算机密码筛选过期记录  
 适用于：  
 
 -   Active Directory 组发现  
@@ -492,7 +494,7 @@ Active Directory 组发现不支持可通过使用 Active Directory 系统发现
 > [!WARNING]  
 >  如果配置此筛选，并且**按域登录名筛选过期记录**，则会从发现中排除满足任一筛选器条件的计算机。  
 
-###  <a name="a-namebkmkcustomada-search-customized-active-directory-attributes"></a><a name="bkmk_customAD"></a>搜索自定义的 Active Directory 属性  
+###  <a name="bkmk_customAD"></a>搜索自定义的 Active Directory 属性  
  适用于：  
 
 -   Active Directory 系统发现  
@@ -502,9 +504,4 @@ Active Directory 组发现不支持可通过使用 Active Directory 系统发现
 每种发现方法都支持可发现的 Active Directory 属性的唯一列表。  
 
 可在“Active Directory 系统发现属性”和“Active Directory 用户发现属性”对话框中的“Active Directory 属性”选项卡上，查看和配置自定义属性列表。  
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

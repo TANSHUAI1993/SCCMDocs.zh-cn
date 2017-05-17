@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: 8f3086adac2c6886316a2fd65b3d471acac9077c
+ms.contentlocale: zh-cn
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -41,9 +43,4 @@ ms.openlocfilehash: 8f3086adac2c6886316a2fd65b3d471acac9077c
 
 ## <a name="make-sure-that-maintenance-windows-are-large-enough-to-deploy-critical-software-updates"></a>确保维护时段足够大以部署关键的软件更新  
  可为设备集合配置维护时段，以限制 Configuration Manager 可在这些设备上安装软件的次数。 如果你将该维护时段配置得太小，则客户端可能无法安装关键的软件更新，这使客户端容易遭受可由软件更新减轻的攻击。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

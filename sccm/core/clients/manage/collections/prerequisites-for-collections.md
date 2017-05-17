@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: 81342ab0d064e3f2da19126819bdd048270a4320
+ms.contentlocale: zh-cn
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -34,9 +36,4 @@ System Center Configuration Manager 中的集合仅包含产品内部的依赖�
 |----------------|----------------------|  
 |Reporting Services 点|在运行集合的报表前，必须先安装 Reporting Services 点站点系统角色。 有关详细信息，请参阅 [System Center Configuration Manager 中的报表](../../../../core/servers/manage/reporting.md)。|  
 |必须授予特定的安全权限来管理集合|必须具有以下安全权限才能管理符合性设置：<br /><br /> - 若要创建和管理集合：“集合”对象的“创建”、“删除”、“修改”、“修改文件夹”、“移动对象”、“读取”和“读取资源”。<br /><br /> - 若要管理集合设置：“集合”对象的“修改集合设置”。<br /><br /> 所有集合文件夹（包括根文件夹）都需要“修改文件夹”  权限。|  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 7fa191ce37a68f604673fe9b9724f76c3ff10032
 ms.openlocfilehash: 1ad4abf1f06ed24bd1d505648280b5e5d80220c7
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -50,9 +52,4 @@ Configuration Manager 不支持单一站点系统服务器上多个站点的站�
 -   [System Center Configuration Manager 站点系统角色的配置选项](../../../../core/servers/deploy/configure/configuration-options-for-site-system-roles.md)  
 
      某些站点系统角色支持需要比用户界面中可以说明的更多详细信息的配置。 本主题提供这些详细信息。  
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

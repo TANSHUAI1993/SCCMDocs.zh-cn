@@ -15,9 +15,11 @@ caps.latest.revision: 6
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: b12d4a1592ce4601fa1f0a6cd2a539a3664c0c37
+ms.contentlocale: zh-cn
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -27,7 +29,7 @@ ms.openlocfilehash: b12d4a1592ce4601fa1f0a6cd2a539a3664c0c37
 
 此主题包含 System Center Configuration Manager 中硬件清单的安全和隐私信息。  
 
-##  <a name="a-namebkmksecurityhardwareinventorya-security-best-practices-for-hardware-inventory"></a><a name="BKMK_Security_HardwareInventory"></a> 硬件清单的最佳安全方案  
+##  <a name="BKMK_Security_HardwareInventory"></a> 硬件清单的最佳安全方案  
  从客户端收集硬件清单数据时使用下列最佳安全方案：  
 
 |最佳安全方案|更多信息|  
@@ -48,7 +50,7 @@ ms.openlocfilehash: b12d4a1592ce4601fa1f0a6cd2a539a3664c0c37
 
  默认情况下，客户端设置中启用了硬件清单。  
 
-##  <a name="a-namebkmkprivacyhardwareinventorya-privacy-information-for-hardware-inventory"></a><a name="BKMK_Privacy_HardwareInventory"></a> 硬件清单的隐私信息  
+##  <a name="BKMK_Privacy_HardwareInventory"></a> 硬件清单的隐私信息  
  硬件清单允许检索 Configuration Manager 客户端上注册表和 WMI 中存储的任何信息。 软件清单允许您发现具有指定类型的所有文件或从客户端收集任何指定的文件。 通过扩展硬件和软件清单并添加新的许可证管理功能，资产智能增强了清单功能。  
 
  默认情况下，客户端设置中启用了硬件清单，并且收集的 WMI 信息由你选择的选项确定。 默认情况下，软件清单处于启用状态，但默认情况下不收集文件。 尽管你可以选择启用硬件清单报告类，但资产智能数据集合会自动启用。  
@@ -56,9 +58,4 @@ ms.openlocfilehash: b12d4a1592ce4601fa1f0a6cd2a539a3664c0c37
  清单信息不会发送到 Microsoft。 清单信息存储在 Configuration Manager 数据库中。 当客户端使用 HTTPS 来连接到管理点时，它们向站点发送的清单数据在传输过程中是加密的。 如果客户端使用 HTTP 来连接到管理点，你可以选择启用清单加密。 清单数据不会以加密格式存储在数据库中。 信息将保留在数据库中，直到每 90 天后被站点维护任务“删除过期的清单历史”  或“删除过期的收集文件”  。 可以配置删除间隔。  
 
  在配置硬件清单、软件清单、文件收集或资产智能数据集合前，请考虑你的隐私要求。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

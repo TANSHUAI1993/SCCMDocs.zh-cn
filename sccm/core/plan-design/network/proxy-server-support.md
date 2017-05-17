@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: c4f30e4839709722b216262b21d7b51c07d24d1e
 ms.openlocfilehash: dc36be47310d2c2178c974a2b503d0b5f9f6e2ec
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -85,9 +87,4 @@ System Center Configuration Manager 站点系统服务器和客户端都可使�
 3.  在“站点系统属性”中，选择“代理”选项卡，然后设置此主站点服务器的代理设置。  
 
 4.  选择“确定”以保存新的代理服务器配置。  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

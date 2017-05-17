@@ -15,9 +15,10 @@ caps.latest.revision: 0
 author: robstackmsft
 ms.author: robstack
 Robots: NOINDEX,NOFOLLOW
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
 ms.openlocfilehash: 30d0177dc7fcc7f39d00c48067130d587435bf2d
+ms.contentlocale: zh-cn
 ms.lasthandoff: 12/16/2016
 
 ---

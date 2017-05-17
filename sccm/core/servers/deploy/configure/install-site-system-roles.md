@@ -15,9 +15,11 @@ caps.latest.revision: 4
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 8370e3b102afed518e8154d4944ab420188faccf
 ms.openlocfilehash: 76b070f8e203cc0c751f35e5a4b4904504786c04
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="install-site-system-roles-for-system-center-configuration-manager"></a>安装 System Center Configuration Manager 的站点系统角色
@@ -38,7 +40,7 @@ System Center Configuration Manager 控制台具有可用于安装站点系统�
 
 -   Configuration Manager 使用**站点系统安装帐户**来安装站点系统角色。 你在运行适用的向导来创建新站点系统服务器或向现有站点系统服务器中添加站点系统角色时指定此帐户。 默认情况下，此帐户是站点服务器计算机的本地系统帐户，但你可以指定域用户帐户以供用作站点系统安装帐户。 有关详细信息，请参阅 [System Center Configuration Manager 中使用的帐户](../../../../core/plan-design/hierarchy/accounts.md)。  
 
-##  <a name="a-namebkmkinstalla-to-install-site-system-roles-on-an-existing-site-system-server"></a><a name="bkmk_Install"></a>在现有站点系统服务器上安装站点系统角色  
+##  <a name="bkmk_Install"></a>在现有站点系统服务器上安装站点系统角色  
 
 1.  在 Configuration Manager 控制台中，单击“管理” 。  
 
@@ -81,9 +83,4 @@ System Center Configuration Manager 控制台具有可用于安装站点系统�
 
 > [!TIP]  
 >  Windows PowerShell cmdlet New-CMSiteSystemServer 执行与此过程相同的功能。 有关详细信息，请参阅 Microsoft System Center 2012 Configuration Manager SP1 Cmdlet 参考文档中的 [New-CMSiteSystemServer](http://go.microsoft.com/fwlink/p/?LinkID=271414)。  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

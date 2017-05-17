@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 90775fcf2549080a43e9c1606caa79d9eb90a89c
 ms.openlocfilehash: 1d6c3b1db14867bdbc5cae8ded099d9024a79549
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/03/2017
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="manage-software-updates-in-updates-publisher"></a>管理 Updates Publisher 中的软件更新

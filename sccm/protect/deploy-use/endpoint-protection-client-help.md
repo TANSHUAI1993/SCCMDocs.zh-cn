@@ -15,9 +15,11 @@ caps.latest.revision: 6
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 017bd5b899b364fc832c721d63cc7dbad0a11671
 ms.openlocfilehash: 212c73fcb947c3b56da6055bf47fe078301ad90d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -59,9 +61,4 @@ Windows Defender 设置可启用有助于保护电脑免受恶意软件攻击的
 ### <a name="see-also"></a>另请参阅  
  [Endpoint Protection 客户端的常见问题](endpoint-protection-client-faq.md)   
  [对 Windows Defender 或 Endpoint Protection 客户端进行故障排除](troubleshoot-endpoint-client.md)
-
-
-
-<!--HONumber=Feb17_HO3-->
-
 

@@ -15,10 +15,11 @@ caps.latest.revision: 12
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: dda2f4c01078fbbd174cbcb30357554c24f6abeb
 ms.openlocfilehash: 14834f62ffaa8fcba5ddb7536a0b76e18b557e53
-ms.lasthandoff: 04/17/2017
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="list-of-prerequisite-checks-for-system-center-configuration-manager"></a>System Center Configuration Manager 的先决条件检查列表

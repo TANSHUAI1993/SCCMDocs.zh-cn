@@ -15,10 +15,11 @@ caps.latest.revision: 5
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 8f4ec982a54cf3cefef310268a54850e70e2e63a
 ms.openlocfilehash: 237dc9cbccb973720a633490f096aed4bc16d183
-ms.lasthandoff: 03/13/2017
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="windows-defender-advanced-threat-protection"></a>Windows Defender 高级威胁防护

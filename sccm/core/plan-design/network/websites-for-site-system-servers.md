@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 26bbec1e8d6c53ce297689ba4390b9347229eb15
 ms.openlocfilehash: 886ff3b8e867fc340c79648a57feae81653b0ccd
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -34,7 +36,7 @@ ms.openlocfilehash: 886ff3b8e867fc340c79648a57feae81653b0ccd
 
 
 
-##  <a name="a-namebkmkwhat2knowa-what-to-know-before-choosing-to-use-custom-websites"></a><a name="BKMK_What2Know"></a>选择使用自定义网站前的须知  
+##  <a name="BKMK_What2Know"></a>选择使用自定义网站前的须知  
  默认情况下，站点系统角色使用 IIS 中的“默认网站”。 这会在站点系统角色安装时自动设置。 但在主站点上，可以转而选择使用自定义网站。 使用自定义网站时：  
 
 -   为整个站点启用自定义网站，而不是为单独的站点系统服务器或角色启用。  
@@ -132,9 +134,4 @@ ms.openlocfilehash: 886ff3b8e867fc340c79648a57feae81653b0ccd
     2.  启动 **SMSWEB** 网站。  
 
     3.  在站点的站点服务器上重启 **SMS_SITE_COMPONENT_MANAGER** 服务。  
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

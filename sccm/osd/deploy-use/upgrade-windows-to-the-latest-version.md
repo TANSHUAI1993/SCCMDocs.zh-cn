@@ -15,9 +15,11 @@ caps.latest.revision: 13
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 288a4c649f371d9701fe7249449356aa222bf372
 ms.openlocfilehash: 35f04e237efffbdb12893f658950a99dc0b98b85
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -37,7 +39,7 @@ ms.openlocfilehash: 35f04e237efffbdb12893f658950a99dc0b98b85
 
  根据以下部分，使用任务序列通过网络部署操作系统。  
 
-##  <a name="a-namebkmkplana-plan"></a><a name="BKMK_Plan"></a> 计划  
+##  <a name="BKMK_Plan"></a> 计划  
 
 -   **查看用于升级操作系统的任务序列的限制。**  
 
@@ -59,7 +61,7 @@ ms.openlocfilehash: 35f04e237efffbdb12893f658950a99dc0b98b85
 
      此升级方案的唯一先决条件是具有可用于操作系统升级包和任务序列中包含的其他任何包的分发点。 有关详细信息，请参阅[安装或修改分发点](../../core/servers/deploy/configure/install-and-configure-distribution-points.md)。
 
-##  <a name="a-namebkmkconfigurea-configure"></a><a name="BKMK_Configure"></a> 配置  
+##  <a name="BKMK_Configure"></a> 配置  
 
 1.  **准备操作系统升级包**  
 
@@ -75,7 +77,7 @@ ms.openlocfilehash: 35f04e237efffbdb12893f658950a99dc0b98b85
     > [!NOTE]  
     >  通常，将使用[创建用于升级操作系统的任务序列](create-a-task-sequence-to-upgrade-an-operating-system.md)中的步骤来创建任务序列，将操作系统升级到 Windows 10。 任务序列包括升级操作系统步骤以及用于处理端到端升级过程的其他建议步骤和组。 但是，可以创建自定义任务序列并添加 [升级操作系统](../understand/task-sequence-steps.md#BKMK_UpgradeOS)任务序列步骤以升级操作系统。 这是将操作系统升级到 Windows 10 所需的唯一步骤。 如果选择此方法，还要在升级操作系统步骤后添加[重启计算机](../understand/task-sequence-steps.md#a-namebkmkrestartcomputera-restart-computer)步骤来完成升级。 请务必使用“当前安装的默认操作系统”设置，将计算机重启到已安装的操作系统而不是 Windows PE。  
 
-##  <a name="a-namebkmkdeploya-deploy"></a><a name="BKMK_Deploy"></a> 部署  
+##  <a name="BKMK_Deploy"></a> 部署  
 
 -   使用下列部署方法之一部署操作系统：  
 
@@ -88,9 +90,4 @@ ms.openlocfilehash: 35f04e237efffbdb12893f658950a99dc0b98b85
 -   **监视任务序列部署**  
 
      若要监视任务序列部署以升级操作系统，请参阅[监视操作系统部署](monitor-operating-system-deployments.md)。  
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

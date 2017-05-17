@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: 6a851ddfeee78574fbb0b1eff0c7cc518a7bb598
+ms.contentlocale: zh-cn
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -28,7 +30,7 @@ ms.openlocfilehash: 6a851ddfeee78574fbb0b1eff0c7cc518a7bb598
 
 System Center Configuration Manager 中的资产智能允许使用资产智能目录清查和管理整个企业中的软件许可证使用情况。 许多硬件清单 Windows Management Instrumentation (WMI) 类扩大了收集的有关所用硬件和软件标题的信息的广度。 超过 60 个报表以易于使用的格式显示此信息。 这些报表有很多链接至更具针对性的报表，在其中可以查询常规信息和钻取至更详细的信息。 可以将自定义信息添加到资产智能目录，如自定义软件类别、软件家族、软件标签和硬件要求。 还可以连接到 System Center Online，用最新的可用信息动态更新资产智能目录。 Microsoft 客户可以通过将软件许可证信息导入 Configuration Manager 站点数据库中，来协调企业软件许可证与已购买并正在使用的软件许可证的使用。  
 
-##  <a name="a-namebkmkassetintelligencecataloga-asset-intelligence-catalog"></a><a name="BKMK_AssetIntelligenceCatalog"></a> 资产智能目录  
+##  <a name="BKMK_AssetIntelligenceCatalog"></a> 资产智能目录  
 
  Configuration Manager 资产智能目录是存储在站点数据库中的一组数据库表，它们包含超过 300,000 个软件标题和版本的分类和标识信息。 这些数据库表也用于管理特定软件标题的硬件要求。  
 
@@ -36,22 +38,22 @@ System Center Configuration Manager 中的资产智能允许使用资产智能�
 
  包含新发布软件的资产智能目录更新可供定期下载以执行批量目录更新。 或者，可以使用资产智能同步点站点系统角色动态更新目录。  
 
-###  <a name="a-namebkmksoftwarecategoriesa-software-categories"></a><a name="BKMK_SoftwareCategories"></a> 软件类别  
+###  <a name="BKMK_SoftwareCategories"></a> 软件类别  
  资产智能软件类别可用于对已列出清单的软件标题进行广泛的分类，也可用作更具体的软件家族的高级别分组。 例如，软件类别可以是能源公司，而该软件类别中的软件家族可以是石油和天然气或水力电气。 在资产智能目录中预定义了许多软件类别，并且可以创建用户定义的类别以额外定义已列出清单的软件。 所有预定义的软件类别的验证状态始终为“已验证” ，而添加到资产智能目录的自定义软件类别信息是“用户定义” 。 有关如何管理软件类别的详细信息，请参阅[在 System Center Configuration Manager 中配置资产智能](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md)。  
 
 > [!NOTE]  
 >  存储在资产智能目录中的预定义软件类别信息是只读的，无法更改或删除。 管理用户可以添加、修改或删除用户定义的软件类别。  
 
-###  <a name="a-namebkmksoftwarefamiliesa-software-families"></a><a name="BKMK_SoftwareFamilies"></a> 软件家族  
+###  <a name="BKMK_SoftwareFamilies"></a> 软件家族  
  资产智能软件家族可用于定义软件类别中的已列出清单的软件标题。 在资产智能目录中预定义了许多软件家族，并且可以创建用户定义的类别以额外定义已列出清单的软件。 所有预定义的软件家族的验证状态始终为“已验证” ，而添加到资产智能目录的自定义软件家族信息是“用户定义” 。 有关如何管理软件家族的详细信息，请参阅[在 System Center Configuration Manager 中配置资产智能](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md)。  
 
 > [!NOTE]  
 >  预定义软件家族信息是只读的，无法更改。 管理用户可以添加、修改或删除用户定义的软件家族。  
 
-###  <a name="a-namebkmkcustomlabelsa-software-labels"></a><a name="BKMK_CustomLabels"></a> 软件标签  
+###  <a name="BKMK_CustomLabels"></a> 软件标签  
  资产智能自定义软件标签使你可以创建筛选器，可使用它们对软件标题进行分组并使用资产智能报表查看它们。 可以使用软件标签创建共享公共属性的软件标题的用户定义组。 例如，可以创建一个名为“共享件”的软件标签，将该软件标签与已列出清单的共享件标题相关联，然后运行报表以显示具有关联“共享件”软件标签的所有软件标题。 未预定义软件标签。 软件标签的验证状态始终是“用户定义” 。 有关如何管理软件标签的详细信息，请参阅[在 System Center Configuration Manager 中配置资产智能](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md)。  
 
-###  <a name="a-namebkmkhardwarerequirementsa-hardware-requirements"></a><a name="BKMK_HardwareRequirements"></a> 硬件要求  
+###  <a name="BKMK_HardwareRequirements"></a> 硬件要求  
  对软件标题进行软件部署前，可以使用硬件要求来验证计算机是否满足软件标题的硬件要求。 可以在“资产和符合性”  工作区中的“资产智能”  节点下的“硬件要求”  节点下，管理软件标题的硬件要求。 资产智能目录中预定义了许多硬件要求，你可以创建新的用户定义的硬件要求信息以满足自定义要求。 所有预定义硬件要求的验证状态始终为“已验证” ，而添加到资产智能目录的用户定义硬件要求是“用户定义” 。 有关如何管理硬件要求的详细信息，请参阅[在 System Center Configuration Manager 中配置资产智能](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md)。  
 
 > [!NOTE]  
@@ -73,7 +75,7 @@ System Center Configuration Manager 中的资产智能允许使用资产智能�
 
  存储在资产智能目录中的预定义硬件要求是只读的，无法删除。  管理用户可以添加、修改或删除未存储在资产智能目录中的软件标题的用户定义硬件要求。  
 
-##  <a name="a-namebkmkinventoriedsoftwaretitlesa-inventoried-software-titles"></a><a name="BKMK_InventoriedSoftwareTitles"></a> 已列出清单的软件标题  
+##  <a name="BKMK_InventoriedSoftwareTitles"></a> 已列出清单的软件标题  
  可以在“资产和符合性”  工作区中的“资产智能”  节点下的“已列出清单的软件”  节点下，查看已列出清单的软件标题信息。 硬件清单客户端代理基于存储在资产智能目录中的软件标题，从 Configuration Manager 客户端收集已列出清单的软件信息。  
 
 > [!WARNING]  
@@ -100,7 +102,7 @@ System Center Configuration Manager 中的资产智能允许使用资产智能�
 > [!NOTE]  
 >  只能在层次结构中的顶层站点上为已列出清单的软件更改分类信息（产品名称、供应商、软件类别和软件家族）。 修改预定义软件的分类信息之后，软件的验证状态会从“已验证”  更改为“用户定义” 。  
 
-##  <a name="a-nameassetintelligencesycnronizationpointa-asset-intelligence-synchronization-point"></a><a name="AssetIntelligenceSycnronizationPoint"></a> 资产智能同步点  
+##  <a name="AssetIntelligenceSycnronizationPoint"></a> 资产智能同步点  
  资产智能同步点是一个用于连接到 System Center Online（使用 TCP 端口 443）以管理动态资产智能目录信息更新的 Configuration Manager 站点系统角色。 此站点角色只能安装在层次结构的顶层站点上。 必须使用连接到顶层站点的 Configuration Manager 控制台配置所有资产智能目录自定义。 虽然所有更新都必须在顶层站点上配置，但是资产智能目录信息会复制到层次结构中的其他站点。 使用资产智能同步点站点角色可以请求与 System Center Online 进行按需目录同步或者计划自动目录同步。 除了下载新的资产智能目录信息之外，资产智能同步点还可以将自定义软件标题信息上载到 System Center Online 以进行分类。 Microsoft 将所有上载到 System Center Online 进行分类的软件标题信息视为公用信息。 因此，应确保自定义软件标题不包含机密或专有信息。  
 
 > [!NOTE]  
@@ -109,7 +111,7 @@ System Center Configuration Manager 中的资产智能允许使用资产智能�
 > [!NOTE]  
 >  需要资产智能同步点站点系统角色才能连接到 System Center Online。 有关如何安装资产智能同步点的信息，请参阅[在 System Center Configuration Manager 中配置资产智能](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md)。  
 
-##  <a name="a-namebkmkassetintelligencehomepagea-asset-intelligence-home-page"></a><a name="BKMK_AssetIntelligenceHomePage"></a> “资产智能”主页  
+##  <a name="BKMK_AssetIntelligenceHomePage"></a> “资产智能”主页  
  “资产和符合性”工作区中的“资产智能”节点是 Configuration Manager 中的资产智能主页。 “资产智能”  主页显示资产智能目录信息的摘要仪表板视图。  
 
 > [!NOTE]  
@@ -124,28 +126,28 @@ System Center Configuration Manager 中的资产智能允许使用资产智能�
 
 -   **清单软件状态**：提供已列出清单的软件、软件类别以及由 Microsoft 标识、由管理员标识、等待联机标识或未标识并且未等待的软件家族的计数和百分比。 以表格式显示的信息显示每种对象的计数，以图表显示的信息显示每个对象的百分比。  
 
-##  <a name="a-namebkmkassetintelligencereportsa-asset-intelligence-reports"></a><a name="BKMK_AssetIntelligenceReports"></a> 资产智能报表  
+##  <a name="BKMK_AssetIntelligenceReports"></a> 资产智能报表  
  资产智能报表位于 Configuration Manager 控制台中，在“监视”工作区中“报表”节点下的“资产智能”文件夹中。 这些报表提供有关硬件、许可证管理和软件的信息。 有关 Configuration Manager 中报表的详细信息，请参阅 [System Center Configuration Manager 中的报表](../../../../core/servers/manage/reporting.md)。  
 
 > [!NOTE]  
 >  资产智能报表中显示的已安装软件标题和许可证信息的数量的准确性可能会与安装的软件标题或环境中使用的许可证的实际数量不同。 形成这种差异的原因是为企业环境中安装的软件标题清点软件许可证信息所涉及的复杂依赖关系和限制。 请勿将资产智能报表用作确定所购买软件许可证符合性的唯一来源。  
 
-###  <a name="a-namebkmkhardwarereportsa-asset-intelligence-hardware-reports"></a><a name="BKMK_HardwareReports"></a> 资产智能硬件报表  
+###  <a name="BKMK_HardwareReports"></a> 资产智能硬件报表  
  资产智能硬件报表提供有关组织中硬件资产的信息。 使用硬件清单信息（例如速度、内存、外围设备等），资产智能硬件报表可以显示有关 USB 设备、必须升级的硬件乃至未准备好执行特定软件升级的计算机的信息。  
 
 > [!NOTE]  
 >  资产智能硬件报表中的一些用户数据是从系统安全事件日志收集的。 为实现更好的报表准确性，建议在将计算机重新分配给新用户时清除此日志。  
 
-###  <a name="a-namebkmklicensemanagementreportsa-asset-intelligence-license-management-reports"></a><a name="BKMK_LicenseManagementReports"></a> 资产智能许可证管理报表  
+###  <a name="BKMK_LicenseManagementReports"></a> 资产智能许可证管理报表  
  资产智能许可证管理报表提供有关正在使用的许可证的数据。 “许可证分类帐”报表以与 Microsoft 许可证声明 (MLS) 一致的格式列出已安装的 Microsoft 应用程序。 这提供了将购买的许可证与使用的许可证配对的简便方法。 其他许可证管理报表提供有关充当针对操作系统激活统计信息运行密钥管理服务 (KMS) 的服务器的计算机的信息。  
 
 > [!IMPORTANT]  
 >  有几个资产智能许可证管理报表可提供有关 KMS（一种管理批量许可的方法）的功能的信息。 如果尚未实施 KMS 服务器，某些报表可能不返回任何数据。 有关 KMS 的详细信息，请在 [Microsoft TechNet](http://go.microsoft.com/fwlink/?linkid=3225)上搜索 KMS。  
 
-###  <a name="a-namebkmksoftwarereportsa-asset-intelligence-software-reports"></a><a name="BKMK_SoftwareReports"></a> 资产智能软件报表  
+###  <a name="BKMK_SoftwareReports"></a> 资产智能软件报表  
  资产智能软件报表提供有关组织中计算机上安装的软件家族、类别和特定软件标题的信息。 软件报表可显示有关浏览器帮助程序对象、自动启动的软件等的信息。 这些报表可用于识别广告软件、间谍软件和其他恶意软件，并且可以标识软件冗余，从而有助于简化软件购买和支持。  
 
-###  <a name="a-namebkmksoftwareidtagreportsa-asset-intelligence-software-identification-tag-reports"></a><a name="BKMK_SoftwareIdTagReports"></a> 资产智能软件标识标记报表  
+###  <a name="BKMK_SoftwareIdTagReports"></a> 资产智能软件标识标记报表  
  资产智能软件标识标记报表提供有关包含符合 ISO/IEC 19770-2 标准的软件标识标记的软件的信息。 软件标识标记提供用于标识安装的软件的授权信息。 启用 SMS_SoftwareTag 硬件清单报表类时，Configuration Manager 会收集有关具有软件标识标记的软件的信息。 以下报表提供有关软件的信息：  
 
 -   **软件 14A - 搜索启用软件标识标记的软件**：此报表提供启用了软件标识标记的已安装软件的计数。  
@@ -154,10 +156,10 @@ System Center Configuration Manager 中的资产智能允许使用资产智能�
 
 -   **软件 14C - 特定计算机上所安装的启用软件标识标记的软件**：此报表列出特定计算机上启用了特定软件标识标记的所有已安装软件。  
 
-###  <a name="a-namebkmkreportinglimitationsa-asset-intelligence-reporting-limitations"></a><a name="BKMK_ReportingLImitations"></a> 资产智能报表限制  
+###  <a name="BKMK_ReportingLImitations"></a> 资产智能报表限制  
  资产智能报表可以提供有关安装的软件标题及已购买且正在使用的软件许可证的大量信息。 然而，不应该将这些信息用作确定所购买软件许可证符合性的唯一来源。  
 
-####  <a name="a-namebkmkexampledependenciesa-example-dependencies"></a><a name="BKMK_ExampleDependencies"></a> 示例依赖关系  
+####  <a name="BKMK_ExampleDependencies"></a> 示例依赖关系  
  资产智能报表中显示的已安装软件标题和许可证信息的数量的准确性可能会与当前使用的实际数量不同。 形成这种差异的原因是为企业环境中使用的软件标题清点软件许可证信息所涉及的复杂依赖关系。 以下举例演示了在使用资产智能的企业中，对可能影响资产智能报表准确性的已安装软件列出清单所涉及的依赖关系：  
 
  **客户端硬件清单依赖关系**  
@@ -166,7 +168,7 @@ System Center Configuration Manager 中的资产智能允许使用资产智能�
  **软件封装依赖关系**  
  因为资产智能报表基于使用标准 Configuration Manager 客户端硬件清单进程收集的已安装软件标题数据，所以可能未正确收集某些软件标题数据。 例如，不符合标准安装流程的软件安装或者在安装之前更改的软件安装可能导致资产智能报表不准确。  
 
-####  <a name="a-namebkmklegallimitationsa-legal-limitations"></a><a name="BKMK_LegalLimitations"></a> 法律限制  
+####  <a name="BKMK_LegalLimitations"></a> 法律限制  
  资产智能报表中显示的信息受诸多限制影响，其中显示的信息不表示法律、会计或其他专业建议。 资产智能报表提供的信息仅供参考，并且不应用作确定软件许可证使用情况符合性的唯一信息来源。  
 
  以下举例说明了在使用资产智能的企业中，对可能影响资产智能报表准确性的已安装软件和许可证使用情况列出清单所涉及的限制：  
@@ -188,7 +190,7 @@ System Center Configuration Manager 中的资产智能允许使用资产智能�
  **许可证对帐限制**  
  通过将由管理员指定的许可证数量与根据管理员所设置的计划从 Configuration Manager 客户端硬件清单收集的已安装软件标题数量进行比较，来计算安装的软件标题数量与购买的软件许可证数量的对帐。 此比较并不表示许可证位置的最终 Microsoft 结论。 实际的许可证位置取决于特定软件标题许可证以及许可条款所授予的使用权限。  
 
-##  <a name="a-namebkmkvalidationstatesa-asset-intelligence-validation-states"></a><a name="BKMK_ValidationStates"></a> 资产智能验证状态  
+##  <a name="BKMK_ValidationStates"></a> 资产智能验证状态  
  资产智能验证状态表示资产智能目录信息的源验证状态和当前验证状态。 下表显示可能的资产智能验证状态以及可能导致这些状态的管理员操作。  
 
 |**状态**|**定义**|**管理员操作**|**注释**|  
@@ -206,9 +208,4 @@ System Center Configuration Manager 中的资产智能允许使用资产智能�
 >  在分类冲突解决后，项目不会再次验证为存在冲突，除非以后的分类更新引入了有关项目的新信息。  
 
  有关验证状态何时可能会从一个状态转换到另一个状态的示例，请参阅 [System Center Configuration Manager 中的资产智能验证状态转换示例](../../../../core/clients/manage/asset-intelligence/example-validation-state-transitions-for-asset-intelligence.md)。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

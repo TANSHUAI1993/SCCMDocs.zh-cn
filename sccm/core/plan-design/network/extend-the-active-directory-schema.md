@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 88649111ea3a38c027efb4952211546afd0bf27e
 ms.openlocfilehash: 58beef440db8e019a06ce7c4c8eaabc8e85ce954
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -110,9 +112,4 @@ ms.openlocfilehash: 58beef440db8e019a06ce7c4c8eaabc8e85ce954
  设置容器并授予权限，并且安装 Configuration Manager 主站点后，可以设置该站点以将数据发布到 Active Directory。  
 
  有关发布的详细信息，请参阅[发布 System Center Configuration Manager 的站点数据](../../../core/servers/deploy/configure/publish-site-data.md)。  
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

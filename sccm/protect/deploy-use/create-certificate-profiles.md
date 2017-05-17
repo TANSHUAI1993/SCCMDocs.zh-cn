@@ -16,10 +16,11 @@ caps.handback.revision: 0
 author: Nbigman
 ms.author: nbigman
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: aa8924a013ebdbee888cab33001fddbe7ad2d67e
 ms.openlocfilehash: 80a716f5a42a81e5550eb1b5c7f14534e14a4fb7
-ms.lasthandoff: 03/30/2017
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 
 ---
