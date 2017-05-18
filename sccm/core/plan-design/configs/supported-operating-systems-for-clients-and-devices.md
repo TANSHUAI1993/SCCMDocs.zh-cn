@@ -15,10 +15,11 @@ caps.latest.revision: 5
 author: arob98
 ms.author: angrobe
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 507bad02c6e028f09a8b0c8a566ac55f7c3942a5
-ms.openlocfilehash: 4afba7b7702aa12b1cfcaf454e23b0dfb3274e7f
-ms.lasthandoff: 03/22/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d5166b16ffbe46af561b1ce98c0494cc4aaa72a8
+ms.openlocfilehash: cd7b8bf35aeb26c8b7b37f6faa51c9a09138fdb9
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="supported-operating-systems-for-clients-and-devices-for-system-center-configuration-manager"></a>System Center Configuration Manager 的客户端和设备支持的操作系统
@@ -67,7 +68,7 @@ ms.lasthandoff: 03/22/2017
 -   **Windows 7 SP1**（x86、x64）：专业版、企业版和旗舰版    
 
 -   **Windows Server 2016 (x64) 的 Server Core 安装** <sup>2</sup>
-  - 从版本 1606（或 2016 年 10 月发布的 1606 基准版本）开始，支持该操作系统，并提供 KB3186654 中的修补程序汇总。 但是，此操作系统不支持使用 Endpoint Protection。
+  - 从版本 1606（或 2016 年 10 月发布的 1606 基准版本）开始，支持该操作系统，并提供 KB3186654 中的修补程序汇总。 
 
 
 -   **Windows Server 2012 R2 (x64) 的 Server Core 安装** <sup>2</sup>    
