@@ -2,7 +2,7 @@
 title: "基于 Internet 的客户端管理 | Microsoft Docs"
 description: "创建计划，在 System Center Configuration Manager 中管理基于 Internet 的客户端。"
 ms.custom: na
-ms.date: 04/23/2017
+ms.date: 05/16/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,10 +17,10 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 828e2ac9a3f9bcea1571d24145a1021fdf1091f3
-ms.openlocfilehash: 82867e77840e14e9b8170801ea3c4a9f399c9890
+ms.sourcegitcommit: ae60eb25383f4bd07faaa1265185a471ee79b1e9
+ms.openlocfilehash: 90c30bfb22735f73422f1547301552bf42022bb9
 ms.contentlocale: zh-cn
-ms.lasthandoff: 12/16/2016
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -34,7 +34,7 @@ ms.lasthandoff: 12/16/2016
 
  使用下列部分来帮助你规划基于 Internet 的客户端管理。  
 
-##  <a name="BKMK_IBCM_FeaturesNotSupported"></a> Internet 上不支持的功能  
+##  <a name="features-that-are-not-supported-on-the-internet"></a>Internet 上不支持的功能  
  并非所有客户端管理功能都适用于 Internet，因此在 Internet 上管理客户端时，有些功能可能不受支持。 不支持 Internet 管理的功能通常依赖于 Active Directory 域服务或不适合用于公用网络，例如网络发现和 LAN 唤醒 (WOL)。  
 
  通过 Internet 管理客户端时，下列功能不受支持：  
@@ -55,7 +55,7 @@ ms.lasthandoff: 12/16/2016
 
  如果你具有配置为接受 Internet 连接的软件更新点，则 Internet 上基于 Configuration Manager Internet 的客户端始终会对此软件更新点进行扫描，以确定是否需要软件更新。 但是，如果这些客户端在 Internet 上，则它们首先会尝试从 Microsoft 更新下载软件更新，而不是从基于 Internet 的分发点中下载。 只有在此下载失败的情况下，它们之后才会尝试从基于 Internet 的分发点下载所需的软件更新。 未针对基于 Internet 的客户端管理进行配置的客户端不能从 Microsoft 更新下载软件更新，而必须使用 Configuration Manager 分发点。  
 
-##  <a name="BKMK_PlanforInternetSiteSystems"></a>来自 Internet 或不受信任林的客户端通信的注意事项  
+##  <a name="considerations-for-client-communications-from-the-internet-or-untrusted-forest"></a>有来自 Internet 或不受信任的林中的客户端通信的注意事项  
  下列安装在主站点上的站点系统角色支持来自不受信任的位置（如 Internet 或不受信任的林）的客户端连接（辅助站点不支持来自不受信任位置的客户端连接）：  
 
 -   应用程序目录网站点  
@@ -96,7 +96,7 @@ ms.lasthandoff: 12/16/2016
 -   隧道：   
     如果代理 Web 服务器无法支持 SSL 桥接的要求，或者想对通过 Configuration Manager 注册的移动设备配置 Internet 支持，则也支持 SSL 隧道。 这是一项安全性较差的选项，因为来自 Internet 的 SSL 数据包会在不终止 SSL 的情况下转发到站点系统，因此无法检测其是否包含恶意内容。 使用 SSL 隧道时，代理 Web 服务器不需要证书。  
 
-##  <a name="BKMK_PlanforInternetClients"></a>规划基于 Internet 的客户端  
+##  <a name="planning-for-internet-based-clients"></a>规划基于 Internet 的客户端  
  你必须确定是为 Intranet 和 Internet 上的管理还是为仅限 Internet 客户端管理配置将通过 Internet 管理的客户端计算机。 只能在安装客户端计算机期间配置客户端管理选项。 如果过后改变了主意，则必须重新安装客户端。  
 
 > [!NOTE]  
@@ -116,7 +116,7 @@ ms.lasthandoff: 12/16/2016
 
  在基于 Internet 的客户端管理和 Intranet 客户端管理之间自动切换的优点是：当客户端计算机连接到 Intranet 时可自动使用所有 Configuration Manager 功能，当客户端计算机连接到 Internet 时，可继续使用基本管理功能对其进行管理。 此外，在 Internet 上开始的下载可以在 Intranet 上无缝地继续，反之亦然。  
 
-##  <a name="BKMK_PrerequisitsForInternetClientMgmt"></a>基于 Internet 的客户端管理的先决条件  
+##  <a name="prerequisites-for-internet-based-client-management"></a>基于 Internet 的客户端管理的先决条件  
  Configuration Manager 中基于 Internet 的客户端管理具有以下外部依赖项：  
 
 -   将在 Internet 上管理的客户端必须具有 Internet 连接。  
