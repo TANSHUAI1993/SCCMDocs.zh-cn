@@ -15,9 +15,11 @@ caps.latest.revision: 2
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
 ms.openlocfilehash: 59633ce68e2bb2d722900215751f345d6d098721
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="capabilities-in-technical-preview-1610-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1610 版中的功能
@@ -63,19 +65,19 @@ ms.openlocfilehash: 59633ce68e2bb2d722900215751f345d6d098721
 #### <a name="try-it-out"></a>试试看
 拒绝已批准的应用程序请求：
 
-1.  在 Configuration Manager 控制台中，[创建和部署需要批准的应用程序](https://docs.microsoft.com/en-us/sccm/apps/deploy-use/create-applications)。
-2.  在客户端计算机上，打开“软件中心”并提交应用程序请求。
-3.  在 Configuration Manager 控制台中，批准应用程序请求。
-4.  拒绝已批准的应用程序请求：在 Configuration Manager 控制台中，导航到“软件库” > “概述” > “应用程序管理” > “批准请求”，然后选择要拒绝的应用程序请求。  在功能区上，单击“拒绝”。
+1.    在 Configuration Manager 控制台中，[创建和部署需要批准的应用程序](https://docs.microsoft.com/en-us/sccm/apps/deploy-use/create-applications)。
+2.    在客户端计算机上，打开“软件中心”并提交应用程序请求。
+3.    在 Configuration Manager 控制台中，批准应用程序请求。
+4.    拒绝已批准的应用程序请求：在 Configuration Manager 控制台中，导航到“软件库” > “概述” > “应用程序管理” > “批准请求”，然后选择要拒绝的应用程序请求。  在功能区上，单击“拒绝”。
 
 ## <a name="exclude-clients-from-automatic-upgrade"></a>从自动升级中排除客户端
 Technical Preview 1610 引入了一种新设置，可用于排除客户端集合，使其不会自动安装更新后的客户端版本。  这适用于自动升级以及其他方法，例如基于软件更新的升级、登录脚本和组策略。 这可以用于在升级客户端时需格外谨慎的计算机的集合。 排除集合中的客户端会忽略安装更新客户端软件的请求。
 
 ### <a name="configure-exclusion-from-automatic-upgrade"></a>配置自动升级排除
 配置自动升级排除：
-1.  在 Configuration Manager 控制台中，打开“管理”>“站点配置”>“站点”下的“层次结构设置”，然后选择“客户端升级”选项卡。
-2.  选中“从升级中排除指定的客户端”复选框，然后选中“排除集合”，然后选择要排除的集合。 只能选择排除单个集合。
-3.  单击“确定”以关闭并保存配置。 然后，客户端更新策略后，排除集合中的客户端将不再自动安装客户端软件更新。
+1.    在 Configuration Manager 控制台中，打开“管理”>“站点配置”>“站点”下的“层次结构设置”，然后选择“客户端升级”选项卡。
+2.    选中“从升级中排除指定的客户端”复选框，然后选中“排除集合”，然后选择要排除的集合。 只能选择排除单个集合。
+3.    单击“确定”以关闭并保存配置。 然后，客户端更新策略后，排除集合中的客户端将不再自动安装客户端软件更新。
 
   ![用于自动升级排除的设置](media/automatic_upgrade_exclusion.png)
 
@@ -128,13 +130,13 @@ Technical Preview 1610 引入了一种新设置，可用于排除客户端集合
 
 ### <a name="try-it-out"></a>试试看！
 
-1.  在 Configuration Manager 控制台中，转到“资产和合规性” > “概述” > “合规性设置” > >“配置项”，然后创建新的“配置项”。
-2.  输入名称，然后在**不通过 Configuration Manager 客户端托管的设备的设置**下选择“Windows 8.1 和 Windows 10”，然后单击“下一步”。
-3.  确保在“支持平台”页面上选中“所有 Windows 10 (64 位)”和“所有 Windows 10 (32位)”，然后单击“下一步”。
-4.  选择 **Windows Defender** 设置组，然后单击“下一步”。
-5.  在此页上配置所需设置，然后单击“下一步”。
-6.  完成向导。
-7.  将此配置项添加到配置基线，并将此基线部署到运行 Windows 10 十一月更新 (1511) 或更高版本的计算机。
+1.    在 Configuration Manager 控制台中，转到“资产和合规性” > “概述” > “合规性设置” > >“配置项”，然后创建新的“配置项”。
+2.    输入名称，然后在**不通过 Configuration Manager 客户端托管的设备的设置**下选择“Windows 8.1 和 Windows 10”，然后单击“下一步”。
+3.    确保在“支持平台”页面上选中“所有 Windows 10 (64 位)”和“所有 Windows 10 (32位)”，然后单击“下一步”。
+4.    选择 **Windows Defender** 设置组，然后单击“下一步”。
+5.    在此页上配置所需设置，然后单击“下一步”。
+6.    完成向导。
+7.    将此配置项添加到配置基线，并将此基线部署到运行 Windows 10 十一月更新 (1511) 或更高版本的计算机。
 
 > [!NOTE]
 > 请记住，在部署配置基线时选中“修正不符合要求的设置”复选框。
@@ -145,14 +147,14 @@ Technical Preview 1610 引入了一种新设置，可用于排除客户端集合
 
 ### <a name="try-it-out"></a>试试看！
 
-1.  在 Configuration Manager 控制台中，转到“资产和合规性” > “概览”>“设备”。
-2.  在“远程设备操作”菜单中，选择“发送同步请求”。
+1.    在 Configuration Manager 控制台中，转到“资产和合规性” > “概览”>“设备”。
+2.    在“远程设备操作”菜单中，选择“发送同步请求”。
 
-同步可能需要&5; 到&10; 分钟。 策略中的任何更改都将同步到设备。 可以在“设备”视图的“远程同步状态”列或设备的“属性”对话框中跟踪同步请求的状态。
+同步可能需要 5 到 10 分钟。 策略中的任何更改都将同步到设备。 可以在“设备”视图的“远程同步状态”列或设备的“属性”对话框中跟踪同步请求的状态。
 
 ## <a name="additional-security-role-support"></a>其他安全角色支持
 
-除了完全权限管理员之外，以下内置安全角色现在对“所有企业拥有的设备”节点中的项具有完全访问权限，包括**预声明设备**、**iOS 注册配置文件**以及 **Windows 注册配置文件**：•   **资产管理员** •   **公司资源资产管理员**
+现在，除了完全权限管理员之外，以下内置安全角色也拥有对“所有公司拥有的设备”节点中的项（包括“预声明设备”、“iOS 注册配置文件”和“Windows 注册配置文件”）的完全访问权限：•    **资产管理员** •    **公司资源资产管理员**
 
 对 Configuration Manager 控制台中这些区域的只读访问权限仍授予给**只读分析员**角色。
 
@@ -162,9 +164,4 @@ Technical Preview 1610 引入了一种新设置，可用于排除客户端集合
 
 ## <a name="see-also"></a>另请参阅
 [System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

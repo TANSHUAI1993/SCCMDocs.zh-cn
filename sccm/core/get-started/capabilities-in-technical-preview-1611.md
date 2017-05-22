@@ -15,9 +15,11 @@ caps.latest.revision: 2
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
 ms.openlocfilehash: 5e77ebbfd3f3d573d903fe58024a22feb9884e4a
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="capabilities-in-technical-preview-1611-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1611 版中的功能
@@ -35,9 +37,9 @@ ms.openlocfilehash: 5e77ebbfd3f3d573d903fe58024a22feb9884e4a
 
  由于这些只是警告，因此可以忽略。
 
-- ***PowerShell***：从 Configuration Manager 控制台连接到 Windows PowerShell 时，可能会收到以下错误：** Microsoft.ConfigurationManagement.PowerShell.Types.ps1xml 未进行数字签名**。  
+- ***PowerShell***：从 Configuration Manager 控制台连接到 Windows PowerShell 时，可能会收到以下错误： **Microsoft.ConfigurationManagement.PowerShell.Types.ps1xml 未进行数字签名**。  
 
-   可通过使用版本 1610 中的已签名版本替换某些文件来解决此问题。 从版本 1610 安装中的 **&lt;install directory>\AdminConsole\bin\** 文件夹复制所有具有以下扩展名的文件：**.psd1**、**.ps1xml** 和 **.psm1**。将这些文件粘贴到 Technical Preview 1611 安装中的 **&lt;install directory>\AdminConsole\bin\** 文件夹，覆盖 1611 版本的文件。
+   可通过使用版本 1610 中的已签名版本替换某些文件来解决此问题。 从版本 1610 安装中的“&lt;安装目录>\AdminConsole\bin”**\**文件夹复制所有具有以下扩展名的文件：**.psd1**、**.ps1xml** 和 **.psm1**。 将这些文件粘贴到 Technical Preview 1611 安装中的“&lt;安装目录>\AdminConsole\bin”**\**文件夹，覆盖 1611 版本的文件。
 
 
 **以下是可以试用的此版本的新功能。**  
@@ -75,9 +77,4 @@ ms.openlocfilehash: 5e77ebbfd3f3d573d903fe58024a22feb9884e4a
 
 ## <a name="see-also"></a>另请参阅
 [System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

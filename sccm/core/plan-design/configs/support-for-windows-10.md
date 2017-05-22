@@ -16,13 +16,13 @@ author: brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 065b1fcb25d7c7845b6f26e757b36e7fb97ce013
-ms.openlocfilehash: 2ec25e9b093d9451d8880ba36f4d022ec4bad001
+ms.sourcegitcommit: f809c9327db9f298168674add2d09820fdecd1b8
+ms.openlocfilehash: ed5efcf7b305f8bee6e99e00c5285f6ae7033d82
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 05/17/2017
 
 ---
-# <a name="support-for-windows-10-for-system-center-configuration-manager"></a>支持对 System Center Configuration Manager 使用 Windows 10
+# <a name="support-for-windows-10-for-system-center-configuration-manager"></a>支持对 System Center Configuration Manager 使用 Windows 10  
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
@@ -64,7 +64,7 @@ Configuration Manager 会在每个 Windows 10 新版本发布后尽快支持其�
 
 下表列出了可以对不同版本 Configuration Manager 使用的 Windows 10 ADK 版本。
 
-|Windows 10 版本 |Configuration Manager 1606 |Configuration Manager 1610  |Configuration Manager 1702 |
+|Windows 10 ADK 版本 |Configuration Manager 1606 |Configuration Manager 1610  |Configuration Manager 1702 |
 |--------------------|-----|-----|-----|
 |1507  |![不支持](media/Red_X.png)         |![不支持](media/Red_X.png)  |![不支持](media/Red_X.png)|
 |1511  |![后向兼容](media/blue_compat.png)|![不支持](media/Red_X.png)  |![不支持](media/Red_X.png)|

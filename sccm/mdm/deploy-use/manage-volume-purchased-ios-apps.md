@@ -2,7 +2,7 @@
 title: "管理批量采购的 iOS 应用 | Microsoft Docs"
 description: "部署、管理和跟踪通过 iOS App Store 购买的应用的许可证。"
 ms.custom: na
-ms.date: 05/03/2017
+ms.date: 05/12/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,10 +17,10 @@ author: mtillman
 ms.author: mtillman
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: c6a6137fa978e1ea28aefea2aea4e29ba661efd6
-ms.openlocfilehash: 55f1204b088a7b636a90561f20aa41c7de72bc05
+ms.sourcegitcommit: f4cb711f369698fe8e045f8c83dd96ec6fb29d70
+ms.openlocfilehash: ce706e938f558406044f7890c80bb7156c3b262b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/04/2017
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="manage-volume-purchased-ios-apps-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 管理批量购买的 iOS 应用
@@ -58,6 +58,7 @@ ms.lasthandoff: 05/04/2017
       选择“同步”执行手动同步时，将始终执行完全同步。  
 -   如果需要恢复或还原 Configuration Manager 数据库，建议稍后执行手动同步，确保同步的许可证数据保持最新。  
 -   此外，必须从 Apple 导入有效的 Apple Push Notification 服务 (APN) 证书，以允许管理 iOS 设备（包括应用部署）。 有关详细信息，请参阅[设置 iOS 混合设备管理](enroll-hybrid-ios-mac.md)。  
+-   Configuration Manager 最多支持添加 3000 个 VPP 令牌。
 
 从 System Center Configuration Manager 1702 开始，现在可以向设备和用户部署已授权的应用。 具体取决于应用支持设备授权的能力，合适的许可证将在部署时按以下方式声明：
 

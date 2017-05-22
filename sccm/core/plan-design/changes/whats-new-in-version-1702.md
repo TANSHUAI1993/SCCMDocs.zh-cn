@@ -13,10 +13,11 @@ ms.assetid: 409e26e1-7716-4f1d-a0ee-34feabf20792
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 90775fcf2549080a43e9c1606caa79d9eb90a89c
-ms.openlocfilehash: 4616ebb84ae63acbe6af892918aa2dd1a0be4825
-ms.lasthandoff: 05/03/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f4cb711f369698fe8e045f8c83dd96ec6fb29d70
+ms.openlocfilehash: a2954b3c6f9a09b7246347e780c4cfc49ba39ca1
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="what39s-new-in-version-1702-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1702 中的新增功能
@@ -172,8 +173,8 @@ System Center Configuration Manager Current Branch 的更新 1702 作为控制�
 ### <a name="hardware-inventory-collects-uefi-information"></a>硬件清单将收集 UEFI 信息
 新的硬件清单类 (**SMS_Firmware**) 和属性 (**UEFI**) 可帮助确定是否以 UEFI 模式启动计算机。 如果以 UEFI 模式启动计算机，则 **UEFI** 属性设为 **TRUE**。 默认情况下，这在硬件清单中处于启用状态。 有关硬件清单的详细信息，请参阅[如何配置硬件清单](/sccm/core/clients/manage/inventory/configure-hardware-inventory)。
 
-### <a name="improvements-to-software-center-settings-and-notification-messages-for-high-impact-task-sequences"></a>针对影响重大的任务序列，改进软件中心设置和消息通知
-本版本包括针对影响重大的任务序列，对软件中心设置和通知消息进行的以下改进：
+### <a name="improvements-to-software-center-warning-messages-for-high-impact-task-sequences"></a>改进了高效任务序列的软件中心警告消息
+此版本对高效部署任务序列的软件中心警告消息进行了以下改进：
 
 - 在任务序列的属性中，现可将任何任务序列（包括非操作系统任务序列）配置为高风险部署。 任何符合特定条件的任务序列都将自动定义为“影响重大”。 有关详细信息，请参阅[管理高风险部署](/sccm/protect/understand/settings-to-manage-high-risk-deployments)。
 - 在任务序列的属性中，可以选择针对影响重大的部署，使用默认通知消息或创建自定义通知消息。

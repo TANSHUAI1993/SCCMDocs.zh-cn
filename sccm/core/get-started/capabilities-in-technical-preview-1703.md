@@ -15,10 +15,11 @@ caps.latest.revision: 5
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 3eb48942c1259d2aa1b3c200fad73b39b11c0b8c
-ms.openlocfilehash: d497bd5a2971315eecdc0900f735ab2cd8b2e7bc
-ms.lasthandoff: 03/30/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f4cb711f369698fe8e045f8c83dd96ec6fb29d70
+ms.openlocfilehash: bb1b96a56db68dcea22270855b899ba3a90afd0d
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="capabilities-in-technical-preview-1703-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1703 中的功能
@@ -141,28 +142,24 @@ Windows 10 创意者更新引入了一个简单的转换工具，可自动执行
 
 
 ## <a name="client-settings-to-configure-windows-analytics-for-upgrade-readiness"></a>用于配置 Windows Analytics for Upgrade Readiness 的客户端设置
-从此版本开始，将 [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics) 用于 Configuration Manager 时，可使用设备客户端设置简化 Windows Analytics 的配置。 Windows Analytics 收集 Configuration Manager 客户端的相关遥测数据，并向 Operations Manager Suite (OMS) 工作区报告这些数据。 收集的遥测数据可帮助确定托管设备 Windows 升级决策的优先级。
-
-Configuration Manager 收集的遥测数据通过 Windows 事件跟踪 (ETW) 日志文件保存。 客户端提交硬件清单时，这些日志文件将提交到 Configuration Manager 站点。 这些文件随后将被传输到 OMS 工作区。 日志传输到 OMS 后，将从 Configuration Manager 站点删除日志文件及其数据。
+自此版本起，可以使用设备客户端设置来简化配置将 [Windows Analytics](https://www.microsoft.com/en-us/WindowsForBusiness/windows-analytics) 解决方案（如 [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics)）与 Configuration Manager 结合使用所需的 Windows 遥测。 Configuration Manager 可以从 Windows Analytics 中检索数据，从而能够根据客户端计算机报告的 Windows 遥测数据获取有关环境当前状态的有价值见解。 Windows 遥测数据由客户端计算机报告给 Windows 遥测服务，随后相关数据被传输到在组织的 OMS 工作区之一中托管的 Windows Analytics 解决方案。 Upgrade Readiness 是一种 Windows Analytics 解决方案，可以帮助你优先做出有关受管理设备的 Windows 升级的决策。
 
 有关 Windows 遥测设置的信息，请参阅[在组织中配置 Windows 遥测](https://technet.microsoft.com/itpro/windows/manage/configure-windows-telemetry-in-your-organization)。
 
 ### <a name="prerequisites"></a>先决条件
-- 必须配置了站点才可从 OMS Upgrade Readiness 使用 Log Analytics。 有关信息，请参阅 Current Branch 内容库中的 [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics)（升级准备情况）。
-- 客户端必须使用应用清单来提交遥测数据。
+- 必须已将站点配置为使用 Upgrade Readiness 云服务。 有关详细信息，请参阅 [Upgrade Readiness](/sccm/core/clients/manage/upgrade/upgrade-analytics)
 
 ### <a name="configure-windows-analytics-client-settings"></a>配置 Windows Analytics 客户端设置
-若要配置 Windows Analytics，可在 Configuration Manager 控制台中转到“管理” > “客户端设置”，双击“默认客户端设置”，然后选择“Windows Analytics”。  
+若要配置 Windows Analytics，请在 Configuration Manager 控制台中依次转到“管理” > “客户端设置”，双击“创建自定义设备客户端设置”，然后选中“Windows Analytics”。  
 
-然后进行下列配置：
+然后，转到“Windows Analytics”设置选项卡，配置进行以下设置：
 - **商用 ID**  
-商用 ID 会将用户管理的设备中的信息映射到 OMS 工作区。 如果已配置用于 Upgrade Readiness（与 Configuration Manager 配合使用）的商用 ID，请使用该 ID。 如果还没有商用 ID，请参阅[生成商用 ID 键]( https://technet.microsoft.com /itpro/windows/deploy/upgrade-readiness-get-started#generate-your-commercial-id-key)。
+商用 ID 键可用于将你管理的设备中的信息映射到托管你组织的 Windows Analytics 数据的 OMS 工作区。 如果已配置用于 Upgrade Readiness 的商用 ID 键，请使用此 ID。 如果还没有配置商用 ID 键，请参阅[生成商用 ID 键]( https://technet.microsoft.com /itpro/windows/deploy/upgrade-readiness-get-started#generate-your-commercial-id-key)。
 
 - 设置 **Windows 10 设备的遥测级别**   
-若要了解每个 Windows 10 遥测级别所收集的内容，请参阅 Windows 联机文档中的[遥测级别]( https://technet.microsoft.com/itpro/windows/manage/configure-windows-telemetry-in-your-organization#telemetry-levels)。
+若要了解每个 Windows 10 遥测级别收集的信息，请参阅[在组织中配置 Windows 遥测]( https://technet.microsoft.com/itpro/windows/manage/configure-windows-telemetry-in-your-organization#telemetry-levels)。
 
 - 选择**选择加入 Windows 7、8 和 8.1 设备上的商业数据收集**   
 若要了解选择加入后从这些操作系统中收集的数据，请从 Microsoft 下载并参阅 PDF 文件 [Windows 7, Windows 8, and Windows 8.1 appraiser telemetry events and fields](https://go.microsoft.com/fwlink/?LinkID=822965)（Windows 7、Windows 8 和 Windows 8.1 评估人员遥测事件和字段）。
 
-- **配置 Internet Explore 数据收集**
-
+- **配置 Internet Explorer 数据收集**：在运行 Windows 8.1 或更低版本的设备上，启用 Internet Explorer 数据收集后，Upgrade Readiness 可以检测可能会阻止顺利升级到 Windows 10 的 Web 应用程序不兼容问题。 可以每 Internet 区域启用一次 Internet Explorer 数据收集。 有关 Internet 区域的详细信息，请参阅[关于 URL 安全区域](https://msdn.microsoft.com/en-us/library/ms537183(v=vs.85).aspx)。

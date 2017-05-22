@@ -16,10 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 3eb48942c1259d2aa1b3c200fad73b39b11c0b8c
-ms.openlocfilehash: 39361102d77441488bf61c9cbbfb0086774e0c09
-ms.lasthandoff: 03/30/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: d5166b16ffbe46af561b1ce98c0494cc4aaa72a8
+ms.openlocfilehash: e040552dab21ba9a71e06a78f6acc2ffe1b0eb61
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -92,7 +93,7 @@ Configuration Manager 在以下操作系统上支持将重复数据删除用于�
 有关详细信息，请参阅 Configuration Manager 团队博客上的 [Configuration Manager 分发点和 Windows Server 2012 重复数据删除](http://blogs.technet.com/b/configmgrteam/archive/2014/02/18/configuration-manager-distribution-points-and-windows-server-2012-data-deduplication.aspx)和 Windows Server TechNet 库中的[重复数据删除概述](http://technet.microsoft.com/library/hh831602.aspx)。  
 
 ##  <a name="bkmk_DA"></a> DirectAccess  
-Configuration Manager 支持 Windows Server 2008 R2 中的 DirectAccess 功能，以便站点系统服务器和客户端之间的通信。  
+Configuration Manager 支持 Windows Server 2008 R2 及更高版本中的 DirectAccess 功能，以便在客户端和站点服务器系统之间进行通信。  
 
 -   当满足了 DirectAccess 的所有要求后，DirectAccess 允许 Internet 上的 Configuration Manager 客户端与其分配的站点通信，就好像在 Intranet 上一样。  
 

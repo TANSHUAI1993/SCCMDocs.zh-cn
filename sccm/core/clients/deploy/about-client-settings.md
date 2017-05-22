@@ -17,8 +17,8 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 4eee9731a4a27328c47c0d15931cab28cf520a18
-ms.openlocfilehash: d1d2ec7c053d13ebaeb00d0dfeb126716b5f7ae5
+ms.sourcegitcommit: ae60eb25383f4bd07faaa1265185a471ee79b1e9
+ms.openlocfilehash: 3d90f16eac59b7069ff2f33170eba85d2cde65ef
 ms.contentlocale: zh-cn
 ms.lasthandoff: 05/17/2017
 
@@ -215,9 +215,9 @@ System Center Configuration Manager 中的所有客户端设置在 Configuration
 
      如果在计算机上配置了 BitLocker PIN 条目，则在软件安装之后重启计算机时，此选项可以略过输入 PIN 的要求。  
 
-    -   **始终**：Configuration Manager 在安装了需要重启的软件并且启动了计算机重启之后，它会临时挂起 BitLocker 提出的在下次计算机重启时输入 PIN 的要求。 此设置仅适用于 Configuration Manager 启动的计算机重启，当用户重启计算机时，它不会挂起输入 BitLocker PIN 的要求。 在 Windows 启动后恢复 BitLocker PIN 输入要求。  
+    -   **始终**：在安装需要重启的软件并且启动计算机重启之后，Configuration Manager 会临时暂停 BitLocker。 此设置仅适用于 Configuration Manager 启动的计算机重启。当用户重启计算机时，它不会取消输入 BitLocker PIN 的要求。 在 Windows 启动后恢复 BitLocker PIN 输入要求。
 
-    -   **从不**：Configuration Manager 在安装了需要重启的软件之后，它不会挂起 BitLocker 提出的在下次计算机重启时输入 PIN 的要求。 在此情况下，直到用户输入 PIN 来完成标准启动过程并加载 Windows，才能完成软件安装。  
+    -   **从不**：在安装需要重启的软件之后，Configuration Manager 不会在下次计算机启动时暂停 BitLocker。 在此情况下，直到用户输入 PIN 来完成标准启动过程并加载 Windows，才能完成软件安装。
 
 -   **其他用于管理应用程序部署和软件更新的软件**  
 

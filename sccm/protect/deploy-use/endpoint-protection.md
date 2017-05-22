@@ -15,9 +15,11 @@ caps.latest.revision: 11
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 4688b4b12a7afa5fcfdc0e42f984271d98f10316
-ms.openlocfilehash: 90e6d82e7fd1ff0ad4f1d616cc23201769fe26e2
+ms.translationtype: Human Translation
+ms.sourcegitcommit: ae60eb25383f4bd07faaa1265185a471ee79b1e9
+ms.openlocfilehash: 3c31271f3e3ae7aa45da03b3d75fd78242330646
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -33,21 +35,15 @@ System Center Configuration Manager 中的 Endpoint Protection 支持为 Configu
  将 Endpoint Protection 与 Configuration Manager 配合使用时，具有以下优势：  
 
 -   配置反恶意软件策略和 Windows 防火墙设置，管理所选的计算机组的 Windows Defender 高级威胁防护  
-
 -   使用 Configuration Manager 软件更新下载最新的反恶意软件定义文件，使客户端计算机保持最新  
-
 -   发送电子邮件通知、使用控制台中的监视、查看报表，以在客户端计算机上检测到恶意软件时，通知管理用户  
 
-从 Windows 10 和 Windows Server 2016 起，计算机无需任何其他的客户端即可进行 Endpoint Protection 管理。 在 Windows 8.1 和早期版本的计算机上，除安装 Configuration Manager 客户端之外，Endpoint Protection 还需安装自己的客户端。 Endpoint Protection 客户端具有以下功能：  
+自 Windows 10 和 Windows Server 2016 计算机起，Windows Defender 已经安装。 对于这些操作系统，Windows Defender 的管理客户端在 Configuration Manager 客户端安装时一起安装。 在 Windows 8.1 及更低版本的计算机上，Endpoint Protection 客户端随 Configuration Manager 客户端一起安装。 Windows Defender 和 Endpoint Protection 客户端具有以下功能：  
 
 -   恶意软件与间谍软件检测和修正  
-
 -   Rootkit 检测和修正  
-
 -   严重漏洞评估与自动定义和引擎更新  
-
 -   通过网络检查系统进行网络漏洞检测  
-
 -   与 Cloud Protection Service 集成，以向 Microsoft 报告恶意软件。 加入此服务后，如果在计算机上检测到无法识别的恶意软件，Endpoint Protection 客户端或 Windows Defender 可以从恶意软件保护中心下载最新的定义。  
 
 > [!NOTE]  
@@ -115,13 +111,8 @@ System Center Configuration Manager 中的 Endpoint Protection 支持为 Configu
 2. 选择网站顶部的“下载和密钥”选项卡。
 3. 筛选产品 **System Center Endpoint Protection (Current Branch)**。
 4. 单击链接以**下载**
-5. 单击“继续” 。 应能看到若干文件，其中一个名为：**System Center Endpoint Protection (current branch - version 1606) for Linux OS and Macintosh OS Multilanguage   32/64 bit   1507 MB ISO**。
+5. 单击“继续” 。 应能看到若干文件，其中一个名为：**System Center Endpoint Protection (current branch - version 1606) for Linux OS and Macintosh OS Multilanguage    32/64 bit    1507 MB    ISO**。
 6. 单击箭头图标，下载该文件。 文件名为 **SW_DVD5_Sys_Ctr_Endpnt_Prtctn_1606_MultiLang_EptProt_Lin_Mac_MLF_X21-30777.ISO**。
 
  有关如何安装和管理适用于 Linux 和 Mac 计算机的 Endpoint Protection 客户端，请使用这些产品随附的文档，该文档位于“文档”  文件夹。
-
-
-
-<!--HONumber=Feb17_HO1-->
-
 

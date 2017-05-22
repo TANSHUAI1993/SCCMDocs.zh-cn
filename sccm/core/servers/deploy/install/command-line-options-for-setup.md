@@ -15,10 +15,11 @@ caps.latest.revision: 3
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
 ms.openlocfilehash: 04fe7b3e674287c4255563ab4a308e54d0b6c3aa
-ms.lasthandoff: 03/27/2017
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="command-line-options-for-setup-in-system-center-configuration-manager"></a>System Center Configuration Manager 中适用于安装程序的命令行选项
@@ -57,8 +58,8 @@ ms.lasthandoff: 03/27/2017
 
  有关安装程序的先决条件文件的详细信息，请参阅[安装程序下载程序](setup-downloader.md)部分。  
 
- **/SCRIPT <*安装脚本路径*>**  
- 执行无人参与的安装。在使用 **/SCRIPT** 选项时，需要一个安装程序初始化文件。 有关如何运行无人参与的安装程序的详细信息，请参阅[使用命令行安装站点](../../../../core/servers/deploy/install/use-a-command-line-to-install-sites.md)。  
+ **/SCRIPT <*安装程序脚本路径*>**  
+ 执行无人参与安装。 在使用 **/SCRIPT** 选项时，需要一个安装程序初始化文件。 有关如何运行无人参与的安装程序的详细信息，请参阅[使用命令行安装站点](../../../../core/servers/deploy/install/use-a-command-line-to-install-sites.md)。  
 
  **/SDKINST <*SMS 提供程序 FQDN*>**  
  在指定计算机上安装 SMS 提供程序。 必须为 SMS 提供程序计算机提供完全限定的域名 (FQDN)。 有关 SMS 提供程序的详细信息，请参阅[为 System Center Configuration Manager 规划 SMS 提供程序](../../../../core/plan-design/hierarchy/plan-for-the-sms-provider.md)。  
@@ -67,7 +68,7 @@ ms.lasthandoff: 03/27/2017
  在指定计算机上卸载 SMS 提供程序。 你必须提供 SMS 提供程序计算机的 FQDN。  
 
  **/MANAGELANGS <*语言脚本路径*>**  
- 管理安装在以前安装的站点上的语言。要使用此选项，必须从站点服务器上的 **<*Configuration Manager 安装路径*>\BIN\X64** 中运行安装程序，并提供包含语言设置的语言脚本文件的位置。 有关语言安装程序脚本文件中可用的语言选项的详细信息，请参阅本主题中的[用于管理语言的命令行选项](#bkmk_Lang)部分。  
+ 管理安装在以前安装的站点上的语言。 若要使用此选项，必须从站点服务器上的“**<*Configuration Manager 安装路径>*>\BIN\X64” **中运行安装程序，然后提供包含语言设置的语言脚本文件的位置。 有关语言安装程序脚本文件中可用的语言选项的详细信息，请参阅本主题中的[用于管理语言的命令行选项](#bkmk_Lang)部分。  
 
 ##  <a name="bkmk_Lang"></a> 用于管理语言的命令行选项  
  **标识**  
@@ -176,7 +177,7 @@ ms.lasthandoff: 03/27/2017
 
     -   **是否必需：** 是  
 
-    -   **值：** <*xxxxx-xxxxx-xxxxx-xxxxx-xxxxx*> *或* Eval  
+    -   **值：** <*xxxxx-xxxxx-xxxxx-xxxxx-xxxxx*>  *或* Eval  
 
     -   **详细信息：**指定 Configuration Manager 安装产品密钥，包括短划线。 输入 **Eval** 以安装 Configuration Manager 的评估版。  
 
@@ -422,7 +423,7 @@ ms.lasthandoff: 03/27/2017
 
     -   **是否必需：** 是  
 
-    -   **值：** <*xxxxx-xxxxx-xxxxx-xxxxx-xxxxx*> *或* Eval  
+    -   **值：** <*xxxxx-xxxxx-xxxxx-xxxxx-xxxxx*>  *或* Eval  
 
     -   **详细信息：**指定 Configuration Manager 安装产品密钥，包括短划线。 输入 **Eval** 以安装 Configuration Manager 的评估版。  
 
@@ -814,7 +815,7 @@ ms.lasthandoff: 03/27/2017
 
     -   **是否必需：** 是  
 
-    -   **值：** <*xxxxx-xxxxx-xxxxx-xxxxx-xxxxx*> *或* Eval  
+    -   **值：** <*xxxxx-xxxxx-xxxxx-xxxxx-xxxxx*>  *或* Eval  
 
     -   **详细信息：**指定 Configuration Manager 安装产品密钥，包括短划线。 输入 **Eval** 以安装 Configuration Manager 的评估版。  
 

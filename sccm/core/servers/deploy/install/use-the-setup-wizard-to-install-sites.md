@@ -14,10 +14,11 @@ caps.latest.revision: 3
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 2f1bc62a4695d60dc4679e479797ee84cd4ddee4
-ms.lasthandoff: 03/27/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f809c9327db9f298168674add2d09820fdecd1b8
+ms.openlocfilehash: 14b4172ad713a3981b8a5abe182405e271d78c26
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="use-the-setup-wizard-to-install-system-center-configuration-manager-sites"></a>使用安装向导安装 System Center Configuration Manager 站点
@@ -310,7 +311,7 @@ ms.lasthandoff: 03/27/2017
     > [!IMPORTANT]  
     > 当 Configuration Manager 安装 SQL Server Express 时，它会安装不带 service pack 的 SQL Server Express 2012：  
 
-    > -   对于要支持的辅助站点，安装该站点后必须安装 Service Pack 2（或更高版本）来升级 SQL Server Express 2012。
+    > -   若要让辅助站点受到支持，必须在安装站点后将 SQL Server Express 2012 升级到[受支持的版本](/sccm/core/plan-design/configs/support-for-sql-server-versions#bkmk_SQLVersions)。
     > -   此外，如果无法完成新辅助站点安装，但先完成了 SQL Server Express 2012 的安装，则必须先更新 SQL Server Express 实例，才能使 Configuration Manager 成功重试辅助站点安装。  
 
      **使用现有的 SQL Server 实例**  

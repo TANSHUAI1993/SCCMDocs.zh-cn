@@ -2,7 +2,7 @@
 title: "支持的 SQL Server 版本 | Microsoft Docs"
 description: "获取托管 System Center Configuration Manager 站点数据库的 SQL Server 版本和配置要求。"
 ms.custom: na
-ms.date: 05/01/2017
+ms.date: 05/10/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,10 +16,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: d5a6fdc9a526c4fc3a9027dcedf1dd66a6fff5a7
-ms.openlocfilehash: fa7f232fd385f742bb11c6596c954d87c2da87a8
+ms.sourcegitcommit: f809c9327db9f298168674add2d09820fdecd1b8
+ms.openlocfilehash: 4166560602edf6eb299511c8b59dc3903e3bfffc
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/02/2017
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -45,14 +45,19 @@ ms.lasthandoff: 05/02/2017
 -   SQL Server 群集。 请参阅[使用 SQL Server 群集托管站点数据库](../../../core/servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md)。
 -   SQL Server AlwaysOn 可用性组。 此选项需要 Configuration Manager 1602 版或更高版本。 有关详细信息，请参阅[通过 SQL Server AlwaysOn 实现适用于 System Center Configuration Manager 的高可用性站点数据库](../../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)。
 
-> [!NOTE]  
->  不支持网络负载平衡 (NLB) 群集配置中的 SQL Server 群集。 此外，不支持 SQL Server 数据库镜像技术和对等复制。 SQL Server 标准事务复制仅支持将对象复制到配置为使用 [数据库副本](https://technet.microsoft.com/library/mt608546.aspx)的管理点。  
-
 
  **辅助站点：**  
  站点数据库可使用完整安装的 SQL Server 或 SQL Server Express 的默认实例。  
 
  SQL Server 必须位于站点服务器计算机上。  
+
+ **支持限制**   
+ 不支持下列配置：
+ -   网络负载均衡 (NLB) 群集配置中的 SQL Server 群集
+ -   群集共享卷 (CSV) 上的 SQL Server 群集
+ -   SQL Server 数据库镜像技术和对等复制
+
+SQL Server 事务复制仅支持将对象复制到配置为使用[数据库副本](https://technet.microsoft.com/library/mt608546.aspx)的管理点。  
 
 ##  <a name="bkmk_SQLVersions"></a> 支持的 SQL Server 版本  
  在含有多个网站的层次结构中，只要满足以下条件，各个网站就可以使用不同版本的 SQL Server 托管网站数据库：
@@ -109,14 +114,14 @@ ms.lasthandoff: 05/02/2017
 -   主站点  
 -   辅助站点  
 
+<!-- Support for this service pack version has been dropped by Microsoft    
+### SQL Server 2012 SP2: Standard, Enterprise   
+ You can use this version of SQL Server with no minimum cumulative update version for the following:  
 
-### <a name="sql-server-2012-sp2-standard-enterprise"></a>SQL Server 2012 SP2：标准版、企业版   
- 可将此版本的 SQL Server 与以下产品的非最低累计更新版本一起使用：  
-
--   管理中心站点  
--   主站点  
--   辅助站点  
-
+-   A central administration site  
+-   A primary site  
+-   A secondary site  
+-->
 
 ### <a name="sql-server-2008-r2-sp3-standard-enterprise-datacenter"></a>SQL Server 2008 R2 SP3：标准版、企业版、数据中心版     
   [从版本 1702 开始](/sccm/core/plan-design/changes/removed-and-deprecated-features#deprecated-support-for-sql-server-versions-as-a-site-database)，不支持此版本的 SQL Server。  
@@ -155,10 +160,13 @@ ms.lasthandoff: 05/02/2017
 
 -   辅助站点  
 
-### <a name="sql-server-2012-express-sp2"></a>SQL Server 2012 Express SP2   
- 可将此版本的 SQL Server 与以下产品的非最低累计更新版本一起使用：  
+<!-- Support for this service pack version has been dropped by Microsoft   
+### SQL Server 2012 Express SP2   
+ You can use this version of SQL Server with no minimum cumulative update version for the following:  
 
--   辅助站点  
+-   A secondary site  
+-->
+
 
 ##  <a name="bkmk_SQLConfig"></a> SQL Server 所需的配置  
  用于站点数据库（包括 SQL Server Express）的 SQL Server 的所有安装都需要以下内容。 Configuration Manager 将 SQL Server Express 作为辅助站点安装的一部分进行安装时，将为你自动创建这些配置。  

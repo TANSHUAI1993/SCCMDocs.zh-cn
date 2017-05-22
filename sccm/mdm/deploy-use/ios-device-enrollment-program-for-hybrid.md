@@ -16,8 +16,8 @@ author: mtillman
 ms.author: mtillman
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 4eee9731a4a27328c47c0d15931cab28cf520a18
-ms.openlocfilehash: 555da7187b505a926731350d16787bc02d28dad3
+ms.sourcegitcommit: ae60eb25383f4bd07faaa1265185a471ee79b1e9
+ms.openlocfilehash: 5b5eadd7b4026eae59acceaef43cdacd7a33d3ac
 ms.contentlocale: zh-cn
 ms.lasthandoff: 05/17/2017
 
@@ -39,7 +39,7 @@ ms.lasthandoff: 05/17/2017
     在能够注册 iOS 设备注册计划 (DEP) 设备之前，必须完成[设置混合移动设备管理](../../mdm/deploy-use/setup-hybrid-mdm.md)的步骤，包括[支持 iOS 注册的步骤](../deploy-use/enroll-hybrid-ios-mac.md)。
 
 2.  **创建 DEP 令牌请求**   
-    在 Configuration Manager 控制台中的“管理”工作区中，展开“层次结构配置”，再展开“云服务”，然后单击“Windows Intune 订阅”。 单击“主页”选项卡上的“创建 DEP 令牌请求”，单击“浏览”指定 DEP 令牌请求的下载位置，然后单击“下载”。 将 DEP 令牌请求 (.pem) 文件保存到本地。 .pem 文件用于从 Apple 设备注册计划门户请求信任令牌 (.p7m)。  
+    在 Configuration Manager 控制台中，依次展开“管理”工作区中的“层次结构配置”和“云服务”，然后单击“Microsoft Intune 订阅”。 单击“主页”选项卡上的“创建 DEP 令牌请求”，单击“浏览”指定 DEP 令牌请求的下载位置，然后单击“下载”。 将 DEP 令牌请求 (.pem) 文件保存到本地。 .pem 文件用于从 Apple 设备注册计划门户请求信任令牌 (.p7m)。  
 
 3.  **获取设备注册计划令牌**   
     转到 [设备注册计划门户](https://deploy.apple.com) (https://deploy.apple.com) 并使用你的公司 Apple ID 登录。 若要续订 DEP 令牌，必须在将来使用此 Apple ID。  
@@ -55,7 +55,7 @@ ms.lasthandoff: 05/17/2017
      此证书(.p7m)文件用于在 Intune 和 Apple 的设备注册计划服务器之间建立信任关系。  
 
 4.  **将 DEP 令牌添加到 Configuration Manager**   
-    在 Configuration Manager 控制台中的“管理”工作区中，展开“层次结构配置”，然后单击“Windows Intune 订阅”。 单击“主页”选项卡上的“配置平台”，然后单击“iOS”。 选择“启用设备注册计划”，浏览到证书 (.p7m) 文件，单击“打开”，再单击“上传”，然后单击“确定”。  
+    在 Configuration Manager 控制台中，展开“管理”工作区中的“层次结构配置”，然后单击“Microsoft Intune 订阅”。 单击“主页”选项卡上的“配置平台”，然后单击“iOS”。 选择“启用设备注册计划”，浏览到证书 (.p7m) 文件，单击“打开”，再单击“上传”，然后单击“确定”。  
 
 #### <a name="set-up-enrollment-for-apple-device-enrollment-program-dep-ios-devices"></a>设置 Apple 设备注册计划 (DEP) iOS 设备的注册  
 

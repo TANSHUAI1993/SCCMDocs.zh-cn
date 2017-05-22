@@ -15,10 +15,11 @@ caps.latest.revision: 157
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: ae008c91a7387ba76f2bfac13f8feb489a0cc558
-ms.openlocfilehash: 8ffaee12bd826e2f19653b215ee19423ea672433
-ms.lasthandoff: 04/21/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f809c9327db9f298168674add2d09820fdecd1b8
+ms.openlocfilehash: 3a7370fedee417588d219dc7bff46205faf42929
+ms.contentlocale: zh-cn
+ms.lasthandoff: 05/17/2017
 
 
 ---
@@ -45,23 +46,7 @@ ms.lasthandoff: 04/21/2017
 
 -   每次安装在保持活动状态 90 天后变为非活动状态。  
 
--   英语是唯一受支持的语言。  
-
--   仅支持独立主站点。 不支持管理中心站点、多个主站点或辅助站点。  
-
--   仅支持以下 SQL Server 版本：  
-
-    -   SQL Server 2016（不带 Service Pack）及更高版本
-    -   SQL Server 2014（不带 Service Pack）及更高版本
-    -   SQL Server 2012（带 Service Pack 2）或更高版本
-
-
--   站点最多支持 10 个客户端，这些客户端必须在以下操作系统之一上运行：  
-
-      -   Windows 10  
-      -   Windows 8.1  
-      -   Windows 8  
-      -   Windows 7  
+-   英语是唯一受支持的语言。
 
 
 -   仅支持以下安装标志（开关）：  
@@ -79,6 +64,23 @@ ms.lasthandoff: 04/21/2017
 -   不支持升级到此预览版。  
 
 -   不支持从此预览版升级到生产版本（当前分支）。 但是，更新可用于预览版本时，可以从 Configuration Manager 控制台的“更新和与维护服务”节点查找并安装它们。 有关控制台中升级过程的视频，请观看 youtube.com 上的 [Installing ConfigMgr Update Packages（安装 ConfigMgr 更新包）](https://www.youtube.com/embed/KBd_EGFbUT8) 。  
+-   仅支持独立主站点。 不支持管理中心站点、多个主站点或辅助站点。  
+
+此 Configuration Manager 分支支持以下产品和技术。 不过，将它们囊括在这一内容中并不表示对超出相应产品的单独支持生命周期的产品或版本延长支持。 不支持将超出其支持生命周期的产品与 Configuration Manager 一起使用。 有关 Microsoft 支持生命周期的详细信息，请访问 [Microsoft 支持生命周期](http://go.microsoft.com/fwlink/p/?LinkId=208270) 网站。  
+
+-   仅支持以下 SQL Server 版本：  
+
+    -   SQL Server 2016（不带 Service Pack）及更高版本
+    -   SQL Server 2014（含 Service Pack 1）及更高版本
+    -   SQL Server 2012（含 Service Pack 3）或更高版本
+
+
+-   站点最多支持 10 个客户端，这些客户端必须在以下操作系统之一上运行：  
+
+      -   Windows 10  
+      -   Windows 8.1  
+      -   Windows 8  
+      -   Windows 7  
 
 ##  <a name="bkmk_install"></a> 安装并更新技术预览版  
  System Center Configuration Manager Technical Preview 与 System Center Configuration Manager 的当前版本是不同的。  
