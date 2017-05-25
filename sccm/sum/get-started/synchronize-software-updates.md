@@ -13,15 +13,17 @@ ms.service:
 ms.technology:
 - configmgr-sum
 ms.assetid: ea8698c4-9df5-4cf5-8b62-ab93115b4769
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
 ms.openlocfilehash: e68170a16a6a908e035247ed9c0f3cc6cdbe1983
+ms.contentlocale: zh-cn
+ms.lasthandoff: 12/16/2016
 
 
 
 ---
 
-#  <a name="a-namebkmksumsynca-synchronize-software-updates"></a><a name="BKMK_SUMSync"></a> 同步软件更新
+#  <a name="BKMK_SUMSync"></a> 同步软件更新
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
@@ -33,7 +35,7 @@ ms.openlocfilehash: e68170a16a6a908e035247ed9c0f3cc6cdbe1983
   >  软件更新点必须连接到其上游同步源以同步软件更新。 当软件更新点从其上游同步源断开连接时，你可以使用导出和导入方法来同步软件更新。 有关详细信息，请参阅[从断开连接的软件更新点中同步软件更新](synchronize-software-updates-disconnected.md)。  
 
 ## <a name="schedule-software-updates-synchronization"></a>计划软件更新同步
-在配置软件更新同步计划时，顶层软件更新点将按计划的日期和时间启动与 Microsoft 更新的同步。 自定义计划允许你在 WSUS 服务器、站点服务器和网络的需求不高的日期和时间同步软件更新。 例如，你可以设置计划，以便每周凌晨 2:00 同步软件更新。 在按计划同步期间，自上次计划的同步以来对软件更新元数据所做的所有更改将被插入到站点数据库。 这包括新的软件更新元数据，或已修改、删除或者现在已过期的元数据。
+在配置软件更新同步计划时，顶层软件更新点将按计划的日期和时间启动与 Microsoft 更新的同步。 自定义计划允许你在 WSUS 服务器、站点服务器和网络的需求不高的日期和时间同步软件更新。 例如，你可以设置计划，以便每周凌晨 2:00 同步软件更新。 在按计划同步期间，自上次计划的同步以来对软件更新元数据所做的所有更改将插入到站点数据库。 这包括新的软件更新元数据，或已修改、删除或者现在已过期的元数据。
 
 在顶层站点上使用下列过程来计划软件更新同步。  
 
@@ -80,9 +82,4 @@ ms.openlocfilehash: e68170a16a6a908e035247ed9c0f3cc6cdbe1983
 在首次同步软件更新后，或有新的可用分类或产品时，必须[配置新的分类和产品](configure-classifications-and-products.md)以便通过新条件同步软件更新。
 
 通过所需的条件同步软件更新后，[管理软件更新的设置](manage-settings-for-software-updates.md)。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 
