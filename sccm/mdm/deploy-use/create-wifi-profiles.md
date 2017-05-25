@@ -13,8 +13,8 @@ ms.topic: article
 ms.assetid: c72612d4-0b3d-4e71-b3c9-35782701b78a
 caps.latest.revision: 18
 caps.handback.revision: 0
-author: mtillman
-ms.author: mtillman
+author: lleonard-msft
+ms.author: alleonar
 manager: angrobe
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
