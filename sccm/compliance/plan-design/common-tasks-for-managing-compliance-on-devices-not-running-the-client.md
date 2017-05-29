@@ -1,11 +1,11 @@
 ---
 redirect_url: /sccm/mdm/deploy-use/manage-compliance-settings
-redirect_document_id: TRUE
+redirect_document_id: FALSE
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f9097014c7e988ec8e139e518355c4efb19172b3
-ms.openlocfilehash: 1b054b11b0589db7d890b4429bd27a8485d737ff
+ms.sourcegitcommit: 4eee9731a4a27328c47c0d15931cab28cf520a18
+ms.openlocfilehash: ceca0fd883a2b03e384e24cc753f5d9801049a42
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 05/29/2017
 
 ---
 
