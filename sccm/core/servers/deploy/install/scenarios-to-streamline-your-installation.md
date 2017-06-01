@@ -27,7 +27,7 @@ ms.lasthandoff: 05/17/2017
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-随着 System Center Configuration Manager Current Branch 更新版本的发布，提供了新的方案来简化新层次结构安装到更新版本（例如更新 1610），以及从 Microsoft System Center 2012 Configuration Manager 进行升级的过程。 
+随着 System Center Configuration Manager Current Branch 更新版本的发布，提供了新的方案来简化新层次结构安装到更新版本（例如更新 1610），以及从 Microsoft System Center 2012 Configuration Manager 进行升级的过程。
 
 支持的方案包括：  
 
@@ -113,9 +113,7 @@ ms.lasthandoff: 05/17/2017
     -   子主站点会自动安装与管理中心站点相同的更新版本。  
     -   辅助站点不会自动安装新版本。 必须从控制台中进行手动升级。  
 
-   
-
-    在此步骤后，在管理中心站点上安装更新时，子主站点将只安装其维护时段允许的更新版本。  
+  在此步骤后，在管理中心站点上安装更新时，子主站点将只安装其维护时段允许的更新版本。  
 
 4.  **在顶层站点上安装更新版本。** 此操作会更新顶层站点。 管理中心站点安装更新版本后，每个子主站点都会自动安装该更新（除非维护时段禁止安装）。  
 
