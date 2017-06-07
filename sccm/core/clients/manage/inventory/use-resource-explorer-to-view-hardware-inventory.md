@@ -42,7 +42,7 @@ ms.lasthandoff: 05/29/2017
     >  Configuration Manager 会按“删除过期的清单历史记录”站点维护任务中指定的天数保留硬件清单历史记录  
 
 > [!NOTE]  
->  若要了解如何在运行 Linux 和 UNIX 的客户端查看硬件清单，请参阅 [How to monitor clients for Linux and UNIX servers in System Center Configuration Manager](../../../../core/clients/manage/monitor-clients-for-linux-and-unix-servers.md)。  
+>  若要了解如何在运行 Linux 和 UNIX 的客户端查看硬件清单，请参阅 [如何在 System Center Configuration Manager 中监视 Linux 和 UNIX 服务器的客户端](../../../../core/clients/manage/monitor-clients-for-linux-and-unix-servers.md)。  
 
 ### <a name="how-to-run-resource-explorer-from-the-configuration-manager-console"></a>如何从 Configuration Manager 控制台运行资源浏览器  
 
