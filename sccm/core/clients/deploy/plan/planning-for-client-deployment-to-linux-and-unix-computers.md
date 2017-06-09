@@ -248,7 +248,7 @@ ms.lasthandoff: 12/16/2016
 
  **防火墙要求**:确保防火墙不会在您指定为客户端请求端口的端口中阻止通信。 适用于 Linux 和 UNIX 的客户端直接与管理点、分发点以及回退状态点进行通信。  
 
- 有关客户端通信和请求端口的详细信息，请参阅  [Configure the Client for Linux and UNIX to Locate Management Points](../../../../core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md#BKMK_ConfigClientMP)。  
+ 有关客户端通信和请求端口的详细信息，请参阅  [配置适用于 Linux 和 UNIX 的客户端以查找管理点](../../../../core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md#BKMK_ConfigClientMP)。  
 
 ##  <a name="BKMK_PlanningforCommunicationsforLnU"></a>为 Linux 和 UNIX 服务器规划跨林信任的通信  
  使用 Configuration Manager 管理的 Linux 和 UNIX 服务器作为工作组客户端运行并且需要与工作组中基于 Windows 的客户端相似的配置。 有关来自工作组中的计算机的通信的信息，请参阅 [System Center Configuration Manager 中终结点之间的通信](../../../../core/plan-design/hierarchy/communications-between-endpoints.md)主题中的[跨 Active Directory 林的通信](../../../../core/plan-design/hierarchy/communications-between-endpoints.md#Plan_Com_X-Forest)部分。  
