@@ -155,9 +155,9 @@ ms.lasthandoff: 05/17/2017
 
 ### <a name="step-6-manually-install-the-virus-and-spyware-definition-updates"></a>步骤 6：手动安装病毒和间谍软件定义更新  
 
--   如果你运行的是 32 位 Windows 操作系统，请手动下载最新的更新，网址为 [http://go.microsoft.com/fwlink/?LinkID=87342](http://go.microsoft.com/fwlink/?LinkID=87342) 。  
+-   如果你运行的是 32 位 Windows 操作系统，请手动下载最新的更新，网址为 [http://go.microsoft.com/fwlink/?LinkID=87342](http://go.microsoft.com/fwlink/?LinkID=87342) (http://go.microsoft.com/fwlink/?LinkID=87342)。  
 
--   如果你运行的是 64 位 Windows 操作系统，请手动下载最新的更新，网址为 [http://go.microsoft.com/fwlink/?LinkID=87341](http://go.microsoft.com/fwlink/?LinkID=87341) 。  
+-   如果你运行的是 64 位 Windows 操作系统，请手动下载最新的更新，网址为 [http://go.microsoft.com/fwlink/?LinkID=87341](http://go.microsoft.com/fwlink/?LinkID=87341) (http://go.microsoft.com/fwlink/?LinkID=87341)。  
 
 -   单击“运行” 。 最新的更新将手动安装在你的计算机上。  
 
