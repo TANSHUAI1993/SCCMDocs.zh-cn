@@ -65,7 +65,7 @@ ms.lasthandoff: 05/17/2017
 ## <a name="publish-publications"></a>发布发布项
 发布更新和捆绑包时，Updates Publisher 会向更新服务器添加这些更新和捆绑包的相关信息（元数据），可能还会添加更新的二进制文件（完整内容），以供部署到设备。
 
-必须先为 Updates Publisher 配置“更新服务器”[](/sccm/sum/tools/updates-publisher-options#update-server)选项，然后才能进行发布。 若要打开此配置选项，请依次转到“更新工作区”&gt;“概述”，然后选择“配置 WSUS 和签名证书”。 还可以转到 Updates Publisher 选项的“更新服务器”页。
+必须先为 Updates Publisher 配置[“更新服务器”](/sccm/sum/tools/updates-publisher-options#update-server)选项，然后才能进行发布。 若要打开此配置选项，请依次转到“更新工作区”&gt;“概述”，然后选择“配置 WSUS 和签名证书”。 还可以转到 Updates Publisher 选项的“更新服务器”页。
 
 > [!NOTE]   
 > Updates Publisher 只能发布大小不超过 375 MB 的更新。

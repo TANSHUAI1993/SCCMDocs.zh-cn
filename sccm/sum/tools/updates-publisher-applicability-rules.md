@@ -54,7 +54,7 @@ ms.lasthandoff: 05/17/2017
 -   也可以在创建或编辑更新时新建规则。 无法保存通过这种方式创建的规则以供将来使用。
 
 ## <a name="create-applicability-rule"></a>创建适用性规则
-下面介绍的步骤与在“创建更新向导”[](/sccm/sum/tools/create-updates-with-updates-publisher#the-create-update-wizard)中创建规则的方式类似。 与此向导的不同之处在于，可以视需要保存规则集以供将来使用。
+下面介绍的步骤与在[“创建更新向导”](/sccm/sum/tools/create-updates-with-updates-publisher#the-create-update-wizard)中创建规则的方式类似。 与此向导的不同之处在于，可以视需要保存规则集以供将来使用。
 
 1.  在“规则工作区”中，选择“创建”，打开“创建规则”向导。
 

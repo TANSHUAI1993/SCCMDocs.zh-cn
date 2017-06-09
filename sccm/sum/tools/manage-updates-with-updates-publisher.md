@@ -49,7 +49,7 @@ ms.lasthandoff: 05/17/2017
 ## <a name="edit-updates-and-bundles"></a>编辑更新和捆绑包
 可以选择存储库中的更新和捆绑包进行修改。
 
-在“更新工作区”中，选择更新或捆绑包，然后在“开始”选项卡中选择“编辑”，打开编辑向导。 虽然更新和捆绑包各自有向导，但它们密切相关，显示“创建更新”[](/sccm/sum/tools/create-updates-with-updates-publisher#the-create-update-wizard)或“创建捆绑包”[](/sccm/sum/tools/create-updates-with-updates-publisher#the-create-bundle-wizard)向导中的相同选项。
+在“更新工作区”中，选择更新或捆绑包，然后在“开始”选项卡中选择“编辑”，打开编辑向导。 虽然更新和捆绑包各自有向导，但它们密切相关，显示[“创建更新”](/sccm/sum/tools/create-updates-with-updates-publisher#the-create-update-wizard)或[“创建捆绑包”](/sccm/sum/tools/create-updates-with-updates-publisher#the-create-bundle-wizard)向导中的相同选项。
 
 编辑时，可以更改与更新或捆绑包相关的任意可用详细信息，以便能够在环境中使用。 例如，可以编辑适用性或优先规则，也可以更改语言。 还可以更改产品和供应商，将更新或捆绑包移到自定义文件夹中，从而对更新进行分组，以供你自己使用。
 
@@ -83,7 +83,7 @@ ms.lasthandoff: 05/17/2017
 ## <a name="publish-updates-and-bundles-from-the-updates-workspace"></a>在“更新工作区”中发布更新和捆绑包
 发布更新和捆绑包时，Updates Publisher 会向更新服务器添加这些更新和捆绑包的相关信息（元数据），可能还会添加更新的二进制文件（完整内容），以供部署到设备。
 
-必须先为 Updates Publisher 配置“更新服务器”[](/sccm/sum/tools/updates-publisher-options#update-server)选项，然后才能进行发布。 若要打开此配置选项，请依次转到“更新工作区”&gt;“概述”，然后选择“配置 WSUS 和签名证书”。 还可以转到 Updates Publisher 选项的“更新服务器”页。
+必须先为 Updates Publisher 配置[“更新服务器”](/sccm/sum/tools/updates-publisher-options#update-server)选项，然后才能进行发布。 若要打开此配置选项，请依次转到“更新工作区”&gt;“概述”，然后选择“配置 WSUS 和签名证书”。 还可以转到 Updates Publisher 选项的“更新服务器”页。
 
 发布更新和捆绑包的方法有两种：
 -   直接在“更新工作区”中发布。 （请参阅以下过程*如何发布更新和捆绑包*。）

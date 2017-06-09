@@ -89,7 +89,7 @@ Updates Publisher 可以在每次启动时自动检查订阅是否有变化。 �
 
     >  如果不再信任某发布者，请将此发布者从受信任的发布者列表中删除。 若要详细了解如何接受目录，请单击“安全警告 - 目录验证”对话框中的“告诉我详细信息”。
 
-    如果选择始终接受某发布者发布的目录，请将此发布者添加到“受信任的发布者列表”[](/sccm/sum/tools/updates-publisher-options#trusted-publishers)中。 可以使用 Updates Publisher 选项检查和编辑此列表。
+    如果选择始终接受某发布者发布的目录，请将此发布者添加到[“受信任的发布者列表”](/sccm/sum/tools/updates-publisher-options#trusted-publishers)中。 可以使用 Updates Publisher 选项检查和编辑此列表。
 
 4.  当存储库中已有更新且满足以下任一条件时，导入向导会跳过更新导入：
 
