@@ -38,7 +38,7 @@ ms.lasthandoff: 05/17/2017
 
     -   选择“浏览”，查找将用作包源的软件更新包。 有效的包源包括 .MSI、.MSP 或 .EXE 文件。 Updates Publisher 会创建文件哈希。 然后，哈希和文件名将用于要创建的更新的更新元数据。
 
-    -   指定此更新的内容源位置。 拥有内容的本地副本时，可以选中“使用本地源发布软件更新内容”复选框，从而使用“本地源发布路径”[](/sccm/sum/tools/updates-publisher-options#advanced)（和高级选项）。 如果未选中该选项，必须指定此更新在 Web 上的 URL。 此路径或 URL 会添加到更新元数据中。
+    -   指定此更新的内容源位置。 拥有内容的本地副本时，可以选中“使用本地源发布软件更新内容”复选框，从而使用[本地源发布路径](/sccm/sum/tools/updates-publisher-options#advanced)（和高级选项）。 如果未选中该选项，必须指定此更新在 Web 上的 URL。 此路径或 URL 会添加到更新元数据中。
 
         稍后，向 WSUS 服务器发布此更新时，Updates Publisher 会从指明的源位置获取此更新的二进制文件。
 
