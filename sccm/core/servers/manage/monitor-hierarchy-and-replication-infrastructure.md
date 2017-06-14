@@ -16,9 +16,10 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
 ms.openlocfilehash: 132803a1aa9aad5c5462686bd656688418e47d07
+ms.contentlocale: zh-cn
 ms.lasthandoff: 12/16/2016
 
 
@@ -62,7 +63,7 @@ ms.lasthandoff: 12/16/2016
  使用下列信息来帮助你监视常见的 Configuration Manager 任务：  
 
  **警报**  
-   请参阅 [Monitor alerts](../../../core/servers/manage/use-alerts-and-the-status-system.md#BKMK_MonitorAlerts) 中的 [Use alerts and the status system for System Center Configuration Manager](../../../core/servers/manage/use-alerts-and-the-status-system.md)。  
+   请参阅 [使用 System Center Configuration Manager 的警报和状态系统](../../../core/servers/manage/use-alerts-and-the-status-system.md#BKMK_MonitorAlerts) 中的 [监视警报](../../../core/servers/manage/use-alerts-and-the-status-system.md)。  
 
  **符合性设置**  
    请参阅[如何在 System Center Configuration Manager 中监视符合性设置](../../../compliance/deploy-use/monitor-compliance-settings.md)。  
