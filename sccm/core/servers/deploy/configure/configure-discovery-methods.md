@@ -213,7 +213,7 @@ ms.lasthandoff: 05/17/2017
 8.  完成为此站点配置 Active Directory 用户发现的操作后，选择“确定”保存配置。  
 
 ##  <a name="BKMK_ConfigHBDisc"></a>配置检测信号发现  
- 默认情况下，检测信号发现在安装 Configuration Manager 主站点时启用。 因此，若不想使用每隔&7; 天的默认设置，只需配置有关客户端将检测信号发现数据记录发送到管理点的频率的计划。  
+ 默认情况下，检测信号发现在安装 Configuration Manager 主站点时启用。 因此，若不想使用每隔 7 天的默认设置，只需配置有关客户端将检测信号发现数据记录发送到管理点的频率的计划。  
 
 > [!NOTE]  
 >  如果在同一站点上同时启用了“清除安装标志”  客户端请求安装和站点维护任务，请将检测信号发现的计划设置为小于“清除安装标志”  站点维护任务的“客户端重新发现期间”  。 有关站点维护任务的详细信息，请参阅 [System Center Configuration Manager 的维护任务](../../../../core/servers/manage/maintenance-tasks.md)。  
