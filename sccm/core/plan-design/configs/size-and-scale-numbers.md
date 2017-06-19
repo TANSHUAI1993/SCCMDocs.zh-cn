@@ -15,9 +15,11 @@ caps.latest.revision: 4
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f9c43e26758d5171a6ef56e827b4b054ebc8a5e5
 ms.openlocfilehash: c7ad33339e65e6e00e88f98d6e13baceb98dae77
+ms.contentlocale: zh-cn
+ms.lasthandoff: 12/31/2016
 
 ---
 # <a name="size-and-scale-numbers-for-system-center-configuration-manager"></a>System Center Configuration Manager 的大小和扩展数量
@@ -37,7 +39,7 @@ ms.openlocfilehash: c7ad33339e65e6e00e88f98d6e13baceb98dae77
 
 以下的支持数量基于对 Configuration Manager 使用推荐的硬件，并对所有可用的 Configuration Manager 功能使用默认配置。 如果不使用推荐的硬件，或者使用更高的自定义配置（例如运行硬件或软件清单的频率超过七天一次的默认频率），站点系统的性能可能会下降，并且可能无法满足所述的支持级别。
 
-##  <a name="a-namebkmksitesystemscalea-site-types"></a><a name="bkmk_SiteSystemScale"></a>站点类型  
+##  <a name="bkmk_SiteSystemScale"></a>站点类型  
  **管理中心站点：**  
 
 -   一个管理中心站点最多可支持 25 个子主站点。  
@@ -67,7 +69,7 @@ ms.openlocfilehash: c7ad33339e65e6e00e88f98d6e13baceb98dae77
 
     -   此站点系统角色的每个实例支持层次结构所支持的最大客户端数。  
 
-## <a name="a-namebkmkrolesa-site-system-roles"></a><a name="bkmk_roles"></a> Site system roles    
+## <a name="bkmk_roles"></a> Site system roles    
 
 **应用程序目录 web 服务点：**  
 
@@ -125,10 +127,10 @@ ms.openlocfilehash: c7ad33339e65e6e00e88f98d6e13baceb98dae77
 
 -   默认情况下，Configuration Manager 不支持将软件更新点配置为网络负载平衡 (NLB) 群集。 但是，可以使用 Configuration Manager SDK 在 NLB 群集上配置最多 4 个软件更新点。  
 
-##  <a name="a-namebkmkclientnumbersa-client-numbers-for-sites-and-hierarchies"></a><a name="bkmk_clientnumbers"></a>站点和层次结构的客户端数量  
+##  <a name="bkmk_clientnumbers"></a>站点和层次结构的客户端数量  
  使用以下信息来确定站点中或层次结构中可以支持多少客户端和哪些客户端类型。  
 
-###  <a name="a-namebkmkcasa-hierarchy-with-a-central-administration-site"></a><a name="bkmk_cas"></a>具有管理中心站点的层次结构  
+###  <a name="bkmk_cas"></a>具有管理中心站点的层次结构  
 管理中心站点最多可支持包括对下列三组列出的设备数量总数：  
 
 -   700,000 台台式机（运行 Windows、Linux 和 UNIX 的计算机）  
@@ -147,14 +149,14 @@ ms.openlocfilehash: c7ad33339e65e6e00e88f98d6e13baceb98dae77
 >  在管理中心站点使用标准版 SQL Server 的层次结构中，层次结构最多可支持 50,000 台台式机和设备。 在独立主站点上使用的 SQL Server 版本不限制该站点容量，以便其支持最大的规定客户端数量。  
 
 
-###  <a name="a-namebkmkchipria-child-primary-site"></a><a name="bkmk_chipri"></a>子主站点  
+###  <a name="bkmk_chipri"></a>子主站点  
 包含管理中心站点的层次结构中的每个子主站点支持：  
 
 -   总共 150,000 台客户端和设备，不局限于特定组或类型，只要不超过层次结构所支持的数量。  
 
 例如，一个支持 25,000 台（因为这是一个层次结构的上限数量）运行 Mac 和 Windows CE 7.0 的计算机的主站点，还可支持 125,000 个台式计算机。 这就使支持的设备总数达到子主站点支持的上限数量 - 150,000。
 
-###  <a name="a-namebkmkpria-stand-alone-primary-site"></a><a name="bkmk_pri"></a>独立主站点  
+###  <a name="bkmk_pri"></a>独立主站点  
 独立主站点支持下列数量的设备：  
 
 -   总数不超过 175,000 的客户端和设备  
@@ -171,12 +173,12 @@ ms.openlocfilehash: c7ad33339e65e6e00e88f98d6e13baceb98dae77
 
 例如，支持 150,000 台台式机和 10,000 个 Mac 或 Windows CE 7.0 的独立主站点仅可额外支持 15,000 台设备。 这些设备可以是基于云的，也可以是使用本地 MDM 管理的。  
 
-###  <a name="a-namebkmkseca-secondary-sites"></a><a name="bkmk_sec"></a>辅助站点  
+###  <a name="bkmk_sec"></a>辅助站点  
 辅助站点支持：  
 
 -   15,000 台台式机（运行 Windows、Linux 和 UNIX 的计算机）  
 
-###  <a name="a-namebkmkmpa-management-points"></a><a name="bkmk_mp"></a>管理点  
+###  <a name="bkmk_mp"></a>管理点  
 每个管理点可以支持以下数目的设备：  
 
 -   总数不超过 25,000 的客户端和设备  
@@ -188,9 +190,4 @@ ms.openlocfilehash: c7ad33339e65e6e00e88f98d6e13baceb98dae77
         -   使用本地 MDM 管理的 10,000 台设备  
 
         -   10,000 台运行 Mac 和 Windows CE 7.0 客户端的设备
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 
