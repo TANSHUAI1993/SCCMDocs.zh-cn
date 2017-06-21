@@ -36,19 +36,19 @@ ms.lasthandoff: 12/16/2016
 |步骤|描述|更多信息|  
 |----------|-----------------|----------------------|  
 |验证是否安装了 SQL Server Business Intelligence Development Studio|报表模型是通过使用 SQL Server Business Intelligence Development Studio 设计和构建的。 验证在你创建自定义报表模型的计算机上是否安装了 SQL Server Business Intelligence Development Studio。|有关 SQL Server Business Intelligence Development Studio 的详细信息，请参阅 SQL Server 2008 文档。|  
-|创建报表模型项目|报表模型项目包含数据源的定义（.ds 文件）、数据源视图的定义（.dsv 文件）以及报表模型（.smdl 文件）。|有关详细信息，请参阅本主题中的 [To create the report model project](#BKMK_CreateReportModelProject) 部分。|  
-|为报表模型定义数据源|创建报表模型项目之后，你必须定义一个从中提取业务数据的数据源。 通常情况下，该数据源为 Configuration Manager 站点数据库。|有关详细信息，请参阅本主题中的 [To define the data source for the report model](#BKMK_DefineReportModelDataSource) 部分。|  
-|为报表模型定义数据源视图|定义了在报表模型项目中使用的数据源之后，下一步是为项目定义数据源视图。 数据源视图是基于一个或多个数据源的逻辑数据模型。 数据源视图封装基础数据源包含的物理对象（例如表和视图）的访问权限。 SQL Server Reporting Services 通过数据源视图生成报表模型。<br /><br /> 数据源视图向你提供所指定的数据的有用表示形式，从而简化模型设计过程。 你可以重命名表和字段并在数据源视图中添加聚合字段和派生表，而无需更改基础数据源。 为了提高模型效率，请仅将你打算使用的那些表添加到数据源。|有关详细信息，请参阅本主题中的 [To define the data source view for the report model](#BKMK_DefineReportModelDataSourceView) 部分。|  
+|创建报表模型项目|报表模型项目包含数据源的定义（.ds 文件）、数据源视图的定义（.dsv 文件）以及报表模型（.smdl 文件）。|有关详细信息，请参阅本主题中的 [创建报表模型项目](#BKMK_CreateReportModelProject) 部分。|  
+|为报表模型定义数据源|创建报表模型项目之后，你必须定义一个从中提取业务数据的数据源。 通常情况下，该数据源为 Configuration Manager 站点数据库。|有关详细信息，请参阅本主题中的 [为报表模型定义数据源](#BKMK_DefineReportModelDataSource) 部分。|  
+|为报表模型定义数据源视图|定义了在报表模型项目中使用的数据源之后，下一步是为项目定义数据源视图。 数据源视图是基于一个或多个数据源的逻辑数据模型。 数据源视图封装基础数据源包含的物理对象（例如表和视图）的访问权限。 SQL Server Reporting Services 通过数据源视图生成报表模型。<br /><br /> 数据源视图向你提供所指定的数据的有用表示形式，从而简化模型设计过程。 你可以重命名表和字段并在数据源视图中添加聚合字段和派生表，而无需更改基础数据源。 为了提高模型效率，请仅将你打算使用的那些表添加到数据源。|有关详细信息，请参阅本主题中的 [为报表模型定义数据源视图](#BKMK_DefineReportModelDataSourceView) 部分。|  
 |创建报表模型|报表模型是数据库的一个层，它标识业务实体、字段和角色。 在发布之后，报表生成器用户可以通过使用这些模型来开发报表，而不必熟悉数据库结构或了解并编写查询。 模型由一同分组在一个友好名称下的几组相关的报表项目组成，包含这些业务项目之间的预定义关系，并包含预定义的计算。 模型是通过使用一种名为语义模型定义语言 (SMDL) 的 XML 语言定义的。 报表模型文件的文件扩展名为 .smdl。|有关详细信息，请参阅本主题中的 [To create the report model](#BKMK_CreateReportModel) 部分。|  
 |发布报表模型|要通过使用刚刚创建的模型构建报表，你必须将其发布到报表服务器。 在发布模型时，模型中包括数据源和数据源视图。|有关详细信息，请参阅本主题中的 [发布报表模型以在 SQL Server Reporting Services 中使用](#BKMK_PublishReportModel) 部分。|  
-|将报表模型部署到 Configuration Manager|在使用“创建报表向导”中的自定义报表模型创建基于模型的报表之前，必须将报表模型部署到 Configuration Manager。|有关详细信息，请参阅本主题中的 [To deploy the custom report model to Configuration Manager](#BKMK_DeployReportModel) 部分。|  
+|将报表模型部署到 Configuration Manager|在使用“创建报表向导”中的自定义报表模型创建基于模型的报表之前，必须将报表模型部署到 Configuration Manager。|有关详细信息，请参阅本主题中的 [将自定义报表模型部署到 Configuration Manager](#BKMK_DeployReportModel) 部分。|  
 
 ## <a name="steps-for-creating-a-basic-report-model-in-sql-server-reporting-services"></a>在 SQL Server Reporting Services 中创建基本报表模型的步骤  
  可以使用以下过程创建一个基本报表模型，站点中的用户可使用该模型根据 Configuration Manager 数据库的单一视图中的数据来构建基于特定模型的报表。 你创建一个报表模型，该模型向报表作者呈现有关站点中的客户端计算机的信息。 该信息来自 Configuration Manager 数据库中的 **v_R_System** 视图。  
 
  在你执行这些过程的计算机上，确保已安装了 SQL Server Business Intelligence Development Studio，并且计算机已通过网络连接到 Reporting Services 点服务器。 有关 SQL Server Business Intelligence Development Studio 的详细信息，请参阅 SQL Server 2008 文档。  
 
-###  <a name="BKMK_CreateReportModelProject"></a> To create the report model project  
+###  <a name="BKMK_CreateReportModelProject"></a> 创建报表模型  
 
 1.  在桌面上，单击“开始” ，单击“Microsoft SQL Server 2008” ，然后单击“SQL Server Business Intelligence Development Studio” 。  
 
