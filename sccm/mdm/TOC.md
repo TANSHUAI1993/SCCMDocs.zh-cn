@@ -55,6 +55,8 @@
 
 ## [管理 Intune 订阅](deploy-use/manage-intune-subscriptions.md)
 
+## [更改 MDM 机构](deploy-use/change-mdm-authority.md)
+
 ## 管理资源访问
 ### [创建 Wi-Fi 配置文件](deploy-use/create-wifi-profiles.md)
 ### [创建 PFX 证书配置文件](deploy-use/create-pfx-certificate-profiles.md)
