@@ -99,6 +99,8 @@
 ###  [设置实验室](get-started/set-up-your-lab.md)
 
 ##   [技术预览](get-started/technical-preview.md)
+###  [1706 中的功能](get-started/capabilities-in-technical-preview-1706.md)
+###  [1705 中的功能](get-started/capabilities-in-technical-preview-1705.md)
 ###  [1704 中的功能](get-started/capabilities-in-technical-preview-1704.md)
 ###  [1703 中的功能](get-started/capabilities-in-technical-preview-1703.md)
 ###  [1702 中的功能](get-started/capabilities-in-technical-preview-1702.md)
@@ -111,9 +113,10 @@
 ###  [1607 中的功能](get-started/capabilities-in-technical-preview-1607.md)
 ###  [1606 中的功能](get-started/capabilities-in-technical-preview-1606.md)
 ###  [1605 中的功能](get-started/capabilities-in-technical-preview-1605.md)
-###  [1604 中的功能](get-started/capabilities-in-technical-preview-1604.md)
-###  [1603 中的功能](get-started/capabilities-in-technical-preview-1603.md)
-<!--
+
+<!-- No longer in support, and all features are in the Current Branch
+###  [Capabilities in 1604](get-started/capabilities-in-technical-preview-1604.md)
+###  [Capabilities in 1603](get-started/capabilities-in-technical-preview-1603.md)
 ###  [Capabilities in 1602](get-started/capabilities-in-technical-preview-1602.md)
 ###  [Capabilities in 1601](get-started/capabilities-in-technical-preview-1601.md)
 ###  [Capabilities in 1512](get-started/capabilities-in-technical-preview-1512.md)
@@ -178,7 +181,8 @@
 #### [边界](servers/deploy/configure/boundaries.md)
 #### [边界组](servers/deploy/configure/boundary-groups.md)
 #### [1610 之前的版本的边界组](servers/deploy/configure/boundary-groups-for-1511-1602-and-1606.md)
-###  [使用 SQL Server AlwaysOn](servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)
+###  [准备使用 SQL Server Always On](servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)
+###  [配置 SQL Server Always On](servers/deploy/configure/configure-aoag.md)
 ###  [使用 SQL Server 群集](servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md)
 ###  [数据库文件的自定义位置](servers/deploy/configure/custom-locations-for-site-database-files.md)
 ###  [配置基于角色的管理](servers/deploy/configure/configure-role-based-administration.md)
@@ -204,6 +208,7 @@
 ##   [升级本地基础结构](servers/manage/upgrade-on-premises-infrastructure.md)
 ##   [Configuration Manager 的更新](servers/manage/updates.md)
 ###  [安装控制台内部更新](servers/manage/install-in-console-updates.md)
+#### [测试数据库升级](servers/manage/test-database-upgrade.md)
 #### [流程图 - 下载更新](servers/manage/download-updates-flowchart.md)
 #### [流程图 - 更新复制](servers/manage/update-replication-flowchart.md)
 ###  [预发行功能](servers/manage/pre-release-features.md)
