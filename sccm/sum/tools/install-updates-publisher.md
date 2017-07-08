@@ -2,7 +2,7 @@
 title: "安装 Updates Publisher | Microsoft Docs"
 description: "在环境中安装 System Center Updates Publisher"
 ms.custom: na
-ms.date: 4/29/2017
+ms.date: 07/03/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,10 +17,10 @@ ms.author: brenduns
 manager: angrobe
 robots: NOINDEX, NOFOLLOW
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 90775fcf2549080a43e9c1606caa79d9eb90a89c
-ms.openlocfilehash: 996766d0bd9ab2a3acb1970414f0ae511d97fbff
+ms.sourcegitcommit: 70772ba7d08560aa66abcce29dc6cc6334aa2032
+ms.openlocfilehash: 63ea0383497a3f06870c0907c732010259d1a809
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 07/03/2017
 
 ---
 # <a name="install-updates-publisher"></a>安装 Updates Publisher
@@ -119,7 +119,7 @@ ms.lasthandoff: 05/17/2017
 安装完成后，运行“UpdatesPublisher”文件夹中的 **UpdatesPublisher.exe**，启动 Updates Publisher。
 
 ## <a name="next-steps"></a>后续步骤
- 安装 Updates Publisher 后，我们建议为 Updates Publisher [配置选项](/tools/updates-publisher-options)。 必须先配置一些选项，然后才能使用 Updates Publisher 的一些功能。
+ 安装 Updates Publisher 后，我们建议为 Updates Publisher [配置选项](updates-publisher-options.md)。 必须先配置一些选项，然后才能使用 Updates Publisher 的一些功能。
 
- 不过，如果要使用默认功能，并且不打算将更新部署到更新服务器或受管理设备，可以直接跳到[管理软件更新目录](/tools/updates-publisher-catalogs)或[创建软件更新](/tools/create-updates-with-updates-publisher)，创建你自己的更新目录。
+ 不过，如果要使用默认功能，并且不打算将更新部署到更新服务器或受管理设备，可以直接跳到[管理软件更新目录](updates-publisher-catalogs.md)或[创建软件更新](create-updates-with-updates-publisher.md)，创建你自己的更新目录。
 
