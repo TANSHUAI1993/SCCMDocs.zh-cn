@@ -16,10 +16,10 @@ ms.author: brenduns
 manager: angrobe
 ROBOTS: NOINDEX, NOFOLLOW
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 831d8a66c827d246069c7415cdce7a7c4bb95b33
-ms.openlocfilehash: 19e3099773f887129374413482702de3f4b0a36f
+ms.sourcegitcommit: db673277d1cc2d24e8dba2439b2b1891c883ebd0
+ms.openlocfilehash: 8b80f4d14eafa4cbbfb083178a118bc0e71f4019
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/16/2017
 
 ---
 # <a name="what39s-new-in-version-1610-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1610 的新增功能
@@ -143,7 +143,7 @@ Configuration Manager 版本 1602 中引入了软件中心的自定义品牌。 
 
 
 ## <a name="improved-functionality-in-dialog-boxes-about-required-software"></a>有关所需软件的对话框的功能改进
-当用户收到来自“暂停并提醒我:”设置的所需软件后，可以从下面的下拉值列表中进行选择： 
+当用户收到来自“暂停并提醒我：”设置的所需软件后，可以从下面的下拉值列表中进行选择： 
 - **以后**。 指定根据客户端代理设置中配置的通知设置安排通知。
 - **固定时间**。 指定在选定时间（比如 30 分钟）之后再次显示通知。
 

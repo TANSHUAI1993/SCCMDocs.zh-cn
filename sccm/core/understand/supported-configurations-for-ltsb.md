@@ -16,10 +16,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f809c9327db9f298168674add2d09820fdecd1b8
-ms.openlocfilehash: ec33d5febcbf7b57e220f7fe27db9671080fecff
+ms.sourcegitcommit: b0ba955aa7f854c3fa2c06ccf9ccd8ed354758b0
+ms.openlocfilehash: 31bddee83b2365cfa903077ffaa1d7116b194378
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/12/2017
 
 
 ---
@@ -40,7 +40,7 @@ ms.lasthandoff: 05/17/2017
 **Windows：**
 - 仅支持用于 Windows 的质量和安全更新。
 - 不为 Windows 10 的 Current Branch (CB)、Current Branches for Business (CBB) 或 LTSB 添加任何支持。
--    不对 Windows Server 新的主版本提供支持。
+-   不对 Windows Server 新的主版本提供支持。
 
 **SQL Server：**
 - SQL Server 仅支持质量和安全更新或次要升级（如服务包）。
@@ -51,6 +51,7 @@ LTSB 支持使用以下 Windows 计算机操作系统作为站点系统。  每�
 
 **支持的操作系统：**
 - Windows Server 2016
+- Windows Server 2012 R2 (x64)：标准版、数据中心版
 - Windows Server 2012 (x64)：标准版、数据中心版
 - Windows Server 2008 R2 SP1 (x64)：标准版、企业版、数据中心版
 - Windows Server 2008 SP2（x86、x64）：标准版、企业版、数据中心版（请参阅注释 1）
