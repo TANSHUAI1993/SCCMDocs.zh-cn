@@ -2,7 +2,7 @@
 title: "配置基线的常见任务 - Configuration Manager | Microsoft Docs"
 description: "了解如何创建和部署 System Center Configuration Manager 配置基线。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 07/12/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,15 +16,15 @@ caps.handback.revision: 0
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 991eff171dce95590a7f050e0d3b07f98c0224b3
-ms.openlocfilehash: 5682cacb43af5bf9248446f1c35b08f137bdae9d
+ms.translationtype: HT
+ms.sourcegitcommit: 344b55aecd72479b759b40e8252e64a06c5eaba0
+ms.openlocfilehash: 5bf4457af6bedf7bc9cd73c879f1857209c0725d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
-
+ms.lasthandoff: 07/13/2017
 
 ---
-# <a name="common-tasks-for-creating-and-deploying-configuration-baselines-with-system-center-configuration-manager"></a>System Center Configuration Manager 用于创建和部署配置基线的常见任务
+# System Center Configuration Manager 用于创建和部署配置基线的常见任务
+<a id="common-tasks-for-creating-and-deploying-configuration-baselines-with-system-center-configuration-manager" class="xliff"></a>
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
@@ -34,18 +34,19 @@ ms.lasthandoff: 05/17/2017
 
  在开始之前，请阅读 [System Center Configuration Manager 中的符合性设置入门](../../compliance/get-started/get-started-with-compliance-settings.md)以了解有关符合性设置的一些基础知识，另请阅读[规划和配置符合性设置](../../compliance/plan-design/plan-for-and-configure-compliance-settings.md)来实施任何必要的先决条件。  
 
-## <a name="create-a-configuration-baseline"></a>创建配置基线  
+## 创建配置基线
+<a id="create-a-configuration-baseline" class="xliff"></a>  
  在本例中，已创建了仅针对运行 Configuration Manager 客户端的 Windows 10 电脑的配置项目。  
 
  此配置项目强制要求在 Windows 10 电脑上输入至少 6 位字符的密码。 配置项目名为“Windows 10 密码实施” 。  
 
-在下面的过程中，你将了解如何将此配置项目添加到配置基线以准备部署。  
+使用下面的过程了解如何将此配置项目添加到配置基线以准备部署。  
 
 1.  在 Configuration Manager 控制台中，单击“资产和符合性” > “符合性设置” > “配置基线”。  
 
 3.  在“主页”  选项卡上的“创建”  组中，单击“创建配置基线” 。  
 
-4.  在“创建配置基线”  对话框中，配置以下项：  
+4.  在“创建配置基线”  对话框中，配置以下设置：  
 
     -   **名称** – 输入 **Windows 10 密码** （或你选择的另一名称）  
 
@@ -53,15 +54,14 @@ ms.lasthandoff: 05/17/2017
 
 6.  在“添加配置项目”  对话框中，选择之前创建的“Windows 10 密码实施”  配置项目，然后单击“添加” 。  
 
-7.  单击“确定”以关闭“添加配置项目”  对话框并返回“创建配置基线”  对话框，其外观类似于此屏幕截图：  
-
-     ![“创建配置基线”对话框](/sccm/compliance/plan-design/media/Create-Configuration-Baseline.png)  
+7.  单击“确定”以关闭“添加配置项目”  对话框并返回到“创建配置基线”  对话框。
 
 8.  单击“确定”  以关闭“创建配置基线”  对话框。  
 
- 现在，可以看到刚才在 Configuration Manager 控制台的“配置基线”节点中创建的配置基线。  
+ 现在，可以看到在 Configuration Manager 控制台的“配置基线”节点中创建的配置基线。  
 
-## <a name="deploy-the-configuration-baseline"></a>部署配置基线  
+## 部署配置基线
+<a id="deploy-the-configuration-baseline" class="xliff"></a>  
  在本例中，会将前一过程中创建的配置基线部署到计算机集合中。  
 
 1.  在 Configuration Manager 控制台中，单击“资产和符合性” > “符合性设置” > “配置基线”。  
@@ -70,7 +70,7 @@ ms.lasthandoff: 05/17/2017
 
 4.  在“主页”  选项卡上的“部署”  组中，单击“部署” 。  
 
-5.  在“部署配置基线”  对话框中，配置以下项：  
+5.  在“部署配置基线”  对话框中，配置以下设置：  
 
     -   **所选配置基线** – 确保“Windows 10 密码”  配置基线已自动添加到此列表中。  
 
@@ -79,17 +79,16 @@ ms.lasthandoff: 05/17/2017
     -   **集合** – 单击“浏览”  以选择在其上评估配置基线并针对符合性进行修正的计算机集合。 在本例中，已将配置基线部署到内置“所有台式计算机和服务器客户端”  集合。  
 
         > [!TIP]  
-        >  不要担心选择的集合是否包含不运行 Windows 10 的计算机或设备。 只要在创建的配置项目中配置支持的平台，只有 Windows 10 电脑会评估符合性。  
+        >  不要担心选择的集合是否包含不运行 Windows 10 的计算机或设备。 只要在创建的配置项目中配置支持的平台，则只针对 Windows 10 电脑评估符合性。  
 
-    -   如果需要，配置用于评估配置基线的计划。 否则，请保留默认值“7 天” 。  
-
-6.  现在，对话框外观如下所示：  
-
-     ![“部署配置基线”对话框](/sccm/compliance/plan-design/media/Deploy-configuration-baselines.png)  
+    -   如有必要，配置用于评估配置基线的计划。 否则，请保留默认值“7 天” 。  
 
 7.  单击“确定”  以关闭“部署配置基线”  对话框并创建部署。  
 
- 如果想要快速了解此部署的合规性统计信息，请在“监视”  工作区中，单击“部署” 。 在屏幕底部，可看到“合规性统计信息”  图表。  
+ 如果想要快速了解此部署的合规性统计信息，请在“监视”  工作区中，单击“部署” 。 在屏幕底部，可看到“符合性统计信息”图表。  
 
- 有关如何监视配置基线的详细信息，请参阅[监视符合性设置](../../compliance/deploy-use/monitor-compliance-settings.md)  
+## 后续步骤
+<a id="next-steps" class="xliff"></a> 
+
+有关如何监视配置基线的详细信息，请参阅[监视符合性设置](../../compliance/deploy-use/monitor-compliance-settings.md)。  
 

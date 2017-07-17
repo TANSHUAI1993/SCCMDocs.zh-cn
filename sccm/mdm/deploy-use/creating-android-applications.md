@@ -15,14 +15,15 @@ caps.latest.revision: 6
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 27a92dc1c3710ff55f0b145386319dda371533d9
-ms.openlocfilehash: d3b20a59a9147e09e58f04f83f97fd72ebfef5a1
+ms.translationtype: HT
+ms.sourcegitcommit: 344b55aecd72479b759b40e8252e64a06c5eaba0
+ms.openlocfilehash: 3bfb7364c3de5264a5fa8a684965d9aebeb84719
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 07/13/2017
 
 ---
-# <a name="create-android-applications-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 创建 Android 应用程序
+# 使用 System Center Configuration Manager 创建 Android 应用程序
+<a id="create-android-applications-with-system-center-configuration-manager" class="xliff"></a>
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
@@ -36,7 +37,8 @@ System Center Configuration Manager 应用程序具有一个或多个部署类�
 
 请参阅[启动创建应用程序向导](../../apps/deploy-use/create-applications.md#start-the-create-application-wizard)，了解创建 Configuration Manager 应用程序和部署类型所需的步骤。 此外，创建和部署适用于 Android 设备的应用程序时，请记住以下注意事项。  
 
-## <a name="general-considerations-for-android-apps"></a>Android 应用的一般注意事项
+## Android 应用的一般注意事项
+<a id="general-considerations-for-android-apps" class="xliff"></a>
 
 Configuration Manager 支持以下适用于 Android 的应用类型的部署：
 
@@ -48,9 +50,11 @@ Configuration Manager 支持以下适用于 Android 的应用类型的部署：
 
 |设备类型|支持的操作|
 |-|-|
-|Android|**可用**、**必需**。 用户必须同意安装和卸载。
+|Android|可用、必需 用户必须同意安装和卸载。|
+|Android for Work | **必需** |
 
-## <a name="approve-and-deploy-android-for-work-apps"></a>批准和部署 Android for Work 应用
+## 批准和部署 Android for Work 应用
+<a id="approve-and-deploy-android-for-work-apps" class="xliff"></a>
 作为 Configuration Manager 管理员，你还可以在 [Play for Work 网站](https://play.google.com/work)中批准并部署应用，并将这些应用部署到托管的 Android for Work 设备。
 
 使用以下步骤在 Play for Work 应用商店中批准应用，将其同步到 Configuration Manager 控制台，然后将其部署到托管的 Android for Work 设备中。 若要将应用部署到用户的工作配置文件中，需要在 Play for Work 中批准该应用，然后将应用与 Configuration Manager 控制台同步。
