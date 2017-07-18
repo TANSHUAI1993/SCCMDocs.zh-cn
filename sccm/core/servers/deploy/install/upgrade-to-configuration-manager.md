@@ -2,7 +2,7 @@
 title: "升级到 System Center Configuration Manager | Microsoft Docs"
 description: "了解从运行 System Center 2012 Configuration Manager 的站点和层次结构成功进行就地升级的步骤。"
 ms.custom: na
-ms.date: 05/02/2017
+ms.date: 6/6/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,10 +16,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: d940fd1bbf96767d44f8c55315e814be55a83897
-ms.openlocfilehash: 9e58ab8dd892adf25429564adfd6f86849ddcbdf
+ms.sourcegitcommit: 3619a73d3a39659de927e1711a7ec81de9918064
+ms.openlocfilehash: 1166b739e1e8d667172d97883f484fdbc3a142c1
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/13/2017
 
 
 ---
@@ -32,17 +32,17 @@ ms.lasthandoff: 05/17/2017
  在从 System Center 2012 Configuration Manager 升级之前，必须准备站点，需要删除可能会阻止成功升级的特定配置，然后在涉及多个站点时需要按照升级顺序操作。  
 
  > [!TIP]
- > 管理 System Center Configuration Manager 站点和层次结构基础结构时，术语“升级”、“更新”和“安装”用于描述三种不同概念。 若要了解每个术语的使用方法，请参阅[有关升级、更新和安装](/sccm/core/understand/upgrade-update-install)。
+ > 管理 System Center Configuration Manager 站点和层次结构基础结构时，术语“升级”“更新”和“安装”用于描述三种不同概念。 若要了解每个术语的使用方法，请参阅[有关升级、更新和安装](/sccm/core/understand/upgrade-update-install)。
 
 ##  <a name="bkmk_path"></a> 就地升级路径  
 
 **升级到版本 1702**   
 如果具有版本 1702 基线介质，可以将下列版本升级到 System Center Configuration Manager 版本 1702 的完整许可版本：   
--      System Center Configuration Manager 版本 1702 的评估版安装
--      System Center 2012 Configuration Manager Service Pack 1
--      System Center 2012 Configuration Manager Service Pack 2
--      System Center 2012 R2 Configuration Manager
--      System Center 2012 R2 Configuration Manager Service Pack 1
+-     System Center Configuration Manager 版本 1702 的评估版安装
+-     System Center 2012 Configuration Manager Service Pack 1
+-     System Center 2012 Configuration Manager Service Pack 2
+-     System Center 2012 R2 Configuration Manager
+-     System Center 2012 R2 Configuration Manager Service Pack 1
 
 **升级到 1606 版本**  
 2016 年 12 月 15 日，为添加对其他升级方案的支持，已发布版本 1606 的基线媒体。 此新版本支持将以下版本升级到 System Center Configuration Manager 版本 1606 的完整许可版本：  
@@ -115,7 +115,7 @@ When you have version 1511 baseline media, you can upgrade the following to a fu
 以下站点系统角色不再用于 System Center Configuration Manager，必须先将其卸载，然后再从 System Center 2012 Configuration Manager 进行升级：  
 
 -   带外管理点  
--   服务健康验证程序点  
+-   系统健康验证程序点  
 
 **在主站点上禁用管理点数据库副本：**  
 Configuration Manager 无法成功升级启用了管理点数据库副本的主站点。 禁用数据库复制，然后：  
@@ -151,7 +151,7 @@ Configuration Manager 无法升级使用网络负载平衡 (NLB) 群集来承载
 **运行安装程序先决条件检查程序**：  
 升级站点之前，可以独立于安装程序运行 **先决条件检查程序** ，以验证站点是否满足先决条件 稍后升级该站点时会再次运行必备组件检查程序。  
 
-如果使用 2016 年 10 月发行的 1606 版基线媒体，独立的必备组件检查会对要升级到 System Center Configuration Manage 的 Current Branch 和 Long-Term Servicing Branch (LTSB) 的站点进行评估。 由于 LTSB 不支持某些功能，在 *ConfigMgrPrereq.log* 中可能会看到以下类似条目：
+如果使用 2016 年 10 月发行的 1606 版基线媒体，独立的必备组件检查会对要升级到 System Center Configuration Manage 的 Current Branch 和 Long-Term Servicing Branch (LTSB) 的站点进行评估。 由于 LTSB 不支持某些功能，在 ConfigMgrPrereq.log 中可能会看到以下类似条目：
  - 信息：该站点为 LTSB 版本。
  - LTSB 版本不支持的站点系统角色“资产智能同步点”；    错误；    Configuration Manager 已检测到“资产智能同步点”已安装。 LTSB 版本不支持资产智能。 必须卸载资产智能同步点站点系统角色才能继续操作。
 
@@ -271,7 +271,7 @@ Configuration Manager 不支持辅助站点备份，也不支持辅助站点数�
      软件更新或软件更新组的自定义摘要计划被重置为默认值（1 小时）。 升级完成后，请将自定义摘要值重置为所需的频率。  
 
 ##  <a name="bkmk_test"></a> 测试站点数据库升级  
-以下信息仅适用于将先前版本（如 System Center 2012 Configuration Manager）升级到 System Center Configuration Manager。 如果你的站点已运行 System Center Configuration Manager，且正在安装新的更新，请参阅**安装控制台内部更新前**中的[步骤 2：在安装更新前测试数据库升级](/sccm/core/servers/manage/install-in-console-updates#bkmk_step2)。
+以下信息仅适用于将先前版本（如 System Center 2012 Configuration Manager）升级到 System Center Configuration Manager。
 
 在升级站点之前，请针对升级测试该站点的数据库副本。  
 
@@ -395,7 +395,7 @@ Configuration Manager 不支持辅助站点备份，也不支持辅助站点数�
 
 辅助站点升级将在后台进行。 升级完成后，可以在 Configuration Manager 控制台中确认状态。 要确认状态，请选择辅助站点服务器，然后在“主页”  选项卡上的“站点”  组中单击“显示安装状态” 。  
 
-##  <a name="BKMK_PostUpgrade"></a> 执行升级后任务  
+##  <a name="BKMK_PostUpgrade"></a>执行升级后任务  
 将站点升级到新的 Service Pack 后，你可能必须完成其他任务以完成升级或重新配置站点。 这些任务可能包括升级 Configuration Manager 客户端或 Configuration Manager 控制台、重新启用管理点的数据库副本，或者还原所使用的并且在 Service Pack 升级后未保留的 Configuration Manager 功能的设置。  
 
 **辅助站点的已知问题：**  

@@ -2,7 +2,7 @@
 title: "发行说明 - Configuration Manager | Microsoft Docs"
 description: "有关产品中尚未解决或 Microsoft 知识库文章中未涵盖的紧急问题，请参阅这些说明。"
 ms.custom: na
-ms.date: 05/11/2017
+ms.date: 05/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,10 +17,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: d5166b16ffbe46af561b1ce98c0494cc4aaa72a8
-ms.openlocfilehash: 9da6f9678a7fb5c76f365a3522f5e5e0fdfec037
+ms.sourcegitcommit: dc221ddf547c43ab1f25ff83c3c9bb603297ece6
+ms.openlocfilehash: 6113576ca38da27e9e8732b3930deee96db4ae2c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/01/2017
 
 
 ---
@@ -153,7 +153,7 @@ ConfigMgrSetup.log
 
 将客户端部署到 Windows 计算机时，安装失败。 ccmsetup.log 文件包含条目“文件 'C:\WINDOWS\ccmsetup\Silverlight.exe' 返回了故障代码 1612。 安装失败”，后跟条目“InstallFromManifest 失败 0x8007064c”。
 
-**解决方法：**这是由于以前安装的 Silverlight 版本损坏所致。 可以尝试在受影响的计算机上运行以下工具来解决此问题：[https://support.microsoft.com/help/17588/fix-problems-that-block-programs-from-being-installed-or-removed](https://support.microsoft.com/help/17588/fix-problems-that-block-programs-from-being-installed-or-removed) 
+**解决方法：**这是由于以前安装的 Silverlight 版本损坏所致。 可以尝试在受影响的计算机上运行以下工具来解决此问题：[https://support.microsoft.com/help/17588/fix-problems-that-block-programs-from-being-installed-or-removed](https://support.microsoft.com/help/17588/fix-problems-that-block-programs-from-being-installed-or-removed)
 
 
 
@@ -200,6 +200,14 @@ ConfigMgrSetup.log
 
 **解决方法**：  
 用户必须在关闭第一个高风险部署对话框后，才能查看下一个高风险部署对话框。
+
+## <a name="software-updates"></a>软件更新
+
+### <a name="importing-an-office-365-client-settings-from-a-configuration-file-fails-when-it-contains-unsupported-languages"></a>包含不受支持的语言时，无法从配置文件导入 Office 365 客户端设置
+如果从现有的 XML 配置文件导入 Office 365 客户端设置，且该文件包含 Office 365 ProPlus 客户端不支持的语言，则会出现错误。 有关详细信息，请参阅[从 Office 365 客户端管理仪表板将 Office 365 应用部署到客户端](/sccm/sum/deploy-use/manage-office-365-proplus-updates#to-deploy-office-365-apps-to-clients-from-the-office-365-client-management-dashboard)。
+
+**解决方法**：    
+在 XML 配置文件中仅使用 [Office 365 ProPlus 客户端支持的语言](https://technet.microsoft.com/library/cc179219&#40;v=office.16&#41;.aspx)。  
 
 ## <a name="mobile-device-management"></a>移动设备管理  
 
@@ -250,9 +258,16 @@ ConfigMgrSetup.log
 **解决方法：**在“免除集合”页上选择“用户集合”之前，将“用户集合”添加到“目标集合”页，或者确保不会将同一“用户集合”添加到“目标集合”和“免除集合”中。
 
 ## <a name="endpoint-protection"></a>Endpoint Protection
-<!--  Product Studio bug 485370 added by Nathbarn 04 19 2017 -->
+<!--  Product Studio bug 485370 added 04 19 2017 -->
 ### <a name="antimalware-policy-fails-to-apply-on-windows-server-2016-core"></a>反恶意软件政策无法应用于 Windows Server 2016 Core
 反恶意软件政策无法应用于 Windows Server 2016 Core。  错误代码为 0x80070002。  ConfigSecurityPolicy.exe 缺少依赖项。
 
-**解决方法：**2017 年 5 月 9 日发布的[知识库文章 4019472](https://support.microsoft.com/help/4019472/windows-10-update-kb4019472) 解决了此问题。 
+**解决方法：**2017 年 5 月 9 日发布的[知识库文章 4019472](https://support.microsoft.com/help/4019472/windows-10-update-kb4019472) 解决了此问题。
+
+<!-- Product Studio bug 462286 added  05 25 2017 and valid until July 2017 GA release -->
+### <a name="windows-defender-advanced-threat-protection-policies-fail-on-older-client-agents"></a>无法在更早的客户端代理上使用 Windows Defender 高级威胁防护策略
+
+从 Configuration Manager 版本 1610 或更高站点服务器创建的 Windows Defender 高级威胁防护策略无法应用到 Configuration Manager 版本 1606 和更早版本的客户端。  未载入客户端，且策略评估报告错误。 Windows Defender 高级威胁防护配置中的“部署状态”显示“错误”。
+
+解决方法：将 Configuration Manager 客户端升级到版本 1610 或更高版本。
 

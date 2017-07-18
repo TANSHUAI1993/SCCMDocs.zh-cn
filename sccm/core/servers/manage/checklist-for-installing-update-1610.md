@@ -2,7 +2,7 @@
 title: "1610 的清单 | System Center Configuration Manager"
 description: "了解更新到 System Center Configuration Manager 版本 1610 之前需要执行的操作。"
 ms.custom: na
-ms.date: 2/7/2017
+ms.date: 6/6/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -16,10 +16,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 30af3326578d39c6d995672071705bcaeb877e4d
-ms.openlocfilehash: 640fc5ddb4e0a6828901b7f406ca72fc210b2970
+ms.sourcegitcommit: 3619a73d3a39659de927e1711a7ec81de9918064
+ms.openlocfilehash: 54b243fd33ed13b8ccde48fa5e2525204455d96c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/13/2017
 
 ---
 # <a name="checklist-for-installing-update-1610-for-system-center-configuration-manager"></a>用于为 System Center Configuration Manager 安装更新 1610 的清单
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/17/2017
 
 -   当更新列为“可用”时，此更新即可准备安装。 安装版本 1610, 之前，请查看以下[关于安装更新 1610](#about-installing-update-1610)和[清单](#checklist)信息，了解在开始更新之前要进行的配置。
 
--   如果更新显示为“正在下载”且未更改，请查看 ** hman.log ** 和 ** dmpdownloader.log ** 是否有误。
+-   如果更新显示为“正在下载”且未更改，请查看  **hman.log**  和  **dmpdownloader.log**  是否有误。
 
     -   通常情况下，还可以在站点服务器上重启 **SMS_Executive** 服务，以重启更新重新分发文件的下载。
 
@@ -94,10 +94,7 @@ ms.lasthandoff: 05/17/2017
 **为托管站点、站点数据库服务器和远程站点系统角色的计算机上的操作系统安装所有合适的关键更新：**为 Configuration Manager 安装更新之前，请为每个适用的站点系统安装任何关键更新。 如果安装的更新需要重启，请在启动 Configuration Manager 更新之前重启合适的计算机。
 
 **在主站点上禁用管理点数据库副本：**   
-Configuration Manager 无法成功更新启用了管理点数据库副本的主站点。 禁用数据库复制，然后：
-
--   创建站点数据库的备份以测试数据库升级。
--   为 Configuration Manager 安装更新。
+Configuration Manager 无法成功更新启用了管理点数据库副本的主站点。 安装 Configuration Manager 的更新之前禁用数据库复制。
 
 有关详细信息，请参阅 [System Center Configuration Manager 管理点的数据库副本](/sccm/core/servers/deploy/configure/database-replicas-for-management-points)。
 
@@ -125,21 +122,24 @@ Configuration Manager 无法更新使用网络负载均衡 (NLB) 群集来托管
 
 有关详细信息，请参阅 [System Center Configuration Manager 的备份和恢复](/sccm/protect/understand/backup-and-recovery)。
 
-**在最近的站点数据库备份副本上测试数据库升级：**更新 System Center Configuration Manager 管理中心站点或主站点之前，请在站点数据库副本上测试站点数据库升级过程。
+<!-- Removed from update guidance 6/6/2017
+**Test the database upgrade on a copy of the most recent site database backup:** 
+Before you update a System Center Configuration Manager central administration site or primary site, test the site database upgrade process on a copy of the site database.
 
--   建议测试站点数据库升级过程，因为当升级站点时，可能会修改站点数据库。
+-   We recommend that you test the site database upgrade process because when you upgrade a site, the site database might be modified.
 
--   虽然测试数据库升级不是必需的，但它可以在生产数据库受到影响之前先行识别升级的问题。
+-   Although a test database upgrade is not required, it can identify problems for the upgrade before your production database is affected.
 
--   失败的站点数据库升级可能会使站点数据库无法运行，并且可能需要进行站点恢复以还原功能。
+-   A failed site database upgrade can render your site database inoperable and might require a site recovery to restore functionality.
 
--   虽然在层次结构的站点之间共享了站点数据库，但是，请在升级每个合适的站点之前计划在该站点上测试数据库。
+-   Although the site database is shared between sites in a hierarchy, plan to test the database at each applicable site before you upgrade that site.
 
--   如果在主站点上对管理点使用数据库副本，请在创建站点数据库备份之前禁用复制。
+-   If you use database replicas for management points at a primary site, disable replication before you create the backup of the site database.
 
-Configuration Manager 不支持辅助站点备份，也不支持辅助站点数据库的测试升级。
+Configuration Manager does not support the backup of secondary sites nor does it support the test upgrade of a secondary site database.
 
-请勿在生产站点数据库上运行测试数据库升级。 执行此任务会升级站点数据库，并可能导致你的站点无法运行。 有关详细信息，请参阅**安装控制台内部更新前**中的[步骤 2：在安装更新前测试数据库升级](/sccm/core/servers/manage/install-in-console-updates#bkmk_step2)。
+Do not run a test database upgrade on the production site database. Doing so updates the site database and could render your site inoperable. For more information, see [Step 2: Test the database upgrade before installing an update](/sccm/core/servers/manage/install-in-console-updates#bkmk_step2) from **Before you install an in-console update**.
+-->
 
 **规划客户端试点：**   
 安装更新客户端的更新后，可以在新的客户端更新部署和升级所有活动的客户端之前在预生产中对其进行测试。

@@ -2,7 +2,7 @@
 title: "1606 的清单 | Microsoft Docs"
 description: "了解从 System Center Configuration Manager 版本 1511 或 1602 更新到版本 1606 之前需要执行的操作。"
 ms.custom: na
-ms.date: 2/7/2017
+ms.date: 6/6/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -16,10 +16,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 30af3326578d39c6d995672071705bcaeb877e4d
-ms.openlocfilehash: b0def6eb962d243a7ea5910b8d56bbb448b3a2e4
+ms.sourcegitcommit: 3619a73d3a39659de927e1711a7ec81de9918064
+ms.openlocfilehash: a6bda116499845fedff0126e2890755931de85bb
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/13/2017
 
 ---
 # <a name="checklist-for-installing-update-1606-for-system-center-configuration-manager"></a>用于为 System Center Configuration Manager 安装更新 1606 的清单
@@ -78,11 +78,7 @@ System Center Configuration Manager Current Branch 的版本 1606 是一项更�
 
  **为承载站点、站点数据库服务器和远程站点系统角色的计算机上的操作系统安装所有合适的关键更新：**为 Configuration Manager 安装更新之前，请为每个适用的站点系统安装任何关键更新。 如果安装的更新需要重启，请在开始升级之前重启合适的计算机。  
 
- **在主站点上禁用管理点数据库副本：**Configuration Manager 无法成功更新启用了管理点数据库副本的主站点。 禁用数据库复制，然后：  
-
--   创建站点数据库的备份以测试数据库升级。  
-
--   为 Configuration Manager 安装更新。  
+ **在主站点上禁用管理点数据库副本：**Configuration Manager 无法成功更新启用了管理点数据库副本的主站点。 安装 Configuration Manager 的更新之前禁用数据库复制。  
 
 有关详细信息，请参阅 [System Center Configuration Manager 管理点的数据库副本](../../../core/servers/deploy/configure/database-replicas-for-management-points.md)。  
 
@@ -111,22 +107,23 @@ System Center Configuration Manager Current Branch 的版本 1606 是一项更�
 
 有关详细信息，请参阅 [System Center Configuration Manager 的备份和恢复](../../../protect/understand/backup-and-recovery.md)。  
 
+<!-- Removed from update guidance 6/6/2017
+ **Test the database upgrade on a copy of the most recent site database backup:** Before you update a System Center Configuration Manager central administration site or primary site, test the site database upgrade process on a copy of the site database.  
 
- **在最近的站点数据库备份副本上测试数据库升级：**更新 System Center Configuration Manager 管理中心站点或主站点之前，请在站点数据库副本上测试站点数据库升级过程。  
+-   You should test the site database upgrade process because when you upgrade a site, the site database might be modified.  
 
--   应该对站点数据库升级过程进行测试，因为在升级站点时，站点数据库可能会被修改。  
+-   Although a test database upgrade is not required, it can identify problems for the upgrade before your production database is affected.  
 
--   虽然测试数据库升级不是必需的，但它可以在生产数据库受到影响之前先行识别升级的问题。  
+-   A failed site database upgrade can render your site database inoperable and might require a site recovery to restore functionality.  
 
--   失败的站点数据库升级可能会使站点数据库无法运行，并且可能需要进行站点恢复以还原功能。  
+-   Although the site database is shared between sites in a hierarchy, plan to test the database at each applicable site before you upgrade that site.  
 
--   虽然在层次结构的站点之间共享了站点数据库，但是，请在升级每个合适的站点之前计划在该站点上测试数据库。  
+-   If you use database replicas for management points at a primary site, disable replication before you create the backup of the site database.  
 
--   如果在主站点上对管理点使用数据库副本，请在创建站点数据库备份之前禁用复制。  
+Configuration Manager does not support the backup of secondary sites nor does it support the test upgrade of a secondary site database.   
 
-Configuration Manager 不支持辅助站点备份，也不支持辅助站点数据库的测试升级。   
-
-请勿在生产站点数据库上运行测试数据库升级。 执行此任务会升级站点数据库，并可能导致你的站点无法运行。 有关详细信息，请参阅**安装控制台内部更新前需执行的操作**中的[步骤 2：在安装更新前测试数据库升级](/sccm/core/servers/manage/install-in-console-updates#bkmk_step2)。
+Do not run a test database upgrade on the production site database. Doing so updates the site database and could render your site inoperable. For more information, For more information, see [Step 2: Test the database upgrade before installing an update](/sccm/core/servers/manage/install-in-console-updates#bkmk_step2) from **Before you install an in-console update**.
+-->
 
  **规划客户端试点：**安装更新客户端的更新后，可以在新的客户端更新部署和升级所有活动的客户端之前在预生产中对其进行测试。   
 

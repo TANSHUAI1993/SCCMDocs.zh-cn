@@ -2,7 +2,7 @@
 title: "设计站点层次结构 - Configuration Manager | Microsoft Docs"
 description: "了解 System Center Configuration Manager 的可用拓扑和管理选项以便你可以规划站点层次结构。"
 ms.custom: na
-ms.date: 1/3/2017
+ms.date: 6/16/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,10 +17,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 35e48666f4d1a2363304650f960531fd0630a291
-ms.openlocfilehash: e346e83b0ae0dc7a612cef7a7b9fb1fdb42236bc
+ms.sourcegitcommit: db673277d1cc2d24e8dba2439b2b1891c883ebd0
+ms.openlocfilehash: 4710b1b89eb50cb7bcf4c4ee50c12a96b6561bc9
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/16/2017
 
 
 ---
@@ -32,9 +32,9 @@ ms.lasthandoff: 05/17/2017
 然后，在考虑了可减少需安装的站点数的内容管理选项后，可以计划能够高效地为当前业务需求提供服务，并且可之后进行拓展以满足将来增长的需求的拓扑。  
 
 > [!NOTE]
-> 在计划安装新的 Configuration Manager 时，请熟悉[发行说明]( /sccm/core/servers/deploy/install/release-notes)，其中详细说明了活动版本中的当前问题。 此发行说明适用于 Configuration Manager 的所有分支。  但是，在使用[技术预览版分支]( /sccm/core/get-started/technical-preview)时，你将在每个版本的技术预览版文档中发现仅针对该分支的问题。  
+> 在计划安装新的 Configuration Manager 时，请熟悉[发行说明]( /sccm/core/servers/deploy/install/release-notes)，其中详细说明了活动版本中的当前问题。 此发行说明适用于 Configuration Manager 的所有分支。  但是，在使用[Technical Preview 分支]( /sccm/core/get-started/technical-preview)时，你将在每个版本的 Technical Preview 文档中发现仅针对该分支的问题。  
 
-##  <a name="bkmk_topology"></a> 层次结构拓扑  
+##  <a name="bkmk_topology"></a>层次结构拓扑  
  层次结构拓扑的范围从单一独立主站点一直到一组连接的主要和辅助站点，该组站点在层次结构顶级（顶层）站点处具有管理中心站点。   在层次结构中所用的站点类型和计数的关键驱动程序通常是你必须支持的设备的类型和数量，如下所示：   
 
  **独立主站点：**在单一主站点可支持所有设备和用户的管理时，使用独立主站点（请参阅[调整大小和扩展数量](/sccm/core/plan-design/configs/size-and-scale-numbers)）。 如果不同的地理位置可由单一主站点成功地提供服务，则该拓扑也成功。  若要帮助管理网络流量，可以使用首选的管理点和精心规划的内容基础结构（请参阅 [System Center Configuration Manager 中内容管理的基本概念](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)）。  
@@ -66,7 +66,7 @@ ms.lasthandoff: 05/17/2017
 
 -   管理中心站点是层次结构中的顶层站点。  
 
--   在配置具有多个主站点的层次结构时，你必须安装管理中心站点，并且它必须是你安装的第一个站点。  
+-   在配置具有多个主站点的层次结构时，必须安装管理中心站点。 如果你立即需要两个或多个主站点，请先安装管理中心站点。 如果你已有主站点并想随后安装管理中心站点，则必须扩展独立主站点[](/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#bkmk_expand)，以安装管理中心站点。 
 
 -   管理中心站点仅支持使用主站点作为子站点。  
 

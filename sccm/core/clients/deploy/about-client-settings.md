@@ -17,10 +17,10 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: ae60eb25383f4bd07faaa1265185a471ee79b1e9
-ms.openlocfilehash: 3d90f16eac59b7069ff2f33170eba85d2cde65ef
+ms.sourcegitcommit: c8717925dba42451b1e241a7c2f59e43896d7d99
+ms.openlocfilehash: 4a169098f30e4a9d708e41ee25c6a400d5ff0e85
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/19/2017
 
 ---
 # <a name="about-client-settings-in-system-center-configuration-manager"></a>关于 System Center Configuration Manager 中的客户端设置
@@ -65,7 +65,7 @@ System Center Configuration Manager 中的所有客户端设置在 Configuration
 
 - **配置客户端缓存大小**
 
-  Windows 计算机上的客户端缓存会保存用于安装应用程序和程序的临时文件。 选择“是”可指定“最大缓存大小”（MB 或磁盘百分比）。 如果此选项为“否”，则默认大小为 5,120 MB。
+  Windows 计算机上的客户端缓存会保存用于安装应用程序和程序的临时文件。 选择“是”可指定“最大缓存大小”（MB 或磁盘百分比）。 客户端缓存大小可以扩展到最大大小（按 MB 或磁盘百分比指定），以较小者为准。 如果此选项为“否”，则默认大小为 5,120 MB。
 
 ## <a name="client-policy"></a>客户端策略  
 
@@ -95,7 +95,7 @@ System Center Configuration Manager 中的所有客户端设置在 Configuration
 
   -   如果在客户端应用程序目录中安装应用程序后删除应用程序部署，则客户端最多会对是否安装了应用程序的情况继续检查 2 天。  
 
-   此外，如果此设置为“False” 或“否”，则用户将不会收到为用户部署的所需应用程序或用户策略中的任何其他管理任务。  
+   此外，如果此设置为“False”或“否”，则用户将不会收到为用户部署的所需应用程序或用户策略中的任何其他管理任务。  
 
    当用户的计算机位于 Intranet 或 Internet 时，此设置会应用到用户。 如果还想在 Internet 上启用用户策略，则其必须为“True”或“是”。  
 
@@ -107,7 +107,7 @@ System Center Configuration Manager 中的所有客户端设置在 Configuration
 
   -   基于 Internet 的管理点可通过使用 Windows 身份验证（Kerberos 或 NTLM）成功地对用户进行验证。  
 
-   如果将此选项保留为“假”  或“否” ，或者任何一个条件失败，则 Internet 上的计算机将仅收到计算机策略。 在此情况下，用户仍然能够查看、请求和安装基于 Internet 的应用程序目录中的应用程序。 如果此设置为“False”或“否”，但“在客户端上启用用户策略轮询”为“True”或“在客户端上启用用户策略”为“是”，则在计算机连接到 Intranet 之前，用户将不会收到用户策略。  
+   如果将此选项保留为“假” 或“否”，或者任何一个条件失败，则 Internet 上的计算机将仅收到计算机策略。 在此情况下，用户仍然能够查看、请求和安装基于 Internet 的应用程序目录中的应用程序。 如果此设置为“False”或“否”，但“在客户端上启用用户策略轮询”为“True”或“在客户端上启用用户策略”为“是”，则在计算机连接到 Intranet 之前，用户将不会收到用户策略。  
 
    有关在 Internet 上管理客户端的详细信息，请参阅 [System Center Configuration Manager 中终结点之间的通信](../../../core/plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan)中的[来自 Internet 或不受信任林的客户端通信的注意事项](../../../core/plan-design/hierarchy/communications-between-endpoints.md)。  
 
@@ -118,7 +118,7 @@ System Center Configuration Manager 中的所有客户端设置在 Configuration
 
 -   **计划符合性评估**  
 
-     选择“计划”以创建将在用户部署配置基线时向用户显示的默认计划。 可以在“部署配置基线”  对话框中为每个基线配置此值。  
+     选择“计划”以创建将在用户部署配置基线时向用户显示的默认计划。 可以在“部署配置基线”对话框中为每个基线配置此值。  
 
 -   **启用用户数据和配置文件**  
 
@@ -136,7 +136,7 @@ System Center Configuration Manager 中的所有客户端设置在 Configuration
 
     -   对基于 Intranet 和 Internet 的客户端管理配置客户端后，如果客户端在 Internet 上，则会为它们提供基于 Internet 的应用程序目录网站点；如果客户端在 Intranet 上，则会为它们提供基于 Intranet 的应用程序目录网站点。  
 
-     自动检测不保证将为客户端提供与其最接近的应用程序目录网站点。 由于以下原因，你可能决定不使用“自动检测”  ：  
+     自动检测不保证将为客户端提供与其最接近的应用程序目录网站点。 由于以下原因，你可能决定不使用“自动检测”：  
 
      -   你想要为客户端手动配置最接近的服务器，或者确保客户端不跨慢速网络连接连接到服务器。  
 
@@ -182,7 +182,7 @@ System Center Configuration Manager 中的所有客户端设置在 Configuration
 
      如果更改此设置，则当用户下次加载其浏览器或刷新其当前打开的浏览器窗口时，更改将生效。  
 
-     有关此设置的详细信息，请参阅 [System Center Configuration Manager 中应用程序管理的安全和隐私](../../../apps/plan-design/security-and-privacy-for-application-management.md) 中的 [Microsoft Silverlight 5 的证书和应用程序目录所需的提升信任模式](../../../apps/plan-design/security-and-privacy-for-application-management.md#BKMK_CertificatesSilverlight5)。  
+     有关此设置的详细信息，请参阅 [System Center Configuration Manager 中应用程序管理的安全和隐私](../../../apps/plan-design/security-and-privacy-for-application-management.md)中的 [Microsoft Silverlight 5 的证书和应用程序目录所需的提升信任模式](../../../apps/plan-design/security-and-privacy-for-application-management.md#BKMK_CertificatesSilverlight5)。  
 
 -   **软件中心中显示的组织名称**  
 
@@ -246,8 +246,12 @@ System Center Configuration Manager 中的所有客户端设置在 Configuration
     >  如果由于此客户端设置的缘故而无法运行未签名的脚本，则 Configuration Manager 会用以下方法报告此错误：  
     >   
     > -   错误 ID“0X87D00327”和“脚本未签名”的说明作为控制台的“监视”Configuration Manager工作区中的部署状态错误。  
-    > -   错误代码“0X87D00327” 及描述“脚本未签名”，或“0X87D00320” 及描述“尚未安装脚本宿主”（报表中的错误类型为“发现错误”）。 其中一个示例为**资产配置基线中配置项目的错误详细信息**。  
-    > -   **Script is not signed (Error: 87D00327; Source: CCM)** 文件中的消息 **DcmWmiProvider.log** 。  
+    > -   错误代码“0X87D00327”及描述“脚本未签名”，或“0X87D00320”及描述“尚未安装脚本宿主”（报表中的错误类型为“发现错误”）。 其中一个示例为**资产配置基线中配置项目的错误详细信息**。  
+    > -   **Script is not signed (Error: 87D00327; Source: CCM)** 文件中的消息 **DcmWmiProvider.log**。  
+
+-   **显示关于新部署的通知**  
+
+     如果要显示将于一周内进行部署的通知，请选择“是”。  此消息将在每次启动客户端代理时显示。
 
 -   **禁用截止时间随机化**  
 
@@ -283,13 +287,13 @@ System Center Configuration Manager 中的所有客户端设置在 Configuration
      选择“True”或“是”，在尚未安装该客户端的客户端计算机上安装和启用 Endpoint Protection 客户端。  
 
     > [!NOTE]  
-    >  如果已经安装了 Endpoint Protection 客户端，则选择“False” 或“否”将不卸载 Endpoint Protection 客户端。 若要卸载 Endpoint Protection 客户端，将“在客户端计算机上管理 Endpoint Protection 客户端”客户端设置设为“False”或“否”）。 然后，部署包和程序以卸载 Endpoint Protection 客户端。  
+    >  如果已经安装了 Endpoint Protection 客户端，则选择“False”或“否”将不卸载 Endpoint Protection 客户端。 若要卸载 Endpoint Protection 客户端，将“在客户端计算机上管理 Endpoint Protection 客户端”客户端设置设为“False”或“否”）。 然后，部署包和程序以卸载 Endpoint Protection 客户端。  
 
 -   **对于带有写入筛选器的 Windows Embedded 设备，提交 Endpoint Protection 客户端安装(需要重新启动)**  
 
      选择“是”以对 Windows Embedded 设备禁用写入筛选器并重启该设备。 这会在设备上执行安装。  
 
-     如果指定“否”  ，则在临时覆盖区上安装客户端，重启设备时会清除此临时覆盖区。 在此情况下不会提交 Endpoint Protection 客户端，直到另一个安装对设备执行更改为止。 此为默认设置。  
+     如果指定“否”，则在临时覆盖区上安装客户端，重启设备时会清除此临时覆盖区。 在此情况下不会提交 Endpoint Protection 客户端，直到另一个安装对设备执行更改为止。 此为默认设置。  
 
 -   **在安装 Endpoint Protection 客户端后取消任何所需的计算机重启**  
 
@@ -376,7 +380,7 @@ System Center Configuration Manager 中的所有客户端设置在 Configuration
 
 -   **启用唤醒代理**  
 
-     指定“是”  以在为单播包配置站点 LAN 唤醒设置后对其进行补充。  
+     指定“是”以在为单播包配置站点 LAN 唤醒设置后对其进行补充。  
 
      有关唤醒代理的详细信息，请参阅[规划如何在 System Center Configuration Manager 中唤醒客户端](../../../core/clients/deploy/plan/plan-wake-up-clients.md)。  
 
@@ -394,11 +398,11 @@ System Center Configuration Manager 中的所有客户端设置在 Configuration
      保留默认值 9，除非在站点“属性”的“端口”选项卡上更改了 LAN 唤醒 (UDP) 端口号。  
 
     > [!IMPORTANT]  
-    >  此数字必须与站点“属性” 中的数字匹配。 如果在一个位置更改此数字，则不会在其他位置自动更新此数字。  
+    >  此数字必须与站点“属性”中的数字匹配。 如果在一个位置更改此数字，则不会在其他位置自动更新此数字。  
 
 ##  <a name="remote-tools"></a>远程工具  
 
--   **在客户端上启用远程控制** 及描述“脚本未签名” **防火墙例外配置文件**  
+-   **在客户端上启用远程控制**及描述“脚本未签名” **防火墙例外配置文件**  
 
      选择是否为接收这些客户端设置的所有客户端计算机启用 Configuration Manager 远程控制。 选择“配置”以启用远程控制。 根据需要将防火墙设置配置为允许远程控制在客户端计算机上工作。  
 
@@ -542,7 +546,7 @@ System Center Configuration Manager 中的所有客户端设置在 Configuration
           >   
           >  软件清单不收集超过 20 MB 的文件。  
           >   
-          >  “配置客户端设置”对话框中的“所有收集的文件的最大大小(KB)” 值显示所有收集的文件的最大大小。 达到该大小后，将停止文件收集。 已收集的任何文件都会被保留并发送到站点服务器。  
+          >  “配置客户端设置”对话框中的“所有收集的文件的最大大小(KB)”值显示所有收集的文件的最大大小。 达到该大小后，将停止文件收集。 已收集的任何文件都会被保留并发送到站点服务器。  
 
           > [!IMPORTANT]
           >  如果将软件清单配置为收集许多大文件，则这可能会对网络和站点服务器的性能有负面影响。  
@@ -630,7 +634,7 @@ System Center Configuration Manager 中的所有客户端设置在 Configuration
 
 -   **移动设备注册配置文件**  
 
-     在可以配置此设置之前，必须首先将移动设备用户设置“允许用户注册移动设备”  设置为“真” 。 然后，可以选择“设置配置文件”，以指定注册配置文件（包含有关要在注册过程中使用的证书模板的信息）、包含注册点和注册代理点的站点以及将在注册后管理设备的站点。  
+     在可以配置此设置之前，必须首先将移动设备用户设置“允许用户注册移动设备”设置为“真”。 然后，可以选择“设置配置文件”，以指定注册配置文件（包含有关要在注册过程中使用的证书模板的信息）、包含注册点和注册代理点的站点以及将在注册后管理设备的站点。  
 
     > [!IMPORTANT]  
     >  在配置此选项之前，请确保你配置了要用于移动设备注册的证书模板。  
@@ -639,7 +643,7 @@ System Center Configuration Manager 中的所有客户端设置在 Configuration
 
 -   **移动设备注册配置文件**  
 
-     在可以配置此设置之前，必须首先将注册用户设置“允许用户注册移动设备和 Mac 计算机”  设置为“是” 。 然后，可以选择“设置配置文件”，以指定注册配置文件（包含有关要在注册过程中使用的证书模板的信息）、包含注册点和注册代理点的站点以及将在注册后管理设备的站点。  
+     在可以配置此设置之前，必须首先将注册用户设置“允许用户注册移动设备和 Mac 计算机”设置为“是”。 然后，可以选择“设置配置文件”，以指定注册配置文件（包含有关要在注册过程中使用的证书模板的信息）、包含注册点和注册代理点的站点以及将在注册后管理设备的站点。  
 
     > [!IMPORTANT]  
     >  在配置此选项之前，请确保你配置了要用于移动设备注册或用于 Mac 客户端证书注册的证书模板。  

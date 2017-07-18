@@ -2,7 +2,7 @@
 title: "1702 的清单 | System Center Configuration Manager"
 description: "了解更新到 System Center Configuration Manager 版本 1702 之前需要执行的操作。"
 ms.custom: na
-ms.date: 05/02/2017
+ms.date: 6/6/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -16,10 +16,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 90775fcf2549080a43e9c1606caa79d9eb90a89c
-ms.openlocfilehash: c4ace452d62d4fa08f4457cb1735718ca4bd016d
+ms.sourcegitcommit: 3619a73d3a39659de927e1711a7ec81de9918064
+ms.openlocfilehash: 355dfb361a1ab3e1bd436dae1df8a416bf79c6c8
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/13/2017
 
 ---
 # <a name="checklist-for-installing-update-1702-for-system-center-configuration-manager"></a>用于为 System Center Configuration Manager 安装更新 1702 的清单
@@ -108,10 +108,7 @@ ms.lasthandoff: 05/17/2017
 **为托管站点、站点数据库服务器和远程站点系统角色的计算机上的操作系统安装所有合适的关键更新：**为 Configuration Manager 安装更新之前，请为每个适用的站点系统安装任何关键更新。 如果安装的更新需要重启，请在开始升级之前重启合适的计算机。
 
 **在主站点上禁用管理点数据库副本：**   
-Configuration Manager 无法成功更新启用了管理点数据库副本的主站点。 禁用数据库复制，然后：
-
--   创建站点数据库的备份以测试数据库升级。
--   为 Configuration Manager 安装更新。
+Configuration Manager 无法成功更新启用了管理点数据库副本的主站点。 安装 Configuration Manager 的更新之前禁用数据库复制。
 
 有关详细信息，请参阅 [System Center Configuration Manager 管理点的数据库副本](/sccm/core/servers/deploy/configure/database-replicas-for-management-points)。
 
@@ -139,21 +136,24 @@ Configuration Manager 无法更新使用网络负载均衡 (NLB) 群集来托管
 
 有关详细信息，请参阅 [System Center Configuration Manager 的备份和恢复](/sccm/protect/understand/backup-and-recovery)。
 
-**在最近的站点数据库备份副本上测试数据库升级：**更新 System Center Configuration Manager 管理中心站点或主站点之前，可以在站点数据库副本上测试站点数据库升级过程。
+<!-- Removed from update guidance 6/6/2017
+**Test the database upgrade on a copy of the most recent site database backup:** 
+Before you update a System Center Configuration Manager central administration site or primary site, you can test the site database upgrade process on a copy of the site database.
 
--   建议测试站点数据库升级过程，因为当升级站点时，可能会修改站点数据库。
+-   We recommend that you test the site database upgrade process because when you upgrade a site, the site database might be modified.
 
--   虽然测试数据库升级不是必需的，但它可以在生产数据库受到影响之前先行识别升级的问题。
+-   Although a test database upgrade is not required, it can identify problems for the upgrade before your production database is affected.
 
--   失败的站点数据库升级可能会使站点数据库无法运行，并且可能需要进行站点恢复以还原功能。
+-   A failed site database upgrade can render your site database inoperable and might require a site recovery to restore functionality.
 
--   虽然在层次结构的站点之间共享了站点数据库，但是，请在升级每个合适的站点之前计划在该站点上测试数据库。
+-   Although the site database is shared between sites in a hierarchy, plan to test the database at each applicable site before you upgrade that site.
 
--   如果在主站点上对管理点使用数据库副本，请在创建站点数据库备份之前禁用复制。
+-   If you use database replicas for management points at a primary site, disable replication before you create the backup of the site database.
 
-Configuration Manager 不支持辅助站点备份，也不支持辅助站点数据库的测试升级。
+Configuration Manager does not support the backup of secondary sites nor does it support the test upgrade of a secondary site database.
 
-请勿在生产站点数据库上运行测试数据库升级。 执行此任务会升级站点数据库，并可能导致你的站点无法运行。 有关详细信息，请参阅**安装控制台内部更新前**中的[步骤 2：在安装更新前测试数据库升级](/sccm/core/servers/manage/install-in-console-updates#bkmk_step2)。
+Do not run a test database upgrade on the production site database. Doing so updates the site database and could render your site inoperable. For more information, see [Step 2: Test the database upgrade before installing an update](/sccm/core/servers/manage/install-in-console-updates#bkmk_step2) from **Before you install an in-console update**.
+-->
 
 **规划客户端试点：**   
 安装更新客户端的更新后，可以在新的客户端更新部署和升级所有活动的客户端之前在预生产中对其进行测试。
@@ -186,11 +186,11 @@ Configuration Manager 不支持辅助站点备份，也不支持辅助站点数�
 
 ## <a name="post-update-checklist"></a>发布更新清单
 更新安装完成后查看以下要执行的操作。
-1.    请确保站点到站点复制处于活动状态。 在控制台中，查看“监视” > “站点层次结构”和“监视” > “数据库复制”获取复制链接处于活动状态的问题或确认指示。
-2.    确保每个站点服务器和站点系统角色都已更新为版本 1702。 在控制台中，你可以将可选列“版本”添加到某些节点的显示，包括“站点”和“分发点”。
+1.  请确保站点到站点复制处于活动状态。 在控制台中，查看“监视” > “站点层次结构”和“监视” > “数据库复制”获取复制链接处于活动状态的问题或确认指示。
+2.  确保每个站点服务器和站点系统角色都已更新为版本 1702。 在控制台中，你可以将可选列“版本”添加到某些节点的显示，包括“站点”和“分发点”。
 
  如有必要，站点系统角色将自动重新安装以更新到最新版本。 请考虑重新启动未成功更新的远程站点系统。
-3.    为在开始更新前禁用的主站点中的管理点重新配置数据库副本。
+3.  为在开始更新前禁用的主站点中的管理点重新配置数据库副本。
 4.  重新配置开始更新前禁用的数据库维护任务。
-5.    如果在安装更新前已配置客户端试点，请按照你创建的计划升级客户端。
+5.  如果在安装更新前已配置客户端试点，请按照你创建的计划升级客户端。
 

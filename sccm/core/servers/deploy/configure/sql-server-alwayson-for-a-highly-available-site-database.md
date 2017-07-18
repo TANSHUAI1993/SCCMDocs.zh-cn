@@ -1,7 +1,8 @@
 ---
-title: SQL Server AlwaysOn | Microsoft Docs
+title: "SQL Server AlwaysOn | Microsoft 文档"
+description: "计划将 SQL Server AlwaysOn 可用性组与 SCCM 配合使用。"
 ms.custom: na
-ms.date: 1/4/2017
+ms.date: 5/26/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,262 +16,242 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: aaaab003ddd22f18160d4be63cfeab3a7e7f6b03
+ms.sourcegitcommit: dc221ddf547c43ab1f25ff83c3c9bb603297ece6
+ms.openlocfilehash: 188ae877368a6cb2ec9998bff74259b4e5b5e7ce
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/01/2017
 
 
 ---
-# <a name="sql-server-alwayson-for-a-highly-available-site-database-for-system-center-configuration-manager"></a>通过 SQL Server AlwaysOn 实现适用于 System Center Configuration Manager 的高可用性站点数据库
+# <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>准备将 SQL Server AlwaysOn 可用性组与 Configuration Manager 配合使用
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
+准备 System Center Configuration Manager，以将 SQL Server AlwaysOn 可用性组用作站点数据库的高可用性和灾难恢复解决方案。  
+Configuration Manager 支持在以下位置使用可用性组：
+-     主站点和管理中心站点。
+-     本地环境或 Microsoft Azure 中。
 
- 从 System Center Configuration Manager 1602 版开始，可以使用 SQL Server [AlwaysOn 可用性组](https://msdn.microsoft.com/library/hh510230\(v=sql.120\).aspx)承载主站点和管理中心站点上的站点数据库作为高可用性和灾难恢复解决方案。 可在本地或在 Microsoft Azure 中托管可用性组。  
+在 Microsoft Azure 中使用可用性组时，可使用 Azure 可用性集进一步提升站点数据库的可用性。 有关 Azure 可用性集的详细信息，请参阅 [管理虚拟机的可用性](https://azure.microsoft.com/documentation/articles/virtual-machines-windows-manage-availability/)。
 
- 使用 Microsoft Azure 托管可用性组时，可将 SQL Server AlwaysOn 可用性组用于 Azure 可用性集，从而进一步提升站点数据库的可用性。 有关 Azure 可用性集的详细信息，请参阅 [管理虚拟机的可用性](https://azure.microsoft.com/documentation/articles/virtual-machines-windows-manage-availability/)。  
+>  [!Important]   
+>  在继续之前，熟悉如何配置 SQL Server 和 SQL Server 可用性组。 以下信息引用 SQL Server 文档库和过程。
 
- Configuration Manager 支持在位于内部或外部负载均衡器后面的 SQL 可用性组上承载站点数据库。 除了在每个副本上配置防火墙例外，还需要为以下端口添加负载均衡规则：
-  - SQL over TCP: TCP 1433
-  - SQL Server Service Broker: TCP 4022
-  - 服务器消息块 (SMB): TCP 445
-  - RPC 终结点映射程序: TCP 135
+## <a name="supported-scenarios"></a>支持的方案
+以下是将可用性组与 Configuration Manager 配合使用的支持方案。 可以在[配置 Configuration Manager 的可用性组](/sccm/core/servers/deploy/configure/configure-aoag)中找到每个方案的详细信息和过程。
 
 
-以下是支持可用性组的方案：  
+-      [创建与 Configuration Manager 配合使用的可用性组](/sccm/core/servers/deploy/configure/configure-aoag#create-and-configure-an-availability-group)。
+-     [配置站点以使用可用性组](/sccm/core/servers/deploy/configure/configure-aoag#configure-a-site-to-use-the-database-in-the-availability-group)。
+-     [可以从托管站点数据库的可用性组添加或删除副本成员](/sccm/core/servers/deploy/configure/configure-aoag#add-and-remove-replica-members)。
+-     [可以将站点数据库从可用性组移到独立 SQL Server 的默认实例或命名实例](/sccm/core/servers/deploy/configure/configure-aoag#stop-using-an-availability-group)。
 
--   可以将站点数据库移到可用性组的默认实例  
 
--   可以从托管站点数据库的可用性组添加或删除副本成员  
+## <a name="prerequisites"></a>先决条件
+将以下先决条件应用到所有方案。 如果将其他先决条件应用到特定方案，将针对该方案详细介绍这些先决条件。   
 
--   可以将站点数据库从可用性组移到独立 SQL Server 的默认实例或命名实例  
+### <a name="configuration-manager-accounts-and-permissions"></a>Configuration Manager 帐户和权限
+**站点服务器到副本成员访问权限：**   
+站点服务器的计算机帐户必须是可用性组成员计算机上“本地管理员”组的成员。
 
-> [!Important]  
-> 在混合配置中将 Microsoft Intune 与 Configuration Manager 结合使用时，从可用性组来回移动站点数据库将触发数据与云重新同步。 此问题无法避免。 
+### <a name="sql-server"></a>SQL Server
+**版本：**  
+可用性组中的每个副本必须运行由 Configuration Manager 版本支持的 SQL Server 版本。 如果 SQL Server 支持，可用性组的不同节点可以运行不同版本的 SQL Server。
 
+**版本：**  
+必须使用 SQL Server 企业版。
 
+**帐户：**  
+每个 SQL Server 实例可以在域用户帐户（服务帐户）或本地系统下运行。 组中的每个副本可以具有不同的配置。 根据 [SQL Server 最佳实践](/sql/sql-server/install/security-considerations-for-a-sql-server-installation#before-installing-includessnoversionincludesssnoversion-mdmd)，使用具有最低权限的帐户。
 
-> [!NOTE]  
->  成功配置和使用可用性组要求你熟悉 SQL Server 和 SQL Server 可用性组的配置。 本主题中 System Center Configuration Manager 的过程依赖于 SQL Server 文档库中找到的其他文档和过程。  
+例如，若要配置服务帐户和 SQL Server 2016 的权限，请参阅 MSDN 上的[配置 Windows 服务帐户和权限](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions)。
 
- **将 Configuration Manager 与 AlwaysOn 可用性组配合使用时的已知问题：**  
+  如果使用本地系统运行一个副本，则必须配置终结点身份验证。 这包括权限委派，以便启用到副本服务器终结点的连接。
+  -     通过将每个 SQL Server 的计算机帐户添加为节点中其他 SQL Server 上的登录名，并授予该帐户的 SA 权限来委派 SQL Server 权限。  
+  -     通过在每个副本上运行以下脚本来向本地终结点上的每个远程服务器委派终结点权限：    
 
--   **设置 Configuration Manager 以使用可用性组时，所有副本服务器需要相同的文件路径：**  
+              GRANT CONNECT ON endpoint::[endpoint_name]  
+              TO [domain\servername$]
 
-    -   运行 Configuration Manager 安装程序以重定向站点以使用可用性组中的数据库时，组中的每个辅助副本服务器的文件路径必须和用来承载当前主副本上站点数据库文件的文件路径相同。 如果辅助副本上不存在相同的路径，则安装程序将无法将可用性组实例添加为站点数据库的新位置。  
+有关详细信息，请参阅[为 AlwaysOn 可用性组创建数据库镜像终结点](/sql/database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell)。
 
-         此外，在每个辅助副本服务器上，本地 SQL Server 服务帐户必须具有对此文件夹的“完全控制”权限。  
+### <a name="availability-group-configurations"></a>可用性组配置
+**副本成员：**  
+此可用性组必须具有一个主要副本，并且可以具有最多两个同步次要副本。  每个副本成员必须：
+-   使用“默认实例”  
+    从版本 1702 年开始，可以使用命名实例。
 
-         仅当使用安装程序指定可用性组中的数据库实例时，次要副本服务器才需要此文件路径。  安装程序完成在可用性组中使用站点数据库的更改后，可以从次要副本服务器删除未使用的路径。  
+-      将**主角色中的连接**设置为**是**
+-      将**可读次要副本**设置为**是**  
+-      设置为“手动故障转移”       
 
-         例如，考虑以下情况：  
+    >  [!TIP]
+    >  Configuration Manager 设置为“自动故障转移”时，支持使用可用性组副本。 但是，在以下情况下必须设置“手动故障转移”：
+    >  -  运行安装程序以指定在可用性组中使用站点数据库。
+    >  -  在将任何更新（不仅是适用于站点数据库的更新）安装到 Configuration Manager 时。  
 
-        -   创建使用三个 SQL 服务器的可用性组  
+**副本成员位置：**  
+可用性组中的所有副本必须在本地托管或在 Microsoft Azure 上托管。 不支持包含本地成员或 Azure 中成员的组。     
 
-        -   主副本服务器是新安装的 SQL Server 2014。  默认情况下，数据库 .MDF 和 .LDF 文件存储在 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA  
+在 Azure 中设置可用性组，且组处于内部或外部负载均衡器后面时，必须开放以下默认端口，使安装程序能够访问每个副本：   
 
-        -   你的两个辅助副本服务器均已从以前版本升级到 SQL Server 2014，并保留用于存储数据库文件的原始文件路径：C:\Program Files\Microsoft SQL Server\MSSQL10.MSSQLSERVER\MSSQL\DATA  
+-      RCP 终结点映射程序 - **TCP 135**   
+-      服务器消息块 – **TCP 445**  
+  数据库移动完成后，可以删除此端口。从版本 1702 开始，不再需要此端口。  **
+-      SQL Server Service Broker -  **TCP 4022**
+-      SQL over TCP – **TCP 1433**   
 
-        -   尝试将站点数据库移到该可用性组之前，即使辅助副本不使用以下文件位置，也必须在每个辅助副本服务器上创建以下文件路径：C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA（此为主副本上所使用路径的副本）  
+安装完成后，以下端口必须保持可访问状态：
+-      SQL Server Service Broker -  **TCP 4022**
+-      SQL over TCP – **TCP 1433**
 
-        -   然后向每个辅助副本上的 SQL Server 服务帐户授予对该服务器上新创建文件位置的完全控制访问权限  
+从版本 1702 开始，可以使用这些配置的自定义端口。 在可用性组中的所有副本上，该终结点必须使用相同的端口。
 
-        -   现在，便可以成功运行 Configuration Manager 安装程序以引导站点使用可用性组中的站点数据库  
 
--   **运行安装程序以引导站点数据库使用可用性组时，ConfigMgrSetup.log 中可能会记录类似于以下的错误：**  
+**侦听器：**   
+此可用性组必须具有至少一个“可用组侦听器”。 将 Configuration Manager 配置为使用可用性组中的站点数据库时，将使用此侦听器的虚拟名称。 尽管可用性组可以包含多个侦听器，但 Configuration Manager 只能使用其中一个。 请参阅[创建或配置可用性组侦听器 (SQL Server)](/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server)，了解详细信息。
 
-    -   错误：SQL Server 错误：[25000][3906][Microsoft][SQL Server Native Client 11.0][SQL Server]未能更新数据库 "CM_AAA"，因为此数据库为只读。   Configuration Manager 安装程序 1/21/2016 4:54:59 PM  7344 (0x1CB0)  
+**文件路径：**   
+运行 Configuration Manager 安装程序以配置站点使用可用性组中的数据库时，每个次要副本服务器的 SQL Server 文件路径必须和当前主要副本上找到的站点数据库文件的文件路径相同。
+-   如果不存在相同的路径，安装程序将无法将可用性组实例添加为站点数据库的新位置。
+-   此外，本地 SQL Server 服务帐户必须具有对此文件夹的“完全控制”权限。
 
-     安装程序在尝试处理可用性组辅助副本上的数据库角色时记录了这些错误。 可以放心忽略这些错误。
-- **承载其他可用性组的 SQL Server：**
+仅当使用安装程序指定可用性组中的数据库实例时，次要副本服务器才需要此文件路径。 安装程序完成在可用性组中站点数据库的配置后，可以从次要副本服务器删除未使用的路径。
 
-  安装版本 1610 之前，当使用可用性组，然后运行 Configuration Manager 安装程序或安装 Configuration Manager 更新时，承载 Configuration Manager 可用性组的 SQL Server 上每个其他可用性组中的每个副本必须进行以下配置：
-    - **手动故障转移**
-    - **允许任何只读连接**
+例如，考虑以下情况：
+-    创建可使用三个 SQL Server 的可用性组。
 
+-    主副本服务器是新安装的 SQL Server 2014。 默认情况下，数据库 .MDF 和 .LDF 文件存储在 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA 中。
 
-##  <a name="bkmk_BnR"></a> 当你使用 SQL Server AlwaysOn 可用性组时，备份和恢复的更改  
- **备份：**  
+-    两个次要副本服务器均已从以前版本升级到 SQL Server 2014，并保留用于存储数据库文件的原始文件路径：C:\Program Files\Microsoft SQL Server\MSSQL10.MSSQLSERVER\MSSQL\DATA。
 
- 当站点数据库在某一可用性组中运行时，应继续运行内置“备份站点”服务器维护任务来备份常规 Configuration Manager 设置和文件，但不要计划使用由该备份创建的 .MDF 或 .LDF 文件。 相反，计划通过使用 SQL Server 直接备份站点数据库。  
+-    尝试将站点数据库移到该可用性组之前，即使次要副本不使用以下文件位置，也必须在每个次要副本服务器上创建以下文件路径：C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA（此为主要副本上所使用路径的副本）。
 
- 此外，由于已将数据库的恢复模式设置为完整备份，因此必须计划监视和维护站点数据库事务日志的大小。  在完整恢复模型下，在进行数据库或事务日志的完整备份后，才对事务进行强化。 完整恢复模式是使用可用性组中站点数据库的要求，在配置与 Configuration Manager 一起使用的组时设置。 有关 SQL Server 备份和还原的详细信息，请参阅 SQL Server 文档中的 [SQL Server 数据库的备份和还原](https://msdn.microsoft.com/library/ms187048\(v=sql.120\).aspx) 。  
+-    然后向每个次要副本上的 SQL Server 服务帐户授予对该服务器上新创建文件位置的完全控制访问权限。
 
- **恢复：**  
+-    现在，便可以成功运行 Configuration Manager 安装程序以配置站点使用可用性组中的站点数据库。
 
- 在站点恢复期间，只要可用性组的一个节点仍正常工作，就可以使用“跳过数据库恢复”站点恢复选项（当站点数据库未受影响时使用此选项）。  
+**在新副本上配置数据库：**   
+ 每个副本的数据库必须设置如下：
+-     CLR 集成必须为启用状态
+-      **Max text repl size** 必须为 *2147483647*
+-      数据库所有者必须是 *SA 帐户*
+-      **TRUSTWORTY**必须为**打开**
+-      **Service Broker** 必须为*启用*
 
- 但是，如果可用性组的所有节点都已丢失，则必须重新创建可用性组，才能恢复站点（System Center Configuration Manager 不能重新生成或还原可用性节点。）使用还原且重新配置的备份重新创建组后，即可使用“跳过数据库恢复(当站点数据库未受影响时使用此选项)”站点恢复选项。  
+可以仅在主要副本上进行这些配置。 若要配置次要副本，必须先将主要副本故障转移到次要副本，以使次要副本成为新的主要副本。   
 
- 有关备份和恢复的详细信息，请参阅 [System Center Configuration Manager 的备份和恢复](../../../../protect/understand/backup-and-recovery.md)。  
+在需要帮助配置设置时，使用 SQL Server 文档。 有关示例，请参阅 SQL Server 文档中的 [TRUSTWORTHY](/sql/relational-databases/security/trustworthy-database-property) 或 [CLR 集成](/sql/relational-databases/clr-integration/clr-integration-enabling)。
 
-##  <a name="bkmk_create"></a> 配置与 Configuration Manager 配合使用的可用性组  
- 在开始下列过程之前，请熟悉完成此配置所需的 SQL Server 过程，以及配置与 Configuration Manager 配合使用的可用性组的以下详细信息。  
+### <a name="verification-script"></a>验证脚本
+可以运行以下脚本来验证主要副本和次要副本的数据库配置。 必须将该次要副本更改为主要副本才能修复次要副本上的某个问题。
 
- **与 System Center Configuration Manager 配合使用的 AlwaysOn 可用性组的要求：**  
+    SET NOCOUNT ON
 
--  *版本*：可用性组中的每个节点（或副本）必须运行由 System Center Configuration Manager 支持的 SQL Server 版本。 如果 SQL Server 支持，可用性组的不同节点可以运行不同版本的 SQL Server。   
+    DECLARE @dbname NVARCHAR(128)
 
-- *版本*：必须使用 SQL Server 企业版。  SQL Server 2016 标准版引入了 Basic 可用性组（Configuration Manager 不支持此组）。
+    SELECT @dbname = sd.name FROM sys.sysdatabases sd WHERE sd.dbid = DB_ID()
 
+    IF (@dbname = N'master' OR @dbname = N'model' OR @dbname = N'msdb' OR @dbname = N'tempdb' OR @dbname = N'distribution' ) BEGIN
+    RAISERROR(N'ERROR: Script is targetting a system database.  It should be targeting the DB you created instead.', 0, 1)
+    GOTO Branch_Exit;
+    END ELSE
+    PRINT N'INFO: Targetted database is ' + @dbname + N'.'
 
--   此可用性组必须具有一个主副本，并且可以具有最多两个同步辅助副本。  
+    PRINT N'INFO: Running verifications....'
 
--  将数据库添加到某一可用性组后，必须将主副本故障转移到辅助副本（使其成为新的主副本），然后对数据库进行以下配置：
-    - 启用 Trustworthy：等于 True
-    - 启用 Service Broker：等于 True
-    - 设置 dbowner：等于 SA
+    IF NOT EXISTS (SELECT * FROM sys.configurations c WHERE c.name = 'clr enabled' AND c.value_in_use = 1)
+    PRINT N'ERROR: CLR is not enabled!'
+    ELSE
+    PRINT N'PASS: CLR is enabled.'
 
-    可以运行以下脚本来配置这些设置，其中 cm_ABC 是站点数据库的名称：  
+    DECLARE @repltable TABLE (
+    name nvarchar(max),
+    minimum int,
+    maximum int,
+    config_value int,
+    run_value int )
 
-    >     USE master  
-    >     ALTER DATABASE cm_ABC SET NEW_BROKER   
-    >     ALTER DATABASE cm_ABC SET ENABLE_BROKER  
-    >     ALTER DATABASE cm_ABC SET TRUSTWORTHY ON;  
-    >     USE cm_ABC  
-    >     EXEC sp_changedbowner 'sa'  
-    >     Exec sp_configure 'max text repl size (B)', 2147483647 reconfigure
+    INSERT INTO @repltable
+    EXEC sp_configure 'max text repl size (B)'
 
+    IF NOT EXISTS(SELECT * from @repltable where config_value = 2147483647 and run_value = 2147483647 )
+    PRINT N'ERROR: Max text repl size is not correct!'
+    ELSE
+    PRINT N'PASS: Max text repl size is correct.'
 
+    IF NOT EXISTS (SELECT db.owner_sid FROM sys.databases db WHERE db.database_id = DB_ID() AND db.owner_sid = 0x01)
+    PRINT N'ERROR: Database owner is not sa account!'
+    ELSE
+    PRINT N'PASS: Database owner is sa account.'
 
--   此可用性组必须具有至少一个“可用组侦听器”。  将 Configuration Manager 配置为使用可用性组中的站点数据库时，将使用此侦听器的虚拟名称。 尽管可用性组可以包含多个侦听器，但 Configuration Manager 只能使用其中一个  
+    IF NOT EXISTS( SELECT * FROM sys.databases db WHERE db.database_id = DB_ID() AND db.is_trustworthy_on = 1 )
+    PRINT N'ERROR: Trustworthy bit is not on!'
+    ELSE
+    PRINT N'PASS: Trustworthy bit is on.'
 
--   每个主要和辅助副本必须满足以下条件：  
-    - 设置为“允许任何只读连接”
-    - 使用“默认实例”
-    - 设置为“手动故障转移”  
+    IF NOT EXISTS( SELECT * FROM sys.databases db WHERE db.database_id = DB_ID() AND db.is_broker_enabled = 1 )
+    PRINT N'ERROR: Service broker is not enabled!'
+    ELSE
+    PRINT N'PASS: Service broker is enabled.'
 
-        > [!TIP]  
-        >  System Center Configuration Manager 设置为“自动故障转移”时，支持使用可用性组副本。 但是，当运行安装程序以指定使用可用性组中站点数据库，以及安装 Configuration Manager 的任何更新（不仅是适用于站点数据库的更新）时，必须设置“手动故障转移”。  
+    IF NOT EXISTS( SELECT * FROM sys.databases db WHERE db.database_id = DB_ID() AND db.is_honor_broker_priority_on = 1 )
+    PRINT N'ERROR: Service broker priority is not set!'
+    ELSE
+    PRINT N'PASS: Service broker priority is set.'
 
-  **可用性组的限制**
-   - 不支持 Basic 可用性组（随 SQL Server 2016 标准版引入）。 这是因为 Basic 可用性组不支持对次要副本的读取访问，这是与 Configuration Manager 配合使用的要求。 有关详细信息，请参阅 [Basic 可用性组（AlwaysOn 可用性组）](https://msdn.microsoft.com/en-us/library/mt614935.aspx)。
+    PRINT N'Done!'
 
-   - 可用性组仅可用于站点数据库，不支持软件更新数据库或报表数据库。   
-   - 使用可用性组时，必须将报表点手动配置为使用当前主副本，而非可用性组侦听器。 如果主副本故障转移到另一个副本，则必须将报表点重新配置为使用新的主副本。  
-   - 在安装更新（例如版本 1606）之前，请确保将可用性组设置为手动故障转移。 站点更新后，可以将故障转移还原为自动故障转移。
+    Branch_Exit:
 
+## <a name="limitations-and-known-issues"></a>限制和已知问题
+以下限制适用于所有方案。   
 
+**不支持 Basic 可用性组：**  
+随着 SQL Server 2016 Standard 版本的推出，[Basic 可用性组](https://msdn.microsoft.com/library/mt614935.aspx)不支持对次要副本的读取访问，这是与 Configuration Manager 配合使用的要求。
 
- **配置和使用可用性组所需的权限：**  
+**托管其他可用性组的 SQL Server：**   
+在 Configuration Manager 版本 1610 之前，当 SQL Server 上的可用性组托管除用于 Configuration Manager 的组之外的一个或多个可用性组时，每个其他可用性组中的每个副本必须在运行 Configuration Manager 安装程序或安装 Configuration Manager 更新时进行以下配置：
+-   **手动故障转移**
+-     **允许任何只读连接**
 
--   站点服务器的计算机帐户必须是可用性组成员计算机上“本地管理员”组的成员。  
+**不支持的数据库使用：**
+-   **Configuration Manager 仅支持可用性组中的站点数据库：**不支持以下内容：
+    -   报表数据库
+    -   WSUS 数据库
+-   **预先存在的数据库：**不能使用副本上创建的新数据库。 而必须在配置可用性组时将现有 Configuration Manager 数据库的副本还原为主要副本。
 
-#### <a name="to-configure-an-availability-group-to-host-a-site-database"></a>将可用性组配置为托管站点数据库  
+**ConfigMgrSetup.log 中的安装错误：**  
+运行安装程序将站点数据库移到可用性组时，安装程序会尝试处理可用性组的次要副本上的数据库角色，并记录错误，如下所示：
+-   错误：SQL Server 错误：[25000][3906][Microsoft][SQL Server Native Client 11.0][SQL Server]未能更新数据库 "CM_AAA"，因为此数据库为只读。 Configuration Manager 安装程序 1/21/2016 4:54:59 PM 7344 (0x1CB0)  
 
-1.  使用以下命令可停止 Configuration Manager 站点：  
-     **Preinst.exe /stopsite**  
+这些错误可以忽略。
 
-     有关使用 Preinst.exe 的详细信息，请参阅 [System Center Configuration Manager 的层次结构维护工具 (Preinst.exe)](../../../../core/servers/manage/hierarchy-maintenance-tool-preinst.exe.md)。  
+## <a name="changes-for-site-backup"></a>站点备份的更改
+**备份数据库文件：**  
+当站点数据库在某一可用性组中运行时，应运行内置“备份站点服务器”维护任务来备份常规 Configuration Manager 设置和文件。 但不要使用由该备份创建的 .MDF 或 .LDF 文件。 相反，通过使用 SQL Server 直接备份这些数据库文件。
 
-2.  将站点数据库的备份模型从“简单”更改为“完整”。  
+**事务日志：**  
+必须将站点数据库的恢复模式设置为“完整”（在可用性组中使用的要求）。 使用此配置可以计划监视和维护站点数据库事务日志的大小。 在完整恢复模型下，在进行数据库或事务日志的完整备份后，才对事务进行强化。 请参阅 SQL Server 文档中的 [SQL Server 数据库的备份和还原](/sql/relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases)了解详细信息。
 
-     请参阅 SQL Server 文档中的[查看或更改数据库的恢复模式](https://msdn.microsoft.com/library/ms189272\(v=sql.120\).aspx)。 （可用性组仅支持“完整”）。  
+## <a name="changes-for-site-recovery"></a>站点恢复的更改
+如果可用性组至少有一个节点仍正常工作，就可以使用“跳过数据库恢复(当站点数据库未受影响时使用此选项)”站点恢复选项。
 
-3.  在将托管组的主要副本的服务器上，使用“新建可用性组向导”创建可用性组。 在向导中：  
+ 在可用性组的所有节点都已丢失时，必须重新创建可用性组才能恢复站点。 Configuration Manager 无法重新生成或还原可用性节点。 重新创建组且还原并重新配置备份后，即可使用“跳过数据库恢复(当站点数据库未受影响时使用此选项)”站点恢复选项。
 
-    -   在“选择数据库”页面上，为你的 Configuration Manager 站点选择数据库  
+有关详细信息，请参阅 [System Center Configuration Manager 的备份和恢复](/sccm/protect/understand/backup-and-recovery)。
 
-    -   在“添加副本”页面，配置以下内容：  
+## <a name="changes-for-reporting"></a>报表的更改
+**安装 Reporting Services 点：**  
+Reporting Services 点不支持使用可用性组的侦听器虚拟名称，也不支持托管 SQL Server AlwaysOn 可用性组中的 Reporting Services 数据库：
+-   默认情况下，Reporting Services 点安装将“站点数据库服务器名称”设置为指定作为侦听器的虚拟名称。 更改此设置以指定可用性组中的计算机名称和副本的实例。
+-   若要在副本节点处于脱机状态时，卸载报告负载并提高可用性，请考虑在每个副本节点上安装其他 Reporting Services 点，并将每个 Reporting Services 点配置为指向其自己的计算机名称。
 
-        -   **副本：**指定将托管次要副本的服务器  
+在可用性组的每个副本上安装 Reporting Services 点时，报表可以始终连接到活动的报表点服务器。
 
-        -   **侦听器**：指定“侦听器 DNS 名称”作为完整 DNS 名称，如 **&lt;Listener_Server>.fabrikam.com**。 将 Configuration Manager 配置为使用可用性组中的站点数据库时，将使用此名称。
+**切换由控制台使用的 Reporting Services 点：**  
+若要运行报表，在控制台中，转到“监视” > “概述” > “报告” > “报表”，然后选择“报表选项”。 在“报表选项”对话框中，选择所需的 Reporting Services 点。
 
-    -   在“选择初始数据同步”页面，选择“完整”。 该向导创建可用性组后，向导将备份主数据库和事务日志，并在托管辅助副本的每个服务器上还原它们。 如果不使用此步骤，则需要将站点数据库的副本还原到托管辅助副本的每个服务器，并将该数据库手动联接到组。  
-
-    有关详细信息，请参阅 SQL Server 文档中的[使用可用性组向导](https://msdn.microsoft.com/library/hh403415\(v=sql.120\).aspx)。  
-
-4.  配置可用性组后，为主要副本上的站点数据库配置“TRUSTWORTHY”属性，然后“启用 CLR 集成”。 有关如何配置这些项目的信息，请参阅 SQL Server 文档中的 [TRUSTWORTHY 数据库属性](https://msdn.microsoft.com/library/ms187861\(v=sql.120\).aspx)和[启用 CLR 集成](https://msdn.microsoft.com/library/ms131048\(v=sql.120\).aspx)。  
-
-5.  执行以下操作以配置可用性组中的每个辅助副本：  
-
-    1.  将当前主要副本手动故障转移到辅助副本。 请参阅 SQL Server 文档中的 [执行可用性组的计划手动故障转移](https://msdn.microsoft.com/library/hh231018\(v=sql.120\).aspx) 。  
-
-    2.  为新增主要副本上的数据库配置 **TRUSTWORTHY** 属性，然后 **启用 CLR 集成**。  
-
-6.  将所有副本提升为主要副本并配置数据库后，即可将该可用性组与 Configuration Manager 配合使用。  
-
-
-
-
-
-##  <a name="bkmk_direct"></a> 将站点数据库移至可用性组中  
- 可以将以前安装的站点的站点数据库移到可用性组。 必须首先创建可用性组，然后在可用性组中配置用于操作的数据库。  
-
- 若要完成此过程，运行 Configuration Manager 安装程序的用户帐户必须是可用性组成员计算机上“本地管理员”组的成员。  
-
-#### <a name="to-move-a-site-database-to-an-availability-group"></a>将站点数据库移至可用性组中  
-
-1.  从 **&lt;Configuration Manager 站点安装文件夹 \>\BIN\X64\setup.exe** 运行 **Configuration Manager 安装程序**。  
-
-2.  在“入门”  页上，选择“执行站点维护或重置此站点” ，然后单击“下一步” 。  
-
-3.  选择“修改 SQL Server 配置”选项，然后单击“下一步”。  
-
-4.  为站点数据库重新配置以下内容：  
-
-    -   **SQL Server 名称** ：输入在创建可用性组时配置的可用性组侦听器的虚拟名称。 虚拟名称应为完整的 DNS 名称，如 **&lt;endpointServer\>.fabrikam.com**  
-
-    -   **实例：** 此值必须为空，以便为可用性组的可用性组侦听器指定默认实例。  如果当前站点数据库安装在已命名实例上，则将列出且必须清除该已命名实例  
-
-    -   **数据库：** 保留所显示的名称。 这是当前站点数据库的名称。  
-
-5.  为新的数据库位置提供此信息后，使用常规过程和配置完成安装。  
-
-##  <a name="bkmk_change"></a> 添加或删除活动可用性组的成员  
- Configuration Manager 使用可用性组中托管的站点数据库后，可删除副本成员或添加其他副本成员（不超过一个主节点和两个辅助节点）。  
-
-#### <a name="to-add-a-new-replica-member"></a>添加新的副本成员  
-
-1.  将新的服务器作为辅助副本添加到可用性组。 请参阅 SQL Server 文档库中的  [将次要副本添加到可用性组 (SQL Server)](https://msdn.microsoft.com/library/hh213247\(v=sql.120\).aspx)。  
-
-2.  通过运行 **Preinst.exe /stopsite** 停止 Configuration Manager 站点，请参阅 [System Center Configuration Manager 的层次结构维护工具 (Preinst.exe)](../../../../core/servers/manage/hierarchy-maintenance-tool-preinst.exe.md)。  
-
-3.  配置每个辅助副本。 为可用性组中的每个辅助副本执行以下操作：  
-
-    1.  将主要副本手动故障转移到新的辅助副本。 请参阅 SQL Server 文档中的 [执行可用性组的计划手动故障转移](https://msdn.microsoft.com/library/hh231018\(v=sql.120\).aspx) 。  
-
-    2.  将新服务器上数据库配置为“Trustworthy”，并启用 CLR 集成。 请参阅 SQL Server 文档中的 [TRUSTWORTHY 数据库属性](https://msdn.microsoft.com/library/ms187861\(v=sql.120\).aspx) 和  [启用 CLR 集成](https://msdn.microsoft.com/library/ms131048\(v=sql.120\).aspx)。  
-
-4.  通过启动站点组件管理器 (**sitecomp**) 和 **SMS_Executive** 服务重启站点。  
-
-#### <a name="to-remove-a-replica-member-from-the-availability-group"></a>从可用性组删除副本成员  
-
--   请使用 SQL Server 文档中 [从可用性组删除辅助副本](https://msdn.microsoft.com/library/hh213149\(v=sql.120\).aspx) 中的信息。  
-
-##  <a name="bkmk_remove"></a> 将站点数据库从可用性组移回单个实例 SQL Server  
- 不再需要在可用性组中托管站点数据库时，请使用以下过程。  
-
-#### <a name="to-move-the-site-database-from-an-availability-group-back-to-a-single-instance-sql-server"></a>将站点数据库从可用性组移回单个实例 SQL Server  
-
-1.  使用以下命令停止 Configuration Manager 站点：  
-     **Preinst.exe /stopsite**  有关详细信息，请参阅 [System Center Configuration Manager 的层次结构维护工具 (Preinst.exe)](../../../../core/servers/manage/hierarchy-maintenance-tool-preinst.exe.md)。  
-
-2.  使用 SQL Server 创建主要副本中站点数据库的完整备份。 有关如何完成此步骤的信息，请参阅 SQL Server 文档中的 [创建完整数据库备份](https://msdn.microsoft.com/library/ms187510\(v=sql.120\).aspx) 。  
-
-3.  如果托管可用性组主要副本的服务器现将托管站点数据库的单个实例，可跳过此步骤：  
-
-    -   使用 SQL Server 将站点数据库备份还原到将托管站点数据库的服务器。  请参阅 SQL Server 文档库中的[还原数据库备份 (SQL Server Management Studio)](https://msdn.microsoft.com/library/ms177429\(v=sql.120\).aspx)。  
-
-4.  在已还原的站点数据库中，将站点数据库备份模型从“完整”更改为“简单”。  请参阅 SQL Server 文档中的 [查看或更改数据库的恢复模式](https://msdn.microsoft.com/library/ms189272\(v=sql.120\).aspx) 。  
-
-5.  从 **&lt;Configuration Manager 站点安装文件夹 \>\BIN\X64\setup.exe** 运行 **Configuration Manager 安装程序**。  
-
-6.  在“入门”  页上，选择“执行站点维护或重置此站点” ，然后单击“下一步” 。  
-
-7.  选择“修改 SQL Server 配置”选项，然后单击“下一步”。  
-
-8.  为站点数据库重新配置以下内容：  
-
-    -   **SQL Server 名称：** 输入现在托管站点数据库的服务器的名称。  
-
-    -   **实例：** 指定托管站点数据库的已命名实例（如果数据库在默认实例上则将其留空）。  
-
-    -   **数据库：** 保留所显示的名称。 这是当前站点数据库的名称。  
-
-9. 为新的数据库位置提供此信息后，使用常规过程和配置完成安装。 安装完成后，站点将重启并开始使用新的数据库位置。  
-
-10. 若要清理原为可用性组成员的服务器，请按照 SQL Server 文档中 [删除可用性组](https://msdn.microsoft.com/library/ff878113\(v=sql.120\).aspx) 中的指导进行操作。
+## <a name="next-steps"></a>后续步骤
+在了解使用可用性组时所需的常见任务的先决条件、限制和更改后，请参阅[配置 Configuration Manager 的可用性组](/sccm/core/servers/deploy/configure/configure-aoag)，了解有关设置和配置站点以使用可用性组的过程。
 

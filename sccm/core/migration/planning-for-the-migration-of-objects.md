@@ -16,9 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 45931f60273f3130cca36320770126a36dcc3d1e
-ms.openlocfilehash: 9870ffa6ae5f80db823bfc74a7cc2e67fc8cf21d
+ms.translationtype: Human Translation
+ms.sourcegitcommit: c6ee0ed635ab81b5e454e3cd85637ff3e20dbb34
+ms.openlocfilehash: 17f3955aa7c63a13bab03b46002f7de0b0ec38fe
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/08/2017
 
 
 ---
@@ -48,7 +50,7 @@ ms.openlocfilehash: 9870ffa6ae5f80db823bfc74a7cc2e67fc8cf21d
 
 -   [规划软件计数规则自定义的迁移](#Plan_Migrate_SWM_Rules)  
 
-##  <a name="a-nameplanmigratesoftwareupdatesa-plan-to-migrate-software-updates"></a><a name="Plan_migrate_Software_updates"></a>规划软件更新迁移  
+##  <a name="Plan_migrate_Software_updates"></a>规划软件更新迁移  
  可以迁移软件更新对象，例如软件更新包和软件更新部署。  
 
  要成功迁移软件更新对象，必须首先将目标层次结构设置为包含与源层次结构环境匹配的配置。 这需要进行以下操作：  
@@ -79,7 +81,7 @@ ms.openlocfilehash: 9870ffa6ae5f80db823bfc74a7cc2e67fc8cf21d
 
 从 System Center 2012 Configuration Manager 或 System Center Configuration Manager 源层次结构中迁移对象时，不会修改软件更新对象。  
 
-##  <a name="a-nameplanmigratecontenta-plan-to-migrate-content"></a><a name="Plan_Migrate_content"></a>规划内容迁移  
+##  <a name="Plan_Migrate_content"></a>规划内容迁移  
  你可以将内容从支持的源层次结构迁移到目标层次结构。 对于 Configuration Manager 2007 源层次结构，此内容包括软件分发包以及程序和虚拟应用程序，如 Microsoft Application Virtualization (App-V)。 对于 System Center 2012 Configuration Manager 和 System Center Configuration Manager 源层次结构，此内容包括应用程序和 App-V 虚拟应用程序。 在层次结构之间迁移内容时，压缩的源文件迁移到目标层次结构。  
 
 ### <a name="packages-and-programs"></a>包和程序  
@@ -121,12 +123,12 @@ ms.openlocfilehash: 9870ffa6ae5f80db823bfc74a7cc2e67fc8cf21d
 ### <a name="applications"></a>应用程序  
  可以将应用程序从支持的 System Center 2012 Configuration Manager 或 System Center Configuration Manager 源层次结构迁移到目标层次结构中。 如果将客户端从源层次结构重新分配到目标层次结构，则客户端将保留以前安装的应用程序的历史记录以防止客户端重新运行已迁移的应用程序。  
 
-##  <a name="a-namebkmkmigratecollectionsa-plan-to-migrate-collections"></a><a name="BKMK_MigrateCollections"></a>规划集合迁移  
+##  <a name="BKMK_MigrateCollections"></a>规划集合迁移  
  可以从支持的 System Center 2012 Configuration Manager 或 System Center Configuration Manager 源层次结构迁移集合的条件。 为此，请使用基于对象的迁移作业。 在迁移集合时，你将迁移集合的规则，而不是有关集合成员的信息，或者与集合成员相关的信息或对象。  
 
  在从 Configuration Manager 2007 源层次结构中进行迁移时，不支持迁移集合对象。  
 
-##  <a name="a-nameplanmigrateosda-plan-to-migrate-operating-system-deployments"></a><a name="Plan_migrate_OSD"></a>规划操作系统部署迁移  
+##  <a name="Plan_migrate_OSD"></a>规划操作系统部署迁移  
 你可以从支持的源层次结构中迁移下列操作系统部署对象：  
 
 -   操作系统映像和包。 启动映像的源路径在目标站点上将更新为 Windows 管理安装工具包 (Windows AIK) 的默认映像位置。 下面是迁移操作系统映像和包的要求及限制：  
@@ -142,9 +144,9 @@ ms.openlocfilehash: 9870ffa6ae5f80db823bfc74a7cc2e67fc8cf21d
     > [!NOTE]  
     >  在迁移任务序列时，Configuration Manager 可能会迁移目标层次结构中不需要的对象。 这些对象包括启动映像和 Configuration Manager 2007 客户端安装包。  
 
--   驱动程序和驱动程序包。  
+-   驱动程序和驱动程序包。 在迁移驱动程序包时，目标层次结构中 SMS 提供程序的计算机帐户必须可以完全控制包源。
 
-##  <a name="a-nameplanmigratecompliancesettingsa-plan-to-migrate-desired-configuration-management"></a><a name="Plan_Migrate_Compliance_settings"></a>规划所需的配置管理的迁移  
+##  <a name="Plan_Migrate_Compliance_settings"></a>规划所需的配置管理的迁移  
 你可以迁移配置项目和配置基线。  
 
 > [!NOTE]  
@@ -152,14 +154,14 @@ ms.openlocfilehash: 9870ffa6ae5f80db823bfc74a7cc2e67fc8cf21d
 
 可以导入 Configuration Manager 2007 配置包。 导入过程会自动转换配置包以与 System Center Configuration Manager 兼容。  
 
-##  <a name="a-nameplanmigrateboundariesa-plan-to-migrate-boundaries"></a><a name="Plan_migrate_Boundaries"></a>规划边界迁移  
+##  <a name="Plan_migrate_Boundaries"></a>规划边界迁移  
  你可以在层次结构之间迁移边界。 从 Configuration Manager 2007 中迁移边界时，源站点中的每个边界会同时迁移，而且将添加到在目标层次结构中创建的新边界组。 从 System Center 2012 Configuration Manager 或 System Center Configuration Manager 层次结构中迁移边界时，你选择的每个边界均将添加到目标层次结构中的新边界组。  
 
  将为内容位置启用自动创建的每个边界组，但不会为站点分配这样做。 这可以防止在源和目标层次结构之间出现站点分配的重叠边界。 从 Configuration Manager 2007 源站点中迁移有助于防止新安装的 Configuration Manager 2007 客户端错误地分配到目标层次结构。 默认情况下，System Center Configuration Manager 客户端不会自动分配到 Configuration Manager 2007 站点。  
 
  在迁移过程中，如果与目标层次结构共享分发点，则与该分发点关联的任何边界都会自动迁移到目标层次结构。 在目标层次结构中，迁移过程会为每个共享的分发点创建一个新的只读边界组。 如果更改源层次结构中的分发点的边界，则在下次数据收集周期中，会使用这些更改来更新目标层次结构中的边界组。  
 
-##  <a name="a-nameplanmigratereportsa-plan-to-migrate-reports"></a><a name="Plan_Migrate_reports"></a>规划报表迁移  
+##  <a name="Plan_Migrate_reports"></a>规划报表迁移  
 Configuration Manager 不支持迁移报表。 实际上，它使用 SQL Server Reporting Services Report Builder 从源层次结构中导出报表，然后将它们导入到目标层次结构。  
 
 > [!NOTE]  
@@ -167,7 +169,7 @@ Configuration Manager 不支持迁移报表。 实际上，它使用 SQL Server 
 
 有关报表的详细信息，请参阅 [System Center Configuration Manager 中的报表](../../core/servers/manage/reporting.md)。  
 
-##  <a name="a-nameplanmigrateorgfoldersa-plan-to-migrate-organizational-and-search-folders"></a><a name="Plan_Migrate_Org_Folders"></a>规划组织文件夹和搜索文件夹的迁移  
+##  <a name="Plan_Migrate_Org_Folders"></a>规划组织文件夹和搜索文件夹的迁移  
  可以将组织文件夹和搜索文件夹从支持的源层次结构迁移到目标层次结构。 此外，可以将保存的搜索条件从 System Center 2012 Configuration Manager 或 System Center Configuration Manager 源层次结构迁移到目标层次结构中。  
 
  默认情况下，在迁移时迁移过程将为对象和集合保持搜索文件夹和管理文件夹的结构。 但是，在“创建迁移作业向导”的“设置”页上，可以将迁移作业设置为不迁移对象的组织结构（取消勾选此选项的框）。 将始终保持集合的组织结构。  
@@ -176,19 +178,14 @@ Configuration Manager 不支持迁移报表。 实际上，它使用 SQL Server 
 
  从 System Center 2012 Configuration Manager 或 System Center Configuration Manager 源层次结构中迁移已保存的搜索时，将迁移搜索的条件，而不是有关搜索结果的信息。 迁移已保存的搜索并不适用于 Configuration Manager 2007 源站点。  
 
-##  <a name="a-nameplanmigrateaia-plan-to-migrate-asset-intelligence-customizations"></a><a name="Plan_Migrate_AI"></a>规划资产智能自定义项的迁移  
+##  <a name="Plan_Migrate_AI"></a>规划资产智能自定义项的迁移  
  可以将资产智能的自定义从支持的源层次结构迁移到目标层次结构。 在 Configuration Manager 2007 与 System Center Configuration Manager 之间，资产智能自定义的结构并无显著变化。  
 
 > [!NOTE]  
 >  System Center Configuration Manager 不支持从使用 Asset Intelligence Service 2.0 (AIS 2.0) 的 Configuration Manager 2007 站点中迁移资产智能对象。  
 
-##  <a name="a-nameplanmigrateswmrulesa-plan-to-migrate-software-metering-rules-customizations"></a><a name="Plan_Migrate_SWM_Rules"></a>规划软件计数规则自定义的迁移  
+##  <a name="Plan_Migrate_SWM_Rules"></a>规划软件计数规则自定义的迁移  
  在 Configuration Manager 2007 与 System Center Configuration Manager 之间，软件计数并无显著变化。 可以将软件计数规则从支持的源层次结构迁移到目标层次结构。  
 
  默认情况下，迁移到目标层次结构的软件计数规则不会与目标层次结构中的特定站点关联，而是应用到层次结构中的所有客户端。 若要将软件计数规则应用到特定站点中的客户端，必须在迁移计数规则后编辑它。  
-
-
-
-<!--HONumber=Jan17_HO2-->
-
 

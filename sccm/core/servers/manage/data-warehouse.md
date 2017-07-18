@@ -1,8 +1,8 @@
 ---
-title: "数据仓库 | Microsoft Docs"
+title: "数据仓库 | Microsoft 文档"
 description: "System Center Configuration Manager 的数据仓库服务点和数据库"
 ms.custom: na
-ms.date: 3/28/2017
+ms.date: 5/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,10 +16,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 3c2a07f560e0aa3d2beb7cc50e71c98ac45c27e1
-ms.openlocfilehash: 9239f6e749c368835e8594ca2d07378d8555b99e
+ms.sourcegitcommit: dc221ddf547c43ab1f25ff83c3c9bb603297ece6
+ms.openlocfilehash: f11a53bbc85b40077b3909568db5ae5552b0456c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/01/2017
 
 
 ---
@@ -51,6 +51,7 @@ ms.lasthandoff: 05/17/2017
 - 安装站点系统角色的计算机的计算机帐户用于将数据与数据仓库数据库同步。 此帐户要求具有以下权限：  
   - 在将托管数据仓库数据库的计算机上是**管理员**。
   - 对数据仓库数据库具有 **DB_owner** 权限。
+  - 顶层站点站点数据库的 DB_reader 和 execute 权限。
 -    SQL Server 2012 或更高版本的默认或命名的实例上支持数据仓库数据库。 版本必须为企业版或数据中心版。
   - SQL Server AlwaysOn 可用性组：不支持此配置。
   - SQL Server 群集：不支持 SQL Server 故障转移群集。 这是因为数据仓库数据库尚未在 SQL Server 故障转移群集上进行深入测试。
@@ -157,7 +158,7 @@ ms.lasthandoff: 05/17/2017
 
 打开数据仓库报表打开时，会返回以下错误：
 
-*报表处理期间出错。(rsProcessingAborted)无法创建与数据源 “AutoGen__39B693BB_524B_47DF_9FDB_9000C3118E82_” 的连接。(rsErrorOpeningConnection)已成功创建与服务器的连接，但随后在预登录握手期间出错。(提供程序: SSL 提供程序，错误: 0 - 证书链由不受信任的颁发机构颁发。)*
+*报表处理期间出错。(rsProcessingAborted)无法创建与数据源“AutoGen__39B693BB_524B_47DF_9FDB_9000C3118E82_”的连接。(rsErrorOpeningConnection)已成功创建与服务器的连接，但随后在预登录握手期间出错。(提供程序: SSL 提供程序，错误: 0 - 证书链由不受信任的颁发机构颁发。)*
 
 - **解决方案**：使用以下步骤配置证书：
 

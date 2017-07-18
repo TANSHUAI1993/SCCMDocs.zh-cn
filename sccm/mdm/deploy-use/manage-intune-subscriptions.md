@@ -2,7 +2,7 @@
 title: "使用 System Center Configuration Manager 管理 Intune 订阅 | Microsoft Docs"
 description: "使用 System Center Configuration Manager 管理 Intune 订阅。"
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 06/02/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,10 +17,10 @@ author: mtillman
 ms.author: mtillman
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 2e0b3cd1070d0f8adb1219acd33c3126d2758a49
+ms.sourcegitcommit: 662901e850566756759fcfc61c58f3c0e56bc5aa
+ms.openlocfilehash: 2cb4d724c8b78657458a30c0bb020f67c6b62795
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/03/2017
 
 ---
 # <a name="manage-an-intune-subscription-associated-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 管理 Intune 订阅
@@ -55,6 +55,5 @@ ms.lasthandoff: 05/17/2017
 现在可以创建新服务连接点、将新 Intune 订阅添加到 Configuration Manager 以及将 Configuration Manager 设置为 MDM 机构。
 
 ## <a name="how-to-change-mdm-authority-to-intune"></a>如何将 MDM 机构更改为 Intune
-
-从 1610 版开始，可以将 Intune MDM 机构从 Configuration Manager 切换为 Intune。 即将发布此功能的相关信息。
+从 Configuration Manager 1610 版本和 Microsoft Intune 1705 版本开始，可以更改你的 MDM 机构而无需联系 Microsoft 支持部门，也无需取消注册并重新注册现有的托管设备。 有关详细信息，请参阅[更改 MDM 机构](/sccm/mdm/deploy-use/change-mdm-authority)。
 

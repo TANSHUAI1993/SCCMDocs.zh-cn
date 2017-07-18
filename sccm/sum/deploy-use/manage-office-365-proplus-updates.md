@@ -5,7 +5,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 03/24/2017
+ms.date: 05/31/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
@@ -13,10 +13,10 @@ ms.technology:
 - configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
 ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 016580dc6ee3c5268833db941d42416a976d201c
+ms.sourcegitcommit: dc221ddf547c43ab1f25ff83c3c9bb603297ece6
+ms.openlocfilehash: 744bcb603a02bc7d237ffb3a7f925037b94a23ba
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/01/2017
 
 ---
 
@@ -52,11 +52,11 @@ Office 365 客户端管理仪表板中显示的数据来自硬件清单。 在�
 #### <a name="to-display-data-in-the-office-365-client-management-dashboard"></a>若要在 Office 365 客户端管理仪表板中显示数据
 1. 启用硬件清单（如果尚未启用）。 有关详细信息，请参阅[配置硬件清单](\sccm\core\clients\manage\configure-hardware-inventory)。
 2. 在 Configuration Manager 控制台中，导航到“管理” > “客户端设置” > “默认客户端设置”。  
-3. 在“主页”  选项卡上的“属性”  组中，单击“属性” 。  
-4. 在 **默认客户端设置** 对话框中，单击 **硬件清单**。  
-5. 在 **设备设置** 列表中，单击 **设置类**。  
+3. 在“主页”选项卡上的“属性”组中，单击“属性”。  
+4. 在**默认客户端设置**对话框中，单击**硬件清单**。  
+5. 在**设备设置**列表中，单击**设置类**。  
 6. 在“硬件清单类”对话框中，选择“Office 365 ProPlus 配置”。  
-7.  单击 **确定** 以保存所做的更改并关闭 **硬件清单类** 对话框。  
+7.  单击**确定**以保存所做的更改并关闭**硬件清单类**对话框。  
 报告硬件清单后，Office 365 客户端管理仪表板将开始显示数据。
 
 ## <a name="deploy-office-365-updates-with-configuration-manager"></a>使用 Configuration Manager 部署 Office 365 更新
@@ -142,6 +142,9 @@ Office 365 客户端管理仪表板中显示的数据来自硬件清单。 在�
 4. 在“导入客户端设置”页上，选择是从现有的 XML 配置文件导入 Office 365 客户端设置还是手动指定设置，然后单击“下一步”。  
 
     如果具有现有的配置文件，请输入文件的位置并跳到步骤 7。 请注意，必须采用 &#92;&#92;*server*&#92;*share*&#92;*filename*.XML 形式指定位置。
+    > [!IMPORTANT]    
+    > XML 配置文件必须仅包含 [Office 365 ProPlus 客户端支持的语言](https://technet.microsoft.com/library/cc179219&#40;v=office.16&#41;.aspx)。
+
 5. 在“客户端产品”页上，依次选择使用的 Office 365 套件、想要包括的应用程序、应包括的任何其他 Office 产品，然后单击“下一步”。
 6. 在“客户端设置”页上，选择要包括的设置，然后单击“下一步”。
 7. 在“部署”页上，选择是否部署该应用程序，然后单击“下一步”。  
@@ -151,7 +154,7 @@ Office 365 客户端管理仪表板中显示的数据来自硬件清单。 在�
 10. 可以在 Configuration Manager 中从“软件库” > “概述” > “应用程序管理” > “应用程序”部署或编辑应用程序，就像部署或编辑任何其他应用程序一样。   
 
 > [!IMPORTANT]
-> 在 Configuration Manager 中使用 Office 365 应用程序向导创建和部署的 Office 365 应用不会由 Configuration Manager 自动管理，除非启用软件更新客户端代理设置“再次启用 Office 365 客户端管理”。 有关详细信息，请参阅[关于客户端设置](/sccm/core/clients/deploy/about-client-settings)。
+> 在启用软件更新客户端代理设置“启用 Office 365 客户端代理的管理”之前，Configuration Manager 不会自动管理在 Configuration Manager 中使用 Office 365 应用程序向导创建和部署的 Office 365 应用。 有关详细信息，请参阅[关于客户端设置](/sccm/core/clients/deploy/about-client-settings)。
 
 >[!NOTE]
 >部署 Office 365 应用后，可以创建自动部署规则以维护该应用。 若要创建 Office 365 应用的自动部署规则，请单击 Office 365 客户端管理仪表板中的“创建 ADR”，然后在选择选择该产品时选择“Office 365 客户端”。 有关详细信息，请参阅[自动部署软件更新](/sccm/sum/deploy-use/automatically-deploy-software-updates)。

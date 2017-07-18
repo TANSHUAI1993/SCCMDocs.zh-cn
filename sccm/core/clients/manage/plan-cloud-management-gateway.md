@@ -1,7 +1,7 @@
 ---
 title: "规划云管理网关 | Microsoft Docs"
 description: 
-ms.date: 05/16/2017
+ms.date: 06/07/2017
 ms.prod: configuration-manager
 ms.technology:
 - configmgr-client
@@ -10,10 +10,10 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: ae60eb25383f4bd07faaa1265185a471ee79b1e9
-ms.openlocfilehash: b1295891a5567e64b901c79100c2971e526dc874
+ms.sourcegitcommit: c6ee0ed635ab81b5e454e3cd85637ff3e20dbb34
+ms.openlocfilehash: a7380ae781447880ffcba0778694ea62e10c4889
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/08/2017
 
 ---
 
@@ -22,6 +22,9 @@ ms.lasthandoff: 05/17/2017
 *适用范围：System Center Configuration Manager (Current Branch)*
 
 从版本 1610 开始，云管理网关提供一种简单的方法来管理 Internet 上的 Configuration Manager 客户端。 云管理网关服务会部署到 Microsoft Azure 并需要 Azure 订阅。 会使用一个名为云管理网关连接点的新角色将该服务连接到本地 Configuration Manager 基础结构。 部署并配置好后，客户端可以访问本地 Configuration Manager 站点系统角色，而不管它们是在内部专用网络上还是在 Internet 上。
+
+> [!TIP]  
+> 与版本 1610 一起引入，云管理网关是一项预发行功能。 若要启用此功能，请参阅[使用更新中的预发行功能](/sccm/core/servers/manage/pre-release-features)。
 
 使用 Configuration Manager 控制台将服务部署到 Azure，添加云管理网关连接点角色，并配置站点系统角色以允许云管理网关通信。 云管理网关服务目前只支持管理点和软件更新点角色。
 
@@ -93,11 +96,6 @@ ms.lasthandoff: 05/17/2017
 
     - 有关更多详细信息，请参阅使用[基于云的分发](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#cost-of-using-cloud-based-distribution)的费用。
 
-## <a name="next-steps"></a>后续步骤
-
-[设置云管理网关](setup-cloud-management-gateway.md)
-
-
 ## <a name="frequently-asked-questions-about-the-cloud-management-gateway-cmg"></a>有关云管理网关 (CMG) 的常见问题解答
 
 ### <a name="why-use-the-cloud-management-gateway"></a>为什么要使用云管理网关？
@@ -122,7 +120,7 @@ ms.lasthandoff: 05/17/2017
 
 必须有以下证书，才能保护 CMG：
 
-- **管理证书** - 这可以是包括自签名证书在内的任何证书。 可以使用上载到 Azure AD 中的公共证书或导入 Configuration Manager 的[含私钥的 PFX](/sccm/mdm/deploy-use/create-pfx-certificate-profiles)，从而使用 Azure AD 进行身份验证。 
+- **管理证书** - 这可以是包括自签名证书在内的任何证书。 可以使用上载到 Azure AD 中的公共证书或导入 Configuration Manager 的[含私钥的 PFX](/sccm/mdm/deploy-use/create-pfx-certificate-profiles)，从而使用 Azure AD 进行身份验证。
 - **Web 服务证书** - 建议使用公共 CA 证书来获取客户端的本机信任。 必须在公共 DNS 注册机构中创建 CName。 不支持使用通配符证书。
 - **上载到 CMG 中的根/SubCA 证书** - CMG 需要对客户端 PKI 证书进行全链验证。 如果使用企业 CA 颁发客户端 PKI 证书，且 Internet 上没有其根或从属 CA，那么就必须将其上载到 CMG 中。
 
@@ -159,15 +157,17 @@ CMG 通过以下方式帮助确保安全性：
 
 - 确保面向客户端的发布终结点 Configuration Manager 角色（如管理点和软件更新点）在 IIS 中托管终结点，从而为客户端请求提供服务。 发布到 CMG 的每个终结点都有对应的 URL 映射。
 外部 URL 是客户端在与 CMG 进行通信时使用的 URL。
-内部 URL 是用于将请求转发给内部服务器的 CMG 连接点。 
+内部 URL 是用于将请求转发给内部服务器的 CMG 连接点。
 
 #### <a name="example"></a>例如：
 在管理点上启用 CMG 通信时，Configuration Manager 会在内部为每个管理点服务器（如 ccm_system、ccm_incoming 和 sms_mp）创建一组 URL 映射。
-管理点 ccm_system 终结点的外部 URL 可能如下所示：**https://<CMG service name>/CCM_Proxy_MutualAuth/<MP Role ID>/CCM_System**。 URL 对每个管理点都是唯一的。 然后，Configuration Manager 客户端会将启用了 CMG 的 MP 名称（如 **<CMG service name>/CCM_Proxy_MutualAuth/<MP Role ID>**）放入其 Internet 管理点列表中。 所有已发布的外部 URL 都会自动上载到 CMG 中，以便 CMG 可以进行 URL 筛选。 所有 URL 映射都会复制到 CMG 连接点，以便连接点可以根据客户端请求外部 URL 将请求转发给内部服务器。
+管理点 ccm_system 终结点的外部 URL 可能如下所示：**https://<CMG service name>/CCM_Proxy_MutualAuth/<MP Role ID>/CCM_System**。
+URL 对每个管理点都是唯一的。 然后，Configuration Manager 客户端会将启用了 CMG 的 MP 名称（如 **<CMG service name>/CCM_Proxy_MutualAuth/<MP Role ID>**）放入其 Internet 管理点列表中。
+所有已发布的外部 URL 都会自动上载到 CMG 中，以便 CMG 可以进行 URL 筛选。 所有 URL 映射都会复制到 CMG 连接点，以便连接点可以根据客户端请求外部 URL 将请求转发给内部服务器。
 
-### <a name="what-ports-are-used-by-the-cloud-management-gateway"></a>云管理网关使用哪些端口？ 
+### <a name="what-ports-are-used-by-the-cloud-management-gateway"></a>云管理网关使用哪些端口？
 
-- 在本地网络上，不需要使用任何入站端口。 部署 CMG 后将会自动在 CMG 上创建各种端口。 
+- 在本地网络上，不需要使用任何入站端口。 部署 CMG 后将会自动在 CMG 上创建各种端口。
 - 除了端口 443，CMG 连接点还需要使用一些出站端口。
 
 |||||
@@ -182,7 +182,7 @@ CMG 通过以下方式帮助确保安全性：
 
 - 如果可能，在同一网络区域中配置 CMG、CMG 连接点和 Configuration Manager 站点服务器，以减少延迟。
 - 目前，Configuration Manager 客户端和 CMG 之间的连接无法感知区域。
-- 为了提高可用性，建议每个站点至少有 2 个 CMG 虚拟实例和 2 个 CMG 连接点 
+- 为了提高可用性，建议每个站点至少有 2 个 CMG 虚拟实例和 2 个 CMG 连接点
 - 可以添加更多的 VM 实例，将 CMG 扩展为支持更多客户端。 它们由 Azure AD 负载均衡器进行负载均衡。
 - 创建更多的 CMG 连接点，在它们之间分配负载。 CMG 将通过“轮询机制”将流量分配给其正在连接的 CMG 连接点。
 - 在 1702 版本中，每个 CMG VM 实例支持 6000 个客户端。 当 CMG 通道处于高负载状态时，请求仍会得到处理，但耗时可能会比平时长。
@@ -195,4 +195,7 @@ CMG 通过以下方式帮助确保安全性：
 
 有关所有 CMG 相关日志文件的列表，请参阅 [Configuration Manager 中的日志文件](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/log-files#cloud-management-gateway)
 
+## <a name="next-steps"></a>后续步骤
+
+[设置云管理网关](setup-cloud-management-gateway.md)
 

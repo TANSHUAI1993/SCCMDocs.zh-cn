@@ -16,10 +16,10 @@ author: nathbarn
 ms.author: nathbarn
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: e6833951db27b227a3ca22925e9d9f4c3fc443fc
-ms.openlocfilehash: e8606b8a9268a0a0668b75070cf35894f4794123
+ms.sourcegitcommit: 5eed004bd38a567dfdd4e392300be656a7abe3f7
+ms.openlocfilehash: c692fad43807e54cecbd7ab60284ea740d60617d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 05/25/2017
 
 ---
 # <a name="predeclare-devices-with-imei-or-ios-serial-numbers"></a>预声明具有 IMEI 或 iOS 序列号的设备
@@ -62,7 +62,7 @@ ms.lasthandoff: 05/17/2017
 
 ## <a name="format-for-uploading-csv-files"></a>上传的 .csv 文件的格式
 
-通过 IMEI 或序列号来标识设备的 .csv 文件必须拥有以下格式（仅用于提供指导的顶行除外）。 每一行都必须包含 ID 号，即 IMEI 号码或 iOS 序列号。 可以同时添加两种号码。 IMEI 号码可用于 Android、iOS 和 Windows 设备。 还支持 iOS 序列号。  此表格包含示例数据：
+用于通过 IMEI 或 iOS 序列号来标识设备的 .csv 文件必须具有以下格式（仅用于提供指导的顶行除外）。 每一行都必须包含 ID 号，即 IMEI 号码或 iOS 序列号。 对于 iOS 设备，可以包括这两者。 IMEI 号码可用于 Android、iOS 和 Windows 设备。 此表格包含示例数据：
 
 | IMEI 编号  | iOS 序列号  | 操作系统 | 详细信息 |
 |------------ |---------------|-----|-----|

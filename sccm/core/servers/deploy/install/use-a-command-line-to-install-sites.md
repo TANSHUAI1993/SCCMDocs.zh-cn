@@ -16,10 +16,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: fefa5f3aa12d82b66a251cf0525475496e1e35cf
+ms.sourcegitcommit: f7cd9c71287d62c9f5d36e2f032bc2a6065572ae
+ms.openlocfilehash: 8ff48b08d1abb7481592c0ea076d4efa15c3d8ee
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/06/2017
 
 ---
 # <a name="use-a-command-line-to-install-system-center-configuration-manager-sites"></a>使用命令行安装 System Center Configuration Manager 站点
@@ -67,7 +67,7 @@ ms.lasthandoff: 05/17/2017
     -   标识  
     -   恢复
 
-有关备份和恢复的详细信息，请参阅[在 Configuration Manager 中备份和恢复](../../../../protect/understand/backup-and-recovery.md)主题的[无人参与的站点恢复脚本文件密钥](../../../../protect/understand/backup-and-recovery.md#BKMK_UnattendedSiteRecoveryKeys)。  
+有关详细信息，请参阅 [Configuration Manager 的无人参与站点恢复](/sccm/protect/understand/unattended-recovery)。  
 
 若要了解将在无人参与的安装脚本文件中使用的一系列密钥和值，请查看[无人参与的安装程序脚本文件密钥](../../../../core/servers/deploy/install/command-line-options-for-setup.md#bkmk_Unattended)。  
 
@@ -87,7 +87,7 @@ ms.lasthandoff: 05/17/2017
 - 安装新的管理中心站点
 - 安装新的主站点
 - 恢复管理中心站点
-- 恢复主站点 
+- 恢复主站点
 
 该值不支持用于从 Microsoft 批量许可站点中获取的安装介质。
 请参阅[命令行选项](/sccm/core/servers/deploy/install/command-line-options-for-setup)获取有关如何在脚本文件中使用此密钥名称的信息。

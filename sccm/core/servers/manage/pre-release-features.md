@@ -2,7 +2,7 @@
 title: "预发行功能 | Microsoft Docs"
 description: "System Center Configuration Manager 中的预发行功能"
 ms.custom: na
-ms.date: 4/24/2017
+ms.date: 6/13/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,32 +16,32 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 690d03d9c8c49a815bd318df549d7401a855bc5d
-ms.openlocfilehash: b12fcb3c372c34ee47306a9b536c3d0c4764b8be
+ms.sourcegitcommit: 3619a73d3a39659de927e1711a7ec81de9918064
+ms.openlocfilehash: 988f8da0b221f8c0b470e7a0a8ed995356193f98
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/13/2017
 
 
 ---
 # <a name="pre-release-features-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的预发行功能
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-预发行功能是指 Current Branch 中随附的功能，用于在生产环境中的早期测试。 这些功能完全受支持，但仍在开发过程中，所以在从预发行类别中划出之前，可能会有所变更。
+预发行功能是指 Current Branch 中的功能，用于在生产环境中的早期测试。 这些功能完全受支持，但仍在开发过程中，所以在从预发行类别中划出之前，可能会有所变更。
 
  若要使用预发行功能，必须在 Configuration Manager 控制台中同意使用预发行功能，然后才可选择并启用它们。  
 
-同意是对每个层次结构执行的一次性操作，不能撤消。 除非你同意，否则不能启用更新随附的新的预发行功能。
+同意是对每个层次结构执行的一次性操作，不能撤消。 除非你同意，否则不能启用更新随附的新的预发行功能。 启用预发行功能后，将无法关闭。
 
 若要同意，请在控制台中转到“管理” > “站点配置” > “站点”，然后选择“层次结构设置”。 在“常规”选项卡上，选择“同意使用预发行功能”。
 
  > [!NOTE]
- > 如果之前启用了更新 1602 的预发行功能，在安装较新版本更新之前，即使不同意使用预发行功能，也可使用这些功能。
+ > 如果在安装较新版本更新之前启用了更新 1602 的预发行功能，即使不同意使用预发行功能，也可使用这些功能。
 
 安装包含预发行功能的更新时，这些功能和此次更新包含的常规功能在“更新与维护服务向导”中可见：
   - **如果同意：** 安装更新时，可以启用更新和维护向导中的预发行功能。 为此，请选择预发行功能，就像选择任何其他功能那样。     
 
     也可以之后从控制台的“管理” > “更新和服务” > “功能”节点启用预发行功能。 在“功能”节点选择该功能，然后选择“开启”。 除非用户同意，否则此选项为灰显。 （在版本 1702 之前，“更新和服务”在“管理” > “云服务”下。）
-  -   **如果不同意：**安装更新时，预发行功能在“更新和服务向导”中可见，但将灰显且不能启用。 安装更新之后，可以在“功能”节点中查看这些功能，但在“层次结构设置”中同意这样做之前不能启用它们。
+  -   **如果不同意：**安装更新时，预发行功能在“更新和服务向导”中可见，但将灰显且不能启用。 安装更新后，可以在“功能”节点中查看这些功能。 但是，在“层次结构设置”中同意后才能启用它们。
 
 如果在独立主站点中同意这样做，并通过安装新的管理中心站点扩展层次结构，则还必须在管理中心站点也同意这样做。
 

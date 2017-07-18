@@ -16,10 +16,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: a93ea730c39cce9dc46036f5aa6ece4a62679d0f
-ms.openlocfilehash: 0d16d362b798c194645f987088ba8a95a7be3f19
+ms.sourcegitcommit: 0ebda27c0f3848615346c2ecf1ab8b9bb9ab6f0d
+ms.openlocfilehash: 0a3704a2d3b75ed7e0a7f718b681448ab6fc078d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 05/26/2017
 
 
 ---
@@ -81,7 +81,7 @@ ms.lasthandoff: 05/17/2017
 
 -   **分发点**。 一种站点系统角色，其中包含供客户端下载的源文件，例如应用程序内容、软件包、软件更新、操作系统映像以及启动映像。 默认情况下，当站点安装时，此角色安装在新主站点和辅助站点的站点服务器计算机上。 管理中心站点上不支持此角色。 你可以在支持的一个站点和同一层次结构中的多个站点中安装此角色的多个实例。 有关详细信息，请参阅 [System Center Configuration Manager 中内容管理的基本概念](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)和[为 System Center Configuration Manager 管理内容和内容基础结构](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。  
 
--   **回退状态点**。 一种站点系统角色，该角色可帮助监视客户端安装并确定因无法与其管理点通信而不受管理的客户端。 尽管此角色仅在主站点中受支持，你可以在一个站点或同一层次结构中的多个站点中安装此角色的多个实例。 有关详细信息，请参阅 [Content source location scenarios](../../../core/plan-design/hierarchy/content-source-location-scenarios.md)。
+-   **回退状态点**。 一种站点系统角色，该角色可帮助监视客户端安装并确定因无法与其管理点通信而不受管理的客户端。 尽管仅主站点支持此角色，你可以在一个站点和同一层次结构中的多个站点中安装此角色的多个实例。     
 
 
 -   **Endpoint Protection 点**。 一种站点系统角色，Configuration Manager 使用该角色来接受 Endpoint Protection 许可条款并为云保护服务配置默认成员身份。 层次结构仅支持此角色的单一实例，并且它必须位于层次结构的顶层站点（管理中心站点或独立主站点）。 如果将独立主站点扩展到更大的层次结构中，必须从主站点中卸载此角色，然后可将其安装在管理中心站点上。 有关详细信息，请参阅 [System Center Configuration Manager 中的 Endpoint Protection](../../../protect/deploy-use/endpoint-protection.md)。  

@@ -16,10 +16,10 @@ author: NathBarn
 ms.author: nathbarn
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 8f4ec982a54cf3cefef310268a54850e70e2e63a
-ms.openlocfilehash: 237dc9cbccb973720a633490f096aed4bc16d183
+ms.sourcegitcommit: 0ebda27c0f3848615346c2ecf1ab8b9bb9ab6f0d
+ms.openlocfilehash: 6c3b67278fa587c137a29e174e277fb0f15872c8
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 05/26/2017
 
 ---
 # <a name="windows-defender-advanced-threat-protection"></a>Windows Defender 高级威胁防护
@@ -33,8 +33,8 @@ Windows Defender ATP 是 [Windows Security Center](https://securitycenter.window
  **先决条件**  
 
 -   Windows Defender 高级威胁防护联机服务的订阅  
-
--   运行 Windows 10、1607 版及更高版本的客户端  
+-   运行 Windows 10、版本 1607 及更高版本的客户端计算机  
+-   运行 Configuration Manager 1610 版或更高客户端代理的客户端计算机
 
 ## <a name="how-to-create-an-onboarding-configuration-file"></a>如何创建载入配置文件  
 
@@ -53,9 +53,9 @@ Windows Defender ATP 是 [Windows Security Center](https://securitycenter.window
 
 1.  在 Configuration Manager 控制台中，导航到“资产和符合性” > “概述” > “Endpoint Protection” > “Windows Defender ATP 策略”，然后单击“创建 Windows Defender ATP 策略”。 将打开 Windows Defender ATP 策略向导。  
 
-2.  键入 Windows Defender ATP 策略的**名称**和**说明**，然后选择“载入”。 单击“下一步” 。  
+2.  键入 Windows Defender ATP 策略的**名称**和**说明**，然后选择“载入”。 单击“下一步”。  
 
-3.  **浏览**到组织的 Windows Defender ATP 云服务租户提供的配置文件。 单击“下一步” 。  
+3.  **浏览**到组织的 Windows Defender ATP 云服务租户提供的配置文件。 单击“下一步”。  
 
 4.  指定从托管设备收集和共享的文件示例以进行分析。  
 
@@ -63,7 +63,7 @@ Windows Defender ATP 是 [Windows Security Center](https://securitycenter.window
 
     -   **所有文件类型**  
 
-     单击“下一步” 。  
+     单击“下一步”。  
 
 5.  查看摘要，然后完成该向导。  
 
@@ -100,9 +100,9 @@ Windows Defender ATP 是 [Windows Security Center](https://securitycenter.window
 
 5.  在 Configuration Manager 控制台中，导航到“资产和符合性” > “概述” > “Endpoint Protection” > “Windows Defender ATP 策略”，然后单击“创建 Windows Defender ATP 策略”。 将打开 Windows Defender ATP 策略向导。  
 
-6.  键入 Windows Defender ATP 策略的**名称**和**说明**，选择“载出”。 单击“下一步” 。  
+6.  键入 Windows Defender ATP 策略的**名称**和**说明**，选择“载出”。 单击“下一步”。  
 
-7.  **浏览**到组织的 Windows Defender ATP 云服务租户提供的配置文件。 单击“下一步” 。  
+7.  **浏览**到组织的 Windows Defender ATP 云服务租户提供的配置文件。 单击“下一步”。  
 
 8.  查看摘要，然后完成该向导。  
 

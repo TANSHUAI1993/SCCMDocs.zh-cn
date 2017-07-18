@@ -16,10 +16,10 @@ author: andredm7
 ms.author: andredm
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 23b1d24e908d04b64c3bbfa518793a44e696d468
-ms.openlocfilehash: e9028a54e538b4ec987dbaeb5ba1ee22ad091728
+ms.sourcegitcommit: c8717925dba42451b1e241a7c2f59e43896d7d99
+ms.openlocfilehash: e78fe989b7ff445717c8320c4eae3900eb46baea
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/19/2017
 
 
 ---
@@ -27,31 +27,25 @@ ms.lasthandoff: 05/17/2017
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-
-
- 从 Configuration Manager 的版本 1602 开始，可以为 System Center Configuration Manager 管理的电脑配置条件访问。  
+从 Configuration Manager 的版本 1602 开始，可以为 System Center Configuration Manager 管理的电脑配置条件访问。  
 
 > [!IMPORTANT]  
->  这是更新 1602、更新 1606 和更新 1610 中提供的预发布功能。 预发行功能包含在产品中，用于在生产环境中进行早期测试，但不应将其视为生产就绪。 有关详细信息，请参阅[使用更新中的预发行功能](../../core/servers/manage/install-in-console-updates.md#bkmk_prerelease)。
+> 这是更新 1602、更新 1606 和更新 1610 中提供的预发布功能。 预发行功能包含在产品中，用于在生产环境中进行早期测试，但不应将其视为生产就绪。 有关详细信息，请参阅[使用更新中的预发行功能](../../core/servers/manage/install-in-console-updates.md#bkmk_prerelease)。
 > - 安装更新 1602 之后，功能类型显示为已发行，即使它是预发行。
 > - 如果随后从 1602 更新到 1606，则功能类型显示为已发行，即使它仍保持预发行。
 > - 如果从版本 1511 直接更新到 1606，则功能类型显示为预发行。
 
- 如果你在查找有关如何为 Intune 注册和管理的设备或是已加入域但是没有评估其合规性的电脑配置条件访问，请参阅[管理在 System Center Configuration Manager 中的访问服务](../../protect/deploy-use/manage-access-to-services.md)。  
-
+如果你在查找有关如何为 Intune 注册和管理的设备或是已加入域但是没有评估其合规性的电脑配置条件访问，请参阅[管理在 System Center Configuration Manager 中的访问服务](../../protect/deploy-use/manage-access-to-services.md)。
 
 ## <a name="supported-services"></a>支持的服务  
 
--   Exchange Online  
-
--   SharePoint Online  
+-   Exchange Online
+-   SharePoint Online
 
 ## <a name="supported-pcs"></a>支持的电脑  
 
--   Windows 7  
-
--   Windows 8.1  
-
+-   Windows 7
+-   Windows 8.1
 -   Windows 10 
 
 ## <a name="configure-conditional-access"></a>配置条件访问  
@@ -61,7 +55,7 @@ ms.lasthandoff: 05/17/2017
 
 -   ADFS 同步和 O365 订阅。 O365 订阅用于设置 Exchange Online 和 SharePoint Online。  
 
--   Microsoft Intune 订阅。 应在 Configuration Manager 控制台中配置 Microsoft Intune 订阅。 这仍然需要你采用混合部署。  
+-   Microsoft Intune 订阅。 应在 Configuration Manager 控制台中配置 Microsoft Intune 订阅。 Intune 订阅用于将设备符合性状态中继到 Azure Active Directory 和用户授权。  
 
  电脑必须满足以下要求：  
 
@@ -73,14 +67,14 @@ ms.lasthandoff: 05/17/2017
 
     -   对于 Windows 7 电脑，必须通过 System Center Configuration Manager 将设备注册软件包部署到 Windows 7 电脑。 [将已加入 Windows 域的设备自动注册到 Azure Active Directory](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1) 主题包含更多详细信息。  
 
--   必须使用 [启用了](https://support.office.com/en-US/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a)新式验证的 Office 2013 或 Office 2016。  
+-   必须使用启用了[](https://support.office.com/en-US/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a)新式验证的 Office 2013 或 Office 2016。  
 
  下面介绍的步骤适用于 Exchange Online 和 SharePoint Online  
 
 ### <a name="step-1-configure-compliance-policy"></a>步骤 1。 配置合规性策略  
  在 Configuration Manager 控制台中，使用以下规则创建合规性策略：  
 
--   需要在 Azure ActiveDirectory 中注册：此规则检查用户的设备是否在加入到 Azure AD 的地方运行，如果不是，则在 Azure AD 中自动注册该设备。 仅 Windows 8.1 支持自动注册。 对于 Windows 7 PC，请部署 MSI 来执行自动注册。 有关更多详细信息，请参阅 [将设备自动注册到 Azure Active Directory](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1)  
+-   需要在 Azure ActiveDirectory 中注册：此规则检查用户的设备是否在加入到 Azure AD 的地方运行，如果不是，则在 Azure AD 中自动注册该设备。 仅 Windows 8.1 支持自动注册。 对于 Windows 7 PC，请部署 MSI 来执行自动注册。 有关更多详细信息，请参阅[将设备自动注册到 Azure Active Directory](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1)  
 
 -   **在晚于特定天数的截止日期之前安装所有必需的更新：**此规则检查用户的设备是否在截止日期及你指定的宽限期内具有所需的所有更新（在所需的自动更新规则中指定），并自动安装任何挂起的所需更新。  
 
@@ -109,13 +103,13 @@ ms.lasthandoff: 05/17/2017
 
 ### <a name="step-3--create-a-conditional-access-policy-for-exchange-online-and-sharepoint-online"></a>步骤 3。  为 Exchange Online 和 SharePoint Online 创建条件访问策略  
 
-1.  在 Configuration Manager 控制台中，单击“资产和符合性” 。  
+1.  在 Configuration Manager 控制台中，单击“资产和符合性”。  
 
 2.  若要为 Exchange Online 创建策略，请选择“启用 Exchange Online 的条件访问策略”。  
 
      若要为 SharePoint Online 创建策略，请选择“启用 Exchange Online 的条件访问策略”。  
 
-3.  在“主页”  选项卡的“链接”  组，单击“在 Intune 控制台中配置条件性访问策略” 。 你可能需要提供用于连接 Configuration Manager 和 Intune 的帐户的用户名和密码。  
+3.  在“主页”选项卡的“链接”组，单击“在 Intune 控制台中配置条件性访问策略”。 你可能需要提供用于连接 Configuration Manager 和 Intune 的帐户的用户名和密码。  
 
      随即将打开 Intune 管理控制台。  
 
@@ -125,12 +119,12 @@ ms.lasthandoff: 05/17/2017
 
 5.  将 Windows 电脑要求设置为**设备必须是合规的选项**。  
 
-6.  在“目标组” 下，单击“修改”  以选择将应用策略的 Azure Active Directory 安全组。  
+6.  在“目标组”下，单击“修改”以选择将应用策略的 Azure Active Directory 安全组。  
 
     > [!NOTE]  
     >  同一安全用户组应用于部署合规性策略，目标组应用于条件访问策略。  
 
-     在“免除组” 下，可以选择“修改”  以选择从此策略中免除的 Azure Active Directory 安全组。  
+     在“免除组”下，可以选择“修改”以选择从此策略中免除的 Azure Active Directory 安全组。  
 
 7.  单击“保存”以创建和保存策略  
 
@@ -146,6 +140,8 @@ ms.lasthandoff: 05/17/2017
 
 -   Windows 10 users may see multiple access failures when trying to reach O365 and/or SharePoint online resources. Note that conditional access is not fully supported for Windows 10.  
 --->
-### <a name="see-also"></a>另请参阅  
- [使用 System Center Configuration Manager 保护数据和站点基础结构](../../protect/understand/protect-data-and-site-infrastructure.md)
+## <a name="see-also"></a>另请参阅
+
+- [使用 System Center Configuration Manager 保护数据和站点基础结构](../../protect/understand/protect-data-and-site-infrastructure.md)
+- [Configuration Manager 条件访问疑难解答流程图](https://gallery.technet.microsoft.com/Conditional-access-fd747c1a?redir=0)
 
