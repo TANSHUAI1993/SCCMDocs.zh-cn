@@ -2,7 +2,7 @@
 title: "弃用的功能 | Microsoft Docs"
 description: "了解有关 System Center Configuration Manager 不再支持的功能、产品和操作系统的信息。"
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 06/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,10 +17,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 57b9ab13bda0bb5fa5139e52a4c55ef9524e4097
+ms.sourcegitcommit: 0ec241d07f51b80b84d65676ef1207b31a9a9983
+ms.openlocfilehash: e23acf743d8f73afd213c44c3728d1b66d7e558f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/28/2017
 
 
 ---
@@ -59,7 +59,7 @@ ms.lasthandoff: 05/17/2017
 
 -   注释 1：除分发点和拉取分发点外，站点服务器或站点系统角色均不支持此操作系统。 你可以继续使用操作系统作为分发点，直到此支持被宣布弃用或者此操作系统的扩展支持期到期为止。 有关详细信息，请参阅 [Installation of System Center Configuration Manager CB and LTSB fails on Windows Server 2008](https://support.microsoft.com/help/4015095)（在 Windows Server 2008 上安装 System Center Configuration Manager CB 和 LTSB 失败）。
 
--   注释 2：从版本 1702 开始，此操作系统不支持站点服务器或大多数站点系统角色，但 1702 之前的版本继续支持其使用。 此操作系统仍然支持状态迁移点和分发点站点系统角色（包括拉取分发点，而且适用于 PXE 和多播），直到宣布弃用此支持，或者此操作系统的扩展支持期到期。 从版本 1602 开始，可以对站点服务器的操作系统进行就地升级，从 Windows Server 2008 R2 升级到 Windows Server 2012 R2。  
+-   注释 2：从版本 1702 开始，此操作系统不支持站点服务器或大多数站点系统角色，但 1702 之前的版本继续支持其使用。 此操作系统仍然支持分发点站点系统角色（包括拉取分发点，而且适用于 PXE 和多播），直到宣布弃用此支持，或者此操作系统的扩展支持期到期。 从版本 1602 开始，可以对站点服务器的操作系统进行就地升级，从 Windows Server 2008 R2 升级到 Windows Server 2012 R2。  
 
      有关站点服务器操作系统就地升级的详细信息，请参阅 [System Center Configuration Manager 中的更改内容](../../../core/plan-design/changes/what-has-changed-from-configuration-manager-2012.md)中的[就地升级运行 Windows Server 2008 R2 的站点服务器的操作系统](../../../core/plan-design/changes/whats-new-in-version-1602.md#bkmk_UpgradeOS)部分。
 
@@ -103,7 +103,7 @@ ms.lasthandoff: 05/17/2017
 |带外管理- 在 System Center 2012 Configuration Manager 中找到|2015 年 10 月 16 日|版本 1511|
 |任务序列： <br /> - OSDPreserveDriveLetter  <br /><br /> 现在，在操作系统部署期间，默认情况下，Windows 安装程序会确定要使用的最佳驱动器号（通常为 C:）。 如果想要指定使用另一个驱动器，可以在“应用操作系统”任务序列步骤中更改位置。 转到“选择要应用此操作系统的位置”设置，选择“特定逻辑驱动器号”，然后选择要使用的驱动器。 |2016 年 6 月 20 日 |版本 1606 |
 |任务序列： <br /> - 将磁盘转换为动态磁盘 <br /> - 安装部署工具 |2016 年 11 月 18 日|对这些任务序列的支持随 2017 年 6 月 1 日后发布的首个更新结束。|
-|软件中心将呈现新式外观。 并且本应仅出现在依赖于 Silverlight 的应用程序目录中的应用（用户可用的应用）现在将出现在“应用程序”选项卡中的软件中心。 应用程序目录仍然可以通过软件中心的“安装状态”选项卡中的链接进行访问。<br><br>在未来几个月，以前版本的软件中心将不再可用。<br><br>你可以通过启用客户端设置“计算机代理” > “使用新的软件中心”来使用新的软件中心。<br><br>有关软件中心的详细信息，请参阅[规划和配置 System Center Configuration Manager 中的应用程序管理](https://docs.microsoft.com/sccm/apps/plan-design/plan-for-and-configure-application-management)。|2016 年 12 月 13 日|即将公布|
+|软件中心将呈现新式外观。 并且本应仅出现在依赖于 Silverlight 的应用程序目录中的应用（用户可用的应用）现在将出现在“应用程序”选项卡中的软件中心。 应用程序目录仍然可以通过软件中心的“安装状态”选项卡中的链接进行访问。<br><br>在未来几个月，以前版本的软件中心将不再可用。<br><br>你可以通过启用客户端设置“计算机代理” > “使用新的软件中心”来使用新的软件中心。<br><br>有关软件中心的详细信息，请参阅[规划和配置 System Center Configuration Manager 中的应用程序管理](https://docs.microsoft.com/sccm/apps/plan-design/plan-for-and-configure-application-management)。|2016 年 12 月 13 日|以前版本的软件中心支持在 2018 年 1 月 1 日后发布的第一个更新后结束。|
 |利用 Configuration Manager 管理虚拟硬盘 (VHD)。 </br></br>这包括去除使用任务序列创建新 VHD 或管理 VHD 的选项，以及去除 Configuration Manager 控制台的虚拟硬盘节点。 </br></br>去除这种支持后，虽然现有 VHD 将不被删除，但再也无法从 Configuration Manager 控制台内访问。  |2017 年 1 月 6 日 |对 VHD 的支持将在 2017 年 6 月 1 日后随首个更新的发布而结束。|
 |System Center Configuration Manager 升级评估工具。 </br></br>升级评估工具依赖于 System Center Configuration Manager 和应用程序兼容性工具包 (ACT) 6.x。 ACT 的最终版本随附在 Windows 10 v1511 ADK 中。 由于不再对 ACT 进行任何更新，因此将停止对升级评估工具的支持。 </br></br>升级评估工具将由[升级准备](/sccm/core/clients/manage/upgrade/upgrade-analytics)功能取代。 弃用通知已于 2016 年 9 月 12 日添加到 [UAT 的下载页面](https://www.microsoft.com/download/details.aspx?id=37145)。 |9/12/2016  | 2017 年 7 月 11 日 |  
 

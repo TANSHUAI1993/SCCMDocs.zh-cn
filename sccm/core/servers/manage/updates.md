@@ -1,6 +1,6 @@
 ---
 title: "更新 | Microsoft Docs"
-description: "了解称为“更新与维护服务”的控制台中服务方法，该方法可轻松找到并安装建议的更新。"
+description: "了解称为**更新与维护服务**的控制台中服务方法，该方法可轻松找到并安装建议的更新。"
 ms.custom: na
 ms.date: 05/02/2017
 ms.prod: configuration-manager
@@ -17,10 +17,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 90775fcf2549080a43e9c1606caa79d9eb90a89c
-ms.openlocfilehash: a33960fb89b71c0f8128e21a5054f5b63cfc6b17
+ms.sourcegitcommit: f4c46bfab9b40b29654f4e883817a5508ab25b74
+ms.openlocfilehash: 4bc076bba4672d0be0032ec785da20e60b11a6c4
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/28/2017
 
 
 ---
@@ -30,7 +30,7 @@ ms.lasthandoff: 05/17/2017
 
 System Center Configuration Manager 使用称为“更新和维护服务”的控制台中服务方法，可轻松为 Configuration Manager 基础结构找到并安装建议的更新。 此控制台中服务方法由带外更新补充，例如适用于需要解决其环境特定问题的客户的修补程序。  
 
-> [!TIP]
+> [!TIP]  
 > 管理 System Center Configuration Manager 站点和层次结构基础结构时，术语“升级”、“更新”和“安装”用于描述三种不同概念。 若要了解每个术语的使用方法，请参阅[有关升级、更新和安装](/sccm/core/understand/upgrade-update-install)。
 
 
@@ -85,7 +85,7 @@ Configuration Manager 的某些更新可用作现有基础结构的控制台中�
 | 1511 <br /><br /> 5.00.8325.1000|2015 年 12 月 8 日| 2016 年 12 月 8 日|是|否|  
 
 
-（注释 1）此 1606 基线介质作为 Microsoft System Center 2016 或 System Center Configuration Manager（Current Branch 和 Long-Term Servicing Branch 1606）版的一部分提供。
+（注释 1）1606 和 1702 基线介质作为 Microsoft System Center 2016 或 System Center Configuration Manager（Current Branch 和 Long-Term Servicing Branch）版的一部分在[批量许可服务中心](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC) 上提供。 例如，在 VLSC 上，可以搜索 System Center Config Mgr（Current Branch 和 LTSB），会返回 1606 和 1702 版本基线介质并且可供下载。
 
 若要检查 Configuration Manager 站点的版本，请在控制台中，转至控制台左上角的 **“关于 System Center Configuration Manager”** ，新站点和控制台版本将会显示在那里。  
 

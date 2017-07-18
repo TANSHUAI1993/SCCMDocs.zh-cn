@@ -6,7 +6,7 @@ keywords:
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 03/28/2017
+ms.date: 06/27/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
@@ -14,10 +14,10 @@ ms.technology:
 - configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 690d03d9c8c49a815bd318df549d7401a855bc5d
-ms.openlocfilehash: 703adc87b9498e39a1db71b94f1bc1a05a4889ec
+ms.sourcegitcommit: f4c46bfab9b40b29654f4e883817a5508ab25b74
+ms.openlocfilehash: b5a2fd9f15992c9e5ef8aede64af5446b6852b1a
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/28/2017
 
 
 ---
@@ -294,6 +294,9 @@ ms.lasthandoff: 05/17/2017
 
 -   如果取代软件更新未获准在生产环境中进行部署。  
 
+    > [!NOTE]  
+    >  Configuration Manager 将被取代的软件更新设置为“已过期”时，不会在 WSUS 中将该更新设置为“已过期”。 但是，WSUS 清除任务运行时，在 Configuration Manager 中设置为“已过期”的更新在 WSUS 服务器中设置为“已拒绝”状态，并且计算机上的 Windows 更新代理不再扫描这些更新。 这意味着客户端将继续扫描已过期的更新，直到清除任务运行。 有关 WSUS 清除任务的信息，请参阅[软件更新维护](/sccm/sum/deploy-use/software-updates-maintenance)。
+    
 ###  <a name="BKMK_UpdateLanguages"></a> 语言  
  软件更新点的语言设置允许你配置为软件更新同步摘要详细信息（软件更新元数据）的语言，以及将为软件更新下载的软件更新文件语言。  
 

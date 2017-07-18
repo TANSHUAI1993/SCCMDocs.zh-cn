@@ -2,7 +2,7 @@
 title: "Configuration Manager 的日志文件 | Microsoft Docs"
 description: "使用日志文件解决 System Center Configuration Manager 层次结构中的问题。"
 ms.custom: na
-ms.date: 3/28/2017
+ms.date: 7/03/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,10 +17,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: b991b4ea27e66c233b04f8e65a412404521d89a6
+ms.sourcegitcommit: 5e1bc0063ab3d34410f7dbc773a5eacdd5eb6d2f
+ms.openlocfilehash: 28597cf1cb269fff0872c7f79ef961496aea32ab
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 07/05/2017
 
 
 ---
@@ -231,7 +231,7 @@ Configuration Manager 日志文件存储在多个位置中，该位置取决于�
 |日志名称|详细信息|  
 |--------------|-------------|  
 |Scxcm.log|适用于 Linux 和 UNIX 的 Configuration Manager 客户端的核心服务 (ccmexec.bin) 的日志文件。 此日志文件包含有关 ccmexec.bin 的安装和当前操作的信息。<br /><br /> 默认情况下，此日志文件位于 **/var/opt/microsoft/scxcm.log**<br /><br /> 要更改该日志文件的位置，请编辑“/opt/microsoft/configmgr/etc/scxcm.conf”  并更改“PATH”  字段。 你无需重启客户端计算机或服务以使更改生效。<br /><br /> 可以将日志级别设置为四个不同的设置之一。|  
-|Scxcmprovider.log|适用于 Linux 和 UNIX 的 Configuration Manager 客户端的 CIM 服务 (omiserver.bin) 的日志文件。 此日志文件包含有关 nwserver.bin 的当前操作的信息。<br /><br /> 此日志位于 **/var/opt/microsoft/configmgr/scxcmprovider.log**<br /><br /> 若要更改该日志文件的位置，请编辑“/opt/microsoft/omi/etc/scxcmprovider.conf”  并更改“PATH”  字段。 你无需重启客户端计算机或服务以使更改生效。<br /><br /> 可以将日志级别设置为三个设置之一。|  
+|Scxcmprovider.log|适用于 Linux 和 UNIX 的 Configuration Manager 客户端的 CIM 服务 (omiserver.bin) 的日志文件。 此日志文件包含有关 nwserver.bin 的当前操作的信息。<br /><br /> 此日志位于 **/var/opt/microsoft/configmgr/scxcmprovider.log**<br /><br /> 若要更改该日志文件的位置，请编辑“/opt/microsoft/omi/etc/scxcmprovider.conf”并更改“PATH”字段。 你无需重启客户端计算机或服务以使更改生效。<br /><br /> 可以将日志级别设置为三个设置之一。|  
 
  这两个日志文件支持多个级别的日志记录：  
 
@@ -405,13 +405,13 @@ Configuration Manager 日志文件存储在多个位置中，该位置取决于�
 |objreplmgr.log|记录有关将软件更新通知文件从父站点复制到子站点的详细信息。|站点服务器|  
 |PatchDownloader.log|记录有关从更新源将软件更新下载到站点服务器上的下载目的地的过程的详细信息。|承载从中启动下载的 Configuration Manager 控制台的计算机|  
 |ruleengine.log|记录有关自动部署规则（涉及到标识、内容下载以及软件更新组和部署创建）的详细信息。|站点服务器|  
-|SUPSetup.log|记录有关软件更新点安装的详细信息。 当软件更新点安装完成后，会向此日志文件写入 **Installation was successful** 。|站点系统服务器|  
+|SUPSetup.log|记录有关软件更新点安装的详细信息。 当软件更新点安装完成后，会向此日志文件写入 **Installation was successful**。|站点系统服务器|  
 |WCM.log|记录有关软件更新点配置的详细信息，以及有关连接到 WSUS 服务器的详细信息（以获取有关订阅的更新类别、分类和语言等信息）。|连接到 WSUS 服务器的站点服务器|  
 |WSUSCtrl.log|记录有关站点的配置、数据库连接和 WSUS 服务器健康状况的详细信息。|站点系统服务器|  
 |wsyncmgr.log|记录有关软件更新同步过程的详细信息。|站点系统服务器|  
 |WUSSyncXML.log|记录有关 Microsoft 更新清单工具的同步过程的详细信息。|配置为 Microsoft 更新清单工具的同步主机的客户端计算机|  
 
-##  <a name="BKMK_FunctionLogs"></a> Configuration Manager 功能的日志文件  
+##  <a name="BKMK_FunctionLogs"></a>Configuration Manager 功能的日志文件  
  下列部分列出了与 Configuration Manager 功能相关的日志文件。  
 
 ###  <a name="BKMK_AppManageLog"></a>应用程序管理  
@@ -477,7 +477,7 @@ Configuration Manager 日志文件存储在多个位置中，该位置取决于�
 |Crpmsi.log|记录有关证书注册点的安装和配置的详细信息。|证书注册点|  
 |NDESPlugin.log|记录质询验证和证书注册活动。|Configuration Manager 策略模块和网络设备注册服务|  
 
- 除了 Configuration Manager 日志文件外，请在运行网络设备注册服务的服务器和承载证书注册点的服务器上的事件查看器中查看 Windows 应用程序日志。 例如，从“NetworkDeviceEnrollmentService”  源中查找消息。 你还可以使用下列日志文件：  
+ 除了 Configuration Manager 日志文件外，请在运行网络设备注册服务的服务器和承载证书注册点的服务器上的事件查看器中查看 Windows 应用程序日志。 例如，从“NetworkDeviceEnrollmentService”源中查找消息。 你还可以使用下列日志文件：  
 
 -   网络设备注册服务的 IIS 日志文件：**&lt;path\>\inetpub\logs\LogFiles\W3SVC1**  
 
@@ -507,7 +507,7 @@ Configuration Manager 日志文件存储在多个位置中，该位置取决于�
 ||||
 |-|-|-|
 |日志名称|说明|带有日志文件的计算机|
-|CloudMgr.log|记录有关部署云管理网关服务、正在进行的服务状态，以及与服务相关联的使用数据的详细信息。<br>你可以配置日志记录级别编辑注册表 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\COMPONENTS\SMS_CLOUD_SERVICES_MANAGER\Logging level**|站点系统服务器上的 **SMS/Logs** 文件夹|
+|CloudMgr.log|记录有关部署云管理网关服务、正在进行的服务状态，以及与服务相关联的使用数据的详细信息。<br>你可以配置日志记录级别编辑注册表 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\COMPONENTS\SMS_CLOUD_SERVICES_MANAGER\Logging level**|主站点服务器或 CAS 上的 installdir 文件夹。|
 |CMGSetup.log 或 CMG-*RoleInstanceID*-CMGSetup.log<sup>1</sup>|记录有关云管理网关部署（Azure 中的本地部署）的第二阶段的详细信息<br>你可以使用“Azure 门户\云服务配置”选项卡上的设置“跟踪级别”（“信息”（默认）、“详细”、“错误”）配置日志记录级别。|你的 Azure 服务器上的 **%approot%\logs**，或站点系统服务器上的 SMS/Logs 文件夹|
 |CMGHttpHandler.log 或 CMG-*RoleInstanceID*- CMGHttpHandler.log<sup>1</sup>|记录有关云管理网关 http 处理程序与 Azure 中的 Internet Information Services 绑定的详细信息<br>你可以使用“Azure 门户\云服务配置”选项卡上的设置“跟踪级别”（“信息”（默认）、“详细”、“错误”）配置日志记录级别。|你的 Azure 服务器上的 **%approot%\logs**，或站点系统服务器上的 SMS/Logs 文件夹|
 |CMGService.log 或 CMG-*RoleInstanceID*- CMGService.log<sup>1</sup>|记录有关 Azure 中云管理网关服务核心组件的详细信息<br>你可以使用“Azure 门户\云服务配置”选项卡上的设置“跟踪级别”（“信息”（默认）、“详细”、“错误”）配置日志记录级别。|你的 Azure 服务器上的 **%approot%\logs**，或站点系统服务器上的 SMS/Logs 文件夹|

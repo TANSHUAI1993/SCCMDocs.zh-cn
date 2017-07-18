@@ -2,7 +2,7 @@
 title: "Configuration Manager 的混合 MDM 中的新增功能 | Microsoft Docs"
 description: "了解 Configuration Manager 和 Intune 的混合部署可用的新移动设备管理功能。"
 ms.custom: na
-ms.date: 04/21/2017
+ms.date: 06/30/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,10 +16,10 @@ author: Mtillman
 ms.author: mtillman
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: ae008c91a7387ba76f2bfac13f8feb489a0cc558
-ms.openlocfilehash: 0af5ae68353fcf1db846e2e27f3391fe87dcfc42
+ms.sourcegitcommit: 6f9e6e93fce95666503907010a5c253158c5de7c
+ms.openlocfilehash: b9777e8cfa63eda77512e4837de17b99c792a036
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 07/07/2017
 
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager 和 Microsoft Intune 的混合移动设备管理中的新增功能
@@ -37,6 +37,81 @@ ms.lasthandoff: 05/17/2017
 |**Microsoft Intune 中的新增功能** | 一般情况下，此类别列出的所有功能应适用于所有 Configuration Manager 版本（包括 System Center 2012 R2 Configuration Manager 版本），因为这些功能仅需要 Intune 服务，不需要 Configuration Manager 中的其他功能。|
 |**Configuration Manager Technical Preview 中的新增功能**| 此类别下列出的所有功能仅适用于指定的 Technical Preview 版本。 若要试用这些功能，必须安装功能说明中指定的 Technical Preview 版本。 有关详细信息，请参阅 [System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)。|
 |**Configuration Manager (Current Branch) 中的新增功能**| 此类别下列出的所有功能仅适用于指定的 Configuration Manager (Current Branch) 版本，例如版本 1511 或 1602。 如果要为混合部署使用较旧版本的 Configuration Manager，则必须升级到功能说明中指定的 Configuration Manager (Current Branch) 版本。 有关详细信息，请参阅[升级到 System Center Configuration Manager](../../core/servers/deploy/install/upgrade-to-configuration-manager.md)。|
+
+## <a name="june-2017"></a>2017 年 6 月
+
+### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
+
+- **更改 MDM 机构**
+
+  从 Configuration Manager 1610 版本和 Microsoft Intune 1705 版本开始，可以更改你的 MDM 机构而无需联系 Microsoft 支持部门，也无需取消注册并重新注册现有的托管设备。 有关详细信息，请参阅[更改 MDM 机构]( /sccm/mdm/deploy-use/change-mdm-authority)。
+
+- **Managed Browser 和应用代理集成**
+
+  Intune Managed Browser 现在可以与 Azure AD 应用程序代理服务集成，用户即使在远程工作时也可以访问内部网站。 浏览器的用户只需照常输入网站 URL，Managed Browser 会通过应用程序代理 Web 网关路由请求。 有关详细信息，请参阅[使用 Managed Browser 策略管理 Internet 访问权限](/intune/app-configuration-managed-browser)。
+
+- **适用于 Android 的公司门户应用现在针对应用保护策略提供全新最终用户体验**
+
+  根据客户反馈，我们修改了适用于 Android 的公司门户应用，现在显示“访问公司内容”按钮。 其目的在于，使最终用户在仅需要访问支持应用保护策略（Intune 移动应用程序管理的一项功能）的应用时，无需完成不必要的注册过程。 在[应用 UI 中的新增功能](/intune/whats-new-app-ui)页上可以看到这些更改。
+
+- **可轻松删除公司门户的新菜单操作**
+
+  根据用户反馈，适用于 Android 的公司门户应用已添加一个新的菜单操作，用于从设备删除公司门户。 此操作可从 Intune 管理中删除设备，这样用户就可以从设备中删除应用。 可以在[应用 UI 中的新增功能](/intune/whats-new-app-ui)页和 [Android 最终用户文档](/intune-user-help/unenroll-your-device-from-intune-android)中看到这些更改。
+
+- **对与 Windows 10 创意者更新之间的应用同步的改进**
+
+  适用于 Windows 10 的公司门户应用现在自动启动与 Windows 10 创意者更新（版本 1703）的设备应用安装请求同步。 这会减少“挂起同步”状态期间的应用安装停止问题。 此外，用户也能够从应用中手动启动同步。 在[应用 UI 中的新增功能](/intune/whats-new-app-ui)页上可以看到这些更改。
+
+- **Windows 10 公司门户的全新引导式体验**
+
+  适用于 Windows 10 的公司门户应用为尚未进行标识或注册的设备提供引导式 Intune 演练体验。 新体验提供分步说明，指导用户完成注册到 Azure Active Directory（条件访问功能需要）和 MDM 注册（设备管理功能需要）的过程。 从公司门户主页可以进入引导式体验。 如果用户没有完成注册，仍可以继续使用应用，但可用功能受到限制。
+
+  此更新仅在运行 Windows 10 周年更新（内部版本 1607）或更高版本的设备上可见。 在[应用 UI 中的新增功能](/intune/whats-new-app-ui)页上可以看到这些更改。
+
+- **对适用于 iOS 的公司门户应用中的应用磁贴的改进**
+
+  我们更新了主页上的应用磁贴设计，现在可以反映你为公司门户设置的品牌颜色。 有关详细信息，请参阅[应用 UI 中的新增功能](/intune/whats-new-app-ui)。
+
+- **帐户选取器现在可用于适用于 iOS 的公司门户应用**
+
+  如果用户使用其工作或学校帐户登录到其他 Microsoft 应用，则 iOS 设备用户在登录到公司门户时，可以看到我们的新帐户选取器。 有关详细信息，请参阅[应用 UI 中的新增功能](/intune/whats-new-app-ui)。
+
+### <a name="new-in-configuration-manager-technical-preview-1706"></a>Configuration Manager Technical Preview 1706 中的新增功能
+
+- **新移动应用程序管理策略设置**    
+
+  目前提供以下移动应用程序管理 (MAM) 策略设置：
+
+  - 阻止屏幕捕获(仅限 Android 设备)：指定在使用该应用时，阻止设备的屏幕捕获功能。
+  - 禁用联系人同步：阻止应用将数据保存到设备上的本机“联系人”应用。
+  - 禁用打印：阻止应用打印工作或学校数据。
+
+  请参阅[使用 Configuration Manager 中的应用保护策略来保护应用](https://docs.microsoft.com/sccm/mdm/deploy-use/protect-apps-using-mam-policies)，尝试新的应用保护策略设置。
+
+- **新 Windows 配置项设置**  <!-- 1354715 -->    
+
+  新的 Windows 配置项适用于密码、设备、存储和 Microsoft Edge 设置类别。 有关详细信息，请参阅[新 Windows 配置项设置](/sccm/core/get-started/capabilities-in-technical-preview-1706#new-windows-configuration-item-settings)。
+
+- **新设备符合性策略规则**    
+
+  对于以前仅适用于 Intune 独立版本的符合性策略，现在可以为其配置新选项。 有关详细信息，请参阅[设备符合性策略改进](/sccm/core/get-started/capabilities-in-technical-preview-1706#new-device-compliance-policy-rules)。
+
+- **Android 和 iOS 注册限制** <!-- 1290826 -->      
+
+  管理员现在可以指定用户不能在其混合环境中注册个人 Android 或 iOS 设备。 这可让你将注册的设备限制为预先声明的公司所有设备，或仅限注册了“设备注册计划”的 iOS 设备。 有关详细信息，请参阅 [Android 和 iOS 注册限制](/sccm/core/get-started/capabilities-in-technical-preview-1706#android-and-ios-enrollment-restrictions)。
+
+- **支持 Entrust 证书颁发机构** <!-- 1350740 -->     
+
+  现在，Configuration Manager 可支持 Entrust 证书颁发机构；这使得 PFX 证书可传送到在 Microsoft Intune 中注册的设备。    
+
+  在 Configuration Manager 中添加“证书注册点”角色时，你可以将 Entrust 配置为证书颁发机构。 在添加颁发 PFX 证书的新证书配置文件时，你可以选择 Microsoft 或 Entrust 证书颁发机构。
+
+  已知问题：在 Technical Preview 1706 中，没有为 Microsoft 证书颁发机构颁发 PFX 证书。 这并不会影响导入的 PFX 证书或 SCEP 配置文件。
+
+- **对 macOS VPN 配置文件的 Cisco (IPsec) 支持**  <!-- 1321367 -->    
+
+  你可以使用 Cisco (IPsec) 作为连接类型创建 macOS VPN 配置文件。 有关详细信息，请参阅[创建 VPN 配置文件](/sccm/mdm/deploy-use/create-vpn-profiles#create-vpn-profiles)。
+
 
 ## <a name="april-2017"></a>2017 年 4 月
 
@@ -210,87 +285,6 @@ Configuration Manager (Current Branch) 1702 版本中还包括以下其他混合
   从用于混合移动设备管理 (MDM) 的 Technical Preview 1701 开始，创建用于 Intune 托管设备的新策略和配置文件时，不再需要将特定版本的 Android 和 iOS 作为目标。 得益于此更改，混合部署可为新的 Android 和 iOS 版本更快地提供支持，无需新的 Configuration Manager 版本或扩展。 有关详细信息，请参阅 [Android 和 iOS 版本不再作为创建向导中的目标](/sccm/core/get-started/capabilities-in-technical-preview-1701#android-and-ios-versions-are-no-longer-targetable-in-creation-wizards-for-hybrid-mdm)。
 
 
-## <a name="december-2016"></a>2016 年 12 月
-
-### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
-
-- **注册移动到 Azure 门户时的多重身份验证**
-
-  以前，你会转到 Intune 控制台或 Configuration Manager 控制台，以设置 MFA 用于 Intune 注册。 通过此更新的功能，现可使用 Intune 凭据登录 [Microsoft Azure 门户] (https://manage.windowsazure.com)，并通过 Azure AD 配置 MFA 设置。 若要了解详细信息，请参阅 [Microsoft Intune 的多重身份验证] (https://aka.ms/mfa_ad)。
-
-- **Android 版公司门户应用现已在中国推出**
-
-  Android 版公司门户应用现已在中国推出。 由于中国地区没有 Google Play 商店，Android 设备必须从中国的应用市场获取应用。 可从以下商店下载 Android 版公司门户应用：
-
-  -    [百度](https://go.microsoft.com/fwlink/?linkid=836946)
-  -    [华为](https://go.microsoft.com/fwlink/?linkid=836948)
-  -    [腾讯](https://go.microsoft.com/fwlink/?linkid=836949)
-  -    [豌豆荚](https://go.microsoft.com/fwlink/?linkid=836950)
-  -    [小米](https://go.microsoft.com/fwlink/?linkid=836947)
-
-  Android 版公司门户应用使用 Google Play Services 与 Microsoft Intune 服务进行通信。 由于 Google Play Services 尚未在中国推出，因此执行以下任何任务最长可能需要 8 个小时才能完成。
-
-  | Configuration Manager 管理控制台 | Android 适用的 Intune 公司门户应用 | Intune 公司门户网站 |
-  |----|----|----|        
-  | 停用/擦除（删除所有数据）    | 删除远程设备 | 删除设备（本地和远程） |
-  | 停用/擦除（删除公司数据）    | 重置设备 | 重置设备|
-  | 新的或更新的应用部署 | 安装可用的业务线应用 | 设备密码重置|
-  | 远程锁定    | | |
-  | 密码重置 | | |        
-
-
-## <a name="november-2016"></a>2016 年 11 月
-
-### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
-
-- **适用于 Windows 10 设备的新 Microsoft Intune 公司门户**
-
-  Microsoft 发布了一个新的[适用于 Windows 10 设备的公司门户应用](https://www.microsoft.com/store/apps/9wzdncrfj3pz)。 此应用利用了新 Windows 10 通用格式，可跨所有 Windows 10 设备（PC 和移动设备等）提供相同的更新用户体验，同时仍启用以前公司门户应用提供的所有相同功能。
-
-  新应用可在 Windows 10 设备上利用平台功能，例如单一登录 (SSO) 和基于证书的身份验证。 此应用将作为对现有 Windows 8.1 公司门户和 Windows Phone 8.1 公司门户（安装自 Windows 应用商店）的升级而提供。 有关详细信息，请转到 [Intune 支持团队博客](http://aka.ms/intunecp_universalapp)。
-
-  新公司门户应用还会显示在 Configuration Manager 控制台中标记为**可用**的适用于企业的 Windows 应用商店应用程序。
-
-
-### <a name="new-in-configuration-manager-current-branch"></a>Configuration Manager (Current Branch) 中的新增功能
-
-以下功能以前可在 Configuration Manager Technical Preview 版本中使用，现在可在 Intune 和 Configuration Manager (Current Branch) 1610 版本的混合部署中使用。
-
-* [配置项目的其他设置和改进的体验](/sccm/core/plan-design/changes/whats-new-in-version-1610#new-compliance-settings-for-configuration-items)
-* [DEP 配置文件的其他设置](whats-new-hybrid-archive.md#new-in-configuration-manager-technical-preview-1609)
-* [适用于企业的 Windows 应用商店中的付费应用](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)
-* [Windows 10 VPN 配置文件的本机连接类型](whats-new-hybrid-archive.md#new-in-configuration-manager-technical-preview-1609)
-* [Intune 合规性图表](/sccm/protect/deploy-use/create-compliance-policy#monitor-the-compliance-policy)
-* [从控制台请求策略同步](/sccm/mdm/deploy-use/sync-intune-device)
-* [Windows Defender 配置设置](/sccm/compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client#windows-defender)
-
-Configuration Manager (Current Branch) 1610 版本中还包括以下其他混合功能：
-
-- **增加了注册设备数**
-
-  用户现在最多可注册 15 台设备。 以前该限制为每个用户 5 台设备。
-
-
-- **其他安全支持**
-
-  除了完全权限管理员之外，以下内置安全角色现在对所有企业拥有的设备节点中的项具有完全访问权限，包括预声明设备、iOS 注册配置文件，以及 Windows 注册配置文件：
-
-    - 资产管理员
-    - 公司资源访问管理器
-
-  对 Configuration Manager 控制台中这些区域的只读访问权限仍授予给只读分析员角色。
-
-- **从 Windows 信息保护应用自动触发 VPN 访问**
-
-  可以将 Windows 信息保护主域添加到 Windows 10 VPN 配置文件（使所有关联的应用在设备上运行时自动触发 VPN 连接）。 只在选择本机连接类型时，此选项才可用。
-
-- **Windows 10 VPN 配置文件的条件访问**
-
-    现在可要求在 Azure Active Directory 中注册的 Windows 10 设备符合要求，以通过在 Configuration Manager 控制台中创建的 Windows 10 VPN 配置文件具有 VPN 访问权限。 这可通过 VPN 配置文件向导中“身份验证方法”页上新的“对此 VPN 连接启用条件性访问”复选框，和 Windows 10 VPN 配置文件的 VPN 配置文件属性来实现。 只在选择本机连接类型时，此选项才可用。
-
-    如果对配置文件启用条件性访问，还可以对单一登录身份验证指定一个单独的证书。
-
-
 ## <a name="notices"></a>通知
 
 ### <a name="system-center-2012-configuration-sp1-and-system-center-2012-r2-configuration-manager-rtm-support-for-hybrid-mobile-device-management-ending-on-april-10-2017"></a>System Center 2012 Configuration SP1 和 System Center 2012 R2 Configuration Manager (RTM)：对混合移动设备管理的支持将于 2017 年 4 月 10 日终止
@@ -302,9 +296,9 @@ Configuration Manager (Current Branch) 1610 版本中还包括以下其他混合
 如果运行 Configuration Manager 2012 SP1 或 R2 RTM 的混合部署，建议在 2017 年 4 月 10 日前升级到 Configuration Manager (Current Branch) 或 Configuration Manager 2012（R2 SP1 或 SP2）的最新支持 Service Pack，以避免服务中断。
 
 其他资源：
--    [升级到 System Center Configuration Manager (Current Branch)](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)
--    [计划升级到 System Center 2012 R2 Configuration Manager SP1](https://technet.microsoft.com/library/jj822981.aspx#BKMK_PlanningR2SP1Upgrade)
--    [计划升级到 System Center 2012 Configuration Manager SP2](https://technet.microsoft.com/library/jj822981.aspx#BKMK_PlanningSP2Upgrade)
+-   [升级到 System Center Configuration Manager (Current Branch)](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)
+-   [计划升级到 System Center 2012 R2 Configuration Manager SP1](https://technet.microsoft.com/library/jj822981.aspx#BKMK_PlanningR2SP1Upgrade)
+-   [计划升级到 System Center 2012 Configuration Manager SP2](https://technet.microsoft.com/library/jj822981.aspx#BKMK_PlanningSP2Upgrade)
 
 ### <a name="windows-phone-8-company-portal-upload-deprecated"></a>已弃用的 Windows Phone 8 公司门户上传
 2016 年 10 月 25 日

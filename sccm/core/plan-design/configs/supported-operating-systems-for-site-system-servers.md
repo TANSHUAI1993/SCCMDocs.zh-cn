@@ -2,7 +2,7 @@
 title: "支持的站点系统服务器 | Microsoft Docs"
 description: "了解可用来托管 System Center Configuration Manager 站点或站点系统角色的 Windows 版本。"
 ms.custom: na
-ms.date: 3/9/2017
+ms.date: 06/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,10 +16,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 86109f7186422c2b29ee933e827a7d14123e5792
+ms.sourcegitcommit: 0ec241d07f51b80b84d65676ef1207b31a9a9983
+ms.openlocfilehash: be635e4df79b57b6f650287fa3774d2c10613cee
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 06/28/2017
 
 
 ---
@@ -184,8 +184,8 @@ ms.lasthandoff: 05/17/2017
 ## <a name="windows-server-2008-r2-with-sp1-x64-standard-enterprise-and-datacenter"></a>Windows Server 2008 R2 SP1 (x64)：标准版、企业版和数据中心版  
  根据 [Microsoft 支持生命周期](https://support.microsoft.com/lifecycle)中的详细信息，Windows Server 2008 R2 现处于外延支持，不再处于主流支持。 若要详细了解将来对这些操作系统作为具有 Configuration Manager 的站点系统服务器的支持，请参阅 [System Center Configuration Manager 的已删除和已弃用的功能](../../../core/plan-design/changes/removed-and-deprecated-features.md)。  
 
- 从 Configuration Manager 版本 1702 开始，此操作系统不支持站点服务器或大部分站点系统角色，但仍会继续支持状态迁移点和分发点站点系统角色（包括请求分发点、PXE 和多播）。
- 
+ 从 Configuration Manager 版本 1702 开始，此操作系统不支持站点服务器或大部分站点系统角色，但仍会继续支持分发点站点系统角色（包括请求分发点、PXE 和多播）。
+
  1702 之前的版本继续支持使用以下服务器。
 
 

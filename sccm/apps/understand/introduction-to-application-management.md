@@ -15,11 +15,11 @@ caps.latest.revision: 18
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-experimental: true
-experiment_id: rob-table-161101
-translationtype: Human Translation
-ms.sourcegitcommit: 5aef08865b232ff2dacec6906098bebf4e42e6b1
-ms.openlocfilehash: 699adb5fac0c625c321db011af6989cc4c0778ec
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f4c46bfab9b40b29654f4e883817a5508ab25b74
+ms.openlocfilehash: 959a36413d06bb225f260bd44c1d3d59efd44e69
+ms.contentlocale: zh-cn
+ms.lasthandoff: 06/28/2017
 
 
 ---
@@ -37,11 +37,11 @@ ms.openlocfilehash: 699adb5fac0c625c321db011af6989cc4c0778ec
 
  当应用程序部署到设备上时，“要求”  决定在设备上安装哪种部署类型。  
 
- 当然，利用应用程序还可以做很多事情，读完本指南即可了解相关知识。 下表介绍了一些概念，你需要在深入学习前进行了解。 所有这些不必出现在你创建的每个应用程序中：  
+ 可以通过应用程序执行更多操作。 阅读本指南即可了解这些内容。 下表介绍了在深入学习前需要了解的一些概念：  
 
 |概念|描述|    
 |-|-|  
-|**惠?**|在之前版本的 Configuration Manager 中，经常要创建包含你想要向其部署应用程序的设备的集合。 虽然你仍然可以这样做，但要求通过允许指定更详尽的条件（应用程序将按照此条件安装）来减少这种需求。<br /><br /> 例如，可以指定应用程序仅在运行 Windows 10 的计算机上安装。 接下来，你可以将应用程序部署到所有设备，但它只会在运行 Windows 10 的设备上安装。<br /><br /> Configuration Manager 会评估要求，确定是否安装应用程序及其任何部署类型。 然后，它会确定用于安装应用程序的正确部署类型。 默认情况下，根据“计划部署的重新评估” 客户端设置，每七天重新评估一次要求规则以确保符合性。<br /><br /> 有关详细信息，请参阅[创建和部署应用程序](../../apps/get-started/create-and-deploy-an-application.md)。|  
+|**惠?**|在之前版本的 Configuration Manager 中，经常要创建包含你想要向其部署应用程序的设备的集合。 尽管仍然可以创建集合，但使用要求可以为应用程序部署指定更多的详细条件。<br /><br /> 例如，可以指定应用程序仅在运行 Windows 10 的计算机上安装。 接下来，可以将应用程序部署到设备，但它只会在运行 Windows 10 的设备上安装。<br /><br /> Configuration Manager 会评估要求，确定是否安装应用程序及其任何部署类型。 然后，它会确定用于安装应用程序的正确部署类型。 默认情况下，根据“计划部署的重新评估” 客户端设置，每七天重新评估一次要求规则以确保符合性。<br /><br /> 有关详细信息，请参阅[创建和部署应用程序](../../apps/get-started/create-and-deploy-an-application.md)。|  
 |**全局条件**|尽管要求用于单个应用程序中的特定部署类型，但也可创建全局条件。 这些条件是可用于任何应用程序和部署类型的预定义要求库。<br /><br /> Configuration Manager 包含一套内置全局条件，并且也可以创建自己的全局条件。<br /><br /> 有关详细信息，请参阅[创建全局条件](../../apps/deploy-use/create-global-conditions.md)。|  
 |**模拟部署**|评估应用程序的要求、检测方法和依赖关系。 在未实际安装应用程序的情况下报告结果。<br /><br /> 有关详细信息，请参阅[模拟应用程序部署](../../apps/deploy-use/simulate-application-deployments.md)。|  
 |**部署操作**|指定是否想要安装或卸载（如果支持）正在部署的应用程序。<br /><br /> 有关详细信息，请参阅[部署应用程序](../../apps/deploy-use/deploy-applications.md)。|  
@@ -56,7 +56,7 @@ ms.openlocfilehash: 699adb5fac0c625c321db011af6989cc4c0778ec
  可通过 Configuration Manager 部署以下应用类型：  
 
 - Windows Installer（*.msi 文件）
-- Windows 应用包（*.appx*、.appxbundle）
+- Windows 应用包（*.appx、*.appxbundle）
 - Windows 应用包（在 Windows 应用商店中）
 - Microsoft Application Virtualization 4
 - Microsoft Application Virtualization  5
@@ -110,9 +110,4 @@ ms.openlocfilehash: 699adb5fac0c625c321db011af6989cc4c0778ec
 -   按定期计划运行且不能使用全局评估的脚本。
 
  有关详细信息，请参阅[包和程序](../../apps/deploy-use/packages-and-programs.md)。  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
 
