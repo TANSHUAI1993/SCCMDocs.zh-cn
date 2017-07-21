@@ -15,11 +15,11 @@ caps.latest.revision: 40
 author: Mtillman
 ms.author: mtillman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 6f9e6e93fce95666503907010a5c253158c5de7c
-ms.openlocfilehash: b9777e8cfa63eda77512e4837de17b99c792a036
+ms.translationtype: HT
+ms.sourcegitcommit: 1035dbbf944a3a467d637a4a948a75b0946eb711
+ms.openlocfilehash: a9e03d4c5b290886bda87fae41e4df362eca1b71
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/07/2017
+ms.lasthandoff: 07/11/2017
 
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager 和 Microsoft Intune 的混合移动设备管理中的新增功能
@@ -30,13 +30,21 @@ ms.lasthandoff: 07/07/2017
 
 ##  <a name="compatibility-with-configuration-manager-versions"></a>与 Configuration Manager 版本的兼容性  
 
- 本文的每个部分都列出了混合功能，共 3 个不同类别。 请使用以下指南，确定每个类别中的功能与不同版本的 Configuration Manager 的兼容性：  
+ 本文的每个部分都列出了混合功能，并按 3 个不同类别进行分类。 请使用以下指南，确定每个类别中的功能与不同版本的 Configuration Manager 的兼容性：  
 
 |功能类别|描述|
 |-|-|
 |**Microsoft Intune 中的新增功能** | 一般情况下，此类别列出的所有功能应适用于所有 Configuration Manager 版本（包括 System Center 2012 R2 Configuration Manager 版本），因为这些功能仅需要 Intune 服务，不需要 Configuration Manager 中的其他功能。|
 |**Configuration Manager Technical Preview 中的新增功能**| 此类别下列出的所有功能仅适用于指定的 Technical Preview 版本。 若要试用这些功能，必须安装功能说明中指定的 Technical Preview 版本。 有关详细信息，请参阅 [System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)。|
 |**Configuration Manager (Current Branch) 中的新增功能**| 此类别下列出的所有功能仅适用于指定的 Configuration Manager (Current Branch) 版本，例如版本 1511 或 1602。 如果要为混合部署使用较旧版本的 Configuration Manager，则必须升级到功能说明中指定的 Configuration Manager (Current Branch) 版本。 有关详细信息，请参阅[升级到 System Center Configuration Manager](../../core/servers/deploy/install/upgrade-to-configuration-manager.md)。|
+
+## <a name="july-2017"></a>2017 年 7 月
+
+### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
+
+- **为支持的 Android 版本添加了通知**
+
+    已为支持的 Android 版本添加了新通知。 有关详细信息，请参阅[不再支持 Android 4.3 及更低版本](#notices)。
 
 ## <a name="june-2017"></a>2017 年 6 月
 
@@ -50,17 +58,17 @@ ms.lasthandoff: 07/07/2017
 
   Intune Managed Browser 现在可以与 Azure AD 应用程序代理服务集成，用户即使在远程工作时也可以访问内部网站。 浏览器的用户只需照常输入网站 URL，Managed Browser 会通过应用程序代理 Web 网关路由请求。 有关详细信息，请参阅[使用 Managed Browser 策略管理 Internet 访问权限](/intune/app-configuration-managed-browser)。
 
-- **适用于 Android 的公司门户应用现在针对应用保护策略提供全新最终用户体验**
+- **Android 公司门户应用现在提供全新的应用保护策略最终用户体验**
 
-  根据客户反馈，我们修改了适用于 Android 的公司门户应用，现在显示“访问公司内容”按钮。 其目的在于，使最终用户在仅需要访问支持应用保护策略（Intune 移动应用程序管理的一项功能）的应用时，无需完成不必要的注册过程。 在[应用 UI 中的新增功能](/intune/whats-new-app-ui)页上可以看到这些更改。
+  根据客户反馈，我们修改了适用于 Android 的公司门户应用，现在显示“访问公司内容”按钮。 这样一来，如果最终用户只需访问支持应用保护策略（一项 Intune 移动应用管理功能）的应用，便无需完成不必要的注册过程。 在[应用 UI 中的新增功能](/intune/whats-new-app-ui)页上可以看到这些更改。
 
 - **可轻松删除公司门户的新菜单操作**
 
-  根据用户反馈，适用于 Android 的公司门户应用已添加一个新的菜单操作，用于从设备删除公司门户。 此操作可从 Intune 管理中删除设备，这样用户就可以从设备中删除应用。 可以在[应用 UI 中的新增功能](/intune/whats-new-app-ui)页和 [Android 最终用户文档](/intune-user-help/unenroll-your-device-from-intune-android)中看到这些更改。
+  根据用户反馈，适用于 Android 的公司门户应用已添加一个新的菜单操作，用于从设备删除公司门户。 此操作可从 Intune 管理中删除设备，这样用户就可以从设备中删除应用。 有关这些更改，可以参阅[应用 UI 中的新增功能](/intune/whats-new-app-ui)页和 [Android 最终用户文档](/intune-user-help/unenroll-your-device-from-intune-android)。
 
 - **对与 Windows 10 创意者更新之间的应用同步的改进**
 
-  适用于 Windows 10 的公司门户应用现在自动启动与 Windows 10 创意者更新（版本 1703）的设备应用安装请求同步。 这会减少“挂起同步”状态期间的应用安装停止问题。 此外，用户也能够从应用中手动启动同步。 在[应用 UI 中的新增功能](/intune/whats-new-app-ui)页上可以看到这些更改。
+  Windows 10 公司门户应用现在自动开始为安装了 Windows 10 创意者更新（版本 1703）的设备同步应用安装请求。 这会减少“挂起同步”状态期间出现的应用安装停止问题。 此外，用户还可以在应用中手动启动同步。 在[应用 UI 中的新增功能](/intune/whats-new-app-ui)页上可以看到这些更改。
 
 - **Windows 10 公司门户的全新引导式体验**
 
@@ -98,7 +106,7 @@ ms.lasthandoff: 07/07/2017
 
 - **Android 和 iOS 注册限制** <!-- 1290826 -->      
 
-  管理员现在可以指定用户不能在其混合环境中注册个人 Android 或 iOS 设备。 这可让你将注册的设备限制为预先声明的公司所有设备，或仅限注册了“设备注册计划”的 iOS 设备。 有关详细信息，请参阅 [Android 和 iOS 注册限制](/sccm/core/get-started/capabilities-in-technical-preview-1706#android-and-ios-enrollment-restrictions)。
+  管理员现在可以指定用户不能在其混合环境中注册个人 Android 或 iOS 设备。 这样一来，可以将注册的设备限制为预先声明的公司自有设备，或仅为注册了“设备注册计划”的 iOS 设备。 有关详细信息，请参阅 [Android 和 iOS 注册限制](/sccm/core/get-started/capabilities-in-technical-preview-1706#android-and-ios-enrollment-restrictions)。
 
 - **支持 Entrust 证书颁发机构** <!-- 1350740 -->     
 
@@ -119,7 +127,7 @@ ms.lasthandoff: 07/07/2017
 
 - **适用于 Managed Browser 的 MyApps**
 
-  现在 Microsoft MyApps 改进了 Managed Browser 内部的支持。 不作为管理目标的 Managed Browser 用户将直接转至 MyApps 服务，这些用户可以在其中访问管理员预配的 SaaS 应用。 作为 Intune 管理目标的用户将可以继续从内置 Managed Browser 书签访问 MyApps。
+  现在 Microsoft MyApps 改进了 Managed Browser 内部的支持。 不作为管理目标的 Managed Browser 用户将直接转至 MyApps 服务，这些用户可以在其中访问管理员预配的 SaaS 应用。 作为 Intune 管理目标的用户可以继续通过内置的 Managed Browser 书签访问 MyApps。
 
 - **Managed Browser 和公司门户的新图标**
 
@@ -129,7 +137,7 @@ ms.lasthandoff: 07/07/2017
 
 - **Android 公司门户中的登录进度指示器**
 
-  用户启动或重启应用时，Android 公司门户应用的更新程序将显示登录进度指示器。 允许用户访问应用前，指示器将经历以下新状态：开始是“正在连接...”，然后是“正在登录...”，接下来是“正在查看安全要求...”。 可以在 [Intune 应用 UI 页中的新增功能](/intune/whats-new/whats-new-in-intune-app-ui.md)中查看适用于 Android 的公司门户应用的新屏幕。
+  将 Android 公司门户应用更新为在用户启动或恢复应用时显示登录进度指示器。 允许用户访问应用前，指示器将经历以下新状态：开始是“正在连接...”，然后是“正在登录...”，接下来是“正在查看安全要求...”。 可以在 [Intune 应用 UI 页中的新增功能](/intune/whats-new/whats-new-in-intune-app-ui.md)中查看适用于 Android 的公司门户应用的新屏幕。
 
 - **阻止应用访问 SharePoint Online**
 
@@ -159,11 +167,11 @@ ms.lasthandoff: 07/07/2017
 
 - **Windows 10 公司门户的签名脚本**
 
-  如果需要下载和旁加载 Windows 10 公司门户应用，现在可以使用脚本为你的组织简化应用签名过程。  若要下载该脚本及其使用说明，请参阅 TechNet 库中的 [Microsoft Intune Signing Script for Windows 10 Company Portal](https://aka.ms/win10cpscript)（Windows 10 公司门户适用的 Microsoft Intune 签名脚本）。 有关此公告的详细信息，请参阅 Intune 支持团队博客上的 [Updating your Windows 10 Company Portal app](https://blogs.technet.microsoft.com/intunesupport/2017/03/13/updating-your-windows-10-company-portal-app/)（更新 Windows 10 公司门户应用）。
+  如果需要下载和旁加载 Windows 10 公司门户应用，现在可以使用脚本为你的组织简化应用签名过程。  若要下载该脚本及其使用说明，请参阅 TechNet 库中的 [Microsoft Intune Signing Script for Windows 10 Company Portal](https://aka.ms/win10cpscript)（Windows 10 公司门户适用的 Microsoft Intune 签名脚本）。 有关此公告的详细信息，请参阅 Intune 支持团队博客上的[更新 Windows 10 公司门户应用](https://blogs.technet.microsoft.com/intunesupport/2017/03/13/updating-your-windows-10-company-portal-app/)。
 
 - **改进了对中国的 Android 用户的支持**
 
-  由于中国地区没有 Google Play 商店，Android 设备必须从中国的应用商店获取应用。 公司门户通过重定向中国的 Android 用户，从本地应用商店下载公司门户和 Outlook 应用来支持此工作流。 启用条件性访问策略后，将同时改善有关移动设备管理和移动应用程序管理的用户体验。 以下中文应用商店可以提供 Android 适用的公司门户和 Outlook 应用：
+  由于中国地区没有 Google Play 商店，Android 设备必须从中国的应用商店获取应用。 公司门户通过重定向中国的 Android 用户，以便从本地应用商店下载公司门户和 Outlook 应用，从而支持此工作流。 启用条件访问策略后，这将同时提升有关移动设备管理和移动应用管理的用户体验。 以下中文应用商店可以提供 Android 适用的公司门户和 Outlook 应用：
 
   - [百度](https://go.microsoft.com/fwlink/?linkid=836946)
   - [小米](https://go.microsoft.com/fwlink/?linkid=836947)
@@ -190,7 +198,7 @@ ms.lasthandoff: 07/07/2017
 
    从 Technical Preview 1703 开始，现可支持以下 Volume Purchase Program (VPP) 方案：
 
-   - 设备许可 - 对于支持设备许可且部署到设备集合的应用，每个设备仅需要一个许可证。  以前，设备上每位用户都需要一个许可证。 有关详细信息，请参阅[将批量采购的 iOS 应用部署到设备集合](/sccm/core/get-started/capabilities-in-technical-preview-1703#deploy-volume-purchased-ios-apps-to-device-collections)。
+   - 设备授权 - 对于支持设备授权且部署到设备集合的应用，现在每个设备只需一个许可证。  以前，设备上每位用户都需要一个许可证。 有关详细信息，请参阅[将批量采购的 iOS 应用部署到设备集合](/sccm/core/get-started/capabilities-in-technical-preview-1703#deploy-volume-purchased-ios-apps-to-device-collections)。
    - 将多个 VPP 令牌用于单个混合租户，且同时将两个令牌均用于管理 VPP 应用。
    - 使用 VPP 教育令牌，且可区分企业和教育令牌。
 
@@ -207,7 +215,7 @@ Configuration Manager (Current Branch) 1702 版本中还包括以下其他混合
 
 - **对 Apple Volume Purchase Program (VPP) 改进的支持**
 
-  - 你现在可以将已授权的应用部署到设备以及用户。 根据应用对设备授权的支持能力，合适的许可证将在部署时按以下方式声明：
+  - 你现在可以将已授权的应用部署到设备以及用户。 部署应用时，将声明相应的许可证（如下所示），具体视应用是否支持设备授权而定：
 
     | Configuration Manager 版本 | 应用是否支持设备授权？ | 部署集合类型 | 已声明的许可证 |
     |-|-|-|-|
@@ -226,13 +234,13 @@ Configuration Manager (Current Branch) 1702 版本中还包括以下其他混合
 
   有关批量购买的 iOS 应用的详细信息，请参阅[管理批量购买的 iOS 应用](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps)。
 
-- **对适用于企业的 Windows 应用商店中的业务线应用程序的支持**
+- **适用于企业的 Windows 应用商店支持业务线应用**
 
-  现在可以同步来自适用于企业的 Windows 应用商店的自定义业务线应用程序。
+  现在，可以从适用于企业的 Windows 应用商店同步自定义业务线应用。
 
 - **新移动威胁防御监视工具**
 
-    现在你可以采用新的方法通过移动威胁防御服务提供程序来监视合规性状态。
+    现在，可以使用新方法通过移动威胁防御服务提供程序来监视符合性状态。
 
     有关详细信息，请参阅[如何监视移动威胁防御合规性](/sccm/mdm/deploy-use/monitor-mobile-threat-defense-compliance)。
 
@@ -256,7 +264,7 @@ Configuration Manager (Current Branch) 1702 版本中还包括以下其他混合
 
 - **针对不符合应用的符合性设置**
 
-  现可在符合性策略中创建面向 Android 和 iOS 应用的不符合应用规则。 如果设备安装了指定应用程序，则根据部署的条件性访问策略，它们将被标记为“不符合”且不可再访问公司资源。 有关详细信息，请参阅[条件性访问设备符合性策略改进](/sccm/core/get-started/capabilities-in-technical-preview-1702#conditional-access-device-compliance-policy-improvements)。
+  现可在符合性策略中创建面向 Android 和 iOS 应用的不符合应用规则。 如果设备安装了指定应用，根据部署的条件访问策略，它们被标记为“不符合”，且不可再访问公司资源。 有关详细信息，请参阅[条件性访问设备符合性策略改进](/sccm/core/get-started/capabilities-in-technical-preview-1702#conditional-access-device-compliance-policy-improvements)。
 
 - **PFX 证书创建和分发以及 S/MIME 支持**
 
@@ -287,8 +295,14 @@ Configuration Manager (Current Branch) 1702 版本中还包括以下其他混合
 
 ## <a name="notices"></a>通知
 
-### <a name="system-center-2012-configuration-sp1-and-system-center-2012-r2-configuration-manager-rtm-support-for-hybrid-mobile-device-management-ending-on-april-10-2017"></a>System Center 2012 Configuration SP1 和 System Center 2012 R2 Configuration Manager (RTM)：对混合移动设备管理的支持将于 2017 年 4 月 10 日终止
+### <a name="end-of-support-for-android-43-and-lower"></a>不再支持 Android 4.3 及更低版本
+<!---1171127--->
+2017 年 7 月 6 日
 
+托管应用和 Android 公司门户应用将要求使用 Android 4.4 及更高版本，才能访问公司资源。 在 10 月初之前未更新的设备将无法再访问公司门户或这些应用。 截至 12 月，所有注册的设备都将在 12 月内被强制停用，进而将无法再访问公司资源。 如果在未启用 MDM 的情况下使用应用保护策略，应用将无法接收更新，应用体验质量将随着时间的推移而逐渐降低。
+
+
+### <a name="system-center-2012-configuration-sp1-and-system-center-2012-r2-configuration-manager-rtm-support-for-hybrid-mobile-device-management-ending-on-april-10-2017"></a>System Center 2012 Configuration SP1 和 System Center 2012 R2 Configuration Manager (RTM)：对混合移动设备管理的支持将于 2017 年 4 月 10 日终止
 2017 年 1 月 11 日
 
 对 System Center 2012 Configuration Manager SP1 和 System Center 2012 R2 Configuration Manager RTM 的支持已于 2016 年 7 月 12 日终止。 随后，对与混合 MDM 的 Microsoft Intune 服务关联的这些版本的支持将于 2017 年 4 月 10 日终止。 在此之后，混合 MDM 将停止运行这些版本。 托管设备实质上将成为非托管设备，因为 Intune 连接器将无法再连接到 Intune 服务。 在升级发生前，Configuration Manager 数据（如策略和应用程序）将不会向上流入 Intune，托管设备数据将不会向下流入 Configuration Manager。
