@@ -16,7 +16,6 @@ ms.openlocfilehash: b80fec937b50dca3ab995be281c44c3145300f9f
 ms.contentlocale: zh-cn
 ms.lasthandoff: 06/03/2017
 
-
 ---
 # <a name="change-your-mdm-authority"></a>更改 MDM 机构
 从 Configuration Manager 1610 版本和 Microsoft Intune 1705 版本开始，可以更改你的 MDM 机构而无需联系 Microsoft 支持部门，也无需取消注册并重新注册现有的托管设备。
@@ -39,7 +38,8 @@ ms.lasthandoff: 06/03/2017
 - 在 Configuration Manager 控制台中，删除所有设备注册管理器角色。 转到“管理” > “云服务” > “Microsoft Intune 订阅”，选择“Microsoft Intune 订阅”，依次单击“属性”“设备注册管理器”选项卡，然后删除所有设备注册管理器角色。
 - 在 Configuration Manager 控制台中，删除现有设备类别。 转到“资产和符合性” > “概述” > “设备集合”，选择“管理设备类别”，然后删除现有设备类别。
 - 更改 MDM 机构期间应不会对最终用户产生明显影响。 但是，你可能需要将此更改传递给用户，以确保其设备已开机，并在更改后立即与服务连接。 这将确保尽可能多的设备可尽快通过新机构连接并注册服务。
-- 在更改 MDM 机构之前，如果你使用 Configuration Manager（混合租户）管理 iOS 设备，则必须确保已续订先前在 Configuration Manager 中使用的同一 Apple Push Notification 服务 (APN) 证书，并用于再次在 Intune (Standalone) 中设置租户。    
+- 在更改 MDM 机构之前，如果你使用 Configuration Manager（混合租户）管理 iOS 设备，则必须确保已续订先前在 Configuration Manager 中使用的同一 Apple Push Notification 服务 (APN) 证书，并用于再次在 Intune (Standalone) 中设置租户。
+
     > [!IMPORTANT]  
     > 如果为 Intune (Standalone) 使用不同的 APN 证书，则将取消注册所有以前注册的 iOS 设备，你将不得不通过该过程重新注册它们。 在更改 MDM 机构之前，请确保你准确了解使用何种 APN 证书来管理 Configuration Manager 中的 iOS 设备。 找到 Apple Push Certificates 门户 (https://identity.apple.com) 中列出的相同证书，并确保已标识其 Apple ID 用于创建原始 APN 证书的用户，并且可作为新 MDM 机构更改的一部分续订相同的 APN 证书。  
 
@@ -52,15 +52,15 @@ ms.lasthandoff: 06/03/2017
 - 下一次设备连接到服务时，它将同步并从新的 MDM 机构接收新的设置。
 
 #### <a name="to-change-the-mdm-authority-to-intune-standalone"></a>将 MDM 机构更改为 Intune (Standalone) 的具体步骤
-1.    在 Configuration Manager 控制台中，转到“管理”&gt;“概述”&gt;“云服务”&gt;“Microsoft Intune订阅”，然后删除现有的 Intune 订阅。
-2.    选择“将 MDM 机构更改为 Microsoft Intune”，然后单击“下一步”。
+1.  在 Configuration Manager 控制台中，转到“管理”&gt;“概述”&gt;“云服务”&gt;“Microsoft Intune订阅”，然后删除现有的 Intune 订阅。
+2.  选择“将 MDM 机构更改为 Microsoft Intune”，然后单击“下一步”。
 
     ![下载 APN 证书请求](/sccm/mdm/deploy-use/media/mdm-change-delete-subscription.png)
-3.    登录到你在 Configuration Manager 中设置 MDM 机构时最初使用的 Intune 租户。
-4.    单击“下一步”并完成向导。
-5.    MDM 机构现已重置。 Intune 订阅在 Configuration Manager 控制台的 Microsoft Intune 订阅节点中不再显示。
-6.    使用你之前使用的同一 Intune 租户登录 [Microsoft Intune 管理控制台](http://manage.microsoft.com)。
-7.    确认 MDM 机构已重置，然后将 MDM 机构设置为 Microsoft Intune。 更改 MDM 机构后，你应该会看到它反映在控制台中。 有关详细信息，请参阅[如何设置 MDM 机构](https://docs.microsoft.com/en-us/intune/deploy-use/prerequisites-for-enrollment#step-2-set-mdm-authority)。
+3.  登录到你在 Configuration Manager 中设置 MDM 机构时最初使用的 Intune 租户。
+4.  单击“下一步”并完成向导。
+5.  MDM 机构现已重置。 Intune 订阅在 Configuration Manager 控制台的 Microsoft Intune 订阅节点中不再显示。
+6.  使用你之前使用的同一 Intune 租户登录 [Microsoft Intune 管理控制台](http://manage.microsoft.com)。
+7.  确认 MDM 机构已重置，然后将 MDM 机构设置为 Microsoft Intune。 更改 MDM 机构后，你应该会看到它反映在控制台中。 有关详细信息，请参阅[如何设置 MDM 机构](https://docs.microsoft.com/en-us/intune/deploy-use/prerequisites-for-enrollment#step-2-set-mdm-authority)。
 <!-- [Azure portal](https://docs.microsoft.com/en-us/intune-azure/enroll-devices/set-mdm-authority) -->
 
 
@@ -68,7 +68,7 @@ ms.lasthandoff: 06/03/2017
 当你有 iOS 设备时，必须在 Intune 中配置 APN 证书。
 
 #### <a name="to-configure-the-apns-certificate"></a>配置 APN 证书的具体步骤
-1.    下载 APN 证书请求。
+1.  下载 APN 证书请求。
     <!--The process is different depending on how you connect to Intune:
     **Azure portal**   
     In the [Azure portal](https://azure.portal.com), choose **More Services** &gt; **Monitoring + Management** &gt; **Intune**. On the **Intune** blade, choose **Device enrollment** &gt; **Apple Enrollment** &gt; **Apple MDM Push Certificate**, and then select **Download your CSR** to download and save the .csr file locally.   
@@ -80,22 +80,22 @@ ms.lasthandoff: 06/03/2017
 
     ![下载 APN 证书请求](/sccm/mdm/deploy-use/media/mdm-change-download-apns-certificate.png)
 
-2.    转到 [Apple Push Certificates 门户](http://go.microsoft.com/fwlink/?LinkId=269844)，并使用同一 Apple ID 登录，该 Apple ID 之前用于创建和续订在 Configuration Manager（混合）中使用的 APN 证书。
+2.  转到 [Apple Push Certificates 门户](http://go.microsoft.com/fwlink/?LinkId=269844)，并使用同一 Apple ID 登录，该 Apple ID 之前用于创建和续订在 Configuration Manager（混合）中使用的 APN 证书。
 
     ![Apple Push Certificates 门户登录页](/sccm/mdm/deploy-use/media/mdm-change-apns-portal.png)
 
-3.    选择在 Configuration Manager（混合）中使用的 APN 证书，然后单击“续订”。   
+3.  选择在 Configuration Manager（混合）中使用的 APN 证书，然后单击“续订”。   
 
     ![续订 APN 对话框](/sccm/mdm/deploy-use/media/mdm-change-renew-apns.png)
 
-4.    选择下载到本地的 APN 证书签名请求 (.csr) 文件，然后单击“上传”。
+4.  选择下载到本地的 APN 证书签名请求 (.csr) 文件，然后单击“上传”。
 
     ![Apple Push Certificates 门户登录页](/sccm/mdm/deploy-use/media/mdm-change-renew-apns-upload.png)  
-5.    选择同一 APN，然后单击“下载”。 下载 APN (.pem) 证书并在本地保存文件。  
+5.  选择同一 APN，然后单击“下载”。 下载 APN (.pem) 证书并在本地保存文件。  
 
     ![Apple Push Certificates 门户登录页](/sccm/mdm/deploy-use/media/mdm-change-renew-apns-download.png)
 
-6.    将续订的 APN 证书上传到与之前使用同一 Apple ID 的 Intune 租户。
+6.  将续订的 APN 证书上传到与之前使用同一 Apple ID 的 Intune 租户。
 <!--The process is different depending on how to connect to Intune:  
     **Azure portal**   
     In the [Azure portal](https://azure.portal.com), choose **More Services** &gt; **Monitoring + Management** &gt; **Intune**. On the **Intune** blade, choose **Device enrollment** &gt; **Apple Enrollment**  &gt; **Apple MDM Push Certificate**, enter your Apple ID in step 3, select the certificate (.pem) file in step 4, and then click **Upload**.     
@@ -171,13 +171,13 @@ ms.lasthandoff: 06/03/2017
 - 下一次设备连接到服务时，它将同步并从新的 MDM 机构接收新的设置。
 
 #### <a name="to-change-the-mdm-authority-to-configuration-manager"></a>将 MDM 机构更改为 Configuration Manager 的具体步骤
-1.    在 Configuration Manager 控制台中，转到“管理”&gt;“概述”&gt;“云服务”&gt;“Microsoft Intune订阅”，然后选择添加 Intune 订阅。
-2.    登录到你在 Intune 中设置 MDM 机构时最初使用的 Intune 租户，然后单击“下一步”。
-3.    选择“将我的 MDM 机构更改为 Configuration Manager”，然后单击“下一步”。
+1.  在 Configuration Manager 控制台中，转到“管理”&gt;“概述”&gt;“云服务”&gt;“Microsoft Intune订阅”，然后选择添加 Intune 订阅。
+2.  登录到你在 Intune 中设置 MDM 机构时最初使用的 Intune 租户，然后单击“下一步”。
+3.  选择“将我的 MDM 机构更改为 Configuration Manager”，然后单击“下一步”。
 4.  选择将包含所有用户的用户集合，这些用户将继续由新的混合 MDM 机构托管。
 5.  单击“下一步”并完成向导。  
-5.    MDM 现已机构更改为 Configuration Manager。
-6.    使用同一 Intune 租户登录 [Microsoft Intune 管理控制台](http://manage.microsoft.com)，并确认 MDM 机构已更改为“设置为 Configuration Manager”。
+5.  MDM 现已机构更改为 Configuration Manager。
+6.  使用同一 Intune 租户登录 [Microsoft Intune 管理控制台](http://manage.microsoft.com)，并确认 MDM 机构已更改为“设置为 Configuration Manager”。
 
 
 ### <a name="enable-ios-enrollment"></a>启用 iOS 注册
@@ -194,22 +194,22 @@ ms.lasthandoff: 06/03/2017
     > [!IMPORTANT]
     > 你必须下载新的证书签名请求。 请勿使用现有文件，否则它将失败。  
 
-2.    转到 [Apple Push Certificates 门户](http://go.microsoft.com/fwlink/?LinkId=269844)，并使用同一 Apple ID 登录，该 Apple ID 之前用于创建和续订在 Intune standalone 中使用的 APN 证书。
+2.  转到 [Apple Push Certificates 门户](http://go.microsoft.com/fwlink/?LinkId=269844)，并使用同一 Apple ID 登录，该 Apple ID 之前用于创建和续订在 Intune standalone 中使用的 APN 证书。
 
     ![Apple Push Certificates 门户登录页](/sccm/mdm/deploy-use/media/mdm-change-apns-portal.png)
 
-3.    选择在 Intune standalone 中使用的 APN 证书，然后单击“续订”。   
+3.  选择在 Intune standalone 中使用的 APN 证书，然后单击“续订”。   
 
     ![续订 APN 对话框](/sccm/mdm/deploy-use/media/mdm-change-renew-apns.png)
 
-4.    选择下载到本地的 APN 证书签名请求 (.csr) 文件，然后单击“上传”。
+4.  选择下载到本地的 APN 证书签名请求 (.csr) 文件，然后单击“上传”。
 
     ![Apple Push Certificates 门户登录页](/sccm/mdm/deploy-use/media/mdm-change-renew-apns-upload.png)  
-5.    选择同一 APN，然后单击“下载”。 下载 APN (.pem) 证书并在本地保存文件。  
+5.  选择同一 APN，然后单击“下载”。 下载 APN (.pem) 证书并在本地保存文件。  
 
     ![Apple Push Certificates 门户登录页](/sccm/mdm/deploy-use/media/mdm-change-renew-apns-download.png)
 
-6.    将续订的 APN 证书上传到与之前使用同一 Apple ID 的混合租户。
+6.  将续订的 APN 证书上传到与之前使用同一 Apple ID 的混合租户。
 
     1.  在 Configuration Manager 控制台中，转到“管理”&gt;“云服务”&gt;“Microsoft Intune订阅”，然后选择“配置平台”&gt;“iOS”。  
     2.  在“Microsoft Intune 订阅属性”对话框中，选择“APN 证书”选项卡，并单击选择“启用 iOS 和 Mac OS X (MDM)注册” 复选框。  
