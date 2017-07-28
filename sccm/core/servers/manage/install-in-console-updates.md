@@ -184,7 +184,7 @@ System Center Configuration Manager 与 Microsoft 云服务同步，以获取更
 
     -   **安装**    
 
-    -   安装后（[](#post-installation-tasks)安装后任务适用于 1610 及之后的版本。）  
+    -   **安装后** （[安装后任务](#post-installation-tasks) 适用于 1610 及之后的版本。）  
 
 -   可以查看 **&lt;ConfigMgr_Installation_Directory>\Logs** 中的 **CMUpdate.log** 文件  
 

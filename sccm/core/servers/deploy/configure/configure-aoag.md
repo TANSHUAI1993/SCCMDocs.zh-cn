@@ -58,7 +58,7 @@ ms.lasthandoff: 06/01/2017
 
     有关如何完成此步骤的信息，请参阅 SQL Server 文档中的[创建完整数据库备份](/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server)和[使用 SSMS 还原数据库备份](/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)。
 
-4.    在将托管组的初始主要副本的服务器上，使用“新建可用性组向导”[](/sql/database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio)创建可用性组。 在向导中：
+4.    在将托管组的初始主要副本的服务器上，使用 [新建可用性组向导](/sql/database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio) 创建可用性组。 在向导中：
       -    在“选择数据库”页面上，为你的 Configuration Manager 站点选择数据库。  
 
       -    在“添加副本”页面，配置以下内容：
@@ -78,7 +78,7 @@ ms.lasthandoff: 06/01/2017
 6.    所有副本都满足要求后，可用性组即可与 Configuration Manager 一起使用。
 
 ## <a name="configure-a-site-to-use-the-database-in-the-availability-group"></a>将站点配置为使用可用性组中的数据库
-创建和配置可用性组[](#create-and-configure-an-availability-group)之后，使用 Configuration Manager 站点维护，将站点配置为使用由可用性组托管的数据库。
+[创建和配置可用性组](#create-and-configure-an-availability-group) 之后，使用 Configuration Manager 站点维护，将站点配置为使用由可用性组托管的数据库。
 
 不支持使用它在可用性组中的数据库安装新站点。 例如，如果你使用基线 1702 媒体，则必须安装使用单个 SQL Server 实例的站点。 安装站点后，即可将站点数据库移到可用性组中。
 
