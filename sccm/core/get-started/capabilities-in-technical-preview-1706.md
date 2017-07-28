@@ -132,7 +132,7 @@ ms.lasthandoff: 07/07/2017
 -   851967 – 故障转移失败
 
 ### <a name="add-a-site-server-in-passive-mode"></a>添加被动模式站点服务器
-1.  在控制台中，转到“管理” > “站点配置” > “站点”，并启动“添加站点系统角色向导”[](/sccm/core/servers/deploy/configure/install-site-system-roles)。 还可以使用“创建站点系统服务器向导”。
+1.  在控制台中，转到“管理” > “站点配置” > “站点”，并启动[“添加站点系统角色向导”](/sccm/core/servers/deploy/configure/install-site-system-roles)。 还可以使用“创建站点系统服务器向导”。
 
 2.  在“常规”页上，指定将承载被动模式站点服务器的服务器。 在被动模式下安装站点服务器之前，你指定的服务器不能承载任何站点系统角色。
 
