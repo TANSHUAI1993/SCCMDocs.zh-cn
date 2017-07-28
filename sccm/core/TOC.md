@@ -99,6 +99,7 @@
 ###  [设置实验室](get-started/set-up-your-lab.md)
 
 ##   [技术预览](get-started/technical-preview.md)
+###  [1707 中的功能](get-started/capabilities-in-technical-preview-1707.md)
 ###  [1706 中的功能](get-started/capabilities-in-technical-preview-1706.md)
 ###  [1705 中的功能](get-started/capabilities-in-technical-preview-1705.md)
 ###  [1704 中的功能](get-started/capabilities-in-technical-preview-1704.md)
