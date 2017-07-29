@@ -21,11 +21,11 @@ ms.openlocfilehash: 640cdc67f301a81a45bf27f95eb03cbc8754a9aa
 ms.contentlocale: zh-cn
 ms.lasthandoff: 05/17/2017
 
-
 ---
 # <a name="boundary-groups-for-system-center-configuration-manager-version-1511-1602-and-1606"></a>System Center Configuration Manager 1511、1602 和 1606 版的边界组
 
 *适用范围：System Center Configuration Manager (Current Branch)*
+<!-- This topic drops from TOC with the release of version 1706 -->
 
 本主题中的信息特定于通过 1511、1602 和 1606 版 System Center Configuration Manager 使用边界组。
 如果你使用的是版本 1610 或更高版本，请参阅[配置边界组](/sccm/core/servers/deploy/configure/boundary-groups)，以了解有关使用重新设计的边界组的信息。  

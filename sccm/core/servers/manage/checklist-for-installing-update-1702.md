@@ -2,7 +2,7 @@
 title: "1702 的清单 | System Center Configuration Manager"
 description: "了解更新到 System Center Configuration Manager 版本 1702 之前需要执行的操作。"
 ms.custom: na
-ms.date: 6/6/2017
+ms.date: 06/06/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
