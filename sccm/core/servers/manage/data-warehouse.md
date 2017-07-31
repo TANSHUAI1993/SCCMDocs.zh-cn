@@ -15,12 +15,11 @@ caps.latest.revision:
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dc221ddf547c43ab1f25ff83c3c9bb603297ece6
-ms.openlocfilehash: f11a53bbc85b40077b3909568db5ae5552b0456c
+ms.translationtype: HT
+ms.sourcegitcommit: ef42d1483053e9a6c502f4ebcae5a231aa6ba727
+ms.openlocfilehash: c421c3495f56503d5cbda7b1a5ab5350a168912d
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/01/2017
-
+ms.lasthandoff: 07/26/2017
 
 ---
 #  <a name="the-data-warehouse-service-point-for-system-center-configuration-manager"></a>System Center Configuration Manager 的数据仓库服务点
@@ -52,7 +51,7 @@ ms.lasthandoff: 06/01/2017
   - 在将托管数据仓库数据库的计算机上是**管理员**。
   - 对数据仓库数据库具有 **DB_owner** 权限。
   - 顶层站点站点数据库的 DB_reader 和 execute 权限。
--    SQL Server 2012 或更高版本的默认或命名的实例上支持数据仓库数据库。 版本必须为企业版或数据中心版。
+-   SQL Server 2012 或更高版本的默认或命名的实例上支持数据仓库数据库。 版本必须为企业版或数据中心版。
   - SQL Server AlwaysOn 可用性组：不支持此配置。
   - SQL Server 群集：不支持 SQL Server 故障转移群集。 这是因为数据仓库数据库尚未在 SQL Server 故障转移群集上进行深入测试。
   - 当数据仓库数据库是站点服务器数据库的远程数据库时，必须具有单独的 SQL Server（用于托管数据库）许可证。
@@ -78,7 +77,7 @@ ms.lasthandoff: 06/01/2017
 “系统角色选择”页面：  
 
 “常规”页：
--     **Configuration Manager 数据仓库数据库连接设置**：
+-   **Configuration Manager 数据仓库数据库连接设置**：
  - **SQL Server 完全限定的域名**：  
  指定托管数据仓库服务点和数据库的服务器的完全限定的域名 (FQDN)。
  - **SQL Server 实例名称(如果适用)**：   
@@ -103,15 +102,15 @@ ms.lasthandoff: 06/01/2017
  - **应用程序部署 -历史记录**：   
  查看有关特定应用程序和计算机的应用程序部署的详细信息。
  - **Endpoint Protection 和软件更新符合性 - 历史记录**：查看缺少软件更新的计算机。  
- - **常规硬件清单 - 历史记录**：      
+ - **常规硬件清单 - 历史记录**：   
  查看特定计算机的所有硬件清单。
- - **常规软件清单 - 历史记录**：      
+ - **常规软件清单 - 历史记录**：   
  查看特定计算机的所有软件清单。
- - **基础结构运行状况概述 - 历史记录**：     
+ - **基础结构运行状况概述 - 历史记录**：  
  显示 Configuration Manager 基础结构运行状况概述
- - **检测到的恶意软件列表 - 历史记录**：     
+ - **检测到的恶意软件列表 - 历史记录**：    
  查看组织中检测到的恶意软件。
- - **软件分发摘要 - 历史记录**：     
+ - **软件分发摘要 - 历史记录**：   
  特定播发和计算机的软件分发摘要。
 
 
@@ -126,13 +125,13 @@ ms.lasthandoff: 06/01/2017
 ## <a name="move-the-data-warehouse-database"></a>迁移数据仓库数据库
 使用以下步骤将数据仓库数据库移到新的 SQL Server：
 
-1.    使用 SQL Server Management Studio 备份数据仓库数据库，然后将该数据库还原到要托管此数据仓库的新计算机上的 SQL Server。   
+1.  使用 SQL Server Management Studio 备份数据仓库数据库，然后将该数据库还原到要托管此数据仓库的新计算机上的 SQL Server。   
 > [!NOTE]     
 > 将数据库还原到新服务器后，请确保新数据仓库数据库与原始数据仓库数据库上的数据库访问权限相同。  
 
-2.    使用 Configuration Manager 控制台从当前服务器删除数据仓库服务点站点系统角色。
-3.    重新安装数据仓库服务点并指定托管已还原数据仓库数据库的新 SQL Server 和实例的名称。
-4.    安装站点系统角色后，迁移即完成。
+2.  使用 Configuration Manager 控制台从当前服务器删除数据仓库服务点站点系统角色。
+3.  重新安装数据仓库服务点并指定托管已还原数据仓库数据库的新 SQL Server 和实例的名称。
+4.  安装站点系统角色后，迁移即完成。
 
 ## <a name="troubleshooting-data-warehouse-issues"></a>解决数据仓库问题
 **日志文件**：  
@@ -167,7 +166,7 @@ ms.lasthandoff: 06/01/2017
     1. 打开 IIS，单击“服务器证书”，右键单击“创建自签名证书”，然后指定证书名称的“友好名称”为**数据仓库 SQL Server 标识证书**。 将证书存储选为“个人”。
     2. 打开“SQL Server 配置管理器”，在“SQL Server 网络置配”下右键单击选择“MSSQLSERVER 协议”下的“属性”。 然后，在“证书”选项卡上，选择“数据仓库 SQL Server 标识证书”作为证书，然后保存所做更改。  
     3. 打开“SQL Server 配置管理器”，在“SQL Server 服务”下，重启“SQL Server 服务” 和“报告服务”。
-    4.    打开 Microsoft 管理控制台 (MMC)，然后添加**证书**的管理单元，选择以管理本地计算机的**计算机帐户**的证书。 然后，在 MMC 中，展开“个人”文件夹 >“证书”，然后将“数据仓库 SQL Server 标识证书”导出为 **DER 编码的二进制 X.509 (.CER)** 文件。    
+    4.  打开 Microsoft 管理控制台 (MMC)，然后添加**证书**的管理单元，选择以管理本地计算机的**计算机帐户**的证书。 然后，在 MMC 中，展开“个人”文件夹 >“证书”，然后将“数据仓库 SQL Server 标识证书”导出为 **DER 编码的二进制 X.509 (.CER)** 文件。    
   2.    在托管 SQL Server Reporting Services 的计算机上，打开 MMC，然后添加**证书**的管理单元，然后选择以管理**计算机帐户**的证书。 在**受信任的根证书颁发机构**文件夹下，导入**数据仓库 SQL Server 标识证书**。
 
 
@@ -178,7 +177,7 @@ ms.lasthandoff: 06/01/2017
 
 | 步骤   | 详细信息  |
 |:------:|-----------|  
-| **1**  |     站点服务器传输和存储站点数据库中的数据。  |  
+| **1**  |  站点服务器传输和存储站点数据库中的数据。  |  
 | **2**  |      根据其计划和配置，数据仓库服务点可从站点数据库获取数据。  |  
 | **3**  |  数据仓库服务点可传输和存储数据仓库数据库中已同步数据的副本。 |  
 **报表**

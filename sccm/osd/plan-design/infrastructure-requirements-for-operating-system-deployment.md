@@ -12,15 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 1dc74219-7ff5-4e3b-b4f6-5aad663bb75b
 caps.latest.revision: 24
-author: Dougeby
-ms.author: dougeby
+author: mattbriggs
+ms.author: mabrigg
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 065b1fcb25d7c7845b6f26e757b36e7fb97ce013
-ms.openlocfilehash: ef4536578456c13de5afaa5cd1977d2e6b4b6bd1
+ms.translationtype: HT
+ms.sourcegitcommit: 1f57c63ceeb13c7f7d760d7ecfb48df749da6770
+ms.openlocfilehash: 167e639cdb9995fd743787cc9fbf364ec70f6ed9
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/10/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="infrastructure-requirements-for-operating-system-deployment-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的操作系统部署的基础架构要求
@@ -41,7 +40,9 @@ System Center 2012 Configuration Manager 中的操作系统部署具有外部依
 
 -   Windows 部署工具  
 
--   Windows 预安装环境 (Windows PE)  
+-   Windows 预安装环境 (Windows PE)
+
+有关可对不同版本 Configuration Manager 使用的 Windows 10 ADK 版本列表，请参阅[对作为客户端的 Windows 10 的支持](https://docs.microsoft.com/en-us/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk)。
 
  <sup>1</sup> SMS 提供程序站点系统服务器上不需要 USMT。  
 
@@ -171,7 +172,7 @@ System Center 2012 Configuration Manager 中的操作系统部署具有外部依
  必须在配置为支持 PXE 或多播的分发点所在的服务器上安装 Windows 部署服务 (WDS)。 WDS 包括在服务器的操作系统中。 对于 PXE 部署，WDS 是执行 PXE 启动的服务。 如果为 PXE 安装和启用了分发点，则 Configuration Manager 会将一个使用 WDS PXE 启动功能的提供程序安装到 WDS 中。  
 
 > [!NOTE]  
->  如果服务器需要重启，则 WDS 的安装可能会失败。  
+>  如果服务器需要重启，则 WDS 的安装可能会失败。 
 
  必须考虑的其他 WDS 配置包括下列各项：  
 

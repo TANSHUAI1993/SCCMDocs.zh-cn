@@ -16,12 +16,11 @@ caps.handback.revision: 0
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0ec241d07f51b80b84d65676ef1207b31a9a9983
-ms.openlocfilehash: e23acf743d8f73afd213c44c3728d1b66d7e558f
+ms.translationtype: HT
+ms.sourcegitcommit: ef42d1483053e9a6c502f4ebcae5a231aa6ba727
+ms.openlocfilehash: 98fa323cb94013d875e2cea41b80fff8cc75b6b2
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/28/2017
-
+ms.lasthandoff: 07/26/2017
 
 ---
 # <a name="removed-and-deprecated-features-for-system-center-configuration-manager"></a>System Center Configuration Manager 的已删除和已弃用的功能

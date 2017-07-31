@@ -2,7 +2,7 @@
 title: "大小和扩展 | Microsoft Docs"
 description: "确定需要用来支持 System Center Configuration Manager 环境中设备的站点系统角色和站点的数量。"
 ms.custom: na
-ms.date: 12/30/2016
+ms.date: 07/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.latest.revision: 4
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f9c43e26758d5171a6ef56e827b4b054ebc8a5e5
-ms.openlocfilehash: c7ad33339e65e6e00e88f98d6e13baceb98dae77
+ms.translationtype: HT
+ms.sourcegitcommit: 5945abb49fe06c59355805aa94b04d0d445ecbc3
+ms.openlocfilehash: f539e2d282b56e56a9c58c773788325b27ea6b37
 ms.contentlocale: zh-cn
-ms.lasthandoff: 12/31/2016
+ms.lasthandoff: 07/24/2017
 
 ---
 # <a name="size-and-scale-numbers-for-system-center-configuration-manager"></a>System Center Configuration Manager 的大小和扩展数量
@@ -133,7 +133,7 @@ ms.lasthandoff: 12/31/2016
 ###  <a name="bkmk_cas"></a>具有管理中心站点的层次结构  
 管理中心站点最多可支持包括对下列三组列出的设备数量总数：  
 
--   700,000 台台式机（运行 Windows、Linux 和 UNIX 的计算机）  
+-   700,000 台台式机（运行 Windows、Linux 和 UNIX 的计算机）。 另请参阅对[嵌入式设备](#embedded)的支持。
 
 -   运行 Mac 和 Windows CE 7.0 的 25,000 台设备  
 
@@ -152,7 +152,7 @@ ms.lasthandoff: 12/31/2016
 ###  <a name="bkmk_chipri"></a>子主站点  
 包含管理中心站点的层次结构中的每个子主站点支持：  
 
--   总共 150,000 台客户端和设备，不局限于特定组或类型，只要不超过层次结构所支持的数量。  
+-   总共 150,000 台客户端和设备，不局限于特定组或类型，只要不超过层次结构所支持的数量。 另请参阅对[嵌入式设备](#embedded)的支持。
 
 例如，一个支持 25,000 台（因为这是一个层次结构的上限数量）运行 Mac 和 Windows CE 7.0 的计算机的主站点，还可支持 125,000 个台式计算机。 这就使支持的设备总数达到子主站点支持的上限数量 - 150,000。
 
@@ -161,7 +161,7 @@ ms.lasthandoff: 12/31/2016
 
 -   总数不超过 175,000 的客户端和设备  
 
-    -   150,000 台台式机（运行 Windows、Linux 和 UNIX 的计算机）  
+    -   150,000 台台式机（运行 Windows、Linux 和 UNIX 的计算机）。 另请参阅对[嵌入式设备](#embedded)的支持。
 
     -   运行 Mac 和 Windows CE 7.0 的 25,000 台设备
 
@@ -171,7 +171,11 @@ ms.lasthandoff: 12/31/2016
 
         -   150,000 台基于云的设备  
 
+
 例如，支持 150,000 台台式机和 10,000 个 Mac 或 Windows CE 7.0 的独立主站点仅可额外支持 15,000 台设备。 这些设备可以是基于云的，也可以是使用本地 MDM 管理的。  
+
+### <a name="embedded"></a>主站点和 Windows Embedded 设备
+主站点支持启用了基于文件的写入筛选器 (FBWF) 的 Windows Embedded 设备。 如果嵌入式设备没有启用写入筛选器，则主站点支持大量嵌入式设备，数量最多达该站点允许的设备数。 在主站点支持的设备总数中，其中最多 10,000 台设备可为 Windows Embedded 设备，前提是当这些设备是为[规划 Windows Embedded 设备的客户端部署](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices)的重要说明中列出的异常而配置时。 主站点仅支持 3,000 台启用了 EWF 且不是为异常配置的 Windows Embedded 设备。
 
 ###  <a name="bkmk_sec"></a>辅助站点  
 辅助站点支持：  

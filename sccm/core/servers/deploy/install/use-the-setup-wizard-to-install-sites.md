@@ -1,7 +1,7 @@
 ---
 title: "安装向导 | Microsoft Docs"
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 7/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ caps.latest.revision: 3
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f809c9327db9f298168674add2d09820fdecd1b8
-ms.openlocfilehash: 14b4172ad713a3981b8a5abe182405e271d78c26
+ms.translationtype: HT
+ms.sourcegitcommit: 5945abb49fe06c59355805aa94b04d0d445ecbc3
+ms.openlocfilehash: 678f1b35fe6f7649dacb766f7c671f4ec8ea1435
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 07/24/2017
 
 ---
 # <a name="use-the-setup-wizard-to-install-system-center-configuration-manager-sites"></a>使用安装向导安装 System Center Configuration Manager 站点
@@ -140,7 +140,9 @@ ms.lasthandoff: 05/17/2017
 
 12. 在“数据库信息”页面中，指定下列信息：  
 
-    -   **SQL Server 名称 (FQDN)：** 默认情况下，此项设置为站点服务器计算机。  
+    -   **SQL Server 名称 (FQDN)：** 默认情况下，此项设置为站点服务器计算机。
+
+     如果使用自定义端口，请将该端口添加到 SQL Server 的 FQDN。 若要执行此操作，请在后续服务器的 FQDN 后附加逗号，然后附加端口号。   例如，对于服务器 SQLServer1.fabrikam.com，使用以下语句指定端口 1551：SQLServer1.fabrikam.com,1551
 
     -   **实例名称：**此项默认为空。 它在站点服务器计算机上使用 SQL 的默认实例。  
 

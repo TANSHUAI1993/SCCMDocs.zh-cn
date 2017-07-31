@@ -2,7 +2,7 @@
 title: "站点的先决条件 | Microsoft Docs"
 description: "了解安装不同类型的 System Center Configuration Manager 站点所需的先决条件。"
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 7/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.latest.revision: 5
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: ff89d4aea6be871e64e0a788f054ba4cadb3e51d
+ms.translationtype: HT
+ms.sourcegitcommit: 5945abb49fe06c59355805aa94b04d0d445ecbc3
+ms.openlocfilehash: d46a8b66ace45d25da9d86f2e91b19ae1d6875ab
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 07/24/2017
 
 ---
 # <a name="prerequisites-for-installing-system-center-configuration-manager-sites"></a>安装 System Center Configuration Manager 站点的先决条件
@@ -100,6 +100,19 @@ ms.lasthandoff: 05/17/2017
 -   **在独立主站点和要安装管理中心站点的计算机之间，SQL Server Service Broker (SSB) 的端口必须打开：**  
 
      若要在管理中心站点和主站点之间成功复制数据，Configuration Manager 需要在两个站点之间打开端口以供 SSB 使用。 在安装管理中心站点并扩展独立主站点时，先决条件检查不会验证为 SSB 指定的端口是否在主站点上打开。  
+
+**配置 Azure 服务后的已知问题：**  
+将以下任一 Azure 服务与 Configuration Manager 配合使用，并计划扩展站点时，扩展站点后必须删除指向该服务的连接并重新创建连接。
+
+服务：  
+-       [Operations Manager Suite](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite)   (OMS)
+-       [升级就绪情况](/sccm/core/clients/manage/upgrade/upgrade-analytics)
+-       [适用于企业的 Windows 应用商店](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)
+
+请执行以下步骤，解决此问题：
+ 1.    在 Configuration Manager 控制台中，从 Azure 服务节点删除 Azure 服务。
+ 2.    在 Azure 门户中，从 Azure Active Directory 租户节点删除与该服务关联的租户。  这还会删除与该服务关联的 Azure AD Web 应用。  
+ 3.   重新配置与 Azure 服务的连接，用于 Configuration Manager。
 
 
 ## <a name="bkmk_secondary"></a>辅助站点

@@ -2,7 +2,7 @@
 title: "管理来自适用于企业的 Windows 应用商店的应用 | Microsoft Docs"
 description: "使用 System Center Configuration Manager 管理并部署来自适用于企业的 Windows 应用商店的应用"
 ms.custom: na
-ms.date: 3/29/2017
+ms.date: 7/25/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,16 +15,16 @@ caps.latest.revision: 11
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 6accec2d356861b273b25ba2b6338d9684a46ff6
-ms.openlocfilehash: f2d9da1c584f78e27e84b7f55e7ffe4dd052a27c
+ms.translationtype: HT
+ms.sourcegitcommit: ef42d1483053e9a6c502f4ebcae5a231aa6ba727
+ms.openlocfilehash: 93e767c9a115b30d68871baece670977165f55f4
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 07/26/2017
 
 ---
 
 # <a name="manage-apps-from-the-windows-store-for-business-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 管理来自适用于企业的 Windows 应用商店的应用
-[适用于企业的 Windows 应用商店](https://www.microsoft.com/business-store)中可以为组织查找并采购 Windows 应用（单个或批量）。 通过将应用商店连接到 Configuration Manager，可以同步已使用 Configuration Manager 购买的应用列表，在 Configuration Manager 控制台中查看这些应用，并像部署任何其他应用一样部署它们。
+[适用于企业的 Windows 应用商店](https://www.microsoft.com/business-store)中可以为组织查找并采购 Windows 应用（单个或批量）。 通过将应用商店连接到 Configuration Manager，可以使用 Configuration Manager 同步已购买的应用列表。 然后，可以在 Configuration Manager 控制台中查看这些应用，并按照部署任何其他应用的方式进行部署。
 
 
 ## <a name="online-and-offline-apps"></a>联机和脱机应用
@@ -32,7 +32,7 @@ ms.lasthandoff: 05/17/2017
 适用于企业的 Windows 应用商店支持两种类型的应用：
 
 - **联机** - 此许可类型要求用户和设备连接到应用商店，以获取应用及其许可。 Windows 10 设备必须已加入 Azure Active Directory 域。
-- **脱机** - 组织可以缓存应用和许可，以直接在本地网络部署，而无需连接应用商店或连接 Internet。
+- 脱机 - 允许缓存应用和许可，从而直接在本地网络部署，而无需连接应用商店或连接 Internet。
 
 [了解更多](https://technet.microsoft.com/itpro/windows/whats-new/windows-store-for-business-overview?f=255&MSPPError=-2147217396)适用于企业的 Windows 应用商店的相关信息。
 
@@ -55,7 +55,7 @@ Configuration Manager 支持在运行 Configuration Manager 客户端的 Windows
 若要使用 Configuration Manager 客户端将在线许可的应用部署到 Windows 10 电脑，这些应用必须在 Windows 10 创意者更新或更高版本上运行。
 
 ## <a name="deploying-online-apps-using-the-windows-store-for-business-with-pcs-that-run-the-configuration-manager-client"></a>在运行 Configuration Manager 客户端的 PC 上使用适用于企业的 Windows 应用商店部署在线应用程序
-在将适用于企业的 Windows 应用商店应用部署到运行完整 Configuration Manager 客户端的 PC 前，请考虑以下方面：
+在将适用于企业的 Windows 应用商店应用部署到运行完整 Configuration Manager 客户端的电脑前，请考虑以下方面：
 
 - 若要使用完整功能，PC 必须运行 Windows 10 创意者更新或更高版本。
 - PC 必须加入了 Azure Active Directory 工作区，并与将适用于企业的 Windows 应用商店注册为管理工具的 AAD 租户处于同一位置。
@@ -66,26 +66,26 @@ Configuration Manager 支持在运行 Configuration Manager 客户端的 Windows
 在运行创意者更新（与 Configuration Manager 客户端一起使用）之前的 Windows 10 版本的 PC 上，适用以下功能：
 
 
-- 通过用户安装应用程序强制执行安装时，或应用程序达到其安装截止日期或达到所需部署的后安装重新评估时：
-    - 应用程序将通过启动适用于企业的 Windows 应用商店应用以“强制执行”。 
-    - 在实际安装前，最终用户必须从应用商店完成安装
-    - Configuration Manager 控制台中的应用程序状态将报告失败，并显示错误“Windows 应用商店应用在客户端 PC 上打开并等待用户完成安装。”
+- 通过用户安装应用程序，或通过应用程序达到其安装截止时间，或通过对所需部署进行后安装重新评估，强制执行安装时：
+    - 会通过启动适用于企业的 Windows 应用商店应用，“强制执行”应用程序。 
+    - 在安装应用前，最终用户必须从应用商店完成安装
+    - Configuration Manager 控制台中的应用程序状态会报告失败，并显示错误“Windows 应用商店应用在客户端 PC 上打开并等待用户完成安装。”
 - 在下一步的应用程序评估周期中：
-    - 如果最终用户从应用商店安装了应用程序，则应用程序将报告状态**成功**。 
+    - 如果最终用户从应用商店安装了应用程序，则应用程序会报告状态成功。 
     - 如果最终用户未尝试从应用商店安装应用：
-        - 所需的部署将尝试启动应用商店并再次强制执行应用程序安装。
-        - 将不会重新强制执行可用的部署。
+        - 所需的部署会尝试启动应用商店并再次强制执行应用程序安装。
+        - 不会重新强制执行可用的部署。
 
 #### <a name="further-notes-for-pcs-running-earlier-versions-of-windows-10"></a>有关运行较早版本的 Windows 10 的 PC 的进一步说明：
 
-- 不能部署来自适用于企业的 Windows 应用商店的业务线应用程序
-- 部署来自应用商店的付费应用时，将要求最终用户登录到应用商店并自己购买应用。
-- 如果部署了禁用 Windows 应用商店的使用者版本的访问权限的组策略，则适用于企业的 Windows 应用商店的部署无法运行，即使已启用了适用于企业的 Windows 应用商店。
+- 不能部署来自适用于企业的 Windows 应用商店的业务线应用
+- 部署来自应用商店的付费应用时，最终用户必须登录到应用商店并自己购买应用。
+- 如果部署了禁用 Windows 应用商店的使用者版本的访问权限的组策略，则适用于企业的 Windows 应用商店的部署无法运行，即使已启用适用于企业的 Windows 应用商店。
 
 
 ## <a name="set-up-windows-store-for-business-synchronization"></a>设置适用于企业的 Windows 应用商店同步
 
-**在 Azure Active Directory 中，将 Configuration Manager 注册为“Web 应用程序和/或 Web API”管理工具。这会为你提供以后将需要的客户端 ID。**
+**在 Azure Active Directory 中，将 Configuration Manager 注册为“Web 应用程序和/或 Web API”管理工具。此操作会提供客户端 ID，稍后需要使用它。**
 1. 在 [https://manage.windowsazure.com](https://manage.windowsazure.com) 的 Active Directory 节点中，选择 Azure Active Directory，然后单击“应用程序” > “添加”。
 2.  单击“添加我的组织正在开发的应用程序”。
 3.  为应用程序输入名称，选择“Web 应用程序”和/或“Web API”，然后单击“下一步”箭头。
@@ -93,15 +93,15 @@ Configuration Manager 支持在运行 Configuration Manager 客户端的 Windows
 5.  完成向导。
 
 **在 Azure Active Directory 中，为已注册的管理工具创建客户端密钥**
-1.  突出显示刚创建的应用程序，然后单击“配置”。
-2.  在“密钥”下，从列表中选择持续时间，然后单击“保存”。 这创建新客户端密钥。 成功将适用于企业的 Windows 应用商店载入到 Configuration Manager 之前，请勿导航离开此页面。
+1.  突出显示已创建的应用程序，然后单击“配置”。
+2.  在“密钥”下，从列表中选择持续时间，然后单击“保存”。 此操作会创建一个新的客户端密钥。 成功将适用于企业的 Windows 应用商店载入到 Configuration Manager 之前，请勿导航离开此页面。
 
 **在适用于企业的 Windows 应用商店中，将 Configuration Manager 配置为存储管理工具**
 1.  打开 [https://businessstore.microsoft.com/zh-cn/managementtools](https://businessstore.microsoft.com/en-us/managementtools)，在出现提示时进行登录。
 2.  接受使用条款（如果需要）。
 3.  在“管理工具”下，单击“添加管理工具”。
 4.  在“按名称搜索工具”中，键入以前在 AAD 中创建的应用程序的名称，然后单击“添加”。
-5.  在刚导入的应用程序旁单击“激活”。
+5.  在已导入的应用程序旁单击“激活”。
 6.  如果要允许购买脱机许可的应用程序，则在“管理”>“帐户信息”页面，选择“显示脱机许可的应用”。
 
 **将应用商店帐户添加到 Configuration Manager**
@@ -116,10 +116,11 @@ Configuration Manager 支持在运行 Configuration Manager 客户端的 Windows
 1.  在 Configuration Manager 控制台的“软件库”工作区中，展开“应用程序管理”，然后单击“应用商店应用的许可证信息”。
 2.  选择要部署的应用，然后在“主页”选项卡的“创建”组中，单击“创建应用程序”。
 将创建包含适用于企业的 Windows 应用商店应用的 Configuration Manager 应用程序。 然后，可以像对任何其他 Configuration Manager 应用程序一样部署并监视此应用程序。
+
 > [!IMPORTANT]
 > 对于向 Intune 注册的设备，已部署的应用仅适用于最初注册该设备的用户。 其他任何用户都无法访问该应用。
 
-## <a name="monitor-windows-store-for-business-apps"></a>监视适用于企业的 Windows 应用商店应用
+## <a name="next-steps"></a>后续步骤
 
 在“软件库”工作区中，展开“应用程序管理”，然后单击“应用商店应用的许可证信息”。
 

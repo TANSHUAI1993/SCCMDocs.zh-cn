@@ -15,12 +15,11 @@ caps.latest.revision: 157
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 6f9e6e93fce95666503907010a5c253158c5de7c
-ms.openlocfilehash: 736e5a04d3d5f2a3825ed4e801308fd5699ea86e
+ms.translationtype: HT
+ms.sourcegitcommit: 1f57c63ceeb13c7f7d760d7ecfb48df749da6770
+ms.openlocfilehash: 4644928acbb1ae3d7d72f877565589fae435a96b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/07/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="technical-preview-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview
@@ -116,6 +115,17 @@ ms.lasthandoff: 07/07/2017
 
  |功能 |Technical Preview 版本 |Current Branch 版本|  
  |----------------|---------------------|--------------------|
+ |对于适用于 Windows 10 和 Office 365 的快速安装文件的客户端对等缓存支持|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#client-peer-cache-support-for-express-installation-files-for-windows-10-and-office-365)|![未添加](media/Red_X.gif)|
+ |Surface 仪表板|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#surface-device-dashboard)|![未添加](media/Red_X.gif)|
+ |配置和部署 Windows Defender 应用程序防护策略|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#configure-and-deploy-windows-defender-application-guard-policies)|![未添加](media/Red_X.gif)|
+ |从 Configuration Manager 部署 PowerShell 脚本时，添加参数|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#add-parameters-when-you-deploy-powershell-scripts-from-configuration-manager)|![未添加](media/Red_X.gif)|
+
+
+## <a name="capabilities-delivered-in-previous-technical-previews"></a>以前的技术预览版中提供的功能
+ 当 Current Branch 的最低支持版本提供技术预览版本的所有功能时，将从下表删除该预览版本的详细信息。  
+
+ |功能 |Technical Preview 版本 |Current Branch 版本|  
+ |----------------|---------------------|--------------------|
  |新移动应用程序管理策略设置|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#new-mobile-application-management-policy-settings)|![未添加](media/Red_X.gif)|
  |改进了软件更新点的边界组|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#improved-boundary-groups-for-software-update-points)|![未添加](media/Red_X.gif)|
  |站点服务器角色的高可用性|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#site-server-role-high-availability) |![未添加](media/Red_X.gif)|
@@ -136,13 +146,7 @@ ms.lasthandoff: 07/07/2017
  |用于条件访问的符合性策略的“设备运行状况证明”评估|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#device-health-attestation-assessment-for-compliance-policies-for-conditional-access)|![未添加](media/Red_X.gif)|
  |支持 Entrust 证书颁发机构|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#support-for-entrust-certification-authorities)|![未添加](media/Red_X.gif)|
  |macOS VPN 配置文件的 Cisco (IPSec) 支持|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#cisco-ipsec-support-for-macos-vpn-profiles)|![未添加](media/Red_X.gif)|
-
-## <a name="capabilities-delivered-in-previous-technical-previews"></a>以前的技术预览版中提供的功能
- 当 Current Branch 的最低支持版本提供技术预览版本的所有功能时，将从下表删除该预览版本的详细信息。  
-
- |功能 |Technical Preview 版本 |Current Branch 版本|  
- |----------------|---------------------|--------------------|
-  |Azure AD 和云管理的新功能|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#new-capabilities-for-azure-ad-and-cloud-management)|![未添加](media/Red_X.gif)|
+ |Azure AD 和云管理的新功能|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#new-capabilities-for-azure-ad-and-cloud-management)|![未添加](media/Red_X.gif)|
  |配置和部署 Windows Defender 应用程序防护策略|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#configure-and-deploy-windows-defender-application-guard-policies)|![未添加](media/Red_X.gif)|
  |更新重置工具  |[Tech Preview 1705](capabilities-in-technical-preview-1705.md#update-reset-tool)|![未添加](media/Red_X.gif)|
  |高 DPI 控制台支持  |[Tech Preview 1705](capabilities-in-technical-preview-1705.md#high-dpi-console-support)|![未添加](media/Red_X.gif)|

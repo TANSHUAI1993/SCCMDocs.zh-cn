@@ -15,12 +15,11 @@ caps.latest.revision: 21
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f809c9327db9f298168674add2d09820fdecd1b8
-ms.openlocfilehash: 4166560602edf6eb299511c8b59dc3903e3bfffc
+ms.translationtype: HT
+ms.sourcegitcommit: ef42d1483053e9a6c502f4ebcae5a231aa6ba727
+ms.openlocfilehash: b35e45b9514297e2f9ce405a3244462ed735f39f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
-
+ms.lasthandoff: 07/26/2017
 
 ---
 # <a name="supported-sql-server-versions-for-system-center-configuration-manager"></a>System Center Configuration Manager 支持的 SQL Server 版本
@@ -204,7 +203,7 @@ SQL Server 事务复制仅支持将对象复制到配置为使用[数据库副�
     -   对于辅助站点：设置至少 4 千兆字节 (GB)。  
 
 **SQL 嵌套触发器：**  
-必须启用 [SQL 嵌套触发器](http://go.microsoft.com/fwlink/?LinkId=528802) 。  
+ 必须启用[SQL 嵌套触发器](http://go.microsoft.com/fwlink/?LinkId=528802) 。  
 
  **SQL Server CLR 集成**  
   站点数据库要求启用 SQL Server 公共语言运行时 (CLR)。 这在 Configuration Manager 安装时会自动启用。 有关 CLR 的详细信息，请参阅 [SQL Server CLR 集成简介](https://msdn.microsoft.com/library/ms254498\(v=vs.110\).aspx)  

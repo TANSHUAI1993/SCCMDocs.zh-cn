@@ -14,11 +14,11 @@ ms.assetid: 00684289-d21a-45f8-b1e3-c5c787d73096
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f4c46bfab9b40b29654f4e883817a5508ab25b74
-ms.openlocfilehash: 1a38d25fbc26bd1f45c6fa2a0e931536af2d8b2f
+ms.translationtype: HT
+ms.sourcegitcommit: ef42d1483053e9a6c502f4ebcae5a231aa6ba727
+ms.openlocfilehash: b977a79baec73999caa21648adcb6fcfec4a4935
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/28/2017
+ms.lasthandoff: 07/26/2017
 
 ---
 # <a name="capabilities-in-technical-preview-1705-for-system-center-configuration-manager"></a>在 System Center Configuration Manager 的 Technical Preview 1705 中的功能
@@ -62,7 +62,7 @@ ms.lasthandoff: 06/28/2017
 
 ### <a name="prerequisites"></a>先决条件
 用于运行此工具的帐户需要具有以下权限：
--   对管理中心站点和层次结构中每个主站点的站点数据库的“读取”和“写入”权限。 若要设置这些权限，可以将用户帐户添加为每个站点的 Configuration Manager 数据库上 db_datawriter 和 db_datareader 固定数据库角色[](/sql/relational-databases/security/authentication-access/database-level-roles#fixed-database-roles)的成员。 该工具不与辅助站点进行交互。
+-   对管理中心站点和层次结构中每个主站点的站点数据库的“读取”和“写入”权限。 若要设置这些权限，可以将用户帐户添加为每个站点的 Configuration Manager 数据库上 db_datawriter 和 db_datareader[固定数据库角色](/sql/relational-databases/security/authentication-access/database-level-roles#fixed-database-roles)的成员。 该工具不与辅助站点进行交互。
 -   在层次结构的顶层站点上为“本地管理员”。
 -   在托管服务连接点的计算机上为“本地管理员”。
 
@@ -93,9 +93,9 @@ ms.lasthandoff: 06/28/2017
 | **-I &lt;SQL Server 实例名称>**             | *可选* <br> 使用此参数确定托管站点数据库的 SQL Server 的实例。 |
 | **-FDELETE**                              | *可选* <br> 使用此参数强制删除已成功下载的更新包。 |  
  **示例：**  
- 在一个典型方案中，你想要重置具有下载问题的更新。 你的 SQL Server FQDN 是 server1.fabrikam.com，站点数据库是 CM_XYZ，包 GUID 是 61F16B3C-F1F6-4F9F-8647-2A524B0C802C。  可以运行：CMUpdateReset.exe -S server1.fabrikam.com -D CM_XYZ -P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C
+ 在一个典型方案中，你想要重置具有下载问题的更新。 SQL Server FQDN 是 server1.fabrikam.com，站点数据库是 CM_XYZ，包 GUID 是 61F16B3C-F1F6-4F9F-8647-2A524B0C802C。  可以运行：CMUpdateReset.exe -S server1.fabrikam.com -D CM_XYZ -P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C
 
- 在比较极端的情形下，你希望强制删除存在问题的更新包。 你的 SQL Server FQDN 是 server1.fabrikam.com，站点数据库是 CM_XYZ，包 GUID 是 61F16B3C-F1F6-4F9F-8647-2A524B0C802C。  可以运行：CMUpdateReset.exe  -FDELETE -S server1.fabrikam.com -D CM_XYZ -P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C
+ 在比较极端的情形下，你希望强制删除存在问题的更新包。 SQL Server FQDN 是 server1.fabrikam.com，站点数据库是 CM_XYZ，包 GUID 是 61F16B3C-F1F6-4F9F-8647-2A524B0C802C。  可以运行：CMUpdateReset.exe  -FDELETE -S server1.fabrikam.com -D CM_XYZ -P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C
 
 ### <a name="test-the-tool-with-the-technical-preview"></a>使用 Technical Preview 测试此工具  
 你可以在 Technical Preview 1606 或更高版本中使用此工具。 此工具提供向后支持，因此，它可与很多 Technical Preview 的更新方案一起使用，而无需等到推出下一个 Technical Preview。
