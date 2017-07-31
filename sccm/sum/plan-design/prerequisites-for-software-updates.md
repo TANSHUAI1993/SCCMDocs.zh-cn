@@ -12,9 +12,11 @@ ms.service:
 ms.technology:
 - configmgr-sum
 ms.assetid: fdf05118-162a-411e-b72e-386b9dc9a5e1
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 238ef5814c0c1b832c28d63c9f3879e21a6c439b
 ms.openlocfilehash: 179f076f228daa5adf612275a822cd379b0ce1e3
+ms.contentlocale: zh-cn
+ms.lasthandoff: 12/16/2016
 
 
 ---
@@ -83,7 +85,7 @@ ms.openlocfilehash: 179f076f228daa5adf612275a822cd379b0ce1e3
 ### <a name="reporting-services-point"></a>Reporting Services 点  
  Reporting Services 点站点系统角色可以显示软件更新的报表。 此角色是可选的，但建议使用它。 有关如何创建 Reporting Services 点的详细信息，请参阅[配置报表](../../core/servers/manage/configuring-reporting.md)。  
 
-##  <a name="a-namebkmkrecoverupgradesa-recover-from-synchronizing-the-upgrades-category-before-you-install-kb-3095113"></a><a name="BKMK_RecoverUpgrades"></a> 在安装 KB 3095113 之前从同步升级分类中恢复  
+##  <a name="BKMK_RecoverUpgrades"></a> 在安装 KB 3095113 之前从同步升级分类中恢复  
  必须在你的软件更新点和站点服务器上为 WSUS 安装 [修补程序 3095113](https://support.microsoft.com/kb/3095113) ，然后再同步 **升级** 分类。 如果在启用 **升级** 分类后未安装此修补程序，即使 WSUS 无法正确下载并部署 Windows 10 内部版本 1511 功能升级包，也能看见此功能升级选项。 如果你未先安装 [修补程序 3095113](https://support.microsoft.com/kb/3095113)就同步任何升级，则会使用不可用数据填充 WSUS 数据库 (SUSDB)，必须清除这些数据才能正确部署升级。  使用以下步骤从该问题中恢复。  
 
 #### <a name="to-recover-from-synchronizing-the-upgrades-classification-before-you-install-kb-3095113"></a>在安装 KB 3095113 之前从同步升级分类中恢复  
@@ -111,9 +113,4 @@ ms.openlocfilehash: 179f076f228daa5adf612275a822cd379b0ce1e3
 
 ## <a name="next-steps"></a>后续步骤
 [准备软件更新管理](../get-started/prepare-for-software-updates-management.md)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 
