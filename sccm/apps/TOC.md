@@ -20,6 +20,7 @@
 
 ## 部署应用程序
 ### [部署应用程序](deploy-use/deploy-applications.md)
+### [共享应用程序](deploy-use/share-applications.md)
 ### [模拟应用程序部署](deploy-use/simulate-application-deployments.md)
 ### [部署 App-V 虚拟应用程序](get-started/deploying-app-v-virtual-applications.md)
 
@@ -37,3 +38,5 @@
 ### [更新和停用应用程序](deploy-use/update-and-retire-applications.md)
 ### [修订和取代应用程序](deploy-use/revise-and-supersede-applications.md)
 ### [卸载应用程序](deploy-use/uninstall-applications.md)
+
+## [运行和管理脚本](deploy-use/create-deploy-scripts.md)
