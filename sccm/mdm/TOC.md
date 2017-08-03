@@ -60,6 +60,7 @@
 ## 管理资源访问
 ### [创建 Wi-Fi 配置文件](deploy-use/create-wifi-profiles.md)
 ### [创建 PFX 证书配置文件](deploy-use/create-pfx-certificate-profiles.md)
+### [导入 PFX 证书配置文件](deploy-use/import-pfx-certificate-profiles.md)
 ### [VPN 配置文件](deploy-use/create-vpn-profiles.md)
 ### [创建电子邮件配置文件](deploy-use/create-exchange-activesync-profiles.md)
 ### [Windows Hello 企业版设置](deploy-use/windows-hello-for-business-settings.md)
