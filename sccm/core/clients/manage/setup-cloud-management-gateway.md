@@ -11,11 +11,11 @@ ms.service:
 ms.technology:
 - configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d5a6fdc9a526c4fc3a9027dcedf1dd66a6fff5a7
-ms.openlocfilehash: 97e1bc6585cee0ff433da0ec0b60b9604cb7348f
+ms.translationtype: HT
+ms.sourcegitcommit: afe0ecc4230733fa76e41bf08df5ccfb221da7c8
+ms.openlocfilehash: df6e809aadd3d69275c137c92629ab8426bbdcb7
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 
@@ -43,7 +43,7 @@ ms.lasthandoff: 05/17/2017
 
 采用针对基于云的分发点的同一方法，为云管理网关创建自定义 SSL 证书。 按照[为基于云的分发点部署服务证书](/sccm/core/plan-design/network/example-deployment-of-pki-certificates)中的说明，但以不同方式执行以下操作：
 
-- 设置新证书模板时，向为 Configuration Manager 服务器设置的安全组授予“读取”****和“注册”权限。
+- 在设置新证书模板时，向为 Configuration Manager 服务器设置的安全组提供**读取**和**注册**权限。
 - 请求自定义 Web 服务器证书时，为以 **cloudapp.net** 结尾的证书公用名称提供 FQDN（以便在 Azure 公有云上使用云管理网关），或为以 **usgovcloudapp.net** 结尾的证书公用名词提供 FQDN（以便用于 Azure 政府云）。
 
 

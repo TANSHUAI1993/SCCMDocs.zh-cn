@@ -15,11 +15,11 @@ caps.latest.revision: 15
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a1fc9f2db7c9c2b40d986bb39a0b27d6cc699987
-ms.openlocfilehash: 454828d64b5643e57da4cff3aa3f671e8cd157b1
+ms.translationtype: HT
+ms.sourcegitcommit: afe0ecc4230733fa76e41bf08df5ccfb221da7c8
+ms.openlocfilehash: fef330a14ad2a1f75d520eac0706a376953993e8
 ms.contentlocale: zh-cn
-ms.lasthandoff: 01/05/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 # <a name="about-client-installation-properties-in-system-center-configuration-manager"></a>关于 System Center Configuration Manager 中的客户端安装属性
@@ -528,8 +528,6 @@ CCMSetup 放弃下载客户端安装文件之前将尝试的时间长度 - 以�
 
 > [!IMPORTANT]  
 >  如果管理点仅接受通过 HTTPS 进行的客户端连接，则必须为管理点名称加上前缀 https://。  
-
-例如：`CCMSetup.exe SMSMP=smsmp01.contoso.com`  
 
 示例：`CCMSetup.exe SMSMP=smsmp01.contoso.com`
 

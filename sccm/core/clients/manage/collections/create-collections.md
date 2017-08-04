@@ -16,12 +16,11 @@ caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9555a16d97224a1cf49a426ab225468b07403f60
-ms.openlocfilehash: e28fdeae809cadf78017dd2920e3f1a9484ec8a3
+ms.translationtype: HT
+ms.sourcegitcommit: 5f1412fb132e3a074742e11f1142b2594146cbe1
+ms.openlocfilehash: 44b4707b1a40624c51decf548d23ddd2164c5833
 ms.contentlocale: zh-cn
-ms.lasthandoff: 12/30/2016
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-create-collections-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中创建集合
@@ -57,65 +56,65 @@ ms.lasthandoff: 12/30/2016
 5.  在“创建设备集合向导”的“成员身份规则”页上的“添加规则”列表中，选择想用于此集合的成员身份规则的类型。 可以为每个集合配置多个规则。  
 
         
-        ##### To configure a direct rule  
+##### <a name="to-configure-a-direct-rule"></a>若要配置直接规则  
 
-        1.  在“创建直接成员身份规则向导”  的“搜索资源” 页上，指定以下信息：  
+1.  在“创建直接成员身份规则向导”  的“搜索资源” 页上，指定以下信息：  
 
-            -   **资源类**：选择要搜索并添加到集合的资源的类型。 从“系统资源”  值进行选择以搜索从客户端计算机返回的清单数据，或从“未知计算机”  进行选择以选择未知计算机返回的值。  
+-   **资源类**：选择要搜索并添加到集合的资源的类型。 从“系统资源”  值进行选择以搜索从客户端计算机返回的清单数据，或从“未知计算机”  进行选择以选择未知计算机返回的值。  
 
-            -   **属性名称**：选择与要搜索的所选资源类关联的属性。 例如，如果要按其 NetBIOS 名称来选择计算机，则在“资源类”  列表中选择“系统资源”  ，并在“属性名称”  列表中选择“NetBIOS 名称”  。  
+-   **属性名称**：选择与要搜索的所选资源类关联的属性。 例如，如果要按其 NetBIOS 名称来选择计算机，则在“资源类”  列表中选择“系统资源”  ，并在“属性名称”  列表中选择“NetBIOS 名称”  。  
 
-            -   **排除标记为已过时的资源** - 如果某个客户端计算机被标记为已过时，则不会在搜索结果中包括此值。  
+-   **排除标记为已过时的资源** - 如果某个客户端计算机被标记为已过时，则不会在搜索结果中包括此值。  
 
-            -   **排除未安装 Configuration Manager 客户端的资源** - 这些资源不会显示在搜索结果中。  
+-   **排除未安装 Configuration Manager 客户端的资源** - 这些资源不会显示在搜索结果中。  
 
-            -   **值** ：输入你要在所选属性名称搜索的值。 可以使用百分比字符 **%** 作为通配符。 例如，若要搜索 NetBIOS 名称以“M”开头的计算机，请在此字段中输入“M%”。  
+-   **值** ：输入你要在所选属性名称搜索的值。 可以使用百分比字符 **%** 作为通配符。 例如，若要搜索 NetBIOS 名称以“M”开头的计算机，请在此字段中输入“M%”。  
 
-        2.  在“选择资源”页上，在“资源”列表中选择要添加到集合的资源，然后选择“下一步”。  
+2.  在“选择资源”页上，在“资源”列表中选择要添加到集合的资源，然后选择“下一步”。  
 
 
-        ##### To configure a query rule  
+##### <a name="to-configure-a-query-rule"></a>若要配置查询规则  
 
-        1.  在“查询规则属性”  对话框中，指定以下信息：  
+1.  在“查询规则属性”  对话框中，指定以下信息：  
 
-            -   “名称”：指定唯一名称。  
+-   “名称”：指定唯一名称。  
 
-            -   **导入查询语句** - 打开“浏览查询”对话框，在其中可以选择要用作集合的查询规则的 [Configuration Manager 查询](../../../../core/servers/manage/create-queries.md)。   
+-   **导入查询语句** - 打开“浏览查询”对话框，在其中可以选择要用作集合的查询规则的 [Configuration Manager 查询](../../../../core/servers/manage/create-queries.md)。   
 
-            -   **资源类：**选择要搜索并添加到集合的资源的类型。 从“系统资源”  值中选择值以搜索从客户端计算机返回的清单数据，或从“未知计算机”  进行选择以选择未知计算机返回的值。  
+-   **资源类：**选择要搜索并添加到集合的资源的类型。 从“系统资源”  值中选择值以搜索从客户端计算机返回的清单数据，或从“未知计算机”  进行选择以选择未知计算机返回的值。  
 
-            -   **编辑查询语句** - 打开“查询语句属性”对话框，在其中可以创作要用作集合的规则的查询。 有关查询的详细信息，请参阅 [System Center Configuration Manager 的查询技术参考](../../../../core/servers/manage/queries-technical-reference.md)。  
+-   **编辑查询语句** - 打开“查询语句属性”对话框，在其中可以创作要用作集合的规则的查询。 有关查询的详细信息，请参阅 [System Center Configuration Manager 的查询技术参考](../../../../core/servers/manage/queries-technical-reference.md)。  
 
     
-        ##### To configure an include collection rule  
+##### <a name="to-configure-an-include-collection-rule"></a>若要配置包括集合规则  
 
-        In the **Select Collections** dialog box, select the collections you want to include in the new collection, then choose **OK**.  
+在“选择集合”对话框中，选择要包括在新集合中的集合，然后选择“确定”。  
 
-        ##### To configure an exclude collection rule  
+##### <a name="to-configure-an-exclude-collection-rule"></a>若要配置排除集合规则  
 
-        In the **Select Collections** dialog box, select the collections you want to exclude from the new collection, then choose **OK**.  
+在“选择集合”对话框中，选择要从新集合中排除的集合，然后选择“确定”。  
 
-    -   **对此集合使用增量更新** - 选择此选项可定期从以前的集合评估中只扫描新资源或更改的资源，而与完全集合评估无关。 增量更新按 10 分钟间隔进行。  
+-   **对此集合使用增量更新** - 选择此选项可定期从以前的集合评估中只扫描新资源或更改的资源，而与完全集合评估无关。 增量更新按 10 分钟间隔进行。  
 
-        > [!IMPORTANT]  
-        >  借助使用以下类的查询规则配置的集合不支持增量更新：  
-        >   
-        >  -   SMS_G_System_CollectedFile  
-        > -   SMS_G_System_LastSoftwareScan  
-        > -   SMS_G_System_AppClientState  
-        > -   SMS_G_System_DCMDeploymentState  
-        > -   SMS_G_System_DCMDeploymentErrorAssetDetails  
-        > -   SMS_G_System_DCMDeploymentCompliantAssetDetails  
-        > -   SMS_G_System_DCMDeploymentNonCompliantAssetDetails  
-        > -   SMS_G_User_DCMDeploymentCompliantAssetDetails（仅用于用户集合）  
-        > -   SMS_G_User_DCMDeploymentNonCompliantAssetDetails（仅用于用户集合）  
-        > -   SMS_G_System_SoftwareUsageData  
-        > -   SMS_G_System_CI_ComplianceState  
-        > -   SMS_G_System_EndpointProtectionStatus  
-        > -   SMS_GH_System_*  
-        > -   SMS_GEH_System_*  
+> [!IMPORTANT]  
+>  借助使用以下类的查询规则配置的集合不支持增量更新：  
+>   
+> -   SMS_G_System_CollectedFile  
+> -   SMS_G_System_LastSoftwareScan  
+> -   SMS_G_System_AppClientState  
+> -   SMS_G_System_DCMDeploymentState  
+> -   SMS_G_System_DCMDeploymentErrorAssetDetails  
+> -   SMS_G_System_DCMDeploymentCompliantAssetDetails  
+> -   SMS_G_System_DCMDeploymentNonCompliantAssetDetails  
+> -   SMS_G_User_DCMDeploymentCompliantAssetDetails（仅用于用户集合）  
+> -   SMS_G_User_DCMDeploymentNonCompliantAssetDetails（仅用于用户集合）  
+> -   SMS_G_System_SoftwareUsageData  
+> -   SMS_G_System_CI_ComplianceState  
+> -   SMS_G_System_EndpointProtectionStatus  
+> -   SMS_GH_System_*  
+> -   SMS_GEH_System_*  
 
-    -   **对此集合计划完全更新** - 选择集合成员身份的定期完全评估。  
+-   **对此集合计划完全更新** - 选择集合成员身份的定期完全评估。  
 
 6.  完成向导以创建新集合。 新集合会显示在“资产和符合性”  工作区的“设备集合”  节点中。  
 
@@ -134,60 +133,60 @@ ms.lasthandoff: 12/30/2016
 
     -   在“添加规则”  列表中，选择要用于此集合的成员身份规则的类型。 可以为每个集合配置多个规则。  
 
-         ##### <a name="to-configure-a-direct-rule"></a>若要配置直接规则  
+##### <a name="to-configure-a-direct-rule"></a>若要配置直接规则  
 
-        1.  在“创建直接成员身份规则向导”的“搜索资源”页上，指定：  
+1.  在“创建直接成员身份规则向导”的“搜索资源”页上，指定：  
 
-            -   **资源类**：选择要搜索并添加到集合的资源的类型。 从“用户资源”值中进行选择以搜索 Configuration Manager 收集的用户信息，或从“用户组资源”中进行选择以搜索 Configuration Manager 收集的用户组信息。  
+-   **资源类**：选择要搜索并添加到集合的资源的类型。 从“用户资源”值中进行选择以搜索 Configuration Manager 收集的用户信息，或从“用户组资源”中进行选择以搜索 Configuration Manager 收集的用户组信息。  
 
-            -   **属性名称**：选择与要搜索的资源类关联的属性。 例如，如果要按其组织单位 (OU) 名称来选择用户，则在“资源类”  列表中选择“用户资源”  ，并在“属性名称”  列表中选择“用户组织单位名称”  。  
+-   **属性名称**：选择与要搜索的资源类关联的属性。 例如，如果要按其组织单位 (OU) 名称来选择用户，则在“资源类”  列表中选择“用户资源”  ，并在“属性名称”  列表中选择“用户组织单位名称”  。  
 
-            -   **值：**输入想要搜索的值。 可以使用百分比字符 **%** 作为通配符。 例如，如果要搜索 Contoso OU 中的用户，请在此字段中输入“Contoso”。  
+-   **值：**输入想要搜索的值。 可以使用百分比字符 **%** 作为通配符。 例如，如果要搜索 Contoso OU 中的用户，请在此字段中输入“Contoso”。  
 
-        2.  在“选择资源”页上，在“资源”列表中选择要添加到集合的资源。  
+2.  在“选择资源”页上，在“资源”列表中选择要添加到集合的资源。  
 
-        ##### <a name="to-configure-a-query-rule"></a>若要配置查询规则  
+##### <a name="to-configure-a-query-rule"></a>若要配置查询规则  
 
-        1.  在“查询规则属性”对话框中，提供：  
+1.  在“查询规则属性”对话框中，提供：  
 
-            -   **名称**：唯一名称。  
+-   **名称**：唯一名称。  
 
-            -   **导入查询语句** - 打开“浏览查询”对话框，在其中可以选择要用作集合的查询规则的 [Configuration Manager 查询](../../../../core/servers/manage/queries-technical-reference.md)。  
+-   **导入查询语句** - 打开“浏览查询”对话框，在其中可以选择要用作集合的查询规则的 [Configuration Manager 查询](../../../../core/servers/manage/queries-technical-reference.md)。  
 
-            -   **资源类**：选择要搜索并添加到集合的资源的类型。 从“用户资源”值中进行选择以搜索 Configuration Manager 收集的用户信息，或从“用户组资源”中进行选择以搜索 Configuration Manager 收集的用户组信息。  
+-   **资源类**：选择要搜索并添加到集合的资源的类型。 从“用户资源”值中进行选择以搜索 Configuration Manager 收集的用户信息，或从“用户组资源”中进行选择以搜索 Configuration Manager 收集的用户组信息。  
 
-            -   **编辑查询语句** - 打开“查询语句属性”对话框，在其中可以[创作查询](../../../../core/servers/manage/queries-technical-reference.md)以将其用作集合的规则。  
+-   **编辑查询语句** - 打开“查询语句属性”对话框，在其中可以[创作查询](../../../../core/servers/manage/queries-technical-reference.md)以将其用作集合的规则。  
 
-        ##### <a name="to-configure-an-include-collection-rule"></a>若要配置包括集合规则  
+##### <a name="to-configure-an-include-collection-rule"></a>若要配置包括集合规则  
 
-        在“选择集合”对话框中，选择要包括在新集合中的集合，然后选择“确定”。  
+在“选择集合”对话框中，选择要包括在新集合中的集合，然后选择“确定”。  
 
-        ##### <a name="to-configure-an-exclude-collection-rule"></a>若要配置排除集合规则  
+##### <a name="to-configure-an-exclude-collection-rule"></a>若要配置排除集合规则  
 
-        在“选择集合”对话框中，选择要从新集合中排除的集合，然后选择“确定”。  
+在“选择集合”对话框中，选择要从新集合中排除的集合，然后选择“确定”。  
 
 
-    -   **对此集合使用增量更新** - 选择此选项可定期从以前的集合评估中只扫描新资源或更改的资源，而与完全集合评估无关。 增量更新按 10 分钟间隔进行。  
+-   **对此集合使用增量更新** - 选择此选项可定期从以前的集合评估中只扫描新资源或更改的资源，而与完全集合评估无关。 增量更新按 10 分钟间隔进行。  
 
-        > [!IMPORTANT]  
-        >  借助使用以下类的查询规则配置的集合不支持增量更新：  
-        >   
-        >  -   SMS_G_System_CollectedFile  
-        > -   SMS_G_System_LastSoftwareScan  
-        > -   SMS_G_System_AppClientState  
-        > -   SMS_G_System_DCMDeploymentState  
-        > -   SMS_G_System_DCMDeploymentErrorAssetDetails  
-        > -   SMS_G_System_DCMDeploymentCompliantAssetDetails  
-        > -   SMS_G_System_DCMDeploymentNonCompliantAssetDetails  
-        > -   SMS_G_User_DCMDeploymentCompliantAssetDetails（仅用于用户集合）  
-        > -   SMS_G_User_DCMDeploymentNonCompliantAssetDetails（仅用于用户集合）  
-        > -   SMS_G_System_SoftwareUsageData  
-        > -   SMS_G_System_CI_ComplianceState  
-        > -   SMS_G_System_EndpointProtectionStatus  
-        > -   SMS_GH_System_*  
-        > -   SMS_GEH_System_*  
+> [!IMPORTANT]  
+>  借助使用以下类的查询规则配置的集合不支持增量更新：  
+>   
+> -   SMS_G_System_CollectedFile  
+> -   SMS_G_System_LastSoftwareScan  
+> -   SMS_G_System_AppClientState  
+> -   SMS_G_System_DCMDeploymentState  
+> -   SMS_G_System_DCMDeploymentErrorAssetDetails  
+> -   SMS_G_System_DCMDeploymentCompliantAssetDetails  
+> -   SMS_G_System_DCMDeploymentNonCompliantAssetDetails  
+> -   SMS_G_User_DCMDeploymentCompliantAssetDetails（仅用于用户集合）  
+> -   SMS_G_User_DCMDeploymentNonCompliantAssetDetails（仅用于用户集合）  
+> -   SMS_G_System_SoftwareUsageData  
+> -   SMS_G_System_CI_ComplianceState  
+> -   SMS_G_System_EndpointProtectionStatus  
+> -   SMS_GH_System_*  
+> -   SMS_GEH_System_*  
 
-    -   **对此集合计划完全更新** - 选择集合成员身份的定期完全评估。  
+-   **对此集合计划完全更新** - 选择集合成员身份的定期完全评估。  
 
 6.  完成向导。 新集合会显示在“资产和符合性”  工作区的“用户集合”  节点中。  
 
