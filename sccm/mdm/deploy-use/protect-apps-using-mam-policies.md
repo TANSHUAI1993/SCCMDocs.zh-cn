@@ -16,11 +16,11 @@ caps.handback.revision: 0
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 74f4dd44089d4a13526c981589e1f497f0e10290
+ms.translationtype: HT
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: 50c137f159b0ef631f7173b8eec190182ce41cee
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 07/29/2017
 
 ---
 # <a name="protect-apps-using-mobile-application-management-policies-in-system-center-configuration-manager"></a>使用 System Center Configuration Manager 中的移动应用程序管理策略保护应用
@@ -43,12 +43,12 @@ ms.lasthandoff: 05/17/2017
 
 若要将限制应用到应用，该应用必须结合 Microsoft Intune 应用软件开发工具包 (SDK)。 有两种方式获得此类应用：  
 
--   **使用策略托管应用**（Android 和 iOS）：这些应用内置了App SDK。 要添加此类型的应用，你可以从 iTunes 应用商店或 Google Play 等应用商店指定应用的链接。 对于此类应用，无需进一步的处理。 有关可用于 iOS 和 Android 设备的策略托管应用的列表，请参阅 [Managed apps for Microsoft Intune mobile application management policies](https://technet.microsoft.com/en-us/library/dn708489.aspx)（Microsoft Intune 移动应用程序管理策略的托管应用）。  
+-   **使用策略托管应用**（Android 和 iOS）：这些应用内置了App SDK。 要添加此类型的应用，你可以从 iTunes 应用商店或 Google Play 等应用商店指定应用的链接。 对于此类应用，无需进一步的处理。 有关可用于 iOS 和 Android 设备的策略托管应用的列表，请参阅 [Managed apps for Microsoft Intune mobile application management policies](https://technet.microsoft.com/library/dn708489.aspx)（Microsoft Intune 移动应用程序管理策略的托管应用）。  
 
 -   **使用“已包装的”应用**（Android 和 iOS）：使用 **Microsoft Intune 应用包装工具**重新包装这些应用，将 App SDK 包括在内。 该工具通常用于处理公司内部开发的应用。 它可用于处理从应用商店下载的应用。 有关详细信息，请参阅下列文章：
-    - [使用 Microsoft Intune 应用包装工具为移动应用程序管理准备 iOS 应用](https://technet.microsoft.com/en-us/library/dn878028.aspx)
+    - [使用 Microsoft Intune 应用包装工具为移动应用程序管理准备 iOS 应用](https://technet.microsoft.com/library/dn878028.aspx)
 
-    - [使用 Microsoft Intune 应用包装工具为移动应用程序管理准备 Android 应用](https://technet.microsoft.com/en-us/library/mt147413.aspx)  
+    - [使用 Microsoft Intune 应用包装工具为移动应用程序管理准备 Android 应用](https://technet.microsoft.com/library/mt147413.aspx)  
 
 ## <a name="create-and-deploy-an-app-with-a-mobile-application-management-policy"></a>创建和部署具有移动应用程序管理策略的应用  
 
@@ -58,7 +58,7 @@ ms.lasthandoff: 05/17/2017
 
      例如，Microsoft Word for iPad 应用的 URL 是 **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**  
 
--   **创建包装的应用** - 使用主题[使用 Microsoft Intune 应用包装工具为移动应用程序管理准备 iOS 应用](https://technet.microsoft.com/en-us/library/dn878028.aspx)和[使用 Microsoft Intune 应用包装工具为移动应用程序管理准备 Android 应用](https://technet.microsoft.com/en-us/library/mt147413.aspx)中的信息创建包装的应用。  
+-   **创建包装的应用** - 使用主题[使用 Microsoft Intune 应用包装工具为移动应用程序管理准备 iOS 应用](https://technet.microsoft.com/library/dn878028.aspx)和[使用 Microsoft Intune 应用包装工具为移动应用程序管理准备 Android 应用](https://technet.microsoft.com/library/mt147413.aspx)中的信息创建包装的应用。  
 
      创建处理过的应用和关联的清单文件的工具。 创建包含该应用的 Configuration Manager 应用程序时，使用这些文件。  
 
@@ -178,5 +178,5 @@ ms.lasthandoff: 05/17/2017
 -   如果尚无策略部署到设备，且已部署了两个冲突设置，则将使用设备内的默认设置。  
 
 ##  <a name="see-a-list-of-available-policy-managed-apps"></a>查看可用的策略托管应用列表  
- 有关可用于 iOS 和 Android 设备的策略托管应用列表，请参阅 [Microsoft Intune 应用程序合作伙伴](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-partners)。  
+ 有关可用于 iOS 和 Android 设备的策略托管应用列表，请参阅 [Microsoft Intune 应用程序合作伙伴](https://www.microsoft.com/cloud-platform/microsoft-intune-partners)。  
 
