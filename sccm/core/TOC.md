@@ -15,6 +15,7 @@
 ### [管理 Long-Term Servicing Branch](understand/manage-the-ltsb.md)
 ### [将 Long-Term Servicing Branch 升级到 Current Branch](understand/convert-to-current-branch.md)
 ##  [我应该使用 Configuration Manager 的哪一个分支](understand/which-branch-should-i-use.md)
+##  [扩展互操作性客户端](understand/interoperability-client.md)
 ##  [System Center Configuration Manager 授权](understand/learn-more-editions.md)
 ##  [使用云服务](understand/use-cloud-services.md)
 ### [Azure 上的 Configuration Manager](understand/configuration-manager-on-azure.md)
