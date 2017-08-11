@@ -123,3 +123,4 @@ ms.lasthandoff: 07/03/2017
 
  不过，如果要使用默认功能，并且不打算将更新部署到更新服务器或受管理设备，可以直接跳到[管理软件更新目录](updates-publisher-catalogs.md)或[创建软件更新](create-updates-with-updates-publisher.md)，创建你自己的更新目录。
 
+
