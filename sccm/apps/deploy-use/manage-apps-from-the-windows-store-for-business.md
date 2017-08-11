@@ -2,7 +2,7 @@
 title: "管理来自适用于企业的 Windows 应用商店的应用 | Microsoft Docs"
 description: "使用 System Center Configuration Manager 管理并部署来自适用于企业的 Windows 应用商店的应用"
 ms.custom: na
-ms.date: 7/25/2017
+ms.date: 7/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,10 +16,10 @@ author: robstackmsft
 ms.author: robstack
 manager: angrobe
 ms.translationtype: HT
-ms.sourcegitcommit: ef42d1483053e9a6c502f4ebcae5a231aa6ba727
-ms.openlocfilehash: 93e767c9a115b30d68871baece670977165f55f4
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: 369b6a82a20a90ca534f9484c0be71096dd35a30
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/26/2017
+ms.lasthandoff: 07/29/2017
 
 ---
 
@@ -85,6 +85,8 @@ Configuration Manager 支持在运行 Configuration Manager 客户端的 Windows
 
 ## <a name="set-up-windows-store-for-business-synchronization"></a>设置适用于企业的 Windows 应用商店同步
 
+### <a name="for-configuration-manager-versions-prior-to-1706"></a>对于 1706 之前的 Configuration Manager 版本
+
 **在 Azure Active Directory 中，将 Configuration Manager 注册为“Web 应用程序和/或 Web API”管理工具。此操作会提供客户端 ID，稍后需要使用它。**
 1. 在 [https://manage.windowsazure.com](https://manage.windowsazure.com) 的 Active Directory 节点中，选择 Azure Active Directory，然后单击“应用程序” > “添加”。
 2.  单击“添加我的组织正在开发的应用程序”。
@@ -110,6 +112,24 @@ Configuration Manager 支持在运行 Configuration Manager 客户端的 Windows
 2.  在“主页”选项卡上的“适用于企业的 Windows 应用商店”组中，单击“添加适用于企业的 Windows 应用商店帐户”。 
 3.  从 Azure Active Directory 添加租户 ID、客户端 ID 和客户端密钥，然后完成向导。
 4. 完成之后，会在 Configuration Manager 控制台中“适用于企业的 Windows 应用商店”列表中看到配置的帐户。
+
+### <a name="for-configuration-manager-version-1706-and-later"></a>对于 Configuration Manager 版本 1706 及更高版本
+
+1. 在控制台中，转到“管理” > “概述” > “云服务管理” > “Azure” > “Azure 服务”，然后选择“配置 Azure 服务”以启动“Azure 服务向导”。
+2. 在“Azure 服务”页上，选择要配置的服务，然后单击“下一步”。
+3. 在“常规”页上，提供“Azure 服务名称”的友好名称和可选说明，然后单击“下一步”。
+4. 在“应用”页上，指定 Azure 环境，然后单击“浏览”打开“服务器应用”窗口。
+5. 在“服务器应用”窗口中，选择要使用的服务器应用，然后单击“确定”。 服务器应用是包含 Azure 帐户配置的 Azure Web 应用，包括客户端的租户 ID、客户端 ID 和密钥。 如果没有可用的服务器应用，请使用以下操作之一：
+    - 创建：若要创建新的服务器应用，请单击“创建”。 为应用和租户提供友好名称。 然后，登录 Azure 后，Configuration Manager 将在 Azure 中为用户创建 Web 应用，包括用于 Web 应用的客户端 ID 和密钥。 之后，可在 Azure 门户中查看这些内容。
+    - 导入：若要使用 Azure 订阅中已存在的 Web 应用，请单击“导入”。 为应用和租户提供友好名称，然后为 Configuration Manager 要使用的 Azure Web 应用指定租户 ID、客户端 ID 和密钥。 “验证”信息后，单击“确定”以继续。 
+6. 查看“信息”页，并根据指示完成所有额外步骤和配置。 这些配置是通过 Configuration Manager 使用服务所必需的。 例如，配置适用于企业的 Windows 应用商店：
+    - 在 Azure 中，必须将 Configuration Manager 注册为 Web 应用程序或 Web API 并记录客户端 ID。 还可以指定用于管理工具 (Configuration Manager) 的客户端密钥。
+    - 在适用于企业的 Windows 应用商店控制台中，必须将 Configuration Manager 配置为存储管理工具并启用对脱机许可应用的支持，然后购买至少一个应用。 
+7. 准备好继续后，单击“下一步”。
+8. 在“应用配置”页上，完成此服务的应用目录和语言配置，然后单击“下一步”。
+9. 完成向导后，Configuration Manager 控制台将显示已将“适用于企业的 Windows 应用商店”配置为“云服务类型”。
+
+
 
 
 ## <a name="create-and-deploy-a-configuration-manager-application-from-a-windows-store-for-business-app"></a>从适用于企业的 Windows 应用商店应用创建和部署 Configuration Manager 应用程序。

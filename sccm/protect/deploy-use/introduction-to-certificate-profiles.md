@@ -2,7 +2,7 @@
 title: "证书配置文件简介 | Microsoft Docs"
 description: "了解 System Center Configuration Manager 中的证书配置文件如何与 Active Directory 证书服务一起使用。"
 ms.custom: na
-ms.date: 03/30/2017
+ms.date: 07/25/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,15 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 41dcc259-f147-4420-bff2-b65bdf8cff77
 caps.latest.revision: 7
-author: arob98
-ms.author: angrobe
+author: lleonard-msft
+ms.author: alleonar
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: ba1d5b04cb0cb0284525e295a6086a3c0ac67e9f
+ms.translationtype: HT
+ms.sourcegitcommit: c0d94b8e6ca6ffd82e879b43097a9787e283eb6d
+ms.openlocfilehash: 7b1c0e449f3d1ef42e279e8707df6bf1df163b3f
 ms.contentlocale: zh-cn
-ms.lasthandoff: 03/27/2017
-
+ms.lasthandoff: 08/02/2017
 
 ---
 
@@ -51,17 +50,24 @@ ms.lasthandoff: 03/27/2017
 -   **可信 CA 证书** - 可部署受信任的根 CA 或中间 CA 证书，以便在设备必须验证服务器时形成证书信任链。  
 
 -   **简单证书注册协议 (SCEP)** - 可通过在运行 Windows Server 2012 R2 的服务器上使用 SCEP 协议和网络设备注册服务，为设备或用户请求一个证书。
+
+    首先创建“受信任的 CA 证书”证书配置文件，然后才能创建“简单证书注册协议(SCEP)”证书配置文件。
+
 -   **个人信息交换 (.pfx)** - 可为设备或用户请求一个 .pfx（又称 PKCS #12）证书。
 
-    > [!NOTE]  
-    >  必须创建**受信任的 CA 证书**类型的证书配置文件，然后才能创建**简单证书注册协议 (SCEP)** 证书配置文件。  
+    可以通过从现有证书[导入凭据](/sccm/mdm/deploy-use/import-pfx-certificate-profiles.md)或[定义证书](/sccm/mdm/deploy-use/create-pfx-certificate-profiles.md)颁发机构来处理请求的方式创建 PFX 证书配置文件。
+
+    从版本 1706 开始，可以将 Microsoft 或 Entrust 用作“个人信息交换 (.pfx)”证书的证书颁发机构。
+
 
 ## <a name="requirements-and-supported-platforms"></a>要求和支持的平台  
- 若要部署使用 SCEP 的证书配置文件，必须在管理中心站点或主站点中的站点系统服务器上安装证书注册点。 还必须在运行 Windows Server 2012 R2（包含 Active Directory 证书服务角色和有效的 NDES）的服务器上安装 NDES 策略模块，即 Configuration Manager 策略模块，在需要证书的设备中可以访问该模块。 对于通过 Microsoft Intunee 注册的设备，则要求 NDES 可从 Internet 中访问，例如，位于外围子网（也称为 DMZ）中。  
+若要部署使用 SCEP 的证书配置文件，必须在管理中心站点或主站点中的站点系统服务器上安装证书注册点。 还必须在运行 Windows Server 2012 R2（包含 Active Directory 证书服务角色和有效的 NDES）的服务器上安装 NDES 策略模块，即 Configuration Manager 策略模块，在需要证书的设备中可以访问该模块。 对于通过 Microsoft Intunee 注册的设备，则要求 NDES 可从 Internet 中访问，例如，位于外围子网（也称为 DMZ）中。  
 
- 有关网络设备注册服务如何支持策略模块以便 Configuration Manager 可以部署证书的详细信息，请参阅[结合使用策略模块和网络设备注册服务](http://go.microsoft.com/fwlink/p/?LinkId=328657)。  
+PFX 证书还要求在管理中心站点或主站点中的站点系统服务器上具有证书注册点。  此外，还必须为证书指定证书颁发机构 (CA) 和相关访问凭据。  从版本 1706 开始，可以将 Microsoft 或 Entrust 指定为证书颁发机构。  
 
- Configuration Manager 支持将证书部署到不同的证书存储，具体情况视要求、设备类型和操作系统而定。 支持下列设备和操作系统：  
+有关网络设备注册服务如何支持策略模块以便 Configuration Manager 可以部署证书的详细信息，请参阅[结合使用策略模块和网络设备注册服务](http://go.microsoft.com/fwlink/p/?LinkId=328657)。  
+
+Configuration Manager 支持将证书部署到不同的证书存储，具体情况视要求、设备类型和操作系统而定。 支持下列设备和操作系统：  
 
 -   Windows RT 8.1  
 

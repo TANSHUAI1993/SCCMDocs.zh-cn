@@ -16,12 +16,11 @@ caps.handback.revision: 0
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 6f9e6e93fce95666503907010a5c253158c5de7c
-ms.openlocfilehash: f648d7626af50d95fbaa5a7a2abd821a9c47f5d1
+ms.translationtype: HT
+ms.sourcegitcommit: b7461f89f483314bd07248bbc9d5dde85ca6b6c2
+ms.openlocfilehash: e0726febc4c36a26c5e067914734838bf2681e6c
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/07/2017
-
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="task-sequence-steps-in-system-center-configuration-manager"></a>System Center Configuration 中的任务序列步骤
@@ -37,9 +36,9 @@ ms.lasthandoff: 07/07/2017
  此步骤仅可在 Windows PE 中运行。 不能在标准操作系统中运行。 有关此操作的任务序列变量的详细信息，请参阅[任务序列操作变量](task-sequence-action-variables.md)。  
 
 ### <a name="details"></a>详细信息  
- 在此步骤的“属性”选项卡上，可以配置此部分描述的设置。  
+ 在此步骤的“属性”  选项卡上，可以配置此部分描述的设置。  
 
- 此外，使用“选项”选项卡可执行以下操作：  
+ 此外，使用“选项”  选项卡可执行以下操作：  
 
 -   禁用该步骤。  
 
@@ -85,9 +84,9 @@ ms.lasthandoff: 07/07/2017
  此任务序列步骤仅可在 Windows PE 中运行。 不能在标准操作系统中运行。 有关此操作的任务序列变量的详细信息，请参阅 [Apply Driver Package Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_ApplyDriverPackage)。  
 
 ### <a name="details"></a>详细信息  
- 在此步骤的“属性”选项卡上，可以配置此部分描述的设置。  
+ 在此步骤的“属性”  选项卡上，可以配置此部分描述的设置。  
 
- 此外，使用“选项”选项卡可执行以下操作：  
+ 此外，使用“选项”  选项卡可执行以下操作：  
 
 -   禁用该步骤。  
 
@@ -122,9 +121,9 @@ ms.lasthandoff: 07/07/2017
  标准操作系统或 Windows PE 中均可运行此任务序列步骤。 有关此操作的任务序列变量的详细信息，请参阅 [Apply Network Settings Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_ApplyNetworkSettings)。  
 
 ### <a name="details"></a>详细信息  
- 在此步骤的“属性”选项卡上，可以配置此部分描述的设置。  
+ 在此步骤的“属性”  选项卡上，可以配置此部分描述的设置。  
 
- 此外，使用“选项”选项卡可执行以下操作：  
+ 此外，使用“选项”  选项卡可执行以下操作：  
 
 -   禁用该步骤。  
 
@@ -185,9 +184,9 @@ ms.lasthandoff: 07/07/2017
  此任务序列步骤仅可在 Windows PE 中运行。 不能在标准操作系统中运行。 有关此操作的任务序列变量的详细信息，请参阅 [Apply Operating System Image Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_ApplyOperatingSystem)。  
 
 ### <a name="details"></a>详细信息  
- 在此步骤的“属性”选项卡上，可以配置此部分描述的设置。  
+ 在此步骤的“属性”  选项卡上，可以配置此部分描述的设置。  
 
- 此外，使用“选项”选项卡可执行以下操作：  
+ 此外，使用“选项”  选项卡可执行以下操作：  
 
 -   禁用该步骤。  
 
@@ -239,9 +238,9 @@ ms.lasthandoff: 07/07/2017
  此任务序列步骤仅可在 Windows PE 中运行。 不能在标准操作系统中运行。 有关此操作的任务序列变量的详细信息，请参阅 [Apply Windows Settings Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_ApplyWindowsSettings)。  
 
 ### <a name="details"></a>详细信息  
- 在此步骤的“属性”选项卡上，可以配置此部分描述的设置。  
+ 在此步骤的“属性”  选项卡上，可以配置此部分描述的设置。  
 
- 此外，使用“选项”选项卡可执行以下操作：  
+ 此外，使用“选项”  选项卡可执行以下操作：  
 
 -   禁用该步骤。  
 
@@ -304,9 +303,9 @@ ms.lasthandoff: 07/07/2017
 此任务序列步骤仅可在 Windows PE 中运行。 不能在标准操作系统中运行。 有关此操作的任务序列变量的详细信息，请参阅 [Auto Apply Drivers Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_AutoApplyDrivers)。  
 
 ### <a name="details"></a>详细信息  
- 在此步骤的“属性”选项卡上，可以配置此部分描述的设置。  
+ 在此步骤的“属性”  选项卡上，可以配置此部分描述的设置。  
 
- 此外，使用“选项”选项卡可执行以下操作：  
+ 此外，使用“选项”  选项卡可执行以下操作：  
 
 -   禁用该步骤。  
 
@@ -344,9 +343,9 @@ ms.lasthandoff: 07/07/2017
  此任务序列步骤仅可在标准操作系统中运行。 不可在 Windows PE 中运行。 有关此操作的任务序列变量的详细信息，请参阅 [Capture Network Settings Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_CaptureNetworkSettings)。  
 
 ### <a name="details"></a>详细信息  
- 在此步骤的“属性”选项卡上，可以配置此部分描述的设置。  
+ 在此步骤的“属性”  选项卡上，可以配置此部分描述的设置。  
 
- 此外，使用“选项”选项卡可执行以下操作：  
+ 此外，使用“选项”  选项卡可执行以下操作：  
 
 -   禁用该步骤。  
 
@@ -378,9 +377,9 @@ ms.lasthandoff: 07/07/2017
  此任务序列步骤仅可在 Windows PE 中运行。 不能在标准操作系统中运行。 有关此操作的任务序列变量的详细信息，请参阅 [Capture Operating System Image Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_CaptureOperatingSystemImage)。  
 
 ### <a name="details"></a>详细信息  
- 在此步骤的“属性”选项卡上，可以配置此部分描述的设置。  
+ 在此步骤的“属性”  选项卡上，可以配置此部分描述的设置。  
 
- 此外，使用“选项”选项卡可执行以下操作：  
+ 此外，使用“选项”  选项卡可执行以下操作：  
 
 -   禁用该步骤。  
 
@@ -421,9 +420,9 @@ ms.lasthandoff: 07/07/2017
  此任务序列步骤仅可在 Windows PE 中运行。 不能在标准操作系统中运行。 有关此操作的任务序列变量的详细信息，请参阅 [Capture User State Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_CaptureUserState)。  
 
 ### <a name="details"></a>详细信息  
- 在此步骤的“属性”选项卡上，可以配置此部分描述的设置。  
+ 在此步骤的“属性”  选项卡上，可以配置此部分描述的设置。  
 
- 此外，使用“选项”选项卡可执行以下操作：  
+ 此外，使用“选项”  选项卡可执行以下操作：  
 
 -   禁用该步骤。  
 
@@ -481,9 +480,9 @@ ms.lasthandoff: 07/07/2017
  Windows PE 或标准操作系统中均可运行此任务序列步骤。 有关此操作的任务序列变量的详细信息，请参阅 [Capture Windows Settings Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_CaptureWindowsSettings)。  
 
 ### <a name="details"></a>详细信息  
- 在此步骤的“属性”选项卡上，可以配置此部分描述的设置。  
+ 在此步骤的“属性”  选项卡上，可以配置此部分描述的设置。  
 
- 此外，使用“选项”选项卡可执行以下操作：  
+ 此外，使用“选项”  选项卡可执行以下操作：  
 
 -   禁用该步骤。  
 
@@ -510,9 +509,9 @@ ms.lasthandoff: 07/07/2017
  使用“检查准备情况”任务序列步骤验证目标计算机是否满足指定部署必备条件。  
 
 ### <a name="details"></a>详细信息  
- 在此步骤的“属性”选项卡上，可以配置此部分描述的设置。  
+ 在此步骤的“属性”  选项卡上，可以配置此部分描述的设置。  
 
- 此外，使用“选项”选项卡可执行以下操作：  
+ 此外，使用“选项”  选项卡可执行以下操作：  
 
 -   禁用该步骤。  
 
@@ -544,9 +543,9 @@ ms.lasthandoff: 07/07/2017
  标准操作系统或 Windows PE 中均可运行此任务序列步骤。 有关此操作的任务序列变量的详细信息，请参阅 [Connect to Network Folder Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_ConnecttoNetworkFolder)。  
 
 ### <a name="details"></a>详细信息  
- 在此步骤的“属性”选项卡上，可以配置此部分描述的设置。  
+ 在此步骤的“属性”  选项卡上，可以配置此部分描述的设置。  
 
- 此外，使用“选项”选项卡可执行以下操作：  
+ 此外，使用“选项”  选项卡可执行以下操作：  
 
 -   禁用该步骤。  
 
@@ -560,9 +559,9 @@ ms.lasthandoff: 07/07/2017
  标准操作系统或 Windows PE 中均可运行此步骤。 有关此操作的任务序列变量的详细信息，请参阅 [Convert Disk to Dynamic Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_ConvertDisk)。  
 
 ### <a name="details"></a>详细信息  
- 在此步骤的“属性”选项卡上，可以配置此部分描述的设置。  
+ 在此步骤的“属性”  选项卡上，可以配置此部分描述的设置。  
 
- 此外，使用“选项”选项卡可执行以下操作：  
+ 此外，使用“选项”  选项卡可执行以下操作：  
 
 -   禁用该步骤。  
 
@@ -590,9 +589,9 @@ ms.lasthandoff: 07/07/2017
  此步骤仅可在标准操作系统中运行。 不可在 Windows PE 中运行。  
 
 ### <a name="details"></a>详细信息  
- 在此步骤的“属性”选项卡上，可以配置此部分描述的设置。  
+ 在此步骤的“属性”  选项卡上，可以配置此部分描述的设置。  
 
- 此外，使用“选项”选项卡可执行以下操作：  
+ 此外，使用“选项”  选项卡可执行以下操作：  
 
 -   禁用该步骤。  
 
@@ -635,9 +634,9 @@ ms.lasthandoff: 07/07/2017
 标准操作系统或 Windows PE 中均可运行此步骤。 但是，WinPE 中不支持将包保存在 Configuration Manager 客户端缓存中选项。
 
 ### <a name="details"></a>详细信息  
- 在此步骤的“属性”选项卡上，可以配置此部分描述的设置。  
+ 在此步骤的“属性”  选项卡上，可以配置此部分描述的设置。  
 
- 此外，使用“选项”选项卡可执行以下操作：  
+ 此外，使用“选项”  选项卡可执行以下操作：  
 
 -   禁用该步骤。  
 
@@ -1527,9 +1526,9 @@ Configuration Manager 版本 1606 中引入了一个新的任务序列变量 SMS
 >  使用“设置动态变量”步骤导入任务序列并为变量的值选择“机密值”  时，导入该任务序列时将删除该值。 因此，导入任务序列后你必须重新输入动态变量的值。  
 
 ##  <a name="BKMK_SetTaskSequenceVariable"></a>设置任务序列变量  
- 使用“设置任务序列变量”  任务序列步骤来设置与该任务序列配合使用的变量的值。  
+使用“设置任务序列变量”  任务序列步骤来设置与该任务序列配合使用的变量的值。  
 
- 标准操作系统或 Windows PE 中均可运行此步骤。 任务序列变量由任务序列操作读取，并指定这些操作的行为。 有关特定任务序列变量的详细信息，请参阅[任务序列操作变量](task-sequence-action-variables.md)。  
+标准操作系统或 Windows PE 中均可运行此步骤。 任务序列变量由任务序列操作读取，并指定这些操作的行为。 有关特定任务序列变量的详细信息，请参阅[任务序列操作变量](task-sequence-action-variables.md)。  
 
 ### <a name="details"></a>详细信息  
  在此步骤的“属性”  选项卡上，可以配置此部分描述的设置。  
@@ -1553,6 +1552,16 @@ Configuration Manager 版本 1606 中引入了一个新的任务序列变量 SMS
 
  **值**  
  与任务序列变量相关联的值。 此值可以是 %<varname\>% 语法中的另一个任务序列变量。  
+
+## <a name="hide-task-sequence-progress"></a>隐藏任务序列进度
+<!-- 1354291 -->
+在 1706 版本中，可以通过使用新的变量控制何时向最终用户显示任务序列进度。 在任务序列中，使用“设置任务序列变量”步骤来设置“TSDisableProgressUI”变量的值，以隐藏或显示任务序列进度。 你可以在任务序列中多次使用“设置任务序列变量”步骤来更改变量的值。 这样可以在任务序列进度的不同部分中隐藏或显示任务序列。
+
+ - **隐藏任务序列进度**  
+在任务序列编辑器中，使用[设置任务序列变量](#BKMK_SetTaskSequenceVariable)步骤将“TSDisableProgressUI”变量的值设置为“True”，以隐藏任务序列进度。
+
+ - **显示任务序列进度**  
+在任务序列编辑器中，使用[设置任务序列变量](#BKMK_SetTaskSequenceVariable)步骤将“TSDisableProgressUI”变量的值设置为“False”，以显示任务序列进度。
 
 ##  <a name="BKMK_SetupWindowsandConfigMgr"></a>安装 Windows 和 ConfigMgr  
  使用“安装 Windows 和 ConfigMgr”  任务序列步骤执行从 Windows PE 到新操作系统的转移。 此任务序列步骤是在部署任何操作系统时都必需的部分。 该步骤会将 Configuration Manager 客户端安装到新操作系统中，并为任务序列在新操作系统中继续执行做好准备。  

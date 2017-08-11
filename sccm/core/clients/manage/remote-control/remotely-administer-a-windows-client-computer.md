@@ -2,7 +2,7 @@
 title: "远程管理 Windows 计算机 | Microsoft Docs"
 description: "使用 System Center Configuration Manager 管理远程 Windows 客户端计算机。"
 ms.custom: na
-ms.date: 04/23/2017
+ms.date: 07/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,12 +16,11 @@ caps.handback.revision: 0
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 08afca8b422474639cbdb860e555fe0da27361a4
-ms.openlocfilehash: dd794de867e1d0db47be9dc21a6d494087f76bc1
+ms.translationtype: HT
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: aecc4ccfec98932f3988f1ca1fcdc898cd417933
 ms.contentlocale: zh-cn
-ms.lasthandoff: 12/16/2016
-
+ms.lasthandoff: 07/29/2017
 
 ---
 # <a name="how-to-remotely-administer-a-windows-client-computer-by-using-system-center-configuration-manager"></a>如何使用 System Center Configuration Manager 远程管理 Windows 客户端计算机
@@ -91,12 +90,11 @@ ms.lasthandoff: 12/16/2016
 
 -   在 Windows 命令提示符处键入 <Configuration Manager Installation Folder\>**\AdminConsole\Bin\x64\CmRcViewer.exe**  
 
-    > [!NOTE]  
-    >  CmRcViewer.exe 支持以下命令行选项：  
-    >   
-    >  -   *<Address\>* - 指定要连接的客户端计算机的 NetBIOS 名称、完全限定域名 (FQDN) 或 IP 地址。  
-    > -   *<Site Server Name\>* - 指定要向其发送与远程控制会话相关的状态消息的 System Center Configuration Manager 站点服务器的名称。  
-    > -   **/?** - 显示远程控制查看器的命令行选项。  
-    >   
-    >  **示例：CmRcViewer.exe** <Address\> <\\\Site Server Name>  
+CmRcViewer.exe 支持以下命令行选项：  
+
+- Address - 指定要连接的客户端计算机的 NetBIOS 名称、完全限定域名 (FQDN) 或 IP 地址。
+- Site Server Name - 指定要向其发送与远程控制会话相关的状态消息的 System Center Configuration Manager 站点服务器的名称。
+- **/?** - 显示远程控制查看器的命令行选项。  
+     
+**示例：CmRcViewer.exe** <Address\> <\\\Site Server Name>  
 

@@ -2,7 +2,7 @@
 title: "客户端设置 | Microsoft Docs"
 description: "通过使用 System Center Configuration Manager 中的管理控制台选择客户端设置。"
 ms.custom: na
-ms.date: 03/24/2017
+ms.date: 08/01/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,11 +16,11 @@ caps.handback.revision: 0
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c8717925dba42451b1e241a7c2f59e43896d7d99
-ms.openlocfilehash: 4a169098f30e4a9d708e41ee25c6a400d5ff0e85
+ms.translationtype: HT
+ms.sourcegitcommit: c0d94b8e6ca6ffd82e879b43097a9787e283eb6d
+ms.openlocfilehash: a8233c361e1a78b14a02f328da445814624e38d8
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/19/2017
+ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="about-client-settings-in-system-center-configuration-manager"></a>关于 System Center Configuration Manager 中的客户端设置
@@ -55,7 +55,7 @@ System Center Configuration Manager 中的所有客户端设置在 Configuration
 
 -   **限制时段外的最大传输速率(Kbps)**  
 
-   选择在限制时段之外允许 BITS 限制时，指定客户端在 BITS 限制时段外将使用的最大传输速率。  
+   选择在限制时段之外允许 BITS 限制时，指定客户端在 BITS 限制时段外使用的最大传输速率。  
 
 ## <a name="client-cache-settings"></a>客户端缓存设置
 
@@ -63,9 +63,25 @@ System Center Configuration Manager 中的所有客户端设置在 Configuration
 
   从版本 1606 开始，使用此设置可设置客户端计算机的 [BranchCache](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#branchcache)。 若要允许客户端上的 BranchCache 缓存，请将“启用 BranchCache”设置为“是”。
 
+- **启用 BranchCache**
+
+在客户端计算机上启用 BranchCache。
+
+- **最大 BranchCache 缓存大小（占磁盘的百分比）**。
+
 - **配置客户端缓存大小**
 
-  Windows 计算机上的客户端缓存会保存用于安装应用程序和程序的临时文件。 选择“是”可指定“最大缓存大小”（MB 或磁盘百分比）。 客户端缓存大小可以扩展到最大大小（按 MB 或磁盘百分比指定），以较小者为准。 如果此选项为“否”，则默认大小为 5,120 MB。
+  Windows 计算机上的客户端缓存会保存用于安装应用程序和程序的临时文件。 选择“是”，然后指定：
+    - 最大缓存大小 (MB)。 
+    - 最大缓存大小（占磁盘的百分比）。
+客户端缓存大小可以扩展到最大大小（按 MB 或磁盘百分比指定），以较小者为准。 如果此选项为“否”，则默认大小为 5,120 MB。
+
+- **在完整的 OS 中启用 Configuration Manager 客户端，以共享内容**
+
+启用用于 Configuration Manager 客户端的对等缓存。 然后，指定客户端与对等计算机进行通信的端口信息。 Configuration Manager 将自动配置 Windows 防火墙规则以允许此流量。 如果使用其他防火墙，则必须手动配置规则以允许此流量。
+
+
+
 
 ## <a name="client-policy"></a>客户端策略  
 
@@ -107,7 +123,7 @@ System Center Configuration Manager 中的所有客户端设置在 Configuration
 
   -   基于 Internet 的管理点可通过使用 Windows 身份验证（Kerberos 或 NTLM）成功地对用户进行验证。  
 
-   如果将此选项保留为“假” 或“否”，或者任何一个条件失败，则 Internet 上的计算机将仅收到计算机策略。 在此情况下，用户仍然能够查看、请求和安装基于 Internet 的应用程序目录中的应用程序。 如果此设置为“False”或“否”，但“在客户端上启用用户策略轮询”为“True”或“在客户端上启用用户策略”为“是”，则在计算机连接到 Intranet 之前，用户将不会收到用户策略。  
+   如果将此选项保留为“False” 或“否”，或者任何一个条件失败，则 Internet 上的计算机将仅收到计算机策略。 在此情况下，用户仍然能够查看、请求和安装基于 Internet 的应用程序目录中的应用程序。 如果此设置为“False”或“否”，但“在客户端上启用用户策略轮询”为“True”或“在客户端上启用用户策略”为“是”，则在计算机连接到 Intranet 之前，用户将不会收到用户策略。  
 
    有关在 Internet 上管理客户端的详细信息，请参阅 [System Center Configuration Manager 中终结点之间的通信](../../../core/plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan)中的[来自 Internet 或不受信任林的客户端通信的注意事项](../../../core/plan-design/hierarchy/communications-between-endpoints.md)。  
 
@@ -118,7 +134,7 @@ System Center Configuration Manager 中的所有客户端设置在 Configuration
 
 -   **计划符合性评估**  
 
-     选择“计划”以创建将在用户部署配置基线时向用户显示的默认计划。 可以在“部署配置基线”对话框中为每个基线配置此值。  
+     选择“计划”以创建在用户部署配置基线时向用户显示的默认计划。 可以在“部署配置基线”对话框中为每个基线配置此值。  
 
 -   **启用用户数据和配置文件**  
 
@@ -140,7 +156,7 @@ System Center Configuration Manager 中的所有客户端设置在 Configuration
 
      -   你想要为客户端手动配置最接近的服务器，或者确保客户端不跨慢速网络连接连接到服务器。  
 
-     -   你想要控制哪些客户端连接到哪台服务器。 这可能是出于测试、性能或商业原因。  
+     -   你想要控制哪些客户端连接到哪台服务器。 此配置可能出于测试、性能或商业原因。  
 
      -   你不想等待 25 个小时之久，或者不想为客户端网络更改配置其他应用程序目录网站点。  
 
@@ -228,7 +244,7 @@ System Center Configuration Manager 中的所有客户端设置在 Configuration
     -   使用 Configuration Manager 软件开发工具包 (SDK)，管理客户端代理通知以及应用程序和软件更新的安装。  
 
     > [!WARNING]  
-    >  如果在任一条件都不适用时选择此选项，则将不在客户端上安装软件更新和所需的应用程序。 此设置不阻止用户安装应用程序目录中的应用程序，或者不阻止在客户端计算机上安装包、程序以及任务序列。  
+    >  如果在任一条件都不适用时选择此选项，则不会在客户端上安装软件更新和所需的应用程序。 此设置不阻止用户安装应用程序目录中的应用程序，或者不阻止在客户端计算机上安装包、程序以及任务序列。  
 
 -   **PowerShell 执行策略**  
 

@@ -2,7 +2,7 @@
 title: "数据仓库 | Microsoft 文档"
 description: "System Center Configuration Manager 的数据仓库服务点和数据库"
 ms.custom: na
-ms.date: 5/31/2017
+ms.date: 7/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,10 +16,10 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: HT
-ms.sourcegitcommit: ef42d1483053e9a6c502f4ebcae5a231aa6ba727
-ms.openlocfilehash: c421c3495f56503d5cbda7b1a5ab5350a168912d
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: eedbf12d3bf628666efc90c85a8dfab37e4dc9ab
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/26/2017
+ms.lasthandoff: 07/29/2017
 
 ---
 #  <a name="the-data-warehouse-service-point-for-system-center-configuration-manager"></a>System Center Configuration Manager 的数据仓库服务点
@@ -27,11 +27,12 @@ ms.lasthandoff: 07/26/2017
 
 从 1702 版开始，可以使用数据仓库服务点存储和报告关于 Configuration Manager 部署的长期历史数据。
 
-> [!TIP]  
-> 如 1702 版所述，数据仓库服务点属于预发行功能。 若要启用此功能，请参阅[使用预发行功能](/sccm/core/servers/manage/pre-release-features)。
+> [!TIP]
+> 在 1702 版中，数据仓库服务点属于预发行功能。 若要启用此功能，请参阅[使用预发行功能](/sccm/core/servers/manage/pre-release-features)。
 
-数据仓库最多支持 2 TB 数据，且具有跟踪更改的时间戳。 通过从 Configuration Manager 站点数据库自动同步到数据仓库数据库可实现数据存储。 然后，可从 Reporting Services 点访问此信息。
+> 从版本 1706 开始，此功能不再属于预发行功能。
 
+数据仓库最多支持 2 TB 数据，且具有跟踪更改的时间戳。 通过从 Configuration Manager 站点数据库自动同步到数据仓库数据库可实现数据存储。 然后，可从 Reporting Services 点访问此信息。 同步到数据仓库数据库的数据将保留三年。 内置任务会定期删除超过三年的数据。
 
 同步的数据包括以下全局数据和站点数据组中的对象：
 - 基础结构运行状况
@@ -46,15 +47,22 @@ ms.lasthandoff: 07/26/2017
 
 
 ## <a name="prerequisites-for-the-data-warehouse-service-point"></a>数据仓库服务点的先决条件
+- 只有在层次结构的顶层站点中才会支持数据仓库站点系统角色。 （管理中心站点或独立主站点）。
 - 安装站点系统角色的计算机要求具有 .NET Framework 4.5.2 或更高版本。
 - 安装站点系统角色的计算机的计算机帐户用于将数据与数据仓库数据库同步。 此帐户要求具有以下权限：  
   - 在将托管数据仓库数据库的计算机上是**管理员**。
   - 对数据仓库数据库具有 **DB_owner** 权限。
   - 顶层站点站点数据库的 DB_reader 和 execute 权限。
--   SQL Server 2012 或更高版本的默认或命名的实例上支持数据仓库数据库。 版本必须为企业版或数据中心版。
-  - SQL Server AlwaysOn 可用性组：不支持此配置。
-  - SQL Server 群集：不支持 SQL Server 故障转移群集。 这是因为数据仓库数据库尚未在 SQL Server 故障转移群集上进行深入测试。
-  - 当数据仓库数据库是站点服务器数据库的远程数据库时，必须具有单独的 SQL Server（用于托管数据库）许可证。
+- 数据仓库数据库需要使用 SQL Server 2012 或更高版本。 版本可以是 Standard、Enterprise 或 Datacenter。
+- 支持以下 SQL Server 配置来托管仓库数据库：  
+  - 默认实例
+  - 命名实例
+  - SQL Server Always On 可用性组
+  - SQL Server 故障转移群集
+-   当数据仓库数据库是站点服务器数据库的远程数据库时，必须具有每个 SQL Server（用于托管数据库）单独的许可证。
+- 如果你使用[分布式视图](/sccm/core/servers/manage/data-transfers-between-sites#bkmk_distviews)，则必须在托管管理中心站点的站点数据库的同一服务器上安装数据仓库服务点站点系统角色。
+
+
 
 > [!IMPORTANT]  
 > 当运行数据仓库服务点或托管数据仓库数据库的计算机运行以下任一语言时，不支持数据仓库：
@@ -65,9 +73,7 @@ ms.lasthandoff: 07/26/2017
 
 
 ## <a name="install-the-data-warehouse"></a>安装数据仓库
-可将此站点系统角色仅安装在层次结构的顶层站点（管理中心站点或独立主站点）。
-
-每个层次结构都支持单个此角色的实例，并且可位于该顶层站点的任何站点系统上。 相对于站点系统角色而言，托管仓库数据库的 SQL Server 可以是本地的，也可以是远程的。 尽管数据仓库与在同一站点中安装的 Reporting Services 点兼容，但不需要将这两个站点系统角色安装在同一台服务器上。   
+在顶层站点的任何站点系统上，每个层次结构都支持此角色的单个实例。 相对于站点系统角色而言，托管仓库数据库的 SQL Server 可以是本地的，也可以是远程的。 尽管数据仓库与在同一站点中安装的 Reporting Services 点兼容，但不需要将这两个站点系统角色安装在同一台服务器上。   
 
 若要安装该角色，请使用“添加站点系统角色向导”或“创建站点系统服务器向导”。 有关详细信息，请参阅[安装站点系统角色](/sccm/core/servers/deploy/configure/install-site-system-roles)。  
 
@@ -83,7 +89,8 @@ ms.lasthandoff: 07/26/2017
  - **SQL Server 实例名称(如果适用)**：   
  如果不使用 SQL Server 的默认实例，必须指定该实例。
  - **数据库名称**：   
- 指定数据仓库数据库的名称。  Configuration Manager 将使用此名称创建数据仓库数据库。 如果指定 SQL server 实例上已存在的数据库名称，则 Configuration Manager 将使用该数据库。
+ 指定数据仓库数据库的名称。 数据库名称不能超过 10 个字符。 （在未来版本中，支持的名称长度会增加）。
+ Configuration Manager 使用此名称创建数据仓库数据库。 如果指定 SQL Server 实例上已存在的数据库名称，则 Configuration Manager 会使用该数据库。
  - **用于连接的 SQL Server 端口**：   
  指定为托管数据仓库数据库的 SQL Server 配置的 TCP/IP 端口号。 数据仓库同步服务使用此端口连接到数据仓库数据库。  
 
@@ -125,7 +132,7 @@ ms.lasthandoff: 07/26/2017
 ## <a name="move-the-data-warehouse-database"></a>迁移数据仓库数据库
 使用以下步骤将数据仓库数据库移到新的 SQL Server：
 
-1.  使用 SQL Server Management Studio 备份数据仓库数据库，然后将该数据库还原到要托管此数据仓库的新计算机上的 SQL Server。   
+1.  使用 SQL Server Management Studio 备份数据仓库数据库。 然后，将该数据库还原到托管数据仓库的新计算机上的 SQL Server。   
 > [!NOTE]     
 > 将数据库还原到新服务器后，请确保新数据仓库数据库与原始数据仓库数据库上的数据库访问权限相同。  
 
@@ -146,7 +153,7 @@ ms.lasthandoff: 07/26/2017
 
 
 **已知同步问题**：   
-同步失败，同时 *Microsoft.ConfigMgrDataWarehouse.log* 中出现以下消息：**“填充架构对象失败”**  
+同步失败，同时 Microsoft.ConfigMgrDataWarehouse.log 中出现以下消息：“填充架构对象失败”  
  - **解决方案**：  
     请确保托管站点系统角色的计算机的计算机帐户是数据仓库数据库上的 **db_owner**。
 
@@ -167,7 +174,7 @@ ms.lasthandoff: 07/26/2017
     2. 打开“SQL Server 配置管理器”，在“SQL Server 网络置配”下右键单击选择“MSSQLSERVER 协议”下的“属性”。 然后，在“证书”选项卡上，选择“数据仓库 SQL Server 标识证书”作为证书，然后保存所做更改。  
     3. 打开“SQL Server 配置管理器”，在“SQL Server 服务”下，重启“SQL Server 服务” 和“报告服务”。
     4.  打开 Microsoft 管理控制台 (MMC)，然后添加**证书**的管理单元，选择以管理本地计算机的**计算机帐户**的证书。 然后，在 MMC 中，展开“个人”文件夹 >“证书”，然后将“数据仓库 SQL Server 标识证书”导出为 **DER 编码的二进制 X.509 (.CER)** 文件。    
-  2.    在托管 SQL Server Reporting Services 的计算机上，打开 MMC，然后添加**证书**的管理单元，然后选择以管理**计算机帐户**的证书。 在**受信任的根证书颁发机构**文件夹下，导入**数据仓库 SQL Server 标识证书**。
+  2.    在托管 SQL Server Reporting Services 的计算机上，打开 MMC，然后添加证书的管理单元。 然后选择以管理计算机帐户的证书。 在**受信任的根证书颁发机构**文件夹下，导入**数据仓库 SQL Server 标识证书**。
 
 
 ## <a name="data-warehouse-dataflow"></a>数据仓库数据流   
@@ -186,5 +193,5 @@ ms.lasthandoff: 07/26/2017
 |:------:|-----------|  
 | **A**  |  通过使用内置报表，用户可提出数据请求。 该请求将通过 SQL Server Reporting Services 传递到 Reporting Services 点。 |  
 | **B**  |      大多数报表针对当前信息，然后对站点数据库运行这些请求。 |  
-| **C**  | 报表通过使用类别为**数据仓库**的其中一个报表请求历史数据时，则会对数据仓库数据库运行该请求。   |  
+| **C**  | 报表通过使用“类别”为“数据仓库”的其中一个报表请求历史数据时，则会对数据仓库数据库运行该请求。   |  
 

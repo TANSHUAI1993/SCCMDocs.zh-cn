@@ -16,12 +16,11 @@ caps.handback.revision: 0
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0cf2ac6440588ccf4848baa7a195f78e8675447d
-ms.openlocfilehash: c6a1eb9ccaee45eb242fb320cb6b492d1a39d349
+ms.translationtype: HT
+ms.sourcegitcommit: 0663ba84762c44a5c303562548499f195bae9e1c
+ms.openlocfilehash: cc678c1133b1944f55bcad309cf9ede9f0660b57
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
-
+ms.lasthandoff: 08/01/2017
 
 ---
 # <a name="manage-boot-images-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 管理启动映像
@@ -33,15 +32,7 @@ Configuration Manager 中的一个启动映像是在操作系统部署过程中�
 ## <a name="BKMK_BootImageDefault"></a>默认启动映像
 Configuration Manager 提供两个默认启动映像：一个用于支持 x86 平台，另一个用于支持 x64 平台。 这些映像存储在以下路径中：\\\\*servername*>\SMS_<*sitecode*>\osd\boot\\<*x64*> or <*i386*>。 将根据所采用的操作更新或重新生成默认启动映像。
 
-**使用更新和服务安装 Configuration Manager 的最新版本** 从版本 1702 开始，如果升级 Windows ADK 版本，然后使用更新和服务安装最新版本的 Configuration Manager，Configuration Manager 将重新生成默认启动映像。 这包括已更新的 Windows ADK 中的新 Window PE 版本、新版本的 Configuration Manager 客户端、驱动程序、自定义项等。不会修改自定义启动映像。
-
-在版本 1702 之前，Configuration Manager 会使用客户端组件、驱动程序、自定义项等更新现有启动映像 (boot.wim)，但不会使用 Windows ADK 中的最新版本 Windows PE。 必须手动修改启动映像才能使用 Windows ADK 的最新版本。
-
-**从 Configuration Manager 2012 升级到 Configuration Manager Current Branch (CB)** 通过使用安装过程从 Configuration Manager 2012 升级到 Configuration Manager CB 时，Configuration Manager 将重新生成默认启动映像。 这包括已更新的 Windows ADK 中的新 Window PE 版本、新版本的 Configuration Manager 客户端，且所有自定义项保持不变。 不会修改自定义启动映像。
-
-**使用启动映像更新分发点** 从 Configuration Manager 控制台中的“启动映像”节点使用“更新分发点”操作时，Configuration Manager 将使用客户端组件、驱动程序、自定义项等更新默认启动映像，但不会使用 Windows ADK 中的最新版本 Windows PE。 不会修改自定义启动映像。
-
-此外，对于上述任一操作，请考虑以下内容：
+请考虑执行以下部分中描述的任意操作：
 - 源驱动程序对象必须有效（包括驱动程序源文件），否则驱动程序不会添加到站点上的启动映像。
 - 不会修改不基于默认启动映像的启动映像（即使使用相同的 Windows ADK 版本）。
 - 必须将已修改的启动映像重新分发到分发点。
@@ -50,6 +41,21 @@ Configuration Manager 提供两个默认启动映像：一个用于支持 x86 �
 
 > [!NOTE]
 > 向已添加到“软件库”的所有启动映像中添加了 Configuration Manager 跟踪日志工具。 处于 Windows PE 中时，可以通过从命令提示符键入 **CMTrace** 以启动 Configuration Manager 跟踪日志工具。  
+
+### <a name="use-updates-and-servicing-to-install-the-latest-version-of-configuration-manager"></a>使用更新和服务来安装最新版本的 Configuration Manager
+从版本 1702 开始，如果升级 Windows ADK 版本，然后使用更新和服务安装 Configuration Manager 的最新版本，Configuration Manager 将重新生成默认启动映像。 这包括已更新的 Windows ADK 中的新 Window PE 版本、新版本的 Configuration Manager 客户端、驱动程序、自定义项等。不会修改自定义启动映像。
+
+在版本 1702 之前，Configuration Manager 会使用客户端组件、驱动程序、自定义项等更新现有启动映像 (boot.wim)，但不会使用 Windows ADK 中的最新版本 Windows PE。 必须手动修改启动映像才能使用 Windows ADK 的最新版本。
+
+### <a name="upgrade-from-configuration-manager-2012-to-configuration-manager-current-branch-cb"></a>从 Configuration Manager 2012 升级到 Configuration Manager Current Branch (CB)
+通过使用安装过程从 Configuration Manager 2012 升级到 Configuration Manager CB 时，Configuration Manager 将重新生成默认启动映像。 这包括已更新的 Windows ADK 中的新 Window PE 版本、新版本的 Configuration Manager 客户端，且所有自定义项保持不变。 不会修改自定义启动映像。
+
+### <a name="update-distribution-points-with-the-boot-image"></a>利用启动映像更新分发点
+从 Configuration Manager 控制台中的“启动映像”节点使用“更新分发点”操作时，Configuration Manager 使用客户端组件、驱动程序、自定义项等更新默认启动映像。    
+
+从 Configuration Manager 版本 1706 开始，可以选择在启动映像中从 Windows ADK 安装目录重载最新版本的 Windows PE。 更新分发点向导的“常规”页提供有关安装在站点服务器上的 Windows ADK 版本、启动映像中使用 Windows PE 的 Windows ADK 版本以及 Configuration Manager 客户端版本的信息。 你可以使用此信息来帮助你决定是否重载启动映像。 此外，当你在“启动映像”节点中查看启动映像时，新列（**客户端版本**）已添加，这样你就了解每个启动映像使用的 Configuration Manager 客户端是哪个版本。    
+
+不会修改自定义启动映像。
 
 ##  <a name="BKMK_BootImageCustom"></a>自定义启动映像  
  Configuration Manager 控制台基于来自受支持的 Windows ADK 版本中的 Windows PE 版本时，可从 Configuration Manager 控制台自定义启动映像或[修改启动映像](#BKMK_ModifyBootImages)。 使用新版本升级站点并且安装新版本的 Windows ADK 时，不会使用新版本的 Windows ADK 更新自定义启动映像（不在默认启动映像位置）。 发生这种情况时，你不再能够在 Configuration Manager 控制台中自定义启动映像。 但是，它们将继续如同升级之前一样正常工作。  
@@ -123,7 +129,7 @@ Configuration Manager 提供两个默认启动映像：一个用于支持 x86 �
 >   
 >  有关使用 PXE 部署操作系统的详细信息，请参阅[使用 PXE 通过网络部署 Windows](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md)。  
 
- 关于分发启动映像的步骤，请参阅 [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content)。  
+ 关于分发启动映像的步骤，请参阅 [Distribute content](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_distribute)。  
 
 ##  <a name="BKMK_ModifyBootImages"></a>修改启动映像  
  你可在映像中添加或删除设备驱动程序，或编辑与启动映像关联的属性。 你可添加或删除的设备驱动程序包括网络适配器或大容量存储设备驱动程序。 在修改启动映像时，请考虑以下因素：  
@@ -132,7 +138,7 @@ Configuration Manager 提供两个默认启动映像：一个用于支持 x86 �
 
 -   在修改启动映像时，启动映像不会更改启动映像所引用的任何关联的包。  
 
--   对启动映像进行更改后，你必须 **更新** 已经具有启动映像的分发点上的启动映像，以便使用最新版本的启动映像。 有关详细信息，请参阅 [Manage content you have distributed](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkmanagea-manage-the-content-you-have-distributed)。  
+-   对启动映像进行更改后，你必须 **更新** 已经具有启动映像的分发点上的启动映像，以便使用最新版本的启动映像。 有关详细信息，请参阅 [Manage content you have distributed](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_manage)。  
 
  使用下列过程来修改启动映像。  
 
@@ -213,7 +219,7 @@ Configuration Manager 提供两个默认启动映像：一个用于支持 x86 �
         -   设置“预留分发点设置”  以指定要如何将启动映像分发到为预留内容启用的分发点。  
 
             > [!NOTE]  
-            >  有关预留内容的详细信息，请参阅 [Prestage content](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkprestagea-use-prestaged-content)。  
+            >  有关预留内容的详细信息，请参阅 [Prestage content](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_prestage)。  
 
     -   在“内容位置”  选项卡上，选择分发点或分发点组以执行下列任何操作：  
 

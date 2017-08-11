@@ -16,12 +16,11 @@ caps.handback.revision: 0
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9206b82eca02877c30eebf146d42bcca7290eb42
-ms.openlocfilehash: 7a5ff0e75b8cdac68e3854c4f5aba01a7d423e9b
+ms.translationtype: HT
+ms.sourcegitcommit: afe0ecc4230733fa76e41bf08df5ccfb221da7c8
+ms.openlocfilehash: 506df4f7c7baa5f0586a1ddf0cb02b3de9f4d076
 ms.contentlocale: zh-cn
-ms.lasthandoff: 12/30/2016
-
+ms.lasthandoff: 08/04/2017
 
 ---
 # <a name="how-to-manage-clients-for-linux-and-unix-servers-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中管理 Linux 和 UNIX 服务器客户端
@@ -31,7 +30,7 @@ ms.lasthandoff: 12/30/2016
 当使用 System Center Configuration Manager 管理 Linux 和 UNIX 服务器时，可以配置集合、维护时段和客户端设置，以帮助管理服务器。 此外，尽管适用于 Linux 和 UNIX 的 Configuration Manager 客户端没有用户界面，但可以强制客户端手动轮询客户端策略。
 
 ##  <a name="BKMK_CollectionsforLnU"></a> Collections of Linux and UNIX servers  
- 使用集合管理 Linux 和 UNIX 服务器组的方式与使用集合管理其他客户端类型的方式相同。 集合可以是直接成员身份集合，也可以是基于查询的集合（用于确定客户端操作系统、硬件配置或有关站点数据库中存储的客户端的其他详细信息）。 例如，你可以使用包括 Linux 和 UNIX 服务器的集合来管理下列各项：  
+ 使用集合管理 Linux 和 UNIX 服务器组的方式与使用集合管理其他客户端类型的方式相同。 集合可以是直接成员身份集合，也可以是基于查询的集合。 基于查询的集合用于确定客户端操作系统、硬件配置或有关站点数据库中存储的客户端的其他详细信息。 例如，你可以使用包括 Linux 和 UNIX 服务器的集合来管理下列设置：  
 
 -   客户端设置  
 
@@ -45,7 +44,7 @@ ms.lasthandoff: 12/30/2016
 
  在 Configuration Manager 控制台的“资产和符合性”工作区中的“设备”节点下，可查看有关运行 Linux 和 UNIX 的 Configuration Manager 客户端的计算机的详细信息。 在 Configuration Manager 控制台的“资产和符合性”工作区中，可在“操作系统”列中查看每台计算机的操作系统名称。  
 
- 默认情况下，Linux 和 UNIX 服务器属于 **所有系统** 集合的成员。 建议生成仅包括 Linux 和 UNIX 服务器或其子集的自定义集合。 通过此集合，可管理向诸如计算机组部署软件或分配客户端设置等操作，以便准确衡量部署是否成功。   
+ 默认情况下，Linux 和 UNIX 服务器属于 **所有系统** 集合的成员。 建议生成仅包括 Linux 和 UNIX 服务器或其子集的自定义集合。 通过自定义集合，可管理向诸如计算机组部署软件或分配客户端设置等操作，以便准确衡量部署是否成功。   
 
  在为 Linux 和 UNIX 服务器生成自定义集合时，请包含成员身份规则查询，并在这些查询中包括操作系统特性的 Caption 特性。 有关创建集合的信息，请参阅[如何在 System Center Configuration Manager 中创建集合](../../../core/clients/manage/collections/create-collections.md)。  
 

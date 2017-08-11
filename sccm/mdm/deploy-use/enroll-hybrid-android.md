@@ -2,7 +2,7 @@
 title: "使用 System Center Configuration Manager 和 Microsoft Intune 设置 Android 混合设备管理 | Microsoft Docs"
 description: "使用 Configuration Manager 和 Intune 准备管理 Android 移动设备。"
 ms.custom: na
-ms.date: 03/27/2017
+ms.date: 07/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,12 +16,11 @@ caps.handback.revision: 0
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 86620254897aa9a775dc433de7010b5814c1ec3e
-ms.openlocfilehash: af6fa2dfae5549e89c46d05d0cef1e24342558f9
+ms.translationtype: HT
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: b47ecd1754a623b1b57dc5c5ecb42a6b0b64404e
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/06/2017
-
+ms.lasthandoff: 07/29/2017
 
 ---
 # <a name="set-up-android-hybrid-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>使用 System Center Configuration Manager 和 Microsoft Intune 设置 Android 混合设备管理
@@ -39,6 +38,9 @@ ms.lasthandoff: 07/06/2017
 2. 在 Configuration Manager 控制台的“管理”工作区中，选择“概述” > “云服务” > “Microsoft Intune 订阅”，然后选择你的 Intune 订阅。  
 3. 在“主页”选项卡上的“订阅”组中，选择“配置平台” > “Android”。  
 4. 在“Microsoft Intune 订阅属性” 对话框中，选择“Android” 选项卡并选中“启用 Android 注册” 框。  
+
+> [!NOTE]
+>  “阻止个人拥有的设备”功能目前不可用。 
 
  设置完成后，需要让用户知道如何注册其设备。 请参阅[用户需要了解的有关设备注册的内容](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune)。 此信息适用于 Microsoft Intune 和 Configuration Manager 托管的移动设备。
 

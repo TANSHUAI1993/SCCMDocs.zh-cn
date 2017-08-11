@@ -16,12 +16,11 @@ caps.handback.revision: 0
 author: Nbigman
 ms.author: nbigman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: aa8924a013ebdbee888cab33001fddbe7ad2d67e
-ms.openlocfilehash: 80a716f5a42a81e5550eb1b5c7f14534e14a4fb7
+ms.translationtype: HT
+ms.sourcegitcommit: c0d94b8e6ca6ffd82e879b43097a9787e283eb6d
+ms.openlocfilehash: 1e00804d27ecef2aadd8bfa395db1919c46243ee
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
-
+ms.lasthandoff: 08/02/2017
 
 ---
 
@@ -34,10 +33,16 @@ ms.lasthandoff: 05/17/2017
 
 本主题介绍如何创建受信任的根和 SCEP 证书配置文件。 若要创建 PFX 证书配置文件，请参阅 [Create PFX certificate profiles](../../protect/deploy-use/create-pfx-certificate-profiles.md)（创建 PFX 证书配置文件）。
 
+创建证书配置文件：
 
-## <a name="create-a-new-certificate-profile"></a>创建新的证书配置文件  
+1.  启动“创建证书配置文件向导”。
+1.  提供有关证书的一般信息。
+1.  配置受信任证书颁发机构 (CA) 的证书。  
+1.  配置 SCEP 证书信息（仅针对 SCEP 证书）。  
+1.  为证书配置文件指定支持的平台。
 
-### <a name="start-the-create-certificate-profile-wizard"></a>启动“创建证书配置文件向导”  
+
+## <a name="start-the-create-certificate-profile-wizard"></a>启动“创建证书配置文件向导”  
 
 1.  在 System Center Configuration Manager 控制台中，单击“资产和符合性”。  
 
@@ -45,7 +50,7 @@ ms.lasthandoff: 05/17/2017
 
 3.  在“主页”  选项卡上的“创建”  组中，单击“创建证书配置文件” 。  
 
-### <a name="provide-general-information-about-the-certificate-profile"></a>提供有关证书配置文件的一般信息  
+## <a name="provide-general-information-about-the-certificate-profile"></a>提供有关证书配置文件的一般信息  
 
 在“创建证书配置文件向导”的“常规”  页上，指定下列信息：  
 
@@ -59,11 +64,12 @@ ms.lasthandoff: 05/17/2017
 
 -   **简单证书注册协议 (SCEP) 设置**：如果要通过使用简单证书注册协议和网络设备注册服务角色服务为用户或设备请求证书，请选择此证书配置文件类型。
 
--   **个人信息交换 PKCS #12 (PFX) 设置 - 导入**：选择此项可导入 PFX 证书。 若要了解有关 PFX 证书创建的详细信息，请参阅 [Create PFX certificate profiles](../../protect/deploy-use/create-pfx-certificate-profiles.md)（创建 PFX 证书配置文件）。
+-   **个人信息交换 PKCS #12 (PFX) 设置 - 导入**：选择此项可导入 PFX 证书。 若要了解有关 PFX 证书创建的详细信息，请参阅[导入 PFX 证书配置文件](/sccm/mdm/deploy-use/import-pfx-certificate-profiles.md)。
+
+-   **个人信息交换 PKCS #12 (PFX) 设置 - 创建**：选择此项可使用证书颁发机构处理 PFX 证书。 若要了解有关 PFX 证书创建的详细信息，请参阅 [Create PFX certificate profiles](/sccm/mdm/deploy-use/create-pfx-certificate-profiles.md)（创建 PFX 证书配置文件）。
 
 
-
-### <a name="configure-a-trusted-ca-certificate"></a>配置受信任的 CA 证书  
+## <a name="configure-a-trusted-ca-certificate"></a>配置受信任的 CA 证书  
 
 > [!IMPORTANT]  
 >  你至少必须配置一个受信任的 CA 证书配置文件，然后才能创建 SCEP 证书配置文件。    
@@ -89,7 +95,7 @@ ms.lasthandoff: 05/17/2017
 2.  使用“证书指纹”  值来验证是否导入了正确的证书。  
 
 
-### <a name="configure-scep-certificate-information-only-for-scep-certificates"></a>配置 SCEP 证书信息（仅针对 SCEP 证书）  
+## <a name="configure-scep-certificate-information-only-for-scep-certificates"></a>配置 SCEP 证书信息（仅针对 SCEP 证书）  
 
 1.  在“创建证书配置文件向导”的“SCEP 服务器”  页上，指定将通过 SCEP 颁发证书的 NDES 服务器的 URL。 你可以选择基于证书注册点站点系统服务器的配置自动分配 NDES URL，也可以手动添加 URL。  
 
@@ -183,7 +189,7 @@ ms.lasthandoff: 05/17/2017
    >  如果指定未部署到用户或设备的根 CA 证书，System Center Configuration Manager 将不会发起在此证书配置文件中配置的证书请求。  
 
 
-###  <a name="specify-supported-platforms-for-the-certificate-profile"></a>为证书配置文件指定支持的平台  
+##  <a name="specify-supported-platforms-for-the-certificate-profile"></a>为证书配置文件指定支持的平台  
 
 1. 在“创建证书配置文件向导”的“支持的平台”  页上，选择将在其中安装证书配置文件的操作系统。 或者，单击“全选”  以将证书配置文件安装到所有可用操作系统。
 2. 查看向导的“摘要”页面，并选择“完成”。 

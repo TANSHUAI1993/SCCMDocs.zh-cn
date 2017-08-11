@@ -16,11 +16,11 @@ author: andredm7
 ms.author: andredm
 manager: angrobe
 robots: noindex
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 216d288aa7b7f2b98df86f59355d879366dcd44d
-ms.openlocfilehash: 4baa6e0fe009f5f7dc33f5ab4adb1ec5e5c5271b
+ms.translationtype: HT
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: 6630d0170df22f46f14df241ffd8d48266c69263
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 07/29/2017
 
 ---
 
@@ -277,6 +277,31 @@ ms.lasthandoff: 05/17/2017
       * iOS 6+
       * Android 4.0+
       * Samsung KNOX 标准版 4.0+
+<br></br>
+* **所需的密码类型**。 指定用户是否必须创建字母数字密码或数字密码。 对于字母数字密码，还可以指定密码必须包含的字符集的最小个数。 有以下四个字符集：小写字母、大写字母、符号和数字。
+
+    **在以下设备上受支持：**
+    * Windows Phone 8+
+    * Windows 8.1+
+    * iOS 6+
+<br></br>
+* **在设备上阻止进行 USB 调试**。 无需配置此设置，因为已在 Android for Work 的设备上禁用 USB 调试。
+
+    **在以下设备上受支持：**
+    * Android 4.0+
+    * Samsung KNOX 标准版 4.0+
+<br></br>
+* **阻止来自未知源的应用**。 要求设备阻止安装来自未知源的应用。 无需配置此设置，因为 Android for Work 设备始终限制来自未知源的安装。
+
+    **在以下设备上受支持：**
+    * Android 4.0+
+    * Samsung KNOX 标准版 4.0+
+<br></br>
+* **要求对应用进行威胁扫描**。 此设置指定在设备上启用的“验证”应用功能。 
+
+    **在以下设备上受支持：**
+    * Android 4.2 到 4.4
+    * Samsung KNOX 标准版 4.0+
 
 ### <a name="find-an-app-id"></a>查找应用 ID
 

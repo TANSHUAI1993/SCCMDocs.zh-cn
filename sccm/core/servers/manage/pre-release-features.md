@@ -2,7 +2,7 @@
 title: "预发行功能 | Microsoft Docs"
 description: "System Center Configuration Manager 中的预发行功能"
 ms.custom: na
-ms.date: 6/13/2017
+ms.date: 7/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,12 +15,11 @@ caps.latest.revision: 36
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3619a73d3a39659de927e1711a7ec81de9918064
-ms.openlocfilehash: 988f8da0b221f8c0b470e7a0a8ed995356193f98
+ms.translationtype: HT
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: 7b594daeed81ef2d991ad06489f9184a69804117
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/13/2017
-
+ms.lasthandoff: 07/29/2017
 
 ---
 # <a name="pre-release-features-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的预发行功能
@@ -51,9 +50,10 @@ ms.lasthandoff: 06/13/2017
 
  |功能          |添加为预发行功能 | 添加为完整版功能|  
 |------------------|---------------------|---------------------|
+| 从 Configuration Manager 控制台创建并运行 PowerShell 脚本 |  [版本 1706](/sccm/apps/deploy-use/create-deploy-scripts)|![尚未发行](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 | 使用 Configuration Manager 进行 Device Guard 管理 |  [版本 1702](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)|![尚未发行](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 | 在安装应用程序之前检查运行的可执行文件  |   [版本 1702](/sccm/apps/deploy-use/deploy-applications#how-to-check-for-running-executable-files-before-installing-an-application) |![尚未发行](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-| 数据仓库服务点  |  [版本 1702](/sccm/core/servers/manage/data-warehouse) |![尚未发行](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
+| 数据仓库服务点  |  [版本 1702](/sccm/core/servers/manage/data-warehouse) |[版本 1706](/sccm/core/servers/manage/data-warehouse)|
 | 用于向客户端进行内容分发的对等缓存 |  [版本 1610](/sccm/core/plan-design/hierarchy/client-peer-cache) |![尚未发行](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 | 云管理网关 |  [版本 1610](/sccm/core/clients/manage/plan-cloud-management-gateway) |![尚未发行](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 | 客户端数据源仪表板 |  [版本 1610](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed#client-data-sources-dashboard) |![尚未发行](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|

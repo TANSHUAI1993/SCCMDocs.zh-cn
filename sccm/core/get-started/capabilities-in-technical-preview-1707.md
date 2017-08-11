@@ -2,7 +2,7 @@
 title: Technical Preview 1707 | Microsoft Docs
 description: "了解适用于 System Center Configuration Manager 的 Technical Preview 版本 1707 中的可用功能。"
 ms.custom: na
-ms.date: 06/30/2017
+ms.date: 07/28/2017
 ms.prod: configuration-manager
 ms.technology:
 - configmgr-other
@@ -15,8 +15,8 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 ms.translationtype: HT
-ms.sourcegitcommit: 1f57c63ceeb13c7f7d760d7ecfb48df749da6770
-ms.openlocfilehash: 118f20768ffc99364eb9e8cf2074d7a23f4dc572
+ms.sourcegitcommit: 6e890862fd02786b675e2b7abaca7ede7c0e977a
+ms.openlocfilehash: 91fd850f055a7e892a54487307109a291e336696
 ms.contentlocale: zh-cn
 ms.lasthandoff: 07/28/2017
 
@@ -62,7 +62,7 @@ Surface 设备仪表板提供有关在环境中找到的 Surface 设备的信息
 ## <a name="configure-and-deploy-windows-defender-application-guard-policies"></a>配置和部署 Windows Defender 应用程序防护策略
 <!-- 1351960 -->
 
-[Windows Defender 应用程序防护](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97)是一项新的 Windows 功能，通过在操作系统的其他部分无法访问的安全隔离容器中打开不受信任的网站来帮助保护用户安全。 在此 Technical Preview 版中，我们使用在配置后部署到集合的 Configuration Manager 符合性设置增加了对配置此功能的支持。 此功能将在 64 位版本的 Windows 10 创意者更新预览版 (codename: RS2) 中发布。 现在，若要测试此功能，必须使用此更新的预览版本。
+[Windows Defender 应用程序防护](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97)是一项新的 Windows 功能，通过在操作系统的其他部分无法访问的安全隔离容器中打开不受信任的网站来帮助保护用户安全。 在此 Technical Preview 版中，我们使用在配置后部署到集合的 Configuration Manager 符合性设置增加了对配置此功能的支持。 此功能将在 64 位版本的 Windows 10 Fall Creators Update 预览版 (codename: RS3) 中发布。 现在，若要测试此功能，必须使用此更新的预览版本。
 
 ### <a name="before-you-start"></a>开始之前
 
@@ -87,12 +87,12 @@ Surface 设备仪表板提供有关在环境中找到的 Surface 设备的信息
 
 <!-- 1236459 --->
 
-通过上一 Technical Preview 中引入的新功能，可[从 Configuration Manager 控制台创建并运行 PowerShell 脚本]( /core/get-started/capabilities-in-technical-preview-1706#create-and-run-powershell-scripts-from-the-configuration-manager-console)。
+通过上一 Technical Preview 中引入的新功能，可[从 Configuration Manager 控制台创建并运行 PowerShell 脚本](/sccm/core/get-started/capabilities-in-technical-preview-1706#create-and-run-powershell-scripts-from-the-configuration-manager-console)。
 在此 Technical Preview 中，对此功能进行了扩展。 Configuration Manager 现可读取 PowerShell 脚本，并在创建脚本向导中显示脚本内任何参数。 可在向导中为该参数提供脚本运行时要使用的值。 也可将该参数留空。 如果留空，将需要在运行脚本时提供参数的值。
 
 ### <a name="try-it-out"></a>试试看！
 
-1. 按照说明[从 Configuration Manager 控制台创建并运行 PowerShell 脚本]( /core/get-started/capabilities-in-technical-preview-1706#create-and-run-powershell-scripts-from-the-configuration-manager-console)。
+1. 按照说明[从 Configuration Manager 控制台创建并运行 PowerShell 脚本](/sccm/core/get-started/capabilities-in-technical-preview-1706#create-and-run-powershell-scripts-from-the-configuration-manager-console)。 
 2. 在“创建脚本向导”的新“脚本参数”页上，选择一个参数，然后单击“编辑”。
 3. 为所选参数提供参数值，然后单击“确定”。
 4. 完成向导。

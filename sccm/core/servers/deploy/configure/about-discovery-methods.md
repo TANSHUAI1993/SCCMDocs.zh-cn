@@ -1,7 +1,7 @@
 ---
 title: "发现方法 | Microsoft Docs"
 ms.custom: na
-ms.date: 2/3/2017
+ms.date: 07/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ caps.latest.revision: 8
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 81d7516b814d2db74d4d857871071c8911755754
-ms.openlocfilehash: 6e53f501281e31f2b7df54b9740eac970f108257
+ms.translationtype: HT
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: 442e5e1fbddd00248819a8de79adc78929474fc0
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 07/29/2017
 
 ---
 # <a name="about-discovery-methods-for-system-center-configuration-manager"></a>有关 System Center Configuration Manager 的发现方法
@@ -189,6 +189,27 @@ Active Directory 组发现不支持可通过使用 Active Directory 系统发现
 站点服务器上 **&lt;InstallationPath\>\LOGS** 文件夹内的 **adusrdis.log** 文件中记录了 Active Directory 用户发现操作。  
 
 有关如何配置此发现方法的详细信息，请参阅[为 System Center Configuration Manager 配置发现方法](../../../../core/servers/deploy/configure/configure-discovery-methods.md)。  
+
+## <a name="azureaddisc"></a>Azure Active Directory 用户发现
+从版本 1706 开始，在将环境配置为使用 Azure 服务时，可以使用 Azure Active Directory (Azure AD) 用户发现。
+使用此发现方法在 Azure AD 中搜索对 Azure AD 实例进行身份验证的用户，以查找以下属性：  
+-   objectId
+-   displayName
+-   mail
+-   mailNickname
+-   onPremisesSecurityIdentifier
+-   userPrincipalName
+-   AAD tenantID
+
+此方法支持对 Azure AD 中用户数据的完全同步和增量同步。 然后可以将此信息与从其他发现方法收集的发现数据一起使用。
+
+Azure AD 用户发现的操作记录在层次结构顶层站点服务器上的 SMS_AZUREAD_DISCOVERY_AGENT.log 文件中。
+
+要配置 Azure AD 用户发现，请使用 Azure 服务向导。  有关如何配置此发现方法的详细信息，请参阅[配置 Azure AD 用户发现](/sccm/core/servers/deploy/configure/configure-discovery-methods)。
+
+
+
+
 
 ##  <a name="bkmk_aboutHeartbeat"></a>检测信号发现  
 **可配置：**是  
@@ -407,7 +428,7 @@ Active Directory 组发现不支持可通过使用 Active Directory 系统发现
 
 发现会在指定位置中搜索对象，然后尝试收集有关那些对象的信息。 如果能够确定足够的资源相关信息，则将创建 DDR。 所需信息因使用的发现方法而异。  
 
-如果将同一发现方法配置为在不同的 Configuration Manager 站点上运行，以利用查询本地 Active Directory 服务器的优势，可以将每个站点配置为包含一组独特的发现选项。 由于发现数据与层次结构中的每个站点共享，因此请避免这些配置之间出现重叠，以一次性高效地发现每个资源。 
+如果将同一发现方法配置为在不同的 Configuration Manager 站点上运行，以利用查询本地 Active Directory 服务器的优势，可以将每个站点配置为包含一组独特的发现选项。 由于发现数据与层次结构中的每个站点共享，因此请避免这些配置之间出现重叠，以一次性高效地发现每个资源。
 
 对于较小的环境，可以考虑仅在层次结构中的一个站点上运行每个发现方法，以减少管理开销并降低多个发现操作重新发现同一资源的可能性。 将运行发现的站点数量减至最少时，可降低该发现所使用的整体网络带宽。 此外，还可以减少所创建的且必须由站点服务器进行处理的 DDR 的总体数量。  
 

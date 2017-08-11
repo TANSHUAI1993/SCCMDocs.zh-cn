@@ -16,12 +16,11 @@ caps.handback.revision: 0
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ae008c91a7387ba76f2bfac13f8feb489a0cc558
-ms.openlocfilehash: f5feccc4f810e1a94bb7dcdd5ad507d84b9c3b4a
+ms.translationtype: HT
+ms.sourcegitcommit: b7461f89f483314bd07248bbc9d5dde85ca6b6c2
+ms.openlocfilehash: 32b24b3637dfafe401ea1d9f51b3769aa749f544
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
-
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="task-sequence-built-in-variables-in-system-center-configuration-manager"></a>ystem Center Configuration Manager 中的任务序列内置变量
@@ -83,7 +82,8 @@ ms.lasthandoff: 05/17/2017
 |SMSTSDriverRequestResolveTimeOut|在自动应用驱动程序任务序列步骤期间请求驱动程序目录时，使用此变量指定等待 HTTP 名称解析的秒数。 如果连接时间超过超时设置，则取消该请求。 默认情况下，超时时间设置为 60 秒。|
 |SMSTSDriverRequestSendTimeOut|在自动应用驱动程序任务序列步骤期间发送驱动程序目录请求时，使用此变量指定要使用的秒数。 如果该请求用时比超时设置更长，则取消该请求。 默认情况下，超时时间设置为 60 秒。|
 |SMSTSErrorDialogTimeout|当任务序列中发生错误时，显示对话框，在此变量指定的秒数后自动关闭。 默认情况下，该对话框将在 **900** 秒（15 分钟）后自动关闭。|  
-|TSErrorOnWarning|使用此变量指定任务序列引擎是否将应用程序安装任务序列步骤检测到的警告视为错误。 由于未满足要求而导致一个或多个应用程序或所需的依赖项未安装时，任务序列将 _TSAppInstallStatus 变量设置为 **Warning** 。 当你将 TSErrorOnWarning 变量设置为 **True** 且 _TSAppInstallStatus 变量设置为 Warning 时，它被视为错误。 值 **False** 是默认行为。|  
+| TSDisableProgressUI | 使用此变量可以在任务序列的不同部分中隐藏或显示任务序列进度。 | 
+|TSErrorOnWarning|使用此变量指定任务序列引擎是否将应用程序安装任务序列步骤检测到的警告视为错误。 由于未满足要求而导致一个或多个应用程序或所需的依赖项未安装时，任务序列将 _TSAppInstallStatus 变量设置为 **Warning** 。 当你将 TSErrorOnWarning 变量设置为 **True** 且 _TSAppInstallStatus 变量设置为 Warning 时，它被视为错误。 值 **False** 是默认行为。| 
 |SMSTSLanguageFolder|使用此变量可更改语言中性启动映像的显示语言。|  
 |SMSTSLocalDataDrive|指定运行任务序列时临时文件保存在目标计算机的位置。<br /><br /> 此变量必须在任务序列开始前设置，例如通过设置集合变量。 任务序列启动后，Configuration Manager 定义 _SMSTSMDataPath 变量。|  
 |SMSTSMP|使用此变量指定 Configuration Manager 管理点的 URL 或 IP 地址。|  

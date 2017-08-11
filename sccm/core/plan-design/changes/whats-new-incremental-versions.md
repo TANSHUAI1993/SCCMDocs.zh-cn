@@ -2,7 +2,7 @@
 title: "System Center Configuration Manager 增量版本 | Microsoft Docs"
 description: "了解如何安装和管理 System Center Configuration Manager 更新。"
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 7/31/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -15,11 +15,11 @@ caps.latest.revision: 4
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: fb968fe866920c93edaa43be457032c3e7fd1c42
+ms.translationtype: HT
+ms.sourcegitcommit: c0d94b8e6ca6ffd82e879b43097a9787e283eb6d
+ms.openlocfilehash: 043c9521f4a94ea2df5cebb4ca1c0b1127f0edbc
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="whats-new-in-system-center-configuration-manager-incremental-versions"></a>System Center Configuration Manager 增量版本中的新增功能
@@ -37,14 +37,11 @@ ms.lasthandoff: 05/17/2017
 
  这些更新版本是了解 System Center Configuration Manager 安装的增量版本以及了解能在部署中启用哪些功能的关键。
 
- System Center Configuration Manager 当前分支的初始版本为版本 1511。 自此初始版本后，其他更新可用。 使用以下链接来发现每个版本的新增功能：
+ System Center Configuration Manager 当前分支的初始版本为版本 1511。 自此初始版本后，其他更新可用。 使用以下链接来发现仍受支持的每个版本的新增功能：
+  - [版本 1706 中的新增功能](../../../core/plan-design/changes/whats-new-in-version-1706.md)  
   - [版本 1702 中的新增功能](../../../core/plan-design/changes/whats-new-in-version-1702.md)
   - [版本 1610 中的新增功能](../../../core/plan-design/changes/whats-new-in-version-1610.md)
-  - [版本 1606 中的新增功能](../../../core/plan-design/changes/whats-new-in-version-1606.md)  
 
-<!-- 
-  - [What's new in version 1602](../../../core/plan-design/changes/whats-new-in-version-1602.md)
--->
 
  每个更新版本在其发布后一年内受支持。 尽可能使用最新的更新版本是个很不错的注意。 有关详细信息，请参阅[对 System Center Configuration Manager Current Branch 版本的支持](../../../core/servers/manage/current-branch-versions-supported.md)。  
 

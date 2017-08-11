@@ -2,7 +2,7 @@
 title: "监视 Linux/UNIX 客户端 - Configuration Manager | Microsoft Docs"
 description: "在 System Center Configuration Manager 中监视 Linux 和 UNIX 服务器上的客户端。"
 ms.custom: na
-ms.date: 04/23/2017
+ms.date: 08/04/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,12 +15,11 @@ caps.latest.revision: 6
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
-ms.openlocfilehash: e9965373db17a752c8ae7fddb5f91fa1df912d49
+ms.translationtype: HT
+ms.sourcegitcommit: afe0ecc4230733fa76e41bf08df5ccfb221da7c8
+ms.openlocfilehash: 62843bd544217734c4566d656a7c3a35bd5613cb
 ms.contentlocale: zh-cn
-ms.lasthandoff: 01/24/2017
-
+ms.lasthandoff: 08/04/2017
 
 ---
 # <a name="how-to-monitor-clients-for-linux-and-unix-servers-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中监视 Linux 和 UNIX 服务器的客户端

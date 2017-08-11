@@ -2,7 +2,7 @@
 title: "使用 Configuration Manager 将 Windows 设备升级到不同版本 | Microsoft Docs"
 description: "使用 Configuration Manager 将运行 Windows 10 桌面版、Windows 10 移动版或 Windows 10 全息版的设备自动升级到不同版本。"
 ms.custom: na
-ms.date: 04/18/2017
+ms.date: 07/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,12 +16,11 @@ caps.handback.revision: 0
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 4eee9731a4a27328c47c0d15931cab28cf520a18
-ms.openlocfilehash: cfde0a43947013bbd3a1093688cee19fe309fd03
+ms.translationtype: HT
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: cd8c644d07dab0010dc211df8ce4f2dc6e1fa7ae
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
-
+ms.lasthandoff: 07/29/2017
 
 ---
 
@@ -34,14 +33,14 @@ System Center Configuration Manager **版本升级策略**可以将运行以下�
 
 - Windows 10 桌面版
 - Windows 10 移动版
-- Windows 10 全息版
+<!-- - Windows 10 Holographic -->
 
 支持下列升级路径：
 
 - 从 Windows 10 专业版到 Windows 10 企业版
 - 从 Windows 10 家庭版到 Windows 10 教育版
 - 从 Windows 10 移动版到 Windows 10 移动企业版
-- 从 Windows 10 全息专业版到 Windows 10 全息企业版
+<!-- - From Windows 10 Holographic Pro to Windows 10 Holographic Enterprise -->
 
 设备必须在 Microsoft Intune 中注册或运行 Configuration Manager 客户端软件。 此策略当前不兼容本地 MDM 管理的电脑。
 
@@ -50,7 +49,7 @@ System Center Configuration Manager **版本升级策略**可以将运行以下�
 
 -   在该策略针对的所有设备上安装 Windows 新版本使用的有效产品密钥（针对于桌面操作系统）  
 
--   在该策略针对的所有设备上安装 Windows 新版本使用的包含许可信息的 Microsoft 许可证文件（针对于 Windows 10 移动版和 Windows 10 全息版）。
+-   在该策略针对的所有设备上安装 Windows 新版本使用的包含许可信息的 Microsoft 许可证文件（针对 Windows 10 移动版<!-- and Windows 10 Holographic-->）。
 
 - 若要创建和部署此策略类型，必须分配有 Configuration Manager **完全权限管理员**安全角色。
 
@@ -68,7 +67,7 @@ System Center Configuration Manager **版本升级策略**可以将运行以下�
 
     -   **描述** （可选）- 根据需要，输入有助于在 Intune 控制台中识别该策略的描述。  
 
-    -   **将设备升级到的 SKU 版本** – 从下拉列表中，选择你想将目标设备升级到的版本：Windows 10 桌面版、Windows 10 全息版或 Windows 10 移动版。  
+    -   **将设备升级到的 SKU 版本** – 从下拉列表中，选择你想将目标设备升级到的版本：Windows 10 桌面版<!-- Windows 10 Holographic,-->或 Windows 10 移动版。  
 
     -   **许可证信息** - 选择以下之一：  
 
@@ -77,7 +76,7 @@ System Center Configuration Manager **版本升级策略**可以将运行以下�
             > [!NOTE]  
             >  在创建包含产品密钥的策略后，将无法对产品密钥进行编辑。 这是因为出于安全考虑，密钥将被遮盖。 若要更改产品密钥，必须重新输入完整的密钥。  
 
-        -   **许可证文件** - 单击“浏览”  以选择有效的 XML 格式的许可证文件，该文件将用于升级运行 Windows 10 全息版和 Windows 10 移动版操作系统的目标设备。  
+        -   **许可证文件** - 单击“浏览”以选择有效的 XML 格式的许可证文件，该文件将用于升级运行 <!--Windows 10 Holographic and -->Windows 10 移动版操作系统的目标设备。  
 
 6.  完成向导。  
 
@@ -91,7 +90,15 @@ System Center Configuration Manager **版本升级策略**可以将运行以下�
 
 4.  在“部署 Windows 10 版本升级”对话框中，选择要为其部署策略的集合和评估该策略的计划，然后单击“确定”。 对于 Configuration Manager 客户端管理的电脑，必须将策略部署到设备集合。 对于已注册 Intune 的电脑，可以将策略部署到用户或设备集合。 
 
-可从“监视”  工作区的“部署”  节点监视才创建的部署。  
 
- 该策略应用到目标 Windows 电脑并进行评估后，该电脑将在两小时内重启以应用升级。 确保通知所有要向其部署策略，或计划在其业余时间运行该策略的用户。
+
+## <a name="next-steps"></a>后续步骤
+
+当监视刚从“监视”工作区的“部署”节点创建的部署时，可能会看到指示部署不成功的错误，如下所示：
+- 不适用于此设备
+- 数据类型转换失败
+
+这些错误并不表示部署已失败。 在已成功执行升级的目标电脑上进行验证。
+
+该策略应用到目标 Windows 电脑并进行评估后，该电脑将在两小时内重启以应用升级。 确保通知所有要向其部署策略，或计划在其业余时间运行该策略的用户。
 

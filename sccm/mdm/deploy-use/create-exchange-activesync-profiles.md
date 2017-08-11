@@ -2,7 +2,7 @@
 title: "创建 Exchange ActiveSync 电子邮件配置文件 | Microsoft Docs"
 description: "了解如何在 System Center Configuration Manager 中创建和配置适用于 Microsoft Intune 的电子邮件配置文件。"
 ms.custom: na
-ms.date: 03/28/2017
+ms.date: 07/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,12 +16,11 @@ caps.handback.revision: 0
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 761c3f58f7c57d8f87ee802da37821895062546d
-ms.openlocfilehash: bcf337d2abbcd5aad0f99098f6afd4a73ada3a0b
+ms.translationtype: HT
+ms.sourcegitcommit: c0d94b8e6ca6ffd82e879b43097a9787e283eb6d
+ms.openlocfilehash: 7434c98f2217cf63fdcd250b91e772de72daaea9
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
-
+ms.lasthandoff: 08/02/2017
 
 ---
 
@@ -48,7 +47,7 @@ ms.lasthandoff: 05/17/2017
 
  除了在设备上配置电子邮件帐户以外，还可以配置联系人、日历和任务的同步设置。  
 
- 在创建电子邮件配置文件时，你可以纳入各种各样的安全设置。 这些设置包括使用 System Center Configuration Manager 证书配置文件设置的用于标识、加密和签名的证书。 有关证书配置文件的详细信息，请参阅 [System Center Configuration Manager 中的证书配置文件](/sccm/protect/deploy-use/introduction-to-certificate-profiles)。    
+ 在创建电子邮件配置文件时，你可以纳入各种各样的安全设置。 这些设置包括使用 System Center Configuration Manager 证书配置文件设置的用于标识、加密和签名的证书。 有关证书配置文件的详细信息，请参阅 [System Center Configuration Manager 中的证书配置文件](/sccm/protect/deploy-use/introduction-to-certificate-profiles.md)。    
 
 ## <a name="create-an-exchange-activesync-email-profile"></a>创建 Exchange ActiveSync 电子邮件配置文件  
 
@@ -104,19 +103,21 @@ ms.lasthandoff: 05/17/2017
 
     -   **身份证书**。 选择“选择”，然后选择用于标识的证书。  
 
-        > [!NOTE]  
-        > 你必须首先将身份证书配置为简单证书注册协议 (SCEP) 证书配置文件，然后才能选择身份证书。 有关证书配置文件的详细信息，请参阅 [System Center Configuration Manager 中的证书配置文件](/sccm/protect/deploy-use/introduction-to-certificate-profiles)。  
+         标识证书必须是 SCEP 证书；不能使用 PFX 证书。  若要了解详细信息，请参阅[System Center Configuration Manager 中的证书配置文件](/sccm/protect/deploy-use/introduction-to-certificate-profiles)。  
 
          此选项只有在选择了“身份验证方法”下的“证书”才可用。  
 
     -   **使用 S/MIME**。 发送使用 S/MIME 加密的传出电子邮件。 此选项仅适用于 iOS 设备。 选择从以下选项：
 
+        -   签名证书。  选取“选择”，然后选取用于加密的证书配置文件。  
+
+            配置文件可以是 SCEP 或 PFX 证书。  但是，如果同时使用签名和加密，则必须为签名和加密选择 PFX 证书配置文件。
+
         -   **加密证书**。 选择“选择”，然后选择用于加密的证书。 只能选择 PFX 证书用作加密证书。
 
-        如果同时选择了加密证书和签名证书，则这些证书必须都为 PFX 格式。
+        -   要在 iOS 设备上加密所有邮件，请启用“需要加密”复选框。    
 
-        > [!NOTE]  
-        > 必须首先将证书配置为 (SCEP) 或 PFX 证书配置文件，然后才能选择证书。 有关证书配置文件的详细信息，请参阅 [System Center Configuration Manager 中的证书配置文件](/sccm/protect/deploy-use/introduction-to-certificate-profiles)。  
+         必须先创建证书配置文件，然后才能在此处进行选择。  若要了解详细信息，请参阅[System Center Configuration Manager 中的证书配置文件](/sccm/protect/deploy-use/introduction-to-certificate-profiles)。  
 
 ## <a name="configure-synchronization-settings-for-the-exchange-activesync-email-profile"></a>配置 Exchange ActiveSync 电子邮件配置文件的同步设置  
 

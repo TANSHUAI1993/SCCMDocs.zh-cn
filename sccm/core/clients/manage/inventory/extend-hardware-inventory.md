@@ -16,12 +16,11 @@ caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 05c27c7aa36e0b4236867766dab36125c31467b3
-ms.openlocfilehash: 80d5a13ea5d40150ddd537251e837083e649ac52
+ms.translationtype: HT
+ms.sourcegitcommit: 5f1412fb132e3a074742e11f1142b2594146cbe1
+ms.openlocfilehash: 3e5517e1710d0d12e51fba58efda5dc5edd08544
 ms.contentlocale: zh-cn
-ms.lasthandoff: 01/03/2017
-
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="how-to-extend-hardware-inventory-in-system-center-configuration-manager"></a>How to extend hardware inventory in System Center Configuration Manager
@@ -148,12 +147,12 @@ Configuration.mof 文件用于定义要通过客户端上的硬件清单列出�
 > [!IMPORTANT]  
 >  创建 NOIDMIF 文件时，必须以 ANSI 编码格式保存它。 Configuration Manager 无法读取以 UTF-8 编码格式保存的 NOIDMIF 文件。  
 
- 创建 NOIDMIF 文件后，将其存储在每个客户端上的 *%Windir%***\System32\CCM\Inventory\Noidmifs** 文件夹中。 Configuration Manager 将在下一个计划的硬件清单周期中从此文件夹中的 NODMIF 文件收集信息。  
+ 创建 NOIDMIF 文件后，将其存储在每个客户端上的 %Windir%\CCM\Inventory\Noidmifs 文件夹中。 Configuration Manager 将在下一个计划的硬件清单周期中从此文件夹中的 NODMIF 文件收集信息。  
 
 ###  <a name="BKMK_IDMIF"></a> 若要创建 IDMIF 文件  
  IDMIF 文件可用于将有关资产（通常不能被 Configuration Manager 列出清单并且不与特定客户端设备相关联）的信息添加到 Configuration Manager 数据库。 例如，可以使用 IDMIFS 收集有关投影仪、DVD 播放机、复印机或不包含 Configuration Manager 客户端的其他设备的信息。 有关创建 IDMIF 文件的信息，请参阅 Configuration Manager SDK 文档。  
 
- 创建 IDMIF 文件后，将其存储在客户端计算机上的 *%Windir%***\System32\CCM\Inventory\Idmifs** 文件夹中。 Configuration Manager 将在下一个计划的硬件清单周期中从此文件收集信息。 您必须声明通过添加或将其导入该文件中包含的信息的新类。  
+ 创建 IDMIF 文件后，将其存储在客户端计算机上的 %Windir%\CCM\Inventory\Idmifs 文件夹中。 Configuration Manager 将在下一个计划的硬件清单周期中从此文件收集信息。 您必须声明通过添加或将其导入该文件中包含的信息的新类。  
 
 > [!NOTE]
 > MIF 文件可能包含大量数据，收集这些数据可能对你网站的性能产生负面影响。 仅在需要时启用 MIF 收集，并在硬件清单设置中配置“最大自定义 MIF 文件大小 (KB)”选项。 有关详细信息，请参阅 [System Center Configuration Manager 中的硬件清单简介](introduction-to-hardware-inventory.md)。

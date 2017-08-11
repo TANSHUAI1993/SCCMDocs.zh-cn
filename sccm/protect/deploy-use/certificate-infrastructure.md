@@ -2,7 +2,7 @@
 title: "配置证书基础结构 | Microsoft Docs"
 description: "了解如何在 System Center Configuration Manager 中配置证书注册。"
 ms.custom: na
-ms.date: 03/28/2017
+ms.date: 07/25/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,22 +13,22 @@ ms.topic: get-started-article
 ms.assetid: 29ae59b7-2695-4a0f-a9ff-4f29222f28b3
 caps.latest.revision: 7
 caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
+author: lleonard-msft
+ms.author: alleonar
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 859a8da10f55e314b205b7a4a415a1d2a60a920a
+ms.translationtype: HT
+ms.sourcegitcommit: c0d94b8e6ca6ffd82e879b43097a9787e283eb6d
+ms.openlocfilehash: 640eb1df9d53fc83d93c39a7ecbaf2668e176805
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 08/02/2017
 
 ---
 
-# <a name="certificate-infrastructure"></a>证书基础结构
+# <a name="configure-certificate-infrastructure"></a>配置证书基础结构
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-以下是有关如何在 System Center Configuration Manager 中配置证书的步骤、详情及更多信息。 在开始之前，请检查 [System Center Configuration Manager 中证书配置文件先决条件](../../protect/plan-design/prerequisites-for-certificate-profiles.md)中列出的所有先决条件。  
+了解在 System Center Configuration Manager 中配置证书基础结构的过程。 在开始之前，请检查 [System Center Configuration Manager 中证书配置文件先决条件](../../protect/plan-design/prerequisites-for-certificate-profiles.md)中列出的所有先决条件。  
 
 使用以下步骤配置 SCEP 或 PFX 证书的基础结构。
 
@@ -59,7 +59,7 @@ ms.lasthandoff: 05/17/2017
     > [!NOTE]  
     >  有一些将适合于大多数环境的默认安全权限。 但是，你可以使用备用安全配置。 有关详细信息，请参阅[为 System Center Configuration Manager 中证书配置文件规划证书模板权限](../../protect/plan-design/planning-for-certificate-template-permissions.md)。  
 
-3.  将支持客户端身份验证的 PKI 证书部署到此服务器。 你可能已在计算机上安装了可以使用的合适证书，或者可能必须（或希望）明确为此目的部署证书。 有关此证书的要求的详细信息，请参阅 [System Center Configuration Manager 的 PKI 证书要求](../../core/plan-design/network/pki-certificate-requirements.md)主题中**服务器的 PKI 证书**部分中的“将 Configuration Manager 策略模块与网络设备注册服务角色服务一起运行的服务器”的详细信息。  
+3.  将支持客户端身份验证的 PKI 证书部署到此服务器。 你可能已在计算机上安装了可以使用的合适证书，或者可能必须（或希望）明确为此目的部署证书。 有关此证书的要求的详细信息，请参阅 [System Center Configuration Manager 的 PKI 证书要求](../../core/plan-design/network/pki-certificate-requirements.md)主题中 **服务器的 PKI 证书** 部分中的“将 Configuration Manager 策略模块与网络设备注册服务角色服务一起运行的服务器”的详细信息。  
 
     > [!TIP]  
     >  如果在部署此证书时需要帮助，可以使用[为分发点部署客户端证书](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_clientdistributionpoint2008_cm2012)的说明，因为证书要求是相同的，但有一处例外：  
@@ -124,23 +124,39 @@ ms.lasthandoff: 05/17/2017
 
 6.  在“系统角色选择”  页上，从可用角色列表中选择“证书注册点”  ，然后单击“下一步” 。 
 
-8. 在“证书注册模式”页上，选择是要此证书注册点“处理 SCEP 证书请求”，还是“处理 PFX 证书请求”。 证书注册点无法同时处理两种请求，但是，如果使用两种证书类型，则可以创建多个证书注册点。
+7. 在“证书注册模式”页上，选择是要此证书注册点“处理 SCEP 证书请求”，还是“处理 PFX 证书请求”。 证书注册点无法同时处理两种请求，但是，如果使用两种证书类型，则可以创建多个证书注册点。
 
-7.  在“证书注册点设置”页上，你的设置取决于证书注册点将处理的证书类型：
+   如果处理 PFX 证书，则需要选择证书颁发机构，即 Microsoft 或 Entrust。
+
+8.  “证书注册点设置”页会因证书类型不同而异：
     -   如果选择“处理 SCEP 证书请求”，请配置以下内容：
         -   证书注册点的**网站名称**、**HTTPS 端口号**和**虚拟应用程序名称**。 这些字段使用默认值自动填充。 
         -   **网络设备注册服务和根 CA 证书的 URL** -单击“添加”，然后在“添加 URL 和根 CA 证书”对话框中，指定以下内容：
             - **网络设备注册服务的 URL**：采用以下格式指定 URL：https://*<server_FQDN>*/certsrv/mscep/mscep.dll。 例如，如果运行网络设备注册服务的服务器的 FQDN 为 server1.contoso.com，请键入 **https://server1.contoso.com/certsrv/mscep/mscep.dll**。
             - **根 CA 证书**：浏览到并选择你在 **步骤 1：安装和配置网络设备注册服务及依赖关系**中创建和保存的 .cer 证书文件。 此根 CA 证书允许证书注册点验证 System Center Configuration Manager 策略模块将使用的客户端身份验证证书。  
-    - 如果选择了“处理 PFX 证书请求”，则配置以下内容：
-        - **证书颁发机构 (CA) 和连接到每个 CA 所需的帐户** - 单击“添加”，然后在“添加证书颁发机构和帐户”对话框中，指定以下内容：
+
+    - 如果选择了“处理 PFX 证书请求”，则要为所选证书颁发机构配置连接详细信息和凭据。
+
+        - 要将 Microsoft 用作证书颁发机构，单击“添加”，然后在“添加证书颁发机构和帐户”对话框中指定以下内容：
             - **证书颁发机构服务器名称** - 输入你的证书颁发机构服务器的名称。
             - **证书颁发机构帐户** - 单击“设置”选择或创建在证书颁发机构的模板中具有注册权限的帐户。
-        - **证书注册点连接帐户** - 选择或创建将证书注册点连接到 Configuration Manager 数据库的帐户。 或者，你可以使用托管证书注册点的计算机的本地计算机帐户。
-        - **Active Directory 证书发布帐户** - 选择一个帐户或创建一个新帐户，用于将证书发布到 Active Directory 中的用户对象。
-8.  在“添加 URL 和根 CA 证书”  对话框中，指定下列各项，然后单击“确定” ：  
+            - **证书注册点连接帐户** - 选择或创建将证书注册点连接到 Configuration Manager 数据库的帐户。 或者，你可以使用托管证书注册点的计算机的本地计算机帐户。
+            - **Active Directory 证书发布帐户** - 选择一个帐户或创建一个新帐户，用于将证书发布到 Active Directory 中的用户对象。
 
-9. 单击“下一步”  并完成向导。  
+            - 在“网络设备注册的 URL 和根 CA 证书” 对话框中，指定下列各项，然后单击“确定” ：  
+
+        - 若要将 Entrust 用作证书颁发机构，则指定：
+
+           - MDM Web 服务 URL
+           - URL 的用户名和密码凭据。
+
+           使用 MDM API 定义 Entrust Web 服务 URL 时，请确保至少使用 API 的版本 9，如以下示例所示：
+
+           `https://entrust.contoso.com:19443/mdmws/services/AdminServiceV9`
+
+           API 的早期版本不支持 Entrust。
+
+9. 单击“下一步”并完成向导。  
 
 10. 等待几分钟让安装完成，然后使用下列任何方法验证证书注册点是否已成功安装：  
 

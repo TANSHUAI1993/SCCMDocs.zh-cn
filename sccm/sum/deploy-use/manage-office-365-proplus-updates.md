@@ -13,10 +13,10 @@ ms.technology:
 - configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
 ms.translationtype: HT
-ms.sourcegitcommit: a986c23b18f782b713d7df0048dff2543f640b66
-ms.openlocfilehash: eb2f9ff61b68e015182a1f898afcb2a528b410ba
+ms.sourcegitcommit: 5d696e3da187d47e0d41c02864d9b5267827e701
+ms.openlocfilehash: 902d7f7216ca7bb585afae587a6706e2332da9d3
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/12/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 
@@ -73,7 +73,7 @@ Office 365 客户端管理仪表板在硬件清单得到报告的同时开始显
 - 运行 Office 365 安装程序的计算机必须具有 Internet 访问权限。  
 - 运行 Office 365 安装程序的用户必须对向导中提供的文件位置共享具有**读取**和**写入**权限。
 - 如果收到 404 下载错误，将以下文件复制到用户的 %temp%文件夹中：
-  - [releasehistory.xml](http://officecdn.microsoft.com.edgesuite.net/wsus/releasehistory.cab)
+  - [releasehistory.xml](http://officecdn.microsoft.com/pr/wsus/releasehistory.cab)
   - [o365client_32bit.xml](http://officecdn.microsoft.com/pr/wsus/ofl.cab)  
 
 
@@ -123,6 +123,17 @@ Office 365 客户端管理仪表板在硬件清单得到报告的同时开始显
 
 > [!Important]
 > 必须下载并部署 Office 365 客户端上配置的语言的更新。 例如，假设 Office 365 客户端上配置的语言为 en-us 和 de-de。 在站点服务器上，对适用的 Office 365 更新只下载并部署 en-us 内容。 当用户通过软件中心启动安装以获取此更新时，此更新将在下载内容时挂起。   
+
+## <a name="restart-behavior-and-client-notifications-for-office-365-updates"></a>Office 365 更新的重启行为和客户端通知
+将更新部署到 Office 365 客户端时，重启行为和客户端通知会存在差异，具体取决于所拥有的 Configuration Manager 版本。 下表提供了有关客户端收到 Office 365 更新时的最终用户体验的信息：
+
+|Configuration Manager 版本 |结束用户体验|  
+|----------------|---------------------|
+|1610 之前|设置重启标志，并在计算机重启后安装更新。|
+|1610|安装更新前，关闭 Office 365 应用且不发出警告|
+|包含更新的 1610 <br/>1702|设置重启标志，并在计算机重启后安装更新。|
+|1706|安装更新前，客户端收到弹出消息、应用内通知及倒计时对话框。|
+
 
 ## <a name="add-languages-for-office-365-update-downloads"></a>添加 Office 365 更新下载语言
 自 Configuration Manager 版本 1610 起，可以添加对 Configuration Manager 的支持，以下载 Office 365 支持的任意语言的更新，无论语言是否受 Configuration Manager 支持。    

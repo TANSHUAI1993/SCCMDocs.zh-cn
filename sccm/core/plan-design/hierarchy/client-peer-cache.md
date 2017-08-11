@@ -2,7 +2,7 @@
 title: "客户端对等缓存 | System Center Configuration Manager"
 description: "使用 System Center Configuration Manager 部署内容时，将对等缓存用于客户端内容源位置。"
 ms.custom: na
-ms.date: 7/3/2017
+ms.date: 7/31/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -15,11 +15,11 @@ caps.latest.revision: 3
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ed6b65a1a5aabc0970cd0333cb033405cf6d2aea
-ms.openlocfilehash: 94802680747a3d371716c1b345b2cba098150716
+ms.translationtype: HT
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: 89fcd16887ae77299f9d18472ee6a1ba56794eca
 ms.contentlocale: zh-cn
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/29/2017
 
 ---
 
@@ -94,7 +94,9 @@ ms.lasthandoff: 07/03/2017
 
 -   客户端只能传输来自其当前边界组中的对等缓存客户端中的内容。
 
--   客户端在其中使用对等缓存的每个站点必须使用[网络访问帐户](/sccm/core/plan-design/hierarchy/manage-accounts-to-access-content#a-namebkmknaaa-network-access-account)进行配置。 对等缓存源计算机使用该帐户对来自对等方的下载请求进行身份验证，且该帐户仅需要域用户权限即可完成此目的。
+-   在版本 1706 之前，客户端在其中使用对等缓存的每个站点必须使用[网络访问帐户](/sccm/core/plan-design/hierarchy/manage-accounts-to-access-content#a-namebkmknaaa-network-access-account)进行配置。 从版本 1706 开始，不再需要帐户，但有一个例外。  例外情况是：客户端使用对等缓存从软件中心获取并运行任务序列，并且该任务序列将客户端重新启动到 WinPE。  在此情况下，如果客户端处于 WinPE 中，则仍需要网络访问帐户，以便它可以访问对等缓存源以获取内容。
+
+    在需要时，对等缓存源计算机使用网络访问帐户对来自对等方的下载请求进行身份验证，且该帐户仅需要域用户权限即可实现此目的。
 
 -   因为对等缓存内容源的当前边界由该客户端上次提交的硬件清单决定，所以漫游到网络位置且在其他边界组中的客户端可能仍被视为其以前的边界组成员，以符合对等缓存的目的。 这可能导致提供给客户端的对等缓存内容源不在其直接网络位置中。 建议排除可能有此配置的客户端作为对等缓存源加入。
 

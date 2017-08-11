@@ -2,7 +2,7 @@
 title: "辅助功能 | Microsoft Docs"
 description: "了解使 System Center Configuration Manager 可供残疾人使用的功能。"
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 7/31/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -15,11 +15,11 @@ caps.latest.revision: 6
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
-ms.openlocfilehash: 98599b3c188c9e9b508fea79ecf9a2b2348e9288
+ms.translationtype: HT
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: ca518796477dda149a9f4c0ebd65f0a082eab806
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 07/29/2017
 
 ---
 # <a name="accessibility-features-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的辅助功能
@@ -31,14 +31,38 @@ System Center Configuration Manager 包含可供残疾人使用的功能。
 
 
 ## <a name="bkmk_aconsole"></a>Configuration Manager 控制台的辅助功能  
--   要访问工作区，请使用以下键盘快捷方式：  
 
-|工作区|键盘快捷方式|  
-|------|--------|  
-|资产和符合性|Ctrl+1|  
-|软件库|Ctrl+2|  
-|monitoring|Ctrl+3|  
-|管理|Ctrl+4|  
+**版本 1706 及更高版本的快捷方式和改进**
+
+|键盘快捷方式|  目的|
+|--------|--------|  
+|Ctrl + M|将焦点设置在主（中心）窗格中。|
+|Ctrl + T|将焦点设置到导航窗格中的顶级节点。 如果焦点已在此窗格中，则将焦点设置到你访问的最后一个节点。|
+|Ctrl + I|将焦点设置到功能区下方的痕迹导航栏中。|
+|Ctrl + L|将焦点设置到“搜索”字段中（可用时）。|
+|Ctrl + D|将焦点设置到细节窗格中（可用时）。|
+|Alt     |将焦点移入和移出功能区。|
+
+
+- 改进了在导航窗格键入节点名称字母时的导航。
+- 现在，通过主视图和功能区的键盘导航为圆形。
+- 现在详细信息窗格中的键盘导航为圆形。 要返回到上一个对象或窗格，使用 Ctrl + D，然后按住 Shift + TAB 即可实现。
+- 在刷新工作区视图后，焦点将设置到该工作区的主窗格中。
+- 修复了一个问题，可使屏幕阅读器公布列表项的名称。
+- 为页面上的多个控件添加了可访问名称，使得屏幕阅读器可以公布重要信息。
+
+
+**以下快捷方式在所有版本中可用**
+
+- 要访问工作区，请使用以下键盘快捷方式：  
+
+|键盘快捷方式| 工作区|
+|--------|--------|  
+|Ctrl + 1| 资产和符合性|
+|Ctrl + 2|  软件库|
+|Ctrl + 3|  监视|
+|Ctrl + 4|  管理|
+
 
 -   要访问工作区菜单，请选择 Tab 键，直到焦点位于“展开/折叠”图标上为止。 然后，选择向下箭头键以访问工作区菜单。  
 
@@ -56,7 +80,7 @@ System Center Configuration Manager 包含可供残疾人使用的功能。
 >  本节中的信息可能仅适用于在美国获得 Microsoft 产品许可的用户。 如果在美国以外的国家/地区获得本产品，可以使用软件包附带的子公司信息卡或访问 [Microsoft 辅助功能网站](http://go.microsoft.com/fwlink/?LinkId=8431)，获取 Microsoft 支持服务的联系信息。 可与你所在地的子公司联系，了解本节中描述的产品和服务的类型在你所在地区是否可用。 辅助功能的相关信息具有其他语言（包括日语和法语）版本。  
 
 ##  <a name="bkmk_ahelp"></a>Configuration Manager 帮助的辅助功能  
- Configuration Manager 帮助中包括的功能适用于范围更广的用户（包括行动不便和低视力人群，或其他残疾人群）。  
+ Configuration Manager 帮助中包括的功能适用于范围更广的用户（包括行动不便和低视力用户，或其他残障人士）。  
 
 |若要执行此操作|使用此键盘快捷方式|  
 |----------------|--------------------------------|  

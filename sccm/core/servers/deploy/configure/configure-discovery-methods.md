@@ -2,7 +2,7 @@
 title: "配置发现 | Microsoft Docs"
 description: "配置发现方法，以在 Configuration Manager 站点运行，从而找到可以从网络基础结构和 Active Directory 管理的资源。"
 ms.custom: na
-ms.date: 2/17/2017
+ms.date: 7/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.latest.revision: 5
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 860815010068422f2d8854ed2d574c24cc386891
-ms.openlocfilehash: 63a3c2ef66c80d1da9b50e67166a2196cf1b081b
+ms.translationtype: HT
+ms.sourcegitcommit: 0663ba84762c44a5c303562548499f195bae9e1c
+ms.openlocfilehash: 34a539ceaea6b070f81a28d2c0a9ce388e26cfeb
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 08/01/2017
 
 ---
 # <a name="configure-discovery-methods-for-system-center-configuration-manager"></a>配置 System Center Configuration Manager 的发现方法
@@ -33,7 +33,9 @@ ms.lasthandoff: 05/17/2017
 
 -   服务器发现是一种自动发现方法，用于查找用作站点系统的计算机。 不能对其进行配置或将其禁用。  
 
-**启用任何可配置的发现方法：**  
+**启用可配置的发现方法：**  
+ > [!NOTE]  
+ > 以下信息不适用于 Azure Active Directory 用户发现。 请参阅本主题后续部分的[配置 Azure AD 用户发现](#azureaadisc)。
 
 1.  在 Configuration Manager 控制台中，依次选择“管理” > “层次结构配置”，然后选择“发现方法”。  
 
@@ -211,6 +213,14 @@ ms.lasthandoff: 05/17/2017
 7.  （可选）在“Active Directory 属性”  选项卡上，你可以为要发现的计算机配置其他 Active Directory 属性。 还会列出默认对象属性。  
 
 8.  完成为此站点配置 Active Directory 用户发现的操作后，选择“确定”保存配置。  
+
+## <a name="azureaadisc"></a>配置 Azure AD 用户发现
+从版本 1706 开始，可在将 Configuration Manager 连接到 [Azure 订阅和 Azure Active Directory](/sccm/core/servers/deploy/configure/azure-services-wizard) 时配置 Azure Active Directory 用户发现。
+
+将 Azure AD 用户发现配置为云管理的一部分。 主题“配置 Azure 服务以用于 Configuration Manager”的[创建 Azure Web 应用以用于 Configuration Manager](/sccm/core/servers/deploy/configure/Azure-services-wizard#webapp) 中详细介绍了执行此操作的过程。
+
+
+
 
 ##  <a name="BKMK_ConfigHBDisc"></a>配置检测信号发现  
  默认情况下，检测信号发现在安装 Configuration Manager 主站点时启用。 因此，若不想使用每隔 7 天的默认设置，只需配置有关客户端将检测信号发现数据记录发送到管理点的频率的计划。  

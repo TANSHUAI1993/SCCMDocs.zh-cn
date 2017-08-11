@@ -2,7 +2,7 @@
 title: "SQL Server AlwaysOn | Microsoft 文档"
 description: "计划将 SQL Server AlwaysOn 可用性组与 SCCM 配合使用。"
 ms.custom: na
-ms.date: 5/26/2017
+ms.date: 7/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,12 +15,11 @@ caps.latest.revision: 16
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dc221ddf547c43ab1f25ff83c3c9bb603297ece6
-ms.openlocfilehash: 188ae877368a6cb2ec9998bff74259b4e5b5e7ce
+ms.translationtype: HT
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: c746365238e1255d73387a9496521bb03a56b21b
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/01/2017
-
+ms.lasthandoff: 07/29/2017
 
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>准备将 SQL Server AlwaysOn 可用性组与 Configuration Manager 配合使用
@@ -43,7 +42,9 @@ Configuration Manager 支持在以下位置使用可用性组：
 
 -      [创建与 Configuration Manager 配合使用的可用性组](/sccm/core/servers/deploy/configure/configure-aoag#create-and-configure-an-availability-group)。
 -     [配置站点以使用可用性组](/sccm/core/servers/deploy/configure/configure-aoag#configure-a-site-to-use-the-database-in-the-availability-group)。
--     [可以从托管站点数据库的可用性组添加或删除副本成员](/sccm/core/servers/deploy/configure/configure-aoag#add-and-remove-replica-members)。
+-     [可以从托管站点数据库的可用性组添加或删除同步副本成员](/sccm/core/servers/deploy/configure/configure-aoag#add-and-remove-synchronous-replica-members)。
+-     [配置异步提交副本](/sccm/core/servers/deploy/configure/configure-aoag#configure-an-asynchronous-commit-repilca)（需要 Configuration Manager 版本 1706 或更高版本。）
+-     [从异步提交副本恢复站点](/sccm/core/servers/deploy/configure/configure-aoag#use-the-asynchronous-replica-to-recover-your-site)（需要 Configuration Manager 版本 1706 或更高版本）。
 -     [可以将站点数据库从可用性组移到独立 SQL Server 的默认实例或命名实例](/sccm/core/servers/deploy/configure/configure-aoag#stop-using-an-availability-group)。
 
 
@@ -62,31 +63,35 @@ Configuration Manager 支持在以下位置使用可用性组：
 必须使用 SQL Server 企业版。
 
 **帐户：**  
-每个 SQL Server 实例可以在域用户帐户（服务帐户）或本地系统下运行。 组中的每个副本可以具有不同的配置。 根据 [SQL Server 最佳实践](/sql/sql-server/install/security-considerations-for-a-sql-server-installation#before-installing-includessnoversionincludesssnoversion-mdmd)，使用具有最低权限的帐户。
+每个 SQL Server 实例可以在域用户帐户（服务帐户）或非域帐户下运行。 组中的每个副本可以具有不同的配置。 根据 [SQL Server 最佳实践](/sql/sql-server/install/security-considerations-for-a-sql-server-installation#before-installing-includessnoversionincludesssnoversion-mdmd)，使用具有最低权限的帐户。
 
-例如，若要配置服务帐户和 SQL Server 2016 的权限，请参阅 MSDN 上的[配置 Windows 服务帐户和权限](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions)。
+-   若要配置服务帐户和 SQL Server 2016 的权限，请参阅 MSDN 上的[配置 Windows 服务帐户和权限](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions)。
+-   要使用非域帐户，必须使用证书。 有关详细信息，请参阅[使用数据库镜像端点证书 (Transact-SQL)](https://docs.microsoft.com/sql/database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql)。
 
-  如果使用本地系统运行一个副本，则必须配置终结点身份验证。 这包括权限委派，以便启用到副本服务器终结点的连接。
-  -     通过将每个 SQL Server 的计算机帐户添加为节点中其他 SQL Server 上的登录名，并授予该帐户的 SA 权限来委派 SQL Server 权限。  
-  -     通过在每个副本上运行以下脚本来向本地终结点上的每个远程服务器委派终结点权限：    
-
-              GRANT CONNECT ON endpoint::[endpoint_name]  
-              TO [domain\servername$]
 
 有关详细信息，请参阅[为 AlwaysOn 可用性组创建数据库镜像终结点](/sql/database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell)。
 
 ### <a name="availability-group-configurations"></a>可用性组配置
 **副本成员：**  
-此可用性组必须具有一个主要副本，并且可以具有最多两个同步次要副本。  每个副本成员必须：
+-   此可用性组必须具有一个主要副本。
+-   对于 1706 之前的版本，最多可以有两个同步次要副本。
+-   从版本 1706 开始，可以在可用性组中使用与所用 SQL Server 版本支持的数量和类型相同的副本。
+
+    可以使用异步提交副本来恢复同步副本。 请参阅备份和恢复主题中的[站点数据库恢复选项]( /sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption)，了解有关如何实现此操作的信息。
+    > [!CAUTION]  
+    > Configuration Manager 不支持故障转移后使用异步提交副本作为站点数据库。
+由于 Configuration Manager 不会验证异步提交副本的状态来确认它是否为最新，而[此类副本设计可以为不同步]( https://msdn.microsoft.com/library/ff877884(SQL.120).aspx(d=robot)#Availability%20Modes)，因此，使用异步提交副本作为站点数据库可能会危及站点和数据的完整性。
+
+每个副本成员必须：
 -   使用“默认实例”  
     从版本 1702 年开始，可以使用命名实例。
 
--      将**主角色中的连接**设置为**是**
--      将**可读次要副本**设置为**是**  
--      设置为“手动故障转移”       
+-     将**主角色中的连接**设置为**是**
+-     将**可读次要副本**设置为**是**  
+-     设置为“手动故障转移”      
 
     >  [!TIP]
-    >  Configuration Manager 设置为“自动故障转移”时，支持使用可用性组副本。 但是，在以下情况下必须设置“手动故障转移”：
+    >  Configuration Manager 设置为“自动故障转移”时，支持使用可用性组同步副本。 但是，在以下情况下必须设置“手动故障转移”：
     >  -  运行安装程序以指定在可用性组中使用站点数据库。
     >  -  在将任何更新（不仅是适用于站点数据库的更新）安装到 Configuration Manager 时。  
 
@@ -95,15 +100,15 @@ Configuration Manager 支持在以下位置使用可用性组：
 
 在 Azure 中设置可用性组，且组处于内部或外部负载均衡器后面时，必须开放以下默认端口，使安装程序能够访问每个副本：   
 
--      RCP 终结点映射程序 - **TCP 135**   
--      服务器消息块 – **TCP 445**  
-  数据库移动完成后，可以删除此端口。从版本 1702 开始，不再需要此端口。  **
--      SQL Server Service Broker -  **TCP 4022**
--      SQL over TCP – **TCP 1433**   
+-     RCP 终结点映射程序 - **TCP 135**   
+-     服务器消息块 – **TCP 445**  
+    数据库移动完成后，可以删除此端口。从版本 1702 开始，不再需要此端口。
+-     SQL Server Service Broker -  **TCP 4022**
+-     SQL over TCP – **TCP 1433**   
 
 安装完成后，以下端口必须保持可访问状态：
--      SQL Server Service Broker -  **TCP 4022**
--      SQL over TCP – **TCP 1433**
+-     SQL Server Service Broker -  **TCP 4022**
+-     SQL over TCP – **TCP 1433**
 
 从版本 1702 开始，可以使用这些配置的自定义端口。 在可用性组中的所有副本上，该终结点必须使用相同的端口。
 
@@ -119,25 +124,25 @@ Configuration Manager 支持在以下位置使用可用性组：
 仅当使用安装程序指定可用性组中的数据库实例时，次要副本服务器才需要此文件路径。 安装程序完成在可用性组中站点数据库的配置后，可以从次要副本服务器删除未使用的路径。
 
 例如，考虑以下情况：
--    创建可使用三个 SQL Server 的可用性组。
+-   创建可使用三个 SQL Server 的可用性组。
 
--    主副本服务器是新安装的 SQL Server 2014。 默认情况下，数据库 .MDF 和 .LDF 文件存储在 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA 中。
+-   主副本服务器是新安装的 SQL Server 2014。 默认情况下，数据库 .MDF 和 .LDF 文件存储在 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA 中。
 
--    两个次要副本服务器均已从以前版本升级到 SQL Server 2014，并保留用于存储数据库文件的原始文件路径：C:\Program Files\Microsoft SQL Server\MSSQL10.MSSQLSERVER\MSSQL\DATA。
+-   两个次要副本服务器均已从以前版本升级到 SQL Server 2014，并保留用于存储数据库文件的原始文件路径：C:\Program Files\Microsoft SQL Server\MSSQL10.MSSQLSERVER\MSSQL\DATA。
 
--    尝试将站点数据库移到该可用性组之前，即使次要副本不使用以下文件位置，也必须在每个次要副本服务器上创建以下文件路径：C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA（此为主要副本上所使用路径的副本）。
+-   尝试将站点数据库移到该可用性组之前，即使次要副本不使用以下文件位置，也必须在每个次要副本服务器上创建以下文件路径：C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA（此为主要副本上所使用路径的副本）。
 
--    然后向每个次要副本上的 SQL Server 服务帐户授予对该服务器上新创建文件位置的完全控制访问权限。
+-   然后向每个次要副本上的 SQL Server 服务帐户授予对该服务器上新创建文件位置的完全控制访问权限。
 
--    现在，便可以成功运行 Configuration Manager 安装程序以配置站点使用可用性组中的站点数据库。
+-   现在，便可以成功运行 Configuration Manager 安装程序以配置站点使用可用性组中的站点数据库。
 
 **在新副本上配置数据库：**   
  每个副本的数据库必须设置如下：
--     CLR 集成必须为启用状态
--      **Max text repl size** 必须为 *2147483647*
--      数据库所有者必须是 *SA 帐户*
--      **TRUSTWORTY**必须为**打开**
--      **Service Broker** 必须为*启用*
+-   CLR 集成必须为启用状态
+-     **Max text repl size** 必须为 *2147483647*
+-     数据库所有者必须是 *SA 帐户*
+-     **TRUSTWORTY**必须为**打开**
+-     **Service Broker** 必须为*启用*
 
 可以仅在主要副本上进行这些配置。 若要配置次要副本，必须先将主要副本故障转移到次要副本，以使次要副本成为新的主要副本。   
 
@@ -213,7 +218,7 @@ Configuration Manager 支持在以下位置使用可用性组：
 **托管其他可用性组的 SQL Server：**   
 在 Configuration Manager 版本 1610 之前，当 SQL Server 上的可用性组托管除用于 Configuration Manager 的组之外的一个或多个可用性组时，每个其他可用性组中的每个副本必须在运行 Configuration Manager 安装程序或安装 Configuration Manager 更新时进行以下配置：
 -   **手动故障转移**
--     **允许任何只读连接**
+-   **允许任何只读连接**
 
 **不支持的数据库使用：**
 -   **Configuration Manager 仅支持可用性组中的站点数据库：**不支持以下内容：

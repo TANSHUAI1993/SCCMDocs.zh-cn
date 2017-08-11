@@ -2,27 +2,29 @@
 title: "升级就绪情况 | System Center Configuration Manager"
 description: "将 Upgrade Readiness 与 Configuration Manager 进行集成。 在管理控制台中访问升级兼容性数据。 设定要升级或修正的设备。"
 keywords: 
-author: brenduns
-ms.author: brenduns
+author: mattbriggs
+ms.author: mabrigg
 manager: angerobe
-ms.date: 3/1/2017
+ms.date: 7/31/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
 ms.technology:
 - configmgr-client
 ms.assetid: 68407ab8-c205-44ed-9deb-ff5714451624
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dcbcd57b95f304f007e92ebe2b9aeefb4b579662
-ms.openlocfilehash: 986d0446209f6e7eac1b681066d1b2e2305e1975
+ms.translationtype: HT
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: b1f4cd4a6f19a02d2b2dc3f9a841aeeb2a1403dd
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
-
+ms.lasthandoff: 07/29/2017
 
 ---
 
 # <a name="integrate-upgrade-readiness-with-system-center-configuration-manager"></a>将 Upgrade Readiness 与 System Center Configuration Manager 进行集成
-借助 Upgrade Readiness（以前称为 Upgrade Analytics），用户能够评估和分析设备的准备情况以及与 Windows 10 的兼容性，从而实现更轻松、更流畅的升级。 将 Upgrade Readiness 与 Configuration Manager 进行集成，以便在 Configuration Manager 管理控制台中访问客户端升级兼容性数据。 然后可以从设备列表中设定要升级或修正的设备。
+
+*适用范围：System Center Configuration Manager (Current Branch)*
+
+借助升级就绪情况（以前称为 Upgrade Analytics），用户能够评估和分析设备对 Windows 10 的准备情况。 将 Upgrade Readiness 与 Configuration Manager 进行集成，以便在 Configuration Manager 管理控制台中访问客户端升级兼容性数据。 可以从设备列表中设定要升级或修正的设备。
 
 Upgrade Readiness 是 Microsoft Operations Management Suite (OMS) 中的解决方案。 有关 Upgrade Readiness 的详细信息，请参阅 [Upgrade Readiness 入门](https://technet.microsoft.com/itpro/windows/deploy/manage-windows-upgrades-with-upgrade-readiness)。
 
@@ -31,36 +33,42 @@ Upgrade Readiness 是 Microsoft Operations Management Suite (OMS) 中的解决�
 必须执行几个配置步骤以确保客户端可以向 Upgrade Readiness 提供数据：
 
 -  按[在你的组织中配置 Windows 遥测](https://technet.microsoft.com/itpro/windows/manage/configure-windows-telemetry-in-your-organization)中所述方法配置客户端遥测设置。
--  按 [Upgrade Readiness 入门](https://technet.microsoft.com/itpro/windows/deploy/manage-windows-upgrades-with-upgrade-readiness)的“部署兼容性更新和相关知识库”部分所述的方法，安装知识库。
+-  安装[升级就绪情况入门](https://technet.microsoft.com/itpro/windows/deploy/manage-windows-upgrades-with-upgrade-readiness)的*部署兼容性更新和相关知识库*部分所述的知识库。
 
     > [!NOTE]
     > 用户可下载脚本以自动执行多个客户端安装任务。 有关脚本的信息，请参阅 [Upgrade Readiness 入门](https://technet.microsoft.com/itpro/windows/deploy/manage-windows-upgrades-with-upgrade-readiness)的“运行 Upgrade Readiness 部署脚本”部分。
 
-## <a name="create-a-connection-to-upgrade-readiness"></a>创建 Upgrade Readiness 连接
+## <a name="connect-to-upgrade-readiness"></a>连接到升级就绪情况
 
 ### <a name="prerequisites"></a>先决条件
 
-- 若要添加连接，Configuration Manager 环境必须先在[联机模式](https://azure.microsoft.com/en-us/documentation/articles/resource-group-create-service-principal-portal/)下配置[服务连接点](/sccm/core/servers/deploy/configure/about-the-service-connection-point)。 将连接添加到环境时，它还会在运行此站点系统角色的计算机上安装 Microsoft Monitoring Agent。
-- 将 Configuration Manager 注册为“Web 应用程序和/或 Web API”管理工具，并获得[来自此注册的客户端 ID](https://azure.microsoft.com/documentation/articles/active-directory-integrating-applications/)。
-- 在 Azure Active Directory 中，为已注册的管理工具创建客户端密钥。
-- 在 Azure 管理门户中，向已注册的 Web 应用提供访问 OMS 的权限，如[向 Configuration Manager 提供 OMS 权限](https://azure.microsoft.com/en-us/documentation/articles/log-analytics-sccm/#provide-configuration-manager-with-permissions-to-oms)中所述。
+从 Current Branch 版本 1706 开始，“Azure 服务向导”可简化用于 Configuration Manager 的 Azure 服务的配置过程。 若要使用此向导，需要配置 Azure Web 应用。 有关详细信息，请参阅 [Azure 服务向导](/sccm/core/servers/deploy/configureazure-services-wizard)。
 
-    > [!IMPORTANT]
-    > 配置访问 OMS 的权限时，请务必选择**参与者**角色，并向其分配注册应用的资源组的权限。
+### <a name="use-the-azure-wizard-to-create-the-connection"></a>使用 Azure 向导创建连接
 
-### <a name="create-the-connection"></a>创建连接
+1.  在 Configuration Manager 控制台的“管理”工作区中，展开“云服务”，然后单击“Azure 服务”。
+2.  在“主页”选项卡上的“Azure 服务”组中，单击“配置 Azure 服务”。
+3.  在 Azure 服务页面上键入一个友好的名称。 还可键入说明。 然后选择“升级就绪情况连接器”，并单击“下一步”。
+4.  在“应用”页上指定 Azure 环境。 单击“浏览”设置服务器应用。
+5.  单击“导入”连接到 Azure Web 应用。
+    -  键入“Azure AD 租户名称”。
+    -  键入“Azure AD 租户 ID”。
+    -  键入“应用程序名称”。
+    -  键入“客户端 ID”。
+    -  键入“密钥”。
+    -  选择“密钥到期”日期。
+    -  为“应用程序 ID URI”键入任意 URL。
+    -  单击“验证”，然后单击“确定”。
 
-1.  在 Configuration Manager 控制台中，选择“管理” > “云服务” > “Upgrade Readiness 连接器” > “创建 Upgrade Analytics 连接”以启动“添加 Upgrade Analytics 连接向导”。
-3.  在“Azure Active Directory”屏幕上，提供“租户”、“客户端 ID”以及“客户端密钥”，然后选择“下一步”。
-4.  在“Upgrade Readiness”屏幕上，填写“Azure 订阅”、“Azure 资源组”和“Operations Management Suite 工作区”，提供连接设置。
-5.  在“摘要”屏幕上验证连接设置，然后选择“下一步”。
+6.  在“配置”页上指定到升级就绪情况的连接。 选择以下值：  
+    -  Azure 订阅
+    -  Azure 资源组
+    -  Windows Analytics 工作区
+8.  单击“下一步” 。 可以在“摘要”页中查看连接。 
 
-    > [!NOTE]
-    > 必须将 Upgrade Readiness 连接到层次结构中的顶层站点。 如果将 Upgrade Readiness 连接到独立主站点，然后将管理中心站点添加到环境，则必须删除 OMS 连接并在新层次结构中重新创建。
+## <a name="complete-upgrade-readiness-tasks"></a>完成 Upgrade Readiness 任务  
 
-### <a name="complete-upgrade-readiness-tasks"></a>完成 Upgrade Readiness 任务  
-
-在 Configuration Manager 中创建连接后，请按 [Upgrade Readiness 入门](https://technet.microsoft.com/itpro/windows/deploy/manage-windows-upgrades-with-upgrade-readiness)中所述的方法执行这些任务。  
+创建连接后，请按[升级就绪情况入门](https://technet.microsoft.com/itpro/windows/deploy/manage-windows-upgrades-with-upgrade-readiness)中所述的方法执行这些任务。  
 
 1. 将 UpgradeReadiness 服务添加到 OMS 工作区。  
 2. 生成商用 ID。  
@@ -77,9 +85,9 @@ Upgrade Readiness 部署脚本可执行以下操作：
 - 确认是否已安装最新版本的知识库包 10.0.x（需要 10.0.14913 或后续版本）。  
 - 如果已启用，开启详细模式进行故障排除。  
 - 开始收集 Microsoft 评估组织的升级准备情况所需的遥测数据。  
-- 如果启用，则在 cmd 窗口中显示脚本的进度以向你展示问题（每个步骤是成功还是失败）和/或写入到日志文件。  
+- 启用后，在 cmd 窗口中会显示脚本的进度。 通过它可以查看问题（各个步骤成功还是失败）和/或写入日志文件。  
 
-### <a name="to-run-the-upgrade-readiness-deployment-script"></a>运行 Upgrade Readiness 部署脚本：  
+## <a name="to-run-the-upgrade-readiness-deployment-script"></a>运行 Upgrade Readiness 部署脚本：  
 
 1. 下载 [Upgrade Readiness 部署脚本](https://go.microsoft.com/fwlink/?LinkID=822966&clcid=0x409)并提取 UpgradeReadiness.zip。 仅当计划在故障排除模式下运行脚本时，才需要“诊断”文件夹中的文件。  
 2. 在 RunConfig.bat 中编辑这些参数：  
@@ -111,4 +119,28 @@ Upgrade Readiness 部署脚本可执行以下操作：
 2. 查看数据，其中包括升级就绪状态和报告遥测的 Windows 设备的百分比。
 3. 你可以筛选仪表板以查看特定集合中设备的数据。
 4. 可以查看处于特定就绪状态的设备，并为这些设备创建动态集合，以便可在就绪时升级这些设备，或采取措施使其处于就绪状态。
+
+## <a name="create-a-connection-to-upgrade-readiness-1702-and-earlier"></a>创建到升级就绪情况的连接（1702 及早期版本）
+
+在 Configuration Manager 的 1706 分支之前，创建到升级就绪情况底连接需要以下步骤。
+
+### <a name="prerequisites"></a>先决条件
+
+- 若要添加连接，Configuration Manager 环境必须先在[联机模式](https://azure.microsoft.com/documentation/articles/resource-group-create-service-principal-portal/)下配置[服务连接点](/sccm/core/servers/deploy/configure/about-the-service-connection-point)。 将连接添加到环境时，它还会在运行此站点系统角色的计算机上安装 Microsoft Monitoring Agent。
+- 将 Configuration Manager 注册为“Web 应用程序和/或 Web API”管理工具，并获得[来自此注册的客户端 ID](https://azure.microsoft.com/documentation/articles/active-directory-integrating-applications/)。
+- 在 Azure Active Directory 中，为已注册的管理工具创建客户端密钥。
+- 在 Azure 门户中，向已注册的 Web 应用提供访问 OMS 的权限，如[向 Configuration Manager 提供 OMS 权限](https://azure.microsoft.com/documentation/articles/log-analytics-sccm/#provide-configuration-manager-with-permissions-to-oms)中所述。
+
+    > [!IMPORTANT]
+    > 配置访问 OMS 的权限时，请务必选择**参与者**角色，并向其分配注册应用的资源组的权限。
+
+### <a name="create-the-connection"></a>创建连接
+
+1.  在 Configuration Manager 控制台中，选择“管理” > “云服务” > “Upgrade Readiness 连接器” > “创建 Upgrade Analytics 连接”以启动“添加 Upgrade Analytics 连接向导”。
+3.  在“Azure Active Directory”屏幕上，提供“租户”、“客户端 ID”以及“客户端密钥”，然后选择“下一步”。
+4.  在“Upgrade Readiness”屏幕上，填写“Azure 订阅”、“Azure 资源组”和“Operations Management Suite 工作区”，提供连接设置。
+5.  在“摘要”屏幕上验证连接设置，然后选择“下一步”。
+
+    > [!NOTE]
+    > 必须将 Upgrade Readiness 连接到层次结构中的顶层站点。 如果将 Upgrade Readiness 连接到独立主站点，然后将管理中心站点添加到环境，则必须删除 OMS 连接并在新层次结构中重新创建。
 

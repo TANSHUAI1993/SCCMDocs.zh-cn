@@ -1,5 +1,4 @@
 ---
-
 title: "配置要同步的分类和产品 | Microsoft Docs"
 description: "按照以下步骤在 Configuration Manager 控制台中配置要同步的分类和产品。"
 keywords: 
@@ -13,11 +12,11 @@ ms.service:
 ms.technology:
 - configmgr-sum
 ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
-translationtype: Human Translation
-ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
-ms.openlocfilehash: 6add66e625c790b65edf64216c2262a5d082f820
-
-
+ms.translationtype: HT
+ms.sourcegitcommit: afe0ecc4230733fa76e41bf08df5ccfb221da7c8
+ms.openlocfilehash: 2da61e6e06850b36543b9fd41bd9a7d2368006fb
+ms.contentlocale: zh-cn
+ms.lasthandoff: 08/04/2017
 
 ---
 #  <a name="configure-classifications-and-products-to-synchronize"></a>配置要同步的分类和产品  
@@ -51,9 +50,13 @@ ms.openlocfilehash: 6add66e625c790b65edf64216c2262a5d082f820
     > - **工具**：指定可帮助完成一项或多项任务的实用程序或功能。  
     > - **更新汇总**：指定一组累积的修补程序，它们打包在一起以便于部署。 这些修补程序可以包括安全更新、关键更新、其他更新等。 更新汇总通常解决特定领域的问题，例如安全性或产品组件问题。  
     > - **更新**：指定对已安装的应用程序或文件的更新。  
-    > - **升级**：为 Windows 10 特性和功能指定升级。  
-    >   
-    >      软件更新点和站点必须运行最低具有[修补程序 3095113](https://support.microsoft.com/kb/3095113) 的 WSUS 4.0 来获取“升级”分类。  
+    > - **升级**：为 Windows 10 特性和功能指定升级。 软件更新点和站点必须运行最低具有[修补程序 3095113](https://support.microsoft.com/kb/3095113) 的 WSUS 4.0 来获取“升级”分类。    
+    >       
+
+    > [!NOTE]    
+    > 从 Configuration Manager 版本 1706 开始，还可以选择“包括 Microsoft Surface 驱动程序和固件更新”复选框来同步 Microsoft Surface 驱动程序。 所有软件更新点都必须运行 Windows Server 2016 才能成功同步 Surface 驱动程序。     
+    >    
+    > 这是预发行功能。 预发行功能包含在产品中，用于在生产环境中进行早期测试，但不应将其视为生产就绪。 必须启用此功能，使其可供使用。 有关详细信息，请参阅[使用更新中的预发行功能](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease)。
 
 5.  在“产品”  选项卡上，指定要为其同步软件更新的产品，然后单击“关闭” 。  
 
@@ -65,12 +68,6 @@ ms.openlocfilehash: 6add66e625c790b65edf64216c2262a5d082f820
     > [!IMPORTANT]  
     >  Configuration Manager 存储产品和产品系列的列表，你在初次安装软件更新点时可以从此列表中进行选择。 如果某些产品和产品系列是在发布 Configuration Manager 之后发布的，那么，在完成软件更新同步（这将更新可供你从中进行选择的可用产品和产品系列的列表）之前，可能无法选择它们。  
 
-
 ## <a name="next-steps"></a>后续步骤
 启动软件更新同步以根据新条件检索软件更新。 有关详细信息，请参阅[同步软件更新](synchronize-software-updates.md)。
-
-
-
-<!--HONumber=Dec16_HO3-->
-
 

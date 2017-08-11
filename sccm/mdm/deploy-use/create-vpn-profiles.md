@@ -2,7 +2,7 @@
 title: "System Center Configuration Manager 中的 VPN 配置文件 | Microsoft Docs"
 description: "System Center Configuration Manager 中移动设备上的 VPN 配置文件。"
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 07/26/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,11 +16,11 @@ caps.handback.revision: 0
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d5166b16ffbe46af561b1ce98c0494cc4aaa72a8
-ms.openlocfilehash: aacd11708f9f9bd5b0a2d1b1cd6db3c60a7c0c28
+ms.translationtype: HT
+ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
+ms.openlocfilehash: e4a53caab7d76b604a3fee7dcfc4dc48f22b0fb0
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
+ms.lasthandoff: 07/29/2017
 
 ---
 # <a name="vpn-profiles-on-mobile-devices-in-system-center-configuration-manager"></a>System Center Configuration Manager 中移动设备上的 VPN 配置文件
@@ -39,7 +39,8 @@ ms.lasthandoff: 05/17/2017
 
  |连接类型|iOS 和 macOS X|Android|Windows 8.1|Windows RT|Windows RT 8.1|Windows Phone 8.1|Windows 10 桌面和移动版|  
  |---------------------|----------------------|-------------|-----------------|----------------|--------------------|-----------------------|-----------------------------------|  
- |Cisco AnyConnect|是|是|否|否|否|否|是 (OMA-URI)|  
+ |Cisco AnyConnect|是|是|否|否|否|否|是 (OMA-URI)|
+ |Cisco (IPSec)|仅限 iOS|否|否|否|否|否|否|  
  |脉冲安全|是|是|是|否|是|是|是|  
  |F5 Edge Client|是|是|是|否|是|是|是|  
  |Dell SonicWALL Mobile Connect|是|是|是|否|是|是|是|  
@@ -106,7 +107,7 @@ ms.lasthandoff: 05/17/2017
             - 选中“启用使用替代证书进行单一登录(SSO)”可以选择除 VPN 身份验证证书以外的其他证书来验证设备符合性。 如果选中此选项，请输入 VPN 客户端应查找的正确证书的“EKU”（以逗号分隔的列表）和“颁发者哈希”。
 
          - 对于 **Windows 信息保护**，请输入企业管理的公司标识（通常是组织的主域，例如 *contoso.com*）。 可以指定组织拥有的多个域，只需用“|”字符来分隔域即可。 例如，*contoso.com|newcontoso.com*。   
-              有关 Windows 信息保护的详细信息，请参阅[使用 Microsoft Intune 创建 Windows 信息保护 (WIP) 策略](https://technet.microsoft.com/en-us/itpro/windows/keep-secure/create-wip-policy-using-intune)。   
+            有关 Windows 信息保护的详细信息，请参阅[使用 Microsoft Intune 创建 Windows 信息保护 (WIP) 策略](https://technet.microsoft.com/en-us/itpro/windows/keep-secure/create-wip-policy-using-intune)。   
 
          ![为 VPN 配置条件性访问](media/vpn-conditional-access.png)
 

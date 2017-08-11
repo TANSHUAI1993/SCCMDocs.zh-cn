@@ -16,12 +16,11 @@ caps.handback.revision: 0
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f9097014c7e988ec8e139e518355c4efb19172b3
-ms.openlocfilehash: da86fc2f61ce8229fb0d3f58a4f8a24d1514b30e
+ms.translationtype: HT
+ms.sourcegitcommit: b7461f89f483314bd07248bbc9d5dde85ca6b6c2
+ms.openlocfilehash: 4d048d4f9ab01b28e6c21a38cca4d82c85030618
 ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
-
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="create-applications-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 创建应用程序
@@ -198,6 +197,14 @@ System Center Configuration Manager 应用程序具有将软件部署到设备�
 
         > [!IMPORTANT]  
         >  站点服务器计算机的系统帐户必须具有所指定内容位置的权限。  
+
+    -   “卸载内容设置” - 指定以下选项之一：
+        - “与安装内容相同” - 如果安装和卸载内容相同，请选择此选项。 此为默认行为。
+        - “无卸载内容” - 如果应用程序不需要卸载内容，请选择此选项。
+        - “与安装内容不同” - 如果卸载内容与安装内容不同，请选择此选项。
+
+4. 如果你选择“与安装内容不同”，则浏览到或输入用于卸载应用程序的应用程序内容的位置。
+5. 单击“确定”以关闭部署类型属性对话框。
 
     -   **保留客户端缓存中的内容** - 选择此选项，指定是否应将内容无限期保留在客户端计算机上的缓存中（即使它已运行）。 尽管此选项对于某些部署（例如基于 Windows Installer 的软件，该软件需要有本地源副本才能应用更新）可能很有用，但它会减少可用缓存空间。 如果选择此选项，在缓存没有足够的可用空间的情况下，将可能会导致大型部署稍后失败。  
 

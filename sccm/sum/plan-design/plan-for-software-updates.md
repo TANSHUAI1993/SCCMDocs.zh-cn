@@ -1,5 +1,4 @@
 ---
-
 title: "规划软件更新 | Microsoft Docs"
 description: "在 System Center Configuration Manager 生产环境中使用软件更新之前，需要规划软件更新点基础结构。"
 keywords: 
@@ -13,12 +12,11 @@ ms.service:
 ms.technology:
 - configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f4c46bfab9b40b29654f4e883817a5508ab25b74
-ms.openlocfilehash: b5a2fd9f15992c9e5ef8aede64af5446b6852b1a
+ms.translationtype: HT
+ms.sourcegitcommit: afe0ecc4230733fa76e41bf08df5ccfb221da7c8
+ms.openlocfilehash: 8b739a01a6bb5cacf0f7109e2e6fa3b31dd666d3
 ms.contentlocale: zh-cn
-ms.lasthandoff: 06/28/2017
-
+ms.lasthandoff: 08/04/2017
 
 ---
 
@@ -109,11 +107,15 @@ ms.lasthandoff: 06/28/2017
 
 
 ###  <a name="BKMK_ManuallySwitchSUPs"></a>手动将客户端切换到新的软件更新点
-从 Configuration Manager 版本 1606 开始，可以启用使 Configuration Manager 客户端在活动软件更新点出现问题时切换到新软件更新点的选项。 仅当客户端从管理点接收多个软件更新点时，此选项才导致更改。  
+从 Configuration Manager 版本 1606 开始，可以启用使 Configuration Manager 客户端在活动软件更新点出现问题时切换到新软件更新点的选项。 仅当客户端从管理点接收多个软件更新点时，此选项才导致更改。
 
-在设备集合或一套所选设备上启用此选项。 启用后，客户端将在下次扫描时查找另一个软件更新点。 根据你的 WSUS 配置设置（更新分类、产品、软件更新点是否共享 WSUS 数据库等等），切换到新的软件更新点将会产生额外的网络流量。 因此，应仅当需要时才使用此选项。  
+> [!IMPORTANT]    
+> 切换设备以使用新的服务器时，设备使用回退来查找该新服务器。 因此，请检查你的边界组配置，并在确保软件更新点位于正确的边界组后，再开始进行此更改。 有关详细信息，请参阅[软件更新点](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points)。
+>
+> 切换到新的软件更新点会产生额外的网络流量。 流量大小取决于你的 WSUS 配置设置（更新分类、产品、软件更新点是否共享 WSUS 数据库等等）。 如果计划切换多个设备，请考虑在维护时段执行此操作，以减少同步到新的软件更新点服务器时对网络的影响。
 
 #### <a name="to-enable-the-option-to-switch-software-update-points"></a>启用切换软件更新点的选项  
+在设备集合或一套所选设备上启用此选项。 启用后，客户端将在下次扫描时查找另一个软件更新点。
 
 1.  在 Configuration Manager 控制台中，转到“资产和符合性”>“概览”>“设备集合”。  
 
@@ -295,8 +297,8 @@ ms.lasthandoff: 06/28/2017
 -   如果取代软件更新未获准在生产环境中进行部署。  
 
     > [!NOTE]  
-    >  Configuration Manager 将被取代的软件更新设置为“已过期”时，不会在 WSUS 中将该更新设置为“已过期”。 但是，WSUS 清除任务运行时，在 Configuration Manager 中设置为“已过期”的更新在 WSUS 服务器中设置为“已拒绝”状态，并且计算机上的 Windows 更新代理不再扫描这些更新。 这意味着客户端将继续扫描已过期的更新，直到清除任务运行。 有关 WSUS 清除任务的信息，请参阅[软件更新维护](/sccm/sum/deploy-use/software-updates-maintenance)。
-    
+    > Configuration Manager 将被取代的软件更新设置为“已过期”时，不会在 WSUS 中将该更新设置为“已拒绝”。 但是，WSUS 清除任务运行时，在 Configuration Manager 中设置为“已过期”的更新在 WSUS 服务器中设置为“已拒绝”状态，并且计算机上的 Windows 更新代理不再扫描这些更新。 这意味着客户端将继续扫描已过期的更新，直到清除任务运行。 有关 WSUS 清除任务的信息，请参阅[软件更新维护](/sccm/sum/deploy-use/software-updates-maintenance)。
+
 ###  <a name="BKMK_UpdateLanguages"></a> 语言  
  软件更新点的语言设置允许你配置为软件更新同步摘要详细信息（软件更新元数据）的语言，以及将为软件更新下载的软件更新文件语言。  
 
