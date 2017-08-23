@@ -1,110 +1,106 @@
 ---
-title: "使用 PXE 通过网络部署 Windows | Microsoft Docs"
-description: "使用启动了 PXE 的操作系统部署来刷新计算机的操作系统或在一台新的计算机上安装新版本的 Windows。"
+title: "使用 PXE 透過網路部署 Windows | Microsoft Docs"
+description: "使用 PXE 起始作業系統部署來重新整理電腦的作業系統，或在新電腦上安裝新的 Windows 版本。"
 ms.custom: na
 ms.date: 06/15/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: da5f8b61-2386-4530-ad54-1a5c51911f07
-caps.latest.revision: 19
-caps.handback.revision: 0
+caps.latest.revision: "19"
+caps.handback.revision: "0"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f4c46bfab9b40b29654f4e883817a5508ab25b74
 ms.openlocfilehash: b88ab3799027c78a8c605e934b247097b31e1d21
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/28/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="use-pxe-to-deploy-windows-over-the-network-with-system-center-configuration-manager"></a>使用 PXE 与 System Center Configuration Manager 一起通过网络部署 Windows
+# <a name="use-pxe-to-deploy-windows-over-the-network-with-system-center-configuration-manager"></a>利用 System Center Configuration Manager 使用 PXE 透過網路來部署 Windows
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+適用於：System Center Configuration Manager (最新分支)
 
-System Center Configuration Manager 中启动了预启动执行环境 (PXE) 的操作系统部署允许客户端计算机通过网络请求和部署操作系统。 在此部署方案中，将操作系统映像以及 x86 和 x64 Windows PE 启动映像发送到配置为接受 PXE 启动请求的分发点。
+System Center Configuration Manager 中的開機前執行環境 (PXE) 起始作業系統部署，可讓用戶端電腦透過網路要求與部署作業系統。 在這種部署案例中，您會將作業系統映像和 x86 及 x64 Windows PE 開機映像傳送至設定成接受 PXE 開機要求的發佈點。
 
 > [!NOTE]  
->  当创建一个仅针对 x64 BIOS 计算机的操作系统部署时，x64 启动映像和 x86 启动映像都必须在分发点上可用。
+>  當您建立僅以 x64 BIOS 電腦為目標的作業系統部署時，x64 開機映像和 x86 開機映像在發佈點上都必須為可用狀態。
 
-你可以在以下操作系统部署方案中使用启动了 PXE 的操作系统部署：
+在下列作業系統部署案例中，您可以使用 PXE 起始作業系統部署：
 
--   [使用新版的 Windows 刷新现有的计算机](refresh-an-existing-computer-with-a-new-version-of-windows.md)  
+-   [使用新的 Windows 版本重新整理現有的電腦](refresh-an-existing-computer-with-a-new-version-of-windows.md)  
 
--   [在新计算机（裸机）上安装新版的 Windows](install-new-windows-version-new-computer-bare-metal.md)  
+-   [在新電腦 (裸機) 上安裝新的 Windows 版本](install-new-windows-version-new-computer-bare-metal.md)  
 
-完成其中一个操作系统部署方案中的步骤，然后使用以下部分来准备启动了 PXE 的部署。
+完成任一作業系統部署案例中的步驟，然後使用下列各節的內容準備 PXE 起始部署。
 
-##  <a name="BKMK_Configure"></a> 配置至少一个分发点以接受 PXE 请求
-要将操作系统部署到发出 PXE 启动请求的客户端，请使用一个或多个配置为响应 PXE 启动请求的分发点。 有关在分发点上启用 PXE 的步骤，请参阅[配置分发点以接受 PXE 请求](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_PXEDistributionPoint)。
+##  <a name="BKMK_Configure"></a> 將至少一個發佈點設定為接受 PXE 要求
+若要將作業系統部署至發出 PXE 開機要求的用戶端上，請使用一或多個設定為會回應 PXE 開機要求的發佈點。 如需在發佈點上啟用 PXE 的步驟，請參閱[設定發佈點接受 PXE 要求](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_PXEDistributionPoint)。
 
-## <a name="prepare-a-pxe-enabled-boot-image"></a>准备 PXE 启用的启动映像
-若要使用 PXE 来部署操作系统，必须将已启用 PXE 的 x86 和 x64 启动映像分发到一个或多个已启用 PXE 的分发点。 使用信息在启动映像上启用 PXE 并将启动映像分发到分发点：
+## <a name="prepare-a-pxe-enabled-boot-image"></a>準備啟用 PXE 的開機映像
+若要使用 PXE 以部署作業系統，您必須擁有 x86 和 x64 的支援 PXE 開機映像，以發佈到一個或多個支援 PXE 的發佈點。 使用資訊在開機映像上啟用 PXE，並將開機映像發佈到發佈點：
 
--   要在启动映像上启用 PXE，请从启动映像属性中的“数据源”选项卡中，选择“从已启用 PXE 的分发点部署此启动映像”。
+-   若要在開機映像上啟用 PXE，請從開機映像內容中的 [資料來源] 索引標籤，選取 [從支援 PXE 的發佈點部署此開機映像]。
 
--   如果更改启动映像的属性，请将启动映像重新分发到分发点。 有关详细信息，请参阅[分发内容](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content)。
+-   如果您變更開機映像的內容，請將開機映像重新發佈至發佈點。 如需詳細資訊，請參閱[發佈內容](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content)。
 
-##  <a name="BKMK_PXEExclusionList"></a> 创建 PXE 部署的排除列表
-使用 PXE 部署操作系统时，可以在每个分发点上创建一个排除列表。 将 MAC 地址添加到你希望分发点忽略的计算机的排除列表中。 列出的计算机将不接收 Configuration Manager 用于 PXE 部署的部署任务序列。
+##  <a name="BKMK_PXEExclusionList"></a> 建立 PXE 部署的排除清單
+當您使用 PXE 部署作業系統時，可以在每個發佈點上建立排除清單。 將要發佈點忽略之電腦的 MAC 位址新增到排除清單。 清單中的電腦將不會接收 Configuration Manager 用來進行 PXE 部署的部署工作順序。
 
-#### <a name="to-create-the-exclusion-list"></a>创建排除列表
+#### <a name="to-create-the-exclusion-list"></a>建立排除清單
 
-1.  在针对 PXE 启用的分发点上创建一个文本文件。 例如，将此文本文件命名为 **pxeExceptions.txt**。
+1.  在啟用 PXE 的發佈點上建立文字檔。 例如，將此文字檔命名為 **pxeExceptions.txt**。
 
-2.  使用纯文本编辑器（例如记事本）添加要由启用 PXE 的分发点忽略的计算机的 MAC 地址。 用冒号分隔 MAC 地址值，每行输入一个地址。 例如： `01:23:45:67:89:ab`
+2.  使用純文字編輯器 (像是記事本)，並新增要讓啟用 PXE 的發佈點忽略的電腦 MAC 位址。 以分號分隔 MAC 位址值，且一行輸入一個位址。 例如： `01:23:45:67:89:ab`
 
-3.  将该文本文件保存在启用 PXE 的分发点站点系统服务器上。 可将该文本文件保存到服务器上的任何位置。
+3.  將文字檔儲存在啟用 PXE 的發佈點站台系統伺服器上。 文字檔可以儲存到伺服器上的任何位置。
 
-4.  编辑启用 PXE 的分发点的注册表以创建 MACIgnoreListFile 注册表项。 在启用 PXE 的分发点站点系统服务器上添加该文本文件完整路径的字符串值。 使用以下注册表路径：
+4.  編輯啟用 PXE 之發佈點的登錄，以建立 **MACIgnoreListFile** 登錄機碼。 將文字檔之完整路徑的字串值新增至啟用 PXE 的發佈點站台系統伺服器上。 使用下列登錄路徑：
 
      **HKLM\Software\Microsoft\SMS\DP**  
 
     > [!WARNING]  
-    >  如果不正确地使用注册表编辑器，可能会导致也许需要你重新安装操作系统的严重问题。 Microsoft 不保证能够解决因注册表编辑器使用不当而导致的问题。 使用注册表编辑器的风险由您自己承担。
+    >  如果您不當使用登錄編輯程式，可能造成嚴重的問題，而需要重新安裝作業系統。 Microsoft 無法保證您可以解決因不正確使用登錄編輯程式所造成的問題。 您必須自行承擔使用登錄編輯器的風險。
 
-     进行此注册表更改后，无需重启服务器。
+     進行這項登錄變更後，不需要重新啟動伺服器。
 
-##  <a name="BKMK_RamDiskTFTP"></a> RamDisk TFTP 块大小和窗口大小
-可以为启用 PXE 的分发点自定义 RamDisk TFTP 块大小和窗口大小（从 Configuration Manager 1606 版本开始）。 如果自定义了网络，则可能导致启动映像下载由于超时错误而失败，因为块大小或窗口大小太大。 通过 RamDisk TFTP 块大小和窗口大小自定义可以在使用 PXE 时优化 TFTP 流量，以满足特定网络要求。 在环境中测试自定义设置以确定最高效的方法。 有关详细信息，请参阅[在启用 PXE 的分发点上自定义 RamDisk TFTP 块大小和窗口大小](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_RamDiskTFTP)。
+##  <a name="BKMK_RamDiskTFTP"></a>RamDisk TFTP 區塊大小和視窗大小
+您可以為支援 PXE 的發佈點自訂 RamDisk TFTP 區塊大小，而從 Configuration Manager 1606 版開始，也可以自訂視窗大小。 如果您已自訂網路，可能會導致開機映像下載因發生逾時錯誤而失敗，因為區塊或視窗大小太大。 自訂 RamDisk TFTP 區塊大小和視窗大小可讓您在使用 PXE 來滿足特定的網路需求時，將 TFTP 流量最佳化。 在您的環境中測試自訂設定，以找出最有效率的方法。 如需詳細資訊，請參閱[自訂支援 PXE 之發佈點的相關 RamDisk TFTP 區塊大小和視窗大小](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_RamDiskTFTP)。
 
-## <a name="configure-deployment-settings"></a>配置部署设置
-若要使用启动了 PXE 的操作系统部署，必须配置该部署以使操作系统对 PXE 启动请求可用。 可以在“部署软件向导”的“部署设置”页或部署属性的“部署设置”选项卡上配置可用的操作系统。 对于“可用于以下项目”  设置，请配置下述内容之一：
+## <a name="configure-deployment-settings"></a>設定部署設定
+若要使用 PXE 起始的作業系統部署，必須設定部署，讓作業系統可供 PXE 開機要求使用。 您可以在 [部署軟體精靈] 的 [部署設定] 頁面上，或是在部署內容的 [部署設定] 索引標籤上設定可用的作業系統。 如果是 [供下列項目使用]  設定，請設定下列其中之一：
 
--   Configuration Manager 客户端、媒体和 PXE
+-   Configuration Manager 用戶端、媒體與 PXE
 
--   仅媒体和 PXE
+-   僅媒體與 PXE
 
--   仅媒体和 PXE（隐藏）
+-   僅媒體與 PXE (隱藏)
 
-##  <a name="BKMK_Deploy"></a> 部署任务序列
-将操作系统部署到目标集合。 有关详细信息，请参阅 [Deploy a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS)。 当使用 PXE 部署操作系统时，你可以将部署配置为必需或可用。
+##  <a name="BKMK_Deploy"></a> 部署工作順序
+將作業系統部署至目標集合。 如需詳細資訊，請參閱 [Deploy a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS)。 當您使用 PXE 部署作業系統時，可設定部署是否為需要部署或是提供進行部署。
 
--   所需的部署：所需的部署将使用 PXE，无需任何用户干预。 用户不能绕过 PXE 启动。 但是，如果用户在分发点响应之前取消 PXE 启动，则不会部署操作系统。
+-   **必要的部署**：必要的部署會使用 PXE，完全不需要任何使用者操作。 使用者無法略過 PXE 開機。 然而，如果使用者在發佈點回應之前取消 PXE 開機，就不會部署作業系統。
 
--   **可用部署**：可用部署要求用户在目标计算机旁，以便他们能够按 F12 键以继续进行 PXE 启动过程。 如果由于没有用户在场而未按 F12，则计算机将启动到当前操作系统，或者将从下一个可用启动设备启动计算机。
+-   **可用的部署**：可用的部署會要求使用者出現在目的地電腦，如此，使用者就可按下 F12 鍵繼續處理 PXE 開機。 如果使用者不在電腦端，無法按下 F12 鍵，電腦將會開機到目前的作業系統，或是從下一個可用的開機裝置開機。
 
-通过清除分配给 Configuration Manager 集合或计算机的上一个 PXE 部署的状态，可以重新部署所需的 PXE 部署。 此操作将重置该部署的状态并重新安装最新的所需部署。
+您可以藉由清除指派到 Configuration Manager 集合或電腦的最後一個 PXE 部署狀態，重新部署必要的 PXE 部署。 此動作會重設該部署的狀態，並重新安裝最新的必要部署。
 
 > [!IMPORTANT]
-> PXE 协议不安全。 请确保 PXE 服务器和 PXE 客户端位于物理安全网络上，如在数据中心，以防止未经授权就访问你的站点。
+> PXE 通訊協定不安全。 請確認 PXE 伺服器及 PXE 用戶端皆位於實體上安全的網路，例如位於資料中心可防止對於您站台的未授權存取。
 
-##  <a name="how-is-the-boot-image-selected-for-clients-booting-with-pxe"></a>如何为通过 PXE 启动的客户端选择启动映像？
-当客户端通过 PXE 启动时，Configuration Manager 会提供一个启动映像给该客户端使用。 从 Configuration Manager 版本 1606 开始，Configuration Manager 将使用体系结构精确匹配的启动映像。 如果没有可用的体系结构精确匹配的启动映像，则 Configuration Manager 会使用具有兼容体系结构的启动映像。 下表提供了有关如何为通过 PXE 启动的客户端选择启动映像的详细信息。
-1. Configuration Manager 会在站点数据库中查找与尝试启动的客户端的 MAC 地址或 SMBIOS 相匹配的系统记录。  
+##  <a name="how-is-the-boot-image-selected-for-clients-booting-with-pxe"></a>如何為使用 PXE 開機的用戶端選取開機映像？
+用戶端使用 PXE 開機時，Configuration Manager 會將要使用的開機映像提供給用戶端。 從 Configuration Manager 1606 版開始，Configuration Manager 會使用具有完全相符架構的開機映像。 如果找不到具有完全相符架構的開機映像，Configuration Manager 會使用具有相容架構的開機映像。 下列清單提供如何為使用 PXE 開機的用戶端選取開機映像的詳細資料。
+1. Configuration Manager 會查看站台資料庫中是否有系統記錄符合嘗試開機的用戶端的 MAC 位址或 SMBIOS。  
 
     > [!NOTE]
-    > 如果分配到站点的计算机启动到另一站点的 PXE，则策略对该计算机不可见。 例如，如果已将客户端分配到站点 A，则站点 B 的管理点和分发点将不能从站点 A 访问策略，且客户端无法成功进行 PXE 启动。
+    > 如果指派給站台的電腦會開機至不同站台的 PXE，就不會顯示適用於該電腦的原則。 例如，如果已經將用戶端指派給站台 A，站台 B 的管理點和發佈點將無法存取站台 A 的原則，而用戶端就不會成功進行 PXE 開機。
 
-2. Configuration Manager 会查找部署到步骤 1 中找到的系统记录中的任务序列。
+2. Configuration Manager 會尋找部署至步驟 1 中所找到之系統記錄的工作順序。
 
-3. 在步骤 2 中找到的任务序列列表中，Configuration Manager 会查找与尝试启动的客户端体系结构相匹配的启动映像。 如果找到具有相同体系结构的启动映像，则会使用该启动映像。
+3. 在步驟 2 中找到的工作順序清單中，Configuration Manager 會尋找符合嘗試開機的用戶端架構的開機映像。 如果找到相同架構的開機映像，則會使用該開機映像。
 
-4. 如果未找到具有相同体系结构的启动映像，Configuration Manager 会查找与客户端体系结构兼容的启动映像。 它查找在步骤 2 中发现的任务序列列表。 例如，64 位客户端兼容 32 位和 64 位启动映像。 32 位客户端仅兼容 32 位启动映像。 UEFI 客户端仅兼容 64 位启动映像。
-
+4. 如果找不到具有相同架構的開機映像，Configuration Manager 會尋找與用戶端架構相符的開機映像。 系統會在步驟 2 中的工作順序清單中尋找。 例如，64 位元用戶端與 32 位元和 64 位元開機映像相容。 32 位元用戶端僅與 32 位元開機映像相容。 UEFI 用戶端僅與 64 位元開機映像相容。

@@ -1,88 +1,81 @@
 ---
-title: "电源管理的管理员清单 | Microsoft Docs"
-description: "使用管理员清单，有助于规划和实现 System Center Configuration Manager 中的电源管理。"
+title: "電源管理的系統管理員檢查清單 | Microsoft Docs"
+description: "使用系統管理員檢查清單幫助您規劃及實作 System Center Configuration Manager 電源管理。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 94e42cbe-9df8-4228-a04e-0ad7626180ca
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: e6a7a0b853be930b558cdd739b90285ebb8538e7
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="administrator-checklist-for-power-management-in-system-center-configuration-manager"></a>System Center Configuration Manager 中电源管理的管理员清单
+# <a name="administrator-checklist-for-power-management-in-system-center-configuration-manager"></a>System Center Configuration Manager 中電源管理的系統管理員檢查清單
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用對象：System Center Configuration Manager (最新分支)*
 
-此管理员清单提供了在组织中使用 System Center Configuration Manager 电源管理的建议步骤。  
+這個系統管理員檢查清單提供在組織中使用 System Center Configuration Manager 電源管理的建議步驟。  
 
-## <a name="configuring-power-management"></a>配置电源管理  
- 使用下列步骤可帮助你将你的层次结构配置为收集客户端计算机的电源管理信息。  
-
-> [!IMPORTANT]  
->  在收集并分析客户端计算机的电源数据前，请勿将电源计划应用于层次结构中的计算机。 如果不先检查现有设置就将新的电源管理设置应用于计算机，这可能导致功率消耗变大。  
-
-|任务|详细信息|  
-|----------|-------------|  
-|请在 Configuration Manager 文档库中查看电源管理概念。|请参阅[电源管理简介](introduction-to-power-management.md)。|  
-|请在 Configuration Manager 文档库中查看电源管理先决条件。|请参阅[电源管理的先决条件](prerequisites-for-power-management.md)。|  
-|查看电源管理的最佳方案信息。|请参阅[电源管理的最佳做法](best-practices-for-power-management.md)。|  
-|配置集合，管理环境中计算机的电源消耗。|使用**用于报告基线数据的集合**、**用于报告基线数据的集合**、**无法进行电源管理的计算机集合**、**将应用电源计划的计算机集合**、**将应用电源计划的计算机集合**和**运行 Windows Server 的计算机集合**有助于管理层次结构中的计算机的电源设置。 你可以创建多个集合，并对每个集合应用不同的电源计划。|  
-|启用电源管理。|必须先启用电源管理并配置所需客户端设置，然后才可开始使用电源管理。 有关详细信息，请参阅[配置电源管理](configuring-power-management.md)。|  
-|收集客户端计算机的电源管理信息。|电源管理数据由客户端通过 Configuration Manager 硬件清单报告。 根据已配置的硬件清单计划，可能需要一些时间来检索来自所有客户端计算机的清单。|  
-
-## <a name="monitoring-and-planning-phase"></a>监控和规划阶段  
-
-|任务|详细信息|  
-|----------|-------------|  
-|运行报表“计算机活动” 。|“计算机活动”  报表显示一个图形，该图形显示指定集合在指定时间段内的监视器、计算机和用户活动。 此报表链接到“计算机活动详细信息”  报表，后者显示指定集合中计算机的睡眠和唤醒功能。 有关详细信息，请参阅[如何监视和规划电源管理](monitor-and-plan-for-power-management.md)。|  
-|运行报表“能耗”  或“每日能耗” 。|“能耗”  或“每日能耗”  报表显示指定集合在指定时间段内每月的总功率消耗（以千瓦时 (kWh) 为单位）。 有关详细信息，请参阅[如何监视和规划电源管理](monitor-and-plan-for-power-management.md)。|  
-|运行报表“环境影响”  或”每日环境影响”  。|“环境影响”  或”每日环境影响”  报表显示了一张图表，该图表显示指定的计算机集合在指定时间段内减少的二氧化碳 (CO2) 排放量。 有关详细信息，请参阅[如何监视和规划电源管理](monitor-and-plan-for-power-management.md)。|  
-|运行报表“能源成本”  或“每日能源成本” 。|“能源成本”  或“每日能源成本”  报表显示指定时间段内的总功率消耗成本。 有关详细信息，请参阅[如何监视和规划电源管理](monitor-and-plan-for-power-management.md)。|  
-|运行报表“电源功能” 。|“电源功能”  报表显示指定集合中的计算机的电源管理功能。 有关详细信息，请参阅[如何监视和规划电源管理](monitor-and-plan-for-power-management.md)。|  
-|运行报表“电源设置” 。|“电源设置”  显示指定集合中的计算机所使用的当前电源设置的聚合列表。 有关详细信息，请参阅[如何监视和规划电源管理](monitor-and-plan-for-power-management.md)。|  
-|从电源管理中排除任何所需的计算机集合。|请参阅[配置电源管理](configuring-power-management.md)。|  
+## <a name="configuring-power-management"></a>設定電源管理  
+ 使用下列步驟可協助您設定階層，以收集來自用戶端電腦的電源管理資訊。  
 
 > [!IMPORTANT]  
->  请确保你保存了在监控和规划阶段生成的电源管理报表中的信息。 你可以将此数据与实施和符合性阶段生成的电源管理信息进行比较，以帮助你评估对层次结构中的计算机应用电源计划后实现的电源使用量减小、电力成本节省和环境影响改进。  
+>  除非您已經收集並分析用戶端電腦的電源資料，否則請不要將電源計劃套用至階層中的電腦。 如果您將新的電源管理設定套用至電腦，而不需要先檢查現有設定，這可能會導致耗電量增加。  
 
-## <a name="enforcement-phase"></a>实施阶段  
-
-|任务|详细信息|  
+|工作|詳細資料|  
 |----------|-------------|  
-|选择现有电源计划或为组织中的计算机集合创建新的电源计划。|请参阅[如何创建并应用电源计划](create-and-apply-power-plans.md)。|  
-|将这些电源计划应用于计算机。|请参阅[如何创建并应用电源计划](create-and-apply-power-plans.md)。|  
+|請檢閱 Configuration Manager 文件庫中的電源管理概念。|請參閱[電源管理簡介](introduction-to-power-management.md)。|  
+|請檢閱 Configuration Manager 文件庫中的電源管理必要條件。|請參閱[電源管理的必要條件](prerequisites-for-power-management.md)。|  
+|請檢閱電源管理的最佳做法資訊。|請參閱[電源管理的最佳做法](best-practices-for-power-management.md)。|  
+|設定集合以從環境中的電腦管理電源消耗。|使用 [Collection for reporting of baseline data] \(基準資料報告集合)、[Collection for reporting of baseline data] \(基準資料報告集合)、[Collection of computers incapable of power management] \(無法管理電源的電腦集合)、[Collections of computers to which power plans will be applied] \(要套用電源計劃的電腦集合)、[Collections of computers to which power plans will be applied] \(要套用電源計劃的電腦集合) 和 [Collections of computers that are running Windows Server] \(執行 Windows Server 的電腦集合) 幫助您管理階層中的電腦電源設定。 您可以建立多個集合，並將不同的電源計劃套用至每個集合。|  
+|啟用電源管理。|您必須先啟用電源管理，並設定必要的用戶端設定，才能開始使用電源管理。 如需詳細資訊，請參閱[設定電源管理](configuring-power-management.md)。|  
+|收集來自用戶端電腦的電源管理資訊。|用戶端會透過 Configuration Manager 硬體清查來報告電源管理資訊。 根據您已設定的硬體清查排程，可能需要一些時間來擷取所有用戶端電腦中的清查。|  
 
-## <a name="compliance-phase"></a>符合性阶段  
+## <a name="monitoring-and-planning-phase"></a>監視和規劃階段  
 
-|任务|详细信息|  
+|工作|詳細資料|  
 |----------|-------------|  
-|运行报表“计算机活动” 。|“计算机活动”  报表显示一个图形，该图形显示指定集合在指定时间段内的监视器、计算机和用户活动。 此报表链接到“电源计算机活动详细信息”  报表，后者显示指定集合中计算机的睡眠和唤醒功能。 有关详细信息，请参阅[如何监视和规划电源管理](monitor-and-plan-for-power-management.md)。|  
-|运行报表“能耗”  或“每日能耗” 。|“能耗”  或“每日能耗”  报表显示指定集合在指定时间段内每月的总功率消耗（以千瓦时 (kWh) 为单位）。 有关详细信息，请参阅[如何监视和规划电源管理](monitor-and-plan-for-power-management.md)。|  
-|运行报表“环境影响”  或”每日环境影响” 。|“环境影响”  或”每日环境影响”  报表显示了一张图表，该图表显示指定的计算机集合在指定时间段内减少的二氧化碳 (CO2) 排放量。 有关详细信息，请参阅[如何监视和规划电源管理](monitor-and-plan-for-power-management.md)。|  
-|运行报表“能源成本”  或“每日能源成本” 。|“能源成本”  或“每日能源成本”  报表显示指定时间段内的总功率消耗成本。 有关详细信息，请参阅[如何监视和规划电源管理](monitor-and-plan-for-power-management.md)。|  
+|執行報告 [電腦活動] 。|[電腦活動]  報告顯示圖形來表示所指定集合在指定時段的監視器、電腦和使用者活動。 這個報告會連結到 [電腦活動詳細資料]  報告，以顯示指定集合中電腦的睡眠和喚醒功能清單。 如需詳細資訊，請參閱 [How to monitor and plan for power management](monitor-and-plan-for-power-management.md) (如何監視及規劃 Configuration Manager 的電源管理)。|  
+|執行報告 [能源消耗]  或 [每日能源消耗] 。|[能源消耗]  和 [每日能源消耗]  報告顯示指定集合在指定時段的每月總耗電量，單位為每小時千瓦 (kWh)。 如需詳細資訊，請參閱 [How to monitor and plan for power management](monitor-and-plan-for-power-management.md) (如何監視及規劃 Configuration Manager 的電源管理)。|  
+|執行報告 [環境衝擊]  或 [每日環境衝擊]  。|[環境衝擊]  和 [每日環境衝擊]  報告顯示圖形來表示指定電腦集合在指定時段所儲存的二氧化碳 (CO2) 排放量。 如需詳細資訊，請參閱 [How to monitor and plan for power management](monitor-and-plan-for-power-management.md) (如何監視及規劃 Configuration Manager 的電源管理)。|  
+|執行報告 [能源成本]  或 [每日能源成本] 。|[能源成本]  和 [每日能源成本]  報告顯示指定時段的總耗電量成本。 如需詳細資訊，請參閱 [How to monitor and plan for power management](monitor-and-plan-for-power-management.md) (如何監視及規劃 Configuration Manager 的電源管理)。|  
+|執行報告 [電池容量] 。|[電池容量]  報告顯示指定集合中電腦的電源管理功能。 如需詳細資訊，請參閱 [How to monitor and plan for power management](monitor-and-plan-for-power-management.md) (如何監視及規劃 Configuration Manager 的電源管理)。|  
+|執行報告 [電源設定] 。|[電源設定]  報告顯示指定集合中電腦所使用的目前電源設定彙總清單。 如需詳細資訊，請參閱 [How to monitor and plan for power management](monitor-and-plan-for-power-management.md) (如何監視及規劃 Configuration Manager 的電源管理)。|  
+|排除任何必要的電腦集合不進行電源管理。|請參閱[設定電源管理](configuring-power-management.md)。|  
 
-## <a name="troubleshooting"></a>故障排除  
+> [!IMPORTANT]  
+>  請確定您儲存監視和規劃階段期間所產生之電源管理報告中的資訊。 您可以比較這個資料與強制執行和相容性階段期間所產生的電源管理資訊，協助評估將電源計劃套用至階層中的電腦所省下的耗電量、電源成本和環境衝擊。  
 
-|任务|详细信息|  
+## <a name="enforcement-phase"></a>強制執行階段  
+
+|工作|詳細資料|  
 |----------|-------------|  
-|如果层次结构中的计算机未进入睡眠或休眠状态，请运行报表“失眠报表”  以显示可能的原因。|“失眠报表”  显示了一个列表，该列表列出了阻止计算机进入睡眠或休眠状态的常见原因以及指定时间段内受每种原因影响的计算机数量。 有关详细信息，请参阅[如何监视和规划电源管理](monitor-and-plan-for-power-management.md)。|  
-|如果多个电源计划应用于一台计算机，则将应用限制性最弱的电源计划。 运行报表“具有多个电源计划的计算机”  以查看应用了多个电源计划的计算机。|请参阅[如何监视和规划电源管理](monitor-and-plan-for-power-management.md)中的**具有多个电源计划的计算机**。|  
+|針對組織中的電腦集合，選取現有電源計劃，或建立新的電源計劃。|請參閱 [How to create and apply power plans](create-and-apply-power-plans.md) (如何建立及套用 Configuration Manager 的電源計劃)。|  
+|將這些電源計劃套用至電腦。|請參閱 [How to create and apply power plans](create-and-apply-power-plans.md) (如何建立及套用 Configuration Manager 的電源計劃)。|  
 
+## <a name="compliance-phase"></a>相容性階段  
 
+|工作|詳細資料|  
+|----------|-------------|  
+|執行報告 [電腦活動] 。|[電腦活動]  報告顯示圖形來表示所指定集合在指定時段的監視器、電腦和使用者活動。 這個報告會連結到 [電源電腦活動詳細資料]  報告，以顯示指定集合中電腦的睡眠和喚醒功能清單。 如需詳細資訊，請參閱 [How to monitor and plan for power management](monitor-and-plan-for-power-management.md) (如何監視及規劃 Configuration Manager 的電源管理)。|  
+|執行報告 [能源消耗]  或 [每日能源消耗] 。|[能源消耗]  和 [每日能源消耗]  報告顯示指定集合在指定時段的每月總耗電量，單位為每小時千瓦 (kWh)。 如需詳細資訊，請參閱 [How to monitor and plan for power management](monitor-and-plan-for-power-management.md) (如何監視及規劃 Configuration Manager 的電源管理)。|  
+|執行報告 [環境衝擊]  或 [每日環境衝擊] 。|[環境衝擊]  和 [每日環境衝擊]  報告顯示圖形來表示指定電腦集合在指定時段所儲存的二氧化碳 (CO2) 排放量。 如需詳細資訊，請參閱 [How to monitor and plan for power management](monitor-and-plan-for-power-management.md) (如何監視及規劃 Configuration Manager 的電源管理)。|  
+|執行報告 [能源成本]  或 [每日能源成本] 。|[能源成本]  和 [每日能源成本]  報告顯示指定時段的總耗電量成本。 如需詳細資訊，請參閱 [How to monitor and plan for power management](monitor-and-plan-for-power-management.md) (如何監視及規劃 Configuration Manager 的電源管理)。|  
 
-<!--HONumber=Dec16_HO3-->
+## <a name="troubleshooting"></a>疑難排解  
 
-
+|工作|詳細資料|  
+|----------|-------------|  
+|如果階層中的電腦尚未進入睡眠或休眠，請執行報告 [無法休眠報告]  來顯示可能的原因。|[無法休眠報告]  顯示妨礙電腦進入睡眠或休眠狀態的常見原因清單，以及在指定時段每個原因所影響的電腦數目。 如需詳細資訊，請參閱 [How to monitor and plan for power management](monitor-and-plan-for-power-management.md) (如何監視及規劃 Configuration Manager 的電源管理)。|  
+|如果將多個電源計劃套用至一部電腦，則會套用最不嚴格的電源計劃。 執行報告 [具有多個電源計劃的電腦]  ，查看已套用多個電源計劃的電腦。|請參閱 [How to monitor and plan for power management](monitor-and-plan-for-power-management.md) (如何監視及規劃 Configuration Manager 的電源管理 ) 中的 **Computers with Multiple Power Plans** (具有多個電源計劃的電腦)。|  

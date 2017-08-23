@@ -1,191 +1,187 @@
 ---
-title: "设计站点层次结构 - Configuration Manager | Microsoft Docs"
-description: "了解 System Center Configuration Manager 的可用拓扑和管理选项以便你可以规划站点层次结构。"
+title: "設計站台階層 - Configuration Manager | Microsoft Docs"
+description: "了解 System Center Configuration Manager 可用的拓撲和管理選項，以便您可以規劃站台階層。"
 ms.custom: na
 ms.date: 6/16/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 07ce872e-1558-42ad-b5ad-582c5b1bdbb4
-caps.latest.revision: 22
-caps.handback.revision: 0
+caps.latest.revision: "22"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: db673277d1cc2d24e8dba2439b2b1891c883ebd0
 ms.openlocfilehash: 4710b1b89eb50cb7bcf4c4ee50c12a96b6561bc9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/16/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="design-a-hierarchy-of-sites-for-system-center-configuration-manager"></a>设计 System Center Configuration Manager 的站点层次结构
+# <a name="design-a-hierarchy-of-sites-for-system-center-configuration-manager"></a>為 System Center Configuration Manager 設計站台階層
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用於：System Center Configuration Manager (最新分支)*
 
-安装新的 System Center Configuration Manager 层次结构的第一个站点前，最好先了解 Configuration Manager 的可用拓扑、可用站点的类型及其彼此之间的关系以及每个站点类型提供的管理范围。
-然后，在考虑了可减少需安装的站点数的内容管理选项后，可以计划能够高效地为当前业务需求提供服务，并且可之后进行拓展以满足将来增长的需求的拓扑。  
+在安裝第一個新的 System Center Configuration Manager 階層站台前，最好了解可用的 Configuration Manager 拓撲、可用的站台類型及彼此的關聯性，以及每個站台類型提供的管理範圍。
+然後，在考量可減少需要安裝之站台數目的內容管理選項之後，您可以有效率地提供您目前業務需求的拓撲規劃，稍後再擴充以管理未來的成長。  
 
 > [!NOTE]
-> 在计划安装新的 Configuration Manager 时，请熟悉[发行说明]( /sccm/core/servers/deploy/install/release-notes)，其中详细说明了活动版本中的当前问题。 此发行说明适用于 Configuration Manager 的所有分支。  但是，在使用[Technical Preview 分支]( /sccm/core/get-started/technical-preview)时，你将在每个版本的 Technical Preview 文档中发现仅针对该分支的问题。  
+> 在規劃新的 Configuration Manager 安裝時，請注意[版本資訊]( /sccm/core/servers/deploy/install/release-notes)，其中詳細說明使用中版本的目前問題。 此版本資訊適用於 Configuration Manager 的所有分支。  不過，當您使用 [Technical Preview 分支]( /sccm/core/get-started/technical-preview)時，會在每一版的 Technical Preview 文件中發現只有該分支才會出現的問題。  
 
-##  <a name="bkmk_topology"></a>层次结构拓扑  
- 层次结构拓扑的范围从单一独立主站点一直到一组连接的主要和辅助站点，该组站点在层次结构顶级（顶层）站点处具有管理中心站点。   在层次结构中所用的站点类型和计数的关键驱动程序通常是你必须支持的设备的类型和数量，如下所示：   
+##  <a name="bkmk_topology"></a> 階層拓樸  
+ 階層拓撲從單一獨立主要站台與管理中心網站之階層的頂層 (頂層) 站台連線的主要和次要站台的群組。   類型的主要驅動程式，而且階層中所使用站台的計數通常是必須支援的裝置數目及類型，如下所示：   
 
- **独立主站点：**在单一主站点可支持所有设备和用户的管理时，使用独立主站点（请参阅[调整大小和扩展数量](/sccm/core/plan-design/configs/size-and-scale-numbers)）。 如果不同的地理位置可由单一主站点成功地提供服务，则该拓扑也成功。  若要帮助管理网络流量，可以使用首选的管理点和精心规划的内容基础结构（请参阅 [System Center Configuration Manager 中内容管理的基本概念](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)）。  
+ **獨立的主要站台**︰當單一主要站台可以支援所有裝置和使用者的管理時，請使用獨立的主要站台 (請參閱[調整大小和縮放數字](/sccm/core/plan-design/configs/size-and-scale-numbers))。 當公司的不同地理位置可順利由單一主要站台服務時，此拓撲也會成功。  您可以使用慣用的管理點和仔細規劃的內容基礎結構，以利管理網路流量 (請參閱 [System Center Configuration Manager 的內容管理基本概念](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md))。  
 
- 此拓扑的好处包括：  
+ 這種拓撲的優點包括︰  
 
--   简化管理开销。  
+-   簡化管理負荷。  
 
--   简化可用资源和服务的客户端站点分配和发现。  
+-   簡化用戶端站台指派及探索可用資源及服務。  
 
--   消除站点之间的数据库复制可能引起的延迟。
+-   消除站台間資料庫複寫所引起的可能延遲。
 
--   此选项可以将独立的主层次结构扩展到更大的具有管理中心站点的层次结构。 这使你随后能够安装新主站点以扩展部署的规模。  
+-   透過管理中心網站將獨立主要階層展開為較大階層的選項。 這可讓您稍後安裝新的主要站台，以擴展您的部署規模。  
 
 
-**带有一个或多个子主站点的管理中心站点：**在你需要多个主站点支持所有设备和用户的管理时，使用此拓扑。  当需要使用多于一个主站点时需要。 此拓扑的好处包括：  
+**有一或多個子主要站台的管理中心網站︰** 需要多個主要站台支援管理所有的裝置和使用者時，請使用此拓撲。  當您需要使用多個單一主要站台時所需。 這種拓撲的優點包括︰  
 
 
--   最多支持 25 个主站点，这样能够扩展层次结构的规模。  
+-   支援最多 25 個主要站台，讓您擴展階層的規模。  
 
--   将始终使用管理中心站点（除非重新安装站点）。 这是永久性选项。 不能分离子主站点而将其变为独立主站点。
+-   除非您重新安裝您的站台，否則將一律使用管理中心網站。 這是永久選項。 您無法中斷連結子主要站台以作為獨立主要站台。
 
- 下列部分可帮助你理解何时使用特定站点或内容管理选项来替代其他站点。  
+ 下列各節可協助您了解何時使用特定站台或內容管理選項，來取代其他站台。  
 
-##  <a name="BKMK_ChooseCAS"></a>确定何时使用管理中心站点  
- 使用管理中心站点配置层次结构范围设置，以及监视层次结构中的所有站点和对象。 此站点类型不直接管理客户端，但它可协调站点间数据复制，其中包括整个层次结构中的站点和客户端的配置。  
+##  <a name="BKMK_ChooseCAS"></a> 判斷何時要使用管理中心網站。  
+ 使用管理中心網站設定全階層設定，並監視階層中的所有網站及物件。 此站台類型不會直接管理用戶端，但會協調站台間的資料複寫，包括整個階層的站台和用戶端的設定。  
 
-**以下信息可帮助你决定何时安装管理中心站点：**  
+**使用下列資訊，協助您決定何時要安裝管理中心網站：**  
 
--   管理中心站点是层次结构中的顶层站点。  
+-   管理中心網站是階層中的頂層站台。  
 
--   在配置具有多个主站点的层次结构时，必须安装管理中心站点。 如果你立即需要两个或多个主站点，请先安装管理中心站点。 如果你已有主站点并想随后安装管理中心站点，则必须扩展独立主站点[](/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#bkmk_expand)，以安装管理中心站点。 
+-   當您設定具有一個以上主要站台的階層時，必須安裝管理中心網站。 如果您立即需要兩個或兩個以上的主要站台，請先安裝管理中心網站。 當您已經擁有主要站台，並想要接著安裝管理中心網站時，必須[擴充獨立主要站台](/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#bkmk_expand)以安裝管理中心網站。 
 
--   管理中心站点仅支持使用主站点作为子站点。  
+-   管理中心網站只支援使用主要站台作為子站台。  
 
--   无法为管理中心站点分配客户端。  
+-   管理中心網站自身則不能被指派任何用戶端。  
 
--   管理中心站点不支持直接支持客户端（例如管理点和分发点）的站点系统角色。  
+-   管理中心網站不支援直接支援用戶端的站台系統角色，例如管理點及發佈點。  
 
--   在使用连接到管理中心站点的 Configuration Manager 控制台时，你可以管理层次结构中的所有客户端，并为任何子站点执行站点管理任务。 这可能包括在子级主站点或辅助站点安装管理点或其他站点系统角色。  
+-   使用連線到管理中心網站的 Configuration Manager 主控台時，您可以管理階層中的所有用戶端，以及針對任何子站台執行站台管理工作。 這可以包括安裝管理點或在子主要或次要站台的其他站台系統角色。  
 
--   在使用管理中心站点时，只能在管理中心站点中看到层次结构中所有站点的站点数据。 此数据包括诸如清单数据和状态消息等信息。  
+-   當您使用管理中心網站時，管理中心網站是您唯一可以在階層中查看所有站台資料的位置。 此資料包括清查資料及狀態訊息等資訊。  
 
--   你可以从管理中心站点中通过将发现方法指派在单独的站点上运行，从而配置整个层次结构中的发现操作。  
+-   若要從管理中心網站設定整個階層的探索作業，請指派要在個別站台執行的探索方法。  
 
--   你可以通过将不同的安全角色、安全作用域和集合分配给不同的管理用户来管理整个层次结构中的安全性。 这些配置在层次结构中的每个站点上适用。  
+-   若要管理整個階層的安全性，您可以指派不同的安全性角色、安全性範圍與集合給不同的系統管理使用者。 這些設定可套用到階層中的各個站台。  
 
--   你可以配置文件复制和数据库复制来控制层次结构中站点之间的通信。 这包括计划站点数据的数据库复制，以及管理用于站点之间基于文件的数据传输的带宽。  
+-   您可以設定檔案複寫和資料庫複寫，以控制階層中各站台間的通訊。 這包括排定站台資料的資料庫複寫，以及管理站台間檔案資料傳輸的頻寬。  
 
-##  <a name="BKMK_ChoosePriimary"></a>确定何时使用主站点  
- 使用主站点来管理客户端。 你可以在管理中心站点下面安装主站点以作为子主站点，也可以作为新层次结构的第一个站点。 安装为层次结构的第一个站点的主站点将创建独立主站点。 子主站点和独立主站点均支持辅助站点作为主站点的子站点。  
+##  <a name="BKMK_ChoosePriimary"></a> 判斷何時使用主要站台。  
+ 使用主要站台管理用戶端。 您可以安裝主要站台，作為管理中心網站底下的子主要站台，或是作為新階層的第一個站台。 安裝成階層中第一個站台的主要站台會建立獨立主要站台。 子主要站台和獨立主要站台都支援以次要站台作為主要站台的子站台。  
 
- 出于以下任何原因而考虑使用主站点：  
+ 針對下列任何一種理由，考慮使用主要站台：  
 
--   要管理设备和用户。  
+-   管理裝置和使用者。  
 
--   要增加设备的数目，你可以使用单一层次结构进行管理。  
+-   增加可以使用單一階層來管理的裝置數目。  
 
--   要为部署管理提供其他连接点。  
+-   提供其他的連線點，以進行部署的系統管理。  
 
--   满足组织的管理要求。 例如，你可以在远程位置安装主站点来管理低带宽网络上的部署内容传输。 但是，利用 System Center Configuration Manager，你可以使用选项来限制将数据传输到分发点时的网络带宽使用量。 借助此内容管理功能，便不再需要安装其他站点。  
+-   符合組織的管理需求。 例如，您可能會在遠端位置安裝主要站台，以管理透過低頻寬網路傳送的部署內容。 不過，透過 System Center Configuration Manager，您可以在將資料傳輸到發佈點時使用網路頻寬節流的選項。 該項內容管理功能可以取代安裝其他站台的需求。  
 
 
-**以下信息帮助你决定何时安装主站点：**  
+**使用下列資訊，協助您決定何時要安裝主要站台：**  
 
--   主站点可以是独立主站点或较大层次结构中的子主站点。 如果主站点是包含管理中心站点的层次结构的成员，则站点将使用数据库复制在站点之间复制数据。 除非你需要支持的客户端和设备数大于单一主站点可支持的数目，否则，请考虑安装独立主站点。  安装独立主站点后，可以将其扩展到可向新管理中心站点报告以扩展部署。  
+-   主要站台可以是獨立主要站台或是較大階層中的子主要站台。 當主要站台是含管理中心網站之階層的成員時，站台會使用資料庫複寫在站台之間複寫資料。 除非您需要支援的用戶端和裝置數目超過單一主要站台可支援的數目，否則請考慮安裝獨立主要站台。  安裝獨立主要站台之後，您可以展開它，以回報至新的管理中心網站來擴展部署的規模。  
 
--   主站点仅支持使用管理中心站点作为父站点。  
+-   主要站台僅支援使用管理中心網站作為父站台。  
 
--   主站点仅支持使用辅助站点作为子站点，并且还可以支持多个辅助子站点。  
+-   主要站台不僅支援使用次要站台作為子站台，也支援多個次要子站台。  
 
--   主站点负责处理为其分配的客户端中的所有客户端数据。  
+-   主要站台負責處理所指派用戶端的所有用戶端資料。  
 
--   主站点使用数据库复制与其管理中心站点（在安装新站点时会自动配置）直接通信。  
+-   主要站台使用資料庫複寫，直接與其管理中心網站進行通訊 (當安裝新的站台時自動設定)。  
 
-##  <a name="BKMK_ChooseSecondary"></a>确定何时使用辅助站点  
- 使用辅助站点管理跨低带宽网络的部署内容和客户端数据传输。  
+##  <a name="BKMK_ChooseSecondary"></a> 判斷何時使用次要站台。  
+ 使用次要站台管理在低頻寬網路上部署內容與用戶端資料的傳輸。  
 
- 你可从管理中心站点或辅助站点的直接父主站点管理辅助站点。 辅助站点必须连接到主站点，并且你无法在不卸载这些辅助站点的情况下将它们移至不同的父站点，然后在新的主站点下将它们作为子站点重新安装。
+ 您可經由管理中心網站或次要站台的直接父主要站台來管理次要站台。 次要站台必須連結到主要站台，並且您無法在還未解除安裝的狀況下，將其移至不同的父站台，然後重新安裝為新主要站台下的子站台。
 
-但是，你可以在两个对等辅助站点之间进行内容路由，以便于管理部署内容的基于文件的复制。 为将客户端数据传输到主站点，辅助站点将使用基于文件的复制。 辅助站点还使用数据库复制与其父主站点进行通信。  
+不過，您可以在兩個對等次要站台間路由內容，協助管理以檔案為基礎的部署內容複寫。 為將用戶端資料移轉到主要站台上，次要站台會使用以檔案為基礎的複寫。 次要站台也會使用資料庫複寫，以與其父主要站台進行通訊。  
 
- 如果满足下列任何条件，请考虑安装辅助站点：  
+ 若套用以下任何一種狀況，請考量安裝次要站台：  
 
--   管理用户不需要本地连接点时。  
+-   您不需要有針對系統管理使用者的本機連線點。  
 
--   必须管理指向层次结构中较低级别站点的部署内容的传输时。  
+-   您必須管理將部署內容移轉到階層中較低的站台。  
 
--   必须管理发送到层次结构中较高级别站点的客户端信息时。  
+-   您必須管理傳送到階層中較高站台的用戶端資訊。  
 
- 如果不希望安装辅助站点，并具有位于远程位置的客户端，请考虑使用 Windows BranchCache 或安装已为带宽控制和计划而启用的分发点。 可以使用以下具有或不具有辅助站点的内容管理选项，并且它们可以帮助减少必须安装的站点和服务器数量。 有关 Configuration Manager 中内容管理选项的信息，请参阅[确定何时使用内容管理选项](#BKMK_ChooseSecondaryorDP)。  
+ 如果您不想安裝次要站台，又有用戶端位於遠端位置，請考慮使用 Windows BranchCache，或安裝用來進行頻寬控制與排程的發佈點。 您可以搭配或不搭配次要站台，使用這些內容管理選項，不過它們可以幫助您減少必須安裝的站台和伺服器數量。 如需 Configuration Manager 中內容管理選項的資訊，請參閱[判斷何時要使用內容管理選項](#BKMK_ChooseSecondaryorDP)。  
 
 
-**以下信息帮助你决定何时安装辅助站点：**  
+**使用下列資訊，協助您決定何時要安裝次要站台：**  
 
--   如果 SQL Server 的本地实例不可用，则在站点安装过程中，辅助站点将自动安装 SQL Server Express。  
+-   若沒有本機 SQL Server 執行個體可用，次要站台會在站台安裝期間自動安裝 SQL Server Express。  
 
--   从 Configuration Manager 控制台启动辅助站点安装，而不是直接在计算机上运行安装程序。  
+-   安裝次要站台是從 Configuration Manager 主控台中起始，而不是直接在電腦上執行安裝程式。  
 
--   辅助站点使用站点数据库中信息的子集，其减少了父主站点和辅助站点间数据库复制时产生的复制数据量。  
+-   次要站台使用站台資料庫中資訊的子集，以減少父主要站台與次要站台間資料庫複寫所複寫的資料量。  
 
--   辅助站点支持将基于文件的内容路由至具有公用父主站点的其他辅助站点。  
+-   次要站台支援將以檔案為基礎的內容路由至有一般父主要站台的其他次要站台。  
 
--   辅助站点安装将自动部署位于辅助站点服务器的管理点和分发点。  
+-   安裝次要站台時會自動部署位於次要站台伺服器上的管理點和發佈點。  
 
-##  <a name="BKMK_ChooseSecondaryorDP"></a>确定何时使用内容管理选项  
- 如果你具有设在远程网络位置的客户端，请考虑使用一个或多个内容管理选项而非一个主站点或辅助站点。 当你使用 Windows BranchCache、配置带宽控制分发点或手动将内容复制到分发点（预留内容）时，通常可以消除安装另一站点的需要。  
+##  <a name="BKMK_ChooseSecondaryorDP"></a> 判斷何時要使用內容管理選項。  
+ 如果您有用戶端位於遠端位置，請考慮使用一個或多個內容管理選項，不要使用主要或次要站台。 在您使用 Windows BRanchCache、設定頻寬控制的發佈點，或手動將內容複製到發佈點 (預先設置內容) 時，您經常可以移除安裝一個站台的需求。  
 
 
-**如果满足下列任何条件，请考虑部署分发点（而非安装另一站点）：**  
+**若適用以下任一狀況，請考慮部署發佈點，而不要安裝另一個站台。**  
 
--   对于远程位置的客户端计算机，你的网络带宽已足够与管理点进行通信以下载客户端策略、发送清单、报告状态和发现信息。  
+-   您的網路頻寬足以讓遠端位置的用戶端電腦與管理點進行通訊，以下載用戶端原則，以及傳送清查、回報狀態和探索資訊。  
 
--   后台智能传输服务 (BITS) 提供的带宽控制不足以满足你的网络要求。  
+-   背景智慧型傳送服務 (BITS) 並不會為您的網路需求提供足夠的頻寬控制。  
 
- 有关 Configuration Manager 中内容管理选项的详细信息，请参阅 [System Center Configuration Manager 中内容管理的基本概念](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)。  
+ 如需 Configuration Manager 內容管理選項的詳細資訊，請參閱 [System Center Configuration Manager 中的內容管理基本概念](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)。  
 
-##  <a name="bkmk_beyond"></a>除层次结构拓扑之外  
- 除了初始层次结构拓扑外，还需考虑不同站点的哪些服务或功能将可用（站点系统角色），以及如何在基础结构中管理层次结构范围的配置和功能。 以下常见的注意事项会在单独主题中进行介绍。 这些注意事项很重要，因为它们可影响层次结构设计或受层次结构设计影响：  
+##  <a name="bkmk_beyond"></a> 階層拓撲之外  
+ 除了初始階層拓撲外，請考慮階層中不同站台 (站台系統角色) 提供哪些服務或功能，以及您的基礎結構如何管理階層範圍設定和功能。 下列常見考量事項涵蓋在不同的主題中。 這些可能會影響階層設計或受到階層設計所影響，因此十分重要：  
 
--   当你准备[使用 System Center Configuration Manager 管理计算机和设备](/sccm/core/clients/manage/manage-clients)时，请考虑所管理的设备是在本地，在云中还是包括用户拥有的设备 (BYOD)。  此外，请考虑如何管理多个管理选项支持的设备，例如可以直接通过 Configuration Manager 或通过与 Microsoft Intune 进行集成管理的 Windows 10 计算机。  
+-   當準備[使用 System Center Configuration Manager 管理電腦和裝置](/sccm/core/clients/manage/manage-clients)時，請考量您管理的裝置是位於內部部署、雲端中還是包含使用者擁有的裝置 (BYOD)。  亦請考量您要如何管理受多種管理選項支援的裝置，例如可以直接由 Configuration Manager 管理或透過與 Microsoft Intune 整合的 Windows 10 電腦。  
 
--   了解可用网络基础结构可能会影响远程位置之间数据流的方式（请参阅[为 System Center Configuration Manager 准备网络环境](/sccm/core/plan-design/network/configure-firewalls-ports-domains)）。 同时考虑所管理的用户和设备的地理位置，以及它们是通过公司的域还是从 Internet 访问你的基础结构。  
+-   了解可用的網路基礎結構可能會如何影響遠端位置間的資料流程 (請參閱[準備 System Center Configuration Manager 的網路環境](/sccm/core/plan-design/network/configure-firewalls-ports-domains))。 也要考量您管理的使用者和裝置的所在位置，以及他們透過您公司的網域還是網際網路存取您的基礎結構。  
 
--   规划用于将部署的信息（文件和应用）高效分发到所管理的设备的内容基础结构（请参阅 [System Center Configuration Manager 管理内容和内容基础结构](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)）。  
+-   規劃內容基礎結構，有效率地將所部署的資訊 (檔案和應用程式) 發佈到您管理的裝置上 (請參閱[管理 System Center Configuration Manager 的內容與內容基礎結構](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md))。  
 
--   确定计划使用的 [System Center Configuration Manager 的特性和功能](../../../core/plan-design/changes/features-and-capabilities.md)、站点系统角色或角色需要的 Windows 基础结构以及可能会选择在多站点层次结构中的哪些站点对它们进行部署以最有效地使用你的网络和服务器资源。  
+-   決定打算使用哪些 [System Center Configuration Manager 的特色與功能](../../../core/plan-design/changes/features-and-capabilities.md)、需要的站台系統角色或 Windows 基礎結構，以及要部署在多個站台階層中的哪些站台才能最有效率地使用網路和伺服器資源。  
 
--   请考虑数据和设备的安全，包括对 PKI 的使用。 请参阅 [System Center Configuration Manager 的 PKI 证书要求](../../../core/plan-design/network/pki-certificate-requirements.md)。  
+-   考量資料和裝置的安全性，包括 PKI 的使用。 請參閱 [System Center Configuration Manager 的 PKI 憑證需求](../../../core/plan-design/network/pki-certificate-requirements.md)。  
 
 
-**查看以下用于站点特定配置的资源：**  
+**檢閱下列站台特定設定的資源︰**  
 
--   [为 System Center Configuration Manager 规划 SMS 提供程序](../../../core/plan-design/hierarchy/plan-for-the-sms-provider.md)  
+-   [規劃 System Center Configuration Manager 的 SMS 提供者](../../../core/plan-design/hierarchy/plan-for-the-sms-provider.md)  
 
--   [为 System Center Configuration Manager 规划站点数据库](../../../core/plan-design/hierarchy/plan-for-the-site-database.md)  
+-   [規劃 System Center Configuration Manager 的站台資料庫](../../../core/plan-design/hierarchy/plan-for-the-site-database.md)  
 
--   [为 System Center Configuration Manager 规划站点系统服务器和站点系统角色](../../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md)  
+-   [為 System Center Configuration Manager 規劃站台系統伺服器和站台系統角色](../../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md)  
 
--   [规划 System Center Configuration Manager 中的安全性](../../../core/plan-design/security/plan-for-security.md)  
+-   [在 System Center Configuration Manager 中規劃安全性](../../../core/plan-design/security/plan-for-security.md)  
 
--   当在站点内部署内容时，则为[Managing network bandwidth](../../../core/plan-design/hierarchy/manage-network-bandwidth.md) 。  
+-   部署站台內的內容時[Managing network bandwidth](../../../core/plan-design/hierarchy/manage-network-bandwidth.md) 。  
 
 
-**考虑跨站点和层次结构的配置：**  
+**請考量下列跨越站台和階層的設定：**  
 
--   用于站点和层次结构的 [System Center Configuration Manager 高可用性选项](/sccm/protect/understand/high-availability-options)
+-   適用於站台和階層的 [System Center Configuration Manager 高可用性選項](/sccm/protect/understand/high-availability-options)
 
--   [扩展 System Center Configuration Manager 的 Active Directory 架构](../../../core/plan-design/network/extend-the-active-directory-schema.md)，然后将所有站点配置为[发布 System Center Configuration Manager 的站点数据](../../../core/servers/deploy/configure/publish-site-data.md)  
+-   [擴充 System Center Configuration Manager 的 Active Directory 架構](../../../core/plan-design/network/extend-the-active-directory-schema.md)，並設定站台來[發佈 System Center Configuration Manager 的站台資料](../../../core/servers/deploy/configure/publish-site-data.md)  
 
--   [System Center Configuration Manager 中的站点间数据传输](../../../core/servers/manage/data-transfers-between-sites.md)  
+-   [System Center Configuration Manager 中站台間的資料傳輸](../../../core/servers/manage/data-transfers-between-sites.md)  
 
--   [System Center Configuration Manager 的基于角色的管理基础](../../../core/understand/fundamentals-of-role-based-administration.md)
-
+-   [System Center Configuration Manager 以角色為基礎之系統管理的基礎](../../../core/understand/fundamentals-of-role-based-administration.md)

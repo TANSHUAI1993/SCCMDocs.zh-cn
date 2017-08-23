@@ -1,186 +1,184 @@
 ---
-title: "使用证书颁发机构创建 PFX 证书配置文件 | Microsoft Docs"
-description: "了解如何使用 System Center Configuration Manager 中的 PFX 文件生成支持加密数据交换的用户特定证书。"
+title: "使用憑證授權單位建立 PFX 憑證設定檔 | Microsoft Docs"
+description: "了解如何在 System Center Configuration Manager 中使用 PFX 檔案，產生支援加密資料交換的使用者特定憑證。"
 ms.custom: na
 ms.date: 04/04/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d240a836-c49b-49ab-a920-784c062d6748
-caps.latest.revision: 5
-caps.handback.revision: 0
+caps.latest.revision: "5"
+caps.handback.revision: "0"
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.translationtype: HT
-ms.sourcegitcommit: c0d94b8e6ca6ffd82e879b43097a9787e283eb6d
 ms.openlocfilehash: 43d8b2217763681be69711fce93c020a65da1cd8
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="how-to-create-pfx-certificate-profiles-using-a-certificate-authority"></a>如何使用证书颁发机构创建 PFX 证书配置文件
+# <a name="how-to-create-pfx-certificate-profiles-using-a-certificate-authority"></a>如何使用憑證授權單位建立 PFX 憑證設定檔
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+適用於：System Center Configuration Manager (最新分支)
 
-本文介绍如何使用凭据的证书颁发机构创建证书配置文件。
+在本文中，您將了解如何使用憑證授權單位建立認證的憑證設定檔。
 
-[证书配置文件](../../protect/deploy-use/introduction-to-certificate-profiles.md)提供有关创建和配置证书配置文件的一般信息。 本主题强调了有关与 PFX 证书相关的证书配置文件的一些具体信息。
+[憑證設定檔](../../protect/deploy-use/introduction-to-certificate-profiles.md)提供有關建立及設定憑證設定檔的一般資訊。 本主題會強調說明一些與 PFX 憑證相關之憑證設定檔的特定資訊。
 
-## <a name="pfx-certificate-profiles"></a>PFX 证书配置文件
-借助 System Center Configuration Manager，可以使用证书颁发机构颁发的凭据创建 PFX 证书配置文件。  从版本 1706 开始，可以选择 Microsoft 或 Entrust 作为证书颁发机构。  当部署到用户设备时，个人信息交换 (.pfx) 文件生成用户特定证书，以支持加密的数据交换。
+## <a name="pfx-certificate-profiles"></a>PFX 憑證設定檔
+System Center Configuration Manager 可讓您使用憑證授權單位所核發的認證來建立 PFX 憑證設定檔。  從 1706 版開始，您可以選擇 Microsoft 或 Entrust 作為您的憑證授權單位。  部署到使用者裝置時，個人資訊交換 (.pfx) 檔案會產生使用者特定憑證，以支援加密的資料交換。
 
-若要从现有证书文件导入证书凭据，请参阅[如何通过导入证书详细信息创建 PFX 证书配置文件](../../mdm/deploy-use/import-pfx-certificate-profiles.md)。
+若要從現有的憑證檔案匯入憑證認證，請參閱[如何透過匯入憑證詳細資料建立 PFX 憑證設定檔](../../mdm/deploy-use/import-pfx-certificate-profiles.md)。
 
-## <a name="create-and-deploy-a-personal-information-exchange-pfx-certificate-profile"></a>创建和部署个人信息交换 (PFX) 证书配置文件  
+## <a name="create-and-deploy-a-personal-information-exchange-pfx-certificate-profile"></a>建立及部署個人資訊交換 (PFX) 憑證設定檔  
 
-### <a name="get-started"></a>入门
+### <a name="get-started"></a>開始使用
 
-1.  在 System Center Configuration Manager 控制台中，选择“资产和符合性”。  
-2.  在“资产和符合性” 工作区中，选择“符合性设置” &gt;“公司资源访问”&gt;“证书配置文件”。  
+1.  在 System Center Configuration Manager 主控台中，選擇 [資產與相容性]。  
+2.  在 [資產與合規性] 工作區中，依序選擇 [合規性設定]&gt;[公司資源存取]&gt;[憑證設定檔]。  
 
-3.  在“主页” 选项卡上的“创建” 组中，选择“创建证书配置文件” 。
+3.  在 [常用] 索引標籤的 [建立] 群組中，選擇 [建立憑證設定檔]。
 
-4.  在“创建证书配置文件”向导的“常规”  页上  ，指定下列信息：  
+4.  在 [建立憑證設定檔精靈] 的 [一般] 頁面上，指定下列資訊：  
 
-    -   **名称**：输入证书配置文件的唯一名称。 最多可以使用 256 个字符。  
+    -   **名稱**：輸入憑證設定檔的唯一名稱。 您最多可以使用 256 個字元。  
 
-    -   **说明**：提供对证书配置文件进行概述，以及可帮助在 System Center Configuration Manager 控制台中识别该证书配置文件的其他相关信息的描述。 最多可以使用 256 个字符。  
+    -   **描述**：提供一段描述以說明憑證設定檔的概觀，以及可協助您在 System Center Configuration Manager 主控台中進行識別的其他相關資訊。 您最多可以使用 256 個字元。  
 
-    -   在“指定想要创建的证书配置文件的类型”中，选择“个人信息交换 -- PKCS #12 (PFX)设置 -- 创建”，然后从下拉列表中选择证书颁发机构。  从版本 1706 开始，可以选择 Microsoft 或 Entrust。
+    -   在 [指定您要建立的憑證設定檔類型] 中，選擇 [個人資訊交換 -- PKCS #12 (PFX) 設定 - 建立]，然後從下拉式清單中選擇您的憑證授權單位。  從 1706 版開始，您可以選擇 **Microsoft** 或 **Entrust**。
 
-### <a name="select-supported-platforms"></a>选择支持的平台
+### <a name="select-supported-platforms"></a>選取支援的平台
 
-“支持的平台”页面标识证书配置文件支持的操作系统和设备。  
+[支援的平台] 頁面可識別憑證設定檔支援的作業系統和裝置。  
 
-证书配置文件可能支持多个操作系统和设备，但某些操作系统或设备组合可能需要不同的设置。  在这些情况下，最好为每组独特的设置创建单独的配置文件。  
+憑證設定檔可支援多個作業系統及裝置，不過，某些作業系統或裝置組合可能需要不同的設定。  在這些情況下，最好為個別的設定組合建立獨立的設定檔。  
 
-从版本 1706 开始，可以使用以下选项：
+從 1706 版開始，有下列選項可供使用：
 
 - Windows 10
-    - 所有 Windows 10（64 位）
-    - 所有 Windows 10（32 位）
-    - 所有 Windows 10 全息企业版及更高版本
-    - 所有 Windows 10 全息版及更高版本
-    - 所有 Windows 10 协同版及更高版本
-    - 所有 Windows 10 移动版及更高版本
+    - 所有 Windows 10 (64 位元)
+    - 所有 Windows 10 (32 位元)
+    - 所有 Windows 10 全像攝影版企業版和更新版本
+    - 所有 Windows 10 全像攝影版和更新版本
+    - 所有 Windows 10 團隊版和更新版本
+    - 所有 Windows 10 行動裝置版和更新版本
 - iPhone
 - iPad
 - Android
 - Android for Work
 
 > [!Note]  
-> 目前不支持 MacOS/OSX 设备。  
+> 目前不支援 MacOS/OSX 裝置。  
 
-未选中任何其他选项时，“全选”复选框会选中所有可用选项。  当选中一个或多个选项时，“全选”会清除现有选择。 
+未選取其他任何選項時，[全選] 核取方塊會選取所有可用的選項。  選取一或多個選項時，[全選] 會清除現有的選取項目。 
 
-1.  选择证书配置文件支持的一个或多个平台。
+1.  選取一或多個憑證設定檔支援的平台。
 
-1.  选择“下一步”以继续。  
-
-
-### <a name="configure-certification-authorities"></a>配置证书颁发机构
-
-此处选择证书注册点 (CRP) 来处理 PFX 证书。  
-
-1.  从“主站点”列表中，选择包含 CA 的 CRP 角色的服务器。
-1.  从“证书颁发机构”列表中，通过在左列中设置选中标记来选择相关 CA。
-1.  准备好继续时，选择“下一步”。
-
-要了解详细信息，请参阅[证书基础结构](../../protect/deploy-use/certificate-infrastructure.md)。
+1.  選擇 [下一步] 以繼續。  
 
 
-### <a name="configure-certificate-settings-for-microsoft-ca"></a>配置 Microsoft CA 的证书设置
+### <a name="configure-certification-authorities"></a>設定憑證授權單位
 
-在将 Microsoft 用作 CA 时配置证书设置：
+在這裡，您可以選擇處理 PFX 憑證的憑證登錄點 (CRP)。  
 
-1.  从“证书模板名称”下拉列表中选择证书模板。
+1.  從 [主要站台] 清單中，選擇包含 CA 之 CRP 角色的伺服器。
+1.  從 [憑證授權單位] 清單中，在左側資料行放置核取記號來選擇相關的 CA。
+1.  準備好繼續進行時，請選擇 [下一步]。
 
-1.  启用“证书用途”复选框，将证书配置文件用于 S/MIME 签名或加密。
+若要深入了解，請參閱[憑證基礎結構](../../protect/deploy-use/certificate-infrastructure.md)。
 
-    在将 Microsoft 用作 CA 时检查此选项，与目标用户关联的所有 PFX 证书都会传递给用户注册的所有设备。  未选中此复选框时，每个设备都会收到一个唯一的证书。  
 
-1.  将“使用者名称格式”设置为“公用名”或“完全可分辨名称”。  如果不确定使用哪个名称，请与你的证书颁发机构管理员联系。
+### <a name="configure-certificate-settings-for-microsoft-ca"></a>設定 Microsoft CA 的憑證設定
 
-1.  对于“使用者可选名称”，根据你的 CA 启用“电子邮件地址”和“用户主体名称(UPN)”。
+若要設定 Microsoft 作為 CA 時的憑證設定：
 
-1.  “续订阈值”根据过期前剩余时间的百分比确定证书何时自动续订。
+1.  從 [憑證範本名稱] 下拉式清單中選擇憑證範本。
 
-1.  将“证书有效期”设置为证书的生存期。  通过设置数字 (1-100) 和时间段（年、月或天）指定该期限。
+1.  啟用 [憑證使用方式] 核取方塊，以將憑證設定檔使用於 S/MIME 簽署或加密。
 
-1.  当证书注册点指定 Active Directory 凭据时，启用“Active Directory 发布”。  启用该选项，将证书配置文件发布到 Active Directory。
+    使用 Microsoft 作為 CA 時若核取此選項，與目標使用者相關聯的所有 PFX 憑證都會傳遞至使用者註冊的所有裝置。  未選取此核取方塊時，每個裝置會收到唯一的憑證。  
 
-1.  如果在指定支持的平台时选择了一个或多个 Windows 10 平台，则执行以下操作：
+1.  將 [主體名稱格式] 設為 [一般名稱] 或 [完整的辨別名稱]。  如果不確定要使用何者，請連絡您的憑證授權單位系統管理員。
 
-    1.  将“Windows 证书存储”设置为“用户”。  （“本地计算机”选项不部署证书，因此不应选择此项。）
-    1.  从以下选项之一选择“密钥存储提供程序(KSP)”：
+1.  針對 [主體別名]，視需要為您的 CA 啟用 [電子郵件地址] 和 [使用者主體名稱 (UPN)]。
 
-        - **如果存在受信任的平台模块 (TPM) 则安装到该处**  
-        - **安装到受信任的平台模块 (TPM)，否则失败** 
-        - **安装到 Windows Hello 企业版，否则失败** 
-        - **安装到软件密钥存储提供程序** 
+1.  [更新閾值] 會根據到期前剩餘的時間百分比來決定何時自動更新憑證。
 
-1.  完成后，选择“下一步”或“摘要”。
+1.  將 [憑證有效期間] 設為憑證的存留期。  設定一個 1-100 之間的數字和一段期間 (年、月或日) 以指定期間。
 
-### <a name="configure-certificate-settings-for-entrust-ca"></a>配置 Entrust CA 的证书设置
+1.  當憑證登錄點指定 Active Directory 認證時，會啟用 [Active Directory 發佈]。  啟用此選項會將憑證設定檔發佈至 Active Directory。
 
-在将 Entrust 用作 CA 时配置证书设置：
+1.  如果您在指定支援的平台時選取一或多個 Windows 10 平台：
 
-1.  从“数字标识配置”下拉列表中选择该配置文件。  “数字标识配置”选项由 Entrust 管理员创建。
+    1.  將 [Windows 憑證存放區] 設為 [使用者]。  ([本機電腦] 選項不會部署憑證，不應選擇此選項。)
+    1.  從下列其中一個選項選取 [金鑰儲存提供者 (KSP)]：
 
-1.  选中时，“证书用途”选项使用证书配置文件进行 S/MIME 签名或加密。
+        - **安裝至信賴平台模組 (TPM) (若存在)**  
+        - **安裝至信賴平台模組 (TPM)，否則便失敗** 
+        - **安裝至 Windows Hello 企業版否則便失敗** 
+        - **安裝至軟體金鑰儲存提供者** 
 
-    将 Entrust 用作 CA 时，与目标用户关联的所有 PFX 证书都将传递给用户注册的所有设备。    未选中此选项时，每个设备都会收到一个唯一的证书。  （不同 CA 的行为也不同；要了解详细信息，请参阅相应章节。）
+1.  完成後，選擇 [下一步] 或 [摘要]。
 
-1.  使用“格式”按钮将 Entrust“使用者名称格式”令牌映射到 ConfigMgr 字段。  
+### <a name="configure-certificate-settings-for-entrust-ca"></a>設定 Entrust CA 的憑證設定
 
-    “证书名称格式”对话框列出了 Entrust 数字标识配置变量。  对于每个 Entrust 变量，从关联的下拉列表中选择相应的 LDAP 变量。
+若要設定 Entrust 作為 CA 時的憑證設定：
 
-1.  使用“格式”按钮将 Entrust“使用者可选名称”令牌映射到支持的 LDAP 变量。  
+1.  從 [數位識別碼設定] 下拉式清單中，選擇組態設定檔。  數位識別碼設定選項是由 Entrust 系統管理員建立。
 
-    “证书名称格式”对话框列出了 Entrust 数字标识配置变量。  对于每个 Entrust 变量，从关联的下拉列表中选择相应的 LDAP 变量。
+1.  核取 [憑證使用方式] 時，會將憑證設定檔使用於 S/MIME 簽署或加密。
 
-1.  “续订阈值”根据过期前剩余时间的百分比确定证书何时自动续订。
+    使用 Entrust 作為 CA 時，與目標使用者相關聯的所有 PFX 憑證都會傳遞至使用者註冊的所有裝置。    *未*核取此核取方塊時，每個裝置會收到唯一的憑證。  (不同的 CA 會有不同的行為；若要深入了解，請參閱對應的章節)。
 
-1.  将“证书有效期”设置为证书的生存期。  通过设置数字 (1-100) 和时间段（年、月或天）指定该期限。
+1.  使用 [格式] 按鈕將 Entrust **主體名稱格式**權杖對應至 ConfigMgr 欄位。  
 
-1.  当证书注册点指定 Active Directory 凭据时，启用“Active Directory 发布”。  启用该选项，将证书配置文件发布到 Active Directory。
+    [憑證名稱格式] 對話方塊會列出 Entrust 數位識別碼設定變數。  針對每個 Entrust 變數，從相關聯的下拉式清單中選擇適當的 LDAP 變數。
 
-1.  如果在指定支持的平台时选择了一个或多个 Windows 10 平台，则执行以下操作：
+1.  使用 [格式] 按鈕將 Entrust **主體替代名稱**權杖對應至支援的 LDAP 變數。  
 
-    1.  将“Windows 证书存储”设置为“用户”。  （“本地计算机”选项不部署证书，因此不应选择此项。）
-    1.  从以下选项之一选择“密钥存储提供程序(KSP)”：
+    [憑證名稱格式] 對話方塊會列出 Entrust 數位識別碼設定變數。  針對每個 Entrust 變數，從相關聯的下拉式清單中選擇適當的 LDAP 變數。
 
-        - **如果存在受信任的平台模块 (TPM) 则安装到该处**  
-        - **安装到受信任的平台模块 (TPM)，否则失败** 
-        - **安装到 Windows Hello 企业版，否则失败** 
-        - **安装到软件密钥存储提供程序** 
+1.  [更新閾值] 會根據到期前剩餘的時間百分比來決定何時自動更新憑證。
 
-1.  完成后，选择“下一步”或“摘要”。
+1.  將 [憑證有效期間] 設為憑證的存留期。  設定一個 1-100 之間的數字和一段期間 (年、月或日) 以指定期間。
+
+1.  當憑證登錄點指定 Active Directory 認證時，會啟用 [Active Directory 發佈]。  啟用此選項會將憑證設定檔發佈至 Active Directory。
+
+1.  如果您在指定支援的平台時選取一或多個 Windows 10 平台：
+
+    1.  將 [Windows 憑證存放區] 設為 [使用者]。  ([本機電腦] 選項不會部署憑證，不應選擇此選項。)
+    1.  從下列其中一個選項選取 [金鑰儲存提供者 (KSP)]：
+
+        - **安裝至信賴平台模組 (TPM) (若存在)**  
+        - **安裝至信賴平台模組 (TPM)，否則便失敗** 
+        - **安裝至 Windows Hello 企業版否則便失敗** 
+        - **安裝至軟體金鑰儲存提供者** 
+
+1.  完成後，選擇 [下一步] 或 [摘要]。
 
 
 ### <a name="finish-up"></a>完成
 
-1.  在“摘要”页上，查看所选内容并验证选择。
+1.  在 [摘要] 頁面上，檢視您的選取項目，並確認您的選擇。
 
-1.  准备就绪时，选择“下一步”创建配置文件。  
+1.  準備就緒時，選擇 [下一步] 以建立設定檔。  
 
-1.  “证书配置文件”  工作区现在推出包含 PFX 文件的证书配置文件。 
+1.  包含 PFX 檔案的憑證設定檔現在可從 [憑證設定檔]  工作區取得。 
 
-1.  部署配置文件：
+1.  若要部署設定檔：
 
-    1. 打开“资产和符合性”工作区。
-    1. 选择“符合性设置” > “公司资源访问” > “证书配置文件”
-    1. 右键单击所需的证书配置文件，然后选择“部署”。 
+    1. 開啟 [資產與相容性] 工作區。
+    1. 選擇 [相容性設定] > [公司資源存取] > [憑證設定檔]
+    1. 以滑鼠右鍵按一下所需的憑證設定檔，然後選擇 [部署]。 
 
 
-## <a name="see-also"></a>另请参阅
-[创建新的证书配置文件](../../protect/deploy-use/create-certificate-profiles.md)，此文档将引导你完成创建证书配置文件向导。
+## <a name="see-also"></a>請參閱
+[建立新的憑證設定檔](../../protect/deploy-use/create-certificate-profiles.md)會逐步引導您完成 [建立憑證設定檔精靈]。
 
-[如何通过导入证书详细信息创建 PFX 证书配置文件](../../mdm/deploy-use/import-pfx-certificate-profiles.md)
+[如何透過匯入憑證詳細資料建立 PFX 憑證設定檔](../../mdm/deploy-use/import-pfx-certificate-profiles.md)
 
-[部署 Wi-Fi、VPN、电子邮件和证书配置文件](../../protect/deploy-use/deploy-wifi-vpn-email-cert-profiles.md)介绍了如何部署证书配置文件。
+[部署 Wi-Fi、VPN、電子郵件和憑證設定檔](../../protect/deploy-use/deploy-wifi-vpn-email-cert-profiles.md)描述如何部署憑證設定檔。

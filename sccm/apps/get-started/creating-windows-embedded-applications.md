@@ -1,58 +1,51 @@
 ---
-title: "创建 Windows Embedded 应用程序 | Microsoft Docs"
-description: "请参阅创建和部署适用于 Windows Embedded 设备的应用程序时必须考虑的注意事项。"
+title: "建立 Windows Embedded 應用程式 | Microsoft Docs"
+description: "查看在您建立和部署 Windows Embedded 裝置的應用程式時，必須考慮的事項。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-app
+ms.technology: configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 16acfd63-0c40-424c-82f4-8c63f7f1c30b
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 557888d1f1f899e3198c430bbe5ccdd44178f824
 ms.openlocfilehash: cb0c22f3060ba654778dca958d620f1e1725b93c
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="create-windows-embedded-applications-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 创建 Windows Embedded 应用程序
+# <a name="create-windows-embedded-applications-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 建立 Windows Embedded 應用程式
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用於：System Center Configuration Manager (最新分支)*
 
-除了创建应用程序的其他 System Center Configuration Manager 要求和过程，在创建和部署适用于 Windows Embedded 设备的应用程序时还必须考虑以下注意事项。  
+建立和部署 Windows Embedded 裝置的應用程式時，除了建立應用程式的其他 System Center Configuration Manager 需求和程序之外，還必須考慮下列項目。  
 
-## <a name="general-considerations"></a>一般注意事项  
+## <a name="general-considerations"></a>一般考量  
 
--   将应用程序部署到启用了写入筛选的 Windows Embedded 设备时，可以指定是否在应用部署过程中对设备禁用写入筛选器。 然后可以选择在应用部署后重启写入筛选器。 如果未禁用写入筛选器，则软件会部署到临时覆盖区。 这意味着，除非另一部署强制保留更改，否则设备重启时将不再安装该软件。  
+-   當您將應用程式部署至啟用寫入篩選器的 Windows Embedded 裝置時，您可以指定是否要應用程式部署期間停用裝置上的寫入篩選器。 然後，您可以選擇在應用程式部署之後重新啟動寫入篩選器。 如果未停用寫入篩選器，即會將軟體部署為暫時重疊。 這表示，除非其他部署強制保留變更，否則將不再於重新啟動裝置時安裝軟體。  
 
--   将应用程序部署到 Windows Embedded 设备时，确保设备是配置了维护时段的集合的成员。 这样，你可以管理禁用和启用写入筛选器的时间，以及设备重启的时间。  
+-   當您將應用程式部署至 Windows Enbedded 裝置時，請確定裝置是已設定維護期間之集合的成員。 如此可讓您管理何時停用和啟用寫入篩選器，以及何時重新啟動裝置。  
 
--   控制写入筛选器行为的设置是一个名为“在截止时间或在维护时段内提交更改(需要重启)”的复选框。  
+-   控制寫入篩選器行為的設定，是一個名為 [在到期時或在維護期間認可變更 (需要重新啟動)] 的核取方塊。  
 
-## <a name="tips-for-deploying-applications"></a>部署应用程序提示  
+## <a name="tips-for-deploying-applications"></a>部署應用程式的秘訣  
 
-**为启用了写入筛选器的 Windows Embedded 设备使用必需的应用程序（而不是可用应用程序）** 由于用户无法在启用了写入筛选器的 Windows Embedded 设备上通过软件中心安装应用，因此请在部署应用程序时始终以对这些设备**必需**为部署目标，而不是对这些设备**可用**。 通常这不会有问题，因为运行 Windows Embedded 操作系统的计算机通常运行必须为多个用户采用相同方式运行的单一应用程序。 正因为如此，IT 部门会严密管理和锁定这些设备。 必需的应用程序非常适合于这种情况。
+**針對已啟用寫入篩選器的 Windows Embedded 裝置使用必要的應用程式，而不是可用的應用程式。** 因為使用者無法在已啟用寫入篩選器之 Windows Embedded 裝置的軟體中心安裝應用程式，所以一律會將具有**必要**部署用途的應用程式部署至這些裝置，而不是部署**可用**的應用程式。 通常這是可行的作法，因為執行 Windows Embedded 作業系統的電腦經常執行必須以相同方式對多位使用者執行的單一應用程式。 因此，這些裝置受到 IT 部門的高度管理及鎖定。 必要的應用程式非常適合這種情況。
 
- 但是，如果在启用了写入筛选器的情况下用户确实在嵌入式设备上运行多个应用程序，请将以下限制告知这些用户：  
+ 不過，如果使用者確實在啟用寫入篩選器時於嵌入式裝置上執行多個應用程式，請讓使用者瞭解下列限制：  
 
--   用户无法通过软件中心安装所需的软件。  
+-   使用者無法從軟體中心安裝必要的軟體。  
 
--   用户无法在软件中心的“选项”选项卡上更改其工作时间。  
+-   使用者無法變更軟體中心的 [選項] 索引標籤中的工作時間。  
 
--   用户无法推迟必需应用程序的安装。  
+-   使用者無法延後必要應用程式的安裝。  
 
-此外，如果 Configuration Manager 为软件安装和更新提交更改，低权限用户将无法在维护期间登录。 在此期间，用户将看到一条消息，告知他们设备由于正在维护而不可用。  
+此外，如果 Configuration Manager 正在認可軟體安裝及更新的變更，低權限的使用者就無法在維護期間登入。 在此期間，使用者會看見一則訊息，說明裝置無法使用，因為正在維修。  
 
-**如果应用程序要求用户接受许可条款，请不要将应用程序部署到启用了写入筛选器的 Windows Embedded 设备。** 在禁用了写入筛选器以便 Configuration Manager 能够在嵌入式设备上安装软件时，低权限用户将无法登录到设备。 如果安装要求用户接受许可条款，这将无法进行，并且安装将失败。 如果安装需要用户交互，请确保不要将软件部署到 Windows Embedded 设备。 你可以使用“适用平台”列表来筛选这些操作系统。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-
+**如果應用程式需要使用者接受授權條款，則不要將應用程式部署到已啟用寫入篩選器的 Windows Embedded 裝置。** 停用寫入篩選器，讓 Configuration Manager 能夠在嵌入式裝置上安裝軟體時，低權限的使用者無法登入該裝置。 如果安裝需要使用者接受授權條款，就會無法進行且安裝將失敗。 如果安裝需要使用者互動，請確定未將軟體部署到 Windows Embedded 裝置。 您可以使用 [可用平台] 清單篩選這些作業系統。  

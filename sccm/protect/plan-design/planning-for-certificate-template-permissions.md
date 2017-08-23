@@ -1,67 +1,63 @@
 ---
-title: "规划证书模板权限 | Microsoft Docs"
-description: "了解如何规划配置 System Center Configuration Manager 使用的证书模板所需的权限。"
+title: "規劃憑證範本權限 | Microsoft Docs"
+description: "了解規劃設定 System Center Configuration Manager 所使用憑證範本所需的權限。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: eab0e09d-b09e-4c14-ab14-c5f87472522e
-caps.latest.revision: 5
-caps.handback.revision: 0
+caps.latest.revision: "5"
+caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
 ms.openlocfilehash: 832be8c9fda727804f57e83768cd8799db722c67
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="planning-for-certificate-template-permissions-for-certificate-profiles-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中规划证书配置文件的证书模板权限
+# <a name="planning-for-certificate-template-permissions-for-certificate-profiles-in-system-center-configuration-manager"></a>規劃憑證設定檔在 System Center Configuration Manager 中的憑證範本權限
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用於：System Center Configuration Manager (最新分支)*
 
 
-下列信息可帮助规划如何为 System Center Configuration Manager 在你部署证书配置文件时使用的证书模板配置权限。  
+下列資訊有助於規劃如何設定 System Center Configuration Manager 在您部署憑證設定檔時所使用憑證範本的權限。  
 
-## <a name="default-security-permissions-and-considerations"></a>默认安全权限和注意事项  
- System Center Configuration Manager 将用于为用户和设备请求证书的证书模板所需的默认安全权限如下：  
+## <a name="default-security-permissions-and-considerations"></a>預設的安全性權限和考量  
+ System Center Configuration Manager 用於要求使用者和裝置憑證的憑證範本所需的預設安全性權限如下：  
 
--   “读取”和“注册”（针对网络设备注册服务应用程序池使用的帐户）  
+-   網路裝置註冊服務應用程式集區所使用帳戶的讀取和註冊權限  
 
--   “读取”（针对运行 System Center Configuration Manager 控制台的帐户）  
+-   執行 System Center Configuration Manager 主控台之帳戶的讀取權限  
 
- 有关这些安全权限的详细信息，请参阅[配置证书基础结构](../deploy-use/certificate-infrastructure.md)。  
+ 如需這些安全性權限的詳細資訊，請參閱[設定憑證基礎結構](../deploy-use/certificate-infrastructure.md)。  
 
- 当你使用此默认配置时，用户和设备无法通过证书模板直接请求证书，所有请求必须由网络设备注册服务发起。 此限制非常重要，因为对于证书使用者，这些证书模板必须配置为包含“在请求中提供”  ，这意味着，如果恶意用户或泄露的设备请求了证书，则存在假冒的风险。 在默认配置中，网络设备注册服务必须发起此类请求。 但是，如果运行网络设备注册服务的服务已泄露，则这种假冒风险仍然存在。 为了帮助避免这种风险，请为网络设备注册服务和运行此角色服务的计算机遵循所有最佳安全方案。  
+ 若使用此預設定，使用者和裝置即無法直接向憑證範本要求憑證，而所有的要求都必須由網路裝置註冊服務起始。 這項限制非常重要，因為這些憑證範本的憑證主體必須設成 [在要求中提供]  ，意即若有惡意使用者或安全受損的裝置要求憑證，便會有身分遭冒用的風險。 若使用預設設定，則必須由網路裝置註冊服務起始這類要求。 不過，如果執行網路裝置註冊服務的服務安全受到危害，仍然會有身分遭冒用的風險。 為避開此風險，請遵循網路裝置註冊服務及執行此角色服務之電腦的所有安全性最佳作法。  
 
- 如果默认安全权限无法满足你的业务要求，你可以选择使用其他方法配置证书模板的安全权限：你可以为用户和计算机添加读取和注册权限。  
+ 如果預設的安全性權限無法滿足您的業務需求，您可選擇另一種設定憑證範本安全性權限的方式：您可以新增使用者及電腦的 [讀取] 和 [註冊]權限。  
 
-## <a name="adding-read-and-enroll-permissions-for-users-and-computers"></a>为用户和计算机添加“读取”和“注册”权限  
- 如果一个独立团队管理你的证书颁发机构 (CA) 基础结构团队，并且该独立团队希望 System Center Configuration Manager 在向用户发送证书配置文件来请求用户证书之前验证用户是否具有有效的 Active Directory 域服务帐户，则可能适合为用户和计算机添加“读取”和“注册”权限。 对于此配置，你必须指定包含用户的一个或多个安全组，然后向那些组授予对证书模板的“读取”和“注册”权限。 在这种情况下，CA 管理员将管理安全控制。  
+## <a name="adding-read-and-enroll-permissions-for-users-and-computers"></a>新增使用者及電腦的讀取和註冊權限  
+ 如果您的憑證授權單位 (CA) 基礎結構團隊由不同團隊負責管理，且該團隊希望 System Center Configuration Manager 能先驗證使用者是否擁有有效的 Active Directory 網域服務帳戶，然後才傳送憑證設定檔給使用者以要求使用者憑證，新增使用者及電腦的讀取和註冊權限會是較適當的方式。 對於此設定，您必須先指定一個或多個包含使用者的安全性群組，然後才授與這些群組憑證範本的讀取和註冊權限。 在此種案例中，安全性控制由 CA 系統管理員負責管理。  
 
- 你可以同样指定包含计算机帐户的一个或多个安全组，并授予这些组对证书模板的“读取”和“注册”权限。 如果将计算机证书配置文件部署到是域成员的计算机，则必须为该计算机的计算机帐户授予“读取”和“注册”权限。 如果计算机不是域成员（例如，它是工作组计算机或个人移动设备），则无需这些权限。  
+ 同樣地，您可以指定一個或多個包含電腦帳戶的安全性群組，並授與這些群組憑證範本的讀取和註冊權限。 如果您將電腦憑證設定檔部署到屬於網域成員的電腦，便需為該電腦的電腦帳戶授與讀取和註冊權限。 如果電腦不是網域成員 (例如，如果它是工作群組電腦或個人行動裝置)，便不需要這些權限。  
 
- 尽管此配置使用额外的安全控制，但这不是推荐的最佳做法。 因为指定的用户或设备的所有者可独立于 System Center Configuration Manager 请求证书，并为证书“使用者”提供可能用于假冒另一个用户或设备的值。  
+ 雖然這項設定使用額外的安全性控制，但卻不是建議的最佳作法。 原因是指定的裝置使用者或擁有者可能會個別向 System Center Configuration Manager 要求憑證，並且提供可能用來假冒其他使用者或裝置的憑證主體值。  
 
- 此外，如果你指定无法在进行证书请求时进行验证的帐户，则默认情况下证书请求将失败。 例如，运行网络设备注册服务的服务器位于包含证书注册点站点系统服务器的林不信任的 Active Directory 林中，则证书请求将失败。 你可以将证书注册点配置为在帐户由于域控制器无响应而无法进行验证的情况下继续。 但是，这不是一种最佳安全做法。  
+ 此外，如果您指定了無法在要求憑證時通過驗證的帳戶，根據預設，憑證要求將會失敗。 例如，假設執行網路裝置註冊服務的伺服器在 Active Directory 樹系中，而包含憑證登錄點站台系統伺服器的樹系並不信任該 Active Directory 樹系，憑證要求便會失敗。 您可以設定讓憑證登錄點在帳戶因為網路控制器無回應而無法驗證時繼續作業。 不過，這並不是安全性最佳作法。  
 
- 请注意，如果证书注册点配置为检查是否有帐户权限以及域控制器是否可用，并且拒绝身份验证请求（例如，帐户被锁定或已删除），则证书注册请求将失败。  
+ 請注意，如果為了確認帳戶權限而設定憑證登錄點，而且網域控制站在可用的情況下拒絕驗證要求 (例如帳戶已鎖定或刪除)，憑證註冊要求將會失敗。  
 
-#### <a name="to-check-for-read-and-enroll-permissions-for-users-and-domain-member-computers"></a>检查用户和域成员计算机的“读取”和“注册”权限  
+#### <a name="to-check-for-read-and-enroll-permissions-for-users-and-domain-member-computers"></a>檢查使用者及屬於網域成員之電腦的讀取和註冊權限  
 
-1.  在承载证书注册点的站点系统服务器上，创建下列 DWORD 注册表项以具有值 0：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SCCM\CRP\SkipTemplateCheck  
+1.  在裝載憑證登錄點的站台系統伺服器上，建立下列具有值 0 的 DWORD 登錄機碼：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SCCM\CRP\SkipTemplateCheck  
 
-2.  如果帐户由于域控制器无响应而无法进行验证，并且你要绕过权限检查：  
+2.  如果帳戶因為網域控制站無回應而無法驗證，且您希望略過權限檢查：  
 
-    -   在承载证书注册点的站点系统服务器上，创建下列 DWORD 注册表项以具有值 1：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SCCM\CRP\SkipTemplateCheckOnlyIfAccountAccessDenied  
+    -   在裝載憑證登錄點的站台系統伺服器上，建立下列具有值 1 的 DWORD 登錄機碼：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SCCM\CRP\SkipTemplateCheckOnlyIfAccountAccessDenied  
 
-3.  在颁发 CA 的证书模板属性内的“安全”  选项卡上，添加一个或多个安全组以向用户或设备帐户授予“读取”和“注册”权限。  
-
+3.  在發行 CA 上，在憑證範本內容的 [安全性]  索引標籤上，新增一個或多個安全性群組，以為使用者或裝置帳戶授與讀取和註冊權限。  

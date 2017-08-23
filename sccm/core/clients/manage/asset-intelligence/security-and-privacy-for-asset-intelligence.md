@@ -1,63 +1,59 @@
 ---
-title: "资产智能安全和隐私 | Microsoft Docs"
-description: "获取 System Center Configuration Manager 中资产智能的安全和隐私信息。"
+title: "Asset Intelligence 安全性隱私權 | Microsoft Docs"
+description: "取得 System Center Configuration Manager 中 Asset Intelligence 的安全性與隱私權資訊。"
 ms.custom: na
 ms.date: 2/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d0c6f7a0-dcae-4e6d-aa28-35d464d97ff7
-caps.latest.revision: 5
-caps.handback.revision: 0
+caps.latest.revision: "5"
+caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
-ms.openlocfilehash: d577a16725c2b167d1ff9f77096018433a2fa580
-ms.contentlocale: zh-cn
-ms.lasthandoff: 12/16/2016
-
-
+ms.openlocfilehash: b12054cce52e2b83715a083d78a62e06b5127a2f
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="security-and-privacy-for-asset-intelligence-in-system-center-configuration-manager"></a>System Center Configuration Manager 中资产智能的安全和隐私
+# <a name="security-and-privacy-for-asset-intelligence-in-system-center-configuration-manager"></a>System Center Configuration Manager 中 Asset Intelligence 的安全性與隱私權
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用對象：System Center Configuration Manager (最新分支)*
 
-本主题包括有关 System Center Configuration Manager 中资产智能的安全和隐私的信息。  
+本主題包含 System Center Configuration Manager 中 Asset Intelligence 的安全性與隱私權資訊。  
 
-##  <a name="BKMK_Security_AI"></a> 资产智能安全最佳方案  
- 在使用资产智能时，请使用以下安全最佳方案。  
+##  <a name="BKMK_Security_AI"></a> Asset Intelligence 的安全性最佳作法  
+ 使用 Asset Intelligence 時，請使用下列安全性最佳作法。  
 
-|最佳安全方案|更多信息|  
+|安全性最佳作法|詳細資訊|  
 |----------------------------|----------------------|  
-|导入许可证文件（Microsoft 批量许可文件或常规许可声明文件）时，请确保文件和通信通道的安全。|在导入过程中，使用 NTFS 文件系统权限来确保只有经授权的用户可以访问许可证文件，并在将数据传输到站点服务器时使用服务器消息块 (SMB) 签名来确保其完整性。|  
-|使用最低权限的原则导入许可证文件。|使用基于角色的管理来向导入许可证文件的管理用户授予管理资产智能权限。 资产管理员的内置角色包括此权限。|  
+|當您匯入授權檔案 (Microsoft 大量授權檔案或一般授權聲明檔案) 時，請保護檔案和通訊通道的安全。|使用 NTFS 檔案系統權限，確保只有授權的使用者才能存取授權檔，以及使用伺服器訊息區 (SMB) 簽署，確保匯入程序期間傳送到站台伺服器時的資料完整性。|  
+|使用最低權限的原則來匯入授權檔案。|使用以角色為基礎的系統管理，將 [管理 Asset Intelligence] 權限授與匯入授權檔案的系統管理使用者。 內建角色 [資產管理員] 包含這個權限。|  
 
-##  <a name="BKMK_Privacy_HardwareInventory"></a> 资产智能的隐私信息  
- 资产智能扩展 Configuration Manager 的清单功能，帮助提供更高级别的企业资产可见性。 不会自动启用资产智能信息收集。 你可以通过启用硬件清单报表类来修改所收集信息的类型。 有关详细信息，请参阅[配置 System Center Configuration Manager 中的资产智能](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md)。  
+##  <a name="BKMK_Privacy_HardwareInventory"></a> Asset Intelligence 的隱私權資訊  
+ Asset Intelligence 可擴充 Configuration Manager 的清查功能，以提供企業中更高層級的資產可見性。 不會自動啟用 Asset Intelligence 資訊收集。 您可以修改透過啟用硬體清查報告類別所收集的資訊類型。 如需詳細資訊，請參閱[設定 System Center Configuration Manager 中的 Asset Intelligence](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md)。  
 
- 资产智能信息按照与清单信息相同的方式存储在 Configuration Manager 数据库中。 当客户端使用 HTTPS 连接到管理点时，在传输到管理点的过程中始终加密数据。 当客户端使用 HTTP 连接时，可以配置对清单数据传输进行签名和加密。 清单数据不会以加密格式存储在数据库中。 信息将保留在数据库中，直到被每 90 天一次的站点维护任务“删除过期的清单历史记录”  删除。 可以配置删除间隔。  
+ Asset Intelligence 資訊儲存在 Configuration Manager 資料庫的方式，與清查資訊相同。 用戶端使用 HTTPS 來連線至管理點時，一律會在傳送至管理點期間加密資料。 用戶端使用 HTTP 連線時，您可以設定要簽署和加密的清查資料傳送。 清查資料不會以加密格式儲存在資料庫中。 資訊會保留在資料庫中，直到以每 90 天的間隔由站台維護工作 [刪除過時清查歷程記錄]  將它刪除為止。 您可以設定刪除間隔。  
 
- 资产智能不会向 Microsoft 发送关于用户和计算机或许可证使用的信息。 你可以选择发送 System Center Online 分类请求，这意味着你可以标记一个或多个未分类的软件标题，将它们发送给 System Center Online 进行研究和分类。 在上载软件标题后，Microsoft 研究人员会进行识别、分类，然后将此信息提供给使用在线服务的所有客户。 您应该注意下列有关向 System Center Online 提交信息的隐私隐患：  
+ Asset Intelligence 不會傳送有關使用者和電腦或授權使用的資訊給 Microsoft。 您可以選擇傳送 System Center Online 要求進行分類，這表示您可以標記未分類的一個或多個軟體項目，並將其傳送給 System Center Online 進行研究和分類。 在上傳軟體項目之後，Microsoft 研究人員會進行識別、分類，然後將該知識提供給所有使用線上服務的客戶。 您應該注意將資訊提交給 System Center Online 的下列隱私權含意：  
 
--   上载只适用于您可以选择向 System Center Online 发送的一般软件标题信息（名称、发布者等）。 清单信息不通过上载发送。  
+-   上傳僅適用於您選擇要傳送至 System Center Online 的一般軟體項目資訊 (名稱、發行者等)。 清查資訊不會使用上傳進行傳送。  
 
--   上载决不会自动发生，系统并不打算自动进行此任务。 你必须手动选择并批准上载每个软件标题。  
+-   上傳絕不會自動發生，系統並沒有設計成自動完成此工作。 您必須手動選取以及核准各個軟體標題的上傳。  
 
--   在上载过程开始之前，将会出现一个对话框，向你显示将上载的确切数据。  
+-   上傳程序之前，會有對話方塊確實顯示要上傳的資料。  
 
--   许可证信息不会发送到 Microsoft。 许可证信息存储在 Configuration Manager 数据库的一个独立区域，不能将其发送给 Microsoft。  
+-   不會將授權資訊傳送給 Microsoft。 授權資訊會儲存在 Configuration Manager 資料庫的不同區域中，而且不會傳送給 Microsoft。  
 
--   上载的任何软件标题都会变为公用，表现为指定的应用程序及其分类的信息将成为 System Center Online 资产智能目录的一部分，之后会下载到该目录的其他用户。  
+-   任何上傳的軟體項目皆會公開，因此提供的應用程式與其分類會成為 System Center Online Asset Intelligence 類別目錄的一部分，然後可供類別目錄的其他客戶下載。  
 
--   软件标题的来源不会记录在资产智能目录中，也不会提供给其他客户。 但是，你仍必须验证以确保没有加载包含任何隐私信息的任何应用程序标题。  
+-   軟體項目的來源不會記錄在 Asset Intelligence 類別目錄中，並且不供其他客戶使用。 不過，您仍然必須確認未載入任何包含任何私人資訊的應用程式標題。  
 
--   无法取消上载的数据。  
+-   資料一旦上傳就無法取回。  
 
- 在配置资产智能数据收集以及确定是否将信息提交给 System Center Online 之前，请考虑组织的隐私要求。  
-
+ 在您設定 Asset Intelligence 資料收集並且決定是否將資訊提交給 System Center Online 之前，請考慮貴組織的隱私權需求。  

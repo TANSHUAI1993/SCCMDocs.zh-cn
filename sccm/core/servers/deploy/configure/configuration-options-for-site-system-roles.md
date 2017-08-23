@@ -1,157 +1,154 @@
 ---
-title: "站点系统角色选项 | Microsoft Docs"
-description: "可参阅本文以详细了解那些不一定易于理解的 Configuration Manager 站点系统角色。"
+title: "站台系統角色選項 | Microsoft Docs"
+description: "如需不一定一目了然的 Configuration Manager 站台系統角色的詳細資訊，請參閱這篇文章。"
 ms.custom: na
 ms.date: 2/8/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0e9f0fbd-e442-4509-a021-bfdedf2d04dd
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fff93794afdfa9f890b1f06d6c330d8cffc5796c
 ms.openlocfilehash: b4db5d86cc0ed020ed176feb2e8f1f9dc51a2280
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="configuration-options-for-site-system-roles-for-system-center-configuration-manager"></a>System Center Configuration Manager 站点系统角色的配置选项
+# <a name="configuration-options-for-site-system-roles-for-system-center-configuration-manager"></a>為 System Center Configuration Manager 設定站台系統角色的選項
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用對象：System Center Configuration Manager (最新分支)*
 
-System Center Configuration Manager 站点系统角色的大多数配置选项都不言自明，或在对其进行配置时于向导或对框中予以了解释。 以下部分介绍站点系统角色，这些角色具有可能需要额外信息的设置。  
+System Center Configuration Manager 站台系統角色的大部分設定選項都是一目了然，或是您在設定它們時已在精靈或對話方塊中說明。 下列各節說明其設定可能需要其他資訊的站台系統角色。  
 
-##  <a name="BKMK_ApplicationCatalog_Website"></a>应用程序目录网站点  
- 有关如何为应用程序目录设置应用程序目录网站点的信息，请参阅[规划和配置 System Center Configuration Manager 中的应用程序管理](../../../../apps/plan-design/plan-for-and-configure-application-management.md)。  
+##  <a name="BKMK_ApplicationCatalog_Website"></a> 應用程式類別目錄網站點  
+ 如需如何為應用程式類別目錄設定應用程式類別目錄網站點的資訊，請參閱 [Plan for and configure application management in System Center Configuration Manager](../../../../apps/plan-design/plan-for-and-configure-application-management.md) (在 System Center Configuration Manager 中規劃和設定應用程式管理)。  
 
- **客户端连接**  
+ **用戶端連線**  
 
- 选择“HTTPS”以使用更安全的连接设置，并确定客户端是否从 Internet 进行连接。 此选项需要服务器上的 PKI 证书以向客户端进行服务器身份验证，或用于通过安全套接字层 (SSL) 对数据进行加密。 有关证书要求的详细信息，请参阅 [System Center Configuration Manager 的 PKI 证书要求](../../../../core/plan-design/network/pki-certificate-requirements.md)。  
+ 選取 [HTTPS]，可使用更安全的連線設定以及可判定用戶端是否從網際網路連線。 此選項需要在伺服器上提供 PKI 憑證，才能用於對用戶端進行伺服器驗證，並可透過安全通訊端層 (SSL) 進行資料加密。 如需憑證需求的詳細資訊，請參閱 [System Center Configuration Manager 的 PKI 憑證需求](../../../../core/plan-design/network/pki-certificate-requirements.md)。  
 
- 有关服务器证书部署的示例以及有关如何在 Internet Information Services (IIS) 中配置该证书的信息，请参阅 *System Center Configuration Manager 的 PKI 证书的分步部署示例：Windows Server 2008 证书颁发机构*主题中的[为运行 IIS 的站点系统部署 Web 服务器证书](/sccm/core/plan-design/network/example-deployment-of-pki-certificates)部分。  
+ 如需伺服器憑證的範例部署，以及如何在 Internet Information Services (IIS) 中進行設定的詳細資訊，請參閱[為 Configuration Manager 部署 PKI 憑證的逐步範例：Windows Server 2008 憑證授權單位](/sccm/core/plan-design/network/example-deployment-of-pki-certificates)的＜為執行 IIS 的站台系統部署 Web 伺服器憑證＞一節。  
 
- **将应用程序目录网站添加到受信任的站点区域**  
+ **將應用程式類別目錄網站新增到信任的站台區域**  
 
- 无论当前将“将应用程序目录网站添加到 Internet Explorer 受信任的站点区域”客户端设置设置为“True”，还是“False”，此消息都显示默认客户端设置中的值。 如果使用自定义客户端设置配置此设置，必须自行检查此值。  
+ 此訊息會顯示預設用戶端設定中的值，[將應用程式類別目錄網站新增到 Internet Explorer 信任的網站區域] 用戶端設定目前是否設為 [True] 或 [False]。 如果已使用自訂用戶端設定來設定此設定值，則必須自行確認此值。  
 
- 如果针对完全限定的域名 (FQDN) 设置此站点系统，并且网站不在 Internet Explorer 的受信任的站点区域中，则在用户连接到应用程序目录时会提示用户输入凭据。  
+ 如果是為了完整網域名稱 (FQDN) 設定了此站台系統，且網站不位於 Internet Explorer 中信任的網站區域中時，會提示使用者在連線到應用程式類別目錄時提供認證。  
 
- **组织名称**  
+ **組織名稱**  
 
- 输入用户在应用程序目录中看到的名称。 此品牌信息有助于用户将此网站识别为受信任的源。  
+ 輸入使用者在應用程式類別目錄中看到的名稱。 此商標資訊可協助使用者將此網站識別為信任的來源。  
 
-##  <a name="BKMK_ApplicationCatalog_WebService"></a>应用程序目录 Web 服务点  
- 有关如何为应用程序目录设置应用程序目录 Web 服务点的信息，请参阅[规划和配置 System Center Configuration Manager 中的应用程序管理](../../../../apps/plan-design/plan-for-and-configure-application-management.md)。  
+##  <a name="BKMK_ApplicationCatalog_WebService"></a> 應用程式類別目錄 Web 服務點  
+ 如需如何為應用程式類別目錄設定應用程式類別目錄 Web 服務點的資訊，請參閱 [Plan for and configure application management in System Center Configuration Manager](../../../../apps/plan-design/plan-for-and-configure-application-management.md) (在 System Center Configuration Manager 中規劃和設定應用程式管理)。  
 
  **HTTPS**  
 
- 选择“HTTPS”  以向此应用程序目录 Web 服务点验证应用程序目录网站点。  此选项需要运行应用程序目录网站点的服务器上的 PKI 证书来进行服务器身份验证和通过 SSL 对数据进行加密。 有关证书要求的详细信息，请参阅 [System Center Configuration Manager 的 PKI 证书要求](../../../../core/plan-design/network/pki-certificate-requirements.md)。  
+ 選取 [HTTPS]  將應用程式類別目錄網站點驗證到此應用程式類別目錄 Web 服務點。  此選項需要在執行應用程式類別目錄網站點的伺服器上提供 PKI 憑證，以用於伺服器驗證，並可透過 SSL 進行資料加密。 如需憑證需求的詳細資訊，請參閱 [System Center Configuration Manager 的 PKI 憑證需求](../../../../core/plan-design/network/pki-certificate-requirements.md)。  
 
- 有关服务器证书部署的示例以及有关如何在 IIS 中配置该证书的信息，请参阅 *System Center Configuration Manager 的 PKI 证书的分步部署示例：Windows Server 2008 证书颁发机构*主题中的[为运行 IIS 的站点系统部署 Web 服务器证书](/sccm/core/plan-design/network/example-deployment-of-pki-certificates)部分。  
+ 如需伺服器憑證的部署範例，以及如何在 IIS 中進行設定的資訊，請參閱[為 Configuration Manager 部署 PKI 憑證的逐步範例：Windows Server 2008 憑證授權單位](/sccm/core/plan-design/network/example-deployment-of-pki-certificates)的＜為執行 IIS 的站台系統部署 Web 伺服器憑證＞一節。  
 
-##  <a name="BKMK_CertificateRegistrationPoint"></a>证书注册点  
- 有关如何设置证书注册点的详细信息，请参阅[证书配置文件简介](/sccm/protect/deploy-use/introduction-to-certificate-profiles)。  
+##  <a name="BKMK_CertificateRegistrationPoint"></a> 憑證登錄點  
+ 如需如何設定憑證登錄點的詳細資訊，請參閱[憑證設定檔簡介](/sccm/protect/deploy-use/introduction-to-certificate-profiles)。  
 
-##  <a name="BKMK_Distribution_Point"></a>分发点  
- 若要深入了解如何为内容部署设置分发点，请参阅[为 System Center Configuration Manager 管理内容和内容基础结构](../../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。  
+##  <a name="BKMK_Distribution_Point"></a> 發佈點  
+ 如需如何設定內容部署發佈點的詳細資訊，請參閱[管理 System Center Configuration Manager 的內容與內容基礎結構](../../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。  
 
- 若要深入了解如何为 PXE 部署设置分发点，请参阅[使用 PXE 与 System Center Configuration Manager 一起通过网络部署 Windows](../../../../osd/deploy-use/use-pxe-to-deploy-windows-over-the-network.md)。  
+ 如需如何設定 PXE 部署發佈點的詳細資訊，請參閱[利用 System Center Configuration Manager 使用 PXE 透過網路來部署 Windows](../../../../osd/deploy-use/use-pxe-to-deploy-windows-over-the-network.md)。  
 
- 若要深入了解如何为多播部署设置分发点，请参阅[使用多播与 System Center Configuration Manager 一起通过网络部署 Windows](../../../../osd/deploy-use/use-multicast-to-deploy-windows-over-the-network.md)。  
+ 如需如何設定多點傳送部署發佈點的資訊，請參閱 [利用 System Center Configuration Manager 使用多點傳送透過網路來部署 Windows](../../../../osd/deploy-use/use-multicast-to-deploy-windows-over-the-network.md)。  
 
- **在 Configuration Manager 要求的情况下安装和配置 IIS**  
- 选择此选项以让 Configuration Manager 在站点系统上安装和设置 IIS（如果尚未安装）。 必须在所有分发点上安装 IIS，并且你必须选择此设置才能在向导中继续。  
+ **在 Configuration Manager 需要時安裝並設定 IIS**  
+ 選取此選項，讓 Configuration Manager 在站台系統上安裝及設定 IIS (如果尚未安裝)。 IIS 必須安裝在所有發佈點上，而且您必須選取此設定以在精靈中繼續操作。  
 
- **站点系统安装帐户**  
- 对于站点服务器上安装的分发点，只支持使用站点服务器的计算机帐户作为站点系统安装帐户。  
+ **站台系統安裝帳戶**  
+ 對於安裝在站台伺服器的發佈點，只有站台伺服器的電腦帳戶可以當成站台系統安裝帳戶來使用。  
 
- **创建自签名证书或导入 PKI 客户端证书**  
- 此证书有两个用途：  
+ **建立自我簽署憑證或匯入 PKI 用戶端憑證**  
+ 此憑證有兩種用途：  
 
-1.  在分发点发送状态消息之前，该证书向管理点验证分发点。  
+1.  在發佈點傳送狀態訊息前，向管理點驗證發佈點。  
 
-2.  如果选择了“为客户端启用 PXE 支持”，则会将证书发送到执行 PXE 启动的计算机，以便这些计算机能够在操作系统部署过程中连接到管理点。  
+2.  當選取 [為用戶端啟用 PXE 支援] 時，會將憑證傳送到執行 PXE 開機的電腦，如此電腦就可在部署作業系統期間連線到管理點。  
 
-如果针对 HTTP 设置了站点中的所有管理点，请创建自签名证书。 如果针对 HTTPS 设置了管理点，请导入 PKI 客户端证书。  
+站台中的所有管理點都設定為使用 HTTP 時，會建立自我簽署憑證。 管理點設定為使用 HTTPS 時，則匯入 PKI 用戶端憑證。  
 
-要导入证书，请浏览到包含 PKI 证书的公钥加密标准 #12 (PKCS #12) 文件，对于 Configuration Manager 有以下要求：  
+若要匯入憑證，請瀏覽至具有 PKI 憑證的公開金鑰加密標準 #12 (PKCS #12) 檔案，其應符合下列 Configuration Manager 需求：  
 
--   计划的使用必须包括客户端身份验证。  
+-   預期用途必須包含用戶端驗證。  
 
--   必须设置为可导出私钥。  
+-   必須設定私密金鑰才可匯出。  
 
-没有针对证书使用者名称或使用者备用名称 (SAN) 的特定要求，并且你可以为多个分发点使用同一证书。  
+對於憑證主體名稱或主體別名 (SAN) 並無特定需求，您可以針對多個發佈點使用同一個憑證。  
 
-有关证书要求的详细信息，请参阅 [System Center Configuration Manager 的 PKI 证书要求](../../../../core/plan-design/network/pki-certificate-requirements.md)。 有关此证书的示例部署，请参阅 [System Center Configuration Manager 的 PKI 证书的分步部署示例：Windows Server 2008 证书颁发机构](/sccm/core/plan-design/network/example-deployment-of-pki-certificates)主题中的*为分发点部署客户端证书*部分。  
+如需憑證需求的詳細資訊，請參閱 [System Center Configuration Manager 的 PKI 憑證需求](../../../../core/plan-design/network/pki-certificate-requirements.md)。 如需此憑證的部署範例，請參閱[為 System Center Configuration Manager 部署 PKI 憑證的逐步範例：Windows Server 2008 憑證授權單位](/sccm/core/plan-design/network/example-deployment-of-pki-certificates)中的*部署發佈點的用戶端憑證*一節。  
 
-**为预安排内容启用此分发点**  
-选中此复选框以便为预留内容启用分发点。 如果选中此复选框，可在分发内容时设置分发行为。 可选择是始终在分发点上预留内容、为包预留初始内容但在内容有更新时使用正常内容分发过程，还是为包中的内容始终使用正常内容分发过程。  
+**啟用此發佈點供預先設置的內容使用**  
+選取此核取方塊以啟用預先設置內容的發佈點。 選取此核取方塊時，可在發佈內容時設定發佈行為。 您可以選擇是否永遠在發佈點上預先設置內容、預先設置套件的初始內容 (但在內容更新時使用一般內容發佈程序)，或是永遠對套件中的內容使用一般內容發佈程序。  
 
-**边界组**  
- 你可以将边界组关联到分发点。 在内容部署过程中，客户端必须位于与分发点关联的边界组中，才能将其用作内容的源位置。
- - 版本 1610 之前，可选中“允许内容源位置回退”复选框，以便在没有其他分发点可用时让这些边界组外部的客户端回退并使用分发点作为内容的源位置。
- - **从 1610 版起**，用户不能再配置“允许内容源位置回退”。  但可以设置边界组之间的关系，以检查客户端何时可以开始搜索有效内容源位置的其他边界组。
+**界限群組**  
+ 您可以將界限群組關聯到發佈點。 部署內容期間，用戶端必須存在於與發佈點關聯的界限群組之中，才能將界限群組當成內容的來源位置使用。
+ - **在 1610 版之前**，您可以選取 [允許內容的後援來源位置] 核取方塊，讓位於這些界限群組以外的用戶端回復，並在沒有其他發佈點可用時，將發佈點當成內容的來源位置使用。
+ - **從 1610 版開始**，您無法再設定 [允許內容的後援來源位置]。  相反地，您可以設定界限群組之間的關聯性，以查看用戶端何時可以開始搜尋其他界限群組中的有效內容來源位置。
 
-##  <a name="BKMK_Enrollment_Point"></a>注册点  
-注册点用于安装 Mac 计算机，并用于注册通过本地移动设备管理来进行管理的设备。 有关详细信息，请参阅以下内容：  
+##  <a name="BKMK_Enrollment_Point"></a> 註冊點  
+註冊點可用於安裝 Mac 電腦，且註冊利用內部部署行動裝置管理所管理的裝置。 如需詳細資訊，請參閱下列各項：  
 
--   [如何在 System Center Configuration Manager 中将客户端部署到 Mac](../../../../core/clients/deploy/deploy-clients-to-macs.md)  
+-   [How to deploy clients to Macs in System Center Configuration Manager](../../../../core/clients/deploy/deploy-clients-to-macs.md) (如何在 System Center Configuration Manager 中將用戶端部署至 Mac 電腦)  
 
--   [用户如何在 System Center Configuration Manager 中向本地移动设备管理注册设备](../../../../mdm/deploy-use/user-enroll-devices-on-premises-mdm.md)  
+-   [使用者如何在 System Center Configuration Manager 中使用內部部署行動裝置管理註冊裝置](../../../../mdm/deploy-use/user-enroll-devices-on-premises-mdm.md)  
 
-**允许的连接**  
- HTTPS 设置是自动选择的，并且需要服务器上的 PKI 证书以向注册代理点和带外服务点进行服务器身份验证，以及通过 SSL 对数据进行加密。 有关证书要求的详细信息，请参阅 [System Center Configuration Manager 的 PKI 证书要求](../../../../core/plan-design/network/pki-certificate-requirements.md)。  
+**允許的連線**  
+ 會自動選取 HTTPS 設定，且需要在伺服器上提供 PKI 憑證，以對註冊 Proxy 點進行伺服器驗證、對頻外服務點進行伺服器驗證，以及透過 SSL 加密資料。 如需憑證需求的詳細資訊，請參閱 [System Center Configuration Manager 的 PKI 憑證需求](../../../../core/plan-design/network/pki-certificate-requirements.md)。  
 
- 有关服务器证书部署的示例以及有关如何在 IIS 中配置该证书的信息，请参阅 *System Center Configuration Manager 的 PKI 证书的分步部署示例：Windows Server 2008 证书颁发机构*主题中的[为运行 IIS 的站点系统部署 Web 服务器证书](/sccm/core/plan-design/network/example-deployment-of-pki-certificates)部分。  
+ 如需伺服器憑證的部署範例，以及如何在 IIS 中進行設定的資訊，請參閱[為 Configuration Manager 部署 PKI 憑證的逐步範例：Windows Server 2008 憑證授權單位](/sccm/core/plan-design/network/example-deployment-of-pki-certificates)的＜為執行 IIS 的站台系統部署 Web 伺服器憑證＞一節。  
 
-##  <a name="BKMK_Enrollment_Proxy_Point"></a>注册代理点  
-若要深入了解如何为移动设备设置注册代理点，请参阅[用户如何在 System Center Configuration Manager 中向本地移动设备管理注册设备](../../../../mdm/deploy-use/user-enroll-devices-on-premises-mdm.md)。  
+##  <a name="BKMK_Enrollment_Proxy_Point"></a> 註冊 Proxy 點  
+如需如何設定行動裝置註冊 Proxy 點的資訊，請參閱 [How users enroll devices with On-premises Mobile Device Management in System Center Configuration Manager](../../../../mdm/deploy-use/user-enroll-devices-on-premises-mdm.md) (使用者如何在 System Center Configuration Manager 中使用內部部署行動裝置管理註冊裝置)。  
 
-**客户端连接**  
- HTTPS 设置是自动选择的，并且需要服务器上的 PKI 证书以向 Configuration Manager 注册的移动设备和 Mac 计算机进行服务器身份验证，并通过安全套接字层 (SSL) 对数据进行加密。 有关证书要求的详细信息，请参阅 [System Center Configuration Manager 的 PKI 证书要求](../../../../core/plan-design/network/pki-certificate-requirements.md)。  
+**用戶端連線**  
+ 會自動選取 HTTPS 設定，且在伺服器上需要提供 PKI 憑證，才可對行動裝置及由 Configuration Manager 所註冊的 Mac 電腦進行伺服器驗證，並可透過安全通訊端層 (SSL) 進行資料加密。 如需憑證需求的詳細資訊，請參閱 [System Center Configuration Manager 的 PKI 憑證需求](../../../../core/plan-design/network/pki-certificate-requirements.md)。  
 
- 有关服务器证书部署的示例以及有关如何在 IIS 中配置该证书的信息，请参阅 *System Center Configuration Manager 的 PKI 证书的分步部署示例：Windows Server 2008 证书颁发机构*主题中的[为运行 IIS 的站点系统部署 Web 服务器证书](/sccm/core/plan-design/network/example-deployment-of-pki-certificates)部分。  
+ 如需伺服器憑證的部署範例，以及如何在 IIS 中進行設定的資訊，請參閱[為 Configuration Manager 部署 PKI 憑證的逐步範例：Windows Server 2008 憑證授權單位](/sccm/core/plan-design/network/example-deployment-of-pki-certificates)的＜為執行 IIS 的站台系統部署 Web 伺服器憑證＞一節。  
 
-##  <a name="BKMK_Fallback_Status_Point"></a>回退状态点  
-“状态消息数量”和“限制间隔(秒)”  
-尽管这些选项的默认设置（10,000 条状态消息和 3,600 秒的限制间隔）对于大多数情况已经足够，但在以下条件都成立时，你可能必须更改这些设置：  
+##  <a name="BKMK_Fallback_Status_Point"></a> 後援狀態點  
+[狀況訊息數目] 和 [節流間隔 (秒)]  
+雖然這些選項的預設設定 (10,000 個狀況訊息和 3,600 秒的節流間隔) 足夠應付大部分情況，但您可能需要在以下兩種狀況為 True 時，變更設定：  
 
--   回退状态点仅接受来自 Intranet 的连接。  
+-   後援狀態點僅接受來自內部網路的連線。  
 
--   在多台计算机的客户端部署转出过程中，你使用回退状态点。  
+-   在為多部電腦進行用戶端部署首展期間，您會使用後援狀態點。  
 
-在这种情况下，持续的状态消息流可能会造成状态消息积压，从而导致站点服务器上的中央处理单元 (CPU) 高使用率持续很长一段时间。 此外，你可能无法在 Configuration Manager 控制台和客户端部署报表中看到有关客户端部署的最新信息。  
+在此案例中，持續的狀態訊息資料流可能會建立狀態訊息的積存，該積存會造成持續一段時間內之站台伺服器上的中央處理器 (CPU) 使用量過高。 此外，您可能會看不到 Configuration Manager 主控台以及在用戶端部署報告中用戶端部署的最新資訊。  
 
-这些回退状态点设置针对在客户端部署过程中生成的状态消息进行设置。 这些设置不针对客户端通信问题（例如 Internet 上的客户端无法连接到其基于 Internet 的管理点）进行设置。 由于回退状态点无法将这些设置仅应用于在客户端部署过程中生成的状态消息，因此，如果回退状态点接受来自 Internet 的连接，请不要配置这些设置。  
+這些後援狀態點的設計，主要是針對用戶端部署期間所產生狀態訊息進行設定。 這些設定值並不是針對用戶端部署問題而設定，例如當網際網路上的用戶端無法連線到以網際網路為基礎的管理點時。 由於後援狀態點不能只是將這些設定值套用到用戶端部署期間所產生狀況訊息，所以請勿在後援狀態點接受網際網路的連線時設定這些設定值。  
 
-成功安装 System Center 2012 Configuration Manager 客户端的每台计算机都会向回退状态点发送下列四条状态消息：  
+成功安裝 System Center 2012 Configuration Manager 用戶端的每一部電腦，會將下列四種狀況訊息傳送到後援狀態點：  
 
--   客户端部署已启动  
+-   已啟動用戶端部署  
 
--   客户端部署成功  
+-   成功完成用戶端部署  
 
--   客户端分配已启动  
+-   已啟動用戶端指派  
 
--   客户端分配成功  
+-   成功完成用戶端指派  
 
-无法安装的计算机或无法分配 Configuration Manager 客户端的计算机还会发送额外状态消息。  
+無法安裝或指派 Configuration Manager 用戶端的電腦，會傳送其他的狀態訊息。  
 
-例如，如果将 Configuration Manager 客户端部署到 20,000 台计算机，则部署可能会向回退状态点发送 80,000 条状态消息。 由于默认限制配置允许每 3,600 秒（1 小时）向回退状态点发送 10,000 条状况消息，状况消息可能在回退状态点囤积。 还必须考虑回退状态点和站点服务器之间的可用网络带宽，以及站点服务器处理多条状态消息的处理能力。  
+例如，假設您將 Configuration Manager 用戶端部署到 20,000 部電腦，部署可能會傳送 80,000 個狀態訊息到後援狀態點。 因為預設的節流設定可每 3600 秒 (1 小時) 傳送 10,000 個狀態訊息到後援狀態點，所以狀態訊息可能會積存在後援狀態點上。 您也必須考慮到後援狀態點和站台伺服器之間的可用網路頻寬，以及可處理許多狀態訊息的狀態訊息處理能力。  
 
-为了帮助避免这些问题，请考虑增加状态消息数并缩短限制间隔。  
+為避免發生這些問題，請考慮增加狀態訊息數目，並縮短節流間隔時間。  
 
-如果下列任一条件成立，请重置回退状态点的限制值：  
+如果下列其中一項條件為 True，請重設後援狀態點的節流值：  
 
--   你计算出当前限制值高于处理来自回退状态点的状态消息所需的值。  
+-   您估計目前的節流值，比處理來自後援狀態點之狀況訊息所需的節流值還要高。  
 
--   你发现，当前限制设置会在站点服务器上造成 CPU 高使用率。  
+-   您發現目前的節流設定值會在站台伺服器上造成高 CPU 使用量。  
 
-除非你了解后果，否则请不要更改回退状态点限制设置的设置。 例如，如果将限制设置提高到很高，则站点服务器上的 CPU 使用率可能会提高到很高，从而减慢所有站点操作的速度。  
-
+除非您清楚會產生何種結果，否則請勿變更後援狀態點節流設定的設定值。 例如，當您新增過高的節流設定，站台伺服器上的 CPU 使用量便會增高，進而造成所有的站台作業變得緩慢。  

@@ -1,166 +1,162 @@
 ---
-title: "服务连接工具 | Microsoft Docs"
-description: "了解该工具使你能够连接到 Configuration Manager 云服务以手动上传使用情况信息。"
+title: "服務連接工具 | Microsoft Docs"
+description: "了解這個工具可讓您連線到 Configuration Manager 雲端服務手動上傳使用資訊。"
 ms.custom: na
 ms.date: 4/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6e4964c5-43cb-4372-9a89-b62ae6a4775c
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 32f7fc4ef9c8e8d3c2ec8eeaf9a3174bad992ffb
 ms.openlocfilehash: 0da80521bf223a765c3731f8ad59623d85a4c9fa
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="use-the-service-connection-tool-for-system-center-configuration-manager"></a>使用适用于 System Center Configuration Manager 的服务连接工具
+# <a name="use-the-service-connection-tool-for-system-center-configuration-manager"></a>使用 System Center Configuration Manager 的服務連接工具
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用於：System Center Configuration Manager (最新分支)*
 
-当服务连接点处于脱机模式，或当 Configuration Manager 站点系统服务器未连接到 Internet 时，请使用**服务连接工具**。 该工具有助于随时更新网站的 Configuration Manager 最新更新。  
+在您的服務連接點處於離線模式時，或在 Configuration Manager 站台系統伺服器未連線到網際網路時，使用**服務連線工具**。 這個工具可以協助您讓站台隨時取得 Configuration Manager 的最新更新。  
 
-运行时，该工具手动连接到 Configuration Manager 云服务，以上传层次结构的使用情况信息并下载更新。 必须上载使用情况数据才能启用云服务以为你的部署提供正确的更新。  
+執行時，工具會手動連線到 Configuration Manager 雲端服務以上傳您階層的使用資訊，以及下載更新。 必須先上傳使用資料，才能啟用雲端服務來提供您部署的正確更新。  
 
-## <a name="prerequisites-for-using-the-service-connection-tool"></a>使用服务连接工具的先决条件
-以下为先决条件和已知问题。
+## <a name="prerequisites-for-using-the-service-connection-tool"></a>使用服務連接工具的必要條件
+必要條件和已知問題如下。
 
-**先决条件：**
+**必要條件：**
 
--   已安装服务连接点，并将它设置为“脱机，按需连接”。  
+-   您已安裝服務連接點，並且將它設為 **[離線，需要時連線]**。  
 
--   该工具必须从命令提示符中运行。  
+-   這個工具必須從命令提示字元執行。  
 
--   运行该工具的每个计算机（服务连接点计算机以及连接到 Internet 的计算机）必须是 x64 位系统并且必需安装以下软件：  
+-   執行此工具的每部電腦 (服務連接點電腦，以及連線到網際網路的電腦)，都必須是 x64 系統且已安裝下列項目：  
 
-    -   **Visual C++ Redistributable** x86 和 x64 文件。   默认情况下，Configuration Manager 在托管服务连接点的计算机上安装 x64 版本。  
+    -   **Visual C++ 可轉散發** x86 檔案與 x64 檔案。   Configuration Manager 預設會將 x64 版本安裝在裝載服務連接點的電腦上。  
 
-         若要下载 Visual C++ 文件的副本，请访问 Microsoft 下载中心的 [Visual C++ Redistributable Packages for Visual Studio 2013](http://www.microsoft.com/download/details.aspx?id=40784) 。  
+         若要下載 Visual C++ 檔案的複本，請瀏覽 Microsoft 下載中心的 [適用於 Visual Studio 2013 的 Visual C++ 可轉散發套件](http://www.microsoft.com/download/details.aspx?id=40784) 。  
 
-    -   .NET Framework 4.5.2 或更高版本。  
+    -   .NET Framework 4.5.2 或更新版本。  
 
--   用于运行工具的帐户必须：
-    -   在承载服务连接点的计算机上（工具在此计算机上运行）具有**本地管理员** 权限。
-    -   具有对站点数据库的**读取** 权限。  
-
-
-
--   你将需要具有可存储文件和更新的足够可用空间的 U 盘，或需要另一种方法以在服务连接点计算机与有权访问 Internet 的计算机之间传输文件。 （此方案假设你的站点和托管计算机未直接连接到 Internet。）  
+-   您用來執行此工具的帳戶必須具有下列權限：
+    -   裝載服務連接點之電腦 (此工具執行所在的電腦) 的**本機系統管理員** 權限。
+    -   站台資料庫的**讀取** 權限。  
 
 
 
-## <a name="use-the-service-connection-tool"></a>使用服务连接工具  
-
- 可以在 **%path%/smssetup/tools/ServiceConnectionTool** 文件夹中的 Configuration Manager 安装媒体中找到服务连接工具 (**serviceconnectiontool.exe**)。 始终使用与所用的 Configuration Manager 版本匹配的服务连接工具。
+-   您將需要一個擁有足夠可用空間的 USB 磁碟機來儲存檔案和更新 (或其他可在服務連接點電腦之間傳輸檔案的方法)，以及一部能夠存取網際網路的電腦。 (此案例假設您的站台和受管理電腦未直接連線到網際網路)。  
 
 
- 在此过程中，命令行示例使用了以下文件名和文件夹位置（你不需要使用这些路径和文件名，可以改为使用与你的环境和首选项匹配的其他选择）：  
 
--   用于存储数据以在服务器之间进行传输的 USB 记忆棒的路径：**D:\USB\\**  
+## <a name="use-the-service-connection-tool"></a>使用服務連接工具  
 
--   包含从你的站点导出的数据的 .cab 文件的名称：**UsageData.cab**  
+ 您可在 **%path%\smssetup\tools\ServiceConnectionTool** 資料夾的 Configuration Manager 安裝媒體中，找到服務連接工具 (**serviceconnectiontool.exe**)。 一律使用符合所使用 Configuration Manager 版本的服務連接工具。
 
--   用于存储 Configuration Manager 的已下载更新以在服务器之间进行传输的空文件夹的名称： **UpdatePacks**  
 
-在承载服务连接点的计算机上：  
+ 在這個程序中，命令列範例會使用下列檔案名稱和資料夾位置 (您不需要使用這些路徑和檔案名稱，可以改用符合您環境和喜好設定的替代項目)：  
 
--   使用管理特权打开命令提示符，然后将目录更改为包含 **serviceconnectiontool.exe**的位置。  
+-   用於儲存資料的 USB 隨身碟路徑，以便在伺服器之間傳輸：**D:\USB\\**  
 
-     默认情况下，你可以在 **%path%\smssetup\tools\ServiceConnectionTool** 文件夹中的 Configuration Manager 安装媒体中找到此工具。 此文件夹中的所有文件必须位于同一个文件夹中，这样服务连接工具才能工作。  
+-   包含從站台匯出之資料的 .cab 檔案名稱：**UsageData.cab**  
 
-运行以下命令时，该工具会准备包含使用情况信息的 .cab 文件并将它复制到你指定的位置。 .cab 文件中的数据基于站点配置为收集的诊断使用情况数据的级别。 （请参阅 [System Center Configuration Manager 的诊断和使用情况数据](../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md)）。  运行以下命令以创建 .cab 文件：  
+-   空資料夾的名稱，您可在其中儲存下載的 Configuration Manager 更新，以便在伺服器之間傳輸： **UpdatePacks**  
+
+在裝載服務連接點的電腦上：  
+
+-   使用系統管理權限開啟命令提示字元，然後將目錄變更為包含 **serviceconnectiontool.exe**的位置。  
+
+     根據預設，您可以在 **%path%\smssetup\tools\ServiceConnectionTool** 資料夾的 Configuration Manager 安裝媒體中找到此工具。 這個資料夾中的所有檔案都必須位在相同的資料夾中，這樣服務連接工具才能運作。  
+
+當您執行下列命令時，工具會準備一個包含使用資訊的 .cab 檔案，並將它複製到您指定的位置。 .cab 檔案中的資料是根據已設定您網站收集的診斷使用資料層級。 (請參閱 [System Center Configuration Manager 的診斷和使用方式資料](../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md))。  請執行下列命令來建立 .cab 檔案：  
 
 -   **serviceconnectiontool.exe -prepare -usagedatadest D:\USB\UsageData.cab**  
 
-你还需要将 ServiceConnectionTool 文件夹及其所有内容复制到 U 盘中，或者采用其他方法使它在步骤 3 和 4 即将使用的计算机上可用。  
+您也必須將 ServiceConnectionTool 資料夾及其所有內容複製到 USB 磁碟機，或在您將用於步驟 3 和 4 的電腦上提供此資料。  
 
-### <a name="overview"></a>概述
-**使用服务连接工具主要有三个步骤：**  
+### <a name="overview"></a>概觀
+**使用服務連接工具有三個主要步驟：**  
 
-1.  **准备**：此步骤在托管服务连接点的计算机上运行。 工具运行时，将使用情况数据放入 .cab 文件中并将其存储在 U 盘上（或指定的替代传输位置）。  
+1.  **準備**：此步驟會在裝載服務連接點的電腦上執行。 工具在執行時，會將使用方式資料放入 .cab 檔，並將其儲存在 USB 磁碟機 (或指定的其他傳輸位置)。  
 
-2.  **连接**：此步骤中，在连接到 Internet 的远程计算机上运行该工具，以便上传使用情况数据和后续下载更新。  
+2.  **連線**：在這個步驟中，您將於連線到網際網路的遠端電腦上執行工具，以上傳使用方式資料與下載更新。  
 
-3.  **导入**：此步骤在托管服务连接点的计算机上运行。 工具运行时，导入下载的内容并将其添加到站点，然后你就可以从 Configuration Manager 控制台查看和安装这些更新。  
+3.  **重要**：此步驟會在裝載服務連接點的電腦上執行。 執行時，工具會匯入您的下載並將其新增到您的站台，以便您從 Configuration Manager 主控台檢視及安裝這些更新。  
 
-从版本 1606 开始，当连接到 Microsoft 时，可以一次性上传多个 .cab 文件（每个文件来自不同的层次结构），并指定代理服务器和代理服务器的用户。   
+從版本 1606 開始，當您連接到 Microsoft 時，可以一次上傳多個 .cab 檔案 (每一個從不同階層)，並指定 Proxy 伺服器和 Proxy 伺服器的使用者。   
 
-**若要上传多个 .cab 文件，请执行以下操作：**
- -  将从独立的层次结构中导出的每个 .cab 文件放在同一文件夹中。 每个文件的名称必须是唯一的，如有必要，可以手动重命名。
- -  然后，当运行命令将数据上传到 Microsoft 时，指定包含 .cab 文件的文件夹。 （在更新 1606 之前，每次仅可以从一个层次结构上传数据，并且此工具需要你指定文件夹中的 .cab 文件的名称。）
- -  然后，在层次结构的服务连接点上运行导入任务时，此工具仅自动导入该层次结构的数据。  
+**若要上傳多個 .cab 檔案：**
+ -  將從不同階層匯出的每個 .cab 檔案，放入相同的資料夾。 每個檔案名稱必須是唯一的，您可以視需要手動重新命名。
+ -  接著，當您執行要將資料上傳至 Microsoft 的命令時，即可指定包含 .cab 檔案的資料夾 (在 1606 版之前的更新，您一次只能上傳來自單一階層的資料，且此工具會要求您指定資料夾中的 .cab 檔案名稱)。
+ -  之後，當您在某階層的服務連接點上執行匯入工作時，工具只會自動匯入該階層的資料。  
 
-**若要指定代理服务器，请执行以下操作：**  
-可以使用以下可选参数来指定代理服务器（有关使用这些参数的详细信息可在本主题的命令行参数部分中找到）：
-  - **-proxyserveruri [FQDN_of_proxy_sever]**  使用此参数指定要用于此连接的代理服务器。
-  -  **-proxyusername [username]**  当必须为代理服务器指定用户时，请使用此参数。
+**若要指定 Proxy 伺服器：**  
+若要指定 Proxy 伺服器，您可以使用下列選用參數 (如需使用這些參數的詳細資訊，請參閱本主題的＜命令列參數＞一節)：
+  - **-proxyserveruri [FQDN_of_proxy_sever]**  ：使用這個參數可指定要用於此連線的 Proxy 伺服器。
+  -  **-proxyusername [username]**  ：若您必須指定 Proxy 伺服器的使用者，請使用這個參數。
 
 
 
-### <a name="to-use-the-service-connection-tool"></a>若要使用服务连接点工具  
+### <a name="to-use-the-service-connection-tool"></a>使用服務連接工具  
 
-1.  在承载服务连接点的计算机上：  
+1.  在裝載服務連接點的電腦上：  
 
-    -   使用管理特权打开命令提示符，然后将目录更改为包含 **serviceconnectiontool.exe**的位置。   
+    -   使用系統管理權限開啟命令提示字元，然後將目錄變更為包含 **serviceconnectiontool.exe**的位置。   
 
-2.  运行以下命令以使工具准备包含使用情况信息的 .cab 文件并将其复制到指定的位置：  
+2.  當您執行下列命令時，工具會準備一個包含使用方式資訊的 .cab 檔案，並將它複製到您指定的位置：  
 
     -   **serviceconnectiontool.exe -prepare -usagedatadest D:\USB\UsageData.cab**  
 
-    如果同时上传多个层次结构中的 .cab 文件，则文件夹中的每个 .cab 文件的必须具有一个唯一的名称。 你可以手动重命名添加到该文件夹的文件。
+    如果您要同時從一個以上的階層上傳 .cab 檔案，則資料夾中的每個 .cab 檔案必須具有唯一的名稱。 針對新增至資料夾的檔案，您可以手動重新命名。
 
-    如果你想要查看收集并上传到 Configuration Manager 云服务的使用情况信息，请运行以下命令将相同的数据以 .csv 文件导出，然后可以使用像 Excel 之类的应用程序查看该文件：  
+    如果您想要檢視已收集並上傳至 Configuration Manager 雲端服務的使用方式資訊，請執行下列命令，將相同的資料匯出為 .csv 檔案，即可使用類似 Excel 的應用程式來檢視：  
 
     -   **serviceconnectiontool.exe -export -dest D:\USB\UsageData.csv**  
 
-3.  完成准备步骤后，将 U 盘移动到（或通过另一种方法将导出的数据传输到）有权访问 Internet 的计算机。  
+3.  準備步驟完成之後，請將 USB 磁碟機 (或透過另一種方法傳送匯出的資料) 移至可存取網際網路的電腦。  
 
-4.  在可访问 Internet 的计算机上，使用管理特权打开命令提示符，然后将目录更改为包含工具  **serviceconnectiontool.exe** 的副本以及该文件夹中其他文件的位置。  
+4.  在能夠存取網際網路的電腦上，以系統管理權限開啟命令提示字元，然後將目錄變更到包含  **serviceconnectiontool.exe** 工具複本及該資料夾中其他檔案的位置。  
 
-5.  运行以下命令以开始上载使用情况信息和下载 Configuration Manager 更新：  
+5.  執行下列命令以開始上傳使用資訊以及下載 Configuration Manager 的更新：  
 
     -   **serviceconnectiontool.exe -connect -usagedatasrc D:\USB -updatepackdest D:\USB\UpdatePacks**
 
-    有关此命令行的更多示例，请参阅本主题后的[命令行选项](../../../core/servers/manage/use-the-service-connection-tool.md#bkmk_cmd)部分。
+    如需此命令列的更多範例，請參閱本主題稍後的[命令列選項](../../../core/servers/manage/use-the-service-connection-tool.md#bkmk_cmd)一節。
 
     > [!NOTE]  
-    >  运行该命令行以连接到 Configuration Manager 云服务时，可能会发生如下错误：  
+    >  當您執行命令列來連線至 Configuration Manager 雲端服務時，可能會發生與下面類似的錯誤：  
     >   
-    >  -   未经处理的异常：System.UnauthorizedAccessException：  
+    >  -   未處理的例外狀況: System.UnauthorizedAccessException:  
     >   
-    >      对路径“C:\  
-    >     Users\br\AppData\Local\Temp\extractmanifestcab\95F8A562.sql”的访问被拒绝。  
+    >      拒絕存取路徑 'C:\  
+    >     Users\br\AppData\Local\Temp\extractmanifestcab\95F8A562.sql'。  
     >   
-    > 你可以直接忽略此错误并关闭错误窗口，然后继续。  
+    > 您可以放心地忽略這個錯誤、關閉錯誤視窗，然後繼續。  
 
-6.  下载完 Configuration Manager 的更新后，将 U 盘移动到（或通过另一种方法将导出的数据传输到）承载服务连接点的计算机上。  
+6.  完成下載 Configuration Manager 的更新之後，請將 USB 磁碟機 (或透過另一種方法傳送匯出的資料) 移至裝載服務連接點的電腦。  
 
-7.  在承载服务连接点的计算机上，使用管理特权打开命令提示符，将目录更改为包含 **serviceconnectiontool.exe**的位置，然后运行以下命令：  
+7.  在裝載服務連接點的電腦上，使用系統管理權限開啟命令提示字元，並將目錄變更為包含 **serviceconnectiontool.exe**的位置，然後執行下列命令：  
 
     -   **serviceconnectiontool.exe -import -updatepacksrc D:\USB\UpdatePacks**  
 
-8.  导入完成后，可以关闭命令提示符。 （仅导入适用的层次结构的更新）。  
+8.  匯入完成之後，您可以關閉命令提示字元。 (僅會匯入適用階層的更新)。  
 
-9. 打开 Configuration Manager 控制台并导航到“管理” > “更新和服务”。 现在即可安装之前导入的更新。 （在版本 1702 之前，“更新和服务”在“管理” > “云服务”下。）
+9. 開啟 Configuration Manager 主控台，然後瀏覽至 [系統管理] > [更新與服務]。 已匯入的更新現在可供安裝。 (1702 版之前，[更新與服務] 位於 [系統管理] > [雲端服務] 底下)。
 
- 有关安装更新的信息，请参阅[安装 System Center Configuration Manager 在控制台的更新](../../../core/servers/manage/install-in-console-updates.md)。  
+ 如需安裝更新的資訊，請參閱[安裝適用於 System Center Configuration Manager 的主控台內更新](../../../core/servers/manage/install-in-console-updates.md)。  
 
-## <a name="bkmk_cmd"></a> 命令行选项  
- 若要查看服务连接点工具的帮助信息，请打开包含该工具的文件夹的命令提示符并运行命令：  **serviceconnectiontool.exe**。  
+## <a name="bkmk_cmd"></a> 命令列選項  
+ 若要檢視服務連接點工具的說明資訊，請將命令提示字元開啟到包含工具的資料夾，然後執行命令：  **serviceconnectiontool.exe**。  
 
-|命令行选项|详细信息|  
+|命令列選項|詳細資料|  
 |---------------------------|-------------|  
-|**-prepare -usagedatadest [drive:][path][filename.cab]**|此命令会将当前的使用情况数据存储于 .cab 文件中。<br /><br /> 在承载服务连接点的服务器上以 **本地管理员** 身份运行此命令。<br /><br /> 示例：   **-prepare -usagedatadest D:\USB\Usagedata.cab**|    
-|**-connect -usagedatasrc [drive:][path] -updatepackdest [drive:][path] -proxyserveruri [FQDN of proxy server] -proxyusername [username]** <br /> <br /> 如果使用 1606 之前的 Configuration Manager 版本，则必须指定 .cab 文件的名称，并且不能使用代理服务器的选项。  支持的命令参数是： <br /> **-connect -usagedatasrc [drive:][path][filename] -updatepackdest [drive:][path]** |此命令连接到 Configuration Manager 云服务以从指定位置上传使用情况数据 .cab 文件并下载可用的更新包和控制台内容。 代理服务器的选项是可选选项。<br /><br /> 在可连接到 Internet 的计算机上以 **本地管理员** 身份运行此命令。<br /><br /> 连接时不使用代理服务器的示例： **-connect -usagedatasrc D:\USB\ -updatepackdest D:\USB\UpdatePacks** <br /><br /> 连接时使用代理服务器的示例： **-connect -usagedatasrc D:\USB\Usagedata.cab -updatepackdest D:\USB\UpdatePacks -proxyserveruri itgproxy.redmond.corp.microsoft.com -proxyusername Meg** <br /><br /> 如果使用 1606 之前的版本，则必须为 .cab 文件指定文件名称，并且不能指定代理服务器。 使用以下示例命令行： **-connect -usagedatasrc D:\USB\Usagedata.cab -updatepackdest D:\USB\UpdatePacks**|      
-|**-import -updatepacksrc [drive:][path]**|此命令会将之前下载的更新包和控制台内容导入到 Configuration Manager 控制台中。<br /><br /> 在承载服务连接点的服务器上以 **本地管理员** 身份运行此命令。<br /><br /> 示例：  **-import -updatepacksrc D:\USB\UpdatePacks**|  
-|**-export -dest [drive:][path][filename.csv]**|此命令会将使用情况数据导出为 .csv 文件，然后你可以进行查看。<br /><br /> 在承载服务连接点的服务器上以 **本地管理员** 身份运行此命令。<br /><br /> 示例： **-export -dest D:\USB\usagedata.csv**|  
-
+|**-prepare -usagedatadest [drive:][path][filename.cab]**|這個命令會將目前的使用資料儲存到 .cab 檔案中。<br /><br /> 在裝載服務連接點的伺服器上，以 **本機系統管理員** 身分執行這個命令。<br /><br /> 範例：   **-prepare -usagedatadest D:\USB\Usagedata.cab**|    
+|**-connect -usagedatasrc [drive:][path] -updatepackdest [drive:][path] -proxyserveruri [FQDN of proxy server] -proxyusername [username]** <br /> <br /> 如果您使用比 1606 更早的 Configuration Manager 版本，就必須指定 .cab 檔案名稱，而且無法使用 Proxy 伺服器的選項。  支援的命令參數如下： <br /> **-connect -usagedatasrc [drive:][path][filename] -updatepackdest [drive:][path]** |此命令會連線至 Configuration Manager 雲端服務，以從指定的位置上傳使用方式資料 .cab 檔案，並下載可用的更新套件和主控台內容。 Proxy 伺服器的選項為選擇性。<br /><br /> 在可連線到網際網路的電腦上，以 **本機系統管理員** 身分執行這個命令。<br /><br /> 不使用 Proxy 伺服器連接的範例： **-connect -usagedatasrc D:\USB\ -updatepackdest D:\USB\UpdatePacks** <br /><br /> 使用 Proxy 伺服器連接的範例： **-connect -usagedatasrc D:\USB\Usagedata.cab -updatepackdest D:\USB\UpdatePacks -proxyserveruri itgproxy.redmond.corp.microsoft.com -proxyusername Meg** <br /><br /> 如果您使用 1606 之前的版本，就必須指定 .cab 檔案的檔案名稱，而且無法指定 Proxy 伺服器。 請使用下列命令列範例： **-connect -usagedatasrc D:\USB\Usagedata.cab -updatepackdest D:\USB\UpdatePacks**|      
+|**-import -updatepacksrc [drive:][path]**|這個命令會匯入先前下載到 Configuration Manager 主控台的更新套件和主控台內容。<br /><br /> 在裝載服務連接點的伺服器上，以 **本機系統管理員** 身分執行這個命令。<br /><br /> 範例：  **-import -updatepacksrc D:\USB\UpdatePacks**|  
+|**-export -dest [drive:][path][filename.csv]**|這個命令會將使用資料匯出至 .csv 檔案，以供您進行檢視。<br /><br /> 在裝載服務連接點的伺服器上，以 **本機系統管理員** 身分執行這個命令。<br /><br /> 範例： **-export -dest D:\USB\usagedata.csv**|  

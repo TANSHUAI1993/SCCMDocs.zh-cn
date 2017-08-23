@@ -1,189 +1,187 @@
 ---
 title: "Technical Preview 1511 Configuration Manager 中的功能"
-description: "了解 System Center Configuration Manager Technical Preview 1511 版中的可用功能。"
+description: "了解 System Center Configuration Manager Technical Preview 1511 版中可用的功能。"
 ms.custom: na
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 69473706-21b3-498b-a67e-670fdc988f0d
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: noindex,nofollow
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
-ms.openlocfilehash: 2e0338267ea9fdc639d57f93adda1e46aea80eec
-ms.contentlocale: zh-cn
-ms.lasthandoff: 01/24/2017
-
+ms.openlocfilehash: d0bde2c085cc9b330bc772e68081d629ca9e2f11
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="capabilities-in-technical-preview-1511-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1511 版中的功能
+# <a name="capabilities-in-technical-preview-1511-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1511 中的功能
 
-*适用范围：System Center Configuration Manager (Technical Preview)*
+適用於︰System Center Configuration Manager (Technical Preview)
 
-本文介绍了 System Center Configuration Manager Technical Preview 1511 版中的可用功能。 此版本是技术预览版的基准安装版本，可以使用它安装新的技术预览站点，或者从早期的技术预览版升级。   在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager Technical Preview](/sccm/core/get-started/technical-preview)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。  
+本文介紹 System Center Configuration Manager Technical Preview 1511 版中可用的功能。 此版本是 Technical Preview 的基準安裝，可供您用來安裝新的 Technical Preview 站台，或從舊版 Technical Preview 升級。   安裝此版本的 Technical Preview 之前，請檢閱 [System Center Configuration Manager 的 Technical Preview](/sccm/core/get-started/technical-preview) 簡介主題，以熟悉使用 Technical Preview 的一般需求和限制、如何在版本之間進行更新，以及如何針對 Technical Preview 中的功能提供意見反應。  
 
-以下是可以试用的此版本的新功能。  
+以下是您可以使用此版本試用的新功能。  
 
-##  <a name="BKMK_WUfB"></a>在 Windows 10 中与 Windows Update for Business 集成  
- 现在 Configuration Manager 能够区分通过 Windows Update for Business (WUfB) 直接连接的 Windows 10 计算机与连接到 WSUS 以获取 Windows 10 更新和升级的计算机。  对于通过 WUfB 连接的计算机，更新和升级可以按照管理用户通过组策略或 MDM 策略设置的频率来进行管理，这些更新/升级可以直接从 WUfB 进行安装。    
-对于通过 WUfB 连接的计算机，Configuration Manager 无法报告符合性状态（包括 Windows 更新或定义更新）。 Configuration Manager 也无法将 Microsoft 更新或第三方更新部署到这些计算机。  
+##  <a name="BKMK_WUfB"></a> 與 Windows 10 中的 Windows Update for Business 整合  
+ Configuration Manager 現在能夠區分透過 Windows Update for Business (WUfB) 直接連線的 Windows 10 電腦，以及連線至 WSUS 以取得 Windows 10 更新與升級的電腦。  如果電腦是透過 WUfB 連線，則可以依照系統管理使用者透過群組原則或 MDM 原則設定的頻率來管理更新和升級，並可以直接從 WUfB 安裝這些更新/升級。    
+如果電腦是透過 WUfB 連線，Configuration Manager 將無法報告相容性狀態 (包括 Windows Update 或定義更新)。 此外，Configuration Manager 無法將 Microsoft Update 或協力廠商更新部署到這些電腦。  
 
- **此方案的先决条件：**  
+ **這個案例的必要條件：**  
 
--   Windows 10 桌面专业版或 Windows 10 企业版的版本 1511 或更高版本  
+-   Windows 10 Desktop Pro 或 Windows 10 Enterprise Edition 1511 版或更新版本。  
 
--   要通过 [Windows Update for Business](https://technet.microsoft.com/library/mt622730\(v=vs.85\).aspx)进行管理的计算机。  
+-   要透過 [Windows Update for Business](https://technet.microsoft.com/library/mt622730\(v=vs.85\).aspx)進行管理的電腦。  
 
-### <a name="try-it-out"></a>试试看！  
- 尝试完成下面的任务，然后使用本主题顶部附近的反馈信息，让我们知道它的工作方式：  
+### <a name="try-it-out"></a>試試看！  
+ 請嘗試完成下列工作，然後使用本主題頂端附近的意見反應資訊，告訴我們工作的成效：  
 
-1.  禁用 Windows 更新代理，以便它不会针对 WSUS 进行扫描（如果以前已启用）。   
-    可以设置注册表项 **HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU\useWSUSServer** ，以指示是否针对 WSUS 或 Windows 更新扫描计算机。  值是 2 时，它不会针对 WSUS 进行扫描。  
+1.  如果之前已啟用 Windows Update 代理程式，請將其停用以免對 WSUS 進行掃描。   
+    您可以設定登錄機碼 **HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU\useWSUSServer** ，指出電腦要對 WSUS 或 Windows Update 進行掃描。  當值為 2 時，它不會對 WSUS 進行掃描。  
 
-2.  记下新属性“UseWUServer” （Configuration Manager 资源浏览器中“Windows 更新”  节点下）。  
+2.  請注意 Configuration Manager 資源總管之 [Windows Update] 節點下的新屬性 **UseWUServer** 。  
 
-3.  基于 **UserWUServer** 属性为通过 WUfB 连接以获取更新和升级的所有计算机创建一个集合。  
+3.  根據透過 WUfB 連線以取得更新和升級之所有電腦的 **UseWUServer** 屬性，建立集合。  
 
-4.  创建客户端代理设置以禁用软件更新工作流，并将该设置部署到直接连接到 WUfB 的计算机的集合。  
+4.  建立用戶端代理程式設定，以停用軟體更新工作流程，並將設定部署至直接連線到 WUfB 的電腦集合。  
 
-5.  通过 WUfB 进行管理的计算机会在符合性状态中显示 **未知** ，不会计入总体符合性百分比中。  
+5.  透過 WUfB 管理的電腦會在相容性狀態中顯示 [不明]  ，而且不會計入整體相容性百分比的一部分。  
 
-##  <a name="BKMK_Office365ProPlus"></a>通过 System Center Configuration Manager 管理 Office 365 ProPlus 客户端更新  
- Configuration Manager 现在能够使用 Configuration Manager 软件更新管理工作流来管理 Office 365 客户端更新。    
-当 Microsoft 向 Windows Server 更新服务 (WSUS) 发布新的 Office 365 桌面客户端更新时，如果 Office 365 更新配置为目录同步的一部分，则 Configuration Manager 能够将更新同步到其目录。  Configuration Manager 站点服务器会下载 Office 365 客户端更新并将包分发到 Configuration Manager 分发点。  Configuration Manager 客户端随后会告知 Office 365 桌面客户端在何处获取更新以及何时启动更新安装过程。  
+##  <a name="BKMK_Office365ProPlus"></a> 透過 System Center Configuration Manager 管理 Office 365 ProPlus 用戶端更新  
+ Configuration Manager 現在能夠使用 Configuration Manager 軟體更新管理工作流程，來管理 Office 365 桌面用戶端更新。    
+當 Microsoft 發佈 Windows Server Updates Services (WSUS) 的新 Office 365 桌面用戶端更新時，如果 Office 365 更新已設定為類別目錄同步作業的一部分，Configuration Manager 便能將更新同步處理至其類別目錄。  Configuration Manager 站台伺服器會下載 Office 365 用戶端更新，並將套件發佈至 Configuration Manager 發佈點。  Configuration Manager 用戶端接著會通知 Office 365 桌面用戶端於何處取得更新，以及何時開始更新安裝程序。  
 
-**此方案的先决条件：**  
+**這個案例的必要條件：**  
 
-### <a name="try-it-out"></a>试试看！  
- 尝试完成下面的任务，然后使用本主题顶部附近的反馈信息，让我们知道它的工作方式：  
+### <a name="try-it-out"></a>試試看！  
+ 請嘗試完成下列工作，然後使用本主題頂端附近的意見反應資訊，告訴我們工作的成效：  
 
-1.  可以将 Office 365 更新同步到 Configuration Manager 站点服务器并从 Configuration Manager 控制台查看它们。  
+1.  您可以將 Office 365 更新同步處理至 Configuration Manager 站台伺服器，並從 Configuration Manager 主控台進行檢視。  
 
-2.  可以审批并成功部署 Office 365 更新。  
+2.  您可以核准並成功部署 Office 365 更新。  
 
-3.  可以下载并成功将 Office 365 更新部署到客户端。  
+3.  您可以下載並成功將 Office 365 更新部署到用戶端。  
 
-4.  可以使用控制台中监视或报告来验证 Office 365 更新的符合性。  
+4.  您可以使用主控台中的監視或報告功能，來確認 Office 365 更新是否相容。  
 
- 有关详细步骤，请参阅 [使用 System Center Configuration Manager Technical Preview 管理 Office 365 客户端更新](https://technet.microsoft.com/library/mt628083.aspx)。  
+ 如需詳細步驟，請參閱 [透過 System Center Configuration Manager Technical Preview 管理 Office 365 用戶端更新](https://technet.microsoft.com/library/mt628083.aspx)。  
 
-##  <a name="BKMK_AlwasyOn"></a>支持 SQL Server AlwaysOn，实现数据库的高度可用性  
- Configuration Manager 现在支持使用 SQL Server AlwaysOn 可用性组托管站点数据库。  在安装新站点时，可以指示安装程序使用可用性组，而不是普通的 SQL Server 实例。  
+##  <a name="BKMK_AlwasyOn"></a> 支援適用於高可用性資料庫的 SQL Server AlwaysOn  
+ Configuration Manager 現在支援使用 SQL Server AlwaysOn 可用性群組來裝載站台資料庫。  當您安裝新的站台時，您可以指示安裝程式使用可用性群組，而不是一般 SQL Server 執行個體。  
 
 > [!NOTE]  
->  成功配置和使用可用性组要求你熟悉配置 SQL Server 可用性组，并依赖 SQL Server 文档库中提供文档和过程。  
+>  若要成功設定及使用可用性群組，您必須熟悉 SQL Server 可用性群組的設定，並嚴格參考 SQL Server 文件庫中提供的文件和程序。  
 
-配置和使用可用性组的高级流程包括：  
+設定及使用可用性群組的高階程序包括：  
 
-1.  在 SQL Server 中配置可用性组。  
+1.  設定 SQL Server 中的可用性群組。  
 
-2.  安装新 Configuration Manager 站点，并在安装过程中通过指定组终结点来指示站点使用可用性组。  
+2.  安裝新的 Configuration Manager 站台，並在安裝期間透過指定群組端點，來指示站台使用可用性群組。  
 
-**此方案的先决条件：**  
+**這個案例的必要條件：**  
 
--   需要受 Configuration Manager Technical Preview 支持的 SQL Server 版本  
+-   需要 Configuration Manager Technical Preview 支援的 SQL Server 版本  
 
--   在安装 Configuration Manager 之前必须创建和配置 SQL Server 可用性组  
+-   您必須建立並設定 SQL Server 可用性群組，再安裝 Configuration Manager  
 
--   此可用性组必须具有一个主副本，并且可以具有最多两个同步辅助副本  
+-   可用性群組必須有一個主要複本，而且最多可以有兩個同步次要複本  
 
--   此可用性组必须具有至少一个终结点  
+-   可用性群組至少必須有一個端點  
 
--   你必须具有一个可用性组中的每个 SQL Server 均可以访问的网络位置。 配置可用性组时，此位置由安装程序使用，并且可在安装完成后删除。  
+-   您必須具有可用性群組中每部 SQL Server 都能存取的網路位置。 這個位置可供安裝程式用來設定可用性群組，並會在安裝完成之後加以移除。  
 
-**此版本的已知问题：**  
+**本版的已知問題：**  
 
--   无法成功向已用作站点数据库的可用性组添加新的副本成员。 相反，必须在添加新的副本成员后重新安装站点。  
+-   您無法將新的複本成員成功新增至站台資料庫中已在使用中的可用性群組。 相反地，您必須在新增複本成員之後重新安裝站台。  
 
--   对于这种方案，你可能需要在管理点服务器上（ **从 SQL Server 2012 功能包** ）安装[SQL Server 2012 的本机客户端](http://www.microsoft.com/download/details.aspx?id=29065)。 这可以防止 SQL 连接错误（记录在管理点服务器上的“mp_getauth.log”  中）。  
+-   在這個案例中，您可能需要在管理點伺服器上安裝 **SQL Server 2012 原生用戶端** ([從 SQL Server 2012 功能套件](http://www.microsoft.com/download/details.aspx?id=29065))。 如此可避免發生 SQL 連線錯誤 (記錄在管理點伺服器上的 **mp_getauth.log** 中)。  
 
-### <a name="try-it-out"></a>试试看！  
-尝试完成以下任务，然后使用本主题顶部附近的反馈信息，让我们知道它们的工作方式：  
+### <a name="try-it-out"></a>試試看！  
+請嘗試完成下列工作，然後使用本主題頂端附近的意見反應資訊，告訴我們工作的成效：  
 
--   我可以安装一个主站点，该主站点使用为 SQL AlwaysOn 可用性组配置的数据库服务器  
+-   我可以安裝主要站台，該站台使用專為 SQL AlwaysOn 可用性群組所設定的資料庫伺服器  
 
--   我可以将我的 SQL AlwaysOn 可用性组故障转移到组中的新副本，并且主站点仍正常运行  
+-   我可以將 SQL AlwaysOn 可用性群組容錯移轉至群組中的新複本，而且主要站台仍可運作  
 
-### <a name="configuring-sql-server-alwayson-for-configuration-manager"></a>为 Configuration Manager 配置 SQL Server AlwaysOn  
- 使用以下步骤来首先创建和配置可用性组，然后安装一个使用该可用性组的新 Configuration Manager 站点。  
+### <a name="configuring-sql-server-alwayson-for-configuration-manager"></a>針對 Configuration Manager 設定 SQL Server AlwaysOn  
+ 使用下列程序先建立及設定可用性群組，然後再安裝使用可用性群組的新 Configuration Manager 站台。  
 
-#### <a name="to-create-a-sql-server-alwayson-availability-group"></a>创建一个 SQL Server AlwaysOn 可用性组  
-创建 [SQL Server 可用性组](https://technet.microsoft.com/library/ff878265\(v=sql.120\).aspx)的过程记录在 SQL Server 文档库中。  创建可用性组时，确保满足使用 Configuration Manager 的以下要求：  
+#### <a name="to-create-a-sql-server-alwayson-availability-group"></a>建立 SQL Server AlwaysOn 可用性群組  
+[建立 SQL Server 可用性群組](https://technet.microsoft.com/library/ff878265\(v=sql.120\).aspx) 的程序記載於 SQL Server 文件庫中。  當您建立可用性群組時，請確定符合使用 Configuration Manager 的下列需求：  
 
--   最多包含三个成员：  
+-   最多三個成員：  
 
-    -   一个主副本和最多两个辅助副本  
+    -   一個主要複本和最多兩個次要複本  
 
-    -   辅助副本必须同步。  
+    -   次要複本必須同步。  
 
         > [!TIP]  
-        >  我们建议将辅助副本配置为只读。 这可让你将辅助副本用于报告等功能，同时保持主副本的性能，以便进行站点操作。  
+        >  建議將次要複本設定成唯讀。 如此一來，您便能使用次要複本來執行報告等功能，同時保持主要複本執行站台作業的效能。  
 
--   至少一个终结点。 安装 Configuration Manager 站点时，将使用此终结点的虚拟名称。  
-
-    > [!TIP]  
-    >  尽管组中可以包含多个终结点，但 Configuration Manager 只能使用其中一个。  
-
-#### <a name="to-install-a-configuration-manager-site-that-uses-the-availability-group"></a>安装使用可用性组的 Configuration Manager 站点  
-若要安装使用 SQL Server 可用性组的站点：  
-
-1.  Configuration Manager 安装程序发出提示时，替代以下内容：  
-
-    -   **SQL Server 名称**：输入在创建可用性组时配置的终结点的虚拟名称。 虚拟名称应为完整的 DNS 名称，如 **&lt;endpointServer\>.fabrikam.com**。  
-
-    -   **实例**：此值应保留空白。 在此配置中没有任何实例。  
-
-    -   **数据库**：输入在可用性组的主副本上创建的数据库的名称。  
-
-2.  接下来，你必须提供一个组中的每个 SQL Server 均可以访问的网络位置：  
-
-    -   每个 SQL Server 的计算机帐户和服务帐户均要求完全控制对此位置的访问权限。  
-
-    -   此位置仅在安装过程中使用，并且可在安装程序完成和安装站点之后将其取消共享或删除。  
-
-3.  提供此信息后，使用常规过程和配置完成安装。  
-
-##  <a name="BKMK_ClusterServerUpdates"></a>为服务器群集提供服务  
-现在，你可以创建包含群集中的服务器的集合，然后配置将在你向群集部署更新时使用的群集设置。 你可以在任何给定时间控制处于联机状态的服务器的百分比，还可将预先部署和后期部署 PowerShell 脚本配置为运行自定义操作。  
-
-**此版本的已知问题：**  
-
--   报告不可用于检查群集服务器的软件更新部署状态。  
-
--   “群集设置”  页中的维护序列选项已禁用，并且在此版本中不可用。  
-
-### <a name="try-it-out"></a>试试看！  
-尝试完成下面的任务，然后使用本主题顶部附近的反馈信息，让我们知道它的工作方式：  
-
--   我可以创建表示服务器群集的集合。 对于此测试，可以将收集成员身份规则配置为在此集合中具有 2 台计算机。  
-
--   我可以指定群集中只有 50% 的服务器可以在群集服务的任何时刻处于脱机状态。 使用过程中的示例脚本来指定预先部署脚本和后期部署脚本。  
-
--   将更新部署到此集合。 查看 C:\temp 中的 start.txt 和 end.txt 文件，并验证群集中的服务器上的部署开始和结束时间。 有关详细信息，请查看 UpdatesDeployment.log 文件。  
-
-#### <a name="to-create-a-collection-for-a-server-cluster"></a>若要创建服务器群集的集合  
-
-1.  [创建一个设备集合](https://technet.microsoft.com/library/gg712295.aspx)，使其包含群集中的所有服务器。  
-
-2.  在“资产和符合性”工作区中，单击“设备集合”，右键单击包含群集中的服务器的集合，然后单击“属性”。  
-
-3.  在“常规”选项卡上，选择“所有设备属于同一服务器集群”，然后单击“设置”。  
-
-4.  在“群集设置”页面，选择可以同时脱机安装软件更新的服务器的百分比。 不管你提供的百分比为何，可能只有一台群集服务器在某个时候会处于脱机状态。 当选择一次同时服务的服务器数量时，Configuration Manager 会向下取整。 例如，如果你选择 51%，并且群集中有 4 台服务器，则将有 2 台服务器会同时处于脱机状态。  
-
-5.  指定是否使用部署前（节点排出）脚本或部署后（节点恢复）脚本。  
+-   至少一個端點。 當您安裝 Configuration Manager 站台時，會使用這個端點的虛擬名稱。  
 
     > [!TIP]  
-    >  以下是可用于测试当前时间写入文本文件的部署前和部署后脚本的示例：  
+    >  雖然這個群組可以包含多個端點，但是 Configuration Manager 只能使用一個端點。  
+
+#### <a name="to-install-a-configuration-manager-site-that-uses-the-availability-group"></a>安裝使用可用性群組的 Configuration Manager 站台  
+若要安裝使用 SQL Server 可用性群組的站台：  
+
+1.  在 Configuration Manager 安裝程式提示時，取代下列項目：  
+
+    -   **SQL Server 名稱**：輸入建立可用性群組時所設定端點的虛擬名稱。 這個虛擬名稱應該是完整 DNS 名稱，例如 **&lt;端點伺服器\>.fabrikam.com**。  
+
+    -   **執行個體**：這個值應該保留空白。 這個組態中沒有執行個體。  
+
+    -   **資料庫**：輸入您在可用性群組的主要複本上所建立的資料庫名稱。  
+
+2.  接下來，您必須提供群組中每部 SQL Server 都能存取的網路位置：  
+
+    -   每部 SQL Server 上的電腦帳戶和服務帳戶都需要此位置的完全控制存取權限。  
+
+    -   您只能在安裝期間使用這個位置，並且可以在安裝完成並安裝站台之後取消共用或刪除這個位置。  
+
+3.  提供這項資訊之後，使用您的一般程序和組態來完成安裝。  
+
+##  <a name="BKMK_ClusterServerUpdates"></a> 提供伺服器叢集服務  
+您可以立即建立包含叢集中伺服器的集合，然後設定將更新部署到叢集時所要使用的叢集設定。 您可以控制任何指定時間在線上的伺服器百分比，並設定預先部署和部署後 PowerShell 指令碼來執行自訂動作。  
+
+**本版的已知問題：**  
+
+-   不會提供可檢查叢集伺服器之軟體更新部署狀態的報告。  
+
+-   [叢集設定]  頁面上已停用維護順序選項，無法在本版中使用。  
+
+### <a name="try-it-out"></a>試試看！  
+請嘗試完成下列工作，然後使用本主題頂端附近的意見反應資訊，告訴我們工作的成效：  
+
+-   我可以建立代表伺服器叢集的集合。 針對這項測試，您可以將收集成員資格規則設定為這個集合中有兩部電腦。  
+
+-   我在提供叢集服務的任何時間點，只能指定叢集中 50% 的伺服器處於離線狀態。 使用程序中的範例指令碼來指定預先部署和部署後指令碼。  
+
+-   將更新部署到這個集合。 檢閱 C:\temp 中的 start.txt 和 end.txt 檔案，並確認叢集中伺服器上的部署開始和結束時間。 如需詳細資訊，請檢閱 UpdatesDeployment.log 檔案。  
+
+#### <a name="to-create-a-collection-for-a-server-cluster"></a>若要建立伺服器叢集的集合  
+
+1.  [建立裝置集合](https://technet.microsoft.com/library/gg712295.aspx)以包含叢集中的伺服器。  
+
+2.  在 [資產與相容性] 工作區中，按一下 [裝置集合]，再以滑鼠右鍵按一下包含叢集伺服器的集合，然後按一下 [內容]。  
+
+3.  在 [一般] 索引標籤上，選取 「All devices are part of the same server cluster」 (所有裝置都屬於相同的伺服器叢集)，然後按一下 [設定]。  
+
+4.  在 [叢集設定] 頁面上，選取在安裝軟體更新時可以同時設為離線的伺服器百分比。 不論您提供的百分比為何，有可能一次只有一部叢集伺服器離線。 選取一次要服務幾部伺服器時，Configuration Manager 會無條件捨去成整數。 例如，如果您選擇 51%，且叢集中有 4 部伺服器，則相同時間內會將 2 部伺服器設為離線。  
+
+5.  指定是否要使用預先部署 (節點清空) 指令碼或部署後 (節點繼續) 指令碼。  
+
+    > [!TIP]  
+    >  以下是可將目前時間寫入文字檔案之預先部署和部署後指令碼的測試範例：  
     >   
-    >  **前期部署**  
+    >  **預先部署**  
     >   
     >  `#Start`  
     >   
@@ -193,7 +191,7 @@ ms.lasthandoff: 01/24/2017
     >   
     >  `Out-File C:\temp\start.txt`  
     >   
-    >  **后期部署**  
+    >  **部署後**  
     >   
     >  `#End`  
     >   
@@ -203,9 +201,8 @@ ms.lasthandoff: 01/24/2017
     >   
     >  `Out-File C:\temp\end.txt`  
 
-#### <a name="to-deploy-software-updates-to-the-server-cluster"></a>若要将软件更新部署到服务器群集  
+#### <a name="to-deploy-software-updates-to-the-server-cluster"></a>若要將軟體更新部署至伺服器叢集  
 
-1.  将[软件更新部署](https://technet.microsoft.com/library/gg712304.aspx)到服务器群集集合。  
+1.  [部署軟體更新](https://technet.microsoft.com/library/gg712304.aspx)至伺服器叢集集合。  
 
-2.  [监视软件更新部署](https://technet.microsoft.com/library/gg712304.aspx)。  
-
+2.  [監視軟體更新部署](https://technet.microsoft.com/library/gg712304.aspx)。  

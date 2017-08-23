@@ -1,59 +1,57 @@
 ---
-title: "先决条件检查程序 | Microsoft Docs"
-description: "了解如何使用先决条件检查程序识别并修复可能会阻止安装站点或站点系统角色的问题。"
+title: "必要條件檢查工具 | Microsoft Docs"
+description: "了解如何使用必要條件檢查工具，識別並修正可能封鎖站台或站台系統角色安裝的問題。"
 ms.custom: na
 ms.date: 3/1/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aaf13bb8-4ba2-4bd7-9fac-d36a9d88a1b6
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d5cc318eaf097cb3cfbfde730f7573d27af25648
 ms.openlocfilehash: f0d44f82a0b6068f8cecc5808774677eccb0f8d9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="prerequisite-checker-for-system-center-configuration-manager"></a>System Center Configuration Manager 的先决条件检查程序
+# <a name="prerequisite-checker-for-system-center-configuration-manager"></a>System Center Configuration Manager 的必要條件檢查工具
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用對象：System Center Configuration Manager (最新分支)*
 
- 在运行安装程序安装或升级 System Center Configuration Manager 站点之前，或在新的服务器上安装站点系统角色之前，可从想要用于验证服务器是否已准备就绪的 Configuration Manager 版本，使用此独立应用程序 (**Prereqchk.exe**)。 使用先决条件检查程序识别并修复会阻止安装站点或站点系统角色的问题。  
+ 在執行安裝程式來安裝或升級 System Center Configuration Manager 站台前，或在新的伺服器上安裝站台系統角色前，您可以使用要用來確認伺服器整備程度之 Configuration Manager 版本中的這個獨立應用程式 (**Prereqchk.exe**)。 使用必要條件檢查工具，識別並修正可能封鎖站台或站台系統角色安裝的問題。  
 
 > [!NOTE]  
->  先决条件检查程序始终作为安装程序的一部分运行。  
+>  在執行安裝程序期間，一律會執行必要條件檢查工具。  
 
-情况下，运行先决条件检查程序时：  
+根據預設，在必要條件檢查工具執行時：  
 
--   会对运行它的服务器进行验证。  
--   扫描本地计算机查找现有站点服务器，且仅运行适用于站点的检查。  
--   如果未检测到现有站点，则会运行所有先决条件规则。  
--   它检查规则以验证安装程序所需的软件和设置是否已安装。 必备软件可能需要未经先决条件检查程序验证的其他配置或软件更新。  
--   它会在计算机系统驱动器的 **ConfigMgrPrereq.log** 文件中记录其结果。 日志文件可能包含应用程序界面中未显示的其他信息。  
+-   它會驗證其執行所在的伺服器。  
+-   系統會掃描本機電腦，檢查是否有現有的站台伺服器，並只會執行適用於站台的檢查。  
+-   如果未偵測到現有網站，則會執行所有必要條件規則。  
+-   它會檢查規則，以確認安裝程序所需的軟體及設定都已安裝。 不過，必要軟體可能會需要未經必要條件檢查工具驗證的額外設定或軟體更新。  
+-   因此，它會將其結果記錄在電腦系統磁碟機上的 **ConfigMgrPrereq.log** 檔案中。 記錄檔可能包含未出現在應用程式介面中的其他資訊。  
 
-在命令提示符处运行先决条件检查程序并指定具体的命令行选项：  
+當您在命令提示字元中執行必要條件檢查工具，並指定特定的命令列選項時：  
 
--   先决条件检查程序仅执行与命令行中指定的站点服务器或站点系统关联的检查。  
--   若要检查远程计算机，用户帐户必须具有远程计算机的管理员权限。  
+-   必要條件檢查工具只會針對您在命令列中指定的站台伺服器或是站台系統，執行相關聯的檢查。  
+-   若要檢查遠端電腦，您的使用者帳戶必須具有足以移除電腦的 [系統管理員] 權限。  
 
-若要深入了解先决条件检查程序所执行的检查，请参阅 [System Center Configuration Manager 的先决条件检查列表](../../../../core/servers/deploy/install/list-of-prerequisite-checks.md)。  
+如需必要條件檢查工具所執行的檢查詳細資訊，請參閱 [System Center Configuration Manager 的必要條件檢查清單](../../../../core/servers/deploy/install/list-of-prerequisite-checks.md)。  
 
-## <a name="copy-prerequisite-checker-files-to-another-computer"></a>将先决条件检查程序文件复制到另一台计算机  
+## <a name="copy-prerequisite-checker-files-to-another-computer"></a>將必要條件檢查工具複製到另一部電腦  
 
-1.  在 Windows 资源管理器中，转到以下位置之一：  
+1.  在 Windows 檔案總管中，前往下列其中一個位置：  
 
-    -   **&lt;*Configuration Manager 安装介质*\>\SMSSETUP\BIN\X64**  
-    -   **&lt;*Configuration Manager 安装路径*\>\BIN\X64**  
+    -   &lt;Configuration Manager 安裝媒體\>\SMSSETUP\BIN\X64  
+    -   &lt;Configuration Manager 安裝路徑\>\BIN\X64  
 
-2.  将以下文件复制到另一台计算机上的目标文件夹：  
+2.  將下列檔案複製到另一部電腦的目的地資料夾：  
 
     -   Prereqchk.exe  
     -   Prereqcore.dll  
@@ -61,141 +59,140 @@ ms.lasthandoff: 05/17/2017
     -   Basesvr.dll  
     -   Baseutil.dll  
 
-##  <a name="run-prerequisite-checker-with-default-checks"></a>运行先决条件检查程序进行默认检查  
+##  <a name="run-prerequisite-checker-with-default-checks"></a>利用預設檢查來執行必要條件檢查工具  
 
-1.  在 Windows 资源管理器中，转到以下位置之一：  
+1.  在 Windows 檔案總管中，前往下列其中一個位置：  
 
-    -   **&lt;*Configuration Manager 安装介质*\>\SMSSETUP\BIN\X64**  
-    -   **&lt;*Configuration Manager 安装路径*\>\BIN\X64**  
+    -   &lt;Configuration Manager 安裝媒體\>\SMSSETUP\BIN\X64  
+    -   **&lt;Configuration Manager 安裝路徑**\>\BIN\X64**  
 
-2.  运行 **prereqchk.exe** 以启动先决条件检查程序。   
-    先决条件检查程序将检测现有站点，如果找到，则执行针对升级准备情况的检查。 如果未找到站点，则执行所有检查。 “站点类型”  列提供有关规则与之关联的站点服务器或站点系统的信息。  
+2.  執行 **prereqchk.exe** ，以啟動必要條件檢查程式。   
+    必要條件檢查工具會偵測現有網站，如果找到的話，會執行升級整備程度檢查。 如果未找到網站，則會執行所有檢查。 [網站類型]  欄提供與規則相關聯的網站伺服器或網站系統資訊。  
 
-##  <a name="run-prerequisite-checker-from-a-command-prompt-for-all-default-checks"></a>针对所有默认检查，从命令提示符运行先决条件检查程序  
+##  <a name="run-prerequisite-checker-from-a-command-prompt-for-all-default-checks"></a>針對所有預設檢查，從命令提示字元執行必要條件檢查工具  
 
-1.  打开命令提示符窗口并将目录更改为以下位置之一：  
+1.  開啟 [命令提示字元] 視窗，並將目錄變更為下列其中一個位置：  
 
-    -   **&lt;*Configuration Manager 安装介质*\>\SMSSETUP\BIN\X64**  
-    -   **&lt;*Configuration Manager 安装路径*\>\BIN\X64**  
+    -   **&lt;Configuration Manager 安裝媒體**\>\SMSSETUP\BIN\X64**  
+    -   **&lt;Configuration Manager 安裝路徑**\>\BIN\X64**  
 
-2.  输入  **prereqchk.exe /LOCAL** 以启动先决条件检查程序，并在服务器上运行所有先决条件检查。  
+2.  輸入  **prereqchk.exe /LOCAL** 以啟動必要條件檢查程式，並在伺服器上執行所有必要條件檢查。  
 
-## <a name="run-prerequisite-checker-from-a-command-prompt-to-use-options"></a>从命令提示符运行先决条件检查程序以使用各选项  
+## <a name="run-prerequisite-checker-from-a-command-prompt-to-use-options"></a>從命令提示字元執行必要條件檢查工具以使用選項  
 
-1.  打开命令提示符窗口并将目录更改为以下位置之一：  
+1.  開啟 [命令提示字元] 視窗，並將目錄變更為下列其中一個位置：  
 
-    -   **&lt;*Configuration Manager 安装介质*\>\SMSSETUP\BIN\X64**  
-    -   **&lt;*Configuration Manager 安装路径*\>\BIN\X64**  
+    -   **&lt;Configuration Manager 安裝媒體**\>\SMSSETUP\BIN\X64**  
+    -   **&lt;Configuration Manager 安裝路徑**\>\BIN\X64**  
 
-2.  输入 **prereqchk.exe**，并在后面添加以下一个或多个命令行选项。  
+2.  輸入 **prereqchk.exe**，並加上一個或多個下列命令列選項。  
 
-    例如，可使用以下方法检查主站点：  
+    例如，若要檢查主要站台，您可能會使用下列項目：  
 
-       **prereqchk.exe [/NOUI] /PRI /SQL &lt;FQDN of SQL Server\> /SDK &lt;FQDN of SMS Provider\> [/JOIN &lt;FQDN of central administration site\>] [/MP &lt;FQDN of management point\>] [/DP &lt;FQDN of distribution point\>]**  
+       **prereqchk.exe [/NOUI] /PRI /SQL &lt;SQL Server 的 FQDN\> /SDK &lt;SMS 提供者的 FQDN\> [/JOIN &lt;管理中心網站的 FQDN\>] [/MP &lt;管理點的 FQDN\>] [/DP &lt;發佈點的 FQDN\>]**  
 
-    **管理中心站点服务器：**  
+    **管理中心網站伺服器：**  
 
     -   **/NOUI**  
 
-         不需要。 启动先决条件检查程序而不显示用户界面。 你必须在命令行中的任何其他选项之前指定此选项。  
+         不需要。 啟動必要條件檢查工具，但不顯示使用者介面。 在命令列中指定任何其他選項之前，必須先指定此選項。  
 
     -   **/CAS**  
 
-         必需。 验证本地计算机是否满足管理中心站点的要求。  
+         必要。 確認本機電腦符合管理中心網站的需求。  
 
-    -   **/SQL &lt;*FQDN of SQL Server*>**  
+    -   **/SQL &lt;*SQL Server 的 FQDN*>**  
 
-         必需。 使用完全限定的域名 (FQDN)，验证指定计算机是否满足用于托管 Configuration Manager 站点数据库的 SQL Server 的要求。  
+         必要。 使用完整網域名稱 (FQDN)；可確認指定的電腦符合讓 SQL Server 裝載 Configuration Manager 站台資料庫的需求。  
 
-    -   **/SDK &lt;*FQDN of SMS Provider*>**  
+    -   **/SDK &lt;*SMS 提供者的 FQDN*>**  
 
-         必需。 验证指定计算机是否满足 SMS 提供程序的要求。  
+         必要。 確認指定的電腦符合 SMS 提供者的需求。  
 
     -   **/Ssbport**  
 
-         不需要。 验证防火墙例外是否生效以允许 SQL Server Service Broker (SSB) 端口上的通信。 默认 SSB 端口为 4022。  
+         不需要。 確認防火牆例外狀況有效，可允許 SQL Server Service Broker (SSB) 連接埠上的通訊。 預設 SSB 連接埠為 4022。  
 
-    -   **InstallDir &lt;*Configuration Manager 安装路径*>**  
+    -   **InstallDir &lt;Configuration Manager 安裝路徑>****  
 
-         不需要。 验证站点安装的最小磁盘空间要求。  
+         不需要。 確認符合站台安裝的最小磁碟空間需求。  
 
-    **主站点服务器：**  
+    **主要站台伺服器：**  
 
     -   **/NOUI**  
 
-        不需要。 启动先决条件检查程序而不显示用户界面。 你必须在命令行中的任何其他选项之前指定此选项。  
+        不需要。 啟動必要條件檢查工具，但不顯示使用者介面。 在命令列中指定任何其他選項之前，必須先指定此選項。  
 
     -   **/PRI**  
 
-         必需。 验证本地计算机是否满足主站点的要求。  
+         必要。 確認本機電腦符合主要網站的需求。  
 
-    -   **/SQL &lt;*FQDN of SQL Server*>**  
+    -   **/SQL &lt;*SQL Server 的 FQDN*>**  
 
-         必需。 验证指定计算机是否满足用于托管 Configuration Manager 站点数据库的 SQL Server 的要求。  
+         必要。 確認指定的電腦符合讓 SQL Server 裝載 Configuration Manager 站台資料庫的需求。  
 
-    -   **/SDK &lt;*FQDN of SMS Provider*>**  
+    -   **/SDK &lt;*SMS 提供者的 FQDN*>**  
 
-         必需。 验证指定计算机是否满足 SMS 提供程序的要求。  
+         必要。 確認指定的電腦符合 SMS 提供者的需求。  
 
-    -   **/JOIN &lt;*FQDN of central administration site*>**  
+    -   **/JOIN &lt;*管理中心網站的 FQDN*>**  
 
-         不需要。 验证本地计算机是否满足用于连接到管理中心站点服务器的要求。  
+         不需要。 確認本機電腦符合連線至管理中心網站伺服器的需求。  
 
-    -   **/MP &lt;*FQDN of management point*>**  
+    -   **/MP &lt;*管理點的 FQDN*>**  
 
-         不需要。 验证指定计算机是否满足管理点站点系统角色的要求。 只有当你使用 **/PRI** 选项时，才支持此选项。  
+         不需要。 確認指定的電腦符合管理點網站系統角色的需求。 此選項只有在您使用 **/PRI** 選項時才受支援。  
 
-    -   **/DP &lt;*FQDN of distribution point*>**  
+    -   **/DP &lt;*發佈點的 FQDN*>**  
 
-         不需要。 验证指定计算机是否满足分发点站点系统角色的要求。 只有当你使用 **/PRI** 选项时，才支持此选项。  
+         不需要。 確認指定的電腦符合發佈點網站系統角色的需求。 此選項只有在您使用 **/PRI** 選項時才受支援。  
 
     -   **/Ssbport**  
 
-         不需要。 验证防火墙例外是否生效以允许 SSB 端口上的通信。 默认 SSB 端口为 4022。  
+         不需要。 確認防火牆例外狀況有效，可允許 SSB 連接埠上的通訊。 預設 SSB 連接埠為 4022。  
 
-    -   **InstallDir &lt;*Configuration Manager 安装路径*>**  
+    -   **InstallDir &lt;Configuration Manager 安裝路徑>****  
 
-         不需要。 验证站点安装的最小磁盘空间要求。  
+         不需要。 確認符合站台安裝的最小磁碟空間需求。  
 
-    **辅助站点服务器：**  
+    **次要站台伺服器：**  
 
     -   **/NOUI**  
 
-         不需要。 启动先决条件检查程序而不显示用户界面。 你必须在命令行中的任何其他选项之前指定此选项。  
+         不需要。 啟動必要條件檢查工具，但不顯示使用者介面。 在命令列中指定任何其他選項之前，必須先指定此選項。  
 
-    -   **/SEC &lt;*FQDN of secondary site server*>**  
+    -   **/SEC &lt;*次要站台伺服器的 FQDN*>**  
 
-         必需。 验证指定计算机是否满足辅助站点的要求。  
+         必要。 確認指定的電腦符合次要網站的需求。  
 
     -   **/INSTALLSQLEXPRESS**  
 
-         不需要。 验证是否可在指定计算机上安装 SQL Server Express。  
+         不需要。 確認可在指定的電腦上安裝 SQL Server Express。  
 
     -   **/Ssbport**  
 
-         不需要。 验证防火墙例外是否生效以允许 SSB 端口的通信。 默认 SSB 端口为 4022。  
+         不需要。 確認防火牆例外狀況有效，可允許 SSB 連接埠的通訊。 預設 SSB 連接埠為 4022。  
 
     -   **/Sqlport**  
 
-         不需要。 验证防火墙例外是否生效以允许 SQL Server 服务端口的通信，并且该端口未由 SQL Server 的另一个命名实例使用。 默认端口为 1433。  
+         不需要。 確認防火牆例外狀況有效，可允許 SQL Server 服務連接埠的通訊，而且沒有其他具名 SQL Server 執行個體正在使用該連接埠。 預設的連接埠為 1433。  
 
-    -   **InstallDir &lt;*Configuration Manager 安装路径*>**  
+    -   **InstallDir &lt;Configuration Manager 安裝路徑>****  
 
-         不需要。 验证站点安装的最小磁盘空间要求。  
+         不需要。 確認符合站台安裝的最小磁碟空間需求。  
 
     -   **/SourceDir**  
 
-         不需要。 验证辅助站点的计算机帐户是否可访问承载安装程序源文件的文件夹。  
+         不需要。 確認次要網站的電腦帳戶可以存取裝載安裝程式來源檔案的資料夾。  
 
-   **Configuration Manager 控制台：**  
+   **Configuration Manager 主控台：**  
 
     -   **/Adminui**  
 
-         必需。 验证本地计算机是否满足 Configuration Manager 的安装要求。  
+         必要。 確認本機電腦符合 Configuration Manager 的安裝需求。  
 
-3.  在先决条件检查程序用户界面中，先决条件检查程序将在“先决条件结果”部分中创建一个已发现问题的列表。  
+3.  在必要條件檢查工具的使用者介面中，必要條件檢查工具會在 [必要條件結果] 區段中，建立一份找到的問題清單。  
 
-    -   单击列表中的项目以了解有关如何解决问题的详细信息。  
-    -   在安装站点服务器、站点系统或 Configuration Manager 控制台之前，必须解决列表中状态为“错误”的所有项目。  
-    -   也可打开系统驱动器根目录中的 **ConfigMgrPrereq.log** 文件，查看先决条件检查程序结果。 该日志文件可能包含先决条件检查程序用户界面中未显示的其他信息。  
-
+    -   按一下清單中的項目，即可顯示有關如何解決問題的詳細資料。  
+    -   您必須在安裝站台伺服器、站台系統或 Configuration Manager 主控台之前，解決清單中所有含 [錯誤] 狀態的項目。  
+    -   您也可以在系統磁碟機的根目錄中開啟 **ConfigMgrPrereq.log** 檔案，以檢閱必要條件檢查工具的結果。 記錄檔可能包含未在必要條件檢查工具使用者介面中顯示的其他資訊。  

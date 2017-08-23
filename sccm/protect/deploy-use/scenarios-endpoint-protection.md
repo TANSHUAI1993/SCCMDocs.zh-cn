@@ -1,6 +1,6 @@
 ---
-title: "方案 - Endpoint Protection 保护计算机免受恶意软件侵害 | Microsoft Docs"
-description: "了解如何在 Configuration Manager 中实现 Endpoint Protection，使计算机免受恶意软件侵害。"
+title: "Endpoint Protection 保護電腦免受惡意程式碼威脅的案例 | Microsoft Docs"
+description: "了解如何在 Configuration Manager 中實作 Endpoint Protection，以保護電腦免受惡意程式碼的攻擊。"
 ms.custom: na
 ms.date: 03/13/2017
 ms.prod: configuration-manager
@@ -10,71 +10,67 @@ ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 539c7a89-3c03-4571-9cb4-02d455064eeb
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: af0aafb4b7209d840676d16723509f399c662aad
 ms.openlocfilehash: b98684d44874ff246e4d675039c6e443aee82a62
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
+# <a name="example-scenario-using-system-center-endpoint-protection-to-protect-computers-from-malware-in-system-center-configuration-manager"></a>範例案例: 使用 System Center Endpoint Protection 保護電腦免受 System Center Configuration Manager 中惡意程式碼的威脅
 
-# <a name="example-scenario-using-system-center-endpoint-protection-to-protect-computers-from-malware-in-system-center-configuration-manager"></a>示例方案：使用 System Center Endpoint Protection 来保护计算机在 System Center Configuration Manager 中免受恶意软件侵害
+適用於：System Center Configuration Manager (最新分支)
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+此主題提供一個範例案例，示範如何在 Configuration Manager 中實作 Endpoint Protection 以保護組織的電腦免受惡意程式碼攻擊。  
 
-本主题通过提供示例方案，说明了如何在 Configuration Manager 中实施 Endpoint Protection 以保护组织中的计算机免遭恶意软件攻击。  
+ John 是 Woodgrove Bank 的 Configuration Manager 系統管理員。 該銀行目前使用 System Center Endpoint Protection 保護電腦，以防範惡意程式碼的攻擊。 此外，該銀行也使用 Windows 群組原則以確保公司內的所有電腦上皆已啟用 Windows 防火牆，且當 Windows 防火牆阻擋新程式時通知使用者。  
 
- John 是 Woodgrove Bank 的 Configuration Manager 管理员。 该银行目前使用 System Center Endpoint Protection 来保护计算机免受恶意软件攻击。 此外，该银行使用 Windows 组策略来确保公司中的所有计算机上都启用了 Windows 防火墙，并确保在 Windows 防火墙阻止新程序时通知用户。  
+ 因此，銀行要求 John 將 Woodgrove Bank 的反惡意程式碼軟體升級為 System Center Endpoint Protection，以便受益於最新的反惡意程式碼功能，同時透過 Configuration Manager 主控台來集中管理反惡意程式碼解決方案。 進行這項作業有下列需求：  
 
- John 已受命将 Woodgrove Bank 的反恶意软件升级到 System Center Endpoint Protection，以便银行可以利用最新的反恶意软件功能并能够从 Configuration Manager 控制台集中管理反恶意软件解决方案。 此实现具有下列要求：  
+-   使用 Configuration Manager 來管理目前由群組原則所管理的 Windows 防火牆設定。  
 
--   使用 Configuration Manager 来管理组策略当前管理的 Windows 防火墙设置。  
+-   使用 Configuration Manager 軟體，將惡意程式碼定義下載至電腦。 如果無法使用軟體更新，例如，如果電腦未連線到公司網路時，電腦就必須從 Microsoft Update 下載定義更新。  
 
--   使用 Configuration Manager 软件更新，将恶意软件定义下载到计算机。 如果软件更新不可用，例如，如果计算机未连接到公司网络，则计算机必须从 Microsoft 更新中下载定义更新。  
+-   使用者的電腦必須每天執行惡意程式碼的快速掃描。 但伺服器則必須於工作時間以外的星期六上午 1 點，執行完整的掃描。  
 
--   用户的计算机必须每天执行一次恶意软件快速扫描。 但是，服务器必须在每个星期六的凌晨 1 点（工作时间外）运行完全扫描。  
+-   每次發生下列任一事件時，即傳送電子郵件警示：  
 
--   每次发生下列事件之一时，请发送电子邮件警报：  
+    -   在任何電腦上偵測到惡意程式碼  
 
-    -   在任意计算机上检测到恶意软件  
+    -   超過 5% 以上的電腦上偵測到相同的惡意程式碼威脅  
 
-    -   在 5% 以上的计算机上检测到相同的恶意软件威胁  
+    -   在任何 24 小時的期間內偵測到 5 次以上相同的惡意程式碼威脅  
 
-    -   在任意 24 小时内检测到相同恶意软件威胁的次数超过 5 次  
+    -   在任何 24 小時期間內偵測到 3 種以上不同類型的惡意程式碼  
 
-    -   在任意 24 小时内检测到 3 种以上的不同类型的恶意软件  
+-   解除安裝現有的反惡意程式碼解決方案。  
 
--   卸载现有的反恶意软件解决方案。  
+ John 接著執行下列步驟來實作 Endpoint Protection：  
 
- John 随后执行以下步骤来实现 Endpoint Protection：  
+##  <a name="steps-to-implement-endpoint-protection"></a>若要實作 Endpoint Protection 的步驟  
 
-##  <a name="steps-to-implement-endpoint-protection"></a>若要实现 Endpoint Protection 的步骤  
-
-|过程|参考|  
+|程序|參考|  
 |-------------|---------------|  
-|John 查看 Configuration Manager 中 Endpoint Protection 的基本概念的可用信息。|有关 Endpoint Protection 的概述信息，请参阅 [System Center Configuration Manager 中的 Endpoint Protection](endpoint-protection.md)。|  
-|John 查看并实现使用 Endpoint Protection 所需的先决条件。|有关 Endpoint Protection 的先决条件的信息，请参阅[规划 Endpoint Protection](../plan-design/planning-for-endpoint-protection.md)。|  
-|John 仅在一个站点系统服务器上安装 Endpoint Protection 站点系统角色，该服务器位于 Woodgrove Bank 层次结构的顶部。|有关如何安装 Endpoint Protection 站点系统角色的详细信息，请参阅[配置 Endpoint Protection](configure-endpoint-protection.md) 中的“先决条件”。|  
-|John 配置 Configuration Manager 以使用 SMTP 服务器发送电子邮件警报。<br /><br /> **注意：**仅当希望在生成 Endpoint Protection 警报时收到电子邮件通知，才必须配置 SMTP 服务器。|有关详细信息，请参阅[在 Endpoint Protection 中配置警报](endpoint-configure-alerts.md)。|  
-|John 创建包含所有计算机和服务器的设备集合以安装 Endpoint Protection 客户端。 他将此集合命名为“受 Endpoint Protection 保护的所有计算机”。<br /><br /> **提示：**无法为用户集合配置警报。|有关如何创建集合的详细信息，请参阅[如何在 System Center Configuration Manager 中创建集合](../../core/clients/manage/collections/create-collections.md)|  
-|他配置集合的以下警报： <br /><br />1) **检测到恶意软件**：John 将警报严重性配置为**严重**。 <br /><br />2) **大量计算机上检测到相同类型的恶意软件**：John 将警报的严重性配置为**严重**并指定当 5%以上的计算机上检测到恶意软件时生成警报。 <br /><br />3) **在指定时间间隔内，计算机上反复检测到相同类型的恶意软件**：John 将警报的严重性配置为**严重**并指定当在 24 小时内检测到恶意软件 5 次以上时生成警报。 <br /><br />4) **在指定的时间间隔内，同一台计算机上检测到多种恶意软件**：John 将警报的严重性配置为**严重**并指定当 24 小时内检测到超过 3 种恶意软件时生成警报。<br /><br /> “警报严重性”的值指示将在 Configuration Manager 控制台和电子邮件中接收的警报中显示的警报级别。<br /><br /> 此外，他选择“在 Endpoint Protection 仪表板中查看此集合”选项，以便可在 Configuration Manager 控制台中监视警报。|请参阅[在 System Center Configuration Manager 中配置 Endpoint Protection](endpoint-configure-alerts.md) 中的“为 Endpoint Protection 配置警报”。|  
-|John 通过使用自动部署规则将 Configuration Manager 软件更新配置为每天下载和部署定义更新三次。|有关详细信息，请参阅[使用 Configuration Manager 软件更新来提供定义更新](endpoint-definitions-configmgr.md)中的“使用 Configuration Manager 软件更新来提供定义更新”部分。|  
-|John 检查默认反恶意软件策略中的设置，其中包含来自 Microsoft 推荐的安全设置。 对于每天执行一次快速扫描的计算机，他将更改以下设置：<br /><br /> 1) **在客户端计算机上运行每日快速扫描**：“是”。<br /><br /> 2) **每日快速扫描计划时间**：“上午 9:00”。<br /><br /> John 注意到“从 Microsoft 更新分发的更新”  默认选为了定义更新源。 这满足了计算机在无法接收 Configuration Manager 软件更新时从 Microsoft 更新下载定义的业务要求。|请参阅[如何在 System Center Configuration Manager 中为 Endpoint Protection 创建和部署反恶意软件策略](endpoint-antimalware-policies.md)。|  
-|John 创建一个集合，其中只含有名为“Woodgrove Bank 服务器” 的 Woodgrove Bank 服务器。|请参阅[如何在 System Center Configuration Manager 中创建集合](../../core/clients/manage/collections/create-collections.md)|  
-|John 创建一个名为“Woodgrove Bank 服务器策略” 的自定义反恶意软件策略。 他只添加“计划扫描”  设置，并进行以下更改：<br /><br /> ：  <br /><br /> ：  <br /><br /> ： **1：00 AM**<br /><br /> “在客户端计算机上运行每日快速扫描”:  。|请参阅[如何在 System Center Configuration Manager 中为 Endpoint Protection 创建和部署反恶意软件策略](endpoint-antimalware-policies.md)。|  
-|John 将“Woodgrove Bank 服务器策略”  自定义反恶意软件策略部署到“Woodgrove Bank 服务器”  集合。|请参阅[如何为 Endpoint Protection 创建和部署反恶意软件策略](endpoint-antimalware-policies.md)主题中的“将反恶意软件策略部署到客户端计算机”。|  
-|John 为 Endpoint Protection 创建一组新的自定义客户端设备设置，并将其命名为“Woodgrove Bank Endpoint Protection 设置”。<br /><br /> **注意：**如果不希望在层次结构中的所有客户端上安装并启用 Endpoint Protection，请确保在默认客户端设置中将选项“管理客户端计算机上的 Endpoint Protection 客户端”和“在客户端计算机上安装 Endpoint Protection 客户端”均配置为“否”。|有关详细信息，请参阅[为 Endpoint Protection 配置自定义客户端设置](endpoint-protection-configure-client.md)。|  
-|他为 Endpoint Protection 配置以下设置：<br /><br /> “管理客户端计算机上的 Endpoint Protection 客户端”:  <br /><br /> 此设置和值确保已安装的所有现有 Endpoint Protection 客户端将由 Configuration Manager 托管。<br /><br /> “在客户端计算机上安装 Endpoint Protection 客户端”:  。<br /><br /> “安装 Endpoint Protection 之前自动删除以前安装的反恶意软件”:  。<br /><br /> 此设置和值可满足在安装和启用 Endpoint Protection 前删除现有反恶意软件的业务要求。|有关详细信息，请参阅[为 Endpoint Protection 配置自定义客户端设置](endpoint-protection-configure-client.md)。|  
-|John 将“Woodgrove Bank Endpoint Protection 设置”客户端设置部署到“Endpoint Protection 保护的所有计算机”集合。|请参阅[在 Configuration Manager 中配置 Endpoint Protection](endpoint-antimalware-policies.md) 中的“为 Endpoint Protection 配置自定义客户端设置”。|  
-|John 使用“创建 Windows 防火墙策略向导”，通过为域配置文件配置以下设置来创建策略：<br /><br /> 1) **启用 Windows 防火墙**：“是”<br /><br /> 2)<br />                    ： |请参阅[如何在 System Center Configuration Manager 中为 Endpoint Protection 创建和部署 Windows 防火墙策略](../../protect/deploy-use/create-windows-firewall-policies.md)|  
-|John 将新的防火墙策略部署到先前创建的“Endpoint Protection 保护的所有计算机”集合。|请参阅[如何在 System Center Configuration Manager 中为 Endpoint Protection 创建和部署 Windows 防火墙策略](create-windows-firewall-policies.md)中的“部署 Windows 防火墙策略”|  
-|John 使用 Endpoint Protection 的可用管理任务来管理反恶意软件和 Windows 防火墙策略、在必要时执行计算机按需扫描、强制计算机下载最新的定义并指定当检测到恶意软件时采取的任何进一步操作。|请参阅[如何在 System Center Configuration Manager 中管理 Endpoint Protection 的反恶意软件策略和防火墙设置](endpoint-antimalware-firewall.md)|  
-|John 使用以下方法来监视 Endpoint Protection 的状态和 Endpoint Protection 采取的操作：<br /><br /> 1) 通过使用“监视”工作区中“安全性”下的“Endpoint Protection 状态”节点。<br /><br /> 2)通过使用“资产和符合性”工作区中的“Endpoint Protection”节点。<br /><br /> 3) 通过使用 Configuration Manager 内置报表。|请参阅[如何在 System Center Configuration Manager 中监视 Endpoint Protection](monitor-endpoint-protection.md)|  
+|John 檢閱 Configuration Manager 中 Endpoint Protection 基本概念的相關可用資訊。|如需 Endpoint Protection 的概觀資訊，請參閱 [System Center Configuration Manager 中的 Endpoint Protection](endpoint-protection.md)。|  
+|John 檢閱使用 Endpoint Protection 的必要先決條件並進行實作。|如需 Endpoint Protection 先決條件的詳細資訊，請參閱 [Endpoint Protection 規劃](../plan-design/planning-for-endpoint-protection.md)。|  
+|John 只在 Woodgrove Bank 階層頂端的一個站台系統伺服器上，安裝了 Endpoint Protection 站台系統角色。|如需如何安裝 Endpoint Protection 站台系統角色的詳細資訊，請參閱[設定 Endpoint Protection](configure-endpoint-protection.md) 中的＜先決條件＞。|  
+|John 會將 Configuration Manager 設定為使用 SMTP 伺服器傳送電子郵件警示。<br /><br /> **注意：**僅有當您想要在產生 Endpoint Protection 警示時收到電子郵件通知的情況下，才必須設定 SMTP 伺服器。|如需詳細資訊，請參閱[設定 Endpoint Protection 警示](endpoint-configure-alerts.md)。|  
+|John 會建立一個裝置集合，其中包含所有電腦與伺服器，以安裝 Endpoint Protection 用戶端。 他將此集合命名為 [Endpoint Protection 保護的所有電腦]。<br /><br /> **提示︰**您無法設定使用者集合的警示。|如需如何建立集合的詳細資訊，請參閱[如何在 System Center Configuration Manager 中建立集合](../../core/clients/manage/collections/create-collections.md)。|  
+|他會設定下列警示集合： <br /><br />1) **偵測到惡意程式碼**：針對此情況，John 會設定「嚴重」的警示嚴重性。 <br /><br />2) **數台電腦上偵測到相同類型的惡意程式碼**：針對此情況，John 會設定「嚴重」的警示嚴重性，並指定當超過 5% 的電腦有偵測到惡意程式碼就會產生警示。 <br /><br />3) **某台電腦在指定的間隔內重複偵測到相同類型的惡意程式碼**：針對此情況，John 會設定「嚴重」的警示嚴重性，並指定當 24 小時內偵測到 5 次以上的惡意程式碼就會產生警示。 <br /><br />4) **某台電腦在指定的間隔內偵測到多種類型的惡意程式碼**：針對此情況，John 會設定「嚴重」的警示嚴重性，並指定當 24 小時內產生 3 種以上的惡意程式碼類型時就會產生警示。<br /><br /> **警示嚴重性**的值表示在 Configuration Manager 主控台中會顯示的警示等級，以及 John 在電子郵件訊息中會收到的警示等級。<br /><br /> John 還另外選取了 [在 Endpoint Protection 儀表板中檢視此集合] 選項，以便在 Configuration Manager 主控台中監視警示。|請參閱[設定 System Center Configuration Manager 中的 Endpoint Protection](endpoint-configure-alerts.md) 之＜設定 Endpoint Protection 的警示＞。|  
+|John 還使用自動部署規則，將 Configuration Manager 軟體更新設定為每天下載及部署 3 次定義更新。|如需詳細資訊，請參閱[設定 System Center Configuration Manager 中的 Endpoint Protection](endpoint-definitions-configmgr.md) 之＜使用 Configuration Manager 軟體更新來傳遞定義更新＞一節。|  
+|John 會檢查預設反惡意程式碼原則中的設定，其中包含來自 Microsoft 所建議的安全性設定。 對於每天皆會執行快速掃描的電腦，他變更了下列設定：<br /><br /> 1) **在用戶端電腦上執行每日快速掃描**：**是**。<br /><br /> 2) **每日快速掃描排程時間**：**上午 9 點**。<br /><br /> John 注意到預設已選取 [從 Microsoft Update 發佈的更新]  作為定義更新的來源。 如此一來，當電腦無法收到 Configuration Manager 軟體更新時，即可從 Microsoft Update 下載定義，以滿足業務需求。|請參閱[如何在 System Center Configuration Manager 中建立和部署 Endpoint Protection 的反惡意程式碼原則](endpoint-antimalware-policies.md)。|  
+|John 建立了一個集合，只包含名稱為 **Woodgrove Bank 伺服器**的 Woodgrove Bank 伺服器。|請參閱[如何在 System Center Configuration Manager 中建立集合](../../core/clients/manage/collections/create-collections.md)。|  
+|John 建立了名稱為 **Woodgrove Bank 伺服器原則**的自訂反惡意程式碼原則。 他只新增了 [排程掃描]  設定，且進行了下列變更：<br /><br /> **掃描類型**：  **完整**<br /><br /> **掃描日期**：  **星期六**<br /><br /> **掃描時間**： **上午 1 點**<br /><br /> **在用戶端電腦上執行每日快速掃描**：  **否**。|請參閱[如何在 System Center Configuration Manager 中建立和部署 Endpoint Protection 的反惡意程式碼原則](endpoint-antimalware-policies.md)。|  
+|John 會將 **Woodgrove Bank 伺服器原則** 自訂反惡意程式碼原則，部署至 **Woodgrove Bank 伺服器** 集合。|請參閱 [How to create and deploy antimalware policies for Endpoint Protection](endpoint-antimalware-policies.md) (如何建立和部署 Endpoint Protection 的反惡意程式碼原則) 主題中的＜將反惡意程式碼原則部署到用戶端電腦＞。|  
+|John 會為 Endpoint Protection 建立一組新的自訂用戶端裝置設定，並將其命名為 [Woodgrove Bank Endpoint Protection 設定]。<br /><br /> **注意：**如果不想在階層中的所有用戶端上安裝及啟用 Endpoint Protection，請確定預設用戶端設定中的 [在用戶端電腦上管理 Endpoint Protection 用戶端] 與 [在用戶端電腦上安裝 Endpoint Protection 用戶端] 選項，皆已設定為 [否]。|如需詳細資訊，請參閱[設定 Endpoint Protection 的自訂用戶端設定](endpoint-protection-configure-client.md)。|  
+|John 為 Endpoint Protection 設定了下列設定：<br /><br /> ： **是**<br /><br /> 此設定與值可確保任何已安裝的現有 Endpoint Protection 用戶端，都會變成由 Configuration Manager 所管理。<br /><br /> **在用戶端電腦上安裝 Endpoint Protection 用戶端**：  **是**。<br /><br /> **安裝 Endpoint Protection 之前，自動移除先前安裝的反惡意程式碼軟體**：  **是**。<br /><br /> 此設定與值可在安裝及啟用 Endpoint Protection 之前，移除現有反惡意程式碼軟體，以滿足業務需求。|如需詳細資訊，請參閱[設定 Endpoint Protection 的自訂用戶端設定](endpoint-protection-configure-client.md)。|  
+|John 將 [Woodgrove Bank Endpoint Protection 設定] 的用戶端設定，部署至 [Endpoint Protection 保護的所有電腦] 集合。|請參閱 [Configuring Endpoint Protection in Configuration Manager](endpoint-antimalware-policies.md) (在 Configuration Manager 中設定 Endpoint Protection) 之＜設定 Endpoint Protection 的自訂用戶端設定＞。|  
+|John 使用 [建立 Windows 防火牆原則精靈] 來建立原則，方法是為該網域設定檔設定下列設定：<br /><br /> 1) **啟用 Windows 防火牆**：**是**<br /><br /> 2)<br />                    **當 Windows 防火牆阻擋新程式時通知使用者**： **是**|請參閱[如何建立及部署 System Center Configuration Manager 中 Endpoint Protection 的 Windows 防火牆原則](../../protect/deploy-use/create-windows-firewall-policies.md)。|  
+|John 將新的防火牆原則部署到之前所建立的 [Endpoint Protection 保護的所有電腦] 集合中。|請參閱[如何建立及部署 System Center Configuration Manager 中 Endpoint Protection 的 Windows 防火牆原則](create-windows-firewall-policies.md)的＜建立 Windows 防火牆原則＞一節。|  
+|John 會使用適用於 Endpoint Protection 的管理工作，來管理反惡意程式碼與 Windows 防火牆原則、必要時對電腦執行隨選掃描、強制電腦下載最新的定義，並指定在偵測到惡意程式碼時要採取的任何進一步動作。|請參閱[如何在 System Center Configuration Manager 中管理 Endpoint Protection 的反惡意程式碼原則及防火牆設定](endpoint-antimalware-firewall.md)。|  
+|John 使用下列方法來監視 Endpoint Protection 的狀態，以及 Endpoint Protection 所採取的動作：<br /><br /> 1) 使用 [監視] 工作區中 [安全性] 下的 [Endpoint Protection 狀態] 節點。<br /><br /> 2) 使用 [資產與相容性] 工作區中的 [Endpoint Protection] 節點。<br /><br /> 3) 使用 Configuration Manager 的內建報告。|請參閱[如何監視 System Center Configuration Manager 中的 Endpoint Protection](monitor-endpoint-protection.md)。|  
 
- John 告知经理已成功实施 Endpoint Protection，并且根据指定的业务要求，确认 Woodgrove Bank 的计算机当前受到反恶意软件保护。
-
+ 根據公司給 John 的業務需求，他向主管回報已成功實作 Endpoint Protection，並確認 Woodgrove Bank 的電腦現已受保護可免受反惡意程式的威脅。

@@ -1,62 +1,59 @@
 ---
-title: "升级到 System Center Configuration Manager | Microsoft Docs"
-description: "了解从运行 System Center 2012 Configuration Manager 的站点和层次结构成功进行就地升级的步骤。"
+title: "升級至 System Center Configuration Manager | Microsoft Docs"
+description: "了解從執行 System Center 2012 Configuration Manager 的站台和階層中執行成功就地升級的步驟。"
 ms.custom: na
 ms.date: 6/6/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: c64e7483-b4bb-4738-95f4-ecdaeb6a2ba6
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3619a73d3a39659de927e1711a7ec81de9918064
 ms.openlocfilehash: 1166b739e1e8d667172d97883f484fdbc3a142c1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/13/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="upgrade-to-system-center-configuration-manager"></a>升级到 System Center Configuration Manager
+# <a name="upgrade-to-system-center-configuration-manager"></a>升級至 System Center Configuration Manager
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用於：System Center Configuration Manager (最新分支)*
 
-可以运行就地升级，以从运行 System Center 2012 Configuration Manager 的站点和层次结构升级到 System Center Configuration Manager。  
+您可以從執行 System Center 2012 Configuration Manager 的站台和階層中執行就地升級以升級至 System Center Configuration Manager。  
 
- 在从 System Center 2012 Configuration Manager 升级之前，必须准备站点，需要删除可能会阻止成功升级的特定配置，然后在涉及多个站点时需要按照升级顺序操作。  
+ 從 System Center 2012 Configuration Manager 升級之前，您必須準備站台，這需要您移除可能會讓升級無法成功的特定設定，然後在涉及多個站台時依照升級的順序。  
 
  > [!TIP]
- > 管理 System Center Configuration Manager 站点和层次结构基础结构时，术语“升级”“更新”和“安装”用于描述三种不同概念。 若要了解每个术语的使用方法，请参阅[有关升级、更新和安装](/sccm/core/understand/upgrade-update-install)。
+ > 管理 System Center Configuration Manager 站台及階層基礎結構時，「升級」、「更新」及「安裝」等詞彙是用來描述三種不同的概念。 若要了解如何使用每個詞彙，請參閱[關於升級、更新和安裝](/sccm/core/understand/upgrade-update-install)。
 
-##  <a name="bkmk_path"></a> 就地升级路径  
+##  <a name="bkmk_path"></a> 就地升級路徑  
 
-**升级到版本 1702**   
-如果具有版本 1702 基线介质，可以将下列版本升级到 System Center Configuration Manager 版本 1702 的完整许可版本：   
--     System Center Configuration Manager 版本 1702 的评估版安装
--     System Center 2012 Configuration Manager Service Pack 1
--     System Center 2012 Configuration Manager Service Pack 2
+**升級到 1702 版**   
+當您具有 1702 版基準媒體時，可以將下列產品升級至 System Center Configuration Manager 1702 版的完整授權版本：   
+-     System Center Configuration Manager 1702 版的評估版安裝
+-     System Center 2012 Configuration Manager (含 Service Pack 1)
+-     System Center 2012 Configuration Manager (含 Service Pack 2)
 -     System Center 2012 R2 Configuration Manager
--     System Center 2012 R2 Configuration Manager Service Pack 1
+-     System Center 2012 R2 Configuration Manager (含 Service Pack 1)
 
-**升级到 1606 版本**  
-2016 年 12 月 15 日，为添加对其他升级方案的支持，已发布版本 1606 的基线媒体。 此新版本支持将以下版本升级到 System Center Configuration Manager 版本 1606 的完整许可版本：  
--   System Center Configuration Manager 版本 1606 的评估版安装
--   System Center Configuration Manager 的候选发布版安装  
--   System Center 2012 Configuration Manager Service Pack 1  
--   System Center 2012 Configuration Manager Service Pack 2  
+**升級至 1606 版**  
+在 2016 年 12 月 15 日，發行 1606 版的基準媒體，以新增額外升級案例的支援。 這個新版本支援將下列產品升級至 System Center Configuration Manager 1606 版的完整授權版本：  
+-   System Center Configuration Manager 1606 版的評估版安裝
+-   System Center Configuration Manager 的候選版安裝  
+-   System Center 2012 Configuration Manager (含 Service Pack 1)  
+-   System Center 2012 Configuration Manager (含 Service Pack 2)  
 -   System Center 2012 R2 Configuration Manager  
--   System Center 2012 R2 Configuration Manager Service Pack 1  
+-   System Center 2012 R2 Configuration Manager (含 Service Pack 1)  
 
-如果使用 2016 年 12 月 15 日之前下载的 1606 版基线媒体，可以仅将以下版本升级到 System Center Configuration Manager 版本 1606 的完整许可版本：
--   System Center Configuration Manager 版本 1606 的评估版安装
--   System Center 2012 Configuration Manager Service Pack 2
--   System Center 2012 R2 Configuration Manager Service Pack 1
+如果您使用在 2016 年 12 月 15 日之前下載的 1606 版基準媒體，則只可以將下列產品升級至 System Center Configuration Manager 1606 版的完整授權版本：
+-   System Center Configuration Manager 1606 版的評估版安裝
+-   System Center 2012 Configuration Manager (含 Service Pack 2)
+-   System Center 2012 R2 Configuration Manager (含 Service Pack 1)
 
 <!-- Version 1511 has now dropped out of support
 **Upgrade to version 1511**  
@@ -71,335 +68,334 @@ When you have version 1511 baseline media, you can upgrade the following to a fu
 
 
 > [!TIP]  
->  从 System Center 2012 Configuration Manager 版本升级到 Current Branch 时，或许能够简化升级过程。 有关详细信息，请参阅以下内容：  
+>  當您從 System Center 2012 Configuration Manager 版本升級至最新分支時，可能可以簡化升級程序。 如需詳細資訊，請參閱下列各項：  
 >   
->  -   [System Center Configuration Manager 更新](../../../../core/servers/manage/updates.md)中的[基准和更新版本](../../../../core/servers/manage/updates.md#bkmk_Baselines)  
->  -   [System Center Configuration Manager 的 CD.Latest 文件夹](../../../../core/servers/manage/the-cd.latest-folder.md)  
+>  -   [System Center Configuration Manager 的更新](../../../../core/servers/manage/updates.md)中的[基準和更新版本](../../../../core/servers/manage/updates.md#bkmk_Baselines)一節  
+>  -   [System Center Configuration Manager 的 CD.Latest 資料夾](../../../../core/servers/manage/the-cd.latest-folder.md)  
 
- **不支持以下项目：**  
--   不支持将 Technical Preview for System Center Configuration Manager 升级为完整许可版安装。  Technical Preview 版本只能升级到更高版本的 Technical Preview。  
+ **不支援下列項目：**  
+-   不支援將 System Center Configuration Manager 的 Technical Preview 升級至完整授權安裝。  Technical Preview 版本只能升級至較新版的 Technical Preview。  
 
--   不支持从 Technical Preview 迁移到完整许可版本。  
+-   不支援從 Technical Preview 移轉至完整授權版本。  
 
-##  <a name="bkmk_checklist"></a> 升级清单  
- 下列清单可帮助计划成功升级到 System Center Configuration Manager。  
+##  <a name="bkmk_checklist"></a> 升級檢查清單  
+ 下列檢查清單可協助您規劃順利升級至 System Center Configuration Manager。  
 
-### <a name="before-you-upgrade"></a>升级准备工作  
+### <a name="before-you-upgrade"></a>升級之前  
 
-**检查 System Center 2012 Configuration Manager 环境**并按照 KB4018655：[由于反复重试任务 Configuration Manager 客户端每五个小时重新安装一次并可能导致客户端意外升级](https://support.microsoft.com/help/4018655)中详细介绍的方式解决问题。
+**檢閱您的 System Center 2012 Configuration Manager 環境**，並解決 KB4018655 中所述的問題︰[由於週期性重試工作，Configuration Manager 用戶端會每隔五小時重新安裝，而且可能會導致意外的用戶端升級](https://support.microsoft.com/help/4018655)。
 
-**确保计算机环境符合升级到 System Center Configuration Manager 所需的支持配置**：  
+**確認您的運算環境符合升級至 System Center Configuration Manager 所需的支援設定：**  
 
-查看正在用于承载站点系统角色的服务器操作系统：  
+檢閱用來裝載站台系統角色的伺服器作業系統：  
 
--   System Center 2012 Configuration Manager 支持的某些较旧操作系统不受 System Center Configuration Manager 支持，必须重定位或删除这些操作系统上的站点系统角色，然后才进行升级。 请参阅[站点系统服务器支持的操作系统](../../../../core/plan-design/configs/supported-operating-systems-for-site-system-servers.md)文档。   
--   Configuration Manager 的先决条件检查程序不在站点服务器或远程站点系统上验证站点系统角色的先决条件  
+-   System Center Configuration Manager 不支援 System Center 2012 Configuration Manager 支援的某些舊版作業系統，而且必須先重新放置或移除這些作業系統上的站台系統角色才能升級。 請檢閱[站台系統伺服器支援的作業系統](../../../../core/plan-design/configs/supported-operating-systems-for-site-system-servers.md)文件。   
+-   Configuration Manager 的必要條件檢查程式不會驗證站台伺服器或遠端站台系統上的站台系統角色必要條件  
 
-查看承载站点系统角色的每台计算机所需的先决条件组件：  
+請檢閱裝載站台系統角色之每部電腦的必要條件：  
 
--   例如，为部署操作系统，System Center Configuration Manager 使用 Windows 10 评估和部署工具包 (Windows ADK)。 运行安装程序之前，必须在站点服务器以及运行 SMS 提供程序实例的每台计算机上下载和安装 Windows 10 ADK。  
+-   例如，為了部署作業系統，System Center Configuration Manager 使用 Windows 10 評定及部署套件 (Windows ADK)。 在執行安裝程式之前，您必須在站台伺服器和執行 SMS 提供者執行個體的每部電腦上，下載並安裝 Windows 10 ADK。  
 
-有关支持的平台和先决条件配置的一般信息，请参阅 [Supported configurations for System Center Configuration Manager](../../../../core/plan-design/configs/supported-configurations.md)。  
+如需支援的平台和必要條件設定的一般資訊，請參閱 [Supported configurations for System Center Configuration Manager](../../../../core/plan-design/configs/supported-configurations.md)。  
 
-有关将 Windows ADK 与 Configuration Manager 搭配使用的信息，请参阅 [System Center Configuration Manager 中的操作系统部署的基础结构要求](../../../../osd/plan-design/infrastructure-requirements-for-operating-system-deployment.md)。  
+如需搭配使用 Windows ADK 與 Configuration Manager 的資訊，請參閱 [System Center Configuration Manager 中作業系統部署的基礎結構需求](../../../../osd/plan-design/infrastructure-requirements-for-operating-system-deployment.md)。  
 
-**查看站点和层次结构状态，并确认没有未解决的问题：**  
-升级站点之前，请解决远程计算机上安装的站点服务器、站点数据库服务器和站点系统角色的所有操作问题。 由于现有的操作问题，站点升级可能会失败。  
+**檢閱站台和階層狀態，並確認沒有任何未解決的問題：**  
+在升級網站之前，請先針對網站伺服器、網站資料庫伺服器，以及安裝在遠端電腦上的網站系統角色，解決所有操作問題。 網站升級會因為現有的操作問題而失敗。  
 
-**为承载站点、站点数据库服务器和远程站点系统角色的计算机上的操作系统，安装所有合适的关键更新：**  
-升级站点之前，请为每个合适的站点系统安装任何关键更新。 如果安装的更新需要重启，请在启动 Service Pack 更新之前重启合适的计算机。  
+**在裝載站台、站台資料庫伺服器和遠端站台系統角色的電腦上，安裝其作業系統適用的所有重大更新：**  
+在升級網站之前，為每個適用的網站系統安裝任何重大更新。 如果您安裝的更新需要重新啟動，請先重新啟動適用的電腦再開始進行 Service Pack 更新。  
 
-有关详细信息，请参阅 [Windows 更新](http://go.microsoft.com/fwlink/p/?LinkId=105851)。  
+如需詳細資訊，請參閱 [Windows Update](http://go.microsoft.com/fwlink/p/?LinkId=105851)。  
 
-**卸载 System Center Configuration Manager 不支持的站点系统角色：**  
-以下站点系统角色不再用于 System Center Configuration Manager，必须先将其卸载，然后再从 System Center 2012 Configuration Manager 进行升级：  
+**解除安裝 System Center Configuration Manager 不支援的站台系統角色：**  
+下列站台系統角色無法再用於 System Center Configuration Manager，必須先解除安裝才能從 System Center 2012 Configuration Manager 升級：  
 
--   带外管理点  
--   系统健康验证程序点  
+-   超出訊號範圍管理點  
+-   系統健全狀況驗證程式點  
 
-**在主站点上禁用管理点数据库副本：**  
-Configuration Manager 无法成功升级启用了管理点数据库副本的主站点。 禁用数据库复制，然后：  
+**在主要站台上停用管理點的資料庫複本：**  
+Configuration Manager 無法成功升級具有已啟用管理點之資料庫複本的主要站台。 在下列情況之前先停用資料庫複寫：  
 
--   创建站点数据库的备份以测试数据库升级  
--   将生产站点升级到 System Center Configuration Manager  
+-   建立站台資料庫的備份以測試資料庫升級  
+-   將生產站台升級至 System Center Configuration Manager  
 
-有关详细信息，请参阅以下内容：  
--   System Center 2012 Configuration Manager：[配置管理点的数据库副本](https://technet.microsoft.com/library/hh846234.aspx)  
--   System Center Configuration Manager：[System Center Configuration Manager 管理点的数据库副本](../../../../core/servers/deploy/configure/database-replicas-for-management-points.md)  
+如需詳細資訊，請參閱下列各項：  
+-   System Center 2012 Configuration Manager：[設定管理點的資料庫複本](https://technet.microsoft.com/library/hh846234.aspx)  
+-   System Center Configuration Manager：[System Center Configuration Manager 的管理點資料庫複本](../../../../core/servers/deploy/configure/database-replicas-for-management-points.md)  
 
-**重新配置使用 NLB 的软件更新点：**  
-Configuration Manager 无法升级使用网络负载平衡 (NLB) 群集来承载软件更新点的站点。  
+**重新設定使用 NLB 的軟體更新點：**  
+Configuration Manager 無法升級使用網路負載平衡 (NLB) 叢集的站台以裝載軟體更新點。  
 
-如果为软件更新点使用 NLB 群集，请使用 PowerShell 删除 NLB 群集。 （从 System Center 2012 Configuration Manager SP1 开始，Configuration Manager 控制台中不再有配置 NLB 群集的选项）  
+如果您將 NLB 叢集用於軟體更新點，請使用 PowerShell 移除 NLB 叢集。 (從 System Center 2012 Configuration Manager SP1 開始，Configuration Manager 主控台中沒有選項可以設定 NLB 叢集)  
 
-**在该站点的升级过程中，禁用每个站点上的所有站点维护任务：**  
-在升级到 System Center Configuration Manager 之前，请禁用可能会在升级过程进行时运行的任何站点维护任务。 这包括但不限于以下各项：  
+**停用站台升級期間各站台的所有站台維護工作：**  
+在您升級至 System Center Configuration Manager 之前，請停用任何可能在進行升級程序期間執行的站台維護工作。 這包括但不限於下列項目：  
 
--   备份站点服务器  
--   删除过期的客户端操作  
--   删除过期的发现数据  
+-   備份網站伺服器  
+-   刪除過時用戶端操作  
+-   刪除過時探索資料  
 
-如果站点数据库维护任务在升级过程中运行，站点升级可能会失败。  
+當網站資料庫維護工作在升級期間執行時，網站升級可能會失敗。  
 
-在禁用任务之前，请记录该任务的计划，以便能够在站点升级完成后恢复其配置。  
+在停用工作前，請將工作的排程記錄下來，以便在網站升級完成後您可以還原其設定。  
 
-有关站点维护任务的详细信息，请参阅：  
+如需有關站台維護工作的詳細資訊，請參閱：  
 
--   System Center 2012 Configuration Manager：[规划 Configuration Manager 的维护任务](https://technet.microsoft.com/library/gg712686.aspx)  
--   System Center Configuration Manager：[System Center Configuration Manager 维护任务参考](../../../../core/servers/manage/reference-for-maintenance-tasks.md)  
+-   System Center 2012 Configuration Manager：[規劃 Configuration Manager 的維護工作](https://technet.microsoft.com/library/gg712686.aspx)  
+-   System Center Configuration Manager：[System Center Configuration Manager 的維護工作參考](../../../../core/servers/manage/reference-for-maintenance-tasks.md)  
 
-**运行安装程序先决条件检查程序**：  
-升级站点之前，可以独立于安装程序运行 **先决条件检查程序** ，以验证站点是否满足先决条件 稍后升级该站点时会再次运行必备组件检查程序。  
+**執行安裝程式必要條件檢查工具**：  
+在升級站台之前，您可以在安裝程式之外獨立執行 **必要條件檢查工具** ，以驗證您的站台是否符合必要條件。 稍後，在升級站台之前，必要條件檢查程式會再次執行。  
 
-如果使用 2016 年 10 月发行的 1606 版基线媒体，独立的必备组件检查会对要升级到 System Center Configuration Manage 的 Current Branch 和 Long-Term Servicing Branch (LTSB) 的站点进行评估。 由于 LTSB 不支持某些功能，在 ConfigMgrPrereq.log 中可能会看到以下类似条目：
- - 信息：该站点为 LTSB 版本。
- - LTSB 版本不支持的站点系统角色“资产智能同步点”；    错误；    Configuration Manager 已检测到“资产智能同步点”已安装。 LTSB 版本不支持资产智能。 必须卸载资产智能同步点站点系统角色才能继续操作。
+如果您使用 2016 年 10 月發行版中的 1606 版基準媒體，獨立必要條件檢查會評估站台，以升級到 System Center Configuration Manage 的最新分支和長期維護分支 (LTSB)。 因為 LTSB 不支援某些功能，所以您可能會在 *ConfigMgrPrereq.log* 中看到與下列類似的項目：
+ - 資訊: 站台是 LTSB 版本。
+ - LTSB 版本不支援站台系統角色「Asset Intelligence 同步處理點」;    錯誤;    Configuration Manager 偵測到已安裝「Asset Intelligence 同步處理點」。 LTSB 版本不支援 Asset Intelligence。 您必須先解除安裝 Asset Intelligence 同步處理點站台系統角色，才能繼續。
 
-如果计划升级到 Current Branch，可以安全地忽略 LTSB 版本中的错误。 如果计划升级到 LTSB 才适用。
+如果您想要升級至最新分支，則可以放心略過 LTSB 版本的錯誤。 只有在您想要升級至 LTSB 時，它們才適用。
 
-稍后运行 Configuration Manager 安装程序进行升级时，将再次运行必备组件检查并评估基于选择安装的 System Center Configuration Manager 分支（Current Branch 或 LTSB）的站点。 如果选择升级到 Current Branch，则不会检查 LTSB 不支持的功能。
+稍後，當您執行 Configuration Manager 安裝程式來進行升級時，必要條件檢查會再次執行，並根據您選擇安裝之 System Center Configuration Manager 的分支 (最新分支或 LTSB) 來評估站台。 如果您選擇升級至最新分支，則不會執行 LTSB 不支援之功能的檢查。
 
-有关详细信息，请参阅[必备组件检查程序](/sccm/core/servers/deploy/install/prerequisite-checker)和 [System Center Configuration Manager 的必备组件检查列表](/sccm/core/servers/deploy/install/list-of-prerequisite-checks)。  
+如需詳細資訊，請參閱[必要條件檢查程式](/sccm/core/servers/deploy/install/prerequisite-checker)和 [System Center Configuration Manager 的必要條件檢查清單](/sccm/core/servers/deploy/install/list-of-prerequisite-checks)。  
 
-**下载 System Center Configuration Manager 的必备组件文件和可再发行文件：**    
-使用**安装程序下载程序**下载用于 System Center Configuration Manager 的先决条件可再发行文件、语言包以及最新产品更新。  
+**為 System Center Configuration Manager 下載必要條件檔案和可轉散發檔案：**    
+使用**安裝程式下載程式**以下載必要的可轉散發檔案、語言套件以及 System Center Configuration Manager 的最新產品更新。  
 
-有关信息，请参阅[安装程序下载程序](/sccm/core/servers/deploy/install/setup-downloader)。  
+如需詳細資訊，請參閱[安裝程式下載程式](/sccm/core/servers/deploy/install/setup-downloader)。  
 
-**计划管理服务器和客户端语言**：  
-当站点升级时，站点升级仅安装在升级过程中选择的语言包版本。  
+**規劃伺服器和用戶端語言的管理**：  
+當您升級站台時，站台升級只會安裝您在升級期間選取的語言組件版本。  
 
--   安装程序查看站点的当前语言配置，然后确定存储以前下载的先决条件文件的文件夹中可用的语言包。  
--   然后，你可以确认选择的当前服务器和客户端语言包，或者更改选择以添加或删除语言支持。  
--   仅可以选择在运行安装程序（可以使用下载的先决条件文件获取）时可用的语言包。  
+-   安裝程式會檢閱站台目前的語言設定，然後在儲存先前所下載之必要條件檔案的資料夾中識別可用的語言套件。  
+-   然後您就可以確認目前選取的伺服器和用戶端語言套件，或變更這些選擇以新增或移除語言的支援。  
+-   您只能選取在執行安裝程式 (您會與下載的必要條件檔案一起取得) 時使用的語言套件。  
 
 > [!NOTE]  
->  不能使用 System Center 2012 Configuration Manager 的语言包为 System Center Configuration Manager 站点启用语言。  
+>  您無法使用 System Center 2012 Configuration Manager 的語言套件，來啟用 System Center Configuration Manager 站台的語言。  
 
-有关语言包的详细信息，请参阅 [System Center Configuration Manager 中的语言包](../../../../core/servers/deploy/install/language-packs.md)。  
+如需語言套件的詳細資訊，請參閱 [System Center Configuration Manager 的語言套件](../../../../core/servers/deploy/install/language-packs.md)。  
 
-**查看站点升级考虑事项**：  
-升级站点时，某些功能和配置会重置为默认配置。 若要帮助你准备这些更改以及相关更改，请查看  [升级注意事项](#bkmk_considerations)中的信息。  
+**檢閱站台升級的考慮事項**：  
+當您升級網站時，部分功能和設定會重設為預設設定。 為了幫助您準備這些及相關的變更，請檢閱  [升級時的考量](#bkmk_considerations)中的資訊。  
 
-**在管理中心站点和主站点上创建站点数据库备份：**  
-升级站点之前，请备份站点数据库，以确保具有用于灾难恢复的成功备份。  
+**在管理中心網站和主要站台上建立站台資料庫的備份：**  
+在升級網站之前，請備份網站資料庫以確認您已成功備份，以供災害復原使用。  
 
-请参阅 [System Center Configuration Manager 的备份和恢复](../../../../protect/understand/backup-and-recovery.md)。  
+請參閱 [System Center Configuration Manager 的備份和復原](../../../../protect/understand/backup-and-recovery.md)。  
 
-**备份自定义 Configuration.mof 文件**：  
-如果使用自定义 Configuration.mof 文件定义与硬件清单一起使用的数据类，则在升级站点之前创建此文件的备份。 随后在进行升级之后，将此文件还原到你的站点。 有关使用此文件的详细信息，请参阅[如何在 System Center Configuration Manager 中扩展硬件清单](../../../../core/clients/manage/inventory/extend-hardware-inventory.md)。  
+**備份自訂的 Configuration.mof 檔案**：  
+如果您使用自訂的 Configuration.mof 檔案來定義您搭配硬體清查使用的資料類別，請建立此檔案的備份，然後再升級站台。 接著，在升級之後，將這個檔案還原到您的站台。 如需使用此檔案的詳細資訊，請參閱[如何擴充 System Center Configuration Manager 中的硬體清查](../../../../core/clients/manage/inventory/extend-hardware-inventory.md)。  
 
-**在最近的站点数据库备份副本上测试数据库升级过程：**  
-在升级 Configuration Manager 管理中心站点或主站点之前，请对站点数据库的副本测试站点数据库升级过程。  
+**在最新站台資料庫備份的複本上測試資料庫升級程序：**  
+在升級 Configuration Manager 管理中心網站或主要站台之前，請先在站台資料庫複本上進行站台資料庫升級程序的測試。  
 
--   你应该测试站点数据库升级过程，因为当你升级站点时，可能会修改站点数据库  
--   虽然测试数据库升级不是必需的，但可以在生产数据库受到影响之前先行确定升级的问题  
--   失败的站点数据库升级可能会使站点数据库无法运行，并且可能需要进行站点恢复以还原功能  
--   虽然在层次结构的站点之间共享了站点数据库，但是，请在升级每个合适的站点之前计划在该站点上测试数据库  
--   如果在主站点上对管理点使用数据库副本，请在创建站点数据库备份之前禁用复制  
+-   您應該測試站台資料庫升級程序，因為當您升級站台時，可能會修改站台資料庫  
+-   測試資料庫升級並非必要，但是可以在您的生產資料庫受到影響之前找出升級問題  
+-   站台資料庫升級失敗可能會造成站台資料庫無法運作，且可能需要站台復原才能恢復功能  
+-   雖然站台資料庫在階層中的網站之間共用，您仍需要在升級該網站之前先規劃每個適用站台上的資料庫測試  
+-   如果您在主要站台上使用管理點的資料庫複本，請在建立站台資料庫的備份之前停用複寫  
 
-Configuration Manager 不支持辅助站点备份，也不支持辅助站点数据库的测试升级。  
+Configuration Manager 不支援次要站台的備份或次要站台資料庫的測試升級。  
 
-不支持在生产站点数据库上运行测试数据库升级。 执行此操作会升级站点数据库，并可能导致你的站点无法运行。  
+這不支援在生產網站資料庫上執行測試資料庫升級。 在網站資料庫上進行這類升級可能會造成網站無法運作。  
 
-有关详细信息，请参阅 [测试站点数据库升级](#bkmk_test)。  
+如需詳細資訊，請參閱 [測試站台資料庫升級](#bkmk_test)。  
 
-**重启站点服务器和承载站点系统角色的每台计算机**：  
-这样可以确保更新的最近安装或必备组件中没有任何挂起的操作，并且这是公司特定的内部流程。  
+**重新啟動站台伺服器以及每部裝載站台系統角色的電腦**：  
+完成這項作業可確認目前的更新安裝或必要條件中沒有擱置中的動作，而且是公司特有的內部程序。  
 
-**升级站点**：  
-从层次结构的顶层站点开始，运行 System Center Configuration Manager 源媒体中的 Setup.exe。  
+**升級站台**的完整授權版本：  
+從階層中的頂層站台開始，從 System Center Configuration Manager 來源媒體執行 Setup.exe。  
 
-在顶层站点升级之后，你可以开始升级每个子站点。 请先完成每个站点的升级，然后开始升级下一个站点  
+頂層站台完成升級之後，您就可以開始升級每個子站台。 請先完成每個站台的升級，再開始升級下一個站台  
 
-在层次结构中的所有站点均升级到 System Center Configuration Manager 之前，层次结构会在混合版本模式下运行。  
+在階層中的所有站台都升級至 System Center Configuration Manager 之前，您的階層仍會以混合的版本模式運作。  
 
-有关如何运行升级的信息，请参阅[升级站点](#bkmk_upgrade)。  
+如需如何執行升級的資訊，請參閱[升級站台](#bkmk_upgrade)。  
 
-### <a name="after-you-upgrade"></a>升级后续工作  
-**升级独立的 Configuration Manager 控制台**：  
-默认情况下，升级管理中心站点或主站点时，安装过程也会升级站点服务器上安装的 Configuration Manager 控制台。 但是，你必须手动升级安装在非站点服务器计算机上的每个控制台。  
-
-> [!TIP]  
->  在开始升级之前，关闭每个打开的控制台。  
-
-有关详细信息，请参阅[安装 System Center Configuration Manager 控制台](../../../../core/servers/deploy/install/install-consoles.md)。  
-
-**为主站点中的管理点重新配置数据库副本：**  
-如果将数据库副本用于主站点中的管理点，则必须先卸载数据库副本，再升级站点。 升级主站点之后，为管理点重新配置数据库副本。   
-有关详细信息，请参阅  [Database replicas for management points for System Center Configuration Manager](../../../../core/servers/deploy/configure/database-replicas-for-management-points.md)。  
-
-**重新配置在升级前禁用的任何数据库维护任务：**  
-如果升级之前在站点上禁用了数据库 [System Center Configuration Manager 维护任务的引用](../../../../core/servers/manage/reference-for-maintenance-tasks.md)，请使用与升级之前存在的相同设置在站点上重新配置这些任务。  
-
-**升级客户端**：  
-所有站点都升级到 System Center Configuration Manager 后，可计划升级客户端。  
-
-升级客户端时，会卸载当前的客户端软件，然后安装新的客户端软件版本。 可以使用 Configuration Manager 支持的任何方法来升级客户端。  
+### <a name="after-you-upgrade"></a>升級之後  
+**升級獨立 Configuration Manager 主控台**：  
+當您升級管理中心網站或主要站台時，安裝預設也會升級已安裝在站台伺服器上的 Configuration Manager 主控台。 不過，針對在站台伺服器以外的電腦上安裝的每個主控台，您必須手動進行升級。  
 
 > [!TIP]  
->  在升级层次结构的顶层站点时，也会更新层次结构中的每个分发点上的客户端安装包。 升级主站点时，会更新该主站点提供的客户端升级包。  
+>  在您啟動升級之前，請關閉已開啟的主控台。  
 
-有关如何升级现有客户端和如何安装新客户端的信息，请参阅[如何在 System Center Configuration Manager 中升级 Windows 计算机的客户端](../../../../core/clients/manage/upgrade/upgrade-clients-for-windows-computers.md)。  
+如需詳細資訊，請參閱[安裝 System Center Configuration Manager 主控台](../../../../core/servers/deploy/install/install-consoles.md)。  
 
-##  <a name="bkmk_considerations"></a> 升级注意事项  
-**自动操作**：  
-升级到 System Center Configuration Manager 时，会自动执行下列操作：  
+**在主要站台上重新設定管理點的資料庫複本：**  
+如果您在主要網站上使用管理點的資料庫複本，必須先解除安裝資料庫複本才能升級網站。 升級主要網站後，請重新設定管理點的資料庫複本。   
+如需詳細資訊，請參閱  [Database replicas for management points for System Center Configuration Manager](../../../../core/servers/deploy/configure/database-replicas-for-management-points.md)。  
 
--   站点执行站点重置，这包括重新安装所有站点系统角色。  
--   如果站点是层次结构的顶层站点，则会更新层次结构中的每个分发点上的客户端安装包。 站点还会更新默认启动映像以使用附带 Windows 评估和部署工具包 10 的新 Windows PE 版本。 但是，升级不会升级现有媒体以用于映像部署。  
--   如果站点是主站点，则会更新该站点的客户端升级包。  
+**重新設定您在升級前停用的任何資料庫維護工作：**  
+如果您在升級前已停用站台的資料庫 [System Center Configuration Manager 的維護工作參考](../../../../core/servers/manage/reference-for-maintenance-tasks.md)，請使用升級前相同的設定值重新設定站台的這些工作。  
 
-**管理用户在升级后手动执行的操作**   
-升级站点后，确保执行下列操作：  
+**升級用戶端**：  
+所有站台都升級至 System Center Configuration Manager 之後，規劃升級用戶端。  
 
--   确保分配到每个主站点的客户端都升级和安装适用于新版本的客户端软件  
--   升级连接到站点以及在远离站点服务器的计算机上运行的每个 Configuration Manager 控制台  
--   在将数据库副本用于管理点的主站点中，重新配置数据库副本  
--   站点升级后，你必须手动升级 CD 和 DVD 或 U 盘的物理媒体（如 ISO 文件），或手动升级用于 Windows To Go 部署或提供给硬件供应商的预留媒体。 虽然站点升级可更新默认启动映像，但它不能升级在 Configuration Manager 以外使用的这些媒体文件或设备  
--   计划在不需要原始（较旧）版本的 Windows PE 时更新非默认启动映像。  
-
-**影响配置和设置的操作**   
-站点升级到 System Center Configuration Manager 时，某些配置和设置在升级后将不复存在，或者被设置为新的默认配置。 下表是不再存在或有所改变的设置，并提供详细信息来帮助你在站点升级过程中为它们做好规划：  
-
--   **软件中心：**  
-    下列软件中心项目被重置为它们的默认值：  
-    -   “工作信息” 被重置为周一到周五从凌晨 5:00  到晚上 10:00  Monday 到晚上 10:00 Friday.  
-    -   “计算机维护”  的值被设置为“当我的计算机处于演示模式时暂停软件中心活动” 。  
-    -   “远程控制”  的值被设置为分配到计算机的客户端设置中的值。  
--   **软件更新摘要计划：**  
-     软件更新或软件更新组的自定义摘要计划被重置为默认值（1 小时）。 升级完成后，请将自定义摘要值重置为所需的频率。  
-
-##  <a name="bkmk_test"></a> 测试站点数据库升级  
-以下信息仅适用于将先前版本（如 System Center 2012 Configuration Manager）升级到 System Center Configuration Manager。
-
-在升级站点之前，请针对升级测试该站点的数据库副本。  
-
-若要针对升级测试数据库，请首先将站点数据库的副本还原到未承载 Configuration Manager 站点的 SQL Server 实例。 用于承载数据库副本的 SQL Server 版本必须是作为数据库副本源的 Configuration Manager 版本支持的 SQL Server 版本。  
-
-接下来，在还原站点数据库之后，在 SQL Server 计算机上，使用  **/TESTDBUPGRADE**  命令行选项从 System Center Configuration Manager 的源媒体文件夹中运行 Configuration Manager 安装程序。  
-
--   有关如何创建和还原站点数据库备份的信息，请参阅[适用于安装程序的命令行选项](../../../../core/servers/deploy/install/command-line-options-for-setup.md)。  
--   有关 **/TESTDBUPGRADE** 命令行选项的信息，请参阅[适用于安装程序的命令行选项](../../../../core/servers/deploy/install/command-line-options-for-setup.md) 中的表。  
--   有关支持的 SQL Server 版本的信息，请参阅[对 System Center Configuration Manager 的 SQL Server 版本的支持](../../../../core/plan-design/configs/support-for-sql-server-versions.md)主题。  
+升級用戶端時會解除安裝目前的用戶端軟體，並且安裝新版的用戶端軟體。 若要升級用戶端，可以使用 Configuration Manager 支援的任何方法。  
 
 > [!TIP]  
->  如果将 Microsoft Intune 与 Configuration Manager 集成：  
+>  將階層的頂層網站升級為新的 Service Pack 時，也會更新階層中每個發佈點上的用戶端安裝套件。 升級主要網站時，會同時更新該主要網站提供的用戶端升級套件。  
+
+如需如何升級現有用戶端以及如何安裝新用戶端的資訊，請參閱[如何在 System Center Configuration Manager 中升級 Windows 電腦的用戶端](../../../../core/clients/manage/upgrade/upgrade-clients-for-windows-computers.md)。  
+
+##  <a name="bkmk_considerations"></a> 升級時的考量  
+**自動動作**：  
+當您升級至 System Center Configuration Manager 時，會自動執行下列動作：  
+
+-   網站會執行網站重設，包括重新安裝所有網站系統角色。  
+-   如果該網站為階層的頂層網站，便會更新階層中每個發佈點的用戶端安裝套件。 站台也會更新預設開機映像以使用包含於 Windows 評定及部署套件 8.1 的新版 Windows PE。 不過，該升級不會升級與映像部署搭配使用的現有媒體。  
+-   如果網站為主要網站，則會更新該網站的用戶端升級套件。  
+
+**升級後的系統管理員手動動作**   
+升級站台之後，請確定已執行下列動作：  
+
+-   確定指派至每個主要站台的用戶端皆升級並安裝新版本用戶端軟體  
+-   升級連線至該站台及在站台伺服器遠端之電腦上執行的每個 Configuration Manager 主控台。  
+-   在使用管理點資料庫複本的主要站台上，重新設定資料庫複本  
+-   網站升級之後，您必須先手動升級如 CD 與 DVD 或 USB 快閃磁碟機的 ISO 檔案實體媒體，或預先設置用於 Windows To Go 部署的媒體，以及提供給硬體廠商的媒體。 雖然站台更新可更新預設開機映像，但它無法升級這些媒體檔案，或是使用於 Configuration Manager 外部的裝置。  
+-   當您不需要 Windows PE 原始 (舊版) 版本時，規劃更新非預設的開機映像。  
+
+**影響設定的動作**   
+站台升級至 System Center Configuration Manager 時，有些設定會在升級後消失，或者是設定為新的預設設定。 下表為會消失或改變的設定值，並提供詳細資料以協助您在站台升級期間進行規劃：  
+
+-   **軟體中心：**  
+    下列軟體中心項目會重設為預設值：  
+    -   [工作資訊] 的工作時間會從星期一到星期五 [上午 5.00]  重設為 [下午 10.00]  Monday 重設為 [下午 10.00] Friday.  
+    -   [電腦維護]  的值會設為 [當電腦在簡報模式時暫停軟體中心活動] 。  
+    -   [遠端控制]  的值會設為指派至電腦之用戶端設定中的值。  
+-   **軟體更新摘要排程：**  
+     軟體更新或軟體更新群組的自訂摘要排程會重設為預設值 (1 小時)。 升級結束後，請將自訂摘要值重設為所需的頻率。  
+
+##  <a name="bkmk_test"></a> 測試站台資料庫升級  
+只有在將 System Center 2012 Configuration Manager 這類舊版本升級到 System Center Configuration Manager 時，下列資訊才會適用。
+
+請先測試要進行升級的站台資料庫複本，再升級該站台。  
+
+若要測試要進行升級的資料庫，可先將站台資料庫的複本還原至未裝載 Configuration Manager 站台的 SQL Server 執行個體。 您用來裝載資料庫複本的 SQL Server 版本，必須與來源資料庫複本的 Configuration Manager 版本所支援的 SQL Server 版本相同。  
+
+接著，在還原站台資料庫後，請在 SQL Server 電腦上使用 **/TESTDBUPGRADE** 命令列選項，從 System Center Configuration Manager 的來源媒體資料夾執行 Configuration Manager 安裝程式。  
+
+-   如需如何建立和還原站台資料庫備份的資訊，請參閱[安裝程式的命令列選項](../../../../core/servers/deploy/install/command-line-options-for-setup.md)。  
+-   如需 **/TESTDBUPGRADE** 命令列選項的資訊，請參閱[安裝程式的命令列選項](../../../../core/servers/deploy/install/command-line-options-for-setup.md)中的資料表。  
+-   如需所支援 SQL Server 版本的資訊，請參閱 [System Center Configuration Manager 的 SQL Server 版本支援](../../../../core/plan-design/configs/support-for-sql-server-versions.md)主題。  
+
+> [!TIP]  
+>  如果您整合 Microsoft Intune 與 Configuration Manager：  
 >   
->  当你对已有 5 天或超过 5 天的站点数据库副本运行测试数据库升级时，可能会收到以下其中一条消息：  
+>  當您在 5 天或更多天的站台資料庫複本上執行測試資料庫升級時，可能會收到下列訊息：  
 >   
->  -   警告：升级将强制完全同步到云。  
->  -   错误：数据库升级将强制完全同步到云。  
+>  -   警告：升級會強制完整同步處理至雲端。  
+>  -   錯誤：資料庫升級將會強制完整同步處理至雲端。  
 >   
-> 这两种情况都可以在测试数据库升级的过程中被安全地忽略，因为它们并未指明测试升级失败或出现问题。 相反，它们会指出在实际升级期间，来自**云**数据库复制组的数据可能会与 Microsoft Intune 同步。  
+> 兩種都可以在資料庫升級測試期間放心忽略，因為它們並不表示測試升級失敗或發生問題。 相反地，它們表示在實際升級期間，來自 **Cloud** 資料庫複寫群組的資料可能與 Microsoft Intune 同步處理。  
 
-在计划升级的每个管理中心站点和主站点上使用下列过程。  
+在您規劃升級的各個管理中心網站和主要站台執行下列程序。  
 
-#### <a name="to-test-a-site-database-for-upgrade"></a>若要测试站点数据库进行升级  
+#### <a name="to-test-a-site-database-for-upgrade"></a>測試站台資料庫以進行升級  
 
-1.  建立站点数据库的副本，然后将该副本还原到 SQL Server 的实例，该实例使用与站点数据库相同的版本，并且未承载 Configuration Manager 站点。 例如，站点数据库运行在 SQL Server 的 Enterprise Edition 实例上，请确保将数据库还原到也运行 SQL Server Enterprise Edition 的 SQL Server 实例。  
+1.  製作站台資料庫複本，然後將該複本還原到與您的站台資料庫所使用相同的版本，且未裝載 Configuration Manager 站台的 SQL Server 執行個體。 例如，若站台資料庫執行於 Enterprise Edition 的 SQL Server 執行個體上，請務必將資料庫還原到也是執行 Enterprise Edition 之 SQL Server 的 SQL Server 執行個體。  
 
-2.  还原数据库副本之后，请从 System Center Configuration Manager 的源媒体中运行安装程序。 运行安装程序时，使用 **/TESTDBUPGRADE** 命令行选项。 如果承载数据库副本的 SQL Server 实例不是默认实例，你还必须提供命令行参数以确定承载站点数据库副本的实例。  
+2.  在您還原資料庫複本後，請從 System Center Configuration Manager 的來源媒體執行安裝程式。 當您執行安裝程式時，請使用 **/TESTDBUPGRADE** 命令列選項。 如果裝載資料庫複本的 SQL Server 執行個體不是預設的執行個體，您還需要提供命令列引數，以識別裝載站台資料庫複本的執行個體。  
 
-     例如，你计划升级数据库名称为 SMS_ABC 的站点数据库。 你将此站点数据库的副本还原到实例名称为 DBTest 的受支持 SQL Server 实例。 要测试站点数据库的此副本的升级，请使用下列命令行： **Setup.exe /TESTDBUPGRADE DBtest\CM_ABC**  
+     例如，您想要升級資料庫名稱為 SMS_ABC 的站台資料庫。 您會將此站台資料庫的複本，還原到執行個體名稱為 DBTest 的受支援 SQL Server 執行個體。 若要測試此站台資料庫複本的升級，請使用下列命令列： **Setup.exe /TESTDBUPGRADE DBtest\CM_ABC**  
 
-     可以在 System Center Configuration Manager 的源媒体上的下列位置中找到 Setup.exe：**SMSSETUP\BIN\X64**。  
+     您可在 System Center Configuration Manager 來源媒體的下列位置找到 Setup.exe：**SMSSETUP\BIN\X64**。  
 
-3.  在运行数据库升级测试的 SQL Server 实例上，监视系统驱动器根目录中的 ConfigMgrSetup.log 以了解进度和成功情况。  
+3.  在您執行資料庫升級測試的 SQL Server 執行個體上，監視位於系統磁碟機根目錄中的 ConfigMgrSetup.log 以了解進度及成功與否：  
 
-    -   如果测试升级失败，请解决与站点数据库升级失败相关的任何问题，创建站点数据库的新备份，然后测试站点数据库的新副本的升级。  
-    -   过程成功完成后，你可以删除该数据库副本。  
+    -   如果測試升級失敗，請解決與站台資料庫升級失敗相關的問題，建立新的站台資料庫備份，然後再測試新的站台資料庫複本的升級。  
+    -   順利進行所有程序後，便可以刪除資料庫複本。  
 
         > [!NOTE]  
-        >  不支持还原用于测试升级的站点数据库的副本以用作任何站点上的站点数据库。  
+        >  不支援還原您用於測試升級的站台資料庫複本，以當成任何站台上的站台資料庫使用。  
 
-成功升级站点数据库的副本后，请继续执行 Configuration Manager 站点及其站点数据库的升级。  
+在您順利升級站台資料庫複本後，請繼續進行 Configuration Manager 站台及其站台資料庫的升級。  
 
-##  <a name="bkmk_upgrade"></a> 升级站点  
-完成站点的升级前配置、测试了数据库副本上站点数据库的升级，并下载了计划安装的 Service Pack 版本的先决条件文件和语言包后，即已准备好升级 Configuration Manager 站点。  
+##  <a name="bkmk_upgrade"></a> 升級站台  
+在完成站台升級前的設定、在資料庫複本測試站台資料庫的升級，以及下載您想要安裝之 Service Pack 版本的必要條件檔案及語言套件後，就可以準備升級您的 Configuration Manager 站台。  
 
-在升级层次结构中的站点时，将会先升级层次结构的顶层站点。 此顶层站点是管理中心站点或独立主站点。 管理中心站点的升级完成后，你可以按任何所需顺序升级子主站点。 升级主站点之后，可以升级该站点的子辅助站点，或在升级任何辅助站点之前升级其他主站点。  
+當您升級階層中的某個站台時，會先升級階層的頂層站台。 這個頂層站台可能是管理中心網站或獨立主要站台。 完成管理中心網站的升級後，您可以依所需的任何順序，升級子主要站台。 升級主要站台後，您可以升級該站台的子次要站台，或先升級其他主要站台再升級次要站台。  
 
-若要升级管理中心站点或主站点，请从 System Center Configuration Manager 源媒体中运行安装程序。 但是，不要运行该安装程序来升级辅助站点。 相反，请使用 Configuration Manager 控制台在完成辅助站点的主父站点的升级之后升级该辅助站点。  
+若要升級管理中心網站或主要站台，您可以從 System Center Configuration Manager 來源媒體執行安裝程式。 不過，您不需要執行安裝程式就能升級次要站台。 您可以在完成主要父站台的升級後，改用 Configuration Manager 主控台升級次要站台。  
 
-在升级站点之前，请关闭站点服务器上安装的 Configuration Manager 控制台，直至站点升级完成。 还要关闭在站点服务器以外的计算机上运行的每个 Configuration Manager 控制台。 站点升级完成后，你可以重新连接控制台。 但是，在将 Configuration Manager 控制台升级到其新版本之前，该控制台无法显示 Configuration Manager 新版本中提供的某些对象和信息。  
+在升級站台之前，先關閉站台伺服器上安裝的 Configuration Manager 主控台，直到完成站台升級。 同時，也請關閉非站台伺服器電腦上執行的每個 Configuration Manager 主控台。 您可以在站台升級完成後，讓主控台重新連線。 不過，在將 Configuration Manager 主控台升級至 Configuration Manager 新版本後，該主控台才可以顯示 Configuration Manager 新版本中可用的部分物件和資訊。  
 
-使用以下过程升级 Configuration Manager 站点：  
+請使用下列程序來升級 Configuration Manager 站台：  
 
-#### <a name="to-upgrade-a-central-administration-site-or-primary-site"></a>升级管理中心站点或主站点  
+#### <a name="to-upgrade-a-central-administration-site-or-primary-site"></a>升級管理中心網站或主要站台  
 
-1.  验证运行安装程序的用户是否具有以下安全权限：  
+1.  確認執行安裝程式的使用者具有以下安全性權限：  
 
-    -   站点服务器计算机上的本地管理员权限。  
-    -   站点（如果为远程）的远程站点数据库服务器上的本地管理员权限。    </br></br>
+    -   站台伺服器電腦上的本機系統管理員權限。  
+    -   站台的遠端站台資料庫伺服器上的本機系統管理員權限 (如果位於遠端)。    </br></br>
 
-2.  在站点服务器计算机上，打开 Windows 资源管理器，并浏览到 **&lt;ConfigMgSourceMedia\>\SMSSETUP\BIN\X64**。  
+2.  在站台伺服器電腦上，開啟 Windows 檔案總管，並瀏覽至 **&lt;ConfigMgSourceMedia\>\SMSSETUP\BIN\X64**。  
 
-3.  双击 **Setup.exe**。 Configuration Manager 安装向导将打开。  
+3.  按兩下 **Setup.exe**。 [Configuration Manager 安裝精靈] 隨即開啟。  
 
-4.  在“开始之前”  页面上，单击“下一步” 。  
+4.  在 [ **開始之前** ] 頁面上，按 [ **下一步**]。  
 
-5.  在“入门”  页上，选择“升级此 Configuration Manager 站点” ，然后单击“下一步” 。  
+5.  在 [開始使用]  頁面上，選取 [升級此 Configuration Manager 站台] ，然後按 [下一步] 。  
 
-6.  在“产品密钥”  页上，单击“下一步” 。  
+6.  在 [產品金鑰]  頁面上，按 [下一步] 。  
 
-     如果以前安装了 Configuration Manager 评估版，则可以选择“安装此产品的许可版本”，然后输入 Configuration Manager 的完整安装产品密钥以将站点转换为完整版。  
+     如果您先前曾安裝過 Configuration Manager 評估版，即可選取 [安裝此產品的授權版]，然後輸入完整安裝之 Configuration Manager 的產品金鑰，將站台轉換為完整版。  
 
-     从 2016 年 10 月发布的 System Center Configuration Manager 的 1606 版基线介质开始，可以指定软件保障协议的到期日期。 还可以选择指定许可协议的**软件保障到期日期**，方便向你提醒该日期。 如果在设置期间未输入此信息，则可以稍后在 Configuration Manager 控制台中指定。
+     從 System Center Configuration Manager 的 1606 版 2016 年 10 月版基準媒體開始，您可以指定軟體保證合約的到期日。 您也可以選擇指定授權合約的「軟體保證到期日」，以方便提醒您該日期。 如果您未在安裝期間輸入這個項目，則稍後可以從 Configuration Manager 主控台予以指定。
 
      >  [!NOTE]   
-     >  Microsoft 不会验证输入的到期日期，且不会将此日期用作许可证验证。  相反，可以使用该日期作为到期日期提醒。 这很有用，因为 Configuration Manager 定期检查在线提供的新软件更新，而软件保障许可证应为最新状态，以便有资格使用这些额外的更新。    
+     >  Microsoft 不會驗證您輸入的到期日，亦不會將這個日期用於授權驗證。  相反地，您可以將它作為到期日的提醒。 這項功能很實用，因為 Configuration Manager 會定期檢查線上提供的新軟體更新，因此您應該維持最新的軟體保證授權狀態，才能保有使用其他更新的資格。    
 
-     有关详细信息，请参阅 [System Center Configuration Manager 的许可和分支](/sccm/core/understand/learn-more-editions)。
+     如需詳細資訊，請參閱 [System Center Configuration Manager 的授權與分支](/sccm/core/understand/learn-more-editions)。
 
-7.  在“Microsoft 软件许可条款”  页上，阅读并接受许可条款，然后单击“下一步” 。  
+7.  在 [Microsoft 軟體授權條款]  頁面上，閱讀並接受授權條款，然後按 [下一步] 。  
 
-8.  在“先决条件许可证”  页上，阅读并接受必备软件的许可条款，然后单击“下一步” 。 安装程序将在需要软件时下载该软件并将其自动安装在站点系统或客户端上。 你必须选中所有复选框，然后才能继续进入下一页。  
+8.  在 [必要條件授權]  頁面上，閱讀並接受必要條件軟體的授權條款，然後按 [下一步] 。 安裝程式會在需要時，於網站系統或用戶端上下載並自動安裝軟體。 您必須選取所有核取方塊，才能繼續進入下一頁。  
 
-9. 在“先决条件下载”  页上，指定安装程序是从 Internet 下载最新的必备软件可再发行文件、语言包和最新的产品更新还是使用以前下载的文件，然后单击“下一步” 。 如果以前通过使用安装程序下载程序下载了文件，请选择“使用以前下载的文件”  并指定下载文件夹。 有关详细信息，请参阅[安装程序下载程序](/sccm/core/servers/deploy/install/setup-downloader)。
+9. 在 [必要條件下載]  頁面上，指定是否要讓安裝程式從網際網路下載最新版的必要條件可轉散發檔案、語言套件，以及最新的產品更新，或者使用先前下載的檔案，然後按 [下一步] 。 如果您先前使用安裝程式下載程式下載檔案，請選取 [使用先前下載的檔案]  並指定下載資料夾。 如需詳細資訊，請參閱[安裝程式下載程式](/sccm/core/servers/deploy/install/setup-downloader)。
 
     > [!NOTE]  
-    >  在使用以前下载的文件时，请验证下载文件夹的路径是否包含文件的最新版本。  
+    >  當您使用先前下載的檔案時，請確認下載資料夾的路徑內含最新版的檔案。  
 
-10. 在“服务器语言选择”  页上，查看当前为站点安装的语言的列表。 为 Configuration Manager 控制台和报表选择此站点上可用的其他语言，或清除不再希望在此站点上支持的语言，然后单击“下一步”。 默认情况下，“英语”处于选定状态，并且无法删除。  
-
-    > [!IMPORTANT]  
-    >  每个版本的 Configuration Manager 都不能使用其之前版本的 Configuration Manager 的语言包。 若要启用对所升级的 Configuration Manager 站点上的某种语言的支持，必须使用该新版本的语言包版本。 例如，在从 System Center 2012 Configuration Manager 升级到 System Center Configuration Manager 的过程中，如果语言包的 System Center Configuration Manager 版本不适用于所下载的先决条件文件，则无法安装对该语言的支持。  
-
-11. 在“客户端语言选择”  页上，查看当前为站点安装的语言的列表。 为客户端计算机选择此站点上可用的其他语言，或清除不再希望在此站点上支持的语言。 指定是否为移动设备客户端启用所有客户端语言，然后单击“下一步” 。 默认情况下，“英语”处于选定状态，并且无法删除。  
+10. 在 [伺服器語言選擇]  頁面上，檢視站台目前安裝的語言清單。 選取這個站台可用的其他語言供 Configuration Manager 主控台和報告使用，或清除不想再於這個站台支援的語言，然後按 [下一步]。 預設選取 [英文]，無法移除。  
 
     > [!IMPORTANT]  
-    >  每个版本的 Configuration Manager 都不能使用其之前版本的 Configuration Manager 的语言包。 若要启用对所升级的 Configuration Manager 站点上的某种语言的支持，必须使用该新版本的语言包版本。 例如，在从 System Center 2012 Configuration Manager 升级到 System Center Configuration Manager 的过程中，如果语言包的 System Center Configuration Manager 版本不适用于所下载的先决条件文件，则无法安装对该语言的支持。  
+    >  各版本的 Configuration Manager 皆無法使用舊版 Configuration Manager 的語言套件。 若要在您升級的 Configuration Manager 站台啟用語言支援，您必須使用該新版本的語言套件版本。 例如，從 System Center 2012 Configuration Manager 升級至 System Center Configuration Manager 期間，如果下載的必要條件檔案中未含 System Center Configuration Manager 版本的語言套件，則無法安裝該語言的支援檔案。  
 
-12. 在“设置摘要”  页上，单击“下一步”  启动先决条件检查程序，针对站点升级验证服务器准备情况。  
+11. 在 [用戶端語言選擇]  頁面上，檢視站台目前安裝的語言清單。 選取此站台上可供用戶端電腦使用的其他語言，或清除不想再於此站台支援的語言。 指定是否要針對行動裝置用戶端啟用所有用戶端語言，然後按 [下一步] 。 預設選取 [英文]，無法移除。  
 
-13. 在“先决条件安装检查”  页上，如果未列出任何问题，请单击“下一步”  以升级站点和站点系统角色。 如果先决条件检查程序发现问题，请单击列表上的项目以了解有关如何解决该问题的详细信息。 在继续安装程序之前，请解决列表中状态为“错误”  的所有项目。 解决问题之后，单击“运行检查”  以重启先决条件检查。 你也可以打开系统驱动器根目录中的 ConfigMgrPrereq.log 文件以查看先决条件检查程序结果。 该日志文件可能包含用户界面中未显示的某些其他信息。 有关安装先决条件规则和说明的列表，请参阅[先决条件检查程序](/sccm/core/servers/deploy/install/list-of-prerequisite-checks)。  
+    > [!IMPORTANT]  
+    >  各版本的 Configuration Manager 皆無法使用舊版 Configuration Manager 的語言套件。 若要在您升級的 Configuration Manager 站台啟用語言支援，您必須使用該新版本的語言套件版本。 例如，從 System Center 2012 Configuration Manager 升級至 System Center Configuration Manager 期間，如果下載的必要條件檔案中未含 System Center Configuration Manager 版本的語言套件，則無法安裝該語言的支援檔案。  
 
-在“升级”  页上，安装程序将显示总体进度状态。 当安装程序完成核心站点服务器和站点系统安装时，你可以关闭向导。 站点配置将在后台继续进行。  
+12. 在 [設定摘要]  頁面上按 [下一步]  執行必要條件檢查工具，以確認站台升級的伺服器整備。  
 
-#### <a name="to-upgrade-a-secondary-site"></a>升级辅助站点  
+13. 在 [必要條件安裝檢查]  頁面上，若沒有列出任何問題，請按 [下一步]  升級站台及站台系統角色。 若必要條件檢查工具找出問題，請按一下清單上的某個項目，以了解如何解決問題的詳細資訊。 請先解決清單中具 [錯誤]  狀態的所有項目，再繼續執行安裝程式。 解決問題後，請按一下 [執行檢查]  以重新開始必要條件檢查。 您也可以開啟系統磁碟機根目錄中的 ConfigMgrPrereq.log 檔案，檢閱必要條件檢查工具的結果。 記錄檔可能包含未在使用者介面中顯示的其他資訊。 如需取得安裝的必要條件規則清單與說明，請參閱[必要條件檢查工具](/sccm/core/servers/deploy/install/list-of-prerequisite-checks)。  
 
-1.  验证运行安装程序的管理用户是否具有以下安全权限：  
+安裝程式會在 [升級]  頁面上顯示整體的進度狀態。 安裝程式完成核心網站伺服器與網站系統安裝時，您就可以關閉精靈。 網站設定會繼續在背景中進行。  
 
-    -   辅助站点计算机上的本地管理员权限  
-    -   父主站点上的“基础结构管理员”或“完全权限管理员”安全角色  
-    -   辅助站点的站点数据库上的系统管理员 (SA) 权限  
+#### <a name="to-upgrade-a-secondary-site"></a>升級次要站台  
+
+1.  確認執行安裝程式的系統管理使用者具有以下安全性權限：  
+
+    -   次要站台電腦上的本機系統管理員權限  
+    -   父主要站台上的基礎結構系統管理員或系統高權限管理員安全性角色  
+    -   次要站台之站台資料庫上的系統管理員 (SA) 權限  
     </br>
-2.  在 Configuration Manager 控制台中，单击“管理” 。  
+2.  在 Configuration Manager 主控台中，按一下 [系統管理] 。  
 
-3.  在“管理”  工作区中，展开“站点配置” ，然后单击“站点” 。  
+3.  在 [系統管理]  工作區中，展開 [網站設定] ，然後按一下 [網站] 。  
 
-4.  选择要升级的辅助站点，然后在“主页”  选项卡上的“站点”  组中，单击“升级” 。  
+4.  選取您要升級的次要站台，然後在 [首頁]  索引標籤的 [站台]  群組中，按一下 [升級] 。  
 
-5.  单击“是”  以确认决定，并开始辅助站点的升级。  
+5.  按一下 [是]  確認您的決定，並開始升級次要站台。  
 
-辅助站点升级将在后台进行。 升级完成后，可以在 Configuration Manager 控制台中确认状态。 要确认状态，请选择辅助站点服务器，然后在“主页”  选项卡上的“站点”  组中单击“显示安装状态” 。  
+次要站台升級的程序會在背景執行。 完成升級後，您可以在 Configuration Manager 主控台中確認狀態。 若要確認狀態，請選取次要站台伺服器，然後在 [首頁]  索引標籤的 [站台]  群組中，按一下 [顯示安裝狀態] 。  
 
-##  <a name="BKMK_PostUpgrade"></a>执行升级后任务  
-将站点升级到新的 Service Pack 后，你可能必须完成其他任务以完成升级或重新配置站点。 这些任务可能包括升级 Configuration Manager 客户端或 Configuration Manager 控制台、重新启用管理点的数据库副本，或者还原所使用的并且在 Service Pack 升级后未保留的 Configuration Manager 功能的设置。  
+##  <a name="BKMK_PostUpgrade"></a> 執行升級後工作  
+將站台升級至新的 Servcie Pack 後，可能必須完成其他工作，才能完成升級或重新設定站台。 這些工作可能包括 Configuration Manager 用戶端或 Configuration Manager 主控台的升級、重新啟用管理點的資料庫複寫，或還原您所使用且在升級 Service Pack 後已不存在之 Configuration Manager 功能的設定。  
 
-**辅助站点的已知问题：**  
-- **升级到版本 1511 时：**若要确保辅助站点上的客户端可以从辅助站点（代理管理点）找到管理点，请将管理点手动添加到还包含辅助站点上的分发点的边界组。  
+**次要站台的已知問題：**  
+- **當您升級至 1511 版時：**若要確保次要站台上的用戶端可以從次要站台尋找管理點 (Proxy 管理點)，請手動將管理點新增至也包含次要站台上發佈點的界限群組。  
 
-- **升级到版本 1606 或更高版本时：**代理管理点会自动添加到包含辅助站点上的分发点的边界组。
-
+- **當您升級至 1606 版或更新版本時：**Proxy 管理點會自動新增至包含次要站台上發佈點的界限群組。

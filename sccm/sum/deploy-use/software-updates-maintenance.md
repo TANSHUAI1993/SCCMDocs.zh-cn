@@ -1,7 +1,6 @@
 ---
-
-title: "软件更新维护 | Microsoft Docs"
-description: "若要在 Configuration Manager 中维护更新，可以计划 WSUS 清理任务，也可以手动运行它。"
+title: "軟體更新維護 | Microsoft Docs"
+description: "若要在 Configuration Manager 中維護更新，您可以排程 WSUS 清理工作，也可以手動進行執行。"
 keywords: 
 author: dougeby
 ms.author: dougeby
@@ -10,32 +9,24 @@ ms.date: 10/06/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: 4b0e2e90-aac7-4d06-a707-512eee6e576c
-translationtype: Human Translation
-ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
 ms.openlocfilehash: 1590c623f7bc2f42a8617f110de5321212732a03
-
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="software-updates-maintenance"></a>软件更新维护
+# <a name="software-updates-maintenance"></a>軟體更新維護
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用於：System Center Configuration Manager (最新分支)*
 
-你可以从 Configuration Manager 控制台计划和运行 WSUS 清理任务，也可以从“软件更新点组件”属性中手动运行 WSUS 清理任务。 当你选择运行 WSUS 清理任务时，它将在下一次软件更新同步时运行。 过期的软件更新将设置为在 WSUS 服务器上被拒绝的状态，计算机上的 Windows 更新代理将不再扫描这些软件更新。 默认情况下，WSUS 清理任务作业每 30 天运行一次。  
+您可以從 Configuration Manager 主控台排程和執行 WSUS 清理工作，也可以從 [軟體更新點元件內容] 手動執行 WSUS 清理工作。 當您選取執行 WSUS 清理工作時，它會在下一次軟體更新同步處理時執行。 到期的軟體更新在 WSUS 伺服器上會設為拒絕狀態，而電腦上的 Windows Update 代理程式將不再掃描這些軟體更新。 WSUS 清理工作預設會每 30 天執行一次。  
 
-#### <a name="to-schedule-and-run-the-wsus-cleanup-job"></a>计划和运行 WSUS 清理作业  
+#### <a name="to-schedule-and-run-the-wsus-cleanup-job"></a>進行排程及執行 WSUS 清理工作  
 
-1.  在 Configuration Manager 控制台中，导航到“管理” > “概述” > “站点配置” > “站点”。  
+1.  在 Configuration Manager 主控台中，瀏覽至 [系統管理] > [概觀] > [站台設定] > [站台]。  
 
-2.  单击“设置”  组中的  “配置站点组件”，然后单击“软件更新点”  以打开软件更新点组件属性。  
+2.  按一下 [設定]  群組中的 [設定站台元件]  ，然後按一下 [軟體更新點]  開啟軟體更新點元件屬性。  
 
-3.  单击“取代规则”  选项卡，选择“运行 WSUS 清理向导” ，然后单击“确定” 。
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-
+3.  按一下 [取代規則]  索引標籤，選取 [執行 WSUS 清理精靈] ，然後按一下 [確定] 。

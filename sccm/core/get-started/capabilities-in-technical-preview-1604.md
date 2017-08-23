@@ -1,175 +1,172 @@
 ---
 title: "Technical Preview 1604 Configuration Manager 中的功能"
-description: "了解 System Center Configuration Manager Technical Preview 1604 版中的可用功能。"
+description: "了解 System Center Configuration Manager Technical Preview 1604 版中可用的功能。"
 ms.custom: na
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 684a5559-9e6e-469b-86ae-e768e9f0c9ac
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: noindex,nofollow
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
-ms.openlocfilehash: d36de897e6407ec7431d4dbe24ad04423aee2ca1
-ms.contentlocale: zh-cn
-ms.lasthandoff: 01/24/2017
-
+ms.openlocfilehash: 26b0d8ea7b3e841c48945df55f8860394a98a29f
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="capabilities-in-technical-preview-1604-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1604 版中的功能
+# <a name="capabilities-in-technical-preview-1604-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1604 中的功能
 
-*适用范围：System Center Configuration Manager (Technical Preview)*
+適用於︰System Center Configuration Manager (Technical Preview)
 
-本文介绍 System Center Configuration Manager Technical Preview 1604 版中的可用功能。 可以安装此版本以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。      在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。  
+本文介紹 System Center Configuration Manager Technical Preview 1604 版中可用的功能。 您可以安裝此版本，以更新並新增功能至 Configuration Manager Technical Preview 站台。      安裝此版本的 Technical Preview 之前，請檢閱 [System Center Configuration Manager 的 Technical Preview](../../core/get-started/technical-preview.md) 簡介主題，以熟悉使用 Technical Preview 的一般需求和限制、如何在版本之間進行更新，以及如何針對 Technical Preview 中的功能提供意見反應。  
 
- 以下是可以试用的此版本的新功能。  
+ 以下是您可以使用此版本試用的新功能。  
 
-##  <a name="BKMK_WindowsVPP"></a>管理从适用于企业的 Windows 应用商店批量采购的应用  
- 在[适用于企业的 Windows 应用商店](https://www.microsoft.com/en-us/business-store)中可以为组织查找并采购应用（单个或批量）。 通过将应用商店连接到 Configuration Manager，可从 Configuration Manager 控制台管理批量采购的应用，例如：  
+##  <a name="BKMK_WindowsVPP"></a> 從商務用 Windows 市集管理大量購買的應用程式  
+ [商務用 Windows 市集](https://www.microsoft.com/en-us/business-store)是您可以在其中為您的組織尋找並個別或大量採購應用程式的地方。 藉由將市集連線到 Configuration Manager，您便可以從 Configuration Manager 主控台管理大量採購應用程式，例如：  
 
--   可以将采购的应用列表与 Configuration Manager 同步  
+-   您可以將已購買的應用程式清單與 Configuration Manager 進行同步處理  
 
--   同步的应用会出现在 Configuration Manager 控制台中，可以如同任何其他应用一样部署这些应用  
+-   已同步處理的應用程式會出現在 Configuration Manager 主控台中，您可以部署這些應用程式，就像部署任何其他應用程式一樣  
 
--   可以跟踪可用的许可证数，以及在 Configuration Manager 控制台中使用的许可证数  
+-   您可以在 Configuration Manager 主控台中追蹤有多少授權可用，以及有多少授權已在使用中  
 
-### <a name="try-it-out"></a>试试看！  
+### <a name="try-it-out"></a>試試看！  
 
-##### <a name="scenario-1-set-up-windows-store-for-business-synchronization"></a>方案 1：设置适用于企业的 Windows 应用商店同步  
+##### <a name="scenario-1-set-up-windows-store-for-business-synchronization"></a>案例 1︰設定「商務用 Windows 市集」同步處理  
 
-1.  在 Azure Active Directory 中，将 Configuration Manager 注册为“Web 应用程序和/或 Web API”管理工具。 这会为你提供以后将需要的客户端 ID。  
+1.  在 Azure Active Directory 中，將 Configuration Manager 登錄為 [Web 應用程式和/或 Web API] 管理工具。 這會提供您一個稍後將會需要的用戶端識別碼。  
 
-    1.  在 [https://manage.windowsazure.com](https://manage.windowsazure.com) 的 **Active Directory** 节点中，选择“Azure Active Directory”，然后单击“应用程序” > “添加”。  
+    1.  在 [https://manage.windowsazure.com](https://manage.windowsazure.com) 的 [Active Directory] 節點中，選取您的 Azure Active Directory，然後按一下 [應用程式] > [新增]。  
 
-    2.  单击“添加我的组织正在开发的应用程序”。  
+    2.  按一下 [加入我的組織正在開發的應用程式]。  
 
-    3.  为应用程序输入名称，选择“Web 应用程序”和/或“Web API”，然后单击“下一步”箭头。  
+    3.  輸入應用程式的名稱，選取 [Web 應用程式] 和/或 [Web API]，然後按一下 [下一步] 箭號。  
 
-    4.  为**登录 URL**和**应用 ID URI** 输入相同 URL。  该 URL 可以是任何内容，无需解析为实际地址。 例如，可以输入 **https://&lt;yourdomain\>/sccm**。  
+    4.  為 [登入 URL] 和 [應用程式識別碼 URI] 輸入相同的 URL。  URL 可以是任何內容，不需要解析為實際的位址。 例如，您可以輸入 **https://&lt;您的網域\>/sccm**。  
 
-    5.  完成向导。  
+    5.  完成精靈。  
 
-2.  在 Azure Active Directory 中，为已注册的管理工具创建客户端密钥。  
+2.  在 Azure Active Directory 中，為已註冊的管理工具建立用戶端金鑰。  
 
-    1.  突出显示刚创建的应用程序，然后单击“配置”。  
+    1.  反白選取您剛才建立的應用程式，然後按一下 [設定]。  
 
-    2.  在“密钥”下，从列表中选择持续时间，然后单击“保存”。  这创建新客户端密钥。  成功将适用于企业的 Windows 应用商店载入到 Configuration Manager 之前，请勿导航离开此页面。  
+    2.  從 [金鑰] 底下的清單中選取持續時間，然後按一下 [儲存]。  這會建立一個新的用戶端金鑰。  在您成功將商務用 Windows 市集連線到 Configuration Manager 之前，請勿離開此頁面。  
 
-3.  在适用于企业的 Windows 应用商店中，将 Configuration Manager 配置为存储管理工具。  
+3.  在商務用 Windows 市集中，將 Configuration Manager 設定為市集管理工具。  
 
-    1.  打开 [https://businessstore.microsoft.com/zh-cn/managementtools](https://businessstore.microsoft.com/en-us/managementtools)，在出现提示时进行登录。  
+    1.  開啟 [https://businessstore.microsoft.com/en-us/managementtools](https://businessstore.microsoft.com/en-us/managementtools)，並在出現提示時登入。  
 
-    2.  接受使用条款（如果需要）。  
+    2.  視需要接受使用條款  
 
-    3.  在“管理工具”下，单击“添加管理工具”。  
+    3.  在 [管理工具] 底下，按一下 [Add a management tool]\ (新增管理工具)。  
 
-    4.  在“按名称搜索工具”中，键入以前在 AAD 中创建的应用程序的名称，然后单击“添加”。  
+    4.  在 [Search for the tool by name]\(依名稱搜尋工具) 中，輸入您先前在 AAD 中所建立應用程式的名稱，然後按一下 [新增]。  
 
-    5.  在刚导入的应用程序旁单击“激活”。  
+    5.  按一下您剛才匯入之應用程式旁邊的 [啟用]。  
 
-    6.  在“显示脱机许可的应用”向导中，如果要允许采购脱机许可的应用程序，则单击“是”。  
+    6.  如果您想要允許購買離線授權的應用程式，請在 [Show Offline-Licensed Apps Wizard]\(顯示離線授權的應用程式精靈) 中，按一下 [是]。  
 
-4.  从适用于企业的 Windows 应用商店采购至少一个应用。  
+4.  從「商務用 Windows 市集」至少購買一個應用程式。  
 
-5.  在 Configuration Manager 控制台的“管理”工作区中，展开“云服务”，然后单击“适用于企业的 Windows 应用商店”。  
+5.  在 Configuration Manager 主控台的 [系統管理] 工作區中，展開 [雲端服務]，然後按一下 [商務用 Windows 市集]。  
 
-6.  在“主页”选项卡上的“创建”组中，单击“添加适用于企业的 Windows 应用商店帐户”。  
+6.  在 [常用] 索引標籤的 [建立] 群組中，按一下 [新增商務用 Windows 市集帳戶]。  
 
-7.  从 Azure Active Directory 添加租户 ID、客户端 ID 和客户端密钥，然后完成向导。  
+7.  從 Azure Active Directory 中，加入您的租用戶識別碼、用戶端識別碼及用戶端金鑰，然後完成精靈。  
 
-8.  完成之后，会在 Configuration Manager 控制台中“适用于企业的 Windows 应用商店帐户”列表中看到配置的帐户。  
+8.  完成之後，您就會在 Configuration Manager 主控台的 [商務用 Windows 市集帳戶] 清單中看到您設定的帳戶。  
 
-##### <a name="scenario-2-create-and-deploy-a-configuration-manager-application-from-a-windows-store-for-business-offline-licensed-app"></a>方案 2：从适用于企业的 Windows 应用商店离线授权的应用创建和部署 Configuration Manager 应用程序  
+##### <a name="scenario-2-create-and-deploy-a-configuration-manager-application-from-a-windows-store-for-business-offline-licensed-app"></a>案例 2：從商務用 Windows 市集離線授權的應用程式建立和部署 Configuration Manager 應用程式  
 
-1.  在 Configuration Manager 控制台的“软件库”工作区中，展开“应用程序管理”，然后单击“应用商店应用的许可证信息”。  
+1.  在 Configuration Manager 主控台的 [軟體程式庫] 工作區中，展開 [應用程式管理]，然後按一下 [市集應用程式的授權資訊]。  
 
-2.  **从适用于企业的 Windows 应用商店购买的应用**列表显示了从存储区同步的应用列表。 选择要部署的应用，然后在“主页”选项卡的“创建”组中，单击“创建应用程序”。  
+2.  [已購買的商務用 Windows 市集應用程式] 清單會顯示已從市集同步處理的應用程式清單。 選擇要部署的應用程式，然後在 [常用] 索引標籤的 [建立] 群組中，按一下 [建立應用程式]。  
 
-3.  将创建包含适用于企业的 Windows 应用商店应用的 Configuration Manager 应用程序。 然后，可以像对任何其他 Configuration Manager 应用程序一样部署并监视此应用程序。  
+3.  建立 Configuration Manager 應用程式以包含商務用 Windows 市集應用程式。 然後可以如處理任何其他 Configuration Manager 應用程式一樣，部署及監視此應用程式。  
 
-##  <a name="BKMK_PFW"></a> 对 Microsoft Passport for Work 管理的改进  
- 现在可以将 Passport for Work 策略部署到由 Configuration Manager客户端管理的已加入域的 Windows 10 设备。  
+##  <a name="BKMK_PFW"></a> 對 Microsoft Passport for Work 管理的改進  
+ 您現在可以將 Passport for Work 原則部署到已加入網域且受 Configuration Manager 用戶端管理的 Windows 10 裝置。  
 
-##  <a name="bkmk_switchsup"></a>供客户端切换到新软件更新点的选项  
- 在 1604 Technical Preview 中，可以启用 Configuration Manager 供客户端在活动软件更新点出现问题时切换到新软件更新点的选项。 对于此选项，必须在主站点上有多个软件更新点可用。 在设备集合上启用此选项，在启用之后，当集合中的客户端未能成功连接到活动的软件更新点时，将在下一次扫描时查找另一个软件更新点。 根据 WSUS 配置设置（更新分类、产品等），切换到新的软件更新点将会产生额外的网络流量。 因此，应仅当需要时才使用此选项。  
+##  <a name="bkmk_switchsup"></a> 可供用戶端切換到新軟體更新點的選項  
+ 在 1604 Technical Preview 中，您可以啟用可供 Configuration Manager 用戶端在主動式軟體更新點發生問題時切換到新軟體更新點的選項。 針對此選項，主要站台上必須要有多個軟體更新點。 您可以在裝置集合中啟用此選項，而且一旦啟用，集合中的用戶端就會在無法順利連線到主動式軟體更新點時，於下次掃描尋找另一個軟體更新點。 根據 WSUS 組態設定 (更新分類、產品等)，切換到新軟體更新點將會產生額外的網路流量。 因此，您應該只在必要時才使用此選項。  
 
-#### <a name="to-enable-the-option-to-switch-software-update-points"></a>启用切换软件更新点的选项  
+#### <a name="to-enable-the-option-to-switch-software-update-points"></a>啟用切換軟體更新點的選項  
 
-1.  在 Configuration Manager 控制台中，转到“资产和符合性”>“概览”>“设备集合”。  
+1.  在 Configuration Manager 主控台中，移至 **[資產與相容性] > [概觀] > [裝置集合]**。  
 
-2.  在“主页”选项卡上的“集合”组中，单击“客户端通知”，然后单击“切换到下一个软件更新点”。  
+2.  在 **[首頁]** 索引標籤的 **[集合]** 群組中，按一下 **[用戶端通知]**，然後按一下 **[切換至下一個軟體更新點]**。  
 
 > [!NOTE]  
->  此选项只在具有多个软件更新点的站点上可用。  
+>  只有在具有多個軟體更新點的站台上才會提供此選項。  
 
-##  <a name="bkmk_peercache"></a>用于管理客户端缓存设置和客户端对等缓存的客户端设置  
- 技术预览版 1604 引入了影响客户端缓存使用的两个新设备客户端设置。 这两个设置可以单独使用，但是在用于客户端设置的同一个属性表中配置，可结合使用以帮助管理将内容部署到远程位置的客户端。  
+##  <a name="bkmk_peercache"></a> 可管理用戶端快取設定和用戶端對等快取的用戶端設定  
+ Technical Preview 版本 1604 導入了兩個影響用戶端快取使用的新裝置用戶端設定。 兩者可個別使用，但是是在相同的用戶端設定屬性工作表上設定，並且可相結合來協助您管理對遠端位置中用戶端的內容部署。  
 
--   第一个设置是**客户端对等缓存**，这是内置 Configuration Manager 解决方案，供客户端用于直接从本地缓存将内容与其他客户端共享。 若要使对等缓存客户端可以共享内容，它们必须是相同边界组的成员。 对等缓存不会代替其他解决方案（如 BranchCache）的使用，而是并行工作以便提供更多选项，用于扩展传统内容部署解决方案（如分发点）。  
+-   首先是**用戶端對等快取**，這是一個內建的 Configuration Manager 解決方案，可讓用戶端直接從其本機快取將內容與其他用戶端共用。 若要讓「對等快取」用戶端共用內容，它們必須是相同界限群組的成員。 對等快取不會取代其他解決方案 (例如 BranchCache) 的使用，而是可並行運作來提供您更多選項以擴充傳統內容部署解決方案 (例如發佈點)。  
 
-     将启用对等缓存的客户端设置部署到集合后，该集合的成员可以充当其边界组中其他客户端的对等内容源。  充当对等内容源的客户端将提交一份可用内容列表，即缓存到其管理点的内容的列表。 然后，当该边界组中的下一个客户端请求该内容时，该对等缓存源将作为潜在内容源提供，同时提供所有配置为快速的分发点。 客户端从此内容源的组合池中选择一个随机内容源。 当边界组中没有快速分发点或对等缓存源时，客户端将只能从配置为慢速的分发点查找内容。  
+     將啟用對等快取的用戶端設定部署至集合之後，該集合的成員可以作為其界限群組中其他用戶端的對等內容來源。  以對等內容來源運作的用戶端將會提交已快取至其管理點的可用內容清單。 之後，當該界限群組中的下一個用戶端要求該內容時，就會以潛在內容來源及形式提供對等快取來源，並將所有發佈點設定為快速。 用戶端會從這個合併的內容來源集區中隨機選取內容來源。 如果界限群組中沒有快速發佈點或對等快取來源，用戶端只會從設定為慢速的發佈點搜尋內容。  
 
--   第二个新设置使用户能够在客户端上**管理缓存的大小**。 可以将缓存设置为具有以兆字节 (MB) 表示时的最大大小，以及以客户端驱动器空间的百分比表示时的最大大小。  客户端会强制执行先达到的设置值。  
+-   第二項新設定可讓您**管理用戶端上的快取大小**。 您可以設定讓快取擁有以 MB 為單位的大小上限，以及以用戶端磁碟機空間百分比表示的大小上限。  用戶端會強制執行先到達的設定。  
 
-为了帮助了解客户端对等缓存的使用，可以查看“客户端数据源”仪表板。 在控制台中，转到“监视”>“客户端状态”>“客户端数据源”。 在此处可以选择要应用于仪表板的时间段。 然后在显示中，可以选择要查看其信息的边界组或包。 查看信息时，可以将鼠标悬停在表面上方，以查看有关不同内容或策略源的更多详细信息。  
+為了協助您了解用戶端對等快取的用法，您可以檢視 [Client Data Sources]\(用戶端資料來源) 儀表板。 在主控台中，移至 [監視] > [用戶端狀態] > [Client Data Sources]\(用戶端資料來源)。 您可以在這裡選取一個要套用到儀表板的時段。 然後，在顯示中，您可以選取您想要檢視資訊的界限群組或套件。 檢視資訊時，您可以將滑鼠游標暫留在介面上，以查看有關不同內容或原則來源的更多詳細資料。  
 
- 还可以使用新报表“客户端数据源 - 摘要”查看每个边界组的客户端数据源摘要。   
-**有关使用对等缓存的要求：**  
+ 您也可以使用新報告「用戶端資料來源 - 摘要」來檢視每個界限群組的用戶端資料來源摘要。   
+**使用對等快取的需求︰**  
 
--   必须使用对每个客户端上的缓存文件夹具有**完全控制**的**网络访问帐户**来配置站点。 默认情况下，这是 **%windir%\ccmcache**  
+-   您必須為您的站台設定一個**網路存取帳戶**，此帳戶要能夠**完全控制**每個用戶端上的快取資料夾。 此資料夾預設為 **%windir%\ccmcache**  
 
--   仅当是相同边界组的成员时，客户端才能使用对等缓存传输内容。  
+-   當用戶端為相同界限群組的成員時，它們只能使用「對等快取」來傳輸內容。  
 
-#### <a name="to-configure-client-peer-cache-client-settings"></a>配置客户端对等缓存客户端设置  
+#### <a name="to-configure-client-peer-cache-client-settings"></a>設定用戶端對等快取的用戶端設定  
 
-1.  两种设置均在同一客户端设置页上进行配置。 在 Configuration Manager 控制台中，转到“管理”>“客户端设置”，然后打开要使用的设备客户端设置对象。 还可以修改默认客户端设置对象。  
+1.  這兩項設定會在相同的用戶端設定頁面上進行。 在 Configuration Manager 主控台中，移至 [系統管理] > [用戶端設定]，然後開啟您要使用的裝置用戶端設定物件。 您也可以修改 [預設用戶端設定] 物件。  
 
-2.  从可用设置的列表中，选择“客户端缓存设置”。  
+2.  從可用的設定清單中，選取 [用戶端快取設定]。  
 
-3.  若要管理缓存的大小，请将“配置客户端缓存大小”设置为“是”。 然后可同时以兆字节和客户端驱动器空间的百分比这两种形式配置最大缓存大小。  
+3.  若要管理快取的大小，請將 [設定用戶端快取大小] 設定為 [是]。 然後您可以設定最大快取大小，並以 MB 和用戶端磁碟機空間百分比為單位。  
 
-4.  要使客户端能够参与客户端对等缓存，请将“在完整操作系统中启用 Configuration Manager 客户端以共享内容”设置为“是”。 然后可以配置客户端使用的端口，包括将采用 HTTP 还是 HTTPS。  
+4.  若要讓用戶端參與用戶端對等快取，請將 [在完整作業系統中啟用 Configuration Manager 用戶端以共用內容] 設定為 [是]。 然後您可以設定用戶端所使用的連接埠，包括是否將以 HTTP 或 HTTPS 連接。  
 
-### <a name="try-it-out"></a>试试看！  
- 尝试完成下面的任务，然后使用本主题顶部附近的反馈信息，让我们知道它的工作方式：  
+### <a name="try-it-out"></a>試試看！  
+ 請嘗試完成下列工作，然後使用本主題頂端附近的意見反應資訊，告訴我們工作的成效：  
 
-1.  修改客户端设置以指定客户端缓存的新大小，然后在客户端上确认此设置。  
+1.  修改用戶端設定，以指定新的用戶端快取大小，然後在用戶端上確認這項設定。  
 
-2.  使用客户端设置来配置多个使用对等缓存的客户端  
+2.  使用用戶端設定來設定要使用對等快取的多個用戶端  
 
-3.  将内容部署到客户端，以便一些或大部分客户端通过使用对等缓存从其他客户端获取该内容。  可以通过查看新仪表板确认使用的内容源。  
+3.  將內容部署到用戶端，讓一些或大多數用戶端可以透過使用對等快取從另一個用戶端取得該內容。  您可以檢視新儀表板來確認使用的內容來源。  
 
     > [!NOTE]  
-    >  若要使用技术预览版和单个分发点完成此任务，请将该分发点配置为对所有客户端的网络位置是慢速的。 然后将内容分发给单个客户端。  该客户端获取内容之后，可以将内容分发给其他客户端，这些客户端应首先查找本地对等方以用作内容源，然后再从客户端位置被视为慢速的分发点。  
+    >  若要使用 Technical Preview 和單一發佈點來完成這項工作，請針對您所有用戶端的網路連線，將發佈點設定成慢一點。 然後，將內容發佈到單一用戶端。  在該用戶端取得內容之後，您可以將內容發佈到額外的用戶端，這些用戶端應該會先找到本機對等電腦來做為內容來源，然後才使用從用戶端位置被視為太慢的發佈點。  
 
-##  <a name="bkmk_passport"></a>支持将 Passport for Work 作为 KSP  
- System Center Configuration Manager 允许集成 Microsoft Passport for Work，它是使用 Active Directory 或 Azure Active Directory 帐户取代密码、智能卡或虚拟智能卡进行登录的一种替代方法。  
-通过 Passport，你可以使用“用户手势”取代密码进行登录。 用户手势可以是简单 PIN、Windows Hello 等生物识别身份验证或指纹读取器等外部设备。  
+##  <a name="bkmk_passport"></a> 對以 Passport for Work 做為 KSP 的支援  
+ System Center Configuration Manager 可讓您與 Microsoft Passport for Work 整合，這是一個使用 Active Directory 或 Azure Active Directory 帳戶來取代密碼、智慧卡或虛擬智慧卡的替代登入方法。  
+Passport 可讓您使用使用者筆勢登入，而不使用密碼。 使用者筆勢可能是簡單的 PIN、生物識別驗證 (例如 Windows Hello) 或外部裝置 (例如指紋辨識器)。  
 
--   可以使用 Configuration Manager 控制用户可以用于以及不能用于登录的手势，并配置 PIN 复杂性要求。  
+-   您可以使用 Configuration Manager 來控制使用者可以和不可以使用哪些筆勢來進行登入，以及設定 PIN 複雜度需求。  
 
--   可在 Passport for Work 密钥存储提供程序 (KSP) 中存储身份验证证书。  
+-   您可以將驗證憑證儲存在 Passport for Work 金鑰儲存提供者 (KSP) 中。  
 
-当用户创建 Passport PIN 时，Windows 会发送通知，Configuration Manager 会侦听该通知。  这使 Configuration Manager 可以快速了解哪些用户创建了 Passport PIN。 如果 Passport 在证书配置文件中用作密钥存储提供程序，则 Configuration Manager 随后还可以向这些用户颁发新证书。  
+當使用者建立 Passport PIN 時，Windows 會傳送 Configuration Manager 會接聽的通知。  這可讓 Configuration Manager 快速察覺哪些使用者已建立 Passport PIN。 如果 Passport 被用來當作憑證設定檔中的「金鑰儲存提供者」，Configuration Manager 便可接著一併發行新的憑證給這些使用者。  
 
-##  <a name="bkmk_onpremdha"></a>本地设备运行状况证明  
- Windows 10 设备的运行状况证明现在可以配置为使用本地基础结构进行通信。  管理员可以指定是通过云还是本地资源进行报告。  如果为运行状况证明报告选择“本地”，则可以为服务指定 URI。 这使无法进行 Internet 访问的客户端电脑可以启用和管理使用运行状况证明的设备。  
+##  <a name="bkmk_onpremdha"></a> 內部部署裝置健康情況證明  
+ Windows 10 裝置的健康情況證明現在可以設定為使用內部部署基礎結構來進行通訊。  系統管理員可以指定是要透過雲端還是內部部署資源來執行報告。  如果選取 [內部部署] 來執行健康情況證明報告，便可接著指定服務的 URI。 這可讓無法存取網際網路的用戶端電腦使用健康情況證明來啟用和管理裝置。  
 
-#### <a name="enable-health-attestation-for-on-premises-devices"></a>为本地设备启用运行状况证明  
+#### <a name="enable-health-attestation-for-on-premises-devices"></a>為內部部署裝置啟用健康情況證明  
 
-1.  在 Configuration Manager 控制台中，导航到“管理” > “概述” > “客户端设置”，然后将“使用本地运行状况证明服务”设置为“是”。  
+1.  在 Configuration Manager 主控台中，瀏覽至 **[系統管理]** > **[概觀]** > **[用戶端設定]**，然後將 **[使用內部部署健康情況證明服務]** 設定為 **[是]**。  
 
-2.  指定**本地运行状况证明服务 URL**，然后单击“确定”。  
+2.  指定 **[內部部署健康情況證明服務 URL]**，然後按一下 **[確定]**。  
 
-若要进行尝试，请使用客户端代理设置配置本地运行状况证明服务。  
+若要試試看，請使用用戶端代理程式設定來設定內部部署「健康情況證明服務」。  
 
-##  <a name="BKMK_Smart"></a>适用于 Android 设备的 SmartLock 设置  
- 一个新设置“允许 SmartLock 和其他信任代理”已添加到“Android 和 Samsung KNOX”配置项目，这使用户可以在兼容的 Android 设备上控制 SmartLock 功能。 如果设备处于可信位置（例如当它连接到特定蓝牙设备时，或者在 NFC 标记附近时），则此手机功能（有时称为信任代理）使你可以禁用或绕过设备锁屏界面密码。 可以使用此设置防止最终用户配置 SmartLock。  
-
+##  <a name="BKMK_Smart"></a> 適用於 Android 裝置的 SmartLock 設定  
+ 新的設定 [允許 SmartLock 和其他信任代理程式] 已新增至 [Android 和 Samsung KNOX] 設定項目，可讓您控制相容 Android 裝置上的 SmartLock 功能。 此電話功能 (有時也稱為信任代理程式) 可讓您在裝置位於受信任的位置 (例如連線到特定的藍牙裝置或靠近 NFC 標記) 時，停用或略過裝置鎖定畫面密碼。 您可以使用此設定來防止使用者設定 SmartLock。  

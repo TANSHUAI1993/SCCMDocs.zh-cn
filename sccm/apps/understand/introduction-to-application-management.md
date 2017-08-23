@@ -1,113 +1,109 @@
 ---
-title: "应用程序管理简介 | Microsoft Docs"
-description: "发现管理和部署 System Center Configuration Manager 应用程序所需的基本信息。"
+title: "應用程式管理簡介 | Microsoft Docs"
+description: "探索管理和部署 System Center Configuration Manager 應用程式所需的基本資訊。"
 ms.custom: na
 ms.date: 12/23/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-app
+ms.technology: configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 08f711ba-83bf-4b5f-9520-a0778c6ae7eb
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f4c46bfab9b40b29654f4e883817a5508ab25b74
 ms.openlocfilehash: 959a36413d06bb225f260bd44c1d3d59efd44e69
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/28/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="introduction-to-application-management-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的应用程序管理简介
+# <a name="introduction-to-application-management-in-system-center-configuration-manager"></a>System Center Configuration Manager 的應用程式管理簡介
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+適用於：System Center Configuration Manager (最新分支)
 
-本主题中，将了解开始使用 System Center Configuration Manager 应用程序之前需要了解的基础知识。  
+在本主題中，您將了解開始使用 System Center Configuration Manager 應用程式之前所需知道的基本概念。  
 
 > [!TIP]  
->  如果已经熟悉如何在 Configuration Manager 中管理应用程序，可跳过本主题并移至创建示例应用程序。 请参阅[使用 System Center Configuration Manager 创建和部署应用程序](../../apps/get-started/create-and-deploy-an-application.md)。  
+>  如果您已熟悉如何在 Configuration Manager 中管理應用程式，則可略過這個主題，並移至如何建立範例應用程式。 請參閱[使用 System Center Configuration Manager 建立和部署應用程式](../../apps/get-started/create-and-deploy-an-application.md)。  
 
-## <a name="what-is-an-application"></a>什么是应用程序?  
- 尽管应用程序在计算和 Configuration Manager 中广泛使用，但它具有不同的含义。 将应用程序想象为一个框。 这个框包含一套或多套软件包的安装文件（称为**部署类型**），以及如何部署该软件的说明。  
+## <a name="what-is-an-application"></a>何謂應用程式？  
+ 雖然「應用程式」是電腦中廣泛使用的術語，但是在 Configuration Manager 中，其意義有些不同。 請將應用程式視為一個盒子。 這個盒子包含軟體套件的一或多組安裝檔 (稱為 **部署類型**)，以及軟體部署方式的指示。  
 
- 当应用程序部署到设备上时，“要求”  决定在设备上安装哪种部署类型。  
+ 將應用程式部署至裝置時， **需求** 決定在裝置上安裝的部署類型。  
 
- 可以通过应用程序执行更多操作。 阅读本指南即可了解这些内容。 下表介绍了在深入学习前需要了解的一些概念：  
+ 您可以使用應用程式完成更多工作。 透過閱讀本指南，您將會了解這些事項。 下表介紹您在深入探索之前需要知道的一些概念：  
 
-|概念|描述|    
+|概念|說明|    
 |-|-|  
-|**惠?**|在之前版本的 Configuration Manager 中，经常要创建包含你想要向其部署应用程序的设备的集合。 尽管仍然可以创建集合，但使用要求可以为应用程序部署指定更多的详细条件。<br /><br /> 例如，可以指定应用程序仅在运行 Windows 10 的计算机上安装。 接下来，可以将应用程序部署到设备，但它只会在运行 Windows 10 的设备上安装。<br /><br /> Configuration Manager 会评估要求，确定是否安装应用程序及其任何部署类型。 然后，它会确定用于安装应用程序的正确部署类型。 默认情况下，根据“计划部署的重新评估” 客户端设置，每七天重新评估一次要求规则以确保符合性。<br /><br /> 有关详细信息，请参阅[创建和部署应用程序](../../apps/get-started/create-and-deploy-an-application.md)。|  
-|**全局条件**|尽管要求用于单个应用程序中的特定部署类型，但也可创建全局条件。 这些条件是可用于任何应用程序和部署类型的预定义要求库。<br /><br /> Configuration Manager 包含一套内置全局条件，并且也可以创建自己的全局条件。<br /><br /> 有关详细信息，请参阅[创建全局条件](../../apps/deploy-use/create-global-conditions.md)。|  
-|**模拟部署**|评估应用程序的要求、检测方法和依赖关系。 在未实际安装应用程序的情况下报告结果。<br /><br /> 有关详细信息，请参阅[模拟应用程序部署](../../apps/deploy-use/simulate-application-deployments.md)。|  
-|**部署操作**|指定是否想要安装或卸载（如果支持）正在部署的应用程序。<br /><br /> 有关详细信息，请参阅[部署应用程序](../../apps/deploy-use/deploy-applications.md)。|  
-|**部署目的**|指定部署应用程序为“必需” 还是“可用” 。<br /><br /> **必需**意味着依据设置的计划自动部署应用程序。 不过，用户可以跟踪应用程序部署状态（如果未隐藏），并且可使用软件中心在截止时间之前安装该应用程序。<br /><br /> “可用” 意味着如果将应用程序部署到用户，则用户将在软件中心看到发布的应用程序，并可根据需要进行请求。<br /><br /> 有关详细信息，请参阅[部署应用程序](../../apps/deploy-use/deploy-applications.md)。|  
-|**修订版本**|修订应用程序或应用程序中包含的部署类型时，Configuration Manager 会创建应用程序的新版本。 可显示每个应用程序版本的历史记录、查看其属性、还原应用程序以前的版本或删除旧版本。<br /><br /> 有关详细信息，请参阅[更新和停用应用程序](../../apps/deploy-use/update-and-retire-applications.md)。|  
-|**检测方法**|检测方法用于发现是否已安装部署的应用程序。 如果检测方法指示已安装应用程序，则 Configuration Manager 不会尝试重新安装。<br /><br /> 有关详细信息，请参阅[创建应用程序](../../apps/deploy-use/create-applications.md)。|  
-|**依赖关系**|依赖关系定义在安装部署类型之前必须先安装的另一应用程序中的部署类型。 可以将相关部署类型设置为在安装部署类型之前自动安装。<br /><br /> 有关详细信息，请参阅[创建应用程序](../../apps/deploy-use/create-applications.md)。|  
-|**取代**|Configuration Manager 允许使用取代关系来升级或替换现有应用程序。 取代应用程序时，可以指定新的部署类型来替换被取代应用程序的部署类型。 还可决定安装取代应用程序前，是否升级或卸载被取代应用程序。<br /><br /> 有关详细信息，请参阅[创建应用程序](../../apps/deploy-use/create-applications.md)。|  
-|**以用户为中心的管理**|Configuration Manager 应用程序支持以用户为中心的管理，从而允许将特定用户与特定设备关联。 你可以将应用部署到用户和设备，而不必记住用户设备的名称。 此功能可帮助你确保在特定用户访问的每台设备上始终可以使用最重要的应用。 如果用户购买了新计算机，则在登录之前可在设备上自动安装用户的应用。<br /><br /> 有关详细信息，请参阅[将用户和设备与用户设备相关性相链接](../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md)。|  
+|**Requirements**|在舊版的 Configuration Manager 中，您通常會建立集合，以包含您想要在其中部署應用程式的目標裝置。 雖然您仍然可以建立集合，但是可以透過需求為應用程式部署指定更詳細的準則。<br /><br /> 例如，您可以指定應用程式只能安裝在執行 Windows 10 的裝置上。 之後，您可以將應用程式部署至裝置，但該應用程式只會安裝於執行 Windows 10 的裝置上。<br /><br /> Configuration Manager 會評估需求，以判斷是否要安裝應用程式和其任何部署類型。 然後會判斷可套用來安裝應用程式的正確部署類型。 根據預設，系統會每 7 天根據用戶端設定 [排程部署的重新評估] 重新評估需求規則，確保其相容性。<br /><br /> 如需詳細資訊，請參閱[建立和部署應用程式](../../apps/get-started/create-and-deploy-an-application.md)。|  
+|**全域條件**|雖然需求要搭配單一應用程式中的特定部署類型來使用，但您也可以建立全域條件。 這些是預先定義需求的程式庫，您可以與任何應用程式和部署類型搭配使用。<br /><br /> Configuration Manager 包含一組內建全域條件，而您也可以建立專屬的全域條件。<br /><br /> 如需詳細資訊，請參閱[建立全域條件](../../apps/deploy-use/create-global-conditions.md)。|  
+|**模擬部署**|評估應用程式的需求、偵測方法及相依性。 它會報告結果，而不會實際安裝應用程式。<br /><br /> 如需詳細資訊，請參閱[模擬應用程式部署](../../apps/deploy-use/simulate-application-deployments.md)。|  
+|**部署動作**|指定是要安裝或解除安裝 (支援時) 正在部署的應用程式。<br /><br /> 如需詳細資訊，請參閱[部署應用程式](../../apps/deploy-use/deploy-applications.md)。|  
+|**部署目的**|指定部署應用程式是 [必要] 還是 [可用] 。<br /><br /> [必要] 表示會根據已設定的排程自動部署應用程式。 不過，如果應用程式未隱藏，使用者便可追蹤應用程式部署狀態，也可使用 [軟體中心] 在期限前安裝應用程式。<br /><br /> [可用] 表示如果應用程式部署給使用者，則使用者會在軟體中心看見已發行的應用程式，並可依需求要求該應用程式。<br /><br /> 如需詳細資訊，請參閱[部署應用程式](../../apps/deploy-use/deploy-applications.md)。|  
+|**修訂**|當您針對應用程式或包含在應用程式內的部署類型進行修訂時，Configuration Manager 會建立新的應用程式版本。 您可以顯示每個應用程式版本的歷程記錄、檢視其內容、還原先前的應用程式版本，或刪除舊版本。<br /><br /> 如需詳細資訊，請參閱[更新和淘汰應用程式](../../apps/deploy-use/update-and-retire-applications.md)。|  
+|**偵測方法**|偵測方法用來探索是否已安裝已部署的應用程式。 如果偵測方法表示已安裝應用程式，則 Configuration Manager 不會嘗試再次安裝。<br /><br /> 如需詳細資訊，請參閱[建立應用程式](../../apps/deploy-use/create-applications.md)。|  
+|**相依性**|相依性會從安裝部署類型之前必須先行安裝的其他應用程式中，定義一或多個部署類型。 您可以將相依的部署類型設定為在安裝部署類型之前自動安裝。<br /><br /> 如需詳細資訊，請參閱[建立應用程式](../../apps/deploy-use/create-applications.md)。|  
+|**取代**|Configuration Manager 可讓您使用取代關聯性來升級或取代現有應用程式。 當您取代應用程式時，您可以指定新的部署類型來取代被取代應用程式的部署類型。 您也可以決定是否要先升級或解除安裝被取代的應用程式，然後再安裝取代的應用程式。<br /><br /> 如需詳細資訊，請參閱[建立應用程式](../../apps/deploy-use/create-applications.md)。|  
+|**使用者為中心的管理**|Configuration Manager 應用程式支援以使用者為中心的管理，讓您可以將特定使用者與特定裝置產生關聯。 您不需要記住使用者裝置的名稱，就可以將應用程式部署給使用者和裝置。 這個功能可協助您確保特定使用者存取的每個裝置上都搭載了最重要的應用程式。 若使用者獲得一部新電腦，您也可以在使用者登入前，自動將其應用程式安裝到裝置上。<br /><br /> 如需詳細資訊，請參閱[連結使用者和裝置與使用者裝置親和性](../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md)。|  
 
-## <a name="what-application-types-can-you-deploy"></a>可以部署哪些应用程序类型?  
- 可通过 Configuration Manager 部署以下应用类型：  
+## <a name="what-application-types-can-you-deploy"></a>您可以部署的應用程式類型為何？  
+ Configuration Manager 可讓您部署下列應用程式類型：  
 
-- Windows Installer（*.msi 文件）
-- Windows 应用包（*.appx、*.appxbundle）
-- Windows 应用包（在 Windows 应用商店中）
+- Windows Installer (*.msi 檔案)
+- Windows 應用程式封裝 (*.appx、*.appxbundle)
+- Windows 應用程式套件 (在 Windows 市集中)
 - Microsoft Application Virtualization 4
 - Microsoft Application Virtualization  5
-- Windows Mobile Cabinet
+- Windows Mobile 封包
 - macOS  
 
 
-此外，通过 Microsoft Intune 或 Configuration Manager 本地设备管理来管理设备时，还可以管理以下应用类型：
+此外，當您透過 Microsoft Intune 或 Configuration Manager 內部部署裝置管理功能來管理裝置時，可以進一步管理下列應用程式類型：
 
-- Windows Phone 应用包（*.xap 文件）
-- iOS 应用包（*.ipa 文件）
-- Android 应用包（*.apk 文件）
-- “Google Play 上的 Android 应用包”
-- Windows Phone 应用包（在 Windows Phone 应用商店中）
-- 通过 MDM 的 Windows 安装程序
-- Web 应用程序
-
-
-
-## <a name="state-based-applications"></a>基于状态的应用程序  
- Configuration Manager 应用程序使用基于状态的监视，通过此功能可跟踪用户和设备的上一应用程序部署状态。 这些状态消息显示了有关单个设备的信息。 例如，将应用程序部署到用户集合，则可在 Configuration Manager 控制台中查看此部署的符合性状态和部署目的。 可以通过使用 Configuration Manager 控制台中的“监视”工作区来监视所有软件的部署。 软件部署包括软件更新、符合性设置、应用程序、任务序列以及包和程序。 有关详细信息，请参阅[监视应用程序](/sccm/apps/deploy-use/monitor-applications-from-the-console)。  
-
- 应用程序部署由 Configuration Manager 定期重新计算。 例如：  
-
--   最终用户卸载了部署的应用程序。 在下一个评估周期，Configuration Manager 将检测到应用程序不存在并重新安装它。  
-
--   应用程序由于未满足要求而未安装在设备上。 随后将对设备进行更改，现在它即满足要求。 Configuration Manager 检测到此更改并安装应用程序。  
+- Windows Phone 應用程式套件 (*.xap 檔案)
+- iOS 應用程式套件 (*.ipa 檔案)
+- Android 應用程式套件 (*.apk 檔案)
+- Google Play 上的 Android 應用程式套件
+- Windows Phone 應用程式套件 (在 Windows Phone 市集中)
+- 透過 MDM 的 Windows Installer
+- Web 應用程式
 
 
- 可以使用“计划部署的重新评估”客户端设置设置应用程序部署的重新评估时间间隔。 有关详细信息，请参阅[关于客户端设置](../../core/clients/deploy/about-client-settings.md)。  
 
-## <a name="get-started-creating-an-application"></a>创建应用程序入门  
- 如果要直接开始创建应用程序，会在[创建和部署应用程序](../../apps/get-started/create-and-deploy-an-application.md)主题中找到创建简单应用程序的演练。  
+## <a name="state-based-applications"></a>狀態型應用程式  
+ Configuration Manager 應用程式會使用狀態式監控功能，您可藉此追蹤使用者和裝置最近的應用程式部署狀態。 狀態訊息會顯示有關個別裝置的資訊。 例如，如果應用程式是部署至使用者集合，您可以在 Configuration Manager 主控台中檢視部署與部署目的的相容性狀態。 您可以使用 Configuration Manager 主控台中的 [監視] 工作區，來監視所有軟體的部署。 軟體部署包括軟體更新、相容性設定、應用程式、工作順序以及封裝和程式。 如需詳細資訊，請參閱[監視應用程式](/sccm/apps/deploy-use/monitor-applications-from-the-console)。  
 
- 若已熟悉基本知识，想查看所有可用选项有关的更多详细参考信息，可从[创建应用程序](/sccm/apps/deploy-use/create-applications)开始。  
+ Configuration Manager 會定期重新評估應用程式部署。 例如：  
 
-## <a name="software-center-and-the-application-catalog"></a>软件中心和应用程序目录  
- 在以前版本的 Configuration Manager 中，软件中心用于安装和计划软件安装、配置远程控制设置和设置电源管理。 用户可以连接到应用程序目录，以便浏览和请求软件、设置某些首选项，以及远程擦除其移动设备。  
+-   部署的應用程式會由使用者解除安裝。 因此，在下一個評估週期中，Configuration Manager 會偵測到應用程式不存在並進行重新安裝。  
 
- 虽然这些设置在 System Center Configuration Manager 中仍然可用，但现已推出软件中心的新版本，让用户能够浏览应用程序。 无需使用应用程序目录，该目录要求已启用 Silverlight 的 Web 浏览器。 但是，仍然需要应用程序目录网站点站点系统角色和应用程序目录 Web 服务点站点系统角色来让用户可用的应用显示在软件中心。  
+-   應用程式未安裝在裝置上的原因是其不符合需求。 稍後，裝置會進行變更，因此現在已符合需求。 Configuration Manager 會偵測到這個變更並安裝應用程式。  
 
- 有关详细信息，请参阅[规划和配置应用程序管理](../../apps/plan-design/plan-for-and-configure-application-management.md)。  
 
-## <a name="configuration-manager-packages-and-programs"></a>Configuration Manager 包和程序  
- Configuration Manager 继续支持在产品的早期版本中使用的包和程序。 部署以下任何一项时，使用包和程序的部署可能比使用某个应用程序的部署更适用：  
+ 您可以使用 [排程部署的重新評估] 用戶端設定，來設定應用程式部署的重新評估間隔。 如需詳細資訊，請參閱[關於用戶端設定](../../core/clients/deploy/about-client-settings.md)。  
 
--   不在计算机上安装应用程序的脚本，如用于对计算机磁盘驱动器进行碎片整理的脚本。  
+## <a name="get-started-creating-an-application"></a>開始建立應用程式  
+ 如果您想要直接開始建立應用程式，可以在[建立和部署應用程式](../../apps/get-started/create-and-deploy-an-application.md)主題中找到建立簡單應用程式的逐步解說。  
 
--   不需要进行密切监视之下的"一次性"脚本。  
+ 如果您已熟悉基本概念，但需要所有可用選項的更詳細參考資訊，請從[建立應用程式](/sccm/apps/deploy-use/create-applications)開始了解。  
 
--   按定期计划运行且不能使用全局评估的脚本。
+## <a name="software-center-and-the-application-catalog"></a>軟體中心和應用程式類別目錄  
+ 在舊版的 Configuration Manager 中，軟體中心是用來安裝和排程軟體安裝、進行遠端控制設定，以及設定電源管理。 使用者可以連線到應用程式類別目錄來瀏覽和要求軟體、設定某些喜好設定，以及遠端抹除其行動裝置。  
 
- 有关详细信息，请参阅[包和程序](../../apps/deploy-use/packages-and-programs.md)。  
+ 雖然 System Center Configuration Manager 仍提供這些設定，但現在已有新版的軟體中心，讓您能夠瀏覽應用程式。 您不必使用應用程式類別目錄，不過這需要 Silverlight 功能的網頁瀏覽器。 不過，仍然需要應用程式類別目錄網站點和應用程式類別目錄 Web 服務點站台系統角色，才能讓使用者可用的應用程式出現在軟體中心內。  
 
+ 如需詳細資訊，請參閱[規劃和設定應用程式管理](../../apps/plan-design/plan-for-and-configure-application-management.md)。  
+
+## <a name="configuration-manager-packages-and-programs"></a>Configuration Manager 套件和程式  
+ Configuration Manager 會持續支援產品舊版本中所使用的套件和程式。 在您部署以下項目時，使用封裝和程式的部署可能會比使用應用程式的部署適合：  
+
+-   並未在電腦上安裝應用程式的程式碼，如重組電腦磁碟機的程式碼。  
+
+-   不需要持續監控的「單次用」指令碼。  
+
+-   按週期性排程執行且無法使用全域評估的指令碼。
+
+ 如需詳細資訊，請參閱[套件和程式](../../apps/deploy-use/packages-and-programs.md)。  

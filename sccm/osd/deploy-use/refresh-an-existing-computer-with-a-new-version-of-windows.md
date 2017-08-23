@@ -1,95 +1,88 @@
 ---
-title: "使用新版 Windows 刷新现有计算机 | Microsoft Docs"
-description: "可以使用 Configuration Manager 中的几种办法来分区和格式化（擦除）现有计算机和在计算机上安装新操作系统。"
+title: "使用新的 Windows 版本重新整理現有的電腦 | Microsoft Docs"
+description: "您可以在 Configuration Manager 中使用多種方法來磁碟分割和格式化 (抹除) 現有電腦，並在電腦上安裝新作業系統。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b189a346-8c0d-4870-a876-0719fbb0ab04
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
 ms.openlocfilehash: b247cbb68ed63a8eb99715a248686d68a28c53e2
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="refresh-an-existing-computer-with-a-new-version-of-windows-using-system-center-configuration-manager"></a>通过 System Center Configuration Manager，使用新版本的 Windows 刷新现有的计算机
+# <a name="refresh-an-existing-computer-with-a-new-version-of-windows-using-system-center-configuration-manager"></a>使用 System Center Configuration Manager 以新的 Windows 版本重新整理現有的電腦
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+適用於：System Center Configuration Manager (最新分支)
 
-本主题提供 System Center Configuration Manager 中用于分区和格式化（擦除）现有计算机和在计算机上安装新操作系统的一般步骤。 对于此方案，可以在许多不同的部署方法中进行选择，如 PXE、可启动媒体或软件中心。 你还可以选择用以存储设置的状态迁移点，然后在安装后将这些设置还原到新的操作系统。 如果不确定这是否是正确的操作系统部署方案，请参阅[部署企业版操作系统的方案](scenarios-to-deploy-enterprise-operating-systems.md)。  
+本主題提供在 System Center Configuration Manager 中磁碟分割和格式化 (抹除) 現有電腦，並在電腦上安裝新作業系統的一般步驟。 這個案例中有多種不同的部署方法可供選擇，例如 PXE、可開機媒體或軟體中心。 您也可以選擇安裝狀態移轉點來儲存設定，然後在新的作業系統安裝之後將它們還原至新的作業系統。 如果您不確定此作業系統部署案例是否適合您，請參閱[部署企業作業系統的案例](scenarios-to-deploy-enterprise-operating-systems.md)。  
 
- 采用以下部分内容，使用新版本的 Windows 来刷新现有计算机。  
+ 請使用下列章節的內容，以新版的 Windows 重新整理現有的電腦。  
 
-##  <a name="a-namebkmkplana-plan"></a><a name="BKMK_Plan"></a> 计划  
+##  <a name="BKMK_Plan"></a> 方案  
 
--   **规划和实现基础结构要求**  
+-   **規劃並實作基礎結構需求**  
 
-     在你可以部署操作系统前，有几个必须实施到位的基础结构要求，例如 Windows ADK、用户状态迁移工具 (USMT)、Windows 部署服务 (WDS) 以及支持的硬盘配置等。有关详细信息，请参阅[操作系统部署的基础架构要求](../plan-design/infrastructure-requirements-for-operating-system-deployment.md)。  
+     必須要備妥數個基礎結構需求，才能部署作業系統 (例如 Windows ADK、使用者狀態移轉工具 (USMT)、Windows 部署服務 (WDS)、支援的硬碟設定等)。如需詳細資訊，請參閱[作業系統部署的基礎結構需求](../plan-design/infrastructure-requirements-for-operating-system-deployment.md)。  
 
--   **安装状态迁移点（仅在传输设置时需要）**  
+-   **安裝狀態移轉點 (轉移設定時才需要)**  
 
-     当你要从现有计算机捕获设置并将设置还原到新的操作系统时，必须安装状态迁移点。 有关详细信息，请参阅[状态迁移点](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_StateMigrationPoints)。  
+     當您要從現有的電腦擷取設定，然後將設定還原到新的作業系統時，您必須安裝狀態移轉點。 如需詳細資訊，請參閱[狀態移轉點](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_StateMigrationPoints)。  
 
-##  <a name="a-namebkmkconfigurea-configure"></a><a name="BKMK_Configure"></a> 配置  
+##  <a name="BKMK_Configure"></a> 設定  
 
-1.  **准备启动映像**  
+1.  **準備開機映像**  
 
-     启动映像将启动 Windows PE 环境（具有有限组件和服务的最小操作系统）中的计算机，然后在该计算机上安装完整的 Windows 操作系统。   在部署操作系统时，必须选择要使用的启动映像并将其分发到分发点。 使用以下方法来准备启动映像：  
+     開機映像會啟動 Windows PE 環境中的電腦 (內含有限元件和服務的最低作業系統)，接著在電腦上安裝完整的 Windows 作業系統。   部署作業系統時，您必須選取要使用的開機映像，將此映像發佈到發佈點。 請使用下列資訊準備開機映像：  
 
-    -   若要了解有关启动映像的详细信息，请参阅[管理启动映像](../get-started/manage-boot-images.md)。  
+    -   如需深入了解開機映像，請參閱[管理開機映像](../get-started/manage-boot-images.md)。  
 
-    -   有关如何自定义启动映像的详细信息，请参阅[自定义启动映像](../get-started/customize-boot-images.md)。  
+    -   如需如何自訂開機映像的詳細資訊，請參閱[自訂開機映像](../get-started/customize-boot-images.md)。  
 
-    -   将启动映像分发到分发点 有关详细信息，请参阅[分发内容](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content)。  
+    -   將開機映像發佈到發佈點。 如需詳細資訊，請參閱[發佈內容](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content)。  
 
-2.  **准备操作系统映像**  
+2.  **準備作業系統映像**  
 
-     操作系统映像包含在目标计算机上安装操作系统所必需的文件。 使用以下方法来准备操作系统映像：  
+     作業系統映像包含在目的地電腦安裝作業系統的必要檔案。 請使用下列資訊準備作業系統映像：  
 
-    -   若要了解有关如何创建操作系统映像的详细信息，请参阅[管理操作系统映像](../get-started/manage-operating-system-images.md)。  
+    -   若要深入了解如何建立作業系統映像，請參閱[管理作業系統映像](../get-started/manage-operating-system-images.md)。  
 
-    -   将操作系统映像分发到分发点。 有关详细信息，请参阅[分发内容](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content)。  
+    -   將作業系統映像發佈至發佈點。 如需詳細資訊，請參閱[發佈內容](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content)。  
 
-3.  **创建任务序列以通过网络部署操作系统**  
+3.  **建立工作順序以透過網路部署作業系統**  
 
-     使用任务序列以通过网络自动安装操作系统 使用[创建用于安装操作系统的任务序列](create-a-task-sequence-to-install-an-operating-system.md)中的步骤来创建部署操作系统的任务序列。 可能会有有关任务序列的其他注意事项，具体取决于你所选择的部署方法。  
+     使用網路上自動化作業系統安裝的工作順序。 請使用[建立工作順序以安裝作業系統](create-a-task-sequence-to-install-an-operating-system.md)中的步驟，建立工作順序以部署作業系統。 根據所選部署方法之不同，工作順序可能有其他考量。  
 
     > [!NOTE]  
-    >  在此方案中，任务序列对计算机上的硬盘进行格式化和分区。 若要捕获用户设置，必须使用状态迁移点，并在“创建任务序列”向导的“状态迁移”  页面上选择“在状态迁移点上保存用户设置和文件”  。 如果在本地保存用户设置和文件，它们会在硬盘格式化时丢失并且 Configuration Manager 将无法还原设置。 有关详细信息，请参阅[管理用户状态](../get-started/manage-user-state.md)。  
+    >  在此案例中，工作順序會格式化電腦上的硬碟，並進行磁碟分割。 若要擷取使用者設定，您必須使用狀態移轉點，然後在 [建立工作順序精靈] 的 [狀態移轉]  頁面上選取 [將使用者設定和檔案儲存在狀態移轉點上]  。 如果您在本機儲存使用者設定和檔案，它們將在格式化硬碟時遺失，且 Configuration Manager 將無法還原設定。 如需詳細資訊，請參閱[管理使用者狀態](../get-started/manage-user-state.md)。  
 
-##  <a name="a-namebkmkdeploya-deploy"></a><a name="BKMK_Deploy"></a> 部署  
+##  <a name="BKMK_Deploy"></a> 部署  
 
--   使用下列部署方法之一部署操作系统：  
+-   使用下列部署方法之一來部署作業系統：  
 
-    -   [使用 PXE 通过网络部署 Windows](use-pxe-to-deploy-windows-over-the-network.md)  
+    -   [使用 PXE 透過網路部署 Windows](use-pxe-to-deploy-windows-over-the-network.md)  
 
-    -   [使用多播通过网络部署 Windows](use-multicast-to-deploy-windows-over-the-network.md)  
+    -   [使用多點傳送透過網路來部署 Windows](use-multicast-to-deploy-windows-over-the-network.md)  
 
-    -   [为工厂中的 OEM 或本地 depot 创建映像](create-an-image-for-an-oem-in-factory-or-a-local-depot.md)  
+    -   [建立 OEM 原廠或本機 Depot 的映像](create-an-image-for-an-oem-in-factory-or-a-local-depot.md)  
 
-    -   [使用独立媒体部署 Windows，而不使用网络](use-stand-alone-media-to-deploy-windows-without-using-the-network.md)  
+    -   [使用獨立媒體，而不使用網路來部署 Windows](use-stand-alone-media-to-deploy-windows-without-using-the-network.md)  
 
-    -   [使用可启动媒体通过网络部署 Windows](use-bootable-media-to-deploy-windows-over-the-network.md)  
+    -   [透過網路使用可開機媒體部署 Windows](use-bootable-media-to-deploy-windows-over-the-network.md)  
 
-    -   [使用软件中心通过网络部署 Windows](use-software-center-to-deploy-windows-over-the-network.md)  
+    -   [使用軟體中心透過網路部署 Windows](use-software-center-to-deploy-windows-over-the-network.md)  
 
-## <a name="monitor"></a>监视器  
+## <a name="monitor"></a>監視  
 
--   **监视任务序列部署**  
+-   **監視工作順序部署**  
 
-     若要监视用于安装操作系统的任务序列部署，请参阅[监视操作系统部署](monitor-operating-system-deployments.md)。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-
+     若要監視工作順序部署以安裝作業系統，請參閱[監視作業系統部署](monitor-operating-system-deployments.md)。  

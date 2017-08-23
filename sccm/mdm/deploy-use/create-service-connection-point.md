@@ -1,64 +1,61 @@
 ---
-title: "使用 System Center Configuration Manager 创建服务连接点 | Microsoft Docs"
-description: "使用 System Center Configuration Manager 创建服务连接点。"
+title: "使用 System Center Configuration Manager 建立服務連接點 | Microsoft Docs"
+description: "使用 System Center Configuration Manager 建立服務連接點。"
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 617abb22-d22f-41fb-a76b-1c4259e419d2
-caps.latest.revision: 18
-caps.handback.revision: 0
+caps.latest.revision: "18"
+caps.handback.revision: "0"
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
 ms.openlocfilehash: 9a21d02cb2a50162e5de50481f0f27f2dd7a616c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="create-a-service-connection-point-with-system-center-configuration-manager-and-microsoft-intune"></a>使用 System Center Configuration Manager 和 Microsoft Intune 创建服务连接点
+# <a name="create-a-service-connection-point-with-system-center-configuration-manager-and-microsoft-intune"></a>使用 System Center Configuration Manager 和 Microsoft Intune 建立服務連接點
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用於：System Center Configuration Manager (最新分支)*
 
-创建了订阅后，你可以随后安装服务连接点站点系统角色，该角色使你能够连接到 Intune 服务。 此站点系统角色会将设置和应用程序推送到 Intune 服务。
+建立訂閱後，您就可以安裝服務連線點站台系統角色，該角色可讓您連線至 Intune 服務。 這個站台系統角色會將設定和應用程式推送到 Intune 服務。
 
- 服务连接点将设置和软件部署信息发送到 Configuration Manager，并从移动设备中检索状态和清单消息。 Configuration Manager 服务充当与移动设备通信的网关并存储设置。
+ 服務連接點會將設定和軟體部署資訊傳送至 Configuration Manager，並從行動裝置擷取狀態和清查訊息。 Configuration Manager 服務是與行動裝置進行通訊及儲存設定的閘道。
 
 > [!NOTE]
->  服务连接点系统角色只能安装在管理中心站点或独立主站点上。 服务连接点必须具有 Internet 访问权限。
+>  服務連線點站台系統角色只能安裝在管理中心網站或獨立主要站台上。 服務連接點必須能夠存取網際網路。
 
 
-## <a name="configure-the-service-connection-point-role"></a>配置服务连接点角色
+## <a name="configure-the-service-connection-point-role"></a>設定服務連接點角色
 
-1.  在 Configuration Manager 控制台中，单击“管理” 。
+1.  在 Configuration Manager 主控台中，按一下 [系統管理] 。
 
-2.  在“管理”工作区中，展开“站点”，然后单击“服务器和站点系统角色”。
+2.  在 [系統管理] 工作區中，展開 [站台]，然後按一下 [伺服器和站台系統角色]。
 
-3.  使用关联的步骤将“服务连接点”  角色添加到新的或现有的站点系统服务器：
+3.  使用關聯步驟，將 [服務連接點] 角色新增至新的或現有的站台系統伺服器：
 
-    -   新站点系统服务器：在“主页”  选项卡上的“创建”  组中，单击“创建站点系统服务器”  以启动创建站点系统服务器向导。
+    -   新增站台系統伺服器：在 [常用] 索引標籤的 [建立] 群組中，按一下 [建立站台系統伺服器] 以啟動 [建立站台系統伺服器精靈]。
 
-    -   现有站点系统服务器：单击你要在其上安装服务连接点角色的服务器。 然后，在“主页”  选项卡上的“服务器”  组中，单击“添加站点系统角色”  以启动添加站点系统角色向导。
+    -   現有的站台系統伺服器：按一下您要安裝服務連接點角色的伺服器。 在 [常用] 索引標籤的 [伺服器] 群組中，按一下 [新增網站系統角色] 以啟動 [新增網站系統角色精靈]。
 
-4.  在“系统角色选择”  页面上，选择“服务连接点” ，然后单击“下一步” 。
-![创建服务连接点](../media/mdm-service-connection-point.png)
+4.  在 [系統角色選取] 頁面上，選取 [服務連接點]，然後按一下 [下一步]。
+![建立服務連接點](../media/mdm-service-connection-point.png)
 
-* 完成向导。
+* 完成精靈。
 
-## <a name="how-does-the-service-connection-point-authenticate-with-the-microsoft-intune-service"></a>服务连接点如何通过 Microsoft Intune 服务进行身份验证？
- 服务连接点通过与基于云的 Intune 服务建立连接扩展了 Configuration Manager，从而可通过 Internet 管理移动设备。 服务连接点按照以下方式通过 Intune 服务进行身份验证：
+## <a name="how-does-the-service-connection-point-authenticate-with-the-microsoft-intune-service"></a>服務連接點如何向 Microsoft Intune 服務驗證？
+ 服務連接點會對透過網際網路管理行動裝置的雲端 Intune 服務建立連線，藉此擴充 Configuration Manager。 服務連接點使用 Intune 服務來驗證，如下所示：
 
-1.  在 Configuration Manager 控制台中创建 Intune 订阅时，通过连接到 Azure Active Directory 对 Configuration Manager 管理员进行身份验证，Azure Active Directory 将重定向到相应的 ADFS 服务器，提示输入用户名和密码。 然后，Intune 向租户颁发证书。
+1.  當您在 Configuration Manager 主控台建立 Intune 訂閱時，會連線到 Azure Active Directory 以驗證 Configuration Manager 系統管理員，其會重新導向至個別的 ADFS 伺服器，以提示輸入使用者名稱和密碼。 然後 Intune 會將憑證發行至租用戶。
 
-2.  步骤 1 中的证书安装在服务连接点站点角色上，用于对与 Microsoft Intune 服务的所有进一步通信进行身份验证和授权。
+2.  步驟 1 中的憑證安裝在服務接線點站台角色上，用來驗證和授權所有其他與 Microsoft Intune 服務的通訊。
 
 > [!div class="button"]
-[< 上一步](terms-and-conditions.md)  [下一步 >](enable-platform-enrollment.md)
-
+[< 上一個步驟](terms-and-conditions.md)  [下一個步驟 >](enable-platform-enrollment.md)

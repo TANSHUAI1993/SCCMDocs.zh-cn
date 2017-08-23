@@ -1,39 +1,32 @@
 ---
-title: "报表的安全和隐私 | Microsoft Docs"
-description: "在 Configuration Manager 中使用报表功能时，请了解有关安全和隐私的最佳实践。"
+title: "報告的安全性和隱私權 | Microsoft Docs"
+description: "使用 Configuration Manager 報告功能時，請了解安全性和隱私權的最佳作法。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7a555e06-e6d7-4ebb-8252-412b7c5ad1c1
-caps.latest.revision: 4
-caps.handback.revision: 0
+caps.latest.revision: "4"
+caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
 ms.openlocfilehash: 50ef8b761533bfdd5e8d23abc7791beb4c7d0b11
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="security-and-privacy-for-reporting-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的报表的安全和隐私
+# <a name="security-and-privacy-for-reporting-in-system-center-configuration-manager"></a>System Center Configuration Manager 中報告的安全性和隱私權
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用對象：System Center Configuration Manager (最新分支)*
 
-本主题包含 System Center Configuration Manager 中报表的安全最佳实践和隐私信息。  
+本主題包含 System Center Configuration Manager 報告的安全性最佳作法和隱私權資訊。  
 
- Configuration Manager 报表显示在标准 Configuration Manager 管理操作过程中收集的信息。 例如，你可以显示已从发现或清单中收集的信息的报表。 报表还可以包含客户端管理操作的当前状态信息，例如正在部署软件和正在检查符合性。  
+ Configuration Manager 報告會顯示標準 Configuration Manager 管理作業期間收集的資訊。 例如，您可以顯示從探索或清查收集而來的資訊報告。 報告也可以包含用戶端管理作業目前的狀態資訊，例如部署軟體和檢查相容性。  
 
- 有关 Configuration Manager 操作（可能生成可显示在报表中的数据）的任何安全最佳实践和隐私信息的详细信息，请参阅 [System Center Configuration Manager 的安全最佳实践和隐私信息](../../plan-design/security/security-best-practices-and-privacy-information.md)。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-
+ 如需有關可能產生可在報告中顯示的資料之 Configuration Manager 作業的任何安全性最佳作法和隱私權資訊的詳細資訊，請參閱 [System Center Configuration Manager 的安全性最佳作法與隱私權資訊](../../plan-design/security/security-best-practices-and-privacy-information.md)。  

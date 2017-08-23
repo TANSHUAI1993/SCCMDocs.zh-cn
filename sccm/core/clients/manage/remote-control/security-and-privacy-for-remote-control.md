@@ -1,67 +1,63 @@
 ---
-title: "远程控制安全和隐私 | Microsoft Docs"
-description: "获取 System Center Configuration Manager 中远程控制的安全和隐私信息。"
+title: "遠端控制安全性隱私權 | Microsoft Docs"
+description: "取得 System Center Configuration Manager 中遠端控制的安全性和隱私權資訊。"
 ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 272ee86b-d3d9-4fd9-b5c4-73e490e1a1e4
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
-ms.openlocfilehash: 342a58d2b7439f721381beb43188594b5278043d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 12/16/2016
-
-
+ms.openlocfilehash: 03b8ede7fa4f4c02ffb551bb28fe2db234d39b12
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="security-and-privacy-for-remote-control-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的远程控制的安全和隐私
+# <a name="security-and-privacy-for-remote-control-in-system-center-configuration-manager"></a>System Center Configuration Manager 中遠端控制的安全性和隱私權
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用於：System Center Configuration Manager (最新分支)*
 
-本主题包括有关 System Center 2012 Configuration Manager 中远程控制的安全和隐私信息。  
+本主題包含 System Center 2012 Configuration Manager 中遠端控制的安全性和隱私權資訊。  
 
-##  <a name="BKMK_Security_HardwareInventory"></a> 远程控制安全最佳方案  
- 在使用远程控制管理客户端计算机时，请使用下列最佳安全方案。  
+##  <a name="BKMK_Security_HardwareInventory"></a> 遠端控制的安全性最佳做法  
+ 當您使用遠端控制管理用戶端電腦時，可使用下列安全性最佳做法。  
 
-|最佳安全方案|更多信息|  
+|安全性最佳作法|詳細資訊|  
 |----------------------------|----------------------|  
-|连接到远程计算机时，如果使用 NTLM 而不是 Kerberos 身份验证，请不要继续操作。|当 Configuration Manager 检测到使用 NTLM 而非 Kerberos 对远程控制会话进行身份验证时，你会看到一个提示，警告无法验证远程计算机的标识。 请勿继续使用远程控制会话。 NTLM 身份验证是比 Kerberos 更弱的身份验证协议，容易遭受重播和模拟攻击。|  
-|请勿在远程控制查看器中启用剪贴板共享。|剪贴板支持诸如可执行文件和文本这类对象，可以由主计算机上的用户在远程控制会话期间用于对原始计算机运行程序。|  
-|在远程管理计算机时，请勿对特权帐户输入密码。|监视键盘输入的软件可能捕获到该密码。 或者，如果在客户端计算机上运行的程序不是远程控制用户假定的程序，该程序也可能正在捕获密码。 当要求输入帐户和密码时，应由最终用户输入。|  
-|在远程控制会话过程中锁定键盘和鼠标。|如果 Configuration Manager 检测到远程控制连接已终止，则 Configuration Manager 会自动锁定键盘和鼠标，以便用户无法控制打开的远程控制会话。 但是，此检测可能不会立即进行，因而不会在远程控制服务终止时进行。<br /><br /> 在“ConfigMgr 远程控制”  窗口中选择操作“锁定远程键盘和鼠标”  。|  
-|请勿让用户在软件中心配置远程控制设置。|请勿启用客户端设置“用户可以在软件中心内更改策略或通知设置”  以帮助防止用户被窥探。<br /><br /> 此设置适用于计算机，而不适用于已登录用户。|  
-|启用“域”  Windows 防火墙配置文件。|启用客户端设置“对客户端防火墙例外配置文件启用远程控制”  ，然后为 intranet 计算机选择“域”  Windows 防火墙。|  
-|如果在远程控制会话期间注销，然后以其他用户身份登录，请确保在断开远程控制会话连接之前注销。|如果未在此情况下注销，则会话会保持打开状态。|  
-|请勿向用户授予本地管理员权限。|向用户提供本地管理员权限时，他们可能能够接管远程控制会话或损害你的凭据。|  
-|使用组策略或 Configuration Manager 来配置远程协助设置，但不要同时使用两者。|可以使用 Configuration Manager 和组策略对远程协助设置进行配置更改。 组策略在客户端上进行刷新时，默认情况下，它会通过仅更改在服务器上进行了更改的策略来优化该过程。 Configuration Manager 会更改本地安全策略中的设置（除非强制进行组策略更新，否则无法覆盖这些设置）。<br /><br /> 这两处的设置策略都可能导致结果不一致。 选择这些方法之一来配置远程协助设置。|  
-|启用客户端设置“提示用户提供远程控制权限” 。|虽然有方法可以解决提示用户确认远程控制会话的此客户端设置，不过启用此设置可减少用户在处理机密任务时被窥探的可能性。<br /><br /> 此外，请培训用户验证在远程控制会话过程中显示的帐户名称，并在怀疑帐户未经授权时断开会话连接。|  
-|限制“允许的查看者”列表。|对于能够使用远程控制的用户，不要求具有本地管理员权限。|  
+|當您連線到遠端電腦時，如果使用了 NTLM 而非 Kerberos 驗證，請勿繼續。|當 Configuration Manager 偵測到使用 NTLM 而非 Kerberos 驗證遠端控制工作階段，會出現提示警告您：無法驗證遠端電腦的身分識別。 請勿繼續進行遠端控制工作階段。 NTLM 驗證是比 Kerberos 弱的驗證通訊協定，更容易被重新執行和模擬。|  
+|請不要在遠端控制檢視器中共用剪貼簿。|剪貼簿支援可執行檔和文字等物件，而且主機電腦的使用者可以在遠端控制工作階段使用剪貼簿在原始電腦上執行程式。|  
+|從遠端管理電腦時，請勿輸入特殊權限帳戶的密碼。|監視鍵盤輸入的軟體可以擷取到密碼。 或者，如果用戶端電腦目前執行的程式不是遠端控制使用者所以為的程式，該程式可能在擷取密碼。 需要帳戶和密碼時，使用者應該輸入它們。|  
+|遠端控制工作階段期間請鎖定鍵盤和滑鼠。|如果 Configuration Manager 偵測到遠端控制連線已終止，Configuration Manager 會自動鎖定鍵盤和滑鼠，讓使用者無法接管已開啟的遠端控制工作階段。 但這項偵測可能不會立即進行，而如果遠端控制服務已終止，偵測也不會發生。<br /><br /> 請在 [ConfigMgr 遠端控制]  視窗中選取 [鎖定遠端鍵盤和滑鼠]  動作。|  
+|不要讓使用者在軟體中心內設定遠端控制設定。|不要啟用 [使用者可以在軟體中心變更原則或通知設定]  用戶端設定，以防使用者被監視。<br /><br /> 這項設定適用於電腦，不適用於登入的使用者。|  
+|啟用 **網域** Windows 防火牆設定檔。|啟用 [啟用用戶端防火牆例外設定檔的遠端控制]  用戶端設定，然後為內部網路電腦選取 **網域** Windows 防火牆。|  
+|如果在遠端控制工作階段期間登出，又以其他使用者身分登入，請確定您登出再中斷遠端控制工作階段。|這種情況下如未登出，工作階段會保持開啟狀態。|  
+|請勿提供使用者本機系統管理員權限。|當您提供使用者本機系統管理員權限時，他們可能會接管您的遠端控制工作階段或危害您的認證。|  
+|請使用群組原則或 Configuration Manager 來設定遠端協助設定，但不要同時使用。|您可以使用 Configuration Manager 和群組原則來變更遠端協助設定的設定。 用戶端的群組原則重新整理時，預設只變更伺服器已變更的原則，以提升效率。 Configuration Manager 會變更本機安全性原則中的設定，除非強制更新群組原則，否則可能不會覆寫設定。<br /><br /> 這兩個位置的設定原則可能會造成結果不一致。 請選擇這些方法的其中之一來設定遠端協助設定。|  
+|啟用 [提示使用者提供遠端控制權限] 用戶端設定。|雖然這項用戶端設定有很多方法可以提示使用者確認遠端控制工作階段，但啟用這項設定可以降低使用者在處理機密工作時被監視的機會。<br /><br /> 此外，請教育使用者確認在遠端控制工作階段期間所顯示的帳戶名稱，如果懷疑帳戶未獲得授權，請中斷工作階段連線。|  
+|限制 [允許的檢視者] 清單。|使用者不需要本機系統管理員權限，也能夠能夠使用遠端控制。|  
 
-### <a name="security-issues-for-remote-control"></a>远程控制的安全问题  
- 使用远程控制管理客户端计算机具有以下安全问题：  
+### <a name="security-issues-for-remote-control"></a>遠端控制的安全性問題  
+ 使用遠端控制管理用戶端電腦具有下列安全性問題：  
 
--   不将远程控制审核消息视为可靠。  
+-   請不要認為遠端控制稽核訊息是可靠的。  
 
-     如果启动远程控制会话，然后使用备用凭据登录，则原始帐户会发送审核消息，而不是使用备用凭据的帐户。  
+     如果您開始遠端控制工作階段，並使用替代認證登入，原始帳戶就會傳送稽核訊息，不是使用替代認證的帳戶。  
 
-     如果复制远程控制的二进制文件而不是安装 Configuration Manager 控制台，然后在命令提示符下运行远程控制，则不会发送审核消息。  
+     如果您複製遠端控制的二進位檔案，而不是安裝 Configuration Manager 主控台，就不會傳送稽核訊息，接著會在命令提示字元中執行遠端控制。  
 
-##  <a name="BKMK_Privacy_HardwareInventory"></a> 远程控制的隐私信息  
- 远程控制允许查看 Configuration Manager 客户端计算机上的活动会话，可能也可以查看存储在这些计算机上的任何信息。 默认情况下不启用远程控制。  
+##  <a name="BKMK_Privacy_HardwareInventory"></a> 遠端控制的隱私權資訊  
+ 遠端控制可讓您在 Configuration Manager 用戶端電腦上檢視作用中的工作階段，而且可能可以檢視儲存在這些電腦上的任何資訊。 預設不啟用遠端控制。  
 
- 虽然你可以将远程控制配置为提供明确通知，并在开始远程控制会话之前获得用户的同意，不过它还是可能在不经用户同意或用户不知情的情况下监视用户。 可以配置“仅查看”访问级别以便无法对远程控制进行任何更改，也可以配置“完全控制”。 连接的管理员的帐户会显示在远程控制会话中，以帮助用户识别连接到其计算机的人员。  
+ 雖然您可以設定遠端控制提供顯著的通知，並在遠端控制工作階段開始之前取得使用者同意，但仍然可以在不經使用者同意或覺察下監視使用者。 您可以設定 [只檢視] 或 [完全控制] 存取層級，使遠端控制不能變更任何內容。 遠端控制工作階段中會顯示連線系統管理員的帳戶，幫助使用者識別誰正在連線到他們的電腦。  
 
- 默认情况下，Configuration Manager 会向本地管理员组授予远程控制权限。  
+ Configuration Manager 預設會將遠端控制權限授與本機系統管理員群組。  
 
- 在配置远程控制之前，请考虑隐私要求。  
-
+ 設定遠端控制之前，請考慮您的隱私權需求。  

@@ -1,110 +1,103 @@
 ---
-title: "规划客户端迁移 | Microsoft Docs"
-description: "了解将客户端从源层次结构迁移到 System Center Configuration Manager 目标层次结构的任务。"
+title: "規劃用戶端移轉 | Microsoft Docs"
+description: "了解將用戶端從來源階層移轉至 System Center Configuration Manager 目的地階層的工作。"
 ms.custom: na
 ms.date: 12/30/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2e27b0b7-7bd3-45cd-bc99-9c991606c637
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: ac4576035fda943e38d960dd425d44b7a6ef6a01
 ms.openlocfilehash: b52ca4059dfeed08cabf1f75319da40d6499622f
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="plan-a-client-migration-strategy-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中规划客户端迁移策略
+# <a name="plan-a-client-migration-strategy-in-system-center-configuration-manager"></a>規劃 System Center Configuration Manager 中的用戶端移轉策略
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用於：System Center Configuration Manager (最新分支)*
 
-要将客户端从源层次结构迁移到 System Center Configuration Manager 目标层次结构，必须执行两个任务。 你必须迁移与客户端关联的对象，并且必须重新安装或将客户端从源层次结构重新分配到目标层次结构。 请先迁移对象，以便在迁移客户端时这些对象可用。 与客户端关联的对象是通过使用迁移作业迁移的。 有关如何迁移与客户端关联的对象的信息，请参阅[在 System Center Configuration Manager 中规划迁移作业策略](../../core/migration/planning-a-migration-job-strategy.md)。  
+若要將用戶端從來源階層移轉至 System Center Configuration Manager 目的地階層，您必須執行兩項工作。 您必須移轉與用戶端相關聯的物件，而且必須將用戶端從來源階層重新安裝或重新指派至目的地階層。 先移轉物件，如此在移轉用戶端時，就可以使用物件。 與用戶端相關聯的物件是使用移轉作業進行移轉。 如需移轉與用戶端相關聯之物件方式的詳細資訊，請參閱 [Planning a migration job strategy in System Center Configuration Manager](../../core/migration/planning-a-migration-job-strategy.md) (規劃 System Center Configuration Manager 中的移轉作業策略)。  
 
- 使用下列部分来帮助你规划将客户端迁移到目标层次结构。  
+ 使用以下各節內容有助於規劃將用戶端移轉至目的地階層。  
 
--   [规划将客户端迁移到目标层次结构](#Planning_for_Client_Agent_Migration)  
+-   [規劃將用戶端移轉至目的地階層](#Planning_for_Client_Agent_Migration)  
 
--   [规划在迁移过程中处理客户端中保留的数据](#Planning_for_Client_Data_Migration)  
+-   [規劃處理移轉期間保留在用戶端上的資料](#Planning_for_Client_Data_Migration)  
 
--   [在迁移过程中规划清单和符合性数据](#Planning_for_Inventory_data_migration)  
+-   [規劃移轉期間的清查和相容性資料](#Planning_for_Inventory_data_migration)  
 
-##  <a name="a-nameplanningforclientagentmigrationa-plan-to-migrate-clients-to-the-destination-hierarchy"></a><a name="Planning_for_Client_Agent_Migration"></a> 规划将客户端迁移到目标层次结构  
- 从源层次结构中迁移客户端时，客户端计算机上的客户端软件将升级，以与目标层次结构的产品版本匹配。  
+##  <a name="Planning_for_Client_Agent_Migration"></a> 規劃將用戶端移轉至目的地階層  
+ 從來源階層移轉用戶端時，用戶端電腦上的用戶端軟體會升級，以符合來源階層的產品版本。  
 
--   **Configuration Manager 2007 源层次结构：**从运行受支持版本的 Configuration Manager 源层次结构中迁移客户端时，客户端软件将升级到目标层次结构的客户端版本。  
+-   **Configuration Manager 2007 來源階層：**當您從執行 Configuration Manager 受支援版本的來源階層移轉用戶端時，用戶端軟體會升級為目的地階層的用戶端版本。  
 
--   **System Center 2012 Configuration Manager 或更高版本的层次结构：**在产品版本相同的层次结构之间迁移客户端时，客户端软件不会更改或升级。 而是会从源层次结构重新分配到目标层次结构中的站点。  
+-   **System Center 2012 Configuration Manager 或更新版本的來源階層：**當您在產品版本相同的階層之間移轉用戶端時，用戶端軟體不會變更或升級。 而是從來源階層重新指派至目的地階層中的站台。  
 
     > [!NOTE]  
-    >  如果层次结构的产品版本不支持迁移到目标层次结构，请将源层次结构中的所有站点和客户端升级到兼容的产品版本。 源层次结构升级到支持的产品版本后，你可以在层次结构之间进行迁移。 有关详细信息，请参阅 [System Center Configuration Manager 中迁移的先决条件](../../core/migration/prerequisites-for-migration.md)中的[迁移支持的 Configuration Manager 版本](../../core/migration/prerequisites-for-migration.md#BKMK_SupportedMigrationVersions)。  
+    >  若某階層產品版本無法移轉到您的目的地階層，請將來源階層中的所有站台和用戶端全升級到相容的產品版本。 在來源階層升級到受支援的產品版本後，就可以在階層之間移轉。 如需詳細資訊，請參閱[在 System Center Configuration Manager 中進行移轉的必要條件](../../core/migration/prerequisites-for-migration.md)的[支援移轉的 Configuration Manager 版本](../../core/migration/prerequisites-for-migration.md#BKMK_SupportedMigrationVersions)。  
 
-使用以下信息来帮助你规划客户端迁移：  
+請利用下列資訊幫助您規劃用戶端移轉：  
 
--   若要将客户端从源站点升级或重新分配到目标站点，你可以使用支持的任何客户端部署方法在目标层次结构中部署客户端。 典型的客户端部署方法包括客户端请求安装、软件分发、组策略和基于软件更新的客户端安装。 有关详细信息，请参阅 [System Center Configuration Manager 中的客户端安装方法](../../core/clients/deploy/plan/client-installation-methods.md)。  
+-   若要從來源站台將用戶端升級或重新指派至目的地站台，請使用支援在目的地階層中部署用戶端的任何用戶端部署方法。 一般用戶端部署方法包括用戶端推入安裝、軟體發佈、群組原則，以及軟體更新為基礎的用戶端安裝。 如需詳細資訊，請參閱 [System Center Configuration Manager 中的用戶端安裝方法](../../core/clients/deploy/plan/client-installation-methods.md)。  
 
--   确保源层次结构中运行客户端软件的设备满足最低硬件要求，并运行目标层次结构中的 Configuration Manager 版本支持的操作系统。  
+-   請確定執行來源階層之用戶端軟體的裝置符合最低硬體需求，並且執行目的地階層中 Configuration Manager 版本支援的作業系統。  
 
--   在迁移客户端之前，请运行迁移作业以迁移客户端将在目标层次结构中使用的信息。  
+-   在移轉用戶端之前，請先執行移轉作業來移轉用戶端將在目的地階層中使用的資訊。  
 
--   升级的客户端保留其部署的运行历史记录。 这可以防止部署在目标层次结构中进行不必要的重新运行。  
+-   升級後保留部署執行歷程記錄的用戶端。 這可以避免部署在目的地階層中不必要地重複執行。  
 
-    -   对于 Configuration Manager 2007 客户端，会保留播发运行历史记录。  
+    -   若是 Configuration Manager 2007 用戶端，會保留公告執行歷程記錄。  
 
-    -   对于 System Center 2012 Configuration Manager 或 System Center Configuration Manager 客户端，会保留部署运行历史记录。  
+    -   針對 System Center 2012 Configuration Manager 或 System Center Configuration Manager 的用戶端，保留部署執行歷程記錄。  
 
--   你可以按所选的任何顺序从源层次结构内的站点中迁移客户端。 但是，请考虑分阶段迁移限制数量的客户端，而不是一次迁移大量的客户端。 分阶段迁移可减少每个新升级的客户端将其初始完整清单和符合性数据提交到为其分配的站点时的网络带宽需求和服务器处理。  
+-   您可以依照您選擇的任何順序，從來源階層中的站台移轉用戶端。 不過，請考慮分階段移轉有限的用戶端數目，不要一次移轉大量的用戶端。 分段移轉可在每個新升級的用戶端將其初始完整清查和相容性資料提交至其指派的站台時，減少網路頻寬需求和伺服器處理。  
 
--   在迁移 Configuration Manager 2007 客户端时，会从客户端计算机中卸载现有客户端软件，并安装新的客户端软件。  
+-   當您移轉 Configuration Manager 2007 用戶端時，現有的用戶端軟體會從用戶端電腦上解除安裝，然後安裝新的用戶端軟體。  
 
--   Configuration Manager 无法迁移安装了 App-V 客户端的 Configuration Manager 2007 客户端，除非 App-V 客户端版本为 4.6 SP1 或更高版本。  
+-   Configuration Manager 無法移轉安裝了 App-V 用戶端的 Configuration Manager 2007 用戶端，除非 App-V 用戶端版本是 4.6 SP1 或更新版本。  
 
-可以在 Configuration Manager 控制台“管理”工作区的“迁移”节点中监视客户端迁移进程。  
+在 Configuration Manager 主控台之 [管理] 工作區的 [移轉] 節點，您可以監視用戶端移轉進度。  
 
-将客户端迁移到目标层次结构后，将不再能够使用源层次结构管理该设备，并且应考虑从源层次结构中删除客户端。 尽管这不是迁移层次结构时必须进行的操作，但它可帮助防止在源层次结构报表中标识已迁移的客户端，或不正确地计算迁移过程中两个层次结构之间的资源数量。 例如，当已迁移客户端保留在源站点数据库中时，如果计算机现在由目标层次结构管理，则运行的软件更新报表可能会不正确地将该计算机标识为不受管理的资源。  
+將用戶端移轉至目的地階層之後，您就無法再使用來源階層管理該裝置，而應該考慮從來源階層中移除用戶端。 雖然這不是移轉階層時的需求，但是有助於避免在來源階層報告中識別移轉的用戶端，或是在移轉期間發生兩個階層之間的資源計數不正確。 例如，如果移轉的用戶端留在來源站台資料庫中，您可能會執行軟體更新報告，而誤將該電腦識別為未受管理的資源，而實際上是受到目的地階層管理。  
 
-##  <a name="a-nameplanningforclientdatamigrationa-plan-to-handle-data-maintained-on-clients-during-migration"></a><a name="Planning_for_Client_Data_Migration"></a> 规划在迁移过程中处理客户端中保留的数据  
-将客户端从其源层次结构迁移到目标层次结构时，某些信息在迁移之后会保留在设备上，而其他信息则在设备上不可用。  
+##  <a name="Planning_for_Client_Data_Migration"></a> 規劃處理移轉期間保留在用戶端上的資料  
+您將用戶端從其來源階層移轉至目的地階層時，有些資料會保留在裝置上，而有些資料在移轉後就不會存在裝置上。  
 
-以下信息将保留在客户端设备上：  
+下列資訊會保留在用戶端裝置上：  
 
--   唯一标识符 (GUID)，用于将客户端与其在 Configuration Manager 数据库中的信息关联。  
+-   唯一識別碼 (GUID)，會將用戶端與 Configuration Manager 資料庫中的相關資訊產生關聯。  
 
--   播发或部署历史记录，用于防止客户端不必要地在目标层次结构中重新运行播发或部署。  
+-   公告或部署歷程記錄，可避免用戶端在目的地階層中不必要地重複執行公告或部署。  
 
-以下信息不会保留在客户端设备上：  
+下列資訊不會保留在用戶端裝置上：  
 
--   客户端缓存中的文件。 如果客户端需要这些文件来安装软件，则客户端将再次从目标层次结构中下载这些文件。  
+-   用戶端快取中的檔案。 如果用戶端需要這些檔案才能安裝軟體，用戶端會再次從目的地階層下載這些檔案。  
 
--   源层次结构中有关尚未运行的任何播发或部署的信息。 如果希望客户端在其迁移后运行这些播发或部署，你必须将它们重新部署到目标层次结构中的客户端。  
+-   來源階層中尚未執行的任何公告或部署的相關資訊。 如果您要讓用戶端在移轉後執行公告或部署，則必須將它們重新部署到目的地階層中的用戶端。  
 
--   有关清单的信息。 客户端在迁移之后向目标层次结构中为其分配的站点呈现此信息，并且已生成新的客户端数据。  
+-   清查的相關資訊。 用戶端會在移轉且已產生新的用戶端資料後，將此資訊重新傳送至目的地階層中其指定的站台。  
 
--   符合性数据。 客户端在迁移之后向目标层次结构中为其分配的站点呈现此信息，并且已生成新的客户端数据。  
+-   相容性資料。 用戶端會在移轉且已產生新的用戶端資料後，將此資訊重新傳送至目的地階層中其指定的站台。  
 
-当客户端迁移时，不会保留存储在 Configuration Manager 客户端注册表和文件路径中的信息。 迁移之后，请重新应用这些设置。 典型的设置包括以下各项：  
+用戶端移轉時，儲存在 Configuration Manager 用戶端登錄和檔案路徑中的資訊不會保留。 移轉後，重新套用這些設定。 以下是一般設定：  
 
--   电源使用方案  
+-   電源配置  
 
--   日志记录设置  
+-   記錄設定  
 
--   本地策略设置  
+-   本機原則設定  
 
-此外，你可能必须重新安装某些应用程序。  
+此外，您可能需要重新安裝部分應用程式。  
 
-##  <a name="a-nameplanningforinventorydatamigrationa-plan-for--inventory-and-compliance-data-during-migration"></a><a name="Planning_for_Inventory_data_migration"></a> 在迁移过程中规划清单和符合性数据  
-当你将客户端迁移到目标层次结构时，不会保存客户端清单和符合性数据， 而是会在客户端第一次将其信息发送到为其分配的站点时在目标层次结构中重新创建此信息。 为了帮助减少产生的网络带宽需求和服务器处理，请考虑分阶段迁移少量的客户端，而不是一次迁移大量的客户端。  
+##  <a name="Planning_for_Inventory_data_migration"></a> 規劃移轉期間的清查和相容性資料  
+您將用戶端移轉至目的地階層時，用戶端清查和相容性資料並不會儲存。 此資訊會在用戶端初次將其資訊傳送至其指定的站台時，於目的地階層中重新建立。 若要幫助減少產生的網路頻寬需求和伺服器處理，請考慮分階段移轉小量用戶端，而不要一次移轉大量用戶端。  
 
- 此外，你无法从源层次结构迁移硬件清单的自定义项。 你必须独立于迁移将这些自定义项引入目标层次结构。 有关如何扩展硬件清单的信息，请参阅[如何在 System Center Configuration Manager 中配置硬件清单](../../core/clients/manage/inventory/configure-hardware-inventory.md)。  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
-
+ 此外，您無法從來源階層移轉硬體清查的自訂。 您必須在移轉之外另行將這些自訂導入目的地階層中。 如需如何擴充硬體清查的資訊，請參閱[如何擴充 System Center Configuration Manager 中的硬體清查](../../core/clients/manage/inventory/configure-hardware-inventory.md)。  

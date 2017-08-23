@@ -1,145 +1,141 @@
 ---
-title: "准备 Windows Server | Microsoft Docs"
-description: "确保计算机满足用作 System Center Configuration Manager 的站点服务器或站点系统服务器的先决条件。"
+title: "準備 Windows Server | Microsoft Docs"
+description: "請確定電腦符合當成 System Center Configuration Manager 站台伺服器或站台系統伺服器使用的必要條件。"
 ms.custom: na
 ms.date: 2/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 2aca914f-641e-4bc8-98d4-bbf0a2a5276f
-caps.latest.revision: 10
-caps.handback.revision: 0
+caps.latest.revision: "10"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dd102603356864add4084c6881c39bebcbd635f2
 ms.openlocfilehash: 9b97dedb5d2be0bd2e47260033e6e4361467dc4e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="prepare-windows-servers-to-support-system-center-configuration-manager"></a>准备 Windows Server 以支持 System Center Configuration Manager
+# <a name="prepare-windows-servers-to-support-system-center-configuration-manager"></a>準備 Windows 伺服器以支援 System Center Configuration Manager
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用對象：System Center Configuration Manager (最新分支)*
 
-在将一台 Windows 计算机作为用于 System Center Configuration Manager 的站点系统服务器使用之前，该计算机必须满足作为站点服务器或站点系统服务器使用的先决条件。  
+在您將 Windows 電腦當成 System Center Configuration Manager 站台系統伺服器使用之前，必須確定電腦符合其預期用途 (站台伺服器或站台系統伺服器) 的必要條件。  
 
--   这些先决条件通常包括一个或多个 Windows 功能或角色，通过使用计算机服务器管理器启用它们。  
+-   這些必要條件通常包含一個或多個 Windows 功能或角色，使用電腦伺服器管理員可加以啟用。  
 
--   因为在不同的操作系统中启用 Windows 功能和角色的方法是不同的，请参考适用于自己操作系统的文档以获取关于如何设置所用操作系统的详细信息。  
+-   由於啟用 Windows 功能和角色的方法因不同作業系統而有所差異，所以請參考您的作業系統文件，以取得設定所用作業系統的詳細資訊。  
 
-本文中的信息概述了支持 System Center Configuration Manager 站点系统所需的 Windows 配置类型。 有关特定站点系统角色配置的详细信息，请参阅[站点和站点系统先决条件](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)。
+這篇文章中的資訊提供支援 Configuration Manager 站台系統所需的 Windows 設定類型概觀。 如需特定站台系統角色的設定詳細資料，請參閱[站台和站台系統必要條件](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)。
 
-##  <a name="BKMK_WinFeatures"></a>Windows 功能和角色  
- 在计算机上设置 Windows 功能和角色时，可能需要重新启动计算机以完成该配置。 因此，一个不错的做法是，安装 Configuration Manager 站点或站点系统服务器之前，先确定要承载特定站点系统角色的计算机。
+##  <a name="BKMK_WinFeatures"></a> Windows 功能和角色  
+ 當您在電腦上設定 Windows 功能和角色時，可能需要將電腦重新開機，才能完成設定。 因此，在安裝 Configuration Manager 站台或站台系統伺服器之前，找出即將裝載特定站台系統角色是個不錯的主意。
 ### <a name="features"></a>功能  
- 以下 Windows 功能是某些站点系统服务器必需的，且应在该计算机上安装站点系统角色之前进行设置。  
+ 下列 Windows 功能為特定站台系統伺服器所需，並且應該先加以設定，再將站台系統角色安裝於該電腦。  
 
--   **NET Framework**：包括  
+-   **.NET Framework**：包括  
 
     -   ASP.NET  
-    -   HTTP 激活  
-    -   非 HTTP 激活  
-    -   Windows Communication Foundation (WCF) 服务  
+    -   HTTP 啟動  
+    -   非 HTTP 啟動  
+    -   Windows Communication Foundation (WCF) 服務  
 
-    不同的站点系统角色需要不同版本的 .NET Framework。  
+    不同站台系統角色需要不同版本的 .NET Framework。  
 
-    由于.NET Framework 4.0 和更高版本不是向后兼容，无法替换 3.5 及更早版本，在不同的版本被列为必需时，计划在同一台计算机上启用每个版本。  
+    由於 .NET Framework 4.0 及更新版本無法與舊版相容以取代 3.5 及較舊版本，因此當不同版本列為必要版本時，請規劃在同一部電腦上啟用每個版本。  
 
--   后台智能传输服务 **BITS**：管理点需要 BITS（和自动选择的选项）来支持与托管设备之间的通信。  
+-   **背景智慧型傳送服務 (BITS)**：管理點需要 BITS (和自動選取的選項) 才可支援與受管理裝置間的通訊。  
 
--   **BranchCache**：可以通过 BranchCache 来设置分发点以支持使用 BranchCache 的客户端。  
+-   **BranchCache**：可在發佈點設定 BranchCache，以支援使用 BranchCache 的用戶端。  
 
--   **重复数据删除**：可以使用重复数据删除设置分发点并从中获益。  
+-   **重複資料刪除**：可在發佈點設定重複資料刪除，而從中獲得好處。  
 
--   远程差分压缩 **RDC**：每个托管站点服务器或分发点的计算机都需要 RDC。   
-    RDC 用于生成包签名和执行签名比较。  
+-   **遠端差異壓縮 (RDC)**：每部裝載站台伺服器或發佈點的電腦都需要 RDC。   
+    RDC 可用於產生封裝簽章及執行簽章比較。  
 
 ### <a name="roles"></a>角色  
- 需要以下 Windows 角色来支持特定功能（例如软件更新和操作系统部署），而最常见的站点系统角色需要 IIS。  
+ 下列 Windows 角色為支援軟體更新及作業系統部署等特定功能所需，而 IIS 為大多數常用站台系統角色所需。  
 
- -   **网络设备注册服务**（在 Active Directory 证书服务之下）：此 Windows 角色是在 Configuration Manager 中使用证书配置文件的先决条件。  
+ -   **網路裝置註冊服務** (在 Active Directory 憑證服務下)：此 Windows 角色是使用 Configuration Manager 中「憑證設定檔」的必要條件。  
 
- -   **Web 服务器 IIS**：包括：  
-    -   常见 HTTP 功能 >  
-        -   HTTP 重定向  
-    -   应用程序开发 >  
-        -   .NET 扩展性  
+ -   **網頁伺服器 (IIS)**：包括：  
+    -   一般 HTTP 功能 >  
+        -   HTTP 重新導向  
+    -   應用程式開發 >  
+        -   .NET 擴充性  
         -   ASP.NET  
-        -   ISAPI 扩展  
-        -   ISAPI 筛选器  
+        -   ISAPI 擴充程式  
+        -   ISAPI 篩選器  
     -   管理工具 >  
-        -   IIS 6 管理兼容性  
-        -   IIS 6 元数据库兼容性  
-        -   IIS 6 Windows Management Instrumentation (WMI) 兼容性  
-    -   安全 >  
-        -   请求筛选  
-        -   Windows 身份验证  
+        -   IIS 6 管理相容性  
+        -   IIS 6 Metabase 相容性  
+        -   IIS 6 Windows Management Instrumentation (WMI) 相容性  
+    -   安全性 >  
+        -   要求篩選  
+        -   Windows 驗證  
 
- 下列站点系统角色使用一个或多个列出的 IIS 配置：  
-    -   应用程序目录 Web 服务点  
-    -   应用程序目录网站点  
-    -   分发点  
-    -   注册点  
-    -   注册代理点  
-    -   回退状态点  
-    -   管理点  
-    -   软件更新点  
-    -   状态迁移点     
+ 下列站台系統角色使用其中一或多項所列 IIS 設定：  
+    -   應用程式類別目錄 Web 服務點  
+    -   應用程式類別目錄網站點  
+    -   發佈點  
+    -   註冊點  
+    -   註冊 Proxy 點  
+    -   後援狀態點  
+    -   管理點  
+    -   軟體更新點  
+    -   狀態移轉點     
 
-    需要的最低 IIS 版本为随站点服务器的操作系统一起提供的版本。  
+    所需 IIS 最低版本為站台伺服器作業系統所提供的版本。  
 
-    除了这些 IIS 配置之外，可能还需要设置[分发点的 IIS 请求筛选](#BKMK_IISFiltering)。  
+    除了這些 IIS 設定外，您可能還需要設定[用於發佈點的 IIS 要求篩選](#BKMK_IISFiltering)。  
 
--   **Windows 部署服务**：此角色用于操作系统部署。  
--   **Windows Server 更新服务**：部署软件更新时将需要此角色。  
+-   **Windows 部署服務**：此角色是與「作業系統部署」搭配使用。  
+-   **Windows Server Update Services**：此角色為您部署軟體更新時所需。  
 
-##  <a name="BKMK_IISFiltering"></a>分发点的 IIS 请求筛选  
- 默认情况下，IIS 使用请求筛选来阻止 HTTP 或 HTTPS 通信访问多个文件扩展名和文件夹位置。 在分发点上，这会阻止客户端下载含有被阻止的扩展名或文件夹位置的包。  
+##  <a name="BKMK_IISFiltering"></a> 用於發佈點的 IIS 要求篩選  
+ IIS 預設會使用要求篩選來封鎖 HTTP 或 HTTPS 通訊存取伺服器數個副檔名和資料夾位置。 在發佈點上，如此可預防用戶端下載包含遭封鎖副檔名或資料夾位置的套件。  
 
- 如果包源文件含有在 IIS 中被请求筛选配置阻止的扩展名，则必须将请求筛选设置为不阻止这些扩展名。 这可通过在你的分发点计算机上的 IIS 管理器中 [编辑请求筛选功能](https://technet.microsoft.com/library/hh831621.aspx) 来完成。  
+ 如果您的套件來源檔案包含在 IIS 遭要求篩選設定封鎖的副檔名，您就必須將要求篩選設為允許這些副檔名。 在您的發佈點電腦上 IIS Manager 中 [編輯要求篩選功能](https://technet.microsoft.com/library/hh831621.aspx) 即可完成此作業。  
 
- 此外，Configuration Manager 将下列文件扩展名用于包和应用程序。 请确保请求筛选配置不会阻止以下文件扩展名：  
+ 此外，Configuration Manager 的套件和應用程式使用下列副檔名。 請確認您的要求篩選設定未封鎖這些副檔名：  
 
 -   .PCK  
 -   .PKG  
 -   .STA  
 -   .TAR  
 
-例如，软件部署的源文件可能包含名为 **bin** 的文件夹，或者包含具有 **.mdb** 文件扩展名的文件。  
+例如，軟體部署的來源檔案中可能包含名為 **bin**的資料夾，或是副檔名為 **.mdb** 的檔案。  
 
--   默认情况下，IIS 请求筛选会阻止对这些元素的访问（**bin** 作为隐藏段被阻止，**.mdb** 作为文件扩展名被阻止）。  
+-   IIS 要求篩選預設會封鎖對這些項目的存取權 (**bin** 會封鎖為 [隱藏區段]，**.mdb** 則封鎖為 [副檔名])。  
 
--   在分发点上使用默认的 IIS 配置时，使用 BITS 的客户端不能从分发点下载此软件部署，并指示它们正在等待内容。  
+-   在發佈點上使用預設的 IIS 組態時，使用 BITS 的用戶端將無法從發佈點下載此軟體部署，並且會表示他們正在等候內容。  
 
--   若要允许客户端下载此内容，请在每个适用的分发点上编辑 IIS 管理器中的“请求筛选”，以允许访问所部署的包和应用程序中的文件扩展名和文件夹。  
+-   若要讓用戶端下載此內容，請在每個適用的發佈點上編輯 IIS Manager 中的 [要求篩選]，以允許存取您所部署套件及應用程式中的副檔名和資料夾。  
 
 > [!IMPORTANT]  
->  对请求筛选器进行编辑会增大计算机的受攻击面。  
+>  編輯要求篩選可能增加電腦的受攻擊面。  
 >   
->  -   在服务器级别所做的编辑适用于服务器上的所有网站。  
-> -   对单独的网站进行的编辑仅适用于该网站。  
+>  -   您在伺服器層級進行的編輯適用於伺服器上所有網站。  
+> -   您對個別網站所做的編輯僅使用於該網站。  
 >   
->  最佳安全方案是在专用 Web 服务器上运行 Configuration Manager。 如果必须在 Web 服务器上运行其他应用程序，请使用 Configuration Manager 的自定义网站。 有关详细信息，请参阅 [System Center Configuration Manager 中的站点系统服务器网站](../../../core/plan-design/network/websites-for-site-system-servers.md)。  
+>  最佳安全作法是在專用 Web 伺服器上執行 Configuration Manager。 如果必須在該 Web 伺服器上執行其他應用程式，請使用 Configuration Manager 的自訂網站。 如需相關資訊，請參閱 [Websites for site system servers in System Center Configuration Manager](../../../core/plan-design/network/websites-for-site-system-servers.md) (System Center Configuration Manager 中的站台系統伺服器網站)。  
 
-## <a name="http-verbs"></a>HTTP 谓词
-**管理点：**若要确保客户端与管理点通信成功，请确保管理点服务器允许使用以下 HTTP 谓词：  
+## <a name="http-verbs"></a>HTTP 動詞
+**管理點︰**為了確保用戶端可以成功與管理點進行通訊，請在管理點伺服器上確認允許下列 HTTP 動詞︰  
  - GET
  - POST
  - CCM_POST
  - HEAD
  - PROPFIND
 
-**分发点：**分发点需要以下 HTTP 谓词：
+**發佈點︰**發佈點需要允許下列 HTTP 動詞：
  - GET
  - HEAD
  - PROPFIND
 
-有关如何配置请求筛选的信息，请参阅 TechNet 上的[IIS 中的配置请求筛选](https://technet.microsoft.com/library/hh831621.aspx#Verbs)或适用于托管管理点的 Windows Server 版本的类似文档。
-
+如需設定要求篩選的相關資訊，請參閱 TechNet 上的[在 IIS 中設定要求篩選](https://technet.microsoft.com/library/hh831621.aspx#Verbs)，或適用於裝載管理點的 Windows Server 版本的類似文件。

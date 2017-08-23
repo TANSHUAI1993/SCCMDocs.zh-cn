@@ -1,115 +1,108 @@
 ---
-title: "源层次结构策略 | Microsoft Docs"
-description: "在配置 System Center Configuration Manager 迁移作业之前，请先配置源层次结构并从源站点中收集数据。"
+title: "來源階層策略 | Microsoft Docs"
+description: "在您的 System Center Configuration Manager 環境中設定移轉作業之前，必須先設定來源階層，並且至少從該階層中的一個來源站台收集資料。"
 ms.custom: na
 ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4800a800-66c8-4c35-aebe-e413a23790c1
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: cb5f7bf52a53935ca61b0e1b66822919b17d33e2
 ms.openlocfilehash: 0619de32f859f512ee1c9f5a9c83ef8d04a256ca
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="plan-a-source-hierarchy-strategy-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中规划源层次结构策略
+# <a name="plan-a-source-hierarchy-strategy-in-system-center-configuration-manager"></a>規劃 System Center Configuration Manager 中的來源階層策略
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+適用於：System Center Configuration Manager (最新分支)
 
-在 System Center Configuration Manager 环境中设置迁移作业之前，必须配置源层次结构，并从该层次结构内的至少一个源站点中收集数据。 使用以下部分来帮助规划配置源层次结构、配置源站点，并确定 Configuration Manager 从源层次结构内的源站点中收集信息的方式。 
+在您的 System Center Configuration Manager 環境中設定移轉作業之前，必須先設定來源階層，並且至少從該階層的一個來源站台收集資料。 下列各節可幫助您規劃如何設定來源階層、設定來源站台，以及決定 Configuration Manager 如何從來源階層的來源站台收集資料。 
 
-##  <a name="a-namebkmksourcehierarchiesa-source-hierarchies"></a><a name="BKMK_Source_Hierarchies"></a> 源层次结构  
-源层次结构是 Configuration Manager 层次结构，其中包含要迁移的数据。 在设置迁移并指定源层次结构时，将指定源层次结构的顶层站点。 此站点也称为源站点。 源层次结构内你可从中迁移数据的其他站点也称为源站点。  
+##  <a name="BKMK_Source_Hierarchies"></a> 來源階層  
+來源階層是 Configuration Manager 階層，其中包含您要移轉的資料。 當您設定移轉並且指定來源階層時，會指定來源階層的頂層站台。 此站台也稱為來源站台。 來源階層中您可移轉資料的其他站台也稱為來源站台。  
 
--   在设置迁移作业以从 Configuration Manager 2007 源层次结构迁移数据时，将其配置为从源层次结构中的一个或多个特定源站点迁移数据。  
+-   當您設定移轉作業以移轉 Configuration Manager 2007 來源階層的資料時，需要將其設定為從來源階層的一或多個特定來源站台移轉資料。  
 
--   在设置迁移作业以从运行 System Center 2012 Configuration Manager 或更高版本的源层次结构迁移数据时，只需指定顶层站点。  
+-   當您將移轉作業設定為從執行 System Center 2012 Configuration Manager 或更新版本的來源階層移轉資料時，只需要指定頂層站台。  
 
-一次只能设置一个源层次结构。  
+您一次只能設定一個來源階層。  
 
--   如果设置新的源层次结构，该层次结构将自动成为当前源层次结构，替代以前的源层次结构。  
+-   如果您設定新的來源階層，該階層會自動變成目前的來源階層，取代原本的來源階層。  
 
--   在设置源层次结构时，必须指定源层次结构的顶层站点，并指定供 Configuration Manager 用以连接到 SMS 提供程序和源站点的站点数据库的凭据。  
+-   當您設定來源階層時，必須指定來源階層的頂層站台，而且指定認證供 Configuration Manager 用於連線到該來源站台的 SMS 提供者和站台資料庫。  
 
--   Configuration Manager 使用这些凭据来运行数据收集以从源站点中检索有关对象和分发点的信息。  
+-   Configuration Manager 會使用這些認證執行資料收集以擷取來源站台中物件和發佈點的相關資訊。  
 
--   在数据收集过程中，将确定源层次结构中的子站点。  
+-   作為資料收集程序的一部分，會識別出來源階層中的子站台。  
 
--   如果源层次结构是 Configuration Manager 2007 层次结构，则可以随后将那些附加站点设置为源站点，每个源站点有单独的凭据。  
+-   如果來源階層是 Configuration Manager 2007 階層，即可將這些其他站台設定為來源站台，每個來源站台皆會有個別的認證。  
 
-尽管可连续设置多个源层次结构，但一次只有一个源层次结构的迁移可处于活动状态。  
+雖然您可以連續設定多個來源階層，但是一次仍只能對一個來源階層進行移轉。  
 
--   如果在完成从当前源层次结构中进行的迁移之前设置其他源层次结构，Configuration Manager 将为当前源层次结构取消任何活动的迁移作业，并推迟任何计划的迁移作业。  
+-   如果您在完成從目前的來源階層移轉之前設定其他來源階層，Configuration Manager 會取消任何作用中移轉作業，並且延後針對目前來源階層排定的任何移轉作業。  
 
--   新配置的源层次结构随后将成为当前源层次结构，原始源层次结构现在处于非活动状态。  
+-   新設定的來源階層接著就會成為目前來源階層，而不使用原本的來源站台。  
 
--   可随后为新源层次结构设置连接凭据、其他源站点和迁移作业。  
+-   接著您可以設定連線認證、其他來源站台以及新來源階層的移轉作業。  
 
-如果还原非活动源层次结构，并且之前未使用过“清理迁移数据”，则可以查看该源层次结构的以前配置的迁移作业。 但是，你必须重新配置凭据以连接到层次结构中的适用源站点，然后重新计划任何未完成的迁移作业，然后才能继续从该层次结构中进行迁移。  
+如果您還原非作用中來源階層，而且之前並未使用 [清理移轉資料]，就可以檢視之前為該來源階層設定的移轉作業。 不過，您必須重新設定連線至階層中可用來源站台的認證，然後重新排程未完成的任何移轉作業，才能繼續從該階層移轉。  
 
 > [!CAUTION]  
->  如果从超过一个源层次结构中迁移数据，则每个额外的源层次结构都必须包含一组唯一的站点代码。  
+>  如果您從多個來源階層移轉資料，每個額外的來源階層都必須包含一組唯一的站台碼。  
 
-有关配置源层次结构的详细信息，请参阅[配置源层次结构和源站点以迁移到 System Center Configuration Manager](../../core/migration/configuring-source-hierarchies-and-source-sites-for-migration.md)  
+如需設定來源階層的詳細資訊，請參閱[設定來源階層和來源站台以移轉到 System Center Configuration Manager](../../core/migration/configuring-source-hierarchies-and-source-sites-for-migration.md)。  
 
-##  <a name="a-namebkmksourcesitesa-source-sites"></a><a name="BKMK_Source_Sites"></a> 源站点  
- 源站点是源层次结构中具有要迁移的数据的站点。 源层次结构的顶层站点始终是第一个源站点。 当迁移从新源层次结构的第一个源站点中收集数据时，它将发现有关该层次结构中的其他站点的信息。  
+##  <a name="BKMK_Source_Sites"></a> 來源站台  
+ 來源站台是指來源階層中，擁有您要移轉之資料的站台。 來源階層的頂層站台一律是第一個來源站台。 當移轉從新來源階層的第一個來源站台收集資料時，會探索有關該階層中其他站台的資訊。  
 
- 初始源站点的数据收集完成后，你接下来进行的操作取决于源层次结构的产品版本。  
+ 完成初始來源站台的資料收集後，接著要採取的動作會取決於來源階層的產品版本。  
 
-### <a name="source-sites-that-run-configuration-manager-2007-sp2"></a>运行 Configuration Manager 2007 SP2 的源站点  
- 从 Configuration Manager 2007 SP2 层次结构的初始源站点中收集数据后，不必在创建迁移作业之前设置其他源站点。 但是，必须将其他站点设置为源站点，并且 System Center Configuration Manager 必须成功从这些站点中收集数据，然后才能从其他站点中迁移数据。  
+### <a name="source-sites-that-run-configuration-manager-2007-sp2"></a>執行 Configuration Manager 2007 SP2 的來源站台  
+ 從 Configuration Manager 2007 SP2 階層的初始來源站台收集資料後，您不需在建立移轉作業之前設定其他來源站台。 不過，您必須將其他站台設定為來源站台，而且 System Center Configuration Manager 必須從這些站台成功收集資料，才能從這些站台移轉資料。  
 
- 要从其他站点中收集数据，请单独将每个站点设置为源站点。 这需要为 System Center Configuration Manager 指定凭据以连接到每个源站点的 SMS 提供程序和站点数据库。 为源站点设置凭据之后，该站点的数据收集过程将开始。  
+ 若要從其他站台收集資料，您要將每個站台分別設定為來源站台。 這就需要指定將 System Center Configuration Manager 的認證連線到 SMS 提供者和每個來源站台的站台資料庫。 您為來源站台設定認證後，該站台的資料收集程序就會開始。  
 
- 在 Configuration Manager 2007 SP2 源层次结构中设置其他源站点时，必须按自上而下的顺序设置源站点，这意味着将最后设置底层站点。 可随时在层次结构的分支中配置源站点，但在将某个站点的任何子站点设置为源站点之前，必须将该站点设置为源站点。  
-
-> [!NOTE]  
->  对于迁移，只支持 Configuration Manager 2007 SP2 层次结构中的主站点。  
-
-### <a name="source-sites-that-run-system-center-2012-configuration-manager-or-later"></a>运行 System Center 2012 Configuration Manager 或更高版本的源站点  
- 从 System Center 2012 Configuration Manager 或其后的层次结构的初始源站点中收集数据后，不必设置其他源站点以从源层次结构中配置额外源站点。 这是因为不同于 Configuration Manager 2007，Configuration Manager 的这些版本使用共享数据库，通过共享数据库可确定初始源站点中的所有可用对象并随后将其迁移。  
-
- 在设置访问帐户以收集数据时，可能需要向“源站点 SMS 提供程序帐户”授予对源层次结构中的多台计算机的访问权限。 当源站点支持 SMS 提供程序的多个实例，且每个实例位于不同的计算机上时，可能需要此权限。 当数据收集开始时，目标层次结构的顶层站点将与源层次结构中的顶层站点联系，以确定该站点的 SMS 提供程序的位置。 只会确定 SMS 提供程序的第一个实例。 如果数据收集过程无法访问它确定的位置处的 SMS 提供程序，则该过程将失败，并且不会尝试连接到运行该站点的 SMS 提供程序实例的其他计算机。  
-
-##  <a name="a-namebkmkdatagatheringa-data-gathering"></a><a name="BKMK_Data_Gathering"></a> 数据收集  
- 在指定源层次结构之后，立即为源层次结构中的每个其他源站点设置凭据，或共享源站点的分发点，Configuration Manager 将开始从该源站点中收集数据。  
-
- 数据收集过程随后将按简单的计划重复运行，以便与源站点中的任何数据更改保持同步。 默认情况下，该过程每隔四小时重复一次。 可通过编辑源站点的“属性”来更改此周期的计划。 初始数据收集过程必须审阅 Configuration Manager 数据库中的所有对象，并且可能需要较长时间才能完成。 后续的数据收集过程只确定数据更改，完成操作所需的时间较短。  
-
- 为了收集数据，目标层次结构中的顶层站点将连接到源站点的 SMS 提供程序和站点数据库，以检索对象和分发点的列表。 这些连接使用源站点访问帐户。 有关用于收集数据的所需配置的信息，请参阅 [System Center Configuration Manager 中迁移的先决条件](../../core/migration/prerequisites-for-migration.md)。  
-
- 可以通过使用 Configuration Manager 控制台中的“立即收集数据”和“停止收集数据”来开始或停止数据收集进程。  
-
- 在出于任何原因为源站点使用“停止收集数据”后，必须为站点重新配置凭据，然后才能再次从该站点收集数据。 在重新配置源站点之前，Configuration Manager 将无法确定新对象或对该站点上以前迁移的对象所做的更改。  
+ 您在 Configuration Manager 2007 SP2 來源階層中設定其他來源站台時，必須從上到下設定來源站台，這表示最後才設定底層站台。 您可以隨時在階層分支中設定來源站台，但是必須先設定一個站台作為來源站台，才能設定任何其子站台作為來源站台。  
 
 > [!NOTE]  
->  在将独立主站点扩展为包含管理中心站点的层次结构之前，必须停止所有数据收集操作。 可在站点扩展完成之后重新配置数据收集。  
+>  只有 Configuration Manager 2007 SP2 階層中的主要站台才支援移轉作業。  
 
-### <a name="gather-data-now"></a>控制台中的“立即收集数据”  
- 为站点运行初始数据收集过程后，此过程将重复运行以确定自上次数据收集周期以来已更新的对象。 也可以使用 Configuration Manager 控制台中的“立即收集数据”操作立即开始该进程并重新设置下一个周期的开始时间。  
+### <a name="source-sites-that-run-system-center-2012-configuration-manager-or-later"></a>執行 System Center 2012 Configuration Manager 或更新版本的來源站台  
+ 從 System Center 2012 Configuration Manager 或更新版本階層的初始來源站台收集資料後，您不需要設定該來源階層中的其他來源站台。 原因是不同於 Configuration Manager 2007，這些版本的 Configuration Manager 是使用共用資料庫，而共用資料庫可讓您識別所有可用物件，然後從初始來源站台進行移轉。  
 
- 源站点的数据收集过程成功完成后，你可以共享源站点中的分发点，并配置迁移作业以从该站点中迁移数据。 对于迁移而言，数据收集是一个重复进行的过程，并将持续运行，直至更改源层次结构或使用“停止收集数据”来结束该站点的数据收集过程为止。  
+ 當您設定存取帳戶來收集資料時，可能需要將「來源站台 SMS 提供者帳戶」存取權授與來源階層中的多部電腦。 當來源站台支援 SMS 提供者各自位於不同電腦上的多個執行個體時，可能會需要進行此動作。 資料收集開始時，目的地階層的頂層站台會連絡來源階層中的頂層站台，以識別該站台的 SMS 提供者位置。 只會識別 SMS 提供者的第一個執行個體。 如果資料收集程序無法在識別的位置存取 SMS 提供者，程序就會失敗，而且不會嘗試連線到執行該站台之 SMS 提供者執行個體的其他電腦。  
 
-### <a name="stop-gathering-data"></a>和“停止收集数据”  
- 当你不再想要 Configuration Manager 来确定来自该站点的新的或已更改的对象，则可以使用“停止收集数据”来结束源站点的数据收集过程。 此操作还可防止 Configuration Manager 向目标层次结构中的客户端提供源中的任何共享分发点作为已迁移内容的内容位置。  
+##  <a name="BKMK_Data_Gathering"></a> 資料收集  
+ 在您指定來源階層、設定來源階層中各個其他來源站台的認證，或共用來源站台的發佈點之後，Configuration Manager 隨即開始從來源站台收集資料。  
 
- 要停止从每个源站点中收集数据，必须在底层源站点上运行“停止收集数据”，然后在每个父站点上重复该过程。 源层次结构的顶层站点必须是你执行停止收集数据操作的最后一个站点。 你必须在每个子站点上停止数据收集，之后在父站点上执行此操作。 通常，你只有在准备完成迁移过程时才停止收集数据。  
+ 接著資料收集程序會依照簡單的排程自行重複，以便與來源站台中的任何資料變更保持同步。 根據預設，程序每四小時重複一次。 您可以編輯來源站台的 [內容]，來變更此週期的排程。 初始資料收集程序必須檢閱 Configuration Manager 資料庫中的所有物件，而且可能需要較長的時間才能完成。 後續資料收集程序只會識別資料變更，而且完成所需的時間較短。  
 
- 为源站点停止收集数据后，之前从该站点中收集的有关对象和集合的信息仍然可在设置新迁移作业时使用。 但是，你不会看到任何新对象或集合，也不会看到之前对现有对象所做的更改。 如果重新配置源站点并再次开始收集数据，你将看到有关以前迁移的对象的信息和状态。  
+ 為了收集資料，目的地階層中的頂層站台會連線到來源站台的 SMS 提供者和站台資料庫，以擷取物件清單和發佈點。 這些連線都是使用來源站台存取帳戶。 如需收集資料所需設定的資訊，請參閱[在 System Center Configuration Manager 中進行移轉的必要條件](../../core/migration/prerequisites-for-migration.md)。  
 
+ 您可以使用 Configuration Manager 主控台中的 [立即收集資料] 和 [停止收集資料] 來開始和停止資料收集程序。  
 
+ 您因某種原因對來源站台使用 [停止收集資料] 之後，必須重新設定站台的認證，才能再次從該站台收集資料。 除非您重新設定來源站台，否則 Configuration Manager 無法識別該站台的新物件或之前所移轉物件的變更。  
 
-<!--HONumber=Jan17_HO1-->
+> [!NOTE]  
+>  您將獨立主要站台擴充為擁有管理中心網站的階層之前，必須停止所有資料收集。 您可以在站台擴充完成後，重新設定資料收集。  
 
+### <a name="gather-data-now"></a>主控台中的 [立即收集資料]  
+ 對某個站台執行初始資料收集程序後，此程序會自行重複，以識別自上一次資料收集週期之後已更新的物件。 您也可以使用 Configuration Manager 主控台中的 [立即收集資料] 動作立即開始程序，以及重設下一個週期的開始時間。  
 
+ 來源站台的資料收集程序成功完成後，您可以共用來源站台的發佈點，並且設定移轉作業從該站台移轉資料。 資料收集是一個重複的移轉程序，會繼續執行直到您變更來源階層，或使用 [停止收集資料] 結束該站台的資料收集程序。  
+
+### <a name="stop-gathering-data"></a>和 [停止收集資料]  
+ 如果您不再想要讓 Configuration Manager 識別該站台中新的或變更的物件，可以使用 [停止收集資料] 來結束來源站台的資料收集程序。 此動作也會阻止 Configuration Manager 將來源中的任何共用發佈點，作為您所移轉內容的內容位置，提供給目的地階層中的用戶端。  
+
+ 若要停止從每個來源站台收集資料，您必須在底層來源站台執行 [停止收集資料]，然後在每個父站台重複此程序。 來源階層的頂層站台必須是停止收集資料的最後一個站台。 您必須先在每個子站台上停止收集資料，才能在父站台上執行此動作。 通常，您只會在即將完成移轉程序時，停止收集資料。  
+
+ 停止收集來源站台的資料後，之前從站台收集的物件和集合相關資訊仍可在設定新的移轉作業時使用。 不過，您看不見任何新物件或集合，也看不見對現有物件所做的變更。 如果您重新設定來源站台並再次開始收集資料，就會看見有關之前所移轉物件的資訊和狀態。  

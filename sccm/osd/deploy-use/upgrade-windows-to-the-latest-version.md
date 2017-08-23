@@ -1,94 +1,91 @@
 ---
-title: "将 Windows 升级到最新版本 | Microsoft Docs"
-description: "了解如何使用 Configuration Manager 将操作系统从 Windows 7 或更高版本升级到 Windows 10。"
+title: "將 Windows 升級至最新版本 | Microsoft Docs"
+description: "了解如何使用 Configuration Manager，將作業系統從 Windows 7 或更新版本升級到 Windows 10。"
 ms.custom: na
 ms.date: 02/06/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c21eec87-ad1c-4465-8e45-5feb60b92707
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.translationtype: HT
-ms.sourcegitcommit: 1035dbbf944a3a467d637a4a948a75b0946eb711
 ms.openlocfilehash: 026d61113a918e43ac4395ef092b1931f33f16d3
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/11/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="upgrade-windows-to-the-latest-version-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 将 Windows 升级到最新版本
+# <a name="upgrade-windows-to-the-latest-version-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 將 Windows 升級至最新版本
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+適用於：System Center Configuration Manager (最新分支)
 
-本主题提供了在 System Center Configuration Manager 中将目标计算机的操作系统从 Windows 7 或更高版本升级到 Windows 10，或从 Windows Server 2012 升级到 Windows Server 2016 的步骤。 你可以在不同的部署方法（如独立媒体或软件中心）中进行选择。 就地升级方案：  
+本主題提供 System Center Configuration Manager 的步驟，可將電腦上的作業系統從 Windows 7 或更新版本升級至 Windows 10 的步驟，或是將目的地電腦上的 Windows Server 2012 升級至 Windows Server 2016。 有不同的部署方法可供您選擇，例如獨立媒體或軟體中心。 就地升級案例：  
 
--   升级当前运行以下系统版本的计算机的操作系统：
-    - Windows 7、Windows 8 或 Windows 8.1。 你还可以执行 Windows 10 内部版本的升级。 例如，你可以将 Windows 10 RTM 升级到版本为 1511 的 Windows 10。  
-    - Windows Server 2012。 还可以执行 Windows Server 2016 内部版本的升级。 有关支持的升级路径的详细信息，请参阅[支持的升级路径](https://docs.microsoft.com/windows-server/get-started/supported-upgrade-paths#upgrading-previous-retail-versions-of-windows-server-to-windows-server-2016)。    
+-   升級目前執行下列作業系統的電腦：
+    - Windows 7、Windows 8 或 Windows 8.1。 您也可以執行 Windows 10 的組建至組建升級。 例如，您可以將 Windows 10 RTM 升級到 Windows 10 1511 版。  
+    - Windows Server 2012。 您也可以執行 Windows Server 2016 的組建至組建升級。 如需支援的升級路徑詳細資訊，請參閱[支援的升級路徑](https://docs.microsoft.com/windows-server/get-started/supported-upgrade-paths#upgrading-previous-retail-versions-of-windows-server-to-windows-server-2016)。    
 
--   保留计算机上的应用程序、设置和用户数据。  
+-   保留電腦上的應用程式、設定和使用者資料。  
 
--   没有 Windows ADK 等外部依赖关系。  
+-   沒有外部相依性，例如 Windows ADK。  
 
--   比传统操作系统部署更快、更具弹性。  
+-   比傳統作業系統部署更快且更有彈性。  
 
- 根据以下部分，使用任务序列通过网络部署操作系统。  
+ 使用下列章節，使用工作順序透過網路來部署作業系統。  
 
-##  <a name="BKMK_Plan"></a> 计划  
+##  <a name="BKMK_Plan"></a> 方案  
 
--   **查看用于升级操作系统的任务序列的限制。**  
+-   **檢閱升級作業系統之工作順序的限制**  
 
-     查看使用任务序列升级操作系统时的要求和限制以确保其满足你的需要：  
+     檢閱升級作業系統之工作順序的下列需求和限制，以確定它符合您的需要：  
 
-    -   在安装映像后，应仅添加与部署操作系统和配置计算机核心任务相关的任务序列步骤。 这包括安装包、应用程序或更新的步骤，以及运行命令行、PowerShell 或设置动态变量的步骤。  
+    -   您只應新增在安裝映像之後，與部署作業系統及設定電腦的核心工作相關的工作順序步驟。 這包括安裝套件、應用程式或更新的步驟，以及執行命令列、PowerShell 或設定動態變數的步驟。  
 
-    -   在部署升级任务序列前查看安装在计算机中的驱动程序和应用程序以确保它们与 Windows 10 兼容。  
+    -   檢閱電腦上安裝的驅動程式和應用程式，確保其與 Windows 10 相容，然後再部署升級工作順序。  
 
-    -   以下任务与就地升级不兼容，需要使用传统操作系统部署：  
+    -   下列工作與就地升級不相容，因此需要您使用傳統作業系統部署：  
 
-        -   更改计算机域成员身份或更新本地管理员。  
+        -   變更電腦網域成員資格或更新本機系統管理員。  
 
-        -   在计算机上实现基础更改，包括磁盘分区、将 x86 体系结构更改为 x64 体系结构、实现 UEFI 或修改操作系统基本语言。  
+        -   在電腦上實作基本變更，包括磁碟分割、將架構從 x86 變更為 x64、實作 UEFI，或修改基礎作業系統語言。  
 
-        -   拥有自定义要求（包括使用自定义基本映像、使用第三方<sup></sup> 磁盘加密），或要求 WinPE 脱机操作。  
+        -   您有自訂需求，包括使用自訂基底映像、使用協力廠商<sup></sup> 磁碟加密，或需要 WinPE 離線作業。  
 
--   **规划和实现基础结构要求**  
+-   **規劃並實作基礎結構需求**  
 
-     此升级方案的唯一先决条件是具有可用于操作系统升级包和任务序列中包含的其他任何包的分发点。 有关详细信息，请参阅[安装或修改分发点](../../core/servers/deploy/configure/install-and-configure-distribution-points.md)。
+     升級案例的唯一先決條件，便是您必須有發佈點，以供作業系統升級套件和工作順序中包含的任何其他套件之用。 如需詳細資訊，請參閱[安裝或修改發佈點](../../core/servers/deploy/configure/install-and-configure-distribution-points.md)。
 
-##  <a name="BKMK_Configure"></a> 配置  
+##  <a name="BKMK_Configure"></a> 設定  
 
-1.  **准备操作系统升级包**  
+1.  **準備作業系統升級套件**  
 
-     Windows 10 升级包包含在目标计算机上升级操作系统所必需的源文件。 此升级包的版本、体系结构和语言必须与将升级的客户端的相同。  有关详细信息，请参阅[管理操作系统升级包](../get-started/manage-operating-system-upgrade-packages.md)。  
+     Windows 10 升級套件包含在目的地電腦升級作業系統時的必要檔案。 升級套件的版本、架構和語言必須與要升級的用戶端相同。  如需詳細資訊，請參閱[管理作業系統升級套件](../get-started/manage-operating-system-upgrade-packages.md)。  
 
-2.  **创建用于升级操作系统的任务序列**  
+2.  **建立工作順序以升級作業系統**  
 
-     使用[创建用于升级操作系统的任务序列](create-a-task-sequence-to-upgrade-an-operating-system.md)中的步骤自动升级操作系统。  
+     使用[建立工作順序以升級作業系統](create-a-task-sequence-to-upgrade-an-operating-system.md)中的步驟，自動化升級作業系統。  
 
     > [!IMPORTANT]
-    > 使用独立媒体时，必须在任务序列中包括启动映像，以供“任务序列媒体向导”使用。
+    > 當您使用獨立媒體時，工作順序必須內含開機映像，在 [工作順序媒體精靈] 中才可使用該媒體。
 
     > [!NOTE]  
-    > 通常，将使用[创建用于升级操作系统的任务序列](create-a-task-sequence-to-upgrade-an-operating-system.md)中的步骤来创建任务序列，将操作系统升级到 Windows 10。 任务序列包括升级操作系统步骤以及用于处理端到端升级过程的其他建议步骤和组。 但是，可以创建自定义任务序列并添加 [升级操作系统](../understand/task-sequence-steps.md#BKMK_UpgradeOS)任务序列步骤以升级操作系统。 这是将操作系统升级到 Windows 10 所需的唯一步骤。 如果选择此方法，还要在升级操作系统步骤后添加[重启计算机](../understand/task-sequence-steps.md#a-namebkmkrestartcomputera-restart-computer)步骤来完成升级。 请务必使用“当前安装的默认操作系统”设置，将计算机重启到已安装的操作系统而不是 Windows PE。  
+    > 一般都是使用[建立工作順序以升級作業系統](create-a-task-sequence-to-upgrade-an-operating-system.md)中的步驟來建立工作順序，以便將作業系統升級為 Windows 10。 該工作順序包含 [升級作業系統] 步驟，以及其他建議的步驟和群組，以處理端對端升級程序。 不過，您可以建立自訂工作順序，並新增[升級作業系統](../understand/task-sequence-steps.md#BKMK_UpgradeOS)工作順序步驟，將作業系統升級。 這是將作業系統升級為 Windows 10 的唯一必要步驟。 如果您選擇這個方法，請在 [升級作業系統] 步驟之後也同時新增[重新啟動電腦](../understand/task-sequence-steps.md#a-namebkmkrestartcomputera-restart-computer)步驟，完成升級。 請務必使用 [目前安裝的預設作業系統] 設定，將電腦重新啟動為已安裝的作業系統，而不是 Windows PE。  
 
 ##  <a name="BKMK_Deploy"></a> 部署  
 
--   使用下列部署方法之一部署操作系统：  
+-   使用下列部署方法之一來部署作業系統：  
 
-    -   [使用软件中心通过网络部署 Windows](use-software-center-to-deploy-windows-over-the-network.md)  
+    -   [透過網路使用軟體中心部署 Windows](use-software-center-to-deploy-windows-over-the-network.md)  
 
-    -   [使用独立媒体部署 Windows，而不使用网络](use-stand-alone-media-to-deploy-windows-without-using-the-network.md)  
+    -   [使用獨立媒體，而不使用網路來部署 Windows](use-stand-alone-media-to-deploy-windows-without-using-the-network.md)  
 
-## <a name="monitor"></a>监视器  
+## <a name="monitor"></a>監視  
 
--   **监视任务序列部署**  
+-   **監視工作順序部署**  
 
-     若要监视任务序列部署以升级操作系统，请参阅[监视操作系统部署](monitor-operating-system-deployments.md)。  
-
+     若要監視工作順序部署以升級作業系統，請參閱[監視作業系統部署](monitor-operating-system-deployments.md)。  

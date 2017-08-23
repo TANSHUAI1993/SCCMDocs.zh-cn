@@ -1,100 +1,93 @@
 ---
-title: "管理操作系统升级包 | Microsoft Docs"
-description: "了解如何管理 System Center Configuration Manager 中的操作系统升级包。"
+title: "管理作業系統升級套件 | Microsoft Docs"
+description: "了解如何使用 System Center Configuration Manager 管理作業系統升級套件。"
 ms.custom: na
 ms.date: 12/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b9b22655-b8c1-461f-8047-3a7e906f647a
-caps.latest.revision: 12
-caps.handback.revision: 0
+caps.latest.revision: "12"
+caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 3f44505c977b511223a083a960f871371c0ff133
 ms.openlocfilehash: 5fef04f26b12bced073332fd1f7b4e7c7bd7d398
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="manage-operating-system-upgrade-packages-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 管理操作系统升级包
+# <a name="manage-operating-system-upgrade-packages-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 管理作業系統升級套件
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用對象：System Center Configuration Manager (最新分支)*
 
-System Center Configuration Manager 中的升级包包含用于在计算机上升级现有操作系统的 Windows 安装程序源文件。 使用以下部分管理 Configuration Manager 中的操作系统升级包。
+System Center Configuration Manager 中的升級套件包含用來升級電腦上之現有作業系統的 Windows 安裝程式來源檔案。 使用下列區段管理 Configuration Manager 中的作業系統升級套件。
 
-##  <a name="a-namebkmkaddosupgradepkgsa-add-operating-system-upgrade-packages-to-configuration-manager"></a><a name="BKMK_AddOSUpgradePkgs"></a> 将操作系统升级包添加到 Configuration Manager  
- 在使用操作系统升级包之前，必须先将该包添加到 Configuration Manager 站点。 使用以下过程将操作系统升级包添加的站点：  
+##  <a name="BKMK_AddOSUpgradePkgs"></a> 新增作業系統升級封裝至 Configuration Manager  
+ 在您可以使用作業系統升級套件之前，必須先將此套件加入 Configuration Manager 站台。 請使用下列程序將作業系統升級封裝加入站台。  
 
-#### <a name="to-add-an-operating-system-upgrade-package"></a>若要添加操作系统升级包  
+#### <a name="to-add-an-operating-system-upgrade-package"></a>加入作業系統升級封裝  
 
-1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+1.  在 Configuration Manager 主控台中，按一下 [軟體程式庫] 。  
 
-2.  在“软件库”  工作区中，展开“操作系统” ，然后单击“操作系统升级包” 。  
+2.  在 [軟體程式庫]  工作區中，展開 [作業系統] ，然後按一下 [作業系統升級封裝] 。  
 
-3.  在“主页”  选项卡上的“创建”  组中，单击“添加操作系统升级包”  以启动“添加操作系统升级向导”。  
+3.  在 [首頁]  索引標籤的 [建立]  群組中，按一下 [新增作業系統升級封裝]  啟動 [新增作業系統升級封裝精靈]。  
 
-4.  在“数据源”  页上，指定操作系统升级包的安装源文件的网络路径。 例如，指定安装源文件所在位置的 UNC **\\\server\path**。  
+4.  在 [資料來源]  頁面上，指定作業系統升級封裝之安裝來源檔的網路路徑。 例如，將 UNC **\\\server\path** 指定為安裝來源檔所在位置。  
 
     > [!NOTE]  
-    >  安装源文件包含 Setup.exe 和其他文件以及用于安装操作系统的文件夹。  
+    >  安裝來源檔案包含 Setup.exe 和其他檔案和資料夾，以便安裝作業系統。  
 
     > [!IMPORTANT]  
-    >  限制对安装源文件的访问，以防止受到恶意篡改。  
+    >  限制存取安裝來源檔案，以避免不必要的竄改。  
 
-5.  在“常规”  页上，指定以下信息，然后单击“下一步” 。 当你有多个操作系统安装程序时，此信息在用于标识时非常有用。  
+5.  在 [一般]  頁面上指定下列資訊，然後按 [下一步] 。 這項資訊可在您有多個作業系統安裝程式時做為識別用途。  
 
-    -   **名称**：指定操作系统安装程序的名称。  
+    -   **名稱**：指定作業系統安裝程式的名稱。  
 
-    -   **版本**：指定操作系统安装程序的版本。  
+    -   **版本**：指定作業系統安裝程式的版本。  
 
-    -   **备注**：指定操作系统安装程序的简要描述。  
+    -   **註解**：指定作業系統安裝程式的簡短描述。  
 
-6.  完成向导。  
+6.  完成精靈。  
 
- 你现在可以将操作系统安装程序分发到部署任务序列访问的分发点。  
+ 現在您可以將作業系統安裝程式發佈至部署工作順序所存取的發佈點。  
 
-##  <a name="a-namebkmkdistributebootimagesa-distribute-operating-system-images-to-a-distribution-point"></a><a name="BKMK_DistributeBootImages"></a> 将操作系统映像分发到分发点  
- 将采用与分发其他内容相同的方式将操作系统映像分发到分发点。 大多数情况下，部署操作系统之前必须将操作系统映像分发到至少一个分发点。 关于分发操作系统映像的步骤，请参阅 [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content)。  
+##  <a name="BKMK_DistributeBootImages"></a> 將作業系統映像發佈至發佈點  
+ 作業系統映像發佈至發佈點的方式，與您發佈其他內容的方式相同。 在大部分情況下，您必須在部署作業系統之前，將作業系統映像發佈至至少一個發佈點。 如需發佈作業系統映像的步驟，請參閱 [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content)。  
 
-##  <a name="a-namebkmkosupgradepkgapplyupdatesa-apply-software-updates-to-an-operating-system-upgrade-package"></a><a name="BKMK_OSUpgradePkgApplyUpdates"></a> 将软件更新应用于操作系统升级包  
- 从 Configuration Manager 版本 1602 开始，可以将新的软件更新应用于操作系统升级包中的操作系统映像。 必须将软件更新基础结构实施到位，成功同步软件更新，并将软件更新下载到站点服务器上的内容库后才可将软件更新应用于升级包。 有关详细信息，请参阅[部署软件更新](../../sum/deploy-use/deploy-software-updates.md)。  
+##  <a name="BKMK_OSUpgradePkgApplyUpdates"></a> 套用軟體更新至作業系統升級套件  
+ 自 Configuration Manager 1602 版開始，您可以將新的軟體更新套用至作業系統升級套件中的作業系統映像。 在您可將軟體更新套用至升級套件之前，必須先使軟體更新基礎結構就緒、已成功同步處理軟體更新，並已將軟體更新下載至站台伺服器上的內容庫。 如需詳細資訊，請參閱 [Deploy software updates](../../sum/deploy-use/deploy-software-updates.md) (部署軟體更新)。  
 
- 你可以按指定计划将适用的软件更新应用于升级包。 Configuration Manager 按指定计划将选择的软件更新应用于操作系统升级包，然后根据需要将更新的升级包分发到分发点。 有关操作系统升级包的信息存储在站点数据库中，包括在导入时应用的软件更新。 自升级包最初添加以来已应用于升级包的软件更新也存储在站点数据库中。 当你启动向导以将软件更新应用于操作系统升级包时，向导将检索尚未应用于升级包的适用软件更新的列表供你选择。 Configuration Manager 从站点服务器上的内容库中复制软件更新，然后将软件更新应用于操作系统升级包。  
+ 您可以依指定的排程將適用的軟體更新套用至升級套件。 Configuration Manager 會依照您指定的排程，將選取的軟體更新套用至作業系統升級套件，然後選擇性地將更新的升級套件發佈至發佈點。 有關作業系統升級套件的資訊會儲存在站台資料庫中，包括匯入時已套用的軟體更新。 最初新增時已套用至升級套件的軟體更新也會儲存在站台資料庫中。 當您啟動精靈將軟體更新套用至作業系統升級套件時，精靈會擷取尚未套用至升級套件的可用軟體更新清單供您選取。 Configuration Manager 會從站台伺服器上的內容庫複製軟體更新，並將此軟體更新套用至作業系統升級套件。  
 
- 使用以下过程将软件更新应用于操作系统升级包。  
+ 利用下列程序將軟體更新套用至作業系統升級套件。  
 
-#### <a name="to-apply-software-updates-to-an-operating-system-upgrade-package"></a>将软件更新应用于操作系统升级包  
+#### <a name="to-apply-software-updates-to-an-operating-system-upgrade-package"></a>套用軟體更新至作業系統升級套件  
 
-1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+1.  在 Configuration Manager 主控台中，按一下 [軟體程式庫] 。  
 
-2.  在“软件库”  工作区中，展开“操作系统” ，然后单击“操作系统升级包” 。  
+2.  在 [軟體程式庫]  工作區中，展開 [作業系統] ，然後按一下 [作業系統升級封裝] 。  
 
-3.  选择要向其应用软件更新的操作系统升级包。  
+3.  選取要套用軟體更新的作業系統升級套件。  
 
-4.  在“主页”选项卡上的“操作系统升级包”组中，单击“计划更新”以启动向导。  
+4.  在 **[首頁]** 索引標籤的 **[作業系統升級套件]** 群組中，按一下 **[排程更新]** 以啟動精靈。  
 
-5.  在“选择更新”  页上，选择要应用于操作系统映像的软件更新，然后单击“下一步” 。  
+5.  在 [選擇更新]  頁面上，選取要套用至作業系統映像的軟體更新，然後按 [下一步] 。  
 
-6.  在“设置计划”  页上，指定以下设置，然后单击“下一步” 。  
+6.  在 [設定排程]  頁面上指定下列設定，然後按 [下一步] 。  
 
-    1.  **计划**：指定有关何时将软件更新应用于操作系统映像的计划。  
+    1.  **排程**：指定將軟體更新套用至作業系統映像的排程。  
 
-    2.  **出错时继续**：选择此选项以便即使在出错时也继续将软件更新应用于映像。  
+    2.  **發生錯誤時繼續**：選取此選項，即使發生錯誤仍會將軟體更新套用至映像。  
 
-    3.  **将映像分发到分发点**：选择此选项以在应用了软件更新后更新分发点上的操作系统映像。  
+    3.  **將映像發佈至發佈點**：選取此選項，在套用軟體更新之後更新發佈點上的作業系統映像。  
 
-7.  在“摘要”  页上，验证以下信息，然后单击“下一步” 。  
+7.  確認 [摘要]  頁面中的資訊，然後按 [下一步] 。  
 
-8.  在“完成”  页上，验证软件更新是否已成功应用于操作系统映像。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-
+8.  在 [完成]  頁面上，確認軟體更新已成功套用至作業系統映像。  

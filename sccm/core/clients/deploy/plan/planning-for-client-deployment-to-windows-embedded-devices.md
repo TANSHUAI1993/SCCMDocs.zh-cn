@@ -1,78 +1,75 @@
 ---
-title: "规划 Windows Embedded 设备的客户端部署 | Microsoft Docs"
-description: "在 System Center Configuration Manager 中规划 Windows Embedded 设备的客户端部署。"
+title: "規劃將用戶端部署至 Windows Embedded 裝置 | Microsoft Docs"
+description: "規劃在 System Center Configuration Manager 中將用戶端部署至 Windows Embedded 裝置。"
 ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 038e61f9-f49d-41d1-9a9f-87bec9e00d5d
-caps.latest.revision: 7
-caps.handback.revision: 0
+caps.latest.revision: "7"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: 0f6a6719c4c9bc1e67be11adf5206a7672624fa0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 12/16/2016
-
-
+ms.openlocfilehash: f7ef476a2ebcf0161ebb70d8a3d95f77806aa05e
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="planning-for-client-deployment-to-windows-embedded-devices-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中计划 Windows Embedded 设备的客户端部署
+# <a name="planning-for-client-deployment-to-windows-embedded-devices-in-system-center-configuration-manager"></a>規劃將用戶端部署至 System Center Configuration Manager 中的Windows Embedded 裝置
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+適用於：System Center Configuration Manager (最新分支)
 
-<a name="BKMK_DeployClientEmbedded"></a>如果 Windows Embedded 设备不包括 System Center Configuration Manager 客户端，并且设备满足所需的依赖关系要求，则可以使用任何客户端安装方法。 如果嵌入式设备支持写入筛选器，则必须在安装客户端之前禁用这些筛选器，然后在安装客户端并将其分配给站点之后再次重新启用筛选器。  
+<a name="BKMK_DeployClientEmbedded"></a> 如果您的 Windows Embedded 裝置不包含 System Center Configuration Manager 用戶端，且該裝置符合必要的相依性，您可以使用任何一種用戶端安裝方法。 如內嵌裝置支援寫入篩選器，您必須先停用這些篩選器再安裝用戶端，等到用戶端安裝完畢並指派至網站後，再度重新啟用篩選器。  
 
- 请注意，当禁用筛选器时，不应禁用筛选器驱动程序。 启动计算机时，这些驱动程序通常都将自动启动。 禁用驱动程序将阻止客户端的安装，或者将干扰写入筛选器业务流程，从而导致客户端操作失败。 以下是与必须保持运行状态的每个写入筛选器类型相关联的服务：  
+ 請注意當您停用篩選器時，您不應該停用此篩選器驅動程式。 通常這些驅動程式會在電腦啟動時自動啟動。 停用這些驅動程式將會阻礙用戶端安裝，或干擾寫入篩選器協調流程，這將會造成用戶端作業失敗。 這些是與每個必須持續執行之寫入篩選器類型相關聯的服務：  
 
-|写入筛选器类型|驱动程序|类型|描述|  
+|撰寫篩選器類型|驅動程式|類型|說明|  
 |-----------------------|------------|----------|-----------------|  
-|EWF|EWF|内核|在受保护的卷上实现扇区级别 I/O 重定向。|  
-|FBWF|FBWF|文件系统|在受保护的卷上实现文件级别 I/O 重定向。|  
-|UWF|uwfreg|内核|UWF 注册表重定向程序|  
-|UWF|uwfs|文件系统|UWF 文件重定向程序|  
-|UWF|uwfvol|内核|UWF 卷管理器|  
+|EWF|EWF|核心|會在受保護磁碟區上實作磁區層級 I/O 重新導向。|  
+|FBWF|FBWF|檔案系統|會在受保護磁碟區上實作檔案層級 I/O 重新導向。|  
+|UWF|uwfreg|核心|UWF 登錄重新導向器|  
+|UWF|uwfs|檔案系統|UWF 檔案重新導向器|  
+|UWF|uwfvol|核心|UWF 磁碟區管理員|  
 
- 写入筛选器控制在你进行更改时（如在安装软件时）如何更新嵌入式设备上的操作系统。 如果启用写入筛选器，则不会直接对操作系统进行更改，而是将这些更改重定向到临时覆盖区。 如果更改仅写入到覆盖区，则当嵌入式设备关闭时，更改将会丢失。 但是，如果临时禁用了写入筛选器，则可能会将更改设置为永久性更改，以便每次重启嵌入式设备时不必再进行更改（或重新安装软件）。 但是，临时禁用然后重新启用写入筛选器需要一次或多次重启，因此，你通常需要配置维护时段，使重启发生在工作时间之外，以控制其发生的时间。  
+ 當您進行變更 (例如安裝軟體) 時，寫入篩選器會控制內嵌裝置更新作業系統的方式。 啟用寫入篩選器時，並不會直接對作業系統進行變更，而是將變更重新導向至暫時的重疊層。 如果只將變更寫入至重疊層中，當內嵌裝置關機時，就會失去變更。 不過，如果暫時停用寫入篩選器，就可以進行永久變更，您也不需要在每次內嵌裝置重新啟動後再次進行變更 (或重新安裝軟體)。 不過，暫時停用再重新啟用寫入篩選器後，必須重新啟動一次或一次以上，因此，通常可以透過設定維護期間的方式控制執行此作業的時間，以便在非工作時間重新啟動電腦。  
 
- 你可以将选项配置为在部署软件（如应用程序、任务序列、软件更新和 Endpoint Protection 客户端）时先自动禁用然后再重新启用写入筛选器。 具有使用自动修正的配置项目的配置基线是个例外。 在此情况下，始终在覆盖区进行修正，以便仅在重启设备之前可以使用它。 在下一个评估周期会再次应用修正，但只对覆盖区应用，重启时会清除覆盖区。 要强制 Configuration Manager 提交修正更改，你可以部署配置基线，然后部署支持尽快提交更改的另一个软件部署。  
+ 您可以在部署如應用程式、工作順序、軟體更新，以及 Endpoint Protection 用戶端等軟體時設定選項，以自動停用再重新啟用寫入篩選器。 例外狀況是設定基準及使用自動補救的設定項目。 在此案例中，補救功能永遠會在重疊時發生，而且只能在裝置重新啟動時使用。 補救功能會在下一次評估週期再次套用，但只套用於在重新啟動時建立的重疊。 若要強制 Configuration Manager 認可補救變更，您可以先部署設定基準，再快速進行其他支援認可變更的軟體部署。  
 
- 如果禁用了写入筛选器，则可以使用软件中心在 Windows Embedded 设备上安装软件。 但是，如果启用了写入筛选器，则安装将失败，并且 Configuration Manager 会显示一条错误消息，表明你没有足够的权限安装应用程序。  
+ 如果寫入篩選器已停用，您可以使用 [軟體中心] 在 Windows Embedded 裝置上安裝軟體。 不過，若已啟用寫入篩選器，則安裝會失敗，且 Configuration Manager 會顯示您的權限不足，無法安裝應用程式的錯誤訊息。  
 
 > [!WARNING]  
->  即使未选择 Configuration Manager 选项来提交更改，那么如果进行了提交更改的另一个软件安装或更改，则可能会提交更改。 在此情况下，将提交原始更改以及新更改。  
+>  即使您未選取 Configuration Manager 選項來認可變更，如果其他軟體安裝或變更已認可變更，則可能會認可這些變更。 在此案例中，除了新的變更之外，也會認可原始變更。  
 
- 当 Configuration Manager 禁用写入筛选器以使更改为永久更改时，只有具有本地管理权限的用户才能登录和使用嵌入式设备。 在此期间，低权限用户会被锁在外面并看到一条消息，告知他们计算机由于正在维护而不可用。 这有助于保护处于可以永久应用更改的状态的设备，此维护模式锁定行为是针对用户无法登录这些设备的时间配置维护时段的另一个原因。  
+ 當 Configuration Manager 停用寫入篩選器以進行永久變更時，只有具有本機系統管理權限的使用者可以登入並使用內嵌裝置。 在此期間，權限低的使用者會被鎖定，並且會看到電腦因為維修中而無法使用的訊息。 這麼做可在裝置處於可能永久套用變更的狀態下時保護裝置，此服務模型鎖定行為是另一個設定維護期間的原因，使用者在這段期間內不會再登入這些裝置。  
 
- Configuration Manager 支持管理下列类型的写入筛选器：  
+ Configuration Manager 支援管理下列類型的寫入篩選器：  
 
--   基于文件的写入筛选器 (FBWF) – 有关详细信息，请参阅[基于文件的写入筛选器](http://go.microsoft.com/fwlink/?LinkID=204717)。  
+-   檔案型寫入篩選器 (FBWF) - 如需詳細資訊，請參閱 [File-Based Write Filter](http://go.microsoft.com/fwlink/?LinkID=204717) (檔案型寫入篩選器)。  
 
--   增强型写入筛选器 (EWF) RAM – 有关详细信息，请参阅[增强型写入筛选器](http://go.microsoft.com/fwlink/?LinkId=204718)。  
+-   增強式寫入篩選器 (EWF) RAM - 如需詳細資訊，請參閱 [Enhanced Write Filter](http://go.microsoft.com/fwlink/?LinkId=204718) (增強式寫入篩選器)。  
 
--   统一写入筛选器 (UWF) – 有关详细信息，请参阅[统一写入筛选器](http://go.microsoft.com/fwlink/?LinkId=309236)。  
+-   整合寫入篩選器 (UWF) - 如需詳細資訊，請參閱 [Unified Write Filter](http://go.microsoft.com/fwlink/?LinkId=309236) (整合寫入篩選器)。  
 
- 当 Windows Embedded 设备处于 EWF RAM 注册模式时，Configuration Manager 不支持写入筛选器操作。  
+ 當 Windows Embedded 裝置處於 EWF RAM Reg 模式時，Configuration Manager 不支援寫入篩選器。  
 
 > [!IMPORTANT]  
->  如果可以选择，请将基于文件的写入筛选器 (FBWF) 与 Configuration Manager 一起使用，以便提高效率和可伸缩性。
+>  如果您可以選擇，請搭配使用檔案型寫入篩選器 (FBWF) 與 Configuration Manager，以提升效率及增加延展性。
 >
-> **对于仅使用 FBWF 的设备：**配置以下例外以在设备重启之间保留客户端状态和清单数据：  
+> **僅使用 FBWF 的裝置：**設定下列例外狀況，以便在裝置重新啟動期間保存用戶端狀態和清查資料：  
 >   
 >  -   CCMINSTALLDIR\\*.sdf  
 > -   CCMINSTALLDIR\ServiceData  
 > -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\StateSystem  
 >   
->  运行 Windows Embedded 8.0 和更高版本的设备不支持包含通配符的排除项。 在这些设备上，必须分别配置以下排除项：  
+>  執行 Windows Embedded 8.0 及更新版本的裝置，不支援包含萬用字元的排除項目。 在這些裝置上，您必須個別設定下列的排除項目：  
 >   
->  -   CCMINSTALLDIR 中的所有文件都具有 .sdf 扩展名，通常为：  
+>  -   所有在 CCMINSTALLDIR 中副檔名為 .sdf 的檔案，通常為：  
 >   
 >     -   UserAffinityStore.sdf  
 >     -   InventoryStore.sdf  
@@ -82,32 +79,31 @@ ms.lasthandoff: 12/16/2016
 > -   CCMINSTALLDIR\ServiceData  
 > -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\StateSystem  
 >   
-> **对于仅使用 FBWF 和 UWF 的设备：**当工作组中的客户端使用证书向管理点进行身份验证时，还必须排除私钥以确保客户端继续与管理点通信。 在这些设备上配置以下例外：  
+> **僅使用 FBWF 和 UWF 的裝置：**當工作群組中的用戶端使用憑證來驗證管理點時，您還必須排除私密金鑰，以確保用戶端會繼續與管理點通訊。 在這些裝置上設定下列例外狀況：  
 >   
 >  -   c:\Windows\System32\Microsoft\Protect  
 > -   c:\ProgramData\Microsoft\Crypto  
 > -   HKEY_LOCAL_MACHINE\Software\Microsoft\SystemCertificates\SMS\Certificates  
 
- 有关在 Configuration Manager 中部署和管理启用写入筛选器的 Windows Embedded 设备的示例场景，请参阅[在 Windows Embedded 设备上部署和管理 System Center Configuration Manager 客户端的示例场景](../../../../core/clients/deploy/example-scenario-for-deploying-and-managing-clients-on-windows-embedded-devices.md)。  
+ 如需在 Configuration Manager 中部署和管理已啟用寫入篩選器之 Windows Embedded 裝置的範例案例，請參閱[在 Windows Embedded 裝置上部署及管理 System Center Configuration Manager 用戶端的範例案例](../../../../core/clients/deploy/example-scenario-for-deploying-and-managing-clients-on-windows-embedded-devices.md)。  
 
- 有关如何生成 Windows Embedded 设备映像以及配置写入筛选器的详细信息，请参阅 Windows Embedded 文档或与你的 OEM 联系。  
+ 如需如何為 Windows Embedded 裝置建立映像及設定寫入篩選器的詳細資訊，請參閱您的 Windows Embedded 文件，或洽詢您的 OEM。  
 
 > [!NOTE]  
->  为软件部署和配置项目选择合适的平台时，这些内容会显示 Windows Embedded 系列，而不是特定版本。 请使用以下列表将特定版本的 Windows Embedded 映射到列表框中的选项：  
+>  當您為軟體部署及設定項目選取適用的平台時，這些平台會顯示 Windows Embedded 系列，而不是顯示特定版本。 使用下列清單，對應 Windows Embedded 的特定版本與清單方塊中的選項：  
 >   
->  -   “基于 Windows XP (32 位)的嵌入式操作系统” 包括以下各项：  
+>  -   [以 Windows XP 為基礎的內嵌作業系統 (32 位元)] 包括下列各項：  
 >   
 >      -   Windows XP Embedded  
 >     -   Windows Embedded for Point of Service  
 >     -   Windows Embedded Standard 2009  
 >     -   Windows Embedded POSReady 2009  
-> -   “基于 Windows 7 (32 位)的嵌入式操作系统” 包括以下各项：  
+> -   [以 Windows 7 為基礎的內嵌作業系統 (32 位元)] 包括下列各項：  
 >   
->      -   Windows Embedded Standard 7（32 位）  
->     -   Windows Embedded POSReady 7（32 位）  
+>      -   Windows Embedded Standard 7 (32 位元)  
+>     -   Windows Embedded POSReady 7 (32 位元)  
 >     -   Windows ThinPC  
-> -   “基于 Windows 7 (64 位) 的嵌入式操作系统” 包括以下各项：  
+> -   [以 Windows 7 為基礎的內嵌作業系統 (64 位元)] 包括下列各項：  
 >   
->      -   Windows Embedded Standard 7（64 位）  
->     -   Windows Embedded POSReady 7（64 位）
-
+>      -   Windows Embedded Standard 7 (64 位元)  
+>     -   Windows Embedded POSReady 7 (64 位元)

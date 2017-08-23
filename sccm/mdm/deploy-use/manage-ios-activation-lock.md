@@ -1,109 +1,105 @@
 ---
-title: "管理 iOS 激活锁定 | Microsoft Docs"
-description: "使用 System Center Configuration Manager 管理 iOS 激活锁定。"
+title: "管理 iOS 啟用鎖定 | Microsoft Docs"
+description: "使用 System Center Configuration Manager 管理 iOS 啟用鎖定。"
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e2745bac-e1b4-4dac-8ac7-32f1c820bc9c
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a25c6b409ea6501ead762fabb8cc11c62c84885d
-ms.openlocfilehash: cf98bbb9dee6142e8b085dbffcadb3ed712adcb9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 12/16/2016
-
-
+ms.openlocfilehash: 88bef04a52f716ae13afc21c25d33dea06a3fc9c
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="manage-ios-activation-lock-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 管理 iOS 激活锁定
+# <a name="manage-ios-activation-lock-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 管理 iOS 啟用鎖定
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+適用於：System Center Configuration Manager (最新分支)
 
 
-System Center Configuration Manager 可以帮助你管理 iOS 激活锁定，这是适用于 iOS 7.1 及更高版本设备的“查找我的 iPhone”应用的功能。 启用激活锁定后，任何人都必须先输入用户的 Apple ID 和密码，然后才能执行以下操作：
+System Center Configuration Manager 可以協助您管理 iOS 啟用鎖定，這是 iOS 7.1 和更新版本裝置之「尋找我的 iPhone」應用程式中的功能。 啟用「啟用鎖定」時，必須先輸入使用者的 Apple ID 和密碼，才能讓所有人：
 
-- 关闭“查找我的 iPhone”
-- 擦除设备
-- 重新激活设备
+- 關閉「尋找我的 iPhone」
+- 清除裝置
+- 重新啟動裝置
 
-在 **无人监督** 的设备上，当使用了“查找我的 iPhone”应用时，激活锁定会自动启用。
+在 **不受監督** 裝置上，使用「尋找我的 iPhone」應用程式時，會自動啟用「啟用鎖定」。
 
-在 **监督** 的设备上，必须通过使用 Configuration Manager 符合性设置激活激活锁定。
+在 **受監督** 裝置上，您必須使用 Configuration Manager 相容性設定來啟用「啟用鎖定」。
 
 > [!TIP]
-> 在 iOS 设备的监管模式下，你可以使用 Apple 配置器工具来锁定设备，以将设备的功能限制为完成特定的业务目的。 监管模式通常仅适用于公司拥有的设备。
+> iOS 裝置的受監督模式可讓您使用 Apple Configurator 工具來鎖定裝置，將功能限制在特定商務用途。 受監督的模式通常僅適用於屬公司擁有的裝置。
 
-尽管激活锁定可帮助保护 iOS 设备的安全，并可提高在设备丢失和被盗时的找回几率，但对于 IT 管理员来说，此功能仍然带来了许多挑战。 例如：
+雖然啟用鎖定可以協助保護 iOS 裝置，並提高裝置遺失和遭竊時的復原機會，但是這項功能可能會為身為 IT 系統管理員的您帶來一些挑戰。 例如：
 
-- 你的其中一个用户在设备上设置了激活锁定。 该用户之后离开了公司并返回使用其设备。 如果不提供用户的 Apple ID 和密码，即使将其擦除，也不能重新激活该设备。
-- 你需要报告启用了激活锁定的所有设备。
-- 更新你组织中的设备分配情况时，如果你希望将某些设备分配给另一个部门， 你只能重新分配未启用激活锁定的设备。
-
-
-为了帮助解决这些问题，Apple 在 iOS 7.1 中引入了绕过激活锁定。 借助此功能，你无需用户的 Apple ID 和密码即可删除监管设备中的激活锁定。 监管设备可以生成设备特定的绕过激活锁定代码，该代码存储在 Apple 的激活服务器上。
-
-可以在 [此处](https://support.apple.com/HT201365)阅读有关激活锁定的详细信息。
-
-## <a name="how-configuration-manager-helps-you-manage-activation-lock"></a>Configuration Manager 如何帮助你管理激活锁定
-
-Configuration Manager 可以以下两种方法帮助你管理激活锁定：
-
-1. 在受到监督的设备上启用激活锁定。
-2. 在受到监督的设备上绕过激活锁定。
-
-> [!IMPORTANT]
-> 在无人监督的设备上不能绕过激活锁定。
-
-对于企业自有设备，这个的业务优点是：
+- 其中一位使用者在裝置上設定啟用鎖定。 使用者之後離職並歸還裝置。 如果沒有使用者的 Apple ID 和密碼，就無法重新啟用裝置，即使您抹除它也是一樣。
+- 您需要一份啟用鎖定已啟用之所有裝置的報表。
+- 在重新整理組織中的裝置期間，您想要將某些裝置重新指派給不同的部門。 您只能重新指派啟用鎖定未啟用的裝置。
 
 
+為了協助解決這些問題，Apple 在 iOS 7.1 中引進了啟用鎖定略過。 這可讓您從沒有使用者的 Apple ID 和密碼的受監督裝置移除啟用鎖定。 受監督的裝置會產生裝置特定啟用鎖定略過碼，並儲存在 Apple 啟用伺服器上。
 
-- 用户能够获得“查到我的 iPhone”应用所具有的安全优势
-- 你可以让用户在知道如下事实的情况下进行工作：当需要重新调整设备的用途时，你可以停用或解锁设备
+您可以在 [這裡](https://support.apple.com/HT201365)深入閱讀「啟用鎖定」。
 
+## <a name="how-configuration-manager-helps-you-manage-activation-lock"></a>Configuration Manager 如何協助您管理啟用鎖定
 
-## <a name="enable-activation-lock-on-supervised-devices"></a>在受监督的设备上启用激活锁定
+Configuration Manager 可以透過兩種方式協助您管理啟用鎖定：
 
-使用 Configuration Manager 符合性设置来创建和部署 **iOS 和 Mac OS X** 类型的配置项目以在受到监督的设备上启用激活锁定：
-
-1. 使用[如何为没有使用 System Center Configuration Manager 客户端管理的 iOS 和 Mac OS X 设备创建配置项目](/sccm/compliance/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client)主题中的信息来创建 **iOS 和 Mac OS X** 类型的配置项目。
-2. 在创建配置项目向导的“系统安全”页中，将设置“允许激活锁定（仅限受监督模式）”配置为“允许”。
-3. [将配置项目添加到配置基线](/sccm/compliance/deploy-use/create-configuration-baselines)。
-4. [部署此配置基线](/sccm/compliance/deploy-use/deploy-configuration-baselines)到包含你想要启用激活锁定的 iOS 设备的集合。
+1. 在受監督裝置上啟用「啟用鎖定」。
+2. 在受監督裝置上略過「啟用鎖定」。
 
 > [!IMPORTANT]
-> 在执行此过程之前，请确保你实际拥有该设备。 如果没有，将绕过激活锁定，并且任何拥有此设备的人都将可以完全访问它，从而使他们可以关闭“查找我的 iPhone”、擦除设备或将其重新激活。
+> 您不可以在不受監督裝置上略過「啟用鎖定」。
 
-仅可以在受监督设备上绕过激活锁定，或者检索激活锁定绕过代码；尝试在无人监督的设备上绕过激活锁定或在错误中查看绕过代码结果。
+屬公司擁有裝置之這個項目的商業優勢如下：
 
 
 
-## <a name="view-the-activation-lock-bypass-code"></a>查看绕过激活锁定代码
+- 使用者可以獲得「尋找我的 iPhone」應用程式的安全性優點
+- 您可以讓使用者執行工作，並知道在需要重新規劃裝置時，您將裝置淘汰或解除鎖定
 
-1. 在 Configuration Manager 控制台中，单击“资产和符合性” 。
-2. 在“资产和符合性”  工作区中，单击“设备” 。
-3. 选择在受监督模式下已启用激活锁定的注册设备。
-4. 在“主页”选项卡上，在“设备”组中，单击“远程设备操作” > “查看激活锁定绕过代码”。
-5. “激活锁定绕过代码”对话框中将显示所选设备的绕过代码。
 
-## <a name="bypass-activation-lock"></a>绕过激活锁定
+## <a name="enable-activation-lock-on-supervised-devices"></a>在受監督裝置上啟用「啟用鎖定」
 
-1. 在 Configuration Manager 控制台中，单击“资产和符合性” 。
-2. 在“资产和符合性”  工作区中，单击“设备” 。
-3. 选择在受监督模式下已启用激活锁定的注册设备。
-3. 在“主页”选项卡上，在“设备”组中，单击“远程设备操作” > “绕过激活锁定”。
-5. 阅读警告对话框中的消息，在准备好继续操作后，单击“是”。
-6. 你可以从以下位置检查解锁请求的状态：
+您可以使用 Configuration Manager 相容性設定來建立和部署 **iOS 和 Mac OS X** 類型的設定項目，以在受監督裝置上啟用「啟用鎖定」：
 
-    - 设备属性对话框中设备的发现数据。
-    - “设备”视图中“激活锁定绕过状态”列（默认情况下隐藏此列）。
-    - 细节窗格的“摘要”选项卡中的“远程设备操作信息”部分（当设备处于选中状态）。
+1. 使用[如何為不是使用 System Center Configuration Manager 用戶端所管理的 iOS 和 Mac OS X 裝置建立設定項目](/sccm/compliance/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client)主題中的資訊，建立 **iOS 和 Mac OS X** 類型的設定項目。
+2. 在 [建立設定項目精靈] 的 **[系統安全性]** 頁面上，將 **[允許啟用鎖定 (僅限受監督的模式)]** 設定設成 **[允許]**。
+3. [將設定項目加入設定基準中](/sccm/compliance/deploy-use/create-configuration-baselines)。
+4. [部署此設定基準](/sccm/compliance/deploy-use/deploy-configuration-baselines)到某個集合，而這個集合包含您要啟用「啟用鎖定」的 iOS 裝置。
 
+> [!IMPORTANT]
+> 請先確定您實際擁有裝置，再執行這個程序。 否則，將會略過啟用鎖定，而且實際擁有裝置的人都可以完整存取該裝置來關閉「尋找我的 iPhone」、清除裝置，或重新啟用裝置。
+
+您只能略過「啟用鎖定」，或擷取受監督裝置上的「啟用鎖定」略過碼；嘗試略過不受監督裝置上的啟用鎖定或是檢視略過碼，會導致錯誤。
+
+
+
+## <a name="view-the-activation-lock-bypass-code"></a>檢視啟用鎖定略過碼
+
+1. 在 Configuration Manager 主控台中，按一下 [資產與相容性] 。
+2. 在 [資產與相容性]  工作區中，按一下 [裝置] 。
+3. 選取處於受監督模式並已啟用「啟用鎖定」的已註冊裝置。
+4. 在 **[首頁]** 索引標籤的 **[裝置]** 群組中，按一下 **[遠端裝置動作]** > **[檢視啟用鎖定略過碼]**。
+5. **[啟用鎖定略過碼]** 對話方塊會顯示所選取裝置的略過碼。
+
+## <a name="bypass-activation-lock"></a>略過啟用鎖定
+
+1. 在 Configuration Manager 主控台中，按一下 [資產與相容性] 。
+2. 在 [資產與相容性]  工作區中，按一下 [裝置] 。
+3. 選取處於受監督模式並已啟用「啟用鎖定」的已註冊裝置。
+3. 在 **[首頁]** 索引標籤的 **[裝置]** 群組中，按一下 **[遠端裝置動作]** > **[略過啟用鎖定]**。
+5. 閱讀警告對話方塊中的訊息，然後當您準備好繼續進行時按一下 **[是]** 。
+6. 您可以從下列位置檢查解除鎖定要求的狀態：
+
+    - 裝置內容對話方塊中裝置的探索資料。
+    - **[裝置]** 檢視中的 **[啟用鎖定略過狀態]** 資料行 (預設會隱藏此資料行)。
+    - 詳細資料窗格的 **[摘要]** 索引標籤中的 **[遠端裝置動作資訊]** 區段 (選取裝置時)。

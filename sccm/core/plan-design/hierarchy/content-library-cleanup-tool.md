@@ -1,81 +1,78 @@
 ---
-title: "内容库清理工具 | Microsoft Docs"
-description: "使用内容库清理工具删除不再与 System Center Configuration Manager 部署关联的孤立内容。"
+title: "內容庫清理工具 | Microsoft Docs"
+description: "使用內容庫清理工具，將不再和 System Center Configuration Manager 部署相關聯的孤立內容移除。"
 ms.custom: na
 ms.date: 4/7/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 226cbbb2-9afa-4e2e-a472-be989c0f0e11
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 32f7fc4ef9c8e8d3c2ec8eeaf9a3174bad992ffb
 ms.openlocfilehash: 76e6772bdd5cbd32d525e728f6ebc988b045da78
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="the-content-library-cleanup-tool-for-system-center-configuration-manager"></a>适用于 System Center Configuration Manager 的内容库清理工具
+# <a name="the-content-library-cleanup-tool-for-system-center-configuration-manager"></a>System Center Configuration Manager 的內容庫清理工具
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用對象：System Center Configuration Manager (最新分支)*
 
- 从版本 1702 开始，用户可以使用命令行工具 (**ContentLibraryCleanup.exe**) 从分发点删除不再与任何包或应用程序关联的内容（即孤立内容）。 此工具称为内容库清理工具，可替换针对过去的 Configuration Manager 产品发布的较旧版本的类似工具。  
+ 從 1702 版開始，您可以使用命令列工具 (**ContentLibraryCleanup.exe**) 從發佈點移除不再與任何套件或應用程式相關聯的內容 (孤立的內容)。 此工具稱為內容庫清理工具，並會取代針對過去 Configuration Manager 產品所發行的類似舊版工具。  
 
-该工具只影响你运行该工具时指定的分发点上的内容。 该工具无法删除站点服务器上的内容库中的内容。
+此工具只會影響您在執行此工具時所指定發佈點上的內容。 此工具無法移除站台伺服器上的內容庫內容。
 
-你可以在管理中心站点或主站点的站点服务器上的 *%CM_Installation_Path%\cd.latest\SMSSETUP\TOOLS\ContentLibraryCleanup\* 文件夹中找到 **ContentLibraryCleanup.exe**。
+您在管理中心站台或主要站台可以在站台伺服器上的 *%CM_Installation_Path%\cd.latest\SMSSETUP\TOOLS\ContentLibraryCleanup\* 資料夾中找到 **ContentLibraryCleanup.exe**。
 
-## <a name="requirements"></a>要求  
- 该工具一次只能对一个分发点运行。  
- - 该工具可在承载你要清理的分发点的计算机上直接运行，或者从其他服务器远程运行。
- - 运行该工具的用户帐户必须具有基于角色的直接管理权限，相当于 Configuration Manager 层次结构中的完全权限管理员。 当帐户收到这些具有完全权限管理员权限的 Windows 安全组成员权限时，该工具不能运行。
+## <a name="requirements"></a>需求  
+ 一次只能針對單一發佈點執行此工具。  
+ - 其可以在裝載您想清除的發佈點所在的電腦上直接執行，或從另一部伺服器遠端執行此工具。
+ - 執行此工具的使用者帳戶必須要有直接以角色為基礎的系統管理權限，其相當於 Configuration Manager 階層上的系統高權限管理員。 如果收到這些權限的帳戶身為具有系統高權限管理員權限的 Windows 安全性群組成員，此工具將無法運作。
 
-## <a name="modes-of-operation"></a>操作模式
-可以在以下两种模式中运行该工具。 我们建议在*假设*模式下运行该工具以查看结果，然后在*删除模式*下运行该工具：
-  1.    **假设模式**：   
-      如果未指定 **/delete** 开关，该工具会以假设模式运行，并且标识将从分发点删除的内容。
-   - 当在此模式下运行时，该工具不会删除任何数据。
-   - 有关被删除的内容的信息会写入工具日志文件中，并且不会提示你确认每次可能的删除。  
+## <a name="modes-of-operation"></a>作業模式
+您可以在下列兩種模式中執行此工具。 建議您在「假設狀況」模式中執行工具，以便您先檢閱結果，再於「刪除模式」中執行此工具：
+  1.    **假設狀況模式**：   
+      如果您未指定 **/delete** 參數，此工具會在假設狀況模式中執行，並識別要從發佈點刪除的內容。
+   - 在此模式中執行時，此工具不會刪除任何資料。
+   - 和要刪除的內容相關的資訊會寫入至工具記錄檔，而且系統不會提示您確認每個可能的刪除動作。  
       </br>   
 
-  2. **删除模式**：   
-    使用 **/delete** 开关运行工具时，工具将以删除模式运行。
+  2. **刪除模式**：   
+    當您搭配 **/delete** 參數執行此工具時，此工具會在刪除模式中執行。
 
-     - 以此模式运行时，可从分发点的内容库删除指定分发点上的孤立内容。
-     -     删除每个文件之前，你必须确认是否要删除文件。  若要删除，请选择“是”；若不删除，请选择“否”；或者选择“删除所有”，跳过后续提示并删除所有孤立内容。  
+     - 當在此模式中執行時，您可以從發佈點的內容庫刪除指定發佈點上所發現的孤立內容。
+     -  在刪除每個檔案之前，您都必須確認應刪除檔案。  您可以選取 **Y** 表示是、選取 **N** 表示否，或選取 [全部皆是] 略過接下來的提示並刪除所有孤立的內容。  
      </br>
 
-工具在其中任一模式下运行时，会自动创建带名称的日志，该日志包括运行采用的模式、分发点名称、操作日期和时间等内容。 工具结束时，日志文件会自动打开。
+當此工具在任一種模式中執行時，它會自動建立記錄，其名稱包含此工具的執行模式、發佈點名稱以及操作的日期和時間。 當工具完成時，會自動開啟記錄檔。
 
-默认情况下，日志文件会写入运行该工具的计算机上运行该工具的用户帐户的临时文件夹中。 你可以使用 **/log** 开关将日志文件重定向到其他位置，包括网络共享。
+預設會在此工具執行所在的電腦上，將記錄檔寫入到執行此工具之使用者帳戶的暫存資料夾。 您可以使用 **/log** 參數，將記錄檔重新導向至另一個位置，包括網路共用。
 
 
-## <a name="run-the-tool"></a>运行该工具
-要运行该工具，请执行以下操作：
-1. 使用管理命令提示符打开包含 **ContentLibraryCleanup.exe** 的文件夹。  
-2. 接下来，输入包含所需命令行开关和可选开关的命令行。
+## <a name="run-the-tool"></a>執行工具
+執行工具：
+1. 請在包含 **ContentLibraryCleanup.exe** 的資料夾開啟系統管理命令提示字元。  
+2. 接著輸入命令列，其中包含必要的命令列參數及您要使用的選擇性參數。
 
-**已知问题** 运行该工具时，当任何程序包或部署失败或正在进行时，可能会返回以下错误：
--  *System.InvalidOperationException：由于程序包 <packageID> 未完全安装，因此无法清理此内容库。*
+**已知問題** 執行此工具時，如果有任何套件或部署失敗或正在進行中，可能會傳回類似下列錯誤︰
+-  *System.InvalidOperationException：因為套件 <packageID> 未完全安裝，所以目前無法清除此內容庫。*
 
-**解决方法：** 无。 当内容正在进行处理或部署失败时，该工具无法可靠地识别孤立的文件。 因此，该工具将不允许你清理内容，直到该问题解决。
+**因應措施：** 無。 正在進行部署或無法部署內容時，此工具無法可靠識別孤立的檔案。 因此，在解決該問題之前，此工具不允許您清除內容。
 
-### <a name="command-line-switches"></a>命令行开关  
-可以按任何顺序使用以下命令行开关。   
+### <a name="command-line-switches"></a>命令列參數  
+您可以依任何順序使用下列命令列參數。   
 
-|开关|详细信息|
+|參數|詳細資料|
 |---------|-------|
-|**/delete**  |**可选** </br> 要从分发点删除内容时使用此开关。 删除内容之前，系统会进行提示。 </br></br> 如果不使用此开关，该工具将记录有关要删除的内容的结果，但不会从分发点删除内容。 </br></br> 示例：***ContentLibraryCleanup.exe /dp server1.contoso.com /delete*** |
-| **/q**       |**可选** </br> 此开关在取消所有提示（如删除内容的提示）的安静模式下运行该工具，并且不会自动打开日志文件。 </br></br> 示例：***ContentLibraryCleanup.exe /q /dp server1.contoso.com*** |
-| **/dp &lt;distribution point FQDN>**  | **必需** </br> 指定要清理的分发点的完全限定域名 (FQDN)。 </br></br> 示例：***ContentLibraryCleanup.exe /dp server1.contoso.com***|
-| **/ps &lt;primary site FQDN>**       | **可选** - 从主站点上的分发点清除内容时。</br>**必需** - 从辅助站点上的分发点清除内容时。 </br></br>该工具连接到父主站点，以针对 SMS_Provider 运行查询。 这些查询可让工具确定哪些内容应该处于分发点上，这样它就可以标识孤立的和可删除的内容。 与父主站点的连接必须用于辅助站点上的分发点，因为所需的详细信息无法直接从辅助站点获取。</br></br> 当分发点位于辅助站点上时，指定分发点所属的主站点的 FQDN，或父级主站点的 FQDN。 </br></br> 示例：***ContentLibraryCleanup.exe /dp server1.contoso.com /ps siteserver1.contoso.com*** |
-| **/sc &lt;primary site code>**  | **可选** - 从主站点上的分发点清除内容时。</br>**必需** - 从辅助站点上的分发点清除内容时。 </br></br> 当分发点位于辅助站点上时，指定分发点所属的主站点的站点代码，或父级主站点的站点代码。</br></br> 示例：***ContentLibraryCleanup.exe /dp server1.contoso.com /sc ABC*** |
-| **/log <log file directory>**       |**可选** </br> 指定该工具写入日志文件的位置。 此目录可以是本地驱动器，也可以位于网络共享上。</br></br> 如果不使用此开关，则日志文件位于运行该工具的计算机上的用户的临时文件夹中。</br></br> 本地驱动器示例：***ContentLibraryCleanup.exe /dp server1.contoso.com /log C:\Users\Administrator\Desktop*** </br></br>网络共享示例：***ContentLibraryCleanup.exe /dp server1.contoso.com /log \\&lt;share>\&lt;folder>***|
-
+|**/delete**  |**選擇性** </br> 當您要從發佈點刪除內容時，請使用此參數。 刪除內容之前，您會收到提示。 </br></br> 未使用此參數時，工具會記錄要刪除之內容的相關結果，但不會從發佈點刪除內容。 </br></br> 範例︰***ContentLibraryCleanup.exe /dp server1.contoso.com /delete*** |
+| **/q**       |**選擇性** </br> 此參數以會隱藏所有提示 (例如要刪除內容的提示) 的無訊息模式來執行此工具，而且不會自動開啟記錄檔。 </br></br> 範例︰***ContentLibraryCleanup.exe /q /dp server1.contoso.com*** |
+| **/dp &lt;發佈點 FQDN>**  | **必要** </br> 指定您要清除之發佈點的完整網域名稱 (FQDN)。 </br></br> 範例︰***ContentLibraryCleanup.exe /dp server1.contoso.com***|
+| **/ps &lt;主要站台 FQDN>**       | 從主要站台的發佈點清除內容時為**選擇性**。</br>從次要站台的發佈點清除內容時為**必要**。 </br></br>連線到父主要站台，以對 SMS_Provider 執行的工具。 這些查詢可讓工具判斷發佈點上應該要有什麼內容，以便識別孤立且可移除的內容。 因為無法直接從次要站台取得必要的詳細資料，所以必須為位於次要站台的發佈點建立父主要站台的連線。</br></br> 指定發佈點所屬之主要站台的 FQDN，或發佈點在次要站台時之父主要站台的 FQDN。 </br></br> 範例︰***ContentLibraryCleanup.exe /dp server1.contoso.com /ps siteserver1.contoso.com*** |
+| **/sc &lt;主要站台碼>**  | 從主要站台的發佈點清除內容時為**選擇性**。</br>從次要站台的發佈點清除內容時為**必要**。 </br></br> 指定發佈點所屬之主要站台的站台碼，或發佈點在次要站台時之父主要站台的站台碼。</br></br> 範例︰***ContentLibraryCleanup.exe /dp server1.contoso.com /sc ABC*** |
+| **/log <log file directory>**       |**選擇性** </br> 指定工具要寫入記錄檔的位置。 這可以是本機磁碟機或在網路共用上。</br></br> 在執行此工具的電腦上，不使用這個參數時，記錄檔會位在使用者的暫存資料夾中。</br></br> 本機磁碟機的範例︰***ContentLibraryCleanup.exe /dp server1.contoso.com /log C:\Users\Administrator\Desktop*** </br></br>網路共用的範例︰***ContentLibraryCleanup.exe /dp server1.contoso.com /log \\&lt;共用>\&lt;資料夾>***|

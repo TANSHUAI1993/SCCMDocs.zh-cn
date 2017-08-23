@@ -1,5 +1,5 @@
 ---
-title: "联机文档 | Microsoft Docs"
+title: "線上文件 | Microsoft Docs"
 ms.custom: na
 ms.date: 10/06/2016
 ms.reviewer: na
@@ -8,103 +8,96 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.assetid: 6d665cef-fc67-4686-bcb3-0572c0a3760c
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 1a4a9da88caba55d9e340c7fb1f31f4e3b957f3e
 ms.openlocfilehash: 73bb5d4236469746102fd4893c53f20aaee122d5
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="online-documentation-for-system-center-configuration-manager"></a>System Center Configuration Manager 的联机文档
+# <a name="online-documentation-for-system-center-configuration-manager"></a>System Center Configuration Manager 的線上文件
 
 
-欢迎使用 System Center Configuration Manager文档库。  
-在文档库中查找你使用的产品版本：  
+歡迎使用 System Center Configuration Manager 文件庫。  
+尋找您所使用之產品版本的文件庫：  
 
-## <a name="system-center-configuration-manager-current-branch"></a>System Center Configuration Manager（当前分支）  
-**联机文档** ：你可以在 TechNet 上查看 System Center Configuration Manager 当前分支的联机文档：  
+## <a name="system-center-configuration-manager-current-branch"></a>System Center Configuration Manager (目前分支)  
+**線上文件：** 您可以在 TechNet 網站上檢視 System Center Configuration Manager 的最新分支線上文件：  
 
--   [System Center Configuration Manager 简介](https://technet.microsoft.com/library/mt622715.aspx)  
+-   [Introduction to System Center Configuration Manager (System Center Configuration Manager 簡介) (System Center Configuration Manager 簡介)](https://technet.microsoft.com/library/mt622715.aspx)  
 
--   [为 System Center Configuration Manager 做准备](https://technet.microsoft.com/library/mt608540.aspx)  
+-   [準備開始使用 System Center Configuration Manager](https://technet.microsoft.com/library/mt608540.aspx)  
 
--   [开始使用 System Center Configuration Manager](https://technet.microsoft.com/library/mt608544.aspx)  
+-   [Start using System Center Configuration Manager (開始使用 System Center Configuration Manager) (開始使用 System Center Configuration Manager)](https://technet.microsoft.com/library/mt608544.aspx)  
 
--   [使用 System Center Configuration Manager 管理企业操作系统](https://technet.microsoft.com/library/mt627933.aspx)  
+-   [Manage enterprise operating systems with System Center Configuration Manager (使用 System Center Configuration Manager 管理企業作業系統) (使用 System Center Configuration Manager 管理企業作業系統)](https://technet.microsoft.com/library/mt627933.aspx)  
 
--   [使用 System Center Configuration Manager 部署并管理应用程序](https://technet.microsoft.com/library/mt627959.aspx)  
+-   [Deploy and manage applications with System Center Configuration Manager (使用 System Center Configuration Manager 部署和管理應用程式) (使用 System Center Configuration Manager 部署和管理應用程式)](https://technet.microsoft.com/library/mt627959.aspx)  
 
--   [在 System Center Configuration Manager 中部署并管理软件更新](https://technet.microsoft.com/library/mt634340.aspx)  
+-   [Deploy and manage software updates in System Center Configuration Manager (在 System Center Configuration Manager 中部署和管理軟體更新) (在 System Center Configuration Manager 中部署和管理軟體更新)](https://technet.microsoft.com/library/mt634340.aspx)  
 
--   [使用 System Center Configuration Manager 确保设备的合规性](https://technet.microsoft.com/library/mt595717.aspx)  
+-   [Ensure device compliance with System Center Configuration Manager (確定裝置與 System Center Configuration Manager 的相容性) (確定裝置與 System Center Configuration Manager 的相容性)](https://technet.microsoft.com/library/mt595717.aspx)  
 
--   [使用 System Center Configuration Manager 保护数据和站点基础架构](https://technet.microsoft.com/library/mt613161.aspx)  
+-   [Protect data and site infrastructure with System Center Configuration Manager (使用 System Center Configuration Manager 保護資料和站台基礎結構) (使用 System Center Configuration Manager 保護資料和站台基礎結構)](https://technet.microsoft.com/library/mt613161.aspx)  
 
--   [监视和维护 System Center Configuration Manager](https://technet.microsoft.com/library/mt612855.aspx)  
+-   [監視及維護 System Center Configuration Manager](https://technet.microsoft.com/library/mt612855.aspx)  
 
--   [System Center Configuration Manager 的安全性和隐私](https://technet.microsoft.com/library/mt622694.aspx)  
+-   [Security and privacy for System Center Configuration Manager (System Center Configuration Manager 的安全性和隱私權) (System Center Configuration Manager 的安全性和隱私權)](https://technet.microsoft.com/library/mt622694.aspx)  
 
-**发行说明：**发行说明包含产品文档中未提供的信息，这些信息可能是成功安装并使用 System Center Configuration Manager 所需要的。 请参阅 [System Center Configuration Manager 的发行说明](https://technet.microsoft.com/library/mt592024.aspx)  
+**版本資訊：**版本資訊包含產品文件中未提供，而且可能需要用來順利安裝和使用 System Center Configuration Manager 的資訊。 請參閱 [System Center Configuration Manager 的版本資訊](https://technet.microsoft.com/library/mt592024.aspx)  
 
-**查找帮助：**请参阅[查找使用 System Center Configuration Manager 的帮助](https://technet.microsoft.com/library/mt628521.aspx)：  
+**尋找說明：**請參閱[尋找使用 System Center Configuration Manager 的說明](https://technet.microsoft.com/library/mt628521.aspx)：  
 
-**辅助功能：**请参阅 [Configuration Manager 控制台的辅助功能](https://technet.microsoft.com/library/mt628521.aspx)  
+**協助工具：**請參閱 [Configuration Manager 主控台的協助工具功能](https://technet.microsoft.com/library/mt628521.aspx)  
 
 
 ## <a name="system-center-configuration-manager-technical-preview"></a>System Center Configuration Manager Technical Preview  
-**联机文档：** 您可以在 TechNet 的以下指南中查看联机文档：  
+**線上文件：** 您可以在 TechNet 上的下列指南中檢視線上文件：  
 
  [System Center Configuration Manager Technical Preview](https://go.microsoft.com/fwlink/p/?LinkId=534001)  
 
-**发行说明：** 此技术预览版的发行说明包含在此版本的核心文档中，并且显示在每个功能的信息的字里行间。  
+**版本資訊：** 此技術預覽的版本資訊隨附於此版本的核心文件中，並會和每項功能的資訊一起顯示。  
 
-**辅助功能： **此技术预览版的辅助功能信息与 System Center 2012 Configuration Manager 中的一样。 有关有利于残障人士更容易使用 Configuration Manager 的功能、产品和服务的信息，请参阅 [Configuration Manager 的辅助功能](http://go.microsoft.com/fwlink/p/?LinkId=258586)。  
+**協助工具︰**此技術預覽的協助工具資訊自 System Center 2012 Configuration Manager 以來從未變更。 如需有助於殘障人士更方便使用 Configuration Manager 之功能、產品及服務的相關資訊，請參閱 [Configuration Manager 的協助工具功能](http://go.microsoft.com/fwlink/p/?LinkId=258586)。  
 
 ## <a name="system-center-2012-configuration-manager"></a>System Center 2012 Configuration Manager  
-以下项目的**联机文档**：  
+**線上文件︰**適用於下列產品︰  
 
--   不带 Service Pack、SP1 和 SP2 的 System Center 2012 Configuration Manager  
+-   System Center 2012 Configuration Manager (不含 Service Pack、SP1 及 SP2)  
 
--   不带 Service Pack、SP1 的 System Center 2012 R2 Configuration Manager  
+-   System Center 2012 R2 Configuration Manager (不含 Service Pack 及 SP1)  
 
-可以在 TechNet 的以下指南中查看联机文档：  
+您可以在 TechNet 上的下列指南中檢視線上文件：  
 
--   [System Center 2012 Configuration Manager 入门](https://go.microsoft.com/fwlink/p/?LinkId=210632)  
+-   [開始使用 System Center 2012 Configuration Manager](https://go.microsoft.com/fwlink/p/?LinkId=210632)  
 
--   [System Center 2012 Configuration Manager 的站点管理](https://go.microsoft.com/fwlink/p/?LinkId=210636)  
+-   [System Center 2012 Configuration Manager 的網站管理](https://go.microsoft.com/fwlink/p/?LinkId=210636)  
 
--   [在 System Center 2012 Configuration Manager 中迁移层次结构](https://go.microsoft.com/fwlink/p/?LinkId=210645)  
+-   [在 System Center 2012 Configuration Manager 中移轉階層](https://go.microsoft.com/fwlink/p/?LinkId=210645)  
 
--   [部署 System Center 2012 Configuration Manager 的客户端](https://go.microsoft.com/fwlink/p/?LinkId=210638)  
+-   [在 System Center 2012 Configuration Manager 中部署用戶端](https://go.microsoft.com/fwlink/p/?LinkId=210638)  
 
--   [使用 Microsoft Intune 和 Configuration Manager 管理移动设备](https://go.microsoft.com/fwlink/?LinkId=529959)  
+-   [使用 Microsoft Intune 及 Configuration Manager 管理行動裝置](https://go.microsoft.com/fwlink/?LinkId=529959)  
 
--   [在 System Center 2012 Configuration Manager 中部署软件和操作系统](https://go.microsoft.com/fwlink/p/?LinkId=210635)  
+-   [在 System Center 2012 Configuration Manager 中部署軟體和作業系統](https://go.microsoft.com/fwlink/p/?LinkId=210635)  
 
--   [System Center 2012 Configuration Manager 中的资产和合规性](https://go.microsoft.com/fwlink/p/?LinkId=210639)  
+-   [System Center 2012 Configuration Manager 中的資產與相容性](https://go.microsoft.com/fwlink/p/?LinkId=210639)  
 
--   [System Center 2012 Configuration Manager 的安全和隐私](https://go.microsoft.com/fwlink/p/?LinkId=210640)  
+-   [System Center 2012 Configuration Manager 的安全性和隱私權](https://go.microsoft.com/fwlink/p/?LinkId=210640)  
 
--   [Scenarios and Solutions Using System Center 2012 Configuration Manager（使用 System Center 2012 Configuration Manager 的方案和解决方案）（使用 System Center 2012 Configuration Manager 的方案和解决方案）](https://go.microsoft.com/fwlink/p/?LinkId=290889)  
+-   [Scenarios and Solutions Using System Center 2012 Configuration Manager (使用 System Center 2012 Configuration Manager 的案例和解決方案) (使用 System Center 2012 Configuration Manager 的案例和解決方案)](https://go.microsoft.com/fwlink/p/?LinkId=290889)  
 
- **发行说明和技术出版物：** 发行说明和技术出版物是对 Configuration Manager 指南的补充。 发行说明包含产品文档中未提供的信息，该信息是成功安装 Configuration Manager 所需要的。 技术出版物提供了支持 Configuration Manager 的附加信息。  
+ **版本資訊和技術發行物：** 版本資訊和技術發行物可以補充 Configuration Manager 指南不足之處。 版本資訊中包含產品文件未提供的資訊，以及順利安裝 Configuration Manager 所需的資訊。 技術發行物則提供支援 Configuration Manager 的額外資訊。  
 
--   [System Center 2012 Configuration Manager 的发行说明](http://go.microsoft.com/fwlink/?LinkId=529437)  
+-   [System Center 2012 Configuration Manager 的版本資訊](http://go.microsoft.com/fwlink/?LinkId=529437)  
 
--   [System Center 2012 Configuration Manager 的技术出版物](http://go.microsoft.com/fwlink/p/?LinkId=261032)  
+-   [System Center 2012 Configuration Manager 的技術發行物](http://go.microsoft.com/fwlink/p/?LinkId=261032)  
 
-**辅助功能：** 有关有利于残障人士更容易使用 Configuration Manager 的功能、产品和服务的信息，请参阅联机主题 [Configuration Manager 的辅助功能](http://go.microsoft.com/fwlink/p/?LinkId=258586)。  
+**協助工具：** 如需有助於殘障人士更方便使用 Configuration Manager 之功能、產品及服務的相關資訊，請參閱 [Configuration Manager 的協助工具功能](http://go.microsoft.com/fwlink/p/?LinkId=258586)。  
 
-**可下载文档：** 你可以从 Microsoft 下载中心下载 [此技术文档的副本](http://go.microsoft.com/fwlink/?LinkId=253643)中的一样。 请使用在线的 TechNet 库来获取最新的信息。
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-
+**可下載的文件：** 可以從 [Microsoft 下載中心下載此技術文件的複本](http://go.microsoft.com/fwlink/?LinkId=253643)的資訊一致。 請使用線上 TechNet 技術文件庫來取得最新的資訊。

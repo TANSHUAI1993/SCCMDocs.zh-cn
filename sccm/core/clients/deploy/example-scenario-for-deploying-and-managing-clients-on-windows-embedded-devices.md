@@ -1,184 +1,180 @@
 ---
-title: "示例方案 - 部署 Windows Embedded 客户端 | Microsoft Docs"
-description: "请参阅在 Windows Embedded 设备上部署和管理 System Center Configuration Manager 客户端的示例方案。"
+title: "範例案例 - 部署 Windows Embedded 用戶端 | Microsoft Docs"
+description: "請參閱在 Windows Embedded 裝置上部署及管理 System Center Configuration Manager 用戶端的示範案例。"
 ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 10049c89-b37c-472b-b317-ce4f56cd4be7
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a650ad8e7b1f9468dd04165a3e43a89387b5d696
-ms.openlocfilehash: b07af49e2fecf6cc41258c87794ca7952206bb8a
-ms.contentlocale: zh-cn
-ms.lasthandoff: 01/17/2017
-
-
+ms.openlocfilehash: c535bc62497b5ff0b60ca266c28630d890af3604
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="example-scenario-for-deploying-and-managing-system-center-configuration-manager-clients-on-windows-embedded-devices"></a>在 Windows Embedded 设备上部署和管理 System Center Configuration Manager 客户端的示例场景
+# <a name="example-scenario-for-deploying-and-managing-system-center-configuration-manager-clients-on-windows-embedded-devices"></a>在 Windows Embedded 裝置上部署及管理 System Center Configuration Manager 用戶端的示範案例
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+適用於：System Center Configuration Manager (最新分支)
 
-此方案演示了如何使用 Configuration Manager 管理启用了写入筛选器的 Windows Embedded 设备。如果嵌入设备不支持写入筛选器，则这些设备将用作标准 Configuration Manager 客户端，这些过程将不适用。  
+此案例示範如何使用 Configuration Manager 管理啟用寫入篩選器的 Windows Embedded 裝置。如果您的內嵌裝置不支援寫入篩選器，則會以標準 Configuration Manager 用戶端運作，而且這些程序不適用。  
 
-Coho Vineyard & Winery 正在开设一家访客中心，需要运行 Windows Embedded 的网亭来运行交互式演示文稿。 新访客中心的建筑距离 IT 部门不近，因此必须可远程管理网亭。 除了运行演示文稿的软件外，这些设备还必须运行最新的反恶意软件保护软件以符合公司安全策略。 网亭必须每周全天候运行，且在访客中心开放时没有停机时间。  
+Coho Vineyard & Winery 開闢了一個遊客中心，需要在執行 Windows Embedded 的 kiosk 中執行互動式簡報。 新遊客中心大樓與 IT 部門有點距離，所以必須從遠端管理 kiosk。 除了執行簡報的軟體之外，這些裝置必須執行最新的反惡意程式碼保護軟體，以符合公司的安全性原則。 kiosk 必須於每週 7 天執行，而且在遊客中心開放時完全不停機。  
 
- Coho 已运行 Configuration Manager 来管理其网络上的设备。 Configuration Manager 配置为运行 Endpoint Protection 并安装软件更新和应用程序。 但是，由于 IT 团队以前未管理过 Windows Embedded 设备，因此 Configuration Manager 管理员 Jane 运行一个试点来管理接待大厅中的两个网亭。   
+ Coho 已執行 Configuration Manager 管理網路上的裝置。 Configuration Manager 已設定為執行 Endpoint Protection，並安裝軟體更新及應用程式。 不過，因為 IT 團隊先前不曾管理過 Windows Embedded 裝置，所以 Configuration Manager 系統管理員 Jane 做一項試驗，就是管理接待大廳中的兩部 kiosk。   
 
- 为了管理这些启用了写入筛选器的 Windows Embedded 设备，Jane 执行以下步骤来安装 Configuration Manager 客户端，通过使用 Endpoint Protection 保护客户端，并安装交互式演示文稿软件。  
+ 為了管理這些啟用寫入篩選器的 Windows Embedded 裝置，Jane 執行下列步驟來安裝 Configuration Manager 用戶端，使用 Endpoint Protection 保護用戶端，以及安裝互動式簡報軟體。  
 
-1.  为了保留软件安装，Jane 阅读了相关信息，了解了 Windows Embedded 设备如何使用写入筛选器，以及 Configuration Manager 如何通过自动禁用然后重新启用写入筛选器使写入筛选器的使用更加简单。  
+1.  Jane 閱讀 Windows Embedded 裝置如何使用寫入篩選器，及 Configuration Manager 如何藉由自動停用然後再重新啟用寫入篩選器，使持續安裝軟體更加容易。  
 
-     有关详细信息，请参阅[在 System Center Configuration Manager 中规划对 Windows Embedded 设备的客户端部署](../../../core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md)。  
+     如需詳細資訊，請參閱[規劃將用戶端部署至 System Center Configuration Manager 中的 Windows Embedded 裝置](../../../core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md)。  
 
-2.  在安装 Configuration Manager 客户端之前，Jane 为 Windows Embedded 设备创新建了一个基于查询的设备集合。 由于公司使用标准命名格式来标识其计算机，因此 Jane 可通过计算机名的前六个字母来唯一地标识 Windows Embedded 设备： **WEMDVC**。 她使用以下 WQL 查询来创建此集合： **select SMS_R_System.NetbiosName from SMS_R_System where SMS_R_System.NetbiosName like "WEMDVC%"**  
+2.  在安裝 Configuration Manager 用戶端之前，Jane 為 Windows Embedded 裝置建立一個新的查詢式裝置集合。 由於公司使用標準命名格式來識別電腦，因此 Jane 可以透過電腦名稱的前六個字母來唯一識別 Windows Embedded 裝置： **WEMDVC**。 她使用下列 WQL 查詢建立此集合： **select SMS_R_System.NetbiosName from SMS_R_System where SMS_R_System.NetbiosName like "WEMDVC%"**  
 
-     此集合允许她使用与其他设备不同的配置选项来管理 Windows Embedded 设备。 她将使用此集合来控制重启、使用客户端设置部署 Endpoint Protection，以及部署交互式演示文稿应用程序。  
+     此集合可讓她使用不同的設定選項，從其他裝置管理 Windows Embedded 裝置。 她將會使用此集合來控制重新啟動、以用戶端設定部署 Endpoint Protection，以及部署互動式簡報應用程式。  
 
-     请参阅[如何在 System Center Configuration Manager 中创建集合](../../../core/clients/manage/collections/create-collections.md)。  
+     請參閱[如何在 System Center Configuration Manager 中建立集合](../../../core/clients/manage/collections/create-collections.md)。  
 
-3.  Jane 针对维护时段配置集合，以确保安装演示文稿应用程序和任何升级可能需要的重启不会在访客中心的开放时段进行。 开放时段将为星期一至星期日 09:00 至 18:00。 她将每天的维护时段配置为 18:30 至 06:00。  
+3.  Jane 設定一個維護期間的集合，可確保在遊客中心開放期間，安裝簡報應用程式和任何升級時不需要重新啟動裝置。 開放時間為星期一到星期六的 09:00 到 18:00。 她將維護期間設定為每天 18:30 到 06:00。  
 
-4.  有关详细信息，请参阅[如何在 System Center Configuration Manager 中使用维护时段](../../../core/clients/manage/collections/use-maintenance-windows.md)。  
+4.  如需詳細資訊，請參閱[如何使用 System Center Configuration Manager 中的維護期間](../../../core/clients/manage/collections/use-maintenance-windows.md)。  
 
-5.  然后，Jane 配置一个自定义设备客户端设置以通过为下列设置选择“是”  来安装 Endpoint Protection 客户端，然后将此自定义客户端设置部署到 Windows Embedded 设备集合：  
+5.  Jane 接著設定了自訂裝置用戶端設定，針對下列設定選取 [是]  安裝 Endpoint Protection 用戶端，然後將此自訂用戶端設定部署至 Windows Embedded 裝置集合：  
 
-    -   **在客户端计算机上安装 Endpoint Protection 客户端**  
+    -   **在用戶端電腦上安裝 Endpoint Protection 用戶端**  
 
-    -   **对于带有写入筛选器的 Windows Embedded 设备，提交 Endpoint Protection 客户端安装(需要重新启动)**  
+    -   **針對具有寫入篩選器的 Windows Embedded 裝置，認可 Endpoint Protection 用戶端安裝 (需要重新啟動)**  
 
-    -   **允许安装 Endpoint Protection 客户端和在维护时段以外重启**  
+    -   **允許在維護期間以外執行 Endpoint Protection 用戶端安裝和重新啟動**  
 
-     安装 Configuration Manager 客户端时，这些设置会安装 Endpoint Protection 客户端并确保其作为安装的一部分保留在操作系统中，而不仅仅只是写入覆盖区。 公司安全策略要求始终安装反恶意软件，并且 Jane 不希望面临网亭不受保护（即使在重启的情况下短时间不受保护）的风险。  
-
-    > [!NOTE]  
-    >  安装 Endpoint Protection 客户端所需进行的重启只会在访客中心运营之前设备的设置期间发生一次。 与定期部署应用程序或软件定义更新不同，下一次在同一设备上安装 Endpoint Protection 客户端将可能在公司升级到 Configuration Manager 的下一个版本时进行。  
-
-     有关详细信息，请参阅[在 System Center Configuration Manager 中配置 Endpoint Protection](../../../protect/deploy-use/configure-endpoint-protection.md)。  
-
-6.  在完成了客户端的配置设置后，Jane 准备安装 Configuration Manager 客户端。 她必须在 Windows Embedded 设备上手动禁用写入筛选器，然后才能安装客户端。 她阅读网亭附带的 OEM 文档，并按照其说明执行操作来禁用写入筛选器。  
-
-     Jane 重命名设备，使其使用公司标准命名格式，然后在包含客户端源文件的映射驱动器中使用以下命令运行 CCMSetup 来手动安装客户端： **CCMSetup.exe /MP:mpserver.cohovineyardandwinery.com SMSSITECODE=CO1**  
-
-     此命令安装客户端，将客户端分配给具有 Intranet FQDN **mpserver.cohovineyardandwinery.com**的管理点，并将客户端分配给名为 **CO1**的主站点。  
-
-     Jane 知道，客户端安装并将其状态发送回站点始终会花很长时间。 因此，她等待一段时间，之后确认客户端已成功安装、分配到站点，并显示为她为 Windows Embedded 设备创建的集合中的客户端。  
-
-     为了进一步确认，她在设备的“控制面板”中检查 Configuration Manager 的属性，并将其与站点管理的标准 Windows 计算机进行比较。 例如，在“组件”  选项卡上，“硬件清单代理”  显示“已启用” ，并且在“操作”  选项卡上有 11 项可用操作，其中包括“应用程序部署评估周期”  和“发现数据收集周期” 。  
-
-     Jane 确信客户端已成功安装、分配并且正在从管理点接收客户端策略，然后按照 OEM 的说明手动启用写入筛选器。  
-
-     有关详情，请参阅：  
-
-    -   [如何在 System Center Configuration Manager 中将客户端部署到 Windows 计算机](../../../core/clients/deploy/deploy-clients-to-windows-computers.md)  
-
-    -   [如何在 System Center Configuration Manager 中将客户端分配到一个站点](../../../core/clients/deploy/assign-clients-to-a-site.md)  
-
-7.  在 Configuration Manager 客户端已安装在 Windows Embedded 设备上后，Jane 确认她可采用与管理标准 Windows 客户端相同的方式来管理它们。 例如，她可以从 Configuration Manager 控制台中使用远程控制进行远程管理、为它们启动客户端策略，以及查看客户端属性和硬件清单。  
-
-     由于这些设备已加入了 Active Directory 域，因此她不必手动将它们批准为受信任的客户端，并从 Configuration Manager 控制台中确认它们已得到批准。  
-
-     有关详细信息，请参阅 [How to manage clients in System Center Configuration Manager](../../../core/clients/manage/manage-clients.md)。  
-
-8.  为了安装交互式演示文稿软件，Jane 运行“部署软件向导”  并配置所需的应用程序。 在向导的“用户体验”  页上的“Windows Embedded 设备的写入筛选器处理”  部分，她接受选择“在截止时间或在维护时段内提交更改(需要重启)” 的默认选项。  
-
-     Jane 为写入筛选器保留此默认选项以确保应用程序在重启后保留，以使其始终可供使用网亭的访客使用。 在每天的维护时段中，可以安全地进行安装和任何更新的重启。  
-
-     Jane 将应用程序部署到 Windows Embedded 设备集合。  
-
-     有关详细信息，请参阅 [如何使用 System Center Configuration Manager 部署应用程序](../../../apps/deploy-use/deploy-applications.md)。  
-
-9. 为了配置 Endpoint Protection 的定义更新，Jane 使用软件更新并运行创建自动部署规则向导。 她选择“定义更新”  模板以使用适合于 Endpoint Protection 的设置预先填充向导。  
-
-     这些设置包括向导的“用户体验”  页上的下列设置：  
-
-    -   **到期行为**：未选中“软件安装”  复选框。  
-
-    -   **Windows Embedded 设备的写入筛选器处理**：未选中“在截止时间或在维护时段内提交更改 (需要重启)”  复选框。  
-
-     Jane 保留这些默认设置。 这两个选项连同此配置一起，使得 Endpoint Protection 的任何软件更新可在白天安装到覆盖区，而不用等到维护时段安装和提交。 此配置与计算机运行反恶意软件保护的公司安全策略最为符合。  
+     安裝 Configuration Manager 用戶端時，這些設定會安裝 Endpoint Protection 用戶端，並確保其保存於安裝的作業系統之中，而不是只寫入至重疊。 由於公司安全性原則要求一律要安裝反惡意程式碼軟體，所以 Jane 即使是在重新啟動的非常短時間內，也不想要冒著讓 kiosk 未受保護的風險。  
 
     > [!NOTE]  
-    >  与应用程序的软件安装不同，Endpoint Protection 的软件更新定义可能会非常频繁出现，甚至会一天出现多次。 它们通常是很小的文件。 对于这些类型的安全相关部署，始终安装到覆盖区（而不是等到维护时段再安装）通常可能很有利。 如果设备重启，Configuration Manager 客户端将快速重新安装软件定义更新，因为此操作将启动评估检查，而不会等到下一次计划的评估时进行。  
+    >  安裝 Endpoint Protection 用戶端需要在裝置的安裝期間，以及在遊客中心運作前重新啟動一次。 和應用程式或軟體定義更新的定期部署不同的是，下一次當公司升級至新版的 Configuration Manager 時，可能會在相同裝置上安裝 Endpoint Protection 用戶端。  
 
-     Jane 为自动部署规则选择 Windows Embedded 设备集合。  
+     如需詳細資訊，請參閱[設定 System Center Configuration Manager 中的 Endpoint Protection](../../../protect/deploy-use/configure-endpoint-protection.md)。  
 
-     有关详细信息，请参阅  
-                  步骤 3：按[在 System Center Configuration Manager 中配置 Endpoint Protection](../../../protect/deploy-use/configure-endpoint-protection.md)中所述，配置 Configuration Manager 软件更新以将定义更新提供给客户端计算机  
+6.  此時用戶端的組態設定已就緒，Jane 準備要安裝 Configuration Manager 用戶端。 她必須先手動停用 Windows Embedded 裝置上的寫入篩選器，才能安裝用戶端。 她閱讀了 kiosk 隨附的 OEM 文件，並依照指示停用寫入篩選器。  
 
-10. Jane 决定配置一个定期在覆盖区上提交所有更改的维护任务。 此任务是为了支持软件更新定义部署，减少累积并必须在每次设备重启时再次安装的更新的数量。 在她的体验中，这可帮助反恶意软件程序更有效地运行。  
+     Jane 使用公司標準命名格式重新命名裝置，然後使用下列命令，從保留用戶端來源檔案的對應磁碟執行 CCMSetup，藉以手動安裝用戶端： **CCMSetup.exe /MP:mpserver.cohovineyardandwinery.com SMSSITECODE=CO1**  
+
+     此命令會安裝用戶端，指派用戶端給內部網路 FQDN 為 **mpserver.cohovineyardandwinery.com**的管理點，並將用戶端指派給名為 **CO1**的主要站台。  
+
+     Jane 知道需要一些時間來安裝用戶端，並將其狀態傳送回站台。 因此，她等待用戶端順利安裝，指派給站台，並在她為 Windows Embedded 裝置所建立的集合中顯示為用戶端後才進行確認。  
+
+     為了再次確認，她在裝置上的 [控制台] 中檢查 Configuration Manager 的內容，並將這些內容與站台所管理的標準 Windows 電腦進行比對。 例如，在 [元件]  索引標籤上，[硬體清查代理程式]  顯示為 [已啟用] ，而在 [動作]  索引標籤上有 11 個可用的動作，其中包括 [應用程式部署評估週期]  和 [探索資料收集週期] 。  
+
+     確認用戶端已順利安裝、指派，以及從管理點接收用戶端原則後，Jane 接著便依照 OEM 的指示，手動啟用寫入篩選器。  
+
+     如需詳細資訊，請參閱：  
+
+    -   [如何在 System Center Configuration Manager 中將用戶端部署至 Windows 電腦](../../../core/clients/deploy/deploy-clients-to-windows-computers.md)  
+
+    -   [如何將用戶端指派給 System Center Configuration Manager 中的站台](../../../core/clients/deploy/assign-clients-to-a-site.md)  
+
+7.  現在 Configuration Manager 用戶端已安裝在 Windows Embedded 裝置上，Jane 確認她可以使用與管理標準 Windows 用戶端相同的方式來管理這些裝置。 例如，她可以從 Configuration Manager 主控台使用遠端控制從遠端管理這些裝置，為這些裝置起始用戶端原則，並且檢視用戶端內容和硬體清查。  
+
+     由於這些裝置已加入至 Active Directory 網域，她不需要手動將這些裝置核准為受信任用戶端，以及從 Configuration Manager 主控台確認這些裝置已獲得核准。  
+
+     如需詳細資訊，請參閱 [How to manage clients in System Center Configuration Manager](../../../core/clients/manage/manage-clients.md)。  
+
+8.  為了要安裝互動式簡報軟體，Jane 執行了 [部署軟體精靈]  ，並設定必要的應用程式。 在精靈的 [使用者經驗]  頁面的 [Windows Embedded 裝置的寫入篩選器處理]  區段中，她接受選取 [在到期時或在維護期間認可變更 (需要重新啟動)] 的預設選項。  
+
+     Jane 保留此寫入篩選器的預設選項，確保應用程式在重新啟動後仍然存在，以方便使用 kiosk 的遊客能隨時使用。 日常維護期間為安裝及任何更新時可能會發生的重新啟動狀況，提供了一段安全的期間。  
+
+     Jane 將應用程式部署至 Windows Embedded 裝置集合。  
+
+     如需詳細資訊，請參閱[如何使用 System Center Configuration Manager 部署應用程式](../../../apps/deploy-use/deploy-applications.md)。  
+
+9. 為了要設定 Endpoint Protection 定義更新，Jane 使用軟體更新並執行 [建立自動部署規則精靈]。 她選取 [定義更新]  範本，將適用於 Endpoint Protection 的設定預先填入精靈。  
+
+     這些設定包括精靈之 [使用者經驗]  頁面的下列各項：  
+
+    -   **期限行為**：未選取 [軟體安裝]  核取方塊。  
+
+    -   **Windows Embedded 裝置的寫入篩選器處理**：未選取 [在到期時或在維護期間認可變更 (需要重新啟動)]  核取方塊。  
+
+     Jane 保留這些預設設定。 總之，這兩個選項與此設定允許於白天在重疊中安裝 Endpoint Protection 的任何軟體更新定義，並且不在維護期間等待安裝及認可。 此設定最符合讓電腦執行最新反惡意程式碼防護的公司安全性原則。  
 
     > [!NOTE]  
-    >  如果嵌入式设备曾经运行另一个支持提交更改的管理任务，这些软件更新定义将自动提交到映像。 例如，安装新版本的交互式演示文稿软件也会提交软件更新定义的更改。 或者，每个月安装将在维护时段中安装的标准软件更新也会提交软件更新定义的更改。 但是，在标准软件更新未运行并且交互式演示文稿软件不太可能非常频繁更新的此方案中，可能要几个月之后才会将软件定义更新自动提交到映像。  
+    >  和應用程式的軟體安裝不同的是，Endpoint Protection 的軟體更新定義可能會非常頻繁地發生，甚至是一天多次。 這些通常是小檔案。 這些類型的安全性相關部署通常有益於安裝到重疊，而不是等到維護期間才進行部署。 如果裝置因為此動作起始評估檢查而重新啟動，並且未等到下一次排程的評估，Configuration Manager 用戶端將會快速重新安裝軟體定義更新。  
 
-     Jane 首先创建一个只有名称设置的自定义任务序列。 她运行创建任务序列向导：  
+     Jane 選取了自動部署規則的 Windows Embedded 裝置集合。  
 
-    1.  在“创建新的任务序列”  页上，她选择“创建新的自定义任务序列” ，然后单击“下一步” 。  
+     如需詳細資訊，請參閱  
+                  步驟 3：如[設定 System Center Configuration Manager 中的 Endpoint Protection](../../../protect/deploy-use/configure-endpoint-protection.md) 中所述，將 Configuration Manager 軟體更新設定為傳遞定義更新至用戶端電腦  
 
-    2.  在“任务序列信息”  页面上，她输入 **Maintenance task to commit changes on embedded devices** 作为任务序列名称，然后单击“下一步” 。  
+10. Jane 決定設定一個定期認可重疊上所有變更的維護工作。 此工作是在每一次裝置重新啟動時支援軟體更新定義部署，以降低累積且必須重新安裝的更新數目。 在她的經驗中，此工作可讓反惡意軟體程式更有效地執行。  
 
-    3.  在“摘要”  页上，她选择“下一步” 并完成向导。  
+    > [!NOTE]  
+    >  如果內嵌裝置執行其他支援認可變更的管理工作，可能會自動將這些軟體更新定義認可至映像。 例如，安裝新版本的互動式簡報軟體可能也會認可軟體更新定義的變更。 或者，每個月在維護期間安裝的標準軟體更新，也會認可軟體更新定義的變更。 不過，此案例不會執行標準軟體更新，而且也不太可能經常更新互動式簡報軟體，因此可能要幾個月時間才會自動將軟體定義更新認可至映像。  
 
-     然后，Jane 将此自定义任务序列部署到 Windows Embedded 设备集合，并配置计划以每个月运行。 作为部署设置的一部分，她选中“在截止时间或在维护时段内提交更改(需要重启)”  复选框，以便在重启后保留更改。 为了配置此部署，她选择刚刚创建的自定义任务序列，然后在“主页”  选项卡上的“部署”  组中单击“部署”  以启动部署软件向导：  
+     Jane 先建立了一個只有名稱，沒有任何設定的自訂工作順序。 她執行了 [建立工作順序精靈]：  
 
-    1.  在“常规”  页上，她选择 Windows Embedded 设备集合，然后单击“下一步” 。  
+    1.  她在 [建立新的工作順序]  頁面選取 [建立新的自訂工作順序] ，然後按 [下一步] 。  
 
-    2.  在“部署设置”  页上，她为“目的”  选择“必需” ，然后单击“下一步” 。  
+    2.  她在 [工作順序資訊]  頁面上輸入 **Maintenance task to commit changes on embedded devices** 作為工作順序名稱，然後按一下 [下一步] 。  
 
-    3.  在“计划”  页上，她单击“新建”  以指定维护时段内的一个每周计划，然后单击“下一步” 。  
+    3.  她在 [摘要]  頁面選取 [下一步] 並完成精靈。  
 
-    4.  她完成向导而未进行任何进一步的更改。  
+     Jane 接著將此自訂工作順序部署至 Windows Embedded 裝置集合，並將排程設定為每個月執行。 進行部署設定時，她選取 [在到期時或在維護期間認可變更 (需要重新啟動)]  核取方塊，以便在重新啟動後保存變更。 為了要設定此部署，她選取剛才建立的自訂工作順序，然後在 [首頁]  索引標籤的 [部署]  群組中按一下 [部署]  ，啟動 [部署軟體精靈]：  
 
-     有关详细信息，请参阅  
-                  [管理任务序列以在 System Center Configuration Manager 中自动执行任务](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md)。  
+    1.  她在 [一般]  頁面選取 Windows Embedded 裝置集合，然後按 [下一步] 。  
 
-11. 为使网亭自动运行，Jane 编写了一个脚本，以按照下列设置来配置设备：  
+    2.  她在 [部署設定]  頁面選取 [必要]  之 [目的] ，然後按 [下一步] 。  
 
-    -   使用无密码的来宾帐户自动登录。  
+    3.  她在 [排程]  頁面按了一下 [新增]  以指定維護期間的每週排程，然後按 [下一步] 。  
 
-    -   在启动时自动运行交互式演示文稿软件。  
+    4.  她完成精靈，未做進一步變更。  
 
-     Jane 使用包和程序将此脚本部署到 Windows Embedded 设备集合。 在她运行“部署软件向导”时，她再次选中“在截止时间或在维护时段内提交更改(需要重启)”  复选框，以便在重新启动后保留更改。  
+     如需詳細資訊，請參閱  
+                  [管理工作順序，將 System Center Configuration Manager 中的工作自動化](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md)。  
 
-     有关详细信息，请参阅 [System Center Configuration Manager 中的包和程序](../../../apps/deploy-use/packages-and-programs.md)。  
+11. 為了讓 Kiosk 能夠自動執行，Jane 寫了一個指令碼來設定裝置的下列設定值：  
 
-12. 第二天早上，Jane 检查 Windows Embedded 设备。 她确认下列几点：  
+    -   使用不需密碼的來賓帳戶自動登入。  
 
-    -   使用来宾帐户自动登录了网亭。  
+    -   在啟動時自動執行互動式簡報軟體。  
 
-    -   交互式演示文稿软件正在运行。  
+     Jane 使用套件和程式，將此指令碼部署至 Windows Embedded 裝置集合。 執行部署軟體精靈時，她再次選取 [在到期時或在維護期間認可變更 (需要重新啟動)]  核取方塊，在重新啟動後繼續變更。  
 
-    -   已安装 Endpoint Protection 客户端，而且它拥有最新的软件更新定义。  
+     如需詳細資訊，請參閱 [System Center Configuration Manager中的封裝和程式](../../../apps/deploy-use/packages-and-programs.md)。  
 
-    -   设备在维护时段内重新启动。  
+12. 隔天早上，Jane 檢查 Windows Embedded 裝置。 她確認下列項目：  
 
-     有关详情，请参阅：  
+    -   使用來賓帳戶可以自動登入 Kiosk。  
 
-    -   [如何在 System Center Configuration Manager 中监视 Endpoint Protection](../../../protect/deploy-use/monitor-endpoint-protection.md)  
+    -   互動式簡報軟體可順利執行。  
 
-    -   [使用 System Center Configuration Manager 监视应用程序](/sccm/apps/deploy-use/monitor-applications-from-the-console)  
+    -   已安裝 Endpoint Protection 用戶端，且裝有最新的軟體更新定義。  
 
-13. Jane 监视网亭，并向其经理报告成功管理网亭的情况。 最终，为访客中心订购了 20 个网亭。  
+    -   裝置會在維修期間自動啟動。  
 
-     为了避免手动安装 Configuration Manager 客户端（需要手动禁用写入筛选器，然后再启用它），Jane 确保订单中包含自定义映像，该映像已包含 Configuration Manager 客户端的安装和站点分配。 此外，还按照该公司的命名格式对设备进行命名。  
+     如需詳細資訊，請參閱：  
 
-     这些网亭在距访客中心开张还有一周时运抵。 在这段时间内，这些网亭连接到网络，而且它们的所有设备管理工作都是自动进行的，无需本地管理员干预。 Jane 确认这些网亭按照要求工作：  
+    -   [如何監視 System Center Configuration Manager 中的 Endpoint Protection](../../../protect/deploy-use/monitor-endpoint-protection.md)  
 
-    -   网亭上的客户端完成站点分配，并通过 Active Directory 域服务下载受信任的根密钥。  
+    -   [使用 System Center Configuration Manager 監視應用程式](/sccm/apps/deploy-use/monitor-applications-from-the-console)  
 
-    -   网亭上的客户端自动添加到 Windows Embedded 设备集合中，并在维护时段内自动配置。  
+13. Jane 監控 Kiosk 並向主管報告能夠成功進行管理。 因此，遊客中心訂購了 20 台 Kiosk。  
 
-    -   已安装 Endpoint Protection 客户端，而且它拥有用于反恶意软件防护的最新软件更新定义。  
+     手動安裝 Configuration Manager 用戶端必須手動停用寫入篩選器後再啟用，為避免此作業，Jane 確認訂單包含自訂映像，該映像內含 Configuration Manager 用戶端的安裝與站台指派。 此外，裝置的命名一律以公司命名格式為準。  
 
-    -   已安装并自动运行交互式演示文稿软件，可供访客使用。  
+     遊客中心開幕前一週，Kiosk 送到了。 在這段時間，Kiosk 連線上網，所有裝置管理作業均自動執行，不需要現場管理員操作。 Jane 確認 Kiosk 能夠按照需求執行功能：  
 
-14. 在完成此初始设置之后，仅在访客中心关闭时，才会执行更新可能要求的重新启动操作。  
+    -   Kiosk 上的用戶端可以完成站台指派，並且從 Active Directory 網域服務下載信任的根金鑰。  
 
+    -   Kiosk 上的用戶端會自動新增至 Windows Embedded 裝置集合，並且完成維護期間設定。  
+
+    -   已安裝 Endpoint Protection 用戶端，且裝有最新的反惡意程式防護軟體更新定義。  
+
+    -   已安裝互動式簡報軟體並可自動執行，隨時可供遊客使用。  
+
+14. 初始設定完成後，如必須重新啟動以進行更新，只會在遊客中心關閉後進行。  

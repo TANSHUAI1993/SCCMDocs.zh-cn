@@ -1,35 +1,34 @@
 ---
-title: "任务序列媒体的预启动命令 | Microsoft Docs"
-description: "创建脚本以用于预启动命令，分发与预启动命令关联的内容，以及在媒体中配置预启动命令。"
+title: "工作順序媒體的啟動前置命令 | Microsoft Docs"
+description: "建立用於啟動前置命令的指令碼，並發佈與啟動前置命令相關聯的內容，然後在媒體中設定啟動前置命令。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ccc9f652-2953-4c38-8a90-c799484105ca
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
 ms.openlocfilehash: 1c396534425179c6828d48acc578295167c566be
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="prestart-commands-for-task-sequence-media-in-system-center-configuration-manager"></a>System Center Configuration Manager 中任务序列媒体的预启动命令
+# <a name="prestart-commands-for-task-sequence-media-in-system-center-configuration-manager"></a>System Center Configuration Manager 中工作順序媒體的啟動前置命令
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用於：System Center Configuration Manager (最新分支)*
 
-可以在 System Center Configuration Manager 中创建一个预启动命令，用于启动媒体、独立媒体和预留媒体。 预启动命令是一个脚本或可执行文件，它在选择任务序列之前运行并且可以在 Windows PE 中与用户交互。 预启动命令可能会提示用户输入信息并将此信息保存在任务序列环境中，或者在任务序列变量中查询信息。 启动目标计算机后，会在从管理点下载策略之前运行命令行。 使用以下过程创建脚本以用于预启动命令，分发与预启动命令关联的内容，以及在媒体中配置预启动命令。  
+您可以在 System Center Configuration Manager 建立啟動前置命令，將它與開機媒體、獨立媒體和預先設置的媒體搭配使用。 啟動前置命令是指令碼或可執行檔，其可在選取工作順序之前執行，而且可在 Windows PE 中與使用者互動。 啟動前置命令會提示要求使用者提供資訊，並將該資訊儲存在工作順序環境中，或查詢工作順序變數的相關資訊。 當目的地電腦開機時，會在從管理點下載原則之前執行命令列。 使用下列程序，建立用於啟動前置命令的指令碼，發佈與啟動前置命令相關聯的內容，並且在媒體中設定啟動前置命令。  
 
-## <a name="create-a-script-file-to-use-for-the-prestart-command"></a>创建脚本文件以用于预启动命令  
- 可以在运行任务序列时使用 Microsoft.SMS.TSEnvironment COM 对象读写任务序列变量。 以下示例说明了 Visual Basic 脚本文件，此脚本文件查询 _SMSTSLogPath 任务序列变量以获取当前日志位置。 该脚本还设置自定义变量。  
+## <a name="create-a-script-file-to-use-for-the-prestart-command"></a>建立用於啟動前置命令的指令碼檔  
+ 在執行工作順序的同時，可藉由使用 Microsoft.SMS.TSEnvironment COM 物件來讀取及寫入工作順序變數。 以下範例說明查詢 _SMSTSLogPath 工作順序變數的 Visual Basic 指令碼檔，以取得目前的記錄位置。 指令碼也會設定自訂變數。  
 
 ```  
 dim osd: set env = CreateObject("Microsoft.SMS.TSEnvironment")  
@@ -40,47 +39,41 @@ logPath = env("_SMSTSLogPath")
 env("MyCustomVariable") = "varname"  
 ```  
 
-## <a name="create-a-package-for-the-script-file-and-distribute-the-content"></a>创建脚本文件包并分发内容  
- 为预启动命令创建脚本或可执行文件后，必须创建包源以为脚本或可执行文件承载文件，创建文件包（无需程序），然后将内容分发给分发点。  
+## <a name="create-a-package-for-the-script-file-and-distribute-the-content"></a>建立用於指令碼檔案的套件並發佈內容  
+ 建立用於啟動前置命令的指令碼或可執行檔之後，您必須建立套件來源以裝載指令碼檔或可執行檔、建立檔案的套件 (不需要程式)，然後將內容發佈到發佈點。  
 
- 有关创建包的详细信息，请参阅[包和程序](../../apps/deploy-use/packages-and-programs.md)。  
+ 如需建立套件的詳細資訊，請參閱[套件和程式](../../apps/deploy-use/packages-and-programs.md)。  
 
- 有关分发内容的详细信息，请参阅[分发内容](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute)。  
+ 如需發佈內容的詳細資訊，請參閱[發佈內容](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute)。  
 
-## <a name="configure-the-prestart-command-in-media"></a>在媒体中配置预启动命令  
- 可以在独立媒体、可启动媒体或预留媒体的创建任务序列媒体向导中配置一个预启动命令。 有关媒体类型的详细信息，请参阅[创建任务序列媒体](../deploy-use/create-task-sequence-media.md)。 使用以下过程在媒体中创建预启动命令。  
+## <a name="configure-the-prestart-command-in-media"></a>在媒體中設定啟動前置命令  
+ 您可以在 [建立工作順序媒體精靈] 中為獨立媒體、可開機媒體或預先設置的媒體設定啟動前置命令。 如需媒體類型的詳細資訊，請參閱[建立工作順序媒體](../deploy-use/create-task-sequence-media.md)。 利用下列程序在媒體中建立啟動前置命令。  
 
-#### <a name="to-create-a-prestart-command-in-media"></a>在媒体中创建预启动命令  
+#### <a name="to-create-a-prestart-command-in-media"></a>在媒體中建立啟動前置命令  
 
-1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+1.  在 Configuration Manager 主控台中，按一下 [軟體程式庫] 。  
 
-2.  在“软件库”  工作区中，展开“操作系统” ，然后单击“任务序列” 。  
+2.  在 [軟體程式庫]  工作區中，展開 [作業系統] ，然後按一下 [工作順序] 。  
 
-3.  在“主页”  选项卡上的“创建”  组中，单击“创建任务序列媒体”  以启动创建任务序列媒体向导。  
+3.  在 [首頁]  索引標籤的 [建立]  群組中，按一下 [建立工作順序媒體]  以啟動 [建立工作順序媒體精靈]。  
 
-4.  在“选择媒体类型”  页上，选择“独立媒体” 、“可启动媒体” 或“预留媒体” ，然后单击“下一步” 。  
+4.  在 [選取媒體類型]  頁面上，選取 [獨立媒體] 、[可開機媒體] 或 [預先設置的媒體] ，然後按 [下一步] 。  
 
-5.  导航到向导的“自定义”  页面。 有关在向导中配置其他页面的详细信息，请参阅[创建任务序列媒体](../deploy-use/create-task-sequence-media.md)。  
+5.  瀏覽至精靈的 [自訂]  頁面。 如需在精靈中設定其他頁面的詳細資訊，請參閱[建立工作順序媒體](../deploy-use/create-task-sequence-media.md)。  
 
-6.  在“自定义”  页上，指定以下信息，然后单击“下一步” 。  
+6.  在 [自訂]  頁面指定下列資訊，然後按 [下一步] 。  
 
-    -   选择“启用预启动命令” 。  
+    -   選取 [啟用啟動前置命令] 。  
 
-    -   在“命令行”  文本框中，输入为预启动命令创建的脚本或可执行文件。  
+    -   在 [命令列]  文字方塊中，輸入您為啟動前置命令建立的指令碼或可執行檔。  
 
         > [!IMPORTANT]  
-        >  使用 **cmd /C <预启动命令\>** 指定预启动命令。 例如，如果使用了 TSScript.vbs 作为预启动命令脚本的名称，你将为命令行输入 **cmd /C TSScript.vbs** 。 其中 **cmd /C** 会打开一个新的 Windows 命令解释器窗口，并使用路径环境变量查找预启动命令脚本或可执行文件。 也可以指定预启动命令的完整路径，但是在具有不同驱动器配置的计算机上，驱动器号可能不同。  
+        >  使用 **cmd /C <啟動前置命令\>** 指定啟動前置命令。 例如，假設您將 TSScript.vbs 當成啟動前置命令指令碼的名稱使用，您會在命令列輸入 **cmd /C TSScript.vbs** 。 其中 **cmd /C** 會開啟新的 Windows 命令直譯器視窗，並使用 Path 環境變數尋找啟動前置命令指令碼或可執行檔。 您也可為啟動前置命令指定完整路徑，但磁碟機代號會因電腦不同的磁碟機設定而不同。  
 
-    -   选择“包括预启动命令的文件” 。  
+    -   選取 [包含啟動前置命令的檔案] 。  
 
-    -   单击“设置”  以选择与预启动命令文件关联的包。  
+    -   按一下 [設定]  ，選取與啟動前置命令檔案相關聯的套件。  
 
-    -   单击“浏览”  以选择承载预启动命令内容的分发点。  
+    -   按一下 [瀏覽]  ，選取裝載啟動前置命令之內容的發佈點。  
 
-7.  完成向导。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-
+7.  完成精靈。  

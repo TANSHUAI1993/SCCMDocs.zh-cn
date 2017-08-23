@@ -1,86 +1,82 @@
 ---
-title: "资产智能的示例验证状态转换 | Microsoft Docs"
-description: "请参阅 System Center Configuration Manager 中的资产智能验证状态转换示例。"
+title: "Asset Intelligence 驗證狀態轉換範例 | Microsoft Docs"
+description: "請參閱 System Center Configuration Manager 中 Asset Intelligence 驗證狀態轉換範例。"
 ms.custom: na
 ms.date: 2/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6230a6e5-a1f6-459b-84f1-07fbde0e70f0
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
-ms.openlocfilehash: d1e320c6498e034307557e8a182c36cef2de640b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 12/16/2016
-
-
+ms.openlocfilehash: f280e06f34c0ed355b7c2652c571e36eb6684c59
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="example-validation-state-transitions-for-asset-intelligence-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的资产智能验证状态转换示例
+# <a name="example-validation-state-transitions-for-asset-intelligence-in-system-center-configuration-manager"></a>System Center Configuration Manager 的 Asset Intelligence 驗證狀態轉換範例
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用於：System Center Configuration Manager (最新分支)*
 
-System Center Configuration Manager 中的资产智能验证状态不是静态的，可能会因执行的管理操作而变化，这些操作会影响存储在资产智能目录中的数据。 此主题提供了可能的验证状态转换的示例。
+在 System Center Configuration Manager 中，Asset Intelligence 驗證狀態並非靜態，而是可以從您執行的系統管理動作變更成影響儲存在 Asset Intelligence 類別目錄的資料。 本主題提供可能的驗證狀態轉換範例。
 
-##  <a name="BKMK_UncategorizedIsCategorized"></a> 管理用户对未分类的目录项目进行分类  
+##  <a name="BKMK_UncategorizedIsCategorized"></a> 未分類的類別目錄項目依系統管理使用者分類  
 
-|**状态转换**|**状态转换描述**|  
+|**狀態轉換**|**狀態轉換描述**|  
 |--------------------------|--------------------------------------|  
-|**未分类**|将 System Center Online 或管理用户先前未分类的已列出清单的软件标题输入到资产智能目录中。|  
-|**未分类** 到 **用户定义**|管理用户对未分类的项目进行分类。|  
+|**未分類**|之前未被 System Center Online 分類或系統管理使用者已輸入 Asset Intelligence 類別目錄的已清查軟體項目。|  
+|**未分類** 至 **使用者定義**|未分類的項目依系統管理使用者分類。|  
 
-##  <a name="BKMK_CategorizedIsReCategorized"></a> 管理用户对已分类的目录项目进行重新分类  
+##  <a name="BKMK_CategorizedIsReCategorized"></a> 已分類的類別目錄項目重新依系統管理使用者分類  
 
-|**状态转换**|**状态转换描述**|  
+|**狀態轉換**|**狀態轉換描述**|  
 |--------------------------|--------------------------------------|  
-|**已验证**|目录项目已由 System Center Online 研究人员定义，并存在于资产智能目录中。|  
-|**已验证** 到 **用户定义**|管理用户对已验证的目录项目进行重新分类。|  
+|**已驗證**|類別目錄項目已由 System Center Online 研究人員定義，位於 Asset Intelligence 類別目錄中。|  
+|**已驗證** 到 **使用者定義**|驗證過的類別目錄項目重新依系統管理使用者分類。|  
 
 > [!NOTE]  
->  因为从 System Center Online 获取的分类信息存储在数据库中且不能删除，所以管理用户可以在以后还原为 System Center Online 分类。  
+>  因為取自 System Center Online 的分類資訊儲存在資料庫中且無法刪除，所以系統管理使用者之後可以回復為 System Center Online 分類。  
 
-##  <a name="BKMK_UserDefinedIsRecategorized"></a> System Center Online 对用户定义的目录项目进行重新分类  
+##  <a name="BKMK_UserDefinedIsRecategorized"></a> System Center Online 重新分類使用者定義的類別目錄項目  
 
-|**状态转换**|**状态转换描述**|  
+|**狀態轉換**|**狀態轉換描述**|  
 |--------------------------|--------------------------------------|  
-|**未分类**|将 System Center Online 或管理用户先前未分类的已列出清单的软件标题输入到资产智能目录中。|  
-|**用户定义**|管理用户对未分类的项目进行分类。|  
-|**用户定义** 到 **可更新**|在资产智能目录的后续手动批量更新期间，System Center Online 以不同的方式对用户定义的目录项目进行分类。<br /><br /> 管理用户可以使用“软件详细信息冲突解决”  对话框来决定是否使用新的分类信息或以前用户定义的值。|  
-|**可更新** 到 **已验证**|管理员可以使用“软件详细信息冲突解决”  对话框来使用上一次目录更新期间从 System Center Online 接收到的新分类信息。|  
+|**未分類**|之前未被 System Center Online 或系統管理使用者分類，但已輸入 Asset Intelligence 類別目錄的已清查軟體項目。|  
+|**使用者定義**|未分類的項目依系統管理使用者分類。|  
+|**使用者定義** 到 **可更新**|System Center Online 在後續的手動大量更新 Asset Intelligence 類別目錄期間，已使用不同的方式分類使用者定義的類別目錄項目。<br /><br /> 系統管理使用者可以使用 [軟體詳細資料衝突解決]  對話方塊，決定使用新的分類資訊還是使用之前的使用者定義值。|  
+|**可更新** 到 **已驗證**|系統管理使用者使用 [軟體詳細資料衝突解決]  對話方塊，在之前的類別目錄更新期間，使用從 System Center Online 收到的新分類資訊。|  
 |或||  
-|**可更新** 到 **用户定义**|管理员使用“软件详细信息冲突解决”  对话框来使用先前用户定义的值。|  
+|**可更新** 到 **使用者定義**|系統管理使用者使用 [軟體詳細資料衝突解決]  對話方塊，使用先前的使用者定義值。|  
 
 > [!NOTE]  
->  因为从 System Center Online 获取的分类信息存储在数据库中且不能删除，所以管理用户可以在以后还原为 System Center Online 分类。  
+>  因為取自 System Center Online 的分類資訊儲存在資料庫中且無法刪除，所以系統管理使用者之後可以回復為 System Center Online 分類。  
 
-##  <a name="BKMK_UncategorizedIsSubmitted"></a> 将未分类的目录项目提交给 System Center Online 以进行分类  
+##  <a name="BKMK_UncategorizedIsSubmitted"></a> 將未分類的類別目錄項目提交至 System Center Online 進行分類  
 
-|**状态转换**|**状态转换描述**|  
+|**狀態轉換**|**狀態轉換描述**|  
 |--------------------------|--------------------------------------|  
-|**未分类**|将 System Center Online 或管理用户先前未分类的已列出清单的软件标题输入到资产智能数据库中。|  
-|**未分类** 到 **挂起**|将未分类的项目提交给 System Center Online 以由管理用户进行分类。|  
-|**挂起** 到 **已验证**|System Center Online 对项目进行分类。 管理用户使用批量目录更新或资产智能目录同步将项目导入资产智能目录。 两项功能都可使用资产智能同步点站点系统角色来完成。|  
+|**未分類**|之前未被 System Center Online 或系統管理使用者分類，但已輸入 Asset Intelligence 資料庫的已清查軟體項目。|  
+|**未分類** 到 **擱置**|未分類的類別目錄項目已提交至 System Center Online，由系統管理使用者進行分類。|  
+|**擱置** 到 **已驗證**|項目由 System Center Online 分類。 系統管理使用者使用大量的類別目錄更新或 Asset Intelligence 類別目錄同步處理，將項目匯入 Asset Intelligence 類別目錄。 使用 Asset Intelligence 同步處理點站台系統角色，兩者都可以使用。|  
 
-##  <a name="BKMK_UserDefinedIsSubmitted"></a> 将用户定义的目录项目提交给 System Center Online 以进行分类  
+##  <a name="BKMK_UserDefinedIsSubmitted"></a> 將使用者定義的類別目錄項目提交至 System Center Online 進行分類  
 
-|**状态转换**|**状态转换描述**|  
+|**狀態轉換**|**狀態轉換描述**|  
 |--------------------------|--------------------------------------|  
-|**未分类**|将管理用户或 System Center Online 先前未分类的已列出清单的软件标题输入到资产智能数据库中。|  
-|**用户定义**|对未分类的项目进行分类。|  
-|**用户定义** 到 **挂起**|将用户定义的项目提交给 System Center Online 以进行分类。|  
-|**挂起** 到 **可更新**|在后续目录同步期间，System Center Online 以不同的方式对用户定义的目录项目进行分类。 可以使用“解决冲突”  操作来决定是使用新分类信息还是以前的用户定义值。 有关解决冲突的详细信息，请参阅[解决软件冲突详细信息](../../../../core/clients/manage/asset-intelligence/operations-for-asset-intelligence.md#BKMK_ResolveSoftwareDetails)。|  
-|**可更新** 到 **已验证**|可以使用“解决冲突”  操作并选择上次目录更新期间从 System Center Online 接收到的新分类信息。 有关解决冲突的详细信息，请参阅[解决软件冲突详细信息](../../../../core/clients/manage/asset-intelligence/operations-for-asset-intelligence.md#BKMK_ResolveSoftwareDetails)。|  
+|**未分類**|之前未被系統管理使用者或 System Center Online 分類，但已輸入 Asset Intelligence 資料庫的已清查軟體項目。|  
+|**使用者定義**|您分類了未分類的項目。|  
+|**使用者定義** 到 **擱置**|您要將使用者定義項目提交至 System Center Online 進行分類。|  
+|**擱置** 到 **可更新**|System Center Online 在後續的類別目錄同步處理期間，已使用不同的方式分類使用者定義的類別目錄項目。 您可以使用 [解決衝突]  動作決定要使用新的分類資訊或使用之前的使用者定義值。 如需有關解決衝突的詳細資訊，請參閱[解決軟體詳細資料衝突](../../../../core/clients/manage/asset-intelligence/operations-for-asset-intelligence.md#BKMK_ResolveSoftwareDetails)。|  
+|**可更新** 到 **已驗證**|您在之前的類別目錄更新期間使用了 [解決衝突]  動作，並選取從 System Center Online 收到的新分類資訊。 如需有關解決衝突的詳細資訊，請參閱[解決軟體詳細資料衝突](../../../../core/clients/manage/asset-intelligence/operations-for-asset-intelligence.md#BKMK_ResolveSoftwareDetails)。|  
 |或||  
-|**可更新** 到 **用户定义**|使用“解决冲突”  操作，并选择使用以前的用户定义值。 有关解决冲突的详细信息，请参阅[解决软件冲突详细信息](../../../../core/clients/manage/asset-intelligence/operations-for-asset-intelligence.md#BKMK_ResolveSoftwareDetails)。|  
+|**可更新** 到 **使用者定義**|您使用了 [解決衝突]  動作，並選取使用先前的使用者定義值。 如需有關解決衝突的詳細資訊，請參閱[解決軟體詳細資料衝突](../../../../core/clients/manage/asset-intelligence/operations-for-asset-intelligence.md#BKMK_ResolveSoftwareDetails)。|  
 
 > [!NOTE]  
->  因为从 System Center Online 获取的分类信息存储在数据库中且不能删除，所以你可以在以后还原为 System Center Online 分类。  
-
+>  因為取自 System Center Online 的分類資訊儲存在資料庫中且無法刪除，所以您之後可以回復為 System Center Online 分類。  

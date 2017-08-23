@@ -1,13 +1,12 @@
 ---
-title: "基于风险限制访问权限 | Microsoft Docs"
-description: "根据设备、网络和应用程序风险限制对公司资源的访问权限。"
+title: "根據風險限制存取權 | Microsoft Docs"
+description: "根據裝置、網路和應用程式的風險，來限制公司資源的存取權。"
 ms.custom: na
 ms.date: 04/25/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9083c571-f4fc-4a78-adc5-8aec84dabcbd
@@ -15,84 +14,81 @@ caps.latest.revision:
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c6a6137fa978e1ea28aefea2aea4e29ba661efd6
 ms.openlocfilehash: 21841d97387f07f53993d957641f9ad892d723c2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="manage-access-to-company-resource-based-on-device-network-and-application-risk"></a>根据设备、网络和应用程序风险管理对公司资源的访问权限
+# <a name="manage-access-to-company-resource-based-on-device-network-and-application-risk"></a>根據裝置、網路和應用程式的風險，來管理公司資源的存取權
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用於：System Center Configuration Manager (最新分支)*
 
-根据 Lookout （一种与 Microsoft Intune 集成的设备威胁防护解决方案）所做的风险评估，可以控制从移动设备对公司资源进行访问的权限。 风险基于 Lookout 服务从设备的操作系统 (OS) 漏洞、已安装恶意应用以及恶意网络配置文件收集的遥测。 
+您可以依據由 Lookout 執行的風險評估 (Lookout 為整合 Microsoft Intune 的裝置威脅防護解決方案)，控制行動裝置的公司資源存取權。 Lookout 服務會收集裝置的作業系統 (OS) 漏洞、已安裝的惡意應用程式和惡意網路設定檔的遙測，作為風險依據。 
 
-根据通过 System Center Configuration Manager (SCCM) 合规性策略启用的 Lookout 所报告的风险评估，可以配置条件访问策略并允许或阻止因在其上检测到威胁而确定为不合规的那些设备。
+根據 Lookout 報告的風險評估 (透過 System Center Configuration Manager (SCCM) 合規性政策加以啟用)，您可以設定條件式存取原則，以允許或封鎖判定為不符合規範的裝置，因為這些裝置上偵測到潛在威脅。
 
-[混合 MDM 部署（SCCM 与 Intune）](https://docs.microsoft.com/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management)根据诸如 Lookout 等设备威胁防护解决方案所提供的风险评估，让你能够控制对公司资源的访问。
+[混合式 MDM 部署 (整合 SCCM 與 Intune)](https://docs.microsoft.com/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management) 可讓您依據由 Lookout 這類裝置威脅防護解決方案執行的風險評定，來控制公司資源與資料的存取權。
 
-## <a name="how-do-the-hybrid-mdm-deployment-and-lookout-device-threat-protection-help-protect-company-resources"></a>混合 MDM 部署和 Lookout 设备威胁防护如何帮助保护公司资源？
-在移动设备上运行的 Lookout 移动应用 (Lookout for work) 可捕获文件系统、网络堆栈、设备和应用程序遥测（如果可用），并将其发送到 Lookout 设备威胁防护云服务，以便计算移动威胁的合计设备风险。 还可以在 Lookout 控制台中更改威胁的风险级别分类来满足要求。  
+## <a name="how-do-the-hybrid-mdm-deployment-and-lookout-device-threat-protection-help-protect-company-resources"></a>混合式 MDM 部署和 Lookout 裝置威脅防護如何協助保護公司資源？
+在行動裝置上執行 Lookout 行動裝置應用程式 (Lookout for Work) 時，其可擷取檔案系統、 網路堆疊、裝置和應用程式的遙測 (如果適用的話)，並傳送至 Lookout 裝置威脅防護雲端服務，以計算行動威脅的彙總裝置風險。 您也可以在 Lookout 主控台中視需求變更潛在威脅的風險層級分類。  
 
-SCCM 中的合规性策略现在包含针对 Lookout Mobile Threat Protection 的新规则，其基于 Lookout 威胁风险评估。 启用此规则后，将会评估设备的合规性。
+現在，SCCM 中的合規性政策包含適用於 Lookout Mobile Threat Protection 的新規則，該規則是以 Lookout 裝置威脅風險評估為依據。 啟用此規則時，系統會評估裝置的合規性。
 
-如果确定设备不符合合规性策略，则可使用条件访问策略阻止对 Exchange Online 和 SharePoint Online 等资源的访问。 阻止访问后，会向最终用户提供演练以帮助解决此问题，从而获取对公司资源的访问权限。 该演练通过 Lookout for Work 应用推出。
+如果裝置的判定結果為不符合合規性政策，即會使用條件式存取原則封鎖 Exchange Online 和 SharePoint Online 這類資源的存取權。 當存取遭到封鎖時，系統會提供使用者有助解決問題的逐步解說，以獲得公司資源的存取權。 本逐步解說會透過 Lookout for Work 應用程式加以啟動。
 
-## <a name="supported-platforms"></a>支持的平台：
-* **Android 4.1 及更高版本**，且在 Microsoft Intune 中注册。
-* **iOS 8 及更高版本**，且在 Microsoft Intune 中注册。
-有关 Lookout 支持的平台和语言的信息，请参阅此[文章](https://personal.support.lookout.com/hc/en-us/articles/114094140253)。
+## <a name="supported-platforms"></a>支援的平台：
+* **Android 4.1 和更新版本**，並在 Microsoft Intune 中註冊。
+* **iOS 8 和更新版本**，並在 Microsoft Intune 中註冊。
+如需 Lookout 支援的平台和語言資訊，請參閱[這篇文章](https://personal.support.lookout.com/hc/en-us/articles/114094140253)。
 
-## <a name="prerequisites"></a>先决条件：
-* [混合 MDM 部署](https://docs.microsoft.com/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management)
-* 订阅 Microsoft Intune 和 Azure Active Directory。
-* 对 Lookout Mobile Endpoint Security 的企业订阅。  有关详细信息，请参阅 [Lookout Mobile Endpoint Security](https://www.lookout.com/products/mobile-endpoint-security)
+## <a name="prerequisites"></a>必要條件：
+* [混合式 MDM 部署](https://docs.microsoft.com/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management)
+* Microsoft Intune 和 Azure Active Directory 的訂閱。
+* Lookout Mobile EndPoint Security 的企業訂閱。  如需詳細資訊，請參閱 [Lookout Mobile Endpoint Security](https://www.lookout.com/products/mobile-endpoint-security)
 
-## <a name="example-scenarios"></a>方案示例
-以下是一些常见方案：
-### <a name="control-access-based-on-threat-from-malicious-apps"></a>根据来自恶意应用的威胁控制访问权限：
-在设备上检测到恶意软件等恶意应用时，可阻止此类设备执行以下操作：
-* 解决威胁前连接到公司电子邮件。
-* 使用 OneDrive for Work 应用同步公司文件。
-* 访问业务关键应用。
+## <a name="example-scenarios"></a>範例案例
+以下是一些常見的案例：
+### <a name="control-access-based-on-threat-from-malicious-apps"></a>依據惡意應用程式的威脅來控制存取權：
+在裝置上偵測到惡意應用程式 (如惡意程式碼) 時，您可以封鎖這些裝置，使其不得：
+* 連線到公司的電子郵件 (需等到威脅解決之後才行)。
+* 使用 OneDrive for Work 應用程式同步處理公司的檔案。
+* 存取業務關鍵的應用程式。
 
-**检测到恶意应用时阻止访问：**
+**當偵測到惡意應用程式時，封鎖存取：**
 
-![关系图：显示在设备因其上的恶意应用而被确定为不合规时阻止访问的条件访问策略](media/config-mgr-maliciousapps_blocked.png)
+![此圖表顯示，當裝置因為其中的惡意應用程式導致判定為不符合規範時，條件式存取原則會封鎖存取](media/config-mgr-maliciousapps_blocked.png)
 
-**修正威胁时取消阻止设备并能够访问公司资源：**
+**威脅修復之後，裝置即解除封鎖並可存取公司資源：**
 
-![关系图：显示设备在修正后被确定为合规时授予访问权限的条件访问策略](media/config-mgr-maliciousapps-unblocked.png)
-### <a name="control-access-based-on-threat-to-network"></a>根据网络威胁控制访问权限：
-检测到中间人攻击等网络威胁时，根据设备风险限制对 WiFi 网络的访问。
+![此圖表顯示，當裝置在修復之後判定為符合規範時，條件式存取原則會允許存取](media/config-mgr-maliciousapps-unblocked.png)
+### <a name="control-access-based-on-threat-to-network"></a>依據網路威脅來控制存取權：
+偵測您的網路威脅 (例如攔截式攻擊)，並依據裝置風險來限制存取 WiFi 網路。
 
-**阻止通过 WiFi 访问网络的权限：**
+**透過 WiFi 封鎖網路存取：**
 
-![关系图：显示根据网络威胁阻止 WiFi 访问的条件访问策略](media/config-mgr-network-wifi-blocked.png)
+![此圖表顯示，條件式存取依據網路威脅來封鎖 WiFi 的存取](media/config-mgr-network-wifi-blocked.png)
 
-**修正后授予访问权限：**
+**修復後允許存取：**
 
-![关系图：显示修正威胁后允许访问的条件访问策略](media/config-mgr-network-wifi-unblocked.png)
-### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>根据网络威胁控制对 SharePoint Online 的访问：
+![此圖表顯示，條件式存取在威脅修復之後允許存取](media/config-mgr-network-wifi-unblocked.png)
+### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>依據網路威脅來控制存取 SharePoint Online：
 
-检测到中间人攻击等网络威胁时，根据设备风险阻止对公司文件进行同步。
+偵測您的網路威脅 (例如攔截式攻擊)，並依據裝置風險來防止同步處理公司的檔案。
 
-**根据设备上检测到的网络威胁阻止对 SharePoint Online 的访问：**
+**根據裝置上偵測到的網路威脅，封鎖存取 SharePoint Online：**
 
-![关系图：显示根据威胁检测阻止设备访问 SharePoint Online 的条件访问策略](media/config-mgr-network-spo-blocked.png)
+![此圖表顯示，條件式存取會根據威脅偵測，封鎖裝置存取 SharePoint Online](media/config-mgr-network-spo-blocked.png)
 
 
-**修正后授予访问权限：**
+**修復後允許存取：**
 
-![关系图：显示修正网络威胁后允许访问的条件访问策略](media/config-mgr-network-spo-unblocked.png)
+![此圖表顯示，條件式存取在網路威脅修復之後允許存取](media/config-mgr-network-spo-unblocked.png)
 
-## <a name="next-steps"></a>后续步骤
-以下是实现此解决方案必须执行的主要步骤：
-1.    [使用 Lookout 移动威胁保护设置订阅](set-up-your-subscription-with-lookout.md)
-2.    [在 Intune 中启用 Lookout MTP 连接](enable-lookout-connection-in-intune.md)
-3.  [配置和部署 Lookout for Work 应用程序](configure-and-deploy-lookout-for-work-apps.md)
-4.    [配置合规性策略](enable-device-threat-protection-rule-compliance-policy.md)
-5.    [对 Lookout 集成进行故障排除](troubleshoot-lookout-integration.md)
-
+## <a name="next-steps"></a>後續步驟
+您必須執行下列主要步驟來實作這個解決方案：
+1.  [設定您的訂閱與 Lookout Mobile Threat Protection](set-up-your-subscription-with-lookout.md)
+2.  [在 Intune 中啟用 Lookout MTP 的連線](enable-lookout-connection-in-intune.md)
+3.  [設定和部署 Lookout for Work 應用程式](configure-and-deploy-lookout-for-work-apps.md)
+4.  [設定合規性政策](enable-device-threat-protection-rule-compliance-policy.md)
+5.  [對 Lookout 整合進行疑難排解](troubleshoot-lookout-integration.md)

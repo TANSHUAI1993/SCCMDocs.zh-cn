@@ -1,50 +1,47 @@
 ---
-title: "在 System Center Configuration Manager 中创建 VPN 配置文件 | Microsoft Docs"
-description: "了解如何在 System Center Configuration Manager 中使用 Wi-Fi 配置文件将无线网络设置部署到组织中的移动设备用户。"
+title: "在 System Center Configuration Manager 中建立 Wi-Fi 設定檔 | Microsoft Docs"
+description: "了解如何在 Configuration Manager 中使用 Wi-Fi 設定檔，將無線網路設定部署至組織中的行動裝置使用者。"
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c72612d4-0b3d-4e71-b3c9-35782701b78a
-caps.latest.revision: 18
-caps.handback.revision: 0
+caps.latest.revision: "18"
+caps.handback.revision: "0"
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 6c6f56dd2b68b8c87d87842ab2b0f782e16c7f9c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
-
+ms.openlocfilehash: 362bcbd368fd49979c554cd009b3ba72f20d5fbd
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="how-to-create-wi-fi-profiles-for-mobile-devices-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中为移动设备创建 Wi-Fi 配置文件
+# <a name="how-to-create-wi-fi-profiles-for-mobile-devices-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中建立行動裝置的 Wi-Fi 設定檔
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用於︰System Center Configuration Manager (最新分支)*
 
-在 System Center Configuration Manager 中使用 Wi-Fi 配置文件将无线网络设置部署到组织中的移动设备用户。 通过部署这些设置，可以让用户很方便地连接到 Wi-Fi。  
+在 System Center Configuration Manager 中使用 Wi-Fi 設定檔，將無線網路設定部署至組織中的行動裝置使用者。 部署這些設定，即可讓使用者更輕鬆地連線至 Wi-Fi。  
 
-可以使用 Wi-fi 配置文件配置下列移动设备类型：  
+您可以使用 Wi-Fi 設定檔設定下列行動裝置類型：  
 
--   运行 Windows Phone 8.1 的设备  
+-   執行 Windows Phone 8.1 的裝置  
 
--   运行 Windows 10 桌面或移动版的设备  
+-   執行 Windows 10 Desktop 或 Windows 10 行動裝置版的裝置  
 
--   运行 iOS 5、iOS 6、iOS 7 和 iOS 8 的 IPhone 设备  
+-   執行 iOS 5、iOS 6、iOS 7 與 iOS 8 的 iPhone 裝置  
 
--   运行 iOS 5、iOS 6、iOS 7 和 iOS 8 的 IPad 设备  
+-   執行 iOS 5、iOS 6、iOS 7 與 iOS 8 的 iPad 裝置  
 
--   运行版本 4 或更高版本的 Android 设备
+-   執行版本 4 或更新版本的 Android 裝置
 
 > [!IMPORTANT]  
->  若要将配置文件部署到 Android、iOS、Windows Phone 和注册的 Windows 8.1 或更高版本设备，这些设备必须在 Microsoft Intune 中注册。 有关如何注册设备的信息，请参阅[在 Intune 中注册设备以进行管理](https://docs.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune)。  
+>  若要將設定檔部署到 Android、iOS、Windows Phone 和已註冊的 Windows 8.1 或更新版本的裝置，必須在 Microsoft Intune 註冊這些裝置。 如需如何註冊裝置的相關資訊，請參閱[在 Intune 中註冊裝置以進行管理](https://docs.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune)。  
 
-如需了解如何在 System Center Configuration Manager 中使用 Wi-Fi 配置文件将无线网络设置部署到用户，请参阅[创建 Wi-Fi 配置文件](../../protect/deploy-use/create-wifi-profiles.md#create-a-wi-fi-profile)。
+[建立 Wi-Fi 設定檔](../../protect/deploy-use/create-wifi-profiles.md#create-a-wi-fi-profile)提供有關如何在 Configuration Manager 中使用 Wi-Fi 設定檔，將無線網路設定部署至使用者的一般資訊。
 
-有关部署 Wi-Fi 配置文件的信息，请参阅[部署 Wi-Fi、VPN、电子邮件和证书配置文件](../../protect/deploy-use/deploy-wifi-vpn-email-cert-profiles.md)。
-
+如需有關部署 Wi-Fi 設定檔的詳細資訊，請參閱[部署 Wi-Fi、VPN、電子郵件和憑證設定檔](../../protect/deploy-use/deploy-wifi-vpn-email-cert-profiles.md)。

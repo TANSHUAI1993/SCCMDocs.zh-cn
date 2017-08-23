@@ -1,217 +1,213 @@
 ---
-title: "基于角色的管理基础知识 | Microsoft Docs"
-description: "使用基于角色的管理来控制对 Configuration Manager 和管理对象的管理访问权限。"
+title: "以角色為基礎的系統管理基本概念 | Microsoft Docs"
+description: "使用以角色為基礎的系統管理，控制 Configuration Manager 和您管理之物件的系統管理權限。"
 ms.custom: na
 ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0a2d6c3f-a4e4-4c19-b087-3caada480de9
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 1b9e49da1a5bbfca93fe683b82d2c0056a22cc1f
 ms.openlocfilehash: ddf2ad1cae51c1e36df5a6d86822e2b9abe604e2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="fundamentals-of-role-based-administration-for-system-center-configuration-manager"></a>System Center Configuration Manager 的基于角色的管理基础
+# <a name="fundamentals-of-role-based-administration-for-system-center-configuration-manager"></a>System Center Configuration Manager 以角色為基礎之系統管理的基礎
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用於：System Center Configuration Manager (最新分支)*
 
-在 System Center Configuration Manager 中，使用基于角色的管理来保护管理 Configuration Manager 所需的访问权限。 还需保护对你管理的对象（如集合、部署和站点）的访问权限。 了解在本主题中引入的概念后，可以[为 System Center Configuration Manager 配置基于角色的管理](../../core/servers/deploy/configure/configure-role-based-administration.md)。  
+使用 System Center Configuration Manager，您會使用以角色為基礎的系統管理，以保護管理 Configuration Manager 所需的存取權。 您也可以保護所管理物件的存取權，像是集合、部署和站台。 了解本主題所介紹的概念後，您可以[為 System Center Configuration Manager 設定以角色為基礎的系統管理](../../core/servers/deploy/configure/configure-role-based-administration.md)。  
 
- 此基于角色的管理模式使用以下内容为所有站点和站点设置集中定义并管理层次结构范围的安全访问设置：  
+ 這個以角色為基礎的系統管理模型主要針對所有站台與站台設定，使用下列項目來定義與管理整個階層的安全性存取設定：  
 
--   *安全角色*将分配给管理用户，并为这些用户（或用户组）提供不同 Configuration Manager 对象的权限。 例如创建或更改客户端设置的权限。  
+-   「安全性角色」會指派給系統管理使用者，用以將不同的 Configuration Manager 物件權限提供給這些使用者 (或使用者群組)。 例如，建立或變更用戶端設定的權限。  
 
--   *管理作用域*用于对管理用户负责管理的对象的特定实例进行分组，如安装 Microsoft Office 2010 的应用程序。  
+-   「安全性範圍」是用來針對系統管理使用者負責管理之物件的特定執行個體進行分組，例如安裝 Microsoft Office 2010 的應用程式。  
 
--   *集合*用于指定管理用户可管理的用户和设备资源组。  
+-   「集合」是用來指定系統管理使用者可管理的使用者群組和裝置資源。  
 
- 组合使用安全角色、安全作用域和集合，可分离满足组织需求的管理任务。 将它们组合使用可定义用户的管理作用域，这就是用户可在 Configuration Manager 部署中查看和管理的内容。  
+ 運用安全性角色、安全性範圍和集合的組合，您可以隔離符合組織需求的系統管理指派。 將它們搭配使用，可定義使用者的系統管理範圍，即使用者可以在 Configuration Manager 部署中檢視和管理的內容。  
 
-## <a name="benefits-of-role-based-administration"></a>基于角色的管理的好处  
+## <a name="benefits-of-role-based-administration"></a>以角色為基礎之系統管理的優點  
 
--   站点不再用作管理边界。  
+-   站台不會作為系統管理界限使用。  
 
--   可为层次结构创建管理用户，并仅需将安全性分配给他们一次。  
+-   您可以為階層建立系統管理使用者，且只需為他們指派安全性一次。  
 
--   所有安全分配都已复制，并在整个层次结构中可用。  
+-   所有安全性指派皆會複寫，並可在整個階層使用。  
 
--   有用于分配典型管理任务的内置安全角色。 创建自己的自定义安全角色来满足特定业务需求。  
+-   您可以使用內建安全性角色來指派一般系統管理工作。 建立自己的自訂安全性角色來支援特定的業務需求。  
 
--   管理用户仅查看他们有权管理的对象。  
+-   系統管理使用者只會看到有權限管理的物件。  
 
--   你可以审核管理安全操作。  
+-   您可以稽核系統管理安全性動作。  
 
-为 Configuration Manager 设计和实现管理安全性时，使用以下内容为管理用户创建一个*管理作用域*：  
+在您設計並實作 Configuration Manager 的系統管理安全性時，您會使用下列項目來建立系統管理使用者的「系統管理範圍」：  
 
--   [安全角色](#bkmk_Planroles)  
+-   [安全性角色](#bkmk_Planroles)  
 
 -   [集合](#bkmk_planCol)  
 
--   [安全作用域](#bkmk_PlanScope)  
+-   [安全性範圍](#bkmk_PlanScope)  
 
 
- 管理作用域控制管理用户可以在 Configuration Manager 控制台中查看的对象，以及该用户对这些对象所具有的权限。 基于角色的管理配置作为全局数据复制到层次结构中的每个站点，然后应用到所有管理连接。  
+ 系統管理範圍控制系統管理使用者可在 Configuration Manager 主控台中檢視的物件，以及控制使用者對這些物件的權限。 以角色為基礎的系統管理會將設定複製到階層內的每個網站作為全域資料，然後套用至所有系統管理連線。  
 
 > [!IMPORTANT]  
->  站点间复制的延迟可能会阻止站点收到基于角色的管理的变化。 有关如何监视站点间数据库复制的信息，请参阅 [System Center Configuration Manager 中站点间的数据传输](../../core/servers/manage/data-transfers-between-sites.md)主题。  
+>  網站間複寫延遲可避免網站接收以角色為基礎的系統管理變更。 如需如何監視站台間資料庫複寫的詳細資訊，請參閱 [System Center Configuration Manager 中的站台間資料傳輸](../../core/servers/manage/data-transfers-between-sites.md)主題。  
 
-##  <a name="bkmk_Planroles"></a> 安全角色  
- 安全角色用于向管理用户授予安全权限。 安全角色是安全权限的组合，你将这些权限分配给管理用户，以便他们能够执行管理任务。 这些安全权限定义管理用户可以执行的管理操作，以及为特定对象类型授予的权限。 最佳安全方案是分配提供最低权限的安全角色。  
+##  <a name="bkmk_Planroles"></a> 安全性角色  
+ 使用安全性角色以授與安全權限給系統管理使用者。 安全性角色實際上是指派給系統管理使用者以執行其系統管理工作的一組安全性權限。 這些安全權限定義系統管理使用者可執行的系統管理動作，以及針對特定物件類型所授與的權限。 最佳作法是指派可提供最低權限的安全性角色。  
 
- Configuration Manager 具有多个内置的安全角色，能支持常见的管理任务组合，而且用户可以创建自己的自定义安全角色，以满足特定业务需求。 内置安全角色的示例：  
+ Configuration Manager 有數個內建安全性角色以支援典型的系統管理工作分組，您可以建立專屬的自訂安全性角色以支援您特定的業務需求。 內建的安全性角色的範例：  
 
--   “完全权限管理员”授予 Configuration Manager 中的所有权限。  
+-   「系統高權限管理員」可授與 Configuration Manager 的所有權限。  
 
--   “资产管理器”授予管理以下项目的权限：资产智能同步点、资产智能报告类、软件清单、硬件清单和计数规则。  
+-   「資產管理員」授與管理 Asset Intelligence 同步處理點、Asset Intelligence 報告類別、軟體清查、硬體清查和計量規則的權限。  
 
--   “软件更新管理员”授予定义和部署软件更新的权限。 与此角色关联的管理用户可以创建集合、软件更新组、部署和模板。  
+-   「軟體更新管理員」可授與用以定義並部署軟體更新的權限。 與此角色相關聯的系統管理使用者可以建立集合、軟體更新群組、部署和範本。  
 
 > [!TIP]  
->  在 Configuration Manager 控制台中，可以查看内置的安全角色和创建的自定义安全角色的列表（包括它们的描述）。 若要查看角色，请在“管理”工作区中展开“安全”然后选择“安全角色”。  
+>  您可以檢視內建安全性角色清單與您在 Configuration Manager 主控台建立的自訂安全性角色，包括角色的說明。 若要檢視這些角色，請在 [系統管理] 工作區中展開 [安全性]，然後選取 [安全性角色]。  
 
- 每个安全角色都有针对不同对象类型的特定权限。 例如，“应用程序作者”安全角色具有下列针对应用程序的权限：“批准”、“创建”、“删除”、“修改”、“修改文件夹”、“移动对象”、“读取”、“运行报告”和“设置安全作用域”。
+ 每個安全性角色針對不同的物件類型有特定的權限。 例如，「應用程式作者」安全性角色具有下列應用程式權限：核准、建立、刪除、修改、修改資料夾、移動物件、讀取、執行報表及設定安全性範圍。
 
- 无法更改内置安全角色的权限，但可以复制角色，进行更改，然后将所做的更改另存为新的自定义安全角色。 还可以导入从另一个层次结构（例如测试网络）中导出的安全角色。 查看安全角色及其权限，以确定是使用内置的安全角色还是必须创建自己的自定义安全角色。  
+ 您無法變更內建安全性角色的權限，但您可以複製角色、進行變更，然後將這些變更另存為新的自訂安全性角色。 您也可以匯入從另一個階層 (例如，從測試網路) 匯出的安全性角色。 檢閱安全性角色與其權限以判定您是否要使用內建安全性角色，或您是否必須建立您自己的自訂安全性角色。  
 
- ### <a name="to-help-you-plan-for-security-roles"></a>帮助你规划安全角色  
+ ### <a name="to-help-you-plan-for-security-roles"></a>協助您規劃安全性角色  
 
-1.  确定管理用户在 Configuration Manager 中执行的任务。 这些任务可能关系到一个或多个管理任务组，例如部署应用程序和包、部署操作系统和符合性设置、配置站点和安全性、审核、远程控制计算机以及收集清单数据。  
+1.  辨識系統管理使用者在 Configuration Manager 中執行的工作。 這些工作可與一或多個管理工作群組相關，例如部署應用程式與套件、部署相容性所適用的作業系統與設定、設定網站與安全性、稽核、遠端控制電腦以及收集清查資料。  
 
-2.  将这些管理任务对应到一个或多个内置的安全角色。  
+2.  將這些系統管理工作對應到一個或多個內建安全性角色。  
 
-3.  如果某些管理用户执行多个安全角色的任务，则将多个安全角色分配给这些管理用户，而不是创建一个组合此类任务的新的安全角色。  
+3.  如果部分的系統管理使用者要執行多個安全性角色的工作，請將多個安全性角色指派給這些系統管理使用者，而不要建立結合多個工作的新安全性角色。  
 
-4.  如果你确定的任务未能对应到内置的安全角色，则创建并测试新的安全角色。  
+4.  如果您辨識的工作無法對應到內建安全性角色，請建立並測試新的安全性角色。  
 
-有关如何创建和配置安全角色以实现基于角色的管理的信息，请参阅[为 System Center Configuration Manager 配置基于角色的管理](../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_CreateSecRole)主题中的[创建自定义安全角色](../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ConfigSecRole)和[配置安全角色](../../core/servers/deploy/configure/configure-role-based-administration.md)。  
+如需如何建立與設定以角色為基礎的系統管理安全性角色之詳細資訊，請參閱[為 System Center Configuration Manager 設定以角色為基礎的系統管理](../../core/servers/deploy/configure/configure-role-based-administration.md)主題中的[建立自訂安全性角色](../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_CreateSecRole)與[設定安全性角色](../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ConfigSecRole)。  
 
 ##  <a name="bkmk_planCol"></a> 集合  
- 集合指定管理用户可以查看或管理的用户和计算机资源。 例如，若要使管理用户能够部署应用程序或运行远程控制，必须将它们分配到相应的安全角色，此角色授予对包含这些资源的集合的访问权限。 可以选择用户或设备的集合。  
+ 集合可用來指定系統管理使用者可檢視或管理的使用者與電腦資源。 例如，如果系統管理使用者要部署應用程式或是執行遠端控制，則必須指派使用者安全性角色，以取得授與包含這些資源的集合的存取權限。 您可以選取使用者或裝置集合。  
 
- 有关集合的详细信息，请参阅 [System Center Configuration Manager 中的集合简介](../../core/clients/manage/collections/introduction-to-collections.md)。  
+ 如需有關集合的詳細資訊，請參閱 [System Center Configuration Manager 的集合簡介](../../core/clients/manage/collections/introduction-to-collections.md)。  
 
- 在配置基于角色的管理之前，请检查你是否必须出于下列任一原因创建新的集合：  
+ 設定以角色為基礎的系統管理之前，檢查您是否必須基於下列原因建立新集合:  
 
--   功能组织。 例如，独立的服务器和工作站集合。  
+-   功能性組織。 例如，區分伺服器與工作站的集合。  
 
--   地理位置协调。 例如，独立的北美洲和欧洲集合。  
+-   地理對齊方式。 例如，區分北美與歐洲的集合。  
 
--   安全要求和业务流程。 例如，独立的生产计算机和测试计算机集合。  
+-   安全性需求和商務程序。 例如，區分生產與測試電腦的集合。  
 
--   组织协调。 例如，每个业务单位的独立集合。  
+-   組織對齊方式。 例如，區分每個業務單位的集合。  
 
-有关如何配置集合以实现基于角色的管理的信息，请参阅[为 System Center Configuration Manager 配置基于角色的管理](../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ConfigColl)主题中的[配置集合以管理安全性](../../core/servers/deploy/configure/configure-role-based-administration.md)。  
+如需如何針對以角色為基礎的系統管理來設定集合的詳細資訊，請參閱[為 System Center Configuration Manager 設定以角色為基礎的系統管理](../../core/servers/deploy/configure/configure-role-based-administration.md)主題中的[設定集合以管理安全性](../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ConfigColl)。  
 
-##  <a name="bkmk_PlanScope"></a> 安全作用域  
- 使用安全作用域为管理用户提供对安全对象的访问。 安全作用域是作为一个组分配给管理用户的安全对象的命名集。 必须将所有安全对象分配到一个或多个安全作用域。 Configuration Manager 具有两个内置安全作用域：  
+##  <a name="bkmk_PlanScope"></a> 安全性範圍  
+ 使用安全性範圍以提供系統管理使用者存取安全性物件。 安全性範圍是以群組身分指派給系統管理使用者的已命名安全物件集。 所有安全物件都必須指派給一個或多個安全性範圍。 Configuration Manager 具有兩個內建安全性範圍︰  
 
--   “全部”内置的安全作用域授予对所有作用域的访问权限。 无法将对象分配到此安全作用域。  
+-   「全部」內建安全性範圍可授與所有範圍的存取權。 您無法指派物件至此安全性範圍。  
 
--   “默认”内置安全作用域默认用于所有对象。 初次安装 Configuration Manager 时，所有对象均分配到此安全作用域。  
+-   「預設」內建安全性範圍預設會用於所有物件。 首次安裝 Configuration Manager 時，所有物件都會被指派至此安全性範圍。  
 
-如果想限制管理用户可以查看和管理的对象，则必须创建并使用你自己的自定义安全作用域。 安全作用域不支持层次结构，而且不能嵌套。 安全作用域可以包含一个或多个对象类型，其中包括下列类型：  
+如果您想限制系統管理使用者可查看與管理的物件，您必須建立與使用您專屬的自訂安全性範圍。 安全性範圍不支援階層結構而且不可為巢狀。 安全性範圍可包含一個或多個物件類型，包括下列各項：  
 
--   警报订阅  
+-   警示訂閱  
 
--   应用程序  
+-   應用程式  
 
--   启动映像  
+-   開機映像  
 
--   边界组  
+-   界限群組  
 
--   配置项目  
+-   設定項目  
 
--   自定义客户端设置  
+-   自訂用戶端設定  
 
--   分发点和分发点组  
+-   發佈點及發佈點群組  
 
--   驱动程序包  
+-   驅動程式套件  
 
--   全局条件  
+-   全域條件  
 
--   迁移作业  
+-   移轉作業  
 
--   操作系统映像  
+-   作業系統映像  
 
--   操作系统安装包  
+-   作業系統安裝套件  
 
--   包  
+-   套件  
 
--   查询  
+-   查詢  
 
--   站点  
+-   網站  
 
--   软件计数规则  
+-   軟體計量規則  
 
--   软件更新组  
+-   軟體更新群組  
 
--   软件更新包  
+-   軟體更新套件  
 
--   任务序列包  
+-   工作順序套件  
 
--   Windows CE 设备设置项目和包  
+-   Windows CE 裝置設定項目和套件  
 
-还有一些对象是无法包含在安全作用域中的，因为它们仅由安全角色保护。 无法将对这些对象进行的管理性访问限制在一部分可用的对象内。 例如，管理用户可能创建了用于特定站点的边界组。 由于边界对象不支持安全作用域，因此，无法向此用户分配这样一个安全作用域：仅提供对可能与该站点关联的边界的访问。 由于边界对象无法关联到安全作用域，因此，在向用户分配包含对边界对象的访问的安全角色时，该用户可以访问层次结构中的每个边界。  
+有部分物件無法包含在安全性範圍中，因為這些物件只能透過安全性角色來確保安全性。 這些物件的系統管理存取權無法限制為可用物件的子集。 例如，您的系統管理使用者可能會建立僅限於特定網站使用的界限群組。 由於界限物件不支援安全性範圍，因此您無法為此使用者指派安全性範圍，以限制其只能存取可能與該網站相關聯的界限。 由於界限物件無法與安全性範圍產生關聯，指派包含界限物件存取權的安全性角色給使用者時，該使用者可存取階層中的所有界限。  
 
-不受安全作用域限制的对象包括：  
+不受安全性範圍限制的物件包括下列物件:  
 
--   Active Directory 林  
+-   Active Directory 樹系  
 
--   管理用户  
+-   系統管理使用者  
 
--   警报  
+-   警示  
 
--   反恶意软件策略  
+-   反惡意程式碼原則  
 
--   边界  
+-   界限  
 
--   计算机关联  
+-   電腦關聯  
 
--   默认客户端设置  
+-   預設用戶端設計  
 
--   部署模板  
+-   部署範本  
 
--   设备驱动程序  
+-   裝置驅動程式  
 
--   Exchange Server 连接器  
+-   Exchange Server 連接器  
 
--   迁移站点间映射  
+-   移轉網站對網站對應  
 
--   移动设备注册配置文件  
+-   行動裝置註冊設定檔  
 
--   安全角色  
+-   安全性角色  
 
--   安全作用域  
+-   安全性範圍  
 
--   站点地址  
+-   網站位址  
 
--   站点系统角色  
+-   網站系統角色  
 
--   软件标题  
+-   軟體標題  
 
--   软件更新  
+-   軟體更新  
 
--   状态消息  
+-   狀態訊息  
 
--   用户设备相关性  
+-   使用者裝置親和性  
 
-在必须限制对独立的对象实例的访问时，请创建安全作用域。 例如：  
+必須限制個別物件執行個體的存取時，請建立安全性範圍。 例如：  
 
--   你有一组管理用户，他们必须能够查看生产应用程序而不是测试应用程序。 请为生产应用程序创建一个安全作用域，并为测试应用程序创建另一个安全作用域。  
+-   您的系統管理使用者群組必須能夠查看生產應用程式而非測試應用程式。 為生產應用程式建立一個安全性範圍，並為測試應用程式建立另一個範圍。  
 
--   不同的管理用户需要对某个对象类型的一些实例进行不同的访问。 例如，一组管理用户需要特定软件更新组的“读取”权限，而另一组管理用户需要其他软件更新组的“修改”和“删除”权限。 请为这些软件更新组创建不同的安全作用域。  
+-   不同的系統管理使用者針對某些物件類型的執行個體需要不同的存取權限。 例如，某個系統管理使用者群組需要特定軟體更新群組的 [讀取] 權限，另一個系統管理使用者群組則需要其他軟體更新群組的 [修改] 和 [刪除] 權限。 針對這些軟體更新群組建立不同的安全性範圍。  
 
-有关如何配置安全作用域以实现基于角色的管理的信息，请参阅[为 System Center Configuration Manager 配置基于角色的管理](../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ConfigSecScope)主题中的[配置对象的安全作用域](../../core/servers/deploy/configure/configure-role-based-administration.md)。  
-
+如需如何針對以角色為基礎的系統管理來設定安全性範圍的詳細資訊，請參閱[為 System Center Configuration Manager 設定以角色為基礎的系統管理](../../core/servers/deploy/configure/configure-role-based-administration.md)主題中的[設定物件的安全性範圍](../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ConfigSecScope)。  

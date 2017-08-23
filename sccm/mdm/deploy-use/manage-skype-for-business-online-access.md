@@ -1,116 +1,112 @@
 ---
-title: "管理 Skype for Business Online 访问 | Microsoft Docs"
-description: "了解如何使用条件访问策略管理对 Skype for Business Online 的访问。"
+title: "管理商務用 Skype Online 存取 | Microsoft Docs"
+description: "了解如何使用條件式存取原則來管理商務用 Skype Online 的存取權。"
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 71c44250-626e-482c-8794-434c6aeb2fb1
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: c39303c2e1a30ff4d7f27bd617a85516dd4cd15d
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/06/2017
-
-
+ms.openlocfilehash: cacb22a85e74a7d9cae75ad907d0206487cd4dc7
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="manage-skype-for-business-online-access"></a>管理 Skype for Business Online 访问
+# <a name="manage-skype-for-business-online-access"></a>管理商務用 Skype Online 存取
 
-*适用范围：System Center Configuration Manager (Current Branch)*
-
-
-基于你指定的条件，使用  **Skype for Business Online** 的条件访问策略管理对 Skype for Business Online 的访问权限。  
+*適用對象：System Center Configuration Manager (最新分支)*
 
 
- 当目标用户尝试在其设备上使用 Skype for Business Online 时，将评估以下方面：![ConditionalAccess_SFBFlow](media/ConditionalAccess_SFBFlow.png)  
+使用  **商務用 Skype Online** 的條件式存取原則，根據您所指定的條件管理商務用 Skype Online 存取。  
 
-## <a name="prerequisites"></a>先决条件  
 
--   为 Skype for Business Online 启用新式验证。 填充该 [连接窗体](https://connect.microsoft.com/office/Survey/NominationSurvey.aspx?SurveyID=17299&ProgramID=8715) 以在新式验证程序中注册。  
+ 當目標使用者嘗試在他們的裝置上使用商務用 Skype Online，則會發生下列評估︰![ConditionalAccess&#95;SFBFlow](media/ConditionalAccess_SFBFlow.png)  
 
--   所有最终用户都必须使用 Skype for Business Online。 如果你的部署中同时具有 Skype for Business Online 和本地 Skype for Business，则条件访问策略不会应用于最终用户。  
+## <a name="prerequisites"></a>先決條件  
 
--   需要访问 Skype for Business Online 的设备必须：  
+-   啟用商務用 Skype Online 的新式驗證。 請填寫這份 [Connect 表單](https://connect.microsoft.com/office/Survey/NominationSurvey.aspx?SurveyID=17299&ProgramID=8715) ，以註冊加入新式驗證計畫。  
 
-    -   是 Android 或 iOS 设备。  
+-   您所有的一般使用者都必須使用商務用 Skype Online。 如果您有同時部署商務用 Skype Online 與商務用 Skype 內部部署，則一般使用者不會套用條件式存取原則。  
 
-    -   向 Intune 注册。  
+-   需要存取商務用 Skype Online 的裝置必須：  
 
-    -   符合任何已部署的 Intune 合规性策略。  
+    -   為 Android 或 iOS 裝置。  
 
- 基于指定的条件，设备状态存储在可授予或阻止访问的 Azure Active Directory 中。  
-如果不满足条件，则用户将在登录时看到以下消息的其中一条：  
+    -   註冊 Intune。  
 
--   如果设备未向 Intune 注册，或未在 Azure Active Directory 中注册，则会显示一条消息，说明如何安装公司门户应用并进行注册。  
+    -   與任何已部署的 Intune 相容性原則相容。  
 
--   如果设备不合规，则会显示一条消息，将用户定向到 Intune 公司门户网站或公司门户应用，用户可在其中找到有关该问题及其修正方式的信息。  
+ 裝置狀態儲存在 Azure Active Directory，它會根據您指定的條件，授與或封鎖存取權。  
+如不符合條件，使用者會在登入時看見下列訊息之一：  
 
-## <a name="configure-conditional-access-for-skype-for-business-online"></a>为 Skype for Business Online 配置条件访问  
+-   如果裝置未註冊 Intune，或未在 Azure Active Directory 中登錄，就會顯示訊息，指示如何安裝及註冊公司入口網站應用程式。  
 
-### <a name="step-1-configure-active-directory-security-groups"></a>步骤 1：配置 Active Directory 安全组  
- 在开始之前，针对条件访问策略配置 Azure Active Directory 安全组。 你可以在 Office 365 管理中心中配置这些组。 这些组包含将作为目标的用户，或从策略中免除的用户。 如果将某个用户设定为策略的目标，则其使用的每个设备必须合规才能访问资源。  
+-   如果裝置不相容，即會顯示一則訊息，將使用者引導至 Intune 公司入口網站或公司入口網站 app，讓他們能夠在該處找到問題的相關資訊，以及如何修復問題的方法。  
 
- 你可以指定两种组类型以用于 Skype for Business 策略：  
+## <a name="configure-conditional-access-for-skype-for-business-online"></a>設定商務用 Skype Online 的條件式存取  
 
--   目标组 â€“ 包含将应用策略的用户组  
+### <a name="step-1-configure-active-directory-security-groups"></a>步驟 1：設定 Active Directory 安全性群組  
+ 在開始之前，請先為條件式存取原則設定 Azure Active Directory 安全性群組。 您可以在 Office 365 系統管理中心中設定這些群組。 這些群組包含將成為原則目標的使用者，或是免套用此原則的使用者。 當使用者成為原則的目標時，他們使用的每個裝置都必須相容，才能存取資源。  
 
--   免除组 â€“ 包含从策略中免除的用户组（可选）  
-    如果用户位于两个组中，则会将其从策略中免除。  
+ 您可以指定要用於商務用 Skype 原則的兩種群組類型 ︰  
 
-### <a name="step-2-configure-and-deploy-a-compliance-policy"></a>步骤 2：配置和部署合规性策略  
- 确保创建合规性策略并将其部署到设定为 Skype for Business Online 策略目标的所有设备。  
+-   目標群組 â€“ 包含套用原則的使用者群組  
 
- 有关如何配置合规性策略的详细信息，请参阅[管理 System Center Configuration Manager 中的设备合规性策略](../../protect/deploy-use/device-compliance-policies.md)。  
+-   豁免群組 â€“ 包含豁免原則的使用者群組 (選擇性)  
+    如果使用者隸屬於這兩個群組，他們將免套用原則。  
+
+### <a name="step-2-configure-and-deploy-a-compliance-policy"></a>步驟 2：建立及部署相容性原則  
+ 請確定您針對商務用 Skype Online 原則設為目標之所有裝置建立與部署相容性原則。  
+
+ 如需如何設定相容性原則的詳細資訊，請參閱[在 System Center Configuration Manager 中管理裝置相容性原則](../../protect/deploy-use/device-compliance-policies.md)。  
 
 > [!NOTE]  
->  如果你尚未部署合规性策略，但是启用了 Skype for Business Online 策略，则允许所有已向 Intune 注册的目标设备进行访问。  
+>  如果您尚未部署相容性原則而啟用商務用 Skype Online 原則，則系統將允許所有已在 Intune 中註冊的目標裝置進行存取。  
 
- 准备就绪后，继续执行步骤 3。  
+ 當您就緒時，請繼續執行步驟 3。  
 
-### <a name="step-3-configure-the-skype-for-business-online-policy"></a>步骤 3：配置 Skype for Business Online 策略  
- 接下来，配置策略以要求只有托管及合规的设备才能访问 Skype for Business Online。 此策略会存储在 Azure Active Directory 中。  
+### <a name="step-3-configure-the-skype-for-business-online-policy"></a>步驟 3：設定商務用 Skype Online 原則  
+ 接著，設定原則以要求只有受管理和相容的裝置才可以存取商務用 Skype Online。 這項原則會儲存在 Azure Active Directory。  
 
-1.  在 [Microsoft Intune 管理控制台](https://manage.microsoft.com)中，单击“策略” > “条件访问” > “Skype for Business Online 策略”。  
+1.  在 [Microsoft Intune 管理主控台](https://manage.microsoft.com)中，按一下 **[原則]** > **[條件式存取]** > **Skype for Business Online [原則]**。  
 
-     ![ConditionalAccess_SFBPolicy](media/ConditionalAccess_SFBPolicy.png)  
+     ![ConditionalAccess&#95;SFBPolicy](media/ConditionalAccess_SFBPolicy.png)  
 
-2.  选择“启用条件访问策略”。  
+2.  選取 **[啟用條件存取原則]**。  
 
-3.  在“应用程序访问”下，可以选择将条件访问策略应用到：  
+3.  在 **[應用程式存取]**下，您可以選擇將條件式存取原則套用至：  
 
     -   iOS  
 
     -   Android  
 
-4.  在“目标组” 下，单击“修改”  以选择将应用策略的 Azure Active Directory 安全组。 你可以选择将其应用于所有用户或仅针对特定用户组。  
+4.  按一下 [目標群組] 下方的 [修改]  ，選取要套用原則的 Azure Active Directory 安全性群組。 您可以選擇針對所有使用者，或僅針對選取的使用者群組。  
 
-5.  在“免除组” 下，可以选择“修改”  以选择从此策略中免除的 Azure Active Directory 安全组。  
+5.  按一下 [豁免群組] 下方的 [修改]  ，選取豁免此原則的 Azure Active Directory 安全性群組。  
 
-6.  完成后，请单击“保存” 。  
+6.  完成之後，請按一下 [儲存] 。  
 
- 现在为 Skype for Business Online 配置了条件访问。 不需要部署条件访问策略，它将立即生效。  
+ 您現在已設定商務用 Skype Online 的條件式存取。 您不需部署條件式存取原則，它會立即生效。  
 
-## <a name="monitor-the-compliance-and-conditional-access-policies"></a>监视遵从性和条件性访问策略  
- 在“组”工作区中，可以查看设备的条件访问状态。  
+## <a name="monitor-the-compliance-and-conditional-access-policies"></a>監視相容性及條件式存取原則  
+ 在 [群組] 工作區中，您可以檢視裝置的條件式存取狀態。  
 
- 选择任何移动设备组，然后在“设备”选项卡上，选择以下“筛选器”之一：  
+ 選取任何行動裝置群組，然後在 **[裝置]** 索引標籤上，選取下列其中一個 **[篩選]**：  
 
--   **未向 AAD 注册的设备** â€“ 阻止这些设备访问 Skype for Business Online。  
+-   **沒有註冊 AAD 的裝置** â€“ 商務用 Skype Online 已封鎖這些裝置。  
 
--   **不合规的设备** â€“ 阻止这些设备访问 Skype for Business Online。  
+-   **不相容的裝置** â€“ 商務用 Skype Online 已封鎖這些裝置。  
 
--   **已向 AAD 注册的合规设备** â€“ 这些设备可以访问 Skype for Business Online。  
+-   **已註冊 AAD 且相容的裝置** â€“ 這些裝置可以存取商務用 Skype Online。  
 
-### <a name="see-also"></a>另请参阅  
+### <a name="see-also"></a>請參閱  
 
- [在 System Center Configuration Manager 中管理设备合规性策略](../../protect/deploy-use/device-compliance-policies.md)
-
+ [在 System Center Configuration Manager 中管理裝置相容性原則](../../protect/deploy-use/device-compliance-policies.md)

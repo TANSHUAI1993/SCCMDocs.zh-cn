@@ -1,147 +1,140 @@
 ---
-title: "管理操作系统映像 | Microsoft Docs"
-description: "在 Configuration Manager 中，了解如何管理存储在 Windows 映像 (WIM) 文件中的操作系统映像。"
+title: "管理作業系統映像 | Microsoft Docs"
+description: "在 Configuration Manager 中，深入了解儲存在 Windows 映像處理 (WIM) 檔案中的作業系統映像管理方法。"
 ms.custom: na
 ms.date: 12/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fab13949-371c-4a4c-978e-471db1e54966
-caps.latest.revision: 17
-caps.handback.revision: 0
+caps.latest.revision: "17"
+caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 03722ff4f480cd26842e395fe1f7ec8359e2b33e
 ms.openlocfilehash: 6953c3834ca303b949f22436010a87b3da9688dc
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="manage-operating-system-images-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 管理操作系统映像
+# <a name="manage-operating-system-images-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 管理作業系統映像
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用對象：System Center Configuration Manager (最新分支)*
 
-Configuration Manager 中的操作系统映像以 Windows 映像 (WIM) 文件格式存储，代表在计算机上成功安装和配置操作系统所需的引用文件和文件夹的压缩集合。 对于所有操作系统部署方案，必须选择操作系统映像。   你可以使用默认操作系统映像或从你配置的引用计算机生成操作系统映像。 在生成引用计算机时，在捕获操作系统以创建映像文件之前，你可以向其添加操作系统文件、驱动程序、支持文件、软件更新、工具和其他软件应用程序。 下面提供了有关每种方法的信息。  
+Configuration Manager 中的作業系統映像儲存為 Windows 映像 (WIM) 檔案格式，代表經過壓縮的參照檔案和資料夾集合，其為成功在電腦上安裝及設定作業系統所必需。 在所有作業系統部署案例中，您都必須選取作業系統映像。   您可以使用預設的作業系統映像，或從您設定的參照電腦建置作業系統映像。 當您建立參照電腦時，您可以先將作業系統檔案、驅動程式、支援檔案、軟體更新、工具和其他軟體應用程式加入此作業系統，之後再擷取以建立映像檔。 以下提供每個方法的相關資訊。  
 
- **默认映像**  
+ **預設映像**  
 
- 默认操作系统映像 (install.wim) 包含在 Windows 操作系统安装文件中。 此映像是包含一组标准驱动程序的基本操作系统映像。 当你使用默认操作系统映像时，可以在操作系统安装之后使用任务序列步骤来安装应用和进行其他配置。  默认操作系统映像位于 <*操作系统源路径*>\Sources\install.wim。  
+ 預設作業系統映像 (install.wim) 隨附於 Windows 作業系統安裝檔案。 這個映像是包含一組標準驅動程式的基本作業系統映像。 當您使用預設的作業系統映像時，您可以安裝應用程式，並在使用工作順序步驟安裝作業系統之後，進行其他組態。  預設的作業系統映像位於 <*作業系統來源路徑*>\Sources\install.wim。  
 
--   **优点**  
+-   **優點**  
 
-    -   映像大小小于捕获的映像。  
+    -   映像的大小會小於擷取的映像大小。  
 
-    -   使用任务序列步骤安装应用和配置可更加动态。 例如，你可以在任务序列中更改将安装的应用和配置，并且无需对操作系统进行重映像。  
+    -   使用工作順序步驟安裝應用程式與組態更具動態。 例如，您可以變更將安裝的應用程式和工作順序中的組態，而不需要重新建立作業系統映像。  
 
--   **缺点**  
+-   **缺點**  
 
-    -   操作系统安装可能需要更多时间，因为操作系统安装完成后将进行应用安装和其他配置。  
+    -   由於應用程式安裝和其他組態會在作業系統安裝完成後進行，所以作業系統安裝可能需要更多的時間。  
 
- **捕获的映像**  
+ **擷取的映像**  
 
- 若要创建自定义操作系统映像，则构建具有所需的操作系统的引用计算机，并安装应用、配置设置等。然后，从引用计算机捕获操作系统映像以创建 WIM 文件。 你可以手动构建引用计算机，或者可以使用任务序列自动执行部分或所有构建步骤。   
-有关创建自定义操作系统映像的步骤，请参阅[自定义操作系统映像](customize-operating-system-images.md)。  
+ 若要建立自訂的作業系統映像，您必須建置具備所需作業系統的參照電腦，以及安裝應用程式和設定組態等。然後，您可以從參照電腦擷取作業系統映像，以建立 WIM 檔案。 您可以手動建立參照電腦，也可以使用工作順序將部分或所有建立步驟自動化。   
+如需建立自訂之作業系統映像的步驟，請參閱 [Customize operating system images](customize-operating-system-images.md) (使用 System Center Configuration Manager 自訂作業系統映像)。  
 
--   **优点**  
+-   **優點**  
 
-    -   安装速度可以比使用默认映像更快。 例如，可以使用捕获的操作系统映像预安装应用，并且将无需在之后使用任务序列步骤来安装应用。  
+    -   此種安裝可以比使用預設映像更快。 例如，應用程式可使用擷取的作業系統映像預先安裝，而您稍後將不需使用工作順序步驟安裝應用程式。  
 
--   **缺点**  
+-   **缺點**  
 
-    -   操作系统安装可能需要更多时间，因为操作系统安装完成后将进行应用安装和其他配置。  
+    -   由於應用程式安裝和其他組態會在作業系統安裝完成後進行，所以作業系統安裝可能需要更多的時間。  
 
 
-##  <a name="a-namebkmkaddosimagesa-add-operating-system-images-to-configuration-manager"></a><a name="BKMK_AddOSImages"></a>将操作系统映像添加到 Configuration Manager  
- 在可以使用操作系统映像之前，必须先将映像添加到 Configuration Manager 站点。 使用以下过程将操作系统映像添加到站点。  
+##  <a name="BKMK_AddOSImages"></a> 將作業系統映像加入 Configuration Manager  
+ 在您可以使用作業系統映像之前，必須先將此映像加入 Configuration Manager 站台。 請使用下列程序將作業系統映像加入站台。  
 
-#### <a name="to-add-an-operating-system-image-to-a-site"></a>若要将操作系统映像添加到站点  
+#### <a name="to-add-an-operating-system-image-to-a-site"></a>將作業系統映像加入站台  
 
-1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+1.  在 Configuration Manager 主控台中，按一下 [軟體程式庫] 。  
 
-2.  在“软件库”  工作区中，展开“操作系统” ，然后单击“操作系统映像包” 。  
+2.  在 [軟體程式庫]  工作區中，展開 [作業系統] ，然後按一下 [作業系統映像] 。  
 
-3.  在“主页”  选项卡上的“创建”  组中，单击“添加操作系统映像包”  以启动添加操作系统映像包向导。  
+3.  在 [首頁]  索引標籤的 [建立]  群組中，按一下 [新增作業系統映像]  啟動 [新增作業系統映像精靈]。  
 
-4.  在“数据源”  页上，指定操作系统映像的网络路径。 例如，指定 **\\\server\path\OS.WIM**。  
+4.  在 [資料來源]  頁面上，指定作業系統映像的網路路徑。 例如指定 **\\\server\path\OS.WIM**。  
 
-5.  在“常规”  页上，指定以下信息，然后单击“下一步” 。 当你向同一站点中添加多个操作系统映像时，此信息在用于标识时非常有用。  
+5.  在 [一般]  頁面上指定下列資訊，然後按 [下一步] 。 這項資訊可在新增多個作業系統映像至相同站台時做為識別用途。  
 
-    -   **名称**：指定映像的名称。 默认情况下，映像的名称是从 WIM 文件中获取的。  
+    -   **名稱**：指定映像的名稱。 根據預設，映像的名稱取自 WIM 檔。  
 
     -   **版本**：指定映像的版本。  
 
-    -   **备注**：指定映像的简要描述。  
+    -   **註解**：指定映像的簡短描述。  
 
-6.  完成向导。  
+6.  完成精靈。  
 
- 现在可以将操作系统映像分发到分发点。  
+ 您現在可以將作業系統映像發佈至發佈點。  
 
-##  <a name="a-namebkmkdistributebootimagesa-distribute-operating-system-images-to-distribution-points"></a><a name="BKMK_DistributeBootImages"></a>将操作系统映像分发到分发点  
- 将采用与分发其他内容相同的方式将操作系统映像分发到分发点。 大多数情况下，部署操作系统之前必须将操作系统映像分发到至少一个分发点。 关于分发操作系统映像的步骤，请参阅 [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content)。  
+##  <a name="BKMK_DistributeBootImages"></a> 將作業系統映像發佈至發佈點  
+ 作業系統映像發佈至發佈點的方式，與您發佈其他內容的方式相同。 在大部分情況下，您必須在部署作業系統之前，將作業系統映像發佈至至少一個發佈點。 如需發佈作業系統映像的步驟，請參閱 [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content)。  
 
-##  <a name="a-namebkmkosimagesapplyupdatesa-apply-software-updates-to-an-operating-system-image"></a><a name="BKMK_OSImagesApplyUpdates"></a>将软件更新应用于操作系统映像  
- 我们会定期发布适用于你的操作系统映像中的操作系统的新软件更新。 必须将软件更新基础结构实施到位，成功同步软件更新，并将软件更新下载到站点服务器上的内容库后才可将软件更新应用于映像。 有关详细信息，请参阅[部署软件更新](../../sum/deploy-use/deploy-software-updates.md)。  
+##  <a name="BKMK_OSImagesApplyUpdates"></a> 將軟體更新套用至作業系統映像  
+ 適用於作業系統映像中作業系統的新軟體更新會定期發行。 在您可將軟體更新套用至映像之前，必須先使軟體更新基礎結構就緒、已成功同步處理軟體更新，並已將軟體更新下載至站台伺服器上的內容庫。 如需詳細資訊，請參閱 [Deploy software updates](../../sum/deploy-use/deploy-software-updates.md) (部署軟體更新)。  
 
- 你可以按指定计划将适用的软件更新应用于映像。 Configuration Manager 按指定计划将选择的软件更新应用于操作系统映像，然后根据需要将更新的映像分发到分发点。 有关操作系统映像的信息存储在站点数据库中，包括在导入时应用的软件更新。 自映像最初添加以来已应用于映像的软件更新也存储在站点数据库中。 当你启动向导以将软件更新应用于操作系统映像时，向导将检索尚未应用于映像的适用软件更新的列表供你选择。 Configuration Manager 从站点服务器上的内容库中复制软件更新，然后将软件更新应用于操作系统映像。  
+ 您可以依指定的排程將適用的軟體更新套用至映像。 依照您指定的排程，Configuration Manager 會將您選取的軟體更新套用至作業系統映像，然後選擇性地將更新映像發佈至發佈點。 有關作業系統映像的資訊會儲存在站台資料庫中，包括匯入時已套用的軟體更新。 最初新增時已套用至映像的軟體更新也會儲存在站台資料庫中。 當您啟動精靈將軟體更新套用至作業系統映像時，精靈會擷取尚未套用至映像的可用軟體更新清單供您選取。 Configuration Manager 會從站台伺服器上的內容庫複製軟體更新，並將此軟體更新套用至作業系統映像。  
 
- 使用以下过程将软件更新应用于操作系统映像。  
+ 利用下列程序將軟體更新套用至作業系統映像。  
 
-#### <a name="to-apply-software-updates-to-an-operating-system-image"></a>将软件更新应用于操作系统映像  
+#### <a name="to-apply-software-updates-to-an-operating-system-image"></a>將軟體更新套用至作業系統映像  
 
-1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+1.  在 Configuration Manager 主控台中，按一下 [軟體程式庫] 。  
 
-2.  在“软件库”  工作区中，展开“操作系统” ，然后单击“操作系统映像包” 。  
+2.  在 [軟體程式庫]  工作區中，展開 [作業系統] ，然後按一下 [作業系統映像] 。  
 
-3.  选择要向其应用软件更新的操作系统映像。  
+3.  選取要套用軟體更新的作業系統映像。  
 
-4.  在“主页”  选项卡上的“操作系统映像包”  组中，单击“计划更新”  以启动向导。  
+4.  在 [首頁]  索引標籤的 [作業系統映像]  群組中，按一下 [排程更新]  啟動精靈。  
 
-5.  在“选择更新”  页上，选择要应用于操作系统映像的软件更新，然后单击“下一步” 。  
+5.  在 [選擇更新]  頁面上，選取要套用至作業系統映像的軟體更新，然後按 [下一步] 。  
 
-6.  在“设置计划”  页上，指定以下设置，然后单击“下一步” 。  
+6.  在 [設定排程]  頁面上指定下列設定，然後按 [下一步] 。  
 
-    1.  **计划**：指定有关何时将软件更新应用于操作系统映像的计划。  
+    1.  **排程**：指定將軟體更新套用至作業系統映像的排程。  
 
-    2.  **出错时继续**：选择此选项以便即使在出错时也继续将软件更新应用于映像。  
+    2.  **發生錯誤時繼續**：選取此選項，即使發生錯誤仍會將軟體更新套用至映像。  
 
-    3.  **将映像分发到分发点**：选择此选项以在应用了软件更新后更新分发点上的操作系统映像。  
+    3.  **將映像發佈至發佈點**：選取此選項，在套用軟體更新之後更新發佈點上的作業系統映像。  
 
-7.  在“摘要”  页上，验证以下信息，然后单击“下一步” 。  
+7.  確認 [摘要]  頁面中的資訊，然後按 [下一步] 。  
 
-8.  在“完成”  页上，验证软件更新是否已成功应用于操作系统映像。  
+8.  在 [完成]  頁面上，確認軟體更新已成功套用至作業系統映像。  
 
-##  <a name="a-namebkmkosimagemulticasta-prepare-the-operating-system-image-for-multicast-deployments"></a><a name="BKMK_OSImageMulticast"></a>为多播部署准备操作系统映像  
- 使用多播部署以允许多台计算机同时下载操作系统映像。 映像通过分发点多播给客户端，而不是让分发点通过单独连接向每个客户端发送映像的副本。 选择[使用多播通过网络部署 Windows](../deploy-use/use-multicast-to-deploy-windows-over-the-network.md) 操作系统部署方法时，必须先将操作系统映像包配置为支持多播，然后才能将操作系统映像分发到启用了多播的分发点。 使用下列过程来为现有操作系统映像包设置多播选项。  
+##  <a name="BKMK_OSImageMulticast"></a> 準備多點傳送部署的作業系統映像  
+ 使用多點傳送部署，以允許多部電腦同時下載作業系統映像。 此映像檔由發佈點多點傳送至用戶端，而不是讓發佈點透過個別連線，傳送映像複本至每個用戶端。 當您選擇[使用多點傳送透過網路來部署 Windows](../deploy-use/use-multicast-to-deploy-windows-over-the-network.md) 作業系統部署方法時，必須將作業系統映像套件設定為支援多點傳送，然後將其發佈到啟用多點傳送的發佈點。 利用下列程序，為現有的作業系統映像套件設定多點傳送選項。  
 
-#### <a name="to-modify-an-operating-system-image-package-to-use-multicast"></a>修改操作系统映像包以使用多播  
+#### <a name="to-modify-an-operating-system-image-package-to-use-multicast"></a>將作業系統映像套件修改為使用多點傳送  
 
-1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+1.  在 Configuration Manager 主控台中，按一下 [軟體程式庫] 。  
 
-2.  在“软件库”  工作区中，展开“操作系统” ，然后单击“操作系统映像包” 。  
+2.  在 [軟體程式庫]  工作區中，展開 [作業系統] ，然後按一下 [作業系統映像] 。  
 
-3.  选择要分发到启用了多播的分发点的操作系统映像。  
+3.  選取您要發佈至支援多點傳送之發佈點的作業系統映像。  
 
-4.  在“主页”  选项卡上的“属性”  组中，单击“属性” 。  
+4.  在 [首頁]  索引標籤的 [內容]  群組中，按一下 [內容] 。  
 
-5.  选择“分发设置”  选项卡，并配置以下选项：  
+5.  選取 [發佈設定]  索引標籤，並設定下列選項：  
 
-    -   **允许通过多播传输此包(仅 WinPE)**：必须选择此选项以使 Configuration Manager 同时部署多个操作系统映像。  
+    -   **允許透過多點傳送來傳送此套件 (僅適用於 WinPE)**：您必須針對 Configuration Manager 選取此選項，才能同時部署作業系統映像。  
 
-    -   **加密多播包**：指定在将映像发送到分发点之前是否对其进行加密。 如果包中包含敏感信息，请使用此选项。 如果不对映像进行加密，则包的内容将以明文的形式出现在网络上并且可被未授予用户读取。  
+    -   **加密多點傳送套件**：指定是否要在將映像傳送至發佈點前，先對映像進行加密。 如果套件包含敏感資訊，請使用此選項。 如果映像未加密，套件的內容會以純文字在網路上傳送，並且可能會被未經授權的使用者讀取。  
 
-    -   **仅通过多播传输此包**：指定是否希望分发点仅在多播会话期间部署映像。  
+    -   **僅透過多點傳送傳送此套件**：指定是否只要在多點傳送工作階段期間，讓發佈點部署映像。  
 
-         如果选择“仅通过多播传输此包” ，则必须还要指定“需要时通过运行任务序列本地下载内容”  作为操作系统映像的部署选项。 你可以在部署操作系统映像时为映像指定部署选项，或者可以稍后通过编辑部署的属性来指定这些选项。 部署选项位于部署对象的“属性”  页的“分发点”  选项卡上。  
+         如果您選取 [僅透過多點傳送傳送此套件] ，則必須同時指定 [執行工作順序以視需要將內容下載到本機]  作為作業系統映像的部署選項。 您可以在部署作業系統映像時指定映像的部署選項，或者稍後再編輯部署的內容以指定這些選項。 這些部署選項位於部署物件 [內容]  頁面的 [發佈點]  索引標籤上。  
 
-6.  单击" **确定**"。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-
+6.  按一下 [ **確定**]。  

@@ -1,115 +1,111 @@
 ---
-title: "客户端托管的设备的常见符合性管理任务 - Configuration Manager | Microsoft Docs"
-description: "通过完成一些常见方案，了解 System Center Configuration Manager 符合性设置。"
+title: "用戶端管理之裝置的一般相容性管理工作 - Configuration Manager | Microsoft Docs"
+description: "透過處理一些常見的案例，了解 System Center Configuration Manager 相容性設定需要。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4e345791-74db-41ad-b472-024ce6521daf
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 991eff171dce95590a7f050e0d3b07f98c0224b3
 ms.openlocfilehash: 2012ab5e55da8d707fd668e0163b42fe7d56c72f
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="common-tasks-for-managing-compliance-on-devices-with-the-system-center-configuration-manager-client"></a>使用 System Center Configuration Manager 客户端在设备上管理符合性的常见任务
+# <a name="common-tasks-for-managing-compliance-on-devices-with-the-system-center-configuration-manager-client"></a>使用 System Center Configuration Manager 用戶端管理裝置上相容性的一般工作
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用對象：System Center Configuration Manager (最新分支)*
 
-本主题中的方案通过演示你可能遇到的一些常见情景介绍如何使用 System Center Configuration Manager 符合性设置。  
+本主題中的案例透過您可能遇到的一些常見案例，為您簡介使用 System Center Configuration Manager 的相容性設定。  
 
- 如果你已熟悉符合性设置，有关所有可用功能的详细文档，可参阅[使用 System Center Configuration Manager 客户端管理的设备的配置项目](../../compliance/deploy-use/configuration-items-for-devices-managed-with-the-client.md)部分。  
+ 如已熟悉相容性設定，您可在 [Configuration items for devices managed with the System Center Configuration Manager client](../../compliance/deploy-use/configuration-items-for-devices-managed-with-the-client.md) (由 System Center Configuration Manager 用戶端管理的裝置設定項目) 一節中找到所用全部功能的詳細文件。  
 
- 在开始之前，请阅读[符合性设置入门](../../compliance/get-started/get-started-with-compliance-settings.md)以了解有关符合性设置的一些基础知识，另请阅读[规划和配置符合性设置](../../compliance/plan-design/plan-for-and-configure-compliance-settings.md)来实施任何必要的先决条件。  
+ 開始之前，請參閱[開始使用相容性設定](../../compliance/get-started/get-started-with-compliance-settings.md)，了解相容性設定的一些基本概念，另請參閱[規劃及設定相容性設定](../../compliance/plan-design/plan-for-and-configure-compliance-settings.md)，實作任何必要條件。  
 
-## <a name="general-information-for-each-scenario"></a>每个方案的一般信息  
- 在每个方案中，将创建可执行特定任务的配置项目。 打开“创建配置项目向导”，使用以下步骤：  
+## <a name="general-information-for-each-scenario"></a>每個案例的通用資訊  
+ 在每個案例中，您會建立執行特定工作的設定項目。 請使用下列步驟開啟 [建立設定項目精靈]：  
 
-1.  在 Configuration Manager 控制台中，单击“资产和符合性” > “符合性设置” > “配置项目”。  
+1.  在 Configuration Manager 主控台中，按一下 [資產與相容性] > [相容性設定] > [設定項目]。  
 
-3.  在“主页”  选项卡上的“创建”  组中，单击“创建配置项目” 。  
+3.  在 [常用]  索引標籤上，按一下 [建立]  群組中的 [建立設定項目] 。  
 
-4.  在“创建配置项目”向导的“常规”  选项卡上（如下所示），指定配置项目的名称和说明，然后选择本主题中的每个方案的相应配置项目类型。  
+4.  在 [建立設定項目精靈] 的 [一般]  索引標籤上 (如下所示)，指定設定項目的名稱和描述，然後為本主題的每個案例選擇適當的設定項目類型。  
 
-     ![将显示“创建配置项目向导”的常规页。](/sccm/compliance/plan-design/media/Compliance-Settings-Wizard---1.png)  
+     ![顯示 [建立設定項目精靈] 的 [一般] 頁面。](/sccm/compliance/plan-design/media/Compliance-Settings-Wizard---1.png)  
 
-## <a name="scenarios-for-windows-10-devices-managed-with-the-configuration-manager-client"></a>使用 Configuration Manager 客户端管理的 Windows 10 设备的方案  
+## <a name="scenarios-for-windows-10-devices-managed-with-the-configuration-manager-client"></a>使用 Configuration Manager 用戶端管理的 Windows 10 裝置案例  
 
-### <a name="scenario-disable-the-use-of-bluetooth-on-windows-10-devices"></a>方案：在 Windows 10 设备上禁用蓝牙  
- 在此方案中，安全部门已将设备上的蓝牙功能识别为可用于在公司外传输敏感企业信息的一种手段。 你最近已将所有的 PC 都升级到了 Windows 10 并决定禁用这些设备上的蓝牙功能。  
+### <a name="scenario-disable-the-use-of-bluetooth-on-windows-10-devices"></a>案例：停止在 Windows 10 裝置上使用藍牙  
+ 在此案例中，安全性部門發現裝置上的藍牙功能可作為用來在公司外部傳送公司機密資訊的方式。 您最近將所有電腦都升級為 Windows 10，並且決定停用這些裝置上的藍牙功能。  
 
-1.  在“创建配置项目”向导的“常规”  页上，选择  “Windows 10”配置项目类型，然后单击“下一步” 。  
+1.  在 [建立設定項目精靈] 的 [一般]  頁面上，選取 [Windows 10]  設定項目類型，然後按一下 [下一步] 。  
 
-2.  在向导的“支持的平台”  页上，选择所有 Windows 10 平台。  
+2.  在精靈的 [支援的平台]  頁面上，選取所有 Windows 10 平台。  
 
-3.  在“设备设置”  页上，选择“设备” ，然后单击“下一步” 。  
+3.  在 [裝置設定]  頁面上，選取 [裝置] ，然後按一下 [下一步] 。  
 
-4.  在“设备”  页上，选择“禁止”  作为 “蓝牙”的值。  
+4.  在 [裝置]  頁面上，選取 [禁止]  作為 [藍牙] 的值。  
 
-5.  选择“修正非符合性设置”  以确保更改被应用到所有 Windows 10 设备上。  
+5.  選取 [補救不相容的設定]  確保變更套用至所有 Windows 10 裝置。  
 
-6.  完成向导以创建配置项目。  
+6.  完成精靈以建立設定項目。  
 
- 现在便可以通过[使用 System Center Configuration Manager 创建和部署配置基线的常见任务](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md)主题中的信息将创建的配置部署到设备。  
+ 您現在可以使用 [Common tasks for creating and deploying configuration baselines with System Center Configuration Manager](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md) (以 System Center Configuration Manager 建立及部署設定基準的一般工作) 主題中的資訊，協助您將已建立的設定部署至裝置。  
 
-## <a name="scenarios-for-windows-desktop-and-server-computers-managed-with-the-configuration-manager-client"></a>使用 Configuration Manager 客户端管理的 Windows 台式机和服务器计算机的方案  
- 在运行 Configuration Manager 客户端的 Mac 计算机上，有两种评估符合性的选项：  
+## <a name="scenarios-for-windows-desktop-and-server-computers-managed-with-the-configuration-manager-client"></a>使用 Configuration Manager 用戶端所管理之 Windows 桌上型電腦和伺服器電腦的案例  
+ 在執行 Configuration Manager 用戶端的 Mac 電腦上 ，有兩個評估相容性選項：  
 
--   评估 Mac OS X 首选项 (plist) 文件。  
+-   評估 Mac OS X 喜好設定 (plist) 檔案。  
 
--   使用自定义脚本并评估由该脚本返回的结果。  
+-   使用自訂指令碼，並評估指令碼所傳回的結果。  
 
- 有关详细信息，请参阅[如何为 System Center Configuration Manager 客户端管理的Mac OS X 设备创建配置项目](../../compliance/deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md)。  
+ 如需詳細資訊，請參閱[如何為 System Center Configuration Manager 用戶端所管理的 Mac OS X 裝置建立設定項目](../../compliance/deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md)。  
 
-### <a name="scenario-remediate-an-incorrect-registry-value-on-windows-desktop-computers"></a>方案：修正 Windows 台式计算机上的不正确的注册表值  
- 在此方案中，你将发现重要的业务线应用在你管理的运行 Windows 8.1 的某些计算机上未正确运行。 经过调查发现，这是因为某些计算机上名为“HKEY_LOCAL_MACHINE\SOFTWARE\Woodgrove\LOB App\Configuration\Configuration1”  的注册表值已被设置为了“0”  。 若想成功运行业务线应用，必须将该值设置为“1” 。  
+### <a name="scenario-remediate-an-incorrect-registry-value-on-windows-desktop-computers"></a>案例：補救 Windows 桌上型電腦上的不正確登錄值  
+ 在此案例中，您發現您所管理且執行 Windows 8.1 的某些電腦上未正確地執行重要的企業營運應用程式。 調查之後，您會發現這是因為某些電腦上名為 **HKEY_LOCAL_MACHINE\SOFTWARE\Woodgrove\LOB App\Configuration\Configuration1** 的登錄機碼值設為 [0]  。 若要讓企業營運應用程式成功執行，此值必須設為 [1] 。  
 
- 在此过程中，你需要创建一个配置项目，它会监视并自动修正发现的任何错误的注册表项值。  
+ 在此程序中，您將建立監視並自動補救所找到之任何不正確登錄機碼值的設定項目。  
 
-1.  在“创建配置项目”向导的“常规”  页上，选择  “Windows 台式机和服务器(自定义)”配置项目类型，然后单击 “下一步”。  
+1.  在 [建立設定項目精靈] 的 [一般]  頁面上，選取 [Windows 桌面或伺服器 (自訂)]  設定項目類型，然後按一下 [下一步] 。  
 
-2.  在向导的“支持的平台”  页上，选择“Windows 8.1”  （以确保配置项目仅应用于受影响的计算机）。  
+2.  在精靈的 **支援的平台** 頁面上，選取 **「Windows 8.1」** (確保設定項目僅套用至受影響的電腦)。  
 
-3.  在“设置”  页上，单击“新建”  创建新的设置。  
+3.  在 [設定]  頁面上，按一下 [新增]  建立新的設定。  
 
-4.  在“创建设置”  对话框的“常规”  选项卡上，配置以下信息：  
+4.  在 [建立設定]  對話方塊的 [一般]  索引標籤上，設定下列項目：  
 
-    -   **名称** > **示例设置**  
+    -   **名稱** > **設定範例**  
 
-    -   **设置类型** > **注册表值**  
+    -   **設定類型** > **登錄值**  
 
-    -   **数据类型** > **整数** （因为该值仅包含一个数字）  
+    -   **資料類型** > **整數** (因為值只包含數字)  
 
     -   **Hive** > **HKEY_LOCAL_MACHINE**  
 
-    -   **密钥** > **SOFTWARE\Woodgrove\LOB App\Configuration\Configuration1**  
+    -   **機碼** > **SOFTWARE\Woodgrove\LOB App\Configuration\Configuration1**  
 
-    -   **值** > **1** （必需值）  
+    -   **值** > **1** (必要值)  
 
-5.  在  “创建设置”对话框的“符合性规则”  选项卡上，单击“新建” ，然后在“创建规则”  对话框中，配置以下信息：  
+5.  在 [建立設定]  對話方塊的 [相容性規則]  索引標籤上，按一下 [新增] ，然後在 [建立規則]  對話方塊中設定下列項目：  
 
-    -   **名称** > **规则示例**  
+    -   **名稱** > **範例規則**  
 
-    -   **所选设置** – 验证所选设置是否为“示例设置” 。  
+    -   **選取的設定** – 確認選取的設定為 [範例設定] 。  
 
-    -   **规则类型** > **值**  
+    -   **規則類型** > **值**  
 
-    -   **设置必须符合以下规则** – 验证设置名称是否正确，并配置选项以指定设置值必须等于“1” 。  
+    -   **設定必須符合下列規則** – 確認設定名稱正確，並將選項設定為指定設定值必須等於 **1**。  
 
-    -   **修正非符合性规则(如果支持)** – 勾选此框，以确保 Configuration Manager 在注册表项值不正确时将其重置为正确的值。  
+    -   **支援時補救不相容的規則** – 檢查此方塊，以確保 Configuration Manager 在值不正確時會重設正確的登錄機碼值。  
 
-6.  完成向导以创建配置项目。  
+6.  完成精靈以建立設定項目。  
 
- 现在可以使用[用于创建和部署配置基线的常见任务](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md)主题中的信息将创建的配置部署到设备。  
-
+ 您現在可以使用[建立及部署設定基準的一般工作](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md)主題中的資訊，協助您將已建立的設定部署至裝置。  

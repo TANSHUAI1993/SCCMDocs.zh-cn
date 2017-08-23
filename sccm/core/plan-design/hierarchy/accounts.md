@@ -1,349 +1,345 @@
 ---
-title: "Configuration Manager 使用的帐户 | Microsoft Docs"
-description: "在 System Center Configuration Manager 中标识和管理 Windows 组和帐户。"
+title: "Configuration Manager 使用的帳戶 | Microsoft Docs"
+description: "識別及管理 System Center Configuration Manager 中的 Windows 群組和帳戶。"
 ms.custom: na
 ms.date: 2/9/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 72d7b174-f015-498f-a0a7-2161b9929198
-caps.latest.revision: 7
-caps.handback.revision: 0
+caps.latest.revision: "7"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 72263ec5e7104924a1ca46dc2000be9f8568599f
 ms.openlocfilehash: a776667cc9f24bd4a468afea76e466c34ce66864
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="accounts-used-in-system-center-configuration-manager"></a>System Center Configuration Manager 中使用的帐户
+# <a name="accounts-used-in-system-center-configuration-manager"></a>System Center Configuration Manager 中使用的帳戶
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用對象：System Center Configuration Manager (最新分支)*
 
-可以使用以下信息确定 System Center Configuration Manager 中使用的 Windows 组和帐户、它们的使用方式以及任何要求。  
+利用下列資訊可識別 System Center Configuration Manager 中使用的 Windows 群組及帳戶、其使用方式，以及任何需求。  
 
-## <a name="windows-groups-that-configuration-manager-creates-and-uses"></a>Configuration Manager 创建和使用的 Windows 组  
- Configuration Manager 会自动创建并在许多情况下自动维护以下 Windows 组。  
+## <a name="windows-groups-that-configuration-manager-creates-and-uses"></a>Configuration Manager 建立及使用的 Windows 群組  
+ Configuration Manager 會自動建立，而且在許多情況下，會自動維護下列 Windows 群組。  
 
 > [!NOTE]  
->  当 Configuration Manager 在作为域成员的计算机上创建组时，该组为本地安全组。 如果计算机是域控制器，则该组是在域中的所有域控制器之间共享的域本地组。  
+>  當 Configuration Manager 在屬於網域成員的電腦上建立群組時，群組會是本機安全性群組。 如果電腦是網域控制站，群組會是網域中所有網域控制站之間共用的網域本機群組。  
 
 
 ### <a name="configmgrcollectedfilesaccess"></a>ConfigMgr_CollectedFilesAccess  
-Configuration Manager 使用此组来授予查看软件清单所收集的文件的访问权限。  
+Configuration Manager 會使用此群組來授與軟體清查所收集之檔案的檢視權限。  
 
-下表列出了此组的其他详细信息：  
+下表列出此群組的其他詳細資料：  
 
-|详情|更多信息|  
+|詳細資料|詳細資訊|  
 |------------|----------------------|  
-|类型和位置|此组是在主站点服务器上创建的本地安全组。<br /><br /> 卸载站点时，不会自动删除此组。 必须手动将其删除。|  
-|Membership|Configuration Manager 自动管理组成员身份。 成员身份管理用户，这些管理用户被授予对分配的安全角色中“集合”  安全对象的“查看收集的文件”  权限。|  
-|权限|默认情况下，此组对站点服务器上的以下文件夹具有 **Read** 权限： **%path%\Microsoft Configuration Manager\sinv.box\FileCol**。|  
+|類型和位置|此群組為主要網站伺服器上建立的本機安全性群組。<br /><br /> 當您解除安裝網站時，此群組不會自動移除。 您必須手動刪除。|  
+|成員資格|Configuration Manager 會自動管理群組成員資格。 成員資格包括系統管理使用者，會授與對指派的安全性角色中 [集合]  安全物件的 [檢視收集到的檔案]  權限。|  
+|權限|根據預設，此群組具備站台伺服器上下列資料夾的 **Read** 權限： **%path%\Microsoft Configuration Manager\sinv.box\FileCol**。|  
 
 ### <a name="configmgrdviewaccess"></a>ConfigMgr_DViewAccess  
- 此组是由 Configuration Manager 在站点数据库服务器或数据库副本服务器上创建的本地安全组。 当前不使用该组，但将其保留以供将来使用。  
+ 此群組是 Configuration Manager 在站台資料庫伺服器或資料庫複本伺服器上建立的本機安全性群組。 本項目目前尚未啟用，不過會保留供未來使用。  
 
-### <a name="configmgr-remote-control-users"></a>ConfigMgr 远程控制用户  
- Configuration Manager 远程工具使用此组将设置的帐户和组存储在分配到每个客户端的“允许的查看者”列表中。  
+### <a name="configmgr-remote-control-users"></a>ConfigMgr 遠端控制使用者  
+ 對於指派給每個用戶端的「允許的檢視者」清單，Configuration Manager 遠端工具會使用此群組來儲存您在清單中設定的帳戶和群組。  
 
- 下表列出了此组的其他详细信息：  
+ 下表列出此群組的其他詳細資料：  
 
-|详情|更多信息|  
+|詳細資料|詳細資訊|  
 |------------|----------------------|  
-|类型和位置|此组是在客户端接收启用远程工具的策略时在 Configuration Manager 客户端上创建的本地安全组。<br /><br /> 为客户端禁用远程工具后，不会自动删除此组。 必须从每个客户端计算机中手动将其删除。|  
-|Membership|默认情况下，此组中没有成员。 当你将用户添加到“允许的查看者”列表时，会将这些用户自动添加到此组中。<br /><br /> 可以使用“允许的查看者”列表来管理此组的成员身份，而不是将用户或组直接添加到此组。<br /><br /> 除了作为允许的查看者外，管理用户还必须具有“集合”对象的“远程控制”权限。 你可以通过使用“远程工具操作人员”安全角色来分配此权限。|  
-|权限|默认情况下，此组无权访问计算机上的任何位置。 它仅用于保留“允许的查看者”列表。|  
+|類型和位置|此群組是用戶端收到啟用遠端工具的原則時，在 Configuration Manager 用戶端上建立的本機安全性群組。<br /><br /> 停用用戶端的遠端工具後，此群組不會自動移除。 您必須從每部用戶端電腦中手動刪除。|  
+|成員資格|根據預設，此群組中沒有成員。 當您新增使用者至 [允許的檢視者] 清單時，使用者會自動新增至此群組。<br /><br /> 您可以使用 [允許的檢視者] 清單來管理此群組的成員資格，而不要直接將使用者或群組新增到此群組。<br /><br /> 除了作為允許的檢視者之外，系統管理使用者還必須具備**集合**物件的**遠端控制**權限。 您可以使用 [遠端工具操作員] 安全性角色指派此權限。|  
+|權限|根據預設，此群組沒有存取電腦上任何位置的權限。 它只能用來保存允許的檢視者清單。|  
 
-### <a name="sms-admins"></a>SMS 管理员  
- Configuration Manager 通过 Windows Management Instrumentation (WMI) 使用此组授予对 SMS 提供程序的访问权限。 需要 SMS 提供程序的访问权限才能在 Configuration Manager 控制台中查看和更改对象。  
+### <a name="sms-admins"></a>SMS Admins  
+ 透過 Windows Management Instrumentation (WMI)，Configuration Manager 能使用此群組來授與 SMS 提供者的存取權限。 檢視及變更 Configuration Manager 主控台中的物件都需要存取 SMS 提供者。  
 
 > [!NOTE]  
->  管理用户的基于角色的管理配置确定他们在使用 Configuration Manager 控制台时可查看和管理哪些对象。  
+>  系統管理使用者之以角色為基礎的系統管理設定可決定他們在使用 Configuration Manager 主控台時可檢視和管理的物件。  
 
- 下表列出了此组的其他详细信息：  
+ 下表列出此群組的其他詳細資料：  
 
-|详情|更多信息|  
+|詳細資料|詳細資訊|  
 |------------|----------------------|  
-|类型和位置|此组是在具有 SMS 提供程序的每台计算机上创建的本地安全组。<br /><br /> 卸载站点时，不会自动删除此组。 必须手动将其删除。|  
-|Membership|Configuration Manager 自动管理组成员身份。 默认情况下，层次结构中的每个管理用户以及站点服务器计算机帐户是站点中每台 SMS 提供程序计算机上的“SMS 管理员”组的成员。|  
-|权限|在 WMI 控制 MMC 管理单元中设置 SMS 管理员权限。 默认情况下，授予 SMS 管理员组对 Root\SMS 命名空间的 **Enable Account** 和 **Remote Enable** 权限。 经过身份验证的用户具有**执行方法**、**提供程序写入**和**启用帐户**权限。<br /><br /> 使用远程 Configuration Manager 控制台的管理员用户均需要同时对站点服务器计算机和 SMS 提供程序计算机拥有“远程激活 DCOM”权限。 最佳方案是将这些权限授予“SMS 管理员”以简化管理，而不是将这些权限直接授予用户或组。 有关详细信息，请参阅 [Configure DCOM permissions for remote Configuration Manager consoles](../../../core/servers/manage/modify-your-infrastructure.md#BKMK_ConfigDCOMforRemoteConsole) 主题中的 [Modify your System Center Configuration Manager infrastructure](../../../core/servers/manage/modify-your-infrastructure.md) 部分。|  
+|類型和位置|此群組是每部擁有 SMS 提供者電腦上建立的本機安全性群組。<br /><br /> 當您解除安裝網站時，此群組不會自動移除。 您必須手動刪除。|  
+|成員資格|Configuration Manager 會自動管理群組成員資格。 根據預設，階層中的每位系統管理使用者及網站伺服器電腦帳戶，都是網站中每部 SMS 提供者電腦的 SMS Admins 群組成員。|  
+|權限|SMS Admins 的權限是在 WMI Control MMC 嵌入式管理單元中設定。 根據預設，會授與 SMS Admins 群組 Root\SMS 命名空間上的 **Enable Account** 和 **Remote Enable** 。 已驗證的使用者具有 **Execute Methods**、**Provider Write** 及 **Enable Account**。<br /><br /> 將使用遠端 Configuration Manager 主控台的系統管理使用者，需要站台伺服器電腦及 SMS 提供者電腦上的「遠端啟用 DCOM」權限。 最佳作法是將這些權限授與 SMS Admins 以簡化系統管理，而不要直接將這些權限授與使用者或群組。 如需詳細資訊，請參閱 [Configure DCOM permissions for remote Configuration Manager consoles](../../../core/servers/manage/modify-your-infrastructure.md#BKMK_ConfigDCOMforRemoteConsole) 主題中的 [Modify your System Center Configuration Manager infrastructure](../../../core/servers/manage/modify-your-infrastructure.md) 一節。|  
 
-### <a name="smssitesystemtositeserverconnectionmpltsitecode"></a>SMS_SiteSystemToSiteServerConnection_MP_&lt;sitecode\>  
- 远离站点服务器的 Configuration Manager 管理点使用此组来连接到站点数据库。 此组向管理点提供对站点服务器上的收件箱文件夹和站点数据库的访问权限。  
+### <a name="smssitesystemtositeserverconnectionmpltsitecode"></a>SMS_SiteSystemToSiteServerConnection_MP_&lt;站台碼\>  
+ 站台伺服器的遠端 Configuration Manager 管理點會使用此群組來連接站台資料庫。 此群組提供網站伺服器和網站資料庫上 [收件匣] 資料夾的管理點存取。  
 
- 下表列出了此组的其他详细信息：  
+ 下表列出此群組的其他詳細資料：  
 
-|详情|更多信息|  
+|詳細資料|詳細資訊|  
 |------------|----------------------|  
-|类型和位置|此组是在具有 SMS 提供程序的每台计算机上创建的本地安全组。<br /><br /> 卸载站点时，不会自动删除此组。 必须手动将其删除。|  
-|Membership|Configuration Manager 自动管理组成员身份。 默认情况下，成员身份包括具有站点管理点的远程计算机的计算机帐户。|  
-|权限|默认情况下，此组对站点服务器上的 **%path%\Microsoft Configuration Manager\inboxes** 文件夹具有“读取”、“读取和执行”和“列出文件夹内容”权限。 此组对管理点向其中写入客户端数据的 **Write** 下的子文件夹具有额外的 **inboxes** 权限。|  
+|類型和位置|此群組是每部擁有 SMS 提供者電腦上建立的本機安全性群組。<br /><br /> 當您解除安裝網站時，此群組不會自動移除。 您必須手動刪除。|  
+|成員資格|Configuration Manager 會自動管理群組成員資格。 根據預設，成員資格包括擁有網站管理點之遠端電腦的電腦帳戶。|  
+|權限|此群組預設會具有站台伺服器上 **%路徑%\Microsoft Configuration Manager\inboxes** 資料夾的**讀取**、**讀取與執行**及**列出資料夾內容**權限。 對於管理點寫入用戶端資料之 **inboxes** 下方的子資料夾，此群組具有額外的**寫入**權限。|  
 
-### <a name="smssitesystemtositeserverconnectionsmsprovltsitecode"></a>SMS_SiteSystemToSiteServerConnection_SMSProv_&lt;sitecode\>  
- 远离站点服务器的 Configuration Manager SMS 提供程序计算机使用此组来连接到站点服务器。  
+### <a name="smssitesystemtositeserverconnectionsmsprovltsitecode"></a>SMS_SiteSystemToSiteServerConnection_SMSProv_&lt;站台碼\>  
+ 站台伺服器的遠端 Configuration Manager SMS 提供者電腦會使用此群組連接站台伺服器。  
 
- 下表列出了此组的其他详细信息：  
+ 下表列出此群組的其他詳細資料：  
 
-|详情|更多信息|  
+|詳細資料|詳細資訊|  
 |------------|----------------------|  
-|类型和位置|此组是在站点服务器上创建的本地安全组。<br /><br /> 卸载站点时，不会自动删除此组。 必须手动将其删除。|  
-|Membership|Configuration Manager 自动管理组成员身份。 默认情况下，成员身份包括用于从为站点安装了 SMS 提供程序的每台远程计算机连接到站点服务器的计算机帐户或域用户帐户。|  
-|权限|默认情况下，此组对站点服务器上的 **%path%\Microsoft Configuration Manager\inboxes** 文件夹具有“读取”、“读取和执行”和“列出文件夹内容”权限。 对 **inboxes** 下 SMS 提供程序需要访问的子文件夹来说，此组具有额外权限 **Write** 或者“写入”和“修改”权限。<br /><br /> 此组还对 **%path%\Microsoft Configuration Manager\OSD\boot** 下的文件夹具有“读取”、“读取和执行”、“列出文件夹内容”、“写入”和“修改”权限，并对站点服务器上 **%path%\Microsoft Configuration Manager\OSD\Bin** 下的文件夹具有“读取”权限。|  
+|類型和位置|此群組為網站伺服器上建立的本機安全性群組。<br /><br /> 當您解除安裝網站時，此群組不會自動移除。 您必須手動刪除。|  
+|成員資格|Configuration Manager 會自動管理群組成員資格。 根據預設，成員資格包括從已安裝網站的 SMS 提供者的每一部遠端電腦連接至網站伺服器所使用的電腦帳戶或網域使用者帳戶。|  
+|權限|此群組預設會具有站台伺服器上 **%路徑%\Microsoft Configuration Manager\inboxes** 資料夾的**讀取**、**讀取與執行**及**列出資料夾內容**權限。 對於 SMS 提供者須有權限才能存取之 **inboxes** 下方的子資料夾，此群組具有額外的**寫入**權限，或**寫入**和**修改**權限。<br /><br /> 此群組也具有站台伺服器 **%路徑%\Microsoft Configuration Manager\OSD\boot** 底下資料夾的**讀取**、**讀取與執行**、**列出資料夾內容**、**寫入**及**修改**權限，以及 **%路徑%\Microsoft Configuration Manager\OSD\Bin** 底下資料夾的**讀取**權限。|  
 
-### <a name="smssitesystemtositeserverconnectionstatltsitecode"></a>SMS_SiteSystemToSiteServerConnection_Stat_&lt;sitecode\>  
- Configuration Manager 远程站点系统计算机上的文件分派管理器使用此组来连接到站点服务器。  
+### <a name="smssitesystemtositeserverconnectionstatltsitecode"></a>SMS_SiteSystemToSiteServerConnection_Stat_&lt;站台碼\>  
+ Configuration Manager 遠端站台系統電腦上的檔案發送管理員，會使用此群組來連接站台伺服器。  
 
- 下表列出了此组的其他详细信息：  
+ 下表列出此群組的其他詳細資料：  
 
-|详情|更多信息|  
+|詳細資料|詳細資訊|  
 |------------|----------------------|  
-|类型和位置|此组是在站点服务器上创建的本地安全组。<br /><br /> 卸载站点时，不会自动删除此组。 必须手动将其删除。|  
-|Membership|Configuration Manager 自动管理组成员身份。 默认情况下，成员身份包括用于从运行文件分派管理器的每台远程站点系统计算机连接到站点服务器的计算机帐户或域用户帐户。|  
-|权限|默认情况下，此组对站点服务器上的 **%path%\Microsoft Configuration Manager\inboxes** 文件夹和该位置下的子文件夹具有“读取”、“读取和执行”和“列出文件夹内容”权限。 此组具有对站点服务器上 **%path%\Microsoft Configuration Manager\inboxes\statmgr.box** 文件夹的额外权限（“写入”和“修改”）。|  
+|類型和位置|此群組為網站伺服器上建立的本機安全性群組。<br /><br /> 當您解除安裝網站時，此群組不會自動移除。 您必須手動刪除。|  
+|成員資格|Configuration Manager 會自動管理群組成員資格。 根據預設，成員資格包括從執行檔案發送管理員的每一部遠端網站系統電腦連接至網站伺服器所使用的電腦帳戶或網域使用者帳戶。|  
+|權限|此群組預設會具有站台伺服器上 **%path%\Microsoft Configuration Manager\inboxes** 資料夾及此位置底下子資料夾的**讀取**、**讀取與執行**及**列出資料夾內容**權限。 對於站台伺服器上的 **%path%\Microsoft Configuration Manager\inboxes\statmgr.box** 資料夾，此群組具有額外的**寫入**和**修改**權限。|  
 
-### <a name="smssitetositeconnectionltsitecode"></a>SMS_SiteToSiteConnection_&lt;sitecode\>  
- Configuration Manager 使用此组在层次结构中的站点之间实现基于文件的复制。 对于将文件直接传输到此站点的每个远程站点，此组包含设为“文件复制帐户”的帐户。  
+### <a name="smssitetositeconnectionltsitecode"></a>SMS_SiteToSiteConnection_&lt;站台碼\>  
+ Configuration Manager 會使用此群組在階層中的站台間啟用以檔案為基礎之複寫。 對於直接將檔案傳送到這個站台的每個遠端站台，這個群組具有設定為 [檔案複寫帳戶] 的帳戶。  
 
- 下表列出了此组的其他详细信息：  
+ 下表列出此群組的其他詳細資料：  
 
-|详情|更多信息|  
+|詳細資料|詳細資訊|  
 |------------|----------------------|  
-|类型和位置|此组是在站点服务器上创建的本地安全组。|  
-|Membership|安装新站点作为另一个站点的子站点时，Configuration Manager 会自动将新站点的计算机帐户添加到父站点服务器上的组。 Configuration Manager 还会将父站点计算机帐户添加到新站点服务器上的组中。 如果为基于文件的传输指定另一个帐户，请将此帐户添加到目标站点服务器上的此组。<br /><br /> 卸载站点时，不会自动删除此组。 必须手动将其删除。|  
-|权限|默认情况下，此组具有对 **%path%\Microsoft Configuration Manager\inboxes\despoolr.box\receive** 文件夹的“完全控制”  权限。|  
+|類型和位置|此群組為網站伺服器上建立的本機安全性群組。|  
+|成員資格|當您安裝新站台作為另一個站台的子站台時，Configuration Manager 會自動將新站台的電腦帳戶新增至父站台伺服器上的群組。 Configuration Manager 還會將父站台上的電腦帳戶新增至新站台伺服器上的群組。 如果您指定另一個帳戶進行檔案為基礎的傳輸，請將該帳戶新增至目的地網站伺服器上的此群組。<br /><br /> 當您解除安裝網站時，此群組不會自動移除。 您必須手動刪除。|  
+|權限|根據預設，此群組可 **完全控制** **%path%\Microsoft Configuration Manager\inboxes\despoolr.box\receive** 資料夾。|  
 
-## <a name="accounts-that-configuration-manager-uses"></a>Configuration Manager 使用的帐户  
- 可以为 Configuration Manager 设置下列帐户。  
+## <a name="accounts-that-configuration-manager-uses"></a>Configuration Manager 使用的帳戶  
+ 您可以為 Configuration Manager 設定下列帳戶。  
 
-### <a name="active-directory-group-discovery-account"></a>Active Directory 组发现帐户  
- **Active Directory 组发现帐户**用于发现本地、全局和通用安全组、这些组内的成员身份，以及 Active directory 域服务中指定位置的通讯组内的成员身份。 不会以组资源的形式发现通讯组。  
+### <a name="active-directory-group-discovery-account"></a>Active Directory 群組探索帳戶  
+ **Active Directory 群組探索帳戶**可用來探索本機、全域和通用安全性群組、這些群組內的成員資格，以及 Active Directory Domain Services 中指定位置之發佈群組內的成員資格。 發佈群組不會探索為群組資源。  
 
- 此帐户可以是运行发现的站点服务器的计算机帐户，或者是 Windows 用户帐户。 它必须对为发现指定的 Active Directory 位置具有“读取”  访问权限。  
+ 此帳戶可以是執行探索之網站伺服器的電腦帳戶，或是 Windows 使用者帳戶。 它必須具有指定進行探索之 Active Directory 位置的 [讀取]  存取權限。  
 
-### <a name="active-directory-system-discovery-account"></a>Active Directory 系统发现帐户  
- **Active Directory 系统发现帐户** 用于从 Active Directory 域服务中的指定位置发现计算机。  
+### <a name="active-directory-system-discovery-account"></a>Active Directory 系統探索帳戶  
+ [Active Directory 系統探索帳戶]  用來探索 Active Directory 網域服務中指定位置的電腦。  
 
- 此帐户可以是运行发现的站点服务器的计算机帐户，或者是 Windows 用户帐户。 它必须对为发现指定的 Active Directory 位置具有“读取”  访问权限。  
+ 此帳戶可以是執行探索之網站伺服器的電腦帳戶，或是 Windows 使用者帳戶。 它必須具有指定進行探索之 Active Directory 位置的 [讀取]  存取權限。  
 
-### <a name="active-directory-user-discovery-account"></a>Active Directory 用户发现帐户  
- **Active Directory 用户发现帐户** 用于从 Active Directory 域服务中的指定位置发现用户帐户。  
+### <a name="active-directory-user-discovery-account"></a>Active Directory 使用者探索帳戶  
+ [Active Directory 使用者探索帳戶]  用來探索 Active Directory 網域服務中指定位置的使用者帳戶。  
 
- 此帐户可以是运行发现的站点服务器的计算机帐户，或者是 Windows 用户帐户。 它必须对为发现指定的 Active Directory 位置具有“读取”  访问权限。  
+ 此帳戶可以是執行探索之網站伺服器的電腦帳戶，或是 Windows 使用者帳戶。 它必須具有指定進行探索之 Active Directory 位置的 [讀取]  存取權限。  
 
-### <a name="active-directory-forest-account"></a>Active Directory 林帐户  
- **Active Directory 林帐户**用于发现 Active Directory 林中的网络基础结构。 管理中心站点和主站点也用它来将站点数据发布到林的 Active Directory 域服务。  
+### <a name="active-directory-forest-account"></a>Active Directory 樹系帳戶  
+ **Active Directory 樹系帳戶**可用來從 Active Directory 樹系探索網路基礎結構。 管理中心網站和主要網站也會使用它將站台資料發佈至樹系的 Active Directory Domain Services。  
 
 > [!NOTE]  
->  辅助站点始终使用辅助站点服务器计算机帐户来发布到 Active Directory。  
+>  次要網站一律使用次要網站伺服器電腦帳戶發佈至 Active Directory。  
 
 > [!NOTE]  
->  Active Directory 林帐户必须是全局帐户才能发现和发布到不受信任林。 如果不使用站点服务器的计算机帐户，则只能选择全局帐户。  
+>  Active Directory 樹系帳戶必須是通用帳戶，才能探索及發佈至不受信任的樹系。 如果您未使用網站伺服器的電腦帳戶，就只能選取通用帳戶。  
 
- 此帐户必须对要在其中发现网络基础结构的每个 Active Directory 林具有“读取”  权限。  
+ 此帳戶必須具有您要探索網路基礎結構所在之每個 Active Directory 樹系的 [讀取]  權限。  
 
- 此帐户必须对要在其中发布站点数据的每个 Active Directory 林中的“系统管理”容器及其所有子对象具有“完全控制”  权限。  
+ 此帳戶必須具有您要發佈網站資料所在的每個 Active Directory 樹系中，系統管理容器及其所有子物件的 [完全控制]  權限。  
 
-### <a name="asset-intelligence-synchronization-point-proxy-server-account"></a>资产智能同步点代理服务器帐户  
- 资产智能同步点使用**资产智能同步点代理服务器帐户**通过需要对访问进行身份验证的代理服务器或防火墙访问 Internet。  
+### <a name="asset-intelligence-synchronization-point-proxy-server-account"></a>Asset Intelligence 同步處理點 Proxy 伺服器帳戶  
+ Asset Intelligence 同步處理點會使用 **Asset Intelligence 同步處理點 Proxy 伺服器帳戶**，經由需要驗證存取的 Proxy 伺服器或防火牆來存取網際網路。  
 
 > [!IMPORTANT]  
->  为所需的代理服务器或防火墙指定具有可能最低的权限的帐户。  
+>  為所需的 Proxy 伺服器或防火牆指定具備最低可能權限的帳戶。  
 
-### <a name="certificate-registration-point-account"></a>证书注册点帐户  
- **证书注册点帐户**将证书注册点连接到 Configuration Manager 数据库。 默认情况下，会使用证书注册点服务器的计算机帐户，但是可以改为设置用户帐户。 每当证书注册点在站点服务器的不受信任的域中时，都必须指定用户帐户。 此帐户只需要站点数据库的“读取”权限，因为写入任务由状态消息系统处理。  
+### <a name="certificate-registration-point-account"></a>憑證登錄點帳戶  
+ **憑證登錄點帳戶**：可將憑證登錄點連線至 Configuration Manager 資料庫。 預設會使用憑證登錄點伺服器的電腦帳戶，但您可以改為設定使用者帳戶。 只要憑證登錄點位於網站伺服器的不受信任網域內，就必須指定使用者帳戶。 此帳戶僅需要網站資料庫的**讀取**權限，因為寫入操作會由狀況訊息系統處理。  
 
-### <a name="capture-operating-system-image-account"></a>捕获操作系统映像包帐户  
- Configuration Manager 使用**捕获操作系统映像帐户**来访问在部署操作系统时用于存储捕获映像的文件夹。 如果将“捕获操作系统映像包”  步骤添加到任务序列中，则需要此帐户。  
+### <a name="capture-operating-system-image-account"></a>擷取作業系統映像帳戶  
+ Configuration Manager 會使用**擷取作業系統映像帳戶**，存取部署作業系統時擷取之映像的儲存資料夾。 如果您將步驟 [擷取作業系統映像]  新增到工作順序，就需要此帳戶。  
 
- 此帐户对存储捕获映像的网络共享必须具有“读取”  和“写入”  权限。  
+ 帳戶在儲存映像的網路共用上都必須擁有 [讀取]  與 [寫入]  權限。  
 
- 如果在 Windows 中更改帐户的密码，则必须使用新密码更新任务序列。 Configuration Manager 客户端在下次下载客户端策略时将接收新密码。  
+ 如果 Windows 中帳戶的密碼變更，您必須以新密碼更新工作順序。 在用戶端接著下載用戶端原則時，Configuration Manager 用戶端會收到新的密碼。  
 
- 如果使用此帐户，则可以创建一个具有访问所需网络资源的最低权限的域用户帐户，并将其用于所有任务序列帐户。  
+ 如果您使用此帳戶，您可以建立一個具備最低權限的網域使用者帳戶，來存取所需的網路資源，並用在所有工作順序帳戶上。  
 
 > [!IMPORTANT]  
->  请勿向此帐户分配交互式登录权限。  
+>  請勿將互動式登入權限指派給此帳戶。  
 >   
->  请勿将网络访问帐户用于此帐户。  
+>  勿對此帳戶使用網路存取帳戶。  
 
-### <a name="client-push-installation-account"></a>客户端请求安装帐户  
- 如果使用客户端请求安装来部署客户端，则可以使用**客户端请求安装帐户**连接到计算机并安装 Configuration Manager 客户端软件。 如果未指定此帐户，则站点服务器帐户用于尝试安装客户端软件。  
+### <a name="client-push-installation-account"></a>用戶端推入安裝帳戶  
+ 如果您使用用戶端推入安裝來部署用戶端，您可使用**用戶端推入安裝帳戶**來連線至電腦，並安裝 Configuration Manager 用戶端軟體。 若未指定此帳戶，則會使用網站伺服器帳戶來嘗試安裝用戶端軟體。  
 
- 在要安装 Configuration Manager 客户端软件的计算机上，此帐户必须为本地“管理员”组的成员。 此帐户不需要**域管理员**权限。  
+ 此帳戶必須是即將安裝 Configuration Manager 用戶端軟體之電腦的本機**系統管理員**群組成員。 此帳戶不需要**網域系統管理員**權限。  
 
- 可以指定一个或多个客户端请求安装帐户，而 Configuration Manager 会尝试这些帐户直到成功为止。  
+ 您可以指定一或多個用戶端推入安裝帳戶，Configuration Manager 會嘗試輪流使用這些用戶端，直到其中一個成功為止。  
 
 > [!TIP]  
->  要更有效地在大型 Active Directory 部署中协调帐户更新，请使用不同的名称创建一个新帐户，然后将新帐户添加到 Configuration Manager 内客户端请求安装帐户的列表中。 请留出足够的时间让 Active Directory 域服务复制新帐户，然后从 Configuration Manager 和 Active Directory 域服务中删除旧帐户。  
+>  為更有效協調大型 Active Directory 部署中的帳戶更新，請以不同的名稱建立新的帳戶，然後將新的帳戶新增至 Configuration Manager 中用戶端推入安裝帳戶的清單。 應提供 Active Directory 網域服務足夠的時間複寫新帳戶，然後從 Configuration Manager 和 Active Directory 網域服務移除舊帳戶。  
 
 > [!IMPORTANT]  
->  不要向此帐户授予本地登录的权限。  
+>  請勿將本機登入權限授與此帳戶。  
 
-### <a name="enrollment-point-connection-account"></a>注册点连接帐户  
- **注册点连接帐户**将注册点连接到 Configuration Manager 站点数据库。 默认情况下，会使用注册点的计算机帐户，但是可以改为设置用户帐户。 每当注册点在站点服务器的不受信任的域中时，都必须指定用户帐户。 此帐户需要站点数据库的“读取”和“写入”权限。  
+### <a name="enrollment-point-connection-account"></a>註冊點連線帳戶  
+ **註冊點連線帳戶**：可將註冊點連線至 Configuration Manager 站台資料庫。 預設會使用註冊點的電腦帳戶，但您可以改為設定使用者帳戶。 只要註冊點位於網站伺服器的不受信任網域內，就必須指定使用者帳戶。 此帳戶需要網站資料庫的**讀取**和**寫入**權限。  
 
-### <a name="exchange-server-connection-account"></a>Exchange Server 连接帐户  
- **Exchange Server 连接帐户** 将站点服务器连接到指定的 Exchange Server 计算机以查找和管理连接到 Exchange Server 的移动设备。 此帐户需要 Exchange PowerShell cmdlet 以提供对 Exchange Server 计算机的所需权限。 有关 cmdlet 的详细信息，请参阅[使用 System Center Configuration Manager 和 Exchange 管理移动设备](../../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)。  
+### <a name="exchange-server-connection-account"></a>Exchange Server 連線帳戶  
+ [Exchange Server 連線帳戶]  會將站台伺服器連線到指定的 Exchange Server 電腦，以找出並管理連線到 Exchange Server 的行動裝置。 此帳戶需要提供給 Exchange Server 電腦必要權限的 Exchange PowerShell Cmdlet。 如需 Cmdlet 的詳細資訊，請參閱[使用 System Center Configuration Manager 和 Exchange 管理行動裝置](../../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)。  
 
-### <a name="exchange-server-connector-proxy-server-account"></a>Exchange Server 连接器代理服务器帐户  
- Exchange Server 连接器使用 **Exchange Server 连接器代理服务器帐户**通过需要对访问进行身份验证的代理服务器或防火墙访问 Internet。  
-
-> [!IMPORTANT]  
->  为所需的代理服务器或防火墙指定具有可能最低的权限的帐户。  
-
-### <a name="management-point-connection-account"></a>管理点连接帐户  
- **管理点连接帐户**用于将管理点连接到 Configuration Manager 站点数据库，以便它可以发送和检索客户端的信息。 默认情况下，会使用管理点的计算机帐户，但是可以改为设置用户帐户。 每当管理点在站点服务器的不受信任的域中时，都必须指定用户帐户。  
-
- 在运行 Microsoft SQL Server 的计算机上将此帐户创建为低权限本地帐户。  
+### <a name="exchange-server-connector-proxy-server-account"></a>Exchange Server 連接器 Proxy 伺服器帳戶  
+ Exchange Server 連接器會使用 **Exchange Server 連接器 Proxy 伺服器帳戶**，以經由需要經驗證存取的 Proxy 伺服器或防火牆來存取網際網路。  
 
 > [!IMPORTANT]  
->  不要向此帐户授予交互式登录的权限。  
+>  為所需的 Proxy 伺服器或防火牆指定具備最低可能權限的帳戶。  
 
-### <a name="multicast-connection-account"></a>多播连接帐户  
- 为多播设置的分发点使用**多播连接帐户**从站点数据库中读取信息。 默认情况下，会使用分发点的计算机帐户，但是可以改为设置用户帐户。 每当站点数据库在不受信任的林中时，都必须指定用户帐户。 例如，数据中心具有非站点服务器和站点数据库的林中的外围网络，则可以使用此帐户从站点数据库中读取多播信息。  
+### <a name="management-point-connection-account"></a>管理點連線帳戶  
+ **管理點連線帳戶**：可用來將管理點連線到 Configuration Manager 站台資料庫，使其可以傳送和擷取用戶端的資訊。 預設會使用管理點的電腦帳戶，但您可以改為設定使用者帳戶。 只要管理點位於網站伺服器的不受信任網域內，就必須指定使用者帳戶。  
 
- 如果创建此帐户，请在运行 Microsoft SQL Server 的计算机上将此帐户创建为低权限本地帐户。  
+ 在執行 Microsoft SQL Server 的電腦上建立低權限的本機帳戶。  
 
 > [!IMPORTANT]  
->  不要向此帐户授予交互式登录的权限。  
+>  請勿將互動式登入權限授與此帳戶。  
 
-### <a name="network-access-account"></a>网络访问帐户  
- 客户端计算机无法使用其本地计算机帐户访问分发点上的内容时，它们则会使用**网络访问帐户**。 例如，这适用于来自不受信任的域中的工作组客户端和计算机。 当安装操作系统的计算机在域上还没有计算机帐户时，也可能会在操作系统部署过程中使用此帐户。  
+### <a name="multicast-connection-account"></a>多點傳送連線帳戶  
+ 針對多點傳送設定的發佈點會使用**多點傳送連線帳戶**，來讀取站台資料庫的資訊。 預設會使用發佈點的電腦帳戶，但您可以改為設定使用者帳戶。 只要網站資料庫位於不受信任的樹系中，就必須指定使用者帳戶。 例如，如果您的資料中心在網站伺服器和網站資料庫以外的樹系中擁有周邊網路，您可以使用此帳戶來讀取網站資料庫的多點傳送資訊。  
+
+ 如果建立了此帳戶，則在執行 Microsoft SQL Server 的電腦上建立低權限的本機帳戶。  
+
+> [!IMPORTANT]  
+>  請勿將互動式登入權限授與此帳戶。  
+
+### <a name="network-access-account"></a>網路存取帳戶  
+ 用戶端電腦在無法使用其本機電腦帳戶來存取發佈點上的內容時，就會使用**網路存取帳戶**。 例如，這會套用至不受信任網域的工作群組用戶端和電腦。 當安裝作業系統的電腦沒有網域上的電腦帳戶時，此帳戶也會在作業系統部署期間使用。  
 
 > [!NOTE]  
->  决不会将网络访问帐户用作安全性上下文来运行程序、安装软件更新或运行任务序列。 它仅用于访问网络上的资源。  
+>  網路存取帳戶不能作為執行程式、安裝軟體更新或執行工作順序的安全性環境。 它只能用來存取網路上的資源。  
 
- 授予此帐户对内容的最低合适权限，客户端需要此权限来访问软件。 在具有包内容的分发点或其他服务器上，帐户必须具有“从网络访问此计算机”  权限。 每个站点最多可以配置 10 个网络访问帐户。  
+ 請授與此帳戶用戶端存取軟體所需之內容的最低適當權限。 該帳戶在發佈點或包含套件內容的其他伺服器上，必須具有 [從網路存取這台電腦]  的權限 您可以在每個站台設定最多 10 個站台存取帳戶。  
 
 > [!WARNING]  
->  当 Configuration Manager 尝试使用计算机名$ 帐户下载内容并失败时，它会自动重试网络访问帐户，即使以前尝试并失败过。  
+>  當 Configuration Manager 嘗試使用 computername$ 帳戶下載內容卻失敗時，即使先前嘗試網路存取帳戶時失敗，還是會自動再次嘗試使用網路存取帳戶。  
 
- 在任何域中创建将提供资源的所需访问权限的帐户。 网络访问帐户必须始终包含一个域名。 此帐户不支持传递安全性。 如果在多个域中具有分发点，请在受信任的域中创建帐户。  
-
-> [!TIP]  
->  为了避免帐户锁定，请不要对现有网络访问帐户更改密码。 而是在 Configuration Manager 中创建新帐户并设置此新帐户。 在经过足够的时间让所有客户端接收新帐户详细信息之后，请从网络共享文件夹中移除旧帐户并删除该帐户。  
-
-> [!IMPORTANT]  
->  不要向此帐户授予交互式登录的权限。
->   
->  不要授予此帐户将计算机加入到域的权限。 如果在任务序列过程中必须将计算机加入到域中，请使用任务序列编辑器域加入帐户。  
-
-### <a name="package-access-account"></a>包访问帐户  
- 利用**包访问帐户**，可以设置 NTFS 权限，该权限用于指定可以访问分发点上的包文件夹的用户和用户组。 默认情况下，Configuration Manager 仅向通用访问帐户“用户”和“管理员”授予访问权限。 可以通过使用其他的 Windows 帐户或组来控制客户端计算机的访问权限。 移动设备始终会匿名检索包内容，所以这些设备不使用包访问帐户。  
-
- 默认情况下，当 Configuration Manager 在分发点上创建包共享时，它会授予对本地“用户”组的“读取”权限以及对本地“管理”组的“完全控制”权限。 所需的实际权限取决于包。 如果你的客户端在工作组或不受信任的林中，则那些客户端会使用网络访问帐户访问包内容。 请使用定义的包访问帐户来确保网络访问帐户具有对包的权限。  
-
- 在域中使用可以访问分发点的帐户。 如果在创建包之后创建或更改帐户，则必须重新分发包。 更新包不会更改对包的 NTFS 权限。  
-
- 不必将网络访问帐户添加为包访问帐户，因为用户组的成员身份会自动添加它。 将包访问帐户限制为网络访问帐户不会阻止客户端访问包。  
-
-### <a name="reporting-services-point-account"></a>Reporting Services 点帐户  
- SQL Server Reporting Services 使用 **Reporting Services 点帐户**从站点数据库中检索 Configuration Manager 报表的数据。 你指定的 Windows 用户帐户和密码经过加密，并存储在 SQL Server Reporting Services 数据库中。  
-
-### <a name="remote-tools-permitted-viewer-accounts"></a>远程工具“允许的查看者”帐户  
- 你为远程控制指定的“允许的查看者”  帐户是一系列获准在客户端上使用远程工具功能的用户。  
-
-### <a name="site-system-installation-account"></a>站点系统安装帐户  
- 站点服务器使用**站点系统安装帐户**安装、重新安装、卸载和设置站点系统。 如果将站点系统设置为要求站点服务器启动到此站点系统的连接，则在安装站点系统和任何站点系统角色之后，Configuration Manager 还会使用此帐户从站点系统计算机中提取数据。 每个站点系统都可能具有不同的站点系统安装帐户，但是，只能设置一个站点系统安装帐户来管理该站点系统上的所有站点系统角色。  
-
- 对于管理员将安装和设置的站点系统，此帐户需要具有这些系统上的本地管理权限。 此外，此帐户还要求在这些系统上的安全策略中指定“从网络访问此计算机”。  
+ 在任何提供必要的資源存取的網域中建立帳戶。 網路存取帳戶一律都必須包含網域名稱。 此帳戶不支援傳遞安全性。 如果您在多個網域中擁有發佈點，請在受信任網域中建立此帳戶。  
 
 > [!TIP]  
->  如果有多个域控制器，而且将跨域使用这些帐户，请在设置站点系统之前检查确认已复制这些帐户。  
+>  為避免帳戶鎖定，請不要變更現有網域存取帳戶的密碼。 您可改為建立新帳戶，並且在 Configuration Manager 中設定新帳戶。 經過一段時間所有用戶端都已收到新帳戶的詳細資料後，從網路共用資料夾移除舊帳戶，並刪除該帳戶。  
+
+> [!IMPORTANT]  
+>  請勿將互動式登入權限授與此帳戶。
 >   
->  在指定位于要管理的每个站点系统上的本地帐户时，该配置比使用域帐户更安全，因为它在此帐户受到侵害时限制了攻击者可能造成的损害。 但是，域帐户更易于管理。 所以需就安全管理和有效管理进行权衡与协调。  
+>  不要授與此帳戶將電腦加入網域的權限。 如果您必須在工作順序期間將電腦加入網域，請使用工作順序編輯器網域加入帳戶。  
 
-### <a name="smtp-server-connection-account"></a>SMTP 服务器连接帐户  
- 当 SMTP 服务器需要对访问进行身份验证时，站点服务器使用 **SMTP 服务器连接帐户**来发送电子邮件警报。  
+### <a name="package-access-account"></a>套件存取帳戶  
+ **套件存取帳戶**可讓您設定 NTFS 權限，指定可以存取發佈點上套件資料夾的使用者和使用者群組。 根據預設，Configuration Manager 只會將存取權授與一般的**使用者**與**系統管理員**帳戶。 您可以使用其他 Windows 帳戶或群組，控制用戶端電腦的存取。 因為行動裝置一律會匿名擷取套件內容，所以這些裝置不會使用套件存取帳戶。  
+
+ 根據預設，當 Configuration Manager 在發佈點建立套件共用時，它會授與**讀取**存權限給本機**使用者**群組，和授與**完全控制**權限給本機**系統管理員**群組。 實際需要的權限則依套件而定。 如果有用戶端位於工作群組或不受信任的樹系中，這些用戶端會使用網路存取帳戶來存取套件內容。 請使用預設套件存取帳戶來確保網路存取帳戶有權限存取套件。  
+
+ 使用網域中可存取發佈點的帳戶。 如果您在建立套件後建立或變更帳戶，則必須重新發佈套件。 更新套件並不會變更套件上的 NTFS 權限。  
+
+ 您不需要將網路存取帳戶新增為套件存取帳戶，因為使用者群組的成員資格會自動新增該帳戶。 將套件存取帳戶限制為只有網路存取帳戶不會阻止用戶端存取套件。  
+
+### <a name="reporting-services-point-account"></a>Reporting Services 點帳戶  
+ SQL Server Reporting Services 使用 **Reporting Services 點帳戶**，從站台資料庫擷取 Configuration Manager 報告的資料。 您指定的 Windows 使用者帳戶和密碼皆經過加密，並且儲存在 SQL Server Reporting Services 資料庫中。  
+
+### <a name="remote-tools-permitted-viewer-accounts"></a>遠端工具獲准檢視器帳戶  
+ 指定進行遠端控制的 [獲准檢視器]  是一份使用者清單，這些使用者均獲准使用用戶端上的遠端工具功能。  
+
+### <a name="site-system-installation-account"></a>網站系統安裝帳戶  
+ 站台伺服器使用**站台系統安裝帳戶**來安裝、重新安裝、解除安裝和設定站台系統。 如果設定站台系統要求站台伺服器起始與此站台系統之間的連線，安裝站台系統和任何站台系統角色後，Configuration Manager 也會使用此帳戶從站台系統電腦提取資料。 每個網站系統的網站系統安裝帳戶可以不同，但您只能設定一個網站系統安裝帳戶管理該網站系統上的所有網站系統角色。  
+
+ 對於系統管理員即將安裝及設定的網站系統，此帳戶須有該系統的本機系統管理權限。 此外，在系統管理員即將安裝及設定的網站系統上，此帳戶須有安全性原則中**從網路存取這台電腦**的權限。  
+
+> [!TIP]  
+>  如果您有許多網域控制站，且將跨網域使用這些帳戶，請在設定網站系統前檢查這些帳戶是否已複寫。  
+>   
+>  在每個要管理的網站系統指定本機帳戶時，這種設定比使用網域帳戶更安全，因為它能夠有效降低攻擊者入侵帳戶時所造成的損失。 儘管如此，網域帳戶還是較容易管理。 請考慮安全性與系統管理效益之間的取捨。  
+
+### <a name="smtp-server-connection-account"></a>SMTP 伺服器連線帳戶  
+ 當 SMTP 伺服器需要驗證存取時，站台伺服器會使用 **SMTP 伺服器連線帳戶**傳送電子郵件警示。  
 
 > [!IMPORTANT]  
->  指定具有可能最低的权限的帐户来发送电子邮件。  
+>  指定具備最低可能權限的帳戶來寄送電子郵件。  
 
-### <a name="software-update-point-connection-account"></a>软件更新点连接帐户  
- 站点服务器将**软件更新点连接帐户**用于下列两项软件更新服务：  
+### <a name="software-update-point-connection-account"></a>軟體更新點連線帳戶  
+ 站台伺服器使用**軟體更新點連線帳戶**進行下列兩種軟體更新服務：  
 
--   Windows Server Update Services (WSUS) Configuration Manager，用于设置诸如产品定义、分类和上游设置等设置。  
+-   Windows Server Update Services (WSUS) Configuration Manager，會設定產品定義、分類及上游設定之類的設定值。  
 
--   WSUS Synchronization Manager，它请求同步到上游 WSUS 服务器或 Microsoft 更新。  
+-   WSUS Synchronization Manager，會要求與上游 WSUS 伺服器或 Microsoft Update 同步處理。  
 
-站点系统安装帐户可以安装软件更新的组件，但无法在软件更新点上执行特定于软件更新的功能。 如果因为软件更新点在不受信任的林中而无法将站点服务器计算机帐户用于该功能，则除了指定站点系统安装帐户之外，还必须指定此帐户。  
+網站系統安裝帳戶可以安裝軟體更新元件，但無法在軟體更新點上執行軟體更新專屬功能。 如果因為軟體更新點位於不受信任的樹系中而無法以網站伺服器電腦帳戶使用此功能，除了網站系統安裝帳戶外，還必須指定這個帳戶。  
 
-此帐户必须是安装 WSUS 的计算机上的本地管理员。 它还必须属于本地 WSUS 管理员组。  
+此帳戶必須是安裝 WSUS 之電腦上的本機系統管理員。 它也必須是本機 WSUS 系統管理員群組的成員。  
 
-### <a name="software-update-point-proxy-server-account"></a>软件更新点代理服务器帐户  
- 软件更新点使用**软件更新点代理服务器帐户**通过需要对访问进行身份验证的代理服务器或防火墙访问 Internet。  
+### <a name="software-update-point-proxy-server-account"></a>軟體更新點 Proxy 伺服器帳戶  
+ 軟體更新點會使用**軟體更新點 Proxy 伺服器帳戶**，透過要求驗證存取的 Proxy 伺服器或防火牆存取網際網路。  
 
 > [!IMPORTANT]  
->  为所需的代理服务器或防火墙指定具有可能最低的权限的帐户。  
+>  為所需的 Proxy 伺服器或防火牆指定具備最低可能權限的帳戶。  
 
-### <a name="source-site-account"></a>源站点帐户  
- 迁移过程使用**源站点帐户**来访问源站点的 SMS 提供程序。 此帐户需要源站点中的站点对象的“读取”  权限来收集迁移作业的数据。  
+### <a name="source-site-account"></a>來源網站帳戶  
+ 移轉程序使用**來源站台帳戶**存取來源站台的 SMS 提供者。 此帳戶需要 [讀取]  權限以讀取來源網站中的網站物件，才能收集移轉作業所需的資料。  
 
- 如果将 Configuration Manager 2007 分发点或具有共存分发点的辅助站点升级到 System Center Configuration Manager 分发点，则此帐户必须也具有“站点”类的“删除”权限才能在升级过程中从 Configuration Manager 2007 站点成功删除分发点。  
+ 如果將擁有共置發佈點的 System Center Configuration Manager 發佈點或次要站台升級為 Configuration Manager 2007 發佈點，此帳戶也必須要有 [站台] 類別的**刪除**權限，才能在升級期間從 Configuration Manager 2007 站台中順利移除發佈點。  
 
 > [!NOTE]  
->  源站点帐户和源站点数据库帐户均在 Configuration Manager 控制台“管理”工作区的“帐户”的节点中被标识为“迁移管理器”。  
+>  來源站台帳戶與來源站台資料庫帳戶均識別為**移轉管理員**，其位於 Configuration Manager 主控台的 [管理] 工作區的 [帳戶] 節點中。  
 
-### <a name="source-site-database-account"></a>源站点数据库帐户  
- 迁移过程使用**源站点数据库帐户**来访问源站点的 SQL Server 数据库。 若要从源站点的 SQL Server 数据库中收集数据，源站点数据库帐户必须具有源站点 SQL Server 数据库的“读取”和“执行”权限。  
-
-> [!NOTE]  
->  如果使用 System Center Configuration Manager 计算机帐户，请确保此帐户符合下列所有条件：  
->   
-> -   它是 Configuration Manager 2007 站点所在的域中的“Distributed COM Users”安全组的成员。  
-> -   它是“SMS 管理员”  安全组的成员。  
-> -   它具有对所有 Configuration Manager 2007 对象的“读取”权限。  
+### <a name="source-site-database-account"></a>來源網站資料庫帳戶  
+ 移轉程序使用**來源站台資料庫帳戶**存取來源站台的 SQL Server 資料庫。 若要從來源網站的 SQL Server 資料庫收集資料，來源網站資料庫帳戶必須要有來源網站 SQL Server 資料庫的**讀取**及**執行**權限。  
 
 > [!NOTE]  
->  源站点帐户和源站点数据库帐户均在 Configuration Manager 控制台“管理”工作区的“帐户”的节点中被标识为“迁移管理器”。  
+>  如果使用 System Center Configuration Manager 電腦帳戶，請確定此帳戶的下列條件皆成立：  
+>   
+> -   在 Configuration Manager 2007 站台所在的網域中為 **Distributed COM Users** 安全性群組的成員。  
+> -   其為 [SMS Admins]  安全性群組的成員。  
+> -   它具有所有 Configuration Manager 2007 物件的**讀取**權限。  
 
-### <a name="task-sequence-editor-domain-joining-account"></a>任务序列编辑器域加入帐户  
- 在任务序列中，使用 **任务序列编辑器域加入帐户** 将最近映像化的计算机加入到域。 如果将“加入域或工作组”  步骤添加到任务序列，然后选择“加入域” ，则需要此帐户。 如果将“应用网络设置”步骤添加到任务序列，则也可以设置此帐户，但这不是必需的。  
+> [!NOTE]  
+>  來源站台帳戶與來源站台資料庫帳戶均識別為**移轉管理員**，其位於 Configuration Manager 主控台的 [管理] 工作區的 [帳戶] 節點中。  
 
- 此帐户需要获得计算机将加入的域中的“域加入”  权限。  
+### <a name="task-sequence-editor-domain-joining-account"></a>工作順序編輯器網域加入帳戶  
+ 工作順序會中運用 [工作順序編輯器網域加入帳戶]  ，將新製作映像的電腦新增至網域中。 如果在工作順序中新增 [加入網域或工作群組]  步驟，然後選取 [加入網域] ，則必須要有此帳戶。 如果在工作順序中新增 [套用網路設定] 步驟，也可以設定此帳戶，但並非必要條件。  
+
+ 此帳戶會要求 [網域加入]  該電腦將加入的網域中。  
 
 > [!TIP]  
->  如果需要将此帐户用于任务序列，则可以创建一个具有访问所需网络资源的最低权限的域用户帐户，并将其用于所有任务序列帐户。  
+>  如果需要此帳戶才能進行工作順序，您可以建立一個具備最小權限的網域使用者帳戶來存取必要的網路資源，並且在所有工作順序帳戶中使用該帳戶。  
 
 > [!IMPORTANT]  
->  请勿向此帐户分配交互式登录权限。  
+>  請勿將互動式登入權限指派給此帳戶。  
 >   
->  请勿将网络访问帐户用于此帐户。  
+>  勿對此帳戶使用網路存取帳戶。  
 
-### <a name="task-sequence-editor-network-folder-connection-account"></a>任务序列编辑器网络文件夹连接帐户  
- 任务序列使用**任务序列编辑器网络文件夹连接帐户**来连接到网络上的共享文件夹。 如果将“连接到网络文件夹”  步骤添加到任务序列中，则需要此帐户。  
+### <a name="task-sequence-editor-network-folder-connection-account"></a>工作順序編輯器網路資料夾連線帳戶  
+ 工作順序使用**工作順序編輯器網路資料夾連線帳戶**連線至網路上的共用資料夾。 如果在工作順序中新增 [連線至網路資料夾]  步驟，則一定要有此帳戶。  
 
- 此帐户需要具有访问指定共享文件夹的权限。 它必须是域帐户。  
+ 此帳戶須有指定之共用資料夾的存取權限。 它必須是使用者網域帳戶。  
 
 > [!TIP]  
->  如果需要将此帐户用于任务序列，则可以创建一个具有访问所需网络资源的最低权限的域用户帐户，并将其用于所有任务序列帐户。  
+>  如果需要此帳戶才能進行工作順序，您可以建立一個具備最小權限的網域使用者帳戶來存取必要的網路資源，並且在所有工作順序帳戶中使用該帳戶。  
 
 > [!IMPORTANT]  
->  请勿向此帐户分配交互式登录权限。  
+>  請勿將互動式登入權限指派給此帳戶。  
 >   
->  请勿将网络访问帐户用于此帐户。  
+>  勿對此帳戶使用網路存取帳戶。  
 
-### <a name="task-sequence-run-as-account"></a>任务序列运行方式帐户  
- **任务序列运行方式帐户** 用于在任务序列中运行命令行，而且使用不同于本地系统帐户的凭据。 如果将“运行命令行”步骤添加到任务序列，但不希望任务序列在托管计算机上使用本地系统帐户权限来运行，则需要此帐户。  
+### <a name="task-sequence-run-as-account"></a>工作順序執行身分帳戶  
+ [工作順序執行身分帳戶]  用於在工作順序中執行命令列，以及使用本機系統帳戶以外的認證。 如果您在工作順序中新增 [執行命令列] 步驟，但不希望工作順序在受管理電腦上使用本機系統帳戶權限執行，則一定要有此帳戶。  
 
- 设置此帐户，使其具有运行在任务序列中指定的命令行所需的最低权限。 此帐户需要交互式登录权限，而且它通常需要安装软件和访问网络资源的能力。  
+ 設定帳戶權限，使其擁有執行工作順序指定之命令列所需的最小權限即可。 此帳戶需要互動式登入權限，而且通常需要安裝軟體及存取網路資源。  
 
 > [!IMPORTANT]  
->  请勿将网络访问帐户用于此帐户。  
+>  勿對此帳戶使用網路存取帳戶。  
 >   
->  切勿将此帐户设为域管理员。  
+>  永不使帳戶成為網域系統管理員。  
 >   
->  切勿为此帐户设置漫游配置文件。 任务序列运行时，它将为该帐户下载漫游配置文件。 这会导致该配置文件在本地计算机上面临易被访问的风险。  
+>  永不設定此帳戶的漫遊設定檔。 當工作順序執行時，它會下載帳戶的漫遊設定檔。 這會導致在本機電腦上存取該設定檔變成很容易的事。  
 >   
->  要限制此帐户的作用域。 例如，为每个任务序列创建不同的任务序列运行方式帐户，以便在某个帐户受到侵害时，只会损害该帐户能够访问的客户端计算机。  
+>  限制帳戶的範圍。 例如，為每個工作順序建立不同的工作順序執行身分帳戶，一旦其中一個帳戶遭受入侵時，只有該帳戶能夠存取的用戶端電腦會出現風險。  
 >   
->  如果命令行需要计算机上的管理权限，请考虑在所有将运行任务序列的计算机上为任务序列运行方式帐户单独创建一个本地管理员帐户。 不再需要该帐户时请立即将其删除。  
-
+>  如果命令列要求電腦的系統管理存取權限，請考慮在所有將執行該工作順序的電腦上建立單獨作為工作順序執行身分帳戶的本機系統管理員帳戶。 不需要此類帳戶時立即加以刪除。  

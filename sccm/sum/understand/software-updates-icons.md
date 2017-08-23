@@ -1,6 +1,6 @@
 ---
-title: "用于软件更新的图标 | Microsoft Docs"
-description: "Configuration Manager 控制台包含指示已同步更新或软件更新组的状态的图标。"
+title: "軟體更新所使用的圖示 | Microsoft Docs"
+description: "Configuration Manager 主控台包含圖示，指出已同步處理的更新或軟體更新群組的狀態。"
 keywords: 
 author: dougeby
 ms.author: dougeby
@@ -9,124 +9,117 @@ ms.date: 10/06/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: 63c5ef72-5715-4d86-85a2-71beba469fab
-translationtype: Human Translation
-ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
 ms.openlocfilehash: 04c5ccc53263b2672096b564695a636bfb28d952
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="icons-used-for-software-updates-in-system-center-configuration-manager"></a>System Center Configuration Manager 中用于软件更新的图标
+# <a name="icons-used-for-software-updates-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中軟體更新所使用的圖示
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用於：System Center Configuration Manager (最新分支)*
 
-同步后的软件更新会显示在 Configuration Manager 控制台中，每个软件更新的首列均包含一个指示特定状态的图标。 软件更新组也使用一个图标表示，该图标提供有关组中所包含软件更新的状态信息。 本部分提供有关软件更新图标和每个图标表示的内容的信息。  
+同步處理的軟體更新會顯示在 Configuration Manager 主控台中，而且每個軟體更新的第一個資料行都會包含指出特定狀態的圖示。 軟體更新群組也會以圖示代表，以提供群組中所含軟體更新的狀態資訊。 本節提供軟體更新圖示和每個圖示所代表意義的相關資訊。  
 
-## <a name="icons-for-software-updates"></a>软件更新图标  
- 同步后的软件更新由以下其中一个图标表示。  
+## <a name="icons-for-software-updates"></a>軟體更新的圖示  
+ 同步處理的軟體更新會以下列其中一個圖示代表。  
 
-### <a name="normal-icon"></a>“正常”图标  
- ![图标](../media/Normal.jpg "“正常”图标") 带有绿色箭头的图标表示正常的软件更新。  
-
- **描述：**  
-
- 正常软件更新已同步，可用于软件部署。  
-
- **操作问题：**  
-
- 没有操作问题。  
-
-### <a name="expired-icon"></a>“被取代”图标  
- ![图标](../media/Expired.jpg "“已过期”图标") 带有黑色 X 的图标表示过期的软件更新。 当软件更新显示在 Configuration Manager 控制台中时，也可以通过查看软件更新的“已过期”列来识别过期的软件更新。  
+### <a name="normal-icon"></a>一般圖示  
+ ![圖示](../media/Normal.jpg "一般圖示") 具有綠色箭號的圖示代表一般軟體更新。  
 
  **描述：**  
 
- 过期的软件更新以前可部署到客户端计算机，但是软件更新过期之后，不能再为软件更新创建新部署。 过期的软件更新会从活动部署中删除，并且不再对客户端可用。  
+ 一般軟體更新已進行同步處理，且可用於軟體部署。  
 
- **操作问题：**  
+ **操作考量：**  
 
- 没有操作问题。
+ 沒有任何操作考量。  
 
-### <a name="superseded-icon"></a>“被取代”图标  
- ![图标](../media/Superseded.jpg "“被取代”图标") 带有黄色星号的图标表示被取代的软件更新。 当软件更新显示在 Configuration Manager 控制台中时，也可以通过查看软件更新的“被取代”列来识别被取代的软件更新。  
-
- **描述：**  
-
- 被取代的软件更新已替换为更新版本的软件更新。 通常，取代另一个软件更新的软件更新将执行以下一项或多项操作：  
-
--   增强、改进或添加到由以前发布的一个或多个软件更新提供的修补程序。  
-
--   提高（如果批准安装软件更新，则由客户端安装的）软件更新文件包的效率。 例如，被取代的软件更新可能包含不再与修补程序或新软件更新现在支持的操作系统相关的文件，因此这些文件未包括在软件更新的取代文件包中。  
-
--   换句话说，产品的较新版本不再适用于产品的较旧版本或配置。 如果进行了修改来扩展语言支持，则软件更新还可能取代其他软件更新。 例如，稍后对 Microsoft Office 的产品更新进行的修订可能会删除对较旧操作系统的支持，但会在初始软件更新版本中添加对新语言的额外支持。  
-
- 在“软件更新点组件”属性的“取代规则”选项卡上，你可以指定管理取代的软件更新的方式。 有关详细信息，请参阅 [Supersedence rules](../plan-design/plan-for-software-updates.md#BKMK_SupersedenceRules)。  
-
- **操作问题：**  
-
- 如果可能，将用于取代的软件更新而不是被取代的更新部署到客户端计算机上。 你可以在软件更新属性中的“取代信息”  选项卡上显示用于取代软件更新的软件更新列表。  
-
-### <a name="invalid-icon"></a>“无效”图标  
- ![图标](../media/Invalid.jpg "“无效”图标") 带有红色 X 的图标表示无效的软件更新。  
+### <a name="expired-icon"></a>已過期圖示  
+ ![圖示](../media/Expired.jpg "已過期圖示") 具有黑色 X 的圖示代表已過期的軟體更新。 當軟體更新顯示在 Configuration Manager 主控台時，您也可以檢視軟體更新的 [已過期] 資料行，來識別已過期的軟體更新。  
 
  **描述：**  
 
- 活动部署中有无效的软件更新，但是由于某种原因，其内容（软件更新文件）不可用。 以下是可能出现此状态的情况：  
+ 已過期的軟體更新之前可以部署至用戶端電腦，但是軟體更新一旦過期，就無法再建立軟體更新的新部署。 已從作用中部署移除過期軟體更新，因此無法再供用戶端使用。  
 
--   成功部署了软件更新，但已从部署包中删除此软件更新文件，此文件已不再可用。  
+ **操作考量：**  
 
--   在站点上创建了软件更新部署，并且已成功将部署对象复制到子站点，但部署包尚未成功复制到子站点。  
+ 沒有任何操作考量。
 
- **操作问题：**  
-
- 当软件更新缺少内容时，客户端将无法安装软件更新，直到内容在分发点上可用。 你可以通过使用“重新分发”  操作，将内容重新分发到分发点。 当在父站点创建的部署中缺少软件更新的内容时，必须将软件更新复制或重新分发到子站点上。 有关内容重新分发的详细信息，请参阅[管理已分发的内容](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_manage)。  
-
-### <a name="metadata-only-icon"></a>“仅元数据”图标
- ![图标](../media/MetadataOnly.png "“仅元数据”图标") 带有蓝色箭头的图标表示仅元数据软件更新。
+### <a name="superseded-icon"></a>已取代圖示  
+ ![圖示](../media/Superseded.jpg "已取代的圖示") 具有黃色星星的圖示代表已取代的軟體更新。 當軟體更新顯示在 Configuration Manager 主控台時，您也可以檢視軟體更新的 [已取代] 資料行，來識別已取代的軟體更新。  
 
  **描述：**  
 
- 仅元数据软件更新在 Configuration Manager 控制中可用于报告。 不能部署或下载仅元数据软件更新，因为软件更新文件与软件更新元数据不相关联。  
+ 已取代的軟體更新已取代為軟體更新的較新版本。 通常，取代其他軟體更新的軟體更新，會執行下列一個或多個動作：  
 
- **操作问题：**  
+-   增強、改進或新增至由一個或多個先前發行之軟體更新所提供的修正程式。  
 
- 仅元数据软件更新可用于报告目的，但不可用于软件更新部署。  
+-   提升其軟體更新檔案封裝的效率，如果已核准安裝軟體更新，則用戶端會進行安裝。 例如，已取代的軟體更新可能包含不再與新軟體更新現在所支援的修正程式或作業系統相關的檔案，因此不會將這些檔案包含在將取代的軟體更新檔案封裝中。  
 
-## <a name="icons-for-software-update-groups"></a>软件更新组图标  
- 软件更新组由以下其中一个图标表示。  
+-   更新新版的產品，或者，換句話說，不再適用於舊版本或產品組態。 如果已進行修改來擴充語言支援，則軟體更新也可以取代其他軟體更新。 例如，Microsoft Office 的新版修訂版產品更新可能會移除對舊版作業系統的支援，但在初始軟體更新版本中新增對新語言的其他支援。  
 
-### <a name="normal-icon"></a>“正常”图标  
- ![图标](../media/Normal.jpg "“正常”图标") 带有绿色箭头的图标表示仅包含正常软件更新的软件更新组。  
+ 在 [軟體更新點元件] 內容的 [取代規則] 索引標籤上，您可以指定如何管理已取代的軟體更新。 如需詳細資訊，請參閱 [Supersedence rules](../plan-design/plan-for-software-updates.md#BKMK_SupersedenceRules)。  
 
- **操作问题：**  
+ **操作考量：**  
 
- 没有操作问题。  
+ 如果可能的話，請將取代軟體更新部署至用戶端電腦，而不是已取代的軟體更新。 您可以顯示軟體更新清單，這份軟體更新清單會取代軟體更新內容之 [取代資訊]  索引標籤上的軟體更新。  
 
-### <a name="expired-icon"></a>“被取代”图标  
- ![图标](../media/Expired.jpg "“已过期”图标") 带有黑色 X 的图标表示包含一个或多个过期的软件更新的软件更新组。  
+### <a name="invalid-icon"></a>無效圖示  
+ ![圖示](../media/Invalid.jpg "無效圖示") 具有紅色 X 的圖示代表無效軟體更新。  
 
- **操作问题：**  
+ **描述：**  
 
- 如果可能，删除或替换软件更新组中过期的软件更新。  
+ 無效軟體更新位於使用中部署內，但基於某個原因而無法使用內容 (軟體更新檔案)。 下列是可能發生這個狀態的情況：  
 
-### <a name="superseded-icon"></a>“被取代”图标  
- ![图标](../media/Superseded.jpg "“被取代”图标") 带有黄色星号的图标表示包含一个或多个被取代的软件更新的软件更新组。  
+-   您已成功部署軟體更新，但是軟體更新檔案已從部署封裝中移除，因此無法再使用。  
 
- **操作问题：**  
+-   您在站台建立軟體更新部署，而且部署物件已成功複寫到子站台，但部署封裝未成功地複寫到子站台。  
 
- 如果可能，将软件更新组中被取代的软件更新替换为用于取代的软件更新。  
+ **操作考量：**  
 
-### <a name="invalid-icon"></a>“无效”图标  
- ![图标](../media/Invalid.jpg "“无效”图标") 带有红色 X 的图标表示包含一个或多个无效的软件更新的软件更新组。  
+ 遺失軟體更新的內容時，除非可以在發佈點上再次使用內容，否則用戶端無法安裝軟體更新。 使用 [重新發佈]  動作，可以將內容重新發佈至發佈點。 遺失在父站台建立之部署中的軟體更新內容時，必須將軟體更新複寫或重新發佈至子站台。 如需內容重新發佈的詳細資訊，請參閱[管理您已發佈的內容](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_manage)。  
 
- **操作问题：**  
+### <a name="metadata-only-icon"></a>僅中繼資料圖示
+ ![圖示](../media/MetadataOnly.png "僅中繼資料圖示") 具有藍色箭號的圖示代表僅中繼資料軟體更新。
 
- 当软件更新缺少内容时，客户端将无法安装软件更新，直到内容在分发点上可用。 你可以通过使用“重新分发”  操作，将内容重新分发到分发点。 当在父站点创建的部署中缺少软件更新的内容时，需要将软件更新复制或重新分发到子站点上。 有关内容重新分发的详细信息，请参阅[管理已分发的内容](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_manage)。  
+ **描述：**  
 
+ Configuration Manager 主控台中提供僅中繼資料軟體更新，其可用於產生報告。 您無法部署或下載僅中繼資料軟體更新，因為軟體更新檔案未與軟體更新中繼資料相關聯。  
 
+ **操作考量：**  
 
-<!--HONumber=Dec16_HO3-->
+ 僅中繼資料軟體更新可用於產生報告，但不適用於軟體更新部署。  
 
+## <a name="icons-for-software-update-groups"></a>軟體更新群組圖示  
+ 軟體更新群組會以下列其中一個圖示代表。  
 
+### <a name="normal-icon"></a>一般圖示  
+ ![圖示](../media/Normal.jpg "一般圖示") 具有綠色箭號的圖示代表只包含一般軟體更新的軟體更新群組。  
+
+ **操作考量：**  
+
+ 沒有任何操作考量。  
+
+### <a name="expired-icon"></a>已過期圖示  
+ ![圖示](../media/Expired.jpg "已過期圖示") 具有黑色 X 的圖示代表包含一或多個已過期軟體更新的軟體更新群組。  
+
+ **操作考量：**  
+
+ 如果可能，請移除或取代軟體更新群組中已過期的軟體更新。  
+
+### <a name="superseded-icon"></a>已取代圖示  
+ ![圖示](../media/Superseded.jpg "已取代的圖示") 具有黃色星星的圖示代表包含一或多個已取代軟體更新的軟體更新群組。  
+
+ **操作考量：**  
+
+ 如果可能的話，請將軟體更新群組中的已取代軟體更新取代為取代軟體更新。  
+
+### <a name="invalid-icon"></a>無效圖示  
+ ![圖示](../media/Invalid.jpg "無效圖示") 具有紅色 X 的圖示代表包含一或多個無效軟體更新的軟體更新群組。  
+
+ **操作考量：**  
+
+ 遺失軟體更新的內容時，除非可以在發佈點上再次使用內容，否則用戶端無法安裝軟體更新。 使用 [重新發佈]  動作，可以將內容重新發佈至發佈點。 遺失在父站台建立之部署中的軟體更新內容時，需要將軟體更新複寫或重新發佈至子站台。 如需內容重新發佈的詳細資訊，請參閱[管理您已發佈的內容](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_manage)。  

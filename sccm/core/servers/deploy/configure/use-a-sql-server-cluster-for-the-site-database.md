@@ -1,106 +1,102 @@
 ---
-title: "SQL Server 群集 | Microsoft Docs"
-description: "使用 SQL Server 群集托管 System Center Configuration Manager 站点数据库。 包括受支持选项的相关信息。"
+title: "SQL Server 叢集 | Microsoft Docs"
+description: "使用 SQL Server 叢集來裝載 System Center Configuration Manager 站台資料庫。 包含所支援選項的相關資訊。"
 ms.custom: na
 ms.date: 2/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: d09a82c6-bbd1-49ca-8ffe-e3ce87b85d33
-caps.latest.revision: 10
-caps.handback.revision: 0
+caps.latest.revision: "10"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ce0d7fc5f3d1812c4d62e551661c0ef89707567b
 ms.openlocfilehash: 53f119bbb1f8827a9c23c8b747840350bbb92790
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="use-a-sql-server-cluster-for-the-system-center-configuration-manager-site-database"></a>对 System Center Configuration Manager 站点数据库使用 SQL Server 群集。
+# <a name="use-a-sql-server-cluster-for-the-system-center-configuration-manager-site-database"></a>針對 System Center Configuration Manager 站台資料庫使用 SQL Server 叢集
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用於：System Center Configuration Manager (最新分支)*
 
 
- 可以使用 SQL Server 群集托管 System Center Configuration Manager 站点数据库。 站点数据库是 Server 群集支持的唯一站点系统角色。  
+ 您可以使用 SQL Server 叢集來裝載 System Center Configuration Manager 站台資料庫。 站台資料庫是伺服器叢集唯一支援的站台系統角色。  
 
 > [!IMPORTANT]  
->  SQL Server 群集是否设置成功依赖于 SQL Server 文档库中提供的文档和过程。  
+>  成功設定 SQL Server 叢集遵循 SQL Server 文件庫中所提供的文件和程序。  
 
- 群集可提供故障转移支持，并提高站点数据库的可靠性。 但是，它不提供额外的处理或负载均衡优势。 事实上，由于站点服务器在连接到站点数据库之前必须查找 SQL Server 群集的活动节点，因此可能出现性能下降。  
+ 叢集可以提供容錯移轉支援，並改善站台資料庫的可靠性。 不過，它未提供額外的處理或負載平衡好處。 事實上，因為站台伺服器必須先尋找作用中的 SQL Server 叢集節點，才能連線到站台資料庫，所以效能可能會因此而降低。  
 
- 安装 Configuration Manager 之前，必须准备 SQL Server 群集以支持 Configuration Manager。 （请参阅本节后面的先决条件。）  
+ 安裝 Configuration Manager 之前，必須先準備 SQL Server 叢集，以支援 Configuration Manager。 (請參閱本節後面的先決條件)。  
 
- Configuration Manager 安装过程中，会在 Microsoft Windows Server 群集的每个物理计算机节点上安装 Windows 卷影复制服务编写器。 这支持“备份站点服务器”维护任务。  
+ 在 Configuration Manager 安裝期間，會在 Microsoft Windows Server 叢集的每個實體電腦節點上安裝 Windows 磁碟區陰影複製服務寫入器。 這支援**備份站台伺服器**維護工作。  
 
- 安装站点后，Configuration Manager 每小时检查一次群集节点的更改。 Configuration Manager 自动管理检测到的影响 Configuration Manager 组件安装的任何更改（如节点故障转移或向 SQL Server 群集添加新节点）。  
+ 安裝站台之後，Configuration Manager 會每小時檢查叢集節點有無變更。 Configuration Manager 會自動管理所偵測到會影響 Configuration Manager 元件安裝 (例如節點容錯移轉或新增 SQL Server 叢集的節點) 的變更。  
 
-## <a name="supported-options-for-using-a-sql-server-failover-cluster"></a>使用 SQL Server 故障转移群集的支持选项
+## <a name="supported-options-for-using-a-sql-server-failover-cluster"></a>使用 SQL Server 容錯移轉叢集的支援選項
 
-用作站点数据库的 SQL Server 故障转移群集支持以下选项：
+用作站台資料庫的 SQL Server 容錯移轉叢集支援下列選項︰
 
--   单个实例群集  
+-   單一執行個體叢集  
 
--   多个实例配置  
+-   多個執行個體的組態  
 
--   多个活动节点  
+-   多個作用中的節點  
 
--   命名或默认实例  
+-   具名執行個體或預設執行個體  
 
-请注意以下先决条件：  
+請注意下列先決條件：  
 
--   站点数据库必须远离站点服务器。 （群集不能包括站点系统服务器。）  
+-   站台資料庫相對於站台伺服器而言，必須是遠端的資料庫 (叢集不得包含站台系統伺服器)。  
 
--   必须将站点服务器的计算机帐户添加到群集中每个服务器的“本地管理员”组。  
+-   您必須將站台伺服器的電腦帳戶新增至叢集中每部伺服器的 [本機系統管理員] 群組。  
 
--   若要支持 Kerberos 身份验证，必须启用 **TCP/IP** 网络通信协议，使每个 SQL Server 群集节点进行网络连接。 不需要**命名管道** ，但可以将其用于排除 Kerberos 身份验证问题。 在“SQL Server 网络配置”的“SQL Server 配置管理器”中配置网络协议设置。  
+-   若要支援 Kerberos 驗證，必須為每個 SQL Server 叢集節點的網路連線啟用 **TCP/IP** 網路通訊協定。 **具名管道** 並非必要，但可用於疑難排解 Kerberos 驗證問題。 網路通訊設定是在 [SQL Server 組態管理員] 的 [SQL Server 網路組態] 下設定。  
 
--   如果使用 PKI，请参阅 Configuration Manager 的 PKI 证书要求，了解对站点服务器使用 SQL Server 时的特定证书要求。  
+-   若是使用 PKI，請參閱＜Configuration Manager 的 PKI 憑證需求＞中所述有關您為站台資料庫使用 SQL Server 叢集時的特定憑證需求。  
 
-请考虑以下限制：  
+請考慮下列限制：  
 
--   **安装和配置：**  
+-   **安裝及組態：**  
 
-    -   辅助站点不能使用 SQL Server 群集。  
+    -   次要站台無法使用 SQL Server 叢集。  
 
-    -   当你指定 SQL Server 群集时，用于指定站点数据库的非默认文件位置的选项不可用。  
+    -   當您指定 SQL Server 叢集時，無法使用用於為站台資庫指定非預設檔案位置的選項。  
 
--   **SMS 提供程序：**  
+-   **SMS 提供者：**  
 
-    -   不可在 SQL Server 群集或作为群集 SQL Server 节点运行的计算机上安装 SMS 提供程序的实例。  
+    -   不支援在 SQL Server 叢集或以叢集 SQL Server 節點身分執行的電腦上，安裝 SMS 提供者的執行個體。  
 
--   **数据复制选项：**  
+-   **資料複寫選項：**  
 
-    -   使用“分布式视图”时，不可使用 SQL Server 群集托管站点数据库。  
+    -   若要使用**分散式檢視**，將無法使用 SQL Server 叢集裝載站台資料庫。  
 
--   **备份和恢复：**  
+-   **備份及復原：**  
 
-    -   对于使用命名实例的 SQL Server 群集，Configuration Manager 不支持 Data Protection Manager (DPM) 备份。 但它在使用默认 SQL Server 实例的 SQL Server 群集上支持 DPM 备份。  
+    -   Configuration Manager 不支援為使用具名執行個體的 SQL Server 叢集執行 Data Protection Manager (DPM) 備份。 不過，它確實支援在使用預設 SQL Server 執行個體的 SQL Server 叢集上執行 DPM 備份。  
 
-## <a name="prepare-a-clustered-sql-server-instance-for-the-site-database"></a>为站点数据库准备群集 SQL Server 实例  
+## <a name="prepare-a-clustered-sql-server-instance-for-the-site-database"></a>準備站台資料庫的叢集 SQL Server 執行個體  
 
-若要准备站点数据库，需要完成以下主要任务：
+以下是完成以準備站台資料庫的主要工作︰
 
--   创建虚拟 SQL Server 群集以在现有 Windows Server 群集环境上承载站点数据库。 有关安装和设置 SQL Server 群集的具体步骤，请参阅特定于 SQL Server 版本的文档。 例如，你在使用 SQL Server 2008 R2，请参阅 [Installing a SQL Server 2008 R2 Failover Cluster（安装 SQL Server 2008 R2 故障转移群集）](http://go.microsoft.com/fwlink/p/?LinkId=240231)。  
+-   建立虛擬 SQL Server 叢集，以便在現有的 Windows Server 叢集環境裝載站台資料庫。 如需安裝和設定 SQL Server 叢集的特定步驟，請參閱 SQL Server 版本的相關文件。 例如，若您使用的是 SQL Server 2008 R2，請參閱 [安裝 SQL Server 2008 R2 容錯移轉叢集](http://go.microsoft.com/fwlink/p/?LinkId=240231)。  
 
--   在 SQL Server 群集的每台计算机上，可在不希望 Configuration Manager 在其上安装站点组件的各驱动器的根文件夹中放置一个文件。 应将该文件命名为 **NO_SMS_ON_DRIVE.SMS**。 默认情况下，Configuration Manager 将在各物理节点上安装某些组件以支持备份等操作。  
+-   您可以在 SQL Server 叢集中不想讓 Configuration Manager 安裝站台元件之每一部電腦的每個磁碟機根資料夾中放置檔案。 此檔案應該命名為 **NO_SMS_ON_DRIVE.SMS**。 Configuration Manager 預設會在每個實體節點上安裝一些元件，以支援備份等作業。  
 
--   将站点服务器的计算机帐户添加到每台 Windows Server 群集节点计算机的“本地管理员”  组。  
+-   將站台伺服器的電腦帳戶新增至 Windows Server 叢集節點電腦的 [本機系統管理員]  群組。  
 
--   在虚拟 SQL Server 实例中，将 **sysadmin** SQL Server 角色分配给要运行 Configuration Manager 安装程序的用户帐户。  
+-   在虛擬 SQL Server 執行個體中，將 **sysadmin** SQL Server 角色指派給要執行 Configuration Manager 安裝程式的使用者帳戶。  
 
-### <a name="to-install-a-new-site-using-a-clustered-sql-server"></a>若要安装使用群集 SQL Server 的新站点  
- 若要安装使用群集站点数据库的站点，请按照安装站点的通常过程运行 Configuration Manager 安装程序，但执行以下例外操作：  
+### <a name="to-install-a-new-site-using-a-clustered-sql-server"></a>使用叢集 SQL Server 安裝新的站台  
+ 若要安裝使用叢集站台資料庫的站台，除了下列幾個步驟之外，請遵循您安裝站台時的正常程序執行 Configuration Manager 安裝程式：  
 
--   在“数据库信息”  页上，指定要承载站点数据库的虚拟 SQL Server 群集实例的名称。 虚拟实例将替换运行 SQL Server 的计算机的名称。  
+-   在 [資料庫資訊]  頁面上，指定要裝載站台資料庫之虛擬 SQL Server 叢集執行個體的名稱。 此虛擬執行個體會取代執行 SQL Server 之電腦的名稱。  
 
     > [!IMPORTANT]  
-    >  当输入虚拟 SQL Server 群集实例的名称时，请勿输入 Windows Server 群集创建的虚拟 Windows Server 名称。 如果使用虚拟 Windows Server 名称，则在活动 Windows Server 群集节点的本地硬盘驱动器上安装站点数据库。 这会在该节点故障时阻止成功进行故障转移。  
-
+    >  當您輸入輸入虛擬 SQL Server 叢集執行個體的名稱時，請勿輸入 Windows Server 叢集所建立的虛擬 Windows Server 名稱。 若是使用虛擬 Windows Server 名稱，站台資料庫將會安裝在作用中 Windows Server 叢集節點的本機硬碟上。 若該節點失敗，將會造成容錯移轉失敗。  

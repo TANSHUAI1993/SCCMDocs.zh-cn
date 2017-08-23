@@ -1,149 +1,142 @@
 ---
-title: "准备 Windows PE 对等缓存来减少 WAN 流量 | Microsoft Docs"
-description: "Windows PE 对等缓存适用于 Windows PE，在没有本地分发点的情况下，可从本地对等缓存中获取内容并将 WAN 流量降到最低。"
+title: "準備 Windows PE 對等快取以減少 WAN 流量 | Microsoft Docs"
+description: "Windows PE 對等快取作用於 Windows PE，以從本機對等取得內容，並在沒有本機發佈點時，將 WAN 流量降至最低。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 6c64f276-b88c-4b1e-8073-331876a03038
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
 ms.openlocfilehash: 814c6133a30b1116d05aaeafddb0dfb7fe2a390e
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="prepare-windows-pe-peer-cache-to-reduce-wan-traffic-in-system-center-configuration-manager"></a>准备 Windows PE 对等缓存以减少 System Center Configuration Manager 中的 WAN 流量
+# <a name="prepare-windows-pe-peer-cache-to-reduce-wan-traffic-in-system-center-configuration-manager"></a>準備 Windows PE 對等快取，以降低 System Center Configuration Manager 中的 WAN 流量
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用於：System Center Configuration Manager (最新分支)*
 
-在 System Center Configuration Manager 中部署新的操作系统时，运行任务序列的计算机可使用 Windows PE 对等缓存从本地对等计算机（对等缓存源）中获取内容，而无需从分发点下载内容。 这有助于最大限度减小没有本地分发点的分支机构场景中的广域网 (WAN) 流量。  
+當您在 System Center Configuration Manager 中部署新的作業系統時，執行工作順序的電腦可使用 Windows PE 對等快取，從本機對等裝置 (對等快取來源) 取得內容，而不是從發佈點下載內容。 這有助於在分公司沒有本機發佈點的案例中，降低廣域網路 (WAN) 流量。  
 
- Windows PE 对等缓存与 [Windows BranchCache](http://technet.microsoft.com/library/mt617255\(TechNet.10\).aspx#bkmk_branchcache)类似，但是在 Windows 预安装环境 (Windows PE) 中运行。 如果从操作系统上下文（例如客户端软件中心）启动任务序列，则不会使用 Windows PE 对等缓存。 以下术语用于描述使用 Windows PE 对等缓存的客户端：  
+ Windows PE 對等快取類似 [Windows BranchCache](http://technet.microsoft.com/library/mt617255\(TechNet.10\).aspx#bkmk_branchcache)，但可在 Windows 預先安裝環境 (Windows PE) 中運作。 如果您從作業系統內容 (例如從用戶端的軟體中心) 啟動工作順序，則不會使用 Windows PE 對等快取。 下列字詞用以描述使用 Windows PE 對等快取的用戶端：  
 
--   “对等缓存客户端”  是配置为使用 Windows PE 对等缓存的计算机。  
+-   **對等快取用戶端** 是設定為使用 Windows PE 對等快取的電腦。  
 
--   **对等缓存源** 是为对等缓存配置的客户端，可将内容提供给其他请求该内容的对等缓存客户端。  
+-   **對等快取來源** 是設定成使用對等快取的用戶端，也是提供內容給其他要求該內容之對等快取用戶端的用戶端。  
 
-使用下列部分管理对等缓存。
+使用下列各節管理對等快取。
 
-##  <a name="a-namebkmkpeercacheobjectsa-objects-stored-on-a-peer-cache-source"></a><a name="BKMK_PeerCacheObjects"></a> 对等缓存源上存储的对象  
- 在 Windows PE 中运行时，配置为使用 Windows PE 对等缓存的任务序列可获取以下内容对象：  
+##  <a name="BKMK_PeerCacheObjects"></a> 存放在對等快取來源的物件  
+ 在 Windows PE 中執行工作順序時，其設定為會使用 Windows PE 對等快取可以取得下列內容物件：  
 
--   操作系统映像  
+-   作業系統映像  
 
--   驱动程序包  
+-   驅動程式套件  
 
--   包和程序（当客户端继续在完整操作系统中运行任务序列时，如果最初在 Windows PE 中运行时为对等缓存配置了任务序列，则客户端从对等缓存源中获取此内容。）  
+-   套件和程式 (當用戶端繼續在完整作業系統中執行工作順序時，如果工作順序原本是針對在 Windows PE 中執行時的對等快取所設定，用戶端就會從對等快取來源取得此內容。)  
 
--   其他启动映像  
+-   其他開機映像  
 
- 下面的内容对象永远不能使用对等缓存进行传输。 如果已在环境中配置了 Windows BranchCache，，则会改从分发点传输或通过 Windows BranchCache 进行传输：  
+ 下列內容物件一律不會使用對等快取傳輸。 下列內容物件永遠不會透過對等快取傳輸，也不會從發佈點傳輸，或在環境中已設定 Windows BranchCache 時由 Windows BranchCache 傳送：  
 
--   应用程序  
+-   應用程式  
 
--   软件更新  
+-   軟體更新  
 
-##  <a name="a-namebkmkpeercacheworka-how-does--windows-pe-peer-cache-work"></a><a name="BKMK_PeerCacheWork"></a> Windows PE 对等缓存如何工作？  
- 请考虑这样一个场景：一个分支机构没有分发点，但是启用了多个客户端使用 Windows PE 对等缓存。 将配置为使用对等缓存的任务序列部署到多个已配置为属于对等缓存源的客户端。 第一个运行任务序列的客户端将广播对包含内容的对等方的请求。 但未找到此对等方，因此跨 WAN 从分发点获取内容。 客户端安装新的映像，然后将内容存储在其 Configuration Manager 客户端缓存中，这样该客户端可作为其他客户端的对等缓存源。 当下一个客户端运行任务序列时，它将在子网上广播对对等缓存源的请求，而第一个客户端将响应，并提供其缓存的内容。  
+##  <a name="BKMK_PeerCacheWork"></a> Windows PE 對等快取運作方式為何？  
+ 假設分公司沒有發佈點，但允許幾個用戶端使用 Windows PE 對等快取的情況。 您部署的工作順序，設定為對設定成是對等快取來源一部分的數個用戶端，使用對等快取。 第一個執行工作順序的用戶端，會為具備該內容的對等，廣播一則要求。 因為找不到任何項目，所以會從 WAN 中的發佈點取得內容。 用戶端會安裝新映像，然後將內容儲存在其 Configuration Manager 用戶端快取中，以作為其他用戶端的對等快取來源。 當下一個用戶端執行工作順序時，它會在對等快取來源的子網路上廣播要求，而第一個用戶端會回應並提供其快取內容。  
 
-##  <a name="a-namebkmkpeercachedeterminea-determine-what--clients-will-be-part-of-the-windows-pe-peer-cache-source"></a><a name="BKMK_PeerCacheDetermine"></a> 确定将属于 Windows PE 对等缓存源的客户端  
- 为了帮助你确定可选为 Windows PE 对等缓存源的计算机，你应该考虑以下几个方面：  
+##  <a name="BKMK_PeerCacheDetermine"></a> 決定哪些用戶端將隸屬於 Windows PE 對等快取來源  
+ 為協助您判斷哪些電腦要選取為 Windows PE 對等快取來源，您應該考量一些情況：  
 
--   Windows PE 对等缓存源应为始终开机且可用于对等缓存客户端的台式计算机。  
+-   Windows PE 對等快取來源應為一直開機且對等快取用戶端可以使用的桌上型電腦。  
 
--   Windows PE 对等缓存具有足以存储映像的客户端缓存大小。  
+-   Windows PE 對等快取的用戶端快取大小，足以儲存映像。  
 
-##  <a name="a-namebkmkpeercacherequirementsa-requirements-for-a-client-to-use-a--windows-pe-peer-cache-source"></a><a name="BKMK_PeerCacheRequirements"></a> 使用 Windows PE 对等缓存源的客户端的要求  
- 对于使用 Windows PE 对等缓存源的客户端，必须满足以下要求：  
+##  <a name="BKMK_PeerCacheRequirements"></a> 使用 Windows PE 對等快取來源的用戶端需求  
+ 若是使用 Windows PE 對等快取來源的用戶端，必須符合下列需求：  
 
--   Configuration Manager 客户端必须能够通过网络上的以下端口进行通信：  
+-   Configuration Manager 用戶端必須能夠跨網路上的下列連接埠進行通訊：  
 
-    -   初始网络广播的端口，用于查找对等缓存源。 默认情况下，这是端口 8004。  
+    -   用於初始網路廣播以尋找對等快取來源的連接埠。 根據預設，此連接埠是 8004。  
 
-    -   用于从对等缓存源（HTTP 和 HTTPS）下载内容的端口。 默认情况下，此端口是 8003。  
+    -   用於從對等快取來源 (HTTP 和 HTTPS) 下載內容的連接埠。 根據預設，此連接埠是 8003。  
 
         > [!TIP]  
-        >  客户端将使用 HTTPS 来下载可用的内容。 但是，HTTP 或 HTTPS 使用相同的端口号。  
+        >  用戶端會使用 HTTPS 下載可供使用的內容。 但會為 HTTP 或 HTTPS 使用相同的連接埠號碼。  
 
--   在客户端上[Configure the Client Cache for Configuration Manager Clients](../../core/clients/manage/manage-clients.md#BKMK_ClientCache) ，以确保其具有足够的空间来保留和存储部署的映像。 Windows PE 对等缓存不会影响客户端缓存的配置或行为。  
+-   在用戶端上[Configure the Client Cache for Configuration Manager Clients](../../core/clients/manage/manage-clients.md#BKMK_ClientCache) 以確保用戶端有足夠的空間可保存及儲存所部署的映像。 Windows PE 對等快取不會影響用戶端快取的設定或行為。  
 
--   任务序列部署的部署选项必须配置为“当任务序列需要时在本地下载内容”。  
+-   工作順序部署的 [部署] 選項，必須設定為 [工作順序需要時將內容下載到本機]。  
 
-##  <a name="a-namebkmkpeercacheconfigurea-configure-windows-pe-peer-cache"></a><a name="BKMK_PeerCacheConfigure"></a> 配置 Windows PE 对等缓存  
- 以下方法可用于预配包含对等缓存内容的客户端，使其可用作对等缓存源：  
+##  <a name="BKMK_PeerCacheConfigure"></a> 設定 Windows PE 對等快取  
+ 您可以使用下列方法，利用對等快取內容來佈建用戶端，使其可成為對等快取來源：  
 
--   如果对等缓存客户端找不到包含内容的对等缓存源，则它将从分发点下载内容。  如果该客户端接收到启用对等缓存的客户端设置，且任务序列配置为保留缓存的内容，则该客户端将成为一个对等缓存源。  
+-   找不到具有內容之對等快取來源的對等快取用戶端會從發佈點下載內容。  如果用戶端收到的用戶端設定啟用對等快取，並將工作順序設定為保留快取內容，則用戶端會變成對等快取來源。  
 
--   对等缓存客户端可从另一个对等缓存客户端（对等缓存源）获取内容。  由于配置了客户端用于对等缓存，因此当客户端运行配置为保留缓存的内容的任务序列时，客户端将成为一个对等缓存源。  
+-   對等快取用戶端可以從另一個對等快取用戶端 (對等快取來源) 取得內容。  由於用戶端已設定為使用對等快取，因此當它執行設定為保留快取內容的工作順序時，用戶端會變成對等快取來源。  
 
--   客户端运行包含可选步骤（即 [Download Package Content](../understand/task-sequence-steps.md#BKMK_DownloadPackageContent)）的任务序列，该步骤用于预安排包含在 Windows PE 对等缓存任务序列中的相关内容。 使用此方法时：  
+-   用戶端執行的工作順序，包括選用步驟 [Download Package Content](../understand/task-sequence-steps.md#BKMK_DownloadPackageContent)，其用於預先設置內含於 Windows PE 對等快取工作順序中的相關內容。 當您使用這個方法時：  
 
-    -   客户端无需安装正在部署的映像。  
+    -   用戶端不需要安裝正在部署的映像。  
 
-    -   除了“下载包内容”  选项之外，任务序列还必须使用“Configuration Manager 客户端缓存”  选项。 使用此选项可在客户端缓存中存储内容，使客户端可作为其他对等缓存客户端的对等缓存源。  
+    -   除了 [下載套件內容]  選項之外，工作順序還必須使用 [Configuration Manager 用戶端快取]  選項。 您可以使用這個選項將內容儲存在用戶端快取中，以便用戶端可以做為其他對等快取用戶端的對等快取來源。  
 
- 以下步骤将帮助你在客户端上配置 Windows PE 对等缓存，以及配置支持对等缓存的任务序列。  
+ 下列程序將協助您在用戶端上設定 Windows PE 對等快取，並設定支援對等快取的工作順序。  
 
-### <a name="to-configure-the-windows-pe-peer-cache-source-computers"></a>配置 Windows PE 对等缓存源计算机  
+### <a name="to-configure-the-windows-pe-peer-cache-source-computers"></a>設定 Windows PE 對等快取來源電腦  
 
-1.  在 Configuration Manager 控制台中，导航到“管理” > “客户端设置”，然后创建一个新的“自定义客户端设备设置”，或编辑现有设置对象。 你还可以对“默认客户端设置”  对象进行此配置。  
+1.  在 Configuration Manager 主控台中，瀏覽至 [系統管理] > [用戶端設定]，然後建立新的 [自訂用戶端裝置設定] 或編輯現有的設定物件。 您也可以針對 [預設用戶端設定]  物件進行這項設定。  
 
     > [!TIP]  
-    >  使用自定义设置对象管理将接收此配置的客户端。 例如，你可能希望避免在到处奔走的用户的笔记本电脑上进行此配置。 经常移动的系统不适合作为向其他对等缓存客户端提供内容的源。  
+    >  自訂設定物件可用來管理哪些用戶端會收到這項組態。 例如，您可能想要在使用者經常移動的膝上型電腦上避免進行這項設定。 具備高度機動性的系統並不適合做為提供內容給其他對等快取用戶端的來源。  
     >   
-    >  另请记住，将此设置配置为“默认客户端设置” 的一部分时，此配置适用于环境中的所有客户端。  
+    >  另請記住，當您將這項設定設定為 [預設用戶端設定] 的一部分時，該項組態會套用到您環境中的所有用戶端。  
 
-2.  在“Windows PE 对等缓存” 下，将“在完整操作系统中启用 Configuration Manager 客户端以共享内容”  设置为“是” 。  
+2.  在 [Windows PE 對等快取] 下，將 [允許完整作業系統中的 Configuration Manager 共用內容]  設定為 [是] 。  
 
-    -   默认情况下，仅 HTTP 处于启用状态。 如果你想要让客户端可以通过 HTTPS 下载内容，请将“启用 HTTPS 以进行客户端对等通信”  设置为“是” 。  
+    -   預設只會啟用 HTTP。 如果您想要讓用戶端能夠透過 HTTPS 下載內容，請將 [啟用 HTTPS 進行用戶端對等通訊]  設定為 [是] 。  
 
-    -   默认情况下，用于广播的端口设置为 8004，用于内容下载的端口设置为 8003。 你可以更改这两个端口。  
+    -   根據預設，用於廣播的連接埠會設定為 8004，而用於下載內容的連接埠會設定為 8003。 您可以變更這兩者。  
 
-3.  保存客户端设置，并将其部署到你选为对等缓存源的客户端。  
+3.  對選取作為對等快取來源的用戶端，儲存用戶端設定並加以部署。  
 
- 为设备配置此设置对象后，该设备配置为可用作对等缓存源。 这些设置应部署到潜在的对等缓存客户端，以配置所需的端口和协议。  
+ 使用這個設定物件設定裝置之後，會將裝置設定為對等快取來源。 這些設定應該部署到潛在的對等快取用戶端，以便設定必要的連接埠和通訊協定。  
 
-###  <a name="a-namebkmkpeercacheconfiguretsa-configure-a-task-sequence-for-windows-pe-peer-cache"></a><a name="BKMK_PeerCacheConfigureTS"></a> 为 Windows PE 对等缓存配置任务序列  
- 配置任务序列时，将以下任务序列变量用作要部署任务序列的集合的集合变量：  
+###  <a name="BKMK_PeerCacheConfigureTS"></a> 為 Windows PE 對等快取設定工作順序  
+ 當您設定工作順序時，請使用下列工作順序變數作為部署工作順序所在之集合上的集合變數：  
 
 -   **SMSTSPeerDownload**  
 
      值：TRUE  
 
-     这使客户端能够使用 Windows PE 对等缓存。  
+     可讓用戶端使用 Windows PE 對等快取。  
 
 -   **SMSTSPeerRequestPort**  
 
-     值：<端口号\>  
+     值：<連接埠號碼\>  
 
-     不使用在客户端设置中配置的默认端口 (8004) 时，你必须将此变量配置为用于初始广播的网络端口的自定义值。  
+     當您未使用在 [用戶端設定] 中設定的預設連接埠 (8004) 時，您必須將這個變數設定為初始廣播所要使用的自訂網路連接埠值。  
 
 -   **SMSTSPreserveContent**  
 
      值：TRUE  
 
-     此变量用于标志在部署后将保留在 Configuration Manager 客户端缓存中的任务序列内容。 这与使用 SMSTSPersisContent（仅任务序列持续期间保留内容）不同，并且使用的是任务序列缓存，而不是 Configuration Manager 客户端缓存。  
+     這會標幟工作順序中的內容，以在部署後將內容保留在 Configuration Manager 用戶端快取中。 這有別於使用 SMSTSPersisContent，SMSTSPersisContent 只會在工作順序持續期間保留內容，並會使用工作順序快取，而不是 Configuration Manager 用戶端快取。  
 
- 有关详细信息，请参阅[任务序列内置变量](../understand/task-sequence-built-in-variables.md)。  
+ 如需詳細資訊，請參閱[工作順序內建變數](../understand/task-sequence-built-in-variables.md)。  
 
-###  <a name="a-namebkmkpeercachevalidatea-validate-the-success-of-using-windows-pe-peer-cache"></a><a name="BKMK_PeerCacheValidate"></a> 验证使用 Windows PE 对等缓存是否成功  
- 在使用 Windows PE 对等缓存来部署和安装任务序列后，可以通过查看运行任务序列的客户端上的 **smsts.log** 来确认过程中是否成功使用对等缓存。  
+###  <a name="BKMK_PeerCacheValidate"></a> 確認順利使用 Windows PE 對等快取  
+ 使用 Windows PE 對等快取部署工作順序且加以安裝之後，可以透過檢視執行工作順序之用戶端上的 **smsts.log** ，來確認程序中已順利使用該對等快取。  
 
- 在该日志中，查找类似于以下形式的条目，其中 <*SourceServerName*> 用于标识客户端从中获取内容的计算机。 这台计算机应为对等缓存源，而并不是分发点服务器。 其他详细信息将因本地环境和配置而异。  
+ 在記錄檔中，尋找類似如下的項目，其中 <*SourceServerName*> 可識別用戶端取得內容的來源電腦。 這部電腦應該是對等快取來源，而不是發佈點伺服器。 其他詳細資料會依您的本機環境和組態而有所不同。  
 
 -   *<![LOG[Downloaded file from http:// <SourceServerName\>:8003/SCCM_BranchCache$/SS10000C/sccm?/install.wim to C:\\_SMSTaskSequence\Packages\SS10000C\install.wim ]LOG]!><time="14:24:33.329+420" date="06-26-2015" component="ApplyOperatingSystem" context="" type="1" thread="1256" file="downloadcontent.cpp:1626">*  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

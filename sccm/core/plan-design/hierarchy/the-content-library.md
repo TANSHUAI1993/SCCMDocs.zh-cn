@@ -1,69 +1,66 @@
 ---
-title: "内容库 | Microsoft Docs"
-description: "了解 System Center Configuration Manager 用于减少已分发内容总大小的内容库的信息。"
+title: "內容庫 | Microsoft Docs"
+description: "了解 System Center Configuration Manager 用來減少整體發佈內容大小的內容庫。"
 ms.custom: na
 ms.date: 2/14/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 65c88e54-3574-48b0-a127-9cc914a89dca
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d31fecdb71b498864df2bce7403a4290ea9700ae
 ms.openlocfilehash: 0fa9f431c00476d71b2b08f92f914d76636d1a27
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="the-content-library-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的内容库
+# <a name="the-content-library-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的內容庫
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用對象：System Center Configuration Manager (最新分支)*
 
-内容库是内容的单实例存储，System Center Configuration Manager 使用它来减少分发的内容的组合正文的总体大小。 内容库存储软件更新、应用程序、操作系统部署等的所有内容文件。
+內容庫是內容的儲存單一版本，而 System Center Configuration Manager 可使用該內容來減少所發佈內容之合併主體的整體大小。 內容庫是存放軟體更新、應用程式、作業系統部署等所有內容檔案的位置。
 
- - 会在每个**站点服务器**和每个**分发点**上自动创建并维护内容库的副本。
+ - 在**站台伺服器**與每個**發佈點**上自動建立及維護的內容庫複本。
 
- - 在 Configuration Manager 将内容文件下载到站点服务器或将文件复制到分发点之前，Configuration Manager 会验证每个内容文件是否已在内容库中。
- - 如果有内容文件，则 Configuration Manager 不会复制该文件，而是会将现有内容文件与应用程序或包关联。
+ - 在 Configuration Manager 將內容檔案下載至站台伺服器，或將檔案複製到發佈點之前，Configuration Manager 會先驗證內容庫中是否已存在每個內容檔。
+ - 若可使用內容檔，Configuration Manager 並不會複製檔案，而是會建立現有內容檔與應用程式或套件的關聯。
 
-在安装分发点的计算机上，你可以配置下列内容：
+在安裝發佈點的電腦上，可以設定：
 
-- 希望在其上创建内容库的一个或多个磁盘驱动器。
-- 使用的每个驱动器的优先级。
+- 要建立內容庫的一個或多個磁碟機。
+- 每個所使用的磁碟機之優先順序。
 
-Configuration Manager 复制内容文件时，会将文件复制到优先级最高的驱动器中，直到该驱动器的可用空间小于指定的最小可用空间。
-- 在分发点安装过程中，你可以配置驱动器设置。
-- 安装完成后，无法在分发点属性中配置驱动器设置。
+當 Configuration Manager 複製內容檔案時，它會複製到優先順序最高的磁碟機，直到該磁碟機的可用空間數少於您指定的下限為止。
+- 您可在發佈點安裝期間設定磁碟機設定。
+- 完成安裝之後，即無法在發佈點內容中設定磁碟機設定。
 
 
-有关如何为分发点配置驱动器设置的详细信息，请参阅[为 System Center Configuration Manager 管理内容和内容基础结构](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。  
+如需如何設定發佈點之磁碟機設定的詳細資訊，請參閱[管理 System Center Configuration Manager 的內容與內容基礎結構](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。  
 
 
 >  [!IMPORTANT]  
->  若要在安装后将内容库移到分发点上的另一位置，请使用 System Center 2012 R2 Configuration Manager 工具包中的**内容库传输工具**。 可以从 [Microsoft Download Center（Microsoft 下载中心）](http://go.microsoft.com/fwlink/?LinkId=279566)下载此工具包。  
+>  若要在安裝後將內容庫移至發佈點上的不同位置，請使用 System Center 2012 R2 Configuration Manager Toolkit 中的**內容庫傳輸工具**。 您可以從 [Microsoft 下載中心](http://go.microsoft.com/fwlink/?LinkId=279566)下載此工具組。  
 
-## <a name="about-the-content-library-on-the-central-administration-site"></a>关于管理中心站点上的内容库  
- 默认情况下，安装站点时，Configuration Manager 会在管理中心站点上创建内容库。 该内容库放置在具有最多可用磁盘空间的站点服务器驱动器上。 因为无法在管理中心站点上安装分发点，所以无法确定内容库要使用的驱动器的优先级。 类似于其他站点服务器和分发点上的内容库，当包含内容库的驱动器可用磁盘空间不足时，内容库会自动跨越到下一个可用的驱动器。  
+## <a name="about-the-content-library-on-the-central-administration-site"></a>關於管理中心網站上的內容庫  
+ Configuration Manager 預設會在安裝管理中心網站時於站台上建立內容庫。 內容庫將存放於站台伺服器中有最多可用磁碟空間的磁碟機中。 由於您無法在管理中心網站上安裝發佈點，因此無法設定內容庫使用之磁碟機的優先性。 類似於其他站台伺服器上的內容庫和發佈點上的內容庫，當包含內容庫的磁碟機可用磁碟空間不足，內容庫將自動跨越至下個可用的磁碟機。  
 
- Configuration Manager 会在以下情况下使用管理中心站点上的内容库：  
+ Configuration Manager 在下列案例中會使用管理中心網站上的內容庫︰  
 
--   在管理中心站点上创建内容时。  
+-   在管理中心網站上建立內容時。  
 
--   迁移另一个 Configuration Manager 站点中的内容，并将管理中心站点指定为将管理该内容的站点时。  
+-   當您移轉其他 Configuration Manager 站台的內容時，並將管理中心網站指派為管理內容的站台。  
 
 > [!NOTE]  
->  在主站点创建内容，然后将其分发给其他主站点或其他主站点下面的辅助站点，管理中心站点将该内容临时存储在管理中心站点上的计划员收件箱中，但未将该内容添加到其内容库中。  
+>  當您在主要站台建立內容，並將內容發佈至不同的主要站台或不同主要站台之下的次要站台時，管理中心網站會暫時將該內容儲存在管理中心網站上的排程器收件匣中，但不會將該內容新增至其內容庫。  
 
- 使用以下选项管理位于管理中心站点上的内容库：  
+ 使用下列選項在管理中心網站上管理內容庫︰  
 
--   若要防止在特定驱动器上安装内容库，请在创建内容库前先创建一个名为 **no_sms_on_drive.sms** 的空文件，然后将该文件复制到驱动器的根文件夹。  
+-   若要避免將內容庫安裝在特定磁碟機，在建立內容庫之前，請建立一個空白檔案 **no_sms_on_drive.sms**，並將檔案複製到磁碟機的根資料夾。  
 
--   创建内容库之后，请使用 System Center 2012 R2 Configuration Manager 工具套件中的**内容库传输工具**来管理内容库的位置。 可以从 [Microsoft Download Center（Microsoft 下载中心）](http://go.microsoft.com/fwlink/?LinkId=279566)下载此工具包。  
-
+-   建立內容庫之後，請使用 System Center 2012 R2 Configuration Manager Toolkit 中的**內容庫傳輸工具**來管理內容庫的位置。 您可以從 [Microsoft 下載中心](http://go.microsoft.com/fwlink/?LinkId=279566)下載此工具組。  

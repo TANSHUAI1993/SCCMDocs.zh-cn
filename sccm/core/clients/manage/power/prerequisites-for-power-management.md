@@ -1,50 +1,43 @@
 ---
-title: "电源管理的先决条件 | Microsoft Docs"
-description: "获取 System Center Configuration Manager 中电源管理的先决条件。"
+title: "電源管理的必要條件 | Microsoft Docs"
+description: "取得 System Center Configuration Manager 中電源管理的必要條件。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9c062f13-3c1f-4621-9cae-de0e322aa03f
-caps.latest.revision: 4
-caps.handback.revision: 0
+caps.latest.revision: "4"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
 ms.openlocfilehash: 711ef491899846b86bfed0355ac7fd0f9d509c4f
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="prerequisites-for-power-management-in-system-center-configuration-manager"></a>System Center Configuration Manager 中电源管理的先决条件
+# <a name="prerequisites-for-power-management-in-system-center-configuration-manager"></a>System Center Configuration Manager 中電源管理的必要條件
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用於：System Center Configuration Manager (最新分支)*
 
-System Center Configuration Manager 中的电源管理具有外部依赖关系和产品中的依赖关系。  
+System Center Configuration Manager 中的電源管理具有外部相依性和產品內的相依性。  
 
-## <a name="dependencies-external-to-configuration-manager"></a>Configuration Manager 的外部依赖关系  
- 下表针对使用电源管理列出了 Configuration Manager 的外部依赖关系。  
+## <a name="dependencies-external-to-configuration-manager"></a>Configuration Manager 外部的相依性  
+ 下表列出 Configuration Manager 外部使用電源管理的相依性。  
 
-|依赖关系|更多信息|  
+|相依性|詳細資訊|  
 |----------------|----------------------|  
-|客户端计算机必须能够支持所需的电源状态|若要使用电源管理的所有功能，客户端计算机必须能够支持睡眠、休眠、从睡眠状态唤醒，以及从休眠状态唤醒操作。 可以使用“电源功能”  报表来确定计算机是否可以支持这些操作。 有关详细信息，请参阅[如何在 System Center Configuration Manager 中监视和规划电源管理](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md)主题中的[电源功能报表](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md#BKMK_Capabilites)。|  
+|用戶端電腦必須可以支援必要的電源狀態|若要使用電源管理的所有功能，用戶端電腦必須可以支援睡眠、休眠、從睡眠喚醒，以及從休眠喚醒的動作。 您可以使用 [電源功能]  報告，判斷電腦是否可支援這些動作。 如需詳細資訊，請參閱[如何監視和規劃 System Center Configuration Manager 的電源管理](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md)主題中的[電源管理報告](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md#BKMK_Capabilites)。|  
 
-## <a name="configuration-manager-dependencies"></a>Configuration Manager 依赖关系  
- 下表针对使用电源管理列出了 Configuration Manager 的内部依赖关系。  
+## <a name="configuration-manager-dependencies"></a>Configuration Manager 相依性  
+ 下表列出 Configuration Manager 內部使用電源管理的相依性。  
 
-|依赖关系|更多信息|  
+|相依性|詳細資訊|  
 |----------------|----------------------|  
-|必须先启用电源管理才能创建和监视电源计划。|有关如何启用和配置电源管理的信息，请参阅[在 System Center Configuration Manager 中配置电源管理](../../../../core/clients/manage/power/configuring-power-management.md)。|  
-|Reporting Services 点|在查看电源管理报表前，必须先配置一个 Reporting Services 点。 有关详细信息，请参阅 [System Center Configuration Manager 中的报表](../../../../core/servers/manage/reporting.md)。|  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-
+|必須先啟用電源管理，才能建立和監視電源計劃。|如需如何啟用和設定電源管理的相關資訊，請參閱[設定 System Center Configuration Manager 的電源管理](../../../../core/clients/manage/power/configuring-power-management.md)。|  
+|Reporting Services 點|您必須先設定 Reporting Services 點，才能檢視電源管理報告。 如需詳細資訊，請參閱 [Reporting in System Center Configuration Manager](../../../../core/servers/manage/reporting.md) (System Center Configuration Manager 中的報告)。|  

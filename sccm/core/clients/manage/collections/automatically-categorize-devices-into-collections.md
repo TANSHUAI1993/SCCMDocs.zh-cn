@@ -1,60 +1,57 @@
 ---
-title: "自动将设备分类到集合 | Microsoft Docs"
-description: "使用 System Center Configuration Manager 自动将设备分类到集合。"
+title: "自動將裝置分類為集合 | Microsoft Docs"
+description: "使用 System Center Configuration Manager 自動將裝置分類為集合。"
 ms.custom: na
 ms.date: 04/23/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 98b038b4-1a13-4228-bdb8-a12194e32b0e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 05c27c7aa36e0b4236867766dab36125c31467b3
-ms.openlocfilehash: b1bac05e9335dd757b8f499f97daea24e0f4acbd
-ms.contentlocale: zh-cn
-ms.lasthandoff: 01/03/2017
-
+ms.openlocfilehash: d1b79fb091a6ae4b967d63843ae7b45a0cbeb555
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="automatically-categorize-devices-into-collections-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 自动将设备分类到集合
+# <a name="automatically-categorize-devices-into-collections-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 自動將裝置分類為集合
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+適用於：System Center Configuration Manager (最新分支)
 
-可创建设备类别，可将其用于配合使用 Microsoft Intune 和 Configuration Manager 时自动在设备集合中放置设备。 然后用户在 Intune 中注册设备时需要选择某个设备类别。 可从 Configuration Manager 控制台中更改设备类别。
+您可以建立裝置類別，如此可在您使用 Configuration Manager 與 Microsoft Intune 時自動將裝置放在裝置集合中。 使用者向 Intune 註冊裝置時，必須選擇裝置類別。 您可以從 Configuration Manager 主控台變更裝置類別。
 
 > [!IMPORTANT]  
-    >  此功能适用于 **2016 年 6 月**及以后版本的 Microsoft Intune。 试用这些过程前，请确保已更新到此版本。
+    >  這項功能適用於 Microsoft Intune 的 **2016 年 6 月**版及更新版本。 請先確定已更新為此版，再嘗試這些程序。
 
-## <a name="create-device-categories"></a>创建设备类别
+## <a name="create-device-categories"></a>建立裝置類別
 
-1.  转到“资产和符合性” > “概述” > “设备集合”。
-2.  在“主页”选项卡上的“设备集合”组中，选择“管理设备类别”。
-3.  创建、编辑或删除类别。
+1.  移至 [資產與合規性] > [概觀] > [裝置集合]。
+2.  在 [常用] 索引標籤的 [裝置集合] 群組中，選擇 [管理裝置類別]。
+3.  建立、編輯或移除類別目錄。
 
-## <a name="associate-a-collection-with-a-device-category"></a>将集合与设备类别相关联
+## <a name="associate-a-collection-with-a-device-category"></a>建立集合與裝置類別的關聯
 
-将集合与设备类别关联后，该类别中的所有设备都会添加到该集合。 无法将设备类别规则添加到内置集合（如“所有系统”）。
+當您建立集合與裝置類別的關聯時，該類別中的所有裝置都會新增至該集合。 您無法將裝置類別規則新增至內建集合，例如 [所有系統]。
 
-1.  在设备集合“属性”对话框的“成员身份规则”选项卡上，选择“添加规则” > “设备类别规则”。
-2.  在“选择设备类别”对话框中，选择一个或多个设备类别，所选类别将应用到集合中的所有设备。
+1.  在裝置集合之 [內容] 對話方塊的 [成員資格規則] 索引標籤上，選擇 [新增規則] > [裝置類別規則]。
+2.  在 [選取裝置類別] 對話方塊中，選取將套用至集合中所有裝置的一或多個裝置類別。
 
-## <a name="change-the-category-of-a-device"></a>更改设备的类别
+## <a name="change-the-category-of-a-device"></a>變更裝置類別
 
-1.  在“资产和符合性” > “概述” > “设备”中，从“设备”列表中选择一个设备。
-2.  在“主页”选项卡的“设备”组中，选择“更改类别”。
-3.  选择一个类别，然后选择“确定”。
+1.  在 [資產與合規性] > [概觀] > [裝置] 下，從 [裝置] 選取裝置。
+2.  在 [首頁] 索引標籤的 [裝置] 群組中，選擇 [變更類別]。
+3.  選擇一個類別，然後選擇 [確定]。
 
-## <a name="view-which-category-a-device-belongs-to"></a>查看设备所属的类别
+## <a name="view-which-category-a-device-belongs-to"></a>檢視裝置屬於哪個類別
 
-在“资产和符合性” > “概述” > “设备”中的“设备”列表中，此类别在“设备类别”列中显示。
+在 [資產與合規性] > [概觀] > [裝置] 的 [裝置] 清單中，類別會顯示在 [裝置類別] 欄。
 
-如果“设备类别” 列未显示，请在“设备”列（如“名称”）中右键单击其中一个列标题，然后选择“设备类别”。
+如果 [裝置類別] 欄未顯示，請以滑鼠右鍵按一下 [裝置] 清單中的其中一個欄標題 (例如 [名稱])，然後選取 [裝置類別]。
 
-如果将某个设备分配到某个类别，随后又删除该类别，则“按用户在 Microsoft Intune 中注册的设备的列表”报表将在“设备类别”列显示 GUID，而不显示类别名称。
-
+如果您將裝置指派給一個類別，然後刪除該類別，[Microsoft Intune 中每位使用者註冊的裝置清單] 報告會在 [裝置類別] 欄中顯示 GUID，而不是類別名稱。

@@ -1,230 +1,226 @@
 ---
-title: "规划和配置应用程序管理 | Microsoft Docs"
-description: "实现和配置用于在 System Center Configuration Manager 中部署应用程序的所需依赖关系。"
+title: "規劃和設定應用程式管理 | Microsoft Docs"
+description: "實作和設定必要的相依性以在 System Center Configuration Manager 中部署應用程式。"
 ms.custom: na
 ms.date: 02/09/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-app
+ms.technology: configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 2be84a1d-ebb9-47ae-8982-c66d5b92a52a
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 1c43c4968f93985515249ddb117269f8ed61302a
 ms.openlocfilehash: 46cc3fcfd9516cf1c124e24b50d0aac0cb0025dc
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="plan-for-and-configure-application-management-in-system-center-configuration-manager"></a>规划和配置 System Center Configuration Manager 中的应用程序管理
+# <a name="plan-for-and-configure-application-management-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中規劃和設定應用程式管理
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用於：System Center Configuration Manager (最新分支)*
 
-使用本文中的信息可帮助实现用于在 System Center Configuration Manager 中部署应用程序的所需依赖关系。  
+使用本文中的資訊，協助您實作所需的相依性，以便在 System Center Configuration Manager 中部署應用程式。  
 
-## <a name="dependencies-external-to-configuration-manager"></a>Configuration Manager 的外部依赖关系  
+## <a name="dependencies-external-to-configuration-manager"></a>Configuration Manager 外部的相依性  
 
-|依赖关系|更多信息|  
+|相依性|詳細資訊|  
 |------------------|----------------------|  
-|在运行应用程序目录网站点、应用程序目录 Web 服务点、管理点和分发点的站点系统服务器上，需要安装 Internet Information Services (IIS)。|有关此要求的详细信息，请参阅[支持的配置](../../core/plan-design/configs/supported-configurations.md)。|  
-|Configuration Manager 注册的移动设备|在对应用程序进行代码签名以将其部署到移动设备时，如果使用版本 3 模 (**Windows Server 2008, Enterprise Edition**) 生成了证书，请勿使用此证书。 此证书模板创建的证书与用于移动设备的 Configuration Manager 应用程序不兼容。<br /><br /> 如果使用 Active Directory 证书服务对移动设备应用程序进行代码签名，请勿使用版本 3 证书模板。|  
-|如果想自动创建用户设备相关性，必须将客户端配置为审核登录事件。|Configuration Manager 客户端从电脑的安全事件日志中读取类型为“成功”的登录事件，以确定自动的用户设备相关性。  通过以下两个审核策略，启用这些事件：<br>**审核帐户登录事件**<br>**审核登录事件**<br>若要自动在用户和设备之间创建关系，请确保在客户端计算机上启用这两个设置。 可以使用 Windows 组策略来配置这两个设置。|  
+|執行應用程式類別目錄網站點的站台系統伺服器、應用程式類別目錄 Web 服務點、管理點及發佈點均需要 Internet Information Services (IIS)。|如需這項需求的詳細資訊，請參閱[支援的設定](../../core/plan-design/configs/supported-configurations.md)。|  
+|Configuration Manager 註冊的行動裝置|進行應用程式程式碼簽署以將其部署至行動裝置時，請勿使用以第 3 版範本 (**Windows Server 2008 Enterprise Edition**) 所產生的憑證。 此憑證範本所建立的憑證與行動裝置適用的 Configuration Manager 應用程式不相容。<br /><br /> 如果您的行動裝置應用程式使用 Active Directory 憑證服務進行應用程式程式碼簽署，請勿使用第 3 版的憑證範本。|  
+|如果要自動建立使用者裝置親和性，就必須將用戶端設為稽核登入事件。|Configuration Manager 用戶端會從電腦安全性事件記錄檔讀取 [成功] 類型的登入事件，以判定自動使用者裝置親和性。  這些事件是透過下列兩項稽核原則啟用：<br>**稽核帳戶登入事件**<br>**稽核登入事件**<br>要自動建立使用者和裝置之間的關聯性，請務必在用戶端電腦上啟用這兩種設定。 您可以使用 Windows 群組原則設定這些設定。|  
 
-## <a name="configuration-manager-dependencies"></a>Configuration Manager 依赖关系   
+## <a name="configuration-manager-dependencies"></a>Configuration Manager 相依性   
 
-|依赖关系|更多信息|  
+|相依性|詳細資訊|  
 |------------------|----------------------|  
-|管理点|客户端会与管理点联系，以下载客户端策略、查找内容和连接到应用程序目录。<br /><br /> 如果客户端无法访问管理点，则无法使用应用程序目录。|  
-|分发点|在可以将应用程序部署到客户端之前，层次结构中必须有至少一个分发点。 默认情况下，站点服务器在标准安装时启用分发点站点角色。 分发点的数量和位置将因企业的特定要求而异。<br /><br /> 若要深入了解如何安装分发点和管理内容，请参阅[管理内容和内容基础结构](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。|  
-|客户端设置|许多客户端设置都可以控制在客户端上安装应用程序的方式和用户在客户端上的体验。 这些客户端设置包括：<br /><br /><ul><li>计算机代理</li><li>计算机重新启动</li><li>软件部署</li><li>用户和设备相关性</li></ul> 有关这些客户端设置的详细信息，请参阅[关于客户端设置](../../core/clients/deploy/about-client-settings.md)。<br /><br /> 若要了解如何配置客户端设置，请参阅[如何配置客户端设置](../../core/clients/deploy/configure-client-settings.md)。|  
-|对于应用程序目录：<br /><br /> 发现的用户帐户|用户必须先被 Configuration Manager 发现，然后才能查看和请求应用程序目录中的应用程序。 有关详细信息，请参阅[运行发现](/sccm/core/servers/deploy/configure/run-discovery)。|  
-|必须安装 APP-V 4.6 SP1 或更高版本的客户端才能运行虚拟应用程序|为了能够在 Configuration Manager 中创建虚拟应用程序，客户端计算机必须安装 App-V 4.6 SP1 或更高版本的客户端。<br /><br /> 还必须使用在知识库[文章 2645225](http://go.microsoft.com/fwlink/p/?LinkId=237322) 中描述的修补程序来更新 App-V 客户端，才能部署虚拟应用程序。|  
-|应用程序目录 Web 服务点|应用程序目录 Web 服务点是站点系统角色，它向应用程序目录网站提供有关软件库中可用的软件的信息。<br /><br /> 若要深入了解如何配置此站点系统角色，请参阅本文中的[配置软件中心和应用程序目录（仅适用于 Windows 电脑）](/sccm/apps/plan-design/plan-for-and-configure-application-management#configure-software-center-and-the-application-catalog-windows-pcs-only)。|  
-|应用程序目录网站点|应用程序目录网站点是站点系统角色，它向用户提供可用软件的列表。<br /><br /> 若要深入了解如何配置此站点系统角色，请参阅本文中的[配置软件中心和应用程序目录（仅适用于 Windows 电脑）](/sccm/apps/plan-design/plan-for-and-configure-application-management#configure-software-center-and-the-application-catalog-windows-pcs-only)。|  
-|Reporting Services 点|为了能够使用 Configuration Manager 中的报表进行应用程序管理，必须首先安装和配置 Reporting Services 点。<br /><br /> 有关详细信息，请参阅 [System Center Configuration Manager 中的报表](../../core/servers/manage/reporting.md)。|  
-|应用程序管理的安全权限|必须具有以下安全权限才能管理应用程序。<br /><br /> “应用程序作者”安全角色包含前面列出的在 Configuration Manager 中创建、更改和停用应用程序所需的权限。<br /><br /> **若要部署应用程序，请执行以下操作：**<br /><br /> “应用程序部署管理员”安全角色包含前面列出的在 Configuration Manager 中部署应用程序所需的权限。<br /><br /> “应用程序管理员”安全角色具有“应用程序作者”和“应用程序部署管理员”安全角色中的所有权限。<br /><br /> 有关详细信息，请参阅[配置基于角色的管理](../../core/servers/deploy/configure/configure-role-based-administration.md)。|  
+|管理點|用戶端會連絡管理點，以下載用戶端原則、尋找內容，以及連線至應用程式類別目錄。<br /><br /> 如果用戶端無法存取管理點，就不能使用應用程式類別目錄。|  
+|發佈點|您的階層中至少必須要有一個發佈點，才能將應用程式部署至用戶端。 站台伺服器預設會在標準安裝期間啟用一個發佈點站台。 發佈點的數量和位置因貴企業的特定需求而異。<br /><br /> 如需如何安裝發佈點及管理內容的詳細資訊，請參閱[管理內容與內容基礎結構](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。|  
+|用戶端設計|許多用戶端設定會控制在用戶端上安裝應用程式的方式，以及用戶端上的一般使用者體驗。 其中包括下列用戶端設定：<br /><br /><ul><li>電腦代理程式</li><li>電腦重新啟動</li><li>軟體部署</li><li>使用者和裝置親和性</li></ul> 如需這些用戶端設定的詳細資訊，請參閱[關於用戶端設定](../../core/clients/deploy/about-client-settings.md)。<br /><br /> 如需如何設定用戶端設定的相關資訊，請參閱[如何設定用戶端設定](../../core/clients/deploy/configure-client-settings.md)。|  
+|應用程式類別目錄：<br /><br /> 探索到的使用者帳戶|Configuration Manager 必須先探索到使用者之後，使用者才能檢視及要求應用程式類別目錄中的應用程式。 如需詳細資訊，請參閱[執行探索](/sccm/core/servers/deploy/configure/run-discovery)。|  
+|使用 App-V 4.6 SP1 或更新版的用戶端執行虛擬應用程式|用戶端電腦必須安裝 App-V 4.6 SP1 或更新版本的用戶端，才能在 Configuration Manager 中建立虛擬應用程式。<br /><br /> 此外，您必須先使用知識庫[文章 2645225](http://go.microsoft.com/fwlink/p/?LinkId=237322) 中所述的 Hotfix 來更新 App-V 用戶端，才能部署虛擬應用程式。|  
+|應用程式類別目錄 Web 服務點|應用程式類別目錄 Web 服務點是一個站台系統角色，可針對在應用程式類別目錄中能夠使用的軟體庫軟體提供相關資訊。<br /><br /> 如需如何設定此站台系統角色的相關資訊，請參閱本文中的[設定軟體中心和應用程式類別目錄 (僅限 Windows 電腦)](/sccm/apps/plan-design/plan-for-and-configure-application-management#configure-software-center-and-the-application-catalog-windows-pcs-only)。|  
+|應用程式類別目錄網站點|應用程式類別目錄網站點是一個站台系統角色，可提供可用軟體清單給使用者。<br /><br /> 如需如何設定此站台系統角色的相關資訊，請參閱本文中的[設定軟體中心和應用程式類別目錄 (僅限 Windows 電腦)](/sccm/apps/plan-design/plan-for-and-configure-application-management#configure-software-center-and-the-application-catalog-windows-pcs-only)。|  
+|Reporting Services 點|您必須先安裝並設定 Reporting Services 點，才能使用 Configuration Manager 中的報告管理應用程式。<br /><br /> 如需詳細資訊，請參閱 [Reporting in System Center Configuration Manager](../../core/servers/manage/reporting.md) (System Center Configuration Manager 中的報告)。|  
+|應用程式管理的安全性權限|您必須具備下列安全性權限，才能管理應用程式。<br /><br /> [應用程式作者] 安全性角色包括上述所有權限，在 Configuration Manager 中建立、變更及淘汰應用程式時需要這些權限。<br /><br /> **部署應用程式：**<br /><br /> [應用程式部署管理員] 安全性角色包括上述所有權限，在 Configuration Manager 中部署應用程式時需要這些權限。<br /><br /> [應用程式系統管理員] 安全性角色具備 [應用程式作者] 和 [應用程式部署管理員] 等安全性角色的所有權限。<br /><br /> 如需詳細資訊，請參閱[設定以角色為基礎的系統管理](../../core/servers/deploy/configure/configure-role-based-administration.md)。|  
 
-##  <a name="configure-software-center-and-the-application-catalog-windows-pcs-only"></a>配置软件中心和应用程序目录（仅适用于 Windows PC）  
+##  <a name="configure-software-center-and-the-application-catalog-windows-pcs-only"></a>設定軟體中心和應用程式類別目錄 (僅限 Windows 電腦)  
 
- 在 System Center Configuration Manager 中，对于用户如何更改设置、浏览应用程序和安装应用程序，现在有两个选项：  
+ 在 System Center Configuration Manager 中，您現在有兩個選項可讓使用者用來變更設定、瀏覽應用程式及安裝應用程式：  
 
--   **新的软件中心** - 新的软件中心具有新式外观。 并且本应仅出现在依赖于 Silverlight 的应用程序目录中的应用（用户可用的应用）现在将出现在“应用程序”选项卡下的软件中心。 应用程序目录仍然可以通过软件中心的“安装状态”选项卡下的链接进行访问。  
+-   **新的軟體中心** - 新的軟體中心具備現代化外觀。 先前只出現在 Silverlight 相依應用程式類別目錄 (使用者可用的應用程式) 中的應用程式，現在會出現在軟體中心的 [應用程式] 索引標籤下方。 應用程式類別目錄還是可以使用軟體中心 [安裝狀態] 索引標籤下的連結進行存取。  
 
-     你可以通过启用客户端设置“计算机代理” **计算机代理** > **使用新的软件中心**。  
+     您可以啟用用戶端設定 [電腦代理程式] **電腦代理程式** > **使用新的軟體中心**。  
 
     > [!IMPORTANT]  
-    >  虽然不再需要连接到应用程序目录，但仍必须配置应用程序目录网站点和应用程序目录 Web 服务点，该内容将在下一节中详细介绍。  
+    >  雖然您不再需要連線至應用程式類別目錄，但您還是必須設定應用程式類別目錄網站點和應用程式類別目錄 Web 服務點，如下一節所述。  
 
--   **以前的软件中心和应用程序目录** - 默认情况下，用户会继续连接到以前版本的软件中心并连接到应用程序目录（需要 Silverlight 启用的 Web 浏览器）来浏览可用的应用程序。  
+-   **先前的軟體中心和應用程式類別目錄** - 根據預設，使用者會繼續連線至舊版的軟體中心以及連線至應用程式類別目錄 (需要啟用 Silverlight 功能的網頁瀏覽器) 來瀏覽可用的應用程式。  
 
- 无论你选择使用哪个版本，当你在 Windows 电脑上安装 Configuration Manager 客户端时，都会自动安装软件中心。  
+ 不論您選擇使用哪個版本，當您在 Windows 電腦上安裝 Configuration Manager 用戶端時，都會自動安裝軟體中心。  
 
     > [!TIP]  
-    >  用户看到的软件中心的版本取决于 Configuration Manager 客户端设置。 这样便能根据部署到集合的自定义客户端设置，灵活地控制使用哪个版本。 
+    >  使用者看到的軟體中心版本視 Configuration Manager 用戶端設定而定。 這可讓您根據部署至集合的自訂用戶端設定，彈性地控制所使用的版本。 
 
     > [!IMPORTANT]
-    > 在未来几个月，我们将删除以前版本的软件中心，并且它将不再可用。
-    > 你可以通过启用客户端设置“计算机代理” **计算机代理** > **使用新的软件中心**。 
+    > 在未來的幾個月，我們將會移除舊版的軟體中心，並且不再提供使用。
+    > 您可以啟用用戶端設定 [電腦代理程式] **電腦代理程式** > **使用新的軟體中心**。 
 
-## <a name="steps-to-install-and-configure-the-application-catalog-and-software-center"></a>安装和配置应用程序目录及软件中心的步骤  
+## <a name="steps-to-install-and-configure-the-application-catalog-and-software-center"></a>安裝和設定應用程式類別目錄和軟體中心的步驟  
 
 > [!IMPORTANT]  
->  执行这些步骤以前，请确保已满足之前所列的所有先决条件。  
+>  在執行這些步驟之前，請確定您已符合先前所列的所有必要條件。  
 
-|步骤|详细信息|更多信息|  
+|步驟|詳細資料|詳細資訊|  
 |-----------|-------------|----------------------|  
-|**步骤 1：** 如果你将使用 HTTPS 连接，请确保已将 Web 服务器证书部署到站点系统服务器。|将 Web 服务器证书部署到将运行应用程序目录网站点和应用程序目录 Web 服务点的站点系统服务器。<br /><br /> 此外，如果希望客户端从 Internet 中使用应用程序目录，请将 Web 服务器证书部署到至少一个管理点站点系统服务器，并针对来自 Internet 的客户端连接对其进行配置。|有关证书要求的详细信息，请参阅 [PKI 证书要求](../../core/plan-design/network/pki-certificate-requirements.md)。|  
-|**步骤 2：** 如果你将使用客户端 PKI 证书连接到管理点，请将客户端身份验证证书部署到客户端计算机。|尽管客户端不使用客户端 PKI 证书来连接到应用程序目录，但它们必须连接到管理点，然后才能使用应用程序目录。 在以下情况下，你必须将客户端身份验证证书部署到客户端计算机：<br /><br /><ul><li>Intranet 中的所有管理点只接受 HTTPS 客户端连接。</li><li>客户端将从 Internet　连接到应用程序目录。</li></ul>|有关证书要求的详细信息，请参阅 [PKI 证书要求](../../core/plan-design/network/pki-certificate-requirements.md)。|  
-|**步骤 3：** 安装和配置应用程序目录 Web 服务点和应用程序目录网站。|必须将这两个站点系统角色安装在同一站点中。 你不必将它们安装在同一站点系统服务器上或安装在同一 Active Directory 林中。 但是，应用程序目录 Web 服务点必须位于站点数据库所在的林中。|有关站点系统角色布局的详细信息，请参阅[规划站点系统服务器和站点系统角色](../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md)。<br /><br /> 要配置应用程序目录 Web 服务点和应用程序目录网站点，请参阅**步骤 3：安装和配置应用程序目录站点系统角色**。|  
-|**步骤 4：** 为应用程序目录和软件中心配置客户端设置。|如果希望所有用户具有相同设置，请配置默认客户端设置。 否则，请为特定集合配置自定义客户端设置。|有关客户端设置的详细信息，请参阅[关于客户端设置](../../core/clients/deploy/about-client-settings.md)。<br /><br /> 若要详细了解如何配置这些客户端设置，请参阅**步骤 4：为应用程序目录和软件中心配置客户端设置**。|  
-|**步骤 5：** 验证应用程序目录是否可正常运行。|可以从浏览器或软件中心中直接使用应用程序目录。|请参阅**步骤 5：验证应用程序目录是否可正常运行**。|  
+|**步驟 1：** 如果您將使用 HTTPS 連線，請確定您已將 Web 伺服器憑證部署至站台系統伺服器。|將 Web 伺服器憑證部署至將執行應用程式類別目錄網站點，和應用程式類別目錄 Web 服務點的站台系統伺服器。<br /><br /> 此外，如果您要讓用戶端從網際網路存取應用程式類別目錄，請將 Web 伺服器憑證部署到至少一個管理點站台系統伺服器，並且設定該憑證用於來自網際網路的用戶端連線。|如需憑證需求的詳細資訊，請參閱 [PKI 憑證需求](../../core/plan-design/network/pki-certificate-requirements.md)。|  
+|**步驟 2：** 如要使用用戶端 PKI 憑證與管理點連線，請將用戶端驗證憑證部署至用戶端電腦。|雖然用戶端不會使用用戶端 PKI 憑證連線至應用程式類別目錄，但是必須先連線到管理點，才能使用應用程式類別目錄。 在下列案例中，您必須將用戶端驗證憑證部署至用戶端電腦：<br /><br /><ul><li>內部網路上的所有管理點只接受 HTTPS 用戶端連線。</li><li>用戶端將從網際網路連線到應用程式類別目錄。</li></ul>|如需憑證需求的詳細資訊，請參閱 [PKI 憑證需求](../../core/plan-design/network/pki-certificate-requirements.md)。|  
+|**步驟 3：** 安裝及設定應用程式類別目錄 Web 服務點和應用程式類別目錄網站。|您必須將這兩個站台系統角色安裝到相同站台上。 您不一定要將它們安裝到同一部站台系統伺服器上，或相同的 Active Directory 樹系中。 不過，應用程式類別目錄 Web 服務點必須與站台資料庫位於相同的樹系中。|如需站台系統角色放置的詳細資訊，請參閱[規劃站台系統伺服器和站台系統角色](../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md)。<br /><br /> 若要設定應用程式類別目錄 Web 服務點和應用程式類別目錄網站點，請參閱**步驟 3：安裝及設定應用程式類別目錄站台系統角色**。|  
+|**步驟 4：** 設定應用程式類別目錄和軟體中心的用戶端設定。|如果您希望所有使用者擁有相同的設定，請設定預設用戶端設定。 否則，請針對特定集合設定自訂用戶端設定。|如需用戶端設定的詳細資訊，請參閱[關於用戶端設定](../../core/clients/deploy/about-client-settings.md)。<br /><br /> 如需如何設定這些用戶端設定的詳細資訊，請參閱**步驟 4：設定應用程式類別目錄和軟體中心的用戶端設定**。|  
+|**步驟 5：** 確認應用程式類別目錄可運作。|您可以直接從瀏覽器或軟體中心使用應用程式類別目錄。|請參閱**步驟 5：確認應用程式類別目錄可運作**。|  
 
-## <a name="supplemental-procedures-to-install-and-configure-the-application-catalog-and-software-center"></a>用于安装和配置应用程序目录和软件中心的补充过程  
- 如果上表中的步骤需要执行补充过程，请使用以下信息。  
+## <a name="supplemental-procedures-to-install-and-configure-the-application-catalog-and-software-center"></a>安裝及設定應用程式類別目錄和軟體中心的補充程序  
+ 當上表中的步驟需要補充程序時，可利用下列資訊。  
 
-###  <a name="step-3-install-and-configure-the-application-catalog-site-system-roles"></a>步骤 3：安装和配置应用程序目录站点系统角色  
- 这些过程为应用程序目录配置站点系统角色。 请选择以下两个过程之一，具体取决于是安装新站点系统服务器还是使用现有站点系统服务器：  
+###  <a name="step-3-install-and-configure-the-application-catalog-site-system-roles"></a>步驟 3：安裝及設定應用程式類別目錄站台系統角色  
+ 這些程序會設定應用程式類別目錄的站台系統角色。 根據您要安裝新的站台系統伺服器，或是使用現有的站台系統伺服器而定，選擇下列其中一個程序：  
 
 > [!NOTE]  
->  应用程序目录不能安装在辅助站点或管理中心站点上。  
+>  應用程式類別目錄無法安裝到次要站台或管理中心網站上。  
 
-####  <a name="to-install-and-configure-the-application-catalog-site-systems-new-site-system-server"></a>安装和配置应用程序目录站点系统：新建站点系统服务器  
+####  <a name="to-install-and-configure-the-application-catalog-site-systems-new-site-system-server"></a>安裝及設定應用程式類別目錄站台系統：新增網站系統伺服器  
 
-1.  在 Configuration Manager 控制台中，选择“管理” > “站点配置” > “服务器和站点系统角色”。  
+1.  在 Configuration Manager 主控台中，選擇 [系統管理] > [站台設定] > [伺服器和站台系統角色]。  
 
-3.  在“主页”选项卡上的“创建”组中，选择“创建站点系统服务器”。  
+3.  在 [首頁] 索引標籤的 [建立] 群組中，選擇 [建立站台系統伺服器]。  
 
-4.  在“常规”页上，指定站点系统的常规设置，然后选择“下一步”。  
-
-    > [!TIP]  
-    >  如果希望客户端计算机通过 Internet 使用应用程序目录，请指定 Internet 完全限定的域名 (FQDN)。  
-
-5.  在“系统角色选择”页上，从可用角色列表选择“应用程序目录 Web 服务点”和“应用程序目录网站点”，然后选择“下一步”。  
-
-6.  完成该向导。  
-
-####  <a name="to-install-and-configure-the-application-catalog-site-systems-existing-site-system-server"></a>安装和配置应用程序目录站点系统：现有站点系统服务器  
-
-1.  在 Configuration Manager 控制台中，选择“管理” > “站点配置” > “服务器和站点系统角色”，然后选择要用于应用程序目录的服务器。  
-
-3.  在“主页”选项卡上的“服务器”组中，选择“添加站点系统角色”。  
-
-4.  在“常规”页上，指定站点系统的常规设置，然后选择“下一步”。  
+4.  在 [一般] 頁面上，指定站台系統的一般設定，然後選擇 [下一步] 。  
 
     > [!TIP]  
-    >  如果希望客户端计算机通过 Internet 使用应用程序目录，请指定 Internet 完全限定的域名 (FQDN)。  
+    >  如果您想要讓用戶端電腦透過網際網路使用應用程式類別目錄，請指定網際網路完整網域名稱 (FQDN)。  
 
-5.  在“系统角色选择”页上，从可用角色列表选择“应用程序目录 Web 服务点”和“应用程序目录网站点”，然后选择“下一步”。  
+5.  在 [系統角色選取] 頁面上，從可用角色清單中選取 [應用程式類別目錄 Web 服務點] 和 [應用程式類別目錄網站點]，然後選擇 [下一步]。  
 
-6.  完成该向导。  
+6.  完成精靈。  
 
-7. 通过使用状态消息和查看日志文件来验证这些站点系统角色的安装：  
+####  <a name="to-install-and-configure-the-application-catalog-site-systems-existing-site-system-server"></a>安裝及設定應用程式類別目錄站台系統：現有的網站系統伺服器  
 
-    状态消息：使用组件“SMS_PORTALWEB_CONTROL_MANAGER”  和“SMS_AWEBSVC_CONTROL_MANAGER” 。  
+1.  在 Configuration Manager 主控台中，選擇 [系統管理] > [站台設定] > [伺服器和站台系統角色]，然後選取要用於應用程式類別目錄的伺服器。  
 
-    例如，“SMS_PORTALWEB_CONTROL_MANAGER”的状态 ID“1015”确认站点组件管理器已成功安装在应用程序目录网站点上。  
+3.  在 [首頁] 索引標籤的 [伺服器] 群組中，選取 [新增網站系統角色]。  
 
-    日志文件：搜索 **SMSAWEBSVCSetup.log** 和 **SMSPORTALWEBSetup.log**。  
+4.  在 [一般] 頁面上，指定站台系統的一般設定，然後選擇 [下一步] 。  
 
-    有关详细信息，请搜索 **awebsvcMSI.log** 和 **portlwebMSI.log** 日志文件。  
+    > [!TIP]  
+    >  如果您想要讓用戶端電腦透過網際網路使用應用程式類別目錄，請指定網際網路完整網域名稱 (FQDN)。  
 
-###  <a name="step-4-configure-the-client-settings-for-the-application-catalog-and-software-center"></a>步骤 4：为应用程序目录和软件中心配置客户端设置  
- 此过程为应用程序目录和软件中心配置将适用于层次结构中的所有设备的默认客户端设置。 如果希望这些设置仅适用于某些设备，则可以创建自定义客户端设置并将其部署到一个集合，该集合中的设备具有特定设置。 若要深入了解如何创建自定义设备设置，请参阅[如何在 System Center Configuration Manager 中配置客户端设置](../../core/clients/deploy/configure-client-settings.md)一文中的[如何创建和部署自定义客户端设置](../../core/clients/deploy/configure-client-settings.md#create-and-deploy-custom-client-settings)部分。  
+5.  在 [系統角色選取] 頁面上，從可用角色清單中選取 [應用程式類別目錄 Web 服務點] 和 [應用程式類別目錄網站點]，然後選擇 [下一步]。  
 
-1.  在 Configuration Manager 控制台中，选择“管理” > “客户端设置” > “默认客户端设置”。  
+6.  完成精靈。  
 
-3.  在“主页”选项卡上的“属性”组中，选择“属性”。  
+7. 藉由使用狀態訊息和檢閱記錄檔，確認這些站台系統角色的安裝：  
 
-4.  查看并配置与用户通知、应用程序目录和软件中心相关的设置。 例如：  
+    狀態訊息：使用元件 **SMS_PORTALWEB_CONTROL_MANAGER** 和 **SMS_AWEBSVC_CONTROL_MANAGER**。  
 
-    1.  “计算机代理” 组：  
+    例如 **SMS_PORTALWEB_CONTROL_MANAGER** 的狀態識別碼 **1015** 可確認站台元件管理員已成功安裝在應用程式類別目錄網站點上。  
 
-        -   **默认应用程序目录网站点**  
+    記錄檔：搜尋 **SMSAWEBSVCSetup.log** 和 **SMSPORTALWEBSetup.log**。  
 
-        -   **向 Internet Explorer 受信任的站点区域添加默认应用程序目录网站**  
+    如需詳細資訊，請搜尋 **awebsvcMSI.log** 和 **portlwebMSI.log** 記錄檔。  
 
-        -   **软件中心中显示的组织名称**  
+###  <a name="step-4-configure-the-client-settings-for-the-application-catalog-and-software-center"></a>步驟 4：設定應用程式類別目錄和軟體中心的用戶端設定  
+ 此程序會設定應用程式類別目錄和軟體中心的預設用戶端設定，這些設定將套用至階層內所有裝置。 如果您只要將這些設定套用至部分裝置，可以建立自訂用戶端設定，並將它部署至具備將擁有特定設定之裝置的集合。 如需如何建立自訂裝置設定的詳細資訊，請參閱[如何在 System Center Configuration Manager 中設定用戶端設定](../../core/clients/deploy/configure-client-settings.md)文章中的[如何建立及部署自訂用戶端設定](../../core/clients/deploy/configure-client-settings.md#create-and-deploy-custom-client-settings)一節。  
+
+1.  在 Configuration Manager 主控台中，選擇 [系統管理] > [用戶端設定] > [預設用戶端設定]。  
+
+3.  在 [首頁] 索引標籤的 [內容] 群組中，選擇 [內容]。  
+
+4.  檢閱並設定與使用者通知、應用程式類別目錄和軟體中心相關的設定。 例如：  
+
+    1.  [電腦代理程式] 群組：  
+
+        -   **預設應用程式類別目錄網站點**  
+
+        -   **將預設應用程式類別目錄網站新增至 Internet Explorer 的信任的網站區域**  
+
+        -   **顯示於軟體中心的組織名稱**  
 
             > [!TIP]  
-            >  要指定显示在应用程序目录中的组织名称并配置网站主题，请使用应用程序目录网站属性上的“自定义”选项卡。  
+            >  若要指定應用程式類別目錄中顯示的組織名稱以及設定網站佈景主題，請使用應用程式類別目錄網站內容中的 [自訂] 索引標籤。  
 
-        -   **使用新的软件中心** - 借助新的软件中心，用户可以浏览和安装可用的应用而无需访问应用程序目录（需要 Silverlight 启用的 Web 浏览器），如果要使用新的软件中心，请设置为“是”。  
+        -   **使用新的軟體中心** - 如果您想要使用新的軟體中心，讓使用者瀏覽及安裝可用的應用程式，而不需要存取應用程式類別目錄 (這需要啟用 Silverlight 功能的網頁瀏覽器)，請設為 [是] 。  
 
-        -   **安装权限**  
+        -   **安裝權限**  
 
-        -   **显示关于新部署的通知**  
+        -   **針對新部署顯示通知**  
 
-    2.  “电源管理” 组：  
+    2.  [電源管理] 群組：  
 
-        -   **允许用户从电源管理中排除其设备**  
+        -   **允許使用者從電源管理排除其裝置**  
 
-    3.  “远程工具” 组：  
+    3.  [遠端工具] 群組：  
 
-        -   **用户可以在软件中心内更改策略或通知设置**  
+        -   **使用者可以在軟體中心變更原則或通知設定**  
 
-    4.  “用户和设备相关性” 组：  
+    4.  [使用者和裝置親和性] 群組：  
 
-        -   **允许用户定义其主要设备**  
+        -   **允許使用者定義其主要裝置**  
 
     > [!NOTE]  
-    >  有关客户端设置的详细信息，请参阅[关于 System Center Configuration Manager 中的客户端设置](../../core/clients/deploy/about-client-settings.md)。  
+    >  如需用戶端設定的詳細資訊，請參閱[關於 System Center Configuration Manager 中的用戶端設計](../../core/clients/deploy/about-client-settings.md)。  
 
-5.  选择“确定”可关闭“默认客户端设置”对话框。  
+5.  選擇 [確定] 以關閉 [預設用戶端設定] 對話方塊。  
 
- 当客户端计算机下一次下载客户端策略时，将使用这些设置对它们进行配置。 若要为单个客户端启动策略检索，请参阅[如何管理客户端](../../core/clients/manage/manage-clients.md)。
+ 用戶端電腦將會在下一次下載用戶端原則時進行這些設定。 若要起始單一用戶端的原則擷取，請參閱[如何管理用戶端](../../core/clients/manage/manage-clients.md)。
 
-#### <a name="how-to-customize-software-center-branding"></a>如何自定义软件中心品牌
+#### <a name="how-to-customize-software-center-branding"></a>如何自訂軟體中心商標
 
-根据以下规则应用软件中心的自定义品牌：
+軟體中心的自訂商標會根據下列規則套用：
 
-1. 如果未安装应用程序目录网站点站点服务器角色，则软件中心将显示“计算机代理”客户端设置（软件中心中显示的“组织名称”）中指定的组织名称。 有关说明，请参阅[如何配置客户端设置](https://docs.microsoft.com/en-us/sccm/core/clients/deploy/configure-client-settings)。
-2. 如果已安装应用程序目录网站点站点服务器角色，则软件中心将显示在应用程序目录网站点站点服务器角色属性中指定的组织名称和颜色。 有关详细信息，请参阅[应用程序目录网站点的配置选项](https://docs.microsoft.com/en-us/sccm/core/servers/deploy/configure/configuration-options-for-site-system-roles#BKMK_ApplicationCatalog_Website)。
-3. 如果已配置 Microsoft Intune 订阅且已连接到 Configuration Manager，则软件中心将显示 Intune 订阅属性中指定的组织名称、颜色和公司徽标。 有关详细信息，请参阅 [Configuring the Microsoft Intune subscription](https://docs.microsoft.com/en-us/sccm/mdm/deploy-use/setup-hybrid-mdm#step-3-configure-intune-subscription)。
+1. 如果未安裝應用程式類別目錄網站點站台伺服器角色，軟體中心將會顯示**電腦代理程式**用戶端設定 [顯示在軟體中心的組織名稱] 中指定的組織名稱。 如需相關指示，請參閱[如何設定用戶端設定](https://docs.microsoft.com/en-us/sccm/core/clients/deploy/configure-client-settings)。
+2. 如果未安裝「應用程式類別目錄網站點」站台伺服器角色，則「軟體中心」將會顯示「應用程式類別目錄網站點」站台伺服器角色內容中指定的組織名稱和色彩。 如需詳細資訊，請參閱[應用程式類別目錄網站點的設定選項](https://docs.microsoft.com/en-us/sccm/core/servers/deploy/configure/configuration-options-for-site-system-roles#BKMK_ApplicationCatalog_Website)。
+3. 如果已設定 Microsoft Intune 訂閱並連線到 Configuration Manager 環境，則軟體中心將會顯示 Intune 訂閱內容中指定的組織名稱、色彩及公司標誌。 如需詳細資訊，請參閱 [Configuring the Microsoft Intune subscription](https://docs.microsoft.com/en-us/sccm/mdm/deploy-use/setup-hybrid-mdm#step-3-configure-intune-subscription)。
 
 > [!IMPORTANT]  
->  软件中心品牌与 Intune 服务每 14 天同步一次，因此在 Intune 中所做的更改显示在 Configuration Manager 以前，可能会有延迟。
+>  軟體中心商標每隔 14 天會與 Intune 服務進行同步處理，因此，在 Configuration Manager 顯示您於 Intune 中所做的變更之前，可能會有延遲。
 
-###  <a name="step-5-verify-that-the-application-catalog-is-operational"></a>步骤 5：验证应用程序目录是否可正常运行  
- 使用以下过程来验证应用程序目录是否可正常运行。 可以从浏览器或软件中心中直接使用应用程序目录。  
+###  <a name="step-5-verify-that-the-application-catalog-is-operational"></a>步驟 5：確認應用程式類別目錄可運作  
+ 利用下列程序確認應用程式類別目錄可運作。 您可以直接從瀏覽器或軟體中心使用應用程式類別目錄。  
 
 > [!NOTE]  
->  应用程序目录需要 Microsoft Silverlight，后者将为 Configuration Manager 客户端先决条件自动安装。 如果通过使用未安装 Configuration Manager 客户端的计算机从浏览器中直接使用应用程序目录，请首先验证计算机上是否安装了 Microsoft Silverlight。  
+>  應用程式類別目錄需要 Microsoft Silverlight，它會自動安裝為 Configuration Manager 用戶端必要條件。 如果您使用未安裝 Configuration Manager 用戶端的電腦直接從瀏覽器使用應用程式類別目錄，請先確認電腦上已安裝 Microsoft Silverlight。  
 
 > [!TIP]  
->  应用程序目录在安装后未正常运行的大多数典型原因都是未满足先决条件。 确认应用程序目录站点系统角色的站点系统角色先决条件。 可以使用[支持的配置](../../core/plan-design/configs/supported-configurations.md)一文实现此目标。  
+>  缺少必要條件是應用程式類別目錄在安裝後未能正常運作的最常見原因。 請確認應用程式類別目錄站台系統角色的的系統角色必要條件。 您可以使用[支援的設定](../../core/plan-design/configs/supported-configurations.md)文章來完成此作業。  
 
 > [!NOTE]  
->  如果使用域管理员帐户登录，将不会显示来自于 Configuration Manager 客户端的通知消息（如指示新软件可用的消息）。  
+>  如果您使用網域系統管理員帳戶登入，將不會顯示來自 Configuration Manager 用戶端的訊息通知 (例如，指出新的軟體已可供使用的訊息)。  
 
-### <a name="to-use-the-application-catalog-directly-from-a-browser"></a>从浏览器中直接使用应用程序目录  
+### <a name="to-use-the-application-catalog-directly-from-a-browser"></a>直接從瀏覽器使用應用程式類別目錄  
 
--   在浏览器中，输入应用程序目录网站的地址，并确认网页显示以下三个选项卡：“应用程序目录”、“我的应用程序请求”和“我的设备”。  
+-   在瀏覽器中，輸入應用程式類別目錄網站的位址，並確認網頁中顯示三個索引標籤：[應用程式類別目錄]、[我的應用程式要求] 和 [我的裝置]。  
 
-     为应用程序目录选用以下列表中适当的地址，其中 &lt;server&gt; 是计算机名、Intranet FQDN 或 Internet FQDN：  
+     選取並使用下列應用程式類別目錄清單中的適當位址，其中 &lt;伺服器&gt; 是電腦名稱、內部網路 FQDN 或網際網路 FQDN：  
 
-    -   HTTPS 客户端连接和默认站点系统角色设置：**https://&lt;server&gt;/CMApplicationCatalog**  
+    -   HTTPS 用戶端連線和預設站台系統角色設定：**https://&lt;伺服器&gt;/CMApplicationCatalog**  
 
-    -   HTTP 客户端连接和默认站点系统角色设置：**http://&lt;server&gt;/CMApplicationCatalog**  
+    -   HTTP 用戶端連線和預設站台系統角色設定：**http://&lt;伺服器&gt;/CMApplicationCatalog**  
 
-    -   HTTPS 客户端连接和自定义站点系统角色设置：**https://&lt;server&gt;:&lt;port&gt;/&lt;web application name&gt;**  
+    -   HTTPS 用戶端連線和自訂站台系統角色設定：**https://&lt;伺服器&gt;:&lt;連接埠&gt;/&lt;Web 應用程式名稱&gt;**  
 
-    -   HTTP 客户端连接和自定义站点系统角色设置：**http://&lt;server&gt;:&lt;port&gt;/&lt;web application name&gt;**  
+    -   HTTP 用戶端連線和自訂站台系統角色設定：**http://&lt;伺服器&gt;:&lt;連接埠&gt;/&lt;Web 應用程式名稱&gt;**  
 
-### <a name="to-use-the-application-catalog-from-software-center-does-not-apply-to-the-new-version-of-software-center"></a>从软件中心（不适用于新版本软件中心）使用应用程序目录  
+### <a name="to-use-the-application-catalog-from-software-center-does-not-apply-to-the-new-version-of-software-center"></a>從軟體中心使用應用程式類別目錄 (不會套用至新版的軟體中心)  
 
-1.  在客户端计算机上，选择“开始” > “所有程序” > “Microsoft System Center 2012” > “Configuration Manager” > “软件中心”。  
+1.  在用戶端電腦上，選擇 [開始] > [所有程式] > [Microsoft System Center 2012] > [Configuration Manager] > [軟體中心]。  
 
-2.  如果之前为软件中心配置了组织名称作为客户端设置，请确认此名称按指定方式显示。  
+2.  如果您之前設定軟體中心的組織名稱做為用戶端設定，請確認該名稱依照指定顯示。  
 
-3.  选择“从应用程序目录中查找其他应用程序”，并确认页面显示以下三个选项卡：“应用程序目录”、“我的应用程序请求”和“我的设备”。  
+3.  選擇 [從應用程式類別目錄尋找其他應用程式]，並確認頁面中顯示三個索引標籤：[應用程式類別目錄]、[我的應用程式要求] 和 [我的裝置]。  
 
 > [!WARNING]  
->  安装了应用程序目录站点系统角色后，从软件中心选择“从应用程序目录中查找其他应用程序”链接时，将不会立即看到应用程序目录。 在客户端下一次下载其客户端策略后，或在安装了应用程序目录站点系统角色后最多 25 个小时内，将可以从软件中心中使用应用程序目录。  
-
+>  安裝應用程式類別目錄站台系統角色之後，當您從軟體中心選擇 [從應用程式類別目錄尋找其他應用程式] 連結時，將不會立即看見該應用程式類別目錄。 在用戶端下一次下載其用戶端原則，或是應用程式類別目錄站台系統角色安裝後達到 25 小時後，才能在軟體中心內看見應用程式類別目錄。  

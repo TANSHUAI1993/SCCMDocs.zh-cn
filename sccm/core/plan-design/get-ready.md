@@ -1,48 +1,41 @@
 ---
-title: "为 System Center Configuration Manager 做准备 | Microsoft Docs"
-description: "查找有助于规划 System Center Configuration Manager 部署的主题。"
+title: "準備開始使用 System Center Configuration Manager | Microsoft Docs"
+description: "尋找可協助您規劃 System Center Configuration Manager 部署的主題。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3e839a3e-e476-4ec2-bf29-21e78180441d
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 6ed317d45d90758832d4157985dd95d5e253c6fc
 ms.openlocfilehash: b2d9cf11b944b6ee648b8fc7bc836ed5a82925a5
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="get-ready-for-system-center-configuration-manager"></a>为 System Center Configuration Manager 做准备
+# <a name="get-ready-for-system-center-configuration-manager"></a>準備開始使用 System Center Configuration Manager
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用於：System Center Configuration Manager (最新分支)*
 
-已准备好开始规划 System Center Configuration Manager 部署时，使用下列主题中的信息：  
-
-
-  -   [为 System Center Configuration Manager 设计站点层次结构](../../core/plan-design/hierarchy/design-a-hierarchy-of-sites.md)  
-
-  -   [System Center Configuration Manager 的基于角色的管理基础](../../core/understand/fundamentals-of-role-based-administration.md)  
-
-  -   [System Center Configuration Manager 中内容管理的基础知识](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)  
-
-  -   [了解客户端如何查找 System Center Configuration Manager 的站点资源和服务](../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md)  
-
--   [为 System Center Configuration Manager 准备网络环境](/sccm/core/plan-design/network/configure-firewalls-ports-domains)  
-
--   [System Center Configuration Manager 支持的配置](../../core/plan-design/configs/supported-configurations.md)  
+當您準備好開始規劃您的 System Center Configuration Manager 部署時，請使用下列主題中的資訊：  
 
 
+  -   [為 System Center Configuration Manager 設計站台階層](../../core/plan-design/hierarchy/design-a-hierarchy-of-sites.md)  
 
-<!--HONumber=Dec16_HO3-->
+  -   [System Center Configuration Manager 以角色為基礎的系統管理基本概念](../../core/understand/fundamentals-of-role-based-administration.md)  
 
+  -   [System Center Configuration Manager 中的內容管理基本概念](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)  
 
+  -   [了解用戶端如何找到 System Center Configuration Manager 的站台資源和服務](../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md)  
+
+-   [為 System Center Configuration Manager 準備網路環境](/sccm/core/plan-design/network/configure-firewalls-ports-domains)  
+
+-   [System Center Configuration Manager 的支援設定](../../core/plan-design/configs/supported-configurations.md)  

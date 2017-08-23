@@ -1,115 +1,112 @@
 ---
-title: "创建查询 | Microsoft Docs"
-description: "了解如何在 System Center Configuration Manager 中创建和导入查询。 包括示例查询和提示。"
+title: "建立查詢 | Microsoft Docs"
+description: "探索如何在 System Center Configuration Manager 中建立和匯入查詢。 包含範例查詢和秘訣。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 868049d3-3209-47ec-b34a-9cc26941893a
-caps.latest.revision: 5
-caps.handback.revision: 0
+caps.latest.revision: "5"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2087badc9dd1d216352dce232b145a786783ac89
 ms.openlocfilehash: 9f38d86ff6227bb6ea88c358a3d61242372d449e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/18/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="how-to-create-queries-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中创建查询
+# <a name="how-to-create-queries-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中建立查詢
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+適用於：System Center Configuration Manager (最新分支)
 
-可以使用本主题来帮助在 System Center Configuration Manager 中创建或导入查询。  
+您可以使用本主題來協助在 System Center Configuration Manager 中建立或匯入查詢。  
 
-##  <a name="BKMK_Create"></a> 如何创建查询  
- 使用此过程有助于在 Configuration Manager 中创建查询。  
+##  <a name="BKMK_Create"></a> 如何建立查詢  
+ 使用這個程序，協助您在 Configuration Manager 中建立查詢。  
 
-#### <a name="to-create-a-query"></a>若要创建查询  
+#### <a name="to-create-a-query"></a>建立查詢  
 
-1.  在 Configuration Manager 控制台中，选择“监视”。  
+1.  在 Configuration Manager 主控台中，選擇 [監視]。  
 
-2.  在“监视”工作区中，选择“查询”。 然后，在“主页”选项卡的“创建”组中，选择“创建查询”。  
+2.  在 [監視] 工作區中，選擇 [查詢]。 接著，在 [常用] 索引標籤的 [建立] 群組中，選擇 [建立查詢]。  
 
-3.  在“创建查询向导”的“常规”选项卡中，为查询指定一个唯一的名称和可选备注。  
+3.  在 [建立查詢精靈]  的 [一般] 索引標籤上，指定查詢的唯一名稱和選擇性註解。  
 
-4.  如果你想要导入现有查询以用作新查询的基础，请选择“导入查询语句”。 在“浏览查询”对话框框中，选择你想要导入的一个现有查询，然后选择“确定”。  
+4.  如果您想要匯入現有的查詢來作為新查詢的基礎，請選擇 [匯入查詢陳述式]。 在 [瀏覽查詢] 對話方塊中，選取您要匯入的現有查詢，然後選擇 [確定]。  
 
-5.  在“对象类型”列表中，选择希望查询返回的对象类型。 下表描述了可以搜索的一些对象类型的示例：  
+5.  在 [物件類型] 清單中，選取您要查詢傳回的物件類型。 下表描述您可以搜尋之物件類型的一些範例：  
 
-    |对象类型|描述|  
+    |物件型別|說明|  
     |-----------------|-----------------|  
-    |**系统资源**|用于搜索典型的系统属性，例如设备的 NetBIOS 名称、客户端版本、客户端 IP 地址和 Active Directory 域服务信息。|  
-    |**用户资源**|用于搜索典型的用户信息，例如用户名、用户组名和安全组名。|  
-    |**部署**|用于搜索部署的典型属性，例如部署名称、计划和部署到的集合。|  
+    |**系統資源**|用來搜尋一般系統屬性，例如裝置的 NetBIOS 名稱、用戶端版本、用戶端 IP 位址和 Active Directory 網域服務資訊。|  
+    |**使用者資源**|用來搜尋一般使用者資訊，例如使用者名稱、使用者群組名稱和安全性群組名稱。|  
+    |**部署**|用來搜尋部署的一般屬性，例如部署名稱、排程和所部署的目標集合。|  
 
-6.  选择“编辑查询语句”，以打开“查询名称”*&lt;\>* “语句属性”对话框。  
+6.  選擇 [編輯查詢陳述式] 以開啟 [&lt;查詢名稱\> 陳述式內容] 對話方塊。  
 
-7.  在“查询名称”*&lt;\>* “语句属性”对话框的“常规”选项卡中，指定此查询返回的属性和显示方式。 选择“新建”图标，以添加新属性。 还可以选择“显示查询语言”，以直接以 WMI 查询语言 (WQL) 输入或编辑查询。 有关 WMI 查询的示例，请参阅本主题中的 [Example WQL queries](#BKMK_Example) 部分。  
+7.  在 [&lt;查詢名稱\> 陳述式內容] 對話方塊的 [一般] 索引標籤上，指定這個查詢會傳回的屬性及其顯示方式。 選擇**新增**圖示以新增新屬性。 您也可以選擇 [顯示查詢語言]，直接以 WMI 查詢語言 (WQL) 輸入或編輯查詢。 如需 WMI 查詢的範例，請參閱本主題中的 [Example WQL queries](#BKMK_Example) 一節。  
 
     > [!TIP]  
-    > 可以使用下列 MSDN 参考文档，以帮助构造自己的 WQL 查询：  
+    > 您可以使用下列 MSDN 參考文件，來協助您建構自己的 WQL 查詢：  
     >   
-    > -   [WQL (SQL for WMI)](http://go.microsoft.com/fwlink/p/?LinkId=256653)  
+    > -   [WQL (適用於 WMI 的 SQL)](http://go.microsoft.com/fwlink/p/?LinkId=256653)  
     > -   [WHERE 子句](http://go.microsoft.com/fwlink/p/?LinkId=256654)  
-    > -   [WQL 运算符：](http://go.microsoft.com/fwlink/p/?LinkId=256655)  
+    > -   [WQL 運算子](http://go.microsoft.com/fwlink/p/?LinkId=256655)  
 
-8.  在“查询名称”*&lt;\>* “语句属性”对话框的“条件”选项卡中，指定用于优化查询结果的条件。 例如，可以只返回查询结果中包含 **XYZ** 站点代码的资源。 可以配置多个查询条件。  
+8.  在 [&lt;查詢名稱\> 陳述式內容] 對話方塊的 [準則] 索引標籤上，指定用來縮小查詢結果的準則。 例如，您可以在查詢結果中，只傳回具有 **XYZ** 之站台碼的資源。 您可以設定查詢的多項準則。  
 
     > [!IMPORTANT]  
-    > 如果创建的查询中未包含任何条件，查询将在“所有系统”集合中返回所有设备。  
+    > 如果您建立未包含任何準則的查詢，此查詢會傳回 [所有系統]  集合中的所有裝置。  
 
-9. 在“查询名称”*&lt;\>* “语句属性”对话框的“联接”选项卡中，可以将两个不同属性的数据合并到查询结果中。 虽然在为查询结果选择不同的属性时，Configuration Manager 会自动创建查询联接，但“联接”选项卡提供了更多高级选项。 下表中列出了 System Center 2012 Configuration Manager 支持的属性类：  
+9. 在 [&lt;查詢名稱\> 陳述式內容] 對話方塊的 [聯結] 索引標籤上，可以將來自兩個不同屬性的資料結合為您的查詢結果。 雖然當您為查詢結果選擇不同的屬性時，Configuration Manager 便會自動建立查詢聯結，不過 [聯結] 索引標籤提供更進階的選項。 下表顯示 System Center 2012 Configuration Manager 所支援的屬性類別：  
 
-    |联接类型|描述|  
+    |聯結類型|說明|  
     |---------------|-----------------|  
-    |内部|只显示匹配的结果 - 始终由自动创建的联接使用。|  
-    |左|显示基属性的所有结果，同时，只显示联接属性的匹配结果。|  
-    |右|对于联接属性显示所有结果，而对于基属性只显示匹配结果。|  
-    |完整|对于基属性和联接属性均显示所有结果。|  
+    |內部|只顯示相符的結果，自動建立的聯結一律會使用。|  
+    |左方|顯示基底屬性的所有結果，但只顯示聯結屬性的相符結果。|  
+    |右方|顯示聯結屬性的所有結果，但只顯示基底屬性的相符結果。|  
+    |完整|顯示基底屬性和聯結屬性的所有結果。|  
 
-     有关如何联接运算的详细信息，请参阅 SQL Server 文档。  
+     如需如何使用聯結作業的詳細資訊，請參閱您的 SQL Server 文件。  
 
-10. 选择“确定”，关闭“查询名称”*&lt;\>* “语句属性”对话框。  
+10. 選擇 [確定] 關閉 [&lt;查詢名稱\> 陳述式內容] 對話方塊。  
 
-11. 在“创建查询向导”中的“常规”选项卡中，指定是否将此查询的结果不限制于一个集合中的成员、是否限制于指定集合中的成员，或是否每次运行查询时提示输入集合。  
+11. 在 [建立查詢精靈] 的 [一般] 索引標籤上，指定這個查詢的結果是否不限於集合的成員、是否限於指定集合的成員，或是否要在每次執行查詢時提示輸入集合。  
 
-12. 完成向导以创建查询。 新查询显示在“监视”工作区中的“查询”节点中。  
+12. 完成精靈以建立查詢。 新的查詢會顯示在 [監視]  工作區的 [查詢]  節點中。  
 
-##  <a name="BKMK_Import"></a>如何导入查询  
- 使用此过程来帮助将查询导入到 Configuration Manager 中。 有关如何导出查询的信息，请参阅[如何在 System Center Configuration Manager 中管理查询](../../../core/servers/manage/manage-queries.md)。  
+##  <a name="BKMK_Import"></a> 如何匯入查詢  
+ 使用這個程序，協助您將查詢匯入 Configuration Manager 中。 如需如何匯出查詢的相關資訊，請參閱[如何在 System Center Configuration Manager 中管理查詢](../../../core/servers/manage/manage-queries.md)。  
 
-#### <a name="to-import-a-query"></a>若要导入查询  
+#### <a name="to-import-a-query"></a>匯入查詢  
 
-1.  在 Configuration Manager 控制台中，选择“监视”。  
+1.  在 Configuration Manager 主控台中，選擇 [監視]。  
 
-2.  在“监视”工作区中，选择“查询”。 在“主页”选项卡的“创建”组中，选择“导入对象”。  
+2.  在 [監視] 工作區中，選擇 [查詢]。 在 [常用] 索引標籤的 [建立] 群組中，選擇 [匯入物件]。  
 
-3.  在“导入对象向导”中的“MOF 文件名”页面中，选择“浏览”，以选择包含要导入的查询的托管对象格式 (MOF) 文件。  
+3.  在 [匯入物件精靈] 的 [MOF 檔案名稱] 頁面上，選擇 [瀏覽] 以選取包含您要匯入之查詢的受管理物件格式 (MOF) 檔案。  
 
-4.  查看关于要导入的查询的信息，然后完向导。 新查询显示在“监视”工作区中的“查询”节点中。  
+4.  檢閱要匯入之查詢的相關資訊，然後完成精靈。 新的查詢會顯示在 [監視] 工作區的 [查詢] 節點中。  
 
 ##  <a name="BKMK_Example"></a> Example WQL queries
 
-本部分包含可在你的层次结构中使用或因其他目的修改的 WMI 查询示例。 要使用这些查询，请在“查询语句属性”对话框中选择“显示查询语言”。 然后，将查询复制并粘贴到“查询语句”字段。  
+本節包含範例 WMI 查詢，您可以在階層中使用，或針對其他目的進行修改。 若要使用這些查詢，請選擇 [查詢陳述式內容] 對話方塊中的 [顯示查詢語言]。 然後，將查詢複製並貼入 [查詢陳述式] 欄位。  
 
 > [!TIP]  
-> 使用 `%` 通配符来表示任何字符串。 例如，`%Visio%` 将返回 Microsoft Office Visio 2010。  
+> 使用萬用字元 `%` 來代表任何字元字串。 例如，`%Visio%` 會傳回 Microsoft Office Visio 2010。  
 
-### <a name="computers-that-run-windows-7"></a>运行 Windows 7 的计算机
+### <a name="computers-that-run-windows-7"></a>執行 Windows 7 的電腦
 
-使用以下查询返回运行 Windows 7 的所有计算机的 NetBIOS 名称和操作系统版本。  
+使用下列查詢可傳回執行 Windows 7 之所有電腦的 NetBIOS 名稱和作業系統版本。  
 
 > [!TIP]  
-> 若要返回运行 Windows Server 2008 R2 的计算机，请将 `%Workstation 6.1%` 改为 `%Server 6.1%`。  
+> 若要傳回執行 Windows Server 2008 R2 的電腦，請將 `%Workstation 6.1%` 變更為 `%Server 6.1%`。  
 
 ```  
 select SMS_R_System.NetbiosName,  
@@ -118,12 +115,12 @@ SMS_R_System where
 SMS_R_System.OperatingSystemNameandVersion like "%Workstation 6.1%"  
 ```  
 
-### <a name="computers-with-a-specific-software-package-installed"></a>安装特定软件包的计算机  
+### <a name="computers-with-a-specific-software-package-installed"></a>已安裝特定軟體套件的電腦  
 
-使用以下查询来返回安装了特定软件包的所有计算机的 NetBIOS 名称和软件包名称。 本示例显示了已安装某个版本的 Microsoft Visio 的所有计算机。 用想要查询的软件包代替 `%Visio%`。  
+使用下列查詢可傳回已安裝特定軟體封裝之所有電腦的 NetBIOS 名稱和軟體封裝名稱。 這個範例會顯示已安裝 Microsoft Visio 版本的所有電腦。 請以您要查詢的軟體套件取代 `%Visio%`。  
 
 > [!TIP]  
-> 此查询通过使用 Windows 控制面板中程序列表中显示的名称来搜索软件包。  
+> 這個查詢會使用 Windows 控制台之程式清單中所顯示的名稱，來搜尋軟體封裝。  
 
 ```  
 select SMS_R_System.NetbiosName,   
@@ -134,9 +131,9 @@ SMS_R_System.ResourceId where
 SMS_G_System_ADD_REMOVE_PROGRAMS.DisplayName like "%Visio%"  
 ```  
 
-### <a name="computers-that-are-in-a-specific-active-directory-domain-services-organizational-unit"></a>特定 Active Directory 域服务组织单位中的计算机
+### <a name="computers-that-are-in-a-specific-active-directory-domain-services-organizational-unit"></a>位於特定 Active Directory Domain Services 組織單位的電腦
 
-使用以下查询来返回指定组织单位 (OU) 中所有计算机的 NetBIOS 名称和 OU 名称。 用想要查询的 OU 的名称代替文本 `OU Name`。  
+使用下列查詢以傳回指定 OU 中所有電腦的 NetBIOS 名稱和組織單位 (OU) 名稱。 請以您要查詢的 OU 名稱取代文字 `OU Name`。  
 
 ```  
 select SMS_R_System.NetbiosName,   
@@ -145,48 +142,47 @@ SMS_R_System where
 SMS_R_System.SystemOUName = "OU Name"  
 ```  
 
-### <a name="computers-with-a-specific-netbios-name"></a>具有特定 NetBIOS 名称的计算机
+### <a name="computers-with-a-specific-netbios-name"></a>具有特定 NetBIOS 名稱的電腦
 
-使用以下查询来返回以指定字符串开头的所有计算机的 NetBIOS 名称。 在本例中，查询会返回 NetBIOS 名称以 `ABC` 开头的所有计算机。  
+使用下列查詢可傳回開頭為特定字元字串之所有電腦的 NetBIOS 名稱。 在這個範例中，此查詢會傳回 NetBIOS 名稱開頭為 `ABC` 的所有電腦。  
 
 ```  
 select SMS_R_System.NetbiosName from    
 SMS_R_System where SMS_R_System.NetbiosName like "ABC%"  
 ```  
 
-###  <a name="BKMK_DeviceType"></a>特定类型的设备
+###  <a name="BKMK_DeviceType"></a> 特定類型的裝置
 
-设备类型存储在 Configuration Manager 数据库中，在 **sms_r_system** 资源类型和 **AgentEdition** 属性名称下。 使用以下查询来仅检索与指定设备类型的代理版本匹配的设备：  
+裝置類型會儲存在 Configuration Manager 資料庫中的資源類別 **sms_r_system** 和屬性名稱 **AgentEdition** 底下。 針對符合您所指定裝置類型代理程式版本的裝置，使用下列查詢來擷取這些裝置：  
 
 ```  
 Select SMS_R_System.ClientEdition from SMS_R_System where SMS_R_System.ClientEdition = <Device ID>  
 ```  
 
-为 &lt;Device ID\> 选择下列其中一个值：  
+使用下列其中一個 *&lt;裝置識別碼\>* 值：  
 
-|设备类型|AgentEdition 的值|  
+|裝置類型|AgentEdition 的值|  
 |-----------------|---------------------------|  
-|Windows 台式机或便携式计算机|0|  
-|Windows 基于 ARM 的设备（运行 Windows RT）|1|  
+|Windows 桌上型電腦或膝上型電腦|0|  
+|Windows ARM 型裝置 (執行 Windows RT)|1|  
 |Windows Mobile 6.5|2|  
 |Nokia Symbian|3|  
 |Windows Phone|4|  
-|Mac 计算机|5|  
+|Mac 電腦|5|  
 |Windows CE|6|  
 |Windows Embedded|7|  
 |iOS|8|  
 |iPad|9|  
 |iPod Touch|10|  
 |Android|11|  
-|Intel 片上系统|12|  
-|UNIX 和 Linux 服务器|13|  
+|Intel 晶片式系統|12|  
+|UNIX 和 Linux 伺服器|13|  
 
- 例如，如果想要查询只返回 Mac 计算机，请使用以下查询：  
+ 例如，如果您要讓查詢只傳回 Mac 電腦，請使用下列查詢：  
 
 ```  
 Select SMS_R_System.ClientEdition from SMS_R_System where SMS_R_System.ClientEdition = 5  
 ```  
 
-## <a name="see-also"></a>另请参阅  
- [System Center Configuration Manager 中查询的操作和维护](../../../core/servers/manage/operations-and-maintenance-for-queries.md)
-
+## <a name="see-also"></a>請參閱  
+ [System Center Configuration Manager 中查詢的作業和維護](../../../core/servers/manage/operations-and-maintenance-for-queries.md)

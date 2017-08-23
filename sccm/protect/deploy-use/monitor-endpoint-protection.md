@@ -1,86 +1,82 @@
 ---
-title: "监视 Endpoint Protection 状态 | Microsoft Docs"
-description: "了解如何在 System Center Configuration Manager 层次结构中监视 Endpoint Protection。"
+title: "監視 Endpoint Protection 狀態 | Microsoft Docs"
+description: "了解如何在 System Center Configuration Manager 階層中監視 Endpoint Protection。"
 ms.custom: na
 ms.date: 03/13/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f4a1335c-bb3d-493e-a124-83a32a107dc8
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0fa837c68eb073d2ceaf48c938137a94141a102e
-ms.openlocfilehash: 99e266e44f718d97c2a6e61e8e6816752751ed7b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 01/24/2017
-
-
+ms.openlocfilehash: b5771f4faebc06076bdbf84727848c881fc1dfb4
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="how-to-monitor-endpoint-protection-status"></a>如何监视 Endpoint Protection 状态
+# <a name="how-to-monitor-endpoint-protection-status"></a>如何監視 Endpoint Protection 狀態
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用於：System Center Configuration Manager (最新分支)*
 
-可以使用“监视”工作区中的“安全性”下的“Endpoint Protection 状态”节点，“资产和符合性”工作区中的“Endpoint Protection”节点以及使用报表，在 Microsoft System Center Configuration Manager 层次结构中监视 Endpoint Protection。  
+您可以在 Microsoft System Center Configuration Manager 階層中監視 Endpoint Protection，方法是使用 [監視] 工作區中 [安全性] 下的 [Endpoint Protection 狀態] 節點、[資產與合規性] 工作區中的 [Endpoint Protection] 節點，以及使用報告。  
 
-##  <a name="BKMK_1"></a>如何使用“Endpoint Protection 状态”节点监视 Endpoint Protection  
+##  <a name="BKMK_1"></a> 如何使用 Endpoint Protection 狀態節點監視 Endpoint Protection  
 
-1.  在 Configuration Manager 控制台中，单击“监视” 。  
+1.  在 Configuration Manager 主控台中，按一下 [監視] 。  
 
-2.  在“监视”工作区中，展开“安全性”，然后单击“Endpoint Protection 状态”。  
+2.  在 [監視] 工作區中，展開 [安全性] 然後按一下 [Endpoint Protection 狀態]。  
 
-3.  在 **集合** 列表中，选择想要查看状态信息的集合。  
+3.  在 **集合** 清單中選取您要檢視狀態資訊的集合。  
 
     > [!IMPORTANT]  
-    >  集合是在以下情况下可供选择：  
+    >  集合是可讓您選取在下列情況：  
     >   
-    >  -   当你在“<集合名称\>属性”对话框的“警报”选项卡上选择“在 Endpoint Protection 仪表板中查看此集合”时。  
-    > -   当你部署 Endpoint Protection 反恶意软件策略应用到集合。  
-    > -   如果先启用然后部署 Endpoint Protection 到集合的客户端设置。  
+    >  -   當您在 [*<集合名稱\>* 內容] 對話方塊的 [警示] 索引標籤上選取 [在 Endpoint Protection 儀表板中檢視此集合] 時。  
+    > -   當您將 Endpoint Protection 反惡意程式碼原則部署至集合時。  
+    > -   當您啟用 Endpoint Protection 用戶端設定並將其部署至集合時。  
 
-4.  查看中显示的信息 **安全状态** 和 **操作状态** 部分。 您可以单击以创建临时集合中的任何状态链接 **设备** 中的节点 **资产和符合性** 工作区。 此临时集合包含具有所选状态的计算机。  
+4.  檢視中顯示的資訊 **安全性狀態** 和 **操作狀態** 區段。 您可以按一下來建立暫時的集合中的任何狀態連結 **裝置** 中的節點 **資產與相容性** 工作區。 暫時的集合包含具有選定狀態的電腦。  
 
     > [!IMPORTANT]  
-    >  “Endpoint Protection 状态”节点中显示的信息基于上次从 Configuration Manager 数据库汇总的数据，可能不是最新的。 如果想要检索最新数据，则在“主页”选项卡上，单击“运行摘要”，或单击“计划摘要”以调整摘要间隔。  
+    >  [Endpoint Protection 狀態] 節點中顯示的資訊取決於從 Configuration Manager 資料庫摘要的最後一筆資料，因此可能不是最新資訊。 如果您想要擷取最新的資料，請在 **[首頁]** 索引標籤上按一下 **[執行摘要]**，或按一下 **[排程摘要]** ，以調整摘要間隔。  
 
-##  <a name="BKMK_2"></a>如何在“资产和符合性”工作区中监视 Endpoint Protection  
+##  <a name="BKMK_2"></a> 如何在資產與相容性工作區中監視 Endpoint Protection  
 
-1.  在 Configuration Manager 控制台中，单击“资产和符合性” 。  
+1.  在 Configuration Manager 主控台中，按一下 [資產與相容性] 。  
 
-2.  在 **资产和符合性** 工作区中，执行以下操作之一：  
+2.  在 **資產與相容性** 工作區中，執行下列動作:  
 
-    -   单击 **设备**。 在 **设备** 列表，选择一台计算机，然后单击 **恶意软件详细信息** 选项卡。  
+    -   按一下 **裝置**。 在 **裝置** 清單，選取 電腦，然後按一下 **惡意程式碼的詳細資料**  索引標籤。  
 
-    -   单击 **设备集合**。 在 **设备集合** 列表中，选择包含您想要监视的计算机的集合，然后在 **主页** 选项卡上，在 **集合** 组中，单击 **显示成员**。  
+    -   按一下 **裝置集合**。 在 **[裝置集合]** 清單中，選取包含您想要監視之電腦的集合，然後在 **[首頁]** 索引標籤的 **[集合]** 群組中，按一下 **[顯示成員]**。  
 
-3.  在 <集合名称\> 列表中，选择一台计算机，然后单击“恶意软件详细信息”选项卡。  
+3.  在 [*<集合名稱\>*] 清單中選取電腦，然後按一下 [惡意程式碼詳細資料] 索引標籤。  
 
-##  <a name="BKMK_3"></a>如何使用报表监视 Endpoint Protection  
- 使用以下报表可帮助查看有关层次结构中的 Endpoint Protection 的信息。 你还可以使用这些报表来帮助针对任何 Endpoint Protection 问题进行故障排除。 有关如何在 Configuration Manager 中配置报表的详细信息，请参阅 [System Center Configuration Manager 中的报表](../../core/servers/manage/reporting.md)和 [System Center Configuration Manager 中的日志文件](../../core/plan-design/hierarchy/log-files.md)。 Endpoint Protection 报表处于 Endpoint Protection 文件夹中。  
+##  <a name="BKMK_3"></a> 如何使用報告監視 Endpoint Protection  
+ 使用下列報告，協助您檢視有關的資訊 Endpoint Protection 階層中。 您也可以使用這些報告來協助疑難排解任何 Endpoint Protection 問題。 如需如何在 Configuration Manager 設定報告的詳細資訊，請參閱 [System Center Configuration Manager 中的報告](../../core/servers/manage/reporting.md)和 [System Center Configuration Manager 中的記錄檔](../../core/plan-design/hierarchy/log-files.md)。 Endpoint Protection 報告位於 Endpoint Protection 資料夾中。  
 
-|报告名称|描述|  
+|報表名稱|說明|  
 |-----------------|-----------------|  
-|**反恶意软件活动报告**|显示指定集合的反恶意软件活动的概述。|  
-|**受感染的计算机**|显示在其检测到指定的威胁的计算机的列表。|  
-|**通过威胁的前几名用户**|显示具有最多的检测到的威胁的用户列表。|  
-|**用户威胁列表**|显示已找到指定的用户帐户的威胁的列表。|  
+|**反惡意程式碼活動報表**|顯示指定之集合的反惡意程式碼活動的概觀。|  
+|**受感染的電腦**|顯示的電腦偵測到指定的威脅清單。|  
+|**最上層使用者的威脅**|顯示具有最多的偵測到威脅的使用者清單。|  
+|**使用者的威脅清單**|顯示找不到指定的使用者帳戶的威脅的清單。|  
 
-## <a name="malware-alert-levels"></a>恶意软件警报级别  
- 使用下表来标识可能会显示在报表中或显示在 Configuration Manager 控制台中的不同 Endpoint Protection 警报级别。  
+## <a name="malware-alert-levels"></a>惡意程式碼警示等級  
+ 使用下表來識別不同 Endpoint Protection 警示層級可能會顯示在報告中，或是在 Configuration Manager 主控台。  
 
-|警报级别|描述|  
+|警示等級|說明|  
 |-----------------|-----------------|  
-|**已失败**|Endpoint Protection 未能修正恶意软件。 检查有关错误的详细信息日志。<br /><br /> **注意：**有关 Configuration Manager 和 Endpoint Protection 日志文件的列表，请参阅 [System Center Configuration Manager 中的日志文件](../../core/plan-design/hierarchy/log-files.md)主题中的“Endpoint Protection”部分。|  
-|**已删除**|Endpoint Protection 已成功删除了恶意软件。|  
-|**已隔离**|Endpoint Protection 已将恶意软件移动到一个安全位置，并已阻止其运行，直到你将其删除或允许其运行。|  
-|**已清理**|恶意软件已清理受感染的文件中。|  
-|**允许**|管理用户选择允许包含要运行的恶意软件的软件。|  
-|**不执行任何操作**|Endpoint Protection 对恶意软件不执行任何操作。 如果重新启动计算机后检测到恶意软件和不能再检测到恶意软件 ； 这可能会发生例如，如果映射的网络驱动器上检测到的恶意软件是不重新连接时在计算机重新启动。|  
-|**已阻止**|Endpoint Protection 已阻止恶意软件运行。 这可能是如果发现计算机上的进程是包含恶意软件。|
-
+|**失敗**|Endpoint Protection 無法補救惡意程式碼。 檢查您日誌中的錯誤詳細資料。<br /><br /> **注意：**如需 Configuration Manager 和 Endpoint Protection 記錄檔的清單，請參閱 [System Center Configuration Manager 中的記錄檔](../../core/plan-design/hierarchy/log-files.md)主題中的＜Endpoint Protection＞一節。|  
+|**移除**|Endpoint Protection 已順利移除惡意程式碼。|  
+|**已隔離**|Endpoint Protection 已將惡意程式碼移至安全的位置，使其無法執行，直到您將它移除，或允許它執行。|  
+|**已清除**|惡意程式碼已清除受感染的檔案中。|  
+|**允許**|選取要包含惡意程式碼執行的軟體可讓系統管理使用者。|  
+|**沒有動作**|Endpoint Protection 對惡意程式碼不採取任何動作。 這可能發生在偵測到惡意程式碼並不會再偵測到惡意程式碼; 之後重新啟動電腦比方說，如果對應的網路磁碟機上偵測到的惡意程式碼是不重新連線時重新啟動電腦。|  
+|**封鎖**|Endpoint Protection 封鎖惡意程式碼，使其無法執行。 這可能會發生在處理序已在電腦上的找到包含惡意程式碼。|

@@ -1,211 +1,207 @@
 ---
-title: "资产智能简介 | Microsoft Docs"
-description: "获取 System Center Configuration Manager 中的资产智能简介。"
+title: "Asset Intelligence 簡介 | Microsoft Docs"
+description: "了解 System Center Configuration Manager 中的 Asset Intelligence 簡介。"
 ms.custom: na
 ms.date: 2/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 0bdfdef5-390f-4099-8bde-de51d9a89175
-caps.latest.revision: 7
-caps.handback.revision: 0
+caps.latest.revision: "7"
+caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
-ms.openlocfilehash: 6a851ddfeee78574fbb0b1eff0c7cc518a7bb598
-ms.contentlocale: zh-cn
-ms.lasthandoff: 12/16/2016
-
-
+ms.openlocfilehash: 879dc3f04f361af955afbc4db180d097073e8d41
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="introduction-to-asset-intelligence-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的资产智能简介
+# <a name="introduction-to-asset-intelligence-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的 Asset Intelligence 簡介
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+適用於：System Center Configuration Manager (最新分支)
 
-System Center Configuration Manager 中的资产智能允许使用资产智能目录清查和管理整个企业中的软件许可证使用情况。 许多硬件清单 Windows Management Instrumentation (WMI) 类扩大了收集的有关所用硬件和软件标题的信息的广度。 超过 60 个报表以易于使用的格式显示此信息。 这些报表有很多链接至更具针对性的报表，在其中可以查询常规信息和钻取至更详细的信息。 可以将自定义信息添加到资产智能目录，如自定义软件类别、软件家族、软件标签和硬件要求。 还可以连接到 System Center Online，用最新的可用信息动态更新资产智能目录。 Microsoft 客户可以通过将软件许可证信息导入 Configuration Manager 站点数据库中，来协调企业软件许可证与已购买并正在使用的软件许可证的使用。  
+System Center Configuration Manager 中的 Asset Intelligence 可讓您使用 Asset Intelligence 類別目錄，清查和管理整個企業的軟體授權使用情形。 豐富的硬體清查 Windows Management Instrumentation (WMI) 類別可提升所使用之硬體和軟體項目相關收集資訊的全面性， 並提供 60 多種格式簡單好用的報告以呈現這項資訊。 這當中有許多報告可連結至更特定的報告，供您在其中查詢一般資訊，並向下鑽研至更詳細的資訊。 您可以將自訂資訊新增至 Asset Intelligence 類別目錄，例如自訂的軟體類別、軟體系列、軟體標籤和硬體需求。 您也可以連線至 System Center Online，以可用的最新資訊動態更新 Asset Intelligence 類別目錄。 Microsoft 客戶可以將軟體授權資訊匯入 Configuration Manager 站台資料庫，以協調企業軟體授權使用量與已使用的購買軟體授權。  
 
-##  <a name="BKMK_AssetIntelligenceCatalog"></a> 资产智能目录  
+##  <a name="BKMK_AssetIntelligenceCatalog"></a> Asset Intelligence 類別目錄  
 
- Configuration Manager 资产智能目录是存储在站点数据库中的一组数据库表，它们包含超过 300,000 个软件标题和版本的分类和标识信息。 这些数据库表也用于管理特定软件标题的硬件要求。  
+ Configuration Manager Asset Intelligence 類別目錄是一組儲存在站台資料庫中的資料庫資料表，其中包含超過 300,000 種軟體項目及版本的分類和識別資訊。 這些資料庫資料表也可用來管理特定軟體項目的硬體需求。  
 
- 资产智能目录提供所使用的软件标题的软件许可证信息（属于 Microsoft 和非 Microsoft 软件）。 资产智能目录中提供了软件标题的一组预定义硬件要求，可以创建新的用户定义的硬件要求信息以满足自定义要求。 此外，可以自定义资产智能目录中的信息，并且可以将软件标题信息上载到 System Center Online 以进行分类。  
+ Asset Intelligence 類別目錄提供正在使用之軟體項目的軟體授權資訊，包括 Microsoft 和非 Microsoft 軟體。 Asset Intelligence 類別目錄也提供一組軟體項目的預先定義硬體需求，您可以建立新的使用者定義硬體需求資訊，以符合自訂需求。 此外，您可以自訂 Asset Intelligence 類別目錄中的資訊，並將軟體項目資訊上傳至 System Center Online 以進行分類。  
 
- 包含新发布软件的资产智能目录更新可供定期下载以执行批量目录更新。 或者，可以使用资产智能同步点站点系统角色动态更新目录。  
+ 您可以定期下載內含新發行軟體的 Asset Intelligence 類別目錄更新，以執行大量類別目錄更新。 或者，您可以使用 Asset Intelligence 同步處理點站台系統角色來動態更新類別目錄。  
 
-###  <a name="BKMK_SoftwareCategories"></a> 软件类别  
- 资产智能软件类别可用于对已列出清单的软件标题进行广泛的分类，也可用作更具体的软件家族的高级别分组。 例如，软件类别可以是能源公司，而该软件类别中的软件家族可以是石油和天然气或水力电气。 在资产智能目录中预定义了许多软件类别，并且可以创建用户定义的类别以额外定义已列出清单的软件。 所有预定义的软件类别的验证状态始终为“已验证” ，而添加到资产智能目录的自定义软件类别信息是“用户定义” 。 有关如何管理软件类别的详细信息，请参阅[在 System Center Configuration Manager 中配置资产智能](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md)。  
-
-> [!NOTE]  
->  存储在资产智能目录中的预定义软件类别信息是只读的，无法更改或删除。 管理用户可以添加、修改或删除用户定义的软件类别。  
-
-###  <a name="BKMK_SoftwareFamilies"></a> 软件家族  
- 资产智能软件家族可用于定义软件类别中的已列出清单的软件标题。 在资产智能目录中预定义了许多软件家族，并且可以创建用户定义的类别以额外定义已列出清单的软件。 所有预定义的软件家族的验证状态始终为“已验证” ，而添加到资产智能目录的自定义软件家族信息是“用户定义” 。 有关如何管理软件家族的详细信息，请参阅[在 System Center Configuration Manager 中配置资产智能](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md)。  
+###  <a name="BKMK_SoftwareCategories"></a> 軟體類別  
+ Asset Intelligence 軟體類別可用來廣泛分類已清查的軟體項目，也可作為更特定之軟體系列的高階分組。 例如，軟體類別可能是能源公司，而該軟體類別內的軟體系列可能是石油與天然氣或水力電氣。 Asset Intelligence 類別目錄中有預先定義許多軟體類別，您可以建立使用者定義的分類，以進一步定義已清查的軟體。 所有預先定義之軟體類別目錄的驗證狀態一律是 [已驗證] ，而新增至 Asset Intelligence 類別目錄的自訂軟體類別目錄資訊則是 [使用者定義] 。 如需如何管理軟體類別的詳細資訊，請參閱[設定 System Center Configuration Manager 中的 Asset Intelligence](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md)。  
 
 > [!NOTE]  
->  预定义软件家族信息是只读的，无法更改。 管理用户可以添加、修改或删除用户定义的软件家族。  
+>  Asset Intelligence 類別目錄中儲存的預先定義軟體類別目錄資訊是唯讀，而且無法將其變更或刪除。 系統管理使用者可以新增、修改或刪除使用者定義的軟體類別。  
 
-###  <a name="BKMK_CustomLabels"></a> 软件标签  
- 资产智能自定义软件标签使你可以创建筛选器，可使用它们对软件标题进行分组并使用资产智能报表查看它们。 可以使用软件标签创建共享公共属性的软件标题的用户定义组。 例如，可以创建一个名为“共享件”的软件标签，将该软件标签与已列出清单的共享件标题相关联，然后运行报表以显示具有关联“共享件”软件标签的所有软件标题。 未预定义软件标签。 软件标签的验证状态始终是“用户定义” 。 有关如何管理软件标签的详细信息，请参阅[在 System Center Configuration Manager 中配置资产智能](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md)。  
-
-###  <a name="BKMK_HardwareRequirements"></a> 硬件要求  
- 对软件标题进行软件部署前，可以使用硬件要求来验证计算机是否满足软件标题的硬件要求。 可以在“资产和符合性”  工作区中的“资产智能”  节点下的“硬件要求”  节点下，管理软件标题的硬件要求。 资产智能目录中预定义了许多硬件要求，你可以创建新的用户定义的硬件要求信息以满足自定义要求。 所有预定义硬件要求的验证状态始终为“已验证” ，而添加到资产智能目录的用户定义硬件要求是“用户定义” 。 有关如何管理硬件要求的详细信息，请参阅[在 System Center Configuration Manager 中配置资产智能](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md)。  
+###  <a name="BKMK_SoftwareFamilies"></a> 軟體系列  
+ Asset Intelligence 軟體系列可用來定義軟體類別中已清查的軟體項目。 Asset Intelligence 類別目錄中有預先定義許多軟體系列，您可以建立使用者定義的分類，以進一步定義已清查的軟體。 所有預先定義之軟體系列的驗證狀態一律是 [已驗證] ，而新增至 Asset Intelligence 類別目錄的自訂軟體系列資訊則是 [使用者定義] 。 如需如何管理軟體系列的詳細資訊，請參閱[設定 System Center Configuration Manager 中的 Asset Intelligence](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md)。  
 
 > [!NOTE]  
->  Configuration Manager 控制台中显示的硬件要求均从资产智能目录检索，并且不基于 System Center 2012 Configuration Manager 客户端的已列出清单的软件标题信息。 硬件要求信息不作为 System Center Online 同步过程的一部分进行更新。 你可以为没有关联硬件要求的清单软件创建用户定义的硬件要求。  
+>  預先定義的軟體系列資訊是唯讀，而且無法變更。 系統管理使用者可以新增、修改或刪除使用者定義的軟體系列。  
 
- 默认情况下，为列出的每项硬件要求显示下列信息：  
+###  <a name="BKMK_CustomLabels"></a> 軟體標籤  
+ Asset Intelligence 自訂軟體標籤可讓您建立篩選器以群組軟體項目，並使用 Asset Intelligence 報告來檢視它們。 您可以使用軟體標籤，建立共用相同屬性之軟體項目的使用者定義群組。 比方說，您可以建立一個稱為「共享軟體」的軟體標籤，再將該軟體標籤與已清查的共享軟體項目建立關聯，並執行報告以顯示具有相關聯「共享軟體」軟體標籤的所有軟體項目。 系統不提供預先定義的軟體標籤。 因此，軟體標籤的驗證狀態一律是 [使用者定義] 。 如需如何管理軟體標籤的詳細資訊，請參閱[設定 System Center Configuration Manager 中的 Asset Intelligence](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md)。  
 
--   **软件标题**：指定与硬件要求相关联的软件标题。  
+###  <a name="BKMK_HardwareRequirements"></a> 硬體需求  
+ 您可以使用硬體需求的資訊，確認電腦符合軟體項目的硬體需求之後，再將它們設為軟體部署的目標。 您可以在 [資產與相容性]  工作區中 [Asset Intelligence]  節點下的 [硬體需求]  節點，管理軟體項目的硬體需求。 Asset Intelligence 類別目錄提供許多預先定義的硬體需求，您也可以建立新的使用者定義硬體需求資訊，以符合自訂需求。 所有預先定義之硬體需求的驗證狀態一律是 [已驗證] ，而新增至 Asset Intelligence 類別目錄的使用者定義硬體需求資訊則是 [使用者定義] 。 如需如何管理硬體需求的詳細資訊，請參閱[設定 System Center Configuration Manager 中的 Asset Intelligence](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md)。  
 
--   **最低 CPU (MHz)**：指定软件标题所需的最低处理器速度，以兆赫 (MHz) 为单位。  
+> [!NOTE]  
+>  Configuration Manager 主控台中顯示的硬體需求是擷取 Asset Intelligence 類別目錄，而不是以 System Center 2012 Configuration Manager 用戶端中的已清查軟體項目資訊為依據。 硬體需求的資訊不會與 System Center Online 同步處理程序一起更新。 針對沒有相關聯硬體需求的已清查軟體，您可以建立使用者定義的硬體需求。  
 
--   **最小 RAM (KB)**：指定软件标题所需的最小 RAM，以 KB 为单位。  
+ 根據預設，每個列出的硬體需求會顯示下列資訊：  
 
--   **最小磁盘空间(KB)**：指定软件标题所需的最小可用硬盘空间，以 KB 为单位。  
+-   **軟體項目**：指定與硬體需求相關聯的軟體項目。  
 
--   **最小磁盘大小 (KB)**：指定软件标题所需的最小硬盘大小，以 KB 为单位。  
+-   **CPU 下限 (MHz)**：指定軟體項目所需的最低處理器速度 (MHz)。  
 
--   **验证状态**：指定硬件要求的验证状态。  
+-   **RAM 下限 (KB)**：指定軟體項目所需的最小 RAM (KB)。  
 
- 存储在资产智能目录中的预定义硬件要求是只读的，无法删除。  管理用户可以添加、修改或删除未存储在资产智能目录中的软件标题的用户定义硬件要求。  
+-   **磁碟空間下限 (KB)**：指定軟體項目所需的最小可用硬碟空間 (KB)。  
 
-##  <a name="BKMK_InventoriedSoftwareTitles"></a> 已列出清单的软件标题  
- 可以在“资产和符合性”  工作区中的“资产智能”  节点下的“已列出清单的软件”  节点下，查看已列出清单的软件标题信息。 硬件清单客户端代理基于存储在资产智能目录中的软件标题，从 Configuration Manager 客户端收集已列出清单的软件信息。  
+-   **磁碟大小下限 (KB)**：指定軟體項目所需的最小可用硬碟大小 (KB)。  
+
+-   **驗證狀態**：指定硬體需求的驗證狀態。  
+
+ 儲存在 Asset Intelligence 類別目錄中的預先定義硬體需求是唯讀，而且無法刪除。  系統管理使用者可以新增、修改或刪除未儲存在 Asset Intelligence 類別目錄中的使用者定義之軟體項目硬體需求。  
+
+##  <a name="BKMK_InventoriedSoftwareTitles"></a> 已清查的軟體項目  
+ 您可以在 [資產與相容性]  工作區中 [Asset Intelligence]  節點下的 [已清查的軟體]  節點，檢視已清查的軟體項目資訊。 硬體清查用戶端代理程式會依據儲存在 Asset Intelligence 類別目錄中的軟體項目，從 Configuration Manager 用戶端收集已清查的軟體資訊。  
 
 > [!WARNING]  
->  硬件清单客户端代理基于启用的资产智能硬件清单报表类收集清单。 有关如何启用报表类的详细信息，请参阅[在 System Center Configuration Manager 中配置资产智能](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md)。  
+>  硬體清查用戶端代理程式會根據您啟用的 Asset Intelligence 報告類別，來收集清查項目。 如需如何啟用報告類別的詳細資訊，請參閱[設定 System Center Configuration Manager 中的 Asset Intelligence](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md)。  
 
- 默认情况下，为每个已列出清单的软件标题显示下列信息：  
+ 根據預設，每個列出的已清查軟體項目會顯示下列資訊：  
 
--   **名称**：指定已列出清单的软件标题的名称。  
+-   **名稱**：指定已清查軟體項目的名稱。  
 
--   **供应商**：指定开发已列出清单的软件标题的供应商名称。  
+-   **廠商**：指定開發已清查軟體項目的廠商名稱。  
 
--   **版本**：指定已列出清单的软件标题的产品版本。  
+-   **版本**：指定已清查軟體項目的產品版本。  
 
--   **类别**：指定已列出清单的软件标题当前所分配的软件类别。  
+-   **類別**：指定目前指派給已清查軟體項目的軟體類別。  
 
--   **家族**：指定已列出清单的软件标题当前所分配的软件家族。  
+-   **系列**：指定目前指派給已清查軟體項目的軟體系列。  
 
--   **标签** [“1”、“2” 和“3” ]：指定与软件标题关联的自定义标签。 已列出清单的软件标题可以与最多三个自定义标签关联。  
+-   **標籤** [**1**、 **2**和 **3**]：指定與軟體項目相關聯的自訂標籤。 已清查的軟體項目最多可以有三個與其相關聯的自訂標籤。  
 
--   **计数**：指定对软件标题列出清单的 Configuration Manager 客户端数。  
+-   **計數**：指定已清查軟體項目的 Configuration Manager 用戶端數目。  
 
--   **状态**：指定已列出清单的软件标题的验证状态。  
-
-> [!NOTE]  
->  只能在层次结构中的顶层站点上为已列出清单的软件更改分类信息（产品名称、供应商、软件类别和软件家族）。 修改预定义软件的分类信息之后，软件的验证状态会从“已验证”  更改为“用户定义” 。  
-
-##  <a name="AssetIntelligenceSycnronizationPoint"></a> 资产智能同步点  
- 资产智能同步点是一个用于连接到 System Center Online（使用 TCP 端口 443）以管理动态资产智能目录信息更新的 Configuration Manager 站点系统角色。 此站点角色只能安装在层次结构的顶层站点上。 必须使用连接到顶层站点的 Configuration Manager 控制台配置所有资产智能目录自定义。 虽然所有更新都必须在顶层站点上配置，但是资产智能目录信息会复制到层次结构中的其他站点。 使用资产智能同步点站点角色可以请求与 System Center Online 进行按需目录同步或者计划自动目录同步。 除了下载新的资产智能目录信息之外，资产智能同步点还可以将自定义软件标题信息上载到 System Center Online 以进行分类。 Microsoft 将所有上载到 System Center Online 进行分类的软件标题信息视为公用信息。 因此，应确保自定义软件标题不包含机密或专有信息。  
+-   **狀態**：指定已清查軟體項目的驗證狀態。  
 
 > [!NOTE]  
->  提交了未分类的软件标题，并且客户对相同软件标题至少进行了 4 次分类请求之后，System Center Online 研究人员会进行标识、分类，然后将软件标题分类信息提供给正在使用联机服务的所有客户。 表示最多分类请求的软件标题会收到最高优先级以进行分类。 自定义软件和业务线应用程序不大可能接收类别，作为最佳做法，不应将这些软件标题发送给 Microsoft 进行分类。  
+>  您僅可變更階層中頂層網站的已清查軟體分類資訊 (產品名稱、廠商、軟體類別與軟體系列)。 修改預先定義的軟體分類資訊之後，軟體的驗證狀態會從 [已驗證]  變更為 [使用者定義] 。  
+
+##  <a name="AssetIntelligenceSycnronizationPoint"></a> Asset Intelligence 同步處理點  
+ Asset Intelligence 同步處理點是一種 Configuration Manager 站台系統角色，其可用來連線至 System Center Online (使用 TCP 連接埠 443)，以動態管理 Asset Intelligence 類別目錄資訊的更新。 此站台角色只能安裝在階層的頂層網站上。 您必須使用連線至頂層網站的 Configuration Manager 主控台，來設定所有 Asset Intelligence 類別目錄的自訂項目。 雖然您必須在頂層站台中設定所有更新，但系統會將 Asset Intelligence 類別目錄資訊複寫到階層中的其他站台。 Asset Intelligence 同步處理點站台角色可讓您要求隨選同步處理 System Center Online 或排程自動類別目錄同步處理。 除了下載新的 Asset Intelligence 類別目錄資訊，Asset Intelligence 同步處理點還可以將自訂軟體項目資訊上傳至 System Center Online 以便分類。 Microsoft 會將所有上傳至 System Center Online 的軟體項目分類為公用資訊。 因此，請確認您自訂的軟體項目不含機密或專利資訊。  
 
 > [!NOTE]  
->  需要资产智能同步点站点系统角色才能连接到 System Center Online。 有关如何安装资产智能同步点的信息，请参阅[在 System Center Configuration Manager 中配置资产智能](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md)。  
-
-##  <a name="BKMK_AssetIntelligenceHomePage"></a> “资产智能”主页  
- “资产和符合性”工作区中的“资产智能”节点是 Configuration Manager 中的资产智能主页。 “资产智能”  主页显示资产智能目录信息的摘要仪表板视图。  
+>  未分類的軟體項目提交之後，若有客戶對相同軟體項目提出 4 個以上的分類要求時，System Center Online 研究人員會識別、分類，然後將軟體項目分類資訊提供給所有使用線上服務的客戶。 分類要求數最多的軟體項目，其分類優先順序最高。 自訂軟體和企業營運應用程式不太可能會收到分類，因此最佳做法是不要將這類軟體項目傳送給 Microsoft 進行分類。  
 
 > [!NOTE]  
->  在查看“资产智能”  主页时，它不会自动更新。  
+>  需具備 Asset Intelligence 同步處理點站台系統角色，才能連線到 System Center Online。 如需如何安裝 Asset Intelligence 同步處理點的資訊，請參閱[設定 System Center Configuration Manager 中的 Asset Intelligence](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md)。  
 
- “资产智能”  主页包含以下部分：  
+##  <a name="BKMK_AssetIntelligenceHomePage"></a> Asset Intelligence 首頁  
+ [資產與相容性] 工作區中的 [Asset Intelligence] 節點即為 Configuration Manager 的 Asset Intelligence 首頁。 [Asset Intelligence]  首頁會顯示 Asset Intelligence 類別目錄資訊的摘要儀表板檢視。  
 
--   **目录同步**：提供有关是否启用资产智能和资产智能同步点当前状态的信息。 该部分还提供同步计划、是否导入客户许可证声明、上次更新状态的时间和下一个计划更新的时间以及安装资产智能同步点站点系统之后发生的更改数。  
+> [!NOTE]  
+>  在檢視 [Asset Intelligence]  首頁期間，首頁不會自動更新。  
+
+ [Asset Intelligence]  首頁包括下列區段：  
+
+-   **類別目錄同步處理**：提供是否啟用 Asset Intelligence 以及 Asset Intelligence 同步處理點目前狀態的相關資訊。 本區段也提供同步處理排程、客戶授權聲明是否匯入、上次更新狀態的時間、下次排定的更新時間，以及安裝 Asset Intelligence 同步處理點站台系統之後發生的變更數目。  
 
     > [!NOTE]  
-    >  如果安装了资产智能同步点站点系统角色，则仅显示“资产智能”  主页的“资产智能目录同步”部分。  
+    >  僅有安裝 Asset Intelligence 同步處理點站台系統角色之後，[Asset Intelligence]  首頁的 Asset Intelligence 類別目錄同步處理區段才會顯示。  
 
--   **清单软件状态**：提供已列出清单的软件、软件类别以及由 Microsoft 标识、由管理员标识、等待联机标识或未标识并且未等待的软件家族的计数和百分比。 以表格式显示的信息显示每种对象的计数，以图表显示的信息显示每个对象的百分比。  
+-   **已清查的軟體狀態**：提供由 Microsoft 識別、系統管理員識別、擱置的線上識別或無法辨識但未擱置的已清查軟體、軟體類別及軟體系列的計數和百分比。 這些資訊會以表格格式顯示各項計數，並以圖表顯示各項百分比。  
 
-##  <a name="BKMK_AssetIntelligenceReports"></a> 资产智能报表  
- 资产智能报表位于 Configuration Manager 控制台中，在“监视”工作区中“报表”节点下的“资产智能”文件夹中。 这些报表提供有关硬件、许可证管理和软件的信息。 有关 Configuration Manager 中报表的详细信息，请参阅 [System Center Configuration Manager 中的报表](../../../../core/servers/manage/reporting.md)。  
-
-> [!NOTE]  
->  资产智能报表中显示的已安装软件标题和许可证信息的数量的准确性可能会与安装的软件标题或环境中使用的许可证的实际数量不同。 形成这种差异的原因是为企业环境中安装的软件标题清点软件许可证信息所涉及的复杂依赖关系和限制。 请勿将资产智能报表用作确定所购买软件许可证符合性的唯一来源。  
-
-###  <a name="BKMK_HardwareReports"></a> 资产智能硬件报表  
- 资产智能硬件报表提供有关组织中硬件资产的信息。 使用硬件清单信息（例如速度、内存、外围设备等），资产智能硬件报表可以显示有关 USB 设备、必须升级的硬件乃至未准备好执行特定软件升级的计算机的信息。  
+##  <a name="BKMK_AssetIntelligenceReports"></a> Asset Intelligence 報告  
+ 在 Configuration Manager 主控台中，Asset Intelligence 報告位於 [監視] 工作區之 [報告]  節點下的 Asset Intelligence 資料夾中。 這份報告提供硬體、授權管理和軟體的相關資訊。 如需 Configuration Manager 報告的詳細資訊，請參閱 [System Center Configuration Manager 中的報告](../../../../core/servers/manage/reporting.md)。  
 
 > [!NOTE]  
->  资产智能硬件报表中的一些用户数据是从系统安全事件日志收集的。 为实现更好的报表准确性，建议在将计算机重新分配给新用户时清除此日志。  
+>  Asset Intelligence 報告中顯示的已安裝軟體項目數量及授權資訊的精確度，可能會與已安裝的實際軟體項目數量或環境中已使用的授權數量有所不同。 因為要清查企業環境中安裝的軟體項目之軟體授權資訊涉及到複雜的相依性與限制，因此會造成這項差異。 請不要將 Asset Intelligence 報告作為判斷購買的軟體授權相容性的唯一來源。  
 
-###  <a name="BKMK_LicenseManagementReports"></a> 资产智能许可证管理报表  
- 资产智能许可证管理报表提供有关正在使用的许可证的数据。 “许可证分类帐”报表以与 Microsoft 许可证声明 (MLS) 一致的格式列出已安装的 Microsoft 应用程序。 这提供了将购买的许可证与使用的许可证配对的简便方法。 其他许可证管理报表提供有关充当针对操作系统激活统计信息运行密钥管理服务 (KMS) 的服务器的计算机的信息。  
+###  <a name="BKMK_HardwareReports"></a> Asset Intelligence 硬體報告  
+ Asset Intelligence 硬體報告提供組織中硬體資產的相關資訊。 Asset Intelligence 硬體報告可藉由使用速度、記憶體、週邊裝置等硬體清查資訊，呈現 USB 裝置與必須升級的硬體等相關資訊，包括尚未準備好進行特定軟體升級的電腦相關資訊。  
+
+> [!NOTE]  
+>  Asset Intelligence 硬體報告會從系統安全性事件記錄檔中收集部分使用者資料。 為保障較佳的報告精確度，建議您在重新指派電腦給新使用者時清除此記錄檔。  
+
+###  <a name="BKMK_LicenseManagementReports"></a> Asset Intelligence 授權管理報告  
+ Asset Intelligence 授權管理報告提供正在使用的授權相關資料。 授權分類帳報告會使用與 Microsoft 授權聲明 (MLS) 一致的格式列出已安裝的 Microsoft 應用程式。 這是一種方便的方法，可供您比對已使用授權和所購買的授權。 其他授權管理報告則提供作為執行金鑰管理服務 (KMS) 之伺服器的電腦相關資訊，以取得作業系統啟用統計資料。  
 
 > [!IMPORTANT]  
->  有几个资产智能许可证管理报表可提供有关 KMS（一种管理批量许可的方法）的功能的信息。 如果尚未实施 KMS 服务器，某些报表可能不返回任何数据。 有关 KMS 的详细信息，请在 [Microsoft TechNet](http://go.microsoft.com/fwlink/?linkid=3225)上搜索 KMS。  
+>  若干 Asset Intelligence 授權管理報告會顯示 KMS 函式的相關資訊，其為管理大量授權的方法。 如果尚未實作 KMS 伺服器，有些報告可能不會傳回任何資料。 如需 KMS 的詳細資訊，請在 [Microsoft TechNet](http://go.microsoft.com/fwlink/?linkid=3225)上搜尋 KMS。  
 
-###  <a name="BKMK_SoftwareReports"></a> 资产智能软件报表  
- 资产智能软件报表提供有关组织中计算机上安装的软件家族、类别和特定软件标题的信息。 软件报表可显示有关浏览器帮助程序对象、自动启动的软件等的信息。 这些报表可用于识别广告软件、间谍软件和其他恶意软件，并且可以标识软件冗余，从而有助于简化软件购买和支持。  
+###  <a name="BKMK_SoftwareReports"></a> Asset Intelligence 軟體報告  
+ Asset Intelligence 軟體報告提供安裝在組織電腦上的軟體系列、類別以及特定軟體項目等相關資訊。 軟體報告顯示瀏覽器協助程式物件與自動啟動的軟體等相關資訊。 這些報告可用來識別廣告軟體、間諜軟體及其他惡意程式碼，並識別軟體備援，以協助簡化軟體購買及支援。  
 
-###  <a name="BKMK_SoftwareIdTagReports"></a> 资产智能软件标识标记报表  
- 资产智能软件标识标记报表提供有关包含符合 ISO/IEC 19770-2 标准的软件标识标记的软件的信息。 软件标识标记提供用于标识安装的软件的授权信息。 启用 SMS_SoftwareTag 硬件清单报表类时，Configuration Manager 会收集有关具有软件标识标记的软件的信息。 以下报表提供有关软件的信息：  
+###  <a name="BKMK_SoftwareIdTagReports"></a> Asset Intelligence 軟體識別標記報告  
+ Asset Intelligence 軟體識別標記報告提供包含符合 ISO/IEC 19770-2 之軟體識別標記的軟體相關資訊。 軟體識別標記會提供用來識別已安裝軟體的授權資訊。 在您啟用 SMS_SoftwareTag Asset Intelligence 硬體清查報告類別時，Configuration Manager 即會收集包含軟體識別標記之軟體的相關資訊。 下列報告提供軟體相關資訊：  
 
--   **软件 14A - 搜索启用软件标识标记的软件**：此报表提供启用了软件标识标记的已安装软件的计数。  
+-   **軟體 14A – 搜尋已啟用軟體識別標記的軟體**：這份報告提供具有啟用軟體識別標記的已安裝軟體計數。  
 
--   **软件 14B - 安装有启用特定软件标识标记的软件的计算机**：此报表列出安装了启用特定软件标识标记的软件的所有计算机。  
+-   **軟體 14B – 安裝啟用特定軟體識別標記之軟體的電腦**：這份報告列出已安裝啟用了特定軟體識別標記之軟體的所有電腦。  
 
--   **软件 14C - 特定计算机上所安装的启用软件标识标记的软件**：此报表列出特定计算机上启用了特定软件标识标记的所有已安装软件。  
+-   **軟體 14C – 特定電腦上安裝的已啟用軟體識別標記的軟體**：此報告會列出在特定電腦上已啟用特定軟體識別標記的所有已安裝軟體。  
 
-###  <a name="BKMK_ReportingLImitations"></a> 资产智能报表限制  
- 资产智能报表可以提供有关安装的软件标题及已购买且正在使用的软件许可证的大量信息。 然而，不应该将这些信息用作确定所购买软件许可证符合性的唯一来源。  
+###  <a name="BKMK_ReportingLImitations"></a> Asset Intelligence 報告限制  
+ Asset Intelligence 報告提供已安裝軟體項目與正在使用之購買軟體授權的大量相關資訊。 不過，您不應該將這項資訊作為判斷購買之軟體授權相容性的唯一來源。  
 
-####  <a name="BKMK_ExampleDependencies"></a> 示例依赖关系  
- 资产智能报表中显示的已安装软件标题和许可证信息的数量的准确性可能会与当前使用的实际数量不同。 形成这种差异的原因是为企业环境中使用的软件标题清点软件许可证信息所涉及的复杂依赖关系。 以下举例演示了在使用资产智能的企业中，对可能影响资产智能报表准确性的已安装软件列出清单所涉及的依赖关系：  
+####  <a name="BKMK_ExampleDependencies"></a> 相依性範例  
+ Asset Intelligence 報告中顯示的已安裝軟體項目數量及授權資訊的精確度，可能會與目前已使用的實際數量有所不同。 因為要清查企業環境中所使用的軟體項目之軟體授權資訊涉及到複雜的相依性，因此會造成這項差異。 下列範例說明使用 Asset Intelligence 清查企業中已安裝軟體涉及的相依性，其可能會影響 Asset Intelligence 報告的精確度：  
 
- **客户端硬件清单依赖关系**  
- 资产智能安装的软件报表基于通过扩展硬件清单启用资产智能报表，从 Configuration Manager 客户端收集的数据。 因为对硬件清单报表的这种依赖关系，资产智能报表将仅反映来自在启用了必需的资产智能 WMI 报表类的情况下，成功完成硬件清单进程的 Configuration Manager 客户端的数据。 另外，因为 Configuration Manager 客户端根据管理用户所定义的计划来执行硬件清单进程，所以在数据报表中可能出现延迟，此延迟会影响资产智能报表的准确性。 例如，已列出清单的受许可软件标题可能会在客户端完成成功的硬件清单周期之后卸载。 但是，该软件标题会在资产智能报表中显示为已安装，直到客户端的下一个计划硬件清单报表周期。  
+ **用戶端硬體清查相依性**  
+ Asset Intelligence 已安裝軟體報告的資料收集來源是 Configuration Manager 用戶端，作法是藉由擴充硬體清查來啟用 Asset Intelligence 報告。 這種硬體清查報告的相依性導致 Asset Intelligence 報告僅會反映來自下列用戶端的資料：順利完成硬體清查處理程序且已啟用必要 Asset Intelligence WMI 報告類別的 Configuration Manager 用戶端。 此外，由於 Configuration Manager 用戶端是依據系統管理使用者所定義的排程來執行硬體清查處理程序，因此資料報告時可能會發生延遲並影響 Asset Intelligence 報告的精確度。 比方說，在用戶端成功完成硬體清查週期後，其中某個已清查的授權軟體項目可能被解除安裝。 不過，直到用戶端下一個排定的硬體清查報告週期為止，Asset Intelligence 報告都會將該軟體項目顯示為已安裝。  
 
- **软件封装依赖关系**  
- 因为资产智能报表基于使用标准 Configuration Manager 客户端硬件清单进程收集的已安装软件标题数据，所以可能未正确收集某些软件标题数据。 例如，不符合标准安装流程的软件安装或者在安装之前更改的软件安装可能导致资产智能报表不准确。  
+ **軟體封裝相依性**  
+ 由於 Asset Intelligence 報告的依據是使用標準 Configuration Manager 用戶端硬體清查處理程序收集的已安裝軟體項目資料，因此部分軟體項目資料的收集可能有誤。 例如，不符合標準安裝處理程序的軟體安裝，或在安裝以前有所變更的軟體安裝，都可能會導致不正確的 Asset Intelligence 報告。  
 
 ####  <a name="BKMK_LegalLimitations"></a> 法律限制  
- 资产智能报表中显示的信息受诸多限制影响，其中显示的信息不表示法律、会计或其他专业建议。 资产智能报表提供的信息仅供参考，并且不应用作确定软件许可证使用情况符合性的唯一信息来源。  
+ Asset Intelligence 報告顯示的資訊可能會有許多限制，其中顯示的資訊亦不代表法律、會計或其他方面的專業意見。 Asset Intelligence 報告所提供的資訊僅供參考，不應作為判斷軟體授權使用量相容性的唯一資訊來源。  
 
- 以下举例说明了在使用资产智能的企业中，对可能影响资产智能报表准确性的已安装软件和许可证使用情况列出清单所涉及的限制：  
+ 下列為使用 Asset Intelligence 清查企業中已安裝軟體與授權使用量涉及的限制範例，其可能會影響 Asset Intelligence 報告的精確度：  
 
- **Microsoft 许可证使用情况数量限制**  
- -   购买的 Microsoft 软件许可证的数量基于管理员提供的信息，并且应进行严密评审以确保提供正确的软件许可证数量。  
+ **Microsoft 授權使用數量限制**  
+ -   購買的 Microsoft 軟體授權數量是以系統管理員提供的資訊為依據，因此，您應仔細檢閱以確保提供的軟體授權數目正確。  
 
--   报告的 Microsoft 软件许可证数量仅包含有关通过批量许可计划获取的 Microsoft 软件许可证的信息，不反映通过零售、OEM 或其他软件许可证销售渠道获取的软件许可证的信息。  
+-   回報的 Microsoft 軟體授權數量僅包含透過大量授權方案取得之 Microsoft 軟體授權的相關資訊，並不會反映透過零售、OEM 或其他軟體授權銷售通路取得之軟體授權的資訊。  
 
--   由于软件经销商报表要求和计划，最近 45 天内获取的软件许可证可能未包括在所报告的 Microsoft 软件许可证数量中。  
+-   由於軟體轉銷商的報告需求和排程所致，回報的 Microsoft 軟體授權數量可能不會納入前 45 天內取得的軟體授權。  
 
--   由于公司合并或收购而导致的软件许可证转让不会反映在 Microsoft 软件许可证数量中。  
+-   因公司合併或收購導致的軟體授權移轉可能不會反映在 Microsoft 軟體授權數量中。  
 
--   Microsoft 批量许可 (MVLS) 协议中的非标准条款和条件可能会影响所报告的软件许可证数量，因此，可能需要 Microsoft 代表进行附加评审。  
+-   Microsoft 大量授權 (MVLS) 協議中的非標準條款及條件可能會影響回報的軟體授權數目，因此，可能需由 Microsoft 代表再行審閱。  
 
- **安装的软件标题数量限制**  
- Configuration Manager 客户端必须成功完成资产智能报表的硬件清单报表周期才能准确报告已安装软件标题的数量。 另外，如果在成功硬件清单报表周期之后安装或卸载已许可的软件标题，则可能存在延迟，因此在客户端报告它的下一个计划的硬件清单之前，该软件标题将不会反映在运行的资产智能报表中。  
+ **已安裝的軟體項目數量限制**  
+ Configuration Manager 用戶端必須成功完成硬體清查報告週期，Asset Intelligence 報告才能準確地回報已安裝的軟體項目數量。 此外，在成功的硬體清查報告之後，如果 Asset Intelligence 報告在用戶端回報下一個排定硬體清查之前執行，報告就不會反映安裝或解除安裝已授權的軟體項目之間的延遲。  
 
- **许可证对帐限制**  
- 通过将由管理员指定的许可证数量与根据管理员所设置的计划从 Configuration Manager 客户端硬件清单收集的已安装软件标题数量进行比较，来计算安装的软件标题数量与购买的软件许可证数量的对帐。 此比较并不表示许可证位置的最终 Microsoft 结论。 实际的许可证位置取决于特定软件标题许可证以及许可条款所授予的使用权限。  
+ **授權對帳限制**  
+ 購買的軟體授權數量與已安裝軟體項目的對帳數量計算方式如下：依據系統管理員設定的排程，比較系統管理員指定的授權數量和從 Configuration Manager 用戶端硬體清查收集的已安裝軟體項目數量。 這項比較不代表 Microsoft 的最終授權定位結論。 實際的授權定位取決於特定軟體項目授權和授權條款授與的使用量權限。  
 
-##  <a name="BKMK_ValidationStates"></a> 资产智能验证状态  
- 资产智能验证状态表示资产智能目录信息的源验证状态和当前验证状态。 下表显示可能的资产智能验证状态以及可能导致这些状态的管理员操作。  
+##  <a name="BKMK_ValidationStates"></a> Asset Intelligence 驗證狀態  
+ Asset Intelligence 驗證狀態代表 Asset Intelligence 類別目錄資訊的來源和目前驗證狀態。 下表說明可能的 Asset Intelligence 驗證狀態，以及會造成這些狀態的系統管理員動作。  
 
-|**状态**|**定义**|**管理员操作**|**注释**|  
+|**狀態**|**定義**|**系統管理員動作**|**註解**|  
 |---------------|--------------------|------------------------------|-----------------|  
-|**Validated**|System Center Online 研究人员定义了目录项目。|无。|最佳状态。|  
-|**User Defined**|System Center Online 研究人员尚未定义目录项目。|自定义了本地目录信息。|此状态显示在资产智能报表中。|  
-|**挂起**|System Center Online 研究人员尚未定义目录项目，但是该项目已提交给 System Center Online 进行分类。|从 System Center Online 请求进行分类。|在 System Center Online 研究人员对项目进行分类和资产智能目录同步之前，目录项目一直保持此状态。|  
-|**可更新**|在后续目录同步期间，System Center Online 以不同的方式对用户定义的目录项目进行分类。|自定义了本地资产智能目录，以将项目归类为用户定义。|可以使用“解决冲突”操作来决定是使用新分类信息还是以前的用户定义值。 有关如何解决冲突的详细信息，请参阅 [System Center Configuration Manager 中的资产智能操作](../../../../core/clients/manage/asset-intelligence/operations-for-asset-intelligence.md)。|  
-|**未分类**|System Center Online 研究人员尚未定义目录项目，项目尚未提交给 System Center Online 进行分类，并且管理员尚未分配用户定义的分类值。|无。|请求分类或自定义本地目录信息。<br /><br /> 有关请求分类的详细信息，请参阅 [System Center Configuration Manager 中的资产智能操作](../../../../core/clients/manage/asset-intelligence/operations-for-asset-intelligence.md)。<br /><br /> 有关如何更改软件标题类别的详细信息，请参阅 [System Center Configuration Manager 中的资产智能操作](../../../../core/clients/manage/asset-intelligence/operations-for-asset-intelligence.md)。|  
+|**Validated**|System Center Online 研究人員已定義類別目錄項目。|無。|最佳狀態。|  
+|**User Defined**|System Center Online 研究人員未定義類別目錄項目。|自訂本機類別目錄資訊。|此狀態會顯示在 Asset Intelligence 報告中。|  
+|**擱置**|System Center Online 研究人員未定義類別目錄項目，但項目已提交給 System Center Online 進行分類。|System Center online 已要求分類。|類別目錄項目會維持此狀態，直到 System Center Online 研究人員分類好項目並同步處理 Asset Intelligence 類別目錄為止。|  
+|**可更新**|System Center Online 在後續的類別目錄同步處理期間，已使用不同的方式分類使用者定義的類別目錄項目。|自訂本機 Asset Intelligence 類別目錄，以將項目分類為使用者定義。|您可以使用 [解決衝突] 動作決定要使用新的分類資訊或使用之前的使用者定義值。 如需如何解決衝突的詳細資訊，請參閱 [System Center Configuration Manager 中 Asset Intelligence 的作業](../../../../core/clients/manage/asset-intelligence/operations-for-asset-intelligence.md)。|  
+|**未分類**|System Center Online 研究人員尚未定義類別目錄項目、項目未提交至 System Center Online 以進行分類，以及系統管理員尚未指派使用者定義的分類值。|無。|要求分類或自訂本機類別目錄資訊。<br /><br /> 如需要求分類的詳細資訊，請參閱 [System Center Configuration Manager 中 Asset Intelligence 的作業](../../../../core/clients/manage/asset-intelligence/operations-for-asset-intelligence.md)。<br /><br /> 如需如何變更軟體項目之類別目錄的詳細資訊，請參閱 [System Center Configuration Manager 中 Asset Intelligence 的作業](../../../../core/clients/manage/asset-intelligence/operations-for-asset-intelligence.md)。|  
 
 > [!NOTE]  
->  提交给 System Center Online 进行分类的目录项目在管理中心站点上具有验证状态“挂起”  ，但在子主站点上会继续显示为具有验证状态“未分类”  。  
+>  提交至 System Center Online 以進行分類的類別目錄項目，其在管理中心網站上的驗證狀態皆為 [擱置中]  ，但在子主要站台上會繼續顯示 [未分類]  驗證狀態。  
 
 > [!NOTE]  
->  在分类冲突解决后，项目不会再次验证为存在冲突，除非以后的分类更新引入了有关项目的新信息。  
+>  分類衝突解決後，只要之後的分類更新沒有導入新的項目資訊，就不會再將項目驗證為衝突。  
 
- 有关验证状态何时可能会从一个状态转换到另一个状态的示例，请参阅 [System Center Configuration Manager 中的资产智能验证状态转换示例](../../../../core/clients/manage/asset-intelligence/example-validation-state-transitions-for-asset-intelligence.md)。  
-
+ 如需何時會轉換驗證狀態的範例，請參閱 [System Center Configuration Manager 的 Asset Intelligence 驗證狀態轉換範例](../../../../core/clients/manage/asset-intelligence/example-validation-state-transitions-for-asset-intelligence.md)。  

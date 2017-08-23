@@ -1,96 +1,93 @@
 ---
 title: "Technical Preview 1512 Configuration Manager 中的功能"
-description: "了解 System Center Configuration Manager Technical Preview 1512 版中的可用功能。"
+description: "了解 System Center Configuration Manager Technical Preview 1512 版中可用的功能。"
 ms.custom: na
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e4d9e414-1346-4ed4-85d0-64d602b68731
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: noindex,nofollow
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
-ms.openlocfilehash: 7fff6f2807a679b621b736b8ad0b6561fb37affe
-ms.contentlocale: zh-cn
-ms.lasthandoff: 01/24/2017
-
+ms.openlocfilehash: 5cf8d54fbaa98a75ac2a875a23a43b1d3e5be0dd
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="capabilities-in-technical-preview-1512-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1512 版中的功能
+# <a name="capabilities-in-technical-preview-1512-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1512 中的功能
 
-*适用范围：System Center Configuration Manager (Technical Preview)*
+適用於︰System Center Configuration Manager (Technical Preview)
 
-本文介绍了 System Center Configuration Manager Technical Preview 1512 版中的可用功能。 可以安装此版本以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。 在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager Technical Preview](technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。  
+本文介紹 System Center Configuration Manager Technical Preview 1512 版中可用的功能。 您可以安裝此版本，以更新並新增功能至 Configuration Manager Technical Preview 站台。 安裝此版本的 Technical Preview 之前，請檢閱 [System Center Configuration Manager 的 Technical Preview](technical-preview.md) 簡介主題，以熟悉使用 Technical Preview 的一般需求和限制、如何在版本之間進行更新，以及如何針對 Technical Preview 中的功能提供意見反應。  
 
- 以下是可以试用的此版本的新功能。  
+ 以下是您可以使用此版本試用的新功能。  
 
-##  <a name="bkmk_devicehealth"></a> 设备运行状况证明  
- 从 Technical Preview 1512 开始，管理员可以在 Configuration Manager 中查看 Windows 10 设备运行状况证明的状态。  此功能适用于 Configuration Manager 和带 Microsoft Intune 的 Configuration Manager。 设备运行状况证明让管理员能够确保客户端计算机具有可信 BIOS、TPM 和启动软件配置。 为了支持设备运行状况证明，客户端设备必须运行 Win10 并启用 TPM 2。 设备运行状况证明显示为以下各项启用的设备数：  
+##  <a name="bkmk_devicehealth"></a> 裝置健全狀況證明  
+ 從 Technical Preview 1512 開始，系統管理員可以在 Configuration Manager 中檢視 Windows 10 裝置健康情況證明的狀態。  這項功能適用於 Configuration Manager 以及搭配 Microsoft Intune 使用的 Configuration Manager。 系統管理員可透過裝置健全狀況證明，確認該用戶端電腦具有可信任的 BIOS、TPM 以及開機軟體設定。 若要支援裝置健全狀況證明，用戶端裝置必須執行 Win10，同時啟用 TPM 2。 裝置健全狀況證明會顯示為下列各項啟用的裝置數目：  
 
--   开机初期启动的反恶意软件  
+-   早期啟動反惡意程式碼  
 
 -   BitLocker  
 
--   安全启动  
+-   安全開機  
 
--   代码完整性  
+-   程式碼完整性  
 
-控制台还显示丢失最多的运行状况证明设置和设备数。  
+主控台也會顯示排名在前最缺少的健全狀況證明設定，同時顯示裝置數目。  
 
-若要预览设备运行状况证明视图，请在 Configuration Manager 中转到“监视”工作区，单击“安全”节点，然后单击“运行状况证明”。  
+若要預覽裝置健康情況證明檢視，請在 Configuration Manager 主控台中，移至 [監視] 工作區，按一下 [安全性] 節點，然後按一下 [健康情況證明]。  
 
-##  <a name="bkmk_viewterms"></a>条款和条件的控制台中监视  
-从 Technical Preview 1512 开始，如果将 Configuration Manager 与 Microsoft Intune 集成，便可以使用 Configuration Manager 查看已接受和未接受你的 IT 部门所配置条款和条件的用户。  
+##  <a name="bkmk_viewterms"></a> 在主控台中監視條款及條件  
+從 Technical  Preview 1512 開始，當您將 Configuration Manager 與 Microsoft Intune 整合時，可以使用 Configuration Manager 主控台檢視哪些使用者已接受 IT 部門所設定的條款及條件，哪些使用者則未接受。  
 
-**查看摘要信息：**  
+**若要檢視摘要資訊：**  
 
--   在 Configuration Manager 控制台中，转到“监视” > “概述” > “部署”，然后选择要查看的条款和条件部署。  
+-   在 Configuration Manager 主控台中，移至 [監視] > [概觀] > [部署]，然後選取您要檢視的條款及條件部署。  
 
-**查看详细信息：**  
+**若要檢視詳細資訊：**  
 
-1.  在 Configuration Manager 控制台中，转到“资产和符合性” > “概述” > “符合性设置” > “条款和条件”，然后选择要查看的条款和条件。  
+1.  在 Configuration Manager 主控台中，移至 [資產與相容性] > [概觀] > [相容性設定] > [條款及條件]，然後選取您要檢視的條款及條件。  
 
-2.  在控制台底部，选择“部署”选项卡并选择部署，然后单击“查看状态”。  
+2.  在主控台的底部，依序選取 [部署] 索引標籤和部署，然後按一下 [檢視狀態]。  
 
-##  <a name="bkmk_EPpolicy"></a>对 Endpoint Protection 策略设置的改进  
-在 1512 Technical Preview 中，我们在 Endpoint Protection 反恶意软件策略中添加了以下新设置：  
+##  <a name="bkmk_EPpolicy"></a> Endpoint Protection 原則設定的改善  
+在 1512 Technical Preview 中，我們已在 Endpoint Protection 反惡意程式碼原則中新增下列新的設定：  
 
--   实时保护：**在下载时和安装前阻止可能不需要的应用程序**  
+-   即時保護：**在下載時及安裝前封鎖潛在的垃圾應用程式**  
 
-    -   可能不需要的应用程序 (PUA) 是一种基于信誉和研究驱动的标识的威胁分类。 大多数情况下，它们是不需要的应用程序捆绑程序或其捆绑应用程序。  
+    -   潛在的垃圾應用程式 (PUA) 是依據評價與研究導向識別碼所區分的威脅分類。 這些最常見的潛在垃圾應用程式為垃圾應用程式搭配程式或其搭配的應用程式。  
 
-    -   默认启用了保护策略设置（设置为“是”）。 启用后，此设置将在下载和安装时阻止 PUA。 但是，您可以排除特定文件或文件夹，以满足您的环境的特定需求。  
+    -   預設會啟用保護原則設定 (設定為 [是])。 在啟用的情況下，這個設定於下載和安裝時，會封鎖 PUA。 不過，您可以排除特定檔案或資料夾，以符合您環境的特定需求。  
 
--   扫描设置：**在运行完全扫描时扫描映射的网络驱动器**  
+-   掃描設定：**執行完整掃描時，掃描網路對應的網路磁碟**  
 
-    -   此设置可以提供更高的粒度，让管理员能够在按计划完全扫描的过程中允许按需扫描网络文件，从而规避始终扫描映射的网络驱动器的风险。  
+    -   此設定為系統管理員提供能以更細微的方式隨選掃描網路檔案，而能避開在排程進行完整掃描期間，會一律掃描對應網路磁碟機的風險。  
 
-    -   必须先启用“扫描网络文件”设置（“是”），才可对此设置进行配置。  
+    -   必須對此設定先啟用 [掃描網路檔案] 設定 (設為 [是])，才可進行設定。  
 
-    -   默认情况下，此设置为“否”，表示完全扫描将不访问映射的网络驱动器。  
+    -   此設定預設會是 [否]，表示完整掃描不會存取對應的網路磁碟機。  
 
--   自动示例文件提交配置：  
+-   提交自動範例檔案設定：  
 
-     反恶意软件引擎可能会请求将文件示例发送到 Microsoft 供进一步分析。 默认情况下，发送此类示例之前将始终给出提示。 管理员现在可以管理以下设置以配置此行为：  
+     反惡意程式碼引擎可能會要求將範例檔案傳送給 Microsoft，進行進一步分析。 根據預設，在傳送這類範例前一律會出現提示。 系統管理員現已可管理下列設定，來設定此行為：  
 
-    -   高级：**启用自动示例文件提交以帮助 Microsoft 确定某些检测到的项是否为恶意项**：将此设置更改为“是”以启用自动示例文件提交。 默认情况下，此设置为“否”，这意味着禁用了自动示例文件提交，并且将在发送示例前提示用户。   （此设置是在 System Center 2012 R2 Configuration Manager SP1 中首次推出的）  
+    -   進階：**啟用自動範例檔提交，可協助 Microsoft 判定某些偵測到的項目是否為惡意**：將此設定變更為 [是] 可啟用自動範例檔提交。 此設定預設為 [否]，表示停用自動提交範例檔案，而且在傳送範例之前將提示使用者。   (此項設定最初由 System Center 2012 R2 Configuration Manager SP1 時採用)  
 
-    -   高级：**允许用户修改自动示例文件提交设置**：此设置决定在设备上具有本地管理权限的用户可否在客户端界面中更改自动示例文件提交设置。 默认情况下，此设置为“否”，这意味着只能从 Configuration Manager 内更改设置，设备上的本地管理员不能更改此配置。  
+    -   進階：**允許使用者修改自動範例檔案提交設定**：此設定會決定對裝置具有本機系統管理權限的使用者，是否可以在用戶端介面中變更自動範例檔提交設定。 此設定預設為 [否]，表示設定只能從 Configuration Manager 主控台變更，且裝置的本機系統管理員無法變更此設定。  
 
-         例如，下面显示了启用时由管理员设置的 Windows 10 中的 Windows Defender 设置，并且不允许用户对其进行修改：  
+         例如，下圖顯示系統管理員已啟用 Windows 10 中的 Windows Defender 設定，而且不允許使用者進行修改：  
 
          ![TechRef&#95;WinDefender](../../core/get-started/media/TechRef_WinDefender.png "TechRef_WinDefender")  
 
-    此外，Endpoint Protection 反恶意软件政策的“排除设置”部分中的现有“排除文件和文件夹”设置已改进为允许设备排除。 例如，你现在可以将以下内容指定为排除项： **\device\mvfs** （适用于 Multiversion 文件系统）。 策略不会验证设备路径；将 Endpoint Protection 策略提供给客户端上必须能够解释设备字符串的反恶意软件引擎。  
+    此外，Endpoint Protection 反惡意程式碼原則的 [排除設定] 區段中現有的 [排除檔案及資料夾] 設定，已改良為可以排除裝置。 例如：您現已可以指定排除下列項目： **\device\mvfs** (適用於多版本檔案系統)。 此原則不會驗證裝置路徑。要在用戶端上為反惡意程式碼引擎提供 Endpoint Protection 原則，使其必須能夠解譯裝置字串。  
 
-**使用 Endpoint Protection 策略的先决条件：**  
+**使用 Endpoint Protection 原則的必要條件：**  
 
-必须先使用 Endpoint Protection 客户端设置安装并管理 Endpoint Protection 客户端，才能使用 Endpoint Protection 策略。 该操作使用适用于 Windows 7、Windows 8、Windows 8.1 的 System Center Endpoint Protection 客户端或适用于 Windows 10 的托管 Windows Defender 完成。 请参阅 [System Center Configuration Manager 中的 Endpoint Protection](../../protect/deploy-use/endpoint-protection.md)。  
-
+必須先使用 Endpoint Protection 用戶端設定，安裝及管理 Endpoint Protection 用戶端，才可使用 Endpoint Protection 原則。 若是使用 Windows 7、Windows 8、Windows 8.1 之 System Center Endpoint Protection 用戶端，或是 Windows 10 受管理的 Windows Defender，則此作業已完成。 請參閱 [System Center Configuration Manager 中的 Endpoint Protection](../../protect/deploy-use/endpoint-protection.md)。  

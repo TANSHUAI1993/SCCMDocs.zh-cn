@@ -1,47 +1,43 @@
 ---
-title: "条件访问 | Microsoft Docs"
-description: "了解如何在 System Center Configuration Manager 中使用条件访问来帮助保护电子邮件和其他服务。"
+title: "條件式存取 | Microsoft Docs"
+description: "了解如何使用 System Center Configuration Manager 中的條件式存取，以協助保護電子郵件及其他服務。"
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7b04727b-d563-422f-8d59-4dd66215d0b3
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: ea9184cd4fdc87513ed489f0f568efa6d64c1caa
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/06/2017
-
-
+ms.openlocfilehash: d6933a331bb229f7e378e8f0bfa511f6b0553ae9
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
+# <a name="manage-access-to-services-in-system-center-configuration-manager"></a>管理 System Center Configuration Manager 中的服務存取權
 
-# <a name="manage-access-to-services-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中管理对服务的访问
-
-*适用范围：System Center Configuration Manager (Current Branch)*
-
-
-## <a name="conditional-access-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的条件访问
-使用“条件访问”，根据指定的条件帮助确保设备上通过 Microsoft Intune 注册的电子邮件和其他服务的安全。  
-
- 有关**使用 System Center Configuration Manager 管理并进行合规性评估的电脑上的条件访问**的信息，请参阅 [Manage access to O365 services for PCs managed by System Center Configuration Manager](../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)（管理由 System Center Configuration Manager 管理的电脑的 O365 服务的访问权限）。  
+適用於：System Center Configuration Manager (最新分支)
 
 
- 条件性访问的典型流可能如下所示：  
+## <a name="conditional-access-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的條件式存取
+使用 [條件式存取]可依據您指定的條件，協助保護已向 Microsoft Intune 註冊之裝置上的電子郵件和其他服務。  
+
+ 如需**以 System Center Configuration Manager 管理並評估相容性之電腦的條件式存取**資訊，請參閱[管理 System Center Configuration Manager 所管理之電腦對 O365 服務的存取](../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)。  
+
+
+ 條件式存取的標準流程大致如下：  
 
  ![ConditionalAccess4](media/ConditionalAccess4.png)  
 
- 使用条件性访问管理对以下服务的访问：  
+ 您可以使用條件存取來管理下列服務的存取：  
 
--   Microsoft Exchange 内部部署  
+-   Microsoft Exchange 內部部署  
 
 -   Microsoft Exchange Online  
 
@@ -49,138 +45,137 @@ ms.lasthandoff: 03/06/2017
 
 -   SharePoint Online  
 
--   Skype for Business Online
+-   商務用 Skype Online
 
 -   Dynamics CRM Online
 
- 若要实现条件性访问，可以在 Configuration Manager 中配置两个策略类型：  
+ 若要實作條件式存取，可在 Configuration Manager 中設定兩種原則類型：  
 
--   “符合性策略” 是可选策略，你可以将其部署到用户集合并对设置进行评估，例如：  
+-   **相容性原則** 不是必要的原則，可以部署到使用者集合，以及用於評估設定，例如：  
 
-    -   密码  
+    -   密碼  
 
     -   加密  
 
-    -   设备是否已越狱或取得 root 权限  
+    -   裝置為 jailbroken 或根目錄  
 
-    -   设备上的电子邮件是由 Configuration Manager 策略还是由 Intune 策略管理  
+    -   裝置上的電子郵件是由 Configuration Manager 或 Intune 原則管理  
 
-     **如果未向设备部署合规性策略，则任何适用的条件性访问策略都会将该设备视为合规**。  
+     **若未將相容性原則部署到裝置，所有適用的條件式存取原則皆會將裝置視為相容**。  
 
--   “条件性访问策略”针对特定服务而配置，并定义相应规则，如哪些 Azure Active Directory 安全用户组或 Configuration Manager 用户集合将被设为目标或豁免。  
+-   **條件式存取原則**會針對特定服務設定，並定義規則，例如哪些 Azure Active Directory 安全性使用者群組或 Configuration Manager 使用者集合將是目標，或是豁免。  
 
-     可从 Configuration Manager 控制台配置本地 Exchange 条件性访问策略。 但是，当配置 Exchange Online 或 SharePoint Online 策略时，将打开 Intune 管理控制台用于配置策略。  
+     您可設定 Configuration Manager 主控台的內部部署 Exchange 條件式存取原則。 不過，當您設定 Exchange Online 或 SharePoint Online 的原則時，這會開啟您用來設定原則的 Intune 管理主控台。  
 
-     与其他 Intune 或 Configuration Manager 策略不同，不用部署条件性访问策略。 相反，你只需配置这些策略一次，它们将应用于所有目标用户。  
+     不同於其他 Intune 或 Configuration Manager 原則，您無須部署條件式存取原則。 這類原則只需要部署一次，就會套用到所有受管理的使用者。  
 
- 当设备不满足你配置的条件时，将指导用户完成注册设备并修复阻止设备合规的问题的流程。  
+ 當裝置不符合您設定的條件時，會將使用者導向註冊裝置及修正裝置不相容之問題的程序。  
 
-在开始使用条件性访问**之前**，请确保已经满足正确的**要求**：  
+在您開始使用條件式存取**之前**，請確定您已確實地了解**需求**：  
 
-## <a name="requirements-for-exchange-online-using-the-shared-multi-tenant-environment"></a>Exchange Online 的要求（使用共享多租户环境）
-条件访问 Exchange Online 支持运行以下操作系统的设备：
--   Windows 8.1 及更高版本（若已注册到 Intune）
--   Windows 7.0 或 Windows 8.1（若已加入域）
--   Windows Phone 8.1 及更高版本
--   iOS 7.1 及更高版本
--   Android 4.0 及更高版本、Samsung KNOX 标准版 4.0 及更高版本
+## <a name="requirements-for-exchange-online-using-the-shared-multi-tenant-environment"></a>Exchange Online 的需求 (使用共用的多租用戶環境)
+Exchange Online 條件式存取支援執行下列各項的裝置：
+-   Windows 8.1 及更新版本 (已向 Intune 註冊)
+-   Windows 7.0 或 Windows 8.1 (已加入網域時)
+-   Windows Phone 8.1 和更新版本
+-   iOS 7.1 和更新版本
+-   Android 4.0 和更新版本、Samsung KNOX Standard 4.0 和更新版本
 
  **此外**：
--   设备必须加入工作区，工作区将设备注册到 Azure Active Directory Device Registration 服务 (AAD DRS)。<br />     
-- 已加入域的 PC 必须通过组策略或 MSI 自动注册到 Azure Active Directory。
+-   裝置必須加入工作地點，以向 Azure Active Directory 裝置註冊服務 (AAD DRS) 註冊。<br />     
+- 聯結網域的電腦必須透過群組原則或 MSI 自動向 Azure Active Directory 註冊。
 
-  本主题中的“PC 的条件性访问”  描述了启用 PC 的条件性访问的所有要求。<br />     
-  AAD DRS 将对 Intune 和 Office 365 客户自动激活。 已经部署了 ADFS 设备注册服务的用户将不会在他们本地的 Active Directory 上看到已注册的设备。
--   你必须使用包含 Exchange Online（例如 E3）的 Office 365 订阅，并且用户必须获得 Exchange Online 许可。
--   **Exchange Server 连接器** 是可选的，其可将 Configuration Manager 连接到 Microsoft Exchange Online 并且有助于通过 Configuration Manager 控制台监视设备信息（请参阅[使用 System Center Configuration Manager 和 Exchange 管理移动设备](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)）。
-你不需要使用连接器来使用合规性策略或条件性访问策略，但要求你运行帮助评估条件性访问影响的报告。
+  本主題中的 **電腦的條件存取** 一節將說明為電腦啟用條件存取的所有需求。<br />     
+  Intune 和 Office 365 客戶將會自動啟用 AAD DRS。 已部署 ADFS 裝置註冊服務的客戶不會在其內部部署 Active Directory 中看到已註冊的裝置。
+-   您必須使用包含 Exchange Online (例如 E3) 的 Office 365 訂閱，而且使用者必須具備 Exchange Online 授權。
+-   您可選用 **Exchange Server 連接器**，其會將 Configuration Manager 連線至 Microsoft Exchange Online，並協助您透過 Configuration Manager 主控台，來監視裝置資訊 (請參閱[使用 System Center Configuration Manager 和 Exchange 管理行動裝置](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md))。
+您無須使用連接器，就能使用相容性原則或條件存取原則，但在執行報告必須使用，以協助您評估條件存取的影響。
 
-## <a name="requirements-for-exchange-online-dedicated"></a>Exchange Online Dedicated 的要求
-Exchange Online Dedicated 的条件性访问支持运行以下操作系统的设备：
--   Windows 8 及更高版本（若已注册到 Intune）
--   Windows 7.0 或 Windows 8.1（若已加入域）
+## <a name="requirements-for-exchange-online-dedicated"></a>Exchange Online Dedicated 的需求
+Exchange Online Dedicated 的條件存取支援執行下列平台的裝置：
+-   Windows 8 及更新版本 (已向 Intune 註冊)
+-   Windows 7.0 或 Windows 8.1 (已加入網域時)
 
-  已加入域的 PC 的条件性访问仅针对新 Exchange Online 专用环境中的租户。
--   Windows Phone 8 及更高版本
--   使用 Exchange ActiveSync (EAS) 电子邮件客户端的任何 iOS 设备
--   Android 4 及更高版本。
--   对于**旧 Exchange Online Dedicated 环境**中的租户：    
+  對網域的條件存取只會將電腦聯結至新的 Exchange Online 專用環境中的租用戶。
+-   Windows Phone 8 和更新版本
+-   所有使用 Exchange ActiveSync (EAS) 電子郵件用戶端的 iOS 裝置
+-   Android 4 及更新版本
+-   若是使用**舊版 Exchange Online Dedicated 環境**的租用戶：    
 
-  必须使用“Exchange Server 连接器”，它会将 Configuration Manager 连接到 Microsoft Exchange 内部部署）。 由此你可以管理移动设备并启用条件访问（请参阅[使用 System Center Configuration Manager 和 Exchange 管理移动设备](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)）。
--   对于**新 Exchange Online Dedicated 环境**中的租户：     
-  可选的“Exchange Server 连接器”会将 Configuration Manager 连接到 Microsoft Exchange Online 并且帮助管理设备信息（请参阅[使用 System Center Configuration Manager 和 Exchange 管理移动设备](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)）。 你不需要使用连接器来使用合规性策略或条件性访问策略，但要求你运行帮助评估条件性访问影响的报告。  
+  您必須使用 **Exchange Server 連接器**，將 Configuration Manager 連線到 Microsoft Exchange 內部部署。 這可讓您管理行動裝置和啟用條件存取 (請參閱[使用 System Center Configuration Manager 和 Exchange 管理行動裝置](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md))。
+-   若是使用**新 Exchange Online Dedicated 環境**的租用戶：     
+  選擇性的 **Exchange Server 連接器**會將 Configuration Manager 連線至 Microsoft Exchange Online，並協助您管理裝置資訊 (請參閱[使用 System Center Configuration Manager 和 Exchange 管理行動裝置](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md))。 您無須使用連接器，就能使用相容性原則或條件存取原則，但在執行報告必須使用，以協助您評估條件存取的影響。  
 
-## <a name="requirements-for-exchange-on-premises"></a>Exchange 内部部署的要求
-Exchange 内部部署支持的条件性访问：
--   Windows 8 及更高版本（若已注册到 Intune）
--   Windows Phone 8 及更高版本
--   iOS 上的本机电子邮件应用
--   Android 4 或更高版本上的本机电子邮件应用
--   不支持 Microsoft Outlook 应用（Android 和 iOS）。
+## <a name="requirements-for-exchange-on-premises"></a>Exchange 內部部署的需求
+Exchange 內部部署的條件式存取支援：
+-   Windows 8 及更新版本 (已向 Intune 註冊)
+-   Windows Phone 8 和更新版本
+-   iOS 上的原生電子郵件應用程式
+-   Android 4 或更新版本上的原生電子郵件應用程式
+-   不支援 Microsoft Outlook 應用程式 (Android 和 iOS)。
 
 **此外**：
 
--  Exchange 版本必须是 Exchange 2010 或更高版本。 支持 Exchange Server 客户端访问服务器 (CAS) 阵列。
+-  Exchange 版本必須是 Exchange 2010 或更新版本。 支援 Exchange 伺服器用戶端存取伺服器 (CAS) 陣列。
 
 > [!TIP]
-> 如果你的 Exchange 环境在 CAS 服务器配置中，则必须将本地 Exchange 连接器配置为指向一个 CAS 服务器。
-- 必须使用“Exchange Server 连接器”，它会将 Configuration Manager 连接到 Microsoft Exchange 内部部署。 由此你可以管理移动设备并启用条件访问（请参阅[使用 System Center Configuration Manager 和 Exchange 管理移动设备](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)）。
-  - 请确保使用最新版本的 **内部部署 Exchange 连接器**。 应通过 Configuration Manager 控制台来配置本地 Exchange 连接器。 有关详细的演练，请参阅[使用 System Center Configuration Manager 和 Exchange 管理移动设备](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)。
-  - 连接器仅可在 System Center Configuration Manager 主站点上进行配置。</li><li>此连接器支持 Exchange CAS 环境。 <br />        在配置连接器时，必须对其进行设置，以便与一个 Exchange CAS 服务器通信。
+> 如果您的 Exchange 環境位在 CAS 伺服器設定中，則您必須將內部部署 Exchange Connector 設定為指向其中一個 CAS 伺服器。
+- 您必須使用 **Exchange Server 連接器**，將 Configuration Manager 連線到 Microsoft Exchange 內部部署。 這可讓您管理行動裝置和啟用條件存取 (請參閱[使用 System Center Configuration Manager 和 Exchange 管理行動裝置](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md))。
+  - 請確定您是使用最新版的 **內部部署 Exchange Connector**。 內部部署 Exchange 連接器應透過 Configuration Manager 主控台加以設定。 如需詳細的逐步解說，請參閱[使用 System Center Configuration Manager 和 Exchange 管理行動裝置](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)。
+  - 連接器必定只能在 System Center Configuration Manager 主要站台上加以設定。</li><li>此連接器支援 Exchange CAS 環境。 <br />        設定連接器時，您必須加以設定，使該連接器可與其中一個 Exchange CAS 伺服器聯繫。
 
-- 可以基于身份验证或用户凭据条目使用证书来配置 Exchange ActiveSync
+- Exchange ActiveSync 可以設定成具有憑證型驗證或使用者認證項目
 
 
-## <a name="requirements-for-skype-for-business-online"></a>Skype for Business Online 的要求
-条件访问至 SharePoint Online 支持运行以下操作系统的设备：
- -   iOS 7.1 及更高版本
- -   Android 4.0 及更高版本
- -   Samsung KNOX 标准版 4.0 或更高版本
+## <a name="requirements-for-skype-for-business-online"></a>商務用 Skype Online 的需求
+SharePoint Online 條件式存取支援執行下列各項的裝置：
+ -   iOS 7.1 和更新版本
+ -   Android 4.0 及更新版本
+ -   Samsung KNOX Standard 4.0 或更新版本
 
-**此外**，必须为 Skype for Business Online 启用新式验证。 填充该 [连接窗体](https://connect.microsoft.com/office/Survey/NominationSurvey.aspx?SurveyID=17299&ProgramID=8715) 以在新式验证程序中注册。
+**此外**，您也必須為商務用 Skype Online 啟用新式驗證。 請填寫這份 [Connect 表單](https://connect.microsoft.com/office/Survey/NominationSurvey.aspx?SurveyID=17299&ProgramID=8715) ，以註冊加入新式驗證計畫。
 
-所有最终用户都必须使用 Skype for Business Online。 如果你的部署同时具有 Skype for Business Online 和本地 Skype for Business，则条件访问策略不会应用于处于本地部署中的最终用户。
+您的所有使用者都必須使用商務用 Skype Online。 如果您的部署同時包含商務用 Skype Online 與商務用 Skype 內部部署，則條件式存取原則將不會套用至處於內部部署中的使用者。
 
-## <a name="requirements-for-sharepoint-online"></a>SharePoint Online 的要求
-条件访问至 SharePoint Online 支持运行以下操作系统的设备：
- -   Windows 8.1 及更高版本（若已注册到 Intune）
- -   Windows 7.0 或 Windows 8.1（若已加入域）
- -   Windows Phone 8.1 及更高版本
- -   iOS 7.1 及更高版本
- -   Android 4.0 及更高版本、Samsung KNOX 标准版 4.0 及更高版本
+## <a name="requirements-for-sharepoint-online"></a>SharePoint Online 的需求
+SharePoint Online 條件式存取支援執行下列各項的裝置：
+ -   Windows 8.1 及更新版本 (已向 Intune 註冊)
+ -   Windows 7.0 或 Windows 8.1 (已加入網域時)
+ -   Windows Phone 8.1 和更新版本
+ -   iOS 7.1 和更新版本
+ -   Android 4.0 和更新版本、Samsung KNOX Standard 4.0 和更新版本
 
  **此外**：
- -   设备必须加入工作区，工作区将设备注册到 Azure Active Directory Device Registration 服务 (AAD DRS)。
+ -   裝置必須加入工作地點，以向 Azure Active Directory 裝置註冊服務 (AAD DRS) 註冊。
 
- 已加入域的 PC 必须通过组策略或 MSI 自动注册到 Azure Active Directory。 本主题中的“PC 的条件性访问”  描述了启用 PC 的条件性访问的所有要求。
+ 聯結網域的電腦必須透過群組原則或 MSI 自動向 Azure Active Directory 註冊。 本主題中的 **電腦的條件存取** 一節將說明為電腦啟用條件存取的所有需求。
 
- AAD DRS 将对 Intune 和 Office 365 客户自动激活。 已经部署了 ADFS 设备注册服务的用户将不会在他们本地的 Active Directory 上看到已注册的设备。
- -   SharePoint Online 订阅是必需的，并且用户必须获得 SharePoint Online 许可。
+ Intune 和 Office 365 客戶將會自動啟用 AAD DRS。 已部署 ADFS 裝置註冊服務的客戶不會在其內部部署 Active Directory 中看到已註冊的裝置。
+ -   需要 SharePoint Online 訂閱，且使用者必須具備 SharePoint Online 授權。
 
- ### <a name="conditional-access-for-pcs"></a>PC 的条件性访问
+ ### <a name="conditional-access-for-pcs"></a>電腦的條件存取
 
- 你可以设置 PC 的条件性访问以访问满足以下要求的 PC 的“Exchange Online”  和“SharePoint Online”  ，其中该 PC 运行 Office 桌面应用程序：
- -   电脑必须运行 Windows 7.0 或 Windows 8.1。
- -   PC 必须已加入域或必须合规。
+ 您可以針對執行 Office 桌面應用程式的電腦安裝條件存取，以便針對符合下列需求的電腦存取 **Exchange Online** 和 **SharePoint Online** ：
+ -   電腦必須執行 Windows 7.0 或 Windows 8.1。
+ -   這部電腦必須已聯結網域或與網域相容。
 
- 为了符合规范，PC 必须在 Intune 中进行注册且符合相应策略。
+ 為了相容，此電腦必須在 Intune 註冊，並與該原則相容。
 
- 对于加入域的电脑，必须将它设置为 [自动向 Azure Active Directory 注册设备](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-automatic-device-registration/) 。
- -   [Office 365 新式验证必须已启用](https://blogs.office.com/2015/03/23/office-2013-modern-authentication-public-preview-announced/)，且具有所有最新的 Office 更新。<br />     新式验证将基于 Active Directory 身份验证库 (ADAL) 的登录引入到 Office 2013 Windows 客户端中，并实现诸如“多重身份验证” 和“基于证书的身份验证” 等更佳的安全性。
- -   安装 ADFS 声明规则以阻止非新式验证协议。  
+ 已加入網域的電腦必須設為向 Azure Active Directory [自動註冊裝置](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-automatic-device-registration/) 。
+ -   [必須啟用 Office 365 的數據機驗證](https://blogs.office.com/2015/03/23/office-2013-modern-authentication-public-preview-announced/)，以及具有所有最新的 Office 更新。<br />     新式驗證將 Active Directory 驗證程式庫 (ADAL) 登入整合到 Office 2013 Windows 用戶端中，並啟用更佳的安全性，例如 **多因素驗證**和 **憑證式驗證**。
+ -   設定 ADFS 宣告規則來封鎖非新式驗證通訊協定。  
 
-## <a name="next-steps"></a>后续步骤  
- 阅读以下主题，了解如何为你要求的方案配置合规性策略和条件性访问策略：  
+## <a name="next-steps"></a>後續步驟  
+ 閱讀下列主題，以了解如何針對您的需要設定相容性原則及條件存取原則：  
 
--   [在 System Center Configuration Manager 中管理设备合规性策略](../../protect/deploy-use/device-compliance-policies.md)  
+-   [在 System Center Configuration Manager 中管理裝置相容性原則](../../protect/deploy-use/device-compliance-policies.md)  
 
--   [在 System Center Configuration Manager 中管理对电子邮件的访问](../../protect/deploy-use/manage-email-access.md)  
+-   [管理 System Center Configuration Manager 中的電子郵件存取](../../protect/deploy-use/manage-email-access.md)  
 
--   [在 System Center Configuration Manager 中管理 SharePoint Online 访问](../../protect/deploy-use/manage-sharepoint-online-access.md)  
+-   [在 System Center Configuration Manager 中管理 SharePoint Online 存取](../../protect/deploy-use/manage-sharepoint-online-access.md)  
 
--   [管理 Skype for Business Online 访问权限](../../protect/deploy-use/manage-skype-for-business-online-access.md)  
+-   [管理商務用 Skype Online 存取](../../protect/deploy-use/manage-skype-for-business-online-access.md)  
 
-### <a name="see-also"></a>另请参阅  
+### <a name="see-also"></a>請參閱  
 
- [System Center Configuration Manager 中的符合性设置入门](../../compliance/get-started/get-started-with-compliance-settings.md)
-
+ [在 System Center Configuration Manager 中開始使用相容性設定](../../compliance/get-started/get-started-with-compliance-settings.md)

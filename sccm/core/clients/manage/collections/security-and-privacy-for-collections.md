@@ -1,50 +1,46 @@
 ---
-title: "集合安全和隐私 | Microsoft Docs"
-description: "获取 System Center Configuration Manager 中集合的最佳安全做法和隐私。"
+title: "集合安全性和隱私權 | Microsoft Docs"
+description: "取得 System Center Configuration Manager 中集合的安全性與隱私權最佳作法。"
 ms.custom: na
 ms.date: 2/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 30bf2451-5415-4be2-ba8d-21759370cd83
-caps.latest.revision: 5
-caps.handback.revision: 0
+caps.latest.revision: "5"
+caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
-ms.openlocfilehash: 3379494824804c6be5c051c67a79d25e7eed88f0
-ms.contentlocale: zh-cn
-ms.lasthandoff: 12/16/2016
-
-
+ms.openlocfilehash: 0cade975e96220e193db1de92816f97cd253532d
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="security-and-privacy-for-collections-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的集合的安全和隐私
+# <a name="security-and-privacy-for-collections-in-system-center-configuration-manager"></a>System Center Configuration Manager 中集合的安全性和隱私權
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用對象：System Center Configuration Manager (最新分支)*
 
-本主题包含 System Center Configuration Manager 中集合的最佳安全做法和隐私信息。  
+本主題包含 System Center Configuration Manager 集合的安全性最佳作法和隱私權資訊。  
 
- 没有专门针对 Configuration Manager 中的集合的隐私信息。 集合是资源（如用户和设备）的容器。 集合成员身份通常依赖于 Configuration Manager 在标准操作过程中收集的信息。 例如，通过使用从发现或清单收集的资源信息，可以将集合配置为包含满足指定条件的设备。 集合还可以基于客户端管理操作的当前状态信息，例如正在部署软件和正在检查符合性。 除了这些基于查询的集合，管理用户还可以将资源添加到集合。  
+ 沒有專門針對 Configuration Manager 集合的隱私權資訊。 集合是資源的容器，例如使用者和裝置。 集合成員資格通常依賴 Configuration Manager 在標準作業期間所收集的資訊。 例如，透過使用從探索或清查收集到的資源資訊，集合可以設定成包含符合指定準則的裝置。 集合也可以用戶端管理作業目前的狀態資訊為基礎，例如部署軟體和檢查相容性。 除了這些查詢式的集合，系統管理使用者也可以在資源中加入集合。  
 
- 有关集合的详细信息，请参阅 [System Center Configuration Manager 中的集合简介](../../../../core/clients/manage/collections/introduction-to-collections.md)。 有关 Configuration Manager 操作（可用于配置集合成员身份）的任何最佳安全做法和隐私信息的详情，请参阅 [System Center Configuration Manager 的最佳安全做法和隐私信息](../../../../core/plan-design/security/security-best-practices-and-privacy-information.md)。  
+ 如需有關集合的詳細資訊，請參閱 [System Center Configuration Manager 的集合簡介](../../../../core/clients/manage/collections/introduction-to-collections.md)。 如需可用於設定集合成員資格之 Configuration Manager 作業的安全性最佳作法詳細資訊和隱私權資訊，請參閱 [System Center Configuration Manager 的安全性最佳作法和隱私權資訊](../../../../core/plan-design/security/security-best-practices-and-privacy-information.md)。  
 
-## <a name="security-best-practices-for-collections"></a>集合的最佳安全方案  
- 可将以下最佳安全方案用于集合。  
+## <a name="security-best-practices-for-collections"></a>集合的安全性最佳做法  
+ 請使用下列集合安全性最佳做法。  
 
-|最佳安全方案|更多信息|  
+|安全性最佳作法|詳細資訊|  
 |----------------------------|----------------------|  
-|当你使用保存到网络位置的托管对象格式 (MOF) 文件导出或导入集合时，请保护该位置和网络通道的安全。|限制可访问网络文件夹的人员。<br /><br /> 在网络位置与站点服务器之间使用服务器消息块 (SMB) 签名或 Internet 协议安全性 (IPsec)，以防止攻击者篡改导出的集合数据。 使用 IPsec 对网络上的数据进行加密以防止信息泄漏。|  
+|當您使用儲存在網路位置的受管理物件格式 (MOF) 檔案匯出或匯入集合時，請保護位置和網路通道。|限制存取網路資料夾的人員。<br /><br /> 使用在網路位置和站台伺服器之間的伺服器訊息區 (SMB) 簽署或網際網路通訊協定安全性 (IPsec)，防止攻擊者竄改匯出的集合資料。 在網路上使用 IPsec 為資料加密，以防止洩露資訊。|  
 
-### <a name="security-issues-for-collections"></a>集合的安全问题  
- 集合具有以下安全问题：  
+### <a name="security-issues-for-collections"></a>集合的安全性問題  
+ 集合有下列安全性問題：  
 
--   如果使用集合变量，本地管理员可以读取可能敏感的信息。  
+-   如果您使用集合變數，本機系統管理員可以讀取潛在的敏感資訊。  
 
-     在部署操作系统时，可以使用集合变量。  
-
+     當您部署作業系統時，可以使用集合變數。  

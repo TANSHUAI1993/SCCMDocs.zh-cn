@@ -1,75 +1,67 @@
 ---
-title: "监视电子邮件、Wi-Fi 和 VPN 配置文件 | Microsoft Docs"
-description: "了解如何在 System Center Configuration Manager 中监视电子邮件、Wi-Fi 和 VPN 配置文件的符合性状态。"
+title: "監視電子郵件、Wi-Fi 和 VPN 設定檔 | Microsoft Docs"
+description: "了解如何在 System Center Configuration Manager 中監視電子郵件、Wi-Fi 和 VPN 設定檔的相容性狀態。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e2315b8b-98bc-40e1-8ef9-bfb5e69ab109
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Nbigman
 ms.author: nbigman
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: bff083fe279cd6b36a58305a5f16051ea241151e
 ms.openlocfilehash: 73d941633d270cf9628f8be14e1e56f3c78624b6
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
+# <a name="monitor-email-wi-fi-and-vpn-profiles-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中監視電子郵件、Wi-Fi 和 VPN 設定檔
 
-# <a name="monitor-email-wi-fi-and-vpn-profiles-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中监视电子邮件、Wi-Fi 和 VPN 配置文件
+*適用對象：System Center Configuration Manager (最新分支)*
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+將 System Center Configuration Manager 電子郵件、Wi-Fi 或 VPN 設定檔部署至階層中的使用者之後，您就可以使用下列程序監視設定檔的相容性狀態：  
 
-将 System Center Configuration Manager 电子邮件、Wi-Fi 或 VPN 配置文件部署到层次结构中的用户后，可以使用下列过程来监视配置文件的符合性状态：  
+-   [如何在 Configuration Manager 主控台中檢視相容性結果](#BKMK_console)  
 
--   [如何在 Configuration Manager 控制台中查看符合性结果](#BKMK_console)  
+-   [如何使用報告檢視相容性結果](#BKMK_Reports)  
 
--   [如何使用报表来查看符合性结果](#BKMK_Reports)  
+##  <a name="BKMK_console"></a> 如何在 Configuration Manager 主控台中檢視相容性結果  
+ 使用這個程序，在 System Center Configuration Manager 主控台中檢視已部署設定檔的相容性詳細資料。  
 
-##  <a name="a-namebkmkconsolea-how-to-view-compliance-results-in-the-configuration-manager-console"></a><a name="BKMK_console"></a> 如何在 Configuration Manager 控制台中查看符合性结果  
- 使用此过程在 System Center Configuration Manager 控制台中查看有关所部署配置文件的符合性的详细信息。  
+#### <a name="to-view-compliance-results-in-the-configuration-manager-console"></a>在 Configuration Manager 主控台中檢視相容性結果  
 
-#### <a name="to-view-compliance-results-in-the-configuration-manager-console"></a>在 Configuration Manager 控制台查看符合性结果  
+1.  在 System Center Configuration Manager 主控台中，按一下 [監視]。  
 
-1.  在 System Center Configuration Manager 控制台中，单击“监视”。  
+2.  在 [監視]  工作區中按一下 [部署] 。  
 
-2.  在“监视”  工作区中，单击“部署” 。  
+3.  在 [部署] 清單中，選取您要檢閱相容性資訊的設定檔部署。  
 
-3.  在“部署”列表中，选择要查看其符合性信息的配置文件部署。  
+4.  您可以在主頁面檢閱有關設定檔部署相容性的摘要資訊。 若要檢視更詳細的資訊，請選取設定檔部署，然後在 [首頁] 索引標籤的 [部署] 群組中，按一下 [檢視狀態] 以開啟 [部署狀態] 頁面。  
 
-4.  可以在主页上查看有关配置文件部署符合性的摘要信息。 若要查看详细信息，请选择配置文件部署，然后在“主页”选项卡上的“部署”组中，单击“查看状态”以打开“部署状态”页。  
+     [部署狀態]  頁面包含下列索引標籤：  
 
-     “部署状态”  页包含下列选项卡：  
-
-    -   “符合”：显示基于受影响资产数量的配置文件的符合性。 你可以双击规则以在“资产和符合性”  工作区中的“用户”  节点下创建一个临时节点，其中包含符合此配置文件的所有用户。 “资产详细信息”窗格显示符合配置文件的用户。 双击列表中的用户以显示其他信息。  
+    -   **相容：**根據受影響的資產數目，顯示設定檔的相容性。 您可以按兩下規則，在 [資產與相容性]  工作區的 [使用者]  節點下方建立臨時節點，其中包含與此設定檔相容的所有使用者。 [資產詳細資料] 窗格會顯示與設定檔相容的使用者。 按兩下清單中的使用者以顯示其他資訊。  
 
         > [!IMPORTANT]  
-        >  如果某个配置文件在客户端设备上不适用，则不会评估该配置文件；但是，它返回的状态为符合。  
+        >  如果設定檔在用戶端裝置上不適用，就不會進行評估；不過，會傳回為相容。  
 
-    -   “错误”：显示基于受影响资产数量的所选配置文件部署的所有错误的列表。 你可以双击规则以在“资产和符合性”  工作区的“用户”  节点下创建一个临时节点，其中包含对于此配置文件生成了错误的所有用户。 当你选择某个用户时，“资产详细信息”  窗格将显示受所选问题影响的用户。 双击列表中的用户以显示有关问题的其他信息。  
+    -   **錯誤：**根據受影響的資產數目，顯示所選設定檔部署的所有錯誤清單。 您可以按兩下規則，在 [資產與相容性]  工作區的 [使用者]  節點下方建立臨時節點，其中包含因此設定檔而產生錯誤的所有使用者。 當您選取使用者時，[資產詳細資料]  窗格會顯示受到所選問題影響的使用者。 按兩下清單中的使用者以顯示與此問題有關的其他資訊。  
 
-    -   “不符合”：显示基于受影响资产数量的配置文件内所有不符合规则的列表。 你可以双击规则以在“资产和符合性”  工作区的“用户”  节点下创建一个临时节点，其中包含不符合此配置文件的所有用户。 当你选择某个用户时，“资产详细信息”  窗格将显示受所选问题影响的用户。 双击列表中的用户以显示有关问题的进一步信息。  
+    -   **不相容**：根據受影響的資產數目，顯示一份設定檔中所有不相容規則的清單。 您可以按兩下規則，在 [資產與相容性]  工作區的 [使用者]  節點下方建立臨時節點，其中包含與此設定檔不相容的所有使用者。 當您選取使用者時，[資產詳細資料]  窗格會顯示受到所選問題影響的使用者。 按兩下清單中的使用者以顯示與此問題有關的進一步資訊。  
 
-    -   “未知”：显示所有未报告所选配置文件部署符合性的用户的列表，以及设备的当前客户端状态。  
+    -   **未知：**顯示未回報所選設定檔部署相容性的所有使用者清單，以及裝置目前用戶端狀態。  
 
-5.  在“部署状态”页上，可以查看有关所部署的配置文件的符合性的详细信息。 将在“部署”  节点下创建一个临时节点，该节点可帮助你快速再次找到此信息。  
+5.  在 [部署狀態] 頁面中，您可以檢閱與部署之設定檔相容性有關的詳細資訊。 [部署]  節點下方會建立一個臨時節點以協助您更快再找到此資訊。  
 
-##  <a name="a-namebkmkreportsa-how-to-view-compliance-results-by-using-reports"></a><a name="BKMK_Reports"></a> 如何使用报表来查看符合性结果  
- 符合性设置（包括 System Center Configuration Manager 中的配置文件）还包括一些内置报表，使你能监视有关配置文件的信息。 这些报表的报表类别为“符合性和设置管理” 。  
+##  <a name="BKMK_Reports"></a> 如何使用報告檢視相容性結果  
+ 相容性設定包含 System Center Configuration Manager 中的設定檔，亦包含數個內建報告，可讓您監視關於設定檔的資訊。 這些報告具有 [相容性和設定管理] 的報告類別。  
 
 > [!IMPORTANT]  
->  在符合性设置报表中使用参数“设备筛选器”  和“用户筛选器”  时，你必须使用通配符 (%) 字符。  
+>  當您在相容性設定報告中使用 [裝置篩選器]  和 [使用者篩選器]  參數時，必須使用萬用字元 (%)。  
 
- 有关如何在 System Center Configuration Manager 中配置报表的详细信息，请参阅 [System Center Configuration Manager 中的报表](../../core/servers/manage/reporting.md)。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-
+ 如需如何在 System Center Configuration Manager 設定報告的詳細資訊，請參閱 [System Center Configuration Manager 中的報告](../../core/servers/manage/reporting.md)。  

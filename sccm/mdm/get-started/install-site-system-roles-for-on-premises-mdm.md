@@ -1,76 +1,72 @@
 ---
-title: "为本地 MDM 安装角色 - Configuration Manager | Microsoft Docs"
-description: "在 System Center Configuration Manager 中为本地移动设备管理安装站点系统角色。"
+title: "安裝內部部署 MDM 的角色 - Configuration Manager | Microsoft Docs"
+description: "在 System Center Configuration Manager 中，安裝內部部署行動裝置管理功能所需的站台系統角色。"
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: c3cf9f64-c2b9-4ace-9527-2aba6d4eef04
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Mtillman
 ms.author: mtillman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3743c80b0c2b5142f3a537ba3855ffd14794d42b
-ms.openlocfilehash: 916b971f851f968f6534ac834bd3182cc61614aa
-ms.contentlocale: zh-cn
-ms.lasthandoff: 01/24/2017
-
-
+ms.openlocfilehash: 4913606e2f8a36e0004f711b24ecd836d0485124
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="install-site-system-roles-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中为本地移动设备管理安装站点系统角色
+# <a name="install-site-system-roles-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>為 System Center Configuration Manager 中的內部部署行動裝置管理安裝站台系統角色
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用於：System Center Configuration Manager (最新分支)*
 
-本地移动设备管理上的 System Center Configuration Manager 需要 Configuration Manager 站点基础结构中的下列站点系统角色：  
+System Center Configuration Manager 中的內部部署行動裝置管理功能，需要下列 Configuration Manager 站台基礎結構的站台角色：  
 
--   注册点  
+-   註冊點  
 
--   注册代理点  
+-   註冊 Proxy 點  
 
--   分发点  
+-   發佈點  
 
--   设备管理点  
+-   裝置管理點  
 
--   服务连接点  
+-   服務連接點  
 
- 如果组织中的大多数电脑和设备都是使用 Configuration Manager 客户端软件进行管理的，则向组织添加本地移动设备管理时，可能要求现有的基础结构中已安装大多数站点系统角色。 如果没有，请参阅[为 System Center Configuration Manager 添加站点系统角色](../../core/servers/deploy/configure/add-site-system-roles.md)，了解如何向站点添加站点系统角色的完整信息。  
-
-> [!NOTE]  
->  如果你以设备管理点站点系统角色使用数据库副本，那么新注册的设备最初无法连接到设备管理点，直到数据库副本与之同步。 此连接失败的原因是数据库副本没有建立成功连接所需的新注册设备的信息。 副本每 5 分钟同步一次，因此设备在注册之后的最初 5 分钟将无法连接（通常尝试 2 次连接），在此之后设备将成功连接。  
-
- 无论使用现有站点系统角色还是添加新角色，你都必须将其配置用于管理新式设备。 按照下列步骤配置分发点和设备管理点，使它们在本地移动设备管理上正常工作：  
+ 如果組織中大部分的電腦和裝置是使用 Configuration Manager 用戶端軟體進行管理，當您要將內部部署行動裝置管理功能新增至組織時，大部分的站台系統角色可能已安裝為現有基礎結構的一部分。 若否，請參閱[為 System Center Configuration Manager 新增站台系統角色](../../core/servers/deploy/configure/add-site-system-roles.md)，以了解如何將它們新增至站台的完整資訊。  
 
 > [!NOTE]  
->  Configuration Manager 的 Current Branch 仅支持从设备到分发点和设备管理点的 Intranet 连接，以便进行本地移动设备管理。 但是，如果你还管理着 Mac OS X 计算机，则这些客户端将需要通过 Internet 连接到这些站点系统角色。 在这种情况下，配置分发点和设备管理点的属性时应改用“允许 Intranet 和 Internet 连接”设置。  
+>  如果您搭配使用資料庫複本與裝置管理點站台系統角色，則剛完成註冊的裝置一開始無法連線到裝置管理點，直到資料庫複本與它同步為止。 因為資料庫複本沒有剛完成註冊的裝置進行成功連線所需的相關資訊，所以會發生這個連線失敗。 複本會每 5 分鐘同步處理一次，因此裝置在註冊之後的前 5 分鐘無法連線 (通常是 2 次連線嘗試)，在此時間之後即可成功連線裝置。  
 
-### <a name="to-configure-site-system-roles-to-manage-modern-devices"></a>若要配置站点系统角色以管理新式设备：  
+ 無論您使用現有的或加入新的站台系統角色，都必須將其設為用來管理新式裝置。 請遵循下列步驟，設定內部部署行動裝置管理功能所需的發佈點和裝置管理點，以使其正確地運作：  
 
-1.  在 Configuration Manager 控制台中，单击“管理” > “概述” > “站点配置” > “服务器和站点系统角色”。  
+> [!NOTE]  
+>  針對內部部署行動裝置管理功能，Configuration Manager 的最新分支只支援從裝置到發佈點以及裝置管理點的內部網路連線。 然而，若您同時也管理 Mac OS X 電腦，則這些用戶端會需要這些站台系統角色的網際網路連線。 在此情況下，當您設定發佈點和裝置管理點的內容時，應該改為使用 [允許內部網路和網際網路連線] 設定。  
 
-2.  选择具有想要配置的分发点或设备管理点的站点系统服务器，打开“站点系统”的属性并确保其已指定 FQDN。 单击" **确定**"。  
+### <a name="to-configure-site-system-roles-to-manage-modern-devices"></a>若要設定站台系統角色來管理新式裝置：  
 
-3.  打开分发点站点系统角色的属性。 在“常规”选项卡上，确保选中“HTTPS”，并选择“仅允许 Intranet 连接”。  
+1.  在 Configuration Manager 主控台中，按一下 [系統管理] > [概觀] > [站台設定] > [伺服器和站台系統角色]。  
 
-     如果还通过 Configuration Manager 客户端单独管理着 Mac 计算机，请改用“允许 Intranet 和 Internet 连接”。  
+2.  選取站台系統伺服器與您要設定的發佈點或裝置管理點，開啟 [站台系統] 的內容，並確定其已指定 FQDN。 按一下 [ **確定**]。  
+
+3.  開啟發佈點站台系統角色的內容。 在 [一般] 索引標籤上，請確定已選取 [HTTPS]，並選取 [僅允許內部網路連線]。  
+
+     若您同時也以 Configuration Manager 用戶端個別管理 Mac 電腦，請改為使用 [允許內部網路和網際網路連線]。  
 
     > [!NOTE]  
-    >  为 Intranet 连接配置的分发点需要为其配置站点边界。 Configuration Manager 的 Current Branch 仅支持用于本地移动设备管理的 IPv4 范围边界。 有关配置站点边界的详细信息，请参阅[为 System Center Configuration Manager 定义站点边界和边界组](../../core/servers/deploy/configure/define-site-boundaries-and-boundary-groups.md)。  
+    >  需要為針對內部網路連線所設定的發佈點設定站台界限。 最新分支的 Configuration Manager 僅支援 IPv4 範圍界限的內部部署行動裝置管理功能。 如需設定站台界限的詳細資訊，請參閱[為為 System Center Configuration Manager 定義站台界限和界限群組](../../core/servers/deploy/configure/define-site-boundaries-and-boundary-groups.md)。  
 
-4.  单击“允许移动设备连接到此分发点”旁边的复选框，然后单击“确定”。  
+4.  按一下 [允許行動裝置連接至這個發佈點] 旁的核取方塊，然後按一下 [確定]。  
 
-5.  打开管理点站点系统角色的属性。 在“常规”选项卡上，确保选中“HTTPS”，并选择“仅允许 Intranet 连接”。  
+5.  開啟管理點站台系統角色的內容。 在 [一般] 索引標籤上，請確定已選取 [HTTPS]，並選取 [僅允許內部網路連線]。  
 
-     如果还通过 Configuration Manager 客户端单独管理着 Mac 计算机，请改用“允许 Intranet 和 Internet 连接”。  
+     若您也使用 Configuration Manager 用戶端來個別管理 Mac 電腦，請改為使用 [允許內部網路和網際網路連線]。  
 
-6.  单击“允许移动设备和 Mac 计算机使用此管理点”旁的复选框。 单击" **确定**"。  
+6.  按一下 「Allow mobile devices and Mac Computer to use this management point」 (允許行動裝置和 Mac 電腦使用此管理點) 旁的核取方塊。 按一下 [ **確定**]。  
 
-     这会将该管理点有效地变为设备管理点。  
+     這會有效地將管理點轉換成裝置管理點。  
 
- 添加站点系统角色并将其配置用于管理新式设备后，需要将承载该角色的服务器配置为受信任终结点，以便注册托管设备并与之通信。 有关详细信息，请参阅 [为 System Center Configuration Manager 中的本地移动设备管理的受信任通信设置证书](../../mdm/get-started/set-up-certificates-on-premises-mdm.md)。  
-
+ 一旦加入並設定用以以管理新式裝置的站台系統角色，您將需要設定作為註冊的受信任端點，以及與管理的裝置通訊之角色的伺服器。 如需詳細資訊，請參閱[為 System Center Configuration Manager 中的內部部署行動裝置管理安裝站台系統角色](../../mdm/get-started/set-up-certificates-on-premises-mdm.md)。  

@@ -1,171 +1,166 @@
 ---
-
-title: "批量注册设备 | Microsoft Docs | 本地 MDM"
-description: "在 System Center Configuration Manager 中自动向本地移动设备管理批量注册设备。"
+title: "大量註冊裝置 | Microsoft Docs | 內部部署 MDM"
+description: "在 System Center Configuration Manager 中使用內部部署行動裝置管理，以自動方式大量註冊裝置。"
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: b36f5e4a-2b57-4d18-83f6-197081ac2a0a
-caps.latest.revision: 13
-caps.handback.revision: 0
+caps.latest.revision: "13"
+caps.handback.revision: "0"
 author: Mtillman
 ms.author: mtillman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3b1451edaed69a972551bd060293839aa11ec8b2
 ms.openlocfilehash: be9596537e9c80a6d78aa0685d33382bfd242afe
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="how-to-bulk-enroll-devices-with-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中向本地移动设备管理批量注册设备
+# <a name="how-to-bulk-enroll-devices-with-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中使用內部部署行動裝置管理大量註冊裝置
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+適用於：System Center Configuration Manager (最新分支)
 
 
-相较于要求用户输入其凭据以注册设备的用户注册，System Center Configuration Manager 本地移动设备管理中的批量注册是自动化程度更高的注册设备的方式。  批量注册使用注册程序包在注册过程中对设备进行身份验证。 包（.ppkg 文件）中包含证书配置文件和可选的 Wi-Fi 配置文件（设备需要 intranet 连接以支持注册时选择）。  
+System Center Configuration Manager 內部部署行動裝置管理中的大量註冊是一種比起使用者註冊更自動化的裝置註冊方式，使用者註冊需要使用者輸入認證來註冊裝置。  大量註冊使用註冊套件在註冊期間驗證裝置。 套件 (.ppkg 檔案) 包含憑證設定檔，以及選擇性地包含 Wi-Fi 設定檔，如果裝置需要內部網路連線才能支援註冊的話。  
 
 > [!NOTE]  
->  Configuration Manager 的 Current Branch 支持针对运行以下操作系统的设备的本地移动设备管理中的注册：  
+>  Configuration Manager 的最新分支，支援執行下列作業系統的裝置在內部部署行動裝置管理中註冊：  
 >   
-> -  Windows 10 企业版  
-> -   Windows 10 专业版  
-> -   Windows 10 协同版  
-> -   Windows 10 移动版  
-> -   Windows 10 移动企业版
-> -   Windows 10 IoT 企业版   
+> -  Windows 10 Enterprise  
+> -   Windows 10 Pro  
+> -   Windows 10 團隊版  
+> -   Windows 10 Mobile  
+> -   Windows 10 Mobile Enterprise
+> -   Windows 10 企業版   
 
-以下任务说明了如何为本地移动设备管理批量注册电脑和设备：  
+下列工作說明如何為內部部署行動裝置管理大量註冊電腦和裝置：  
 
--   [创建一份证书配置文件](#bkmk_createCert)  
+-   [建立憑證設定檔](#bkmk_createCert)  
 
--   [创建 Wi-fi 配置文件](#CreateWifi)  
+-   [建立 Wi-Fi 設定檔](#CreateWifi)  
 
--   [创建注册配置文件](#bkmk_createEnroll)  
+-   [建立註冊設定檔](#bkmk_createEnroll)  
 
--   [创建一个注册程序包 (ppkg) 文件](#bkmk_createPpkg)  
+-   [建立註冊套件 (ppkg) 檔案](#bkmk_createPpkg)  
 
--   [使用程序包批量注册设备](#bkmk_getPpkg)  
+-   [使用套件來大量註冊裝置](#bkmk_getPpkg)  
 
--   [验证设备的注册](#bkmk_verifyEnroll)  
+-   [確認裝置的註冊](#bkmk_verifyEnroll)  
 
-##  <a name="bkmk_createCert"></a> 创建一份证书配置文件  
- 注册程序包的主要组件是一个证书配置文件，用于自动将受信任的根证书设置到正在注册的设备。  设备和本地移动设备管理所需的站点系统角色之间进行受信任的通信需要此根证书。 如果没有根证书，在该设备和承载注册点、注册代理点、分发点和设备管理点站点系统角色的服务器之间的 HTTPS 连接中，该设备将不受信任。  
+##  <a name="bkmk_createCert"></a> 建立憑證設定檔  
+ 註冊套件的主要元件是憑證設定檔，它用來自動提供信任的根憑證給正在註冊的裝置。  裝置與內部部署行動裝置管理所需的站台系統角色之間進行信任通訊時，需要這個根憑證。 若沒有根憑證，裝置在它與裝載註冊點、註冊 Proxy 點、發佈點和裝置管理點站台系統角色的伺服器之間的 HTTPS 連線中便不會受到信任。  
 
- 作为准备系统以用于本地移动设备管理这一操作的一部分，要导出可用于注册程序包的证书配置文件的根证书。 有关如何获得受信任的根证书的说明，请参阅[导出根与 Web 服务器证书的根相同的证书](../../mdm/get-started/set-up-certificates-on-premises-mdm.md#bkmk_exportCert)。  
+ 在針對內部部署行動裝置管理準備系統時，您匯出了一個根憑證，您可以在註冊套件的憑證設定檔中使用它。 如需如何取得受信任根憑證的指示，請參閱[將具有相同的根的憑證匯出為網頁伺服器憑證](../../mdm/get-started/set-up-certificates-on-premises-mdm.md#bkmk_exportCert)。  
 
- 使用导出的根证书创建一个证书配置文件。 有关说明，请参阅[如何在 System Center Configuration Manager 中创建证书配置文件](../../protect/deploy-use/create-certificate-profiles.md)。  
+ 使用匯出的根憑證建立憑證設定檔。 如需相關指示，請參閱[如何在 System Center Configuration Manager 中建立憑證設定檔](../../protect/deploy-use/create-certificate-profiles.md)。  
 
-##  <a name="CreateWifi"></a> 创建 Wi-fi 配置文件  
- 用于批量注册的包的另一个组件是 Wi-Fi 配置文件。 在配置了网络设置之前，某些设备可能不具有支持注册所需的网络连接。 在注册程序包中包含一个 Wi-Fi 配置文件可为设备提供一种建立网络连接的方式。  
+##  <a name="CreateWifi"></a> 建立 Wi-Fi 設定檔  
+ 用於大量註冊之套件的另一個元件是 Wi-Fi 設定檔。 有些裝置在佈建網路設定之前，可能沒有支援註冊所需的網路連線。 在註冊套件中包含 Wi-Fi 設定檔提供了一種方法來建立裝置的網路連線。  
 
- 若要在 Configuration Manager 中创建 Wi-Fi 配置文件，请按照[如何在 System Center Configuration Manager 中创建 Wi-Fi 配置文件](../../protect/deploy-use/create-wifi-profiles.md)中的说明进行操作。  
+ 若要在 Configuration Manager 中建立 Wi-Fi 設定檔，請依照[如何在 System Center Configuration Manager 中建立 Wi-Fi 設定檔](../../protect/deploy-use/create-wifi-profiles.md)中的指示進行。  
 
 > [!IMPORTANT]  
->创建用于批量注册的 Wi-Fi 配置文件时，请牢记以下两个问题：
+>建立用於大量註冊的 Wi-Fi 設定檔時，請記住下列兩個問題：
 >
-> - Configuration Manager 的 Current Branch 仅支持以下用于本地移动设备管理的 Wi-Fi 安全性配置：  
+> - Configuration Manager 的最新分支只支援進行內部部署行動裝置管理的下列 Wi-Fi 安全性設定：  
 >   
->   - 安全类型：“WPA2 企业”  或“WPA2 个人”   
->   - 加密类型：“AES”  或“TKIP”   
->   - EAP 类型：“智能卡或其他证书”  或“PEAP”   
+>   - 安全性類型： **WPA2 Enterprise** 或 **WPA2 Personal**  
+>   - 加密類型： **AES** 或 **TKIP**  
+>   - EAP 類型： **智慧卡或其他憑證** 或 **PEAP**  
 >
 >
-> - 尽管 Configuration Manager 在 Wi-Fi 配置文件中有针对代理服务器信息的设置，但在注册设备时不会配置代理。 如果需要对已注册设备设置代理服务器，可以在设备注册后使用配置项目部署设置，或使用 Windows 映像和配置设计器 (ICD) 创建第二个包以部署在批量注册程序包旁边。
+> - 雖然 Configuration Manager 在 Wi-Fi 設定檔中有 Proxy 伺服器資訊的設定，但不會在註冊裝置之後設定 Proxy。 如果您需要使用註冊的裝置來設定 Proxy 伺服器，您可以在註冊裝置之後使用設定項目來部署設定，或使用 Windows 映像處理與設定設計工具 (ICD) 建立第二個套件，以便與大量註冊套件一起部署。
 
-##  <a name="bkmk_createEnroll"></a> 创建注册配置文件  
- 注册配置文件允许你指定设备注册时所需的设置，包括将受信任的根证书动态设置到设备的证书配置文件和在需要时将配置网络设置的 Wi-Fi 配置文件。  
+##  <a name="bkmk_createEnroll"></a> 建立註冊設定檔  
+ 註冊設定檔可讓您指定裝置註冊所需的設定，包括會動態佈建信任根憑證給裝置的憑證設定檔，以及視需要佈建網路設定的 Wi-Fi 設定檔。  
 
- 创建注册配置文件之前，请确保你具有证书配置文件并创建了 Wi-Fi 配置文件（如果需要）。 有关详细信息，请参阅 [创建一份证书配置文件](#bkmk_createCert) 和 [创建 Wi-fi 配置文件](#CreateWifi)。  
+ 建立註冊設定檔之前，請確定您已建立憑證設定檔和 Wi-Fi 設定檔 (如果需要)。 如需詳細資訊，請參閱 [建立憑證設定檔](#bkmk_createCert) 和 [建立 Wi-Fi 設定檔](#CreateWifi)。  
 
-#### <a name="to-create-an-enrollment-profile"></a>创建注册配置文件：  
+#### <a name="to-create-an-enrollment-profile"></a>建立註冊設定檔  
 
-1.  在 Configuration Manager 控制台中，单击“资产和符合性” >“概述” >“公司拥有的所有设备” >“Windows” >“注册配置文件”。  
+1.  在 Configuration Manager 主控台中，按一下 [資產與相容性] >[概觀] >[所有屬公司擁有的裝置] >[Windows] >[註冊設定檔]。  
 
-2.  右键单击“注册配置文件”  ，然后单击“创建配置文件” 。  
+2.  以滑鼠右鍵按一下 [註冊設定檔]  ，然後按一下 [建立設定檔] 。  
 
-3.  在“创建注册配置文件”向导中，输入配置文件的名称，请确保针对“管理机构”  勾选了“本地” ，然后单击“下一步” 。  
+3.  在 [建立註冊設定檔精靈] 中，輸入設定檔的名稱、確定針對 [管理授權單位]  選取了 [內部部署] ，然後按一下 [下一步] 。  
 
-4.  选择站点代码，然后单击“下一步” 。  
+4.  選取站台碼，然後按一下 [下一步] 。  
 
-5.  选择“仅 Intranet” ，选择设备将用于启动注册过程的注册代理点，然后单击“下一步” 。  
+5.  選取 [僅限內部網路] 、選取裝置將用來啟動註冊程序的註冊 Proxy 點，然後按一下 [下一步] 。  
 
-6.  选择包含受信任的根证书的证书配置文件（即在 [Create a certificate profile](#bkmk_createCert)中创建的配置文件），然后单击“下一步” 。  
+6.  選取包含受信任根憑證 (這是您在 [Create a certificate profile](#bkmk_createCert)中建立的設定檔) 的憑證設定檔，按一下 [下一步] 。  
 
-7.  选择包含设备连接到 intranet 所必需的网络设置的 WiFi 配置文件（即在 [Create a Wi-Fi profile](#CreateWifi)中创建的配置文件），然后单击“下一步” 。  
+7.  選取包含必要網路設定的 Wi-Fi 設定檔，以便裝置能連線到內部網路 (這是您在 [Create a Wi-Fi profile](#CreateWifi)建立的設定檔)，然後按一下 [下一步] 。  
 
     > [!NOTE]  
-    >  如果你不打算将 Wi-Fi 配置文件用于注册程序包，则跳过此步骤。  
+    >  如果您的註冊套件不使用 Wi-Fi 設定檔，請略過此步驟。  
 
-8.  确认注册配置文件的设置，然后单击“下一步”。 单击“关闭”  以退出向导。  
+8.  確認註冊設定檔的設定，然後按一下 [下一步]。 按一下 [關閉]  以結束精靈。  
 
-##  <a name="bkmk_createPpkg"></a> 创建一个注册程序包 (ppkg) 文件  
- 注册程序包是用于为本地移动设备管理批量注册设备的文件。  必须使用 Configuration Manager 创建此文件。 可以使用 Windows 映像和配置设计器 (ICD) 创建类似类型的程序包，但只有在 Configuration Manager 中创建的程序包可用于为本地移动设备管理完成整个设备注册过程。 使用 Windows ICD 创建的包只提供注册所需的用户主体名称 (UPN)，而不执行实际的注册过程。  
+##  <a name="bkmk_createPpkg"></a> 建立註冊套件 (ppkg) 檔案  
+ 註冊套件是您用來為內部部署行動裝置管理大量註冊裝置的檔案。  此檔案必須使用 Configuration Manager 建立。 您可以使用 Windows 映像處理與設定設計工具 (ICD) 建立類似類型的套件，但只有您在 Configuration Manager 建立的套件可用來全程為內部部署行動裝置管理註冊裝置。 使用 Windows ICD 建立的套件只能提供註冊所需的使用者主要名稱 (UPN)，而不能執行實際的註冊程序。  
 
- 创建注册程序包的过程需要适用于 Windows 10 的 Windows 评估和部署工具包 (ADK)。  请确保已在运行 Configuration Manager 控制台的服务器上安装了版本号为 1511 的 Windows ADK。 更多详细信息，请参阅 [下载适用于 Windows 10 的工具包和工具](https://msdn.microsoft.com/windows/hardware/dn913721.aspx)中的 ADK 部分。  
+ 在 Windows 10 建立註冊套件的程序需要 Windows 評定及部署工具套件 (ADK)。  在執行 Configuration Manager 主控台的伺服器上，請確定您已安裝 1511 版的 Windows ADK。 如需詳細資訊，請參閱 [下載 Windows 10 的套件與工具](https://msdn.microsoft.com/windows/hardware/dn913721.aspx)的＜ADK＞一節  
 
 > [!TIP]  
->  如果从 Configuration Manager 控制台中删除了注册程序包，则无法将其用于设备注册。 作为一种用于管理不再需要用于批量注册设备的包的方式，你可以将其删除。  
+>  如果您從 Configuration Manager 主控台移除註冊套件，它便無法用來註冊裝置。 您可以使用套件移除來管理您不想再用於大量註冊裝置的套件。  
 
-#### <a name="to-create-an-enrollment-package-ppkg-file"></a>创建一个注册程序包 (ppkg) 文件：  
+#### <a name="to-create-an-enrollment-package-ppkg-file"></a>建立註冊套件 (ppkg) 檔案：  
 
-1.  右键单击刚创建的配置文件（在 [创建注册配置文件](#bkmk_createEnroll)中，单击“导出” 。  
+1.  以滑鼠右鍵按一下剛才建立的設定檔 (在 [建立註冊設定檔](#bkmk_createEnroll)) 中，然後按一下 [匯出] 。  
 
-2.  单击“浏览” ，找到要保存 .ppkg 文件的位置，为包输入一个名称，然后单击“保存” 。  
+2.  按一下 [瀏覽] 、找出您想要儲存 .ppkg 檔案的位置、輸入套件的名稱，然後按一下 [儲存] 。  
 
-3.  如果你想通过密码来保护包，请单击“加密包” 旁边的复选框，然后单击“导出”  ，然后等待约 10 秒钟，导出即可完成。  
+3.  如果您想要利用密碼保護套件，請按一下 [加密套件] 旁的核取方塊，然後按一下 [匯出]  ，並等待約 10 秒讓匯出完成。  
 
     > [!NOTE]  
-    >  如果加密了该程序包，Configuration Manager 会提供一条包含解密密码的消息。 请确保保存了密码信息，因为你将需要它在设备上设置包。  
+    >  如果您已加密套件，Configuration Manager 會提供包含解密密碼的訊息。 請確定您儲存密碼資訊，因為您需要它才能在裝置上佈建套件。  
 
-4.  单击" **确定**"。  
+4.  按一下 [ **確定**]。  
 
-##  <a name="bkmk_getPpkg"></a> 使用程序包批量注册设备  
- 在通过全新体验 (OOBE) 过程对设备进行设置之前和之后，可以使用程序包注册设备。   还可将注册程序包包含为原始设备制造商 (OEM) 设置包的一部分。  
+##  <a name="bkmk_getPpkg"></a> 使用套件來大量註冊裝置  
+ 您可以在透過全新體驗 (OOBE) 程序佈建裝置之前或之後，使用套件註冊裝置。   註冊套件也可以包含為原始設備製造商 (OEM) 佈建套件的一部分。  
 
- 包必须以物理方式传递给要将其用于批量注册的设备。 你可以以各种方式将注册程序包传递给设备，具体取决于你的需要，其中包括以下方式：  
+ 套件必須實體傳遞給要用它來大量註冊的裝置。 您可以根據需求以各種方式傳遞註冊套件到裝置，包括：  
 
--   从文件系统复制  
+-   從檔案系統複製  
 
--   附加到电子邮件  
+-   附加至電子郵件  
 
--   跨近场通信 (NFC) 连接进行复制  
+-   透過近距離無線通訊 (NFC) 連線複製  
 
--   从内存卡复制  
+-   從記憶卡複製  
 
--   扫描条形码  
+-   掃描條碼  
 
--   从受限设备复制  
+-   從有行動網卡的裝置複製  
 
--   包含在 OEM 设置包中  
+-   包含在 OEM 佈建套件中  
 
-#### <a name="to-bulk-enroll-a-device"></a>批量注册设备：  
+#### <a name="to-bulk-enroll-a-device"></a>大量註冊裝置：  
 
-1.  在要注册的设备上，找到注册程序包（使用文件资源管理器），然后双击 .ppkg 文件。  
+1.  在要註冊的裝置上，尋找註冊套件 (使用檔案總管) 並按兩下 .ppkg 檔案。  
 
-2.  在“用户帐户控制”消息中，单击“是”  。  
+2.  在 [使用者帳戶控制] 訊息中，按一下 [是]  。  
 
-3.  在询问该程序包是否来自你信任的源的对话框中，单击“是，添加它”。  
+3.  在詢問您套件是否來自信任來源的對話方塊中，按一下 [是的，新增]。  
 
-     注册过程启动，且需要约 5 分钟完成启动。  
+     註冊程序會開始，並需要大約 5 分鐘。  
 
-4.  打开“设置” 。  
+4.  開啟 [設定] 。  
 
-5.  单击“关闭”   > 所需的站点系统角色之间进行受信任的通信需要此根证书。 注册成功后，会在“”   
+5.  按一下 [關閉]   > 的站台系統角色之間進行信任通訊時，需要這個根憑證。 註冊成功時，您會在 []   
 
-6.  单击该帐户，然后单击“同步”，从而使用 Configuration Manager 启动管理。  
+6.  按一下該帳戶，然後按一下 [同步]，這會以 Configuration Manager 開始管理。  
 
-##  <a name="bkmk_verifyEnroll"></a> 验证设备的注册  
- 可以在 Configuration Manager 控制台中验证是否已成功注册设备。  
+##  <a name="bkmk_verifyEnroll"></a> 確認裝置的註冊  
+ 您可以在 Configuration Manager 主控台確認裝置已成功註冊。  
 
--   启动 Configuration Manager 控制台。  
+-   啟動 Configuration Manager 主控台。  
 
--   单击“关闭”  >  > 所需的站点系统角色之间进行受信任的通信需要此根证书。 列表中将显示已注册的设备。  
-
+-   按一下 [關閉]  >  > 的站台系統角色之間進行信任通訊時，需要這個根憑證。 註冊的裝置會出現在清單中。  

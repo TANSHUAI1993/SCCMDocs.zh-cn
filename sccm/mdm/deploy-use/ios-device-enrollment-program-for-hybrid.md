@@ -1,135 +1,111 @@
 ---
-title: "通过设备注册计划 (DEP) 注册 iOS 设备 - Configuration Manager | Microsoft Docs"
-description: "在 Configuration Manager 中使用 Intune 为混合部署启用 iOS 设备注册计划 (DEP) 注册。"
+title: "使用裝置註冊計劃 (DEP) 註冊 iOS 裝置 - Configuration Manager | Microsoft Docs"
+description: "啟用 iOS 裝置註冊計畫 (DEP) 註冊，以使用 Intune 進行 Configuration Manager 混合式部署。"
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 08/15/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 78d44adc-9b1c-4bc6-b72d-e93873916ea6
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 255249332350843ba0b78128423482e260974521
-ms.openlocfilehash: 1ea0360b5b182b92e11ea9dfe78b5a3552ae4845
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/30/2017
-
+ms.openlocfilehash: e76e46ce0d6ee0582d5161709ff114b936ac5660
+ms.sourcegitcommit: db7b7ec347638efd05cdba474e8a8f8535516116
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/16/2017
 ---
-# <a name="ios-device-enrollment-program-dep-enrollment-for-hybrid-deployments-with-configuration-manager"></a>使用 Configuration Manager 进行混合部署的 iOS 设备注册计划 (DEP) 注册
+# <a name="ios-device-enrollment-program-dep-enrollment-for-hybrid-deployments-with-configuration-manager"></a>適用於 Configuration Manager 混合式部署的 iOS 裝置註冊計畫 (DEP) 註冊
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+適用於：System Center Configuration Manager (最新分支)
 
-公司可以通过 Apple 的设备注册计划购买 iOS 设备，然后使用 Microsoft Intune 管理它们。 要利用 Apple 设备注册计划 (DEP) 管理企业所有的 iOS 设备，公司必须完成 Apple 所要求的步骤以加入该计划并通过该计划获取设备。 该过程的详细信息，可以通过以下网站获得：  [https://deploy.apple.com](https://deploy.apple.com)进行管理。 该程序的优点包括免手动设置设备，无需通过 USB 将每个设备连接到计算机。  
+公司可以透過 Apple 的裝置註冊計畫，購買 iOS 裝置，並使用 Microsoft Intune 進行管理。 若要使用 Apple 裝置註冊程式 (DEP) 來管理公司所擁有的 iOS 裝置，公司必須完成和 Apple 參與此計畫的步驟，並透過該計畫取得裝置。 下列網址提供該程序的詳細資訊：  [https://deploy.apple.com](https://deploy.apple.com)來管理它們。 這個方案的優點包括裝置自動安裝，而不需要透過 USB 將每部裝置連線到電腦。  
 
- 在你可以通过 DEP 注册企业所有的 iOS 设备之前，你需要从 Apple 获得 DEP 令牌。 此令牌允许 Intune 同步有关你的企业所拥有的且加入了 DEP 的设备的信息。 它还允许 Intune 将注册配置文件上传到 Apple 并将设备分配到这些配置文件。  
+ 在您以 DEP 註冊公司所擁有的 iOS 裝置之前，您需要從 Apple 取得 DEP 權杖。 此權杖可讓 Intune 同步處理貴公司所擁有的 DEP 參與裝置資訊。 它也讓 Intune 得以將註冊設定檔上傳至 Apple，並將這些設定檔指定給裝置。  
 
-## <a name="apple-dep-enrollment-for-ios-devices"></a>适用于 iOS 设备的 Apple DEP 注册  
- 以下过程介绍如何将通过 Apple DEP 购买的 iOS 设备指定为 Intune 管理的公司拥有的设备。 用户第一次将设备电源接通时，它会接收 DEP 管理配置文件、运行设置助理并将其纳入管理。  
+## <a name="apple-dep-enrollment-for-ios-devices"></a>適用於 iOS 裝置的 Apple DEP 註冊  
+ 下列程序說明如何將透過 Apple DEP 購買的 iOS 裝置指定為受 Intune 管理的屬公司所擁有之裝置。 當使用者第一次啟動裝置電源時，即會收到 DEP 管理設定檔，並執行設定輔助程式，以使裝置受到管理。  
 
-###  <a name="enable-dep-enrollment-in-configuration-manager-with-intune"></a>使用 Intune 在 Configuration Manager 中启用 DEP 注册  
+##  <a name="enable-dep-enrollment-in-configuration-manager-with-intune"></a>啟用搭配 Intune 之 Configuration Manager 中的 DEP 註冊  
 
-1.  **开始使用 Configuration Manager 管理 iOS 设备**   
-    在能够注册 iOS 设备注册计划 (DEP) 设备之前，必须完成[设置混合移动设备管理](../../mdm/deploy-use/setup-hybrid-mdm.md)的步骤，包括[支持 iOS 注册的步骤](../deploy-use/enroll-hybrid-ios-mac.md)。
+1.  **開始使用 Configuration Manager 管理 iOS 裝置**   
+    您必須先完成[設定混合式行動裝置管理](../../mdm/deploy-use/setup-hybrid-mdm.md)的步驟 (包括[支援 iOS 註冊的步驟](../deploy-use/enroll-hybrid-ios-mac.md)) 之後，才能註冊 iOS 裝置註冊計畫 (DEP) 的裝置。
+2.  **建立 DEP 權杖要求**   
+    在 Configuration Manager 主控台的 [系統管理] 工作區中，依序展開 [階層設定]、[雲端服務]，然後按一下 [Microsoft Intune 訂閱]。 在 [首頁] 索引標籤上按一下 [建立 DEP 權杖要求]，按一下 [瀏覽] 指定 DEP 權杖要求的下載位置，然後按一下 [下載]。 將 DEP 權杖要求 (.pem) 檔案儲存在本機。 這個 .pem 檔案會用於向 Apple 裝置註冊計畫入口網站要求信任的權杖 (.p7m)。  
+3.  **取得裝置註冊計畫權杖**   
+    移至 [裝置註冊計畫入口網站](https://deploy.apple.com) (https://deploy.apple.com) ，並使用公司的 Apple ID 登入。 未來必須使用這個 Apple 識別碼來更新 DEP 權杖。  
+    1.  在[裝置註冊計畫入口網站](https://deploy.apple.com)中，移至 [裝置註冊計畫] > [管理伺服器]，然後按一下 [新增 MDM 伺服器]。  
+    2.  輸入 [MDM 伺服器名稱] ，然後按一下 [下一步] 。 伺服器名稱可用於識別 MDM 伺服器。 它不是 Intune 或 Configuration Manager 伺服器的名稱或 URL。  
+    3.  [新增 <伺服器名稱\>] 對話方塊隨即開啟。 按一下 [選取檔案...]  上傳您在上一個步驟建立的 .pem 檔案，然後按一下 [下一步]。  
+    4.  [新增 <伺服器名稱\>] 對話方塊會顯示 [您的伺服器權杖] 連結。 將伺服器權杖 (.p7m) 檔案下載到您的電腦，然後按一下 [完成] 。  
 
-2.  **创建 DEP 令牌请求**   
-    在 Configuration Manager 控制台中，依次展开“管理”工作区中的“层次结构配置”和“云服务”，然后单击“Microsoft Intune 订阅”。 单击“主页”选项卡上的“创建 DEP 令牌请求”，单击“浏览”指定 DEP 令牌请求的下载位置，然后单击“下载”。 将 DEP 令牌请求 (.pem) 文件保存到本地。 .pem 文件用于从 Apple 设备注册计划门户请求信任令牌 (.p7m)。  
+     此憑證 (.p7m) 檔案會用於建立 Intune 與 Apple 裝置註冊程式伺服器之間的信任關係。  
+4.  **將 DEP 權杖新增至 Configuration Manager**   
+    在 Configuration Manager 主控台的 [系統管理] 工作區中，展開 [階層設定]，然後按一下 [Microsoft Intune 訂閱]。 在 [首頁] 索引標籤上按一下 [設定平台]，然後按一下 [iOS]。 選取 [啟用裝置註冊計畫] ，瀏覽至憑證 (.p7m) 檔案，依序按一下 [開啟]、[上傳] 及 [確定]。  
 
-3.  **获取设备注册计划令牌**   
-    转到[设备注册计划门户](https://deploy.apple.com) (https://deploy.apple.com) 并使用你的公司 Apple ID 登录。 若要续订 DEP 令牌，必须在将来使用此 Apple ID。  
+## <a name="add-a-corporate-device-enrollment-policy"></a>新增公司的裝置註冊原則  
 
-    1.  在[设备注册计划门户](https://deploy.apple.com)中，转到“设备注册计划” > “管理服务器”，然后单击“添加 MDM 服务器”。  
+1. 在 Configuration Manager 主控台的 [資產與相容性] 工作區中，依序展開 [概觀]、[公司擁有的所有裝置]、[iOS]，然後按一下 [註冊設定檔]。 在 [首頁] 索引標籤上按一下 [建立設定檔]，開啟 [建立設定檔精靈]。 在下列頁面上設定：  
+2. 在 [一般]  頁面上指定下列資訊，然後按 [下一步] 。  
+  -   **名稱** - 裝置註冊設定檔的名稱。 (使用者看不到)  
+  -   **描述** - 裝置註冊設定檔的描述。 (使用者看不到)  
+  -   **使用者親和性** – 指定裝置的註冊方式。 請參閱 [User affinity for hybrid managed devices in Configuration Manager](../../mdm/deploy-use/user-affinity-for-hybrid-managed-devices.md) (Configuration Manager 中針對混合式受管理裝置的使用者親和性)。  
 
-    2.  输入“MDM 服务器名称”，然后单击“下一步”。 服务器名称供参考，用于识别 MDM 服务器。 它不是名称，也不是 Intune 或 Configuration Manager 服务器的 URL。  
+      -  **提示輸入使用者親和性**：該裝置必須在初始設定期間關聯到使用者，以便之後能夠以該使用者的身分存取公司資料及傳送電子郵件。  應針對使用者所擁有且需要使用公司入口網站 (如安裝 App) 之受 DEP 管理的裝置設定使用者親和性。  
+      > [!NOTE]
+      > 設有使用者親和性的 DEP 必須啟用 WS-Trust 1.3 使用者名稱/混合端點，才能要求使用者權杖。
 
-    3.  此时将打开“添加 <ServerName\>”对话框。 单击 **“选择文件...”** ，上载你在上一步中创建的 。pem 文件，然后单击“下一步” **“下一步”**。  
+      -   **沒有使用者親和性**：該裝置不會關聯到使用者。 針對執行工作而不需存取本機使用者資料的裝置，請使用此關係。 需要使用者關係的 App 會無法運作。  
+    ![DEP 設定檔名稱、描述及使用者親和性提示的螢幕擷取畫面](../media/dep-general.png)
 
-    4.  “添加 <ServerName\>”对话框会显示“你的服务器令牌”链接。 将服务器令牌(.p7m)文件下载到计算机，然后单击“完成”。  
+3. 在 [裝置註冊計劃設定] 頁面上，指定下列資訊，然後按一下 [下一步]。  
+    -   **部門**：使用者在啟用期間點選 [About Configuration]\(關於設定) 時，會顯示這項資訊。  
+    -   **支援電話號碼**：使用者在啟用期間按一下 [需要協助] 按鈕時顯示。
+       ![將 DEP 設定檔指派給 iOS 裝置的螢幕擷取畫面](../media/dep-settings.png)
 
-     此证书(.p7m)文件用于在 Intune 和 Apple 的设备注册计划服务器之间建立信任关系。  
+    - **準備模式**：在啟用期間會設定此狀態，而且需要將裝置重設為出廠預設值才能進行變更︰  
+        -   **不受監督** - 有限的管理功能。  
+        -   **受監督** - 啟用更多管理選項，並且預設會停用 [啟用鎖定]。  
+    - **鎖定裝置的註冊設定檔**：在啟用期間會設定此狀態，而且需要重設為出廠預設值才能進行變更。  
+      -   **停用** - 允許從 [設定] 功能表中移除管理設定檔。  
+      -   **啟用** - (需要**準備模式** = **受監督**) 停用允許移除管理設定檔的 iOS 設定  
 
-4.  **将 DEP 令牌添加到 Configuration Manager**   
-    在 Configuration Manager 控制台中，展开“管理”工作区中的“层次结构配置”，然后单击“Microsoft Intune 订阅”。 单击“主页”选项卡上的“配置平台”，然后单击“iOS”。 选择“启用设备注册计划”，浏览到证书 (.p7m) 文件，单击“打开”，再单击“上传”，然后单击“确定”。  
+4.  在 [設定助理] 頁面，設定為可自訂 [iOS 設定助理] 在一開啟裝置電源時就啟動，然後按 [下一步]。 這些設定包括：  
+  -   **密碼** - 在啟用期間提示輸入密碼。 除非裝置會受到保護，或以其他方式控制存取 (例如，將裝置限制為單一應用程式的 Kiosk 模式)，否則一律需要密碼。  
+  -   **定位服務** - 啟用時，設定輔助程式會在啟用期間提示服務。  
+  -   **還原** - 啟用時，設定輔助程式會在啟用期間提示 iCloud 備份。  
+  -   **Apple ID** - 若要下載 iOS App Store 應用程式 (包含 Intune 所安裝的應用程式)，您必須提供 Apple ID。 啟用時，如果 Intune 嘗試不使用 Apple ID 來安裝應用程式，iOS 會提示使用者輸入 Apple ID。  
+  -   **條款及條件** - 啟用時，設定輔助程式會在啟用期間提示使用者接受 Apple 的條款及條件。  
+  -   **Touch ID** - 啟用時，設定助理會在啟用期間提示此服務
+  -   **Apple Pay** - 啟用時，設定助理會在啟用期間提示此服務
+  -   **縮放** - 啟用時，設定助理會在啟用期間提示此服務
+  -   **Siri** - 啟用時，設定輔助程式會在啟用期間提示此服務。  
+  -   **傳送診斷資料給 Apple** - 啟用時，設定輔助程式會在啟用期間提示此服務。  
+    ![將 DEP 設定檔指派給 iOS 裝置的螢幕擷取畫面](../media/dep-setup-assistant.png)
+5.  在 [其他管理] 頁面上，指定其他管理設定是否可以使用 USB 連線。 當您選取 [需要憑證] ，您就必須匯入為了此設定檔而使用的 Apple Configurator 管理憑證。  設為 [不允許] 時，可防止使用 iTunes 同步處理檔案或透過 Apple Configurator 進行管理。 Microsoft 建議您選擇 [不允許]，並從 Apple Configurator 匯出任何進一步設定，然後將其部署為自訂 iOS 組態設定檔，而不是使用此設定來允許進行手動部署 (不論是否使用憑證)。  
 
-#### <a name="set-up-enrollment-for-apple-device-enrollment-program-dep-ios-devices"></a>设置 Apple 设备注册计划 (DEP) iOS 设备的注册  
+  -   **不允許** - 防止裝置透過 USB 進行通訊 (停用配對)。  
+  -   **允許** - 允許裝置透過任何電腦或 Mac 的 USB 連線進行通訊。  
+  -   **需要憑證** - 允許使用匯入註冊設定檔的憑證與 Mac 配對。  
 
-1.  **添加公司设备注册策略**   
-    在 Configuration Manager 控制台的“资产和符合性”工作区中，依次展开“概述”、“所有公司拥有的设备”和“iOS”，然后单击“注册配置文件”。 单击“主页”选项卡的“创建配置文件”，打开创建配置文件向导。 在以下页面中配置设置：  
+## <a name="assign-dep-devices-for-management"></a>指派要管理的 DEP 裝置
 
-    1.  在“常规”页上，指定以下信息，然后单击“下一步”。  
+1. 移至 [裝置註冊計畫入口網站](https://deploy.apple.com) (https://deploy.apple.com) ，並使用公司的 Apple ID 登入。
+2. 移至 [部署計畫] > [裝置註冊計畫] > [管理裝置]。 指定您 [Choose Devices (選擇裝置)] 的方式、提供裝置資訊，並利用裝置的 [序號]、[訂單號碼] 或 [上傳 CSV 檔案] 來指定詳細資料。 接著，選取 [指派給伺服器]，選取您在步驟 3 指定的 [<*伺服器名稱*>]，然後按一下 [確定]。  
 
-        -   名称 – 设备注册配置文件的名称。 （对用户不可见）  
+3.  **同步處理 DEP 管理的裝置**   
+    在 [資產與相容性] 工作區中，前往 [公司擁有的所有裝置] > [預先宣告的裝置]。 在 [首頁] 索引標籤上，按一下 [DEP 同步處理] 。 同步處理要求會傳送至 Apple。 同步處理完成之後，會顯示 DEP 管理的裝置。
 
-        -   说明 - 设备注册配置文件的说明。 （对用户不可见）  
+    > [!NOTE]
+    > 使用混合式設定時，在 Configuration Manager 主控台中，按一下 [DEP 同步處理] 可手動觸發 DEP 同步處理作業。
 
-        -   用户关联 - 指定设备的注册方式。 请参阅 [Configuration Manager 中混合托管设备的用户关联](../../mdm/deploy-use/user-affinity-for-hybrid-managed-devices.md)。  
+4.  **指派 DEP 設定檔**<br>在 [資產與相容性] 工作區中，前往 [公司擁有的所有裝置] > [iOS] > [註冊設定檔]。 選取 DEP 註冊設定檔，然後在 [首頁] 索引標籤中，按一下 [指派給裝置]。 選取將使用此註冊設定檔的裝置，按一下 [新增]，然後按一下 [確定]。   
+     ![將 DEP 設定檔指派給 iOS 裝置的螢幕擷取畫面](../media/dep-assign-profile.png)
 
-            -   用户关联提示：必须在初始设置过程中将设备与用户相关联，然后允许该用户将其用于访问公司数据和电子邮件。  应该对属于用户且需要使用公司门户（即需要安装应用）的 DEP 托管设备配置用户关联。  
-
-            > [!NOTE]
-            > 具有用户关联的 DEP 要求启用 ADFS WS-Trust 1.3 用户名/混合终结点以请求用户令牌。
-
-            -   无用户关联：该设备不与用户关联。 将此隶属关系用于无需访问本地用户数据即可执行任务的设备。 需要用户关联的应用无法运行。  
-             ![DEP 配置文件名称、说明和“用户关联”提示的屏幕截图](../media/dep-general.png)
-
-    2.  在“设备注册计划设置”页上，指定以下信息，然后单击“下一步”。  
-
-        -   部门：用户在激活过程中点击“关于配置”时显示此信息。  
-
-        -   支持电话号码：用户在激活过程中单击“需要帮助”按钮时显示。
-       ![向 iOS 设备分配 DEP 配置文件的屏幕截图](../media/dep-settings.png)
-
-        -   准备模式：在激活过程中设置此状态，且只能通过恢复设备出厂设置更改：  
-
-            -   无人监督 - 有限的管理功能  
-
-            -   受到监督 - 启用更多的管理选项，并默认禁用激活锁定  
-
-        -   **将注册配置文件锁定到设备**：在激活过程中设置此状态，且只能通过恢复出厂设置更改  
-
-            -   禁用 - 允许从“设置”菜单中删除管理配置文件  
-
-            -   启用 -（需要**准备模式** = **受到监督**）禁用可能允许删除管理配置文件的 iOS 设置  
-
-    3.  在“设置助理”页上，配置自定义第一次打开设备时启动的 iOS 设置助理的设置，然后单击“下一步”。 这些设置包括：  
-        -   密码 - 在激活过程中提示输入密码。 始终需要密码，除非设备将受到保护，或以某种其他方式（即限制设备只可使用一个应用的展台模式）控制访问权限。  
-        -   定位服务 - 如果启用，在激活过程中设置助理会提示此服务  
-        -   还原 - 如果启用，在激活过程中设置助理会提示进行 iCloud 备份  
-        -   Apple ID - 下载 iOS App Store 应用（包括由 Intune 安装的应用）时需要 Apple ID。 如果启用，Intune 在没有 ID 的情况下尝试安装应用时，iOS 将提示用户提供 Apple ID。  
-        -   条款和条件 - 如果启用，在激活过程中设置助理会提示用户接受 Apple 的条款和条件  
-        -   Touch ID - 如果启用，在激活过程中设置助理会提示此服务
-        -   Apple Pay - 如果启用，在激活过程中设置助理会提示此服务
-        -   缩放 - 如果启用，在激活过程中设置助理会提示此服务
-        -   Siri - 如果启用，在激活过程中设置助理会提示此服务  
-        -   向 Apple 发送诊断数据 - 如果启用，在激活过程中设置助理会提示此服务  
-        ![向 iOS 设备分配 DEP 配置文件的屏幕截图](../media/dep-setup-assistant.png)
-
-    4.  在“附加管理”页上，指定 USB 连接是否可用于附加管理设置。 当选择“需要证书”时，你必须导入 Apple Configurator 管理证书以供此配置文件使用。  设置为“禁止”可阻止通过 Apple Configurator 与 iTunes 或管理同步文件。 Microsoft 建议设置为“禁止”，从 Apple Configurator 中导出任何进一步的配置，然后部署为自定义 iOS 配置文件，而不是使用此设置允许带或不带证书的手动部署。  
-
-        -   禁止 - 阻止设备通过 USB 进行通信（禁止配对）  
-
-        -   允许 - 允许设备通过 USB 连接与任何电脑或 Mac 进行通信  
-
-        -   需要证书 - 允许与具有导入到注册配置文件的证书的 Mac 配对  
-
-2.  **分配 DEP 设备以进行管理**   
-    转到[设备注册计划门户](https://deploy.apple.com) (https://deploy.apple.com) 并使用你的公司 Apple ID 登录。 转到“部署计划” > “设备注册计划” > “管理设备”。 指定“选择设备”的方式，提供设备信息，并按设备“序列号”、“订单编号”或“上传 CSV 文件”指定详细信息。 接下来，选择“分配到服务器”并选择在步骤 3 中指定的 <*ServerName*>，然后单击“确定”。  
-
-3.  **同步 DEP 管理的设备**   
-    在“资产和符合性”工作区中，转到“所有公司拥有的设备” > “预声明设备”。 在“主页”选项卡上，单击“DEP 同步”。 会向 Apple 发送同步请求。 同步完成后，将显示 DEP 管理的设备。
-
-> [!NOTE]
-> 在混合配置中，DEP 同步操作通过在 Configuration Manager 控制台中单击“DEP 同步”手动触发。
-
-4.  **分配 DEP 配置文件**<br>在“资产和符合性”工作区中，转到“公司拥有的所有设备” > “iOS” > “注册配置文件”。 选择 DEP 注册配置文件，然后在“主页”选项卡中单击“分配给设备”。 选择要使用此注册配置文件的设备，单击“添加”，然后单击“确定”。   
-     ![向 iOS 设备分配 DEP 配置文件的屏幕截图](../media/dep-assign-profile.png)
-
-5.  **将设备分配给用户**   
-    现在可以将你的企业拥有的设备给予用户。 在打开设备并运行设置助理以注册设备之前，托管设备的“注册状态”将一直显示为“未连接”。 打开 iOS 设备时，它将注册为由 Intune 管理。
-
+## <a name="distribute-devices-to-users"></a>將裝置散發給使用者
+現在您可以將公司所擁有的裝置提供給使用者。 受管理裝置的 [註冊狀態]  會顯示為 **未連線** ，直到裝置開機並執行 [設定助理] 來註冊該裝置為止。 當 iOS 裝置開機時，就會加以註冊交由 Intune 管理。

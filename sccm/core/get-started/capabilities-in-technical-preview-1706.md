@@ -1,11 +1,10 @@
 ---
-title: "Technical Preview 1706 | Microsoft 文档"
-description: "了解在 System Center Configuration Manager 的 Technical Preview 1706 中的可用功能。"
+title: Technical Preview 1706 | Microsoft Docs
+description: "了解 System Center Configuration Manager Technical Preview 1706 版中可用的功能。"
 ms.custom: na
 ms.date: 06/30/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -14,18 +13,17 @@ ms.assetid: ca3b4714-2a16-495e-8a17-1d87991d5556
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 6f9e6e93fce95666503907010a5c253158c5de7c
 ms.openlocfilehash: d45f504dfe0a4c7852b0e2c8ff60d54005346c02
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/07/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="capabilities-in-technical-preview-1706-for-system-center-configuration-manager"></a>在 System Center Configuration Manager 的 Technical Preview 1706 中的功能
+# <a name="capabilities-in-technical-preview-1706-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1706 中的功能
 
-*适用范围：System Center Configuration Manager（Technical Preview）*
+適用於︰System Center Configuration Manager (Technical Preview)
 
-本文将介绍在 System Center Configuration Manager 的 Technical Preview 1706 中的可用功能。 你可以安装此版本，以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。 在安装此 Technical Preview 前，请查看 [System Center Configuration Manager 的 Technical Preview](../../core/get-started/technical-preview.md)，熟悉使用 Technical Preview 的常规要求和限制，如何在两版本之间进行更新，以及如何对 Technical Preview 中的有关功能提供反馈。     
+本文介紹 System Center Configuration Manager Technical Preview 1706 版中可用的功能。 您可以安裝此版本，以更新並新增功能至 Configuration Manager Technical Preview 站台。 安裝此版本的 Technical Preview 之前，請檢閱 [System Center Configuration Manager 的 Technical Preview](../../core/get-started/technical-preview.md)，以熟悉使用 Technical Preview 的一般需求和限制、如何在版本之間進行更新，以及如何針對 Technical Preview 中的功能提供意見反應。     
 
 
 <!--  Known Issues Template   
@@ -33,17 +31,17 @@ ms.lasthandoff: 07/07/2017
 -   **Issue Name**. Details
     Workaround details.
 -->
-**此 Technical Preview 中的已知问题：**
+**此 Technical Preview 的已知問題：**
 
--   移动分发点 - 由于单一主站点 Technical Preview 的限制，控制台中用于在站点之间移动分发点的选项不能用于此版本。
+-   **移動發佈點** - 主控台中用來在站台間移動發佈點的選項不能與此版本搭配使用，因為 Technical Preview 限制使用單一主要站台。
 
--   设备符合性设置 - 当使用两个新的设备符合性设置时，可能会遇到相反的行为：
-    - **在设备上阻止进行 USB 调试**
-    - **阻止来自未知源的应用**
+-   **裝置合規性設定** - 使用下列兩個新裝置合規性設定時，您可能會遇到相反的行為：
+    - **封鎖裝置上的 USB 偵錯**
+    - **封鎖來自不明來源的應用程式**
 
-        例如，如果管理员将“在设备上阻止进行 USB 调试”设置为“true”，则所有未启用 USB 调试的设备均会被标记为不符合。
+        例如，如果系統管理員將 [封鎖裝置上的 USB 偵錯] 設定為 [true]，則所有未啟用 USB 偵錯的裝置都會標示為不符合規範。
 
-**以下是此版本可以试用的新功能。**  
+**以下是您可以使用此版本試用的新功能。**  
 
 <!--  Rough Section Template
 ##  FEATURE
@@ -55,531 +53,530 @@ ms.lasthandoff: 07/07/2017
  -  Task 2              
 -->
 
-## <a name="improved-boundary-groups-for-software-update-points"></a>改进了软件更新点的边界组
+## <a name="improved-boundary-groups-for-software-update-points"></a>改進的軟體更新點界限群組
 <!-- 1324591 -->
-此版本包括了针对软件更新点如何与边界组配合使用的多项改进。 以下内容总结了新的回退行为：
--   现在，软件更新点的回退使用一个可配置的时间来回退到相邻边界组，最小时间为 120 分钟。
+此版本包含對軟體更新點與界限群組搭配運作方式的改進。 以下摘要說明新的後援行為：
+-   軟體更新點的後援現在使用一段可設定的時間來切換至後援的鄰近界限群組，可設定的時間下限為 120 分鐘。
 
--   独立于回退配置，客户端会尝试访问它使用了 120 分钟的最后一个软件更新点。 在 120 分钟无法访问该服务器后，客户端将检查其池中可用的软件更新点，以便找到一个新的软件更新点。
+-   不論後援設定為何，用戶端會在 120 分鐘內持續嘗試連線到最後所使用的軟體更新點。 在持續 120 分鐘都無法連線到該伺服器之後，用戶端就會檢查其集區中可用的軟體更新點，以便找出新的更新點。
 
-  -   客户端当前边界组中的所有软件更新点都将立即添加到客户端池。
+  -   用戶端目前界限群組中的所有軟體更新點都會立即新增到用戶端的集區。
 
-  -   因为客户端在查找新的软件更新点之前，会尝试在 120 分钟内使用原始服务器，所以在两小时过去之前不会联系其他服务器。
+  -   由於用戶端在 120 分鐘內都會持續嘗試使用其原始伺服器，然後才會尋找新的伺服器，因此必須等到 2 小時過後，才會與其他伺服器連線。
 
-  -   如果回退到相邻组配置为最小 120 分钟，那么来自该相邻边界组的软件更新点将成为客户端可用服务器池的一部分。
+  -   針對切換至後援的鄰近群組，如果設定了 120 分鐘下限，來自該鄰近界限群組的軟體更新點就會成為用戶端可用伺服器集區的一部分。
 
--   如果在两个小时内无法连接到其原始服务器，则客户端会切换到一个短循环，以联系新的软件更新点。
+-   在持續兩小時都無法連線到其原始伺服器之後，用戶端就會切換到較短的新軟體更新點連線週期。
 
-    这意味着，如果客户端无法连接到新的服务器，它就会从自己的可用服务器池中快速选择下一个服务器，并尝试进行连接。
+    這意謂著如果用戶端無法與新伺服器連線，它會迅速從可用伺服器集區中選取下一部伺服器，然後嘗試與該伺服器連線。
 
-  -   此循环将一直持续下去，直到客户端连接到可以使用的软件更新点。
-  -   在客户端找到软件更新点后，当满足每个相邻边界组的回退时间时，会将其他服务器添加到可用服务器池中。
+  -   這個週期會持續下去，直到用戶端連線到它可以使用的軟體更新點為止。
+  -   在用戶端找到軟體更新點之前，當達到每個鄰近界限群組的後援時間時，系統會將額外的伺服器新增到可用伺服器集區。
 
-有关详细信息，请参阅 Current Branch 的边界组主题中的[软件更新点](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points)。
+如需詳細資訊，請參閱「最新分支」之＜界限群組＞主題中的[軟體更新點](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points)。
 
 
-## <a name="site-server-role-high-availability"></a>站点服务器角色的高可用性
+## <a name="site-server-role-high-availability"></a>站台伺服器角色高可用性
 <!-- 1128774 -->
-站点服务器角色的高可用性是一个基于 Configuration Manager 的解决方案，用以在“被动”模式下安装其他主站点服务器。 被动模式站点服务器是现有处于“主动”模式的主站点服务器的另一个服务器。 在需要时可立即使用被动模式站点服务器。
+站台伺服器角色的高可用性是一個以 Configuration Manager 為基礎的解決方案，能夠安裝「被動」模式的額外主要站台伺服器。 被動模式站台伺服器是除了您現有「主動」模式主要站台伺服器以外的站台伺服器。 被動模式站台伺服器可在需要時立即可供使用。
 
-被动模式主站点服务器：
--   使用相同的站点数据库作为活动站点服务器。
--   接收活动站点服务器内容库的副本，然后同步保存。
--   只要在被动模式下，将不会向站点数据库写入数据。
--   只要在被动模式下，将不支持安装或删除可选的站点系统角色。
+被動模式的主要站台伺服器：
+-   會使用與您主動站台伺服器相同的站台資料庫。
+-   會接收一份主動站台伺服器內容庫複本，然後保持同步。
+-   只要處於被動模式，便不會將資料寫入至站台資料庫。
+-   只要處於被動模式，便不支援安裝或移除選用的站台系統角色。
 
-要将被动模式站点服务器设置成为主动模式站点服务器，可通过手动进行提升。 这会将主动站点服务器切换为被动站点服务器。 只要该计算机可以访问，在原始主动模式服务器上可用的站点系统角色将仍然可用。 仅站点服务器角色会在主动和被动模式之间切换。
+若要將被動模式站台伺服器變成您的主動模式站台伺服器，您需以手動方式將它升階。 這會將主動站台伺服器切換成被動站台伺服器。 原始主動模式站台伺服器上可用的站台系統角色仍然可供使用，只要該電腦可供存取即可。 在主動與被動模式之間切換的只有站台伺服器角色。
 
-要安装被动模式站点服务器，可使用“创建站点系统服务器向导”来配置一个类型为“主站点服务器”、模式为“被动”的新站点服务器。 然后，该向导将在指定服务器上运行 Configuration Manager 安装程序，以在被动模式下安装新的站点服务器。 安装完成后，主动模式站点服务器将保留被动模式站点服务器及其内容库，以便与你对活动站点服务器所做的更改或配置进行同步。
+若要安裝被動模式站台伺服器，您需使用「建立站台系統伺服器精靈」來設定 [類型] 為 [主要站台伺服器] 且 [模式] 為 [被動] 的新站台伺服器。 此精靈會接著在指定的伺服器上執行「Configuration Manager 安裝程式」，以安裝被動模式的新站台伺服器。 安裝完成之後，主動模式站台伺服器會讓被動模式站台伺服器及其內容庫與您對主動站台伺服器所做的變更或設定保持同步。
 
-### <a name="prerequisites-and-limitations"></a>先决条件和限制
--   每个主站点均支持在被动模式下的单一站点服务器。
+### <a name="prerequisites-and-limitations"></a>先決條件和限制
+-   每個主要站台都支援一個被動模式的站台伺服器。
 
--   被动模式下的站点服务器可以是本地服务器或是 Azure 中基于云的服务器。
+-   被動模式的站台伺服器可以是內部部署的站台伺服器，也可以是 Azure 中的雲端式站台伺服器。
 
--   主动模式和被动模式站点服务器都必须位于同一域中。
+-   主動模式與被動模式站台伺服器必須位於相同的網域中。
 
--   主动模式和被动模式站点服务器都必须使用相同的站点数据库，该数据库必须远离每个站点服务器的计算机。
+-   主動模式與被動模式站台伺服器必須使用相同的站台資料庫，此資料庫必須位於每部站台伺服器之電腦的遠端。
 
-    -   承载数据库的 SQL Server 可以使用默认实例、命名实例、SQL Server 群集或 Always On 可用性组。
+    -   裝載資料庫的 SQL Server 可以使用預設執行個體、具名執行個體、SQL Server 叢集或「Always On 可用性群組」。
 
-    -   被动模式下的站点服务器被配置为使用与主动模式站点服务器相同的站点数据库。 但是，被动模式站点服务器在提升为主动模式之前将不使用该数据库。
+    -   被動模式的站台伺服器已設定為使用與主動模式站台伺服器相同的站台資料庫。 不過，被動模式站台伺服器必須在升階為主動模式之後，才會使用該資料庫。
 
--   将运行被动模式站点服务器的计算机：
+-   將執行被動模式站台伺服器的電腦：
 
-    -   必须满足[安装主站点的先决条件](https://docs.microsoft.com/en-us/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#primary-sites-and-the-central-administration-site)。
+    -   必須符合[安裝主要站台的必要條件](https://docs.microsoft.com/en-us/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#primary-sites-and-the-central-administration-site)。
 
-    -   使用与主动模式站点服务器的版本相匹配的源文件进行安装。
+    -   會使用與主動模式站台伺服器版本相符的來源檔案來進行安裝。
 
-    -   在安装被动模式站点之前，不能从任何站点获得站点系统角色。
+    -   在安裝被動模式站台之前，不能有來自任何站台的站台系統角色。
 
--   主动和被动模式站点服务器计算机可运行不同的操作系统或服务包版本，只要它们一直受 Configuration Manager 版本的支持。
+-   主動與被動模式站台伺服器電腦可以執行不同的作業系統或 Service Pack 版本，只要您的 Configuration Manager 版本同時支援它們兩者即可。
 
--   被动模式站点服务器到主动模式服务器的提升为手动操作。 没有任何自动故障转移。
+-   將被動模式站台伺服器升階為主動模式伺服器需手動執行。 並沒有任何自動容錯移轉機制。
 
--   只能在处于主动模式的站点服务器上安装站点系统角色。
+-   站台系統角色只能安裝在主動模式的站台伺服器上。
 
-    -   主动模式下的站点服务器支持所有站点系统角色。 在被动模式下时，无法在服务器上安装站点系统角色。
+    -   主動模式的站台伺服器支援所有站台系統角色。 您無法在處於被動模式的伺服器上安裝站台系統角色。
 
-    -   使用数据库（如报告点）的站点系统角色必须在远离主动模式和被动模式站点服务器的服务器上拥有该数据库。
+    -   使用資料庫 (例如報告點) 的站台系統角色必須讓該資料庫所在伺服器位於主動模式與被動模式站台伺服器的遠端。
 
-    -   SMS_Provider 不会以被动模式安装在站点服务器上。 因为必须连接到站点的 SMS_Provider 手动将被动模式站点服务器提升为主动模式，我们建议在其他计算机上[至少安装一个附加的提供程序实例](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider)。
+    -   SMS_Provider 並不會在被動模式的站台伺服器上進行安裝。 由於您必須連線到該站台的 SMS_Provider，才能手動將被動模式站台伺服器升階為主動模式，因此建議您在額外的電腦上[至少安裝一個額外的提供者執行個體](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider)。
 
-**已知问题**：   
-此版本中，以下条件的状态在控制台中将显示为数值，而不是可读文本：
--   131071 – 站点服务器安装失败
--   720895 – 站点服务器角色卸载失败
--   851967 – 故障转移失败
+**已知問題**：   
+在此版本中，下列情況的「狀態」在主控台中會以數值的形式而不是以可讀的文字顯示：
+-   131071 - 站台伺服器安裝失敗
+-   720895 - 站台伺服器角色解除安裝失敗
+-   851967 - 容錯移轉失敗
 
-### <a name="add-a-site-server-in-passive-mode"></a>添加被动模式站点服务器
-1.  在控制台中，转到“管理” > “站点配置” > “站点”，并启动[“添加站点系统角色向导”](/sccm/core/servers/deploy/configure/install-site-system-roles)。 还可以使用“创建站点系统服务器向导”。
+### <a name="add-a-site-server-in-passive-mode"></a>新增被動模式的站台伺服器
+1.  在主控台中，移至 [系統管理] > [站台設定] > [站台]，然後啟動[新增站台系統角色精靈](/sccm/core/servers/deploy/configure/install-site-system-roles)。 您也可以使用「建立站台系統伺服器精靈」。
 
-2.  在“常规”页上，指定将承载被动模式站点服务器的服务器。 在被动模式下安装站点服务器之前，你指定的服务器不能承载任何站点系统角色。
+2.  在 [一般] 頁面上，指定將裝載被動模式站台伺服器的伺服器。 您指定的伺服器在安裝被動模式的站台伺服器之前，不能裝載任何站台系統角色。
 
-3.  在“系统角色选择”页上，仅选择“被动模式下的主站点服务器”。
+3.  在 [系統角色選取] 頁面上，僅選取 [被動模式的主要站台]。
 
-4.  要完成向导，必须提供用于在指定服务器上运行安装程序并安装站点服务器角色的以下信息：
-    -   选择将安装文件从主动站点服务器复制到新的被动模式站点服务器，或指定一个包含主动站点服务器“CD.Latest”文件夹内容位置的路径。
+4.  為了完成精靈步驟，您必須提供下列資訊，這些資訊會用來在指定的伺服器上執行安裝程式並安裝站台伺服器角色：
+    -   選擇將安裝檔案從主動站台伺服器複製到新的被動模式站台伺服器，或是指定一個包含主動站台伺服器之 [CD.Latest] 資料夾的位置路徑。
 
-    -   指定主动模式站点服务器使用的同一站点数据库服务器和数据库名称。
+    -   指定與主動模式站台伺服器所用相同的站台資料庫伺服器和資料庫名稱。
 
-5.  然后，Configuration Manager 在指定服务器上安装被动模式站点服务器。
+5.  Configuration Manager 會接著在指定的伺服器上安裝被動模式的站台伺服器。
 
-有关详细的安装状态，请转到“管理” > “站点配置” > “站点”。
--   被动模式下的站点服务器状态将显示为“正在安装”。
+如需了解詳細的安裝狀態，請移至 [系統管理] > [站台設定] > [站台]。
+-   被動模式站台伺服器的狀態會顯示為 [正在安裝]。
 
--   选择服务器，然后单击“显示状态”，打开“站点服务器安装状态”，以查看更多详细信息。
-
-
-
-### <a name="promote-the-passive-mode-site-server-to-active-mode"></a>将被动模式站点服务器提升为主动模式
-如果想要将被动模式站点服务器更改为主动模式，则可以从“管理” > “站点配置” > “站点”的“节点”窗格中执行此操作。 只要可以访问 SMS_Provider 实例，便可以访问站点来执行此更改。
-1.  在 Configuration Manager 控制台的“节点”窗格中，选择被动模式下的站点服务器，然后从功能区中选择“提升为主动”。
-
-2.  正在提升的服务器的简单“状态”在“节点”窗格中显示为“正在提升”。
-
-3.  在提升完成后，“状态”列将对这两个新的主动模式站点服务器和新的被动模式站点服务器显示为“确定”。
-
-4.  在“管理” > “站点配置” > “站点”中，主站点服务器的名称现在显示主动模式站点服务器的新名称。
-有关详细状态，请转到“监视” > “站点服务器状态”。
-    -   “模式”列将标识哪个服务器为主动或被动。
-
-    -   将服务器从被动模式提升到主动模式时，选择要提升为主动的站点服务器，然后从功能区选择“显示状态”。 这将会打开“站点服务器升级状态”窗口，其中显示有关该流程的其他详细信息。
-
-当主动模式下的站点服务器切换为被动模式时，仅站点系统角色会成为被动模式。 在该计算机上安装的所有其他站点系统角色则保持主动状态，并可供客户端访问。
+-   選取該伺服器，然後按一下 [顯示狀態] 來開啟 [站台伺服器安裝狀態]，以了解更多詳細資訊。
 
 
-### <a name="daily-monitoring"></a>每日监视
-如果你有被动模式下的主站点，请进行每日监视，以确保其与主动模式站点服务器保持同步并可供使用。 要执行此操作，请转到“监视” > “站点服务器状态”。 在此你可以查看主动模式和被动模式站点服务器。
 
-“摘要”选项卡：
--   “模式”列标识哪个服务器为主动或被动。
--   “状态”列在被动模式服务器与主动模式服务器同步时会显示“确定”。
--   要查看有关内容同步状态的其他详细信息，请单击“内容同步状态”中的“显示状态”。 这将会打开“内容库”选项卡，你可以在其中尝试修复内容同步问题。
+### <a name="promote-the-passive-mode-site-server-to-active-mode"></a>將被動模式站台伺服器升階為主動模式
+當您想要將被動模式站台伺服器變更為主動模式時，需從 [系統管理] > [站台設定] > [站台] 中的 [節點] 窗格執行此操作。 只要您能夠存取 SMS_Provider 的執行個體，便能夠存取該站台來進行這項變更。
+1.  在 Configuration Manager 主控台的 [節點] 窗格中，選取被動模式的站台伺服器，然後從功能區中選擇 [升階為主動]。
 
-“内容库”选项卡：
--   查看从主动站点服务器同步到被动模式站点服务器的内容的“状态”。
--   你可以选择状态为“失败”的内容，然后从功能区选择“同步所选项”。 此操作将尝试重新将内容从内容源同步到被动模式站点服务器。 在恢复期间，状态将显示为“正在进行”，并在同步后显示为“成功”。
+2.  您正在升階之伺服器的簡單 [狀態] 會在 [節點] 窗格中顯示為 [升階]。
 
-### <a name="try-it-out"></a>试试看！
-请尝试完成以下任务，然后从功能区的“主页”选项卡向我们发送“反馈”，让我们了解它的工作状况：
--   我可以在被动模式下安装主站点。
--   我可以使用控制台来提升被动模式站点服务器，以使其成为主动模式站点服务器，并确认这两个站点服务器的状态更改。
+3.  升階完成之後，新 [主動] 模式站台伺服器和新 [被動] 模式站台伺服器的 [狀態] 資料行都會顯示 [正常]。
+
+4.  在 [系統管理] > [站台設定] > [站台] 中，主要站台伺服器的名稱現在會顯示新 [主動] 模式站台伺服器的名稱。
+如需了解詳細狀態，請移至 [監視] > [站台伺服器狀態]。
+    -   [模式] 資料行會指出哪一部伺服器為 [主動] 或 [被動]。
+
+    -   將伺服器從被動模式升階為主動模式時，請選取要升階為主動的站台伺服器，然後從功能區中選擇 [顯示狀態]。 這會開啟 [站台伺服器升階狀態] 視窗，當中會顯示有關該程序的其他詳細資料。
+
+當主動模式的站台伺服器切換到被動模式時，只有站台系統角色會變成被動。 所有安裝在該電腦上的其他站台系統角色仍然保持主動，並且可供其他用戶端存取。
 
 
-## <a name="include-trust-for-specific-files-and-folders-in-a-device-guard-policy"></a>在 Device Guard 策略中包括对特定文件和文件夹的信任
+### <a name="daily-monitoring"></a>每天監視
+當您有被動模式的主要站台時，請每天監視它，以確保它與主動模式站台伺服器保持同步並且可供使用。 若要這樣做，請移至 [監視] > [站台伺服器狀態]。 您可以在此處同時檢視主動模式與被動模式站台伺服器。
+
+[摘要] 索引標籤：
+-   [模式] 資料行會指出哪一部伺服器為 [主動] 或 [被動]。
+-   當被動模式伺服器與主動模式伺服器同步時，[狀態] 資料行會列出 [正常]。
+-   若要檢視有關內容同步處理狀態的其他詳細資料，請從 [內容同步狀態] 按一下 [顯示狀態]。 這會開啟 [內容庫] 索引標籤，您可以在此處嘗試修正內容同步問題。
+
+[內容庫] 索引標籤：
+-   檢視從主動站台伺服器同步至被動模式站台伺服器之內容的 [狀態]。
+-   您可以選取 [狀態] 為 [失敗] 的內容，然後從功能區中選擇 [同步處理所選項目]。 此動作會嘗試將該內容從內容來源重新同步至被動模式站台伺服器。 在復原期間，[狀態] 會顯示為 [進行中]，當同步時，則會顯示為 [成功]。
+
+### <a name="try-it-out"></a>試試看！
+請嘗試完成下列工作，然後從功能區的 [首頁] 索引標籤中傳送 [意見反應] 給我們，讓我們了解運作情況：
+-   我可以安裝被動模式的主要站台。
+-   我可以使用主控台將被動模式站台伺服器升階為主動模式站台伺服器，並確認這兩部站台伺服器的狀態變更。
+
+
+## <a name="include-trust-for-specific-files-and-folders-in-a-device-guard-policy"></a>在 Device Guard 原則中包含對特定檔案和資料夾的信任
 <!-- 1324676 -->
-在此版本中，我们已向 [Device Guard](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager) 策略管理添加了更多功能
+在此版本中，我們已在 [Device Guard](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager) 原則管理中新增進一步的功能
 
-现在可以选择在 Device Guard 策略中添加对特定文件或文件夹的信任。 此操作可让你：
+您現在可以視需要在 Device Guard 原則中新增對特定檔案或資料夾的信任。 這可讓您：
 
-1.  解决托管安装程序行为的问题
-2.  信任无法使用 Configuration Manager 部署的业务线应用
-3.  信任包括在操作系统部署映像中的应用
+1.  克服與受管理安裝程式相關的問題
+2.  信任無法以 Configuration Manager 部署的商務營運應用程式
+3.  信任作業系統部署映像中所包含的應用程式。
 
-### <a name="try-it-out"></a>试试看！
+### <a name="try-it-out"></a>試試看！
 
-1.  在创建 Device Guard 策略时，在“创建 Device Guard 策略向导”的“包含”项选项卡上，单击“添加”。
-2.  在“添加受信任文件或文件夹”对话框中，指定有关你想要信任的文件或文件夹的信息。 你可以指定本地文件或文件夹路径，或者连接到你有权连接的远程设备，并指定文件或文件夹在该设备上的路径。
-3.  完成向导。
+1.  在您建立 Device Guard 原則時，於「建立 Device Guard 原則」精靈中，按一下 [新增]。
+2.  在 [新增信任的檔案或資料夾] 對話方塊中，指定您想要信任的檔案或資料夾相關資訊。 您可以指定本機檔案或資料夾路徑，或是連線到您具備連線權限的遠端裝置，然後指定該裝置上的檔案或資料夾。
+3.  完成精靈。
 
 
-## <a name="hide-task-sequence-progress"></a>隐藏任务序列进度
+## <a name="hide-task-sequence-progress"></a>隱藏工作順序進度
 <!-- 1354291 -->
-在此版本中，你可以通过使用新的变量控制何时向最终用户显示任务序列进度。 在任务序列中，使用“设置任务序列变量”步骤来设置“TSDisableProgressUI”变量的值，以隐藏或显示任务序列进度。 你可以在任务序列中多次使用“设置任务序列变量”步骤来更改变量的值。 这样可以在任务序列进度的不同部分中隐藏或显示任务序列。
+在此版本中，您可以使用新的變數來控制對使用者顯示工作順序進度的時機。 請在您的工作順序中，使用 [設定工作順序變數] 步驟來設定 **TSDisableProgressUI** 變數的值，以隱藏或顯示工作順序進度。 您可以在工作順序中多次使用 [設定工作順序變數] 步驟，以變更此變數的值。 這可讓您在不同的工作順序區段中隱藏或顯示工作順序進度。
 
-#### <a name="to-hide-task-sequence-progress"></a>隐藏任务序列进度
-在任务序列编辑器中，使用[设置任务序列变量](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable)步骤将“TSDisableProgressUI”变量的值设置为“True”，以隐藏任务序列进度。
+#### <a name="to-hide-task-sequence-progress"></a>隱藏工作順序進度
+請在工作順序編輯器中，使用[設定工作順序變數](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable)步驟，將 **TSDisableProgressUI** 變數的值設定為 **True**，以隱藏工作順序進度。
 
-#### <a name="to-display-task-sequence-progress"></a>显示任务序列进度
-在任务序列编辑器中，使用[设置任务序列变量](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable)步骤将“TSDisableProgressUI”变量的值设置为“False”，以显示任务序列进度。
+#### <a name="to-display-task-sequence-progress"></a>顯示工作順序進度
+請在工作順序編輯器中，使用[設定工作順序變數](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable)步驟，將 **TSDisableProgressUI** 變數的值設定為 **False**，以顯示工作順序進度。
 
-## <a name="specify-a-different-content-location-for-install-content-and-uninstall-content"></a>指定安装内容和卸载内容的不同内容位置
+## <a name="specify-a-different-content-location-for-install-content-and-uninstall-content"></a>針對安裝內容和解除安裝內容指定不同的內容位置
 <!-- 1097546 -->
-在今天的 Configuration Manager 中，你可以指定包含应用安装程序文件的安装位置。 指定安装位置时，它同样可用作应用程序内容的卸载位置。
-根据你的反馈，当想要卸载部署的应用程序，并且应用内容不在客户端计算机上时，客户端会在卸载应用程序之前再次下载所有应用安装程序文件。
-为了解决此问题，现在你可以同时指定一个安装内容位置和一个可选的卸载内容位置。 此外，你还可以选择不指定卸载内容位置。
+在現今的 Configuration Manager 中，您需指定包含應用程式安裝檔的安裝位置。 指定安裝位置時，這也會用來作為應用程式內容的解除安裝位置。
+根據您的意見反應，當您想要將已部署的應用程式解除安裝，而該應用程式內容不在用戶端電腦上時，則用戶端會先重新下載所有應用程式安裝檔，然後才將應用程式解除安裝。
+為了解決此問題，您現在可以指定安裝內容位置，也可以指定選用的解除安裝內容位置。 此外，您還可以選擇不指定解除安裝內容位置。
 
-### <a name="try-it-out"></a>试试看！
+### <a name="try-it-out"></a>試試看！
 
-1. 在应用程序的部署类型属性中，请单击“内容”选项卡。
-2. 将“安装内容位置”配置为常规。
-3. 对于“卸载内容设置”，请选择以下项之一：
-    - 与安装内容相同 - 无论是安装还是卸载应用程序，都将使用相同的内容位置。
-    - 没有卸载内容 - 如果你不想为应用程序提供卸载内容位置，则选择此选项。
-    - 不同于安装内容 - 如果你想要指定不同于安装内容位置的卸载内容位置，则选择此选项。
-5. 如果你选择“不同于安装内容”，则浏览到或输入将用于卸载应用程序的应用内容的位置。
-6. 单击“确定”以关闭部署类型属性对话框。
+1. 在應用程式的部署類型屬性中，按一下 [內容] 索引標籤。
+2. 依照一般方式設定「安裝內容位置」。
+3. 針對 [解除安裝內容設定]，選擇下列其中一個選項：
+    - **與安裝內容相同** - 不論您是要進行應用程式安裝還是解除安裝，都會使用相同的內容位置。
+    - **沒有解除安裝內容** - 如果您不想要提供應用程式的解除安裝內容位置，請選擇此選項。
+    - **與安裝內容不同** - 如果您想要指定與安裝內容位置不同的解除安裝內容位置，請選擇此選項。
+5. 如果您選取了 [與安裝內容不同]，請瀏覽至或輸入將用來將應用程式解除安裝的應用程式內容位置。
+6. 按一下 [確定] 關閉部署類型內容對話方塊。
 
 
-## <a name="accessibility-improvements"></a>辅助功能改进  
+## <a name="accessibility-improvements"></a>協助工具改進  
 <!--1253000 -->
-此预览版在 Configuration Manager 控制台中引入了对[辅助功能](/sccm/core/understand/accessibility-features)的多项改进。 其中包括:     
+此預覽版針對 Configuration Manager 主控台中的[協助工具功能](/sccm/core/understand/accessibility-features)引進數個改進。 它們包括：     
 
-**在控制台中移动的新键盘快捷方式：**
--   Ctrl + M - 将焦点设置在主（中心）窗格中。
--   Ctrl + T - 将焦点设置到导航窗格中的顶级节点。 如果焦点已在此窗格中，则将焦点设置到你访问的最后一个节点。
--   Ctrl + I - 将焦点设置到功能区下方的痕迹导航栏中。
--   Ctrl + L - 将焦点设置到“搜索”字段中（可用时）。
--   Ctrl + D - 将焦点设置到“详细信息”窗格中（可用时）。
--   Alt – 将焦点移入和移出功能区。
+**可在整個主控台中四處移動的新鍵盤快速鍵：**
+-   Ctrl + M - 將焦點設定在主要 (中央) 窗格上。
+-   Ctrl + T - 將焦點設定至瀏覽窗格中的最上層節點。 如果焦點已經在該窗格中，則會將焦點設定至您瀏覽的最後一個節點。
+-   Ctrl + I - 將焦點設定至功能區下的階層連結列。
+-   Ctrl + L - 將焦點設定至 [搜尋] 欄位 (如果可用)。
+-   Ctrl + D - 將焦點設定至詳細資料窗格 (如果可用)。
+-   Alt - 將焦點在功能區內外切換。
 
-**一般改进：**
--   改进了在导航窗格键入节点名称字母时的导航。
--   现在通过主视图和功能区的键盘导航为圆形。
--   现在详细信息窗格中的键盘导航为圆形。 要返回到上一个对象或窗格，使用 Ctrl + D，然后按住 Shift + TAB 即可实现。
--   在刷新工作区视图后，焦点将设置到该工作区的主窗格中。
--   修复了一个问题，可使屏幕阅读器公布列表项的名称。
--   为页面上的多个控件添加了可访问名称，使得屏幕阅读器可以公布重要信息。
+**一般改進：**
+-   改進當您輸入節點名稱的字母時在瀏覽窗格中的瀏覽。
+-   在主要檢視和功能區的鍵盤瀏覽現在是採用循環方式。
+-   在詳細資料窗格中的鍵盤瀏覽現在是採用循環方式。 若要返回上一個物件或窗格，請使用 Ctrl + D，然後使用 Shift + TAB。
+-   重新整理 [工作區] 檢視之後，焦點會設定至該工作區的主要窗格。
+-   修正問題，讓螢幕助讀程式能夠朗讀清單項目的名稱。
+-   為頁面上多個控制項新增可存取的名稱，讓螢幕助讀程式能夠朗讀重要資訊。
 
 
-## <a name="changes-to-the-azure-services-wizard-to-support-upgrade-readiness"></a>更改 Azure 服务向导以支持升级就绪情况
+## <a name="changes-to-the-azure-services-wizard-to-support-upgrade-readiness"></a>為支援升級整備而對 Azure 服務精靈進行的變更
 <!-- 1353331 -->
-从此版本开始，可使用 Azure 服务向导来配置从 Configuration Manager 到[升级就绪情况](/sccm/core/clients/manage/upgrade/upgrade-analytics)的连接。 通过使用相关 Azure 服务的常见向导，简化了连接器的配置。   
+從此版本開始，請使用「Azure 服務精靈」來設定從 Configuration Manager 到[升級整備](/sccm/core/clients/manage/upgrade/upgrade-analytics)的連線。 使用此精靈可透過使用相關 Azure 服務的通用精靈，來簡化連接器的設定。   
 
-虽然配置连接的方法已更改，但是连接的先决条件和对“升级就绪情况”的使用方式仍保持不变。   
+雖然設定連線的方法已變更，但連線的先決條件及「升級整備」的使用方式仍維持不變。   
 
-### <a name="prerequisites-for-upgrade-readiness"></a>升级就绪情况的先决条件
-[与升级就绪情况的连接](/sccm/core/clients/manage/upgrade/upgrade-analytics#create-a-connection-to-upgrade-readiness)的先决条件与所述的 Configuration Manager 的 Current Branch 相比，没有变化。 为方便起见，在此予以重复列出：  
+### <a name="prerequisites-for-upgrade-readiness"></a>升級整備的先決條件
+[建立升級整備的連線](/sccm/core/clients/manage/upgrade/upgrade-analytics#create-a-connection-to-upgrade-readiness)的先決條件與針對 Configuration Manager 之「最新分支」詳述的先決條件相同。 為了方便起見，才在這裡重述：  
 
-**先决条件**
--   若要添加连接，Configuration Manager 环境必须先在[联机模式](/sccm/core/servers/deploy/configure/about-the-service-connection-point#a-namebkmkmodesa-modes-of-operation)下配置[服务连接点](/sccm/core/servers/deploy/configure/about-the-service-connection-point)。 将连接添加到环境时，它还会在运行此站点系统角色的计算机上安装 Microsoft Monitoring Agent。
--   将 Configuration Manager 注册为“Web 应用程序和/或 Web API”管理工具，并获得[来自此注册的客户端 ID](https://azure.microsoft.com/documentation/articles/active-directory-integrating-applications/)。
--   在 Azure Active Directory 中，为已注册的管理工具创建客户端密钥。
--   在 Azure 管理门户中，向已注册的 Web 应用提供访问 OMS 的权限，如[向 Configuration Manager 提供 OMS 权限](https://azure.microsoft.com/documentation/articles/log-analytics-sccm/#provide-configuration-manager-with-permissions-to-oms)中所述。
+**先決條件**
+-   若要新增連線，您的 Configuration Manager 環境必須先以[線上模式](/sccm/core/servers/deploy/configure/about-the-service-connection-point#a-namebkmkmodesa-modes-of-operation)設定[服務連接點](/sccm/core/servers/deploy/configure/about-the-service-connection-point)。 當您將連線新增至環境時，也會在執行此站台系統角色的電腦上安裝 Microsoft Monitoring Agent。
+-   將 Configuration Manager 註冊為「Web 應用程式和/或 Web API」管理工具，並且取得[來自此註冊的用戶端識別碼](https://azure.microsoft.com/documentation/articles/active-directory-integrating-applications/)。
+-   在 Azure Active Directory 中，為已註冊的管理工具建立用戶端金鑰。
+-   在 Azure 管理入口網站中，為已註冊的 Web 應用程式提供 OMS 存取權限 (如[為 Configuration Manager 提供 OMS 的權限](https://azure.microsoft.com/documentation/articles/log-analytics-sccm/#provide-configuration-manager-with-permissions-to-oms)中所述)。
 
 > [!IMPORTANT]       
-> 配置访问 OMS 的权限时，请务必选择**参与者**角色，并向其分配注册应用的资源组的权限。
+> 設定 OMS 存取權限時，請務必選擇 [參與者] 角色，並將所註冊應用程式之資源群組的權限指派給它。
 
-配置先决条件后，便可以使用该向导来创建连接。
+設定完先決條件之後，您即已準備好使用此精靈來建立連線。
 
-### <a name="use-the-azure-services-wizard-to-configure-upgrade-readiness"></a>使用 Azure 服务向导配置升级就绪情况
-1.  在控制台中，转到“管理” > “概述” > “云服务” > “Azure 服务”，然后从功能区的“主页”选项卡上选择“配置 Azure 服务”，以启动“Azure 服务向导”。
+### <a name="use-the-azure-services-wizard-to-configure-upgrade-readiness"></a>使用 Azure 服務精靈來設定升級整備
+1.  在主控台中，移至 [系統管理] > [概觀] > [雲端服務] > [Azure 服務]，然後從功能區的 [首頁] 索引標籤中選擇 [設定 Azure 服務]，來啟動「Azure 服務精靈」。
 
-2.  在“Azure 服务”页上，选择“升级就绪情况连接器”，然后单击“下一步”。
+2.  在 [Azure 服務] 頁面上，選取 [升級整備連接器]，然後按 [下一步]。
 
-3.  在“应用”页上，指定你的“Azure 环境”（Technical Preview仅支持公有云）。 然后，单击“导入”，以打开“导入应用”窗口。
+3.  在 [應用程式] 頁面上，指定您的 [Azure 環境] \(Technical Preview 僅支援 [公用雲端])。 然後，按一下 [匯入] 來開啟 [匯入應用程式] 視窗。
 
-4.  在“导入应用”窗口中，指定 Azure AD 中现存的 Web 应用的详细信息。
-    -   为 Azure AD 租户名称提供一个友好名称。 然后，指定租户 ID、应用名称、客户端 ID、Azure Web 应用的密钥，以及应用 ID URI。
-    -   单击“验证”，如果成功，则单击“确定”以继续。
+4.  在 [匯入應用程式] 視窗中，指定您 Azure AD 中已存在之 Web 應用程式的詳細資料。
+    -   為 [Azure AD 租用戶名稱] 提供一個易記的名稱。 然後，指定 [租用戶識別碼]、[用戶端識別碼]、Azure Web 應用程式的祕密金鑰，以及 [應用程式識別碼 URI]。
+    -   按一下 [驗證]，如果成功，請按一下 [確定] 來繼續作業。
 
-5.   在“配置”页上，指定想要与此升级就绪情况的连接一起使用的订阅、资源组和 Windows Analytics 工作区。  
+5.   在 [設定] 頁面上，指定您想要與這個「升級整備」連線搭配使用的訂用帳戶、資源群組及「Windows Analytics 工作區」。  
 
-6.  单击“下一步”转到“摘要”页，然后完成向导以创建连接。
+6.  按 [下一步] 以移至 [摘要] 頁面，然後完成精靈步驟來建立連線。
 
 
-## <a name="new-client-settings-for-cloud-services"></a>云服务的新客户端设置
+## <a name="new-client-settings-for-cloud-services"></a>雲端服務的新用戶端設定
 <!-- 1319883 -->
 
-在此版本中，我们向 Configuration Manager 添加了两个新的客户端设置。 这两个新设置将可以在“云服务”部分找到。  这些设置为你提供了以下功能：
+在此版本中，我們在 Configuration Manager 中新增了兩個新的用戶端設定。 您將在 [雲端服務] 區段中找到這些設定。  這些設定可提供您下列功能：
 
-- 控制哪些 Configuration Manager 客户端可以访问已配置的云管理网关。
-- 在 Azure Active Directory 中自动注册已加入域的 Windows 10 Configuration Manger 客户端。
+- 控制哪些 Configuration Manager 用戶端可以存取已設定的雲端管理閘道。
+- 自動向 Azure Active Directory 註冊已加入網域的 Windows 10 Configuration Manger 用戶端。
 
-这些新设置可帮助你实现 [Configuration Manager 1705 Technical Preview](/sccm/core/get-started/capabilities-in-technical-preview-1705#new-capabilities-for-azure-ad-and-cloud-management)中所述的功能。
+這些新設定可協助您完成 [Configuration Manager 1705 Technical Preview](/sccm/core/get-started/capabilities-in-technical-preview-1705#new-capabilities-for-azure-ad-and-cloud-management) 中所述的功能。
 
-### <a name="before-you-start"></a>开始之前
+### <a name="before-you-start"></a>開始之前
 
-你必须在本地 Active Directory 和 Azure AD 租户之间安装并配置 Azure AD Connect。
+您必須已在內部部署 Active Directory 與 Azure AD 租用戶之間安裝並設定 Azure AD Connect。
 
-如果你删除了该连接，设备不会取消注册，但不会注册新的设备。
+如果您移除連線，系統並不會將裝置取消註冊，但將不會註冊任何新裝置。
 
-### <a name="try-it-out"></a>试试看！
+### <a name="try-it-out"></a>試試看！
 
-1. 使用[如何配置客户端设置](/sccm/core/clients/deploy/configure-client-settings)中的信息来配置以下客户端设置（在云服务中找到）部分。
-    -   在 Azure Active Directory 中自动注册已加入域的新 Windows 10 设备 – 设置为“是”（默认值），或“否”。
-    -   允许客户端使用云管理网关 – 设置为“是”（默认值），或“否”。
-2.  将客户端设置部署到所需的设备集合。
+1. 使用[如何設定用戶端設定](/sccm/core/clients/deploy/configure-client-settings)中的資訊來設定下列用戶端設定 (可在 [雲端服務] 中找到) 區段。
+    -   **自動向 Azure Active Directory 註冊新加入 Windows 10 網域的裝置** - 設定為 [是]\ (預設值) 或 [否]。
+    -   **允許用戶端使用雲端管理閘道** - 設定為 [是] \(預設值) 或 [否]。
+2.  將用戶端設定部署至所需的裝置集合。
 
-要确认设备是否已加入 Azure AD，请在命令提示符窗口运行命令“dsregcmd.exe /status”。 如果设备已加入 Azure AD，结果中的“AzureAdjoined”字段将显示“YES”。
+若要確認裝置是否已加入 Azure AD，請在命令提示字元視窗中執行 **dsregcmd.exe /status** 命令。 如果裝置已加入 Azure AD 網域，結果中的 **AzureAdjoined** 欄位將會顯示 **YES**。
 
-## <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>从 Configuration Manager 控制台创建并运行 PowerShell 脚本
+## <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>從 Configuration Manager 主控台建立及執行 PowerShell 指令碼
 <!-- 1236459 -->
 
-在 Configuration Manager 中，你可以使用包和程序将脚本部署到客户端设备。 在此 Technical Preview 中，我们添加了可以让你执行以下操作的新功能：
+在 Configuration Manager 中，您可以使用套件和程式將指令碼部署至用戶端裝置。 在此 Technical Preview 中，我們已新增可讓您採取下列動作的新功能：
 
-- 将 PowerShell 脚本导入到 Configuration Manager
-- 从 Configuration Manager 控制台编辑脚本（仅针对未签名的脚本）
-- 将脚本标记为“已批准”或“已拒绝”，以提高安全性
-- 在 Windows 客户端 PC 和本地托管的 Windows PC 的集合上运行脚本。 不过，你不需要部署脚本，它们可以在客户端设备上近乎实时的运行。
-- 在 Configuration Manager 控制台中检查脚本返回的结果。
-
-
-### <a name="prerequisites"></a>先决条件
-
-要使用这些脚本，你必须是相应 Configuration Manager 安全角色的成员。
-
-- 导入并编写脚本 - 对于“符合性设置管理员”安全角色中的“SMS 脚本”，你的帐户必须具有“创建”权限。
-- 批准或拒绝脚本 - 对于“符合性设置管理员”安全角色中的“SMS 脚本”，你的帐户必须具有“批准”权限。
-- 运行脚本 - 对于“符合性设置管理员”安全角色中的“集合”，你的帐户必须具有“运行脚本”权限。
-
-有关 Configuration Manager 安全角色的详细信息，请参阅[基于角色的管理基础](/sccm/core/understand/fundamentals-of-role-based-administration)。
-
-默认情况下，用户不能批准他们创建的脚本。 由于这些脚本功能非常强大、用途多样，并且可以部署到多个设备，因此，我们引入了一种新的概念，用于将脚本创建者和脚本批准者之间的角色相互分开。 这样做可以额外提升安全级别，避免在没有监督的情况下运行脚本。 你可以关闭此辅助批准策略，以方便测试，尤其是在Technical Preview 中。
-
-若允许用户批准他们自己的脚本：
-
-1. 在 Configuration Manager 控制台中，单击“管理”。
-2. 在“管理”工作区中，展开“站点配置”，然后单击“站点”。
-3. 在站点列表中，选择你的站点，然后在“主页”选项卡的“站点”组中，单击“层次结构设置”。
-4. 在“层次结构设置属性”对话框的“常规”选项卡中，清除“不允许脚本创建者批准他们自己的脚本”复选框。
+- 將 PowerShell 指令碼匯入到 Configuration Manager
+- 從 Configuration Manager 主控台編輯指令碼 (僅適用於未簽署的指令碼)
+- 將指令碼標示為 [已核准] 或 [已拒絕] 以提升安全性
+- 在 Windows 用戶端電腦及內部部署受管理 Windows 電腦的集合上執行指令碼。 您不須部署指令碼，它們會以近乎即時的方式在用戶端裝置上執行。
+- 在 Configuration Manager 主控台中檢查指令碼所傳回的結果。
 
 
-### <a name="try-it-out"></a>试试看！
+### <a name="prerequisites"></a>先決條件
 
-#### <a name="import-and-edit-a-script"></a>导入和编辑脚本
+若要使用指令碼，您必須是適當 Configuration Manager 安全性角色的成員。
 
-1. 在 Configuration Manager 控制台中，单击“软件库”。
-2. 在“软件库”工作区中，单击“脚本”。
-3. 在“主页”选项卡的“创建”组中，单击“创建脚本”。
-4. 在“创建脚本”向导的“脚本”页，配置以下各项：
-    - 脚本名称 - 输入脚本的名称。 虽然可以创建具有相同名称的多个脚本，但这会让你难以在 Configuration Manager 控制台中查找所需的脚本。
-    - 脚本语言 - 目前，仅支持“PowerShell”脚本。
-    - 导入 - 将 PowerShell 脚本导入到控制台。 该脚本将在“脚本”字段中显示。
-    - 清除 - 从“脚本”字段中删除当前脚本。
-    - 脚本 - 显示当前导入的脚本。 你可以在此字段中根据需要编辑脚本。
-5. 完成向导。 新脚本将显示在“脚本”列表，且状态显示为“正等待审批”。 在客户端设备上运行此脚本之前，必须先批准它。
+- **若要匯入及撰寫指令碼** - 您的帳戶必須具備「合規性設定管理員」安全性角色中「SMS 指令碼」的「建立」權限。
+- **若要核准或拒絕指令碼** - 您的帳戶必須具備「合規性設定管理員」安全性角色中「SMS 指令碼」的「核准」權限。
+- **若要執行指令碼** - 您的帳戶必須具備「合規性設定管理員」安全性角色中「集合」的「執行指令碼」權限。
+
+如需有關 Configuration Manager 安全性角色的詳細資訊，請參閱[以角色為基礎之系統管理的基礎](/sccm/core/understand/fundamentals-of-role-based-administration)。
+
+使用者預設無法核准自己所撰寫的指令碼。 由於指令碼相當強大、用途廣泛且可部署至許多裝置，因此我們引進了能夠將指令碼撰寫者與指令碼核准者之角色分開的新概念。 這可針對執行指令碼而未受監督的情況提供一層額外的安全性。 您可以關閉這個次要核准功能以方便進行測試，特別是在 Technical Preview 版本期間。
+
+允許使用者核准自己的指令碼：
+
+1. 在 Configuration Manager 主控台中，按一下 [系統管理] 。
+2. 在 [系統管理]  工作區中，展開 [網站設定] ，然後按一下 [網站] 。
+3. 在站台清單中，選擇您的站台，然後在 [首頁] 索引標籤上的 [站台] 群組中，按一下 [階層設定]。
+4. 在 [階層設定內容] 對話方塊的 [一般] 索引標籤上，取消選取 [不允許指令碼作者核准自己的指令碼]。
 
 
-#### <a name="approve-or-deny-a-script"></a>批准或拒绝脚本
+### <a name="try-it-out"></a>試試看！
+
+#### <a name="import-and-edit-a-script"></a>匯入及編輯指令碼
+
+1. 在 Configuration Manager 主控台中，按一下 [軟體程式庫] 。
+2. 在 [軟體程式庫] 工作區中，按一下 [指令碼]。
+3. 在 [首頁] 索引標籤上的 [建立] 群組中，按一下 [建立指令碼]。
+4. 在 [建立指令碼] 精靈的 [指令碼] 頁面上，設定下列資訊：
+    - **指令碼名稱** - 輸入指令碼的名稱。 雖然可以使用相同名稱來建立多個指令碼，但這會讓您更難在 Configuration Manager 主控台中找出所需的指令碼。
+    - **指令碼語言** - 目前僅支援 **PowerShell** 指令碼。
+    - **匯入** - 將 PowerShell 指令碼匯入到主控台。 指令碼會顯示在 [指令碼] 欄位中。
+    - **清除** - 將目前的指令碼從 [指令碼] 欄位中清除。
+    - **指令碼** - 顯示目前已匯入的指令碼。 您可以視需要編輯此欄位中的指令碼。
+5. 完成精靈。 新指令碼會顯示在 [指令碼] 清單中，其狀態為 [等候核准]。 您必須先核准此指令碼，才能在用戶端裝置上執行它。
+
+
+#### <a name="approve-or-deny-a-script"></a>核准或拒絕指令碼
 
 
 
-在可以运行脚本之前，必须先通过审批。 批准脚本：
+您必須先核准指令碼，才能執行它。 核准指令碼：
 
-1. 在 Configuration Manager 控制台中，单击“软件库”。
-2. 在“软件库”工作区中，单击“脚本”。
-3. 在“脚本”列表中，选择想要批准或拒绝的脚本，然后在“主页”选项卡“脚本”组中，单击“批准/拒绝”。
-4. 在“批准或拒绝脚本”对话框中，“批准”或“拒绝”脚本，并根据需要输入有关你决定的批注。 如果拒绝脚本，它将无法在客户端设备上运行。
-5. 完成向导。 在“脚本”列表，你将看到“批准状态”列中发生的变化，具体要取决于你进行的操作。
+1. 在 Configuration Manager 主控台中，按一下 [軟體程式庫] 。
+2. 在 [軟體程式庫] 工作區中，按一下 [指令碼]。
+3. 在 [指令碼] 清單中，選擇您想要核准或拒絕的指令碼，然後在 [首頁] 索引標籤上的 [指令碼] 群組中，按一下 [核准/拒絕]。
+4. 在 [核准或拒絕指令碼] 對話方塊中，[核准] 或 [拒絕] 指令碼，並視需要輸入與您決策相關的註解。 如果您拒絕某個指令碼，它就無法在用戶端裝置上執行。
+5. 完成精靈。 在 [指令碼] 清單中，[核准狀態] 資料行會隨著您採取的動作而發生變更。
 
-#### <a name="run-a-script"></a>运行脚本
+#### <a name="run-a-script"></a>執行指令碼
 
-脚本批准后，它即可在你选择的集合上运行。
+指令碼經核准之後，就能在您選擇的集合上執行。
 
-1. 在 Configuration Manager 控制台中，单击“资产和符合性”。
-2. 在“资产和符合性”工作区中，单击“设备集合”。
-3. 在“设备集合”列表中，单击要在其中运行脚本的设备集合。
-3. 在“主页”选项卡的“所有系统”组中，单击“运行脚本”。
-4. 在“运行脚本”向导的“脚本”页，从列表中选择一个脚本。 仅显示已批准的脚本。 单击“下一步”，然后完成向导。
+1. 在 Configuration Manager 主控台中，按一下 [資產與合規性]。
+2. 在 [資產與相容性]  工作區中，按一下 [裝置集合] 。
+3. 在 [裝置集合] 清單中，按一下要用來作為指令碼執行位置的裝置集合。
+3. 在 [首頁] 索引標籤的 [所有系統] 群組中，按一下 [執行指令碼]。
+4. 在 [執行指令碼] 精靈的 [指令碼] 頁面上，從清單中選擇一個指令碼。 此清單只會顯示已核准的指令碼。 按一下 [下一步] 完成精靈。
 
-#### <a name="monitor-a-script"></a>监视脚本
+#### <a name="monitor-a-script"></a>監視指令碼
 
-在客户端设备中运行脚本后，使用此过程来监视操作成功与否。
+對用戶端裝置執行指令碼之後，請使用此程序來監視作業是否成功。
 
-1. 在 Configuration Manager 控制台中，单击“监视”。
-2. 在“监视”工作区中，单击“脚本结果”。
-3. 在“脚本结果”列表中，可以查看在客户端设备上运行的每个脚本的结果。 脚本退出代码“0”，通常表示脚本已成功运行。
+1. 在 Configuration Manager 主控台中，按一下 [監視] 。
+2. 在 [監視] 工作區中，按一下 [指令碼結果]。
+3. 在 [指令碼結果] 清單中，您可以檢視在用戶端裝置上執行之每個指令碼的結果。 指令碼結束代碼 **0** 通常表示指令碼已成功執行。
 
-## <a name="pxe-network-boot-support-for-ipv6"></a>PXE 网络启动对 IPv6 的支持
+## <a name="pxe-network-boot-support-for-ipv6"></a>適用於 IPv6 的 PXE 網路開機支援
 <!-- 1269793 -->
-你现在可以启用对 IPv6 的 PXE 网络启动支持，以启动任务序列操作系统部署。 当你使用此设置时，启用 PXE 的分发点将支持 IPv4 和 IPv6。 此选项不需要 WDS，并且存在的话，将会停止 WDS。
+您現在可以啟用適用於 IPv6 的 PXE 網路開機支援，以開始工作順序作業系統部署。 當您使用此設定時，支援 PXE 的發佈點將可同時支援 IPv4 和 IPv6。 此選項不需要 WDS，並且如果 WDS 存在，就會將其停止。
 
-#### <a name="to-enable-pxe-boot-support-for-ipv6"></a>启用 PXE 启动对 IPv6 的支持
-使用以下过程来启用 PXE 的 IPv6 支持选项。
+#### <a name="to-enable-pxe-boot-support-for-ipv6"></a>啟用適用於 IPv6 的 PXE 開機支援
+請使用下列程序來為 PXE 啟用支援 IPv6 的選項。
 
-1. 在 Configuration Manager 控制台中，转到“管理” > “概述” > “分发点”，然后单击“属性”，获得启用 PXE 的分发点。
-2. 在“PXE”选项卡上，选择“支持 IPv6”，以启用 PXE 的 IPv6 支持。
+1. 在 Configuration Manager 主控台中，移至 [系統管理] > [概觀] > [發佈點]，然後按一下支援 PXE 之發佈點的 [內容]。
+2. 在 [PXE] 索引標籤上，選取 [支援 IPv6] 來為 PXE 啟用 IPv6 支援。
 
-## <a name="manage-microsoft-surface-driver-updates"></a>管理 Microsoft Surface 驱动程序更新
+## <a name="manage-microsoft-surface-driver-updates"></a>管理 Microsoft Surface 驅動程式更新
 <!-- 1098490 -->
-你现在可以使用 Configuration Manager 来管理 Microsoft Surface 驱动程序更新。
+您現在可以使用 Configuration Manager 來管理 Microsoft Surface 驅動程式更新。
 
-### <a name="prerequisites"></a>先决条件
-所有软件更新点都必须运行 Windows Server 2016。
+### <a name="prerequisites"></a>先決條件
+所有軟體更新點都必須執行 Windows Server 2016。
 
-### <a name="try-it-out"></a>试试看！
-请尝试完成以下任务，然后从功能区的“主页”选项卡向我们发送“反馈”，让我们了解它的工作状况：
-1. 为 Microsoft Surface 驱动程序启用同步。 使用[配置分类和产品](/sccm/sum/get-started/configure-classifications-and-products)中的过程，并选择“分类”选项卡上的“包括 Microsoft Surface 驱动程序和固件更新”，以启用 Surface 驱动程序。
-2. [同步 Microsoft Surface 驱动程序](/sccm/sum/get-started/synchronize-software-updates.md)。
-3. [部署同步的 Microsoft Surface 驱动程序](/sccm/sum/deploy-use/deploy-software-updates)
+### <a name="try-it-out"></a>試試看！
+請嘗試完成下列工作，然後從功能區的 [首頁] 索引標籤中傳送 [意見反應] 給我們，讓我們了解運作情況：
+1. 啟用 Microsoft Surface 驅動程式的同步處理。 請使用[設定分類和產品](/sccm/sum/get-started/configure-classifications-and-products)中的程序，並在 [分類] 索引標籤上選取 [包含 Microsoft Surface 驅動程式與韌體更新]，來啟用 Surface 驅動程式。
+2. [同步處理 Microsoft Surface 驅動程式](/sccm/sum/get-started/synchronize-software-updates.md)。
+3. [部署已同步處理的 Microsoft Surface 驅動程式](/sccm/sum/deploy-use/deploy-software-updates)
 
-## <a name="configure-windows-update-for-business-deferral-policies"></a>配置 Windows Update for Business 延迟策略
+## <a name="configure-windows-update-for-business-deferral-policies"></a>設定 Windows Update for Business 延遲原則
 <!-- 1290890 -->
-现在，你可以针对 Windows 10 功能更新或直接由 Windows Update for Business 托管的 Windows 10 设备的质量更新，配置延迟策略。 你可以在“软件库” > “Windows 10 维护服务”下方的新“Windows Update for Business 策略”节点中管理延迟策略。
+您現在可以為 Windows Update for Business 直接管理的 Windows 10 裝置，設定 Windows 10「功能更新」或「品質更新」的延遲原則。 您可以在 [軟體程式庫] > [Windows 10 服務] 底下的新 [Windows Update for Business 原則] 節點中管理延遲原則。
 
-### <a name="prerequisites"></a>先决条件
-由 Windows Update for Business 托管的 Windows 10 设备必须具有 Internet 连接。
+### <a name="prerequisites"></a>先決條件
+Windows Update for Business 所管理的 Windows 10 裝置必須能夠連線到網際網路。
 
-#### <a name="to-create-a-windows-update-for-business-deferral-policy"></a>创建 Windows Update for Business 延迟策略
-1. 在“软件库” > “Windows 10 维护服务” > “Windows Update for Business 策略”中
-2. 在“主页”选项卡的“创建”组中，选择“创建 Windows Update for Business 策略”，以打开“创建 Windows Update for Business 策略向导”。
-3. 在“常规”页上，提供策略的名称和描述。
-4. 在“延迟策略”页上，配置是否要延迟或暂停功能更新。    
-    功能更新通常是针对 Windows 的新增功能。 在配置“分支就绪级别”设置后，你可以根据其可用性定义是否要延迟从 Microsoft 接收功能更新以及延迟时长。
-    - 分支就绪级别：设置设备将为其接收 Windows 更新的分支（Current Branch 或 Current Branch for Business）。
-    - 延迟期(天)：指定功能更新将被延迟的天数。 你可以自更新发布之日起，在 180 天内延迟接收这些功能更新。
-    - 暂停功能更新启动：选择是否要暂停设备接收功能更新，暂停时间为自暂停更新之日起的 60 天内。 在设置的最大天数过后，暂停功能将自动过期，并且设备将扫描 Windows 更新以获取适用的更新。 在此扫描之后，你可以再次暂停更新。 通过清除该复选框，可以取消暂停功能更新。   
-5. 选择是否要延迟或暂停质量更新。     
-    质量更新通常是对现有 Windows 功能的修复和改进，通常会在每个月的第一个星期二发布，虽然 Microsoft 可以在任何时候发布。 你可以根据其可用性定义是否要延迟接收质量更新，以及它的延迟时长。
-    - 延迟期(天)：指定功能更新将被延迟的天数。 你可以自更新发布之日起，在 180 天内延迟接收这些功能更新。
-    - 暂停质量更新启动：选择是否要暂停设备接收质量更新，暂停时间为自暂停更新之日起的 35 天内。 在设置的最大天数过后，暂停功能将自动过期，并且设备将扫描 Windows 更新以获取适用的更新。 在此扫描之后，你可以再次暂停更新。 通过清除该复选框，可以取消暂停质量更新。
-6. 选择“安装来自其他 Microsoft 产品的更新”，可启用使延迟设置适用于 Microsoft 更新以及 Windows 更新的组策略设置。
-7. 选择“包括 Windows 更新中的驱动程序”，可自动更新 Windows 更新中的驱动程序。 如果清除此设置，则不会从 Windows 更新下载驱动程序更新。
-8. 完成向导以创建新的延迟策略。
+#### <a name="to-create-a-windows-update-for-business-deferral-policy"></a>建立 Windows Update for Business 延遲原則
+1. 在 [軟體程式庫] > [Windows 10 服務] > [Windows Update for Business 原則] 中
+2. 在 [首頁] 索引標籤的 [建立] 群組中，選取 [建立 Windows Update for Business 原則] 以開啟「建立 Windows Update for Business 原則精靈」。
+3. 在 [一般] 頁面上，提供原則的名稱和描述。
+4. 在 [延遲原則] 頁面上，設定是要延遲還是暫停「功能更新」。    
+    「功能更新」通常是 Windows 的新功能。 在設定 [分支整備層級] 設定之後，您可以接著定義在 Microsoft 提供「功能更新」之後，是否要延遲接收「功能更新」，以及要延遲多久。
+    - **分支整備層級**：設定裝置將接收其 Windows 更新的分支 (「最新分支」或「最新商務分支」)。
+    - **延遲期 (天)**：指定「功能更新」的延遲天數。 您可以將這些「功能更新」的接收延遲 180 天 (自其發行日算起)。
+    - **暫停功能更新開始**：選取是否要讓裝置在自暫停更新日算起最長可達 60 天的期間內，暫停接收「功能更新」。 在過了天數上限之後，暫停功能將自動失效，裝置將會掃描 Windows Update 是否有適用的更新。 進行此掃描之後，您可以再次暫停更新。 您可以取消選取此核取方塊來取消暫停「功能更新」。   
+5. 選擇是要延遲還是暫停「功能更新」。     
+    「品質更新」通常是對現有 Windows 功能的修正和改進，並且通常是在每個月的第一個星期二發佈，但是可由 Microsoft 隨時發行。 您可以定義在「品質更新」可供使用之後，是否要延遲接收「品質更新」，以及要延遲多久。
+    - **延遲期 (天)**：指定「功能更新」的延遲天數。 您可以將這些「功能更新」的接收延遲 180 天 (自其發行日算起)。
+    - **暫停品質更新開始**：選取是否要讓裝置在自暫停更新日算起最長可達 35 天的期間內，暫停接收「品質更新」。 在過了天數上限之後，暫停功能將自動失效，裝置將會掃描 Windows Update 是否有適用的更新。 進行此掃描之後，您可以再次暫停更新。 您可以取消選取此核取方塊來取消暫停「品質更新」。
+6. 選取 [安裝來自其他 Microsoft 產品的更新]，以啟用讓延遲設定適用於 Microsoft Update 及 Windows Update 的群組原則設定。
+7. 選取 [包含 Windows Update 的驅動程式] 以自動從 Windows Update 更新驅動程式。 如果您取消選取此設定，就不會從 Windows Update 下載驅動程式更新。
+8. 完成精靈步驟以建立新的延遲原則。
 
-#### <a name="to-deploy-a-windows-update-for-business-deferral-policy"></a>部署 Windows Update for Business 延迟策略
-1. 在“软件库” > “Windows 10 维护服务” > “Windows Update for Business 策略”中
-2. 在“主页”选项卡的“部署”组中，选择“部署 Windows Update for Business 策略”。
-3. 配置下列设置：
-    - 要部署的配置策略：选择要部署的 Windows Update for Business 策略。
-    - 集合：单击“浏览”，可选择要在其中部署策略的集合。
-    - 在支持时修正非符合性规则：选择该选项，可自动修正 Windows Management Instrumentation (WMI)、注册表、脚本和 Configuration Manager 所注册移动设备的所有设置的任何非符合性规则。
-    - 允许维护时段外的修正：如果已为你向其部署策略的集合配置了维护时段，启用此选项可以让符合性设置在维护时段外修正值。 有关维护时段的详细信息，请参阅[如何使用维护时段](/sccm/core/clients/manage/collections/use-maintenance-windows)。
-    - 生成警报：配置一个警报，在指定日期和时间之前配置基线符合性小于指定百分比时，生成一个警报。 你也可以指定是否希望将警报发送到 System Center Operations Manager。
-    - 随机延迟(小时)：指定延迟时段，以免网络设备注册服务的处理负荷过重。 默认值为 64 小时。
-    - 计划：指定在客户端计算机上对部署的配置文件进行评估所依据的符合性评估计划。 该计划可以是简单计划或自定义计划。 当用户登录时，客户端计算机将评估配置文件。
-4.  完成向导以部署配置文件。
+#### <a name="to-deploy-a-windows-update-for-business-deferral-policy"></a>部署 Windows Update for Business 延遲原則
+1. 在 [軟體程式庫] > [Windows 10 服務] > [Windows Update for Business 原則] 中
+2. 在 [首頁] 索引標籤的 [部署] 群組中，選取 [部署 Windows Update for Business 原則]。
+3. 進行以下設定：
+    - **要部署的設定原則**：選取您要部署的 Windows Update for Business 原則。
+    - **集合**：按一下 [瀏覽] 以選取您要部署原則的集合。
+    - **支援時補救不符合規範的規則**：選取此選項即可針對 Windows Management Instrumentation (WMI)、登錄、指令碼以及 Configuration Manager 所註冊行動裝置的所有設定，自動補救所有不符合規範的原則。
+    - **允許在維護期間以外補救**：如果已針對您部署原則的集合設定維護期間，啟用此選項即可讓合規性設定在維護期間之外補救值。 如需維護期間的詳細資訊，請參閱[如何在 Configuration Manager 中使用維護期間](/sccm/core/clients/manage/collections/use-maintenance-windows)。
+    - **產生警示**：設定一個警示，以在設定基準合規性於指定的日期和時間低於指定百分比時產生警示。 您也可以指定是否要將警示傳送至 System Center Operations Manager。
+    - **隨機延遲 (小時)**：指定一個延遲時間範圍，以避免「網路裝置註冊服務」的處理時間過長。 預設值是 64 小時。
+    - **排程**：指定在用戶端電腦上評估已部署之設定檔時所依據的合規性評估排程。 此排程可以是簡易或自訂排程。 當使用者登入時，用戶端電腦會評估此設定檔。
+4.  完成精靈步驟以部署設定檔。
 
 
 
-## <a name="support-for-entrust-certification-authorities"></a>支持 Entrust 证书颁发机构
+## <a name="support-for-entrust-certification-authorities"></a>針對 Entrust 憑證授權單位的支援
 <!-- 1350740 -->
-现在，Configuration Manager 可支持 Entrust 证书颁发机构；这使得 PFX 证书可传送到在 Microsoft Intune 中注册的设备。
+Configuration Manager 現在支援 Entrust 憑證授權單位；這使 PFX 憑證得以傳送到已在 Microsoft Intune 中註冊的裝置。
 
-在 Configuration Manager 中添加“证书注册点”角色时，你可以将 Entrust 配置为证书颁发机构。 在添加颁发 PFX 证书的新证书配置文件时，你可以选择 Microsoft 或 Entrust 证书颁发机构。
+當您在 Configuration Manager 中新增「憑證登錄點」角色時，便可以將 Entrust 設定成憑證授權單位。 當新增發行 PFX 憑證的憑證設定檔時，您可以選取 Microsoft 或 Entrust 憑證授權單位。
 
-已知问题：在 Technical Preview 1706 中，没有为 Microsoft 证书颁发机构颁发 PFX 证书。 这并不会影响导入的 PFX 证书或 SCEP 配置文件。
+**已知問題**：在 1706 Technical Preview 中，不會為 Microsoft 憑證授權單位發行 PFX 憑證。 這不會影響匯入的 PFX 憑證或 SCEP 設定檔。
 
 
-## <a name="cisco-ipsec-support-for-macos-vpn-profiles"></a>macOS VPN 配置文件的 Cisco (IPsec) 支持
+## <a name="cisco-ipsec-support-for-macos-vpn-profiles"></a>針對 macOS VPN 設定檔的 Cisco (IPsec) 支援
 <!-- 1321367 -->
 
-你可以使用 Cisco (IPsec) 作为连接类型创建 macOS VPN 配置文件。 有关详细信息，请参阅[创建 VPN 配置文件](https://docs.microsoft.com/en-us/sccm/mdm/deploy-use/create-vpn-profiles#create-vpn-profiles)。
+您可以建立以 Cisco (IPsec) 作為連線類型的 macOS VPN 設定檔。 如需詳細資訊，請參閱[建立 VPN 設定檔](https://docs.microsoft.com/en-us/sccm/mdm/deploy-use/create-vpn-profiles#create-vpn-profiles)。
 
 
-## <a name="new-windows-configuration-item-settings"></a>新 Windows 配置项设置
+## <a name="new-windows-configuration-item-settings"></a>新的 Windows 組態項目設定
 <!-- 1354715 -->
 
-在此版本中，我们添加了以下你可以在 Windows 配置项中使用的新设置：
+在此版本中，我們新增了下列可供您在 Windows 設定項目中使用的新設定：
 
-### <a name="password"></a>Password
+### <a name="password"></a>密碼
 
-- **设备加密**
+- **裝置加密**
 
-### <a name="device"></a>设备
+### <a name="device"></a>裝置
 
-- **修改区域设置(仅限桌面设备)**
-- **电源和睡眠设置修改**
-- **语言设置修改**
-- **系统时间修改**
-- **设备名称修改**
+- **修改區域設定 (僅限桌面)**
+- **修改電源及睡眠設定**
+- **修改語言設定**
+- **修改系統時間**
+- **修改裝置名稱**
 
-### <a name="store"></a>应用商店
+### <a name="store"></a>市集
 
-- **自动更新来自应用商店的应用**
-- **仅使用专用应用商店**
-- **启动来自应用商店的应用**
+- **自動更新來自市集的應用程式**
+- **僅使用私人市集**
+- **啟動來自市集的應用程式**
 
 ### <a name="microsoft-edge"></a>Microsoft Edge
 
-- **阻止关于标志的访问**
-- **SmartScreen 提示重写**
-- **文件的 SmartScreen 提示替代**
-- **WebRTC localhost IP 地址**
-- **默认搜索引擎**
+- **禁止存取 about: 旗標**
+- **防止 SmartScreen 提示覆寫**
+- **對檔案防止 SmartScreen 提示覆寫**
+- **WebRTC localhost IP 位址**
+- **預設搜尋引擎**
 - **OpenSearch XML URL**
-- **主页(仅限桌面)**
+- **首頁 (僅限桌面)**
 
-有关符合性设置的详细信息，请参阅[确保设备符合性](/sccm/compliance/understand/ensure-device-compliance)。
+如需有關合規性設定的詳細資訊，請參閱[確定裝置合規性](/sccm/compliance/understand/ensure-device-compliance)。
 
 
-## <a name="new-device-compliance-policy-rules"></a>新设备符合性策略规则
+## <a name="new-device-compliance-policy-rules"></a>新的裝置合規性政策規則
 
-* **所需的密码类型**。 指定用户是否必须创建字母数字密码或数字密码。 对于字母数字密码，你还可以指定密码必须包含的字符集的最小个数。 有以下四个字符集：小写字母、大写字母、符号和数字。
+* **必要的密碼類型**。 指定使用者必須建立英數密碼還是數值密碼。 如果是英數密碼，您還需指定密碼必須包含的字元集數目下限。 字元集共有四種：小寫字母、大寫字母、符號和數字。
 
-    **在以下设备上受支持：**
-    * Windows Phone 8+
+    **支援於：**
+    * Windows Phone 8 或更新版本
     * Windows 8.1+
-    * iOS 6+
+    * iOS 6 或更新版本
 <br></br>
-* **在设备上阻止进行 USB 调试**。 无需配置此设置，因为已在 Android for Work 的设备上禁用 USB 调试。
+* **封鎖裝置上的 USB 偵錯**。 您不需要進行此設定，因為 Android for Work 裝置上已停用 USB 偵錯。
 
-    **在以下设备上受支持：**
+    **支援於：**
     * Android 4.0+
-    * Samsung KNOX 标准版 4.0+
+    * Samsung KNOX Standard 4.0 或更新版本
 <br></br>
-* **阻止来自未知源的应用**。 要求设备阻止安装来自未知源的应用。 无需配置此设置，因为 Android for Work 设备始终限制来自未知源的安装。
+* **封鎖來自不明來源的應用程式**。 要求裝置必須防止來自不明來源的應用程式安裝。 您不需要進行此設定，因為 Android for Work 裝置一律會限制來自不明來源的安裝。
 
-    **在以下设备上受支持：**
+    **支援於：**
     * Android 4.0+
-    * Samsung KNOX 标准版 4.0+
+    * Samsung KNOX Standard 4.0 或更新版本
 <br></br>
-* **要求对应用进行威胁扫描**。 此设置指定在设备上启用的“验证”应用功能。
+* **需要對應用程式進行威脅掃描**。 此設定會指定在裝置上啟用 [驗證應用程式] 功能。
 
-    **在以下设备上受支持：**
+    **支援於：**
     * Android 4.2 到 4.4
-    * Samsung KNOX 标准版 4.0+
+    * Samsung KNOX Standard 4.0 或更新版本
 
-请参阅[创建和部署设备符合性策略](https://docs.microsoft.com/sccm/mdm/deploy-use/create-compliance-policy)，尝试新的设备符合性规则。
+若要試用新的裝置合規性規則，請參閱[建立和部署裝置合規性政策](https://docs.microsoft.com/sccm/mdm/deploy-use/create-compliance-policy)。
 
-## <a name="new-mobile-application-management-policy-settings"></a>新移动应用程序管理策略设置
-从此版本开始，你可以使用三个新的移动应用程序管理 (MAM) 策略设置：
+## <a name="new-mobile-application-management-policy-settings"></a>新的行動應用程式管理原則設定
+從此版本開始，您可以使用三個新的行動應用程式管理 (MAM) 原則設定：
 
-- 阻止屏幕捕获(仅限 Android 设备)：指定在使用该应用时，阻止设备的屏幕捕获功能。
+- **封鎖螢幕擷取 (僅限 Android 裝置)：**指定在使用此應用程式時，封鎖裝置的螢幕擷取功能。
 
-- 禁用联系人同步：阻止应用将数据保存到设备上的本机“联系人”应用。
+- **停用連絡人同步：**防止應用程式將資料儲存至裝置上的原生「連絡人」應用程式。
 
-- 禁用打印：阻止应用打印工作或学校数据。
+- **停用列印：**防止應用程式列印公司或學校資料。
 
-请参阅[使用 Configuration Manager 中的应用保护策略来保护应用](https://docs.microsoft.com/sccm/mdm/deploy-use/protect-apps-using-mam-policies)，尝试新的应用保护策略设置。
+若要試用新的應用程式保護原則設定，請參閱[使用 Configuration Manager 中的應用程式保護原則來保護應用程式](https://docs.microsoft.com/sccm/mdm/deploy-use/protect-apps-using-mam-policies)。
 
-## <a name="android-and-ios-enrollment-restrictions"></a>Android 和 iOS 注册限制
+## <a name="android-and-ios-enrollment-restrictions"></a>Android 和 iOS 的註冊限制
 <!-- 1290826 -->
-从此版本开始，管理员现在可以指定用户不能在其混合环境中注册个人 Android 或 iOS 设备。 这可让你将注册的设备限制为预先声明的公司所有设备，或仅限注册了“设备注册计划”的 iOS 设备。
+從此版本開始，系統管理員現在可以指定使用者不能在其混合式環境中註冊個人的 Android 或 iOS 裝置。 這可讓您將註冊的裝置僅限於已預先宣告的公司擁有裝置，或是透過「裝置註冊計劃」註冊的 iOS 裝置。
 
-### <a name="try-it-out"></a>试试看
-1. 在“管理”工作区中的 Configuration Manager 控制台中，转到“云服务” > “Microsoft Intune 订阅”。
-2. 在“主页”选项卡的“订阅”组中，选择“配置平台”，然后选择“Android”或“iOS”。
-3. 选择“阻止个人所有的设备”。
+### <a name="try-it-out"></a>試試看
+1. 在 Configuration Manager 主控台的 [系統管理] 工作區中，移至 [雲端服務] > [Microsoft Intune 訂閱]。
+2. 在 [首頁] 索引標籤的 [訂閱] 群組中，選擇 [設定平台]，然後選取 [Android] 或 [iOS]。
+3. 選取 [只允許在 Intune 中註冊預先宣告的裝置]。
 
-## <a name="android-for-work-application-management-policy-for-copy-paste"></a>针对复制粘贴的 Android for Work 应用程序管理策略
-针对“允许工作和个人配置文件间的数据共享”选项，我们已更新了 Android for Work 配置项的设置说明。
+## <a name="android-for-work-application-management-policy-for-copy-paste"></a>Android for Work 的應用程式複製貼上管理原則
+我們已更新 Android for Work 之 [允許工作和個人設定檔之間的資料共用] 設定項目的設定描述。
 
-|在 Technical Preview 1706 之前 | 新选项名称 | 行为|
+|在 1706 Technical Preview 之前 | 新的選項名稱 | 行為|
 |-|-|-|
-|阻止任何跨边界的共享| 默认共享限制| 工作到个人：默认（期望在所有版本上阻止） <br>个人到工作：默认（在 6.x+ 上允许，在 5.x 上阻止）|
-|无限制|   个人配置文件中的应用可以处理来自工作配置文件的共享请求| 工作到个人：允许  <br>个人到工作：允许|
-|工作配置文件中的应用可以处理来自个人配置文件的共享请求 |工作配置文件中的应用可以处理来自个人配置文件的共享请求 |工作到个人：默认<br>个人到工作：允许<br>（仅在个人到工作阻止的 5.x 上可用）|
+|禁止跨邊界共用| 預設共用限制| 公司到個人：預設 (預期在所有版本上都封鎖) <br>個人到公司：預設 (在 6.x 以上的版本上允許，在 5.x 版本上封鎖)|
+|沒有限制|   個人設定檔中的應用程式可以處理來自工作設定檔的共用要求| 公司到個人：允許  <br>個人到公司：允許|
+|公司設定檔中的應用程式，可以處理來自個人設定檔的共用要求 |公司設定檔中的應用程式，可以處理來自個人設定檔的共用要求 |公司到個人：預設<br>個人到公司：允許<br>(僅適用於封鎖個人到公司的 5.x 版環境)|
 
-这些选项都不直接阻止复制粘贴行为。 我们对 1704 版本中的服务和公司门户应用添加了自定义设置，可以对其进行配置以防止复制粘贴。 这可以通过自定义 URI 来设置。
+這些選項全都不會直接防止複製貼上行為。 我們已在 1704 中將一個自訂設定新增到服務與「公司入口網站」應用程式，可用來防止複製貼上。 您可以透過自訂 URI 來進行此設定。
 
--   OMA-URI:  ./Vendor/MSFT/WorkProfile/DisallowCrossProfileCopyPaste
--   值类型：布尔
+-   OMA-URI：./Vendor/MSFT/WorkProfile/DisallowCrossProfileCopyPaste
+-   值類型：布林值
 
-设置 DisallowCrossProfileCopyPaste，以确实阻止 Android for Work 个人和工作配置文件之间的复制粘贴行为。
+將 DisallowCrossProfileCopyPaste 設定為 true 可防止 Android for Work 個人與工作設定檔之間的複製貼上行為。
 
-### <a name="try-it-out"></a>试试看
-1. 在 Configuration Manager 控制台中，选择“资产和符合性” > “概述” > “符合性设置” > “配置项”。
-2. 选择“创建”以创建一个新的配置项，并指定“名称”和“Android for Work”。
-3. 在设备设置组中进行配置，选择“工作配置文件”，然后选择“下一步”。
-4. 选择“允许在工作和个人配置文件之间共享数据”，然后完成向导。
+### <a name="try-it-out"></a>試試看
+1. 在 Configuration Manager 主控台中，選取 [資產與合規性] > [概觀] > [合規性設定] > [設定項目]。
+2. 選擇 [建立] 以建立新的設定項目，然後指定 [名稱] 和 [Android for Work]。
+3. 在要設定的裝置設定群組中，選取 [工作設定檔]，然後選擇 [下一步]。
+4. 選取 [允許工作與個人設定檔之間的資料共用] 的值，然後完成精靈步驟。
 
-## <a name="device-health-attestation-assessment-for-compliance-policies-for-conditional-access"></a>用于条件访问的符合性策略的“设备运行状况证明”评估
+## <a name="device-health-attestation-assessment-for-compliance-policies-for-conditional-access"></a>條件式存取之合規性政策的裝置健康情況證明評估
 <!-- 1097546 -->
-从此版本开始，你可以将“设备运行状况证明”状态用作对公司资源进行条件性访问的符合性策略规则。
+從此版本開始，您可以使用「裝置健康情況證明」狀態作為對公司資源進行條件式存取時的合規性政策規則。
 
-### <a name="try-it-out"></a>试试看
-选择一个“设备运行状况证明”规则作为符合性策略评估的一部分。
-
+### <a name="try-it-out"></a>試試看
+選取某個「裝置健康情況證明」規則作為合規性政策評估的一部分。

@@ -1,66 +1,59 @@
 ---
-title: "规划迁移 | Microsoft Docs"
-description: "将数据迁移到 System Center Configuration Manager 目标层次结构之前，了解有关站点和层次结构的信息。"
+title: "規劃移轉 | Microsoft Docs"
+description: "先了解站台和階層，再將資料移轉至 System Center Configuration Manager 目的地階層。"
 ms.custom: na
 ms.date: 1/12/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b2bf493e-1e10-496f-a139-2646522703ed
-caps.latest.revision: 7
-caps.handback.revision: 0
+caps.latest.revision: "7"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: a2405bc04889bd6ae46069fe447228149bbaf468
 ms.openlocfilehash: fffef1e95e1dfa03971f140a6e5a7fff9bfe5e27
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="plan-for-migration-to-system-center-configuration-manager"></a>规划向 System Center Configuration Manager 的迁移
+# <a name="plan-for-migration-to-system-center-configuration-manager"></a>規劃移轉至 System Center Configuration Manager
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用於：System Center Configuration Manager (最新分支)*
 
-在将数据迁移到 System Center Configuration Manager 目标层次结构之前，请确保熟知 Configuration Manager 中的站点和层次结构。 有关站点和层次结构的详细信息，请参阅 [System Center Configuration Manager 的基础知识](../../core/understand/fundamentals.md)。  
+將資料移轉至 System Center Configuration Manager 目的地階層之前，請確定您熟悉 Configuration Manager 中的站台和階層。 如需站台和階層的詳細資訊，請參閱 [System Center Configuration Manager 的基礎](../../core/understand/fundamentals.md)。  
 
- 必须先安装将成为目标层次结构的 System Center Configuration Manager 层次结构，然后才能从支持的源层次结构中迁移数据。  
+ 您必須將 System Center Configuration Manager 階層安裝為目的地階層，才能從支援的來源階層移轉資料。  
 
- 安装目标层次结构之后，设置要在目标层次结构中使用的管理特性和功能，然后再开始迁移数据。  
+ 在您安裝目的地階層後，可先設定想要在目的地階層中使用的管理特性和功能，然後再開始移轉資料。  
 
- 此外，可能还必须规划源层次结构与目标层次结构之间的重叠。 例如，可能需要设置源层次结构以将相同网络位置或边界用作目标层次结构，随后将新客户端安装到目标层次结构并使用自动站点分配。 在这种情况下，因为新安装的 Configuration Manager 客户端可以从任一层次结构中选择要加入的站点，所以，该客户端可能会错误地分配到源层次结构。 为此，应计划将目标层次结构中的每个新客户端分配到该层次结构中的特定站点，而不是使用自动站点分配。  
+ 此外，您可能必須規劃來源階層和目的地階層之間的重疊。 例如，您可以將來源階層設定為使用相同網路位置或界限作為目的地階層，然後在目的地階層安裝新用戶端，並使用自動站台指派。 在此案例中，由於全新安裝的 Configuration Manager 用戶端可以從任一階層選取站台加入，因此可能會不正確地將用戶端指派到您的來源階層。 因此，請規劃將目的地階層中的每個新用戶端指派給該階層的特定站台，而不使用自動站台指派。  
 
- 有关站点分配的详细信息，请参阅 [System Center Configuration Manager 不同版本之间的互操作性](../../core/plan-design/hierarchy/interoperability-between-different-versions.md)中的[客户端站点分配注意事项](../../core/plan-design/hierarchy/interoperability-between-different-versions.md#BKMK_SupConfigSiteAssignment)。  
+ 如需站台指派的詳細資訊，請參閱 [System Center Configuration Manager 不同版本之間的互通性](../../core/plan-design/hierarchy/interoperability-between-different-versions.md)中的[用戶端站台指派考量](../../core/plan-design/hierarchy/interoperability-between-different-versions.md#BKMK_SupConfigSiteAssignment)。  
 
-## <a name="plan-topics"></a>规划主题  
- 使用下列主题来帮助你规划如何将支持的源层次结构迁移到 System Center Configuration Manager 目标层次结构：
+## <a name="plan-topics"></a>規劃主題  
+ 使用下列主題有助於規劃如何將支援的來源階層移轉至 System Center Configuration Manager 目的地階層：
 
--   [System Center Configuration Manager 中迁移的先决条件](../../core/migration/prerequisites-for-migration.md)  
+-   [在 System Center Configuration Manager 中進行移轉的必要條件](../../core/migration/prerequisites-for-migration.md)  
 
--   [System Center Configuration Manager 中针对迁移规划的管理员清单](../../core/migration/administrator-checklists-for-migration-planning.md)  
+-   [System Center Configuration Manager 中的系統管理員移轉規劃檢查清單](../../core/migration/administrator-checklists-for-migration-planning.md)  
 
--   [确定是否将数据迁移到 System Center Configuration Manager](../../core/migration/determine-whether-to-migrate-data.md)  
+-   [判斷是否要將資料移轉至 System Center Configuration Manager](../../core/migration/determine-whether-to-migrate-data.md)  
 
--   [在 System Center Configuration Manager 中规划源层次结构策略](../../core/migration/planning-a-source-hierarchy-strategy.md)  
+-   [規劃 System Center Configuration Manager 中的來源階層策略](../../core/migration/planning-a-source-hierarchy-strategy.md)  
 
--   [System Center Configuration Manager 中针对迁移规划的管理员清单](../../core/migration/administrator-checklists-for-migration-planning.md)  
+-   [System Center Configuration Manager 中的系統管理員移轉規劃檢查清單](../../core/migration/administrator-checklists-for-migration-planning.md)  
 
--   [在 System Center Configuration Manager 中规划客户端迁移策略](../../core/migration/planning-a-client-migration-strategy.md)  
+-   [規劃 System Center Configuration Manager 中的用戶端移轉策略](../../core/migration/planning-a-client-migration-strategy.md)  
 
--   [在 System Center Configuration Manager 中规划内容部署迁移策略](../../core/migration/planning-a-content-deployment-migration-strategy.md)  
+-   [規劃 System Center Configuration Manager 中的內容部署移轉策略](../../core/migration/planning-a-content-deployment-migration-strategy.md)  
 
--   [规划将 Configuration Manager 对象迁移到 System Center Configuration Manager](../../core/migration/planning-for-the-migration-of-objects.md)  
+-   [規劃將 Configuration Manager 物件移轉至 System Center Configuration Manager](../../core/migration/planning-for-the-migration-of-objects.md)  
 
--   [在 System Center Configuration Manager 中规划监视迁移活动](../../core/migration/planning-to-monitor-migration-activity.md)  
+-   [規劃在 System Center Configuration Manager 中監視移轉活動](../../core/migration/planning-to-monitor-migration-activity.md)  
 
--   [规划在 System Center Configuration Manager 中完成迁移](../../core/migration/planning-to-complete-migration.md)  
-
-
-
-<!--HONumber=Jan17_HO2-->
-
-
+-   [規劃在 System Center Configuration Manager 中完成移轉](../../core/migration/planning-to-complete-migration.md)  

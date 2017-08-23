@@ -1,67 +1,60 @@
 ---
-title: "导入配置数据 | Microsoft Docs"
-description: "如果配置数据为 cabinet 文件格式，并且符合受支持的服务建模语言架构，则将它导入。"
+title: "匯入設定資料 | Microsoft Docs"
+description: "如果設定資料包含在封包檔格式中，並遵循支援的服務模組化語言結構描述，即可匯入設定資料。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 309b9a09-a611-4ba2-90ab-dde51582cf87
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: f9e939d871e95a3248d8e5d96cb73063a81fd5cf
 ms.openlocfilehash: 60d0642618a3074fc50a848f1189f4d6559ca916
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="import-configuration-data-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 导入配置数据
+# <a name="import-configuration-data-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 匯入設定資料
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用於：System Center Configuration Manager (最新分支)*
 
-除了在 System Center Configuration Manager 控制台中创建配置基线和配置项目之外，还可以导入配置数据（如果它采用 cabinet (.cab) 文件格式并符合受支持的服务建模语言 (SML) 架构）。 可从以下位置导入配置数据：  
+在 System Center Configuration Manager 主控台中，您除了可以建立設定基準和設定項目，還可以匯入設定資料 (當設定資料包含在封包檔格式 (.cab) 中，並遵循支援的 SML 結構描述的情況下)。 您可以透過下列項目，匯入設定資料：  
 
--   从 Microsoft 或从其他软件供应商站点下载的最佳做法配置数据（配置包）。  
+-   從 Microsoft 或其他軟體廠商網站下載組態資料 (組態套件) 最佳做法。  
 
--   从 System Center 2012 Configuration Manager 及更高版本导出的配置数据。  
+-   已從 System Center 2012 Configuration Manager 和更新版本匯出的設定資料。  
 
--   在外部创建且符合 SML 架构的配置数据。  
+-   外部撰寫且符合 SML 結構描述的設定資料。  
 
- 有关可帮助你管理 System Center 2012 Configuration Manager 站点服务器角色的符合性的示例配置包，请参阅 [System Center 2012 Configuration Manager 配置包](http://www.microsoft.com/en-us/download/details.aspx?id=30710&WT.mc_id=rss_alldownloads_all)。  
+ 如需可協助您管理 System Center 2012 Configuration Manager 站台伺服器角色的相容性組態組件範例，請參閱 [System Center 2012 Configuration Manager 組態套件](http://www.microsoft.com/en-us/download/details.aspx?id=30710&WT.mc_id=rss_alldownloads_all)。  
 
-当导入配置基线时，配置基线中引用的部分或全部配置项目也可能包含在 CAB 文件中。 在导入过程中，Configuration Manager 会验证配置基线中引用的所有配置项目是否也包括在 Cabinet 文件中或在 Configuration Manager 站点中已存在。 如果尝试导入的配置基线引用了 Configuration Manager 无法找到的配置数据，导入过程会失败。  
+當您匯入組態基準時，封包檔可能也會包含組態基準中所參考的部分或全部組態項目。 在匯入過程中，Configuration Manager 會驗證設定基準中參考的所有設定項目是同時包含在封包檔中，還是早就在 Configuration Manager 站台中。 如果您嘗試匯入的設定基準參考了 Configuration Manager 找不到的設定資料，則匯入程序會失敗。  
 
-导入过程可能失败的其他情况包括：  
+匯入程序可能失敗的其他情況包括：  
 
--   配置数据引用了 Configuration Manager 在其数据库中或在 CAB 文件自身中找不到的配置数据。  
+-   設定資料參考了 Configuration Manager 找不到的設定資料；這些資料可能在其資料庫或封包檔案當中。  
 
--   Configuration Manager 数据库中已存在一些具有相同名称和配置数据版本，但具有不同内容版本的配置数据。  
+-   設定資料已在 Configuration Manager 資料庫中，名稱及設定資料版本皆相同，但內容版本不同。  
 
--   Configuration Manager 数据库中已存在具有相同内容版本的配置数据，但哈希计算将它识别为不同内容版本。  
+-   設定資料已在 Configuration Manager 資料庫中，內容版本相同，但雜湊計算將其識別為不同。  
 
--   在 Configuration Manager 数据库中已存在或最近已删除具有相同名称的配置数据的较新版本。  
+-   已有同名的較新版本設定資料，或最近已從 Configuration Manager 資料庫刪除。  
 
--   在多站点 Configuration Manager 层次结构中，配置数据最初是从父站点中导入的。 必须从同一站点而非一个子站点更新配置数据。  
+-   在多站台的 Configuration Manager 階層中，設定資料原本是從父站台匯入。 它必須從相同的站台更新，不能從子站台更新。  
 
-### <a name="import-configuration-data"></a>导入配置数据  
+### <a name="import-configuration-data"></a>匯入設定資料  
 
-1.  在 Configuration Manager 控制台中，单击“资产和符合性” > “配置项目”或“配置基线”
-2.  在“主页”选项卡上的“创建”组中，单击“导入配置数据”。  
-3.  在“导入配置数据向导”  的“选择文件” 页上，单击“添加” ，然后在“打开”  对话框中，选择要导入的 .cab 文件。  
-4.  如果希望可以在 Configuration Manager 控制台中编辑导入的配置数据，请选中“**创建已导入配置基线和配置项目的新副本”**复选框。  
-5.  在“摘要”页上，查看将执行的操作，然后完成向导。  
+1.  在 Configuration Manager 主控台中，按一下 [資產與相容性] > [設定項目] 或 [設定基準]。
+2.  在 [常用] 索引標籤中，按一下 [建立] 群組中的 [匯入設定資料]。  
+3.  在 [匯入組態資料精靈]  的 [選取檔案] 頁面中，按一下 [新增] ，然後在 [開啟]  對話方塊中，選取要匯入的 .cab 檔案。  
+4.  如果想要在 Configuration Manager 主控台中編輯匯入的設定資料，請選取 [建立已匯入的設定基準和設定項目的新複本] 核取方塊。  
+5.  在 [摘要] 頁面上，檢閱將採取的動作，然後完成精靈。  
 
-导入的配置数据会显示在“资产和符合性”工作区的“符合性设置”节点中。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-
+匯入的設定資料會顯示在 [資產與相容性] 工作區的 [相容性設定] 節點中。  

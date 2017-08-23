@@ -1,90 +1,86 @@
 ---
-title: "定义边界 | Microsoft Docs"
-description: "了解如何在 Intranet 上定义可包含你要管理的设备的网络位置。"
+title: "定義界限 | Microsoft Docs"
+description: "了解如何在您的內部網路上定義網路位置，其中可包含您要管理的裝置。"
 ms.custom: na
 ms.date: 3/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 4a9dc4d9-e114-42ec-ae2b-73bee14ab04f
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
 ms.openlocfilehash: bed70809008fde5e2b0215f4dce049402edf83ba
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="define-network-locations-as-boundaries-for-system-center-configuration-manager"></a>将网络位置定义为 System Center Configuration Manager 的边界
+# <a name="define-network-locations-as-boundaries-for-system-center-configuration-manager"></a>針對 System Center Configuration Manager 將網路位置定義為界限
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用於：System Center Configuration Manager (最新分支)*
 
-Configuration Manager 边界是网络上的位置，其中包含你要管理的设备。 设备所在的边界相当于 Active Directory 站点，或由安装在设备上的 Configuration Manager 客户端指定的网络 IP 地址。
- - 你可以手动创建单个边界。 但是，Configuration Manager 不支持以边界的形式直接输入超网。 作为替代，请使用 IP 地址范围边界类型。
- - 可以将 [Active Directory Forest Discovery](../../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutForest) 方法配置成为每个 IP 子网和其发现的 Active Directory 站点自动发现并创建边界。 当 Active Directory 林发现确定分配给 Active Directory 站点的超网时，Configuration Manager 将超网转换为 IP 地址范围边界。  
+Configuration Manager 界限是您網路上的位置，該位置包含您要管理的裝置。 裝置所在的界限相當於 Active Directory 站台，或是安裝於裝置上的 Configuratoin Manager 用戶端所識別的網路 IP 位址。
+ - 您可以手動建立個別界限。 不過，Configuration Manager 不支援使用 Supernet 的直接入口作為界限。 不過，您可以使用 IP 位址範圍界限類型。
+ - 您可以設定 [Active Directory 樹系探索](../../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutForest)方法以自動探索，並針對它探索到的各個 IP 子網路和 Active Directory 站台建立界限。 當 Active Directory 樹系探索識別指派給 Active Directory 網站的 Supernet 時，Configuration Manager 會將 Supernet 轉換為 IP 位址範圍界限。  
 
-设备使用 Configuration Manager 管理员感知不到的 IP 地址的情况并不罕见。 当不确定设备的网络位置时，请通过在设备上使用 **IPCONFIG** 命令确认设备所报告的自身位置。  
+裝置使用 Configuration Manager 系統管理員未注意到的 IP 位置並不是罕見狀況。 對裝置的網路位置存疑時，請對該裝置使用 **IPCONFIG** 命令，確認裝置回報為位置的內容。  
 
-当你创建边界时，边界会自动获得一个名称，该名称基于边界的类型和作用域。 你无法修改此名称。 作为替代方式，你可以指定一个描述以帮助在 Configuration Manager 控制台中标识该边界。  
+當您建立界限時，界限會自動收到根據界限類型和範圍所定的名稱。 您無法修改這個名稱。 相反地，您可以指定描述以協助在 Configuration Manager 主控台中識別界限。  
 
-每个边界都可供层次结构中的每个站点使用。 创建边界之后，你可以修改其属性以执行以下操作：  
--   将边界添加到一个或多个边界组。  
--   更改边界的类型或作用域。  
--   查看边界“站点系统”  选项卡以了解哪些站点系统服务器（分发点、状态迁移点和管理点）与边界相关联。  
+每個界限都可供您階層中的每個站台使用。 建立界限後，您可以修改其內容以執行下列動作：  
+-   將界限新增至一個或多個界限群組。  
+-   變更界限的類型或範圍。  
+-   檢視界限 [站台系統]  索引標籤，查看與界限相關聯的站台系統伺服器 (發佈點、狀態移轉點和管理點)。  
 
-## <a name="to-create-a-boundary"></a>创建边界  
+## <a name="to-create-a-boundary"></a>建立界限  
 
-1.  在 Configuration Manager 控制台中，单击“管理” > “层次结构尊重” > “边界”  
+1.  在 Configuration Manager 主控台中按一下 [系統管理] > [階層設定] > [界限]。  
 
-2.  在“主页”  选项卡上的“创建”  组中，单击“创建边界” **Boundary.**。  
+2.  在 [首頁]  索引標籤的 [建立]  群組中，按一下 [建立界限]  **Boundary.**。  
 
-3.  在“创建边界”对话框的“常规”  选项卡上，你可以指定“描述”  以便通过友好名称或引用来标识边界。  
+3.  在 [建立界限] 對話方塊的 [一般]  索引標籤上，您可以指定 [描述]  ，以易記名稱或參照來識別界限。  
 
-4.  为此边界选择“类型”  ：  
+4.  選取此界限的 [類型]  ：  
 
-    -   如果选择“IP 子网” ，你必须为此边界指定“子网 ID”  。  
+    -   如果您選取 [IP 子網路] ，則必須指定此界限的 [子網路識別碼]  。  
         > [!TIP]  
-        >  你可以指定“网络”  和“子网掩码”  以便自动指定“子网 ID”  。 在保存边界时，只会保存子网 ID 值。  
+        >  您可以指定 [網路]  和 [子網路遮罩]  ，以自動指定 [子網路識別碼]  。 儲存界限時，只會儲存 [子網路識別碼] 值。  
 
-    -   如果选择“Active Directory 站点” ，则必须指定或“浏览”  到站点服务器的本地林中的 Active Directory 站点。  
+    -   如果您選取 [Active Directory 站台] ，則必須指定或 [瀏覽]  至本機站台伺服器樹系中的 Active Directory 站台。  
 
         > [!IMPORTANT]  
-        >  如果为边界指定 Active Directory 站点，则边界包括作为该 Active Directory 站点成员的每个 IP 子网。 如果 Active Directory 站点的配置在 Active Directory 中发生变化，则此边界中包括的网络位置也会更改。  
+        >  您為界限指定 Active Directory 站台時，界限會包含每一個身為該 Active Directory 站台成員的 IP 子網路。 如果 Active Directory 中 Active Directory 站台的設定變更，此界限中的網路位置也會變更。  
 
-    -   如果选择“IPv6 前缀” ，你必须以 IPv6 前缀格式指定“前缀”  。  
+    -   如果您選取 [IPv6 首碼] ，則必須指定 IPv6 首碼格式的 [首碼]  。  
 
-    -   如果选择“IP 地址范围” ，你必须指定包括 IP 子网的一部分或包括多个 IP 子网的“起始 IP 地址”  和“结束 IP 地址”  。    
+    -   如果您選取 [IP 位址範圍] ，則必須指定包含部分 IP 子網路或包含多個 IP 子網路的 [起始 IP 位址]  和 [結束 IP 位址]  。    
 
-5.  单击“确定”  保存新边界。  
+5.  按一下 [確定]  儲存新界限。  
 
-## <a name="to-configure-a-boundary"></a>配置边界  
+## <a name="to-configure-a-boundary"></a>設定界限  
 
-1.  在 Configuration Manager 控制台中，单击“管理” > “层次结构尊重” > “边界”  
+1.  在 Configuration Manager 主控台中按一下 [系統管理] > [階層設定] > [界限]。  
 
-2.  选择要修改的边界。  
+2.  選取您要修改的界限。  
 
-3.  在“主页”  选项卡上的“属性”  组中，单击“属性” 。  
+3.  在 [首頁]  索引標籤的 [內容]  群組中，按一下 [內容] 。  
 
-4.  在边界的“属性”  对话框中，选择“常规”  选项卡以编辑边界的“描述”  或“类型”  。 你也可以通过编辑边界的网络位置来更改边界的作用域。 例如，对于 Active Directory 站点边界，你可以指定新的 Active Directory 站点名称。  
+4.  在界限的 [內容]  對話方塊中，選取 [一般]  索引標籤以編輯界限的 [描述]  或 [類型]  。 您也可以編輯界限的網路位置來變更界限的範圍。 例如，您可以為 Active Directory 站台界限指定新的 Active Directory 站台名稱。  
 
-5.  选择“站点系统”  选项卡以查看与此边界关联的站点系统。 你无法从边界的属性中更改此配置。  
+5.  選取 [站台系統]  索引標籤即可檢視與此界限相關聯的站台系統。 您無法從界限的內容變更此設定。  
 
     > [!TIP]  
-    >  对于列为边界的站点系统的站点系统服务器，站点系统服务器必须关联为包含此边界的至少一个边界组的站点系统服务器。 这配置在边界组的“引用”  选项卡上。  
+    >  若要使站台系統伺服器成為界限的站台系統，站台系統伺服器必須是包含此界限的至少一個界限群組的相關聯站台系統伺服器。 這設定在界限群組的 [參照]  索引標籤上。  
 
-6.  选择“边界组”  选项卡以修改此边界的边界组成员身份：  
+6.  選取 [界限群組]  索引標籤可修改此界限的界限群組成員資格：  
 
-    -   要将此边界添加到一个或多个边界组，请单击“添加” ，选中一个或多个边界组的复选框，然后单击“确定” 。  
+    -   若要將此界限新增至一個或多個界限群組，請按一下 [新增] ，選取一個或多個界限群組的核取方塊，然後按一下 [確定] 。  
 
-    -   要从某个边界组中删除此边界，请选择该边界组，然后单击“删除” 。  
+    -   若要從界限群組中移除此界限，請選取界限群組，然後按一下 [移除] 。  
 
-7.  单击“确定”  关闭边界属性并保存配置。  
-
+7.  按一下 [確定]  關閉界限內容，並儲存設定。  

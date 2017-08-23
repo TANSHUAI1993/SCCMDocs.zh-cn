@@ -1,132 +1,128 @@
 ---
-title: "如何创建 Wi-Fi 配置文件 | Microsoft Docs"
-description: "了解如何在 System Center Configuration Manager 中使用 Wi-Fi 配置文件为组织中的用户部署无线网络设置。"
+title: "如何建立 Wi-Fi 設定檔 | Microsoft Docs"
+description: "了解如何在 System Center Configuration Manager 中使用 Wi-Fi 設定檔，將無線網路設定部署至組織中的使用者。"
 ms.custom: na
 ms.date: 12/11/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 321b19b2-a093-4b8f-995f-41f74b886eb5
-caps.latest.revision: 13
-caps.handback.revision: 0
+caps.latest.revision: "13"
+caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
 ms.openlocfilehash: f1ae976899de1fd3efcbde0c7268f071a5d0218b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="create-wi-fi-profiles"></a>创建 Wi-Fi 配置文件
+# <a name="create-wi-fi-profiles"></a>建立 Wi-Fi 設定檔
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用於：System Center Configuration Manager (最新分支)*
 
 
-在 System Center Configuration Manager 中使用 Wi-Fi 配置文件将无线网络设置部署到组织中的用户。 通过部署这些设置，可以让用户很方便地连接到 Wi-Fi。  
+在 System Center Configuration Manager 中使用 Wi-Fi 設定檔，將無線網路設定部署至組織中的使用者。 部署這些設定，即可讓使用者更輕鬆地連線至 Wi-Fi。  
 
- 例如，你有一个 Wi-Fi 网络并想让所有 iOS 设备都能够连接到该网络。 创建 Wi-Fi 配置文件，其中包含连接到无线网络所必需的设置。 然后，将该配置文件部署到在层次结构中拥有 iOS 设备的所有用户。 IOS 设备的用户可以在无线网络列表中看到公司网络，并且可以容易地连接到此网络。  
+ 例如，您想要讓所有 iOS 裝置連線到您的 Wi-Fi 網路。 建立 Wi-Fi 設定檔，內含連線到無線網路所需的設定。 然後，將設定檔部署到在您的階層中擁有 iOS 裝置的所有使用者。 iOS 裝置使用者可在無線網路清單中看見公司網路，並且可直接連線至該網路。  
 
- 你可以使用 Wi-fi 配置文件配置下列设备类型：  
+ 您可以使用 Wi-Fi 設定檔設定下列裝置類型：  
 
--   运行 Windows 8.1 (32 位) 的设备  
+-   執行 Windows 8.1 32 位元的裝置  
 
--   运行 Windows 8.1 (64 位) 的设备  
+-   執行 Windows 8.1 64 位元的裝置  
 
--   运行 Windows RT 8.1 的设备  
+-   執行 Windows RT 8.1 的裝置  
 
--   运行 Windows 10 桌面或移动版的设备  
+-   執行 Windows 10 Desktop 或 Windows 10 行動裝置版的裝置  
 
-如需深入了解如何在 System Center Configuration Manager 中使用 Wi-Fi 配置文件将无线网络设置部署到移动设备用户，请参阅[针对移动设备创建 Wi-Fi 配置文件](../../mdm/deploy-use/create-wifi-profiles.md)。
+[建立行動裝置的 Wi-Fi 設定檔](../../mdm/deploy-use/create-wifi-profiles.md)提供有關如何使用 Configuration Manager 中的 Wi-Fi 設定檔，將無線網路設定部署至行動裝置使用者的詳細資訊。
 
 > [!IMPORTANT]  
->  若要将配置文件部署到 Android、iOS、Windows Phone 和注册的 Windows 8.1 或更高版本设备，这些设备必须在 Microsoft Intune 中注册。 有关如何注册设备的信息，请参阅[在 Intune 中注册设备以进行管理](https://docs.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune)。  
+>  若要將設定檔部署到 Android、iOS、Windows Phone 和已註冊的 Windows 8.1 或更新版本的裝置，必須在 Microsoft Intune 註冊這些裝置。 如需如何註冊裝置的相關資訊，請參閱[在 Intune 中註冊裝置以進行管理](https://docs.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune)。  
 
- 在创建 Wi-Fi 配置文件时，你可以纳入各种各样的安全设置。 其中包括已通过使用 Configuration Manager 证书配置文件推送的服务器验证和客户端身份验证证书。 有关证书配置文件的详细信息，请参阅 [System Center Configuration Manager 中的证书配置文件](introduction-to-certificate-profiles.md)。  
+ 建立 Wi-Fi 設定檔時，您可以加入多種安全性設定。 這些安全性設定包括使用 Configuration Manager 憑證設定檔推送的伺服器驗證和用戶端驗證憑證。 如需憑證設定檔的詳細資訊，請參閱 [Certificate profiles in System Center Configuration Manager](introduction-to-certificate-profiles.md) (System Center Configuration Manager 中的憑證設定檔)。  
 
-## <a name="create-a-wi-fi-profile"></a>创建 Wi-Fi 配置文件  
+## <a name="create-a-wi-fi-profile"></a>建立 Wi-Fi 設定檔  
 
-1.  在 Configuration Manager 控制台中，选择“资产和符合性” > “符合性设置” >  “公司资源访问” > “Wi-Fi 配置文件”。  
+1.  在 Configuration Manager 主控台中，選擇 [資產與合規性] > [合規性設定] >  [公司資源存取] > [Wi-Fi 設定檔]。  
 
-3.  在“主页”选项卡上的“创建”组中，选择“创建 Wi-Fi 配置文件”。  
+3.  在 [常用] 索引標籤的 [建立] 群組中，選擇 [建立 Wi-Fi 設定檔]。  
 
-1.  在“常规”页中，为 Wi-Fi 配置文件输入唯一名称和说明。  如果想要使用另一个 Wi-fi 配置文件中的设置，请选择“从文件中导入现有的 Wi-fi 配置文件项”。  
-
-    > [!IMPORTANT]  
-    >  确保导入的 Wi-fi 配置文件包含 Wi-fi 配置文件的有效 XML。 导入文件时，Configuration Manager 不会验证该配置文件。  
-
-3.  在**报表的不符合性严重程度**中，指定在客户端设备上发现 Wi-Fi 配置文件不符合（例如，配置文件安装失败）时报告的严重性级别。 可用的严重性级别如下：  
-
-    -   **无**：对于 Configuration Manager 报表，不符合此合规性规则的设备不报告故障严重性。  
-
-    -   **信息**：对于 Configuration Manager 报表，不符合此合规性规则的计算机将报告故障严重性**信息**。  
-
-    -   **警告**：对于 Configuration Manager 报表，不符合此合规性规则的计算机将报告故障严重性**警告**。  
-
-    -   **严重**：对于 Configuration Manager 报表，不符合此合规性规则的计算机将报告故障严重性**严重**。  
-
-    -   **事件严重**：对于 Configuration Manager 报表，不符合此合规性规则的计算机将报告故障严重性**严重**。 应用程序事件日志中也会以 Windows 事件的形式记录此严重性级别。  
-
-1.  在“Wi-Fi 配置文件”页，提供设备会将其显示为网络名称的名称。  
+1.  在 [一般] 頁面上，輸入此 Wi-Fi 設定檔的唯一名稱和描述。  如果您想要使用另一個 Wi-Fi 設定檔的設定，請選取 **[從檔案匯入現有的 Wi-Fi 設定檔項目]**。  
 
     > [!IMPORTANT]  
-    >  Configuration Manager 不支持在网络名称中使用单引号 (**â€˜**) 或逗号 (**,**) 字符。  
+    >  請確定您匯入的 Wi-Fi 設定檔包含 Wi-Fi 設定檔的有效 XML。 當您匯入檔案時，Configuration Manager 不會驗證設定檔。  
 
-2.  指定区分大小写的 **SSID**
-3.  选择其他适当的连接选项，包括：   如果有可能隐藏了 SSID，则**在网络未广播其名称 (SSID) 时连接**  
+3.  在 [報告的不相容嚴重性] 中，指定在發現用戶端裝置上的 Wi-Fi 設定檔不相容時所報告的嚴重性層級 (例如，如果設定檔安裝失敗)。 可用的嚴重性層級如下：  
 
-4.  在“安全配置”选择无线网络使用的安全协议；如果网络无安全保护，则选择“无身份验证(开放式)”。
+    -   **無**：不符合這項相容性規則的電腦不會回報 Configuration Manager 報告的失敗嚴重性。  
+
+    -   **資訊**：不符合這項相容性規則的電腦會回報 Configuration Manager 報告的 [資訊] 失敗嚴重性。  
+
+    -   **警告**：不符合這項相容性規則的電腦會回報 Configuration Manager 報告的 [警告] 失敗嚴重性。  
+
+    -   **重大**：不符合這項相容性規則的電腦會回報 Configuration Manager 報告的 [重大] 失敗嚴重性。  
+
+    -   **重大事件**：不符合這項相容性規則的電腦會回報 Configuration Manager 報告的 [重大] 失敗嚴重性。 此嚴重性層級也會在應用程式事件記錄檔中記錄為 Windows 事件。  
+
+1.  在 [Wi-Fi 設定檔] 頁面上，提供裝置將顯示為網路名稱的名稱。  
+
     > [!IMPORTANT]  
-    >  如果你正在为本地移动设备管理创建 Wi-Fi 配置文件，Configuration Manager 的 Current Branch 仅支持以下 Wi-Fi 安全性配置：  
+    >  Configuration Manager 不支援在網路名稱中使用單引號 (**â€˜**) 或逗號 (**,**) 字元。  
+
+2.  指定區分大小寫的 **SSID**
+3.  選擇其他適當的連線選項，包括。   **在網路未廣播其名稱 (SSID) 時進行連線** (如果可能隱藏了 SSID)  
+
+4.  在 [安全性設定] 頁面上，選取無線網路使用的安全性通訊協定，或在網路不安全時選取 [不驗證 (開放)]。
+    > [!IMPORTANT]  
+    >  如果您要建立 Wi-Fi 設定檔來進行內部部署行動裝置管理，則 Configuration Manager 的最新分支只支援下列 Wi-Fi 安全性設定：  
     >   
-    >  安全类型：“WPA2 企业”  或“WPA2 个人”   
-    > 加密类型：“AES”  或“TKIP”   
-    > EAP 类型：“智能卡或其他证书”  或“PEAP”   
+    >  安全性類型： **WPA2 Enterprise** 或 **WPA2 Personal**  
+    > 加密類型： **AES** 或 **TKIP**  
+    > EAP 類型： **智慧卡或其他憑證** 或 **PEAP**  
 
-    > 仅限 Android 设备，不支持安全类型“WPA – 个人”、“WPA2 – 个人”和“WEP”。  
+    > 針對 Android 裝置，不支援 [WPA Personal]、[WPA2 Personal] 和 [WEP] 安全性類型。  
 
-2.  选择无线网络使用的加密方法。  
+2.  選取無線網路使用的加密方法。  
 
-3.  选择用于向无线网络进行验证的 EAP 类型。  
+3.  選取用來進行無線網路驗證的 EAP 類型。  
 
-     仅限 Windows Phone 设备：不支持 EAP 类型“LEAP”  和“EAP-FAST”  。  
+     僅適用於 Windows Phone 裝置：不支援 [LEAP]  和 [EAP-FAST]  的 EAP 類型。  
 
-4.  单击“配置”  ，为所选的 EAP 类型指定属性。 对于某些所选的 EAP 类型，此选项可能不可用。  
+4.  請按一下 [設定]  以指定所選取 EAP 類型的屬性。 此選項可能不適用於選取的某些 EAP 類型。  
 
     > [!IMPORTANT]  
-    >  单击“配置” 时，打开的对话框是 Windows 对话框。 因此，必须确保运行 Configuration Manager 控制台的计算机的操作系统支持配置所选的 EAP 类型。  
+    >  當您按一下 [設定] 時會開啟一個 Windows 對話方塊。 基於此原因，您必須確定執行 Configuration Manager 主控台之電腦的作業系統支援設定選取的 EAP類型。  
     >   
-    >  对于 iOS 设备，如果你选择非 EAP 方法用于身份验证，那么无论你选择何种方法，都将使用 MS-CHAP v2 进行连接。  
+    >  針對 iOS 裝置，如果您選擇非 EAP 方法進行驗證，不論您選擇的方法為何，都會使用 MS-CHAP v2 進行連線。  
 
-5.  如果你想要存储用户凭据，以便用户无需在每次登录时输入凭据，请选择“在每次登录时记住用户凭据” 。  
+5.  如果您想要儲存使用者認證，以便使用者不需要在每次登入時輸入認證，請選取 [每次登入時記住使用者認證] 。  
 
-6. **仅适用于 iOS 设备：**  
- 配置 Wi-Fi 连接所需的任何证书的信息。 必须配置客户端证书以及受信任的服务器证书名称或根证书，如下所示：  
+6. **僅適用於 iOS 裝置：**  
+ 設定 Wi-Fi 連線所需要的任何憑證資訊。 您必須設定用戶端憑證，以及信任的伺服器憑證名稱或根憑證，如下所示：  
 
-    -   **受信任的服务器证书名称**：如果设备连接到的服务器使用服务器身份验证证书来识别服务器并帮助保护信道的安全，请在该证书的使用者名称或使用者备用名称中输入一个或多个名称。 名称通常为服务器完全限制的域名。 例如，服务器证书在证书使用者中具有公用名 srv1.contoso.com，则输入“srv1.contoso.com” 。 如果服务器证书具有多个在使用者可选名称中指定的名称，请输入每个名称，以分号分隔。  
+    -   **信任的伺服器憑證名稱**：如果裝置連線的伺服器使用伺服器驗證憑證來識別伺服器並協助保護通訊通道，請在該憑證的主體名稱或主體別名中輸入一個或多個名稱。 這些名稱通常是伺服器的完整網域名稱。 例如，如果伺服器憑證在憑證主體中的一般名稱是 srv1.contoso.com，則輸入 **srv1.contoso.com**。 如果伺服器憑證在主體別名中指定多個名稱，請使用分號分隔輸入的每個名稱。  
 
     > [!TIP]  
-    >  如果将使用你为 iOS 设备 EAP 或客户端身份验证选择的客户端证书来向远程身份验证拨入用户服务 (RADIUS) 服务器（例如正在运行网络策略服务器的服务器）进行验证，则你必须将使用者可选名称设置为用户主体名称。  
+    >  如果您為 EAP 選取的用戶端憑證或 iOS 裝置的用戶端驗證將用來驗證遠端驗證撥入使用者服務 (RADIUS) 伺服器 (例如執行網路原則伺服器的伺服器)，您必須將 [主體別名] 設定為使用者主體名稱。  
 
-    -   “选择用于服务器验证的根证书”：如果设备连接到的服务器使用设备不信任的服务器身份验证证书，请选择包含服务器证书的根证书的证书配置文件，以在设备上创建证书信任链。  
+    -   **選取根憑證以進行伺服器驗證**：如果裝置連線的伺服器使用裝置不信任的伺服器驗證憑證，請選取包含伺服器憑證之根憑證的憑證設定檔，以在裝置上建立信任的憑證鏈結。  
 
-    -   **选择用于客户端身份验证的客户端证书**：如果服务器或网络设备需要客户端证书来验证连接设备，请选择包含客户端身份验证证书的证书配置文件。  
+    -   **選取用戶端驗證的用戶端憑證**：如果伺服器或網路裝置需要用戶端憑證來驗證連接的裝置，選取包含用戶端驗證憑證的憑證設定檔。  
 
     > [!NOTE]  
-    >  必须首先以证书配置文件的形式配置和部署根证书和客户端证书，然后你才能选择这些证书。 有关证书配置文件的详细信息，请参阅 [System Center Configuration Manager 中的证书配置文件](introduction-to-certificate-profiles.md)。  
+    >  在選取根憑證和用戶端憑證之前，您必須先將其設定及部署為憑證設定檔。 如需憑證設定檔的詳細資訊，請參閱 [Certificate profiles in System Center Configuration Manager](introduction-to-certificate-profiles.md) (System Center Configuration Manager 中的憑證設定檔)。  
 
-7.  在“高级设置”页上，指定 Wi-Fi 配置文件的高级设置，例如身份验证模式、单一登录选项以及（美国）联邦信息处理标准符合性。 有关这些选项的详细信息，请参阅 Windows 文档。 高级设置可能不可用或可能会有所不同，具体情况视你在向导的“安全性配置”  页上所选的选项而定。  
+7.  在 [進階設定] 頁面上，指定 Wi-Fi 設定檔的進階設定，例如驗證模式、單一登入選項和美國聯邦資訊處理標準相容性。 如需這些選項的詳細資訊，請參閱您的 Windows 文件。 視您在精靈的 [安全性設定]  頁面上選取的選項而定，進階設定可能無法使用或者有所變動。  
 
-1.  在“代理设置”页上，如果无线网络使用代理服务器，请选择“配置此 Wi-Fi 配置文件的代理设置”，然后提供配置信息。  
+1.  如果您的無線網路使用 Proxy 伺服器，請在 [Proxy 設定] 頁面上，選取 [設定此 Wi-Fi 設定檔的 Proxy 設定]，然後提供設定資訊。  
 
-2. 在“支持的平台”页上，选择将在其中安装 Wi-Fi 配置文件的操作系统。 或者单击“全选”  以将 Wi-Fi 配置文件安装到所有可用的操作系统。  
+2. 在 [支援的平台] 頁面上，選取您要安裝 Wi-Fi 設定檔的作業系統。 或者，按一下 [全選]  將 Wi-Fi 設定檔安裝到所有可用的作業系統。  
 
-### <a name="next-steps"></a>后续步骤
- 有关如何部署 Wi-Fi 配置文件的信息，请参阅[如何在 System Center Configuration Manager 中部署 Wi-Fi 配置文件](deploy-wifi-vpn-email-cert-profiles.md)。  
-
+### <a name="next-steps"></a>後續步驟
+ 如需如何部署 Wi-Fi 設定檔的資訊，請參閱 [How to deploy Wi-Fi profiles in System Center Configuration Manager](deploy-wifi-vpn-email-cert-profiles.md) (如何在 System Center Configuration Manager 中部署 Wi-Fi 設定檔)。  

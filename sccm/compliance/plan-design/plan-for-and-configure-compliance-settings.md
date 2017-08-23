@@ -1,60 +1,53 @@
 ---
-title: "规划和配置符合性设置 | Microsoft Docs"
-description: "了解在 System Center Configuration Manager 中使用符合性设置的先决条件和配置任务。"
+title: "規劃與設定合規性設定 | Microsoft Docs"
+description: "了解使用 System Center Configuration Manager 相容性設定的必要條件和設定工作。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9ea20b01-676a-4cc2-b328-0098a41b202e
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: f9e939d871e95a3248d8e5d96cb73063a81fd5cf
 ms.openlocfilehash: d26ac3de58d2f0ef447725e63fc2d8adda6ea06c
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="plan-for-and-configure-compliance-settings-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中规划和配置符合性设置
+# <a name="plan-for-and-configure-compliance-settings-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中規劃和設定相容性設定
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用對象：System Center Configuration Manager (最新分支)*
 
-在开始使用 System Center Configuration Manager 符合性设置之前，需要了解几个先决条件，并且需要执行一些配置任务。  
+開始使用 System Center Configuration Manager 相容性設定之前，您需要了解幾個必要條件，並且需要執行一些設定工作。  
 
-## <a name="prerequisites-for-compliance-settings"></a>符合性设置的先决条件  
+## <a name="prerequisites-for-compliance-settings"></a>相容性設定的必要條件  
 
-|先决条件|更多信息|  
+|必要條件|詳細資訊|  
 |------------------|----------------------|  
-|必须启用 Windows Configuration Manager 客户端并配置符合性评估。|请参阅下文|  
-|如果你想要运行报表，就必须为站点配置报告。|[System Center Configuration Manager 中的报表](../../core/servers/manage/reporting.md)|  
-|所需的安全权限。|“符合性设置管理员”安全角色包括管理符合性设置、用户数据和配置文件配置项目和远程连接配置文件必需的权限。<br /><br /> [配置基于角色的管理](../../core/servers/deploy/configure/configure-role-based-administration.md)|  
+|必須啟用並設定 Windows Configuration Manager 用戶端以進行相容性評估。|請參閱下面的|  
+|如果您想要執行報告，則必須設定站台的報告功能。|[System Center Configuration Manager 中的報告](../../core/servers/manage/reporting.md)|  
+|必要的安全性權限。|[相容性設定管理員] 安全性角色包含管理相容性設定、使用者資料和設定檔套件項目以及遠端連線設定檔所需的權限。<br /><br /> [設定以角色為基礎的系統管理](../../core/servers/deploy/configure/configure-role-based-administration.md)|  
 
-##  <a name="enable-and-configure-compliance-settings-for-windows-pcs-only"></a>启用并配置符合性设置（仅适用于 Windows 电脑）  
+##  <a name="enable-and-configure-compliance-settings-for-windows-pcs-only"></a>啟用和設定相容性設定 (僅限 Windows 電腦)  
 
-此过程为符合性设置配置默认客户端设置并应用于你的层次结构中的所有计算机。 如果希望这些设置仅应用于某些计算机，请创建一个自定义设备客户端设置，并将其分配给包含要使用符合性设置的计算机的集合。 有关如何创建自定义设备设置的详细信息，请参阅[如何配置客户端设置](../../core/clients/deploy/configure-client-settings.md)。  
+這個程序設定相容性設定的預設用戶端設定，並套用至階層中的所有電腦。 如果您只想某些電腦套用這些設定，請建立自訂裝置用戶端設定，並將它指派給包含要使用相容性設定之電腦的集合。 如需如何建立自訂裝置設定的詳細資訊，請參閱 [How to Configure Client Settings](../../core/clients/deploy/configure-client-settings.md) (如何設定用戶端設定)。  
 
 > [!TIP]  
->  其他设备类型不需要任何特定的配置以评估符合性设置。  
+>  其他裝置類型不需要進行任何特定組態，即可評估相容性設定。  
 
-1.  在 Configuration Manager 控制台中，单击“管理” > “客户端设置” > “默认设置”。  
-2.  在“主页”  选项卡上的“属性”  组中，单击“属性” 。  
-3.  在“默认设置”  对话框中，单击“符合性设置” 。  
-4.  为符合性设置配置下列客户端设置：
-    - **在客户端上启用符合性评估** - 如果要在客户端设备上评估符合性，则设置为“True”。
-    - **计划符合性评估** - 如果要修改客户端设备上的默认符合性评估计划，请单击“计划”。
-    - **启用用户数据和配置文件** - 如果要向 Windows 计算机创建并部署用户数据和配置文件配置项目，则启用此选项。 有关详细信息，请参阅[创建用户数据和配置文件配置项目](/sccm/compliance/deploy-use/create-remote-connection-profiles)。
-5. 单击“确定”  来关闭“默认设置”  对话框。  
+1.  在 Configuration Manager 主控台中按一下 [管理] > [用戶端設定] > **[預設設定]**。  
+2.  在 [首頁]  索引標籤的 [內容]  群組中，按一下 [內容] 。  
+3.  在 [預設設定]  對話方塊中，按一下 [相容性設定] 。  
+4.  設定相容性設定的下列用戶端設定：
+    - **在用戶端上啟用相容性評估**：如果想要評估用戶端裝置的相容性請設為 [True]。
+    - **排程相容性評估**：如果您想要修改用戶端裝置上的預設相容性評估排程，請按一下 [排程]。
+    - **啟用使用者資料和設定檔**：如果您想要建立使用者資料和設定檔設定項目，並將其部署至 Windows 電腦，請啟用這個選項。 如需詳細資訊，請參閱 [Create user data and profiles configuration items](/sccm/compliance/deploy-use/create-remote-connection-profiles) (建立使用者資料和設定檔設定項目)。
+5. 按一下 [確定]  ，關閉 [預設設定]  對話方塊。  
 
-当客户端计算机下一次下载客户端策略时，将使用这些设置进行配置。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-
+用戶端電腦會在下一次下載用戶端原則時，使用這些設定進行設定。  

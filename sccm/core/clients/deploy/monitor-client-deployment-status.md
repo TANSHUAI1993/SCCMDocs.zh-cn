@@ -1,68 +1,64 @@
 ---
-title: "监视客户端部署状态 | Microsoft Docs"
-description: "在 System Center Configuration Manager 中监视客户端部署状态。"
+title: "監視用戶端部署狀態 | Microsoft Docs"
+description: "在 System Center Configuration Manager 中監視用戶端部署狀態。"
 ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 20a573b3-53cb-4ed5-bae1-7542f533ed20
-caps.latest.revision: 11
-caps.handback.revision: 0
+caps.latest.revision: "11"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 52d2e088b8db3c2e9a0af640ca3db72b9fd7af60
-ms.openlocfilehash: 0ca218e4276699dd9029308e1d8ac524563da7c5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 01/03/2017
-
-
+ms.openlocfilehash: 3d9d02d8c56aea17e563112f92173c2b56781da6
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="how-to-monitor-client-deployment-status-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中监视客户端部署状态
+# <a name="how-to-monitor-client-deployment-status-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中監視用戶端部署狀態
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用於：System Center Configuration Manager (最新分支)*
 
-在站点间部署客户端需要时间，并且首次进行某些安装并不会成功。 System Center Configuration Manager 控制台提供了一种通过实时报告客户端部署状态，从而关注集合内客户端部署的方法。  
+在站台之間部署用戶端需要時間，且首次安裝有時候不會成功。 System Center Configuration Manager 主控台可即時報告用戶端部署狀態，讓您隨時掌握用戶端的部署。  
 
 > [!NOTE]  
->  使用 Configuration Manager 控制台（如本文所述）是监视客户端部署的最佳方法，也是最可靠的方法。 控制台中“监视”工作区的“客户端状态”部分可实时准确地提供客户端部署状态。 也可以使用其他工具来监视客户端部署，例如 Windows Server 中的服务器管理器或 System Center Operations Manager，但是这样可能会从正常的客户端安装活动收到警报。 由于客户端安装程序 (CCMSetup.exe) 在不同环境中的运行方式，这些其他工具可能会生成不能准确反映客户端部署状态的假警报和警告。  
+>  監視用戶端部署最佳且最可靠的方法是使用 Configuration Manager 主控台 (如本文中所述)。 主控台中 **[監視]** 工作區的 **[用戶端狀態]** 區段，提供正確且即時的用戶端部署狀態。 您可以使用其他工具監視用戶端部署，如 Windows Server 中的伺服器管理員，或是 System Center Operations Manager，但您可能會收到來自一般用戶端安裝活動的警示。 因為用戶端安裝程式 (CCMSetup.exe) 在各種環境執行的方式，所以其他工具可能會產生未正確反應用戶端部署狀態的錯誤警示和警告。  
 
- 在控制台的“监视”工作区中，可以监视指定集合内发生的客户端部署的以下状态：  
+ 在主控台的 **[監視]** 工作區中，您可以監視指定集合內用戶端部署的下列狀態︰  
 
--   合规  
+-   相容  
 
--   正在进行  
+-   進行中  
 
--   不符合  
+-   不相容  
 
--   已失败  
+-   失敗  
 
--   未知  
+-   不明  
 
- Configuration Manager 报告生产客户端或预生产客户端的部署。 Configuration Manager 控制台还提供指定时间内失败的客户端部署的图表，以帮助你确定随着时间的推移，要为排除部署问题而采取的措施是否提高了部署成功率。  
+ Configuration Manager 會報告實際執行用戶端或實際執行前用戶端的部署。 Configuration Manager 主控台也提供顯示指定期間內失敗之用戶端部署的圖表，以協助您判斷針對部署進行的疑難排解是否有逐漸改善部署成功率。  
 
-## <a name="to-monitor-client-deployments"></a>监视客户端部署  
+## <a name="to-monitor-client-deployments"></a>監視用戶端部署  
 
--   在 Configuration Manager 控制台中，单击“监视” > “客户端状态”。  
+-   在 Configuration Manager 主控台中，按一下 [監視] > [用戶端狀態]。  
 
--   根据想要监视的客户端版本，单击“生产客户端部署”或“预生产客户端部署”。  
+-   視您要監視的用戶端版本，按一下 **[實際執行用戶端部署]** 或 **[進入生產階段前用戶端部署]** 。  
 
--   查看客户端部署状态和客户端部署失败的图表。  
+-   檢閱用戶端部署狀態和用戶端部署失敗的圖表。  
 
--   如果想更改报告的范围，单击“浏览...”并选择其他集合。  
+-   如果您想要變更報告的範圍，請按一下 [瀏覽...]，然後選擇其他集合。  
 
- 若要了解有关预生产客户端部署的详细信息，请参阅[如何在 System Center Configuration Manager 中的预生产集合中测试客户端升级](../../../core/clients/manage/upgrade/test-client-upgrades.md)。
+ 若要深入了解進入生產階段前的用戶端部署，請參閱[如何測試 System Center Configuration Manager 的進入生產階段前集合用戶端升級](../../../core/clients/manage/upgrade/test-client-upgrades.md)。
 
  > [!NOTE]
- > 即使在已成功部署客户端时，托管预生产集合中站点系统角色的计算机上的部署状态也可能被报告为“不符合”。 当你将客户端提升为生产时，则会正常报告部署状态。   
+ > 在進入生產階段前集合中，裝載站台系統角色之電腦上的部署狀態可能會報告為 [不符合標準]，即使用戶端已成功部署也一樣。 當您將用戶端升階為生產階段時，就會正確報告部署狀態。   
 
- 若要监视已部署客户端的状态，请参阅[如何在 System Center Configuration Manager 中监视客户端](../../../core/clients/manage/monitor-clients.md)  
+ 若要監視部署的用戶端狀態，請參閱[如何在 System Center Configuration Manager 中監視用戶端](../../../core/clients/manage/monitor-clients.md)。  
 
- 可以使用 Configuration Manager 报告来了解有关站点中的客户端状态的详细信息。 有关如何运行报表的详细信息，请参阅 [System Center Configuration Manager 中的报表](../../../core/servers/manage/reporting.md)。  
-
+ 您可以使用 Configuration Manager 報告深入了解站台內用戶端的狀態。 如需如何執行報告的詳細資訊，請參閱 [Reporting in System Center Configuration Manager](../../../core/servers/manage/reporting.md) (System Center Configuration Manager 中的報告)。  

@@ -1,58 +1,55 @@
 ---
-title: "Configuration Manager 中混合托管设备的用户关联 | Microsoft Docs"
-description: "配置 Configuration Manager 中托管设备的用户关联。"
+title: "Configuration Manager 中針對混合式受管理裝置的使用者親和性 | Microsoft Docs"
+description: "在 Configuration Manager 中設定受管理裝置的使用者親和性。"
 ms.custom: na
 ms.date: 03/05/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b5d520a7-e9e5-40ee-91f9-f2684214beb6
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: 74dcc0f4e680893db804956615248b7e1230d2b5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 12/16/2016
-
+ms.openlocfilehash: d039792a88b9e7704f37718a88f841dd9216d1b1
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="user-affinity-for-hybrid-managed-devices-in-configuration-manager"></a>Configuration Manager 中混合托管设备的用户关联
+# <a name="user-affinity-for-hybrid-managed-devices-in-configuration-manager"></a>Configuration Manager 中針對混合式受管理裝置的使用者親和性
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用於：System Center Configuration Manager (最新分支)*
 
-配置公司拥有的设备的配置文件时，管理员可以指定托管设备是否可以具有“用户关联”（用于标识设备的特定用户）。  
+當設定公司所擁有裝置的設定檔時，系統管理員可以指定受管理裝置是否可以具有「使用者親和性」，這會識別特定使用者與裝置。  
 
-##  <a name="BKMK_iOSCP"></a>具有用户关联的托管设备  
- 配置了“用户关联”的设备可以安装和运行公司门户应用，以下载应用和管理设备。 用户收到设备后，必须完成一些其他步骤，以便完成设置助理并安装公司门户应用。  
+##  <a name="BKMK_iOSCP"></a> 具有使用者親和性的受管理裝置  
+ 已設定 [使用者親和性] 的裝置可以安裝並執行 [公司入口網站] 應用程式，以下載 App 及管理裝置。 使用者收到裝置之後，他們必須完成一些額外步驟，以完成 [設定助理] 並安裝 [公司入口網站] 應用程式。  
 
-#### <a name="how-to-enroll-ios-devices-with-user-affinity"></a>如何注册具有用户关联的 iOS 设备  
+#### <a name="how-to-enroll-ios-devices-with-user-affinity"></a>如何註冊包含使用者親和性的 iOS 裝置  
 
-1.  用户首次打开新设备时，系统会提示其完成设置助理。 注册配置文件可以指定在安装过程中提示输入凭据。 用户必须使用与其在 Intune 中的订阅相关联的凭据（即唯一的个人名称或 UPN）。  
+1.  使用者第一次將其新裝置開機時，系統會提示他們完成 [設定助理]。 註冊設定檔可以指定在安裝期間提示您輸入認證。 使用者必須使用與其 Intune 中訂閱相關聯的認證 (也就是唯一的個人識別碼或 UPN)。  
 
-2.  安装过程中，系统还可能提示用户输入 Apple ID。 必须提供 Apple ID 设备才能安装公司门户。 用户也可以在安装完成后在 iOS“设置”菜单中提供 Apple ID。  
+2.  安裝期間，系統也會提示使用者輸入 Apple ID。 必須先提供 Apple ID，裝置才能安裝 [公司入口網站]。 使用者可以在安裝完成之後從 iOS [設定] 功能表中提供 Apple ID。  
 
-3.  安装完成后，iOS 设备必须从应用商店安装公司门户应用，例如[公司门户应用](https://itunes.apple.com/us/app/id719171358)。  
+3.  安裝完成之後，iOS 裝置必須從 App Store 安裝 [公司入口網站] 應用程式 (例如[公司入口網站應用程式](https://itunes.apple.com/us/app/id719171358))。  
 
-4.  现在用户可以使用在设置设备时使用的 UPN 登录公司门户。  
+4.  使用者現在可以使用設定裝置時所使用的 UPN 來登入 [公司入口網站]。  
 
-5.  登录后，系统会提示用户注册其设备。 第一步是“识别其设备”。 应用会提供一份已向企业注册并已分配到最终用户的 Intune 帐户的 iOS 设备列表。 选择匹配的设备。  
+5.  登入之後，系統會提示使用者註冊其裝置。 第一個步驟是 **識別裝置**。 應用程式會在清單中顯示已經過公司註冊並指派給使用者 Intune 帳戶的 iOS 裝置。 選擇相符的裝置。  
 
-     如果该设备还不是企业拥有的设备，选择“新设备”以继续标准注册流程。  
+     如果此裝置尚未經過公司註冊，請選取 [新裝置] 來繼續標準註冊流程。  
 
-6.  在下一个屏幕上，用户必须确认新设备的序列。 用户可以点击“确认序列号”链接以启动设置应用程序来验证序列号。 然后用户必须将序列号的最后 4 个字符输入到公司门户应用中。  
+6.  在下一個畫面中，使用者必須確認新裝置的序號。 使用者可以點選 [確認序號] 連結啟動 [設定] app，以確認序號。 使用者必須在 [公司入口網站] 應用程式中輸入序號的最後 4 個字元。  
 
-     此步骤验证该设备是否是在 Intune 中注册的企业设备。 如果设备上的序列号不匹配，则选择了错误的设备。 返回到上一屏幕并选择其他设备。  
+     此步驟會確認裝置是公司在 Intune 中註冊的裝置。 如果裝置上的序號不符，則可能選取了錯誤的裝置。 返回上一個畫面，並選取不同的裝置。  
 
-7.  验证序列号后，公司门户应用将重定向到公司门户网站以完成注册，然后会提示用户返回到应用。  
+7.  序號通過驗證後，[公司入口網站] 應用程式會重新導向至 [公司入口網站] 網站以完成註冊，然後提示使用者返回 app。  
 
-8.  注册现已完成。 现在你可以使用此设备的完整功能集。  
+8.  現在已經完成註冊。 您現在即可使用裝置所含的完整功能。  
 
-##  <a name="BKMK_noUA"></a>不具有用户关联的托管设备  
- 配置为“无用户关联”的设备不支持公司门户，因此不能安装该应用。 公司门户适用于具有企业凭据的用户，并且需要访问个性化企业资源（例如邮件）的权限。 注册为“无用户关联”的设备并不具有专用的用户登录。 展台、销售点 (POS) 或共享实用程序设备是注册为“无用户关联”的设备的典型用例。 如果需要用户关联，注册设备前请确保设备的注册配置文件选中“用户关联”。 若要更改设备的关联状态，必须停用并重新注册设备。
-
+##  <a name="BKMK_noUA"></a> 沒有使用者親和性的受管理裝置  
+ 已設定 [沒有使用者親和性] 的裝置不支援 [公司入口網站]，而且不應該安裝應用程式。 [公司入口網站] 是針對有公司認證且需要存取個人化公司資源 (如電子郵件) 的使用者而設計。 註冊為 [沒有使用者親和性] 的裝置應該不會有專用的使用者登入。 Kiosk、銷售點 (POS)，或共用的工具裝置，皆屬註冊為無使用者親和性的常見案例。 如果需要使用者親和性，請在註冊裝置之前，確認裝置的註冊設定檔已選取 [使用者親和性]。 若要變更裝置的親和性狀態，您必須將裝置淘汰並重新註冊該裝置。

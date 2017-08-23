@@ -1,115 +1,111 @@
 ---
-title: "发布和 Active Directory 架构 | Microsoft Docs"
-description: "为 System Center Configuration Manager 扩展 Active Directory 架构，以简化部署和配置客户端的过程。"
+title: "發行和 Active Directory 結構描述 | Microsoft Docs"
+description: "為 System Center Configuration Manager 延伸 Active Directory 架構，簡化部署及設定用戶端的程序。"
 ms.custom: na
 ms.date: 2/6/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: bc15ee7e-4d0a-4463-ae2c-f72d8d45d65d
-caps.latest.revision: 17
-caps.handback.revision: 0
+caps.latest.revision: "17"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 88649111ea3a38c027efb4952211546afd0bf27e
 ms.openlocfilehash: 58beef440db8e019a06ce7c4c8eaabc8e85ce954
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="prepare-active-directory-for-site-publishing"></a>为站点发布准备 Active Directory
+# <a name="prepare-active-directory-for-site-publishing"></a>準備 Active Directory 以發行站台
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用對象：System Center Configuration Manager (最新分支)*
 
-为 System Center Configuration Manager 扩展 Active Directory 架构时，向 Configuration Manager 站点所使用的 Active Directory 引入新结构，以便将关键信息发布在客户端可以轻松访问的安全位置。  
+當您為 System Center Configuration Manager 延伸 Active Directory 架構時，會為 Active Directory 納入新的結構，而 Configuration Manager 站台會使用這些新結構在用戶端可輕鬆存取的安全位置，發佈重要資訊。  
 
-建议使用具有扩展的 Active Directory 架构的 Configuration Manager 来管理本地客户端。 扩展架构可以简化部署和设置客户端的过程。 扩展架构还可让客户端高效查找资源，如不同 Configuration Manager 站点系统角色提供的内容服务器和其他服务。  
+管理內部部署用戶端時，最好是使用 Configuration Manager 與延伸的 Active Directory 架構。 延伸的架構可簡化部署以及設定用戶端的程序。 延伸的架構也可讓用戶端能有效地尋找資源，像是內容伺服器以及不同 Configuration Manager 站台系統角色所提供的其他服務。  
 
--   如果不熟悉提供 Configuration Manager 部署的扩展架构，可参阅 [System Center Configuration Manager 的架构扩展](../../../core/plan-design/network/schema-extensions.md)帮助你做出这一决定。  
+-   如果您不熟悉為 Configuration Manager 部署提供了哪些延伸架構，可以閱讀 [System Center Configuration Manager 的架構延伸](../../../core/plan-design/network/schema-extensions.md)以協助您進行決策。  
 
--   不使用扩展的架构时，可以设置其他方法（例如 DNS 和 WINS）来查找服务和站点系统服务器。 这些服务定位方法需要附加配置，不是客户端进行服务定位的首选方法。 若要了解详细信息，请阅读[了解客户端如何查找 System Center Configuration Manager 的站点资源和服务](../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md)。  
+-   當您不使用延伸架構時，可設定其他方法 (像是 DNS 與 WINS) 以找出服務與站台系統伺服器。 服務位置的這些方法，需要額外的組態，而且不是最理想的用戶端服務位置方法。 若要深入了解，請閱讀[Understand how clients find site resources and services for System Center Configuration Manager](../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md) (了解用戶端如何找到 System Center Configuration Manager 的站台資源與服務)。  
 
--   如果已为 Configuration Manager 2007 或 System Center 2012 Configuration Manager 扩展了 Active Directory 架构，则不需要执行其他操作。 架构扩展不变，并已就位。  
+-   如果 Active Directory 架構已為 Configuration Manager 2007 或 System Center 2012 Configuration Manager 延伸，您不需要執行其他動作。 延伸架構不會變更，且已準備就緒。  
 
-扩展架构是用于任何林的一次性操作。 若要进行扩展并使用扩展的 Active Directory 架构，请遵循以下步骤：  
+對於任何樹系而言，擴充架構都是單次的動作。 若要延伸，然後使用延伸的 Active Directory 架構，請遵循下列步驟進行︰  
 
-## <a name="step-1-extend-the-schema"></a>步骤 1。 扩展架构  
-为 Configuration Manager 扩展架构：  
+## <a name="step-1-extend-the-schema"></a>步驟 1： 擴充架構  
+延伸 Configuration Manager 的架構：  
 
--   使用属于“架构管理员”安全组成员的帐户。  
+-   使用屬於 Schema Admins 安全性群組成員的帳戶。  
 
--   登录架构主域控制器。  
+-   登入架構主機網域控制站。  
 
--   运行 **Extadsch.exe** 工具，或将 LDIFDE 命令行实用程序用于 **ConfigMgr_ad_schema.ldf** 文件。 工具和文件均位于 Configuration Manager 安装媒体上的 **SMSSETUP\BIN\X64** 文件夹中。  
+-   執行 **Extadsch.exe** 工具，或使用 LDIFDE 命令列公用程式並附 **ConfigMgr_ad_schema.ldf** 檔案。 工具與檔案都位於 Configuration Manager 安裝媒體的 **SMSSETUP\BIN\X64** 資料夾中。  
 
-#### <a name="option-a-use-extadschexe"></a>选项 A：使用 Extadsch.exe  
+#### <a name="option-a-use-extadschexe"></a>選項 A：使用 Extadsch.exe  
 
-1.  运行 **extadsch.exe** ，将新类和属性添加到 Active Directory 架构。  
+1.  執行 **extadsch.exe** ，將新的類別與屬性加入 Active Directory 架構。  
 
     > [!TIP]  
-    >  从命令行运行此工具，以便在它运行时查看反馈。  
+    >  從命令列執行此工具，於執行期間檢視意見反應。  
 
-2.  通过查看系统驱动器根目录中的 extadsch.log，验证架构扩展是否成功。  
+2.  檢閱系統磁碟機根目錄中的 extadsch.log，確認已成功延伸架構。  
 
-#### <a name="option-b-use-the-ldif-file"></a>选项 B：使用 LDIF 文件  
+#### <a name="option-b-use-the-ldif-file"></a>選項 B：使用 LDIF 檔案  
 
-1.  编辑 **ConfigMgr_ad_schema.ldf** 文件以定义你希望扩展的 Active Directory 根域：  
+1.  編輯 **ConfigMgr_ad_schema.ldf** 檔案，以定義您延伸的 Active Directory 根網域：  
 
-    -   将该文件中文本“DC=x”的所有实例替换为要扩展的域的完整名称。  
+    -   具備要延伸的網域全名之檔案內，中所有出現文字 **DC = x** 之處，都加以取代。  
 
-    -   例如，如果要扩展的域的完整名称为 widgets.microsoft.com，则将文件中 DC=x 的所有实例更改为 **DC=widgets, DC=microsoft, DC=com**。  
+    -   例如，若要擴充的網域全名為 widgets.microsoft.com，請將檔案中所有出現的 [DC=x]，都變更為 **DC=widgets, DC=microsoft, DC=com**。  
 
-2.  使用 LDIFDE 命令行实用工具将“ConfigMgr_ad_schema.ldf”文件的内容导入 Active Directory 域服务：  
+2.  使用 LDIFDE 命令列公用程式，將 **ConfigMgr_ad_schema.ldf** 檔案的內容匯入 Active Directory Domain Services：  
 
-    -   例如，下列命令行会将架构扩展导入 Active Directory 域服务，启用详细日志记录，并在导入过程中创建一个日志文件：**ldifde -i -f ConfigMgr_ad_schema.ldf -v -j &lt;location to store log file\>**。  
+    -   例如，以下命令列會將延伸架構匯入 Active Directory Domain Services，並開啟詳細資訊記錄，然後於匯入期間建立記錄檔：**ldifde -i -f ConfigMgr_ad_schema.ldf -v -j &lt;位置，以儲存記錄檔\>**。  
 
-3.  通过查看上一步中使用的命令行所创建的日志文件，可以验证架构扩展是否成功。  
+3.  利用檢閱上一步驟中所用命令列所建立之記錄檔的方式，驗證延伸架構已成功。  
 
-## <a name="step-2--create-the-system-management-container-and-grant-sites-permissions-to-the-container"></a>步骤 2。  创建系统管理容器，并向该容器授予站点权限  
- 扩展架构之后，必须在 Active Directory 域服务 (AD DS) 中创建名为“系统管理”的容器：  
+## <a name="step-2--create-the-system-management-container-and-grant-sites-permissions-to-the-container"></a>步驟 2：  建立「系統管理」容器，並為容器授與站台的權限  
+ 延伸架構之後，必須在 Active Directory Domain Services (AD DS) 中建立一個名為 **System Management** 的容器︰  
 
--   在具有将向 Active Directory 发布数据的主站点或辅助站点的每个域中创建一次此容器。  
+-   在具有會將資料發佈至 Active Directory 的主要或次要站台的每個網域中，都要建立一次此容器。  
 
--   对于每个容器，向发布数据到域的每个主站点和辅助站点服务器的计算机帐户授予权限。 每个帐户都需要对容器具有“完全控制”权限，并且高级权限“应用到”等于“这个对象及全部后代”。  
+-   您要為每個容器將權限授與每部主要和次要站台伺服器的電腦帳戶，這些伺服器會將資料發佈至該網域。 每個帳戶都需要有容器的**完全控制**權限，以及相當於 [此物件及所有子系物件] 之 [套用在] 的進階權限。  
 
-#### <a name="to-add-the-container"></a>若要添加容器  
+#### <a name="to-add-the-container"></a>若要新增容器  
 
-1.  使用对 Active Directory 域服务中“系统”容器具有“创建所有子对象”权限的帐户。  
+1.  所用帳戶應具有 Active Directory 網域服務之 **System** 容器的 **[建立所有子物件]** 權限。  
 
-2.  运行“ADSI 编辑器”(adsiedit.msc)，并连接到站点服务器的域。  
+2.  執行 **ADSI 編輯器** (adsiedit.msc)，並連接至站台伺服器的網域。  
 
-3.  创建容器：  
+3.  建立容器：  
 
-    -   展开“域”&lt;计算机完全限定的域名\>，展开&lt;可分辨名称\>，右键单击“CN=System”，选择“新建”，然后选择“对象”。  
+    -   依序展開 [網域]、[電腦完整網域名稱]&lt;\>、[辨別名稱]&lt;\>，在 [CN=System] 上按一下滑鼠右鍵，選擇 [新增]，然後選擇 [物件]。  
 
-    -   在“创建对象”对话框中，选择“容器”，然后选择“下一步”。  
+    -   在 [建立物件] 對話方塊中，選擇 [容器]，然後選擇 [下一步]。  
 
-    -   在“值”框中，输入“系统管理”，然后选择“下一步”。  
+    -   在 [值] 方塊中輸入 **System Management**，然後選擇 [下一步]。  
 
-4.  分配权限：  
+4.  指派權限：  
 
     > [!NOTE]  
-    >  如果有需要，可以使用 Active Directory 用户和计算机管理工具 (dsa.msc) 等其他工具向容器添加权限。  
+    >  您可視需要使用像是 Active Directory 使用者與電腦系統管理工具 (dsa.msc) 等其他工具，為容器加入權限。  
 
-    -   右键单击“CN=System Management”，然后选择“属性”。  
+    -   在 [CN=System Management] 上按一下滑鼠右鍵，然後選擇 [內容]。  
 
-    -   选择“安全”选项卡，选择“添加”，然后添加具有“完全控制”权限的站点服务器计算机帐户。  
+    -   選取 [安全性] 索引標籤，選擇 [新增]，然後以**完全控制**權限新增站台伺服器電腦帳戶。  
 
-    -   选择“高级”，选择站点服务器的计算机帐户，然后选择“编辑”。  
+    -   選擇 [進階]，並選取站台伺服器的電腦帳戶，然後選擇 [編輯]。  
 
-    -   在“应用到”列表中，选择“这个对象及全部后代”。  
+    -   在 [套用到] 清單中，選取 [此物件及所有子系物件]。  
 
-5.  选择“确定”关闭控制台并保存配置。  
+5.  按一下 [確定]，關閉對話方塊並儲存設定。  
 
-## <a name="step-3-set-up-sites-to-publish-to-active-directory-domain-services"></a>步骤 3。 设置站点以发布到 Active Directory 域服务  
- 设置容器并授予权限，并且安装 Configuration Manager 主站点后，可以设置该站点以将数据发布到 Active Directory。  
+## <a name="step-3-set-up-sites-to-publish-to-active-directory-domain-services"></a>步驟 3： 將站台設定為發佈至 Active Directory Domain Services  
+ 設定此容器並授與權限，且已安裝 Configuration Manager 主要站台之後，即可將該站台設定為將資料發佈至 Active Directory。  
 
- 有关发布的详细信息，请参阅[发布 System Center Configuration Manager 的站点数据](../../../core/servers/deploy/configure/publish-site-data.md)。  
-
+ 如需發佈的詳細資訊，請參閱[發佈 System Center Configuration Manager 的站台資料](../../../core/servers/deploy/configure/publish-site-data.md)。  

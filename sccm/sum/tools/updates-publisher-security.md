@@ -1,104 +1,101 @@
 ---
-title: "证书和安全性 | Microsoft Docs"
-description: "管理 System Center Updates Publisher 中的证书和安全性"
+title: "憑證和安全性 | Microsoft Docs"
+description: "管理 System Center Updates Publisher 的憑證和安全性"
 ms.custom: na
 ms.date: 4/29/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a7f91e63-4750-402e-9970-dd14be7f76a3
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: NOINDEX, NOFOLLOW
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 31819a1df4e63e1114682490a9b3c3b4e5c99cfa
 ms.openlocfilehash: c43af95a539a9284e4e49822b284783e02f9fa21
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="manage-certificates-and-security-for-updates-publisher"></a>管理 Updates Publisher 中的证书和安全性
+# <a name="manage-certificates-and-security-for-updates-publisher"></a>管理 Updates Publisher 的憑證和安全性
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+適用於：System Center Configuration Manager (最新分支)
 
-下面的过程展示了如何在更新服务器上配置证书存储、如何在客户端计算机上配置自签名证书，以及如何将组策略配置为允许计算机上的 Windows 更新代理扫描已发布的更新。
+以下程序可協助您設定更新伺服器上的憑證存放區、在用戶端電腦上設定自我簽署憑證，以及設定群組原則以允許電腦上的 Windows Update 代理程式掃描已發行的更新。
 
-## <a name="configure-the-certificate-store-on-the-update-server"></a>在更新服务器上配置证书存储
- Updates Publisher 使用数字证书对其发布的目录中的更新进行签名。 证书必须位于更新服务器上的证书存储中，以及 Updates Publisher 计算机的证书存储中（如果此计算机远离更新服务器的话），才能将目录发布到更新服务器中。
+## <a name="configure-the-certificate-store-on-the-update-server"></a>設定更新伺服器上的憑證存放區
+ Updates Publisher 使用數位憑證來簽署它所發行之目錄中的更新。 在目錄可以發行到更新伺服器之前，該憑證必須位於更新伺服器上的憑證存放區，以及 Updates Publisher 電腦的憑證存放區中 (若該電腦位於更新伺服器的遠端)。
 
-下面的过程是将证书添加到更新服务器上证书存储的几种可行方法之一。
+下列程序是將憑證新增到更新伺服器上憑證存放區的其中一種方法。
 
-### <a name="to-configure-the-certificate-store"></a>如何配置证书存储
-1.  在有权访问 Updates Publisher 计算机和更新服务器的计算机上，依次单击“开始”和“运行”，在文本框中键入“MMC”，然后单击“确定”，打开 Microsoft 管理控制台 (MMC)。
+### <a name="to-configure-the-certificate-store"></a>設定憑證存放區
+1.  在可以存取 Updates Publisher 電腦及更新伺服器的電腦上，按一下 [開始]，按一下 [執行]，在文字方塊中輸入 **MMC**，然後按一下 [確定] 以開啟 Microsoft Management Console (MMC)。
 
-2.  依次单击“文件”、“添加/删除管理单元”、“添加”、“证书”和“添加”，选择“计算机帐户”，然后单击“下一步”。
+2.  依序按一下 [檔案]、[新增/移除嵌入式管理單元]、[新增]、[憑證]、[新增]，選取 [電腦帳戶]，然後按一下 [下一步]。
 
-3.  选择“另一台计算机”，键入更新服务器的名称或单击“浏览”找到更新服务器计算机，然后依次单击“完成”、“关闭”和“确定”。
+3.  選取 [另一部電腦]，輸入更新伺服器的名稱，或按一下 [瀏覽] 來尋找更新伺服器電腦，依序按一下 [完成]、[關閉]、[確定]。
 
-4.  依次展开“证书(*更新服务器名称*)”****和“WSUS”，然后单击“证书”。
+4.  依序展開 [憑證 (更新伺服器名稱)]**、[WSUS]，然後按一下 [憑證]。
 
-5.  在结果窗格中，右键单击相应证书，然后依次单击“所有任务”和“导出”。
+5.  在結果面板中，以滑鼠右鍵按一下目標憑證，按一下 [所有工作]，然後按一下 [匯出]。
 
-6.  在“证书导出向导”中，使用默认设置，创建包含向导中指定的名称和位置的导出文件。 此文件必须对更新服务器可用，然后才能继续执行下一步。
+6.  在 [憑證匯出精靈] 中，使用預設設定來以精靈中所指定的名稱和位置建立匯出檔。 繼續下一步之前，更新伺服器必須能存取此檔案。
 
-7.  右键单击“受信任的发布者”，然后依次单击“所有任务”和“导入”。 使用第 6 步中的导出文件完成“证书导入向导”。
+7.  以滑鼠右鍵按一下 [受信任的發行者]，按一下 [所有工作]，然後按一下 [匯入]。 使用在步驟 6 匯出的檔案來完成 [憑證匯入精靈]。
 
-8.  如果使用的是自签名证书（如“WSUS 发布者自签名”），请右键单击“受信任的根证书颁发机构”，然后依次单击“所有任务”和“导入”。 使用第 6 步中的导出文件完成“证书导入向导”。
+8.  若使用自我簽署憑證 (例如「WSUS 發行者自我簽署」)，請以滑鼠右鍵按一下 [信任的根憑證授權]，按一下 [所有工作]，然後按一下 [匯入]。 使用在步驟 6 匯出的檔案來完成 [憑證匯入精靈]。
 
-9.  右键单击“证书(*更新服务器名称*)**”**，单击“连接到另一台计算机”，输入 Updates Publisher 计算机的计算机名称，然后单击“确定”。
+9.  以滑鼠右鍵按一下 [憑證 (更新伺服器名稱)]**，按一下 [連線至另一部電腦]，輸入 Updates Publisher 電腦的電腦名稱，然後按一下 [確定]。
 
-10. 如果 Updates Publisher 计算机远离更新服务器，请重复执行第 7-9 步，将证书导入 Updates Publisher 计算机上的证书存储。
+10. 如果 Updates Publisher 位於更新伺服器的遠端，請重複步驟 7 至步驟 9 的動作，以將憑證匯入 Updates Publisher 電腦上的憑證存放區。
 
 
 
-## <a name="configure-a-self-signing-certificate-on-client-computers"></a>在客户端计算机上配置自签名证书
-在客户端计算机上，Windows 更新代理 (WUA) 会扫描目录中的更新。 如果代理在本地计算机上的“受信任的发布者”证书存储中找不到相应的数字证书时，将无法通过此过程安装更新。 如果发布更新目录时使用的是自签名证书（如“WSUS 发布者自签名”），证书还必须位于本地计算机上的“受信任的根证书颁发机构”证书存储中，这样代理才能验证证书的有效性。
+## <a name="configure-a-self-signing-certificate-on-client-computers"></a>在用戶端電腦上設定自我簽署憑證
+在用戶端電腦上，Windows Update 代理程式 (WUA) 會掃描目錄中的更新。 當代理程式無法在本機電腦上的「受信任的發行者」存放區中找到數位憑證時，此程序將無法安裝更新。 若使用自我簽署憑證 (例如「WSUS 發行者自我簽署」) 來發行更新目錄，則該憑證也必須位於本機電腦的「信任的根憑證授權」憑證存放區中，讓代理程式能驗證該憑證是否有效。
 
-在客户端计算机上配置证书的方法有多种，如使用组策略和“证书导入向导”，或使用 CertUtil 工具和软件分发。可以使用其中一种。
+您可以使用數種方法來在用戶端電腦上設定憑證，例如使用群組原則和「憑證匯入精靈」，或使用 Certutil 工具和軟體發佈。
 
-下面的示例展示了如何在客户端计算机上配置签名证书。
+以下提供在用戶端電腦上設定簽署憑證的其中一個範例。
 
-### <a name="to-configure-a-self-signing-certificate-on-client-computers"></a>如何在客户端计算机上配置自签名证书
-1.  在有权访问更新服务器的计算机上，依次单击“开始”和“运行”，在文本框中键入“MMC”，然后单击“确定”，打开 Microsoft 管理控制台 (MMC)。
+### <a name="to-configure-a-self-signing-certificate-on-client-computers"></a>在用戶端電腦上設定自我簽署憑證
+1.  在可以存取更新伺服器的電腦上，按一下 [開始]，按一下 [執行]，在文字方塊中輸入 **MMC**，然後按一下 [確定] 以開啟 Microsoft Management Console (MMC)。
 
-2.  依次单击“文件”、“添加/删除管理单元”、“添加”、“证书”和“添加”，选择“计算机帐户”，然后单击“下一步”。
+2.  依序按一下 [檔案]、[新增/移除嵌入式管理單元]、[新增]、[憑證]、[新增]，選取 [電腦帳戶]，然後按一下 [下一步]。
 
-3.  选择“另一台计算机”，键入更新服务器的名称或单击“浏览”找到更新服务器计算机，然后依次单击“完成”、“关闭”和“确定”。
+3.  選取 [另一部電腦]，輸入更新伺服器的名稱，或按一下 [瀏覽] 來尋找更新伺服器電腦，依序按一下 [完成]、[關閉]、[確定]。
 
-4.  依次展开“证书(*更新服务器名称*)**”**和“WSUS”，然后单击“证书”。
+4.  依序展開 [憑證 (更新伺服器名稱)]**、[WSUS]，然後按一下 [憑證]。
 
-5.  右键单击结果窗格中的证书，然后依次单击“所有任务”和“导出”。 使用默认设置完成“证书导出向导”，创建包含向导中指定的名称和位置的导出证书文件。
+5.  在結果面板中，以滑鼠右鍵按一下憑證，按一下 [所有工作]，然後按一下 [匯出]。 使用預設設定來完成 [憑證匯出精靈]，來以精靈中所指定的名稱和位置建立匯出憑證檔。
 
-6.  使用下面的方法之一，将用于对更新目录进行签名的证书添加到每个使用 WUA 扫描目录中更新的客户端计算机中。 在客户端计算机上添加证书，如下所述：
+6.  使用下列其中一種方法來將簽署更新目錄的憑證，新增到每部會使用 WUA 在目錄中掃描更新的用戶端電腦。 以下列方式在用戶端電腦上新增憑證：
 
-    -   对于自签名证书：将证书添加到“受信任的根证书颁发机构”和“受信任的发布者”证书存储中。
+    -   針對自我簽署憑證：將憑證新增到 [信任的根憑證授權] 和 [受信任的發行者] 憑證存放區。
 
-    -   对于证书颁发机构 (CA) 颁发的证书：将证书添加到“受信任的发布者”证书存储中。
+    -   針對憑證授權單位 (CA) 所發行的憑證：將憑證新增到 [受信任的發行者] 憑證存放區。
 
     > [!NOTE]
-    > WUA 还会检查本地计算机上是否启用了“允许来自 Intranet Microsoft 更新服务位置的签名内容”组策略设置。 必须为 WUA 启用此策略设置，以扫描使用 Updates Publisher 创建和发布的更新。 若要详细了解如何启用此组策略设置，请参阅[如何在客户端计算机上配置组策略](https://technet.microsoft.com/library/bb530967.aspx(d=robot))。
+    > WUA 也會檢查本機電腦上是否啟用 [允許來自內部網路 Microsoft 更新服務位置的已簽署內容] 群組原則設定。 必須為 WUA 啟用此原則設定，以掃描使用更新發行者建立與發行的更新。 如需啟用此群組原則設定的詳細資訊，請參閱[如何在用戶端電腦上設定群組原則](https://technet.microsoft.com/library/bb530967.aspx(d=robot)。
 
 
 
-## <a name="configuring-group-policy-to-allow-wua-on-computers-to-scan-for-published-updates"></a>将组策略配置为允许计算机上的 WUA 扫描已发布的更新
-必须先启用“允许来自 Intranet Microsoft 更新服务位置的签名内容”策略设置，然后计算机上的 Windows 更新代理 (WUA) 才能扫描使用 Updates Publisher 创建和发布的更新。 启用此策略设置后，如果更新已在本地计算机上的“受信任的发布者”证书存储中进行过签名，WUA 会接受通过 Intranet 位置收到的更新。 在环境中的计算机上配置组策略的方法有多种。
+## <a name="configuring-group-policy-to-allow-wua-on-computers-to-scan-for-published-updates"></a>設定群組原則以允許電腦上的 WUA 掃描已發行的更新。
+在電腦上的 Windows Update 代理程式 (WUA) 可以掃描由 Updates Publisher 所建立及發行的更新之前，必須先啟用原則設定，以允許來自內部網路 Microsoft 更新服務位置的已簽署內容。 啟用原則設定之後，若更新是在本機電腦上的 [受信任的發行者] 憑證存放區中簽署，WUA 將接受透過內部網路位置接收的更新。 有數種方法可以在環境中設定電腦上的群組原則。
 
-对于不在域中的计算机，可以配置注册表项设置，从而允许来自 Intranet Microsoft 更新服务位置的签名内容。
+針對沒有位於網域上的電腦，可以設定登錄機碼設定，以允許來自內部網路 Microsoft 更新服務位置位置的已簽署內容。
 
-下面的过程展示了为域中的计算机配置组策略，以及为不在域中的计算机配置注册表项值的基本步骤。
+以下程序提供基礎步驟，可針對網域上的電腦設定群組原則，以及針對沒有位於網域上的電腦設定登錄機碼。
 
-### <a name="to-configure-group-policy-to-allow-wua-to-scan-for-published-updates"></a>如何将组策略配置为允许 WUA 扫描已发布的更新
-1.  以拥有配置组策略的相应安全权限的用户身份，打开组策略对象编辑器 Microsoft 管理控制台 (MMC) 管理单元。
+### <a name="to-configure-group-policy-to-allow-wua-to-scan-for-published-updates"></a>設定群組原則以允許 WUA 掃描已發行的更新
+1.  使用具有適當安全性權限以設定群組原則的角色，開啟群組原則物件編輯器 Microsoft Management Console (MMC) 嵌入式管理單元。
 
-2.  单击“浏览”，然后选择域、OU 或与网站相关联的 GPO（已配置的组策略在网站中传播到相应客户端计算机）。 依次单击“确定”、“完成”、“关闭”和“确定”。
+2.  按一下 [瀏覽]，並選取連結到已設定群組原則會傳播至目標用戶端電腦之站台的網域、OU 或 GPO。 依序按一下 [確定]、[完成]、[關閉]，然後按一下 [確定]。
 
-3.  在控制台树中依次展开选定策略设置、“计算机配置”、“管理模板”和“Windows 组件”，然后单击“Windows 更新”。
+3.  在主控台樹狀目錄中展開選取的原則設定，依序展開 [電腦設定]、[系統管理範本] 和 [Windows 元件]，然後按一下 [Windows Update]。
 
-4.  在结果窗格中，右键单击“允许来自 Intranet Microsoft 更新服务位置的签名内容”，然后依次单击“属性”、“已启用”和“确定”。
-
+4.  在結果窗格中，以滑鼠右鍵按一下 [允許來自內部網路 Microsoft 更新服務位置的已簽署內容]，再依序按一下 [內容]、[啟用]、[確定]。

@@ -1,6 +1,6 @@
 ---
-title: "部署软件更新 | Microsoft Docs"
-description: "在 Configuration Manager 控制台中选择软件更新以手动启动部署过程或自动部署更新。"
+title: "部署軟體更新 | Microsoft Docs"
+description: "在 Configuration Manager 主控台中選擇軟體更新，以手動開始部署程序，或自動部署更新。"
 keywords: 
 author: dougeby
 ms.author: dougeby
@@ -9,74 +9,67 @@ ms.date: 10/06/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: 04536d51-3bf7-45e5-b4af-36ceed10583d
-translationtype: Human Translation
-ms.sourcegitcommit: e6cf8c799b5be2f7dbb6fadadddf702ec974ae45
 ms.openlocfilehash: 70a0ad1da03a7ca88df206fec683ab1df2b531e1
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
+#  <a name="BKMK_SUMDeploy"></a> 部署軟體更新  
 
-#  <a name="a-namebkmksumdeploya-deploy-software-updates"></a><a name="BKMK_SUMDeploy"></a> 部署软件更新  
+適用於：System Center Configuration Manager (最新分支)
 
-*适用范围：System Center Configuration Manager (Current Branch)*
-
-软件更新部署阶段是指部署软件更新的过程。 无论如何部署软件更新，更新通常都会添加到软件更新组，软件更新会下载到分发点，并且更新组会部署到客户端。 当你创建部署时，系统会将关联软件更新策略发送到客户端计算机，从分发点将软件更新内容文件下载至客户端计算机上的本地缓存，然后即可从客户端安装软件更新。 Internet 上的客户端将从 Microsoft 更新下载内容。  
-
-> [!NOTE]  
->  你可以在 Intranet 上配置客户端，以在未提供分发点时从 Microsoft 更新下载软件更新。  
+軟體更新部署階段是部署軟體更新的程序。 不論您如何部署軟體更新，更新通常會新增到軟體更新群組，軟體更新會下載到發佈點，然後更新群組會部署至用戶端。 在您建立部署時，會將相關軟體更新原則傳送至用戶端電腦，然後從發佈點將軟體更新內容檔案下載到用戶端電腦上的本機快取，接著就能從用戶端安裝軟體更新。 網際網路上的用戶端則會從 Microsoft Update 下載內容。  
 
 > [!NOTE]  
->  与其他部署类型不同，无论客户端上的最大缓存大小如何设置，所有软件更新均会下载到客户端缓存中。 有关客户端缓存设置的详细信息，请参阅 [Configure the Client Cache for Configuration Manager Clients](../../core/clients/manage/manage-clients.md#BKMK_ClientCache)。  
+>  若沒有可用的發佈點，您可以在內部網路上設定用戶端，從 Microsoft Update 下載軟體更新。  
 
-如果配置必需的软件更新部署，则软件更新将于计划的截止时间自动安装。 或者，客户端计算机上的用户可以在截止时间前计划或启动软件更新安装。 在尝试的安装后，客户端计算机会将状态消息发回站点服务器以报告软件更新安装是否成功。 有关软件更新部署的详细信息，请参阅 [Software update deployment workflows](../understand/software-updates-introduction.md#BKMK_DeploymentWorkflows)。  
+> [!NOTE]  
+>  和其他部署類型不同的是，無論用戶端上設定的最大快取大小是多少，所有的軟體更新都會下載到用戶端快取。 如需有關用戶端快取設定的詳細資訊，請參閱 [Configure the Client Cache for Configuration Manager Clients](../../core/clients/manage/manage-clients.md#BKMK_ClientCache)。  
 
-部署软件更新有两个主要方案：手动部署和自动部署。 通常，首先会手动部署软件更新以为客户端计算机创建基线，然后将通过使用自动部署来管理客户端上的软件更新。  
+如果您設定必要的軟體更新部署，就會在排程期限自動安裝軟體更新。 或者，用戶端電腦上的使用者可以在期限前排程或起始軟體更新安裝。 在嘗試安裝後，用戶端電腦會將狀態訊息傳回網站伺服器，回報軟體更新安裝是否成功。 如需軟體更新部署的詳細資訊，請參閱 [Software update deployment workflows](../understand/software-updates-introduction.md#BKMK_DeploymentWorkflows)。  
 
-## <a name="a-namebkmkmanualdeploymenta-manually-deploy-software-updates"></a><a name="BKMK_ManualDeployment"></a>手动部署软件更新
-可以在 Configuration Manager 控制台中选择软件更新并手动启动部署过程。 在创建将管理进行中的每月软件更新部署的自动部署规则之前，你通常将使用此部署方法以用所需的软件更新使客户端计算机保持最新，并部署带外软件更新要求。 以下列表提供手动部署软件更新的一般工作流：  
+部署軟體更新的主要狀況有兩種：手動部署和自動部署。 通常，您一開始會以手動部署軟體更新以建立用戶端電腦的基準，然後使用自動部署管理用戶端上的軟體更新。  
 
-1. 使用特定要求的软件更新的筛选。 例如，你可以提供条件，以检索在 50 多台客户端设备上所需要的所有安全或严重软件更新。  
-2. 创建包含软件更新的软件更新组。  
-3. 下载软件更新组中的软件更新的内容。  
-4. 手动部署软件更新组。
+## <a name="BKMK_ManualDeployment"></a> 手動部署軟體更新
+您可以在 Configuration Manager 主控台中選取軟體更新，並手動開始部署程序。 在您建立自動部署規則以管理每月進行中的軟體更新部署之前，您通常會使用這種部署方式以必要的軟體更新讓用戶端電腦保持在最新狀態，以及部署超出訊號範圍的軟體更新需求。 以下清單提供手動部署軟體更新的一般工作流程：  
 
-有关详细步骤，请参阅[手动部署软件更新](manually-deploy-software-updates.md)。
+1. 篩選使用特定需求的軟體更新。 例如，您可以提供可擷取所有安全性或 50 部以上用戶端電腦上必要的重要軟體更新的準則。  
+2. 建立含有軟體更新的軟體更新群組。  
+3. 在軟體更新群組中下載軟體更新的內容。  
+4. 手動部署軟體更新群組。
 
-## <a name="automatically-deploy-software-updates"></a>自动部署软件更新
-通过使用自动部署规则 (ADR).配置自动软件更新部署。 这是部署每月软件更新（通常称为“周二补丁日”）的常见方法，并且用于管理定义更新。 规则运行时，软件更新将从软件更新组中删除（如果使用现有更新组），将符合指定条件（例如，在最后一月中发布的所有安全软件更新）的软件更新添加到软件更新组中，软件更新的内容文件将下载和复制到分发点，并将软件更新部署到目标集合中的客户端。 以下列表提供自动部署软件更新的一般工作流：  
+如需詳細步驟，請參閱[手動部署軟體更新](manually-deploy-software-updates.md)。
 
-1.  创建 ADR 以指定部署设置。
-2.  软件更新会添加到软件更新组中。  
-3.  如果已指定软件更新组，则将其部署到目标集合中的客户端计算机。  
+## <a name="automatically-deploy-software-updates"></a>自動部署軟體更新
+自動軟體更新部署是使用自動部署規則 (ADR) 來設定。 這是每月軟體更新 (一般稱為「週二修補程式日」(Patch Tuesday)) 和管理定義更新的常見部署方式。 執行規則時，軟體更新會從軟體更新群組中移除 (使用現有更新群組時)，符合指定準則的軟體更新 (例如，上個月發行的所有安全性軟體更新) 會新增至軟體更新群組，軟體更新的內容檔案會下載並複製到發佈點，且軟體更新會部署至目標集合中的用戶端。 以下清單提供自動部署軟體更新的一般工作流程：  
 
-必须确定要在环境中使用的部署策略。 例如，你可以创建 ADR 并以测试客户端集合为目标。 验证在测试组上是否安装了软件更新之后，你可以在规则中添加新部署或将现有部署中的集合更改为包含更大客户端集的目标集合。 ADR 所创建的软件更新对象具有交互性。  
+1.  建立指定部署設定的 ADR。
+2.  軟體更新會新增至軟體更新群組。  
+3.  軟體更新群組會部署至目標集合中的用戶端電腦 (如果有指定)。  
 
--   使用 ADR 部署的软件更新会自动部署到已添加到目标集合的新客户端。  
--   添加到软件更新组的新软件更新会自动部署到目标集合中的客户端。  
--   你可以针对 ADR 随时启用或禁用部署。  
+您必須決定要在您的環境中使用哪種部署策略。 例如，您可能會建立 ADR，並且以測試用戶端集合為目標。 在您確認軟體更新已安裝在測試群組上之後，您便可以在規則中加入新的部署，或將現有部署中的集合變更為包含更多用戶端集合的目標集合。 ADR 建立的軟體更新物件皆為互動式。  
 
-创建 ADR 后，可以将其他部署添加到规则。 这可以帮助你管理将不同更新部署到不同集合的复杂性。 每个新部署均具有完整的功能和部署监视体验，且你添加的每个新部署具有以下特性：  
+-   使用 ADR 部署的軟體更新會自動部署至已加入目標集合的新用戶端。  
+-   新增至軟體更新群組的軟體更新會自動部署至目標集合中的用戶端。  
+-   您可以隨時啟用或停用 ADR 的部署。  
 
--   使用的更新组和包与在 ADR 首次运行时创建的更新组和包相同  
+建立 ADR 之後，您可以將其他的部署加入規則中。 如此可協助您管理將不同更新部署到不同集合的複雜性。 每個新部署都會有完整的功能和部署監視體驗，而且每個加入的新部署都：  
+
+-   使用 ADR 第一次執行時所建立的相同更新群組和封裝  
 -   可以指定不同的集合  
--   支持唯一部署属性，包括：  
-   -   激活时间  
-   -   截止时间  
-   -   显示或隐藏最终用户体验  
-   -   针对此部署的单独警报  
+-   支援獨特的部署內容，包括：  
+   -   啟用時間  
+   -   期限  
+   -   顯示或隱藏使用者經驗  
+   -   分隔這個部署的警示  
 
-有关详细步骤，请参阅[自动部署软件更新](automatically-deploy-software-updates.md)
+如需詳細步驟，請參閱[自動部署軟體更新](automatically-deploy-software-updates.md)
 
 <!-- ###  <a name="BKMK_ClientCache"></a> Client cache setting  
 The Configuration Manager client downloads the content for required software updates to the local client cache soon after it receives the deployment. However, the client waits to download the content until after the **Software available time** setting for the deployment. The client does not download software updates in optional deployments (deployments that do not have a scheduled installation deadline) until the user manually starts the installation. When the configured deadline passes, the software updates client agent performs a scan to verify that the software update is still required, then the software updates client agent checks the local cache on the client computer to verify that the software update source file is still available, and then installs the software update. If the content was deleted from the client cache to make room for another deployment, the client downloads the software updates to the cache. Software updates are always downloaded to the client cache regardless of the configured maximum client cache size. For other deployments, such as applications or packages, the client only downloads content that is within the maximum cache size that you configure for the client. Cached content is not automatically deleted, but it remains in the cache for at least one day after the client used that content.  -->
 
 
  <!-- For more information about the deployment process, see [Software update deployment process](../../sum/understand/software-updates-introduction.md#BKMK_DeploymentProcess).  -->
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-

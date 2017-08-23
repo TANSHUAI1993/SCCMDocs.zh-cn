@@ -1,230 +1,227 @@
 ---
-title: "使用 System Center Configuration Manager，通过远程擦除、锁定或密码重置功能保护数据 | Microsoft Docs"
-description: "使用 System Center Configuration Manager，通过完全擦除、选择性擦除、远程锁定或密码重置功能保护设备数据。"
+title: "使用 System Center Configuration Manager 透過遠端抹除、鎖定或密碼重設來協助保護資料 | Microsoft Docs"
+description: "使用 System Center Configuration Manager 透過完整抹除、選擇性抹除、遠端鎖定或密碼重設來協助保護裝置資料。"
 ms.custom: na
 ms.date: 03/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 770da7bd-02dd-474a-9604-93ff1ea0c1e4
-caps.latest.revision: 18
-caps.handback.revision: 0
+caps.latest.revision: "18"
+caps.handback.revision: "0"
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dda2f4c01078fbbd174cbcb30357554c24f6abeb
 ms.openlocfilehash: 351fdc6328dd0859d60e00b128963df738e69f81
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="protect-data-with-remote-wipe-lock-or-passcode-reset-by-using-system-center-configuration-manager"></a>使用 System Center Configuration Manager，通过远程擦除、锁定或密码重置功能保护数据
+# <a name="protect-data-with-remote-wipe-lock-or-passcode-reset-by-using-system-center-configuration-manager"></a>使用 System Center Configuration Manager 透過遠端抹除、鎖定或密碼重設來協助保護資料
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+適用於：System Center Configuration Manager (最新分支)
 
-System Center Configuration Manager 提供选择性擦除、完全擦除、远程锁定以及密码重置功能。 移动设备可以存储敏感的公司数据并提供对许多公司资源的访问。 为了保护设备，你可以发出以下命令：  
+System Center Configuration Manager 提供選擇性抹除、完整抹除、遠端鎖定和密碼重設功能。 行動裝置可能儲存了公司機密資料，並可用來存取許多公司資源。 若要協助保護裝置，您可以發出：  
 
-- 用于将设备还原为其出厂默认设置的完全擦除命令。  
+- 完整抹除，將裝置還原回其出廠設定。  
 
-- 只删除公司数据的选择性擦除命令。  
+- 選擇性抹除，只移除公司資料。  
 
-- 用于帮助保护设备安全的远程锁定可能会丢失。  
+- 遠端鎖定，協助保護可能遺失的裝置。  
 
-- 重置设备密码。  
+- 重設裝置密碼。  
 
-## <a name="full-wipe"></a>完全擦除  
-如果需要保护遗失设备的安全或者停用正在使用的设备，你可以向设备发出擦除命令。  
+## <a name="full-wipe"></a>完整抹除  
+當您需要保護遺失的裝置或要淘汰現役裝置時，即可出對該裝置發出資料抺除命令。  
 
-向设备发出“完全擦除”  命令以将设备还原为其出厂默认值。 这将删除所有公司及用户数据和设置。 可以在 Windows Phone、iOS、Android 和 Windows 10 上执行完全擦除。  
+對裝置發出 **完整抹除** 命令，將裝置還原回其出廠預設值。 如此會移除公司和使用者所有的資料和設定。 您可以在 Windows Phone、iOS、Android 與 Windows 10 裝置上完整抹除。  
 
 > [!NOTE]
-> 擦除版本早于 1511，且 RAM 小于 4 GB 的 Windows 10 设备可能会使该设备不响应。 [了解详细信息](https://technet.microsoft.com/library/mt592024.aspx#full-wipe-disables-windows-10-devices-with-less-than-4-gb-ram)。
+> 抹除 1511 版以前小於 4 GB RAM 的 Windows 10 裝置，可能會導致裝置沒有回應。 [進一步了解](https://technet.microsoft.com/library/mt592024.aspx#full-wipe-disables-windows-10-devices-with-less-than-4-gb-ram)。
 
-#### <a name="to-initiate-a-remote-wipe-from-the-configuration-manager-console"></a>从 Configuration Manager 控制台启动远程擦除  
+#### <a name="to-initiate-a-remote-wipe-from-the-configuration-manager-console"></a>從 Configuration Manager 主控台起始遠端抹除  
 
-1. 在 Configuration Manager 控制台中，选择“资产和符合性”，然后选择“设备”。 或者，可以选择“设备集合”并选择一个集合。  
+1. 在 Configuration Manager 主控台中，選擇 [資產與相容性]，然後選擇 [裝置]。 或者，您可以選擇 [裝置集合]，然後選取集合。  
 
-2. 选择需停用/擦除的设备。  
+2. 選取要淘汰/抹除的裝置。  
 
-3. 选择“设备组”中的“远程设备操作”，然后选择“停用/擦除”。  
+3. 在 [裝置群組] 中選擇 [遠端裝置動作]，然後選擇 [淘汰/抹除]。  
 
-## <a name="selective-wipe"></a>选择性擦除  
-向设备发出“选择性擦除”  命令以仅删除公司数据。 下表按平台描述了将删除什么数据，以及执行选择性擦除后对设备上保留的数据的影响。  
+## <a name="selective-wipe"></a>選擇性抹除  
+對裝置發出 **選擇性抹除** 命令，僅移除公司資料。 下表依平台說明移除了哪些資料，以及在選擇性抹除後對於保留在裝置上的資料有何影響。  
 
-**Android**  
+**iOS**  
 
-|注销设备时删除的内容|iOS|  
+|淘汰裝置時移除的內容|iOS|  
 |--------------------------------------------|---------|  
-|使用 Configuration Manager 和 Intune 安装的公司应用及关联数据|卸载应用。 删除公司应用数据。|  
-|VPN 和 Wi-Fi 配置文件|删除。|  
-|证书|删除并吊销。|  
-|设置|已删除，除了：**允许语音漫游**、**允许数据漫游**和**允许漫游时自动同步**。|  
-|管理代理|删除管理配置文件。|  
-|电子邮件配置文件|对于由 Intune 设置的电子邮件配置文件，将删除电子邮件帐户和电子邮件。|  
+|使用 Configuration Manager 和 Intune 安裝公司應用程式及相關資料|已解除安裝應用程式。 將會移除公司應用程式資料。|  
+|VPN 和 Wi-Fi 設定檔|已移除。|  
+|憑證|已移除並撤銷。|  
+|設定|已移除，除了︰[允許語音漫遊]、[允許數據漫遊] 和 [允許在漫遊時自動同步處理]。|  
+|管理代理程式|移除管理設定檔。|  
+|電子郵件設定檔|若為由 Intune 所設定的電子郵件設定檔，電子郵件帳戶和電子郵件將被移除。|  
 
-**Android 和 Android Samsung KNOX 标准版**  
+**Android 和 Android Samsung KNOX Standard**  
 
-|注销设备时删除的内容|Android|Samsung KNOX 标准版|  
+|淘汰裝置時移除的內容|Android|Samsung KNOX Standard|  
 |--------------------------------------------|-------------|------------------|  
-|使用 Configuration Manager 和 Intune 安装的公司应用及关联数据|保留已安装的应用和数据。|卸载应用。|  
-|VPN 和 Wi-Fi 配置文件|删除。|删除。|  
-|证书|吊销。|吊销。|  
-|设置|删除要求。|删除要求。|  
-|管理代理|撤销设备管理员权限。|撤销设备管理员权限。|  
-|电子邮件配置文件|不适用。|对于由 Intune 设置的电子邮件配置文件，将删除电子邮件帐户和电子邮件。|  
+|使用 Configuration Manager 和 Intune 安裝公司應用程式及相關資料|應用程式和資料仍會保持安裝。|已解除安裝應用程式。|  
+|VPN 和 Wi-Fi 設定檔|已移除。|已移除。|  
+|憑證|已撤銷。|已撤銷。|  
+|設定|已移除需求。|已移除需求。|  
+|管理代理程式|撤銷裝置系統管理員權限。|撤銷裝置系統管理員權限。|  
+|電子郵件設定檔|不適用。|若為由 Intune 所設定的電子郵件設定檔，電子郵件帳戶和電子郵件將被移除。|  
 
 **Android for Work**
 
-在 Android for Work 设备上执行选择性擦除将删除该设备上的工作配置文件以及工作配置文件中的的所有数据、应用和设置。 这将在 Configuration Manager 和 Intune 中停用对该设备的管理。 Android for Work 不支持完全擦除。
+在 Android for Work 裝置上執行選擇性抹除會移除該裝置上的工作設定檔，以及工作設定檔中的所有資料、應用程式和設定。 這會從 Configuration Manager 和 Intune 的管理中淘汰該裝置。 Android for Work 不支援完整抹除。
 
  **Windows 10、Windows 8.1、Windows RT 8.1 和 Windows RT**  
 
-|注销设备时删除的内容|Windows 10、Windows 8.1 和 Windows RT 8.1|  
+|淘汰裝置時移除的內容|Windows 10、Windows 8.1 和 Windows RT 8.1|  
 |---------------------------------|-------------|
-|使用 Configuration Manager 和 Intune 安装的公司应用及关联数据|将卸载应用并删除旁加载密钥。 使用 Windows 选择性擦除的应用将吊销加密密钥，并且数据将不再可访问。|  
-|VPN 和 Wi-Fi 配置文件|删除。|  
-|证书|删除并吊销。|  
-|设置|删除要求。|
-|管理代理|不适用。 管理代理为内置。|  
-|电子邮件配置文件|删除启用了 EFS 的电子邮件，包括 Windows 电子邮件和附件的邮件应用。|  
+|使用 Configuration Manager 和 Intune 安裝公司應用程式及相關資料|將解除安裝應用程式並且移除側載金鑰。 使用 Windows 選擇性抺除的應用程式將會撤銷加密金鑰，而資料將再也無法存取。|  
+|VPN 和 Wi-Fi 設定檔|已移除。|  
+|憑證|已移除並撤銷。|  
+|設定|已移除需求。|
+|管理代理程式|不適用。 管理代理程式是內建項目。|  
+|電子郵件設定檔|移除已啟用 EFS 的電子郵件，且該電子郵件包含適用於 Windows 電子郵件與附件的郵件應用程式。|  
 
- **Windows 10 移动版、Windows Phone 8.0 和 Windows Phone 8.1**
+ **Windows 10 行動裝置版、Windows Phone 8.0 和 Windows Phone 8.1**
 
-|注销设备时删除的内容|Windows 10 移动版、Windows Phone 8 和 Windows Phone 8.1|  
+|淘汰裝置時移除的內容|Windows 10 行動裝置版、Windows Phone 8 和 Windows Phone 8.1|  
 |-|-|
-|使用 Configuration Manager 和 Intune 安装的公司应用及关联数据|卸载应用。 删除公司应用数据。|  
-|VPN 和 Wi-Fi 配置文件|已针对 Windows 10 移动版和 Windows Phone 8.1 删除。|  
-|证书|从 Windows Phone 8.1 中删除。|  
-|管理代理|不适用。 管理代理为内置。|  
-|电子邮件配置文件|已删除（除 Windows Phone 8.0 外）。|  
+|使用 Configuration Manager 和 Intune 安裝公司應用程式及相關資料|已解除安裝應用程式。 將會移除公司應用程式資料。|  
+|VPN 和 Wi-Fi 設定檔|移除 Windows 10 行動裝置版和 Windows Phone 8.1。|  
+|憑證|從 Windows Phone 8.1 中移除。|  
+|管理代理程式|不適用。 管理代理程式是內建項目。|  
+|電子郵件設定檔|已移除 (除了 Windows Phone 8.0)。|  
 
-还从 Windows 10 移动版和 Windows Phone 8.1 设备删除了以下设置：  
+Windows 10 行動裝置版和 Windows Phone 8.1 裝置也移除了下列設定︰  
 
-- **需要密码才可解锁移动设备**  
-- **允许简单密码**  
-- **最短密码长度**  
-- **所需的密码类型**
-- **密码过期（天数）**  
-- **记住密码历史**  
-- **擦除设备前允许的重复登录失败次数**  
-- **需要提供密码之前处于非活动状态的分钟数**  
-- **所需密码类型 - 最小字符集数**  
-- **允许照相机**
-- **需要对移动设备加密**  
-- **允许使用可移动存储**  
-- **允许使用 Web 浏览器**  
-- **允许应用程序商店**  
-- **允许屏幕捕获**  
-- **允许使用地理位置**  
-- **允许 Microsoft 帐户**  
-- **允许复制和粘贴**  
-- **允许使用 Wi-Fi tethering**  
-- **允许自动连接到免费 Wi-Fi 热点**  
-- **允许 Wi-Fi 热点报告**  
-- **允许恢复出厂设置**
-- **允许使用蓝牙**  
-- **允许使用 NFC**
-- **允许 Wi-Fi**
+- **需要密碼來解除鎖定行動裝置**  
+- **允許簡單密碼**  
+- **密碼長度下限**  
+- **必要的密碼類型**
+- **密碼到期 (天數)**  
+- **記住密碼歷程記錄**  
+- **重複登入失敗多少次之後抹除該裝置**  
+- **在非使用狀態幾分鐘後需要輸入密碼**  
+- **必要的密碼類型 - 字元集數目下限**  
+- **允許相機**
+- **行動裝置需要加密**  
+- **允許卸除式存放裝置**  
+- **允許網頁瀏覽器**  
+- **允許應用程式市集**  
+- **允許螢幕擷取**  
+- **允許使用地理位置**  
+- **允許 Microsoft 帳戶**  
+- **允許複製並貼上**  
+- **允許 Wi-Fi 網際網路共用功能**  
+- **允許自動連線到免費的 Wi-Fi 熱點**  
+- **允許 Wi-Fi 熱點回報**  
+- **允許原廠重設**
+- **允許藍芽**  
+- **允許 NFC**
+- **允許 Wi-Fi**
 
-#### <a name="to-initiate-a-remote-wipe-from-the-configuration-manager-console"></a>从 Configuration Manager 控制台启动远程擦除  
+#### <a name="to-initiate-a-remote-wipe-from-the-configuration-manager-console"></a>從 Configuration Manager 主控台起始遠端抹除  
 
-1. 在 Configuration Manager 控制台中，选择“资产和符合性”，然后选择“设备”。 或者，可以选择“设备集合”并选择一个集合。  
+1. 在 Configuration Manager 主控台中，選擇 [資產與相容性]，然後選擇 [裝置]。 或者，您可以選擇 [裝置集合]，然後選取集合。  
 
-2. 选择需停用/擦除的设备。  
+2. 選取要淘汰/抹除的裝置。  
 
-3. 选择“设备组”中的“远程设备操作”，然后选择“停用/擦除”。  
+3. 在 [裝置群組] 中選擇 [遠端裝置動作]，然後選擇 [淘汰/抹除]。  
 
-## <a name="wiping-efs-enabled-content"></a>擦除启用了 EFS 的内容  
-Windows 8.1 和 Windows RT 8.1 支持选择性擦除加密文件系统 (EFS) 加密的内容。 下列各项适用于启用 EFS 的内容的选择性擦除：  
+## <a name="wiping-efs-enabled-content"></a>抹除啟用 EFS 的內容  
+Windows 8.1 和 Windows RT 8.1 支援選擇性抹除加密檔案系統 (EFS) 加密的內容。 下列規則適用於支援選擇性抹除啟用 EFS 的內容：  
 
-- 仅选择性擦除由 EFS 通过与 Intune 帐户相同的 Internet 域保护的应用和数据。 有关详细信息，请参阅 [设备数据管理的 Windows 选择性擦除](http://technet.microsoft.com/library/dn486874.aspx)。  
+- 只有透過相同的網際網路網域作為 Intune 帳戶並被 EFS 保護的應用程式才會選擇性地抹除。 如需詳細資訊，請參閱 [Windows 選擇性清除裝置資料管理](http://technet.microsoft.com/library/dn486874.aspx)。  
 
-- 如果对与 EFS 关联的域进行了任何更改，则更改可能要花费长达 48 小时，之后才能对使用新域的应用和数据进行选择性擦除。  
+- 如果對 EFS 關聯的網域執行任何變更，在應用程式與資料使用能選擇性抹除的新網域前，變更項目需要至少 48 小時才能完成。  
 
-- 向 Intune 注册的每个域均为将擦除的域。  
+- 將會抹除每個已註冊 Intune 的網域。  
 
-EFS 选择性擦除当前支持的数据和应用：  
+EFS 選擇性抹除目前支援的資料和應用程式如下：  
 
-- Windows 相关邮件应用。  
+- Windows 郵件應用程式。  
 
-- 工作文件夹。
+- 工作資料夾。
 
-- 使用 EFS 加密的文件和文件夹。 有关详细信息，请参阅 [加密文件系统的最佳方案](http://support.microsoft.com/kb/223316)。  
+- 由 EFS 加密的檔案和資料夾。 如需詳細資訊，請參閱 [加密檔案系統的最佳作法](http://support.microsoft.com/kb/223316)。  
 
-### <a name="best-practices-for-selective-wipe"></a>选择性擦除的最佳方案  
+### <a name="best-practices-for-selective-wipe"></a>選擇性抹除的最佳做法  
 
-- 为 iOS 和 Windows Phone 8.1 设备设置电子邮件配置文件，以便成功擦除电子邮件。  
+- 若要成功抹除電子郵件，請在 iOS 和 Windows Phone 8.1 裝置上設定電子郵件設定檔。  
 
-- 确保通过移动设备应用管理分发了应用，以便成功擦除应用。  
+- 若要成功抹除應用程式，請確定該應用程式為透過行動裝置應用程式管理發佈。  
 
-- 对于 iOS，将设置“允许备份到 iCloud”配置为“不允许”，以使用户无法使用 iCloud 还原内容。  
+- 若為 iOS，請將 [允許備份至 iCloud] 設定設為 [不允許]，如此使用者無法使用 iCloud 還原內容。  
 
-- 如果帐户已停用一年，那么 Intune 将停用该帐户，并将执行选择性擦除。  
+- 如果帳戶停用達一年，Intune 將會淘汰帳戶並接著執行選擇性抹除。  
 
-##  <a name="passcode-reset"></a>密码重置  
-如果用户忘记密码，则你可以删除设备中的密码，或者在设备上强制使用新的临时密码，从而帮助用户解决问题。 下表列出了在不同移动平台上重置密码的方法。  
+##  <a name="passcode-reset"></a>密碼重設  
+如果使用者忘記密碼，您可以藉由從裝置移除密碼或是在裝置上強制套用新暫時密碼的方式來幫助使用者。 下表列出密碼重設在不同行動平台上的運作方式。  
 
-|平台|密码重置|  
+|平台|密碼重設|  
 |--------------|--------------------|  
-|iOS|支持以便清除设备中的密码。 不创建新的临时密码。|
-|macOS| 不支持。|
-|Android|支持并且创建临时密码。|
-|Android for Work | 不支持。|
-|Windows 10 电脑|不支持。|  
-|Windows 10 移动版|支持，已加入 Azure AD 的设备除外。|
-|Windows Phone 8.1|支持。|  
-|Windows RT 8.1 |不支持。|  
-|Windows 8.1 电脑 |不支持。|  
+|iOS|支援從裝置清除密碼。 不會建立新的暫時密碼。|
+|macOS| 不支援。|
+|Android|支援，且會建立暫時密碼。|
+|Android for Work | 不支援。|
+|Windows 10 電腦|不支援。|  
+|Windows 10 行動裝置|支援，但不包括加入 Azure AD 的裝置。|
+|Windows Phone 8.1|支援。|  
+|Windows RT 8.1 |不支援。|  
+|Windows 8.1 電腦 |不支援。|  
 
-#### <a name="to-reset-the-passcode-on-a-mobile-device-remotely-in-configuration-manager"></a>在 Configuration Manager 中远程重置移动设备上的密码  
+#### <a name="to-reset-the-passcode-on-a-mobile-device-remotely-in-configuration-manager"></a>在 Configuration Manager 遠端重設行動裝置的密碼  
 
-1. 在 Configuration Manager 控制台中，选择“资产和符合性”，然后选择“设备”。 或者，可以选择“设备集合”并选择一个集合。  
+1. 在 Configuration Manager 主控台中，選擇 [資產與相容性]，然後選擇 [裝置]。 或者，您可以選擇 [裝置集合]，然後選取集合。  
 
-2. 选择要重置密码的一台或多台设备。  
+2. 選取要重設密碼的一或多部裝置。  
 
-3. 选择“设备组”中的“远程设备操作”，然后选择“密码重置”。  
+3. 在 [裝置群組] 中選擇 [遠端裝置動作]，然後選擇 [密碼重設]。  
 
-#### <a name="to-show-the-state-of-the-passcode-reset"></a>显示密码重置状态  
+#### <a name="to-show-the-state-of-the-passcode-reset"></a>顯示密碼重設狀態  
 
-1. 在 Configuration Manager 控制台中，选择“资产和符合性”，然后选择“设备”。 或者，可以选择“设备集合”并选择一个集合。  
+1. 在 Configuration Manager 主控台中，選擇 [資產與相容性]，然後選擇 [裝置]。 或者，您可以選擇 [裝置集合]，然後選取集合。  
 
-2. 选择要显示密码重置状态的一台或多台设备。  
+2. 選取要顯示密碼重設狀態的一或多部裝置。  
 
-3. 选择“设备组”中的“远程设备操作”，然后选择“显示密码状态”。  
+3. 在 [裝置群組] 中選擇 [遠端裝置動作]，然後選擇 [顯示密碼狀態]。  
 
-## <a name="remote-lock"></a>远程锁定  
-如果用户丢失其设备，你可以远程锁定该设备。 下表列出了是如何在不同的移动平台上进行远程锁定的。  
+## <a name="remote-lock"></a>遠端鎖定  
+如果使用者遺失裝置，您可以從遠端鎖定裝置。 下表列出遠端鎖定在不同行動平台上的運作方式。  
 
-|平台|远程锁定|  
+|平台|遠端鎖定|  
 |--------------|-----------------|  
-|iOS|支持。|  
-|Android|支持。|  
-|Windows 10|此时不受支持。|  
-|Windows Phone 8 和 Windows Phone 8.1|支持。|  
-|Windows RT 8.1 |如果设备的当前用户是注册设备的相同用户，则支持。|  
-|Windows 8.1|如果设备的当前用户是注册设备的相同用户，则支持。|  
+|iOS|支援。|  
+|Android|支援。|  
+|Windows 10|目前不支援。|  
+|Windows Phone 8 和 Windows Phone 8.1|支援。|  
+|Windows RT 8.1 |如果目前的裝置使用者和註冊裝置的使用者是同一位時便支援。|  
+|Windows 8.1|如果目前的裝置使用者和註冊裝置的使用者是同一位時便支援。|  
 
-#### <a name="to-lock-a-mobile-device-remotely-through-the-configuration-manager-console"></a>通过 Configuration Manager 控制台远程锁定移动设备  
+#### <a name="to-lock-a-mobile-device-remotely-through-the-configuration-manager-console"></a>透過 Configuration Manager 主控台從遠端鎖定行動裝置  
 
-1. 在 Configuration Manager 控制台中，选择“资产和符合性”，然后选择“设备”。 或者，可以选择“设备集合”并选择一个集合。  
+1. 在 Configuration Manager 主控台中，選擇 [資產與相容性]，然後選擇 [裝置]。 或者，您可以選擇 [裝置集合]，然後選取集合。  
 
-2. 选择要锁定的一台或多台设备。  
+2. 選取要鎖定的一或多部裝置。  
 
-3. 选择“设备组”中的“远程设备操作”，然后选择“远程锁定”。  
+3. 在 [裝置群組] 中選擇 [遠端裝置動作]，然後選擇 [遠端鎖定]。  
 
-#### <a name="to-show-the-state-of-the-remote-lock"></a>显示远程锁定状态  
+#### <a name="to-show-the-state-of-the-remote-lock"></a>顯示遠端鎖定狀態  
 
-1. 在 Configuration Manager 控制台中，选择“资产和符合性”，然后选择“设备”。 或者，可以选择“设备集合”并选择一个集合。  
+1. 在 Configuration Manager 主控台中，選擇 [資產與相容性]，然後選擇 [裝置]。 或者，您可以選擇 [裝置集合]，然後選取集合。  
 
-2. 选择要显示远程锁定状态的设备。  
+2. 選取要顯示遠端鎖定狀態的裝置。  
 
-3. 选择“设备组”中的“远程设备操作”，然后选择“显示远程锁定状态”。  
+3. 在 [裝置群組] 中選擇 [遠端裝置動作]，然後選擇 [顯示遠端鎖定狀態]。  
 
-### <a name="see-also"></a>另请参阅  
-[Windows Selective Wipe for Device Data Management](http://technet.microsoft.com/library/dn486874.aspx)（设备数据管理的 Windows 选择性擦除）   
-
+### <a name="see-also"></a>請參閱  
+[Windows 選擇性清除裝置資料管理 (英文)](http://technet.microsoft.com/library/dn486874.aspx)   

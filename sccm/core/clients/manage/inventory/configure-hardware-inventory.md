@@ -1,53 +1,49 @@
 ---
-title: "配置硬件清单 | Microsoft Docs"
-description: "在 System Center Configuration Manager 中设置所有客户端或某个集合的硬件清单。"
+title: "設定硬體清查 | Microsoft Docs"
+description: "在 System Center Configuration Manager 中設定所有用戶端或集合的硬體清查。"
 ms.custom: na
 ms.date: 02/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0e45290e-f8f7-4335-801e-570225d12c2b
-caps.latest.revision: 5
-caps.handback.revision: 0
+caps.latest.revision: "5"
+caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 05c27c7aa36e0b4236867766dab36125c31467b3
-ms.openlocfilehash: deed112cca011b3b410c1197b7abf0f36a864f3c
-ms.contentlocale: zh-cn
-ms.lasthandoff: 01/03/2017
-
-
+ms.openlocfilehash: 0baadb95ec8dbb945f1a611ebb95a03cec3199bd
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-configure-hardware-inventory-in-system-center-configuration-manager"></a>How to configure hardware inventory in System Center Configuration Manager
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+適用於：System Center Configuration Manager (最新分支)
 
-此过程会为硬件清单配置默认客户端设置，并应用于层次结构中的所有客户端。 如果你希望这些设置仅应用于某些客户端，请创建自定义设备客户端设置，并将它分配给包含要使用硬件清单的设备的集合。 请参阅[如何在 System Center Configuration Manager 中配置客户端设置](../../../../core/clients/deploy/configure-client-settings.md)。  
+此程序可設定硬體清查的預設用戶端設定，並套用到階層中的所有用戶端。 如果您只想要將這些設定套用至部分用戶端，請建立自訂裝置用戶端設定，並將它指派給包含您要設定硬體清查之裝置的集合。 請參閱[如何在 System Center Configuration Manager 中設定用戶端設定](../../../../core/clients/deploy/configure-client-settings.md)。  
 
 > [!NOTE]  
->  如果客户端设备从多组客户端设置收到硬件清单设置，则来自每组设置的硬件清单类会在客户端报告硬件清单时进行合并。  
+>  如果用戶端裝置收到來自多組用戶端設定的硬體清查設定，則當用戶端報告硬體清查時，會將每組設定的硬體清查類別合併。  
 
-### <a name="to-configure-hardware-inventory"></a>若要配置硬件清单  
+### <a name="to-configure-hardware-inventory"></a>若要設定硬體清查  
 
-1.  在 Configuration Manager 控制台中，选择“管理” > “客户端设置” > “默认客户端设置”。  
+1.  在 Configuration Manager 主控台中，選擇 [系統管理] > [用戶端設定] > [預設用戶端設定]。  
 
-4.  在“主页”选项卡上的“属性”组中，选择“属性”。  
+4.  在 [首頁] 索引標籤的 [內容] 群組中，選擇 [內容]。  
 
-5.  在“默认设置”对话框中，选择“硬件清单”。  
+5.  在 [預設設定] 對話方塊中，選擇 [硬體清查]。  
 
-6.  在“设备设置”  列表中，配置以下各项：  
+6.  在 [裝置設定]  清單中，設定下列項目：  
 
-    -   **针对客户端启用硬件清单** - 选择“True”。  
+    -   **在用戶端上啟用硬體清查** - 選取 [True]。  
 
-    -   **硬件清单计划** - 单击“计划”指定客户端收集硬件清单的间隔。  
+    -   **硬體清查排程** - 按一下 [排程] 指定用戶端收集硬體清查的時間間隔。  
 
-7.  配置所需的其他[硬件清单客户端设置](../../../../core/clients/deploy/about-client-settings.md#hardware-inventory)。  
+7.  設定您需要的其他[硬體清查用戶端設定](../../../../core/clients/deploy/about-client-settings.md#hardware-inventory)。  
 
-当客户端设备下一次下载客户端策略时，会使用这些设置对它们进行配置。 要为单个客户端启动策略检索，请参阅 [How to manage clients in System Center Configuration Manager](../../../../core/clients/manage/manage-clients.md)。  
-
+在下次下載用戶端原則時，用戶端裝置會使用這些設定來進行設定。 若要起始單一用戶端的原則擷取，請參閱 [How to manage clients in System Center Configuration Manager](../../../../core/clients/manage/manage-clients.md)。  

@@ -1,57 +1,53 @@
 ---
-title: "创建 iOS 应用程序 | Microsoft Docs"
-description: "请参阅创建和部署适用于 iOS 设备的应用程序时必须考虑的注意事项。"
+title: "建立 iOS 應用程式 | Microsoft Docs"
+description: "查看在您建立和部署 iOS 裝置的應用程式時，必須考慮的事項。"
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ff633013-5313-4cd3-949c-56d45e777280
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 22bfae0509a5ce0b52763ea3eda7b8d6891431ed
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/06/2017
-
-
+ms.openlocfilehash: 349fcf335e7faddbcbd2ffe0ece7e711465f28df
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="create-ios-applications-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 创建 iOS 应用程序
+# <a name="create-ios-applications-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 建立 iOS 應用程式
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用於：System Center Configuration Manager (最新分支)*
 
-System Center Configuration Manager 应用程序具有一个或多个部署类型，这些是将软件部署到设备所需的安装文件和信息。 部署类型还具有指定软件的部署时间和方法的规则。  
+System Center Configuration Manager 應用程式有一或多個部署類型，其中包含將軟體部署至裝置所需的安裝檔案與資訊。 部署類型也包含指定部署軟體之時間和方法的規則。  
 
- 可以使用下列方法创建应用程序：  
+ 您可以使用下列兩種方式建立應用程式：  
 
--   通过读取应用程序安装文件来自动创建应用程序和部署类型。  
+-   透過讀取應用程式安裝檔案的方式自動建立應用程式和部署類型。  
 
--   手动创建应用程序并稍后添加部署类型。  
+-   手動建立應用程式並在之後新增部署類型。  
 
--   从文件导入应用程序。  
+-   從檔案匯入應用程式。  
 
-请参阅[启动创建应用程序向导](../../apps/deploy-use/create-applications.md#start-the-create-application-wizard)，了解创建 Configuration Manager 应用程序和部署类型所需的步骤。 此外，创建和部署适用于 iOS 设备的应用程序时，请记住以下注意事项。  
+如需建立 Configuration Manager 應用程式與部署類型的必要步驟，請參閱[啟動建立應用程式精靈](../../apps/deploy-use/create-applications.md#start-the-create-application-wizard)。 此外，當您建立並部署 iOS 裝置的應用程式時，請記住下列考量。  
 
-## <a name="general-considerations"></a>一般注意事项  
- Configuration Manager 支持以下应用类型的部署：  
+## <a name="general-considerations"></a>一般考量  
+ Configuration Manager 支援部署下列應用程式類型：  
 
-|设备类型|受支持的文件|  
+|裝置類型|支援的檔案|  
 |-----------------|---------------------|  
-|iOS|*.ipa<br /><br /> 在 System Center Configuration Manager 中，不需要在导入 iOS 应用时指定属性列表 (.plist) 文件。|  
+|iOS|*.ipa<br /><br /> 在 System Center Configuration Manager 中，匯入 iOS 應用程式時，不需要指定內容清單 (.plist) 檔案。|  
 
- 支持以下部署操作：  
+ 支援下列部署動作：  
 
-|设备类型|支持的操作|  
+|裝置類型|支援的動作|  
 |-----------------|-----------------------|  
-|iOS|**可用**、**必需**。 用户必须同意安装和卸载。
+|iOS|**可用**、**必要**。 使用者必須同意安裝和解除安裝。
 
 > [!IMPORTANT]  
->  目前，最终用户无法从 iOS 的 Microsoft Intune 公司门户应用程序中安装公司应用程序。 这是由于 iOS 应用商店中发布的应用受到限制（请参阅应用商店查看准则，第 2 部分）。 用户可通过浏览到 Intune Web 门户 (portal.manage.microsoft.com) 在其设备上安装企业应用（包括托管的应用商店应用和业务线应用包）。 若要深入了解由 Intune 公司门户应用启用的移动管理功能，请参阅 [Enrolled device management capabilities in Microsoft Intune](https://technet.microsoft.com/library/dn600287.aspx)（Microsoft Intune 中的注册设备管理功能）。  
-
+>  使用者目前無法從適用於 iOS 的 Microsoft Intune 公司入口網站應用程式安裝公司應用程式。 這是因為 iOS App Store 中發行之應用程式的限制所致 (請參閱 App Store 審核指南的第 2 節)。 使用者可以在其裝置上瀏覽至 Intune Web 入口網站 (portal.manage.microsoft.com) 來安裝公司應用程式 (包括受管理的 App Store 應用程式與企業營運應用程式套件)。 如需 Intune 公司入口網站應用程式所啟用的行動管理功能詳細資訊，請參閱 [Microsoft Intune 的已註冊裝置管理功能](https://technet.microsoft.com/library/dn600287.aspx)。  

@@ -1,146 +1,139 @@
 ---
-title: "将用户和设备与用户设备相关性相链接 | Microsoft Docs"
-description: "将用户和设备与用户设备相关性相链接，并自动将应用部署到与用户关联的所有设备。"
+title: "連結使用者和裝置與使用者裝置親和性 | Microsoft Docs"
+description: "使用使用者裝置親和性連結使用者和裝置，並自動將應用程式部署到與使用者相關聯的所有裝置。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-app
+ms.technology: configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5b30b0d5-722d-4d4b-9ed7-5a43de315461
-caps.latest.revision: 7
-caps.handback.revision: 0
+caps.latest.revision: "7"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 6b1393b2a329bcd017dc961366afb09fa7a77899
 ms.openlocfilehash: 4e8e677851ad9ae7d027ab685e842a8ff5e35573
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="link-users-and-devices-with-user-device-affinity-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中将用户和设备与用户设备相关性相链接
+# <a name="link-users-and-devices-with-user-device-affinity-in-system-center-configuration-manager"></a>System Center Configuration Manager 的連結使用者和裝置與使用者裝置親和性
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用於：System Center Configuration Manager (最新分支)*
 
-System Center Configuration Manager (Configuration Manager) 中的用户设备相关性将一个用户与一个或多个设备关联。 这样，在将应用程序部署到某用户时无需知道该用户的设备名称。 你将应用程序部署到该用户，而不是部署到该用户的每个设备。 之后，用户设备相关性会自动确保在所有与该用户关联的设备上安装应用程序。  
+System Center Configuration Manager (Configuration Manager) 中的使用者裝置親和性可建立使用者與一或多部裝置的關聯。 這樣不需要知道使用者裝置的名稱，也可為使用者部署應用程式。 不需要將應用程式部署至該使用者的每部裝置，而是部署給該使用者。 接著，使用者裝置親和性會自動確定該應用程式是否已安裝在與該使用者相關聯的所有裝置上。  
 
- 可以定义主要设备，它们通常是用户每天在工作中使用的设备。 当在用户和设备之间创建相关性时，你会获得更多的软件部署选项。 例如，某用户需要 Microsoft Visio，那么，你可以使用 Windows Installer 部署将它安装在该用户的主要设备上。 但是，在不是主要设备的设备上，可能要将 Visio 部署为虚拟应用程序。 在用户未登录时，你还可以使用用户设备相关性将软件预先部署在用户的设备上，以便在用户登录时，应用程序已安装好并且可以运行了。  
+ 您可以定義主要裝置，它們通常是使用者每天用於執行工作的裝置。 在使用者和裝置之間建立親和性時，可以獲得更多應用程式部署選項。 例如，如果使用者需要 Microsoft Visio，您可以使用 Windows Installer 部署將其安裝在該使用者的主要裝置上。 不過，在非主要裝置上，您可以將 Visio 部署為虛擬應用程式。 您也可以在使用者未登入時，利用使用者裝置親和性在使用者的裝置上預先部署軟體，讓使用者在登入時，應用程式已安裝好且可執行。  
 
- 必须管理计算机的用户设备相关性信息。 Configuration Manager 会自动为它注册的移动设备管理用户设备相关性。  
+ 您必須管理電腦的使用者裝置親和性資訊。 Configuration Manager 會自動管理使用者裝置與其所註冊之行動裝置的親和性。  
 
-## <a name="manually-set-up-user-device-affinity"></a>手动设置用户设备相关性  
+## <a name="manually-set-up-user-device-affinity"></a>手動設定使用者裝置親和性  
 
-1.  在 Configuration Manager 控制台中，选择“资产和符合性” > “设备”。  
+1.  在 Configuration Manager 主控台中，選擇 [資產與合規性] > [裝置]。  
 
-3.  从列表中选择一个设备。 然后，在“主页”选项卡的“设备”组中选择“编辑主要用户”。  
+3.  在清單中，選取裝置。 然後，在 [首頁] 索引標籤的 [裝置] 群組中，選擇 [編輯主要使用者]。  
 
-4.  在“编辑主要用户”对话框中，搜索并选择要添加为所选设备的主要用户的用户。 选择“添加”。  
-
-    > [!NOTE]  
-    > “主要用户”列表显示已成为此设备的主要用户的用户，以及使用了哪种方法来指定每项用户 - 设备关系。  
-
-## <a name="set-up-primary-devices-for-a-user"></a>设置用户的主要设备  
-
-1.  在 Configuration Manager 控制台中，选择“资产和符合性” > “用户”。  
-
-3.  从列表中选择一个用户。 然后，在“设备”选项卡中选择“编辑主要设备”。  
-
-4.  在“编辑主要设备”对话框中，搜索并选择要添加为所选用户的主要设备的设备。 选择“添加”。  
+4.  在 [編輯主要使用者] 對話方塊中，搜尋並選取要新增為所選裝置之主要使用者的使用者。 選擇 [新增]。  
 
     > [!NOTE]  
-    > “主要设备”列表显示已设置为此用户的主要设备的设备，以及使用了哪种方法来指定每项用户-设备关系。  
+    > [主要使用者] 清單會顯示哪些使用者已經是此裝置的主要使用者，以及用於指派每個使用者-裝置關聯性的方法。  
 
-## <a name="automatically-create-user-device-affinities-windows-pcs-only"></a>自动创建用户设备相关性（仅针对 Windows PC）  
- Configuration Manager 从 Windows 事件日志中读取有关用户登录的数据。 若要自动创建用户设备相关性，必须在客户端计算机上启用本地安全策略中的这两个选项，以便将登录事件存储在 Windows 事件日志中：  
+## <a name="set-up-primary-devices-for-a-user"></a>設定使用者的主要裝置  
 
--   **审核帐户登录事件**  
--   **审核登录事件**  
+1.  在 Configuration Manager 主控台中，選擇 [資產與合規性] > [使用者]。  
 
- 要配置这些设置，请使用 Windows 组策略。  
+3.  在清單中，選取使用者。 然後，在 [裝置] 索引標籤上，選擇 [編輯主要裝置]。  
+
+4.  在 [編輯主要裝置] 對話方塊中，搜尋並選取裝置以將其新增為所選使用者的主要裝置。 選擇 [新增]。  
+
+    > [!NOTE]  
+    > [主要裝置] 清單會顯示哪些裝置已設為此使用者的主要裝置，以及用於指派每個使用者-裝置關聯性的方法。  
+
+## <a name="automatically-create-user-device-affinities-windows-pcs-only"></a>自動建立使用者裝置親和性 (僅限 Windows 電腦)  
+ Configuration Manager 會從 Windows 事件記錄檔讀取使用者登入相關資料。 若要自動建立使用者裝置親和性，您必須在用戶端電腦的本機安全性原則中開啟這兩個選項，將登入事件儲存在 Windows 事件記錄檔中：  
+
+-   **稽核帳戶登入事件**  
+-   **稽核登入事件**  
+
+ 若要進行這些設定，請使用 Windows 群組原則。  
 
 > [!IMPORTANT]  
-> 如果错误导致 Windows 事件日志生成大量条目，则可能将创建新的事件日志。 如果出现这种情况，现有的登录事件可能不再可供 Configuration Manager 使用。  
+> 如果錯誤導致 Windows 事件記錄檔產生大量項目，可能會建立新的事件記錄檔。 若發生此情況，Configuration Manager 就無法使用現有的登入事件。  
 >   
-> 在 Windows XP 中打开“审核帐户登录事件”和“审核登录事件”设置时请小心。 默认情况下，保留策略为 7 天，这些事件很有可能将填满安全事件日志。 如果事件日志已满，标准用户将无法登录。 为了避免该问题，对于安全事件日志，请将策略“保留方法”值设置为“按需要覆盖事件”。 为了使用户设备相关性有足够的数据，还要将“安全事件日志大小上限”策略设置为合理的值（例如 5-20 MB）。  
+> 開啟 Windows XP 中的 [稽核帳戶登入事件] 及 [稽核登入事件] 設定時請小心。 根據預設，保留原則是 7 天，而這些事件很有可能會填滿安全性事件記錄檔。 如果事件記錄檔已滿，標準使用者將無法登入。 為預防此問題，請將安全性事件記錄檔的原則 [保持方法] 值設定為 [視需要覆寫事件]。 若要讓使用者裝置親和性有足夠資料，也請將原則安全性事件記錄檔大小上限設定為合理的值，例如 5-20 MB。  
 
-### <a name="set-up-the-site-to-automatically-create-user-device-affinities"></a>将站点设置为自动创建用户设备相关性  
+### <a name="set-up-the-site-to-automatically-create-user-device-affinities"></a>設定站台自動建立使用者裝置親和性  
 
-1.  在 Configuration Manager 控制台中，选择“管理” > “客户端设置”。  
+1.  在 Configuration Manager 主控台中，選擇 [系統管理] > [用戶端設定]。  
 
-2.  若要修改默认的客户端设置，请选择“默认客户端设置”，然后，在“主页”选项卡的“属性”组中选择“属性”。 若要创建自定义客户端代理设置，请选择“客户端设置”节点，然后，在“主页”选项卡的“创建”组中选择“创建自定义客户端设备设置”。  
+2.  若要修改預設用戶端設定，請選取 [預設用戶端設定]，然後在 [首頁] 索引標籤的 [內容] 群組中選擇 [內容]。 若要建立自訂用戶端代理程式設定，請選取 [用戶端設定] 節點，然後在 [首頁] 索引標籤的 [建立] 群組中選擇 [建立自訂用戶端裝置設定]。  
 
     > [!NOTE]  
-    > 如果修改默认的客户端设置，则它们将部署到层次结构中的所有计算机。 有关配置客户端设置的详细信息，请参阅[如何在 System Center Configuration Manager 中配置客户端设置](../../core/clients/deploy/configure-client-settings.md)。  
+    > 如果修改預設用戶端設定，會將這些設定部署至階層中的所有電腦。 如需設定用戶端設定的詳細資訊，請參閱[如何在 System Center Configuration Manager 中設定用戶端設定](../../core/clients/deploy/configure-client-settings.md)。  
 
-3.  对于“用户和设备相关性”，进行如下设置：  
+3.  在 [使用者和裝置親和性] 中，設定下列項目：  
 
-    -   **用户设备相关性阈值(分钟)**。 设置在创建用户设备相关性之前使用设备的分钟数。  
+    -   **使用者裝置親和性閾值 (分鐘)**。 設定建立使用者裝置親和性之前的裝置使用分鐘數。  
 
-    -   **用户设备相关性阈值(天)**。 设置基于使用情况的相关性阈值的测量天数。  
+    -   **使用者裝置親和性閾值 (天)**。 設定衡量使用親和性閾值的天數。  
 
-    -   **利用使用情况数据自动配置用户设备相关性**。 要让站点自动创建用户设备相关性，请从下拉列表中选择 **True**。 如果选择 **False**，则必须批准所有的用户设备相关性分配。  
+    -   **從使用資料自動設定使用者裝置親和性**。 若要讓站台自動建立使用者裝置親和性，請從下拉式清單中選取 [True]。 如果您選取 [False]，則必須核准所有使用者裝置親和性指派。  
 
     > [!TIP]  
-    > **例如：**如果将“用户设备相关性阈值(分钟)”指定为 **60** 分钟，并将“用户设备相关性阈值(天)”指定为 **5** 天，那么，用户必须在 5 天内使用设备至少 60 分钟，才能自动创建用户设备相关性。  
+    > **範例：**如果您將 [使用者裝置親和性閾值 (分鐘)] 設定為 **60** 分鐘，並將 [使用者裝置親和性閾值 (天)] 設定為 **5** 天，則使用者在 5 天內至少必須使用該裝置 60 分鐘，才會自動建立使用者裝置親和性。  
 
-在自动创建用户设备相关性之后，Configuration Manager 会继续监视用户设备相关性阈值。 如果用户使用设备的时间降到所设置的阈值以下，则将删除用户设备相关性。 请将“用户设备相关性阈值(天)”的值设置为至少 **7** 天，以避免出现这种情况：在用户未登录时（例如在周末时），可能会丢失自动配置的用户设备相关性。  
+自動建立使用者裝置親和性之後，Configuration Manager 會繼續監視使用者裝置親和性閾值。 如果使用者的裝置活動低於您設定的閾值，就會移除使用者裝置親和性。 將 [使用者裝置親和性閾值 (天)] 的值設定為 **7** 天以上，可避免因使用者未登入 (例如在週末期間) 而失去自動設定的使用者裝置親和性。  
 
-## <a name="import-user-device-affinities-from-a-file"></a>从文件导入用户设备相关性  
- 若要一次创建许多关系，可以导入具有多个用户设备相关性详细信息的文件。 对本过程而言，主体设备必须已被发现，而且作为 Configuration Manager 数据库中的资源存在，否则本过程将会失败。  
+## <a name="import-user-device-affinities-from-a-file"></a>從檔案匯入使用者裝置親和性  
+ 若要同時建立許多關聯性，您可以匯入包含多個使用者裝置親和性詳細資料的檔案。 在此程序中，必須先探索到主體裝置，且主體裝置必須是 Configuration Manager 資料庫中的資源，否則程序將失敗。  
 
-1.  在 Configuration Manager 控制台中，选择“资产和符合性” > “用户”或“设备”。  
+1.  在 Configuration Manager 主控台中，選擇 [資產與合規性] > [使用者] 或 [裝置]。  
 
-2.  在“主页”选项卡的“创建”组中，选择“导入用户设备相关性”。  
+2.  在 [首頁] 索引標籤的 [建立] 群組中，選擇 [匯入使用者裝置親和性]。  
 
-3.  在“导入用户设备相关性向导”的“选择映射”页上，设置下列信息：  
+3.  在 [匯入使用者裝置親和性精靈] 的 [選擇對應] 頁面上，設定這項資訊：  
 
-    -   **文件名**。 指定逗号分隔值 (CSV) 文件，该文件包含要创建用户设备相关性的用户和设备的列表。 在该文件中，每个用户和设备对都必须位于各自的行中，其值由逗号分隔。 使用格式：<*Domain*>&#92;<*user name*>,<*device NetBIOS name*>。  
+    -   **檔案名稱**。 指定逗號分隔值 (CSV) 檔案，其中會列出要相互建立親和性的使用者及裝置。 在此檔案中，每一對使用者和裝置都必須各有其專屬資料列，並以逗號分隔值。 使用下列格式：<網域>&#92;<使用者名稱>,<裝置 NetBIOS 名稱>。  
 
-    -   **此文件有供参考的列标题**。 如果 .csv 文件具有顶行标题，请选择此选项，在导入过程中将忽略标题行。  
+    -   **此檔案具有可供參照的欄位標題**。 如果 .csv 檔案具有頂端資料列標頭，請選取這個選項，並在匯入期間忽略標頭資料列。  
 
-4.  如果导入的文件在每行上包含两个以上的项目，则可以使用“列”和“分配”来指定哪些列代表用户和设备，以及在导入过程中要忽略哪些列。  
+4.  如果要匯入的檔案中每個資料列都有兩個以上的項目，您可以使用 [資料行] 和 [指派] 來指定代表使用者和裝置的資料行，以及匯入時要忽略的資料行。  
 
-5.  选择“下一步”，然后完成“导入用户设备相关性向导”。  
+5.  選擇 [下一步]，然後完成 [匯入使用者裝置親和性精靈]。  
 
-## <a name="let-users-create-their-own-device-affinities"></a>让用户创建自己的设备相关性  
- 通过后续过程，你可以设置来让用户可在软件中心应用中创建自己的用户设备相关性。  
+## <a name="let-users-create-their-own-device-affinities"></a>讓使用者建立其專屬裝置親和性  
+ 使用下列程序，您可以設定使用者在軟體中心應用程式中建立其專屬使用者裝置親和性。  
 
-### <a name="set-up-the-site-to-allow-user-created-user-device-affinity-requests"></a>将站点设置为允许用户创建的用户设备相关性请求  
+### <a name="set-up-the-site-to-allow-user-created-user-device-affinity-requests"></a>設定站台允許使用者建立的使用者裝置親和性要求  
 
-1.  在 Configuration Manager 控制台中，选择“管理” > “客户端设置”。  
+1.  在 Configuration Manager 主控台中，選擇 [系統管理] > [用戶端設定]。  
 
-2.  若要修改默认的客户端设置，请选择“默认客户端设置”，然后，在“主页”选项卡的“属性”组中选择“属性”。 若要创建自定义客户端代理设置，请选择“客户端设置”节点，然后，在“主页”选项卡的“创建”组中选择“创建自定义客户端用户设置”。  
+2.  若要修改預設用戶端設定，請選取 [預設用戶端設定]，然後在 [首頁] 索引標籤的 [內容] 群組中選擇 [內容]。 若要建立自訂用戶端代理程式設定，請選取 [用戶端設定] 節點，然後在 [首頁] 索引標籤的 [建立] 群組中選擇 [建立自訂用戶端使用者設定]。  
 
     > [!NOTE]  
-    > 如果修改默认的客户端设置，则它们将部署到层次结构中的所有计算机。 有关配置客户端设置的详细信息，请参阅[配置客户端设置](../../core/clients/deploy/configure-client-settings.md)。  
+    > 如果修改預設用戶端設定，會將這些設定部署至階層中的所有電腦。 如需設定用戶端設定的詳細資訊，請參閱[設定用戶端設定](../../core/clients/deploy/configure-client-settings.md)。  
 
-3.  选择客户端设置“用户和设备相关性”  ，然后在“允许用户定义其主要设备”  下拉列表中，选择“真” 。  
+3.  選取用戶端設定 [使用者和裝置親和性]  ，然後在 [允許使用者定義其主要裝置]  下拉式清單中，選取 [True] 。  
 
-### <a name="set-up-a-user-device-affinity"></a>设置用户设备相关性  
+### <a name="set-up-a-user-device-affinity"></a>設定使用者裝置親和性  
 
-1.  在“应用程序目录”中，选择“我的系统”。  
+1.  在 [應用程式類別目錄] 中，選擇 [我的系統]。  
 
-2.  选择“我经常使用此计算机工作”选项。  
+2.  選取 [我經常使用這部電腦工作] 選項。  
 
-## <a name="manage-user-device-affinity-requests-from-users"></a>管理来自用户的用户设备相关性请求  
- 在将客户端设置“利用使用情况数据自动配置用户设备相关性”  设为“假” 时，你必须批准所有的用户设备相关性分配。  
+## <a name="manage-user-device-affinity-requests-from-users"></a>管理使用者的使用者裝置親和性要求  
+ 用戶端設定 [從使用資料自動設定使用者裝置親和性]  設為 [False] 時，必須由您核准所有使用者裝置親和性指派。  
 
-### <a name="approve-or-reject-a-user-device-affinity-request"></a>批准或拒绝用户设备相关性请求  
+### <a name="approve-or-reject-a-user-device-affinity-request"></a>核准或拒絕使用者裝置親和性要求  
 
-1.  在 Configuration Manager 控制台中，选择“资产和符合性”。  
+1.  在 Configuration Manager 主控台中，選擇 [資產與相容性]。  
 
-2.  在“资产和符合性”  工作区中，选择要为其管理相关性请求的用户或设备集合。  
+2.  在 [資產與相容性]  工作區中，選取您要管理哪一個使用者或裝置集合的親和性要求。  
 
-3.  在“主页”选项卡的“集合”组中，选择“管理相关性请求”。  
+3.  在 [首頁] 索引標籤的 [集合] 群組中，選擇 [管理親和性要求]。  
 
-4.  在“管理用户设备相关性请求”对话框中，选择一个相关性请求，然后选择“批准”或“拒绝”。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-
+4.  在 [管理使用者裝置親和性要求] 對話方塊中，選取親和性要求，然後選擇 [核准] 或 [拒絕]。  

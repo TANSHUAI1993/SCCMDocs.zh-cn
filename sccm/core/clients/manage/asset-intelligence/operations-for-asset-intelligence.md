@@ -1,341 +1,337 @@
 ---
-title: "使用资产智能 | Microsoft Docs"
-description: "在 System Center Configuration Manager 中执行常见的资产智能任务。"
+title: "使用 Asset Intelligence | Microsoft Docs"
+description: "在 System Center Configuration Manager 中執行一般的 Asset Intelligence 工作。"
 ms.custom: na
 ms.date: 2/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e8159bd9-5c2b-4d25-82f9-78fcfd732ba9
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
-ms.openlocfilehash: 6bfbfbcce6ef5c38164e161d197f5a3fb4b4e353
-ms.contentlocale: zh-cn
-ms.lasthandoff: 12/16/2016
-
-
+ms.openlocfilehash: 17168e26f13340847928f6e3623115cd4b55997b
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="how-to-use-asset-intelligence-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中使用资产智能
+# <a name="how-to-use-asset-intelligence-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中使用 Asset Intelligence
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用對象：System Center Configuration Manager (最新分支)*
 
-本主题包含的信息可帮助在 System Center Configuration Manager 层次结构中管理典型的资产智能任务：  
+本主題包含的資訊可協助您管理 System Center Configuration Manager 階層中的一般 Asset Intelligence 工作︰  
 
-##  <a name="BKMK_ViewInformation"></a> 查看资产智能信息  
- 你可以在“资产智能”  主页上和资产智能报表中查看资产智能信息。  
+##  <a name="BKMK_ViewInformation"></a> 檢視 Asset Intelligence 資訊  
+ 您可以在 [Asset Intelligence]  首頁上和 Asset Intelligence 報告中檢視 Asset Intelligence 資訊。  
 
-###  <a name="BKMK_AssetIntelligenceHomePage"></a> “资产智能”主页  
- “资产智能”  主页显示了资产智能目录信息的摘要仪表板。 在主页上可以查看有关目录同步和清单软件状态的信息。 “资产智能”  主页包含以下部分：  
+###  <a name="BKMK_AssetIntelligenceHomePage"></a> Asset Intelligence 首頁  
+ [Asset Intelligence]  首頁會顯示 Asset Intelligence 類別目錄資訊的摘要儀表板。 在首頁上，您可以檢視類別目錄同步處理和已清查之軟體狀態的相關資訊。 [Asset Intelligence]  首頁分為下列各區段：  
 
--   **目录同步**：该部分提供了有关是否启用资产智能、资产智能同步点当前的状态、同步计划、是否导入客户许可证声明、上次状态更新的时间和下次计划更新的时间以及在安装资产智能同步点站点系统之后发生的更改数的信息。  
+-   **類別目錄同步處理**：提供下列項目的相關資訊：是否啟用 Asset Intelligence、Asset Intelligence 同步處理點的目前狀態、同步處理排程、是否匯入客戶授權聲明、上次更新狀態的時間、下次排定的更新時間，以及安裝 Asset Intelligence 同步處理點站台系統之後發生的變更數目。  
 
     > [!NOTE]  
-    >  如果安装了资产智能同步点站点系统角色，则仅显示“资产智能”  主页的“资产智能目录同步状态”部分。  
+    >  只有在已安裝 Asset Intelligence 同步處理點站台系統角色時，才會顯示 [Asset Intelligence]  首頁的 Asset Intelligence 類別目錄同步處理區段。  
 
--   **清单软件状态**：该部分提供了清单软件、软件类别以及由 Microsoft 标识、由管理用户标识、等待联机标识或未标识并且未等待的软件系列的计数和百分比。 以表格格式显示的信息显示每个对象的计数，而以图表格式显示的信息则显示每个对象的百分比。  
+-   **已清查的軟體狀態**：提供由 Microsoft 所識別、系統管理使用者所識別、擱置線上識別或無法辨識但未擱置的已清查軟體、軟體類別目錄以及軟體系列的計數和百分比。 以表格格式顯示的資訊會顯示各項計數，而以圖表顯示的資訊會顯示各項百分比。  
 
- 使用以下过程查看在“资产智能”  主页上的资产智能信息。  
+ 使用下列程序，在 [Asset Intelligence]  首頁上檢視 Asset Intelligence 資訊。  
 
-##### <a name="to-view-asset-intelligence-information-on-the-asset-intelligence-home-page"></a>若要查看“资产智能”主页上的资产智能信息  
+##### <a name="to-view-asset-intelligence-information-on-the-asset-intelligence-home-page"></a>在 Asset Intelligence 首頁上檢視 Asset Intelligence 資訊  
 
-1.  在 Configuration Manager 控制台中，单击“资产和符合性” 。  
+1.  在 Configuration Manager 主控台中，按一下 [資產與相容性] 。  
 
-2.  在“资产和符合性”  工作区中，单击“资产智能” 。 将显示资产智能报表。  
+2.  在 [資產與相容性]  工作區中，按一下 [Asset Intelligence] 。 即會顯示 Asset Intelligence 報告。  
 
-###  <a name="BKMK_AssetIntelligenceReports"></a> 资产智能报表  
- 总共有 60 多个资产智能报表，这些报表显示了由资产智能收集的信息。 大多数报表都是链接至更具针对性的报表，你可以从中查询常规信息以及向下钻取更多详细信息。 资产智能报表位于 Configuration Manager 控制台，“监视”工作区中的“报表”节点下。 这些报表提供有关硬件、许可证管理和软件的信息。 有关 Configuration Manager 中报表的详细信息，请参阅 [System Center Configuration Manager 中的报表](../../../../core/servers/manage/reporting.md)。  
+###  <a name="BKMK_AssetIntelligenceReports"></a> Asset Intelligence 報告  
+ 有超過 60 份的 Asset Intelligence 報告顯示 Asset Intelligence 所收集的資訊。 這當中有許多報告可連結至更特定的報告，供您在其中查詢一般資訊，並向下鑽研至更詳細的資訊。 Asset Intelligence 報告位於 Configuration Manager 主控台之 [監視] 工作區的 [報告] 節點下。 這份報告提供硬體、授權管理和軟體的相關資訊。 如需 Configuration Manager 報告的詳細資訊，請參閱 [Reporting in System Center Configuration Manager](../../../../core/servers/manage/reporting.md) (System Center Configuration Manager 中的報告)。  
 
 > [!NOTE]  
->  由于要列出安装在企业环境中的软件许可证信息的软件标题涉及到复杂的依赖关系和限制，因此已安装的软件标题质量的准确性以及在资产智能报表中显示的许可证信息可能会与环境中已安装的软件标题或者正在使用中的许可证的实际数目不一致。 资产智能报表不应作为确定所购买的软件许可证符合性的唯一源。  
+>  Asset Intelligence 報告中顯示的已安裝軟體項目數量及授權資訊的精確度，可能會與已安裝的實際軟體項目數目或環境中已使用的授權數量有所不同，因為與清查企業環境中已安裝軟體項目之軟體授權資訊的複雜相依性和限制。 Asset Intelligence 報告不應該作為判斷購買的軟體授權相容性的唯一來源。  
 
- 使用以下过程，通过使用资产智能报表来查看资产智能信息。  
+ 使用下列程序，透過 Asset Intelligence 報告來檢視 Asset Intelligence 資訊。  
 
-##### <a name="to-view-collected-asset-intelligence-information-by-using-asset-intelligence-reports"></a>若要通过使用资产智能报表查看收集的资产智能信息  
+##### <a name="to-view-collected-asset-intelligence-information-by-using-asset-intelligence-reports"></a>使用 Asset Intelligence 報告來檢視所收集的 Asset Intelligence 資訊  
 
-1.  在 Configuration Manager 控制台中，单击“监视” 。  
+1.  在 Configuration Manager 主控台中，按一下 [監視] 。  
 
-2.  在“监视”  工作区中，依次展开“报告” ，“报表” ，然后单击“资产智能” 。 将显示资产智能报表。  
+2.  在 [監視]  工作區中，依序展開 [報告] 和 [報告] ，然後按一下 [Asset Intelligence] 。 即會顯示 Asset Intelligence 報告。  
 
     > [!WARNING]  
-    >  如果在“报表”  节点下没有报表文件夹存在，请验证你是否配置了报告。 有关详细信息，请参阅[在 System Center Configuration Manager 中配置报表](../../../../core/servers/manage/configuring-reporting.md)。  
+    >  如果 [報告]  節點下沒有任何報告資料夾，請確認您已設定報告。 如需詳細資料，請參閱 [Configuring reporting in System Center Configuration Manager](../../../../core/servers/manage/configuring-reporting.md) (在 System Center Configuration Manager 中設定報告)。  
 
-3.  选择你希望运行的资产智能报表，然后在“主页”  选项卡上的“报表组”  组中，单击“运行” 。  
+3.  選取您要執行的 Asset Intelligence 報告，然後在 [首頁]  索引標籤的 [報告群組]  群組中按一下 [執行] 。  
 
-##  <a name="BKMK_SynchronizeTheCatalog"></a> 同步资产智能目录  
- 你可以将本地资产智能目录与 System Center Online 同步以检索最新的软件标题分类。 当你手动请求将目录与 System Center Online 同步时，可能需要 15 分钟或者更长时间才能完成与 System Center Online 同步的过程。 同步成功完成时，Configuration Manager 会将“资产智能”主页上的“上次成功更新时间”设置更新成与当前时间相一致。  
+##  <a name="BKMK_SynchronizeTheCatalog"></a> 同步處理 Asset Intelligence 類別目錄  
+ 您可以同步處理本機 Asset Intelligence 類別目錄與 System Center Online，來擷取最新的軟體項目分類。 當您手動要求與 System Center Online 的類別目錄同步處理時，可能需要 15 分鐘或更長的時間才能完成與 System Center Online 的同步處理程序。 Configuration Manager 會使用同步處理成功完成時的目前時間來更新 [Asset Intelligence] 首頁上的 [上次成功更新] 設定。  
 
 > [!NOTE]  
->  必须先使用此过程安装资产智能同步点站点系统角色。 有关如何安装资产智能同步点的信息，请参阅[在 System Center Configuration Manager 中配置资产智能](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md)。  
+>  必須先使用這些程序來安裝 Asset Intelligence 同步處理點站台系統角色。 如需安裝 Asset Intelligence 同步處理點的資訊，請參閱 [Configuring Asset Intelligence in System Center Configuration Manager](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md) (在 System Center Configuration Manager 中設定 Asset Intelligence)。  
 
- 使用以下过程为资产智能目录创建同步计划。  
+ 使用下列程序建立 Asset Intelligence 類別目錄的同步處理排程。  
 
-#### <a name="to-create-a-synchronization-schedule-for-the-asset-intelligence-catalog"></a>若要为资产智能目录创建同步计划  
+#### <a name="to-create-a-synchronization-schedule-for-the-asset-intelligence-catalog"></a>建立 Asset Intelligence 類別目錄的同步處理排程  
 
-1.  在 Configuration Manager 控制台中，单击“资产和符合性” 。  
+1.  在 Configuration Manager 主控台中，按一下 [資產與相容性] 。  
 
-2.  在“资产和符合性”  工作区中，单击“资产智能” 。  
+2.  在 [資產與相容性]  工作區中，按一下 [Asset Intelligence] 。  
 
-3.  在“主页”  选项卡上的“创建”  组中，单击“同步” ，然后单击“日程安排同步” 。  
+3.  在 [首頁]  索引標籤的 [建立]  群組中，按一下 [同步處理] ，然後按一下 [排程同步處理] 。  
 
-4.  在“资产智能同步点日程安排”  对话框中，选择“按日程安排启用同步” ，然后配置简单的或自定义的日程安排。  
+4.  在 [Asset Intelligence 同步處理點排程]  對話方塊中，選取 [啟用依排程同步處理] ，然後設定簡單或自訂排程。  
 
-5.  单击“确定”  以保存更改。  
+5.  按一下 [確定]  儲存變更。  
 
     > [!NOTE]  
-    >  有关同步日程安排，包括下一次安排的同步，请参阅层次结构顶层站点上“资产和符合性”  工作区中的“资产智能”  节点。  
+    >  如需同步處理排程 (包含下一個排程的同步處理) 的相關資訊，請參閱階層最上層站台之 [資產與相容性]  工作區中的 [Asset Intelligence]  節點。  
 
- 使用以下过程手动同步资产智能目录。  
+ 使用下列程序手動同步處理 Asset Intelligence 類別目錄。  
 
 > [!WARNING]  
->  System Center Online 在 12 小时内仅接受一次手动同步请求。  
+>  System Center Online 只會在 12 小時的期間內接受一個手動同步處理要求。  
 
-###  <a name="BKMK_ManuallySynchronizeCatalog"></a> 若要手动同步资产智能目录  
+###  <a name="BKMK_ManuallySynchronizeCatalog"></a> 手動同步處理 Asset Intelligence 類別目錄  
 
-1.  在 Configuration Manager 控制台中，单击“资产和符合性” 。  
+1.  在 Configuration Manager 主控台中，按一下 [資產與相容性] 。  
 
-2.  在“资产和符合性”  工作区中，单击“资产智能” 。  
+2.  在 [資產與相容性]  工作區中，按一下 [Asset Intelligence] 。  
 
-3.  在“主页”  选项卡上的“创建”  组中，单击“同步” ，再单击“同步资产智能目录” ，然后单击“确定” 。  
+3.  在 [首頁]  索引標籤的 [建立]  群組中，依序按一下 [同步處理] 、[同步處理 Asset Intelligence 類別目錄] 和 [確定] 。  
 
-##  <a name="BKMK_CustomizeCatalog"></a> 自定义资产智能目录  
- 从 System Center Online 接收到的资产智能目录分类信息存储在站点数据库中，权限为只读且不能修改或删除。 然而，你可以创建、修改并删除自定义软件类别、软件系列、软件标签以及硬件要求目录信息。 对于现有或用户定义的软件标题信息，你可以使用自定义分类数据，而不使用由 System Center Online 提供的信息。 当你更改或添加分类信息时，目录信息将被视为用户定义的信息。 用户定义的分类信息存储在与已验证的目录信息不同的数据库表中。  
+##  <a name="BKMK_CustomizeCatalog"></a> 自訂 Asset Intelligence 類別目錄  
+ 接收自 System Center Online 的 Asset Intelligence 類別目錄分類資訊以唯讀權限儲存在站台資料庫中，無法進行修改或刪除。 不過，您可以建立、修改和刪除自訂軟體類別、軟體系列、軟體標籤和硬體需求類別目錄資訊。 然後，您可以使用自訂分類資料，而不是 System Center Online 針對現有或使用者定義軟體項目資訊所提供的資訊。 當您變更或新增分類資訊時，會將類別目錄資訊視為由使用者所定義。 使用者定義的分類資訊儲存在與已驗證之類別目錄資訊不同的資料庫資料表中。  
 
-###  <a name="BKMK_SoftwareCategories"></a> 软件类别  
- 资产智能软件类别可用于对已列出清单的软件标题进行广泛的分类，也可用作更具体的软件家族的高级别分组。 例如，软件类别可以是能源公司，而该软件类别中的软件家族可以是石油和天然气或水力电气。 在资产智能目录中预定义了许多软件类别，并且可以创建其他用户定义的类别以进一步定义已列出清单的软件。 所有预定义软件类别的验证状态始终为“已验证” ，而添加到资产智能目录的自定义软件类别信息则为“用户定义” 。  
+###  <a name="BKMK_SoftwareCategories"></a> 軟體類別  
+ Asset Intelligence 軟體類別可用來廣泛分類已清查的軟體項目，也可作為更特定之軟體系列的高階分組。 例如，軟體類別可能是能源公司，而該軟體類別內的軟體系列可能是石油與天然氣或水力電氣。 Asset Intelligence 類別目錄中預先定義許多軟體類別，並且建立其他使用者定義的類別，以進一步定義已清查的軟體。 所有預先定義之軟體類別的驗證狀態一律是 [已驗證] ，而新增至 Asset Intelligence 類別目錄的自訂軟體類別資訊則是 [使用者定義] 。  
 
- 使用以下过程创建用户定义的软件类别。  
+ 使用下列程序建立使用者定義的軟體類別。  
 
-##### <a name="to-create-a-user-defined-software-category"></a>若要创建用户定义的软件类别  
+##### <a name="to-create-a-user-defined-software-category"></a>建立使用者定義的軟體類別  
 
-1.  在 Configuration Manager 控制台中，单击“资产和符合性” 。  
+1.  在 Configuration Manager 主控台中，按一下 [資產與相容性] 。  
 
-2.  在“资产和符合性”  工作区中，单击“资产智能” ，然后单击“目录” 。  
+2.  在 [資產與相容性]  工作區中，按一下 [Asset Intelligence] ，然後按一下 [類別目錄] 。  
 
-3.  在“主页”  选项卡上的“创建”  组中，单击“创建软件类别” 。  
+3.  在 [首頁]  索引標籤的 [建立]  群組中，按一下 [建立軟體類別] 。  
 
-4.  在“常规”  页面上，为新的软件类别输入名称和（可选）说明。  
-
-    > [!NOTE]  
-    >  始终将所有新的自定义软件类别的验证状态设置为“用户定义” 。  
-
-     单击“下一步” 。  
-
-5.  在“摘要”  页面上查看设置，然后单击“下一步” 。  
-
-6.  在“完成”  页上，单击“关闭”  退出向导。  
-
-###  <a name="BKMK_SoftwareFamilies"></a> 软件家族  
- 资产智能软件家族可用于进一步定义软件类别中的已列出清单的软件标题。 例如，软件类别可以是能源公司，而该软件类别中的软件家族可以是石油和天然气或水力电气。 可以在资产智能目录中预定义许多软件系列，并且还可以创建其他用户定义的系列以进一步定义清单软件。 所有预定义的软件系列的验证状态始终为“已验证” ，而添加到资产智能目录的自定义软件家族信息则为“用户定义” 。  
-
- 使用以下过程创建用户定义的软件系列。  
-
-##### <a name="to-create-a-user-defined-software-family"></a>若要创建用户定义的软件系列  
-
-1.  在 Configuration Manager 控制台中，单击“资产和符合性” 。  
-
-2.  在“资产和符合性”  工作区中，单击“资产智能” ，然后单击“目录” 。  
-
-3.  在“主页”  选项卡上的“创建”  组中，单击“创建软件系列” 。  
-
-4.  在“常规”  页面上，为新的软件系列输入名称和（可选）说明。  
+4.  在 [一般]  頁面上，輸入新軟體類別的名稱，並選擇性地輸入描述。  
 
     > [!NOTE]  
-    >  始终将所有新自定义软件家族的验证状态设置为“用户定义” 。  
+    >  所有新自訂軟體類別的驗證狀態一律設為 [使用者定義] 。  
 
-5.  在“摘要”  页面上查看设置，然后单击“下一步” 。  
+     按一下 [下一步] 。  
 
-6.  在“完成”  页上，单击“关闭”  退出向导。  
+5.  在 [摘要]  頁面上，檢閱設定，然後按一下 [下一步] 。  
 
-###  <a name="BKMK_SoftwareLabels"></a> 软件标签  
- 你可以通过资产智能自定义软件标签创建筛选器，然后用筛选器对软件标题进行分组并通过使用资产智能报表查看它们。 例如，你可以创建被称为共享件的软件标签，将它与大量的应用程序相关联，然后运行报表以显示共享件软件标签的所有标题。 所有你添加到资产智能目录中的自定义软件标签的验证状态为“用户定义”  。  
+6.  在 [完成]  頁面上，按一下 [關閉]  結束精靈。  
 
- 使用以下过程创建用户定义的自定义标签。  
+###  <a name="BKMK_SoftwareFamilies"></a> 軟體系列  
+ Asset Intelligence 軟體系列可用來進一步定義軟體類別內已清查的軟體項目。 例如，軟體類別可能是能源公司，而該軟體類別內的軟體系列可能是石油與天然氣或水力電氣。 Asset Intelligence 類別目錄中預先定義許多軟體系列，並且建立其他使用者定義的系列，以定義已清查的軟體。 所有預先定義之軟體系列的驗證狀態一律是 [已驗證] ，而新增至 Asset Intelligence 類別目錄的自訂軟體系列資訊則是 [使用者定義] 。  
 
-##### <a name="to-create-a-user-defined-software-label"></a>若要创建用户定义的软件标签  
+ 使用下列程序建立使用者定義的軟體系列。  
 
-1.  在 Configuration Manager 控制台中，单击“资产和符合性” 。  
+##### <a name="to-create-a-user-defined-software-family"></a>建立使用者定義的軟體系列  
 
-2.  在“资产和符合性”  工作区中，单击“资产智能” ，然后单击“目录” 。  
+1.  在 Configuration Manager 主控台中，按一下 [資產與相容性] 。  
 
-3.  在“主页”  选项卡上的“创建”  组中，单击“创建软件标签” 。  
+2.  在 [資產與相容性]  工作區中，按一下 [Asset Intelligence] ，然後按一下 [類別目錄] 。  
 
-4.  在“常规”  页面上，为新的软件系列输入名称和（可选）说明。  
+3.  在 [首頁]  索引標籤的 [建立]  群組中，按一下 [建立軟體系列] 。  
+
+4.  在 [一般]  頁面上，輸入新軟體系列的名稱，並選擇性地輸入描述。  
 
     > [!NOTE]  
-    >  始终将所有新自定义软件标签的验证状态设置为“用户定义” 。  
+    >  所有新自訂軟體系列的驗證狀態一律設為 [使用者定義] 。  
 
-5.  在“摘要”  页面上查看设置，然后单击“下一步” 。  
+5.  在 [摘要]  頁面上，檢閱設定，然後按一下 [下一步] 。  
 
-6.  在“完成”  页上，单击“关闭”  退出向导。  
+6.  在 [完成]  頁面上，按一下 [關閉]  結束精靈。  
 
-###  <a name="BKMK_HardwareRequirements"></a> 硬件要求  
- 对软件标题进行软件部署前，可使用硬件要求信息来验证计算机是否满足软件标题的硬件要求。 资产智能目录中预定义了许多硬件要求，你可以创建新的用户定义的硬件要求信息以满足自定义要求。 所有预定义的硬件要求的验证状态始终为“已验证” ，而添加到资产智能目录的用户定义的硬件要求信息为“用户定义” 。  
+###  <a name="BKMK_SoftwareLabels"></a> 軟體標籤  
+ Asset Intelligence 自訂軟體標籤可讓您建立篩選器以群組軟體項目，並使用 Asset Intelligence 報告來檢視它們。 例如，您可以建立稱為「共享軟體」的軟體標籤，並建立它與一些應用程式的關聯性，然後執行報告，以顯示具有共享軟體之軟體標籤的所有標題。 新增至 Asset Intelligence 類別目錄之所有自訂軟體標籤的驗證狀態是 [使用者定義]  。  
+
+ 使用下列程序建立使用者定義的自訂標籤。  
+
+##### <a name="to-create-a-user-defined-software-label"></a>建立使用者定義的軟體標籤  
+
+1.  在 Configuration Manager 主控台中，按一下 [資產與相容性] 。  
+
+2.  在 [資產與相容性]  工作區中，按一下 [Asset Intelligence] ，然後按一下 [類別目錄] 。  
+
+3.  在 [首頁]  索引標籤的 [建立]  群組中，按一下 [建立軟體標籤] 。  
+
+4.  在 [一般]  頁面上，輸入新軟體系列的名稱，並選擇性地輸入描述。  
+
+    > [!NOTE]  
+    >  所有新自訂軟體標籤的驗證狀態一律設為 [使用者定義] 。  
+
+5.  在 [摘要]  頁面上，檢閱設定，然後按一下 [下一步] 。  
+
+6.  在 [完成]  頁面上，按一下 [關閉]  結束精靈。  
+
+###  <a name="BKMK_HardwareRequirements"></a> 硬體需求  
+ 硬體需求資訊可協助您確認電腦符合軟體項目的硬體需求之後，再將它們設為軟體部署的目標。 Asset Intelligence 類別目錄提供許多預先定義的硬體需求，您也可以建立新的使用者定義硬體需求資訊，以符合自訂需求。 所有預先定義之硬體需求的驗證狀態一律是 [已驗證] ，而新增至 Asset Intelligence 類別目錄的使用者定義硬體需求資訊則是 [使用者定義] 。  
 
 > [!IMPORTANT]  
->  Configuration Manager 控制台中显示的硬件要求均从本地计算机上的资产智能目录检索，并且不基于 System Center 2012 Configuration Manager 客户端的已列出清单的软件标题信息。 硬件要求信息不作为 System Center Online 同步过程的一部分进行更新。 你可以为没有关联硬件要求的清单软件创建用户定义的硬件要求。  
+>  Configuration Manager 主控台中顯示的硬體需求是擷取自本機電腦上的 Asset Intelligence 類別目錄，而不是根據 System Center 2012 Configuration Manager 用戶端中的已清查軟體項目資訊。 硬體需求的資訊不會與 System Center Online 同步處理程序一起更新。 針對沒有相關聯硬體需求的已清查軟體，您可以建立使用者定義的硬體需求。  
 
- 使用以下过程创建用户定义的硬件要求。  
+ 使用下列程序建立使用者定義的硬體需求。  
 
-##### <a name="to-create-a-user-defined-hardware-requirements"></a>若要创建用户定义的硬件要求  
+##### <a name="to-create-a-user-defined-hardware-requirements"></a>建立使用者定義的硬體需求  
 
-1.  在 Configuration Manager 控制台中，单击“资产和符合性” 。  
+1.  在 Configuration Manager 主控台中，按一下 [資產與相容性] 。  
 
-2.  在“资产和符合性”  工作区中，单击“资产智能” ，然后单击“硬件要求” 。  
+2.  在 [資產與相容性]  工作區中，按一下 [Asset Intelligence] ，然後按一下 [硬體需求] 。  
 
-3.  在“主页”  选项卡上的“创建”  组中，单击“创建硬件要求” 。  
+3.  在 [首頁]  索引標籤的 [建立]  群組中，按一下 [建立硬體需求] 。  
 
-4.  在“常规”  页面上，输入以下信息：  
+4.  在 [一般]  頁面上，輸入下列資訊︰  
 
-    1.  **软件标题**：指定硬件要求关联的软件标题。 软件标题不能是资产智能目录中已存在的标题。  
+    1.  **軟體項目**：指定與硬體需求相關聯的軟體項目。 軟體項目不能存在於 Asset Intelligence 類別目錄中。  
 
-    2.  **验证状态**：为硬件要求列出“用户定义”  验证状态。 你无法修改此设置。  
+    2.  **驗證狀態**：列出驗證狀態為 [使用者定義]  的硬體需求。 您無法修改這項設定。  
 
-    3.  **最低 CPU (MHz)**：指定软件标题所需的最低处理器速度，以兆赫 (MHz) 为单位。  
+    3.  **CPU 下限 (MHz)**：指定軟體項目所需的最低處理器速度 (MHz)。  
 
-    4.  **最小 RAM (KB)**：指定软件标题所需的最小 RAM，以 KB 为单位。  
+    4.  **RAM 下限 (KB)**：指定軟體項目所需的最小 RAM (KB)。  
 
-    5.  **最小磁盘空间 (KB)**：指定软件标题所需的最小可用硬盘空间，以 KB 为单位。  
+    5.  **磁碟空間下限 (KB)**：指定軟體項目所需的最小可用硬碟空間 (KB)。  
 
-    6.  **最小磁盘大小 (KB)**：指定软件标题所需的最小硬盘大小，以 KB 为单位。  
+    6.  **磁碟大小下限 (KB)**：指定軟體項目所需的最小可用硬碟大小 (KB)。  
 
-     单击“下一步” 。  
+     按一下 [下一步] 。  
 
-5.  在“摘要”  页面上查看设置，然后单击“下一步” 。  
+5.  在 [摘要]  頁面上，檢閱設定，然後按一下 [下一步] 。  
 
-6.  在“完成”  页上，单击“关闭”  退出向导。  
+6.  在 [完成]  頁面上，按一下 [關閉]  結束精靈。  
 
-###  <a name="BKMK_ModifyCategorization"></a> 修改清单软件的分类信息  
- 使用特定分类信息（例如产品名称、供应商、软件类别以及软件系列）配置资产智能目录中预定义的软件。 当预定义的分类信息不满足你的要求时，你可以在软件标题的属性中修改该信息。 当你修改预定义软件的分类信息时，软件的验证状态会从“已验证”  更改为“用户定义” 。  
+###  <a name="BKMK_ModifyCategorization"></a> 修改已清查軟體的分類資訊  
+ 使用特定分類資訊 (例如產品名稱、廠商、軟體類別和軟體系列) 來設定 Asset Intelligence 類別目錄中的預先定義軟體。 預先定義的分類資訊不符合您的需求時，您可以修改軟體項目之內容中的資訊。 修改預先定義之軟體的分類資訊時，軟體的驗證狀態會從 [已驗證]  變更為 [使用者定義] 。  
 
 > [!IMPORTANT]  
->  只能修改顶层站点上的分类信息。  
+>  只能修改最上層站台上的分類資訊。  
 
- 使用以下过程修改清单软件的分类信息。  
+ 使用下列程序修改已清查軟體的分類資訊。  
 
-##### <a name="to-modify-the-categorizations-for-software-titles"></a>若要修改软件标题的分类  
+##### <a name="to-modify-the-categorizations-for-software-titles"></a>修改軟體項目的分類  
 
-1.  在 Configuration Manager 控制台中，单击“资产和符合性” 。  
+1.  在 Configuration Manager 主控台中，按一下 [資產與相容性] 。  
 
-2.  在“资产和符合性”  工作区中，单击“资产智能” ，然后单击“清单软件” 。  
+2.  在 [資產與相容性]  工作區中，按一下 [Asset Intelligence] ，然後按一下 [已清查的軟體] 。  
 
-3.  为你希望修改的分类选择一个或多个软件标题。  
+3.  選取軟體項目，或選取您要修改分類的多個軟體項目。  
 
-4.  在“主页”  选项卡上的“属性”  组中，单击“属性” 。  
+4.  在 [首頁]  索引標籤的 [內容]  群組中，按一下 [內容] 。  
 
-5.  在“常规”  选项卡上，你可以修改以下分类信息：  
+5.  在 [一般]  索引標籤上，您可以修改下列分類資訊：  
 
-    -   **产品名称**：指定清单软件标题的名称。  
+    -   **產品名稱**：指定已清查軟體項目的名稱。  
 
-    -   **供应商**：指定开发已列出清单的软件标题的供应商名称。  
+    -   **廠商**：指定開發已清查軟體項目的廠商名稱。  
 
-    -   **类别**：指定已列出清单的软件标题当前所分配的软件类别。  
+    -   **類別**：指定目前指派給已清查軟體項目的軟體類別。  
 
-    -   **家族**：指定已列出清单的软件标题当前所分配的软件家族。  
+    -   **系列**：指定目前指派給已清查軟體項目的軟體系列。  
 
-6.  单击“确定”  以保存更改。  
+6.  按一下 [確定]  儲存變更。  
 
- 使用以下过程将软件还原到原始分类信息。  
+ 使用下列程序，將軟體還原為原始分類資訊。  
 
-### <a name="revert-categorization-information-to-original-settings-for-software"></a>将软件的分类信息还原为软件的原始设置  
- Configuration Manager 会将从 System Center Online 中获得的分类信息存储在数据库中。 不能删除该信息。 修改信息后，你可以将该分类信息还原为 System Center Online 分类。 资产智能目录中不存在的清单软件也可以还原为原始设置。  
+### <a name="revert-categorization-information-to-original-settings-for-software"></a>將軟體的分類資訊還原為原始設定  
+ Configuration Manager 會將取自 System Center Online 的分類資訊儲存至資料庫中。 無法刪除該資訊。 修改資訊之後，您可以將分類資訊還原回 System Center Online 分類。 不在 Asset Intelligence 類別目錄中的已清查軟體也可以還原回原始設定。  
 
- 使用以下过程将分类信息还原为原始设置。  
+ 使用下列程序，將分類資訊還原為原始設定。  
 
-##### <a name="to-revert-categorization-information-to-original-settings"></a>若要将分类信息还原为原始设置  
+##### <a name="to-revert-categorization-information-to-original-settings"></a>將分類資訊還原為原始設定  
 
-1.  在 Configuration Manager 控制台中，单击“资产和符合性” 。  
+1.  在 Configuration Manager 主控台中，按一下 [資產與相容性] 。  
 
-2.  在“资产和符合性”  工作区中，单击“资产智能” ，然后单击“清单软件” 。  
+2.  在 [資產與相容性]  工作區中，按一下 [Asset Intelligence] ，然後按一下 [已清查的軟體] 。  
 
-3.  选择你希望还原到原始设置的一个或多个软件标题。 只能还原状态为“用户定义”  的软件。  
+3.  選取軟體項目，或選取您要還原為原始設定的多個軟體項目。 只能還原具有 [使用者定義]  狀態的軟體。  
 
     > [!TIP]  
-    >  单击“状态”  列以按验证状态进行排序。 通过排序，你可以查看按验证状态排列的所有软件并快速选择多个项以还原至原始设置。  
+    >  按一下要依驗證狀態排序的 [狀態]  資料行。 排序可讓您看到所有依驗證狀態的軟體，以及快速選取要還原為原始設定的多個項目。  
 
-4.  在“主页”  选项卡上的“产品”  组中，单击“还原” 。  
+4.  在 [首頁]  索引標籤的 [產品]  群組中，按一下 [還原] 。  
 
-5.  单击“是”  以将软件还原为原始分类信息。  
+5.  按一下 [是]  ，將軟體還原為原始分類資訊。  
 
-6.  当你还原资产智能目录中存在的软件分类信息时，验证状态会从“用户定义”  更改为“已验证” 。 当你还原资产智能目录中不存在的软件时，验证状态会从“用户定义”  更改为“未分类” 。  
+6.  還原 Asset Intelligence 類別目錄中軟體的分類資訊時，驗證狀態會從 [使用者定義]  變更為 [已驗證] 。 還原不在類別目錄中的軟體時，驗證狀態會從 [使用者定義]  變更為 [未分類] 。  
 
-##  <a name="BKMK_RequestCatalogUpdate"></a> 为未分类的软件标题请求目录更新  
- 可以将未分类的软件标题信息提交至 System Center Online 以供研究和分类。 提交了未分类的软件标题，并且客户对相同软件标题至少进行了 4 次分类请求之后，研究人员会进行标识、分类，然后将软件标题分类信息提供给所有正在使用 System Center Online 的客户。 Microsoft 会对具有最多分类请求的软件标题指定最高优先级。 自定义软件和业务线应用程序不大可能接收类别，作为最佳做法，不应将这些软件标题发送给 Microsoft 进行分类。  
+##  <a name="BKMK_RequestCatalogUpdate"></a> 要求未分類軟體項目的類別目錄更新  
+ 未分類軟體項目資訊可以提交給 System Center Online，以進行研究和分類。 提交未分類的軟體項目之後，若有客戶對相同軟體項目提出 4 個以上的分類要求時，研究人員會識別、分類，然後將軟體項目分類資訊提供給所有使用 System Center Online 服務的客戶。 Microsoft 會將最高的分類優先順序提供給分類要求數最多的軟體項目。 自訂軟體和企業營運應用程式不太可能會收到分類，因此最佳做法是不要將這類軟體項目傳送給 Microsoft 進行分類。  
 
- 当软件标题信息提交至 System Center Online 以供分类时，下列条件适用：  
+ 將軟體項目資訊提交給 System Center Online 進行分類時，下列情況適用：  
 
--   仅向 System Center Online 传输基本的软件标题信息，可以在提交前查看要分类的软件标题信息。  
+-   基本軟體項目資訊傳輸至 System Center Online，而且可以在提交之前檢閱要分類的軟體項目資訊。  
 
--   永远不会传输软件许可证信息。  
+-   永遠不會傳輸軟體授權資訊。  
 
--   任何已上载的软件标题将作为 System Center Online 目录的一部分予以公开，其他客户均可下载。  
+-   所有上傳的軟體項目都會公開作為 System Center Online 類別目錄的一部分，而且可供其他客戶進行下載。  
 
--   软件标题源未在 System Center Online 目录中存储。 然而，不应提交包含机密或专有信息的应用程序标题供 System Center Online 进行分类。  
+-   軟體項目的來源不是儲存在 System Center Online 類別目錄中。 不過，不應該提交包含機密或專屬資訊的應用程式標題，供 System Center Online 進行分類。  
 
 > [!NOTE]  
->  有关资产智能隐私信息的详细信息，请参阅 [System Center Configuration Manager 中资产智能的安全和隐私](../../../../core/clients/manage/asset-intelligence/security-and-privacy-for-asset-intelligence.md)。  
+>  如需 Asset Intelligence 隱私權資訊的詳細資訊，請參閱 [Security and privacy for Asset Intelligence in System Center Configuration Manager](../../../../core/clients/manage/asset-intelligence/security-and-privacy-for-asset-intelligence.md) (System Center Configuration Manager 中 Asset Intelligence 的安全性與隱私權)。  
 
- 使用下列过程从 System Center Online 中请求资产智能目录的软件标题分类。  
+ 使用下列程序，從 System Center Online 要求 Asset Intelligence 類別目錄軟體項目分類。  
 
-#### <a name="to-request-a-catalog-update-for-uncategorized-software-titles"></a>若要为未分类的软件标题请求目录更新  
+#### <a name="to-request-a-catalog-update-for-uncategorized-software-titles"></a>要求未分類軟體項目的類別目錄更新  
 
-1.  在 Configuration Manager 控制台中，单击“资产和符合性” 。  
+1.  在 Configuration Manager 主控台中，按一下 [資產與相容性] 。  
 
-2.  在“资产和符合性”  工作区中，单击“资产智能” ，然后单击“清单软件” 。  
+2.  在 [資產與相容性]  工作區中，按一下 [Asset Intelligence] ，然後按一下 [已清查的軟體] 。  
 
-3.  选择一个或多个产品名称，将它们提交至 System Center Online 进行分类。 仅未分类并已列出清单的软件标题可以提交到 System Center Online 以供分类。 如果管理员已对清单软件标题进行了分类并生成了用户定义的状态，则必须右键单击清单软件标题，再单击“还原”  以将软件标题还原到“未分类”  状态，然后将其提交到 System Center Online 进行分类。  
+3.  選取產品名稱，或選取要提交給 System Center Online 進行分類的多個產品名稱。 只有未分類的已清查軟體項目才能提交給 System Center Online 進行分類。 如果系統管理員已分類已清查的軟體項目而導致使用者定義的狀態，您必須在已清查的軟體項目上按一下滑鼠右鍵，然後按一下 [還原]  先將軟體項目還原為 [未分類]  狀態，再將它提交給 System Center Online 進行分類。  
 
     > [!NOTE]  
-    >  Configuration Manager 可以一次处理多达 100 个软件标题的分类。 如果选择了超过 100 个软件标题，则只会处理前 100 个软件标题。 必须选择少于 100 个要在批次中进行分类的其余软件标题。  
+    >  Configuration Manager 一次最多可以處理 100 個軟體項目來進行分類。 如果您選取 100 個以上的軟體項目，則只會處理前 100 個軟體項目。 您必須以小於 100 的批次來選取其餘的軟體項目進行分類。  
 
     > [!TIP]  
-    >  单击“状态”  列以按验证状态进行排序。 这样可让你看见所有未分类的产品名称，快速选择多个项目并提交进行分类。  
+    >  按一下要依驗證狀態排序的 [狀態]  資料行。 這可讓您看到所有未分類的產品名稱，並快速地選取要提交進行分類的多個項目。  
 
-4.  在“主页”  选项卡上的“产品”  组中，单击“请求目录更新” 。  
+4.  在 [首頁]  索引標籤的 [產品]  群組中，按一下 [要求類別目錄更新] 。  
 
-5.  查看 System Center Online 分类提交隐私消息。 单击“详细信息”  以查看将发送到 System Center Online 的信息。  
+5.  檢閱 System Center Online 分類提交隱私權訊息。 按一下 [詳細資料]  檢視將傳送給 System Center Online 的資訊。  
 
-6.  选择“我已阅读并理解此消息” ，然后单击“确定”  以允许提交所选的软件标题进行分类。  
+6.  選取 [我已經閱讀並了解此訊息] ，然後按一下 [確定]  允許提交選取的軟體項目進行分類。  
 
-7.  验证已提交至 System Center Online 进行分类的清单软件名称的状态是否已从“未分类”  更改为“挂起” 。  
+7.  確認提交給 System Center Online 進行分類的已清查軟體產品名稱狀態已從 [未分類]  變更為 [擱置] 。  
 
     > [!NOTE]  
-    >  提交至 System Center Online 进行分类的软件在管理中心站点上具有验证状态为“挂起”  的软件在子主站点上仍然会显示为“未分类”  的验证状态。  
+    >  提交給 System Center Online 進行分類的軟體，其在管理中心網站上的驗證狀態為 [擱置]  ，但在子主要站台上仍會顯示 [未分類]  驗證狀態。  
 
-##  <a name="BKMK_ResolveSoftwareDetails"></a> 解决软件详细信息冲突  
- System Center Online 与现有软件详细信息存在冲突，因此在其已收到最近更新的软件分类详细信息之后，你可以选择如何解决该冲突。 当前具有冲突的软件的验证状态为“可更新” 。 在解决软件详细信息冲突之后，根据你指定的设置，软件分类信息将保留在资产智能目录中。 在解决冲突之后，对于相同软件分类值，软件详细信息冲突不会再次发生，除非 System Center Online 值发生变化。  
+##  <a name="BKMK_ResolveSoftwareDetails"></a> 解決軟體詳細資料衝突  
+ 從 System Center Online 接收到與現有軟體詳細資料資訊衝突的剛更新軟體分類詳細資料之後，即可選擇如何解決衝突。 具有目前衝突之軟體的驗證狀態為 [可更新] 。 解決軟體詳細資料衝突之後，會根據您指定的設定，將軟體分類資訊保留在 Asset Intelligence 類別目錄中。 除非在解決衝突之後變更 System Center Online 值，否則相同的軟體分類值不會再發生軟體詳細資料衝突。  
 
- 使用以下过程解决软件详细信息冲突。  
+ 使用下列程序解決軟體詳細資料衝突。  
 
-#### <a name="to-resolve-a-software-details-conflict"></a>解决软件详细信息冲突  
+#### <a name="to-resolve-a-software-details-conflict"></a>解決軟體詳細資料衝突  
 
-1.  在 Configuration Manager 控制台中，单击“资产和符合性” 。  
+1.  在 Configuration Manager 主控台中，按一下 [資產與相容性] 。  
 
-2.  在“资产和符合性”  工作区中，单击“资产智能” ，然后单击“清单软件” 。  
+2.  在 [資產與相容性]  工作區中，按一下 [Asset Intelligence] ，然後按一下 [已清查的軟體] 。  
 
-3.  查看软件标题的“状态”  列是否处于“可更新”  状态。  
+3.  檢閱處於 [可更新]  狀態之軟體項目的 [狀態]  資料行。  
 
-4.  选择你希望解决冲突的软件标题，然后在“主页”  选项卡上的“产品”  组中，单击“解决冲突” 。  
+4.  選取您需要解決衝突的軟體項目，並在 [首頁]  索引標籤的 [產品]  群組中，然後按一下 [解決衝突] 。  
 
-5.  查看以下信息：  
+5.  檢閱下列資訊：  
 
-    -   **本地值**：指定资产智能目录中与较新的 System Center Online 软件分类详细信息发生冲突的现有软件分类信息。  
+    -   **本機值**：指定 Asset Intelligence 類別目錄中與較新 System Center Online 軟體分類詳細資料發生衝突的現有軟體分類資訊。  
 
-    -   **已下载的值**：为冲突的资产智能目录软件分类信息指定新的 System Center Online 软件分类信息。  
+    -   **下載的值**：指定衝突的 Asset Intelligence 類別目錄軟體分類資訊的新 System Center Online 軟體分類資訊。  
 
-6.  选择以下设置之一以解决软件详细信息冲突：  
+6.  選取下列其中一個設定來解決軟體詳細資料衝突：  
 
-    -   **不更改本地编辑的目录信息值**：通过保留现有资产智能目录软件分类信息来解决软件详细信息冲突。 当你选择此设置时，软件标题状态会从“可更新”  更改为“用户定义” 。  
+    -   **不變更本機編輯類別目錄資訊值**：保留現有 Asset Intelligence 類別目錄軟體分類資訊，來解決軟體詳細資料衝突。 當您選取這個設定時，軟體項目狀態會從 [可更新]  變更為 [使用者定義] 。  
 
-    -   **用已下载的 System Center Online 值覆盖本地编辑的目录信息值**：通过用从 System Center Online 获得的新信息覆盖现有的资产智能目录软件分类信息来解决软件详细信息冲突。 当你选择此设置时，软件标题状态会从“可更新”  更改为“已验证” 。  
+    -   **使用下載的 System Center Online 值覆寫本機編輯類別目錄資訊**：使用取自 System Center Online 的新資訊來覆寫現有 Asset Intelligence 類別目錄軟體分類資訊，來解決軟體詳細資料衝突。 當您選取這個設定時，軟體項目狀態會從 [可更新]  變更為 [已驗證] 。  
 
-     单击“确定”  保存冲突解决。  
-
+     按一下 [確定]  儲存衝突解決方法。  

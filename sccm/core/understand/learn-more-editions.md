@@ -1,118 +1,114 @@
 ---
-title: "了解有关授权和分支的详细情况 | Microsoft Docs"
-description: "请使用本主题，了解有关 2016 年 10 月发行的 System Center Configuration Manager（包括 Current Branch 1606 版、Long-Term Servicing Branch (LTSB) 和 Current Branch 的评估安装）的可用安装选项的许可要求。"
+title: "深入了解授權和分支 | Microsoft Docs"
+description: "請使用本主題，深入了解 System Center Configuration Manager 2016 年 10 月版本提供之安裝選項的授權需求，其中包括最新分支 1606 版、長期維護分支 (LTSB) 和最新分支的評估安裝。"
 ms.custom: na
 ms.date: 10/12/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 495b87ae-41a4-49ba-abe2-d4f7d22ac0d4
-caps.latest.revision: 0
-caps.handback.revision: 0
+caps.latest.revision: "0"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a0d4eb601948aa3abb12409f3475d69cacf4a6aa
 ms.openlocfilehash: 90e16b316872cb370c9c2e645f46ac12afab7107
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
+# <a name="licensing-and-branches-for-system-center-configuration-manager"></a>System Center Configuration Manager 的授權和分支
 
-# <a name="licensing-and-branches-for-system-center-configuration-manager"></a>System Center Configuration Manager 的许可和分支
+適用於：System Center Configuration Manager (最新分支)、(長期維護分支)
 
-*适用范围：System Center Configuration Manager (Current Branch) 和 (Long-Term Servicing Branch)*
+請使用本主題深入了解 2016 年 10 月發行的 System Center Configuration Manager 1606 版的安裝選項授權需求。 這些安裝選項包括最新分支 1606 版、長期維護分支 (LTSB)，以及最新分支 1606 版的評估安裝。
 
-参阅本主题，了解 System Center Configuration Manager 1606 版本 2016 年 10 月发行版中提供的安装选项的许可要求。 这些安装选项包括 Current Branch 版本 1606、Long-Term Servicing Branch (LTSB) 和Current Branch 版本 1606 的评估安装。
-
-**许可概述：**   
-自 2016 年 10 月 1 日起，具有 System Center Configuration Manager 许可证上可用的软件保障 (SA) 或同等订阅权限的客户，有权使用 System Center Configuration Manager 的 2016 年 10 月发行的版本 1606。 自 2016 年 10 月 1 日起（含），对 System Center Configuration Manager 具有权限的客户在安装时将会发现两个已许可的选项：Current Branch 和 Long-Term Servicing Branch (LTSB)。
-
-
-**许可指定：**  
-[可在此处](http://go.microsoft.com/fwlink/?LinkId=800052)找到通过 Microsoft 批量许可计划购买的产品的完整条款和条件。
+**授權概觀：**   
+如果客戶具有 System Center Configuration Manager 授權的作用中軟體保證 (SA) 或自 2016 年 10 月 1 日起的對等訂閱權限，即有權使用 2016 年 10 月發行的 System Center Configuration Manager 1606 版。 如果客戶具有自 2016 年 10 月 1 日起的 System Center Configuration Manager 權限，則在安裝時會發現最新分支和長期維護分支 (LTSB) 這兩個授權選項。
 
 
-## <a name="system-center-configuration-manager-licensed-branches"></a>System Center Configuration Manager 已许可的分支  
-本主题参考软件保障协议（或等效订阅权限），此协议是授予 Configuration Manager 安装和使用权限的 Microsoft 许可协议。
+**授權詳細資料：**  
+[您可參閱此連結，了解透過 Microsoft 大量授權方案購買之產品的完整條款及條件](http://go.microsoft.com/fwlink/?LinkId=800052)。
 
 
-|分支|许可|详细信息|
+## <a name="system-center-configuration-manager-licensed-branches"></a>System Center Configuration Manager 授權的分支  
+本主題會參考軟體保證合約 (或對等的訂閱權限) 也就是授與安裝和使用 Configuration Manager 權限的 Microsoft 授權合約。
+
+
+|分支|授權|詳細資料|
 |----------------|---------------------|--------------------|
-|Current Branch | 需要 Configuration Manager 的可用的软件保障协议（或等效权限）。 </br></br> 请参阅本主题中的[软件保障和 Current Branch](#software-assurance-and-the-current-Branch)。| 支持在希望接收来自 Microsoft 的定期质量和功能更新的生产环境中使用。 </br></br> 此分支提供使用所有功能和改进的访问权限。 </br></br> 每个版本更新发布后，支持期限为一 (1) 年，此后必须更新到[受支持](/sccm/core/servers/manage/current-branch-versions-supported)的较新版本。|
-|Long-Term Servicing Branch (LTSB)| 在发布日（2016 年 10 月 1 日）需要具有与 Microsoft 签订的最新软件保障协议 </br></br> 请参阅本主题中的[软件保障和 LTSB](#software-assurance-and-the-ltsb)。 | 支持在生产环境中使用。 适用于 Configuration Manager 的软件保障 (SA) 或等效订阅权限于 2016 年 10 月 1 日后过期的客户。 </br></br> 与 Current Branch 相比，此分支有所限制。 </br></br> 对于此分支，提供 Configuration Manager 的关键安全更新，但不提供新功能。 |
-|Current Branch 的评估安装| 不需要与 Microsoft 签订软件保障协议。 | [评估安装](https://www.microsoft.com/en-us/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection)始终是 Current Branch，使用期限为 180 天。 </br></br> 可将评估安装升级到 Current Branch 的完整安装。 不能将评估安装升级到 Long-Term Servicing Branch。|
+|最新分支 | 需具備作用中的 Configuration Manager 軟體保證合約 (或對等權限)。 </br></br> 請參閱本主題的[軟體保證和最新分支](#software-assurance-and-the-current-Branch)。| 支援在想要從 Microsoft 接收定期品質和功能更新的生產環境中使用。 </br></br> 此分支可供存取所有功能和增強功能。 </br></br> 每個版本的更新支援為發行後一 (1) 年內，在這段期間，您必須更新為仍[受支援](/sccm/core/servers/manage/current-branch-versions-supported)的較新版本。|
+|長期維護分支 (LTSB)| 需具備發行當時 (2016 年 10 月 1 日) 與 Microsoft 簽訂的最新軟體保證合約 </br></br> 請參閱本主題的[軟體保證和 LTSB](#software-assurance-and-the-ltsb)。 | 支援在生產環境中使用。 適用於軟體保證 (SA) 或對等 Configuration Manager 訂閱權限已於 2016 年 10 月 1 日之後到期的客戶。 </br></br> 相較於最新分支，此分支有所限制。 </br></br> 此分支可獲得 Configuration Manager 的重大安全性更新，但無法使用任何新功能。 |
+|最新分支的評估安裝| 不需要與 Microsoft 簽訂軟體保證合約。 | [評估安裝](https://www.microsoft.com/en-us/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection)一律是指最新分支，而且可用 180 天。 </br></br> 評估安裝可以升級為最新分支的完整安裝。 您無法將評估安裝升級為長期維護分支。|
 
-除了 Current Branch、LTSB 和 Current Branch 的评估安装，还提供 [System Center Configuration Manager 的 Technical Preview](https://www.microsoft.com/en-us/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview)。 这是 Configuration Manager 的受限内部版本，可通过此版本试用将来可能会添加到 Current Branch 的新功能。 使用不同于许可版本的介质安装 Technical Preview。 有关详细信息，请参阅 [Technical Preview](/sccm/core/get-started/technical-preview) 的文档。
-
-
-## <a name="licensed-branches"></a>许可的分支
-自 2016 年 10 月 1 日起，具有 System Center Configuration Manager 许可证上可用的软件保障 (SA) 或同等订阅权限的客户，有权使用 System Center Configuration Manager 的 2016 年 10 月发行的版本 1606。 自 2016 年 10 月 1 日起（含），对 System Center Configuration Manager 1606 版具有权限的客户在安装时将会发现两个许可选项：
--    **Current Branch**
--    **Long-Term Servicing Branch (LTSB)**
+除了最新分支、LTSB 和最新分支的評估安裝，也提供 [System Center Configuration Manager Technical Preview](https://www.microsoft.com/en-us/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview)。 這是有限的 Configuration Manager 組建，可讓您試用未來更新中新增的最新分支新功能。 您可以使用不同媒體來安裝 Technical Preview 而不是授權版本。 如需詳細資訊，請參閱 [Technical Preview](/sccm/core/get-started/technical-preview)。
 
 
-有关详细信息，请参阅上节中的表。
+## <a name="licensed-branches"></a>授權的分支
+如果客戶具有 System Center Configuration Manager 授權的作用中軟體保證 (SA) 或自 2016 年 10 月 1 日起的對等訂閱權限，即有權使用 2016 年 10 月發行的 System Center Configuration Manager 1606 版。 如果客戶具有自 2016 年 10 月 1 日起的 System Center Configuration Manager 1606 版權限，則在安裝時 2016 版會發現下列兩個授權選項：
+-   **最新分支**
+-   **長期維護分支 (LTSB)**
 
 
-## <a name="software-assurance-agreements-and-system-center-configuration-manager"></a>软件保障协议和 System Center Configuration Manager
-自 2016 年 10 月 1 日起（包含当日），System Center Configuration Manager 许可证上的软件保障或等效订阅权限的状态决定可安装和使用的分支。
+如需詳細資訊，請參閱上一節的表格。
 
 
-### <a name="software-assurance-and-the-current-branch"></a>软件保障和 Current Branch
-System Center Configuration Manager Current Branch 的使用权限可以由以下提供：
--  **System Center：**如果客户具有 System Center Standard 上的可用 SA 或数据中心许可证，则可安装和使用 System Center Configuration Manager 的 Current Branch 选项。
-
--  **System Center Configuration Manager：**如果客户具有 System Center Configuration Manager 许可证上的可用 SA 或等效订阅权限，则可安装和使用 System Center Configuration Manager 的 Current Branch 选项。
-
-自 2016 年 10 月 1 日起（含），如果具有 System Center Configuration Manager 许可证上的可用 SA（或等效订阅权限）：
-- 可以安装并使用 Current Branch。
-- 如果允许 SA 或订阅失效，必须卸载 Current Branch。
-
-### <a name="software-assurance-and-the-ltsb"></a>软件保障和 LTSB
- 自 2016 年 10 月 1 日起（含），如果具有 System Center Configuration Manager 许可证上的可用 SA（或等效订阅权限）：
- - 可以安装并使用 LTSB。 如果客户对 System Center Configuration Manager 具有永久权限或者允许 SA 或订阅失效，则其可在失效时安装当前的 System Center Configuration Manager LTSB 版本。
-
-LTSB 以 Current Branch 1606 版为基础，具有以下限制：
-  - 不支持将 Current Branch 转换为 LTSB。 如果当前拥有 Current Branch 站点，必须将 LTSB 作为新站点安装。  
-
-  - LTSB 并非支持 Current Branch 的每一项功能。 [Long-Term Servicing Branch 简介](introduction-to-the-ltsb.md)及相关文档中详细介绍了限制。 这些限制包括有限的功能集、有限的升级选项和单独的产品支持生命周期。  
+## <a name="software-assurance-agreements-and-system-center-configuration-manager"></a>軟體保證合約和 System Center Configuration Manager
+您可以安裝並使用的分支是由 2016 年 10 月 1 日起，您所擁有的 System Center Configuration Manager 授權軟體保證狀態或對等訂閱權限決定。
 
 
-### <a name="software-assurance-expiration-date"></a>软件保障到期日期
-从 2016 年 10 月发布的 System Center Configuration Manager 的 1606 版基线介质开始，可以指定软件保障协议的到期日期。 “软件保障到期日期”是一个可选值，可在运行 Configuration Manager 安装程序时或稍后从 Configuration Manager 控制台中指定该值。
+### <a name="software-assurance-and-the-current-branch"></a>軟體保證和最新分支
+下例項目提供 System Center Configuration Manager 最新分支的使用權限：
+-  **System Center：**如果使用者具有 System Center 的標準或資料中心授權，即可安裝並使用 System Center Configuration Manager 的最新分支選項。
+
+-  **System Center Configuration Manager：**如果客戶具有 System Center Configuration Manager 授權的使用中 SA 或對等訂閱權限，即有權安裝並使用 System Center Configuration Manager 的最新分支選項。
+
+如果您具有自 2016 年 10 月 1 日起的 System Center Configuration Manager 授權作用中 SA (或對等訂閱權限)：
+- 您可以安裝並使用最新分支。
+- 如果您可接受 SA 或訂閱失效，則必須解除安裝最新分支。
+
+### <a name="software-assurance-and-the-ltsb"></a>軟體保證和 LTSB
+ 如果您具有自 2016 年 10 月 1 日起的 System Center Configuration Manager 授權作用中 SA (或對等訂閱權限)：
+ - 您可以安裝並使用 LTSB。 如果客戶擁有 System Center Configuration Manager 的永久權限，或可接受 SA 或訂閱失效，則可在失效當下安裝 System Center Configuration Manager LTSB 版。
+
+LTSB 是以最新分支 1606 版為基礎，並具有下列限制：
+  - 不支援將最新分支轉換為 LTSB。 如果您目前具有最新分支站台，則必須將 LTSB 安裝為新的站台。  
+
+  - LTSB 並非完全支援最新分支的所有功能。 [長期維護分支簡介](introduction-to-the-ltsb.md)及其相關文件中有詳述相關限制。 這些限制包括有限的功能集、有限升級選項，以及個別的產品支援生命週期。  
+
+
+### <a name="software-assurance-expiration-date"></a>軟體保證到期日
+從 System Center Configuration Manager 的 1606 版 2016 年 10 月版基準媒體開始，您可以指定軟體保證合約的到期日。 **軟體保證到期日**：這個選用值可在執行 Configuration Manager 安裝程式時指定，或稍後從 Configuration Manager 主控台內將其指定為方便的提醒。
 
 >  [!NOTE]   
->  Microsoft 不会验证指定的到期日期，且不使用此日期验证许可证。  相反，可以使用该日期作为到期日期提醒。 这很有用，因为 Configuration Manager 会定期检查在线提供的新软件更新，而软件保障许可证应为最新状态，才有资格使用这些额外的更新。    
+>  Microsoft 不會驗證您指定的到期日，也不會將這個日期用於授權驗證。  因此，您可以將它作為到期日的提醒。 這項功能很實用，因為 Configuration Manager 會定期檢查線上提供的新軟體更新，因此您應該維持最新的軟體保證授權狀態，才能保有使用其他更新的資格。    
 
-**指定日期：**
-- 通过 System Center Configuration Manager 1606 版基线介质运行安装程序时，可在安装向导的“产品密钥”页指定该值。
+**若要指定日期：**
+- 當您從 System Center Configuration Manager 1606 版基準媒體執行安裝程式時，可以在 [安裝精靈] 的 [產品金鑰] 頁面上指定值。
 
-- 可在 Configuration Manager 控制台的“层次结构设置属性”的“许可”选项卡上指定此值。
+- 在 Configuration Manager 主控台的 [階層設定內容] 中，您可以在 [授權] 索引標籤上指定值。
 
-有关软件保障许可和 System Center Configuration Manager 的 Current Branch 的详细信息，请参阅 [System Center Configuration Manager 的许可和分支](/sccm/core/understand/learn-more-editions)。
+如需 System Center Configuration Manager 軟體保證授權和最新分支的詳細資訊，請參閱 [Licensing and branches for System Center Configuration Manager](/sccm/core/understand/learn-more-editions) (System Center Configuration Manager 授權和分支)。
 
 
-## <a name="resources-for-licensing-information"></a>有关许可信息的资源
-使用以下链接可了解更多有关产品许可的详细信息。
+## <a name="resources-for-licensing-information"></a>授權資訊的資源
+請使用下列連結，深入了解產品授權詳細資料。
 
-**Microsoft 批量许可服务中心 (VLSC) 链接：**
-- VLSC 概述：[https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx](https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx)。
+**Microsoft 大量授權服務中心 (VLSC) 連結：**
+- VLSC 的概觀：[https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx](https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx)。
 
-- Microsoft 批量许可产品术语： [http://go.microsoft.com/fwlink/?LinkId=800052](http://go.microsoft.com/fwlink/?LinkId=800052)。
+- Microsoft 大量授權產品條款：[http://go.microsoft.com/fwlink/?LinkId=800052](http://go.microsoft.com/fwlink/?LinkId=800052)。
 
-- 批量许可客户可以在此获得许可证摘要：[https://www.microsoft.com/Licensing/servicecenter/default.aspx](https://www.microsoft.com/Licensing/servicecenter/default.aspx)。  
-  转到“许可证”菜单，然后单击“许可证摘要”获取许可证概述。
+- 大量授權客戶可於此處取得其授權摘要：[https://www.microsoft.com/Licensing/servicecenter/default.aspx](https://www.microsoft.com/Licensing/servicecenter/default.aspx)。  
+  移至 [授權] 功能表，然後按一下 [授權摘要] 以取得授權的概觀。
 
-**VLSC 视频：**
-- 有关 VLSC 工作原理的培训视频：m[https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx#tab=2](https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx#tab=2)。
+**VLSC 影片：**
+- VLSC 運作方式的訓練影片：[https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx#tab=2](https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx#tab=2)。
 
-- 可在此查看可用的软件保障协议（从约 43 秒开始）：[https://www.microsoft.com/showcase/video.aspx?uuid=fe1846cb-1d26-49fc-b064-57b25dcc31a0](https://www.microsoft.com/showcase/video.aspx?uuid=fe1846cb-1d26-49fc-b064-57b25dcc31a0)。
+- 尋找作用中軟體保證合約的所在位置 (約在影片 43 秒處)：[https://www.microsoft.com/showcase/video.aspx?uuid=fe1846cb-1d26-49fc-b064-57b25dcc31a0](https://www.microsoft.com/showcase/video.aspx?uuid=fe1846cb-1d26-49fc-b064-57b25dcc31a0)。
 
-- 如何获取 VLSC 的权限：[https://www.microsoft.com/showcase/video.aspx?uuid=ac4ed1ca-d0a9-43cd-89fa-74ccb555dec4](https://www.microsoft.com/showcase/video.aspx?uuid=ac4ed1ca-d0a9-43cd-89fa-74ccb555dec4)。  可以将 VLSC 读取和写入权限委派给组织中的其他人。
-
+- 如何取得 VLSC 的權限：[https://www.microsoft.com/showcase/video.aspx?uuid=ac4ed1ca-d0a9-43cd-89fa-74ccb555dec4](https://www.microsoft.com/showcase/video.aspx?uuid=ac4ed1ca-d0a9-43cd-89fa-74ccb555dec4)。  您可以將 VLSC 讀取和寫入權限委派給組織中的其他人。

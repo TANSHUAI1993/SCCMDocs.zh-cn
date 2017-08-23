@@ -1,61 +1,54 @@
 ---
-title: "诊断数据的使用 | Microsoft Docs"
-description: "了解 Microsoft 如何使用 System Center Configuration Manager 收集的诊断和使用情况数据。"
+title: "使用診斷資料 | Microsoft Docs"
+description: "了解 Microsoft 如何使用 System Center Configuration Manager 收集的診斷及使用方式資料。"
 ms.custom: na
 ms.date: 12/29/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a8021bc8-2799-41f4-83c2-e27d1242028c
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 24a233516058e645df2a43623855665b97b041b0
 ms.openlocfilehash: 9864f6ba7b9a2211c99b1a5d9ebd582e01ccfeb6
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="how-diagnostics-and-usage-data-is-used-for-system-center-configuration-manager"></a>如何将诊断和使用情况数据用于 System Center Configuration Manager
+# <a name="how-diagnostics-and-usage-data-is-used-for-system-center-configuration-manager"></a>診斷和使用方式資料如何用於 System Center Configuration Manager
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用於：System Center Configuration Manager (最新分支)*
 
-System Center Configuration Manager 收集的诊断和使用数据为 Microsoft 提供有关产品使用情况的近乎即时的反馈，并可用于调整将来的更新。 我们也能查看配置数据，这些数据可帮助我们设计并测试生产中的配置。 例如：  
+System Center Configuration Manager 所收集的診斷和使用方式資料會以近即時的方式將產品的運作狀況提供給 Microsoft，並用來調整後續的更新。 我們也可以查看設定資料，以協助我們設計及測試生產環境中的設定。 例如：  
 
--   站点服务器使用的 Windows Server 版本  
+-   站台伺服器所使用的 Windows Server 版本  
 
--   已安装的语言包  
+-   安裝的語言套件  
 
--   SQL 架构针对产品默认值的增量  
+-   SQL 結構描述與產品預設值的差異  
 
-此数据帮助工程团队计划将来的测试，以确保在最常见的配置下获得最佳体验。 由于将以更快频率发布 Configuration Manager 更新（以便更好地支持 Windows 10 和 Microsoft Intune 等快速发展的技术），因此，此数据对于快速调整和适应至关重要。  
+這份資料可協助工程團隊規劃未來測試，以確保獲得最常見設定的最佳體驗。 隨著 Configuration Manager 更新的發行頻率愈來愈快 (以便針對快速發展的 Windows 10 和 Microsoft Intune 等技術提供更佳的支援)，這份資料對於快速調整與採用至關重要。  
 
-同样重要的一点是，了解诊断和使用数据不适用于哪些方面。 Microsoft 不会将此数据用于以下方面：  
+診斷和使用方式資料不被運用的情形也同樣重要。 Microsoft 不會將此資料用來︰  
 
--   许可审核，例如按照许可协议比较客户使用情况  
+-   授權稽核，例如針對授權合約比對用戶端使用方式  
 
--   不支持的产品的审核  
+-   稽核不支援的產品  
 
--   基于功能使用情况或地理位置（时区）等可用数据进行广告宣传  
+-   根據可用資料 (例如功能使用習慣或地理位置 (時區)) 推銷廣告  
 
-##  <a name="a-namebkmkimprovea-examples-of-how-diagnostics-and-usage-data-improves-the-product"></a><a name="bkmk_improve"></a> 诊断和使用数据如何改进产品的示例  
-Microsoft 使用可用数据来改进产品。 以下是几个示例：  
+##  <a name="bkmk_improve"></a> 診斷和使用方式資料如何改進產品的範例  
+Microsoft 會利用可用的資料來改進產品。 以下是一些範例：  
 
--   **修订了对较旧服务器操作系统的支持：**  
+-   **修改較舊的伺服器作業系統的支援：**  
 
-     System Center Configuration Manager Current Branch 提供的初始支持对 Windows Server 2008 R2 的支持时间线加以限制。 检查已升级到 Configuration Manager Current Branch 的客户的使用数据之后，我们发现需要修订和扩展此时间线，以支持仍使用此服务器操作系统托管站点服务器和站点系统角色的客户。  
+     System Center Configuration Manager 最新分支所提供的初始支援，會限制 Windows Server 2008 R2 的支援時間表。 在檢查已升級至 Configuration Manager 最新分支的客戶使用方式資料後，我們意識到修改並延長此時間表的必要性，這樣才能支援仍使用此伺服器作業系統來裝載站台伺服器及站台系統角色的客戶。  
 
--   **改进了先决条件检查：**  
+-   **改善必要條件檢查：**  
 
-     基于使用数据，我们改进了先决条件检查以便安装更新，从而删除过时的规则、负责处理其他情况以及在某些情况下自动修正某些问题。  
-
-
-
-<!--HONumber=Dec16_HO5-->
-
-
+     根據使用方式資料，我們已經改善安裝更新的必要條件檢查，以移除過時的規則、處理額外情況，以及在某些情況下自動修補某些問題。  

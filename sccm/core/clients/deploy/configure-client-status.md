@@ -1,117 +1,113 @@
 ---
-title: "配置客户端状态 | Microsoft Docs"
-description: "在 System Center Configuration Manager 中选择客户端状态设置。"
+title: "設定用戶端狀態 | Microsoft Docs"
+description: "選取 System Center Configuration Manager 中的用戶端狀態設定。"
 ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: a2275ba2-c83d-43e7-90ed-418963a707fe
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 55c953f312a9fb31e7276dde2fdd59f8183b4e4d
-ms.openlocfilehash: 22cc286baa72d3e356a07b91ee0a1be646fa8a9e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 12/16/2016
-
-
+ms.openlocfilehash: 060d63ab8bce9c3bb39d2db404580b9f59416d33
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="how-to-configure-client-status-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中配置客户端状态
+# <a name="how-to-configure-client-status-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中設定用戶端狀態
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用對象：System Center Configuration Manager (最新分支)*
 
-在可以监视 System Center Configuration Manager 客户端状态和修正所发现的问题之前，必须配置站点，以指定用于将客户端标记为不活动的参数，以及配置选项以便在客户端的活动程度低于指定的阈值时向你发出警报。 还可以禁止计算机自动修正客户端状态发现的任何问题。  
+您必須設定站台指定用於將用戶端標記為非作用中的參數，以及設定一旦用戶端活動低於指定閾值時的警示選項，才能監視 System Center Configuration Manager 用戶端狀態，以及補救所找到的問題。 您也可以停止讓電腦自動補救用戶端狀態找到的所有問題。  
 
-##  <a name="BKMK_1"></a>配置客户端状态  
+##  <a name="BKMK_1"></a> 設定用戶端狀態  
 
-1.  在 Configuration Manager 控制台中，单击“监视” 。  
+1.  在 Configuration Manager 主控台中，按一下 [監視] 。  
 
-2.  在“监视”  工作区中，单击“客户端状态” ，然后，在“主页”  选项卡中，在“客户端状态”  组中单击“客户端状态设置” 。  
+2.  在 [監視]  工作區中按一下 [用戶端狀態] ，然後在 [首頁]  索引標籤的 [用戶端狀態]  群組中按一下 [用戶端狀態設定] 。  
 
-3.  在“客户端状态设置属性”  对话框中，指定下列值以确定客户端活动程度：  
-
-    > [!NOTE]  
-    >  如果不符合任何设置，则将客户端标记为不活动。  
-
-    -   **以下几天的客户端策略请求:** 指定自客户端请求策略以来的天数。 默认值为 **7** 天。  
-
-    -   **以下几天的检测信号发现:** 指定自客户端计算机将检测信号发现记录发送到站点数据库以来的天数。 默认值为 **7** 天。  
-
-    -   **以下几天的硬件清单:** 指定自客户端计算机将硬件清单记录发送到站点数据库以来的天数。 默认值为 **7** 天。  
-
-    -   **以下几天的软件清单:** 指定自客户端计算机将软件清单记录发送到站点数据库以来的天数。 默认值为 **7** 天。  
-
-    -   **以下几天的状态消息:** 指定自客户端计算机将状态消息发送到站点数据库以来的天数。 默认值为 **7** 天。  
-
-4.  在“客户端状态设置属性”  对话框中，指定下列值以确定将客户端状态历史记录数据保留多长时间：  
-
-    -   **保留以下几天的客户端状态历史记录:** 指定要将客户端状态历史记录在站点数据库中保留多长时间。 默认值为 **31** 天。  
-
-5.  单击“确定”  以保存属性和关闭“客户端状态设置属性”  对话框。  
-
-##  <a name="BKMK_Schedule"></a>配置客户端状态的计划  
-
-1.  在 Configuration Manager 控制台中，单击“监视” 。  
-
-2.  在“监视”  工作区中，单击“客户端状态” ，然后，在“主页”  选项卡中，在“客户端状态”  组中单击“计划客户端状态更新” 。  
-
-3.  在“计划客户端状态更新”  对话框中，配置所要的客户端状态更新间隔，然后单击“确定”。  
+3.  在 [用戶端狀態設定內容]  對話方塊中，指定下列用於判斷用戶端活動的值：  
 
     > [!NOTE]  
-    >  如果更改客户端状态更新的计划，则此更新将在下一次计划的客户端状态更新（对于以前配置的计划而言）之后才会生效。  
+    >  如果不符合其中任何設定，用戶端將標示為非作用中。  
 
-##  <a name="BKMK_2"></a>配置客户端状态的警报  
+    -   **以下指定天數內的用戶端原則要求：** 指定用戶端提出原則要求之後的天數。 預設值是 **7** 天。  
 
-1.  在 Configuration Manager 控制台中，单击“资产和符合性” 。  
+    -   **以下指定天數內的活動訊號探索：** 指定用戶端電腦傳送活動訊號探索記錄至站台資料庫後的天數。 預設值是 **7** 天。  
 
-2.  在“资产和符合性”  工作区中，单击“设备集合” 。  
+    -   **以下指定天數內的硬體清查：** 指定用戶端電腦傳送硬體清查記錄至站台資料庫後的天數。 預設值是 **7** 天。  
 
-3.  在“设备集合”  列表中，选择要为其配置警报的集合，然后，在“主页”  选项卡中，在“属性”  组中单击“属性” 。  
+    -   **以下指定天數內的軟體清查：** 指定用戶端電腦傳送軟體清查記錄至站台資料庫後的天數。 預設值是 **7** 天。  
+
+    -   **以下指定天數內的狀態訊息：** 指定用戶端電腦傳送狀態訊息至站台資料庫後的天數。 預設值是 **7** 天。  
+
+4.  在 [用戶端狀態設定內容]  對話方塊中，指定下列用於判斷保留用戶端狀態歷程記錄資料的天數：  
+
+    -   **保留以下指定天數內的用戶端狀態歷程：** 指定您要將用戶端狀態歷程記錄保留在站台資料庫中的天數。 預設值是 **31** 天。  
+
+5.  按一下 [確定]  儲存內容，並且關閉 [用戶端狀態設定內容]  對話方塊。  
+
+##  <a name="BKMK_Schedule"></a> 設定用戶端狀態排程  
+
+1.  在 Configuration Manager 主控台中，按一下 [監視] 。  
+
+2.  在 [監視]  工作區中按一下 [用戶端狀態] ，然後在 [首頁]  索引標籤的 [用戶端狀態]  群組中按一下 [排程用戶端狀態更新] 。  
+
+3.  在 [排程用戶端狀態更新]  對話方塊中，設定用戶端狀態進行更新的間隔，然後按一下 [確定]。  
 
     > [!NOTE]  
-    >  无法为用户集合配置警报。  
+    >  變更用戶端狀態更新的排程時，更新會在下次排程的用戶端狀態更新 (之前設定的排程) 時生效。  
 
-4.  在“&lt;集合名称\>”的“属性”对话框的“警报”选项卡上，单击“添加”。  
+##  <a name="BKMK_2"></a> 設定用戶端狀態警示  
+
+1.  在 Configuration Manager 主控台中，按一下 [資產與相容性] 。  
+
+2.  在 [資產與相容性]  工作區中，按一下 [裝置集合] 。  
+
+3.  在 [裝置集合]  清單中，選取您要用於設定警示的集合，然後在 [首頁]  索引標籤的 [內容]  群組中按一下 [內容] 。  
 
     > [!NOTE]  
-    >  仅在与你关联的安全角色具有警报的权限时，“警报”  选项卡才可见。  
+    >  您無法設定使用者集合的警示。  
 
-5.  在“添加新的集合警报”  对话框中，选择要在客户端状态阈值低于特定值时生成的警报，然后单击“确定” 。  
+4.  在 [&lt;集合名稱\> 內容] 對話方塊的 [警示] 索引標籤上，按一下 [新增]。  
 
-6.  在“警报”  选项卡的“条件”  列表中，选择每个客户端状态警报，然后指定下列信息。  
+    > [!NOTE]  
+    >  您所指派到的安全性角色具有警示權限時，才會顯示 [警示]  索引標籤。  
 
-    -   **警报名称** - 接受默认名称，或者输入新的警报名称。  
+5.  在 [新增集合警示]  對話方塊中，選擇您要在用戶端狀態閾值低於特定值時產生的警示，然後按一下 [確定] 。  
 
-    -   **警报严重性** – 从下拉列表中，选择将显示在 Configuration Manager 控制台中的警报级别。  
+6.  在 [警示]  索引標籤的 [條件]  清單中選取每個用戶端狀態警示，然後指定下列資訊。  
 
-    -   **引发警报** - 指定警报的阈值百分比。  
+    -   **警示名稱** - 接受預設名稱或輸入新的警示名稱。  
 
-7.  单击“确定”关闭“&lt;集合名称\>”的“属性”对话框。  
+    -   **警示嚴重性** - 從下拉式清單中，選擇將顯示在 Configuration Manager 主控台中的警示等級。  
 
-##  <a name="BKMK_3"></a>禁止计算机自动修正问题  
+    -   **產生警示** - 指定警示的閾值百分比。  
 
-1.  在要禁止其自动修正问题的客户端计算机上打开注册表编辑器。  
+7.  按一下 [確定] 關閉 [&lt;集合名稱\> 內容] 對話方塊。  
+
+##  <a name="BKMK_3"></a> 排除電腦的自動補救功能  
+
+1.  在要停用自動補救功能的用戶端電腦上開啟登錄編輯程式。  
 
     > [!WARNING]  
-    >  如果不正确地使用注册表编辑器，可能导致严重问题，或许需要您重新安装操作系统。 Microsoft 不保证能够解决因注册表编辑器使用不当而导致的问题。 使用注册表编辑器的风险由您自己承担。  
+    >  如果使用登錄編輯程式的方式不正確，可能會導致嚴重問題而必須重新安裝作業系統。 Microsoft 無法保證您可以解決因不正確使用登錄編輯程式所造成的問題。 您必須自行承擔使用登錄編輯器的風險。  
 
-2.  导航到“HKEY_LOCAL_MACHINE\Software\Microsoft\CCM\CcmEval\NotifyOnly” 。  
+2.  瀏覽至 **HKEY_LOCAL_MACHINE\Software\Microsoft\CCM\CcmEval\NotifyOnly**。  
 
-3.  为此注册表项输入下列值之一：  
+3.  針對此登錄編輯程式輸入下列任一值：  
 
-    -   **True** - 客户端计算机不会自动修正发现的任何问题。 但是，你在“监视”  工作区中仍会收到与此客户端相关的任何问题的警报。  
+    -   **True** - 用戶端電腦不會自動補救找到的任何問題。 不過，一旦此用戶端出現任何問題，您仍然會在 [監視]  工作區中收到警示。  
 
-    -   **False** – 客户端计算机将自动修正发现的问题并且将在“监视”工作区中发出警报。 此为默认设置。  
+    -   **False** - 用戶端電腦會自動補救找到的問題，您會在 [監視] 工作區中收到警示。 這是預設設定。  
 
-4.  关闭注册表编辑器。  
+4.  關閉登錄編輯程式。  
 
- 还可以使用 CCMSetup **NotifyOnly** 安装属性来安装客户端，以禁止它们自动修正问题。 有关此客户端安装属性的详细信息，请参阅[关于 System Center Configuration Manager 中的客户端安装属性](../../../core/clients/deploy/about-client-installation-properties.md)。  
-
+ 您也可以使用 CCMSetup **NotifyOnly** 安裝內容安裝用戶端，停止用戶端執行自動補救。 如需用戶端安裝內容的詳細資訊，請參閱[關於 System Center Configuration Manager 中的用戶端安裝內容](../../../core/clients/deploy/about-client-installation-properties.md)。  

@@ -1,61 +1,54 @@
 ---
-title: "创建自定义任务序列 | Microsoft Docs"
-description: "在 System Center Configuration Manager 中编辑自定义任务序列以将步骤添加到任务序列。"
+title: "建立自訂工作順序 | Microsoft Docs"
+description: "在 System Center Configuration Manager 中編輯自訂工作順序，以在工作順序中新增步驟。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b9800a66-7541-47ca-8276-da8ef6cb6d1b
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
 ms.openlocfilehash: 03c844084c72fc52806123d9f4c11a410a3ec775
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="create-a-custom-task-sequence-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 创建自定义任务序列
+# <a name="create-a-custom-task-sequence-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 建立自訂工作順序
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用對象：System Center Configuration Manager (最新分支)*
 
-当在 System Center Configuration Manager 中创建自定义任务序列时，它不包含任何任务序列步骤。 创建任务序列后，必须对其进行编辑，并添加所需的任务序列步骤。  
+當您在 System Center Configuration Manager 中建立自訂工作順序時，它不會包含任何工作順序步驟。 建立工作順序之後，您必須編輯它，並新增您需要的工作順序步驟。  
 
-##  <a name="a-namebkmkcustomtsa-create-a-custom-task-sequence"></a><a name="BKMK_CustomTS"></a> 创建自定义任务序列  
- 使用下列过程来创建自定义任务序列。  
+##  <a name="BKMK_CustomTS"></a> 建立自訂工作順序  
+ 使用下列程序建立自訂工作順序。  
 
-#### <a name="to-create-a-custom-task-sequence"></a>创建自定义任务序列  
+#### <a name="to-create-a-custom-task-sequence"></a>建立自訂工作順序  
 
-1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+1.  在 Configuration Manager 主控台中，按一下 [軟體程式庫] 。  
 
-2.  在“软件库”  工作区中，展开“操作系统” ，然后单击“任务序列” 。  
+2.  在 [軟體程式庫]  工作區中，展開 [作業系統] ，然後按一下 [工作順序] 。  
 
-3.  在“主页”  选项卡上的“创建”  组中，单击“创建任务序列”  以启动创建任务序列向导。  
+3.  在 [首頁]  索引標籤的 [建立]  群組中，按一下 [建立工作順序]  啟動 [建立工作順序精靈]。  
 
-4.  在“创建新的任务序列”  页面上，选择“创建新的自定义任务序列” 。  
+4.  在 [建立新的工作順序]  頁面上，選取 [建立新的自訂工作順序] 。  
 
-5.  在“任务序列信息”  页上，指定任务序列的名称、任务序列的描述以及供任务序列使用的可选启动映像，然后完成向导。  
+5.  在 [工作順序資訊]  頁面指定工作順序的名稱、工作順序的描述，以及工作順序可使用的選用開機映像，然後完成精靈。  
 
- 完成“创建任务序列向导”之后，Configuration Manager 会将自定义任务序列添加到“任务序列”节点。 你现在可以编辑此任务序列以向其中添加任务序列步骤。  
+ 完成 [建立工作順序精靈] 之後，Configuration Manager 會將自訂的工作順序新增至 [工作順序] 節點。 您現在可以編輯此工作順序，為其新增工作順序步驟。  
 
- 有关可用的任务序列步骤列表，请参阅[任务序列步骤](../understand/task-sequence-steps.md)。  
+ 如需可用工作順序步驟的清單，請參閱[工作順序步驟](../understand/task-sequence-steps.md)。  
 
- 有关如何编辑任务序列的信息，请参阅[编辑任务序列](manage-task-sequences-to-automate-tasks.md#BKMK_ModifyTaskSequence)。  
+ 如需如何編輯工作順序的詳細資訊，請參閱[編輯工作順序](manage-task-sequences-to-automate-tasks.md#BKMK_ModifyTaskSequence)。  
 
- 通常使用任务序列来自动执行操作系统部署的任务，但你可以创建自定义任务序列来自动执行各种任务。 有关详细信息，请参阅[创建用于非操作系统部署的任务序列](create-a-task-sequence-for-non-operating-system-deployments.md)。  
+ 通常您會使用工作順序將作業系統部署的工作自動化，但是您可以建立自訂工作順序，以自動化各種工作。 如需詳細資訊，請參閱[建立非作業系統部署的工作順序](create-a-task-sequence-for-non-operating-system-deployments.md)。  
 
- ## <a name="next-steps"></a>后续步骤
- [部署任务序列](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS)
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-
+ ## <a name="next-steps"></a>後續步驟
+ [部署工作順序](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS)

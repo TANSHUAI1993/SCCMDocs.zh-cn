@@ -1,41 +1,38 @@
 ---
-title: "使用 System Center Configuration Manager 创建 MDM 集合 | Microsoft Docs"
-description: "使用 System Center Configuration Manager 创建 MDM 集合。"
+title: "使用 System Center Configuration Manager 建立 MDM 集合 | Microsoft Docs"
+description: "使用 System Center Configuration Manager 建立 MDM 集合。"
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d1b4337f-85e8-45e6-8bbe-9f18b49041c7
-caps.latest.revision: 18
-caps.handback.revision: 0
+caps.latest.revision: "18"
+caps.handback.revision: "0"
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
 ms.openlocfilehash: fabbcfd2d5656d4fa8cb87feffe87e17998df145
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="create-an-mdm-collection-with-system-center-configuration-manager-and-microsoft-intune"></a>使用 System Center Configuration Manager 和 Microsoft Intune 创建 MDM 集合
+# <a name="create-an-mdm-collection-with-system-center-configuration-manager-and-microsoft-intune"></a>使用 System Center Configuration Manager 和 Microsoft Intune 建立 MDM 集合
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用於：System Center Configuration Manager (最新分支)*
 
-需要 Configuration Manager 用户集合以指定可以向管理中注册设备的用户。 由于 Intune 许可证由用户进行分配，所以只能使用用户集合（而非设备集合）。
+需要有 Configuration Manager 使用者集合，才能指定可將裝置註冊至管理的使用者。 因為 Intune 授權是由使用者所指派，所以您只能使用使用者集合 (而不是裝置集合)。
 
 > [!NOTE]
-> 若要向 Intune 注册设备，无需在 Office 365 门户或 Azure Active Directory 门户中向用户分配许可证。 只需在与 Intune 订阅（在一个[后续步骤](configure-intune-subscription.md)中）关联的集合中包括用户即可。
+> 若要使用 Intune 來註冊裝置，您不需要將授權指派給 Office 365 入口網站或 Azure Active Directory 入口網站中的使用者。 只需要包括集合中與 Intune 訂閱相關聯的使用者 (在[稍後步驟](configure-intune-subscription.md)中)。
 
-为进行测试，可以设置**直接规则**并添加可以注册设备的特定用户。 在 Configuration Manager 控制台中，选择“资产和符合性” > “用户集合”，单击“主页”选项卡 >“创建”组，然后单击“创建用户集合”。 若要实现更广泛的分发，应使用**查询规则**定义用户。 有关集合的详细信息，请参阅[如何创建集合](https://technet.microsoft.com/library/mt629371.aspx)。
+基於測試，您可以設定**直接規則**，並新增可註冊裝置的特定使用者。 在 Configuration Manager 主控台中，選擇 [資產與合規性] > [使用者集合]，並按一下 [常用] 索引標籤 > [建立] 群組，然後按一下 [建立使用者集合]。 針對更廣泛的發佈，您應該使用 [查詢規則] 來定義使用者。 如需集合的詳細資訊，請參閱[如何建立集合](https://technet.microsoft.com/library/mt629371.aspx)。
 
-![为 MDM 创建用户集合](../media/mdm-create-user-collection.png)
+![建立 MDM 的使用者集合](../media/mdm-create-user-collection.png)
 
 > [!div class="button"]
-[下一步 >](confirm-dns.md)
-
+[下一個步驟 >](confirm-dns.md)

@@ -1,274 +1,267 @@
 ---
-title: "修补程序安装程序 | Microsoft Docs"
-description: "了解何时以及如何通过 Configuration Manager 的修补程序安装更新。"
+title: "Hotfix 安裝程式 | Microsoft Docs"
+description: "了解何時及如何透過 Hotfix 安裝程式安裝 Configuration Manager 更新。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f3058277-c597-4dac-86d1-41b6f7e62b36
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 10b1010ccbf3889c58c55b87e70b354559243c90
 ms.openlocfilehash: 8ffc7383e895909e6e6c4b8a7875fd5f0df2220e
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="use-the-hotfix-installer-to-install-updates-for-system-center-configuration-manager"></a>使用修补程序安装程序来安装 System Center Configuration Manager 的更新
+# <a name="use-the-hotfix-installer-to-install-updates-for-system-center-configuration-manager"></a>使用 Hotfix 安裝程式來安裝 System Center Configuration Manager 更新
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用於：System Center Configuration Manager (最新分支)*
 
-System Center Configuration Manager 的某些更新无法从 Microsoft 云服务获取，只能在带外获取。 用于解决特定问题的受限版本修补程序是一个示例。   
-必须安装从 Microsoft 接收的更新（或修补程序），并且该更新的文件名是以 **.exe** 扩展名（而非 **update.exe**）结尾时，可使用该修补程序下载所随附的修补程序安装程序，将更新直接安装到 Configuration Manager 站点服务器。  
+System Center Configuration Manager 的某些更新無法從 Microsoft 雲端服務取得，只能從頻外取得。 用以解決特定問題的有限版本 Hotfix 就是一例。   
+當您必須安裝您由 Microsoft 接收的更新 (或 Hotfix)，且該更新具有一個以副檔名 **.exe** (而非 **update.exe**) 結尾的檔案名稱時，您使用包含在該 Hotfix 下載項目中的 Hotfix 安裝程式，直接將該更新安裝至 Configuration Manager 站台伺服器。  
 
- 如果修补程序文件有 **.update.exe** 文件扩展名，请参阅[使用更新注册工具将修补程序导入 System Center Configuration Manager](../../../core/servers/manage/use-the-update-registration-tool-to-import-hotfixes.md)。  
-
-> [!NOTE]  
->  本主题提供有关如何安装更新 System Center Configuration Manager 的修补程序的常规指导。 有关特定更新的详细信息，请参阅 Microsoft 支持上该更新的相应知识库 (KB) 文章。  
-
-##  <a name="a-namebkmkoverviewa-overview-of-hotfixes-for-configuration-manager"></a><a name="bkmk_Overview"></a> Configuration Manager 修补程序概述  
- Configuration Manager 的修补程序类似于其他 Microsoft 产品（例如 SQL Server）的修补程序，包含一个单独的修复程序或一个捆绑包（多个修复程序的汇总），如 Microsoft 知识库文章中所述。  
-
- 单独的更新包含针对特定版本 Configuration Manager 的修补程序的单个重点更新。  
-更新捆绑包具有针对 Configuration Manager 特定版本的多个更新。  
-不能从更新捆绑中安装单独更新。  
-
- 如果你计划创建部署以在其他计算机上安装更新，则必须在管理中心站点服务器或主站点服务器上安装更新捆绑。  
-
- 运行更新捆绑时将发生以下事件：  
-
--   它从更新捆绑中提取每个适用组件的更新文件。  
-
--   启动向导，指导你完成配置更新和更新部署选项的过程。  
-
--   完成该向导后，在站点服务器上安装捆绑中适用于该站点服务器的更新。  
-
-向导也会创建部署，你可以使用这些部署在其他计算机上安装更新。 你可以使用诸如软件部署包或 Microsoft System Center Updates Publisher 2011 之类受支持的部署方法将更新部署到其他计算机。  
-
- 运行向导时，会在站点服务器上创建一个要与 Updates Publisher 2011 一起使用的 **.cab** 文件。 （可选）你可以将向导配置为创建一个或多个软件部署包。 可以使用这些部署在客户端或 Configuration Manager 控制台等组件上安装更新。 也可以在未运行 Configuration Manager 客户端的计算机上手动安装更新。  
-
- 可以更新 Configuration Manager 中的下列三个组：  
-
--   Configuration Manager 服务器角色，其中包括：  
-
-    -   管理中心站点  
-
-    -   主站点  
-
-    -   辅助站点  
-
-    -   远程 SMS 提供程序  
-
--   Configuration Manager 控制台  
-
--   Configuration Manager 客户端  
+ 如果 Hotfix 檔案具有 **.update.exe** 副檔名，請參閱[使用更新註冊工具將 Hotfix 匯入 System Center Configuration Manager](../../../core/servers/manage/use-the-update-registration-tool-to-import-hotfixes.md)。  
 
 > [!NOTE]  
->  **针对站点系统角色的更新**（包括站点数据库更新和基于云的分发点更新）作为针对站点服务器和服务的更新中的一部分，由站点组件管理器安装。  
+>  本主題提供有關如何安裝可更新 System Center Configuration Manager 之 Hofix 的一般指引。 如需特定更新的詳細資訊，請參閱 Microsoft 支援服務提供的對應知識庫 (KB) 文章內容。  
+
+##  <a name="bkmk_Overview"></a> Configuration Manager 的 Hotfix 概觀  
+ Configuration Manager 的 Hotfix 類似於其他 Microsoft 產品 (例如 SQL Server) 的 Hotfix，包含了一個個別修正或配套 (修正彙總套件)，且在 Microsoft 知識庫文件有說明。  
+
+ 個別更新包含特定 Configuration Manager 版本的單一聚焦更新。  
+更新配套包含特定 Configuration Manager 版本的多個更新。  
+當更新為配套時，您無法安裝該配套的個別更新。  
+
+ 如果您規劃建立部署以在其他電腦上安裝更新，則必須在管理中心網站伺服器或主要站台上安裝更新配套。  
+
+ 執行更新配套時，會發生下列情況：  
+
+-   它會從更新配套擷取每個適用元件的更新檔案。  
+
+-   啟動精靈，引導您完成更新及其部署選項的設定程序。  
+
+-   當您完成精靈之後，適用於站台伺服器的更新配套會安裝在站台伺服器上。  
+
+精靈也會建立可用於在其他電腦上安裝更新的部署。 您可以透過支援的部署方法，將更新部署到其他電腦，例如透過軟體部署封裝或 Microsoft System Center Updates Publisher 2011。  
+
+ 當執行精靈時，它會在站台伺服器上建立要與 Updates Publisher 2011 搭配使用的 **.cab** 檔。 您也可以選擇設定精靈，同時為軟體部署建立一個或多個封裝。 您可以使用這些部署在元件 (例如用戶端或 Configuration Manager 主控台) 上安裝更新。 您也可在未執行 Configuration Manager 用戶端的電腦上手動安裝更新。  
+
+ Configuration Manager 中的下列三個群組可進行更新：  
+
+-   Configuration Manager 伺服器角色，其包括：  
+
+    -   管理中心網站  
+
+    -   主要網站  
+
+    -   次要網站  
+
+    -   遠端 SMS 提供者  
+
+-   Configuration Manager 主控台  
+
+-   Configuration Manager 用戶端  
+
+> [!NOTE]  
+>  **站台系統角色更新** (包括站台資料庫和雲端發佈點的更新) 會由站台元件管理員作為站台伺服器和服務的一部分進行安裝。  
 >   
->  但是，更新请求分发点是由分发管理器而非站点组件管理器维护。  
+>  不過，更新提取發佈點是由發佈管理員提供，而非站台元件管理員。  
 
- Configuration Manager 的每个更新捆绑包都是可自提取的 .exe 文件 (SFX)，此文件包括在 Configuration Manager 的适用组件上安装更新所需的文件。 通常，SFX 文件可能包含下列文件：  
+ Configuration Manager 的每個更新配套都是可自我解壓縮 .exe 檔案 (SFX)，其包含在 Configuration Manager 適用元件上安裝更新時所必需的檔案。 通常，SFX 檔案可能包含以下檔案：  
 
-|文件|详细信息|  
+|檔案|詳細資料|  
 |----------|-------------|  
-|&lt;Product version\>-QFE-KB&lt;KB article ID\>-&lt;platform\>-&lt;language\>.exe|这是更新文件。 此文件的命令行由 Updatesetup.exe 进行管理。<br /><br /> 例如：<br />CM1511RTM-QFE-KB123456-X64-ENU.exe|  
-|Updatesetup.exe|此 .msi 包装管理更新捆绑的安装。<br /><br /> 运行更新时，Updatesetup.exe 会检测运行它的计算机的显示语言。 默认情况下，此更新的用户界面是英文。 但是，如果支持显示语言，则会以计算机的本地语言显示用户界面。|  
-|License_&lt;language\>.rtf|如果适用，每个更新都会包含支持语言的一个或多个许可证文件。|  
-|&lt;Product&updatetype>-&lt;product version\>-&lt;KB article ID\>-&lt;platform\>.msp|如果更新适用于 Configuration Manager 控制台或客户端，则更新捆绑包会包括单独的 Windows Installer 修补 (.msp) 文件。<br /><br /> 例如：<br /><br /> **Configuration Manager 控制台更新：** ConfigMgr1511 AdminUI KB1234567 i386.msp<br /><br /> **客户端更新：**ConfigMgr1511-client-KB1234567-i386.msp<br />ConfigMgr1511-client-KB1234567-x64.msp|  
+|&lt;產品版本\>-QFE-KB&lt;知識庫文章識別碼\>-&lt;平台\>-&lt;語言\>.exe|這是更新檔。 此檔案的命令列由 Updatesetup.exe 管理。<br /><br /> 例如：<br />CM1511RTM-QFE-KB123456-X64-ENU.exe|  
+|Updatesetup.exe|這個 .msi 包裝函式會管理更新配套的安裝。<br /><br /> 當您執行更新程式時，Updatesetup.exe 會偵測電腦執行時所顯示的語言。 根據預設，更新程式的使用者介面是英文版。 不過，如果顯示語言是受支援的語言，電腦使用者介面便會顯示本機語言。|  
+|License_&lt;語言\>.rtf|若適用，每個更新都會包含一個或多個受支援語言所適用的授權檔案。|  
+|&lt;產品&updatetype>-&lt;產品版本\>-&lt;知識庫文章識別碼\>-&lt;平台\>.msp|將更新套用至 Configuration Manager 主控台或用戶端時，更新配套會包含個別 Windows Installer 修補 (.msp) 檔案。<br /><br /> 例如：<br /><br /> **Configuration Manager 主控台更新：** ConfigMgr1511-AdminUI-KB1234567-i386.msp<br /><br /> **用戶端更新：**ConfigMgr1511-client-KB1234567-i386.msp<br />ConfigMgr1511-client-KB1234567-x64.msp|  
 
- 默认情况下，更新捆绑会将其操作记录到站点服务器上的 .log 文件中。 此日志文件与更新捆绑同名，并且会写入到 **%SystemRoot%/Temp** 文件夹中。  
+ 根據預設，更新配套會將其動作記錄到站台伺服器的 .log 檔案。 記錄檔具有和更新配套相同的名稱，且會寫入 **%SystemRoot%/Temp** 資料夾中。  
 
- 运行更新捆绑时，会将与更新捆绑同名的文件提取到计算机上的临时文件夹中，然后运行 Updatesetup.exe。 Updatesetup.exe 会为 Configuration Manager &lt;产品版本\> &lt;KB 编号\> 向导启动软件更新。  
+ 當您執行更新組合時，它會將與更新組合同名的檔案解壓縮到電腦的暫存資料夾，然後再執行 Updatesetup.exe。 Updatesetup.exe 會啟動 [Configuration Manager &lt;產品版本\> &lt;知識庫號碼\> 軟體更新精靈]。  
 
- 在适用的更新范围内，此向导会在站点服务器上的 System Center Configuration Manager 安装文件夹下创建一系列文件夹。 文件夹结构如下所示：   
- **\\\\&lt;服务器名称\>\SMS_&lt;站点代码\>\修补程序\\&lt;KB 编号\>\\&lt;更新类型\>\\&lt;平台\>**。  
+ 適用的更新範圍內，精靈會在站台伺服器上的 System Center Configuration Manager 安裝資料夾下建立一系列的資料夾。 資料夾結構如下所示：   
+ **\\\\&lt;伺服器名稱\>\SMS_&lt;站台碼\>\Hotfix\\&lt;知識庫號碼\>\\&lt;更新類型\>\\&lt;平台\>**。  
 
- 下表提供了有关文件夹结构中的各个文件夹的详细信息：  
+ 下表提供有關資料夾結構中資料夾的詳細資料：  
 
-|文件夹名称|更多信息|  
+|資料夾名稱|詳細資訊|  
 |-----------------|----------------------|  
-|&lt;服务器名称\>|这是在其中运行更新捆绑的站点服务器的名称。|  
-|SMS_&lt;站点代码\>|这是 Configuration Manager 安装文件夹的共享名称。|  
-|&lt;KB 编号\>|这是此更新捆绑的知识库文章的 ID 编号。|  
-|&lt;更新类型\>|这些是 Configuration Manager 的更新类型。 向导会为更新捆绑中包含的每种更新类型创建一个单独的文件夹。 文件夹名称表示更新类型。 它们包括以下内容：<br /><br /> **服务器**：包括对站点服务器、站点数据库服务器和运行 SMS 提供程序的计算机的更新。<br /><br /> **客户端**：包括对 Configuration Manager 客户端的更新。<br /><br /> **AdminConsole**：包括对 Configuration Manager 客户端的更新<br /><br /> 除了上述更新类型之外，向导还会创建一个名为 **SCUP**的文件夹。 此文件夹并不表示更新类型，而是包含更新发布服务器的 .cab 文件。|  
-|&lt;平台\>|这是特定于平台的文件夹。 它包含特定于处理器类型的更新文件。  这些文件夹包括：<br /><br />- x64<br /><br /> - I386|  
+|&lt;伺服器名稱\>|這是您執行更新配套所在之站台伺服器的名稱。|  
+|SMS_&lt;站台碼\>|這是 Configuration Manager 安裝資料夾的共用名稱。|  
+|&lt;知識庫號碼\>|這是此更新配套適用之知識庫文章的識別碼。|  
+|&lt;更新類型\>|這些是 Configuration Manager 的更新類型。 精靈會為更新配套中所包含之每一種更新類型，建立個別資料夾。 資料夾名稱代表更新類型。 其包括：<br /><br /> **伺服器**：包括執行 SMS 提供者之站台伺服器、站台資料庫伺服器及電腦的更新。<br /><br /> **用戶端**：包括對 Configuration Manager 用戶端的更新。<br /><br /> **AdminConsole**：包括對 Configuration Manager 主控台的更新<br /><br /> 除了之前的更新類型以外，精靈會建立一個名為 **SCUP**的資料夾。 此資料夾不代表更新類型，而是包含了更新發行者的 .cab 檔。|  
+|&lt;平台\>|這是平台特定的資料夾。 該資料夾中包含特定於某種處理器類型的更新檔案。  這些資料夾包括：<br /><br />- x64<br /><br /> - I386|  
 
-##  <a name="a-namebkmkinstalla-how-to-install-updates"></a><a name="bkmk_Install"></a> 如何安装更新  
- 要安装更新，必须首先在站点服务器上安装更新捆绑。 安装更新捆绑时，会为该更新启动安装向导。 此向导将执行以下操作：  
+##  <a name="bkmk_Install"></a> 如何安裝更新  
+ 若要安裝更新，您必須先在站台伺服器上安裝更新配套。 當您安裝更新配套時，便會啟動該更新的安裝精靈。 此精靈會執行下列動作：  
 
--   提取更新文件  
+-   解壓縮更新檔案  
 
--   帮助你配置部署  
+-   協助您設定部署  
 
--   在本地计算机的服务器组件上安装适用的更新  
+-   在本機電腦的伺服器元件上安裝適用的更新  
 
-在站点服务器上安装更新捆绑包之后，可以更新 Configuration Manager 的其他组件。 下表描述了适用于这些不同组件的更新操作：  
+在站台伺服器上安裝更新配套後，您可以接著更新 Configuration Manager 的其他元件。 下表說明對這些不同元件的更新動作：  
 
-|组件|说明|  
+|元件|指示|  
 |---------------|------------------|  
-|站点服务器|当你未选择直接在远程站点服务器上安装更新捆绑时将更新部署到该远程站点服务器。|  
-|站点数据库|对于远程站点服务器，如果未直接在该远程站点服务器上安装更新捆绑，则将包括更新的服务器更新部署到站点数据库。|  
-|Configuration Manager 控制台|初次安装 Configuration Manager 控制台后，可以在运行该控制台的每台计算机上为 Configuration Manager 控制台安装更新。 无法修改 Configuration Manager 控制台安装文件以在初次安装控制台过程中应用更新。|  
-|远程 SMS 提供程序|为安装更新捆绑所在的非站点服务器计算机上运行的每个 SMS 提供程序实例安装更新。|  
-|Configuration Manager 客户端|初次安装 Configuration Manager 客户端后，可以在运行该客户端的每台计算机上为 Configuration Manager 客户端安装更新。|  
+|網站伺服器|當您未選擇將更新配套直接安裝在遠端站台伺服器時，可將更新部署到該遠端站台伺服器。|  
+|網站資料庫|對於遠端站台伺服器，如果您未將更新配套直接安裝在遠端站台伺服器，便可將包含更新的伺服器更新部署到站台資料庫。|  
+|Configuration Manager 主控台|初始安裝 Configuration Manager 主控台後，您可以在執行主控台的每部電腦上為 Configuration Manager 主控台安裝更新。 在初始安裝主控台期間，您無法修改 Configuration Manager 主控台安裝檔案以套用更新。|  
+|遠端 SMS 提供者|為每一個執行於電腦而不是您安裝更新配套所在之站台伺服器的 SMS Provider 執行個體，安裝更新。|  
+|Configuration Manager 用戶端|初始安裝 Configuration Manager 用戶端後，您可以在執行用戶端的每部電腦上為 Configuration Manager 用戶端安裝更新。|  
 
 > [!NOTE]  
->  可以只对运行 Configuration Manager 客户端的计算机部署更新。  
+>  您只能將更新部署到執行 Configuration Manager 用戶端的電腦上手動安裝更新。  
 
- 如果重新安装客户端、Configuration Manager 控制台或 SMS 提供程序，则还必须为这些组件重新安装更新。  
+ 如果您重新安裝用戶端、Configuration Manager 主控台或 SMS 提供者，則也必須重新安裝這些元件的更新。  
 
- 使用下列各部分中的信息在 Configuration Manager 的每个组件上安装更新。  
+ 使用以下各節資訊，在 Configuration Manager 的每一個元件上安裝更新。  
 
-###  <a name="a-namebkmkserversa-update-servers"></a><a name="bkmk_servers"></a> 更新服务器  
- 服务器更新可能包括**站点**、**站点数据库**和运行 **SMS 提供程序**实例的计算机的更新：  
+###  <a name="bkmk_servers"></a> 更新伺服器  
+ 伺服器的更新，可包含適用於 **站台**、 **site database**以及執行 **SMS 提供者**之執行個體電腦的更新：  
 
-####  <a name="a-namebkmksitea-update-a-site"></a><a name="bkmk_site"></a>更新站点  
- 要更新 Configuration Manager 站点，可以直接在站点服务器上安装更新捆绑包，也可以在其他站点上安装更新捆绑包之后，将更新部署到站点服务器。  
+####  <a name="bkmk_site"></a> 更新站台  
+ 若要更新 Configuration Manager 站台，您可以將更新配套直接安裝在站台伺服器上，也可在將更新配套安裝到不同站台後，將更新部署到站台伺服器。  
 
- 在站点服务器上安装更新时，更新安装进程会管理应用更新所需的其他操作，如更新站点系统角色。 此情况的例外是站点数据库。 以下部分包含有关如何更新站点数据库的信息。  
+ 當您將更新安裝在站台伺服器上時，更新安裝程序會管理用以套用更新 (例如更新站台系統角色) 的其他必要動作。 唯一的例外是站台資料庫。 下一節內容包含有關如何更新站台資料庫的資訊。  
 
-####  <a name="a-namebkmkdatabasea-update-a-site-database"></a><a name="bkmk_database"></a>更新站点数据库  
- 为了更新站点数据库，安装进程会对站点数据库运行一个名为“update.sql”  的文件。 你可以将更新进程配置为自动更新站点数据库，或者可以以后手动更新站点数据库。  
+####  <a name="bkmk_database"></a> 更新站台資料庫  
+ 若要更新站台資料庫，安裝程序會在站台資料庫執行一支名為 **update.sql** 的檔案。 您可以將更新程序設定為可自動更新站台資料庫，或可稍後手動更新站台資料庫。  
 
- **自动更新站点数据库**  
+ **自動更新站台資料庫**  
 
- 在站点服务器上安装更新捆绑时，可以选择在安装服务器更新时自动更新站点数据库。 此决策仅适用于安装了更新捆绑的站点服务器，不适用于为在远程站点服务器上安装更新而创建的部署。  
+ 在站台伺服器上安裝更新配套時，您可以選擇在安裝伺服器更新時，自動更新站台資料庫。 這個決定僅適用於安裝更新配套所在的站台伺服器，不適用於為了在遠端站台伺服器安裝更新而建立的部署。  
 
 > [!NOTE]  
->  选择自动更新站点数据库时，进程会更新数据库，而不考虑数据库是位于站点服务器上还是位于远程计算机上。  
+>  當您選擇自動更新站台資料庫時，無論資料庫是位於站台伺服器或在遠端電腦上，該程序都會更新資料庫。  
 
 > [!IMPORTANT]  
->  在更新站点数据库之前，请创建站点数据库的备份。 你不能卸载站点数据库的更新。 有关如何创建 Configuration Manager 的备份信息，请参阅 [System Center Configuration Manager 的备份和恢复](../../../protect/understand/backup-and-recovery.md)。  
+>  在更新站台資料庫之前，可建立站台資料庫的備份。 您無法解除安裝對站台資料庫的更新。 如需如何建立 Configuration Manager 備份的相關資訊，請參閱 [System Center Configuration Manager 備份和復原](../../../protect/understand/backup-and-recovery.md)。  
 
- **手动更新站点数据库**  
+ **手動更新站台資料庫**  
 
- 如果选择在站点服务器上安装更新捆绑时不自动更新站点数据库，则服务器更新不会在运行更新捆绑的站点服务器上修改数据库。 但是，使用为软件部署或该安装创建的包的部署将始终更新站点数据库。  
+ 如果您選擇在站台伺服器上安裝更新配套時不自動更新站台資料庫，伺服器更新就不會在執行更新配套的站台伺服器上修改資料庫。 然而，使用為軟體部署而建立之套件或所安裝之套件的部署，永遠會更新站台資料庫。  
 
 > [!WARNING]  
->  如果更新包括站点服务器更新和站点数据库更新，则在为站点服务器和站点数据库完成更新之前，此更新将不能正常运行。 对站点数据库应用更新之前，站点处于不受支持状态。  
+>  當更新作業將更新程式納入站台伺服器和站台資料庫時，直到站台伺服器和站台資料庫完成更新後，更新才能正常運作。 在將更新套用到站台資料庫之前，該站台都處於不受支援狀態。  
 
- **手动更新站点数据库：**  
+ **手動更新站台資料庫：**  
 
-1.  在站点服务器上停止 SMS_SITE_COMPONENT_MANAGER 服务，然后停止 SMS_EXECUTIVE 服务。  
+1.  請在站台伺服器上，依序停止 SMS_SITE_COMPONENT_MANAGER 服務和 SMS_EXECUTIVE 服務。  
 
-2.  关闭 Configuration Manager 控制台。  
+2.  關閉 Configuration Manager 主控台。  
 
-3.  在该站点的数据库上运行名为 **update.sql** 的更新脚本。 有关如何运行脚本来更新 SQL Server 数据库的信息，请参阅用于站点数据库服务器的 SQL Server 版本的文档。  
+3.  在該站台的資料庫上執行名為 **update.sql** 的更新指令碼。 如需如何執行指令碼以更新 SQL Server 資料庫的相關資訊，請參閱用於站台資料庫伺服器之 SQL Server 版本的文件。  
 
-4.  重启在前面的步骤中停止的服务。  
+4.  重新啟動在先前步驟中已停止的服務。  
 
-5.  安装更新捆绑包时，会将 **update.sql** 提取到站点服务器上的以下位置：**\\\\&lt;Server Name\>\SMS_&lt;Site Code\>\Hotfix\\&lt;KB Number\>\update.sql**  
+5.  安裝更新配套時，它會將 **update.sql** 擷取到站台伺服器的下列位置：**\\\\&lt;伺服器名稱\>\SMS_&lt;站台碼\>\Hotfix\\&lt;知識庫號碼\>\update.sql**  
 
-####  <a name="a-namebkmkprovidera-update-a-computer-that-runs-the-sms-provider"></a><a name="bkmk_provider"></a>更新运行 SMS 提供程序的计算机  
- 安装包含 SMS 提供程序的更新的更新捆绑之后，必须将更新部署到运行 SMS 提供程序的每台计算机。 唯一的例外是，你安装此更新捆绑的站点服务器上以前安装的 SMS 提供程序实例。 在你安装此更新捆绑时，会更新站点服务器上的 SMS 提供程序的本地实例。  
+####  <a name="bkmk_provider"></a> 更新執行 SMS 提供者的電腦  
+ 安裝包含 SMS 提供者更新的更新配套後，必須將更新部署至每台執行 SMS 提供者的電腦。 唯一的例外是先前安裝在站台伺服器 (用來安裝更新配套) 上的 SMS 提供者執行個體。 站台伺服器上的本機 SMS 提供者執行個體會在您安裝更新配套時更新。  
 
- 如果删除某计算机上的 SMS 提供程序，然后重新安装它，则之后必须在该计算机上重新安装 SMS 提供程序的更新。  
+ 如果移除電腦上的 SMS 提供者之後再重新安裝，則必須在該電腦上重新安裝 SMS 提供者更新。  
 
-###  <a name="a-namebkmkclientsa-update-clients"></a><a name="BKMK_clients"></a>更新客户端  
- 如果安装的更新中包含针对 Configuration Manager 客户端的更新，则需选择是在更新安装过程中自动升级客户端，还是以后手动升级客户端。 有关客户端自动升级的详细信息，请参阅 [如何升级 Windows 计算机的客户端](https://technet.microsoft.com/library/mt627885.aspx)。  
+###  <a name="BKMK_clients"></a> 更新用戶端  
+ 當您安裝包含 Configuration Manager 用戶端更新的更新時，會提供您使用更新安裝自動升級用戶端的選項，或者稍後手動升級用戶端。 如需用戶端自動升級的詳細資訊，請參閱 [如何在 System Center Configuration Manager 中升級 Windows 電腦的用戶端](https://technet.microsoft.com/library/mt627885.aspx)之 Hotfix 的一般指引。  
 
- 可以将更新与 Updates Publisher 或软件部署包一起部署，也可以选择在每个客户端上手动安装更新。 有关如何使用部署来安装更新的详细信息，请参阅本主题中的 [为 Configuration Manager 部署更新](#BKMK_Deploy) 部分。  
-
-> [!IMPORTANT]  
->  在安装客户端更新且更新捆绑包含服务器更新时，请务必也在客户端分配到的主站点上安装服务器更新。  
-
-若要手动安装客户端更新，则在每个 Configuration Manager 客户端上都必须运行 **Msiexec.exe**，并且引用特定于平台的客户端更新 .msp 文件。  
-
- 例如，可以使用下列命令行来更新客户端。 此命令行在客户端计算机上运行 MSIEXEC，并且引用更新捆绑包在站点服务器上提取的 .msp 文件：**msiexec.exe /p \\\\&lt;ServerName\>\SMS_&lt;SiteCode\>\Hotfix\\&lt;KB Number\>\Client\\&lt;Platform\>\\&lt;msp\> /L\*v &lt;logfile\>REINSTALLMODE=mous REINSTALL=ALL**  
-
-###  <a name="a-namebkmkconsolea-update-configuration-manager-consoles"></a><a name="BKMK_console"></a>更新 Configuration Manager 控制台  
- 若要更新 Configuration Manager 控制台，必须在控制台安装完成后在运行控制台的计算机上安装更新。  
+ 您可以使用更新發行者或軟體部署套件來部署更新，也可選擇在每個用戶端上手動安裝更新。 如需如何使用部署安裝更新的詳細資訊，請參閱本主題中的 [部署 Configuration Manager 的更新](#BKMK_Deploy) 一節。  
 
 > [!IMPORTANT]  
->  在安装 Configuration Manager 控制台的更新，且更新捆绑包具有服务器更新时，请务必也在与 Configuration Manager 控制台一起使用的站点上安装服务器更新。  
+>  安裝用戶端更新且更新配套包含伺服器更新時，請務必同時在接受用戶端指派的主要站台上安裝伺服器更新。  
 
-如果更新的计算机运行 Configuration Manager 客户端：  
+若要手動安裝用戶端更新，您必須在每個 Configuration Manager 用戶端上執行 **Msiexec.exe**，並且參照特定平台的用戶端更新 .msp 檔案。  
 
--   可以使用部署来安装更新。 有关如何使用部署来安装更新的详细信息，请参阅本主题中的 [为 Configuration Manager 部署更新](#BKMK_Deploy) 部分。  
+ 例如，您可以使用下列命令列更新用戶端。 這個命令列會在用戶端電腦上執行 MSIEXEC，並且參照更新組合在站台伺服器上解壓縮的 .msp 檔：**msiexec.exe /p \\\\&lt;ServerName\>\SMS_&lt;SiteCode\>\Hotfix\\&lt;知識庫號碼\>\Client\\&lt;平台\>\\&lt;msp\> /L\*v &lt;logfile\>REINSTALLMODE=mous REINSTALL=ALL**  
 
--   如果你是直接登录到客户端计算机，则可通过交互方式运行安装。  
-
--   你可以在每台计算机上手动安装更新。 若要手动安装 Configuration Manager 控制台更新，则在运行 Configuration Manager 控制台的每台计算机上运行 Msiexec.exe，并引用 Configuration Manager 控制台更新 .msp 文件。  
-
-例如，可以使用下列命令行来更新 Configuration Manager 控制台。 此命令行在客户端计算机上运行 MSIEXEC，并且引用更新捆绑在站点服务器上提取的 .msp 文件：**msiexec.exe /p \\\\&lt;ServerName\>\SMS_&lt;SiteCode\>\Hotfix\\&lt;KB Number\>\AdminConsole\\&lt;Platform\>\\&lt;msp\> /L\*v &lt;logfile\>REINSTALLMODE=mous REINSTALL=ALL**  
-
-##  <a name="a-namebkmkdeploya-deploy-updates-for-configuration-manager"></a><a name="BKMK_Deploy"></a> 为 Configuration Manager 部署更新  
- 在站点服务器上安装了更新捆绑之后，可以通过以下三种方法之一将更新部署到其他计算机。  
-
-###  <a name="a-namebkmkdeployscupa-use-updates-publisher-2011-to-install-updates"></a><a name="BKMK_DeploySCUP"></a>使用 Updates Publisher 2011 安装更新  
- 在站点服务器上安装更新捆绑时，安装向导会为 Updates Publisher 创建一个目录文件，用于将更新部署到适用的计算机。 即使选择“使用包和程序来部署此更新” 选项，此向导也会创建该目录。  
-
- Updates Publisher 的目录名为 **SCUPCatalog.cab**，它位于运行更新捆绑包的计算机上的下列位置：**\\\\&lt;ServerName\>\SMS_&lt;SiteCode\>\Hotfix\\&lt;KB Number\>\SCUP\SCUPCatalog.cab**  
+###  <a name="BKMK_console"></a> 更新 Configuration Manager 主控台  
+ 若要更新 Configuration Manager 主控台，您必須在主控台安裝完成後，在執行主控台的電腦上安裝更新。  
 
 > [!IMPORTANT]  
->  在创建 SCUPCatalog.cab 时，使用了安装更新捆绑的站点服务器的特定路径，因此，无法在其他站点服务器上使用该文件。  
+>  如果您安裝 Configuration Manager 主控台的更新，並且更新配套包含伺服器更新，請務必同時在使用 Configuration Manager 主控台的站台上安裝伺服器更新。  
 
- 在向导完成之后，可以将该目录导入到 Updates Publisher，然后使用 Configuration Manager 软件更新来部署更新。 有关 Updates Publisher 的信息，请参阅 System Center 2012 的 TechNet 库中的 [Updates Publisher 2011](http://go.microsoft.com/fwlink/p/?LinkID=83449)。  
+如果您更新的電腦執行 Configuration Manager 用戶端：  
 
- 使用下列过程将 SCUPCatalog.cab 文件导入到更新发布服务器，然后发布更新。  
+-   您可以使用部署來安裝更新。 如需如何使用部署安裝更新的詳細資訊，請參閱本主題中的 [部署 Configuration Manager 的更新](#BKMK_Deploy) 一節。  
 
-##### <a name="to-import-the-updates-to-updates-publisher-2011"></a>将更新导入到 Updates Publisher 2011  
+-   如果您直接登入用戶端電腦，則可以互動方式執行安裝。  
 
-1.  启动 Updates Publisher 控制台，然后单击“导入”。  
+-   您可以在每部電腦上手動安裝更新。 若要手動安裝 Configuration Manager 主控台更新，您必須在每部執行 Configuration Manager 主控台的電腦上執行 Msiexec.exe，並參照 Configuration Manager 主控台更新 .msp 檔案。  
 
-2.  在“Import Software Updates Catalog Wizard”（导入软件更新目录向导）的“Import Type”（导入类型）  页上，选择“Specify the path to the catalog to import”（指定要导入的目录的路径） ，然后指定 SCUPCatalog.cab 文件。  
+例如，您可以使用下列命令列更新 Configuration Manager 主控台。 這個命令列會在電腦上執行 MSIEXEC，並且參照更新組合在站台伺服器上解壓縮的 .msp 檔：**msiexec.exe /p \\\\&lt;ServerName\>\SMS_&lt;SiteCode\>\Hotfix\\&lt;知識庫號碼\>\AdminConsole\\&lt;平台\>\\&lt;msp\> /L\*v &lt;logfile\>REINSTALLMODE=mous REINSTALL=ALL**  
 
-3.  单击“Next”（下一步） ，然后再次单击“Next”（下一步）  。  
+##  <a name="BKMK_Deploy"></a> 部署 Configuration Manager 的更新  
+ 當您在站台伺服器上安裝更新配套後，可以使用下列三種方法之一，將更新部署至其他電腦。  
 
-4.  在“Security Warning - Catalog Validation”（安全警告 - 目录验证）  对话框中，单击“Accept”（接受） 。 在向导完成后关闭它。  
+###  <a name="BKMK_DeploySCUP"></a> 使用 Updates Publisher 2011 安裝更新  
+ 當您在站台伺服器上安裝更新配套時，安裝精靈會針對「更新發行者」建立類別目錄檔案，您可以用來將更新部署至適用的電腦。 精靈一律會建立此類別目錄，即使您選取 **[Use package and program to deploy this update (使用套件和程式部署此更新)]**之 Hotfix 的一般指引。  
 
-5.  在 Updates Publisher 控制台中，选择要部署的更新，然后单击“发布”。  
+ Updates Publisher 的類別目錄名稱為 **SCUPCatalog.cab**，且可在執行更新配套的電腦的下列位置找到：**\\\\&lt;ServerName\>\SMS_&lt;SiteCode\>\Hotfix\\&lt;知識庫號碼\>\SCUP\SCUPCatalog.cab**  
 
-6.  在“Publish Software Updates Wizard”（发布软件更新向导）的“Publish Options”（发布选项）  页上，选择“Full Content”（完整内容） ，然后单击“Next”（下一步） 。  
+> [!IMPORTANT]  
+>  由於 SCUPCatalog.cab 檔案是利用站台伺服器專用的更新配套安裝路徑建立的，因此不能在其他站台伺服器上使用。  
 
-7.  完成向导以发布更新。  
+ 完成精靈之後，可以將類別目錄匯入 Updates Publisher，然後使用 Configuration Manager 軟體更新來部署更新。 如需 Updates Publisher 的相關資訊，請參閱 System Center 2012 TechNet 文件庫中的 [Updates Publisher 2011](http://go.microsoft.com/fwlink/p/?LinkID=83449)。  
 
-###  <a name="a-namebkmkdeployswdista-use-software-deployment-to-install-updates"></a><a name="BKMK_DeploySWDist"></a>使用软件部署来安装更新  
- 在主站点或管理中心站点的站点服务器上安装更新捆绑时，可以配置安装向导以创建软件部署的更新包。 然后，可以将每个包部署到要更新的计算机的集合。  
+ 請使用下列程序將 SCUPCatalog.cab 檔案匯入更新發行者並發行更新。  
 
- 若要创建软件部署包，在向导的“Configure Software Update Deployment”（配置软件更新部署）  页上，选中要更新的每种更新包类型的复选框。 可用的类型可能包括服务器、Configuration Manager 控制台和客户端。 对于所选的每种更新类型，都会单独创建一个包。  
+##### <a name="to-import-the-updates-to-updates-publisher-2011"></a>將更新匯入至發行者 2011  
+
+1.  啟動 Updates Publisher 主控台，然後按一下 [匯入]。  
+
+2.  在匯入軟體更新類別目錄精靈的 [匯入類型]  頁面中，選取 [指定欲匯入之類別目錄的路徑] ，然後指定 SCUPCatalog.cab 檔案。  
+
+3.  按 [下一步] ，然後再次按 [下一步]  。  
+
+4.  在 [安全性警告 - 目錄驗證]  對話方塊中，按一下 [接受] 。 完成後關閉精靈。  
+
+5.  在 Updates Publisher 主控台中，選取您要部署的更新，然後按一下 [發行]。  
+
+6.  在發行軟體更新精靈的 [發行選項]  頁面中，選取 [完整內容] 再按 [下一步] 。  
+
+7.  完成精靈以發行更新。  
+
+###  <a name="BKMK_DeploySWDist"></a> 使用軟體部署安裝更新  
+ 當您在主要站台或管理中心網站的站台伺服器上安裝更新配套時，您可以設定安裝精靈來建立軟體部署的更新套件。 接著您可以將每個套件部署至欲更新的電腦集合。  
+
+ 若要建立軟體部署套件，請在精靈的 [設定軟體更新部署]  頁面中，選取欲更新之每種更新套件類型旁的核取方塊。 可用類型可以包含伺服器、Configuration Manager 主控台和用戶端。 您每選取一種更新類型，都會為該類型建立一個獨立套件。  
 
 > [!NOTE]  
->  服务器的包将包含下列组件的更新：  
+>  伺服器套件包含下列元件的更新：  
 >   
->  -   站点服务器  
->  -   SMS 提供程序  
->  -   站点数据库  
+>  -   網站伺服器  
+>  -   SMS 提供者  
+>  -   網站資料庫  
 
- 接下来，在向导的“Configure Software Update Deployment Method”（配置软件更新部署方法）  页上，选择“I will use software distribution”（我将使用软件分发） 选项。 选择此选项指示向导创建软件部署包。  
+ 接下來，在精靈的 [設定軟體更新部署方法]  頁面中，選取 [我將使用軟體發佈] 選項。 此選項會引導精靈建立軟體部署套件。  
 
- 在向导完成之后，可以在 Configuration Manager 控制台的“软件库”工作区的“包”节点中查看该向导创建的包。 然后，可以按照标准过程将软件包部署到 Configuration Manager 客户端。 当包在客户端上运行时，它会在客户端计算机上安装对相应的 Configuration Manager 组件的更新。  
+ 精靈結束後，您可以在 [軟體程式庫] 工作區之 [套件] 節點上的 Configuration Manager 主控台中檢視精靈所建立的套件。 接著，您可以使用標準程序將軟體套件部署至 Configuration Manager 用戶端。 套件在用戶端上執行時，會將更新安裝至用戶端電腦上可用的 Configuration Manager 元件。  
 
- 有关如何将包部署到 Configuration Manager 客户端的详细信息，请参阅 [System Center Configuration Manager 中的包和程序](../../../apps/deploy-use/packages-and-programs.md)。  
+ 如需如何將套件部署至 Configuration Manager 用戶端的相關資訊，請參閱 [System Center Configuration Manager 中的套件和程式](../../../apps/deploy-use/packages-and-programs.md)。  
 
-###  <a name="a-namebkmkdeploycollectionsa-create-collections-for-deploying-updates-to-configuration-manager"></a><a name="BKMK_DeployCollections"></a>创建集合以将更新部署到 Configuration Manager  
- 可以将特定的更新部署到合适的客户端。 下列信息可以帮助你为 Configuration Manager 的不同组件创建设备集合。  
+###  <a name="BKMK_DeployCollections"></a> 建立用於將更新部署到 Configuration Manager 的集合  
+ 您可以將特定更新部署至可用的用戶端。 下列資訊可協助您為 Configuration Manager 的不同元件建立裝置集合。  
 
-|Configuration Manager 组件|说明|  
+|Configuration Manager 的元件|指示|  
 |----------------------------------------|------------------|  
-|管理中心站点服务器|创建直接成员身份查询，并且添加管理中心站点服务器计算机。|  
-|所有主站点服务器|创建直接成员身份查询，并且添加每台主站点服务器计算机。|  
-|所有辅助站点服务器|创建直接成员身份查询，并且添加每台辅助站点服务器计算机。|  
-|所有 x86 客户端|使用下列查询条件创建集合：<br /><br /> **Select \* from SMS_R_System inner join SMS_G_System_SYSTEM on SMS_G_System_SYSTEM.ResourceID = SMS_R_System.ResourceId where SMS_G_System_SYSTEM.SystemType = "X86-based PC"**|  
-|所有 x64 客户端|使用下列查询条件创建集合：<br /><br /> **Select \* from SMS_R_System inner join SMS_G_System_SYSTEM on SMS_G_System_SYSTEM.ResourceID = SMS_R_System.ResourceId where SMS_G_System_SYSTEM.SystemType = "X64-based PC"**|  
-|运行 Configuration Manager 控制台的所有计算机|创建直接成员身份查询，并且添加每台计算机。|  
-|运行 SMS 提供程序实例的远程计算机|创建直接成员身份查询，并且添加每台计算机。|  
+|管理中心網站伺服器|建立直接成員資格查詢，並且新增管理中心網站伺服器電腦。|  
+|所有主要站台伺服器|建立直接成員資格查詢，並且新增每台主要站台伺服器電腦。|  
+|所有次要站台伺服器|建立直接成員資格查詢，並且新增每台次要站台伺服器電腦。|  
+|所有 x 86 用戶端|使用下列查詢準則建立集合：<br /><br /> **Select \* from SMS_R_System inner join SMS_G_System_SYSTEM on SMS_G_System_SYSTEM.ResourceID = SMS_R_System.ResourceId where SMS_G_System_SYSTEM.SystemType = "X86-based PC"**|  
+|所有 x64 用戶端|使用下列查詢準則建立集合：<br /><br /> **Select \* from SMS_R_System inner join SMS_G_System_SYSTEM on SMS_G_System_SYSTEM.ResourceID = SMS_R_System.ResourceId where SMS_G_System_SYSTEM.SystemType = "X64-based PC"**|  
+|所有執行 Configuration Manager 主控台的電腦|建立直接成員資格查詢，並且新增每台電腦。|  
+|執行 SMS 提供者執行個體的遠端電腦|建立直接成員資格查詢，並且新增每台電腦。|  
 
 > [!NOTE]  
->  若要更新站点数据库，请将更新部署到该站点的站点服务器。  
+>  若要更新站台資料庫，請將更新部署至該站台的站台伺服器。  
 
- 有关如何创建集合的信息，请参阅[如何在 System Center Configuration Manager 中创建集合](../../../core/clients/manage/collections/create-collections.md)。  
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-
+ 如需如何建立集合的資訊，請參閱[如何在 System Center Configuration Manager 中建立集合](../../../core/clients/manage/collections/create-collections.md)。  

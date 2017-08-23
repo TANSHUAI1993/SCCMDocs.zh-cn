@@ -1,236 +1,233 @@
 ---
-title: "创建用于捕获操作系统的任务序列 | Microsoft Docs"
-description: "“构建和捕获”任务序列将构建可以包括特定驱动程序和软件更新，以及操作系统的引用计算机。"
+title: "建立工作順序以擷取作業系統 | Microsoft Docs"
+description: "組建和擷取工作順序會建立參照電腦，包含特定的驅動程式和軟體更新與作業系統。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-osd
+ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 25e4ac68-0e78-4bbe-b8fc-3898b372c4e8
-caps.latest.revision: 19
-caps.handback.revision: 0
+caps.latest.revision: "19"
+caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 74341fb60bf9ccbc8822e390bd34f9eda58b4bda
 ms.openlocfilehash: e9320e40b8e5031ffa3da5e5149c7da718cc87d5
-ms.lasthandoff: 12/16/2016
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="create-a-task-sequence-to-capture-an-operating-system-in-system-center-configuration-manager"></a>创建任务序列来捕获 System Center Configuration Manager 中的操作系统
+# <a name="create-a-task-sequence-to-capture-an-operating-system-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 建立工作順序以擷取作業系統
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用對象：System Center Configuration Manager (最新分支)*
 
-当使用任务序列将操作系统部署到 System Center Configuration Manager 中的计算机时，该计算机会安装在任务序列中指定的操作系统映像。 若要自定义操作系统映像以使其包含特定的驱动程序、应用程序、软件更新等，需要使用构建和捕获任务序列来构建引用计算机，然后从该引用计算机捕获操作系统映像。 如果已具有可进行捕获的引用计算机，你可以创建用于捕获操作系统的自定义任务序列。 使用以下部分来捕获自定义操作系统。  
+當您使用工作順序將作業系統部署到 System Center Configuration Manager 中的電腦時，電腦會安裝您在工作順序中指定的作業系統映像。 若要自訂作業系統映像，使其包含特定驅動程式、應用程式、軟體更新等，您可以使用組建和擷取工作順序，以建立參照電腦，然後從參照電腦擷取作業系統映像。 如果您已經有用於擷取的參照電腦，您可以建立自訂工作順序，以擷取作業系統。 您可以使用下列章節來擷取自訂的作業系統。  
 
-##  <a name="a-namebkmkbuildcapturetsa-use-a-task-sequence-to-build-and-capture-a-reference-computer"></a><a name="BKMK_BuildCaptureTS"></a> 使用任务序列来构建和捕获引用计算机  
- “构建和捕获”任务序列对引用计算机进行分区和格式化，安装操作系统以及 Configuration Manager 客户端、应用程序和软件更新，然后从引用计算机捕获操作系统。 在分发点上与任务序列（如应用程序）相关联的包必须可用，然后才能创建构建和捕获任务序列。  
+##  <a name="BKMK_BuildCaptureTS"></a> 使用工作順序來建立和擷取參照電腦  
+ 組建和擷取工作順序會分割並格式化參照電腦、安裝作業系統，以及安裝 Configuration Manager 用戶端、應用程式和軟體更新，然後從參照電腦擷取作業系統。 建立組建和擷取工作順序之前，在發佈點上必須先有與工作順序相關聯的套件，例如應用程式。  
 
-###  <a name="a-namebkmkcreatepackagesa-prepare-for-operating-system-deployments"></a><a name="BKMK_CreatePackages"></a> 准备操作系统部署  
- 有大量方案可用于将操作系统部署到环境中的计算机。 在大多数情况下，将创建任务序列并在“创建任务序列向导”中选择 **安装现有映像包** 来安装操作系统、迁移用户设置、应用软件更新和安装应用程序。 在创建任务序列以安装操作系统之前，以下方面必须已到位：  
+###  <a name="BKMK_CreatePackages"></a> 準備作業系統部署  
+ 有很多案例可用於將作業系統部署到您環境中的電腦。 在大部分情況下，您將建立工作順序，然後在 [建立工作順序精靈] 中選取 [安裝現有的映像套件]  來安裝作業系統、移轉使用者設定、套用軟體更新及安裝應用程式。 建立工作順序以安裝作業系統之前，下列項目必須先準備就緒：  
 
--   **必需**  
+-   **必要**  
 
-    -   [启动映像](../get-started/manage-boot-images.md)在 Configuration Manager 控制台中必须可用。  
+    -   在 Configuration Manager 主控台中必須有[開機映像](../get-started/manage-boot-images.md)。  
 
-    -   [操作系统映像](../get-started/manage-operating-system-images.md)在 Configuration Manager 控制台中必须可用。  
+    -   在 Configuration Manager 主控台中必須有[作業系統映像](../get-started/manage-operating-system-images.md)。  
 
--   **必需（若使用）**  
+-   **必要 (如果有用到)**  
 
-    -   [驱动程序包](../get-started/manage-drivers.md)在 Configuration Manager 控制台中必须可用，该程序包包含必要的 Windows 驱动程序以支持引用计算机上的硬件。 有关管理驱动程序的任务序列步骤的详细信息，请参阅[使用任务序列安装设备驱动器](../get-started/manage-drivers.md#BKMK_TSDrivers)。  
+    -   Configuration Manager 主控台中必須有[驅動程式套件](../get-started/manage-drivers.md)，其包含必要的 Windows 驅動程式，以支援參照電腦上的硬體。 如需管理驅動程式的工作順序步驟詳細資訊，請參閱[使用工作順序來安裝裝置驅動程式](../get-started/manage-drivers.md#BKMK_TSDrivers)。  
 
-    -   必须在 Configuration Manager 控制台中同步[软件更新](../../sum/get-started/synchronize-software-updates.md)。  
+    -   [軟體更新](../../sum/get-started/synchronize-software-updates.md)必須在 Configuration Manager 主控台中進行同步處理。  
 
-    -   必须将[应用程序](../../apps/deploy-use/create-applications.md)添加到 Configuration Manager 控制台。  
+    -   Configuration Manager 主控台中必須新增[應用程式](../../apps/deploy-use/create-applications.md)。  
 
-###  <a name="a-namebkmkcreatebuildcapturetsa-create-a-build-and-capture-task-sequence"></a><a name="BKMK_CreateBuildCaptureTS"></a> 创建一个构建和捕获任务序列  
- 使用下列过程使用任务序列构建引用计算机和捕获操作系统。  
+###  <a name="BKMK_CreateBuildCaptureTS"></a> 建立組建和擷取工作順序  
+ 請使用下列程序，以使用工作順序建立參照電腦和擷取作業系統。  
 
-#### <a name="to-create-a-task-sequence-that-builds-and-captures-an-operating-system-image"></a>创建用于构建和捕获操作系统映像的任务序列  
+#### <a name="to-create-a-task-sequence-that-builds-and-captures-an-operating-system-image"></a>建立組建和擷取作業系統映像的工作順序  
 
-1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+1.  在 Configuration Manager 主控台中，按一下 [軟體程式庫] 。  
 
-2.  在“软件库”  工作区中，展开“操作系统” ，然后单击“任务序列” 。  
+2.  在 [軟體程式庫]  工作區中，展開 [作業系統] ，然後按一下 [工作順序] 。  
 
-3.  在“主页”  选项卡上的“创建”  组中，单击“创建任务序列”  以启动创建任务序列向导。  
+3.  在 [首頁]  索引標籤的 [建立]  群組中，按一下 [建立工作順序]  啟動 [建立工作順序精靈]。  
 
-4.  在“创建新的任务序列”  页上，选择“构建并捕获引用操作系统映像包” 。  
+4.  在 [建立新的工作順序]  頁面上，選取 [建立並擷取參照作業系統映像] 。  
 
-5.  在“任务序列信息”  页上，指定以下设置，然后单击“下一步” 。  
+5.  在 [工作順序資訊]  頁面上指定下列設定，然後按 [下一步] 。  
 
-    -   “任务序列名称”：指定用于标识任务序列的名称。  
+    -   **工作順序名稱**：指定識別工作順序的名稱。  
 
-    -   “描述”：指定由该任务序列所执行的任务描述，例如任务序列创建的操作系统的描述。  
+    -   **描述**：指定工作順序所執行工作的描述，例如工作順序所建立作業系統的描述。  
 
-    -   “启动映像”：指定用于安装操作系统映像的启动映像。  
-
-        > [!IMPORTANT]  
-        >  启动映像的体系结构必须与目标计算机的硬件体系结构兼容。  
-
-6.  在“安装 Windows”  页上，指定以下设置，然后单击“下一步” 。  
-
-    -   **映像包**：指定包含安装操作系统所需文件的操作系统映像包。  
-
-    -   “映像索引”：指定要安装的操作系统。 如果操作系统映像包含多个版本，则选择你想要安装的版本。  
-
-    -   “产品秘钥”：指定要安装的 Windows 操作系统的产品密钥。 你可以指定编码的批量许可证密钥和标准产品密钥。 如果使用非编码的产品密钥，则必须通过短划线 (-) 分隔每组 5 个字符。 例如： *XXXXX-XXXXX-XXXXX-XXXXX-XXXXX*  
-
-    -   “服务器授权模式”：指定服务器许可证为“每客户” , 或未指定许可证。 如果服务器许可证为“每服务器” ，则还需指定服务器连接的最大数量。  
-
-    -   指定如何处理在部署操作系统时使用的管理员帐户。  
-
-        -   “随机生成本地管理员密码并禁用所有支持的平台上的帐户”：指定是否使用 Configuration Manager 创建本地管理员帐户的随机密码并在部署操作系统时禁用该帐户。  
-
-        -   “启用该账户并指定本地管理员密码”：指定是否在部署了操作系统的所有计算机上使用相同的本地管理员帐户密码。  
-
-7.  在“配置网络”  页上，指定以下设置，然后单击“下一步” 。  
-
-    -   “加入工作组”：指定是否在部署操作系统时将目标计算机添加到工作组。  
-
-    -   “加入域”：指定是否在部署操作系统时将目标计算机添加到域。 在“域” 中，指定域的名称。  
+    -   **開機映像**：指定安裝作業系統映像的開機映像。  
 
         > [!IMPORTANT]  
-        >  你可以浏览以查找本地林中的域，但对于远程林则必须指定域名。  
+        >  開機映像的架構必須與目的地電腦的硬體架構相容。  
 
-         你还可以指定组织单位 (OU)。 这是一项可选设置，用于指定在其中创建计算机帐户的 OU 的 LDAP X.500 可分辨名称（如果尚未存在）。  
+6.  在 [安裝 Windows]  頁面上指定下列設定，然後按 [下一步] 。  
 
-    -   “帐户”：指定具有加入指定域的权限的帐户的用户名和密码。 例如： *domain\user* 或 *%variable%*。  
+    -   **映像套件**：指定包含安裝作業系統所需檔案的作業系統映像套件。  
+
+    -   **映像索引**：指定要安裝的作業系統。 如果作業系統映像包含多個版本，則選取您想要安裝的版本。  
+
+    -   **產品金鑰**：指定要安裝之 Windows 作業系統的產品金鑰。 您可以指定編碼的大量授權金鑰和標準產品金鑰。 如果您使用非編碼的產品金鑰，則必須以破折號 (-) 分隔字元，每 5 個字元為一組。 例如： *XXXXX-XXXXX-XXXXX-XXXXX-XXXXX*  
+
+    -   **伺服器授權模式**：指定伺服器授權為 [按照基座] 、[按照伺服器] ，或者不指定授權。 如果伺服器授權為 [按照伺服器] ，請同時指定伺服器連線數目上限。  
+
+    -   指定如何處理部署作業系統時使用的系統管理員帳戶。  
+
+        -   **隨機產生本機系統管理員密碼，並停用所有支援平台上的帳戶**：指定是否要讓 Configuration Manager 建立本機系統管理員帳戶的隨機密碼，並在部署作業系統時停用此帳戶。  
+
+        -   **啟用帳戶並指定本機系統管理員密碼**：指定是否在部署作業系統的所有電腦上，使用相同的本機系統管理員帳戶密碼。  
+
+7.  在 [設定此網路]  頁面指定下列設定，然後按 [下一步] 。  
+
+    -   **加入工作群組**：指定是否在部署作業系統時，將目的地電腦加入工作群組。  
+
+    -   **加入網域**：指定是否在部署作業系統時，將目的地電腦加入網域。 在 [網域] 中，指定網域名稱。  
 
         > [!IMPORTANT]  
-        >  如果打算迁移域设置或工作组设置，你必须输入适当的域凭据。  
+        >  您可以進行瀏覽，尋找本機樹系中的網域，但是必須指定遠端樹系的網域名稱。  
 
-8.  在“安装 Configuration Manager”页上，指定 Configuration Manager 客户端包（其中包含要安装 Configuration Manager 客户端的源文件），并添加安装客户端所需的任何其他属性，然后单击“下一步”。  
+         您也可以指定組織單位 (OU)。 這是選用設定，會指定要建立電腦帳戶所在 OU 的 LDAP X.500 辨別名稱 (如果帳戶尚未存在)。  
 
-     有关可用于安装客户端的属性的详细信息，请参阅[关于客户端安装属性](../../core/clients/deploy/about-client-installation-properties.md)。  
+    -   **帳戶**：指定具有加入指定網域權限之帳戶的使用者名稱和密碼。 例如： *網域\使用者* 或 *%變數%*。  
 
-9. 在“包括更新”  页上，指定是安装必需的软件更新、所有软件更新还是不安装软件更新，然后单击“下一步” 。 如果指定要安装软件更新，Configuration Manager 将只会安装以包含目标计算机的集合为目标的那些软件更新。  
+        > [!IMPORTANT]  
+        >  如果您打算移轉網域設定或工作群組設定，則必須輸入適當的網域認證。  
 
-10. 在“安装应用程序”  页上，指定要安装在目标计算机上的应用程序，然后单击“下一步” 。 如果指定多个应用程序，你也可以指定任务序列在特定应用程序的安装失败时继续进行。  
+8.  在 [安裝 Configuration Manager] 頁面上，指定包含來源檔案的 Configuration Manager 用戶端套件，以安裝 Configuration Manager 用戶端，並新增安裝用戶端所需的任何其他內容，然後按一下 [下一步]。  
 
-11. 在“系统准备”  页上，指定以下设置，然后单击“下一步” 。  
+     如需可用來安裝用戶端的內容詳細資訊，請參閱[關於 Configuration Manager 中的用戶端安裝內容](../../core/clients/deploy/about-client-installation-properties.md)。  
 
-    -   **包**：指定 Configuration Manager 包，其中包含要用于捕获引用计算机设置的适当版本的 Sysprep。  
+9. 在 [包含更新]  頁面上，指定要安裝必要的軟體更新、所有軟體更新或不安裝軟體更新，然後按 [下一步] 。 如果您指定安裝軟體更新，Configuration Manager 只會將目標軟體更新安裝至目的地電腦為其成員的集合。  
 
-         如果你运行的操作系统版本是 Windows Vista 或更高版本，则 Sysprep 自动安装在计算机上，而且你不必指定包。  
+10. 在 [安裝應用程式]  頁面上，指定要安裝在目的地電腦上的應用程式，然後按 [下一步] 。 如果您指定多個應用程式，也可以指定工作順序在特定應用程式安裝失敗時繼續執行。  
 
-12. 在“映像属性”  页上，指定以下操作系统映像设置，然后单击“下一步” 。  
+11. 在 [系統準備]  頁面指定下列設定，然後按 [下一步] 。  
 
-    -   “创建者”：指定创建操作系统映像的用户的名称。  
+    -   **套件**：指定內含適當版本 Sysprep 的 Configuration Manager 套件，以用於擷取參照電腦設定。  
 
-    -   “版本”：指定与操作系统映像关联的用户定义版本号。  
+         如果您執行的作業系統版本為 Windows Vista 或更新版本，Sysprep 會自動安裝在電腦上，您不需要指定套件。  
 
-    -   “描述”：指定操作系统计算机映像的用户定义描述。  
+12. 在 [映像內容]  頁面上，指定下列作業系統映像的設定，然後按 [下一步] 。  
 
-13. 在“捕获映像”  页上，指定以下设置，然后单击“下一步” 。  
+    -   **建立者**：指定建立作業系統映像的使用者名稱。  
 
-    -   “路径”：指定存储输出 .WIM 文件的共享网络文件夹。 此文件包含以你通过使用此向导指定的设置为基础的操作系统映像。 如果指定包含现有 .WIM 文件的文件夹，则会覆盖现有文件。  
+    -   **版本**：指定與作業系統映像相關聯的使用者定義版本號碼。  
 
-    -   “账户”：指定对存储映像的网络共享具有权限的 Windows 帐户。  
+    -   **描述**：指定作業系統電腦映像之使用者定義描述。  
 
-14. 完成向导。  
+13. 在 [擷取映像]  頁面上指定下列設定，然後按 [下一步] 。  
 
-15. 要向任务序列中添加其他步骤，请选择所创建的任务序列并单击“编辑” 。 有关如何编辑任务序列的信息，请参阅[编辑任务序列](manage-task-sequences-to-automate-tasks.md#BKMK_ModifyTaskSequence)。  
+    -   **路徑**：指定用於存放輸出 .WIM 檔案的共用網路資料夾。 此檔案內含的作業系統映像，取決於您利用此精靈所指定的設定。 如果指定內含現有 .WIM 檔案的資料夾，就會覆寫現有檔案。  
 
- 采用以下其中一种方式将任务序列部署到引用计算机：  
+    -   **帳戶**：指定 Windows 帳戶，該帳戶擁有儲存映像之網路共用的使用權限。  
 
--   如果引用计算机为 Configuration Manager 客户端，则可以将构建和捕获任务序列部署到包含引用计算机的集合。 有关如何部署操作系统映像的信息，请参阅 [Create a task sequence to install an operating system](create-a-task-sequence-to-install-an-operating-system.md)（创建任务序列以安装操作系统）。  
+14. 完成精靈。  
+
+15. 若要將其他步驟新增至工作順序，請選取您要建立的工作順序，並按一下 [編輯] 。 如需如何編輯工作順序的資訊，請參閱[編輯工作順序](manage-task-sequences-to-automate-tasks.md#BKMK_ModifyTaskSequence)。  
+
+ 請使用下列方法之一將工作順序部署至參照電腦：  
+
+-   如果參照電腦為 Configuration Manager 用戶端，則可將組建和擷取工作順序部署至包含參照電腦的集合。 如需如何部署作業系統映像的資訊，請參閱 [Create a task sequence to install an operating system](create-a-task-sequence-to-install-an-operating-system.md) (建立工作順序以安裝作業系統)。  
 
     > [!NOTE]  
-    >  如果任务序列具有磁盘分区任务序列步骤，请不要在部署任务序列时选择“下载程序”  选项。  
+    >  如果工作順序具有磁碟分割工作順序步驟，請勿在部署工作順序時選取 [下載程式]  選項。  
 
--   如果引用计算机不是 Configuration Manager 客户端，或者如果想手动在引用计算机上运行任务序列，则请运行“创建任务序列媒体向导”以创建可启动媒体。 有关如何创建可启动媒体的信息，请参阅[创建可启动媒体](create-bootable-media.md)。  
+-   如果參照電腦不是 Configuration Manager 用戶端，或如果您想要在參照電腦上手動執行工作順序，請執行 [建立工作順序媒體精靈] 以建立可開機媒體。 如需如何建立可開機媒體的資訊，請參閱[建立可開機媒體](create-bootable-media.md) 。  
 
-##  <a name="a-namebkmkcaptureexistingrefcomputera-capture-an-operating-system-image-from-an-existing-reference-computer"></a><a name="BKMK_CaptureExistingRefComputer"></a> 从现有引用计算机中捕获操作系统映像  
- 如果已具有可随时用于捕获的引用计算机，则可以创建用于从引用计算机捕获操作系统的任务序列。 将使用“捕获操作系统映像”  任务序列步骤可从引用计算机捕获一个或多个映像，并将它们存储在指定网络共享上的映像文件 (wim) 文件中。 在 Windows PE 中使用启动映像启动引用计算机，将引用计算机上的每个硬盘驱动器作为 .wim 文件中的单独映像进行捕获。 如果引用计算机有多个驱动器，则生成的 .wim 文件对于每个卷将包含单独的映像。 仅捕获格式化为 NTFS 或 FAT32 的卷。 其他格式的卷和 USB 卷会被忽略。  
+##  <a name="BKMK_CaptureExistingRefComputer"></a> 從現有的參照電腦擷取作業系統映像  
+ 如果您已經有要擷取的參照電腦，您可以建立從參照電腦擷取作業系統的工作順序。 您將使用 [擷取作業系統映像]  工作順序步驟，從參照電腦擷取一或多個映像，並將其存放在指定網路共用上的映像檔 (.wim) 中。 會在 Windows PE 中使用開機映像啟動此參照電腦，並將此參照電腦上的每個硬碟都擷取成 .wim 檔案內的個別映像。 如果參照的電腦中有多個磁碟機，所產生的 .wim 檔案將會包含每個磁碟區的個別映像。 只會擷取格式化為 NTFS 或 FAT32 的磁碟區。 會略過其他格式的磁碟區和 USB 磁碟區。  
 
- 使用以下过程从现有引用计算机中捕获操作系统映像。  
+ 請使用下列程序，從現有的參照電腦擷取作業系統映像。  
 
-#### <a name="to-capture-an-operating-system-from-an-existing-reference-computer"></a>从现有引用计算机中捕获操作系统  
+#### <a name="to-capture-an-operating-system-from-an-existing-reference-computer"></a>從現有的參照電腦擷取作業系統  
 
-1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+1.  在 Configuration Manager 主控台中，按一下 [軟體程式庫] 。  
 
-2.  在“软件库”  工作区中，展开“操作系统” ，然后单击“任务序列” 。  
+2.  在 [軟體程式庫]  工作區中，展開 [作業系統] ，然後按一下 [工作順序] 。  
 
-3.  在“主页”  选项卡上的“创建”  组中，单击“创建任务序列”  以启动创建任务序列向导。  
+3.  在 [首頁]  索引標籤的 [建立]  群組中，按一下 [建立工作順序]  啟動 [建立工作順序精靈]。  
 
-4.  在“创建新的任务序列”  页面上，选择“创建新的自定义任务序列” 。  
+4.  在 [建立新的工作順序]  頁面上，選取 [建立新的自訂工作順序] 。  
 
-5.  在“任务序列信息”  页面上，指定任务序列的名称和任务序列的描述。  
+5.  在 [工作順序資訊]  頁面上，指定工作順序的名稱和工作順序的描述。  
 
-6.  指定任务序列的启动映像。 此启动映像用于使用 Windows PE 启动引用计算机。  有关详细信息，请参阅[管理启动映像](../get-started/manage-boot-images.md)。  
+6.  指定工作順序的開機映像。 此開機映像用於以 Windows PE 啟動參照電腦。  如需詳細資訊，請參閱[管理開機映像](../get-started/manage-boot-images.md)。  
 
-7.  完成向导。  
+7.  完成精靈。  
 
-8.  在“任务序列” 中，选择自定义任务序列，然后在“任务序列”  组中的“主页”  选项卡上，单击“编辑”  ，以打开任务序列编辑器。  
+8.  在 [工作順序] 中，選取自訂工作順序，然後在 [首頁]  索引標籤的 [工作順序]  群組中，按一下 [編輯]  ，以開啟 [工作順序編輯器]。  
 
-9. 仅当引用计算机上安装了 Configuration Manager 客户端时才使用此步骤。  
+9. 只有參照電腦上已安裝 Configuration Manager 用戶端時，才使用此步驟。  
 
-     依次单击**添加**和**映像**，然后单击[准备 ConfigMgr 客户端以便捕获](../understand/task-sequence-steps.md#BKMK_PrepareConfigMgrClientforCapture)。 此任务序列步骤在引用计算机上获得 Configuration Manager 客户端，并且准备该客户端用于进行捕获（这是映像创建过程的一部分）。  
+     依序按一下 [新增] 和 [映像]，然後按一下 [[準備 ConfigMgr 用戶端以進行擷取]](../understand/task-sequence-steps.md#BKMK_PrepareConfigMgrClientforCapture)。 此工作順序步驟會採用參照電腦上的 Configuration Manager 用戶端，並準備此用戶端，以便在執行映像建立程序時進行擷取。  
 
-10. 依次单**添加**和**映像**，然后单击[准备 Windows 以便捕获](../understand/task-sequence-steps.md#BKMK_PrepareWindowsforCapture)。 此任务序列操作运行 Sysprep，然后将计算机重新启动到为该任务序列指定的 Windows PE 启动映像。 要使此操作成功完成，引用计算机不可加入域。  
+10. 依序按一下 [新增] 和 [映像]，然後按一下 [[準備 Windows 以進行擷取]](../understand/task-sequence-steps.md#BKMK_PrepareWindowsforCapture)。 此工作順序動作會執行 Sysprep，然後使電腦重新開機至為工作順序指定的 Windows PE 開機映像。 參照電腦絕不能加入網域中，才能順利完成這個動作。  
 
-11. 依次单击**添加**和**映像**，然后单击[捕获操作系统映像](../understand/task-sequence-steps.md#BKMK_CaptureOperatingSystemImage)。  此任务序列步骤将仅从 Windows PE 运行，以捕获引用计算机上的硬盘驱动器。 对任务序列步骤配置下列设置。  
+11. 依序按一下 [新增] 和 [映像]，然後按一下 [[擷取作業系統映像]](../understand/task-sequence-steps.md#BKMK_CaptureOperatingSystemImage)。  此工作順序步驟將只從 Windows PE 執行，以擷取參照電腦上的硬碟。 請設定工作順序步驟的下列設定。  
 
-    -   “名称” 和“描述” : Optionally, you can change the name of the task sequence step 和“描述” provide a description.  
+    -   **名稱** 和 **描述**：(選擇性) 您可以變更工作順序步驟的名稱，並提供描述。  
 
-    -   “目标”：指定存储输出 .WIM 文件的共享网络文件夹。 此文件包含以你通过使用此向导指定的设置为基础的操作系统映像。 如果指定包含现有 .WIM 文件的文件夹，则会覆盖现有文件。  
+    -   **目的地**：指定用於存放輸出 .WIM 檔案的共用網路資料夾。 此檔案內含的作業系統映像，取決於您利用此精靈所指定的設定。 如果指定內含現有 .WIM 檔案的資料夾，就會覆寫現有檔案。  
 
-    -   “描述”, 和“创建者” （可选）提供有关将捕获的映像的详细信息。  
+    -   **描述**、 **版本**和 **建立者**：(選擇性) 提供將擷取映像的詳細資料。  
 
-    -   “捕获操作系统映像帐户”：指定对指定的网络共享具有权限的 Windows 帐户。 单击“设置”  以指定该 Windows 帐户的名称。  
+    -   **擷取作業系統映像帳戶**：指定 Windows 帳戶，該帳戶擁有您所指定網路共用的使用權限。 按一下 [設定]  ，以指定該 Windows 帳戶的名稱。  
 
-     单击“确定”  关闭任务序列编辑器。  
+     按一下 [確定]  ，結束 [工作順序編輯器]。  
 
- 采用以下其中一种方式将任务序列部署到引用计算机：  
+ 請使用下列方法之一將工作順序部署至參照電腦：  
 
--   如果引用计算机为 Configuration Manager 客户端，则可以将任务序列部署到包含引用计算机的集合。 有关如何部署操作系统映像的信息，请参阅 [Create a task sequence to install an operating system](create-a-task-sequence-to-install-an-operating-system.md)（创建任务序列以安装操作系统）。  
+-   如果參照電腦為 Configuration Manager 用戶端，則可將工作順序部署至包含參照電腦的集合。 如需如何部署作業系統映像的資訊，請參閱 [Create a task sequence to install an operating system](create-a-task-sequence-to-install-an-operating-system.md) (建立工作順序以安裝作業系統)。  
 
--   如果引用计算机不是 Configuration Manager 客户端，或者如果想手动在引用计算机上运行任务序列，则请运行“创建任务序列媒体向导”以创建可启动媒体。 有关如何创建可启动媒体的信息，请参阅[创建可启动媒体](create-bootable-media.md)。  
+-   如果參照電腦不是 Configuration Manager 用戶端，或如果您想要在參照電腦上手動執行工作順序，請執行 [建立工作順序媒體精靈] 以建立可開機媒體。 如需如何建立可開機媒體的資訊，請參閱[建立可開機媒體](create-bootable-media.md) 。  
 
-##  <a name="a-namebkmkbuildandcapturetsexamplea-task-sequence-example-to-build-and-capture-an-operating-system-image"></a><a name="BKMK_BuildandCaptureTSExample"></a> 用于构建和捕获操作系统映像的任务序列示例  
- 使用下表作为创建任务序列以构建和捕获操作系统映像时的指导。 该表将帮助您决定任务序列步骤的常规顺序，以及如何将这些任务序列步骤组织并构建成逻辑组。 你创建的任务序列可能与此示例有所不同，可以包含更多或较少的任务序列步骤和组。  
+##  <a name="BKMK_BuildandCaptureTSExample"></a> 建立並擷取作業系統映像的工作順序範例  
+ 使用下表做為指南，您在建立工作順序來建置和擷取作業系統映像。 資料表會協助您決定您的工作順序步驟及如何組織和組織成邏輯群組的那些工作順序步驟的一般順序。 您所建立的工作順序可能與此範例不同，而且可能包含更多或更少的工作順序步驟和群組。  
 
 > [!IMPORTANT]  
->  始终使用“创建任务序列向导”来创建此类型的任务序列。  
+>  請一律使用 [建立工作順序精靈] 來建立此類型的工作順序。  
 
- 使用“新任务序列”  创建此新任务序列时，如果您手动将这些任务序列步骤添加至现有任务序列，则某些任务序列步骤名称可能与应使用的名称不同。 下表显示了命名差异：  
+ 當您使用 [新增工作順序]  來建立這個新的工作順序時，如果您手動將這些工作順序步驟加入現有工作順序，則此工作順序步驟的某些名稱會與其原本應有的名稱不同。 下表顯示這些名稱的差異：  
 
-|新建任务序列向导任务序列步骤名称|相当的任务序列编辑器步骤名称|  
+|新的工作順序精靈工作順序步驟名稱|對等項目工作序列編輯器中的步驟名稱|  
 |------------------------------------------------------|-----------------------------------------------|  
-|在 Windows PE 中重新启动|重新启动到 Windows PE 或硬盘|  
-|对磁盘 0 分区|格式化磁盘并分区|  
-|应用设备驱动程序|自动应用驱动程序|  
-|安装更新|安装软件更新|  
-|加入工作组|加入域或工作组|  
-|准备 ConfigMgr 客户端|Prepare ConfigMgr Client for Capture|  
-|准备操作系统|Prepare Windows for Capture|  
-|捕获引用计算机|捕获操作系统映像|  
+|在 Windows PE 中重新啟動|重新開機到 Windows PE 或硬碟|  
+|磁碟分割磁碟 0|格式化和分割磁碟|  
+|套用裝置驅動程式|自動套用驅動程式|  
+|安裝更新|安裝軟體更新|  
+|加入群組|加入網域或工作群組|  
+|準備 ConfigMgr 用戶端|準備 ConfigMgr 用戶端以進行擷取|  
+|準備作業系統|準備 Windows 以進行擷取|  
+|擷取參考機器|擷取作業系統映像|  
 
-|任务序列组/步骤|参考|  
+|工作順序群組/步驟|參考|  
 |-------------------------------|---------------|  
-|构建引用计算机 - **（新建任务序列组）**|创建任务序列组。 任务序列组将类似的任务序列步骤放在一起，以获得更佳的组织和错误控制。<br /><br /> 此组包含构建引用计算机所需的操作。|  
-|在 Windows PE 中重新启动|使用此任务序列步骤指定目标计算机的重新启动选项。 此步骤会向用户显示一则消息，指出将重新启动计算机以便可以继续安装。<br /><br /> 此步骤使用只读 **_SMSTSInWinPE** 任务序列变量。 如果关联值等于 **false** ，该任务序列步骤将继续。|  
-|对磁盘 0 分区|使用此任务序列步骤指定格式化目标计算机上的硬盘时所需的操作。 默认磁盘编号为 **0**。<br /><br /> 此步骤使用只读的 **_SMSTSClientCache** 任务序列变量。 如果 Configuration Manager 客户端缓存不存在，则会运行此步骤。|  
-|应用操作系统|使用此任务序列步骤在目标计算机上安装指定的操作系统映像。 此步骤首先删除目标计算机上相应的顺序磁盘卷上的所有文件（特定于 Configuration Manager 的控制文件除外），然后将 WIM 文件中包含的所有卷映像应用到该顺序磁盘卷。|  
-|应用 Windows 设置|使用此任务序列步骤配置目标计算机的 Windows 设置配置信息。|  
-|应用网络设置|使用此任务序列步骤指定目标计算机的网络或工作组配置信息。|  
-|应用设备驱动程序|使用此任务序列步骤匹配驱动程序，并将其作为操作系统部署的一部分进行安装。 你可以通过选择“考虑所有类别的驱动程序”  允许 Windows 安装程序搜索所有现有的驱动程序类别；或者选择“将驱动程序匹配限制为仅考虑所选类别的驱动程序” 以限制 Windows 安装程序搜索的驱动程序类别。<br /><br /> 此步骤使用只读 **_SMSTSMediaType** 任务序列变量。 如果关联值不等于 **FullMedia** ，则将运行此任务序列步骤。|  
-|安装 Windows 和 ConfigMgr|使用此任务序列步骤安装 Configuration Manager 客户端软件。 Configuration Manager 安装和注册 Configuration Manager 客户端 GUID。 你可以在“安装属性”  窗口中分配必要的安装参数。|  
-|安装更新|使用此任务序列步骤指定如何在目标计算机上安装软件更新。 在运行此任务序列步骤时，才会评估目标计算机是否有适用的软件更新。 此时，会与其他 Configuration Manager 托管客户端一样，评估目标计算机是否有合适的软件更新。<br /><br /> 此步骤使用只读 **_SMSTSMediaType** 任务序列变量。 如果关联值不等于 **FullMedia** ，则将运行此任务序列步骤。|  
-|捕获引用计算机 - **（新建任务序列组）**|创建其他任务序列组。 此组包含准备和捕获引用计算机的必需步骤。|  
-|加入工作组|使用此任务序列步骤来指定使目标计算机加入工作组需要的信息。|  
-|Prepare ConfigMgr Client for Capture|使用此步骤在引用计算机上获得 Configuration Manager 客户端，并且使其准备好以便捕获（这是映像创建过程的一部分）|  
-|准备操作系统|使用此任务序列步骤来指定当从引用计算机捕获 Windows 设置时要使用的 Sysprep 选项。 此任务序列步骤运行 Sysprep，然后将计算机重新启动到为该任务序列指定的 Windows PE 启动映像。|  
-|捕获操作系统映像|使用此任务序列步骤来访问特定的现有网络共享和在保存映像时使用的 .WIM 文件。 当使用“添加操作系统映像包向导” 添加操作系统映像包时，此位置用作包源位置。|  
+|建立參照電腦- **(新的工作序列群組)**|建立工作序列群組。 工作順序群組會一同保留類似的工作順序步驟，以取得較佳的組織及錯誤控制。<br /><br /> 這個群組包含建置參照電腦時所需的動作。|  
+|在 Windows PE 中重新啟動|您可以使用此工作順序步驟來指定目的地電腦的重新啟動選項。 此步驟中會顯示訊息給使用者的電腦將會重新啟動以便繼續進行安裝。<br /><br /> 此步驟中使用唯讀 **_SMSTSInWinPE** 工作順序變數。 如果相關聯的值等於 **false** ，則工作順序步驟將會繼續。|  
+|磁碟分割磁碟 0|使用此工作順序步驟指定的動作需要在目的地電腦上的將硬碟格式化。 預設的磁碟編號是 **0**。<br /><br /> 此步驟中使用唯讀 **_SMSTSClientCache** 工作順序變數。 如果 Configuration Manager 用戶端快取不存在，則會執行此步驟。|  
+|套用作業系統|使用此工作順序步驟在目的電腦上安裝指定的作業系統映像。 在刪除該磁碟區上的有檔案後，此步驟會將包含於 WIM 檔案中的磁碟區映像套用至目標電腦上對應的循序磁碟區 (但 Configuration Manager 特定控制檔案除外)。|  
+|套用 Windows 設定|請使用這項工作順序步驟，設定目的電腦的 Windows 設定組態資訊。|  
+|套用網路設定|您可以使用此工作順序步驟來指定目的地電腦的網路或工作群組組態資訊。|  
+|套用裝置驅動程式|您他的工作順序步驟來比對並安裝驅動程式做為作業系統部署的一部分。 您可以讓 Windows 安裝程式來搜尋所有現有的驅動程式類別目錄 **考慮所有類別的驅動程式** 或限制哪些驅動程式類別 Windows 安裝程式會藉由選取搜尋 **限制只考慮選取的類別目錄中的驅動程式的驅動程式比對**。<br /><br /> 此步驟中使用唯讀 **_SMSTSMediaType** 工作順序變數。 如果相關聯的值不等於 **FullMedia** 會執行此工作順序步驟。|  
+|[安裝套件]|使用此工作順序步驟來安裝 Configuration Manager 用戶端軟體。 Configuration Manager 會安裝並註冊 Configuration Manager 用戶端 GUID。 您可以在 **[安裝內容]** 視窗中指派必要的安裝參數。|  
+|安裝更新|若要指定目的地電腦上安裝軟體更新的方式使用此工作順序步驟。 在執行此工作順序步驟之前，不會評估目的地電腦適用的軟體更新。 此時，會評估目的地電腦是否有類似於任何其他 Configuration Manager 管理用戶端的軟體更新。<br /><br /> 此步驟中使用唯讀 **_SMSTSMediaType** 工作順序變數。 如果相關聯的值不等於 **FullMedia** 會執行此工作順序步驟。|  
+|擷取參照電腦- **(新的工作序列群組)**|建立另一個工作序列群組。 這個群組包含必要的步驟來準備和擷取參照電腦。|  
+|加入群組|您可以使用此工作順序步驟來指定已加入工作群組的目的地電腦所需的資訊。|  
+|準備 ConfigMgr 用戶端以進行擷取|使用此步驟準備擷取參照電腦的 Configuration Manager 用戶端，作為映像處理程序的一部分。|  
+|準備作業系統|您可以使用此工作順序步驟來指定擷取從參照電腦的 Windows 設定時所要使用的 Sysprep 選項。 此工作順序步驟執行 Sysprep，然後讓電腦重新開機至指定的工作順序的 Windows PE 開機映像。|  
+|擷取作業系統映像|使用此工作順序步驟來輸入特定的現有網路共用和。儲存映像時要使用 WIM 檔案。 使用 [新增作業系統映像套件精靈] ，新增作業系統映像套件時，這個位置用作為套件來源位置。|  
 
- 从引用计算机中捕获了映像后，请不要从该引用计算机中捕获另一个操作系统映像，因为在初始配置过程中会创建注册表项。 请在每次捕获操作系统映像时创建新引用计算机。 如果计划使用同一引用计算机来创建将来的操作系统映像，请首先卸载 Configuration Manager 客户端，然后重新安装 Configuration Manager 客户端。  
+ 在您從參照電腦擷取映像後，由於在初始化設定期間會建立登錄項目，因此請勿從參照電腦擷取其他作業系統映像。 您每一次擷取作業系統映像，都會建立新的參照電腦。 如果您打算使用相同的參照電腦來建立未來的作業系統映像，請先解除安裝 Configuration Manager 用戶端，然後再重新安裝 Configuration Manager 用戶端。  
 
-## <a name="next-steps"></a>后续步骤  
-[部署企业版操作系统的方法](methods-to-deploy-enterprise-operating-systems.md)
-
+## <a name="next-steps"></a>後續步驟  
+[部署企業作業系統的方法](methods-to-deploy-enterprise-operating-systems.md)

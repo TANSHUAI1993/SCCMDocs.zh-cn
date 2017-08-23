@@ -1,303 +1,299 @@
 ---
-title: "配置报表 | Microsoft 文档"
-description: "阅读有关如何在 Configuration Manager 层次结构中设置报表，包括 SQL Server Reporting Services 的信息。"
+title: "設定報告 | Microsoft Docs"
+description: "了解如何在 Configuration Manager 階層中設定報告，包括 SQL Server Reporting Services 的相關資訊。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 55ae86a7-f0ab-4c09-b4da-89cd0e7fa0e0
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f62d969dd49fb00b688602128df74b28ff551135
 ms.openlocfilehash: 7ae6bac23e585d6f61aff0f3155d050f1b537620
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/07/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="configuring-reporting-in-system-center-configuration-manager"></a>配置 System Center Configuration Manager 中的报表
+# <a name="configuring-reporting-in-system-center-configuration-manager"></a>設定 System Center Configuration Manager 中的報表
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用對象：System Center Configuration Manager (最新分支)*
 
-在 System Center Configuration Manager 控制台中创建、修改和运行报表之前，必须执行许多配置任务。 使用本主题中的下列部分帮助在 Configuration Manager 层次结构中配置报表：  
+您必須先執行一些設定工作，才能在 System Center Configuration Manager 主控台建立、修改和執行報告。 使用本主題中的以下各節，協助您在 Configuration Manager 階層中設定報告：  
 
- 在层次结构中继续安装和配置 Reporting Services 之前，请查看以下 Configuration Manager 报表主题：  
+ 請先檢閱下列 Configuration Manager 報告主題，再繼續於階層中安裝及設定 Reporting Services：  
 
--   [System Center Configuration Manager 中的报表简介](../../../core/servers/manage/introduction-to-reporting.md)  
+-   [System Center Configuration Manager 的報告簡介](../../../core/servers/manage/introduction-to-reporting.md)  
 
--   [规划 System Center Configuration Manager 中的报表](../../../core/servers/manage/planning-for-reporting.md)  
+-   [System Center Configuration Manager 中的報告規劃](../../../core/servers/manage/planning-for-reporting.md)  
 
 ##  <a name="BKMK_SQLReportingServices"></a> SQL Server Reporting Services  
- SQL Server Reporting Services 是基于服务器的报表平台，它为各种数据源提供综合性报表功能。 Configuration Manager 中的 Reporting Services 点与 SQL Server Reporting Services 通信，以将 Configuration Manager 报表复制到指定的报表文件夹，配置 Reporting Services 设置以及配置 Reporting Services 安全设置。 Reporting Services 连接到 Configuration Manager 站点数据库，以检索运行报表时返回的数据。  
+ SQL Server Reporting Services 是一個以伺服器為基礎的報告平台，可針對各種資料來源提供完整的報告功能。 在 Configuration Manager 與 SQL Server Reporting Services 通訊的 Reporting Services 點中，將 Configuration Manager 報告複製到指定的報告資料夾、進行 Reporting Services 設定，以及進行 Reporting Services 安全性設定。 Reporting Services 會連線至 Configuration Manager 站台資料庫，以擷取當您執行報告時傳回的資料。  
 
- 在 Configuration Manager 站点中安装 Reporting Services 点之前，必须在托管 Reporting Services 点站点系统角色的站点系统上安装和配置 SQL Server Reporting Services。 有关安装 Reporting Services 的信息，请参阅 [SQL Server TechNet Library（SQL Server TechNet 库）](http://go.microsoft.com/fwlink/p/?LinkId=266389)。  
+ 您必須先在裝載 Reporting Service 點站台系統角色的站台系統上安裝及設定 SQL Server Reporting Services，才能在 Configuration Manager 站台中安裝 Reporting Services 點。 如需有關安裝 Reporting Services 的資訊，請參閱 [SQL Server TechNet 技術文件庫](http://go.microsoft.com/fwlink/p/?LinkId=266389)。  
 
- 使用以下过程验证 SQL Server Reporting Services 是否已安装并且正确运行。  
+ 使用下列程序，確認是否已安裝及正確執行 SQL Server Reporting Services。  
 
-#### <a name="to-verify-that-sql-server-reporting-services-is-installed-and-running"></a>验证 SQL Server Reporting Services 是否已安装并且正在运行  
+#### <a name="to-verify-that-sql-server-reporting-services-is-installed-and-running"></a>確認已安裝及執行 SQL Server Reporting Services  
 
-1.  在桌面上依次单击“开始”、“所有程序”、“Microsoft SQL Server 2008 R2”、“配置工具”和“Reporting Services Configuration Manager”。  
+1.  在桌面上，依序按一下 [開始] 、[所有程式] 、[Microsoft SQL Server 2008 R2] 、[組態工具] 和 [Reporting Services 組態管理員] 。  
 
-2.  在“Reporting Services 配置连接”对话框中，指定承载 SQL Server Reporting Services 的服务器的名称，在菜单上，选择在其上安装了 SQL Reporting Services 的 SQL Server 的实例，然后单击“连接”。 此时将打开 Reporting Services Configuration Manager。  
+2.  在 [Reporting Services 組態連接]  對話方塊中，指定裝載 SQL Server Reporting Services 的伺服器名稱，並在功能表上選取已安裝 SQL Reporting Services 的 SQL Server 執行個體，然後按一下 [連線] 。 此時會開啟 [Reporting Services 組態管理員]。  
 
-3.  在“报表服务器状态”页上，验证“报表服务状态”是否设置为“已启动”。 如果没有，请单击“启动”。  
+3.  在 [報表伺服器狀態]  頁面上，確認 [報告服務狀態]  設定為 [已啟動] 。 如果不是，請按一下 [啟動] 。  
 
-4.  在“Web 服务 URL”页上，单击“Report Service Web 服务 URL”中的 URL 以测试报表文件夹连接。 此时可能会打开“Windows 安全”对话框并提示你输入安全凭据。 默认情况下，将显示你的用户帐户。 输入你的密码，然后单击“确定”。 验证是否成功地打开了该网页。 关闭浏览器窗口。  
+4.  在 [Web 服務 URL]  頁面上，按一下 [報表服務 Web 服務 URL]  中的 URL，測試與報告資料夾的連線。 此時可能會開啟 [Windows 安全性]  對話方塊，提示您輸入安全性認證。 預設會顯示您的使用者帳戶。 輸入您的密碼，按一下 [確定] 。 確認已順利開啟該網頁。 關閉瀏覽器視窗。  
 
-5.  在“数据库”页上，使用“本机”验证是否已配置“报表服务器模式”设置。  
+5.  在 [資料庫]  頁面上，確認已使用 [原生]  設定 [報表伺服器模式] 設定。  
 
-6.  在“报表管理器 URL”页上，单击“报表管理器站点标识”中的 URL 以测试报表管理器虚拟目录连接。 此时可能会打开“Windows 安全”对话框并提示你输入安全凭据。 默认情况下，将显示你的用户帐户。 输入你的密码，然后单击“确定”。 验证是否成功地打开了该网页。 关闭浏览器窗口。  
+6.  在 [報表管理員 URL]  頁面上，按一下 [報表管理員網站識別]  中的 URL，測試與報表管理員虛擬目錄的連線。 此時可能會開啟 [Windows 安全性]  對話方塊，提示您輸入安全性認證。 預設會顯示您的使用者帳戶。 輸入您的密碼，按一下 [確定] 。 確認已順利開啟該網頁。 關閉瀏覽器視窗。  
 
     > [!NOTE]  
-    >  Configuration Manager 中的报表不需要 Reporting Services 报表管理器，但是如果想要在 Internet 浏览器上运行报表或使用报表管理器管理报表，则需要它。  
+    >  Configuration Manager 中的報告不需要使用 Reporting Services 報表管理員，但如果您要在網際網路瀏覽器上執行報告，或使用報表管理員管理報告，則需要使用它。  
 
-7.  单击“退出”以关闭 Reporting Services 配置管理器。  
+7.  按一下 [結束] 關閉 Reporting Services Configuration Manager。  
 
-##  <a name="BKMK_ReportBuilder3"></a>将报表配置为使用报表生成器 3.0  
+##  <a name="BKMK_ReportBuilder3"></a> 設定報表以使用 Report Builder 3.0  
 
-#### <a name="to-change-the-report-builder-manifest-name-to-report-builder-30"></a>将报表生成器清单名称更改为 Report Builder 3.0 的报表生成器清单名称  
+#### <a name="to-change-the-report-builder-manifest-name-to-report-builder-30"></a>將報告產生器資訊清單名稱變更為 Report Builder 3.0  
 
-1.  在运行 Configuration Manager 控制台的计算机上打开 Windows 注册表编辑器。  
+1.  在執行 Configuration Manager 主控台的電腦上，開啟 Windows 登錄編輯程式。  
 
-2.  浏览到“HKEY_LOCAL_MACHINE/SOFTWARE/Wow6432Node/Microsoft/ConfigMgr10/AdminUI/Reporting”。  
+2.  瀏覽至 **HKEY_LOCAL_MACHINE/SOFTWARE/Wow6432Node/Microsoft/ConfigMgr10/AdminUI/Reporting**。  
 
-3.  双击“ReportBuilderApplicationManifestName”项以编辑值数据。  
+3.  按兩下 **ReportBuilderApplicationManifestName** 機碼以編輯值資料。  
 
-4.  将“ReportBuilder_2_0_0_0.application”更改为“ReportBuilder_3_0_0_0.application”，然后单击“确定”。  
+4.  將 [ReportBuilder_2_0_0_0.application]  變更為 [ReportBuilder_3_0_0_0.application] ，然後按一下 [確定] 。  
 
-5.  关闭 Windows 注册表编辑器。  
+5.  關閉 Windows 登錄編輯程式。  
 
-##  <a name="BKMK_InstallReportingServicesPoint"></a>安装 Reporting Services 点  
- 必须在站点上安装 Reporting Services 点以管理该站点上的报表。 Reporting Services 点将报表文件夹和报表复制到 SQL Server Reporting Services，对报表和文件夹应用安全策略，并在 Reporting Services 中设置配置设置。 在 Configuration Manager 控制台中显示报表之前，以及在 Configuration Manager 中管理报表之前，必须配置 Reporting Services 点。 Reporting Services 点是必须在安装并运行 Microsoft SQL Server Reporting Services 的服务器上配置的站点系统角色。 有关先决条件的详细信息，请参阅[报表的先决条件](prerequisites-for-reporting.md)。  
+##  <a name="BKMK_InstallReportingServicesPoint"></a> 安裝 Reporting Services 點  
+ 必須在站台上安裝 Reporting Services 點，才能在站台管理報告。 Reporting Services 點會將報告資料夾和報告複製到 SQL Server Reporting Services、為報告和資料夾套用安全性原則，以及在 Reporting Services 中設定組態設定。 您必須先設定 Reporting Services 點，才能讓報告顯示在 Configuration Manager 主控台中，以及在 Configuration Manager 中管理報告。 Reporting Services 點是必須伺服器上以安裝並執行之 Microsoft SQL Server Reporting Services 進行設定的站台系統角色。 如需必要條件的詳細資訊，請參閱 [Configuration Manager 中的報表必要條件](prerequisites-for-reporting.md)。  
 
 > [!IMPORTANT]  
->  选择站点以安装 Reporting Services 点时，请记住将访问报表的用户所在的安全作用域必须与安装 Reporting Services 点所在的站点的安全作用域相同。  
+>  選取站台以安裝 Reporting Services 點時，請注意，存取報告的使用者所在的安全性範圍，必須與安裝 Reporting Services 點的站台相同。  
 
 > [!NOTE]  
->  在站点系统上安装 Reporting Services 点之后，请不要更改报表服务器的 URL。 例如，创建 Reporting Services 点，然后在 Reporting Services Configuration Manager 中修改报表服务器的 URL，则 Configuration Manager 控制台将继续使用旧的 URL，并且你无法从控制台中运行、编辑或创建报表。 如果必须更改报表服务器的 URL，请删除 Reporting Services 点，更改 URL，然后重新安装 Reporting Services 点。  
+>  在您於站台伺服器上安裝 Reporting Services 點之後，請勿變更報告伺服器的 URL。 例如，若您建立了 Reporting Services 點，然後在 Reporting Services 組態管理員中修改報表伺服器的 URL，則 Configuration Manager 主控台將會繼續使用舊的 URL，而您將無法從主控台執行、編輯或建立報告。 當您必須變更 URL 報告伺服器時，請先移除 Reporting Services 點、變更 URL，然後重新安裝 Reporting Services 點。  
 
 > [!IMPORTANT]    
-> 安装 Reporting Services 点时，必须指定 Reporting Services 点帐户。 之后，来自不同域的用户在尝试运行报表时，报表将无法运行，除非域间建立起双向信任。
+> 當您安裝 Reporting Services 點時，必須指定 Reporting Services 點帳戶。 之後，當不同網域的使用者嘗試執行報告時，除非在網域之間建立雙向信任，否則報告將會無法執行。
 
- 使用以下过程来安装 Reporting Services 点。  
+ 利用下列程序安裝 Reporting Services 點。  
 
-#### <a name="to-install-the-reporting-services-point-on-a-site-system"></a>在站点系统上安装 Reporting Services 点  
+#### <a name="to-install-the-reporting-services-point-on-a-site-system"></a>在站台系統上安裝 Reporting Services 點  
 
-1.  在 Configuration Manager 控制台中，单击“管理”。  
+1.  在 Configuration Manager 主控台中，按一下 [系統管理] 。  
 
-2.  在“管理”工作区中，展开“站点配置”，然后单击“服务器和站点系统角色”。  
+2.  在 [系統管理]  工作區中，展開 [網站設定] ，然後按一下 [伺服器和網站系統角色] 。  
 
     > [!TIP]  
-    >  要仅列出承载 Reporting Services 点站点角色的站点系统，请右键单击“服务器和站点系统角色”以选择“Reporting Services 点”。  
+    >  若只要列出裝載 Reporting Services 點站台角色的站台系統，請以滑鼠右鍵按一下 [伺服器和站台系統角色]  選取 [Reporting Services 點] 。  
 
-3.  使用关联的步骤将 Reporting Services 点站点系统角色添加到新的或现有的站点系统服务器：  
-
-    > [!NOTE]  
-    >  有关配置站点系统的详细信息，请参阅[为 Center Configuration Manager 添加站点系统角色](../deploy/configure/add-site-system-roles.md)。  
-
-    -   **新建站点系统**：在“主页”选项卡的“创建”组中，单击“创建站点系统服务器”。 “创建站点系统服务器向导”将会打开。  
-
-    -   “现有站点系统”：单击要在其上安装 Reporting Services 点站点系统角色的服务器。 单击服务器时，会在结果窗格中显示服务器上已经安装的站点系统角色的列表。  
-
-         在“主页”选项卡上的“服务器”组中，单击“添加站点系统角色”。 “添加站点系统角色向导”将会打开。  
-
-4.  在“常规”页上，指定站点系统服务器的一般设置。 向现有站点系统服务器添加 Reporting Services 点时，请验证以前配置的值。  
-
-5.  在“系统角色选择”页上的可用角色列表中选择“Reporting Services 点”，然后单击“下一步”。  
-
-6.  在“Reporting Services 点”页上配置下列设置：  
-
-    -   **站点数据库服务器名称**：指定托管 Configuration Manager 站点数据库的服务器名称。 通常，向导会自动检索服务器的完全限定的域名 (FQDN)。 要指定数据库实例，请使用格式 &lt;*服务器名称*>\&lt;*实例名称*>。  
-
-    -   **数据库名称**：指定 Configuration Manager 站点数据库的名称，然后单击“验证”以确认向导具有访问站点数据库的权限。  
-
-        > [!IMPORTANT]  
-        >  将要创建 Reporting Services 点的用户帐户必须对站点数据库具有“读取”访问权限。 如果连接测试失败，则会出现一个红色警告图标。 将光标移到此图标之上以阅读失败的详细信息。 更正该失败，然后再次单击“测试”。  
-
-    -   **文件夹名称**：指定所创建且用于托管 Reporting Services 中的 Configuration Manager 报表的文件夹名称。  
-
-    -   “Reporting Services 服务器实例”：在 Reporting Services 的 SQL Server 实例列表中进行选择。 只发现一个实例时，默认情况下会列出并选择该实例。 如果未发现实例，请验证是否安装和配置了 SQL Server Reporting Services，并且是否在站点系统上启动了 SQL Server Reporting Services 服务。  
-
-        > [!IMPORTANT]  
-        >  Configuration Manager 在当前用户上下文中连接至所选站点系统上的 Windows Management Instrumentation (WMI)，以检索 Reporting Services 的 SQL Server 实例。 当前用户必须对站点系统上的 WMI 具有“读取”访问权限，否则将无法检索 Reporting Services 实例。  
-
-    -   **Reporting Services 点帐户**：单击“设置”，然后选择在 Reporting Services 点上的 SQL Server Reporting Services 连接到 Configuration Manager 站点数据库时要使用的帐户，以检索报表中显示的数据。 选择“现有帐户”以指定以前配置为 Configuration Manager 帐户的 Windows 用户帐户，或者选择“新帐户”以指定当前未配置为 Configuration Manager 帐户的 Windows 用户帐户。 Configuration Manager 会自动授予指定用户访问站点数据库的权限。 “管理”工作区内“安全”节点的“帐户”子文件夹中会显示该帐户，以及“ConfigMgr Reporting Services 点”帐户名称。  
-
-         运行 Reporting Services 的帐户必须属于域本地安全组“Windows Authorization Access Group”，并且必须为其将“读取 tokenGroupsGlobalAndUniversal”权限设置为“允许”。 必须为来自与 Reporting Services 点帐户不同域的用户建立双向信任，以便成功运行报表。
-
-         指定 Windows 用户帐户和密码经过加密并存储在 Reporting Services 数据库中。 Reporting Services 通过使用此帐户和密码从站点数据库中检索报表的数据。  
-
-        > [!IMPORTANT]  
-        >  指定的帐户在承载 Reporting Services 数据库的计算机上必须具有“本地登录”权限。  
-
-7.  在“Reporting Services 点”页上，单击“下一步”。  
-
-8.  在“摘要”页上，验证设置，然后单击“下一步”以安装 Reporting Services 点。  
-
-     向导完成后，会创建报表文件夹，并将 Configuration Manager 报表复制到指定的报表文件夹中。  
+3.  使用相關的步驟，將 Reporting Services 點站台系統角色新增至新的或現有的站台系統伺服器：  
 
     > [!NOTE]  
-    >  创建报表文件夹并将报表复制到报表服务器时，Configuration Manager 会确定适合对象的语言。 如果在站点上安装了关联的语言包，则 Configuration Manager 会采用站点报表服务器上运行的操作系统的语言创建对象。 如果该语言不可用，则会用英文创建和显示报表。 在无语言包的站点上安装 Reporting Services 点时，会安装英文报表。 如果在安装 Reporting Services 点之后安装语言包，则必须先卸载然后重新安装 Reporting Services 点，以获得采用合适语言包语言的报表。 有关语言包的详细信息，请参阅 [System Center Configuration Manager 中的语言包](../deploy/install/language-packs.md)。  
+    >  如需設定站台系統的詳細資訊，請參閱 [Add site system roles for System Center Configuration Manager](../deploy/configure/add-site-system-roles.md) (為 System Center Configuration Manager 新增站台系統角色)。  
 
-###  <a name="BKMK_FileInstallationAndSecurity"></a>文件安装和报表文件夹安全权限  
- Configuration Manager 执行以下操作来安装 Reporting Services 点以及配置 Reporting Services：  
+    -   **新增站台系統伺服器**：在 [首頁]  索引標籤的 [建立]  群組中，按一下 [建立站台系統伺服器] 。 隨即開啟 [建立站台系統伺服器精靈]  。  
+
+    -   **現有站台系統**：在要安裝 Reporting Services 點站台系統角色的伺服器上按一下。 按一下伺服器時，就會在結果窗格中顯示已經安裝在該伺服器上的網站系統角色清單。  
+
+         在 [首頁]  索引標籤的 [伺服器]  群組中，按一下 [新增網站系統角色] 。 隨即開啟 [新增站台系統角色精靈]  。  
+
+4.  在 [一般]  頁面上，指定網站系統伺服器的一般設定。 將 Reporting Services 點新增到現有的站台系統伺服器時，請確認您之前設定的值。  
+
+5.  在 [系統角色選取]  頁面上，在可用角色的清單中選取 [Reporting Services 點]  ，然後按 [下一步] 。  
+
+6.  在 [Reporting Services 點]  頁面上，設定下列設定：  
+
+    -   **站台資料庫伺服器名稱**：指定裝載 Configuration Manager 站台資料庫的伺服器名稱。 通常，精靈會自動擷取伺服器的完整網域名稱 (FQDN)。 若要指定資料庫執行個體，請使用 &lt;伺服器名稱>\&lt;執行個體名稱> 的格式。  
+
+    -   **資料庫名稱**：指定 Configuration Manager 站台資料庫名稱，然後按一下 [驗證]，確認精靈可存取站台資料庫。  
+
+        > [!IMPORTANT]  
+        >  建立 Reporting Services 點的使用者帳戶，必須擁有站台資料庫的 **讀取** 權限。 如果連線測試失敗，則會顯示紅色警告圖示。 將游標移至此圖示上方，即可讀取失敗的詳細資料。 更正錯誤，然後再按一下 [測試]  。  
+
+    -   **資料夾名稱**：指定在 Reporting Services 中所建立以及用於裝載 Configuration Manager 報告的資料夾名稱。  
+
+    -   **Reporting Services 伺服器執行個體**：在清單中選取 Reporting Services 的 SQL Server 執行個體。 根據預設，如果只有找到一個執行個體，則會列出並選取該執行個體。 如果找不到執行個體，請確認已安裝且設定 SQL Server Reporting Services，而且已在站台系統啟動 SQL Server Reporting Services 服務。  
+
+        > [!IMPORTANT]  
+        >  Configuration Manager 會在目前使用者的內容中，建立與所選站台系統之 Windows Management Instrumentation (WMI) 的連線，以擷取 Reporting Services 的 SQL Server 執行個體。 目前的使用者必須擁有站台系統上 WMI 的 **讀取** 權限，否則會無法擷取 Reporting Services 執行個體。  
+
+    -   **Reporting Services 點帳戶**：按一下 [設定]，然後選取 Reporting Services 點上的 SQL Server Reporting Services 連線到 Configuration Manager 站台資料庫時，用以擷取顯示在報告中資料的帳戶。 選取 [現有的帳戶] 以指定之前設定為 Configuration Manager 帳戶的 Windows 使用者帳戶，或選取 [新增帳戶] 以指定目前未設定為 Configuration Manager 帳戶的 Windows 使用者帳戶。 Configuration Manager 會自動授與指定之使用者存取站台資料庫的權限。 顯示在 [系統管理]  工作區中 [安全性]  節點之 [帳戶]  子資料夾中的使用者，具有 [ConfigMgr Reporting Services 點]  帳戶名稱。  
+
+         執行 Reporting Services 的帳戶必須隸屬於網域本機安全性群組 [Windows Authorization Access Group] ，且將 [Read tokenGroupsGlobalAndUniversal]  權限設定為 [允許] 。 除了 Reporting Servicies 點帳戶之外，還必須為來自不同網域的使用者建立雙向信任，才能成功執行報告。
+
+         指定的 Windows 使用者帳戶和密碼會經過加密，並儲存於 Reporting Services 資料庫中。 Reporting Services 會使用此帳戶和密碼，擷取來自站台資料庫的報告資料。  
+
+        > [!IMPORTANT]  
+        >  您所指定的帳戶在裝載 Reporting Services 資料庫的電腦上，必須擁有 **本機登入** 權限。  
+
+7.  在 [Reporting Services 點]  頁面上，按 [下一步] 。  
+
+8.  在 [摘要]  頁面上確認設定，然後按 [下一步]  安裝 Reporting Services 點。  
+
+     精靈完成後會建立報告資夾，並將 Configuration Manager 報告複製到指定的報告資料夾。  
+
+    > [!NOTE]  
+    >  當建立報告資料夾，並將報告複製到報表伺服器時，Configuration Manager 會判斷物件的適用語言。 如果站台上已安裝關聯的語言套件，Configuration Manager 會以和站台上報表伺服器所執行作業系統相同的語言來建立物件。 如果沒有可用的語言，則會以英文建立和顯示報告。 當您在不含語言套件的站台上安裝 Reporting Services 點時，會安裝英文版的報告。 如果在安裝 Reporting Services 點後安裝語言套件，您必須先解除安裝再重新安裝 Reporting Serivces 點，才能使用具適當語言套件的報告。 如需語言套件的詳細資訊，請參閱 [Language Packs in System Center Configuration Manager](../deploy/install/language-packs.md) (System Center Configuration Manager 的語言套件)。  
+
+###  <a name="BKMK_FileInstallationAndSecurity"></a> 檔案安裝與報表資料夾安全性權限  
+ Configuration Manager 會執行下列動作，安裝 Reporting Services 點和設定 Reporting Services：  
 
 > [!IMPORTANT]  
->  系统使用为 SMS_Executive 服务配置的帐户（通常是站点服务器本地系统帐户）的凭据来执行以下列表中的操作。  
+>  以下所列出的動作，可利用已針對 SMS_Executive 服務設定之帳戶的認證來執行，其通常是站台伺服器本機系統帳戶。  
 
--   安装 Reporting Services 点站点角色。  
+-   安裝 Reporting Services 點站台角色。  
 
--   使用在向导中指定的存储凭据在 Reporting Services 中创建数据源。 这是当你运行报表时 Reporting Services 用于连接到站点数据库的 Windows 用户帐户和密码。  
+-   在 Reporting Services 中，使用您在精靈中指定的儲存認證來建立資料來源。 這是 Reporting Services 在您執行報告時用於連線到站台資料庫的 Windows 使用者帳戶和密碼。  
 
--   在 Reporting Services 中创建 Configuration Manager 根文件夹。  
+-   在 Reporting Services 中建立 Configuration Manager 根資料夾。  
 
--   在 Reporting Services 中添加“ConfigMgr 报表用户”和“ConfigMgr 报表管理员”安全角色。  
+-   在 Reporting Services 中新增 [ConfigMgr 報告使用者]  和 [ConfigMgr 報告系統管理員]  安全性角色。  
 
--   创建子文件夹，并将 %ProgramFiles%\SMS_SRSRP 中的Configuration Manager 报表部署到 Reporting Services。  
+-   建立子資料夾並將 Configuration Manager 報告從 %ProgramFiles%\SMS_SRSRP 部署至 Reporting Services。  
 
--   将 Reporting Services 中的 **ConfigMgr 报表用户**角色添加到 Configuration Manager中具有“站点读取”权限的所有用户帐户的根文件夹。  
+-   在 Reporting Services 中，針對 Configuration Manager 中所有具有**站台讀取**權限的使用者帳戶新增 **Configuration Manager 報告使用者**角色至根資料夾。  
 
--   将 Reporting Services 中的 **ConfigMgr 报表管理员**角色添加到 Configuration Manager中具有“站点修改”权限的所有用户帐户的根文件夹。  
+-   在 Reporting Services 中，針對 Configuration Manager 中所有具有**站台修改**權限的使用者帳戶新增 **Configuration Manager 報告管理**角色至根資料夾。  
 
--   检索报表文件夹与 Configuration Manager 受保护对象类型（在 Configuration Manager 站点数据库中进行维护）之间的映射。  
+-   擷取報告資料夾與 Configuration Manager 安全物件類型 (保存於 Configuration Manager 站台資料庫中) 之間的對應。  
 
--   针对 Reporting Services 中的特定报表文件夹，为 Configuration Manager 中的管理用户配置以下权限：  
+-   為 Configuration Manager 中的系統管理使用者設定 Reporting Services 中特定報告資料夾的下列權限：  
 
-    -   添加用户，针对具有 Configuration Manager 对象的“运行报表”权限的管理用户，将 **ConfigMgr 报表用户**角色分配到其关联报表文件夹。  
+    -   針對具有 Configuration Manager 物件之**執行報告**權限的系統管理使用者新增使用者，並將 **Configuration Manager 報告使用者**角色指派至相關聯的報告資料夾。  
 
-    -   添加用户，针对具有 Configuration Manager 对象的“修改报表”权限的管理用户，将 **ConfigMgr 报表管理员**角色分配到其关联报表文件夹。  
+    -   針對具有 Configuration Manager 物件之**修改報告**權限的系統管理使用者新增使用者，並將 **Configuration Manager 報告管理**角色指派至相關聯的報告資料夾。  
 
-     Configuration Manager 将连接到 Reporting Services，并对 Configuration Manager 和 Reporting Services 根文件夹和特定报表文件夹设置用户权限。 在 Reporting Services 点的初始安装后，Configuration Manager 将每隔 10 分钟连接到 Reporting Services 一次，以验证对报表文件夹配置的用户权限是否为 Configuration Manager 用户设置的关联权限。 在使用 Reporting Services 报表管理器添加用户或修改报表文件夹的用户权限时，Configuration Manager 将使用站点数据库中存储的基于角色的分配覆盖这些更改。 Configuration Manager 还会删除在 Configuration Manager 中不具有报表权限的用户。  
+     Configuration Manager 會連接至 Reporting Services，並設定使用者對 Configuration Manager 及 Reporting Services 根資料夾與特定報告資料夾的權限。 Reporting Services 點初始安裝完成後，Configuration Manager 會以 10 分鐘間隔連接至 Reporting Services，確認報告資料夾上設定的使用者權限與針對 Configuration Manager 使用者設定的權限相關聯。 使用 Reporting Services 報表管理員在報告資料夾上新增使用者或修改使用者權限時，Configuration Manager 會使用儲存在站台資料庫中以角色為基礎的指派來覆寫這些變更。 Configuration Manager 也會移除沒有 Configuration Manager 報告權限的使用者。  
 
-##  <a name="BKMK_SecurityRoles"></a>Configuration Manager 的 Reporting Services 安全角色  
- Configuration Manager 安装 Reporting Services 点时，会在 Reporting Services 中添加以下安全角色：  
+##  <a name="BKMK_SecurityRoles"></a> Configuration Manager 的 Reporting Services 安全性角色  
+ 當 Configuration Manager 安裝 Reporting Services 點時，會在 Reporting Services 中新增下列安全性角色：  
 
--   “ConfigMgr 报表用户”：分配有此安全角色的用户只能运行 Configuration Manage 报表。  
+-   **Configuration Manager 報告使用者**：獲派此安全性角色的使用者，只可執行 Configuration Manager 報表。  
 
--   “ConfigMgr 报表管理员”：分配有此安全角色的用户可执行与 Configuration Manage 中的报表相关的所有任务。  
+-   **Configuration Manager 報告管理員**：獲派此安全性角色的使用者，可執行與 Configuration Manager 報告相關的所有工作。  
 
-##  <a name="BKMK_VerifyReportingServicesPointInstallation"></a>验证 Reporting Services 点安装  
- 添加 Reporting Services 点站点角色后，你可以通过查看特定状态消息和日志文件条目来验证安装。 使用以下过程来验证 Reporting Services 点安装是否成功。  
+##  <a name="BKMK_VerifyReportingServicesPointInstallation"></a> 確認 Reporting Services 點安裝  
+ 新增 Reporting Services 點站台角色後，您可以查看特定狀態訊息及記錄檔項目確認安裝。 利用下列程序確認 Reporting Services 點安裝成功。  
 
 > [!WARNING]  
->  如果报表显示在 Configuration Manage 控制台的“监视”工作区中“报表”节点的“报表”子文件夹中，则可以跳过此过程。  
+>  如果報告顯示在 Configuration Manager 主控台的 [監視] 工作區之 [報告] 節點的 [報告] 子資料夾中，則可略過這個程序。  
 
-#### <a name="to-verify-the-reporting-services-point-installation"></a>验证 Reporting Services 点安装  
+#### <a name="to-verify-the-reporting-services-point-installation"></a>若要確認 Reporting Services 點安裝  
 
-1.  在 Configuration Manager 控制台中，单击“监视”。  
+1.  在 Configuration Manager 主控台中，按一下 [監視] 。  
 
-2.  在“监视”工作区中，展开“系统状态”，然后单击“组件状态”。  
+2.  在 [監視]  工作區中，展開 [系統狀態] ，然後按一下 [元件狀態] 。  
 
-3.  在组件列表中单击“SMS_SRS_REPORTING_POINT”。  
+3.  按一下元件清單中的 [SMS_SRS_REPORTING_POINT]  。  
 
-4.  在“主页”选项卡上的“组件”组中，单击“显示消息”，然后单击“全部”。  
+4.  在 [首頁]  索引標籤的 [元件]  群組中，按一下 [顯示訊息] ，然後按一下 [全部] 。  
 
-5.  为安装 Reporting Services 点之前的期间指定日期和时间，然后单击“确定”。  
+5.  指定安裝 Reporting Services 點之前某一期間的日期及時間，然後按一下 [確定] 。  
 
-6.  验证是否列出了状态消息 ID 1015，指明 Reporting Services 点已成功安装。 或者，可以打开位于 &lt;*ConfigMgr 安装路径*>\Logs 中的 Srsrp.log 文件，并查看“安装已成功”。  
+6.  確認狀態訊息識別碼 1015 列出，表示 Reporting Services 點成功安裝。 或者，您可以開啟位於 &lt;Configuration Manager 安裝路徑>\Logs 中的 Srsrp.log 檔案，並尋找 [安裝成功]。  
 
-     在 Windows 资源管理器中，导航到 &lt;*ConfigMgr 安装路径*>\Logs。  
+     在 Windows 檔案總管中，瀏覽至 &lt;Configuration Manager 安裝路徑>\Logs。  
 
-7.  打开 Srsrp.log，并从 Reporting Services 点成功安装的时间开始逐句浏览该日志文件。 验证是否创建了报表文件夹、部署了报表并且确认了针对每个文件夹的安全策略。 在安全策略确认的最后一行之后查找“Successfully checked that the SRS web service is healthy on server”（已成功检查 SRS Web 服务在服务器上是否正常）。  
+7.  開啟 Srsrp.log，並從 Reporting Services 點成功安裝的時間開始逐步查看記錄檔。 確認報告資料夾已建立，報告已部署，且每個資料夾上的安全性原則已確認。 尋找安全原則確認最後一行後面的 「Successfully checked that the SRS web service is healthy on server」  (成功確認伺服器上的 SRS Web 服務狀況良好)。  
 
-##  <a name="BKMK_Certificate"></a>为 Configuration Manager 控制台计算机配置自签名证书  
- 你可以使用许多选项来创作 SQL Server Reporting Services 报表。 在 Configuration Manager 控制台中创建或编辑报表时，Configuration Manage 将打开报表生成器以用作创作环境。 无论如何创作 Configuration Manager 报表，均需一个自签名证书以便向站点数据库服务器进行服务器验证。 Configuration Manager 会将证书自动安装在站点服务器和安装了 SMS 提供程序的计算机上。 因此，当 Configuration Manager 控制台从其中一台计算机中运行时，可以直接通过该控制台创建或编辑报表。 但是，从安装在另一台计算机上的 Configuration Manager 控制台创建或修改报表时，必须从站点服务器导出证书并将其添加到运行 Configuration Manager 控制台的计算机上的**受信任人**证书存储。  
+##  <a name="BKMK_Certificate"></a> 設定 Configuration Manager 主控台電腦的自我簽署憑證  
+ 您有許多選項可用來撰寫 SQL Server Reporting Services 報告。 當您在 Configuration Manager 主控台中建立或編輯報告時，Configuration Manager 會開啟報表產生器作為撰寫環境使用。 無論您撰寫 Configuration Manager 報告的方式為何，都需要自我簽署憑證才能對站台資料庫伺服器進行伺服器驗證。 Configuration Manager 會在站台伺服器以及已安裝 SMS 提供者的電腦上自動安裝憑證。 因此，從其中一部電腦執行 Configuration Manager 主控台時，您就可以建立或編輯報告。 不過，當您從安裝在不同電腦的 Configuration Manager 主控台建立或修改報告時，必須從站台伺服器匯出憑證，再將它新增至執行 Configuration Manager 主控台電腦的**受信任的人**憑證存放區。  
 
 > [!NOTE]  
->  有关 SQL Server Reporting Services 的其他报表创作环境的详细信息，请参阅 SQL Server 2008 联机丛书中的 [比较报表创作环境](http://go.microsoft.com/fwlink/p/?LinkId=242805) 。  
+>  如需有關其他 SQL Server Reporting Services 報告撰寫環境的詳細資訊，請參閱《SQL Server 2008 線上叢書》中的 [比較報表撰寫環境](http://go.microsoft.com/fwlink/p/?LinkId=242805) 。  
 
- 使用以下过程作为示例，了解如何将自签名证书的副本从站点服务器传输到运行 Configuration Manager 控制台的另一台计算机（如果两台计算机都运行 Windows Server 2008 R2）。 如果由于操作系统版本不同而无法按此过程进行操作，请参阅操作系统文档来了解等效的过程。  
+ 利用下列程序作為範例，了解當兩部電腦都執行 Windows Server 2008 R2 時，如何將自我簽署憑證複本從站台伺服器傳送至另一部執行 Configuration Manager 主控台的電腦。 如果您使用不同的作業系統版本而無法依照此程序執行，請參閱作業系統文件中相同的程序。  
 
-#### <a name="to-transfer-a-copy-of-self-signed-certificate-from-the-site-server-to-another-computer"></a>将自签名证书的副本从站点服务器传输到另一台计算机  
+#### <a name="to-transfer-a-copy-of-self-signed-certificate-from-the-site-server-to-another-computer"></a>若要從站台伺服器將自我簽署憑證的副本傳送至另一部電腦  
 
-1.  在站点服务器上执行以下步骤以导出自签名证书：  
+1.  在站台伺服器上執行下列步驟將自我簽署憑證匯出：  
 
-    1.  单击“启动”，再单击“运行”，然后键入 **mmc.exe**。 在空白控制台中，单击“文件”，然后单击“添加/删除管理单元”。  
+    1.  依序按一下 [開始] 與 [執行] ，然後輸入 **mmc.exe**。 在空白主控台中，按一下 [檔案] ，然後按一下 [新增/移除嵌入式管理單元] 。  
 
-    2.  在“添加/删除管理单元”对话框中，从“可用的管理单元”列表中选择“证书”，然后单击“添加”。  
+    2.  在 [新增或移除嵌入式管理單元]  對話方塊中，從 [可用的嵌入式管理單元]  清單中選取 [憑證] ，然後按一下 [新增] 。  
 
-    3.  在“证书管理单元”对话框中，选择“计算机帐户”，然后单击“下一步”。  
+    3.  在 [憑證嵌入式管理單元]  對話方塊中，選取 [電腦帳戶] ，然後按 [下一步] 。  
 
-    4.  在“选择计算机”对话框中，确保选中“本地计算机: (运行此控制台的计算机)”，然后单击“完成”。  
+    4.  在 [選取電腦]  對話方塊中，確定選取 [本機電腦: (執行這個主控台的電腦)]  ，然後按一下 [完成] 。  
 
-    5.  在“添加/删除管理单元”对话框中，单击“确定”。  
+    5.  在 [新增或移除嵌入式管理單元]  對話方塊中，按一下 [確定] 。  
 
-    6.  在控制台中展开“证书(本地计算机)”，展开“受信任人”，并选择“证书”。  
+    6.  在主控台中，依序展開 [憑證 (本機電腦)] 和 [受信任的人] ，然後選取 [憑證] 。  
 
-    7.  右键单击友好名称为&lt;*站点服务器的 FQDN*> 的证书，单击“所有任务”，然后选择“导出”。  
+    7.  以滑鼠右鍵按一下易記名稱為 &lt;站台伺服器的 FQDN> 的憑證，按一下 [所有工作]，然後選取 [匯出]。  
 
-    8.  通过使用默认选项完成“证书导出向导”，并使用“.cer”文件扩展名保存证书。  
+    8.  使用預設選項完成 [憑證匯出精靈]  ，然後以 [.cer]  副檔名儲存憑證。  
 
-2.  在运行 Configuration Manager 控制台的计算机上执行以下步骤，将自签名证书添加到“受信任人”证书存储：  
+2.  在執行 Configuration Manager 主控台的電腦上執行下列步驟，將自我簽署憑證新增至 [受信任的人] 憑證存放區：  
 
-    1.  重复前面 1.a 到 1.e 的步骤 在管理点计算机上的 MMC 中配置**证书**管理单元。  
+    1.  重複上述步驟 1.a 到 1.e， 在管理點電腦上設定**憑證**嵌入式MMC。  
 
-    2.  在控制台中，展开“证书(本地计算机)”，展开“受信任人”，右键单击“证书”，选择“所有任务”，然后选择“导入”以启动“证书导入向导”。  
+    2.  在主控台中，依序展開 [憑證 (本機電腦)] 和 [受信任的人] ，以滑鼠右鍵按一下 [憑證] ，選取 [所有工作] ，然後選取 [匯入]  ，啟動 [憑證匯入精靈] 。  
 
-    3.  在“要导入的文件”页上，选择在步骤 1.h 中保存的证书，然后单击“下一步”。  
+    3.  在 [匯入檔案]  頁面上，選取步驟 1.h 中儲存的憑證，然後按 [下一步] 。  
 
-    4.  在“证书存储”页上，选择“将所有的证书放入下列存储”（“证书存储”设置为“受信任人”），然后单击“下一步”。  
+    4.  在 [憑證存放區]  頁面上，選取 [將所有憑證放入以下的存放區] ，並將 [憑證存放區]  設為 [受信任的人] ，然後按 [下一步] 。  
 
-    5.  单击“完成”关闭向导并在计算机上完成证书配置。  
+    5.  按一下 [完成]  關閉精靈，並完成電腦上的憑證設定。  
 
-##  <a name="BKMK_ModifyReportingServicesPoint"></a>修改 Reporting Services 点设置  
- 安装了 Reporting Services 点之后，你可以在 Reporting Services 点属性中修改站点数据库连接和身份验证设置。 使用以下过程来修改 Reporting Services 点设置。  
+##  <a name="BKMK_ModifyReportingServicesPoint"></a> 修改 Reporting Services 點設定  
+ 安裝 Reporting Services 點之後，您可以在 Reporting Services 點內容中修改站台資料庫連接及驗證設定。 利用下列程序修改 Reporting Services 點設定。  
 
-#### <a name="to-modify-reporting-services-point-settings"></a>修改 Reporting Services 点设置  
+#### <a name="to-modify-reporting-services-point-settings"></a>若要修改 Reporting Services 點設定  
 
-1.  在 Configuration Manager 控制台中，单击“管理”。  
+1.  在 Configuration Manager 主控台中，按一下 [系統管理] 。  
 
-2.  在“管理”工作区中，展开“站点配置”，然后单击“服务器和站点系统角色”以列出站点系统。  
+2.  在 [系統管理]  工作區中，展開 [站台設定] ，然後按一下 [伺服器和站台系統角色]  列出站台系統。  
 
     > [!TIP]  
-    >  要仅列出承载 Reporting Services 点站点角色的站点系统，请右键单击“服务器和站点系统角色”以选择“Reporting Services 点”。  
+    >  若只要列出裝載 Reporting Services 點站台角色的站台系統，請以滑鼠右鍵按一下 [伺服器和站台系統角色]  選取 [Reporting Services 點] 。  
 
-3.  选择承载你要修改其设置的 Reporting Services 点的站点系统，然后在“站点系统角色”中选择“Reporting Services 点”。  
+3.  選取裝載您要修改設定之 Reporting Services 點的站台系統，然後在 [站台系統角色]  中選取 [Reporting Service 點] 。  
 
-4.  在“站点角色”选项卡上的“属性”组中，单击“属性”。  
+4.  在 [網站角色]  索引標籤的 [內容]  群組中，按一下 [內容] 。  
 
-5.  在“Reporting Services 点属性”对话框上，你可以修改以下设置：  
+5.  在 [Reporting Services 點內容]  對話方塊中，您可以修改下列設定：  
 
-    -   **站点数据库服务器名称**：指定托管 Configuration Manager 站点数据库的服务器名称。 通常，向导会自动检索服务器的完全限定的域名 (FQDN)。 要指定数据库实例，请使用格式 &lt;*服务器名称*>\&lt;*实例名称*>。  
+    -   **站台資料庫伺服器名稱**：指定裝載 Configuration Manager 站台資料庫的伺服器名稱。 通常，精靈會自動擷取伺服器的完整網域名稱 (FQDN)。 若要指定資料庫執行個體，請使用 &lt;伺服器名稱>\&lt;執行個體名稱> 的格式。  
 
-    -   **数据库名称**：指定 System Center 2012 Configuration Manager 站点数据库的名称，然后单击“验证”以确认向导具有访问站点数据库的权限。  
-
-        > [!IMPORTANT]  
-        >  创建 Reporting Services 点的用户帐户必须具有站点数据库的“读取”访问权限。 如果连接测试失败，则会出现一个红色警告图标。 将光标移到此图标之上以阅读失败的详细信息。 更正该失败，然后再次单击“测试”。  
-
-    -   **用户帐户**：单击“设置”，然后选择在 Reporting Services 点上的 SQL Server Reporting Services 连接到 Configuration Manager 站点数据库时要使用的帐户，以检索报表中显示的数据。 选择“现有帐户”以指定具有现有 Configuration Manager 权限的 Windows 用户帐户，或者选择“新帐户”以指定当前不具有 Configuration Manager 中权限的 Windows 用户帐户。 Configuration Manager 会自动授予指定用户帐户访问站点数据库的权限。 该帐户在“管理”工作区中“安全”节点的“帐户”子文件夹中显示为“ConfigMgr SRS 报表点”帐户。  
-
-         指定 Windows 用户帐户和密码经过加密并存储在 Reporting Services 数据库中。 Reporting Services 通过使用此帐户和密码从站点数据库中检索报表的数据。  
+    -   **資料庫名稱**：指定 System Center 2012 Configuration Manager 站台資料庫名稱，然後按一下 [驗證]，確認精靈可存取站台資料庫。  
 
         > [!IMPORTANT]  
-        >  当站点数据库位于远程站点系统上时，你指定的帐户必须具有计算机的“在本机登录”权限。  
+        >  要用來建立 Reporting Services 點的使用者帳戶必須具有站台資料庫的「讀取」存取權限。 如果連線測試失敗，則會顯示紅色警告圖示。 將游標移至此圖示上方，即可讀取失敗的詳細資料。 更正錯誤，然後再按一下 [測試]  。  
 
-6.  单击“确定”保存更改并退出对话框。  
+    -   **使用者帳戶**：按一下 [設定]，然後選取要在 Reporting Services 點上的 SQL Server Reporting Services 連線到 Configuration Manager 站台資料庫時，用以擷取顯示在報告中資料的帳戶。 選取 [現有的帳戶] 以指定具有現有 Configuration Manager 權限的 Windows 使用者帳戶，或選取 [新增帳戶] 以指定目前尚未具有 Configuration Manager 權限的 Windows 使用者帳戶。 Configuration Manager 會自動授與指定之使用者帳戶存取站台資料庫的權限。 此帳戶會在 [系統管理]  工作區中 [安全性]  節點的 [帳戶]  子資料夾中顯示為 [ConfigMgr SRS 報告點]  帳戶。  
 
-## <a name="upgrading-sql-server"></a>升级 SQL Server  
- 升级 SQL Server 以及用作 Reporting Services 点数据源的 SQL Server Reporting Services 后，你可能会在从 Configuration Manager 控制台中运行或编辑报表时遇到错误。 要使报表从 Configuration Manager 控制台中正常工作，必须删除站点的 Reporting Services 点站点系统角色，然后再重新安装。 不过，在升级之后，你可以继续从 Internet 浏览器中成功运行和编辑报表。  
+         指定的 Windows 使用者帳戶和密碼會經過加密，並儲存於 Reporting Services 資料庫中。 Reporting Services 會使用此帳戶和密碼，擷取來自站台資料庫的報告資料。  
 
-##  <a name="BKMK_ConfigureReportOptions"></a>配置报表选项  
- 使用 Configuration Manager 站点的报表选项选择用于管理报表的默认 Reporting Services 点。 尽管一个站点上可以有多个 Reporting Services 点，但只会使用在报表选项中选择的默认报表服务器来管理报表。 使用以下过程来配置站点的报表选项。  
+        > [!IMPORTANT]  
+        >  若站台資料庫位於遠端站台系統上，您指定的帳戶就必須具有該電腦的 [本機登入]  權限。  
 
-#### <a name="to-configure-report-options"></a>要配置报表选项  
+6.  按一下 [確定]  儲存變更並結束對話方塊。  
 
-1.  在 Configuration Manager 控制台中，单击“监视”。  
+## <a name="upgrading-sql-server"></a>升級 SQL Server  
+ 您升級 SQL Server 及作為 Reporting Services 點資料來源的 SQL Server Reporting Services 後，可能會在從 Configuration Manager 主控台執行或編輯報告時發生錯誤。 為了可從 Configuration Manager 主控台正常執行報告，您必須移除站台的 Reporting Services 點站台系統角色，然後重新安裝。 不過升級後，您可以繼續從網際網路瀏覽器成功執行及編輯報告。  
 
-2.  在“监视”工作区中，展开“报表”，然后单击“报表”。  
+##  <a name="BKMK_ConfigureReportOptions"></a> 設定報表選項  
+ 使用 Configuration Manager 站台的報告選項選取預設 Reporting Services 點，用來管理您的報告。 雖然一個站台可以有多個 Reporting Services 點，但是只有報告選項中選取的預設報告伺服器會用來管理報告。 利用下列程序設定站台的報告選項。  
 
-3.  在“主页”选项卡上的“设置”组中，单击“报表选项”。  
+#### <a name="to-configure-report-options"></a>若要設定報告選項  
 
-4.  在列表中选择默认报表服务器，然后单击“确定”。 如果列表未列出任何 Reporting Services 点，请验证是否已在该站点中成功安装和配置了 Reporting Services 点。  
+1.  在 Configuration Manager 主控台中，按一下 [監視] 。  
 
-## <a name="next-steps"></a>后续步骤
-[报表的操作和维护](operations-and-maintenance-for-reporting.md)
+2.  在 [監視]  工作區中，展開 [報告] ，然後按一下 [報告] 。  
 
+3.  在 [首頁]  索引標籤的 [設定]  群組中，按一下 [報告選項] 。  
+
+4.  在清單中選取預設報告伺服器，然後按一下 [確定] 。 如果清單中未列出 Reporting Services 點，請確認您已在站台中成功安裝及設定 Reporting Services 點。  
+
+## <a name="next-steps"></a>後續步驟
+[報告作業和維護](operations-and-maintenance-for-reporting.md)

@@ -1,90 +1,86 @@
 ---
 title: "管理集合 | Microsoft Docs"
-description: "在 System Center Configuration Manager 中执行常见集合管理任务。"
+description: "在 System Center Configuration Manager 中執行一般集合管理工作。"
 ms.custom: na
 ms.date: 4/25/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e102fd1a-76df-4d8e-b1b0-10ee18318f67
-caps.latest.revision: 8
-caps.handback.revision: 0
+caps.latest.revision: "8"
+caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d94acac84f052a01de9d9c9f65f237c0006c45b8
 ms.openlocfilehash: 4d44f98eb0755619cdd2101203a13725186b835b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="how-to-manage-collections-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中管理集合
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+適用於：System Center Configuration Manager (最新分支)
 
-使用本主题中的概述信息可帮助执行 System Center Configuration Manager 中的集合的管理任务。  
+本主題中的概觀資訊可用來協助您執行 System Center Configuration Manager 中集合的管理工作。  
 
 > [!NOTE]  
->  有关如何创建 Configuration Manager 集合的信息，请参阅[如何在 System Center Configuration Manager 中创建集合](../../../../core/clients/manage/collections/create-collections.md)。  
+>  如需如何建立 Configuration Manager 集合的資訊，請參閱[如何在 System Center Configuration Manager 中建立集合](../../../../core/clients/manage/collections/create-collections.md)。  
 
-## <a name="how-to-manage-device-collections"></a>如何管理设备集合  
- 在“资产和符合性”  工作区中，选择“设备集合” ，接着选择要管理的集合，然后选择管理任务。  
+## <a name="how-to-manage-device-collections"></a>如何管理裝置集合  
+ 在 [資產與相容性]  工作區中，選取 [裝置集合] ，並選取要管理的集合，然後選取管理工作。  
 
- 使用下表以详细了解可能需要一些信息才能让你选择的管理任务。  
+ 請參閱下表，了解選取管理工作前需要知道的資訊。  
 
-|管理任务|详细信息|更多信息|  
+|管理工作|詳細資料|詳細資訊|  
 |---------------------|-------------|----------------------|  
-|**显示成员**|显示身为“设备”  节点下临时节点中所选集合的成员的所有资源。|无更多信息。|  
-|**添加所选项**|提供了下列选项，可执行以下操作之一：<br /><br /> - <br />                    **将所选项添加到现有设备集合** - 将打开“选择集合”对话框，可以从中选择想要将所选集合的成员添加到的集合。 使用“包括集合”  成员身份规则可将所选集合包括在此集合中。<br /><br /> - **将所选项添加到新的设备集合** - 将打开“创建设备集合向导”，可以在其中创建新的集合。 使用“包括集合”  成员身份规则可将所选集合包括在此集合中。|[如何在 System Center Configuration Manager 中创建集合](../../../../core/clients/manage/collections/create-collections.md)|  
-|**安装客户端**|将打开“安装客户端向导”，它使用客户端推送安装在所选集合中的所有计算机上安装 Configuration Manager 客户端。|[如何部署客户端到 Windows 计算机](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md)|  
-|**管理相关性请求**|将打开“管理用户设备相关性请求”  对话框，你可以在其中批准或拒绝挂起的请求，以为所选集合中的设备建立用户设备相关性。|[在 System Center Configuration Manager 中将用户和设备与用户设备关联相链接](../../../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md)|  
-|**清除所需的 PXE 部署**|从所选集合的所有成员中清除任何所需的 PXE 启动部署。|[操作系统部署简介](../../../../osd/understand/introduction-to-operating-system-deployment.md)|  
-|**更新成员身份**|评估所选集合的成员身份。 对于具有很多成员的集合，此更新可能需要一些时间才能完成。 使用“刷新”  操作，在更新完成后将显示更新为新的集合成员。|无更多信息。|  
-|**添加资源**|将打开“将资源添加到集合”  对话框，你可以在其中搜索要添加到所选集合的新资源。<br /><br /> 所选集合的图标将在更新正在进行时显示为沙漏符号。|无更多信息。|  
-|**客户端通知**|指示所选设备集合中的所有客户端下载计算机或用户策略。|无更多信息。|  
-|**Endpoint Protection**|执行完整或快速反恶意软件扫描，或将最新反恶意软件定义下载到所选集合中的计算机。|[System Center Configuration Manager 中的 Endpoint Protection](../../../../protect/deploy-use/endpoint-protection.md)|  
-|**导出**|将打开“导出集合向导”，可帮助将此集合导出到托管对象格式 (MOF) 文件，然后可以在其他 Configuration Manager 站点上存档或使用该文件。<br /><br /> 导出集合时，不会导出所选集合使用“包括”  或“排除”  规则引用的集合。|无更多信息。|  
-|**复制**|创建所选集合的副本。 新集合使用所选集合作为限定集合。|无更多信息。|  
-|**删除**|删除所选集合。 你还可以从站点数据库删除集合中的所有资源。<br /><br /> 不能删除 Configuration Manager 中内置的集合。|有关内置集合的列表，请参阅 [System Center Configuration Manager 中的集合简介](../../../../core/clients/manage/collections/introduction-to-collections.md)。|  
-|**模拟部署**|打开“模拟应用程序部署向导”  ，在其中你无需安装或卸载应用程序就能测试应用程序部署的结果。|[如何使用 System Center Configuration Manager 模拟应用程序部署](../../../../apps/deploy-use/simulate-application-deployments.md)|  
-|**部署**|显示下列选项：<br /><br /> - <br />                    **应用程序** - 将打开“部署软件向导”，可以在其中选择和配置所选集合的应用程序部署。<br /><br /> - <br />                    **程序** - 将打开“部署软件向导”  ，你可以在其中选择和配置所选集合的包和程序部署。<br /><br /> - **配置基线** - 将打开“部署配置基线”对话框，可以在其中配置部署所选集合的一个或多个配置基线。<br /><br /> - <br />                    **任务序列** - 将打开“部署软件向导”  ，你可以在其中选择和配置所选集合的任务序列部署。<br /><br /> - <br />                    **软件更新** - 将打开“部署软件更新向导”，可以在其中配置部署所选集合中的资源的软件更新。|[如何使用 System Center Configuration Manager 部署应用程序](../../../../apps/deploy-use/deploy-applications.md)<br /><br /> [System Center Configuration Manager 中的包和程序](../../../../apps/deploy-use/packages-and-programs.md)<br /><br /> [如何在 System Center Configuration Manager 中部署配置基线](../../../../compliance/deploy-use/deploy-configuration-baselines.md)<br /><br /> [管理任务序列以在 System Center Configuration Manager 中自动执行任务](../../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md)<br /><br /> [在 System Center Configuration Manager 中管理软件更新](/sccm/sum/understand/software-updates-introduction)|  
+|**顯示成員**|在 [裝置]  節點下，顯示臨時節點中為所選取集合成員的所有資源。|沒有其他資訊。|  
+|**新增選取的項目**|請提供下列選項來執行下列其中一個動作：<br /><br /> - <br />                    **將選取的項目新增至現有的裝置集合** - 開啟 [選取集合] 對話方塊，您可以在其中選取您要新增所選取集合成員的集合。 使用 [包含集合]  成員資格規則，將選取的集合包含在這個集合。<br /><br /> - **將選取的項目新增至新裝置集合** - 開啟 [建立裝置集合精靈]，您可以在其中建立新的集合。 使用 [包含集合]  成員資格規則，將選取的集合包含在這個集合。|[如何在 System Center Configuration Manager 中建立集合](../../../../core/clients/manage/collections/create-collections.md)|  
+|**安裝用戶端**|開啟 [安裝用戶端精靈]，這個精靈使用用戶端推入安裝在所選取集合的所有電腦上安裝 Configuration Manager 用戶端。|[如何將用戶端部署至 Windows 電腦](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md)|  
+|**管理親和性要求**|開啟 [管理使用者裝置親和性要求]  對話方塊，您可以在其中核准或拒絕擱置要求，以建立所選取集合中裝置的使用者裝置親和性。|[在 System Center Configuration Manager 中使用使用者裝置親和性連結使用者和裝置](../../../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md)|  
+|**清除必要的 PXE 部署**|清除所選取集合之所有成員中的任何必要 PXE 開機部署。|[作業系統部署簡介](../../../../osd/understand/introduction-to-operating-system-deployment.md)|  
+|**更新成員資格**|評估所選取集合的成員資格。 對於具有許多成員的集合，這個更新可能需要一些時間才能完成。 使用 [重新整理]  動作，會在更新完成之後，使用新的集合成員來更新顯示。|沒有其他資訊。|  
+|**新增資源**|開啟 [將資源新增至集合]  對話方塊，您可以在其中搜尋要新增至所選取集合的新資源。<br /><br /> 所選取集合的圖示會顯示沙漏符號，同時進行更新。|沒有其他資訊。|  
+|**用戶端通知**|指示所選取裝置集合中的所有用戶端下載電腦或使用者原則。|沒有其他資訊。|  
+|**Endpoint Protection**|執行完整或快速反惡意程式碼掃描，或將最新的反惡意程式碼定義下載至所選取集合中的電腦。|[System Center Configuration Manager 中的 Endpoint Protection](../../../../protect/deploy-use/endpoint-protection.md)|  
+|**匯出**|開啟 [匯出集合精靈]，以協助您將這個集合匯出至管理物件格式 (MOF) 檔案，之後再將這個檔案封存或用於另一個 Configuration Manager 站台。<br /><br /> 當您匯出集合時，不會匯出所選取集合利用 **Include** 或 **Exclude** 規則所參考的集合。|沒有其他資訊。|  
+|**複製**|建立所選取集合的複本。 新的集合會使用選取的集合作為限制集合。|沒有其他資訊。|  
+|**刪除**|刪除選取的集合。 您也可以從站台資料庫中刪除集合中的所有資源。<br /><br /> 您無法刪除 Configuration Manager 的內建集合。|如需內建集合的清單，請參閱 [System Center Configuration Manager 的集合簡介](../../../../core/clients/manage/collections/introduction-to-collections.md)。|  
+|**模擬部署**|開啟 [模擬應用程式部署精靈]  ，可讓您不需要安裝或解除安裝應用程式，即可測試應用程式部署的結果。|[如何使用 System Center Configuration Manager 模擬應用程式部署](../../../../apps/deploy-use/simulate-application-deployments.md)|  
+|**部署**|顯示下列選項：<br /><br /> - <br />                    **應用程式** - 開啟 [部署軟體精靈]，您可以在其中選取並設定所選取集合的應用程式部署。<br /><br /> - <br />                    **程式** – 開啟 [部署軟體精靈]  ，您可以在其中選取並設定所選取集合的封裝和程式部署。<br /><br /> - **設定基準** - 開啟 [部署設定基準] 對話方塊，您可以在其中設定將一個或多個設定基準部署至選取的集合。<br /><br /> - <br />                    **工作順序** – 開啟 [部署軟體精靈]  ，您可以在其中選取並設定所選取集合的工作順序部署。<br /><br /> - <br />                    **軟體更新** - 開啟 [部署軟體更新精靈]，您可以在其中設定將軟體更新部署至所選取集合中的資源。|[如何使用 System Center Configuration Manager 部署應用程式](../../../../apps/deploy-use/deploy-applications.md)<br /><br /> [System Center Configuration Manager 中的套件和程式](../../../../apps/deploy-use/packages-and-programs.md)<br /><br /> [如何在 System Center Configuration Manager 中部署設定基準](../../../../compliance/deploy-use/deploy-configuration-baselines.md)<br /><br /> [管理工作順序，將 System Center Configuration Manager 中的工作自動化](../../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md)<br /><br /> [在 System Center Configuration Manager 中管理軟體更新](/sccm/sum/understand/software-updates-introduction)|  
 
-## <a name="how-to-manage-user-collections"></a>如何管理用户集合  
- 在“资产和符合性”  工作区中，选择“用户集合” ，接着选择要管理的集合，然后选择管理任务。  
+## <a name="how-to-manage-user-collections"></a>如何管理使用者集合  
+ 在 [資產與相容性]  工作區中，選取 [使用者集合] ，並選取要管理的集合，然後選取管理工作。  
 
- 使用下表以详细了解可能需要一些信息才能让你选择的管理任务。  
+ 請參閱下表，了解選取管理工作前需要知道的資訊。  
 
-|管理任务|详细信息|更多信息|  
+|管理工作|詳細資料|詳細資訊|  
 |---------------------|-------------|----------------------|  
-|**显示成员**|显示身为“用户”  节点下临时节点中所选集合的成员的所有资源。|无更多信息。|  
-|**添加所选项**|通过此选项可执行以下操作之一：<br /><br /> - <br />                    **将所选项添加到现有用户集合** - 将打开“选择集合”对话框，可以从中选择想要将所选集合的成员添加到的集合。 使用“包括集合”  成员身份规则可将所选集合包括在此集合中。<br /><br /> - **将所选项添加到新的用户集合** - 将打开“创建用户及和向导”，可以在其中创建新的集合。 使用“包括集合”  成员身份规则可将所选集合包括在此集合中。|[如何在 System Center Configuration Manager 中创建集合](../../../../core/clients/manage/collections/create-collections.md)|  
-|**管理相关性请求**|将打开“管理用户设备相关性请求”  对话框，你可以在其中批准或拒绝挂起的请求，以为所选集合中的用户建立用户设备相关性。|[在 System Center Configuration Manager 中将用户和设备与用户设备关联相链接](../../../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md)|  
-|**更新成员身份**|评估所选集合的成员身份。 对于具有很多成员的集合，此更新可能需要一些时间才能完成。 使用“刷新”  操作，在更新完成后将显示更新为新的集合成员。<br /><br /> 所选集合的图标将在更新正在进行时显示为沙漏符号。|无更多信息。|  
-|**添加资源**|将打开“将资源添加到集合”  对话框，你可以在其中搜索要添加到所选集合的新资源。|无更多信息。|  
-|**导出**|将打开“导出集合向导”，可帮助将此集合导出到托管对象格式 (MOF) 文件，然后可以在其他 Configuration Manager 站点上存档或使用该文件。<br /><br /> 导出集合时，不会导出所选集合使用“包括”  或“排除”  规则引用的集合。|无更多信息。|  
-|**复制**|创建所选集合的副本。 新集合使用所选集合作为限定集合。|无更多信息。|  
-|**删除**|删除所选集合。 你还可以从站点数据库删除集合中的所有资源。<br /><br /> 不能删除 Configuration Manager 中内置的集合。|有关内置集合的列表，请参阅 [System Center Configuration Manager 中的集合简介](../../../../core/clients/manage/collections/introduction-to-collections.md)。|  
-|**模拟部署**|打开“模拟应用程序部署向导”  ，在其中你无需安装或卸载应用程序就能测试应用程序部署的结果。|[如何使用 System Center Configuration Manager 模拟应用程序部署](../../../../apps/deploy-use/simulate-application-deployments.md)|  
-|**部署**|显示下列选项：<br /><br /> - **应用程序** - 将打开“部署软件向导”，可以在其中选择和配置所选集合的应用程序部署。<br /><br /> - <br />                    **程序** - 将打开“部署软件向导”  ，你可以在其中选择和配置所选集合的包和程序部署。<br /><br /> - **配置基线** - 将打开“部署配置基线”对话框，可以在其中配置部署所选集合的一个或多个配置基线。|[如何使用 System Center Configuration Manager 部署应用程序](../../../../apps/deploy-use/deploy-applications.md)<br /><br /> [System Center Configuration Manager 中的包和程序](../../../../apps/deploy-use/packages-and-programs.md)<br /><br /> [如何在 System Center Configuration Manager 中部署配置基线](../../../../compliance/deploy-use/deploy-configuration-baselines.md)|  
+|**顯示成員**|在 [使用者]  節點下，顯示臨時節點中為所選取集合成員的所有資源。|沒有其他資訊。|  
+|**新增選取的項目**|這個選項可讓您執行下列其中一個動作：<br /><br /> - <br />                    **將選取的項目新增至現有的使用者集合** - 開啟 [選取集合] 對話方塊，您可以在其中選取您要新增所選取集合成員的集合。 使用 [包含集合]  成員資格規則，將選取的集合包含在這個集合。<br /><br /> - **將選取的項目新增至新使用者集合** - 開啟 [建立使用者集合精靈]，您可以在其中建立新的集合。 使用 [包含集合]  成員資格規則，將選取的集合包含在這個集合。|[如何在 System Center Configuration Manager 中建立集合](../../../../core/clients/manage/collections/create-collections.md)|  
+|**管理親和性要求**|開啟 [管理使用者裝置親和性要求]  對話方塊，您可以在其中核准或拒絕擱置要求，以建立所選取集合中使用者的使用者裝置親和性。|[在 System Center Configuration Manager 中使用使用者裝置親和性連結使用者和裝置](../../../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md)|  
+|**更新成員資格**|評估所選取集合的成員資格。 對於具有許多成員的集合，這個更新可能需要一些時間才能完成。 使用 [重新整理]  動作，會在更新完成之後，使用新的集合成員來更新顯示。<br /><br /> 所選取集合的圖示會顯示沙漏符號，同時進行更新。|沒有其他資訊。|  
+|**新增資源**|開啟 [將資源新增至集合]  對話方塊，您可以在其中搜尋要新增至所選取集合的新資源。|沒有其他資訊。|  
+|**匯出**|開啟 [匯出集合精靈]，以協助您將這個集合匯出至管理物件格式 (MOF) 檔案，之後再將這個檔案封存或用於另一個 Configuration Manager 站台。<br /><br /> 當您匯出集合時，不會匯出所選取集合利用 **Include** 或 **Exclude** 規則所參考的集合。|沒有其他資訊。|  
+|**複製**|建立所選取集合的複本。 新的集合會使用選取的集合作為限制集合。|沒有其他資訊。|  
+|**刪除**|刪除選取的集合。 您也可以從站台資料庫中刪除集合中的所有資源。<br /><br /> 您無法刪除 Configuration Manager 的內建集合。|如需內建集合的清單，請參閱 [System Center Configuration Manager 的集合簡介](../../../../core/clients/manage/collections/introduction-to-collections.md)。|  
+|**模擬部署**|開啟 [模擬應用程式部署精靈]  ，可讓您不需要安裝或解除安裝應用程式，即可測試應用程式部署的結果。|[如何使用 System Center Configuration Manager 模擬應用程式部署](../../../../apps/deploy-use/simulate-application-deployments.md)|  
+|**部署**|顯示下列選項：<br /><br /> - **應用程式** - 開啟 [部署軟體精靈]，您可以在其中選取並設定所選取集合的應用程式部署。<br /><br /> - <br />                    **程式** – 開啟 [部署軟體精靈]  ，您可以在其中選取並設定所選取集合的封裝和程式部署。<br /><br /> - **設定基準** - 開啟 [部署設定基準] 對話方塊，您可以在其中設定將一個或多個設定基準部署至選取的集合。|[如何使用 System Center Configuration Manager 部署應用程式](../../../../apps/deploy-use/deploy-applications.md)<br /><br /> [System Center Configuration Manager 中的套件和程式](../../../../apps/deploy-use/packages-and-programs.md)<br /><br /> [如何在 System Center Configuration Manager 中部署設定基準](../../../../compliance/deploy-use/deploy-configuration-baselines.md)|  
 
-##  <a name="BKMK_CollProp"></a> 集合属性  
- 打开集合的“属性”  对话框，即可查看和配置集合的以下属性。  
+##  <a name="BKMK_CollProp"></a> 集合內容  
+ 當您開啟集合的 [內容]  對話方塊時，可以檢視並設定集合的下列內容。  
 
-|选项卡名称|更多信息|  
+|索引標籤名稱|詳細資訊|  
 |--------------|----------------------|  
-|**常规**|让你能够查看和配置有关所选集合的常规信息，包括集合名称和限定集合。|  
-|**成员身份规则**|让你能够配置定义此集合成员身份的成员身份规则。 有关详细信息，请参阅[如何在 System Center Configuration Manager 中创建集合](../../../../core/clients/manage/collections/create-collections.md)。|  
-|**电源管理**|让你能够配置向所选集合中计算机分配的电源管理计划。 有关详细信息，请参阅[电源管理简介](../../../../core/clients/manage/power/introduction-to-power-management.md)。|  
-|**部署**|显示已部署到所选集合的成员的任何软件。|  
-|**维护时段**|让你能够查看和配置应用于所选集合的成员的维护时段。 有关详细信息，请参阅[如何在 System Center Configuration Manager 中使用维护时段](../../../../core/clients/manage/collections/use-maintenance-windows.md)。|  
-|**集合变量**|让你能够配置应用于此集合并可由任务序列使用的变量。 有关详细信息，请参阅[任务序列内置变量](../../../../osd/understand/task-sequence-built-in-variables.md)。|  
-|**分发点组**|让你能够将一个或多个分发点组关联到所选集合的成员。 有关详细信息，请参阅[管理 System Center Configuration Manager 的内容和内容基础结构](../../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。|  
-|**安全**|显示可通过关联角色和安全作用域访问所选集合的管理用户。|  
-|**监视器**|让你能够配置何时对于客户端状态和 Endpoint Protection 生成警报。 有关详细信息，请参阅[如何在 System Center Configuration Manager 中配置客户端状态](../../../../core/clients/deploy/configure-client-status.md)和[如何在 System Center Configuration Manager 中监视 Endpoint Protection](../../../../protect/deploy-use/monitor-endpoint-protection.md)。|  
-
+|**一般**|可讓您檢視和設定所選取集合 (包含集合名稱和限制集合) 的一般資訊。|  
+|**成員資格規則**|可讓您設定可定義這個集合成員資格的成員資格規則。 如需詳細資訊，請參閱[如何在 System Center Configuration Manager 中建立集合](../../../../core/clients/manage/collections/create-collections.md)。|  
+|**電源管理**|可讓您設定指派給所選取集合中電腦的電源管理計畫。 如需詳細資訊，請參閱[電源管理簡介](../../../../core/clients/manage/power/introduction-to-power-management.md)。|  
+|**部署**|顯示已部署至所選取集合成員的任何軟體。|  
+|**維護期間**|可讓您檢視和設定套用至所選取集合成員的維護期間。 如需詳細資訊，請參閱[如何使用 System Center Configuration Manager 中的維護期間](../../../../core/clients/manage/collections/use-maintenance-windows.md)。|  
+|**集合變數**|可讓您設定套用至這個集合並可供工作順序使用的變數。 如需詳細資訊，請參閱[工作順序內建變數](../../../../osd/understand/task-sequence-built-in-variables.md)。|  
+|**發佈點群組**|可讓您將一個或多個發佈點群組與所選取集合成員產生關聯。 如需詳細資訊，請參閱[管理 System Center Configuration Manager 的內容與內容基礎結構](../../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。|  
+|**安全性**|顯示具有所選取集合與相關聯角色和安全性範圍權限的系統管理使用者。|  
+|**監視**|可讓您設定何時產生用戶端狀態和 Endpoint Protection 的警示。 如需詳細資訊，請參閱[如何在 System Center Configuration Manager 中設定用戶端狀態](../../../../core/clients/deploy/configure-client-status.md)和[如何監視 System Center Configuration Manager 中的 Endpoint Protection](../../../../protect/deploy-use/monitor-endpoint-protection.md)。|  

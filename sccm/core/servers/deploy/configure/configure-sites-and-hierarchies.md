@@ -1,57 +1,53 @@
 ---
-title: "配置站点 | Microsoft Docs"
-description: "查阅此清单以确保你考虑到会同时影响站点和层次结构的最常见配置。"
+title: "設定站台 | Microsoft Docs"
+description: "請參閱這份檢查清單，確保考慮到對站台和階層皆有影響的最常見設定。"
 ms.custom: na
 ms.date: 2/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9efb4061-f642-48bd-8332-3357ff5b3118
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5f1efaa776079b21d52b9936273380e9bb8963e9
 ms.openlocfilehash: 862f420c063cb44c419d4904fbb4696efb739758
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="configure-sites-and-hierarchies-for-system-center-configuration-manager"></a>配置 System Center Configuration Manager 的站点和层次结构
+# <a name="configure-sites-and-hierarchies-for-system-center-configuration-manager"></a>為 System Center Configuration Manager 設定站台與階層
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用對象：System Center Configuration Manager (最新分支)*
 
-在安装首个 System Center Configuration Manager 站点或将附加站点添加到层次结构后，请使用以下清单确保已考虑会同时影响站点和层次结构的最常见配置。  
+安裝第一個 System Center Configuration Manager 站台，或將其他站台新增到您的階層之後，使用下列檢查清單可確保您考慮到會影響站台與階層的最常見設定。  
 
-## <a name="checklist-of-common-configurations-for-new-and-additional-sites"></a>全新站点和附加站点的常见配置清单  
-请记住有关配置的以下说明，这些说明适用于大多数部署：
+## <a name="checklist-of-common-configurations-for-new-and-additional-sites"></a>新站台與和其他站台的一般組態檢查清單  
+請留意下列適用於多數部署的設定相關備註：
 
--   某些选项相互依赖，例如 Active Directory 林发现、边界和边界组。  
+-   但有些選項是彼此相依的，例如 Active Directory 樹系探索、界限以及界限群組。  
 
--   一些配置有默认值，你可以使用这些默认值而不进行配置更改，至少暂时可以这样做。  
+-   其中有一些組態有預設值，無須任何設定變更即可使用 (至少暫時如此)。  
 
--   如边界组和分发点组等附加配置则需要你进行配置，之后才能使用它们。  
+-   而其他組態 (例如界限群組與發佈點群組) 則必須先設定之後才可使用。  
 
-|操作|详细信息|  
+|動作|詳細資料|  
 |------------|-------------|  
-|配置基于角色的管理|分离管理分配，从而控制哪些管理用户可在 Configuration Manager 环境中查看和管理不同对象和数据。<br /><br /> 配置基于角色的管理与层次结构中的所有站点共享。   <br/><br/>有关详细信息，请参阅[为 System Center Configuration Manager 配置基于角色的管理](../../../../core/servers/deploy/configure/configure-role-based-administration.md)。|  
-|将站点数据发布到 Active Directory 域服务 (AD DS)|让客户端轻松查找服务并高效使用站点资源。<br /><br /> 必须首先[扩展 System Center Configuration Manager 的 Active Directory 架构](../../../../core/plan-design/network/extend-the-active-directory-schema.md)，然后每个站点必须被单独配置为[发布 System Center Configuration Manager 的站点数据](../../../../core/servers/deploy/configure/publish-site-data.md)|  
-|配置服务连接点|在层次结构的顶层站点上，计划安装和配置服务连接点。 有关详细信息，请参阅[关于 System Center Configuration Manager 服务连接点](../../../../core/servers/deploy/configure/about-the-service-connection-point.md)。|  
-|添加站点系统角色|为单独的站点安装一个或多个附加站点系统角色。  有关详细信息，请参阅[添加 System Center Configuration Manager 的站点系统角色](../../../../core/servers/deploy/configure/add-site-system-roles.md)。|  
-|配置站点边界和边界组|指定定义 Intranet 上网络位置的边界，其中包含要管理的设备。 然后配置边界组，使处于这些网络位置的客户端可以查找 Configuration Manager 资源。 有关详细信息，请参阅[为 System Center Configuration Manager 定义站点边界和边界组](../../../../core/servers/deploy/configure/define-site-boundaries-and-boundary-groups.md)。|  
-|配置分发点组|配置分发点的逻辑组可简化部署的管理。 有关详细信息，请参阅[为 System Center Configuration Manager 安装和配置分发点](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md)中的[管理分发点组](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_manage)。|  
-|运行发现|运行发现可查看网络中的资源，其中包括网络基础结构、设备和用户。<br /><br /> 有关详细信息，请参阅 [Run discovery for System Center Configuration Manager](../../../../core/servers/deploy/configure/run-discovery.md)。|  
-|为管理基础结构的管理员添加冗余和容量|可以通过安装附加 SMS 提供程序和 Configuration Manager 控制台来扩展容量，以便管理员管理基础结构：<br /><br /> **安装附加 SMS 提供程序**可提供冗余，以便联系点管理站点和层次结构。 有关详细信息，请参阅[修改 System Center Configuration Manager 基础结构](../../../../core/servers/manage/modify-your-infrastructure.md)中的[管理 SMS 提供程序](../../../../core/servers/manage/modify-your-infrastructure.md#BKMK_ManageSMSprovider)。<br /><br /> **安装附加 Configuration Manager 控制台**以提供访问其他管理用户的权限。 有关详细信息，请参阅[安装 Configuration Manager 控制台](../../../../core/servers/deploy/install/install-consoles.md)。|  
-|配置站点组件|配置每个站点中的站点组件，修改站点系统角色和站点状态报告的行为。 有关详细信息，请参阅 [Site components for System Center Configuration Manager](../../../../core/servers/deploy/configure/site-components.md)。|  
-|创建自定义集合|使用发现的关于设备和用户的信息，创建对象的自定义集合以简化未来的管理任务。 有关详细信息，请参阅[如何在 System Center Configuration Manager 中创建集合](../../../../core/clients/manage/collections/create-collections.md)。|  
-|配置设置以管理高风险部署|在站点中配置设置，这些设置会在管理用户创建高风险任务序列部署时警告他们。  有关详细信息，请参阅[用于管理 System Center Configuration Manager 的高风险部署的设置](../../../../protect/understand/settings-to-manage-high-risk-deployments.md)。|  
-|配置管理点的数据库副本|配置数据库副本，以减少管理点在处理来自客户端的请求时放在站点数据库服务器上的 CPU 负载。 有关详细信息，请参阅 [System Center Configuration Manager 管理点的数据库副本](../../../../core/servers/deploy/configure/database-replicas-for-management-points.md)。|  
-|配置 SQL Server AlwaysOn 可用性组以承载站点数据库|从版本 1602 开始，可将可用性组配置为高可用性和灾难恢复解决方案，以承载主站点和管理中心站点上的站点数据库。 有关详细信息，请参阅[通过 SQL Server AlwaysOn 实现适用于 System Center Configuration Manager 的高可用性站点数据库](../../../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)。|  
-|修改站点之间的复制|请参阅 [System Center Configuration Manager 中的站点间数据传输](../../../../core/servers/manage/data-transfers-between-sites.md)以了解有关以下主题：<br /><br /> 在辅助站点之间配置[基于文件的复制](../../../../core/servers/manage/data-transfers-between-sites.md#bkmk_fileroute)<br /><br /> 配置[数据库复制链接](../../../../core/servers/manage/data-transfers-between-sites.md#bkmk_Dblinks)<br /><br /> 配置[分布式视图](../../../../core/servers/manage/data-transfers-between-sites.md#bkmk_distviews)|  
-
+|設定以角色為基礎的系統管理|分隔系統管理的指派，以控制哪些系統管理使用者可以在 Configuration Manager 環境中檢視及管理不同的物件與資料。<br /><br /> 階層中的所有站台，會共用以角色為基礎之系統管理的組態。   <br/><br/>如需詳細資訊，請參閱[為 System Center Configuration Manager 設定以角色為基礎的系統管理](../../../../core/servers/deploy/configure/configure-role-based-administration.md)。|  
+|發佈站台資料至 Active Directory 網域服務 (AD DS)|讓用戶端輕鬆找到服務，並有效率地使用站台資源。<br /><br /> 您必須先[擴充 System Center Configuration Manager 的 Active Directory 架構](../../../../core/plan-design/network/extend-the-active-directory-schema.md)，接著必須個別設定各個站台，以[發佈 System Center Configuration Manager 的站台資料](../../../../core/servers/deploy/configure/publish-site-data.md)|  
+|設定服務連接點|規劃在階層的頂層站台安裝及設定服務連接點。 如需詳細資訊，請參閱 [關於 System Center Configuration Manager 中的服務連線點](../../../../core/servers/deploy/configure/about-the-service-connection-point.md)。|  
+|新增站台系統角色|為各個站台安裝一個或多個額外的站台系統角色。  如需詳細資訊，請參閱[為 System Center Configuration Manager 新增站台系統角色](../../../../core/servers/deploy/configure/add-site-system-roles.md)。|  
+|設定界限與界限群組|指定界限以在您的內部網路上定義網路位置，其中可包含您要管理的裝置。 然後設定界限群組，讓位於那些網路位置的用戶端可以找到 Configuration Manager 資源。 如需詳細資訊，請參閱[為 System Center Configuration Manager 定義站台界限和界限群組](../../../../core/servers/deploy/configure/define-site-boundaries-and-boundary-groups.md)。|  
+|設定發佈點群組|設定發佈點的邏輯群組，讓管理部署更容易。 如需詳細資訊，請參閱[為 System Center Configuration Manager 安裝及設定發佈點](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_manage)中的[管理發佈點群組](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md)。|  
+|執行探索工作|執行探索以在網路上尋找資源，包括網路基礎結構、裝置與使用者。<br /><br /> 如需詳細資訊，請參閱 [為 System Center Configuration Manager 執行探索](../../../../core/servers/deploy/configure/run-discovery.md)。|  
+|為管理基礎結構的管理員新增備援及容量|安裝其他 SMS 提供者與 Configuration Manager 主控台，為管理基礎結構的系統管理員擴充容量：<br /><br /> **安裝額外的 SMS 提供者**可為連絡點提供備援，以管理站台與階層。 如需詳細資訊，請參閱[修改您的 System Center Configuration Manager 基礎結構](../../../../core/servers/manage/modify-your-infrastructure.md)中的[管理 SMS 提供者](../../../../core/servers/manage/modify-your-infrastructure.md#BKMK_ManageSMSprovider)。<br /><br /> **安裝其他 Configuration Manager 主控台**可為額外的系統管理使用者提供存取。 如需詳細資訊，請參閱[安裝 Configuration Manager 主控台](../../../../core/servers/deploy/install/install-consoles.md)。|  
+|設定站台元件|在每個站台設定站台元件，以修改站台系統角色與站台狀態報告的行為。 如需詳細資訊，請參閱 [System Center Configuration Manager 的站台元件](../../../../core/servers/deploy/configure/site-components.md)。|  
+|建立自訂集合|請使用探索到的裝置與使用者相關資訊，建立物件的自訂集合，以簡化日後的管理工作。 如需詳細資訊，請參閱[如何在 System Center Configuration Manager 中建立集合](../../../../core/clients/manage/collections/create-collections.md)。|  
+|設定管理高風險部署的設定|在站台進行設定，在系統管理使用者建立高風險的工作順序部署時對其發出警告。  如需詳細資訊，請參閱[管理 System Center Configuration Manager 高風險部署的設定](../../../../protect/understand/settings-to-manage-high-risk-deployments.md)。|  
+|為管理點設定資料庫複本|設定資料庫複本，以減少管理點在服務來自用戶端的要求時，加諸站台資料庫伺服器的 CPU 負載。 如需詳細資訊，請參閱 [System Center Configuration Manager 的管理點資料庫複本](../../../../core/servers/deploy/configure/database-replicas-for-management-points.md)。|  
+|設定 SQL Server AlwaysOn 可用性群組來裝載站台資料庫|從 1602 版開始，即可將可用性群組設定為在主要站台及管理中心網站裝載站台資料庫的高可用性和災害復原方案。 如需詳細資訊，請參閱[適用於 System Center Configuration Manager 之高可用性站台資料庫的 SQL Server AlwaysOn](../../../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)。|  
+|修改站台間的複寫|請參閱 [System Center Configuration Manager 中的站台間資料傳輸](../../../../core/servers/manage/data-transfers-between-sites.md)以了解下列主題：<br /><br /> 設定次要站台之間的[檔案式複寫](../../../../core/servers/manage/data-transfers-between-sites.md#bkmk_fileroute)<br /><br /> 設定[資料庫複寫連結](../../../../core/servers/manage/data-transfers-between-sites.md#bkmk_Dblinks)<br /><br /> 設定[分散式檢視](../../../../core/servers/manage/data-transfers-between-sites.md#bkmk_distviews)|  

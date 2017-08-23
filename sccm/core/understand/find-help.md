@@ -1,80 +1,76 @@
 ---
-title: "查找有关使用 System Center Configuration Manager 的帮助 | Microsoft Docs"
-description: "查找有关 System Center Configuration Manager 的其他信息的资源。"
+title: "尋找使用 System Center Configuration Manager 的說明 | Microsoft Docs"
+description: "尋找 System Center Configuration Manager 其他資訊的資源。"
 ms.custom: na
 ms.date: 2/8/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 86810629-cf2a-43e8-86a2-847444119fc1
-caps.latest.revision: 19
-caps.handback.revision: 0
+caps.latest.revision: "19"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 199096db7a23fb14db98b95e75246ed254848ab7
 ms.openlocfilehash: 72fe220cb9a40d6a20164ace1db8542a91221f55
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="find-help-for-using-system-center-configuration-manager"></a>查找使用 System Center Configuration Manager 的帮助
+# <a name="find-help-for-using-system-center-configuration-manager"></a>尋找使用 System Center Configuration Manager 的說明
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用對象：System Center Configuration Manager (最新分支)*
 
-请使用以下资源，获取有关 System Center Configuration Manager 的其他信息：  
+使用下列資源以取得 System Center Configuration Manager 的其他資訊：  
 
--   [信息和支持](#bkmk_Info)  
+-   [資訊和支援](#bkmk_Info)  
 
-    -   [搜索文档库](#BKMK_SearchTips)  
+    -   [搜尋文件庫](#BKMK_SearchTips)  
 
-    -   [System Center Configuration Manager 团队博客](#BKMK_ProductGroupBlog)  
-    -   [支持选项和社区资源](#BKMK_SupportOptions)
+    -   [System Center Configuration Manager 小組部落格](#BKMK_ProductGroupBlog)  
+    -   [支援選項和社群資源](#BKMK_SupportOptions)
 
-  有关辅助功能的帮助，请参阅 [Accessibility features in System Center Configuration Manager](../../core/understand/accessibility-features.md)（System Center Configuration Manager 中的辅助功能）。
+  如需協助工具功能的說明，請參閱 [System Center Configuration Manager 的協助工具功能](../../core/understand/accessibility-features.md)。
 
-##  <a name="bkmk_Info"></a> 信息和支持  
- 请使用以下有关 Configuration Manager 的其他信息的资源。  
+##  <a name="bkmk_Info"></a> 資訊和支援  
+ 使用下列資源以取得 Configuration Manager 的其他資訊。  
 
--   **若要访问最新的 System Center Configuration Manager 产品文档：**请使用 TechNet [System Center Configuration Manager 的文档库](http://go.microsoft.com/fwlink/p/?LinkId=691974)。
+-   **存取最新的 System Center Configuration Manager 產品文件︰**請使用 TechNet [Documentation Library for System Center Configuration Manager](http://go.microsoft.com/fwlink/p/?LinkId=691974) (System Center Configuration Manager 文件庫)。
 
--   **若要提供有关文档的反馈：**请在 [System Center Configuration Manager 反馈（文档）](https://configurationmanager.uservoice.com/forums/300492-ideas/category/112371-documentation)中使用“User Voice”提交反馈。  
+-   **提供有關文件的意見：**請在 [System Center Configuration Manager Feedback (Documentation)](https://configurationmanager.uservoice.com/forums/300492-ideas/category/112371-documentation) (System Center Configuration Manager 的意見反應 (文件)) 網頁內使用 **User Voice** 提交意見反應。  
 
--   **若要下载文档的存档副本：**请转到 TechNet 库：
+-   **下載文件的封存複本︰**請移至 TechNet 組件庫︰
 
     - [版本 1602](https://gallery.technet.microsoft.com/documentation-for-system-ea90eaf1)
     - [版本 1511](https://gallery.technet.microsoft.com/documentation-for-system-ea90eaf1)
 
-###  <a name="BKMK_SearchTips"></a> 搜索文档库  
- 使用下列搜索提示来帮助你查找所需信息：  
+###  <a name="BKMK_SearchTips"></a> 搜尋文件庫  
+ 使用下列搜尋秘訣有助於尋找所需的資訊：  
 
--   使用首选的搜索引擎查找 System Center Configuration Manager 的内容时，可通过包含以下两个术语将搜索结果的范围缩小为当前内容库：**SCCM** 和 **Docs**。
+-   使用您慣用的搜尋引擎來尋找 System Center Configuration Manager 內容時，可藉由包含下列兩個詞彙，將搜尋結果專注在目前的內容庫中︰**SCCM** 與 **Docs**。
 
--   请使用与在用户界面 (UI) 和联机文档中所看到的词条相匹配的搜索词，而不使用可能会在社区内容中看到的非正式词条或缩写。 例如，搜索“management point”（管理点）而不是“MP”、搜索“deployment type”（部署类型）而不是“DT”，以及搜索“software updates”（软件更新）而不是“SUM”。  
+-   使用與您在使用者介面 (UI) 以及線上文件所見到字串相符的搜尋字詞，而不是您在社群內容中可能會看到的非正式字詞或縮寫。 例如，搜尋 "management point" 而非 "MP"、"deployment type" 而非 "DT"，以及搜尋 "software updates" 而非 "SUM"。  
 
--   在 TechNet 或帮助文件中的页面上搜索时（例如，选择 Ctrl+F1，并在“查找”框中输入搜索词），结果不包括折叠的部分中的文本。 要搜索折叠部分中的文本，请在搜索页面之前展开这些部分。 要执行此操作，可选择页面顶部的“全部展开”按钮，或者双击任何折叠部分。 展开所有部分后，则可以通过在页面上进行搜索来搜索该页面上的所有部分。  
+-   當您在 TechNet 頁面中或說明檔中搜尋時 (例如，選取 Ctrl-F1，並在 [尋找] 方塊中輸入搜尋字詞)，結果會排除摺疊章節中的文字。 若要搜尋摺疊章節中的文字，請先展開這些章節，再於該頁面上進行搜尋。 如要展開這些章節，請選取頁面頂端的 [全部展開] 按鈕，或按兩下任何摺疊的章節。 所有章節都展開後，在頁面上執行的搜尋即可搜尋該頁面上的所有章節。  
 
--   要搜索帮助文件中的主题，请选择 F1，然后在“查找”对话框中输入搜索词。 帮助文件不支持“全部展开”选项，必须先手动展开各个折叠部分，然后才能在页面上进行搜索来查找那些部分中的文本。  
+-   若要搜尋說明檔中的主題，請選取 F1 鍵，然後在 [尋找] 對話方塊中輸入搜尋字詞。 說明檔不支援 [全部展開] 選項，您必須手動展開摺疊的個別章節，在頁面上搜尋時才能找到這些章節中的文字。  
 
--   请尽可能使用 TechNet 在线库，而不是下载的文档。 TechNet 包含最新信息，并且你搜索的信息可能不在下载的文档中，或者可能有修正或额外的在线信息。  
+-   盡可能使用 TechNet 線上文件庫，而不使用下載的文件。 TechNet 內含最新的資訊，而您所搜尋的資訊可能並未包含在下載的文件中，或者其中可能有修正或其他線上資訊。  
 
--   如果发现搜索本地存储的文档更快捷轻松，可以选择 TechNet 中的多个主题并将它们保存在本地。 首先，登录 TechNet。 然后，在想要保存在本地的页面顶部，选择“导出”（位于“打印”旁）。 然后你会看到“导出多组页面”  横幅，你可以添加和删除要保存的页面。 然后选择“管理页面”以将其导出。 有关详细信息，请选择横幅中的“帮助”。  
+-   如果您發現儲存在本機可以較容易且快速地搜尋文件，可以在 TechNet 上選取多個主題，並將它們儲存在本機。 首先，登入 TechNet。 然後在想要儲存於本機的頁面頂端，選擇 [匯出]\(在 [列印] 旁邊)。 [匯出多組頁面]  橫幅隨即顯示，以供您新增及移除所要儲存的頁面。 接著請選擇 [管理頁面] 匯出頁面。 如需詳細資訊，請選擇橫幅上的 [說明]。  
 
-###  <a name="BKMK_ProductGroupBlog"></a> System Center Configuration Manager 团队博客  
- Configuration Manager 工程和合作伙伴团队使用 [System Center Configuration Manager 团队博客](http://go.microsoft.com/fwlink/?LinkId=191941)为用户提供有关 Configuration Manager 和相关技术的技术信息和其他新闻。 我们的博客文章补充了产品文档和支持信息。  
+###  <a name="BKMK_ProductGroupBlog"></a> System Center Configuration Manager 小組部落格  
+ Configuration Manager 工程及夥伴團隊使用 [System Center Configuration Manager Team Blog](http://go.microsoft.com/fwlink/?LinkId=191941) (System Center Configuration Manager 團隊部落格) 為您提供技術資訊和其他關於 Configuration Manager 的新聞及相關技術。 我們的部落格會張貼產品文件和支援資訊等補充資訊。  
 
-###  <a name="BKMK_SupportOptions"></a> 支持选项和社区资源  
- 下列链接提供有关支持选项和社区资源的信息：  
+###  <a name="BKMK_SupportOptions"></a> 支援選項和社群資源  
+ 下列連結提供支援選項和社群資源的相關資訊：  
 
--   [Microsoft 支持](http://go.microsoft.com/fwlink/?LinkId=243064)  
+-   [Microsoft 支援服務](http://go.microsoft.com/fwlink/?LinkId=243064)  
 
--   [Configuration Manager 社区：System Center Configuration Manager (Current Branch) 生存指南](http://social.technet.microsoft.com/wiki/contents/articles/33035.system-center-configuration-manager-current-branch-survival-guide.aspx )  
+-   [Configuration Manager Community - System Center Configuration Manager (Current Branch) Survival Guide](http://social.technet.microsoft.com/wiki/contents/articles/33035.system-center-configuration-manager-current-branch-survival-guide.aspx ) (Configuration Manager 社群 - System Center Configuration Manager (最新分支) 求生指南)  
 
--   [Configuration Manager 论坛页面](https://social.technet.microsoft.com/Forums/en-US/home?category=ConfigMgrCB)  
-
+-   [Configuration Manager 論壇網頁](https://social.technet.microsoft.com/Forums/en-US/home?category=ConfigMgrCB)  

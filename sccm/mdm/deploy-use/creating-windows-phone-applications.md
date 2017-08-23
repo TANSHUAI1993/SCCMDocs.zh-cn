@@ -1,69 +1,65 @@
 ---
-title: "创建 Windows Phone 应用程序 | Microsoft Docs"
-description: "请参阅创建和部署适用于 Windows Phone 设备的应用程序时必须考虑的注意事项。"
+title: "建立 Windows Phone 應用程式 | Microsoft Docs"
+description: "查看在您建立和部署 Windows Phone 裝置的應用程式時，必須考慮的事項。"
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 68fe11fa-5fb2-4b81-b0f5-b6f2392fb4ad
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 6d5d5eb9e4bf0297e2d86bf591dab5b3f42c95fa
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/06/2017
-
-
+ms.openlocfilehash: 6cbf2389a72c0c384ef8e84a1755ac77b64bfc6d
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="create-windows-phone-applications-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 创建 Windows Phone 应用程序
+# <a name="create-windows-phone-applications-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 建立 Windows Phone 應用程式
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用於︰System Center Configuration Manager (最新分支)*
 
-System Center Configuration Manager 应用程序具有一个或多个部署类型，这些是将软件部署到设备所需的安装文件和信息。 部署类型还具有指定软件的部署时间和方法的规则。  
+System Center Configuration Manager 應用程式有一或多個部署類型，其中包含將軟體部署至裝置所需的安裝檔案與資訊。 部署類型也包含指定部署軟體之時間和方法的規則。  
 
- 可以使用下列方法创建应用程序：  
+ 您可以使用下列兩種方式建立應用程式：  
 
--   通过读取应用程序安装文件来自动创建应用程序和部署类型。  
+-   透過讀取應用程式安裝檔案的方式自動建立應用程式和部署類型。  
 
--   手动创建应用程序并稍后添加部署类型。  
+-   手動建立應用程式並在之後新增部署類型。  
 
--   从文件导入应用程序。  
+-   從檔案匯入應用程式。  
 
-请参阅[启动创建应用程序向导](../../apps/deploy-use/create-applications.md#start-the-create-application-wizard)，了解创建 Configuration Manager 应用程序和部署类型所需的步骤。 此外，创建和部署适用于 Windows Phone 设备的应用程序时，请记住以下注意事项。  
+如需建立 Configuration Manager 應用程式與部署類型的必要步驟，請參閱[啟動建立應用程式精靈](../../apps/deploy-use/create-applications.md#start-the-create-application-wizard)。 此外，當您建立並部署 Windows Phone 裝置的應用程式時，請記住下列考量。  
 
-## <a name="general-considerations"></a>一般注意事项  
- Configuration Manager 支持部署以下应用文件类型：  
+## <a name="general-considerations"></a>一般考量  
+ Configuration Manager 支援部署下列應用程式檔案類型：  
 
-|设备类型|支持的文件类型|  
+|裝置類型|支援的檔案類型|  
 |-----------------|---------------------|  
 |Windows Phone 8|.xap|  
 |Windows Phone 8.1|.xap、.appx、.appxbundle|
-|Windows 10 移动版|.xap、.appx、.appxbundle|
+|Windows 10 Mobile|.xap、.appx、.appxbundle|
 
- 支持以下部署操作：  
+ 支援下列部署動作：  
 
-|设备类型|支持的操作|  
+|裝置類型|支援的動作|  
 |-----------------|-----------------------|  
-|Windows Phone 8、Windows Phone 8.1 和 Windows 10 移动版|可用、要求、卸载|  
+|Windows Phone 8、Windows Phone 8.1 及 Windows 10 Mobile|可用、必要、解除安裝|  
 
-## <a name="steps-to-deploy-the-latest-windows-phone-company-portal-app-with-supersedence"></a>使用取代来部署最新 Windows Phone 公司门户应用的步骤  
- 下表提供了创建和部署最新 Windows Phone 8 公司门户应用的步骤、详细信息和更多信息。  
+## <a name="steps-to-deploy-the-latest-windows-phone-company-portal-app-with-supersedence"></a>使用取代方式部署最新 Windows Phone 公司入口網站應用程式的步驟  
+ 下表提供用於建立及部署最新 Windows Phone 8 公司入口網站應用程式的步驟、詳細資料和更多資訊。  
 
-|步骤|更多信息|  
+|步驟|詳細資訊|  
 |----------|----------------------|  
-|**步骤 1：** 获取最新的公司门户应用。|下载 [Windows Phone 8 公司门户应用](http://go.microsoft.com/fwlink/?LinkId=268440)。|  
-|**步骤 2：** 使用 Symantec 证书对公司门户应用进行签名。|有关如何对公司门户应用进行签名的信息，请参阅[使用 System Center Configuration Manager 和 Microsoft Intune 设置 Windows Phone 和 Windows 10 移动版混合设备管理](../../mdm/deploy-use/enroll-hybrid-windows.md)。|  
-|**步骤 3：**使用公司门户应用的最新版本创建新的应用程序，并指定取代关系。|有关详细信息，请参阅[创建应用程序](../../apps/deploy-use/create-applications.md)和[修订和取代应用程序](../../apps/deploy-use/revise-and-supersede-applications.md)。|  
-|**步骤 4：**将应用程序添加到 Microsoft Intune 订阅向导。|有关详细信息，请参阅[使用 System Center Configuration Manager 和 Microsoft Intune 设置 Windows Phone 和 Windows 10 版移动混合设备管理](../../mdm/deploy-use/enroll-hybrid-windows.md)。|  
-|**步骤 5：**删除向 Microsoft Intune 订阅向导添加公司门户应用时自动创建的部署。|Microsoft Intune 订阅已创建了此应用的自动部署，因为此部署将不支持取代。|  
-|**步骤 6：**创建应用程序的新部署。 在“部署软件向导”的“部署设置”页上，选中“自动升级此应用程序的任何取代版本”。|使用取代功能以及用取代关系创建的应用程序来创建新部署。|  
-|**步骤 7（可选）：**默认情况下，7 天后将在设备上安装取代应用。 为了更快地将公司门户应用部署到以前注册的设备，请将“计划部署的重新评估”设置更改为较低的值。<br /><br /> 如果将此值设置为低于默认值的值，则可能会对网络和客户端计算机性能有负面影响。|无更多信息。|  
-
+|**步驟 1：**取得最新的公司入口網站應用程式。|下載 [Windows Phone 8 公司入口網站應用程式](http://go.microsoft.com/fwlink/?LinkId=268440)。|  
+|**步驟 2：**使用您的 Symantec 憑證簽署公司入口網站應用程式。|如需如何簽署公司入口網站應用程式的相關資訊，請參閱[以 System Center Configuration Manager 和 Microsoft Intune 來設定 Windows Phone 及 Windows 10 行動裝置版混合式裝置管理](../../mdm/deploy-use/enroll-hybrid-windows.md)。|  
+|**步驟 3：**使用最新版公司入口網站應用程式建立新的應用程式，並指定取代關聯性。|如需詳細資訊，請參閱[建立應用程式](../../apps/deploy-use/create-applications.md)和[修改和取代應用程式](../../apps/deploy-use/revise-and-supersede-applications.md)。|  
+|**步驟 4：**將應用程式新增至 [Microsoft Intune 訂閱精靈]。|如需詳細資訊，請參閱[以 System Center Configuration Manager 和 Microsoft Intune 來設定 Windows Phone 及 Windows 10 行動裝置版混合式裝置管理](../../mdm/deploy-use/enroll-hybrid-windows.md)。|  
+|**步驟 5：**刪除在您將公司入口網站應用程式新增到 [Microsoft Intune 訂閱精靈] 時自動建立的部署。|Microsoft Intune 訂閱已建立此應用程式的自動部署，因為此部署不會支援取代。|  
+|**步驟 6：**建立應用程式的新部署。 在 [部署軟體精靈] 的 [部署設定] 頁面上，選取 [自動升級任何會取代此應用程式的版本]。|使用您以取代關聯性建立的應用程式，建立含取代的新部署。|  
+|**步驟 7 (選用)：**依預設，取代應用程式會在 7 天後安裝於裝置上。 若要更快將公司入口網站應用程式部署到先前註冊的裝置，可以將 [排程部署的重新評估] 設定變更為較低的值。<br /><br /> 如果將這個值設定成比預設值低的值，可能會對您的網路及用戶端電腦效能造成負面影響。|沒有其他資訊。|  

@@ -1,211 +1,207 @@
 ---
-title: "备份站点 | Microsoft 文档"
-description: "在 System Center Configuration Manager 中出现故障或数据丢失之前备份站点。"
+title: "備份站台 | Microsoft Docs"
+description: "了解如何在發生失敗或資料遺失之前，在 System Center Configuration Manager 中備份您的站台。"
 ms.custom: na
 ms.date: 6/5/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f7832d83-9ae2-4530-8a77-790e0845e12f
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f7cd9c71287d62c9f5d36e2f032bc2a6065572ae
 ms.openlocfilehash: 7deb00d4b67eabf3238907b337a9d0367c3d99cc
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/06/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
+# <a name="back-up-a-configuration-manager-site"></a>備份 Configuration Manager 站台
 
-# <a name="back-up-a-configuration-manager-site"></a>备份 Configuration Manager 站点
+適用於：System Center Configuration Manager (最新分支)
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+準備備份和復原方法，以避免資料遺失。 對於 Configuration Manager 站台，備份和復原方法有助於您在遺失最少資料的情況下更快復原站台和階層。  
 
-准备备份和恢复方法，以避免数据丢失。 对于 Configuration Manager 站点，备份和恢复方法可有助于更快地恢复站点和层次结构，并最大程度降低数据丢失的风险。  
+本主題的章節可協助您備份站台。 若要復原站台，請參閱 [Configuration Manager 的復原](/sccm/protect/understand/recover-sites)。  
 
-本主题中介绍的内容可帮助你备份站点。 要恢复站点，请参阅 [Configuration Manager 的恢复](/sccm/protect/understand/recover-sites)。  
+## <a name="considerations-before-creating-a-backup"></a>建立備份前的考量  
+-   **如果您使用 SQL Server Always On 可用性群組來裝載站台資料庫：**請根據[準備使用 SQL Server Always On](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database#changes-for-site-backup) 中所述來修改備份和復原計劃。
 
-## <a name="considerations-before-creating-a-backup"></a>创建备份之前的注意事项  
--   如果你使用 SQL Server AlwaysOn 可用性组来承载站点数据库：按照[准备使用 SQL Server Always On](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database#changes-for-site-backup) 中的说明修改你的备份和恢复计划。
+-   Configuration Manager 可以從 Configuration Manager 備份維護工作，或從您使用其他程序建立的站台資料庫備份，以復原站台資料庫。   
 
--   Configuration Manager 可以从 Configuration Manager 备份维护任务或从使用另一个进程创建的站点数据库备份来恢复站点数据库。   
+    例如，您可以使用 Microsoft SQL Server 維護計畫建立的備份還原站台資料庫。 您也可以使用以 Data Protection Manager 建立的備份來備份站台資料庫 (DPM)。
 
-    例如，可以通过作为 Microsoft SQL Server 维护计划一部分创建的备份来还原站点数据库。 你还可以使用通过使用 Data Protection Manager 创建的备份来备份站点数据库 (DPM)。
+####  <a name="using-data-protection-manager-to-back-up-your-site-database"></a>使用 Data Protection Manager 備份網站資料庫
+您可以使用 System Center 2012 Data Protection Manager (DPM) 來備份站台資料庫。
 
-####  <a name="using-data-protection-manager-to-back-up-your-site-database"></a>使用 Data Protection Manager 来备份站点数据库
-你可以使用 System Center 2012 Data Protection Manager (DPM) 来备份站点数据库。
-
-你可以在 DPM 中为站点数据库计算机创建一个新保护组。 在创建新保护组向导的“选择组成员”页上，从数据源列表中选择 SMS 编写器服务，然后选择站点数据库作为适当的成员。 有关使用 DPM 来备份站点数据库的详细信息，请参阅 TechNet 上的 [Data Protection Manager Documentation Library（Data Protection Manager 文档库）](http://go.microsoft.com/fwlink/?LinkId=272772)。  
+您必須在網站資料庫電腦的 DPM 中建立新的保護群組。 在 [建立新保護群組精靈] 的 [選擇群組成員]  頁面上，您可以從資料來源清單選取 SMS 寫入器服務，然後選取網站資料庫作為適當的成員。 如需使用 DPM 備份網站資料庫的詳細資訊，請參閱 TechNet 上的 [Data Protection Manager Documentation Library (Data Protection Manager 文件庫)](http://go.microsoft.com/fwlink/?LinkId=272772) 。  
 
 > [!IMPORTANT]  
->  Configuration Manager 不支持对使用命名实例的 SQL Server 群集进行 DPM 备份，但支持对使用默认 SQL Server 实例的 SQL Server 群集进行 DPM 备份。  
+>  Configuration Manager 不支援為使用具名執行個體的 SQL Server 叢集執行 DPM 備份，但支援在使用 SQL Server 預設執行個體的 SQL Server 叢集上執行 DPM 備份。  
 
- 还原站点数据库之后，请按照安装程序中的步骤进行操作以恢复站点。 选择“使用已手动恢复的站点数据库”恢复选项以使用通过 Data Protection Manager 恢复的站点数据库。  
+ 在您還原網站資料庫後，請依照安裝程式中的步驟還原網站。 選取 [使用手動復原的站台資料庫] 復原選項，以使用您透過 Data Protection Manager 復原的站台資料庫。  
 
-## <a name="backup-maintenance-task"></a>备份维护任务
-可以通过计划预定义的备份站点服务器维护任务来自动完成 Configuration Manager 站点的备份。 此任务包括：
+## <a name="backup-maintenance-task"></a>備份維護工作
+您可以藉由排程預先定義的「備份站台伺服器」維護工作，自動備份 Configuration Manager 站台。 這項工作：
 
--   按计划运行
--   备份站点数据库
--   备份特定注册表项
--   备份特定文件夹和文件
--   备份 [CD.Latest 文件夹](/sccm/core/servers/manage/the-cd.latest-folder)   
+-   依排程執行
+-   備份站台資料庫
+-   備份特定的登錄機碼
+-   備份特定的資料夾和檔案
+-   備份 [CD.Latest 資料夾](/sccm/core/servers/manage/the-cd.latest-folder)   
 
-计划至少每 5 天运行一次默认站点备份任务。 这是因为 Configuration Manager 使用为期 5 天的 SQL Server 更改跟踪保持期。  （请参阅“恢复站点”主题中的 [SQL Server 更改跟踪保持期](/sccm/protect/understand/recover-sites#bkmk_SQLretention)。）
+規劃至少每隔 5 天執行預設站台備份工作。 這是因為 Configuration Manager 使用 5 天的 *SQL Server 變更追蹤保留期間*。  (請參閱復原站台主題中的 [SQL Server 變更追蹤保留期間](/sccm/protect/understand/recover-sites#bkmk_SQLretention))。
 
-若要简化备份过程，可以创建 **AfterBackup.bat** 文件以在备份维护任务成功运行后自动执行备份后操作。 AfterBackup.bat 文件通常用于将备份快照存档到安全位置。 也可以使用 AfterBackup.bat 文件将文件复制到备份文件夹并启动其他补充备份任务。  
+若要簡化備份程序，您可以建立 **AfterBackup.bat** 檔案，自動在順利執行備份維護工作後執行備份後動作。 AfterBackup.bat 檔案通常用來將備份快照封存到安全的位置。 您也可以使用 AfterBackup.bat 檔案將檔案複製到備份資料夾，並開始進行其他增補的備份工作。  
 
-你可以备份管理中心站点和主站点，但不支持备份辅助站点或站点系统服务器。
+您可以備份管理中心網站和主要網站，但不支援次要網站或網站系統伺服器的備份。
 
-当 Configuration Manager 备份服务运行时，它将按照备份控制文件 (**&lt;ConfigMgrInstallationFolder\>\Inboxes\Smsbkup.box\Smsbkup.ctl**) 中定义的指令进行操作。 你可以修改备份控制文件来更改备份服务的行为。  
+當 Configuration Manager 備份服務執行時，會依照備份控制檔案 (**&lt;ConfigMgrInstallationFolder\>\Inboxes\Smsbkup.box\Smsbkup.ctl**) 中定義的指示進行。 您可以修改備份控制檔案，以變更備份服務的行為。  
 
-站点备份状态信息将写入 **Smsbkup.log** 文件。 将在备份站点服务器维护任务属性内指定的目标文件夹中创建此文件。  
+站台備份狀態資訊會寫入至 **Smsbkup.log** 檔案。 此檔案會在您於「備份網站伺服器」維護工作內容中指定的目的地資料夾中建立。  
 
-#### <a name="to-enable-the-site-backup-maintenance-task"></a>启用站点备份维护任务  
+#### <a name="to-enable-the-site-backup-maintenance-task"></a>啟用網站備份維護工作  
 
-1.  在 Configuration Manager 控制台中，依次打开“管理” > “站点配置” > “站点”。  
+1.  在 Configuration Manager 主控台中，開啟 [系統管理] > [站台設定] > [站台]。  
 
-2.  选择要在其中启用站点备份维护任务的站点。  
+2.  選取您要啟用網站備份維護工作的網站。  
 
-3.  在“主页”选项卡上的“设置”组中，选择“站点维护任务”。  
+3.  在 [常用] 索引標籤的 [設定] 群組中，選擇 [站台維護工作]。  
 
-4.  选择“备份站点服务器”  >  “编辑”。  
+4.  選擇 [備份站台伺服器]  >  [編輯]。  
 
-5.  选择“启用此任务” > “设置路径”以指定备份目标。 有下列选项：  
+5.  選擇 [啟用此工作] > [設定路徑] 以指定備份目的地。 下列選項可供您選擇：  
 
     > [!IMPORTANT]  
-    >  为了帮助防止篡改备份文件，请将文件存储在安全的位置。 最安全的备份路径是本地驱动器，因此你可以在文件夹上设置 NTFS 文件系统权限。 Configuration Manager 不会对备份路径中存储的备份数据进行加密。  
+    >  若要預防備份檔案遭到竄改，請將檔案儲存在安全的位置。 最安全的備份路徑是本機磁碟機，因此您可以在資料夾上設定 NTFS 檔案系統權限。 Configuration Manager 不會加密儲存在備份路徑中的備份資料。  
 
-    -   站点服务器上用于站点数据和数据库的本地驱动器：指定将站点和站点数据库的备份文件存储在站点服务器本地磁盘驱动器上的指定路径中。 你必须在备份任务运行之前创建本地文件夹。 站点服务器上的本地系统帐户必须具有站点服务器备份的本地文件夹的**“写入”**NTFS 文件系统权限。 运行 SQL Server 的计算机上的本地系统帐户必须具有站点数据库备份文件夹的**“写入”**NTFS 权限。  
+    -   **用於站台資料和資料庫的站台伺服器本機磁碟機**：指定將站台和站台資料庫的備份檔案儲存在站台伺服器本機磁碟上指定的路徑。 您必須先建立本機資料夾才可以執行備份工作。 網站伺服器的本機系統帳戶必須擁有網站伺服器備份本機資料夾的 **寫入** NTFS 檔案系統權限。 電腦若是執行 SQL Server，其本機系統帳戶必須擁有網站資料庫備份資料夾的 **寫入** NTFS 權限。  
 
-    -   站点数据和数据库的网络路径（UNC 名称）：指定将站点和站点数据库的备份文件存储在指定 UNC 路径中。 你必须在备份任务运行之前创建共享。 站点服务器的计算机帐户以及 SQL Server 的计算机帐户（如果 SQL Server 安装在另一台计算机上）必须具有共享网络文件夹的“写入”NTFS 和共享权限。  
+    -   **用於站台資料和資料庫的網路路徑 (UNC 名稱)**：指定將站台和站台資料庫的備份檔案儲存在指定的 UNC 路徑。 您必須先建立共用才可以執行備份工作。 網站伺服器的電腦帳戶和 SQL Server 的電腦帳戶 (如果 SQL Server 安裝在其他電腦上) 必須擁有共用網路資料夾的 **寫入** NTFS 和共用權限。  
 
-    -   **站点服务器和 SQL Server 上的本地驱动器**：指定将站点的备份文件存储在站点服务器本地驱动器上的指定路径中，并将站点数据库的备份文件存储在站点数据库服务器本地驱动器上的指定路径中。 你必须在备份任务运行之前创建本地文件夹。 站点服务器的计算机帐户必须具有你在站点服务器上创建的文件夹的“写入”NTFS 权限。 SQL Server 的计算机帐户必须具有你在站点数据库服务器上创建的文件夹的“写入”NTFS 权限。 只有在站点服务器未安装站点数据库时，此选项才可用。  
+    -   **站台伺服器和 SQL Server 上的本機磁碟機**：指定將站台的備份檔案儲存在站台伺服器本機磁碟機上指定的路徑，並將站台資料庫的備份檔案儲存在站台資料庫伺服器本機磁碟機上指定的路徑。 您必須先建立本機資料夾才可以執行備份工作。 網站伺服器的電腦帳戶必須擁有您在網站伺服器上建立之資料夾的 **寫入** NTFS 權限。 SQL Server 的電腦帳戶必須擁有您在網站資料庫伺服器上建立之資料夾的 **寫入** NTFS 權限。 此選項僅在網站伺服器上未安裝網站資料庫時適用。  
 
     > [!NOTE]  
-    >   只有在你指定备份目标的 UNC 路径时，用于浏览到备份目标的选项才可用。
+    >   只有在您指定備份目的地的 UNC 路徑時才可以使用瀏覽備份目的地的選項。
 
-    > 用于备份目标的文件夹名称或共享名称不支持使用 Unicode 字符。  
+    > 用於不支援使用 Unicode 字元之備份目的地的資料夾名稱或共用名稱。  
 
-6.  为站点备份任务配置计划。 作为最佳方案，请考虑活动工作时间外的备份计划。 如果有层次结构，请考虑使用一周至少运行两次的计划，以确保在出现站点故障时保留最大量的数据。  
+6.  為站台備份工作設定排程。 基於最佳作法，請考慮將備份排程在非工作時間執行。 如果您有階層，請考慮將排程設在一週至少執行二次，以確保在發生網站失敗時可以保留較多的資料。  
 
-    如果在为备份配置的同一站点服务器上运行 Configuration Manager 控制台，则备份站点服务器维护任务将为计划使用本地时间。 如果 Configuration Manager 控制台从为备份配置的站点的远程计算机中运行，则备份站点服务器维护任务为计划使用 UTC。  
+    當您在與設定備份相同的站台伺服器上執行 Configuration Manager 主控台時，「備份站台伺服器」維護工作會使用當地時間進行排程。 當您從來自設定要進行備份的遠端站台電腦執行 Configuration Manager 主控台時，「備份站台伺服器」維護工作會使用 UTC 進行排程。  
 
-7.  选择在站点备份任务失败时是否创建警报，单击“确定”，然后单击“确定”。 如果选择，则 Configuration Manager 将为备份失败创建关键警报，可以在“监视”工作区的“警报”节点中查看该警报。  
+7.  選擇是否要在站台備份工作失敗時建立警示，按一下 [確定]，再按一下 [確定]。 選取時，Configuration Manager 會建立備份失敗的重大警示，您可以在 [監視] 工作區的 [警示] 節點中檢閱該警示的內容。  
 
- 接下来，验证备份站点服务器维护任务是否正在运行，以确保正在创建备份。  
+ 接下來，確認「備份站台伺服器」維護工作正在執行，以確定備份已建立。  
 
-#### <a name="to-verify-that-the-backup-site-server-maintenance-task-is-running"></a>验证备份站点服务器维护任务是否正在运行  
-通过查看下列任何信息来验证站点备份维护任务是否正在运行：  
+#### <a name="to-verify-that-the-backup-site-server-maintenance-task-is-running"></a>確認備份站台伺服器維護工作正在執行  
+藉由檢閱下列任一項，確認「站台備份」維護工作正在執行：  
 
--   检查该任务创建的备份目标文件夹中的文件上的时间戳。 验证是否已使用与上次计划运行该任务的时间匹配的时间更新了该时间戳。  
+-   檢查此工作所建立備份目的地資料夾中檔案的時間戳記。 確認時間戳記的時間已更新為符合此工作上次排程執行的時間。  
 
--   在“监视”工作区的“组件状态”节点中，查看 SMS_SITE_BACKUP 的状态消息。 如果站点备份成功完成，你将看到消息 ID 5035，指示站点备份已成功完成，且未出现任何错误。  
+-   在 [監視]  工作區的 [元件狀態]  節點中，檢閱 SMS_SITE_BACKUP 的狀態訊息。 當網站備份順利完成時，您會看到訊息識別碼 5035，表示網站備份已順利完成且沒有發生錯誤。  
 
--   如果将备份站点服务器维护任务配置为在备份失败的情况下创建警报，你可以检查“监视”工作区中的“警报”节点来了解备份失败情况。  
+-   當「備份網站伺服器」維護工作設定為在備份失敗時建立警示時，您可以在 [監視]  工作區的 [警示]  節點中檢查備份失敗的內容。  
 
--   在 &lt;*ConfigMgrInstallationFolder*>\Logs 中，查看 Smsbkup.log 以了解警告和错误。 站点备份成功完成后，你将看到`Backup completed`，时间戳和消息 ID 为 `STATMSG: ID=5035`。  
+-   在 &lt;*ConfigMgrInstallationFolder*>\Logs 中，查看 Smsbkup.log 中的警示及錯誤。 當網站備份順利完成時，您會看到含有時戳的 `Backup completed` ，以及訊息識別碼 `STATMSG: ID=5035`。  
 
     > [!TIP]  
-    >  如果备份维护任务失败，你可以通过停止并重启 SMS_SITE_BACKUP 服务来重启备份任务。  
+    >  當備份維護工作失敗時，您可以藉由停止再重新啟動 SMS_SITE_BACKUP 服務，重新啟動備份工作。  
 
-## <a name="archive-the-backup-snapshot"></a>存档备份快照  
-备份站点服务器维护任务第一次运行时将创建一个备份快照，你可以使用该快照在出现故障时恢复站点服务器。 当备份任务在后续周期中再次运行时，它将创建新备份快照，该快照将覆盖以前的快照。 因此，站点只有一个备份快照，并且你无法检索以前的备份快照。  
+## <a name="archive-the-backup-snapshot"></a>封存備份快照  
+第一次執行「備份網站伺服器」維護工作時，它會建立一個備份快照，您可以在發生失敗時使用這個備份快照復原您的網站。 當備份工作在後續的週期中再次執行時，它會建立新的備份快照，並使用該備份快照覆寫先前的快照。 因此網站只有一個備份快照，您無法擷取舊版的備份快照。  
 
-作为最佳方案，请保留备份快照的多个存档，原因如下：  
+作為最佳作法，請針對以下原因保留多個備份快照封存：  
 
--   备份媒体经常会出现故障、位置不正确或仅包含部分备份。 从较旧的备份恢复出现故障的独立主站点比在没有任何备份的情况下进行恢复要好。 对于层次结构中的站点服务器，备份必须位于 SQL Server 更改跟踪保持期内，或者不需要备份。  
+-   備份媒體失敗、錯置，或僅包含部分備份，都是常見狀況。 從過去的備份復原失敗的獨立主要網站總比完全沒有備份要來得好。 對於階層中的網站伺服器，備份必須是在 SQL Server 變更追蹤保留期間內，否則就不需要備份。  
 
--   对于若干备份周期，可能检测不到站点中的损坏。 可能必须使用获取自站点损坏之前的备份快照。 这适用于独立主站点以及层次结构中备份处于 SQL Server 更改跟踪保持期内的站点。  
+-   有可能在數個備份週期中都偵測不到網站損毀。 您可能必須使用站台損毀前的備份快照。 這可套用至獨立主要站台以及其備份是在 SQL Server 變更追蹤保留期間內的階層中站台。  
 
--   举例来说，如果备份站点服务器维护任务失败，站点将可能根本没有任何备份快照。 由于备份任务会在其开始备份当前数据之前删除以前的备份快照，因此将不具备有效的备份快照。  
+-   例如，如果備份網站伺服器維護工作失敗，網站就可能完全沒有備份快照。 由於備份工作會在開始備份現有資料前將過去的備份快照全部移除，如此就會沒有有效的備份快照。  
 
-## <a name="using-the-afterbackupbat-file"></a>使用 AfterBackup.bat 文件  
-成功备份站点之后，备份站点服务器任务会自动尝试运行一个名为 AfterBackup.bat 的文件。 必须在 &lt;*ConfigMgrInstallationFolder*>\Inboxes\Smsbkup 中手动创建 AfterBackup.bat 文件。 如果 AfterBackup.bat 文件存在并存储在正确的文件夹中，则该文件将在备份任务完成后自动运行。
+## <a name="using-the-afterbackupbat-file"></a>使用 AfterBackup.bat 檔案  
+順利備份站台之後，備份站台伺服器工作會自動嘗試執行名為 AfterBackup.bat 的檔案。 您必須在 &lt;*ConfigMgrInstallationFolder*>\Inboxes\Smsbkup 中手動建立 AfterBackup.bat 檔案。 如果 AfterBackup.bat 檔案存在，且儲存在正確的資料夾中，則會在備份工作完成後自動執行。
 
-AfterBackup.bat 文件使你能够在每个备份操作结束时将备份快照存档，并自动执行不属于备份站点服务器维护任务一部分的其他备份后任务。 AfterBackup.bat 文件将存档和备份操作结合，从而确保将每个新备份快照存档。
+AfterBackup.bat 檔案可讓您在每次備份操作結束時封存備份快照，並自動執行其他非備份網站伺服器維護工作的備份後工作。 AfterBackup.bat 檔案會整合封存與備份操作，如此即可確保封存每個新的備份快照。
 
-如果 AfterBackup.bat 文件不存在，备份任务将跳过该文件，不会对备份操作产生影响。 要验证站点备份任务是否成功运行了 AfterBackup.bat 文件，请查看“监视”工作区的“组件状态”节点，并查看 SMS_SITE_BACKUP 的状态消息。 如果任务成功启动了 AfterBackup.bat 命令文件，你将看到消息 ID 5040。  
+若 AfterBackup.bat 檔案不存在，則備份工作就會將其略過，而對於備份操作沒有任何影響。 若要確認網站備份工作是否已成功執行 AfterBackup.bat 檔，請參閱 [監視]  工作區內的 [元件狀態]  節點，並檢閱 SMS_SITE_BACKUP 的狀態訊息。 工作成功啟動 Afterbackup.bat 命令檔時，您會看見訊息 ID 5040。  
 
 > [!TIP]  
->  要创建 AfterBackup.bat 文件以将站点服务器备份文件存档，必须在该批处理文件中使用复制命令工具，例如 [Robocopy](http://go.microsoft.com/fwlink/p/?LinkId=228408)。 例如，你可以创建 AfterBackup.bat 文件，并在第一行上添加以下类似内容：`Robocopy E:\ConfigMgr_Backup \\ServerName\ShareName\ConfigMgr_Backup /MIR`  
+>  若要建立 AfterBackup.bat 檔案以封存您的站台伺服器備份檔案，您必須在批次檔中使用複製命令工具，例如 [Robocopy](http://go.microsoft.com/fwlink/p/?LinkId=228408)。 例如，您可以建立 AfterBackup.bat 檔，然後在第一行加入如下的內容：`Robocopy E:\ConfigMgr_Backup \\ServerName\ShareName\ConfigMgr_Backup /MIR`  
 
- 尽管 AfterBackup.bat 的预期用途是将备份快照存档，但你可以创建 AfterBackup.bat 文件以在每个备份操作结束时执行其他任务。  
+ 雖然 AfterBackup.bat 的用途是封存備份快照，您也可以建立 AfterBackup.bat 檔，在每次備份操作結束時執行額外工作。  
 
-##  <a name="supplemental-backup-tasks"></a>补充备份任务  
-备份站点服务器维护任务提供站点服务器文件和站点数据库的备份快照，但会存在一些你在创建备份策略时必须考虑的其他未备份项目。 使用下列部分来帮助完成 Configuration Manager 备份策略。  
+##  <a name="supplemental-backup-tasks"></a>增補的備份工作  
+備份網站伺服器維護工作為網站伺服器檔案和網站資料庫提供備份快照，但在您建立備份策略時，還有其他項目並未備份，這是必須納入考慮的。 使用下列各節可協助您完成 Configuration Manager 備份策略。  
 
-### <a name="back-up-custom-reporting-services-reports"></a>备份自定义 Reporting Services 报表  
-如果修改了预定义或已创建自定义 Reporting Services 报表，则为报表服务器数据库文件创建备份是备份策略的一个重要部分。 报表服务器备份必须包括报表和模型的源文件、加密密钥、自定义程序集或扩展、配置文件、自定义报表中使用的自定义 SQL Server 视图、自定义存储过程等的备份。  
+### <a name="back-up-custom-reporting-services-reports"></a>支持自訂 Reporting Services 報告  
+您已經修改預先定義或建立自訂的 Reporting Services 報告時，針對報告伺服器資料庫檔案建立備份也是備份策略中很重要的部分。 報告伺服器備份必須包含報告和模組、加密金鑰、自訂組件或延伸、設定檔案、自訂報告中所使用之自訂 SQL Server 檢視、自訂儲存程序等的來源檔備份。  
 
 > [!IMPORTANT]  
->  将 Configuration Manager 升级到较新版本时，预定义的报表可能被新报表覆盖。 如果修改预定义报表，请备份该报表，然后在 Reporting Services 中将其还原。  
+>  Configuration Manager 升級到較新版本時，新報告可能會覆寫預先定義的報告。 如果您修改預先定義的報告，請先備份報告，然後在 Reporting Services 中還原。  
 
- 有关在 Reporting Services 中备份自定义报表的详细信息，请参阅 SQL Server 2014 联机丛书中的 [Reporting Services 安装的备份和还原操作](https://technet.microsoft.com/library/ms155814\(v=sql.120\).aspx) 。  
+ 如需備份 Reporting Services 中的自訂報告的詳細資訊，請參閱《SQL Server 2014 線上叢書》中的 [Reporting Services 安裝的備份與還原作業](https://technet.microsoft.com/library/ms155814\(v=sql.120\).aspx) 。  
 
-### <a name="back-up-content-files"></a>备份内容文件  
-Configuration Manager 中的内容库是存储软件更新、应用程序、操作系统部署等的所有内容文件的位置。 内容库位于站点服务器和每个分发点上。 “备份站点服务器”维护任务不包含内容库或包源文件的备份。 在站点服务器失败时，有关内容库文件的信息会被还原到站点数据库，但你必须还原站点服务器上的内容库和包源文件。  
+### <a name="back-up-content-files"></a>備份內容檔案  
+Configuration Manager 中的內容庫是儲存軟體更新、應用程式、作業系統部署等之所有內容檔案的位置。 內容庫位於站台伺服器和每個發佈點上。 備份網站伺服器維護工作並不包括內容庫或套件來源檔案的備份。 網站伺服器失敗時，內容庫檔案相關資訊會還原至網站資料庫，但您必須在網站伺服器上還原內容庫和套件來源檔案。  
 
--   内容库：必须还原内容库，然后才能将内容重新分发到分发点。 当开始执行内容重分发时，Configuration Manager 会将文件从站点服务器上的内容库复制到分发点。 站点服务器的内容库位于 SCCMContentLib 文件夹中，该文件夹通常位于安装站点时可用磁盘空间最多的驱动器上。  
+-   **內容庫**：必須先還原內容庫，您才能將內容重新發佈至發佈點。 當您開始重新發佈內容時，Configuration Manager 會從站台伺服器的內容庫將檔案複製到發佈點。 站台伺服器的內容庫位於 SCCMContentLib 資料夾中，這個資料夾一般位於安裝站台時可用磁碟空間最大的磁碟機上。  
 
--   包源文件：必须还原包源文件，然后才能更新分发点上的内容。 当开始进行内容更新时，Configuration Manager 会将新文件或修改的文件从包源复制到内容库，后者依次将这些文件复制到关联的分发点。 你可以在 SQL Server 中运行以下查询来查找所有包和应用程序的包源位置：`SELECT * FROM v_Package`。 你可以通过查看包 ID 的前三个字符来确定包源站点。 例如，如果包 ID 为 CEN00001，则源站点的站点代码为 CEN。 在还原包源文件时，必须将它们还原到发生故障之前所在的同一位置。  
+-   **封裝來源檔案**：必須先還原封裝來源檔案，您才能在發佈點上更新內容。 當您開始進行內容更新時，Configuration Manager 會從套件來源將新的或修改過的檔案複製到內容庫，接著將檔案複製到關聯的發佈點。 您可以在 SQL Server 中執行以下查詢，找出所有套件和應用程式的套件來源位置： `SELECT * FROM v_Package`。 您可以查看封裝識別碼的前三個字元，藉此識別封裝來源站台。 例如，如果封裝識別碼為 CEN00001，則來源站台的站台碼為 CEN。 當您還原套件來源檔案時，檔案必須還原到失敗前所在的相同位置。  
 
- 验证是否在站点服务器的文件系统备份中包括了内容库和包源位置。  
+ 確認您在網站伺服器的檔案系統備份中同時包含內容庫和套件來源位置。  
 
-### <a name="back-up-custom-software-updates"></a>备份自定义软件更新  
- System Center Updates Publisher 2011 是一种独立工具，通过该工具可将自定义软件更新发布到 Windows Server Update Services (WSUS)、将软件更新同步到 Configuration Manager、评估软件更新符合性，并将自定义软件更新部署到客户端。 Updates Publisher 为其软件更新存储库使用本地数据库。 使用 Updates Publisher 管理自定义软件更新时，请确定是否应在备份计划中包括 Updates Publisher 数据库。 有关 Updates Publisher 的详细信息，请参阅 System Center TechCenter 库中的 [System Center Updates Publisher 2011](http://go.microsoft.com/fwlink/p/?LinkId=228726) 。  
+### <a name="back-up-custom-software-updates"></a>備份自訂的軟體更新  
+ System Center Updates Publisher 2011 是一種獨立工具，可讓您將自訂軟體更新發佈到 Windows Server Update Services (WSUS)、將軟體更新同步處理至 Configuration Manager、評估軟體更新合規性，以及將自訂軟體更新部署至用戶端。 Updates Publisher 會使用本機資料庫作為其軟體更新存放庫。 使用 Updates Publisher 管理自訂軟體更新時，需判斷是否應將 Updates Publisher 資料庫納入備份計畫中。 如需更新發行者的詳細資訊，請參閱 System Center TechCenter 文件庫中的 [System Center Updates Publisher 2011 (System Center 更新發行者 2011)](http://go.microsoft.com/fwlink/p/?LinkId=228726) 。  
 
- 使用下列过程来备份 Updates Publisher 数据库。  
+ 使用以下程序來備份 Updates Publisher 資料庫。  
 
-#### <a name="to-back-up-the-updates-publisher-2011-database"></a>备份 Updates Publisher 2011 数据库  
+#### <a name="to-back-up-the-updates-publisher-2011-database"></a>備份更新發行者 2011 資料庫  
 
-1.  在运行 Updates Publisher 的计算机上，浏览到 %*USERPROFILE*%\AppData\Local\Microsoft\System Center Updates Publisher 2011\5.00.1727.0000\\ 中的 Updates Publisher 数据库文件 (Scupdb.sdf)。 每个运行 Updates Publisher 的用户有不同的数据库文件。  
+1.  在執行 Updates Publisher 的電腦上，瀏覽至 %*使用者設定檔*%\AppData\Local\Microsoft\System Center Updates Publisher 2011\5.00.1727.0000\\ 中的 Updates Publisher 資料庫檔案 (Scupdb.sdf)。 每個執行 Updates Publisher 的使用者都有不同的資料庫檔案。  
 
-2.  将数据库文件复制到备份目标。 例如，如果备份目标为 E:\ConfigMgr_Backup，则可将 Updates Publisher 数据库文件复制到 E:\ConfigMgr_Backup\SCUP2011。  
+2.  將資料庫檔案複製到備份目的地。 例如，若備份目的地是 E:\ConfigMgr_Backup，您可以將 Updates Publisher 資料庫檔案複製到 E:\ConfigMgr_Backup\SCUP2011。  
 
     > [!TIP]  
-    >  如果计算机上有多个数据库文件，请考虑将文件存储在子文件夹中，该子文件夹指示与数据库文件关联的用户配置文件。 例如，你可能在 E:\ConfigMgr_Backup\SCUP2011\User1 中有一个数据库文件，并在 E:\ConfigMgr_Backup\SCUP2011\User2 中有另一个数据库文件。  
+    >  電腦上有一個以上的資料庫檔案時，請考慮將檔案儲存於指出與資料庫檔案關聯之使用者設定檔的子資料夾中。 例如，您可以在 E:\ConfigMgr_Backup\SCUP2011\User1 中有一個資料庫檔案，而在 E:\ConfigMgr_Backup\SCUP2011\User2 中有另一個資料庫檔案。  
 
-## <a name="user-state-migration-data"></a>用户状态迁移数据  
-在希望保留当前操作系统的用户状态的操作系统部署方案中，可以使用 Configuration Manager 任务序列来捕获和还原用户状态数据。 状态迁移点的属性中列出了存储用户状态数据的文件夹。 在站点服务器备份维护任务中，不会备份此用户状态迁移数据。 作为备份计划的一部分，你必须手动备份指定用于存储用户状态迁移数据的文件夹。   
+## <a name="user-state-migration-data"></a>使用者狀態移轉資料  
+您可以使用 Configuration Manager 工作順序來擷取和還原作業系統部署案例 (您想保留目前作業系統的使用者狀態) 中的使用者狀態資料。 儲存使用者狀態資料的資料夾會列在狀態移轉點的內容中。 此使用者狀態移轉資料並不會備份為網站伺服器備份維護工作的一部分。 作為您備份計畫的一部分，您必須手動備份所指定用來儲存使用者狀態移轉資料的資料夾。   
 
-### <a name="to-determine-the-folders-used-to-store-user-state-migration-data"></a>确定用于存储用户状态迁移数据的文件夹  
+### <a name="to-determine-the-folders-used-to-store-user-state-migration-data"></a>判斷用來儲存使用者狀態移轉資料的資料夾  
 
-1.  在 Configuration Manager 控制台中，单击“管理”。  
+1.  在 Configuration Manager 主控台中，按一下 [系統管理] 。  
 
-2.  在“管理”工作区中，展开“站点配置”，并选择“服务器和站点系统角色”。  
+2.  在 [系統管理] 工作區中，展開 [站台設定]，然後選擇 [伺服器和站台系統角色]。  
 
-3.  选择承载状态迁移角色的站点系统，然后在“站点系统角色”中选择“状态迁移点”。  
-
-
-4.  在“站点角色”选项卡上的“属性”组中，单击“属性”。  
-5.  “常规”选项卡上的“文件夹详细信息”部分中列出了存储用户状态迁移数据的文件夹。  
+3.  選取裝載狀態移轉角色的站台系統，然後選擇 [站台系統角色] 中的 [狀態移轉點]。  
 
 
+4.  在 [網站角色]  索引標籤的 [內容]  群組中，按一下 [內容] 。  
+5.  儲存使用者狀態移轉資料的資料夾會列在 [一般]  索引標籤上的 [資料夾詳細資料]  區段中。  
 
-## <a name="about-the-sms-writer-service"></a>关于 SMS 编写器服务  
-SMS 编写器是一项服务，该服务在备份过程中与卷影复制服务 (VSS) 交互。 SMS 编写器服务必须正在运行，Configuration Manager 站点备份才能成功完成。  
+
+
+## <a name="about-the-sms-writer-service"></a>關於 SMS 寫入器服務  
+SMS 寫入器是一個服務，會在備份程序進行期間與磁碟區陰影複製服務 (VSS) 互動。 Configuration Manager 站台備份必須執行 SMS 寫入器服務才可以順利完成。  
 
 ### <a name="purpose"></a>目的  
-SMS 编写器向 VSS 服务注册，并绑定到其接口和事件。 当 VSS 广播事件时，或者，如果它将特定通知发送到 SMS 编写器，SMS 编写器将响应通知并执行适当的操作。 SMS 编写器可读取位于 &lt;*ConfigMgr Installation Path*>\inboxes\smsbkup.box 中的备份控制文件 (smsbkup.ctl)，并确定要备份的文件和数据。 SMS 编写器根据此信息以及 SMS 注册表项和子项中的特定数据生成由不同部分组成的元数据。 当请求元数据时，它将元数据发送到 VSS。 然后，VSS 将元数据发送到请求应用程序，即 Configuration Manager 备份管理器。 备份管理器选择备份的数据并通过 VSS 将此数据发送到 SMS 编写器。 SMS 编写器执行适当的步骤来为备份做好准备。 稍后，当 VSS 准备获取快照时，它将发送事件，SMS 编写器停止所有 Configuration Manager 服务，并确保在创建快照时 Configuration Manager 活动已冻结。 完成快照后，SMS 编写器重启服务和活动。  
+SMS 寫入器會登錄至 VSS 服務，並繫結至其介面和事件。 當 VSS 廣播事件或傳送特定通知到 SMS 寫入器時，SMS 寫入器會回應通知，並採取適當的動作。 SMS 寫入器會讀取位於 &lt;ConfigMgr 安裝路徑>\inboxes\smsbkup.box 的備份控制檔案 (smsbkup.ctl)，並決定所備份的檔案及資料。 SMS 寫入器會根據此資訊與來自 SMS 登錄機碼及子機碼的特定資料建立由各種元件組成的中繼資料。 它會在收到要求時將中繼資料傳送至 VSS。 VSS 接著會傳送中繼資料給提出要求的應用程式，即 Configuration Manager 備份管理員。 備份管理員會選取已備份的資料，並經由 VSS 將此資料傳送給 SMS 寫入器。 SMS 寫入器會採取適當的步驟來進行備份的準備。 稍後當 VSS 準備好建立快照時會傳送一個事件，此時 SMS 寫入器會停止所有 Configuration Manager 服務，並確定 Configuration Manager 活動在建立快照時已遭到凍結。 在快照建立完成後，SMS 寫入器會重新啟動服務和活動。  
 
-将自动安装 SMS 编写器服务。 当 VSS 应用程序请求备份或还原时，该服务必须正在运行。  
+SMS 寫入器服務會自動進行安裝。 當 VSS 應用程式要求備份或還原時，SMS 寫入器必須處於執行中狀態。  
 
-### <a name="writer-id"></a>编写器 ID  
-SMS 编写器的编写器 ID 为：03ba67dd-dc6d-4729-a038-251f7018463b。  
+### <a name="writer-id"></a>寫入器 ID  
+SMS 寫入器的寫入器 ID 為：03ba67dd-dc6d-4729-a038-251f7018463b。  
 
-### <a name="permissions"></a>权限  
-SMS 编写器服务必须采用本地系统帐户运行。  
+### <a name="permissions"></a>權限  
+SMS 寫入器服務必須在本機系統帳號戶下執行。  
 
-### <a name="volume-shadow-copy-service"></a>卷影复制服务  
-VSS 是一组 COM API，它实现一个框架，以允许在系统上的应用程序继续写入卷时执行所有卷备份。 VSS 提供一个一致的接口，在用于更新磁盘上的数据的用户应用程序（SMS 编写器服务）和用于备份应用程序的用户应用程序（备份管理器服务）之间实现协作。 有关详细信息，请参阅 Windows Server TechCenter 中的[卷影复制服务](http://go.microsoft.com/fwlink/p/?LinkId=241968)主题。  
+### <a name="volume-shadow-copy-service"></a>磁碟區陰影複製服務  
+VSS 是一組 COM API，其中實作了一個架構以允許進行磁碟區備份時系統上的應用程式仍能繼續寫入磁碟區。 VSS 提供一致的介面，可在磁碟上更新資料的使用者應用程式 (SMS 寫入器服務) 與備份應用程式 (備份管理員服務) 之間進行協調。 如需詳細資訊，請參閱 Windows Server TechCenter 中的[磁碟區陰影複製服務](http://go.microsoft.com/fwlink/p/?LinkId=241968) \(英文\) 主題。  
 
-## <a name="next-steps"></a>后续步骤
-创建备份后，使用该备份练习[站点恢复](/sccm/protect/understand/recover-sites)。 这可以帮助你在需要基于备份执行恢复操作之前熟悉恢复过程，并有助于确认备份是否可成功实现其预期目的。  
-
+## <a name="next-steps"></a>後續步驟
+建立備份之後，請使用該備份來練習[站台復原](/sccm/protect/understand/recover-sites)。 這有助於您在需要仰賴復原程序之前先加以熟悉，並可協助確認備份是否針對其預定用途成功執行。  

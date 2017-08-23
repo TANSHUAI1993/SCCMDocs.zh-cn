@@ -1,83 +1,81 @@
 ---
-title: "配置客户端设置 | Microsoft Docs"
-description: "选择 System Center Configuration Manager 中的客户端设置。"
+title: "設定用戶端設定 | Microsoft Docs"
+description: "選取 System Center Configuration Manager 的用戶端設定。"
 ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 95e9858a-bad4-4651-9e61-2e31dc5050fa
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 809c7938968b4a6efce6ef37fe7b7baf2c9dd3e7
-ms.openlocfilehash: 77e17786302c885052c8861107a49ff826accb65
-ms.contentlocale: zh-cn
-ms.lasthandoff: 12/16/2016
-
+ms.openlocfilehash: 478d562bfb7fdb3921a4278741ff096e81e6092a
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="how-to-configure-client-settings-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中配置客户端设置
+# <a name="how-to-configure-client-settings-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中設定用戶端設定
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用於：System Center Configuration Manager (最新分支)*
 
-可以从“管理” > “客户端设置”管理 System Center Configuration Manager 中的所有客户端设置。 如果要为层次结构中未应用任何自定义设置的所有用户和设备配置设置，请修改默认设置。 如果要将不同设置仅应用于某些用户或设备，请创建自定义设置并将它们部署到集合。  
+您可以從 [系統管理] > [用戶端設定] 管理 System Center Configuration Manager 中的所有用戶端設定。 若您想要設定在階層中未套用任何自訂設定之所有使用者和裝置的設定，可修改預設設定。 如果您只想要將不同的設定套用至部分使用者或裝置，可建立自訂設定並將這些設定部署至集合。  
 
-有关每种客户端设置的详细信息，请参阅[关于 System Center Configuration Manager 中的客户端设置](../../../core/clients/deploy/about-client-settings.md)。
+如需各項用戶端設定的資訊，請參閱[關於 Configuration Manager 中的用戶端設定](../../../core/clients/deploy/about-client-settings.md)。
 
 > [!NOTE]  
->  你还可以使用配置项目来管理客户端，以便评估、跟踪和修正设备的配置符合性。 有关详细信息，请参阅[使用 System Center Configuration Manager 确保设备的合规性](../../../compliance/understand/ensure-device-compliance.md)。  
+>  您也可以使用組態項目管理用戶端，以評估、追蹤和補救裝置的組態相容性。 如需詳細資訊，請參閱 [Ensure device compliance with System Center Configuration Manager](../../../compliance/understand/ensure-device-compliance.md) (使用 System Center Configuration Manager 確保裝置相容性)。  
 
-##  <a name="configure-the-default-client-settings"></a>配置默认客户端设置    
+##  <a name="configure-the-default-client-settings"></a>設定預設的用戶端設定    
 
-1.  在 Configuration Manager 控制台中，选择“管理” > “客户端设置” > “默认客户端设置”。  
+1.  在 Configuration Manager 主控台中，選擇 [系統管理] > [用戶端設定] > [預設用戶端設定]。  
 
-3.  在“主页”选项卡上，选择“属性”。  
+3.  在 [常用] 索引標籤上，選擇 [內容]。  
 
-4.  在导航窗格中查看和配置每个设置组的客户端设置。  
+4.  在瀏覽窗格中，檢視及設定每一組設定的用戶端設定。  
 
- 当客户端计算机下一次下载客户端策略时，将使用这些设置对它们进行配置。 若要为单一客户端启动策略检索，请参阅[如何管理 System Center Configuration Manager 中的客户端](../../../core/clients/manage/manage-clients.md)中的[为 Configuration Manager 客户端启动策略检索](../../../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval)。  
+ 用戶端電腦將會在下一次下載用戶端原則時進行這些設定。 若要起始單一用戶端的原則抓取，請參閱[如何管理 System Center Configuration Manager 中的用戶端](../../../core/clients/manage/manage-clients.md)中的[起始 Configuration Manager 用戶端的原則抓取](../../../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval)。  
 
-##  <a name="create-and-deploy-custom-client-settings"></a>创建和部署自定义客户端设置  
-部署这些自定义设置后，它们将覆盖默认客户端设置。 在开始此过程之前，请确保有一个集合，其中包含需要这些自定义客户端设置的用户或设备。  
+##  <a name="create-and-deploy-custom-client-settings"></a>建立及部署自訂用戶端設定  
+當您部署這些自訂設定時，這些設定會覆寫預設用戶端設定。 在開始此程序之前，請先確定您擁有包含這些需要自訂用戶端設定之使用者或裝置的集合。  
 
-1.  在 Configuration Manager 控制台中，选择“管理” > “客户端设置”。  
+1.  在 Configuration Manager 主控台中，選擇 [系統管理] > [用戶端設定]。  
 
-3.  在“主页”选项卡上的“创建”组中，选择“创建自定义客户端设备设置”，然后选择以下任意选项：  
+3.  在 [常用] 索引標籤的 [建立] 群組中，選擇 [建立自訂用戶端設定]，然後選擇其中一項：  
 
-    -   **创建自定义客户端设备设置**  
+    -   **建立自訂用戶端裝置設定**  
 
-    -   **创建自定义客户端用户设置**  
+    -   **建立自訂用戶端使用者設定**  
 
-4.  指定唯一名称和选项说明。  
+4.  指定唯一的名稱和選項描述。  
 
-5.  选择显示一组设置的一个或多个复选框。  
+5.  選取一個或多個顯示設定群組的核取方塊。  
 
-6.  从导航窗格中选择每组设置，然后配置可用设置，再单击“确定”。   
+6.  選擇瀏覽窗格中的每個設定群組，設定可用的設定，然後按一下 [確定]。   
 
-8.  选择创建的自定义客户端设置。 在“主页”选项卡上的“客户端设置”组中，选择“部署”。  
+8.  選取您建立的自訂用戶端設定。 在 [常用] 索引標籤的 [用戶端設定] 群組中，選擇 [部署]。  
 
-9. 在“选择集合”对话框中，选择合适的集合，然后选择“确定”。 如果在详细信息窗格中单击“部署”  选项卡，你可以验证所选的集合。  
+9. 在 [選取集合] 對話方塊中，選取適當的集合，然後選擇 [確定]。 按一下詳細資料窗格中的 [部署]  索引標籤，即可驗證所選取的集合。  
 
-10. 查看刚刚创建的自定义客户端设置的顺序。 如果有多个自定义客户端设置，则会依据其序号应用这些设置。 如果存在任何冲突，则具有最低序号的设置优先于其他设置。 若要更改序号，请在“主页”选项卡上的“客户端设置”组中选择“上移项目”或“下移项目”。  
+10. 檢視您剛才建立的自訂用戶端設定的順序。 如果您有多個自訂用戶端設定，則這些設定會依照其順序編號套用。 如果發生任何衝突，順序編號最小的設定會覆寫其他設定。 若要變更順序編號，請在 [常用] 索引標籤的 [用戶端設定] 群組中，選擇 [將項目往上移] 或 [將項目往下移] 。  
 
- 当客户端计算机下一次下载客户端策略时，将使用这些设置对它们进行配置。 若要为单一客户端启动策略检索，请参阅[如何管理 System Center Configuration Manager 中的客户端](../../../core/clients/manage/manage-clients.md)中的[为 Configuration Manager 客户端启动策略检索](../../../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval)。  
+ 用戶端電腦將會在下一次下載用戶端原則時進行這些設定。 若要起始單一用戶端的原則抓取，請參閱[如何管理 System Center Configuration Manager 中的用戶端](../../../core/clients/manage/manage-clients.md)中的[起始 Configuration Manager 用戶端的原則抓取](../../../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval)。  
 
-##  <a name="view-client-settings"></a>查看客户端设置  
- 如果已将多个客户端设置部署到同一设备、用户或用户组，则设置的优先顺序和组合可能会很复杂。 查看客户端设置：  
+##  <a name="view-client-settings"></a>檢視用戶端設定  
+ 當有多個用戶端設定部署至相同裝置、使用者或使用者群組時，設定的優先順序和組合可能會很複雜。 若要檢視用戶端設定：  
 
-1.  在 Configuration Manager 控制台中，依次选择“资产和符合性” > “设备” > “用户”或“用户集合”。  
+1.  在 Configuration Manager 主控台中，選擇 [資產與合規性] > [裝置] > [使用者] 或 [使用者集合]。  
 
-3.  在“客户端设置”  组中选择设备、用户或用户组，选择“产生的客户端设置” 。  
+3.  選取裝置、使用者或使用者群組，然後在 [用戶端設定]  群組中，選取 [結果用戶端設定] 。  
 
-4.  从左边窗格中选择一个客户端设置，然后设置将会显示。 在此视图中，设置是只读的。 
+4.  從左窗格選取用戶端設定，隨即顯示設定。 在此檢視中，設定是唯讀的。 
 
     > [!NOTE]  
-    >  若要查看客户端设置，必须对“客户端设置”具有读取权限。  
+    >  若要檢視用戶端設定，您必須具有用戶端設定的讀取存取權限。  
 
     

@@ -1,7 +1,6 @@
 ---
-
-title: "不使用 Internet 连接同步更新 - Configuration Manager | Microsoft Docs"
-description: "在断开 Internet 连接的顶层软件更新点上运行软件更新同步。"
+title: "在沒有網際網路連線的情況下同步處理更新 - Configuration Manager | Microsoft Docs"
+description: "在與網際網路中斷連線的頂層軟體更新點上，執行軟體更新同步處理。"
 keywords: 
 author: dougeby
 ms.author: dougeby
@@ -10,104 +9,98 @@ ms.date: 01/23/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: 1a997c30-8e71-4be5-89ee-41efb2c8d199
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 89158debdf4c345a325feeb608db2215a88ed81b
 ms.openlocfilehash: fd9c1e9418ff1956c6ef98753e23a293440179be
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
-
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
+# <a name="synchronize-software-updates-from-a-disconnected-software-update-point"></a>從已中斷連線的軟體更新點同步處理軟體更新  
 
-# <a name="synchronize-software-updates-from-a-disconnected-software-update-point"></a>从断开连接的软件更新点中同步软件更新  
+*適用於：System Center Configuration Manager (最新分支)*
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+ 當頂層站台的軟體更新點與網際網路中斷連線時，您必須使用 WSUSUtil 工具的匯出和匯入功能同步處理軟體更新中繼資料。 您可以選擇不在 Configuration Manager 階層中的現有 WSUS 伺服器作為同步處理來源。 本主題提供如何使用 WSUSUtil 工具的匯出和匯入功能的資訊。  
 
- 如果顶层站点上的软件更新点从 Internet 断开连接，你必须使用 WSUSUtil 工具的导出和导入功能来同步软件更新元数据。 可以选择不属于 Configuration Manager 层次结构的现有 WSUS 服务器作为同步源。 本主题提供有关如何使用 WSUSUtil 工具的导出和导入功能的信息。  
+ 若要匯出和匯入軟體更新中繼資料，您必須在指定的匯出伺服器上從 WSUS 資料庫匯出軟體更新中繼資料，然後將儲存在本機的授權條款檔案複製到已中斷連線的軟體更新點，然後將軟體更新中繼資料匯入至已中斷連線之軟體更新點上的 WSUS 資料庫。  
 
- 要导出和导入软件更新元数据，你必须从指定导出服务器上的 WSUS 数据库中导出软件更新元数据，接着将本地存储的许可条款文件复制到断开连接的软件更新点，然后将软件更新元数据导入断开连接的软件更新点上的 WSUS 数据库。  
+ 使用下表識別要匯出軟體更新中繼資料的匯出伺服器。  
 
- 使用下表来确定要在其中导出软件更新元数据的导出服务器。  
-
-|软件更新点|连接的软件更新点的上游更新源|断开连接的软件更新点的导出服务器|  
+|軟體更新點|適用於連線軟體更新點的上游更新來源|適用於已中斷連線的軟體更新點的匯出伺服器|  
 |---------------------------|-----------------------------------------------------------------|------------------------------------------------------------|  
-|管理中心站点|Microsoft 更新 (Internet)<br /><br /> 现有 WSUS 服务器|通过使用 Configuration Manager 环境中所需的软件更新分类、产品和语言选择与 Microsoft 更新同步的 WSUS 服务器。|  
-|独立主站点|Microsoft 更新 (Internet)<br /><br /> 现有 WSUS 服务器|通过使用 Configuration Manager 环境中所需的软件更新分类、产品和语言选择与 Microsoft 更新同步的 WSUS 服务器。|  
+|管理中心網站|Microsoft Update (網際網路)<br /><br /> 現有的 WSUS 伺服器|使用您在 Configuration Manager 環境中所需的軟體更新分類、產品和語言，選擇與 Microsoft Update 同步處理的 WSUS 伺服器。|  
+|獨立主要網站|Microsoft Update (網際網路)<br /><br /> 現有的 WSUS 伺服器|使用您在 Configuration Manager 環境中所需的軟體更新分類、產品和語言，選擇與 Microsoft Update 同步處理的 WSUS 伺服器。|  
 
- 在开始导出过程之前，请验证软件更新同步是否已在所选导出服务器上完成，以确保同步最新的软件更新元数据。 要验证软件更新同步是否已成功完成，请使用下列过程。  
+ 請確認已在選取的匯出伺服器上完成軟體更新同步處理，以確定已同步處理最新的軟體更新中繼資料，再啟動匯出程序。 若要確認軟體更新同步處理是否已順利完成，請使用下列程序。  
 
-#### <a name="to-verify-that-software-updates-synchronization-has-completed-successfully-on-the-export-server"></a>验证软件更新同步是否已在导出服务器上成功完成  
+#### <a name="to-verify-that-software-updates-synchronization-has-completed-successfully-on-the-export-server"></a>確認是否已順利在匯出伺服器上完成軟體更新同步處理  
 
-1.  在导出服务器上打开 WSUS 管理控制台并连接到 WSUS 数据库。  
+1.  開啟 WSUS 管理主控台，並連線至匯出伺服器上的 WSUS 資料庫。  
 
-2.  在 WSUS 管理控制台中，单击“同步” 。 软件更新同步尝试的列表将显示在结果窗格中。  
+2.  在 WSUS 管理主控台中，按一下 [同步處理] 。 結果窗格中會顯示軟體更新同步處理次數清單。  
 
-3.  在结果窗格中，找到最新的软件更新同步尝试并验证该尝试是否已成功完成。  
+3.  在結果窗格中，找到最新軟體更新同步處理次數，並確認其已順利完成。  
 
 > [!IMPORTANT]  
->  WSUSUtil 工具必须以本地方式在导出服务器上运行才能导出软件更新元数据，并且它还必须在断开连接的软件更新点服务器上运行才能导入软件更新元数据。 此外，运行 WSUSUtil 工具的用户必须是每个服务器上的本地管理员组的成员。  
+>  WSUSUtil 工具必須在匯出伺服器的本機上執行，才能匯出軟體更新中繼資料，此工具還必須在已中斷連線的軟體更新點伺服器上執行，以匯入軟體更新中繼資料。 此外，執行 WSUSUtil 工具的使用者必須是每一部伺服器之本機 Administrators 群組成員。  
 
-## <a name="export-process-for-software-updates"></a>软件更新的导出过程  
- 软件更新导出过程包括两个主要步骤：将本地存储的许可条款文件复制到断开连接的软件更新点，以及从导出服务器上的 WSUS 数据库中导出软件更新元数据。  
+## <a name="export-process-for-software-updates"></a>軟體更新的匯出程序  
+ 軟體更新的匯出程序包含兩個主要步驟：將儲存在本機的授權條款檔案複製到已中斷連線的軟體更新點，並從匯出伺服器上的 WSUS 資料庫匯出軟體更新中繼資料。  
 
- 使用下列过程将本地许可条款元数据复制到断开连接的软件更新点。  
+ 使用下列程序，將本機授權條款中繼資料複製到已中斷連線的軟體更新點。  
 
-#### <a name="to-copy-local-files-from-the-export-server-to-the-disconnected-software-update-point-server"></a>将本地文件从导出服务器复制到断开连接的软件更新点服务器  
+#### <a name="to-copy-local-files-from-the-export-server-to-the-disconnected-software-update-point-server"></a>將本機檔案從匯出伺服器複製到已中斷連線的軟體更新點伺服器  
 
-1.  在导出服务器上，导航到存储软件更新和软件更新许可条款的文件夹。 默认情况下，WSUS 服务器将文件存储在 <*WSUSInstallationDrive*>\WSUS\WSUSContent\\ 下，其中 *WSUSInstallationDrive* 是安装了 WSUS 的驱动器。  
+1.  在匯出伺服器上，瀏覽至儲存軟體更新的軟體更新和授權條款的資料夾。 依預設，WSUS 伺服器會將檔案儲存在 <WSUS 安裝磁碟機>\WSUS\WSUS 內容\\中，其中 <WSUS 安裝磁碟機> 是安裝 WSUS 的磁碟機。  
 
-2.  将所有文件和文件夹从此位置复制到断开连接的软件更新点服务器上的 WSUSContent 文件夹。  
+2.  將所有檔案和資料夾從此位置複製到已中斷連線之軟體更新點伺服器上的 WSUSContent 資料夾。  
 
- 使用下列过程从导出服务器上的 WSUS 数据库中导出软件更新元数据。  
+ 在匯出伺服器上使用下列程序，從 WSUS 資料庫匯出軟體更新中繼資料。  
 
-#### <a name="to-export-software-updates-metadata-from-the-wsus-database-on-the-export-server"></a>从导出服务器上的 WSUS 数据库中导出软件更新元数据  
+#### <a name="to-export-software-updates-metadata-from-the-wsus-database-on-the-export-server"></a>從匯出伺服器上的 WSUS 資料庫匯出軟體更新中繼資料  
 
-1.  在导出服务器上的命令提示符处，导航到包含 WSUSutil.exe 的文件夹。 默认情况下，该工具位于 %*ProgramFiles*%\Update Services\Tools。 例如，如果该工具位于默认位置中，则键入 **cd %ProgramFiles%\Update Services\Tools**。  
+1.  在匯出伺服器上的命令提示字元中，巡覽至包含 WSUSutil.exe 的資料夾。 根據預設，這項工具位於 %*ProgramFiles*%\Update Services\Tools 中。 例如，若工具位於預設位置，請輸入 **cd %ProgramFiles%\Update Services\Tools**。  
 
-2.  键入下列命令以将软件更新元数据导出为一个包文件：  
+2.  輸入下列內容，將軟體更新中繼資料匯出至套件檔案：  
 
-     **wsusutil.exe export**  *packagename*  *logfile*  
+     **wsusutil.exe 匯出**  *packagename*  *logfile*  
 
      例如：  
 
      **wsusutil.exe export export.cab export.log**  
 
-     此格式可以汇总为如下：WSUSutil.exe 后跟导出选项、在导出操作过程中创建的导出 .cab 文件的名称，以及日志文件的名称。 WSUSutil.exe 从导出服务器中导出元数据，并创建操作的日志文件。  
+     格式摘要如下：WSUSutil.exe 後面接著 export 選項、匯出作業期間建立的匯出 .cab 檔案名稱，以及記錄檔的名稱。 WSUSutil.exe 會從匯出伺服器匯出中繼資料，並建立操作的記錄檔。  
 
     > [!NOTE]  
-    >  包（.cab 文件）和日志文件名称在当前文件夹中必须唯一。  
+    >  套件 (.cab 檔案) 和記錄檔名稱在目前的資料夾中必須是唯一的。  
 
-3.  将导出包移动到导入 WSUS 服务器上包含 WSUSutil.exe 的文件夹。  
+3.  將匯出套件移至匯入 WSUS 伺服器上包含 WSUSutil.exe 的資料夾。  
 
     > [!NOTE]  
-    >  如果将包移动到此文件夹，导入体验可能会更加轻松。 你可以将包移动到导入服务器可访问的任何位置，然后在运行 WSUSutil.exe 时指定该位置。  
+    >  如果您將套件移至此資料夾，匯入程序會更加容易。 您可以將套件移至任何可存取匯入伺服器的位置，然後在執行 WSUSutil.exe 時指定此位置。  
 
-## <a name="import-software-updates-metadata"></a>导入软件更新元数据  
- 使用下列过程将软件更新元数据从导出服务器导入到断开连接的软件更新点。  
+## <a name="import-software-updates-metadata"></a>匯入軟體更新中繼資料  
+ 使用下列程序，將軟體更新中繼資料從匯出伺服器匯入至已中斷連線的軟體更新點。  
 
 > [!IMPORTANT]  
->  决不要导入从你不信任的源中导出的任何数据。 如果导入你不信任的源中的内容，将可能会危害 WSUS 服务器的安全性。  
+>  絕對不可匯入來自任何您不信任之來源所匯出的資料。 如果從不信任來源匯入內容，可能會危及 WSUS 伺服器的安全性。  
 
-#### <a name="to-import-metadata-to-the-database-of-the-import-server"></a>将元数据导入到导入服务器的数据库  
+#### <a name="to-import-metadata-to-the-database-of-the-import-server"></a>將中繼資料匯入至匯入伺服器的資料庫  
 
-1.  在导入 WSUS 服务器上的命令提示符下，导航到包含 WSUSutil.exe 的文件夹。 默认情况下，该工具位于 %*ProgramFiles*%\Update Services\Tools。  
+1.  在匯入 WSUS 伺服器上的命令提示字元中，巡覽至包含 WSUSutil.exe 的資料夾。 根據預設，這項工具位於 %*ProgramFiles*%\Update Services\Tools 中。  
 
-2.  键入下列命令：  
+2.  輸入下列命令：  
 
-     **wsusutil.exe import**  *packagename*  *logfile*  
+     **wsusutil.exe 匯入**  *packagename*  *logfile*  
 
      例如：  
 
      **wsusutil.exe import export.cab import.log**  
 
-     此格式可以汇总为如下：WSUSutil.exe 后跟导入命令、在导出操作过程中创建的包文件 (.cab) 的名称、包文件的路径（如果该文件位于其他文件夹中），以及日志文件的名称。 WSUSutil.exe 从导出服务器中导入元数据，并创建操作的日志文件。  
+     格式摘要如下：WSUSutil.exe 後方接著 import 命令、匯出作業期間建立的套件檔案 (.cab) 名稱、套件檔案的路徑名稱 (如果位於不同的資料夾)，以及記錄檔的名稱。 WSUSutil.exe 會匯入來自匯出伺服器的中繼資料，並建立操作的記錄檔。  
 
-## <a name="next-steps"></a>后续步骤
-在首次同步软件更新后，或有新的可用分类或产品时，必须[配置新的分类和产品](configure-classifications-and-products.md)以便通过新条件同步软件更新。
+## <a name="next-steps"></a>後續步驟
+在您第一次同步處理軟體更新之後，或有新的分類或產品可用之後，必須[設定新的分類和產品](configure-classifications-and-products.md)，使用新的準則來同步處理軟體更新。
 
-通过所需的条件同步软件更新后，[管理软件更新的设置](manage-settings-for-software-updates.md)。  
-
+使用您需要的準則同步處理軟體更新之後，請[管理軟體更新的設定](manage-settings-for-software-updates.md)。  

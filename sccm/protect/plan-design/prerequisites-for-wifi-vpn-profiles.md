@@ -1,59 +1,52 @@
 ---
-title: "Wi-Fi 和 VPN 配置文件先决条件 | Microsoft Docs"
-description: "了解管理 System Center Configuration Manager 中的证书配置文件、Wi-Fi 配置文件和 VPN 配置文件所需的安全权限。"
+title: "Wi-Fi 和 VPN 設定檔必要條件 | Microsoft Docs"
+description: "了解在 System Center Configuration Manager 中管理憑證設定檔、Wi-Fi 設定檔和 VPN 設定檔所需的安全性權限。"
 ms.custom: na
 ms.date: 11/23/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: d2dacb2d-ab3b-42a2-8dc8-94da31f993c2
-caps.latest.revision: 5
-caps.handback.revision: 0
+caps.latest.revision: "5"
+caps.handback.revision: "0"
 author: Nbigman
 ms.author: nbigman
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 31b68ede677df8b86412a334d1d100041a0e659e
 ms.openlocfilehash: 309b0363f9b3ec4a31b8323b9e64c9f73060c281
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="prerequisites-for-wi-fi-and-vpn-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager 中 Wi-Fi 和 VPN 配置文件的先决条件
+# <a name="prerequisites-for-wi-fi-and-vpn-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager 中 Wi-Fi 和 VPN 設定檔的必要條件
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用於：System Center Configuration Manager (最新分支)*
 
-System Center Configuration Manager 中的 Wi-Fi 和 VPN 配置文件仅在产品内有依赖关系。  
+System Center Configuration Manager 中的 Wi-Fi 和 VPN 設定檔僅具有產品內的相依性。  
 
- 你必须具有下列安全权限才能管理公司资源访问设置，例如证书配置文件、Wi-Fi 配置文件和 VPN 配置文件：  
+ 您必須具有下列安全性權限才能管理公司資源存取設定，例如憑證設定檔、Wi-Fi 設定檔和 VPN 設定檔：  
 
--   若要查看和管理 Wi-Fi 配置文件的警报和报表：需要对“警报”对象的“创建”、“删除”、“修改”、“修改报表”、“读取”和“运行报表”权限。  
+-   檢視與管理 Wi-Fi 設定檔的警示和報告：[警示] 物件的 [建立]、[刪除]、[修改]、[修改報告]、[讀取] 和 [執行報告]。  
 
--   若要创建和管理证书配置文件：需要“证书配置文件” 对象的“创作策略” 、“修改报表” 、“读取”  和“运行报表”  权限。  
+-   建立和管理憑證設定檔：[憑證設定檔] 物件的 [撰寫原則] 、[修改報告] 、[讀取]  及 [執行報告]  。  
 
--   若要管理 Wi-Fi、证书和 VPN 配置文件部署：需要对“集合” 对象的“部署配置策略” 、“修改客户端状态警报” 、“读取”  和“读取资源”  。  
+-   管理 Wi-Fi、憑證和 VPN 設定檔部署：[集合] 物件的 [部署組態原則] 、[修改用戶端狀態警示] 、[讀取]  及 [讀取資源]  。  
 
--   若要管理所有配置策略：需要对“配置策略” 对象的“创建” 、“删除” 、“修改” 、“读取”  和“设置安全作用域”  权限。  
+-   管理所有組態原則：[組態原則] 物件的 [建立] 、[刪除] 、[修改] 、[讀取]  及 [設定安全性範圍]  。  
 
--   若要运行与 Wi-Fi 和 VPN 配置文件相关的查询：需要对“查询”对象的“读取”权限。  
+-   執行與 Wi-Fi 和 VPN 設定檔相關的查詢：[查詢] 物件的 [讀取] 權限。  
 
--   若要在 System Center Configuration Manager 控制台中查看 Wi-Fi 和 VPN 配置文件信息：需要对“站点”对象的“读取”权限。  
+-   在 System Center Configuration Manager 主控台中檢視 Wi-Fi 和 VPN 設定檔資訊：[站台] 物件的 [讀取] 權限。  
 
--   若要查看 Wi-Fi 和 VPN 配置文件的状态消息：需要对“状态消息”对象的“读取”权限。  
+-   檢視 Wi-Fi 和 VPN 設定檔的狀態訊息：[狀態訊息] 物件的 [讀取] 權限。  
 
--   若要创建和修改受信任的 CA 证书配置文件：需要对“受信任的 CA 证书配置文件” 对象的“创作策略” 、“修改报表” 、“读取”  和“运行报表”  权限。  
+-   建立和修改信任的 CA 憑證設定檔：[信任的 CA 憑證設定檔] 物件的 [撰寫原則] 、[修改報告] 、[讀取]  及 [執行報告]  。  
 
--   若要创建和管理 VPN 配置文件：需要对“VPN 配置文件” 对象的“创作策略” 、“修改报表” 、“读取”  和“运行报表”  权限。  
+-   建立和管理 VPN 設定檔：[VPN 設定檔] 物件的 [撰寫原則] 、[修改報告] 、[讀取]  及 [執行報告]  。  
 
--   若要创建和管理 Wi-Fi 配置文件：需要对“Wi-Fi 配置文件” 对象的“创作策略” 、“修改报表” 、“读取”  和“运行报表”  权限。  
+-   建立和管理 Wi-Fi 設定檔：[Wi-Fi 設定檔] 物件的 [撰寫原則] 、[修改報告] 、[讀取]  及 [執行報告]  。  
 
- **公司资源访问管理器**安全角色包括在 System Center Configuration Manager 中管理 Wi-Fi 配置文件所需的这些权限。 有关详细信息，请参阅[在 System Center Configuration Manager 中配置安全性](../../core/plan-design/security/configure-security.md)。
-
-
-
-<!--HONumber=Dec16_HO3-->
-
-
+ [公司資源存取管理員] 安全性角色包括在 System Center Configuration Manager 中管理 Wi-Fi 設定檔所需的上列權限。 如需詳細資訊，請參閱[在 System Center Configuration Manager 中設定安全性](../../core/plan-design/security/configure-security.md)。

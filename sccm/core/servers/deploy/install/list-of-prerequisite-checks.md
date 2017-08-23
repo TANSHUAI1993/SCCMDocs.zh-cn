@@ -1,129 +1,126 @@
 ---
-title: "先决条件检查 | Microsoft Docs"
-description: "查看 System Center Configuration Manager 的可用先决条件检查。 包括安全权限检查"
+title: "必要條件檢查 | Microsoft Docs"
+description: "檢閱 System Center Configuration Manager 可用的必要條件檢查。 包括安全性權限的檢查。"
 ms.custom: na
 ms.date: 4/17/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6a279624-ffc9-41aa-8132-df1809708dd5
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dda2f4c01078fbbd174cbcb30357554c24f6abeb
 ms.openlocfilehash: 14834f62ffaa8fcba5ddb7536a0b76e18b557e53
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="list-of-prerequisite-checks-for-system-center-configuration-manager"></a>System Center Configuration Manager 的先决条件检查列表
+# <a name="list-of-prerequisite-checks-for-system-center-configuration-manager"></a>System Center Configuration Manager 的必要條件檢查清單
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用對象：System Center Configuration Manager (最新分支)*
 
-下列部分详细介绍了可用的先决条件检查。
+下列章節詳述可用的必要條件檢查。
 
-有关使用先决条件检查程序的信息，请参阅[先决条件检查程序](prerequisite-checker.md)。  
+如需使用必要條件檢查工具的資訊，請參閱[必要條件檢查工具](prerequisite-checker.md)。  
 
-##  <a name="BKMK_Security"></a> 针对安全权限的先决条件检查  
-下表列出了先决条件检查程序针对安全权限执行的先决条件检查。
+##  <a name="BKMK_Security"></a> 安全性權限的必要條件檢查  
+下表列出必要條件檢查工具針對安全性權限執行的必要條件檢查。
 
-|已执行的检查|说明|严重性|站点适用性|
+|已執行的檢查|說明|嚴重性|站台適用性|
 |---|---|---|---|
-|**管理中心站点上的管理员权限**|验证运行 Configuration Manager 安装程序的用户帐户在管理中心站点计算机上是否有**管理员**权限。 |错误|主站点|
-|**扩展主站点上的管理权限**|验证运行安装程序的用户帐户在将扩展的独立主站点上是否有**管理员**权限。|错误|管理中心站点|
-|**站点系统上的管理权限**|验证运行 Configuration Manager 安装程序的用户帐户在站点服务器计算机上是否有**管理员**权限。 |错误|管理中心站点、 <br>主站点、 <br>辅助站点|
-|**扩展主站点上的 CAS 计算机管理权限**|验证管理中心站点的计算机帐户在将扩展的独立主站点上是否有**管理员**权限。|错误|管理中心站点|
-|**连接到管理中心站点上的 SQL Server**|验证在主站点上运行 Configuration Manager 安装程序以加入现有层次结构的用户帐户在管理中心站点的 SQL Server 实例上是否有 **sysadmin** 角色。|错误|主站点|
-|**站点服务器计算机帐户管理权限**|验证站点服务器计算机帐户在 SQL Server 和管理点计算机上是否有**管理员**权限。|错误|主站点、 <br>SQL Server|
-|**站点系统与 SQL Server 的通信**| 对于配置为针对用于承载 Configuration Manager 站点数据库的 SQL Server 实例运行 SQL Server 服务的帐户，验证是否为该帐户在 Active Directory 域服务中注册了有效的服务主体名称 (SPN)。 必须在 Active Directory 域服务中注册有效的 SPN 才能支持 Kerberos 身份验证。|警告|辅助站点、 <br>管理点|
-|**SQL Server 安全模式**|验证是否针对 Windows 身份验证安全配置了 SQL Server。|警告|SQL Server|
-|**SQL Server sysadmin 权限**|验证运行 Configuration Manager 安装程序的用户帐户在为站点数据库安装选择的 SQL Server 实例上是否有 **sysadmin** 角色。 当安装程序无法访问 SQL Server 的实例来验证权限时，此检查也会失败。|错误|SQL Server|
-|**引用站点的 SQL Server sysadmin 权限**|验证运行 Configuration Manager 安装程序的用户帐户在选作引用站点数据库的 SQL Server 角色实例上是否有 **sysadmin** 角色。 需要 SQL Server **sysadmin** 角色权限才能修改站点数据库。|错误|SQL Server|
+|**管理中心網站上的系統管理員權限**|確認執行 Configuration Manager 安裝程式的使用者帳戶具有管理中心網站電腦上的 [系統管理員] 權限。 |錯誤|主要網站|
+|**擴充主要站台的系統管理權限**|確認執行安裝程式的使用者帳戶具有將擴充之獨立主要站台上的 [系統管理員] 權限。|錯誤|管理中心網站|
+|**站台系統的系統管理權限**|確認執行 Configuration Manager 安裝程式的使用者帳戶具有站台伺服器電腦上的 [系統管理員] 權限。 |錯誤|管理中心網站， <br>主要站台， <br>次要網站|
+|**擴充主要站台的 CAS 電腦系統管理權限**|確認管理中心網站的電腦帳戶具有將擴充之獨立主要站台上的 [系統管理員] 權限。|錯誤|管理中心網站|
+|**管理中心網站上的 SQL Server 連線**|確認要加入現有階層的主要站台上執行 Configuration Manager 安裝程式的使用者帳戶，具有管理中心網站上 SQL Server 執行個體的 **sysadmin** 角色。|錯誤|主要網站|
+|**站台伺服器電腦帳戶系統管理權限**|確認站台伺服器電腦帳戶具有 SQL Server 及管理點電腦上的 [系統管理員] 權限。|錯誤|主要站台， <br>SQL Server|
+|**站台系統與 SQL Server 的通訊**| 確認已在 Active Directory 網域服務中，針對設定要執行裝載 Configuration Manager 站台資料庫的 SQL Server 執行個體之 SQL Server 服務的帳戶，註冊有效的服務主體名稱 (SPN)。 Active Directory 網域服務中必須註冊有效的 SPN 才能支援 Kerberos 驗證。|警告|次要站台， <br>管理點|
+|**SQL Server 安全性模式**|確認已針對 Windows 驗證安全性設定 SQL Server。|警告|SQL Server|
+|**SQL Server sysadmin 權限**|確認執行 Configuration Manager 安裝程式的使用者帳戶，具有為站台資料庫安裝選取之 SQL Server 執行個體上的 **sysadmin** 角色。 如果安裝程式無法存取 SQL Server 執行個體以確認權限，這項檢查也會失敗。|錯誤|SQL Server|
+|**參照站台的 SQL Server sysadmin 權限**|確認執行 Configuration Manager 安裝程式的使用者帳戶，具有選為參照站台資料庫之 SQL Server 角色執行個體上的 **sysadmin** 角色。 需要有 SQL Server **sysadmin** 角色權限才能修改站台資料庫。|錯誤|SQL Server|
 
-##  <a name="BKMK_Dependencies"></a> 针对 Configuration Manager 依赖关系的先决条件检查
-下表列出了先决条件检查程序针对 Configuration Manager 依赖关系执行的先决条件检查。
+##  <a name="BKMK_Dependencies"></a> Configuration Manager 相依性的必要條件檢查
+下表列出必要條件檢查工具針對 Configuration Manager 相依性執行的必要條件檢查。
 
-|已执行的检查|说明|严重性|站点适用性|
+|已執行的檢查|說明|嚴重性|站台適用性|
 |---|---|---|---|
-|**目标主站点上的活动迁移映射**|验证是否不存在到主站点的活动迁移映射。|错误|管理中心站点|
-|**活动复本 MP**|检查活动管理点副本。|错误|主站点|
-|**分发点上的管理权限**|验证运行安装程序的用户帐户在分发点计算机上是否有**管理员**权限。|警告|分发点|
-|**管理点上的管理权限**|验证站点服务器的计算机帐户在管理点和分发点计算机上是否有**管理员**权限。|警告|管理点|
-|**管理共享（站点系统）**|验证站点系统计算机上是否存在所需的管理共享。|警告|管理点|
-|**应用程序兼容性**|验证当前应用程序是否符合应用程序架构。|警告|管理中心站点、 <br>主站点|
-|**已启用 BITS**|验证管理点站点系统计算机上是否安装了后台智能传输服务 (BITS)。 如果此检查失败，则不会安装 BITS，计算机或远程 IIS 主机上不会安装适用于 IIS 7.0 的 Internet Information Services (IIS) 6.0 Windows Management Instrumentation (WMI) 兼容性组件，或者由于站点服务器计算机上未安装 IIS 公共组件，安装程序无法验证远程 IIS 设置。|错误|管理点|
-|**已安装 BITS**|验证 IIS 中是否安装了 BITS。|警告|管理点|
-|**SQL Server 上不区分大小写的排序规则**|验证 SQL Server 安装是否使用不区分大小写的排序规则，例如 SQL_Latin1_General_CP1_CI_AS。|错误|SQL Server|
-|**检查现有独立主站点的版本和站点代码**|验证计划扩展的主站点是否为独立主站点，并验证其是否具有相同版本的 Configuration Manager，但其站点代码与要安装的管理中心站点不同。|错误|管理中心站点、 <br>主站点|
-|**检查不兼容的集合引用**|在升级期间，此检查会验证集合是否仅引用具有相同类型的其他集合。|错误|管理中心站点|  
-|**管理点计算机上的客户端版本**|验证是否在未安装不同版本的 Configuration Manager 客户端的计算机上安装管理点。|错误|管理点|
-|**SQL Server 内存使用的配置**|检查是否为 SQL Server 配置了不受限制的内存使用。 你应将 SQL Server 内存配置为具有最大限制。|警告|SQL Server|
-|**专用的 SQL Server 实例**|检查是否配置了专用 SQL Server 实例来承载 Configuration Manager 站点数据库。 如果另一个站点使用该实例，你必须选择其他实例以供新站点使用。 或者，可以卸载其他站点或将其数据库转移到 SQL Server 的其他实例。|错误|管理中心站点、 <br>主站点、 <br>辅助站点|
-|**服务器上现有的 Configuration Manager 服务器组件**|验证站点服务器或站点系统角色是否尚未安装在为站点安装选择的计算机上。|错误|管理中心站点、 <br>主站点、 <br>辅助站点|
-|**针对 SQL Server 的防火墙例外**|检查 Windows 防火墙是否已禁用，或者 SQL Server 是否存在相关的 Windows 防火墙例外。 必须允许远程访问 Sqlservr.exe 或所需的 TCP 端口。 默认情况下，SQL Server 侦听 TCP 端口 1433，SQL Server Service Broker (SSB) 使用 TCP 端口 4022。|错误|管理中心站点、 <br>主站点、 <br>辅助站点、 <br>管理点|
-|**针对 SQL Server（独立主站点）的防火墙例外**|检查 Windows 防火墙是否已禁用，或者 SQL Server 是否存在相关的 Windows 防火墙例外。 必须允许远程访问 Sqlservr.exe 或所需的 TCP 端口。 默认情况下，SQL Server 侦听 TCP 端口 1433，SSB 使用 TCP 端口 4022。|警告|主站点（仅独立）|
-|**管理点 SQL Server 的防火墙例外**|检查 Windows 防火墙是否已禁用，或者 SQL Server 是否存在相关的 Windows 防火墙例外。|警告|管理点|
-|**IIS HTTPS 配置**|验证 HTTPS 通信协议的 IIS 网站绑定。 如果安装需要 HTTPS 的站点角色，则必须使用有效的公钥基础结构 (PKI) 证书在指定服务器上配置 IIS 站点绑定。|警告|管理点、 <br>分发点|
-|**IIS 服务正在运行**|验证在要安装管理点或分发点的计算机上 IIS 是否已安装并正在运行。|错误|管理点、 <br> 分发点|
-|**匹配扩展主站点的排序规则**|验证将扩展的独立主站点的站点数据库是否与管理中心站点上的站点数据库具有相同的排序规则。|错误|管理中心站点|
-|**已注册 Microsoft 远程差分压缩 (RDC) 库**|验证 RDC 库是否在 Configuration Manager 站点服务器上注册。|错误|管理中心站点、 <br>主站点、 <br>辅助站点|
-|**Microsoft Windows Installer**|验证 Windows Installer 版本。 如果此检查失败，安装程序将无法验证版本或已安装版本是否不符合 Windows Installer 4.5 的最低要求。|错误|管理中心站点、 <br>主站点、 <br>辅助站点|
-|**Microsoft XML Core Services 6.0 (MSXML60)**|验证计算机上是否安装了 MSXML 6.0 或更高版本。|警告|管理中心站点、 <br>主站点、 <br>辅助站点、 <br>Configuration Manager 控制台、 <br>管理点、 <br>分发点|
-|**Configuration Manager 控制台的最低 Minimum .NET Framework 版本**|检查 Configuration Manager 控制台计算机上是否安装了 Microsoft .NET Framework 4.0。 可从 [Microsoft 下载中心](http://go.microsoft.com/fwlink/p/?LinkId=189149)下载 .NET Framework 4.0。|错误|Configuration Manager 控制台|
-|**Configuration Manager 站点服务器的最低 .NET Framework 版本**|检查 Configuration Manager 站点服务器上是否安装了 .NET Framework 3.5。 对于 Windows Server 2008，可以从 [Microsoft 下载中心](http://go.microsoft.com/fwlink/p/?LinkId=185604)下载 Microsoft .NET Framework 3.5。 对于 Windows Server 2008 R2，可以将 .NET Framework 3.5 启用为服务器管理器内的功能。|错误|管理中心站点、 <br>主站点、 <br>辅助站点|
-|**Configuration Manager 辅助站点 SQL Server Express 版本安装的最低 .NET Framework 版本**|验证 Configuration Manager 辅助站点计算机上是否安装了 .NET Framework 4.0，以安装 SQL Server Express。|错误|辅助站点|
-|**父/子数据库排序规则**|验证站点数据库的排序规则是否与父站点数据库的排序规则匹配。 层次结构中的所有站点都必须使用相同的数据库排序规则。|错误|主站点、 <br>辅助站点|
-|**站点服务器上的 PowerShell 2.0**|验证 Configuration Manager Exchange 连接器的站点服务器上是否安装了 Windows PowerShell 2.0 或更高版本。 有关 PowerShell 2.0 的详细信息，请参阅 Microsoft 知识库 [文章 968930](http://go.microsoft.com/fwlink/p/?LinkId=226450) 。|警告|主站点|
-|**主 FQDN**|使用完全限定的域名 (FQDN)，验证计算机的 NetBIOS 名称是否与计算机的本地主机名（FQDN 的第一个标签）匹配。|错误|管理中心站点、 <br>主站点、 <br>辅助站点、 <br>SQL Server|
-|**辅助站点上到 WMI 的远程连接**|检查安装程序是否能够在辅助站点服务器上建立与 WMI 的远程连接。|警告|辅助站点|
-|**所需的 SQL Server 排序规则**|验证 SQL Server 和 Configuration Manager 站点数据库的实例（如果已安装）是否配置为使用 SQL_Latin1_General_CP1_CI_AS 排序规则，除非正在使用中文版操作系统并且需要 GB18030 支持。<br><br>有关更改 SQL Server 实例和数据库排序规则的信息，请参阅 SQL Server 2008 R2 联机丛书中的[设置和更改排序规则](http://go.microsoft.com/fwlink/p/?LinkID=234541) 。  有关启用 GB18030 支持的信息，请参阅 [System Center Configuration Manager 的国际支持](../../../../core/plan-design/hierarchy/international-support.md)。|错误|管理中心站点、 <br>主站点、 <br>辅助站点|
-|**安装程序源文件夹**|验证辅助站点的计算机帐户是否具有安装程序源文件夹和共享的 **“读取”** NTFS 文件系统权限和 **“读取”** 共享权限。<br><br>**注意**：如果使用管理共享（例如，C$ 和 D$），则辅助站点计算机帐户必须是该计算机的**管理员**用户。|错误|辅助站点|
-|**安装程序源版本**|验证为辅助站点安装指定的源文件夹中的 Configuration Manager 版本是否与主站点的 Configuration Manager 版本匹配。|错误|辅助站点|
-|**站点代码正在使用中**|检查在 Configuration Manager 层次结构中是否已不使用指定的站点代码。 你必须为此站点指定唯一的站点代码。|错误|主站点|
-|**SMS 提供程序计算机与站点服务器具有相同的域**|检查运行 SMS 提供程序实例的计算机是否与站点服务器具有相同的域。|错误|SMS 提供程序|
-|**SQL Server 版本**|检查站点上的 SQL Server 版本是否并非 SQL Server Express。|错误|SQL Server|
-|**辅助站点上的 SQL Server Express**|检查 SQL Server Express 是否可成功安装在辅助站点的站点服务器计算机上。|错误|辅助站点|
-|**辅助站点计算机上的 SQL Server**|检查 SQL Server 是否安装在辅助站点计算机上。 不能在远程站点系统上安装 SQL Server。<br><br>**警告**：只有在选择让安装程序使用现有 SQL Server 实例时，此检查才适用。|错误|辅助站点|
-|**SQL Server 进程内存分配**|验证 SQL Server 是否至少为管理中心站点和主站点保留 8 GB 的内存，并至少为辅助站点保留 4 GB 的内存。 若要深入了解如何通过使用 SQL Server Management Studio 设置固定内存量，请参阅[如何设置固定内存量 (SQL Server Management Studio)](http://go.microsoft.com/fwlink/p/?LinkId=233759)。<br><br>**注意**：此检查不适用于辅助站点上的 SQL Server Express，其保留内存只能为 1 GB。|警告|SQL Server|
-|**SQL Server 服务运行帐户**|验证 SQL Server 服务的登录帐户不是本地用户帐户或 LOCAL SERVICE。 你必须将 SQL Server 服务配置为使用有效的域帐户、NETWORK SERVICE 或 LOCAL SYSTEM。|错误|管理中心站点、 <br>主站点、 <br>辅助站点|
-|**SQL Server TCP 端口**|检查是否已为 SQL Server 实例启用了 TCP，并且设置为使用静态端口。|错误|SQL Server|
-|**SQL Server 版本**|验证指定站点数据库服务器上是否安装了支持的 SQL Server 版本。 有关详细信息，请参阅[对 System Center Configuration Manager 的 SQL Server 版本的支持](../../../../core/plan-design/configs/support-for-sql-server-versions.md)。|错误|SQL Server|
-|**升级所不支持的站点系统操作系统版本**|进行升级时，此规则检查运行 Windows Server 2008 或更早版本的计算机上是否安装了除分发点以外的站点系统角色。<br><br>**注意**：因为该检查无法解析将 Intune 和 Configuration Manager 集成后，Azure 中安装的或者是为 Microsoft Intune 使用的云存储安装的站点系统角色的状态，所以可以将这些角色的警告作为误报而忽略。|警告|主站点、 <br>辅助站点|
-|**在扩展主站点上不受支持的“资产智能同步点”站点系统角色**|检查资产智能同步点站点系统角色是否未安装在要扩展的独立主站点上。|错误|管理中心站点|
-|**在扩展主站点上不受支持的“Endpoint Protection 点”站点系统角色**|检查 Endpoint Protection 点站点系统角色是否未安装在要扩展的独立主站点上。|错误|管理中心站点|
-|**在扩展主站点上不受支持的“Microsoft Intune 连接器”站点系统角色**|检查 Microsoft Intune 连接器站点系统角色是否未安装在要扩展的独立主站点上。|错误|管理中心站点|
-|**已安装用户状态迁移工具 (USMT)**|检查是否安装了适用于 Windows 8.1 的 Windows 评估和部署工具包 (ADK) 的用户状态迁移工具 (USMT) 组件。|错误|管理中心站点、 <br>主站点（仅独立）|  
-|**验证 SQL Server 计算机的 FQDN**|检查你为 SQL Server 计算机指定的 FQDN 是否有效。|错误|SQL Server|
-|**验证管理中心站点版本**|检查管理中心站点是否具有相同的 Configuration Manager 版本。|错误|主站点|
-|**验证站点服务器发布到 Active Directory 的权限**|验证站点服务器的计算机帐户对 Active Directory 域中的 **“系统管理”** 容器是否具有 **“完全控制”** 权限。 有关配置所需权限的选项的详细信息，请参阅[为站点发布准备 Active Directory](../../../../core/plan-design/network/extend-the-active-directory-schema.md)。<br><br>**注意**：如果已手动验证权限，则可以忽略此警告。|警告|管理中心站点、 <br>主站点、 <br>辅助站点|
-|**已安装 Windows 部署工具**|检查是否安装了适用于 Windows 10 的 Windows ADK 的 Windows 部署工具组件。|错误|SMS 提供程序|
-|**Windows 故障转移群集**|检查具有管理点或分发点的计算机是否并非 Windows 群集的一部分。|错误|管理点<br>分发点|
-|**已安装 Windows 预安装环境**|检查是否安装了适用于 Windows 10 的 Windows ADK 的 Windows 预安装环境组件。|错误|SMS 提供程序|
-|**Windows 远程管理 (WinRM) 1.1 版**|验证主站点服务器或 Configuration Manage 控制台计算机上是否安装了 WinRM 1.1 以运行带外管理控制台。 有关如何下载 WinRM 1.1 的详细信息，请参阅 Microsoft 知识库 [文章 936059](https://support.microsoft.com/en-us/kb/936059) 。|警告|主站点、 <br>Configuration Manager 控制台|
-|**站点服务器上的 WSUS**|验证站点服务器上是否安装了 Windows Server Update Services (WSUS) 3.0 Service Pack 2 (SP2)。 在不是站点服务器上的计算机上使用软件更新点时，必须在站点服务器上安装 WSUS 管理控制台。 有关 WSUS 的详细信息，请参阅 [Windows Server 更新服务](http://go.microsoft.com/fwlink/p/?LinkID=79477)。|警告|管理中心站点、 <br>主站点|  
+|**目標主要網站上作用中的移轉對應**|確認沒有主要網站的作用中移轉對應。|錯誤|管理中心網站|
+|**使用中的複本 MP**|檢查作用中的管理點複本。|錯誤|主要網站|
+|**發佈點上的系統管理權限**|確認執行安裝程式的使用者帳戶具有發佈點電腦上的 [系統管理員] 權限。|警告|發佈點|
+|**管理點上的系統管理權限**|確認站台伺服器的電腦帳戶具有管理點及發佈點電腦上的 [系統管理員] 權限。|警告|管理點|
+|**系統管理共用 (站台系統)**|確認網站系統電腦上有必要的系統管理共用。|警告|管理點|
+|**應用程式相容性**|確認目前的應用程式與應用程式架構相容。|警告|管理中心網站， <br>主要網站|
+|**BITS 已啟用**|確認管理點網站系統電腦上已安裝背景智慧型傳送服務 (BITS)。 此檢查失敗時，表示未安裝 BITS、電腦上或遠端 IIS 主機上未安裝 IIS 7.0 的 Internet Information Services (IIS) 6.0 Windows Management Instrumentation (WMI) 相容性元件，或是安裝程式無法確認遠端 IIS 設定，因為站台伺服器電腦上未安裝 IIS 通用元件。|錯誤|管理點|
+|**BITS 已安裝**|確認 IIS 中已安裝 BITS。|警告|管理點|
+|**SQL Server 上不區分大小寫的定序**|確認 SQL Server 安裝使用不區分大小寫定序，例如 SQL_Latin1_General_CP1_CI_AS。|錯誤|SQL Server|
+|**檢查現有的獨立主要站台的版本及站台碼**|確認您要擴充的主要站台是獨立的主要站台，且其 Configuration Manager 版本與要安裝的管理中心網站相同，但站台碼不同。|錯誤|管理中心網站， <br>主要網站|
+|**檢查是否有不相容的集合參考**|在升級期間，這項檢查會確認集合是否只參考相同類型的其他集合。|錯誤|管理中心網站|  
+|**管理點電腦上的用戶端版本**|確認您要安裝管理點的電腦並未安裝不同版本的 Configuration Manager 用戶端。|錯誤|管理點|
+|**SQL Server 記憶體使用量設定**|檢查 SQL Server 的記憶體使用量是否設定為無限制。 您應將 SQL Server 記憶體設為具有上限。|警告|SQL Server|
+|**專用的 SQL Server 執行個體**|檢查是否已設定專用的 SQL Server 執行個體來裝載 Configuration Manager 站台資料庫。 如果另一個網站使用執行個體，則您必須選取不同的執行個體讓新網站使用。 或者，您可以解除安裝另一個站台，或將其資料庫移至不同的 SQL Server 執行個體。|錯誤|管理中心網站， <br>主要站台， <br>次要網站|
+|**伺服器上現有的 Configuration Manager 伺服器元件**|確認所選取要進行網站安裝的電腦上並未安裝網站伺服器或網站系統角色。|錯誤|管理中心網站， <br>主要站台， <br>次要網站|
+|**SQL Server 的防火牆例外狀況**|檢查 Windows 防火牆是否停用，或是否有與 SQL Server 相關的 Windows 防火牆例外狀況。 您必須允許從遠端存取 Sqlservr.exe 或必要的 TCP 通訊埠。 根據預設，SQL Server 會接聽 TCP 通訊埠 1433，SQL Server Service Broker 則使用 TCP 通訊埠 4022。|錯誤|管理中心網站， <br>主要站台， <br>次要站台， <br>管理點|
+|**SQL Server 的防火牆例外狀況 (獨立主要站台)**|檢查 Windows 防火牆是否停用，或是否有與 SQL Server 相關的 Windows 防火牆例外狀況。 您必須允許從遠端存取 Sqlservr.exe 或必要的 TCP 通訊埠。 根據預設，SQL Server 會接聽 TCP 通訊埠 1433，SSB 則使用 TCP 通訊埠 4022。|警告|主要站台 (僅限獨立)|
+|**管理點的 SQL Server 防火牆例外狀況**|檢查 Windows 防火牆是否停用，或是否有與 SQL Server 相關的 Windows 防火牆例外狀況。|警告|管理點|
+|**IIS HTTPS 設定**|確認 HTTPS 通訊協定的 IIS 網站繫結。 當您安裝需要 HTTPS 的站台角色時，必須在指定的伺服器上使用有效的公開金鑰基礎結構 (PKI) 憑證設定 IIS 網站繫結。|警告|管理點， <br>發佈點|
+|**IIS 服務執行中**|確認電腦上已安裝 IIS 且執行中，以安裝管理點或發佈點。|錯誤|管理點， <br> 發佈點|
+|**比對擴充主要站台的定序**|確認您要擴充之獨立主要站台的站台資料庫與管理中心網站的站台資料庫擁有相同的定序。|錯誤|管理中心網站|
+|**已登錄 Microsoft 遠端差異壓縮 (RDC) 程式庫**|確認 Configuration Manager 站台伺服器已登錄 RDC 程式庫。|錯誤|管理中心網站， <br>主要站台， <br>次要網站|
+|**Microsoft Windows Installer**|確認 Windows Installer 版本。 這項檢查失敗時，表示安裝程式無法確認版本，或安裝的版本不符合 Windows Installer 4.5 的最低需求。|錯誤|管理中心網站， <br>主要站台， <br>次要網站|
+|**Microsoft XML Core Services 6.0 (MSXML60)**|確認電腦上已安裝 MSXML 6.0 或更新版本。|警告|管理中心網站， <br>主要站台， <br>次要站台， <br>Configuration Manager 主控台， <br>管理點， <br>發佈點|
+|**Configuration Manager 主控台的最低 .NET Framework 版本**|檢查 Configuration Manager 主控台電腦是否已安裝 Microsoft .NET Framework 4.0。 您可以從 [ Microsoft 下載中心](http://go.microsoft.com/fwlink/p/?LinkId=189149)下載 .NET Framework 4.0。|錯誤|Configuration Manager 主控台|
+|**Configuration Manager 站台伺服器的最低 .NET Framework 版本**|檢查 Configuration Manager 站台伺服器是否已安裝 .NET Framework 3.5。 若為 Windows Server 2008，您可以從 [Microsoft 下載中心](http://go.microsoft.com/fwlink/p/?LinkId=185604)下載 Microsoft .NET Framework 3.5。 若為 Windows Server 2008 R2，您可以在伺服器管理員內將 .NET Framework 3.5 當成功能啟用。|錯誤|管理中心網站， <br>主要站台， <br>次要網站|
+|**Configuration Manager 次要站台之 SQL Server Express Edition 安裝的最低 .NET Framework 版本**|確認用於安裝 SQL Server Express 的 Configuration Manager 次要站台電腦上是否安裝 .NET Framework 4.0。|錯誤|次要網站|
+|**父/子資料庫定序**|確認網站資料庫的定序符合父網站資料庫的定序。 階層中的所有網站都必須使用相同的資料庫定序。|錯誤|主要站台， <br>次要網站|
+|**站台伺服器上的 PowerShell 2.0**|確認 Configuration Manager Exchange 連接器的站台伺服器上已安裝 Windows PowerShell 2.0 版或更新版本。 如需 PowerShell 2.0 的詳細資訊，請參閱 Microsoft 知識庫中的 [文章編號: 968930](http://go.microsoft.com/fwlink/p/?LinkId=226450) 。|警告|主要網站|
+|**主要 FQDN**|使用完整網域名稱 (FQDN) 確認電腦的 NetBIOS 名稱符合電腦的本機主機名稱 (FQDN 的第一個標籤)。|錯誤|管理中心網站， <br>主要站台， <br>次要站台， <br>SQL Server|
+|**次要站台上的 WMI 遠端連線**|檢查安裝程式是否能在次要網站伺服器上建立與 WMI 的遠端連線。|警告|次要網站|
+|**所需的 SQL Server 定序**|確認 SQL Server 執行個體和 Configuration Manager 站台資料庫 (如有安裝) 設定為使用 SQL_Latin1_General_CP1_CI_AS 定序，除非您使用中文作業系統並需要 GB18030 支援。<br><br>如需變更 SQL Server 執行個體和資料庫定序的詳資訊，請參閱《SQL Server 2008 R2 線上叢書》中的[設定和變更定序](http://go.microsoft.com/fwlink/p/?LinkID=234541)。  如需啟用 GB18030 支援的資訊，請參閱 [System Center Configuration Manager 的多語系支援](../../../../core/plan-design/hierarchy/international-support.md)。|錯誤|管理中心網站， <br>主要站台， <br>次要網站|
+|**安裝程式來源資料夾**|確認次要網站的電腦帳戶具有安裝程式來源資料夾和共用的 **Read** NTFS 檔案系統權限及 **Read** 共用權限。<br><br>**注意**：如果您使用系統管理共用 (例如 C$ 和 D$)，則次要站台電腦帳戶必須是電腦上的 [系統管理員] 使用者。|錯誤|次要網站|
+|**安裝程式來源版本**|確認來源資料夾中，您為次要站台安裝指定的 Configuration Manager 版本符合主要站台的 Configuration Manager 版本。|錯誤|次要網站|
+|**使用中的站台碼**|確認您指定的站台碼尚未在 Configuration Manager 階層中使用。 您必須為此網站指定唯一的網站碼。|錯誤|主要網站|
+|**SMS 提供者電腦具有與站台伺服器相同的網域**|檢查執行 SMS 提供者執行個體的電腦是否具有與站台伺服器相同的網域。|錯誤|SMS 提供者|
+|**SQL Server 版本**|確認網站上 SQL Server 的版本不是 SQL Server Express。|錯誤|SQL Server|
+|**次要站台上的 SQL Server Express**|確認 SQL Server Express 是否可成功安裝到次要網站的網站伺服器電腦上。|錯誤|次要網站|
+|**次要站台電腦上的 SQL Server**|確認次要網站電腦上是否已安裝 SQL Server。 您無法在遠端站台系統上安裝 SQL Server。<br><br>**警告**：這項檢查只有在您選取讓安裝程式使用現有的 SQL Server 執行個體時才適用。|錯誤|次要網站|
+|**SQL Server 處理程序記憶體配置**|確認 SQL Server 至少保留 8 GB 給管理中心網站和主要網站，以及至少 4 GB 給次要網站。 如需如何使用 SQL Server Management Studio 設定固定的記憶體數量的詳細資訊，請參閱[如何：設定固定的記憶體數量 (SQL Server Management Studio)](http://go.microsoft.com/fwlink/p/?LinkId=233759)。<br><br>**注意**：這項檢查不適用次要站台上的 SQL Server Express，其保留記憶體限於 1 GB。|警告|SQL Server|
+|**SQL Server 服務執行帳戶**|確認 SQL Server 服務的登入帳戶不是本機使用者帳戶或 LOCAL SERVICE。 您必須將 SQL Server 服務設定為使用有效的網域帳戶、NETWORK SERVICE 或 LOCAL SYSTEM。|錯誤|管理中心網站， <br>主要站台， <br>次要網站|
+|**SQL Server TCP 通訊埠**|檢查 SQL Server 執行個體的 TCP 是否已啟用且設為使用靜態連接埠。|錯誤|SQL Server|
+|**SQL Server 版本**|確認指定的網站資料庫伺服器上已安裝支援的 SQL Server 版本。 如需詳細資訊，請參閱 [System Center Configuration Manager 的 SQL Server 版本支援](../../../../core/plan-design/configs/support-for-sql-server-versions.md)。|錯誤|SQL Server|
+|**不支援升級的站台系統作業系統版本**|進行升級時，此規則會檢查執行 Windows Server 2008 或更舊版本的電腦上是否已安裝發佈點以外的站台系統角色。<br><br>**注意**：由於這項檢查無法解析安裝在 Azure 中的站台系統角色狀態，也無法解析您在整合 Intune 與 Configuration Manager 時，為 Microsoft Intune 所使用之雲端存放裝置安裝的站台系統角色狀態，因此您可以將這些角色的警告視為誤判而予以忽略。|警告|主要站台， <br>次要網站|
+|**擴充的主要站台上有不支援的站台系統角色「Asset Intelligence 同步處理點」**|確認您要擴充的獨立主要站台上並未安裝 Asset Intelligence 同步處理點站台系統角色。|錯誤|管理中心網站|
+|**擴充的主要站台上有不支援的站台系統角色「Endpoint Protection 點」**|檢查您要擴充的獨立主要站台上並未安裝 Endpoint Protection 點站台系統角色。|錯誤|管理中心網站|
+|**擴充的主要站台上有不支援的站台系統角色「Microsoft Intune 連接器」**|檢查您要擴充的獨立主要站台上並未安裝 Microsoft Intune 連接器站台系統角色。|錯誤|管理中心網站|
+|**已安裝使用者狀態移轉工具 (USMT)**|檢查是否已安裝 Windows 8.1 適用之 Windows 評定及部署封裝 (ADK) 的使用者狀態移轉工具 (USMT) 元件。|錯誤|管理中心網站， <br>主要站台 (僅限獨立)|  
+|**驗證 SQL Server 電腦的 FQDN**|檢查您為 SQL Server 電腦指定的 FQDN 是否有效。|錯誤|SQL Server|
+|**驗證管理中心網站版本**|檢查管理中心網站是否具有相同版本的 Configuration Manager。|錯誤|主要網站|
+|**驗證站台伺服器發佈至 Active Directory 的權限**|確認網站伺服器的電腦帳戶對其 Active Directory 網域中的 **系統管理** 容器具有 **完全控制** 權限。 如需設定必要權限之選項的詳細資訊，請參閱[準備 Active Directory 以發行站台](../../../../core/plan-design/network/extend-the-active-directory-schema.md)。<br><br>**注意**：如已手動驗證權限，則可忽略此警告。|警告|管理中心網站， <br>主要站台， <br>次要網站|
+|**已安裝 Windows 部署工具**|檢查是否已安裝 Windows ADK for Windows 10 的 Windows 部署工具元件。|錯誤|SMS 提供者|
+|**Windows 容錯移轉叢集**|檢查具有管理點或發佈點的電腦是否不是 Windows 叢集的一部分。|錯誤|管理點<br>發佈點|
+|**已安裝 Windows 預先安裝環境**|檢查是否已安裝 Windows ADK for Windows 10 的 Windows 預先安裝環境元件。|錯誤|SMS 提供者|
+|**Windows 遠端管理 (WinRM) v1.1**|確認主要站台伺服器或 Configuration Manager 主控台電腦上已安裝 WinRM 1.1，以執行頻外管理主控台。 如需如何下載 WinRM 1.1 的詳細資訊，請參閱 Microsoft 知識庫中的 [文章編號: 936059](https://support.microsoft.com/en-us/kb/936059) 。|警告|主要站台， <br>Configuration Manager 主控台|
+|**站台伺服器上的 WSUS**|確認站台伺服器上已安裝 Windows Server Update Services (WSUS) 3.0 Service Pack 2 (SP2)。 當您在不是站台伺服器的電腦上使用軟體更新點時，必須在站台伺服器上安裝 WSUS 管理主控台。 如需 WSUS 的詳細資訊，請參閱 [Windows Server Update Services](http://go.microsoft.com/fwlink/p/?LinkID=79477)。|警告|管理中心網站， <br>主要網站|  
 
-##  <a name="BKMK_Requirements"></a> 针对系统需求的先决条件检查  
-下表列出了先决条件检查程序针对系统需求执行的检查。  
+##  <a name="BKMK_Requirements"></a> 系統需求的必要條件檢查  
+下表列出必要條件檢查工具針對系統需求執行的必要條件檢查。  
 
-|已执行的检查|说明|严重性|站点适用性|
+|已執行的檢查|說明|嚴重性|站台適用性|
 |---|---|---|---|
-|**Active Directory 域功能级别检查**|验证 Active Directory 域功能级别是否最低为 Windows Server 2008 R2。|警告|管理中心站点、 <br>主站点|
-|**检查服务器服务是否正在运行**|验证服务器服务是否已启动。|错误|管理中心站点、 <br>主站点、 <br>辅助站点|  
-|**域成员身份**|验证 Configuration Manager 计算机是否为 Windows 域的成员。|错误|管理中心站点、 <br>主站点、 <br>辅助站点、 <br>SMS 提供程序、 <br>SQL Server|
-|**域成员身份**|验证 Configuration Manager 计算机是否为 Windows 域的成员。|警告|管理点、 <br>分发点|
-|**站点服务器上的 FAT 驱动器**|检查是否已使用 FAT 文件系统格式化了磁盘驱动器。 为提高安全性，在使用 NTFS 文件系统格式化的磁盘驱动器上安装站点服务器组件。|警告|主站点|
-|**站点服务器上的可用磁盘空间**|为安装站点服务器，站点服务器计算机至少必须有 15 GB 的可用磁盘空间。 如果将 SMS 提供程序站点系统角色安装在同一台计算机上，则必须有 1 GB 的额外可用空间。|错误|管理中心站点、 <br>主站点、 <br>辅助站点|
-|**正在等待系统重启**|检查在你运行安装程序之前另一个程序是否需要重启服务器。|错误|管理中心站点、 <br>主站点、 <br>辅助站点、 <br>Configuration Manager 控制台、 <br>SMS 提供程序、 <br>SQL Server、 <br>管理点、 <br>分发点|
-|**只读域控制器**|只读域控制器 (RODC) 上不支持站点数据库服务器和辅助站点服务器。 有关详细信息，请参阅 Microsoft 知识库中的 [You may encounter problems when installing SQL Server on a domain controller](http://go.microsoft.com/fwlink/p/?LinkId=264856)（在域控制器上安装 SQL Server 时可能会遇到的问题）。|错误|管理中心站点、 <br>主站点、 <br>辅助站点|
-|**架构扩展**|确定 Active Directory 域服务架构是否已扩展，如果已扩展，则确定所使用的架构扩展的版本。 对于站点服务器安装，不要求进行 Configuration Manager Active Directory 架构扩展，但是建议执行此操作以便充分使用 Configuration Manager 的所有功能。 有关扩展架构的优势的详细信息，请参阅[为站点发布准备 Active Directory](../../../../core/plan-design/network/extend-the-active-directory-schema.md)。|警告|管理中心站点、 <br>主站点|
-|**站点服务器 FQDN 长度**|检查站点服务器计算机的 FQDN 的长度。|错误|管理中心站点、 <br>主站点、 <br>辅助站点|
-|**不受支持的 Configuration Manager 控制台操作系统**|验证 Configuration Manager 控制台是否可安装在运行支持的操作系统版本的计算机上。 有关详细信息，请参阅 [System Center Configuration Manager 控制台支持的操作系统](/sccm/core/plan-design/configs/supported-operating-systems-consoles)。|错误|Configuration Manager 控制台|
-|**安装程序不支持的站点服务器操作系统版本**|验证服务器上是否运行支持的操作系统。 有关详细信息，请参阅 [System Center Configuration Manager 站点系统服务器支持的操作系统](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers.md)。|错误|管理中心站点、 <br>主站点、 <br>辅助站点、 <br>Configuration Manager 控制台、 <br>管理点、 <br>分发点|
-|**验证数据库一致性**|从 1602 版开始，此检查用于验证数据库一致性。|错误|管理中心站点、 <br>主站点|  
-
+|**Active Directory 網域功能等級檢查**|確認 Active Directory 網域功能等級至少為 Windows Server 2008 R2。|警告|管理中心網站， <br>主要網站|
+|**檢查伺服器服務是否正在執行**|確認伺服器服務是否已啟動。|錯誤|管理中心網站， <br>主要站台， <br>次要網站|  
+|**網域成員資格**|確認 Configuration Manager 電腦是 Windows 網域的成員。|錯誤|管理中心網站， <br>主要站台， <br>次要站台， <br>SMS 提供者， <br>SQL Server|
+|**網域成員資格**|確認 Configuration Manager 電腦是 Windows 網域的成員。|警告|管理點， <br>發佈點|
+|**站台伺服器上的 FAT 磁碟機**|檢查磁碟機是否使用 FAT 檔案系統格式化。 在使用 NTFS 檔案系統格式化的磁碟機上安裝站台伺服器元件可獲得較高的安全性。|警告|主要網站|
+|**站台伺服器上的可用磁碟空間**|站台伺服器電腦必須至少有 15 GB 的可用磁碟空間供安裝站台伺服器使用。 如果您在同一部電腦上安裝 SMS 提供者網站系統角色，則必須有額外 1 GB 的可用空間。|錯誤|管理中心網站， <br>主要站台， <br>次要網站|
+|**系統重新啟動擱置中**|檢查在您執行安裝程式之前，是否有其他程式要求重新啟動伺服器。|錯誤|管理中心網站， <br>主要站台， <br>次要站台， <br>Configuration Manager 主控台， <br>SMS 提供者， <br>SQL Server， <br>管理點， <br>發佈點|
+|**唯讀網域控制站**|唯讀網域控制站 (RODC) 上不支援網站資料庫伺服器和次要網站伺服器。 如需詳細資訊，請參閱 Microsoft 知識庫中的 [You may encounter problems when installing SQL Server on a domain controller](http://go.microsoft.com/fwlink/p/?LinkId=264856) (在網域控制站上安裝 SQL Server 時，您可能會遇到問題)。|錯誤|管理中心網站， <br>主要站台， <br>次要網站|
+|**架構延伸模組**|判斷 Active Directory 網域服務架構是否已擴充，如果已擴充，則架構延伸模組版本為何。 站台伺服器安裝並不需要 Configuration Manager Active Directory 架構延伸模組，但若要完整使用所有 Configuration Manager 功能，建議使用它們。 如需擴充架構之優點的詳細資訊，請參閱[準備 Active Directory 以發行站台](../../../../core/plan-design/network/extend-the-active-directory-schema.md)。|警告|管理中心網站， <br>主要網站|
+|**站台伺服器 FQDN 長度**|檢查網站伺服器電腦的 FQDN 長度。|錯誤|管理中心網站， <br>主要站台， <br>次要網站|
+|**不支援的 Configuration Manager 主控台作業系統**|確認 Configuration Manager 主控台可安裝在執行受支援作業系統版本的電腦上。 如需詳細資訊，請參閱 [System Center Configuration Manager 主控台的支援作業系統](/sccm/core/plan-design/configs/supported-operating-systems-consoles)。|錯誤|Configuration Manager 主控台|
+|**安裝程式不支援的站台伺服器作業系統版本**|確認伺服器上執行的是否為支援的作業系統。 如需詳細資訊，請參閱 [System Center Configuration Manager 站台系統伺服器支援的作業系統](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers.md)。|錯誤|管理中心網站， <br>主要站台， <br>次要站台， <br>Configuration Manager 主控台， <br>管理點， <br>發佈點|
+|**驗證資料庫一致性**|從 1602 版開始，這項檢查會驗證資料庫一致性。|錯誤|管理中心網站， <br>主要網站|  

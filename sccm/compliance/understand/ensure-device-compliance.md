@@ -1,79 +1,72 @@
 ---
-title: "确保设备合规性 | Microsoft Docs"
-description: "使用 System Center Configuration Manager 管理组织中设备的配置和合规性。"
+title: "確定裝置合規性 | Microsoft Docs"
+description: "使用 System Center Configuration Manager 管理組織中的裝置設定和合規性。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7568c9aa-b99e-4466-bfc8-0301aa376930
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: f9e939d871e95a3248d8e5d96cb73063a81fd5cf
 ms.openlocfilehash: f7ecfe550d2e28579ea873442b2a68dc1c7c5483
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/07/2017
 ---
-# <a name="ensure-device-compliance-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 确保设备的合规性
+# <a name="ensure-device-compliance-with-system-center-configuration-manager"></a>Ensure device compliance with System Center Configuration Manager (確定裝置與 System Center Configuration Manager 的相容性)
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*適用於：System Center Configuration Manager (最新分支)*
 
-System Center Configuration Manager 中的符合性设置提供了管理组织中设备的配置和符合性所需的工具与资源。 这可以帮助你支持以下业务要求：  
+System Center Configuration Manager 中的合規性設定可提供管理組織中裝置設定和合規性所需的工具和資源。 這可協助您支援下列商務需求：  
 
--   将你所管理的 Windows PC、Mac 计算机、服务器和移动设备的配置与你创建的或从其他供应商处获取的最佳方案配置进行比较  
+-   根據您建立或取自其他廠商的最佳做法組態，比較您所管理之 Windows 電腦、Mac 電腦、伺服器和行動裝置的組態  
 
--   确定未经授权的设备配置  
+-   識別未經授權的裝置組態  
 
--   报告与法规策略和内部安全策略的符合性  
+-   報告與法規原則和內部安全性原則的相容性  
 
--   确定安全漏洞  
+-   識別安全性弱點  
 
--   提供帮助桌面，帮助桌面中具有通过确定不符合配置来检测所报告事件和问题的可能原因的信息。  
+-   將透過識別不相容組態來偵測所報告事件和問題的可能原因資訊，提供給技術支援中心  
 
--   自动修正移动设备上的某些非符合性设置  
+-   自動修復行動裝置上的部分不相容設定  
 
--   通过将应用程序、包、程序或脚本部署到由报告其在符合性范围外的设备自动进行填充的集合，以修正符合性的问题  
-
-
-## <a name="get-started"></a>入门  
- 了解有关符合性设置的基本信息，以及你可以使用这些设置完成的任务。  
-
- [符合性设置入门](../../compliance/get-started/get-started-with-compliance-settings.md)  
-
-## <a name="plan-and-design"></a>规划和设计  
- 在开始使用符合性设置之前，请确保你已实现本主题中包含的必要先决条件。  
-
- [规划和配置符合性设置](../../compliance/plan-design/plan-for-and-configure-compliance-settings.md)  
-
-## <a name="common-tasks"></a>常见任务  
- 本部分中会列出一些常见方案，有助于用户了解如何在 Configuration Manager 中使用符合性设置。  
-
- [管理符合性的常见任务](../../compliance/plan-design/common-tasks-for-managing-compliance.md)  
-
-## <a name="remote-connection-profiles"></a>远程连接配置文件  
- 此配置项目类型允许将用户的 PC 配置为在未连接到域或者其个人计算机通过 Internet 连接时以远程方式连接到工作计算机。  
-
- [创建远程连接配置文件](/sccm/compliance/deploy-use/create-remote-connection-profiles)  
-
-## <a name="user-data-and-profiles"></a>用户数据和配置文件  
- 配置项目类型包含的设置可为层次结构中的用户管理运行 Windows 8 和更高版本的计算机上的文件夹重定向、脱机文件和漫游配置文件。  
-
- [创建用户数据和配置文件配置项目](/sccm/compliance/deploy-use/create-user-data-and-profiles-configuration-items)  
-
-## <a name="windows-edition-upgrade-policy"></a>Windows 版本升级策略  
- 版本升级策略允许你将 Windows 10 设备自动升级到新版本。 你可以指定升级 Windows 10 桌面版的产品密钥或可用于升级运行 Windows 10 移动版和 Windows 10 全息版的设备的许可证文件。  
-
- [使用版本升级策略升级 Windows 设备](/sccm/compliance/deploy-use/upgrade-windows-version)  
+-   將應用程式、套件和程式或指令碼部署至會自動填入報告為不符合規範之裝置的集合，來補救不合規性  
 
 
+## <a name="get-started"></a>開始使用  
+ 了解相容性設定的基本概念，以及使用這些設定所能完成的工作。  
 
-<!--HONumber=Dec16_HO3-->
+ [開始使用合規性設定](../../compliance/get-started/get-started-with-compliance-settings.md)  
 
+## <a name="plan-and-design"></a>規劃和設計  
+ 請先確定您已實作了本主題中的所需必要條件，再開始使用相容性設定。  
 
+ [規劃和設定合規性設定](../../compliance/plan-design/plan-for-and-configure-compliance-settings.md)  
+
+## <a name="common-tasks"></a>一般工作  
+ 在本節中，您會發現一些常見案例，可協助您了解如何使用 Configuration Manager 中的合規性設定。  
+
+ [管理合規性的一般工作](../../compliance/plan-design/common-tasks-for-managing-compliance.md)  
+
+## <a name="remote-connection-profiles"></a>遠端連線設定檔  
+ 當您的使用者未連線至網域，或者他們是透過網際網路連接其個人電腦時，此設定項目類型可讓您設定使用者的電腦，使其可從遠端連線至工作電腦。  
+
+ [建立遠端連線設定檔](/sccm/compliance/deploy-use/create-remote-connection-profiles)  
+
+## <a name="user-data-and-profiles"></a>使用者資料和設定檔  
+ 設定項目類型包含了某些設定，這些設定可為階層中的使用者管理執行 Windows 8 (含) 以後版本電腦上的資料夾重新導向、離線檔案和漫遊設定檔。  
+
+ [建立使用者資料和設定檔設定項目](/sccm/compliance/deploy-use/create-user-data-and-profiles-configuration-items)  
+
+## <a name="windows-edition-upgrade-policy"></a>Windows 版本升級原則  
+ 版本升級原則可讓您將 Windows 10 裝置自動升級至更新版本。 您可以指定產品金鑰來升級 Windows 10 桌上型電腦版本，或是為執行 Windows 10 行動裝置版和 Windows 10 全像攝影版的裝置指定可將其升級的授權檔案。  
+
+ [使用版本升級原則升級 Windows 裝置](/sccm/compliance/deploy-use/upgrade-windows-version)  
