@@ -6,24 +6,21 @@ ms.date: 2/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 95c13c00-909f-4fbb-bbaa-1eba9d54d8c5
-caps.latest.revision: 8
-caps.handback.revision: 0
+caps.latest.revision: "8"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: noindex
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7479e54b5db2eff893bf9fbaf52c104836cda519
 ms.openlocfilehash: 5b5540c35c02df6e3d06e4aa9269b8da3238233e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="schema-extensions-for-system-center-configuration-manager"></a>System Center Configuration Manager 的架构扩展
 
@@ -151,4 +148,3 @@ ms.lasthandoff: 05/17/2017
 > -   类：cn=MS-SMS-Server-Locator-Point  
 
 你可以通过查看 System Center Configuration Manager 安装媒体的 **\SMSSETUP\BIN\x64** 文件夹中的 **ConfigMgr_ad_schema.LDF** 文件来确保前面的列是最新的。  
-

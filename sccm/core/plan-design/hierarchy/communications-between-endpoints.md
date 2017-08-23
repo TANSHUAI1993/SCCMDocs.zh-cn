@@ -1,6 +1,6 @@
 ---
-title: "端點之間的通訊 | Microsoft Docs"
-description: "了解 System Center Configuration Manager 站台系統與元件如何透過網路通訊。"
+title: "终结点之间的通信 | Microsoft Docs"
+description: "了解 System Center Configuration Manager 站点系统和组件如何跨网络通信。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -17,243 +17,243 @@ manager: angrobe
 ms.openlocfilehash: cd94f9ccc7e196b30e5dc7ae9368d073b7cff5d2
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="communications-between-endpoints-in-system-center-configuration-manager"></a>System Center Configuration Manager 中端點之間的通訊
+# <a name="communications-between-endpoints-in-system-center-configuration-manager"></a>System Center Configuration Manager 中终结点之间的通信
 
-適用於：System Center Configuration Manager (最新分支)
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 
-##  <a name="Planning_Intra-site_Com"></a> 站台內站台系統之間的通訊  
- 當 Configuration Manager 站台系統或元件透過網路與其他站台系統或站台中的 Configuration Manager 元件通訊時，會根據站台設定方式來使用下列其中一項通訊協定：  
+##  <a name="Planning_Intra-site_Com"></a> 站点中站点系统间的通信  
+ 当 Configuration Manager 站点系统或组件跨网络与站点中的其他站点系统或 Configuration Manager 组件通信时，它们将根据你配置站点的方式使用以下其中一项协议：  
 
--   伺服器訊息區 (SMB)  
+-   服务器消息块 (SMB)  
 
 -   HTTP  
 
 -   HTTPS  
 
-除了從站台伺服器到發佈點的通訊以外，站台中伺服器對伺服器的通訊可能會在任何時間發生，並且不會使用任何機制控制網路頻寬。 由於您無法控制站台系統之間的通訊，請確保將站台系統伺服器安裝在快速且網路連線良好的位置。  
+除了站点服务器与分发点之间的通信之外，随时都可能发生站点中服务器与服务器的通信，并且不使用任何机制来控制网络带宽。 因为你无法控制站点系统之间的通信，请确保在具有快速和良好连接网络的位置中安装站点系统服务器。  
 
-協助您管理從站台伺服器到發佈點的內容傳送：  
+若要帮助你管理从站点服务器到分发点的内容传输：  
 
--   設定網路頻寬控制與排程的發佈點。 這些控制項與站台間位址所使用的設定相似，當傳送內容至遠端網路位置是您主要的頻寬考量時，通常可使用此設定，而不需安裝另一個 Configuration Manager 站台。  
+-   配置网络带宽控件和计划的分发点。 这些控件与站点间地址使用的配置相似，如果将内容传输到远程网络位置是你的主要带宽考虑事项，则可以经常使用此配置，而不用安装其他 Configuration Manager 站点。  
 
--   您可以將發佈點安裝為預先設置的發佈點。 預先設置的發佈點可讓您使用以手動方式放置於發佈點伺服器的內容，並可免除透過網路傳送內容檔案的需求。  
+-   你可以安装一个分发点作为预留的分发点。 预留的分发点允许你使用手动放在分发点服务器上的内容，并且不需要在网络中传输内容文件。  
 
-如需詳細資訊，請參閱[管理內容管理的網路頻寬](manage-network-bandwidth.md)。
+有关详细信息，请参阅[管理用于内容管理的网络带宽](manage-network-bandwidth.md)。
 
 
-##  <a name="Planning_Client_to_Site_System"></a> 從用戶端到站台系統和服務的通訊  
-用戶端會起始與站台系統角色、Active Directory 網域服務及線上服務的通訊。 若要啟用這些通訊，防火牆必須允許用戶端和其通訊端點之間的網路流量。 端點包括：  
+##  <a name="Planning_Client_to_Site_System"></a> 从客户端到站点系统和服务的通信  
+客户端启动与站点系统角色、Active Directory 域服务以及联机服务的通信。 若要启用这些通信，防火墙必须允许客户端与其通信的终结点之间的网络流量。 终结点包括：  
 
--   **應用程式類別目錄網站點**：支援 HTTP 和 HTTPS 通訊
+-   **应用程序目录网站点**：支持 HTTP 和 HTTPS 通信
 
--   **雲端資源**：包括 Microsoft Azure 和 Microsoft Intune  
+-   **基于云的资源**：包括 Microsoft Azure 和 Microsoft Intune  
 
--   **Configuration Manager 原則模組 (NDES)**：支援 HTTP 和 HTTPS 通訊
+-   **Configuration Manager 策略模块 (NDES)**：支持 HTTP 和 HTTPS 通信
 
--   **發佈點**：支援 HTTP 和 HTTPS 通訊，而雲端發佈點需要 HTTPS  
+-   **分发点**：支持 HTTP 和 HTTPS 通信，且基于云的分发点需要 HTTPS  
 
--   **後援狀態點**：支援 HTTP 通訊  
+-   **回退状态点**：支持 HTTP 通信  
 
--   **管理點**：支援 HTTP 和 HTTPS 通訊  
+-   **管理点**：支持 HTTP 和 HTTPS 通信  
 
--   **Microsoft Update**  
+-   **Microsoft 更新**  
 
--   **軟體更新點**：支援 HTTP 和 HTTPS 通訊  
+-   **软件更新点**：支持 HTTP 和 HTTPS 通信  
 
--   **狀態移轉點**：支援 HTTP 和 HTTPS 通訊  
+-   **状态迁移点**：支持 HTTP 和 HTTPS 通信  
 
--   **各種網域服務**  
+-   **各种域服务**  
 
-用戶端必須先使用服務位置找到支援用戶端通訊協定 (HTTP 或 HTTPS) 的站台系統角色，才能與站台系統角色通訊。 根據預設，用戶端會使用最安全的可用方法：  
+客户端必须先使用服务定位找出支持客户端协议（HTTP 或 HTTPS）的站点系统角色，然后才可与站点系统角色通信。 默认情况下，客户端使用提供给它们的最安全方法：  
 
--   若要使用 HTTPS，您必須具有公開金鑰基礎結構 (PKI)，並且必須在用戶端與伺服器上安裝 PKI 憑證。 如需如何使用憑證的資訊，請參閱 [System Center Configuration Manager 的 PKI 憑證需求](../../../core/plan-design/network/pki-certificate-requirements.md)。  
+-   要使用 HTTPS，你必须具有公钥基础结构 (PKI) 并且必须在客户端和服务器上安装 PKI 证书。 有关如何使用证书的信息，请参阅 [System Center Configuration Manager 的 PKI 证书要求](../../../core/plan-design/network/pki-certificate-requirements.md)。  
 
--   在部署使用網際網路資訊服務 (IIS) 並支援從用戶端進行通訊的網站系統角色時，您必須指定用戶端要使用 HTTP 或 HTTPS 連線至網站系統。 如果您使用 HTTP，您也必須考慮簽署和加密選擇。 如需詳細資訊，請參閱[在 System Center Configuration Manager 中規劃安全性](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForSigningEncryption)中的[規劃簽署與加密](../../../core/plan-design/security/plan-for-security.md)。  
+-   在部署使用 Internet 信息服务 (IIS) 并支持来自客户端的通信的站点系统角色时，必须指定客户端是否使用 HTTP 或 HTTPS 连接到站点系统。 如果使用 HTTP，还必须考虑签名和加密选项。 有关详细信息，请参阅[在 System Center Configuration Manager 中规划安全性](../../../core/plan-design/security/plan-for-security.md)中的[规划签名和加密](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForSigningEncryption)。  
 
-如需用戶端服務位置的資訊，請參閱[了解用戶端如何找到 System Center Configuration Manager 的站台資源和服務](../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md)。  
+有关按客户端进行的服务定位的信息，请参阅[了解客户端如何查找 System Center Configuration Manager 的站点资源和服务](../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md)。  
 
-如需用戶端與這些端點進行通訊時所用的連接埠和通訊協定的詳細資訊，請參閱 [System Center Configuration Manager 中使用的連接埠](../../../core/plan-design/hierarchy/ports.md)。  
+有关与这些终结点通信时客户端所使用的端口和协议的详细信息，请参阅 [System Center Configuration Manager 中使用的端口](../../../core/plan-design/hierarchy/ports.md)。  
 
-###  <a name="BKMK_clientspan"></a> 從網際網路或未受信任之樹系的用戶端通訊考量  
-安裝在主要站台的下列站台系統角色支援來自不受信任位置 (例如網際網路或不受信任樹系) 的用戶端連線。 (次要站台不支援來自不受信任位置的用戶端連線)  
+###  <a name="BKMK_clientspan"></a> 来自 Internet 或不受信任林的客户端通信的注意事项  
+下列安装在主站点上的站点系统角色支持来自不受信任的位置（如 Internet 或不受信任的林）的客户端连接。 （辅助站点不支持来自不受信任位置的客户端连接）：  
 
--   應用程式類別目錄網站點  
+-   应用程序目录网站点  
 
--   Configuration Manager 原則模組  
+-   Configuration Manager 策略模块  
 
--   發佈點 (以雲端為基礎的發佈點需要 HTTPS)  
+-   分发点（基于云的分发点需要 HTTPS）  
 
--   註冊 Proxy 點  
+-   注册代理点  
 
--   後援狀態點  
+-   回退状态点  
 
--   管理點  
+-   管理点  
 
--   軟體更新點  
+-   软件更新点  
 
-**關於網際網路對向的站台系統：**   
-用戶端樹系與站台系統伺服器之間不需要有信任。 不過，當包含網際網路對向站台系統的樹系信任包含使用者帳戶的樹系時，此設定仍支援針對網際網路上的裝置使用以使用者為基礎的原則 (在啟用 [用戶端原則] 用戶端設定之 [從網際網路用戶端啟用使用者原則要求] 的情況下)。  
+**关于面向 Internet 的站点系统：**   
+客户端的林和站点系统服务器的林之间不需要信任。 但当包含面向 Internet 的站点系统的林信任包含用户帐户的林时，如果启用“客户端策略”客户端设置“启用来自 Internet 客户端的用户策略请求”，则此配置对 Internet 上的设备支持基于用户的策略。  
 
-例如，以下設定會說明何時以網際網路為基礎的用戶端管理會針對網際網路上的裝置，支援使用者原則。  
+例如，以下配置说明了当基于 Internet 的客户端管理支持 Internet 上设备的用户策略时：  
 
--   以網際網路為基礎的管理點位於唯讀網域控制站所在的中介網路，以驗證使用者，且中介防火牆允許 Active Directory 封包。  
+-   基于 Internet 的管理点在只读域控制器所在外围网络中以对用户进行身份验证，并且干扰防火墙允许 Active Directory 数据包。  
 
--   使用者帳戶位於樹系 A (內部網路)，以網際網路為基礎的管理點則位於樹系 B (中介網路)。 樹系 B 信任樹系 A，且中介防火牆允許驗證封包。  
+-   用户帐户在林 A (Intranet) 中，基于 Internet 的管理点在林 B（外围网络）中。 林 B 信任林 A，干扰防火墙允许身份验证数据包。  
 
--   使用者帳戶與以網際網路為基礎的管理點位於樹系 A (內部網路)。 使用 Web Proxy 伺服器 (例如 Forefront Threat Management Gateway)，將管理點發佈至網際網路。  
+-   用户帐户和基于 Internet 的管理点在在林 A (Intranet) 中。 系统使用 Web 代理服务器（例如，前端威胁管理网关）将管理点发布到 Internet。  
 
 > [!NOTE]  
->  若 Kerberos 驗證失敗，就會自動嘗試 NTLM 驗證。  
+>  如果 Kerberos 身份验证失败，则会自动尝试 NTLM 身份验证。  
 
-如前一個範例所顯示的，當使用 Web Proxy 伺服器 (如 ISA 伺服器與 Forefront Treat Management Gateway) 將以網際網路為基礎的網站系統發佈到網際網路上時，您可以將這些網站置於內部網路內。 這些站台系統只能針對來自網際網路的用戶端連線，或來自網際網路與內部網路的用戶端連線，進行設定。 使用 Web Proxy 伺服器時，您可以設定其讓安全通訊端層 (SSL) 橋接至 SSL (較安全) 或 SSL 通道，如下所示：  
+如上一个示例所示，当使用 Web 代理服务器（如 ISA 服务器和前端威胁管理网关）将基于 Internet 的站点系统发布到 Internet 时，可以将这些系统放置在 Intranet 中。 可以仅为 Internet 客户端连接配置这些站点系统，或者可以为 Internet 和 Intranet 客户端连接配置这些站点系统。 使用 Web 代理服务器时，可以针对到 SSL 的安全套接字层 (SSL) 桥接或 SSL 隧道来配置它，如下所示：  
 
--   **SSL 橋接至 SSL：**   
-    針對以網際網路為基礎的用戶端管理使用 Proxy 網頁伺服器時的建議設定是 SSL 橋接至 SSL，這會透過驗證以啟用 SSL 終止。 必須使用電腦驗證來驗證用戶端電腦，並使用使用者驗證來驗證行動裝置舊版用戶端。 由 Configuration Manager 註冊的行動裝置並不支援 SSL 橋接。  
+-   **到 SSL 的 SSL 桥接：**   
+    为基于 Internet 的客户端管理使用代理 Web 服务器时建议的配置是到 SSL 的 SSL 桥接，此配置使用 SSL 终止操作和身份验证。 必须使用计算机身份验证对客户端计算机进行身份验证，使用用户身份验证对移动设备旧客户端进行身份验证。 通过 Configuration Manager 注册的移动设备不支持 SSL 桥接。  
 
-     在 Proxy 網頁伺服器進行 SSL 終止的優點是將來自網際網路的封包轉寄到內部網路前，都必須經過檢查。 Proxy 網頁伺服器會驗證來自用戶端的連線，將其終止，然後開啟一個連線到以網際網路為基礎之網站系統的全新已驗證連線。 Configuration Manager 用戶端使用 Proxy 網頁伺服器時，用戶端識別 (用戶端 GUID) 會安全地保存在封包裝載中，管理點就不用考慮讓 Proxy 網頁伺服器成為用戶端。 使用 HTTP 至 HTTPS 或從 HTTPS 至 HTTP 的 Configuration Manager 不支援橋接。  
+     代理 Web 服务器上的 SSL 终止的优点是：在将来自 Internet 的数据包转发到内部网络之前，会对该数据包进行检测。 代理 Web 服务器将对来自客户端的连接进行验证，将其终止，然后建立一个新的经身份验证的连接，连接到基于 Internet 的站点系统。 当 Configuration Manager 客户端使用代理 Web 服务器时，客户端标识（客户端 GUID）安全地包含在数据包有效负载内，因而管理点不会将代理 Web 服务器视为客户端。 Configuration Manager 中不支持 HTTP 到 HTTPS 的桥接，或 HTTPS 到 HTTP 的桥接。  
 
--   **通道**：   
-    若您的 Proxy 網頁伺服器無法支援 SSL 橋接的需求，或您想設定網際網路支援由 Configuration Manager 註冊的行動裝置，則也支援 SSL 通道。 這是比較危險的選項，因為來自網際網路的 SSL 封包會轉寄到沒有 SSL 終止的網站系統，因此無法檢查封包內是否存在惡意內容。 使用 SSL 通道時，Proxy 網頁伺服器不需要憑證。  
+-   隧道：   
+    如果代理 Web 服务器无法支持 SSL 桥接的要求，或者想对通过 Configuration Manager 注册的移动设备配置 Internet 支持，则也支持 SSL 隧道。 这是一项安全性较差的选项，因为来自 Internet 的 SSL 数据包会在不终止 SSL 的情况下转发到站点系统，因此无法检测其是否包含恶意内容。 使用 SSL 隧道时，代理 Web 服务器不需要证书。  
 
-##  <a name="Plan_Com_X-Forest"></a> 跨 Active Directory 樹系的通訊  
-System Center Configuration Manager 支援跨 Active Directory 樹系的站台與階層。  
+##  <a name="Plan_Com_X-Forest"></a> 跨 Active Directory 林的通信  
+System Center Configuration Manager 支持跨越 Active Directory 林的站点和层次结构。  
 
-Configuration Manager 也支援不在相同 Active Directory 樹系作為站台伺服器的網域電腦，以及工作群組內的電腦：  
+Configuration Manager 也支持与站点服务器不在相同 Active Directory 林中的域计算机，以及工作组中的计算机：  
 
--   **若要支援樹系中站台伺服器樹系不信任的網域電腦**，您可以：  
+-   **为了支持不受站点服务器林信任的林中的域计算机**，可以：  
 
-    -   在該不受信任的樹系中安裝站台系統角色，並可選擇是否將站台資訊發佈至 Active Directory 樹系  
+    -   在该不受信任的林中安装站点系统角色，并可以将站点信息发布到该 Active Directory 林  
 
-    -   管理這些電腦，如同它們是工作群組電腦一樣。  
+    -   管理这些计算机，就好像它们是工作组计算机一样。  
 
-  在不受信任的 Active Directory 樹系中安裝站台系統伺服器時，會將樹系中來自用戶端的用戶端到伺服器通訊保留在該樹系內，而且 Configuration Manager 可以使用 Kerberos 驗證電腦。 將站台資訊發佈至用戶端樹系時，用戶端可以從其 Active Directory 樹系擷取網站資訊 (如可用管理點清單)，而不用從其指派的管理點下載此資訊。  
+  在不受信任的 Active Directory 林中安装站点系统服务器时，会在该林中保留来自该林的客户端的客户端到服务器的通信，并且 Configuration Manager 可以使用 Kerberos 对计算机进行身份验证。 将站点信息发布到客户端的林时，客户端将得益于检索站点信息（如可用管理点的列表），得益于其 Active Directory 林，而不用从其分配的管理点中下载此信息。  
 
   > [!NOTE]  
-  >  若想管理網際網路上的裝置，您可以在網站系統伺服器位於 Active Directory 樹系時，在您的周邊網路中安裝網際網路型網站系統角色。 此狀況並不需要在周邊網路與站台伺服器的樹系間建立雙向信任。  
+  >  如果你想要管理 Internet 上的设备，则当站点系统服务器在 Active Directory 林中时，可以在外围网络中安装基于 Internet 的站点系统角色。 此方案不需要外围网络与站点服务器林之间的双向信任。  
 
--   **若要支援工作群組中的電腦**，您必須：  
+-   **为了支持工作组中的计算机**，你必须：  
 
-    -   在工作群組電腦使用 HTTP 用戶端連線到站台系統角色時，手動核准工作群組電腦。 原因是 Configuration Manager 無法使用 Kerberos 來驗證這些電腦。  
+    -   在工作组计算机对站点系统角色使用 HTTP 客户端连接时，手动批准这些计算机。 这是因为 Configuration Manager 不能通过使用 Kerberos 对这些计算机进行身份验证。  
 
-    -   請設定工作群組用戶端使用網路存取帳戶，這些電腦才能從發佈點擷取內容。  
+    -   将工作组客户端配置为使用网络访问帐户，以便这些计算机可以从分发点中检索内容。  
 
-    -   提供工作群組用戶端尋找管理點的替代機制。 您可以使用 DNS 發佈、WINS，或直接指派管理點。 原因是這些用戶端無法從 Active Directory 網域服務擷取站台資訊。  
+    -   为工作组客户端提供替代机制以查找管理点。 可以使用 DNS 发布或 WINS，或者可以直接分配管理点。 这是因为这些客户端无法从 Active Directory 域服务中检索站点信息。  
 
-    這個內容庫中的相關資源：  
+    此内容库中的相关资源：  
 
-    -   [管理 Configuration Manager 用戶端的衝突記錄](../../../core/clients/manage/manage-clients.md#BKMK_ConflictingRecords)  
+    -   [为 Configuration Manager 客户端管理冲突记录](../../../core/clients/manage/manage-clients.md#BKMK_ConflictingRecords)  
 
-    -   [網路存取帳戶](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#accounts-used-for-content-management)  
+    -   [网络访问帐户](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#accounts-used-for-content-management)  
 
-    -   [如何在工作群組電腦上安裝 Configuration Manager 用戶端](../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientWorkgroup)  
+    -   [如何在工作组计算机上安装 Configuration Manager 客户端](../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientWorkgroup)  
 
-###  <a name="bkmk_span"></a> 可支援跨多個網域和樹系之站台或階層的案例  
+###  <a name="bkmk_span"></a> 支持跨多个域和林的站点或层次结构的方案  
 
-#### <a name="communication-between-sites-in-a-hierarchy-that-spans-forests"></a>跨樹系階層中網站間的通訊  
-此案例需要支援 Kerberos 驗證的雙向樹系信任。  如果您沒有支援 Kerberos 驗證的雙向樹系信任，Configuration Manager 就不支援遠端樹系中的子站台。  
+#### <a name="communication-between-sites-in-a-hierarchy-that-spans-forests"></a>跨林的层次结构中站点之间的通信  
+此方案要求支持 Kerberos 身份验证的双向林信任。  如果没有支持 Kerberos 身份验证的双向林信任，则 Configuration Manager 不支持远程林中的子站点。  
 
- **Configuration Manager 支援在遠端樹系中 (需要父站台樹系內的雙向信任) 安裝子站台**  
+ **Configuration Manager 支持在与父站点林之间具有所需双向信任的远程林中安装子站点**  
 
--   例如，只要存在所需的信任，您可以在與主要父站台不同的樹系中放置次要站台。  
+-   例如，只要存在所需的信任，就可以将辅助站点放在与其主父站点不同的林中。  
 
 > [!NOTE]  
->  子站台可以是主要站台 (其中管理中心網站是父站台) 或次要站台。  
+>  子站点可以是主站点（其中，管理中心站点为父站点）或辅助站点。  
 
-Configuration Manager 中的站台間通訊使用資料庫複寫和以檔案為基礎的傳輸。 安裝站台時，必須指定帳戶，以便在指定伺服器上安裝站台。 此帳戶也會建立與維護網站間的通訊。  
+Configuration Manager 中的站点间通信使用数据库复制和基于文件的传输。 在安装站点时，必须指定用于在指定服务器上安装该站点的帐户。 此帐户还建立并维护站点之间的通信。  
 
-網站成功安裝並起始以檔案為基礎的傳輸與資料庫複寫後，就不需要為了與網站通訊設定其他項目。  
+当站点成功安装并启动基于文件的传输和数据库复制之后，你不必为站点通信进行任何其他配置。  
 
-**存在雙向樹系信任時，Configuration Manager 就不需要任何其他設定步驟。**  
+**存在双向林信任时，Configuration Manager 不需要任何其他配置步骤。**  
 
-根據預設，安裝新站台作為另一個站台的子站台時，Configuration Manager 會設定以下項目：  
+默认情况下，在将新站点安装为另一个站点的子项时，Configuration Manager 会配置以下各项：  
 
--   每個站台以檔案為基礎的站台間複寫路由 (其使用站台伺服器電腦帳戶)。 Configuration Manager 會將每部電腦的電腦帳戶加入目的地電腦的 **SMS_SiteToSiteConnection_&lt;站台碼\>** 群組中。  
+-   使用站点服务器计算机帐户的每个站点处基于站点间文件的复制路由。 Configuration Manager 将每台计算机的计算机帐户添加到目标计算机上的 **SMS_SiteToSiteConnection_&lt;sitecode\>** 组。  
 
--   每個網站上 SQL Server 間的資料庫複寫。  
+-   每个站点中 SQL Server 之间的数据库复制。  
 
-也必須設定以下設定：  
+还必须设置下列配置：  
 
--   中介防火牆和網路裝置必須允許 Configuration Manager 要求的網路封包。  
+-   干扰防火墙和网络设备必须允许 Configuration Manager 请求的网络包。  
 
--   樹系間的名稱解析必須能夠運作。  
+-   名称解析必须在林之间工作。  
 
--   若要安裝網站或網站系統角色，您必須指定一個在指定電腦上具備本機系統管理權限的帳戶。  
+-   若要安装站点或站点系统角色，必须指定在指定的计算机上具有本地管理员权限的帐户。  
 
-#### <a name="communication-in-a-site-that-spans-forests"></a>跨樹系站台中的通訊  
-此案例不需要雙向樹系信任。  
+#### <a name="communication-in-a-site-that-spans-forests"></a>跨林的站点中的通信  
+此方案不需要双向林信任。  
 
-**主要站台支援將站台系統角色安裝到遠端樹系的電腦上**。  
+**主站点支持在远程林中的计算机上安装站点系统角色**。  
 
--   應用程式類別目錄 Web 服務點是唯一的例外。  只有與站台伺服器相同的樹系中才予以支援。  
+-   该应用程序目录 Web 服务点是唯一的例外。  仅在站点服务器所在的同一个林中受支持。  
 
--   網站系統角色接受來自網際網路的連線時，做為安全性最佳作法，請將這些網站系統角色安裝在樹系界限會為網站伺服器提供保護的位置 (例如周邊網路中)。  
+-   当站点系统角色接受来自 Internet 的连接时，作为最佳安全方案，请在林边界为站点服务器提供保护的位置（例如，在外围网络中）安装这些站点系统角色。  
 
-**在不受信任之樹系中的電腦上安裝站台系統角色：**  
+**若要在位于不受信任的林中的计算机上安装站点系统角色：**  
 
--   您必須指定**站台系統安裝帳戶**，以用來安裝站台系統角色。 (帳戶必須具有本機系統管理認證才能連接。)然後在指定電腦上安裝站台系統角色。  
+-   必须指定用于安装站点系统角色的“站点系统安装帐户”。 （该帐户必须具有要连接的本地管理凭据。）然后在指定计算机上安装站点系统角色。  
 
--   您必須選取 [要求網站伺服器起始與此網站系統的連線] 網站系統選項。 若要這麼做，網站伺服器必須建立和網站系統伺服器間的連線，以傳輸資料。 這可防止位於不受信任位置的電腦起始與受信任網路內之站台伺服器的聯繫。 這些連線會使用 **網站系統安裝帳戶**。  
+-   必须选择站点系统选项“要求站点服务器启动到此站点系统的连接” 。 这需要站点服务器建立到站点系统服务器的连接以传输数据。 这会阻止不受信任位置中的计算机与信任的网络中的站点服务器联系。 这些连接使用“站点系统安装帐户” 。  
 
-**若要使用安裝在不受信任之樹系中的站台系統角色，** 防火牆必須允許網路流量，即使站台伺服器會起始資料傳輸亦同。  
+**若要使用安装在不受信任的林中的站点系统角色，** 即使站点服务器启动数据传输，防火墙也必须允许网络流量。  
 
-此外，下列網站系統角色需要直接存取網站資料庫。 因此，防火牆必須允許來自不受信任的樹系到站台 SQL Server 的適用流量：  
+此外，下列站点系统角色需要直接访问站点数据库。 因此，防火墙必须允许从不受信任的林到站点 SQL Server 的适用流量：  
 
--   Asset Intelligence 同步處理點  
+-   资产智能同步点  
 
--   Endpoint Protection 點  
+-   Endpoint Protection 点  
 
--   註冊點  
+-   注册点  
 
--   管理點  
+-   管理点  
 
--   Reporting Service 點  
+-   报告服务点  
 
--   狀態移轉點  
+-   状态迁移点  
 
-如需詳細資訊，請參閱 [System Center Configuration Manager 中使用的連接埠](../../../core/plan-design/hierarchy/ports.md)。  
+有关详细信息，请参阅 [System Center Configuration Manager 中使用的端口](../../../core/plan-design/hierarchy/ports.md)。  
 
-**您可能需要設定站台系統角色對站台資料庫的存取權：**  
+**你可能需要将站点系统角色配置为可访问站点数据库：**  
 
-管理點和註冊點站台系統角色都會連線到站台資料庫。  
+管理点和注册点站点系统角色均将连接到站点数据库。  
 
--   根據預設，安裝這些站台系統角色時，Configuration Manager 會設定新站台系統伺服器的電腦帳戶作為站台系統角色的連線帳戶，並將該帳戶新增到適當的 SQL Server 資料庫角色。  
+-   默认情况下，在安装这些站点系统角色时，Configuration Manager 会将新站点系统服务器的计算机帐户配置为该站点系统角色的连接帐户，然后将该帐户添加到合适的 SQL Server 数据库角色中。  
 
--   在不受信任的網域中安裝這些網站系統角色時，您必須設定網站系統角色連線帳戶啟用網站系統角色，以便從資料庫取得資訊。  
+-   在不受信任的域中安装这些站点系统角色时，你必须配置站点系统角色连接帐户以使站点系统角色能够从数据库中获取信息。  
 
-如果您將網域使用者帳戶設定為這些站台系統角色的連線帳戶，請確定網域使用者帳戶能正確存取該站台上的 SQL Server 資料庫：  
+如果将域用户帐户配置为这些站点系统角色的连接帐户，请确保该域用户帐户具有对该站点上的 SQL Server 数据库的合适访问权限：  
 
--   管理點： **管理點資料庫連線帳戶**  
+-   管理点：“管理点数据库连接帐户”   
 
--   註冊點： **註冊點連線帳戶**  
+-   注册点：“注册点连接帐户”   
 
-在您規劃其他樹系中的網站系統角色時，請考量以下其他資訊：  
+在规划其他林中的站点系统角色时，请考虑以下其他信息：  
 
--   如果您執行 Windows 防火牆，請設定適用的防火牆設定檔，以便在站台資料庫伺服器和安裝有遠端站台系統角色的電腦間傳遞通訊。 如需防火牆設定檔的資訊，請參閱[了解防火牆設定檔](http://go.microsoft.com/fwlink/p/?LinkId=233629)。  
+-   如果运行 Windows 防火墙，请配置合适的防火墙配置文件，以传递站点数据库服务器与随远程站点系统角色一起安装的计算机之间的通信。 有关防火墙配置文件的信息，请参阅[了解防火墙配置文件](http://go.microsoft.com/fwlink/p/?LinkId=233629)。  
 
--   以網際網路為基礎的管理點信任包含使用者帳戶的樹系時，就支援使用者原則。 不存在信任時，就僅支援電腦原則。  
+-   当基于 Internet 的管理点信任包含用户帐户的林时，支持用户策略。 当不存在信任时，仅支持计算机策略。  
 
-#### <a name="communication-between-clients-and-site-system-roles-when-the-clients-are-not-in-the-same-active-directory-forest-as-their-site-server"></a>用戶端並未與站台伺服器處於相同 Active Directory 樹系時，用戶端與站台系統角色間的通訊  
-當用戶端與其站台的站台伺服器不在相同的樹系中時，Configuration Manager 支援以下情況：  
+#### <a name="communication-between-clients-and-site-system-roles-when-the-clients-are-not-in-the-same-active-directory-forest-as-their-site-server"></a>当客户端与其站点服务器不在相同 Active Directory 林中时客户端与站点系统角色之间的通信  
+Configuration Manager 对不在其站点的站点服务器所在的相同林中的客户端支持以下方案：  
 
--   在用戶端樹系與站台伺服器樹系間存在雙向樹系信任。  
+-   客户端的林与站点服务器的林之间存在双向林信任。  
 
--   站台系統角色伺服器位於與用戶端相同的樹系中。  
+-   站点系统角色服务器与客户端在相同林中。  
 
--   用戶端位於網域電腦上，該電腦和站台伺服器間不存在雙向樹系信任，而在用戶端樹系中未安裝站台系統角色。  
+-   客户端在与站点服务器之间没有双向林信任的域计算机上，客户端林中未安装站点系统角色。  
 
--   用戶端位於工作群組電腦上。  
+-   客户端在工作组计算机上。  
 
-加入網域之電腦上用戶端的站台發佈到其 Active Directory 樹系時，這些用戶端就可以使用服務位置的 Active Directory 網域服務。  
+当加入域的计算机上的客户端的站点已发布到其 Active Directory 林时，这些客户端可以将 Active Directory 域服务用于服务定位。  
 
-若要將站台資訊發佈至另一個 Active Directory 樹系，您必須：  
+若要将站点信息发布到另一个 Active Directory 林，你必须：  
 
--   指定樹系，然後在 [系統管理]  工作區的 [Active Directory 樹系]  節點中啟用發佈至該樹系。  
+-   首先指定林，然后在“管理”  工作区的“Active Directory 林”  节点中启用发布到该林。  
 
--   設定每個站台將其資料發佈至 Active Directory 網域服務。 此設定可啟用該樹系中的用戶端，以擷取網站資訊和找出管理點。 針對無法使用服務位置之 Active Directory 網域服務的用戶端，您可以使用 DNS、WINS，或用戶端指派的管理點。  
+-   将每个站点配置为将其数据发布到 Active Directory 域服务。 此配置允许该林中的客户端检索站点信息以及查找管理点。 对于无法将 Active Directory 域服务用于服务定位的客户端，可以使用 DNS、WINS 或客户端的分配的管理点。  
 
-###  <a name="bkmk_xchange"></a> 將 Exchange Server 連接器放在遠端樹系中  
-若要支援此案例，請確認名稱解析可在樹系之間運作 (例如設定 DNS 轉寄)，並在您設定 Exchange Server 連接器時指定 Exchange Server 的內部網路 FQDN。 如需詳細資訊，請參閱[使用 System Center Configuration Manager 和 Exchange 管理行動裝置](../../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)。  
+###  <a name="bkmk_xchange"></a> 将 Exchange Server 连接器放置到远程林中  
+若要支持此方案，请确保名称解析能够跨越林工作（例如，配置 DNS 转发），并且当你配置 Exchange Server 连接器时，请指定 Exchange Server 的 Intranet FQDN。 有关详细信息，请参阅[使用 System Center Configuration Manager 和 Exchange 管理移动设备](../../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)。  

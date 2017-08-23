@@ -1,6 +1,6 @@
 ---
-title: "升級用戶端 | Microsoft Docs"
-description: "在 System Center Configuration Manager 中升級 Windows 電腦上的用戶端。"
+title: "升级客户端 | Microsoft Docs"
+description: "在 System Center Configuration Manager 中升级 Windows 计算机上的客户端。"
 ms.custom: na
 ms.date: 05/04/2017
 ms.prod: configuration-manager
@@ -18,85 +18,85 @@ manager: angrobe
 ms.openlocfilehash: 98b8c92e4dad3cef1ed3701b9c0f9111eb9941ea
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="how-to-upgrade-clients-for-windows-computers-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中升級 Windows 電腦的用戶端
+# <a name="how-to-upgrade-clients-for-windows-computers-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中升级 Windows 计算机的客户端
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-您可以使用 Configuration Manager 中的用戶端安裝方法或自動用戶端升級功能，升級 Windows 電腦上的用戶端。 下列用戶端安裝方法可有效地在 Windows 電腦上升級用戶端軟體：  
+可以使用客户端安装方法或 Configuration Manager 中的自动客户端升级功能升级 Windows 计算机上的客户端。 下面的客户端安装方法是在 Windows 计算机上升级客户端软件的有效方式：  
 
--   群組原則安裝  
+-   组策略安装  
 
--   登入指令碼安裝  
+-   登录脚本安装  
 
--   手動安裝  
+-   手动安装  
 
--   升級安裝  
+-   升级安装  
 
- 如果您想要使用用戶端安裝方法來升級用戶端，請在[如何在 System Center Configuration Manager 中將用戶端部署至 Windows 電腦](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md)中深入了解如何使用這些方法。
+ 如果对使用客户端安装方法升级客户端感兴趣，请参阅[如何在 System Center Configuration Manager 中部署客户端到 Windows 计算机](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md)，了解使用这些方法的详细信息。
 
- 從 1610 版開始，您可以指定排除群組來排除用戶端不進行升級。 如需詳細資訊，請參閱[如何排除升級 Windows 電腦的用戶端](exclude-clients-windows.md)。  
+ 从版本 1610 开始，可通过指定排除组来排除客户端的升级。 有关详细信息，请参阅[如何排除升级 Windows 计算机的客户端](exclude-clients-windows.md)。  
 
 
 > [!TIP]  
->  如果您從舊版的 Configuration Manager \(例如 Configuration Manager 2007 或 System Center 2012 Configuration Manager\) 升級伺服器基礎結構，建議您先完成伺服器升級 (包含安裝所有的最新分支更新)，然後再升級 Configuration Manager 用戶端。   最新的最新分支更新包含最新版本的用戶端，因此最好在您安裝所有要使用的 Configuration Manager 更新之後，執行用戶端升級。
+>  如果是从以前版本的 Configuration Manager（例如 Configuration Manager 2007 或 System Center 2012 Configuration Manager）升级服务器基础结构，我们建议你先完成服务器升级（包括安装所有当前分支更新），然后再升级 Configuration Manager 客户端。   最新的当前分支更新包括最新版本的客户端，因此最好是在所有要使用的 Configuration Manager 更新都安装完成后再执行客户端升级。
 
 > [!NOTE]
-> 如果您想要在升級期間重新指派用戶端的站台，可以使用 SMSSITECODE client.msi 屬性來指定新站台。 如果您針對 SMSSITECODE 使用 AUTO，則也必須指定 SITEREASSIGN=TRUE，允許在升級期間執行自動站台重新指派。 如需詳細資訊，請參閱 [SMSSITECODE](../../deploy/about-client-installation-properties.md#smssitecode)。
+> 如果计划在升级期间为客户端重新分配站点，则可以使用 SMSSITECODE client.msi 属性指定新站点。 如果对 SMSSITECODE 使用 AUTO，则还必须指定 SITEREASSIGN=TRUE，以允许在升级期间自动重新分配站点。 有关详细信息，请参阅 [SMSSITECODE](../../deploy/about-client-installation-properties.md#smssitecode)。
 
-## <a name="use-automatic-client-upgrade"></a>使用自動用戶端升級  
- 您也可以將 Configuration Manager 設定為當 Configuration Manager 識別出指派至 Configuration Manager 階層的用戶端版本比階層中所使用的版本低時，自動將用戶端軟體升級至最新 Configuration Manager 用戶端版本。 此案例包含當用戶端嘗試指派至 Configuration Manager 站台時，會將用戶端升級至最新版本。  
+## <a name="use-automatic-client-upgrade"></a>使用自动客户端升级  
+ 还可以将 Configuration Manager 配置为：当 Configuration Manager 发现分配给 Configuration Manager 层次结构的客户端低于层次结构中使用的版本时，将客户端软件自动升级为最新的 Configuration Manager 客户端版本。 此方案包括客户端在尝试分配到 Configuration Manager 站点时将客户端升级到最新版本。  
 
- 用戶端可以在下列情況自動升級：  
+ 在下列情况下可自动升级客户端：  
 
--   用戶端版本比階層中使用的版本低。  
+-   客户端版本低于层次结构中正在使用的版本。  
 
--   管理中心網站上的用戶端已安裝現有用戶端所沒有的語言組件。  
+-   为管理中心站点上的客户端安装了语言包，而现有客户端未安装。  
 
--   階層中的用戶端必要條件，與用戶端上安裝的版本不同。  
+-   层次结构中客户端必备组件的版本不同于客户端上安装的必备组件版本。  
 
--   有一或多個用戶端安裝檔案的版本不同。  
-
-> [!NOTE]  
->  您可以執行 [站台 - 用戶端資訊] 報告資料夾中的 [依用戶端版本列出的 Configuration Manager 用戶端計數] 報告，識別階層中不同版本的 Configuration Manager 用戶端。  
-
- Configuration Manager 預設會建立升級套件，其會自動傳送至階層中的所有發佈點。 如果您對管理中心網站上的用戶端套件進行變更 (例如新增用戶端語言組件)，則 Configuration Manager 會自動更新套件，並將其發佈至階層中的所有發佈點。 如果已啟用自動用戶端升級，則每個用戶端會自動安裝新的用戶端語言套件。  
+-   一个或多个客户端安装文件的版本不同。  
 
 > [!NOTE]  
->  Configuration Manager 不會自動將用戶端升級套件傳送至 Configuration Manager 雲端發佈點。  
+>  可以运行报表文件夹“站点 - 客户端信息”中的“按客户端版本列出的 Configuration Manager 客户端计数”报表，从而确定层次结构中 Configuration Manager 客户端的不同版本。  
 
- 建議您在整個階層啟用自動用戶端升級。 這樣可使用最少的系統管理負荷來更新您的用戶端。  
+ Configuration Manager 默认情况下会创建一个自动发送到层次结构中的所有分发点的升级包。 如果更改管理中心站点上的客户端包，例如，添加客户端语言包，则 Configuration Manager 会自动升级该包并将其分发给层次结构中的所有分发点。 如果启用了自动客户端升级，则每个客户端都将自动安装新客户端语言包。  
 
- 使用下列程序，設定自動用戶端升級。 自動用戶端升級必須在管理中心網站設定，而此設定適用於階層中的所有用戶端。  
+> [!NOTE]  
+>  Configuration Manager 不会将客户端升级包自动发送到 Configuration Manager 的基于云的分发点。  
 
-### <a name="to-configure-automatic-client-upgrades"></a>設定自動用戶端升級  
+ 我们建议在整个层次结构中启用自动客户端升级。 这样可以花费最低管理开销保持客户端更新。  
 
-1.  在 Configuration Manager 主控台中，按一下 [系統管理] 。  
+ 使用以下过程配置自动客户端升级。 必须在管理中心站点配置自动客户端升级，此配置将应用于层次结构中的所有客户端。  
 
-2.  在 [系統管理]  工作區中，展開 [網站設定] ，然後按一下 [網站] 。  
+### <a name="to-configure-automatic-client-upgrades"></a>若要配置自动客户端升级  
 
-3.  在 [首頁]  索引標籤的 [建立]  群組中，按一下 [階層設定] 。  
+1.  在 Configuration Manager 控制台中，单击“管理” 。  
 
-4.  在 [階層設定內容]  對話方塊的 [用戶端升級]  索引標籤中，檢閱實際執行用戶端的版本與日期，並確定其為您想要用來升級 Windows 電腦的版本。  如果其不是您預期見到的用戶端版本，您可能需要將實際執行前用戶端升階為實際執行用戶端。 如需詳細資訊，請參閱[如何測試 System Center Configuration Manager 的進入生產階段前集合用戶端升級](../../../../core/clients/manage/upgrade/test-client-upgrades.md)。  
+2.  在“管理”  工作区中，展开“站点配置” ，然后单击“站点” 。  
 
-5.  按一下 [使用實際執行用戶端升級階層中的所有用戶端]  ，然後在確認對話方塊中按一下 [確定]  。  
+3.  在“主页”  选项卡上的“站点”  组中，单击“层次结构设置” 。  
 
-6.  如果您不想要將用戶端升級套用至伺服器，按一下 [不升級伺服器] 。  
+4.  在“层次结构设置属性”  对话框的“客户端升级”  选项卡中，查看生产客户端的版本和日期并确保该版本正是你想用于升级 Windows 计算机的版本。  如果该客户端版本不是你想要的，可能需要将预生产客户端提升到生产。 有关详细信息，请参阅[如何在 System Center Configuration Manager 中的预生产集合中测试客户端升级](../../../../core/clients/manage/upgrade/test-client-upgrades.md)。  
 
-7.  指定電腦收到用戶端原則後必須在幾天內升級用戶端。 在指定的天數內，用戶端會以隨機間隔進行升級。 這可避免大量用戶端電腦同時進行升級的情況。
+5.  单击“使用生产客户端升级层次结构中的所有客户端”  ，然后单击确认对话框中的“确定”  。  
+
+6.  如果不希望将客户端升级应用到服务器，则单击“请勿升级客户端” 。  
+
+7.  指定计算机在收到客户端策略后必须在其中升级客户端的天数。 系统将在此天数内按随机间隔升级客户端。 这会防止同时升级大量客户端计算机的情况出现。
 
     > [!NOTE]
-    > 電腦必須處於執行中，才能升級用戶端。 如果電腦未在排程接收升級時執行，則不會升級。 相反地，重新啟動電腦時，排程另一個升級在允許天數內的任意時間執行。 如果這在升級的天數到期之後發生，則會排程在重新啟動電腦之後的 24 小時內的任意時間升級。
+    > 升级客户端时计算机必须处于运行状态。 如果计算机在计划接收更新时没有运行，则更新不会发生。 相反，该计算机重新启动时，会计划在允许的天数内的一个随机时间进行另一次更新。 如果上述允许的更新天数已过期时才重新启动计算机，则会计划在计算机重新启动的 24 小时内的一个随机时间进行更新。
     >     
-    > 基於這項行為，如果隨機排程的升級時間不在正常工作時間內，則升級經常會在工作日結束關機的電腦可能需要比預期時間還要長的時間。
+    > 由于此行为，如果随机计划的更新时间不在正常的工作时间之内，则工作日结束时例行关闭的计算机可能需要比预期时间更长的时间来进行更新。
 
-7. 從 1610 版開始，如果您要排除用戶端不進行升級，請按一下 「Exclude specified clients from upgrade」 (排除指定的用戶端不進行升級)，然後指定要排除的集合。
+7. 从版本 1610 开始，若要排除升级客户端，请单击“从升级中排除指定的客户端”，然后指定要排除的集合。
 
-8.  如果您要將用戶端安裝套件複製到已經啟用預先設置內容的發佈點，請按一下 [將用戶端安裝套件自動發佈至針對預先設置內容啟用的發佈點] 。  
+8.  如果想要将客户端安装包复制到针对预留内容启用的分发点，请单击“向针对预留内容启用的分发点自动分发客户端安装包” 。  
 
-9. 按一下 [確定]  儲存設定，然後關閉 [階層設定內容]  對話方塊。 用戶端接著下載原則時，就會收到這些設定。
+9. 单击“确定”  以保存设置并关闭“层次结构设置属性”  对话框。 客户端下次下载策略时将收到这些设置。
 
 >[!NOTE]
->用戶端升級會遵循您所設定的任何 Configuration Manager 維護時段。
+>客户端升级按已配置的任意 Configuration Manager 维护时段进行。

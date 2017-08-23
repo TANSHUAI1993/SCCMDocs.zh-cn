@@ -1,6 +1,6 @@
 ---
-title: "升級用戶端 | Microsoft Docs"
-description: "取得如何在 System Center Configuration Manager 中升級用戶端的相關資訊。"
+title: "升级客户端 | Microsoft Docs"
+description: "获取有关如何在 System Center Configuration Manager 中升级客户端的信息。"
 ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
@@ -17,134 +17,134 @@ manager: angrobe
 ms.openlocfilehash: 4b80e0e688dd6482bc9a7fe111607e258071f45a
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="upgrade-clients-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中升級用戶端
+# <a name="upgrade-clients-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中升级客户端
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-您可以使用不同的方法，升級 Windows 電腦、UNIX 和 Linux 伺服器以及 Mac 電腦上的 System Center Configuration Manager 用戶端軟體。 以下是各種方法的優缺點。  
+可以使用不同的方法在 Windows 计算机、UNIX 和 Linux 服务器以及 Mac 计算机上升级 System Center Configuration Manager 客户端软件。 以下是每种方法的优缺点。  
 
 > [!TIP]  
->  如果您從舊版的 Configuration Manager \(例如 Configuration Manager 2007 或 System Center 2012 Configuration Manager\) 升級伺服器基礎結構，建議您先完成伺服器升級 (包含安裝所有的最新分支更新)，然後再升級 Configuration Manager 用戶端。 如此一來，您也會有用戶端軟體的最新版本。  
+>  如果是从以前版本的 Configuration Manager（例如 Configuration Manager 2007 或 System Center 2012 Configuration Manager）升级服务器基础结构，我们建议你先完成服务器升级（包括安装所有当前分支更新），然后再升级 Configuration Manager 客户端。 这样，你还将具有最新版本的客户端软件。  
 
-## <a name="group-policy-installation"></a>群組原則安裝  
- **支援的用戶端平台：** Windows  
+## <a name="group-policy-installation"></a>组策略安装  
+ **支持的客户端平台：** Windows  
 
- **優點**  
+ **优点**  
 
--   升級用戶端前不需要先探索電腦。  
+-   在可以升级客户端之前，无需发现计算机。  
 
--   可用於全新安裝或升級用戶端。  
+-   可用于安装新客户端或执行升级。  
 
--   電腦可以讀取已發佈至 Active Directory 網域服務的用戶端安裝內容。  
+-   计算机可以读取已发布到 Active Directory 域服务的客户端安装属性。  
 
--   不需在目標用戶端電腦設定及維護安裝帳戶。  
+-   你无需为目标客户端计算机配置和维护安装帐户。  
 
- **缺點**  
+ **缺点**  
 
--   如果升級大量用戶端，可能會使網路流量增高。  
+-   如果升级大量客户端，则会导致较高的网络流量。  
 
--   如果未延伸 Configuration Manager 的 Active Directory 架構，您必須使用 [[群組原則] 設定](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientGP)，將用戶端安裝內容新增至站台中的電腦。  
+-   如果没有为 Configuration Manager 扩展 Active Directory 架构，则必须使用[组策略设置](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientGP)将客户端安装属性添加到站点中的计算机。  
 
 
-## <a name="logon-script-installation"></a>登入指令碼安裝  
- **支援的用戶端平台：** Windows  
+## <a name="logon-script-installation"></a>登录脚本安装  
+ **支持的客户端平台：** Windows  
 
- **優點**  
+ **优点**  
 
--   安裝用戶端前不需要先探索電腦。  
+-   在可以安装客户端之前，无需发现计算机。  
 
--   可用於全新安裝或升級用戶端。  
+-   可用于安装新客户端或执行升级。  
 
--   支援使用 CCMSetup 命令列屬性。  
+-   支持使用 CCMSetup 的命令行属性。  
 
- **缺點**  
+ **缺点**  
 
--   如果在短時間內升級大量用戶端，可能會使網路流量增高。  
+-   如果在短时间内升级大量客户端，则会导致较高的网络流量。  
 
--   如果使用者不常登入網路，可能需要花很長的時間才能升級所有用戶端電腦。  
+-   如果用户并非经常登录到网络，则可能需要很长时间才能升级所有客户端计算机。  
 
- 如需詳細資訊，請參閱 [How to Install Configuration Manager Clients by Using Logon Scripts](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientLogonScript) (如何使用登入指令碼安裝 Configuration Manager 用戶端)。  
+ 有关详细信息，请参阅[如何使用登录脚本安装 Configuration Manager 客户端](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientLogonScript)。  
 
-## <a name="manual-installation"></a>手動安裝  
- **支援的用戶端平台：** Windows、UNIX/Linux、Mac OS X  
+## <a name="manual-installation"></a>手动安装  
+ **支持的客户端平台：** Windows、UNIX/Linus、Mac OS X  
 
- **優點**  
+ **优点**  
 
--   升級用戶端前不需要先探索電腦。  
+-   在可以升级客户端之前，无需发现计算机。  
 
--   可供測試之用。  
+-   可用于测试目的。  
 
--   支援使用 CCMSetup 命令列屬性。  
+-   支持使用 CCMSetup 的命令行属性。  
 
- **缺點**  
+ **缺点**  
 
--   不提供自動化功能，因此相當耗時。  
+-   无自动化，因此耗费时间。  
 
- 如需詳細資訊，請參閱下列主題：  
+ 有关详细信息，请参阅下列主题：  
 
--   [如何手動安裝 Configuration Manager 用戶端](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_Manual)  
+-   [如何手动安装 Configuration Manager 客户端](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_Manual)  
 
--   [如何在 System Center Configuration Manager 中升級 Linux 和 UNIX 伺服器的用戶端](../../../../core/clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md)  
+-   [如何在 System Center Configuration Manager 中升级 Linux 和 UNIX 服务器的客户端](../../../../core/clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md)  
 
--   [如何在 System Center Configuration Manager 中升級 Mac 電腦上的用戶端](../../../../core/clients/manage/upgrade/upgrade-clients-on-mac-computers.md)  
+-   [如何在 System Center Configuration Manager 中升级 Mac 计算机的客户端](../../../../core/clients/manage/upgrade/upgrade-clients-on-mac-computers.md)  
 
-## <a name="upgrade-installation-application-management"></a>升級安裝 (應用程式管理)  
- **支援的用戶端平台：** Windows  
-
-> [!NOTE]  
->  您無法使用這種方法升級 Configuration Manager 2007 用戶端。 在此案例中，您可以從 Configuration Manager 2007 站台將 Configuration Manager 用戶端部署為套件，或者您可以使用自動用戶端升級以自動建立和部署含有最新用戶端版本的套件。  
-
- **優點**  
-
--   支援使用 CCMSetup 命令列屬性。  
-
- **缺點**  
-
--   如果您將用戶端發佈至大量集合，可能會使網路流量增高。  
-
--   必須先探索電腦並將電腦指派至站台，才能升級這些電腦上的用戶端軟體。  
-
- 如需詳細資訊，請參閱 [How to Install Configuration Manager Clients by Using a Package and Program](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientApp) (如何使用封裝和程式安裝 Configuration Manager 用戶端)。  
-
-## <a name="automatic-client-upgrade"></a>自動用戶端升級  
+## <a name="upgrade-installation-application-management"></a>升级安装（应用程序管理）  
+ **支持的客户端平台：** Windows  
 
 > [!NOTE]  
->  可以用來將 Configuration Manager 2007 用戶端升級至 System Center Configuration Manager 用戶端。 Configuration Manager 2007 用戶端可以指派至 Configuration Manager 站台，但是無法執行自動用戶端升級以外的任何動作。  
+>  无法使用此方法升级 Configuration Manager 2007 客户端。 在此情况下，可以从 Configuration Manager 2007 站点中以包的形式部署 Configuration Manager 客户端，或者可以使用自动客户端升级，这种方法可自动创建和部署包含客户端最新版本的包。  
 
- **支援的用戶端平台：** Windows  
+ **优点**  
 
- **優點**  
+-   支持使用 CCMSetup 的命令行属性。  
 
--   可用於自動將站台中的用戶端保持在最新版本。  
+ **缺点**  
 
--   需要進行最基本的管理。  
+-   将客户端分发到大型集合时，可能会导致较高的网络流量。  
 
- **缺點**  
+-   只能用于在已发现并分配到站点的计算机上升级客户端软件。  
 
--   只能用於升級用戶端軟體，不可用於安裝新用戶端。  
+ 有关详细信息，请参阅[如何通过使用包和程序来安装 Configuration Manager 客户端](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientApp)。  
 
--   不適合用於同時升級許多用戶端。  
+## <a name="automatic-client-upgrade"></a>自动客户端升级  
 
--   適用於階層中指派至某個站台的所有用戶端。 不能依集合設定範圍。  
+> [!NOTE]  
+>  可用于将 Configuration Manager 2007 客户端升级到 System Center Configuration Manager 客户端。 Configuration Manager 2007 客户端可分配给 Configuration Manager 站点，但无法执行自动客户端升级外的任何操作。  
 
--   排程選項有限。  
+ **支持的客户端平台：** Windows  
 
- 如需詳細資訊，請參閱[如何在 System Center Configuration Manager 中升級 Windows 電腦的用戶端](../../../../core/clients/manage/upgrade/upgrade-clients-for-windows-computers.md)。  
+ **优点**  
 
-## <a name="client-testing"></a>用戶端測試  
- **支援的用戶端平台：** Windows  
+-   可用于自动让站点中的客户端的版本保持最新。  
 
- **優點**  
+-   所需管理最少。  
 
--   可用來在較小的進入生產階段前集合中測試新的用戶端版本。  
+ **缺点**  
 
--   測試完成時，進入生產階段前的用戶端會升級至生產，並跨 Configuration Manager 站台自動進行升級。  
+-   只能用于升级客户端软件，不能用于安装新客户端。  
 
- **缺點**  
+-   不适用于同时升级多个客户端。  
 
--   只能用於升級用戶端軟體，不可用於安裝新用戶端。  
+-   适用于层次结构中分配到站点的所有客户端。 无法按集合来限定范围。  
 
- [如何測試 System Center Configuration Manager 的進入生產階段前集合用戶端升級](../../../../core/clients/manage/upgrade/test-client-upgrades.md)  
+-   有限的计划选项。  
+
+ 有关详细信息，请参阅[如何在 System Center Configuration Manager 中升级 Windows 计算机的客户端](../../../../core/clients/manage/upgrade/upgrade-clients-for-windows-computers.md)。  
+
+## <a name="client-testing"></a>客户端测试  
+ **支持的客户端平台：** Windows  
+
+ **优点**  
+
+-   可用于在较小的预生产集合中测试新的客户端版本。  
+
+-   测试完成后，预生产中的客户端将被提升到生产，并将在整个 Configuration Manager 站点中自动进行升级。  
+
+ **缺点**  
+
+-   只能用于升级客户端软件，不能用于安装新客户端。  
+
+ [如何在 System Center Configuration Manager 中的预生产集合中测试客户端升级](../../../../core/clients/manage/upgrade/test-client-upgrades.md)  

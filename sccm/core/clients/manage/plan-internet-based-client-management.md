@@ -1,6 +1,6 @@
 ---
-title: "以網際網路為基礎的用戶端管理 | Microsoft Docs"
-description: "在 System Center Configuration Manager 中建立方案以管理以網際網路為基礎的用戶端。"
+title: "基于 Internet 的客户端管理 | Microsoft Docs"
+description: "创建计划，在 System Center Configuration Manager 中管理基于 Internet 的客户端。"
 ms.custom: na
 ms.date: 05/16/2017
 ms.prod: configuration-manager
@@ -18,135 +18,135 @@ manager: angrobe
 ms.openlocfilehash: 90c30bfb22735f73422f1547301552bf42022bb9
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="plan-for-internet-based-client-management-in-system-center-configuration-manager"></a>System Center Configuration Manager 中以網際網路為基礎的用戶端管理規劃
+# <a name="plan-for-internet-based-client-management-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中基于 Internet 的客户端管理计划
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-以網際網路為基礎的用戶端管理 (有時稱之為 IBCM) 可讓您在 System Center Configuration Manager 用戶端並未連線至您公司網路，但有標準網際網路連線時，管理這些用戶端。 這種安排有幾個優點，包括降低成本 (因為無須執行虛擬私人網路 (VPN))，且能以更即時的方式部署軟體更新。  
+通过基于 Internet 的客户端管理（有时称为 IBCM），可在 System Center Configuration Manager 客户端未连接到公司网络但具有标准 Internet 连接时管理该客户端。 这种管理方式有一些优点，例如，不必运行虚拟专用网 (VPN)，从而可以降价成本，以及能够更及时地部署软件更新。  
 
- 因為在公用網路上管理用戶端電腦需要更高的安全性，以網際網路為基礎的用戶端管理就要求用戶端與用戶端連線的網站系統伺服器使用 PKI 憑證。 這可確保由獨立的單位驗證連線，且進出這些網站系統的資料都使用安全通訊端層 (SSL) 進行加密。  
+ 由于在公用网络上管理客户端计算机的安全性要求较高，因此基于 Internet 的客户端管理要求客户端以及客户端连接到的站点系统服务器使用 PKI 证书。 这样可以确保连接通过独立的机构进行身份验证，且在这些站点系统之间传输的数据使用安全套接字层 (SSL) 加密。  
 
- 請利用以下各節來協助您規劃以網際網路為基礎的用戶端管理。  
+ 使用下列部分来帮助你规划基于 Internet 的客户端管理。  
 
-##  <a name="features-that-are-not-supported-on-the-internet"></a>網際網路上「不」支援的功能  
- 並非所有用戶端管理功能都可在網際網路上使用，因此，在網際網路上管理用戶端時，就不會支援某些功能。 網際網路管理不支援的功能，一般需依賴 Active Directory 網域服務，或不適合在公用網路上使用，例如網路探索和網路喚醒 (WOL)。  
+##  <a name="features-that-are-not-supported-on-the-internet"></a>Internet 上不支持的功能  
+ 并非所有客户端管理功能都适用于 Internet，因此在 Internet 上管理客户端时，有些功能可能不受支持。 不支持 Internet 管理的功能通常依赖于 Active Directory 域服务或不适合用于公用网络，例如网络发现和 LAN 唤醒 (WOL)。  
 
- 在網際網路上管理用戶端時，不支援以下功能：  
+ 通过 Internet 管理客户端时，下列功能不受支持：  
 
--   透過網際網路的用戶端部署，例如用戶端推入和以軟體更新為基礎的用戶端部署。 此時請改以手動方式進行用戶端安裝。  
+-   通过 Internet 进行的客户端部署，如基于客户端请求和软件更新的客户端部署。 请改用手动客户端安装。  
 
--   自動網站指派。  
+-   自动站点分配。  
 
--   網路喚醒。  
+-   LAN 唤醒。  
 
--   作業系統部署。 不過，您可以部署並未部署作業系統的工作順序，例如在用戶端上執行指令碼與維護工作的工作順序。  
+-   操作系统部署。 但是，你可以部署不部署操作系统的任务序列；例如在客户端上运行脚本和维护任务的任务序列。  
 
--   遠端控制。  
+-   远程控制。  
 
--   軟體部署至使用者，除非以網際網路為基礎的管理點可以使用 Windows 驗證 (Kerberos 或 NTLM) 來驗證 Active Directory 網域服務中的使用者。 當以網際網路為基礎的管理點信任使用者帳戶所在的樹系時，就可能出現這種狀況。  
+-   针对用户的软件部署，除非基于 Internet 的管理点可以使用 Windows 身份验证（Kerberos 或 NTLM）对 Active Directory 域服务中的用户进行身份验证。 当基于 Internet 的管理点信任用户帐户所在的林时，这种情况是有可能的。  
 
- 此外，以網際網路為基礎的管理不支援漫遊。 漫遊會讓用戶端總是找出最接近的發佈點來下載內容。 當網站系統設定為使用網際網路 FQDN，且網站系統角色允許來自網際網路的用戶端連線時，則在網際網路上受管理的用戶端會經由其指派的網站與網站系統進行通訊。 無論頻寬或實體位置為何，用戶端都會以不確定的方式選取其中一個以網際網路為基礎的網站系統。  
+ 此外，基于 Internet 的客户端管理不支持漫游。 漫游能够使客户端始终找到最近的分发点来下载内容。 在以下情况下，在 Internet 上管理的客户端会与其分配的站点中的站点系统通信：这些站点系统被配置为使用 Internet FQDN 并且站点系统角色允许来自 Internet 的客户端连接。 客户端不确定地选择基于 Internet 的站点系统之一，而不考虑带宽或物理位置。  
 
- 當您擁有設定為接受來自網際網路的連線的軟體更新點時，Configuration Manager 在網際網路上以網際網路為基礎的用戶端一律皆會掃描此軟體更新點，藉以判斷所需的軟體更新。 不過，當這些用戶端位於網際網路上時，首先會嘗試從 Microsoft Update 下載軟體更新，而不是從以網際網路為基礎的發佈點下載。 只有在下載失敗後，才會嘗試從以網際網路為基礎的發佈點下載所需的軟體更新。 未針對以網際網路為基礎的用戶端管理設定的用戶端，永遠不會嘗試從 Microsoft Update 下載軟體更新，但會一直使用 Configuration Manager 發佈點。  
+ 如果你具有配置为接受 Internet 连接的软件更新点，则 Internet 上基于 Configuration Manager Internet 的客户端始终会对此软件更新点进行扫描，以确定是否需要软件更新。 但是，如果这些客户端在 Internet 上，则它们首先会尝试从 Microsoft 更新下载软件更新，而不是从基于 Internet 的分发点中下载。 只有在此下载失败的情况下，它们之后才会尝试从基于 Internet 的分发点下载所需的软件更新。 未针对基于 Internet 的客户端管理进行配置的客户端不能从 Microsoft 更新下载软件更新，而必须使用 Configuration Manager 分发点。  
 
-##  <a name="considerations-for-client-communications-from-the-internet-or-untrusted-forest"></a>從網際網路或未受信任之樹系的用戶端通訊考量  
- 安裝在主要網站的下列網站系統角色支援來自不受信任位置 (例如網際網路或不受信任樹系) 的用戶端連線 (次要網站不支援來自不受信任位置的用戶端連線)：  
+##  <a name="considerations-for-client-communications-from-the-internet-or-untrusted-forest"></a>有来自 Internet 或不受信任的林中的客户端通信的注意事项  
+ 下列安装在主站点上的站点系统角色支持来自不受信任的位置（如 Internet 或不受信任的林）的客户端连接（辅助站点不支持来自不受信任位置的客户端连接）：  
 
--   應用程式類別目錄網站點  
+-   应用程序目录网站点  
 
--   Configuration Manager 原則模組  
+-   Configuration Manager 策略模块  
 
--   發佈點 (以雲端為基礎的發佈點需要 HTTPS)  
+-   分发点（基于云的分发点需要 HTTPS）  
 
--   註冊 Proxy 點  
+-   注册代理点  
 
--   後援狀態點  
+-   回退状态点  
 
--   管理點  
+-   管理点  
 
--   軟體更新點  
+-   软件更新点  
 
- **關於網際網路對向的網站系統：**   
-雖然用戶端的樹系與站台系統伺服器之間不需要具有信任關係，但當包含網際網路對向站台系統的樹系信任包含使用者帳戶的樹系時，此設定仍支援針對網際網路上的裝置使用以使用者為基礎的原則 (在啟用 [用戶端原則] 用戶端設定之 [從網際網路用戶端啟用使用者原則要求] 的情況下)。  
+ **关于面向 Internet 的站点系统：**   
+虽然客户端和站点系统服务器的林之间不需要信任，但当包含面向 Internet 的站点系统的林信任包含用户帐户的林时，如果启用“客户端策略”客户端设置“启用来自 Internet 客户端的用户策略请求”，则此配置对 Internet 上的设备支持基于用户的策略。  
 
- 例如，以下設定會說明何時以網際網路為基礎的用戶端管理會針對網際網路上的裝置，支援使用者原則。  
+ 例如，以下配置说明了当基于 Internet 的客户端管理支持 Internet 上设备的用户策略时：  
 
--   以網際網路為基礎的管理點位於唯讀網域控制站所在的中介網路，以驗證使用者，且中介防火牆允許 Active Directory 封包。  
+-   基于 Internet 的管理点在只读域控制器所在外围网络中以对用户进行身份验证，并且干扰防火墙允许 Active Directory 数据包。  
 
--   使用者帳戶位於樹系 A (內部網路)，以網際網路為基礎的管理點則位於樹系 B (中介網路)。 樹系 B 信任樹系 A，且中介防火牆允許驗證封包。  
+-   用户帐户在林 A (Intranet) 中，基于 Internet 的管理点在林 B（外围网络）中。 林 B 信任林 A，干扰防火墙允许身份验证数据包。  
 
--   使用者帳戶與以網際網路為基礎的管理點位於樹系 A (內部網路)。 使用 Web Proxy 伺服器 (例如 Forefront Threat Management Gateway)，將管理點發佈至網際網路。  
-
-> [!NOTE]  
->  若 Kerberos 驗證失敗，就會自動嘗試 NTLM 驗證。  
-
- 如前一個範例所顯示的，當使用 Web Proxy 伺服器 (如 ISA 伺服器與 Forefront Treat Management Gateway) 將以網際網路為基礎的網站系統發佈到網際網路上時，您可以將這些網站置於內部網路內。 這些網站系統只能針對來自網際網路的用戶端連線，或來自網際網路與內部網路的用戶端連線，進行設定， 使用 Web Proxy 伺服器時，您可以設定其讓安全通訊端層 (SSL) 橋接至 SSL (較安全) 或 SSL 通道：  
-
--   **SSL 橋接至 SSL：**   
-    針對以網際網路為基礎的用戶端管理使用 Proxy 網頁伺服器時的建議設定是 SSL 橋接至 SSL，這會透過驗證以啟用 SSL 終止。 必須使用電腦驗證來驗證用戶端電腦，並使用使用者驗證來驗證行動裝置舊版用戶端。 由 Configuration Manager 註冊的行動裝置並不支援 SSL 橋接。  
-
-     在 Proxy 網頁伺服器進行 SSL 終止的優點是將來自網際網路的封包轉寄到內部網路前，都必須經過檢查。 Proxy 網頁伺服器會驗證來自用戶端的連線，將其終止，然後開啟一個連線到以網際網路為基礎之網站系統的全新已驗證連線。 Configuration Manager 用戶端使用 Proxy 網頁伺服器時，用戶端識別 (用戶端 GUID) 會安全地保存在封包裝載中，管理點就不用考慮讓 Proxy 網頁伺服器成為用戶端。 使用 HTTP 至 HTTPS 或從 HTTPS 至 HTTP 的 Configuration Manager 不支援橋接。  
-
--   **通道**：   
-    若您的 Proxy 網頁伺服器無法支援 SSL 橋接的需求，或您想設定網際網路支援由 Configuration Manager 註冊的行動裝置，則也支援 SSL 通道。 這是比較危險的選項，因為來自網際網路的 SSL 封包會轉寄到沒有 SSL 終止的網站系統，因此無法檢查封包內是否存在惡意內容。 使用 SSL 通道時，Proxy 網頁伺服器不需要憑證。  
-
-##  <a name="planning-for-internet-based-clients"></a>規劃以網際網路為基礎的用戶端  
- 您必須判斷在網際網路上受管理的用戶端電腦是否要針對在內部網路與網際網路上受管理來進行設定，或是設定僅在網際網路內接受用戶端管理。 在安裝用戶端電腦時，您只能設定用戶端管理選項。 若您稍後改變心意，就必須重新安裝用戶端。  
+-   用户帐户和基于 Internet 的管理点在在林 A (Intranet) 中。 系统使用 Web 代理服务器（例如，前端威胁管理网关）将管理点发布到 Internet。  
 
 > [!NOTE]  
->  如果您設定具有網際網路連線功能的管理點，連線至該管理點的用戶端，會在下一次重新整理它們的可用管理點清單時，成為具有網際網路連線功能。  
+>  如果 Kerberos 身份验证失败，则会自动尝试 NTLM 身份验证。  
+
+ 如上一个示例所示，当使用 Web 代理服务器（如 ISA 服务器和前端威胁管理网关）将基于 Internet 的站点系统发布到 Internet 时，可以将这些系统放置在 Intranet 中。 可以仅为 Internet 客户端连接配置这些站点系统，或者可以为 Internet 和 Intranet 客户端连接配置这些站点系统。 使用 Web 代理服务器时，可以针对到 SSL 的安全套接字层 (SSL) 桥接或 SSL 隧道来配置它：  
+
+-   **到 SSL 的 SSL 桥接：**   
+    为基于 Internet 的客户端管理使用代理 Web 服务器时建议的配置是到 SSL 的 SSL 桥接，此配置使用 SSL 终止操作和身份验证。 必须使用计算机身份验证对客户端计算机进行身份验证，使用用户身份验证对移动设备旧客户端进行身份验证。 通过 Configuration Manager 注册的移动设备不支持 SSL 桥接。  
+
+     代理 Web 服务器上的 SSL 终止的优点是：在将来自 Internet 的数据包转发到内部网络之前，会对该数据包进行检测。 代理 Web 服务器将对来自客户端的连接进行验证，将其终止，然后建立一个新的经身份验证的连接，连接到基于 Internet 的站点系统。 当 Configuration Manager 客户端使用代理 Web 服务器时，客户端标识（客户端 GUID）安全地包含在数据包有效负载内，因而管理点不会将代理 Web 服务器视为客户端。 Configuration Manager 中不支持 HTTP 到 HTTPS 的桥接，或 HTTPS 到 HTTP 的桥接。  
+
+-   隧道：   
+    如果代理 Web 服务器无法支持 SSL 桥接的要求，或者想对通过 Configuration Manager 注册的移动设备配置 Internet 支持，则也支持 SSL 隧道。 这是一项安全性较差的选项，因为来自 Internet 的 SSL 数据包会在不终止 SSL 的情况下转发到站点系统，因此无法检测其是否包含恶意内容。 使用 SSL 隧道时，代理 Web 服务器不需要证书。  
+
+##  <a name="planning-for-internet-based-clients"></a>规划基于 Internet 的客户端  
+ 你必须确定是为 Intranet 和 Internet 上的管理还是为仅限 Internet 客户端管理配置将通过 Internet 管理的客户端计算机。 只能在安装客户端计算机期间配置客户端管理选项。 如果过后改变了主意，则必须重新安装客户端。  
+
+> [!NOTE]  
+>  如果配置 Internet 支持的管理点，则连接到该管理点的客户端在下一步刷新其可用的管理点列表时变为受 Internet 支持。  
 
 > [!TIP]  
->  您不需要限制設定僅在網際網路中進行的用戶端管理，您也可以將其用在內部網路上。  
+>  你不必将仅限 Internet 客户端管理的配置局限于 Internet，你也可以在 Intranet 上使用它。  
 
- 設定僅在網際網路上接受用戶端管理的用戶端，只會和針對來自網際網路之用戶端連線設定的網站系統進行通訊。 這個設定適合您已知從未連線至公司內部網路的電腦，例如在遠端位置的銷售點電腦。 當您要限制用戶端僅經由 HTTPS 進行通訊 (例如支援防火牆與受限制的安全性原則) 時，以及當您在中介網路上安裝以網際網路為基礎的網站系統，且要使用 Configuration Manager 用戶端管理這些伺服器時，也適合這個設定。  
+ 为仅限 Internet 客户端管理配置的客户端仅与为 Internet 的客户端连接配置的站点系统通信。 此配置将适合于确定永远不会连接至公司 Intranet 的计算机，例如，位于远程位置的销售点计算机。 若要将客户端通信局限于仅限 HTTPS（例如，为支持防火墙和受限制的安全策略）以及在外围网络中安装基于 Internet 的站点系统并且想要使用 Configuration Manager 客户端管理这些服务器时，此配置也合适。  
 
- 您要管理網際網路上的工作群組用戶端時，必須將這些用戶端安裝為僅在網際網路上進行通訊。  
+ 想要管理 Internet 上的工作组客户端时，必须将其安装为仅限 Internet 的客户端。  
 
 > [!NOTE]  
->  當行動裝置用戶端設定為使用以網際網路為基礎的管理點時，會將行動裝置用戶端自動設定為僅在網際網路上進行通訊。  
+>  将移动设备客户端配置为使用基于 Internet 的管理点时，会将移动设备客户端自动配置为仅限 Internet 的客户端。  
 
- 其他用戶端電腦則可以設定為接受網際網路與內部網路用戶端管理。 當它偵測到網路變更時，它們可以自動在以網際網路為基礎的用戶端管理與內部網路用戶端管理間進行切換。 若這些用戶端可以找到並連線至設定為在內部網路進行用戶端連線的管理點，就會將這些用戶端視為具備完整 Configuration Manager 管理功能的內部網路用戶端來進行管理。 若用戶端找不到或無法連線至設定為在內部網路進行用戶端連線的管理點，它們會嘗試連線到以網際網路為基礎的管理點，若成功，接著就會由這些用戶端之指定網站內以網際網路為基礎的網站系統來管理這些用戶端。  
+ 可以为 Internet 和 Intranet 客户端管理配置其他客户端计算机。 当它们检测到网络更改时，它们会在基于 Internet 的客户端管理和 Intranet 客户端管理之间自动切换。 如果这些客户端可以找到并连接到为 Intranet 上的客户端连接配置的管理点，则会作为具有完整的 Configuration Manager 管理功能的 Intranet 客户端来管理这些客户端。 如果客户端无法找到或连接到为 Intranet 上的客户端连接配置的管理点，则它们会尝试连接到基于 Internet 的管理点，如果此操作成功，则其分配的站点中基于 Internet 的站点系统将管理这些客户端。  
 
- 在以網際網路為基礎的用戶端管理，以及內部網路用戶端管理間進行自動切換的優點是：只要用戶端電腦連線至內部網路，且只要它們在網際網路上，就能繼續以基礎管理功能管理時，這些用戶端電腦就可以自動使用所有 Configuration Manager 功能。 此外，在網際網路上開始的下載可以在內部網路上順利恢復，反之亦然。  
+ 在基于 Internet 的客户端管理和 Intranet 客户端管理之间自动切换的优点是：当客户端计算机连接到 Intranet 时可自动使用所有 Configuration Manager 功能，当客户端计算机连接到 Internet 时，可继续使用基本管理功能对其进行管理。 此外，在 Internet 上开始的下载可以在 Intranet 上无缝地继续，反之亦然。  
 
-##  <a name="prerequisites-for-internet-based-client-management"></a>以網際網路為基礎之用戶端管理的必要條件  
- Configuration Manager 中以網際網路為基礎的用戶端管理有以下外部相依性：  
+##  <a name="prerequisites-for-internet-based-client-management"></a>基于 Internet 的客户端管理的先决条件  
+ Configuration Manager 中基于 Internet 的客户端管理具有以下外部依赖项：  
 
--   將在網際網路上進行管理的用戶端必須具備網際網路連線。  
+-   将在 Internet 上管理的客户端必须具有 Internet 连接。  
 
-     Configuration Manager 使用現有網際網路服務提供者 (ISP) 連線來連線到網際網路，這可以是永久或暫時的連線。 用戶端行動裝置必須具備直接網際網路連線，但用戶端電腦可以具備直接網際網路連線，或使用 Proxy 網頁伺服器來連線。  
+     Configuration Manager 使用至 Internet 的现有 Internet 服务提供商 (ISP) 连接，此连接可以是永久或临时连接。 客户端移动设备必须具有直接 Internet 连接，但客户端计算机可以具有直接 Internet 连接，或者可以使用代理 Web 服务器进行连接。  
 
--   支援以網際網路為基礎之用戶端管理的網站系統必須具備連線至網際網路的能力，且必須位於 Active Directory 網域。  
+-   支持基于 Internet 的客户端管理的站点系统必须连接到 Internet，并且必须在 Active Directory 域中。  
 
-     以網際網路為基礎的網站系統不需要和網站伺服器的 Active Directory 樹系間建立信任關係。 不過，在以網際網路為基礎的管理點可以使用 Windows 驗證來驗證使用者時，就支援使用者原則。 若 Windows 驗證失敗，則僅支援電腦原則。  
+     基于 Internet 的站点系统不需要站点服务器的 Active Directory 林的信任关系。 但是，当基于 Internet 的管理点可通过使用 Windows 身份验证对用户进行身份验证时，支持用户策略。 如果 Windows 身份验证失败，则仅只支持计算机策略。  
 
     > [!NOTE]  
-    >  若要支援使用者原則，您也必須將兩個 [用戶端原則]  用戶端設定設定為 [True]  。  
+    >  要支持用户策略，也必须将以下两个“客户端策略”  客户端设置设为“真”  ：  
     >   
-    >  -   **啟用用戶端的使用者原則輪詢**  
-    > -   **[從網際網路用戶端啟用使用者原則要求]**  
+    >  -   **在客户端上启用用户策略轮询**  
+    > -   **启用来自 Internet 客户端的用户策略请求**  
 
-     以網際網路為基礎的應用程式類別目錄網站點也要求以 Windows 驗證來驗證使用者 (它們的電腦位於網際網路上時)。 這項要求獨立於使用者原則。  
+     当用户的计算机在 Internet 上时，基于 Internet 的应用程序目录网站点也需要 Windows 身份验证对用户进行身份验证。 此要求与用户策略无关。  
 
--   您必須具備支援的公開金鑰基礎結構 (PKI) 以部署及管理用戶端要求的憑證，以及在網際網路和以網際網路為基礎的網站系統伺服器上進行管理的憑證。  
+-   你必须具有支持的公钥基础结构 (PKI)，此结构可以部署和管理客户端需要且在 Internet 和基于 Internet 的站点系统服务器上受管理的证书。  
 
-     如需 PKI 憑證的詳細資訊，請參閱 [System Center Configuration Manager 的 PKI 憑證需求](/sccm/core/plan-design/network/pki-certificate-requirements)。  
+     有关 PKI 证书的详细信息，请参阅 [System Center Configuration Manager 的 PKI 证书要求](/sccm/core/plan-design/network/pki-certificate-requirements)。  
 
--   網站系統 (支援以網際網路為基礎的用戶端管理) 的網際網路完整網域名稱 (FQDN) 必須在公開 DNS 伺服器上登錄為主機項目。  
+-   必须将支持基于 Internet 的客户端管理的 Internet 站点系统完全限定域名 (FQDN) 注册为公用 DNS 服务器上的主机条目。  
 
--   居中的防火牆或 Proxy 伺服器必須允許與以網際網路為基礎之站台系統相關聯的用戶端通訊。  
+-   干预防火墙或代理服务器必须允许与基于 Internet 的站点系统关联的客户端通信。  
 
-     用戶端通訊要求：  
+     客户端通信要求：  
 
-    -   支援 HTTP 1.1  
+    -   支持 HTTP 1.1  
 
-    -   允許多部分 MIME 附件的 HTTP 內容類型 (多部分/混合和應用程式/octet-stream)。  
+    -   允许多部件 MIME 附件的 HTTP 内容类型（多部件/混合和应用程序/八进制数流）  
 
-    -   針對以網際網路為基礎的管理點，允許以下動詞：  
+    -   允许基于 Internet 的管理点的以下谓词：  
 
         -   HEAD  
 
@@ -158,7 +158,7 @@ ms.lasthandoff: 08/07/2017
 
         -   PROPFIND  
 
-    -   針對以網際網路為基礎的發佈點，允許以下動詞：  
+    -   允许基于 Internet 的分发点的以下谓词：  
 
         -   HEAD  
 
@@ -166,32 +166,32 @@ ms.lasthandoff: 08/07/2017
 
         -   PROPFIND  
 
-    -   針對以網際網路為基礎的後援狀態點，允許以下動詞：  
+    -   允许基于 Internet 的回退状态点的以下谓词：  
 
         -   POST  
 
-    -   針對以網際網路為基礎的應用程式類別目錄網站點，允許以下動詞：  
+    -   允许基于 Internet 的应用程序目录网站点的以下谓词：  
 
         -   POST  
 
         -   GET  
 
-    -   針對以網際網路為基礎的管理點，允許以下 HTTP 標頭：  
+    -   允许基于 Internet 的管理点的以下 HTTP 头：  
 
-        -   Range:  
+        -   范围：  
 
-        -   CCMClientID:  
+        -   CCMClientID：  
 
-        -   CCMClientIDSignature:  
+        -   CCMClientIDSignature：  
 
-        -   CCMClientTimestamp:  
+        -   CCMClientTimestamp：  
 
-        -   CCMClientTimestampsSignature:  
+        -   CCMClientTimestampsSignature：  
 
-    -   針對以網際網路為基礎的發佈點，允許以下 HTTP 標頭：  
+    -   允许基于 Internet 的分发点的以下 HTTP 头：  
 
-        -   Range:  
+        -   范围：  
 
-     如需支援這些要求的設定資訊，請參閱您的防火牆或 Proxy 伺服器說明文件。  
+     有关支持这些要求的配置信息，请参阅防火墙或代理服务器文档。  
 
-     如需您針對來自網際網路之用戶端連線使用軟體更新點時類似的通訊要求，請參閱 Windows Server Update Services (WSUS) 的說明文件。 例如，針對 Windows Server 2003 上的 WSUS，請參閱 [Appendix D: Security Settings (附錄 D：安全性設定)](http://go.microsoft.com/fwlink/p/?LinkId=143368)，安全性設定的部署附錄。
+     关于使用 Internet 中客户端连接的软件更新点时的类似通信要求，请参阅 Windows Server Update Services (WSUS) 的文档。 例如，对于 Windows Server 2003 上的 WSUS，请参阅安全设置的部署附录： [附录 D：安全设置](http://go.microsoft.com/fwlink/p/?LinkId=143368)。

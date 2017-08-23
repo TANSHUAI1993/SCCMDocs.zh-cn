@@ -1,6 +1,6 @@
 ---
-title: "使用行動應用程式管理原則來保護應用程式 | Microsoft Docs"
-description: "修改您部署之應用程式的功能，讓這些應用程式符合公司的相容性和安全性原則。"
+title: "使用移动应用程序管理策略保护应用 | Microsoft Docs"
+description: "修改部署的应用的功能，使它们符合公司的合规性和安全策略。"
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
@@ -18,162 +18,162 @@ manager: angrobe
 ms.openlocfilehash: 50c137f159b0ef631f7173b8eec190182ce41cee
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="protect-apps-using-mobile-application-management-policies-in-system-center-configuration-manager"></a>使用 System Center Configuration Manager 中的行動應用程式管理原則來保護應用程式
+# <a name="protect-apps-using-mobile-application-management-policies-in-system-center-configuration-manager"></a>使用 System Center Configuration Manager 中的移动应用程序管理策略保护应用
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager 應用程式管理原則可讓您修改所部署之應用程式的功能，以協助使其符合公司的合規性和安全性原則。 例如，您可以限制受限應用程式中的剪下、複製及貼上作業，或將應用程式設定成只能在受管理瀏覽器中開啟所有 URL。 應用程式管理原則支援：  
+通过 System Center Configuration Manager 应用程序管理策略，可修改部署的应用的功能，帮助应用符合公司的合规性策略和安全策略。 例如，可限制在受限应用内进行剪切、复制和粘贴操作，或配置应用以打开托管浏览器内的所有 URL。 应用管理策略支持：  
 
--   執行 Android 4 和更新版本的裝置  
+-   运行 Android 4 和更高版本的设备  
 
--   執行 iOS 7 和更新版本的裝置  
+-   运行 iOS 7 和更高版本的设备  
 
-您也可以使用行動應用程式管理原則來保護不受 Intune 管理之裝置上的應用程式。 您可以使用這項新功能，對連線到 Office 365 服務的應用程式套用行動應用程式管理原則。 連線到內部部署 Exchange 或 SharePoint 的應用程式不支援這項功能。  
+还可使用移动应用管理策略保护不由 Intune 管理的设备上的应用。 可使用这项新功能，将移动应用管理策略应用到连接到 Office 365 服务的应用。 此操作不支持用于连接到本地 Exchange 或 SharePoint 的应用。  
 
-若要使用這項新功能，您需要使用 Azure 預覽入口網站。 下列主題可協助您開始使用：  
--   [在 Azure 入口網站中開始使用行動應用程式管理原則](https://technet.microsoft.com/library/mt627830.aspx)  
--   [使用 Microsoft Intune 建立及部署行動應用程式管理原則](https://technet.microsoft.com/library/mt627829.aspx)  
+若要使用这项新功能，需使用 Azure 预览门户。 下列主题可帮你入门：  
+-   [在 Azure 门户中开始使用移动应用管理策略](https://technet.microsoft.com/library/mt627830.aspx)  
+-   [使用 Microsoft Intune 创建和部署移动应用管理策略](https://technet.microsoft.com/library/mt627829.aspx)  
 
- 與處理 Configuration Manager 中的設定項目和基準不同，您不需要直接部署應用程式管理原則。 而是將原則與您想要限制的應用程式部署類型建立關聯。 當應用程式部署類型已部署並安裝在裝置上時，您指定的設定就會生效。  
+ 与 Configuration Manager 中的配置项目和基线不同，不会直接部署应用程序管理策略。 而是将该策略与你想要进行限制的应用程序部署类型关联。 在设备上部署并安装了应用部署类型后，指定的设置将生效。  
 
-若要將限制套用至應用程式，應用程式必須加入 Microsoft Intune 應用程式軟體開發套件 (SDK)。 有兩種方法可以取得這種類型的應用程式：  
+若要将限制应用到应用，该应用必须结合 Microsoft Intune 应用软件开发工具包 (SDK)。 有两种方式获得此类应用：  
 
--   **使用受原則管理的應用程式** (Android 及 iOS)：這些應用程式已內建 App SDK。 若要加入此類型的應用程式，請從應用程式市集 (例如 iTunes Store 或 Google Play) 指定應用程式的連結。 這種類型的應用程式不需要進行任何處理。 如需適用於 iOS 和 Android 裝置之受原則管理的應用程式清單，請參閱 [Microsoft Intune 行動應用程式管理原則的受管理應用程式](https://technet.microsoft.com/library/dn708489.aspx)。  
+-   **使用策略托管应用**（Android 和 iOS）：这些应用内置了App SDK。 要添加此类型的应用，你可以从 iTunes 应用商店或 Google Play 等应用商店指定应用的链接。 对于此类应用，无需进一步的处理。 有关可用于 iOS 和 Android 设备的策略托管应用的列表，请参阅 [Managed apps for Microsoft Intune mobile application management policies](https://technet.microsoft.com/library/dn708489.aspx)（Microsoft Intune 移动应用程序管理策略的托管应用）。  
 
--   **使用「包裝的」應用程式** (Android 及 iOS)：這些應用程式使用 **Microsoft Intune App Wrapping Tool** 進行重新封裝，以包含 App SDK。 此工具通常用來處理內部建立的公司應用程式。 它不能用來處理從應用程式市集下載的應用程式。 如需詳細資訊，請參閱下列文章：
-    - [準備將 iOS 應用程式交由 Intune App Wrapping Tool 進行行動應用程式管理](https://technet.microsoft.com/library/dn878028.aspx)
+-   **使用“已包装的”应用**（Android 和 iOS）：使用 **Microsoft Intune 应用包装工具**重新包装这些应用，将 App SDK 包括在内。 该工具通常用于处理公司内部开发的应用。 它可用于处理从应用商店下载的应用。 有关详细信息，请参阅下列文章：
+    - [使用 Microsoft Intune 应用包装工具为移动应用程序管理准备 iOS 应用](https://technet.microsoft.com/library/dn878028.aspx)
 
-    - [準備 Android 應用程式以使用 Intune 應用程式包裝工具進行行動應用程式管理](https://technet.microsoft.com/library/mt147413.aspx)  
+    - [使用 Microsoft Intune 应用包装工具为移动应用程序管理准备 Android 应用](https://technet.microsoft.com/library/mt147413.aspx)  
 
-## <a name="create-and-deploy-an-app-with-a-mobile-application-management-policy"></a>以行動應用程式管理原則建立及部署應用程式  
+## <a name="create-and-deploy-an-app-with-a-mobile-application-management-policy"></a>创建和部署具有移动应用程序管理策略的应用  
 
-##  <a name="step-1-obtain-the-link-to-a-policy-managed-app-or-create-a-wrapped-app"></a>步驟 1：取得受原則管理的應用程式連結，或者建立包裝的應用程式  
+##  <a name="step-1-obtain-the-link-to-a-policy-managed-app-or-create-a-wrapped-app"></a>步骤 1：获取指向策略托管应用的链接，或创建已包装的应用  
 
--   **取得受原則管理的應用程式連結**：從應用程式市集，尋找並記下您要部署之受原則管理的應用程式 URL。  
+-   **获取策略托管应用的链接**：从应用商店查找并记录要部署的策略托管应用的 URL。  
 
-     例如 iPad 版 Microsoft Word 應用程式的 URL 為 **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**  
+     例如，Microsoft Word for iPad 应用的 URL 是 **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**  
 
--   **建立包裝的應用程式**：使用[準備將 iOS 應用程式交由 Intune App Wrapping Tool 進行行動應用程式管理](https://technet.microsoft.com/library/dn878028.aspx)和[準備 Android 應用程式以使用 Intune 應用程式包裝工具進行行動應用程式管理](https://technet.microsoft.com/library/mt147413.aspx)主題中的資訊，來建立包裝的應用程式。  
+-   **创建包装的应用** - 使用主题[使用 Microsoft Intune 应用包装工具为移动应用程序管理准备 iOS 应用](https://technet.microsoft.com/library/dn878028.aspx)和[使用 Microsoft Intune 应用包装工具为移动应用程序管理准备 Android 应用](https://technet.microsoft.com/library/mt147413.aspx)中的信息创建包装的应用。  
 
-     此工具會建立處理過的應用程式和相關聯的資訊清單檔案。 當您建立包含此應用程式的 Configuration Manager 應用程式時，會使用這些檔案。  
+     创建处理过的应用和关联的清单文件的工具。 创建包含该应用的 Configuration Manager 应用程序时，使用这些文件。  
 
-##  <a name="step-2-create-a-configuration-manager-application-that-contains-an-app"></a>步驟 2：建立包含應用程式的 Configuration Manager 應用程式  
- 建立 Configuration Manager 應用程式的程序會有所不同，取決於您使用的是受原則管理的應用程式 (外部連結)，或是使用透過 Microsoft Intune App Wrapping Tool for iOS (iOS 的應用程式套件) 所建立的應用程式。 使用下列其中一個程序建立 Configuration Manager 應用程式。  
+##  <a name="step-2-create-a-configuration-manager-application-that-contains-an-app"></a>步骤 2：创建包含应用的 Configuration Manager 应用程序  
+ 创建 Configuration Manager 应用程序的过程有所不同，具体取决于使用的是策略托管应用（外部链接）还是通过适用于 iOS 的 Microsoft Intune 应用包装工具（iOS 应用包）创建的应用。 使用以下过程之一创建 Configuration Manager 应用程序。  
 
-1.  在 Configuration Manager 主控台中，選擇 [軟體程式庫] > [應用程式管理] > [應用程式]。  
+1.  在 Configuration Manager 控制台中，选择“软件库” > “应用程序管理” > “应用程序”。  
 
-3.  在 [首頁] 索引標籤的 [建立] 群組中，選擇 [建立應用程式] 以開啟 [建立應用程式精靈]。  
+3.  在“主页”选项卡上的“创建”组中，选择“创建应用程序”，打开“创建应用程序”向导。  
 
-4.  在 [一般]  頁面上，選取 [從安裝檔案自動偵測此應用程式的相關資訊] 。  
+4.  在“常规”  页上，选择“自动检测安装文件中有关此应用程序的信息” 。  
 
-5.  在 **[類型]** 下拉式清單中，選取 **[iOS 的應用程式套件 (\*.ipa 檔)]**。  
+5.  在“类型”下拉列表中，选择“iOS 应用包(\*.ipa 文件)”。**  
 
-6.  選擇 [瀏覽] 以選取您要匯入的應用程式套件，然後選擇 [下一步]。  
+6.  选择“浏览”，选择要导入的应用包，然后选择“下一步”。  
 
-7.  在 [一般資訊]  頁面上，輸入您想要使用者在公司入口網站看見的說明文字與類別資訊。  
+7.  在“常规信息”  页上，输入希望用户在公司门户中看到的描述性文本和类别信息。  
 
-8.  完成精靈。  
+8.  完成向导。  
 
- 新應用程式顯示在 [軟體程式庫]  工作區的 [應用程式]  節點中。  
+ 新应用程序会显示在“软件库”  工作区的“应用程序”  节点中。  
 
-### <a name="create-an-application-that-contains-a-link-to-a-policy-managed-app"></a>建立包含受管理原則之應用程式連結的應用程式  
+### <a name="create-an-application-that-contains-a-link-to-a-policy-managed-app"></a>创建包含策略托管应用链接的应用程序  
 
-1.  在 Configuration Manager 主控台中，選擇 [軟體程式庫] > [應用程式管理] > [應用程式]。  
+1.  在 Configuration Manager 控制台中，选择“软件库” > “应用程序管理” > “应用程序”。  
 
-3.  在 [首頁] 索引標籤的 [建立] 群組中，選擇 [建立應用程式] 以開啟 [建立應用程式精靈]。  
+3.  在“主页”选项卡上的“创建”组中，选择“创建应用程序”，打开“创建应用程序”向导。  
 
-4.  在 [一般]  頁面上，選取 [從安裝檔案自動偵測此應用程式的相關資訊] 。  
+4.  在“常规”  页上，选择“自动检测安装文件中有关此应用程序的信息” 。  
 
-5.  在 [類型]  下拉式清單中，選取下列其中一項：  
+5.  在“类型”  下拉列表中，选择以下一项：  
 
-    -   針對 iOS： **App Store 上的 iOS 應用程式封裝**  
+    -   对于 iOS： **应用商店中的 iOS 应用包**  
 
-    -   針對 Android： **Google Play 上的 Android 應用程式封裝**  
+    -   对于 Android： **Google Play 上的 Android 应用包**  
 
-6.  輸入應用程式的 URL (來自步驟 1)，然後選擇 [下一步]。  
+6.  输入应用的 URL（来自步骤 1），然后选择“下一步”。  
 
-7.  在 [一般資訊]  頁面上，輸入您想要使用者在公司入口網站看見的說明文字與類別資訊。  
+7.  在“常规信息”  页上，输入希望用户在公司门户中看到的描述性文本和类别信息。  
 
-8.  完成精靈。  
+8.  完成向导。  
 
- 新應用程式顯示在 [軟體程式庫]  工作區的 [應用程式]  節點中。  
+ 新应用程序会显示在“软件库”  工作区的“应用程序”  节点中。  
 
-##  <a name="step-3-create-an-application-management-policy"></a>步驟 3：建立應用程式管理原則  
- 接下來，建立應用程式管理原則，並將其與應用程式產生關聯。 您可以建立一般或受管理的瀏覽器原則。  
+##  <a name="step-3-create-an-application-management-policy"></a>步骤 3：创建应用程序管理策略  
+ 接下来，创建一个与该应用程序关联的应用程序管理策略。 可以创建一个常规或托管浏览器策略。  
 
-1)  在 Configuration Manager 主控台中，選擇 [軟體程式庫] > [應用程式管理] > [應用程式管理原則]。  
+1)  在 Configuration Manager 控制台中，选择“软件库” > “应用程序管理” > “应用程序管理策略”。  
 
-2)  在 [首頁] 索引標籤的 [建立] 群組中，選擇 [建立應用程式管理原則]。  
+2)  在“主页”选项卡的“创建”组中，选择“创建应用程序管理策略”。  
 
-3)  在 [一般] 頁面上，輸入原則的名稱和描述，然後選擇 [下一步]。  
+3)  在“常规”页上，输入策略的名称和说明，然后选择“下一步”。  
 
-4)  在 [原則類型] 頁面上，選取平台並針對此原則選取原則類型，然後選擇 [下一步]。 目前有下列原則類型可供使用：  
+4)  在“策略类型”页上，选择此策略的平台和策略类型，然后选择“下一步”。 可以使用下列策略类型：  
 
--   **一般**：[一般] 原則類型可讓您修改所部署之應用程式的功能，以協助使其符合公司的合規性和安全性原則。 例如，您可以限制受限制應用程式內的剪下、複製及貼上作業。  
+-   **常规**：通过“常规”策略类型可修改所部署应用的功能，帮助其符合公司的合规性和安全策略。 例如，可以限制受限应用中的剪切、复制和粘贴操作。  
 
--   **受管理的瀏覽器**：[受管理的瀏覽器] 原則可讓您決定允許還是封鎖受管理的瀏覽器開啟 URL 清單。 [受管理的瀏覽器] 原則類型可讓您修改 Intune Managed Browser 應用程式的功能。 這是讓您能夠管理使用者可執行之動作的網頁瀏覽器，包括他們可以瀏覽的網站，以及如何在瀏覽器內開啟內容連結。 深入了解  [iOS 的 Intune Managed Browser 應用程式](https://itunes.apple.com/us/app/microsoft-intune-managed-browser/id943264951?mt=8) 和 [Android 的 Intune Managed Browser 應用程式](https://play.google.com/store/apps/details?id=com.microsoft.intune.mam.managedbrowser&hl=en)。
+-   **托管浏览器**：通过“托管浏览器”策略可确定允许或阻止托管浏览器打开 URL 列表。 “托管浏览器”策略类型可让你修改 Intune 托管浏览器应用的功能。 这是一个 Web 浏览器，可让你管理用户可以执行的操作（包括他们可以访问的站点）以及打开指向浏览器中内容的链接的方式。 详细了解  [适用于 iOS 的 Intune 托管浏览器应用](https://itunes.apple.com/us/app/microsoft-intune-managed-browser/id943264951?mt=8) 和 [适用于 Android 的 Intune 托管浏览器应用](https://play.google.com/store/apps/details?id=com.microsoft.intune.mam.managedbrowser&hl=en)。
 
-5)  在 [iOS 原則] 或 [Android 原則] 頁面上，視需要設定下列值，然後選擇 [下一步]。 選項可能會視您設定原則的裝置類型而不同。  
+5)  在“iOS 策略”或“Android 策略”页上，按需配置以下值，然后选择“下一步”。 该选项可能有所差异，这取决于你配置策略的设备类型。  
 
-|值|詳細資訊|  
+|值|更多信息|  
 |-----------|----------------------|  
-|**限制要在公司管理的瀏覽器中顯示網頁內容**|可在受管理的瀏覽器中開啟應用程式中的所有連結。 您必須將此應用程式部署到裝置，此選項才會運作。|  
-|**防止 Android 備份** 或 **防止 iTunes 和 iCloud 備份**|停用從應用程式備份任何資訊。|  
-|**允許應用程式將資料傳送到其他應用程式**|指定此應用程式可以將資料傳送過去的應用程式。 您可以選擇不允許資料傳送到任何應用程式、只允許傳送至其他受限制的應用程式，或允許傳送到任何應用程式。<br /><br /> 針對 iOS 裝置，若要避免受管理與未受管理應用程式之間的文件傳送，您必須也設定及部署行動裝置安全性原則來停用 [在其他未受管理的應用程式中允許受管理的文件] 設定。<br /><br /> 如果您選取只允許傳送到其他受限制的應用程式，Intune PDF 和影像檢視器 (如果已部署) 會用來開啟個別類型的內容。|  
-|**允許應用程式接收來自其他應用程式的資料**|指定此應用程式可以接收其資料的應用程式。 您可以選擇不允許來自任何應用程式的資料傳送、只允許來自其他受限制應用程式的傳送，或允許來自任何應用程式的傳送。|  
-|**避免「另存新檔」**|停用在任何使用此原則的應用程式中使用 [另存新檔] 選項。|  
-|**限制與其他應用程式的剪下、複製和貼上**|指定如何與應用程式搭配使用剪下、複製和貼上作業。 從下列選項進行選擇：<br /><br /> **封鎖** – 不允許在此應用程式與其他應用程式之間進行剪下、複製和貼上作業。<br /><br /> **受原則管理的應用程式** – 僅允許此應用程式與其他受限制的應用程式之間的剪下、複製和貼上作業。<br /><br /> **可貼上的受原則管理應用程式** – 從此應用程式剪下或複製的資料，只允許貼到其他受限制的應用程式。 允許從任何應用程式剪下或複製的資料貼上到此應用程式。<br /><br /> **任何應用程式** – 對這個應用程式的剪下、複製和貼上作業沒有任何限制。|  
-|**需要簡單的 PIN 碼才能存取**|要求使用者輸入他們指定的 PIN 碼，才能使用此應用程式。 要求使用者在第一次執行應用程式時設定。|  
-|**PIN 重設之前的嘗試次數**|指定使用者必須重設 PIN 之前可以嘗試的 PIN 輸入次數。|  
-|**需要公司認證才能存取**|要求使用者必須輸入其公司的登入資訊，才能存取應用程式。|  
-|**需要裝置符合公司原則才能存取**|只允許在裝置未進行 JB 或 Root 破解時使用應用程式。|  
-|**重新檢查存取需求前等候時間 (分鐘)**|在 [逾時] 欄位中，指定啟動應用程式之後，重新檢查應用程式存取需求之前的時間間隔。<br /><br /> 在 [離線寬限期] 欄位中，如果裝置已離線，請指定重新檢查應用程式存取需求之前的時間間隔。|  
-|**加密應用程式資料**|指定加密與此應用程式相關聯的所有資料，包括儲存在外部的資料，例如 SD 卡上儲存的資料。<br /><br /> **iOS 的加密**<br /><br /> 針對與 Configuration Manager 行動應用程式管理原則相關聯的應用程式，資料會使用作業系統所提供的裝置層級加密在靜止時加密。 您可以透過必須由 IT 管理員所設定的裝置 PIN 碼原則予以啟用。 需要 PIN 碼時，會根據行動應用程式管理原則中的設定來加密資料。 如 Apple 文件 [iOS 7 所使用的模組經 FIPS 140-2 認證](http://support.apple.com/en-us/HT202739)中所述。<br /><br /> **Android 的加密**<br /><br /> 針對與 Configuration Manager 行動應用程式管理原則相關聯的應用程式，加密由 Microsoft 所提供。 資料會在檔案 I/O 作業期間，根據行動應用程式管理原則中的設定，以同步方式加密。 Android 上的受管理應用程式使用 CBC 模式的 AES-128 加密，並利用平台的密碼編譯程式庫。 加密方法未經 FIPS 140-2 認證。 將一律加密裝置儲存空間上的內容。|  
-    |**封鎖螢幕擷取** (僅限 Android 裝置)|指定在使用此應用程式時，裝置的螢幕擷取功能會遭到封鎖。|  
+|**限制显示在企业托管浏览器内的 Web 内容**|确保在托管浏览器中打开应用中的所有链接。 你必须部署此应用，此选项才能工作。|  
+|**“阻止 Android 备份”** 或 **“阻止 iTunes 和 iCloud 备份”**|禁止从应用备份任何信息。|  
+|**允许应用向其他应用传送数据**|指定该应用可以发送数据的应用。 可选择不允许将数据传输到任何应用、仅允许传输到其他受限应用或允许传输到任何应用。<br /><br /> 对于 iOS 设备，若要防止在托管和非托管应用之间传输文档，你也必须配置并部署禁用 **“允许在其他非托管应用中使用托管文档”**设置的移动设备安全策略。<br /><br /> 如果选择仅允许传输到其他受限应用，则 Intune PDF 和图片查看器（如果已部署）将打开各自类型的内容。|  
+|**允许应用从其他应用接收数据**|指定应用可以接收数据的应用。 可选择不允许从任何应用传输数据、仅允许从其他受限应用传输数据或允许从任何应用传输数据。|  
+|**防止“另存为”**|在任何使用此策略的应用中禁用“另存为”选项。|  
+|**限制剪切、复制和粘贴到其他应用程序**|指定应用使用剪切、复制和粘贴操作的方法。 选择：<br /><br /> **阻止** – 不允许在本应用和其他应用间进行剪切、复制和粘贴操作。<br /><br /> **策略托管应用** – 仅允许在本应用和其他受限应用间进行剪切、复制和粘贴操作。<br /><br /> **可粘贴的策略托管应用** – 允许将从本应用剪切或复制的数据粘贴到其他受限应用。 允许将剪切或复制自任何应用的数据粘贴至本应用。<br /><br /> **任何应用** – 不限制本应用的剪切、复制和粘贴操作。|  
+|**访问需要简单 PIN**|要求用户输入他们指定使用此应用的 PIN。 要求用户在首次运行该应用时进行设置。|  
+|**重置 PIN 前的尝试次数**|指定输入 PIN 码的尝试次数，达到该次数后用户必须重置 PIN。|  
+|**访问需要公司凭据**|要求用户必须输入其公司登录信息，才能访问该应用。|  
+|**访问要求设备符合公司策略**|仅允许设备在未越狱或获取根权限时使用此应用。|  
+|**在一定时间后重新检查访问要求（分钟）**|指定应用启动后重新检查访问要求前的时间段（在“超时”字段中）。<br /><br /> 在“离线宽限期”字段，如果设备离线，指定应用重新检查访问要求前的时间段。|  
+|**加密应用数据**|指定加密与本应用相关的所有数据，包括外部存储的数据，例如存储在 SD 卡上的数据。<br /><br /> **适用于 iOS 的加密**<br /><br /> 对于与 Configuration Manager 移动应用程序管理策略关联的应用，使用操作系统提供的设备级加密对静止数据进行加密。 通过必须由 IT 管理员设置的设备 PIN 策略启用此操作。 需要 PIN 时，根据移动应用程序管理策略的设置对数据进行加密。 正如 Apple 文档所述，[iOS 7 所使用的模块经过了 FIPS 140-2 的认证](http://support.apple.com/en-us/HT202739)。<br /><br /> **适用于 Android 的加官**<br /><br /> 对于与 Configuration Manager 移动应用程序管理策略关联的应用，加密由 Microsoft 提供。 根据移动应用程序管理策略的设置，数据在文件 I/O 运行过程中同步加密。 Android 上托管的应用利用平台加密库使用 CBC 模式的 AES-128 加密。 加密方法没有获得 FIPS 140-2 认证。 设备存储中的内容始终处于加密状态。|  
+    |**“阻止屏幕捕捉”** （仅限于 Android 设备）|指定在使用该应用时，阻止设备的屏幕捕捉功能。|  
 
-6)  在 [受管理的瀏覽器] 頁面上，選取是否允許受管理的瀏覽器只開啟清單中的 URL 或封鎖受管理的瀏覽器開啟清單中的 URL，然後選擇 [下一步]。  
-如需詳細資訊，請參閱[使用受管理的瀏覽器原則管理網際網路存取](manage-internet-access-using-managed-browser-policies.md)。  
+6)  在“托管浏览器”页上，选择允许托管浏览器只打开列表中的 URL 或是阻止托管浏览器打开列表中的 URL，然后选择“下一步”。  
+有关详细信息，请参阅[使用托管浏览器策略管理 Internet 访问](manage-internet-access-using-managed-browser-policies.md)。  
 
-7)  完成精靈。  
+7)  完成向导。  
 
- 新原則會顯示在 [軟體程式庫]  工作區的 [應用程式管理原則]  節點中。  
+ 新策略显示在“软件库”  工作区的“应用程序管理策略”  节点中。  
 
-##  <a name="step-4-associate-the-application-management-policy-with-a-deployment-type"></a>步驟 4：建立應用程式管理原則與部署類型間的關聯  
+##  <a name="step-4-associate-the-application-management-policy-with-a-deployment-type"></a>步骤 4：将应用程序管理策略与部署类型相关联  
 
- 當您針對需要應用程式管理原則的應用程式建立部署類型時，Configuration Manager 會辨識此部署類型，並提示您將其與應用程式管理原則產生關聯。 針對受管理的瀏覽器，您需要同時與 [一般] 和 [受管理的瀏覽器] 原則產生關聯。 如需詳細資訊，請參閱[建立應用程式](create-applications.md)。  
-
-> [!IMPORTANT]  
->  如果已部署應用程式，則新部署類型的部署會失敗，直到建立此關聯為止。 您可以在應用程式之 [內容]  中的 [應用程式管理]  索引標籤上建立關聯。  
+ 为需要应用程序管理策略的应用创建部署类型后，Configuration Manager 会对其进行识别，并提示用户关联应用管理策略。 对于托管浏览器，将需要关联“常规”和“托管浏览器”策略。 有关详细信息，请参阅[创建应用程序](create-applications.md)。  
 
 > [!IMPORTANT]  
->  針對執行早於 iOS 7.1 之作業系統的裝置，應用程式在解除安裝時不會移除相關聯的原則。  
+>  如果已部署应用程序，此关联完成前，将无法成功部署新部署类型。 可以在“应用程序管理”  选项卡上应用程序的“属性”  中建立关联。  
+
+> [!IMPORTANT]  
+>  对于运行 iOS 7.1 之前的操作系统的设备，关联的策略只有在卸载应用后才能删除。  
 >   
->  如果裝置並未從 Configuration Manager 註冊，原則就不會從應用程式中移除。 即使之後解除安裝並重新安裝應用程式，已套用原則的應用程式會保留原則設定。  
+>  如果从 Configuration Manager 取消注册设备，则策略不会从应用中删除。 应用了策略的应用会保留策略设置，甚至在卸载并重新安装了该应用后也是如此。  
 
-##  <a name="step-5-monitor-the-app-deployment"></a>步驟 5：監視應用程式部署  
- 建立並部署與行動應用程式管理原則相關聯的應用程式之後，您可以監視應用程式並解決任何原則衝突。  
+##  <a name="step-5-monitor-the-app-deployment"></a>步骤 5：监视应用部署  
+ 创建并部署关联移动应用程序管理策略的应用后，可监视应用并解决任何策略冲突问题。  
 
-1.  在 Configuration Manager 主控台中，選擇 [軟體程式庫] > [概觀] > [部署]。  
+1.  在 Configuration Manager 控制台中，选择“软件库” > “概述” > “部署”。  
 
-3.  選取您已建立的部署。 然後，在 [首頁] 索引標籤上，選擇 [內容]。  
+3.  选择创建的部署。 然后，在“主页”选项卡上，选择“属性”。  
 
-4.  在部署的詳細資料窗格中，選擇 [相關物件] 下的 [應用程式管理原則]。  
+4.  在部署的详细信息窗格中的“相关对象”下，选择“应用程序的管理策略”。  
 
- 如需監視應用程式的詳細資訊，請參閱[監視應用程式](/sccm/apps/deploy-use/monitor-applications-from-the-console)。  
+ 有关监视应用程序的详细信息，请参阅[监视应用程序](/sccm/apps/deploy-use/monitor-applications-from-the-console)。  
 
-##  <a name="learn-how-policy-conflicts-are-resolved"></a>了解如何解決原則衝突  
- 第一次部署到使用者或裝置時，如果行動應用程式管理原則發生衝突，則會從部署到應用程式的原則中移除衝突的特定設定值。 應用程式接著會使用內建的衝突值。  
+##  <a name="learn-how-policy-conflicts-are-resolved"></a>了解如何解决策略冲突  
+ 如果在第一次部署到用户或设备时出现移动应用管理策略冲突，则会从部署到应用的策略中删除处于冲突的特定设置值。 然后应用将使用内置冲突值。  
 
- 後續部署到應用程式或使用者時，如果行動應用程式管理原則發生衝突，不會在已部署至應用程式的行動應用程式管理原則上更新衝突的特定設定值，且應用程式會使用該設定的現有值。  
+ 如果在后续部署到应用或用户时出现移动应用管理策略冲突，则不会在部署到应用的移动应用管理策略上更新处于冲突的特定设备值，且应用会使用该设置的现有值。  
 
- 在裝置或使用者收到兩個衝突原則的情況下，會適用下列行為：  
+ 如果设备或用户收到两个冲突策略，则适用以下行为：  
 
--   如果原則已部署至裝置，則不會覆寫現有的原則設定。  
+-   如果尚未将策略部署到设备，则现有策略设置不会被覆盖。  
 
--   如果原則尚未部署到裝置，並且已部署兩個衝突的設定，則會使用裝置內建的預設設定。  
+-   如果尚无策略部署到设备，且已部署了两个冲突设置，则将使用设备内的默认设置。  
 
-##  <a name="see-a-list-of-available-policy-managed-apps"></a>請參閱可用受原則管理的應用程式清單  
- 如需適用於 iOS 和 Android 裝置之受原則管理的應用程式清單，請參閱 [Microsoft Intune application partners](https://www.microsoft.com/cloud-platform/microsoft-intune-partners) (Microsoft Intune 應用程式合作夥伴)。  
+##  <a name="see-a-list-of-available-policy-managed-apps"></a>查看可用的策略托管应用列表  
+ 有关可用于 iOS 和 Android 设备的策略托管应用列表，请参阅 [Microsoft Intune 应用程序合作伙伴](https://www.microsoft.com/cloud-platform/microsoft-intune-partners)。  
