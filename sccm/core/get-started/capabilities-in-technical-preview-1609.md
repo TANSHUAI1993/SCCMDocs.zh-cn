@@ -1,6 +1,6 @@
 ---
 title: "Technical Preview 1609 Configuration Manager 中的功能"
-description: "了解 System Center Configuration Manager Technical Preview 1609 版中可用的功能。"
+description: "了解 System Center Configuration Manager Technical Preview 版本 1609 中的可用功能。"
 ms.custom: na
 ms.date: 01/23/2017
 ms.reviewer: na
@@ -17,440 +17,440 @@ manager: angrobe
 ms.openlocfilehash: 89a41c8a3137d0e54011ddf9a1d9b4894ecb7df8
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
 # <a name="capabilities-in-technical-preview-1609-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1609 中的功能
 
-適用於︰System Center Configuration Manager (Technical Preview)
+*适用范围：System Center Configuration Manager (Technical Preview)*
 
 
 
-本文介紹 System Center Configuration Manager Technical Preview 1609 版中可用的功能。 您可以安裝此版本，以更新並新增功能至 Configuration Manager Technical Preview 站台。      安裝此版本的 Technical Preview 之前，請檢閱 [System Center Configuration Manager 的 Technical Preview](../../core/get-started/technical-preview.md) 簡介主題，以熟悉使用 Technical Preview 的一般需求和限制、如何在版本之間進行更新，以及如何針對 Technical Preview 中的功能提供意見反應。    
+本文介绍了 System Center Configuration Manager Technical Preview 版本 1609 中的可用功能。 可以安装此版本以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。      在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。    
 
-**此 Technical Preview 的已知問題：**  
-*  當您更新至 Configuration Manager 1609 Technical Preview 時，將會刪除任何您已部署的版本升級原則。 若要繼續使用這些原則，您必須重新建立並部署這些原則。
+**此 Technical Preview 中的已知问题：**  
+*  升级到 Configuration Manager 1609 Technical Preview 时，将删除已部署的任何版本升级策略。 若要继续使用这些策略，则必须重新创建并部署它们。
 
 
-**以下是您可以使用此版本試用的新功能。**  
+**以下是可以试用的此版本的新功能。**  
 
-## <a name="improvements-to-endpoint-protection"></a>Endpoint Protection 的改進
-Endpoint Protection 反惡意程式碼原則設定的改進 - 您現在可以指定 Endpoint Protection 雲端保護服務將封鎖可疑檔案的層級。 這項新設定可讓系統管理員根據所遇到的大量惡意程式碼，指定「具風險」的電腦。
+## <a name="improvements-to-endpoint-protection"></a>Endpoint Protection 的改进
+Endpoint Protection 反恶意软件策略设置的改进 - 现在可以指定 Endpoint Protection 云保护服务在其中阻止可疑文件的级别。 一个新的设置，可以使管理员根据计算机遇到的大量恶意软件指定“危险的”计算机。
 
-## <a name="increased-number-of-enrolled-devices"></a>增加已註冊裝置的數目
-系統管理員現在可讓使用者在混合式行動裝置管理中，向 Intune 註冊最多 15 部裝置。 之前每位使用者僅限 5 部裝置。
+## <a name="increased-number-of-enrolled-devices"></a>增加了“注册的设备”的数量
+管理员现在可以让用户在使用 Intune 管理的混合移动设备中注册多达 15 个设备。 以前此限制为每个用户 5 个设备。
 
-## <a name="additional-apple-dep-settings"></a>其他 Apple DEP 設定
+## <a name="additional-apple-dep-settings"></a>其他 Apple DEP 设置
 
-系統管理員現在可以在適用於 iOS 和 Mac 裝置的 DEP 設定檔中，設定下列 Apple 裝置註冊方案 (DEP) 設定：
+管理员现在可以在适用于 iOS 和 Mac 设备的 DEP 配置文件中配置下列 Apple 设备注册计划 (DEP) 设置：
 - **Touch ID**
-- **縮放**
+- **缩放**
 - **Siri**
 
-啟用時，Apple 的設定助理會在裝置啟用期間提示此服務。
+如果启用，在设备激活过程中 Apple 的设置助理会提示此服务。
 
-## <a name="integration-with-upgrade-analytics"></a>與 Upgrade Analytics 的整合
+## <a name="integration-with-upgrade-analytics"></a>与 Upgrade Analytics 的集成
 
-Upgrade Analytics 可讓您評估及分析裝置整備及與 Windows 10 的相容性，以更輕鬆順暢地進行升級。 整合 Upgrade Analytics 與 Configuration Manager 之後，您可以在 Configuration Manager 管理主控台中存取升級相容性資料，然後從裝置清單中設定要升級或修復的目標裝置。
+Upgrade Analytics 使你能够评估和分析设备的准备情况以及与 Windows 10 的兼容性，从而实现更轻松、更流畅的升级。 通过将 Upgrade Analytics 与 Configuration Manager 集成，你可以访问 Configuration Manager 管理控制台中的升级兼容性数据，然后从设备列表中设置目标设备以进行升级或更新。
 
-您可以在 [Get started with Upgrade Analytics](https://technet.microsoft.com/itpro/windows/deploy/upgrade-analytics-get-started) (開始使用 Upgrade Analytics) 中閱讀更多有關 Upgrade Analytics 的資訊。
+有关 Upgrade Analytics 的详细信息，请参阅 [Upgrade Analytics 入门](https://technet.microsoft.com/itpro/windows/deploy/upgrade-analytics-get-started)。
 
-## <a name="native-connection-types-for-windows-10-vpn-hybrid-profiles"></a>Windows 10 VPN 混合式設定檔的原生連線類型
+## <a name="native-connection-types-for-windows-10-vpn-hybrid-profiles"></a>Windows 10 VPN 混合配置文件的本机连接类型
 
-搭配使用 Configuration Manager 和 Intune 時，您現在可以在 Configuration Manager 主控台中不使用 OMA-URI，以 Microsoft Automatic、IKEv2、PPTP 和 L2TP 連線類型建立 Windows 10 VPN 設定檔。
+结合使用 Configuration Manager 和 Intune 时，现在可在 Configuration Manager 控制台中创建具有 Microsoft Automatic、IKEv2、PPTP 和 L2TP 连接类型的 Windows 10 VPN 配置文件，而无需使用 OMA-URI。
 
-## <a name="enhancements-to-windows-store-for-business-integration-with-configuration-manager"></a>商務用 Windows 市集與 Configuration Manager 整合的改善
+## <a name="enhancements-to-windows-store-for-business-integration-with-configuration-manager"></a>适用于企业的 Windows 应用商店与 Configuration Manager 集成的增强功能
 
-在此版本中，我們更新了[商務用 Windows 市集整合](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)並新增下列功能：
+在此版本中，我们已更新[适用于企业的 Windows 应用商店集成](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)的以下新增功能：
 
-**更新︰**在最新版的 Technical Preview 中，立即同步處理功能無法運作。
+**更新：**当前的技术预览版不支持即时同步功能。
 
-- 之前，您只能從商務用 Windows 市集部署免費應用程式。 Configuration Manager 現在會另外支援部署付費線上授權應用程式 (僅適用已在 Intune 註冊的裝置)。
-- 您現在可以起始商務用 Windows 市集與 Configuration Manager 之間的立即同步處理。
-- 您現在可以修改從 Azure Active Directory 取得的用戶端秘密金鑰
+- 以前，你仅可以从适用于企业的 Windows 应用商店部署免费的应用程序。 Configuration Manager 现在还支持部署在线支付许可应用（仅适用于注册了 Intune 的设备）。
+- 现在你可启动适用于企业的 Windows 应用商店和 Configuration Manager 之间的即时同步。
+- 现在可修改从 Azure Active Directory 获取的客户端密钥
 
-### <a name="try-it-out"></a>試試看！
+### <a name="try-it-out"></a>试试看！
 
-#### <a name="purchase-and-sync-a-paid-online-licensed-app"></a>購買並同步付費線上授權應用程式
+#### <a name="purchase-and-sync-a-paid-online-licensed-app"></a>购买并同步在线支付许可应用
 
-1. 從商務用 Windows 市集至少購買一個付費線上授權應用程式。
-2. 在 Configuration Manager 主控台的 [管理] 工作區中，按一下 [雲端服務] > [更新與服務] > [商務用 Windows 市集]。
-3. 在 [常用] 索引標籤的 [同步] 群組中，按一下 [立即同步]。
-4. 不久，您所購買的應用程式就會出現在 [應用程式管理] 工作區的 [市集應用程式的授權資訊] 節點中。
+1. 从适用于企业的 Windows 应用商店购买在线支付许可应用。
+2. 在 Configuration Manager 控制台的“管理”工作区中，单击“云服务” > “更新与维护服务” > “适用于企业的 Windows 应用商店”。
+3. 在“主页”选项卡上的“同步”组中，单击“立即同步”。
+4. 不久之后，你购买的应用将出现在“应用程序管理”工作区的“应用商店应用的许可证信息”节点中。
 
-#### <a name="create-and-deploy-a-configuration-manager-application-from-the-synchronized-app-data"></a>從已同步處理的應用程式資料建立和部署 Configuration Manager 應用程式
+#### <a name="create-and-deploy-a-configuration-manager-application-from-the-synchronized-app-data"></a>创建和部署来自同步应用数据的 Configuration Manager 应用程序
 
-從付費市集應用程式建立和部署 Configuration Manager 應用程式的程序，與從免費應用程式建立應用程式的程序一樣。 請參閱[使用 System Center Configuration Manager 管理從商務用 Windows 市集購買的應用程式](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)中的**從商務用 Windows 市集建立和部署 Configuration Manager 應用程式**一節。
+从付费的应用商店应用中创建和部署 Configuration Manager 应用程序的过程与从免费的应用中创建应用程序的过程相同。 请参阅[使用 System Center Configuration Manager 管理来自适用于企业的 Windows 应用商店的应用](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)中的**创建和部署来自适用于企业的 Windows 应用商店应用的 Configuration Manager 应用程序**部分。
 
 
-#### <a name="modify-the-client-secret-key-from-azure-active-directory"></a>從 Azure Active Directory 修改用戶端秘密金鑰
+#### <a name="modify-the-client-secret-key-from-azure-active-directory"></a>修改 Azure Active Directory 中的客户端密钥
 
-1. 在 Configuration Manager 主控台的 [管理] 工作區中，按一下 [雲端服務] > [更新與服務] > [商務用 Windows 市集]。
-2. 選取您的商務用 Windows 市集帳戶，然後按一下 [內容]。
-3. 在 [商務用 Windows 市集帳戶內容] 對話方塊的 [用戶端秘密金鑰] 欄位中，輸入新的金鑰，然後按一下 [驗證]。 驗證後，按一下 [套用]，然後關閉對話方塊。
+1. 在 Configuration Manager 控制台的“管理”工作区中，单击“云服务” > “更新与维护服务” > “适用于企业的 Windows 应用商店”。
+2. 选择适用于企业的 Windows 应用商店的帐户，然后单击“属性”。
+3. 在“适用于企业的 Windows 应用商店的帐户属性”对话框中的“客户端密钥”字段中输入新的密钥，然后单击“验证”。 验证后，单击“应用”，然后关闭此对话框。
 
 
-## <a name="new-compliance-settings-for-configuration-items"></a>設定項目的新相容性設定
+## <a name="new-compliance-settings-for-configuration-items"></a>配置项目的新符合性设置
 
-我們新增了許多新設定，可供您針對各種裝置平台在設定項目中使用。
-這些是先前存在於 Microsoft Intune 獨立設定中的設定，現在當您搭配使用 Intune 和 Configuration Manager 時可以使用這些設定。
-如果您需要任何設定的說明，請開啟[透過 Microsoft Intune 原則管理裝置上的設定和功能](https://docs.microsoft.com/en-us/intune/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies)，然後選取所需平台的設定子主題。
+我们添加了许多新设置，你可以在配置项目中将这些设置用于各种设备平台。
+这些设置之前存在于 Microsoft Intune 的独立配置中，现在结合使用 Intune 和 Configuration Manager 时可以使用这些设置。
+如果需要有关任何这些设置的帮助，请打开[使用 Microsoft Intune 策略管理设备上的设置和功能](https://docs.microsoft.com/en-us/intune/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies)，然后选择所需的平台设置副标题。
 
 
-### <a name="new-settings-for-android-devices"></a>Android 裝置的新設定
+### <a name="new-settings-for-android-devices"></a>适用于 Android 设备的新设置
 
-#### <a name="password-settings"></a>密碼設定
+#### <a name="password-settings"></a>密码设置
 
-- **記住密碼歷程記錄**
-- **允許指紋解除鎖定**
+- **记住密码历史**
+- **允许指纹解锁**
 
-#### <a name="security-settings"></a>安全性設定
+#### <a name="security-settings"></a>安全设置
 
-- **儲存卡需要加密**
-- **允許螢幕擷取**
-- **允許提交診斷資料**
+- **需要对存储卡进行加密**
+- **允许屏幕捕获**
+- **允许提交诊断数据**
 
-#### <a name="browser-settings"></a>瀏覽器設定
+#### <a name="browser-settings"></a>浏览器设置
 
-- **允許網頁瀏覽器**
-- **允許自動填入**
-- **允許快顯封鎖程式**
-- **允許 Cookie**
-- **允許動態指令碼處理**
+- **允许使用 Web 浏览器**
+- **允许自动填充**
+- **允许使用弹出窗口阻止程序**
+- **允许使用 Cookie**
+- **允许使用活动脚本**
 
-#### <a name="app-settings"></a>應用程式設定
+#### <a name="app-settings"></a>应用设置
 
-- **允許 Google Play 商店**
+- **允许使用 Google Play 商店**
 
-#### <a name="device-capability-settings"></a>裝置功能設定
+#### <a name="device-capability-settings"></a>设备功能设置
 
-- **允許卸除式存放裝置**
-- **允許 Wi-Fi 網際網路共用功能**
-- **允許使用地理位置**
-- **允許 NFC**
-- **允許藍芽**
-- **允許語音漫遊**
-- **允許數據漫遊**
-- **允許 SMS/MMS 傳訊**
-- **允許語音助理**
-- **允許語音撥號**
-- **允許複製並貼上**
+- **允许使用可移动存储**
+- **允许使用 Wi-Fi tethering**
+- **允许使用地理位置**
+- **允许使用 NFC**
+- **允许使用蓝牙**
+- **允许语音漫游**
+- **允许数据漫游**
+- **允许 SMS/MMS 消息传送**
+- **允许使用语音助手**
+- **允许语音拨号**
+- **允许复制和粘贴**
 
 
-### <a name="new-settings-for-ios-devices"></a>iOS 裝置的新設定
+### <a name="new-settings-for-ios-devices"></a>适用于 iOS 设备的新设置
 
-#### <a name="password-settings"></a>密碼設定
+#### <a name="password-settings"></a>密码设置
 
-- **密碼所需的複合字元數**
-- **允許簡單密碼**
-- **在非使用狀態幾分鐘後需要輸入密碼**
-- **記住密碼歷程記錄**
+- **密码中所需的复杂字符数**
+- **允许简单密码**
+- **需要提供密码之前处于非活动状态的分钟数**
+- **记住密码历史**
 
-### <a name="new-settings-for-mac-os-x-devices"></a>Mac OS X 裝置的新設定
+### <a name="new-settings-for-mac-os-x-devices"></a>适用于 Mac OS X 设备的新设置
 
-#### <a name="password-settings"></a>密碼設定
+#### <a name="password-settings"></a>密码设置
 
-- **密碼所需的複合字元數**
-- **允許簡單密碼**
-- **記住密碼歷程記錄**
-- **在非使用狀態幾分鐘後啟用螢幕保護**
+- **密码中所需的复杂字符数**
+- **允许简单密码**
+- **记住密码历史**
+- **屏幕保护程序激活前处于非活动状态的分钟数**
 
-### <a name="new-settings-for-windows-10-desktop-and-mobile-devices"></a>Windows 10 Desktop 與行動裝置版裝置的新設定
+### <a name="new-settings-for-windows-10-desktop-and-mobile-devices"></a>适用于 Windows 10 桌面和移动版设备的新设置
 
-#### <a name="password-settings"></a>密碼設定
+#### <a name="password-settings"></a>密码设置
 
-- **字元集數目下限**
-- **記住密碼歷程記錄**
-- **裝置從閒置狀態恢復時必須輸入密碼**
+- **最小字符集数**
+- **记住密码历史**
+- **当设备从空闲状态返回时需要密码**
 
-#### <a name="security-settings"></a>安全性設定
+#### <a name="security-settings"></a>安全设置
 
-- **行動裝置需要加密**
-- **允許手動取消註冊**
+- **需要对移动设备加密**
+- **允许手动取消注册**
 
-#### <a name="device-capability-settings"></a>裝置功能設定
+#### <a name="device-capability-settings"></a>设备功能设置
 
-- **允許透過行動數據使用 VPN**
-- **允許透過行動數據進行 VPN 漫遊**
-- **允許重設手機**
-- **允許 USB 連線**
-- **允許 Cortana**
-- **允許行動中心通知**
+- **允许通过移动电话网络使用 VPN**
+- **允许在通过移动电话网络漫游时使用 VPN**
+- **允许重置手机**
+- **允许使用 USB 连接**
+- **允许使用 Cortana**
+- **允许操作中心通知**
 
-### <a name="new-settings-for-windows-10-team-devices"></a>Windows 10 團隊版裝置的新設定
+### <a name="new-settings-for-windows-10-team-devices"></a>适用于 Windows 10 协同版设备的新设置
 
-#### <a name="device-settings"></a>裝置設定
+#### <a name="device-settings"></a>设备设置
 
-- **啟用 Azure Operational Insights**
-- **啟用 Miracast 無線投影**
-- **選擇要顯示在歡迎畫面上的會議資訊**
-- **鎖定畫面背景圖片 URL**
+- **启用 Azure Operational Insights**
+- **启用 Miracast 无线投影**
+- **选择“欢迎”屏幕上显示的会议信息**
+- **锁屏背景图像 URL**
 
 
-### <a name="new-settings-for-windows-81-devices"></a>Windows 8.1 裝置的新設定
+### <a name="new-settings-for-windows-81-devices"></a>适用于 Windows 8.1 设备的新设置
 
-#### <a name="applicability-settings"></a>適用性設定
+#### <a name="applicability-settings"></a>适用性设置
 
-- **套用所有設定至 Windows 10**
+- **将所有配置应用到 Windows 10**
 
-#### <a name="password-settings"></a>密碼設定
+#### <a name="password-settings"></a>密码设置
 
-- **必要的密碼類型**
-- **字元集數目下限**
-- **密碼長度下限**
-- **重複登入失敗多少次之後抹除該裝置**
-- **在非使用狀態幾分鐘後會關閉螢幕**
-- **密碼到期 (天數)**
-- **記住密碼歷程記錄**
-- **不得重複使用以前用過的密碼**
-- **允許圖片密碼和 PIN**
+- **所需的密码类型**
+- **最小字符集数**
+- **最短密码长度**
+- **擦除设备前允许的重复登录失败次数**
+- **屏幕关闭前处于不活动状态的分钟数**
+- **密码过期（天数）**
+- **记住密码历史**
+- **防止重用以前的密码**
+- **允许图片密码和 PIN**
 
-#### <a name="browser-settings"></a>瀏覽器設定
+#### <a name="browser-settings"></a>浏览器设置
 
-- **允許自動偵測內部網路**
+- **允许自动检测 Intranet 网络**
 
 
-### <a name="new-settings-for-windows-phone-81-devices"></a>Windows Phone 8.1 裝置的新設定
+### <a name="new-settings-for-windows-phone-81-devices"></a>适用于 Windows Phone 8.1 设备的新设置
 
-#### <a name="applicability-settings"></a>適用性設定
+#### <a name="applicability-settings"></a>适用性设置
 
-- **套用所有設定至 Windows 10**
+- **将所有配置应用到 Windows 10**
 
-#### <a name="password-settings"></a>密碼設定
+#### <a name="password-settings"></a>密码设置
 
-- **字元集數目下限**
-- **允許簡單密碼**
-- **記住密碼歷程記錄**
+- **最小字符集数**
+- **允许简单密码**
+- **记住密码历史**
 
-#### <a name="device-capability-settings"></a>裝置功能設定
+#### <a name="device-capability-settings"></a>设备功能设置
 
-- **允許自動連線到免費的 Wi-Fi 熱點**
+- **允许自动连接到免费 Wi-Fi 热点**
 
 
-## <a name="improvements-for-boundary-groups"></a>界限群組的改進
-此預覽版引進了界限群組及其如何與發佈點搭配使用的重要變更。 這些變更有助於簡化內容基礎結構的設計，同時讓您更充分掌控用戶端如何及何時進行後援，以搜尋其他發佈點作為內容來源位置。 這包括內部部署和雲端架構的發佈點。
+## <a name="improvements-for-boundary-groups"></a>边界组的改进
+此预览版介绍了对边界组的重要更改以及它们如何与分发点配合使用。 这些更改将有助于简化内容基础结构的设计，同时使你更好地控制客户端如何以及何时回退以搜索更多分发点作为内容源位置。 这包括位于本地和基于云的分发点。
 
-這些改進將您可能很熟悉的現今概念和行為 (例如將發佈點設定為快速或低速)，取代成更容易設定和維護的新模型。 這些變更也是未來變更的基礎，未來變更將會改進要與界限群組關聯的其他站台系統角色。  
+这些改进将替换你现如今可能已熟悉的概念和行为（类似于将分发点配置为快速或慢速），将它们替换为一个新的模型，该模型将更易于设置和维护。 这些更改也是未来更改的基础，以后还将改进与边界组相关联的其他站点系统角色。  
 
-升級至 1609 版的期間，此升級會轉換您目前的界限群組設定以符合新的模型，讓這些變更不會干擾您的內容發佈設定 (請參閱[將現有的界限群組更新為新的模型](/sccm/core/get-started/capabilities-in-technical-preview-1609#bkmk_update))。
+在升级到 1609 期间，升级将转换你的当前边界组配置，以适应新的模型，以便这些更改不会妨碍内容分发配置（请参阅[将现有边界组更新到新模型](/sccm/core/get-started/capabilities-in-technical-preview-1609#bkmk_update)。
 
-下列各節將詳細說明此預覽版所引進的變更、新模型的運作方式，以及升級已設定界限群組的站台時可預期的情況。
+以下部分将详细说明此预览版引入的更改、新模型的工作原理，以及在升级已配置边界组的站点时可以期望的内容。
 
 
 
-### <a name="changes-in-ui-and-behavior-for-boundary-groups-and-content-locations"></a>界限群組和內容位置的 UI 和行為變更
-以下是界限群組及用戶端尋找內容方式的主要變更。 許多變更和概念會搭配運作。
--   **移除快速或低速的設定︰**您不會再將個別發佈點設定為快速或低速。  相反地，與界限群組相關聯的每個站台系統都會視為相同。 由於這項變更，界限群組內容的 [參考] 索引標籤不再支援快速或低速的設定。
--   **每個站台的新預設界限群組︰**每個主要站台都有新的預設界限群組，名為 ***Default-Site-Boundary-Group\<站台碼>***。  如果用戶端不在指派給界限群組的網路位置，該用戶端會從其指派的站台使用與預設群組相關聯的站台系統。 請規劃使用此界限群組，來取代後援內容位置的概念。    
- -  移除 [允許內容的後援來源位置]︰您無法再明確設定要用於後援的發佈點，而且已從 UI 移除此設定選項。
+### <a name="changes-in-ui-and-behavior-for-boundary-groups-and-content-locations"></a>边界组和内容位置的用户界面和行为的更改
+以下是对边界组以及客户端查找内容的方式的关键更改。 这些更改许多都和概念协同工作。
+-   **已删除对于快速或慢速的配置：**不再将单独的分发点配置为快速或慢速。  相反，每个与边界组相关联的站点系统都将视为相同的系统。 由于有此更改，边界组属性的“引用”选项卡不再支持快速或慢速的配置。
+-   **每个站点的新默认边界组：**每个主站点都具有一个名为 ***Default-Site-Boundary-Group\<sitecode>*** 的新默认边界组。  当客户端不在分配给边界组的网络位置时，该客户端将从其指定的站点使用与默认组相关联的站点系统。 计划使用此边界组作为回退内容位置概念的替换。    
+ -  已删除**“允许使用内容的回退源位置”**：无法再将分发点显式配置为用于回退，并且已从用户界面中删除设置此操作的选项。
 
-    此外，應用程式部署類型的 [允許用戶端使用內容的後援來源位置] 設定結果已變更。 部署類型的這項設定現在可讓用戶端使用預設站台界限群組作為內容來源位置。
+    此外，已更改应用程序部署类型上的**允许客户端使用内容的回退源位置**的设置结果。 部署类型上的此设置现在允许客户端使用默认站点边界组作为内容源位置。
 
- -  **界限群組關聯性︰**每個界限群組可以連結至一或多個額外的界限群組。 這些連結會形成關聯性，可在名為 [關聯性] 的新界限群組內容索引標籤上設定：
-    -   直接與用戶端建立關聯的每個界限群組稱為**目前**界限群組。  
-    -   用戶端因其「目前」界限群組與另一個群組之間的關聯而可以使用的任何界限群組，稱為**芳鄰**界限群組。
-    -  它位於 [關聯性] 索引標籤上，您可以在其中新增界限群組以作為「芳鄰」界限群組。 您也可以設定時間 (以分鐘為單位)，以決定若使用者無法從「目前」群組中的發佈點找到內容，將於何時從這些「芳鄰」界限群組開始搜尋內容位置。
+ -  **边界组关系：**每个边界组都可链接到一个或多个其他的边界组。 这些链接就会形成关系，并在名为“关系”的新边界组属性选项卡上进行配置：
+    -   客户端直接与之关联的每个边界组都称为**当前**边界组。  
+    -   由于客户端的“当前”边界组和另一个组之间存在关联，客户端可以使用的任何边界组都称为**邻居**边界组。
+    -  它位于添加可用作“邻居”边界组的边界组“关系”选项卡中。 还可以配置时间（分钟），用于确定在当前组中无法从分发点找到内容的客户端开始从这些邻居边界组搜索内容位置的时间。
 
-        當您新增或變更界限群組設定時，您可以選擇防止您設定的目前群組切換回該特定界限群組。
+        添加或更改边界组配置时，可以选择阻止从当前正在配置的组中回退到该特定的边界组。
 
-    若要使用新的設定，您可以定義從一個界限群組到另一個界限群組的明確關聯 (連結)，並將該關聯群組中的所有發佈點設定為相同的時間 (以分鐘為單位)。 您設定的時間會決定若用戶端無法從其「目前」界限群組找到內容，可於何時從該芳鄰界限群組開始搜尋內容來源。
+    若要使用新配置，可定义从一个边界组到另一个边界组的显式关联（链接），并在相同的时间（分钟）内配置该关联组中的所有分发点。 配置的时间可确定未能从其当前边界组找到内容源的客户端可以开始从该邻居边界组搜索内容源的时间。
 
-    除了明確設定的界限群組之外，每個界限群組還有預設站台界限群組的隱含連結。 此連結會在 120 分鐘後開始生效，此時預設站台界限群組會成為芳鄰界限群組，讓用戶端可使用與該界限群組相關聯的發佈點作為內容來源位置。
+    除了显式配置的边界组外，每个边界组都具有指向默认站点边界组的隐式链接。 此链接在 120 分钟后变为活动状态，在这段时间，默认站点边界组成为一个邻居边界组，它允许客户端使用与该边界组相关联的分发点作为内容源位置。
 
-    此行為會取代先前稱為內容後援的行為。  您可以覆寫此 120 分鐘的預設行為，方法是將預設站台界限群組明確關聯至「目前」群組，然後以分鐘為單位設定特定時間，或完全封鎖以防止使用後援。
+    此行为替换以前称为内容回退的行为。  可以通过将默认站点边界组显式关联到当前组，并设置特定的时间（分钟），或完全阻止回退以防使用，来替代此 120 分钟的默认行为。
 
 
--   **用戶端嘗試從每個發佈點取得內容，最多 2 分鐘︰**當用戶端搜尋內容來源位置時，它會嘗試存取一個發佈點 2 分鐘，再嘗試另一個發佈點。 這是舊版的一項變更，在舊版中，用戶端會嘗試連線到發佈點，最多 2 小時。
+-   **客户端尝试从每个分发点获取高达 2 分钟的内容：**客户端搜索内容源位置时，它将尝试对每个分发点进行 2 分钟的访问，然后再尝试访问另一个分发点。 这是对以前版本的一个更改，在以前版本中，客户端尝试连接到分发点的时间高达 2 小时。
 
-    - 用戶端嘗試使用的第一個發佈點，是從用戶端的「目前」界限群組 (或群組) 中可用的發佈點集區隨機選取而來。
+    - 客户端尝试使用的第一个分发点是从客户端的当前边界组（或组）中的可用分发点池中随机选择的。
 
-    - 如果用戶端在兩分鐘後還找不到內容，則會切換至新的發佈點，並嘗試從該伺服器取得內容。 此程序會每隔兩分鐘重複一次，直到用戶端找到內容或到達其集區中最後一部伺服器為止。
+    - 两分钟后，如果客户端找不到内容，它将切换到新的分发点并尝试从该服务器获取内容。 每隔两分钟重复此过程，直到客户端找到内容或到达其池中的最后一个服务器。
 
-    - 如果用戶端在必須切換回「芳鄰」界限群組之前，從其「目前」集區找不到有效的內容來源位置，則用戶端會將該「芳鄰」群組中的發佈點新增至其目前清單結尾，然後搜尋包含兩個界限群組之發佈點的擴充來源位置群組。
+    - 如果在回退到达邻居边界组期间前，客户端无法从其当前池找到有效的内容源位置，则客户端将向其当前列表的末尾添加邻居组中的分发点，然后搜索包括来自两个边界组的分发点的扩展组的源位置。
 
         > [!TIP]  
-        > 如果您建立從目前界限群組到預設站台界限群組的明確連結，並定義比連結至芳鄰界限群組的後援時間更短的後援時間，用戶端在包含芳鄰群組之前，會先從預設站台界限群組開始搜尋來源位置。
+        > 创建从当前边界组到默认站点边界组的显式链接，并定义比链接到邻居边界组的回退时间更少的回退时间时，客户端将在包括邻居组之前从默认站点边界组开始搜索源位置。
 
-    - 當用戶端無法從集區中的最後一部伺服器取得內容時，就會重新開始此程序。
+    - 客户端无法从池中的最后一个服务器获取内容时，它将再次开始该过程。
 
 
-### <a name="how-the-new-model-works"></a>新模型的運作方式
-當您設定界限群組時，您可以將界限 (網路位置) 和站台系統角色 (例如發佈點) 關聯至界限群組。 這可協助將用戶端連結至站台系統伺服器，例如位於網路上用戶端附近的發佈點。   
--   您可以將相同的界限指派給多個界限群組
--   站台系統伺服器 (例如發佈點) 可以關聯至多個界限群組，以提供給更廣泛的網路位置使用
--   如果發佈點未關聯至界限群組，用戶端將無法使用該發佈點作為內容來源位置。
+### <a name="how-the-new-model-works"></a>新模型的工作原理
+配置边界组时，可以将边界（网络位置）和站点系统角色（如分发点）关联到边界组。 这样做有助于将客户端链接到站点系统服务器，如位于网络上的客户端附近的分布点。   
+-   可以将相同的边界分配给多个边界组
+-   站点系统服务器（如分发点）可与多个边界组相关联，从而使它们可用于更广泛的网络位置
+-   如果分发点不与边界组关联，则客户端不能使用该分发点作为内容源位置。
 
-從此 Technical Preview 開始，您可以定義界限群組關聯性，以設定內容來源位置的後援行為。 此新行為是在界限群組內容的新 [關聯性] 索引標籤上設定，不會再將站台系統設定為低速或快速，而是設定界限群組以允許內容的後援來源位置。
+从本技术预览开始，可以定义边界组关系，以配置内容源位置的回退行为。 可以在边界组属性的新“关系”选项卡配置这一新行为，该行为替换了将站点系统配置为慢速或快速，并配置一个边界组以允许内容的回退源位置行为。
 
-在 [關聯性] 索引標籤上，您可以新增其他界限群組，以設定這些群組的關聯性。 每個關聯性都是從**目前**界限群組到您新增之界限群組 (稱為**芳鄰**) 的單向連結。 針對您建立的每個連結，您可以設定具有後援時間 (以分鐘為單位) 的發佈點。 如果用戶端無法從其目前界限群組找到有效的內容來源位置，此時間可用來決定用戶端在「目前」界限群組中經過多久，才可以開始使用「芳鄰」界限群組中的發佈點。
+在“关系”选项卡上，添加其他边界组，以配置与这些组之间的关系。 每个关系都是一个单向链接（从**当前**边界组指向添加的边界组），这称为**邻居**。 对于创建的每个链接，都可以为分发点配置一个回退时间（分钟）。 如果当前边界组中的客户端无法从其当前边界组找到有效的内容源位置，则可以使用此时间来确定开始使用邻居边界组中的分发点的时间间隔。
 
-當用戶端找不到內容並從芳鄰界限群組開始搜尋位置時，它會以控制的方式為用戶端增加集區中的可用發佈點數目。  
+如果客户端无法找到内容，并开始从邻居边界组搜索位置，则它将以一种可控的方式增加该客户端的可用分发点池。  
 
--   界限群組可以有多個關聯性。 這可讓您設定在不同的期間後切換回不同的芳鄰。
--   用戶端只會切換回其目前界限群組的直接芳鄰界限群組。
--   當用戶端是多個界限群組的成員時，目前界限群組會定義為該用戶端的所有界限群組聯集。  該用戶端接著可切換回任何原始界限群組的芳鄰。
+-   一个边界组可具有多个关系。 这使你可以为不同的邻居配置回退，以在不同的时间段后发生。
+-   客户端仅回退到是其当前边界组的直接邻居的边界组。
+-   当某个客户端是多个边界组的成员时，此当前边界组即被定义为所有客户端的边界组的联合。  然后该客户端可以回退到任何这些原始边界组的一个邻居边界组。
 
-除了您定義的連結之外，還會在您建立的界限群組與針對每個站台自動建立的預設界限群組之間，自動建立一個隱含連結。 此自動連結：
--   可供不在與您階層中任何界限群組相關聯之界限上的用戶端使用，這些用戶端會自動使用其指派站台中的預設界限群組，來識別有效的內容來源位置。   
--   為預設後援選項，會在 120 分鐘後從目前界限群組切換回站台預設界限群組。
+除了定义的链接外，还有一个隐式链接，此链接是在你创建的边界组和为每个站点自动创建的默认边界组之间自动创建的。 此自动链接：
+-   由不在边界上的客户端使用，边界与层次结构中的任何边界组都相关联，层次结构自动使用分配的站点中的默认边界组来确定有效的内容源位置。   
+-   是一个默认回退选项，即从当前边界组回退到站点默认边界组，120 分钟后使用。
 
-**使用新模型的範例︰**     
-您將建立不共用界限或站台系統伺服器三個界限群組：
--   群組 BG_A，以及與該群組相關聯的發佈點 DP_A1 和 DP_A2
--   群組 BG_B，以及與該群組相關聯的發佈點 DP_B1 和 DP_B2
--   群組 BG_C，以及與該群組相關聯的發佈點 DP_C1 和 DP_C2
+**使用新模型的示例：**     
+创建三个边界组，使其不共享边界或站点系统服务器：
+-   组 BG_A，包含与该组关联的 DP_A1 和 DP_A2 分发点
+-   组 BG_B，包含与该组关联的 DP_B1 和 DP_B2 分发点
+-   组 BG_C，包含与该组关联的 DP_C1 和 DP_C2 分发点
 
-您會將用戶端的網路位置只新增至 BG_A 界限群組作為界限，接著您會設定從該界限群組到其他兩個界限群組的關聯性：
--   您將設定要在 10 分鐘後使用之第一個「芳鄰」群組 (BG_B) 中的發佈點。 此群組包含發佈點 DP_B1 和 DP_B2。 這兩者會適當地連線到第一個群組界限位置。
--   您將設定要在 20 分鐘後使用的第二個「芳鄰」 群組 (BG_C)。 此群組包含發佈點 DP_C1 和 DP_C2。 這兩者來自其他兩個界限群組並跨 WAN。
--   您也會將位於站台伺服器上的另一個發佈點新增至站台預設站台界限群組。 這是您最少使用的內容來源位置，但它位於所有界限群組的中央。
+将客户端网络位置作为边界添加到仅 BG_A 边界组中，然后配置从该边界组到其他两个边界组的关系：
+-   配置第一个邻居组 (BG_B) 的分发点，使其 10 分钟后使用。 此组包含分发点 DP_B1 和 DP_B2。 这两个分发点都很好地连接到第一组边界位置。
+-   配置第二个邻居组 (BG_C)，使其 20 分钟后使用。 此组包含分发点 DP_C1 和 DP_C2。 这两个分发点都从其他两个边界组跨越 WAN。
+-   此外，还需将位于站点服务器上的其他分发点添加到站点的默认站点边界组。 这是你最不希望的内容源位置，但它位于所有边界组的中心位置。
 
-    界限群組和後援時間的範例：
+    边界组和回退时间的示例：
 
      ![BG_Fallack](media/BG_Fallback.png)
 
 
-使用下列設定：
--   用戶端會從其「目前」界限群組 (BG_A) 中的發佈點開始搜尋內容，搜尋每個發佈點兩分鐘，再切換到界限群組中的下一個發佈點。 有效內容來源位置的用戶端集區包含 DP_A1 和 DP_A2。
--   如果用戶端從其「目前」界限群組搜尋 10 分鐘後找不到內容，則會在其搜尋中新增 BG_B 界限群組中的發佈點。 接著會從其結合之發佈點集區中的發佈點繼續搜尋內容，該集區現在包含 BG_A 和 BG_B 界限群組中的發佈點。 用戶端會繼續花兩分鐘的時間連絡每個發佈點，再切換到其集區中的下一個發佈點。 有效內容來源位置的用戶端集區包含 DP_A1、DP_A2、DP_B1 和 DP_B2。
--   如果用戶端在延長的 10 分鐘 (20 分鐘) 後仍然找不到具有內容的發佈點，它會擴充其可用的發佈點集區，加入第二個「芳鄰」群組 (界限群組 BG_C) 中的發佈點。 用戶端現在有 6 個發佈點可供搜尋 (DP_A1、DP_A2、DP_B2、DP_B2、DP_C1 和 DP_C2)，而且會繼續每隔兩分鐘變更為新的發佈點，直到找到內容為止。
--   如果用戶端在總計 120 分鐘後找不到內容，就會切換回加入「預設站台界限群組」作為其繼續搜尋的一部分。 現在，發佈點集區包含已設定之三個界限群組中的所有發佈點，而且最後一個發佈點位於站台伺服器電腦上。  用戶端接著會繼續搜尋內容，每隔兩分鐘變更發佈點一次，直到找到內容為止。
+使用该配置：
+-   客户端开始从其当前边界组 (BG_A) 中的分发点搜索内容，对每个分发点进行为时两分钟的搜索，然后再切换到边界组中的下一个分发点。 有效的内容源位置的客户端池包括 DP_A1 和 DP_A2。
+-   如果在搜索 10 分钟之后客户端无法从其当前边界组找到内容，然后，它将向它的搜索添加 BG_B 边界组中的分发点。 然后它将继续从其组合的分发点池中的分发点搜索内容，该池现在包含来自 BG_A 和 BG_B 边界组的分发点。 客户端继续对每个分发点进行为时两分钟的联系，然后再从其池切换到下一个分发点。 有效的内容源位置的客户端池包括 DP_A1、DP_A2、DP_B1 和 DP_B2。
+-   再过 10 分钟（20 分钟）后，如果客户端仍未找到分发点的内容，它将扩展其可用分发点池，以便包含来自第二个邻居组（边界组 BG_C）的分发点。 现在，客户端具有 6 个要搜索的分发点（DP_A1、DP_A2、DP_B2、DP_B2、DP_C1 和 DP_C2），并继续每隔两分钟切换到新的分发点直到找到内容。
+-   如果客户端在总共 120 分钟后还未找到内容，则它将回退，以将默认站点边界组纳入其继续搜索的一部分。 现在，分发点池包括来自这三个已配置的边界组的所有分发点，并且最后一个分发点位于站点服务器计算机上。  然后，客户端继续执行对内容的搜索，并每隔两分钟对分发点进行更改直到找到内容。
 
-藉由設定在不同的時間使用不同的芳鄰群組，您就可以控制何時將特定發佈點新增為內容來源位置，以及用戶端何時或是否會使用後援當做防護機制，以在任何其他位置都沒有內容時切換回預設站台界限群組。
+通过将不同的邻居组配置为在不同的时间可用，可以控制将特定分发点添加为内容源位置的时间，以及客户端将默认站点边界组的回退用作从任何其他位置不可用的内容的安全网络的时间或设想。
 
 
-### <a name="bkmk_update"></a>將現有的界限群組更新為新的模型
-當您安裝 1609 版並更新站台時，會自動進行下列設定。 這些設定是為了確保您目前的後援行為在您設定新的界限群組和關聯性之前維持可用。  
--   站台上未受保護的發佈點會新增至該站台的 *Default-Site-Boundary-Group\<站台碼>* 界限群組。
--   系統會為每個現有的界限群組建立一個複本，其中包含設定為低速連線的站台伺服器。 新群組的名稱是 ***\<原始界限群組名稱>-Slow-Tmp***：  
-    -   原始界限群組中會保留使用快速連線的站台系統。
-    -   使用低速連線的站台系統複本會新增至界限群組複本。 設定為慢速的原始站台系統會在原始界限群組中保留供回溯相容性，但不會從該界限群組中使用。
-    -   此界限群組複本沒有相關聯的界限。 不過，原始群組與後援時間設定為零的新界限群組複本之間，會建立一個後援連結。
+### <a name="bkmk_update"></a>将现有边界组更新到新模型
+安装版本 1609 并更新网站时，将自动进行以下配置。 这些配置旨在确保当前的回退行为保持可用，直到配置了新边界组和关系。  
+-   站点中不受保护的分发点将添加到该站点的默认站点边界组 \<sitecode> 边界组。
+-   副本由每个现有的边界组组成，这些边界组包含配置为慢速连接的站点服务器。 新组的名称为 ***\<original boundary group name>-Slow-Tmp***：  
+    -   包含快速连接的站点系统会保留在原始边界组中。
+    -   包含慢速连接的站点系统副本将添加到边界组副本中。 配置为慢速的原始站点系统仍处于原始边界组中，以便保持向后兼容性，但不从该边界组使用它。
+    -   此边界组副本不具有与之相关联的边界。 但是，已在原始组和将回退时间设置为 0 的新边界组副本之间创建回退链接。
 
- 下表指出結合原始部署設定與發佈點設定之後，您可以預期的新後援行為：
+ 下表列出了可从原始部署设置和分发点配置组合期望的新回退行为：
 
-低速網路中之 [不要執行程式] 的原始部署設定  |[允許用戶端使用內容的後援來源位置] 的原始發佈點設定  |新的後援行為  
+慢速网络中“不运行程序”的原始部署配置  |“允许客户端使用内容的回退源位置”的原始分发点配置  |新的回退行为  
 ---------|---------|---------
-已選取     |  已選取    |  **沒有後援** - 只使用目前界限群組中的發佈點       
-已選取     |  未選取|  **沒有後援** - 只使用目前界限群組中的發佈點       
-未選取 |  未選取|  **切換回芳鄰** - 使用目前界限群組中的發佈點，然後新增芳鄰界限群組中的發佈點。 除非設定預設站台界限群組的明確連結，否則用戶端不會切換回該群組。    
-未選取 | 已選取     |   **標準後援** - 先使用目前界限群組中的發佈點，再使用芳鄰和站台預設界限群組中的發佈點
+选定     |  选定    |  **没有回退** - 仅使用当前边界组中的分发点       
+选定     |  未选定|  **没有回退** - 仅使用当前边界组中的分发点       
+未选定 |  未选定|  **回退到邻居** - 使用当前边界组中的分发点，然后添加邻居边界组中的分发点。 除非已配置到默认站点边界组的显式链接，否则客户端将不会回退到该组。    
+未选定 | 选定     |   **正常回退** - 使用当前边界组中的分发点，然后使用来自邻居和站点默认边界组的分发点
 
- 所有其他部署設定都會導致**標準後援**。  
+ 所有其他的部署配置会导致**正常回退**。  
 
 
 
-## <a name="office-365-client-management-dashboard"></a>Office 365 用戶端管理儀表板  
-Configuration Manager 1609 Technical Preview 引進了新的儀表板。 若要檢視此儀表板，請在 Configuration Manager 主控台中，移至 [軟體程式庫] > [概觀] > [Office 365 用戶端管理]。
+## <a name="office-365-client-management-dashboard"></a>Office 365 客户端管理仪表板  
+Configuration Manager 1609 Technical Preview 引入了一个新的仪表板。 若要查看该仪表板，可在 Configuration Manager 控制台中转到“软件库” > “概述” > “Office 365 客户端管理”。
 >[!NOTE]
->在 Configuration Manager 主控台的 [新增功能] 工作區中，此新儀表板錯誤命名為 **Office 365 服務儀表板**。
+>在 Configuration Manager 控制台中的“新增功能”工作区中，新仪表板被错误地命名为“Office 365 服务仪表板”。
 
-此儀表板會顯示下列圖表：
+仪表板显示以下内容的图表：
 
-- Office 365 用戶端數目
-- Office 365 用戶端版本
-- Office 365 用戶端語言
-- Office 365 用戶端通道     
-如需詳細資訊，請參閱 [Office 365 ProPlus 更新通道的概觀](https://technet.microsoft.com/library/mt455210.aspx)。
-- 在可用產品集合中選取 Office 365 用戶端的自動部署規則。
+- Office 365 客户端数
+- Office 365 客户端版本
+- Office 365 客户端语言
+- Office 365 客户端通道     
+有关详细信息，请参阅 [Office 365 专业增强版的更新频道概述](https://technet.microsoft.com/library/mt455210.aspx)。
+- 已在可用产品集中选择 Office 365 客户端的自动部署规则。
 
-您可以在此儀表板上執行下列動作：
-- 使用儀表板頂端的 [集合] 下拉式清單設定，依特定集合成員篩選儀表板資料。
-- 在儀表板右上方，按一下 [Office 365 Installer] 啟動 [Office 365 用戶端安裝精靈]，將 Office 365 應用程式部署至用戶端。 如需詳細資訊，請參閱[將 Office 365 應用程式部署至用戶端](#deploy-office-365-apps-to-clients)。
-- 在儀表板中間右邊，按一下 [建立 ADR] 開啟 [自動部署規則精靈]，以建立新的自動部署規則 (ADR)。 若要建立適用於 Office 365 應用程式的 ADR，請在選擇產品時選取 [Office 365 用戶端]。 如需詳細資訊，請參閱[自動部署軟體更新](/sccm/sum/deploy-use/automatically-deploy-software-updates)。
-- 在儀表板右下方，按一下 [Create Client Agent Settings]\(建立用戶端代理程式設定) 開啟用戶端代理程式設定。 如需詳細資訊，請參閱[關於用戶端設定](/sccm/core/clients/deploy/about-client-settings)。
+你可以对仪表板执行以下操作：
+- 在仪表板顶部，使用“集合”下拉列表设置按特定集合的成员筛选仪表板数据。
+- 在仪表板的右上方，单击“Office 365 安装程序”以启动 Office 365 客户端安装向导，将 Office 365 应用部署到客户端。 有关详细信息，请参阅[将 Office 365 应用部署到客户端](#deploy-office-365-apps-to-clients)。
+- 在仪表板的中右侧，单击“创建 ADR”以打开“自动部署规则向导”，创建新的自动部署规则 (ADR)。 若要创建适用于 Office 365 应用的 ADR，请在选择该产品时选择“Office 365 客户端”。 有关详细信息，请参阅[自动部署软件更新](/sccm/sum/deploy-use/automatically-deploy-software-updates)。
+- 在仪表板的右下方，单击“创建客户端代理设置”以打开客户端代理设置。 有关详细信息，请参阅[关于客户端设置](/sccm/core/clients/deploy/about-client-settings)。
 
 
 
-如需 Office 365 ProPlus 更新的詳細資訊，請參閱[使用 Configuration Manager 管理 Office 365 ProPlus 更新](/sccm/sum/deploy-use/manage-office-365-proplus-updates)。
+有关 Office 365 专业增强版更新的详细信息，请参阅[使用 Configuration Manager 管理 Office 365 专业增强版更新](/sccm/sum/deploy-use/manage-office-365-proplus-updates)。
 
-## <a name="deploy-office-365-apps-to-clients"></a>將 Office 365 應用程式部署至用戶端
-在此版本中，您可以從 [Office 365 用戶端管理] 儀表板啟動 Office 365 Installer，以便設定 Office 365 安裝設定、從 Office 內容傳遞網路 (CDN) 下載檔案，並在 Configuration Manager 中將檔案當做應用程式來部署。
+## <a name="deploy-office-365-apps-to-clients"></a>将 Office 365 应用部署到客户端
+在此版本中，可以从 Office 365 客户端管理仪表板启动 Office 365 安装程序，此程序可用于配置 Office 365 安装设置、从 Office 内容传送网络 (CDN) 下载文件，以及将文件部署为 Configuration Manager 中的应用程序。
 
 ### <a name="limitations-of-office-365-deployment"></a>Office 365 部署的限制
-- 當您嘗試在 [Office 365 應用程式安裝精靈] 中匯入現有的用戶端設定 (XML) 時，可能會發生問題。 您可以手動設定用戶端設定，而不會發生問題。
+- 尝试导入 Office 365 应用安装向导中的现有客户端设置 (XML) 时，可能会遇到问题。 你可以手动配置客户端设置，而不会出现问题。
 
-#### <a name="to-deploy-office-365-apps-to-clients"></a>將 Office 365 應用程式部署至用戶端
-1. 在 Configuration Manager 主控台中，巡覽至 [軟體程式庫] > [概觀] > [Office 365 用戶端管理]。
-2. 按一下右上方窗格中的 [Office 365 Installer]。 [Office 365 用戶端安裝精靈] 隨即開啟。
-3. 在 [應用程式設定] 頁面上，提供應用程式的名稱和描述，輸入檔案的下載位置，然後按一下 [下一步]。 請注意，您必須使用 &#92;&#92;*server*&#92;*share* 格式來指定位置。
-4. 在 [匯入用戶端設定] 頁面上，選擇要從現有的 XML 組態檔匯入 Office 365 用戶端設定，還是要手動指定設定，然後按一下 [下一步]。
-如果您有現成的組態檔，請輸入檔案的位置，然後跳至步驟 7。 請注意，您必須使用 &#92;&#92;*server*&#92;*share*&#92;*檔案名稱*.XML 格式來指定位置。
+#### <a name="to-deploy-office-365-apps-to-clients"></a>将 Office 365 应用部署到客户端
+1. 在 Configuration Manager 控制台中，导航到“软件库” > “概述” > “Office 365 客户端管理”。
+2. 单击右上方窗格中的“Office 365 安装程序”。 将打开 Office 365 客户端安装向导。
+3. 在“应用程序设置”页上，提供应用的名称和说明，输入文件的下载位置，然后单击“下一步”。 请注意，必须采用 &#92;&#92;*server*&#92;*share* 形式指定位置。
+4. 在“导入客户端设置”页上，选择是从现有的 XML 配置文件导入 Office 365 客户端设置还是手动指定设置，然后单击“下一步”。
+如果具有现有的配置文件，请输入文件的位置并跳到步骤 7。 请注意，必须采用 &#92;&#92;*server*&#92;*share*&#92;*filename*.XML 形式指定位置。
 
     > [!IMPORTANT]
-    >當您嘗試在此 Technical Preview 中匯入現有的用戶端設定 (XML) 時，可能會發生問題。
+    >尝试导入此技术预览中的现有客户端设置 (XML) 时，可能会遇到问题。
 
-5. 在 [Client Products]\(用戶端產品) 頁面上，依序選取您使用的 Office 365 套件、要包含的應用程式、應包含的任何其他 Office 產品，然後按一下 [下一步]。
-6. 在 [用戶端設定] 頁面上，選擇要包含的設定，然後按一下 [下一步]。
-7. 在 [部署] 頁面上，選擇是否要部署應用程式，然後按一下 [下一步]。
-如果您選擇不要在精靈中部署套件，請跳至步驟 9。
-8. 設定精靈頁面的其餘部分，就像是一般應用程式部署一樣。 如需詳細資訊，請參閱[建立和部署應用程式](/sccm/apps/get-started/create-and-deploy-an-application)。
-9. 完成精靈。
-10. 您可以在 Configuration Manager 中，從 [軟體程式庫] > [概觀] > [應用程式管理] > [應用程式] 部署或編輯應用程式，就像是任何其他應用程式一樣。
+5. 在“客户端产品”页上，依次选择使用的 Office 365 套件、想要包括的应用程序、应包括的任何其他 Office 产品，然后单击“下一步”。
+6. 在“客户端设置”页上，选择要包括的设置，然后单击“下一步”。
+7. 在“部署”页上，选择是否部署该应用程序，然后单击“下一步”。
+如果选择不部署向导中的包，请跳到步骤 9。
+8. 像配置典型应用程序那样，配置该向导页的其余部分。 有关详细信息，请参阅[创建和部署应用程序](/sccm/apps/get-started/create-and-deploy-an-application)。
+9. 完成向导。
+10. 可以在 Configuration Manager 中从“软件库” > “概述” > “应用程序管理” > “应用程序”部署或编辑应用程序，就像部署或编辑任何其他应用程序一样。
 
 >[!NOTE]
->部署 Office 365 應用程式之後，您可以建立自動部署規則，以維護應用程式。 若要建立適用於 Office 365 應用程式的 ADR，請按一下 [Create an ADR]\(建立 ADR)，然後在選擇產品時選取 [Office 365 用戶端]。 如需詳細資訊，請參閱[自動部署軟體更新](/sccm/sum/deploy-use/automatically-deploy-software-updates)。
+>部署 Office 365 应用后，可以创建自动部署规则以维护该应用。 若要创建适用于 Office 365 应用的 ADR，请单击“创建 ADR”，然后在选择该产品时选择“Office 365 客户端”。 有关详细信息，请参阅[自动部署软件更新](/sccm/sum/deploy-use/automatically-deploy-software-updates)。
 
-## <a name="BKMK_UEFIConversion"></a>BIOS 轉換成 UEFI 的改進
-您現在可以使用新變數 TSUEFIDrive 來自訂作業系統部署工作順序，如此一來，「重新啟動電腦」步驟就會在硬碟上準備用於轉換成 UEFI 的 FAT32 磁碟分割。 下列程序提供範例，說明如何建立工作順序步驟，以準備用於將 BIO 轉換成 UEFI 的硬碟。
+## <a name="BKMK_UEFIConversion"></a>对于 BIOS 到 UEFI 转换的改进
+现在可以使用新的变量 TSUEFIDrive 自定义操作系统部署任务的序列，以便“重启计算机”步骤为到 UEFI 的转换在硬盘驱动器上准备 FAT32 分区。 以下过程提供了有关如何创建任务序列步骤以便为 BIOS 到 UEFI 的转换准备硬盘驱动器的示例。
 
-#### <a name="to-prepare-the-fat32-partition-for-the-conversion-to-uefi"></a>若要準備用於轉換成 UEFI 的 FAT32 磁碟分割：
-在安裝作業系統的現有工作順序中，您將新增具有執行 BIOS 轉換成 UEFI 之步驟的新群組。
+#### <a name="to-prepare-the-fat32-partition-for-the-conversion-to-uefi"></a>为到 UEFI 的转换准备 FAT32 分区：
+在现有的用于安装操作系统的任务序列中，添加一个新组，并包含将 BIOS 转换为 UEFI 的步骤。
 
-1. 在擷取檔案和設定的步驟之後，以及安裝作業系統的步驟之前，建立新的工作順序群組。 例如，在 [擷取檔案和設定] 之後，建立名為 **BIOS-to-UEFI** 的群組。
-2. 在新群組的 [選項] 索引標籤中，新增工作順序變數作為條件，其中 **_SMSTSBootUEFI** **不等於** **true**。 當電腦已在 UEFI 模式時，這會防止執行群組中的步驟。
-![BIOS to UEFI 群組](media/BIOS-to-UEFI-group.png)
-3. 在新群組底下，新增 [重新啟動電腦] 工作順序步驟。 在 [指定重新啟動後執行的項目] 中，選取 [指派給此工作順序的開機映像] 以在 Windows PE 中啟動電腦。  
-4. 在 [選項] 索引標籤上，新增工作順序變數作為條件，其中 **_SMSTSInWinPE 等於 false**。 如果電腦已在 Windows PE 中，這會防止執行此步驟。
+1. 在捕获文件和设置之后，并在安装操作系统之前，创建新的任务序列组。 例如，在“捕获文件和设置”组之后创建名为“BIOS-to-UEFI”的组。
+2. 在新组的“选项”选项卡中，添加一个新的任务序列变量作为条件，其中 **_SMSTSBootUEFI**  **不等于** **true**。 这样可以在计算机已处于 UEFI 模式时，防止运行组中的步骤。
+![BIOS 转 UEFI 组](media/BIOS-to-UEFI-group.png)
+3. 在新组中，添加“重启计算机”任务序列步骤。 在“指定重启后要运行的内容”中，选择“已选择分配给此任务序列的启动映像”以在 Windows PE 中启动计算机。  
+4. 在“选项”选项卡中，添加一个任务序列变量作为条件，其中 **_SMSTSInWinPE 等于 false**。 这样在计算机已处于 Windows PE 时，防止运行此步骤。
 
-    ![重新啟動電腦步驟](media/Restart-in-Windows-PE.png)
-5. 新增啟動 OEM 工具的步驟，以將韌體從 BIOS 轉換成 UEFI。 這通常會是 [執行命令列] 工作順序步驟，其中包含啟動 OEM 工具的命令列。
-5.  新增 [格式化和分割磁碟] 工作順序步驟，對硬碟進行分割與格式化。 在此步驟中，執行下列動作：
-    1.  安裝作業系統之前，先建立將轉換成 UEFI 的 FAT32 磁碟分割。 選擇 [GPT] 作為 [磁碟類型]。
-    ![格式化和分割磁碟步驟](media/Format-and-partition-disk.png)
-    2.  移至 FAT32 的 [磁碟分割內容]。 在 [變數] 欄位中輸入 **TSUEFIDrive**。 當工作順序偵測到此變數時，它會準備 UEFI 轉換，再重新啟動電腦。
-    ![磁碟分割內容](media/Partition-properties.png)
-    3. 建立工作順序引擎用來儲存其狀態及存放記錄檔的 NTFS 磁碟分割。
-6.  新增 [重新啟動電腦] 工作順序步驟。 在 [指定重新啟動後執行的項目] 中，選取 [指派給此工作順序的開機映像] 以在 Windows PE 中啟動電腦。  
-
-
+    ![“重启计算机”步骤](media/Restart-in-Windows-PE.png)
+5. 添加一个步骤以启动 OEM 工具，该工具可将固件从 BIOS 转换到 UEFI。 这通常是**运行命令行**任务序列步骤，其中有一个命令行可以启动 OEM 工具。
+5.  添加“格式化磁盘并分区”任务序列步骤，用于对硬盘进行分区和格式化。 在该步骤中，执行以下操作：
+    1.  创建 FAT32 分区，该分区在安装操作系统之前将转换为 UEFI。 为“磁盘类型”选择“GPT”。
+    ![格式化磁盘并分区步骤](media/Format-and-partition-disk.png)
+    2.  转到 FAT32 分区的属性。 在“变量”字段中输入“TSUEFIDrive”。 当任务序列检测到此变量时，它将为 UEFI 转换做准备，准备就绪后会重启计算机。
+    ![分区属性](media/Partition-properties.png)
+    3. 创建 NTFS 分区，任务序列引擎使用此分区保存其状态和存储日志文件。
+6.  添加“重启计算机”任务序列步骤。 在“指定重启后要运行的内容”中，选择“已选择分配给此任务序列的启动映像”以在 Windows PE 中启动计算机。  
 
 
-## <a name="intune-compliance-charts"></a>Intune 相容性圖表
-在此版本中，您可以使用 Configuration Manager 主控台之 [監視] 工作區底下的新圖表，快速檢視裝置的整體相容性及不相容的主要原因。
 
-#### <a name="to-view-the-intune-compliance-charts"></a>檢視 Intune 相容性圖表
-1. 在 Configuration Manager 主控台中，移至 [監視] > [概觀] > [相容性設定]。
-2. [Overall Device Compliance]\(整體裝置相容性) 圖表隨即顯示。
-3. 按一下 [相容性原則] 節點，以檢視 [Overall Device Compliance]\(整體裝置相容性) 和 [Top Non-Compliance Reasons]\(不相容的主要原因) 圖表。
 
-### <a name="limitations-of-intune-compliance-charts-in-tp-1609"></a>TP 1609 中的 Intune 相容性圖表限制
-- 向下切入 [Overall Device Compliance]\(整體裝置相容性) 圖表目前會產生錯誤。
-- [Top Non-Compliance Reasons]\(不相容的主要原因) 圖表會列出原則名稱，而不是個別不相容原因。 您可以按一下原則，向下切入並查看不符合該原則的裝置。
+## <a name="intune-compliance-charts"></a>Intune 合规性图表
+在此版本中，可以通过使用 Configuration Manager 控制台中“监视工作区”下的新图表快速查看设备的总体合规性以及不合规的主要原因。
 
-### <a name="try-it-out"></a>試試看
-依序完成下列各節：
+#### <a name="to-view-the-intune-compliance-charts"></a>查看 Intune 合规性图表
+1. 在 Configuration Manager 控制台中，转到“监视” > “概述” > “符合性设置”。
+2. 将显示“设备的总体合规性”图表。
+3. 单击“合规性策略”节点以查看“设备的总体合规性”和“不合规的主要原因”图表。
 
-#### <a name="check-overall-compliance-chart"></a>查看 Overall Compliance (整體相容性) 圖表
-1. 在 Configuration Manager 中新增兩個 iOS 相容性原則。 一個原則應該包含裝置的一組設定 (例如將 PIN 長度設定為 6)。 另一個原則應該包含另一組設定 (例如 PIN 複雜性)。 原則設定不應該重疊或互相衝突。
-2. 將兩個原則部署給一組使用者。
-3. 使用相同的使用者帳戶以及在上一個步驟中收到原則的帳戶，在 Intune 註冊兩部 iOS 裝置。 裝置不應符合相容性原則的準則。
-4. 在 Configuration Manager 中，查看 [Overall Device Compliance]\(整體裝置相容性) 圖表。 這兩部裝置應報告為不相容。
+### <a name="limitations-of-intune-compliance-charts-in-tp-1609"></a>TP 1609 中的 Intune 合规性图表的限制
+- “设备的总体合规性”图表的向下钻取当前生成错误。
+- “不合规的主要原因”图表列出了策略名称，而没有逐条列出不合规的原因。 可以单击该策略向下钻取，查看不符合该策略的设备。
+
+### <a name="try-it-out"></a>试试看
+按顺序完成下列部分：
+
+#### <a name="check-overall-compliance-chart"></a>检查“总体合规性”图表
+1. 在 Configuration Manager 中添加两个 iOS 合规性策略。 一个策略应具有设备的一组设置（例如，设置 PIN 长度为 6）。 另一个策略应具有另一组设置（例如，PIN 复杂性）。 策略设置不应重叠或冲突。
+2. 将这两个策略部署到一组用户。
+3. 使用相同的用户帐户（即收到上一步中的策略的帐户）在 Intune 中注册两个 iOS 设备。 设备不应满足合规性策略的条件。
+4. 在 Configuration Manager 中，查看“设备的总体合规性”图表。 这两个设备都应报告为不符合。
 <!-- 5. Click the **Non-compliant** section of the chart. Both devices should appear in the filtered view under **Assets and Compliance** > **Overview** > **Device**. -->
 
-#### <a name="check-the-top-non-compliance-reasons-chart"></a>查看 Top Non-compliance Reasons (不相容的主要原因) 圖表
-5. 查看 [不相容的主要原因]\(Top Non-compliance Reasons) 圖表。 此圖表列出不相容的主要 5 個原因，但如果在不同的原則之間只設定兩個相容性設定，則只會顯示不相容的主要 2 個原因。
-6. 按一下圖表中的其中一個區段。 這兩部裝置應該會出現在 [資產與相容性] > [概觀] > [裝置] 底下的篩選檢視中。
+#### <a name="check-the-top-non-compliance-reasons-chart"></a>查看“不合规的主要原因”图表
+5. 查看“不合规的主要原因”图表。 此图表列出了不符合的 5 个主要原因，但当仅跨策略设置两个符合性设置时，将仅显示前 2 个不符合的原因。
+6. 单击图表中的一个部分。 这两种设备都应显示在筛选视图中的“资产和符合性” > “概述” > “设备”下。
 
-#### <a name="make-devices-compliant-and-check-the-charts"></a>將裝置設為相容並查看圖表
-7. 將其中一部裝置設為符合其中一個原則。 再次查看 [Overall Device Compliance]\(整體裝置相容性) 圖表。 此圖表應該會顯示一部相容的裝置和一部不相容的裝置。
-8. 將另一部裝置設為符合相同原則。 這會讓一部裝置符合兩個原則，而另一部裝置只符合其中一個原則。
-9. 查看 [不相容的主要原因]\(Top Non-compliance Reasons) 圖表。 應該只會列出一個不相容的原因。
+#### <a name="make-devices-compliant-and-check-the-charts"></a>使设备合规，然后查看图表
+7. 使其中一个设备符合其中一个策略。 再次查看“设备的总体合规性”图表。 该图表将显示一个合规的设备和一个不合规的设备。
+8. 使另一个设备符合相同的策略。 这将使一个设备符合这两个策略以及一个设备仅符合其中一个策略。
+9. 查看“不合规的主要原因”图表。 应仅列出一个不符合的原因。
 <!--7. Click the **Compliant** section of the chart. Only the compliant device should appear in the filtered view. -->
 
 
 
 
 
-## <a name="see-also"></a>另請參閱
-[System Center Configuration Manager 的 Technical Preview](../../core/get-started/technical-preview.md)
+## <a name="see-also"></a>另请参阅
+[System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)

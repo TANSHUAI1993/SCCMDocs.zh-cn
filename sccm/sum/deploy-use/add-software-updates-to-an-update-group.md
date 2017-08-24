@@ -1,6 +1,6 @@
 ---
-title: "將更新新增至更新群組 - Configuration Manager | Microsoft Docs"
-description: "將軟體更新手動或自動新增至您環境中的軟體更新群組。"
+title: "将更新添加到更新组 - Configuration Manager | Microsoft Docs"
+description: "手动或自动将软件更新添加到环境中的软件更新组。"
 keywords: 
 author: dougeby
 ms.author: dougeby
@@ -14,46 +14,46 @@ ms.assetid: a0767664-fd60-46a8-9da5-86cc431ce53c
 ms.openlocfilehash: 02e30ba48f3564fa8a31f21793c145054e02e002
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="add-software-updates-to-an-update-group"></a>將軟體更新新增至更新群組  
+# <a name="add-software-updates-to-an-update-group"></a>将软件更新添加到更新组  
 
-*適用對象：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
- 軟體更新群組提供您在環境中組織軟體更新的有效方法。 您可以手動將軟體更新新增至軟體更新群組，或使用 ADR 自動將軟體更新新增至軟體更新群組。 您也可以手動部署軟體更新群組，或使用 ADR 自動部署群組。 部署軟體更新群組之後，您可以將新的軟體更新新增至群組，然後 Configuration Manager 就會自動部署它們。 利用下列程序，將軟體更新新增至新的或現有軟體更新群組。  
+ 软件更新组会为你提供行之有效的方法来组织你的环境中的软件更新。 你可以将软件更新手动添加到软件更新组，或通过运用 ADR，将软件更新自动添加到软件更新组。 你还可以手动部署软件更新组，或通过运用 ADR 自动部署该组。 在部署软件更新组后，你可以将新的软件更新添加到组，Configuration Manager 将自动对它们进行部署。 使用下列过程以将软件更新添加到新的或现有的软件更新组。  
 
-#### <a name="to-add-software-updates-to-a-new-software-update-group"></a>將軟體更新新增至新的軟體更新群組  
+#### <a name="to-add-software-updates-to-a-new-software-update-group"></a>将软件更新添加到新的软件更新组  
 
-1.  在 Configuration Manager 主控台中，按一下 [軟體程式庫] 。  
+1.  在 Configuration Manager 控制台中，单击“软件库” 。  
 
-2.  在 [軟體程式庫] 工作區中，展開 [軟體更新] ，然後按一下 [所有軟體更新] 。  
+2.  在“软件库”工作区中，展开“软件更新” ，然后单击“所有软件更新” 。  
 
-3.  選取要新增到新軟體群組的軟體更新。  
+3.  选择要添加到新软件更新组的软件更新。  
 
-4.  在 [首頁]  索引標籤的 [更新]  群組中，按一下 [建立軟體更新群組] 。  
+4.  在“主页”  选项卡上的“更新”  组中，单击“创建软件更新组” 。  
 
-5.  指定軟體更新群組的名稱，並選擇是否要提供描述。 使用能為您提供足夠資訊的名稱和描述，來判斷哪一種類型的軟體更新應在軟體更新群組中。 若要進行，請按一下 [建立] 。  
+5.  指定软件更新组的名称并根据需要提供描述。 使用名称和描述提供足够的信息，供你确定软件更新组中软件更新的类型。 要继续，请单击“创建” 。  
 
-6.  按一下 [軟體更新群組]  以顯示新的軟體更新群組。  
+6.  单击“软件更新组”  以显示新的软件更新组。  
 
-7.  選取軟體更新群組，然後在 [首頁]  索引標籤的 [更新]  群組中按一下 [顯示成員]  ，顯示此群組包括的軟體更新的清單。  
+7.  选择软件更新组，在“主页”  选项卡内的“更新”  组中，单击“显示成员”  以显示组中所包含的软件更新的列表。  
 
-#### <a name="to-add-software-updates-to-an-existing-software-update-group"></a>將軟體更新新增至現有軟體更新群組  
+#### <a name="to-add-software-updates-to-an-existing-software-update-group"></a>将软件更新添加到现有软件更新组中  
 
-1.  在 Configuration Manager 主控台中，按一下 [軟體程式庫] 。  
+1.  在 Configuration Manager 控制台中，单击“软件库” 。  
 
-2.  在 [軟體程式庫] 工作區中，展開 [軟體更新] ，然後按一下 [所有軟體更新] 。  
+2.  在“软件库”工作区中，展开“软件更新” ，然后单击“所有软件更新” 。  
 
-3.  選取您要新增到新軟體群組的軟體更新。  
+3.  选择要添加到新软件更新组的软件更新。  
 
     > [!NOTE]  
-    >  在 [所有軟體更新] 節點 上，Configuration Manager 預設只會顯示在過去 30 天內發行且分類為 [重大] 和 [安全性] 的軟體更新。  
+    >  在“所有软件更新”节点上，默认情况下 Configuration Manager 只显示分类为“严重”和“安全”并且在过去 30 天内发布的软件更新。  
 
-4.  在 [首頁]  索引標籤的 [更新]  群組中，按一下 [編輯成員資格] 。  
+4.  在“主页”  选项卡上的“更新”  组中，单击“编辑成员身份” 。  
 
-5.  選取您要新增軟體更新的軟體更新群組。  
+5.  选择要添加软件更新的软件更新组。  
 
-6.  按一下 [軟體更新群組]  節點，以顯示軟體更新群組。  
+6.  单击“软件更新组”  节点以显示软件更新组。  
 
-7.  選取軟體更新群組，然後在 [首頁]  索引標籤的 [更新]  群組中按一下 [顯示成員]  ，顯示軟體更新群組包括的軟體更新的清單。  
+7.  选择软件更新组，并在“主页”  选项卡中的“更新”  组中单击“显示成员”  ，以显示软件更新组中所包括的软件更新列表。  

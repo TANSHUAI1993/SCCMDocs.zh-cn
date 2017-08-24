@@ -1,6 +1,6 @@
 ---
-title: "選擇 Intune 獨立部署或混合式 MDM | Microsoft Docs"
-description: "選擇要部署使用 Intune 和 Configuration Manager 的混合式行動裝置管理，還是要執行 Intune 獨立部署。"
+title: "选择 Intune 独立版或混合 MDM | Microsoft Docs"
+description: "选择是使用 Intune 和 Configuration Manager 部署混合移动设备管理还是运行 Intune 独立版。"
 ms.custom: na
 ms.date: 07/18/2017
 ms.prod: configuration-manager
@@ -17,39 +17,39 @@ manager: angrobe
 ms.openlocfilehash: 26c36df77c21254c7ad2b8a45906bd3706f9ec65
 ms.sourcegitcommit: 06aef618f72c700f8a716a43fb8eedf97c62a72b
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/21/2017
 ---
-# <a name="choose-between-microsoft-intune-standalone-and-hybrid-mobile-device-management-with-system-center-configuration-manager"></a>在 Microsoft Intune 獨立部署與使用 System Center Configuration Manager 的混合式行動裝置管理之間進行選擇
+# <a name="choose-between-microsoft-intune-standalone-and-hybrid-mobile-device-management-with-system-center-configuration-manager"></a>在 Microsoft Intune 独立版与使用 System Center Configuration Manager 实现的混合移动设备管理之间做出选择
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-使用 Microsoft Intune 進行行動裝置管理 (MDM) 時，最常詢問的其中一個問題就是：「我應該整合 Intune 和 Configuration Manager (混合式 MDM)，還是在僅限雲端的設定中執行 Intune 獨立部署？」 若要回答此問題，您應該仔細比較這兩個選項。
+有关使用 Microsoft Intune 进行移动设备管理 (MDM) 的最常见问题之一是“应该将 Intune 与 Configuration Manager（混合 MDM）进行集成还是应该在只涉及云的配置中运行 Intune 独立版本？” 要回答这个问题，应仔细比较两个选项。
 
-## <a name="intune-standalone"></a>Intune 獨立部署
-Intune 獨立部署是 Microsoft 建議的部署拓撲。 Intune 獨立部署是僅限雲端的 MDM 解決方案，可透過可從世界各地存取的 Web 主控台來進行管理。 北美洲、歐洲和亞洲都有託管的 Intune Datacenter。 因為 Intune 是雲端服務，所以您可以在相對較短的時間範圍內將 Intune 管理部署到您的裝置。
+## <a name="intune-standalone"></a>Intune 独立版
+Intune 独立版是 Microsoft 推荐的部署拓扑。 Intune 独立版是仅涉及云的 MDM 解决方案，并使用可从全世界任意位置访问的 Web 控制台进行管理。 Intune 数据中心托管于北美、欧洲和亚洲。 由于 Intune 是云服务，因此可在较短时间范围内将 Intune 管理部署到设备。
 
-客戶通常會發現部署獨立拓撲更為快速且輕鬆，因為沒有內部部署元件的相依性。 Intune 獨立部署現在已在 Microsoft Azure 雲端平台上，且提供如下的多種進階功能：
-- 整合的企業行動管理平台：Azure 入口網站中的整合雲端平台與系統管理體驗，可用於 Intune、Azure AD Premium 與 Azure 資訊保護。
-- 行動裝置管理：眾多的行動裝置管理與資訊保護功能。
-- 彈性規模：部署與管理行動裝置，而不需要擔心規模的問題。
-- 角色型存取控制：根據指派的角色與範圍來限制系統管理功能的存取。
-- 以程式設計方式存取 (API)：支援 Microsoft Graph API，以及 SDK 和 PowerShell 管理選項。
-- Web 主控台：依 Web 標準打造的 HTML 5 主控台，可支援大多數的新式網頁瀏覽器。
-- 進階報告：可建立自訂報告的功能。
-- 靈活性：安裝簡單，且能快速傳遞新功能。
-
-
-## <a name="hybrid-mdm-with-configuration-manager"></a>搭配 Configuration Manager 的混合式 MDM
-混合式 MDM 是將 Intune 行動裝置管理功能整合至 Configuration Manager 的解決方案。 它使用 Intune 作為將原則、設定檔和應用程式傳遞至裝置的傳遞通道，但使用 Configuration Manager 內部部署基礎結構來管理內容與裝置。 混合式實作提供了「單一整合窗口」控制功能。  這表示您可以使用相同的內部部署基礎結構和系統管理主控台透過 Intune 來管理行動裝置，以及透過傳統 Configuration Manager 用戶端來管理電腦和伺服器。 基於如下原因，可選擇混合式 MDM：  
-- 您想要藉由相同的系統管理主控台，以管理在 Intune 中註冊的行動裝置，以及使用 Configuration Manager 用戶端管理的裝置
-- 您的基礎結構需要有多部 NDES 伺服器，以便將憑證傳遞到行動裝置
-- 您的基礎結構需要有多個 Exchange 連接器
-- 您需要 S/MIME 加密支援
+客户通常会发现它可以更快、更轻松地部署独立拓扑，因为没有本地组件的依赖项。 Intune 独立版现在位于 Microsoft Azure 云平台上，并提供许多高级功能，例如：
+- 集成式企业移动性管理平台 - 一款集成式云平台，并提供面向 Intune、 Azure AD Premium 和 Azure 信息保护的 Azure 门户的管理体验。
+- 移动设备管理 - 丰富的移动设备管理和信息保护功能。
+- 规模 - 部署和管理移动设备，而无需担心规模。
+- 基于角色的访问控制 - 基于分配的角色和范围限制对管理功能的访问。
+- 编程访问 (API) – Microsoft Graph API 支持、SDK 和 PowerShell 管理选项。
+- Web 控制台 - 基于 HTML 5 的控制台，以 Web 标准构建而成，支持大多数现代 Web 浏览器。
+- 高级报表 - 能够创建自定义报表。
+- 灵活性 - 简单安装和快速传递新功能。
 
 
-## <a name="changing-the-mdm-authority-setting"></a>變更 MDM 授權單位設定
-若需要變更 MDM 授權單位設定，不需要連絡 Microsoft 支援服務，也不需要將現有受管理裝置解除註冊並重新註冊，便可以自行變更。 如需詳細資訊，請參閱[變更您的 MDM 授權單位](../deploy-use/change-mdm-authority.md)。
+## <a name="hybrid-mdm-with-configuration-manager"></a>使用 Configuration Manager 的混合 MDM
+混合 MDM 是一种解决方案，可将 Intune 的移动设备管理功能集成到 Configuration Manager。 它将 Intune 用作策略、配置文件和应用程序到设备的传递通道，但将 Configuration Manager 本地基础结构用于管理内容以及管理设备。 混合实现提供“单一管理平台”控制。  这意味着可使用同一本地基础结构和管理控制台来管理具有 Intune 的移动设备，以及具有传统 Configuration Manager 客户端的电脑和服务器。 出于以下原因，可以选择混合 MDM：  
+- 想要从相同的管理控制台管理 Intune 中注册的移动设备以及使用 Configuration Manager 客户端托管的设备
+- 基础结构要求具备多个 NDES 服务器以便将证书传递到移动设备
+- 基础结构要求具备多个 Exchange 连接器
+- 需要 S/MIME 加密支持
+
+
+## <a name="changing-the-mdm-authority-setting"></a>更改 MDM 机构设置
+如果需要更改 MDM 机构设置，可以自行更改而无需联系 Microsoft 支持部门，也无需取消注册并重新注册现有的托管设备。 有关详细信息，请参阅[更改 MDM 机构](../deploy-use/change-mdm-authority.md)。
 
 > [!NOTE]    
-> 您必須要有 Configuration Manager 1610 版或更新的版本，才能將 MDM 授權單位變更為 Intune 獨立部署。 若是使用先前版本的 Configuration Manager，仍然可以變更 MDM 授權單位，但是需要 Microsoft 支援服務與作業的協助。 同時您也需要在變更 MDM 授權單位之後，解除註冊並重新註冊所有的裝置。  
+> 必须具有 Configuration Manager 1610 或更高版本，才可将 MDM 机构更改为 Intune 独立版。 在具有较早版本的 Configuration Manager 时，可以更改 MDM 机构，但它需要 Microsoft 支持和操作的帮助。 它还要求用户取消注册，并在更改 MDM 机构后重新注册所有设备。  

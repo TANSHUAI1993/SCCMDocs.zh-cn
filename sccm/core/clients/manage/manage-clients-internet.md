@@ -1,6 +1,6 @@
 ---
-title: "管理網際網路上的用戶端 - Configuration Manager | Microsoft Docs"
-description: "了解如何在 Configuration Manager 中使用雲端管理閘道和以網際網路為基礎的用戶端管理來管理用戶端。"
+title: "在 Internet 上管理客户端 - Configuration Manager | Microsoft Docs"
+description: "了解如何通过云管理网关和 Configuration Manager 中的基于 Internet 的客户端管理来管理客户端。"
 ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -11,61 +11,61 @@ manager: angrobe
 ms.openlocfilehash: 1b6752be448e1062c97a3225db4fa8af9f4832a6
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="manage-clients-on-the-internet-with-configuration-manager"></a>使用 Configuration Manager 管理網際網路上的用戶端
+# <a name="manage-clients-on-the-internet-with-configuration-manager"></a>在 Internet 上使用 Configuration Manager 管理客户端
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-一般來說，在 Configuration Manager 中，大部分受管理的電腦和伺服器實際上是與站台系統伺服器 (用以執行管理功能) 位於相同的內部私人網路或公司網路上。 不過，如果公司網路外部的用戶端電腦是連接網際網路，且用戶端不需透過虛擬私人網路連接站台系統伺服器，您即可管理這些用戶端電腦。
+通常，Configuration Manager 中受管理的多数计算机和服务器与执行管理功能的站点系统服务器物理上位于同一内部专用或公司网络中。 但如果客户端计算机连接到了 Internet，则可在公司网络外部对其进行管理，无需通过虚拟专用网络连接客户端，到达站点系统服务器。
 
-Configuration Manager 提供下列兩種方式來管理連接網際網路的用戶端：
+Configuration Manager 提供两种方法来管理连接了 Internet 的客户端：
 
--   雲端管理閘道
+-   云管理网关
 
--   以網際網路為基礎的用戶端管理
+-   基于 Internet 的客户端管理
 
-## <a name="cloud-management-gateway"></a>雲端管理閘道
+## <a name="cloud-management-gateway"></a>云管理网关
 
-自 Configuration Manager 1610 版起，已導入雲端管理閘道。 這個新方法可使用部署到 Microsoft Azure 的雲端服務以及與該服務進行通訊的新站台系統角色組合，來管理以網際網路為基礎的用戶端。 用戶端即可使用服務來與 Configuration Manager 進行通訊。
+从 1610 版本起，Configuration Manager 引入了云管理网关。 通过这一新方法可结合使用部署到 Microsoft Azure 的云服务和与该服务通信的新站点系统角色来管理基于 Internet 的客户端。 然后客户端可使用该服务与 Configuration Manager 通信。
 
-優點：
+优点：
 
--   不需任何額外的基礎結構投資。
+-   无需额外的基础结构投资。
 
--   不會將內部部署基礎結構公開至網際網路。
+-   不会将本地基础结构公开至 Internet。
 
--   執行服務的雲端虛擬機器完全受 Azure 的管理，而且不需要維護。
+-   运行服务的云虚拟机由 Azure 完全管理且免维护。
 
--   可在 Configuration Manager 主控台中輕鬆進行設定。
+-   可轻松在 Configuration Manager 控制台中进行设置和配置。
 
-缺點：
+缺点：
 
--   雲端訂閱成本。
+-   云订阅费用。
 
--   會透過雲端服務傳送管理資料。
+-   通过云服务发送的管理数据。
 
-如需詳細資訊，請參閱[規劃雲端管理閘道](plan-cloud-management-gateway.md)。
+有关详细信息，请参阅[规划云管理网关](plan-cloud-management-gateway.md)。
 
-## <a name="internet-based-client-management"></a>以網際網路為基礎的用戶端管理
+## <a name="internet-based-client-management"></a>基于 Internet 的客户端管理
 
-這個方法需仰賴連結網際網路的站台系統伺服器 (用戶端與其進行通訊) 以進行管理。 您必須針對用戶端和站台系統伺服器進行相關設定，才能使用這個方法執行以網際網路為基礎的管理。
+此方法依赖于面向 Internet 的站点系统服务器，为了进行管理，客户端会与该服务器通信。 此方法要求配置客户端和站点系统服务器，实现基于 Internet 的管理。
 
-優點：
+优点：
 
--   無任何雲端服務相依性。
+-   无云服务依赖关系。
 
--   無任何雲端訂閱的額外相關成本。
+-   无与云订阅关联的费用。
 
--   可完整控制提供服務的伺服器和角色。
+-   可完全控制提供服务的服务器和角色。
 
-缺點：
+缺点：
 
--   需要額外的基礎結構投資。
+-   需要额外的基础结构投资。
 
--   額外基礎結構會造成其他負荷和營運成本。
+-   额外基础结构的日常管理费用和运营费用。
 
--   基礎結構必須公開到網際網路。
+-   必须向 Internet 公开基础结构。
 
-如需詳細資訊，請參閱[規劃以網際網路為基礎的用戶端管理](plan-internet-based-client-management.md)。
+有关详细信息，请参阅[规划基于 Internet 的客户端管理](plan-internet-based-client-management.md)。

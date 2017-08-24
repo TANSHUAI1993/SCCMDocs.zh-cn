@@ -1,5 +1,5 @@
 ---
-title: "探索方法 | Microsoft Docs"
+title: "发现方法 | Microsoft Docs"
 ms.custom: na
 ms.date: 07/31/2017
 ms.prod: configuration-manager
@@ -16,181 +16,181 @@ manager: angrobe
 ms.openlocfilehash: 442e5e1fbddd00248819a8de79adc78929474fc0
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="about-discovery-methods-for-system-center-configuration-manager"></a>關於 System Center Configuration Manager 的探索方法
+# <a name="about-discovery-methods-for-system-center-configuration-manager"></a>有关 System Center Configuration Manager 的发现方法
 
-*適用對象：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager 探索方法可以找到網路上的不同裝置，或從 Active Directory 找到找到裝置和使用者。 若要有效利用探索方法，您應該了解其可用的設定和限制。  
+System Center Configuration Manager 发现方法可以在网络上找到不同设备，或从 Active Directory 找到设备和用户。 若要有效地使用发现方法，应了解及其可用配置和限制。  
 
-##  <a name="bkmk_aboutForest"></a> Active Directory 樹系探索  
- **可設定︰**是  
+##  <a name="bkmk_aboutForest"></a> Active Directory 林发现  
+ **可配置：**是  
 
- **預設為啟用：**否  
+ **默认启用：**否  
 
- 可用來執行這個方法的**帳戶**︰  
+ 可用于运行此方法的**帐户**：  
 
--   **Active Directory 樹系探索帳戶** (使用者定義)  
+-   **Active Directory 林发现帐户**（用户定义）  
 
--   站台伺服器的**電腦帳戶**  
+-   站点服务器的**计算机帐户**  
 
-與其他 Active Directory 探索方法不同，Active Directory 樹系探索不會探索您可管理的資源。 相反地，此方法會探索在 Active Directory 設定的網路位置，並可將這些位置轉換成可在階層中使用的界限。  
+与其他 Active Directory 发现方法不同，Active Directory 林发现不会发现可管理的资源。 而会发现 Active Directory 中配置的网络位置，并可将这些位置转换为边界，供在整个层次结构中使用。  
 
-這個方法執行時會搜尋本機 Active Directory 樹系、每個信任的樹系，以及每個您在 Configuration Manager 主控台 **Active Directory 樹系**節點設定的其他樹系。  
+此方法运行时，它会搜索本地 Active Directory 林、每个受信任的林以及在 Configuration Manager 控制台的“Active Directory 林”节点中配置的所有其他林。  
 
-使用 Active Directory 樹系探索，以：  
+借助 Active Directory 林发现，可：  
 
--   探索 Active Directory 站台和子網路，然後根據這些網路位置建立 Configuration Manager 界限。  
+-   发现 Active Directory 站点和子网，然后基于这些网络位置创建 Configuration Manager 边界。  
 
--   識別已指派給 Active Directory 站台的超網路，並將每個超網路轉換成 IP 位址範圍界限。  
+-   标识分配到 Active Directory 站点的超网，并将每个超网转换为 IP 地址范围边界。  
 
--   在允許發佈到樹系，而且指定的 Active Directory 樹系帳戶具有該樹系的權限時，發佈至樹系的 Active Directory Domain Services (AD DS)。  
+-   当启用“发布到林”并且指定的 Active Directory 林帐户具有该林的权限时，则发布到该林中的 Active Directory 域服务 (AD DS)。  
 
-從 [管理] 工作區之 [階層設定] 中的下列節點，管理 Configuration Manager 主控台中的 Active Directory 樹系探索：  
+可以从以下节点在 Configuration Manager 控制台中管理 Active Directory 林发现，这些节点位于“管理”工作区的“层次结构配置”下：  
 
--   **探索方法**：您可以在此啟用 Active Directory 樹系探索，使其在階層中的頂層站台上執行。 您也可以指定簡易排程來執行探索，並設定為自動從其探索的 IP 子網路和 Active Directory 站台建立界限。 Active Directory 樹系探索無法在子主要站台或次要站台上執行。  
+-   **发现方法**：你可在此处启用 Active Directory 林发现以在层次结构的顶层站点上运行。 你也可以指定一个简单的计划来运行发现，并将其配置为依据所发现的 IP 子网和 Active Directory 站点自动创建边界。 Active Directory 林发现无法在子主站点或辅助站点上运行。  
 
--   **Active Directory 樹系**：您可以在此設定要探索的其他 Active Directory 樹系、為每個樹系指定要作為 Active Directory 樹系帳戶的帳戶，並設定發佈至每個樹系。 此外，您還可以監視探索程序，將 IP 子網路和 Active Directory 站台新增至 Configuration Manager 作為界限及界限群組的成員。  
+-   **Active Directory 林**：在此处配置要发现的其他 Active Directory 林，为每个林指定要用作 Active Directory 林帐户的帐户，并配置针对每个林的发布。 此外，可以监视发现过程，并将 IP 子网和 Active Directory 站点作为边界和边界组的成员添加到 Configuration Manager。  
 
-若要設定將階層中每個站台發佈至 Active Directory 樹系，請將您的 Configuration Manager 主控台連線至階層的頂層站台。 Active Directory 站台 [內容] 對話方塊中的 [發佈] 索引標籤只能顯示目前的站台及其子站台。 在允許發佈到數系，而且已經為 Configuration Manager 延伸該樹系的架構時，就會為允許發佈至該 Active Directory 樹系的每個站台發佈下列資訊：  
+要为层次结构中的每个站点配置 Active Directory 林发布，请将 Configuration Manager 控制台连接到层次结构的顶层站点。 Active Directory 站点的“属性”对话框中的“发布”选项卡只能显示当前站点及其子站点。 如果针对某个林启用了发布，并且为 Configuration Manager 扩展了该林的架构，则会为已启用以发布到该 Active Directory 林的每个站点发布下列信息：  
 
--    **SMS-Site-&lt;站台碼>**
+-    **SMS-Site-&lt;site code>**
 
--   **SMS-MP-&lt;站台碼>-&lt;站台系統伺服器名稱>**  
+-   **SMS-MP-&lt;site code>-&lt;site system server name>**  
 
--   **SMS-SLP-&lt;站台碼>-&lt;站台系統伺服器名稱>**  
+-   **SMS-SLP-&lt;site code>-&lt;site system server name>**  
 
--   **SMS-&lt;站台碼>-&lt;Active Directory 站台名稱或子網路>**  
-
-> [!NOTE]  
->  次要網站一律使用次要網站伺服器電腦帳戶發佈至 Active Directory。 如果您要由次要站台發佈至 Active Directory，請確定次要站台伺服器電腦具備發佈至 Active Directory 的權限。 次要站台無法將資料發佈至不信任的樹系。  
-
-> [!CAUTION]  
->  取消選取選項以將站台發佈至 Active Directory 樹系時，該站台先前發佈的所有資訊，包括可用的站台系統角色，都會 Active Directory 中移除。  
-
-Active Directory 樹系探索動作會記錄在下列記錄中：  
-
--   所有動作 (但不包括與發佈相關的動作) 都會記錄在站台伺服器上 **&lt;安裝路徑>\Logs** 資料夾的 **ADForestDisc.Log** 檔案中。  
-
--   Active Directory 樹系探索的發佈活動會記錄在站台伺服器 **&lt;安裝路徑>\Logs** 資料夾的 **hman.log** 和 **sitecomp.log** 檔案中。  
-
-如需如何設定此探索方法的詳細資訊，請參閱 [Configure discovery methods for System Center Configuration Manager](../../../../core/servers/deploy/configure/configure-discovery-methods.md) (設定 System Center Configuration Manager 的探索方法)。  
-
-##  <a name="bkmk_aboutGroup"></a> Active Directory 群組探索  
-**可設定︰**是  
-
-**預設為啟用：**否  
-
-可用來執行這個方法的**帳戶**︰  
-
--   **Active Directory 群組探索帳戶** (使用者定義)  
-
--   站台伺服器的**電腦帳戶**  
-
-> [!TIP]  
->  除了本節中的資訊，請參閱 [Common features of Active Directory Group, System, and User Discovery](#bkmk_shared) (Active Directory 群組、系統和使用者探索的通用功能)。  
-
-使用此方法搜尋 Active Directory Domain Services，以識別︰  
-
--   本機、全域和萬用安全性群組。  
-
--   群組的成員資格。  
-
--   群組成員電腦與使用者的有限資訊，即使另一個探索方法先前未探索到這些電腦與使用者亦然。  
-
-此探索方法的目的在於識別群組以及群組成員的群組關係。 根據預設，僅會探索安全性群組。 如果您也想找到發佈群組的成員資格，就必須在 [Active Directory 群組探索內容] 對話方塊的 [選項] 索引標籤上選取 [探索發佈群組的成員資格] 選項方塊。  
-
-Active Directory 群組探索不支援可使用 Active Directory 系統探索或 Active Directory 使用者探索識別的延伸 Active Directory 屬性。 由於此探索方法尚未最佳化以探索電腦和使用者資源，請考慮在執行 Active Directory 系統探索和 Active Directory 使用者探索之後執行此探索方法。 這是因為此方法會為群組建立完整的探索資料記錄 (DDR)，但身為群組成員的電腦和使用者只能獲得有限的 DDR。  
-
-您可以設定下列探索範圍以控制此方法搜尋資訊的方式：  
-
--   **位置**：請使用位置來搜尋一個或多個 Active Directory 容器。 此範圍選項支援指定的 Active Directory 容器的遞迴式搜尋，同時可搜尋所指定容器下的每個子容器。 此程序會繼續執行，直到找不到任何子容器為止。  
-
--   **群組**：請使用群組來搜尋一個或多個特定 Active Directory 群組。 您可以將 [Active Directory 網域] 設定為使用預設網域和樹系，或縮小個別網域控制站的搜尋範圍。 此外，您還可以指定一個或多個要搜尋的群組。 如果您未指定至少一個群組，則會搜尋在指定的 [Active Directory 網域]  位置中找到的所有群組。  
-
-> [!CAUTION]  
->  當您設定探索範圍時，請僅選擇您必須探索的群組。 這是因為 Active Directory 群組探索會嘗試探索該範圍中每個群組的每個成員。 大型群組的探索會需要使用大量的頻寬和 Active Directory 資源。  
+-   **SMS-&lt;site code>-&lt;Active Directory site name or subnet>**  
 
 > [!NOTE]  
->  您必須先執行 Active Directory 系統探索或 Active Directory 使用者探索，視想要探索的內容而定，才能建立以延伸 Active Directory 屬性為基礎的集合 (並確保電腦和使用者的探索結果正確無誤)。  
+>  辅助站点始终使用辅助站点服务器计算机帐户来发布到 Active Directory。 如果希望辅助站点发布到 Active Directory，则请确保辅助站点服务器计算机帐户具有发布到 Active Directory 的权限。 辅助站点无法将数据发布到不受信任的林。  
 
-Active Directory 群組探索動作會記錄在站台伺服器 **&lt;裝路徑\>\LOGS** 資料夾的 **adsgdis.log** 檔案中。  
+> [!CAUTION]  
+>  如果取消选中将站点发布到 Active Directory 林的选项，则会从 Active Directory 中删除之前为该站点发布的信息，其中包括可用站点系统角色。  
 
-如需如何設定此探索方法的詳細資訊，請參閱 [Configure discovery methods for System Center Configuration Manager](../../../../core/servers/deploy/configure/configure-discovery-methods.md) (設定 System Center Configuration Manager 的探索方法)。  
+Active Directory 林发现操作记录在下列日志中：  
 
-##  <a name="bkmk_aboutSystem"></a> Active Directory 系統探索  
-**可設定︰**是  
+-   站点服务器上的 **&lt;InstallationPath>\Logs** 文件夹内的 **ADForestDisc.Log** 文件中记录了除与发布相关的操作之外的所有操作。  
 
-**預設為啟用：**否  
+-   站点服务器上的 **&lt;InstallationPath>\Logs** 文件夹内的 **hman.log** 和 **sitecomp.log** 文件中记录了 Active Directory 林发现发布操作。  
 
-可用來執行這個方法的**帳戶**︰  
+有关如何配置此发现方法的详细信息，请参阅[为 System Center Configuration Manager 配置发现方法](../../../../core/servers/deploy/configure/configure-discovery-methods.md)。  
 
--   **Active Directory 系統探索帳戶** (使用者定義)  
+##  <a name="bkmk_aboutGroup"></a> Active Directory 组发现  
+**可配置：**是  
 
--   站台伺服器的**電腦帳戶**  
+**默认启用：**否  
 
-> [!TIP]  
->  除了本節中的資訊，請參閱 [Common features of Active Directory Group, System, and User Discovery](#bkmk_shared) (Active Directory 群組、系統和使用者探索的通用功能)。  
+可用于运行此方法的**帐户**：  
 
-使用此探索方法來搜尋指定的 Active Directory Domain Services 位置，以尋找可用來建立集合與查詢的電腦資源。 您也可以使用用戶端推入安裝，將 Configuration Manager 用戶端安裝在探索到的裝置上。  
+-   **Active Directory 组发现帐户**（用户定义）  
 
-根據預設，此方法會探索與電腦相關的基本資訊，包括下列項目：  
-
--   電腦名稱  
-
--   作業系統和版本  
-
--   Active Directory 容器名稱  
-
--   IP 位址  
-
--   Active Directory 站台  
-
--   上次登入時間戳記  
-
-若要成功建立電腦的 DDR，Active Directory 系統探索必須能夠識別電腦帳戶，然後成功將電腦名稱解析為 IP 位址。  
-
-您可以在 [Active Directory 屬性] 索引標籤的 [Active Directory 系統探索內容] 對話方塊中，檢視 Active Directory 系統探索傳回的預設物件屬性完整清單。 您也可以設定方法以探索額外 (擴充) 的屬性。  
-
-Active Directory 系統探索動作會記錄在站台伺服器 **&lt;裝路徑\>\LOGS** 資料夾的 **adsysdis.log** 檔案中。  
-
-如需如何設定此探索方法的詳細資訊，請參閱 [Configure discovery methods for System Center Configuration Manager](../../../../core/servers/deploy/configure/configure-discovery-methods.md) (設定 System Center Configuration Manager 的探索方法)。  
-
-##  <a name="bkmk_aboutUser"></a> Active Directory 使用者探索  
-**可設定︰**是  
-
-**預設為啟用：**否  
-
-可用來執行這個方法的**帳戶**︰  
-
--   **Active Directory 使用者探索帳戶** (使用者定義)  
-
--   站台伺服器的**電腦帳戶**  
+-   站点服务器的**计算机帐户**  
 
 > [!TIP]  
->  除了本節中的資訊，請參閱 [Common features of Active Directory Group, System, and User Discovery](#bkmk_shared) (Active Directory 群組、系統和使用者探索的通用功能)。  
+>  有关除本部分外的其他信息，请参阅 [Active Directory 组、系统和用户发现的常见功能](#bkmk_shared)。  
 
-使用此探索方法來搜尋 Active Directory Domain Services，以識別使用者帳戶和相關屬性。 根據預設，此方法會探索與使用者帳戶相關的基本資訊，包括下列項目：  
+使用此方法搜索 Active Directory 域服务以识别：  
 
--   使用者名稱  
+-   本地、全局和通用安全组。  
 
--   唯一的使用者名稱 (包括網域名稱)  
+-   组的成员身份。  
+
+-   有关组的成员计算机和用户的有限信息（即使这些计算机和用户以前未被另一种发现方法发现过）。  
+
+此发现方法用于确定组和组成员的组关系。 默认情况下，只会发现安全组。 如果还想要找到分发组的成员身份，则必须在“Active Directory 组发现属性”对话框中的“选项”选项卡上，选中“发现分发组的成员身份”选项的复选框。  
+
+Active Directory 组发现不支持可通过使用 Active Directory 系统发现或 Active Directory 用户发现确定的扩展 Active Directory 属性。 由于此发现方法未经过优化，无法发现计算机和用户资源，因此请考虑在运行 Active Directory 系统发现和 Active Directory 用户发现之后运行此发现方法。 这是因为此方法会为组创建完整的发现数据记录 (DDR)，但只会为作为组成员的计算机和用户创建有限的 DDR。  
+
+可以配置下列发现作用域，控制此方法搜索信息的方式：  
+
+-   **位置**：如果要搜索一个或多个 Active Directory 容器，请使用位置。 此作用域选项支持对指定的 Active Directory 容器进行递归搜索，该搜索还会搜索指定容器下的每个子容器。 此过程将继续，直至找不到其他子容器为止。  
+
+-   **组**：如果要搜索一个或多个特定 Active Directory 组，请使用组。 可以配置“Active Directory 域”以使用默认域和林，或将搜索范围限制为单独的域控制器。 此外，你可以指定要搜索的一个或多个组。 如果未指定至少一个组，则会搜索在指定“Active Directory 域”  位置中找到的所有组。  
+
+> [!CAUTION]  
+>  在配置发现作用域时，请仅选择必须发现的组。 这是因为 Active Directory 组发现会尝试发现发现作用域中每个组的每个成员。 大组的发现可能需要使用大量的带宽和 Active Directory 资源。  
+
+> [!NOTE]  
+>  必须先运行 Active Directory 系统发现或 Active Directory 用户发现（具体取决于想要发现的内容），然后才可创建基于扩展 Active Directory 属性的集合并确保计算机和用户的发现结果准确。  
+
+站点服务器上 **&lt;InstallationPath\>\LOGS** 文件夹内的 **adsgdis.log** 文件中记录了 Active Directory 组发现操作。  
+
+有关如何配置此发现方法的详细信息，请参阅[为 System Center Configuration Manager 配置发现方法](../../../../core/servers/deploy/configure/configure-discovery-methods.md)。  
+
+##  <a name="bkmk_aboutSystem"></a> Active Directory 系统发现  
+**可配置：**是  
+
+**默认启用：**否  
+
+可用于运行此方法的**帐户**：  
+
+-   **Active Directory 系统发现帐户**（用户定义）  
+
+-   站点服务器的**计算机帐户**  
+
+> [!TIP]  
+>  有关除本部分外的其他信息，请参阅 [Active Directory 组、系统和用户发现的常见功能](#bkmk_shared)。  
+
+使用此发现方法在指定的 Active Directory 域服务位置中搜索可用于创建集合和查询的计算机资源。 还可以使用客户端请求安装在已发现设备上安装 Configuration Manager 客户端。  
+
+默认情况下，此方法将发现有关计算机的基本信息，其中包括：  
+
+-   计算机名称  
+
+-   操作系统和版本  
+
+-   Active Directory 容器名称  
+
+-   IP 地址  
+
+-   Active Directory 站点  
+
+-   上次登录的时间戳  
+
+若要成功创建计算机的 DDR，Active Directory 系统发现则必须能够识别计算机帐户，然后成功地将计算机名称解析为 IP 地址。  
+
+在“Active Directory 系统发现属性”对话框中的“Active Directory 属性”选项上，可查看 Active Directory 系统发现已返回的默认对象属性的完整列表。 还可配置方法来发现其他（扩展）属性。  
+
+站点服务器上 **&lt;InstallationPath\>\LOGS** 文件夹内的 **adsysdis.log** 文件中记录了 Active Directory 系统发现操作。  
+
+有关如何配置此发现方法的详细信息，请参阅[为 System Center Configuration Manager 配置发现方法](../../../../core/servers/deploy/configure/configure-discovery-methods.md)。  
+
+##  <a name="bkmk_aboutUser"></a> Active Directory 用户发现  
+**可配置：**是  
+
+**默认启用：**否  
+
+可用于运行此方法的**帐户**：  
+
+-   **Active Directory 用户发现帐户**（用户定义）  
+
+-   站点服务器的**计算机帐户**  
+
+> [!TIP]  
+>  有关除本部分外的其他信息，请参阅 [Active Directory 组、系统和用户发现的常见功能](#bkmk_shared)。  
+
+使用此发现方法搜索 Active Directory 域服务，以确定用户帐户和关联属性。 默认情况下，此方法将发现有关用户帐户的基本信息，其中包括：  
+
+-   用户名  
+
+-   唯一用户名（包括域名）  
 
 -   Domain  
 
--   Active Directory 容器名稱  
+-   Active Directory 容器名称  
 
-您可以在 [Active Directory 屬性] 索引標籤的 [Active Directory 使用者探索內容] 對話方塊中，檢視 Active Directory 使用者探索傳回的預設物件屬性完整清單。 您也可以設定方法以探索額外 (擴充) 的屬性。
+在“Active Directory 用户发现属性”对话框中的“Active Directory 属性”选项卡上，可查看 Active Directory 用户发现所返回的默认对象属性的完整列表。 还可配置方法来发现其他（扩展）属性。
 
-Active Directory 使用者探索動作會記錄在站台伺服器 **&lt;安裝路徑\>\LOGS** 資料夾的 **adusrdis.log** 檔案中。  
+站点服务器上 **&lt;InstallationPath\>\LOGS** 文件夹内的 **adusrdis.log** 文件中记录了 Active Directory 用户发现操作。  
 
-如需如何設定此探索方法的詳細資訊，請參閱 [Configure discovery methods for System Center Configuration Manager](../../../../core/servers/deploy/configure/configure-discovery-methods.md) (設定 System Center Configuration Manager 的探索方法)。  
+有关如何配置此发现方法的详细信息，请参阅[为 System Center Configuration Manager 配置发现方法](../../../../core/servers/deploy/configure/configure-discovery-methods.md)。  
 
-## <a name="azureaddisc"></a> Azure Active Directory 使用者探索
-從 1706 版開始，在您設定環境以使用 Azure 服務時，將可以使用 Azure Active Directory (Azure AD) 使用者探索。
-在您的 Azure AD 中使用此探索方法來搜尋向 Azure AD 執行個體驗證的使用者，以尋找下列屬性：  
+## <a name="azureaddisc"></a>Azure Active Directory 用户发现
+从版本 1706 开始，在将环境配置为使用 Azure 服务时，可以使用 Azure Active Directory (Azure AD) 用户发现。
+使用此发现方法在 Azure AD 中搜索对 Azure AD 实例进行身份验证的用户，以查找以下属性：  
 -   objectId
 -   displayName
 -   mail
@@ -199,327 +199,327 @@ Active Directory 使用者探索動作會記錄在站台伺服器 **&lt;安裝�
 -   userPrincipalName
 -   AAD tenantID
 
-此方法支援針對來自 Azure AD 的使用者資料進行完整同步處理和差異同步處理。 此資訊接著可搭配您透過其他探索方法所收集到的探索資料使用。
+此方法支持对 Azure AD 中用户数据的完全同步和增量同步。 然后可以将此信息与从其他发现方法收集的发现数据一起使用。
 
-Azure AD 使用者探索的動作，會記錄在位於階層頂層站台伺服器上的 SMS_AZUREAD_DISCOVERY_AGENT.log 檔案之中。
+Azure AD 用户发现的操作记录在层次结构顶层站点服务器上的 SMS_AZUREAD_DISCOVERY_AGENT.log 文件中。
 
-若要設定 Azure AD 使用者探索，請使用 Azure 服務精靈。  如需有關如何設定此探索方法的相關資訊，請參閱[設定 Azure AD 使用者探索](/sccm/core/servers/deploy/configure/configure-discovery-methods)。
-
-
+要配置 Azure AD 用户发现，请使用 Azure 服务向导。  有关如何配置此发现方法的详细信息，请参阅[配置 Azure AD 用户发现](/sccm/core/servers/deploy/configure/configure-discovery-methods)。
 
 
 
-##  <a name="bkmk_aboutHeartbeat"></a> 活動訊號探索  
-**可設定︰**是  
 
-**預設已啟用：**是  
 
-可用來執行這個方法的**帳戶**︰  
+##  <a name="bkmk_aboutHeartbeat"></a>检测信号发现  
+**可配置：**是  
 
--   站台伺服器的**電腦帳戶**  
+**默认启用：**是  
 
-活動訊號探索與其他 Configuration Manager 探索方法不同。 依預設會啟用此項，並在每個電腦用戶端 (而不是站台伺服器) 上執行，以建立 DDR。 若為行動裝置用戶端，則會由行動裝置用戶端正在使用的管理點來建立此 DDR。 為協助維護 Configuration Manager 用戶端的資料庫記錄，請勿停用活動訊號探索。 除維護資料庫記錄外，此方法可強制將電腦探索為新的資源記錄，或重新匯入已從資料庫刪除的電腦資料庫記錄。  
+可用于运行此方法的**帐户**：  
 
-活動訊號探索會依據對此階層中所有用戶端設定的排程執行，或如果手動叫用，則依據在用戶端 Configuration Manager 程式之 [動作] 索引標籤的 [探索資料收集週期] 在特定用戶端執行。 活動訊號探索的預設排程設定為每 7 天一次。 如果變更了活動訊號探索間隔，請確定執行的頻率比站台維護工作 [刪除過時探索資料] \(會從站台資料庫刪除非使用中用戶端的記錄 ) 來得更頻繁。 您只能針對主要站台設定 [刪除過時探索資料]  工作。  
+-   站点服务器的**计算机帐户**  
 
-當活動訊號探索執行時，會建立具有用戶端目前資訊的 DDR。 然後用戶端會將這個小檔案 (大小約 1 KB) 複製到管理點，以便主要站台加以處理。 此檔案具有下列資訊：  
+检测信号发现不同于其他 Configuration Manager 发现方法。 它默认为启用状态，并且在每个计算机客户端（而非站点服务器）上运行以创建 DDR。 对于移动设备客户端，移动设备客户端正在使用的管理点会创建此 DDR。 若要帮助维护 Configuration Manager 客户端的数据库记录，请不要禁用检测信号发现。 除了维护数据库记录，此方法能够以新资源记录形式强制进行计算机发现，或者可以重新填写从数据库中删除的计算机的数据库记录。  
 
--   網路位置  
+检测信号发现按照为层次结构中所有客户端配置的计划运行，或者（若手动调用）通过运行客户端 Configuration Manager 程序中“操作”选项卡上的“发现数据收集周期”，在特定客户端上运行。 检测信号发现的默认计划设置为每 7 天进行一次。 如果你更改检测信号发现间隔，请确保它比从站点数据库中删除非活动客户端记录的“删除过期的发现数据” 站点维护任务运行得更加频繁。 你可以仅为主站点配置“删除过期的发现数据”  任务。  
 
--   NetBIOS 名稱  
+运行检测信号发现时，它会创建具有客户端当前信息的 DDR。 然后，客户端将此大小约 1 KB 的小文件复制到管理点，使主站点可对其进行处理。 该文件包含以下信息：  
 
--   用戶端代理程式版本  
+-   网络位置  
 
--   操作狀態詳細資料  
+-   NetBIOS 名称  
 
-活動訊號探索是唯一提供用戶端安裝狀態詳細資訊的探索方法。 其執行作業的方法是更新系統資源用戶端屬性，設定等於 [是] 的值。  
+-   客户端代理版本  
 
-> [!NOTE]  
->  即使停用活動訊號探索，仍會建立 DDR，並針對作用中行動裝置用戶端提交。 這可確保 [刪除過時探索資料]  工作不會影響作用中行動裝置。 完成的原因是當 [刪除過時探索資料] 工作刪除行動裝置的資料庫記錄時，同時也會撤銷裝置憑證，並封鎖行動裝置，使其無法連線至管理點。  
+-   操作状态详细信息  
 
-活動訊號探索動作會記錄在以下位置：  
-
--   若為電腦用戶端，則會將活動訊號探索動作記錄在用戶端 *%Windir%\CCM\Logs* 資料夾的 **InventoryAgent.log** 檔案中。  
-
--   若為行動裝置用戶端，活動訊號探索動作則會記錄在行動裝置用戶端所使用管理點 *%Program Files%\CCM\Logs* 資料夾中的 **DMPRP.log** 檔案內。  
-
-如需如何設定此探索方法的詳細資訊，請參閱 [Configure discovery methods for System Center Configuration Manager](../../../../core/servers/deploy/configure/configure-discovery-methods.md) (設定 System Center Configuration Manager 的探索方法)。  
-
-##  <a name="bkmk_aboutNetwork"></a> 網路探索  
-**可設定︰**是  
-
-**預設為啟用：**否  
-
-可用來執行這個方法的**帳戶**︰  
-
--   站台伺服器的**電腦帳戶**  
-
-使用此方法探索網路拓撲，以及探索具有 IP 位址的網路裝置。 網路探索會藉由查詢執行 Microsoft 之 DHCP 實作、路由器中的位址解析通訊協定 (ARP) 快取、具備 SNMP 功能的裝置以及 Active Directory 網域的伺服器，來搜尋您的網路，找出啟用 IP 的資源。  
-
-使用網路探索之前，必須先指定執行探索的*層級*。 您也要設定可啟用網路探索來查詢網路區段或裝置的一個或多個探索機制。 您也可以設定能協助控制網路上探索動作的設定。 最後，您要定義網路探索執行的一或多個排程。  
-
-為了讓這個方法成功探索資源，網路探索必須找出資源的 IP 位址和子網路遮罩。 找出物件子網路遮罩的方法如下：  
-
--   **路由器 ARP 快取：**網路探索會查詢路由器的 ARP 快取，以尋找子網路資訊。 通常，路由器 ARP 快取中資料的存留時間都很短。 因此，當網路探索查詢 ARP 快取時，ARP 快取可能已不再具有所要求物件的資訊。  
-
--   **DHCP：**網路探索會查詢您指定要探索裝置的每部 DHCP 伺服器，以了解 DHCP 伺服器提供的使用期。 網路探索僅支援執行 Microsoft DHCP 實作的 DHCP 伺服器。  
-
--   **SNMP 裝置：**網路探索可以直接查詢 SNMP 裝置。 若要讓網路探索查詢裝置，該裝置必須安裝本機 SNMP 代理程式。 您還必須將網路探索設定為使用 SNMP 代理程式正在使用的群體名稱。  
-
-當探索辨識出可 IP 定址的物件，並可判斷物件子網路遮罩時，便會建立該物件的 DDR。 由於不同類型的裝置都可以連線到網路，因此網路探索可以探索出無法支援 Configuration Manager 用戶端軟體的資源。 例如，可以探索出但並不受管理的裝置，包括印表機和路由器。  
-
-網路探索可以傳回數種屬性，作為其建立之探索記錄的一部分。 它們包括：  
-
--   NetBIOS 名稱  
-
--   IP 位址  
-
--   資源網域  
-
--   系統角色  
-
--   SNMP 社群名稱  
-
--   MAC 位址  
-
-網路探索活動會記錄在執行探索的站台伺服器 *&lt;安裝路徑\>\Logs* 的 **Netdisc.log** 檔案中。  
-
- 如需如何設定此探索方法的詳細資訊，請參閱 [Configure discovery methods for System Center Configuration Manager](../../../../core/servers/deploy/configure/configure-discovery-methods.md) (設定 System Center Configuration Manager 的探索方法)。  
+检测信号发现是唯一提供有关客户端安装状态的详细信息的发现方法。 它通过更新系统资源客户端属性，以将某个值设置为“是”来实现此操作。  
 
 > [!NOTE]  
->  複雜網路和低頻寬的連線會導致網路探索執行速度緩慢，並產生明顯的網路流量。 最佳作法是只在其他探索方法無法找出您必須探索的資源時，才執行網路探索。 例如，若您必須探索工作群組電腦，就請使用網路探索。 其他探索方法不會探索工作群組電腦。  
+>  即使禁用检测信号发现，也仍然会针对活动的移动设备客户端来创建和提交 DDR。 这可以确保“删除过期的发现数据”  任务不影响活动的移动设备。 实现此操作的原因是，在“删除过期发现数据” 任务删除移动设备的数据库记录时，它还会吊销设备证书并阻止移动设备连接到管理点。  
 
-###  <a name="BKMK_NetDiscLevels"></a> 網路探索的層級  
-設定網路探索時，要從三個探索層級中指定一個：  
+检测信号发现操作记录在以下位置：  
 
-|探索的層級|詳細資料|  
+-   对于计算机客户端，检测信号发现操作记录在 %Windir%\CCM\Logs 文件夹内 **InventoryAgent.log** 文件中的客户端上。  
+
+-   对于移动设备客户端，检测信号发现操作记录在移动设备客户端使用的管理点的 %Program Files%\CCM\Logs 文件夹内的 **DMPRP.log** 文件中。  
+
+有关如何配置此发现方法的详细信息，请参阅[为 System Center Configuration Manager 配置发现方法](../../../../core/servers/deploy/configure/configure-discovery-methods.md)。  
+
+##  <a name="bkmk_aboutNetwork"></a>网络发现  
+**可配置：**是  
+
+**默认启用：**否  
+
+可用于运行此方法的**帐户**：  
+
+-   站点服务器的**计算机帐户**  
+
+使用此方法发现网络的拓扑，并在拥有 IP 地址的网络上发现设备。 网络发现通过查询运行 DHCP 的 Microsoft 实现的服务器、路由器中的地址解析协议 (ARP) 缓存、启用了 SNMP 的设备以及 Active Directory 域，在网络中搜索启用了 IP 的资源。  
+
+使用网络发现前，必须指定要运行的发现的*级别*。 你也需要配置一个或多个发现机制，以使网络发现能够查询网络段或设备。 你也可以配置有助于控制网络上的发现操作的设置。 最后，你可以定义网络发现运行的一个或多个计划。  
+
+为使此方法成功发现资源，网络发现必须识别资源的 IP 地址以及子网掩码。 使用以下方法来确定对象的子网掩码：  
+
+-   **路由器 ARP 缓存：**网络发现将查询路由器的 ARP 缓存来查找子网信息。 通常，路由器 ARP 缓存中的数据生存时间很短。 因此，当网络发现查询 ARP 缓存时，ARP 缓存可能不再包含有关所请求的对象的信息。  
+
+-   **DHCP：**网络发现查询指定的每个 DHCP 服务器，以发现 DHCP 服务器为其提供了租约的设备。 网络发现只支持运行 DHCP 的 Microsoft 实现的 DHCP 服务器。  
+
+-   **SNMP 设备：**网络发现可以直接查询 SNMP 设备。 设备必须安装本地 SNMP 代理，网络发现才能查询该设备。 还必须将网络发现配置为使用 SNMP 代理所使用的共同体名称。  
+
+当发现识别到可寻址 IP 的对象并且可以确定该对象的子网掩码时，它将为该对象创建 DDR。 由于可以将不同类型的设备连接到网络，因此网络发现可以发现无法支持 Configuration Manager 客户端软件的资源。 例如，可以发现但无法管理的设备包括打印机和路由器。  
+
+网络发现可以返回多个属性作为它所创建的发现记录的一部分。 其中包括:  
+
+-   NetBIOS 名称  
+
+-   IP 地址  
+
+-   资源域  
+
+-   系统角色  
+
+-   SNMP 社区名称  
+
+-   MAC 地址  
+
+网络发现活动记录在运行发现的站点服务器上的 &lt;InstallationPath\>\Logs 内的 **Netdisc.log** 文件中。  
+
+ 有关如何配置此发现方法的详细信息，请参阅[为 System Center Configuration Manager 配置发现方法](../../../../core/servers/deploy/configure/configure-discovery-methods.md)。  
+
+> [!NOTE]  
+>  复杂的网络和低带宽连接可能导致网络发现运行缓慢并生成大量的网络流量。 作为一种最佳方案，请仅在其他发现方法找不到你必须发现的资源时，才运行网络发现。 例如，你必须发现工作组计算机，则使用网络发现。 其他发现方法不发现工作组计算机。  
+
+###  <a name="BKMK_NetDiscLevels"></a>网络发现的级别  
+配置网络发现时，你可以指定以下三个发现级别之一：  
+
+|发现的级别|详细信息|  
 |------------------------|-------------|  
-|拓撲|此層級會探索路由器和子網路，但不會識別出物件的子網路遮罩。|  
-|拓撲和用戶端|除了拓撲外，此層級也會探索潛在用戶端 (如電腦) 和資源 (如印表機和路由器)。 此探索層級會嘗試識別出所找到物件的子網路遮罩。|  
-|拓撲、用戶端和用戶端作業系統|除了拓撲與潛在用戶端外，此層級也會嘗試探索電腦作業系統名稱和版本。 此層級會使用 Windows 瀏覽器和 Windows 網路功能呼叫。|  
+|拓扑|此级别发现路由器和子网，但不标识对象的子网掩码。|  
+|拓扑和客户端|除了拓扑之外，此级别还发现潜在的客户端（如计算机）以及如打印机和路由器等资源。 此级别的发现尝试识别它所发现的对象的子网掩码。|  
+|拓扑、客户端和客户端操作系统|除了拓扑和潜在客户端之外，此级别还尝试发现计算机操作系统名称和版本。 该级别使用 Windows 浏览器和 Windows 网络调用。|  
 
- 隨著層級遞增，網路探索也會隨之增加其活動和網路頻寬使用量。 請考量在您啟用網路探索所有面向前可能會產生的網路流量。  
+ 对于每个增量级别，网络发现会增加其活动的网络带宽使用量。 在启用网络发现的各个方面之前，请考虑可以生成的网络流量。  
 
- 例如，第一次使用網路探索時，您可能只會以拓撲層級來開始，以識別您的網路基礎結構。 接著，您可以重新設定網路探索，以探索出物件及其裝置作業系統。 您也可以進行設定，將網路探索限制在特定網路區段範圍內。 這樣一來，您就可以在需要的網路位置內探索物件，並避免不必要的網路流量，還可以從邊緣路由器或網路外部探索物件。  
+ 例如，在首次使用网络发现时，你可以仅从此拓扑级别开始标识网络基础结构。 然后，可以将网络发现重新配置为发现对象及其设备操作系统。 还可以通过配置设置，将网络发现限制在某个特定范围的网段内。 如此一来，就能在所需的网络位置中发现对象，从而避免不必要的网络流量，并且还可以从边缘路由器或网络外部发现对象。  
 
-###  <a name="BKMK_NetDiscOptions"></a> 網路探索選項  
-若要啟用網路探索來搜尋 IP 可定址的裝置，您必須設定一或多個可指定如何查詢裝置的下列選項。  
+###  <a name="BKMK_NetDiscOptions"></a>网络发现选项  
+要启用网络发现以搜索 IP 可寻址的设备，必须配置以下一个或多个选项以指定如何查询设备。  
 
 > [!NOTE]  
->  網路探索會在執行探索之站台伺服器的電腦帳戶內容中執行。 如果電腦帳戶沒有不信任網域的權限，網域與 DHCP 伺服器設定就無法探索資源。  
+>  网络发现在运行发现的站点服务器的计算机帐户上下文中运行。 如果计算机帐户对不受信任的域没有权限，则域和 DHCP 服务器配置可能无法发现资源。  
 
 **DHCP：**  
 
-指定要網路探索進行查詢的每個 DHCP 伺服器。 (網路探索僅支援執行 Microsoft DHCP 實作的 DHCP 伺服器)。  
+指定你希望网络发现查询的每个 DHCP 服务器。 （网络发现只支持运行 DHCP 的 Microsoft 实现的 DHCP 服务器。）  
 
--   網路探索會使用遠端程序呼叫 DHCP 伺服器的資料庫，來擷取資訊。  
+-   网络发现使用对 DHCP 服务器上的数据库的远程过程调用来检索信息。  
 
--   網路探索可以同時查詢 32 位元和 64 位元 DHCP 伺服器，以找出每個伺服器上註冊的裝置清單。  
+-   网络发现可以查询 32 位和 64 位 DHCP 服务器以获取向每个服务器注册的设备的列表。  
 
--   若要讓網路探索成功查詢 DHCP 伺服器，執行探索之伺服器的電腦帳戶必須是 DHCP 伺服器上 DHCP 使用者群組的成員。 例如，以下項目為真時，會存在此層級的存取權。  
+-   为了让网络发现成功地查询 DHCP 服务器，运行发现的服务器的计算机帐户必须是 DHCP 服务器上 DHCP 用户组的成员。 例如，满足以下条件之一时存在此访问级别：  
 
-    -   指定的 DHCP 伺服器是執行探索之伺服器的 DHCP 伺服器。  
+    -   指定的 DHCP 服务器是运行发现的服务器的 DHCP 服务器。  
 
-    -   執行探索的電腦與 DHCP 伺服器位於同一網域。  
+    -   运行发现的计算机和 DHCP 服务器在相同域中。  
 
-    -   在執行探索的電腦與 DHCP 伺服器間存在雙向信任。  
+    -   运行发现的计算机和 DHCP 服务器之间存在双向信任。  
 
-    -   站台伺服器是 DHCP 使用者群組的成員。  
+    -   站点服务器为 DHCP 用户组的成员。  
 
--   網路探索列舉 DHCP 伺服器時，不會每次都找到靜態 IP 位址。 網路探索不會找到 DHCP 伺服器上在 IP 位址排除範圍內的 IP 位址， 也不會探索已保留供手動指派的 IP 位址。  
+-   当网络发现枚举 DHCP 服务器时，它并不始终发现静态 IP 地址。 网络发现不查找 DHCP 服务器上已排除的 IP 地址范围中的 IP 地址。 并且它也不发现为手动分配所保留的 IP 地址。  
 
-**網域：**  
+**域：**  
 
-指定要網路探索進行查詢的每個網域。  
+指定你希望网络发现查询的每个域。  
 
--   執行探索的站台伺服器電腦帳戶必須具備權限，才能讀取每個指定網域中的網域控制站。  
+-   运行发现的站点服务器的计算机帐户必须有权读取每个指定域中的域控制器。  
 
--   若要從本機網域探索電腦，就必須在執行網路探索的站台伺服器相同子網路上，啟用至少一部電腦的電腦瀏覽器服務。  
+-   若要发现本地域中的计算机，必须至少在一个与运行网络发现的站点服务器处于同一子网的计算机上启用计算机浏览器服务。  
 
--   網路探索可以在您瀏覽網路時探索出可從站台伺服器上檢視的所有電腦。  
+-   网络发现可以发现你可以在浏览网络时从站点服务器中查看的任何计算机。  
 
--   網路探索會擷取 IP 位址，然後使用網際網路控制訊息通訊協定的回應要求，Ping 出所找到的每個裝置。 **ping** 命令可協助判斷目前作用中的電腦。  
+-   网络发现检索 IP 地址，然后使用 Internet 控制消息协议 (ICMP) 回显请求 ping 它所发现的每个设备。 **ping** 命令有助于确定当前处于活动状态的计算机。  
 
-**SNMP 裝置：**  
+**SNMP 设备：**  
 
-指定要網路探索進行查詢的每個 SNMP 裝置。  
+指定你希望网络发现查询的每个 SNMP 设备。  
 
--   網路探索會從回應該查詢的 SNMP 裝置擷取 ipNetToMediaTable 值。 此值會傳回用戶端電腦或其他資源 (如印表機、路由器或其他可 IP 定址的裝置) 的 IP 位址陣列。  
+-   网络发现从响应查询的任何 SNMP 设备中检索 ipNetToMediaTable 值。 此值返回作为客户端计算机或其他资源（如打印机、路由器或其他可寻址 IP 的设备）的 IP 地址的数组。  
 
--   若要查詢某個裝置，您必須指定該裝置的 IP 位址或 NetBIOS 名稱。  
+-   若要查询设备，必须指定设备的 IP 地址或 NetBIOS 名称。  
 
--   您必須設定網路探索為使用裝置的社群名稱，否則裝置會拒絕以 SNMP 為基礎的查詢。  
+-   你必须将网络发现配置为使用设备的共同体名称，否则设备将拒绝基于 SNMP 的查询。  
 
-###  <a name="BKMK_LimitNetDisc"></a> 限制網路探索  
-網路探索查詢網路邊際的 SNMP 裝置時，可以找出有關在您的網路外的子網路和 SNMP 裝置的資訊。 您可經由設定可與探索通訊的 SNMP 裝置，以及指定要查詢的網路區段，使用下列資訊來限制網路探索。  
+###  <a name="BKMK_LimitNetDisc"></a>限制网络发现  
+当网络发现在网络边缘上查询 SNMP 设备时，它可以标识关于在中间网络之外的子网和 SNMP 设备的信息。 使用以下信息，通过配置发现可以与其通信的 SNMP 设备以及指定要查询的网络段，可以限制网络发现。  
 
-**子網路：**  
+**子网：**  
 
-設定網路探索在使用 SNMP 和 DHCP 選項時查詢的子網路。 這兩個選項只會搜尋已啟用的子網路。  
+配置网络发现在使用 SNMP 和 DHCP 选项时查询的子网。 这两个选项仅搜索启用的子网。  
 
-例如，DHCP 要求可以從整個網路的某個位置傳回裝置。 如果您想要只探索特定子網路上的裝置，請在 [網路探索內容] 對話方塊的 [子網路] 索引標籤上指定和啟用該特定子網路。 當您指定和啟用子網路時，會將未來的 DHCP 和 SNMP 探索工作限制在這些子網路。  
-
-> [!NOTE]  
->  子網路設定不會限制 [網域] 探索選項所探索的物件。  
-
-**SNMP 群體名稱：**  
-
-若要讓網路探索順利查詢 SNMP 裝置，請以裝置的群體名稱設定網路探索。 如果網路探索不是使用 SNMP 裝置的群體名稱進行設定，裝置會拒絕查詢。  
-
-**躍點數上限：**  
-
-當您設定路由器躍點數上限時，會限制網路探索可使用 SNMP 查詢的網路區段和路由器數目。  
-
-您所設定的躍點數目，會限制網路探索可查詢之其他裝置和網路區段數目。  
-
-例如，含 **0** (零) 路由器躍點的僅拓撲探索，會探索原始伺服器所在的子網路。 這包含該子網路上的任何路由器。  
-
-下圖顯示僅拓撲網路探索查詢在伺服器 1 上，指定了 0 路由器躍點的情況下執行時，找到的項目：子網路 D 和路由器 1。  
-
- ![以零個路由器跳躍點進行探索的影像](media/Disc-0.gif)  
-
- 下圖顯示拓撲和用戶端網路探索查詢在伺服器 1 上，指定了 0 路由器躍點的情況下執行時，找到的項目：子網路 D 和路由器 1，以及子網路 D 上所有潛在用戶端。  
-
- ![以一個路由器跳躍點進行探索的影像](media/Disc-1.gif)  
-
- 若要得知其他路由器躍點是如何增加探索的網路資源量，請考慮下列網路：  
-
- ![以兩個路由器跳躍點進行探索的影像](media/Disc-2.gif)  
-
- 從伺服器 1 使用一個路由器躍點執行拓撲專屬網路探索時，探索下列各項：  
-
--   路由器 1 和子網路 10.1.10.0 (用零個躍點找到)  
-
--   子網路 10.1.20.0 和 10.1.30.0、子網路 A 和路由器 2 (在第一個躍點上找到)  
-
-> [!WARNING]  
->  每次增加路由器躍點數目，都會大幅提高可探索的資源數目，以及增加網路探索所使用的網路頻寬。  
-
-##  <a name="bkmk_aboutServer"></a> 伺服器探索  
-**可設定：**否  
-
-除了使用者可設定的探索方法外，Configuration Manager 會使用一種名為**伺服器探索** (SMS_WINNT_SERVER_DISCOVERY_AGENT) 的處理序。 這個探索方法會為站台系統的電腦 (例如設定為管理點的電腦) 建立資源記錄。  
-
-##  <a name="bkmk_shared"></a> Active Directory 群組探索、系統探索及使用者探索的通用功能  
-本節提供下列探索方法之通用功能的資訊︰  
-
--   Active Directory 群組探索  
-
--   Active Directory 系統探索  
-
--   Active Directory 使用者探索  
+例如，DHCP 请求可以从整个网络内的位置中返回设备。 如果只想发现特定子网上的设备，请在“网络发现属性”对话框中的“子网”选项卡上指定和启用该特定子网。 指定和启用子网时，将未来的 DHCP 和 SNMP 发现任务限制为仅针对那些子网。  
 
 > [!NOTE]  
->  本節中的資訊不適用於 Active Directory 樹系探索。  
+>  子网配置不限制**域**发现选项发现的对象。  
 
-這三種探索方法在設定及操作方面相當類似。 這些方法可以探索電腦、使用者，以及儲存在 Active Directory Domain Services 中與資源群組成員資格相關的資訊。 此探索程序是由站台伺服器上執行的探索代理程式所管理 (位於已設定執行探索的每個站台上)。 您可以設定每一種探索方法來搜尋一個或多個 Active Directory 位置，作為本機樹系或遠端樹系中的位置執行個體。  
+**SNMP 共同体名称：**  
 
-當探索搜尋不受信任的樹系以尋找資源時，探索代理程式必須能成功解析下列情況：  
+要使网络发现能够成功查询 SNMP 设备，请使用设备的社区名称配置网络发现。 如果未使用 SNMP 设备的社区名称来配置网络发现，则设备会拒绝查询。  
 
--   若要使用 Active Directory 系統探索來探索電腦資源，探索代理程式必須能解析資源的 FQDN。 若無法解析 FQDN，接著便會嘗試依其 NetBIO 名稱來解析資源。  
+**最大跃点数：**  
 
--   若要使用 Active Directory 使用者探索或 Active Directory 群組探索來探索使用者或群組資源，探索代理程式必須能解析您為 Active Directory 位置指定的網域控制站名稱 FQDN。  
+配置最大路由器跃点数时，你可以限制网络发现能够使用 SNMP 查询的网络段和路由器的数目。  
 
-您可以針對指定的每個位置，設定個別的搜尋選項，例如啟用遞迴式搜尋來搜尋 Active Directory 子容器位置。 您也可以設定唯一的帳戶以便在搜尋該位置時使用。 這可在單一站台上設定探索方法上提供彈性，以便在多個樹系之間搜尋多個 Active Directory 位置，而不需要設定具備所有位置權限的單一帳戶。  
+你配置的跃点数可以限制网络发现可以查询的其他设备和网络段的数目。  
 
-當您在特定站台上執行這三種探索方法時，該站台上的 Configuration Manager 站台伺服器會連絡指定 Active Directory 樹系中最近的網域控制站，以找出 Active Directory 資源。 網域和樹系可以處於任何支援的 Active Directory 模式中。 您指派給每個位置執行個體的帳戶都必須擁有指定 Active Directory 位置的**讀取**權限。
+例如，路由器跃点数为“0” （零）的仅拓扑的发现会发现发起服务器所在的子网。 它包含该子网上的任何路由器。  
 
-探索會在指定的位置上搜尋物件，然後嘗試收集與這些物件相關的資訊。 當能夠識別足夠的資源相關資訊時便建立 DDR。 必要的資訊會依使用的探索方法而有所不同。  
+下图显示了在路由器跃点数指定为 0 的服务器 1 上运行仅拓扑的网络发现查询时，该网络发现查询所找到的内容：子网 D 和路由器 1。  
 
-如果您要設定在不同 Configuration Manager 站台上執行相同的探索方法，以善用本機 Active Directory 伺服器查詢，您可以使用一組唯一的探索選項來設定每個站台。 由於探索資料會在階層中的每個站台間共用，因此請避免重複這些設定以便一次就有效率地探索每個資源。
+ ![路由器跃点为零的发现图像](media/Disc-0.gif)  
 
-對於規模較小的環境，建議您只在階層中的一個站台上執行各探索方法，藉此減少系統管理上的額外負擔，並避免執行多個探索動作來重新探索相同的資源。 當您將執行探索的站台數目降到最低時，就能減少探索所使用的整體網路頻寬。 您也可以減少站台伺服器所建立及必須處理的整體 DDR 數目。  
+ 下图显示了在路由器跃点数指定为 0 的服务器 1 上运行拓扑和客户端网络发现查询时，该网络发现查询所找到的内容：子网 D 和路由器 1，以及子网 D 上的所有潜在客户端。  
 
-許多的探索方法設定都一目了然。 請利用以下各節取得與探索選項相關的詳細資訊，在設定這些選項之前您可能會需要額外的資訊。  
+ ![有一个路由器跃点的发现图像](media/Disc-1.gif)  
 
-搭配多個 Active Directory 探索方法可使用下列選項︰  
+ 为了更好地了解其他路由器跃点如何增加发现的网络资源量，请考虑以下网络：  
 
--   [差異探索](#bkmk_delta)  
+ ![有两个路由器跃点的发现图像](media/Disc-2.gif)  
 
--   [依網域登入來篩選過時的電腦記錄](#bkmk_stalelogon)  
+ 从具有一个路由器跃点的服务器 1 中运行仅限拓扑的网络发现将发现以下各项：  
 
--   [依電腦密碼篩選過時的記錄](#bkmk_stalepassword)  
+-   路由器 1 和子网 10.1.10.0（已找到，跃点数为零）  
 
--   [搜尋自訂的 Active Directory 屬性](#bkmk_customAD)  
-
-###  <a name="bkmk_delta"></a> 差異探索  
-可用於：  
-
--   Active Directory 群組探索  
-
--   Active Directory 系統探索  
-
--   Active Directory 使用者探索  
-
-差異探索並非獨立的探索方法，而是適用探索方法的可用選項。 差異探索會搜尋特定的 Active Directory 屬性，自適用的探索方法上次完整探索週期後是否有所變更。 屬性變更會提交至 Configuration Manager 資料庫以更新資源的探索記錄。  
-
-差異探索的執行週期預設為 5 分鐘。 這比一般的完整探索週期排程更為頻繁。  如此頻繁的週期是可行的，因為差異探索使用的站台伺服器和網路資源比完整探索週期少。 使用差異探索時，您可以降低該探索方法的完整探索週期頻率。  
-
-以下是差異探索最常偵測到的變更：  
-
--   將新的電腦或使用者新增到 Active Directory  
-
--   基本的電腦和使用者資訊的變更  
-
--   新增到群組的新電腦或使用者  
-
--   從群組移除的電腦或使用者  
-
--   系統群組物件的變更  
-
-儘管差異探索可以偵測到新的資源與群組成員資格的變更，但當資源已從 Active Directory 刪除時，就無法偵測。 差異探索所建立與完整探索週期所建立之 DDR 的處理方式類似。  
-
-您可以在每種探索方法的內容中的 [輪詢排程]  索引標籤上設定差異探索。  
-
-###  <a name="bkmk_stalelogon"></a> 依網域登入來篩選過時的電腦記錄  
-可用於：  
-
--   Active Directory 群組探索  
-
--   Active Directory 系統探索  
-
-您可以設定探索根據電腦的上次網域登入來排除具有過時電腦記錄的電腦。 當啟用此選項時，Active Directory 系統探索會評估其識別的每部電腦。 Active Directory 群組探索則會評估所探索的群組成員的每一部電腦。  
-
-若要使用此選項：  
-
--   必須設定電腦更新 Active Directory 網域服務的 **lastLogonTimeStamp** 屬性。  
-
--   Active Directory 網域功能層級必須設定為 Windows Server 2003 或更新版本。  
-
-當您設定要在這項設定中使用的上次登入時間時，請考量網域控制站之間的複寫間隔。  
-
-您可以在 [Active Directory 探索內容] 及 [Active Directory 群組探索內容] 對話方塊的 [選項] 索引標籤上設定篩選。 選擇 [僅探索在指定時間登入網域的電腦] 選項。  
+-   子网 10.1.20.0 和 10.1.30.0、子网 A 和路由器 2（在第一个跃点上找到）  
 
 > [!WARNING]  
->  當您設定此篩選及 [Filter stale records by computer password]\(依電腦密碼篩選過時的記錄) 時，符合其中一項篩選準則的電腦就會從探索中排除。  
+>  路由器跃点数每增加一个都可能大幅增加可发现的资源数，并增加网络发现所使用的网络带宽。  
 
-###  <a name="bkmk_stalepassword"></a> 依電腦密碼篩選過時的記錄  
-可用於：  
+##  <a name="bkmk_aboutServer"></a>服务器发现  
+**可配置：**否  
 
--   Active Directory 群組探索  
+除了用户可配置的发现方法之外，Configuration Manager 还使用名为**服务器发现** (SMS_WINNT_SERVER_DISCOVERY_AGENT) 的进程。 此发现方法为作为站点系统的计算机（如配置为管理点的计算机）创建资源记录。  
 
--   Active Directory 系統探索  
+##  <a name="bkmk_shared"></a>Active Directory 组发现、系统发现和用户发现的常用功能  
+本部分提供以下发现方法常见功能的相关信息：  
 
-您可以設定探索根據電腦的上次電腦帳戶密碼更新來排除有過時電腦記錄的電腦。 當啟用此選項時，Active Directory 系統探索會評估其識別的每部電腦。 Active Directory 群組探索則會評估所探索的群組成員的每一部電腦。  
+-   Active Directory 组发现  
 
-若要使用此選項：  
+-   Active Directory 系统发现  
 
--   必須設定電腦更新 Active Directory 網域服務的 **pwdLastSet** 屬性。  
+-   Active Directory 用户发现  
 
-當您在設定此選項時，除了網域控制站間的複寫間隔之外，還請考慮此屬性的更新間隔。  
+> [!NOTE]  
+>  本部分中的信息不适用于 Active Directory 林发现。  
 
-您可以在 [Active Directory 探索內容] 及 [Active Directory 群組探索內容] 對話方塊的 [選項] 索引標籤上設定篩選。 選擇 [僅探索在指定時間更新其電腦帳戶密碼的電腦] 選項。  
+这三种发现方法的配置和操作类似。 它们可以发现计算机、用户以及关于 Active Directory 域服务中存储的资源的组成员身份信息。 发现进程由发现代理进行管理，该发现代理在每个站点中配置为运行发现的站点服务器上运行。 你可以将其中每种发现方法配置为搜索一个或多个 Active Directory 位置，并将其作为本地林或远程林中的位置实例。  
+
+当发现在不受信任的林中搜索资源时，发现代理必须能够解析以下对象，才能成功进行操作：  
+
+-   若要使用 Active Directory 系统发现来发现计算机资源，发现代理必须能够解析资源的 FQDN。 如果无法解析 FQDN，则它将尝试通过资源的 NetBIOS 名称来解析资源。  
+
+-   若要使用 Active Directory 用户发现或 Active Directory 组发现来发现用户或组资源，发现代理必须能够解析为 Active Directory 位置指定的域控制器名称的 FQDN。  
+
+对于指定的每个位置，可以配置单个搜索选项，如启用位置的 Active Directory 子容器的递归搜索。 也可以将唯一帐户配置为在搜索该位置时使用。 这样，你可以灵活地在一个站点配置发现方法以跨多个林搜索多个 Active Directory 位置，而不必配置对所有位置拥有权限的单个帐户。  
+
+在特定站点运行这三种发现方法中的每种发现方法时，该站点中的 Configuration Manager 站点服务器会与指定 Active Directory 林中最近的域控制器联系，以查找 Active Directory 资源。 域和林可以处于任何支持的 Active Directory 模式下。 分配给每个位置实例的帐户必须对指定的 Active Directory 位置具有“读取”访问权限。
+
+发现会在指定位置中搜索对象，然后尝试收集有关那些对象的信息。 如果能够确定足够的资源相关信息，则将创建 DDR。 所需信息因使用的发现方法而异。  
+
+如果将同一发现方法配置为在不同的 Configuration Manager 站点上运行，以利用查询本地 Active Directory 服务器的优势，可以将每个站点配置为包含一组独特的发现选项。 由于发现数据与层次结构中的每个站点共享，因此请避免这些配置之间出现重叠，以一次性高效地发现每个资源。
+
+对于较小的环境，可以考虑仅在层次结构中的一个站点上运行每个发现方法，以减少管理开销并降低多个发现操作重新发现同一资源的可能性。 将运行发现的站点数量减至最少时，可降低该发现所使用的整体网络带宽。 此外，还可以减少所创建的且必须由站点服务器进行处理的 DDR 的总体数量。  
+
+许多发现方法配置是一目了然的。 使用下列部分来了解有关在你对其进行配置之前可能需要其他信息的发现选项的详细信息。  
+
+以下选项适用于与多个 Active Directory 发现方法配合使用：  
+
+-   [增量发现](#bkmk_delta)  
+
+-   [按域登录名筛选过期计算机记录](#bkmk_stalelogon)  
+
+-   [按计算机密码筛选过期记录](#bkmk_stalepassword)  
+
+-   [搜索自定义的 Active Directory 属性](#bkmk_customAD)  
+
+###  <a name="bkmk_delta"></a>增量发现  
+适用于：  
+
+-   Active Directory 组发现  
+
+-   Active Directory 系统发现  
+
+-   Active Directory 用户发现  
+
+增量发现不是独立的发现方法，而是可用于适用发现方法的选项。 增量发现会搜索特定的 Active Directory 属性，查找自适用的发现方法的上一次完整发现周期以来所做的更改。 此属性更改会提交至 Configuration Manager 数据库，以更新资源的发现记录。  
+
+默认情况下，增量发现按 5 分钟一个周期进行运行。 这比完整发现周期的典型计划要更为频繁。  此频繁周期之所以可行，是因为增量发现使用的站点服务器和网络资源比完整发现周期使用的少。 使用增量发现时，可针对该发现方法减小完整发现周期的频率。  
+
+增量发现检测到的最常见更改如下：  
+
+-   添加到 Active Directory 中的新计算机或用户  
+
+-   对基本计算机和用户信息所做的更改  
+
+-   添加到组中的新计算机或用户  
+
+-   从组中删除的计算机或用户  
+
+-   对系统组对象所做的更改  
+
+虽然增量发现可以检测新资源以及对组成员身份所做的更改，但它无法检测从 Active Directory 中删除资源的时间。 对增量发现所创建的 DDR 进行处理的方式类似于由完整发现周期创建的 DDR。  
+
+你在每个发现方法的属性中的“轮询计划”  选项卡上配置增量发现。  
+
+###  <a name="bkmk_stalelogon"></a>按域登录名筛选过期计算机记录  
+适用于：  
+
+-   Active Directory 组发现  
+
+-   Active Directory 系统发现  
+
+可以配置发现，以根据计算机的最后一个域登录名排除具有过期计算机记录的计算机。 如果启用此选项，Active Directory 系统发现将评估它识别的每台计算机。 Active Directory 组发现将评估作为所发现的组的成员的每台计算机。  
+
+使用此选项：  
+
+-   必须将计算机配置为更新 Active Directory 域服务中的 **lastLogonTimeStamp** 属性。  
+
+-   必须将 Active Directory 域功能级别设置为 Windows Server 2003 或更高版本。  
+
+在配置上一次登录后的时间（想要用于此设置）时，请考虑域控制器之间的复制间隔。  
+
+可在“Active Directory 系统发现属性”和“Active Directory 组发现属性”对话框中的“选项”选项卡上配置筛选。 选择“仅发现登录到域一段给定时间的计算机”选项。  
 
 > [!WARNING]  
->  當您設定此篩選及 [Filter stale records by domain logon]\(依網域登入篩選過時的記錄) 時，符合其中一項篩選準則的電腦就會從探索中排除。  
+>  如果配置此筛选，并且**按计算机密码筛选过期记录**，则会从发现中排除满足任一筛选器条件的计算机。  
 
-###  <a name="bkmk_customAD"></a> 搜尋自訂的 Active Directory 屬性  
- 可用於：  
+###  <a name="bkmk_stalepassword"></a>按计算机密码筛选过期记录  
+适用于：  
 
--   Active Directory 系統探索  
+-   Active Directory 组发现  
 
--   Active Directory 使用者探索  
+-   Active Directory 系统发现  
 
-每種探索方法都支援可探索的唯一 Active Directory 屬性清單。  
+可以配置发现，以根据计算机进行的最后一次计算机帐户密码更新，排除具有过期计算机记录的计算机。 如果启用此选项，Active Directory 系统发现将评估它识别的每台计算机。 Active Directory 组发现将评估作为所发现的组的成员的每台计算机。  
 
-您可以在 [Active Directory 系統探索內容] 和 [Active Directory 使用者探索內容] 對話方塊中的 [Active Directory 屬性] 索引標籤上，檢視及設定自訂屬性的清單。  
+使用此选项：  
+
+-   必须将计算机配置为更新 Active Directory 域服务中的 **pwdLastSet** 属性。  
+
+在配置此选项时，除了考虑域控制器之间的复制间隔外，还要考虑此属性的更新间隔。  
+
+可在“Active Directory 系统发现属性”和“Active Directory 组发现属性”对话框中的“选项”选项卡上配置筛选。 选择“仅发现具有更新的计算机帐户密码一段给定时间的计算机”选项。  
+
+> [!WARNING]  
+>  如果配置此筛选，并且**按域登录名筛选过期记录**，则会从发现中排除满足任一筛选器条件的计算机。  
+
+###  <a name="bkmk_customAD"></a>搜索自定义的 Active Directory 属性  
+ 适用于：  
+
+-   Active Directory 系统发现  
+
+-   Active Directory 用户发现  
+
+每种发现方法都支持可发现的 Active Directory 属性的唯一列表。  
+
+可在“Active Directory 系统发现属性”和“Active Directory 用户发现属性”对话框中的“Active Directory 属性”选项卡上，查看和配置自定义属性列表。  

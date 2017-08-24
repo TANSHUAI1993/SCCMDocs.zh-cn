@@ -1,6 +1,6 @@
 ---
-title: "設定裝置註冊 | Microsoft Docs"
-description: "將在 System Center Configuration Manager 中註冊裝置以進行內部部署行動裝置管理的權限授與使用者。"
+title: "设置设备注册 | Microsoft Docs"
+description: "对用户授予在 System Center Configuration Manager 中向本地移动设备管理注册设备的权限。"
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
@@ -17,73 +17,73 @@ manager: angrobe
 ms.openlocfilehash: 16d4106d486d821b7ce92a1de65ebb04469d18de
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="set-up-device-enrollment-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>設定 System Center Configuration Manager 中內部部署行動裝置管理的裝置註冊
+# <a name="set-up-device-enrollment-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>为 System Center Configuration Manager 中的本地移动设备管理设置设备注册
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-您必須授與使用者執行權限，使用者才可註冊裝置以進行 System Center Configuration Manager 內部部署行動裝置管理。 若要將裝置註冊權限授與使用者，請遵循下列工作進行。
+要使用户可向 System Center Configuration Manager 本地移动设备管理注册设备，需要授予其执行此操作的权限。 若要向用户授予注册设备的权限，请执行以下任务。
 
--   [建立使用者能註冊新式裝置註冊設定檔](#bkmk_createProf)  
+-   [创建允许用户注册新式设备的注册配置文件](#bkmk_createProf)  
 
--   [針對已註冊裝置設定額外的用戶端設定](#bkmk_addClient)  
+-   [为注册的设备设置其他客户端设置](#bkmk_addClient)  
 
--   [讓使用者能收到新式裝置註冊設定檔](#bkmk_enableUsers)  
+-   [使用户能够接收新式设备注册配置文件](#bkmk_enableUsers)  
 
--   [將根憑證儲存在會註冊的裝置上](#bkmk_storeCert)  
+-   [在要注册的设备上存储根证书](#bkmk_storeCert)  
 
-##  <a name="bkmk_createProf"></a> 建立使用者能註冊新式裝置註冊設定檔  
- 若要推送允許使用者註冊現代化行動裝置所需的設定，您可以將新的註冊設定檔新增至預設用戶端設定，以套用到 Configuration Manager 站台中所有探索到的使用者。  
+##  <a name="bkmk_createProf"></a> 创建允许用户注册新式设备的注册配置文件  
+ 为了推送允许用户注册新式设备所需的设置，可以向默认客户端设置添加新的注册配置文件，该配置文件适用于 Configuration Manager 站点中发现的所有用户。  
 
-1.  在 Configuration Manager 主控台中，按一下 [系統管理] > [概觀] > [用戶端設定]，並開啟 [預設用戶端設定]，然後選取 [註冊]。  
+1.  在 Configuration Manager 控制台中，单击“管理” > “概述” > “客户端设置”，打开“默认客户端设置”并选择“注册”。  
 
-2.  在 [裝置設定] 下，指定輪詢新式裝置的間隔。  
+2.  在“设备设置”下，为新式设备指定轮询间隔。  
 
-3.  在 [使用者設定] 下，為 [允許使用者註冊新式裝置]  選取 [是] 。  
+3.  在“用户设置”下，为“允许用户注册新式设备”  选择“是” 。  
 
-4.  在 [現代化裝置註冊設定檔] 旁邊按一下 [設定設定檔...]，然後按一下 [建立...]  
+4.  在“新式设备注册配置文件”旁，单击“设置配置文件…”，然后单击“创建…”  
 
-5.  在 [建立註冊設定檔] 中，輸入註冊設定檔的名稱，並選擇希望使用者註冊設定檔使用的管理站台碼。 按一下 [確定]  數次，結束 [預設值] 頁面。  
+5.  在“创建注册配置文件”中，键入注册配置文件的名称，然后选择你希望具有该注册配置文件的用户使用的管理站点代码。 单击“确定”  数次以退出“默认设置”页。  
 
 > [!NOTE]  
->  如果想要將註冊設定檔部署到探索到的一部分使用者，可以利用使用者集合，並建立自訂用戶端設定，部署至該集合。 如需建立自訂用戶端設定的詳細資訊，請參閱 [How to configure client settings in System Center Configuration Manager](../../core/clients/deploy/configure-client-settings.md)  
+>  如果你希望将注册配置文件部署到的已发现用户的子集，则可以使用用户集合，并创建要部署到该集合的自定义客户端设置。 有关创建自定义客户端设置的信息，请参阅 [How to configure client settings in System Center Configuration Manager](../../core/clients/deploy/configure-client-settings.md)  
 
-##  <a name="bkmk_addClient"></a> 針對已註冊裝置設定額外的用戶端設定  
- 除了針對現代化裝置設定註冊設定檔之外，您還可以在裝置註冊後，設定額外的用戶端設定來設定裝置。  如需設定用戶端設定的資訊，請參閱[如何在 System Center Configuration Manager 中設定用戶端設定](../../core/clients/deploy/configure-client-settings.md)。  
+##  <a name="bkmk_addClient"></a> 为注册的设备设置其他客户端设置  
+ 除了为新式设备设置注册配置文件之外，还可以设置其他客户端设置以便在注册设备时配置它们。  有关设置客户端设置的信息，请参阅[如何在 System Center Configuration Manager 中配置客户端设置](../../core/clients/deploy/configure-client-settings.md)。  
 
- 並非所有的用戶端設定都適用於進行內部部署行動裝置管理。 Configuration Manager 的最新分支支援進行內部部署行動裝置管理的下列用戶端設定：  
+ 并非所有客户端设置都对本地移动设备管理可用。 Configuration Manager 的 current branch 支持以下用于本地移动设备管理的客户端设置：  
 
--   註冊 - 這些設定會指定受管理裝置的註冊設定檔。 如需如何設定註冊設定檔的詳細資訊，請參閱 [Create an enrollment profile that allows users to enroll modern devices](#bkmk_createProf)(建立使用者能註冊新式裝置的註冊設定檔)。  
+-   注册 - 这些设置为托管设备设置注册配置文件。 有关如何设置注册配置文件的详细信息，请参阅 [创建允许用户注册新式设备的注册配置文件](#bkmk_createProf)。  
 
--   用戶端原則 - 這些設定會指定下載用戶端原則到裝置的頻率。 您也可以啟用以原則輪詢將使用者設為目標的設定。 如需用戶端原則設定的詳細資訊，請參閱[關於 System Center Configuration Manager 中的用戶端設計](../../core/clients/deploy/about-client-settings.md)中的＜用戶端原則＞一節。  
+-   客户端策略 - 这些设置指定将客户端策略下载到设备的频率。 还可以启用设置以便使用策略轮询确定目标用户。 有关客户端策略设置的详细信息，请参阅[关于 System Center Configuration Manager 中的客户端设置](../../core/clients/deploy/about-client-settings.md)中的“客户端策略”部分。  
 
--   軟體部署 - 這項設定會設定評估用戶端裝置以進行軟體部署的間隔。 如需軟體部署設定的詳細資訊，請參閱[關於 System Center Configuration Manager 中的用戶端設計](../../core/clients/deploy/about-client-settings.md)中的＜軟體部署＞一節。  
+-   软件部署 - 此设置可设置为软件部署评估客户端设备的间隔。 有关软件部署设置的详细信息，请参阅[关于 System Center Configuration Manager 中的客户端设置](../../core/clients/deploy/about-client-settings.md)中的“软件部署”部分  
 
     > [!NOTE]  
-    >  對於內部部署行動裝置管理，軟體部署設定僅能作為預設用戶端設定使用。 Configuration Manager 的最新分支中的自訂用戶端設定無法搭配軟體部署設定。  
+    >  对于本地移动设备管理，软件部署设置只能用作默认客户端设置。 在 Configuration Manager 的 current branch 中，软件部署设置不能与自定义客户端设置一起使用。  
 
-##  <a name="bkmk_enableUsers"></a> 讓使用者能收到新式裝置註冊設定檔  
- 若要讓使用者接收已修改的用戶端設定與進行內部部署行動裝置管理的註冊設定檔，必須先透過 Active Directory 探索方法探索到使用者。 為確保每個需要註冊設定檔的使用者皆可取得它，請執行 Active Directory 使用者探索。 如需如何探索使用者的指示，請參閱 [Run discovery for System Center Configuration Manager](../../core/servers/deploy/configure/run-discovery.md)。  
+##  <a name="bkmk_enableUsers"></a> 使用户能够接收新式设备注册配置文件  
+ 为使用户接收具有本地移动设备管理的注册配置文件的已修改客户端设置，必须通过 Active Directory 发现方法发现它们。 为了确保需要注册配置文件的每个人能够获得它，请运行对 Active Directory 用户运行发现。 有关如何发现用户的说明，请参阅 [Run discovery for System Center Configuration Manager](../../core/servers/deploy/configure/run-discovery.md)。  
 
-##  <a name="bkmk_storeCert"></a> 將根憑證儲存在會註冊的裝置上  
- 其裝置已加入網域的使用者，應該已有必要的根憑證，可與裝載站台系統角色的伺服器進行受信任的通訊，因為利用 Active Directory 加入網域的過程中，會核發根。 未加入網域的電腦與行動裝置，需要在裝置上手動安裝根憑證，才可進行註冊。 這些裝置會自動具備必要的根憑證。  
+##  <a name="bkmk_storeCert"></a> 在要注册的设备上存储根证书  
+ 由于根是作为域加入过程的一部分与 Active Directory 一起颁发的，所以使用已加入域的设备的用户将很可能已具有所需根证书，能够与站点系统角色的宿主服务器进行受信任的通信。 未加入域的计算机和移动设备将需要在设备上手动安装的根证书才能进行注册。 这些设备将不自动具有所需根证书。  
 
- 必須為裝置提供匯出的憑證檔案，進行手動安裝。 可利用電子郵件、OneDrive、SD 記憶卡、USB 磁碟，或任何適合您需求的方法，提供憑證檔案。  
+ 必须向设备提供导出的证书文件才能进行手动安装。 可使用电子邮件、OneDrive、SD 卡、USB 拇指驱动器或最能满足你的需求的任何方法完成此操作。  
 
- 裝置上要使用的根憑證是在[將具有相同的根的憑證匯出為網頁伺服器憑證](../../mdm/get-started/set-up-certificates-on-premises-mdm.md#bkmk_exportCert)中匯出的憑證。  
+ 你想要在设备上使用的根证书是在[导出根与 Web 服务器证书的根相同的证书](../../mdm/get-started/set-up-certificates-on-premises-mdm.md#bkmk_exportCert)中导出的。  
 
-1.  在要註冊的裝置上，找到根憑證檔案，然後按兩下該檔案。  
+1.  在要注册的设备上，找到并双击该根证书文件。  
 
-2.  在 [憑證] 視窗中，按一下 [安裝憑證...]  
+2.  在“证书”窗口中，单击“安装证书...”  
 
-3.  在 [憑證匯入精靈] 中，選取 [本機] ，然後按一下 [下一步] 。  
+3.  在“证书导入向导”中，选择“本地计算机” 并单击“下一步” 。  
 
-4.  在 [使用者帳戶控制] 視窗中，按一下 [是] 。  
+4.  在“用户帐户控制”窗口中，选择“是” 。  
 
-5.  選取 [將所有憑證放入以下的存放區] ，然後按一下 [瀏覽] 。  
+5.  选择“将所有的证书放入下列存储” ，然后单击“浏览” 。  
 
-6.  依序按一下 [受信任的根憑證授權單位] 、[確定] 和 [下一步] 。  
+6.  依次单击“受信任的根证书颁发机构” 和“确定” ，然后单击“下一步” 。  
 
-7.  按一下 [完成] 。  
+7.  单击 **“完成”**。  

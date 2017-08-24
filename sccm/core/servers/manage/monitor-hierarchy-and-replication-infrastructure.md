@@ -1,6 +1,6 @@
 ---
-title: "監視複寫 | Microsoft Docs"
-description: "了解如何使用主控台中的 [監視] 工作區，監視 Configuration Manager 的基礎結構和操作。"
+title: "监视复制 | Microsoft Docs"
+description: "了解如何使用控制台中的“监视”工作区在 Configuration Manager 中监视基础结构和操作。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -18,226 +18,226 @@ manager: angrobe
 ms.openlocfilehash: 132803a1aa9aad5c5462686bd656688418e47d07
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="monitor-hierarchy-and-replication-infrastructure-in-system-center-configuration-manager"></a>監視 System Center Configuration Manager 的階層及複寫基礎結構
+# <a name="monitor-hierarchy-and-replication-infrastructure-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的监视层次结构和复制基础结构
 
-*適用對象：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-若要監視 System Center Configuration Manager 的基礎結構和作業，請使用 Configuration Manager 主控台的 [監視] 工作區。  
+若要在 System Center Configuration Manager 中监视基础结构和操作，请使用 Configuration Manager 控制台中的“监视”工作区。  
 
 > [!NOTE]  
->  此位置的例外狀況為移轉，移轉可以直接在 [系統管理]  工作區的 [移轉]  節點中進行監視。 如需詳細資訊，請參閱 [移轉到 System Center Configuration Manager 的作業](../../../core/migration/operations-for-migration.md)。  
+>  此位置的例外是“迁移”，迁移是从“管理”  工作区的“迁移”  节点中直接监视的。 有关详细信息，请参阅 [用于迁移到 System Center Configuration Manager 的操作](../../../core/migration/operations-for-migration.md)。  
 
- 除了使用 Configuration Manager 主控台進行監視，您還可以使用 Configuration Manager 報告，或檢視 Configuration Manager 元件的 Configuration Manager 記錄檔。 如需報告的資訊，請參閱 [System Center Configuration Manager 中的報告](../../../core/servers/manage/reporting.md)。 如需記錄檔的資訊，請參閱 [System Center Configuration Manager 中的記錄檔](../../../core/plan-design/hierarchy/log-files.md)。  
+ 除了使用 Configuration Manager 控制台进行监视，还可以使用 Configuration Manager 报表，或查看 Configuration Manager 组件的 Configuration Manager 日志文件。 有关使用报表的详细信息，请参阅 [System Center Configuration Manager 中的报表](../../../core/servers/manage/reporting.md)。 有关日志文件的详细信息，请参阅 [System Center Configuration Manager 中的日志文件](../../../core/plan-design/hierarchy/log-files.md)。  
 
- 當您在監視站台時，可尋找指出有問題需要您處理的記號。 例如：  
+ 在监视站点时，请查看指示需要你采取措施的问题的迹象。 例如：  
 
--   站台伺服器和站台系統上的積存檔案。  
+-   站点服务器和站点系统上的文件积压。  
 
--   指出錯誤或問題的狀態訊息。  
+-   指示错误或问题的状态消息。  
 
--   無法進行站台內通訊。  
+-   失败的站点内通信。  
 
--   伺服器上系統事件記錄中的錯誤和警告訊息。  
+-   服务器上系统事件日志中的错误和警告消息。  
 
--   Microsoft SQL Server 錯誤記錄中的錯誤和警告訊息。  
+-   Microsoft SQL Server 错误日志中的错误和警告消息。  
 
--   長時間未回報的站台或用戶端。  
+-   长时间未报告的站点或客户端。  
 
--   SQL Server 資料庫的回應緩慢。  
+-   SQL Server 数据库响应缓慢。  
 
--   硬體故障的跡象。  
+-   硬件故障的迹象。  
 
-為了要使站台故障的風險降至最低，如果監視工作發現有任何出現問題的跡象，請調查問題的來源，並盡快修復問題。  
+为了最大程度地降低站点故障的风险，如果监视任务暴露出任何问题迹象，请尽快调整问题根源并将其修复。  
 
 
 
-##  <a name="BKMK_MonintorMgmtTasks"></a> 監視 Configuration Manager 的一般管理工作  
- Configuration Manager 從 Configuration Manager 主控台內提供內建的監視。 您可以監視許多工作，包括與軟體更新、電源管理，以及整個階層中的內容部署相關的工作。  
+##  <a name="BKMK_MonintorMgmtTasks"></a> 监视 Configuration Manager 的常用管理任务  
+ Configuration Manager 提供从 Configuration Manager 控制台中进行的内置监视。 你可以监视许多任务，其中包括与整个层次结构中的软件更新、电源管理以及内容部署相关的那些任务。  
 
- 請參考下列資訊來協助您監視常見的 Configuration Manager 工作：  
+ 使用下列信息来帮助你监视常见的 Configuration Manager 任务：  
 
- **警示**  
-   請參閱 [使用 System Center Configuration Manager 的警示和狀態系統](../../../core/servers/manage/use-alerts-and-the-status-system.md#BKMK_MonitorAlerts) 中的 [監視 Configuration Manager 的狀態系統](../../../core/servers/manage/use-alerts-and-the-status-system.md)。  
+ **警报**  
+   请参阅 [使用 System Center Configuration Manager 的警报和状态系统](../../../core/servers/manage/use-alerts-and-the-status-system.md#BKMK_MonitorAlerts) 中的 [监视警报](../../../core/servers/manage/use-alerts-and-the-status-system.md)。  
 
- **相容性設定**  
-   請參閱[如何在 System Center Configuration Manager 中監視相容性設定](../../../compliance/deploy-use/monitor-compliance-settings.md)。  
+ **符合性设置**  
+   请参阅[如何在 System Center Configuration Manager 中监视符合性设置](../../../compliance/deploy-use/monitor-compliance-settings.md)。  
 
- **內容部署**  
-   如需監視內容的一般資訊，請參閱[管理 System Center Configuration Manager 的內容與內容基礎結構](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。  
+ **内容部署**  
+   有关监视内容的常规信息，请参阅[为 System Center Configuration Manager 管理内容和内容基础结构](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。  
 
-如需監視特定類型內容部署的詳細資訊：
--   若要監視應用程式，請參閱[使用 System Center Configuration Manager 監視應用程式](/sccm/apps/deploy-use/monitor-applications-from-the-console)。  
+有关监视特定类型的内容部署的信息：
+-   若要监视应用程序，请参阅[使用 System Center Configuration Manager 监视应用程序](/sccm/apps/deploy-use/monitor-applications-from-the-console)。  
 
--   若要監視封裝和程式，請參閱 [System Center Configuration Manager 中的封裝和程式](../../../apps/deploy-use/packages-and-programs.md)中的如何管理封裝和程式。  
+-   若要监视包和程序，请参阅 [System Center Configuration Manager 中的包和程序](../../../apps/deploy-use/packages-and-programs.md)中的“如何管理包和程序”。  
 
 **Endpoint Protection**  
-   請參閱[如何監視 System Center Configuration Manager 中的 Endpoint Protection](../../../protect/deploy-use/monitor-endpoint-protection.md)。  
+   请参阅[如何在 System Center Configuration Manager 中监视 Endpoint Protection](../../../protect/deploy-use/monitor-endpoint-protection.md)。  
 
-**監視電源管理**  
- 請參閱[如何監視和規劃 System Center Configuration Manager 的電源管理](../../../core/clients/manage/power/monitor-and-plan-for-power-management.md)。  
+**监视电源管理**  
+ 请参阅[如何在 System Center Configuration Manager 中监视和规划电源管理](../../../core/clients/manage/power/monitor-and-plan-for-power-management.md)。  
 
-**監視軟體計量**  
-請參閱[在 System Center Configuration Manager 中使用軟體計量監視應用程式使用量](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md)。  
+**监视软件计数**  
+请参阅[在 System Center Configuration Manager 中使用软件计数监视应用使用情况](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md)。  
 
-**監視軟體更新**  
- 請參閱[在 System Center Configuration Manager 中監視軟體更新](../../../sum/deploy-use/monitor-software-updates.md)。  
+**监视软件更新**  
+ 请参阅[在 System Center Configuration Manager 中监视软件更新](../../../sum/deploy-use/monitor-software-updates.md)。  
 
 
-##  <a name="BKMK_MonitorInfrastructure"></a> 監視 Configuration Manager 的階層基礎結構  
-Configuration Manager 提供數種可監視階層狀態和操作的方法。 您可以檢查整個階層上站台的系統狀態、監視來自站台階層或地理檢視的站台內複寫、監視站台間資料庫複寫的複寫連結，以及使用複寫連結分析師工具補救複寫問題。  
+##  <a name="BKMK_MonitorInfrastructure"></a> 监视 Configuration Manager 的层次结构基础结构  
+Configuration Manager 提供了若干方法来监视层次结构的状态和操作。 你可以检查整个层次结构中站点的系统状态、通过站点层次结构或地理视图监视站点内复制、针对数据库复制监视站点之间的复制链接，并使用复制链接分析器工具来修正复制问题。  
 
-###  <a name="BKMK_SH_Node"></a> 關於站台階層節點  
-[監視] 工作區的 [站台階層] 節點提供您 Configuration Manager 階層和站台間連結的概觀。 您可以使用兩種檢視：  
+###  <a name="BKMK_SH_Node"></a> 关于站点层次结构节点  
+“监视”工作区中的“站点层次结构”节点提供 Configuration Manager 层次结构和站点间链接的概述。 你可以使用两个视图：  
 
--   **階層圖**：此檢視會以拓撲圖顯示您的階層，該圖已簡化為只顯示重要資訊。  
+-   **层次结构关系图**：此视图将层次结构显示为一个拓扑图，该拓扑图经过简化，仅显示重要信息。  
 
--   **地理檢視**：此檢視會以地圖顯示您的站台，顯示您所設定的站台位置。  
+-   **地理视图**：此视图在显示你配置的站点位置的地图上显示你的站点。  
 
-使用 [站台階層]  節點監視各站台的健全狀況、站台內複寫連結，以及其與外在因素的關聯性，例如地理位置。  
+使用“站点层次结构”  节点来监视每个站点的运行状况，以及站点内复制链接及它们与外部因素（例如地理位置）的关系。  
 
-由於站台狀態和站台內連線狀態會複寫為站台資料，而不是全域資料，因此當您將 Configuration Manager 主控台連線到子主要站台時，無法檢視其他主要站台或其子次要站台的站台或連結狀態。 例如，在多重主要站台階層中，當您的 Configuration Manager 主控台連線到主要站台時，您可以檢視子次要站台、主要站台和管理中心網站的狀態，但您無法查看管理中心網站下方階層中其他節點的狀態。  
+由于站点状态和站点内链接状态以站点数据（而不是全局数据）形式复制，因此当你将 Configuration Manager 控制台连接到子主站点时，将无法查看其他主站点或其子辅助站点的站点或链接状态。 例如，在多主站点层次结构中，当 Configuration Manager 控制台连接到主站点时，你可以查看子辅助站点、主站点和管理中心站点的状态，但看不到管理中心站点下层次结构的其他节点的状态。  
 
- 請使用 [設定設定值]  命令控制站台階層顯示的呈現方式。 當 Configuration Manager 主控台連線到一個站台時，對 [站台階層] 節點所進行的設定都會複寫到所有其他站台。  
+ 使用“配置设置”  命令来控制站点层次结构显示的呈现方式。 你在 Configuration Manager 控制台连接到一个站点时对“站点层次结构”节点进行的配置将被复制到所有其他站点。  
 
-#### <a name="hierarchy-diagram"></a>階層圖  
- 階層圖會以拓撲圖顯示您的站台。 在此檢視中，您可以從該站台選取站台和檢視狀態訊息摘要切入以檢視狀態訊息，以及存取站台的 [內容]  對話方塊。  
+#### <a name="hierarchy-diagram"></a>层次结构关系图  
+ 层次结构关系图在拓扑图中显示你的站点。 在此视图中，你可以选择站点并查看该站点中的状态消息摘要，向下钻取以查看状态消息，以及访问站点的“属性”  对话框。  
 
- 此外，您可以將滑鼠指標暫停在站台或站台間的複寫連結上，以檢視該物件的高階狀態。 由於複寫連線狀態不會進行全域複寫，因此在內含多重主要站台的階層中，您必須將 Configuration Manager 主控台連線到管理中心網站，如此才能檢視所有站台間的複寫連結詳細資。  
+ 此外，你可以将鼠标指针悬停在站点或站点之间的复制链接上以查看该对象的高级状态。 由于复制链接状态不会全局复制，因此，在包含多个主站点的层次结构中，你必须将 Configuration Manager 控制台连接到管理中心站点才能查看所有站点之间的复制链接详细信息。  
 
- 下列選項可修改階層圖：  
+ 下列选项会修改层次结构关系图：  
 
--   **群組**：您可以設定在階層圖中觸發變更的主要站台和次要站台數目，圖中會將這些站台合併為單一物件。 當多個站台合併為單一物件，您就可以查看站台的總數，以及狀態訊息和站台狀態的高階彙總。 群組設定不會影響地理檢視。  
+-   **组**：你可以配置在层次结构关系图显示中触发更改的主站点和辅助站点的数量，该关系图将这些站点合并为一个对象。 如果站点合并为一个对象，你将看到站点的总数，以及状态消息和站点状态的高级汇总。 组配置不影响地理视图。  
 
--   **我的最愛站台**：您可以將個別站台指定為我的最愛站台。 階層圖會以星號圖示識別我的最愛站台。 我的最愛站台不會在您使用群組時與其他站台合併，而且永遠會個別顯示。  
+-   **收藏站点**：你可以将单独的站点指定为收藏站点。 星形图标在层次结构关系图中标识收藏站点。 当你使用组时，收藏站点不会与其他站点合并，并始终会单独显示。  
 
-#### <a name="geographical-view"></a>地理檢視  
- 地理檢視會以地圖顯示各站台的位置。 只會顯示使用位置設定的站台。 當您在此檢視中選取站台時，會顯示複寫到父站台或子站台的連結。 和階層圖檢視不同的是，您不能在此檢視中顯示站台狀態訊息或複寫連結詳細資料。  
+#### <a name="geographical-view"></a>地理视图  
+ 地理视图显示每个站点在地图上的位置。 只会显示与位置一起配置的站点。 在此视图中选择站点时，将显示指向父站点或子站点的复制链接。 与层次结构关系图视图不同，你无法在此视图中显示站点状态消息或复制链接详细信息。  
 
 > [!NOTE]  
->  若要使用地理檢視，您的 Configuration Manager 主控台所連線的電腦必須已安裝 Internet Explorer，並且能夠使用 HTTP 通訊協定存取 Bing 地圖服務。  
+>  要使用地理视图，Configuration Manager 控制台所连接到的计算机必须安装 Internet Explorer，并且必须能够通过使用 HTTP 协议来访问必应地图。  
 
-下列選項可修改地理檢視。  
+下列选项修改地理视图。  
 
--   **站台位置**：您可以為每個站台指定地理位置。 您可以將位置指定為街道地址、地圖名稱 (如城市名稱)，或緯度和經度座標。 例如，若要使用 Redmond Washington 的緯度和經度，您可以指定 **N 47 40 26.3572 W 122 7 17.4432** 作為站台的位置。 您不需要指定經度或緯度的度數、分鐘或秒數的符號。 Configuration Manager 會使用 Bing 地圖服務，在地理檢視上顯示位置。 這讓您可以選擇檢視與地理位置相關的階層，深入瞭解可能會影響到特定站台或站台內複寫的地區問題。  
+-   **站点位置**：你可以指定每个站点的地理位置。 你可以将位置指定为街道地址、位置名称（例如城市名称），或者通过经纬度坐标来指定位置。 例如，要使用华盛顿雷蒙德市的经纬度，你将指定 **N 47 40 26.3572 W 122 7 17.4432** 作为站点位置。 你无需为经纬度的度、分或秒指定符号。 Configuration Manager 使用必应地图在地理视图上显示位置。 这样，你将能选择相对于某个地理位置查看你的层次结构，从而可深入了解可能影响特定站点或站点内复制的区域问题。  
 
-     當您指定某個位置時，可使用 [位置]  方塊來搜尋階層中的特定站台。 選取站台之後，請在 [位置]  資料行輸入位置的縣 (市) 名稱或街道地址。 Configuration Manager 使用 Bing 地圖服務以解析此位置。  
+     在指定位置时，你可以使用“位置”  框来搜索层次结构中的特定站点。 选中站点后，在“位置”  列中输入城市名或街道地址作为位置。 Configuration Manager 使用必应地图解析位置。  
 
-###  <a name="BKMK_MonitorRepLinksAndStatuss"></a> 如何監視資料庫複寫連結和複寫狀態  
- 除了從 [監視]  工作區的 [站台階層]  節點存取高階詳細資料， 您也可以在使用 [監視]  工作區的 [資料庫複寫]  節點時，監視資料庫複寫的詳細資料。 您可以從 [資料庫複寫] 監視站台間複寫連結的狀態，以及您的 Configuration Manager 主控台所連線之站台上複寫群組的初始化詳細資料和複寫詳細資料。  
+###  <a name="BKMK_MonitorRepLinksAndStatuss"></a> 如何监视数据库复制链接和复制状态  
+ 除了可从“监视”  工作区“站点层次结构”  节点访问的高层详细信息。 还可在使用“监视”  工作区中的“数据复制”  节点时监视数据库复制的详细信息。 从“数据库复制”中，你可以监视站点之间的复制链接的状态，以及你的 Configuration Manager 控制台所连接到的站点上的复制组的初始化详细信息和复制详细信息。  
 
 > [!TIP]  
->  雖然 [資料庫複寫]  節點也會顯示在 [系統管理]  工作區的 [階層設定]  節點中，但您無法從該位置檢視資料庫複寫連結的複寫狀態。  
+>  尽管“数据库复制”  节点还出现在“管理”  工作区的“层次结构配置”  节点下，但你无法从该位置中查看数据库复制链接的复制状态。  
 
-####  <a name="BKMK_MonitorReplicationLinks"></a> 複寫連結狀態  
-站台間的資料庫複寫包含多組資訊的複寫，稱為複寫群組。 每個複寫群組會以不同複寫優先順序進行複寫。 根據預設，複寫群組中包含的資料和複寫的頻率都無法修改。  
+####  <a name="BKMK_MonitorReplicationLinks"></a> 复制链接状态  
+站点之间的数据库复制涉及到若干组信息的复制，称为复制组。 每个复制组都使用不同的复制优先级进行复制。 默认情况下，无法修改复制组中包含的数据以及复制的频率。  
 
- 當複寫連結在使用中時，而且沒有失敗或降級的狀態時，會及時複寫所有的複寫群組。 當一個或多個複寫群組無法在預訂的時間內完成複寫時，該連結會顯示為降級狀態。 降級的連結仍然可以運作，但您應該監視這些連結，確定它們是否返回使用中狀態，或調查它們以確定未發生其他降級或複寫失敗情形。  
+ 当复制链接处于活动状态，并且没有失败或降级状态时，所有复制组都将及时进行复制。 如果一个或多个复制组在预期的时间段中无法完成复制，则链接将显示为降级。 降级的链接仍然起作用，但你应对其进行监视以确保其恢复为活动状态，或对其进行调查以确保不会出现其他降级或复制失败情况。  
 
- 您可以為每個複寫連結指定當複寫群組在複寫不成功時可重試複寫的次數，之後連結的狀態就會設定為降級或失敗。 即使所有複寫群組的複寫只有一個複寫群組失敗，連結的狀態就會設定為降級或失敗，因為在指定的嘗試次數內有一個複寫群組無法完成複寫。 如需複寫閾值的資訊，請參閱 [System Center Configuration Manager 中的站台間資料傳輸](../../../core/servers/manage/data-transfers-between-sites.md)主題中的[資料庫複寫閾值](../../../core/servers/manage/data-transfers-between-sites.md#BKMK_DBRepThresholds)一節。  
+ 你可以为每个复制链接指定未成功复制的复制组在链接状态设置为降级或失败之前重试复制的次数。 即使除了一个复制组外的所有复制组都成功复制，但由于一个复制组无法在指定的尝试次数内完成复制，链接的状态仍会设置为降级或失败。 有关复制阈值的信息，请参阅 [System Center Configuration Manager 中的站点间数据传输](../../../core/servers/manage/data-transfers-between-sites.md)中的[数据库复制阈值](../../../core/servers/manage/data-transfers-between-sites.md#BKMK_DBRepThresholds)部分。  
 
- 使用下表中的資訊可瞭解需要進一步調查的複寫連結狀態。  
+ 使用下表中的信息来了解可能需要进一步调查的复制链接的状态。  
 
-|連結描述|詳細資訊|  
+|链接描述|更多信息|  
 |----------------------|----------------------|  
-|**連結使用中**|未偵測到問題，連結通訊正進行中。|  
-|**連結已降級**|複寫正常運作，但至少有一個複寫物件或群組發生延遲。 監視處於此狀態的連結，並檢閱連結上兩個站台的資訊，確定連結是否發生失敗的情形。<br /><br /> 當站台接收到的複寫資料無法快速將資料認可到資料庫時，連結可能也會顯示降級的狀態。 在進行大量資料複寫時，可能會發生此情況。 例如，若部署軟體更新到大量電腦，連結上的父站台可能需要一些時間來處理大量的資料複寫。 父站台上的處理延隔，可能會導致連結狀態設為降級，直到父站台順利處理資料的積存為止。|  
-|**連結已失敗**|複寫無法運作。 複寫連結有可能在沒有進一步動作的情況下復原。 您可以使用複寫連結分析師來調查及協助補救此連結上的複寫。<br /><br /> 此狀態也可能表示複寫連結上父站台和子站台之間發生實體網路的問題。|  
+|**链接处于活动状态**|未检测到任何问题，并且链接上的通信正在进行。|  
+|**链接已降级**|复制正常运行，但至少一个复制对象或组已延迟。 监视处于此状态的链接，并查看链接上两个站点中的信息了解链接可能失败的迹象。<br /><br /> 当收到复制的数据的站点无法将数据快速提交到数据库时，链接也可能显示降级状态。 在复制大量数据时，可能会发生这种情况。 例如，你将软件更新部署到大量的计算机，则链接上的父站点可能要花费一段时间来处理复制的数据量。 父站点上的处理延迟可能会导致将链接状态设置为降级，直至父站点可成功处理积压的数据为止。|  
+|**链接已失败**|复制无法正常工作。 复制链接可能无需进行进一步操作便可恢复。 你可以使用复制链接分析器来调查并帮助修正此链接上的复制。<br /><br /> 此状态也可能指示复制链接上父站点和子站点之间的物理网络的问题。|  
 
- 當父站台正在升級到新的 Service Pack，而且您正在從子站台檢視連結狀態時，連結狀態會顯示為使用中。 升級後，要等到子站台與父站台使用相同的 Service Pack 時，從父站台檢視時連結狀態會顯示為使用中，而從子站台檢視時會顯示為已設定。  
+ 当父站点正在升级到新的 Service Pack，并且你从子站点中查看链接状态时，链接状态将显示为活动。 升级之后，在子站点也升级到与父站点相同的 Service Pack 之前，如果从父站点中进行查看，链接状态将显示为活动，如果从子站点中进行查看，链接状态将显示为正在配置。  
 
-####  <a name="BKMK_MonitorReplicationStatus"></a> 複寫狀態  
- 您可以使用 [監視]  工作區的 [資料庫複寫]  節點來檢視複寫連結的複寫狀態，以及檢視與複寫連結上各個站台的站台資料庫相關詳細資料。 您也可以檢視與複寫群組相關的詳細資料。 若要檢視詳細資料，請選取複寫連結，然後針對您要檢視的複寫狀態選取適當的索引標籤。 以下是複寫狀態之各種不同索引標籤的相關詳細資料。  
+####  <a name="BKMK_MonitorReplicationStatus"></a> 复制状态  
+ 你可以使用“监视”  工作区的“数据库复制”  节点来查看复制链接的复制状态，并查看复制链接上每个站点中的站点数据库的详细信息。 你还可以查看有关复制组的详细信息。 要查看详细信息，请选择复制链接，然后为要查看的复制状态选择相应的选项卡。 下面是有关复制状态的不同选项卡的详细信息。  
 
  **摘要**  
- 檢視與站台資料的複寫以及連結上兩個站台間全域資料相關的層級資訊。  
+ 查看有关链接上两个站点之间的站点数据和全局数据复制的高级信息。  
 
- 您也可以按一下 [檢視歷史流量資料的報告]  ，檢視顯示與透過複寫連結進行複寫所使用網路頻寬相關的詳細資料報告。  
+ 你也可以单击“查看历史流量数据报表”  来查看一个报表，其中显示有关复制链接上的复制所使用的网络带宽的详细信息。  
 
- **父站台**  
- 針對複寫連結上的父站台，檢視與資料庫相關的詳細資料，包括：  
+ **父站点**  
+ 对于复制链接上的父站点，查看有关数据库的详细信息，其中包括：  
 
--   SQL Server 的防火牆連接埠  
+-   SQL Server 的防火墙端口  
 
--   可用磁碟空間  
+-   可用磁盘空间  
 
--   資料庫檔案位置  
+-   数据库文件位置  
 
--   憑證  
+-   证书  
 
-**子站台**  
- 針對複寫連結上的子站台，檢視與資料庫相關的詳細資料，包括：  
+**子站点**  
+ 对于复制链接上的子站点，查看有关数据库的详细信息，其中包括：  
 
--   SQL Server 的防火牆連接埠  
+-   SQL Server 的防火墙端口  
 
--   可用磁碟空間  
+-   可用磁盘空间  
 
--   資料庫檔案位置  
+-   数据库文件位置  
 
--   憑證  
+-   证书  
 
-**初始化詳細資料**    
- 檢視透過複寫連結進行複寫的複寫群組初始化狀態。 此資訊可協助您識別初始化複寫資料正在進行中或已失敗。  
+**初始化详细信息**    
+ 查看通过复制链接进行复制的复制组的初始化状态。 此信息可帮助你确定复制数据的初始化何时正在进行或已失败。  
 
- 此外，您可以使用此資訊來識別站台進入互通性模式的時間。 互通性模式會在子站台與父站台不是使用相同版本的 Configuration Manager 時發生。  
+ 此外，你可以使用此信息来确定站点何时可能处于互操作性模式。 当子站点运行的 Configuration Manager 版本与父站点不同时，将会出现互操作性模式。  
 
-**複寫詳細資料**    
- 檢閱每個跨連結複寫之複寫群組的複寫狀態。 利用這項資訊可幫助您識別複寫特定資料時的問題或延遲，並且有助於判斷適合此連結的資料庫複寫臨界值。 如需資料庫複寫閾值的資訊，請參閱 [System Center Configuration Manager 中的站台間資料傳輸](../../../core/servers/manage/data-transfers-between-sites.md)主題中的[資料庫複寫閾值](../../../core/servers/manage/data-transfers-between-sites.md#BKMK_DBRepThresholds)一節。  
+**复制详细信息**    
+ 查看通过链接进行复制的每个复制组的复制状态。 使用此信息来帮助确定特定数据复制的问题或延迟，并帮助确定此链接的相应数据库复制阈值。 有关数据库复制阈值的信息，请参阅 [System Center Configuration Manager 中的站点间数据传输](../../../core/servers/manage/data-transfers-between-sites.md)中的[数据库复制阈值](../../../core/servers/manage/data-transfers-between-sites.md#BKMK_DBRepThresholds)部分。  
 
 > [!TIP]  
->  站台資料的複寫群組只會從子站台傳送至父站台。 全域資料的複寫群組則會雙向複寫。  
+>  站点数据的复制组只会从子站点发送到父站点。 全局数据的复制组则以双向方式复制。  
 
-###  <a name="BKMK_RLA"></a> 關於複寫連結分析師  
- Configuration Manager 包含**複寫連結分析師**，可用來分析及修復複寫問題。 您可以使用複寫連結分析師在複寫失敗時，以及在複寫停止運作但尚未回報失敗時，補救複寫連結錯誤。 複寫連結分析師可用來補救 Configuration Manager 階層中下列電腦之間的複寫問題 (複寫失敗的方向沒有影響)：  
+###  <a name="BKMK_RLA"></a> 关于复制链接分析器  
+ Configuration Manager 包括**复制链接分析器**，你使用该分析器来分析和修复复制问题。 你可以使用复制链接分析器在复制失败以及复制停止工作但尚未报告为失败时修正复制链接故障。 复制链接分析器可用于修正 Configuration Manager 层次结构中以下计算机之间的复制问题（复制故障的方向并不重要）：  
 
--   站台伺服器和站台資料庫伺服器之間。  
+-   站点服务器和站点数据库服务器之间。  
 
--   每一個站台的站台資料庫伺服器和另一個站台的站台資料庫電腦之間 (站台間複寫)。  
+-   站点的站点数据库服务器和另一个站点的站点数据库计算机之间（站点间复制）。  
 
-您可以在 Configuration Manager 主控台或命令提示字元中執行複寫連結分析師：  
+你可以在 Configuration Manager 控制台中或命令提示符处运行复制链接分析器：  
 
--   在 Configuration Manager 主控台中執行：在 [監視] 工作區中按一下 [資料庫複寫] 節點，選取您要分析的複寫連結，然後在 [首頁] 索引標籤的 [資料庫複寫] 群組中，選取 [複寫連結分析師]。  
+-   在 Configuration Manager 控制台中运行：在“监视”工作区中，单击“数据库复制”节点，选择要分析的复制链接，然后在“主页”选项卡上的“数据库复制”组中选择“复制链接分析器”。  
 
--   若要在命令提示字元中執行，請輸入下列命令：**%路徑%\Microsoft Configuration Manager\AdminConsole\bin\Microsoft.ConfigurationManager.ReplicationLinkAnalyzer.Wizard.exe &lt;來源站台伺服器 FQDN\> &lt;目的地站台伺服器 FQDN\>**。  
+-   要在命令提示符处运行，请键入以下命令：**%path%\Microsoft Configuration Manager\AdminConsole\bin\Microsoft.ConfigurationManager.ReplicationLinkAnalyzer.Wizard.exe &lt;源站点服务器 FQDN\> &lt;目标站点服务器 FQDN\>**  
 
-當您執行複寫連結分析師時，它會使用一系列診斷規則和檢查偵測問題。 當工具執行時，您可以檢視工具識別出的問題。 如果已知有解決問題的指示，則會顯示。 如果複寫連結分析器可自動補救問題，就會對您顯示該選項。 複寫連結分析器完成時，會將結果儲存到下列 XML 報告中，以及執行工具的使用者桌面上的記錄檔中：  
+当你运行复制链接分析器时，它将使用一系列诊断规则和检查来检测问题。 该工具运行时，你可以查看该工具确定的问题。 如果用于解决某个问题的说明已知，则会显示出来。 如果复制链接分析器可自动修正问题，则会向你呈现该选项。 当复制链接分析器完成时，它将结果保存在以下基于 XML 的报表以及运行该工具的用户桌面上的一个日志文件中：  
 
 -   ReplicationAnalysis.xml  
 
 -   ReplicationLinkAnalysis.log  
 
-當複寫連結分析師執行時，會在補救問題時停止下列服務，並且在補救完成後重新啟動這些服務：  
+当复制链接分析器运行时，它会在修正某些问题时停止以下服务，并在修正完成时重启这些服务：  
 
 -   SMS_SITE_COMPONENT_MANAGER  
 
 -   SMS_EXECUTIVE  
 
-如果複寫連結分析師補救失敗，請檢閱站台伺服器並重新啟動這些服務 (如果已停止)。  
+如果复制链接分析器未能完成修正，请查看站点服务器并重启这些服务（如果它们已停止）。  
 
-成功和不成功的調查與補救動作都會加以記錄，以提供工具介面上未顯示的其他詳細資料。  
+成功和未成功的调查和修正操作会被记录下来，以提供工具界面中未呈现的附加详细信息。  
 
-**使用複寫連結分析師的必要條件：**  
+**使用复制链接分析器的先决条件：**  
 
--   您用來執行複寫連結分析師的帳戶，必須具有複寫連結中所包含每一部電腦上的本機系統管理員權限。 帳戶不需要特定角色為基礎的系統管理安全性角色。 因此，有權存取 [資料庫複本] 節點的系統管理使用者可以在 Configuration Manager 主控台執行此工具，或是對每部電腦有足夠權限的系統管理員可以在命令提示字元執行此工具。  
+-   你用于运行复制链接分析器的帐户在复制链接中涉及的每台计算机上必须具有本地管理员权限。 此帐户不需要特定的基于角色的管理安全角色。 因此，有权访问“数据库复制”节点的管理用户可以在 Configuration Manager 控制台中运行该工具，或者对每台计算机具有足够权限的系统管理员可以在命令提示符处运行该工具。  
 
--   您用來執行複寫連結分析師的帳戶，必須具有複寫連結中所包含每一個 SQL Server 的 sysadmin 權限。  
+-   你用于运行复制链接分析器的帐户对复制链接中涉及的每个 SQL Server 数据库必须具有 sysadmin 权限。  
 
-**複寫連結分析師的已知問題：**  
+**复制链接分析器的已知问题：**  
 
--   隨著 System Center Configuration Manager 1511 版的發行，複寫連結分析師在從 System Center 2012 Configuration Manager 升級的主要站台中會產生 SQL Server Service Broker 憑證錯誤。 這是因為 1511 版本導入了憑證名稱變更，但複寫連結分析師尚未更新。 忽略這些錯誤並無大礙。  
+-   随着 System Center Configuration Manager 1511 版本的发布，复制链接分析器针对从 System Center 2012 Configuration Manager 升级的主站点会产生 SQL Server Service Broker 证书错误。 这是因为 1511 版本引入的证书名称发生更改，而复制链接分析器尚未对其进行更新。 可以安全忽略这些错误。  
 
-###  <a name="BKMK_ProcsforMonitoringReplication"></a> 監視資料庫複寫的程序  
+###  <a name="BKMK_ProcsforMonitoringReplication"></a> 用于监视数据库复制的过程  
 
-##### <a name="to-monitor-high-level-site-to-site-database-replication-status"></a>若要監視高階站台對站台資料庫複寫狀態    
-1.  在 Configuration Manager 主控台中，按一下 [監視] 。  
+##### <a name="to-monitor-high-level-site-to-site-database-replication-status"></a>监视高级别站点到站点数据库复制状态    
+1.  在 Configuration Manager 控制台中，单击“监视” 。  
 
-2.  在 [監視]  工作區中，按一下 [站台階層]  開啟 [階層圖]  檢視。  
+2.  在“监视”  工作区中，单击“站点层次结构”  以打开“层次结构图表”  视图。  
 
-3.  將滑鼠指標短暫暫停於兩個站台之間的線上，即可檢視這些站台的全域和站台資料複寫的狀態。  
+3.  将鼠标指针短暂停留在两个站点之间的线条上以查看这些站点的全局和站点数据复制的状态。  
 
-##### <a name="to-monitor-the-replication-status-for-a-replication-link"></a>若要監視複寫連結的複寫狀態    
-1.  在 Configuration Manager 主控台中，按一下 [監視] 。  
+##### <a name="to-monitor-the-replication-status-for-a-replication-link"></a>监视复制链接的复制状态    
+1.  在 Configuration Manager 控制台中，单击“监视” 。  
 
-2.  在 [監視]  工作區中，按一下 [資料庫複寫] ，然後選取您要監視之連結的複寫連結。 然後在工作區中，選取適當的索引標籤檢視有關該連結之複寫狀態的各種不同詳細資料。  
+2.  在“监视”  工作区中，单击“数据库复制” ，然后选择要监视的链接的复制链接。 然后，在工作区中选择相应的选项卡以查看有关该链接的复制状态的不同详细信息。  

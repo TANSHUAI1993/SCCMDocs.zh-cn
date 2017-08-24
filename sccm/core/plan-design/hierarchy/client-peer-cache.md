@@ -1,6 +1,6 @@
 ---
-title: "用戶端對等快取 | System Center Configuration Manager"
-description: "使用 System Center Configuration Manager 部署內容時，針對用戶端內容來源位置使用對等快取。"
+title: "客户端对等缓存 | System Center Configuration Manager"
+description: "使用 System Center Configuration Manager 部署内容时，将对等缓存用于客户端内容源位置。"
 ms.custom: na
 ms.date: 7/31/2017
 ms.reviewer: na
@@ -17,93 +17,93 @@ manager: angrobe
 ms.openlocfilehash: 89fcd16887ae77299f9d18472ee6a1ba56794eca
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="peer-cache-for-configuration-manager-clients"></a>Configuration Manager 用戶端的對等快取
+# <a name="peer-cache-for-configuration-manager-clients"></a>用于 Configuration Manager 客户端的对等缓存
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-從 System Center Configuration Manager 版本 1610 開始，您可以使用**對等快取**，以協助管理將內容部署至遠端位置的用戶端。 對等快取是一個內建的 Configuration Manager 解決方案，可讓用戶端直接將其本機快取的內容與其他用戶端共用。   
+从 System Center Configuration Manager 版本 1610 开始，可以使用**对等缓存**来帮助管理向远程位置中客户端的内容部署。 对等缓存是内置 Configuration Manager 解决方案，使客户端能够直接从本地缓存将内容与其他客户端共享。   
 
 > [!TIP]  
-> 對等快取和用戶端資料來源儀表板，都是在版本 1610 引進的發行前版本功能。 若要啟用它們，請參閱[使用更新的發行前版本功能](/sccm/core/servers/manage/pre-release-features)。
+> 如 1610 版本中所述，对等缓存和“客户端数据源”仪表板均为预发行功能。 若要启用这些功能，请参阅[使用更新中的预发行功能](/sccm/core/servers/manage/pre-release-features)。
 
-## <a name="overview"></a>概觀
-對等快取用戶端是可以使用對等快取的 Configuration Manager 用戶端。 具有可與其他用戶端共用之內容的對等快取用戶端為對等快取來源。
- -  您可以使用用戶端設定，讓使用端能夠使用對等快取。
- -  若要以對等快取來源的形式共用內容，對等快取用戶端必須：
-    -  已加入網域。 不過，未加入網域的用戶端仍可以從已加入網域的對等快取來源取得內容。
-    -  為正在尋找內容之用戶端的目前界限群組成員。 當用戶端使用後援來搜尋鄰近界限群組的內容時，鄰近界限群組中的對等快取用戶端不會包含於可用內容來源位置的集區中。 如需目前和鄰近界限群組的詳細資訊，請參閱[界限群組](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups##a-namebkmkboundarygroupsa-boundary-groups)。
- - Configuration Manager 用戶端快取中保存的每種內容類型，都可利用對等快取提供給其他的用戶端。
- -  對等快取不會取代其他解決方案 (例如 BranchCache) 的使用，而是可並行運作來提供您更多選項以擴充傳統內容部署解決方案。 這是一個不依賴 BranchCache 的自訂解決方案，所以就算不啟用或使用 Windows BranchCache，這個解決方案仍能運作。
+## <a name="overview"></a>概述
+对等缓存客户端是能够使用对等缓存功能的 Configuration Manager 客户端。 具有可与其他客户端共享的内容的对等缓存客户端是对等缓存源。
+ -  通过客户端设置，可以使客户端能够使用对等缓存。
+ -  若要将内容共享为对等缓存源，那么对等缓存客户端需满足以下条件：
+    -  必须已加入域。 但是，未加入域的客户端可以获取已加入域的对等缓存源中的内容。
+    -  必须是正在查找该内容的客户端当前边界组的成员。 客户端使用回退来查找相邻边界组中的内容时，相邻边界组中的对等缓存客户端不包括在可用内容源位置的池中。 有关当前边界组和相邻边界组的详细信息，请参阅[边界组](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups##a-namebkmkboundarygroupsa-boundary-groups)。
+ - Configuration Manager 客户端缓存中保留的每种类型的内容均可使用对等缓存提供给其他客户端。
+ -  对等缓存不会代替其他解决方案（如 BranchCache）的使用，而是并行工作以便提供更多选项，用于扩展传统内容部署解决方案（如分发点）。 这是一种无需依赖于 BranchCache 的自定义解决方案，因此即使不启用或不使用 Windows BranchCache，此解决方案依然可正常运作。
 
-### <a name="operations"></a>作業
+### <a name="operations"></a>操作
 
-將啟用對等快取的用戶端設定部署至集合之後，該集合的成員就能做為同一個界限群組中其他用戶端的對等內容來源：
- -  以對等內容來源運作的用戶端會向其管理點提交可用的快取內容清單。
- -  然後，當該界限群組中的下一個用戶端要求該內容時，就會傳回具有該內容的每個對等快取來源以做為潛在的內容來源，以及該界限群組中的發佈點與其他內容來源位置。
- -  針對每個標準作業程序，搜尋內容的用戶端會從提供給它的來源集區中選取一個內容來源，然後繼續嘗試取得內容。
+将启用对等缓存的客户端设置部署到集合后，该集合的成员可以充当同一边界组中其他客户端的对等内容源：
+ -  充当对等内容源的客户端会将可用缓存内容列表提交到其管理点。
+ -  然后，当该边界组中的下一个客户端请求该内容时，具有内容的每个对等缓存源都将作为潜在内容源返回，同时还将返回该边界组中的分发点和其他内容源位置。
+ -  根据正常操作过程，查找内容的客户端将从为其提供的源池中选择其中一个内容源，然后继续尝试获取内容。
 
 > [!NOTE]
-> 如果對內容的鄰近界限群組發生了後援，就不會將來自鄰近界限群組的對等快取內容來源位置新增至用戶端潛在內容來源位置的集區。  
+> 如果发生了向内容的相邻边界组的回退，则相邻边界组中的对等缓存内容源位置将不会添加到潜在内容源位置的客户端池中。  
 
 
-雖然您可以讓所有用戶端以對等快取來源的身分參與，但最理想的做法是只選擇最適合作為對等快取來源的用戶端。  您可以根據用戶端的底座類型、磁碟空間、網路連線能力及更多項目來評估用戶端的適用性。 如需可協助您選取最適合用於對等快取的最佳用戶端詳細資訊，請參閱[這個由 Microsoft 顧問所維護的部落格](https://blogs.technet.microsoft.com/setprice/2016/06/29/pe-peer-cache-custom-reporting-examples/)。
+虽然可以让所有客户端都加入为对等缓存源，但最佳做法还是仅选择最适合作为对等缓存源的那些客户端。  可以根据客户端的底盘类型、磁盘空间、网络连接等评估客户端的适用性。 有关可帮助选择要用于对等缓存的最佳客户端的详细信息，请参阅[这篇由 Microsoft 顾问撰写的博客](https://blogs.technet.microsoft.com/setprice/2016/06/29/pe-peer-cache-custom-reporting-examples/)。
 
-**限制存取對等快取來源**  
-從 1702 版開始，當對等快取來源電腦符合下列任一條件時，對等快取來源電腦將會拒絕內容要求︰  
-  -  處於電力偏低模式。
-  -  CPU 負載會在要求內容時超過 80%。
-  -  磁碟 I/O 的 *AvgDiskQueueLength* 超過 10。
-  -  無法再連線至電腦。   
+**对对等缓存源的有限访问权限**  
+从版本 1702 开始，当对等缓存源计算机满足以下任一条件时，对等缓存源计算机将拒绝对内容的请求：  
+  -  处于低电量模式。
+  -  请求内容时 CPU 负载超过 80%。
+  -  磁盘 I/O 的 AvgDiskQueueLength 超过 10。
+  -  该计算机没有其他可用连接。   
 
-當您使用 System Center Configuration Manager SDK 時，可以使用對等來源功能的用戶端設定伺服器 WMI 類別來進行這些設定 (*SMS_WinPEPeerCacheConfig*)。
+使用 System Center Configuration Manager SDK 时，可以使用对等源功能的客户端配置服务器 WMI 类 (*SMS_WinPEPeerCacheConfig*) 配置这些设置。
 
-電腦拒絕內容要求時，提出要求的電腦會繼續在其可用內容來源位置集區中的替代來源搜尋內容。   
-
-
-
-### <a name="monitoring"></a>監視   
-為了協助您了解對等快取的用法，您可以檢視 [用戶端資料來源] 儀表板。 請參閱[用戶端資料來源儀表板](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed#client-data-sources-dashboard)。
-
-從 1702 版開始，您可以使用下列三份報告來檢視對等快取使用情況。 在主控台中，移至 [監視] >  [報告] > [報告]。 所有報告的類型都是 [軟體發佈內容]：
-1.  **對等快取來源內容拒絕**：  
-您可以使用此報告來了解界限群組中的對等快取來源拒絕內容要求的頻率。
- - **已知問題︰**向下鑽研 *MaxCPULoad* 或 *MaxDiskIO* 之類的結果時，您可能會收到錯誤，暗示找不到報告或詳細資料。 若要解決這個問題，請使用下列兩種報告，直接顯示結果。
-
-2. **對等快取來源內容拒絕條件**：  
-您可以使用此報告來了解所指定界限群組或拒絕類型的詳細拒絕資料。 您可以指定
-
-  - **已知問題︰**您無法從可用的參數中選取，而必須改為手動輸入。 如同在第一份報告中所見，輸入 [界限群組名稱] 和 [拒絕類型] 的值。 例如，您可能會在 [拒絕類型] 輸入 *MaxCPULoad* 或 *MaxDiskIO*。
-
-3. **對等快取來源內容拒絕詳細資料**：   
-  您可以使用此報告來了解所要求但遭到拒絕的內容。
-
- - **已知問題︰**您無法從可用的參數中選取，而必須改為手動輸入。 如同在第一份報告 (對等快取來源內容拒絕) 中所見，輸入 [拒絕類型] 的值，然後針對您需要詳細資訊的內容來源輸入其 [資源識別碼]。  尋找內容來源的資源識別碼︰  
-
-    1. 尋找如同第 2 份報告 (依條件拒絕對等快取來源內容) 結果中的 [對等快取來源] 所示的電腦名稱。  
-    2. 接下來，移至 [資產與合規性] > [裝置]，然後搜尋該電腦的名稱。 使用 [資源識別碼] 欄中的值。  
+如果计算机拒绝对内容的请求，请求计算机会继续在其可用内容源位置池中的备用源中搜索内容。   
 
 
-## <a name="requirements-and-considerations-for-peer-cache"></a>對等快取的需求與考量
--   在任何支援做為 Configuration Manager 用戶端的 Windows 作業系統上都支援對等快取。 非 Windows 作業系統不支援對等快取。
 
--   用戶端只能從其目前界限群組中的對等快取用戶端傳輸內容。
+### <a name="monitoring"></a>monitoring   
+为了帮助了解对等缓存的使用，可以查看“客户端数据源”仪表板。 请参阅[客户端数据源仪表板](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed#client-data-sources-dashboard)。
 
--   在 1706 版之前，用戶端使用對等快取所在的每個站台都必須設有[網路存取帳戶](/sccm/core/plan-design/hierarchy/manage-accounts-to-access-content#a-namebkmknaaa-network-access-account)。 從 1706 版開始，該帳戶已非必要，唯一的例外是：  當用戶端使用對等快取從軟體中心取得並執行工作順序，而該工作順序會將用戶端重新開機至 WinPE 時。  在此情況下，用戶端在 WinPE 時仍需要網路存取帳戶，才能存取對等快取來源以取得內容。
+从版本 1702 开始，可以使用以下三个报表来查看对等缓存使用。 在控制台中，转到“监视” > “报表” > “报表”。 所有报表均为一种类型的**软件分发内容**：
+1.  **对等缓存源内容拒绝**：  
+使用此报告来了解边界组中对等缓存源拒绝内容请求的频率。
+ - **已知问题：**在向下钻取结果（如 *MaxCPULoad* 或 *MaxDiskIO*）时，可能会收到一个错误，表明找不到该报表或详细信息。 若要解决此问题，请使用以下两个直接显示结果的报表。
 
-    當有需要網路存取帳戶時，對等快取來源電腦會使用此帳戶來驗證對等的下載要求，而針對此目的，只需要網域使用者權限。
+2. **按条件的对等缓存源内容拒绝**：  
+使用此报告来了解指定边界组的拒绝详细信息或拒绝类型。 你可指定
 
--   因為目前的對等快取內容來源界限是根據該用戶端的上次硬體清查提交所決定，所以，若用戶端漫遊至位於不同界限群組的網路位置，基於對等快取的目的，仍然可能被視為是其先前界限群組的成員。 這會導致提供給用戶端的對等快取內容來源不在其中繼網路位置上。 我們建議您排除有此設定傾向的用戶端，不要讓它以對等快取來源的身分參與。
+  - **已知问题：**不能从可用的参数中进行选择，而必须手动输入。 输入*边界组名称*和*拒绝类型*的值，如第一个报表所示。 例如，对于*拒绝类型*，你可以输入 *MaxCPULoad* 或 *MaxDiskIO*。
 
-## <a name="to-configure-client-peer-cache-client-settings"></a>設定用戶端對等快取的用戶端設定
-1.  在 Configuration Manager 主控台中，移至 [系統管理] > [用戶端設定]，然後開啟您要使用的裝置用戶端設定物件。 您也可以修改 [預設用戶端設定] 物件。
-2.  從可用的設定清單中，選擇 [用戶端快取設定]。
-3.  將 [在完整作業系統中啟用 Configuration Manager 用戶端以共用內容] 設為 [是]。
-4.  設定下列設定來定義您想要用於對等快取的連接埠：  
-  -  **用於初始網路廣播的連接埠**
-  -  **為用戶端對等通訊啟用 HTTPS**
-  -  **用於從對等節點下載內容的連接埠 (HTTP/HTTPS)**
+3. **对等缓存源内容拒绝详细信息**：   
+  使用此报告来了解在被拒绝时所请求的内容。
 
-在為對等快取啟用的每一部電腦上，如果 Windows 防火牆正在使用中，Configuration Manager 就會設定它，以便使用您設定的連接埠。
+ - **已知问题：**不能从可用的参数中进行选择，而必须手动输入。 输入在第一个报表（对等缓存源内容拒绝）中显示的*拒绝类型*值，然后输入你希望了解相关详细信息的内容源的*资源 ID*。  查找内容源的资源 ID：  
+
+    1. 在第二个报表（按条件的对等缓存源内容拒绝）的结果中查找显示为*对等缓存源*的计算机名称。  
+    2. 接下来，转到“资产和合规性” > “设备”，然后搜索该计算机名称。 使用资源 ID 列中的值。  
+
+
+## <a name="requirements-and-considerations-for-peer-cache"></a>对等缓存的要求和注意事项
+-   任何支持作为 Configuration Manager 客户端的 Windows 操作系统都支持对等缓存。 对等缓存不支持非 Windows 操作系统。
+
+-   客户端只能传输来自其当前边界组中的对等缓存客户端中的内容。
+
+-   在版本 1706 之前，客户端在其中使用对等缓存的每个站点必须使用[网络访问帐户](/sccm/core/plan-design/hierarchy/manage-accounts-to-access-content#a-namebkmknaaa-network-access-account)进行配置。 从版本 1706 开始，不再需要帐户，但有一个例外。  例外情况是：客户端使用对等缓存从软件中心获取并运行任务序列，并且该任务序列将客户端重新启动到 WinPE。  在此情况下，如果客户端处于 WinPE 中，则仍需要网络访问帐户，以便它可以访问对等缓存源以获取内容。
+
+    在需要时，对等缓存源计算机使用网络访问帐户对来自对等方的下载请求进行身份验证，且该帐户仅需要域用户权限即可实现此目的。
+
+-   因为对等缓存内容源的当前边界由该客户端上次提交的硬件清单决定，所以漫游到网络位置且在其他边界组中的客户端可能仍被视为其以前的边界组成员，以符合对等缓存的目的。 这可能导致提供给客户端的对等缓存内容源不在其直接网络位置中。 建议排除可能有此配置的客户端作为对等缓存源加入。
+
+## <a name="to-configure-client-peer-cache-client-settings"></a>配置客户端对等缓存客户端设置
+1.  在 Configuration Manager 控制台中，转到“管理” > “客户端设置”，然后打开要使用的设备客户端设置对象。 还可以修改默认客户端设置对象。
+2.  从可用设置的列表中，选择“客户端缓存设置”。
+3.  将“在完整的 OS 中启用 Configuration Manager 客户端以共享内容”设置为“是”。
+4.  配置以下设置以定义要用于对等缓存的端口：  
+  -  **初始网络广播的端口**
+  -  **启用 HTTPS，以进行客户端对等通信**
+  -  **用于从对等中下载内容的端口 (HTTP/HTTPS)**
+
+在启用了对等缓存的每台计算机上，如果 Windows 防火墙正在使用中，则 Configuration Manager 会将其配置为允许使用所配置的端口。

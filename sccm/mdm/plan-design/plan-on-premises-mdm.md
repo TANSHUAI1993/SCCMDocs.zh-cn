@@ -1,6 +1,6 @@
 ---
-title: "規劃內部部署 MDM | Microsoft Docs"
-description: "在 System Center Configuration Manager 中規劃內部部署行動裝置管理來管理行動裝置。"
+title: "规划本地 MDM | Microsoft Docs"
+description: "在 System Center Configuration Manager 中规划本地移动设备管理以管理移动设备。"
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
@@ -18,104 +18,104 @@ manager: angrobe
 ms.openlocfilehash: 544c3bea0c7df96887ee1717f061c39c64b82d01
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="plan-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的內部部署行動裝置管理規劃
+# <a name="plan-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中规划本地移动设备管理
 
-*適用對象：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-在準備 Configuration Manager 基礎結構來處理內部部署行動裝置管理之前，請先考量下列需求。
+在准备 Configuration Manager 基础结构以处理本地移动设备管理之前，请考虑以下要求。
 
-##  <a name="bkmk_devices"></a> 支援的裝置  
- 內部部署行動裝置管理可讓您使用裝置作業系統內建的管理功能來管理行動裝置。  管理功能是以 Open Mobile Alliance (OMA) 裝置管理 (DM) 標準為基礎，且許多裝置平台都使用這項標準管理裝置。  我們稱之為**現代化裝置** (在文件和 Configuration Manager 主控台使用者介面中)，以和需要使用 Configuration Manager 用戶端加以管理的其他裝置加以區別。  
+##  <a name="bkmk_devices"></a>支持的设备  
+ 本地移动设备管理允许你使用内置于设备操作系统的管理功能来管理移动设备。  该管理功能基于开放移动联盟 (OMA) 设备管理 (DM) 标准，许多设备平台都使用此标准来允许对设备进行管理。  我们将它们称为“新式设备”（在文档和 Configuration Manager 控制台用户界面中），以将它们与其他需要 Configuration Manager 客户端来进行管理的设备区别开来。  
 
  > [!NOTE]  
->  Configuration Manager 最新分支，支援執行下列作業系統的裝置在內部部署行動裝置管理中註冊︰  
+>  Configuration Manager 的 Current Branch 支持针对运行以下操作系统的设备的本地移动设备管理中的注册：  
 >   
-> -  Windows 10 Enterprise  
-> -   Windows 10 Pro  
-> -   Windows 10 團隊版 \(從 Configuration Manager 1602 版開始\)  
-> -   Windows 10 Mobile  
-> -   Windows 10 Mobile Enterprise
-> -   Windows 10 企業版   
+> -  Windows 10 企业版  
+> -   Windows 10 专业版  
+> -   Windows 10 协同版\(自 Configuration Manager 版本 1602 起\)  
+> -   Windows 10 移动版  
+> -   Windows 10 移动企业版
+> -   Windows 10 IoT 企业版   
 
-##  <a name="bkmk_intune"></a> 使用 Microsoft Intune 訂閱  
- 若要開始使用內部部署行動裝置管理，您需要 Microsoft Intune 訂閱。 訂閱只有在追蹤裝置授權時才需要，不會用來管理或儲存裝置的管理資訊。 所有的管理都是貴組織企業使用內部部署的 Configuration Manager 基礎結構來處理。  
+##  <a name="bkmk_intune"></a>使用 Microsoft Intune 订阅  
+ 若要开始使用本地移动设备管理，你需要 Microsoft Intune 订阅。 仅跟踪设备授权时需要订阅，订阅不用于管理或储存设备的管理信息。 所有管理均由你组织的企业使用本地 Configuration Manager 基础结构来进行。  
 
  > [!NOTE]  
- > 從 1610 版開始，Configuration Manager 支援同時使用 Microsoft Intune 和內部部署 Configuration Manager 基礎結構來管理行動裝置。   
+ > 从版本 1610 开始，Configuration Manager 支持同时使用 Microsoft Intune 和本地 Configuration Manager 基础结构管理移动设备。   
 
- 如果站台有使用網際網路連線的裝置，即可使用 Intune 服務通知裝置來檢查原則更新的裝置管理點。 Intune 嚴格限用於對網際網路對向裝置的通知。 不使用網際網路連線且無法透過 Intune 連絡的裝置，依賴設定輪詢間隔以站台系統角色簽入取得管理功能。  
+ 如果你的站点拥有具 Internet 连接性的设备，可使用 Intune 服务通知设备检查设备管理点是否有策略更新。 Intune 的这种用法仅限用于对面向 Internet 的设备进行通知。 无 Internet 连接（且不能由 Intune 连接）的设备依靠配置的轮询间隔来签入站点系统角色，从而实现管理功能。  
 
 > [!TIP]  
->  建議您先設定 Intune，再安裝必要的站台系統角色，讓站台系統角色使用最短的時間開始運作。  
+>  我们建议先设置 Intune，然后再设置所需的站点系统角色，以最小化站点系统角色开始正常运行所需的时间。  
 
- 如需如何設定 Intune 訂閱的資訊，請參閱 [為 System Center Configuration Manager 中的內部部署行動裝置管理設定 Microsoft Intune 訂閱](../../mdm/get-started/set-up-intune-subscription-on-premises-mdm.md)。  
+ 有关如何设置 Intune 订阅的信息，请参阅[在 System Center Configuration Manager 中为本地移动设备管理设置 Microsoft Intune 订阅](../../mdm/get-started/set-up-intune-subscription-on-premises-mdm.md)。  
 
-##  <a name="bkmk_roles"></a> 必要的站台系統角色  
- 內部部署行動裝置管理需要下列的站台系統角色，每種至少一個：  
+##  <a name="bkmk_roles"></a>所需站点系统角色  
+ 本地移动设备管理需要至少一个以下站点系统角色：  
 
--   **註冊 Proxy 點** ，以支援註冊要求。  
+-   **注册代理点** ，用于支持注册请求。  
 
--   **註冊點** ，以支援裝置註冊。  
+-   **注册点** ，用于支持设备注册。  
 
--   **裝置管理點** ，用於傳遞原則。 這個站台系統角色是管理點角色的變化，後者已設定為允許管理行動裝置。  
+-   **设备管理点** ，用于策略传递。 此站点系统角色是管理点角色的变体，后者已配置为允许移动设备管理。  
 
--   **發佈點** ，用於傳遞內容。  
+-   **分发点** ，用于内容传递。  
 
--   **服務連接點**，用於連接到 Intune 以通知防火牆外的裝置。  
+-   **服务连接点**，用于连接到 Intune 以通知位于防火墙外的设备。  
 
- 這些站台系統角色可以安裝在單一站台系統伺服器，或分別在不同的伺服器上執行，視貴組織需求而定。 每個用於內部部署行動裝置管理的站台系統伺服器都必須設定為 HTTPS 端點來與受信任的裝置通訊。 如需詳細資訊，請參閱 [必要的信任通訊](#bkmk_trustedComs)。  
+ 这些站点系统角色可以安装在单个站点系统服务器上，或者根据组织的需要分别运行在不同的服务器上。 用于本地移动设备管理的每个站点系统服务器都必须配置为 HTTPS 终结点，以便与受信任的设备通信。 有关详细信息，请参阅 [所需受信任的通信](#bkmk_trustedComs)。  
 
- 如需規劃站台系統角色的詳細資訊，請參閱 [規劃 System Center Configuration Manager 的站台系統伺服器和站台系統角色](../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md)。  
+ 有关规划站点系统角色的详细信息，请参阅 [为 System Center Configuration Manager 规划站点系统服务器和站点系统角色](../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md)。  
 
- 如需如何加入必要站台系統角色的詳細資訊，請參閱 [在 System Center Configuration Manager 中為內部部署行動裝置管理安裝站台系統角色](../../mdm/get-started/install-site-system-roles-for-on-premises-mdm.md)。  
+ 有关如何添加所需站点系统角色的详细信息，请参阅 [在 System Center Configuration Manager 中为本地移动设备管理安装站点系统角色](../../mdm/get-started/install-site-system-roles-for-on-premises-mdm.md)。  
 
-##  <a name="bkmk_trustedComs"></a> 必要的信任通訊  
- 內部部署行動裝置管理需有站台系統角色才能取得 HTTPS 通訊。 您可以根據本身的需求，使用貴企業的憑證授權單位 (CA) 建立伺服器和裝置間的受信任連接，或者使用公眾可取得的 CA 作為受信任的授權單位。  不管哪種方式，您都需要使用 IIS 設定的 Web 伺服器憑證，此憑證位在裝載了必要站台系統角色的站台系統伺服器上；而且您還需要此 CA 的根憑證，此 CA 是安裝在必須連接這些伺服器的裝置上。  
+##  <a name="bkmk_trustedComs"></a>所需受信任的通信  
+ 本地移动设备管理要求启用站点系统角色以进行 HTTPS 通信。 根据需要，你可以使用企业的证书颁发机构 (CA) 在服务器和设备之间建立受信任的连接，或者使用公开发布的 CA 作为受信任的颁发机构。  无论哪种方式，你都需要在托管所需站点系统角色的站点系统服务器上用 IIS 配置 Web 服务器证书，并且需要在要连接到那些服务器的设备上安装该 CA 的根证书。  
 
- 如果使用貴企業的 CA 建立信任的通訊，您必須執行下列工作：  
+ 如果你使用企业的 CA 建立受信任的通信，则需要执行下列任务：  
 
--   在 CA 上建立及發行 Web 伺服器憑證範本。  
+-   在 CA 上创建和颁发 Web 服务器证书模板。  
 
--   要求每個裝載了必要站台系統角色站台的站台系統伺服器 Web 伺服器憑證。  
+-   为托管所需站点系统角色的每个站点系统服务器请求一个 Web 服务器证书。  
 
--   設定站台系統伺服器上的 IIS，以使用要求的 Web 伺服器憑證。  
+-   在站点系统服务器上配置 IIS 以使用所需的 Web 服务器证书。  
 
- 至於已加入公司 Active Directory 網域的裝置，裝置上已有用於信任連接的企業 CA 根憑證。 這表示使用站台系統伺服器的 HTTPS 連線會自動信任已加入網域的裝置 (例如桌上型電腦)。 不過，未加入網域的裝置 (通常是行動裝置) 不會安裝必要的根憑證。 這些裝置需要手動安裝根憑證，才能成功與支援內部部署行動裝置管理的站台系統伺服器通訊。  
+ 对于已加入企业 Active Directory 域的设备，企业 CA 的根证书在受信任连接的设备上已经可用。 这意味着使用站点系统服务器的 HTTPS 连接将自动信任已加入域的设备（如台式计算机）。 但是，未加入域的设备（通常为移动设备）将不安装所需根证书。 将需要在这些设备上手动安装根证书，才能与支持本地移动设备管理的站点系统服务器成功通信。  
 
- 您必須匯出發行 CA 的根憑證供個別裝置使用。 若要取得根憑證檔案，您可以使用 CA 匯出；更簡單的方法是使用 CA 發行的 Web 伺服器憑證擷取根目錄，再建立根憑證檔案。   然後，根憑證必須傳遞到裝置。  範例傳遞方法包括  
+ 你必须导出所颁发 CA 的根证书供各设备使用。 要获取根证书文件，你可以使用 CA 导出它，或者采用更简单的方法，即使用由 CA 颁发的 Web 服务器证书提取根目录并创建根证书文件。   然后，必须将根证书传递到设备。  传递方法示例包括  
 
--   檔案系統  
+-   文件系统  
 
--   電子郵件附件  
+-   电子邮件附件  
 
--   記憶卡  
+-   内存卡  
 
--   行動網卡  
+-   受限设备  
 
--   雲端存放裝置 (例如 OneDrive)  
+-   云存储（例如 OneDrive）  
 
--   近距離無線通訊 (NFC) 連線  
+-   近场通信 (NFC) 连接  
 
--   條碼掃描器  
+-   条形码扫描程序  
 
--   全新體驗 (OOBE) 佈建套件  
+-   现成体验 (OOBE) 预配包  
 
- 如需詳細資訊，請參閱 [Set up certificates for trusted communications for On-premises Mobile Device Management in System Center Configuration Manager](../../mdm/get-started/set-up-certificates-on-premises-mdm.md)  
+ 有关详细信息，请参阅 [Set up certificates for trusted communications for On-premises Mobile Device Management in System Center Configuration Manager](../../mdm/get-started/set-up-certificates-on-premises-mdm.md)。  
 
-##  <a name="bkmk_enrollment"></a> 註冊考量  
- 若要啟用內部部署行動裝置管理裝置註冊，使用者必須授與註冊權限，他們的裝置也必須和裝載必要站台系統角色的站台系統伺服器有信任的通訊。  
+##  <a name="bkmk_enrollment"></a>注册注意事项  
+ 若要为本地移动设备管理启用设备注册，必须向用户授予注册权限，且其设备必须能够与承载所需站点系统角色的站点系统服务器实现受信任的通信。  
 
- 在 Configuration Manager 用戶端設定中設定註冊設定檔，即可完成授與使用者註冊權限。 您可以使用預設的用戶端設定，將註冊設定檔推送至所有探索到的使用者，或在自訂用戶端設定中設定註冊設定檔，將此設定推送到一個或多個使用者集合。  
+ 可以通过在 Configuration Manager 客户端设置中设置注册配置文件，来授予用户注册权限。 你可以使用默认客户端设置将注册配置文件推送到所有已发现的用户；或者在自定义客户端设置中设置注册配置文件，并将设置推送到一个或多个用户集合。  
 
- 授與使用者註冊權限之後，使用者就可以註冊自己的裝置。 若要註冊，使用者的裝置必須有發行 Web 伺服器憑證之憑證授權單位 (CA) 的根憑證，此 Web 伺服器憑證使用在裝載了必要站台系統角色的站台系統伺服器上。  
+ 授予用户注册权限后，用户即可注册其自己的设备。 要进行注册，用户的设备必须具有颁发托管站点系统角色的站点系统服务器上所用 Web 服务器证书的证书颁发机构 (CA) 的根证书。  
 
- 除了使用者起始註冊之後，您也可以設定大量註冊套件，讓裝置註冊不需要使用者介入。 將這個套件傳遞至裝置的時機，可以在開始佈建使用裝置之前，或裝置進入其 OOBE 流程之後。  
+ 除用户启动的注册外，你还可以设置一个允许在没有用户干预的情况下注册设备的批量注册包。 可在最初配置此注册包以供使用之前，或在设备完成其 OOBE 流程之后将此注册包传递到设备。  
 
- 如需如何設定和註冊裝置的詳細資訊，請參閱  
+ 有关如何设置和注册设备的详细信息，请参阅  
 
--   [設定 System Center Configuration Manager 中內部部署行動裝置管理的裝置註冊](../../mdm/get-started/set-up-device-enrollment-on-premises-mdm.md)  
+-   [在 System Center Configuration Manager 中为本地移动设备管理设置设备注册](../../mdm/get-started/set-up-device-enrollment-on-premises-mdm.md)  
 
--   [在 System Center Configuration Manager 中註冊裝置以進行內部行動裝置管理](../../mdm/deploy-use/enroll-devices-on-premises-mdm.md)  
+-   [在 System Center Configuration Manager 中为本地移动设备管理注册设备](../../mdm/deploy-use/enroll-devices-on-premises-mdm.md)  

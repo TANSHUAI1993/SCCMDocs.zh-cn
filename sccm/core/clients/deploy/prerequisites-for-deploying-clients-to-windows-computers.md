@@ -1,6 +1,6 @@
 ---
-title: "Windows 用戶端部署必要條件 | Microsoft Docs"
-description: "了解在 System Center Configuration Manager 中將用戶端部署至 Windows 電腦的必要條件。"
+title: "Windows 客户端部署先决条件 | Microsoft Docs"
+description: "了解在 System Center Configuration Manager 中将客户端部署到 Windows 计算机的先决条件。"
 ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
@@ -18,220 +18,220 @@ manager: angrobe
 ms.openlocfilehash: 6636ce4d929326fad0210407d7634ea585eb0a2d
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="prerequisites-for-deploying-clients-to-windows-computers-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中將用戶端部署至 Windows 電腦的必要條件
+# <a name="prerequisites-for-deploying-clients-to-windows-computers-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中将客户端部署到 Windows 计算机的先决条件
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-在環境中部署 Configuration Manager 用戶端會擁有下列外部相依性和產品內的相依性。 此外，每一種用戶端部署方法都有自己的相依性，必須符合這些相依性用戶端安裝才能成功。  
+在环境中部署 Configuration Manager 客户端有下列外部依赖关系和产品内部依赖关系。 此外，每个客户端部署方法有其自己的先决条件，要成功安装客户端，必须满足其自己的先决条件。  
 
-  您同時務必檢閱 [System Center Configuration Manager 的支援設定](../../../core/plan-design/configs/supported-configurations.md)，確認裝置符合 Configuration Manager 用戶端的最低硬體和作業系統需求。  
+  请确保同时查看 [System Center Configuration Manager 支持的配置](../../../core/plan-design/configs/supported-configurations.md)以确认设备满足 Configuration Manager 客户端的最低硬件和操作系统要求。  
 
- 如需 Linux 和 UNIX Configuration Manager 用戶端必要條件的資訊，請參閱[在 System Center Configuration Manager 中規劃將用戶端部署至 Linux 和 UNIX 電腦](../../../core/clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers.md)。  
-
-> [!NOTE]  
->  本文章只列出最低需求的軟體版本號碼。  
-
-##  <a name="BKMK_prereqs_computers"></a> 電腦用戶端的必要條件  
- 使用下列資訊來判斷在電腦上安裝 Configuration Manager 用戶端時的必要條件。  
-
-### <a name="dependencies-external-to-configuration-manager"></a>Configuration Manager 外部的相依性  
-
-|||  
-|-|-|  
-|Windows Installer 3.1.4000.2435 版|支援針對套件和軟體更新使用 Windows Installer 更新 (.msp) 檔案所需。|  
-|[KB2552033](http://go.microsoft.com/fwlink/p/?LinkId=240048)|啟用用戶端推入安裝時，在執行 Windows Server 2008 R2 的站台伺服器上安裝此 Hotfix。|  
-|Microsoft 背景智慧型傳送服務 (BITS) 2.5 版|需要在用戶端電腦和 Configuration Manager 站台系統之間進行節流資料傳送。 BITS 不會在用戶端安裝期間自動下載。 在電腦上安裝 BITS 時，通常需要重新啟動才能完成安裝。<br /><br /> 大部分作業系統都包含 BITS，如果沒有的話 (例如 Windows Server 2003 R2 SP2)，您必須先安裝 BITS，再安裝 Configuration Manager 用戶端。|  
-|Microsoft 工作排程器|在用戶端上啟用此服務，以完成用戶端安裝。|  
-
-### <a name="dependencies-external-to-configuration-manager-and-automatically-downloaded-during-installation"></a>Configuration Manager 外部的相依性和安裝期間自動下載的相依性  
- Configuration Manager 用戶端可能會有一些外部相依性。 這些相依性取決於用戶端電腦上的作業系統和安裝的軟體。  
-
- 如果完成用戶端安裝時需要這些相依性，則這些相依性會隨用戶端軟體自動安裝。  
-
-|||  
-|-|-|  
-|Windows Update 代理程式 7.0.6000.363 版|Windows 支援更新偵測和部署所需。|  
-|Microsoft Core XML Services (MSXML) 6.20.5002 版和更新版本|支援在 Windows 中處理 XML 文件所需。|  
-|Microsoft 遠端差異壓縮 (RDC)|最佳化透過網路的資料傳輸所需。|  
-|Microsoft Visual C++ 2013 可轉散發套件 12.0.21005.1 版|支援用戶端操作所需。 用戶端電腦上安裝此更新時，可能需要重新啟動以完成安裝。|  
-|Microsoft Visual C++ 2005 可轉散發套件 8.0.50727.42 版|針對 1606 版和更早版本，支援 Microsoft SQL Server Compact 作業所需。|  
-|Windows Imaging API 6.0.6001.18000|允許 Configuration Manager 管理 Windows 映像 (.wim) 檔案所需。|  
-|Microsoft Policy Platform 1.2.3514.0|允許用戶端評估相容性設定所需。|  
-|Microsoft Silverlight 5.1.41212.0 (從 Configuration Manager 1602 版開始)|支援應用程式類別目錄網站使用者經驗所需。|  
-|Microsoft .NET Framework 4.5.2 版|支援用戶端操作所需。 如果未安裝 Microsoft .NET Framework 4.5 或更新版本，就會自動安裝在用戶端電腦上。 如需詳細資訊，請參閱 [關於 Microsoft.NET Framework 4.5.2 版的其他詳細資料](#dotNet)。|  
-|Microsoft SQL Server Compact 3.5 SP2 元件|儲存用戶端操作相關資訊所需。|  
-|Microsoft Windows Imaging 元件|適用於 64 位元電腦的 Windows Server 2003 或 Windows XP SP2 的 Microsoft .NET Framework 4.0 所需。|
-|Microsoft Intune 電腦軟體用戶端|您無法在同一部電腦上執行 Intune 電腦軟體用戶端和 Configuration Manager 用戶端。 在安裝 Configuration Manager 用戶端之前，請確定已經移除 Intune 用戶端。|
-
-####  <a name="dotNet"></a> 關於 Microsoft.NET Framework 4.5.2 版的其他詳細資料  
+ 有关适用于 Linux 和 UNIX 的 Configuration Manager 客户端的先决条件的信息，请参阅[在 System Center Configuration Manager 中规划 Linux 和 UNIX 计算机的客户端部署](../../../core/clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers.md)。  
 
 > [!NOTE]  
->  針對 .NET 4.0、4.5 與 4.5.1 的支援已於 2016 年 1 月 12 日到期。 如需詳細資訊，請參閱位於 support.microsoft.com 中的 [週期支援原則常見問題集 - Microsoft .NET Framework](https://support.microsoft.com/gp/framework_faq?WT.mc_id=azurebg_email_Trans_943_NET452_Update) 。  
+>  本文中显示的软件版本号仅列出所需的最低版本号。  
 
- 可能需要重新開機才能完成安裝 Microsoft .NET Framework 4.5.2 版。 使用者會在系統匣中看到 [需要重新啟動]  的通知。  需要重新啟動用戶端電腦的常見案例：  
+##  <a name="BKMK_prereqs_computers"></a>计算机客户端的先决条件  
+ 使用下列信息来确定在计算机上安装 Configuration Manager 客户端时的先决条件。  
 
--   電腦執行多個 .NET 應用程式或服務。  
-
--   缺少 .NET 安裝需要的一或多個軟體更新。  
-
--   電腦還在等待重新啟動前一個安裝的 .NET Framework 軟體更新。  
-
- 安裝好 .NET Framework 4.5.2 之後，或許還要陸續安裝其他的更新，這可能需要另外重新啟動電腦。  
-
-### <a name="configuration-manager-dependencies"></a>Configuration Manager 相依性  
- 如需下列站台系統角色的詳細資訊，請參閱[為 System Center Configuration Manager 用戶端判斷站台系統角色](../../../core/clients/deploy/plan/determine-the-site-system-roles-for-clients.md)。  
+### <a name="dependencies-external-to-configuration-manager"></a>Configuration Manager 的外部依赖关系  
 
 |||  
 |-|-|  
-|管理點|雖然部署 Configuration Manager 用戶端時不需要管理點，但是您必須要有管理點，才能在用戶端電腦與 Configuration Manager 伺服器之間傳送資訊。 若沒有管理點，就無法管理用戶端電腦。|  
-|發佈點|發佈點在用戶端部署中是選用，但是建議使用網站系統角色。 所有發佈點都會裝載用戶端來源檔案，可在用戶端部署期間讓電腦找到最靠近的發佈點來下載用戶端來源檔案。 如果網站沒有發佈點，電腦就會從其管理點下載用戶端來源檔案。|  
-|後援狀態點|後援狀態點在用戶端部署中是選用，但是建議使用網站系統角色。 後援狀態點會追蹤用戶端部署，並且在無法與管理點通訊時，讓 Configuration Manager 站台中的電腦傳送狀態訊息。|  
-|Reporting Services 點|Reporting Services 點是選用但是建議使用網站系統角色，可顯示與用戶端部署和管理相關的報告。 如需詳細資訊，請參閱 [Reporting in System Center Configuration Manager](../../../core/servers/manage/reporting.md) (System Center Configuration Manager 中的報告)。|  
+|Windows Installer 版本 3.1.4000.2435|这是支持将 Windows Installer 更新文件 (.msp) 用于包和软件更新所必需的。|  
+|[KB2552033](http://go.microsoft.com/fwlink/p/?LinkId=240048)|如果启用了客户端请求安装，则必须在运行 Windows Server 2008 R2 的站点服务器上安装此修补程序。|  
+|Microsoft 后台智能传输服务 (BITS) 2.5 版|需要允许客户端计算机和 Configuration Manager 站点系统之间的受限数据传输。 客户端安装过程中不会自动下载 BITS。 在计算机上安装了 BITS 后，通常需要重启来完成安装。<br /><br /> 大多数操作系统都包括 BITS，但如果未包括（例如，Windows Server 2003 R2 SP2），则必须在安装 Configuration Manager 客户端之前安装 BITS。|  
+|Microsoft 任务计划程序|在客户端上启用此服务，以便完成客户端安装。|  
 
-### <a name="installation-method-dependencies"></a>安裝方法相依性  
- 以下是各種用戶端安裝方法特定的必要條件。  
+### <a name="dependencies-external-to-configuration-manager-and-automatically-downloaded-during-installation"></a>Configuration Manager 的外部依赖关系及安装过程中的自动下载  
+ Configuration Manager 客户端有一些可能的外部依赖关系。 这些依赖关系取决于操作系统以及客户端计算机上安装的软件。  
 
--   用戶端推入安裝  
+ 如果需要这些依赖关系来完成客户端安装，则它们将随客户端软件一起自动安装。  
 
-    -   用戶端推入安裝帳戶用來連線至電腦以安裝用戶端，該帳戶是在 [用戶端推入安裝內容]  對話方塊的 [帳戶]  索引標籤上指定。 此帳戶必須是目的地電腦上本機系統管理員群組的成員。  
+|||  
+|-|-|  
+|Windows Update 代理版本 7.0.6000.363|Windows 要求支持更新检测和部署。|  
+|Microsoft Core XML Services (MSXML) 版本 6.20.5002 或更高版本|要求支持在 Windows 中处理 XML 文档。|  
+|Microsoft 远程差分压缩 (RDC)|需要该项以优化网络上的数据传输。|  
+|Microsoft Visual C++ 2013 可再发行组件版本 12.0.21005.1|需要该项以支持客户端操作。 客户端计算机上安装此更新后，可能需要重新启动才能完成安装。|  
+|Microsoft Visual C++ 2005 可再发行组件版本 8.0.50727.42|对于 1606 或更早版本，需要该项以支持 Microsoft SQL Server Compact 操作。|  
+|Windows 映像 API 6.0.6001.18000|需要该项以允许 Configuration Manager 管理 Windows 映像 (.wim) 文件。|  
+|Microsoft 策略平台 1.2.3514.0|需要该项以允许客户端评估符合性设置。|  
+|Microsoft Silverlight 5.1.41212.0（从 Configuration Manager 版本 1602 开始）|需要该项以支持应用程序目录网站用户体验。|  
+|Microsoft .NET Framework 版本 4.5.2|需要该项以支持客户端操作。 如果没有安装 Microsoft .NET Framework 4.5 或更高版本，那么将自动将其安装在客户端计算机上。 有关详细信息，请参阅[有关 Microsoft .NET Framework 版本 4.5.2 的其他详细信息](#dotNet)。|  
+|Microsoft SQL Server Compact 3.5 SP2 组件|需要该项以存储与客户端操作相关的信息。|  
+|Microsoft Windows 映像组件|对于 64 位计算机，适用于 Windows Server 2003 或 Windows XP SP2 的 Microsoft .NET Framework 4.0 需要该组件。|
+|Microsoft Intune 电脑软件客户端|你不能在同一台电脑上运行 Intune 电脑软件客户端和 Configuration Manager 客户端。 在安装 Configuration Manager 客户端之前，请确保删除 Intune 客户端。|
 
-         如果您未指定用戶端推入安裝帳戶，就會使用網站伺服器電腦帳戶。  
+####  <a name="dotNet"></a>有关 Microsoft .NET Framework 版本 4.5.2 的其他详细信息  
 
-    -   您安裝用戶端所在的電腦必須已經過至少一種 Configuration Manager 探索方法探索。  
+> [!NOTE]  
+>  对 .NET 4.0、4.5 和 4.5.1 的支持已于 2016 年 1 月 12 日过期。 有关详细信息，请参阅 support.microsoft.com 处的 [Microsoft .NET Framework 支持生命周期策略常见问题解答](https://support.microsoft.com/gp/framework_faq?WT.mc_id=azurebg_email_Trans_943_NET452_Update)。  
 
-    -   電腦擁有 ADMIN$ 共用。  
+ 可能需要重启以完成安装 Microsoft .NET Framework 版本 4.5.2。 用户将在系统托盘中看到 **需要重启** 通知。  需要客户端计算机重启的常见场景：  
 
-    -   如果您要將用戶端自動推入探索到的資源中，則必須選取 [用戶端推入安裝內容] 對話方塊中的 [Enable client push installation to assigned resources]\(對指派的資源啟用用戶端推入安裝)。  
+-   计算机上正在运行.NET 应用程序或服务。  
 
-    -   用戶端電腦必須能夠連絡發佈點或管理點，以便下載支援的檔案。  
+-   .NET 安装所需的一个或多个软件更新丢失。  
 
-     您必須具有下列安全性權限，才能使用用戶端推入安裝 Configuration Manager 用戶端：  
+-   计算机正在等待从 .NET Framework 软件更新的先前安装中重启。  
 
-    -   設定用戶端推送安裝帳戶：[站台]  物件的 [修改]  及讀取權限。  
+ 安装.NET Framework 4.5.2 后，它的其他更新可能会随后安装，这可能需要另外重启计算机。  
 
-    -   使用用戶端推送將用戶端安裝到集合、裝置和查詢：集合物件的 [修改資源]  和 [讀取]  權限。  
+### <a name="configuration-manager-dependencies"></a>Configuration Manager 依赖关系  
+ 有关以下站点系统角色的详细信息，请参阅[为 System Center Configuration Manager 客户端确定站点系统角色](../../../core/clients/deploy/plan/determine-the-site-system-roles-for-clients.md)  
 
-     [基礎結構系統管理員]  安全性角色包括管理用戶端推入安裝的必要權限。  
+|||  
+|-|-|  
+|管理点|尽管部署 Configuration Manager 客户端不需要管理点，但要在客户端计算机和 Configuration Manager 服务器之间传输信息，则必须有管理点。 没有管理点，就无法管理客户端计算机。|  
+|分发点|分发点是可选的，但建议为客户端部署使用该站点系统角色。 所有分发点都承载客户端源文件，从而使计算机能够在客户端部署过程中找到从中下载客户端源文件的最近分发点。 如果站点没有分发点，则计算机从其管理点中下载客户端源文件。|  
+|回退状态点|回退状态点是可选的，但建议为客户端部署使用该站点系统角色。 当 Configuration Manager 站点中的计算机不能与管理点通信时，回退状态点将跟踪客户端部署并允许这些计算机发送状态消息。|  
+|Reporting Services 点|Reporting Services 点是可选的，但建议使用该站点系统角色，它能够显示与客户端部署和管理相关的报表。 有关详细信息，请参阅 [System Center Configuration Manager 中的报表](../../../core/servers/manage/reporting.md)。|  
 
--   以軟體更新點為基礎的安裝  
+### <a name="installation-method-dependencies"></a>安装方法依赖关系  
+ 以下先决条件特定于客户端的各种不同安装方法。  
 
-    -   如果 Active Directory 架構尚未擴充，或是您要安裝另一個樹系中的用戶端，則必須使用群組原則將 CCMSetup.exe 的安裝內容佈建至電腦的登錄中。 如需詳細資訊，請參閱  [How to Provision Client Installation Properties (Group Policy and Software Update-Based Client Installation)](../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_Provision)。  
+-   客户端请求安装  
 
-    -   Configuration Manager 用戶端必須發佈到軟體更新點。  
+    -   客户端请求安装帐户用于连接到计算机以安装客户端，并且是在“客户端请求安装属性”  对话框的“帐户”  选项卡上指定的。 该帐户必须是目标计算机上本地管理员组的成员。  
 
-    -   用戶端電腦必須能夠連絡發佈點或管理點，以便下載支援的檔案。  
+         如果未指定客户端请求安装帐户，则使用站点服务器计算机帐户。  
 
-     如需管理 Configuration Manager 軟體更新所需的安全性權限，請參閱 [System Center Configuration Manager 軟體更新的必要條件](../../../sum/plan-design/prerequisites-for-software-updates.md)。  
+    -   必须已通过至少一种 Configuration Manager 发现方法发现要在其中安装客户端的计算机。  
 
--   群組原則為基礎的安裝  
+    -   计算机具有 ADMIN$ 共享。  
 
-    -   如果 Active Directory 架構尚未擴充，或是您要安裝另一個樹系中的用戶端，則必須使用群組原則將 CCMSetup.exe 的安裝內容佈建至電腦的登錄中。 如需詳細資訊，請參閱  [How to Provision Client Installation Properties (Group Policy and Software Update-Based Client Installation)](../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_Provision)。  
+    -   如果要对发现的资源自动请求 Configuration Manager 客户端，则必须在“客户端请求安装属性”对话框中选择“对已分配资源启用客户端请求安装”。  
 
-    -   用戶端電腦必須能夠連絡管理點，以便下載支援的檔案。  
+    -   客户端计算机必须能够联系分发点或管理点以便下载支持文件。  
 
--   登入指令碼為基礎的安裝  
+     必须具有下列安全权限才能通过使用客户端请求安装 Configuration Manager 客户端：  
 
-     除非您在命令提示字元中以命令列屬性 **ccmsetup /source**指定了 CCMSetup.exe，否則用戶端電腦必須能夠連絡發佈點或管理點，才能下載支援的檔案。  
+    -   配置客户端请求安装帐户：“站点”  对象的 **修改** 和读取权限。  
 
--   手動安裝  
+    -   使用客户端请求将客户端安装到集合、设备和查询：“集合”对象的 **修改资源** 和 **读取** 权限。  
 
-     除非您在命令提示字元中以命令列屬性 **ccmsetup /source**指定了 CCMSetup.exe，否則用戶端電腦必須能夠連絡發佈點或管理點，才能下載支援的檔案。  
+     “基础结构管理员”  安全角色包括管理客户端请求安装所需的权限。  
 
--   工作群組電腦安裝  
+-   基于软件更新点的安装  
 
-     若要存取 Configuration Manager 站台伺服器網域的資源，必須針對該站台設定網路存取帳戶。  
+    -   如果尚未扩展 Active Directory 架构，或者要从另一个林中安装客户端，则必须使用组策略在计算机的注册表中设置 CCMSetup.exe 的安装属性。 有关详细信息，请参阅  [How to Provision Client Installation Properties (Group Policy and Software Update-Based Client Installation)](../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_Provision)。  
 
-     如需如何設定網路存取帳戶的詳細資訊，請參閱 [System Center Configuration Manager 中的內容管理基本概念](../../plan-design/hierarchy/fundamental-concepts-for-content-management.md)。  
+    -   必须将 Configuration Manager 客户端发布到软件更新点。  
 
--   軟體發佈為基礎的安裝 (僅適用於升級)  
+    -   客户端计算机必须能够联系分发点或管理点以便下载支持文件。  
 
-    -   如果 Active Directory 架構尚未擴充，或是您要安裝另一個樹系中的用戶端，則必須使用群組原則將 CCMSetup.exe 的安裝內容佈建至電腦的登錄中。 如需詳細資訊，請參閱 [How to Provision Client Installation Properties (Group Policy and Software Update-Based Client Installation)](../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_Provision)。  
+     有关管理 Configuration Manager 软件更新所需的安全权限，请参阅 [System Center Configuration Manager 中软件更新的先决条件](../../../sum/plan-design/prerequisites-for-software-updates.md)。  
 
-    -   用戶端電腦必須能夠連絡發佈點或管理點，以便下載支援的檔案。  
+-   基于组策略的安装  
 
-     如需使用應用程式管理來升級 Configuration Manager 用戶端所需的安全性權限，請參閱[應用程式管理的安全性與隱私權](../../../apps/plan-design/security-and-privacy-for-application-management.md)。  
+    -   如果尚未扩展 Active Directory 架构，或者要从另一个林中安装客户端，则必须使用组策略在计算机的注册表中设置 CCMSetup.exe 的安装属性。 有关详细信息，请参阅  [How to Provision Client Installation Properties (Group Policy and Software Update-Based Client Installation)](../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_Provision)。  
 
--   自動用戶端升級  
+    -   客户端计算机必须能够联系管理点以便下载支持文件。  
 
-     您必須是 [系統高權限管理員]  安全性角色的成員，才能設定自動用戶端升級。  
+-   基于登录脚本的安装  
 
-### <a name="firewall-requirements"></a>防火牆需求  
- 如果站台系統伺服器與您要安裝 Configuration Manager 用戶端的電腦之間有防火牆，請參閱 [System Center Configuration Manager 中用戶端適用的 Windows 防火牆和連接埠設定](../../../core/clients/deploy/windows-firewall-and-port-settings-for-clients.md)。  
+     除非您在命令提示符处指定了包含命令行属性 **ccmsetup /source**的 CCMSetup.exe，否则客户端计算机必须能够联系分发点或管理点以便下载支持文件。  
 
-##  <a name="BKMK_prereqs_mobiledevices"></a> 行動裝置用戶端的必要條件  
- 請利用下列資訊判斷在行動裝置上安裝 Configuration Manager 用戶端及使用 Configuration Manager 註冊行動裝置時的必要條件。  
+-   手动安装  
 
-### <a name="dependencies-external-to-configuration-manager"></a>Configuration Manager 外部的相依性  
+     除非您在命令提示符处指定了包含命令行属性 **ccmsetup /source**的 CCMSetup.exe，否则客户端计算机必须能够联系分发点或管理点以便下载支持文件。  
 
--   Microsoft 企業憑證授權單位 (CA)，其擁有用於部署及管理行動裝置所需憑證的憑證範本。  
+-   工作组计算机安装  
 
-     發行 CA 必須在註冊程序期間自動核准來自行動裝置使用者的憑證要求。  
+     为了访问 Configuration Manager 站点服务器域中的资源，必须为该站点配置网络访问帐户。  
 
-     如需憑證需求的詳細資訊，請參閱 [System Center Configuration Manager 的憑證設定檔安全性和隱私權](../../../protect/plan-design/security-and-privacy-for-certificate-profiles.md)。  
+     有关如何配置“网络访问帐户”的详细信息，请参阅 [System Center Configuration Manager 中内容管理的基本概念](../../plan-design/hierarchy/fundamental-concepts-for-content-management.md)。  
 
--   安全性群組，其中包含可註冊其行動裝置的使用者。  
+-   基于软件分发的安装（仅针对升级）  
 
-     此安全性群組用來設定行動裝置註冊期間所使用的憑證範本。  
+    -   如果尚未扩展 Active Directory 架构，或者要从另一个林中安装客户端，则必须使用组策略在计算机的注册表中设置 CCMSetup.exe 的安装属性。 有关详细信息，请参阅 [How to Provision Client Installation Properties (Group Policy and Software Update-Based Client Installation)](../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_Provision)。  
 
--   選擇性但建議使用：名為 **ConfigMgrEnroll** 的 DNS 別名 (CNAME 記錄)，針對您要安裝註冊 Proxy 點的站台系統伺服器名稱所設定。  
+    -   客户端计算机必须能够联系分发点或管理点以便下载支持文件。  
 
-     此 DNS 別名必須支援註冊服務的自動探索：如果您未設定此 DNS 記錄，使用者就必須在註冊程序中，手動指定註冊 Proxy 點的站台系統伺服器名稱。  
+     有关使用应用程序管理升级 Configuration Manager 客户端所需的安全权限，请参阅[应用程序管理的安全和隐私](../../../apps/plan-design/security-and-privacy-for-application-management.md)。  
 
--   將執行註冊點和註冊 Proxy 點網站系統角色之電腦的網站系統角色相依性。  
+-   自动客户端升级  
 
-     請參閱[支援的站台系統伺服器作業系統](../../../core/plan-design/configs/supported-operating-systems-for-site-system-servers.md)。  
+     你必须是“完全权限管理员”  安全角色的成员才能配置自动客户端升级。  
 
-### <a name="configuration-manager-dependencies"></a>Configuration Manager 相依性  
- 如需下列站台系統角色的詳細資訊，請參閱[為 System Center Configuration Manager 用戶端判斷站台系統角色](../../../core/clients/deploy/plan/determine-the-site-system-roles-for-clients.md)。  
+### <a name="firewall-requirements"></a>防火墙要求  
+ 如果站点系统服务器与你想要在其上安装 Configuration Manager 客户端的计算机之间存在防火墙，请参阅 [System Center Configuration Manager 中客户端的 Windows 防火墙和端口设置](../../../core/clients/deploy/windows-firewall-and-port-settings-for-clients.md)。  
 
--   針對 HTTPS 用戶端連線設定且針對行動裝置啟用的管理點。  
+##  <a name="BKMK_prereqs_mobiledevices"></a>移动设备客户端的先决条件  
+ 使用下列信息来确定在移动设备上安装 Configuration Manager 客户端和使用 Configuration Manager 注册这些设备时的先决条件。  
 
-     在行動裝置上安裝 Configuration Manager 用戶端時一律需要管理點。 除了 HTTPS 設定需求以及為行動裝置啟用之外，必須使用網際網路 FQDN 設定管理點並接受來自網際網路的用戶端連線。  
+### <a name="dependencies-external-to-configuration-manager"></a>Configuration Manager 的外部依赖关系  
 
--   註冊點和註冊 Proxy 點  
+-   Microsoft 企业证书颁发机构 (CA) 及证书模板，用于部署和管理移动设备所需的证书。  
 
-     註冊 Proxy 點會管理來自行動裝置的註冊要求，註冊點則可完成註冊程序。 註冊點必須位於與網站伺服器相同的 Active Directory 樹系集中，但註冊 Proxy 點可以位於另一個樹系中。  
+     颁发 CA 必须在注册过程中自动批准来自移动设备用户的证书请求。  
 
--   行動裝置註冊的用戶端設定  
+     有关证书要求的详细信息，请参阅 [System Center Configuration Manager 中证书配置文件的安全和隐私](../../../protect/plan-design/security-and-privacy-for-certificate-profiles.md)。  
 
-     設定用戶端設定以允許使用者註冊行動裝置並設定至少一個註冊設定檔。  
+-   一个安全组，其中包含可注册其移动设备的用户。  
 
--   Reporting Services 點  
+     此安全组用于配置在移动设备注册过程中使用的证书模板。  
 
-     Reporting Services 點是選用服務，但建議使用可顯示行動裝置註冊與用戶端管理相關報告的網站系統角色。  
+-   可选但建议使用：为您将在其上安装注册代理点的站点系统服务器名称配置的 DNS 别名（CNAME 记录），名为 **ConfigMgrEnroll** 。  
 
-     如需詳細資訊，請參閱 [Reporting in System Center Configuration Manager](../../../core/servers/manage/reporting.md) (System Center Configuration Manager 中的報告)。  
+     必须有此 DNS 别名，才能支持注册服务自动发现：如果您未配置此 DNS 记录，则用户必须在注册过程中手动指定注册代理点的站点系统服务器名称。  
 
--   若要設定行動裝置的註冊，您必須擁有下列安全性權限：  
+-   将运行注册点和注册代理点站点系统角色的计算机的站点系统角色依赖关系。  
 
-    -   加入、修改及刪除註冊站台系統角色：[站台]  物件的 [修改]  權限。  
+     请参阅[站点系统服务器支持的操作系统](../../../core/plan-design/configs/supported-operating-systems-for-site-system-servers.md)。  
 
-    -   設定用於註冊的用戶端設定：預設用戶端設定需要 [站台]  物件的 [修改]  權限，自訂用戶端設定則需要 [用戶端代理程式]   權限。  
+### <a name="configuration-manager-dependencies"></a>Configuration Manager 依赖关系  
+ 有关以下站点系统角色的详细信息，请参阅[为 System Center Configuration Manager 客户端确定站点系统角色](../../../core/clients/deploy/plan/determine-the-site-system-roles-for-clients.md)。  
 
-     [系統高權限管理員]  安全性角色包括設定註冊網站系統角色的必要權限。  
+-   为 HTTPS 客户端连接配置并为移动设备启用的管理点  
 
-     若要管理已註冊的行動裝置，您必須擁有下列安全性權限：  
+     必须使用管理点才能在移动设备上安装 Configuration Manager 客户端。 除了 HTTPS 要求和为移动设备启用的要求外，还必须将管理点配置为具有 Internet FQDN 并接受来自 Internet 的客户端连接。  
 
-    -   抹除或淘汰行動裝置：[集合]  物件的 [刪除資源]  。  
+-   注册点和注册代理点  
 
-    -   取消抹除或淘汰命令：[集合]  物件的 [刪除資源]  。  
+     注册代理点管理来自移动设备的注册请求，注册点完成注册过程。 注册点必须位于站点服务器所在的 Active Directory 林中，但注册代理点则可位于另一个林中。  
 
-    -   允許及封鎖行動裝置：[集合]  物件的 [修改資源]  。  
+-   移动设备注册的客户端设置  
 
-    -   遠端鎖定或重設行動裝置的密碼：[集合]  物件的 [修改]  資源。  
+     配置客户端设置以允许用户注册移动设备并至少配置一个注册配置文件。  
 
-     [作業管理員]  安全性角色包括管理行動裝置的必要權限。  
+-   Reporting Services 点  
 
-     如需如何設定安全性權限的詳細資訊，請參閱 [Fundamentals of role-based administration for System Center Configuration Manager](../../../core/understand/fundamentals-of-role-based-administration.md) 和  [Configure role-based administration for System Center Configuration Manager](../../../core/servers/deploy/configure/configure-role-based-administration.md)。  
+     Reporting Services 点是可选的，但建议使用该站点系统角色，它能够显示与移动设备注册和客户端管理相关的报表。  
 
-### <a name="firewall-requirements"></a>防火牆需求  
- 例如路由器與防火牆以及 Windows Firewall (如適用) 等網路干擾裝置都必須允許與行動裝置註冊相關的流量：  
+     有关详细信息，请参阅 [System Center Configuration Manager 中的报表](../../../core/servers/manage/reporting.md)。  
 
--   行動裝置與註冊 Proxy 點之間：HTTPS (預設為 TCP 443)  
+-   要针对移动设备配置注册，你必须具有下列安全权限：  
 
--   註冊 Proxy 點與註冊點之間：HTTPS (預設為 TCP 443)  
+    -   添加、修改和删除注册站点系统角色：“站点”  对象的 **修改** 权限。  
 
- 如果您使用 Proxy 網路伺服器，必須設定伺服器允許 SSL 通道作業；行動裝置不支援 SSL 橋接作業。  
+    -   配置客户端设置以供注册：默认客户端设置需要“站点”  对象的 **修改** 权限，自定义客户端设置需要 **客户端代理**  权限。  
+
+     “完全权限管理员”  安全角色包括配置注册站点系统角色所需的权限。  
+
+     要管理注册的移动设备，你必须具有下列安全权限：  
+
+    -   擦除或停用移动设备：“集合”  对象的 **删除资源** 权限。  
+
+    -   取消擦除或停用命令：“集合”  对象的 **删除资源** 权限。  
+
+    -   允许和阻止移动设备：“集合”  对象的 **修改资源** 权限。  
+
+    -   远程锁定或重置移动设备上的密码：“集合”  对象的 **修改资源** 权限。  
+
+     “操作管理员”  安全角色包括管理移动设备所需的权限。  
+
+     有关如何配置安全权限的详细信息，请参阅 [Fundamentals of role-based administration for System Center Configuration Manager](../../../core/understand/fundamentals-of-role-based-administration.md) 和  [Configure role-based administration for System Center Configuration Manager](../../../core/servers/deploy/configure/configure-role-based-administration.md)。  
+
+### <a name="firewall-requirements"></a>防火墙要求  
+ 诸如路由器和防火墙以及 Windows 防火墙（如果适用）等干预网络设备必须允许与移动设备注册相关联的通讯：  
+
+-   移动设备和注册代理点之间：HTTPS（默认情况下为 TCP 443）  
+
+-   注册代理点和注册点之间：HTTPS（默认情况下为 TCP 443）  
+
+ 如果你使用代理 Web 服务器，则必须针对 SSL 隧道对其进行配置；移动设备不支持 SSL 桥接。  

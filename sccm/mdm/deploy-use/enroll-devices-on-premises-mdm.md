@@ -1,6 +1,6 @@
 ---
-title: "註冊裝置 | Microsoft Docs"
-description: "了解在 System Center Configuration Manager 中註冊裝置以進行內部行動裝置管理的方法。"
+title: "注册设备 | Microsoft Docs"
+description: "了解在 System Center Configuration Manager 中为本地移动设备管理注册设备的方法。"
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
@@ -17,28 +17,28 @@ manager: angrobe
 ms.openlocfilehash: 4abaef35969ef1a5340ae8ca8aa5699cd3942642
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="enroll-devices-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中註冊裝置以進行內部行動裝置管理
+# <a name="enroll-devices-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中为本地移动设备管理注册设备
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-若要使用 System Center Configuration Manager 內部部署行動裝置管理來管理電腦和裝置，裝置需要註冊以便 Configuration Manager 能與裝置溝通管理工作。 Configuration Manager 提供兩種註冊裝置的方法：  
+若要使用 System Center Configuration Manager 本地移动设备管理来管理计算机，需要注册设备，以便 Configuration Manager 能够与设备通信进行任务管理。 Configuration Manager 提供了两种注册设备的方法：  
 
--   **使用者註冊** - 在此方法中，使用者在其裝置上起始註冊程序。 使用者註冊若要成功，裝置上必須安裝信任的根憑證，且必須佈建使用者，以便由 Configuration Manager 註冊。  若要註冊裝置，使用者只要提供工作認證，裝置便會註冊為受管理。  
+-   “用户注册” - 在这种方法中，用户启动其设备上的注册过程。 为了使用户注册成功，必须在设备上安装受信任的根证书且用户必须设置为由 Configuration Manager 进行注册。  若要注册设备，用户只需提供工作凭据，设备就被注册为可管理状态。  
 
-     如需詳細資訊，請參閱[使用者如何在 System Center Configuration Manager 中使用內部部署行動裝置管理註冊裝置](../../mdm/deploy-use/user-enroll-devices-on-premises-mdm.md)  
+     有关详细信息，请参阅[用户如何在 System Center Configuration Manager 中向本地移动设备管理注册设备](../../mdm/deploy-use/user-enroll-devices-on-premises-mdm.md)  
 
--   **大量註冊** - 在此方法中，裝置的使用者不需要起始註冊。 而是會在 Configuration Manager 建立一個大量註冊套件，然後放在裝置上並開啟。 開啟時，套件會提供註冊裝置所需的資訊。  
+-   “批量注册” - 这种方法中，设备用户不需要启动注册。 而是在 Configuration Manager 内创建批量注册程序包，然后将其放置到设备上并打开。 打开时，此包提供注册设备所需的信息。  
 
-     如需詳細資訊，請參閱[如何在 System Center Configuration Manager 中使用內部部署行動裝置管理大量註冊裝置](../../mdm/deploy-use/bulk-enroll-devices-on-premises-mdm.md)  
+     有关详细信息，请参阅[如何在 System Center Configuration Manager 中向本地移动设备管理批量注册设备](../../mdm/deploy-use/bulk-enroll-devices-on-premises-mdm.md)  
 
  > [!NOTE]  
->  Configuration Manager 的最新分支，支援執行下列作業系統的裝置在內部部署行動裝置管理中註冊︰  
+>  Configuration Manager 的 Current Branch 支持针对运行以下操作系统的设备的本地移动设备管理中的注册：  
 >   
->  -   Windows 10 Enterprise  
-> -   Windows 10 Pro  
-> -   Windows 10 團隊版 
-> -   Windows 10 Mobile  
-> -   Windows 10 Mobile Enterprise   
+>  -   Windows 10 企业版  
+> -   Windows 10 专业版  
+> -   Windows 10 协同版 
+> -   Windows 10 移动版  
+> -   Windows 10 移动企业版   

@@ -1,6 +1,6 @@
 ---
-title: "探索裝置與使用者資源 |Microsoft Docs"
-description: "閱讀以了解探索程序及探索資料記錄的概觀。"
+title: "发现设备和用户资源 | Microsoft Docs"
+description: "阅读发现过程和发现数据记录的概述。"
 ms.custom: na
 ms.date: 2/8/2017
 ms.prod: configuration-manager
@@ -18,71 +18,71 @@ manager: angrobe
 ms.openlocfilehash: 647826e9d340d3ef97abab0dba51041a3727dedc
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="run-discovery-for-system-center-configuration-manager"></a>為 System Center Configuration Manager 執行探索
+# <a name="run-discovery-for-system-center-configuration-manager"></a>运行 System Center Configuration Manager 发现
 
-*適用於︰System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-您可以使用 System Center Configuration Manager 中的一或多種探索方法，尋找您可管理的裝置與使用者資源。 您也可以使用 [探索] 來找出環境中的網路基礎結構。 您可使用多種不同的方法來探索不同的事物，且每個方法都有其自己的設定與限制。  
+使用 System Center Configuration Manager 中的一种或多种发现方法以查找可以管理的设备和用户资源。 还可以使用发现来识别环境中的网络基础结构。 可使用多种不同的方法来发现不同的内容，并且每种方法都有其自己的配置和限制。  
 
-## <a name="overview-of-discovery"></a>探索概觀  
- 探索是一種過程，Configuration Manager 會透過這個過程來了解可供您管理的項目。 下列是可用的探索方法：  
+## <a name="overview-of-discovery"></a>发现概述  
+ 发现是一个 Configuration Manager 用于了解可管理的事务的过程。 以下是可用的发现方法：  
 
--   Active Directory 樹系探索  
+-   Active Directory 林发现  
 
--   Active Directory 群組探索  
+-   Active Directory 组发现  
 
--   Active Directory 系統探索  
+-   Active Directory 系统发现  
 
--   Active Directory 使用者探索  
+-   Active Directory 用户发现  
 
--   活動訊號探索  
+-   检测信号发现  
 
--   網路探索  
+-   网络发现  
 
--   伺服器探索  
+-   服务器发现  
 
 > [!TIP]  
->  您可以在 [About discovery methods for System Center Configuration Manager](../../../../core/servers/deploy/configure/about-discovery-methods.md) (關於 System Center Configuration Manager 的探索方法) 了解個別的探索方法。  
+>  你可以在[有关 System Center Configuration Manager 的发现方法](../../../../core/servers/deploy/configure/about-discovery-methods.md)中了解各个发现方法。  
 >   
->  如需選取使用方法以及階層中哪個站台之協助，請參閱 [選取在 System Center Configuration Manager 使用的探索方法](../../../../core/servers/deploy/configure/select-discovery-methods-to-use.md)。  
+>  有关选择要使用的方法和层次结构中的站点的帮助，请参阅[选择 System Center Configuration Manager 要使用的发现方法](../../../../core/servers/deploy/configure/select-discovery-methods-to-use.md)。  
 
- 為充分運用探索方法，您必須在站台啟用該方法，並將它設定為搜尋特定網路或 Active Directory 位置。 執行探索方法時，其會查詢指定的位置是否有可供 Configuration Manager 管理之裝置或使用者的相關資訊。 當探索方法成功找到某項資源的相關資訊時，會將該資訊置於稱作探索資料記錄 (DDR) 的檔案內。 主要站台或管理中心網站接著會處理該檔案。 處理 DDR 時會在站台資料庫中為新探索到的資源建立新記錄，或是以新資訊更新現有記錄。  
+ 若要使用大部分的发现方法，必须在站点上启用该方法，并将其设置为搜索特定网络或 Active Directory 位置。 运行时，此方法会查询特定位置以获取有关 Configuration Manager 可管理的设备或用户的信息。 当发现方法成功找到有关资源的信息时，它会将该信息放在称为发现数据记录 (DDR) 的文件中。 主站点或管理中心站点随后将对该文件进行处理。 对 DDR 的处理会在站点数据库中为新发现的资源创建一条新记录，或使用新信息更新现有记录。  
 
- 有些探索方法可能會產生大量的網路流量，而其所產生的 DDR，會在處理時耗用大量的 CPU 資源。 因此，請只規劃使用達成您目標所需的探索方法。 您可以從只使用一或兩個探索方法開始，之後再以節制的方式啟用其他方法來延伸您環境中的探索層級。  
+ 某些发现方法可能会生成大量的网络流量，并且所产生的 DDR 可能会导致在处理过程中使用大量的 CPU 资源。 因此，请计划仅使用满足目标所需的那些发现方法。 可在开始时仅使用一种或两种发现方法，之后以管制方式启用其他方法以扩展环境中的发现级别。  
 
- 將探索資訊新增到站台資料庫之後，接著不論該資訊的探索或處理站台是為何，會將該資訊複寫到階層中個每個站台。 因此，若在不同的站台為探索方法設定不同的排程與設定，在單一站台上可能可執行特定的探索方法。 如此可減少因為重複的探索動作而使用網路頻寬的情況，並會降低於多個站台上處理多餘的探索資料。  
+ 将发现信息添加到站点数据库后，再将其复制到层次结构中的每个站点中，与发现或处理此信息的位置无关。 因此，尽管可为不同站点中的发现方法设置不同的计划和设置，但可能仅会在单个站点中运行特定的发现方法。 这通过重复的发现操作减少网络带宽的使用，并减少在多个站点中对冗余发现数据的处理。  
 
- 您可以使用探索資料，建立之自訂集合與查詢，依邏輯方式分組管理工作資源。 例如：  
+ 可以使用发现数据来创建对管理任务的资源进行逻辑分组的自定义集合和查询。 例如：  
 
--   發行用戶端安裝或升級。  
+-   推送客户端安装或升级。  
 
--   將內容佈署到使用者或裝置。  
+-   将内容部署到用户或设备。  
 
--   部署用戶端設定以及相關設定。
+-   部署客户端设置和相关配置。
 
-##  <a name="BKMK_DDRs"></a> 關於探索資料記錄  
- DDR 是由探索方法所建立的檔案。 其包含可於 Configuration Manager 中管理之資源的相關資訊，例如電腦、使用者，某些情況下還有網路基礎結構。 這些資訊會在主要站台或管理中心網站上處理。 當 DDR 中的資源資訊輸入到資料庫後，就會將 DDR 刪除，並會複寫資訊以當作階層中所有站台的全域資料。  
+##  <a name="BKMK_DDRs"></a>关于发现数据记录  
+ DDR 是由发现方法创建的文件。 它们包含可在 Configuration Manager 中管理的资源的信息，如计算机、用户和（某些情况下的）网络基础结构。 将在主站点或管理中心站点上对它们进行处理。 在 DDR 中的资源信息进入数据库后，即会删除该 DDR，并且信息将以全局数据的形式复制到层次结构中的所有站点。  
 
- 站台所處理的 DDR，取決於其所含的資訊：  
+ 处理 DDR 的站点取决于它包含的信息：  
 
--   新探索的資源 DDR 若不在資料庫中，便會在階層的頂層站台處理。 頂層網站會在資料庫中建立新的資源記錄，並為其指派唯一的識別碼。 DDR 會經由以檔案為基礎的複寫傳輸，直到其到達頂層站台為止。  
+-   数据库中没有的新发现资源的 DDR 在层次结构的顶层站点上进行处理。 顶层站点在数据库中创建一条新的资源记录，并为其分配唯一的标识符。 DDR 通过基于文件的复制进行传输，直至到达顶层站点为止。  
 
--   先前探索之物件的 DDR，會在主要站台上處理。 子主要站台不會在 DDR 包含已存在於資料庫之資源的相關資訊時，將 DDR 傳送到管理中心網站。  
+-   以前发现的对象的 DDR 在主站点上进行处理。 如果 DDR 包含有关数据库中已有资源的信息，则子主站点不会将 DDR 传输到管理中心站点。  
 
--   次要站台不會處理 DDR，而是一律會採用以檔案為基礎的複寫方式，將它們傳送到其父主要站台。  
+-   辅助站点不处理 DDR，并会始终通过基于文件的复制将其传输到它们的父主站点。  
 
-DDR 檔案是以 .ddr 副檔名作為識別，檔案大小通常約 1 KB。  
+DDR 文件由 .ddr 扩展名标识，大小通常约为 1 KB。  
 
-## <a name="get-started-with-discovery"></a>開始使用探索：  
- 在使用 Configuration Manager 主控台來設定探索之前，應先了解各種方法之間的差異、各種方法的功能，以及就某些方法而言，有何限制。  
+## <a name="get-started-with-discovery"></a>发现入门：  
+ 使用 Configuration Manager 控制台设置发现之前，应了解方法间的差异、方法可实现的效果，以及某些方法的局限性。  
 
-下列主題可建立將協助您順利使用探索方法的基礎：  
+以下主题可构成有助于你成功使用发现方法的基础：  
 
--   [About discovery methods for System Center Configuration Manager](../../../../core/servers/deploy/configure/about-discovery-methods.md) (關於 System Center Configuration Manager 的探索方法)  
+-   [关于 System Center Configuration Manager 的发现方法](../../../../core/servers/deploy/configure/about-discovery-methods.md)  
 
--   [Select discovery methods to use for System Center Configuration Manager](../../../../core/servers/deploy/configure/select-discovery-methods-to-use.md) (選取用於 System Center Configuration Manager 的探索方法)  
+-   [选择 System Center Configuration Manager 要使用的发现方法](../../../../core/servers/deploy/configure/select-discovery-methods-to-use.md)  
 
-然後，當您了解想要使用的方法後，在[設定 System Center Configuration Manager 的探索方法](../../../../core/servers/deploy/configure/configure-discovery-methods.md)內，尋找設定每一種方法的指引。  
+在对要使用的方法有所了解之后，可在[配置 System Center Configuration Manager 的发现方法](../../../../core/servers/deploy/configure/configure-discovery-methods.md)中找到每个方法的设置指南。  

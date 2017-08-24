@@ -1,6 +1,6 @@
 ---
-title: "Configuration Manager 版本之間的互通性 | Microsoft Docs"
-description: "了解如何避免相同網路中多個 System Center Configuration Manager 階層之間產生衝突。"
+title: "Configuration Manager 版本之间的互操作性 | Microsoft Docs"
+description: "了解如何避免同一网络上多个 System Center Configuration Manager 层次结构之间发生冲突。"
 ms.custom: na
 ms.date: 1/30/2017
 ms.prod: configuration-manager
@@ -17,69 +17,69 @@ manager: angrobe
 ms.openlocfilehash: 28593d271603ff9775425327996d844d7ed358cd
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="interoperability-between-different-versions-of-system-center-configuration-manager"></a>System Center Configuration Manager 不同版本之間的互通性
+# <a name="interoperability-between-different-versions-of-system-center-configuration-manager"></a>System Center Configuration Manager 不同版本之间的互操作性
 
-*適用於︰System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-您可在相同網路上安裝及操作多個獨立的 System Center Configuration Manager 階層。 不過，由於不同的 Configuration Manager 階層無法在移轉程序外互通，因此每個階層的設定都需要避免彼此之間發生衝突。 此外，您可以建立特定設定，幫助所管理的資源與正確階層的站台系統互動。  
+可在同一网络上安装和运行多个独立的 System Center Configuration Manager 层次结构。 但是，由于 Configuration Manager 的各层次结构仅在迁移过程中进行交互，因此每个层次结构都需要配置以防止彼此间存在冲突。 此外，可创建某些配置，帮助所管理的资源与相应层次结构中的站点系统进行交互。  
 
- 下面各節提供在相同網路上使用不同版本 Configuration Manager 的相關資訊：  
+ 下列部分提供有关在同一网络上使用不同版本的 Configuration Manager 的信息：  
 
--   [System Center Configuration Manager 與產品舊版本之間的互通性](#BKMK_SupConfigInterop)  
+-   [System Center Configuration Manager 和 早期版本之间的互操作性](#BKMK_SupConfigInterop)  
 
--   [Configuration Manager 主控台的互通性](#BKMK_ConsoleInterop)  
+-   [Configuration Manager 控制台的互操作性](#BKMK_ConsoleInterop)  
 
--   [混合版本階層中的 Configuration Manager 限制](#bkmk_mixed)  
+-   [混合版本层次结构中的 Configuration Manager 限制](#bkmk_mixed)  
 
-##  <a name="BKMK_SupConfigInterop"></a> System Center Configuration Manager 與產品舊版本之間的互通性  
- 除了從 System Center 2012 Configuration Manager 升級至 System Center Configuration Manager 或從某個 System Center Configuration Manager 版本升級至較新版本 (使用主控台內更新) 的升級程序期間以外，不同版本的站台不能共存於相同階層中。   
+##  <a name="BKMK_SupConfigInterop"></a> System Center Configuration Manager 和 早期版本之间的互操作性  
+ 同一层次结构中不可共同存在不同版本的站点，除非是 System Center 2012 Configuration Manager 到 System Center Configuration Manager 的升级期间，或者是某个 System Center Configuration Manager 版本到较新版本的升级期间（使用控制台内更新）。   
 
- 因為您可以部署與現有 System Center 2012 Configuration Manager 站台或階層並存的 System Center Configuration Manager 站台，建議您規劃好以避免任一版本的用戶端嘗試加入另一個版本的站台。
+ 因为可通过现有 System Center 2012 Configuration Manager 站点或者层次结构并排部署 System Center Configuration Manager 站点和层次结构，所以建议计划阻止其中某版本的客户端加入另一版本中的站点。
 
-例如，如果兩個或更多個 Configuration Manager 階層有包含相同網路位置的重疊界限 (請參閱[重疊的界限](/sccm/core/servers/deploy/configure/boundary-groups#overlapping-boundaries))，則最佳做法是將每個新的用戶端指派給特定站台，而不使用自動站台指派。 如需了解 System Center 2012 Configuration Manager 中自動站台指派的資訊，請參閱[如何將用戶端指派給 System Center Configuration Manager 中的站台](../../../core/clients/deploy/assign-clients-to-a-site.md)。  
+例如，如果两个或更多 Configuration Manager 层次结构具有包含相同网络位置的重叠边界（详见[重叠边界](/sccm/core/servers/deploy/configure/boundary-groups#overlapping-boundaries)），则最好将每个新客户端分配给特定站点，而不是使用自动站点分配。 有关 System Center 2012 Configuration Manager 中自动站点分配的信息，请参阅 [如何在 System Center Configuration Manager 中将客户端分配到一个站点](../../../core/clients/deploy/assign-clients-to-a-site.md)。  
 
- 此外，若電腦上裝載來自 System Center Configuration Manager 的站台系統角色，您不能在其上透過 System Center 2012 Configuration Manager 來安裝用戶端；若電腦上裝載來自 System Center 2012 Configuration Manager 的站台系統角色，也不能在其上安裝 System Center Configuration Manager 用戶端。  
+ 此外，无法在托管 System Center Configuration Manager 站点系统角色的计算机上通过 System Center 2012 Configuration Manager 安装客户端，也无法在托管 System Center 2012 Configuration Manager 站点系统角色的计算机上安装 System Center Configuration Manager 客户端。  
 
- 同樣地，不支援下列用戶端和下列虛擬私人網路 (VPN) 連線：  
+ 类似地，以下客户端和虚拟专用网 (VPN) 连接不受支持：  
 
--   任何 System Center 2012 Configuration Manager 或更早的電腦用戶端版本  
+-   任何 System Center 2012 Configuration Manager 或更早版本的计算机客户端  
 
--   任何 System Center 2012 Configuration Manager 或更早的裝置管理用戶端  
+-   任何 System Center 2012 Configuration Manager 或早期设备管理客户端  
 
--   Windows CE Platform Builder 裝置管理用戶端 (任何版本)  
+-   Windows CE Platform Builder 设备管理客户端（任意版本）  
 
--   System Center Mobile Device Manager VPN 連線  
+-   System Center Mobile Device Manager VPN 连接  
 
-###  <a name="BKMK_SupConfigSiteAssignment"></a> 用戶端站台指派考量  
- System Center Configuration Manager 用戶端只能指派給單一主要站台。 在用戶端安裝期間使用自動網站指派將用戶端指派至網站時，若有多個界限群組包含相同的界限，而且界限群組擁有不同的指派的站台，就無法預測實際的用戶端網站指派。  
+###  <a name="BKMK_SupConfigSiteAssignment"></a> 客户端站点分配注意事项  
+ 仅可将 System Center Configuration Manager 客户端分配到单个主站点。 当在客户端安装期间使用自动站点分配将客户端分配到站点，多个边界组包括相同的边界，并且边界组有不同的已分配站点时，将无法预测客户端的实际站点分配。  
 
- 如果界限跨多個 Configuration Manager 站台和階層重疊，用戶端可能會指派給非預期的站台，也可能根本不會指派給任何站台。  
+ 如果多个 Configuration Manager 站点和层次结构之间的边界重叠，则可能不会将客户端分配到所期望的站点，或者根本不能分配到站点。  
 
- System Center Configuration Manager 用戶端會在完成站台指派之前檢查 Configuration Manager 站台的版本；如果界限重疊，則無法指派給舊版本。 不過，System Center 2012 Configuration Manager 用戶端指派給 System Center Configuration Manager 站台時也可能會有不正確的情況。  
+ System Center Configuration Manager 客户端将在完成站点分配之前检查 Configuration Manager 站点的版本；如果边界重叠，则无法分配到早期版本。 但是，System Center 2012 Configuration Manager 客户端可能会错误分配到 System Center Configuration Manager 站点。  
 
- 為避免在兩個階層的界限重疊時不小心將用戶端指派給錯誤的站台，建議您將 Configuration Manager 用戶端安裝參數設為將用戶端指派給特定站台。  
+ 为了防止在两个层次结构有重叠的边界时将客户端意外地分配到错误的站点，建议配置 Configuration Manager 客户端安装参数，将客户端分配到特定站点。  
 
-##  <a name="bkmk_mixed"></a> 混合版本階層中的 Configuration Manager 限制  
- 有時，升級 System Center Configuration Manager 站台時，不同的站台會有不同的版本。 例如，您可能將管理中心網站升級至新的版本，但因站台維護期間，可能之後才會升級一個或多個主要站台。  
+##  <a name="bkmk_mixed"></a> 混合版本层次结构中的 Configuration Manager 限制  
+ 在升级 System Center Configuration Manager 站点的过程中，有时不同的站点会拥有不同的版本。 例如，可能会将管理中心站点升级到新版本，但由于站点维护窗口，需要一段时间以后才能升级一个或多个主站点。  
 
- 單一階層中不同的站台執行不同的版本時，部分功能無法使用。 這可能會影響您在 Configuration Manager 主控台中管理 Configuration Manager 物件的方式，以及對用戶端提供的功能。 通常，如果站台或用戶端是執行較舊 Service Pack 版本，可能就無法存取較新版 Configuration Manager 的功能。  
+ 当单一层次结构中的不同站点使用不同版本时，某些功能不可用。 这可能会影响在 Configuration Manager 控制台中管理 Configuration Manager 对象的方式，并影响客户端可用的功能。 通常，无法在站点上或通过运行较低 Service Pack 版本的客户端访问 Configuration Manager 较新版本中的功能。  
 
-### <a name="limitations-when-upgrading--configuration-manager"></a>升級 Configuration Manager 時的限制  
+### <a name="limitations-when-upgrading--configuration-manager"></a>升级 Configuration Manager 的限制  
 
-|物件|詳細資料|  
+|对象|详细信息|  
 |------------|-------------|  
-|網路存取帳戶|**從 System Center 2012 Configuration Manager 升級至 System Center Configuration Manager 時：**當您從連線至已更新為 System Center Configuration Manager 管理中心網站的 Configuration Manager 主控台，檢視網路存取帳戶詳細資料時，如果主要站台是執行 System Center 2012 Configuration Manager 而這些帳戶在該站台中設定，則主控台不會顯示該帳戶的詳細資料。 主要站台升級至與管理中心網站相同的版本之後，主控台中就可以看到帳戶詳細資料。<br /><br /> **在 System Center Configuration Manager 版本間進行升級時：**當您從連線至已更新為新版 System Center Configuration Manager 管理中心網站的 Configuration Manager 主控台，檢視網路存取帳戶詳細資料時，如果主要站台是執行舊版本而帳戶在該站台中設定，則主控台不會顯示這些帳戶的詳細資料。 主要站台升級至與管理中心網站相同的版本之後，主控台中就可以看到帳戶詳細資料。|  
-|作業系統部署的開機映像|**從 System Center 2012 Configuration Manager 升級至 System Center Configuration Manager 時：**當階層的頂層站台升級為 System Center Configuration Manager 時，預設開機映像會自動更新為以 Windows 評定及部署套件 10 (Windows ADK) 為基礎的開機映像。 只有在部署至 System Center Configuration Manager 站台上的用戶端時，才使用這些開機映像。 如需詳細資訊，請參閱[在 System Center Configuration Manager 中規劃作業系統部署互通性](../../../osd/plan-design/planning-for-operating-system-deployment-interoperability.md)。<br /><br /> **在 System Center Configuration Manager 版本間進行升級時：**只要 cm6long 的新版本未更新使用中的 Windows ADK 版本，就不會影響開機映像。|  
-|新的工作順序步驟|如果您建立的工作順序使用了舊版未提供但某個 Configuration Manager 版本引進的步驟，可能會遇到下列問題：<br /><br /> -- 當您嘗試從執行舊版 Configuration Manager 的站台編輯工作順序時，發生錯誤。<br /><br /> -- 工作順序在執行舊版 Configuration Manager 用戶端的電腦上不執行。|  
-|用戶端對舊版管理點通訊|如果 Configuration Manager 用戶端是透過比用戶端更舊版本的站台來與管理點進行通訊 ，則只能使用舊版 Configuration Manager 支援的功能。 例如，如果您最近升級了 System Center Configuration Manager 站台，並從該站台將內容部署至用戶端，假設此用戶端與尚未升級為該版本的管理點進行通訊，該用戶端就無法使用最新版本的新功能。|  
+|网络访问帐户|**从 System Center 2012 Configuration Manager 升级到 System Center Configuration Manager 时：**如果某 Configuration Manager 控制台连接到已更新为 System Center Configuration Manager 的管理中心站点，则通过该控制台查看网络访问帐户详细信息时，控制台不会显示在运行 System Center 2012 Configuration Manager 的主站点上配置的帐户的详细信息。 主站点升级到与管理中心站点相同的版本后，将可在控制台中看到帐户详细信息。<br /><br /> **在 System Center Configuration Manager 版本之间进行升级时：**如果某 Configuration Manager 控制台连接到已更新为 System Center Configuration Manager 新版本的管理中心站点，则通过该控制台查看网络访问帐户详细信息时，控制台不会显示在运行旧版本的主站点上配置的帐户的详细信息。 主站点升级到与管理中心站点相同的版本后，将可在控制台中看到帐户详细信息。|  
+|操作系统部署的启动映像|**从 System Center 2012 Configuration Manager 升级到 System Center Configuration Manager 时：**层次结构的顶层站点升级到 System Center Configuration Manager 时，默认启动映像会自动更新为基于 Windows 评估和部署工具包 10 (Windows ADK ) 的启动映像。 仅将这些启动映像用于对 System Center Configuration Manager 站点中客户端的部署。 有关详细信息，请参阅[在 System Center Configuration Manager 中规划操作系统部署互操作性](../../../osd/plan-design/planning-for-operating-system-deployment-interoperability.md)。<br /><br /> **在 System Center Configuration Manager 各版本之间升级时：**只要新版本的 cm6long 不更新当前使用的 Windows ADK 版本，就不会对启动映像造成影响。|  
+|新建任务序列步骤|使用某 Configuration Manager 版本中介绍的步骤创建任务序列时（早期版本中不可用），可能会遇到下列问题：<br /><br /> --   尝试从运行 Configuration Manager 先前版本的站点编辑任务序列时出错。<br /><br /> -- 在运行早期版本 Configuration Manager 客户端的计算机上，任务序列不运行。|  
+|客户端到下层管理点的通信|对于与某个站点中的管理点通信的 Configuration Manager 客户端，如果该站点运行的版本比客户端低，则该客户端只能使用 Configuration Manager 的下层版本所支持的功能。 例如，如果将内容从近期升级的 System Center Configuration Manager 站点部署到与管理点通信的客户端，但该客户端尚未升级到此版本，则该客户端无法使用最新版本中的新增功能。|  
 
-##  <a name="BKMK_ConsoleInterop"></a> Configuration Manager 主控台的互通性  
- 下表提供在混用不同 Configuration Manager 版本的環境中使用 Configuration Manager 主控台的相關資訊。  
+##  <a name="BKMK_ConsoleInterop"></a>Configuration Manager 控制台的互操作性  
+ 下表包含在具有 Configuration Manager 混合版本的环境中使用 Configuration Manager 控制台的相关信息。  
 
-|互通性環境|詳細資訊|  
+|互操作性环境|更多信息|  
 |----------------------------------|----------------------|  
-|使用 System Center 2012 Configuration Manager 和 System Center Configuration Manager 的環境|若要管理 Configuration Manager 站台，主控台和主控台連接的站台兩者必須執行相同版本的 Configuration Manager。 例如，您無法使用 System Center 2012 Configuration Manager 主控台來管理 System Center Configuration Manager 站台，反之亦然。<br /><br /> 此外，在同一部電腦上不能安裝 System Center 2012 Configuration Manager 主控台和 System Center Configuration Manager 主控台。|  
-|安裝多重 System Center Configuration Manager 版本的環境|System Center Configuration Manager 只支援在電腦上安裝單一 Configuration Manager 主控台。 若要使用不同 System Center Configuration Manager 版本專用的主控台，您必須在不同的電腦上安裝不同的主控台。<br /><br /> 將階層中的站台更新為新版本時，您可以將主控台連線至執行新版本的站台，並檢視該階層中其他站台的資訊。 不過，我們不建議您使用這種設定，因為主控台版本與 Configuration Manager 站台版本之間的差異可能會導致資料問題，而且最新產品版本中所提供的某些功能將無法在主控台中使用。 <br /></br /> 使用版本與站台版本不符的主控台時，無法管理站台。 這樣做可能會造成資料遺失，也可能讓您的站台面臨風險。 舉例來說，使用 1610 版的主控台無法管理執行 1606 版的站台。 |
+|同时具有 System Center 2012 Configuration Manager 和 System Center Configuration Manager 的环境|若要管理 Configuration Manager 站点，控制台及其连接到的站点必须运行相同版本的 Configuration Manager。 例如，无法使用 System Center 2012 Configuration Manager 控制台管理 System Center Configuration Manager 站点，反之亦然。<br /><br /> 不支持在同一计算机上安装 System Center 2012 Configuration Manager 控制台和 System Center Configuration Manager 控制台。|  
+|具有 System Center Configuration Manager 的多个版本的环境|System Center Configuration Manager 不支持在某一计算机上安装多个 Configuration Manager 控制台。 若要使用特定于 System Center Configuration Manager 的不同版本的多个控制台，必须在单独的计算机上安装不同的控制台。<br /><br /> 在将层次结构中的站点更新到新版本的过程中，你可以将控制台连接到运行更新的版本的站点，并查看关于该层次结构中其他站点的信息。 但是，不建议使用此配置，因为控制台版本和 Configuration Manager 站点版本之间的差异可能导致数据问题，且某些在最新产品版本中可用的功能在控制台中不可用。 <br /></br />使用的控制台的版本与站点版本不匹配时，不支持对站点进行管理。 这样可能会导致数据丢失，并会将你的站点置于风险之中。 例如，不支持使用版本为 1610 的控制台来管理运行版本 1606 的站点。 |

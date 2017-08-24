@@ -1,6 +1,6 @@
 ---
-title: "管理使用者狀態 - Configuration Manager| Microsoft Docs"
-description: "System Center Configuration Manager 以使用者狀態移轉工具來擷取及還原作業系統部署案例中的使用者狀態資料。"
+title: "管理用户状态 - Configuration Manager| Microsoft Docs"
+description: "System Center Configuration Manager 使用用户状态迁移工具捕获和还原操作系统部署方案中的用户状态数据。"
 ms.custom: na
 ms.date: 01/23/2017
 ms.prod: configuration-manager
@@ -18,114 +18,114 @@ manager: angrobe
 ms.openlocfilehash: a0bd86587669c32377b1eafa6a890d37e10ac3f6
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="manage-user-state-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中管理使用者狀態
+# <a name="manage-user-state-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中管理用户状态
 
-*適用對象：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-您可以使用 System Center Configuration Manager 工作順序來擷取和還原作業系統部署案例 (您想保留目前作業系統的使用者狀態) 中的使用者狀態資料。 例如：  
+在希望保留当前操作系统的用户状态的操作系统部署方案中，可以使用 System Center Configuration Manager 任务序列来捕获和还原用户状态数据。 例如：  
 
--   您想要從某部電腦擷取使用者狀態，並將其還原到另一部電腦上的部署。  
+-   某些部署，其中你希望从一台计算机中捕获用户状态，然后在另一台计算机上将其还原。  
 
--   更新部署，在這類部署中您會在同一部電腦上擷取和還原使用者狀態。  
+-   在更新部署中，你希望在同一台计算机上捕获和还原用户状态。  
 
- Configuration Manager 以使用者狀態移轉工具 (USMT) 10.0 來管理在作業系統安裝完成後，從來源電腦將使用者狀態資料移轉至目的地電腦。 如需 USMT 10.0 一般移轉案例的相關資訊，請參閱  [常見移轉案例](https://technet.microsoft.com/library/mt299169\(v=vs.85\).aspx)。  
+ 操作系统安装完成后，Configuration Manager 使用用户状态迁移工具 (USMT) 10.0 来管理从源计算机到目标计算机的用户状态数据迁移。 有关 USMT 10.0 常见迁移方案的详细信息，请参阅  [常见迁移方案](https://technet.microsoft.com/library/mt299169\(v=vs.85\).aspx)。  
 
- 請使用下列區段以利擷取與還原使用者資料。
+ 使用以下部分可帮助你捕获和还原用户数据。
 
 
-##  <a name="BKMK_StoringUserData"></a> 儲存使用者狀態資料  
- 當您擷取使用者狀態時，可以在目的地電腦上或狀態移轉點上儲存使用者狀態資料。 若要在使用者狀態移轉點上儲存使用者狀態，您必須使用裝載狀態移轉點站台系統角色的 Configuration Manager 站台系統伺服器。 若要在目的地電腦上儲存使用者狀態，您必須將工作順序設定為使用連結在本機儲存資料。  
+##  <a name="BKMK_StoringUserData"></a> 存储用户状态数据  
+ 捕获用户状态时，可以在目标计算机或状态迁移点上存储用户状态数据。 要将用户状态存储在用户状态迁移点上，你必须使用承载状态迁移点站点系统角色的 Configuration Manager 站点系统服务器。 要将用户状态存储在目标计算机上，你必须配置任务序列以便使用链接以本地方式存储数据。  
 
 > [!NOTE]  
->  用於在本機儲存使用者狀態的連結，稱為永久連結。 永久連結是 USMT 10.0 的一項功能，會掃描電腦的使用者檔案和設定，然後針對這些檔案建立永久連結的目錄。 接著，您可以在部署新的作業系統後，使用永久連結來還原使用者資料。  
+>  用于以本地方式存储用户状态的链接称为硬链接。 硬链接是一项 USMT 10.0 功能，该功能将扫描计算机以查找用户文件和设置，然后创建指向这些文件的硬链接的目录。 然后，使用硬链接在部署了新操作系统之后还原用户数据。  
 
 > [!IMPORTANT]  
->  您不能同時使用狀態移轉點和永久連結來儲存使用者狀態資料。  
+>  你无法同时使用状态迁移点和使用硬链接来存储用户状态数据。  
 
- 擷取到使用者狀態資訊後，可以運用下列任一方法儲存擷取到的資訊：  
+ 捕获用户状态信息后，可以使用下列方法之一存储信息：  
 
--   您可以設定狀態移轉點來遠端存放使用者狀態資料。 [擷取]  工作順序會將資料傳送至狀態移轉點。 等到作業系統部署完畢後，[還原]  工作順序就會擷取資料並還原目的地電腦上的使用者狀態。  
+-   你可以通过配置状态迁移点以远程存储用户状态数据。 **捕获** 任务序列将数据发送到状态迁移点。 然后，在部署操作系统之后， **还原** 任务序列将检索数据并在目标计算机上还原用户状态。  
 
--   您可以將使用者狀態資料存放在本機的特定位置。 在此案例中，[擷取]  工作順序會將使用者資料複製到目的地電腦上的特定位置。 等到作業系統部署完畢後，[還原]  工作順序便會從該位置擷取使用者資料。  
+-   你可以以本地方式将用户状态数据存储到特定位置。 在此方案中， **捕获** 任务序列将用户数据复制到目标计算机上的特定位置。 然后，在部署操作系统之后， **还原** 任务序列从该位置检索用户数据。  
 
--   您可以指定能用於將使用者資料還原至原始位置的永久連結。 在此案例中，移除舊的作業系統後，使用者資料仍保留在磁碟中。 接著，等到新的作業系統部署完畢後，[還原]  工作順序會利用永久連結將使用者狀態資料還原至原始位置。  
+-   你可以指定可用于将用户数据还原到其原始位置的硬链接。 在此方案中，删除旧操作系统时，用户状态数据会保留在驱动器上。 然后，在部署新操作系统之后， **还原** 任务序列使用硬链接将用户状态数据还原到其原始位置。  
 
-###  <a name="BKMK_UserDataSMP"></a> 在狀態移轉點上儲存使用者資料  
- 若要在狀態移轉點上儲存使用者狀態資料，您必須執行下列作業：  
+###  <a name="BKMK_UserDataSMP"></a> 在状态迁移点上存储用户数据  
+ 要将用户状态数据存储在状态迁移点上，必须执行下列操作：  
 
-1.  [Configure a state migration point](#BKMK_StateMigrationPoint) 以儲存使用者狀態資料。  
+1.  用于存储用户状态数据的[Configure a state migration point](#BKMK_StateMigrationPoint) 。  
 
-2.  在來源電腦和目的地電腦之間[Create a computer association](#BKMK_ComputerAssociation) 。 您必須先建立此關聯，才可以在來源電腦上擷取使用者狀態。  
+2.  在源计算机和目标计算机之间[Create a computer association](#BKMK_ComputerAssociation) 。 在源计算机上捕获用户状态之前，你必须创建此关联。  
 
-3.  [在 System Center Configuration Manager 中建立工作順序以擷取和還原使用者狀態](../deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md)。 具體來說，您必須新增下列工作順序步驟，以從電腦擷取使用者資料、將使用者資料儲存在狀態移轉點上，然後將使用者資料還原到電腦：  
+3.  [创建任务序列以捕获和还原 System Center Configuration Manager 中的用户状态](../deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md)。 具体而言，必须添加下列任务序列步骤以从计算机捕获用户数据，在状态迁移点上存储用户日期并将用户数据还原到一台计算机：  
 
-    -   [要求狀態存放區](../understand/task-sequence-steps.md#BKMK_RequestStateStore)要求在從電腦擷取狀態，或是將狀態還原至電腦時，能夠存取狀態移轉點。  
+    -   [请求状态存储](../understand/task-sequence-steps.md#BKMK_RequestStateStore)，在从计算机捕获状态或将状态还原到计算机时请求访问状态迁移点。  
 
-    -   [擷取使用者狀態](../understand/task-sequence-steps.md#BKMK_CaptureUserState)擷取和還原狀態移轉點上的使用者狀態資料。  
+    -   [捕获用户状态](../understand/task-sequence-steps.md#BKMK_CaptureUserState)，捕获用户状态数据并将其存储在状态迁移点上。  
 
-    -   [還原使用者狀態](../understand/task-sequence-steps.md#BKMK_RestoreUserState)從使用者狀態移轉點擷取資料，在目的地電腦上還原使用者狀態。  
+    -   [还原用户状态](../understand/task-sequence-steps.md#BKMK_RestoreUserState)，通过从用户状态迁移点检索数据在目标计算机上还原用户状态。  
 
-    -   [釋放狀態存放區](../understand/task-sequence-steps.md#BKMK_ReleaseStateStore)通知狀態移轉點，擷取或還原動作已完成。  
+    -   [发布状态存储](../understand/task-sequence-steps.md#BKMK_ReleaseStateStore)，通知状态迁移点捕获或还原操作已完成。  
 
-###  <a name="BKMK_UserDataDestination"></a> 在本機儲存使用者資料  
- 若要在本機儲存使用者狀態資料，您必須執行下列作業：  
+###  <a name="BKMK_UserDataDestination"></a> 在本地存储用户数据  
+ 若要在本地存储用户状态数据，必须执行以下操作：  
 
--   [建立工作順序擷取和還原使用者狀態](../deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md)。 具體來說，您必須新增下列工作順序步驟，以從電腦擷取使用者資料，然後使用永久連線將使用者資料還原到電腦：  
+-   [创建用于捕获和还原用户状态的任务序列](../deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md)。 具体而言，必须添加下列任务序列步骤以从计算机捕获用户数据，并通过使用硬链接将用户数据还原到一台计算机，  
 
-    -   [擷取使用者狀態](../understand/task-sequence-steps.md#BKMK_CaptureUserState)使用永久連結，擷取和儲存使用者狀態資料至本機資料夾。  
+    -   [捕获用户状态](../understand/task-sequence-steps.md#BKMK_CaptureUserState)，捕获用户状态数据并通过使用硬链接将其存储到本地文件夹。  
 
-    -   [還原使用者狀態](../understand/task-sequence-steps.md#BKMK_RestoreUserState)以使用永久連結擷取資料，在目的地電腦上還原使用者狀態。  
+    -   [还原用户状态](../understand/task-sequence-steps.md#BKMK_RestoreUserState)，使用硬链接，通过检索数据在目标计算机上还原用户数据。  
 
         > [!NOTE]  
-        >  永久連結參照的使用者狀態資料在工作順序移除舊的作業系統後，仍會保留在電腦上。 這個資料在部署新的作業系統後，可用來還原使用者狀態。  
+        >  在任务序列删除旧操作系统后，硬链接引用的用户状态数据保留在计算机上。 这是用于在部署新操作系统时用于还原用户状态的数据。  
 
 ##  <a name="BKMK_StateMigrationPoint"></a> Configure a state migration point  
- 狀態移轉點會儲存在某台電腦上擷取到的使用者狀態資料，再將資料還原至另一台電腦。 不過，當您擷取同一部電腦之作業系統部署的使用者設定時 (例如目的地電腦的部署，在此重新整理作業系統)，您可以使用永久連結將資料儲存在同一部電腦，或是在狀態移轉點上。 進行部分電腦部署時，若要建立狀態存放區，Configuration Manager 會自動在狀態存放區和目的地電腦之間建立關聯。 您可以使用下列方法，將狀態移轉點設定為儲存使用者狀態資料：  
+ 状态迁移点在一台计算机上存储捕获的用户状态数据，然后在另一台计算机上还原这些数据。 但是，当你在同一台计算机上捕获操作系统部署的用户设置时（例如在目标计算机上刷新操作系统的部署），你可以通过使用硬链接将数据存储在同一台计算机上或将数据存储在状态迁移点上。 对于某些计算机部署，当你创建状态存储时，Configuration Manager 会自动在状态存储和目标计算机之间创建关联。 你可以使用下列方法来配置状态迁移点以存储用户状态数据：  
 
--   使用 [建立站台系統伺服器精靈]  ，為狀態管理點建立新的站台系統伺服器。  
+-   使用“创建站点系统服务器向导”  为状态迁移点创建一个新站点系统服务器。  
 
--   使用 [新增站台系統角色精靈]  ，將狀態移轉點新增至現有伺服器。  
+-   使用“添加站点系统角色向导”  将状态迁移点添加到现有服务器。  
 
- 當您使用這些精靈時，系統會提示您為狀態移轉點提供下列資訊：  
+ 在使用这些向导时，会提示你提供状态迁移点的下列信息：  
 
--   用於儲存使用者狀態資料的資料夾。  
+-   用于存储用户状态数据的文件夹。  
 
--   狀態移轉點上可儲存資料的用戶端數目上限。  
+-   可在状态迁移点上存储数据的客户端的最大数量。  
 
--   狀態移轉點用於儲存使用者狀態資料的最小可用空間。  
+-   供状态迁移点存储用户状态数据的最小可用空间。  
 
--   角色的刪除原則。 您可以指定是要在還原於電腦後立刻刪除使用者狀態資料，或是在將使用者資料還原到電腦後的特定天數後再將其刪除。  
+-   角色的删除策略。 你可以指定在计算机上还原用户状态数据之后立即删除该数据，或在计算机上还原用户数据后特定天数之后再删除该数据。  
 
--   狀態移轉點是否只回應還原使用者狀態資料的要求。 當您啟用此選項時，將無法使用狀態移轉點來儲存使用者狀態資料。  
+-   状态迁移点是否仅响应还原用户状态数据的请求。 如果启用此选项，你将无法使用状态迁移点来存储用户状态数据。  
 
- 如需狀態移轉點和其設定步驟的詳細資訊，請參閱[狀態移轉點](prepare-site-system-roles-for-operating-system-deployments.md#BKMK_StateMigrationPoints)。  
+ 有关状态迁移点以及对其进行配置的步骤的详细信息，请参阅[状态迁移点](prepare-site-system-roles-for-operating-system-deployments.md#BKMK_StateMigrationPoints)。  
 
 ##  <a name="BKMK_ComputerAssociation"></a> Create a computer association  
- 當您在新硬體上安裝作業系統，而且想要擷取及還原使用者資料和設定時，請建立電腦關聯以定義來源電腦和目的電腦之間的關聯性。 來源電腦是 Configuration Manager 管理的現有電腦。 當您將新的作業系統部署至目的地電腦時，來源電腦會包含移轉至目的地電腦的使用者狀態。  
+ 当你在新硬件上安装操作系统并且想捕获和还原用户数据设置时，请创建计算机关联以定义源计算机和目标计算机之间的关系。 源计算机是 Configuration Manager 管理的现有计算机。 在你将新操作系统部署到目标计算机时，源计算机包含迁移到目标计算机的用户状态。  
 
 > [!NOTE]  
->  您無法在位於 Configuration Manager 父站台的電腦與位於子站台的電腦之間建立電腦關聯。 電腦關聯為站台特定，且不會複寫。  
+>  不支持在 Configuration Manager 父站点中的计算机与子站点中的计算机之间创建计算机关联。 计算机关联是特定于站点的，不会复制。  
 
-#### <a name="to-create-a-computer-association"></a>建立電腦關聯  
+#### <a name="to-create-a-computer-association"></a>创建计算机关联  
 
-1.  在 Configuration Manager 主控台中，按一下 [資產與相容性] 。  
+1.  在 Configuration Manager 控制台中，单击“资产和符合性” 。  
 
-2.  在 [資產與相容性]  工作區中，按一下 [使用者狀態移轉] 。  
+2.  在“资产和符合性”  工作区中，单击“用户状态迁移” 。  
 
-3.  在 [首頁]  索引標籤的 [建立]  群組中，按一下 [建立電腦關聯] 。  
+3.  在“主页”  选项卡上的“创建”  组中，单击“创建计算机关联” 。  
 
-4.  在 [電腦關聯內容]  對話方塊的 [電腦關聯]  索引標籤上，指定要擷取其使用者狀態的來源電腦，以及要還原使用者狀態資料的目的地電腦。  
+4.  在“计算机关联属性”  对话框的“计算机关联”  选项卡上，指定具有要捕获的用户状态的源计算机，以及要在其上还原用户状态数据的目标计算机。  
 
-5.  在 [使用者帳戶]  索引標籤上，指定要移轉至目的地電腦的使用者帳戶。 指定下列其中一項設定：  
+5.  在“用户帐户”  选项卡上，指定要迁移到目标计算机的用户帐户。 指定下列设置之一：  
 
-    -   **擷取和還原所有使用者帳戶**：此設定會擷取和還原所有使用者帳戶。 使用此設定建立多個與相同來源電腦的關聯。  
+    -   **捕获并还原所有用户帐户**：此设置捕获和还原所有用户帐户。 使用此设置来创建与同一源计算机的多个关联。  
 
-    -   **擷取所有使用者帳戶並還原指定的帳戶**：此設定會擷取來源電腦上的所有使用者帳戶，並只還原您在目的地電腦上指定的帳戶。 另外，若想要與相同來源電腦建立多個關聯，您可以使用此設定。  
+    -   **捕获所有用户帐户并还原指定的帐户**：此设置捕获源计算机上的所有用户帐户，并且仅在目标计算机上还原指定的帐户。 此外，你可以在要创建与同一源计算机的多个关联时使用此设置。  
 
-    -   **擷取和還原指定的使用者帳戶**：此設定只會擷取及還原您所指定的帳戶。 您無法在選取此設定時，對相同來源電腦建立多個關聯。  
+    -   **捕获并还原指定的用户帐户**：此设置仅捕获和还原指定的帐户。 如果选择此设置，你无法创建与同一源计算机的多个关联。  
 
-##  <a name="BKMK_MigrationFails"></a> 在作業系統部署失敗時還原使用者狀態資料  
- 如果作業系統部署失敗，可使用 USMT 10.0 LoadState 功能以擷取在部署程序中所擷取的使用者狀態資料。 這包括在狀態移轉點上儲存的資料，或是本機儲存在目的地電腦上的資料。 如需 USMT 功能的詳細資訊，請參閱 [LoadState 語法](https://technet.microsoft.com/library/mt299188\(v=vs.85\).aspx)。  
+##  <a name="BKMK_MigrationFails"></a> 在操作系统部署失败时还原用户状态数据  
+ 如果操作系统部署失败，请使用 USMT 10.0 LoadState 功能检索在部署过程中捕获的用户状态数据。 这包括存储在状态迁移点上的数据，或者以本地方式保存在目标计算机上的数据。 有关此 USMT 功能的详细信息，请参阅 [LoadState 语法](https://technet.microsoft.com/library/mt299188\(v=vs.85\).aspx)。  

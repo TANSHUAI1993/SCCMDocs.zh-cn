@@ -4,24 +4,21 @@ description: "了解 System Center Configuration Manager Technical Preview 1605 
 ms.custom: na
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2bafd028-1923-4463-9e3e-ee41bc0c437b
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5d08d1f9ccd995d544c3c21c4af52ede73343077
-ms.openlocfilehash: 3af395b84dd6878af9b846b438049e55baf9472e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 01/24/2017
-
-
+ms.openlocfilehash: 8b3d472c586e704ee48e9825138c72f655d89492
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="capabilities-in-technical-preview-1605-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1605 版中的功能
 
@@ -377,7 +374,7 @@ ms.lasthandoff: 01/24/2017
 
 2.  键入 Windows Defender ATP 策略的**名称**和**说明**，然后选择“载入”。 单击“下一步”。  
 
-3.  **浏览**到组织的 Windows Defender ATP 云服务租户提供的配置文件。 单击“下一步” 。  
+3.  **浏览**到组织的 Windows Defender ATP 云服务租户提供的配置文件。 单击“下一步”。  
 
 4.  指定从托管设备收集和共享的文件示例以进行分析。  
 
@@ -471,4 +468,3 @@ ms.lasthandoff: 01/24/2017
      单击“下一步” 。  
 
 4.  查看文件导入的结果。 以前导入的 IMEI 或序列号会将其详细信息更新为新的详细信息。  单击“下一步”继续，或单击“返回”保存更新后的详细信息，然后完成向导。  
-

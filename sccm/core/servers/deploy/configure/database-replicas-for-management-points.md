@@ -1,6 +1,6 @@
 ---
-title: "管理點資料庫複本 | Microsoft Docs"
-description: "使用資料庫複本，以減少管理點對站台資料庫伺服器造成的 CPU 負載。"
+title: "管理点数据库副本 | Microsoft Docs"
+description: "使用数据库副本可减少管理点对站点数据库服务器施加的 CPU 负载。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -17,235 +17,235 @@ manager: angrobe
 ms.openlocfilehash: 130c053c9f2a1817dd85b1f3c01285aab19d59cb
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="database-replicas-for-management-points-for-system-center-configuration-manager"></a>System Center Configuration Manager 的管理點資料庫複本
+# <a name="database-replicas-for-management-points-for-system-center-configuration-manager"></a>System Center Configuration Manager 管理点的数据库副本
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager 主要站台可以使用資料庫複本，減少管理點在服務來自用戶端的要求時，對站台資料庫伺服器造成的 CPU 負載。  
+System Center Configuration Manager 主站点可以使用数据库副本来减少管理点在处理来自客户端的请求时对站点数据库服务器施加的 CPU 负载。  
 
--   管理點使用資料庫複本時，該管理點會從裝載資料庫複本的 SQL Server 電腦要求資料，而不會從站台資料庫伺服器要求資料。  
+-   当管理点使用数据库副本时，此管理点会从承载数据库副本的 SQL Server 计算机中请求数据，而不是从站点数据库服务器中请求。  
 
--   如此有助於減少站台資料庫伺服器上的 CPU 處理需求，方法是卸載與用戶端相關的常用處理工作。  用戶端常用處理工作的範例，包括有大量經常提出用戶端原則要求的用戶端之站台。  
+-   这有助于通过卸载与客户端相关的频繁处理任务来减少站点数据库服务器上的 CPU 处理要求。  客户端的频繁处理任务的示例包括其中存在大量客户端的站点，这些站点频繁请求客户端策略  
 
 
-##  <a name="bkmk_Prepare"></a> 準備使用資料庫複本  
-**有關管理點的資料庫複本：**  
+##  <a name="bkmk_Prepare"></a> 准备使用数据库副本  
+**关于管理点的数据库副本：**  
 
--   複本是站台資料庫的部分複本，其會複寫到另一個 SQL Server 執行個體：  
+-   副本是指站点数据库的部分复制，该站点数据库复制到独立的 SQL Server 实例：  
 
-    -   主要站台為該站台的每個管理點，支援專用資料庫複本 (次要站台不支援資料庫複本)  
+    -   主站点支持站点上的每个管理点的专用数据库副本（辅助站点不支持数据库副本）  
 
-    -   相同站台的多個管理點單可使用單一個資料庫複本  
+    -   单个数据库副本可用于同一站点的多个管理点  
 
-    -   只要每個管理點都在個別 SQL Server 執行個體中執行，SQL Server 就可以裝載多個資料庫複本，供不同的管理點使用  
+    -   只要每个数据库副本在独立的 SQL Server 实例中运行，SQL Server 即可承载多个副本以供不同管理点使用  
 
--   為了此一目的，複本會將固定排程的站台資料庫複本，從該站台資料庫伺服器所發佈的資料，進行同步處理。  
+-   副本按固定计划，从站点数据库服务器以此目的发布的数据中同步站点数据库的副本。  
 
--   可以將管理點設定為安裝管理點時使用複本，或稍後重新設定先前所安裝的管理點，以使用資料庫複本。  
+-   管理点可配置为在安装此管理点时使用副本，或随后通过重新配置先前安装的管理点以使用数据库副本  
 
--   請定期監視站台資料庫伺服器與每部資料庫複本伺服器，以確保彼此之間進行複寫，且資料庫複本伺服器的效能，可以滿足您所需的站台與用戶端效能。  
+-   定期监视站点数据库服务器和各个数据库副本服务器，以确保这两者间发生复制操作，并确保数据库副本服务器的性能足以满足所需的站点和客户端性能  
 
-**資料庫複本的必要條件：**  
+**数据库副本的先决条件：**  
 
--   **SQL Server 需求：**  
+-   **SQL Server 要求：**  
 
-    -   裝載資料庫複本的 SQL Server，必須符合和站台資料庫伺服器相同的需求。 但複本伺服器並不需要和站台資料庫伺服器執行相同的 SQL Server 版本，只要執行支援的 SQL Server 版本即可。 如需詳細資訊，請參閱 [System Center Configuration Manager 的 SQL Server 版本支援](../../../../core/plan-design/configs/support-for-sql-server-versions.md)。  
+    -   承载数据库副本的 SQL Server 必须满足与站点数据库服务器相同的要求。 但只要副本服务器运行受支持的 SQL Server 版本，就无需运行与站点数据库服务器相同版本的 SQL Server。 有关信息，请参阅[对 System Center Configuration Manager 的 SQL Server 版本的支持](../../../../core/plan-design/configs/support-for-sql-server-versions.md)  
 
-    -   裝載複本資料庫的電腦上之 SQL Server Service，必須以 **System** 帳戶的身分執行。  
+    -   承载副本数据库的计算机上的 SQL Server 服务必须以 **系统** 帐户形式运行。  
 
-    -   裝載站台資料庫與裝載資料庫複本的 SQL Server，都必須要安裝 **SQL Server Replication** 。  
+    -   承载站点数据库和承载数据库副本的这两个 SQL Server 均必须安装有“SQL Server 复制”  。  
 
-    -   站台資料庫必須 **發佈** 資料庫複本，且每個遠端資料庫複本伺服器，都必須 **訂閱** 已發佈的資料。  
+    -   站点数据库必须 **发布** 数据库副本，且每个远程数据库副本服务器必须 **订阅** 已发布的数据。  
 
-    -   裝載站台資料庫與裝載資料庫複本的 SQL Server，都必須設定為支援 2 GB 的 **文字複寫大小上限** 。 如需有關如何為 SQL Server 2012 進行設定的範例，請參閱 [Configure the max text repl size Server Configuration Option (設定最大文字複寫大小伺服器設定選項)](http://go.microsoft.com/fwlink/p/?LinkId=273960)。  
+    -   承载站点数据库和承载数据库副本的这两个 SQL Server 均必须配置为支持 2 GB 的“最大文本替换大小”  。 有关如何为 SQL Server 2012 配置此项的示例，请参阅 [Configure the max text repl size Server Configuration Option（配置最大文本替换大小服务器配置选项）](http://go.microsoft.com/fwlink/p/?LinkId=273960)。  
 
--   **自我簽署憑證：** 若要設定資料庫複本，您必須在資料庫複本伺服器上建立自我簽署憑證，並讓使用該資料庫複本伺服器的每個管理點，都能使用此憑證。  
+-   **自签名证书：** 若要配置数据库副本，必须在数据库副本服务器上创建自签名证书，并将此证书提供给将使用该数据库副本服务器的每个管理点。  
 
-    -   該憑證會自動提供給安裝在資料庫複本伺服器上的管理點使用。  
+    -   证书会自动提供给数据库副本服务器上安装的管理点。  
 
-    -   若要將此憑證提供給遠端管理點使用，必須匯出該憑證，再接著將其加入遠端管理點上的 **受信任的人員** 憑證存放區。  
+    -   若要将此证书提供给远程管理点，则必须导出证书，然后将其添加到远程管理点上的 **受信任人** 证书存储中。  
 
--   **用戶端通知：** 若要為管理點支援資料複本的用戶端通知，必須為 **SQL Server Service Broker**設定站台資料庫伺服器與資料庫複本伺服器之間的通訊。 此作業需要：  
+-   **客户端通知：** 若要支持包含管理点数据库副本的客户端通知，你必须针对 **SQL Server Service Broker**配置站点数据库服务器和数据库副本服务器之间的通信。 这要求：  
 
-    -   為每個資料庫設有其他資料庫的相關資訊  
+    -   使用其他数据库的相关信息配置每个数据库  
 
-    -   在安全通訊的兩個資料庫之間交換憑證  
+    -   在两个数据库间交换证书以确保安全通信  
 
-**使用資料庫複本時的限制：**  
+**使用数据库副本时的限制：**  
 
--   當您的站台設定為發佈資料庫複本時，應使用下列程序取代一般的指導方針：  
+-   当站点配置为发布数据库副本时，应使用以下过程代替常规指导：  
 
-    -   [解除安裝發佈資料庫複本的站台伺服器](#BKMK_DBReplicaOps_Uninstall)  
+    -   [卸载发布数据库副本的站点服务器](#BKMK_DBReplicaOps_Uninstall)  
 
-    -   [移動發佈資料庫複本的站台伺服器資料庫](#BKMK_DBReplicaOps_Move)  
+    -   [移动发布数据库副本的站点服务器数据库](#BKMK_DBReplicaOps_Move)  
 
--   **升級至 System Center Configuration Manager**：將站台從 System Center 2012 Configuration Manager 升級到 System Center Configuration Manager 之前，您必須停用管理點的資料庫複本。  升級站台之後，可為管理點重新設定資料庫複本。  
+-   **升级到 System Center Configuration Manager**：将站点从 System Center 2012 Configuration Manager 升级到 System Center Configuration Manager 之前，必须对管理点禁用数据库副本。  站点升级之后，可以为管理点重新配置数据库副本。  
 
--   **單一 SQL Server 上的多個複本**：若將資料庫複本伺服器設定成要為管理點裝載多個資料庫複本 (每個複本都必須位於個別的執行個體上)，您必須使用經過修改的組態指令碼 (來自下一節的步驟 4)，以避免覆寫先前在該伺服器上設定的資料庫複本所使用的自我簽署憑證。  
+-   **单个 SQL Server 上的多个副本：**如果将数据库副本服务器配置为承载管理点的多个数据库副本（每个副本必须位于单独的实例上），则必须使用修改后的配置脚本（从下一节的第 4 步开始）来防止此服务器上先前配置的数据库副本覆盖当前使用的自签名证书。  
 
-##  <a name="BKMK_DBReplica_Config"></a> 設定資料庫複本  
-若要設定資料庫複本，必須完成下列步驟：  
+##  <a name="BKMK_DBReplica_Config"></a> 配置数据库副本  
+若要配置数据库副本，需要以下步骤：  
 
--   [步驟 1 - 設定站台資料庫伺服器以發佈資料庫複本](#BKMK_DBReplica_ConfigSiteDB)  
+-   [第 1 步 - 配置站点数据库服务器以发布数据库副本](#BKMK_DBReplica_ConfigSiteDB)  
 
--   [步驟 2 - 設定資料庫複本伺服器](#BKMK_DBReplica_ConfigSrv)  
+-   [第 2 步 – 配置数据库副本服务器](#BKMK_DBReplica_ConfigSrv)  
 
--   [步驟 3 - 設定要使用資料庫複本的管理點](#BKMK_DBReplica_ConfigMP)  
+-   [第 3 步 - 将管理点配置为使用数据库副本](#BKMK_DBReplica_ConfigMP)  
 
--   [步驟 4 - 設定資料庫複本伺服器的自我簽署憑證](#BKMK_DBReplica_Cert)  
+-   [第 4 步 - 配置数据库副本服务器的自签名证书](#BKMK_DBReplica_Cert)  
 
--   [步驟 5 - 設定資料庫複本伺服器的 SQL Server Service Broker](#BKMK_DBreplica_SSB)  
+-   [第 5 步 - 为数据库副本服务器配置 SQL Server Service Broker](#BKMK_DBreplica_SSB)  
 
-###  <a name="BKMK_DBReplica_ConfigSiteDB"></a> 步驟 1 - 設定站台資料庫伺服器以發佈資料庫複本  
- 使用下列程序作為範例，以引導您在 Windows Server 2008 R2 電腦上設定網站資料庫伺服器來發佈資料庫複本。 如果您有不同的作業系統版本，請參考您的作業系統文件並視需要調整您在此程序中的步驟。  
+###  <a name="BKMK_DBReplica_ConfigSiteDB"></a> 第 1 步 - 配置站点数据库服务器以发布数据库副本  
+ 使用下列过程作为示例，了解如何在 Windows Server 2008 R2 计算机上将站点数据库服务器配置为发布数据库副本。 如果具有不同的操作系统版本，请参阅操作系统文档，并根据需要调整此过程中的步骤。  
 
-##### <a name="to-configure-the-site-database-server"></a>設定網站資料庫伺服器  
+##### <a name="to-configure-the-site-database-server"></a>配置站点数据库服务器  
 
-1.  在網站資料庫伺服器上，設定 SQL Server Agent 為自動啟動。  
+1.  在站点数据库服务器上，将 SQL Server 代理设置为自动启动。  
 
-2.  在網站資料庫伺服器上，以 **ConfigMgr_MPReplicaAccess**的名稱建立本機使用者群組。 您必須將您在此網站上使用的每個資料庫複本伺服器的電腦帳戶新增到此群組中，使這些資料庫複本伺服器與已發佈的資料庫複本同步。  
+2.  在站点数据库服务器上，用 **ConfigMgr_MPReplicaAccess**名称创建本地用户组。 必须将要在此站点使用的每个数据库副本服务器的计算机帐户添加到此组中，以使那些数据库副本服务器能够与发布的数据库副本同步。  
 
-3.  在網站資料庫伺服器上，以 **ConfigMgr_MPReplica**的名稱設定檔案共用。  
+3.  在站点数据库服务器上，配置名为 **ConfigMgr_MPReplica**的文件共享。  
 
-4.  將下列權限新增至 **ConfigMgr_MPReplica** 共用：  
+4.  将以下权限添加到“ConfigMgr_MPReplica”  共享中：  
 
     > [!NOTE]  
-    >  如果 SQL Server Agent 使用的帳戶與本機系統帳戶不同，請使用以下清單中的該帳戶名稱來取代 SYSTEM。  
+    >  如果 SQL Server 代理使用的帐户不是本地系统帐户，请将“系统”替换为以下列表中的该帐户名称。  
 
-    -   **共用權限**：  
+    -   **共享权限**：  
 
-        -   SYSTEM： **寫入**  
+        -   系统： **写**  
 
-        -   ConfigMgr_MPReplicaAccess： **讀取**  
+        -   ConfigMgr_MPReplicaAccess： **读取**  
 
-    -   **NTFS 共用權限**：  
+    -   **NTFS 权限**：  
 
-        -   SYSTEM： **完全控制**  
+        -   系统： **完全控制**  
 
-        -   ConfigMgr_MPReplicaAccess：**讀取**、**讀取與執行**、**列出資料夾內容**  
+        -   ConfigMgr_MPReplicaAccess：“读取”、“读取和执行”、“列表文件夹内容”  
 
-5.  使用 **SQL Server Management Studio** 以連線至站台資料庫並執行下列預存程序進行查詢： **spCreateMPReplicaPublication**  
+5.  使用“SQL Server Management Studio”  连接到站点数据库，并以查询形式运行以下存储过程： **spCreateMPReplicaPublication**  
 
-當完成預存程序時，網站資料庫伺服器會設定為發佈資料庫複本。  
+当存储过程完成后，站点数据库服务器被配置为发布数据库副本。  
 
-###  <a name="BKMK_DBReplica_ConfigSrv"></a> 步驟 2 - 設定資料庫複本伺服器  
-資料庫複本伺服器是執行 SQL Server 的電腦，並裝載網站資料庫的複本供管理點使用。 資料庫複本伺服器會依照固定排程，與網站資料庫伺服器發佈的資料庫複本同步處理其資料庫的複本。  
+###  <a name="BKMK_DBReplica_ConfigSrv"></a> 第 2 步 – 配置数据库副本服务器  
+数据库副本服务器是运行 SQL Server 的计算机，它承载了站点数据库副本以供管理点使用。 数据库副本服务器按照固定计划将其数据库副本与站点数据库服务器发布的数据库副本同步。  
 
-資料庫複本伺服器必須符合與網站資料庫伺服器相同的需求。 不過，資料庫複本伺服器執行的 SQL Server 版本可以與網站資料庫伺服器使用的版本不同。 如需 SQL Server 支援版本的資訊，請參閱 [System Center Configuration Manager 的 SQL Server 版本支援](../../../../core/plan-design/configs/support-for-sql-server-versions.md)主題。  
+数据库副本服务器必须满足站点数据库服务器应满足的要求。 但是，数据库副本服务器运行的 SQL Server 版本可以与站点数据库服务器使用的版本不同。 有关支持的 SQL Server 版本的信息，请参阅[对 System Center Configuration Manager 的 SQL Server 版本的支持](../../../../core/plan-design/configs/support-for-sql-server-versions.md)主题。  
 
 > [!IMPORTANT]  
->  SQL Server Service 在裝載複本資料庫的電腦上必須以系統帳戶的身分執行。  
+>  承载副本数据库的计算机上的 SQL Server 服务必须以系统帐户形式运行。  
 
-使用下列程序作為範例，以引導您在 Windows Server 2008 R2 電腦上設定資料庫複本伺服器。 如果您有不同的作業系統版本，請參考您的作業系統文件並視需要調整您在此程序中的步驟。  
+使用下列过程作为示例，了解如何在 Windows Server 2008 R2 计算机上配置数据库副本服务器。 如果具有不同的操作系统版本，请参阅操作系统文档，并根据需要调整此过程中的步骤。  
 
-##### <a name="to-configure-the-database-replica-server"></a>設定資料庫複本伺服器  
+##### <a name="to-configure-the-database-replica-server"></a>配置数据库副本服务器  
 
-1.  在資料庫複本伺服器上，設定 SQL Server Agent 為自動啟動。  
+1.  在数据库副本服务器上，将 SQL Server 代理设置为自动启动。  
 
-2.  在資料庫複本伺服器上，使用 [SQL Server Management Studio]  以連線至本機伺服器，然後瀏覽至 [複寫]  資料夾，按一下 [本機訂閱] 並選取 [新增訂閱]  以啟動 [新增訂閱精靈] ：  
+2.  在数据库副本服务器上，使用“SQL Server Management Studio”  连接到本地服务器，浏览到“复制”  文件夹，单击“本地订阅”，并选择“新建订阅”  以启动“新建订阅向导” ：  
 
-    1.  在 [發行集]  頁面的 [發行者]  清單方塊中，選取 [尋找 SQL Server 發行者] 並輸入網站資料庫伺服器的名稱，然後按一下 [連接] 。  
+    1.  在“发布”  页上的“发布者”  列表框中，选择“查找 SQL Server 发布者” ，输入站点数据库服务器的名称，然后单击“连接” 。  
 
-    2.  選取 [ConfigMgr_MPReplica] ，然後按 [下一步] 。  
+    2.  选择“ConfigMgr_MPReplica” ，然后单击“下一步” 。  
 
-    3.  在 [散發代理程式位置]  頁面中，選取 [在訂閱者端執行每一個代理程式 (提取訂閱)] ，然後按 [下一步] 。  
+    3.  在“分发代理位置”  页上，选择“在其订阅服务器上运行每个代理(请求订阅)” ，然后单击“下一步” 。  
 
-    4.  在 [訂閱者]  頁面上，執行以下其中一項：  
+    4.  在“订阅服务器”  页上，执行下列操作之一：  
 
-        -   從資料庫複本伺服器選取現有的資料庫供資料庫複本使用，然後按一下 [確定] 。  
+        -   从数据库副本服务器上选择要用于数据库副本的现有数据库，然后单击“确定” 。  
 
-        -   選取 [新增資料庫]  為資料庫複本建立新的資料庫。 在 [新增資料庫]  頁面上，指定資料庫名稱，然後按一下 [確定] 。  
+        -   选择“新建数据库”  以为该数据库副本创建新数据库。 在“新建数据库”  页上，指定数据库名称，然后单击“确定” 。  
 
-    5.  按 [下一步]  以繼續。  
+    5.  单击 **“下一步”** 以继续。  
 
-    6.  在 [散發代理程式安全性] 頁面中，在對話方塊的 [訂閱者連接] 資料列中按一下內容按鈕 [(....)]，然後設定連接的安全性設定。  
+    6.  在“分发代理安全性”页上，单击对话框的“订阅服务器连接”行中的属性按钮“(.…)”，然后配置连接的安全设置。  
 
         > [!TIP]  
-        >  內容按鈕 [(.…)] 位於顯示方塊的第四欄中。  
+        >  属性按钮“(....)”在显示框的第四列中。  
 
-        **安全性設定：**  
+        **安全设置：**  
 
-        -   設定執行散發代理程式處理的帳戶 (處理帳戶)：  
+        -   配置运行分发代理进程（进程帐户）的帐户：  
 
-            -   如果 SQL Server Agent 以本機系統身分執行，請選取 [以 SQL Server Agent 服務帳戶執行 (這不是建議的安全性最佳作法)。]   
+            -   如果 SQL Server 代理作为本地系统运行，请选择“在 SQL Server 代理服务帐户下运行(这不是我们推荐的最佳安全配置)”   
 
-            -   如果您使用不同帳戶來執行 SQL Server Agent，請選取 [以下列 Windows 帳戶執行] ，然後設定該帳戶。 您可以指定 Windows 帳戶或 SQ Server 帳戶。  
+            -   如果 SQL Server 代理使用其他帐户运行，请选择“在以下 Windows 帐户下运行” ，然后配置该帐户。 你可以指定 Windows 帐户或某个 SQL Server 帐户。  
 
             > [!IMPORTANT]  
-            >  您必須將執行散發代理程式權限的帳戶授與發行者進行提取訂閱。 如需設定這些權限的資訊，請參閱 SQL Server TechNet 文件庫中的 [Distribution Agent Security (散發代理程式安全性)](http://go.microsoft.com/fwlink/p/?LinkId=238463) 。  
+            >  你必须以请求订阅的形式向运行分发代理的帐户授予对发布者的权限。 有关配置这些权限的信息，请参阅 SQL Server TechNet 库中的 [分发代理安全性](http://go.microsoft.com/fwlink/p/?LinkId=238463) 。  
 
-        -   針對 [連接到散發者] ，請選取 [藉由模擬處理帳戶] 。  
+        -   对于“连接到分发服务器” ，请选择“通过模拟进程帐户” 。  
 
-        -   針對 [連接到訂閱者] ，請選取 [藉由模擬處理帳戶] 。  
+        -   对于“连接到订阅服务器” ，请选择“通过模拟进程帐户” 。  
 
-         在設定連接安全性設定之後，請按一下 [確定]  儲存設定，然後按 [下一步] 。  
+         在配置连接安全设置之后，请单击“确定”  以保存它们，然后单击“下一步” 。  
 
-    7.  在 [同步排程]  頁面的 [代理程式排程]  清單方塊中，選取 [定義排程] ，然後設定 [新增作業排程] 。 設定 [每日] 的頻率，並每隔 [5 分鐘] 重複一次，將持續時間設為 [沒有結束日期] 。 按 [下一步]  儲存排程，然後再按一次 [下一步]  。  
+    7.  在“同步计划”  页上的“代理计划”  列表框中，选择“定义计划” ，然后配置“新建作业计划” 。 将频率设置为“每日” 发生，并且每“5 分钟” 重复一次，并将持续时间设置为“无结束日期” 。 单击“下一步”  以保存计划，然后再单击“下一步”  。  
 
-    8.  在 [精靈動作]  頁面中，選取 [建立訂閱] 的核取方塊，然後按 [下一步] 。  
+    8.  在“向导操作”  页上，选中“创建订阅” 的复选框，然后单击“下一步” 。  
 
-    9. 在 [完成精靈]  頁面中，按一下 [完成] ，然後按一下 [關閉]  以完成精靈。  
+    9. 在“完成向导”  页上，单击“完成” ，然后单击“关闭”  以完成向导。  
 
-3.  完成 [新增訂閱精靈] 之後，立即使用 **SQL Server Management Studio** 來連線到資料庫複本伺服器資料庫，然後執行下列查詢以啟用 TRUSTWORTHY 資料庫屬性：  `ALTER DATABASE <MP Replica Database Name> SET TRUSTWORTHY ON;`  
+3.  完成新建订阅向导之后，立即使用“SQL Server Management Studio”连接到数据库副本服务器数据库并运行以下查询以启用 TRUSTWORTHY 数据库属性：`ALTER DATABASE <MP Replica Database Name> SET TRUSTWORTHY ON;`  
 
-4.  檢閱同步處理狀態以確認訂閱是否成功：  
+4.  查看同步状态以验证订阅是否成功：  
 
-    -   在訂閱者電腦上：  
+    -   在订阅服务器计算机上：  
 
-        -   在 [SQL Server Management Studio] 中，連線至資料庫複本伺服器並展開 [複寫] 。  
+        -   在“SQL Server Management Studio” 中，连接到数据库副本服务器，并展开“复制” 。  
 
-        -   展開 [本機訂閱] ，以滑鼠右鍵按一下網站資料庫發行的訂閱，然後選取 [檢視同步處理的狀態] 。  
+        -   展开“本地订阅” ，右键单击站点数据库发布订阅，然后选择“查看同步状态” 。  
 
-    -   在發行者電腦上：  
+    -   在发布服务器计算机上：  
 
-        -   在 [SQL Server Management Studio] 中，連線至網站資料庫電腦，以滑鼠右鍵按一下 [複寫]  資料夾，然後選取 [啟動複寫監視器] 。  
+        -   在“SQL Server Management Studio” 中，连接到站点数据库计算机，右键单击“复制”  文件夹，然后选择“启动复制监视器” 。  
 
-5.  若要啟用資料庫複本的 Common Language Runtime (CLR) 整合，請使用 **SQL Server Management Studio** 以連線至資料庫複本伺服器上的資料庫複本，並執行下列預存程序進行查詢： **exec sp_configure 'clr enabled', 1; RECONFIGURE WITH OVERRIDE**  
+5.  要为数据库副本启用公共语言运行时 (CLR) 集成，请使用“SQL Server Management Studio”  连接到数据库副本服务器上的数据库副本，并以查询形式运行以下存储过程： **exec sp_configure 'clr enabled', 1; RECONFIGURE WITH OVERRIDE**  
 
-6.  針對使用資料庫複本伺服器的每個管理點，將管理點電腦帳戶新增至該資料庫複本伺服器上的本機 [Administrators]  群組。  
+6.  对于使用数据库副本服务器的每个管理点，请将该管理点计算机帐户添加到该数据库副本服务器上的本地“管理员”  组中。  
 
     > [!TIP]  
-    >  此步驟對於在資料庫複本伺服器上執行的管理點來說並非必要。  
+    >  数据库副本服务器上运行的管理点不需要此步骤。  
 
- 資料庫複本現在已備妥可供管理點使用。  
+ 现在管理点可以使用数据库副本了。  
 
-###  <a name="BKMK_DBReplica_ConfigMP"></a> 步驟 3 - 設定要使用資料庫複本的管理點  
- 您可以在主要網站上設定管理點，使您在安裝管理點角色時可使用資料庫複本，或者您可以重新設定現有的管理點來使用資料庫複本。  
+###  <a name="BKMK_DBReplica_ConfigMP"></a> 第 3 步 - 将管理点配置为使用数据库副本  
+ 可以将主站点上的管理点配置为在安装管理点角色时使用数据库副本，或者可以将现有管理点重新配置为使用数据库副本。  
 
- 使用下列資訊來設定管理點以使用資料庫複本：  
+ 使用下列信息将管理点配置为使用数据库副本：  
 
--   **若要設定新的管理點：** 在您用來安裝管理點的精靈 [管理點資料庫]  頁面上，選取 [使用資料庫複本] ，並為裝載資料庫複本的電腦指定 FQDN。 接下來，在 [ConfigMgr 網站資料庫名稱] 中指定資料庫複本在該電腦上的資料庫名稱。  
+-   **配置新的管理点：** 在用于安装管理点的“管理点数据库”  页上，选择“使用数据库副本” ，然后指定承载数据库副本的计算机的 FQDN。 接着，对于“ConfigMgr 站点数据库名称” ，请指定该计算机上数据库副本的数据库名称。  
 
--   **若要設定之前安裝的管理點**：開啟管理點的內容頁面，選取 [管理點資料庫]  索引標籤，選取 [使用資料庫複本] ，然後為裝載資料庫複本的電腦指定 FQDN。 接下來，在 [ConfigMgr 網站資料庫名稱] 中指定資料庫複本在該電腦上的資料庫名稱。  
+-   **配置以前安装的管理点**：打开管理点的属性页，选择“管理点数据库”  选项卡，再选择“使用数据库副本” ，然后指定承载数据库副本的计算机的 FQDN。 接着，对于“ConfigMgr 站点数据库名称” ，请指定该计算机上数据库副本的数据库名称。  
 
--   **針對會使用資料庫複本的每個管理點**，您必須手動將管理點伺服器的電腦帳戶加入資料庫複本的 **db_datareader** 角色。  
+-   **对于使用数据库副本的每个管理点**，必须将管理点服务器的计算机帐户手动添加到该数据库副本的 **db_datareader** 角色。  
 
-除了設定管理點以使用資料庫複本伺服器以外，您還必須在管理點的 [IIS]  中啟用 [Windows 驗證]  ：  
+除了将管理点配置为使用数据库副本服务器之外，必须在管理点上的“IIS”  中启用“Windows 身份验证”  ：  
 
-1.  開啟 [Internet Information Services (IIS) 管理員] 。  
+1.  打开“Internet Information Services (IIS)管理器” 。  
 
-2.  選取管理點使用的網站，並開啟 [驗證] 。  
+2.  选择管理点使用的网站，并打开“身份验证” 。  
 
-3.  將 [Windows 驗證]  設為 [已啟用] ，然後關閉 [Internet Information Services (IIS) 管理員] 。  
+3.  将“Windows 身份验证”  设置为“启用” ，然后关闭“Internet Information Services (IIS)管理器” 。  
 
-###  <a name="BKMK_DBReplica_Cert"></a> 步驟 4 - 設定資料庫複本伺服器的自我簽署憑證  
- 您必須在資料庫複本伺服器上建立自我簽署憑證，並且讓使用該資料庫複本伺服器的每個管理點都能使用此憑證。  
+###  <a name="BKMK_DBReplica_Cert"></a> 第 4 步 - 配置数据库副本服务器的自签名证书  
+ 必须在数据库副本服务器上创建自签名证书，并将此证书提供给将使用该数据库副本服务器的每个管理点。  
 
- 該憑證會自動提供給安裝在資料庫複本伺服器上的管理點使用。 不過，您必須先匯出憑證，然後將其新增至遠端管理點上的 [受信任的人] 憑證存放區中，遠端管理點才能使用此憑證。  
+ 证书会自动提供给数据库副本服务器上安装的管理点。 但是，要将此证书提供给远程管理点，则必须导出证书，然后将其添加到远程管理点上的可信人员证书存储中。  
 
- 使用下列程序作為範例，以引導您在 Windows Server 2008 R2 電腦的資料庫複本伺服器上設定自我簽署憑證。 如果您有不同的作業系統版本，請參考您的作業系統文件並視需要調整您在這些程序中的步驟。  
+ 使用下列过程作为示例，了解如何在 Windows Server 2008 R2 计算机的数据库副本服务器上配置自签名证书。 如果具有不同的操作系统版本，请参阅操作系统文档，并根据需要调整这些过程中的步骤。  
 
-##### <a name="to-configure-a-self-signed-certificate-for-the-database-replica-server"></a>設定資料庫複本伺服器的自我簽署憑證  
+##### <a name="to-configure-a-self-signed-certificate-for-the-database-replica-server"></a>配置数据库副本服务器的自签名证书  
 
-1.  在資料庫複本伺服器上，使用系統管理權限開啟 PowerShell 命令提示，然後執行下列命令： **set-executionpolicy UnRestricted**  
+1.  在数据库副本服务器上，使用管理权限打开 PowerShell 命令提示符，然后运行下列命令： **set-executionpolicy UnRestricted**  
 
-2.  複製下列 PowerShell 指令碼並使用 **CreateMPReplicaCert.ps1**的名稱另存新檔。 將此檔案的複本置於資料庫複本伺服器的系統磁碟分割的根資料夾中。  
+2.  复制以下 PowerShell 脚本，并用 **CreateMPReplicaCert.ps1**名称将其保存为文件。 将此文件的副本放入数据库副本服务器的系统分区的根文件夹中。  
 
     > [!IMPORTANT]  
-    >  如果要在單一 SQL Server 上設定多個資料庫複本，針對您所設定的每個後續複本，針對此程序，您都必須使用此指令碼的已修改版本。 請參閱  [單一的 SQL Server 上的其他資料庫複本補充指令碼](#bkmk_supscript)。  
+    >  如果你正在单个 SQL Server 上配置多个数据库副本，则对于配置的每个后续副本，必须对此步骤使用此脚本的修改版本。 请参阅  [单个 SQL Server 上附加数据库副本的补充脚本](#bkmk_supscript)  
 
     ```  
     # Script for creating a self-signed certificate for the local machine and configuring SQL Server to use it.  
@@ -372,140 +372,140 @@ System Center Configuration Manager 主要站台可以使用資料庫複本，�
     Restart-Service $SQLServiceName -Force  
     ```  
 
-3.  在資料庫複本伺服器上，執行已套用至 SQL Server 設定中的下列命令：  
+3.  在数据库副本服务器上，运行下列适用于 SQL Server 配置的命令：  
 
-    -   若是 SQL Server 預設執行個體：以滑鼠右鍵按一下檔案 [CreateMPReplicaCert.ps1]  ，並選取 [用 PowerShell 執行] 。 當指令碼執行時會建立自我簽署憑證，並設定 SQL Server 以使用憑證。  
+    -   对于 SQL Server 的默认实例：右键单击文件“CreateMPReplicaCert.ps1”  ，并选择“使用 PowerShell 运行” 。 运行脚本时，它会创建自签名证书，并将 SQL Server 配置为使用该证书。  
 
-    -   若是 SQL Server 的具名執行個體：使用 PowerShell 以執行命令 **%path%\CreateMPReplicaCert.ps1 xxxxxx** ，其中 **xxxxxx** 是 SQL Server 執行個體的名稱。  
+    -   对于 SQL Server 的命名实例：使用 PowerShell 运行命令 **%path%\CreateMPReplicaCert.ps1 xxxxxx** ，其中 **xxxxxx** 是 SQL Server 实例的名称。  
 
-    -   指令碼完成後，請確認 SQL Server Agent 正在執行。 否則，請重新啟動 SQL Server Agent。  
+    -   脚本完成之后，验证 SQL Server 代理是否正在运行。 如果未在运行，请重启 SQL Server 代理。  
 
-##### <a name="to-configure-remote-management-points-to-use-the-self-signed-certificate-of-the-database-replica-server"></a>若要設定遠端管理點使用資料庫複本伺服器的自我簽署憑證  
+##### <a name="to-configure-remote-management-points-to-use-the-self-signed-certificate-of-the-database-replica-server"></a>配置远程管理点以使用数据库副本服务器的自签名证书  
 
-1.  在資料庫複本伺服器上執行下列步驟將伺服器自我簽署憑證匯出：  
+1.  在数据库副本服务器上执行下列步骤以导出该服务器的自签名证书：  
 
-    1.  依序按一下 [開始] 與 [執行] ，然後輸入 **mmc.exe**。 在空白主控台中，按一下 [檔案] ，然後按一下 [新增/移除嵌入式管理單元] 。  
+    1.  单击“启动” ，再单击“运行” ，然后键入 **mmc.exe**。 在空白控制台中，单击“文件”，然后单击“添加/删除管理单元”。  
 
-    2.  在 [新增或移除嵌入式管理單元]  對話方塊中，從 [可用的嵌入式管理單元]  清單中選取 [憑證] ，然後按一下 [新增] 。  
+    2.  在“添加/删除管理单元”对话框中，从“可用的管理单元”列表中选择“证书”，然后单击“添加”。  
 
-    3.  在 [憑證嵌入式管理單元]  對話方塊中，選取 [電腦帳戶] ，然後按 [下一步] 。  
+    3.  在“证书管理单元”对话框中，选择“计算机帐户”，然后单击“下一步”。  
 
-    4.  在 [選取電腦]  對話方塊中，確定選取 [本機電腦: (執行這個主控台的電腦)]  ，然後按一下 [完成] 。  
+    4.  在“选择计算机”对话框中，确保选中“本地计算机: (运行此控制台的计算机)”，然后单击“完成”。  
 
-    5.  在 [新增或移除嵌入式管理單元]  對話方塊中，按一下 [確定] 。  
+    5.  在“添加/删除管理单元”  对话框中，单击“确定” 。  
 
-    6.  在主控台中，依序展開 [憑證 (本機電腦)] 和 [個人] ，然後選取 [憑證] 。  
+    6.  在控制台中展开“证书(本地计算机)” ，展开“个人” ，并选择“证书” 。  
 
-    7.  以滑鼠右鍵按一下易記名稱為 [ConfigMgr SQL Server Identification Certificate] 的憑證，按一下 [所有工作] ，然後選取 [匯出] 。  
+    7.  右键单击友好名称为“ConfigMgr SQL Server 标识证书” 的证书，单击“所有任务” ，然后选择“导出” 。  
 
-    8.  使用預設選項完成 [憑證匯出精靈]  ，然後以 [.cer]  副檔名儲存憑證。  
+    8.  通过使用默认选项完成“证书导出向导”  ，并使用“.cer”  文件扩展名保存证书。  
 
-2.  在管理點電腦上執行下列步驟，將資料庫複本伺服器的自我簽署憑證新增至管理點上的 [受信任的人] 憑證存放區。  
+2.  在管理点计算机上执行以下步骤，将数据库副本服务器的自签名证书添加到管理点上的“受信任人”证书存储：  
 
-    1.  重複上述步驟 1.a 到 1.e， 在管理點電腦上設定**憑證**嵌入式MMC。  
+    1.  重复前面 1.a 到 1.e 的步骤 在管理点计算机上的 MMC 中配置**证书**管理单元。  
 
-    2.  在主控台中，依序展開 [憑證 (本機電腦)] 和 [受信任的人] ，以滑鼠右鍵按一下 [憑證] ，選取 [所有工作] ，然後選取 [匯入]  ，啟動 [憑證匯入精靈] 。  
+    2.  在控制台中，展开“证书(本地计算机)”，展开“受信任人”，右键单击“证书”，选择“所有任务”，然后选择“导入”以启动“证书导入向导”。  
 
-    3.  在 [匯入檔案]  頁面上，選取步驟 1.h 中儲存的憑證，然後按 [下一步] 。  
+    3.  在“要导入的文件”页上，选择在步骤 1.h 中保存的证书，然后单击“下一步”。  
 
-    4.  在 [憑證存放區]  頁面上，選取 [將所有憑證放入以下的存放區] ，並將 [憑證存放區]  設為 [受信任的人] ，然後按 [下一步] 。  
+    4.  在“证书存储”  页上，选择“将所有的证书放入下列存储” （“证书存储”  设置为“受信任人” ），然后单击“下一步” 。  
 
-    5.  按一下 [完成]  關閉精靈，並完成管理點上的憑證設定。  
+    5.  单击“完成”  关闭向导并在管理点上完成证书配置。  
 
-###  <a name="BKMK_DBreplica_SSB"></a> 步驟 5 - 設定資料庫複本伺服器的 SQL Server Service Broker  
-若要針對管理點支援資料複本的用戶端通知，您必須針對 SQL Server Service Broker 設定網站資料庫伺服器與資料庫複本伺服器之間的通訊。 您會需要設定每個資料庫中有關其他資料庫的資訊，以及在兩個資料庫之間交換憑證以進行安全通訊。  
-
-> [!NOTE]  
->  資料庫複本伺服器必須先成功完成網站資料庫伺服器的初次同步處理，您才能使用下列程序。  
-
- 下列程序不會修改 SQL Server 中設定用於網站資料庫伺服器，或資料庫複本伺服器的 Service Broker 連接埠。 此程序會設定每個資料庫使用正確的 Service Broker 連接埠與其他資料庫進行通訊。  
-
- 利用下列程序設定網站資料庫伺服器和資料庫複本伺服器的 Service Broker。  
-
-##### <a name="to-configure-the-service-broker-for-a-database-replica"></a>若要設定資料庫複本的 Service Broker  
-
-1.  使用 **SQL Server Management Studio** 連接至資料庫複本伺服器資料庫，然後執行下列查詢，啟用資料庫複本伺服器上的 Service Broker：**ALTER DATABASE &lt;複本資料庫名稱\> SET ENABLE_BROKER, HONOR_BROKER_PRIORITY ON WITH ROLLBACK IMMEDIATE**  
-
-2.  接著在資料庫複本伺服器上，設定用戶端通知所使用的 Service Broker 並匯出 Service Broker 憑證。 若要執行這項操作，請執行以單一動作設定 Service Broker 並匯出憑證的 SQL Server 預存程序。 當您執行預存程序時，必須指定資料庫複本伺服器的 FQDN、資料庫複本資料庫的名稱，並指定匯出憑證檔案的位置。  
-
-     執行下列查詢，以在資料庫複本伺服器上設定必要的詳細資料，並匯出資料庫複本伺服器的憑證：**EXEC sp_BgbConfigSSBForReplicaDB '&lt;複本 SQL Server FQDN\>', '&lt;複本資料庫名稱\>', '&lt;憑證備份檔案路徑\>'**  
-
-    > [!NOTE]  
-    >  如果資料庫複本伺服器不是位於預設 SQL Server 執行個體上，您在這個步驟除了指定複本資料庫名稱之外，還必須指定執行個體名稱。 若要執行這項操作，請將 **&lt;複本資料庫名稱\>** 取代為 **&lt;執行個體名稱\\複本資料庫名稱\>**。  
-
-     從資料庫複本伺服器匯出憑證後，將憑證副本放至主網站資料庫伺服器上。  
-
-3.  使用 [SQL Server Management Studio]  連接至主網站資料庫。 連接至主網站資料庫後，執行查詢匯入憑證，並指定資料庫複本伺服器上正在使用的 Service Broker 連接埠、資料庫複本伺服器的 FQDN，以及資料庫複本資料庫的名稱。 這樣就會將主網站資料庫設定為使用 Service Broker 與資料庫複本伺服器的資料庫進行通訊。  
-
-     執行下列查詢，以從資料庫複本伺服器匯入憑證，並指定必要的詳細資料：**EXEC sp_BgbConfigSSBForRemoteService 'REPLICA', '&lt;SQL Service Broker 連接埠\>', '&lt;憑證檔案路徑\>', '&lt;複本 SQL Server FQDN\>', '&lt;複本資料庫名稱\>'**  
-
-    > [!NOTE]  
-    >  如果資料庫複本伺服器不是位於預設 SQL Server 執行個體上，您在這個步驟除了指定複本資料庫名稱之外，還必須指定執行個體名稱。 若要執行這項操作，請將 **&lt;複本資料庫名稱\>** 取代為 **\執行個體名稱\\複本資料庫名稱\>**。  
-
-4.  接著，在站台資料庫伺服器上，執行下列命令，以匯出站台資料庫伺服器的憑證：**EXEC sp_BgbCreateAndBackupSQLCert '&lt;憑證備份檔案路徑\>'**  
-
-     從網站資料庫伺服器匯出憑證後，將憑證副本放至資料庫複本伺服器上。  
-
-5.  使用 [SQL Server Management Studio]  連接至資料庫複本伺服器資料庫。 連接至資料庫複本伺服器資料庫後，執行查詢匯入憑證，並指定主網站的網站碼及網站資料庫伺服器上正在使用的 Service Broker 連接埠。 這樣就會將資料庫複本伺服器設定為使用 Service Broker 與主網站的資料庫進行通訊。  
-
-     執行下列查詢，以從站台資料庫伺服器匯入憑證：**EXEC sp_BgbConfigSSBForRemoteService '&lt;站台碼\>', '&lt;SQL Service Broker 連接埠\>', '&lt;憑證檔案路徑\>'**  
-
- 完成網站資料庫及資料庫複本資料庫的設定後經過幾分鐘，主網站的通知管理員就會建立從主網站資料庫到資料庫複本的用戶端通知 Service Broker 交談。  
-
-###  <a name="bkmk_supscript"></a> 單一的 SQL Server 上的其他資料庫複本補充指令碼  
- 當您使用步驟 4 中的指令碼，設定 SQL Server (已有預計要繼續使用的資料庫複本) 上資料庫複本伺服器的自我簽署憑證時，必須使用經過修改的原始指令碼版本。 下列修改內容可避免指令碼刪除伺服器上現有的憑證，同時建立易記名稱不重複的後續憑證。  編輯原始的指令碼，如下所示：  
-
--   將指令碼項目 **# Delete existing cert if one exists** 與 **# Create the new cert**之間的指令碼項目，標為註解以避免執行。 若要執行此作業，請加入  **#**  作為適用的每一行之第一個字元。  
-
--   為每個使用此指令碼進行設定的後續資料庫複本，更新憑證的易記名稱。  若要執行此作業，請編輯行 **$enrollment.CertificateFriendlyName = "ConfigMgr SQL Server Identification Certificate"** ，並以新名稱取代 **ConfigMgr SQL Server Identification Certificate** ，像是  **ConfigMgr SQL Server Identification Certificate1**。  
-
-##  <a name="BKMK_DBReplicaOps"></a> 管理資料庫複本組態  
- 當您在網站上使用資料庫複本時，請使用以下各節中的資訊以補充解除安裝資料庫複本、解除安裝使用資料庫複本的網站，或是將網站資料庫移至新的 SQL Server 安裝的程序。 當您利用下面各節的資訊刪除發佈時，請使用指引刪除用於資料庫複本之 SQL Server 版本的交易複寫。 例如，若您使用 SQL Server 2008 R2，請參閱 [如何：刪除發行集 (複寫 Transact-SQL 程式設計)](http://go.microsoft.com/fwlink/p/?LinkId=273934)。  
+###  <a name="BKMK_DBreplica_SSB"></a> 第 5 步 - 为数据库副本服务器配置 SQL Server Service Broker  
+要支持包含管理点的数据库副本的客户端通知，你必须针对 SQL Server Service Broker 配置站点数据库服务器和数据库副本服务器之间的通信。 这要求你配置包含有关其他数据库的信息的每个数据库，并在两个数据库之间交换证书以实现安全通信。  
 
 > [!NOTE]  
->  在您還原為資料庫複本設定的網站資料庫之後，必須先重新設定每個資料庫複本並重建發佈及訂閱，才能使用資料庫複本。  
+>  数据库副本服务器必须成功完成与站点数据库服务器的初始同步，然后你才能使用下列过程。  
 
-###  <a name="BKMK_UninstallDbReplica"></a> 解除安裝資料庫複本  
- 您針對管理點使用資料庫複本時，可能需要解除安裝資料庫複本一段時間，然後再重新設定它以供使用。 例如，將 Configuration Manager 站台升級為新的 Service Pack 之前，必須先移除資料庫複本。 網站升級完成後，您就可以還原資料庫複本以供使用。  
+ 以下过程不会修改在 SQL Server 中为站点数据库服务器或数据库副本服务器配置的 Service Broker 端口。 作为替代，此过程将每个数据库配置为使用正确的 Service Broker 端口与其他数据库通信。  
 
- 利用下列步驟解除安裝資料庫複本。  
+ 使用以下过程来为站点数据库服务器和数据库副本服务器配置 Service Broker。  
 
-1.  在 Configuration Manager 主控台的 [系統管理] 工作區中，展開 [站台設定]，然後選取 [伺服器和站台系統角色]，接著在詳細資料窗格中選取站台系統伺服器，且該伺服器裝載的管理點使用您要解除安裝的資料庫複本。  
+##### <a name="to-configure-the-service-broker-for-a-database-replica"></a>为数据库副本配置 Service Broker  
 
-2.  在 [網站系統角色]  窗格中，用滑鼠右鍵按一下 [管理點]  並選取 [內容] 。  
+1.  使用“SQL Server Management Studio”连接到数据库副本服务器数据库，然后运行以下查询以在数据库副本服务器上启用 Service Broker：**ALTER DATABASE &lt;副本数据库名称\> SET ENABLE_BROKER, HONOR_BROKER_PRIORITY ON WITH ROLLBACK IMMEDIATE**  
 
-3.  在 [管理點資料庫]  索引標籤上選取 [使用網站資料庫]  ，設定管理點使用網站資料庫而不是資料庫複本。 然後按一下 [確定]  儲存設定。  
+2.  接着，在数据库副本服务器上，为客户端通知配置 Service Broker，并导出 Service Broker 证书。 为此，请运行 SQL Server 存储过程，该存储过程只需一次操作便可配置 Service Broker 并导出证书。 在运行该存储过程时，你必须指定数据库副本服务器的 FQDN、数据库副本数据库的名称，并指定证书文件的导出位置。  
 
-4.  接著使用 [SQL Server Management Studio]  執行下列工作：  
+     运行以下查询在数据库副本服务器上配置所需的详细信息，并导出数据库副本服务器的证书：**EXEC sp_BgbConfigSSBForReplicaDB '&lt;副本 SQL Server FQDN\>', '&lt;副本数据库名称\>', '&lt;证书备份文件路径\>'**  
 
-    -   刪除網站伺服器資料庫上的資料庫複本發佈。  
+    > [!NOTE]  
+    >  如果数据库副本服务器不在 SQL Server 的默认实例上，则对于此步骤，除了指定副本数据库名称之外，你还必须指定实例名称。 为此，请将**&lt;副本数据库名称\>**替换为**实例名称&lt;\\副本数据库名称\>**。  
 
-    -   刪除資料庫複本伺服器上的資料庫複本訂閱。  
+     从数据库副本服务器中导出证书后，将证书的副本放在主站点数据库服务器上。  
 
-    -   刪除資料庫複本伺服器上的複本資料庫。  
+3.  使用“SQL Server Management Studio”  连接到主站点数据库。 连接到主站点数据库后，运行查询以导入证书，并指定数据库副本服务器上正在使用的 Service Broker 端口、数据库副本服务器的 FQDN，以及数据库副本数据库的名称。 这会将主站点数据库配置为使用 Service Broker 与数据库副本服务器的数据库通信。  
 
-    -   停用網站資料庫伺服器上的發行與散發。 若要停用發行與散發，請以滑鼠右鍵按一下 [複寫] 資料夾，然後按一下 [停用發行與散發] 。  
+     运行以下查询以从数据库副本服务器导入证书并指定所需的详细信息：**EXEC sp_BgbConfigSSBForRemoteService 'REPLICA', '&lt;SQL Service Broker 端口\>', '&lt;证书文件路径\>', '&lt;副本 SQL Server FQDN\>', '&lt;副本数据库名称\>'**  
 
-5.  在網站資料庫伺服器上刪除發佈、訂閱、複本資料庫及停用發佈後，資料庫複本便已解除安裝。  
+    > [!NOTE]  
+    >  如果数据库副本服务器不在 SQL Server 的默认实例上，则对于此步骤，除了指定副本数据库名称之外，你还必须指定实例名称。 为此，请将 **&lt;副本数据库名称\>** 替换为 **\实例名称\\副本数据库名称\>**。  
 
-###  <a name="BKMK_DBReplicaOps_Uninstall"></a> 解除安裝發佈資料庫複本的站台伺服器  
- 解除安裝發佈資料庫複本的網站之前，請先利用下列步驟清除發佈及任何訂閱。  
+4.  接着，在站点数据库服务器上，运行以下命令来导出站点数据库服务器的证书：**EXEC sp_BgbCreateAndBackupSQLCert '&lt;证书备份文件路径\>'**  
 
-1.  使用 [SQL Server Management Studio]  刪除網站伺服器資料庫中的資料庫複本發佈。  
+     从站点数据库服务器中导出证书后，将证书的副本放在数据库副本服务器上。  
 
-2.  使用 [SQL Server Management Studio]  刪除裝載此網站所使用資料庫複本的每一部遠端 SQL Server 上的資料庫複本訂閱。  
+5.  使用“SQL Server Management Studio”  连接到数据库副本服务器数据库。 连接到数据库副本服务器数据库后，运行查询以导入证书，并指定主站点的站点代码和站点数据库服务器上正在使用的 Service Broker 端口。 这会将数据库副本服务器配置为使用 Service Broker 与主站点的数据库通信。  
 
-3.  解除安裝網站。  
+     运行以下查询以从站点数据库服务器导入证书：**EXEC sp_BgbConfigSSBForRemoteService '&lt;站点代码\>', '&lt;SQL Service Broker 端口\>', '&lt;证书文件路径\>'**  
 
-###  <a name="BKMK_DBReplicaOps_Move"></a> 移動發佈資料庫複本的站台伺服器資料庫  
- 將網站資料庫移至新電腦時，請利用下列步驟：  
+ 在你完成站点数据库和数据库副本数据库的配置几分钟后，主站点上的通知管理器将为客户端通知设置从主站点数据库到数据库副本的 Service Broker 对话。  
 
-1.  使用 [SQL Server Management Studio]  刪除網站伺服器資料庫中的資料庫複本發佈。  
+###  <a name="bkmk_supscript"></a> 单个 SQL Server 上附加数据库副本的补充脚本  
+ 当你使用第 4 步中的脚本在 SQL Server 上配置数据库副本服务器的自签名证书（其中 SQL Server 已具有你计划继续使用的数据库副本）时，必须使用原始脚本修改后的版本。 以下修改使脚本无法删除服务器上的现有证书，并创建具有唯一友好名称的后续证书。  编辑原始脚本，如下所示：  
 
-2.  使用 [SQL Server Management Studio]  刪除此網站上每部資料庫複本伺服器中的資料庫複本訂閱。  
+-   注释掉（阻止运行）脚本条目 **# Delete existing cert if one exists** 和 **# Create the new cert**之间的每一行。 若要如此，请添加“#”  **#**  作为每个适用行的第一个字符。  
 
-3.  將資料庫移至新的 SQL Server 電腦。 如需詳細資訊，請參閱 [Modify the site database configuration](../../../../core/servers/manage/modify-your-infrastructure.md#bkmk_dbconfig) 主題中的 [Modify your System Center Configuration Manager infrastructure](../../../../core/servers/manage/modify-your-infrastructure.md) 一節。  
+-   对于使用此脚本配置的每个后续数据库副本，请更新证书的友好名称。  若要如此，请编辑行 **$enrollment.CertificateFriendlyName = "ConfigMgr SQL Server Identification Certificate"** 并将 **ConfigMgr SQL Server Identification Certificate** 替换为新名称，如  **ConfigMgr SQL Server Identification Certificate1**。  
 
-4.  重建網站資料庫伺服器上的資料庫複本發佈。 如需詳細資訊，請參閱本主題的 [步驟 1 - 設定站台資料庫伺服器以發佈資料庫複本](#BKMK_DBReplica_ConfigSiteDB) 。  
+##  <a name="BKMK_DBReplicaOps"></a> 管理数据库副本配置  
+ 在站点上使用数据库副本时，请使用下列部分中的信息对卸载数据库副本、卸载使用数据库副本的站点或将站点数据库转移到新安装 SQL Server 的过程进行补充。 在使用下列部分中的信息删除发布时，请使用有关为用于数据库副本的 SQL Server 版本删除事务复制的指引。 例如，如果使用 SQL Server 2008 R2，请参阅 [如何：删除发布（复制 Transact-SQL 编程）](http://go.microsoft.com/fwlink/p/?LinkId=273934)。  
 
-5.  重建每一部資料庫複本伺服器上的資料庫複本訂閱。 如需詳細資訊，請參閱本主題的 [步驟 2 - 設定資料庫複本伺服器](#BKMK_DBReplica_ConfigSrv) 。  
+> [!NOTE]  
+>  还原为数据库副本配置的站点数据库之后，你必须重新配置每个数据库副本（从而重新创建发布和订阅），然后才能使用数据库副本。  
+
+###  <a name="BKMK_UninstallDbReplica"></a> 卸载数据库副本  
+ 如果为管理点使用数据库副本，你可能需要卸载数据库副本一段时间，然后再重新配置它以供使用。 例如，你必须在将 Configuration Manager 站点升级到新的 Service Pack 之前删除数据库副本。 站点升级完成后，你可以还原数据库副本以供使用。  
+
+ 使用以下步骤来卸载数据库副本。  
+
+1.  在 Configuration Manager 控制台的“管理”工作区中，展开“站点配置”，选择“服务器和站点系统角色”，然后在详细信息窗格中选择承载管理点的站点系统服务器，其中该管理点使用将卸载的数据库副本。  
+
+2.  在“站点系统角色”  窗格中，右键单击“管理点”  并选择“属性” 。  
+
+3.  在“管理点数据库”  选项卡上，选择“使用站点数据库”  将管理点配置为使用站点数据库，而不是数据库副本。 然后，单击“确定”  保存配置。  
+
+4.  接着，使用“SQL Server Management Studio”  执行下列任务：  
+
+    -   从站点服务器数据库中删除数据库副本的发布。  
+
+    -   从数据库副本服务器中删除数据库副本的订阅。  
+
+    -   从数据库副本服务器中删除副本数据库。  
+
+    -   在站点数据库服务器上禁用发布和分发。 要禁用发布和分发，请右键单击“复制”文件夹，然后单击“禁用发布和分发” 。  
+
+5.  在你删除发布、订阅、副本数据库并在站点数据库服务器上禁用发布之后，即会卸载数据库副本。  
+
+###  <a name="BKMK_DBReplicaOps_Uninstall"></a> 卸载发布数据库副本的站点服务器  
+ 在卸载发布数据库副本的站点之前，请使用下列步骤清理发布和任何订阅。  
+
+1.  使用“SQL Server Management Studio”  从站点服务器数据库中删除数据库副本发布。  
+
+2.  使用“SQL Server Management Studio”  从承载此站点的数据库副本的每个远程 SQL Server 中删除数据库副本订阅。  
+
+3.  卸载站点。  
+
+###  <a name="BKMK_DBReplicaOps_Move"></a> 移动发布数据库副本的站点服务器数据库  
+ 将站点数据库转移到新计算机时，请使用下列步骤：  
+
+1.  使用“SQL Server Management Studio”  从站点服务器数据库中删除数据库副本发布。  
+
+2.  使用“SQL Server Management Studio”  从此站点的每个数据库副本服务器中删除数据库副本订阅。  
+
+3.  将数据库转移到新的 SQL Server 计算机。 有关详细信息，请参阅 [Modify the site database configuration](../../../../core/servers/manage/modify-your-infrastructure.md#bkmk_dbconfig) 主题中的 [Modify your System Center Configuration Manager infrastructure](../../../../core/servers/manage/modify-your-infrastructure.md) 部分。  
+
+4.  在站点数据库服务器上重新创建数据库副本的发布。 有关详情，请参阅本主题中的 [第 1 步 - 配置站点数据库服务器以发布数据库副本](#BKMK_DBReplica_ConfigSiteDB) 。  
+
+5.  在每个数据库副本服务器上重新创建数据库副本的订阅。 有关详情，请参阅本主题中的 [第 2 步 – 配置数据库副本服务器](#BKMK_DBReplica_ConfigSrv) 。  

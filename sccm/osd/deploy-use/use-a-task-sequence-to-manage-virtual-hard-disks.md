@@ -1,6 +1,6 @@
 ---
-title: "使用工作順序以管理虛擬硬碟 | Microsoft Docs"
-description: "建立和修改 VHD、新增應用程式和軟體更新，並將 VHD 從 Configuration Manager 發行至 System Center Virtual Machine Manager (VMM)。"
+title: "使用任务序列管理虚拟硬盘 | Microsoft Docs"
+description: "通过 Configuration Manager 创建和修改 VHD、添加应用程序和软件更新，以及将 VHD 发布到 System Center Virtual Machine Manager (VMM)。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -17,21 +17,21 @@ manager: angrobe
 ms.openlocfilehash: f77af4b8fcb193ed44511c0e5eea7290f55dbbf8
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="use-a-task-sequence-to-manage-virtual-hard-disks-in-system-center-configuration-manager"></a>使用工作順序管理 System Center Configuration Manager 中的虛擬硬碟
+# <a name="use-a-task-sequence-to-manage-virtual-hard-disks-in-system-center-configuration-manager"></a>使用任务序列来管理 System Center Configuration Manager 中的虚拟硬盘
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-在 System Center Configuration Manager 中，您可以管理虛擬硬碟 (VHD)，並將您建立的 VHD 從 Configuration Manager 主控台整合至資料中心。 尤其是，您可以建立和修改 VHD、將應用程式和軟體更新新增至 VHD，並將 VHD 從 Configuration Manager 主控台發行至 System Center Virtual Machine Manager (VMM)。  
+在 System Center Configuration Manager 中，可以通过 Configuration Manager 控制台管理虚拟硬盘 (VHD) 并将所创建的 VHD 集成到数据中心中。 具体而言，可以通过 Configuration Manager 控制台创建和修改 VHD、向 VHD 中添加应用程序和软件更新，以及将 VHD 发布到 System Center Virtual Machine Manager (VMM)。  
 
- 請使用下面各節管理 Configuration Manager 中的 VHD。
+ 使用下列部分在 Configuration Manager 中管理 VHD。
 
-## <a name="prerequisites"></a>先決條件  
- 在您開始之前，請確認下列必要條件：  
+## <a name="prerequisites"></a>先决条件  
+ 在开始之前，请验证下列先决条件：  
 
--   您用來管理 VHD 的電腦必須執行下列其中一種作業系統：  
+-   你从中管理 VHD 的计算机必须运行下列操作系统之一：  
 
     -   Windows 8.1 x64  
 
@@ -43,287 +43,287 @@ ms.lasthandoff: 08/07/2017
 
     -   Windows Server 2012 R2  
 
--   必須在 BIOS 中啟用虛擬化，而且必須在您執行 Configuration Manager 主控台以管理 VHD 的電腦上安裝 Hyper-V。 您可以安裝 Hyper-V 管理工具以協助您測試及疑難排解虛擬硬碟，這同時也是最佳作法。 舉例來說，若要監視 smsts.log 檔案以追蹤工作順序在 Hyper-V 中的進度，您必須先安裝 Hyper-V 管理工具。 如需 Hyper-V 需求的詳細資訊，請參閱 [Hyper-V 安裝必要條件](http://technet.microsoft.com/library/cc731898.aspx)。  
+-   必须在 BIOS 中启用虚拟化，并且必须在从中运行 Configuration Manager 控制台来管理 VHD 的计算机上安装 Hyper-V。 同时，作为最佳方案，请安装 Hyper-V 管理工具来帮助你测试和诊断虚拟硬盘。 例如，若要监视 smsts.log 文件以跟踪 Hyper-V 中任务序列的进度，你必须安装 Hyper-V 管理工具。 有关 Hyper-V 要求的详细信息，请参阅 [安装 Hyper-V 的先决条件](http://technet.microsoft.com/library/cc731898.aspx)。  
 
     > [!IMPORTANT]  
-    >  建立 VHD 的程序會耗用處理器的時間和記憶體。 因此，建議您從未安裝在站台伺服器上的 Configuration Manager 主控台來管理 VHD。  
+    >  创建 VHD 的过程会消耗处理器时间和内存。 因此，建议通过不是安装在站点服务器上的 Configuration Manager 控制台来管理 VHD。  
 
--   當您從站台伺服器的遠端電腦管理 VHD 時，站台伺服器必須具有 VHD 檔案所在之資料夾的 [寫入]  存取權限。  
+-   当你通过远离站点服务器的计算机管理 VHD 时，站点服务器必须对包含 VHD 文件的文件夹具有“写入”  访问权限。  
 
--   確認您用來管理 VHD 的電腦擁有足夠的可用磁碟空間。 VHD 的硬碟空間需求會根據您安裝的作業系統和應用程式而有所不同。  
+-   验证在你从中管理 VHD 的计算机上是否有足够的可用磁盘空间。 VHD 的硬盘空间要求将因你安装的操作系统和应用程序而异。  
 
--   確認您用來管理 VHD 的電腦擁有足夠的記憶體。 在建立 VHD 的程序期間，虛擬機器會設定為使用 2 GB 的記憶體。  
+-   验证在你从中管理 VHD 的计算机上是否有足够的内存。 在创建 VHD 的过程中，虚拟机配置为消耗 2 GB 内存。  
 
--   在您用來上傳 VHD 至 VMM 的電腦上安裝 System Center Virtual Machine Manager (VMM) 主控台。 您可以將 VMM 主控台安裝在用來管理 VHD 的電腦上，這表示您不再需要安裝 Hyper-V 將 VHD 匯入 VMM。  
+-   在你从中将 VHD 上载到 VMM 的计算机上安装 System Center Virtual Machine Manager (VMM) 控制台。 你可以将 VMM 控制台安装在从中管理 VHD 的单独计算机上，这意味着无需安装 Hyper-V 即可将 VHD 导入到 VMM。  
 
     > [!NOTE]  
-    >  如果您在開啟 Configuration Manager 主控台時安裝 VMM 主控台，則必須在 VMM 主控台安裝完成之後重新啟動 Configuration Manager 主控台。 否則，Configuration Manager 將無法順利連線至 VMM 管理伺服器以上傳 VHD。  
+    >  如果在 Configuration Manager 控制台已打开的同时安装 VMM 控制台，必须在 VMM 控制台安装完成后重启 Configuration Manager 控制台。 否则， Configuration Manager 将无法成功连接到 VMM 管理服务器以上传 VHD。  
 
-##  <a name="BKMK_CreateVHDSteps"></a> 建立 VHD 的步驟  
- 若要建立 VHD，您必須建立包含建立 VHD 的步驟的工作順序，然後在建立虛擬硬碟精靈中使用該工作順序來建立 VHD。 以下各節提供建立 VHD 的步驟。  
+##  <a name="BKMK_CreateVHDSteps"></a> 创建 VHD 的步骤  
+ 要创建 VHD，你必须创建一个包含用于创建 VHD 的步骤的任务序列，然后在“创建虚拟硬盘向导”中使用该任务序列创建 VHD。 以下部分提供了创建 VHD 的步骤。  
 
-###  <a name="BKMK_CreateTS"></a> 建立 VHD 的工作順序  
- 您必須建立工作順序，其中將包含建立 VHD 的步驟。 在建立工作順序精靈中，您可以使用 [安裝現有的映像套件至虛擬硬碟]  選項來完成建立 VHD 的步驟。 舉例來說，精靈會新增下列必要步驟：重新啟動 Windows PE、格式化及分割硬碟、套用作業系統以及將電腦關機。 您無法在完整的作業系統中建立 VHD。 此外，Configuration Manager 必須等待虛擬機器關機之後才能完成套件。 根據預設，精靈在將虛擬機器關機之前會等候 5 分鐘。 在建立工作順序之後，您可以視需要新增其他步驟。  
+###  <a name="BKMK_CreateTS"></a> 为 VHD 创建任务序列  
+ 你必须创建将包含创建 VHD 的步骤的任务序列。 在“创建任务序列向导”中，你可以选择“将现有的映像包安装到虚拟硬盘”  选项，该选项创建用于创建 VHD 的步骤。 例如，向导将添加所需的下列步骤：在 Windows PE 中重启、对磁盘进行格式化和分区、应用操作系统以及关闭计算机。 当处于完整操作系统中时，你无法创建 VHD。 此外，Configuration Manager 必须等待虚拟机关闭，然后才能完成包。 默认情况下，向导在关闭虚拟机之前将等待 5 分钟。 创建任务序列后，你可以在必要时添加其他步骤。  
 
 > [!IMPORTANT]  
->  下列程序會使用 [安裝現有的映像套件至虛擬硬碟]  選項建立工作順序，這會自動包含成功建立 VHD 所需要的步驟。 如果您選擇使用現有的工作順序或手動建立工作順序，請務必將電腦關機的步驟新增至工作順序的結尾。 如果不執行此步驟，則不會刪除暫時虛擬機器，使得建立 VHD 的程序無法完成。 不過，精靈將會完成並報告成功狀態。  
+>  下列过程通过使用“将现有的映像包安装到虚拟硬盘”  选项来创建任务序列，该选项自动包括成功创建 VHD 的必需步骤。 如果选择使用现有任务序列或手动创建任务序列，请确保在任务序列的结尾添加“关闭计算机”步骤。 如果没有此步骤，将不会删除临时虚拟机，并且创建 VHD 的过程不会完成。 但是，向导将完成并报告成功。  
 
- 使用下列程序建立工作順序以建立 VHD：  
+ 使用下列过程来创建任务序列以创建 VHD：  
 
-#### <a name="to-create-the-task-sequence-to-create-the-vhd"></a>若要建立工作順序以建立 VHD  
+#### <a name="to-create-the-task-sequence-to-create-the-vhd"></a>创建任务序列以创建 VHD  
 
-1.  在 Configuration Manager 主控台中，按一下 [軟體程式庫] 。  
+1.  在 Configuration Manager 控制台中，单击“软件库” 。  
 
-2.  在 [軟體程式庫]  工作區中，展開 [作業系統] ，然後按一下 [工作順序] 。  
+2.  在“软件库”  工作区中，展开“操作系统” ，然后单击“任务序列” 。  
 
-3.  在 [首頁]  索引標籤的 [建立]  群組中，按一下 [建立工作順序]  啟動 [建立工作順序精靈]。  
+3.  在“主页”  选项卡上的“创建”  组中，单击“创建任务序列”  以启动创建任务序列向导。  
 
-4.  在 [建立新的工作順序]  頁面上，按一下 [安裝現有的映像套件至虛擬硬碟] ，然後按 [下一步] 。  
+4.  在“创建新的任务序列”  页上，单击“将现有的映像包安装到虚拟硬盘” ，然后单击“下一步” 。  
 
-5.  在 [工作順序資訊]  頁面上指定下列設定，然後按 [下一步] 。  
+5.  在“任务序列信息”  页上，指定以下设置，然后单击“下一步” 。  
 
-    -   **工作順序名稱**：指定識別工作順序的名稱。  
+    -   “任务序列名称”：指定用于标识任务序列的名称。  
 
-    -   **描述**：指定工作順序的描述。  
+    -   “描述”：指定任务序列的描述。  
 
-    -   **開機映像**：指定在目的地電腦上安裝作業系統的開機映像。 如需詳細資訊，請參閱[管理開機映像](../get-started/manage-boot-images.md)。  
+    -   **启动映像包**：指定用于在目标计算机上安装操作系统的启动映像。 有关详细信息，请参阅[管理启动映像](../get-started/manage-boot-images.md)。  
 
-6.  在 [安裝 Windows]  頁面上指定下列設定，然後按 [下一步] 。  
+6.  在“安装 Windows”  页上，指定以下设置，然后单击“下一步” 。  
 
-    -   **映像套件**：指定包含要安裝之作業系統映像的套件。  
+    -   “映像包”：指定包含要安装的操作系统映像的包。  
 
-    -   **映像**：如果作業系統映像套件包含多個映像，請指定要安裝之作業系統映像的索引。  
+    -   “映像”：如果操作系统映像包有多个映像，请指定要安装的操作系统映像的索引。  
 
-    -   **產品金鑰**：指定要安裝之 Windows 作業系統的產品金鑰。 您可以指定編碼的大量授權金鑰和標準產品金鑰。 如果您使用非編碼的產品金鑰，則必須以破折號 (-) 分隔字元，每 5 個字元為一組。 例如： *XXXXX-XXXXX-XXXXX-XXXXX-XXXXX*  
+    -   “产品秘钥”：指定要安装的 Windows 操作系统的产品密钥。 你可以指定编码的批量许可证密钥和标准产品密钥。 如果使用非编码的产品密钥，则必须通过短划线 (-) 分隔每组 5 个字符。 例如： *XXXXX-XXXXX-XXXXX-XXXXX-XXXXX*  
 
-    -   **伺服器授權模式**：指定伺服器授權為 [按照基座] 、[按照伺服器] ，或者不指定授權。 如果伺服器授權為 [按照伺服器] ，請同時指定伺服器連線數目上限。  
+    -   “服务器授权模式”：指定服务器许可证为“每客户” , 或未指定许可证。 如果服务器许可证为“每服务器” ，则还需指定服务器连接的最大数量。  
 
-    -   指定如何處理部署作業系統映像時使用的系統管理員帳戶。  
+    -   指定如何处理在部署操作系统映像时使用的管理员帐户。  
 
-        -   **隨機產生本機系統管理員密碼，並停用所有支援平台上的帳戶 (建議)**：使用此設定，使精靈可隨機建立本機系統管理員帳戶密碼，並在部署作業系統映像時停用帳戶。  
+        -   “随机生成本地管理员密码并禁用所有支持的平台上的帐户（建议）”：使用此设置让向导随机创建本地管理员帐户的密码并在部署操作系统映像后禁用该帐户。  
 
-        -   **啟用帳戶並指定本機系統管理員密碼**：使用此設定，在部署作業系統映像的所有電腦上使用本機系統管理員帳戶的特定密碼。  
+        -   “启用帐户并指定本地管理员密码”：使用此设置以便为部署操作系统映像的所有计算机上的本地管理员帐户使用特定密码。  
 
-7.  在 [設定此網路]  頁面指定下列設定，然後按 [下一步] 。  
+7.  在“配置网络”  页上，指定以下设置，然后单击“下一步” 。  
 
-    -   **加入工作群組**：指定是否將目的地電腦加入工作群組。  
+    -   “加入工作组”：指定是否将目标计算机添加到工作组。  
 
-    -   **加入網域**：指定是否將目的地電腦加入網域。 在 [網域] 中，指定網域名稱。  
+    -   “加入域”：指定是否将目标计算机添加到域。 在“域” 中，指定域的名称。  
 
         > [!IMPORTANT]  
-        >  您可以進行瀏覽，尋找本機樹系中的網域，但是必須指定遠端樹系的網域名稱。  
+        >  你可以浏览以查找本地林中的域，但对于远程林则必须指定域名。  
 
-         您也可以指定組織單位 (OU)。 這是選用設定，會指定要建立電腦帳戶所在 OU 的 LDAP X.500 辨別名稱 (如果帳戶尚未存在)。  
+         你还可以指定组织单位 (OU)。 这是一项可选设置，用于指定在其中创建计算机帐户的 OU 的 LDAP X.500 可分辨名称（如果尚未存在）。  
 
-    -   **帳戶**：指定具有加入指定網域權限之帳戶的使用者名稱和密碼。 例如： *網域\使用者* 或 *%變數%*。  
+    -   “帐户”：指定具有加入指定域的权限的帐户的用户名和密码。 例如： *domain\user* 或 *%variable%*。  
 
-8.  在 [安裝 Configuration Manager] 頁面上，指定在目的地電腦上安裝 Configuration Manager 用戶端套件，然後按 [下一步]。  
+8.  在“安装 Configuration Manager”页上，指定要安装到目标计算机上的 Configuration Manager 客户端包，然后单击“下一步”。  
 
-9. 在 [安裝應用程式]  頁面上，指定要安裝在目的地電腦上的應用程式，然後按 [下一步] 。 如果您指定多個應用程式，也可以指定工作順序在特定應用程式安裝失敗時繼續執行。  
+9. 在“安装应用程序”  页上，指定要安装在目标计算机上的应用程序，然后单击“下一步” 。 如果指定多个应用程序，你也可以指定任务序列在特定应用程序的安装失败时继续进行。  
 
-10. 完成精靈。  
+10. 完成向导。  
 
-###  <a name="BKMK_CreateVHD"></a> 建立 VHD  
- 在建立 VHD 的工作順序之後，請使用建立虛擬硬碟精靈來建立 VHD。  
+###  <a name="BKMK_CreateVHD"></a> 创建 VHD  
+ 为 VHD 创建任务序列之后，请使用“创建虚拟硬盘向导”来创建 VHD。  
 
 > [!IMPORTANT]  
->  在執行此程序之前，請確認您符合本主題一開始所列出的必要條件。  
+>  在运行此过程之前，请验证是否满足本主题开头列出的先决条件。  
 
- 使用下列程序建立 VHD。  
+ 使用下列过程来创建 VHD。  
 
-#### <a name="to-create-a-vhd"></a>若要建立 VHD  
+#### <a name="to-create-a-vhd"></a>创建 VHD  
 
-1.  在 Configuration Manager 主控台中，按一下 [軟體程式庫] 。  
+1.  在 Configuration Manager 控制台中，单击“软件库” 。  
 
-2.  在 [軟體程式庫]  工作區中，展開 [作業系統] ，然後按一下 [虛擬硬碟] 。  
+2.  在“软件库”  工作区中，展开“操作系统” ，然后单击“虚拟硬盘” 。  
 
-3.  在 [首頁]  索引標籤的 [建立]  群組中，按一下 [建立虛擬硬碟]  啟動 [建立虛擬硬碟精靈]。  
+3.  在“主页”  选项卡上的“创建”  组中，单击“创建虚拟硬盘”  以启动“创建虚拟硬盘向导”。  
 
     > [!NOTE]  
-    >  Hyper-V 必須安裝在執行 Configuration Manager 主控台以管理 VHD 的電腦上，否則就是未啟用 [建立虛擬硬碟] 選項。 如需 Hyper-V 需求的詳細資訊，請參閱 [Hyper-V 安裝必要條件](http://technet.microsoft.com/library/cc731898.aspx)。  
+    >  Hyper-V 必须安装在运行 Configuration Manager 控制台（从中管理 VHD）的计算机上，否则不会启用“创建虚拟硬盘”选项。 有关 Hyper-V 要求的详细信息，请参阅 [安装 Hyper-V 的先决条件](http://technet.microsoft.com/library/cc731898.aspx)。  
 
     > [!TIP]  
-    >  若要組織您的 VHD，請建立新的資料夾，或在 [虛擬硬碟]  節點下方選取現有的資料夾，然後在資料夾中按一下 [建立虛擬硬碟]  。  
+    >  若要组织 VHD，请在“虚拟硬盘”  节点下创建一个新文件夹或选择现有文件夹，然后从该文件夹中单击“创建虚拟硬盘”  。  
 
-4.  在 [一般]  頁面上指定以下設定，然後按 [下一步] 。  
+4.  在“常规”  页上，指定以下设置，然后单击“下一步” 。  
 
-    -   **名稱**：指定 VHD 的唯一名稱。  
+    -   “名称”：为 VHD 指定唯一名称。  
 
-    -   **版本**：指定 VHD 的版本號碼。 這是選擇性的設定。  
+    -   “版本”：为 VHD 指定版本号。 这是一个可选设置。  
 
-    -   **註解**：指定 VHD 的描述。  
+    -   “注释”：为 VHD 指定描述。  
 
-    -   **路徑**：指定精靈將用來建立 VHD 檔案的路徑和檔案名稱。  
+    -   “路径”：指定向导将在其中创建 VHD 文件的位置的路径和文件名。  
 
-         您必須以 UNC 格式輸入有效的網路路徑。 例如︰**\\\servername\\<sharename\>\\<filename\>.vhd**。  
+         你必须以 UNC 格式输入有效的网络路径。 例如：**\\\servername\\<sharename\>\\<filename\>.vhd**。  
 
         > [!WARNING]  
-        >  Configuration Manager 必須具有指定路徑的「寫入」存取權才能建立 VHD。 如果 Configuration Manager 無法存取路徑，則會在站台伺服器的 distmgr.log 檔案中記錄相關錯誤。  
+        >  Configuration Manager 必须对指定路径具有“写入”访问权限才能创建 VHD。 如果 Configuration Manager 未能访问该路径，它会将关联的错误记录在站点服务器上的 distmgr.log 文件中。  
 
-5.  在 [工作順序]  頁面中，指定您在上一節中指定的工作順序，然後按 [下一步] 。  
+5.  在“任务序列”  页上，指定你在前面部分中指定的任务序列，然后单击“下一步” 。  
 
-6.  在 [發佈點]  頁面中，選取一個或多個包含工作順序所需內容的發佈點，然後按 [下一步] 。  
+6.  在“分发点”  页上，选择包含任务序列所需的内容的一个或多个分发点，然后单击“下一步” 。  
 
-7.  在 [自訂]  頁面上，按 [下一步] 。 建立 VHD 的程序會忽略您在此頁面指定的任何設定。  
+7.  在“自定义”  页面上，单击“下一步” 。 VHD 的创建过程将忽略你在此页面上指定的任何设置。  
 
-8.  在確認這些設定後按 [下一步] 。 精靈隨即會建立 VHD。  
+8.  查看设置，然后单击“下一步” 。 此向导将创建 VHD。  
 
     > [!TIP]  
-    >  完成 VHD 建立程序的時間可能不盡相同。 當精靈執行此程序時，您可以監視下列記錄檔以追蹤進度。 記錄檔預設會位於執行 Configuration Manager 主控台的電腦上，並位於 %*ProgramFiles(x86)*%\Microsoft Configuration Manager\AdminConsole\AdminUILog 的路徑。  
+    >  完成该过程以创建 VHD 的过程的时间可能有所不同。 在向导进行此过程的同时，你可以监视下列日志文件来跟踪进度。 默认情况下，这些日志位于运行 Configuration Manager 控制台的计算机上的 %ProgramFiles(x86)%\Microsoft Configuration Manager\AdminConsole\AdminUILog 中。  
     >   
-    >  -   **CreateTSMedia.log**：精靈會在建立工作順序媒體時將資訊寫入此記錄檔。 檢閱此記錄檔，追蹤精靈在建立獨立媒體時的進度。  
-    > -   **DeployToVHD.log**：精靈會在執行建立 VHD 的程序時將資訊寫入此記錄檔。 檢閱此記錄檔，追蹤精靈在建立獨立媒體之後的所有步驟進度。  
+    >  -   “”：向导在创建任务序列媒体时将信息写入此日志。 查看此日志文件来跟踪向导在创建独立媒体时的进度。  
+    > -   “”：向导在进行创建 VHD 的过程时将信息写入此日志。 查看此日志文件来跟踪向导在创建独立媒体后所有步骤的进度。  
     >   
-    >  此外，當作業系統安裝開始時，您可以開啟 Hyper-V Manager (如果您已在電腦上安裝 Hyper-V 管理工具) 並連線至精靈建立的暫時虛擬機器，查看執行中的工作順序。 您可以在虛擬機器上監視 smsts.log 檔案以追蹤工作順序的進度。 如果完成工作順序的步驟發生問題，可使用此記錄檔來協助您疑難排解問題。 硬碟格式化之前，smsts.log 檔案位於 x: \windows\temp\smstslog\smsts.log，硬碟格式化之後位於 c:\\_SMSTaskSequence\Logs\Smstslog\。 在工作順序步驟完成之後，系統會在 5 分鐘之後 (根據預設) 將虛擬機器關機並且予以刪除。  
+    >  此外，当操作系统安装启动时，你可以打开 Hyper-V 管理器（如果在计算机上安装了 Hyper-V 管理工具），并连接到向导创建的临时虚拟机以查看正在运行的任务序列。 从该虚拟机中，你可以监视 smsts.log 文件来跟踪任务序列的进度。 如果在完成任务序列步骤时出现问题，你可以使用此日志文件来帮助你解决问题。 smsts.log 文件位于 x: \windows\temp\smstslog\smsts.log（在硬盘格式化前），位于 c:\\_SMSTaskSequence\Logs\Smstslog\（在格式化后）。 任务序列步骤完成后，虚拟机（默认情况下）会在 5 分钟后关闭并被删除。  
 
- 在 Configuration Manager 建立 VHD 之後，VHD 會放在 [軟體程式庫] 工作區之 [作業系統部署] 節點下的 Configuration Manager 主控台的 [虛擬硬碟] 節點。  
+ Configuration Manager 创建 VHD 后，它位于“软件库”工作区中“操作系统部署”节点下 Configuration Manager 控制台中的“虚拟硬盘”中。  
 
 > [!NOTE]  
->  Configuration Manager 會連線至 VHD 的來源位置，以擷取 VHD 的大小。 如果 Configuration Manager 無法存取 VHD 檔案，VHD 的 [大小 (KB)] 資料行就會顯示 **0**。  
+>  Configuration Manager 通过连接到 VHD 的源位置来检索 VHD 的大小。 如果 Configuration Manager 无法访问 VHD 文件，则 VHD 的“大小 (KB)”列中显示 **0**。  
 
-##  <a name="BKMK_ModifyVHDSteps"></a> 修改現有 VHD 的步驟  
- 若要修改 VHD，您必須使用修改 VHD 的必要步驟來建立工作順序。 接著，請在修改虛擬硬碟精靈中選取該工作順序。 此精靈會將 VHD 連結到虛擬機器、在 VHD 中執行工作順序，然後更新 VHD 檔案。 以下各節提供修改 VHD 的步驟。  
+##  <a name="BKMK_ModifyVHDSteps"></a> 修改现有 VHD 的步骤  
+ 要修改 VHD，你必须创建一个包含修改 VHD 所需的步骤的任务序列。 然后，在“修改虚拟硬盘向导”中选择该任务序列。 该向导会将 VHD 连接到虚拟机、在 VHD 中运行任务序列，然后更新 VHD 文件。 以下部分提供了修改 VHD 的步骤。  
 
-###  <a name="BKMK_ModifyTS"></a> 建立工作順序以修改 VHD  
- 若要修改現有的 VHD，您必須先建立工作順序。 請只選擇修改工作順序所需的步驟。 例如，如果您要新增應用程式到 VHD，請建立自訂工作順序，然後只加入「安裝應用程式」的步驟。  
+###  <a name="BKMK_ModifyTS"></a> 创建任务序列以修改 VHD  
+ 要修改现有的 VHD，必须首先创建一个任务序列。 仅选择修改任务序列所需的步骤。 例如，如果要将应用程序添加到 VHD 中，请创建自定义任务序列，然后仅添加“安装应用程序”步骤。  
 
- 請使用下列程序建立工作順序以修改 VHD。  
+ 使用下列过程来创建任务序列以修改 VHD。  
 
-#### <a name="to-create-a-custom-task-sequence-to-modify-the-vhd"></a>建立自訂工作順序以修改 VHD  
+#### <a name="to-create-a-custom-task-sequence-to-modify-the-vhd"></a>创建自定义任务序列以修改 VHD  
 
-1.  在 Configuration Manager 主控台中，按一下 [軟體程式庫] 。  
+1.  在 Configuration Manager 控制台中，单击“软件库” 。  
 
-2.  在 [軟體程式庫]  工作區中，展開 [作業系統] ，然後按一下 [工作順序] 。  
+2.  在“软件库”  工作区中，展开“操作系统” ，然后单击“任务序列” 。  
 
-3.  在 [首頁]  索引標籤的 [建立]  群組中，按一下 [建立工作順序]  啟動 [建立工作順序精靈]。  
+3.  在“主页”  选项卡上的“创建”  组中，单击“创建任务序列”  以启动创建任务序列向导。  
 
-4.  在 [建立新的工作順序]  頁面上，選取 [建立新的自訂工作順序] ，然後按 [下一步] 。  
+4.  在“创建新的任务序列”  页面上，选择“创建新的自定义任务序列” ，然后单击“下一步” 。  
 
-5.  在 [工作順序資訊]  頁面上指定下列設定，然後按 [下一步] 。  
+5.  在“任务序列信息”  页上，指定以下设置，然后单击“下一步” 。  
 
-    -   **工作順序名稱**：指定識別工作順序的名稱。  
+    -   “任务序列名称”：指定用于标识任务序列的名称。  
 
-    -   **描述**：指定工作順序的描述。  
+    -   “描述”：指定任务序列的描述。  
 
-    -   **開機映像**：指定在目的地電腦上安裝作業系統的開機映像。 如需詳細資訊，請參閱[管理開機映像](../get-started/manage-boot-images.md)。  
+    -   **启动映像包**：指定用于在目标计算机上安装操作系统的启动映像。 有关详细信息，请参阅[管理启动映像](../get-started/manage-boot-images.md)。  
 
-6.  完成精靈。  
+6.  完成向导。  
 
- 請使用下列程序將工作順序步驟新增到自訂工作順序。  
+ 使用下列过程将任务序列步骤添加到自定义任务序列中。  
 
-#### <a name="to-add-task-sequence-steps-to-the-custom-task-sequence"></a>新增工作順序步驟到自訂工作順序  
+#### <a name="to-add-task-sequence-steps-to-the-custom-task-sequence"></a>将任务序列步骤添加到自定义任务序列中  
 
-1.  在 Configuration Manager 主控台中，按一下 [軟體程式庫] 。  
+1.  在 Configuration Manager 控制台中，单击“软件库” 。  
 
-2.  在 [軟體程式庫]  工作區中，展開 [作業系統] ，按一下 [工作順序] ，然後您在前面的程序中建立的自訂工作順序。  
+2.  在“软件库”  工作区中，展开“操作系统” ，单击“任务序列” ，然后选择在上一个过程中创建的自定义任务序列。  
 
-3.  在 [首頁]  索引標籤的 [工作順序]  群組中，按一下 [編輯]  ，啟動匯出工作順序編輯器。  
+3.  在“主页”  选项卡上的“任务序列”  组中，单击“编辑”  以启动任务序列编辑器。  
 
-4.  新增用來修改 VHD 的工作順序步驟。  
+4.  添加用于修改 VHD 的任务序列步骤。  
 
-5.  按一下 [確定]  ，結束工作順序編輯器。  
+5.  单击“确定”  退出任务序列编辑器。  
 
 ###  <a name="BKMK_ModifyVHD"></a> 修改 VHD  
- 在建立 VHD 的工作順序之後，請使用修改虛擬硬碟精靈來修改 VHD。  
+ 为 VHD 创建任务序列之后，请使用“修改虚拟硬盘向导”来修改 VHD。  
 
- 請使用下列程序修改 VHD。  
+ 使用下列过程来修改 VHD。  
 
 #### <a name="to-modify-a-vhd"></a>修改 VHD  
 
-1.  在 Configuration Manager 主控台中，按一下 [軟體程式庫] 。  
+1.  在 Configuration Manager 控制台中，单击“软件库” 。  
 
-2.  在 [軟體程式庫]  工作區中，展開 [作業系統] ，按一下 [虛擬硬碟] ，然後選取要修改的 VHD。  
+2.  在“软件库”  工作区中，展开“操作系统” ，单击“虚拟硬盘” ，然后选择要修改的 VHD。  
 
-3.  在 [首頁]  索引標籤的 [虛擬硬碟]  群組中，按一下 [修改虛擬硬碟]  ，啟動修改虛擬硬碟精靈。  
+3.  在“主页”  选项卡上的“虚拟硬盘”  组中，单击“修改虚拟硬盘”  以启动“修改虚拟硬盘向导”。  
 
     > [!NOTE]  
-    >  Hyper-V 必須安裝在執行 Configuration Manager 主控台以管理 VHD 的電腦上，否則就是未啟用 [修改虛擬硬碟] 選項。 如需 Hyper-V 需求的詳細資訊，請參閱 [Hyper-V 安裝必要條件](http://technet.microsoft.com/library/cc731898.aspx)。  
+    >  Hyper-V 必须安装在运行 Configuration Manager 控制台（从中管理 VHD）的计算机上，否则不会启用“修改虚拟硬盘”选项。 有关 Hyper-V 要求的详细信息，请参阅 [安装 Hyper-V 的先决条件](http://technet.microsoft.com/library/cc731898.aspx)。  
 
-4.  在 [一般]  頁面上，確認下列設定，然後按 [下一步] 。  
+4.  在“常规”  页上，确认下列设置，然后单击“下一步” 。  
 
-    -   **名稱**：指定 VHD 的唯一名稱。  
+    -   “名称”：为 VHD 指定唯一名称。  
 
-    -   **版本**：指定 VHD 的版本號碼。 這是選擇性的設定。  
+    -   “版本”：为 VHD 指定版本号。 这是一个可选设置。  
 
-    -   **註解**：指定 VHD 的描述。  
+    -   “注释”：为 VHD 指定描述。  
 
-    -   **路徑**：指定建立 VHD 檔案所在的路徑和檔案名稱。 您無法修改這項設定。  
+    -   “路径”：指定 VHD 文件所在位置的路径和文件名。 你无法修改此设置。  
 
         > [!WARNING]  
-        >  Configuration Manager 必須具有指定路徑的「寫入」存取權才能建立 VHD。 如果 Configuration Manager 無法存取路徑，則會在站台伺服器的 distmgr.log 檔案中記錄相關錯誤。  
+        >  Configuration Manager 必须对指定路径具有“写入”访问权限才能创建 VHD。 如果 Configuration Manager 未能访问该路径，它会将关联的错误记录在站点服务器上的 distmgr.log 文件中。  
 
-5.  在 [工作順序]  頁面中，指定您在上一節建立的自訂工作順序，然後按 [下一步] 。  
+5.  在“任务序列”  页上，指定你在前面部分中创建的自定义任务序列，然后单击“下一步” 。  
 
-6.  在 [發佈點]  頁面中，選取一個或多個包含工作順序所需內容的發佈點，然後按 [下一步] 。  
+6.  在“分发点”  页上，选择包含任务序列所需的内容的一个或多个分发点，然后单击“下一步” 。  
 
-7.  在 [自訂]  頁面上，按 [下一步] 。 修改 VHD 的程序會忽略您在此頁面指定的任何設定。  
+7.  在“自定义”  页面上，单击“下一步” 。 VHD 的修改过程将忽略你在此页面上指定的任何设置。  
 
-8.  在確認這些設定後按 [下一步] 。 精靈隨即會建立已修改的 VHD。  
+8.  查看设置，然后单击“下一步” 。 此向导将创建修改的 VHD。  
 
     > [!TIP]  
-    >  完成 VHD 修改程序的時間可能不盡相同。 當精靈執行此程序時，您可以監視下列記錄檔以追蹤進度。 記錄檔預設會位於執行 Configuration Manager 主控台的電腦上，並位於 %*ProgramFiles(x86)*%\Microsoft Configuration Manager\AdminConsole\AdminUILog 的路徑。  
+    >  完成该过程以修改 VHD 的过程的时间可能有所不同。 在向导进行此过程的同时，你可以监视下列日志文件来跟踪进度。 默认情况下，这些日志位于运行 Configuration Manager 控制台的计算机上的 %ProgramFiles(x86)%\Microsoft Configuration Manager\AdminConsole\AdminUILog 中。  
     >   
-    >  -   **CreateTSMedia.log**：精靈會在建立工作順序媒體時將資訊寫入此記錄檔。 檢閱此記錄檔，追蹤精靈在建立獨立媒體時的進度。  
-    > -   **DeployToVHD.log**：精靈會在執行修改 VHD 的程序時將資訊寫入此記錄檔。 檢閱此記錄檔，追蹤精靈在建立獨立媒體之後的所有步驟進度。  
+    >  -   “”：向导在创建任务序列媒体时将信息写入此日志。 查看此日志文件来跟踪向导在创建独立媒体时的进度。  
+    > -   “”：向导在进行修改 VHD 的过程时将信息写入此日志。 查看此日志文件来跟踪向导在创建独立媒体后所有步骤的进度。  
     >   
-    >  此外，您也可以開啟 Hyper-V Manager (如果您已在電腦上安裝 Hyper-V 管理工具) 並連線至精靈建立的暫時虛擬機器，查看執行中的工作順序。 您可以在虛擬機器上監視 smsts.log 檔案以追蹤工作順序的進度。 如果完成工作順序的步驟發生問題，可使用此記錄檔來協助您疑難排解問題。 硬碟格式化之前，smsts.log 檔案位於 x: \windows\temp\smstslog\smsts.log，硬碟格式化之後位於 c:\\_SMSTaskSequence\Logs\Smstslog\。 在工作順序步驟完成之後，系統會在 5 分鐘之後 (根據預設) 將虛擬機器關機並且予以刪除。  
+    >  此外，你可以打开 Hyper-V 管理器（如果在计算机上安装了 Hyper-V 管理工具），并连接到向导创建的临时虚拟机以查看正在运行的任务序列。 从该虚拟机中，你可以监视 smsts.log 文件来跟踪任务序列的进度。 如果在完成任务序列步骤时出现问题，你可以使用此日志文件来帮助你解决问题。 smsts.log 文件位于 x: \windows\temp\smstslog\smsts.log（在硬盘格式化前），位于 c:\\_SMSTaskSequence\Logs\Smstslog\（在格式化后）。 任务序列步骤完成后，虚拟机（默认情况下）会在 5 分钟后关闭并被删除。  
 
-##  <a name="BKMK_ApplyUpdates"></a> 將軟體更新套用至 VHD  
- 適用於 VHD 中作業系統的新軟體更新會定期發行。 您可以依指定的排程將適用的軟體更新套用至 VHD。 在您指定的排程上，Configuration Manager 會套用您為 VHD 選取的軟體更新。  
+##  <a name="BKMK_ApplyUpdates"></a> 将软件更新应用于 VHD  
+ 我们会定期发布适用于你的 VHD 中的操作系统的新软件更新。 你可以按指定计划将适用的软件更新应用于 VHD。 Configuration Manager 将按指定的计划将所选的软件更新应用于 VHD。  
 
- 有關 VHD 的資訊會儲存在站台資料庫中，包括建立 VHD 時已套用的軟體更新。 最初建立時已套用至 VHD 的軟體更新也會儲存在站台資料庫中。 當您啟動精靈將軟體更新套用至 VHD 時，精靈會擷取尚未套用至 VHD 的可用軟體更新清單供您選取。  
+ 有关 VHD 的信息存储在站点数据库中，包括在创建 VHD 时应用的软件更新。 自 VHD 最初创建以来已应用于 VHD 的软件更新也存储在站点数据库中。 当你启动向导以将软件更新应用于 VHD 时，向导将检索尚未应用于 VHD 的适用软件更新的列表供你选择。  
 
- 您可以選取 [發生錯誤時仍繼續] 設定，讓 Configuration Manager 繼續套用軟體更新，即使發生錯誤仍然套用一或多個您所選取的軟體更新。  
+ 可以选择“出错时继续”设置，即使应用选择的一个或多个软件更新时出错，Configuration Manager 也可继续应用软件更新。  
 
 > [!NOTE]  
->  軟體更新會從站台伺服器上的內容庫複製。  
+>  将从站点服务器上的内容库中复制软件更新。  
 
- 請使用下列程序將軟體更新套用至 VHD。  
+ 使用下列过程将软件更新应用于 VHD。  
 
-#### <a name="to-apply-software-updates-to-a-vhd"></a>若要將軟體更新套用至 VHD  
+#### <a name="to-apply-software-updates-to-a-vhd"></a>将软件更新应用于 VHD  
 
-1.  在 Configuration Manager 主控台中，按一下 [軟體程式庫] 。  
+1.  在 Configuration Manager 控制台中，单击“软件库” 。  
 
-2.  在 [軟體程式庫]  工作區中，展開 [作業系統] ，然後按一下 [虛擬硬碟] 。  
+2.  在“软件库”  工作区中，展开“操作系统” ，然后单击“虚拟硬盘” 。  
 
-3.  選取要套用軟體更新的 VHD。  
+3.  选择要应用软件更新的 VHD。  
 
-4.  在 [首頁]  索引標籤的 [虛擬硬碟]  群組中，按一下 [排程更新]  啟動精靈。  
+4.  在“主页”  选项卡上的“虚拟硬盘”  组中，单击“计划更新”  以启动向导。  
 
-5.  在 [選擇更新]  頁面上，選取要套用至 VHD 的軟體更新，然後按 [下一步] 。  
+5.  在“选择更新”  页上，选择要应用于 VHD 的软件更新，然后单击“下一步” 。  
 
-6.  在 [設定排程]  頁面上指定下列設定，然後按 [下一步] 。  
+6.  在“设置计划”  页上，指定以下设置，然后单击“下一步” 。  
 
-    1.  **排程**：指定將軟體更新套用至 VHD 的排程。  
+    1.  “计划”：指定有关何时将软件更新应用于 VHD 的计划。  
 
-    2.  **發生錯誤時繼續**：選取此選項，即使發生錯誤仍會將軟體更新套用至映像。  
+    2.  “出错时继续”：选择此选项以便即使在出错时也继续将软件更新应用于映像。  
 
-7.  確認 [摘要]  頁面中的資訊，然後按 [下一步] 。  
+7.  在“摘要”  页上，验证以下信息，然后单击“下一步” 。  
 
-8.  在 [完成]  頁面上，確認軟體更新已成功套用至作業系統映像。  
+8.  在“完成”  页上，验证软件更新是否已成功应用于操作系统映像。  
 
-##  <a name="BKMK_ImportToVMM"></a> 將 VHD 匯入至 System Center Virtual Machine Manager  
- System Center VMM 是一種虛擬資料中心的管理解決方案，可讓您設定及管理虛擬主機、網路和儲存資源，以在您建立的私人雲端上建立及部署虛擬機器和服務。 在 Configuration Manager 中建立 VHD 之後，您就可以使用 VMM 來匯入和管理 VHD。  
+##  <a name="BKMK_ImportToVMM"></a> 将 VHD 导入到 System Center Virtual Machine Manager  
+ System Center VMM 是用于虚拟化数据中心的管理解决方案，使你能够配置和管理虚拟化主机、网络以及存储资源，以便创建虚拟机和服务并将它们部署到你创建的私有云。 在 Configuration Manager 中创建 VHD 之后，可通过使用 VMM 来导入和管理 VHD。  
 
 > [!TIP]  
->  將 VHD 上傳至 VMM 之前，請確認 VMM 主控台可成功連線至 VMM 管理伺服器。  
+>  在将 VHD 上载到 VMM 之前，请验证 VMM 控制台是否成功连接到 VMM 管理服务器。  
 
- 使用下列程序將 VHD 匯入 VMM。  
+ 使用下列过程将 VHD 导入到 VMM。  
 
-#### <a name="to-import-a-vhd-to-vmm"></a>若要將 VHD 匯入 VMM  
+#### <a name="to-import-a-vhd-to-vmm"></a>将 VHD 导入到 VMM  
 
-1.  在 Configuration Manager 主控台中，按一下 [軟體程式庫] 。  
+1.  在 Configuration Manager 控制台中，单击“软件库” 。  
 
-2.  在 [軟體程式庫]  工作區中，展開 [作業系統] ，然後按一下 [虛擬硬碟] 。  
+2.  在“软件库”  工作区中，展开“操作系统” ，然后单击“虚拟硬盘” 。  
 
-3.  在 [首頁]  索引標籤的 [虛擬硬碟]  群組中，按一下 [上傳到 Virtual Machine Manager]  以開始上傳到 Virtual Machine Manager 精靈。  
+3.  在“主页”  选项卡上的“虚拟硬盘”  组中，单击“上载到 Virtual Machine Manager”  以启动“上载到 Virtual Machine Manager 向导”。  
 
-4.  在 [一般]  頁面上，設定下列設定，然後按 [下一步] 。  
+4.  在“常规”  页上，配置下列设置，然后单击“下一步” 。  
 
-    -   **VMM 伺服器名稱**：指定要安裝 VMM 管理伺服器的電腦 FQDN。 精靈會連線至 VMM 管理伺服器以下載伺服器的程式庫共用。  
+    -   “VMM 服务器名称”：指定在其上安装 VMM 管理服务器的计算机的 FQDN。 向导将连接到 VMM 管理服务器以下载服务器的库共享。  
 
-    -   **VMM 程式庫共用**：在下拉式清單中指定 VMM 程式庫共用。  
+    -   “VMM 库共享”: Specify the  from the drop-down list.  
 
-    -   **使用未加密的傳輸**：選擇此設定，將 VHD 檔案傳輸至 VMM 管理伺服器且不使用加密。  
+    -   “使用未加密的传输”：选择此设置以在不使用加密的情况下将 VHD 文件传输到 VMM 管理服务器。  
 
-5.  在摘要頁面上確認這些設定，然後完成精靈。 上傳 VHD 所需要的時間會根據 VHD 檔案的大小以及 VMM 管理伺服器的網路頻寬而有所不同。  
+5.  在“摘要”页面上验证设置，然后完成向导。 上载 VHD 所花费的时间可能会因 VHD 文件的大小以及连接到 VMM 管理服务器的网络带宽而异。  

@@ -1,6 +1,6 @@
 ---
-title: "準備安裝站台 | Microsoft Docs"
-description: "如果您打算安裝多個 Configuration Manager 站台，閱讀這些資訊有助您節省時間，並避免錯誤。"
+title: "安装站点的准备工作 | Microsoft Docs"
+description: "如果计划安装多个 Configuration Manager 站点，请阅读此信息，帮助节省时间并防止出现错误。"
 ms.custom: na
 ms.date: 3/1/2017
 ms.prod: configuration-manager
@@ -17,76 +17,76 @@ manager: angrobe
 ms.openlocfilehash: 829f2d44a9b8d203a5b753ebb6d8f759b1a05111
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="prepare-to-install-system-center-configuration-manager-sites"></a>準備安裝 System Center Configuration Manager 站台
+# <a name="prepare-to-install-system-center-configuration-manager-sites"></a>准备安装 System Center Configuration Manager 站点
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-若要準備一或多個 System Center Configuration Manager 站台的成功部署，請熟悉本文中的詳細資訊。 這些步驟可以節省安裝多個站台期間的時間，並協助防止可能會導致需要重新安裝一或多個站台的錯誤步驟。
+若要准备成功部署一个或多个 System Center Configuration Manager 站点，请熟悉本文中有关步骤的详细信息。 这些步骤可以节省安装多个站点的时间，并有助于防止漏掉步骤从而导致需要重新安装一个或多个站点。
 
 > [!TIP]
-> 管理 System Center Configuration Manager 站台及階層基礎結構時，「升級」、「更新」及「安裝」等詞彙是用來描述三種不同的概念。 若要了解如何使用每個詞彙，請參閱[關於升級、更新和安裝](/sccm/core/understand/upgrade-update-install)。
+> 管理 System Center Configuration Manager 站点和层次结构基础结构时，术语“升级”“更新”和“安装”用于描述三种不同概念。 若要了解每个术语的使用方法，请参阅[有关升级、更新和安装](/sccm/core/understand/upgrade-update-install)。
 
-## <a name="bkmk_options"></a> 安裝不同類型站台的選項
-當您安裝新的 Configuration Manager 站台時，可使用的來源檔案版本取決於已在階層中的站台版本 (如果有的話) 而定， 適用的安裝方法則取決於您想要安裝的站台類型而定。  
+## <a name="bkmk_options"></a>安装不同类型站点的选项
+安装新的 Configuration Manager 站点时，可使用的源文件版本取决于层次结构中已有站点的版本（若有）。 可用的安装方法取决于要安装的站点类型。  
 
-安裝站台之前，請確定您已規劃階層，並了解您要安裝的站台類型。 如需詳細資訊，請參閱[設計站台階層](../../../../core/plan-design/hierarchy/design-a-hierarchy-of-sites.md)。
-
-
-### <a name="first-site"></a>第一個站台
-您要為階層安裝的第一個站台，是獨立主要站台或管理中心網站。
-
-**安裝媒體**：若要將管理中心網站或獨立主要站台安裝為新階層中的第一個站台，您必須[使用 Configuration Manager 的基準版本](../../../../core/servers/manage/updates.md#bkmk_Baselines)。 請不要使用來自任何站台之 [CD.Latest 資料夾](../../../../core/servers/manage/the-cd.latest-folder.md)的已更新來源檔案，來安裝新階層的第一個站台。
-
-**安裝方法**︰您可以使用 [Configuration Manager 安裝精靈](../../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md)來安裝任一種類型的站台，也可以設定指令碼以與[指令式命令列安裝](../../../../core/servers/deploy/install/use-a-command-line-to-install-sites.md)搭配使用。
+安装站点前，请确保已对层次结构进行了规划，并且了解想要安装的站点类型。 有关详细信息，请参阅[设计站点层次结构](../../../../core/plan-design/hierarchy/design-a-hierarchy-of-sites.md)。
 
 
-### <a name="additional-sites"></a>其他站台
-安裝初始站台之後，即可隨時新增更多站台。 您可以使用下列選項來新增站台 (以[支援的限制](../../../../core/plan-design/configs/size-and-scale-numbers.md)為上限)：
+### <a name="first-site"></a>第一个站点
+层次结构中安装的第一个站点必须是独立主站点或管理中心站点。
 
-|您擁有的站台|您可安裝的其他站台類型|
+**安装介质**：若要将管理中心站点或独立主站点安装为新层次结构中的第一个站点，必须使用 Configuration Manager 的[基线版本](../../../../core/servers/manage/updates.md#bkmk_Baselines)。 安装新层次结构的第一个站点时，请勿使用任何站点的 [CD.Latest 文件夹](../../../../core/servers/manage/the-cd.latest-folder.md)中更新的源文件。
+
+**安装方法**：可使用 [Configuration Manager 安装向导](../../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md)安装任一站点类型，或可将脚本配置为与[脚本化命令行安装](../../../../core/servers/deploy/install/use-a-command-line-to-install-sites.md)配合使用。
+
+
+### <a name="additional-sites"></a>其他站点
+在初始站点安装完成后，可随时添加更多站点。 可使用以下选项添加站点（不得超过[支持的限制](../../../../core/plan-design/configs/size-and-scale-numbers.md)）：
+
+|你拥有的站点|可安装的其他站点类型|
 |---|---|
-|管理中心網站|子主要站台|
-|子主要站台|次要網站|
-|獨立主要網站|次要站台 (您可展開主要站台，將獨立主要站台轉換至子主要站台)|
+|管理中心站点|子级主站点|
+|子级主站点|辅助站点|
+|独立主站点|辅助站点（可扩展将独立主站点转换为子级主站点的主站点）|
 
-**安裝媒體**：如果您安裝管理中心網站以在獨立主要站台上進行擴充，或在現有階層中安裝新的子主要站台，則必須使用符合現有一或多個站台版本的安裝媒體 (其中包含原始程式檔)。
+**安装介质**：若要安装管理中心站点以扩展独立主站点，或在现有层次结构中安装新的子主站点，必须使用与一个或多个现有站点的版本匹配的安装介质（内附源文件）。
 
 > [!IMPORTANT]
-> 如果您所安裝的主控台內更新已變更先前安裝站台的版本，請不要使用原始安裝媒體， 而是改成使用更新站台之 [CD.Latest 資料夾](../../../../core/servers/manage/the-cd.latest-folder.md)中的來源檔案。 Configuration Manager 要求您使用的來源檔案，必須符合新站台所要連接的現有站台版本。
+> 如果已安装控制台内部更新（更改了以前安装的站点版本），请勿使用原始安装媒体。 此情况下，请改用已更新站点的 [CD.Latest 文件夹](../../../../core/servers/manage/the-cd.latest-folder.md)中的源文件。 Configuration Manager 要求所用的源文件必须与新站点要连接到的现有站点版本相匹配。
 
-您必須透過 Configuration Manager 主控台來安裝次要站台。 如此一來，系統一律會使用父主要站台的來源檔案來安裝次要站台。
+必须从 Configuration Manager 控制台安装辅助站点。 由此，始终使用父主站点的源文件安装辅助站点。
 
-**安裝方法**：您用來安裝其他站台的方式取決於所要安裝的站台類型而定。
--   **新增管理中心網站**：您可以使用 [Configuration Manager 安裝精靈] 或指令碼命令列，以將新的管理中心網站當成父站台安裝至現有的獨立主要站台。 如需詳細資訊，請參閱[擴充獨立主要站台](../../../../core/servers/deploy/install/prerequisites-for-installing-sites.md#bkmk_expand)。
--   **新增子主要站台**：您可以使用 [Configuration Manager 安裝精靈] 或命令列安裝，以將子主要站台新增至管理中心網站下方。
--   **新增次要站台**：您可以使用 Configuration Manager 主控台，以將次要站台當成子站台安裝至主要站台下方。 系統僅支援這種新增次要站台的方法。
+**安装方法**：附加站点的安装方法取决于要安装的站点类型。
+-   **添加管理中心站点**：可使用 Configuration Manager 安装向导或脚本化命令行，将新的管理中心站点作为父站点安装到现有的独立主站点中。 有关详细信息，请参阅[扩展独立主站点](../../../../core/servers/deploy/install/prerequisites-for-installing-sites.md#bkmk_expand)。
+-   **添加子主站点**：可使用 Configuration Manager 安装向导或命令行安装在管理中心站点下添加子主站点。
+-   **添加辅助站点**：使用 Configuration Manager 控制台将辅助站点安装为主站点下的子站点。 不可使用其他方法添加辅助站点。
 
-## <a name="bkmk_tasks"></a> 要在開始安裝之前完成的一般工作
--   **了解將要用於部署的階層拓撲**    
-如需詳細資訊，請參閱[為 System Center Configuration Manager 設計站台階層](../../../../core/plan-design/hierarchy/design-a-hierarchy-of-sites.md)。  
+## <a name="bkmk_tasks"></a>开始安装前要完成的常见任务
+-   **了解用于部署的层次结构拓扑**    
+有关详细信息，请参阅[设计 System Center Configuration Manager 的站点层次结构](../../../../core/plan-design/hierarchy/design-a-hierarchy-of-sites.md)。  
 
--   **準備並設定個別伺服器，以符合與 Configuration Manager 搭配使用的必要條件和支援的設定**         
-如需詳細資訊，請參閱 [Site and site system prerequisites](../../../../core/plan-design/configs/site-and-site-system-prerequisites.md) (站台和站台系統必要條件)。  
+-   **准备和配置单个服务器以满足与 Configuration Manager 搭配使用的先决条件和受支持的配置**         
+有关详细信息，请参阅[站点和站点系统先决条件](../../../../core/plan-design/configs/site-and-site-system-prerequisites.md)。  
 
--   **安裝和設定 SQL Server 以裝載站台資料庫**     
-如需詳細資訊，請參閱 [System Center Configuration Manager 的 SQL Server 版本支援](../../../../core/plan-design/configs/support-for-sql-server-versions.md)。  
+-   **安装和配置 SQL Server 以托管站点数据库**     
+有关详细信息，请参阅[对 System Center Configuration Manager 的 SQL Server 版本的支持](../../../../core/plan-design/configs/support-for-sql-server-versions.md)。  
 
--   **準備支援 Configuration Manager 的網路環境**      
-如需詳細資訊，請參閱[為 System Center Configuration Manager 設定防火牆、連接埠和網域](../../../../core/plan-design/network/configure-firewalls-ports-domains.md)。  
+-   **准备网络环境以支持 Configuration Manager**      
+有关详细信息，请参阅[配置防火墙、端口和域以准备 Configuration Manager](../../../../core/plan-design/network/configure-firewalls-ports-domains.md)。  
 
-- **如果您要使用公開金鑰基礎結構 (PKI)，請備妥基礎結構和憑證。**      
-如需詳細資訊，請參閱 [Configuration Manager 的 PKI 憑證需求](../../../../core/plan-design/network/pki-certificate-requirements.md)。
+- **如果要使用公钥基础结构 (PKI)，请准备基础结构和证书**      
+有关详细信息，请参阅 [Configuration Manager 的 PKI 证书要求](../../../../core/plan-design/network/pki-certificate-requirements.md)。
 
--   **在要當成站台伺服器或站台系統伺服器使用的電腦上安裝最新安全性更新，並在必要時重新啟動電腦。**
+-   **在要用作站点服务器或站点系统服务器的计算机上安装最新的安全更新，并在需要时重启它们**
 
-## <a name="bkmk_sitecodes"></a>  關於站台名稱及站台碼
-站台碼和站台名稱是用來識別和管理 Configuration Manager 階層中的站台。 在 Configuration Manager 主控台中，站台碼和站台名稱的顯示格式為 &lt;站台碼\> - &lt;站台名稱\>。 階層中所使用的每個站台碼都必須是唯一的。 如果針對 Configuration Manager 擴充 Active Directory 架構時，站台正在發行資料，則 Active Directory 樹系中所使用的站台碼必須為唯一代碼 (即使站台碼用於不同的 Configuration Manager 階層中，或站台碼已經用於稍早的 Configuration Manager 安裝亦同)。 請務必仔細規劃您的站台碼和站台名稱以部署階層。
+## <a name="bkmk_sitecodes"></a>关于站点名称和站点代码
+站点代码和站点名称用于标识和管理 Configuration Manager 层次结构中的站点。 在 Configuration Manager 控制台中，站点代码和名称以 &lt;*站点代码*\> - &lt;*站点名称*\> 的格式显示。 在层次结构中使用的每个站点代码必须是唯一的。 如果已扩展了 Configuration Manager 的 Active Directory 架构，且站点正在发布数据，则在 Active Directory 林中使用的站点代码必须唯一，即使这些代码在不同的 Configuration Manager 层次结构中使用或已在早期安装的 Configuration Manager 中使用过。 在部署层次结构之前，请务必仔细规划站点代码和名称。
 
-### <a name="specify-a-site-code-and-site-name"></a>指定站台碼和站台名稱
-在執行 Configuration Manager 安裝程式期間，系統會提示您輸入管理中心網站、每個主要和次要站台的站台碼和站台名稱以進行安裝。 站台碼必須可唯一識別階層中的每個站台。 由於站台碼會用於資料夾名稱中，因此使用站台碼名稱時，請不要包含下列 Configuration Manager 保留名稱和 Windows 保留名稱：
+### <a name="specify-a-site-code-and-site-name"></a>指定站点代码和站点名称
+运行 Configuration Manager 安装程序时，系统将提示为管理中心站点以及每个主站点和辅助站点安装输入站点代码及站点名称。 站点代码必须唯一地标识层次结构中的每个站点。 由于文件夹名称中使用了站点代码，因此，请勿将以下名称用于站点代码，其中包括为 Configuration Manager 和 Windows 保留的名称：
   -  AUX
   -  CON
   -  NUL
@@ -94,46 +94,46 @@ ms.lasthandoff: 08/07/2017
   -  SMS
 
 > [!NOTE]
-> Configuration Manager 安裝程式不會驗證站台碼是否為使用中。
+> Configuration Manager 安装程序不会验证站点代码是否已弃用。
 
-若要在 Configuration Manager 安裝程式執行時，輸入站台的站台碼，您必須輸入三位英數字元。 站台碼僅可使用字母 *A* 到 *Z* 和數字 *0* 到 *9* 的任何組合。 字母或數字的順序不會影響網站間的通訊。 例如，您不需要將主要站台命名為 *ABC*，並將次要站台命名為 *DEF*。
+若要在运行 Configuration Manager 安装程序时输入站点代码，必须输入 3 个字母数字字符。 站点代码中只允许使用任意组合的 *A* 到 *Z* 的字母和 *0* 到 *9* 的数字。 字母或数字的序列对站点之间的通信没有影响。 例如，不一定要将主站点和辅助站点分别命名为 *ABC* 和 *DEF*。
 
-網站名稱是此網站的易記名稱識別項。 您僅可在站台名稱中使用字元 *A* 到 *Z*，*a* 到 *z*，*0* 到 *9* 以及連字號 (*-*)。
+站点名称是站点的友好名称标识符。 仅可在站点名称中使用字符 *A* 到 *Z*、*a* 到 *z*、*0* 到 *9* 和连字符 (*-*)。
 
 > [!IMPORTANT]
-> 系統不支援在安裝站台之後變更站台碼或站台名稱。
+> 安装站点后，不可更改站点代码或站点名称。
 
-### <a name="reuse-a-site-code"></a>重複使用站台碼
-您不可以在管理中心網站或主要站台中的 Configuration Manager 階層中重複使用站台碼，即使您已經解除安裝原始站台和站台碼亦同。 如果您重複使用站台碼，階層中就會有物件識別碼衝突的風險。 如果 Configuration Manager 階層或 Active Directory 樹系內不再使用次要站台和其站台碼，您可以重複使用該次要站台的站台碼。
+### <a name="reuse-a-site-code"></a>重复使用站点代码
+在 Configuration Manager 层次结构中，管理中心站点或主站点的站点代码只能使用一次，即使在卸载了原始站点和站点代码后也是如此。 如果重复使用站点代码，则可能会在层次结构中遇到对象 ID 冲突。 如果 Configuration Manager 层次结构或 Active Directory 林中不再使用某个辅助站点，则可重复使用该辅助站点的站点代码。
 
-## <a name="limits-and-restrictions-for-installed-sites"></a>已安裝站台的限制
-安裝站台之前，請務必了解下列站台和站台階層適用的限制︰
--   執行安裝程式之後，若要變更下列站台內容，您必須解除安裝站台，然後使用新的值重新安裝：  
-  -   程式檔安裝目錄  
-  -   站台碼  
-  -   站台描述  
--   當階層包含管理中心網站時：  
-  -   Configuration Manager 不支援將子主要站台移出階層來建立獨立主要站台，或將它附加至不同的階層。 相反地，請先解除安裝子主要站台，然後將其重新安裝為新的獨立主要站台，或不同階層之管理中心網站的子站台。  
+## <a name="limits-and-restrictions-for-installed-sites"></a>已安装站点的限制和局限性
+安装站点前，请务必了解适用于站点和站点层次结构的以下限制：
+-   运行安装程序后，除非卸载该站点，然后再使用新值重新安装，否则无法更改下列站点属性：  
+  -   程序文件安装目录  
+  -   站点代码  
+  -   站点说明  
+-   当你的层次结构中包括管理中心站点时：  
+  -   Configuration Manager 不支持将子主站点移出层次结构，以创建独立主站点或将其附加到不同的层次结构。 而首先需要卸载子主站点，然后重新将它安装为新的独立主站点或其他层次结构的管理中心站点的子站点。  
 
 
-## <a name="bkmk_optionalsteps"></a>  執行安裝程式前的選擇性步驟
-**手動執行[安裝程式下載程式](../../../../core/servers/deploy/install/setup-downloader.md)**
+## <a name="bkmk_optionalsteps"></a>运行安装程序前的可选步骤
+**手动运行[安装程序下载程序](../../../../core/servers/deploy/install/setup-downloader.md)**
 
-若要下載 Configuration Manager 的更新版安裝檔案，您可以手動執行安裝程式下載程式。 如果執行安裝程式的電腦未連線到網際網路，或您預計要安裝多部站台伺服器時，請考慮使用安裝程式下載程式，以下載安裝程式的必要更新。 下列為其他資訊：
--  安裝程式預設會連線至網際網路，以下載更新版安裝檔案。
--  這些檔案預設會儲存在 Redist 資料夾中。
--  您可以將安裝程式指向您先前儲存這些檔案複本的網路位置。
+若要为 Configuration Manager 下载更新后的安装文件，可运行安装程序下载程序。 若要运行安装程序的计算机未连接到 Internet，或者需要安装多个站点服务器，请考虑使用安装程序下载程序下载安装程序所需的更新。 下面是其他信息：
+-  安装程序默认连接到 Internet，以下载更新的安装程序文件。
+-  这些文件默认存储在 Redist 文件夹中。
+-  可将安装程序定向到网络上以前存储这些文件的副本的位置。
 
-**手動執行[必要條件檢查工具](../../../../core/servers/deploy/install/prerequisite-checker.md)**
+**手动运行[先决条件检查程序](../../../../core/servers/deploy/install/prerequisite-checker.md)**
 
-在執行安裝程式並安裝站台之前，以及在伺服器上安裝站台系統角色之前，您可以執行必要條件檢查工具，以找出並修正問題。 必要條件檢查工具有助於確保電腦符合裝載站台或站台系統角色的需求。 下列為其他資訊：
- -  安裝程式預設會執行必要條件檢查工具。
- -  如果發生任何錯誤，即會停止安裝程式，直到解決問題為止。
+若要确定并修复问题，然后再运行安装程序来安装站点并在一台服务器上安装站点系统角色，可运行先决条件检查程序。 先决条件检查程序有助于确保计算机满足托管站点或站点系统角色的要求。 下面是其他信息：
+ -  安装程序默认运行先决条件检查程序。
+ -  如果存在任何错误，安装程序将停止，直到问题解决。
 
-**識別選擇性連接埠**
+**确定可选端口**
 
-您可以識別用於站台系統與用戶端的選擇性連接埠。 下列為其他資訊：
- -  站台系統和用戶端預設會使用預先定義的連接埠進行通訊。
- -  在安裝期間，您可以設定替代連接埠。
+可确定供站点系统和客户端使用的可选端口。 下面是其他信息：
+ -  站点系统和客户端默认使用预定义的端口进行通信。
+ -  安装过程中，可以配置备用端口。
 
- 如需詳細資訊，請參閱 [System Center Configuration Manager 中使用的連接埠](../../../../core/plan-design/hierarchy/ports.md)。
+ 有关详细信息，请参阅 [System Center Configuration Manager 中使用的端口](../../../../core/plan-design/hierarchy/ports.md)。

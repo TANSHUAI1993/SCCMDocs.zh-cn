@@ -6,22 +6,19 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b89bcfbf-f5b6-4fb1-bb5e-a5cc18ec0c78
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f62d969dd49fb00b688602128df74b28ff551135
 ms.openlocfilehash: df572cd0c64c82e25164430a53e1b893b3ba3cf5
-ms.contentlocale: zh-cn
-ms.lasthandoff: 06/07/2017
-
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="operations-and-maintenance-for-reporting-in-system-center-configuration-manager"></a>System Center Configuration Manager 中报告的操作和维护
 
@@ -363,4 +360,3 @@ ms.lasthandoff: 06/07/2017
 -   在“摘要”页上，查看报表订阅的设置。 单击“上一步”以更改设置，或单击“下一步”，以创建报表订阅。  
 
 -   在“完成”页上，单击“关闭”退出向导。 验证是否已成功创建报表订阅。 可以在“监视”工作区中的“订阅”节点的“报表”，下查看和修改报表订阅。  
-

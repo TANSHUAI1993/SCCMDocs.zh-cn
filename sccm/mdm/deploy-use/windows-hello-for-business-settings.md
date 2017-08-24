@@ -1,6 +1,6 @@
 ---
-title: "Windows Hello 企業版設定 | Microsoft Docs"
-description: "了解如何整合 Windows Hello 企業版與 System Center Configuration Manager。"
+title: "Windows Hello 企业版设置 | Microsoft Docs"
+description: "了解如何将 Windows Hello 企业版与 System Center Configuration Manager 集成。"
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
@@ -17,90 +17,90 @@ manager: angrobe
 ms.openlocfilehash: a97b3d97eb302e4133b0a79a8c7e27004872c8b1
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="windows-hello-for-business-settings-in-system-center-configuration-manager-hybrid"></a>System Center Configuration Manager 的 Windows Hello 企業版設定 (混合式)
+# <a name="windows-hello-for-business-settings-in-system-center-configuration-manager-hybrid"></a>System Center Configuration Manager 中的 Windows Hello 企业版设置（混合）
 
-*適用對象：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager 讓您整合 Windows Hello 企業版 (原 Microsoft Passport for Windows)，這是 Windows 10 裝置的另一種登入方法。 Windows Hello 企業版使用 Active Directory 或 Azure Active Directory 帳戶來取代密碼、智慧卡或虛擬智慧卡。  
+通过 System Center Configuration Manager，可与 Windows Hello 企业版（以前为 Microsoft Passport for Windows）集成，其为 Windows 10 设备的替代登录方法。 Hello 企业版使用 Active Directory 或 Azure Active Directory 帐户来替代密码、智能卡或虚拟智能卡。  
 
-Windows Hello 企業版可讓您藉由 **使用者手勢** 登入，而不使用密碼。 使用者手勢可能是簡單的 PIN、生物識別驗證或外部裝置 (例如指紋辨識器)。  
+在 Hello 企业版中，可以使用“用户手势”取代密码进行登录。 用户手势可以是简单的 PIN、生物识别身份验证或指纹读取器等外部设备。  
 
- Configuration Manager 與 Windows Hello 企業版整合的方法有兩種：  
+ Configuration Manager 通过两种方式与 Windows Hello 企业版集成：  
 
--   您可以使用 Configuration Manager 控制使用者可以/不可用以登入的筆勢。  
+-   可以使用 Configuration Manager 来控制用户能够和不能用于登录的手势。  
 
--   您可以將驗證憑證儲存在 Windows Hello 企業版金鑰儲存提供者 (KSP) 中。 如需詳細資訊，請參閱[憑證設定檔](create-pfx-certificate-profiles.md)。  
+-   可在 Windows Hello 企业版密钥存储提供程序 (KSP) 中存储身份验证证书。 有关详细信息，请参阅[证书配置文件](create-pfx-certificate-profiles.md)。  
 
-- 您可以將 Windows Hello 企業版原則部署至執行 Configuration Manager 用戶端且已加入網域的 Windows 10 裝置。 [在已加入網域的 Windows 10 裝置上設定 Windows Hello 企業版](../../protect/deploy-use/windows-hello-for-business-settings.md#configure-windows-hello-for-business-on-domain-joined-windows-10-devices)中有此設定的說明。 當您使用 Configuration Manager 與 Intune (混合) 時，您可以在 Windows 10 和 Windows 10 行動裝置上設定這些設定，但不能在執行 Configuration Manager 用戶端且加入網域的裝置上設定。   
+- 可将 Windows Hello 企业版策略部署到运行 Configuration Manager 客户端的已加入域的 Windows 10 设备。 [在已加入域的 Windows 10 设备上配置 Windows Hello 企业版](../../protect/deploy-use/windows-hello-for-business-settings.md#configure-windows-hello-for-business-on-domain-joined-windows-10-devices)中介绍了此配置。 搭配使用 Configuration Manager 和 Intune（混合）时，可在 Windows 10 和 Windows 10 移动设备上配置这些设置，但不能在运行 Configuration Manager 客户端的已加入域的设备上进行配置。   
 
-如需設定 Windows Hello 企業版設定的一般資訊，請參閱 [System Center Configuration Manager 的 Windows Hello 企業版設定](../../protect/deploy-use/windows-hello-for-business-settings.md)。
+有关配置 Windows Hello 企业版设置的一般信息，请参阅 [System Center Configuration Manager 中的 Windows Hello 企业版设置](../../protect/deploy-use/windows-hello-for-business-settings.md)。
 
-## <a name="configure-windows-hello-for-business-settings-hybrid"></a>設定 Windows Hello 企業版設定 (混合)  
+## <a name="configure-windows-hello-for-business-settings-hybrid"></a>配置 Windows Hello 企业版设置（混合）  
 
-1.  在 Configuration Manager 主控台中，按一下 [管理] > [雲端服務] > [Microsoft Intune 訂閱]。  
+1.  在 Configuration Manager 控制台中，单击“管理” > “云服务” > “Microsoft Intune 订阅”。  
 
-3.  從清單中選取您的 Microsoft Intune 訂閱，然後在 **[首頁]** 索引標籤的 **[訂閱]** 群組中，按一下 **[設定平台]** > **[Windows (MDM)]**。  
+3.  从列表中选择你的 Microsoft Intune 订阅，然后在“主页”选项卡的“订阅”组中，单击“配置平台” > “Windows (MDM)”。  
 
-4.  在 **[Microsoft Intune 訂閱內容]** 對話方塊的 **[Windows Hello 企業版]** 索引標籤上，從下列值中進行選擇，即可對所有已註冊 Windows 10 裝置和 Windows 10 行動裝置版裝置發揮效力：  
+4.  在“Microsoft Intune 订阅属性”对话框的“Windows Hello 企业版”选项卡上，从以下值中选择将影响所有已注册的 Windows 10 和 Windows 10 移动版设备的项：  
 
-    -   **停用註冊之裝置上的 Windows Hello 企業版** 或 **啟用註冊之裝置上的 Windows Hello 企業版** - 在所有已註冊的 Windows 10 和 Windows 10 行動裝置版裝置上，啟用或停用 Windows Hello 企業版。  
+    -   **禁用已注册设备上的 Windows Hello 企业版**或**启用已注册设备上的 Windows Hello 企业版** - 启用或禁用所有已注册的 Windows 10 和 Windows 10 移动版设备上的 Windows Hello 企业版。  
 
-    -   **使用信賴平台模組 (TPM)** - 信賴平台模組 (TPM) 晶片提供額外一層資料安全性。 選擇下列其中一個值：  
+    -   **使用受信任的平台模块 (TPM)** - 受信任的平台模块 (TPM) 芯片提供了一层额外的数据安全保障。 选择下列值之一：  
 
-        -   **必要** (預設) - 只有能存取 TPM 的裝置可以佈建 Windows Hello 企業版。  
+        -   **必须** （默认）- 仅具有可访问 TPM 的设备可预配 Windows Hello 企业版。  
 
-        -   **慣用** - 第一次嘗試使用 TPM 的裝置。 如果無法使用此值，則可以使用軟體加密  
+        -   **首选** - 首次尝试使用 TPM 的设备。 如果这不可用，他们可以使用软件加密  
 
-    -   **需要 PIN 碼長度下限** - 指定 Windows Hello 企業版的 PIN 所需字元數目下限。 您必須使用至少 4 個字元 (預設值是 6 個字元)。  
+    -   **要求的最小 PIN 长度** - 指定 Windows Hello 企业版 PIN 所需的最小字符数。 必须使用至少 4 个字符（默认值为 6 个字符）。  
 
-    -   **需要 PIN 碼長度上限** - 指定 Windows Hello 企業版的 PIN 允許字元數目上限。 您最多可以使用 127 個字元。  
+    -   **要求的最大 PIN 长度** - 指定 Windows Hello 企业版 PIN 允许的最大字符数。 最多可以使用 127 个字符。  
 
-    -   **PIN 中需要有小寫字母** - 指定 Windows Hello 企業版的 PIN 是否必須使用小寫字母。 從下列選項進行選擇：  
+    -   **要求在 PIN 中使用小写字母** - 指定是否必须在 Windows Hello 企业版 PIN 中使用小写字母。 选择：  
 
-        -   **允許** - 使用者可以在 PIN 中使用小寫字元。  
+        -   **允许** - 用户可以在其 PIN 中使用小写字母。  
 
-        -   **必要** - 使用者必須在 PIN 中包含至少一個小寫字元。  
+        -   **必须** - 用户必须在其 PIN 中包含至少一个小写字母。  
 
-        -   **不允許** (預設) - 使用者不得在 PIN 中使用小寫字元。  
+        -   **不允许** （默认）- 用户不得在其 PIN 中使用小写字母。  
 
-    -   **PIN 中需要有大寫字母** - 指定 Windows Hello 企業版的 PIN 是否必須使用大寫字母。 從下列選項進行選擇：  
+    -   **要求在 PIN 中使用大写字母** - 指定是否必须在 Windows Hello 企业版 PIN 中使用大写字母。 选择：  
 
-        -   **允許** - 使用者可以在 PIN 中使用大寫字元。  
+        -   **允许** - 用户可以在其 PIN 中使用大写字母。  
 
-        -   **必要** - 使用者必須在 PIN 中包含至少一個大寫字元。  
+        -   **必须** - 用户必须在其 PIN 中包含至少一个大写字母。  
 
-        -   **不允許** (預設) - 使用者不得在 PIN 中使用大寫字元。  
+        -   **不允许** （默认）- 用户不得在其 PIN 中使用大写字母。  
 
-    -   **需要特殊字元** - 指定在 PIN 中使用特殊字元的方式。 從下列選項進行選擇：  
+    -   **要求含有特殊字符** - 指定 PIN 中使用特殊字符。 选择：  
 
-        -   **允許** - 使用者可以在 PIN 中使用特殊字元。  
+        -   **允许** - 用户可以在其 PIN 中使用特殊字符。  
 
-        -   **必要** - 使用者必須在 PIN 中包含至少一個特殊字元。  
+        -   **必须** - 用户必须在其 PIN 中包含至少一个特殊字符。  
 
-        -   **不允許** (預設) - 使用者不得在 PIN 中使用特殊字元 (這也是在未進行設定時會採取的行為)。  
+        -   **不允许** （默认）- 用户必须在其 PIN 中使用特殊字符（这也是不配置此设置时的行为）。  
 
-         特殊字元包含：**! " # $ % & ' ( ) \* + , - . / : ; < = > ? @ [ \ ] ^ _ ` { &#124; } ~**。  
+         特殊字符包括：**! " # $ % & ' ( ) \* + , - . / : ; < = > ? @ [ \ ] ^ _ ` { &#124; } ~**。  
 
-    -   **需要 PIN 碼期限 (天)** - 指定必須變更裝置 PIN 的天數。 預設為 41 天。  
+    -   **需要 PIN 有效期（天）** - 指定必须更改设备 PIN 前的天数。 默认值为 41 天。  
 
-    -   **禁止重複使用舊 PIN 碼** - 使用此設定來限制重複使用先前用過的 PIN。 預設為不能重複使用最後 5 個使用過的 PIN。  
+    -   **防止重用以前的 PIN** - 使用此设置来限制重用以前使用过的 PIN。 默认设置为不能重用最近使用的 5 个 PIN。  
 
-    -   **啟用生物識別手勢** - 啟用生物識別驗證 (例如臉部辨識或指紋) 以替代 Windows Hello 企業版的 PIN。 使用者仍然必須設定公司 PIN 以免生物識別驗證失敗。  
+    -   **启用生物识别手势** - 启用如面部识别或指纹等生物识别身份验证作为 Windows Hello 企业版的 PIN 的替代方法。 如果生物识别身份验证失败，则用户仍必须配置工作 PIN。  
 
-         若設為 **[已啟用]**，Windows Hello 企業版即允許生物識別驗證。  若設為 **[已停用]**，Windows Hello 企業版會防止生物識別驗證 (針對所有帳戶類型)。  
+         如果设置为“启用”，Windows Hello 企业版则允许生物识别身份验证。  如果设置为“禁用”，Windows Hello 企业版将阻止生物识别身份验证（对于所有帐户类型）。  
 
-    -   **使用進階防詐騙 (如可使用)** - 設定是否在支援的裝置上使用進階防詐騙功能。  
+    -   **在可用时，使用增强型反欺骗程序** - 配置是否在支持增强型反欺骗程序的设备上使用该程序。  
 
-         若設為 [已啟用] ，Windows 即要求所有使用者在支援的情況下，使用臉部特徵防詐騙。  
+         如果设置为“已启用” ，则 Windows 将在支持反电子欺骗技术时要求所有用户对面部识别功能使用此技术。  
 
-    -   **使用遠端 Passport** - 若此選項設為 **[已啟用]**，使用者即可使用遠端 Windows Hello 企業版作為桌上型電腦驗證的可攜式配套裝置。 桌上型電腦必須已加入 Azure Active Directory，且配套裝置必須設有 Windows Hello 企業版的 PIN。  
+    -   **使用远程 Passport** - 如果此选项设置为“启用”，则用户可以使用远程 Hello 企业版充当台式计算机身份验证的便携伴侣设备。 台式计算机必须加入 Azure Active Directory，并且伴侣设备必须配置 Windows Hello 企业版 PIN。  
 
-5.  完成後，請按一下 [確定] 。  
+5.  完成后单击“确定” 。  
 
-### <a name="see-also"></a>請參閱  
- [使用 System Center Configuration Manager 保護資料和站台基礎結構](../../protect/understand/protect-data-and-site-infrastructure.md)
+### <a name="see-also"></a>另请参阅  
+ [使用 System Center Configuration Manager 保护数据和站点基础结构](../../protect/understand/protect-data-and-site-infrastructure.md)
 
- [使用商務用 Windows Hello 管理身分識別驗證](https://technet.microsoft.com/itpro/windows/keep-secure/manage-identity-verification-using-microsoft-passport)。  
+ [使用 Windows Hello 企业版管理身份验证](https://technet.microsoft.com/itpro/windows/keep-secure/manage-identity-verification-using-microsoft-passport)。  

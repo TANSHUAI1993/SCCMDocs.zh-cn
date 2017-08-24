@@ -1,6 +1,6 @@
 ---
-title: "監視憑證設定檔 | Microsoft Docs"
-description: "了解如何監視 System Center Configuration Manager 憑證設定檔的相容性狀態。"
+title: "监视证书配置文件 | Microsoft Docs"
+description: "了解如何监视 System Center Configuration Manager 证书配置文件的符合性状态。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -18,64 +18,64 @@ manager: angrobe
 ms.openlocfilehash: 84e275fa5b17bc703da22fb686ef9050d17e557f
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="how-to-monitor-certificate-profiles-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中監視憑證設定檔
+# <a name="how-to-monitor-certificate-profiles-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中监视证书配置文件
 
-適用於：System Center Configuration Manager (最新分支)
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 
-##  <a name="view-compliance-results-in-the-configuration-manager-console"></a>在 Configuration Manager 主控台中檢視合規性結果  
+##  <a name="view-compliance-results-in-the-configuration-manager-console"></a>在 Configuration Manager 控制台中查看符合性结果  
 
-若要監視 SCEP 憑證合規性，請不要使用主控台，而改為使用[報告](#view-compliance-results-by-using-reports)。 
+要监视 SCEP 证书符合性，请不要使用控制台，而是使用[报表](#view-compliance-results-by-using-reports)。 
 
-1.  在 Configuration Manager 主控台中，選擇 [監視]>  [部署]。  
+1.  在 Configuration Manager 控制台中，选择“监视”>  “部署”。  
 
-3.  選取感興趣的憑證設定檔部署。  
+3.  选择所需的证书配置文件部署。  
 
-4.  檢閱主要頁面上的摘要憑證合規性資訊。 如需更更詳細資訊，請選取憑證設定檔，然後在 [首頁] 索引標籤的 [部署] 群組中，選擇 [檢視狀態] 以開啟 [部署狀態] 頁面。  
+4.  查看主页上的证书符合性信息汇总。 有关详细信息，请选择证书配置文件，然后在“主页”选项卡上的“部署”组中，选择“查看状态”以打开“部署状态”页。  
 
-     [部署狀態]  頁面包含下列索引標籤：  
+     “部署状态”  页包含下列选项卡：  
 
-    -   **相容**：根據受影響的資產數目，顯示憑證設定檔的相容性。 您可以按兩下規則，在 [資產與相容性]  工作區的 [使用者]  節點下方建立臨時節點。 這個節點包含與此憑證設定檔相容的所有使用者。 [資產詳細資料]  窗格也顯示與這個設定檔相容的使用者。 如需詳細資訊，請按兩下清單中的使用者。  
+    -   **符合**：显示基于受影响资产数量的证书配置文件的符合性。 你可以双击规则以在“资产和符合性”  工作区中的“用户”  节点下创建一个临时节点。 此节点包含符合此证书配置文件的所有用户。 “资产详细信息”  窗格也显示符合此配置文件的用户。 双击列表中的用户可查看详细信息。  
 
         > [!IMPORTANT]  
-        >  如果憑證設定檔在用戶端裝置上不適用，就不會進行評估； 不過，仍會傳回為相容。  
+        >  如果某个证书配置文件在客户端设备上不适用，则不会评估该配置文件。 但是，它返回的状态为符合。  
 
-    -   **錯誤**：根據受影響的資產數目，顯示所選憑證設定檔部署的所有錯誤清單。 您可以按兩下規則，在 [資產與相容性]  工作區的 [使用者]  節點下方建立臨時節點。 這個節點包含因為這個設定檔而產生錯誤的所有使用者。 當您選取使用者時，[資產詳細資料]  窗格會顯示受到所選問題影響的使用者。 按兩下清單中的使用者，以顯示詳細資訊。  
+    -   **错误**：显示基于受影响资产数量的所选证书配置文件部署的所有错误的列表。 你可以双击规则以在“资产和符合性”  工作区的“用户”  节点下创建一个临时节点。 此节点包含对于此配置文件生成了错误的所有用户。 当你选择某个用户时，“资产详细信息”  窗格将显示受所选问题影响的用户。 双击列表中的用户以显示详细信息。  
 
-    -   **不相容**：根據受影響的資產數目，顯示憑證設定檔中所有不相容規則的清單。 您可以按兩下規則，在 [資產與相容性]  工作區的 [使用者]  節點下方建立臨時節點。 這個節點包含與這個設定檔不相容的所有使用者。 當您選取使用者時，[資產詳細資料]  窗格會顯示受到所選問題影響的使用者。 按兩下清單中的使用者以顯示與此問題有關的進一步資訊。  
+    -   **不符合**：显示基于受影响资产数量的证书配置文件内所有不符合规则的列表。 你可以双击规则以在“资产和符合性”  工作区的“用户”  节点下创建一个临时节点。 此节点包含不符合此配置文件的所有用户。 当你选择某个用户时，“资产详细信息”  窗格将显示受所选问题影响的用户。 双击列表中的用户以显示有关问题的进一步信息。  
 
-    -   **未知**：顯示未回報所選憑證設定檔部署相容性的所有使用者清單，以及裝置目前用戶端狀態。  
+    -   **未知**：显示没有为所选证书配置文件部署报告符合性的所有用户的列表，以及设备的当前客户端状态。  
 
-5.  在 [部署狀態] 頁面上，檢閱有關部署之憑證設定檔合規性的詳細資訊。 [部署]  節點下方會建立一個臨時節點以協助您更快再找到此資訊。  
+5.  在“部署状态”页上，可以查看有关所部署的证书配置文件的符合性的详细信息。 将在“部署”  节点下创建一个临时节点，该节点可帮助你快速再次找到此信息。  
 
-     憑證的註冊狀態會以數字顯示。 請使用下表瞭解每個數字代表的意義：  
+     证书的注册状态显示为数字。 使用下表了解每个数字的含意：  
 
-    |註冊狀態|說明|  
+    |注册状态|描述|  
     |-----------------------|-----------------|  
-    |0x00000001|註冊成功，且已發行憑證。|  
-    |0x00000002|要求已提出，但註冊尚待處理，或要求已被認定超出訊號範圍。|  
-    |0x00000004|註冊必須延後。|  
-    |0x00000010|發生錯誤。|  
-    |0x00000020|註冊狀態未知。|  
-    |0x00000040|狀態資訊已略過。 如果 HYPERLINK "http://msdn.microsoft.com/en-us/windows/ms721572" \l "_security_certification_authority_gly" 憑證授權單位無效或尚未被選取進行監視，就可能發生此情況。|  
-    |0x00000100|註冊已被拒。|  
+    |0x00000001|注册成功，并已颁发证书。|  
+    |0x00000002|已提交请求并且正在等待注册，或者已在带外发出请求。|  
+    |0x00000004|注册必须被推迟。|  
+    |0x00000010|出现了错误。|  
+    |0x00000020|注册状态未知。|  
+    |0x00000040|已跳过状态信息。 如果 HYPERLINK "http://msdn.microsoft.com/en-us/windows/ms721572" \l "_security_certification_authority_gly" 证书颁发机构无效或者尚未选中进行监视，便会出现此问题。|  
+    |0x00000100|注册被拒绝。|  
 
-##  <a name="view-compliance-results-by-using-reports"></a>使用報告檢視合規性結果
+##  <a name="view-compliance-results-by-using-reports"></a>使用报表来查看符合性结果
 
- System Center Configuration Manager 中的相容性設定包含內建報告，您可利用這些報告來監視憑證設定檔的相關資訊。 這些報告具有 [相容性和設定管理] 的報告類別。  
+ System Center Configuration Manager 中的符合性设置包括内置报表，你可以使用这些报表监视有关证书配置文件的信息。 这些报表的报表类别为“符合性和设置管理” 。  
 
 > [!IMPORTANT]  
->  當您在相容性設定的報告中使用 [裝置篩選器]  和 [使用者篩選器]  參數時，必須使用萬用字元 (%)。  
+>  在符合性设置报表中使用参数“设备筛选器”  和“用户筛选器”  时，你必须使用通配符 (%) 字符。  
 
-若要監視 SCEP 憑證合規性，請使用報告節點 [公司資源存取] 下的這些憑證報告：  
+要监视 SCEP 证书符合性，使用位于报表节点“公司资源访问”下的这些证书报表：  
 
- -   憑證發行歷程記錄  
- -   憑證即將到期的資產清單  
- -   依憑證發行狀態列出的資產清單  
+ -   证书颁发历史记录  
+ -   证书即将到期的资产列表  
+ -   按证书颁发状态列出的资产的列表  
 
 
 
- 如需如何在 System Center Configuration Manager 設定報告的詳細資訊，請參閱 [System Center Configuration Manager 中的報告](../../core/servers/manage/reporting.md)。  
+ 有关如何在 System Center Configuration Manager 中配置报表的详细信息，请参阅 [System Center Configuration Manager 中的报表](../../core/servers/manage/reporting.md)。  

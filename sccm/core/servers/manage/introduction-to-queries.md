@@ -1,6 +1,6 @@
 ---
-title: "查詢簡介 | Microsoft Docs"
-description: "建立並執行查詢，以找出 System Center Configuration Manager 階層中符合查詢準則的物件。"
+title: "查询简介 | Microsoft Docs"
+description: "可创建和运行查询，在 System Center Configuration Manager 层次结构中查找与查询条件相匹配的对象。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -18,22 +18,22 @@ manager: angrobe
 ms.openlocfilehash: f84d518670c0ece3c08c890d2293335518f7f8e9
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="introduction-to-queries-in-system-center-configuration-manager"></a>System Center Configuration Manager 的查詢簡介
+# <a name="introduction-to-queries-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的查询简介
 
-適用於：System Center Configuration Manager (最新分支)
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-您可以建立並執行查詢，以找出 System Center Configuration Manager 階層中符合查詢準則的物件。 這些物件包含電腦或使用者群組等特定類型的項目。 查詢可以傳回大部分類型的 Configuration Manager 物件，其中包括網站、集合、應用程式以及清查資料。  
+可创建和运行查询，在 System Center Configuration Manager 层次结构中查找与查询条件相匹配的对象。 这些对象包括特定类型的计算机或用户组等项目。 查询可以返回大部分类型的 Configuration Manager 对象，包括站点、集合、应用程序和清单数据。  
 
- 建立查詢時，您必須指定至少兩個參數：要搜尋的位置與您想要搜尋的項目。 例如，若要尋找 Configuration Manager 站台中所有電腦的可用硬碟空間量，您可以建立查詢以搜尋 [邏輯磁碟] 屬性類別和 [可用空間 (MB)] 屬性，以取得可用硬碟空間。  
+ 创建查询时，必须至少指定两个参数：搜索位置和搜索内容。 例如，若要查找 Configuration Manager 站点中所有计算机上的可用硬盘空间量，可以创建一个查询，搜索“逻辑磁盘”属性类以及可用硬盘空间的“可用空间 (MB)”属性。  
 
- 建立初始查詢之後，您可以指定其他的查詢準則。 例如，您可以指定查詢結果僅包含指派給指定站台的電腦。 您也可以修改結果的顯示方式，依您所需的順序來檢視結果。 例如，您可以指定依可用硬碟空間量的遞增或遞減順序來排序結果。  
+ 在创建初始查询之后，可以指定其他查询条件。 例如，可以指定查询结果仅包括分配给指定站点的计算机。 还可以修改结果的显示方式，以便按照有意义的顺序查看结果。 例如，可以指定按可用硬盘空间量的升序或降序对结果进行排序。  
 
- 當您建立查詢時，Configuration Manager 會將其儲存並顯示在 [監視] 工作區的 [查詢] 節點中。 您可以從這個位置建立新的查詢，然後執行、更新或管理現有的查詢。  
+ 创建查询时，它会由 Configuration Manager 存储并显示在“监视”工作区中的“查询”节点中。 从此位置可以创建新查询，然后运行、更新或管理现有查询。  
 
- 您也可以將查詢匯入 Configuration Manager 集合中的查詢規則。 如需詳細資訊，請參閱[如何在 System Center Configuration Manager 中建立集合](../../../core/clients/manage/collections/create-collections.md)。  
+ 还可以将查询导入 Configuration Manager 集合中的查询规则中。 有关详细信息，请参阅[如何在 System Center Configuration Manager 中创建集合](../../../core/clients/manage/collections/create-collections.md)。  
 
-## <a name="see-also"></a>另請參閱  
- [System Center Configuration Manager 的查詢技術參考](../../../core/servers/manage/queries-technical-reference.md)
+## <a name="see-also"></a>另请参阅  
+ [System Center Configuration Manager 的查询技术参考](../../../core/servers/manage/queries-technical-reference.md)

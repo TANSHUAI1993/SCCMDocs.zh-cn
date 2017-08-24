@@ -1,6 +1,6 @@
 ---
-title: "用戶端的站台系統角色 | Microsoft Docs"
-description: "在 System Center Configuration Manager 中判斷用戶端的站台系統角色。"
+title: "客户端的站点系统角色 | Microsoft Docs"
+description: "在 System Center Configuration Manager 中确定客户端的站点系统角色。"
 ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
@@ -18,72 +18,72 @@ manager: angrobe
 ms.openlocfilehash: 9f2dda834f23b2ee85c4c301c7e1b6a3a54ebc97
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="determine-the-site-system-roles-for-system-center-configuration-manager-clients"></a>為 System Center Configuration Manager 用戶端判斷站台系統角色
+# <a name="determine-the-site-system-roles-for-system-center-configuration-manager-clients"></a>为 System Center Configuration Manager 客户端确定站点系统角色
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-本主題可協助您判斷部署 Configuration Manager 用戶端所需的站台系統角色：  
+本主题可帮助确定部署 Configuration Manager 客户端所需的站点系统角色：  
 
- 如需在階層中安裝必要站台系統角色之位置的詳細資訊，請參閱[為 System Center Configuration Manager 設計站台階層](../../../../core/plan-design/hierarchy/design-a-hierarchy-of-sites.md)。  
+ 有关在层次结构中的何处安装所需站点系统角色的详细信息，请参阅[设计 System Center Configuration Manager 的站点层次结构](../../../../core/plan-design/hierarchy/design-a-hierarchy-of-sites.md)。  
 
- 如需如何安裝及設定您需要之站台系統角色的詳細資訊，請參閱[安裝站台系統角色](../../../../core/servers/deploy/configure/install-site-system-roles.md)。  
+ 有关如何安装和配置所需的站点系统角色的详细信息，请参阅[安装站点系统角色](../../../../core/servers/deploy/configure/install-site-system-roles.md)。  
 
-##  <a name="determine-if-you-need-a-management-point"></a>判斷您是否需要管理點  
- 根據預設，所有的 Windows 用戶端電腦都會使用發佈點來安裝 Configuration Manager 用戶端，並且可在無法使用發佈點時，切換回管理點。 不過，當您使用 CCMSetup 命令列內容 **/source:<路徑\>** 時，可在其他來源的電腦上安裝 Windows 用戶端。 例如，如果您在網際網路上安裝用戶端，可能就會執行此動作。 另一種情況是在用戶端安裝期間，您想要避免在電腦和管理點之間傳送網路封包，也許是因為防火牆封鎖了所需的連接埠，或是因為您具備低頻寬連線。 不過，所有的用戶端都必須和要指派到站台的管理點通訊，並由 Configuration Manager 進行管理。  
+##  <a name="determine-if-you-need-a-management-point"></a>确定是否需要管理点  
+ 默认情况下，所有 Windows 客户端计算机都使用分发点来安装 Configuration Manager 客户端，并且可以在分发点不可用时回退到管理点。 但是，如果使用 CCMSetup 命令行属性 **/source:<Path\>**，则可以通过替代源在计算机上安装 Windows 客户端。 例如，在 Internet 上安装客户端时，可能会执行此操作。 另一种情况是想在客户端安装过程中避免在计算机与管理点之间发送网络包，可能是因为防火墙阻止所需端口，或者因为具有低带宽连接。 但是，所有客户端都必须与管理点进行通信，才能分配给站点以及由 Configuration Manager 来管理。  
 
- 如需 CCMSetup 命令列內容 **/source:<路徑\>** 的詳細資訊，請參閱[關於 System Center Configuration Manager 中的用戶端安裝內容](../../../../core/clients/deploy/about-client-installation-properties.md)。  
+ 有关 CCMSetup 命令行属性 **/source:<Path\>** 的详细信息，请参阅[关于 System Center Configuration Manager 中的客户端安装属性](../../../../core/clients/deploy/about-client-installation-properties.md)。  
 
- 當您在階層中安裝一個以上的管理點時，用戶端會根據其樹系成員資格及網路位置，自動連線到其中一個點。 您無法在次要站台安裝一個以上的管理點。  
+ 在层次结构中安装多个管理点时，客户端会根据其林成员身份和网络位置自动连接到某个点。 你无法在辅助站点中安装多个管理点。  
 
- Mac 電腦用戶端以及您向 Configuration Manager 註冊的行動裝置用戶端，一律需要管理點以進行用戶端安裝。 此管理點必須位於主要站台、必須設定為支援行動裝置，並且必須接受來自網際網路的用戶端連線。 這些用戶端無法使用次要站台的管理點，或連線到其他主要站台的管理點。  
+ 用 Configuration Manager 注册的 Mac 计算机客户端和移动设备客户端始终需要用于客户端安装的管理点。 此管理点必须在主站点中，必须配置为支持移动设备，并且必须接受来自 Internet 的客户端连接。 这些客户端无法使用辅助站点中的管理点或者无法连接到其他主站点中的管理点。  
 
-##  <a name="determine-if-you-need-a-fallback-status-point"></a>判斷您是否需要後援狀態點  
- 您可以使用後援狀態點來監視 Windows 電腦的用戶端部署。 您也可以識別因無法與管理點通訊而未受管理的 Windows 電腦用戶端。 Mac 電腦、由 Configuration Manager 註冊的行動裝置，以及藉由使用 Exchange Server 連接器進行管理的行動裝置，都未使用後援狀態點。  
+##  <a name="determine-if-you-need-a-fallback-status-point"></a>确定是否需要回退状态点  
+ 回退状态点可用于监视 Windows 计算机的客户端部署。 还可以标识因无法与管理点通信而不受管理的 Windows 计算机客户端。 Mac 计算机、通过 Configuration Manager 注册的移动设备，以及使用 Exchange Server 连接器管理的移动设备不使用回退状态点。  
 
- 監視用戶端活動及用戶端健全狀況，並不需要後援狀態點。  
+ 监视客户端活跃状况和客户端健康状况不需要回退状态点。  
 
- 後援狀態點永遠都是透過 HTTP 來和用戶端通訊，其使用未經授權的連線，並以純文字傳送資料。 這種方式會使後援狀態點容易遭受攻擊，尤其是和以網際網路為基礎的用戶端管理搭配使用時。 若要減少攻擊介面，可經常讓伺服器執行後援狀態點，且不可將其他站台系統角色安裝在生產環境中的相同伺服器上。  
+ 回退状态点始终通过 HTTP 与客户端通信，HTTP 使用未经过身份验证的连接并以明文形式发送数据。 这会使回退状态点易受到攻击，特别是在与基于 Internet 的客户端管理一起使用时。 为了帮助减少攻击面，请在生产环境中始终专门使用一个服务器来运行回退状态点，并且不要在该服务器上安装其他站点系统角色。  
 
- 如果下列各項全都適用，即會安裝後援狀態點：  
+ 如果以下所有条件都适用，请安装回退状态点：  
 
--   您希望將 Windows 電腦的用戶端通訊錯誤傳送到站台，即使這些用戶端電腦無法與管理點通訊。  
+-   你想将 Windows 计算机中的客户端通信错误发送给站点，即使这些客户端计算机无法与管理点通信也不例外。  
 
--   您想要使用 Configuration Manager 用戶端部署報告，因這些報告會顯示由後援狀態點傳送的資料。  
+-   你想要使用 Configuration Manager 客户端部署报表，这些报表显示回退状态点发送的数据。  
 
--   您擁有此站台系統角色專用的伺服器，並且用其他安全性量值進行保護，防止伺服器遭受攻擊。  
+-   此站点系统角色具有专用服务器，并且采取了其他安全措施来帮助保护服务器不受攻击。  
 
--   使用後援狀態點的好處，勝過與未授權連線以及透過 HTTP 流量傳送純文字相關聯的安全性風險。  
+-   使用回退状态点的好处大于与未经过身份验证的连接以及通过 HTTP 流量进行的明文传输关联的安全风险。  
 
- 如果使用未經授權的連線執行網站以及傳送純文字的安全性風險，勝過識別出用戶端通訊問題的好處，請勿安裝後援狀態點。  
+ 如果使用未经过身份验证的连接以及明文传输运行网站的安全风险大于确定客户端通信问题的好处，则不安装回退状态点。  
 
-##  <a name="determine-whether-you-need-a-reporting-services-point"></a>判斷您是否需要 Reporting Services 點  
- Configuration Manager 提供許多報告，協助您在 Configuration Manager 主控台監視安裝、指派及管理用戶端。 有些用戶端部署報告要求將用戶端指派到後援狀態點。  
+##  <a name="determine-whether-you-need-a-reporting-services-point"></a>确定是否需要 Reporting Services 点  
+ Configuration Manager 提供了许多报表，以帮助你在 Configuration Manager 控制台中监视客户端的安装、分配和管理。 一些客户端部署报表需要将客户端分配到回退状态点。  
 
- 雖然部署用戶端不需要使用報告，而且您可以在 Configuration Manager 主控台查看某些部署資訊，或是使用用戶端記錄檔來取得詳細資訊，但用戶端報告所提供的寳貴資訊可協助監視及進行用戶端部署疑難排解。  
+ 虽然部署客户端不需要报表，并且你可以在 Configuration Manager 控制台中查看某些部署信息，或者可以使用客户端日志文件获取详细信息，但客户端报表可提供重要的信息，以帮助监视客户端部署以及对其进行故障排除。  
 
-##  <a name="determine-if-you-need-an-enrollment-point-and-an-enrollment-proxy-point"></a>判斷您是否需要註冊點和註冊 Proxy 點  
- Configuration Manager 需要使用註冊點和註冊 Proxy 點註冊行動裝置，並註冊 Mac 電腦的憑證。 如果您利用 Exchange Server 連接器管理行動裝置，或安裝行動裝置舊版用戶端 (例如 Windows CE 適用者)，或在 Mac 電腦上從 Configuration Manager 個別要求和安裝用戶端憑證，則不需要這些站台系統角色。  
+##  <a name="determine-if-you-need-an-enrollment-point-and-an-enrollment-proxy-point"></a>确定是否需要注册点和注册代理点  
+ Configuration Manager 需要注册点和注册代理点以注册移动设备以及注册 Mac 计算机的证书。 如果将使用 Exchange Server 连接器来管理移动设备，如果安装移动设备旧客户端（例如，用于 Windows CE），或者如果独立于 Configuration Manager 在 Mac 计算机上请求和安装客户端证书，则不需要这些站点系统角色。  
 
-##  <a name="determine-if-you-need-a-distribution-point"></a>判斷您是否需要發佈點  
- 您不需要發佈點就能在 Windows 電腦上安裝 Configuration Manager。 但根據預設，Configuration Manager 會使用發佈點，在 Windows 電腦上安裝用戶端來源檔案，但可切換回從管理點下載這些檔案。 不使用發佈點來安裝由 Configuration Manager 註冊的行動裝置用戶端，但如果您安裝了行動裝置舊版用戶端，就會使用發佈點安裝。 如果您將 Configuration Manager 用戶端當成部分的作業系統部署來安裝，便會儲存並從發佈點擷取作業系統映像。  
+##  <a name="determine-if-you-need-a-distribution-point"></a>确定是否需要分发点  
+ 在 Windows 计算机上安装 Configuration Manager 客户端不需要分发点。 但是默认情况下，Configuration Manager 会使用分发点在 Windows 计算机上安装客户端源文件，但它可以进行回退以从管理点中下载这些文件。 分发点并不用于安装 Configuration Manager 注册的移动设备客户端，但如果你安装移动设备旧客户端，则会使用分发点。 如果在操作系统部署过程中安装 Configuration Manager 客户端，则会在分发点中存储和检索操作系统映像包。  
 
- 雖然您可能不需要發佈點就能安裝大多數的 Configuration Manager 用戶端，您還是需要使用發佈點，在用戶端上安裝像是應用程式和軟體更新之類的軟體。  
+ 虽然安装大多数 Configuration Manager 客户端可能不需要分发点，但在客户端上安装诸如应用程序和软件更新之类的软件却需要分发点。  
 
-##  <a name="determine-if-you-need-an-application-catalog-website-point-and-an-application-catalog-web-services-point"></a>判斷您是否需要應用程式類別目錄網站點和應用程式類別目錄 Web 服務點  
- 用戶端部署不需要使用應用程式類別目錄網站點和應用程式類別目錄 Web 服務點。 不過，您可能會想要將它們當成部分用戶端部署程序來安裝，如此使用者便可在 Configuration Manager 用戶端安裝於 Windows 電腦時，立即執行下列動作：  
+##  <a name="determine-if-you-need-an-application-catalog-website-point-and-an-application-catalog-web-services-point"></a>确定是否需要应用程序目录网站点和应用程序目录 Web 服务点  
+ 客户端部署不需要应用程序目录网站点和应用程序目录 Web 服务点。 但是，你可能需要在客户端部署过程中安装它们，以便在 Windows 计算机上安装 Configuration Manager 客户端之后用户可以立即执行以下操作：  
 
--   抹除其行動裝置。  
+-   擦除他们的移动设备。  
 
--   搜尋及安裝應用程式類別目錄的應用程式。  
+-   从应用程序目录中搜索并安装应用程序。  
 
--   配合 [可用] 部署目的，將應用程式部署到使用者和裝置。  
+-   将应用程序部署到用户和设备（部署目的为“可用” ）。  
 
-##  <a name="determine-whether-you-require-a-cloud-management-gateway-connector-point"></a>判斷您是否需要雲端管理閘道連接器點 
+##  <a name="determine-whether-you-require-a-cloud-management-gateway-connector-point"></a>确定是否需要云管理网关连接点 
 
-如果您正在設定[雲端管理閘道](/sccm/core/clients/manage/setup-cloud-management-gateway)以[管理網際網路上的用戶端](/sccm/core/clients/manage/manage-clients-internet)，則需要雲端管理閘道連接器點。
+如果你设置了[云管理网关](/sccm/core/clients/manage/setup-cloud-management-gateway)以便[在 Internet 上管理客户端](/sccm/core/clients/manage/manage-clients-internet)，则需要云管理网关连接点。
 
 
  

@@ -1,6 +1,6 @@
 ---
-title: "設定 System Center Configuration Manager 實驗室 | Microsoft Docs"
-description: "設定實驗室，以使用模擬實際活動來評估 Configuration Manager。"
+title: "设置 System Center Configuration Manager 实验室 | Microsoft Docs"
+description: "设置实验室以便使用模拟现实活动评估 Configuration Manager。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -18,166 +18,166 @@ manager: angrobe
 ms.openlocfilehash: 11f5d0c3c61d675a8182e985f82e6af363b34592
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="set-up-your-system-center-configuration-manager-lab"></a>設定 System Center Configuration Manager 實驗室
+# <a name="set-up-your-system-center-configuration-manager-lab"></a>设置你的 System Center Configuration Manager 实验室
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-遵循本主題中的指引可讓您設定實驗室，以使用模擬實際活動來評估 Configuration Manager 。  
+遵循本主题中的指导原则将使你能够设置实验室以使用模拟现实活动评估 Configuration Manager。  
 
-##  <a name="BKMK_LabCore"></a> 核心元件  
- 設定 System Center Configuration Manager 的環境需要一些核心元件，才能支援 Configuration Manager 安裝。    
+##  <a name="BKMK_LabCore"></a> 核心组件  
+ 为 System Center Configuration Manager 中设置环境需要一些核心组件支持安装 Configuration Manager。    
 
--   **實驗室環境會使用 Windows Server 2012 R2** (在其中安裝 System Center Configuration Manager)。  
+-   **该实验室环境使用 Windows Server 2012 R2**，我们将在其中安装 System Center Configuration Manager。  
 
-     您可以從 [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012) 下載 Windows Server 2012 R2 評估版。  
+     可以从 [TechNet 评估中心](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012)下载 Windows Server 2012 R2 的评估版。  
 
-     請考慮修改或停用 Internet Explorer 增強式安全性設定，以更輕鬆地存取這些練習過程中所參考的一些下載項目。 如需深入了解 WCF，請檢閱 [Internet Explorer：增強式安全性設定](https://technet.microsoft.com/en-us/library/dd883248\(v=ws.10\).aspx) 。  
+     请考虑修改或禁用 Internet Explorer 增强的安全配置以便更轻松地访问在整个练习过程中引用的某些下载文件。 请查看 [Internet Explorer：增强的安全配置](https://technet.microsoft.com/en-us/library/dd883248\(v=ws.10\).aspx) 以获取其他信息。  
 
--   **實驗室環境會使用 SQL Server 2012 SP2** (適用於站台資料庫)。  
+-   **实验室环境中将 SQL Server 2012 SP2** 用于站点数据库。  
 
-     您可以從 [Microsoft 下載中心](https://www.microsoft.com/en-us/download/details.aspx?id=29066)下載 SQL Server 2012 評估版。  
+     可以从 [Microsoft 下载中心](https://www.microsoft.com/en-us/download/details.aspx?id=29066)下载 SQL Server 2012 的评估版。  
 
-     SQL Server 具有必須符合才能與 System Center Configuration Manager 搭配使用的[支援的 SQL Server 版本](../../core/plan-design/configs/support-for-sql-server-versions.md#bkmk_SQLVersions)。  
+     SQL Server 具有[支持的 SQL Server 版本](../../core/plan-design/configs/support-for-sql-server-versions.md#bkmk_SQLVersions)，必须满足这些版本才能用于 System Center Configuration Manager。  
 
-    -   Configuration Manager 需要 64 位元版本的 SQL Server 才能裝載站台資料庫。  
+    -   Configuration Manager 需要 64 位版本的 SQL Server 以托管站点数据库。  
 
-    -   **SQL_Latin1_General_CP1_CI_AS** 作為 **SQL 定序** 類別。  
+    -   **SQL_Latin1_General_CP1_CI_AS** 作为“SQL 排序规则”  类。  
 
-    -   **Windows 驗證**，而非 [SQL 驗證](https://technet.microsoft.com/en-us/library/ms144284.aspx)，而非 is required.  
+    -   **Windows 身份验证**， [而不是 SQL 身份验证](https://technet.microsoft.com/en-us/library/ms144284.aspx)， is required.  
 
-    -   需要專用 **SQL Server 執行個體**。  
+    -   需要专用的 **SQL Server 实例**。  
 
-    -   不會限制 SQL Server 的**系統可定址記憶體**。  
+    -   不限制用于 SQL Server 的**系统可寻址内存**。  
 
-    -   設定 **SQL Server 服務帳戶**，使用**網域本機使用者**帳戶執行。  
+    -   将 **SQL Server 服务帐户**配置为使用**域本地用户**帐户运行。  
 
-    -   您必須安裝 **SQL Server Reporting Services**。  
+    -   必须安装 **SQL Server reporting services**。  
 
-    -   **站台間通訊** 會使用預設連接埠 TCP 4022 上的 SQL Server Service Broker。  
+    -   **站点间通信** 对默认端口 TCP 4022 使用 SQL Server Service Broker。  
 
-    -   SQL Server 資料庫引擎與所選取 Configuration Manager 站台系統角色之間的**站台內通訊**會使用預設連接埠 TCP 1433。  
+    -   SQL Server 数据库引擎与所选 Configuration Manager 站点系统角色之间的**站点内通信**使用默认端口 TCP 1433。  
 
--   **網域控制站會使用 Windows Server 2008 R2** (其已安裝 Active Directory 網域服務)。 網域控制站也會當成 DHCP 和 DNS 伺服器的主機運作，以與完整網域名稱搭配使用。  
+-   **域控制器使用 Windows Server 2008 R2**（安装了 Active Directory 域服务）。 域控制器还充当 DHCP 的主机和 DNS 服务器以便用于完全限定的域名。  
 
-     如需其他資訊，請檢閱本 [Active Directory 網域服務概觀](https://technet.microsoft.com/en-us/library/hh831484)。  
+     有关其他信息，请查看此 [Active Directory 域服务概述](https://technet.microsoft.com/en-us/library/hh831484)。  
 
--   **Hyper-V 與一些虛擬機器搭配使用**，確認這些練習中採取的管理步驟如預期地運作。 建議最少使用三部已安裝 Windows 7 (或更新版本) 的虛擬機器。  
+-   **Hyper-V 与几个虚拟机一起使用**，以验证在这些练习中执行的管理步骤是否按预期正常工作。 建议最少三个虚拟机，并已安装 Windows 7（或更高版本）。  
 
-     如需其他資訊，請檢閱本 [Hyper-V 概觀](https://technet.microsoft.com/en-us/library/hh831531.aspx)。  
+     有关其他信息，请查看此 [Hyper-V 概述](https://technet.microsoft.com/en-us/library/hh831531.aspx)。  
 
--   **系統管理員權限** 。  
+-   **管理员权限** 。  
 
-    -   Configuration Manager 需要具有 Windows Server 環境內本機權限的系統管理員  
+    -   Configuration Manager 需要管理员在 Windows Server 环境中具有本地权限  
 
-    -   Active Directory 需要具有架構修改權限的系統管理員  
+    -   Active Directory 需要具有架构修改权限的管理员  
 
-    -   虛擬機器需要機器本身的本機權限  
+    -   虚拟机需要计算机本身的本地权限  
 
-雖然這個實驗室不需要，但是您可以檢閱 [System Center Configuration Manager 的支援設定](../../core/plan-design/configs/supported-configurations.md)以取得 System Center Configuration Manager 實作需求的其他資訊。 請參閱軟體版本文件，而非這裡所參考的文件。  
+虽然此实验室不需要，不过可以查看 [System Center Configuration Manager 支持的配置](../../core/plan-design/configs/supported-configurations.md)以了解有关实现 System Center Configuration Manager 的要求的其他信息。 请参阅此处所引用软件版本之外的版本的文档。  
 
-安裝所有這些元件之後，還必須採取其他步驟，才能設定 Configuration Manager 的 Windows 環境：  
+安装所有这些组件后，还必须执行其他步骤以为 Configuration Manager 配置 Windows 环境：  
 
-###  <a name="BKMK_LabADPrep"></a> 準備實驗室的 Active Directory 內容  
- 在本實驗室中，您將建立安全性群組，然後在其中加入網域使用者。  
+###  <a name="BKMK_LabADPrep"></a> 为实验室准备 Active Directory 内容  
+ 你将为此实验室创建一个安全组，然后向其添加一个域用户。  
 
--   安全性群組： **Evaluation**  
+-   安全组： **Evaluation**  
 
-    -   群組領域： **Universal**  
+    -   组作用域： **Universal**  
 
-    -   群組類型： **Security**  
+    -   组类型： **Security**  
 
--   網域使用者： **ConfigUser**  
+-   域用户： **ConfigUser**  
 
-     在正常情況下，您不會將通用存取權授與環境內的所有使用者。 您與此使用者如此做，才能簡化實驗室的上線作業。  
+     正常情况下，你不会将向环境内的所有用户授予通用访问权限。 你与此用户一起进行此操作的目的是为了简化你的实验室联机。  
 
-下列程序列出讓 Configuration Manager 用戶端查詢 Active Directory 網域服務以找到站台資源所需的後續步驟。  
+使 Configuration Manager 客户端能够查询 Active Directory 域服务以找到站点资源所需的后续步骤列于后续程序上。  
 
-###  <a name="BKMK_CreateSysMgmtLab"></a> 建立系統管理容器  
- Configuration Manager 不會在擴充架構時，自動在 Active Directory 網域服務中建立必要系統管理容器。 因此，您將為實驗室建立這個項目。 這個步驟將要求您 [安裝 ADSI 編輯](https://technet.microsoft.com/en-us/library/cc773354\(WS.10\).aspx#BKMK_InstallingADSIEdit)。  
+###  <a name="BKMK_CreateSysMgmtLab"></a> 创建系统管理容器  
+ 扩展架构时，Configuration Manager 不会在 Active Directory 域服务中自动创建所需的系统管理容器。 因此，你会为你的实验室创建此系统管理容器。 此步骤将要求你 [安装 ADSI 编辑器。](https://technet.microsoft.com/en-us/library/cc773354\(WS.10\).aspx#BKMK_InstallingADSIEdit)  
 
- 請確定您以具有 Active Directory 網域服務之 [系統]  容器 [建立所有子物件]  權限的帳戶登入。  
+ 确保你以对 Active Directory 域服务中的“系统”  容器具有“创建所有子对象”  权限的帐户身份登录。  
 
-##### <a name="to-create-the-system-management-container"></a>建立系統管理容器：  
+##### <a name="to-create-the-system-management-container"></a>若要创建系统管理容器：  
 
-1.  執行 [ADSI 編輯] ，並連線至網站伺服器所在的網域。  
+1.  运行“ADSI 编辑器” ，并连接到站点服务器所在的域。  
 
-2.  依序展開 [網域 &lt;電腦完整網域名稱\>] 和 [<辨別名稱\>]，並以滑鼠右鍵按一下 [CN=System]，然後依序按一下 [新增] 和 [物件]。  
+2.  展开“域&lt;计算机完全限定的域名\>”，展开“<可分辨名称\>”，右键单击“CN=System”，再单击“新建”，然后单击“对象”。  
 
-3.  在 [建立物件]  對話方塊中，選取 [容器] ，然後按 [下一步] 。  
+3.  在  “创建对象”对话框中，选择“容器” ，然后单击“下一步” 。  
 
-4.  在 [值]  方塊中輸入 **System Management**，然後按一下 [下一步] 。  
+4.  在“值”  框中，键入 **System Management**，然后单击“下一步” 。  
 
-5.  按一下 [完成]  完成程序。  
+5.  单击“完成”  以完成该过程。  
 
-###  <a name="BKMK_SetSecPermLab"></a> 設定系統管理容器的安全性權限  
- 請將站台資訊發佈到容器所需的權限授與站台伺服器的電腦帳戶。 您也將針對這個工作使用 ADSI 編輯。  
-
-> [!IMPORTANT]  
->  確認您已連線到站台伺服器的網域，再開始進行下列程序。  
-
-##### <a name="to-set-security-permissions-for-the-system-management-container"></a>設定系統管理容器的安全性權限：  
-
-1.  在主控台窗格中，展開**站台伺服器的網域**，並展開 [&lt;DC=伺服器辨別名稱\>]，然後展開 [CN=System]。 以滑鼠右鍵按一下 [CN=System Management] ，然後按一下 [內容] 。  
-
-2.  在 [CN=System Management Properties]  對話方塊中，按一下 [安全性]  索引標籤，然後按一下 [新增]  新增站台伺服器電腦帳戶。 將 [完全控制]  權限授與帳戶。  
-
-3.  按一下 [進階]，並選取站台伺服器的電腦帳戶，然後按一下 [編輯]。  
-
-4.  在 [套用到]  清單中，選取 [此物件及所有子系物件] 。  
-
-5.  按一下 [確定]  關閉 [ADSI 編輯]  主控台並完成程序。  
-
-     如需此程序的其他資訊，請檢閱[擴充 System Center Configuration Manager 的 Active Directory 架構](../../core/plan-design/network/extend-the-active-directory-schema.md)。  
-
-###  <a name="BKMK_ExtADSchLab"></a> 使用 extadsch.exe 延伸 Active Directory 架構  
- 您將擴充這個實驗室的 Active Directory 架構，這可讓您以最少的管理成本來使用所有的 Configuration Manager 特性和功能。 延伸 Active Directory 架構是對每個樹系都只能執行一次的整個樹系組態。 永久延伸架構會修改基底 Active Directory 組態中的這組類別和屬性。 這項動作無法復原。 擴充架構可讓 Configuration Manager 存取元件，以允許它在實驗室環境內最有效地運作。  
+###  <a name="BKMK_SetSecPermLab"></a> 为系统管理容器设置安全权限  
+ 授予站点服务器计算机帐户将站点信息发布到容器所需的权限。 你也会针对此任务使用 ADSI 编辑器。  
 
 > [!IMPORTANT]  
->  確定您是使用具有 Schema Admins  安全性群組成員身分的帳戶登入架構主機網域控制站。 嘗試使用替代認證將會失敗。  
+>  确认你在开始下列过程之前已连接到站点服务器的域。  
 
-##### <a name="to-extend-the-active-directory-schema-using-extadschexe"></a>使用 extadsch.exe 延伸 Active Directory 架構：  
+##### <a name="to-set-security-permissions-for-the-system-management-container"></a>若要为系统管理容器设置安全权限：  
 
-1.  建立架構主機網域控制站系統狀態的備份。 如需備份主機網域控制站的詳細資訊，請檢閱 [Windows Server 備份](https://technet.microsoft.com/en-us/library/cc770757.aspx)。  
+1.  在控制台窗格中，依次展开“站点服务器的域”、“DC=&lt;服务器可分辨名称\>”，然后展开“CN=System”。 右键单击“CN=System Management” ，然后单击“属性” 。  
 
-2.  瀏覽至安裝媒體中的 **\SMSSETUP\BIN\X64** 。  
+2.  在“CN=System Management 属性”  对话框中，单击“安全”  选项卡，然后单击“添加”  以添加该站点服务器计算机帐户。 为该帐户授予“完全控制”  权限。  
 
-3.  執行 **extadsch.exe**。  
+3.  单击“高级”，选择站点服务器的计算机帐户，然后单击“编辑”。  
 
-4.  檢閱位於系統磁碟機的根資料夾中的 **extadsch.log** ，確認已成功延伸架構。  
+4.  在“应用到”  列表中，选择“这个对象及全部后代” 。  
 
-     如需此程序的其他資訊，請檢閱[擴充 System Center Configuration Manager 的 Active Directory 架構](../../core/plan-design/network/extend-the-active-directory-schema.md)。  
+5.  单击“确定”  关闭“ADSI 编辑器”  控制台并完成该过程。  
 
-###  <a name="BKMK_OtherTasksLab"></a> 其他必要工作  
- 您也需要先完成下列工作，再進行安裝。  
+     有关此过程的其他见解，请查看[扩展 System Center Configuration Manager 的 Active Directory 架构](../../core/plan-design/network/extend-the-active-directory-schema.md)  
 
- **建立資料夾來儲存所有下載**  
+###  <a name="BKMK_ExtADSchLab"></a> 使用 extadsch.exe 来扩展 Active Directory 架构  
+ 你将扩展此实验室中的 Active Directory 架构，因为这会使你能够以最小的管理开销使用所有 Configuration Manager 功能。 扩展 Active Directory 架构是林范围的配置，每个林执行一次该配置。 扩展架构永久修改基本 Active Directory 配置中的类和属性的集。 此操作不可逆。 扩展架构允许 Configuration Manager 访问组件，这可以使其可在实验室环境中最有效地工作。  
 
- 在這個練習中，將會有安裝媒體之元件所需的多個下載。 開始任何安裝程序之前，除非您想要解除委任您的實驗室，否則請決定不需要您移動這些檔案的位置。 建議使用具有不同子資料夾來儲存這些下載的單一資料夾。  
+> [!IMPORTANT]  
+>  确保你使用作为“架构管理员”  安全组成员的帐户登录到架构主机域控制器。 尝试使用备用凭据都将失败。  
 
- **安裝 .NET 並啟動 Windows Communication Foundation**  
+##### <a name="to-extend-the-active-directory-schema-using-extadschexe"></a>若要使用 extadsch.exe 来扩展 Active Directory 架构：  
 
- 您將需要安裝兩個 .NET Frameworks：依序安裝 .NET 3.5.1 和 .NET 4.5.2+。 您也將需要啟動 Windows Communication Foundation (WCF)。 WCF 設計成提供分散式運算、廣泛互通性以及服務導向之直接支援的可管理方式，並透過服務導向的程式設計模型來簡化已連線應用程式的開發。 如需深入了解 WCF，請檢閱 [何謂 Windows Communication Foundation？](https://technet.microsoft.com/en-us/subscriptions/ms731082\(v=vs.90\).aspx) 。  
+1.  创建架构主机域控制器的系统状态的备份。 有关备份主机域控制器的详细信息，请查看 [Windows Server Backup](https://technet.microsoft.com/en-us/library/cc770757.aspx)  
 
-##### <a name="to-install-net-and-activate-windows-communication-foundation"></a>安裝 .NET 並啟動 Windows Communication Foundation：  
+2.  导航至安装介质中的 **\SMSSETUP\BIN\X64** 。  
 
-1.  開啟 **Server Manager**，然後瀏覽至 [管理] 。 按一下 [新增角色及功能]  開啟 [新增角色及功能精靈]  **Wizard.**。  
+3.  运行 **extadsch.exe**。  
 
-2.  檢閱 [開始之前]  面板中所提供的資訊，然後按一下 [下一步] 。  
+4.  通过查看位于系统驱动器根目录中的 **extadsch.log** ，验证架构扩展是否成功。  
 
-3.  選取 [角色型或功能型安裝] ，然後按一下 [下一步] 。  
+     有关此过程的其他见解，请查看[扩展 System Center Configuration Manager 的 Active Directory 架构](../../core/plan-design/network/extend-the-active-directory-schema.md)。  
 
-4.  從 [伺服器集區] 中選取您的伺服器，然後按一下 [下一步] 。  
+###  <a name="BKMK_OtherTasksLab"></a> 其他必需的任务  
+ 你在安装前还需要完成以下任务。  
 
-5.  檢閱 [伺服器角色]  面板，然後按一下 [下一步] 。  
+ **创建文件夹存储所有下载内容**  
 
-6.  新增下列 [功能]  ，方法是從清單中選取它們：  
+ 在本次练习期间，安装媒介的组件将需要多个下载文件。 开始任何安装过程前，请先确定一个在你取消配置实验室之前不会要求你移动这些文件的位置。 建议使用一个具有很多子文件夹的文件夹来存储这些下载文件。  
+
+ **安装 .NET 并且 激活 Windows Communication Foundation**  
+
+ 你需要安装这两种.NET 框架：首先安装 .NET 3.5.1，然后安装 .NET 4.5.2+。 你还需要激活 Windows Communication Foundation (WCF)。 WCF 通过面向服务的编程模型专为实现分布式计算、广泛的互操作性和直接支持服务方向提供可管理的方法，并简化了连接应用程序开发。 请查看 [什么是 Windows Communication Foundation？](https://technet.microsoft.com/en-us/subscriptions/ms731082\(v=vs.90\).aspx) ，了解关于 WCF 的其他见解。  
+
+##### <a name="to-install-net-and-activate-windows-communication-foundation"></a>若要安装 .NET 并且激活 Windows Communication Foundation：  
+
+1.  打开 **Server Manager**，然后导航到“管理” 。 单击“添加角色和功能”  以打开“添加角色和功能向导”  **Wizard.**。  
+
+2.  查看“开始前”  面板提供的信息，然后单击“下一步” 。  
+
+3.  选择“基于角色或基于功能的安装” ，然后单击“下一步” 。  
+
+4.  从“服务器池” 选择你的服务器，然后单击“下一步” 。  
+
+5.  查看“服务器角色”  面板，然后单击“下一步” 。  
+
+6.  通过从列表中选择，添加以下“功能”  ：  
 
     -   **.NET Framework 3.5 功能**  
 
-        -   **.NET Framework 3.5 (包含 .NET 2.0 和 3.0)**  
+        -   **.NET framework 3.5（包括 .NET 2.0 和 3.0）**  
 
     -   **.NET Framework 4.5 功能**  
 
@@ -185,103 +185,103 @@ ms.lasthandoff: 08/07/2017
 
         -   **ASP.NET 4.5**  
 
-        -   **WCF 服務**  
+        -   **WCF 服务**  
 
-            -   **HTTP 啟動**  
+            -   **HTTP 激活**  
 
-            -   **TCP 連接埠共用**  
+            -   **TCP 端口共享**  
 
-7.  檢閱 [網頁伺服器角色 (IIS)]  和 [角色服務]  畫面，然後按一下 [下一步] 。  
+7.  查看“Web 服务器角色 (IIS)”  以及“角色服务”  屏幕，然后单击“下一步” 。  
 
-8.  檢閱 [確認]  畫面，然後按一下 [下一步] 。  
+8.  查看“确认”  屏幕，然后单击“下一步” 。  
 
-9. 按一下 [安裝]  ，並在 [伺服器管理員]  的 [通知] 窗格中確認正確地完成安裝。  
+9. 单击“安装”  并在“服务器管理器”  的“通知” 窗格验证安装是否正确完成。  
 
-10. 完成 .NET 基底安裝之後，請瀏覽至 [Microsoft 下載中心](https://www.microsoft.com/en-us/download/details.aspx?id=42643) 來取得 .NET Framework 4.5.2 的 Web 安裝程式。 按一下 [下載]  按鈕，然後 [執行]  安裝程式。 它將自動偵測必要的元件並以您選取的語言進行安裝。  
+10. .NET 的基本安装完成后，导航到 [Microsoft 下载中心](https://www.microsoft.com/en-us/download/details.aspx?id=42643) 以获取 .NET Framework 4.5.2 的 Web 安装程序。 单击“下载”  按钮，然后单击“运行”以运行  安装程序。 它将自动检测并安装你选择的语言版本的所需组件。  
 
-如需其他資訊，請檢閱下列文章中需要這些 .NET Framework 的原因：  
+有关其他信息，请查看以下文章以了解为什么需要这些 .NET 框架：  
 
--   [.NET Framework 版本和相依性](https://technet.microsoft.com/en-us/library/bb822049.aspx)  
+-   [.NET Framework 版本和依赖关系](https://technet.microsoft.com/en-us/library/bb822049.aspx)  
 
--   [.NET Framework 4 RTM 應用程式相容性逐步解說](https://technet.microsoft.com/en-us/library/dd889541.aspx)  
+-   [.NET Framework 4 RTM 应用程序兼容性演练](https://technet.microsoft.com/en-us/library/dd889541.aspx)  
 
--   [如何：將 ASP.NET Web 應用程式升級至 ASP.NET 4](https://technet.microsoft.com/en-us/library/dd483478\(VS.100\).aspx)  
+-   [如何：将 ASP.NET Web 应用程序更新到 ASP.NET 4](https://technet.microsoft.com/en-us/library/dd483478\(VS.100\).aspx)  
 
--   [Microsoft .NET Framework 支援週期原則 FAQ](https://support.microsoft.com/en-us/gp/framework_faq?WT.mc_id=azurebg_email_Trans_943_NET452_Update)  
+-   [Microsoft .NET Framework 支持生命周期策略常见问题](https://support.microsoft.com/en-us/gp/framework_faq?WT.mc_id=azurebg_email_Trans_943_NET452_Update)  
 
--   [CLR Inside Out - 同處理序並存](https://msdn.microsoft.com/en-us/magazine/ee819091.aspx)  
+-   [CLR 全面透彻解析 - 进程内并行](https://msdn.microsoft.com/en-us/magazine/ee819091.aspx)  
 
-**啟用 BITS、IIS 和 RDC**  
+**启用 BITS、IIS 和 RDC**  
 
-[背景智慧型傳送服務 (BITS)](https://technet.microsoft.com/en-us/library/dn282296.aspx) 用於需要在用戶端與伺服器之間非同步傳送檔案的應用程式。 透過計量前景和背景的傳送流程，BITS 會保留其他網路應用程式的回應能力。 如果中斷傳送工作階段，則也會自動繼續檔案傳送。  
+[后台智能传输服务 (BITS)](https://technet.microsoft.com/en-us/library/dn282296.aspx) 用于需要在客户端和服务器之间异步传输文件的应用程序。 通过计数前台和后台传输的流，BITS 保留了其他网络应用程序的响应能力。 如果传输会话中断，则它还会自动恢复文件传输。  
 
-因為這個站台伺服器也會用作管理點，所以您將安裝這個實驗室的 BITS。  
+因为此站点服务器也将用作管理点，所以你需要为此实验室安装 BITS。  
 
-Internet Information Services (IIS) 是彈性可擴充的網頁伺服器，可用來在站台上裝載任何項目。 Configuration Manager 將它用於多個站台系統角色。 如需 IIS 的其他資訊，請檢閱 [System Center Configuration Manager 中的站台系統伺服器網站](../../core/plan-design/network/websites-for-site-system-servers.md)。  
+Internet 信息服务 (IIS) 是可用来承载 Web 上找到的任何内容的灵活、可扩展的 Web 服务器。 由 Configuration Manager 将其用于大量站点系统角色。 有关 IIS 的其他信息，请查看 [System Center Configuration Manager 中的站点系统服务器网站](../../core/plan-design/network/websites-for-site-system-servers.md)。  
 
-[遠端差異壓縮 (RDC)](https://technet.microsoft.com/en-us/library/cc754372.aspx) 是一組 API，應用程式可用來判斷是否已對一組檔案進行任何變更。 RDC 可讓應用程式僅複寫檔案的變更部分，進而保持最小網路流量。  
+[远程差分压缩 (RDC)](https://technet.microsoft.com/en-us/library/cc754372.aspx) 是应用程序可用于确定是否已对一组文件进行过任何更改的 API 集。 RDC 使应用程序能够仅复制文件已更改的部分，将网络流量保持在最低限度。  
 
-##### <a name="to-enable-bits-iis-and-rdc-site-server-roles"></a>啟用 BITS、IIS 和 RDC 站台伺服器角色：  
+##### <a name="to-enable-bits-iis-and-rdc-site-server-roles"></a>若要启用 BITS、IIS 和 RDC 站点服务器角色：  
 
-1.  在站台伺服器上，開啟 **Server Manager**。 瀏覽至 [管理] 。 按一下 [新增角色及功能]  開啟 [新增角色及功能精靈] 。  
+1.  在你的站点服务器上，打开 **Server Manager**。 导航到“管理” 。 单击“添加角色和功能”  以打开“添加角色和功能向导” 。  
 
-2.  檢閱 [開始之前]  面板中所提供的資訊，然後按一下 [下一步] 。  
+2.  查看“开始前”  面板提供的信息，然后单击“下一步” 。  
 
-3.  選取 [角色型或功能型安裝] ，然後按一下 [下一步] 。  
+3.  选择“基于角色或基于功能的安装” ，然后单击“下一步” 。  
 
-4.  從 [伺服器集區] 中選取您的伺服器，然後按一下 [下一步] 。  
+4.  从“服务器池” 选择你的服务器，然后单击“下一步” 。  
 
-5.  新增下列 [伺服器角色]  ，方法是從清單中選取它們：  
+5.  通过从列表中选择，添加以下“服务器角色”  ：  
 
-    -   **網頁伺服器 (IIS)**  
+    -   **Web 服务器 (IIS)**  
 
-        -   **一般 HTTP 功能**  
+        -   **常见 HTTP 功能**  
 
-            -   **預設文件**  
+            -   **默认文档**  
 
-            -   **目錄瀏覽**  
+            -   **目录浏览**  
 
-            -   **HTTP 錯誤**  
+            -   **HTTP 错误**  
 
-            -   **靜態內容**  
+            -   **静态内容**  
 
-            -   **HTTP 重新導向**  
+            -   **HTTP 重定向**  
 
-        -   **健全狀況及診斷**  
+        -   **运行状况和诊断**  
 
-            -   **HTTP 記錄**  
+            -   **HTTP 日志记录**  
 
-            -   **記錄工具**  
+            -   **日志记录工具**  
 
-            -   **要求監視器**  
+            -   **请求监视器**  
 
-            -   **追蹤**  
+            -   **跟踪**  
 
-    -   **效能**  
+    -   **性能**  
 
-        -   **靜態內容壓縮**  
+        -   **静态内容压缩**  
 
-        -   **動態內容壓縮**  
+        -   **动态内容压缩**  
 
     -   **Security**  
 
-        -   **要求篩選**  
+        -   **请求筛选**  
 
-        -   **基本驗證**  
+        -   **基本身份验证**  
 
-        -   **用戶端憑證對應驗證**  
+        -   **客户端证书映射身份验证**  
 
-        -   **IP 及網域限制**  
+        -   **IP 和域限制**  
 
-        -   **URL 授權**  
+        -   **URL 授权**  
 
-        -   **Windows 授權**  
+        -   **Windows 授权**  
 
-    -   **應用程式開發**  
+    -   **应用程序开发**  
 
-        -   **.NET 擴充性 3.5**  
+        -   **.NET Extensibility 3.5**  
 
-        -   **.NET 擴充性 4.5**  
+        -   **.NET Extensibility 4.5**  
 
         -   **ASP**  
 
@@ -289,111 +289,111 @@ Internet Information Services (IIS) 是彈性可擴充的網頁伺服器，可�
 
         -   **ASP.NET 4.5**  
 
-        -   **ISAPI 擴充程式**  
+        -   **ISAPI 扩展**  
 
-        -   **ISAPI 篩選器**  
+        -   **ISAPI 筛选器**  
 
-        -   **伺服器端包含**  
+        -   **服务器端包括**  
 
-    -   **FTP 伺服器**  
+    -   **FTP 服务器**  
 
-        -   **FTP 服務**  
+        -   **FTP 服务**  
 
     -   **管理工具**  
 
-        -   **IIS 管理主控台**  
+        -   **IIS 管理控制台**  
 
-        -   **IIS 6 管理相容性**  
+        -   **IIS 6 管理兼容性**  
 
-            -   **IIS 6 Metabase 相容性**  
+            -   **IIS 6 元数据库兼容性**  
 
-            -   **IIS 6 管理主控台**  
+            -   **IIS 6 管理控制台**  
 
-            -   **IIS 6 指令碼工具**  
+            -   **IIS 6 脚本工具**  
 
-            -   **IIS 6 WMI 相容性**  
+            -   **IIS 6 WMI 兼容性**  
 
-        -   **IIS 6 管理指令碼及工具**  
+        -   **IIS 6 管理脚本和工具**  
 
-        -   **Management Service**  
+        -   **管理服务**  
 
-6.  新增下列 [功能]  ，方法是從清單中選取它們：  
+6.  通过从列表中选择，添加以下“功能”  ：  
 
-    -   -   **背景智慧型傳送服務 (BITS)**  
+    -   -   **后台智能传输服务 (BITS)**  
 
-            -   **IIS 伺服器擴充功能**  
+            -   **IIS 服务器扩展**  
 
-        -   **遠端伺服器管理工具**  
+        -   **远程服务器管理工具**  
 
             -   **功能管理工具**  
 
-                -   **BITS 伺服器擴充功能工具**  
+                -   **BITS 服务器扩展工具**  
 
-7.  按一下 [安裝]  ，並在 [伺服器管理員]  的 [通知] 窗格中確認正確地完成安裝。  
+7.  单击“安装”  并在“服务器管理器”  的“通知” 窗格验证安装是否正确完成。  
 
-根據預設，IIS 會封鎖 HTTP 或 HTTPS 通訊存取數種類型的副檔名和位置。 若要讓這些檔案發佈至用戶端系統，您需要在發佈點上設定 IIS 的要求篩選。 如需詳細資訊，請檢閱[用於發佈點的 IIS 要求篩選](../../core/plan-design/network/prepare-windows-servers.md#BKMK_IISFiltering)。  
+默认情况下，IIS 阻止多种文件拓展名和位置通过 HTTP 或 HTTPS 通信进行访问。 若要使这些文件分发到客户端系统，你需要为分发点上的 IIS 配置请求筛选。 有关详细信息，请参阅[分发点的 IIS 请求筛选](../../core/plan-design/network/prepare-windows-servers.md#BKMK_IISFiltering)。  
 
-##### <a name="to-configure-iis-filtering-on-distribution-points"></a>在發佈點上設定 IIS 篩選：  
+##### <a name="to-configure-iis-filtering-on-distribution-points"></a>若要在分发点上配置 IIS 筛选：  
 
-1.  開啟 **IIS Manager** ，然後在資訊看板中選取您的伺服器名稱。 這樣會將您帶到 [首頁]  畫面。  
+1.  打开 **IIS Manager** 并在侧栏中选择你的服务器名。 这将使你转到“主页”  屏幕。  
 
-2.  確認選取 [首頁]  畫面底部的 [功能檢視]  。 瀏覽至 [IIS]  ，並開啟 [要求篩選] 。  
+2.  验证已选择“主页”  屏幕底部的“功能视图”  。 导航到 **IIS** 并打开“请求筛选” 。  
 
-3.  在 [動作]  窗格中，按一下 [允許副檔名]   
+3.  在“操作”  窗格中，单击“允许文件拓展名...”   
 
-4.  將 **.msi** 輸入對話方塊中，然後按一下 [確定] 。  
+4.  键入 **.msi** 到对话框中，然后单击“确定” 。  
 
-###  <a name="BKMK_InstallCMLab"></a> 安裝 Configuration Manager  
-您將建立[判斷何時使用主要站台](../../core/plan-design/hierarchy/design-a-hierarchy-of-sites.md#BKMK_ChoosePriimary)來直接管理用戶端。 這將讓您的實驗室環境支援潛在裝置之[站台系統縮放](/sccm/core/plan-design/configs/size-and-scale-numbers)的管理。  
-在這個過程中，您也會安裝 Configuration Manager 主控台，以用來管理您之後的評估裝置。  
+###  <a name="BKMK_InstallCMLab"></a> 安装配置管理器  
+你将创建[确定何时使用主站点](../../core/plan-design/hierarchy/design-a-hierarchy-of-sites.md#BKMK_ChoosePriimary)以直接管理客户端。 这将允许你的实验室环境支持可能设备的[站点系统扩展](/sccm/core/plan-design/configs/size-and-scale-numbers)管理。  
+在此过程中，你也可以安装 Configuration Manager 控制台，它将用于管理你今后的评估设备。  
 
-開始安裝之前，請在使用 Windows Server 2012 的伺服器上啟動[先決條件檢查程式](/sccm/core/servers/deploy/install/prerequisite-checker)，確認已正確地啟用所有設定。  
+在开始安装之前，使用 Windows Server 2012 启动服务器上的[必备组件检查程序](/sccm/core/servers/deploy/install/prerequisite-checker)以确认已正确启用所有设置。  
 
-##### <a name="to-download-and-install-configuration-manager"></a>下載和安裝 Configuration Manager：  
+##### <a name="to-download-and-install-configuration-manager"></a>若要下载和安装 Configuration Manager：  
 
-1.  瀏覽至 [System Center 評估版](https://www.microsoft.com/evalcenter/evaluate-system-center-2012-configuration-manager-and-endpoint-protection)頁面來下載 System Center Configuration Manager 的最新評估版。  
+1.  导航到[系统中心评估](https://www.microsoft.com/evalcenter/evaluate-system-center-2012-configuration-manager-and-endpoint-protection)页以下载 System Center Configuration Manager 的最新评估版本。  
 
-2.  將下載媒體解壓縮到預先定義的位置。  
+2.  将下载媒体解压缩到预定义位置。  
 
-3.  遵循[使用 System Center Configuration Manager 安裝精靈來安裝站台](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites)中所列的安裝程序。 在該程序內，您將輸入下列項目：  
+3.  请按照[使用 System Center Configuration Manager 安装向导安装站点](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites)中列出的安装过程操作。 在该过程中，你将输入以下各项：  
 
-    |站台安裝程序中的步驟|選取範圍|  
+    |站点安装过程的步骤|选择|  
     |-----------------------------------------|---------------|  
-    |步驟 4：[產品金鑰]  頁面|選取 [評估] 。|  
-    |步驟 7：  **必要條件下載**|選取 [下載所需檔案]  ，然後指定預先定義的位置。|  
-    |步驟 10： **站台和安裝設定**|-   **站台碼：LAB**<br />-   **站台名稱：評估**<br />-   **安裝資料夾：** 指定預先定義的位置。|  
-    |步驟 11： **主要站台安裝**|選取 [將主要站台安裝為獨立站台] ，然後按一下 [下一步] 。|  
-    |步驟 12： **資料庫安裝**|-   **SQL Server 名稱 (FQDN)：** 在這裡輸入 FQDN。<br />-   **執行個體名稱：** 因為您將使用先前安裝的預設 SQL 執行個體，所以請將這個項目留白。<br />-   **Service Broker 連接埠：** 保留為預設連接埠 4022。|  
-    |步驟 13： **資料庫安裝**|請將這些設定保留為預設值。|  
-    |步驟 14：**SMS 提供者**|請將這些設定保留為預設值。|  
-    |步驟 15： **用戶端通訊設定**|確認未選取 [所有站台系統角色僅能接受用戶端傳來的 HTTPS 通訊]  。|  
-    |步驟 16： **站台系統角色**|輸入 FQDN，並確認仍選取 [所有站台系統角色僅能接受用戶端傳來的 HTTPS 通訊]  。|  
+    |步骤 4：“产品密钥”  页|选择“评估” 。|  
+    |步骤 7：“必备下载”  |选择“下载所需文件”  并指定预定义的位置。|  
+    |步骤 10：“站点和安装设置” |-   **站点代码：LAB**<br />-   **站点名称：Evaluation**<br />-    指定预定义的位置。|  
+    |步骤 11：“主站点安装” |选择“将主站点安装为独立站点” ，然后单击“下一步” 。|  
+    |步骤 12：“数据库安装” |-    在此处输入你的 FQDN。<br />-    将其留空，因为你将使用以前安装的 SQL 的默认实例。<br />-    保留为默认端口 4022。|  
+    |步骤 13：“数据库安装” |将这些设置保留为默认值。|  
+    |步骤 14：“SMS 提供程序”|将这些设置保留为默认值。|  
+    |步骤 15：“客户端通信设置” |确认未选择“所有站点系统角色仅接受来自客户端的 HTTPS 通信” |  
+    |步骤 16：“站点系统角色” |输入你的 FQDN，并确认仍未选择“所有站点系统角色仅接受来自客户端的 HTTPS 通信”  。|  
 
-###  <a name="BKMK_EnablePubLab"></a> 啟用 Configuration Manager 站台的發行  
-每個 Configuration Manager 站台都會將其專屬的站台特定資訊發行至 Active Directory 架構中網域分割內的系統管理容器。 必須開啟 Active Directory 與 Configuration Manager 間通訊的雙向通道，才能處理這個流量。 您也會額外啟用樹系探索，以判斷 Active Directory 及網路基礎結構的某些元件。  
+###  <a name="BKMK_EnablePubLab"></a>为 Configuration Manager 站点启用发布  
+每个 Configuration Manager 站点将其自己的特定于站点的信息发布到 Active Directory 架构中其域分区内的系统管理容器中。 必须打开 Active Directory 和 Configuration Manager 之间的双向通道以处理此流量。 此外，还将启用林发现以确定 Active Directory 和网络基础结构的某些组件。  
 
-##### <a name="to-configure-active-directory-forests-for-publishing"></a>若要設定 Active Directory 樹系進行發佈：  
+##### <a name="to-configure-active-directory-forests-for-publishing"></a>针对发布配置 Active Directory 林：  
 
-1.  在 Configuration Manager 主控台的左下角，按一下 [系統管理]。  
+1.  在 Configuration Manager 控制台的左下角，单击“管理”。  
 
-2.  在 [系統管理]  工作區中，展開 [階層組態] ，然後按一下 [探索方法] 。  
+2.  在“管理”  工作区中，展开“层次结构配置” ，然后单击“发现方法” 。  
 
-3.  選取 [Active Directory 樹系探索]  ，然後按一下 [內容] 。  
+3.  选择“Active Directory 林发现”  ，然后单击“属性” 。  
 
-4.  在 [內容]  對話方塊中，選取 [啟用 Active Directory 樹系探索] 。 這個項目作用之後，請選取 [探索到 Active Directory 站台界限時自動建立它們] 。 將會出現一個對話方塊，指出 **您是否要盡快執行完整探索?** 按一下 [完成] 。  
+4.  在“属性”  对话框中，选择“启用 Active Directory 林发现” 。 此功能激活后，选择“当发现 Active Directory 站点边界时自动进行创建” 。 将出现一个对话框，显示“你想尽快运行完整的发现吗？”  单击“完成” 。  
 
-5.  在畫面頂端的 [探索方法]  群組中，按一下 [立即執行樹系探索] ，然後瀏覽至資訊看板中的 [Active Directory 樹系]  。 您的 Active Directory 樹系應該會顯示在探索到的樹系清單中。  
+5.  在屏幕顶部的“发现方法”  组中，单击“立即运行林发现” ，然后导航至侧栏中的“Active Directory 林”  。 Active Directory 林应显示在发现的林列表中。  
 
-6.  瀏覽至畫面頂端的 [一般 ]  索引標籤。  
+6.  导航到该屏幕顶部的“常规”  选项卡。  
 
-7.  在 [系統管理]  工作區中，展開 [階層設定] ，然後按一下 [Active Directory 樹系] 。  
+7.  在“管理”  工作区中，展开“层次结构配置” ，然后单击“Active Directory 林” 。  
 
-##### <a name="to-enable-a-configuration-manager-site-to-publish-site-information-to-your-active-directory-forest"></a>讓 Configuration Manager 站台將站台資訊發行至 Active Directory 樹系：  
+##### <a name="to-enable-a-configuration-manager-site-to-publish-site-information-to-your-active-directory-forest"></a>使 Configuration Manager 站点能够将站点信息发布到 Active Directory 林：  
 
-1.  在 Configuration Manager 主控台中，按一下 [系統管理] 。  
+1.  在 Configuration Manager 控制台中，单击“管理” 。  
 
-2.  您將設定尚未探索到的新樹系。  
+2.  你将配置尚未发现的新林。  
 
-3.  在 [系統管理]  工作區中，按一下 [Active Directory 樹系] 。  
+3.  在“管理”  工作区中，单击“Active Directory 林” 。  
 
-4.  在站台內容的 [發佈]  索引標籤上，選取您已連線的樹系，然後按一下 [確定]  儲存組態。
+4.  在该站点属性的“发布”  选项卡上，选择你连接的林，然后单击“确定”  保存配置。

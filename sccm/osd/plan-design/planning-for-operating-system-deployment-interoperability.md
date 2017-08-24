@@ -1,6 +1,6 @@
 ---
-title: "規劃作業系統部署互通性 | Microsoft Docs"
-description: "了解單一階層中不同 System Center Configuration Manager 站台使用不同版本時的互通性問題。"
+title: "规划操作系统部署互操作性 | Microsoft Docs"
+description: "了解单一层次结构中的不同 System Center Configuration Manager 站点使用不同版本时的互操作性问题。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -17,56 +17,56 @@ manager: angrobe
 ms.openlocfilehash: 50a4b75b8c8c1cb6f7a8e696abad285f99080fcd
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="planning-for-operating-system-deployment-interoperability-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中規劃作業系統部署互通性
+# <a name="planning-for-operating-system-deployment-interoperability-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中规划操作系统部署互操作性
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-單一階層中不同 System Center Configuration Manager 站台使用不同版本時，部分 Configuration Manager 功能會無法使用。 通常，執行舊版的站台或用戶端無法存取新版 Configuration Manager 的功能。 如需詳細資訊，請參閱 [Interoperability between different versions of System Center Configuration Manager](../../core/plan-design/hierarchy/interoperability-between-different-versions.md)。  
+当单一层次结构中的不同 System Center Configuration Manager 站点使用不同版本时，某些 Configuration Manager 功能不可用。 通常，无法在站点上或通过运行较低版本的客户端访问 Configuration Manager 的较新版本中的功能。 有关详细信息，请参阅 [Interoperability between different versions of System Center Configuration Manager](../../core/plan-design/hierarchy/interoperability-between-different-versions.md)。  
 
- 當您升級階層中的頂層站台以及階層中執行舊版 Configuration Manager 的其他站台時，請考慮下列各項：  
+ 在升级层次结构中的顶层站点和升级层次结构中运行具有较低版本的 Configuration Manager 的其他站点时，请考虑以下事项：  
 
--   用戶端安裝套件  
+-   客户端安装包  
 
-    -   預設用戶端安裝套件的來源會自動升級，而階層中所有發佈點會更新為新的用戶端安裝套件，即使發佈點位於舊版的階層站台也一樣。  
+    -   会自动升级默认客户端安装包的来源，并使用新的客户端安装包更新层次结构中的所有分发点，即使在层次结构具有较低版本的站点处的分发点上也是如此。  
 
-    -   執行新版本的用戶端無法指派至尚未升級為新版本的站台。 指派會在管理點遭到封鎖。  
+    -   无法将运行新版本的客户端分配给尚未升级到新版本的站点。 将在管理点处阻止分配。  
 
--   開機映像  
+-   启动映像  
 
-    -   當頂層站台升級至最新版的 Configuration Manager 時，預設開機映像 (x86 和 x64) 會自動更新為使用 Windows PE 10 且以 Windows ADK for Windows 10 為基礎的開機映像。 與預設開機映像相關聯的檔案會隨最新版的 Configuration Manager 檔案更新。 自訂開機映像不會自動更新。 您必須手動更新包含舊版 Windows PE 的自訂開機映像。  
+    -   将顶层站点升级到 Configuration Manager 的最新版本时，默认启动映像（x86 和 x64）会自动更新为使用 Windows PE 10 且基于适用于 Windows 10 的 Windows ADK 启动映像。 与默认启动映像关联的文件会使用这些文件的最新 Configuration Manager 版本进行更新。 自定义启动映像不会自动更新。 将需要手动更新自定义启动映像，其中包括旧版 Windows PE。  
 
-    -   若您的站台階層包含採用不同 Configuration Manager 版本的站台，請避免使用動態媒體。 請改用以站台為基礎的媒體來連絡特定管理點，直到所有站台升級為相同的 Configuration Manager 版本的站台。  
+    -   如果站点层次结构包含具有不同 Configuration Manager 版本的站点，则避免使用动态媒体。 相反，使用基于站点的媒体来联系特定的管理点，直到所有站点均升级到相同版本的 Configuration Manager 版本。  
 
-    -   確認最新版 Configuration Manager 開機映像是否包含所需的自訂項目，然後以最新版的 Configuration Manager 和新的開機映像更新站台中所有的發佈點。  
+    -   验证最新的 Configuration Manager 启动映像是否包含所需的自定义项，然后使用新的启动映像更新具有最新版 Configuration Manager 站点中的所有分发点。  
 
--   使用者狀態移轉工具 (USMT)  
+-   用户状态迁移工具 (USMT)  
 
-    -   當頂層站台升級至最新版的 Configuration Manager 時，預設的 USMT 套件會自動更新為最新版本。 自訂的 USMT 套件不會自動更新。 您必須手動更新這些套件。  
+    -   将顶层站点升级到 Configuration Manager 最新版本时，默认 USMT 包将自动更新为最新版本。 自定义 USMT 包不会自动更新。 将需要手动更新这些包。  
 
--   新的工作順序步驟  
+-   新建任务序列步骤  
 
-    -   新版的 Configuration Manager 會定期引入新的工作順序步驟。 當您依新步驟將工作順序部署到舊版的用戶端時，工作順序步驟會失敗。 請先確定目標集合中的用戶端已更新為新版本，再依新步驟部署工作順序。  
+    -   新任务序列步骤将定期引入到新版本的 Configuration Manager 中。 将具有新步骤的任务序列部署到较旧的客户端时，任务序列步骤将失败。 在部署具有新步骤的任务序列之前，请确保目标集合中的客户端都更新到最新版本。  
 
--   作業系統部署媒體  
+-   操作系统部署媒体  
 
-    -   當站台更新為新版本時，所有媒體 (可開機、擷取、預先設置及獨立的) 都必須使用新的 Configuration Manager 用戶端套件來更新。  
+    -   将站点更新到新版本时，必须使用新的 Configuration Manager 客户端包更新所有媒体（可启动媒体、捕获媒体、预留媒体和独立媒体）。  
 
--   作業系統部署的協力廠商擴充功能  
+-   操作系统部署的第三方扩展  
 
-    -   當作業系統部署具有協力廠商延伸模組，且您有不同版本的 Configuration Manager 站台或 Configuration Manager 用戶端時，這是一個混合階層，延伸模組可能會發生問題。  
+    -   当具有操作系统部署的第三方扩展且拥有不同版本的 Configuration Manager 站点或 Configuration Manager 客户端（即混合层次结构）时，扩展可能存在问题。  
 
- 當您主動升級階層中的站台時，請使用下列章節內容幫助您進行作業系統部署。  
+ 在主动升级层次结构中的站点时，请使用下列部分来帮助你进行操作系统部署。  
 
-## <a name="latest-version-of-configuration-manager-sites-in-a-mixed-hierarchy"></a>混合階層中的最新版 Configuration Manager 站台  
- 當您將站台升級為最新版 Configuration Manager 時，參照預設用戶端安裝套件的工作順序會自動開始部署最新的 Configuration Manager 用戶端版本。 參照自訂用戶端安裝套件的工作順序會繼續部署該自訂套件中包含的用戶端版本 (可能是舊版的 Configuration Manager 用戶端)，而且必須升級以避免工作順序部署失敗。 若您的工作順序設定為使用自訂用戶端安裝套件，則必須將工作順序步驟更新為使用最新版 Configuration Manager 的用戶端安裝套件，或將自訂套件更新為使用最新的 Configuration Manager 用戶端安裝來源。  
+## <a name="latest-version-of-configuration-manager-sites-in-a-mixed-hierarchy"></a>混合层次结构中 Configuration Manager 站点的最新版本  
+ 将站点升级到 Configuration Manager 的最新版本时，引用默认客户端安装包的任务序列将自动启动，以部署最新 Configuration Manager 客户端版本。 引用自定义客户端安装包的任务序列将继续部署该自定义包中包含的客户端版本（可能是以前的 Configuration Manager 客户端版本），并且必须更新以避免任务序列部署失败。 如果有配置为使用自定义客户端安装包的任务序列，则必须更新任务序列步骤以使用客户端安装包的最新 Configuration Manager 版本，或更新自定义包以使用最新 Configuration Manager 客户端安装源。  
 
 > [!IMPORTANT]  
->  請勿將參照最新 Configuration Manager 用戶端安裝套件的工作順序，部署到舊版 Configuration Manager 站台的用戶端。 當指派給舊版 Configuration Manager 站台的用戶端升級為最新的 Configuration Manager 用戶端版本時，Configuration Manager 會封鎖舊版 Configuration Manager 站台的用戶端。 因此，用戶端將不再指派給任何站台，並且維持未受管理狀態，直到您手動將用戶端指派給最新的 Configuration Manager 站台，或在電腦上再次安裝舊版的 Configuration Manager 用戶端。  
+>  不要将引用最新 Configuration Manager 客户端安装包的任务序列部署到较旧的 Configuration Manager 站点中的客户端。 当分配到较旧的 Configuration Manager 站点的客户端升级到最新的 Configuration Manager 客户端版本时，Configuration Manager 会阻止将客户端分配到较旧的 Configuration Manager 站点。 因此，在将客户端手动分配给最新的 Configuration Manager 站点或在计算机上重新安装客户端较旧的 Configuration Manager 版本之前，客户端将不再分配给任何站点，并处于不受管理状态。  
 
-## <a name="older-versions-of-configuration-manager-in-a-mixed-hierarchy"></a>混合階層中的舊版 Configuration Manager  
- 當管理中心網站升級為最新版 Configuration Manager 之後，您必須執行下列步驟，以確保部署到指派給舊版 Configuration Manager 站台 (尚未升級為最新版的 Configuration Manager) 之用戶端的作業系統部署工作順序，不會讓用戶端處於未受管理狀態。  
+## <a name="older-versions-of-configuration-manager-in-a-mixed-hierarchy"></a>混合层次结构中 Configuration Manager 的较旧版本  
+ 如果已将管理中心站点升级到 Configuration Manager 的最新版本，必须执行以下步骤，以确保部署到（已分配给较旧 Configuration Manager 站点的）客户端（尚未升级到 Configuration Manager 的最新版本）的操作系统部署任务序列未将这些客户端置于不受管理状态。  
 
--   只在 Configuration Manager 站台中建立用來部署至用戶端的工作順序。 同樣地，您要建立一份工作順序，用來部署至最新版 Configuration Manager 站台的用戶端，然後修改此工作順序，以便將它部署至舊版 Configuration Manager 站台的用戶端。 接著設定工作順序參照使用舊版 Configuration Manager 用戶端安裝來源的自訂用戶端安裝套件。 如果沒有參照舊版 Configuration Manager 用戶端安裝來源的自訂用戶端安裝套件，則必須手動建立一份。  
+-   创建一个将仅用于在 Configuration Manager 站点中部署到客户端的任务序列。 同样，你将建立用于在 Configuration Manager 站点的最新版本中部署到客户端的任务序列的副本，然后修改该任务序列，以便能够在较旧的 Configuration Manager 站点中的客户端。 然后，配置任务序列以引用使用较旧的 Configuration Manager 客户端安装源的自定义客户端安装包。 如果还没有一个引用较旧的 Configuration Manager 客户端安装源的自定义安装包，则必须手动创建该安装包。  

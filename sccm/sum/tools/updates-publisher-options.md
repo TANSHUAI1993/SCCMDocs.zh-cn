@@ -1,6 +1,6 @@
 ---
-title: "設定選項 | Microsoft Docs"
-description: "設定使用 System Center Updates Publisher 的選項"
+title: "配置选项 | Microsoft Docs"
+description: "配置选项以使用 System Center Updates Publisher"
 ms.custom: na
 ms.date: 4/29/2017
 ms.prod: configuration-manager
@@ -18,135 +18,135 @@ robots: NOINDEX, NOFOLLOW
 ms.openlocfilehash: b66ed0a5e1c87d8c82853da86e3d55b0e2c043bb
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="configure-options-for-updates-publisher"></a>設定 Updates Publisher 的選項
+# <a name="configure-options-for-updates-publisher"></a>为 Updates Publisher 配置选项
 
-*適用於：System Center Updates Publisher*
+*适用范围：System Center Updates Publisher*
 
-檢閱與設定會影響 Updates Publisher 作業的選項和相關設定。
+检查并配置影响 Updates Publisher 操作的选项和相关设置。
 
-若要存取 Updates Publisher 選項，請在主控台左上角按一下 [Updates Publisher 屬性] 索引標籤，然後選擇 [選項]。
+若要访问 Updates Publisher 选项，请单击控制台左上角的“Updates Publisher 属性”选项卡，然后选择“选项”。
 
-![選項](media/properties1.png)   
+![选项](media/properties1.png)   
 
 
-選項可分為下列類型：
+选项的分类如下：
 
--   更新伺服器
--   ConfigMgr 伺服器
--   Proxy 設定
--   受信任的發行者
--   進階
+-   更新服务器
+-   ConfigMgr 服务器
+-   代理设置
+-   受信任的发行者
+-   高级
 -   更新
--   記錄
+-   日志记录
 
-## <a name="update-server"></a>更新伺服器
-您必須設定 Updates Publisher 搭配更新伺服器 (例如 Windows Server Update Services (WSUS)) 運作，才能[發行更新](/sccm/sum/tools/manage-updates-with-updates-publisher#publish-updates-and-bundles)。 這包含指定伺服器、在伺服器位於主控台遠端的情況下連線至該伺服器的方法，以及用來數位簽署您所發行之更新的憑證。
+## <a name="update-server"></a>更新服务器
+必须先将 Updates Publisher 配置为与 Windows Server Update Services (WSUS) 等更新服务器协同工作，然后才能[发布更新](/sccm/sum/tools/manage-updates-with-updates-publisher#publish-updates-and-bundles)。 这包括指定服务器、用于连接远离控制台的服务器的方法，以及用于对你发布的更新进行数字签名的证书。
 
--   **設定更新伺服器**。 當您設定更新伺服器時，請選取 Configuration Manager 階層中最上層的 WSUS 伺服器 (更新伺服器)，來讓所有子站台都能存取您所發行的更新。
+-   **配置更新服务器**。 配置更新服务器时，请选择 Configuration Manager 层次结构中的顶层 WSUS 服务器（更新服务器），以便所有子网站均有权访问你发布的更新。
 
-  如果您的更新伺服器位於 Updates Publisher 伺服器的遠端，請指定伺服器的完整網域名稱 (FQDN)，以及您是否會透過 SSL 連線。 當您透過 SSL 連線時，預設連接埠會從 8530 變成 8531。 請確定您所設定的連接埠符合您更新伺服器所使用的連接埠。
+  如果更新服务器远离 Updates Publisher 服务器，请指定服务器的完全限定的域名 (FQDN) 以及是否通过 SSL 连接。 通过 SSL 连接时，默认端口介于 8530 到 8531 之间。 请确保设置的端口与更新服务器使用的端口一致。
 
     > [!TIP]  
-    > 如果您沒有設定更新伺服器，則仍然可以使用 Updates Publisher 來撰寫軟體更新。
+    > 如果未配置更新服务器，仍可以使用 Updates Publisher 编写软件更新。
 
--   **設定簽署憑證**。 您必須設定並成功連線至更新伺服器，才能設定簽署憑證。
+-   **配置签名证书**。 必须先配置并成功连接更新服务器，然后才能配置签名证书。
 
-    Updates Publisher 會使用簽署憑證來簽署發行至更新伺服器的軟體更新。 如果更新伺服器的憑證存放區，或執行 Updates Publisher 的電腦中沒有數位憑證，則發行會失敗。
+    Updates Publisher 使用签名证书对发布到更新服务器的软件更新进行签名。 如果更新服务器或运行 Updates Publisher 的计算机的证书存储中没有数字证书，那么发布将失败。
 
-    如需將憑證新增至憑證存放區的詳細資訊，請參閱 [Updates Publisher 的憑證與安全性](/sccm/sum/tools/updates-publisher-security)。
+    若要详细了解如何向证书存储添加证书，请参阅 [Updates Publisher 中的证书和安全性](/sccm/sum/tools/updates-publisher-security)。
 
-    如果沒有自動偵測到更新伺服器的數位憑證，請選擇下列其中一項：
+    如果没有设置为更新服务器自动检测数字证书，请选择以下选项之一：
 
-    -   **瀏覽**：只有在更新伺服器是安裝在執行主控台的伺服器上時，「瀏覽」才可供使用。 選取憑證之後，您必須選擇 [建立] 來將該憑證新增到更新伺服器上的 WSUS 憑證存放區。 針對透過此方法所選取的憑證，您必須輸入 **.pfx** 檔案密碼。
+    -   浏览：仅在运行控制台的服务器上安装了更新服务器后，“浏览”才可用。 选择证书后，必须选择“创建”，才能将证书添加到更新服务器上的 WSUS 证书存储中。 必须为通过此方法选择的证书输入 **.pfx** 文件密码。
 
-    -   **建立**：使用此選項建立新的憑證。 這也會將憑證新增至更新伺服器上的 WSUS 憑證存放區。
+    -   创建：选择此选项可新建证书。 还可以将证书添加到更新服务器上的 WSUS 证书存储中。
 
-    「如果您建立自己的簽署憑證」，請設定下列各項︰
+    **如果创建你自己的签名证书**，请配置以下选项：
 
-    -   啟用 [允許匯出私密金鑰] 選項。
+    -   启用“允许导出私钥”选项。
 
-    -   設定數位簽章的 [金鑰使用方法]。
+    -   为数字签名设置“密钥用法”。
 
-    -   將 [最小金鑰大小] 設定為等於或大於 2048 位元的值。
+    -   将“最小密钥大小”设置为不小于 2048 位的值。
 
-    使用 [移除] 選項從 WSUS 憑證存放區移除憑證。 當更新伺服器位於您所使用之 Updates Publisher 主控台的本機網路上，或當您使用 **SSL** 來連線至遠端更新伺服器時，便可以使用此選項。
+    使用“删除”选项可从 WSUS 证书存储中删除证书。 当更新服务器位于所使用的 Updates Publisher 控制台附近，或通过 **SSL** 连接远程更新服务器时，此选项可用。
 
-## <a name="configmgr-server"></a>ConfigMgr 伺服器
-當您搭配 Updates Publisher 使用 Configuration Manager 時，便使用這些選項。
+## <a name="configmgr-server"></a>ConfigMgr 服务器
+将 Configuration Manager 与 Updates Publisher 结合使用时，请配置下面这些选项。
 
--   **指定 Configuration Manager 伺服器**：在您啟用 Configuration Manager 的支援之後，請指定 Configuration Manager 階層中最上層站台伺服器的位置。 如果該伺服器位於 Updates Publisher 安裝的遠端，請指定站台伺服器的 FQDN。 選擇 [測試連線] 以確定您可以連線到站台伺服器。
+-   指定 Configuration Manager 服务器：启用对 Configuration Manager 的支持后，指定 Configuration Manager 层次结构中的顶层网站服务器的位置。 如果此服务器远离 Updates Publisher 安装项，请指定网站服务器的 FQDN。 选择“测试连接”，以确保可以连接网站服务器。
 
--   **設定閾值**：當您使用 [自動] 發行集類型發行更新時，將會使用閾值。 閾值可協助您判斷發行的是更新的完整內容還是中繼資料。 若要深入了解發行集類型，請參閱[將更新指派至發行集](/sccm/sum/tools/manage-updates-with-updates-publisher#assign-updates-and-bundles-to-a-publication)
+-   配置阈值：如果发布的更新的发布项类型为“自动”，需要使用阈值。 阈值有助于确定何时发布更新的完整内容，而不是只发布元数据。 若要详细了解发布项类型，请参阅[将更新分配给发布项](/sccm/sum/tools/manage-updates-with-updates-publisher#assign-updates-and-bundles-to-a-publication)
 
-    您可以使用下列其中一個閾值，或是兩個都啟用：
+    可以使用以下阈值之一，也可以两种阈值都使用：
 
-    -   **要求的用戶端計數閾值**：這會定義在 Updates Publisher 可以自動發行更新的完整內容之前，必須要求更新的用戶端數量。 在有指定數目的用戶端要求更新之前，只會發行更新的中繼資料。
+    -   请求客户端计数阈值：此阈值定义了必须有多少个客户端请求更新，Updates Publisher 才能自动发布更新的完整内容。 如果没有指定数量的客户端请求更新，只会发布更新元数据。
 
-    -   **套件來源大小閾值 (MB)**：這會避免自動發行超出您所指定之大小的更新。 如果更新的大小超過此值，將只會發行中繼資料。 小於指定大小的更新可以發行其完整內容。
+    -   包源大小阈值(MB)：此阈值可阻止自动发布超出指定大小的更新。 如果更新的大小超出此阈值，只会发布元数据。 如果更新的大小小于指定阈值，可以发布更新的完整内容。
 
-## <a name="proxy-settings"></a>Proxy 設定
-當您從網際網路匯入軟體目錄，或是將更新發行至網際網路時，Updates Publisher 會使用 Proxy 設定。
+## <a name="proxy-settings"></a>代理设置
+从 Internet 导入软件目录或向 Internet 发布更新时，Updates Publisher 使用代理设置。
 
--   指定 Proxy 伺服器的 FQDN 或 IP 位址。 支援 IPv4 和 IPv6。
+-   指定代理服务器的 FQDN 或 IP 地址。 支持 IPv4 和 IPv6。
 
--   如果 Proxy 伺服器會針對網際網路存取驗證使用者，您必須指定 Windows 名稱。 不支援的通用主體名稱 (UPN)。
+-   如果代理服务器验证用户是否有权访问 Internet，必须指定 Windows 名称。 不支持通用主体名称 (UPN)。
 
-## <a name="trusted-publishers"></a>受信任的發行者
-當您匯入更新目錄時，該目錄的來源 (根據其憑證) 會新增為信任的發行者。 同樣地，當您發行更新時，更新憑證的來源會新增為信任的發行者。
+## <a name="trusted-publishers"></a>受信任的发行者
+如果导入更新目录，目录（基于证书）的源被添加为受信任的发布者。 同样，如果发布更新，更新证书的源被添加为受信任的发布者。
 
-您可以檢視每個發行者的憑證詳細資料，並從信任的發行者清單中移除發行者。
+可以查看每个发布者的证书详细信息，并从受信任的发布者列表中删除发布者。
 
-當用戶端搜尋更新時，來自不受信任之發行者的內容可能會危害用戶端電腦。 您應該僅接受來自您所信任之發行者的內容。
+不受信任的发布者发布的内容可能会在客户端扫描更新时损坏客户端计算机。 应只接受你信任的发布者发布的内容。
 
-## <a name="advanced"></a>進階
-進階選項包含下列項目：
+## <a name="advanced"></a>高级
+高级选项如下：
 
--   **存放庫位置**：檢視與修改資料庫檔案 **scupdb.sdf** 的位置。 此檔案是 Updates Publisher 的存放庫。
+-   存储库位置：查看和修改数据库文件 **scupdb.sdf** 的位置。 此文件是 Updates Publisher 存储库。
 
--   **時間戳記︰**啟用時，會針對您所簽署的更新新增一個可識別其簽署時間的時間戳記。 於憑證有效時簽署的更新，可以在該簽署憑證過期後使用。 根據預設，軟體更新在其簽署憑證過期之後將無法進行部署。
+-   时间戳：启用后，时间戳会添加到签名的更新中，以标识签名时间。 在证书有效时签名的更新可以在签名证书过期后继续使用。 默认情况下，无法部署签名证书过期的软件更新。
 
--   **檢查已訂閱目錄的更新**：Updates Publisher 每次啟動時，可以自動檢查您已訂閱的目錄是否有更新。 找到目錄更新時，詳細資料會在 [更新工作區] 的 [概觀] 視窗中，以 [最近的警示] 提供。
+-   检查已订阅目录的最新动态：每次启动时，Updates Publisher 都可以自动检查已订阅目录的最新动态。 发现的目录最新动态会在“更新工作区”的“概述”窗口中以“最新警报”的形式详细显示。
 
--   **憑證撤銷**：選擇此選項以啟用憑證撤銷檢查。
+-   证书吊销：选择此选项可以启用证书吊销检查。
 
--   **本機來源發行**：Updates Publisher 可以使用您正在發行之更新的本機複本，而不用從網際網路下載該更新。 位置必須是執行 Updates Publisher 之電腦上的資料夾。 根據預設，此位置是 **My Documents\LocalSourcePublishing**。 當您先前已下載一個或多個更新，或已對您想要部署的更新做出變更時，請使用此選項。
+-   本地源发布：从 Internet 下载要发布的更新前，Updates Publisher 可以先使用它的本地副本。 位置必须是运行 Updates Publisher 的计算机上的文件夹。 默认情况下，此位置是 **My Documents\LocalSourcePublishing**。 如果以前下载过一个或多个更新，或对要部署的更新进行了修改，请选择此选项。
 
--   **軟體更新清理精靈**：啟動更新清理精靈。 精靈會使位於更新伺服器上，但沒有位於 Updates Publisher 存放庫中的更新到期。 如需詳細資料，請參閱[使未參考的更新到期](#expire-unreferenced-software-updates)。
+-   软件更新清理向导：启动更新清理向导。 此向导会终止更新服务器上有、但 Updates Publisher 存储库中没有的更新。 请参阅[终止未引用的软件更新](#expire-unreferenced-software-updates)，了解更多详情。
 
 ## <a name="updates"></a>更新
- Updates Publisher 可以在每次開啟時自動檢查是否有新的更新。 您也可以選擇加入接收 Updates Publisher 的預覽組建。
+ Updates Publisher 可以在每次打开时自动检查是否有新更新。 也可以选择接收 Updates Publisher 的预览版。
 
-若要手動檢查更新，請在 Updates Publisher 主控台中，按一下![屬性](media/properties2.png)  
-以開啟 [Updates Publisher 屬性]，然後選擇 [檢查更新]。
+若要手动检查更新，请单击 Updates Publisher 控制台中的“属性”![](media/properties2.png)，  
+打开“Updates Publisher 属性”，然后选择“检查更新”。
 
-在 Updates Publisher 找到新的更新之後，它會顯示 [可用的更新] 視窗，您便可以選擇安裝它。 如果您選擇不安裝該更新，它會在下一次開啟主控台時向您提供。
+找到新更新后，Updates Publisher 会在“更新可用”窗口中进行显示，然后你可以选择安装。 如果选择不安装更新，将在下次打开控制台时看到安装提示。
 
-## <a name="logging"></a>記錄
-Updates Publisher 會將有關 Updates Publisher 的基本資訊記錄到 **&lt;*path*&gt;\Windows\Temp\UpdatesPublisher.log**。
+## <a name="logging"></a>日志记录
+Updates Publisher 将 Updates Publisher 的基本信息记录到 **&lt;*路径*&gt;\Windows\Temp\UpdatesPublisher.log**。
 
-使用記事本或 **CMTrace** 來檢視記錄檔。 CMTrace 是 Configuration Manager 記錄檔工具，可在 Configuration Manager 來源媒體的 **\SMSSetup\Tools** 資料夾中找到。
+使用记事本或 **CMTrace** 可以查看日志。 CMTrace 是 Configuration Manager 日志文件工具，位于 Configuration Manager 源媒体的 **\SMSSetup\Tools** 文件夹中。
 
-您可以變更記錄檔的大小及其詳細資料層級。
+可以更改日志大小及其详细程度。
 
-當您啟用資料庫記錄時，會包含針對 Updates Publisher 資料庫所執行之查詢的相關資訊。 使用資料庫記錄可能導致 Updates Publisher 電腦的效能降低。
+启用数据库日志记录后，将包括对 Updates Publisher 数据库运行的查询的相关信息。 使用数据库日志记录可能会导致 Updates Publisher 计算机的性能下降。
 
-若要檢視記錄檔，請在主控台中按一下![屬性](media/properties2.png)以開啟 [Updates Publisher 屬性]，然後選擇 [檢視記錄檔]。
+若要查看日志文件，请单击控制台中的“属性”![](media/properties2.png)，打开“Updates Publisher 属性”，然后选择“查看日志文件”。
 
-## <a name="expire-unreferenced-software-updates"></a>使未參考的軟體更新到期
-您可以執行 [軟體更新清理精靈] 來使位於更新伺服器上，但沒有位於 Updates Publisher 存放庫中的更新到期。 這會通知 Configuration Manager，然後 Configuration Manager 會從所有未來的部署中移除那些更新。
+## <a name="expire-unreferenced-software-updates"></a>终止未引用的软件更新
+可以运行“软件更新清理向导”，终止更新服务器上有、但 Updates Publisher 存储库中没有的更新。 这会通知 Configuration Manager，然后它会从任何未来部署中删除这些更新。
 
-使更新到期的動作將無法回復。 請只有在您確定貴組織已不再需要所選取的軟體更新時，才執行此工作。
+终止更新的操作无法撤回。 只有在确认组织不再需要你选择的软件更新时，才能执行此任务。
 
-### <a name="to-remove-expired-software-updates"></a>移除已到期的軟體更新
-1.  在 Updates Publisher 主控台中，按一下![屬性](media/properties2.png)以開啟 [Updates Publisher 屬性]，然後選擇 [選項]。
+### <a name="to-remove-expired-software-updates"></a>如何删除已终止的软件更新
+1.  在 Updates Publisher 控制台中，单击“属性”![](media/properties2.png)，打开“Updates Publisher 属性”，然后选择“选项”。
 
-2.  選擇 [進階]，然後在 [軟體更新清除精靈] 下，選擇 [啟動]。
+2.  依次选择“高级”和“软件更新清理向导”下的“启动”。
 
-3.  選取您要設為到期的軟體更新，然後選擇 [下一步]。
+3.  选择要终止的软件更新，然后选择“下一步”。
 
-4.  檢閱您的選取項目之後，選擇 [下一步] 以接受選取項目並將那些更新設為到期。
+4.  检查选择的更新后，选择“下一步”，接受选择并终止这些更新。
 
-5.  在精靈完成後，選擇 [關閉] 以完成精靈。
+5.  此向导完成后，选择“关闭”，完成向导。

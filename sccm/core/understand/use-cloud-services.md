@@ -1,6 +1,6 @@
 ---
-title: "使用雲端服務搭配 Configuration Manager | Microsoft Docs"
-description: "佈建 System Center Configuration Manager 的雲端資源，以補充內部部署基礎結構。"
+title: "将云服务与 Configuration Manager 结合使用 | Microsoft Docs"
+description: "为 System Center Configuration Manager 预配云资源，补充本地基础结构。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -18,87 +18,87 @@ manager: angrobe
 ms.openlocfilehash: 52f7c63d155d5c34f0f12e13020767dec1867dab
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="use-cloud-services-with-system-center-configuration-manager"></a>使用雲端服務搭配 System Center Configuration Manager
+# <a name="use-cloud-services-with-system-center-configuration-manager"></a>将云服务用于 System Center Configuration Manager
 
-*適用於︰System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager 支援數個雲端式選項。 這些選項能補充您的內部部署基礎結構，並可協助解決像是下列的商務問題：  
+System Center Configuration Manager 支持多个基于云的选项。 这些选项能补充本地基础结构，还有助于解决以下业务问题，如：  
 
--   如何管理 BYOD (透過使用行動裝置管理的 Intune)。  
+-   如何管理 BYOD（通过将 Intune 用于移动设备管理）。  
 
--   在公司防火牆外，如何提供隔離用戶端或內部網路的資源 (透過使用雲端式發佈點)。  
+-   如何向公司防火墙之外的 Intranet 上的独立客户端或资源提供内容资源（通过使用基于云的分发点）。  
 
--   在實體硬體無法使用或無法以邏輯方式放置時，如何擴充基礎結構以支援您的需求 (透過使用 Microsoft Azure 虛擬機器)。  
+-   当物理硬件不可用或未以逻辑方式放置以支持你的需求时，如何扩大基础结构（通过使用 Microsoft Azure 虚拟机）。  
 
-雖然在部署 Configuration Manager 前不一定要佈建雲端資源，但在階層設計計劃發展太深入之前，先了解這些選項會有所助益。 使用雲端資源或許能協助您省下金錢與時間，並解決內部部署基礎結構無法解決的商務問題。  
+尽管不一定必须在部署 Configuration Manager 之前预配云资源，但是它对于在层次结构设计规划进展太快之前理解这些选项十分有益。 使用云资源可在解决业务问题时节省金钱和时间，而这一点是本地基础结构无法做到的。  
 
-## <a name="cloud-based-resources-you-can-use-with-configuration-manager"></a>可以搭配 Configuration Manager 使用的雲端資源  
- 由於每個選項都有不同的需求，因此請逐一深入調查，以了解獨特的必要條件、限制，以及依使用量而產生的潛在額外成本。  
+## <a name="cloud-based-resources-you-can-use-with-configuration-manager"></a>可与 Configuration Manager 一起使用的基于云的资源  
+ 由于每个选项具有不同的要求，更深入地调查每个选项可了解唯一的先决条件、限制和根据使用情况产生额外成本的可能性。  
 
--   如需雲端發佈點的相關資訊，請參閱[安裝雲端發佈點](/sccm/core/servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure)。
+-   有关基于云的分发点的信息，请参阅[安装基于云的分发点](/sccm/core/servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure)。
 
--   如需 Azure 的詳細資訊，請參閱 MSDN Library 中的 [Azure](http://go.microsoft.com/fwlink/p/?LinkId=262965)。  
+-   有关 Azure 的详细信息，请参阅 MSDN 库中的 [Azure](http://go.microsoft.com/fwlink/p/?LinkId=262965)。  
 
-### <a name="azure-virtual-machines-for-cloud-based-infrastructure"></a>Azure 虛擬機器 (適用於雲端式基礎結構)  
- Configuration Manager 支援使用在 Azure 虛擬機器中執行的電腦，就像在實體公司網路中內部部署執行一樣。 您可以在下列案例使用 Azure 虛擬機器：  
+### <a name="azure-virtual-machines-for-cloud-based-infrastructure"></a>Azure 虚拟机（用于基于云的基础结构）  
+ Configuration Manager 支持使用在 Azure 虚拟机中运行的计算机，正如在物理公司网络中进行本地运行一样。 你可在以下方案中使用 Azure 虚拟机：  
 
--   **案例 1：**您可以在虛擬機器中執行 Configuration Manager，並用其來管理安裝在其他虛擬機器中的用戶端。  
+-   **方案 1：**可以在虚拟机中运行 Configuration Manager，并使用它管理其他虚拟机上安装的客户端。  
 
--   **案例 2：**您可以在虛擬機器中執行 Configuration Manager，並用其來管理未在 Azure 中執行的用戶端。  
+-   **方案 2：**可以在虚拟机中运行 Configuration Manager，并使用它管理不在 Azure 中运行的客户端。  
 
--   **案例 3：**您可以一方面在虛擬機器中執行不同的 Configuration Manager 站台系統角色，一方面在您的實體公司網路 (具備用於通訊的適當網路連線) 中執行其他角色。  
+-   **方案 3：**可以在虚拟机中运行不同的 Configuration Manager 站点系统角色，同时在物理公司网络（具有用于通信的相应网络连接）中运行其他角色。  
 
-適用於在您實體公司網路上安裝 Configuration Manager 的相同網路、作業系統和硬體需求，也適用於在 Azure 中安裝 Configuration Manager。  
+如果网络、操作系统和硬件要求适用于在物理公司网络中安装 Configuration Manager，则相同的这些要求也适用于在 Azure 中安装 Configuration Manager。  
 
-需要有 Azure 訂用帳戶，才能使用 Azure 虛擬機器。 會根據所使用的虛擬機器數目、其設定，以及雲端式資源使用量來產生費用。  
+Azure 虚拟机的使用需要一个 Azure 订阅。 根据所使用虚拟机的数量及其配置以及基于云的资源的使用计费。  
 
-此外，在 Azure 虛擬機器上執行的 Configuration Manager 站台和用戶端受限於與內部部署安裝相同的授權需求。  
+此外，Configuration Manager 站点和在 Azure 虚拟机中运行的客户端与本地安装遵循相同的许可证要求。  
 
-### <a name="azure-services-for-cloud-based-distribution-points"></a>Azure 服務 (適用於雲端式發佈點)  
- 您可以使用 Azure 服務來裝載 Configuration Manager 發佈點，其稱為雲端發佈點。 您可以[使用雲端式發佈點搭配 System Center Configuration Manager](../../core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md)、內部部署發佈點，以及部署在 Azure 虛擬機器的發佈點。  
+### <a name="azure-services-for-cloud-based-distribution-points"></a>Azure 服务（用于基于云的分发点）  
+ 可以使用 Azure 服务托管 Configuration Manager 分发点，该分发点名为调用的基于云的分发点。 可以[将基于云的分发点与 System Center Configuration Manager](../../core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md)，连同本地分发点和 Azure 虚拟机中部署的分发点一起使用。  
 
- 這不同於使用 Azure 虛擬機器，在 Azure 虛擬機器上需部署站台系統角色。 雲端發佈點：  
+ 这与使用在其上部署了站点系统角色的 Azure 虚拟机不同。 基于云的分发点：  
 
--   在 Azure 中執行為服務，而不是在虛擬機器上執行。  
+-   在 Azure 中作为一项服务运行，而不是在虚拟机上运行。  
 
--   自動調整以滿足用戶端增加的內容要求。  
+-   自动扩展以适应客户端的内容请求增加。  
 
--   支援網際網路和內部網路上的用戶端。  
+-   支持 Internet 和 intranet 上的客户端。  
 
-需要有 Azure 訂用帳戶，才能使用 Azure 來裝載發佈點。 會根據傳輸到服務以及從服務傳輸的資料量來產生費用。  
+将 Azure 用于承载分发点，需要一个 Azure 订阅。 根据传入该服务和从该服务传出的数据量计费。  
 
-### <a name="microsoft-intune-for-mobile-device-management"></a>Microsoft Intune (適用於行動裝置管理)  
- 您可以整合 Microsoft Intune 訂閱與 Configuration Manager，以便能夠使用 Intune 服務來管理裝置。 此項整合：  
+### <a name="microsoft-intune-for-mobile-device-management"></a>Microsoft Intune（用于移动设备管理）  
+ 可以将 Microsoft Intune 订阅与 Configuration Manager 集成，实现通过 Intune 服务对设备进行管理。 此集成：  
 
--   稱為混合式設定，並會擴充 Configuration Manager (或 Intune，視您的檢視方塊而定) 以支援各種裝置。  
+-   称为混合配置，并扩展 Configuration Manager（或 Intune，具体取决于你的观点），以支持多种设备。  
 
--   需要 Microsoft Intune 連接器站台系統角色。  
+-   要求 Microsoft Intune 连接器站点系统角色。  
 
--   您需要有個別的 Intune 訂閱，而針對您將使用 Intune 來管理的裝置，該訂閱需具有足夠的裝置授權。  
+-   要求有一个单独的 Intune 订阅，并且对于将使用 Intune 管理的设备具有足够的许可证。  
 
-雖然 Intune 使用 Azure，但您不需要個別設定 Azure，同時也不會有超過 Intune 訂閱費用的額外成本。  
+尽管 Intune 使用 Azure，但它不要求单独配置 Azure，也不会产生 Intune 订阅成本以外的其他成本。  
 
-### <a name="additional-configuration-manager-capabilities"></a>其他 Configuration Manager 功能  
- 某些 Configuration Manager 功能可以連線至雲端服務，例如：  
+### <a name="additional-configuration-manager-capabilities"></a>附加 Configuration Manager 管理功能  
+ 某些 Configuration Manager 功能可以连接到基于云的服务，如：  
 
 -   Windows Server Update Services (WSUS)。  
 
--   下載 Configuration Manager 更新的 Configuration Manager 服務雲端。  
+-   用于下载 Configuration Manager 更新的 Configuration Manager 服务云。  
 
-這些其他功能不需要您擁有 Azure 訂用帳戶。 您不需要在雲端中設定特定連線、憑證或服務。 相反地，Configuration Manager 會替您自動加以管理。 您只需要確保適用的站台系統與裝置能夠存取以網際網路為基礎的 URL。  
+这些附加功能不要求用户拥有 Azure 订阅。 不必在云中设置特定的连接、证书或服务。 它们由 Configuration Manager 自动进行管理。 用户需要做的就是确保可应用的站点系统和设备能够访问基于 Internet 的 URL。  
 
-##  <a name="BKMK_CloudSec"></a> 雲端服務的安全性  
- Configuration Manager 使用憑證來佈建與存取您在 Azure 中的內容，以及管理您使用的服務。 Configuration Manager 會將您儲存在 Azure 中的資料加密，但在 Azure 提供的安全性或資料控制項之外，不會提供額外防護。  
+##  <a name="BKMK_CloudSec"></a>基于云的服务的安全性  
+ Configuration Manager 使用证书预配和访问 Azure 中的内容，并管理所使用的服务。 Configuration Manager 加密你存储在 Azure 中的数据，但除引入 Azure 提供的那些安全或数据控制之外，不会引入的其他安全或数据控制。  
 
- 如需詳細資訊，請參閱不同雲端式資源案例的詳細資料。 您也可以檢視下列 Azure 安全性主題：  
+ 有关详细信息，请参阅关于不同的基于云的资源方案的详细信息。 还可以查看 Azure 安全性的以下主题：  
 
--   [Azure：了解 Azure 中的安全性帳戶管理](http://go.microsoft.com/fwlink/p/?LinkId=262968)  
+-   [Azure：了解 Azure 中的安全帐户管理](http://go.microsoft.com/fwlink/p/?LinkId=262968)  
 
--   [Azure Security Overview](http://go.microsoft.com/fwlink/p/?LinkId=262970) (Azure 安全性概觀)  
+-   [Azure 安全性概述](http://go.microsoft.com/fwlink/p/?LinkId=262970)  
 
--   [Get Past the Security Crossroads in Your Cloud Migration (解決與雲端移轉有關的安全性問題) (解決與雲端移轉有關的安全性問題)](http://go.microsoft.com/fwlink/p/?LinkId=262971)  
+-   [在云迁移中通过安全性十字路口](http://go.microsoft.com/fwlink/p/?LinkId=262971)  
 
--   [Azure 資料安全性的第 1 部分 (共 2 個部分)](http://go.microsoft.com/fwlink/p/?LinkId=262974)  
+-   [Azure 中的数据安全性（1/2 部分）](http://go.microsoft.com/fwlink/p/?LinkId=262974)  

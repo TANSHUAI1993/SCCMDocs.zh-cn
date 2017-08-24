@@ -1,6 +1,6 @@
 ---
-title: "在 Windows PE 中預先佈建 BitLocker | Microsoft Docs"
-description: "Configuration Manager 中的 [預先佈建 BitLocker] 工作可先從 Windows 預先安裝環境啟用 BitLocker，再進行作業系統部署。"
+title: "预先设置 Windows PE 中的 BitLocker | Microsoft Docs"
+description: "在部署操作系统之前，可通过 Configuration Manager 中的预设置 BitLocker 任务从 Windows 预安装环境启用 BitLocker。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -18,44 +18,44 @@ manager: angrobe
 ms.openlocfilehash: baca498dbc5b8e168852aa3c18ee23a9c483e69c
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="preprovision-bitlocker-in-windows-pe-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 在 Windows PE 中預先佈建 BitLocker
+# <a name="preprovision-bitlocker-in-windows-pe-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 预先设置在 Windows PE 中的 BitLocker
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager 中的 [預先佈建 BitLocker] 工作順序步驟可讓您在部署作業系統之前，先從 Windows 預先安裝環境 (Windows PE) 啟用 BitLocker。 由於只加密已使用的磁碟空間，因此加密速度較快。 這是藉由在執行 Windows 安裝程序之前，將隨機產生的透明保護裝置套用至格式化的磁碟區並加密磁碟區的方式進行。 預先佈建 BitLocker 是 Windows 8 和 Windows Server 2012 引進的功能。 不過，只要執行特定步驟，您仍可以在硬碟上預先佈建 BitLocker 並安裝 Windows 7。 Windows 7 安裝程式完成後，您必須設定 BitLocker 金鑰保護裝置，因為 Windows 7 BitLocker 控制台不支援使用透明保護裝置的 BitLocker。 您必須依照 [啟用 BitLocker]  步驟或使用 manage-bde.exe 命令列工具新增金鑰保護裝置。  
+利用 System Center Configuration Manager 中的“预设置 BitLocker”任务序列步骤，可以在部署操作系统之前从 Windows 预安装环境 (Windows PE) 中启用 BitLocker。 由于仅加密使用的磁盘空间，因此加密时间要短得多。 这是通过在运行 Windows 设置进程之前将随机生成的清除保护程序应用于格式化的卷并对卷进行加密来完成的。 Windows 8 和 Windows Server 2012 引入了预设置 BitLocker 的功能。 但是，只要遵循特定步骤，即可在硬盘上预设置 BitLocker 并安装 Windows 7。 当 Windows 7 安装程序完成后，你必须设置 BitLocker 密钥保护程序，因为 Windows 7 BitLocker 控制面板不使用清除保护程序支持 BitLocker。 你必须执行“启用 BitLocker”  步骤或者使用 manage-bde.exe 命令行工具来添加密钥保护程序。  
 
- 一般而言，您必須執行下列步驟才能順利在即將安裝 Windows 7 的電腦上預先佈建 BitLocker：  
+ 通常，你必须执行以下操作，以在将安装 Windows 7 的计算机上成功预设置 BitLocker：  
 
--   在 Windows PE 中重新啟動電腦  
+-   在 Windows PE 中重启计算机  
 
     > [!IMPORTANT]  
-    >  您必須使用包含 Windows PE 4 或更新版本的開機映像才能預先佈建 BitLocker。 如需 Configuration Manager 中所支援 Windows PE 版本的詳細資訊，請參閱 [Configuration Manager 外部的相依性](../plan-design/infrastructure-requirements-for-operating-system-deployment.md#BKMK_ExternalDependencies)。  
+    >  你必须使用带有 Windows PE 4 或更高版本的启动映像来预设置 BitLocker。 有关 Configuration Manager 中支持的 Windows PE 版本的详细信息，请参阅 [Configuration Manager 的外部依赖关系](../plan-design/infrastructure-requirements-for-operating-system-deployment.md#BKMK_ExternalDependencies)。  
 
--   分割和格式化硬碟  
+-   对硬盘进行分区和格式化  
 
--   中的 [預先佈建 BitLocker]  
+-   中的“预设置 BitLocker”  
 
--   使用特定作業系統和網路設定安裝 Windows 7  
+-   使用特定的操作系统和网络设置安装 Windows 7  
 
--   將金鑰保護裝置新增至 BitLocker  
+-   将密钥保护程序添加到 BitLocker 中  
 
- 在 Configuration Manager 中，於硬碟上預先佈建 BitLocker 並安裝 Windows 7 的建議做法是建立新的工作順序，然後從 [建立工作順序精靈] 的 [建立新工作順序] 頁面選取 [安裝現有的映像套件]。 此精靈將會建立下表所列的工作順序步驟。  
+ 在 Configuration Manager 中，在硬盘上预设置 BitLocker 以及安装 Windows 7 的建议方法为：创建新任务序列，并从“创建任务序列向导”的“新建任务序列”页中选择“安装现有的映像包”。 此向导将创建下表中列出的任务序列步骤。  
 
 > [!NOTE]  
->  根據您在精靈中進行設定的方式，工作順序可能會有額外的步驟。 例如，如果您在精靈的 [狀態移轉]  頁面上選取了 [擷取的 Microsoft Windows 設定]  ，就可能會有 [擷取 Windows 設定]  這個步驟。  
+>  任务序列可能具有其他步骤，具体取决于你在向导中配置设置的方式。 例如，如果在向导的“状态迁移”  页上选择了“捕获 Microsoft Windows 设置”  ，则可能具有“捕获 Windows 设置”  步骤。  
 
-|工作順序步驟|詳細資料|  
+|任务序列步骤|详细信息|  
 |------------------------|-------------|  
-|停用 BitLocker|此步驟會停用 BitLocker 加密 (若目前啟用的話)。 如需詳細資訊，請參閱[停用 BitLocker](../understand/task-sequence-steps.md#BKMK_DisableBitLocker)。|  
-|在 Windows PE 中重新啟動電腦|此步驟會執行指派給工作順序的開機映像，在 Windows PE 中重新啟動電腦。 您必須使用包含 Windows PE 4 或更新版本的開機映像才能預先佈建 BitLocker。 如需詳細資訊，請參閱[重新啟動電腦](../understand/task-sequence-steps.md#BKMK_RestartComputer)。|  
-|分割磁碟 0 – BIOS<br /><br /> 分割磁碟 0 – UEFI|這些步驟使用 BIOS 或 UEFI 針對目的地電腦的指定磁碟執行格式化和分割的動作。 當工作順序偵測到目的地電腦處於 UEFI 模式時，即會使用 UEFI。 如需詳細資訊，請參閱[格式化和分割磁碟](../understand/task-sequence-steps.md#BKMK_FormatandPartitionDisk)。|  
-|中的 [預先佈建 BitLocker]|這個步驟會在 Windows PE 中啟用磁碟上的 BitLocker。 只有已使用的磁碟空間會加密。 由於您已在上一個步驟分割和格式化硬碟，在無資料的情況下，加密很快就可以完成。 如需詳細資訊，請參閱[預先佈建 BitLocker](../understand/task-sequence-steps.md#BKMK_PreProvisionBitLocker)。|  
-|套用作業系統|此步驟會準備用來在目的地電腦上安裝作業系統的回應檔，並將 OSDTargetSystemDrive 工作順序變數設定為包含作業系統檔案之分割區的磁碟機代號。 設定 Windows 和 ConfigMgr 步驟將使用此回應檔和變數來安裝作業系統。 如需詳細資訊，請參閱 [Apply Operating System Image](../understand/task-sequence-steps.md#BKMK_ApplyOperatingSystemImage)。|  
-|套用 Windows 設定|此步驟會將 Windows 設定新增至回應檔。 設定 Windows 和 ConfigMgr 步驟將使用回應檔安裝作業系統。 如需詳細資訊，請參閱[套用 Windows 設定](../understand/task-sequence-steps.md#BKMK_ApplyWindowsSettings)。|  
-|套用網路設定|此步驟會將網路設定新增至回應檔。 設定 Windows 和 ConfigMgr 步驟將使用回應檔安裝作業系統。 如需詳細資訊，請參閱[套用網路設定步驟](../understand/task-sequence-steps.md#BKMK_ApplyNetworkSettings)。|  
-|套用裝置驅動程式|此步驟將比對並安裝驅動程式，作為作業系統部署的一部分。 如需詳細資訊，請參閱[自動套用驅動程式](../understand/task-sequence-steps.md#BKMK_AutoApplyDrivers)。|  
-|設定 Windows 和 ConfigMgr|此步驟會從 Windows PE 轉換為新的作業系統。 此工作順序步驟是部署任何作業系統的必要部分。 它會將 Configuration Manager 用戶端安裝到新的作業系統中，並準備好讓工作順序繼續在新的作業系統中執行。 如需詳細資訊，請參閱[設定 Windows 和 ConfigMgr](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr)。|  
-|啟用 BitLocker|此步驟將在硬碟上啟用 BitLocker 加密，並且設定金鑰保護裝置。 由於硬碟已預先佈建 BitLocker，此步驟可以很迅速地完成。 Windows 7 會要求您新增金鑰保護裝置。 若您不使用此步驟，可以執行 manage-bde.exe 命令列工具設定金鑰保護裝置。 如需詳細資訊，請參閱[啟用 BitLocker](../understand/task-sequence-steps.md#BKMK_EnableBitLocker)。|  
+|禁用 BitLocker|如果当前启用了 BitLocker 加密，则此步骤将禁用该加密。 有关详细信息，请参阅[禁用 BitLocker](../understand/task-sequence-steps.md#BKMK_DisableBitLocker)。|  
+|在 Windows PE 中重启计算机|此步骤通过运行分配给任务序列的启动映像在 Windows PE 中重启计算机。 你必须使用带有 Windows PE 4 或更高版本的启动映像来预设置 BitLocker。 有关详细信息，请参阅[重启计算机](../understand/task-sequence-steps.md#BKMK_RestartComputer)。|  
+|对磁盘 0 分区 - BIOS<br /><br /> 对磁盘 0 分区 - UEFI|这些步骤使用 BIOS 或 UEFI 对目标计算机上的指定驱动器进行格式化和分区。 当任务序列检测到目标计算机处于 UEFI 模式时，它会使用 UEFI。 有关详细信息，请参阅[格式化磁盘并分区](../understand/task-sequence-steps.md#BKMK_FormatandPartitionDisk)。|  
+|中的“预设置 BitLocker”|在 Windows PE 中，此步骤将在驱动器上启用 BitLocker。 仅加密使用的驱动器空间。 因为你在上一个步骤中对硬盘进行了分区和格式化，因此没有数据并且加密完成得非常快。 有关详细信息，请参阅[预设置 BitLocker](../understand/task-sequence-steps.md#BKMK_PreProvisionBitLocker)。|  
+|应用操作系统|此步骤准备用于在目标计算机上安装操作系统的答案文件，并将 OSDTargetSystemDrive 任务序列变量设置为包含操作系统文件的分区的驱动器号。 “安装 Windows 和 ConfigMgr”步骤使用答案文件和变量来安装操作系统。 有关详细信息，请参阅 [Apply Operating System Image](../understand/task-sequence-steps.md#BKMK_ApplyOperatingSystemImage)。|  
+|应用 Windows 设置|此步骤将 Windows 设置添加到答案文件中。 “安装 Windows 和 ConfigMgr”步骤使用答案文件来安装操作系统。 有关详细信息，请参阅 [应用 Windows 设置](../understand/task-sequence-steps.md#BKMK_ApplyWindowsSettings)。|  
+|应用网络设置|此步骤将网络设置添加到答案文件中。 “安装 Windows 和 ConfigMgr”步骤使用答案文件来安装操作系统。 有关详细信息，请参阅[应用网络设置步骤](../understand/task-sequence-steps.md#BKMK_ApplyNetworkSettings)。|  
+|应用设备驱动程序|此步骤在操作系统部署过程中匹配和安装驱动程序。 有关详细信息，请参阅[自动应用驱动程序](../understand/task-sequence-steps.md#BKMK_AutoApplyDrivers)。|  
+|安装 Windows 和 ConfigMgr|此步骤执行从 Windows PE 到新操作系统的转换。 此任务序列步骤是在部署任何操作系统时都必需的部分。 该步骤会将 Configuration Manager 客户端安装到新操作系统中，并为任务序列在新操作系统中继续执行做好准备。 有关详细信息，请参阅[安装 Windows 和 ConfigMgr](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr)。|  
+|启用 BitLocker|此步骤在硬盘上启用 BitLocker 加密并设置密钥保护程序。 因为用 BitLocker 预设置了硬盘，所以此步骤完成得非常快。 Windows 7 要求你添加密钥保护程序。 如果你未使用此步骤，则可以运行 manage-bde.exe 命令行工具来设置密钥保护程序。 有关详细信息，请参阅[启用 BitLocker](../understand/task-sequence-steps.md#BKMK_EnableBitLocker)。|  

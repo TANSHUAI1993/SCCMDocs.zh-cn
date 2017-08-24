@@ -1,6 +1,6 @@
 ---
-title: "監視作業系統部署 | Microsoft Docs"
-description: "Configuration Manager 主控台提供警示、報告和各種狀態指標，協助您監視作業系統部署物件。"
+title: "监视操作系统部署 | Microsoft Docs"
+description: "为帮助你监视操作系统部署对象，Configuration Manager 控制台提供了警报、报表和各种状态指示器。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -18,79 +18,79 @@ manager: angrobe
 ms.openlocfilehash: 154c0a286e6b9ccedc7545eb010967ac00d35407
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="monitor-operating-system-deployments-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中監視作業系統部署
+# <a name="monitor-operating-system-deployments-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中监视操作系统部署
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-Configuration Manager 主控台提供下列方式協助您監視作業系統部署物件。  
+Configuration Manager 控制台提供了以下方式来帮助你监视操作系统部署对象。  
 
 
-##  <a name="BKMK_OSDAlerts"></a> 作業系統部署警示  
- 您可以在工作順序部署設定中設定警示，在部署的相容性層級低於設定的百分比時通知系統管理使用者。  
+##  <a name="BKMK_OSDAlerts"></a> 操作系统部署警报  
+ 你可以在任务序列部署设置中配置警报，以便在部署符合性水平低于配置百分比时通知管理用户。  
 
- 進行警示設定後，如果指定的條件發生，Configuration Manager 就會產生警示。 您可以在下列位置檢閱工作順序部署警示：  
+ 配置警报设置后，如果出现指定的条件，则 Configuration Manager 会生成警报。 你可以在下列位置查看任务序列部署警报：  
 
-1.  在 [軟體程式庫]  工作區的 [作業系統]  節點中檢閱最近的警示。  
+1.  在“软件库”  工作区的“操作系统”  节点中查看最近警报。  
 
-2.  在 [監視]  工作區的 [警示]  節點中管理設定的警示。  
+2.  在“监视”  工作区的“警报”  节点中管理已配置的警报。  
 
-##  <a name="BKMK_TSDeployStatus"></a> 工作順序部署狀態  
- 部署工作順序之後，您可以監視部署狀態。 使用下列程序監視工作順序的部署狀態。  
+##  <a name="BKMK_TSDeployStatus"></a> 任务序列部署状态  
+ 部署任务序列后，你可以监视部署状态。 使用下列过程来监视任务序列的部署状态。  
 
-#### <a name="to-monitor-deployment-status"></a>若要監視部署狀態  
+#### <a name="to-monitor-deployment-status"></a>监视部署状态  
 
-1.  在 Configuration Manager 主控台中，按一下 [監視] 。  
+1.  在 Configuration Manager 控制台中，单击“监视” 。  
 
-2.  在 [監視] 工作區中，按一下 [部署] 。  
+2.  在“监视”工作区中，单击“部署” 。  
 
-3.  按一下要監視部署狀態的工作順序。  
+3.  单击要监视其部署状态的任务序列。  
 
-4.  在 [首頁]  索引標籤的 [部署]  群組中，按一下 [檢視狀態] 。  
+4.  在“主页”  选项卡上的“部署”  组中，单击“查看状态” 。  
 
-##  <a name="BKMK_TSReports"></a> 作業系統部署報告  
- 有許多預先定義的作業系統部署報告可供使用。 這些報告分成數種類別，可用以報告有關狀態移轉和工作順序部署的特定資訊。 除了使用預先設定的報告之外，您也可以根據企業需要建立自訂軟體更新報告。 如需詳細資訊，請參閱[報告作業和維護](../../core/servers/manage/operations-and-maintenance-for-reporting.md)。  
+##  <a name="BKMK_TSReports"></a> 操作系统部署报表  
+ 提供多个预定义的操作系统部署报表。 它们分为几个类别，可用于报告有关状态迁移和任务序列部署的特定信息。 除了使用预先配置的报表之外，还可以按照企业的需求创建自定义软件更新报表。 有关详细信息，请参阅[报表的操作和维护](../../core/servers/manage/operations-and-maintenance-for-reporting.md)。  
 
-##  <a name="BKMK_MonitorContent"></a> 監視內容  
- 您可以在 Configuration Manager 主控台中監視內容，檢閱與關聯發佈點相關之所有套件類型的狀態。 包括套件中內容的內容驗證狀態、指派至特定發佈點群組的內容狀態、指派至發佈點的內容狀態，以及每個發佈點的選用功能狀態 (內容驗證、PXE 和多點傳送)。  
+##  <a name="BKMK_MonitorContent"></a> 监视内容  
+ 可以在 Configuration Manager 控制台中监视内容，以查看与关联的分发点相关的所有包类型的状态。 这可以包括包中的内容的内容验证状态、分配给特定分发点组的内容的状态、分配给分发点的内容的状态和每个分发点的可选功能（内容验证、PXE 和多播）的状态。  
 
-###  <a name="BKMK_ContentStatus"></a> 內容狀態監視  
- [監視]  工作區中的 [內容狀態]  節點會提供有關內容套件的資訊。 您可以檢閱有關套件的一般資訊、套件的發佈狀態，以及有關套件的詳細狀態資訊。 利用下列程序可檢視內容狀態。  
+###  <a name="BKMK_ContentStatus"></a> 内容状态监视  
+ “监视”  工作区中的“内容状态”  节点提供有关内容包的信息。 可以查看有关包的常规信息、包的分发状态和有关包的详细状态信息。 使用下列过程来查看内容状态。  
 
-#### <a name="to-monitor-content-status"></a>若要監視內容狀態  
+#### <a name="to-monitor-content-status"></a>监视内容状态  
 
-1.  在 Configuration Manager 主控台中，按一下 [監視] 。  
+1.  在 Configuration Manager 控制台中，单击“监视” 。  
 
-2.  在 [監視] 工作區中，展開 [發佈狀態] ，然後按一下 [內容狀態] 。 套件便會顯示。  
+2.  在“监视”工作区中，展开“分发状态” ，然后单击“内容状态” 。 此时会显示包。  
 
-3.  選取要檢視其詳細狀態資訊的套件。  
+3.  选择要查看其详细状态信息的包。  
 
-4.  在 [首頁]  索引標籤上，按一下 [檢視狀態] 。 套件的詳細狀態資訊隨即顯示。  
+4.  在“主页”  选项卡上，单击“查看状态” 。 此时会显示包的详细状态信息。  
 
-###  <a name="BKMK_DPGroupStatus"></a> 發佈點群組狀態  
- [監視]  工作區中的 [發佈點群組狀態]  節點會提供有關發佈點群組的資訊。 您可以檢閱有關發佈點群組的一般資訊，例如發佈點群組狀態和相容性比率，以及發佈點群組的詳細狀態資訊。 利用下列程序可檢視發佈點群組狀態。  
+###  <a name="BKMK_DPGroupStatus"></a> 分发点组状态  
+ “监视”  工作区中的“分发点组状态”  节点提供有关分发点组的信息。 可以查看有关分发点组的常规信息（例如分发点组状态和符合性比率），以及分发点组的详细状态信息。 使用下列过程来查看分发点组状态。  
 
-#### <a name="to-monitor-distribution-point-group-status"></a>若要監視發佈點群組狀態  
+#### <a name="to-monitor-distribution-point-group-status"></a>监视分发点组状态  
 
-1.  在 Configuration Manager 主控台中，按一下 [監視] 。  
+1.  在 Configuration Manager 控制台中，单击“监视” 。  
 
-2.  在 [監視] 工作區中，展開 [發佈狀態] ，然後按一下 [發佈點群組狀態] 。 發佈點群組隨即顯示。  
+2.  在“监视”工作区中，展开“分发状态” ，然后单击“分发点组状态” 。 此时会显示分发点组。  
 
-3.  選取要檢視其詳細狀態資訊的發佈點群組。  
+3.  选择要查看其详细状态信息的分发点组。  
 
-4.  在 [首頁]  索引標籤上，按一下 [檢視狀態] 。 發佈點群組的詳細狀態資訊隨即顯示。  
+4.  在“主页”  选项卡上，单击“查看状态” 。 此时会显示分发点组的详细状态信息。  
 
-###  <a name="BKMK_DPConfigStatus"></a> 發佈點組態狀態  
- [監視]  工作區中的 [發佈點設定狀態]  節點會提供有關發佈點的資訊。 您可以檢閱已啟用的發佈點屬性，例如 PXE、多點傳送及內容驗證。 您也可以檢視發佈點的詳細狀態資訊。 利用下列程序可檢視發佈點設定狀態。  
+###  <a name="BKMK_DPConfigStatus"></a> 分发点配置状态  
+ “监视”  工作区中的“分发点配置状态”  节点提供有关分发点的信息。 可以查看为分发点启用的属性，例如 PXE、多播和内容验证。 还可以查看分发点的详细状态信息。 使用下列过程来查看分发点配置状态。  
 
-#### <a name="to-monitor-distribution-point-configuration-status"></a>若要監視發佈點設定狀態  
+#### <a name="to-monitor-distribution-point-configuration-status"></a>监视分发点配置状态  
 
-1.  在 Configuration Manager 主控台中，按一下 [監視] 。  
+1.  在 Configuration Manager 控制台中，单击“监视” 。  
 
-2.  在 [監視] 工作區中，展開 [發佈狀態] ，然後按一下 [發佈點設定狀態] 。 發佈點隨即顯示。  
+2.  在“监视”工作区中，展开“分发状态” ，然后单击“分发点配置状态” 。 此时会显示分发点。  
 
-3.  選取要檢視其發佈點狀態資訊的發佈點。  
+3.  选择要查看其分发点状态信息的分发点。  
 
-4.  在結果窗格中，按一下 [詳細資料]  索引標籤。 發佈點的狀態資訊隨即顯示。  
+4.  在结果窗格中，单击“详细信息”  选项卡。 此时会显示分发点的状态信息。  

@@ -1,6 +1,6 @@
 ---
-title: "Windows 用戶端防火牆和連接埠設定 | Microsoft Docs"
-description: "在 System Center Configuration Manager 中選取用戶端的 Windows 防火牆和連接埠設定。"
+title: "Windows 客户端的防火墙和端口设置 | Microsoft Docs"
+description: "在 System Center Configuration Manager 中选择客户端的 Windows 防火墙和端口设置。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -18,157 +18,157 @@ manager: angrobe
 ms.openlocfilehash: 79686514efcba344c4babc3d3be03b48adca7132
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="windows-firewall-and-port-settings-for-clients-in-system-center-configuration-manager"></a>System Center Configuration Manager 中用戶端適用的 Windows 防火牆和連接埠設定
+# <a name="windows-firewall-and-port-settings-for-clients-in-system-center-configuration-manager"></a>System Center Configuration Manager 中客户端的 Windows 防火墙和端口设置
 
-*適用對象：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager 中執行 Windows 防火牆的用戶端，通常需要您將其設定為例外，以允許它們與站台進行通訊。 您必須設定的例外，取決於您搭配 Configuration Manager 用戶端使用哪些管理功能。  
+System Center Configuration Manager 中运行 Windows 防火墙的客户端计算机通常需要配置例外，以便允许与它们的站点进行通信。 必须配置的例外取决于与 Configuration Manager 客户端一起使用的管理功能。  
 
- 使用以下各節識別這些管理功能，以及取得有關如何在 Windows 防火牆設定這些例外的詳細資訊。  
+ 使用下列部分来确定这些管理功能，并了解有关如何为这些例外配置 Windows 防火墙的详细信息。  
 
-##  <a name="BKMK_ModifyingWindowsFirewall"></a> 修改 Windows 防火牆准許的連接埠和程式  
- 使用下列程序可在 Windows 防火牆上為 Configuration Manager 用戶端修改連接埠和程式。  
+##  <a name="BKMK_ModifyingWindowsFirewall"></a> 修改 Windows 防火墙允许的端口和程序  
+ 使用下列过程在 Windows 防火墙上为 Configuration Manager 客户端修改端口和程序。  
 
-#### <a name="to-modify-the-ports-and-programs-permitted-by-windows-firewall"></a>修改 Windows 防火牆准許的連接埠和程式  
+#### <a name="to-modify-the-ports-and-programs-permitted-by-windows-firewall"></a>修改 Windows 防火墙允许的端口和程序  
 
-1.  在執行 Windows 防火牆的電腦上開啟 [控制台]。  
+1.  在运行 Windows 防火墙的计算机上，打开“控制面板”。  
 
-2.  以滑鼠右鍵按一下 [Windows 防火牆] ，然後按一下 [開啟] 。  
+2.  右键单击“Windows 防火墙” ，再单击“打开” 。  
 
-3.  設定必要的例外，以及所需的自訂程式和連接埠。  
+3.  配置任何必需的例外，以及你需要的任何自定义程序和端口。  
 
-## <a name="programs-and-ports-that-configuration-manager-requires"></a>Configuration Manager 所需的程式和連接埠  
- 下列 Configuration Manager 功能需要 Windows 防火牆上的例外：  
+## <a name="programs-and-ports-that-configuration-manager-requires"></a>Configuration Manager 所需的程序和端口  
+ 以下 Configuration Manager 功能需要在 Windows 防火墙上配置例外：  
 
-### <a name="queries"></a>查詢  
- 如果您在執行 Windows 防火牆的電腦上執行 Configuration Manager 主控台，則第一次執行的查詢會失敗，且作業系統會顯示一個對話方塊，詢問您是否要解除封鎖 statview.exe。 如果您解除封鎖 statview.exe，將可順利執行以後的查詢，不會發生錯誤。 您也可以在執行查詢前，於 Windows 防火牆的 [例外]  索引標籤上手動將 Statview.exe 新增至程式和服務清單。  
+### <a name="queries"></a>查询  
+ 如果在运行 Windows 防火墙的计算机上运行 Configuration Manager 控制台，则在初次运行查询时会失败，而且操作系统会显示一个对话框，询问是否想取消阻止 statview.exe。 如果取消阻止，则以后运行的查询不会遇到错误。 在运行查询之前，也可以在 Windows 防火墙的“例外”  选项卡上手动将 Statview.exe 添加到程序和服务列表中。  
 
-### <a name="client-push-installation"></a>用戶端推入安裝  
- 若要使用用戶端推入來安裝 Configuration Manager 用戶端，請將以下例外新增至 Windows 防火牆：  
+### <a name="client-push-installation"></a>客户端请求安装  
+ 若要使用客户端请求来安装 Configuration Manager 客户端，请将下列项目作为例外添加到 Windows 防火墙中：  
 
--   傳出和傳入：檔案及印表機共用   
+-   出站和入站：“文件和打印机共享”   
 
--   傳入：Windows Management Instrumentation (WMI)   
+-   入站：“Windows Management Instrumentation (WMI)”   
 
-### <a name="client-installation-by-using-group-policy"></a>使用群組原則安裝用戶端  
- 若要使用群組原則安裝 Configuration Manager 用戶端，請在 Windows 防火牆新增 [檔案及印表機共用] 以當作例外。  
+### <a name="client-installation-by-using-group-policy"></a>使用组策略进行的客户端安装  
+ 若要使用组策略安装 Configuration Manager 客户端，请将“文件和打印机共享”作为例外添加到 Windows 防火墙中。  
 
-### <a name="client-requests"></a>用戶端要求  
- 若要讓用戶端電腦與 Configuration Manager 站台系統進行通訊，請在 Windows 防火牆新增下列各項以當作例外：  
+### <a name="client-requests"></a>客户端请求  
+ 为使客户端计算机能与 Configuration Manager 站点系统通信，请将下列项目作为例外添加到 Windows 防火墙中：  
 
- 傳出：TCP 連接埠 80  (適用於 HTTP 通訊)  
+ 出站：TCP 端口 **80** （用于 HTTP 通信）  
 
- 傳出：TCP 連接埠 443  (適用於 HTTPS 通訊)  
-
-> [!IMPORTANT]  
->  這些連接埠為預設的連接埠號碼，可在 Configuration Manager 中變更。 如需詳細資訊，請參閱[如何在 System Center Configuration Manager 中設定用戶端通訊連接埠](../../../core/clients/deploy/configure-client-communication-ports.md)。 如果這些連接埠已變更為非預設值，您也必須在 Windows 防火牆設定相符的例外。  
-
-### <a name="client-notification"></a>用戶端通知  
- 若要讓管理點通知用戶端電腦有關其必須在系統管理使用者在 Configuration Manager 主控台選取用戶端動作時採取某項動作 (例如下載電腦原則或起始惡意程式碼掃描)，請在 Windows 防火牆新增下列各項以當作例外：  
-
- 傳出：TCP 連接埠 10123   
-
- 如果此通訊不成功，Configuration Manager 會自動改回使用現有 HTTP 或 HTTPS 的用戶端對管理點通訊連接埠：  
-
- 傳出：TCP 連接埠 80  (適用於 HTTP 通訊)  
-
- 傳出：TCP 連接埠 443  (適用於 HTTPS 通訊)  
+ 出站：TCP 端口 **443** （用于 HTTPS 通信）  
 
 > [!IMPORTANT]  
->  這些連接埠為預設的連接埠號碼，可在 Configuration Manager 中變更。 如需詳細資訊，請參閱[如何在 System Center Configuration Manager 中設定用戶端通訊連接埠](../../../core/clients/deploy/configure-client-communication-ports.md)。 如果這些連接埠已變更為非預設值，您也必須在 Windows 防火牆設定相符的例外。  
+>  这些为默认端口号，可在 Configuration Manager 中进行更改。 有关详细信息，请参阅[如何在 System Center Configuration Manager 中配置客户端通信端口](../../../core/clients/deploy/configure-client-communication-ports.md)。 如果已更改了这些端口的默认值，则还必须在 Windows 防火墙上配置相应的例外。  
 
-### <a name="remote-control"></a>遠端控制  
- 若要使用 Configuration Manager 遠端控制，請允許下列連接埠：  
+### <a name="client-notification"></a>客户端通知  
+ 当管理用户在 Configuration Manager 控制台中选择了客户端操作时（例如下载计算机策略或启动恶意软件扫描），为使管理点能将它必须执行的操作通知客户端计算机，请将下列项目作为例外添加到 Windows 防火墙中：  
 
--   傳入：TCP 連接埠 2701  
+ 出站：TCP 端口 **10123**  
 
-### <a name="remote-assistance-and-remote-desktop"></a>遠端協助和遠端桌面  
- 若要從 Configuration Manager 主控台起始 [遠端協助]，請在用戶端電腦的 Windows 防火牆將自訂程式 **Helpsvc.exe** 和輸入自訂連接埠 TCP **135** 新增至准許的程式和服務清單中。 您也必須准許 [遠端協助]  和 [遠端桌面] 。 如果您從用戶端電腦起始 [遠端協助]，Windows 防火牆會自動設定並准許 [遠端協助]  和 [遠端桌面] 。  
+ 如果此通信不成功，则 Configuration Manager 会自动恢复使用现有的客户端到管理点 HTTP 或 HTTPS 通信端口：  
 
-### <a name="wake-up-proxy"></a>喚醒 Proxy  
- 如果您啟用喚醒 Proxy 用戶端設定，則會使用一個名為 ConfigMgr Wake-up Proxy 的新服務，透過點對點通訊協定檢查子網路上的其他電腦是否為執行中狀態，並視需要喚醒這些電腦。 這類通訊會使用下列連接埠：  
+ 出站：TCP 端口 **80** （用于 HTTP 通信）  
 
- 傳出：UDP 連接埠 25536   
-
- 傳出：UDP 連接埠 9   
-
- 這些連接埠號碼為預設值，可在 Configuration Manager 中使用 [喚醒 Proxy 連接埠號碼 (UDP)] 和 [網路喚醒連接埠號碼 (UDP)] 的 [電源管理] 用戶端設定進行變更。 如果您指定 [電源管理] ：[喚醒 Proxy 的 Windows 防火牆例外]  用戶端設定，會自動在 Windows 防火牆為用戶端設定這些連接埠。 不過，如果用戶端執行不同的防火牆，您必須手動將這些連接埠號碼設定為例外。  
-
- 除了這些連接埠，喚醒 Proxy 也會在用戶端電腦之間使用網際網路控制訊息通訊協定 (ICMP) 回應要求訊息。 此通訊用於確認網路上的另一台用戶端電腦是否處於喚醒狀態。 ICMP 有時稱為 TCP/IP Ping 命令。  
-
- 如需喚醒 Proxy 的詳細資訊，請參閱[規劃如何在 System Center Configuration Manager 中喚醒用戶端](../../../core/clients/deploy/plan/plan-wake-up-clients.md)。  
-
-### <a name="windows-event-viewer-windows-performance-monitor-and-windows-diagnostics"></a>Windows 事件檢視器、Windows 效能監視器和 Windows 診斷  
- 若要從 Configuration Manager 主控台存取 Windows 事件檢視器、Windows 效能監視器和 Windows 診斷，請在 Windows 防火牆將 [檔案及印表機共用] 設為例外。  
-
-## <a name="ports-used-during-configuration-manager-client-deployment"></a>Configuration Manager 用戶端部署期間使用的連接埠  
- 下表列出用戶端安裝程序執行期間使用的連接埠。  
+ 出站：TCP 端口 **443** （用于 HTTPS 通信）  
 
 > [!IMPORTANT]  
->  如果站台系統和用戶端電腦之間有防火牆，請確認防火牆是否准許您所選用戶端安裝方法所需連接埠的流量通過。 例如，防火牆通常會阻止用戶端推入安裝無法順利執行，因為防火牆會封鎖伺服器訊息區 (SMB) 和遠端程序呼叫 (RPC)。 在此案例中，請使用不同的用戶端安裝方法，例如手動安裝 (執行 CCMSetup.exe) 或以群組原則為基礎的用戶端安裝。 這些替代用戶端安裝方法不需要 SMB 或 RPC。  
+>  这些为默认端口号，可在 Configuration Manager 中进行更改。 有关详细信息，请参阅[如何在 System Center Configuration Manager 中配置客户端通信端口](../../../core/clients/deploy/configure-client-communication-ports.md)。 如果已更改了这些端口的默认值，则还必须在 Windows 防火墙上配置相应的例外。  
 
- 如需有關如何在用戶端電腦上設定 Windows 防火牆的資訊，請參閱 [修改 Windows 防火牆准許的連接埠和程式](#BKMK_ModifyingWindowsFirewall)。  
+### <a name="remote-control"></a>远程控制  
+ 若要使用 Configuration Manager 远程控制，请开放以下端口：  
 
-### <a name="ports-that-are-used-for-all-installation-methods"></a>所有安裝方法使用的連接埠  
+-   入站：TCP 端口**2701**  
 
-|說明|UDP|TCP|  
+### <a name="remote-assistance-and-remote-desktop"></a>远程协助和远程桌面  
+ 若要通过 Configuration Manager 控制台启动远程协助，请在客户端计算机上的 Windows 防火墙中，将自定义程序 **Helpsvc.exe** 和自定义入站端口 TCP **135** 添加到允许的程序和服务列表中。 还必须允许“远程协助”  和“远程桌面” 。 如果从客户端计算机启动远程协助，则 Windows 防火墙会自动配置并允许“远程协助”  和“远程桌面” 。  
+
+### <a name="wake-up-proxy"></a>唤醒代理  
+ 如果启用唤醒代理客户端设置，则名为“ConfigMgr 唤醒代理”的新服务会使用对等协议来检查子网上的其他计算机是否处于唤醒状态，并根据需要唤醒它们。 此通信使用下列端口：  
+
+ 出站：UDP 端口 **25536**  
+
+ 出站：UDP 端口 **9**  
+
+ 通过使用“唤醒代理端口号 (UDP)”和“LAN 唤醒端口号 (UDP)”的“电源管理”客户端设置可在 Configuration Manager 中更改这些默认端口号。 如果你指定“电源管理” ：“针对唤醒代理的 Windows 防火墙例外”  客户端设置，则将在 Windows 防火墙中为客户端自动配置这些端口。 但是，如果客户端运行另一个防火墙，则你必须手动为这些端口号配置例外。  
+
+ 除了使用这些端口之外，唤醒代理还使用 Internet 控制消息协议 (ICMP) 来回显在客户端计算机之间发送的请求消息。 此通信用于确认网络上的另一台客户端计算机是否处于唤醒状态。 ICMP 有时称为 TCP/IP ping 命令。  
+
+ 有关唤醒代理的详细信息，请参阅[规划如何在 System Center Configuration Manager 中唤醒客户端](../../../core/clients/deploy/plan/plan-wake-up-clients.md)。  
+
+### <a name="windows-event-viewer-windows-performance-monitor-and-windows-diagnostics"></a>Windows 事件查看器、Windows 性能监视器和 Windows 诊断  
+ 若要从 Configuration Manager 控制台中访问 Windows 事件查看器、Windows 性能监视器和 Windows 诊断，请在 Windows 防火墙中将“文件和打印机共享”作为例外进行启用。  
+
+## <a name="ports-used-during-configuration-manager-client-deployment"></a>Configuration Manager 客户端部署期间使用的端口  
+ 下表列出了客户端安装过程中使用的端口。  
+
+> [!IMPORTANT]  
+>  如果站点系统服务器与客户端计算机之间存在防火墙，请确认防火墙是否允许您选择的客户端安装方法所需的端口进出流量。 例如，防火墙经常会阻止客户端请求安装继续进行，因为防火墙会阻止服务器消息块 (SMB) 和远程过程调用 (RPC)。 在此情况下，请使用其他客户端安装方法，如手动安装（运行 CCMSetup.exe）或基于组策略的客户端安装。 这些替代客户端安装方法不需要 SMB 或 RPC。  
+
+ 有关如何在客户端计算机上配置 Windows 防火墙的信息，请参阅 [修改 Windows 防火墙允许的端口和程序](#BKMK_ModifyingWindowsFirewall)。  
+
+### <a name="ports-that-are-used-for-all-installation-methods"></a>用于所有安装方法的端口  
+
+|描述|UDP|TCP|  
 |-----------------|---------|---------|  
-|若已為用戶端指派後援狀態點，則從用戶端電腦到後援狀態點都會使用超文字傳輸協定 (HTTP)。|--|80 (請參閱附註 1， **可用的替代連接埠**)|  
+|为客户端分配回退状态点时用于从客户端计算机向回退状态点进行传输的超文本传输协议 (HTTP)。|--|80（请参阅备注 1， **可用的备用端口**）|  
 
-### <a name="ports-that-are-used-with-client-push-installation"></a>搭配用戶端推入安裝使用的連接埠  
- 除了下表所列的連接埠，用戶端推入安裝也會在站台伺服器與用戶端電腦之間使用網際網路控制訊息通訊協定 (ICMP) 回應要求訊息，確認網路上是否存在該用戶端電腦。 ICMP 有時稱為 TCP/IP Ping 命令。 ICMP 沒有 UDP 或 TCP 通訊協定號碼，因此未列在下表中。 不過，任何中介網路裝置 (如防火牆) 都必須准許 ICMP 流量，才可順利進行用戶端推入安裝。  
+### <a name="ports-that-are-used-with-client-push-installation"></a>用于客户端请求安装的端口  
+ 除了使用下表中列出的端口之外，客户端请求安装还使用站点服务器向客户端计算机发出的 Internet 控制消息协议 (ICMP) 回显请求消息来确认网络上是否有客户端计算机。 ICMP 有时称为 TCP/IP ping 命令。 ICMP 没有 UDP 或 TCP 协议号，因此未在下表中列出。 但是，为了使客户端请求安装成功，任何干预网络设备（如防火墙）都必须容许 ICMP 流量。  
 
-|說明|UDP|TCP|  
+|描述|UDP|TCP|  
 |-----------------|---------|---------|  
-|站台伺服器和用戶端電腦之間的伺服器訊息區 (SMB)。|--|445|  
-|站台伺服器和用戶端電腦之間的 RPC 端點對應程式。|135|135|  
-|站台伺服器和用戶端電腦之間的 RPC 動態連接埠。|--|動態|  
-|若透過 HTTP 連線，則從用戶端電腦到管理點都會使用超文字傳輸協定 (HTTP)。|--|80 (請參閱附註 1， **可用的替代連接埠**)|  
-|若透過 HTTPS 連線，則從用戶端電腦到管理點都會使用超文字傳輸協定 (HTTPS)。|--|433 (請參閱註 1， **可用的替代連接埠**)|  
+|站点服务器与客户端计算机之间的服务器消息块 (SMB)。|--|445|  
+|站点服务器与客户端计算机之间的 RPC 终结点映射程序。|135|135|  
+|站点服务器与客户端计算机之间的 RPC 动态端口。|--|DYNAMIC|  
+|在通过超文本传输协议 (HTTP) 进行连接时，用于从客户端计算机连接到管理点的 HTTP。|--|80（请参阅备注 1， **可用的备用端口**）|  
+|在通过安全超文本传输协议 (HTTPS) 进行连接时，用于从客户端计算机连接到管理点的 HTTPS。|--|433（请参阅备注 1， **可用的备用端口**）|  
 
-### <a name="ports-that-are-used-with-software-update-point-based-installation"></a>搭配以軟體更新點為基礎之安裝所使用的連接埠  
+### <a name="ports-that-are-used-with-software-update-point-based-installation"></a>用于基于软件更新点的安装的端口  
 
-|說明|UDP|TCP|  
+|描述|UDP|TCP|  
 |-----------------|---------|---------|  
-|從用戶端電腦到軟體更新點的超文字傳輸協定 (HTTP)。|--|80 或 8530 (請參閱附註 2， **Windows Server Update Services**)|  
-|從用戶端電腦到軟體更新點的安全超文字傳輸通訊協定 (HTTP)。|--|443 或 8531 (請參閱附註 2， **Windows Server Update Services**)|  
-|當您指定 CCMSetup 命令列內容 **/source:&lt;路徑\>** 時，來源伺服器和用戶端電腦間會使用伺服器訊息區 (SMB)。|--|445|  
+|用于从客户端计算机向软件更新点进行传输的超文本传输协议 (HTTP)。|--|80 或 8530（请参阅备注 2， **Windows Server Update Services**）|  
+|用于从客户端计算机向软件更新点进行传输的安全超文本传输协议 (HTTPS)。|--|443 或 8531（请参阅备注 2， **Windows Server Update Services**）|  
+|指定 CCMSetup 命令行属性 **/source:&lt;Path\>** 时源服务器与客户端计算机之间的服务器消息块 (SMB)。|--|445|  
 
-### <a name="ports-that-are-used-with-group-policy-based-installation"></a>搭配以群組原則為基礎之安裝所使用的連接埠  
+### <a name="ports-that-are-used-with-group-policy-based-installation"></a>用于基于组策略的安装的端口  
 
-|說明|UDP|TCP|  
+|描述|UDP|TCP|  
 |-----------------|---------|---------|  
-|若透過 HTTP 連線，則從用戶端電腦到管理點都會使用超文字傳輸協定 (HTTP)。|--|80 (請參閱附註 1， **可用的替代連接埠**)|  
-|若透過 HTTPS 連線，則從用戶端電腦到管理點都會使用超文字傳輸協定 (HTTPS)。|--|433 (請參閱註 1， **可用的替代連接埠**)|  
-|當您指定 CCMSetup 命令列內容 **/source:&lt;路徑\>** 時，來源伺服器和用戶端電腦間會使用伺服器訊息區 (SMB)。|--|445|  
+|在通过超文本传输协议 (HTTP) 进行连接时，用于从客户端计算机连接到管理点的 HTTP。|--|80（请参阅备注 1， **可用的备用端口**）|  
+|在通过安全超文本传输协议 (HTTPS) 进行连接时，用于从客户端计算机连接到管理点的 HTTPS。|--|433（请参阅备注 1， **可用的备用端口**）|  
+|指定 CCMSetup 命令行属性 **/source:&lt;Path\>** 时源服务器与客户端计算机之间的服务器消息块 (SMB)。|--|445|  
 
-### <a name="ports-that-are-used-with-manual-installation-and-logon-script-based-installation"></a>搭配手動安裝和以登入指令碼為基礎之安裝所使用的連接埠  
+### <a name="ports-that-are-used-with-manual-installation-and-logon-script-based-installation"></a>用于手动安装和基于登录脚本的安装的端口  
 
-|說明|UDP|TCP|  
+|描述|UDP|TCP|  
 |-----------------|---------|---------|  
-|在執行 CCMSetup.exe 之用戶端電腦和網路共用之間的伺服器訊息區 (SMB)。<br /><br /> 當您安裝 Configuration Manager 時，會從管理點的 *&lt;安裝路徑\>*\Client 資料夾複製用戶端安裝來源檔案，並自動共用。 不過，您可以在網路的任何電腦上複製這些檔案，並建立新共用。 此外，您可以在本機執行 CCMSetup.exe (例如使用卸除式媒體)，以避免產生此網路流量。|--|445|  
-|當您透過 HTTP 連線，且未指定 CCMSetup 命令列內容 **/source:&lt;路徑\>** 時，從用戶端電腦到管理點都會使用超文字傳輸通訊協定 (HTTP)。|--|80 (請參閱附註 1， **可用的替代連接埠**)|  
-|當您透過 HTTPS 連線，且未指定 CCMSetup 命令列內容 **/source:&lt;路徑\>** 時，從用戶端電腦到管理點都會使用安全超文字傳輸通訊協定 (HTTPS)。|--|433 (請參閱註 1， **可用的替代連接埠**)|  
-|當您指定 CCMSetup 命令列內容 **/source:&lt;路徑\>** 時，來源伺服器和用戶端電腦間會使用伺服器訊息區 (SMB)。|--|445|  
+|客户端计算机与从中运行 CCMSetup.exe 的网络共享之间的服务器消息块 (SMB)。<br /><br /> 安装 Configuration Manager 时，会从管理点上的 &lt;InstallationPath\>\Client 文件夹中复制客户端安装源文件并自动共享这些文件。 但是，您可以在网络上的任何计算机上复制这些文件并创建新共享。 或者，您可以通过以本地方式运行 CCMSetup.exe 来消除此网络流量，例如，使用可移动媒体。|--|445|  
+|通过超文本传输协议 (HTTP) 进行连接且未指定 CCMSetup 命令行属性 **/source:&lt;Path\>** 时，用于从客户端计算机连接到管理点的 HTTP。|--|80（请参阅备注 1， **可用的备用端口**）|  
+|通过安全超文本传输协议 (HTTPS) 进行连接且未指定 CCMSetup 命令行属性 **/source:&lt;Path\>** 时，用于从客户端计算机连接到管理点的 HTTPS。|--|433（请参阅备注 1， **可用的备用端口**）|  
+|指定 CCMSetup 命令行属性 **/source:&lt;Path\>** 时源服务器与客户端计算机之间的服务器消息块 (SMB)。|--|445|  
 
-### <a name="ports-that-are-used-with-software-distribution-based-installation"></a>搭配以軟體發佈為基礎之安裝所使用的連接埠  
+### <a name="ports-that-are-used-with-software-distribution-based-installation"></a>用于基于软件分发的安装的端口  
 
-|說明|UDP|TCP|  
+|描述|UDP|TCP|  
 |-----------------|---------|---------|  
-|發佈點和用戶端電腦之間的伺服器訊息區 (SMB)。|--|445|  
-|若透過 HTTP 連線，則從用戶端到發佈點都會使用超文字傳輸協定 (HTTP)。|--|80 (請參閱附註 1， **可用的替代連接埠**)|  
-|若透過 HTTPS 連線，則從用戶端到發佈點都會使用安全超文字傳輸協定 (HTTPS)。|--|433 (請參閱註 1， **可用的替代連接埠**)|  
+|分发点与客户端计算机之间的服务器消息块 (SMB)。|--|445|  
+|在通过超文本传输协议 (HTTP) 进行连接时，用于从客户端连接到分发点的 HTTP。|--|80（请参阅备注 1， **可用的备用端口**）|  
+|在通过安全超文本传输协议 (HTTPS) 进行连接时，用于从客户端连接到分发点的 HTTPS。|--|433（请参阅备注 1， **可用的备用端口**）|  
 
-## <a name="notes"></a>附註  
- **1 可用的替代連接埠** 在 Configuration Manager 中，您可以定義此值的替代連接埠。 如果已定義自訂連接埠，便可以在您定義 IPsec 原則的 IP 篩選資訊或設定防火牆時，替換該自訂連接埠。  
+## <a name="notes"></a>注意  
+ **1 可用的备用端口** 在 Configuration Manager 中，您可以为此值定义备用端口。 如果定义了自定义端口，则为 IPsec 策略或为配置防火墙定义 IP 筛选器信息时将替代该自定义端口。  
 
- **2 Windows Server Update Services** 您可以在預設網站 (連接埠 80) 或自訂網站 (連接埠 8530) 安裝 Windows Server Update Service (WSUS)。  
+ **2 Windows Server Update Services** 你可以在默认网站（端口 80）或自定义网站（端口 8530）上安装 Windows Server Update Services (WSUS)。  
 
- 安裝後，即可變更連接埠。 您不需要在整個網站階層都使用相同的連接埠號碼。  
+ 安装后，您可以更改端口。 不必在整个站点层次结构中使用相同的端口号。  
 
- 如果 HTTP 連接埠是80，HTTPS 連接埠必須是 443。  
+ 如果 HTTP 端口为 80，则 HTTPS 端口必须为 443。  
 
- 如果 HTTP 連接埠使用其他任何號碼，則 HTTPS 連接埠必須是該連接埠號碼加 1。 例如，8530 和 8531。
+ 如果 HTTP 端口为其他端口，则 HTTPS 端口必须大 1。 例如 8530 和 8531。

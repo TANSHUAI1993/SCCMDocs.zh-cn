@@ -1,6 +1,6 @@
 ---
-title: "作業系統部署的基礎結構需求 | Microsoft Docs"
-description: "在使用 System Center 2012 Configuration Manager 作業系統部署之前，請務必先了解外部相依性及產品的相依性。"
+title: "操作系统部署的基础结构要求 | Microsoft Docs"
+description: "使用 System Center 2012 Configuration Manager 部署操作系统前，确保已了解外部依赖关系和产品依赖关系。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -17,227 +17,227 @@ manager: angrobe
 ms.openlocfilehash: 167e639cdb9995fd743787cc9fbf364ec70f6ed9
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="infrastructure-requirements-for-operating-system-deployment-in-system-center-configuration-manager"></a>System Center Configuration Manager 中作業系統部署的基礎結構需求
+# <a name="infrastructure-requirements-for-operating-system-deployment-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的操作系统部署的基础架构要求
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-System Center 2012 Configuration Manager 中的作業系統部署具有外部相依性和產品中的相依性。 使用下列章節可協助您做好作業系統部署的準備。  
+System Center 2012 Configuration Manager 中的操作系统部署具有外部依赖关系和产品内依赖关系。 使用以下部分的内容帮助你准备操作系统的部署。  
 
-##  <a name="BKMK_ExternalDependencies"></a> Configuration Manager 外部的相依性  
- 以下為在 Configuration Manager 中部署作業系統所需之外部工具、安裝套件及作業系統的資訊。  
+##  <a name="BKMK_ExternalDependencies"></a> Configuration Manager 的外部依赖关系  
+ 下面提供了有关在 Configuration Manager 中部署操作系统所需的外部工具、安装工具包和操作系统的信息。  
 
-### <a name="windows-adk-for-windows-10"></a>Windows ADK for Windows 10  
- Windows ADK 是一組工具和文件，支援設定及部署 Windows 作業系統。 Configuration Manager 會使用 Windows ADK 自動化 Windows 安裝、擷取 Windows 映像、進行使用者設定檔和資料移轉等作業。  
+### <a name="windows-adk-for-windows-10"></a>适用于 Windows 10 的 Windows ADK  
+ Windows ADK 是一组工具和文档，为 Windows 操作系统的配置和部署提供支持。 Configuration Manager 使用 Windows ADK 来自动完成 Windows 安装、捕获 Windows 映像、迁移用户配置文件和数据，诸如此类。  
 
- 下列 Windows ADK 功能必須安裝到階層中頂層網站的站台伺服器、階層中每個主要站台的站台伺服器，以及 SMS 提供者站台系統伺服器上：  
+ 必须在层次结构的顶层站点的站点服务器上、层次结构中每个主站点的站点服务器上以及 SMS 提供程序站点系统服务器上安装 Windows ADK 的以下功能：  
 
--   使用者狀態移轉工具 (USMT) <sup>1</sup>  
+-   用户状态迁移工具 (USMT) <sup>1</sup>  
 
 -   Windows 部署工具  
 
--   Windows 預先安裝環境 (Windows PE)
+-   Windows 预安装环境 (Windows PE)
 
-如需可搭配不同 Configuration Manager 版本使用的 Windows 10 ADK 版本清單，請參閱[對 Windows 10 用戶端的支援](https://docs.microsoft.com/en-us/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk)。
+有关可对不同版本 Configuration Manager 使用的 Windows 10 ADK 版本列表，请参阅[对作为客户端的 Windows 10 的支持](https://docs.microsoft.com/en-us/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk)。
 
- <sup>1</sup> USMT 在 SMS 提供者站台系統伺服器上並不需要。  
+ <sup>1</sup> SMS 提供程序站点系统服务器上不需要 USMT。  
 
 > [!NOTE]  
->  您必須先在每一部要裝載管理中心網站和主要站台伺服器的電腦上手動安裝 Windows ADK，再安裝 Configuration Manager 站台。  
+>  在安装 Configuration Manager 站点之前，必须在每台计算机上手动安装 Windows ADK，这些计算机将托管管理中心站点或主站点服务器。  
 
- 如需詳細資訊，請參閱：  
+ 有关详情，请参阅：  
 
--   [給 IT 專業人員，適用於 Windows 10 的 Windows ADK 案例](https://technet.microsoft.com/library/mt280162\(v=vs.85\).aspx)  
+-   [面向 IT 专业人员的适用于 Windows 10 方案的 Windows ADK](https://technet.microsoft.com/library/mt280162\(v=vs.85\).aspx)  
 
--   [下載適用於 Windows 10 的 Windows ADK](https://msdn.microsoft.com/windows/hardware/dn913721.aspx#adkwin10)  
+-   [下载适用于 Windows 10 的 Windows ADK](https://msdn.microsoft.com/windows/hardware/dn913721.aspx#adkwin10)  
 
--   [Windows 10 的支援](/sccm/core/plan-design/configs/support-for-windows-10)  
+-   [支持 Windows 10](/sccm/core/plan-design/configs/support-for-windows-10)  
 
 
-### <a name="user-state-migration-tool-usmt"></a>使用者狀態移轉工具 (USMT)  
- Configuration Manager 會使用包含 USMT 10 來源檔案的 USMT 套件來擷取使用者狀態，並在作業系統部署過程中將其還原。 Configuration Manager 安裝程式會自動在頂層站台建立 USMT 套件。 USMT 10 可以從 Windows 7、Windows 8、Windows 8.1 及 Windows 10 擷取使用者狀態。 USMT 10 發佈於適用於 Windows 10 的 Windows 評定及部署套件 (Windows ADK) 中。  
+### <a name="user-state-migration-tool-usmt"></a>用户状态迁移工具 (USMT)  
+ Configuration Manager 使用包含 USMT 10 源文件的 USMT 包在操作系统部署过程中捕获和还原用户状态。 位于顶层站点的 Configuration Manager 安装程序将自动创建 USMT 包。 USMT 10 可以捕获 Windows 7、Windows 8、Windows 8.1 和 Windows 10 中的用户状态。 在适用于 Windows 10 的 Windows 评估和部署工具包 (Windows ADK) 中分发 USMT 10。  
 
- 如需詳細資訊，請參閱：  
+ 有关详情，请参阅：  
 
--   [USMT 10 的常見移轉案例](https://technet.microsoft.com/library/mt299169\(v=vs.85\).aspx)  
+-   [USMT 10 的常见迁移方案](https://technet.microsoft.com/library/mt299169\(v=vs.85\).aspx)  
 
--   [管理使用者狀態](../get-started/manage-user-state.md)  
+-   [管理用户状态](../get-started/manage-user-state.md)  
 
 ### <a name="windows-pe"></a>Windows PE  
- Windows PE 用於開機映像，以啟動電腦。 它是提供有限服務的 Windows 作業系統，會在預先安裝和部署 Windows 作業系統的過程中使用。 以下提供 Configuration Manager 版本、支援的 Windows ADK 版本，以及開機映像 (包括可從 Configuration Manager 主控台自訂的開機映像，以及可以使用 DISM 自訂然後新增映像到指定 Configuration Manager 版本的開機映像) 所依據的 Windows PE 版本。  
+ Windows PE 用于引导映像以启动计算机。 它是一种提供有限服务的 Windows 操作系统，在 Windows 操作系统的预安装和部署过程中使用。 下面提供了 Configuration Manager 的版本、受支持的 Windows ADK 版本、启动映像所基于的 Windows PE 版本（可在 Configuration Manager 控制台中自定义），以及启动映像所基于的 Windows PE 版本（可使用 DISM 自定义，然后将映像添加到 Configuration Manager 指定版本）。  
 
-#### <a name="configuration-manager-version-1511"></a>Configuration Manager 1511 版  
- 以下提供支援的 Windows ADK 版本，以及開機映像 (包括可從 Configuration Manager 主控台自訂的開機映像，以及可以使用 DISM 自訂然後新增映像到指定 Configuration Manager 版本的開機映像) 所依據的 Windows PE 版本。  
+#### <a name="configuration-manager-version-1511"></a>Configuration Manager 版本 1511  
+ 下面提供了受支持的 Windows ADK 版本、可在 Configuration Manager 控制台中自定义的启动映像所基于的 Windows PE 版本，以及可使用 DISM 自定义，然后将映像添加到 Configuration Manager 的启动映像所基于的 Windows PE 版本。  
 
 -   **Windows ADK 版本**  
 
-     Windows ADK for Windows 10  
+     适用于 Windows 10 的 Windows ADK  
 
--   **可從 Configuration Manager 主控台自訂之開機映像的 Windows PE 版本**  
+-   **可从 Configuration Manager 控制台中自定义的启动映像的 Windows PE 版本**  
 
      Windows PE 10  
 
--   **無法從 Configuration Manager 主控台自訂之開機映像的支援 Windows PE 版本**  
+-   **不可从 Configuration Manager 控制台中自定义的启动映像的 Windows PE 支持版本**  
 
      Windows PE 3.1<sup>1</sup> 和 Windows PE 5  
 
-     <sup>1</sup> 只有當開機映像以 Windows PE 3.1 為基礎時，您才能將開機映像新增至 Configuration Manager。 請安裝適用於 Windows 7 SP1 的 Windows AIK 補充元件，以便使用適用於 Windows 7 SP1 的 Windows AIK 補充元件 (以 Windows PE 3.1 為基礎) 來升級適用於 Windows 7 的 Windows AIK (以 Windows PE 3 為基礎)。 您可以從 [Microsoft 下載中心](http://www.microsoft.com/download/details.aspx?id=5188)下載適用於 Windows 7 SP1 的 Windows AIK 補充元件。  
+     <sup>1</sup> 只有当启动映像基于 Windows PE 3.1 时才能将该映像添加到 Configuration Manager 中。 安装适用于 Windows 7 SP1 的 Windows AIK 补充，以使用适用于 Windows 7 SP1（基于 Windows PE 3.1）的 Windows AIK 补充升级适用于 Windows 7（基于 Windows PE 3）的 Windows AIK。 你可以从 [Microsoft 下载中心](http://www.microsoft.com/download/details.aspx?id=5188)下载适用于 Windows 7 SP1 的 Windows AIK 补充。  
 
-     例如，當您有 Configuration Manager 時，便可從 Configuration Manager 主控台，使用適用於 Windows 10 的 Windows ADK (以 Windows PE 10 為基礎) 來自訂開機映像。 不過，若支援以 Windows PE 5 為基礎的開機映像，您必須從不同的電腦自訂開機映像，並使用與 Windows ADK for Windows 8 一起安裝的 DISM 版本。 接著，您可以將開機映像新增到 Configuration Manager 主控台。 如需自訂開機映像 (新增選用元件和驅動程式)、啟用開機映像的命令支援、將開機映像新增至 Configuration Manager 主控台，以及使用開機映像更新發佈點之步驟的詳細資訊，請參閱[自訂開機映像](../get-started/customize-boot-images.md)。 如需開機映像的詳細資訊，請參閱[管理開機映像](../get-started/manage-boot-images.md)。  
+     例如，如果具有 Configuration Manager，则可以利用 Configuration Manager 控制台自定义适用于 Windows 10 的 Windows ADK 中的启动映像（基于 Windows PE 10）。 但是，当支持基于 Windows PE 5 的启动映像时，你必须在不同的计算机中自定义它们，并使用随适用于 Windows 8 的 Windows ADK 一起安装的 DISM 版本。 然后，可以向 Configuration Manager 控制台添加启动映像。 有关自定义启动映像（添加可选组件和驱动程序）、对启动映像启用命令支持、将启动映像添加到 Configuration Manager 控制台中，以及使用启动映像更新分发点的步骤的详细信息，请参阅[自定义启动映像](../get-started/customize-boot-images.md)。 有关启动映像的详细信息，请参阅[管理启动映像](../get-started/manage-boot-images.md)。  
 
 ### <a name="windows-server-update-services-wsus"></a>Windows Server Update Services (WSUS)  
-您必須安裝下列 WSUS 4.0 Hotfix：
-  - [Hotfix 3095113](https://support.microsoft.com/kb/3095113) 的 WSUS 4.0 為 Windows 10 服務所必須，該服務使用軟體更新基礎結構以取得 Windows 10 功能升級。 當您具有 WSUS 3.2 時，您必須使用工作順序升級 Windows 10。 如需詳細資訊，請參閱[管理 Windows 即服務](../deploy-use/manage-windows-as-a-service.md)。  
-  - [Hotfix 3159706](https://support.microsoft.com/kb/3159706) 是使用 Windows 10 服務，將電腦升級為 Windows 10 年度更新版與後續版本的必要項目。 若要安裝此 Hotfix，您必須採取支援文章所述的手動步驟。 如需詳細資訊，請參閱[管理 Windows 即服務](../deploy-use/manage-windows-as-a-service.md)。
+必须安装以下 WSUS 4.0 修补程序：
+  - [Hotfix 3095113](https://support.microsoft.com/kb/3095113) 的 WSUS 4.0，它使用软件更新基础架构来获取 Windows 10 功能的升级。 如果你使用的是 WSUS 3.2，则必须使用任务序列来升级 Windows 10。 有关详细信息，请参阅[管理 Windows 即服务](../deploy-use/manage-windows-as-a-service.md)。  
+  - 如果要使用 Windows 10 维护服务将计算机升级到 Windows 10 Anniversary Update，必须提供[修补程序 3159706](https://support.microsoft.com/kb/3159706)对于子序列版本也是如此。 支持文章中描述有手动操作步骤，必须按照这些步骤安装此修补程序。 有关详细信息，请参阅[管理 Windows 即服务](../deploy-use/manage-windows-as-a-service.md)。
 
 
-### <a name="internet-information-services-iis-on-the-site-system-servers"></a>站台系統伺服器上的網際網路資訊服務 (IIS)  
- 發佈點、狀態移轉點和管理點需要 IIS。 如需此項需求的詳細資訊，請參閱[站台和站台系統必要條件](../../core/plan-design/configs/site-and-site-system-prerequisites.md)。  
+### <a name="internet-information-services-iis-on-the-site-system-servers"></a>站点系统服务器上的 Internet 信息服务 (IIS)  
+ 分发点、状态迁移点和管理点均需要 IIS。 有关此要求的详细信息，请参阅[站点和站点系统角色的先决条件](../../core/plan-design/configs/site-and-site-system-prerequisites.md)。  
 
-### <a name="windows-deployment-services-wds"></a>Windows 部署服務 (WDS)  
- 以下情況需要 WDS：PXE 部署、使用多點傳送將部署的頻寬最佳化，以及映像的離線服務。 若遠端伺服器上安裝提供者，則您必須在站台伺服器和遠端提供者上安裝 WDS。 如需詳細資訊，請參閱本主題中的 [Windows 部署服務](#BKMK_WDS) 。  
+### <a name="windows-deployment-services-wds"></a>Windows 部署服务 (WDS)  
+ PXE 部署需要 WDS，当你使用多播在部署中优化带宽以及将其用于脱机维护映像时，也需要 WDS。 如果在远程服务器上安装提供程序，则必须在站点服务器和远程提供程序上安装 WDS。 有关详细信息，请参阅本主题中的 [Windows 部署服务](#BKMK_WDS) 。  
 
-### <a name="dynamic-host-configuration-protocol-dhcp"></a>動態主機設定通訊協定 (DHCP)  
- DHCP 是 PXE 部署所需。 您必須具備作用中主機與正常運作 DHCP 伺服器，才能使用 PXE 部署作業系統。 如需 PXE 部署的詳細資訊，請參閱[透過網路來使用 PXE 部署 Windows](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md)。  
+### <a name="dynamic-host-configuration-protocol-dhcp"></a>动态主机配置协议 (DHCP)  
+ DHCP 是 PXE 部署所必需的。 你必须有正常运行的 DHCP 服务器（带有活动主机）才能使用 PXE 部署操作系统。 有关 PXE 部署的详细信息，请参阅[使用 PXE 通过网络部署 Windows](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md)。  
 
-### <a name="supported-operating-systems-and-hard-disk-configurations"></a>支援的作業系統和硬碟設定  
- 在您部署作業系統時，如需 Configuration Manager 所支援的作業系統版本和硬碟設定詳細資訊，請參閱[支援的作業系統](#BKMK_SupportedOS)及[支援的磁碟設定](#BKMK_SupportedDiskConfig)。  
+### <a name="supported-operating-systems-and-hard-disk-configurations"></a>支持的操作系统和硬盘配置  
+ 有关部署操作系统时 Configuration Manager 所支持的操作系统版本和硬盘配置的详细信息，请参阅[支持的操作系统](#BKMK_SupportedOS)和[支持的硬盘配置](#BKMK_SupportedDiskConfig)。  
 
-### <a name="windows-device-drivers"></a>Windows 裝置驅動程式  
- 您在目的地電腦上安裝作業系統以及使用開機映像執行 Windows PE 時，可以使用 Windows 裝置驅動程式。 如需裝置驅動程式的詳細資訊，請參閱[管理驅動程式](../get-started/manage-drivers.md)。  
+### <a name="windows-device-drivers"></a>Windows 设备驱动程序  
+ 当你在目标计算机上安装操作系统，以及使用启动映像来运行 Windows PE 时，可以使用 Windows 设备驱动程序。 有关设备驱动程序的详细信息，请参阅[管理驱动程序](../get-started/manage-drivers.md)。  
 
-##  <a name="BKMK_InternalDependencies"></a> Configuration Manager 相依性  
- 以下為 Configuration Manager 作業系統部署必要條件的資訊。  
+##  <a name="BKMK_InternalDependencies"></a> Configuration Manager 依赖关系  
+ 下面提供了有关 Configuration Manager 操作系统部署先决条件的信息。  
 
-### <a name="operating-system-image"></a>作業系統映像  
- Configuration Manager 中的作業系統映像儲存為 Windows 映像 (WIM) 檔案格式，代表經過壓縮的參照檔案和資料夾集合，其為成功在電腦上安裝及設定作業系統所必需。 如需詳細資訊，請參閱[管理作業系統映像](../get-started/manage-operating-system-images.md)。  
+### <a name="operating-system-image"></a>操作系统映像  
+ Configuration Manager 中的操作系统映像以 Windows 映像 (WIM) 文件格式存储，代表在计算机上成功安装和配置操作系统所需的引用文件和文件夹的压缩集合。 有关详细信息，请参阅[管理操作系统映像](../get-started/manage-operating-system-images.md)。  
 
-### <a name="driver-catalog"></a>驅動程式類別目錄  
- 若要部署裝置驅動程式，您必須匯入裝置驅動程式、啟用它，並且在 Configuration Manager 用戶端可以存取的發佈點上提供該驅動程式。 如需驅動程式類別目錄的詳細資訊，請參閱[管理驅動程式](../get-started/manage-drivers.md)。  
+### <a name="driver-catalog"></a>驱动程序目录  
+ 要部署设备驱动程序，必须导入并启用该设备驱动程序，然后使其在 Configuration Manager 客户端可访问的分发点上可用。 有关驱动程序目录的详细信息，请参阅[管理驱动程序](../get-started/manage-drivers.md)。  
 
-### <a name="management-point"></a>管理點  
- 管理點會在用戶端電腦和 Configuration Manager 站台之間傳送資訊。 用戶端會使用管理點執行完成作業系統部署所需的任何工作順序。  
+### <a name="management-point"></a>管理点  
+ 管理点在客户端计算机和 Configuration Manager 站点之间传输信息。 客户端使用管理点来运行完成操作系统部署所需的任何任务序列。  
 
- 如需工作順序的詳細資訊，請參閱[自動化工作的規劃考量](planning-considerations-for-automating-tasks.md)。  
+ 有关任务序列的详细信息，请参阅[计划自动执行任务时的考虑事项](planning-considerations-for-automating-tasks.md)。  
 
-### <a name="distribution-point"></a>發佈點  
- 發佈點在大部分部署中用來儲存部署作業系統所使用的資料，例如作業系統映像或裝置驅動程式套件。 工作順序通常會從發佈點擷取資料來部署作業系統。  
+### <a name="distribution-point"></a>分发点  
+ 分发点在大多数部署中使用，存储用于部署操作系统的数据，例如操作系统映像或设备驱动程序包。 任务序列通常从分发点中检索数据来部署操作系统。  
 
- 如需安裝發佈點及管理內容之方式的詳細資訊，請參閱[管理內容與內容基礎結構](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。  
+ 有关如何安装分发点和管理内容的详细信息，请参阅[管理内容和内容基础结构](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。  
 
-### <a name="pxe-enabled-distribution-point"></a>啟用 PXE 的發佈點  
- 若要部署起始 PXE 的部署，您必須設定發佈點以接收來自用戶端的 PXE 要求。 如需如何為發佈點的詳細資訊，請參閱[設定發佈點](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#pxe)。  
+### <a name="pxe-enabled-distribution-point"></a>已启用 PXE 的分发点  
+ 要部署 PXE 启动的部署，你必须将分发点配置为接受来自客户端的 PXE 请求。 有关如何配置分发点的详细信息，请参阅[配置分发点](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#pxe)。  
 
-### <a name="multicast-enabled-distribution-point"></a>啟用多點傳送的發佈點  
- 若要使用多點傳送最佳化作業系統部署，您必須設定發佈點支援多點傳送。 如需如何為發佈點的詳細資訊，請參閱[設定發佈點](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#multicast)。   
+### <a name="multicast-enabled-distribution-point"></a>启用多播的分发点  
+ 要使用多播优化操作系统部署，你必须配置分发点以支持多播。 有关如何配置分发点的详细信息，请参阅[配置分发点](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#multicast)。   
 
-### <a name="state-migration-point"></a>狀態移轉點  
- 當您擷取及還原並存與重新整理部署所需的使用者狀態資料時，必須設定狀態移轉點，才能在另一部電腦上還原使用者狀態資料。  
+### <a name="state-migration-point"></a>状态迁移点  
+ 在为并排部署和全新部署捕获和还原用户状态数据时，你必须配置状态迁移点以便将用户状态数据存储在另一台计算机上。  
 
- 如需如何設定狀態移轉點的詳細資訊，請參閱 [狀態移轉點](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_StateMigrationPoints)。  
+ 有关如何配置状态迁移点的详细信息，请参阅 [状态迁移点](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_StateMigrationPoints)。  
 
- 如需擷取及還原使用者狀態方式的資訊，請參閱[管理使用者狀態](../get-started/manage-user-state.md)。  
+ 有关如何捕获和还原用户状态的信息，请参阅[管理用户状态](../get-started/manage-user-state.md)。  
 
-### <a name="service-connection-point"></a>服務連接點  
- 當您使用 Windows 作為服務 (WaaS) 來部署 Windows 10 最新分支時，您必須有已安裝的服務連接點。 如需詳細資訊，請參閱[管理 Windows 即服務](../deploy-use/manage-windows-as-a-service.md)。  
+### <a name="service-connection-point"></a>服务连接点  
+ 使用 Windows 即服务 (WaaS) 部署 Windows 10 当前分支时，必须已安装服务连接点。 有关详细信息，请参阅[管理 Windows 即服务](../deploy-use/manage-windows-as-a-service.md)。  
 
-### <a name="reporting-services-point"></a>Reporting Services 點  
- 若要使用 Configuration Manager 報告進行作業系統部署，您必須安裝及設定 Reporting Services 點。 如需詳細資訊，請參閱[報告](../../core/servers/manage/reporting.md)。  
+### <a name="reporting-services-point"></a>Reporting Services 点  
+ 如果针对操作系统部署需使用 Configuration Manager 报表，则必须安装和配置 Reporting Services 点。 有关详细信息，请参阅[报表](../../core/servers/manage/reporting.md)。  
 
-### <a name="security-permissions-for-operating-system-deployments"></a>作業系統部署的安全性權限  
- [作業系統部署管理員]  安全性角色是內建的角色，無法變更。 不過，您可以複製角色、進行變更，然後將變更儲存為新的自訂安全性角色。 以下是直接套用至作業系統部署的權限：  
+### <a name="security-permissions-for-operating-system-deployments"></a>操作系统部署的安全权限  
+ “操作系统部署管理员”  安全角色是一个无法更改的内置角色。 不过，你可以复制该角色，进行更改，然后将这些更改保存为一个新的自定义安全角色。 下面是一些直接应用于操作系统部署的权限：  
 
--   **開機映像套件**：建立、刪除、修改、修改資料夾、移動物件、讀取、設定安全性範圍  
+-   **启动映像包**：创建、删除、修改、修改文件夹、移动对象、读取、设置安全作用域  
 
--   **裝置驅動程式**：建立、刪除、修改、修改資料夾、修改報告、移動物件、讀取、執行報告  
+-   **设备驱动程序**：创建、删除、修改、修改文件夹、修改报表、移动对象、读取、运行报表  
 
--   **驅動程式套件**：建立、刪除、修改、修改資料夾、移動物件、讀取、設定安全性範圍  
+-   **驱动程序包**：创建、删除、修改、修改文件夹、移动对象、读取、设置安全作用域  
 
--   **作業系統映像**：建立、刪除、修改、修改資料夾、移動物件、讀取、設定安全性範圍  
+-   **操作系统映像**：创建、删除、修改、修改文件夹、移动对象、读取、设置安全作用域  
 
--   **作業系統安裝套件**：建立、刪除、修改、修改資料夾、移動物件、讀取、設定安全性範圍  
+-   **操作系统安装包**：创建、删除、修改、修改文件夹、移动对象、读取、设置安全作用域  
 
--   **工作順序套件**：建立、建立工作順序媒體、刪除、修改、修改資料夾、修改報告、移動物件、讀取、執行報告、設定安全性範圍  
+-   **任务序列包**：创建、创建任务序列介质、删除、修改、修改文件夹、修改报表、移动对象、读取、运行报表、设置安全作用域  
 
- 如需有關自訂安全性角色的詳細資訊，請參閱 [建立自訂安全性角色](../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_CreateSecRole)。  
+ 有关自定义安全角色的详细信息，请参阅 [创建自定义安全角色](../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_CreateSecRole)。  
 
-### <a name="security-scopes-for-operating-system-deployments"></a>作業系統部署的安全性範圍  
- 使用安全性範圍可提供管理使用者存取作業系統部署中所使用可保護物件的權限，例如作業系統及開機映像、驅動程式套件及工作順序套件。 如需詳細資訊，請參閱 [安全性範圍](../../core/understand/fundamentals-of-role-based-administration.md#bkmk_PlanScope)。  
+### <a name="security-scopes-for-operating-system-deployments"></a>操作系统部署的安全作用域  
+ 使用安全作用域来向管理用户提供对操作系统部署中所使用的安全对象（例如操作系统和启动映像、驱动程序包以及任务序列包）的访问权限。 有关详细信息，请参阅 [安全作用域](../../core/understand/fundamentals-of-role-based-administration.md#bkmk_PlanScope)。  
 
-##  <a name="BKMK_WDS"></a> Windows 部署服務  
- Windows 部署服務 (WDS) 必須與您設定支援 PXE 或多點傳送的部署點安裝在同一部伺服器上。 WDS 已包含在伺服器的作業系統中。 對於 PXE 部署而言，WDS 是執行 PXE 開機的服務。 安裝並啟用 PXE 的發佈點時，Configuration Manager 會將提供者安裝到使用 WDS PXE 開機功能的 WDS 中。  
+##  <a name="BKMK_WDS"></a> Windows 部署服务  
+ 必须在配置为支持 PXE 或多播的分发点所在的服务器上安装 Windows 部署服务 (WDS)。 WDS 包括在服务器的操作系统中。 对于 PXE 部署，WDS 是执行 PXE 启动的服务。 如果为 PXE 安装和启用了分发点，则 Configuration Manager 会将一个使用 WDS PXE 启动功能的提供程序安装到 WDS 中。  
 
 > [!NOTE]  
->  如果伺服器需要重新啟動，則 WDS 安裝可能會失敗。 
+>  如果服务器需要重启，则 WDS 的安装可能会失败。 
 
- 其他必須納入考慮的 WDS 設定包括下列：  
+ 必须考虑的其他 WDS 配置包括下列各项：  
 
--   系統管理員必須是 Local Administrators 群組成員，才能在伺服器上安裝 WDS。  
+-   服务器上的 WDS 安装要求管理员是“本地管理员”组的成员。  
 
--   WDS 伺服器必須是 Active Directory 網域成員，或是 Active Directory 網域的網域控制站。 所有 Windows 網域和樹系設定皆支援 WDS。  
+-   WDS 服务器必须是 Active Directory 域或 Active Directory 域的域控制器的成员。 所有 Windows 域和林配置都支持 WDS。  
 
--   若遠端伺服器上安裝提供者，則您必須在站台伺服器和遠端提供者上安裝 WDS。  
+-   如果在远程服务器上安装提供程序，则必须在站点服务器和远程提供程序上安装 WDS。  
 
-###  <a name="BKMK_WDSandDHCP"></a> 當您在同一部伺服器上有 WDS 和 DHCP 時的考量  
- 如果您規劃在執行 DHCP 的伺服器上共同裝載發佈點，請考慮以下設定問題。  
+###  <a name="BKMK_WDSandDHCP"></a> WDS 和 DHCP 在同一个服务器上时的注意事项  
+ 如果计划在运行 DHCP 的服务器上共同承载分发点，请考虑以下配置问题。  
 
--   您必須擁有一部具作用中範圍之正在運作的 DHCP 伺服器 Windows 部署服務使用 PXE，其需要 DHCP 伺服器。  
+-   必须具有正常运行的 DHCP 服务器和活动作用域。 Windows 部署服务使用需要 DHCP 服务器的 PXE。  
 
--   DHCP 和 Windows 部署服務都需要連接埠號碼 67。 如果共同裝載 Windows 部署服務和 DHCP，您就可以將 DHCP 或為 PXE 設定的發佈點移到另外的伺服器。 您也可使用下列程序，將 Windows Deployment Services 伺服器設定為在不同的連接埠上接聽。  
+-   DHCP 和 Windows 部署服务都需要端口号 67。 如果共同承载 Windows 部署服务和 DHCP，则可以将为 PXE 配置的 DHCP 或分发点移动到单独的服务器。 或者可以使用以下过程将 Windows 部署服务服务器配置为侦听其他端口。  
 
-    #### <a name="to-configure-the-windows-deployment-services-server-to-listen-on-a-different-port"></a>將 Windows 部署服務伺服器設定為在不同的連接埠上接聽  
+    #### <a name="to-configure-the-windows-deployment-services-server-to-listen-on-a-different-port"></a>将 Windows 部署服务服务器配置为侦听其他端口  
 
-    1.  修改下列登錄機碼：  
+    1.  修改下面的注册表项：  
 
          **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WDSServer\Providers\WDSPXE**  
 
-    2.  將登錄值設定為： **UseDHCPPorts = 0**  
+    2.  将注册表值设置为： **UseDHCPPorts = 0**  
 
-    3.  若要讓新設定生效，可在伺服器執行下列命令：  
+    3.  为了使新配置生效，请在服务器上运行以下命令：  
 
          `WDSUTIL /Set-Server /UseDHCPPorts:No /DHCPOption60:Yes`  
 
--   執行 Windows 部署服務時需要 DNS 伺服器。  
+-   运行 Windows 部署服务需要 DNS 服务器。  
 
--   必須在 Windows 部署服務伺服器上開啟下列 UDP 連接埠。  
+-   必须在 Windows 部署服务服务器上打开以下 UDP 端口。  
 
-    -   連接埠 67 (DHCP)  
+    -   端口 67 (DHCP)  
 
-    -   連接埠 69 (TFTP)  
+    -   端口 69 (TFTP)  
 
-    -   連接埠 4011 (PXE)  
+    -   端口 4011 (PXE)  
 
     > [!NOTE]  
-    >  此外，如果在伺服器上需要 DHCP 授權，您需要在伺服器上開啟 DHCP 用戶端連接埠 68。  
+    >  此外，如果服务器上需要 DHCP 授权，则需要在服务器上打开 DHCP 客户端端口 68。  
 
-##  <a name="BKMK_SupportedOS"></a> 支援的作業系統  
- 在[支援的用戶端和裝置作業系統](../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md)中，列為支援之用戶端作業系統的所有 Windows 作業系統，皆可支援作業系統部署。  
+##  <a name="BKMK_SupportedOS"></a> 支持的操作系统  
+ 所有 Windows 操作系统（在[客户端和设备支持的操作系统](../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md)中列为受支持的操作系统）都支持用于操作系统部署。  
 
-##  <a name="BKMK_SupportedDiskConfig"></a> 支援的磁碟設定  
- 下表顯示支援 Configuration Manager 作業系統部署之參照電腦和目的地電腦的硬碟設定組合。  
+##  <a name="BKMK_SupportedDiskConfig"></a> 支持的磁盘配置  
+ 下表显示了引用计算机和目标计算机上 Configuration Manager 操作系统部署支持的硬盘配置组合。  
 
-|參照電腦硬碟設定|目的地電腦硬碟設定|  
+|引用计算机硬盘配置|目标计算机硬盘配置|  
 |------------------------------------------------|--------------------------------------------------|  
-|基本磁碟|基本磁碟|  
-|動態磁碟上的簡單磁碟區|動態磁碟上的簡單磁碟區|  
+|基本磁盘|基本磁盘|  
+|动态磁盘上的简单卷|动态磁盘上的简单卷|  
 
- Configuration Manager 僅支援從已設定簡單磁碟區的電腦擷取作業系統映像。 不支援下列硬碟設定：  
+ Configuration Manager 仅支持从配置有简单卷的计算机捕获操作系统映像。 不支持下列硬盘配置：  
 
--   合併磁碟區  
+-   跨区卷  
 
--   等量磁碟區 (RAID 0)  
+-   带区卷 (RAID 0)  
 
--   鏡像磁碟區 (RAID 1)  
+-   镜像卷 (RAID 1)  
 
--   同位檢查磁碟區 (RAID 5)  
+-   奇偶校验卷 (RAID 5)  
 
- 下表顯示不支援 Configuration Manager 作業系統部署之參照和目的地電腦上的其他硬碟設定。  
+ 下表显示了引用计算机和目标计算机上不支持用于 Configuration Manager 操作系统部署的其他硬盘配置。  
 
-|參照電腦硬碟設定|目的地電腦硬碟設定|  
+|引用计算机硬盘配置|目标计算机硬盘配置|  
 |------------------------------------------------|--------------------------------------------------|  
-|基本磁碟|動態磁碟|  
+|基本磁盘|动态磁盘|  
 
-## <a name="next-steps"></a>後續步驟
-[準備作業系統部署](../get-started/prepare-for-operating-system-deployment.md)
+## <a name="next-steps"></a>后续步骤
+[准备操作系统部署](../get-started/prepare-for-operating-system-deployment.md)

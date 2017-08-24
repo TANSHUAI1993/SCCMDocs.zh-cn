@@ -1,6 +1,6 @@
 ---
-title: "使用 Lookout 設定訂閱 | System Center Configuration Manager"
-description: "本主題提供如何設定 Lookout 裝置威脅保護的詳細資訊。"
+title: "使用 Lookout 设置订阅 |System Center Configuration Manager"
+description: "本主题提供有关如何配置 Lookout 设备威胁保护的详细信息。"
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
@@ -17,114 +17,114 @@ manager: angrobe
 ms.openlocfilehash: b777140c753e709f4048a30e63d8ae730d3e8723
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="set-up-your-subscription-for--lookout-device-threat-protection"></a>設定訂閱進行 Lookout 裝置威脅保護
+# <a name="set-up-your-subscription-for--lookout-device-threat-protection"></a>设置订阅以使用 Lookout 设备威胁保护
 
-*適用對象：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-若要準備好您的訂閱進行 Lookout 裝置威脅保護服務，Lookout 支援 (enterprisesupport@lookout.com) 需要 Azure Active Directory (Azure AD) 訂閱的下列資訊。 Lookout 行動端點安全性租用戶將會與 Azure AD 訂閱相關聯，以整合 Lookout 與 Intune。 
+为了为 Lookout 设备威胁防护服务准备好订阅，Lookout 支持人员 enterprisesupport@lookout.com 需要有关 Azure Active Directory (Azure AD) 订阅的以下信息。 Lookout 移动端点安全租户将与 Azure AD 订阅关联以便让 Lookout 与 Intune 集成。 
 
-* **Azure AD 租用戶識別碼**
-* 用於**完整** Lookout 主控台存取的 **Azure AD 群組物件識別碼**
-* 用於**受限制** Lookout 主控台存取的 **Azure AD 群組物件識別碼** (選擇性)
+* **Azure AD 租户 ID**
+* Lookout 控制台**完全**访问权限的**Azure AD 组对象 ID**
+* Lookout 控制台**受限**访问权限的**Azure AD 组对象 ID**（可选）
 
 > [!IMPORTANT]
-> 尚未與 Azure AD 租用戶相關聯的現有 Lookout 行動端點安全性租用戶無法用於與 Azure AD 和 Intune 的整合。 請連絡 Lookout 支援，以建立新的 Lookout 行動端點安全性租用戶。 使用新的租用戶，將 Azure AD 使用者上架。
+> 没有与 Azure AD 租户相关联的现有 Lookout 移动端点安全租户不能用于与 Azure AD 和 Intune 集成。 请联系 Lookout 支持人员以创建新的 Lookout 移动端点安全租户。 使用新的租户以加入 Azure AD 用户。
 
-使用下節，收集您需要提供給 Lookout 支援小組的資訊。  
+使用下列部分来收集需要向 Lookout 支持团队提供的信息。  
 
-## <a name="get-your-azure-ad-information"></a>取得 Azure AD 資訊
-### <a name="azure-ad-tenant-id"></a>Azure AD 租用戶識別碼
-登入 [Azure AD 管理入口網站](https://manage.windowsazure.com)，然後選取您的訂閱。 
+## <a name="get-your-azure-ad-information"></a>获取 Azure AD 信息
+### <a name="azure-ad-tenant-id"></a>Azure AD 租户 ID
+登录到[Azure AD 管理门户](https://manage.windowsazure.com)，然后选择订阅。 
 
-![顯示租用戶名稱之 Azure AD 頁面的螢幕擷取畫面](media/aad_tenant_name.png) 當您選擇訂閱名稱時，產生的 URL 會包括訂閱識別碼。  如果您有尋找訂閱識別碼的任何問題，請參閱這篇 [Microsoft 支援文章](https://support.office.com/en-us/article/Find-your-Office-365-tenant-ID-6891b561-a52d-4ade-9f39-b492285e2c9b?ui=en-US&rs=en-US&ad=US)以取得尋找訂閱識別碼的秘訣。   
-### <a name="azure-ad-group-id"></a>Azure AD 群組識別碼
-Lookout 主控台支援 2 種存取層級︰  
-* **完整存取：**Azure AD 系統管理員可以建立具有「完整存取」的使用者群組，以及選擇性地建立具有「限制存取」的使用者群組。  只有這些群組中的使用者才能登入 **Lookout 主控台**。
-* **限制存取：**這個群組中的使用者無法存取 Lookout 主控台的數個設定和註冊相關模組，並且只能唯讀存取 Lookout 主控台的「安全性原則」模組。  
+![显示租户名称的 Azure AD 页面的屏幕截图](media/aad_tenant_name.png)选择订阅名称时，生成的 URL 包含订阅 ID。  如果查找订阅 ID 时遇到任何问题，请参阅此 [Microsoft 支持文章](https://support.office.com/en-us/article/Find-your-Office-365-tenant-ID-6891b561-a52d-4ade-9f39-b492285e2c9b?ui=en-US&rs=en-US&ad=US)获取查找订阅 ID 的技巧。   
+### <a name="azure-ad-group-id"></a>Azure AD 组 ID
+Lookout 控制台支持 2 种级别的访问权限:  
+* **完全访问：** Azure AD 管理员可以为用户创建一个具有完全访问权限的组，并根据需要创建具有受限访问权限的组。  只有这些组中的用户才能登录到 **Lookout 控制台**。
+* **受限的访问权限：**此组中的用户不能访问某些配置以及与 Lookout 控制台注册相关的模块，并且对控制台模块的**安全策略**仅具有只读访问权限。  
 
-如需權限的詳細資訊，請閱讀 Lookout 網站上的[這篇文章](https://personal.support.lookout.com/hc/en-us/articles/114094105653)。
+有关权限的详细信息，请参阅 Lookout 网站上的[此文](https://personal.support.lookout.com/hc/en-us/articles/114094105653)。
 
-[群組物件識別碼] 位於 [Azure AD 管理主控台] 中群組的 [內容] 頁面上。
+**组对象 ID**位于“Azure AD 管理控制台”中的组的“属性”页上。
 
-![反白顯示 GroupID 欄位之 [內容] 頁面的螢幕擷取畫面](media/aad_group_object_id.png)
+![突出显示 GroupID 字段的属性页屏幕截图](media/aad_group_object_id.png)
 
-收集這項資訊之後，請連絡 Lookout 支援 (電子郵件︰enterprisesupport@lookout.com)。
+收集此信息后，请联系 Lookout 支持人员（电子邮件：enterprisesupport@lookout.com）。
 
-Lookout 支援會與您的主要連絡人合作以將您的訂閱上架，並使用您所收集的資訊建立 Lookout 企業帳戶。
+Lookout 支持人员将使用主要联系人载入订阅，并使用收集的信息创建 Lookout 企业帐户。
 
 
-## <a name="configure-your-subscription-with-lookout-device-threat-protection"></a>使用 Lookout 裝置威脅保護設定訂閱
-### <a name="step-1-set-up-your-device-threat-protection"></a>步驟 1：設定裝置威脅保護
-在 Lookout 支援建立 Lookout 企業帳戶之後，您就可以登入 Lookout 主控台。   來自 Lookout 的電子郵件會傳送給您公司的主要連絡人，並且內含登入 URL 連結：https://aad.lookout.com/les?action=consent
+## <a name="configure-your-subscription-with-lookout-device-threat-protection"></a>使用 Lookout 设备威胁保护配置订阅
+### <a name="step-1-set-up-your-device-threat-protection"></a>步骤 1：设置设备威胁防护
+Lookout 支持人员创建企业帐户后，你可以登录到 Lookout 控制台。   Lookout 会向公司的主要联系人发送一封电子邮件，并附带登录链接(url:https://aad.lookout.com/les?action=consent)
 
-當您第一次登入 Lookout 主控台時，必須使用具有 Azure AD 全域管理員角色的使用者帳戶，因為 Lookout 需要這項資訊才能註冊 Azure AD 租用戶。   後續登入不需要使用者具有這個層級的 Azure AD 特殊權限。  在這個首次登入時，會顯示同意頁面。 選擇 [接受] 完成註冊。
+首次登录到 Lookout 控制台时，必须使用全局管理员 Azure AD 角色的用户帐户，因为 Lookout 需要此信息来注册 Azure AD 租户。   后续登录不需要用户具有此级别的 Azure AD 特权。  第一次登录时将显示同意页。 选择“接受”完成注册。
 
-![Lookout 主控台之第一次登入頁面的螢幕擷取畫面](media/lookout-initial-login.png)
+![第一次登录到 Lookout 控制台时的登录页面屏幕截图](media/lookout-initial-login.png)
 
-接受並同意之後，會將您重新導向至 Lookout 主控台。 使用下列 URL 即可完成初始註冊後的後續登入：https://aad.lookout.com
+接受并同意后，系统将重定向到 Lookout 控制台。 初始注册后，可使用 URL (https://aad.lookout.com) 进行后续登录
 
-如果您發生登入問題，請參閱[疑難排解文章]()。
+如果遇到登录问题，请参阅[疑难解答文章]()。
 
-後續步驟概述您必須執行才能在 [Lookout 主控台](https://aad.lookout.com)內完成 Lookout 設定的工作。
+接下来的步骤概述了在 [Lookout 控制台](https://aad.lookout.com) 内完成 Lookout 设置必须执行的任务。
 
-### <a name="step-2-configure-the-intune-connector"></a>步驟 2：設定 Intune 連接器
+### <a name="step-2-configure-the-intune-connector"></a>步骤 2：配置 Intune 连接器
 
-1.  在 Lookout 主控台中，從 [系統] 模組中選擇 [連接器] 索引標籤，然後選取 [Intune]。
+1.  在 Lookout 控制台中，从“系统”模块中选择“连接器”选项卡，然后选择“Intune”。
 
-  ![開啟 [連接器] 索引標籤並反白顯示 Intune 選項之 Lookout 主控台的螢幕擷取畫面](media/lookout-setup-intune-connector.png)
+  ![打开了连接器选项卡的 Lookout 控制台屏幕截图，其中突出显示了 Intune 选项](media/lookout-setup-intune-connector.png)
 
-2.  在 [連線設定] 選項中，設定活動訊號頻率 (分鐘)。  Intune 連接器現在已就緒。  
+2.  在连接设置选项中，以分钟为单位配置检测信号频率。  Intune 连接器现已准备就绪。  
 
-  ![顯示已設定活動訊號頻率之 [連線設定] 索引標籤的螢幕擷取畫面](media/lookout-connection-settings.png)
+  ![连接设置选项卡的屏幕截图，其中显示配置了检测信号频率](media/lookout-connection-settings.png)
 
-### <a name="step-3-configure-enrollment-groups"></a>步驟 3︰設定註冊群組
-在 [註冊管理] 選項上，定義應該向 Lookout 註冊其裝置的一組使用者。 最佳做法是從小組使用者測試開始，並熟悉整合運作方式。  滿意測試結果之後，就可以將註冊擴充至其他使用者群組。
+### <a name="step-3-configure-enrollment-groups"></a>步骤 3：配置注册组
+在“注册管理”选项中，定义一组其设备已向 Lookout 注册的用户。 最佳做法是使用一小组用户进行测试，熟悉集成的工作原理。  若测试结果令人满意，可以将注册扩展到其他组的用户。
 
-若要開始使用註冊群組，請先定義 Azure AD 安全性群組，其將是要在 Lookout 裝置威脅保護中註冊的第一組良好使用者。 在 Azure AD 中建立群組之後，請在 Lookout 主控台中移至 [註冊管理] 選項，並新增 Azure AD 安全性群組**顯示名稱**以進行註冊。
+若要开始使用注册组，首先请定义一个 Azure AD 安全组，它将成为在 Lookout 设备威胁保护中注册的第一组优良用户。 在 Azure、AD 和 Lookout 控制台中创建组后，请转到“注册管理”选项，然后添加 Azure AD 安全组“显示名称”以进行注册。
 
-使用者位於註冊群組時，表示他們在 Azure AD 中所識別和支援的任何裝置都已註冊，且可以在 Lookout 裝置威脅保護中啟用。  第一次在其支援的裝置上開啟 Lookout for Work 應用程式時，會在 Lookout 中啟動裝置。
+如果用户在注册组中，任何在 Azure AD 中经过识别并获得支持的设备都可以在 Lookout 设备威胁保护中注册并激活。  首次在支持的设备上打开 Lookout for Work 应用时，设备就已在 Lookout 中激活。
 
-![Intune 連接器註冊頁面的螢幕擷取畫面](media/lookout-enrollment.png)
+![Intune 连接器注册页面的屏幕截图](media/lookout-enrollment.png)
 
-最佳做法是使用預設值 (5 分鐘) 作為時間增量，以檢查是否有新裝置。
+最佳做法是使用时间增量的默认值（即 5 分钟）来检查新设备。
 
 >[!IMPORTANT]
-> 顯示名稱區分大小寫。  使用 Azure 入口網站之安全性群組的 [內容] 頁面中所顯示的 [顯示名稱]。 請注意，在下圖中，於安全性群組的 [內容] 中，[顯示名稱] 是駝峰式大小寫。  不過，標題會以全部小寫顯示，而且不應該用來進入 Lookout 主控台。
->![Azure 入口網站、Azure Active Directory 服務、[內容] 頁面的螢幕擷取畫面](media/aad-group-display-name.png)
+> 显示名称区分大小写。  请使用“显示名称”，如 Azure 门户安全组的“属性”页所示。 注意在下面的图片中，安全组的“属性”页上的显示名称区分大小写。  标题全部显示为小写，不应将其用于进入 Lookout 控制台。
+>![Azure 门户的屏幕截图、Azure Active Directory 服务、属性页](media/aad-group-display-name.png)
 
-目前版本的限制如下：  
-* 不會對群組顯示名稱進行任何驗證。  請務必使用 Azure AD 安全性群組之 Azure 入口網站中所顯示 [顯示名稱] 欄位中的值。
-* 目前不支援在群組內建立群組。  指定的 Azure AD 安全性群組可能只包含使用者，而未包含巢狀群組。
+当前版本具有以下局限性：  
+* 组显示名称没有任何验证。  请确保在 Azure AD 安全组的 Azure 门户中显示的“显示名称”字段中使用值。
+* 当前不支持在组内创建组。  指定的 Azure AD 安全组可能仅包含用户，而不包含嵌套组。
 
 
-### <a name="step-4-configure-state-sync"></a>步驟 4：設定狀態同步處理
-在 [State Sync]\(狀態同步處理) 選項中，指定應該傳送至 Intune 的資料類型。  目前，您必須啟用裝置狀態和威脅狀態，Lookout Intune 整合才能正確運作。  根據預設會啟用這些項目。
-### <a name="step-5-configure-error-report-email-recipient-information"></a>步驟 5︰設定錯誤報告電子郵件收件者資訊
-在 [Error Management]\(錯誤管理) 選項中，輸入應接收錯誤報告的電子郵件地址。
+### <a name="step-4-configure-state-sync"></a>步骤 4：配置状态同步
+在“状态同步”选项中，指定应发送到 Intune 的数据类型。  目前，必须启用设备状态和威胁状态以便使 Lookout Intune 集成能正常工作。  默认情况下已启用以上状态。
+### <a name="step-5-configure-error-report-email-recipient-information"></a>步骤 5：配置错误报告电子邮件收件人的信息
+在“错误管理”选项中输入接收错误报告的电子邮件地址。
 
-![Intune 連接器錯誤管理頁面的螢幕擷取畫面](media/lookout-connector-error-notifications.png)
+![Intune 连接器错误管理页面的屏幕截图](media/lookout-connector-error-notifications.png)
 
-### <a name="step-6-configure-enrollment-settings"></a>步驟 6： 進行註冊設定
-在 [系統] 模組的 [連接器] 頁面上，指定將裝置視為中斷連線之前的天數。  中斷連線的裝置會被視為不相容，並且會根據 SCCM 條件式存取原則來封鎖存取您公司應用程式。 您可以指定介於 1 與 90 天之間的值。
+### <a name="step-6-configure-enrollment-settings"></a>步骤 6： 配置注册设置
+在“系统”模块的“连接器”页上，指定将设备视为已断开连接之前的天数。  将断开连接的设备视为不合规，并根据 SCCM 条件性访问策略阻止其访问公司应用程序。 可以指定介于 1 到 90 天之间的值。
 
 ![](media/lookout-console-enrollment-settings.png)
 
-### <a name="step-7-configure-email-notifications"></a>步驟 7：設定電子郵件通知
-如果您想要接收威脅的電子郵件警示，請使用應接收通知的使用者帳戶來登入 [Lookout 主控台](https://aad.lookout.com)。 在 [系統] 模組的 [喜好設定] 索引標籤上，選擇所需的通知，並將它們設定為 **ON**。 儲存變更。
+### <a name="step-7-configure-email-notifications"></a>步骤 7：配置电子邮件通知
+若要接收与威胁相关的电子邮件警报，请使用应接收该通知的用户帐户登录到 [Lookout 控制台](https://aad.lookout.com)。 在“系统”模块的“首选项”选项卡上，选择所需的通知并将它们设置为“打开”。 保存所做更改。
 
-![顯示使用者帳戶之 [喜好設定] 頁面的螢幕擷取畫面](media/lookout-email-notifications.png) 如果您不想再收到電子郵件通知，請將通知設定為 **OFF**，然後儲存變更。
-### <a name="step-8-configure-threat-classification"></a>步驟 8：設定威脅分類
-Lookout 裝置威脅保護會分類各種類型的行動威脅。 [Lookout 威脅分類](http://personal.support.lookout.com/hc/en-us/articles/114094130693)具有相關聯的預設風險層級。 隨時可以變更這些項目，以符合您公司的需求。
+![显示用户帐户的首选项页屏幕截图](media/lookout-email-notifications.png)如果不再需要接收电子邮件通知，可将通知设置为“关闭”并保存所做的更改。
+### <a name="step-8-configure-threat-classification"></a>第 8 步：配置威胁分类
+Lookout 设备威胁保护会对各种移动威胁进行分类。 [Lookout 威胁分类](http://personal.support.lookout.com/hc/en-us/articles/114094130693)具有与之相关联的默认风险级别。 可以随时更改这些级别以满足公司的需要。
 
-![顯示威脅和分類之 [原則] 頁面的螢幕擷取畫面](media/lookout-threat-classification.png)
+![显示威胁和分类的策略页屏幕截图](media/lookout-threat-classification.png)
 
 >[!IMPORTANT]
-> 因為 Intune 整合會在執行階段根據這些風險層級來計算裝置合規性，所以這裡指定的風險層級是裝置威脅保護的重要層面。 換句話說，如果裝置具有最少層級為高、中或低的使用中威脅，則 Intune 系統管理員會在原則中設定將裝置識別為不相容的規則。 Lookout 裝置威脅保護中的威脅分類原則直接驅使 Intune 中的裝置合規性計算。
+> 此处指定的风险级别是设备威胁保护的一个重要方面，因为 Intune 集成会在运行时根据这些风险级别计算设备的合规性。 换而言之，如果设备的活动威胁级别为：高、中或低，Intune 管理员会在策略中设置规则来标识不合规的设备。 Lookout 设备威胁保护中的威胁分类策略直接影响 Intune 中设备的合规性计算。
 
-## <a name="watching-enrollment"></a>監看註冊
-安裝完成之後，Lookout 裝置威脅保護會開始輪詢 Azure AD 是否有對應至所指定註冊群組的裝置。  您可以找到 [裝置] 模組上所註冊之裝置的相關資訊。  裝置的初始狀態會顯示為擱置。  在裝置上安裝、開啟和啟動 Lookout for Work 應用程式之後，裝置狀態會變更。  如需如何將 Lookout for Work 應用程式發送到裝置的詳細資訊，請參閱[設定和部署 Lookout for Work 應用程式](configure-and-deploy-lookout-for-work-apps.md)主題。
-## <a name="next-steps"></a>後續步驟
-[在 Intune 中啟用 Lookout MTP 連線](enable-lookout-connection-in-intune.md)
+## <a name="watching-enrollment"></a>观看注册
+设置完成后，Lookout 设备威胁保护会轮询对应于指定注册组的 Azure AD 设备。  可在设备模块上找到已注册设备的相关信息。  设备的初始状态显示为待定。  安装、打开并激活 Lookout for Work 应用后，设备状态将发生更改。  有关如何将 Lookout for Work 应用推送到设备的详细信息，请参阅[配置并部署 Lookout for Work 应用](configure-and-deploy-lookout-for-work-apps.md)主题。
+## <a name="next-steps"></a>后续步骤
+[启用 Lookout MTP 连接 Intune](enable-lookout-connection-in-intune.md)

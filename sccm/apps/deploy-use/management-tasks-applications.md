@@ -1,6 +1,6 @@
 ---
-title: "System Center Configuration Manager 應用程式的管理工作 | Microsoft Docs"
-description: "管理 System Center Configuration Manager 應用程式和部署類型。"
+title: "System Center Configuration Manager 应用程序的管理任务 | Microsoft Docs"
+description: "管理 System Center Configuration Manager 应用程序和部署类型。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -17,45 +17,45 @@ manager: angrobe
 ms.openlocfilehash: 72f99f0c90951f80de3d6e5ed8786d3fa482107e
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="management-tasks-for-system-center-configuration-manager-applications"></a>System Center Configuration Manager 應用程式的管理工作
+# <a name="management-tasks-for-system-center-configuration-manager-applications"></a>System Center Configuration Manager 应用程序的管理任务
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-請使用本文的資訊，協助管理 System Center Configuration Manager 應用程式和部署類型。  
+使用本文中的信息可帮助管理 System Center Configuration Manager 应用程序和部署类型。  
 
-如需建立應用程式和部署類型的說明，請參閱[建立應用程式](../../apps/deploy-use/create-applications.md)。  
+若要帮助创建应用程序和部署类型，请参阅[创建应用程序](../../apps/deploy-use/create-applications.md)。  
 
 > [!IMPORTANT]  
->  依應用程式類型或部署類型而定，有些管理選項可能無法使用。  
+>  取决于应用程序类型或部署类型，某些管理点可能不可用。  
 
-##  <a name="manage-applications"></a>管理應用程式  
- 在 [軟體程式庫] 工作區中，展開 [應用程式管理] > [應用程式]，然後依序選擇欲管理的應用程式和管理工作。  
+##  <a name="manage-applications"></a>管理应用程序  
+ 在“软件库”工作区中，展开“应用程序管理” > “应用程序”，选择要管理的应用程序，然后选择管理任务。  
 
-|工作|詳細資料|  
+|任务|详细信息|  
 |----------|-------------|  
-|**管理存取帳戶**|開啟 [管理存取帳戶]  對話方塊，您可以在其中指定允許與選取的應用程式相關聯之內容存取的層級。|  
-|**建立預先設置的內容檔案**|開啟 [建立預先設置的內容檔案精靈]  以協助您管理將內容發佈至遠端發佈點的作業。 如果排程和節流無法為遠端發佈點提供有效的解決方案，您可以在發佈點上預先設置內容。<br /><br /> 請參閱[管理內容與內容基礎結構](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。|  
-|**修訂歷程記錄**|開啟 [應用程式修訂歷程記錄] 對話方塊，即可在其中檢視此應用程式的修訂內容、刪除舊的應用程式修訂版本，以及還原此應用程式的舊版本。<br /><br /> 請參閱[如何修改和取代應用程式](../../apps/deploy-use/revise-and-supersede-applications.md)。|  
-|**建立部署類型**|開啟 [建立部署類型精靈]，即可使用此精靈將新的部署類型新增至選取的應用程式。<br /><br /> 請參閱[建立應用程式](../../apps/deploy-use/create-applications.md)。|  
-|**更新統計資料**|更新 [監視]  工作區中顯示在 [部署]  節點裡的資訊，這項資訊與此應用程式的部署有關。<br /><br /> 請參閱[從 System Center Configuration Manager 主控台監視應用程式](../../apps/deploy-use/monitor-applications-from-the-console.md)。|  
-|**恢復**|恢復之前使用 [淘汰] 管理工作所淘汰掉的應用程式。|  
-|**Retire**|淘汰應用程式後，就不能再部署該應用程式，但不會刪除該應用程式及其部署。 此選項不會移除此應用程式安裝在用戶端電腦上的現有複本。 對該應用程式的任何修訂內容將會在 60 天後從 Configuration Manager 中刪除。 不過，系統並不會移除該應用程式已經安裝的複本。<br /><br /> 若要刪除應用程式，必須先淘汰該應用程式、刪除所有部署、移除其他部署對該應用程式的參考，然後刪除該應用程式的所有修訂版本。<br /><br /> 請參閱[修改和取代應用程式](../../apps/deploy-use/revise-and-supersede-applications.md)。|  
-|**匯出**|開啟 [匯出應用程式精靈]，此精靈可讓您將選取的應用程式匯出成 .zip 檔案，之後再進行封存或安裝於另一個站台。 如果您選擇匯出應用程式內容，系統會建立一個包含該內容的資料夾。<br /><br /> 您也可以匯出應用程式相依性、取代關聯性和條件，以及應用程式的內容及其相依性。<br /><br /> Windows PowerShell Cmdlet **Export-CMApplication** 可執行相同的功能。 如需詳細資訊，請參閱 Microsoft System Center 2012 Configuration Manager SP1 Cmdlet 參考文件中的 [Export-CMApplication](http://go.microsoft.com/fwlink/p/?LinkID=258880)。|  
-|**刪除**|刪除目前選取的應用程式。<br /><br /> 如果某個應用程式有相依的應用程式、作用中的部署，或者相依的工作順序，您就不能刪除該應用程式。|  
-|**模擬部署**|開啟 [模擬應用程式部署精靈]  ，您不需要安裝或解除安裝應用程式，即可在此精靈中測試該應用程式在電腦中的部署結果。<br /><br /> 請參閱[模擬應用程式部署](../../apps/deploy-use/simulate-application-deployments.md)。|  
-|**部署**|開啟 [部署軟體精靈]  ，您可以在此精靈中將選取的應用程式部署至階層中的電腦集合。<br /><br /> 請參閱[部署應用程式](../../apps/deploy-use/deploy-applications.md)。|  
-|**發佈內容**|開啟 [發佈內容精靈]  ，在此精靈中，您可以將選取的應用程式內容複製到階層中的發佈點。<br /><br /> 請參閱[管理內容與內容基礎結構](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。|  
-|**檢視關聯性**|會顯示一個圖表，其中包含所選應用程式與其他應用程式之間的關聯性。 選擇下列其中一項：<br><br><ul><li>**相依性** – 顯示相依於所選應用程式的應用程式，以及所選應用程式相依的應用程式。</li><li>**取代** – 顯示由所選應用程式取代的應用程式，以及將所選應用程式取代的應用程式。</li><li>**全域條件** – 顯示此應用程式所參考的全域條件。</li></ol><br /> 請參閱[修改和取代應用程式](../../apps/deploy-use/revise-and-supersede-applications.md)及[建立全域條件](../../apps/deploy-use/create-global-conditions.md)。|  
+|**管理访问帐户**|打开“管理访问帐户”  对话框，在其中你可以为与所选应用程序关联的内容指定允许的访问级别。|  
+|**创建预留内容文件**|打开“创建预留的内容文件向导”  ，它可帮助你管理将内容分发到远程分发点的过程。 在计划和限制未能为远程分发点提供有效的解决方案时，你可以在分发点上预留内容。<br /><br /> 请参阅[管理内容和内容基础结构](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。|  
+|**修订版本历史记录**|打开“应用程序修订版本历史记录”对话框，它可让你查看对此应用程序所做的修订的属性、删除旧的应用程序修订版本和还原此应用程序的旧版本。<br /><br /> 请参阅[如何修订和取代应用程序](../../apps/deploy-use/revise-and-supersede-applications.md)。|  
+|**创建部署类型**|打开“创建部署类型向导”，它可让你将新的部署类型添加到所选的应用程序中。<br /><br /> 请参阅[创建应用程序](../../apps/deploy-use/create-applications.md)。|  
+|**更新统计信息**|更新在“监视”  工作区的“部署”  节点中显示的、有关此应用程序的部署的信息。<br /><br /> 请参阅[从 System Center Configuration Manager 控制台监视应用程序](../../apps/deploy-use/monitor-applications-from-the-console.md)。|  
+|**恢复**|恢复以前使用“停用”管理任务停用的应用程序。|  
+|**Retire**|在停用某应用程序时，它不能再用于部署，但不会删除此应用程序及其部署。 也不会删除在客户端计算机上安装的此应用程序的现有副本。 将在 60 天后从 Configuration Manager 中删除对应用程序的任何修订。 但是，不会删除此应用程序的任何已安装的副本。<br /><br /> 若要删除应用程序，必须先停用应用程序，删除所有部署，删除其他部署对该应用程序的引用，然后删除该应用程序的所有修订版本。<br /><br /> 请参阅[修订和取代应用程序](../../apps/deploy-use/revise-and-supersede-applications.md)。|  
+|**导出**|打开“导出应用程序向导”，它可让你将所选的应用程序导出为 .zip 文件，然后可以将其存档或安装到另一个站点上。 如果选择导出应用程序内容，则会创建一个包含此内容的文件夹。<br /><br /> 还可以导出应用程序依赖关系、取代关系和条件以及应用程序及其依赖关系的内容。<br /><br /> Windows PowerShell cmdlet **Export-CMApplication** 执行相同的功能。 有关详细信息，请参阅 Microsoft System Center 2012 Configuration Manager SP1 Cmdlet 参考文档中的 [Export-CMApplication](http://go.microsoft.com/fwlink/p/?LinkID=258880)。|  
+|**删除**|删除当前所选的应用程序。<br /><br /> 在下列情况下无法删除某应用程序：其他应用程序依赖它，它具有活动的部署，或者它具有依赖的任务序列。|  
+|**模拟部署**|打开“模拟应用程序部署向导”  ，在其中你无需安装或卸载应用程序就能测试将应用程序部署到计算机的结果。<br /><br /> 请参阅[模拟应用程序部署](../../apps/deploy-use/simulate-application-deployments.md)。|  
+|**部署**|打开“部署软件向导”  ，在其中你可以将所选的应用程序部署到层次结构中的一组计算机。<br /><br /> 请参阅[部署应用程序](../../apps/deploy-use/deploy-applications.md)。|  
+|**分发内容**|打开“分发内容向导”  ，在其中你可以将所选应用程序的内容复制到层次结构中的分发点。<br /><br /> 请参阅[管理内容和内容基础结构](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。|  
+|**查看关系**|显示一幅图形，其中显示了所选应用程序与其他应用程序的关系。 选择以下选项之一：<br><br><ul><li>**依赖关系** - 显示依赖所选应用程序的应用程序，以及所选应用程序依赖的应用程序。</li><li>**取代** - 显示所选应用程序取代的应用程序，以及所选应用程序被取代为的应用程序。</li><li>**全局条件** - 显示此应用程序引用的全局条件。</li></ol><br /> 请参阅[修订和取代应用程序](../../apps/deploy-use/revise-and-supersede-applications.md)和[创建全局条件](../../apps/deploy-use/create-global-conditions.md)。|  
 
-##  <a name="manage-deployment-types"></a>管理部署類型  
- 在 [軟體程式庫] 工作區中，展開 [應用程式管理]，再選擇 [應用程式]，然後選擇具有您要管理之部署類型的應用程式。 在詳細資料窗格中，選擇 [部署類型] 索引標籤，然後依序選擇您要管理的部署類型以及管理工作。  
+##  <a name="manage-deployment-types"></a>管理部署类型  
+ 在“软件库”工作区中，展开“应用程序管理”，选择“应用程序”，然后选择具有要管理的部署类型的应用程序。 在“详细信息”窗格中，选择“部署类型”选项卡，选择要管理的部署类型，然后选择管理任务。  
 
-|工作|詳細資料|  
+|任务|详细信息|  
 |----------|-------------|  
-|**增加優先順序**|增加所選部署類型的優先順序。 部署類型是依順序評估的。 當部署類型符合指定需求時，就會加以執行，而不會再評估優先順序清單上的其他部署類型。|  
-|**降低優先順序**|降低所選部署類型的優先順序。|  
-|**刪除**|刪除選取的部署類型。<br><br>如果某個部署類型正由其他應用程式中的部署類型所參考，您就不能將其刪除。<br>若要刪除部署類型，您必須移除此部署類型在其他部署類型中的所有相依性。<br>如果應用程式具有的部署類型會參考您要刪除的部署類型，則必須移除這所有應用程式的舊有修訂版本。|  
-|**更新內容**|重新整理所選部署類型的內容。<br /><br /> 當您針對具有虛擬應用程式的部署類型啟動此精靈時，會一併啟動 [更新內容精靈]。 此精靈可讓您變更所選虛擬應用程式的發佈選項和需求規則。 如需詳細資訊，請參閱[建立應用程式](../../apps/deploy-use/create-applications.md)。<br /><br /> 當您重新整理部署類型的內容時，會建立新的應用程式修訂版本。 這可能會導致用戶端裝置更新為新的應用程式。|  
+|**提高优先级**|提高所选部署类型的优先级。 部署类型按次序接受评估。 在某种部署类型符合指定的要求时，将会运行它，之后不会评估优先级列表上的其他部署类型。|  
+|**降低优先级**|降低所选部署类型的优先级。|  
+|**删除**|删除所选的部署类型。<br><br>如果另一个应用程序中的部署类型正在引用某部署类型，则无法删除此部署类型。<br>若要删除某部署类型，则必须删除在其他部署类型中包含的、此部署类型的全部依赖关系。<br>此外，如果任何应用程序包含的部署类型引用了要删除的部署类型，则还必须删除这些应用程序以前的修订版本。|  
+|**更新内容**|刷新所选部署类型的内容。<br /><br /> 在为包含虚拟应用程序的部署类型启动此向导时，会启动“更新内容向导”。 通过该向导可更改所选虚拟应用程序的发布选项和要求规则。 有关详细信息，请参阅[创建应用程序](../../apps/deploy-use/create-applications.md)。<br /><br /> 在刷新部署类型的内容时，会创建此应用程序的新的修订版本。 这可能会导致用新的应用程序来更新客户端设备。|  

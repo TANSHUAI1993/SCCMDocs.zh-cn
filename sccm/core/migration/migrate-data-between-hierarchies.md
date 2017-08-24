@@ -1,6 +1,6 @@
 ---
-title: "移轉資料 | Microsoft Docs"
-description: "了解如何將資料從來源階層傳送至 System Center Configuration Manager 目的地階層。"
+title: "迁移数据 | Microsoft Docs"
+description: "了解如何将数据从源层次结构传输到 System Center Configuration Manager 目标层次结构。"
 ms.custom: na
 ms.date: 12/29/2016
 ms.prod: configuration-manager
@@ -18,94 +18,94 @@ manager: angrobe
 ms.openlocfilehash: dface33392c2a2a662522656eabf0936b52b28fc
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="migrate-data-between-hierarchies-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 階層間移轉資料
+# <a name="migrate-data-between-hierarchies-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中层次结构之间迁移数据
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-使用移轉，將資料從支援的來源階層傳送至您的 System Center Configuration Manager 目的地階層。  當您從來源階層移轉資料時︰  
+使用迁移将数据从受支持的源层次结构传输到 System Center Configuration Manager 目标层次结构。  从源层次结构迁移数据时：  
 
--   您從來源基礎結構中所識別的站台資料庫存取資料，然後將該資料傳送到目前的環境。  
+-   从在源基础结构中标识的站点数据库访问数据，然后将数据传输到当前环境。  
 
--   移轉並不會變更來源階層中的資料，而是會探索該資料並在目的地階層的資料庫中儲存資料複本。  
+-   迁移不会改变源层次结构中的数据，而是发现数据，然后在目标层次结构的数据库中存储这些数据的副本。  
 
-在規劃移轉策略時，請考慮下列事項：  
+规划迁移策略时，请考虑以下事项：  
 
--   您可以將現有 Configuration Manager 2007 SP2 基礎結構移轉至 System Center Configuration Manager。  
+-   可将现有 Configuration Manager 2007 SP2 基础结构迁移到 System Center Configuration Manager。  
 
--   您可以從來源站台移轉部分或所有支援的資料。  
+-   可以从源站点迁移部分或全部受支持的数据。  
 
--   您可以從單一來源站台將資料移轉至目的地階層中數個不同的站台。  
+-   可以将数据从单个源站点迁移到目标层次结构中的多个不同站点。  
 
--   您可以將資料從多個來源站台移至目的地階層中的單一站台。  
+-   可以将数据从多个源站点移到目标层次结构中的单个站点。  
 
-##  <a name="BKMK_MigrationConcepts"></a> 移轉的概念  
- 使用移轉時，可能會遇到下列概念和詞彙。  
+##  <a name="BKMK_MigrationConcepts"></a> 有关迁移的概念  
+ 使用迁移时可能遇到以下概念和术语。  
 
-|概念或詞彙|詳細資訊|  
+|概念或术语|更多信息|  
 |---------------------|----------------------|  
-|來源階層|此階層會執行 Configuration Manager 的受支援版本，並包含您想要移轉的資料。 當您設定移轉時，會在指定來源階層的頂層站台時識別來源階層。 指定來源階層後，目的地階層的底層站台會從指定來源站台的資料庫收集資料，以識別您可以移轉的資料。<br /><br /> 如需詳細資訊，請參閱[在 System Center Configuration Manager 中規劃來源階層策略](../../core/migration/planning-a-source-hierarchy-strategy.md)中的[來源階層](../../core/migration/planning-a-source-hierarchy-strategy.md#BKMK_Source_Hierarchies)。|  
-|來源站台|來源階層中的站台，可以讓您用來將資料移轉到目的地階層。<br /><br /> 如需詳細資訊，請參閱[在 System Center Configuration Manager 中規劃來源階層策略](../../core/migration/planning-a-source-hierarchy-strategy.md)中的[來源站台](../../core/migration/planning-a-source-hierarchy-strategy.md#BKMK_Source_Sites)。|  
-|目的地階層|System Center Configuration Manager 階層，是為了從來源階層匯入資料而執行移轉的位置。|  
-|資料收集|正在進行對來源階層的識別程序，此來源階層可以移轉到目的地階層。 Configuration Manager 會定期檢查來源階層，識別來源階層中您之前移轉過的資訊有無任何變化，同時也會識別在目的地階層中您可能想要更新的資訊。<br /><br /> 如需詳細資訊，請參閱[在 System Center Configuration Manager 中規劃來源階層策略](../../core/migration/planning-a-source-hierarchy-strategy.md)中的[資料收集](../../core/migration/planning-a-source-hierarchy-strategy.md#BKMK_Data_Gathering)。|  
-|移轉作業|設定移轉特定物件，然後管理將這些物件移轉至目的地階層的程序。<br /><br /> 如需詳細資訊，請參閱[在 System Center Configuration Manager 中規劃移轉作業策略](../../core/migration/planning-a-migration-job-strategy.md)|  
-|用戶端移轉|從來源站台的資料庫將用戶端使用的資訊傳送到目的地階層資料庫的程序。 此資料移轉後隨即會將裝置上用戶端軟體升級為目的地階層的用戶端軟體版本。<br /><br /> 如需詳細資訊，請參閱 [在 System Center Configuration Manager 中規劃移轉作業策略](../../core/migration/planning-a-client-migration-strategy.md)。|  
-|共用發佈點|在移轉期間，來源階層中與目的地階層共用的發佈點。<br /><br /> 在移轉期間，指派至目的地階層之站台的用戶端可以透過共用發佈點取得資訊。<br /><br /> 如需詳細資訊，請參閱[在 System Center Configuration Manager 中規劃內容部署移轉策略](../../core/migration/planning-a-content-deployment-migration-strategy.md)中的[在來源與目的地階層間共用發佈點](../../core/migration/planning-a-content-deployment-migration-strategy.md#About_Shared_DPs_in_Migration)。|  
-|監視移轉|監視移轉活動的程序。 您可以在 [系統管理] 工作區的 [移轉] 節點監視移轉進度和成功與否。<br /><br /> 如需詳細資訊，請參閱[規劃在 System Center Configuration Manager 中監視移轉活動](../../core/migration/planning-to-monitor-migration-activity.md)。|  
-|停止收集資料|停止從來源站台收集資料的程序。 當您不再需要從來源階層移轉資料，或者想要暫停進行移轉相關活動時，可以將目的地階層設定為停止從來源階層收集資料。<br /><br /> 如需詳細資訊，請參閱[在 System Center Configuration Manager 中規劃來源階層策略](../../core/migration/planning-a-source-hierarchy-strategy.md)中的[資料收集](../../core/migration/planning-a-source-hierarchy-strategy.md#BKMK_Data_Gathering)。|  
-|清除移轉資料|移除從目的地階層資料庫移轉的相關資訊，以完成從來源階層進行移轉的程序。<br /><br /> 如需詳細資訊，請參閱 [規劃在 System Center Configuration Manager 中完成移轉](../../core/migration/planning-to-complete-migration.md)。|  
+|源层次结构|一种层次结构，其运行 Configuration Manager 的受支持版本，并具有想要迁移的数据。 在设置迁移时，在指定源层次结构的顶层站点时标识源层次结构。 在指定源层次结构之后，目标层次结构的顶层站点从指定的源站点的数据库中收集数据，以确定可迁移的数据。<br /><br /> 有关详细信息，请参阅[在 System Center Configuration Manager 中规划源层次结构策略](../../core/migration/planning-a-source-hierarchy-strategy.md)中的[源层次结构](../../core/migration/planning-a-source-hierarchy-strategy.md#BKMK_Source_Hierarchies)。|  
+|源站点|源层次结构中的站点，具有可迁移到目标层次结构中的数据。<br /><br /> 有关详细信息，请参阅[在 System Center Configuration Manager 中规划源层次结构策略](../../core/migration/planning-a-source-hierarchy-strategy.md)中的[源站点](../../core/migration/planning-a-source-hierarchy-strategy.md#BKMK_Source_Sites)。|  
+|目标层次结构|一个 System Center Configuration Manager 层次结构，迁移在其中运行以从源层次结构导入数据。|  
+|数据收集|确定源层次结构中可迁移到目标层次结构的信息的持续过程。 Configuration Manager 将按计划检查源层次结构，以确定对源层次结构中先前迁移的信息和目标层次结构中可能需要更新的信息的任何更改。<br /><br /> 有关详细信息，请参阅[在 System Center Configuration Manager 中规划源层次结构策略](../../core/migration/planning-a-source-hierarchy-strategy.md)中的[数据收集](../../core/migration/planning-a-source-hierarchy-strategy.md#BKMK_Data_Gathering)。|  
+|迁移作业|配置要迁移的特定对象，然后管理将这些对象迁移到目标层次结构的过程。<br /><br /> 有关详细信息，请参阅[在 System Center Configuration Manager 中规划迁移作业策略](../../core/migration/planning-a-migration-job-strategy.md)|  
+|客户端迁移|将客户端使用的信息从源站点的数据库传输到目标层次结构的数据库的过程。 在进行此数据迁移之后，将设备上的客户端软件升级到目标层次结构中的客户端软件版本。<br /><br /> 有关详细信息，请参阅 [在 System Center Configuration Manager 中规划客户端迁移策略](../../core/migration/planning-a-client-migration-strategy.md)。|  
+|共享的分发点|源层次结构中的分发点，它们在迁移期间与目标层次结构共享。<br /><br /> 在迁移期间，分配到目标层次结构中的站点的客户端可以从共享的分发点中获得内容。<br /><br /> 有关详细信息，请参阅[在 System Center Configuration Manager 中规划内容部署迁移策略](../../core/migration/planning-a-content-deployment-migration-strategy.md)中的[在源和目标层次结构之间共享分发点](../../core/migration/planning-a-content-deployment-migration-strategy.md#About_Shared_DPs_in_Migration)。|  
+|监视迁移|监视迁移活动的过程。 通过“管理” 工作区中的“迁移”节点监视迁移的进度和成功情况。<br /><br /> 有关详细信息，请参阅[在 System Center Configuration Manager 中规划监视迁移活动](../../core/migration/planning-to-monitor-migration-activity.md)。|  
+|停止收集数据|停止从源站点收集数据的过程。 如果不再具有要从源层次结构迁移的数据，或者，如果要暂停与迁移相关的活动，则可以将目标层次结构配置为停止从该源层次结构收集数据。<br /><br /> 有关详细信息，请参阅[在 System Center Configuration Manager 中规划源层次结构策略](../../core/migration/planning-a-source-hierarchy-strategy.md)中的[数据收集](../../core/migration/planning-a-source-hierarchy-strategy.md#BKMK_Data_Gathering)。|  
+|清理迁移数据|通过从目标层次结构数据库中删除有关迁移的信息来完成从源层次结构进行的迁移的过程。<br /><br /> 有关详细信息，请参阅 [计划完成 System Center Configuration Manager 中迁移](../../core/migration/planning-to-complete-migration.md)。|  
 
-## <a name="typical-workflow-for-migration"></a>移轉的一般工作流程  
-設定移轉的工作流程：
+## <a name="typical-workflow-for-migration"></a>迁移的典型工作流  
+设置迁移的工作流：
 
-1.  指定受支援的來源階層。  
+1.  指定支持的源层次结构。  
 
-2.  設定資料收集。 資料收集可讓 Configuration Manager 收集可從來源階層移轉之資料的相關資訊。  
+2.  设置数据收集。 数据收集能让 Configuration Manager 收集有关可以从源层次结构迁移的数据的信息。  
 
-     在您停止資料收集程序之前，Configuration Manager 會自動按照簡單的排程重複資料收集程序。 根據預設，資料收集程序每四小時重複一次，以便 Configuration Manager 能夠在來源階層中識別到您可能要移轉的資料有何變化。 要在目的地階層共用來源階層的發佈點，資料收集也是必要的程序。  
+     Configuration Manager 会自动按照简单的计划重复这个数据收集过程，直到停止此过程为止。 默认情况下，数据收集过程每小时重复一次，使 Configuration Manager 得以识别对源层次结构中可能想迁移的数据所做的更改。 如果将分发点从源层次结构共享到目标层次结构，则也要进行数据收集。  
 
-3.  建立移轉作業，在來源和目的地階層之間移轉資料。  
+3.  创建迁移作业以在源和目标层次结构之间迁移数据。  
 
-4.  您隨時可以使用 [停止收集資料]  命令停止資料收集程序。 停止收集資料時，Configuration Manager 不會再識別來源階層中的資料有何變化，也不能再讓來源和目的地階層共用發佈點。 通常，當您不想再移轉資料或共用來源階層的發佈點時，就可以使用此動作。  
+4.  你随时都可以使用“停止收集数据”  命令来停止数据收集过程。 停止数据收集时，Configuration Manager 不再识别对源层次结构中的数据所做的更改，而且不能够再在源和目标层次结构之间共享分发点。 通常，在你不再计划迁移数据或共享源层次结构中的分发点时使用此操作。  
 
-5.  來源階層中所有站台的資料收集皆停止後，您可以選擇使用 [清除移轉資料]  命令清除移轉資料。 這個命令會從目的地階層的資料庫中刪除從來源階層進行移轉的相關歷程資料。  
+5.  在源层次结构的所有站点均已停止数据收集之后，你可以根据需要使用“清理迁移数据”  命令来清理迁移数据。 此命令将从目标层次结构的数据库中删除有关从源层次结构进行的迁移的历史数据。  
 
-從不再用於管理環境的 Configuration Manager 來源階層移轉資料後，您可以解除委任該來源階層和基礎結構。  
+从 Configuration Manager 源层次结构中迁移了不再用于管理环境的数据之后，可以解除该源层次结构和基础结构的授权。  
 
-##  <a name="BKMK_MigrationScenarios"></a> 移轉案例  
- Configuration Manager 支援下列移轉案例。  
+##  <a name="BKMK_MigrationScenarios"></a> 迁移方案  
+ Configuration Manager 支持以下迁移方案。  
 
 > [!NOTE]  
->  將包含獨立站台的階層擴充為包含管理中心網站的階層並不屬於移轉。 如需階層擴充的相關資訊，請參閱[使用安裝精靈安裝站台](../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md)中的[擴充獨立主要站台](../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md#bkmk_expand)。  
+>  将具有独立站点的层次结构扩展为具有管理中心站点的层次结构并不归类为迁移。 有关层次结构扩展的信息，请参阅[使用安装向导来安装站点](../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md#bkmk_expand)中的[扩展独立主站点](../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md)。  
 
-### <a name="migration-from-configuration-manager-2007-hierarchies"></a>從 Configuration Manager 2007 階層移轉  
- 當您使用移轉功能從 Configuration Manager 2007 移轉資料時，可以將投資保留在現有的站台基礎結構中，並且獲得下列優勢：  
+### <a name="migration-from-configuration-manager-2007-hierarchies"></a>从 Configuration Manager 2007 层次结构进行迁移  
+ 使用迁移方法从 Configuration Manager 2007 迁移数据时，可保留在现有站点基础结构中的投资，并获得以下好处：  
 
-|優勢|詳細資訊|  
+|好处|更多信息|  
 |-------------|----------------------|  
-|站台資料庫的改善|System Center Configuration Manager 資料庫支援完整 Unicode。|  
-|站台間的資料庫複寫|System Center Configuration Manager 中的複寫是以 Microsoft SQL Server 為基礎。 這樣能夠提升站台對站台資料傳送的效能。|  
-|使用者為中心的管理|使用者聚焦於 System Center Configuration Manager 中的管理工作。 例如，即使不知道使用者的裝置名稱，您仍然可以將軟體發佈給該使用者。 此外，System Center Configuration Manager 讓使用者能夠進一步控制要將哪些軟體安裝在其裝置中，以及安裝軟體的時間。|  
-|階層簡化|在 System Center Configuration Manager 中，管理中心網站類型以及主要與次要站台的行為變更，可讓您建立較簡化的站台階層，使用的頻寬及需要的伺服器數量皆可減少。|  
-|以角色為基礎的系統管理|System Center Configuration Manager 採用的這種中央安全性模式可用於根據您的系統管理及商務需求防護及管理整個階層。|  
+|站点数据库的改进|System Center Configuration Manager 数据库支持完整的 Unicode。|  
+|站点之间的数据库复制|System Center Configuration Manager 中的副本基于 Microsoft SQL Server。 这能改善站点间数据传输的性能。|  
+|以用户为中心的管理|用户是 System Center Configuration Manager 中管理任务的重点。 例如，即使你不知道某用户的设备名称，也可以将软件分发给该用户。 此外，System Center Configuration Manager 还能让用户在更大程度上控制在其设备上安装哪个软件，以及何时安装该软件。|  
+|层次结构简化|在 System Center Configuration Manager 中，管理中心站点类型以及主站点和辅助站点的行为更改允许构建使用更少网络带宽、需要更少服务器且更简单的站点层次结构。|  
+|基于角色的管理|这是 System Center Configuration Manager 中的中央安全模型，它提供了与管理要求和业务要求相对应的、覆盖整个层次结构的安全性和管理。|  
 
 > [!NOTE]  
->  因為 System Center 2012 Configuration Manager 中第一次引進的設計變更，所以您無法將 Configuration Manager 2007 基礎結構升級至 System Center Configuration Manager。 支援從 System Center 2012 Configuration Manager 就地升級至 System Center Configuration Manager。  
+>  由于 System Center 2012 Configuration Manager 中首次引入的设计更改，无法将 Configuration Manager 2007 基础结构升级为 System Center Configuration Manager。 支持从 System Center 2012 Configuration Manager 就地升级到 System Center Configuration Manager。  
 
-### <a name="migration-from-configuration-manager-2012-or-another-system-center-configuration-manager-hierarchy"></a>從 Configuration Manager 2012 或其他 System Center Configuration Manager 階層進行移轉  
- 從 System Center 2012 Configuration Manager 或 System Center Configuration Manager 階層移轉資料的程序相同。 其中包括從多個來源階層移轉至單一目的地階層，例如當公司取得由 Configuration Manager 管理的額外資源時。 此外，您可以將資料從測試環境移轉至 Configuration Manager 生產環境。 這樣可讓您將投資保存在 Configuration Manager 測試環境中。  
+### <a name="migration-from-configuration-manager-2012-or-another-system-center-configuration-manager-hierarchy"></a>从 Configuration Manager 2012 或另一个 System Center Configuration Manager 层次结构的迁移  
+ 从 System Center 2012 Configuration Manager 或 System Center Configuration Manager 层次结构迁移数据的过程是相同的。 这包括将数据从多个源层次结构迁移到一个目标层次结构，例如在贵公司获得了已经由 Configuration Manager 管理的额外资源时。 此外，还可以将数据从测试环境迁移到 Configuration Manager 生产环境。 这可以保留 Configuration Manager 测试环境中的投资。  
 
-## <a name="additional-topics-for-migration"></a>其他的移轉主題：  
+## <a name="additional-topics-for-migration"></a>关于迁移的的其他主题：  
 
--   [規劃移轉至 System Center Configuration Manager](../../core/migration/planning-for-migration.md)  
+-   [迁移到 System Center Configuration Manager 的规划](../../core/migration/planning-for-migration.md)  
 
--   [設定來源階層和來源站台以移轉到 System Center Configuration Manager](../../core/migration/configuring-source-hierarchies-and-source-sites-for-migration.md)  
+-   [配置源层次结构和源站点以迁移到 System Center Configuration Manager](../../core/migration/configuring-source-hierarchies-and-source-sites-for-migration.md)  
 
--   [移轉至 System Center Configuration Manager 的作業](../../core/migration/operations-for-migration.md)  
+-   [用于迁移到 System Center Configuration Manager 的操作](../../core/migration/operations-for-migration.md)  
 
--   [移轉至 System Center Configuration Manager 的安全性和隱私權](../../core/migration/security-and-privacy-for-migration.md)  
+-   [有关迁移到 System Center Configuration Manager 的安全和隐私](../../core/migration/security-and-privacy-for-migration.md)  
 
-## <a name="see-also"></a>另請參閱  
- [開始使用 System Center Configuration Manager](../../core/servers/deploy/start-using.md)
+## <a name="see-also"></a>另请参阅  
+ [开始使用 System Center Configuration Manager](../../core/servers/deploy/start-using.md)

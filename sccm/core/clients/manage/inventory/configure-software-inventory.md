@@ -1,6 +1,6 @@
 ---
-title: "設定軟體清查 | Microsoft Docs"
-description: "設定軟體清查，並在 Configuration Manager 中排除軟體清查的資料夾。"
+title: "配置软件清单 | Microsoft Docs"
+description: "配置软件清单，并从 Configuration Manager 中的软件清单中排除文件夹。"
 ms.custom: na
 ms.date: 02/22/2017
 ms.prod: configuration-manager
@@ -18,41 +18,41 @@ manager: angrobe
 ms.openlocfilehash: e60cec71c425e5e42d450cbeee366528d4b42405
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="how-to-configure-software-inventory-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中設定軟體清查
+# <a name="how-to-configure-software-inventory-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中配置软件清单
 
-適用於：System Center Configuration Manager (最新分支)
+*适用范围：System Center Configuration Manager (Current Branch)*
 
- 這個程序可設定軟體清查的預設用戶端設定，並套用到階層中的所有電腦。 如果您只想將這些設定套用至某些電腦，請建立自訂裝置用戶端設定，並將它指派給包含您要使用軟體清查之電腦的集合。 如需如何建立自訂裝置設定的詳細資訊，請參閱 [How to configure client settings in System Center Configuration Manager](../../../../core/clients/deploy/configure-client-settings.md) (如何在 System Center Configuration Manager 中設定用戶端設定)。  
+ 此过程将为软件清单配置默认客户端设置，并应用于层次结构中的所有计算机。 如果希望这些设置仅应用于某些计算机，请创建一个自定义设备客户端设置，并将其分配给包含要使用软件清单的计算机集合。 有关如何创建自定义设备设置的详细信息，请参阅[如何在 System Center Configuration Manager 中配置客户端设置](../../../../core/clients/deploy/configure-client-settings.md)。  
 
-## <a name="to-configure-software-inventory"></a>設定軟體清查  
+## <a name="to-configure-software-inventory"></a>若要配置软件清单  
 
-1.  在 Configuration Manager 主控台中，選擇 [系統管理] > [用戶端設定] [預設用戶端設定]。  
+1.  在 Configuration Manager 控制台中，选择“管理” > “客户端设置”、“默认客户端设置”。  
 
-4.  在 [首頁] 索引標籤的 [內容] 群組中，選擇 [內容]。  
+4.  在“主页”选项卡上的“属性”组中，选择“属性”。  
 
-5.  在 [預設設定] 對話方塊中，選擇 [軟體清查]。  
+5.  在“默认设置”对话框中，选择“软件清单”。  
 
-6.  在 [裝置設定]  清單中，設定下列值：  
+6.  在“设备设置”  列表中，配置以下值：  
 
-    -   **在用戶端上啟用軟體清查** - 從下拉式清單中選取 [True]。  
+    -   **启用客户端上的软件清单** - 从下拉列表中选择“True”。  
 
-    -   **排程軟體清查和檔案收集** - 設定用戶端收集軟體清查和檔案的間隔。   
+    -   **软件清单和文件收集日程安排** – 配置客户端收集软件清单和文件的间隔。   
 
-7.  設定您需要的用戶端設定。 如需可供設定的軟體清查用戶端設定清單，請參閱[關於 Configuration Manager 中的用戶端設定](../../../../core/clients/deploy/about-client-settings.md)主題的[軟體清查](../../../../core/clients/deploy/about-client-settings.md#software-inventory)一節。  
+7.  配置所需的客户端设置。 有关可以配置的软件清单客户端设置的列表，请参阅[关于 System Center Configuration Manager 中的客户端设置](../../../../core/clients/deploy/about-client-settings.md#software-inventory)主题中的[软件清单](../../../../core/clients/deploy/about-client-settings.md)部分。  
 
- 用戶端電腦將會在下一次下載用戶端原則時進行這些設定。 若要起始單一用戶端的原則擷取，請參閱 [How to manage clients in System Center Configuration Manager](../../../../core/clients/manage/manage-clients.md)。  
+ 当客户端计算机下一次下载客户端策略时，将使用这些设置对它们进行配置。 要为单个客户端启动策略检索，请参阅 [How to manage clients in System Center Configuration Manager](../../../../core/clients/manage/manage-clients.md)。  
 
 
-## <a name="to-exclude-folders-from-software-inventory"></a>排除資料夾不進行軟體清查  
+## <a name="to-exclude-folders-from-software-inventory"></a>从软件清单中排除文件夹  
 
-1.  使用 Notepad.exe，建立名為 **Skpswi.dat**的空白檔案。  
+1.  使用 Notepad.exe，创建名为 **Skpswi.dat**的空文件。  
 
-2.  在 **Skpswi.dat** 檔案上按一下滑鼠右鍵，然後按一下 [內容] 。 在 Skpswi.dat 檔案的檔案內容中，選取 [隱藏]  屬性。  
+2.  右键单击 **Skpswi.dat** 文件，然后单击“属性” 。 在 Skpswi.dat 文件的文件属性中，选择“隐藏”  属性。  
 
-3.  將 **Skpswi.dat** 檔案放在您想要排除不進行軟體清查之每個用戶端硬碟機或資料夾結構的根目錄。  
+3.  将 **Skpswi.dat** 文件放置在要从软件清单中排除的每个客户端硬盘或文件夹结构的根目录中。  
 
 > [!NOTE]  
->  除非從用戶端電腦的用戶端磁碟機中刪除這個檔案，否則軟體清查不會重新清查磁碟機。
+>  除非在客户端计算机上删除此文件，否则软件清单将不会再次列出该客户端驱动器清单。

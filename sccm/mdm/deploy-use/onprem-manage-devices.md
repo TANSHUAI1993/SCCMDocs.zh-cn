@@ -1,6 +1,6 @@
 ---
-title: "管理內部部署行動裝置管理的裝置 | Microsoft Docs"
-description: "使用 Configuration Manager 管理內部部署行動裝置管理的裝置。"
+title: "在本地移动设备管理中管理设备 | Microsoft Docs"
+description: "使用 Configuration Manager 在本地移动设备管理中管理设备。"
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
@@ -18,13 +18,13 @@ manager: angrobe
 ms.openlocfilehash: 92009c96ccc5f4124b300873ff77088ea1712c19
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="manage-devices-for-on-premises-mobile-device-management"></a>使用 Configuration Manager 管理內部部署行動裝置管理的裝置
+# <a name="manage-devices-for-on-premises-mobile-device-management"></a>在本地移动设备管理中管理设备
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-您可以使用 System Center Configuration Manager 內部部署行動裝置管理 (MDM) 來管理電腦與裝置。 若要這樣做，[裝置必須註冊](enroll-devices-on-premises-mdm.md)以便 Configuration Manager 可以與裝置進行通訊以執行管理工作。
+可以在 System Center Configuration Manager 本地移动设备管理 (MDM) 中管理计算机和设备。 若要执行此操作，[设备需要先进行注册](enroll-devices-on-premises-mdm.md)，以便 Configuration Manager 能够与管理任务的设备通信。
 
-在內部部署 MDM 中管理裝置與在混合式 MDM 環境中管理裝置相同。 [管理混合式 MDM 中的裝置](wipe-lock-reset-devices.md)提供有關裝置管理的詳細資訊。
+在本地 MDM 中管理设备与在混合 MDM 环境中管理设备一样。 [在混合 MDM 中管理设备](wipe-lock-reset-devices.md)详细介绍了设备管理。

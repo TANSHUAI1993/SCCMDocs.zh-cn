@@ -1,6 +1,6 @@
 ---
-title: "管理高風險部署 | Microsoft Docs"
-description: "了解如何在 System Center Configuration Manager 中設定站台設定，於系統管理員建立高風險部署時發出警告。"
+title: "管理高风险部署 | Microsoft Docs"
+description: "了解如何在 System Center Configuration Manager 中配置站点设置以便在管理员创建高风险部署时警告他们。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -17,44 +17,44 @@ manager: angrobe
 ms.openlocfilehash: 8b5564f39f07a67a3c9278379ed59ca415603d21
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="settings-to-manage-high-risk-deployments-for-system-center-configuration-manager"></a>管理 System Center Configuration Manager 高風險部署的設定
+# <a name="settings-to-manage-high-risk-deployments-for-system-center-configuration-manager"></a>用于管理 System Center Configuration Manager 的高风险部署的设置
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 
-您可以使用 System Center Configuration Manager 設定站台設定，於系統管理員建立高風險工作順序部署時發出提醒。 高風險部署的定義：  
+借助 System Center Configuration Manager，可以配置会在管理员创建高风险任务序列部署时警告他们的站点设置。 其中一项高风险部署是：  
 
--   自動安裝的部署  
+-   自动安装的部署  
 
--   有可能會導致非預期的結果  
+-   可能产生意外结果  
 
- 例如，以**必要**用途部署作業系統的工作順序，會被視為高風險。  
+ 例如，其用途为“必需”的部署操作系统的任务序列被认为是高风险部署。  
 
- 若要降低不需要的高風險部署所帶來的風險，您可以設定這些部署驗證設定中的大小限制：  
+ 若要降低不需要的高风险部署的风险，可以在这些部署验证设置中配置大小限制：  
 
--   **限制集合大小**：當您建立部署時，隱藏所含用戶端數目超過限制的集合。  
+-   **集合大小限制**：创建部署时隐藏包含的客户端多于限制的集合。  
 
-    -   **預設大小**：當您建立部署時，此設定預設會隱藏所含用戶端數目超過限制的集合。 您仍然可以在建立部署時看到這些集合，但預設會予以隱藏。 預設值為 100。 輸入的值為 0 時可忽略此設定。  
+    -   **默认大小**：创建部署时，此设置默认隐藏其客户端数多于限制的集合。 创建部署时，你仍然可以查看这些集合，但它们在默认情况下是隐藏的。 默认值为 100。 输入值 0 可忽略此设置。  
 
-    -   **大小上限**：當您建立部署時，此設定一律會隱藏所含用戶端數目超過限制的集合。 預設值是 0，忽略此設定。 [大小上限]  的值必須大於 [預設大小]  的值。  
+    -   **最大大小**：创建部署时，此设置总是隐藏其客户端多于限制的集合。 默认值为 0，将忽略此设置。 “最大大小”  值必须大于“默认大小”  值。  
 
-     例如，將 [預設大小] 設為 100，而 [大小上限] 設為 1000。 當您建立高風險部署時，[選取集合] 視窗只會顯示所含用戶端少於 100 個的集合。 如果您清除 [隱藏成員計數大於站台大小上限設定的集合] 設定，則此視窗會顯示所含用戶端少於 1000 個的集合。  
+     例如，将“默认大小”设置为 100，将“最大大小”设置为 1000。 当创建高风险部署时，“选择集合”窗口仅显示包含的客户端少于 100 个的集合。 如果清除“隐藏成员数大于站点最低大小配置的集合”设置，则该窗口显示包含的客户端少于 1000 个的集合。  
 
--   **包含站台系統伺服器的集合**：當目標集合包含具有站台系統角色的電腦時封鎖部部署，或在建立部署之前要求驗證。 當部署遭到封鎖時，您必須選取另一個符合部署驗證準則的集合。  
+-   **包含站点系统服务器的集合**：目标集合包含具有站点系统角色的计算机时，创建部署前将阻止部署或要求验证。 部署被阻止时，必须选择一个符合部署验证条件的不同集合。  
 
 > [!NOTE]  
->  高風險的部署一律限制於自訂集合、您建立的集合，以及內建的 [未知的電腦]  集合。 當您建立高風險的部署時，您無法選取 [所有系統] 這類的內建集合。  
+>  高风险部署始终局限于自定义集合、你所创建的集合和内置“未知计算机”  集合。 创建高风险部署时，无法选择“所有系统” 等内置集合。  
 
-### <a name="to-configure-deployment-verification-for-a-site"></a>設定站台的部署驗證  
+### <a name="to-configure-deployment-verification-for-a-site"></a>若要配置站点的部署验证  
 
-1.  在 Configuration Manager 主控台中，選擇 [系統管理] > [站台設定] > [站台]，然後選取要設定的主要站台。  
+1.  在 Configuration Manager 控制台中，选择“管理” >“站点配置” > “站点”，然后选择主站点进行配置。  
 
-2.  在 [首頁] 索引標籤的 [內容] 群組中，選擇 [內容]，然後選擇 [部署驗證] 索引標籤。  
+2.  在“主页”选项卡上的“属性”组中，选择“属性”，然后选择“部署验证”选项卡。  
 
-3.  設定您要使用的組態設定之後，請選擇 [確定] 儲存設定。  
+3.  在设置要使用的配置之后，选择“确定”保存配置。  
 
-### <a name="see-also"></a>請參閱  
- [為 System Center Configuration Manager 設定站台和階層](../../core/servers/deploy/configure/configure-sites-and-hierarchies.md)
+### <a name="see-also"></a>另请参阅  
+ [配置 System Center Configuration Manager 的站点和层次结构](../../core/servers/deploy/configure/configure-sites-and-hierarchies.md)

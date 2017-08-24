@@ -1,6 +1,6 @@
 ---
-title: "準備將用戶端軟體部署到 Mac | Microsoft Docs"
-description: "先完成設定工作，再將 Configuration Manager 用戶端部署至 Mac。"
+title: "将客户端软件部署到 Mac 的准备工作 | Microsoft Docs"
+description: "将 Configuration Manager 客户端部署到 Mac 计算机前的配置任务。"
 ms.custom: na
 ms.date: 05/04/2017
 ms.prod: configuration-manager
@@ -17,20 +17,20 @@ manager: angrobe
 ms.openlocfilehash: b3bb72f81812705b4654e268025074402e89a7cb
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="prepare-to-deploy-client-software-to-macs"></a>準備將用戶端軟體部署到 Mac
+# <a name="prepare-to-deploy-client-software-to-macs"></a>将客户端软件部署到 Mac 的准备工作
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-請遵循這些步驟以確保您準備好[將 Configuration Manager 用戶端部署至 Mac 電腦](/sccm/core/clients/deploy/deploy-clients-to-macs)。 
+按照下列步骤，确保你已准备好[将 Configuration Manager 客户端部署到 Mac 计算机](/sccm/core/clients/deploy/deploy-clients-to-macs)。 
 
-## <a name="mac-prerequisites"></a>Mac 必要條件
+## <a name="mac-prerequisites"></a>Mac 先决条件
 
-Configuration Manager 媒體不提供 Mac 用戶端安裝套件。 從 [Microsoft 下載中心](http://go.microsoft.com/fwlink/?LinkID=525184)下載**其他作業系統的用戶端**。  
+Mac 客户端安装包未与 Configuration Manager 媒体一同提供。 可从 [Microsoft 下载中心](http://go.microsoft.com/fwlink/?LinkID=525184)下载**适用于其他操作系统的客户端**。  
 
-**支援的版本：**  
+**支持的版本：**  
 
 -   **Mac OS X 10.6** (Snow Leopard) 
 
@@ -46,148 +46,148 @@ Configuration Manager 媒體不提供 Mac 用戶端安裝套件。 從 [Microsof
 
 -   **Mac OS X 10.11** (El Capitan)  
 
--   **Mac OS X 10.12** (macOS Sierra )  
+-   **Mac OS X 10.12** (macOS Sierra)  
 
-## <a name="certificate-requirements"></a>憑證需求
-Mac 電腦的用戶端安裝和管理需要公開金鑰基礎結構 (PKI) 憑證。 PKI 憑證會使用相互驗證及加密的資料傳送，對 Mac 電腦和 Configuration Manager 站台之間的通訊進行加密。 Configuration Manager 可以使用含有企業憑證授權單位 (CA) 的 Microsoft 憑證服務和 Configuration Manager 註冊點，以及註冊 Proxy 點站台系統角色來要求並安裝使用者用戶端憑證。 或者，如果憑證符合 Configuration Manager 的需求，您可以單獨從 Configuration Manager 要求及安裝電腦憑證。   
+## <a name="certificate-requirements"></a>证书要求
+在 Mac 计算机上安装和管理客户端需要公钥基础结构 (PKI) 证书。 PKI 证书通过使用手动身份验证和加密的数据传输来保护 Mac 计算机和 Configuration Manager 站点之间的通信的安全。 Configuration Manager 可通过将 Microsoft 证书服务与企业证书颁发机构 (CA)、Configuration Manager 注册点和注册代理点站点系统角色一起使用，从而请求和安装用户客户端证书。 或者，如果证书满足 Configuration Manager 的要求，你可以独立于 Configuration Manager 请求和安装计算机证书。   
   
-Configuration Manager Mac 用戶端一律執行憑證撤銷檢查。 您無法停用此功能。  
+Configuration Manager Mac 客户端始终执行证书吊销检查。 不能禁用此功能。  
   
-如果 Mac 用戶端因為找不到 CRL 而無法確認伺服器憑證的憑證撤銷狀態，它們將無法順利連線至 Configuration Manager 站台系統。 特別是在不同樹系中用於發行憑證授權單位的 Mac 用戶端，請檢查您的 CRL 設計以確定 Mac 用戶端可以找到並連線到 CRL 發佈點 (CDP) 以確保網站系統伺服器的連線。  
+如果 Mac 客户端由于无法找到 CRL 而无法确认服务器证书的证书吊销状态，它们将无法成功连接到 Configuration Manager 站点系统。 特别是，对于所在的林与证书颁发机构不同的 Mac 客户端，请检查你的 CRL 设计以确保 Mac 客户端可找到并连接到 CRL 分发点 (CDP) 以便连接站点系统服务器。  
 
-您必須先決定要如何安裝用戶端憑證，才能在 Mac 電腦上安裝 Configuration Manager 用戶端：  
+在 Mac 计算机上安装 Configuration Manager 客户端之前，请决定安装客户端证书的方式：  
 
--   利用 [CMEnroll 工具](/sccm/core/clients/deploy/deploy-clients-to-macs#install-the-client-and-then-enroll-the-client-certificate-on-the-mac)使用 Configuration Manager 註冊。 註冊程序不支援自動憑證更新，所以您必須在安裝的憑證到期前，先重新註冊 Mac 電腦。  
+-   通过使用 [CMEnroll 工具](/sccm/core/clients/deploy/deploy-clients-to-macs#install-the-client-and-then-enroll-the-client-certificate-on-the-mac)注册 Configuration Manager。 注册过程不支持自动证书续订，因此你必须在安装的证书过期之前重新注册 Mac 计算机。  
 
--   [使用與 Configuration Manager 無關的憑證要求和安裝方法](/sccm/core/clients/deploy/deploy-clients-to-macs#use-a-certificate-request-and-installation-method-that-is-independent-from-configuration-manager)。  
+-   [使用与 Configuration Manager 无关的证书请求和安装方法](/sccm/core/clients/deploy/deploy-clients-to-macs#use-a-certificate-request-and-installation-method-that-is-independent-from-configuration-manager)。  
 
-如需 Mac 用戶端憑證需求及其他支援 Mac 電腦所需 PKI 憑證的詳細資訊，請參閱 [System Center Configuration Manager 的 PKI 憑證需求](../../../core/plan-design/network/pki-certificate-requirements.md)。  
+有关 Mac 客户端证书要求和支持 Mac 计算机所需的其他 PKI 证书的详细信息，请参阅 [System Center Configuration Manager 的 PKI 证书要求](../../../core/plan-design/network/pki-certificate-requirements.md)。  
 
-Mac 用戶端會自動指派給管理它們的 Configuration Manager 站台。 即使通訊受限於內部網路，Mac 用戶端還是會安裝為僅限網際網路的用戶端。 此用戶端設定表示當您將這些網站系統角色設定為允許來自網際網路的用戶端連線時，它們將會與其指派的網站內的網站系統角色 (管理點和發佈點) 通訊。 Mac 電腦不會與其指派的網站以外的網站系統角色通訊。  
+会自动将 Mac 客户端分配给对其进行管理的 Configuration Manager 站点。 即使仅与 Intranet 通信，Mac 客户端也将安装为仅 Internet 的客户端。 这种客户端配置意味着，当你将为客户端分配的站点中的站点系统角色（管理点和分发点）配置为允许来自 Internet 的客户端连接时，它们只会与这些站点系统角色通信。 Mac 计算机不会与为其分配的站点范围外的站点系统角色通信。  
 
 > [!IMPORTANT]  
->  Configuration Manager Mac 用戶端無法用於連線到設定為使用[資料庫複本](../../../core/servers/deploy/configure/database-replicas-for-management-points.md)的管理點。  
+>  Configuration Manager Mac 客户端不能用于连接到配置为使用[数据库副本](../../../core/servers/deploy/configure/database-replicas-for-management-points.md)的管理点。  
 
 
-## <a name="deploy-a-web-server-certificate-to-site-system-servers"></a>將 Web 伺服器憑證部署至站台系統伺服器  
-如果這些站台系統沒有 Web 伺服器憑證，請將此種憑證部署至具有這些站台系統角色的電腦︰  
+## <a name="deploy-a-web-server-certificate-to-site-system-servers"></a>将 Web 服务器证书部署到站点系统服务器  
+如果这些站点系统不具有 Web 服务器证书，请将该证书部署到具有这些站点系统角色的计算机：  
 
--   管理點  
+-   管理点  
 
--   發佈點  
+-   分发点  
 
--   註冊點  
+-   注册点  
 
--   註冊 Proxy 點  
+-   注册代理点  
 
-Web 伺服器憑證必須包含網站系統內容中指定的網際網路 FQDN。 伺服器不必從網際網路存取也能支援 Mac 電腦。 如果您不需要以網際網路為基礎的用戶端管理，您可以將網際網路 FQDN 指定為內部網路 FQDN 值。  
+Web 服务器证书必须包含在站点系统属性中指定的 Internet FQDN。 但不可通过 Internet 访问的服务器也支持 Mac 计算机。 如果不需要基于 Internet 的客户端管理，你可以为 Internet FQDN 指定 Intranet FQDN 值。  
 
-請在管理點、發佈點和註冊 Proxy 點的 Web 伺服器憑證中，指定站台系統的網際網路 FQDN 值。 
+可在管理点、分发点和注册代理点的 Web 服务器证书中指定站点系统的 Internet FQDN 值。 
 
-如需建立及安裝此 Web 伺服器憑證的部署範例，請參閱[為執行 IIS 的站台系統部署 Web 伺服器憑證](../../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_webserver2008_cm2012)。  
+有关创建和安装此 Web 服务器证书的部署示例，请参阅[为运行 IIS 的站点系统部署 Web 服务器证书](../../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_webserver2008_cm2012)。  
 
 
-## <a name="deploy-a-client-authentication-certificate-to-site-system-servers"></a>將用戶端驗證憑證部署至站台系統伺服器  
- 如果這些站台系統沒有用戶端驗證憑證，請將此種憑證部署至裝載這些站台系統角色的電腦：  
+## <a name="deploy-a-client-authentication-certificate-to-site-system-servers"></a>将客户端身份验证证书部署到站点系统服务器  
+ 如果这些站点系统没有客户端身份验证证书，请向托管以下站点系统角色的计算机部署客户端身份验证证书：  
 
--   管理點  
+-   管理点  
 
--   發佈點  
+-   分发点  
 
- 如需建立及安裝管理點用戶端憑證的部署範例，請參閱[部署 Windows 電腦的用戶端憑證](../../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_client2008_cm2012)。  
+ 有关创建和安装管理点的客户端证书的示例部署，请参阅[为 Windows 计算机部署客户端证书](../../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_client2008_cm2012)  
 
- 如需建立及安裝管理點用戶端憑證的部署範例，請參閱[部署發佈點的用戶端憑證](../../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_clientdistributionpoint2008_cm2012)。  
+ 有关创建和安装分发点的客户端证书的示例部署，请参阅[为分发点部署客户端证书](../../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_clientdistributionpoint2008_cm2012)。  
 
 >[!IMPORTANT]
->  若要將用戶端部署到執行 macOS Sierra 的裝置上，必須正確設定管理點憑證的「主體名稱」，例如，使用管理點伺服器的 FQDN。
+>  若要将客户端部署到运行 macOS Sierra 的设备上，必须正确配置管理点证书的使用者名称（例如，使用管理点服务器的 FQDN）。
 
-## <a name="prepare-the-client-certificate-template-for-macs"></a>準備 Mac 的用戶端憑證範本  
+## <a name="prepare-the-client-certificate-template-for-macs"></a>为 Mac 准备客户端证书模板  
 
- 憑證範本必須擁有將在 Mac 電腦上註冊憑證之使用者帳戶的 [讀取]  和 [註冊]  權限。  
+ 对于将在 Mac 计算机上注册证书的用户帐户，证书模板必须具有“读取”  和“注册”  权限。  
 
- 請參閱[部署 Mac 電腦的用戶端憑證](../../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_MacClient_SP1)。  
+ 请参阅[部署 Mac 计算机的客户端证书](../../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_MacClient_SP1)。  
 
-## <a name="configure-the-management-point-and-distribution-point"></a>設定管理點和發佈點  
- 為管理點設定下列選項：  
+## <a name="configure-the-management-point-and-distribution-point"></a>配置管理点和分发点  
+ 为下列选项配置管理点：  
 
 -   HTTPS  
 
--   允許用戶端從網際網路連線。 此設定值是管理 Mac 電腦所必備。 然而，這並不代表網站系統伺服器必須能夠從網際網路存取。  
+-   允许来自 Internet 的客户端连接。 管理 Mac 计算机需要该配置值。 但是，它并不意味着站点系统服务器必须可从 Internet 中访问。  
 
--   允許行動裝置和 Mac 電腦使用此管理點  
+-   允许移动设备和 Mac 计算机使用此管理点  
 
- 雖然安裝用戶端不需要用到發佈點，但是如果要在安裝用戶端後將軟體部署到這些電腦，您必須設定發佈點，以允許用戶端從網際網路連線。  
+ 尽管安装客户端无需分发点，但是，如果要在安装客户端之后将软件部署到这些计算机，则必须配置分发点以允许来自 Internet 的客户端连接。  
 
  
-### <a name="to-configure-management-points-and-distribution-points-to-support-macs"></a>設定管理點及發佈點以支援 Mac  
+### <a name="to-configure-management-points-and-distribution-points-to-support-macs"></a>配置管理点和分发点以支持 Mac  
 
-請確定已使用網際網路 FQDN 設定執行管理點和發佈點的網站系統伺服器，再開始執行此程序。 如果這些伺服器不支援以網際網路為基礎的用戶端管理，您可以將內部網路 FQDN 指定為網際網路 FQDN 值。 
+在开始此过程之前，请确保运行管理点和分发点的站点系统服务器配置为包含 Internet FQDN。 如果这些服务器不支持基于 Internet 的客户端管理，则可以将 Intranet FQDN 指定为 Internet FQDN 值。 
 
-這些站台系統角色必須位於主要站台中。  
+这些站点系统角色必须位于主站点中。  
 
 
-1.  在 Configuration Manager 主控台中，選擇 [系統管理] > [站台設定] > [伺服器和站台系統角色]，然後選擇有正確站台系統角色的伺服器。  
+1.  在 Configuration Manager 控制台中，选择“管理” > “站点配置” > “服务器和站点系统角色”，然后选择拥有正确站点系统角色的服务器。  
 
-3.  在詳細資料窗格中，以滑鼠右鍵按一下 [管理點]，選擇 [角色內容]，然後在 [管理點內容] 對話方塊中設定這些選項：  
+3.  在“详细信息”窗格中，右键单击“管理点”，选择“角色属性”，并在“管理点属性”对话框中配置这些选项：  
 
-    1.  選擇 [HTTPS]。  
+    1.  选择“HTTPS”。  
 
-    2.  選擇 [僅允許網際網路用戶端連線] 或 [允許內部網路和網際網路用戶端連線]。 這些選項需要網際網路或內部網路 FQDN。  
+    2.  选择“仅允许 Internet 客户端连接”或“允许 Intranet 和 Internet 客户端连接”。 这些选项需要 Internet 或 Intranet FQDN。  
 
-    3.  選擇 [允許行動裝置和 Mac 電腦使用此管理點]。  
+    3.  选择“允许移动设备和 Mac 计算机使用此管理点”。  
 
-4.  在詳細資料窗格中，以滑鼠右鍵按一下 [發佈點]，選擇 [角色內容]，然後在 [發佈點內容] 對話方塊中設定這些選項：  
+4.  在“详细信息”窗格中，右键单击“分发点”，选择“角色属性”，并在“分发点属性”对话框中配置这些选项：  
 
-    -   選擇 [HTTPS]。  
+    -   选择“HTTPS”。  
 
-    -   選擇 [僅允許網際網路用戶端連線] 或 [允許內部網路和網際網路用戶端連線]。 這些選項需要網際網路或內部網路 FQDN。  
+    -   选择“仅允许 Internet 客户端连接”或“允许 Intranet 和 Internet 客户端连接”。 这些选项需要 Internet 或 Intranet FQDN。  
 
-    -   選擇 [匯入憑證]，瀏覽至匯出的用戶端發佈點憑證檔案，然後指定密碼。  
+    -   选择“导入证书”，浏览到导出的客户端分发点证书文件，然后指定密码。  
 
-5.  針對主要站台中您要搭配 Mac 使用的所有管理點和發佈點，重複步驟 2 到 4。  
+5.  对将用于 Mac 的主站点中的所有管理点和分发点重复步骤 2 至 4。  
 
-## <a name="configure-the-enrollment-proxy-point-and-the-enrollment-point"></a>設定註冊 Proxy 點和註冊點  
- 您必須在相同網站中安裝這兩種網站系統角色，但不需要在相同網站系統伺服器或相同 Active Directory 樹系中安裝它們。  
+## <a name="configure-the-enrollment-proxy-point-and-the-enrollment-point"></a>配置注册代理点和注册点  
+ 你必须在同一站点中安装这两个站点系统角色，但不必将它们安装在同一站点系统服务器上或同一 Active Directory 林中。  
 
- 如需站台系統角色放置和考量的詳細資訊，請參閱[為 System Center Configuration Manager 規劃站台系統伺服器和站台系統角色](../../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md)中的[站台系統角色](../../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md#bkmk_planroles)。  
+ 有关站点系统角色布局和注意事项的详细信息，请参阅[为 System Center Configuration Manager 规划站点系统服务器和站点系统角色](../../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md)中的[站点系统角色](../../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md#bkmk_planroles)。  
 
- 這些程序會設定網站系統角色以支援 Mac 電腦。   
+ 这些过程配置站点系统角色以支持 Mac 计算机。   
 
--   [新的網站系統伺服器](#new-site-system-server)  
+-   [新建站点系统服务器](#new-site-system-server)  
 
--   [現有的站台系統伺服器](#existing-site-system-server)  
+-   [现有站点系统服务器](#existing-site-system-server)  
 
-###  <a name="new-site-system-server"></a>新增網站系統伺服器  
+###  <a name="new-site-system-server"></a>新建站点系统服务器  
 
-1.  在 Configuration Manager 主控台中，選擇 [系統管理] >  [站台設定] > [伺服器和站台系統角色]。  
+1.  在 Configuration Manager 控制台中，选择“管理” >  “站点配置” > “服务器和站点系统角色”  
 
-3.  在 [首頁] 索引標籤的 [建立] 群組中，選擇 [建立站台系統伺服器]。  
+3.  在“主页”选项卡上的“创建”组中，选择“创建站点系统服务器”。  
 
-4.  在 [一般] 頁面上，指定站台系統的一般設定。  請確定指定網際網路 FQDN 的值。 如果不會從網際網路存取伺服器，請使用內部網路 FQDN。  
+4.  在“常规”页上，指定站点系统的常规设置。  请确保为 Internet FQDN 指定值。 如果不能从 Internet 中访问服务器，请使用 Intranet FQDN。  
 
-5.  在 [系統角色選取] 頁面上，從可用角色的清單中選取 [註冊 Proxy 點] 和 [註冊點]。  
+5.  在“系统角色选择”页上，从可用角色列表中选择“注册代理点”和“注册点”。  
 
-6.  在 [註冊 Proxy 點] 頁面上檢閱設定值，並進行必要的變更。  
+6.  在“注册代理点”页上，查看设置并进行任何必要的更改。  
 
-7.  在 [指定註冊點設定] 頁面上檢閱設定值，並進行必要的變更。 然後完成精靈。  
+7.  在“注册点设置”页上，查看设置并进行任何必要的更改。 然后完成该向导。  
 
-### <a name="existing-site-system-server"></a>現有的網站系統伺服器  
+### <a name="existing-site-system-server"></a>现有站点系统服务器  
 
-1.  在 Configuration Manager 主控台中，選擇 [系統管理] >  [站台設定] > [伺服器和站台系統角色]，然後選擇您要用來支援 Mac 的伺服器。  
+1.  在 Configuration Manager 控制台中，选择“管理” >  “站点配置” > “服务器和站点系统角色”，然后选择要用于支持 Mac 的服务器。  
 
-3.  在 [首頁] 索引標籤的 [建立] 群組中，選擇 [新增站台系統角色]。  
+3.  在“主页”选项卡上的“创建”组中，选择“添加站点系统角色”。  
 
-4.  在 [一般]  頁面上，指定網站系統的一般設定，然後按 [下一步] 。 請確定指定網際網路 FQDN 的值。 如果不會從網際網路存取伺服器，請使用內部網路 FQDN。   
+4.  在“常规”  页上，指定站点系统的常规设置，然后单击“下一步” 。 请确保为 Internet FQDN 指定值。 如果不能从 Internet 中访问服务器，请使用 Intranet FQDN。   
 
-5.  在 [系統角色選取] 頁面上，從可用角色的清單中選擇 [註冊 Proxy 點] 和 [註冊點]。  
+5.  在“系统角色选择”页上，从可用角色列表中选择“注册代理点”和“注册点”。  
 
-6.  在 [註冊 Proxy 點] 頁面上檢閱設定值，並進行必要的變更。  
+6.  在“注册代理点”页上，查看设置并进行任何必要的更改。  
 
-7.  在 [指定註冊點設定] 頁面上檢閱設定值，並進行必要的變更。 然後完成精靈。  
+7.  在“注册点设置”页上，查看设置并进行任何必要的更改。 然后完成该向导。  
 
-## <a name="install-the-reporting-services-point"></a>安裝 Reporting Services 點  
- 若要執行 Mac 的報告，請[安裝 Reporting Services 點](../../../core/servers/manage/configuring-reporting.md)。  
+## <a name="install-the-reporting-services-point"></a>安装 Reporting Services 点  
+ 如果要为 Mac 运行报表，请[安装 Reporting Services 点](../../../core/servers/manage/configuring-reporting.md)。  
 
-### <a name="next-steps"></a>後續步驟
+### <a name="next-steps"></a>后续步骤
 
-[將 Configuration Manager 用戶端部署至 Mac 電腦](/sccm/core/clients/deploy/deploy-clients-to-macs)。  
+[将 Configuration Manager 客户端部署到 Mac 计算机](/sccm/core/clients/deploy/deploy-clients-to-macs)。  

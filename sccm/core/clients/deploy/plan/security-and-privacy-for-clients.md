@@ -1,6 +1,6 @@
 ---
-title: "用戶端安全性和隱私權 | Microsoft Docs"
-description: "了解 System Center Configuration Manager 中的用戶端安全性與隱私權。"
+title: "客户端安全和隐私 | Microsoft Docs"
+description: "了解 System Center Configuration Manager 中客户端的安全和隐私。"
 ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
@@ -18,289 +18,289 @@ manager: angrobe
 ms.openlocfilehash: 1d871b0e1a2897c236d17211a23c9c7d93e42313
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="security-and-privacy-for-clients-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的用戶端安全性和隱私權
+# <a name="security-and-privacy-for-clients-in-system-center-configuration-manager"></a>System Center Configuration Manager 中客户端的安全和隐私
 
-*適用對象：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-本文包含 System Center Configuration Manager 中的用戶端以及由 Exchange Server 連接器所管理之行動裝置的安全性與隱私權資訊：  
+本文包含 System Center Configuration Manager 中的客户端以及 Exchange Server 连接器所管理的移动设备的安全和隐私信息：  
 
-##  <a name="BKMK_Security_Cliients"></a> 用戶端的安全性最佳做法  
- 當 Configuration Manager 接受來自執行 Configuration Manager 用戶端之裝置的資料時，可能會引發用戶端攻擊網站的風險。 例如傳送格式錯誤的清查，或者嘗試使網站系統超載。 因此，只能將 Configuration Manager 用戶端部署至您信任的裝置。 此外，使用以下安全性最佳作法有助於保護網站不受 Rogue 或遭盜用的裝置攻擊：  
+##  <a name="BKMK_Security_Cliients"></a>客户端的最佳安全方案  
+ 当 Configuration Manager 从运行 Configuration Manager 客户端的设备接受数据时，这将带来客户端可能会攻击站点的风险。 例如，它们会发送格式不正确的清单或尝试将站点系统过载。 仅将 Configuration Manager 客户端部署到信任的设备。 此外，使用下列最佳安全方案来帮助站点免遭未授权或被侵害的设备威胁：  
 
- **使用公開金鑰基礎結構 (PKI) 憑證，以執行 IIS 的站台系統進行用戶端通訊。**  
+ **使用公钥基础结构 (PKI) 证书与运行 IIS 的站点系统建立客户端通信。**  
 
--   作為網站內容，針對 [僅 HTTPS]  設定 [網站系統設定] 。  
+-   作为站点属性，将“站点系统设置”  配置为“仅 HTTPS” 。  
 
--   以 **/UsePKICert** CCMSetup 內容安裝用戶端  
+-   安装具有 **/UsePKICert** CCMSetup 属性的客户端  
 
--   使用憑證撤銷清單 (CRL)，並且確保用戶端和通訊中的伺服器可以隨時存取憑證撤銷清單。  
+-   使用证书吊销列表 (CRL) 并确保客户端和通信服务器可以始终访问该列表。  
 
- 行動裝置用戶端以及網際網路上的用戶端電腦連線都需要這些憑證，因此，建議內部網路的所有用戶端連線也同樣使用這些憑證 (發佈點除外)。  
+ 对于 Internet 上的移动设备客户端和客户端计算机连接（分发点除外），这些证书必不可少，建议对 Intranet 上的所有客户端连接也使用这些证书。  
 
- 如需 PKI 憑證需求及如何用以協助保護 Configuration Manager 的詳細資訊，請參閱 [System Center Configuration Manager 的 PKI 憑證需求](../../../../core/plan-design/network/pki-certificate-requirements.md)。  
+ 有关 PKI 证书要求以及证书如何用于帮助保护 Configuration Manager 的详细信息，请参阅 [System Center Configuration Manager 的 PKI 证书要求](../../../../core/plan-design/network/pki-certificate-requirements.md)。  
 
- **自動核准來自信任網域的用戶端電腦，並且手動檢查並核准其他電腦。**  
+ **自动批准受信任域的客户端计算机并手动检查和批准其他计算机**  
 
- 您可以將階層的核准設定為手動、針對信任網域的電腦設為自動，或者針對所有的電腦設定為自動。 最安全的核准方法是自動核准信任網域成員的用戶端，並且手動檢查並核准所有其他用戶端。 除非有其他存取控制功能可預防不受信任的電腦存取您的網路，否則不建議自動核准所有用戶端。  
+ 你可以配置为对层次结构进行手动批准、对受信任域中的计算机进行自动批准，或者对所有计算机进行自动批准。 最安全的批准方法是自动批准作为受信任域成员的客户端，然后手动检查和批准所有其他计算机。 不建议自动批准所有客户端，除非您具有其他访问控制来避免不受信任的计算机访问您的网络。  
 
- 當您無法使用 PKI 驗證時，核准時便會將您信任的電腦識別為受 Configuration Manager 管理。  
+ 在无法使用 PKI 身份验证时，“批准”将标识出由 Configuration Manager 管理的受信任计算机。  
 
- 如需如何手動核准電腦的詳細資訊，請參閱[從裝置節點管理用戶端](../../../../core/clients/manage/manage-clients.md#BKMK_ManagingClients_DevicesNode)。  
+ 有关如何手动批准计算机的详细信息，请参阅[通过“设备”节点管理客户端](../../../../core/clients/manage/manage-clients.md#BKMK_ManagingClients_DevicesNode)。  
 
- **請勿依賴以封鎖預防用戶端存取 Configuration Manager 階層**  
+ **请勿依赖阻止来防止客户端访问 Configuration Manager 层次结构**  
 
- Configuration Manager 基礎結構會拒絕被封鎖的用戶端，因此這些用戶端無法與站台系統通訊並下載原則、上傳清查資料或傳送狀態或狀態訊息。 不過，當網站系統接受 HTTP 用戶端連線時，請勿依賴用封鎖來保護 Configuration Manager 階層，以阻擋不信任電腦的存取。 在這個案例中，封鎖的用戶端可以用新的自我簽署憑證與硬體識別碼重新加入站台。 封鎖的設計是用來在您部署作業系統至用戶端時，以及在所有站台系統接受 HTTPS 用戶端連線時，封鎖遺失或遭到洩露的開機媒體。 如果您使用支援憑證撤銷清單 (CRL) 的公開金鑰基礎結構 (PKI)，請永遠將憑證撤銷視為對應可能遭到洩露之憑證的主要防線。 在 Configuration Manager 中封鎖用戶端是保護階層的第二條防線。  
+ Configuration Manager 基础结构会拒绝被阻止的客户端，使它们无法与站点系统通信，从而无法下载策略、上载清单数据或者发送状况或状态消息。 但是，当站点系统接受 HTTP 客户端连接时，请勿依赖阻止来保护 Configuration Manager 层次结构免遭不受信任计算机的威胁。 在此方案中，被阻止的客户端可以使用新的自签名证书和硬件 ID 重新加入该站点。 “阻止”旨在当你将操作系统部署到客户端并且所有站点系统均接受 HTTPS 客户端连接时用于阻止丢失或受侵害的启动媒体。 如果你使用公钥基础结构 (PKI) 并且它支持证书吊销列表 (CRL)，则始终考虑将证书吊销作为预防证书泄漏的主要防线。 在 Configuration Manager 中阻止客户端为保护层次结构提供第二道防线。  
 
- 請參閱[判斷是否要在 System Center Configuration Manager 中封鎖用戶端](../../../../core/clients/deploy/plan/determine-whether-to-block-clients.md)。  
+ 有关详细信息，请参阅[确定是否在 System Center Configuration Manager 中阻止客户端](../../../../core/clients/deploy/plan/determine-whether-to-block-clients.md)。  
 
- **針對您的環境使用最安全實用的用戶端安裝方法：**  
+ **使用对于环境较为实用并且最为安全的客户端安装方法：**  
 
--   對於網域電腦，群組原則用戶端安裝和以軟體更新為基礎的用戶端安裝方法，皆比用戶端推入安裝更安全。  
+-   对于域计算机，组策略客户端安装和基于软件更新的客户端安装方法比客户端请求安装更为安全。  
 
--   如果您套用存取控制與變更控制，建立映像與手動安裝是非常安全的方法。  
+-   如果你应用访问控件和更改控件，则映像安装和手动安装会非常安全。  
 
- 所有用戶端安裝方法中，最不安全的是用戶端推入安裝，因為其中具有諸多相依性，包括本機系統管理權限、Admin$ 共用，以及諸多防火牆例外。 這些相依性會增加您的受攻擊面。  
+ 对于所有客户端安装方法，客户端请求安装最不安全，因为它有许多依赖性，包括本地管理权限、Admin$ 共享和许多防火墙异常。 这些依赖性将增加你的攻击面。  
 
- 如需其他用戶端安裝方法的詳細資訊，請參閱 [System Center Configuration Manager 中的用戶端安裝方法](../../../../core/clients/deploy/plan/client-installation-methods.md)。  
+ 有关不同客户端安装方法的详细信息，请参阅 [System Center Configuration Manager 中的客户端安装方法](../../../../core/clients/deploy/plan/client-installation-methods.md)。  
 
- 此外，盡可能選取需要 Configuration Manager 最少安全性權限的用戶端安裝方法，並且對於被指派包含可用於用戶端部署以外用途之權限的安全性角色，加以限制。 例如，自動用戶端升級需要 [系統高權限管理員]  安全性角色，而此角色會授與系統管理使用者所有的安全性權限。  
+ 此外，尽可能在 Configuration Manager 中选择要求最少安全权限的客户端安装方法，并限制具有分配的安全角色（有权实现除客户端部署外的其他意图）的管理用户。 例如，自动客户端升级要求具有“完全权限管理员”  安全角色，该角色将授予管理用户所有安全权限。  
 
- 如需各用戶端安裝方法所需之相依性和安全性權限的詳細資訊，請參閱[電腦用戶端的必要條件](../../../../core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md#BKMK_prereqs_computers)中的＜安裝方法相依性＞。  
+ 有关每个客户端安装方法所需的依赖项和安全权限的详细信息，请参阅[计算机客户端先决条件](../../../../core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md#BKMK_prereqs_computers)中的“安装方法依赖关系”。  
 
- **如果您必須使用用戶端推入安裝，請採取以下步驟以保護用戶端推入安裝帳戶**  
+ **如果必须使用客户端请求安装，请采取附加步骤来确保客户端请求安装帐户安全**  
 
- 即使這個帳戶必須是每一部將要安裝 Configuration Manager 用戶端軟體的電腦本機 **Administrators** 群組成員，也絕不要將用戶端推入安裝帳戶新增至 **Domain Admins** 群組。 請建立全域群組，並且將全域群組新增至用戶端電腦上的本機 [系統管理員]  群組。 您也可以建立群組原則物件以新增受限群組設定，藉以將用戶端推入安裝帳戶新增至本機 [系統管理員]  群組。  
+ 尽管该帐户必须为将安装 Configuration Manager 客户端软件的每个计算机上的本地“管理员”组的成员，永远不要将客户端请求安装帐户添加到域管理员”组。 相反，创建全局组并将该全局组添加到你的客户端计算机上的本地“管理员”  组。 你还可以创建组策略对象以添加受限制的组设置，从而将客户端请求安装帐户添加到本地“管理员”  组。  
 
- 如需額外的安全性，請建立多個用戶端推入安裝帳戶，其每一個帳戶對於有限數量電腦皆具有系統管理存取權，因此當一個帳戶遭到洩露時，則只有該帳戶可存取的用戶端電腦會遭到洩露。  
+ 为实现附加的安全性，创建多个客户端请求安装帐户，每个帐户均具有对有限个数的计算机的管理权限，以便在一个帐户受到侵害时，只会损害该帐户能够访问的客户端计算机。  
 
- **製作用戶端電腦映像前移除憑證**  
+ **在创建客户端计算机映像前删除证书**  
 
- 如果您規劃要使用映像技術部署用戶端，在擷取映像之前，請一律先移除含有用戶端驗證及自我簽署憑證的憑證，例如 PKI 憑證。 如果沒有移除這些憑證，用戶端可能會互相模擬，您因而無法驗證各用戶端的資料。  
+ 如果计划通过运用映像技术来部署客户端，请始终在捕获映像前删除证书，如包括客户端身份验证和自签名证书的 PKI 证书。 如果你不删除这些证书，则客户端可能会相互模拟并且你将无法为每个客户端验证数据。  
 
- 如需有關使用 Sysprep 準備電腦以製作映像的詳細資訊，請參閱您的 Windows 部署文件。  
+ 有关使用 Sysprep 准备计算机进行映像的详细信息，请参阅你的 Windows 部署文档。  
 
- **請確定 Configuration Manager 電腦用戶端取得以下憑證的授權複本：**  
+ **确保 Configuration Manager 计算机客户端获得这些证书的授权副本：**  
 
--   Configuration Manager 受信任的根金鑰  
+-   Configuration Manager 信任的根密钥  
 
-     如果您沒有針對 Configuration Manager 延伸 Active Directory 架構，而且用戶端在與管理點通訊時沒有使用 PKI 憑證，則用戶端會依賴 Configuration Manager 受信任的根金鑰來驗證有效的管理點。 在此案例中，除非用戶端使用受信任的根金鑰，否則無法驗證該管理點是否為階層的信任管理點。 在沒有受信任的根金鑰時，技術好的攻擊可以將用戶端導向至 Rogue 管理點。  
+     如果尚未为 Configuration Manager 扩展 Active Directory 架构，并且客户端在与管理点通信时未使用 PKI 证书，则客户端将依赖 Configuration Manager 的受信任根密钥来验证有效管理点的身份。 在这种情况下，除非管理点使用受信任的根密钥，否则客户端无法验证这些管理点是否为该层次结构的受信任管理点。 如果没有受信任的根密钥，则技能较高的攻击者可以将客户端导向未授权的管理点。  
 
-     當用戶端無法從通用類別目錄或藉由使用 PKI 憑證下載 Configuration Manager 受信任的根金鑰時，請以受信任的根金鑰預先佈建用戶端，以確保用戶端無法導向至 Rogue 管理點。 如需詳細資訊，請參閱 [Planning for the Trusted Root Key](../../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForRTK)。  
+     当客户端无法从全局目录或者使用 PKI 证书下载 Configuration Manager 的受信任根密钥时，使用受信任的根密钥来预设置客户端，以确保无法将它们导向未授权的管理点。 有关详细信息，请参阅 [Planning for the Trusted Root Key](../../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForRTK)。  
 
--   網站伺服器簽署憑證  
+-   站点服务器签名证书  
 
-     用戶端會使用網站伺服器簽署憑證，驗證網站伺服器是否已簽署從管理點下載的用戶端原則。 此憑證是由網站伺服器自我簽署，並且發佈至 Active Directory 網域服務。  
+     客户端使用站点服务器签名证书来验证站点服务器是否已将它们从管理点下载的客户端策略签名。 此证书由站点服务器自签名并将发布到 Active Directory 域服务。  
 
-     當用戶端無法從通用分類目錄下載網站伺服器簽署憑證時，用戶端預設會從管理點下載該憑證。 當管理點暴露在不受信任的網路 (例如網際網路) 時，請在用戶端上手動安裝網站伺服器簽署憑證，藉以確保用戶端無法執行來自洩露之管理點的遭篡改用戶端原則。  
+     当客户端无法从全局目录下载站点服务器签名证书时，默认情况下，它们会从管理点下载该证书。 当管理点面临不受信任的网络（如 Internet）时，在客户端上手动安装站点服务器签名证书，以确保它们无法运行已在受侵害的管理点中篡改的客户端策略。  
 
-     若要手動安裝網站伺服器簽署憑證，請使用 CCMSetup client.msi 內容 **SMSSIGNCERT**。 如需詳細資訊，請參閱[關於 System Center Configuration Manager 中的用戶端安裝內容](../../../../core/clients/deploy/about-client-installation-properties.md)。  
+     若要手动安装站点服务器签名证书，请使用 CCMSetup 的 client.msi 属性 **SMSSIGNCERT**。 有关详细信息，请参阅[关于 System Center Configuration Manager 中的客户端安装属性](../../../../core/clients/deploy/about-client-installation-properties.md)。  
 
- **如果用戶端將從第一個接觸的管理點下載受信任的根金鑰，請勿使用自動網站指派**  
+ **如果客户端将从其接触的首个管理点下载受信任的根密钥，则请勿使用自动站点分配**  
 
- 此安全性最佳作法與前述項目連結。 若要避免新用戶端從 Rogue 管理點下載信任金鑰的風險，請只在以下情況使用自動網站指派：  
+ 此最佳安全方案与上述条目有关。 为规避新客户端从未授权的管理点下载受信任的根密钥的风险，请仅在下列情况中使用自动站点分配：  
 
--   用戶端可以存取已發佈至 Active Directory 網域服務的 Configuration Manager 站台資訊。  
+-   客户端可以访问发布到 Active Directory 域服务的 Configuration Manager 站点信息。  
 
--   您以受信任的根金鑰預先佈建用戶端。  
+-   使用受信任的根密钥来预设置客户端。  
 
--   您使用來自企業憑證授權單位的 PKI 憑證，在用戶端和管理點之間建立信任。  
+-   使用企业证书颁发机构颁发的 PKI 证书来建立客户端和管理点之间的信任。  
 
- 如需受信任之根金鑰的詳細資訊，請參閱 [Planning for the Trusted Root Key](../../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForRTK)。  
+ 有关受信任的根密钥的详细信息，请参阅 [Planning for the Trusted Root Key](../../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForRTK)。  
 
- **使用 CCMSetup Client.msi 選項 SMSDIRECTORYLOOKUP=NoWINS 安裝用戶端電腦**  
+ **使用 CCMSetup Client.msi 选项 SMSDIRECTORYLOOKUP=NoWINS 安装客户端计算机**  
 
- 尋找網站與管理點的最安全服務位置方法為 Active Directory 網域服務。 如果無法使用此方法 (例如，因為無法針對 Configuration Manager 延伸 Active Directory 架構，或因為用戶端位於不受信任樹系或工作群組中)，您可以使用 DNS 發佈為替代服務位置方法。 如果這兩種方法都失敗，當管理點未針對 HTTPS 用戶端連線進行設定時，用戶端可能會切換回使用 WINS。  
+ 可供客户端查找站点和管理点的最安全的服务定位方法是使用 Active Directory 域服务。 如果无法做到这点（例如，由于无法为 Configuration Manager 扩展 Active Directory 架构，或客户端位于不受信任的林或工作组中），则可以将 DNS 发布用作备用服务定位方法。 如果未能采用这两个方法，则在未针对 HTTPS 客户端连接配置管理点时，客户端可以回退到使用 WINS。  
 
- 由於發佈至 WINS 比其他發佈方法更不安全，因此，請指定 SMSDIRECTORYLOOKUP=NoWINS 將用戶端電腦設定為不切換回使用 WINS。 如果您必須使用 WINS 作為伺服器位置，請使用 SMSDIRECTORYLOOKUP=WINSSECURE (預設設定)，如此便會使用 Configuration Manager 受信任的根金鑰驗證管理點的自我簽署憑證。  
+ 由于其他发布方法比发布到 WINS 更为安全，因此通过指定 SMSDIRECTORYLOOKUP=NoWINS，将客户端计算机配置为不会回退到使用 WINS。 如果必须使用 WINS 进行服务定位，请使用 SMSDIRECTORYLOOKUP=WINSSECURE（默认设置），它将使用 Configuration Manager 受信任根密钥来验证管理点的自签名证书。  
 
 > [!NOTE]  
->  當用戶端針對 SMSDIRECTORYLOOKUP=WINSSECURE 進行設定，並從 WINS 找到管理點時，用戶端會檢查其 WMI 中 Configuration Manager 受信任的根金鑰複本。 如果管理點憑證上的簽章符合用戶端上受信任的根金鑰複本，憑證便已通過驗證，用戶端則會和透過 WINS 找到的管理點通訊。 如果管理點憑證上的簽章不符合用戶端上受信任的根金鑰複本，憑證便會無效，用戶端則不會和透過 WINS 找到的管理點通訊。  
+>  当针对 SMSDIRECTORYLOOKUP=WINSSECURE 配置客户端并从 WINS 中找到管理点时，客户端将检查它在 WMI 中的 Configuration Manager 受信任根密钥副本。 如果管理点证书上的签名与客户端的受信任根密钥的副本相匹配，则将验证证书，并且客户端将与其使用 WINS 找到的管理点通信。 如果管理点证书上的签名与客户端的受信任根密钥的副本不匹配，则证书无效，并且客户端将不会与其使用 WINS 找到的管理点通信。  
 
- **請確定維護期間值大到足以部署重要的軟體更新**  
+ **确保维护时段足够大以部署关键的软件更新**  
 
- 您可以設定用於裝置集合的維護期間，以限制 Configuration Manager 可以在這些裝置上安裝軟體的次數。 如果您將維護期間設定得太小，則用戶端可能無法安裝重要的軟體更新，導致用戶端容易遭受攻擊，因為安裝軟體更新可降低攻擊機率。  
+ 可为设备集合配置维护时段，以限制 Configuration Manager 可在这些设备上安装软件的次数。 如果你将该维护时段配置得太小，则客户端可能无法安装关键的软件更新，这使客户端容易遭受可由软件更新减轻的攻击。  
 
- **針對具有寫入篩選器的 Windows Embedded 裝置，若 Configuration Manager 停用寫入篩選器以繼續進行軟體安裝和變更，則需採取額外的安全預防措施，以降低受攻擊面。**  
+ **对于具有写入筛选器的 Windows Embedded 设备，如果 Configuration Manager 禁用写入筛选器以保留软件安装和更改，请采取附加安全措施以减少攻击面**  
 
- 當已在 Windows Embedded 裝置啟用寫入篩選器時，任何軟體安裝或變更只對重疊執行，在裝置重新啟動後都不會保存。 如果您使用 Configuration Manager 暫時停用寫入篩選器以保存軟體安裝和變更，在這段期間，內嵌裝置易受所有磁碟機變更的影響，包括共用資料夾。  
+ 当在 Windows Embedded 设备中启用写入筛选器后，将仅对覆盖区进行任何软件安装或更改，并且在设备重启后不会保留。 如果使用 Configuration Manager 来临时禁用写入筛选器以保留软件安装和更改，则在此期间，嵌入式设备会易于面临所有卷（这包括共享文件夹）均被更改的情况。  
 
- 雖然 Configuration Manager 在此期間會將電腦鎖定，只能由本機系統管理員登入，但是請盡可能採取額外的安全預防措施以保護電腦。 例如，啟用防火牆的其他限制，並中斷裝置與網路連接。  
+ 尽管 Configuration Manager 在此期间将锁定计算机以仅允许本地管理员登录，但仍要尽可能采取附加安全措施以便保护计算机。 例如，在防火墙上启用额外限制并从网络中断开设备。  
 
- 如果您使用維護期間保存變更，請小心規劃這些視窗，將寫入篩選器的停用時間降到最低，但時間長度仍足以完成軟體安裝與重新啟動。  
+ 如果你使用维护时段来保留更改，请仔细计划这些时段以最大限度缩短可能禁用写入筛选器的时间，但是时间长度应足够使软件安装和重启完成。  
 
- **如果您使用以軟體更新為基礎的用戶端安裝，並且在網站上安裝較新版本的用戶端時，請更新在軟體更新點上發佈的軟體更新，使用戶端可接收最新的版本**  
+ **如果你使用基于软件更新的客户端安装并在站点上安装更高的客户端版本，请更新在软件更新点发布的软件更新以便客户端收到最新版本**  
 
- 如果您在網站上安裝較新版本的用戶端 (例如將網站升級)，則用於發佈至軟體更新點之用戶端部署的軟體更新，便不會自動更新。 您必須將 Configuration Manager 用戶端重新發佈至軟體更新點，並按一下 [是] 以更新版本號碼。  
+ 如果你在站点上安装更高的客户端版本，例如，升级站点，则不会自动更新发布到软件更新点的客户端部署的软件更新。 必须将 Configuration Manager 客户端重新发布到软件更新点，然后单击“是”以更新版本号。  
 
- 如需詳細資訊，請參閱[如何使用以軟體更新為基礎的安裝來安裝 Configuration Manager 用戶端](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientSUP)中的＜將 Configuration Manager 用戶端發佈到軟體更新點＞程序。  
+ 有关详细信息，请参阅[如何使用基于软件更新的安装来安装 Configuration Manager 客户端](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientSUP)中的部“将 Configuration Manager 客户端发布到软件更新点”。  
 
- **請只為您信任並已限制其實際存取權的電腦，將 [電腦代理程式] 用戶端裝置設定 [重新啟動時暫停輸入 BitLocker PIN] 設為 [永遠]。**  
+ **仅对于受信任并具有受限制的物理访问的计算机，将“计算机代理”客户端设备设置“重启时挂起 BitLocker PIN 项”配置为“始终”**  
 
- 當您將這個用戶端設定值設定為 [永遠] 時，Configuration Manager 會完成軟體的安裝，以確保安裝重要的軟體更新，並且繼續服務。 不過，如果有攻擊者攔截重新啟動程序，則攻擊者可能會控制電腦。 只有在信任電腦並已限制電腦的實體存取時，才能使用此設定。 舉例來說，此設定可能適合用於資料中心內的伺服器。  
+ 将此客户端设置设为“始终”时，Configuration Manager 可完成软件安装以帮助确保关键软件更新已安装且服务已恢复。 但是，如果攻击者截获重启流程，则她将控制计算机。 仅当你信任该计算机并且该计算机的物理访问受到限制时才使用此设置。 例如，此设置可能适用于数据中心中的服务器。  
 
- **請勿將 [電腦代理程式] 用戶端裝置設定 [PowerShell 執行原則] 設為 [略過]。**  
+ **请勿将“计算机代理”客户端设备设置“PowerShell 执行策略”配置为“绕过”。**  
 
- 此用戶端設定允許 Configuration Manager 用戶端執行未簽署的 PowerShell 指令碼，如此可能會造成用戶端電腦執行惡意程式。 如果您必須選取此選項，請使用自訂用戶端設定，並只將其指派至必須執行未簽署之 PowerShell 指令碼的用戶端電腦。  
+ 此客户端设置允许 Configuration Manager 客户端能够运行未签名的 PowerShell 脚本，这可能会使得恶意软件能够在客户端计算机上运行。 如果你必须选择此选项，请使用自定义客户端设置并仅将其分配到必须运行未签名的 PowerShell 脚本的客户端计算机。  
 
-##  <a name="bkmk_mobile"></a> 行動裝置的安全性最佳做法  
- **您以 Configuration Manager 註冊且支援網際網路的行動裝置：將註冊 proxy 點安裝在周邊網路，並將註冊點安裝在內部網路**  
+##  <a name="bkmk_mobile"></a>移动设备的最佳安全方案  
+ **对于你使用 Configuration Manager 注册并将在 Internet 上支持的移动设备：安装外围网络中的注册代理点和 Intranet 中的注册点**  
 
- 此角色隔離有助於保護註冊點不受攻擊。 如果註冊點受到破壞，攻擊者可以取得憑證進行驗證，並且盜取註冊行動裝置的使用者認證。  
+ 此角色分隔可帮助注册点防御攻击。 如果注册点受到侵害，攻击者可能会获得身份验证证书，并且可能会偷窃注册了移动设备的用户的凭据。  
 
- **對於行動裝置：設定密碼設定以保護行動裝置不受他人擅自存取**  
+ **对于移动设备：配置密码设置以帮助防止未经授权访问移动设备**  
 
- 對於由 Configuration Manager 註冊的行動裝置：使用行動裝置設定項目設定 PIN 的密碼複雜性，以及預設的最小密碼長度。  
+ 对于 Configuration Manager 注册的移动设备：使用移动设备配置项目将密码复杂性配置为 PIN，并且至少为最小密码长度的默认长度。  
 
- 對於沒有安裝 Configuration Manager 用戶端，但由 Exchange Server 連接器管理的行動裝置：設定 Exchange Server 連接器的 [密碼設定]，使密碼複雜性為 PIN，並且至少指定預設的密碼最小長度。  
+ 对于未安装 Configuration Manager 客户端但由 Exchange Server 连接器管理的移动设备：为 Exchange Server 连接器配置“密码设置”，以使密码复杂性为 PIN 并指定至少为最小密码长度的默认长度。  
 
- **對於行動裝置：只允許執行信任的公司簽署過的應用程式，不允許安裝未簽署的檔案，如此有助於預防清查資訊與狀態資訊遭到竄改**  
+ **对于移动设备：只有在应用程序经过你信任的公司签名并且不允许未签名的文件安装时，才允许应用程序运行，从而帮助防止篡改清单信息和状态信息**  
 
- 對於由 Configuration Manager 註冊的更多行動裝置：使用行動裝置設定項目，將安全性設定 [未簽署的應用程式] 設定為 [禁止]，並將 [未簽署的檔案安裝] 設定為信任的來源。  
+ 对于 Configuration Manager 注册的更多移动设备：使用移动设备配置项目将安全设置“未签名的应用程序”配置为“禁止”，并将“未签名的文件安装”配置为受信任源。  
 
- 對於沒有安裝 Configuration Manager 用戶端，但由 Exchange Server 連接器管理的行動裝置：設定 Exchange Server 連接器的 [應用程式設定]，將 [未簽署的檔案安裝] 與 [未簽署的應用程式] 設定為 [禁止]。  
+ 对于未安装 Configuration Manager 客户端但由 Exchange Server 连接器管理的移动设备：为 Exchange Server 连接器配置“应用程序设置”，以使“未签名的文件安装”和“未签名的应用程序”配置为“禁止”。  
 
- **對於行動裝置：鎖定未使用的行動裝置，有助於預防權限提高攻擊**  
+ **对于移动设备：通过在未使用移动设备时将其锁定，从而防止权限提升攻击**  
 
- 對於由 Configuration Manager 註冊的更多行動裝置：使用行動裝置設定項目，設定密碼設定 [鎖定行動裝置前允許的閒置時間 (分鐘)]。  
+ 对于 Configuration Manager 注册的更多移动设备：使用移动设备配置项目来配置密码设置“锁定移动设备之前的空闲时间”。  
 
- 對於沒有安裝 Configuration Manager 用戶端，但由 Exchange Server 連接器管理的行動裝置：設定 Exchange Server 連接器的 [密碼設定]，以設定 [鎖定行動裝置前允許的閒置時間 (分鐘)]。  
+ 对于未安装 Configuration Manager 客户端但由 Exchange Server 连接器管理的移动设备：为 Exchange Server 连接器配置“密码设置”，以配置“锁定移动设备之前的空闲时间”。  
 
- **對於行動裝置：限制可註冊行動裝置的使用者，有助於預防權限提高攻擊。**  
+ **对于移动设备：通过限制可注册其移动设备的用户，从而帮助防止权限提升。**  
 
- 使用自訂用戶端設定而非預設用戶端設定，只允許已獲得授權的使用者註冊其行動裝置。  
+ 使用自定义客户端设置（而不是默认客户端设置）以仅允许授权用户注册其移动设备。  
 
- **對於行動裝置：在下列情況下，請勿將應用程式部署到使用 Configuration Manager 或 Microsoft Intune 註冊行動裝置的使用者：**  
+ **对于移动设备：在以下情况下，不要向具有通过 Configuration Manager 或 Microsoft Intune 注册的移动设备的用户部署应用程序：**  
 
--   當行動裝置由一個以上的人使用時。  
+-   如果移动设备由多人使用。  
 
--   當系統管理員代替使用者註冊裝置時。  
+-   如果设备由管理员代表用户注册。  
 
--   當裝置傳送至其他使用者，而沒有先淘汰再重新註冊裝置時。  
+-   如果在未停用然后重新注册设备的情况下将设备转让给另一个人。  
 
- 註冊期間會建立使用者裝置親和性關聯性，以將註冊的使用者對應到行動裝置。 如果有其他使用者使用行動裝置，則該使用將可以執行您部署至原始使用者的應用程式，如此可能導致權限提高。 同樣地，如果系統管理員為使用者註冊行動裝置，則將不會在行動裝置上安裝部署至使用者的應用程式，而會安裝部署至系統管理員的應用程式。  
+ 在注册过程中会创建用户设备相关性关系，该关系将执行注册的用户映射到移动设备。 如果另一个用户使用移动设备，他们将能够运行你为原始用户部署的应用程序，从而可能会导致权限提升。 同样，如果管理员为用户注册移动设备，则为用户部署的应用程序将不会安装在移动设备上，而是可能会安装为管理员部署的应用程序。  
 
- 有別於 Windows 電腦的使用者裝置親和性，您不能為 Microsoft Intune 所註冊的行動裝置手動定義使用者裝置親和性資訊。  
+ 与 Windows 计算机的用户设备相关性不同，你不能为 Microsoft Intune 注册的移动设备手动定义用户设备相关性信息。  
 
- 如果轉移 Intune 所註冊的行動裝置擁有權，則請將行動裝置從 Intune 淘汰以移除使用者裝置親和性，然後要求目前使用者再次註冊裝置。  
+ 如果转让 Intune 注册的移动设备的成员身份，请从 Intune 中停用移动设备以删除用户设备相关性，然后要求当前用户再次注册设备。  
 
- **對於行動裝置：確定使用者使用 Microsoft Intune 註冊他們的行動裝置**  
+ **对于移动设备：确保将用户对其设备进行 Microsoft Intune 注册**  
 
- 由於在註冊期間所建立的使用者裝置親和性關聯，會將註冊的使用者對應至行動裝置，因此，如果系統管理員為使用者註冊行動裝置，則部署至使用者的應用程式將不會安裝在行動裝置上，而會安裝部署至系統管理員的應用程式。  
+ 由于在注册过程中会创建用户设备相关性关系，该关系将执行注册的用户映射到移动设备，因此，如果管理员为用户注册移动设备，则为用户部署的应用程序将不会安装在移动设备上，而是可能会安装为管理员部署的应用程序。  
 
- **對於 Exchange Server 連接器：請確定 Configuration Manager 站台伺服器與 Exchange Server 電腦之間的連線已受到保護**  
+ **对于 Exchange Server 连接器：确保 Configuration Manager 站点服务器和 Exchange Server 计算机之间的连接受到保护**  
 
- 如果是內部部署的 Exchange Server，則使用 IPsec；裝載的 Exchange 會自動使用 SSL 保護連線。  
+ 如果 Exchange Server 在本地，请使用 IPsec；承载的 Exchange 会通过使用 SSL 自动保护连接的安全。  
 
- **對於 Exchange Server 連接器：針對連接器使用最低權限準則**  
+ **对于 Exchange Server 连接器：为连接器使用最小特权原则**  
 
- 如需 Exchange Server 連接器所需之基本 Cmdlet 的清單，請參閱[使用 System Center Configuration Manager 和 Exchange 管理行動裝置](../../../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)。  
+ 有关 Exchange Server 连接器要求的最小 cmdlet 的列表，请参阅[使用 System Center Configuration Manager 和 Exchange 管理移动设备](../../../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)。  
 
-##  <a name="bkmk_macs"></a> Mac 的安全性最佳做法  
- **對於 Mac 電腦：儲存和存取來自安全位置的用戶端來源檔案。**  
+##  <a name="bkmk_macs"></a> Mac 的最佳安全方案  
+ **对于 Mac 计算机：从安全位置中存储和访问客户端源文件。**  
 
- Configuration Manager 不會確認用戶端來源檔案是否已遭竄改。 請從信任的來源下載這些檔案並且以安全的方式儲存和存取。  
+ 在 Mac 计算机上安装或注册客户端之前 Configuration Manager 不会验证这些客户端源文件是否已被篡改。 请从可信来源下载这些文件并且安全地存储和访问它们。  
 
- **對於 Mac 電腦：獨立於 Configuration Manager，監控並追蹤註冊至使用者之憑證的有效期間。**  
+ **对于 Mac 计算机：以独立于 Configuration Manager 的方式，监视和跟踪用户所注册证书的有效期。**  
 
- 為確保業務連續性，請監視並追蹤您用於 Mac 電腦的憑證有效期。 Configuration Manager 不支援此憑證的自動更新，憑證即將到期時也不會對您提出警告。 通常有效期限為 1 年。  
+ 为了确保业务连续性，请监视和跟踪用于 Mac 计算机的证书的有效期。 Configuration Manager 不支持此证书的自动续订，并且会警告你证书即将过期。 有效期通常为 1 年。  
 
- 如需如何更新憑證的資訊，請參閱  [Renewing the Mac Client Certificate Manually](../../../../core/clients/deploy/deploy-clients-to-macs.md#renewing-the-mac-client-certificate)。  
+ 有关如何续订证书的信息，请参阅  [Renewing the Mac Client Certificate Manually](../../../../core/clients/deploy/deploy-clients-to-macs.md#renewing-the-mac-client-certificate)。  
 
- **對於 Mac 電腦：您可以考慮只設定信任的根 CA 憑證至 SSL 通訊協定，以防權限提升。**  
+ **对于 Mac 计算机：考虑配置受信任的根 CA 证书，以使其仅对于 SSL 协议受信任，从而防止权限提升。**  
 
- 當您註冊 Mac 電腦時，會自動安裝管理 Configuration Manager 用戶端的使用者憑證，以及使用者憑證所鏈結的信任根憑證。 如果您想要將此根憑證的信任限制在 SSL 通訊協定，您可以使用以下程序。  
+ 在注册 Mac 计算机时，会连同用户证书链接到的受信任根证书一起自动安装用于管理 Configuration Manager 客户端的用户证书。 如果要将此根证书的信任限制到 SSL 协议，你可以使用下列过程。  
 
- 在您完成此程序之後，根憑證在驗證 SSL 以外的通訊協定時就不會受信任 - 例如安全郵件 (S/MIME)、可延伸的驗證 (EAP) 或者程式碼簽署。  
+ 完成此过程之后，根证书将不会受到信任来验证除 SSL 之外的协议，例如，安全邮件 (S/MIME)、可扩展身份验证 (EAP) 或代码签名。  
 
 > [!NOTE]  
->  如果您安裝獨立於 Configuration Manager 之外的用戶端憑證，您也可以使用此程序。  
+>  如果独立于 Configuration Manager 安装了客户端证书，也可以使用此过程。  
 
- 將根 CA 憑證限制為僅 SSL 通訊協定：  
+ 将根 CA 证书限制到 SSL 协议：  
 
-1.  在 Mac 電腦上，開啟終端機視窗。  
+1.  在 Mac 计算机上，打开一个终端窗口。  
 
-2.  輸入命令 **sudo /Applications/Utilities/Keychain\ Access.app/Contents/MacOS/Keychain\ Access**  
+2.  输入命令 **sudo /Applications/Utilities/Keychain\ Access.app/Contents/MacOS/Keychain\ Access**  
 
-3.  在 [金鑰鏈存取]  對話方塊的 [金鑰鏈]  區段中，按一下 [系統] ，然後按一下 [類別]  區段中的 [憑證] 。  
+3.  在“密钥链访问”  对话框中的“密钥链”  部分中，单击“系统” ，然后在“类别”  部分中，单击“证书” 。  
 
-4.  找出並按兩下 Mac 用戶端憑證的根 CA 憑證。  
+4.  找到然后双击 Mac 客户端证书的根 CA 证书。  
 
-5.  在根 CA 憑證的對話方塊中，展開 [信任]  區段，然後進行下列變更：  
+5.  在根 CA 证书的对话框中，展开“信任”  部分，然后进行下列更改：  
 
-    1.  對於 [使用此憑證時]  設定，將 [永遠信任]  預設值改為 [使用系統預設值] .  
+    1.  对于“使用此证书时”  设置，将“始终信任”  默认设置更改为“使用系统默认值” 。  
 
-    2.  對於 [安全通訊端層 (SSL)]  設定，將 [未指定值]  變更為 [永遠信任] 。  
+    2.  对于“安全套接字层(SSL)”  设置，将“未指定值”  更改为“始终信任” 。  
 
-6.  關閉對話方塊，然後在收到提示時輸入系統管理員的密碼，然後按一下 [更新設定]。  
+6.  关闭对话框，并在提示时输入管理员的密码，然后单击“更新设置”。  
 
-##  <a name="BKMK_SecurityIssues_Clients"></a> Configuration Manager 用戶端的安全性問題  
- 以下安全性問題並未降低：  
+##  <a name="BKMK_SecurityIssues_Clients"></a> Configuration Manager 客户端的安全问题  
+ 下列安全问题没有缓解措施：  
 
--   狀態訊息未經驗證  
+-   不会对状态消息执行验证  
 
-     未針對狀態訊息執行驗證。 當管理點接受 HTTP 用戶端連線時，任何裝置皆可傳送狀態訊息至管理點。 如果管理點只接受 HTTPS 用戶端連線，則裝置必須從信任的根憑證授權單位取得有效用戶端驗證憑證，但無法傳送任何狀態訊息。 如果用戶端傳送無效的狀態訊息，則會遭到捨棄。  
+     不会对状态消息执行任何验证。 当管理点接受 HTTP 客户端连接时，任何设备都可将状态消息发送到管理点。 如果管理点仅接受 HTTPS 客户端连接，则设备必须从受信任的根证书颁发机构获取有效的客户端身份验证证书，但也可能随后发送任何状态消息。 如果客户端发送无效的状态消息，则该消息将被放弃。  
 
-     有數種方式可能針對此漏洞進行攻擊。 攻擊者可傳送假的狀態訊息，以取得以狀態訊息查詢為基礎之集合中的成員資格。 任何用戶端都可能對管理點湧入大量狀態訊息，以啟動阻斷服務。 如果狀態訊息觸發狀態訊息篩選規則中的動作，則攻擊者便可能觸發狀態訊息篩選規則。 攻擊者也可能傳送會導致報告資訊轉譯錯誤的狀態訊息。  
+     针对此漏洞存在一些潜在的攻击。 攻击者可能会发送基于状态消息查询的伪造状态消息以获取集合中的成员身份。 任何客户端可能通过使用状态消息淹没管理点来针对管理点发起拒绝服务攻击。 如果状态消息触发状态消息筛选规则中的操作，则攻击者可能会触发状态消息筛选规则。 攻击者还可能发送表明报表信息不准确的状态消息。  
 
--   原則可能會被重定至非目標的用戶端  
+-   可将策略的目标重新确定为非目标客户端  
 
-     攻擊者可以利用數種方式，將以一個用戶端為目標的原則套用至完全不同的用戶端。 例如，攻擊者可能會在信任的用戶端傳送錯誤的清查或探索資訊，將電腦加入到不應加入的集合，再接收該集合的所有部署。 雖然有控制項可預防攻擊者直接修改原則，但攻擊者仍可將現有的原則重新格式化，並將作業系統重新部署，再傳送至不同的電腦，藉以建立阻斷服務。 這些類型的攻擊需要具備準確的時間控制，以及多方的 Configuration Manager 基礎結構知識。  
+     攻击者可能使用几种方法来使策略的目标确定为适用于完全不同的客户端的客户端。 例如，受信任的客户端中的攻击者可能发送错误的清单或者发现信息，以将计算机添加到不应该属于的集合，然后接收针对该集合的所有部署。 如果存在控制来帮助防止攻击者直接修改策略，攻击者可能采用现有策略来重新格式化和重新部署操作系统并将它发送到其他计算机，从而创建拒绝服务。 这些类型的攻击需要精确计时和 Configuration Manager 基础结构的额外知识。  
 
--   用戶端記錄檔可供使用者存取  
+-   客户端日志允许用户访问  
 
-     所有用戶端記錄檔皆允許使用者「讀取」存取，並且允許互動式使用者「寫入」存取。 如果您啟用詳細資訊記錄，攻擊者可能會讀取記錄檔，尋找有關相容性或系統漏洞的資訊。 如軟體安裝等執行於使用者內容的程序，一律都可用低權限使用者帳戶來寫入記錄檔。 這代表攻擊者也可以利用低權限帳戶寫入記錄檔。  
+     所有客户端日志文件都允许用户具有读取访问权限和交互用户写入访问权限。 如果启用详细日志记录，攻击者可能读取日志文件以查找有关符合性或者系统漏洞的信息。 诸如在用户的上下文中执行的软件安装之类的过程必须能够使用低权限用户帐户写入日志。 这意味着攻击者也可能使用低权限帐户写入日志。  
 
-     最重大的風險是，攻擊者可能會將記錄檔中系統管理員用於稽核以及偵測入侵者的資訊移除。  
+     最严重的风险是攻击者可能删除日志文件中的信息，管理员可能需要这些信息来进行审核和入侵者检测。  
 
--   電腦可用於取得專為行動裝置註冊而設計的憑證  
+-   可使用计算机来获取针对移动设备注册的证书  
 
-     當 Configuration Manager 處理註冊要求時，無法確認要求是源自於行動裝置，而不是電腦。 如果要求是來自電腦，則可以安裝 PKI 憑證，允許電腦向 Configuration Manager 登錄。 在此案例中，若要預防權限提高攻擊，就只能讓信任的使用者註冊行動裝置，並謹慎監視註冊活動。  
+     当 Configuration Manager 处理注册请求时，它无法验证请求是否来自移动设备（而不是计算机）。 如果请求来自计算机，它可能会安装 PKI 证书，该证书随后允许它向 Configuration Manager 注册。 为了在情况中帮助防止权限提升攻击，请仅允许受信任用户注册其移动设备并仔细监视注册活动。  
 
--   如果您封鎖用戶端，則用戶端對管理點的連線不會中斷，封鎖的用戶端可能會以保持運作訊息的方式，繼續傳送用戶端通知封包至管理點  
+-   如果你阻止客户端，从客户端到管理点的连接将不会断开，并且被阻止的客户端可能会继续以保持连接消息的形式向管理点发送客户端通知数据包  
 
-     當您封鎖不再信任的用戶端，而該用戶端已建立用戶端通知通訊時，Configuration Manager 不會中斷與工作階段的連線。 封鎖的用戶端可以繼續傳送封包至其管理點，直到用戶端與網路中斷連線為止。 這些封包只是小型的保持運作封包，而且這些用戶端在被解除封鎖之前，都無法由 Configuration Manager 進行管理。  
+     当你阻止不再信任的客户端，而该客户端已建立客户端通知通信时，Configuration Manager 不会断开会话连接。 被阻止的客户端可能会继续向其管理点发送数据包，直至客户端从网络断开连接为止。 这些数据是非常小的保持连接数据包，并且，在对这些客户端解锁之前，将无法通过 Configuration Manager 对其进行管理。  
 
--   當您使用自動用戶端升級，而且用戶端已導向至管理點以下載用戶端來源檔案時，管理點不會被驗證為信任的來源  
+-   当你使用自动客户端升级，并且将客户端定向到管理点以下载客户端源文件时，不会将管理点验证为受信任源  
 
--   使用者第一次註冊 Mac 電腦時，可能有 DNS 詐騙的風險  
+-   当用户首次注册 Mac 计算机时，会面临 DNS 欺骗导致的风险  
 
-     當 Mac 電腦在註冊期間連線至註冊 Proxy 點時，Mac 電腦通常不具有根 CA 憑證。 此時，伺服器不會受到 Mac 電腦信任，並且會提示使用者繼續。 如果 Rogue DNS 伺服器解析註冊 Proxy 點的完整名稱，則可能會將 Mac 電腦導向至 Rogue 註冊 Proxy 點，並且安裝來自不信任來源的憑證。 為降低此風險，請遵循最佳作法以免環境中出現 DNS 詐騙。  
+     当 Mac 计算机在注册过程中连接到注册代理点时，Mac 计算机不太可能已经有根 CA 证书。 此时，服务器不受 Mac 计算机信任，并会提示用户继续。 如果注册代理点的完全限定的名称被恶意 DNS 服务器解析，它可能会将 Mac 计算机引导到恶意注册代理点，并安装来自不受信任的来源的证书。 为了帮助降低此风险，请遵循最佳方案以避免环境中的 DNS 欺骗。  
 
--   Mac 註冊不會限制憑證要求  
+-   Mac 注册不限制证书请求  
 
-     每次要求新用戶端憑證時，使用者都可以重新註冊 Mac 電腦。 Configuration Manager 不會檢查是否有多個要求，或限制來自單一電腦要求的憑證數目。 Rogue 使用者可以執行重複命令列註冊要求的指令碼，促使在網路上或發行憑證授權單位 (CA) 上拒絕服務。 為降低此風險，請小心監視發行 CA 此類可疑的行為。 Configuration Manager 階層應要立即封鎖有此類行為的電腦。  
+     用户可以重新注册其 Mac 计算机，每次注册均要请求新的客户端证书。 Configuration Manager 不会检查多个请求或限制单台计算机所请求的证书数目。 恶意用户可能会运行一个重复命令行注册请求的脚本，导致网络或证书颁发机构 (CA) 上出现拒绝服务问题。 为了帮助降低此风险，请仔细监视颁发 CA 以确定是否有这种类型的可疑行为。 应从 Configuration Manager 层次结构中立即阻止显示此种行为模式的计算机。  
 
--   抹除認可並不會確認裝置是否已成功抹除  
+-   擦除确认不会验证是否已成功擦除了设备  
 
-     當您對行動裝置起始抹除動作，並且 Configuration Manager 顯示抹除狀態為認可時，驗證方式為確認 Configuration Manager 是否成功傳送訊息，而不是對其進行動作的裝置。 此外，對於由 Exchange Server 連接器管理的行動裝置，抹除認可會確認命令是否由 Exchange 接收，而非裝置。  
+     当针对移动设备发起擦除操作并且 Configuration Manager 显示要确认的擦除状态时，所确认的是 Configuration Manager 已成功发送消息，而不是设备已按照它进行操作。 此外，对于 Exchange Server 连接器管理的移动设备，擦除确认验证 Exchange（而不是设备）是否已接收了命令。  
 
--   如果您使用選項認可 Windows Embedded 裝置上的變更，則可能會以比預期更快將帳戶鎖定  
+-   如果使用选项在 Windows Embedded 设备上提交更改，帐户可能会在过期之前被锁定。  
 
-     如果 Windows Embedded 裝置在執行 Windows 7 之前的作業系統，而且使用者嘗試在停用寫入篩選器時登入，以認可 Configuration Manager 所做的變更時，帳戶鎖定前所允許的錯誤登入次數會有效減半。 例如，假設 [帳戶鎖定閾值]  設定為 6，而使用者輸入錯誤密碼 3 次，便會鎖定帳戶，以有效建立服務阻斷情況。  在此案例中，如果使用者必須登入內嵌裝置，請警告使用者鎖定閥值可能會降低。  
+     如果 Windows Embedded 设备运行 Windows 7 以前的操作系统，并且用户在已禁用写入筛选器以提交 Configuration Manager 所做更改时尝试登录，则在帐户被锁定之前允许的不正确登录尝试次数实际上会减半。 例如，“帐户锁定阈值”  配置为 6，并且帐户在用户错误键入了其密码 3 次的情况即被锁定，实际上造成了拒绝服务状况。  如果用户必须在这种情况下登录到嵌入式设备，请告诫他们锁定阈值被减少的可能性。  
 
-##  <a name="BKMK_Privacy_Cliients"></a> Configuration Manager 用戶端的隱私權資訊  
- 當您部署 Configuration Manager 用戶端時，會啟用用戶端設定，如此就可以使用 Configuration Manager 管理功能。 無論 Configuration Manager 階層中的用戶端是直接連線至公司網路、透過遠端工作階段連線，或是連線至網路網路 (受 Configuration Manager 支援)，您用來設定功能的設定皆可套用至階層中的所有用戶端。  
+##  <a name="BKMK_Privacy_Cliients"></a> Configuration Manager 客户端的隐私信息  
+ 在部署 Configuration Manager 客户端时，启用客户端设置，以便你能够使用 Configuration Manager 管理功能。 用于配置功能的设置适用于 Configuration Manager 层次结构中的所有客户端，不管它们是直接连接到公司网络、通过远程会话连接还是连接到 Internet 但受 Configuration Manager 支持。  
 
- 存放在 Configuration Manager 資料庫中的用戶端資訊，不會傳送給 Microsoft。 資訊會保留在資料庫裡，直到每 90 天由網站維護工作 [刪除過時探索資料]  刪除為止。 您可以設定刪除間隔。  
+ 客户端信息存储在 Configuration Manager 数据库中，不会发送给 Microsoft。 信息保留在该数据库中，而“删除过期的发现数据”  站点维护任务每隔 90 天就会删除这些信息一次。 可以配置删除间隔。  
 
- 在設定 Configuration Manager 用戶端之前，請考慮您的隱私需求。  
+ 在配置 Configuration Manager 客户端之前，请考虑你的隐私要求。  
 
-### <a name="privacy-information-for-mobile-devices-that-are-enrolled-by-configuration-manager"></a>由 Configuration Manager 註冊的行動裝置隱私權資訊  
- 如需以 Configuration Manager 註冊行動裝置時的隱私權資訊，請參閱 [System Center Configuration Manager 隱私權聲明 - 行動裝置增補](../../../../core/misc/privacy/privacy-statement-mobile-device-addendum.md)。  
+### <a name="privacy-information-for-mobile-devices-that-are-enrolled-by-configuration-manager"></a>Configuration Manager 注册的移动设备的隐私信息  
+ 有关通过 Configuration Manager 注册移动设备时的隐私信息，请参阅 [System Center Configuration Manager 隐私声明 - 移动设备附录](../../../../core/misc/privacy/privacy-statement-mobile-device-addendum.md)。  
 
-### <a name="client-status"></a>用戶端狀態  
- Configuration Manager 會監視用戶端活動並定期評估與補救 Configuration Manager 用戶端與其相依性。 用戶端狀態預設為啟用，而且會使用伺服器端的度量來測量用戶端活動檢查、自我檢查用戶端動作、補救以及傳送用戶端狀態資訊到 Configuration Manager 站台。 用戶端會根據您可以設定的排程以執行自我檢查。 用戶端會將檢查結果傳送至 Configuration Manager 站台。 這項資訊會在傳輸過程中加密。  
+### <a name="client-status"></a>客户端状态  
+ Configuration Manager 监视客户端的活动并定期进行评估，并且可修正 Configuration Manager 客户端以及其依赖关系。 客户端状态默认情况下已启用，并且它使用服务器端指标进行客户端活动检查，并使用客户端操作进行自我检查、修正以及用于将客户端状态信息发送到 Configuration Manager 站点。 客户端依据你可配置的计划运行自我检查。 客户端将检查结果发送到 Configuration Manager 站点。 此信息在传输过程中已加密。  
 
- 存放在 Configuration Manager 資料庫中的用戶端狀態資訊，不會傳送給 Microsoft。 此資訊不會以加密格式儲存在網站資料庫內。 並且會保留在資料庫中，直到根據針對 [保留以下指定天數內的用戶端狀態歷程]  用戶端狀態設定所設定的值進行刪除為止。 此設定的預設值為每 31 天。  
+ 客户端状态信息存储在 Configuration Manager 数据库中，不会发送给 Microsoft。 信息并未以加密形式存储在站点数据库中。 此信息保留在数据库中，直至依据为“保留以下几天的客户端状态历史记录”  客户端状态设置配置的值将其删除为止。 此设置的默认值为每隔 31 天删除一次。  
 
- 透過用戶端狀態檢查安裝 Configuration Manager 用戶端之前，請考量您的隱私權需求。  
+ 在安装包含客户端状态检查的 Configuration Manager 客户端时，请考虑你的隐私要求。  
 
-##  <a name="BKMK_Privacy_ExchangeConnector"></a> 使用 Exchange Server 連接器所管理的行動裝置隱私權資訊  
- Exchange Server 連接器會藉由 ActiveSync 通訊協定尋找並管理連接至 Exchange Server (內部部署或託管) 的裝置。 Exchange Server 連接器找到的記錄會儲存在 Configuration Manager 資料庫內。 此資訊會從 Exchange Server 進行收集。 伺服器不包含來自行動裝置傳送至 Exchange Server 的任何額外資訊。  
+##  <a name="BKMK_Privacy_ExchangeConnector"></a>使用 Exchange Server 连接器管理的移动设备的隐私信息  
+ Exchange Server 连接器通过使用 ActiveSync 协议查找和管理连接到 Exchange Server（本地或托管）的设备。 Exchange Server 连接器找到的记录存储在 Configuration Manager 数据库中。 信息是从 Exchange Server 中收集的。 它不包含移动设备发送到 Exchange Server 的内容中的任何其他信息。  
 
- 行動裝置資訊不會傳送給 Microsoft。 行動裝置資訊儲存在 Configuration Manager 資料庫中。 資訊會保留在資料庫裡，直到每 90 天由網站維護工作 [刪除過時探索資料]  刪除為止。 您可以設定刪除間隔。  
+ 不会将移动设备信息发送到 Microsoft。 移动设备信息储会存在 Configuration Manager 数据库中。 信息保留在该数据库中，而“删除过期的发现数据”  站点维护任务每隔 90 天就会删除这些信息一次。 可以配置删除间隔。  
 
- 安裝並設定 Exchange Server 連接器之前，請考量您的隱私權需求。  
+ 在安装和配置 Exchange Server 连接器之前，请考虑你的隐私要求。  

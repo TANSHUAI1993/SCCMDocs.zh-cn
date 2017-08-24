@@ -1,6 +1,6 @@
 ---
-title: "安裝案例 | Microsoft Docs"
-description: "了解在更新或升級站台時，安裝新 Configuration Manager 階層的技術。"
+title: "安装方案 | Microsoft Docs"
+description: "了解更新或升级站点时安装新 Configuration Manager 层次结构的技术。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -17,114 +17,114 @@ manager: angrobe
 ms.openlocfilehash: 938b2970e4d8534fdd5f3daf0c9a5ddb1f576e60
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="scenarios-to-streamline-your-installation-of-system-center-configuration-manager"></a>System Center Configuration Manager 安裝簡化案例
+# <a name="scenarios-to-streamline-your-installation-of-system-center-configuration-manager"></a>简化 System Center Configuration Manager 安装的方案
 
-*適用於︰System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-隨著 System Center Configuration Manager 最新分支更新版本的發行，不論要將新階層安裝到更新版本 (例如更新 1610)，或從 Microsoft System Center 2012 Configuration Manager 進行升級，都提供可簡化程序的新案例。
+随着 System Center Configuration Manager Current Branch 更新版本的发布，提供了新的方案来简化新层次结构安装到更新版本（例如更新 1610），以及从 Microsoft System Center 2012 Configuration Manager 进行升级的过程。
 
-支援的案例包括：  
+支持的方案包括：  
 
-**安裝新的 System Center Configuration Manager 最新分支階層**以執行更新版本。  
+安装运行更新版本的**新 System Center Configuration Manager Current Branch 层次结构**。  
 
--   只安裝頂層站台，緊接著安裝更新，讓該站台成為具有您將使用的更新版本的最新版本。 接著，您可以將其他站台直接安裝到該更新版本。  
--   在此案例中，您可以略過下列程序：將其他站台安裝到基準層級，然後將它們更新到您要使用的更新版本。  
--   在此案例中，您可以略過下列程序：將用戶端安裝到基準版本，然後在您更新到較新版本時重新安裝用戶端。  
+-   通过仅安装顶层站点后立即安装更新，将当前站点与要使用的更新版本保持同步。 然后即可将其他站点直接安装为该更新版本。  
+-   在此方案中，无需先将其他站点安装到基线级别，再将其更新到要使用的更新版本。  
+-   在此方案中，无需先将客户端安装到基准版本，再在更新至更高版本时重新安装客户端。  
 
-**升級 Microsoft System Center 2012 Configuration Manager** 基礎結構至 System Center Configuration Manager 的更新版本。  
+**将 Microsoft System Center 2012 Configuration Manager** 基础结构升级到 System Center Configuration Manager 的更新版本。  
 
--   先將管理中心網站和每個主要站台手動升級到基準版本 (例如 1606 版)，再安裝更新版本 (例如 1610 版)。  
--   在主要站台執行您要使用的更新版本之前，請不要從 Microsoft System Center 2012 Configuration Manager 升級次要站台。  
--   在主要站台執行您要使用的更新版本之前，請不要從 Microsoft System Center 2012 Configuration Manager 升級站台。  
+-   将管理中心站点和每个主站点手动升级到基准版本（例如版本 1606）之后，才能安装更新版本（例如版本 1610）。  
+-   主站点运行要使用的更新版本之后，才能从 Microsoft System Center 2012 Configuration Manager 升级辅助站点。  
+-   主站点运行要使用的更新版本之后，才能从 Microsoft System Center 2012 Configuration Manager 升级客户端。  
 
-## <a name="scenario-install-a-new-hierarchy-to-an-update-version"></a>案例：將新階層安裝到更新版本  
-在此範例案例中，請使用 System Center Configuration Manager 的基準版本 (例如 1610 版) 來安裝階層的第一個站台。 接著，請在部署其他站台或用戶端之前安裝 1610 更新。  
+## <a name="scenario-install-a-new-hierarchy-to-an-update-version"></a>方案：将新的层次结构安装到更新版本  
+在此示例方案中，使用 System Center Configuration Manager 的基准版本（如版本 1610）来安装层次结构的第一个站点。 然后安装 1610 更新，再部署其他站点或客户端。  
 
--   由於您打算使用更新版本 (例如 1610 版) 而不是停留在基準版本 (例如 1606 版)，因此您不需要先安裝其他站台，再將它們升級。 這也適用於用戶端。  
--   請不要安裝版本為 1606 的次要站台，然後將它們升級到 1610 版。 相反地，請在主要站台執行 1610 版之後安裝次要站台。  
+-   因为计划使用更新版本（例如版本 1610）而不会保留在基准版本（例如版本 1606），因此无需安装并升级其他站点。 这同样适用于客户端。  
+-   不能先安装 1606 版的辅助站点，然后将其升级到版本 1610。 在主站点运行版本 1610 之后才安装辅助站点。  
 
-請遵循下列順序︰  
+按照以下顺序执行：  
 
-1.  使用基準媒體來**安裝新階層的頂層站台**。  
+1.  通过使用基线媒体**安装新层次结构的顶层站点**。  
 
-    -   您只能使用基準媒體來安裝新階層的第一個站台。  
-    -   例如，使用基準版本 1606 來安裝頂層站台。 如需詳細資訊，請參閱[使用安裝精靈安裝站台](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites)。  
+    -   基线媒体仅能用于安装新层次结构的第一个站点。  
+    -   例如，使用 1606 基准版本安装顶层站点。 有关详细信息，请参阅[使用安装向导来安装站点](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites)。  
 
-    在此步驟之後，您的頂層站台就會執行 1606 版。  
+    在此步骤后，顶层站点运行的是 1606 版。  
 
-2.  **使用主控台內更新，將您的頂層站台更新到較新的版本**。  
+2.  **使用控制台内部更新将顶层站点更新到更高版本。**  
 
-    -   在安裝任何子站台或用戶端之前，先將您的頂層站台更新到您打算使用的更新版本。  
-    -   例如，您可以將執行 1606 版的頂層站台更新到 1610 版。 如需詳細資訊，請參閱 [System Center Configuration Manager 的更新](../../../../core/servers/manage/updates.md)。  
+    -   将顶层站点更新到要使用的更新版本后，再安装任何子站点或客户端。  
+    -   例如，可以将运行 1606 版的顶层站点更新到 1610 版。 有关详细信息，请参阅 [ System Center Configuration Manager 的更新](../../../../core/servers/manage/updates.md)。  
 
-    在此步驟之後，您的頂層站台就會執行 1610 版。  
+    在此步骤后，顶层站点运行的是 1610 版。  
 
-3.  **在管理中心網站底下安裝新的子主要站台。**  
+3.  **在管理中心站点下安装新的子主站点。**  
 
-    -   使用管理中心網站伺服器上 [CD.Latest] 資料夾中的安裝媒體來安裝子主要站台。 如需詳細資訊，請參閱 [System Center Configuration Manager 的 CD.Latest 資料夾](../../../../core/servers/manage/the-cd.latest-folder.md)。  
+    -   使用管理中心站点服务器上 CD.Latest 文件夹中的安装媒体来安装子主站点。 有关详细信息，请参阅 [System Center Configuration Manager 的 CD.Latest 文件夹](../../../../core/servers/manage/the-cd.latest-folder.md)。  
 
-      必須使用此來源媒體，才能確保新的子主要站台與管理中心網站的版本相符。  
+      需要此源媒体来确保新的子主站点与管理中心站点的版本相匹配。  
 
-    在此步驟之後，新的子主要站台就會執行 1610 版。  
+    在此步骤后，新的子主站点运行的版本是 1610。  
 
-4.  **在每個主要站台，使用主控台內選項來安裝新的次要站台**。  
+4.  **在每个主站点上，使用控制台内部选项安装新的辅助站点。**  
 
-    -   如果您未在主要站台版本為 1606 時安裝次要站台，就不需要升級次要站台。  
-    -   相反地，請安裝執行 1610 版的新次要站台。 如需詳細資訊，請參閱 [Use the Setup Wizard to install sites](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites) (使用安裝精靈安裝站台) 主題中的[Install a secondary site](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites#bkmk_secondary) (安裝次要站台)。  
+    -   由于不是在主站点运行 1606 版时安装的辅助站点，因此无需升级辅助站点。  
+    -   而是安装运行 1610 版的新辅助站点。 有关详细信息，请参阅[使用安装向导安装站点](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites)主题中的[安装辅助站点](/sccm/core/servers/deploy/install/use-the-setup-wizard-to-install-sites#bkmk_secondary)。  
 
-    在此步驟之後，新次要站台就會安裝並執行 1610 版。  
+    在此步骤后，已安装好新的辅助站点，并且运行 1610 版。  
 
-5.  **在主要站台安裝新的用戶端。**  
+5.  **在主站点上安装新的客户端。**  
 
-    -   如果您未在主要站台版本為 1606 時安裝用戶端，就不需要將用戶端從 1606 版升級到 1610 版。  
-    -   相反地，請安裝執行 1610 版的新用戶端。 如需詳細資訊，請參閱[在 System Center Configuration Manager 中部署用戶端](../../../clients/deploy/deploy-clients-to-windows-computers.md)。  
+    -   由于不是在主站点运行 1606 版时安装的客户端，因此无需将客户端从 1606 版升级到 1610 版。  
+    -   而是安装运行 1610 版的新客户端。 有关详细信息，请参阅[在 System Center Configuration Manager 中部署客户端](../../../clients/deploy/deploy-clients-to-windows-computers.md)。  
 
-    在此步驟之後，就會安裝執行 1610 版的新用戶端。  
+    在此步骤后，运行 1610 版的新客户端已安装好。  
 
-## <a name="scenario-upgrade-system-center-2012-configuration-manager-to-an-update-version-of-system-center-configuration-manager-current-branch"></a>案例：將 System Center 2012 Configuration Manager 升級到 System Center Configuration Manager 最新分支的更新版本  
-在此範例案例中，將 Microsoft System Center 2012 Configuration Manager 基礎結構升級到 System Center Configuration Manager 的更新版本，例如 1610 版。  
+## <a name="scenario-upgrade-system-center-2012-configuration-manager-to-an-update-version-of-system-center-configuration-manager-current-branch"></a>方案：将 System Center 2012 Configuration Manager 升级到 System Center Configuration Manager Current Branch 的更新版本  
+在此示例方案中，将 Microsoft System Center 2012 Configuration Manager 基础结构升级到 System Center Configuration Manager 的更新版本（如版本 1610）。  
 
--   在您安裝 1610 版的更新之前，必須先將管理中心網站和每個主要站台升級到基準版本 1606。  
--   次要站台和用戶端則不會升級或安裝 1606 版。 反之，它們會直接從 Microsoft System Center 2012 Configuration Manager 移轉為 System Center Configuration Manager 1610 版。  
+-   安装 1610 版更新之前，必须将管理中心站点和每个主站点升级到 1606 基准版本。  
+-   辅助站点和客户端无需升级或安装版本 1606。 而是直接从 Microsoft System Center 2012 Configuration Manager 移至 System Center Configuration Manager 版本 1610。  
 
-請遵循下列順序︰  
+按照以下顺序执行：  
 
-1.  **升級頂層 Microsoft System Center 2012 Configuration Manager 站台**至最新分支的基準版本 (例如 1606 版)，方法是使用 System Center Configuration Manager 來源媒體。 如需詳細資訊，請參閱[升級至 System Center Configuration Manager](../../../../core/servers/deploy/install/upgrade-to-configuration-manager.md)。  
+1.  使用 System Center Configuration Manager（如版本 1606）的源媒体将**顶层 Microsoft System Center 2012 Configuration Manager 站点**升级到 Current Branch 的基准版本。 有关详细信息，请参阅[升级到 System Center Configuration Manager](../../../../core/servers/deploy/install/upgrade-to-configuration-manager.md)。  
 
-    -   就像傳統升級案例一樣，您一律是先升級階層的頂層站台，然後再升級子站台。  
+    -   与传统升级方案一样，始终先升级层次结构的顶层站点，再升级子站点。  
 
-    在此步驟之後，您的頂層站台就會執行 1606 版。  
+    在此步骤后，顶层站点运行的是 1606 版。  
 
-2.  將**您階層中的每個子主要站台升級** 到該相同基準版本。  
+2.  **将层次结构中的每个子主站点升级** 到相同的基准版本。  
 
-    -   當您從 Microsoft System Center 2012 Configuration Manager 升級時，必須將每個主要站台手動升級到最新分支的基準版本。  
-    -   您目前不需要升級次要站台。  
+    -   从 Microsoft System Center 2012 Configuration Manager 升级时，必须手动将每个主站点升级到 Current Branch 的基准版本。  
+    -   此时无需升级辅助站点。  
 
-    在此步驟之後，每個主要站台都會執行 1606 版。  
+    在此步骤后，每个主站点运行的是 1606 版。  
 
-3.  **設定子主要站台的維護時段**。 將所有主要站台升級到基準版本之後，請規劃設定維護期間以控制這些站台安裝基礎結構更新的時間。 如需詳細資訊，請參閱[如何使用 System Center Configuration Manager 中的維護期間](../../../../core/clients/manage/collections/use-maintenance-windows.md)。  (維護期間在 1606 版中稱為「服務保留時間」。)  
+3.  **在子主站点上设置维护时段。** 将所有主站点升级到基准版本之后，建议配置维护时段，以便控制对这些站点安装基础结构更新的时间。 有关详细信息，请参阅[如何在 System Center Configuration Manager 中使用维护时段](../../../../core/clients/manage/collections/use-maintenance-windows.md)。  （维护时段在 1606 版中被称为*服务时段*。）  
 
-    -   子主要站台會自動安裝您在管理中心網站所安裝的相同更新。  
-    -   次要站台不會自動安裝新版本。 您必須從主控台內手動升級。  
+    -   子主站点会自动安装与管理中心站点相同的更新版本。  
+    -   辅助站点不会自动安装新版本。 必须从控制台中进行手动升级。  
 
-  在此步驟之後，當您在管理中心網站上安裝更新時，子主要站台將只有在其維護期間允許的情況下，才會安裝該更新。  
+  在此步骤后，在管理中心站点上安装更新时，子主站点将只安装其维护时段允许的更新版本。  
 
-4.  **在您的頂層站台安裝更新版本**。 這會更新您的頂層站台。 在管理中心網站安裝更新版本之後，除非維護期間封鎖安裝，否則每個子主要站台都會自動安裝更新。  
+4.  **在顶层站点上安装更新版本。** 此操作会更新顶层站点。 管理中心站点安装更新版本后，每个子主站点都会自动安装该更新（除非维护时段禁止安装）。  
 
-    -   例如，您可以將頂層站台從 1606 版更新到 1610 版。 如需詳細資訊，請參閱 [System Center Configuration Manager 的更新](../../../../core/servers/manage/updates.md)。  
+    -   例如，可以将顶层站点从 1606 版更新至 1610 版. 有关详细信息，请参阅 [ System Center Configuration Manager 的更新](../../../../core/servers/manage/updates.md)。  
 
-    在此步驟之後，您的管理中心網站和每個主要站台都會執行 1610 版。  
+    在此步骤后，管理中心站点和每个主站点运行的是 1610 版。  
 
-5.  **升級次要站台。** 在主要站台安裝更新並執行 1610 版之後，請使用主控台內選項來升級次要站台。  
+5.  **升级辅助站点。** 主站点安装更新并运行 1610 版之后，可以使用控制台内部选项来升级辅助站点。  
 
-    -   這會將次要站台從 Microsoft System Center 2012 Configuration Manager 直接升級到您在主要站台上安裝的更新版本。  
-    -   如需升級次要站台的資訊，請參閱[升級至 System Center Configuration Manager](../../../../core/servers/deploy/install/upgrade-to-configuration-manager.md) 中的[升級站台](../../../../core/servers/deploy/install/upgrade-to-configuration-manager.md#bkmk_upgrade)。  
+    -   此操作会将辅助站点从 Microsoft System Center 2012 Configuration Manager 直接升级到安装在主站点上的更新版本。  
+    -   有关升级辅助站点的信息，请参阅[升级到 System Center Configuration Manager](../../../../core/servers/deploy/install/upgrade-to-configuration-manager.md) 主题中的[升级站点](../../../../core/servers/deploy/install/upgrade-to-configuration-manager.md#bkmk_upgrade)。  
 
-6.  **升級用戶端。** 若要升級用戶端，請使用[如何在 System Center Configuration Manager 中升級 Windows 電腦的用戶端](../../../../core/clients/manage/upgrade/upgrade-clients-for-windows-computers.md)中的資訊。  
+6.  **升级客户端。** 若要升级客户端，请使用[如何在 System Center Configuration Manager 中升级 Windows 计算机的客户端](../../../../core/clients/manage/upgrade/upgrade-clients-for-windows-computers.md)中的信息。  
 
-    -   這會將用戶端從 Microsoft System Center 2012 Configuration Manager 直接升級到您在主要站台上安裝的更新版本。  
+    -   此操作会将客户端从 Microsoft System Center 2012 Configuration Manager 直接升级到安装在主站点上的更新版本。  
 
-    在此步驟之後，用戶端就會升級到 1610 版，而不需先升級到 1606 版。
+    在此步骤后，客户端将升级到 1610 版，而无需先升级到 1606 版。

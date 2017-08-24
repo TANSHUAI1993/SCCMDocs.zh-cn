@@ -1,6 +1,6 @@
 ---
-title: "Configuration Manager 2012 的變更 | Microsoft Docs "
-description: "識別 System Center Configuration Manager 與 System Center 2012 Configuration Manager 中的變更與新功能。"
+title: "自 Configuration Manager 2012 以来的更改 | Microsoft Docs "
+description: "识别与 System Center 2012 Configuration Manager 相比，System Center Configuration Manger 中更改的内容和新功能。"
 ms.custom: na
 ms.date: 05/02/2017
 ms.prod: configuration-manager
@@ -17,152 +17,152 @@ manager: angrobe
 ms.openlocfilehash: 0a3eb93a99533a1569d8f72ca01d6dfcdc75da20
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="what39s-changed-in-system-center-configuration-manager-from-system-center-2012-configuration-manager"></a>System Center Configuration Manager 和 System Center 2012 Configuration Manager 之間的變更
+# <a name="what39s-changed-in-system-center-configuration-manager-from-system-center-2012-configuration-manager"></a>自 System Center 2012 Configuration Manager 以来 System Center Configuration Manager 中更改的内容
 
-*適用於：System Center Configuration Manager (最新分支)*
-
-
- System Center Configuration Manager 的最新分支推出 System Center 2012 Configuration Manager 的重要變更。 本主題識別 System Center Configuration Manager 基準版本 1511 內的重大變更和新功能。 若要了解 System Center Configuration Manager 後續更新中推出的變更，請參閱 [System Center Configuration Manager 累加版本的新功能](/sccm/core/plan-design/changes/whats-new-incremental-versions)。
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 
+ System Center Configuration Manager Current Branch 引入了自 System Center 2012 Configuration Manager 以来的重要更改。 本主题帮助识别 System Center Configuration Manager 的基线版本 1511 中的显著更改和新增功能。 若要了解有关 System Center Configuration Manager 后续更新中引入的更改，请参阅 [System Center Configuration Manager 增量版本中的新增功能](/sccm/core/plan-design/changes/whats-new-incremental-versions)。
 
- 2015 年 12 月發行的 System Center Configuration Manager (版本 1511) 是 Microsoft 目前 Configuration Manager 產品的初始版本。 通常稱之為 System Center Configuration Manager 最新分支。 「最新分支」指出這是支援產品累加式更新的版本。 它也提供一個方法來區別此版本與舊版 Configuration Manager。  
+
+
+ 2015 年 12 月发布的 System Center Configuration Manager（版本 1511）是 Microsoft 发布的当前 Configuration Manager 产品的初始版本。 通常，它被称为 System Center Configuration Manager current branch。 *Current Branch* 表明这是支持产品增量更新的版本。 它还提供区分 Configuration Manager 此发布版本和早期版本的方法。  
 
  System Center Configuration Manager：  
 
--   不同於 Configuration Manager 2007 或 System Center 2012 Configuration Manager 等舊版，產品名稱中不使用年份或產品識別碼。
+-   不在产品名中使用年份或产品标识符，与 Configuration Manager 2007 或 System Center 2012 Configuration Manager 等过去版本不同。
 
--   支援累加式產品中更新 (也稱為更新版本)。 初始版本為版本 1511。 後續版本透過主控台內更新的方式於一年中發行數次 (例如版本 1610)。
--   使用基準版本進行安裝。 雖然 1511 是原始的基準版本，但新的基準版本會不定時發行，例如 1702。 基準版本可用來安裝新的 System Center Configuration Manager 站台和階層，或從支援的 Configuration Manager 2012 版本進行升級。
-
-
+-   支持增量产品内更新，也称为更新版本。 初始版本是版本 1511。 一年发布几次作为控制台内更新的后续版本，如版本 1610。
+-   使用基线版本安装。 1511 是原始的基线版本，而新的基线版本也会不定期发布，如 1702。 基线版本可用于安装新的 System Center Configuration Manager 站点和层次结构，或从 Configuration Manager 2012 支持的版本升级。
 
 
-##  <a name="bkmk_updates"></a> Configuration Manager 的主控台中更新  
- System Center Configuration Manager 使用稱為**更新和服務**的主控台內服務方式，可輕鬆尋找並安裝建議的更新。  
-
- 某些版本只以現有站台的更新形式提供 (從 Configuration Manager 主控台內)，無法用來安裝新的 Configuration Manager 站台。   
-例如，1610 更新只能從 Configuration Manager 主控台內取得。 它是用來更新已執行某版本的 System Center Configuration Manager 的站台。
-
-另外，也會定期發行更新版本做為新的基準版本，例如更新 1702。 這種更新可以用來安裝新的階層而不需要從較舊的基準版本 (例如 1511) 開始，也無須升級至最新版本。
 
 
-如需使用更新的詳細資訊，請參閱 [Updates for System Center Configuration Manager](../../../core/servers/manage/updates.md) (System Center Configuration Manager 的更新)。  
-如需基準的詳細資訊，請參閱[基準和更新版本](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)。
+##  <a name="bkmk_updates"></a> Configuration Manager 的控制台内更新  
+ System Center Configuration Manager 使用称为“更新和服务”的控制台中服务方法，可轻松找到并安装建议的更新。  
 
-##  <a name="bkmk_servicepoint"></a> 新的站台系統角色：服務連接點  
- **Microsoft Intune 連接器**已為啟用額外功能 (**服務連接點**) 的新站台系統角色所取代。 服務連接點：  
+ 某些版本仅可用作（Configuration Manager 控制台内）现有站点的更新，而不能用于安装新的 Configuration Manager 站点。   
+例如，仅可从 Configuration Manager 控制台获取 1610 更新。 它用于更新已运行 System Center Configuration Manager 版本的站点。
 
--   整合 Intune 與 System Center Configuration Manager 內部部署行動裝置管理時，取代 Microsoft Intune 連接器。  
+我们还会定期发布更新版本（如更新 1702）作为新的基线版本。 此类更新可用于在无需以较旧的基线版本（如 1511）开始的情况下安装新的层次结构，并且将版本升级到最新版本。
 
--   作為您管理之裝置的連絡點。  
 
--   將您部署的相關使用方式資料上傳到 Microsoft 雲端服務。  
+有关使用更新的详细信息，请参阅 [System Center Configuration Manager 的更新](../../../core/servers/manage/updates.md)。  
+有关基线版本的详细信息，请参阅[基线版本和升级版本](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)。
 
--   讓套用至部署的更新可從 Configuration Manager 主控台內取用。  
+##  <a name="bkmk_servicepoint"></a> 新站点系统角色：服务连接点  
+ **Microsoft Intune 连接器**被启用其他功能的新站点系统角色（**服务连接点**）所替换。 服务连接点：  
 
-此站台系統角色支援線上和離線操作模式。 如需詳細資訊，請參閱 [About the service connection point in System Center Configuration Manager](../../../core/servers/deploy/configure/about-the-service-connection-point.md)。  
+-   在将 Intune 与 System Center Configuration Manager 本地移动设备管理相集成时，替换 Microsoft Intune 连接器。  
 
-##  <a name="bkmk_usage"></a> 使用量資料收集  
- System Center Configuration Manager 會收集您站台和基礎結構的使用方式資料。 這項資訊是透過服務連接點編譯並提交給 Microsoft 雲端服務。 需要有這項資訊才能讓 Configuration Manager 下載套用至您所使用 Configuration Manager 版本之部署的更新。 當您設定服務連接點時，可以指定資料收集層級，以及這是自動進行提交 (線上模式) 還是手動進行提交 (離線模式)。  
+-   用作管理设备的联系点。  
 
- 如需詳細資訊，請參閱[使用方式資料層級和設定](../../../core/servers/deploy/install/setup-reference.md#bkmk_usage)。  
+-   将有关部署的使用情况数据上传到 Microsoft 云服务。  
 
-##  <a name="bkmk_AMT"></a> Intel 主動管理技術 (AMT) 支援  
- 使用 System Center Configuration Manager，即已從 Configuration Manager 主控台內移除 AMT 型電腦的原生支援。 當您使用 [Microsoft System Center Configuration Manager 的 Intel SCS 附加元件](http://www.intel.com/content/www/us/en/software/setup-configuration-software.html)時，仍會完全管理 AMT 電腦。 附加元件可讓您存取管理 AMT 的最新功能，同時移除 Configuration Manager 併入那些變更之前所引入的限制。  
+-   使应用到部署的更新在 Configuration Manager 控制台中可用。  
 
-移除的 System Center Configuration Manager 整合 AMT 包括頻外管理。 頻外管理點站台系統角色已不再使用，也無法再使用。  
+此站点系统角色支持联机和脱机操作模式。 有关详细信息，请参阅 [About the service connection point in System Center Configuration Manager](../../../core/servers/deploy/configure/about-the-service-connection-point.md)。  
 
-請注意，這項變更不會影響 System Center 2012 Configuration Manager 中的頻外管理。
+##  <a name="bkmk_usage"></a> 使用数据收集  
+ System Center Configuration Manager 收集有关站点和基础结构的使用情况数据。 编译此信息并通过服务连接点将其提交给 Microsoft 云服务。 需要启用 Configuration Manager 下载部署的更新，此部署应用于你使用的 Configuration Manager 版本。 设置服务连接点时，可以指定收集到的数据级别以及它是自动提交（联机模式）还是手动提交（脱机模式）。  
 
-##  <a name="bkmk_out"></a> 已過時功能  
- 某些功能 (例如 [Intel 主動管理技術 (AMT) 型電腦的原生支援](#bkmk_AMT)已從 Configuration Manager 主控台移除。 其他功能 (例如網路存取保護) 則已完整移除。 此外，不再支援一些較舊的 Microsoft 產品 (如 Windows Vista、Windows Server 2008 和 SQL Server 2008)。  
+ 有关详细信息，请参阅[使用情况数据级别和设置](../../../core/servers/deploy/install/setup-reference.md#bkmk_usage)。  
 
- 如需已取代之功能的清單，請參閱 [System Center Configuration Manager 的已移除和已淘汰功能](../../../core/plan-design/changes/removed-and-deprecated-features.md)。  
+##  <a name="bkmk_AMT"></a> Intel 主动管理技术 (AMT) 的支持  
+ 通过 System Center Configuration Manager，已删除了 Configuration Manager 控制台中基于 AMT 的计算机的本机支持。 使用[适用于 Microsoft System Center Configuration Manager 的 Intel SCS 外接程序](http://www.intel.com/content/www/us/en/software/setup-configuration-software.html)时，基于 AMT 的计算机保持完全托管。 使用外接程序可以在 Configuration Manager 能够合并这些更改之前使用用于管理 AMT 的最新功能，同时删除引入的限制。  
 
- 如需所支援產品、作業系統和設定的詳細資訊，請參閱 [Supported configurations for System Center Configuration Manager](../../../core/plan-design/configs/supported-configurations.md) (System Center Configuration Manager 的支援設定)。  
+为 System Center Configuration Manager 删除的集成 AMT 包括带外管理。 不再使用带外管理点站点系统角色或者该角色不再可用。  
 
-## <a name="client-deployment"></a>用戶端部署  
- System Center Configuration Manager 引入新的功能，可用於先測試 Configuration Manager 用戶端的新版本，再使用新的軟體升級站台的其餘部分。 您可以設定用來試驗新用戶端的進入生產階段前集合。 在您滿意進入生產階段前的新用戶端軟體之後，即可升級用戶端，以使用新的版本來自動升級站台的其餘部分。  
+请注意，System Center 2012 Configuration Manager 中的带外管理不受此更改的影响。
 
- 如需如何測試用戶端的詳細資訊，請參閱[如何測試 System Center Configuration Manager 的進入生產階段前集合用戶端升級](../../../core/clients/manage/upgrade/test-client-upgrades.md)。  
+##  <a name="bkmk_out"></a> 弃用的功能  
+ 将从 Configuration Manager 控制台删除一些功能，如基于计算机的 [Intel 主动管理技术 (AMT) 的本机支持](#bkmk_AMT)。 将完全删除其他功能，如网络访问保护。 此外，不再支持某些较旧的 Microsoft 产品，如 Windows Vista、Windows Server 2008 和 SQL Server 2008。  
 
-## <a name="operating-system-deployment"></a>作業系統部署  
+ 有关弃用功能的列表，请参阅 [System Center Configuration Manager 的已删除和已弃用的功能](../../../core/plan-design/changes/removed-and-deprecated-features.md)。  
 
-請注意下列作業系統部署變更：
+ 有关受支持的产品、操作系统和配置的详细信息，请参阅 [System Center Configuration Manager 支持的配置](../../../core/plan-design/configs/supported-configurations.md)。  
 
--   在 [建立工作順序精靈] 的 [從升級套件升級作業系統] 中，有新的工作順序類型可供使用。 它會建立將電腦從 Windows 7、Windows 8 或 Windows 8.1 升級至 Windows 10 的步驟。 如需詳細資訊，請參閱 [Upgrade Windows to the latest version with System Center Configuration Manager](../../../osd/deploy-use/upgrade-windows-to-the-latest-version.md)。  
+## <a name="client-deployment"></a>客户端部署  
+ System Center Configuration Manager 引入了新功能，用于在使用新软件升级站点的其余部分之前，对 Configuration Manager 客户端的新版本进行测试。 可以设置在其中试验新客户端的预生产集合。 对预生产中的新客户端软件感到满意后，可以将客户端提升为使用新版本自动升级站点的其余部分。  
 
--   部署作業系統時，現在可以使用 Windows PE 對等快取。 執行工作順序來部署作業系統的電腦可使用 Windows PE 對等快取，從本機對等裝置 (對等快取來源) 取得內容，而不是從發佈點下載內容。 這有助於在分公司沒有本機發佈點的案例中，降低廣域網路 (WAN) 流量。 如需詳細資訊，請參閱 [Prepare Windows PE peer cache to reduce WAN traffic in System Center Configuration Manager](/sccm/osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic)。  
+ 有关如何测试客户端的详细信息，请参阅[如何在 System Center Configuration Manager 中的预生产集合中测试客户端升级](../../../core/clients/manage/upgrade/test-client-upgrades.md)。  
 
--   您現在可以檢視 Windows 的狀態 (如同環境中的服務一般)。 您也可以建立服務方案，以確立部署更新步調，並確保在新組建發行時，Windows 10 最新分支電腦保持為最新狀態。 此外，您可以檢視當 Windows 10 用戶端即將結束最新分支 (CB) 或最新商務分支 (CBB) 的建置支援時所發出的警示。 如需詳細資訊，請參閱 [Manage Windows as a service using System Center Configuration Manager](../../../osd/deploy-use/manage-windows-as-a-service.md)。  
+## <a name="operating-system-deployment"></a>操作系统部署  
 
-## <a name="application-management"></a>應用程式管理  
+请注意对操作系统部署进行的以下更改：
 
-請注意下列應用程式管理變更：
+-   在“创建任务序列向导”中，单击“从升级包升级操作系统”，然后将有一个新的可用任务序列类型。 它创建将计算机从 Windows 7、Windows 8 或 Windows 8.1 升级到 Windows 10 的步骤。 有关详细信息，请参阅 [Upgrade Windows to the latest version with System Center Configuration Manager](../../../osd/deploy-use/upgrade-windows-to-the-latest-version.md)。  
 
--   System Center Configuration Manager 可讓您部署執行 Windows 10 和更新版本之裝置的通用 Windows 平台 (UWP) 應用程式。 請參閱[使用 System Center Configuration Manager 建立 Windows 應用程式](../../../apps/get-started/creating-windows-applications.md)。  
+-   当部署操作系统时，Windows PE 对等缓存则变为可用。 运行部署操作系统的任务序列的计算机可使用 Windows PE 对等缓存从本地对等计算机（对等缓存源）中获取内容，而无需从分发点下载内容。 这有助于最大限度减小没有本地分发点的分支机构场景中的广域网 (WAN) 流量。 有关详细信息，请参阅 [Prepare Windows PE peer cache to reduce WAN traffic in System Center Configuration Manager](/sccm/osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic)。  
 
--   軟體中心有全新的時尚外貌。 應用程式先前只出現在應用程式類別目錄 (使用者可用的應用程式)，而現在會出現於軟體中心的 [應用程式] 索引標籤下。 這讓使用者更容易找到這些部署，而不需要參考應用程式類別目錄。 此外，也不再需要已啟用 Silverlight 的瀏覽器。 請參閱[在 System Center Configuration Manager 中規劃和設定應用程式管理](../../../apps/plan-design/plan-for-and-configure-application-management.md)。  
+-   现在可将 Windows 的状态作为环境中的一种服务进行查看。 还可以创建维护服务计划以形成部署环，并在新版本发布时，确保 Windows 10 Current Branch 计算机保持最新。 此外，当 Windows 10 客户端对其 Current Branch (CB) 或 Current Branch for Business (CBB) 版本的支持即将到期时，用户可以查看警报。 有关详细信息，请参阅 [Manage Windows as a service using System Center Configuration Manager](../../../osd/deploy-use/manage-windows-as-a-service.md)。  
 
--   透過 MDM 應用程式的新 Windows Installer 類型可讓您建立以 Windows Installer 為基礎的應用程式，並部署到執行 Windows 10 的已註冊電腦上。 請參閱[使用 System Center Configuration Manager 建立 Windows 應用程式](../../../apps/get-started/creating-windows-applications.md)。  
+## <a name="application-management"></a>应用程序管理  
 
--   當您建立內部 iOS 應用程式的應用程式時，只需要指定應用程式的安裝程式 (.ipa) 檔案。 您不再需要指定對應的屬性清單 (.plist) 檔案。 請參閱[使用 System Center Configuration Manager 建立 iOS 應用程式](../../../apps/get-started/creating-ios-applications.md)。  
+请注意对应用程序管理进行的以下更改：
 
--   在 Configuration Manager 2012 中，若要指定 Windows 市集中應用程式的連結，您可以直接指定連結，或瀏覽至已安裝應用程式的遠端電腦。 在 System Center Configuration Manager 中，您仍然可以直接輸入連結，但現在，您可以直接從 Configuration Manager 主控台瀏覽市集中的應用程式，而不是瀏覽至參照電腦。  
+-   通过 System Center Configuration Manager，可部署运行 Windows 10 及更高版本设备的通用 Windows 平台 (UWP) 应用。 请参阅[使用 System Center Configuration Manager 创建 Windows 应用程序](../../../apps/get-started/creating-windows-applications.md)。  
 
-## <a name="software-updates"></a>軟體更新  
+-   软件中心具有富有现代感的全新外观。 此前仅出现在应用程序目录中的应用（用户可用的应用）现在将出现在“应用程序”选项卡下的软件中心中。 这将使这些部署更易于被发现，并且用户不必参考应用程序目录。 此外，不再需要启用了 Silverlight 的浏览器了。 请参阅[规划和配置 System Center Configuration Manager 中的应用程序管理](../../../apps/plan-design/plan-for-and-configure-application-management.md)。  
 
-請注意下列軟體更新變更：
+-   通过 MDM 的新 Windows Installer 安装程序类型让你可以创建基于 Windows Installer 的应用并将其部署到运行 Windows 10 的已注册 PC 上。 请参阅[使用 System Center Configuration Manager 创建 Windows 应用程序](../../../apps/get-started/creating-windows-applications.md)。  
 
--   System Center Configuration Manager 現在可以偵測出電腦軟體更新管理方法之間的差異。 明確來說，它可以分辨連線至 Windows Update for Business (WUfB) 以進行軟體更新管理的 Windows 10 電腦，以及連線至 Windows Server Update Services (WSUS) 以進行軟體更新管理的電腦。 **UseWUServer** 是新屬性，並指定是否使用 WUfB 管理電腦。 您可以在集合中使用此設定，以移除這些電腦不進行軟體更新管理。 如需詳細資訊，請參閱 [Integration with Windows Update for Business in Windows 10](../../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md)。  
+-   当为内部的 iOS 应用创建应用程序时，只需要为该应用指定安装程序 (.ipa) 文件。 不再需要指定相应的属性列表 (.plist) 文件。 请参阅[使用 System Center Configuration Manager 创建 iOS 应用程序](../../../apps/get-started/creating-ios-applications.md)。  
 
--   您現在可從 Configuration Manager 主控台排程及執行 WSUS 清理工作。 在 [軟體更新點元件] 內容中，當您選取執行 WSUS 清理工作時，它會在下一次軟體更新同步處理時執行。 到期的軟體更新在 WSUS 伺服器上會設為拒絕狀態，而電腦上的 Windows Update 代理程式將不再掃描這些軟體更新。 如需詳細資訊，請參閱 [Schedule and run the WSUS clean up task](../../../sum/deploy-use/software-updates-maintenance.md)。  
+-   在 Configuration Manager 2012 中，若要在 Windows 应用商店中指定应用的链接，可以直接指定该链接，或者浏览到安装有该应用的远程计算机。 在 System Center Configuration Manager 中，仍然可以直接输入链接，但是可以直接从 Configuration Manager 控制台浏览应用商店以查找应用，而不用浏览到引用计算机。  
 
-## <a name="compliance-settings"></a>相容性設定  
+## <a name="software-updates"></a>软件更新  
 
-請注意下列合規性設定變更：
+请注意对软件更新进行的以下更改：
 
--   System Center Configuration Manager 改進了建立設定項目的工作流程。 現在，當您建立設定項目並選取支援的平台時，只能使用與該平台相關的設定。 請參閱[在 System Center Configuration Manager 中開始使用相容性設定](../../../compliance/get-started/get-started-with-compliance-settings.md)。  
+-   System Center Configuration Manager 现在可以检测计算机的软件更新管理方法之间的差异。 具体而言，它能区分连接到 Windows Update for Business (WUfB) 进行软件更新管理的 Windows 10 计算机和连接到 Windows Server Update Services (WSUS) 进行软件更新管理的计算机。 **UseWUServer** 属性为新属性，它指定了计算机是否由 WUfB 管理。 你可以在集合中使用此设置从软件更新管理中删除这些计算机。 有关详细信息，请参阅 [Integration with Windows Update for Business in Windows 10](../../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md)。  
 
--   [建立設定項目精靈] 現在可讓您更輕鬆地選擇您想要建立的設定項目類型。 此外，新增和更新的設定項目適用於：  
+-   现在可从 Configuration Manager 控制台计划和运行 WSUS 清理任务。 在**软件更新点组件**属性中，当选择运行 WSUS 清理任务时，它将在下一次软件更新同步时运行。 过期的软件更新将设置为在 WSUS 服务器上被拒绝的状态，计算机上的 Windows 更新代理将不再扫描这些软件更新。 有关详细信息，请参阅 [Schedule and run the WSUS clean up task](../../../sum/deploy-use/software-updates-maintenance.md)。  
 
-    -   使用 Configuration Manager 用戶端管理的 Windows 10 裝置。  
+## <a name="compliance-settings"></a>符合性设置  
 
-    -   使用 Configuration Manager 用戶端管理的 Mac OS X 裝置。  
+请注意对符合性设置进行的以下更改：
 
-    -   使用 Configuration Manager 用戶端管理的 Windows 桌上型電腦和伺服器電腦。  
+-   System Center Configuration Manager 改进了用于创建配置项目的工作流。 现在，当创建配置项目并选择受支持的平台时，只有与该平台相关的设置才可用。 请参阅[System Center Configuration Manager 中的符合性设置入门](../../../compliance/get-started/get-started-with-compliance-settings.md)。  
 
-    -   不使用 Configuration Manager 用戶端管理的 Windows 8.1 和 Windows 10 裝置。  
+-   **创建配置项目**向导现在可以更轻松地选择你想要创建的配置项目类型。 此外，新的和更新的配置项目可用于：  
 
-    -   不使用 Configuration Manager 用戶端管理的 Windows Phone 裝置。  
+    -   使用 Configuration Manager 客户端管理的 Windows 10 设备。  
 
-    -   不使用 Configuration Manager 用戶端管理的 iOS 和 Mac OS X 裝置。  
+    -   使用 Configuration Manager 客户端管理的 Mac OS X 设备。  
 
-    -   不使用 Configuration Manager 用戶端管理的 Android 和 Samsung KNOX Standard 裝置。  
+    -   使用 Configuration Manager 客户端管理的 Windows 台式计算机和服务器计算机。  
 
- 請參閱[如何建立 System Center Configuration Manager 的組態項目](../../../compliance/deploy-use/create-configuration-items.md)。  
+    -   未使用 Configuration Manager 客户端管理的 Windows 8.1 和 Windows 10 设备。  
 
--   支援管理向 Microsoft Intune 註冊或使用 Configuration Manager 用戶端管理的 Mac OS X 電腦設定。 請參閱[如何為不是使用 System Center Configuration Manager 用戶端所管理的 iOS 和 Mac OS X 裝置建立組態項目](../../../compliance/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client.md)。  
+    -   未使用 Configuration Manager 客户端管理的 Windows Phone 设备。  
 
-## <a name="protect-data-and-site-infrastructure"></a>保護資料和站台的基礎結構  
-System Center Configuration Manager 可讓您與 Windows Hello 企業版 (原 Microsoft Passport for Windows) 整合。 Windows Hello 企業版是使用 Active Directory 或 Azure Active Directory 帳戶取代執行 Windows 10 之裝置上的密碼、智慧卡或虛擬智慧卡的替代登入方法。 請參閱　[Windows Hello for Business settings in System Center Configuration Manager](../../../protect/deploy-use/windows-hello-for-business-settings.md) (System Center Configuration Manager 的 Windows Hello 企業版設定)。
+    -   未使用 Configuration Manager 客户端管理的 iOS 和 Mac OS X 设备。  
 
-## <a name="mobile-device-management-with-microsoft-intune"></a>使用 Microsoft Intune 的行動裝置管理  
- System Center Configuration Manager 引入行動裝置管理體驗的增強功能，包括：  
+    -   未使用 Configuration Manager 客户端管理的 Android 和 Samsung KNOX 标准版设备。  
 
--   限制使用者可以註冊的裝置數目。  
+ 请参阅[如何在 System Center Configuration Manager 中创建配置项目](../../../compliance/deploy-use/create-configuration-items.md)。  
 
--   指定公司入口網站使用者在註冊或使用應用程式之前必須接受的條款和條件。  
+-   支持使用 Microsoft Intune 注册或使用 Configuration Manager 客户端管理的 Mac OS X 计算机上的管理设置。 请参阅[如何为没有使用 System Center Configuration Manager 客户端管理的 iOS 和 Mac OS X 设备创建配置项目](../../../compliance/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client.md)。  
 
--   新增可協助管理大量裝置的裝置註冊管理員角色。  
+## <a name="protect-data-and-site-infrastructure"></a>保护数据和站点基础结构  
+System Center Configuration Manager 支持与 Windows Hello 企业版（以前为 Microsoft Passport for Windows）集成。 Windows Hello 企业版是运行 Windows 10 的设备上使用 Active Directory 或 Azure Active Directory 帐户取代密码、智能卡或虚拟智能卡进行登录的一种替代方法。 请参阅 [System Center Configuration Manager 中的 Windows Hello 企业版设置](../../../protect/deploy-use/windows-hello-for-business-settings.md)。
 
-如需 Configuration Manager 及 Intune 的行動裝置管理功能的詳細資訊，請參閱 [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../../mdm/understand/hybrid-mobile-device-management.md) (搭配 System Center Configuration Manager 和 Microsoft Intune 的混合式行動裝置管理 (MDM))。  
+## <a name="mobile-device-management-with-microsoft-intune"></a>使用 Microsoft Intune 进行移动设备管理  
+ System Center Configuration Manager 引入了改进移动设备管理体验的内容，其中包括：  
 
-## <a name="on-premises-mobile-device-management"></a>內部部署行動裝置管理  
- 您現在可以使用內部部署 Configuration Manager 基礎結構管理行動裝置。 所有裝置管理和管理資料都是在內部部署進行處理，且不屬於 Microsoft Intune 或其他雲端服務。 這種類型的裝置管理不需要用戶端軟體。 Configuration Manager 會使用裝置作業系統的內建功能來管理裝置。  
+-   对用户可以注册的设备数设置限制。  
 
- 若要進一步了解，請參閱[在 System Center Configuration Manager 中使用內部部署基礎結構管理行動裝置](../../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md)。
+-   指定公司门户用户在注册或使用应用之前必须接受的条款和条件。  
+
+-   添加了设备注册管理器角色，以帮助管理大量设备。  
+
+有关 Configuration Manager 和 Intune 的移动设备管理功能的详细信息，请参阅 [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](../../../mdm/understand/hybrid-mobile-device-management.md)（System Center Configuration Manager 和 Microsoft Intune 的混合移动设备管理 (MDM)）。  
+
+## <a name="on-premises-mobile-device-management"></a>本地移动设备管理  
+ 现在可以使用本地 Configuration Manager 基础结构管理移动设备。 所有设备管理和管理数据都在本地处理并且不是 Microsoft Intune 或其他云服务的一部分。 此类设备管理不需要客户端软件。 Configuration Manager 管理具有内置于设备操作系统的功能的设备。  
+
+ 若要了解详细信息，请参阅[在 System Center Configuration Manager 中使用本地基础结构管理移动设备](../../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md)。

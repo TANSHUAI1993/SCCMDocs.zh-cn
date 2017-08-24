@@ -1,6 +1,6 @@
 ---
-title: "設定用戶端通訊連接埠 | Microsoft Docs"
-description: "在 System Center Configuration Manager 中設定用戶端通訊連接埠。"
+title: "配置客户端通信端口 | Microsoft Docs"
+description: "在 System Center Configuration Manager 设置客户端通信端口。"
 ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
@@ -18,59 +18,59 @@ manager: angrobe
 ms.openlocfilehash: 63e033fdb436930ac5f37e7408ca9292bc444560
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="how-to-configure-client-communication-ports-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中設定用戶端通訊連接埠
+# <a name="how-to-configure-client-communication-ports-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中配置客户端通信端口
 
-*適用對象：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-您可以變更 System Center Configuration Manager 用戶端用來與使用 HTTP 和 HTTPS 的站台系統進行通訊的要求連接埠號碼。 雖然可能已針對防火牆設定 HTTP 或 HTTPS，使用 HTTP 或 HTTPS 的用戶端通知，比您使用自訂連接埠號碼需要更多管理點電腦的 CPU 使用量和記憶體。 如果您使用傳統的喚醒封包喚醒用戶端，也可以指定要使用的站台連接埠號碼。  
+可以更改 System Center Configuration Manager 客户端用来与使用 HTTP 和 HTTPS 进行通信的站点系统通信的请求端口号。 虽然为防火墙配置了 HTTP 或 HTTPS 的可能性更高，但是，与使用自定义端口号相比，使用 HTTP 或 HTTPS 的客户端通知在管理点计算机上将需要使用更多的 CPU 资源和内存。 如果通过使用传统的唤醒数据包唤醒客户端，则还可以指定要使用的站点端口号。  
 
- 當您指定 HTTP 和 HTTPS 要求連接埠，您可以同時指定預設連接埠號碼及替代連接埠號碼。 用戶端會在與預設連接埠通訊失敗後，自動嘗試替代連接埠。 您可以指定 HTTP 和 HTTPS 資料通訊的設定。  
+ 在指定 HTTP 和 HTTPS 请求端口时，可以指定默认端口号和备用端口号。 在使用默认端口通信失败后，客户端会自动尝试使用备用端口。 可以指定 HTTP 和 HTTPS 数据通信的设置。  
 
- 用戶端要求連接埠的預設值是 HTTP 流量 80  ，HTTPS 流量 443  。 只有在您不想要使用這些預設值時再進行修改。 使用自訂連接埠的一般案例是您在 IIS 中使用自訂網站，而不是使用預設網站。 如果您在 IIS 中變更預設網站的預設連接埠號碼，而其他應用程式也會使用預設網站時，可能會執行失敗。  
+ 客户端请求端口的默认值是 **80** （对于 HTTP 流量）和 **443** （对于 HTTPS 流量）。 仅在你不想使用这两个默认值时才更改它们。 使用自定义端口的典型情况是，你在 IIS 中使用自定义网站而不是默认网站。 如果更改 IIS 中的默认网站的默认端口号，而其他应用程序也使用此默认网站，则它们可能会失败。  
 
 > [!IMPORTANT]  
->  除非了解後果，否則請勿變更 Configuration Manager 中的連接埠號碼。 範例：  
+>  不要在不了解后果的情况下更改 Configuration Manager 中的端口号。 例如：  
 >   
->  -   如果您將用戶端要求服務的連接埠號碼變更為站台設定，而現有的用戶端未重新設定為使用新的連接埠號碼時，這些用戶端將會變成未受管理。  
-> -   設定非預設的連接埠號碼前，請確定防火牆和所有中介網路裝置皆可支援此設定，並且視需要重新設定。 如果您會在網際網路上管理用戶端，而且會變更預設的 HTTPS 連接埠號碼 443，網際網路上的路由器和防火牆可能會封鎖此通訊。  
+>  -   如果在站点配置中更改客户端请求服务的端口号，而且没有重新配置现有的客户端以使用新的端口号，则这些客户端将变为非管理的客户端。  
+> -   在配置非默认的端口号之前，请确保防火墙和所有介入性网络设备都能支持此配置，并在必要时对它们进行重新配置。 如果你将在 Internet 上管理客户端，并且更改默认的 HTTPS 端口号 443，则 Internet 上的路由器和防火墙可能会阻止此通信。  
 
- 為確定用戶端不會在您變更要求連接埠號碼之後不受管理，必須將用戶端設定為使用新的要求連接埠號碼。 變更主要站台的要求連接埠時，所有連接的次要站台都會自動繼承相同的連接埠設定。 使用本主題中的程序，設定主要站台上的要求連接埠。  
+ 为了确保在你更改请求端口号后客户端不会变为非管理的客户端，必须配置客户端以使用新的请求端口号。 在更改主站点上的请求端口时，任何连接的辅助站点均会自动继承相同的端口配置。 使用本主题中的过程来配置主站点上的请求端口。  
 
 > [!NOTE]  
->  如需如何在執行 Linux 與 UNIX 的電腦上設定用戶端要求連接埠的資訊，請參閱[設定 Linux 和 UNIX 用戶端要求連接埠](../../../core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md#BKMK_ConfigLnUClientCommuincations)。  
+>  有关如何为运行 Linux 和 UNIX 的计算机上的客户端配置请求端口的信息，请参阅[为适用于 Linux 和 UNIX 的客户端配置请求端口](../../../core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md#BKMK_ConfigLnUClientCommuincations)。  
 
- 當 Configuration Manager 站台發佈至 Active Directory 網域服務時，將會自動以其站台連接埠設定來設定可存取此資訊的新用戶端和現有用戶端，您不需要採取進一步的動作。 無法存取這個已發佈到 Active Directory 網域服務之資訊的用戶端，包括工作群組用戶端、來自其他 Active Directory 樹系的用戶端、已設定為只使用網際網路的用戶端，以及目前位於網際網路上的用戶端。 如果您在安裝這些用戶端後變更預設連接埠號碼，請使用下列其中一種方法，重新安裝這些用戶端和安裝新的用戶端：  
+ 当 Configuration Manager 站点发布到 Active Directory 域服务时，可以访问此信息的新客户端和现有客户端将自动配置为它们的站点端口设置，并且您无需采取其他操作。 无法访问发布到 Active Directory 域服务的此信息的客户端包括：工作组客户端、其他 Active Directory 林中的客户端、配置为仅通过 Internet 进行管理的客户端，以及目前位于 Internet 上的客户端。 如果在已安装这些客户端后更改默认端口号，请使用以下方法之一重新安装这些客户端和安装任何新的客户端：  
 
--   使用「用戶端推入安裝精靈」重新安裝用戶端。 用戶端推入安裝會自動為用戶端設定最新的站台連接埠設定。 如需如何使用用戶端推送安裝精靈的詳細資訊，請參閱 [如何使用用戶端推入安裝 Configuration Manager 用戶端](../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientPush)。  
+-   使用“客户端请求安装向导”重新安装客户端。 客户端请求安装会自动使用当前的站点端口配置来配置客户端。 有关如何使用“客户端请求安装向导”的详细信息，请参阅[如何使用客户端请求安装 Configuration Manager 客户端](../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientPush)。  
 
--   使用 CCMSetup.exe 以及 CCMHTTPPORT 和 CCMHTTPSPORT 的 client.msi 安裝內容，重新安裝用戶端。 如需這些內容的詳細資訊，請參閱[關於 System Center Configuration Manager 中的用戶端安裝內容](../../../core/clients/deploy/about-client-installation-properties.md)。  
+-   使用 CCMSetup.exe 以及 CCMHTTPPORT 和 CCMHTTPSPORT 的 client.msi 安装属性来重新安装客户端。 有关这些属性的详细信息，请参阅[关于 System Center Configuration Manager 中的客户端安装属性](../../../core/clients/deploy/about-client-installation-properties.md)。  
 
--   使用在 Active Directory 網域服務搜尋 Configuration Manager 用戶端安裝內容的方法，重新安裝用戶端。 如需詳細資訊，請參閱[關於 System Center Configuration Manager 中發佈至 Active Directory 網域服務的用戶端安裝內容](../../../core/clients/deploy/about-client-installation-properties-published-to-active-directory-domain-services.md)。  
+-   使用搜索 Active Directory 域服务以查找 Configuration Manager 客户端安装属性这一方法来重新安装客户端。 有关详细信息，请参阅[关于 System Center Configuration Manager 中的发布到 Active Directory 域服务的客户端安装属性](../../../core/clients/deploy/about-client-installation-properties-published-to-active-directory-domain-services.md)。  
 
- 若要為現有的用戶端重新設定連接埠號碼，您也可以使用隨安裝媒體 (在 SMSSETUP\Tools\PortConfiguration 資料夾中) 提供的指令碼 PORTSWITCH.VBS。  
+ 若要重新配置现有客户端的端口号，你也可以使用随安装媒体提供的且位于 SMSSETUP\Tools\PortConfiguration 文件夹中的脚本 PORTSWITCH.VBS。  
 
 > [!IMPORTANT]  
->  對於目前位於網際網路的現有和新用戶端，您必須使用 CCMHTTPPORT 和 CCMHTTPSPORT 的 CCMSetup.exe client.msi 內容來設定非預設連接埠號碼。  
+>  对于当前在 Internet 上的现有客户端和新客户端，你必须使用 CCMHTTPPORT 和 CCMHTTPSPORT 的 CCMSetup.exe client.msi 属性来配置非默认端口号。  
 
- 變更站台上的要求連接埠後，使用全站台用戶端推入安裝方法安裝的新用戶端，會自動設定使用該站台目前的連接埠號碼。  
+ 更改站点上的请求端口后，使用覆盖整个站点的客户端请求安装方法安装的新客户端将自动配置为站点的当前端口号。  
 
-#### <a name="to-configure-the-client-communication-port-numbers-for-a-site"></a>設定站台的用戶端通訊連接埠號碼  
+#### <a name="to-configure-the-client-communication-port-numbers-for-a-site"></a>配置站点的客户端通信端口号  
 
-1.  在 Configuration Manager 主控台中，按一下 [系統管理] 。  
+1.  在 Configuration Manager 控制台中，单击“管理” 。  
 
-2.  在 [系統管理]  工作區中，展開 [站台設定] ，按一下 [站台] ，然後選取要設定的主要站台。  
+2.  在“管理”  工作区中，展开“站点配置” ，单击“站点” ，然后选择要配置的主站点。  
 
-3.  在 [首頁]  索引標籤上按一下 [內容] ，然後按一下 [連接埠]  索引標籤。  
+3.  在“主页”  选项卡上，单击“属性” ，再单击“端口”  选项卡。  
 
-4.  選取任一項目，然後按一下 [內容] 圖示以顯示 [連接埠詳細資料]  對話方塊。  
+4.  选择任意项，然后单击“属性”图标以显示“端口详细信息”  对话框。  
 
-5.  在 [連接埠詳細資料]  對話方塊中，指定項目的連接埠號碼和描述，然後按一下 [確定] 。  
+5.  在“端口详细信息”  对话框中，指定该项的端口号和描述，然后单击“确定” 。  
 
-6.  如果您會使用 **SMSWeb** 做為執行 IIS 之站台系統的自訂站台名稱，請選取 [使用自訂站台]  。  
+6.  若要将自定义网站名称 **SMSWeb** 用于运行 IIS 的站点系统，请选择“使用自定义网站”  。  
 
-7.  按一下 [確定]  關閉站台的內容對話方塊。  
+7.  单击“确定”  以关闭站点的属性对话框。  
 
- 為階層中的所有主要站台重複此程序。
+ 为层次结构中的所有主站点重复此过程。

@@ -1,6 +1,6 @@
 ---
-title: "移轉來源階層 | Microsoft Docs"
-description: "設定來源階層和來源站台，以將資料移轉至 System Center Configuration Manager 環境。"
+title: "迁移源层次结构 | Microsoft Docs"
+description: "配置源层次结构和源站点，使用户可以将数据迁移到 System Center Configuration Manager 环境。"
 ms.custom: na
 ms.date: 12/29/2016
 ms.prod: configuration-manager
@@ -18,88 +18,88 @@ manager: angrobe
 ms.openlocfilehash: 80c43ab93ee5a2de6bf8d7993dfd46f0005d2df8
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="configure-source-hierarchies-and-source-sites-for-migration-to-system-center-configuration-manager"></a>設定來源階層和來源站台以移轉到 System Center Configuration Manager
+# <a name="configure-source-hierarchies-and-source-sites-for-migration-to-system-center-configuration-manager"></a>配置源层次结构和源站点以迁移到 System Center Configuration Manager
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-若要讓資料移轉至您的 System Center Configuration Manager 環境，您必須設定支援的 Configuration Manager 來源階層，以及該階層中一或多個包含您想要移轉之資料的來源站台。  
+为了能够将数据迁移到 System Center Configuration Manager 环境，必须配置支持的 Configuration Manager 源层次结构，以及该层次结构中一个或多个包含要迁移的数据的源站点。  
 
 > [!NOTE]  
->  移轉操作會在目的地階層的頂層站台執行。 如果您在使用連線到主要子站台的 Configuration Manager 主控台時設定移轉，您必須預留時間將設定複寫到管理中心網站、啟動以及將狀態複寫回所連線的主要站台。  
+>  迁移的操作在目标层次结构中的顶层站点上运行。 如果在使用连接到主子站点的 Configuration Manager 控制台时配置迁移，必须留出时间让配置复制到管理中心站点，开始运行，然后将状态复制回连接到的主站点。  
 
- 使用下列各節的資訊和程序，指定來源階層並新增其他來源站台。 完成這些程序後，您可以建立移轉作業，並開始將資料從來源階層移轉到目的地階層。  
+ 使用下列部分中的信息和过程来指定源层次结构以及添加其他源站点。 完成这些过程之后，可以创建迁移作业，并开始将数据从源层次结构迁移到目标层次结构。  
 
--   [指定移轉的來源階層](#BKBM_ConfigSrcHierarchy)  
+-   [为迁移指定源层次结构](#BKBM_ConfigSrcHierarchy)  
 
--   [識別來源階層的其他來源站台](#BKBM_ConfigSrcSites)  
+-   [确定源层次结构的其他源站点](#BKBM_ConfigSrcSites)  
 
-##  <a name="BKBM_ConfigSrcHierarchy"></a> 指定移轉的來源階層  
- 若要將資料移轉到目的地階層，您必須指定支援的來源階層，該階層內含您要移轉的資料。 根據預設，該階層的頂層站台會成為來源階層的來源站台。 如果您從 Configuration Manager 2007 階層移轉，在從初始來源站台收集資料後，可以設定其他用於移轉的來源站台。 如果您從 System Center 2012 Configuration Manager 或 System Center Configuration Manager 階層移轉，就不需要設定其他從來源階層移轉資料的來源站台。 這是因為 Configuration Manager 的這些版本會使用可在來源階層頂層站台使用的共用資料庫。 共用資料庫含有所有您可以移轉的資訊。  
+##  <a name="BKBM_ConfigSrcHierarchy"></a>为迁移指定源层次结构  
+ 要将数据迁移到目标层次结构，必须指定支持的源层次结构，其中包含要迁移的数据。 默认情况下，该层次结构的顶层站点成为源层次结构的源站点。 如果从 Configuration Manager 2007 层次结构中迁移，则在从初始源站点中收集了数据后，便可以为迁移配置其他源站点。 如果从 System Center 2012 Configuration Manager 或 System Center Configuration Manager 层次结构中迁移，则不必设置其他源站点以从源层次结构中迁移数据。 这是因为 Configuration Manager 的这些版本使用在源层次结构的顶层站点可用的共享数据库。 共享数据库包含你可以迁移的所有信息。  
 
- 使用下列程序指定移轉的來源階層，以及識別 Configuration Manager 2007 階層中的其他來源站台。  
+ 使用下列过程来为迁移指定源层次结构以及确定 Configuration Manager 2007 层次结构中的其他源站点。  
 
- 請使用連線至目的地階層的 Configuration Manager 主控台來執行此程序：  
+ 使用连接到目标层次结构的 Configuration Manager 控制台运行此过程：  
 
-### <a name="to-configure-a-source-hierarchy"></a>設定來源階層   
+### <a name="to-configure-a-source-hierarchy"></a>配置源层次结构   
 
-1.  在 Configuration Manager 主控台中，按一下 [系統管理] 。  
+1.  在 Configuration Manager 控制台中，单击“管理” 。  
 
-2.  在 [系統管理]  工作區中，展開 [移轉] ，然後按一下 [來源階層] 。  
+2.  在“管理”  工作区中，展开“迁移” ，然后单击“源层次结构” 。  
 
-3.  在 [首頁]  索引標籤的 [移轉]  群組中，按一下 [指定來源階層] 。  
+3.  在“主页”  选项卡上的“迁移”  组中，单击“指定源层次结构” 。  
 
-4.  在 [指定來源階層]  對話方塊中，對於 [來源階層] ，選取 [新增來源階層] 。  
+4.  在“指定源层次结构”  对话框中，为“源层次结构” 选择“新源层次结构” 。  
 
-5.  對於**頂層 Configuration Manager 站台伺服器**，輸入支援的來源階層的頂層站台名稱或 IP 位址。  
+5.  对于“顶层 Configuration Manager 站点服务器”，输入受支持的源层次结构的顶层站点的名称或 IP 地址。  
 
-6.  指定具有下列權限的來源站台存取帳戶：  
+6.  指定具有下列权限的源站点访问帐户：  
 
-    -   來源站台帳戶：來源階層中指定頂層站台之 SMS 提供者的 [讀取]  權限。 發佈點共用及升級需要在來源階層中具有該站台的「修改」和「刪除」權限。
+    -   源站点帐户：对源层次结构中指定顶层站点的 SMS 提供程序的“读取”  权限。 必须拥有对源层次结构中网站的**修改**和**删除**权限，才能执行分发点共享和升级操作。
 
-    -   來源站台資料庫帳戶：來源階層中指定頂層站台之 SQL Server 資料庫的 [讀取]  和 [執行]  權限。  
+    -   源站点数据库帐户：对源层次结构中指定顶层站点的 SQL Server 数据库的“读取”  和“执行”  权限。  
 
-     如果您指定電腦帳戶的用途，Configuration Manager 會使用目的地階層的頂層站台電腦帳戶。 使用此選項時，請確保此帳戶是來源階層頂層站台所在網域中的安全性群組 [分散式 COM 使用者] 的成員。  
+     如果指定使用计算机帐户，Configuration Manager 将使用目标层次结构的顶层站点的计算机帐户。 对于此选项，请确保此帐户是源层次结构的顶层站点所在域中“分布式 COM 用户”安全组的成员。  
 
-7.  若要在來源和目的地階層間共用發佈點，請選取 [啟用來源站台伺服器的發佈點共用]  核取方塊。 如果您此時尚未啟用發佈點共用，可以完成在資料收集後，藉由編輯來源站台的認證來完成此動作。  
+7.  要在源层次结构和目标层次结构之间共享分发点，请选中“为源站点服务器启用分发点共享”  复选框。 如果此时不启用分发点共享，则可在数据收集完成后通过编辑源站点的凭据来启用分发点共享。  
 
-8.  按一下 [確定]  儲存設定。 此時會開啟 [資料收集狀態]  對話方塊，並會自動開始收集資料。  
+8.  单击“确定”  保存配置。 这将打开“数据收集状态”  对话框，并且数据收集将自动开始。  
 
-9. 完成資料收集時，請按一下 [關閉]  以關閉 [資料收集狀態]  對話方塊，並完成設定。  
+9. 数据收集完成后，单击“关闭”  以关闭“数据收集状态”  对话框并完成配置。  
 
-##  <a name="BKBM_ConfigSrcSites"></a> 識別來源階層的其他來源站台  
- 當您設定支援的來源階層時，會將該階層的頂層站台自動設定為來源站台，並自動從該站台收集資料。 您應採取的下一個動作，取決於來源階層所執行的 Configuration Manager 版本：  
+##  <a name="BKBM_ConfigSrcSites"></a>确定源层次结构的其他源站点  
+ 在配置支持的源层次结构时，会将该层次结构的顶层站点自动配置为源站点，并且会自动从该站点中收集数据。 接下来要进行的操作取决于源层次结构运行的 Configuration Manager 版本：  
 
--   對於 Configuration Manager 2007 來源階層，在完成初始來源站台的資料收集後，您可以開始只從該初始來源站台進行移轉，或者設定來源階層的其他來源站台。 若要移轉只能從子站台使用的資料，請為 Configuration Manager 2007 階層設定其他來源站台。 例如，您可以將其他來源站台設定為，當您要移轉的內容是在來源階層中的子站台建立，而且無法在來源階層的頂層站台使用時，即收集關於該內容的資料。  
+-   对于 Configuration Manager 2007 源层次结构，在初始源站点的数据收集完成后，便可以开始从该初始源站点中进行迁移，或者配置源层次结构中的其他源站点。 若要迁移仅从子站点中可用的数据，请为 Configuration Manager 2007 层次结构配置其他源站点。 例如，要迁移的内容是在源层次结构中的子站点上创建，并且在源层次结构的顶层站点上不可用，则可以配置其他源站点来收集有关该内容的数据。  
 
--   若為 System Center 2012 Configuration Manager 或 System Center Configuration Manager 來源階層，則不必設定額外的來源站台。 這是因為 Configuration Manager 的這些版本會使用可在來源階層頂層站台使用的共用資料庫。 共用資料庫具有您可以從該來源階層中所有站台移轉的所有資訊。 這使得您可以移轉的資料可以從來源階層的頂層站台使用。  
+-   针对 System Center 2012 Configuration Manager 或 System Center Configuration Manager 源层次结构，则无需配置其他源站点。 这是因为 Configuration Manager 的这些版本使用在源层次结构的顶层站点可用的共享数据库。 共享数据库包含从该源层次结构中的所有站点迁移的所有信息。 这样，你将可以在源层次结构的顶层站点中找到可迁移的数据。  
 
-當您為 Configuration Manager 2007 來源階層設定其他來源站台時，您必須設定從來源階層的頂層到底層的其他來源站台。 您必須將父站台設定為來源站台，才能將其子站台設定為來源站台。  
+在为 Configuration Manager 2007 源层次结构配置其他源站点时，必须在源层次结构中按自上而下的顺序配置其他源站点。 在将父站点的任何子站点配置为源站点之前，你必须将该父站点配置为源站点。  
 
-使用下列程序可設定 Configuration Manager 2007 來源階層的其他來源站台：  
+使用下列过程来为 Configuration Manager 2007 源层次结构配置其他源站点：  
 
-### <a name="to-identify-additional-source-sites-in-the-source-hierarchy"></a>識別來源階層的其他來源站台 
+### <a name="to-identify-additional-source-sites-in-the-source-hierarchy"></a>确定源层次结构中的其他源站点 
 
-1.  在 Configuration Manager 主控台中，按一下 [系統管理] 。  
+1.  在 Configuration Manager 控制台中，单击“管理” 。  
 
-2.  在 [系統管理]  工作區中，展開 [移轉] ，然後按一下 [來源階層] 。  
+2.  在“管理”  工作区中，展开“迁移” ，然后单击“源层次结构” 。  
 
-3.  選擇您要將其設定為來源站台的站台。  
+3.  选择要配置为源站点的站点。  
 
-4.  在 [首頁]  索引標籤的 [來源站台]  群組中，按一下 [設定] 。  
+4.  在“主页”  选项卡上的“源站点”  组中，单击“配置” 。  
 
-5.  在 [來源站台認證]  對話方塊中，針對來源站台存取帳戶指定具有下列權限的帳戶：  
+5.  在“源站点凭据”  对话框中，为源站点访问帐户指定具有以下权限的帐户：  
 
-    -   來源站台帳戶：來源階層中指定頂層站台之 SMS 提供者的 [讀取]  權限。 發佈點共用及升級需要在來源階層中具有該站台的「修改」和「刪除」權限。  
+    -   源站点帐户：对源层次结构中指定顶层站点的 SMS 提供程序的“读取”  权限。 必须拥有对源层次结构中网站的**修改**和**删除**权限，才能执行分发点共享和升级操作。  
 
-    -   來源站台資料庫帳戶：來源階層中指定頂層站台之 SQL Server 資料庫的 [讀取]  和 [執行]  權限。  
+    -   源站点数据库帐户：对源层次结构中指定顶层站点的 SQL Server 数据库的“读取”  和“执行”  权限。  
 
-    如果您指定電腦帳戶的用途，Configuration Manager 會使用目的地階層的頂層站台電腦帳戶。 使用此選項時，請確保此帳戶是來源階層頂層站台所在網域中的安全性群組 [分散式 COM 使用者] 的成員。  
+    如果指定使用计算机帐户，Configuration Manager 将使用目标层次结构的顶层站点的计算机帐户。 对于此选项，请确保此帐户是源层次结构的顶层站点所在域中“分布式 COM 用户”安全组的成员。  
 
-6.  若要在來源和目的地階層間共用發佈點，請選取 [啟用來源站台伺服器的發佈點共用]  核取方塊。 如果您此時尚未啟用發佈點共用，可以在完成資料收集後，藉由編輯來源站台的認證來完成此動作。  
+6.  要在源层次结构和目标层次结构之间共享分发点，请选中“为源站点服务器启用分发点共享”  复选框。 如果此时不启用分发点共享，则可在数据收集完成后通过编辑源站点的凭据来启用分发点共享。  
 
-7. 按一下 [確定]  儲存設定。 此時會開啟 [資料收集狀態]  對話方塊，並會自動開始收集資料。  
+7. 单击“确定”  保存配置。 这将打开“数据收集状态”  对话框，并且数据收集将自动开始。  
 
-8.  當完成資料收集時，可按一下 [關閉]  完成設定。  
+8.  数据收集完成后，单击“关闭”  完成配置。  

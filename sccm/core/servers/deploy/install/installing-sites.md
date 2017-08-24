@@ -1,6 +1,6 @@
 ---
-title: "站台安裝資源 | Microsoft Docs"
-description: "檢閱可協助您安裝 System Center Configuration Manager 或將站台新增至階層的主題清單。"
+title: "站点安装资源 | Microsoft Docs"
+description: "查看列表中的各主题有助于安装 System Center Configuration Manager，或将站点添加到层次结构。"
 ms.custom: na
 ms.date: 1/3/2017
 ms.prod: configuration-manager
@@ -18,35 +18,35 @@ manager: angrobe
 ms.openlocfilehash: 75511c744d7d2bae960273c845ce68f06a82b697
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="resources-for-installing-system-center-configuration-manager-sites"></a>安裝 System Center Configuration Manager 站台的資源
+# <a name="resources-for-installing-system-center-configuration-manager-sites"></a>用于安装 System Center Configuration Manager 站点的资源
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-下列主題可協助您安裝 System Center Configuration Manager 或將站台新增至現有 Configuration Manager 階層。
+以下主题有助于安装 System Center Configuration Manager，或将站点添加到现有 Configuration Manager 层次结构。
 
-- [準備安裝站台](prepare-to-install-sites.md)
+- [安装站点的准备工作](prepare-to-install-sites.md)
 
-  本主題提供可協助您將站台安裝至新或現有階層的重要資訊。 資訊包含選擇非預設原始程式檔的時機、套用至所有站台的限制，以及您可採取的選擇性動作，以協助在安裝多個站台時簡化工作。
+  本主题提供了有助于将站点安装到新的或现有层次结构的重要信息。 这些信息包括何时选择非默认源文件、应用于所有站点的限制，以及安装多个站点时可采用的有助于简化任务的可选操作。
 
-- [安裝站台的必要條件](prerequisites-for-installing-sites.md)
+- [安装站点的先决条件](prerequisites-for-installing-sites.md)
 
-  了解您的帳戶必須具有才能安裝站台的使用者權限和權限，以及您可安裝的每一種站台的相關必要條件。
+  了解安装站点时帐户必须具备的用户权限，以及可安装的每种站点类型的相关先决条件。
 
-- [使用安裝精靈安裝站台](use-the-setup-wizard-to-install-sites.md)
+- [使用安装向导安装站点](use-the-setup-wizard-to-install-sites.md)
 
-  本主題會逐步解說站台安裝精靈。 並提供精靈使用者介面中可能不清楚之選項的詳細資料。  
+  本主题将介绍站点安装向导。 提供有关在向导用户界面中可能未解释清楚的选项的详细信息。  
 
-- [使用命令列和指令碼安裝站台](use-a-command-line-to-install-sites.md)
+- [使用命令行和脚本安装站点](use-a-command-line-to-install-sites.md)
 
-  了解如何取得站台安裝指令碼，以及如何將它用於自動站台安裝。
+  了解如何获取站点安装脚本，以及如何将其用于无人参与的站点安装。
 
-- [安裝 Configuration Manager 主控台](install-consoles.md)
+- [安装 Configuration Manager 控制台](install-consoles.md)
 
-  本主題包含的指引是有關如何在未安裝站台的電腦上安裝 Configuration Manager 主控台。
+  本主题指导用户如何在未安装站点的计算机上安装 Configuration Manager 控制台。
 
-- [將評估安裝升級為完整安裝](upgrade-an-evaluation-install-to-a-full-install.md)
+- [将评估版安装升级为完整版安装](upgrade-an-evaluation-install-to-a-full-install.md)
 
-  準備好將評估站台升級為完整授權版的 Configuration Manager 站台時，請閱讀本主題。
+  如果已准备好将评估站点升级到获得完整许可的 Configuration Manager 站点，请阅读本主题。

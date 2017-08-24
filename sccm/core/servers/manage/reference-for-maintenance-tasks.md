@@ -1,6 +1,6 @@
 ---
-title: "維護工作的參考 | Microsoft Docs"
-description: "請詳讀每個 System Center Configuration Manager 站台維護工作的詳細資料，並了解預設是否會啟用這些工作。"
+title: "维护任务参考 | Microsoft Docs"
+description: "阅读每个 System Center Configuration Manager 站点维护任务的详细信息，以及是否默认启用这些任务。"
 ms.custom: na
 ms.date: 3/8/2017
 ms.prod: configuration-manager
@@ -18,293 +18,293 @@ manager: angrobe
 ms.openlocfilehash: a2d4420c2274a9b1ceb47ffd267849fdb5a55a61
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="reference-for-maintenance-tasks-for-system-center-configuration-manager"></a>System Center Configuration Manager 的維護工作參考
+# <a name="reference-for-maintenance-tasks-for-system-center-configuration-manager"></a>System Center Configuration Manager 维护任务参考
 
-*適用對象：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-本主題列出每個 System Center Configuration Manager 站台維護工作的詳細資料，以及指定哪些站台類型提供這些工作。 每個項目也會指出工作是否為啟用，還是預設為未啟用。 如需規劃及設定站台以執行維護工作的資訊，請參閱 [System Center Configuration Manager 的維護工作](../../../core/servers/manage/maintenance-tasks.md)。  
+本主题列出了每个 System Center Configuration Manager 站点维护任务的详细信息，并指定可使用任务的站点类型。 每个条目还指示默认情况下启用还是未启用任务。 有关规划和配置站点来运行维护任务的信息，请参阅 [System Center Configuration Manager 的维护任务](../../../core/servers/manage/maintenance-tasks.md)。  
 
-**備份站台伺服器**︰使用此工作準備重要資料的復原。 您可以建立重要資訊的備份，以還原站台及 Configuration Manager 資料庫。 如需詳細資訊，請參閱 [System Center Configuration Manager 備份和復原](../../../protect/understand/backup-and-recovery.md)。  
+**备份站点服务器**：使用此任务准备恢复关键数据。 可以为关键信息创建备份，用于还原站点和 Configuration Manager 数据库。 有关详细信息，请参阅 [System Center Configuration Manager 的备份和恢复](../../../protect/understand/backup-and-recovery.md)。  
 
--   **管理中心網站** - 已啟用    
--   **主要站台** - 未啟用    
--   次要站台：無法使用  
+-   **管理中心站点**：已启用    
+-   **主站点**：未启用    
+-   辅助站点：不可用  
 
-**使用清查資訊檢查應用程式標題**：使用此工作可維護軟體清查中所報告之軟體標題與 Asset Intelligence 類別目錄中的軟體標題之間的一致性。 如需詳細資訊，請參閱 [System Center Configuration Manager 中的 Asset Intelligence 簡介](../../../core/clients/manage/asset-intelligence/introduction-to-asset-intelligence.md)。  
+**通过清单信息检查应用程序标题**：使用此任务保持在软件清单中报告的软件标题与资产智能目录中的软件标题的一致性。 有关详细信息，请参阅 [System Center Configuration Manager 中的资产智能简介](../../../core/clients/manage/asset-intelligence/introduction-to-asset-intelligence.md)。  
 
--   **管理中心網站** - 已啟用    
--   **主要站台**：已啟用    
--   次要站台：無法使用  
+-   **管理中心站点**：已启用    
+-   **主站点**：已启用    
+-   辅助站点：不可用  
 
-**清除安裝旗標**：使用此工作可針對未在 **用戶端重新探索** 期間提交「活動訊號探索」記錄的用戶端，移除已安裝旗標。 已安裝旗標可避免在已具備作用中 Configuration Manager 用戶端的電腦上進行自動用戶端推入安裝。  
+**清除安装标志**：使用此任务删除“客户端重新发现”期间不提交检测信号发现记录的客户端的安装标志。 安装的标记阻止向可能具有活动 Configuration Manager 客户端的计算机进行自动客户端请求安装。  
 
--   管理中心網站：無法使用    
--   **主要站台**：未啟用    
--   次要站台：無法使用  
+-   管理中心站点：不可用    
+-   **主站点**：未启用    
+-   辅助站点：不可用  
 
-**刪除過時應用程式要求資料**：使用此工作可從資料庫中，刪除過時的應用程式要求。 如需應用程式要求的詳細資訊，請參閱[使用 System Center Configuration Manager 建立和部署應用程式](/sccm/apps/get-started/create-and-deploy-an-application)。  
+**删除过期的应用程序请求数据**：使用此任务从数据库中删除过期的应用程序请求。 有关应用程序请求的详细信息，请参阅[通过 System Center Configuration Manager 创建和部署应用程序](/sccm/apps/get-started/create-and-deploy-an-application)。  
 
--   管理中心網站：無法使用
--   **主要站台**：已啟用    
--   次要站台：無法使用  
+-   管理中心站点：不可用
+-   **主站点**：已启用    
+-   辅助站点：不可用  
 
-**刪除過時用戶端下載歷程記錄**：使用此工作可刪除有關用戶端所使用下載來源的歷史資料。 下載來源資訊會用來填入[用戶端資料來源儀表板](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed#client-data-sources-dashboard)。  
--  管理中心網站 - 無法使用
--    **主要站台** - 已啟用
--  次要站台 - 無法使用
+**删除旧的客户端下载历史记录**：使用此任务可删除有关客户端使用的下载源的历史数据。 下载源信息用于填充[客户端数据源仪表板](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed#client-data-sources-dashboard)。  
+-  管理中心站点 - 不可用
+-    **主站点** - 已启用
+-  辅助站点 - 不可用
 
-**刪除過時用戶端操作**：使用此工作可從站台資料庫中，刪除過時的用戶端操作資料。 比方說，這包括過時或過期的用戶端通知資料 (例如電腦或使用者原則的下載要求)，以及 Endpoint Protection 資料 (例如系統管理使用者要讓用戶端執行掃描或下載更新定義的要求)。
+**删除过期的客户端操作**：使用此任务从站点数据库中删除客户端操作的所有过期数据。 例如，其中包括过期或到期的客户端通知数据（例如下载计算机或用户策略的请求）和 Endpoint Protection 数据（例如客户端的管理用户运行扫描或下载更新定义的请求）。
 
--   **管理中心網站** - 已啟用    
--   **主要站台**：已啟用    
--   次要站台：無法使用  
+-   **管理中心站点**：已启用    
+-   **主站点**：已启用    
+-   辅助站点：不可用  
 
-**刪除過時用戶端顯示狀態歷程記錄**：使用此工作可刪除比指定時間舊的用戶端線上狀態相關歷程記錄資訊 (由用戶端通知所記錄)。 如需用戶端通知的詳細資訊，請參閱[如何在 System Center Configuration Manager 中監視用戶端](../../../core/clients/manage/monitor-clients.md)。  
+**删除过期的客户端状态历史记录**：使用此任务删除有关客户端通知所记录的、指定时间以前的客户端联机状态的历史记录信息。 有关客户端通知的详细信息，请参阅[如何在 System Center Configuration Manager 中监视客户端](../../../core/clients/manage/monitor-clients.md)。  
 
--   **管理中心網站** - 已啟用   
--   **主要站台**：已啟用    
--   次要站台：無法使用  
+-   **管理中心站点**：已启用   
+-   **主站点**：已启用    
+-   辅助站点：不可用  
 
-**刪除過時的雲端管理閘道流量資料**：使用此工作可從站台資料庫中，刪除所有通過[雲端管理閘道](/sccm/core/clients/manage/plan-cloud-management-gateway)，且與過時資料相關的流量。 例如，其中包含有關要求數量、總要求位元組、總回應位元組、失敗的要求數量，以及目前要求的最大數量。  
-- **管理中心網站** - 已啟用
-- **主要站台** - 已啟用
-- 次要站台 - 無法使用
+**删除旧的云管理网关通信数据**：使用此任务可从站点数据库删除所有关于通过[云管理网关](/sccm/core/clients/manage/plan-cloud-management-gateway)传递的旧的通信数据。 例如，这包括关于请求数、请求总字节数、总响应字节数、失败请求数和最大并发请求数的数据。  
+- **管理中心站点** - 已启用
+- **主站点** - 已启用
+- 辅助站点 - 不可用
 
 
-**刪除過時收集檔案**：使用此工作可從資料庫中，刪除已收集檔案的相關過時資訊。 此工作也會從選定網站的網站伺服器資料夾結構中刪除收集檔案。 根據預設，會將 5 個收集檔案的最新複本儲存在 **Inboxes\sinv.box\FileCol** 目錄的網站伺服器上。 如需詳細資訊，請參閱 [System Center Configuration Manager 中的軟體清查簡介](/sccm/core/clients/manage/inventory/introduction-to-software-inventory)。  
+**删除过期的收集文件**：使用此任务从数据库中删除有关收集的文件的过期信息。 此任务还从所选站点内的站点服务器文件夹结构中删除收集的文件。 默认情况下，会在站点服务器上的 **Inboxes\sinv.box\FileCol** 目录中存储收集的文件的五个最新副本。 有关详细信息，请参阅 [System Center Configuration Manager 中的软件清单简介](/sccm/core/clients/manage/inventory/introduction-to-software-inventory)。  
 
--   管理中心網站：無法使用    
--   **主要站台**：已啟用    
--   次要站台：無法使用  
+-   管理中心站点：不可用    
+-   **主站点**：已启用    
+-   辅助站点：不可用  
 
-**刪除過時電腦關聯資料**：使用此工作可從資料庫中，刪除過時的「作業系統部署」電腦關聯資料。 此資訊用來作為完成使用者狀態還原的一部分。 如需電腦關聯的詳細資訊，請參閱[在 System Center Configuration Manager 中管理使用者狀態](../../../osd/get-started/manage-user-state.md)。  
+**删除过期的计算机关联数据**：使用此任务从数据库中删除过期的操作系统部署计算机关联数据。 此信息用作完成用户状态还原的一部分。 有关计算机关联的详细信息，请参阅[在 System Center Configuration Manager 中管理用户状态](../../../osd/get-started/manage-user-state.md)。  
 
--   管理中心網站：無法使用    
--   **主要站台**：已啟用    
--   次要站台：無法使用  
+-   管理中心站点：不可用    
+-   **主站点**：已启用    
+-   辅助站点：不可用  
 
-**刪除過時刪除偵測資料**：使用此工作可從資料庫中，刪除由「擷取檢視」建立的過時資料。 預設會停用擷取檢視。 您可利用 Configuration Manager SDK 加以啟用。 除非啟用 Extraction Views，否則此工作就沒有可刪除的資料。  
+**删除过期的删除检测数据**：使用此任务从数据库中删除通过提取视图创建的过期数据。 默认情况下，禁用提取视图。 只能通过使用 Configuration Manager SDK 启用它们。 除非启用提取视图，否则没有可供此任务删除的数据。  
 
--   **管理中心網站** - 已啟用    
--   **主要站台**：已啟用    
--   次要站台：無法使用  
+-   **管理中心站点**：已启用    
+-   **主站点**：已启用    
+-   辅助站点：不可用  
 
-**刪除過時裝置抹除記錄**：使用此工作可從資料庫中，刪除過時的行動裝置抹除動作相關資料。 如需抹除行動裝置的詳細資訊，請參閱 [使用 System Center Configuration Manager 透過遠端抹除、鎖定或密碼重設來協助保護資料](/sccm/mdm/deploy-use/wipe-lock-reset-devices)。  
+**删除过期的设备擦除记录**：使用此任务从数据库中删除有关移动设备擦除操作的过期数据。 有关擦除移动设备的信息，请参阅[使用 System Center Configuration Manager 通过远程擦除、锁定或密码重置功能帮助保护数据](/sccm/mdm/deploy-use/wipe-lock-reset-devices)。  
 
--   管理中心網站：無法使用    
--   **主要站台**：已啟用    
--   次要站台：無法使用  
+-   管理中心站点：不可用    
+-   **主站点**：已启用    
+-   辅助站点：不可用  
 
-**刪除受 Exchange Server 連接器管理的過時裝置**：使用此工作可刪除透過 Exchange Server 連接器來管理之行動裝置的相關過時資料。 此資料會根據 Exchange Server 連接器內容之 [探索] 索引標籤上的 [略過未使用達指定天數以上的行動裝置] 選項所設定的間隔時間進行刪除。 如需詳細資訊，請參閱[使用 System Center Configuration Manager 和 Exchange 管理行動裝置](../../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)。  
+**删除由 Exchange Server 连接器管理的过期设备**：使用此任务删除有关使用 Exchange Server 连接器管理的移动设备的过期数据。 将依据在 Exchange Server 连接器属性的“发现”选项卡上为“忽略非活动天数超过以下值的移动设备”选项配置的间隔删除此数据。 有关详细信息，请参阅[使用 System Center Configuration Manager 和 Exchange 管理移动设备](../../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md)。  
 
--   管理中心網站：無法使用   
--   **主要站台**：已啟用    
--   次要站台：無法使用  
+-   管理中心站点：不可用   
+-   **主站点**：已启用    
+-   辅助站点：不可用  
 
-**刪除過時探索資料**：使用此工作可從資料庫中，刪除過時的探索資料。 此資料包括經由活動訊號探索、網路探索與 Active Directory Domain Services 探索方式 (系統、使用者與群組) 所得到的記錄。 在某個站台執行這項工作時，會刪除與該站台關聯的資料，並且這些變更會複寫到其他站台。 如需探索的詳細資訊，請參閱 [Run discovery for System Center Configuration Manager](../../../core/servers/deploy/configure/run-discovery.md)。  
+**删除过期的发现数据**：使用此任务从数据库中删除过期的发现数据。 此数据可能包括利用检测信号发现、网络发现和 Active Directory 域服务发现方法（系统、用户和组）生成的记录。 在某个站点运行此任务时，将删除与此站点关联的数据，而这些更改将复制到其他站点。 有关发现的信息，请参阅 [Run discovery for System Center Configuration Manager](../../../core/servers/deploy/configure/run-discovery.md)。  
 
--   管理中心網站：無法使用    
--   **主要站台**：已啟用    
--   次要站台：無法使用  
+-   管理中心站点：不可用    
+-   **主站点**：已启用    
+-   辅助站点：不可用  
 
-**刪除過時發佈點使用量資料**：使用此工作可從資料庫中，刪除儲存時間超過指定時間的過時發佈點資料。  
+**删除过期的分发点使用数据**：使用此任务从数据库中删除存储时间比指定时间长的分发点的过期数据。  
 
--   **管理中心網站** - 已啟用    
--   **主要站台**：已啟用    
--   次要站台：無法使用  
+-   **管理中心站点**：已启用    
+-   **主站点**：已启用    
+-   辅助站点：不可用  
 
-**刪除過時 Endpoint Protection 健康情況狀態歷程記錄資料**：使用此工作可從資料庫中，刪除過時的 Endpoint Protection 狀態資訊。 如需 Endpoint Protection 狀態資訊的詳細資訊，請參閱[如何監視 System Center Configuration Manager 中的 Endpoint Protection](../../../protect/deploy-use/monitor-endpoint-protection.md)。  
+**删除过期的 Endpoint Protection 运行状况状态历史数据**：使用此任务从数据库中删除 Endpoint Protection 的过期状态信息。 有关 Endpoint Protection 状态信息的详细信息，请参阅[如何在 System Center Configuration Manager 中监视 Endpoint Protection](../../../protect/deploy-use/monitor-endpoint-protection.md)。  
 
--   管理中心網站：無法使用    
--   **主要站台**：已啟用    
--   次要站台：無法使用  
+-   管理中心站点：不可用    
+-   **主站点**：已启用    
+-   辅助站点：不可用  
 
-**刪除已註冊但過時的裝置**︰從 1602 的更新開始，預設會停用此工作。 您可以使用這項工作，從站台資料庫刪除有一段指定時間尚未對站台回報任何資訊的行動裝置有關的過時資料。
+**删除过期的已注册设备**：从 1602 的更新开始，默认禁用此任务。 可使用此任务从站点数据库中删除有关未在指定时间内向该站点报告任何信息的移动设备的过期数据。
 
-此工作適用於由 Microsoft Intune (混合式) 註冊的裝置，或已使用 Configuration Manager 內部部署行動裝置管理功能的裝置。 如需由 Configuration Manager 或 Intune 註冊的裝置作業系統資訊，請參閱 [Supported operating systems for clients and devices for System Center Configuration Manager](../../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md) (System Center Configuration Manager 支援的用戶端和裝置作業系統) 中的[由 Microsoft Intune 註冊的行動裝置](../../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md#mobile-devices-enrolled-by-microsoft-intune)一節。
+此任务适用于通过 Microsoft Intune（混合）或 Configuration Manager 本地移动设备管理注册的设备。 有关使用 Configuration Manager 或 Intune 注册的设备的操作系统信息，请参阅 [System Center Configuration Manager 客户端和设备支持的操作系统](../../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md)中的 [Microsoft Intune 注册的移动设备](../../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md#mobile-devices-enrolled-by-microsoft-intune)部分。
 
--   管理中心網站：無法使用    
--   **主要站台**：未啟用    
--   次要站台：無法使用  
+-   管理中心站点：不可用    
+-   **主站点**：未启用    
+-   辅助站点：不可用  
 
-**刪除過時清查歷程記錄**：使用此工作可從資料庫中，刪除儲存時間超過指定時間的清查資料。 如需清查歷程記錄的資訊，請參閱[如何使用資源總管檢視 System Center Configuration Manager 中的硬體清查](../../../core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md)。  
+**删除过期的清单历史记录**：使用此任务从数据库中删除存储时间比指定时间长的清单数据。 有关清单历史记录的信息，请参阅[如何使用资源浏览器来查看 System Center Configuration Manager 中的硬件清单](../../../core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md)。  
 
--   管理中心網站：無法使用    
--   **主要站台**：已啟用    
--   次要站台：無法使用  
+-   管理中心站点：不可用    
+-   **主站点**：已启用    
+-   辅助站点：不可用  
 
-**刪除過時記錄檔資料**使用此工作可從資料庫中，刪除用來進行疑難排解的過時記錄檔資料。 此一資料與 Configuration Manager 元件運作無關。  
+**删除过期的日志数据**：使用此任务从数据库中删除用于故障排除的过期日志数据。 此数据与 Configuration Manager 组件操作无关。  
 
 > [!IMPORTANT]  
-> 根據預設，此一工作會在每個網站上每日執行。 在管理中心網站與主要網站上，這個工作會刪除超過 30 天的資料。 在次要網站上使用 SQL Server Express 時，請確保這個工作每日執行，並刪除 7 天未使用的資料。  
+> 默认情况下，此任务每天将在每个站点运行。 在管理中心站点和主站点，此任务会删除存在时间大于 30 天的数据。 在辅助站点使用 SQL Server Express 时，请确保此任务每天都运行并删除已 7 天不活动的数据。  
 
--   **管理中心網站** - 已啟用    
--   **主要站台**：已啟用    
--   **次要站台**：已啟用  
+-   **管理中心站点**：已启用    
+-   **主站点**：已启用    
+-   **辅助站点**：已启用  
 
-**刪除過時通知工作歷程記錄**：使用此工作可從站台資料庫中，刪除已達一段指定時間未更新的用戶端通知工作資訊。 如需用戶端通知的詳細資訊，請參閱 [Client deployment tasks for System Center Configuration Manager](../../../core/clients/manage/monitor-clients.md)。  
+**删除过期的通知任务历史记录**：使用此任务从站点数据库中删除指定时间内未更新的有关客户端通知任务的信息。 有关客户端通知的详细信息，请参阅 [System Center Configuration Manager 的客户端部署任务](../../../core/clients/manage/monitor-clients.md)。  
 
--   管理中心網站：無法使用    
--   **主要站台**：已啟用    
--   次要站台：無法使用  
+-   管理中心站点：不可用    
+-   **主站点**：已启用    
+-   辅助站点：不可用  
 
-**刪除過時複寫摘要資料**：使用此工作可從站台資料庫中，刪除已達一段指定時間未更新的過時複寫摘要資料。 如需詳細資訊，請參閱 [How to monitor database replication links and replication status](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md#BKMK_MonitorRepLinksAndStatuss) 主題中的 [Monitor hierarchy and replication infrastructure in System Center Configuration Manager](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md) 一節。  
+**删除过期的复制摘要数据**：使用此任务从站点数据库中删除指定时间内未更新的过期的复制摘要数据。 有关详细信息，请参阅 [How to monitor database replication links and replication status](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md#BKMK_MonitorRepLinksAndStatuss) 主题中的 [Monitor hierarchy and replication infrastructure in System Center Configuration Manager](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md) 部分。  
 
--   **管理中心網站** - 已啟用    
--   **主要站台**：已啟用    
--   **次要站台**：已啟用  
+-   **管理中心站点**：已启用    
+-   **主站点**：已启用    
+-   **辅助站点**：已启用  
 
-**刪除過時的密碼記錄**：在您階層的頂層網站使用此工作，可刪除 Android 和 Windows Phone 裝置之「密碼重設」的資料。 「密碼重設」資料會經過加密，但不會包含裝置的 PIN 碼。 預設會啟用此工作並刪除超過 1 天的資料。  
+**删除过期的密码记录**：在层次结构的顶层站点中使用此任务删除有关 Android 和 Windows Phone 设备的密码重置的过期数据。 密码重置数据已加密，但包含设备的 PIN。 默认情况下启用此任务，并删除超过 1 天的数据。  
 
--   **管理中心網站** - 已啟用    
--   **主要站台**：已啟用    
--   次要站台：無法使用  
+-   **管理中心站点**：已启用    
+-   **主站点**：已启用    
+-   辅助站点：不可用  
 
-**刪除過時複寫追蹤資料**：使用此工作可從資料庫中，刪除 Configuration Manager 站台之間資料庫複寫的過時資料。 變更這項維護工作的設定時，設定會套用到階層中的每個可應用網站。 如需詳細資訊，請參閱 [How to monitor database replication links and replication status](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md#BKMK_MonitorRepLinksAndStatuss) 主題中的 [Monitor hierarchy and replication infrastructure in System Center Configuration Manager](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md) 一節。  
+**删除过期的复制跟踪数据**：使用此任务从数据库中删除关于 Configuration Manager 站点之间的数据库复制的过期数据。 在更改此维护任务的配置时，配置将应用到层次结构中的每个合适的站点。 有关详细信息，请参阅 [How to monitor database replication links and replication status](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md#BKMK_MonitorRepLinksAndStatuss) 主题中的 [Monitor hierarchy and replication infrastructure in System Center Configuration Manager](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md) 部分。  
 
--   **管理中心網站** - 已啟用    
--   **主要站台**：已啟用    
--   **次要站台**：已啟用  
+-   **管理中心站点**：已启用    
+-   **主站点**：已启用    
+-   **辅助站点**：已启用  
 
-**刪除過時軟體計量資料**：使用此工作可從資料庫中，刪除儲存時間超過指定時間的過時軟體計量資料。 如需詳細資訊，請參閱 [System Center Configuration Manager 中的軟體計量](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md)。  
+**删除过期的软件计数数据**：使用此任务从数据库中删除存储时间比指定时间长的软件计数过期数据。 有关详细信息，请参阅 [System Center Configuration Manager 中的软件计数](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md)。  
 
--   管理中心網站：無法使用    
--   **主要站台**：已啟用    
--   次要站台：無法使用  
+-   管理中心站点：不可用    
+-   **主站点**：已启用    
+-   辅助站点：不可用  
 
-**刪除過時軟體計量摘要資料**：使用此工作可從資料庫中，刪除儲存時間超過指定時間的過時軟體計量摘要資料。 如需詳細資訊，請參閱 [System Center Configuration Manager 中的軟體計量](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md)。  
+**删除过期的软件计数摘要数据**：使用此任务从数据库中删除存储时间比指定时间长的软件计数的过期摘要数据。 有关详细信息，请参阅 [System Center Configuration Manager 中的软件计数](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md)。  
 
--   管理中心網站：無法使用    
--   **主要站台**：已啟用    
--   次要站台：無法使用  
+-   管理中心站点：不可用    
+-   **主站点**：已启用    
+-   辅助站点：不可用  
 
-**刪除過時狀態訊息**：使用此工作可依據狀態篩選規則設定，從資料庫刪除過時的狀態訊息資料。 如需詳細資訊，請參閱[使用 System Center Configuration Manager 的警示和狀態系統](../../../core/servers/manage/use-alerts-and-the-status-system.md)主題中的＜監視 Configuration Manager 的狀態系統＞一節。  
+**删除过期的状态消息**：使用此任务从数据库中删除在状态筛选规则中配置的过期状态消息数据。 有关信息，请参阅[使用 System Center Configuration Manager 的警报和状态系统](../../../core/servers/manage/use-alerts-and-the-status-system.md)主题中的“监视 Configuration Manager 的状态系统”部分。  
 
--   **管理中心網站** - 已啟用    
--   **主要站台**：已啟用    
--   次要站台：無法使用  
+-   **管理中心站点**：已启用    
+-   **主站点**：已启用    
+-   辅助站点：不可用  
 
-**刪除過時威脅資料**：使用此工作可從資料庫中，刪除儲存時間超過指定時間的過時 Endpoint Protection 威脅資料。 如需 Endpoint Protection 的資訊，請參閱 [System Center Configuration Manager 中的 Endpoint Protection](../../../protect/deploy-use/endpoint-protection.md)。  
+**删除过期的威胁数据**：使用此任务从数据库中删除存储时间比指定时间长的过期 Endpoint Protection 威胁数据。 有关 Endpoint Protection 的信息，请参阅 [System Center Configuration Manager 中的 Endpoint Protection](../../../protect/deploy-use/endpoint-protection.md)。  
 
--   管理中心網站：無法使用    
--   **主要站台**：已啟用    
--   次要站台：無法使用  
+-   管理中心站点：不可用    
+-   **主站点**：已启用    
+-   辅助站点：不可用  
 
-**刪除過時的未知電腦** - 使用此工作可從站台資料庫中，刪除已達一段指定時間未更新的未知電腦資訊。 如需詳細資訊，請參閱 [System Center Configuration Manager 中的未知電腦部署準備](../../../osd/get-started/prepare-for-unknown-computer-deployments.md)。  
+**删除过期的未知计算机**：使用此任务从站点数据库中删除指定时间内未更新的有关未知计算机的信息。 有关详细信息，请参阅[在 System Center Configuration Manager 中准备未知计算机部署](../../../osd/get-started/prepare-for-unknown-computer-deployments.md)。  
 
--   管理中心網站：無法使用    
--   **主要站台**：已啟用    
--   次要站台：無法使用  
+-   管理中心站点：不可用    
+-   **主站点**：已启用    
+-   辅助站点：不可用  
 
-**刪除過時使用者裝置親和性資料**：使用此工作可從資料庫中，刪除過時的「使用者裝置親和性」資料。 如需詳細資訊，請參閱 [System Center Configuration Manager 的連結使用者和裝置與使用者裝置親和性](../../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md)。  
+**删除过期的用户设备相关性数据**：使用此任务从数据库中删除过期的用户设备相关性数据。 有关详细信息，请参阅[在 System Center Configuration Manager 中将用户和设备与用户设备相关性相链接](../../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md)。  
 
--   管理中心網站：無法使用    
--   **主要站台**：已啟用    
--   次要站台：無法使用  
+-   管理中心站点：不可用    
+-   **主站点**：已启用    
+-   辅助站点：不可用  
 
-**刪除過期的 MDM 大量註冊套件記錄**：使用此工作，在註冊憑證過期後刪除舊的大量註冊憑證及對應的設定檔。 如需詳細資訊，請參閱[建立憑證設定檔](/sccm/protect/deploy-use/create-certificate-profiles)。
--   **管理中心網站**：已啟用
--   **主要站台**：已啟用
--   次要站台：無法使用
+**删除过期 MDM 批量注册包记录**：注册证书过期后使用此任务删除旧的批量注册证书和对应的配置文件。 有关详细信息，请参阅[创建证书配置文件](/sccm/protect/deploy-use/create-certificate-profiles)。
+-   **管理中心站点**：已启用
+-   **主站点**：已启用
+-   辅助站点：不可用
 
-**刪除非使用中用戶端探索資料**：使用此工作可從資料庫中，刪除非使用中用戶端的探索資料。 用戶端標記為已過時，且針對用戶端進行此設定時，就會將用戶端標記為非使用中。
+**删除非活动的客户端发现数据**：使用此任务从数据库中删除非活动的客户端发现数据。 当客户端标记为过时并且由针对客户端状态所做的配置进行标记时，会将客户端标记为不活动。
 
-此工作僅會在 Configuration Manager 用戶端資源上運作。 這與刪除任何過時探索資料記錄的**刪除過時探索資料**工作不同。 在某個網站上執行此工作時，會從階層內所有網站的資料庫內移除資料。 如需詳細資訊，請參閱 [How to configure client status in System Center Configuration Manager](../../../core/clients/deploy/configure-client-status.md)。  
-
-> [!IMPORTANT]  
-> 啟用此工作時，請設定此工作以大於 [活動訊號探索] 排程的間隔執行。 這會啟用使用中用戶端傳送活動訊號探索記錄，將用戶端記錄標記為使用中，此工作就不會將其刪除。  
-
--   管理中心網站：無法使用    
--   **主要站台**：未啟用    
--   次要站台：無法使用  
-
-**刪除過時警示**：使用此工作可從資料庫中，刪除儲存時間超過指定時間的過期警示。 如需詳細資訊，請參閱 [Use alerts and the status system for System Center Configuration Manager](../../../core/servers/manage/use-alerts-and-the-status-system.md)。  
-
--   **管理中心網站** - 已啟用    
--   **主要站台**：已啟用    
--   次要站台：無法使用  
-
-**刪除過時用戶端探索資料**：使用此工作可從資料庫中，刪除過時用戶端記錄。 標記為過時的記錄通常會由相同用戶端較新的記錄來取代。 新的記錄就會成為用戶端目前的記錄。 如需探索的詳細資訊，請參閱 [Run discovery for System Center Configuration Manager](../../../core/servers/deploy/configure/run-discovery.md)。  
+此任务仅针对作为 Configuration Manager 客户端的资源运行。 它不同于删除任何过期的发现数据记录的“删除过期的发现数据”任务。 在站点运行此任务时，它会从层次结构内所有站点的数据库中删除数据。 有关详细信息，请参阅 [How to configure client status in System Center Configuration Manager](../../../core/clients/deploy/configure-client-status.md)。  
 
 > [!IMPORTANT]  
-> 啟用此工作時，請將此工作的間隔執行設定為超過活動訊號探索的排程。 這會啟用用戶端傳送正確設定過時狀態的活動訊號探索記錄。  
+> 启用此任务时，请将此任务配置为按大于“检测信号发现”计划的间隔运行。 这允许活动客户端发送“检测信号发现”记录，以将其客户端记录标记为活动状态，从而阻止此任务删除它们。  
 
--   管理中心網站：無法使用    
--   **主要站台**：未啟用    
--   次要站台：無法使用  
+-   管理中心站点：不可用    
+-   **主站点**：未启用    
+-   辅助站点：不可用  
 
-**刪除過時樹系探索站台和子網路**：使用此工作可刪除過去 30 天內，Active Directory 樹系探索方法未探索出的 Active Directory 站台、子網路及網域的相關資料。 這會移除探索資料，但不會影響此探索資料建立的界限。 如需詳細資訊，請參閱 [Run discovery for System Center Configuration Manager](../../../core/servers/deploy/configure/run-discovery.md)。  
+**删除过时的警报**：使用此任务从数据库中删除存储时间比指定时间长的过期警报。 有关详细信息，请参阅 [Use alerts and the status system for System Center Configuration Manager](../../../core/servers/manage/use-alerts-and-the-status-system.md)。  
 
--   **管理中心網站** - 已啟用    
--   **主要站台**：已啟用    
--   次要站台：無法使用  
+-   **管理中心站点**：已启用    
+-   **主站点**：已启用    
+-   辅助站点：不可用  
 
-**刪除孤立的用戶端部署狀態記錄**：使用此工作可定期清除包含用戶端部署狀態資訊的資料表。 此工作可清理有關已淘汰或已退役裝置的記錄。  
--   **管理中心網站** - 已啟用    
--   **主要站台**：已啟用    
--   次要站台：無法使用
+**删除过时的客户端发现数据**：使用此任务从数据库中删除过时的客户端记录。 标记为过时的记录通常会被同一客户端的较新记录所取代。 较新记录将成为客户端的当前记录。 有关发现的信息，请参阅 [Run discovery for System Center Configuration Manager](../../../core/servers/deploy/configure/run-discovery.md)。  
 
-**刪除未使用的應用程式修訂**：使用此工作可刪除已不再參考的應用程式修訂。 如需詳細資訊，請參閱[如何在 System Center Configuration Manager 中修改和取代應用程式](../../../apps/deploy-use/revise-and-supersede-applications.md)。  
+> [!IMPORTANT]  
+> 启用此任务时，请将此任务配置为按大于“检测信号发现”计划的间隔运行。 这允许客户端发送“检测信号发现”记录以正确设置过时的状态。  
 
--   管理中心網站：無法使用    
--   **主要站台**：已啟用    
--   次要站台：無法使用  
+-   管理中心站点：不可用    
+-   **主站点**：未启用    
+-   辅助站点：不可用  
 
-**評估集合成員**：您可以將「集合成員資格評估」設定為站台元件。 如需網站元件的資訊，請參閱 [Site components for System Center Configuration Manager](../../../core/servers/deploy/configure/site-components.md)。  
+**删除过时的林发现站点和子网**：使用此任务删除在最近 30 天内 Active Directory 林发现方法尚未发现的 Active Directory 站点、子网和域的数据。 此任务删除发现数据，但不影响利用此发现数据创建的边界。 有关详细信息，请参阅 [Run discovery for System Center Configuration Manager](../../../core/servers/deploy/configure/run-discovery.md)。  
 
--   管理中心網站：無法使用    
--   **主要站台**：已啟用    
--   次要站台：無法使用  
+-   **管理中心站点**：已启用    
+-   **主站点**：已启用    
+-   辅助站点：不可用  
 
-**監視索引鍵**：使用此工作可監視 Configuration Manager 資料庫主索引鍵的完整性。 主索引鍵是一個資料行 (或多重資料行的組合)，可找出唯一個資料列以及區分該資料列與 Microsoft SQL Server 資料庫資表中的其他列。  
+**删除孤立客户端部署状态记录**：使用此任务可定期清除包含客户端部署状态信息的表。 此任务将清除与已过时或已解除授权的设备关联的记录。  
+-   **管理中心站点**：已启用    
+-   **主站点**：已启用    
+-   辅助站点：不可用
 
--   **管理中心網站** - 已啟用    
--   **主要站台**：已啟用    
--   次要站台：無法使用  
+**删除未使用的应用程序修订版本**：使用此任务删除不再被引用的应用程序修订版本。 有关详细信息，请参阅[如何在 System Center Configuration Manager 中修订和取代应用程序](../../../apps/deploy-use/revise-and-supersede-applications.md)。  
 
-**重建索引**：使用此工作可重建 Configuration Manager 資料庫索引。 索引是建立在資料庫表上以加速資料擷取的資料庫結構。 例如，搜尋索引欄通常會比搜尋未索引的欄還快。
+-   管理中心站点：不可用    
+-   **主站点**：已启用    
+-   辅助站点：不可用  
 
-為了改善效能，系統會經常更新 Configuration Manager 資料庫索引，以與儲存在資料庫內經常變更的資料同步。 此工作會在至少 50％ 專屬的資料庫欄上建立索引，捨棄少於 50％ 專屬的欄上索引，並且重建所有符合資料專屬性標準的現有索引。  
+**评估集合成员**：将集合成员身份评估配置为站点组件。 有关站点组件的信息，请参阅 [Site components for System Center Configuration Manager](../../../core/servers/deploy/configure/site-components.md)。  
 
--   **管理中心網站**：未啟用    
--   **主要站台**：未啟用    
--   **次要站台**：未啟用  
+-   管理中心站点：不可用    
+-   **主站点**：已启用    
+-   辅助站点：不可用  
 
-**摘述已安裝的軟體資料**：使用此工作可將來自多筆記錄的已安裝軟體資料摘述成一筆一般記錄。 資料摘要可以壓縮儲存在 Configuration Manager 資料庫中的資料量。 如需詳細資訊，請參閱 [System Center Configuration Manager 中的軟體清查簡介](../../clients/manage/inventory\introduction-to-software-inventory.md)。  
+**监视键**：使用此任务监视 Configuration Manager 数据库主键的完整性。 主键是一列或多列的组合，它在 Microsoft SQL Server 数据库表中唯一地标识一行，并将它与任何其他行区分开来。  
 
--   管理中心網站：無法使用    
--   **主要站台**：已啟用    
--   次要站台：無法使用  
+-   **管理中心站点**：已启用    
+-   **主站点**：已启用    
+-   辅助站点：不可用  
 
-**摘述軟體計量檔案使用資料**：使用此工作可將多筆軟體計量檔案使用記錄的資料摘述成一筆一般記錄。 資料摘要可以壓縮儲存在 Configuration Manager 資料庫中的資料量。
+**重建索引**：使用此任务重建 Configuration Manager 数据库索引。 索引是一种数据库结构，它在数据库表之上创建，以加快数据检索速度。 例如，搜索经过索引的列通常比搜索未经索引的列更快。
 
-您可以搭配使用**摘述軟體計量每月使用資料**工作與本工作，以摘述軟體計量資料，並節省 Configuration Manager 資料庫的磁碟空間。 如需詳細資訊，請參閱 [System Center Configuration Manager 中的軟體計量](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md)。  
+为了改善性能，Configuration Manager 数据库索引会频繁更新，以便与存储在数据库中不断变化的数据保持同步。 此任务在数据库列上创建唯一性至少达到 50% 的索引，删除唯一性低于 50% 的列索引，以及重建所有符合数据唯一性条件的现有索引。  
 
--   管理中心網站：無法使用    
--   **主要站台**：已啟用    
--   次要站台：無法使用  
+-   **管理中心站点**：未启用    
+-   **主站点**：未启用    
+-   **辅助站点**：未启用  
 
-**摘述軟體計量每月使用資料**：使用此工作可將多筆軟體計量每月使用記錄的資料摘述成一筆一般記錄。 資料摘要可以壓縮儲存在 Configuration Manager 資料庫中的資料量。
+**汇总已安装软件的数据**：使用此任务将来自多个记录的已安装软件的数据汇总成一个总记录。 数据汇总可以压缩存储在 Configuration Manager 数据库中的数据量。 有关详细信息，请参阅 [System Center Configuration Manager 中的软件清单简介](../../clients/manage/inventory\introduction-to-software-inventory.md)。  
 
-您可以搭配使用**摘述軟體計量檔案使用資料**工作與本工作，以摘述軟體計量資料，並節省 Configuration Manager 資料庫的空間。 如需詳細資訊，請參閱 [System Center Configuration Manager 中的軟體計量](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md)。  
+-   管理中心站点：不可用    
+-   **主站点**：已启用    
+-   辅助站点：不可用  
 
--   管理中心網站：無法使用    
--   **主要站台**：已啟用    
--   次要站台：無法使用  
+**汇总软件计数文件使用数据**：使用此任务将软件计数文件使用情况的多个记录的数据汇总到一个总记录中。 数据汇总可以压缩存储在 Configuration Manager 数据库中的数据量。
 
-**更新應用程式可用目標**：使用此工作可讓 Configuration Manager 依據集合中的資源，重新計算原則與應用程式部署的對應。 當您將原則或應用程式部署到集合時，Configuration Manager 會在您部署的物件與集合成員之間建立初始對應。
+可配合使用此任务与“汇总软件计数每月使用数据”任务，以便汇总软件计数数据以及节省 Configuration Manager 数据库中的磁盘空间。 有关详细信息，请参阅 [System Center Configuration Manager 中的软件计数](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md)。  
 
-這些對應會儲存在資料表中以供快速參考。 當集合成員資格變更時，這些預存的對應會更新以反映這些變更。 但這些對應有可能會變得不同步。 例如，如果站台無法正確地處理通知檔案，該項變更可能就不會反映在對對應所做的變更中。 此工作會根據目前的集合成員資格來重新整理該對應。  
+-   管理中心站点：不可用    
+-   **主站点**：已启用    
+-   辅助站点：不可用  
 
--   管理中心網站：無法使用    
--   **主要站台**：已啟用    
--   次要站台：無法使用  
+**汇总软件计数每月使用数据**：使用此任务将软件计数每月使用情况的多个记录的数据汇总到一个总记录中。 数据汇总可以压缩存储在 Configuration Manager 数据库中的数据量。
 
-**更新應用程式類別目錄資料表**：使用此工作，可同步處理應用程式類別目錄網站資料庫快取與最新的應用程式資訊。 變更這項維護工作的設定時，設定會套用到階層中的所有主要網站。  
+可配合使用此任务与“汇总软件计数文件使用数据”任务，以便汇总软件计数数据以及节省 Configuration Manager 数据库中的空间。 有关详细信息，请参阅 [System Center Configuration Manager 中的软件计数](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md)。  
 
--   管理中心網站：無法使用    
--   **主要站台**：已啟用    
--   次要站台：無法使用  
+-   管理中心站点：不可用    
+-   **主站点**：已启用    
+-   辅助站点：不可用  
+
+**更新应用程序的可用目标**：使用此任务使 Configuration Manager 重新计算将策略和应用程序部署到集合中的资源的映射。 将策略或应用程序部署到集合时，Configuration Manager 将在部署的对象和集合成员之间创建初始映射。
+
+这些映射存储在表中供快速引用。 当集合成员身份更改时，将更新这些存储的映射以反映这些更改。 但是，这些映射有可能未能同步。 例如，如果站点无法正确处理一个通知文件，那么在对映射的更改中可能无法反映此更改。 此任务可以基于当前的集合成员身份刷新映射。  
+
+-   管理中心站点：不可用    
+-   **主站点**：已启用    
+-   辅助站点：不可用  
+
+**更新应用程序目录表**：使用此任务将应用程序目录网站数据库缓存与最新的应用程序信息进行同步。 在更改此维护任务的配置时，配置将应用到层次结构中的所有主站点。  
+
+-   管理中心站点：不可用    
+-   **主站点**：已启用    
+-   辅助站点：不可用  

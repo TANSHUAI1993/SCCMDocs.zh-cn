@@ -1,6 +1,6 @@
 ---
-title: "從 System Center Configuration Manager 共用應用程式 | Microsoft Docs"
-description: "在 System Center Configuration Manager 的軟體中心中共用應用程式的連結。"
+title: "从 System Center Configuration Manager 共享应用程序 | Microsoft Docs"
+description: "在 System Center Configuration Manager 的软件中心共享应用程序链接。"
 ms.custom: na
 ms.date: 07/31/2017
 ms.prod: configuration-manager
@@ -18,16 +18,16 @@ manager: angrobe
 ms.openlocfilehash: 9e6b32caa6c5f27f3b535b224c2a9fe31905547f
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="share-an-application-from-software-center"></a>從軟體中心共用應用程式
+# <a name="share-an-application-from-software-center"></a>从软件中心共享应用程序
 
-適用於：System Center Configuration Manager (最新分支) <!-- 1706 -->
+适用范围：System Center Configuration Manager (Current Branch) <!-- 1706 -->
 
-您可以使用 [應用程式詳細資料] 檢視中的 ![共用](media/share15.png) [共用] 按鈕來複製軟體中心中應用程式的超連結。 您只能共用應用程式的超連結。 如果應用程式變得無法使用，超連結會開啟含有應用程式無法使用之訊息的視窗。
+可以使用软件中心“应用程序详细信息”视图中的 ![Share](media/share15.png)“共享”按钮复制应用程序的超链接。 只能共享应用程序的超链接。 如果应用程序不再可用，则超链接打开的窗口将显示应用程序不可用的消息。
 
-1. 選擇 [應用程式]，然後選擇應用程式。
-2. 按一下 ![共用](media/share15.png) [共用] 按鈕。
-3. 在視窗中按一下 [複製]。
-4. 將 URL 貼入到電子郵件以共用應用程式。
+1. 选择“应用程序”，然后选择相应的应用程序。
+2. 单击 ![Share](media/share15.png)“共享”按钮。
+3. 单击窗口中的“复制”。
+4. 将 URL 粘贴到电子邮件中，以共享此应用程序。

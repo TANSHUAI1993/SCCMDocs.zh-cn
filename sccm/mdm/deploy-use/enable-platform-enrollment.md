@@ -1,6 +1,6 @@
 ---
-title: "使用 System Center Configuration Manager 啟用平台註冊 | Microsoft Docs"
-description: "使用 System Center Configuration Manager 和 Microsoft Intune 啟用平台註冊。"
+title: "使用 System Center Configuration Manager 启用平台注册 | Microsoft Docs"
+description: "使用 System Center Configuration Manager 和 Microsoft Intune 启用平台注册。"
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
@@ -18,18 +18,18 @@ manager: angrobe
 ms.openlocfilehash: 4b047aa752b638aeeb7dd363a66564800d00a8df
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="enable-platform-enrollment-with-system-center-configuration-manager-and-microsoft-intune"></a>使用 System Center Configuration Manager 和 Microsoft Intune 啟用平台註冊
+# <a name="enable-platform-enrollment-with-system-center-configuration-manager-and-microsoft-intune"></a>使用 System Center Configuration Manager 和 Microsoft Intune 启用平台注册
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-不同的裝置平台需要額外的設定，才能啟用裝置註冊。
-  - [iOS 和 Mac 註冊設定](enroll-hybrid-ios-mac.md)：取得 Apple MDM Push 憑證
+不同的设备平台需要不同的配置才能启用设备注册。
+  - [iOS 和 Mac 注册设置](enroll-hybrid-ios-mac.md)：获取 Apple MDM 推送证书
 
-  - [Windows 註冊設定](enroll-hybrid-windows.md)︰設定 DNS，並啟用 Windows 電腦、Windows 10 行動裝置版和 Windows Phone 裝置的註冊
+  - [Windows 注册设置](enroll-hybrid-windows.md)：配置 DNS 并为 Windows 电脑、Windows 10 移动版和 Windows Phone 设备启用注册
 
-  - [Android](enroll-hybrid-android.md)：Android 裝置不需要任何額外的步驟即可啟用註冊
+  - [Android](enroll-hybrid-android.md)：Android 设备无需附加步骤即可启用注册
 
-啟用 MDM 管理之後，即可指定每位使用者可以註冊的裝置數目，每位使用者最多 15 個裝置。
+启用 MDM 管理后，便可以指定每个用户可注册的设备数量，每个用户最多可注册 15 个设备。

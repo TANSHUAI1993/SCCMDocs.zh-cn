@@ -1,6 +1,6 @@
 ---
-title: "電子郵件設定檔的必要條件 | Microsoft Docs"
-description: "了解 System Center Configuration Manager 中的電子郵件設定檔和其產品內外部的相依性。"
+title: "电子邮件配置文件的先决条件 | Microsoft Docs"
+description: "了解 System Center Configuration Manager 中的电子邮件配置文件及其在产品外部和内部的依赖关系。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -18,24 +18,24 @@ manager: angrobe
 ms.openlocfilehash: 451317db1d7aab888c03d1a099b9ce25311e06d0
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="email-profile-prerequisites"></a>電子郵件設定檔必要條件
+# <a name="email-profile-prerequisites"></a>电子邮件配置文件先决条件
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager 中的電子郵件設定檔在產品內外部都有相依性。  
+System Center Configuration Manager 中的电子邮件配置文件在产品外部与内部均有依赖关系。  
 
-## <a name="configuration-manager-dependencies"></a>Configuration Manager 相依性  
+## <a name="configuration-manager-dependencies"></a>Configuration Manager 依赖关系  
 
-|相依性|詳細資訊|  
+|依赖关系|更多信息|  
 |----------------|----------------------|  
-|必須授與特定安全性權限，才能管理電子郵件設定檔|您必須具備下列安全性權限，才能管理公司資源存取設定，例如電子郵件設定檔：<br /><br /> - 檢視與管理電子郵件設定檔的警示和報告：[警示] 物件的 [建立]、[刪除]、[修改]、[修改報告]、[讀取] 和 [執行報告] 權限。<br /><br /> - 建立和管理憑證設定檔：[憑證設定檔] 物件的 [撰寫原則]、[修改報告]、[讀取] 和 [執行報告] 權限。<br /><br /> - 管理電子郵件設定檔部署：[集合] 物件的 [部署設定原則]、[修改用戶端狀態警示]、[讀取] 和 [讀取資源] 權限。<br /><br /> - 管理所有設定原則：[設定原則] 物件的 [建立]、[刪除]、[修改]、[讀取]和 [設定安全性範圍] 權限。<br /><br /> - 執行與電子郵件設定檔相關的查詢：[查詢] 物件的 [讀取] 權限。<br /><br /> 在 System Center Configuration Manager 主控台中檢視電子郵件設定檔資訊：[站台] 物件的 [讀取] 權限。<br /><br /> - 檢視電子郵件設定檔的狀態訊息：[狀態訊息] 物件的 [讀取] 權限。<br /><br /> - 建立和管理電子郵件設定檔：[通訊佈建設定檔] 物件的 [撰寫原則]、[修改報告]、[讀取] 和 [執行報告] 權限。<br /><br /> [公司資源存取管理員] 安全性角色包括在 System Center Configuration Manager 中管理電子郵件設定檔所需的上列權限。 如需詳細資訊，請參閱[在 System Center Configuration Manager 中設定安全性](../../core/plan-design/security/configure-security.md)。|  
-|Active Directory 中的郵件屬性|如果您要利用使用者的主要 SMTP 位址，在電子郵件設定檔中產生使用者電子郵件地址，則必須設定 System Center Configuration Manager 使用者探索，以從 Active Directory 探索 [郵件] 屬性 (這是預設設定)。|  
+|必须授予特定的安全权限来管理电子邮件配置文件|你必须具有以下安全权限才能管理公司资源访问设置，例如电子邮件配置文件：<br /><br /> - 若要查看和管理电子邮件配置文件的警报和报表：需要对“警报”对象的“创建”、“删除”、“修改”、“修改报表”、“读取”和“运行报表”权限。<br /><br /> - 若要创建和管理证书配置文件：需要对“证书配置文件”对象的“创作策略”、“修改报表”、“读取”和“运行报表”权限。<br /><br /> - 若要管理电子邮件配置文件部署：需要对“集合”对象的“部署配置策略”、“修改客户端状态警报”、“读取”和“读取资源”权限。<br /><br /> - 若要管理所有配置策略：需要对“配置策略”对象的“创建”、“删除”、“修改”、“读取”和“设置安全作用域”权限。<br /><br /> - 若要运行与电子邮件配置文件相关的查询：需要对“查询”对象的“读取”权限。<br /><br /> - 若要在 System Center Configuration Manager 控制台中查看电子邮件配置文件信息：需要对“站点”对象的“读取”权限。<br /><br /> - 若要查看电子邮件配置文件的状态消息：需要对“状态消息”对象的“读取”权限 。<br /><br /> - 若要创建和管理电子邮件配置文件：需要对“通信设置配置文件”对象的“创作策略”、“修改报表”、“读取”和“运行报表”权限。<br /><br /> **公司资源访问管理器**安全角色包括在 System Center Configuration Manager 中管理电子邮件配置文件所需的这些权限。 有关详细信息，请参阅[在 System Center Configuration Manager 中配置安全性](../../core/plan-design/security/configure-security.md)。|  
+|Active directory 中的邮件属性|如果要使用用户的主 SMTP 地址生成电子邮件配置文件中的用户电子邮件地址，则必须配置 System Center Configuration Manager 用户发现以从 Active Directory 中发现“邮件”属性（此为默认配置）。|  
 
-## <a name="external-dependencies"></a>外部相依性  
+## <a name="external-dependencies"></a>外部依赖关系  
 
-|相依性|詳細資訊|  
+|依赖关系|更多信息|  
 |----------------|----------------------|  
-|Active Directory 中的郵件屬性|如果您要利用使用者的主要 SMTP 位址，在電子郵件設定檔中產生使用者的電子郵件地址，此位址必須存在於 Active Directory 的 [郵件] 屬性中。<br /><br /> 如需詳細資訊，請參閱 Windows Server 文件。|
+|Active directory 中的邮件属性|如果想要通过使用用户的主 SMTP 地址生成电子邮件配置文件中的用户电子邮件地址，则此地址必须存在于 Active Directory 的“邮件”属性中。<br /><br /> 有关详细信息，请参阅 Windows Server 文档。|

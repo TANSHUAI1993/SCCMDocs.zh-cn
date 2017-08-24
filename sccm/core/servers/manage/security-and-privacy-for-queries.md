@@ -1,6 +1,6 @@
 ---
-title: "查詢的安全性和隱私權 | Microsoft Docs"
-description: "當您查詢站台資料庫中的資訊時，請了解安全性和隱私權的最佳做法。"
+title: "查询的安全和隐私 | Microsoft Docs"
+description: "从站点数据库查询信息时，请了解最佳安全做法和隐私。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -18,23 +18,23 @@ manager: angrobe
 ms.openlocfilehash: e42b13c68ecaeac94245838c2f42e2790799de2b
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="security-and-privacy-for-queries-in-system-center-configuration-manager"></a>System Center Configuration Manager 的查詢安全性和隱私權
+# <a name="security-and-privacy-for-queries-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的查询的安全和隐私
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager 的查詢可讓您從以指定準則為基礎的站台資料庫中擷取資訊。 Configuration Manager 會在標準作業期間收集站台資料庫資訊。 例如，透過使用從探索或清查收集到的資訊，您可以設定查詢識別符合指定準則的裝置。  
+System Center Configuration Manager 中的查询允许基于指定条件从站点数据库中检索信息。 Configuration Manager 会在标准操作过程中收集站点数据库信息。 例如，通过使用从发现或清单收集的信息，可以配置查询来标识满足指定条件的设备。  
 
- 如需查詢的詳細資訊，請參閱 [System Center Configuration Manager 的查詢簡介](../../../core/servers/manage/introduction-to-queries.md)。 如需使用查詢擷取收集資訊之 Configuration Manager 作業的安全性最佳做法和隱私權資訊的詳細資訊，請參閱 [System Center Configuration Manager 的安全性和隱私權](../../../core/plan-design/security/security-and-privacy.md)。  
+ 有关查询的详细信息，请参阅 [System Center Configuration Manager 中的查询简介](../../../core/servers/manage/introduction-to-queries.md)。 有关 Configuration Manager 操作（收集可使用查询检索的信息）的最佳安全做法和隐私信息的详情，请参阅 [System Center Configuration Manager 的安全和隐私](../../../core/plan-design/security/security-and-privacy.md)。  
 
-## <a name="security-best-practices-for-queries"></a>查詢的安全性最佳做法  
- 請使用下列查詢安全性最佳做法。  
+## <a name="security-best-practices-for-queries"></a>查询的最佳安全方案  
+ 可将以下最佳安全方案用于查询。  
 
-|安全性最佳作法|詳細資訊|  
+|最佳安全方案|更多信息|  
 |----------------------------|----------------------|  
-|當您要匯出或匯入儲存在網路位置的查詢時，請保護位置和網路通道。|限制誰可以存取網路資料夾。<br /><br /> 使用在網路位置和站台伺服器之間的伺服器訊息區 (SMB) 簽署或網際網路通訊協定安全性 (IPsec)，在匯入前防止攻擊者竄改查詢資料。|  
+|当导出或导入保存到网络位置的查询时，请保护该位置和网络通道的安全。|限制可访问网络文件夹的人员。<br /><br /> 在网络位置与站点服务器之间使用服务器消息块 (SMB) 签名或 Internet 协议安全性 (IPsec)，以防止攻击者在查询数据导入之前篡改它。|  
 
-## <a name="see-also"></a>請參閱  
- [System Center Configuration Manager 的查詢技術參考](../../../core/servers/manage/queries-technical-reference.md)
+## <a name="see-also"></a>另请参阅  
+ [System Center Configuration Manager 的查询技术参考](../../../core/servers/manage/queries-technical-reference.md)

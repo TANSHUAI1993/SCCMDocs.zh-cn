@@ -1,6 +1,6 @@
 ---
-title: "部署企業作業系統的案例 | Microsoft Docs"
-description: "了解使用 System Center Configuration Manager 部署企業作業系統的多種案例。"
+title: "部署企业操作系统的方案 | Microsoft Docs"
+description: "了解多种使用 System Center Configuration Manager 部署企业操作系统的方案。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -17,49 +17,49 @@ manager: angrobe
 ms.openlocfilehash: b1bea8b1b890f7c96a432835d28ad840a9b6873d
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="scenarios-to-deploy-enterprise-operating-systems-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 部署企業作業系統的案例
+# <a name="scenarios-to-deploy-enterprise-operating-systems-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 部署企业操作系统的方案
 
-適用於：System Center Configuration Manager (最新分支)
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager 提供下列作業系統部署案例：  
+以下操作系统部署方案在 System Center Configuration Manager 中可用：  
 
--   [升級至最新版本的 Windows](upgrade-windows-to-the-latest-version.md)：這個案例會升級目前執行 Windows 7、Windows 8、Windows 8.1 或 Windows 10 電腦的作業系統。 升級程序會保留電腦上的應用程式、設定和使用者資料。 因為沒有外部相依性 (如 Windows ADK)，所以這個程序比傳統的作業系統部署更快、更有彈性。  
+-   [将 Windows 升级到最新版本](upgrade-windows-to-the-latest-version.md)：此方案将升级当前运行 Windows 7、Windows 8、Windows 8.1 或 Windows 10 的计算机上的操作系统。 此升级过程将保留计算机上的应用程序、设置和用户数据。 不存在 Windows ADK 等外部依赖关系，并且此过程比传统的操作系统部署更快、更具弹性。  
 
--   [使用新的 Windows 版本重新整理現有的電腦](refresh-an-existing-computer-with-a-new-version-of-windows.md)：這個案例會分割及格式化 (抹除) 現有的電腦，並在其上安裝新的作業系統。 您可以在安裝作業系統之後，移轉設定和使用者資料。  
+-   [使用新版 Windows 刷新现有计算机](refresh-an-existing-computer-with-a-new-version-of-windows.md)：此方案将对现有计算机进行分区和格式化（擦除），并在该计算机上安装新的操作系统。 你可以在安装操作系统后迁移设置和用户数据。  
 
--   [在新電腦 (裸機) 上安裝新的 Windows 版本](install-new-windows-version-new-computer-bare-metal.md)：這個案例會在新電腦上安裝作業系統。 這是全新的作業系統安裝，不包含任何設定或使用者資料移轉。  
+-   [在新计算机（裸机）上安装新版 的 Windows](install-new-windows-version-new-computer-bare-metal.md)：此方案将在新计算机上安装操作系统。 这是操作系统的全新安装，且不包括任何设置或用户数据迁移。  
 
--   [取代現有的電腦和傳輸設定](replace-an-existing-computer-and-transfer-settings.md)：這個案例會在新電腦上安裝作業系統。 您也可以將舊電腦的設定和使用者資料移轉至新電腦。  
+-   [替换现有计算机并转移设置](replace-an-existing-computer-and-transfer-settings.md)：此方案将在新计算机上安装操作系统。 （可选）你可以将设置和用户数据从旧计算机迁移到新计算机。  
 
-## <a name="things-to-consider-before-you-deploy-operating-system-images"></a>在部署作業系統映像之前的考慮事項  
- 有某些項目，您應該在部署作業系統之前先加以考慮。  
+## <a name="things-to-consider-before-you-deploy-operating-system-images"></a>在部署操作系统映像之前应注意的事项  
+ 在部署操作系统之前应注意的某些事项。  
 
-### <a name="operating-system-image-size"></a>作業系統映像大小  
- 作業系統映像可能非常大。 例如，Windows 7 的映像大小為 3 GB 以上。 同時部署作業系統的映像大小和電腦數目，會影響網路效能和可用頻寬。 確定您會測試網路效能以進一步評估映像部署可能造成的影響，以及完成部署所需的時間。 下列為會對網路效能造成影響的 Configuration Manager 活動：將映像發佈到發佈點、將映像從某個站台發佈到另一個站台，以及將映像下載到 Configuration Manager 用戶端。  
+### <a name="operating-system-image-size"></a>操作系统映像大小  
+ 操作系统映像的大小可能会很大。 例如，Windows 7 的映像大小为 3 GB 或更大。 映像的大小和你向其中同时部署操作系统的计算机的数量影响网络性能和可用带宽。 确保测试了网络性能，以更好地衡量映像部署可能产生的影响以及完成部署所需的时间。 影响网络性能的 Configuration Manager 活动包括将映像分发到分发点、将映像从一个站点分发到另一个站点以及将映像下载到 Configuration Manager 客户端。  
 
- 同時，請確定您已在裝載作業系統映像之發佈點上，規劃足夠的磁碟儲存空間。  
+ 还要确保在承载操作系统映像的分发点上规划足够的磁盘存储空间。  
 
-### <a name="client-cache-size"></a>用戶端快取大小  
- 當 Configuration Manager 用戶端下載內容時，它們會自動使用背景智慧型傳送服務 (BITS) (如果可用)。 當您部署安裝作業系統的工作順序時，可以在部署時設定一個選項，使 Configuration Manager 用戶端先將完整的映像下載至本機快取，再執行工作順序。  
+### <a name="client-cache-size"></a>客户端缓存大小  
+ Configuration Manager 客户端在下载内容时会自动使用后台智能传输服务 (BITS)（如果该服务可用）。 在部署用于安装操作系统的任务序列时，可以针对部署设置选项，以便 Configuration Manager 客户端在任务序列运行之前将完整映像下载到本地缓存。  
 
- 一般情況下，當 Configuration Manager 用戶端必須下載作業系統映像 (或任何其他套件)，但快取中沒有足夠空間時，用戶端會檢查其他快取中的套件，以判斷刪除任一或所有最舊套件是否會釋放足夠的磁碟空間來容納映像。 如果刪除封裝後仍沒有足夠的可用磁碟空間，則用戶端不會下載映像，部署也會失敗。 如果快取具有已設定為必須保存在快取中的大型封裝，則會發生此情況。 如果刪除封裝可以在快取中釋放足夠的可用磁碟空間，用戶端便會刪除這些封裝，然後下載映像至快取。  
+ 通常，当 Configuration Manager 客户端必须下载操作系统映像（或任何其他包），但缓存中没有足够的空间时，客户端将检查缓存中的其他包以确定删除任意或全部最旧的包是否可释放足够的磁盘空间来容纳新映像。 如果删除包无法释放足够的磁盘空间，则客户端不会下载映像，并且部署失败。 如果缓存中有配置为保留在缓存中的大型包，则会发生这种情况。 如果删除包可在缓存中释放足够的空间，则客户端将删除这些包，然后将映像下载到缓存中。  
 
- Configuration Manager 用戶端上的預設快取大小，可能不足以容納大部分的作業系統映像部署。 如果您想要將完整映像下載至用戶端快取，您必須調整目的地電腦上的 Configuration Manager 用戶端快取大小，以容納您要部署的映像大小。  
+ Configuration Manager 客户端上的默认缓存大小对于大多数操作系统映像部署而言可能不够大。 如果计划将完整映像下载到客户端缓存，必须在目标计算机上调整 Configuration Manager 客户端缓存大小以适应所部署的映像的大小。  
 
- 如需詳細資訊，請參閱 [Configure the Client Cache for Configuration Manager Clients](../../core/clients/manage/manage-clients.md#BKMK_ClientCache)。  
+ 有关详细信息，请参阅 [Configure the Client Cache for Configuration Manager Clients](../../core/clients/manage/manage-clients.md#BKMK_ClientCache)。  
 
-## <a name="task-sequence-deployments"></a>工作順序部署  
- 您建立的工作順序可以透過下列其中一種方式，將作業系統映像部署至 Configuration Manager 用戶端電腦：  
+## <a name="task-sequence-deployments"></a>任务序列部署  
+ 创建的任务序列可通过下列方式之一在 Configuration Manager 客户端计算机上部署操作系统映像：  
 
--   先將映像及其內容從發佈點下載至 Configuration Manager 用戶端快取，然後再進行安裝。  
+-   从分发点将映像及其内容先下载到 Configuration Manager 客户端缓存，然后安装映像。  
 
--   立即從發佈點安裝映像及其內容。  
+-   直接从分发点安装映像及其内容。  
 
--   視需要從發佈點安裝映像及其內容  
+-   在需要时从分发点安装映像及其内容  
 
- 根據預設，當您建立工作順序的部署時，會先將映像下載至 Configuration Manager 用戶端快取，然後再進行安裝。 如果您選擇在執行映像前將映像下載至 Configuration Manager 用戶端快取，且工作順序包含重新分割硬碟的步驟，則重新分割步驟會失敗，因為分割硬碟時會清除 Configuration Manager 用戶端快取的內容。 如果工作順序必須重新分割硬碟，您必須在部署工作順序時使用 [從發佈點執行程式]   選項，以從發佈點執行映像安裝。  
+ 默认情况下，在为任务序列创建部署时，会将映像先下载到 Configuration Manager 客户端缓存，然后安装映像。 如果选择在运行映像之前将映像下载到 Configuration Manager 客户端缓存，并且任务序列包含对硬盘驱动器重新分区的步骤，则重新分区步骤会失败，因为对硬盘驱动器分区会擦除 Configuration Manager 客户端缓存的内容。 如果任务序列必须对硬盘驱动器重新分区，则你必须通过在部署任务序列时使用“从分发点运行程序”   选项，从分发点运行映像安装。  
 
- 如需詳細資訊，請參閱 [Deploy a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS)。  
+ 有关详细信息，请参阅 [Deploy a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS)。  

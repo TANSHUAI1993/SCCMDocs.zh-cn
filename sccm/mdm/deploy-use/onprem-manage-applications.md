@@ -1,6 +1,6 @@
 ---
-title: "管理內部部署行動裝置管理的應用程式 | Microsoft Docs"
-description: "管理內部部署行動裝置管理的應用程式。"
+title: "在本地移动设备管理中管理应用程序 | Microsoft Docs"
+description: "在本地移动设备管理中管理应用程序。"
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
@@ -18,13 +18,13 @@ manager: angrobe
 ms.openlocfilehash: 4085b007f006a4cfaeaef802d750b03018d6a683
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="manage-applications-for-on-premises-mobile-device-management"></a>管理內部部署行動裝置管理的應用程式
+# <a name="manage-applications-for-on-premises-mobile-device-management"></a>在本地移动设备管理中管理应用程序
 
-*適用於︰System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-當您在 Configuration Manager 中透過內部部署行動裝置管理 (MDM) 管理裝置時，您可以管理特定其他應用程式類型。 在內部部署 MDM 中管理應用程式與在混合式 MDM 環境中管理應用程式相同。
+通过 Configuration Manager 中的本地设备管理 (MDM) 来管理设备时，还可以管理某些其他应用程序类型。 在本地 MDM 中管理应用程序与在混合 MDM 环境中管理应用一样。
 
-[管理行動裝置應用程式](management-tasks-applications.md)提供有關使用混合式 MDM 或內部部署 MDM 來建立及管理應用程式的詳細資訊。
+若要深入了解使用混合 MDM 或本地 MDM 创建和管理应用程序，请参阅[管理移动应用程序](management-tasks-applications.md)。

@@ -1,6 +1,6 @@
 ---
-title: "將長期維護分支升級至最新分支 | Microsoft Docs"
-description: "了解如何將長期維護分支站台轉換成最新分支站台。"
+title: "将 Long-Term Servicing Branch 升级到 Current Branch | Microsoft Docs"
+description: "了解如何将 Long-Term Servicing Branch 站点转换为 Current Branch 站点。"
 ms.custom: na
 ms.date: 2/8/2017
 ms.prod: configuration-manager
@@ -17,38 +17,38 @@ manager: angrobe
 ms.openlocfilehash: 6e7edc85630d22c5bbba1ff66bd1199903db76db
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="upgrade-the-long-term-servicing-branch-to-the-current-branch"></a>將長期維護分支升級至最新分支
+# <a name="upgrade-the-long-term-servicing-branch-to-the-current-branch"></a>将 Long-Term Servicing Branch 升级到 Current Branch
 
-*適用於：System Center Configuration Manager (長期維護分支)*
+*适用范围：System Center Configuration Manager (Long-Term Servicing Branch)*
 
-使用本主題了解如何將執行 Configuration Manager 長期維護分支 (LTSB) 的站台和階層升級 (轉換) 為最新分支。
+请参阅本主题以了解如何将运行 Configuration Manager 的 Long-Term Servicing Branch (LTSB) 的站点和层次结构升级（转换）为 Current Branch。
 
-當目前的軟體保證合約 (或類似的授權權限) 授與您使用最新分支的權限，您就可以將 LTSB 安裝轉換成最新分支。  這是單向轉換，因為不支援將最新分支站台轉換成 LTSB。
+如果具有授予 Current Branch 使用权的当前软件保障协议（或类似的许可权），则可以将安装从 LTSB 转换到 Current Branch。  这是一种单向转换，因为不支持将 Current Branch 站点转换为 LTSB。
 
-如有多個站台，您只需要轉換階層的頂層站台。 轉換頂層站台之後︰
-- 子主要站台會自動轉換。
--   您必須從 Configuration Manager 主控台內手動更新次要站台。
+如果拥有多个站点，则只需转换层次结构的顶层站点。 在转换顶层站点后：
+- 子主站点也会自动进行转换。
+-   必须从 Configuration Manager 控制台中手动更新辅助站点。
 
-## <a name="run-setup-to-convert-the-long-term-servicing-branch"></a>執行安裝程式，將長期服務分支轉換為維護分支
-在階層的頂層站台，您可以從合格的基準媒體執行 Configuration Manager 安裝程式，並選取 [站台維護]。  然後，當您看到授權頁面時，請選取最新分支的選項來完成精靈。
+## <a name="run-setup-to-convert-the-long-term-servicing-branch"></a>运行安装程序转换 Long-Term Servicing Branch
+在层次结构的顶层站点上，可以从合格的基线媒体运行 Configuration Manager 安装程序并选择“站点维护”。  然后当授权页出现时，为 Current Branch 选择选项并完成向导。
 
-當站台轉換到最新分支時，原先無法使用的功能即可使用。
+站点转换为 Current Branch 后，可以使用以前不可用的功能。
 
 > [!NOTE]  
-> 合格的基準媒體是和您的 LTSB 安裝版本一樣或更新的媒體。
+> 合格的基线媒体是具有等于或高于 LTSB 安装版本的媒体。
 
-例如，因為 LTSB 是以 1606 版為基礎，所以您無法使用 1511 版基準媒體轉換成最新分支。 而是要從用於安裝 LTSB 站台所用的相同 1606 版基準媒體來執行安裝程式，並選擇最新分支的授權選項。  或者，如果已發行最新分支的新版基準，也可以從該基準媒體執行安裝程式。
+例如：因为 LTSB 基于版本 1606，因此不能使用基线 1511 媒体将其转换为 Current Branch。 而是需要从用于安装 LTSB 站点的相同的基线媒体 1606 版本中运行安装程序，然后为 Current Branch 选择授权选项。  或者，如果已发布了 Current Branch 更高的基线版本，则可以从该基线媒体运行安装程序。
 
-如需基準版本清單，請參閱 [Updates for Configuration Manager](/sccm/core/servers/manage/updates) (System Center Configuration Manager 的更新) 中的 **Baseline and update versions** (基準和更新版本)。
+关于基线版本的列表，请参阅 **Configuration Manager 的更新**中的[基线和更新版本](/sccm/core/servers/manage/updates)。
 
-## <a name="use-the-configuration-manager-console-to-convert-the-long-term-servicing-branch"></a>使用 Configuration Manager 主控台轉換長期維護分支
-如果您的站台執行 LTSB，您可以使用 Configuration Manager 主控台中的下列選項轉換成最新分支︰
+## <a name="use-the-configuration-manager-console-to-convert-the-long-term-servicing-branch"></a>使用 Configuration Manager 控制台转换 Long-Term Servicing Branch
+如果站点运行 LTSB，则可以使用 Configuration Manager 控制台中的以下选项将站点转换为 Current Branch：
 
- 1. 在主控台中，前往 [管理] > **[站台設定]** > [站台]，然後開啟 [階層設定]。  
+ 1. 在控制台中，转到“管理” > “站点配置” > “站点”，然后打开“层次结构设置”。  
 
- 2. 選取要轉換成最新分支的選項，然後選擇 [套用]。  
+ 2. 选择选项将站点转换为 Current Branch，然后选择“应用”。  
 
-當站台轉換到最新分支時，原先無法使用的功能即可使用。
+站点转换为 Current Branch 后，可以使用以前不可用的功能。

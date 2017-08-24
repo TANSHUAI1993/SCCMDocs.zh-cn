@@ -1,6 +1,6 @@
 ---
-title: "建立 Mac 電腦應用程式 | Microsoft Docs"
-description: "查看在您建立和部署 Mac 電腦的應用程式時，必須考慮的事項。"
+title: "创建 Mac 计算机应用程序 | Microsoft Docs"
+description: "请参阅创建和部署适用于 Mac 计算机的应用程序时必须考虑的注意事项。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -17,199 +17,199 @@ manager: angrobe
 ms.openlocfilehash: ffd66a4047ec253704e9772e2c3e3a4d9db7c46f
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="create-mac-computer-applications-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 建立 Mac 電腦應用程式
+# <a name="create-mac-computer-applications-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 创建 Mac 计算机应用程序
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-當您建立和部署 Mac 電腦的應用程式時，請記住下列考慮。  
+创建和部署适用于 Mac 计算机的应用程序时，请记住以下注意事项。  
 
 > [!IMPORTANT]  
->  本主題中的程序所涵蓋的資訊，與部署應用程式到安裝 Configuration Manager 用戶端的 Mac 電腦有關。 您向 Microsoft Intune 註冊的 Mac 電腦不支援的應用程式部署。  
+>  本主题中的过程涵盖了有关将应用程序部署到安装了 Configuration Manager 客户端的 Mac 计算机的信息。 使用 Microsoft Intune 注册的 Mac 计算机不支持应用程序部署。  
 
-## <a name="general-considerations"></a>一般考量  
- 您可以使用 System Center Configuration Manager 將應用程式部署到執行 Configuration Manager Mac 用戶端的 Mac 電腦。 將軟體部署到 Mac 電腦的步驟，和用來將軟體部署到 Windows 電腦的步驟類似。 不過，在建立及部署由 Configuration Manager 管理之 Mac 電腦的應用程式之前，請考量以下事項：  
+## <a name="general-considerations"></a>一般注意事项  
+ 可以使用 System Center Configuration Manager 将应用程序部署到运行 Configuration Manager Mac 客户端的 Mac 计算机。 将软件部署到 Mac 计算机的步骤与将软件部署到 Windows 计算机的步骤相似。 但是，在为 Configuration Manager 管理的 Mac 计算机创建和部署应用程序之前，请考虑以下事项：  
 
--   在將 Mac 應用程式套件部署到 Mac 電腦之前，您必須使用 Mac 電腦上的 **CMAppUtil** 工具，將這些應用程式轉換為 Configuration Manager 可讀取的格式。  
+-   将 Mac 应用程序包部署到 Mac 计算机之前，必须使用 Mac 计算机上的 **CMAppUtil** 工具将这些应用程序转换为 Configuration Manager 可以读取的格式。  
 
--   Configuration Manager 不支援對使用者部署 Mac 應用程式。 相反地，這些部署必須對裝置進行。 同樣地，針對 Mac 應用程式部署，Configuration Manager 不支援 [部署軟體精靈] 之 [部署設定] 頁面的 [將軟體預先部署至使用者的主要裝置] 選項。  
+-   Configuration Manager 不支持对用户部署 Mac 应用程序。 而是必须将这些应用程序部署到设备。 同样，对于 Mac 应用程序部署，Configuration Manager 不支持“部署软件向导”的“部署设置”页上的“将软件预先部署到用户的主要设备”选项。  
 
--   Mac 應用程式支援模擬部署。  
+-   Mac 应用程序支持模拟的部署。  
 
--   您無法將應用程式部署到具備 [可用] 目的之 Mac 電腦 。  
+-   无法将应用程序部署到目的为“可用” 的 Mac 计算机。  
 
--   對於 Mac 電腦，並不支援部署軟體時傳送喚醒封包這個選項。  
+-   Mac 计算机不支持用于在部署软件时发送唤醒数据包的选项。  
 
--   Mac 電腦不支援背景智慧型傳送服務 (BITS) 下載應用程式內容。 如果下載應用程式失敗，即會從頭開始重新啟動。  
+-   Mac 计算机不支持使用后台智能传输服务 (BITS) 下载应用程序内容。 如果应用程序下载失败，则将从头重新开始下载。  
 
--   Configuration Manager 不支援建立 Mac 電腦之部署類型時的全域條件。  
+-   为 Mac 计算机创建部署类型时，Configuration Manager 不支持全局条件。  
 
-## <a name="steps-to-create-and-deploy-an-application"></a>建立及部署應用程式的步驟  
- 下表提供用於建立及部署 Mac 電腦之應用程式的步驟、詳細資料和資訊。  
+## <a name="steps-to-create-and-deploy-an-application"></a>用于创建和部署应用程序的步骤  
+ 下表提供了为 Mac 计算机创建和部署应用程序的步骤、详细信息和其他信息。  
 
-|步驟|詳細資料|  
+|步骤|详细信息|  
 |----------|-------------|  
-|**步驟 1**：備妥 Configuration Manager 的 Mac 應用程式|從 Mac 軟體套件建立 Configuration Manager 應用程式之前，您必須使用 Mac 電腦上的 **CMAppUtil** 工具，將 Mac 軟體轉換為 Configuration Manager**.cmmac** 檔案。|  
-|**步驟 2**：建立包含 Mac 軟體的 Configuration Manager 應用程式|使用 [建立應用程式精靈] 建立 Mac 軟體的應用程式。|  
-|**步驟 3**：建立 Mac 應用程式的部署類型|只有當您未從應用程式自動匯入本資訊時，才需要此步驟。|  
-|**步驟 4**：部署 Mac 應用程式|使用 [部署軟體精靈] 將應用程式部署到 Mac 電腦。|  
-|**步驟 5**：監視 Mac 應用程式的部署|監視對 Mac 電腦的成功應用程式部署。|  
+|**步骤 1**：准备用于 Configuration Manager 的 Mac 应用程序|从 Mac 软件包中创建 Configuration Manager 应用程序之前，必须使用 Mac 计算机上的 **CMAppUtil** 工具将 Mac 软件转换为 Configuration Manager**.cmmac** 文件。|  
+|**步骤 2**：创建包含 Mac 软件的 Configuration Manager 应用程序|请使用“创建应用程序向导”为 Mac 软件创建应用程序。|  
+|**步骤 3**：创建 Mac 应用程序部署类型|只有在未从应用程序中自动导入此信息的情况下，才需要执行此步骤。|  
+|**步骤 4**：部署 Mac 应用程序|使用“部署软件向导”将应用程序部署到 Mac 计算机。|  
+|**步骤 5**：监视 Mac 应用程序的部署|监视到 Mac 计算机的应用程序部署是否成功。|  
 
-## <a name="supplemental-procedures-to-create-and-deploy-applications-for-mac-computers"></a>建立及部署 Mac 電腦的應用程式補充程序  
- 使用下列程序，建立及部署由 Configuration Manager 管理之 Mac 電腦的應用程式。  
+## <a name="supplemental-procedures-to-create-and-deploy-applications-for-mac-computers"></a>为 Mac 计算机创建和部署应用程序的补充过程  
+ 使用以下过程为 Configuration Manager 管理的 Mac 计算机创建和部署应用程序。  
 
-###  <a name="step-1-prepare-mac-applications-for-configuration-manager"></a>步驟 1：備妥 Configuration Manager 的 Mac 應用程式  
- 建立及部署 Configuration Manager 應用程式到 Mac 電腦的程序，和 Windows 電腦適用的部署程序類似。 不過，在建立包含 Mac 部署類型的 Configuration Manager 應用程式之前，您必須使用 **CMAppUtil** 工具備妥應用程式。 此工具會和 Mac 用戶端安裝檔案一起下載。 **CMAppUtil** 工具會收集與應用程式相關的資訊，包括來自下列 Mac 套件的偵測資料：  
+###  <a name="step-1-prepare-mac-applications-for-configuration-manager"></a>步骤 1：准备用于 Configuration Manager 的 Mac 应用程序  
+ 为 Mac 计算机创建和部署 Configuration Manager 应用程序的过程类似于 Windows 计算机的部署过程。 但是，在创建包含 Mac 部署类型的 Configuration Manager 应用程序之前，必须使用 **CMAppUtil** 工具准备应用程序。 此工具是与 Mac 客户端安装文件一起下载的。 **CMAppUtil** 工具可以收集有关应用程序的信息，此信息包含以下 Mac 包中的检测数据：  
 
--   Apple 磁碟映像檔 (.dmg)  
+-   Apple 磁盘映像 (.dmg)  
 
--   中繼套件檔案 (.mpkg)  
+-   元包文件 (.mpkg)  
 
--   Mac OS X 安裝程式套件 (.pkg)  
+-   Mac OS X 安装程序包 (.pkg)  
 
--   Mac OS X 應用程式 (.app)  
+-   Mac OS X 应用程序 (.app)  
 
-收集到應用程式資訊後， **CMAppUtil** 接著會建立一支副檔名為 **.cmmac**的檔案。 這支檔案包含 Mac 軟體的安裝檔案，以及有關可用於評估是否已安裝應用程式之偵測方法的資訊。 **CMAppUtil** 也可處理 **.dmg** 檔案，其包含多項 Mac 應用程式，並且為每一個應用程式建立不同部署類型。  
+收集应用程序信息之后， **CMAppUtil** 则会创建扩展名为 **.cmmac**的文件。 此文件包含 Mac 软件的安装文件和有关可用于评估应用程序是否已安装的检测方法的信息。 **CMAppUtil** 还可以处理包含多个 Mac 应用程序的 **.dmg** 文件并为每个应用程序创建不同的部署类型。  
 
-1.  將 Mac 軟體安裝套件複製到 Mac 電腦的資料夾，該資料夾是您擷取從 Microsoft 下載中心下載之 **macclient.dmg** 檔案的內容。  
+1.  将 Mac 软件安装包复制到 Mac 计算机上的文件夹中，你在该文件夹中已经提取了从 Microsoft 下载中心下载的 **macclient.dmg** 文件的内容。  
 
-2.  在相同的 Mac 電腦上，開啟終端機視窗，並瀏覽至您擷取 **macclient.dmg** 檔案之內容所在的資料夾。  
+2.  在相同的 Mac 计算机上，打开终端窗口并导航到在其中提取 **macclient.dmg** 文件内容的文件夹。  
 
-3.  瀏覽至 **Tools** 資料夾並輸入下列命令列命令︰  
+3.  导航到“工具”文件夹并键入以下命令行命令：  
 
-     **./CMAppUtil** <屬性\>  
+     **./CMAppUtil** *<properties\>*  
 
-     例如，假設您想要將 Apple 磁碟映像檔 **MySoftware.dmg** 的內容 (儲存在使用者的桌面資料夾) 轉換成相同資料夾中的 **cmmac** 檔案。 您也想要為磁碟映像檔中找到的所有應用程式建立 **cmmac** 檔案。 若要這麼做，請使用以下命令列：  
+     例如，想将存储在用户的桌面文件夹中，名为 **MySoftware.dmg** 的 Apple 磁盘图像文件转换为同一文件夹中的 **cmmac** 文件。 还需为磁盘图像文件中找到的所有应用程序创建 **cmmac** 文件。 若要执行此操作，请使用以下命令行：  
 
-     **./CMApputil –c /Users/** <使用者名稱\> **/Desktop/MySoftware.dmg -o /Users/** <使用者名稱\> **/Desktop -a**  
-
-    > [!NOTE]  
-    >  應用程式名稱不能超過 128 個字元。  
-
-     若要設定 **CMAppUtil**的選項，請使用下表中的命令列內容：  
-
-    |屬性|詳細資訊|  
-    |--------------|----------------------|  
-    |**-h**|顯示可用的命令列內容。|  
-    |**-r**|將所提供之 **detection.xml** 檔案的 **.cmmac** 輸出到 **stdout**。 輸出內容包含偵測參數，以及用於建立 **CMAppUtil** 檔案的 **.cmmac** 版本。|  
-    |**-c**|指定要轉換的來源檔案。|  
-    |**-o**|和 – c 內容搭配使用來指定輸出路徑。|  
-    |**-a**|和 – c 內容搭配使用，為磁碟映像檔中的所有應用程式和套件自動建立 .cmmac 檔案。|  
-    |**-s**|如果找不到偵測參數，便可略過產生 **detection.xml** ，並在沒有 **.cmmac** 檔案的情況下，強制建立 **detection.xml** 檔案。|  
-    |**-v**|連同診斷資訊一併顯示來自 **CMAppUtil** 工具的更詳細輸出。|  
-
-4.  請確定已在您指定的輸出檔案中建立 **.cmmac** 檔案。  
-
-###  <a name="create-a-configuration-manager-application-that-contains-the-mac-software"></a>建立包含 Mac 軟體的 Configuration Manager 應用程式  
-
-使用下列程序，協助您建立由 Configuration Manager 管理之 Mac 電腦的應用程式。  
-
-1.  在 Configuration Manager 主控台中，選擇 [軟體程式庫] > [應用程式管理] > [應用程式]。  
-
-3.  在 [首頁] 索引標籤的 [建立] 群組中，按一下 [建立應用程式]。  
-
-4.  在 [建立應用程式精靈]  的 [一般] 頁面上，選取 [從安裝檔案自動偵測此應用程式的相關資訊] 。  
+     **./CMApputil –c /Users/** *<User Name\>* **/Desktop/MySoftware.dmg -o /Users/** *<User Name\>* **/Desktop -a**  
 
     > [!NOTE]  
-    >  如果您要自行指定應用程式相關資訊，請選取 [手動指定應用程式資訊]。 如需如何手動指定此項資訊的詳細資訊，請參閱[如何使用 System Center Configuration Manager 建立應用程式](../../apps/deploy-use/create-applications.md)。  
+    >  应用程序名称不能超过 128 个字符。  
 
-5.  在 [類型]  下拉式清單中，選取 [Mac OS X] 。  
+     若要为 **CMAppUtil**配置选项，请使用下表中的命令行属性：  
 
-6.  在 [位置] 欄位中，以 *\\\\伺服器\>\\<共用\>\\<檔案名稱\>* 格式，將 UNC 路徑指定為 Mac 應用程式安裝檔案 (**.cmmac** 檔案)，以偵測應用程式資訊。 或者，選擇 [瀏覽] 以瀏覽並指定安裝檔案位置。  
+  	|属性|更多信息|  
+  	|--------------|----------------------|  
+  	|**-h**|显示可用命令行属性。|  
+  	|**-r**|将提供的 **detection.xml** 文件的 **.cmmac** 输出到 **stdout**。 输出包含检测参数以及用于创建 **CMAppUtil** 文件的 **.cmmac** 的版本。|  
+  	|**-c**|指定要转换的源文件。|  
+  	|**-o**|指定输出路径，同时连带 –c 属性。|  
+  	|**-a**|针对磁盘图像文件中的所有应用程序和包，自动创建 .cmmac 文件，同时连带 –c 属性。|  
+  	|**-s**|在未找到检测参数的情况下跳过生成 **detection.xml** ，并强制创建无 **.cmmac** 文件的 **detection.xml** 文件。|  
+  	|**-v**|显示 **CMAppUtil** 工具中的更多详细输出，以及诊断信息。|  
+
+4.  确保在你指定的输出文件夹中已经创建了 **.cmmac** 文件。  
+
+###  <a name="create-a-configuration-manager-application-that-contains-the-mac-software"></a>创建包含 Mac 软件的 Configuration Manager 应用程序  
+
+使用以下过程帮助你为 Configuration Manager 管理的 Mac 计算机创建应用程序。  
+
+1.  在 Configuration Manager 控制台中，选择“软件库” > “应用程序管理” > “应用程序”。  
+
+3.  在“主页”选项卡上的“创建”组中，选择“创建应用程序”。  
+
+4.  在“创建应用程序向导”  的“常规” 页上，选择“自动检测安装文件中有关此应用程序的信息” 。  
 
     > [!NOTE]  
-    >  您必須具備包含應用程式之 UNC 路徑的存取權。  
+    >  如果想要自已指定有关应用程序的信息，请选择“手动指定应用程序信息”。 有关如何手动指定信息的详细信息，请参阅 [如何使用 System Center Configuration Manager 创建应用程序](../../apps/deploy-use/create-applications.md)。  
 
-7.  選擇 [下一步]。  
+5.  在“类型”  下拉列表中选择“Mac OS X” 。  
 
-8.  在 [建立應用程式精靈] 的 [匯入資訊] 頁面，檢閱已匯入的資訊。 必要時，可以選擇 [上一步] 返回並修正錯誤。 選擇 [下一步] 繼續進行。  
-
-9. 在 [建立應用程式精靈] 的 [一般資訊] 頁面上，指定有關應用程式的資訊 (例如應用程式名稱、註解、版本，以及選擇性的參考)，幫助您在 Configuration Manager 主控台中參考應用程式。  
+6.  在“位置”字段中，指定采用 *\\\\<server\>\\<share\>\\<filename\>* 形式且指向将检测应用程序信息的 Mac 应用程序安装文件（**.cmmac** 文件）的 UNC 路径。 或者，选择“浏览”以浏览和指定安装文件位置。  
 
     > [!NOTE]  
-    >  此頁面可能已有一些應用程式資訊，如果之前有從應用程式安裝檔案取得的話。  
+    >  你必须具有对包含该应用程序的 UNC 路径的访问权限。  
 
-10. 選擇 [下一步]，並檢閱 [摘要] 頁面上的應用程式資訊，然後完成 [建立應用程式精靈]。  
+7.  选择“下一步”。  
 
-11. 新應用程式會在 Configuration Manager 主控台的 [應用程式] 節點中顯示。  
+8.  在“创建应用程序向导”的“导入信息”页上，查看已导入的信息。 如有必要，可以选择“上一步”以返回并更正任何错误。 选择“下一步”以继续。  
 
-###  <a name="step-3-create-a-deployment-type-for-the-mac-application"></a>步驟 3：建立 Mac 應用程式的部署類型  
- 使用下列程序，協助您建立由 Configuration Manager 管理之 Mac 電腦的部署類型。  
+9. 在“创建应用程序向导”的“常规信息”页上，指定有关应用程序的信息，如应用程序名称、备注、版本和可选参考，以帮助你在 Configuration Manager 控制台中引用应用程序。  
+
+    > [!NOTE]  
+    >  如果以前从应用程序安装文件中获取了某些应用程序信息，则此页上可能已经有这些信息。  
+
+10. 选择“下一步”，查看“摘要”页上的应用程序信息，然后完成“创建应用程序向导”。  
+
+11. 新应用程序会显示在 Configuration Manager 控制台的“应用程序”节点中。  
+
+###  <a name="step-3-create-a-deployment-type-for-the-mac-application"></a>步骤 3：创建 Mac 应用程序部署类型  
+ 使用以下过程帮助你为 Configuration Manager 管理的 Mac 计算机创建部署类型。  
 
 > [!NOTE]  
->  如果您已在 [建立應用程式精靈] 中自動匯入應用程式的相關資訊，則可能已建立應用程式的部署類型。  
+>  如果在“创建应用程序向导”中自动导入了关于应用程序的信息，则可能已经创建了应用程序的部署类型。  
 
-1.  在 Configuration Manager 主控台中，選擇 [軟體程式庫] > [應用程式管理] > [應用程式]。  
+1.  在 Configuration Manager 控制台中，选择“软件库” > “应用程序管理” > “应用程序”。  
 
-3.  選取應用程式。 然後在 [首頁] 索引標籤的 [應用程式]  群組中，選擇 [建立部署類型] 為此應用程式建立新部署類型。  
-
-    > [!NOTE]  
-    >  您也可以從 [建立應用程式精靈] 和 [<應用程式名稱\> 內容] 對話方塊的 [部署類型] 索引標籤，啟動 [建立部署類型精靈]。  
-
-4.  在 [建立部署類型精靈] 的 [一般] 頁面的 [類型] 下拉式清單中，選取 [Mac OS X]。  
-
-5.  在 [位置] 欄位中，以 \\\\<伺服器\>\\<共用\>\\<檔案名稱\> 格式，將 UNC 路徑指定為應用程式安裝檔案 (**.cmmac** 檔案)。 或者，選擇 [瀏覽] 以瀏覽並指定安裝檔案位置。  
+3.  选择应用程序。 然后在“主页”选项卡上的“应用程序”组中，选择“创建部署类型”以为此应用程序创建新部署类型。  
 
     > [!NOTE]  
-    >  您必須具備包含應用程式之 UNC 路徑的存取權。  
+    >  还可以从“创建应用程序向导”和“<应用程序名称\>”“属性”对话框的“部署类型”选项卡中启动“创建部署类型向导”。  
 
-6.  選擇 [下一步]。  
+4.  在“创建部署类型向导”的“常规”页上的“类型”拉列表中选择“Mac OS X”。  
 
-7.  在 [建立部署類型精靈]  的 [匯入資訊] 頁面，檢閱已匯入的資訊。 必要時，可選擇 [上一步] 返回並修正錯誤。 選擇 [下一步] 以繼續。  
-
-8.  在 [建立部署類型精靈]  的 [一般資訊] 頁面，指定如應用程式名稱、註解和語言等有部署類型可用的應用程式資訊。  
+5.  在“位置”字段中，指定采用 \\\\<server\>\\<share\>\\<filename\> 形式且指向应用程序安装文件（**.cmmac** 文件）的 UNC 路径。 或者，选择“浏览”以浏览和指定安装文件位置。  
 
     > [!NOTE]  
-    >  此頁面可能已有一些部署類型資訊，如果之前有從應用程式安裝檔案取得的話。  
+    >  你必须具有对包含该应用程序的 UNC 路径的访问权限。  
 
-9. 選擇 [下一步]。  
+6.  选择“下一步”。  
 
-10. 在 [建立部署類型精靈] 的 [需求] 頁面，可指定在 Mac 電腦上安裝部署類型之前必須先符合哪些條件。  
+7.  在“创建部署类型向导”  的“导入信息” 页上，查看已导入的信息。 如有必要，选择“上一步”以返回并更正任何错误。 选择“下一步”以继续。  
 
-11. 選擇 [新增] 以開啟 [建立需求] 對話方塊，並增加新的需求。  
+8.  在“创建部署类型向导”  的“常规信息” 页上，指定有关应用程序的信息，如应用程序名称、备注以及部署类型可采用的语言。  
 
     > [!NOTE]  
-    >  您也可以將新的需求新增至 [<部署類型名稱\> 內容] 對話方塊的 [需求] 索引標籤。  
+    >  如果以前从应用程序安装文件中获取了某些部署类型信息，则此页上可能已经有这些信息。  
 
-12. 從 [類別]  下拉式清單中，選擇此需求用於裝置。  
+9. 选择“下一步”。  
 
-13. 從 [條件] 下拉式清單中，選取要用於評估 Mac 電腦是否符合安裝需求的條件。 此清單的內容會根據您選取的類別而有所不同。  
+10. 在“创建部署类型向导”的“要求”页上，可以指定在 Mac 计算机上安装部署类型之前必须满足的条件。  
 
-14. 從 [運算子] 下拉式清單，選擇將用來比較所選條件和指定值的運算子，以評估使用者或裝置是否符合安裝需求。 可用的運算子會依所選條件而有所不同。  
+11. 选择“添加”以打开“创建要求”对话框并添加新要求。  
 
-15. 在 [值] 欄位中，指定將與所選取條件和運算子搭配使用的值，以評估使用者或裝置是否符合安裝需求。 可用的值會依您選取的條件和運算子而有所不同。
+    > [!NOTE]  
+    >  还可以在“<部署类型名称\> 属性”对话框的“要求”选项卡上添加新要求。  
 
-16. 選擇 [確定] 以儲存需求規則，然後結束 [建立需求] 對話方塊。  
+12. 从“类别”  下拉列表中选择“此要求适用于设备”。  
 
-17. 在 [建立部署類型精靈] 的 [需求] 頁面上，選擇 [下一步]。  
+13. 从“条件”下拉列表中，选择要用于评估 Mac 计算机是否满足安装要求的条件。 根据所选择的类别，此列表的内容会有所不同。  
 
-18. 在 [建立部署類型精靈] 的 [摘要]  頁面上 ，檢閱精靈要採取的動作。  必要時，可選擇 [上一步] 返回並變更部署類型設定。 選擇 [下一步] 以建立部署類型。  
+14. 从“运算符”下拉列表中，选择运算符，此运算符用于将所选条件与指定值进行比较以评估用户或设备是否满足安装要求。 可用运算符将因所选条件而异。  
 
-19. 在完成 [進度] 頁面之後，檢閱已採取的動作，然後選擇 [關閉] 完成 [建立部署類型精靈]。  
+15. 在“值”字段中指定值，这些值将与所选条件和运算符一起用于评估用户或设备是否满足安装要求。 可用值将因所选条件和运算符而异。
 
-20. 如果從 [建立應用程式精靈] 啟動此精靈，您將會回到 [部署類型] 頁面。  
+16. 选择“确定”以保存要求规则并退出“创建要求”对话框。  
 
-###  <a name="deploy-the-mac-application"></a>部署 Mac 應用程式  
- 將應用程式部署到 Mac 電腦的步驟，和用於將應用程式部署到 Windows 電腦的步驟完全相同，下列差異除外：  
+17. 在“创建部署类型向导”的“要求”页上，选择“下一步”。  
 
--   不支援對使用者部署應用程式。  
+18. 在“创建部署类型向导”  的“摘要” 页上，查看向导要采取的操作。  如有必要，选择“上一步”以返回并更改部署类型设置。 选择“下一步”以创建部署类型。  
 
--   不支援具備 [有空]  目的之部署。  
+19. 在“进度”页面完成之后，查看已采取的操作，然后选择“关闭”以完成“创建部署类型向导”。  
 
--   [部署軟體精靈] 之 [部署設定] 頁面上的 [將軟體預先部署至使用者的主要裝置] 選項不受支援。  
+20. 如果从“创建应用程序向导”中启动了此向导，则将返回“部署类型”页。  
 
--   因為 Mac 電腦不支援軟體中心，所以會忽略 [部署軟體精靈] 之 [使用者體驗] 頁面上的 [使用者通知] 設定。  
+###  <a name="deploy-the-mac-application"></a>部署 Mac 应用程序  
+ 将应用程序部署到 Mac 计算机的步骤与将应用程序部署到 Windows 计算机的步骤相同，但以下差异除外：  
 
--   對於 Mac 電腦，並不支援部署軟體時傳送喚醒封包這個選項。  
+-   不支持对用户部署应用程序。  
+
+-   不支持目的为“可用”  的部署。  
+
+-   不支持“部署软件向导”的“部署设置”页上的“将软件预先部署到用户的主要设备”选项。  
+
+-   因为 Mac 计算机不支持软件中心，所以会忽略“部署软件向导”的“用户体验”页上的“用户通知”设置。  
+
+-   Mac 计算机不支持用于在部署软件时发送唤醒数据包的选项。  
 
 > [!NOTE]  
->  您可以建立僅包含 Mac 電腦的集合。 若要這麼做，您可建立一個使用查詢規則的集合，然後使用[如何建立查詢](../../core/servers/manage/create-queries.md)主題中的範例 WQL 查詢。  
+>  可以构建一个只包含 Mac 计算机的集合。 为此，请创建一个使用查询规则的集合，并使用[如何创建查询](../../core/servers/manage/create-queries.md)主题中的 WQL 查询示例。  
 
- 如需詳細資訊，請參閱[部署應用程式](../../apps/deploy-use/deploy-applications.md)。  
+ 有关详细信息，请参阅[部署应用程序](../../apps/deploy-use/deploy-applications.md)。  
 
-###  <a name="step-5-monitor-the-deployment-of-the-mac-application"></a>步驟 5：監視 Mac 應用程式的部署  
- 您可以使用相同程序來監視對 Mac 電腦的應用程式部署，如同您監視對 Windows 電腦的應用程式部署。  
+###  <a name="step-5-monitor-the-deployment-of-the-mac-application"></a>步骤 5：监视 Mac 应用程序的部署  
+ 你可以使用监视 Windows 计算机应用程序部署的过程来监视 Mac 计算机应用程序部署。  
 
- 如需詳細資訊，請參閱[監視應用程式](/sccm/apps/deploy-use/monitor-applications-from-the-console)。  
+ 有关详细信息，请参阅[监视应用程序](/sccm/apps/deploy-use/monitor-applications-from-the-console)。  

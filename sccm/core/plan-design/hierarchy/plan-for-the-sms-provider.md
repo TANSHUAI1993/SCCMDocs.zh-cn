@@ -1,6 +1,6 @@
 ---
-title: "規劃 SMS 提供者 | Microsoft Docs"
-description: "深入了解 SMS 提供者如何協助您管理 System Center Configuration Manager。"
+title: "规划 SMS 提供程序 | Microsoft Docs"
+description: "了解 SMS 提供程序如何帮助你管理 System Center Configuration Manager。"
 ms.custom: na
 ms.date: 2/7/2017
 ms.prod: configuration-manager
@@ -17,185 +17,185 @@ manager: angrobe
 ms.openlocfilehash: 547dc39d5659c7c2e6f1ca670caddc127dbf22c4
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="plan-for-the-sms-provider-for-system-center-configuration-manager"></a>規劃 System Center Configuration Manager 的 SMS 提供者
+# <a name="plan-for-the-sms-provider-for-system-center-configuration-manager"></a>为 System Center Configuration Manager 规划 SMS 提供程序
 
-*適用對象：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-若要管理 System Center Configuration Manager，可以使用連線至 **SMS 提供者**執行個體的 Configuration Manager 主控台。 根據預設，SMS 提供者會在安裝管理中心站台或主要站台時，一併安裝在站台伺服器上。 
-
-
-##  <a name="BKMK_PlanSMSProv"></a> 關於 SMS 提供者  
- SMS 提供者是 Windows Management Instrumentation (WMI) 提供者，會指派網站之 Configuration Manager 資料庫的**讀取**與**寫入**權限：  
-
--   每個管理中心網站和主要網站上至少需要一個 SMS 提供者。 您可以視需要安裝額外的提供者。  
--   **SMS Admins** 安全性群組提供對 SMS 提供者的存取。 Configuration Manager 會自動在站台伺服器上和每部安裝了 SMS 提供者執行個體的電腦上，建立此群組。  
-
--   次要網站不支援 SMS 提供者。  
+若要管理 System Center Configuration Manager，可使用连接到 **SMS 提供程序**的实例的 Configuration Manager 控制台。 默认情况下，当安装管理中心站点或主站点时，SMS 提供程序会安装在站点服务器上。 
 
 
-Configuration Manager 系統管理員使用 SMS 提供者來存取儲存於資料庫中的資訊。 若要執行此動作，系統管理員可以使用 Configuration Manager 主控台、資源總管、工具以及自訂指令碼。 SMS 提供者不會與 Configuration Manager 用戶端互動。 Configuration Manager 主控台連線至網站時，Configuration Manager 主控台會查詢站台伺服器上的 WMI，以找出要使用的 SMS 提供者執行個體。  
+##  <a name="BKMK_PlanSMSProv"></a> 关于 SMS 提供程序  
+ SMS 提供程序是 Windows Management Instrumentation (WMI) 提供程序，它分配对站点中 Configuration Manager 数据库的“读取”和“写入”访问权限：  
 
- SMS 提供者會協助強制執行 Configuration Manager 安全性。 它僅會傳回執行 Configuration Manager 主控台之系統管理使用者獲授權可檢視的資訊。  
+-   每个管理中心站点和主站点上都必须至少具有一个 SMS 提供程序。 你可以根据需要安装其他提供程序。  
+-   “SMS 管理员”安全组提供对 SMS 提供程序的访问权限。 Configuration Manager 在站点服务器和安装了 SMS 提供程序实例的每台计算机上自动创建此组。  
+
+-   辅助站点不支持 SMS 提供程序。  
+
+
+Configuration Manager 管理用户使用 SMS 提供程序访问存储在数据库中的信息。 若要执行此操作，管理员可使用 Configuration Manager 控制台、资源浏览器、工具和自定义脚本。 SMS 提供程序不与 Configuration Manager 客户端交互。 当 Configuration Manager 控制台连接至站点时，Configuration Manager 控制台会查询站点服务器上的 WMI 以查找要使用的 SMS 提供程序的实例。  
+
+ SMS 提供程序帮助强制实施 Configuration Manager 安全性。 它仅返回正在运行 Configuration Manager 控制台的管理用户有权查看的信息。  
 
 > [!IMPORTANT]  
->  裝載網站之 SMS 提供者的每一部電腦離線時，Configuration Manager 主控台會無法連線至該網站的資料庫。  
+>  当承载站点的 SMS 提供程序的每台计算机都脱机时，Configuration Manager 控制台无法连接到该站点的数据库。  
 
- 如需如何管理 SMS 提供者的詳細資訊，請參閱 [Modify your System Center Configuration Manager infrastructure](../../../core/servers/manage/modify-your-infrastructure.md#BKMK_ManageSMSprovider) 中的 [Manage the SMS Provider](../../../core/servers/manage/modify-your-infrastructure.md)。  
+ 若要了解如何管理 SMS 提供程序，请参阅 [Modify your System Center Configuration Manager infrastructure](../../../core/servers/manage/modify-your-infrastructure.md#BKMK_ManageSMSprovider) 中的 [Manage the SMS Provider](../../../core/servers/manage/modify-your-infrastructure.md)。  
 
-## <a name="prerequisites-to-install-the-sms-provider"></a>安裝 SMS 提供者的先決條件  
+## <a name="prerequisites-to-install-the-sms-provider"></a>要安装 SMS 提供程序的先决条件  
 
- 支援 SMS 提供者：  
+ 支持 SMS 提供程序：  
 
--   電腦所在的網域，必須與站台伺服器和站台資料庫站台系統之間具備雙向信任。  
+-   计算机必须在具有站点服务器和站点数据库站点系统双向信任关系的域中。  
 
--   電腦不可擁有來自不同網站的網站系統角色。  
+-   计算机不能具有不同站点中的站点系统角色。  
 
--   電腦不可擁有來自任何網站的 SMS 提供者。  
+-   计算机不能具有任何站点中的 SMS 提供程序。  
 
--   電腦必須執行支援網站伺服器的作業系統。  
+-   计算机必须运行站点服务器支持的操作系统。  
 
--   電腦的可用磁碟空間至少必須要有 650 MB，才可支援隨 SMS 提供者一併安裝的 Windows 自動化部署套件 (Windows ADK) 元件。 如需 Windows ADK 與 SMS 提供者的詳細資訊，請參閱本主題中的 [SMS 提供者的作業系統部署需求](#BKMK_WAIKforSMSProv) 一節。  
+-   计算机至少必须有 650 MB 的可用磁盘空间，以支持与 SMS 提供程序一起安装的 Windows 自动部署工具包 (Windows ADK) 组件。 有关 Windows ADK 和 SMS 提供程序的详细信息，请参阅本主题中的 [针对 SMS 提供程序的操作系统部署要求](#BKMK_WAIKforSMSProv) 。  
 
-##  <a name="bkmk_location"></a> SMS 提供者位置  
- 安裝站台時，會自動安裝該站台的第一個 SMS 提供者。 您可以為 SMS 提供者指定以下任何一個受支援的位置：  
+##  <a name="bkmk_location"></a> SMS 提供程序位置  
+ 安装站点时，会为站点自动安装第一个 SMS 提供程序。 你可以为 SMS 提供程序指定以下任何支持的位置：  
 
--   網站伺服器電腦  
+-   站点服务器计算机  
 
--   網站資料庫電腦  
+-   站点数据库计算机  
 
--   未裝載 SMS 提供者或網站系統角色來自不同網站的伺服器等級的電腦。  
-
-
-若要檢視站台上所安裝每個 SMS 提供者位置，請從站台 [內容] 對話方塊中選取 [一般] 索引標籤。  
-
- 每個 SMS 提供者支援來自多個請求的同時連線。 這些連線的唯一限制是 SMS 提供者電腦上可用伺服器連線的數目，以及 SMS 提供者電腦上的可用資源以服務連線請求。  
-
- 安裝網站後，您可以再次在網站伺服器上執行安裝程式，以變更現有 SMS 提供者的位置，或在該網站上安裝其他 SMS 提供者。 您在一台電腦上只能安裝一個 SMS 提供者，並且電腦上不能安裝來自一個以上網站的 SMS 提供者。  
-
- 請參考下列資訊來了解在每個受支援位置上安裝「SMS 提供者」的優缺點：  
-
- **Configuration Manager 站台伺服器**  
-
--   **優點：**  
-
-    -   SMS 提供者不使用網站資料庫電腦的系統資源。  
-
-    -   除了網站伺服器或網站資料庫電腦外，此位置也可提供比位於電腦上的 SMS 提供者更好的效能。  
-
--   **缺點：**  
-
-    -   SMS 提供者會使用網站伺服器操作專用的系統和網路資源。  
+-   未承载 SMS 提供程序的服务器类计算机，或者不同站点中的站点系统角色  
 
 
-**裝載網站資料庫的 SQL Server**  
+要查看站点中安装的每个 SMS 提供程序的位置，请选择站点“属性”对话框的“常规”选项卡。  
 
--   **優點：**  
+ 每个 SMS 提供程序支持多个请求中的同时连接。 对这些连接的仅有的限制是 SMS 提供程序计算机上可用的服务器连接数目，以及满足连接请求的 SMS 提供程序计算机上可用资源。  
 
-    -   SMS 提供者並不使用網站伺服器上的網站系統資源。  
+ 安装站点后，你可以在站点服务器上重新运行安装程序，以更改现有 SMS 提供程序的位置，或者在该站点上安装其他 SMS 提供程序。 你只能在计算机上安装一个 SMS 提供程序，并且计算机无法从多个站点中安装 SMS 提供程序。  
 
-    -   若有足夠伺服器資源可以使用，此位置可提供三個位置中最佳的效能。  
+ 使用以下信息确定在每个支持的位置上安装 SMS 提供程序的优缺点：  
 
--   **缺點：**  
+ **Configuration Manager 站点服务器**  
 
-    -   SMS 提供者會使用網站資料庫操作專用的系統和網路資源。  
+-   **优点：**  
 
-    -   當站台資料庫裝載於 SQL Server 的叢集執行個體上時，即無法使用此位置。  
+    -   SMS 提供程序不使用站点数据库计算机的系统资源。  
 
+    -   与位于除站点服务器或站点数据库计算机之外的其他计算机上的 SMS 提供程序相比，此位置提供的性能更佳。  
 
-**網站伺服器或網站資料庫電腦以外的電腦**  
+-   **缺点：**  
 
--   **優點：**  
-
-    -   SMS 提供者不使用網站伺服器或網站資料庫電腦資源。  
-
-    -   此類型的位置可讓您部署額外 SMS 提供者，以提供高使用性的連線。  
-
--   **缺點：**  
-
-    -   SMS 提供者效能可能會因為協調站台伺服器與站台資料庫電腦所需的額外網路活動而降低。  
-
-    -   必須讓站台資料庫電腦與所有安裝 Configuration Manager 主控台的電腦一直都能存取此伺服器。  
-
-    -   此位置可使用其他服務專用的系統資源。  
-
-##  <a name="BKMK_SMSProvLanguages"></a> 關於 SMS 提供者語言  
- SMS 提供者操作時顯示的語言可與安裝該 SMS 提供者之電腦的語言不同。  
-
- 系統管理使用者或 Configuration Manager 使用 SMS 提供者處理請求時，SMS 提供者會嘗試傳回格式符合提出請求之電腦的作業系統語言的資料。
-
-其方式是嘗試比對語言是否為間接。 SMS 提供者不會將資訊從一種語言翻譯成另一種語言。 相反地，傳回的資料在 Configuration Manager 主控台上顯示時，資料顯示的語言會根據物件來源和儲存類型而定。  
-
- 當物件的資料儲存在資料庫時，可用的語言會依據以下項目而定：  
-
--   Configuration Manager 建立的物件會使用多國語言的支援，儲存在資料庫中。 儲存物件時使用的語言，是您執行安裝程式時在建立物件的網站上所設定的語言。 這些物件在 Configuration Manager 主控台中顯示時，會以提出請求之電腦的顯示語言顯示 (若物件可使用該語言)。 若不能以提出請求之電腦的顯示語言來顯示物件，則會以預設語言顯示，亦即英文。  
-
--   系統管理使用者建立的物件會使用用來建立物件的語言，儲存在資料庫中。 這些物件會在 Configuration Manager 主控台中以相同語言顯示。 SMS 提供者無法翻譯這些物件，並且也沒有多個語言選項。  
-
-##  <a name="BKMK_MultiSMSProv"></a> 使用多重 SMS 提供者  
- 網站完成安裝後，您可以為網站安裝額外的 SMS 提供者。 若要安裝額外的 SMS 提供者，請在站台伺服器上執行 Configuration Manager 安裝程式。 若以下任何一項為真，請考慮安裝額外的 SMS 提供者：  
-
--   您會有許多執行 Configuration Manager 主控台的系統管理使用者，且會同時連線到站台。  
-
--   您將使用可能引入經常呼叫 SMS 提供者的 Configuration Manager SDK 或其他產品。  
-
--   您想要確保 SMS 提供者的高可用性。  
+    -   SMS 提供程序使用可以专门用于站点服务器操作的系统和网络资源。  
 
 
-站台上安裝多個 SMS 提供者，並提出連線要求時，站台會隨機指派每個新連線要求，以便使用安裝的 SMS 提供者。 您無法指定 SMS 提供者位置搭配使用特定的連線工作階段。  
+**承载站点数据库的 SQL Server**  
 
-> [!NOTE]  
->  請考慮每個 SMS 提供者位置的優缺點。 請在您的資訊是無法控制要為每個新連線使用哪個 SMS 提供者的情況，在這些考量之間取得平衡。  
+-   **优点：**  
 
-例如，首次將 Configuration Manager 主控台連線到某個站台時，連線會查詢站台伺服器上的 WMI，以找出主控台將使用的 SMS 提供者執行個體。 在 Configuration Manager 主控台工作階段結束前，Configuration Manager 主控台會持續使用這個特定的 SMS 提供者執行個體。 若因 SMS 提供者電腦在網路上無法使用，而導致工作階段結束，則當您重新連線 Configuration Manager 主控台時，站台只會重複找出 SMS 提供者要連線的執行個體工作。 其可能會指派給無法使用的相同 SMS 提供者電腦。 若發生這種狀況，您可以嘗試重新連線 Configuration Manager 主控台，直到指派可用的 SMS 提供者電腦為止。  
+    -   SMS 提供程序不使用站点服务器上的站点系统资源。  
 
-##  <a name="BKMK_AboutSMSAdmins"></a> 關於 SMS Admins 群組  
- 您可使用 SMS Admin 群組提供 SMS 提供者系統管理使用者存取權限。 網站安裝時，會在網站伺服器上以及安裝 SMS 提供者的每台電腦上，自動建立群組。 以下是關於 SMS Admins 群組的其他資訊：  
+    -   如果有足够的服务器资源可用，则在这三个位置当中，此位置可以提供最佳性能。  
 
--   當電腦是成員伺服器時，會將 SMS Admins 群組建立為本機群組。  
+-   **缺点：**  
 
--   當電腦是網域控制站時，會將 SMS Admins 群組建立為網域本機群組。  
+    -   SMS 提供程序使用可以专门用于站点数据库操作的系统和网络资源。  
 
--   在電腦上解除安裝 SMS 提供者時，不會將 SMS Admins 群組從電腦中移除。  
+    -   当站点数据库托管于 SQL Server 的群集实例上时，不能使用此位置。  
 
 
-使用者帳戶必須是 SMS Admins 群組的成員，然後使用者才能成功連線至 SMS 提供者。 您在 Configuration Manager 主控台中設定的每個系統管理使用者，會自動新增到每部站台伺服器上的 SMS Admins 群組，以及階層中的每部 SMS 提供者電腦。 從 Configuration Manager 主控台刪除系統管理使用者時，該使用者會從每部站台伺服器上的 SMS Admins 群組與階層中每部 SMS 提供者電腦中移除。  
+**站点服务器或站点数据库计算机之外的计算机**  
 
-使用者成功連線至 SMS 提供者後，以角色為基礎的系統管理會決定使用者可以存取或管理的 Configuration Manager 資源。  
+-   **优点：**  
 
-您可以使用 WMI 控制 MMC 嵌入式管理單元來檢視和設定 SMS Admins 群組權限。 根據預設，[所有人]  都具有 [執行方法] 、[提供者寫入] 和 [啟用帳戶]  的權限。 使用者連線至 SMS 提供者後，會根據以角色區分的系統管理安全性權限 (如 Configuration Manager 主控台中所定義)，授與該使用者存取站台資料庫中資料的權限。 為 SMS Admins 群組明確授與在 **Root\SMS** 命名空間上的 **啟用帳戶** 和 **遠端啟用**權限。  
+    -   SMS 提供程序不使用站点服务器或站点数据库计算机资源。  
+
+    -   此类型的位置允许你部署其他 SMS 提供程序，以为连接提供高可用性。  
+
+-   **缺点：**  
+
+    -   由于与站点服务器和站点数据库计算机协调需要额外的网络活动，因此 SMS 提供程序的性能可能会降低。  
+
+    -   此服务器必须始终可供站点数据库计算机以及安装了 Configuration Manager 控制台的所有计算机访问。  
+
+    -   此位置可以使用以其他方式专供其他服务使用的系统资源。  
+
+##  <a name="BKMK_SMSProvLanguages"></a> 关于 SMS 提供程序语言  
+ SMS 提供程序的操作与安装它的计算机的显示语言无关。  
+
+ 当管理用户或 Configuration Manager 使用 SMS 提供程序处理请求数据时，SMS 提供程序尝试返回格式与请求计算机的操作系统语言匹配的数据。
+
+它尝试匹配语言的方式颇为间接。 SMS 提供程序未将信息从一种语言翻译成另一种语言。 相反，在 Configuration Manager 控制台中返回要显示的数据时，数据的显示语言取决于对象的源和存储类型。  
+
+ 当对象的数据存储在数据库中时，将能够使用的语言取决于下列各项：  
+
+-   系统使用多语言支持将 Configuration Manager 创建的对象存储在数据库中。 系统使用运行安装程序时创建对象所在的站点中配置的语言存储对象。 如果请求计算机的显示语言可用于对象，则在 Configuration Manager 控制台中以该语言显示这些对象。 如果无法用请求计算机的显示语言来显示对象，则以默认语言（英文）显示该对象。  
+
+-   系统使用用于创建对象的语言在数据库中存储管理用户创建的对象。 这些对象以此相同的语言在 Configuration Manager 控制台中显示。 它们无法被 SMS 提供程序转换，并且没有多语言选项。  
+
+##  <a name="BKMK_MultiSMSProv"></a> 使用多个 SMS 提供程序  
+ 站点完成安装后，你可以为站点安装其他 SMS 提供程序。 要安装其他 SMS 提供程序，请在站点服务器上运行 Configuration Manager 安装程序。 如果满足以下任一条件，请考虑安装其他 SMS 提供程序：  
+
+-   将会有许多管理用户在运行 Configuration Manager 控制台的同时连接到站点。  
+
+-   你将使用可能引入 SMS 提供程序频繁调用的 Configuration Manager SDK 或其他产品。  
+
+-   你想要确保 SMS 提供程序的高可用性。  
+
+
+在站点上安装多个 SMS 提供程序并且进行连接请求时，站点随机分配每个新连接请求以使用安装的 SMS 提供程序。 你无法指定要用于特定连接会话的 SMS 提供程序位置。  
 
 > [!NOTE]  
->  每位使用遠端 Configuration Manager 主控台的系統管理使用者，在站台伺服器電腦和 SMS 提供者電腦上都需要 [遠端啟用 DCOM] 權限。 雖然可將這些權限授與任何使用者或群組，但最好是將這些權限授與 SMS Admins 群組，以簡化系統管理。 如需詳細資訊，請參閱 [Configure DCOM permissions for remote Configuration Manager consoles](../../../core/servers/manage/modify-your-infrastructure.md#BKMK_ConfigDCOMforRemoteConsole) 主題中的 [Modify your System Center Configuration Manager infrastructure](../../../core/servers/manage/modify-your-infrastructure.md) 一節。  
+>  请考虑每个 SMS 提供程序位置的优缺点。 由于你无法控制哪个 SMS 提供程序用于每个新连接，请在这些因素中做出权衡。  
+
+例如，首次将 Configuration Manager 控制台连接至站点时，连接会查询站点服务器上的 WMI 以查找控制台将使用的 SMS 提供程序的实例。 在 Configuration Manager 控制台会话结束之前，Configuration Manager 控制台仍使用 SMS 提供程序的此特定实例。 如果会话由于 SMS 提供程序计算机在网络上变得不可用而终止，那么在重新连接 Configuration Manager 控制台时，站点会重复识别要连接到的 SMS 提供程序的实例的任务。 可以分配给不可用的同一 SMS 提供程序计算机。 如果出现这种情况，则在分配可用的 SMS 提供程序计算机之前，可以尝试重新连接 Configuration Manager 控制台。  
+
+##  <a name="BKMK_AboutSMSAdmins"></a> 关于 SMS 管理员组  
+ 你可以使用“SMS 管理员”组为管理用户提供 SMS 提供程序访问权限。 安装站点时会在站点服务器上自动创建此组，并且会在安装 SMS 提供程序的每台计算机上自动创建此组。 以下是关于“SMS 管理员”组的其他信息：  
+
+-   当计算机为成员服务器时，会作为本地组来创建 SMS 管理员组。  
+
+-   当计算机为域控制器时，会作为域本地组来创建 SMS 管理员组。  
+
+-   从计算机中卸载 SMS 提供程序时，不会从计算机中删除 SMS 管理员组。  
 
 
-##  <a name="BKMK_SMSProvNamespace"></a> 關於 SMS 提供者命名空間  
-WMI 架構會定義 SMS 提供者的結構。 架構命名空間會描述 SMS 提供者架構內 Configuration Manager 資料的位置。 下表包含 SMS 提供者所使用的一些常見命名空間。  
+在用户成功连接到 SMS 提供程序之前，其用户帐户必须是“SMS 管理员”组的成员。 在 Configuration Manager 控制台中配置的每个管理用户都会自动添加到每个站点服务器上的“SMS 管理员”组中，以及层次结构内的每个 SMS 提供程序计算机中。 从 Configuration Manager 控制台中删除管理用户时，会从每个站点服务器上的“SMS 管理员”组中以及层次结构中的每个 SMS 提供程序计算机上删除该用户。  
 
-|命名空間|說明|  
+当用户成功连接到 SMS 提供程序之后，基于角色的管理会确定用户可以访问或管理的 Configuration Manager 资源。  
+
+你可以使用 WMI 控件 MMC 管理单元来查看和配置 SMS 管理员组权限。 默认情况下，“Everyone”  具有“执行方法” 、“提供程序写入” 和“启用帐户”  权限。 当用户连接到 SMS 提供程序之后，会根据 Configuration Manager 控制台中定义的基于角色的管理安全权限向用户授予对站点数据库中的数据的访问权限。 SMS 管理员组被明确授予对 **Root\SMS** 命名空间的“启用帐户”和“远程启用”权限。  
+
+> [!NOTE]  
+>  使用远程 Configuration Manager 控制台的每个管理用户需要站点服务器计算机和 SMS 提供程序计算机上的“远程激活”DCOM 权限。 虽然可以将这些权限授予任何用户或组，但建议将这些权限授予“SMS 管理员”组以简化管理。 有关详细信息，请参阅 [Configure DCOM permissions for remote Configuration Manager consoles](../../../core/servers/manage/modify-your-infrastructure.md#BKMK_ConfigDCOMforRemoteConsole) 主题中的 [Modify your System Center Configuration Manager infrastructure](../../../core/servers/manage/modify-your-infrastructure.md) 部分。  
+
+
+##  <a name="BKMK_SMSProvNamespace"></a> 关于 SMS 提供程序命名空间  
+SMS 提供程序的结构由 WMI 架构来定义。 架构命名空间描述 SMS 提供程序架构内 Configuration Manager 数据的位置。 下表包含 SMS 提供程序使用的一些常见命名空间。  
+
+|Namespace|描述|  
 |---------------|-----------------|  
-|Root\SMS\site_&lt;站台碼\>|SMS 提供者，廣泛為 Configuration Manager 主控台、資源總管、Configuration Manager 工具以及指令碼所用。|  
-|Root\SMS\SMS_ProviderLocation|站台 SMS 提供者電腦的位置。|  
-|Root\CIMv2|清查硬體與軟體時，清查 WMI 命名空間資訊的位置。|  
-|Root\CCM|Configuration Manager 用戶端設定原則和用戶端資料。|  
-|root\CIMv2\SMS|由清查用戶端代理程式收集的清查回報類別的位置。 這些設定由用戶端在評估電腦原則時所準備，且會以電腦的用戶端設定配置為基礎。|  
+|Root\SMS\site_*&lt;site code\>*|Configuration Manager 控制台、资源浏览器、Configuration Manager 工具和脚本广泛使用的 SMS 提供程序。|  
+|Root\SMS\SMS_ProviderLocation|站点的 SMS 提供程序计算机的位置。|  
+|Root\CIMv2|清点硬件和软件期间针对 WMI 命名空间信息清点的位置。|  
+|Root\CCM|Configuration Manager 客户端配置策略和客户端数据。|  
+|root\CIMv2\SMS|清单客户端代理收集的清单报告类别的位置。 这些设置由客户端在计算机策略评估期间编译，而且基于计算机的客户端设置的配置。|  
 
-##  <a name="BKMK_WAIKforSMSProv"></a> SMS 提供者的作業系統部署需求  
-安裝 SMS 提供者執行個體的電腦，必須具備目前使用之 Configuration Manager 版本所需的 Windows ADK 必要版本。  
+##  <a name="BKMK_WAIKforSMSProv"></a> 针对 SMS 提供程序的操作系统部署要求  
+安装 SMS 提供程序实例的计算机必须具备使用的 Configuration Manager 版本所需的 Windows ADK 版本。  
 
- -   例如，Configuration Manager 1511 版需要 Windows 10 RTM (10.0.10240) 版本的 Windows ADK。  
+ -   例如，1511 版本的 Configuration Manager 需要 Windows ADK 的 Windows 10 RTM (10.0.10240) 版本。  
 
- -   如需此需求的詳細資訊，請參閱[作業系統部署的基礎結構需求](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment)。  
+ -   有关此要求的详细信息，请参阅[操作系统部署的基础架构要求](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment)。  
 
-管理作業系統部署時，Windows ADK 允許 SMS 提供者可完成各式工作，像是：  
+在管理操作系统部署时，Windows ADK 允许 SMS 提供程序完成不同的任务，比如：  
 
--   檢視 WIM 檔案詳細資料。  
+-   查看 WIM 文件详细信息。  
 
--   新增驅動程式檔案至現有開機映像。  
+-   将驱动程序文件添加到现有的启动映像中。  
 
--   建立開機 .ISO 檔。  
+-   创建启动 .ISO 文件。  
 
 
-Windows ADK 安裝可能在每台安裝 SMS 提供者的電腦上，最多會需要 650 MB 的可用磁碟空間。 這個大量的磁碟空間是 Configuration Manager 安裝 Windows PE 開機映像的必要條件。  
+在安装 SMS 提供程序的每台计算机上，安装 Windows ADK 可能需要最多 650 MB 的可用磁盘空间。 Configuration Manager 需要如此高的磁盘空间来安装 Windows PE 启动映像。  

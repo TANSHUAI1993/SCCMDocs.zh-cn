@@ -1,6 +1,6 @@
 ---
-title: "部署 UNIX/Linux 用戶端 | Microsoft Docs"
-description: "了解如何在 System Center Configuration Manager 中將用戶端部署至 UNIX 或 Linux 伺服器。"
+title: "部署 UNIX/Linux 客户端 | Microsoft Docs"
+description: "了解如何在 System Center Configuration Manager 中将客户端部署到 UNIX 或 Linux 服务器。"
 ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
@@ -17,223 +17,223 @@ manager: angrobe
 ms.openlocfilehash: d61d53daa5ef3d9c986cba8791d4471fea94d29d
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="how-to-deploy-clients-to-unix-and-linux-servers-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中將用戶端部署至 UNIX 和 Linux 伺服器
+# <a name="how-to-deploy-clients-to-unix-and-linux-servers-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中如何将客户端部署到 UNIX 和 Linux 服务器
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-您必須先在每個 Linux 或 UNIX 伺服器上安裝適用於 Linux 和 UNIX 的 Configuration Manager 用戶端，才能使用 System Center Configuration Manager 管理 Linux 或 UNIX 伺服器。 您可以在每部電腦上手動完成用戶端的安裝，或使用可遠端安裝用戶端的殼層指令碼。 Configuration Manager 不支援使用 Linux 或 UNIX 伺服器的用戶端推入安裝。 您可以選擇性地設定 Runbook for System Center Orchestrator，來自動化 Linux 或 UNIX 伺服器上的用戶端安裝。  
+在可以用 System Center Configuration Manager 管理 Linux 或 UNIX 服务器之前，你必须在每个 Linux 或 UNIX 服务器上安装适用于 Linux 和 UNIX 的 Configuration Manager 客户端。 可以在每台计算机上手动完成客户端安装，或远程使用安装客户端的 shell 脚本。 Configuration Manager 不支持对 Linux 或 UNIX 服务器使用客户端请求安装。 （可选）你可以为 System Center orchestrator 配置 Runbook 来自动执行 Linux 或 UNIX 服务器上的客户端安装。  
 
- 不論您使用的安裝方法為何，安裝程序都需要使用名為 **install** 的指令碼來管理安裝程序。 您可以下載用戶端的 Linux 和 UNIX 時會包含此指令碼。  
+ 无论你使用何种安装方法，在安装过程要求使用名为 **install** 的脚本来管理安装过程。 此脚本时，包含您下载适用于 Linux 和 UNIX 的客户端。  
 
- 適用於 Linux 和 UNIX 之 Configuration Manager 用戶端的安裝指令碼支援命令列屬性。 有些則是選擇性需要，有些命令列屬性。 例如，當您安裝用戶端，您必須指定 Linux 或 UNIX 伺服器用於其初次接觸與站台之站台的管理點。 如需命令列屬性的完整清單，請參閱 [在 Linux 和 UNIX 伺服器上安裝用戶端的命令列屬性](#BKMK_CmdLineInstallLnUClient)。  
+ 安装脚本 Configuration Manager 适用于 Linux 和 UNIX 的客户端支持的命令行属性。 某些命令行属性是必需的其他一些是可选。 例如，在安装客户端时，您必须指定由其与该站点的初始联系 Linux 或 UNIX 服务器的站点中的管理点。 有关命令行属性的完整列表，请参阅 [在 Linux 和 UNIX 服务器上安装客户端的命令行属性](#BKMK_CmdLineInstallLnUClient)。  
 
- 安裝用戶端之後，即可在 Configuration Manager 主控台中指定 [用戶端設定] 來設定用戶端代理程式，而設定方式與 Windows 用戶端相同。 如需詳細資訊，請參閱  [Client settings for Linux and UNIX servers](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ClientSettingsforLnU)。  
+ 安装客户端后，在 Configuration Manager 控制台指定客户端设置，从而用和配置基于 Windows 的客户端相同的方式配置客户端代理。 有关详细信息，请参阅  [Client settings for Linux and UNIX servers](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ClientSettingsforLnU)。  
 
-##  <a name="BKMK_AboutInstallPackages"></a> 有關用戶端安裝封裝和通用的代理程式  
- 若要在特定平台上安裝 Linux 和 UNIX 的用戶端，您必須使用安裝用戶端之電腦的適用用戶端安裝封裝。 從 [Microsoft 下載中心](http://go.microsoft.com/fwlink/?LinkID=525184)下載的每個用戶端都包含適用的用戶端安裝套件。 除了用戶端安裝封裝之外，用戶端下載還會包括管理每部電腦上用戶端安裝的 **install** 指令碼。  
+##  <a name="BKMK_AboutInstallPackages"></a> 有关客户端安装包和通用代理  
+ 若要在特定平台上安装适用于 Linux 和 UNIX 的客户端，你必须对要安装客户端的计算机使用合适的客户端安装包。 合适的客户端安装包是从 [Microsoft 下载中心](http://go.microsoft.com/fwlink/?LinkID=525184)下载的每个客户端的一部分。 除了客户端安装包，客户端下载内容还包括在每台计算机上管理客户端安装的 **install** 脚本。  
 
- 當您安裝用戶端時，您可以使用相同的程序和命令列屬性不論您使用用戶端安裝套件。  
+ 在安装客户端时，可以使用相同的过程和命令行属性而不考虑您使用的客户端安装包。  
 
- 如需每個 Linux 和 UNIX Configuration Manager 用戶端版本所支援之作業系統、平台和用戶端安裝套件的詳細資訊，請參閱 [Linux 和 UNIX 伺服器](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices#linux-and-unix-servers)。  
+ 有关适用于 Linux 和 UNIX 的每个版本的 Configuration Manager 客户端支持的操作系统、平台和客户端安装包的详细信息，请参阅 [Linux 和 UNIX 服务器](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices#linux-and-unix-servers)。  
 
-##  <a name="BKMK_InstallLnUClient"></a> 在 Linux 和 UNIX 伺服器上安裝用戶端  
- 若要安裝用戶端的 Linux 和 UNIX，您可以執行指令碼在每個 Linux 或 UNIX 電腦上。 指令碼名為 **安裝** 和支援修改的安裝行為並參照用戶端安裝封裝的命令列屬性。 安裝指令碼和用戶端安裝套件必須位於用戶端。 用戶端安裝套件包含特定 Linux 或 UNIX 作業系統和平台的 Configuration Manager 用戶端檔案。
-每個用戶端安裝套件包含所有必要的檔案以完成用戶端安裝並不像 Windows 電腦將不會下載其他檔案從管理點或其他來源位置。  
+##  <a name="BKMK_InstallLnUClient"></a> 在 Linux 和 UNIX 服务器上安装客户端  
+ 若要安装适用于 Linux 和 UNIX 的客户端，请在每个 Linux 或 UNIX 的计算机上运行脚本。 该脚本命名为 **安装** ，同时支持命令行属性，修改安装行为和引用客户端安装包。 安装脚本和客户端安装包必须位于客户端上。 客户端安装程序包中包含针对特定 Linux 或 UNIX 的操作系统和平台的 Configuration Manager 客户端文件。
+每个客户端安装包包含所有必需的文件以完成客户端安装并与不同的是基于 Windows 的计算机，不会下载其他文件从管理点或其他源位置。  
 
- 在您安裝 Linux 和 UNIX Configuration Manager 用戶端之後，不需要重新啟動電腦。 只要軟體安裝完成時，用戶端可以運作。 如果您重新啟動電腦，Configuration Manager 用戶端會自動重新啟動。  
+ 安装适用于 Linux 和 UNIX 的 Configuration Manager 客户端后，你不需要重新启动计算机。 一旦软件安装完成后，客户端所操作。 如果重新启动计算机，Configuration Manager 客户端将自动重新启动。  
 
- 安裝的用戶端會使用根認證執行。 需要有根認證，才能收集硬體清查，並執行軟體部署。  
+ 使用根凭据运行安装的客户端。 要求根凭据收集硬件清单信息并执行软件部署。  
 
- 下列是命令格式：  
+ 以下为命令格式：  
 
- **./install -mp &lt;電腦\> -sitecode &lt;站台碼\> &lt;屬性 #1> &lt;屬性 #2> &lt;用戶端安裝套件\>**  
+ **./install -mp &lt;computer\> -sitecode &lt;sitecode\> &lt;property #1> &lt;property #2> &lt;client installation package\>**  
 
--   **安裝** 是安裝適用於 Linux 及 UNIX 用戶端指令碼檔案的名稱。 這個檔案被提供與用戶端軟體。  
+-   **安装** 安装适用于 Linux 和 UNIX 的客户端的脚本文件的名称。 此文件提供的客户端软件。  
 
--   **-mp &lt;電腦>** 指定用戶端使用的初始管理點。  
+-   **-mp &lt;computer** 指定客户端使用的初始管理点。  
 
-     範例︰smsmp.contoso.com  
+     示例：smsmp.contoso.com  
 
--   **-sitecode &lt;站台碼\>** 指定指派給用戶端的站台碼。  
+-   **-sitecode &lt;site code\>** 指定将客户端分配到的站点的站点代码。  
 
-     範例：S01  
+     示例：S01  
 
--   &lt;屬性 #1> &lt;屬性 #2> 指定與安裝指令碼搭配使用的命令列屬性。  
+-   &lt;property #1> &lt;property #2> 指定要与安装脚本搭配使用的命令行属性。  
 
     > [!NOTE]  
-    >  如需詳細資訊，請參閱 [在 Linux 和 UNIX 伺服器上安裝用戶端的命令列屬性](#BKMK_CmdLineInstallLnUClient)  
+    >  有关详细信息，请参阅 [在 Linux 和 UNIX 服务器上安装客户端的命令行属性](#BKMK_CmdLineInstallLnUClient)  
 
--   **用戶端安裝套件** 是這個電腦作業系統、版本和 CPU 架構的用戶端安裝 .tar 套件名稱。 用戶端安裝.tar 檔案必須指定上一次。  
+-   **客户端安装包** 是此计算机的操作系统、版本和 CPU 体系结构的客户端安装 .tar 包的名称。 必须最后指定客户端安装.tar 文件。  
 
-     範例：ccm-Universal-x64.&lt;組建\>.tar  
+     示例：ccm-Universal-x64.&lt;build\>.tar  
 
-###  <a name="BKMK_ToInstallLnUClinent"></a> 在 Linux 和 UNIX 伺服器上安裝 Configuration Manager 用戶端  
+###  <a name="BKMK_ToInstallLnUClinent"></a> 若要在 Linux 和 UNIX 服务器上安装 Configuration Manager 客户端  
 
-1.  在 Windows 電腦上，為您想要管理的電腦 [下載適用於 Linux 或 UNIX 伺服器的用戶端檔案](http://go.microsoft.com/fwlink/?LinkID=525184) 。  
+1.  在 Windows 计算机上，为你想要管理的 [Linux 或 UNIX 服务器下载合适的客户端文件](http://go.microsoft.com/fwlink/?LinkID=525184) 。  
 
-2.  執行 Windows 電腦的自我解壓縮 .exe 檔案，解壓縮安裝指令碼和用戶端安裝 .tar 檔案。  
+2.  在 Window 计算机上运行自解压 .exe 文件以提取安装脚本和客户端安装 .tar 文件。  
 
-3.  將 **安裝** 指令碼和 .tar 檔案複製到要管理的伺服器資料夾中。  
+3.  复制 **安装** 脚本和 .tar 文件到你想要管理的服务器上的文件夹。  
 
-4.  在 UNIX 或 Linux 伺服器上，執行下列命令，將指令碼當成程式執行： **chmod +x install**  
+4.  在 UNIX 或 Linux 服务器上，运行以下命令以启用要作为程序运行的脚本： **chmod +x install**  
 
     > [!IMPORTANT]  
-    >  您必須安裝用戶端使用根認證。  
+    >  您必须使用根凭据来安装客户端。  
 
-5.  接下來，執行下列命令以安裝 Configuration Manager 用戶端：**./install -mp &lt;主機名稱\> -sitecode &lt;代碼\> ccm-Universal-x64.&lt;組建\>.tar**  
+5.  接下来，运行以下命令以安装 Configuration Manager 客户端：**./install -mp &lt;hostname\> -sitecode &lt;code\> ccm-Universal-x64.&lt;build\>.tar**  
 
-     當您輸入這個命令時，使用您所需要的其他命令列屬性。  如需命令列屬性清單，請參閱 [在 Linux 和 UNIX 伺服器上安裝用戶端的命令列屬性](#BKMK_CmdLineInstallLnUClient)。  
+     当进入此命令时，使用您所需要的其他命令行属性。  有关命令行属性的列表，请参阅 [在 Linux 和 UNIX 服务器上安装客户端的命令行属性](#BKMK_CmdLineInstallLnUClient)  
 
-6.  指令碼執行之後，請檢閱 **/var/opt/microsoft/scxcm.log** 檔案來驗證安裝。 此外，您還可以在 Configuration Manager 主控台之 [資產與相容性] 工作區的 [裝置] 節點中檢視用戶端詳細資料，確認已安裝用戶端，而且用戶端正在與站台通訊。  
+6.  脚本运行后，通过查看“/var/opt/microsoft/scxcm.log”  文件验证安装 。 此外，可以通过在 Configuration Manager 控制台中“资产和符合性”工作区的“设备”节点中查看客户端的详细信息，确认客户端是否已安装并与站点通信。  
 
-###  <a name="BKMK_CmdLineInstallLnUClient"></a> 在 Linux 和 UNIX 伺服器上安裝用戶端的命令列屬性  
- 下列屬性可用於修改安裝指令碼的行為︰  
+###  <a name="BKMK_CmdLineInstallLnUClient"></a> 在 Linux 和 UNIX 服务器上安装客户端的命令行属性  
+ 以下属性可用于修改安装脚本的行为：  
 
 > [!NOTE]  
->  使用屬性 **-h** 顯示這份支援的屬性。  
+>  使用属性 **-h** 要显示此列表的受支持的属性。  
 
--   **-mp &lt;伺服器 FQDN\>**  
+-   **-mp &lt;server FQDN\>**  
 
-     必要。 指定由用戶端會將它當成連絡人的起始點的管理點伺服器的 FQDN。  
+     必须的。 指定通过 FQDN，客户端将用作初始联系点的管理点服务器。  
 
     > [!IMPORTANT]  
-    >  這個屬性並未指定用戶端在安裝後變成指派的管理點。  
+    >  此属性不会指定安装后为其分配客户端的管理点。  
 
     > [!NOTE]  
-    >  當您使用 **-mp** 屬性指定設定成只接受 HTTPS 用戶端連線的管理點時，也必須使用 **-UsePKICert** 屬性。  
+    >  当你使用 **-mp** 属性来指定配置为只接受 HTTPS 客户端连接的管理点时，还必须使用 **-UsePKICert** 属性。  
 
--   **-sitecode &lt;站台碼\>**  
+-   **-sitecode &lt;sitecode\>**  
 
-     必要。 指定要將 Configuration Manager 用戶端指派過去的 Configuration Manager 主要站台。  
+     必须的。 指定要将 Configuration Manager 客户端分配到的 Configuration Manager 主站点。  
 
-     範例：-sitecode S01  
+     示例：-sitecode S01  
 
--   **-fsp &lt;伺服器_FQDN>**  
+-   **-fsp &lt;server_FQDN>**  
 
-     選擇性。 指定由用戶端用來將狀態訊息提交回溯狀態點伺服器的 FQDN。  
+     可选。 指定通过 FQDN，客户端用于提交状态消息的回退状态点服务器。  
 
-     如需後援狀態點的詳細資訊，請參閱 [Determine Whether You Require a Fallback Status Point](/sccm/core/clients/deploy/plan/determine-the-site-system-roles-for-clients#determine-if-you-need-a-fallback-status-point) 。  
+     有关回退状态点的详细信息，请参阅 [Determine Whether You Require a Fallback Status Point](/sccm/core/clients/deploy/plan/determine-the-site-system-roles-for-clients#determine-if-you-need-a-fallback-status-point) 。  
 
 
--   **-dir &lt;目錄\>**  
+-   **-dir &lt;directory\>**  
 
-     選擇性。 指定安裝 Configuration Manager 用戶端檔案的替代位置。  
+     可选。 指定替代位置以安装 Configuration Manager 客户端文件。  
 
-     根據預設，用戶端會安裝到下列位置： **/opt/microsoft**。  
+     默认情况下，在客户端安装到以下位置： **/opt/microsoft**。  
 
 -   **-nostart**  
 
-     選擇性。 防止在用戶端安裝完成之後自動啟動 Configuration Manager 用戶端服務 **ccmexec.bin**。  
+     可选。 客户端安装完成后，阻止自动启动 Configuration Manager 客户端服务 **ccmexec.bin**。  
 
-     用戶端安裝之後，您必須手動啟動用戶端服務。  
+     在客户端安装后，您必须手动启动客户端服务。  
 
-     根據預設，用戶端服務會啟動用戶端安裝完成之後，以及每次電腦重新啟動。  
+     默认情况下，客户端服务启动后客户端安装完成后，每次在计算机重新启动。  
 
--   **-初始狀態**  
+-   **-清理**  
 
-     選擇性。 在新的安裝作業開始之前指定 Linux 和 UNIX，移除所有的用戶端檔案和資料從先前安裝的用戶端。 這會移除用戶端的資料庫和憑證存放區。  
+     可选。 在新的安装开始之前指定适用于 Linux 和 UNIX 的所有客户端文件和来自以前安装的客户端数据删除。 这会删除客户端的数据库和证书存储。  
 
 -   **-keepdb**  
 
-     選擇性。 指定本機用戶端資料庫會保留，而當您重新安裝用戶端時重複使用。 根據預設，當您重新安裝用戶端時就會刪除此資料庫。  
+     可选。 指定本地客户端数据库保留，并重复使用时重新安装客户端。 默认情况下，当你重新安装客户端将删除此数据库。  
 
--   **-UsePKICert &lt;參數\>**  
+-   **-UsePKICert &lt;parameter\>**  
 
-     選擇性。 指定 X.509 PKI 憑證的完整路徑和檔案名稱中的公用金鑰憑證標準 (PKCS #12) 格式。 此憑證用於用戶端驗證。 如果未在安裝期間指定憑證，而且需要新增或變更憑證，請使用 **certutil** 公用程式。 如需 certutil 的相關資訊，請參閱 [How to manage certificates on the client for Linux and UNIX](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ManageLinuxCerts) 。  
+     可选。 公钥证书标准 (PKCS #12) 格式指定完整路径和文件名为 X.509 PKI 证书的名称。 此证书用于客户端身份验证。 如果在安装过程中未指定证书，则你需要添加或更改证书，请使用 **certutil** 实用工具。 有关 certutil 的信息，请参阅 [How to manage certificates on the client for Linux and UNIX](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ManageLinuxCerts) 。  
 
-     當您使用 **-UsePKICert**時，也必須使用 **-certpw** 命令列參數來提供與 PKCS#12 檔案相關聯的密碼。  
+     当您使用 **-UsePKICert**, ，还必须提供通过使用与 PKCS #12 文件相关联的密码 **-certpw** 命令行参数。  
 
-     如果您不使用這個屬性來指定 PKI 憑證，用戶端會使用自我簽署的憑證和站台系統的所有通訊都都透過 HTTP。  
+     如果不使用此属性可指定 PKI 证书，客户端使用自签名的证书和与站点系统的所有通讯都是通过 HTTP。  
 
-     如果您在上指定無效的憑證用戶端安裝命令列，不會傳回錯誤。 這是因為在用戶端安裝之後，就會發生憑證驗證。 當用戶端啟動時，憑證會驗證和管理點而如果驗證失敗的憑證會出現下列訊息 **scxcm.log**, ，Unix 和 Linux Configuration Manager 用戶端記錄檔: **失敗驗證的憑證管理點**。 預設記錄檔位置為：  **/var/opt/microsoft/scxcm.log**。  
+     如果您在上指定了无效的证书客户端安装命令行，会返回任何错误。 这是因为客户端安装后会发生的证书验证。 如果客户端启动，证书的验证与管理点并且如果验证失败的证书中将显示以下消息 **scxcm.log**, ，Unix 和 Linux Configuration Manager 客户端的日志文件： **失败验证管理点证书**。 默认的日志文件位置是：  **/var/opt/microsoft/scxcm.log**。  
 
     > [!NOTE]  
-    >  如果您安裝用戶端，並使用 **-mp** 屬性來指定設定為只接受 HTTPS 用戶端連線的管理點，則必須指定這個屬性。  
+    >  安装客户端时，必须指定此属性并使用 **-mp** 属性指定配置为仅接受 HTTPS 客户端连接的管理点。  
 
-     範例：-UsePKICert &lt;完整路徑和檔名\> -certpw &lt;密碼\>  
+     示例：-UsePKICert &lt;Full path and filename\> -certpw &lt;password\>  
 
--   **-certpw &lt;參數\>**  
+-   **-certpw &lt;parameter\>**  
 
-     選擇性。 指定使用與您所指定的 PKCS #12 檔案相關聯的密碼 **-UsePKICert** 屬性。  
+     可选。 指定通过使用与您指定的 PKCS #12 文件相关联的密码 **-UsePKICert** 属性。  
 
-     範例：-UsePKICert &lt;完整路徑和檔名\> -certpw &lt;密碼\>  
+     示例：-UsePKICert &lt;Full path and filename\> -certpw &lt;password\>  
 
 -   **-NoCRLCheck**  
 
-     選擇性。 指定用戶端應該不檢查憑證撤銷清單 (CRL) 所使用的 PKI 憑證透過 HTTPS 通訊時。 當未指定此選項時，用戶端會建立 HTTPS 連線所使用的 PKI 憑證之前檢查 CRL。 如需有關用戶端 CRL 檢查的詳細資訊，請參閱 PKI 憑證撤銷的規劃。  
+     可选。 指定客户端应通过使用 PKI 证书通过 HTTPS 通信时检查证书吊销列表 (CRL)。 如果未指定此选项，客户端在通过使用 PKI 证书建立 HTTPS 连接前检查 CRL。 有关客户端 CRL 检查的详细信息，请参阅 PKI 证书吊销的规划。  
 
-     範例：-UsePKICert &lt;完整路徑和檔名\> -certpw &lt;密碼\> -NoCRLCheck  
+     示例：-UsePKICert &lt;Full path and filename\> -certpw &lt;password\> -NoCRLCheck  
 
--   **-rootkeypath &lt;檔案位置\>**  
+-   **-rootkeypath &lt;file location\>**  
 
-     選擇性。 指定 Configuration Manager 受信任根金鑰的完整路徑和檔案名稱。 Configuration Manager 受信任根金鑰提供一種機制，讓 Linux 和 UNIX 用戶端用來確認它們是否連線到屬於正確階層的站台系統。  
+     可选。 指定 Configuration Manager 受信任的根密钥的完整路径和文件名。 Configuration Manager 受信任的根密钥提供一种机制，Linux 和 UNIX 客户端使用此机制来确认它们已连接到属于正确的层次结构的站点系统。  
 
-     如果您未在命令列上指定受信任根金鑰，則用戶端會信任與其通訊的第一個管理點，並從該管理點自動擷取受信任根金鑰。  
+     如果未在命令行上指定受信任的根密钥，客户端将信任其与之通信的第一个管理点，并将从该管理点自动检索受信任的根密钥。  
 
-     如需詳細資訊，請參閱  [Planning for the Trusted Root Key](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForRTK)。  
+     有关详细信息，请参阅  [Planning for the Trusted Root Key](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForRTK)。  
 
-     範例︰-rootkeypath &lt;完整路徑和檔名\>  
+     示例：-rootkeypath &lt;Full path and filename\>  
 
--   **-httpport &lt;連接埠\>**  
+-   **-httpport &lt;port\>**  
 
-     選擇性。 指定在用戶端會使用透過 HTTP 進行通訊來管理點時的管理點設定的連接埠。 如果未指定連接埠，會使用預設值 80。  
+     可选。 指定在客户端在通过 HTTP 与管理点通信时所使用的管理点配置的端口。 如果未指定端口，使用默认值为 80。  
 
-     範例：-httpport 80  
+     示例：-httpport 80  
 
--   **-httpsport &lt;連接埠\>**  
+-   **-httpsport &lt;port\>**  
 
-     選擇性。 指定在用戶端會使用透過 HTTPS 管理點來進行通訊時的管理點設定的連接埠。 如果未指定連接埠，會使用 443 的預設值。  
+     可选。 指定在客户端在通过 HTTPS 与管理点通信时所使用的管理点配置的端口。 如果未指定端口，使用默认值 443。  
 
-     範例：-UsePKICert &lt;完整路徑和憑證名稱\> -httpsport 443  
+     示例：-UsePKICert &lt;Full path and certificate name\> -httpsport 443  
 
 -   **-ignoreSHA256validation**  
 
-     選擇性。 指定用戶端安裝略過 sha-256 驗證。 如果在未與支援 SHA-256 之 OpenSSL 版本一起發行的作業系統上安裝用戶端，請使用這個選項。 如需詳細資訊，請參閱 [About Linux and UNIX Operating Systems That do not Support SHA-256](../../../core/clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers.md#BKMK_NoSHA-256)。  
+     可选。 指定客户端安装将 SHA 256 验证跳过。 在操作系统上安装客户端时使用此选项，该操作系统未使用支持 SHA-256 的 OpenSSL 版本发布。 有关详细信息，请参阅 [About Linux and UNIX Operating Systems That do not Support SHA-256](../../../core/clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers.md#BKMK_NoSHA-256)。  
 
--   **-rootkeypath &lt;檔案位置\>**  
+-   **-signcertpath &lt;file location\>**  
 
-     選擇性。 指定完整路徑和 **.cer** 站台伺服器上的匯出自我簽署憑證的檔案名稱。 如果無 PKI 憑證可用，則 Configuration Manager 站台伺服器會自動產生自我簽署憑證。  
+     可选。 指定的完整路径和 **.cer** 的站点服务器上的导出自签名证书的文件名。 如果 PKI 证书不可用，Configuration Manager 站点服务器自动生成自签名的证书。  
 
-     這些憑證用來驗證從管理點下載用戶端原則從預定的站台所送出。 如果未在安裝期間指定自我簽署憑證，或者需要變更憑證，請使用 **certutil** 公用程式。 如需 certutil 的相關資訊，請參閱 [How to manage certificates on the client for Linux and UNIX](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ManageLinuxCerts) 。  
+     这些证书用于验证从管理点下载的客户端策略发送从预期的站点。 如果在安装过程中未指定证书，或者你需要更改证书，请使用 **certutil** 实用工具。 有关 certutil 的信息，请参阅 [How to manage certificates on the client for Linux and UNIX](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ManageLinuxCerts) 。  
 
-     這個憑證可以透過 [SMS]  憑證存放區擷取、主體名稱為 [站台伺服器]  ，而易記名稱為 [站台伺服器簽署憑證] 。  
+     此证书可通过 **SMS** 证书存储检索，并且具有“站点服务器”  使用者名称以及“站点服务器签名证书” 友好名称。  
 
-     如果在安裝期間沒有指定這個選項，Linux 和 UNIX 用戶端會信任這些通訊並自動將來自該管理點擷取的簽章憑證的第一個管理點。  
+     如果在安装过程中未指定此选项，Linux 和 UNIX 的客户端将信任它们与通信并将自动检索来自该管理点签名证书的第一个管理点。  
 
-     範例︰-signcertpath &lt;完整路徑和檔名\>  
+     示例：-signcertpath &lt;Full path and file name\>  
 
 -   **-rootcerts**  
 
-     選擇性。 指定其他要匯入不是管理點憑證授權單位 (CA) 階層的一部分的 PKI 憑證。 如果您在命令列中指定多個憑證，它們應該以逗號分隔。  
+     可选。 指定其他 PKI 证书导入不是管理点证书颁发机构 (CA) 层次结构的一部分。 如果在命令行中指定多个证书，它们应该是以逗号分隔。  
 
-     如果您使用鏈結至您的網站管理點所信任的根 CA 憑證的 PKI 用戶端憑證，使用此選項。 如果用戶端憑證未鏈結至站台憑證簽發者清單中的受信任根憑證，則管理點將拒絕用戶端。  
+     如果您使用未链接至您的站点管理点信任的根 CA 证书的 PKI 客户端证书，使用此选项。 如果客户端证书未链接到站点的证书颁发者列表中的受信任的根证书，管理点将拒绝此客户端。  
 
-     如果您不使用此選項，Linux 和 UNIX 用戶端會確認使用中的憑證信任階層 **-UsePKICert** 選項。  
+     如果不使用此选项，Linux 和 UNIX 的客户端将验证使用的证书中的信任层次结构 **-UsePKICert** 选项。  
 
-     範例︰-rootcerts &lt;完整路徑和檔名\>,&lt;完整路徑和檔名\>  
+     示例：-rootcerts &lt;Full path and file name\>,&lt;Full path and file name\>  
 
-###  <a name="BKMK_UninstallLnUClient"></a> 從 Linux 和 UNIX 伺服器解除安裝用戶端  
- 若要解除安裝 Linux 和 UNIX Configuration Manager 用戶端，請使用解除安裝公用程式 **uninstall**。 根據預設，這個檔案位於 **/選擇/microsoft/configmgr/bin/** 用戶端電腦上的資料夾。 這在解除安裝命令不支援任何命令列參數，而且將會移除從伺服器到用戶端軟體相關的所有檔案。  
+###  <a name="BKMK_UninstallLnUClient"></a> 从 Linux 和 UNIX 服务器上卸载客户端  
+ 若要卸载适用于 Linux 和 UNIX 的 Configuration Manager 客户端，请使用卸载实用工具 **uninstall**。 默认情况下，此文件位于 **/选择/microsoft/configmgr/bin/** 客户端计算机上的文件夹。 这将卸载命令不支持任何命令行参数，并且将删除所有从服务器向客户端软件相关的文件。  
 
- 若要解除安裝用戶端，請使用下列命令列: **/opt/microsoft/configmgr/bin/uninstall**  
+ 若要卸载客户端，请使用下面的命令行: **/opt/microsoft/configmgr/bin/uninstall**  
 
- 在您解除安裝 Linux 和 UNIX Configuration Manager 用戶端之後，不需要重新啟動電腦。  
+ 安装适用于 Linux 和 UNIX 的 Configuration Manager 客户端后，你不需要重新启动计算机。  
 
-##  <a name="BKMK_ConfigLnUClientCommuincations"></a> 設定 Linux 和 UNIX 用戶端要求連接埠  
- 與 Windows 用戶端類似，Linux 和 UNIX Configuration Manager 用戶端會使用 HTTP 和 HTTPS 來與 Configuration Manager 站台系統通訊。 Configuration Manager 用戶端用來通訊的連接埠稱為要求連接埠。  
+##  <a name="BKMK_ConfigLnUClientCommuincations"></a> 适用于 Linux 和 UNIX 客户端配置请求端口  
+ 与基于 Windows 的客户端类似，适用于 Linux 和 UNIX 的 Configuration Manager 客户端使用 HTTP 和 HTTPS 与 Configuration Manager 站点系统通信。 Configuration Manager 客户端用于通信的端口称为请求端口。  
 
- 當您安裝 Linux 和 UNIX Configuration Manager 用戶端時，可以指定 **-httpport** 和 **-httpsport** 安裝內容來變更用戶端預設要求連接埠。 當您未指定安裝在屬性和自訂的值時，用戶端會使用預設值。 預設值為 **80** HTTP 流量和 **443** 的 HTTPS 流量。  
+ 当你安装适用于 Linux 和 UNIX 的 Configuration Manager 客户端时，你可以通过指定 **-httpport** 和 **-httpsport** 安装属性更改客户端默认请求端口 。 当未指定的安装属性和自定义的值时，客户端将使用默认值。 默认值为 **80** 对于 HTTP 流量和 **443** HTTPS 通信。  
 
- 安裝用戶端之後，您無法變更其要求的連接埠組態。 相反地，若要變更連接埠組態必須重新安裝用戶端並指定新的連接埠組態。 當您重新安裝用戶端變更要求的連接埠號碼時，執行 **安裝** 命令類似於新的用戶端安裝，但使用的其他命令列屬性 **-keepdb**。 此參數會指示要保留的用戶端資料庫和檔案包括用戶端 GUID 和憑證存放區安裝。  
+ 安装客户端后，不能更改其请求端口配置。 相反，若要更改端口配置必须重新安装客户端并指定新的端口配置。 当你重新安装客户端以更改请求端口号时，运行 **安装** 命令类似于新的客户端安装，但使用的其他命令行属性 **-keepdb**。 此开关将指示要保留的客户端数据库和文件包括客户端 GUID 和证书存储区的安装。  
 
- 如需用戶端通訊連接埠號碼的詳細資訊，請參閱[如何在 System Center Configuration Manager 中設定用戶端通訊連接埠](../../../core/clients/deploy/configure-client-communication-ports.md)。  
+ 有关客户端通信端口号的详细信息，请参阅[如何在 System Center Configuration Manager 中配置客户端通信端口](../../../core/clients/deploy/configure-client-communication-ports.md)。  
 
-##  <a name="BKMK_ConfigClientMP"></a> 設定用於 Linux 和 UNIX 找出管理點的用戶端  
- 安裝 Linux 和 UNIX Configuration Manager 用戶端時，必須指定作為初始連絡點使用的管理點。  
+##  <a name="BKMK_ConfigClientMP"></a> 配置客户端适用于 Linux 和 UNIX 来查找管理点  
+ 在安装适用于 Linux 和 UNIX 的 Configuration Manager 客户端时，必须指定用作初始联系点的管理点。  
 
- Linux 和 UNIX Configuration Manager 用戶端會在用戶端安裝時連絡這個管理點。 如果用戶端無法連絡管理點，則用戶端軟體會繼續重試，直到成功為止。  
+ 适用于 Linux 和 UNIX 的 Configuration Manager 客户端将在客户端安装时联系此管理点。 如果客户端无法联系管理点，客户端软件将不断重试直到成功。  
 
- 如需用戶端如何找到管理點的詳細資訊，請參閱 [Locating Management Points](/sccm/core/clients/deploy/assign-clients-to-a-site#locating-management-points)。
+ 有关客户端如何查找管理点的详细信息，请参阅 [Locating Management Points](/sccm/core/clients/deploy/assign-clients-to-a-site#locating-management-points)。

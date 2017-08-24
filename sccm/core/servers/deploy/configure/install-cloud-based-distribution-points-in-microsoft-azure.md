@@ -1,6 +1,6 @@
 ---
-title: "安裝雲端架構發佈點 | Microsoft Docs"
-description: "了解該如何在 Microsoft Azure 中開始使用雲端發佈點。"
+title: "安装基于云的分发点 | Microsoft Docs"
+description: "了解在 Microsoft Azure 中，开始使用基于云的分发点需要执行的操作。"
 ms.custom: na
 ms.date: 2/8/2017
 ms.prod: configuration-manager
@@ -17,116 +17,116 @@ manager: angrobe
 ms.openlocfilehash: 39b35cccf78bba4e69a7de0ca3a5a8dc516201e3
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="install-cloud-based-distribution-points-in-microsoft-azure-for-system-center-configuration-manager"></a>在 Microsoft Azure 中，安裝 System Center Configuration Manager 的雲端架構發佈點
+# <a name="install-cloud-based-distribution-points-in-microsoft-azure-for-system-center-configuration-manager"></a>在 Microsoft Azure 中安装 System Center Configuration Manager 基于云的分发点
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-在 Microsoft Azure 中，您可以安裝 System Center Configuration Manager 的雲端架構發佈點。 如果您不熟悉雲端式發佈點，請先參閱[使用雲端式發佈點](../../../../core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md)再繼續。
+可以在 Microsoft Azure 中安装 System Center Configuration Manager 基于云的分发点。 如果不熟悉基于云的分发点，继续操作前请先参阅[使用基于云的分发点](../../../../core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md)。
 
- 開始安裝之前，請確定您擁有必要的憑證檔案：  
+ 开始安装前，请确保具有必需的证书文件：  
 
--   匯出至 .cer 檔及 .pfx 檔的 Microsoft Azure 管理憑證。  
+-   已导出为 .cer 文件和 .pfx 文件的 Microsoft Azure 管理证书。  
 
--   匯出至 .pfx 檔的 Configuration Manager 雲端架構發佈點服務憑證。  
+-   已导出到 .pfx 文件的 Configuration Manager 基于云的分发点服务证书。  
 
     > [!TIP]
-    >   如需這些憑證的詳細資訊，請參閱 [System Center Configuration Manager 的 PKI 憑證需求](../../../../core/plan-design/network/pki-certificate-requirements.md)主題中的＜雲端架構發佈點＞一節。 如需雲端式發佈點服務憑證的部署範例，請參閱[為 System Center Configuration Manager 部署 PKI 憑證的逐步範例：Windows Server 2008 憑證授權單位](/sccm/core/plan-design/network/example-deployment-of-pki-certificates)中的＜為雲端式發佈點部署服務憑證＞。  
+    >   有关这些证书的详细信息，请参阅 [System Center Configuration Manager 的 PKI 证书要求](../../../../core/plan-design/network/pki-certificate-requirements.md)主题中有关基于云的分发点部分。 有关基于云的分发点服务证书的部署示例，请参阅 [System Center Configuration Manager PKI 证书的分步部署示例：Windows Server 2008 证书认证](/sccm/core/plan-design/network/example-deployment-of-pki-certificates)中的“部署基于云的分发点服务证书”。  
 
 
- 安裝雲端式發佈點之後，Azure 會自動為服務產生 GUID，並將此 GUID 附加至 **cloudapp.net** 的 DNS 尾碼。 您必須使用此 GUID 設定 DNS 的 DNS 別名 (CNAME 記錄)。 這可讓您將在 Configuration Manager 雲端式發佈點服務憑證中定義的服務名稱對應至自動產生的 GUID。  
+ 安装基于云的分发点后，Azure 将自动为服务生成 GUID，并将其附加到 **cloudapp.net** 的 DNS 后缀上。 使用此 GUID 时，必须配置带 DNS 别名的 DNS（CNAME 记录）。 由此，你可将在 Configuration Manager 基于云的分发点服务证书中定义的服务名称映射到自动生成的 GUID。  
 
- 如果您使用 Proxy Web 伺服器，可能需要設定 Proxy 設定才能與裝載發佈點的雲端服務進行通訊。  
+ 如果使用代理 Web 服务器，你可能必须配置代理设置以实现与承载分发点的云服务的通信。  
 
-##  <a name="BKMK_ConfigWindowsAzureandInstallDP"></a> 設定 Azure 和安裝雲端式發佈點  
- 使用下列程序設定 Azure 以支援發佈點，然後在 Configuration Manager 中安裝雲端式發佈點。  
+##  <a name="BKMK_ConfigWindowsAzureandInstallDP"></a>设置 Azure 并安装的基于云的分发点  
+ 使用以下过程设置 Azure 以支持分发点，然后在 Configuration Manager 中安装基于云的分发点。  
 
-### <a name="to-set-up-a-cloud-service-in-azure-for-a-distribution-point"></a>在 Azure 中設定發佈點的雲端服務  
+### <a name="to-set-up-a-cloud-service-in-azure-for-a-distribution-point"></a>在 Azure 中为分发点设置云服务  
 
-1.  開啟網頁瀏覽器進入 Azure 入口網站 (網址為 https://manage.windowsazure.com )，然後存取您的帳戶。  
+1.  打开 Web 浏览器，转到 Azure 门户（网址为 https://manage.windowsazure.com），并访问你的帐户。  
 
-2.  按一下 [託管服務、儲存體帳戶和 CDN]，然後選取 [管理憑證]。  
+2.  单击“托管服务、存储帐户和 CDN”，然后选择“管理证书”。  
 
-3.  以滑鼠右鍵按一下您的訂閱，然後選取 [加入憑證] 。  
+3.  右键单击你的订阅，然后选择“添加证书” 。  
 
-4.  指定包含所匯出 Azure 管理憑證的 .cer 檔作為 [憑證檔案] 以用於此雲端服務，然後按一下 [確定]。  
+4.  对于“证书文件”，请指定 .cer 文件并单击“确定”；其中该文件包含要用于此云服务的已导出 Azure 管理证书。  
 
-管理憑證會載入 Azure 中，而您現在可以安裝雲端式發佈點。  
+管理证书随即加载到 Azure 中，此时即可安装基于云的分发点。  
 
-### <a name="to-install-a-cloud-based-distribution-point-for-configuration-manager"></a>若要安裝 Configuration Manager 的雲端架構發佈點  
+### <a name="to-install-a-cloud-based-distribution-point-for-configuration-manager"></a>为 Configuration Manager 安装基于云的分发点  
 
-1.  完成前述程序中的步驟，設定 Azure 中雲端服務的管理憑證。  
+1.  完成前面过程中的步骤，在 Azure 中使用管理证书设置云服务。  
 
-2.  在 Configuration Manager 主控台的 [系統管理] 工作區中，展開 [雲端服務]，然後選取 [雲端發佈點]。 在 [常用] 索引標籤上，按一下 [建立雲端發佈點]。  
+2.  在 Configuration Manager 控制台的“管理”工作区中，展开“云服务”，然后选择“云分发点”。 在“主页”选项卡上，单击“创建云分发点”。  
 
-3.  在 [建立雲端發佈點精靈] 的 [一般] 頁面上，設定下列各項：  
+3.  在创建云分发点向导的“常规”页上，设置以下各项：  
 
-    -   指定 [訂用帳戶識別碼] 作為 Azure 帳戶。  
+    -   指定 Azure 帐户的“订阅 ID”。  
 
         > [!TIP]  
-        >  您可以在 Azure 入口網站中找到您的 Azure 訂用帳戶識別碼。  
+        >  可在 Azure 门户中找到 Azure 订阅 ID。  
 
-    -   指定 [管理憑證] 。 按一下 [瀏覽] 指定包含所匯出 Azure 管理憑證的 .pfx 檔，然後輸入憑證的密碼。 您可以選擇從 Azure SDK 1.7 指定第 1 版 .publishsettings 檔案。  
+    -   指定“管理证书” 。 单击“浏览”指定 .pfx 文件，然后输入证书密码；其中该文件包含已导出的 Azure 管理证书。 （可选）可指定 Azure SDK 1.7 中的版本 1 .publishsettings 文件。  
 
-4.  按一下 [下一步] 。 Configuration Manager 會連線到 Azure 以驗證管理憑證。  
+4.  单击“下一步” 。 Configuration Manager 将连接到 Azure 以验证管理证书。  
 
-5.  在 [設定] 頁面上完成下列設定，然後按一下 [下一步]：  
+5.  在“设置”页上，完成以下设置，然后单击“下一步”：  
 
-    -   針對 [區域]，選取您要建立裝載此發佈點之雲端服務的 Azure 區域。  
+    -   对于“区域”，选择要在其中创建承载此分发点的云服务的 Azure 区域。  
 
-    -   針對 [憑證檔案]，請指定包含所匯出 Configuration Manager 雲端式發佈點服務憑證的 .pfx 檔案。 然後輸入密碼。  
+    -   对于“证书文件”，请指定 .pfx 文件（其中包含已导出的 Configuration Manager 基于云的分发点服务）。 然后输入密码。  
 
         > [!NOTE]  
-        >  會自動從憑證主體名稱填入 [服務 FQDN] 方塊。 在大部分情況下，您不需要再進行編輯。 例外狀況是您在測試環境中使用萬用字元憑證時。 例如，在此情況下，您可能未指定主機名稱，因此多部具有相同 DNS 尾碼的電腦可以使用憑證。 在此案例中，憑證主體會包含類似 **CN=\*.contoso.com** 的值，而 Configuration Manager 會顯示您必須指定正確 FQDN 的訊息。 按一下 [確定]  關閉訊息，然後在 DNS 尾碼前面輸入特定名稱，以提供完整的 FQDN。 例如，您可以新增 **clouddp1** 指定完整服務 FQDN **clouddp1.contoso.com**。 在您的網域中，服務 FQDN 必須是唯一的，不符合任何加入網域的裝置。  
+        >  将在“服务 FQDN”框中自动填写证书使用者名称。 多数情况下，无需编辑该名称。 在测试环境中使用通配证书的情况除外。 例如，该情况下可能未指定主机名，因此具有相同 DNS 后缀的多台计算机均可使用该证书。 此情况下，证书使用者具有类似于 **CN=\*.contoso.com** 的值，并且 Configuration Manager 将显示消息指示必须指定正确的 FQDN。 单击“确定”  关闭消息，然后在 DNS 后缀前输入特定名称以提供完整的 FQDN。 例如，可以添加 **clouddp1** 以指定 **clouddp1.contoso.com**的完整服务 FQDN。 域中的服务 FQDN 必须唯一，且与所有加入域的设备均不匹配。  
         >   
-        >  萬用字元憑證僅在測試環境中支援。  
+        >  仅支持在测试环境中使用通配证书。  
 
-6.  在 [警示] 頁面上，設定儲存配額、傳輸配額，以及您想讓 Configuration Manager 產生警示的這些配額百分比。 然後按 [下一步] 。  
+6.  在“警报”页上，设置存储配额、传输配额以及希望 Configuration Manager 在达到这些配额的百分之几时生成警报。 然后单击 **“下一步”**。  
 
-7.  完成精靈。  
+7.  完成向导。  
 
-精靈會為雲端架構發佈點建立新的託管服務。 關閉精靈後，您可以在 Configuration Manager 主控台中監視雲端式發佈點的安裝進度。 您也可以監視主要站台伺服器上的 **CloudMgr.log** 檔案。 您可以在 Azure 入口網站中監視雲端服務的佈建。  
+向导将为基于云的分发点创建一个新的托管服务。 关闭向导后，可在 Configuration Manager 控制台中监视基于云的分发点的安装进度。 还可监视主站点服务器上的 **CloudMgr.log** 文件。 可在 Azure 门户中监视云服务的预配情况。  
 
 > [!NOTE]  
->  在 Azure 中佈建新的發佈點可能需要長達 30 分鐘的時間。 佈建儲存體帳戶之前，**CloudMgr.log** 檔案中會重複出現下列訊息：**Waiting for check if container exists.Will check again in 10 seconds (等候檢查容器是否存在。10 秒後將再次檢查)**。 然後服務便會建立及設定。  
+>  在 Azure 中设置新的分发点最多可能需要 30 分钟。 以下消息将在 **CloudMgr.log** 文件中重复出现，直到预配了存储帐户为止：**Waiting for check if container exists。Will check again in 10 seconds**（正在等待检查容器是否存在。将在 10 秒内再次检查）。 然后将创建并配置服务。  
 
- 您可以使用下列方法識別雲端架構發佈點安裝已完成：  
+ 你可以通过使用以下方法来确定基于云的分发点安装已完成：  
 
--   在 Azure 入口網站中，雲端式發佈點的 [部署] 狀態顯示為 [就緒]。  
+-   在 Azure 门户中，基于云的分发点的“部署”显示“就绪”状态。  
 
--   在 Configuration Manager 主控台中，於 [系統管理] 工作區、[階層設定] 和 [雲端] 節點中，雲端式發佈點會將狀態顯示為 [就緒]。  
+-   在 Configuration Manager 控制台中，访问“层次结构”工作区 >“层次结构配置”>“云”节点，可发现基于云的分发点显示“就绪”状态。  
 
--   Configuration Manager 會顯示 SMS_CLOUD_SERVICES_MANAGER 元件的狀態訊息識別碼 **9409**。  
+-   Configuration Manager 显示 SMS_CLOUD_SERVICES_MANAGER 组件的状态消息 ID **9409** 。  
 
-##  <a name="BKMK_ConfigDNSforCloudDPs"></a> 設定雲端式發佈點的名稱解析  
- 用戶端必須能夠將雲端式發佈點的名稱解析到 Azure 所管理的 IP 位址，才能存取雲端式發佈點。 用戶端會分兩個階段執行此動作：  
+##  <a name="BKMK_ConfigDNSforCloudDPs"></a>为基于云的分发点设置名称解析  
+ 客户端必须能够将基于云的分发点的名称解析为 Azure 管理的 IP 地址，然后才能访问基于云的分发点。 客户端分两个阶段执行此操作：  
 
-1.  它們會將您連同 Configuration Manager 雲端式發佈點服務憑證一併提供的服務名稱，對應到您的 Azure 服務 FQDN。 這個 FQDN 包含 GUID 及 **cloudapp.net**的 DNS 尾碼。 GUID 是在您安裝雲端架構發佈點後自動產生的。 您可以參照雲端服務儀表板中的 [SITE URL]，在 Azure 入口網站中查看完整 FQDN。 範例站台 URL 是 **http://d1594d4527614a09b934d470.cloudapp.net**。  
+1.  客户端会将随 Configuration Manager 基于云的分发点服务证书一起提供的服务名称映射到 Azure 服务 FQDN。 此 FQDN 包含 GUID 和 **cloudapp.net**的 DNS 后缀。 GUID 是在安装基于云的分发点之后自动生成的。 若要在 Azure 门户中查看完整 FQDN，可参考云服务仪表板中的“站点 URL”。 站点 URL 的示例为“http://d1594d4527614a09b934d470.cloudapp.net” 。  
 
-2.  他們會將 Azure 服務 FQDN 解析到 Azure 配置的 IP 位址。 在 Azure 入口網站的雲端服務儀表板也可以識別此 IP 位址，並命名為 **PUBLIC VIRTUAL IP ADDRESS (VIP)**。  
+2.  客户端将 Azure 服务 FQDN 解析为 Azure 分配的 IP 地址。 此 IP 地址还可通过 Azure 门户的云服务仪表板查看，并命名为“公共虚拟 IP 地址(VIP)”。  
 
-若要將您連同 Configuration Manager 雲端式發佈點服務憑證 (例如 **clouddp1.contoso.com**) 一併提供的服務名稱對應到 Azure 服務 FQDN (例如 **d1594d4527614a09b934d470.cloudapp.net**)，則網際網路上的 DNS 伺服器必須擁有一個 DNS 別名 (CNAME 記錄)。 然後，用戶端可以使用網際網路上的 DNS 伺服器，將 Azure 服務 FQDN 解析到 IP 位址。  
+若要将随 Configuration Manager 基于云的分发点服务证书一起提供的服务名称（如 **clouddp1.contoso.com**）映射到 Azure 服务 FQDN（如 **d1594d4527614a09b934d470.cloudapp.net**），Internet 上的 DNS 服务器必须具有 DNS 别名（CNAME 记录）。 然后，客户端可通过 Internet 上的 DNS 服务器将 Azure 服务 FQDN 解析为 IP 地址。  
 
-##  <a name="BKMK_ConfigProxyforCloud"></a> 為管理雲端服務的主要站台設定 Proxy 設定  
- 搭配使用雲端服務與 Configuration Manager 時，管理雲端式發佈點的主要站台必須能夠連線到 Azure 入口網站。 此站台會使用主要站台電腦的「系統」帳戶進行連線。 此連線是利用主要站台伺服器電腦上的預設網頁瀏覽器而建立的。  
+##  <a name="BKMK_ConfigProxyforCloud"></a>为管理云服务的主站点设置代理设置  
+ 将云服务与 Configuration Manager 结合使用时，管理基于云的分发点的主站点必须能够连接到 Azure 门户。 该站点使用主站点计算机的**系统**帐户进行连接。 此连接通过使用默认 Web 浏览器在主站点服务器计算机上进行。  
 
- 在管理雲端式發佈點的主要站台伺服器上，您可能必須設定 Proxy 設定值，才能讓主要站台存取網際網路和 Azure。  
+ 在管理基于云的分发点的主站点服务器上，可能必须设置代理设置，才可使主站点访问 Internet 和 Azure。  
 
- 使用下列程序，在 Configuration Manager 主控台為主要站台伺服器設定 Proxy 設定。  
+ 在 Configuration Manager 控制台中使用下列过程为主站点服务器设置代理设置。  
 
 > [!TIP]  
->  您也可以使用 [新增站台系統角色精靈]，在主要站台伺服器上安裝新的站台系統角色時設定 Proxy 伺服器。  
+>  通过“添加站点系统角色向导”在主站点服务器上安装新站点系统角色时，也可设置代理服务器。  
 
-#### <a name="to-set-up-proxy-settings-for-the-primary-site-server"></a>為主要站台伺服器設定 Proxy 設定  
+#### <a name="to-set-up-proxy-settings-for-the-primary-site-server"></a>为主站点服务器设置代理设置  
 
-1.  在 Configuration Manager 主控台中，按一下 [系統管理] 。  
+1.  在 Configuration Manager 控制台中，单击“管理” 。  
 
-2.  在 [系統管理]  工作區中，展開 [站台設定] ，然後按一下 [伺服器和站台系統角色] 。 然後選取管理雲端式發佈點的主要站台伺服器。  
+2.  在“管理”  工作区中，展开“站点配置” ，并单击“服务器和站点系统角色” 。 然后选择用于管理基于云的分发点的主站点服务器。  
 
-3.  在詳細資料窗格中，用滑鼠右鍵按一下 [站台系統] ，再按一下 [內容] 。  
+3.  在详细信息窗格中，右键单击“站点系统” ，然后单击“属性” 。  
 
-4.  在 [站台系統內容] 中，選取 [Proxy] 索引標籤，然後為這個主要站台伺服器設定 Proxy 設定。  
+4.  在“站点系统属性”中，选择“代理”选项卡，然后设置此主站点服务器的代理设置。  
 
-5.  按一下 [確定] 儲存設定。  
+5.  单击“确定”以保存设置。  

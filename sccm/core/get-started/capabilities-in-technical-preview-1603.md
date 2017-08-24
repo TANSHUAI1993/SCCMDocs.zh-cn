@@ -1,6 +1,6 @@
 ---
 title: "Technical Preview 1603 Configuration Manager 中的功能"
-description: "了解 System Center Configuration Manager Technical Preview 1603 版中可用的功能。"
+description: "了解 System Center Configuration Manager Technical Preview 1603 版中的可用功能。"
 ms.custom: na
 ms.date: 01/23/2017
 ms.prod: configuration-manager
@@ -18,77 +18,77 @@ robots: noindex,nofollow
 ms.openlocfilehash: dee2b4ce042bb4a434bb019e17a6b16e2807945c
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="capabilities-in-technical-preview-1603-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1603 中的功能
+# <a name="capabilities-in-technical-preview-1603-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1603 版中的功能
 
-適用於︰System Center Configuration Manager (Technical Preview)
+*适用范围：System Center Configuration Manager (Technical Preview)*
 
-本文介紹 System Center Configuration Manager Technical Preview 1603 版中可用的功能。 您可以安裝此版本，以更新並新增功能至 Configuration Manager Technical Preview 站台。 或者，當您使用 System Center Technical Preview 5 時，此版本會安裝成 System Center Configuration Manager Technical Preview 的基準版本。 安裝此版本的 Technical Preview 之前，請檢閱 [System Center Configuration Manager 的 Technical Preview](../../core/get-started/technical-preview.md) 簡介主題，以熟悉使用 Technical Preview 的一般需求和限制、如何在版本之間進行更新，以及如何針對 Technical Preview 中的功能提供意見反應。  
+本文介绍了 System Center Configuration Manager Technical Preview 1603 版中的可用功能。 可以安装此版本以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。 或者，如果使用的是 System Center Technical Preview 5，此版本将作为 System Center Configuration Manager Technical Preview 的基准版本安装。 在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。  
 
- **此 Technical Preview 的已知問題：**  
+ **此 Technical Preview 中的已知问题：**  
 
--   此版本包含先前所發行功能的更新，但並未導入新功能。 因此，如果您先前已升級到 1602 並啟用 1602 包含的所有功能，「更新精靈」的 [功能] 頁面將會是空白的。  
+-   此版本包括以前发布的功能的更新，但不会引入新功能。 因此，如果以前升级到 1602 并启用了 1602 中包含的所有功能，则更新向导的“功能”页将为空。  
 
--   在您的站台伺服器更新到 Technical Preview 1603 之後，用戶端也必須一併更新到 1603 版本，才能使用任何遠端控制功能。  
+-   站点服务器更新到 Technical Preview 1603 之后，客户端无法使用任何远程控制功能，直到它们也更新到版本 1603。  
 
- **以下是您可以使用此版本試用的新功能。**  
+ **以下是可以试用的此版本的新功能。**  
 
-##  <a name="BKMK_SC1603"></a> 軟體中心的增強功能  
+##  <a name="BKMK_SC1603"></a>对软件中心的改进  
 
-### <a name="new-tiled-view-for-apps"></a>新的應用程式並排顯示檢視  
- 使用者現在可以在「軟體中心」的 [應用程式] 索引標籤中，於應用程式清單或應用程式並排顯示檢視之間做選擇。  
+### <a name="new-tiled-view-for-apps"></a>应用的新平铺视图  
+ 最终用户现在可以在软件中心的“应用程序”选项卡中选择应用列表或应用的平铺视图。  
 
-### <a name="select-multiple-updates-in-software-center"></a>在軟體中心中選取多個更新  
- 在「軟體中心」的 [更新] 索引標籤中，您現在可以選取多個更新或選取 [全部更新]，以開始同時安裝多個更新。  
+### <a name="select-multiple-updates-in-software-center"></a>在软件中心中选择多个更新  
+ 在软件中心的“更新”选项卡中，现在可以选择多个更新，或选择“全部更新”以开始同时安装多个更新。  
 
-##  <a name="BKMK_RC1603"></a> 對遠端控制的改進  
+##  <a name="BKMK_RC1603"></a>对远程控制的改进  
 
-### <a name="limit-shared-clipboard-access-in-a-remote-control-session"></a>限制遠端控制工作階段中的共用剪貼簿存取  
- 您現在可以啟用新的遠端工具用戶端設定 「Prompt user for shared clipboard file transfer permission」 (提示使用者提供共用剪貼簿檔案傳輸權限)，以限制對遠端控制工作階段中共用剪貼簿的存取。  
+### <a name="limit-shared-clipboard-access-in-a-remote-control-session"></a>在远程控制会话中限制共享剪贴板访问  
+ 现在可以启用新的远程工具客户端设置“提示用户提供共享剪贴板文件传输权限”，以在远程控制会话中限制对共享剪贴板的访问。  
 
- 啟用時，共用遠端工作階段的使用者必須先將權限授與該工作階段的檢視者，該檢視者才能透過共用剪貼簿將檔案從該工作階段傳輸到其本機電腦。  
+ 启用时，共享远程会话的最终用户必须先向该会话的查看者授予权限，然后查看者才能通过共享剪贴板将文件从会话传输到其本地计算机。  
 
- 這會如同先前一樣為使用者增加一層保護，如果檢視者獲授與使用者電腦的完整控制權，他們將能以該使用者完全無法察覺的方式，使用共用剪貼簿將檔案從工作階段傳輸到其本機電腦。  
+ 这会如同以前一样为最终用户添加一层保护，如果向查看者授予了最终用户计算机的完全控制，则他们能够采用对最终用户完全透明的方式，使用共享剪贴板将文件从会话传输到其本地计算机。  
 
-##  <a name="BKMK_RamDiskTFTP"></a> 自訂支援 PXE 之發佈點的相關 RamDisk TFTP 區塊大小和視窗大小  
- 在 1603 Technical Preview 中，您可以為支援 PXE 的發佈點自訂 RamDisk TFTP 區塊大小和視窗大小。 如果您已自訂網路，可能會導致開機映像下載因發生逾時錯誤而失敗，因為區塊或視窗大小太大。 自訂 RamDisk TFTP 區塊大小和視窗大小可讓您在使用 PXE 來滿足特定的網路需求時，將 TFTP 流量最佳化。   
-您將需要在您的環境中測試自訂的設定，以確定最有效率的設定是哪一個。  
+##  <a name="BKMK_RamDiskTFTP"></a> 在启用 PXE 的分发点上自定义 RamDisk TFTP 块大小和窗口大小  
+ 在 1603 Technical Preview 中，可以为启用 PXE 的分发点自定义 RamDisk TFTP 块大小和窗口大小。 如果自定义了网络，则可能导致启动映像下载由于超时错误而失败，因为块大小或窗口大小太大。 通过 RamDisk TFTP 块大小和窗口大小自定义可以在使用 PXE 时优化 TFTP 流量，以满足特定网络要求。   
+需要在环境中测试自定义设置以确定最高效的设置。  
 
--   **TFTP 區塊大小**︰區塊大小是伺服器傳送給下載檔案之用戶端的資料封包大小 (如 RFC 2347 所述)。 區塊大小越大，伺服器傳送的封包就越少，因此伺服器與用戶端之間的來回延遲也較少。 不過，較大的區塊大小會導致封包分散，而大多數 PXE 用戶端實作並不支援分散的封包。  
+-   **TFTP 块大小**：块大小是服务器发送到下载文件（如 RFC 2347 中所述）的客户端的数据包大小。 较大的块大小使服务器可以发送较少的数据包，因此服务器与客户端之间的往返延迟较少。 但是，较大的块大小会导致零碎的数据包，而大多数 PXE 客户端实现不支持这一点。  
 
--   **TFTP 視窗大小**：TFTP 針對每個傳送的資料區塊都會要求一個認可 (ACK) 封包。 伺服器在收到上一個區塊的 ACK 封包之前，不會傳送順序中的下一個區塊。 TFTP 視窗化是「Windows 部署服務」中的一項功能，可讓您定義填滿視窗所需的資料區塊數量。 伺服器會以背對背的方式傳送資料區塊，直到填滿視窗為止，然後用戶端會傳送 ACK 封包。 增加此視窗大小可降低用戶端與伺服器之間的來回延遲數，並縮短下載開機映像所需的整體時間。  
+-   **TFTP 窗口大小**：对于发送的每个数据块，TFTP 需要确认 (ACK) 数据包。 服务器在收到上一个块的 ACK 数据包之前，不会发送序列中的下一个块。 TFTP 窗口是 Windows 部署服务中的一个功能，使你可以定义填满窗口所需的数据块数。 服务器在窗口填满之前会背靠背地发送数据块，随后客户端会发送 ACK 数据包。 增加此窗口大小会减少客户端与服务器之间的往返延迟数，并缩短下载启动映像所需的总体时间。  
 
-### <a name="try-it-out"></a>試試看！  
- 請嘗試完成下列工作，然後使用本主題頂端附近的意見反應資訊，告訴我們工作的成效：  
+### <a name="try-it-out"></a>试试看！  
+ 尝试完成下面的任务，然后使用本主题顶部附近的反馈信息，让我们知道它的工作方式：  
 
--   我可以自訂支援 PXE 之發佈點的相關 RamDisk TFTP 視窗大小。  
+-   我可以在启用 PXE 的分发点上自定义 RamDisk TFTP 窗口大小。  
 
--   我可以自訂支援 PXE 之發佈點的相關 RamDisk TFTP 區塊大小。  
+-   我可以在启用 PXE 的分发点上自定义 RamDisk TFTP 块大小。  
 
-### <a name="to-modify-the-ramdisk-tftp-window-size"></a>修改 RamDisk TFTP 視窗大小  
+### <a name="to-modify-the-ramdisk-tftp-window-size"></a>修改 RamDisk TFTP 窗口大小  
 
--   新增支援 PXE 之發佈點的下列相關登錄機碼以自訂 RamDisk TFTP 視窗大小：  
-
-     **位置**：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\DP  
-    名稱：RamDiskTFTPWindowSize  
-
-     **類型**：REG_DWORD  
-
-     **值**：&lt;自訂視窗大小\>  
-
- 預設值為 1 (1 個資料區塊填滿視窗)  
-
-### <a name="to-modify-the-ramdisk-tftp-block-size"></a>修改 RamDisk TFTP 區塊大小  
-
--   新增支援 PXE 之發佈點的下列相關登錄機碼以自訂 RamDisk TFTP 視窗大小：  
+-   在启用 PXE 的分发点上添加以下注册表项以自定义 RamDisk TFTP 窗口大小：  
 
      **位置**：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\DP  
-    名稱：RamDiskTFTPBlockSize  
+    名称：RamDiskTFTPWindowSize  
 
-     **類型**：REG_DWORD  
+     **类型**：REG_DWORD  
 
-     **值**：&lt;自訂區塊大小\>  
+     **值**：&lt;customized window size\>  
 
- 預設值為 4096 (4k)。  
+ 默认值为 1（1 个数据块填满窗口）  
+
+### <a name="to-modify-the-ramdisk-tftp-block-size"></a>修改 RamDisk TFTP 块大小  
+
+-   在启用 PXE 的分发点上添加以下注册表项以自定义 RamDisk TFTP 窗口大小：  
+
+     **位置**：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\DP  
+    名称：RamDiskTFTPBlockSize  
+
+     **类型**：REG_DWORD  
+
+     **值**：&lt;customized block size\>  
+
+ 默认值为 4096 (4k)。  

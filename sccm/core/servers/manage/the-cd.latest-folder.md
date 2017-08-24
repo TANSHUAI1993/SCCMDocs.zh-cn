@@ -1,6 +1,6 @@
 ---
-title: "CD.Latest 資料夾 | Microsoft Docs"
-description: "了解從 Configuration Manager 主控台內進行產品更新的新更新程序。"
+title: "CD.Latest 文件夹 | Microsoft Docs"
+description: "了解有关新的更新过程的详细信息，该过程会从 Configuration Manager 控制台内部将更新传递到产品。"
 ms.custom: na
 ms.date: 05/02/2017
 ms.prod: configuration-manager
@@ -17,47 +17,47 @@ manager: angrobe
 ms.openlocfilehash: 5c39e09b44500fa2f356f83579bb2fb2c1d0e937
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="the-cdlatest-folder-for-system-center-configuration-manager"></a>System Center Configuration Manager 的 CD.Latest 資料夾
+# <a name="the-cdlatest-folder-for-system-center-configuration-manager"></a>System Center Configuration Manager 的 CD.Latest 文件夹
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager 引進新的更新程序，可從 Configuration Manager 主控台內進行產品更新。 為了支援這個 Configuration Manager 的全新更新方法，系統會建立一個名稱為 **CD.Latest** 的新資料夾，此資料夾包含一份適用於您的站台更新版本的 Configuration Manager 安裝檔案。  
+System Center Configuration Manager 引入一种新的更新过程，该过程会从 Configuration Manager 控制台内部将更新传递到产品。 为了支持这种更新 Configuration Manager 的新方法，创建了一个名为 **CD.Latest** 的新文件夹，其中包含用于站点的更新版本的 Configuration Manager 安装文件副本。  
 
-從 1606 更新開始，CD.Latest 資料夾包含名為 **Redist** 的資料夾，其中含有安裝程式下載並使用的可轉散發檔案。 這些檔案會與該 CD.Latest 資料夾中找到的 Configuration Manager 檔案版本相符。 當您從 CD.Latest 資料夾執行安裝程式時，必須使用與該版本安裝程式相符的檔案。 若要執行這項操作，您可以指示安裝程式從 Microsoft 下載最新的檔案，或指示安裝程式使用來自 CD.Latest 資料夾隨附之 Redist 資料夾中的檔案。
+从更新 1606 开始，CD.Latest 文件夹包含一个名为 **Redist** 的文件夹，该文件夹包含安装程序下载和使用的可再发行文件。 这些文件与在该 CD.Latest 文件夹中找到的 Configuration Manager 文件的版本相匹配。 当从 CD.Latest 文件夹运行安装程序时，必须使用与该安装程序的版本相匹配的文件。 为此，可以指示安装程序从 Microsoft 下载新文件和当前文件，或指示安装程序使用包含在 CD.Latest 文件夹中的 Redist 文件夹中的文件。
 
-不過，基準媒體 (例如在 2016 年 10 月發行的基準 1606 版) 不包括 Redist 資料夾。 除非您安裝主控台內更新，否則不會建立 Redist 資料夾。 同時，使用您從基準媒體安裝站台時所使用的 Redist 資料夾。  
+但基线媒体（例如 2016 年 10 月发布的 1606 基线版本）不包含 Redist 文件夹。 只有在安装控制台中更新后才会创建 Redist 文件夹。 同时，从基线媒体安装站点时，请使用所用 Redist 文件夹。  
 
 > [!TIP]
-> 如果您尚未安裝版本 1606，則必須確定所使用的可轉散發套件檔案是最新的。 如果您最近沒有下載可轉散發套件檔案，則可讓安裝程式從 Microsoft 下載。   
+> 如果尚未安装版本 1606，则必须确保使用的 redist 文件是最新文件。 如果你最近没有下载 redist 文件，请计划允许安装程序从 Microsoft 执行该操作。   
 
- 以下是在管理中心網站或主要站台伺服器上建立或更新 [CD.Latest] 資料夾的案例︰  
+ 下面是在管理中心站点或主站点服务器上创建或更新 CD.Latest 文件夹的方案：  
 
--   從 Configuration Manager 主控台內安裝更新或 Hotfix︰系統會在 Configuration Manager 安裝資料夾中建立或更新該資料夾。  
+-   从 Configuration Manager 控制台中安装更新或修补程序：在 Configuration Manager 安装文件夹中创建或更新该文件夹。  
 
--   執行內建的 Configuration Manager 備份工作︰系統會在指定的備份資料夾位置底下建立或更新該資料夾。  
+-   运行内置 Configuration Manager 备份任务：在指定备份文件夹位置下创建或更新该文件夹。  
 
--  從 1606 版開始，當您使用基準媒體 (例如 1606 版和 1702 版) 安裝新的站台時，會建立 CD.Latest 資料夾。
+-  自版本 1606 起，在使用基线介质（如版本 1606 或 1702）安装新网站时，将会创建 CD.Latest 文件夹。
 
-支援使用來自 [CD.Latest] 資料夾的來源檔案進行下列作業：  
+对于以下各项支出 CD.Latest 文件夹中的源文件：  
 
-1.  **備份及復原：**若要復原站台，您必須使用符合您站台之 CD.Latest 資料夾中的來源檔案。 當您使用內建站台備份工作執行站台備份時，CD.Latest 資料夾會包含為備份的一部分。
+1.  **备份和恢复：**若要恢复站点，必须使用 CD.Latest 文件夹中与站点匹配的源文件。 使用内置站点备份任务运行站点备份时，CD.Latest 文件夹作为备份的一部分包括在内。
 
-    -   **在站台復原過程中重新安裝站台時** ，您是透過備份中包含的 CD.Latest 資料夾來安裝站台。 這會使用與您站台備份和站台資料庫相符的檔案版本來安裝站台。  如果您無法存取正確的 CD.Latest 資料夾版本，您可以透過在實驗室環境中安裝站台，然後更新該站台以符合您想要復原的版本，來取得具有正確檔案版本的 CD.Latest 資料夾。
+    -   **当你在站点恢复中重新安装站点时，** 会从包含在你的备份中的 CD.Latest 文件夹安装站点。 此操作会使用与你的站点备份和站点数据库匹配的文件版本安装站点。  如果你无权访问正确的 CD.Latest 文件夹版本，你可以通过在实验室环境中安装站点，然后更新该站点以匹配你要恢复的版本，获取一个带有正确文件版本的 CD.Latest 文件夹。
 
         > [!IMPORTANT]  
-        >  如果沒有正確的 [CD.Latest] 資料夾及其內容可供使用，您就無法復原站台而必須重新安裝。  
+        >  如果你没有正确的可用 CD.Latest 文件夹及其内容，则无法恢复站点，必须重新安装它。  
 
-    -   當您沒有 [CD.Latest] 資料夾但有正常運作的子主要站台或管理中心網站時，您可以使用該站台做為進行站台復原的參照站台。  
+    -   当你没有 CD.Latest 文件夹，但是具有正常运行的子主站点或管理中心站点时，可以将该站点用作站点恢复的引用站点。  
 
-2.  **安裝子主要站台：** 若您要在已安裝一或多個主控台內更新的管理中心網站底下，安裝新的子主要站台，則必須使用安裝程式及來自管理中心網站 CD.Latest 資料夾的來源檔案。 當安裝程式從管理中心網站的 [CD.Latest] 資料夾複本執行時，它會使用與管理中心網站版本相符的安裝來源檔案。 如需詳細資訊，請參閱[使用安裝精靈安裝站台](../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md)。  
+2.  **安装子主站点：** 要在安装了一个或多个控制台内部更新的管理中心站点下安装新的子主站点，必须使用来自管理中心站点的 CD.Latest 文件夹中的安装程序和源文件。 安装程序从来自管理中心站点的 CD.Latest 文件夹副本运行时，它使用与管理中心站点版本匹配的安装源文件。 有关详细信息，请参阅[使用安装向导来安装站点](../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md)。  
 
-3.  **擴充獨立主要站台：** 藉由安裝新的管理中心網站來擴充獨立主要站台時，您必須使用安裝程式及來自主要站台 CD.Latest 資料夾的來源檔案，來安裝新的管理中心網站。 從主要站台的 [CD.Latest] 資料夾複本執行時，它會使用與主要站台版本相符的安裝來源檔案。 如需詳細資訊，請參閱[使用安裝精靈安裝站台](../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md)中的[擴充獨立主要站台](../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md#bkmk_expand)。
+3.  **扩展独立主站点：** 要通过安装新的管理中心站点来扩展独立主站点时，必须使用来自主站点的 CD.Latest 文件夹中的安装程序和源文件来安装新的管理中心站点。 从来自主站点的 CD.Latest 文件夹副本运行时，它使用与主站点版本匹配的安装源文件。 有关详细信息，请参阅[使用安装向导来安装站点](../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md)中的[扩展独立主站点](../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md#bkmk_expand))
 
 > [!IMPORTANT]  
->  不支援使用已更新的 CD.Latest 來源檔案進行下列作業：  
+>  对于以下各项不支持更新后的 CD.Latest 源文件：  
 >   
->  -   為新階層安裝新站台  
->  -   將 Microsoft System Center 2012 Configuration Manager 站台升級至 System Center Configuration Manager
+>  -   为新层次结构安装新站点  
+>  -   将 Microsoft System Center 2012 Configuration Manager 站点升级到 System Center Configuration Manager

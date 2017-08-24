@@ -1,6 +1,6 @@
 ---
-title: "憑證設定檔安全性和隱私權 | Microsoft Docs"
-description: "了解管理 System Center Configuration Manager 使用者和裝置憑證設定檔的安全性最佳作法。"
+title: "证书配置文件安全和隐私 | Microsoft Docs"
+description: "了解在 System Center Configuration Manager 中为用户和设备管理证书配置文件的最佳安全做法。"
 ms.custom: na
 ms.date: 12/28/2016
 ms.prod: configuration-manager
@@ -18,32 +18,32 @@ manager: angrobe
 ms.openlocfilehash: c51787ad3fa0bdb285017cfab1ca6931afba9ea6
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="security-and-privacy-for-certificate-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager 的憑證設定檔安全性和隱私權
+# <a name="security-and-privacy-for-certificate-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager 中证书配置文件的安全和隐私
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 
-##  <a name="security-best-practices-for-certificate-profiles"></a>憑證設定檔的安全性最佳作法  
- 您管理使用者和裝置的憑證設定檔時，可使用下列安全性最佳作法。  
+##  <a name="security-best-practices-for-certificate-profiles"></a>证书配置文件的最佳安全方案  
+ 在为用户和设备管理证书配置文件时，请使用下列最佳安全方案。  
 
-|安全性最佳作法|詳細資訊|  
+|最佳安全方案|更多信息|  
 |----------------------------|----------------------|  
-|識別並遵循任何網路裝置註冊服務的安全性最佳實務，包含在 Internet Information Services (IIS) 設定網路裝置註冊服務網站，要求使用 SSL 並忽略用戶端的憑證。|請參閱 TechNet 上 Active Directory 憑證服務文件庫中的 [網路裝置註冊服務指南](http://go.microsoft.com/fwlink/p/?LinkId=309016) 。|  
-|當您設定 SCEP 憑證設定檔時，請選擇裝置和基礎結構可支援的最安全選項。|識別、實作及遵循為您的裝置和基礎結構所建議的任何安全性最佳作法。|  
-|手動指定使用者裝置親和性，而不是讓使用者識別自己的主要裝置。 此外，請勿啟用基於使用方式的設定。|如果您按一下 SCEP 憑證設定檔中的 [只允許在使用者主要裝置上註冊憑證]  選項，請勿將由使用者或裝置收集到的資訊視為已授權。 如果您使用此設定來部署 SCEP 憑證設定檔，而且信任的系統管理使用者未指定使用者裝置親和性，未授權的使用者可能會因而獲得較高的權限，以及被授與驗證憑證。<br /><br /> **注意：** 如果您確實啟用了基於使用方式的設定，則會藉由使用未受到 System Center Configuration Manager 保護的狀態訊息來收集此資訊。 若要降低此威脅，請在用戶端電腦和管理點之間使用 SMB 簽署或 IPsec。|  
-|請勿將使用者的讀取及註冊權限加入憑證範本，或設定憑證登錄點跳過憑證範本檢查。|雖然 Configuration Manager 支援額外檢查以確認您是否新增使用者的讀取及註冊安全性權限，但是您也可以在無法驗證時設定憑證登錄點以跳過該檢查，但這兩種設定都不是安全性最佳作法。 如需詳細資訊，請參閱[規劃憑證設定檔在 System Center Configuration Manager 中的憑證範本權限](../../protect/plan-design/planning-for-certificate-template-permissions.md)。|  
+|确定并遵循网络设备注册服务的下列任何最佳安全方案，包括在 Internet Information Services (IIS) 中将网络设备注册服务网站配置为需要 SSL 和忽略客户端证书。|请参阅 TechNet 上 Active Directory 证书服务库中的 [Network Device Enrollment Service Guidance（网络设备注册服务指导）](http://go.microsoft.com/fwlink/p/?LinkId=309016) 。|  
+|在配置 SCEP 证书配置文件时，请选择设备和基础结构可支持的最安全选项。|确定、实施和遵循已为你的设备和基础结构推荐的任何最佳安全方案。|  
+|手动指定用户设备相关性，而不是允许用户确定其主设备。 此外，不要启用基于使用情况的配置。|如果在 SCEP 证书配置文件中单击“仅允许在用户主设备上进行证书注册”  选项，请不要考虑从用户处或从要成为权威设备的设备中收集的信息。 如果随此配置一起部署 SCEP 证书配置文件，并且受信任的管理用户未指定用户设备相关性，则未授权用户可能会收到提升的权限，并且会被授予身份验证证书。<br /><br /> **注意：**如果确实启用基于使用情况的配置，则会使用未受 System Center Configuration Manager 保护的状态消息收集此信息。 为了帮助减轻此威胁，请在客户端计算机和管理点之间使用 SMB 签名或 IPsec。|  
+|不要为用户将“读取”和“注册”权限添加到证书模板，或者配置证书注册点以跳过证书模板检查。|尽管在为用户添加“读取”和“注册”安全权限的情况下，Configuration Manager 支持其他检查，并且可以在无法进行身份验证的情况下配置证书注册点以跳过此检查，但任何一种配置都不是最佳安全做法。 有关详细信息，请参阅[为 System Center Configuration Manager 中证书配置文件规划证书模板权限](../../protect/plan-design/planning-for-certificate-template-permissions.md)。|  
 
-## <a name="privacy-information-for-certificate-profiles"></a>憑證設定檔的隱私權資訊  
- 您可以使用憑證設定檔來部署根憑證授權單位 (CA) 和用戶端憑證，然後評估這些裝置在套用設定檔之後是否可相容。 管理點會將相容性資訊傳送至站台伺服器，且 System Center Configuration Manager 會將該資訊存放在站台資料庫中。 相容性資訊包含如主體名稱和指紋等憑證內容。 當裝置將此資訊傳送至管理點時會進行加密，但不會以加密格式儲存在站台資料庫內。 資料庫會保留這些資訊，直到站台維護工作 [刪除過時設定管理資料]  在預設的 90 天間隔後將它刪除為止。 您可以設定刪除間隔。 不會將相容性資訊傳送給 Microsoft。  
+## <a name="privacy-information-for-certificate-profiles"></a>证书配置文件的隐私信息  
+ 你可以使用证书配置文件来部署根证书颁发机构 (CA) 和客户端证书，然后评估那些设备在应用了配置文件后是否变为符合。 管理点会将符合性信息发送到站点服务器，System Center Configuration Manager 会在站点数据库中存储该信息。 符合性信息包括诸如使用者名称和指纹等证书属性。 设备在将信息发送到管理点时会对其进行加密，但信息不会以加密格式存储在站点数据库中。 数据库将保留信息，直到 90 天默认间隔过后站点维护任务“删除过期的配置管理数据”  将其删除为止。 可以配置删除间隔。 符合性信息不会被发送到 Microsoft。  
 
- 憑證設定檔會使用 Configuration Manager 透過探索收集的資訊。 如需探索隱私權資訊的詳細資訊，請參閱 **Security and privacy for System Center Configuration Manager** 中的 [探索的隱私權資訊](../../core/plan-design/security/security-and-privacy.md)一節。  
+ 证书配置文件使用 Configuration Manager 通过发现收集的信息。 有关发现的隐私信息的详细信息，请参阅 **Security and privacy for System Center Configuration Manager** 中的 [有关发现的隐私信息](../../core/plan-design/security/security-and-privacy.md)部分。  
 
 > [!NOTE]  
->  發行給使用者或裝置的憑證可允許存取機密資訊。  
+>  颁发给用户或设备的证书可能允许访问机密信息。  
 
- 依預設，裝置不會評估憑證設定檔。 此外，您必須設定憑證設定檔，然後將其部署至使用者或裝置。  
+ 默认情况下，设备不评估证书配置文件。 此外，你必须配置证书配置文件，然后将它们部署到用户或设备。  
 
- 設定	憑證設定檔之前，請考慮您的隱私權需求。  
+ 在配置证书配置文件之前，请考虑隐私要求。  

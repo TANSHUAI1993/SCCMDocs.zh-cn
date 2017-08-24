@@ -1,5 +1,5 @@
 ---
-title: "報告 | Microsoft Docs"
+title: "报告 | Microsoft Docs"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -17,24 +17,24 @@ manager: angrobe
 ms.openlocfilehash: cebc48180144ae0d711ff09d16be7c37ec237cfa
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="reporting-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的報告
+# <a name="reporting-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的报表
 
-適用於：System Center Configuration Manager (最新分支)
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager 中的報告功能提供一組工具和資源，可協助您使用 Configuration Manager 主控台中 Microsoft SQL Server Reporting Services 的進階報告功能。  
+System Center Configuration Manager 中的报表功能提供了一组工具和资源，有助于在 Configuration Manager 控制台中使用 Microsoft SQL Server Reporting Services 的高级报表功能。  
 
-## <a name="reporting-topics"></a>報告主題  
- 下列主題可協助您管理 Configuration Manager 中的報告功能：  
+## <a name="reporting-topics"></a>报表主题  
+ 下列主题有助于在 Configuration Manager 中管理报表：  
 
--   [報告簡介](introduction-to-reporting.md)  
+-   [报表简介](introduction-to-reporting.md)  
 
--   [報告規劃](planning-for-reporting.md)  
+-   [规划报表](planning-for-reporting.md)  
 
--   [設定報告](configuring-reporting.md)  
+-   [配置报表](configuring-reporting.md)  
 
--   [報告的作業和維護](operations-and-maintenance-for-reporting.md)  
+-   [报表的操作和维护](operations-and-maintenance-for-reporting.md)  
 
--   [報告的安全性和隱私權](security-and-privacy-for-reporting.md)  
+-   [报表的安全和隐私](security-and-privacy-for-reporting.md)  

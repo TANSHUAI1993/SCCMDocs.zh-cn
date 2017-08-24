@@ -1,6 +1,6 @@
 ---
-title: "排除用戶端升級 | Windows | System Center Configuration Manager"
-description: "了解如何在 System Center Configuration Manager 中排除 Windows 用戶端升級。"
+title: "排除客户端升级 | Windows | System Center Configuration Manager"
+description: "了解如何在 System Center Configuration Manager 中排除 Windows 客户端的升级。"
 ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
@@ -16,39 +16,39 @@ manager: angrobe
 ms.openlocfilehash: de5602179f3ac55b51133b8280a0143f1b0ff30e
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="how-to-exclude-upgrading-clients-for-windows-computers-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中排除升級的 Windows 電腦用戶端
+# <a name="how-to-exclude-upgrading-clients-for-windows-computers-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中排除升级 Windows 计算机的客户端
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-從 1610 版開始，您可以排除用戶端集合自動安裝更新的用戶端版本。 這適用於自動升級及其他方法，例如以軟體更新為基礎的升級、登入指令碼和群組原則。 這可以在升級用戶端時，用於需要更小心對待的電腦集合。 排除集合中的用戶端會略過安裝更新版用戶端軟體的要求。
+从版本 1610 开始，可排除客户端集合，使其不会自动安装更新的客户端版本。 这适用于自动升级以及其他方法，例如基于软件更新的升级、登录脚本和组策略。 可将其用于在升级客户端时需特别注意的计算机集合。 排除集合中的客户端会忽略安装更新客户端软件的请求。
 
-## <a name="configure-exclusion-for-automatic-upgrades"></a>設定排除自動升級
+## <a name="configure-exclusion-for-automatic-upgrades"></a>配置自动升级排除
 
-1. 在 Configuration Manager 主控台中，移至 [系統管理] > [站台設定] > [站台]，然後按一下 [階層設定]。
+1. 在 Configuration Manager 控制台中，转到“管理” > “站点配置” > “站点”，然后单击“层次结构设置”。
 
-2. 按一下 [用戶端升級] 索引標籤。
+2. 单击“客户端升级”选项卡。
 
-3. 按一下 「Exclude specified clients from upgrade」 (排除升級指定的用戶端) 核取方塊，然後針對 「Exclusion collection」 (排除集合) 選取您要排除的集合。 您只能選取單一集合進行排除。
+3. 单击“从升级中排除指定的客户端”复选框，然后选中“排除集合”，然后选择要排除的集合。 只能选择排除单个集合。
 
-4.  按一下 [確定] 以關閉並儲存設定。 然後，在用戶端更新原則之後，排除集合中的用戶端就不會再自動安裝用戶端軟體的更新。 如需詳細資訊，請參閱[如何升級 Windows 電腦的用戶端](upgrade-clients-for-windows-computers.md)。
+4.  单击“确定”以关闭并保存配置。 然后，客户端更新策略后，排除集合中的客户端将不再自动安装客户端软件更新。 有关详细信息，请参阅[如何升级 Windows 计算机的客户端](upgrade-clients-for-windows-computers.md)。
 
-![自動升級的排除範圍設定](media/automatic_upgrade_exclusion.png)
+![用于自动升级排除的设置](media/automatic_upgrade_exclusion.png)
 
 
 
 >[!NOTE]
->雖然使用者介面指出用戶端不會透過任何方法升級，但您可以使用兩種方法來覆寫這些設定。 用戶端推入安裝和手動用戶端安裝可用來覆寫此設定。 如需詳細資訊，請參閱下一節。
+>尽管用户界面声明无法通过任何方法升级客户端，但仍有两种方法可用于替代这些设置。 可使用客户端请求安装和手动客户端安装替代此配置。 有关更多详细信息，请参阅以下部分。
 
-## <a name="how-to-upgrade-a-client-that-is-in-an-excluded-collection"></a>如何升級排除集合中的用戶端
+## <a name="how-to-upgrade-a-client-that-is-in-an-excluded-collection"></a>如何升级排除集合中的客户端
 
-只要集合設定為要排除，該集合的成員只能透過兩種方法之一覆寫此排除範圍，以升級其用戶端軟體：
- - **用戶端推入安裝** - 您可以使用用戶端推入安裝來升級排除集合中的用戶端。 因為這視為系統管理員的意圖，所以允許這樣做。此方法可讓您升級用戶端，而不需要從排除範圍中移除整個集合。       
+只要某个集合被配置为排除，则只能通过上述两种方法中的一种来升级集合成员的客户端软件，它会替代排除设置：
+ - **客户端请求安装** – 可以使用“客户端请求安装”来升级排除集合中的客户端。 由于该操作被视为管理员的意图，因此可以此升级客户端，而无需将整个集合从排除设置中删除。       
 
- - **手動用戶端安裝** - 您可以使用下列命令列參數搭配 ccmsetup，手動升級排除集合中的用戶端：***/ignoreskipupgrade***
+ - **手动客户端安装** – 可以手动升级排除集合中的客户端，方法是结合使用后列命令行开关和 ccmsetup：***/ignoreskipupgrade***
 
-  如果您嘗試手動升級屬於排除集合成員的用戶端，但未使用此參數，則用戶端不會安裝新的用戶端軟體。 如需詳細資訊，請參閱[如何手動安裝 Configuration Manager 用戶端](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Manual)。
+  如果尝试在不使用此开关的情况下手动升级排除集合中的客户端，客户端将不会安装新的客户端软件。 有关详细信息，请参阅[如何手动安装 Configuration Manager 客户端](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Manual)。
 
-如需用戶端安裝方法的詳細資訊，請參閱[如何在 System Center Configuration Manager 中將用戶端部署至 Windows 電腦](/sccm/core/clients/deploy/deploy-clients-to-windows-computers)。
+有关客户端安装方法的详细信息，请参阅[如何在 System Center Configuration Manager 中将客户端部署到 Windows 计算机](/sccm/core/clients/deploy/deploy-clients-to-windows-computers)。

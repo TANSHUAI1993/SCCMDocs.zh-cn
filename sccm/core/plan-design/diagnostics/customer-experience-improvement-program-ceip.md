@@ -1,6 +1,6 @@
 ---
 title: CEIP | Microsoft Docs
-description: "了解 System Center Configuration Manager 的客戶經驗改進計畫設定"
+description: "了解 System Center Configuration Manager 的客户体验改善计划设置。"
 ms.custom: na
 ms.date: 12/29/2016
 ms.prod: configuration-manager
@@ -17,19 +17,19 @@ manager: angrobe
 ms.openlocfilehash: dddb6d960269a0d7655597cd9a1ccb31b382853c
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="customer-experience-improvement-program-ceip-for-system-center-configuration-manager"></a>適用於 System Center Configuration Manager 的客戶經驗改進計畫 (CEIP)
+# <a name="customer-experience-improvement-program-ceip-for-system-center-configuration-manager"></a>System Center Configuration Manager 的客户体验改善计划 (CEIP)
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-在安裝 System Center Configuration Manager 主控台期間，您可以選擇參與**客戶經驗改進計畫** (CEIP)。 雖然預設會關閉 CEIP，但如果之前已啟用，則會保持啟用。  
+在 System Center Configuration Manager 控制台的安装过程中，可以选择参与**客户体验改善计划** (CEIP)。 尽管 CEIP 在默认情况下处于关闭状态，但如果之前已启用，则它将保持启用状态。  
 
--   CEIP 與 [System Center Configuration Manager 的診斷和使用方式資料](../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md)不同。  
+-   CEIP 独立于 [System Center Configuration Manager 的诊断和使用情况数据](../../../core/plan-design/diagnostics/diagnostics-and-usage-data.md)。  
 
--   CEIP 是針對主控台，並會收集在使用者介面中選取每個項目的次數此類資料。  
+-   CEIP 基于控制台，可以收集用户界面中每个元素的选择次数等数据。  
 
--   閱讀線上 [CEIP 隱私權聲明](https://www.microsoft.com/products/ceip/en-us/privacypolicy.mspx)。  
+-   在线阅读 [CEIP 隐私声明](https://www.microsoft.com/products/ceip/en-us/privacypolicy.mspx)。  
 
-您可以變更每個主控台安裝的 CEIP 設定。 在主控台中，移至主控台的 [Backstage] 索引標籤 (左上角含下拉式箭頭的索引標籤)，然後選取 [客戶經驗改進計畫] 以變更設定。  
+可在安装控制台时更改 CEIP 设置。 在控制台中，转到“控制台的 Backstage”选项卡（左上角带下拉箭头的选项卡），并选择“客户体验改善计划”以更改设置。  

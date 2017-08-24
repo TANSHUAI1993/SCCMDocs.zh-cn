@@ -1,6 +1,6 @@
 ---
-title: "準備作業系統部署的站台系統角色 | Microsoft Docs"
-description: "先設定站台系統角色，再於 System Center Configuration Manager 中部署作業系統。"
+title: "为操作系统部署准备站点系统角色 | Microsoft Docs"
+description: "在 System Center Configuration Manager 中部署操作系统之前，请配置站点系统角色。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -18,203 +18,203 @@ manager: angrobe
 ms.openlocfilehash: 11c0f169afebdb071fefb5ce300fd1ae3481a94f
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="prepare-site-system-roles-for-operating-system-deployments-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 為作業系統部署準備站台系統角色
+# <a name="prepare-site-system-roles-for-operating-system-deployments-with-system-center-configuration-manager"></a>在 System Center Configuration Manager 中准备操作系统部署的站点系统角色
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-若要在 System Center Configuration Manager 中部署作業系統，您必須先準備下列需要進行特定設定和考量的站台系統角色。
+若要在 System Center Configuration Manager 中部署操作系统，首先必须准备以下站点系统角色，这些角色要求具有特定配置并考虑特定注意事项。
 
-##  <a name="BKMK_DistributionPoints"></a> 發佈點  
- 發佈點站台系統角色包含可供用戶端下載的來源檔案 (例如應用程式內容、軟體更新、作業系統映像和開機映像)。 您可以利用頻寬、節流及排程選項控制內容發佈。  
+##  <a name="BKMK_DistributionPoints"></a> 分发点  
+ 分发点站点系统角色包含供客户端下载的源文件，例如应用程序内容、软件更新、操作系统映像以及启动映像。 你可以通过使用带宽、限制和计划选项来控制内容分发。  
 
- 您的發佈點數量必須足以支援在電腦上進行作業系統部署。 規劃這些發佈點在階層中的位置也十分重要。 您可以在[內容與內容基礎結構](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)中找到大部分的規劃資訊。 不過，關於作業系統部署特有的發佈點仍有些額外規劃考量。  
+ 有足够的分发点支持部署到计算机的操作系统非常重要。 将这些分发点放置在你的层次结构中的规划也同样重要。 可在[管理内容和内容基础结构](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)中找到这一规划的大部分信息。 但是，有一些特定于操作系统部署的分发点的其他规划注意事项。  
 
-###  <a name="BKMK_AdditionalPlanning"></a> 發佈點的額外規劃考量  
- 以下是發佈點的額外規劃考量：  
+###  <a name="BKMK_AdditionalPlanning"></a> 分发点的其他规划注意事项  
+ 以下为分发点要考虑的其他规划事项：  
 
--   **如何防止不想要的作業系統部署？**  
+-   **如何避免不需要的操作系统部署?**  
 
-     Configuration Manager 不會區分站台伺服器與集合中的其他目的地電腦。 如果您將必要的工作順序部署至包含站台伺服器的集合中，該站台伺服器執行工作順序的方式會與該集合中任何其他電腦執行工作順序的方式相同。 請確定作業系統部署所使用的集合包含您想要執行部署的用戶端。  
+     Configuration Manager 不会将站点服务器与集合中的其他目标计算机进行区分。 如果将所需的任务序列部署到包含站点服务器的集合，则站点服务器会以该集合中的任何其他计算机运行任务序列的方式来运行任务序列。 确保你的操作系统部署使用包含你打算运行部署的客户端的集合。  
 
-     您可以管理高風險工作順序部署的行為。 高風險部署會自動安裝於用戶端上，而且可能會造成不需要的結果。 例如，以「必要」用途部署作業系統的工作順序。 若要降低不需要的高風險部署所帶來的風險，您可以設定部署驗證設定。 如需詳細資訊，請參閱[管理高風險部署的設定](../../protect/understand/settings-to-manage-high-risk-deployments.md)。  
+     你可以管理高风险任务序列部署的行为。 高风险部署在客户端上自动安装且可能产生意外结果。 例如，一个用途为“必需”且部署操作系统的任务序列。 若要降低不需要的高风险部署的风险，可以配置部署验证设置。 有关详细信息，请参阅[用于管理高风险部署的设置](../../protect/understand/settings-to-manage-high-risk-deployments.md)。  
 
--   **同時可以有多少部電腦從單一發佈點接收作業系統映像？**  
+-   **一次有多少台计算机可以接收来自单个分发点的操作系统映像？**  
 
-     若要估計您需要多少發佈點，請考慮發佈點的處理速度和磁碟 I/O、網路可用頻寬，以及映像封裝大小對於這些資源的影響。 例如，在 100 MB 的乙太網路上，如果不考慮任何其他伺服器資源因素，一個 4 GB 映像套件在一個小時內最多能夠處理 11 台電腦。  
+     若要预估需要多少个分发点，必须考虑分发点的处理速度和磁盘 I/O 性能、网络上的可用带宽以及映像包的大小对这些资源的影响。 例如，在 100 兆字节 (MB) 的以太网上，如果不考虑任何其他服务器资源因素，则一小时内可以处理 4 千兆字节 (GB) 映像包的计算机的最大数量是 11 台。  
 
      `100 Megabits/sec = 12.5 Megabytes/sec = 750 Megabytes/min = 45 Gigabytes/hour = 11 images @ 4GB per image.`  
 
-     如果您必須在特定時間範圍內將作業系統部署至特定數量的電腦，請將映像發佈至適量的發佈點。  
+     如果必须在特定的时间段内将操作系统部署到特定数量的计算机，请将映像分发到适当数量的分发点。  
 
--   **是否可以將作業系統部署至發佈點？**  
+-   **是否可以将操作系统部署到分发点吗？**  
 
-     您可以將作業系統部署至發佈點，但必須從不同的發佈點接收作業系統映像。  
+     可以将操作系统部署到分发点，但必须从其他分发点接收操作系统映像。  
 
-###  <a name="BKMK_PXEDistributionPoint"></a> 設定發佈點接受 PXE 要求  
- 若要將作業系統部署至發出 PXE 開機要求的 Configuration Manager 用戶端，您必須設定一或多個發佈點來接受 PXE 要求。 在您設定發佈點之後，發佈點將會回應 PXE 開機要求，並判斷要採取的適當部署動作。
+###  <a name="BKMK_PXEDistributionPoint"></a> 配置分发点以接受 PXE 请求  
+ 要将操作系统部署到发出 PXE 启动请求的 Configuration Manager 客户端，必须配置一个或多个分发点以接受 PXE 请求。 配置分发点后，此分发点将响应 PXE 启动请求，并确定要执行的适当部署操作。
 
 > [!IMPORTANT]  
->  [Windows Deployment Services](../plan-design/infrastructure-requirements-for-operating-system-deployment.md#BKMK_WDS) 必須安裝在所有已啟用 PXE 的發佈點上。  
+>  [Windows Deployment Services](../plan-design/infrastructure-requirements-for-operating-system-deployment.md#BKMK_WDS) 必须安装在所有 PXE 启用的分发点上。  
 
- 利用下列程序修改現有的發佈點，讓它能夠接受 PXE 要求。 如需有關安裝新發佈點方式的資訊，請參閱 [Install or modify a distribution point](../../core/servers/deploy/configure/install-and-configure-distribution-points.md)。  
+ 使用以下过程来修改现有分发点，使其可接受 PXE 请求。 有关如何安装新分发点的信息，请参阅 [Install or modify a distribution point](../../core/servers/deploy/configure/install-and-configure-distribution-points.md)。  
 
-#### <a name="to-modify-an-existing-distribution-point-to-accept-pxe-requests"></a>修改現有發佈點以接受 PXE 要求  
+#### <a name="to-modify-an-existing-distribution-point-to-accept-pxe-requests"></a>修改现有分发点以接受 PXE 请求  
 
-1.  在 Configuration Manager 主控台中，按一下 [系統管理]，並展開 [概觀]，然後按一下 [發佈點]。  
+1.  在 Configuration Manager 控制台，单击“管理”，然后展开“概述”并单击“分发点”。  
 
-2.  選取要設定的發佈點，然後在 **[首頁]** 索引標籤的 **[內容]** 群組中，按一下 **[內容]**。  
+2.  选择要配置的分发点，然后在“主页”选项卡上的“属性”组中，单击“属性”。  
 
-3.  在發佈點的內容頁上，按一下 [PXE]  索引標籤。 選取 **[為用戶端啟用 PXE 支援]**啟用此發佈點的 PXE。  
+3.  在分发点的属性页上，单击“PXE”  选项卡。 然后选择“为客户端启用 PXE 支持”以在此分发点上启用 PXE。  
 
-4.  按一下 **[檢閱 PXE 所需的連接埠]** 對話方塊中的 **[是]** ，確認您想要啟用 PXE。 Configuration Manager 自動在 Windows 防火牆上設定預設連接埠。 如果您使用不同的防火牆，則必須手動設定連接埠。  
+4.  在“查看 PXE 的所需端口”对话框中，单击“是”，以确认你想要启用 PXE。 Configuration Manager 将在 Windows 防火墙上自动配置默认端口。 如果你使用其他防火墙，则必须手动配置这些端口。  
 
     > [!NOTE]  
-    >  如果在同一部伺服器上安裝 WDS 和 DHCP，您必須設定 WDS 接聽不同的連接埠 (因為 DHCP 接聽相同的連接埠)。 如需詳細資訊，請參閱[當您在同一部伺服器上有 WDS 和 DHCP 時的考量](../plan-design/infrastructure-requirements-for-operating-system-deployment.md#BKMK_WDSandDHCP)。  
+    >  如果在同一台服务器上安装 WDS 和 DHCP，则必须配置 WDS 以侦听不同端口（因为 DHCP 在同一个端口上侦听）。 有关详细信息，请参阅 [WDS 和 DHCP 在同一个服务器上时的注意事项](../plan-design/infrastructure-requirements-for-operating-system-deployment.md#BKMK_WDSandDHCP)。  
 
-5.  選取 **[允許此發佈點回應傳入的 PXE 要求]** 來啟用 WDS，以回應傳入的 PXE 服務要求。 您可以使用此設定來啟用和停用服務，而不需移除發佈點上的 PXE 功能。  
+5.  选择“允许此分发点响应传入的 PXE 请求”以启用 WDS，以便它会响应传入的 PXE 服务请求。 可以使用此设置来启用和禁用服务，而不从分发点中删除 PXE 功能。  
 
-6.  若要將作業系統部署到不受 Configuration Manager 管理的電腦上，請選取 [啟用未知電腦支援]。  
+6.  选择“启用未知计算机支持”可将操作系统部署到不是由 Configuration Manager 托管的计算机。  
 
-7.  選取 **[電腦使用 PXE 時需要密碼]**，然後指定強式密碼為您的 PXE 部署提供額外的安全性。  
+7.  选择“当计算机使用 PXE 时要求密码”，然后指定一个强密码，为 PXE 部署提供额外的安全保护。  
 
-8.  在 **[使用者裝置親和性]** 清單中，選擇發佈點讓使用者與 PXE 部署的目的地電腦產生關聯的方式。  
+8.  在“用户设备相关性”列表中，选择你希望分发点如何将用户与 PXE 部署的目标计算机关联。  
 
-    -   選取 **[不使用使用者裝置親和性]**，使用者與目的地電腦就不會產生關聯。  
+    -   选择“不使用用户设备相关性”以不将用户与目标计算机关联。  
 
-    -   選取 [手動核准允許使用者裝置親和性]  ，會在使用者與目的地電腦產生關聯之前等候管理使用者核准。  
+    -   选择“通过手动批准允许用户设备相关性”  以在将用户与目标计算机关联之前等待管理用户批准。  
 
-    -   選取 [自動核准允許使用者裝置親和性]  ，會自動將使用者與目的地電腦產生關聯，而不等候核准。  
+    -   选择“通过自动批准允许用户设备相关性”  以自动将用户与目标计算机关联，而不等待批准。  
 
-     如需詳細資訊，請參閱[為使用者與目的地電腦建立關聯](../get-started/associate-users-with-a-destination-computer.md)。  
+     有关详细信息，请参阅[将用户与目标计算机相关联](../get-started/associate-users-with-a-destination-computer.md)。  
 
-9. 指定發佈點從所有網路介面或從特定網路介面回應 PXE 要求。 如果選擇讓發佈點回應特定的網路介面，請提供每個網路介面的 MAC 位址。  
+9. 指定分发点响应来自所有网络接口或来自特定网络接口的 PXE 请求。 如果你选择使分发点响应特定网络接口，请为每个网络接口提供 MAC 地址。  
 
-10. 指定使用多個啟用 PXE 的發佈點時，發佈點回應電腦要求之前的延遲時間 (以秒為單位)。  
+10. 指定在使用了多个启用 PXE 的分发点时分发点在响应计算机请求之前延迟的时间长度（以秒为单位）。  
 
-11. 按一下 [確定]  更新發佈點的內容。  
+11. 单击“确定”  更新分发点的属性。  
 
-###  <a name="BKMK_RamDiskTFTP"></a> 自訂支援 PXE 之發佈點的相關 RamDisk TFTP 區塊大小和視窗大小  
-您可以為支援 PXE 的發佈點自訂 RamDisk TFTP 區塊大小，而從 Configuration Manager 1606 版開始，也可以自訂視窗大小。 如果您已自訂網路，可能會導致開機映像下載因發生逾時錯誤而失敗，因為區塊或視窗大小太大。 自訂 RamDisk TFTP 區塊大小和視窗大小可讓您在使用 PXE 來滿足特定的網路需求時，將 TFTP 流量最佳化。   
-您將需要在您的環境中測試自訂的設定，以確定最有效率的設定是哪一個。  
+###  <a name="BKMK_RamDiskTFTP"></a> 在启用 PXE 的分发点上自定义 RamDisk TFTP 块大小和窗口大小  
+可以为启用 PXE 的分发点自定义 RamDisk TFTP 块大小和窗口大小（从 Configuration Manager 1606 版本开始）。 如果自定义了网络，则可能导致启动映像下载由于超时错误而失败，因为块大小或窗口大小太大。 通过 RamDisk TFTP 块大小和窗口大小自定义可以在使用 PXE 时优化 TFTP 流量，以满足特定网络要求。   
+需要在环境中测试自定义设置以确定最高效的设置。  
 
--   **TFTP 區塊大小**︰區塊大小是伺服器傳送給下載檔案之用戶端的資料封包大小 (如 RFC 2347 所述)。 區塊大小越大，伺服器傳送的封包就越少，因此伺服器與用戶端之間的來回延遲也較少。 不過，較大的區塊大小會導致封包分散，而大多數 PXE 用戶端實作並不支援分散的封包。  
+-   **TFTP 块大小**：块大小是服务器发送到下载文件（如 RFC 2347 中所述）的客户端的数据包大小。 较大的块大小使服务器可以发送较少的数据包，因此服务器与客户端之间的往返延迟较少。 但是，较大的块大小会导致零碎的数据包，而大多数 PXE 客户端实现不支持这一点。  
 
--   **TFTP 視窗大小**：TFTP 針對每個傳送的資料區塊都會要求一個認可 (ACK) 封包。 伺服器在收到上一個區塊的 ACK 封包之前，不會傳送順序中的下一個區塊。 TFTP 視窗化是「Windows 部署服務」中的一項功能，可讓您定義填滿視窗所需的資料區塊數量。 伺服器會以背對背的方式傳送資料區塊，直到填滿視窗為止，然後用戶端會傳送 ACK 封包。 增加此視窗大小可降低用戶端與伺服器之間的來回延遲數，並縮短下載開機映像所需的整體時間。  
+-   **TFTP 窗口大小**：对于发送的每个数据块，TFTP 需要确认 (ACK) 数据包。 服务器在收到上一个块的 ACK 数据包之前，不会发送序列中的下一个块。 TFTP 窗口是 Windows 部署服务中的一个功能，使你可以定义填满窗口所需的数据块数。 服务器在窗口填满之前会背靠背地发送数据块，随后客户端会发送 ACK 数据包。 增加此窗口大小会减少客户端与服务器之间的往返延迟数，并缩短下载启动映像所需的总体时间。  
 
 
-#### <a name="to-modify-the-ramdisk-tftp-window-size"></a>修改 RamDisk TFTP 視窗大小  
+#### <a name="to-modify-the-ramdisk-tftp-window-size"></a>修改 RamDisk TFTP 窗口大小  
 
--   新增支援 PXE 之發佈點的下列相關登錄機碼以自訂 RamDisk TFTP 視窗大小：  
-
-     **位置**：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\DP  
-    名稱：RamDiskTFTPWindowSize  
-
-     **類型**：REG_DWORD  
-
-     **值**：&lt;自訂視窗大小>  
-
- 預設值為 1 (1 個資料區塊填滿視窗)  
-
-#### <a name="to-modify-the-ramdisk-tftp-block-size"></a>修改 RamDisk TFTP 區塊大小  
-
--   新增支援 PXE 之發佈點的下列相關登錄機碼以自訂 RamDisk TFTP 視窗大小：  
+-   在启用 PXE 的分发点上添加以下注册表项以自定义 RamDisk TFTP 窗口大小：  
 
      **位置**：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\DP  
-    名稱：RamDiskTFTPBlockSize  
+    名称：RamDiskTFTPWindowSize  
 
-     **類型**：REG_DWORD  
+     **类型**：REG_DWORD  
 
-     **值**：&lt;自訂區塊大小>  
+     **值**：&lt;自定义窗口大小>  
 
- 預設值為 4096 (4k)。  
+ 默认值为 1（1 个数据块填满窗口）  
+
+#### <a name="to-modify-the-ramdisk-tftp-block-size"></a>修改 RamDisk TFTP 块大小  
+
+-   在启用 PXE 的分发点上添加以下注册表项以自定义 RamDisk TFTP 窗口大小：  
+
+     **位置**：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\DP  
+    名称：RamDiskTFTPBlockSize  
+
+     **类型**：REG_DWORD  
+
+     **值**：&lt;自定义块大小>  
+
+ 默认值为 4096 (4k)。  
 
 
-###  <a name="BKMK_DPMulticast"></a> 設定發佈點支援多點傳送  
- 多點傳送是一種網路最佳化方法，如果可能有多個用戶端同時下載同一個作業系統映像，即可以在發佈點上使用這種方法。 使用多點傳送時，多部電腦可以同時下載由發佈點多點傳送的作業系統映像，不需由發佈點一一透過個別連線傳送資料複本至每個用戶端。 您至少必須設定一個發佈點才能支援多點傳送。 如需詳細資訊，請參閱[使用多點傳送透過網路來部署 Windows](../deploy-use/use-multicast-to-deploy-windows-over-the-network.md)。  
+###  <a name="BKMK_DPMulticast"></a> 配置分发点以支持多播  
+ 当多个客户端可能同时下载同一个操作系统映像时，多播是一种可以在分发点上使用的网络优化方法。 使用多播时，多台计算机可以同时下载操作系统映像，因为映像已由分发点多播，而不必使分发点通过单独连接向每个客户端发送数据的副本。 必须至少配置一个分发点以支持多播。 有关详细信息，请参阅[使用多播通过网络部署 Windows](../deploy-use/use-multicast-to-deploy-windows-over-the-network.md)。  
 
- 您必須將發佈點設定為支援多點傳送，才能部署作業系統。 利用下列程序，將現有的發佈點修改為支援多點傳送。 如需如何安裝新發佈點的資訊，請參閱[安裝和設定發佈點](../../core/servers/deploy/configure/install-and-configure-distribution-points.md)。
+ 在部署操作系统之前，你必须配置分发点以支持多播。 使用下列过程来修改现有分发点以支持多播。 有关如何安装新分发点的信息，请参阅[安装和配置分发点](../../core/servers/deploy/configure/install-and-configure-distribution-points.md)。
 
-#### <a name="to-enable-multicast-for-a-distribution-point"></a>啟用發佈點的多點傳送  
+#### <a name="to-enable-multicast-for-a-distribution-point"></a>为分发点启用多播  
 
-1.  在 Configuration Manager 主控台中，按一下 [系統管理] 。  
+1.  在 Configuration Manager 控制台中，单击“管理” 。  
 
-2.  在 [系統管理]  工作區中，展開 [概觀] ，然後選取 [發佈點]  節點。  
+2.  在“管理”  工作区中，展开“概述” ，然后选择“分发点”  节点。  
 
-3.  選取您要用來多點傳送作業系統映像的發佈點。  
+3.  选择要用于对操作系统映像进行多播的分发点。  
 
-4.  在 [首頁]  索引標籤的 [內容]  群組中，按一下 [內容] 。  
+4.  在“主页”  选项卡上的“属性”  组中，单击“属性” 。  
 
-5.  選取 [多點傳送]  索引標籤，並設定下列選項：  
+5.  选择“多播”  选项卡，并配置以下选项：  
 
-    -   **啟用多點傳送**：您必須選取這個選項，讓發佈點支援多點傳送。  
+    -   **启用多播**：你必须选择此选项以用于分发点支持多播。  
 
-    -   **多點傳送連線帳戶**：指定連線到站台資料庫的帳戶。  
+    -   **多播连接帐户**：指定用于连接到站点数据库的帐户。  
 
-    -   **多點傳送位址設定**：指定用於將資料傳送至目的地電腦的 IP 位址。 根據預設，IP 位址可從啟用發佈多點傳送位址的 DHCP 伺服器取得。 根據網路環境不同，您可以指定介於 239.0.0.0 和 239.255.255.255 之間的 IP 位址範圍。  
+    -   **多播地址设置**：指定 IP 地址以将数据发送到目标计算机。 默认情况下，IP 地址是从为分发多播地址启用的 DHCP 服务器中获得的。 根据网络环境，你可以指定介于 239.0.0.0 和 239.255.255.255 之间的 IP 地址范围。  
 
         > [!IMPORTANT]  
-        >  要求作業系統映像的目的地電腦，必須可以存取這些 IP 位址。 這表示目的地電腦和站台伺服器之間的路由器和防火牆，必須設定為允許多點傳送流量。  
+        >  请求操作系统映像的目标计算机必须可访问这些 IP 地址。 这意味着，必须将目标计算机和站点服务器之间的路由器和防火墙配置为允许多播流量。  
 
-    -   **UDP 連接埠範圍**：指定要將資料傳送至目的地電腦的 UDP 連接埠範圍。  
+    -   **UDP 端口范围**：指定 UDP 端口的范围以将数据发送到目标计算机。  
 
         > [!IMPORTANT]  
-        >  要求作業系統映像的目的地電腦，必須可以存取這些連接埠。 這表示目的地電腦和站台伺服器之間的路由器和防火牆，必須設定為允許多點傳送流量。  
+        >  请求操作系统映像的目标计算机必须可访问这些端口。 这意味着，必须将目标计算机和站点服务器之间的路由器和防火墙配置为允许多播流量。  
 
-    -   **啟用排程多點傳送**：指定 Configuration Manager 如何控制於何時開始將作業系統部署至目的地電腦。 按一下 [啟用排程多點傳送] ，然後選取下列選項。  
+    -   **启用计划的多播**：指定 Configuration Manager 如何控制开始将操作系统部署到目标计算机的时间。 单击“启用计划的多播” ，然后选择下列选项。  
 
-         在 [工作階段啟動延遲] 方塊中，指定在回應第一個部署要求前 Configuration Manager 等待的分鐘數。  
+         在“会话启动延迟”框中，指定 Configuration Manager 在响应第一个部署请求之前等待的分钟数。  
 
-         在 [最小工作階段大小] 方塊中，指定必須接收到多少要求，Configuration Manager 才會開始部署作業系統。  
+         在“最小会话大小”框中，指定在 Configuration Manager 开始部署操作系统之前必须收到的请求数。  
 
-    -   **傳送速率**：選取下載資料至目的地電腦的傳送速率。  
+    -   **传输速率**：选择将数据下载到目标计算机的传输速率。  
 
-    -   **用戶端上限**：指定可以從此發佈點下載作業系統的目的地電腦數目上限。  
+    -   **最大客户端数**：指定可从此分发点下载操作系统的目标计算机的最大数量。  
 
-6.  按一下 [ **確定**]。  
+6.  单击" **确定**"。  
 
-##  <a name="BKMK_StateMigrationPoints"></a> 狀態移轉點  
- 狀態移轉點會儲存在某台電腦上擷取到的使用者狀態資料，再將資料還原至另一台電腦。 不過，當您擷取同一部電腦的作業系統部署使用者設定時 (例如您在此重新整理作業系統之目的地電腦的部署)，您可以選擇使用永久連結將資料儲存在同一部電腦，還是使用狀態移轉點。 進行部分電腦部署時，若要建立狀態存放區，Configuration Manager 會自動在狀態存放區和目的地電腦之間建立關聯。 規劃狀態移轉點時，請考慮下列因素。  
+##  <a name="BKMK_StateMigrationPoints"></a> 状态迁移点  
+ 状态迁移点在一台计算机上存储捕获的用户状态数据，然后在另一台计算机上还原这些数据。 但是，当你在同一台计算机上捕获操作系统部署的用户设置时，例如在目标计算机上刷新操作系统的部署，你可以选择是通过使用硬链接还是使用状态迁移点来储存数据在同一台计算机上。 对于某些计算机部署，当你创建状态存储时，Configuration Manager 会自动在状态存储和目标计算机之间创建关联。 在规划状态迁移点时，请考虑以下因素。  
 
-### <a name="user-state-size"></a>使用者狀態的大小  
- 使用者狀態的大小會直接影響狀態移轉點的磁碟儲存體及移轉時的網路效能。 請考慮使用者狀態的大小以及要移轉的電腦數量。 另外也請一併考慮要從電腦移轉哪些設定。 例如，如果已經將 [我的文件]  備份到伺服器中，那麼您在部署映像時也許就不需要移轉該資料夾。 避免沒有必要的移轉可以盡可能減少使用者狀態的整體大小，同時也能降低使用者狀態大小對於網路效能及狀態移轉點磁碟儲存體可能造成的影響。  
+### <a name="user-state-size"></a>用户状态大小  
+ 用户状态大小直接影响到状态迁移点上的磁盘存储和迁移期间的网络性能。 请考虑用户状态大小和要迁移的计算机数量， 以及要从计算机迁移哪些设置。 例如，如果“我的文档”  已备份到服务器，那么，你可能无需将其作为映像部署的一部分进行迁移。 避免不必要的迁移可以减小用户状态的总大小，并且减轻它本来对网络性能和状态迁移点上的磁盘存储造成的影响。  
 
-### <a name="user-state-migration-tool"></a>使用者狀態移轉工具  
- 若要在部署作業系統期間擷取及還原使用者狀態，您必須使用指向 USMT 來源檔案的使用者狀態移轉工具 (USMT) 套件。 Configuration Manager 會在 Configuration Manager 主控台的 [軟體程式庫] > [應用程式管理] > [套件] 中自動建立這個套件。 Configuration Manager 使用 Windows 評定及部署套件 (Windows ADK) 發佈的 USMT 10.0 來擷取某個作業系統的使用者狀態，然後在另一個作業系統上還原它。  
+### <a name="user-state-migration-tool"></a>用户状态迁移工具  
+ 若要在部署操作系统的过程中捕获和还原用户状态，必须使用指向 USMT 源文件的用户状态迁移工具 (USMT) 包。 Configuration Manager 将在 Configuration Manager 控制台的“软件库” > “应用程序管理” > “包”中自动创建此包。 Configuration Manager 使用在 Windows 评估和部署工具包 (Windows ADK) 中分发的 USMT 10.0，从一个操作系统捕获用户状态，然后将其还原到另一个操作系统。  
 
- 如需不同的 USMT 10.0 移轉案例描述，請參閱 [常見移轉案例](https://technet.microsoft.com/library/mt299169\(v=vs.85\).aspx)。  
+ 有关 USMT 10.0 的不同迁移方案的说明，请参阅 [常见迁移方案](https://technet.microsoft.com/library/mt299169\(v=vs.85\).aspx)。  
 
-### <a name="retention-policy"></a>保留原則  
- 當您設定狀態移轉點時，可以指定存放在移轉點之使用者狀態資料的保存時間長度。 存放在移轉點之使用者狀態的保存時間長度取決於以下兩項考慮因素：  
+### <a name="retention-policy"></a>保留策略  
+ 在配置状态迁移点时，可以指定在其上存储的用户状态数据的保留时间。 此数据在状态迁移点上的保留时间取决于两个因素：  
 
--   所存放的資料對於磁碟儲存體的影響。  
+-   所存储的数据对磁盘存储的影响。  
 
--   可能必須保存該資料，預防日後出現必須再次移轉該資料的需求。  
+-   将数据保留一段时间以防重新迁移数据这一潜在要求。  
 
- 狀態移轉會發生在兩個階段中：擷取資料以及還原資料。 擷取資料時會收集使用者狀態資料，並將其儲存在狀態移轉點中。 還原資料時，則會從狀態移轉點擷取使用者狀態資料、寫入目的地電腦中，然後再由 [釋放狀態存放區]  工作順序分階段釋放所存放的資料。 保留計時器會在釋放資料後啟動。 如果選取立即刪除移轉資料的選項，會在釋放使用者狀態後隨即將其刪除。 如果選取在特定期限內保留資料的選項，則會在釋放狀態資料起經過一段特定時間後將其刪除。 您所設定的保留期間越久，需要的磁碟空間越大。  
+ 状态迁移分两个阶段进行：捕获数据和还原数据。 在捕获数据时，收集用户状态数据并将其保存到状态迁移点。 在还原数据时，从状态迁移点检索用户状态数据，然后将其写入目标计算机。之后，“发布状态存储”  任务序列步骤发布所存储的数据。 在发布数据时，保留计时器启动。 如果选择与立即删除迁移的数据有关的选项，则在发布用户状态数据后会立即将其删除。 如果选择与将数据保留一段时间有关的选项，则在发布状态数据之后，经过这段时间就会删除数据。 将保持期设置得越长，可能需要的磁盘空间就越多。  
 
-### <a name="select-drive-to-store-user-state-migration-data"></a>選取儲存使用者狀態移轉資料的磁碟機  
- 設定狀態移轉點時，必須在伺服器上指定用於存放使用者狀態移轉資料的磁碟機。 您需從固定的磁碟機清單中選取磁碟機。 不過，其中部分磁碟機可能代表不可寫入磁碟機，例如光碟機或非網路共用磁碟機。 此外，某些磁碟機代號可能無法對應於電腦中的任何磁碟機。 設定狀態移轉點時必須指定可寫入的共用磁碟機。  
+### <a name="select-drive-to-store-user-state-migration-data"></a>选择要用于储存用户状态迁移数据的驱动器  
+ 在配置状态迁移点时，必须在服务器上指定用于存储用户状态迁移数据的驱动器。 从固定的驱动器列表中选择驱动器。 但是，一些驱动器可能代表不可写入的驱动器，例如 CD 驱动器或非网络共享的驱动器。 此外，一些驱动器号可能无法映射到计算机上的任何驱动器。 在配置状态迁移点时，必须指定一个可写入的共享驱动器。  
 
-### <a name="configure-a-state-migration-point"></a>設定狀態移轉點  
- 您可以使用下列方法，將狀態移轉點設定為儲存使用者狀態資料：  
+### <a name="configure-a-state-migration-point"></a>配置状态迁移点  
+ 你可以使用下列方法来配置状态迁移点以存储用户状态数据：  
 
--   使用 [建立站台系統伺服器精靈]  ，為狀態管理點建立新的站台系統伺服器。  
+-   使用“创建站点系统服务器向导”  为状态迁移点创建一个新站点系统服务器。  
 
--   使用 [新增站台系統角色精靈]  ，將狀態移轉點新增至現有伺服器。  
+-   使用“添加站点系统角色向导”  将状态迁移点添加到现有服务器。  
 
- 當您使用這些精靈時，系統會提示您為狀態移轉點提供下列資訊：  
+ 在使用这些向导时，会提示你提供状态迁移点的下列信息：  
 
--   用於儲存使用者狀態資料的資料夾。  
+-   用于存储用户状态数据的文件夹。  
 
--   狀態移轉點上可儲存資料的用戶端數目上限。  
+-   可在状态迁移点上存储数据的客户端的最大数量。  
 
--   狀態移轉點用於儲存使用者狀態資料的最小可用空間。  
+-   供状态迁移点存储用户状态数据的最小可用空间。  
 
--   角色的刪除原則。 您可以指定是要在還原於電腦後立刻刪除使用者狀態資料，或是在將使用者資料還原到電腦後的特定天數後再將其刪除。  
+-   角色的删除策略。 你可以指定在计算机上还原用户状态数据之后立即删除该数据，或在计算机上还原用户数据后特定天数之后再删除该数据。  
 
--   狀態移轉點是否只回應還原使用者狀態資料的要求。 當您啟用此選項時，將無法使用狀態移轉點來儲存使用者狀態資料。  
+-   状态迁移点是否仅响应还原用户状态数据的请求。 如果启用此选项，你将无法使用状态迁移点来存储用户状态数据。  
 
- 如需安裝站台系統角色的步驟，請參閱[新增站台系統角色](../../core/servers/deploy/configure/add-site-system-roles.md)。  
+ 有关安装站点系统角色的步骤，请参阅[添加站点系统角色](../../core/servers/deploy/configure/add-site-system-roles.md)。  

@@ -1,6 +1,6 @@
 ---
-title: "主控台支援 | Microsoft Docs"
-description: "了解 System Center Configuration Manager 主控台所支援的作業系統。"
+title: "控制台支持 | Microsoft Docs"
+description: "了解 System Center Configuration Manager 控制台支持的操作系统。"
 ms.custom: na
 ms.date: 1/3/2017
 ms.prod: configuration-manager
@@ -17,30 +17,30 @@ manager: angrobe
 ms.openlocfilehash: 493fe98787591d44b2deb9a4474d38e54f4127e8
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="supported-operating-systems-for-system-center-configuration-manager-consoles"></a>System Center Configuration Manager 主控台的支援作業系統
+# <a name="supported-operating-systems-for-system-center-configuration-manager-consoles"></a>System Center Configuration Manager 控制台支持的操作系统
 
-*適用於：System Center Configuration Manager (最新分支)*
-
-
- 若要支援 System Center Configuration Manager 主控台，下列作業系統需要最低 4.5.2 版的 .NET Framework。 Windows 10 除外，它要求最低為 .NET Framework 4.6。  
-
--   **Windows Server 2016**：Standard、Datacenter  
-  - 從具有 KB3186654 之 Hotfix 彙總套件的 Configuration Manager 1606 版 (或 2016 年 10 月發行的基準版本 1606) 開始，支援 Windows Server 2016。  
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 
--   **Windows Server 2012 R2** (x64)：Standard、Datacenter  
+ 若要支持 System Center Configuration Manager 控制台，以下操作系统需要最低为 4.5.2 版本的 .NET Framework。 Windows 10 除外，它需要最低为 4.6 版本的 .NET Framework。  
 
--   **Windows Server 2012** (x64)：Standard、Datacenter  
+-   **Windows Server 2016**：标准版、数据中心版  
+  - 从 Configuration Manager 版本 1606（或 2016 年 10 月发布的 1606 基线版本）开始，将支持 Windows Server 2016，并提供 KB3186654 中的修补程序汇总。  
 
--   **Windows Server 2008 R2 (含 SP1)** (x64)：Standard、Enterprise、Datacenter  
 
--   **Windows 10** (x86、x64)：專業版、企業版  
+-   **Windows Server 2012 R2** (x64)：标准版、数据中心版  
 
--   **Windows 8.1** (x86、x64)：專業版、企業版  
+-   **Windows Server 2012** (x64)：标准版、数据中心版  
 
--   **Windows 8** (x86、x64)：專業版、企業版  
+-   **Windows Server 2008 R2 SP1** (x64)：标准版、企业版、数据中心版  
 
--   **Windows 7 (含 SP1)** (x86、x64)：專業版、企業版、旗艦版  
+-   **Windows 10**（x86、x64）：专业版、企业版  
+
+-   **Windows 8.1**（x86、x64）：专业版、企业版  
+
+-   **Windows 8**（x86、x64）：专业版、企业版  
+
+-   **Windows 7 SP1**（x86、x64）：专业版、企业版、旗舰版  

@@ -1,6 +1,6 @@
 ---
-title: "設定 Endpoint Protection 用戶端 | Microsoft Docs"
-description: "了解如何設定可部署至階層中之電腦集合的 Endpoint Protection 自訂用戶端設定。"
+title: "配置 Endpoint Protection 客户端 | Microsoft Docs"
+description: "了解如何配置 Endpoint Protection 的自定义客户端设置，从而将其部署到层次结构中的计算机集合。"
 ms.custom: na
 ms.date: 02/14/2017
 ms.prod: configuration-manager
@@ -17,144 +17,144 @@ manager: angrobe
 ms.openlocfilehash: 1488aaa465fb9810bc1b641d41dad95189d37418
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="configure-custom-client-settings-for-endpoint-protection"></a>設定 Endpoint Protection 的自訂用戶端設定
+# <a name="configure-custom-client-settings-for-endpoint-protection"></a>为 Endpoint Protection 配置自定义客户端设置
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-此程序會為 Endpoint Protection 設定自訂用戶端設定，這些設定可部署到階層中的電腦集合。
+此过程为 Endpoint Protection 配置自定义客户端设置，使其可部署到层次结构中的计算机集合。
 
 > [!IMPORTANT]
->  如果您確定要將設定套用到階層中的所有電腦，請僅設定預設的 Endpoint Protection 用戶端設定。
+>  除非你确信要将这些设置应用于层次结构中的所有计算机，否则请不要配置默认 Endpoint Protection 客户端设置。
 
-## <a name="to-enable-endpoint-protection-and-configure-custom-client-settings"></a>啟用 Endpoint Protection 及設定自訂用戶端設定
+## <a name="to-enable-endpoint-protection-and-configure-custom-client-settings"></a>若要启用 Endpoint Protection 并配置自定义客户端设置
 
-1.  在 Configuration Manager 主控台中，按一下 [系統管理] 。
+1.  在 Configuration Manager 控制台中，单击“管理” 。
 
-2.  在 [系統管理]  工作區中，按一下 [用戶端設定] 。
+2.  在“管理”  工作区中，单击“客户端设置” 。
 
-3.  在 [首頁]  索引標籤的 [建立]  群組中，按一下 [建立自訂用戶端裝置設定] 。
+3.  在“主页”  选项卡上的“创建”  组中，单击“创建自定义客户端设备设置” 。
 
-4.  在 [建立自訂用戶端裝置設定]  對話方塊中，提供設定群組的名稱和說明，然後選取 [Endpoint Protection] 。
+4.  在“创建自定义客户端设备设置”  对话框中，为设置组提供名称和描述，然后选择“Endpoint Protection” 。
 
-5.  設定您需要的 Endpoint Protection 用戶端設定。 如需您可以設定的 Endpoint Protection 用戶端設定完整清單，請參閱[關於 System Center Configuration Manager 中的用戶端設定](../../core/clients/deploy/about-client-settings.md)中的＜Endpoint Protection＞一節。
+5.  配置所需的 Endpoint Protection 客户端设置。 有关可以配置的 Endpoint Protection 客户端设置的完整列表，请参阅[关于 System Center Configuration Manager 中的客户端设置](../../core/clients/deploy/about-client-settings.md)主题中的 Endpoint Protection 部分。
 
    > [!IMPORTANT]
-   >  您必須先安裝 Endpoint Protection 站台系統角色，才可以設定 Endpoint Protection 的用戶端設定。
+   >  必须先安装 Endpoint Protection 站点系统角色，然后才能为 Endpoint Protection 配置客户端设置。
 
-6.  按一下 [確定]  關閉 [建立自訂用戶端裝置設定]  對話方塊。 新的用戶端設定會顯示在 [系統管理]  工作區的 [用戶端設定]  節點中。
+6.  单击“确定”  关闭“创建自定义客户端设备设置”  对话框。 新的客户端设置显示在“管理”  工作区的“客户端设置”  节点中。
 
-7.  您必須先將自訂用戶端設定部署至集合，才可加以使用。 選取您想要部署的自訂用戶端設定，然後在 [首頁]  索引標籤的 [用戶端設定]  群組中，按一下 [部署] 。
+7.  在可以使用自定义客户端设置之前，必须将它们部署到集合。 选择你想要部署的自定义客户端设置，然后在“主页”  选项卡的“客户端设置”  组中，单击“部署” 。
 
-8.  在 [選取集合]  對話方塊中，選取您想要在其中部署用戶端設定的集合，然後按一下 [確定] 。 新的部署會顯示在 [詳細資料] 窗格的 [部署]  索引標籤中。
+8.  在“选择集合”  对话框中，选择你想要将客户端设置部署到的集合，然后单击“确定” 。 新的部署显示在细节窗格的“部署”  选项卡中。
 
-用戶端電腦將會在下一次下載用戶端原則時進行這些設定。 若要起始單一用戶端的原則抓取，請參閱[如何在 System Center Configuration Manager 中管理用戶端](../../core/clients/manage/manage-clients.md)中的＜起始 Configuration Manager 用戶端的原則抓取＞一節。
+当客户端计算机下一次下载客户端策略时，将使用这些设置对它们进行配置。 若要为单一客户端启动策略检索，请参阅[如何在 System Center Configuration Manager 中管理客户端](../../core/clients/manage/manage-clients.md)中的“为 Configuration Manager 客户端启动策略检索”部分。
 
-## <a name="how-to-provision-the-endpoint-protection-client-in-a-disk-image-in-configuration-manager"></a>如何在 Configuration Manager 的磁碟映像檔中佈建 Endpoint Protection 用戶端。
-您可以在將作為 Configuration Manager 作業系統部署磁碟映像來源的電腦上，安裝 Endpoint Protection 用戶端。 這個電腦通常稱為參照電腦。 在您建立作業系統的映像之後，就能使用 Configuration Manager 作業系統部署將可包含軟體套件 (包括 Endpoint Protection) 的映像部署至您的用戶端電腦。
+## <a name="how-to-provision-the-endpoint-protection-client-in-a-disk-image-in-configuration-manager"></a>如何在 Configuration Manager 中设置磁盘映像中的 Endpoint Protection 客户端
+你可以将 Endpoint Protection 客户端安装在打算用作 Configuration Manager 操作系统部署的磁盘映像源的计算机上。 此计算机通常称为引用计算机。 创建操作系统的映像之后，可以随后使用 Configuration Manager 操作系统部署将可能包含软件包（包括 Endpoint Protection）的映像部署到客户端计算机。
 
-使用本主題中的程序，可協助您在參照電腦上安裝並設定 Endpoint Protection 用戶端
+本主题介绍了在引用计算机上安装和配置 Endpoint Protection 客户端的相关步骤
 
-### <a name="prerequisites-for-installing-the-endpoint-protection-client-on-the-reference-computer"></a>在參照電腦上安裝 Endpoint Protection 用戶端的必要條件
-以下清單包含在參照電腦上安裝 Endpoint Protection 用戶端軟體所需的必要條件。
+### <a name="prerequisites-for-installing-the-endpoint-protection-client-on-the-reference-computer"></a>在引用计算机上安装 Endpoint Protection 客户端的先决条件
+下面的列表包含在引用计算机上安装 Endpoint Protection 客户端软件的必需先决条件。
 
--   您必須能夠存取 Endpoint Protection 用戶端安裝套件 **scepinstall.exe**。 您可以在站台伺服器上 Microsoft System Center Configuration Manager 安裝資料夾的 [Client] 資料夾中找到這個套件。
+-   必须具有对 Endpoint Protection 客户端安装包 **scepinstall.exe** 的访问权限。 此包位于站点服务器上 System Center Configuration Manager 安装文件夹的“客户端”文件夹中。
 
--   為了確保 Endpoint Protection 用戶端與您組織所需的設定一起部署，請建立反惡意程式碼原則，然後將該原則匯出。 接著，您就可以指定要在手動安裝 Endpoint Protection 用戶端時使用的反惡意程式碼原則。 如需詳細資訊，請參閱[如何在 System Center Configuration Manager 中建立和部署 Endpoint Protection 的反惡意程式碼原則](endpoint-antimalware-policies.md)。
+-   若要确保使用机构中所需的配置部署 Endpoint Protection 客户端，请创建一个反恶意软件策略，然后导出该策略。 可以随后指定要在手动安装 Endpoint Protection 客户端时使用的反恶意软件策略。 有关详细信息，请参阅[如何在 System Center Configuration Manager 中为 Endpoint Protection 创建和部署反恶意软件策略](endpoint-antimalware-policies.md)。
 
    > [!NOTE]
-   >  [預設用戶端反惡意程式碼原則]  無法匯出。
+   >  无法导出“默认客户端反恶意软件策略”  。
 
--   如果您想要安裝具有最新定義的 Endpoint Protection 用戶端，您必須從 [Microsoft 惡意程式碼防護中心](http://go.microsoft.com/fwlink/?LinkID=200965)下載。
+-   如果要使用最新的定义安装 Endpoint Protection 客户端，必须从 [Microsoft 恶意软件防护中心](http://go.microsoft.com/fwlink/?LinkID=200965)下载这些定义。
 
-### <a name="how-to-install-the-endpoint-protection-client-software-on-the-reference-computer"></a>如何在參照電腦上安裝 Endpoint Protection 用戶端軟體
-您可以從命令提示字元在參照電腦本機安裝 Endpoint Protection 用戶端。 若要執行這項操作，您必須先取得安裝檔案 **scepinstall.exe**。 您也可以使用預先設定的反惡意程式碼原則或先前匯出的反惡意程式碼原則安裝用戶端。
+### <a name="how-to-install-the-endpoint-protection-client-software-on-the-reference-computer"></a>如何在引用计算机上安装 Endpoint Protection 客户端软件
+可以通过命令提示符以本地方式在引用计算机上安装 Endpoint Protection 客户端。 为此，你必须首先获取安装文件“scepinstall.exe” 。 你也可以使用预先配置的反恶意软件策略或以前导出的反恶意软件策略来安装客户端。
 
-## <a name="to-install-the-endpoint-protection-client-from-a-command-prompt"></a>從命令提示字元安裝 Endpoint Protection 用戶端
+## <a name="to-install-the-endpoint-protection-client-from-a-command-prompt"></a>通过命令提示符安装 Endpoint Protection 客户端
 
-1.  從 System Center Configuration Manager 安裝媒體上的 [Client] 資料夾，將 **scepinstall.exe** 複製到您要安裝 Endpoint Protection 用戶端軟體的電腦上。
+1.  将 **scepinstall.exe** 从 System Center Configuration Manager 安装媒体上的“Client”文件夹复制到想要安装 Endpoint Protection 客户端软件的计算机上。
 
-2.  使用系統管理員權限開啟命令提示字元，瀏覽至 **scepinstall.exe** 所在的資料夾，然後執行以下命令，新增任何其他您需要的命令列內容：
+2.  使用管理员权限打开命令提示符，导航到“scepinstall.exe”  所在的文件夹，然后运行下列命令，同时添加所需的任何其他命令行属性：
 
    ```
    scepinstall.exe
    ```
 
-    您可以指定下列其中一個命令列內容：
+    你可以指定下列命令行属性之一：
 
-   |屬性|說明|
+   |属性|描述|
    |--------------|-----------------|
-   |/s|指定要執行的無訊息安裝。|
-   |/q|指定要執行的安裝檔案無訊息解壓縮。|
-   |/i|指定要執行的一般安裝。|
-   |/noreplace|指定在安裝期間不解除安裝的協力廠商反惡意程式碼軟體。|
-   |/policy|指定在安裝期間用來設定用戶端的反惡意程式碼原則檔案。|
-   |/sqmoptin|指定此用戶端軟體安裝加入 Microsoft 客戶經驗改進計畫。|
+   |/s|指定将执行无提示安装。|
+   |/q|指定将执行安装程序文件的无提示提取。|
+   |/i|指定应执行正常安装。|
+   |/noreplace|指定在安装过程中不卸载第三方反恶意软件。|
+   |/policy|指定要用于在安装过程中配置客户端的反恶意软件策略文件。|
+   |/sqmoptin|指定选择将此客户端软件安装加入 Microsoft 客户体验改善计划。|
 
-3.  遵循螢幕指示以完成用戶端安裝。
+3.  请按照屏幕说明进行操作以完成客户端安装。
 
-4.  如果您已下載最新的更新定義套件，請複製套件至用戶端電腦，然後按兩下定義套件予以安裝。
+4.  如果下载了最新的更新定义包，请将该包复制到客户端计算机，然后双击该定义包进行安装。
 
    > [!NOTE]
-   >  在 Endpoint Protection 用戶端安裝完成之後，用戶端會自動執行定義更新檢查。 如果此更新檢查成功，您就不需要手動安裝最新的定義更新套件。
+   >  Endpoint Protection 客户端安装完成后，客户端将自动执行定义更新检查。 如果此更新检查成功，则你不必手动安装最新的定义更新包。
 
-## <a name="to-install-the-client-software-with-an-antimalware-policy-from-the-command-prompt"></a>從命令提示字元使用反惡意程式碼原則安裝用戶端軟體
+## <a name="to-install-the-client-software-with-an-antimalware-policy-from-the-command-prompt"></a>通过命令提示符使用反恶意软件策略安装客户端软件
 
-1.  將 **scepinstall.exe** 和匯出的或預先定義的反惡意程式碼原則，複製到您要安裝 Endpoint Protection 用戶端軟體的電腦上。
+1.  将 **scepinstall.exe** 和导出的或预配置的反恶意软件政策复制到想要安装 Endpoint Protection 客户端软件的计算机上。
 
-2.  使用系統管理員權限開啟命令提示字元，瀏覽至 **scepinstall.exe** 反惡意程式碼原則所在的資料夾，然後執行下列命令：
+2.  使用管理员权限打开命令提示符，导航到“scepinstall.exe”  和反恶意软件策略所在的文件夹，然后运行下列命令：
 
    ```
    scepinstall.exe /policy <full path>\<policy file>
    ```
 
-3.  遵循螢幕指示以完成用戶端安裝。
+3.  请按照屏幕说明进行操作以完成客户端安装。
 
-4.  如果您已下載最新的定義套件，請複製套件至用戶端電腦，然後按兩下定義套件予以安裝。
+4.  如果下载了最新的定义包，请将该包复制到客户端计算机，然后双击该定义包进行安装。
 
    > [!NOTE]
-   >  在 Endpoint Protection 用戶端安裝完成之後，用戶端會自動執行定義更新檢查。 如果此更新檢查成功，您就不需要手動安裝最新的定義更新套件。
+   >  Endpoint Protection 客户端安装完成后，客户端将自动执行定义更新检查。 如果此更新检查成功，则你不必手动安装最新的定义更新包。
 
-## <a name="verify-that-the-endpoint-protection-client-is-installed-correctly"></a>確認 Endpoint Protection 用戶端是否正確安裝
-在參照電腦上安裝 Endpoint Protection 用戶端之後，請確認用戶端是否正常運作。
+## <a name="verify-that-the-endpoint-protection-client-is-installed-correctly"></a>验证是否正确安装了 Endpoint Protection 客户端
+在引用计算机上安装 Endpoint Protection 客户端之后，请验证该客户端是否正常工作。
 
-### <a name="to-verify-that-the-endpoint-protection-client-is-installed-correctly"></a>確認 Endpoint Protection 用戶端是否正確安裝
+### <a name="to-verify-that-the-endpoint-protection-client-is-installed-correctly"></a>验证是否正确安装了 Endpoint Protection 客户端
 
-1.  在參照電腦上，從 Windows 通知所在的位置開啟 **System Center Endpoint Protection**。
+1.  在引用计算机上，从 Windows 通知区域中打开“System Center Endpoint Protection” 。
 
-2.  在 [System Center Endpoint Protection] 對話方塊的 [首頁] 索引標籤上，確認 [即時保護] 已設為 [開啟]。
+2.  在“System Center Endpoint Protection”对话框的“开始”选项卡上，验证“实时保护” 是否设置为“启用” 。
 
-3.  確認 [病毒和間諜軟體定義]  顯示為 [最新] 。
+3.  验证是否为“病毒和间谍软件定义”  显示了“最新” 。
 
-4.  您可以在 [掃描選項] 下選取 [完整] ，然後按一下 [立即掃描] ，如此可協助您確認參照電腦是否就緒可以進行映像處理。
+4.  为了确保引用计算机已针对映像做好准备，请在“扫描选项” 下选择“完全” ，然后单击“立即扫描” 。
 
-### <a name="how-to-prepare-the-endpoint-protection-client-for-imaging"></a>如何準備 Endpoint Protection 用戶端以進行映像處理
-在您確認 Endpoint Protection 用戶端在參照電腦上正確安裝後，您就可以準備電腦以進行映像處理。 執行下列步驟以準備 Endpoint Protection 用戶端進行映像處理。
+### <a name="how-to-prepare-the-endpoint-protection-client-for-imaging"></a>如何针对映像准备 Endpoint Protection 客户端
+确定 Endpoint Protection 客户端已正确安装在引用计算机上后，可以针对映像准备计算机。 执行下列步骤以针对映像准备 Endpoint Protection 客户端。
 
 
-如需詳細資訊，請參閱[使用 System Center Configuration Manager 管理作業系統映像](/sccm/osd/get-started/manage-operating-system-images)。
+有关 Configuration Manager 中操作系统部署的详细信息，请参阅[使用 System Center Configuration Manager 管理操作系统映像](/sccm/osd/get-started/manage-operating-system-images)。
 
-### <a name="to-prepare-the-endpoint-protection-client-for-imaging"></a>準備 Endpoint Protection 用戶端以進行映像處理
+### <a name="to-prepare-the-endpoint-protection-client-for-imaging"></a>针对映像准备 Endpoint Protection 客户端
 
-1.  在參照電腦上，以具有系統管理員權限的使用者身分登入。
+1.  在引用计算机上，以具有管理权限的用户身份登录。
 
-2.  從 TechNet 上的 **Windows SysInternals 網站** 下載並安裝 [PsTools](http://go.microsoft.com/fwlink/?LinkId=215263) 。
+2.  从 TechNet 上的 **Windows SysInternals 站点** 下载并安装 [PsTools](http://go.microsoft.com/fwlink/?LinkId=215263) 。
 
-3.  開啟提升權限的命令提示字元，瀏覽至安裝 PsTools 的資料夾，然後輸入下列命令
+3.  打开提升的命令提示符，导航到你在其中安装了 PsTools 的文件夹，然后键入下列命令
 
    ```
    Psexec.exe -s -i regedit.exe
    ```
 
    > [!IMPORTANT]
-   >  以此方式執行登錄編輯程式時請留意；PsExec.exe 中的 -s 選項會以 LocalSystem 權限執行登錄編輯程式。
+   >  以此方式运行注册表编辑器时请小心；PsExec.exe 中的 –s 选项使用 LocalSystem 权限运行注册表编辑器。
 
-4.  在 [登錄編輯程式] 中，瀏覽至下列各個登錄機碼，然後予以刪除。
+4.  在注册表编辑器中，导航到下列每个注册表项，并将其删除。
 
    > [!IMPORTANT]
-   >  刪除登錄機碼必須是在製作參照電腦映像之前的最後步驟。 登錄機碼會在 Endpoint Protection 用戶端啟動時重新建立。 如果您重新啟動參照電腦，就必須再次刪除登錄機碼。
+   >  必须在对引用计算机进行映像之前的最后一步骤删除这些注册表项。 Endpoint Protection 客户端启动后，会重新创建注册表项。 如果重启引用计算机，你必须再次删除这些注册表项。
 
    -   **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft Antimalware\InstallTime**
 
@@ -168,6 +168,6 @@ ms.lasthandoff: 08/07/2017
 
    -   **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\RemovalTools\MRT\GUID**
 
-在完成上述步驟後，您就可以準備參照電腦進行映像處理。 如需詳細資訊，請參閱[使用 System Center Configuration Manager 管理作業系統映像](/sccm/osd/get-started/manage-operating-system-images)。
+完成前面的步骤后，即可针对映像准备引用计算机。 有关 Configuration Manager 中操作系统部署的详细信息，请参阅[使用 System Center Configuration Manager 管理操作系统映像](/sccm/osd/get-started/manage-operating-system-images)。
 
-部署含有 Endpoint Protection 用戶端軟體的映像時，Endpoint Protection 用戶端會自動將資訊報告給電腦被指派的 Configuration Manager 站台，並且會下載並套用適用於用戶端電腦的原則。
+在部署包含 Endpoint Protection 客户端软件的映像时，Endpoint Protection 客户端将自动向计算机所分配到的 Configuration Manager 站点报告信息，并且会下载和应用适用于客户端计算机的策略。

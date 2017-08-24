@@ -1,6 +1,6 @@
 ---
-title: "流程圖 - 更新複寫 | Microsoft Docs"
-description: "請參閱將您選擇安裝的主控台內更新複寫到其他站台的程序。"
+title: "流程图 - 更新复制 | Microsoft Docs"
+description: "查看所选控制台内更新通过其向其他站点安装副本的过程。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -17,13 +17,13 @@ manager: angrobe
 ms.openlocfilehash: cefde9fa6894e39715257f0453ccfe160a55919e
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="flowchart---update-replication-for-system-center-configuration-manager"></a>流程圖 - System Center Configuration Manager 的更新複寫
+# <a name="flowchart---update-replication-for-system-center-configuration-manager"></a>流程图 - 更新 System Center Configuration Manager 的副本
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-這些資料流程顯示將您選擇安裝的主控台內更新複寫到其他站台的程序。 這些流程也會顯示擷取更新以執行必要條件檢查並將更新安裝在管理中心網站和主要站台的程序。  
+这些数据流显示所选控制台内更新通过其向其他站点安装副本的过程。 这些流程还显示提取更新，以运行先决条件检查和在管理中心站点和主站点安装更新的过程。  
 
- ![流程圖 - 複寫更新](media/Flowchart---Replicate-updates.png)  
+ ![流程图 - 复制更新](media/Flowchart---Replicate-updates.png)  

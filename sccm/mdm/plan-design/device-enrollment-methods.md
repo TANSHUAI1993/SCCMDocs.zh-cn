@@ -1,6 +1,6 @@
 ---
-title: "混合式 MDM 的裝置註冊方法 | Microsoft Docs"
-description: "混合式 MDM 的裝置註冊方法。"
+title: "混合 MDM 的设备注册方法 | Microsoft Docs"
+description: "混合 MDM 的设备注册方法。"
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
@@ -18,67 +18,67 @@ manager: angrobe
 ms.openlocfilehash: e09e639e939b846cdc162681f9d7bd4c39cd6fbf
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="overview-of-device-enrollment-methods"></a>裝置註冊方法概觀
+# <a name="overview-of-device-enrollment-methods"></a>设备注册方法概述
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-在您使用 Intune 來擴充 Configuration Manager 之後，您即可註冊並管理公司擁有的裝置，或賦予使用者註冊其個人裝置的權限。 您也可以使用 Configuration Manager，搭配 Intune 來管理公司擁有的裝置。
+使用 Intune 扩展 Configuration Manager 后，可注册和管理公司拥有的设备或授予用户注册其个人设备的权限。 还可以使用 Configuration Manager 通过 Intune 管理公司拥有的设备。
 
-下表顯示註冊方法與支援的功能。 這些功能包括：
-- **抹除** - 將裝置重設為原廠設定，並移除所有的資料。 [淘汰裝置](../deploy-use/wipe-lock-reset-devices.md)
-- **親和性** - 將裝置與使用者相關聯。 行動應用程式管理 (MAM) 及條件式存取公司資料的必要項目。 [使用者親和性](../deploy-use/user-affinity-for-hybrid-managed-devices.md)
-- **鎖定** - 可防止使用者移除裝置管理功能。 iOS 裝置需要處於受監管模式，才能進行鎖定。 [遠端鎖定](../deploy-use/wipe-lock-reset-devices.md#remote-lock)
+下表显示了注册方法及其支持的功能。 这些功能包括：
+- **擦除** - 恢复设备的出厂设置，删除所有数据。 [停用设备](../deploy-use/wipe-lock-reset-devices.md)
+- **相关性** - 将设备与用户相关联。 需要移动应用程序管理 (MAM) 和对公司数据的条件性访问。 [用户关联](../deploy-use/user-affinity-for-hybrid-managed-devices.md)
+- **锁定** - 防止用户从管理中移除设备。 iOS 设备的锁定需要为受监督模式。 [远程锁定](../deploy-use/wipe-lock-reset-devices.md#remote-lock)
 
-**iOS 註冊方法**
+**iOS 注册方法**
 
-| **方法** |  **抹除** |  **親和性**    |   **鎖定** | **詳細資料** |
+| **方法** |  **擦除** |  **相关性**    |   **锁定** | **详细信息** |
 |:---:|:---:|:---:|:---:|:---:|
 |**[BYOD](#byod)** | 否|    是 |   否 | [更多](../deploy-use/enable-platform-enrollment.md)|
 |**[DEM](#dem)**|   否 |否 |否  | [更多](../deploy-use/enroll-devices-with-device-enrollment-manager.md)|
-|**[DEP](#dep)**|   是 |   選擇性 |  選擇性|[更多](../deploy-use/ios-device-enrollment-program-for-hybrid.md)|
-|**[USB-SA](#usb-sa)**| 是 |   選擇性 |  否| [更多](../deploy-use/ios-hybrid-enrollment-using-apple-configurator.md)|
+|**[DEP](#dep)**|   是 |   可选 |  可选|[更多](../deploy-use/ios-device-enrollment-program-for-hybrid.md)|
+|**[USB-SA](#usb-sa)**| 是 |   可选 |  否| [更多](../deploy-use/ios-hybrid-enrollment-using-apple-configurator.md)|
 
-**Windows 和 Android 註冊方法**
+**Windows 和 Android 的注册方法**
 
-| **方法** |  **抹除** |  **親和性**    |   **鎖定** | **詳細資料**|
+| **方法** |  **擦除** |  **相关性**    |   **锁定** | **详细信息**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
 |**[BYOD](#byod)** | 否|    是 |   否 | [更多](../deploy-use/enroll-hybrid-windows.md)|
 |**[DEM](#dem)**|   否 |否 |否  |[更多](../deploy-use/enroll-devices-with-device-enrollment-manager.md)|
 
-如需可協助您判斷最佳方法的一系列問題，請參閱[選擇如何註冊行動裝置](/intune/get-started/choose-how-to-enroll-devices1)。
+关于可帮助用户找到正确方法的一系列问题，请参阅[选择如何注册设备](/intune/get-started/choose-how-to-enroll-devices1)。
 
 ## <a name="byod"></a>BYOD
-「攜帶您自己的裝置」(BYOD) 的使用者可安裝公司入口網站應用程式，並註冊其裝置。 這可以讓使用者連線到公司網路，並加入網域或 Azure Active Directory。 針對大部分平台的許多 COD 案例，啟用 BYOD 註冊功能為必要條件。 請參閱[安裝混合式 MDM](../deploy-use/setup-hybrid-mdm.md)。 ([返回表格](#overview-of-device-enrollment-methods))
+“自带设备办公” (BYOD) 用户可安装公司门户应用并注册其设备。 这可以让用户连接到公司网络，加入域或 Azure Active Directory。 对于大多数平台，许多 COD 方案的先决条件之一都是要求启用 BYOD 注册。 请参阅[安装混合 MDM](../deploy-use/setup-hybrid-mdm.md)。 （[返回到表格](#overview-of-device-enrollment-methods)）
 
-## <a name="corporate-owned-devices"></a>公司擁有的裝置
-您可使用 Configuration Manager 主控台來管理公司擁有的裝置 (COD)。 iOS 裝置可以直接透過 Apple 提供的工具來進行註冊 。 系統管理員或管理員可以使用裝置註冊管理員，來註冊所有裝置類型。 您亦可將具有 IMEI 編號的裝置識別和標記為屬公司擁有，以啟用 COD 案例。
+## <a name="corporate-owned-devices"></a>公司拥有的设备
+可通过 Configuration Manager 控制台管理公司拥有的设备 (COD)。 可直接通过 Apple 提供的工具注册 iOS 设备。 管理员或主管可使用设备注册管理器注册所有设备类型。 还可识别具有 IMEI 号码的设备并将其标记为“公司拥有”来启用 COD 方案。
 
-[註冊公司擁有的裝置](../deploy-use/enroll-company-owned-devices.md)
+[注册公司拥有的设备](../deploy-use/enroll-company-owned-devices.md)
 
 ### <a name="dem"></a>DEM
-裝置註冊管理員是一種特殊的使用者帳戶，可用來註冊和管理屬公司擁有的多部裝置。 管理員可以安裝公司入口網站，並註冊多部尚無使用者的裝置。 深入了解 [DEM](../deploy-use/enroll-devices-with-device-enrollment-manager.md)。 ([返回表格](#overview-of-device-enrollment-methods))
+设备注册管理器是用来注册和管理多个公司拥有的设备的特殊用户帐户。 此管理器可以安装公司门户和注册多个无用户设备。 详细了解 [DEM](../deploy-use/enroll-devices-with-device-enrollment-manager.md)。 （[返回到表格](#overview-of-device-enrollment-methods)）
 
 ### <a name="dep"></a>DEP
-Apple 裝置註冊方案 (DEP) 管理功能可讓您以「無線」方式，建立原則並將其部署至透過 DEP 購買和管理的 iOS 裝置。 當使用者第一次開啟裝置並執行 iOS 設定輔助程式時，即會註冊裝置。 這個方法支援 **iOS 受監管**模式，並可啟用：
-  - 鎖定的註冊
-  - 條件式存取
-  - 破解偵測
-  - 行動應用程式管理
+Apple 设备注册计划 (DEP) 管理允许用户创建“无线”策略并将其部署到通过 DEP 购买和管理的 iOS 设备。 设备将在用户第一次打开设备并运行 iOS 设置助理时注册。 此方法支持“iOS 受监督”模式，该模式反过来可启用：
+  - 锁定的注册
+  - 条件性访问
+  - 破解检测
+  - 移动应用程序管理
 
-深入了解 [DEP](../deploy-use/ios-device-enrollment-program-for-hybrid.md)。 ([返回表格](#overview-of-device-enrollment-methods))
+详细了解 [DEP](../deploy-use/ios-device-enrollment-program-for-hybrid.md)。 （[返回到表格](#overview-of-device-enrollment-methods)）
 
 ### <a name="usb-sa"></a>USB-SA
-USB 連接的設定輔助程式註冊。 系統管理員會建立原則，並將它匯出至 Apple Configurator。 系統會透過原則來準備已連接 USB 且公司擁有的裝置。 系統管理員必須手動註冊每部裝置。 使用者收到裝置後，可執行設定輔助程式，以註冊其裝置。 這個方法支援 **iOS 受監管**模式，並可啟用：
-  - 條件式存取
-  - 破解偵測
-  - 行動應用程式管理
+通过 USB 连接的“设置助理注册”。 管理员创建策略并将其导出到 Apple Configurator。 使用策略准备好通过 USB 连接的公司拥有的设备。 管理员必须手动注册每个设备。 用户收到其设备并运行设置助理，便可注册其设备。 此方法支持“iOS 受监督”模式，该模式反过来可启用：
+  - 条件性访问
+  - 破解检测
+  - 移动应用程序管理
 
-深入了解 [Setup Assistant enrollment with Apple Configurator](../deploy-use/ios-hybrid-enrollment-using-apple-configurator.md) (使用 Apple Configurator 設定輔助程式註冊)。 ([返回表格](#overview-of-device-enrollment-methods))
+详细了解[使用 Apple Configurator 进行设置助理注册](../deploy-use/ios-hybrid-enrollment-using-apple-configurator.md)。 （[返回到表格](#overview-of-device-enrollment-methods)）
 
-## <a name="mobile-device-management-with-exchange-activesync-and-configuration-manager"></a>使用 Exchange ActiveSync 和 Configuration Manager 的行動裝置管理
-針對未註冊但已連接 Exchange ActiveSync (EAS) 的行動裝置，Intune 可以使用 EAS MDM 原則進行管理。 Intune 會使用 Exchange 連接器與 EAS 通訊 (不論內部部署或裝載在雲端中)。
+## <a name="mobile-device-management-with-exchange-activesync-and-configuration-manager"></a>使用 Exchange ActiveSync 和 Configuration Manager 管理移动设备
+可以使用 EAS MDM 策略通过 Intune 管理未注册但连接到 Exchange ActiveSync (EAS) 的移动设备。 Intune 使用 Exchange Connector 与本地或云托管的 EAS 通信。
 
-[使用 Exchange ActiveSync 和 Intune 的行動裝置管理](../deploy-use/manage-mobile-devices-with-exchange-activesync.md)
+[使用 Exchange ActiveSync 和 Intune 管理移动设备](../deploy-use/manage-mobile-devices-with-exchange-activesync.md)

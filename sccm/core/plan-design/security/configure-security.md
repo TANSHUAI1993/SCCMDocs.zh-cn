@@ -1,6 +1,6 @@
 ---
-title: "在 System Center Configuration Manager 中設定安全性 | Microsoft Docs"
-description: "設定 System Center Configuration Manager 的安全性相關選項。"
+title: "配置 System Center Configuration Manager 中的安全性 | Microsoft Docs"
+description: "配置 System Center Configuration Manager 的安全相关选项。"
 ms.custom: na
 ms.date: 12/30/2016
 ms.prod: configuration-manager
@@ -17,112 +17,112 @@ manager: angrobe
 ms.openlocfilehash: 0034381a7a388ddc3eda5e774f3c63d741336301
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="configure-security-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中設定安全性
+# <a name="configure-security-in-system-center-configuration-manager"></a>配置 System Center Configuration Manager 中的安全性
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-請使用本文的資訊，協助設定 System Center Configuration Manager 的安全性相關選項。  
+使用本主题中的信息来帮助为 System Center Configuration Manager 配置以下安全相关选项。  
 
-##  <a name="BKMK_ConfigureClientPKI"></a> 設定用戶端 PKI 憑證的設定  
-如果您想要使用公開金鑰基礎結構 (PKI) 憑證，和使用 Internet Information Services (IIS) 的站台系統進行用戶端連線，請使用下列程序設定這些憑證的設定。  
+##  <a name="BKMK_ConfigureClientPKI"></a> 为客户端 PKI 证书配置设置  
+如果要为与使用 Internet Information Services (IIS) 的站点系统的客户端连接使用公钥基础架构 (PKI) 证书，请使用下列过程来为这些证书配置设置。  
 
-#### <a name="to-configure-client-pki-certificate-settings"></a>設定用戶端 PKI 憑證設定  
+#### <a name="to-configure-client-pki-certificate-settings"></a>配置客户端 PKI 证书设置  
 
-1.  在 Configuration Manager 主控台中，選擇 [系統管理]。  
+1.  在 Configuration Manager 控制台中，选择“管理”。  
 
-2.  在 [系統管理] 工作區中，展開 [站台設定]，選擇 [站台]，然後選擇要設定的主要站台。  
+2.  在“管理”工作区中，展开“站点配置” ，选择“站点”，然后选择要配置的主站点。  
 
-3.  在 [首頁] 索引標籤的 [內容] 群組中選擇 [內容]，然後選擇 [用戶端電腦通訊] 索引標籤。  
+3.  在“主页”选项卡上的“属性”组中，选择“属性”，然后选择“客户端计算机通信”选项卡。  
 
-    這個索引標籤只能在主要站台使用。 如果沒有看到 [用戶端電腦通訊]  索引標籤，請確認您未連線到管理中心網站或次要站台。  
+    此选项卡仅在主站点上可用。 如果看不到“客户端计算机通信”  选项卡，请检查你是否未连接到管理中心站点或辅助站点。  
 
-4.  當您想要讓指派給站台的用戶端，在連線到使用 IIS 的站台系統時一律使用用戶端 PKI 憑證，請選擇 [僅 HTTPS]。 或者，當您不需要讓用戶端使用 PKI 憑證時，請選擇 [HTTPS 或 HTTP]。  
+4.  如果希望分配给站点的客户端在连接到使用 IIS 的站点系统时始终使用客户端 PKI 证书，请选择“仅 HTTPS”。 或者，如果不需要客户端使用 PKI 证书，请选择“HTTPS 或 HTTP”。  
 
-5.  如果選擇的是 [HTTPS 或 HTTP]，請在您想要使用用戶端 PKI 憑證進行 HTTP 連線時，選擇 [使用可用的 PKI 用戶端憑證 (用戶端驗證功能)]。 用戶端會改用此憑證而非使用自我簽署憑證，以對站台系統做自我驗證。 如果您選擇 [僅 HTTPS]，則會自動選擇此選項。  
+5.  如果选择了“HTTPS 或 HTTP”，请在希望为 HTTP 连接使用客户端 PKI 证书时选择“使用客户端 PKI 证书(客户端身份验证功能)(如果可用)”。 客户端使用此证书（而不是自签名证书）来向站点系统验证自身。 如果选择“仅 HTTPS”，则会自动选择此选项。  
 
-    當用戶端被偵測到在網際網路上，或是對僅使用網際網路的用戶端管理進行設定時，這些用戶端永遠都會使用用戶端 PKI 憑證。  
+    如果检测到客户端位于 Internet 上，或者针对仅限 Internet 的客户端管理配置了客户端，则客户端始终使用客户端 PKI 证书。  
 
-6.  當用戶端有一個以上有效的 PKI 用戶端憑證可用時，可選擇 [修改] 設定所選的用戶端選取方法，然後選擇 [確定]。  
+6.  选择“修改”，为一个客户端上有多个有效 PKI 客户端证书的情况配置所选客户端选择方法，然后选择“确定”。  
 
-    如需用戶端憑證選取方法的詳細資訊，請參閱[規劃 PKI 用戶端憑證選取](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForClientCertificateSelection)。  
+    有关客户端证书选择方法的详细信息，请参阅[规划 PKI 客户端证书选择](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForClientCertificateSelection)。  
 
-7.  選取或清除讓用戶端檢查憑證撤銷清單 (CRL) 的核取方塊。  
+7.  选中或清除客户端的复选框以检查证书吊销列表 (CRL)。  
 
-    如需用戶端 CRL 檢查的詳細資訊，請參閱[規劃 PKI 憑證撤銷](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForCRLs)。  
+    有关客户端 CRL 检查的详细信息，请参阅[规划 PKI 证书吊销](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForCRLs)。  
 
-8.  如果必須為用戶端指定受信任根憑證授權單位 (CA) 憑證，請選擇 [設定]，匯入根 CA 憑證檔案，然後選擇 [確定]。  
+8.  如果必须为客户端指定受信任根证书颁发机构 (CA)，请选择“设置”，导入根 CA 证书文件，然后选择“确定”。  
 
-    如需此設定的詳細資訊，請參閱[規劃 PKI 受信任根憑證及憑證簽發者清單](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForRootCAs)。  
+    有关此设置的详细信息，请参阅[规划 PKI 受信任的根证书和证书颁发者列表](../../../core/plan-design/security/plan-for-security.md#BKMK_PlanningForRootCAs)。  
 
-9. 選擇 [確定] 關閉站台的內容對話方塊。  
+9. 单击“确定”以关闭站点的属性对话框。  
 
-為階層中的所有主要站台重複此程序。  
+为层次结构中的所有主站点重复此过程。  
 
-##  <a name="BKMK_ConfigureSigningEncryption"></a> 設定簽署及加密  
-為站台系統設定站台之所有用戶端皆支援的最安全簽署及加密設定。 這些設定在您讓用戶端使用自我簽署憑證透過 HTTP 與站台系統通訊時，尤其重要。  
+##  <a name="BKMK_ConfigureSigningEncryption"></a> 配置签名和加密  
+为站点系统配置站点中的所有客户端可支持的最安全签名和加密设置。 当你让客户端通过使用 HTTP 上的自签名证书与站点系统通信时，这些设置特别重要。  
 
-#### <a name="to-configure-signing-and-encryption-for-a-site"></a>設定站台的簽署及加密  
+#### <a name="to-configure-signing-and-encryption-for-a-site"></a>为站点配置签名和加密  
 
-1.  在 Configuration Manager 主控台中，選擇 [系統管理]。  
+1.  在 Configuration Manager 控制台中，选择“管理”。  
 
-2.  在 [系統管理] 工作區中，展開 [站台設定]，選擇 [站台]，然後選擇要設定的主要站台。  
+2.  在“管理”工作区中，展开“站点配置” ，选择“站点”，然后选择要配置的主站点。  
 
-3.  在 [首頁] 索引標籤的 [內容] 群組中選擇 [內容]，然後選擇 [簽署和加密] 索引標籤。  
+3.  在“主页”选项卡上的“属性”组中，选择“属性”，然后选择“签名和加密”选项卡。  
 
-    這個索引標籤只能在主要站台使用。 如果沒有看到 [簽署和加密]  索引標籤，請確認您未連線到管理中心網站或次要站台。  
+    此选项卡仅在主站点上可用。 如果看不到“签名和加密”  选项卡，请检查你是否未连接到管理中心站点或辅助站点。  
 
-4.  設定所需的簽署及加密選項，然後選擇 [確定]。  
+4.  配置所需的签名和加密选项，然后选择“确定”。  
 
     > [!WARNING]  
-    >  請先確認可能指派給站台的所有用戶端皆可支援此雜湊演算法，或者擁有有效的 PKI 用戶端驗證憑證，然後選擇 [需要 SHA-256]。 您可能必須在用戶端上安裝更新或 Hotfix，以支援 SHA-256 。 例如，執行 Windows Server 2003 SP2 的電腦必須安裝 [知識庫文章 938397](http://go.microsoft.com/fwlink/p/?LinkId=226666)中所參照的 Hotfix。  
+    >  在未先检查可能分配给站点的所有客户端是否可支持此哈希算法并且它们具有有效的 PKI 客户端认证证书的情况下，请不要选择“需要 SHA-256” 。 你可能必须在客户端上安装更新或修补程序来支持 SHA-256。 例如，运行 Windows Server 2003 SP2 的计算机必须安装 [知识库文章 938397](http://go.microsoft.com/fwlink/p/?LinkId=226666)中引用的修补程序。  
     >   
-    >  如果您選擇此選項，而用戶端不支援 SHA-256 及使用自我簽署憑證，則 Configuration Manager 會拒絕這些設定。 在此案例中，SMS_MP_CONTROL_MANAGER 元件會記錄訊息識別碼 5443。  
+    >  如果选择此选项，而客户端无法支持 SHA-256 和使用自签名证书，则 Configuration Manager 将拒绝这些客户端。 在此方案中，SMS_MP_CONTROL_MANAGER 组件记录消息 ID 5443。  
 
-5.  選擇 [確定] 關閉站台的 [內容] 對話方塊。  
+5.  单击“确定”以关闭站点的“属性”对话框。  
 
-為階層中的所有主要站台重複此程序。  
+为层次结构中的所有主站点重复此过程。  
 
-##  <a name="BKMK_ConfigureRBA"></a> 設定以角色為基礎的系統管理  
-以角色為基礎的系統管理結合了安全性角色、安全性範圍和指派的集合，為每個系統管理使用者定義系統管理範圍。 系統管理範圍包含系統管理使用者可以在 Configuration Manager 主控台中檢視的物件，以及與這些系統管理使用者擁有執行權限之物件相關的工作。 以角色為基礎的系統管理設定會套用到階層中的每個站台。  
+##  <a name="BKMK_ConfigureRBA"></a> 配置基于角色的管理  
+基于角色的管理结合了安全角色、安全作用域和分配的集合来定义每个管理用户的管理作用域。 管理作用域包括管理用户可在 Configuration Manager 控制台中查看的对象，以及管理用户有权执行的与这些对象相关的任务。 基于角色的管理配置应用于层次结构中的每个站点。  
 
-下列為[為 System Center Configuration Manager 設定以角色為基礎的系統管理](../../../core/servers/deploy/configure/configure-role-based-administration.md)一文之相關章節的連結：  
+以下链接指向[为 System Center Configuration Manager 配置基于角色的管理](../../../core/servers/deploy/configure/configure-role-based-administration.md)一文中的相关章节：  
 
--   [建立自訂安全性角色](../../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_CreateSecRole)  
+-   [创建自定义安全角色](../../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_CreateSecRole)  
 
--   [設定安全性角色](../../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ConfigSecRole)  
+-   [配置安全角色](../../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ConfigSecRole)  
 
--   [設定物件的安全性範圍](../../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ConfigSecScope)  
+-   [配置对象的安全作用域](../../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ConfigSecScope)  
 
--   [設定集合以管理安全性](../../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ConfigColl)  
+-   [配置集合来管理安全性](../../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ConfigColl)  
 
--   [建立新的系統管理使用者](../../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_Create_AdminUser)  
+-   [创建新管理用户](../../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_Create_AdminUser)  
 
--   [修改系統管理使用者的系統管理範圍](../../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ModAdminUser)  
+-   [修改管理用户的管理作用域](../../../core/servers/deploy/configure/configure-role-based-administration.md#BKMK_ModAdminUser)  
 
 > [!IMPORTANT]  
->  您自己的系統管理範圍，定義您在為其他系統管理使用者設定以角色為基礎的系統管理時，可指派的物件和設定。 如需規劃以角色為基礎之系統管理的詳細資訊，請參閱 [System Center Configuration Manager 以角色為基礎之系統管理的基礎](../../../core/understand/fundamentals-of-role-based-administration.md)。  
+>  你自己的管理作用域定义你在为另一个管理用户配置基于角色的管理时可分配的对象和设置。 有关规划基于角色的管理的信息，请参阅 [System Center Configuration Manager 的基于角色的管理基础](../../../core/understand/fundamentals-of-role-based-administration.md)。  
 
-##  <a name="BKMK_ManageAccounts"></a> 管理 Configuration Manager 使用的帳戶  
-Configuration Manager 支援用於多種不同工作及用途的 Windows 帳戶。  
+##  <a name="BKMK_ManageAccounts"></a> 管理 Configuration Manager 使用的帐户  
+Configuration Manager 支持为许多不同任务和用途使用 Windows 帐户。  
 
-利用下列程序檢視針對不同工作設定的帳戶，以及管理 Configuration Manager 用於每個帳戶的密碼。  
+使用以下过程来查看为不同任务配置的帐户，以及管理 Configuration Manager 用于每个帐户的密码。  
 
-#### <a name="to-manage-accounts-that-are-used-by-configuration-manager"></a>管理 Configuration Manager 使用的帳戶  
+#### <a name="to-manage-accounts-that-are-used-by-configuration-manager"></a>若要管理 Configuration Manager 使用的帐户  
 
-1.  在 Configuration Manager 主控台中，選擇 [系統管理]。  
+1.  在 Configuration Manager 控制台中，选择“管理”。  
 
-2.  在 [管理] 工作區中，展開 [安全性]，然後選擇 [帳戶]，以檢視針對 Configuration Manager 設定的帳戶。  
+2.  在“管理”工作区中，展开“安全”，然后选择“帐户”以查看为 Configuration Manager 配置的帐户。  
 
-3.  若要變更針對 Configuration Manager 所設定帳戶的密碼，請選擇帳戶。  
+3.  要更改为 Configuration Manager 配置的帐户的密码，请选择该帐户。  
 
-4.  在 [首頁] 索引標籤的 [內容] 群組中，選擇 [內容]。  
+4.  在“主页”选项卡上的“属性”组中，选择“属性”。  
 
-5.  選擇 [設定] 以開啟 [Windows 使用者帳戶] 對話方塊，並指定 Configuration Manager 的新密碼，以使用該帳戶。  
+5.  选择“设置”打开“Windows 用户帐户”对话框，并指定 Configuration Manager 用于该帐户的新密码。  
 
     > [!NOTE]  
-    >  您指定的密碼必須符合在 [Active Directory 使用者和電腦] 中為帳戶指定的密碼。  
+    >  你指定的密码必须与在 Active Directory 用户和计算机中为帐户指定的密码匹配。  
 
-6.  選擇 [確定] 完成程序。  
+6.  选择“确定”完成该过程。  

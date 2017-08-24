@@ -1,6 +1,6 @@
 ---
-title: "作業系統部署簡介 | Microsoft Docs"
-description: "在 Configuration Manager 環境中部署作業系統之前，請先了解相關概念。"
+title: "操作系统部署简介 | Microsoft Docs"
+description: "请在 Configuration Manager 环境中部署操作系统之前，了解一些概念。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -17,117 +17,117 @@ manager: angrobe
 ms.openlocfilehash: 2baa6b7dbd66ab41bc9b67e8f43c313be233153c
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="introduction-to-operating-system-deployment-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的作業系統部署簡介
+# <a name="introduction-to-operating-system-deployment-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的操作系统部署简介
 
-適用於：System Center Configuration Manager (最新分支)
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-您可以透過許多不同的方式來使用 Configuration Manager 部署作業系統。 請參閱本節的資訊，以了解如何部署作業系統，並將工作自動化。 
+可以通过不同方式使用 Configuration Manager 部署操作系统。 通过本节中的信息了解如何部署操作系统和自动执行任务。 
 
-##  <a name="BKMK_OSDeploymentProcess"></a> 作業系統部署程序  
- Configuration Manager 提供數種可用於部署作業系統的方法。 無論採用哪一種部署方法，都有幾個必須執行的動作：  
+##  <a name="BKMK_OSDeploymentProcess"></a> 操作系统部署过程  
+ Configuration Manager 提供可用于部署操作系统的一些方法。 无论使用哪种部署方法，都必须执行一些操作：  
 
--   識別啟動開機映像或安裝您必須部署之作業系統映像所需的 Windows 裝置驅動程式。  
+-   标识要开始启动映像或安装操作系统映像（必须部署的）所必需的 Windows 设备驱动程序。  
 
--   識別您想要用來啟動目的地電腦的開機映像。  
+-   确定想要用来启动目标计算机的启动映像。  
 
--   使用工作順序擷取要部署的作業系統映像。 或者，您可以使用預設的作業系統映像。  
+-   使用任务序列捕获将要部署的操作系统的映像。 或者，你可以使用默认的操作系统映像。  
 
--   將開機映像、作業系統映像及任何相關內容發佈至發佈點。  
+-   将启动映像、操作系统映像包以及任何相关内容分发至分发点。  
 
--   建立含有部署開機映像和作業系統映像之步驟的工作順序。  
+-   创建任务序列，该序列带有部署启动映像和操作系统映像的步骤。  
 
--   將工作順序部署到電腦集合。  
+-   将任务序列部署到计算机集合。  
 
--   監視部署。  
+-   监视部署。  
 
-##  <a name="BKMK_OSDScenarios"></a> 作業系統部署案例  
- 在 Configuration Manager 中有許多作業系統部署案例，可讓您依據自己的環境和作業系統安裝目的來選擇。  例如，您可以使用新版本的 Windows 磁碟分割和格式化現有的電腦，或將 Windows 升級至最新版本。 為了協助您決定符合需求的部署方法，請檢閱[部署企業作業系統的案例](../deploy-use/scenarios-to-deploy-enterprise-operating-systems.md)。  您可以從下列作業系統部署案例選擇：  
+##  <a name="BKMK_OSDScenarios"></a> 操作系统部署方案  
+ Configuration Manager 中有许多可供选择的操作系统部署方案，具体取决于你的环境和操作系统的安装目的。  例如，你可以使用新版本的 Windows 对现有计算机进行分区和格式化，或将 Windows 升级到最新版本。 为帮助确定所需的部署方法，请查看[部署企业操作系统的方案](../deploy-use/scenarios-to-deploy-enterprise-operating-systems.md)。  你可以从以下操作系统部署方案中进行选择：  
 
--   [升級至最新版本的 Windows](../deploy-use/upgrade-windows-to-the-latest-version.md)  
+-   [将 Windows 升级到最新版本](../deploy-use/upgrade-windows-to-the-latest-version.md)  
 
--   [使用新的 Windows 版本重新整理現有的電腦](../deploy-use/refresh-an-existing-computer-with-a-new-version-of-windows.md)  
+-   [使用新版的 Windows 刷新现有的计算机](../deploy-use/refresh-an-existing-computer-with-a-new-version-of-windows.md)  
 
--   [在新電腦 (裸機) 上安裝新的 Windows 版本](../deploy-use/install-new-windows-version-new-computer-bare-metal.md)  
+-   [在新计算机（裸机）上安装新版的 Windows](../deploy-use/install-new-windows-version-new-computer-bare-metal.md)  
 
--   [取代現有的電腦和傳輸設定](../deploy-use/replace-an-existing-computer-and-transfer-settings.md)  
+-   [替换现有计算机和传输设置](../deploy-use/replace-an-existing-computer-and-transfer-settings.md)  
 
-##  <a name="BKMK_OSDMethods"></a> 用於部署作業系統的方法  
- 您可以運用數種方法將作業系統部署至 Configuration Manager 用戶端電腦。  
+##  <a name="BKMK_OSDMethods"></a> 用于部署操作系统的方法  
+ 可以使用一些方法将操作系统部署到 Configuration Manager 客户端计算机。  
 
--   **PXE 起始部署**：PXE 起始部署可讓用戶端電腦透過網路要求部署。 在這種部署方法中，會將作業系統映像和 Windows PE 開機映像傳送至設定接受 PXE 開機要求的發佈點。 如需詳細資訊，請參閱[利用 System Center Configuration Manager 使用 PXE 透過網路來部署 Windows](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md)。  
+-   **PXE 启动部署**：PXE 启动部署允许客户端计算机通过网络请求部署。 在此部署方法中，操作系统映像包和 Windows PE 启动映像会发送到配置为接受 PXE 启动请求的分发点。 有关详细信息，请参阅[使用 PXE 与 System Center Configuration Manager 一起通过网络部署 Windows](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md)。  
 
--   **在軟體中心內提供作業系統**：您可以部署作業系統，並在軟體中心提供它。 Configuration Manager 用戶端可以從軟體中心起始作業系統安裝。 如需詳細資訊，請參閱[取代現有的電腦和傳輸設定](../deploy-use/replace-an-existing-computer-and-transfer-settings.md)。  
+-   **使操作系统在软件中心中可用**：可以部署操作系统，并使其在软件中心中可用。 Configuration Manager 客户端可以从软件中心启动操作系统安装。 有关详细信息，请参阅[替换现有计算机和传输设置](../deploy-use/replace-an-existing-computer-and-transfer-settings.md)。  
 
--   **多點傳送部署**：多點傳送部署可以同時將資料傳送至多個用戶端，而不用透過獨立連線將資料複本一一傳送至每個用戶端，因此可以節省網路頻寬。 此一部署方法會將作業系統映像傳送至發佈點。 之後再於用戶端電腦要求部署時部署映像。 如需詳細資訊，請參閱[使用多點傳送透過網路來部署 Windows](../deploy-use/use-multicast-to-deploy-windows-over-the-network.md)。  
+-   **多播部署**：多播部署通过将数据并行发送到多个客户端，而不是通过单独连接向每个客户端发送数据副本，从而节省网络带宽。 在此部署方法中，操作系统映像包将发送到分发点。 这反过来会在客户端计算机请求部署时部署映像。 有关详细信息，请参阅[使用多播通过网络部署 Windows](../deploy-use/use-multicast-to-deploy-windows-over-the-network.md)。  
 
--   **可開機媒體部署**：可開機媒體部署可讓您在目的地電腦啟動時部署作業系統。 目的地電腦啟動時，會從網路擷取工作順序、作業系統映像，以及任何其他必要的內容。 由於媒體不包含該內容，因此您可以直接更新內容，而不需要重新建立媒體。 如需詳細資訊，請參閱[建立可開機媒體](../deploy-use/create-bootable-media.md)。  
+-   **可启动媒体部署**：可启动媒体部署允许在目标计算机启动时部署操作系统。 在目标计算机启动时，它从网络中检索任务序列、操作系统映像包和任何其他必需的内容。 由于媒体上未包括该内容，因此，你无需重新创建媒体就能更新内容。 有关详细信息，请参阅[创建可启动媒体](../deploy-use/create-bootable-media.md)。  
 
--   **獨立媒體部署**：獨立媒體部署可讓您在下列條件下部署作業系統：  
+-   **独立媒体部署**：独立媒体部署允许在下列情况下部署操作系统：  
 
-    -   在不適合透過網路複製作業系統映像或其他大型套件的環境中。  
+    -   在通过网络复制操作系统映像包或其他大型包并不实际可行的环境中。  
 
-    -   在沒有網路連線或網路連線頻寬不足的環境中。  
+    -   在无网络连接或具有低带宽网络连接的环境中。  
 
-     如需詳細資訊，請參閱[建立獨立媒體](../deploy-use/create-stand-alone-media.md)。  
+     有关详细信息，请参阅[创建独立媒体](../deploy-use/create-stand-alone-media.md)。  
 
--   **預先設置媒體部署**：預先設置媒體部署可讓您將作業系統部署至尚未完全佈建的電腦。 預先設置的媒體是一種 Windows Imaging Format (WIM) 檔案，可供廠商或在企業預備中心將其安裝在未連線至 Configuration Manager 環境的裸機電腦上。  
+-   **预留媒体部署**：预留媒体部署允许将操作系统部署到未完全设置的计算机。 预留媒体是 Windows 映像格式 (WIM) 文件，可以由制造商安装在裸机上，也可以安装在未连接到 Configuration Manager 环境的企业暂存中心。  
 
-     之後，在 Configuration Manager 環境中，電腦會使用媒體所提供的開機映像啟動，然後連線至站台管理點取得可用的工作順序以完成下載程序。 這種部署方法能夠減少網路流量，因為開機映像和作業系統映像皆已儲存在目的地電腦上。 您可以指定在預先設置媒體中包含應用程式、套件和驅動程式套件。 如需詳細資訊，請參閱[建立預先設置的媒體](../deploy-use/create-prestaged-media.md)。  
+     随后在 Configuration Manager 环境中，计算机使用媒体提供的启动映像启动，然后连接到站点管理点以执行完成下载过程的可用任务序列。 此部署方法可以减少网络流量，因为启动映像和操作系统映像包已在目标计算机上。 你可以指定要包含在预留媒体中的应用程序、包和驱动程序包。 有关详细信息，请参阅[创建预留媒体](../deploy-use/create-prestaged-media.md)。  
 
-##  <a name="BKMK_BootImages"></a> 開機映像  
- Configuration Manager 中的開機映像是 Windows PE (WinPE) 映像，在作業系統部署時使用。 開機映像用來以 WinPE 啟動電腦，WinPE 是最低需求的作業系統，內含有限的元件和服務可讓目的地電腦準備好進行 Windows 安裝。 Configuration Manager 提供兩種開機映像：一種支援 x86 平台，另一種支援 x64 平台。 這些皆視為預設開機映像。 您建立並新增至 Configuration Manager 的開機映像會視為自訂映像。 在您更新 Configuration Manager 時可以自動取代預設開機映像。 如需開機映像的詳細資訊，請參閱[管理開機映像](../get-started/manage-boot-images.md)。  
+##  <a name="BKMK_BootImages"></a> 启动映像  
+ Configuration Manager 中的启动映像是在操作系统部署过程中使用的 Windows PE (WinPE) 映像。 启动映像用于在 WinPE 中启动计算机，它是用于准备在目标计算机上安装 Windows 的有限组件和服务的最精简操作系统。 Configuration Manager 提供两个启动映像：一个用于支持 x86 平台，另一个用于支持 x64 平台。 这些视为默认启动映像。 创建并添加到 Configuration Manager 的启动映像被视为自定义映像。 更新 Configuration Manager 时，会自动替换默认启动映像。 有关启动映像的详细信息，请参阅[管理启动映像](../get-started/manage-boot-images.md)。  
 
-##  <a name="BKMK_OSImages"></a> 作業系統映像  
- Configuration Manager 中的作業系統映像儲存為 Windows 映像 (WIM) 檔案格式，代表經過壓縮的參照檔案和資料夾集合，其為成功在電腦上安裝及設定作業系統所必需。 在所有作業系統部署案例中，您都必須選取作業系統映像。 您可以使用預設的作業系統映像，或從您設定的參照電腦，建置作業系統映像。 如需詳細資訊，請參閱[管理作業系統映像](../get-started/manage-operating-system-images.md)。  
+##  <a name="BKMK_OSImages"></a> 操作系统映像  
+ Configuration Manager 中的操作系统映像以 Windows 映像 (WIM) 文件格式存储，代表在计算机上成功安装和配置操作系统所需的引用文件和文件夹的压缩集合。 对于所有操作系统部署方案，必须选择操作系统映像。 你可以使用默认操作系统映像或从你配置的引用计算机生成操作系统映像。 有关详细信息，请参阅[管理操作系统映像](../get-started/manage-operating-system-images.md)。  
 
-##  <a name="BKMK_OSUpgradePackages"></a> 作業系統升級套件  
- 作業系統升級套件用來升級作業系統，而且是安裝程式初始化的作業系統部署。 您可透過 DVD 或掛接的 ISO 檔案，將作業系統升級套件匯入 Configuration Manager。 如需詳細資訊，請參閱[管理作業系統升級套件](../get-started/manage-operating-system-upgrade-packages.md)。  
+##  <a name="BKMK_OSUpgradePackages"></a> 操作系统升级包  
+ 操作系统升级包用于升级操作系统，并且是安装程序启动的操作系统部署。 从 DVD 或已安装的 ISO 文件将操作系统升级包导入 Configuration Manager。 有关详细信息，请参阅[管理操作系统升级包](../get-started/manage-operating-system-upgrade-packages.md)。  
 
-##  <a name="BKMK_OSDMedia"></a> 用於部署作業系統的媒體  
- 您可以建立數種能用於部署作業系統的媒體， 包括用於擷取作業系統映像的擷取媒體，以及用於部署作業系統的獨立媒體、預先設置媒體及可開機媒體。 如果電腦沒有網路連線或與 Configuration Manager 網站的連線頻寬不足，您可以使用媒體在其上部署作業系統。 如需如何使用媒體的詳細資訊，請參閱[建立工作順序媒體](../deploy-use/create-task-sequence-media.md)。  
+##  <a name="BKMK_OSDMedia"></a> 用于部署操作系统的媒体  
+ 你可以创建若干种可用于部署操作系统的媒体。 这包括捕获用于捕获操作系统映像的媒体，以及捕获用于部署操作系统的独立、预留和可启动媒体。 通过使用媒体，可以在没有网络连接或者使用低带宽连接连接到 Configuration Manager 站点的计算机上部署操作系统。 有关如何使用媒体的详细信息，请参阅[创建任务序列媒体](../deploy-use/create-task-sequence-media.md)。  
 
-##  <a name="BKMK_DeviceDrivers"></a> 裝置驅動程式  
- 您可以將裝置驅動程式安裝在目的地電腦上，而不需要將驅動程式包含在要部署的作業系統映像中。 Configuration Manager 提供的驅動程式類別目錄中，包含您匯入 Configuration Manager 之所有裝置驅動程式的參照。 該驅動程式類別目錄位於 [軟體程式庫]  工作區，由兩個節點組成：[驅動程式]  和 [驅動程式封裝] 。 [驅動程式]  節點會列出您已匯入至驅動程式類別目錄中的所有驅動程式。 您可以使用此節點探索有關每個已匯入驅動程式的詳細資料、變更驅動程式所屬的驅動程式套件或開機印象、啟用或停用驅動程式，以及執行其他功能。 如需詳細資訊，請參閱[管理驅動程式](../get-started/manage-drivers.md)。  
+##  <a name="BKMK_DeviceDrivers"></a> 设备驱动程序  
+ 你可以在目标计算机上安装设备驱动程序，而不将它们包含在正在部署的操作系统映像中。 Configuration Manager 提供包含对导入 Configuration Manager 的所有设备驱动程序的引用的驱动程序目录。 此驱动程序目录位于“软件库”  工作区中并且包含以下两个节点：“驱动程序”  和“驱动程序包” 。 “驱动程序”  节点列出了已导入到驱动程序目录的所有驱动程序。 你可以使用此节点发现关于每个导入的驱动程序的详细信息，更改驱动程序所属的驱动程序包或启动映像，启用或禁用驱动程序，以及执行其他操作。 有关详细信息，请参阅[管理驱动程序](../get-started/manage-drivers.md)。  
 
-##  <a name="BKMK_OSDUserState"></a> 儲存和還原使用者狀態  
- 部署作業系統時，可以儲存目的地電腦的使用者狀態、部署作業系統，然後在作業系統部署完畢後還原使用者狀態。 在 Configuration Manager 用戶端電腦上安裝作業系統時通常會運用這個程序。  
+##  <a name="BKMK_OSDUserState"></a> 保存并还原用户状态  
+ 部署操作系统时，你可以保存目标计算机中的用户状态，部署操作系统，然后在部署操作系统之后还原用户状态。 此过程通常在 Configuration Manager 客户端计算机上安装操作系统时使用。  
 
- 您可以使用工作順序擷取及還原使用者狀態資訊。 擷取到使用者狀態資訊後，可以運用下列任一方法儲存擷取到的資訊：  
+ 用户状态信息是使用任务序列捕获和还原的。 捕获用户状态信息后，可以使用下列方法之一存储信息：  
 
--   您可以設定狀態移轉點來遠端存放使用者狀態資料。 擷取工作順序會將資料傳送至狀態移轉點。 等到作業系統部署完畢後，還原工作順序就會擷取資料並還原目的地電腦上的使用者狀態。  
+-   你可以通过配置状态迁移点以远程存储用户状态数据。 捕获任务序列将数据发送到状态迁移点。 然后，在部署操作系统之后，还原任务序列检索数据并在目标计算机上还原用户状态。  
 
--   您可以將使用者狀態資料存放在本機的特定位置。 在此案例中，擷取工作順序會將使用者資料複製到目的地電腦上的特定位置。 等到作業系統部署完畢後，還原工作順序便會從該位置擷取使用者資料。  
+-   你可以以本地方式将用户状态数据存储到特定位置。 在此方案中，捕获任务序列将用户数据复制到目标计算机上的特定位置。 然后，在部署操作系统之后，还原任务序列从该位置检索用户数据。  
 
--   您可以指定能用於將使用者資料還原至原始位置的永久連結。 在此案例中，移除舊的作業系統後，使用者資料仍保留在磁碟中。 接著，等到作業系統部署完畢後，還原工作順序會利用永久連結將使用者狀態資料還原至原始位置。  
+-   你可以指定可用于将用户数据还原到其原始位置的硬链接。 在此方案中，删除旧操作系统时，用户状态数据会保留在驱动器上。 然后，在部署操作系统之后，还原任务序列使用硬链接将用户状态数据还原到其原始位置。  
 
- 如需詳細資訊，請參閱[管理使用者狀態](../get-started/manage-user-state.md)。  
+ 有关详细信息，请参阅[管理用户状态](../get-started/manage-user-state.md)。  
 
-##  <a name="BKMK_UnknownComputer"></a> 部署到未知電腦  
- 您可以將作業系統部署至不是由 Configuration Manager 管理的電腦。 這類電腦在 Configuration Manager 資料庫中沒有任何相關記錄。 這些電腦稱為未知電腦。 未知電腦包括：  
+##  <a name="BKMK_UnknownComputer"></a> 部署到未知计算机  
+ 可以将操作系统部署到不由 Configuration Manager 管理的计算机。 Configuration Manager 数据库中没有这些计算机的记录。 这些计算机称为未知计算机。 未知计算机包括下列各项：  
 
--   未安裝 Configuration Manager 用戶端的電腦  
+-   未安装 Configuration Manager 客户端的计算机  
 
--   未匯入 Configuration Manager 的電腦  
+-   未导入到 Configuration Manager 中的计算机  
 
--   Configuration Manager 未探索到的電腦  
+-   未被 Configuration Manager 发现的计算机  
 
- 如需詳細資訊，請參閱[準備未知電腦部署](../get-started/prepare-for-unknown-computer-deployments.md)。  
+ 有关详细信息，请参阅[准备未知计算机部署](../get-started/prepare-for-unknown-computer-deployments.md)。  
 
-##  <a name="BKMK_UDA"></a> 建立使用者與電腦的關聯  
- 部署作業系統時，可以在使用者和目的地電腦之間建立關聯，以支援使用者裝置親和性動作。 當您在使用者和目的地電腦之間建立關聯之後，系統管理使用者可以在與該使用者相關聯的任何電腦上執行動作，例如將應用程式部署到特定使用者的電腦。 不過，當您部署作業系統時，不能將作業系統部署到特定使用者的電腦。 如需詳細資訊，請參閱[為使用者與目的地電腦建立關聯](../get-started/associate-users-with-a-destination-computer.md)。  
+##  <a name="BKMK_UDA"></a> 将用户与计算机关联  
+ 部署操作系统时，可以将用户与目标计算机关联，以支持用户设备关联操作。 将用户与目标计算机关联时，管理用户稍后可以对与该用户关联的任何计算机执行操作，如将应用程序部署到特定用户的计算机。 但是，在部署操作系统时，你无法将操作系统部署到特定用户的计算机。 有关详细信息，请参阅[将用户与目标计算机相关联](../get-started/associate-users-with-a-destination-computer.md)。  
 
-##  <a name="BKMK_TaskSequences"></a> 使用工作順序，將步驟自動化  
- 您可以在 Configuration Manager 環境中建立工作順序來執行各種工作。 工作順序的動作，會在順序的個別步驟中定義。 當執行工作順序時，會在命令列層級執行各個步驟的動作，而不需要使用者介入。 您可以使用工作順序進行下列作業：  
+##  <a name="BKMK_TaskSequences"></a> 使用任务序列自动执行步骤  
+ 可创建任务序列在 Configuration Manager 环境中执行各种任务。 序列的各个步骤中定义了任务序列的操作。 运行任务序列时，系统在命令行级别执行每个步骤的操作，无需用户干预。 可以针对以下情况使用任务序列：  
 
--   [建立工作順序以安裝作業系統](../deploy-use/create-a-task-sequence-to-install-an-operating-system.md)  
+-   [创建用于安装操作系统的任务序列](../deploy-use/create-a-task-sequence-to-install-an-operating-system.md)  
 
--   [建立非作業系統部署的工作順序](../deploy-use/create-a-task-sequence-for-non-operating-system-deployments.md)  
+-   [创建用于非操作系统部署的任务序列](../deploy-use/create-a-task-sequence-for-non-operating-system-deployments.md)  
 
--   [建立工作順序以擷取作業系統](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md)  
+-   [创建用于捕获操作系统的任务序列](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md)  
 
--   [建立工作順序以擷取和還原使用者狀態](../deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md)  
+-   [创建用于捕获和还原用户状态的任务序列](../deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md)  
 
--   [建立自訂工作順序](../deploy-use/create-a-custom-task-sequence.md)  
+-   [创建自定义任务序列](../deploy-use/create-a-custom-task-sequence.md)  

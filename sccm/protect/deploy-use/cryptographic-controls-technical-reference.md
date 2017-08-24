@@ -1,6 +1,6 @@
 ---
-title: "密碼編譯控制項技術參考 | Microsoft Docs"
-description: "了解簽署和加密在 System Center Configuration Manager 中如何協助防止攻擊讀取資料。"
+title: "加密控制技术参考 | Microsoft Docs"
+description: "了解有关在 System Center Configuration Manager 中签名和加密如何帮助防范来自数据读取的攻击。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -17,266 +17,266 @@ manager: angrobe
 ms.openlocfilehash: 09d319ce817c925ac002a27733d2ce35464eeca7
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="cryptographic-controls-technical-reference"></a>密碼編譯控制項技術參考
+# <a name="cryptographic-controls-technical-reference"></a>加密控制技术参考
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 
-System Center Configuration Manager 使用簽署和加密來協助保護 Configuration Manager 階層中的裝置管理。 使用簽署時，如果資料在轉換時遭到變更，則會予以捨棄。 加密則可藉由使用網路通訊協定解析程式，協助防止攻擊者讀取資料。  
+System Center Configuration Manager 使用签名和加密帮助保护 Configuration Manager 层次结构中的设备的管理。 借助签名，如果数据在传输过程中发生更改，则会放弃它。 加密可帮助阻止攻击者使用网络协议分析器读取数据。  
 
- Configuration Manager 用來簽署的主要雜湊演算法是 SHA-256。 當兩個 Configuration Manager 站台彼此通訊時，會使用 SHA-256 來簽署其通訊。 Configuration Manager 中實作的主要加密演算法是 3DES。 這個演算法用於將資料儲存於 Configuration Manager 資料庫中，也用於進行用戶端 HTTP 通訊。 當您使用透過 HTTPS 的用戶端通訊時，可將公開金鑰基礎結構 (PKI) 設定為使用 RSA 憑證，該憑證具備 [System Center Configuration Manager 的 PKI 憑證需求](../../core/plan-design/network/pki-certificate-requirements.md)中所記錄的最大雜湊演算法和金鑰長度。  
+ Configuration Manager 用于签名的主要哈希算法是 SHA-256。 当两个 Configuration Manager 站点相互通信时，它们使用 SHA-256 对其通信签名。 Configuration Manager 中实现的主要加密算法是 3DES。 这用于在 Configuration Manager 数据库中存储数据和客户端 HTTP 通信。 当你通过 HTTPS 使用客户端通信时，可以将私钥基础结构 (PKI) 配置为将 RSA 证书与 [System Center Configuration Manager 的 PKI 证书要求](../../core/plan-design/network/pki-certificate-requirements.md)中记录的最大哈希算法和密钥长度一起使用。  
 
- 針對大多數 Windows 作業系統的密碼編譯作業，Configuration Manager 使用取自 Windows CryptoAPI 程式庫 rsaenh.dll 的 SHA-2、3DES 和 AES 以及 RSA 演算法。  
+ 对于基于 Windows 的操作系统的大多数加密操作来说，Configuration Manager 使用 Windows CryptoAPI 库 rsaenh.dll 中的 SHA-2、3DES 和 AES 以及 RSA 算法。  
 
 > [!IMPORTANT]  
->  有關因應 SSL 弱點的建議變更資訊，請參閱[關於 SSL 弱點](#about-ssl-vulnerabilities)。  
+>  有关针对 SSL 漏洞所建议的更改的信息，请参阅[有关 SSL 漏洞](#about-ssl-vulnerabilities)。  
 
-##  <a name="cryptographic-controls-for-configuration-manager-operations"></a>Configuration Manager 作業的密碼編譯控制項  
- 無論您是否搭配使用 PKI 憑證與 Configuration Manager，都可以簽署與加密 Configuration Manager 中的資訊。  
+##  <a name="cryptographic-controls-for-configuration-manager-operations"></a>Configuration Manager 操作的加密控制  
+ Configuration Manager 中的信息可以进行签名和加密，无论你是否将 PKI 证书用于 Configuration Manager。  
 
-### <a name="policy-signing-and-encryption"></a>原則簽署和加密  
- 用戶端原則指派是由自我簽署的網站伺服器簽署憑證來進行簽署，以防止出現遭入侵的管理點寄送已被竄改的原則的安全性風險。 如果您正在使用網際網路用戶端管理，這就十分重要，原因是這種環境會要求在網際網路通訊中公開的管理點。  
+### <a name="policy-signing-and-encryption"></a>策略签名和加密  
+ 客户端策略分配由自签名站点服务器签名证书进行签名，以帮助阻止泄露的管理点发送已遭篡改的策略的安全风险。 这在使用基于 Internet 的客户端管理时十分重要，因为此环境需要暴露在 Internet 通信中的管理点。  
 
- 包含敏感性資料的原則會使用 3DES 加密。 包含敏感性資料的原則只會寄給獲授權的用戶端。 沒有敏感性資料的原則不會加密。  
+ 策略包含敏感数据时，系统使用 3DES 加密策略。 包含敏感数据的策略仅发送到授权客户端。 系统不对没有敏感数据的策略进行加密。  
 
- 儲存在用戶端的原則會使用資料保護應用程式開發介面 (DPAPI) 加密。  
+ 当策略存储在客户端上时，将使用数据保护应用程序编程接口 (DPAPI) 对其进行加密。  
 
-### <a name="policy-hashing"></a>原則雜湊  
- Configuration Manager 用戶端要求原則時，首先會收到原則指派，如此用戶端才會知道其套用的原則是哪一種，然後只要求這些原則的本文。 每種原則指派都包含相對應原則本文的計算雜湊。 用戶端會擷取適用的原則本文，然後計算本文上的雜湊。 若下載原則本文上的雜湊與原則指派中的雜湊不相符，用戶端會捨棄該原則本文。  
+### <a name="policy-hashing"></a>策略哈希处理  
+ 当 Configuration Manager 客户端请求策略时，它们首先获取一个策略分配，以便它们知道哪些策略适用于它们，然后仅请求那些策略的正文。 每个策略分配均包含相应策略正文的已计算哈希。 客户端检索合适的策略正文，然后计算该正文上的哈希。 如果下载的策略正文上的哈希与策略分配中的哈希不匹配，则客户端会丢弃该策略正文。  
 
- 原則的雜湊演算法是 SHA-1 和 SHA-256。  
+ 策略的哈希算法是 SHA-1 和 SHA-256。  
 
-### <a name="content-hashing"></a>內容雜湊  
- 網站伺服器上的發佈管理員服務會針對所有封裝雜湊內容檔案。 原則提供者會將雜湊納入軟體發佈原則中。 Configuration Manager 用戶端下載內容時，用戶端會在本機重新產生雜湊，並與原則中提供的雜湊進行比對。 若雜湊相符，表示內容並未遭到變更，用戶端會安裝內容。 只要內容中有一個位元遭到變更，雜湊就不相符，也不會安裝軟體。 這項檢查有助於確保安裝正確的軟體，因為是利用原則進行實際內容的交叉檢查。  
+### <a name="content-hashing"></a>内容哈希处理  
+ 站点服务器上的分发管理器服务会对所有包的内容文件进行哈希处理。 策略提供程序包含软件分发策略中的哈希。 当 Configuration Manager 客户端下载内容时，客户端会在本地重新生成哈希，并将其与策略中提供的哈希进行比较。 如果哈希匹配，则未修改内容，并且客户端将安装内容。 如果修改了内容的一个字节，则哈希将不匹配，因此将不安装软件。 此检查有助于确保安装正确的软件，因为会使用策略对实际内容进行交叉检查。  
 
- 內容的預設雜湊演算法是 SHA-256。 若要變更此預設值，請參閱 Configuration Manager 軟體開發套件 (SDK) 的說明文件。  
+ 内容的默认哈希算法为 SHA-256。 要更改此默认值，请参阅 Configuration Manager 软件开发包 (SDK) 的文档。  
 
- 並非所有裝置都支援內容雜湊。 例外狀況包括：  
+ 并非所有设备都可以支持内容哈希处理。 例外包括：  
 
--   Windows 用戶端串流 APP-V 內容時。  
+-   流式传输 APP-V 内容时的 Windows 客户端。  
 
--   Windows Phone 用戶端：但這些用戶端會驗證經由信任來源簽署之應用程式的簽章。  
+-   Windows Phone 客户端，不过这些客户端会验证受信任的来源签署的应用程序签名。  
 
--   Windows RT 用戶端：但這些用戶端會驗證經由信任來源簽署之應用程式的簽章，同時也使用套件完整名稱 (PFN) 驗證。  
+-   Windows RT 客户端，不过这些客户端会验证受信任的来源签署的应用程序签名，并且也使用包完整名称 (PFN) 验证。  
 
--   iOS：但這些裝置會驗證經由信任來源之任何開發人員憑證所簽署應用程式的簽章。  
+-   iOS，不过这些设备会验证受信任的来源中任何开发人员证书签署的应用程序签名。  
 
--   Nokia 用戶端：但這些用戶端會驗證使用自我簽署憑證之應用程式的簽章。 或者，來自信任來源之憑證的簽章和憑證可以簽署 Nokia Symbian Installation Source (SIS) 應用程式。  
+-   Nokia 客户端，不过这些客户端会验证使用自签名证书的应用程序的签名。 或者，受信任的来源中的证书或此证书中的签名可以对 Nokia Symbian 安装源 (SIS) 应用程序进行签名。  
 
--   Android。 此外，這些裝置並不針對應用程式安裝使用簽章驗證。  
+-   Android。 此外，这些设备不对应用程序安装使用签名验证。  
 
--   在不支援 SHA-256 的 Linux 和 UNIX 版本上執行的用戶端。 如需詳細資訊，請參閱[在 System Center Configuration Manager 中規劃將用戶端部署至 Linux 和 UNIX 電腦](../../core/clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers.md)。  
+-   在不支持 SHA-256 的 Linux 和 UNIX 版本上运行的客户端。 有关详细信息，请参阅[在 System Center Configuration Manager 中规划 Linux 和 UNIX 计算机的客户端部署](../../core/clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers.md)。  
 
-### <a name="inventory-signing-and-encryption"></a>清查簽署和加密  
- 無論裝置是透過 HTTP 或 HTTPS 與管理點通訊，都是由裝置簽署用戶端傳送至管理點的清查。 若使用 HTTP，您可以選擇加密此資料，這是安全性的最佳作法。  
+### <a name="inventory-signing-and-encryption"></a>清单签名和加密  
+ 客户端发送给管理点的清单始终由设备签名，无论它们是通过 HTTP 还是 HTTPS 与管理点通信，均不例外。 如果它们使用 HTTP，则可以选择加密此数据，这是最佳安全方案。  
 
-### <a name="state-migration-encryption"></a>狀態移轉加密  
- 儲存在作業系統部署之狀態移轉點的資料，一律都是由使用者狀態移轉工具 (USMT) 使用 3DES 來加密。  
+### <a name="state-migration-encryption"></a>状态迁移加密  
+ 存储在操作系统部署的状态迁移点上的数据始终由用户状态迁移工具 (USMT) 使用 3DES 进行加密。  
 
-### <a name="encryption-for-multicast-packages-to-deploy-operating-systems"></a>加密多點傳送套件以部署作業系統  
- 針對每個作業系統部署套件，您可以在使用多點傳送將套件傳輸至電腦時啟用加密。 加密使用進階加密標準 (AES)。 若啟用加密，就不需要額外的憑證設定。 啟用多點傳送的發佈點會自動產生對稱金鑰，以便加密套件。 每個套件都有不同的加密金鑰。 金鑰會經由使用標準 Windows API，儲存在啟用多點傳送的發佈點。 用戶端連線至多點傳送工作階段時，會在使用 PKI 發行之用戶端驗證憑證 (用戶端使用 HTTPS 時) 或自我簽署憑證 (用戶端使用 HTTP 時) 加密的通道上產生金鑰交換。 用戶端會將金鑰儲存於記憶體中，僅用於多點傳送工作階段。  
+### <a name="encryption-for-multicast-packages-to-deploy-operating-systems"></a>用于部署操作系统的多播包加密  
+ 对于每个操作系统部署包，你可以在使用多播向计算机传输包时启用加密。 加密使用高级加密标准 (AES)。 如果启用加密，则不需要其他证书配置。 启用多播的分发点将自动生成对称密钥来加密包。 每个包都有不同的加密密钥。 系统使用标准 Windows API 将密钥存储在启用多播的分发点上。 当客户端连接到多播会话时，会通过通道进行密钥交换，通道使用 PKI 颁发的客户端身份验证证书（如果客户端使用 HTTPS）或自签名证书（如果客户端使用 HTTP）进行加密。 客户端仅在多播会话期间将密钥存储在内存中。  
 
-### <a name="encryption-for-media-to-deploy-operating-systems"></a>加密媒體以部署作業系統  
- 使用媒體部署作業系統並指定密碼來保護媒體時，會使用進階加密標準 (AES) 來加密環境變數。 媒體上的其他資料，包括應用程式的套件與內容，則不會加密。  
+### <a name="encryption-for-media-to-deploy-operating-systems"></a>用于部署操作系统的媒体加密  
+ 使用媒体部署操作系统以及指定密码来保护媒体时，系统使用高级加密标准 (AES) 对环境变量进行加密。 系统不加密媒体上的其他数据，包括应用程序的包和内容。  
 
-### <a name="encryption-for-content-that-is-hosted-on-cloud-based-distribution-points"></a>將裝載於雲端發佈點的內容加密  
- 從 System Center 2012 Configuration Manager SP1 開始，使用雲端發佈點時，會使用具備 256 位元金鑰大小的進階加密標準 (AES) 來加密您上傳至這些發佈點的內容。 只要您更新內容，就會將內容重新加密。 用戶端下載內容時，會以 HTTPS 連線來進行加密與保護。  
+### <a name="encryption-for-content-that-is-hosted-on-cloud-based-distribution-points"></a>基于云的分发点上承载的内容的加密  
+ 从 System Center 2012 Configuration Manager SP1 开始，在使用基于云的分发点时，使用高级加密标准 (AES) 以及 256 位密钥大小对上载到这些分发点的内容进行加密。 每当对内容进行更新时，都会重新加密内容。 当客户端下载内容时，会通过 HTTPS 连接来加密和保护内容。  
 
-### <a name="signing-in-software-updates"></a>在軟體更新中簽署  
- 所有軟體更新都必須由信任的發行者來簽署，以避免遭到竄改。 在用戶端電腦上，Windows Update 代理程式 (WUA) 會掃描類別目錄的更新，但如果在本機電腦的 [信任的發行者] 存放區中找不到數位憑證，就不會安裝更新。 若使用自我簽署憑證 (如 WSUS 發行者自我簽署) 來發行更新類別目錄，則憑證也必須在本機電腦的「受信任的根憑證授權單位」憑證存放區中，以驗證該憑證是否有效。 WUA 也會檢查本機電腦上是否啟用 [允許來自內部網路 Microsoft 更新服務位置的已簽署內容群組原則]  設定。 必須為 WUA 啟用此原則設定，以掃描使用更新發行者建立與發行的更新。  
+### <a name="signing-in-software-updates"></a>在软件更新中签名  
+ 所有软件更新都必须由受信任的发布者进行签名以防止篡改。 在客户端计算机上，Windows 更新代理 (WUA) 会扫描目录中的更新，但如果它在本地计算机上受信任的发布者存储上无法找到数字证书，则将不安装更新。 如果使用自签名的证书（如 WSUS 发布者自签名的证书）来发布更新目录，则该证书也必须位于本地计算机上受信任的根证书颁发机构的证书存储中，以验证证书的有效性。 WUA 还检查是否在本地计算机上启用了“允许来自 Intranet Microsoft 更新服务位置中的签名内容组策略”  设置。 必须为 WUA 启用此策略设置，以扫描使用 Updates Publisher 创建和发布的更新。  
 
- 在 System Center 更新發行者中發行軟體更新時，只要軟體更新發行至某部更新伺服器，數位憑證就會簽署該軟體更新。 您可以指定 PKI 憑證，或設定更新發行者產生自我簽署憑證，來簽署軟體更新。  
+ 如果在 System Center Updates Publisher 中发布软件更新，则在将软件更新发布到更新服务器时，数字证书会对软件更新签名。 你可以指定 PKI 证书或将 Updates Publisher 配置为生成自签名证书，以对软件更新进行签名。  
 
-### <a name="signed-configuration-data-for-compliance-settings"></a>相容性設定的已簽署設定資料  
- 匯入設定資料時，Configuration Manager 會驗證檔案的數位簽章。 若尚未簽署檔案，或數位簽章驗證檢查失敗，就會向您發出警告，並提示您是否要繼續匯入。 除非您明確信任發行者與檔案的完整性，否則請不要繼續匯入設定資料。  
+### <a name="signed-configuration-data-for-compliance-settings"></a>符合性设置的签名配置数据  
+ 导入配置数据时，Configuration Manager 会验证文件的数字签名。 如果未对文件进行签名，或者数字签名验证检查失败，则会通知并提示你是否继续导入。 只有在你肯定信任发布者以及文件的完整性时，才继续导入配置数据。  
 
-### <a name="encryption-and-hashing-for-client-notification"></a>用戶端通知的加密和雜湊  
- 若您使用用戶端通知，則所有通訊都會使用 TLS，以及伺服器與用戶端作業系統可以交涉的最高等級加密。 例如，執行 Windows 7 的用戶端電腦與執行 Windows Server 2008 R2 的管理點可以支援 128 位元 AES 加密，而執行 Vista 的用戶端電腦也可與相同的管理點通訊，但會向下交涉至 3DES 加密。 同樣的交涉會發生在雜湊於用戶端通知期間 (使用 SHA-1 或 SHA-2) 傳輸的封包上。  
+### <a name="encryption-and-hashing-for-client-notification"></a>客户端通知的加密和哈希处理  
+ 如果使用客户端通知，则所有通信都使用服务器和客户端操作系统可以协商的 TLS 和最高加密。 例如，运行 Windows 7 的客户端计算机和运行 Windows Server 2008 R2 的管理点可以支持 128 位 AES 加密，而针对相同管理点运行 Vista 的客户端计算机将进行协商，以将标准降至 3DES 加密。 系统将进行相同的协商，以对客户端通知过程中传输的包进行哈希处理，从而使用 SHA-1 或 SHA-2。  
 
-##  <a name="certificates-used-by-configuration-manager"></a>Configuration Manager 使用的憑證  
- 如需可由 Configuration Manager 使用之公開金鑰基礎結構 (PKI) 憑證清單、任何特殊需求或限制，以及憑證使用方式，請參閱 [System Center Configuration Manager 的 PKI 憑證需求](../../core/plan-design/network/pki-certificate-requirements.md)。 這份清單包含受支援的雜湊演算法和金鑰長度。 大部分憑證支援 SHA-256 和 2048 位元金鑰長度。  
-
-> [!NOTE]  
->  Configuration Manager 使用的所有憑證，其主體名稱或主體別名都必須只能包含單一位元組字元。  
-
- 以下案例中需要 PKI 憑證：  
-
--   管理網際網路上的 Configuration Manager 用戶端時。  
-
--   管理行動裝置上的 Configuration Manager 用戶端時。  
-
--   管理 Mac 電腦時。  
-
--   使用雲端發佈點時。  
-
--   管理超出訊號範圍的 Intel ATM 型電腦時。  
-
- 針對需要憑證進行驗證、簽署或加密的大多數其他 Configuration Manager 通訊，Configuration Manager 會自動使用 PKI 憑證 (若憑證可用)。 若不可用，Configuration Manager 會產生自我簽署憑證。  
-
- Configuration Manager 使用 Exchange Server 連接器管理行動裝置時，不使用 PKI 憑證。  
-
-### <a name="mobile-device-management-and-pki-certificates"></a>行動裝置管理和 PKI 憑證  
- 若行動電信業者並未鎖定行動裝置，您可以使用 Configuration Manager 或 Microsoft Intune 來要求並安裝用戶端憑證。 此憑證可提供行動裝置上的用戶端與 Configuration Manager 站台系統或 Microsoft Intune 服務間的相互驗證。 如果行動裝置遭到鎖定，就不能使用 Configuration Manager 或 Intune 部署憑證。  
-
- 如果您啟用行動裝置的硬體清查，Configuration Manager 或 Intune 也會清查安裝在行動裝置上的憑證。  
-
-### <a name="out-of-band-management-and-pki-certificates"></a>頻外管理和 PKI 憑證  
- Intel AMT 型電腦的超出訊號範圍管理會使用至少兩種類型的 PKI 發行憑證：AMT 佈建憑證和 Web 伺服器憑證。  
-
- 超出訊號範圍服務點會使用 AMT 佈建憑證來準備電腦進行超出訊號範圍管理。 即將佈建的 AMT 型電腦必須信任由超出訊號範圍管理點提出的憑證。 根據預設，電腦製造商會設定 AMT 型電腦，以使用外部憑證授權單位 (CA)，如 VeriSign、Go Daddy、Comodo 和 Starfield。 若您向其中一個外部 CA 購買佈建憑證，並設定 Configuration Manager 使用此佈建憑證，AMT 型電腦會信任佈建憑證的 CA，佈建也會成功。 但是，使用您自己的內部 CA 來發行 AMT 佈建憑證才是安全性最佳的作法。  
-
- AMT 型電腦會在其防火牆內執行 Web 伺服器元件，而該 Web 伺服器元件會使用傳輸層安全性 (TLS) 來加密與超出訊號範圍服務間的通訊通道。 由於使用者無法介入 AMT BIOS 來手動設定憑證，您必須有 Microsoft 企業憑證授權單位，以自動核准 AMT 型電腦提出的憑證要求。 針對要求格式，此要求會使用 PKCS#10，接著使用 PKCS#7 將憑證資訊傳輸至 AMT 型電腦。  
-
- 雖然是由管理 AMT 型電腦的電腦完成驗證，但執行管理的電腦上還是沒有相對應的用戶端 PKI 憑證。 這些通訊則是使用 Kerberos 或 HTTP Digest 驗證。 使用 HTTP Digest 時，會使用 TLS 進行加密。  
-
- 管理超出訊號範圍的 AMT 型電腦時，可能還需要其他類型的憑證：以 802.1X 驗證之有線網路與無線網路的選用用戶端憑證。 AMT 型電腦驗證至 RADIUS 伺服器時，可能需要用戶端憑證。 針對 EAP-TLS 驗證設定 RADIUS 伺服器時，一律都需要用戶端憑證。 針對 EAP-TTLS/MSCHAPv2 或 PEAPv0/EAP-MSCHAPv2 設定 RADIUS 伺服器時，RADIUS 設定會指定是否需要用戶端憑證。 AMT 型電腦會使用與 Web 伺服器憑證要求相同的程序來要求憑證。  
-
-### <a name="operating-system-deployment-and-pki-certificates"></a>作業系統部署和 PKI 憑證  
- 使用 Configuration Manager 部署作業系統，且管理點需要 HTTPS 用戶端連線時，即使用戶端電腦是在轉換階段 (如從工作順序媒體或支援 PXE 的發佈點開機)，也必須有憑證才能與管理點通訊。 為支援此案例，您必須建立 PKI 用戶端驗證憑證，並連同私密金鑰匯出，然後將其匯入站台伺服器內容，同時新增管理點的受信任根 CA 憑證。  
-
- 如果您建立可開機媒體，在您建立可開機媒體時需匯入用戶端驗證憑證。 在可開機媒體上設定密碼，有助於保護在工作順序中設定的私密金鑰與其他敏感性資料。 經由可開機媒體開機的每部電腦都會對用戶端功能 (如請求用戶端原則) 所需的管理點出示相同的憑證。  
-
- 如果您使用 PXE 開機，則要將用戶端驗證憑證匯入支援 PXE 的發佈點，且針對從該支援 PXE 的發佈點開機的每個用戶端使用相同的憑證。 作為安全性最佳作法，請要求將電腦連線至 PXE 服務的使用者提供密碼，以協助保護工作順序中的私密金鑰和其他敏感性資料。  
-
- 如果這些用戶端驗證憑證的任何一個遭到入侵，請在 [系統管理]  工作區的 [憑證]  節點、[安全性]  節點封鎖憑證。 若要管理這些憑證，您必須擁有 [管理作業系統部署憑證]  權限。  
-
- 部署作業系統並安裝 Configuration Manager 後，用戶端會要求本身擁有的 PKI 用戶端驗證憑證來進行 HTTPS 用戶端通訊。  
-
-### <a name="isv-proxy-solutions-and-pki-certificates"></a>ISV Proxy 解決方案和 PKI 憑證  
- 獨立軟體廠商 (ISV) 可以建立延伸 Configuration Manager 的應用程式。 例如，ISV 可建立擴充功能以支援非 Windows 用戶端平台 (如 Macintosh 或 UNIX 電腦)。 不過，如果站台系統需要 HTTPS 用戶端連線，這些用戶端也必須使用 PKI 憑證與站台進行通訊。 Configuration Manager 包含將憑證指派給 ISV Proxy 的功能，讓 ISV Proxy 用戶端和管理點之間能夠進行通訊。 如果您使用需要 ISV Proxy 憑證的擴充功能，請參閱該產品的說明文件。 如需如何建立 ISV Proxy 憑證的詳細資訊，請參閱 Configuration Manager 軟體開發商套件 (SDK)。  
-
- 若 ISV 憑證遭到入侵，請在 [系統管理]  工作區的 [憑證]  節點、[安全性]  節點封鎖憑證。  
-
-### <a name="asset-intelligence-and-certificates"></a>Asset Intelligence 和憑證  
- Configuration Manager 會安裝 Asset Intelligence 同步處理點所使用的 X.509 憑證以連線至 Microsoft。 Configuration Manager 使用此憑證來向 Microsoft 憑證服務中心要求用戶端驗證憑證。 用戶端驗證憑證會安裝在 Asset Intelligence 同步處理點網站系統伺服器上，用來驗證連線至 Microsoft 的伺服器。 Configuration Manager 會使用用戶端驗證憑證來下載 Asset Iintelligence 類別目錄和上傳軟體標題。  
-
- 此憑證的金鑰長度為 1024 位元。  
-
-### <a name="cloud-based-distribution-points-and-certificates"></a>雲端發佈點和憑證  
- 從 System Center 2012 Configuration Manager SP1 開始，雲端發佈點需要您上傳至 Microsoft Azure 的管理憑證 (自我簽署或 PKI)。 這個管理憑證需要伺服器驗證功能和長度為 2048 位元的憑證金鑰。 此外，您必須針對每個雲端發佈點設定服務憑證 (這不能自我簽署)，並且也必須擁有伺服器驗證功能和長度至少為 2048 位元的憑證金鑰。  
+##  <a name="certificates-used-by-configuration-manager"></a>Configuration Manager 使用的证书  
+ 有关 Configuration Manager 可以使用的公钥基础结构 (PKI) 证书、任何特殊要求或限制以及证书的使用方式的列表，请参阅 [System Center Configuration Manager 的 PKI 证书要求](../../core/plan-design/network/pki-certificate-requirements.md)。 此列表包含支持的哈希算法和密钥长度。 大多数证书支持 SHA-256 和 2048 位密钥长度。  
 
 > [!NOTE]  
->  自我簽署的管理憑證僅供測試用，不可用在產品網路上。  
+>  Configuration Manager 使用的所有证书都必须在使用者名称或使用者可选名称中仅包含单字节字符。  
 
- 用戶端不需要用戶端 PKI 憑證即可使用雲端發佈點；它們使用自我簽署憑證或用戶端 PKI 憑證來針對管理進行驗證。 管理點接著會向用戶端發出 Configuration Manager 存取權杖，用戶端必須向雲端發佈點出示該權杖。 權杖的有效時間為 8 小時。  
+ 以下情况需要 PKI 证书：  
 
-### <a name="the-microsoft-intune-connector-and-certificates"></a>Microsoft Intune 連接器和憑證  
- 當 Microsoft Intune 註冊行動裝置時，您可以藉由建立 Microsoft Intune 連接器，在 Configuration Manager 中管理這些行動裝置。 連接器使用具備用戶端驗證功能的 PKI 憑證，來驗證 Configuration Manager 至 Microsoft Intune，並使用 SSL 在這兩者間傳輸所有資訊。 憑證金鑰大小為 2048 位元，並使用 SHA-1 雜湊演算法。  
+-   在 Internet 上管理 Configuration Manager 客户端时。  
 
- 安裝連接器時，系統會在網站伺服器上建立及儲存側載金鑰的簽署憑證，並在憑證登錄點上建立及儲存加密憑證，以便對簡單憑證註冊通訊協定 (SCEP) 挑戰進行加密。 這些憑證的金鑰大小也是 2048 位元，並使用 SHA-1 雜湊演算法。  
+-   在移动设备上管理 Configuration Manager 客户端时。  
 
- Intune 註冊行動裝置時，會將 PKI 憑證安裝至行動裝置。 憑證具備用戶端驗證功能，使用大小為 2048 位元的金鑰，並使用 SHA-1 雜湊演算法。  
+-   管理 Mac 计算机时。  
 
- Microsoft Intune 會自動要求、產生並安裝這些 PKI 憑證。  
+-   使用基于云的分发点时。  
 
-### <a name="crl-checking-for-pki-certificates"></a>PKI 憑證的 CRL 檢查  
- PKI 憑證撤銷清單 (CRL) 會增加系統管理和處理的負荷，但是更為安全。 不過，如果啟用了 CRL 檢查，但無法存取 CRL，則 PKI 連線會失敗。 如需詳細資訊，請參閱 [System Center Configuration Manager 的安全性和隱私權](../../core/plan-design/security/security-and-privacy.md)。  
+-   对基于 Intel AMT 的计算机进行带外管理时。  
 
- 根據預設，憑證撤銷清單 (CRL) 檢查在 IIS 中為啟用狀態，因此，如果您搭配 PKI 部署使用 CRL，就不需要在大部分執行 IIS 的 Configuration Manager 站台系統上進行其他設定。 例外的是軟體更新，這需要手動步驟來啟用 CRL 檢查，以驗證軟體更新檔案上的簽章。  
+ 对于需要证书进行身份验证、签名或加密的大多数其他 Configuration Manager 通信，如果 PKI 证书可用，则 Configuration Manager 会自动使用这些证书。 如果这些证书不可用，则 Configuration Manager 会生成自签名证书。  
 
- 根據預設，當用戶端電腦使用 HTTPS 用戶端連線時，就會針對用戶端電腦啟用 CRL 檢查。 當您執行超出訊號範圍管理主控台以連線至 AMT 型電腦時，根據預設，並未啟用 CRL 檢查，不過您可以啟用這個選項。 在 Configuration Manager SP1 或更新版本中，您無法對 Mac 電腦上的用戶端停用 CRL 檢查。  
+ Configuration Manager 在使用 Exchange Server 连接器管理移动设备时不使用 PKI 证书。  
 
- 在 Configuration Manager 中的以下連線，並不支援 CRL 檢查：  
+### <a name="mobile-device-management-and-pki-certificates"></a>移动设备管理和 PKI 证书  
+ 如果移动运营商尚未锁定移动设备，则可以使用 Configuration Manager 或 Microsoft Intune 请求和安装客户端证书。 此证书在移动设备上的客户端与 Configuration Manager 站点系统或 Microsoft Intune 服务之间提供相互身份验证。 如果锁定了移动设备，则无法使用 Configuration Manager 或 Intune 部署证书。  
 
--   伺服器對伺服器連線。  
+ 如果启用移动设备硬件清单，则 Configuration Manager 或 Intune 还会清点移动设备上安装的证书。  
 
--   Configuration Manager 註冊的行動裝置。  
+### <a name="out-of-band-management-and-pki-certificates"></a>带外管理和 PKI 证书  
+ 基于 Intel AMT 的计算机的带外管理至少使用以下两种类型的 PKI 颁发的证书：AMT 设置证书和 Web 服务器证书。  
 
--   由 Microsoft Intune 註冊的行動裝置。  
+ 带外服务点使用 AMT 设置证书准备要进行带外管理的计算机。 将设置的基于 AMT 的计算机必须信任带外管理点提供的证书。 默认情况下，基于 AMT 的计算机被计算机制造商配置为使用外部证书颁发机构 (CA)，如 VeriSign、Go Daddy、Comodo 和 Starfield。 如果从外部 CA 之一购买设置证书，并配置 Configuration Manager 以使用此设置证书，则基于 AMT 的计算机将信任设置证书的 CA，设置将成功。 但是，使用你自己的内部 CA 颁发 AMT 设置证书是最佳安全方案。  
 
-##  <a name="cryptographic-controls-for-server-communication"></a>伺服器通訊的密碼編譯控制項  
- Configuration Manager 會針對伺服器通訊使用以下密碼編譯控制項。  
+ 基于 AMT 的计算机在其防火墙内运行 Web 服务器组件，并且该 Web 服务器组件使用传输层安全性 (TLS) 对带外服务点的信道进行加密。 AMT BIOS 中没有用于手动配置证书的用户界面，因此必须具有 Microsoft 企业证书颁发机构，以自动审批基于 AMT 的计算机提出的证书请求。 请求将 PKCS#10 用于请求格式，该格式反过来使用 PKCS#7 将证书信息传输到基于 AMT 的计算机。  
 
-### <a name="server-communication-within-a-site"></a>站台內的伺服器通訊  
- 每個站台系統伺服器都會使用憑證將資料傳輸到相同 Configuration Manager 站台內的其他站台系統。 某些網站系統角色也會使用憑證進行驗證。 例如，若您在一部伺服器上安裝了註冊 Proxy 點，在另一部伺服器上安裝註冊點，它們可使用此身分識別憑證來彼此驗證。 Configuration Manager 使用憑證進行此種通訊時，若有具備伺服器驗證功能的 PKI 憑證可用，Configuration Manager 就會自動使用該憑證；如果沒有，則 Configuration Manager 會產生自我簽署的憑證。 此自我簽署的憑證擁有伺服器驗證功能，並使用 SHA-256，且具有 2048 位元的金鑰長度。 Configuration Manager 會將憑證複製到可能需要信任該站台系統之其他站台系統伺服器上的「受信任的人」存放區。 如此，網站系統就可以使用這些憑證和 PeerTrust 彼此信任。  
+ 虽然基于 AMT 的计算机会向管理它的计算机进行身份验证，但管理它的计算机上没有对应的客户端 PKI 证书。 相反，这些通信使用 Kerberos 或 HTTP 摘要式身份验证。 使用 HTTP 摘要时，系统使用 TLS 对其进行加密。  
 
- 除了每部站台系統伺服器上的此一憑證之外，Configuration Manager 還會針對大部分站台系統角色產生自我簽署憑證。 在相同網站中出現一個以上的網站系統角色執行個體時，則會共用相同憑證。 例如，在相同網站中，您可能有多個管理點或多個註冊點。 這種自我簽署憑證也使用 SHA-256，金鑰長度同樣為 2048 位元。 此外，憑證也會複製到可能需要信任該憑證之網站系統伺服器上的受信任人存放區。 以下網站系統角色會產生此種憑證：  
+ 对基于 AMT 的计算机进行带外管理时需要其他类型的证书：适用于经过 802.1X 身份验证的有线网络和无线网络的可选客户端证书。 基于 AMT 的计算机需要客户端证书以向 RADIUS 服务器进行身份验证。 为 EAP-TLS 身份验证配置 RADIUS 服务器时，始终需要客户端证书。 为 EAP-TTLS/MSCHAPv2 或 PEAPv0/EAP-MSCHAPv2 配置 RADIUS 服务器时，RADIUS 配置会指定是否需要客户端证书。 基于 AMT 的计算机使用 Web 服务器证书请求的过程请求此证书。  
 
--   應用程式類別目錄 Web 服務點  
+### <a name="operating-system-deployment-and-pki-certificates"></a>操作系统部署和 PKI 证书  
+ 当你使用 Configuration Manager 来部署操作系统，并且管理点需要 HTTPS 客户端连接时，客户端计算机还必须具有证书才能与管理点通信，即使在该计算机处于过渡阶段（例如从任务序列媒体或支持 PXE 的分发点中启动）中时也是如此。 为了支持此方案，你必须创建一个 PKI 客户端身份验证证书，并使用私钥将其导出，然后将该证书导入到站点服务器属性并同时添加管理点的受信任根 CA 证书。  
 
--   應用程式類別目錄網站點  
+ 如果创建可启动媒体，则在创建可启动媒体时导入客户端身份验证证书。 在可启动媒体上配置一个密码，以帮助保护私钥和任务序列中配置的其他敏感数据。 通过可启动媒体启动的每台计算机将根据需要为客户端功能（例如请求客户端策略）向管理点提供相同的证书。  
 
--   Asset Intelligence 同步處理點  
+ 如果使用 PXE 启动，则会将客户端身份验证证书导入到支持 PXE 的分发点，并且它为通过支持 PXE 的该分发点启动的每个客户端使用相同的证书。 作为最佳安全方案，请要求将其计算机连接到 PXE 服务的用户提供密码，以帮助保护私钥和任务序列中的其他敏感数据。  
 
--   憑證登錄點  
+ 如果其中任何一个客户端身份验证证书已泄露，请在“管理”  工作区的“安全”  节点内的“证书”  节点中阻止证书。 要管理这些证书，你必须具有“管理操作系统部署证书”  权限。  
 
--   Endpoint Protection 點  
+ 部署了操作系统并安装了 Configuration Manager 之后，客户端将需要自己的 PKI 客户端身份验证证书来进行 HTTPS 客户端通信。  
 
--   註冊點  
+### <a name="isv-proxy-solutions-and-pki-certificates"></a>ISV 代理解决方案和 PKI 证书  
+ 独立软件供应商 (ISV) 可创建扩展 Configuration Manager 的应用程序。 例如，ISV 可创建扩展来支持非 Windows 客户端平台，例如 Macintosh 或 UNIX 计算机。 但是，如果站点系统需要 HTTPS 客户端连接，则这些客户端还必须使用 PKI 证书以与站点进行通信。 Configuration Manager 包括将证书分配给启用 ISV 代理客户端与管理点之间的通信的 ISV 代理的功能。 如果使用需要 ISV 代理证书的扩展，请查阅该产品的文档。 有关如何创建 ISV 代理证书的详细信息，请查看 Configuration Manager 软件开发人员工具包 (SDK)。  
 
--   後援狀態點  
+ 如果 ISV 证书已泄露，请在“管理”  工作区的“安全”  节点内的“证书”  节点中阻止该证书。  
 
--   管理點  
+### <a name="asset-intelligence-and-certificates"></a>资产智能和证书  
+ Configuration Manager 随同资产智能同步点用来连接到 Microsoft 的 X.509 证书一起安装。 Configuration Manager 使用此证书从 Microsoft 证书服务请求客户端身份验证证书。 客户端身份验证证书安装在资产智能同步点站点系统服务器上，并用于向 Microsoft 验证服务器。 Configuration Manager 使用客户端身份验证证书来下载资产智能目录和上载软件标题。  
 
--   啟用多點傳送的發佈點  
+ 此证书的密钥长度为 1024 位。  
 
--   超出訊號範圍服務點  
+### <a name="cloud-based-distribution-points-and-certificates"></a>基于云的分发点和证书  
+ 从 System Center 2012 Configuration Manager SP1 开始，基于云的分发点需要你上载到 Microsoft Azure 的管理证书（自签名或 PKI）。 此管理证书需要服务器身份验证功能，并且要求证书密钥长度为 2048 位。 此外，你必须为每个基于云的分发点配置服务证书，该证书不能是自签名证书，但也具有服务器身份验证功能，并且最小证书密钥长度为 2048 位。  
 
--   Reporting Services 點  
+> [!NOTE]  
+>  自签名管理证书仅用于测试目的，不要在生产网络上使用。  
 
--   軟體更新點  
+ 客户端不需要客户端 PKI 证书来使用基于云的分发点；它们使用自签名证书或客户端 PKI 证书来向管理进行验证。 然后，管理点将 Configuration Manager 访问令牌颁发给客户端，客户端会将该令牌提供给基于云的分发点。 令牌的有效期为 8 小时。  
 
--   狀態移轉點  
+### <a name="the-microsoft-intune-connector-and-certificates"></a>Microsoft Intune 连接器和证书  
+ 当 Microsoft Intune 注册移动设备时，你可以通过创建 Microsoft Intune 连接器来在 Configuration Manager 中管理这些移动设备。 连接器使用具有客户端身份验证功能的 PKI 证书向 Microsoft Intune 验证 Configuration Manager，并通过使用 SSL 在它们之间传输所有信息。 证书密钥大小为 2048 位，并且使用 SHA-1 哈希算法。  
 
--   系統健全狀況驗證程式點  
+ 安装连接器时，会在站点服务器上为旁加载密钥创建和存储签名证书，在证书注册点上创建和存储加密证书，以对简单证书注册协议 (SCEP) 质询进行加密。 这些证书也具有 2048 位的密钥大小，并且使用 SHA-1 哈希算法。  
 
--   Microsoft Intune 連接器  
+ 当 Intune 注册移动设备时，它将在移动设备上安装 PKI 证书。 此证书具有客户端身份验证功能，使用 2048 位的密钥大小，并使用 SHA-1 哈希算法。  
 
- Configuration Manager 會自動管理這些憑證，並且必要時會自動產生這些憑證。  
+ Microsoft Intune 会自动请求、生成和安装这些 PKI 证书。  
 
- Configuration Manager 也會使用用戶端驗證憑證，從發佈點傳送狀態訊息至管理點。 若僅針對 HTTPS 用戶端連線設定管理點，則必須使用 PKI 憑證。 如果管理點接受 HTTPS 連線，您可以使用 PKI 憑證或選取選項以使用自我簽署憑證 (該憑證具備用戶端驗證功能、使用 SHA-256，且金鑰長度為 2048 位元)。  
+### <a name="crl-checking-for-pki-certificates"></a>针对 PKI 证书的 CRL 检查  
+ PKI 证书吊销列表 (CRL) 会增加管理和处理开销，但它更安全。 但是，如果启用了 CRL 检查但无法访问 CRL，则 PKI 连接将失败。 有关详细信息，请参阅 [System Center Configuration Manager 的安全性和隐私](../../core/plan-design/security/security-and-privacy.md)。  
 
-### <a name="server-communication-between-sites"></a>站台間的伺服器通訊  
- Configuration Manager 使用資料庫複寫和檔案為基礎的複寫在網站之間傳送資料。 如需詳細資訊，請參閱 [System Center Configuration Manager 中端點間的通訊](../../core/plan-design/hierarchy/communications-between-endpoints.md)。  
+ IIS 中默认情况下启用了证书吊销列表 (CRL) 检查，因此，如果你要将 CRL 与 PKI 部署结合使用，在运行 IIS 的大多数 Configuration Manager 站点系统上无需进行任何其他配置。 例外情况是软件更新，它需要一个手动步骤来启用 CRL 检查以验证软件更新文件上的签名。  
 
- Configuration Manager 會自動在站台間設定資料庫複寫，並且若有具備伺服器驗證功能的 PKI 憑證，便會使用這些憑證；如果沒有，則 Configuration Manager 會建立自我簽署憑證來進行伺服器驗證。 無論是哪一種狀況，都會經由使用 PeerTrust 之受信任人存放區的憑證來建立網站間的驗證。 這個憑證存放區是用來確保只有 Configuration Manager 階層使用的 SQL Server 電腦會參與站台對站台複寫。 由於主要網站與管理中心網站可以將設定變更複寫至階層中的所有網站，因此次要網站只能將設定變更複寫到其父網站。  
+ 对于客户端计算机，当它们使用 HTTPS 客户端连接时，CRL 检查默认情况下已启用。 当你运行带外管理控制台以连接到基于 AMT 的计算机时，CRL 检查默认情况下未启用，并且你可以启用此选项。 在 Configuration Manager SP1 或更高版本中，你无法为 Mac 计算机上的客户端禁用 CRL 检查。  
 
- 網站伺服器會使用自動出現的安全金鑰交換來建立網站對網站通訊。 傳送端的網站伺服器會產生雜湊，並以其私密金鑰簽署。 接收端的網站伺服器會使用公開金鑰檢查簽章，並以本機產生的數值比對雜湊。 如果相符，接收端的網站會接受複寫的資料。 如果值不相符，Configuration Manager 會拒絕複寫資料。  
+ 对于 Configuration Manager 中的下列连接，CRL 检查不受支持：  
 
- Configuration Manager 中的資料庫複寫使用 SQL Server Service Broker，經由以下機制在站台間傳輸資料：  
+-   服务器到服务器连接。  
 
--   SQL Server 至 SQL Server 連線：此機制經由進階加密標準 (AES) 使用 Windows 認證進行伺服器驗證，並使用長度為 1024 位元的自我簽署憑證簽署並加密資料。 若有具備伺服器驗證功能的 PKI 憑證可用，則會使用這些憑證。 憑證必須放在電腦憑證存放區的個人存放區內。  
+-   Configuration Manager 注册的移动设备。  
 
--   SQL Service Broker：此機制經由進階加密標準 (AES) 使用長度為 2048 位元的自我簽署憑證進行驗證，以及簽署與加密資料。 憑證必須放在 SQL Server Master 資料庫中。  
+-   Microsoft Intune 注册的移动设备。  
 
- 以檔案為基礎的複寫會使用伺服器訊息區 (SMB) 通訊協定，並使用 SHA-256 簽署未加密但也未包含任何敏感性資料的此資料。 如果您要加密此資料，可以使用 IPsec，且必須獨立於 Configuration Manager 來執行。  
+##  <a name="cryptographic-controls-for-server-communication"></a>服务器通信的加密控制  
+ Configuration Manager 为服务器通信使用下列加密控制。  
 
-##  <a name="cryptographic-controls-for-clients-that-use-https-communication-to-site-systems"></a>針對使用 HTTPS 與站台系統通訊的用戶端的密碼編譯控制項  
- 網站系統角色接受用戶端連線時，您可以將其設定為接受 HTTPS 與 HTTP 連線，或僅接受 HTTPS 連線。 接受網際網路連線的網站系統角色僅接受透過 HTTPS 的用戶端連線。  
+### <a name="server-communication-within-a-site"></a>站点内的服务器通信  
+ 每个站点系统服务器使用证书将数据传输到同一 Configuration Manager 站点中的其他站点系统。 某些站点系统角色也使用证书进行身份验证。 例如，你将注册代理点安装在一个服务器上，并将注册点安装在另一个服务器上，则它们可通过使用此身份证书相互进行验证。 当 Configuration Manager 为此通信使用证书时，如果有具有服务器身份验证功能的 PKI 证书可用，则 Configuration Manager 将自动使用该证书；否则 Configuration Manager 将生成自签名证书。 此自签名证书具有服务器身份验证功能、使用 SHA-256，并且具有 2048 位的密钥长度。 Configuration Manager 将该证书复制到可能需要信任该站点系统的其他站点系统服务器上的“受信任人”存储。 然后，站点系统可通过使用这些证书和 PeerTrust 来相互信任。  
 
- 透過 HTTPS 的用戶端連線能整合公開金鑰基礎結構 (PKI)，提供更高等級的安全性，以協助保護用戶端至伺服器的通訊。 不過，設定 HTTPS 用戶端連線時若對 PKI 規劃、部署和作業沒有透徹了解，則還是無濟於事。 例如，如果您未保護根 CA 的安全，攻擊者就可以入侵破壞整個 PKI 基礎結構的信任。 使用受控制與受保護的程序卻無法部署和管理 PKI 憑證，可能會導致出現無法接受重大軟體更新或封包的未受管理用戶端。  
+ 除了每个站点系统服务器的此证书外，Configuration Manager 还会为大多数站点系统角色生成自签名证书。 如果同一站点中有站点系统角色的多个实例，它们将共享相同的证书。 例如，你可能在同一站点中有多个管理点或多个注册点。 此自签名证书也使用 SHA-256，并且密钥长度为 2048 位。 该证书也将复制到可能需要信任它的站点系统服务器上的“受信任人”存储。 下列站点系统角色会生成此证书：  
+
+-   应用程序目录 Web 服务点  
+
+-   应用程序目录网站点  
+
+-   资产智能同步点  
+
+-   证书注册点  
+
+-   Endpoint Protection 点  
+
+-   注册点  
+
+-   回退状态点  
+
+-   管理点  
+
+-   启用多播的分发点  
+
+-   带外服务点  
+
+-   Reporting Services 点  
+
+-   软件更新点  
+
+-   状态迁移点  
+
+-   系统健康验证程序点  
+
+-   Microsoft Intune 连接器  
+
+ 这些证书由 Configuration Manager 自动管理并会在必要时自动生成。  
+
+ Configuration Manager 还使用客户端身份验证证书将状态消息从分发点发送到管理点。 如果仅针对 HTTPS 客户端连接配置了管理点，则必须使用 PKI 证书。 如果管理点接受 HTTP 连接，则你可以使用 PKI 证书，或选择选项以使用具有客户端身份验证功能、使用 SHA-256 并且密钥长度为 2048 位的自签名证书。  
+
+### <a name="server-communication-between-sites"></a>站点间的服务器通信  
+ Configuration Manager 通过使用数据库复制和基于文件的复制在站点之间传输数据。 有关详细信息，请参阅 [System Center Configuration Manager 中终结点之间的通信](../../core/plan-design/hierarchy/communications-between-endpoints.md)。  
+
+ Configuration Manager 自动配置站点之间的数据库复制，并使用具有服务器身份验证功能的 PKI 证书（如果这些证书可用）；否则，Configuration Manager 将为服务器身份验证创建自签名证书。 在这两种情况下，站点之间的身份验证都是通过“受信任人”存储（使用 PeerTrust）中的证书建立的。 此证书存储用于确保只有 Configuration Manager 层次结构使用的 SQL Server 计算机才参与站点间复制。 尽管主站点和管理中心站点可将配置更改复制到层次结构中的所有站点，但辅助站点只能将配置更改复制到其父站点。  
+
+ 站点服务器通过使用自动进行的安全密钥交换来建立站点间通信。 发送站点服务器生成哈希，并使用其私钥对该哈希进行签名。 接收站点服务器通过使用公钥来检查签名，并将哈希与本地生成的值进行比较。 如果它们匹配，则接收站点接受复制的数据。 如果值不匹配，则 Configuration Manager 拒绝复制数据。  
+
+ Configuration Manager 中的数据库复制使用 SQL Server Service Broker 通过下列机制在站点之间传输数据：  
+
+-   SQL 服务器到 SQL 服务器的连接：此机制使用 Windows 凭据进行服务器身份验证，并使用具有 1024 位的自签名证书通过高级加密标准 (AES) 对数据进行签名和加密。 如果具有服务器身份验证功能的 PKI 证书可用，则将使用这些证书。 证书必须位于“计算机”证书存储的“个人”存储中。  
+
+-   SQL 服务代理：此机制使用具有 2048 位的自签名证书进行身份验证，以及通过使用高级加密标准 (AES) 对数据进行签名和加密。 证书必须位于 SQL Server master 数据库中。  
+
+ 基于文件的复制使用服务器消息块 (SMB) 协议，并使用 SHA-256 对未加密但不包含任何敏感数据的此数据进行签名。 如果要对此数据进行加密，你可以使用 IPsec，并且必须独立于 Configuration Manager 实现这一点。  
+
+##  <a name="cryptographic-controls-for-clients-that-use-https-communication-to-site-systems"></a>使用站点系统 HTTPS 通信的客户端的加密控制  
+ 当站点系统角色接受客户端通信时，你可以将它们配置为接受 HTTPS 和 HTTP 连接，或仅接受 HTTPS 连接。 接受来自 Internet 的连接的站点系统角色仅接受通过 HTTPS 进行的客户端连接。  
+
+ 通过 HTTPS 进行的客户端连接通过与公钥基础结构 (PKI) 集成来帮助保护客户端到服务器通信，从而可提供较高级别的安全性。 但是，如果在未透彻理解 PKI 规划、部署和操作的情况下配置 HTTPS 客户端连接，将仍可能会使你易于受到攻击。 例如，你不保护根 CA 的安全，攻击者可能会危害整个 PKI 基础结构的信任。 如果未能使用受控和受保护的过程来部署和管理 PKI 证书，则可能会产生无法接收关键软件更新或包的不受管理的客户端。  
 
 > [!IMPORTANT]  
->  用於用戶端通訊的 PKI 憑證僅保護用戶端與部份網站系統間的通訊， 該憑證不會保護網站伺服器與網站系統間或網站伺服器間的通訊通道。  
+>  用于客户端通信的 PKI 证书仅保护客户端和某些站点系统之间的通信。 它们不保护站点服务器和站点系统之间或站点服务器之间的信道。  
 
-### <a name="communication-that-is-unencrypted-when-clients-use-https-communication"></a>用戶端使用 HTTPS 通訊時未加密的通訊  
- 用戶端使用 HTTPS 與網站系統通訊時，通常透過 SSL 加密通訊。 不過，在以下狀況中，用戶端可以不使用加密，就與網站系統進行通訊：  
+### <a name="communication-that-is-unencrypted-when-clients-use-https-communication"></a>客户端使用 HTTPS 通信时未加密的通信  
+ 当客户端使用 HTTPS 与站点系统通信时，通常会通过 SSL 对通信进行加密。 但是，在下列情况中，客户端会在不使用加密的情况下与站点系统通信：  
 
--   網站系統允許此設定時，用戶端無法在內部網路建立 HTTPS 連線，退而求其次使用 HTTP  
+-   客户端无法在 Intranet 上建立 HTTPS 连接并回退为使用 HTTP（如果站点系统允许此配置）  
 
--   與以下網站系統角色的通訊：  
+-   与下列站点系统角色的通信：  
 
-    -   用戶端傳送狀態訊息至後援狀態點  
+    -   客户端将状态消息发送到回退状态点  
 
-    -   用戶端向支援 PXE 的發佈點傳送 PXE 要求  
+    -   客户端将 PXE 请求发送到支持 PXE 的分发点  
 
-    -   用戶端傳送通知資料至管理點  
+    -   客户端将通知数据发送到管理点  
 
- 設定 Reporting Services 點獨立於用戶端通訊節點，使用 HTTP 或 HTTPS。  
+ Reporting Services 点配置为独立于客户端通信模式使用 HTTP 或 HTTPS。  
 
-##  <a name="cryptographic-controls-for-clients-chat-use-http-communication-to-site-systems"></a>針對使用 HTTP 與站台系統通訊的用戶端的密碼編譯控制項  
- 用戶端對站台系統角色使用 HTTP 通訊時，可以使用 PKI 憑證或 Configuration Manager 產生的自我簽署憑證進行用戶端驗證。 當 Configuration Manager 產生自我簽署憑證時，憑證中會有用於簽署及加密的自訂物件識別碼，而這些憑證也會用來唯一識別用戶端。 對於所有支援的作業系統 (Windows Server 2003 除外)，這些自我簽署憑證會使用 SHA-256，且金鑰長度為 2048 位元。 如果是 Windows Server 2003，則會使用 SHA1，而金鑰長度為 1024 位元。  
+##  <a name="cryptographic-controls-for-clients-chat-use-http-communication-to-site-systems"></a>使用站点系统 HTTP 通信的客户端的加密控制  
+ 当客户端使用与站点系统角色的 HTTP 通信时，它们可使用 PKI 证书进行客户端身份验证，或使用 Configuration Manager 生成的自签名证书。 当 Configuration Manager 生成自签名证书时，这些证书具有用于签名和加密的自定义对象标识符，并且用于唯一标识客户端。 对于除 Windows Server 2003 之外的所有受支持的操作系统，这些自签名证书使用 SHA-256，并且其密钥长度为 2048 位。 对于 Windows Server 2003，则使用 SHA1，且其密钥长度为 1024 位。  
 
-### <a name="operating-system-deployment-and-self-signed-certificates"></a>作業系統部署和自我簽署憑證  
- 使用 Configuration Manager 部署具備自我簽署憑證的作業系統時，即使電腦是在轉換階段 (如從工作順序媒體或支援 PXE 的發佈點開機)，也必須有憑證才能與管理點通訊。 為支援此種案例以進行 HTTP 用戶端連線，Configuration Manager 會產生自我簽署憑證時，憑證中具有用於簽署及加密的自訂物件識別碼，而這些憑證也會用來唯一識別用戶端。 對於所有支援的作業系統 (Windows Server 2003 除外)，這些自我簽署憑證會使用 SHA-256，且金鑰長度為 2048 位元。 如果是 Windows Server 2003，則會使用 SHA1，而金鑰長度為 1024 位元。 ‎如果這些自我簽署憑證遭到入侵，為了避免攻擊者使用這些憑證模擬受信任的用戶端，請在 [系統管理]  工作區的 [憑證]  節點、[安全性]  節點上封鎖憑證。  
+### <a name="operating-system-deployment-and-self-signed-certificates"></a>操作系统部署和自签名证书  
+ 当你使用 Configuration Manager 来部署包含自签名证书的操作系统时，客户端计算机还必须具有证书才能与管理点通信，即使在该计算机处于过渡阶段（例如从任务序列媒体或支持 PXE 的分发点中启动）中时也是如此。 为了针对 HTTP 客户端连接支持此方案，Configuration Manager 会生成自签名证书，这些证书具有用于签名和加密的自定义对象标识符，并且用于唯一标识客户端。 对于除 Windows Server 2003 之外的所有受支持的操作系统，这些自签名证书使用 SHA-256，并且其密钥长度为 2048 位。 对于 Windows Server 2003，则使用 SHA1，且其密钥长度为 1024 位。 如果这些自签名证书已泄露，为了防止攻击者使用这些证书来模拟受信任的客户端，请在“管理”  工作区的“安全”  节点内的“证书”  节点中阻止证书。  
 
-### <a name="client-and-server-authentication"></a>用戶端和伺服器驗證  
- 用戶端透過 HTTP 連線時，會使用 Active Directory 網域服務或 Configuration Manager 受信任的根金鑰驗證管理點。 用戶端並不會驗證其他網站系統角色，例如狀態移轉點或軟體更新點。  
+### <a name="client-and-server-authentication"></a>客户端和服务器身份验证  
+ 在客户端通过 HTTP 连接时，它们使用 Active Directory 域服务或 Configuration Manager 受信任的根密钥对管理点进行身份验证。 客户端不会对其他站点系统角色（例如状态迁移点或软件更新点）进行身份验证。  
 
- 管理點第一次使用自我簽署用戶端憑證驗證用戶端時，由於任何電腦皆可產生自我簽署憑證，因此該機制提供的安全性並不高。 在此案例中，必須在經過核准後增強用戶端識別程序。 只能核准受信任的電腦，並且必須由 Configuration Manager 自動核准，或是由系統管理員手動核准。 如需詳細資訊，請參閱 [System Center Configuration Manager 中端點間的通訊](../../core/plan-design/hierarchy/communications-between-endpoints.md)中的核准一節。  
+ 在管理点使用自签名客户端证书第一次对客户端进行身份验证时，此机制提供最低的安全性，因为任何计算机都能生成自签名证书。 在这种情况下，必须利用批准手段来强化客户端标识过程。 只应批准受信任的计算机 - 由 Configuration Manager 自动批准或由管理用户手动批准。 有关详细信息，请参阅 [System Center Configuration Manager 中终结点之间的通信](../../core/plan-design/hierarchy/communications-between-endpoints.md)中的审批部分。  
 
-##  <a name="about-ssl-vulnerabilities"></a>關於 SSL 弱點  
- 我們建議您停用 SSL 3.0、啟用 TLS 1.1 和 1.2 並重新排序 TLS 相關的加密套件，以改善 Configuration Manager 伺服器的安全性。 若想了解如何執行這些動作，請參閱 [這篇知識庫文章](https://support.microsoft.com/en-us/kb/245030/)。 這個動作不會影響 Configuration Manager 的功能。  
+##  <a name="about-ssl-vulnerabilities"></a>有关 SSL 漏洞  
+ 我们建议禁用 SSL 3.0，启用 TLS 1.1 和 1.2 以及重新排序 TLS 相关密码套件，以提高 Configuration Manager 服务器的安全性。 你可以在 [此知识库文章](https://support.microsoft.com/en-us/kb/245030/)中了解如何执行这些操作。 此操作不会影响 Configuration Manager 的功能。  

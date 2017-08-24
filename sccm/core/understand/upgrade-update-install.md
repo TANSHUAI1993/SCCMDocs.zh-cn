@@ -1,6 +1,6 @@
 ---
-title: "關於升級、更新及安裝 | Microsoft Docs"
-description: "了解管理 Configuration Manager 基礎結構時，關於「安裝」、「更新」及「升級」等詞彙之間的差異。"
+title: "关于升级、更新和安装 | Microsoft Docs"
+description: "了解在管理 Configuration Manager 基础结构时，“安装”、“更新”和“升级”三个术语之间的差异。"
 ms.custom: na
 ms.date: 1/11/2017
 ms.prod: configuration-manager
@@ -18,40 +18,40 @@ manager: angrobe
 ms.openlocfilehash: 6bd6cd7ea3c41fa1d70e17a1290c9f1f74cc9e37
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="about-upgrade-update-and-install-for-site-and-hierarchy-infrastructure"></a>關於站台及階層基礎結構的升級、更新及安裝
+# <a name="about-upgrade-update-and-install-for-site-and-hierarchy-infrastructure"></a>关于站点和层次结构基础结构的升级、更新和安装
 
-適用於：System Center Configuration Manager (最新分支)
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 
-管理 System Center Configuration Manager 站台及階層基礎結構時，「升級」、「更新」及「安裝」等詞彙是用來描述三種不同的概念。
+管理 System Center Configuration Manager 站点和层次结构基础结构时，术语“升级”“更新”和“安装”用于描述三种不同概念。
 
-## <a name="upgrade"></a>升級
-「升級」或「就地升級」是將您的 Configuration Manager 2012 站台或階層轉換為執行 System Center Configuration Manager 的站台或階層時使用。
-當您將 System Center 2012 Configuration Manager 升級為 System Center Configuration Manager 時，您會繼續使用相同的伺服器來裝載您的站台及站台伺服器，並且會保留 Configuration Manager 現有的資料及設定。  這與[移轉](/sccm/core/migration/migrate-data-between-hierarchies)不同，「移轉」是使用安裝於新硬體上新的 System Center Configuration Manager 站台，同時保留有關受管理裝置之設定與資料的方式。
+## <a name="upgrade"></a>Upgrade
+如果要将 Configuration Manager 2012 站点或层次结构转换为运行 System Center Configuration Manager 的站点或层次结构，则使用“升级”或“就地升级”。
+如果要将 System Center 2012 Configuration Manager 升级为 System Center Configuration Manager，请继续使用同一服务器托管站点和站点服务器，并保留 Configuration Manager 的现有数据和配置。  这不同于[迁移](/sccm/core/migration/migrate-data-between-hierarchies)，迁移是一种在使用安装到新硬件的 System Center Configuration Manager 站点的同时，保留托管设备相关配置和数据的方式。
 
-如需詳細資料，請參閱[升級至 System Center Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)。
+有关详细信息，请参阅[升级到 System Center Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)。
 
 
 
 ## <a name="update"></a>更新
-「更新」是用於安裝 System Center Configuration Manager 的主控台內更新，以及安裝無法從 Configuration Manager 主控台內傳遞的頻外更新。 主控台內更新會修改您的最新分支站台 (或 Technical Preview 站台) 的版本，使它執行更新版本。 例如，假設您的站台是執行版本 1606，您可以安裝版本 1610 的更新。 更新也能安裝已知問題的修正程式，而不必修改站台版本。      
+“更新”用于安装 System Center Configuration Manager 的控制台中更新，还用于带外更新，带外更新指无法从 Configuration Manager 控制台中传递的更新。 控制台中更新可修改 Current Branch 站点（或 Technical Preview 站点）的版本，使其可运行更高版本。 例如，如果你的站点运行版本 1606，可安装版本 1610 的更新。 更新还可为已知问题安装修补程序，无需修改站点版本。      
 
-通常，更新會將安全性修正程式、品質改良和新功能加入到您現有的部署。 若您使用 Technical Preview 分支，更新可能會安裝較新版本的 Technical Preview。
--   您可以選擇安裝主控台內更新的時機，從階層的頂層站台開始。
-- 您可以安裝主控台內提供的任何更新。 例如，如果您的站台執行版本 1602，並同時提供 1606 和 1610，您應該考慮安裝版本 1610，因為每個版本都會包含前一個發行版本所提供的功能。
-- 在新的更新於您的頂層站台完成更新後，子主要站台會自動開始更新程序。 不過，您可以設定[服務保留時間](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkservicewindowa-service-windows-for-site-servers)來控制更新的時機。
-- 次要站台不會自動安裝更新。 相反地，您必須從 Configuration Manager 主控台中手動開始更新。
+通常情况下，更新会将安全修补程序、质量改进和新功能添加到现有部署。 如果使用 Technical Preview Branch，则更新可安装更新版本的 Technical Preview。
+-   从层次结构的顶层站点开始，选择安装控制台中更新的时间。
+- 可安装能从控制台中获取的任何更新。 例如，如果站点运行版本 1602，并且同时提供了 1606 和 1610，则应考虑安装版本 1610，因为每个版本都包括了以前发布的版本中首次提供的功能。
+- 顶层站点完成安装新更新后，子主站点将自动启动更新过程。 但是，可设置[服务时段](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkservicewindowa-service-windows-for-site-servers)以控制更新的执行时间。
+- 辅助站点不会自动安装更新。 相反，请从 Configuration Manager 控制台中手动启动更新。
 
-如需詳細資訊，請參閱 [System Center Configuration Manager 的更新](/sccm/core/servers/manage/updates)，和 [System Center Configuration Manager 的 Technical Preview](/sccm/core/get-started/technical-preview)。
+有关详细信息，请参阅 [System Center Configuration Manager 的更新](/sccm/core/servers/manage/updates)和 [Technical Preview for System Center Configuration Manager](/sccm/core/get-started/technical-preview)。
 
 
 
-## <a name="install"></a>安裝
-「安裝」是用於從頭開始建立新的 Configuration Manager 階層，或是將額外站台加入到現有的階層。  
+## <a name="install"></a>安装
+如果要从零开始创建新的 Configuration Manager 层次结构，或将额外站点添加到现有层次结构，则使用“安装”。  
 
-當您安裝新的主要站台或管理中心網站時，您所使用的 setup.exe 以及與其相關聯的來源檔案位置取決於您的安裝案例。
+安装新的主站点或中心管理站点时，使用的 setup.exe 及其相关源文件的位置取决于你的安装方案。
 
-如需詳細資訊，請參閱[準備安裝站台](/sccm/core/servers/deploy/install/prepare-to-install-sites)。
+有关详细信息，请参阅[安装站点的准备工作](/sccm/core/servers/deploy/install/prepare-to-install-sites)。

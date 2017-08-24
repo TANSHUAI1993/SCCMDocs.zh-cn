@@ -1,6 +1,6 @@
 ---
 title: "Azure 上的 Configuration Manager | Microsoft Docs"
-description: "在 Azure 環境上使用 Configuration Manager 的相關資訊。"
+description: "有关在 Azure 环境中使用 Configuration Manager 的信息。"
 ms.custom: na
 ms.date: 03/27/2017
 ms.reviewer: na
@@ -17,165 +17,165 @@ manager: angrobe
 ms.openlocfilehash: 5276ad999fc871496d79e6efff34d5edc6335380
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="configuration-manager-on-azure---frequently-asked-questions"></a>Azure 的 Configuration Manager - 常見問題集
-*適用對象：System Center Configuration Manager (最新分支)*
+# <a name="configuration-manager-on-azure---frequently-asked-questions"></a>Azure 上的 Configuration Manager - 常见问题解答
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-下列問題及回答可協助您了解何時使用，以及如何在 Microsoft Azure 上設定 Configuration Manager。
+下列问题和解答可帮助了解何时使用以及如何在 Microsoft Azure 上配置 Configuration Manager。
 
-## <a name="general-questions"></a>一般問題
-### <a name="my-company-is-trying-to-move-as-many-physical-servers-as-possible-to-microsoft-azure-can-i-move-configuration-manager-servers-to-azure"></a>我的公司正嘗試將盡可能多的實體伺服器移動至 Microsoft Azure，我可以將 Configuration Manager 伺服器移動至 Azure 嗎？
-當然可以，這是支援的案例。  請參閱 [System Center Configuration Manager 的虛擬化環境支援](/sccm/core/plan-design/configs/support-for-virtualization-environments)。
+## <a name="general-questions"></a>一般问题
+### <a name="my-company-is-trying-to-move-as-many-physical-servers-as-possible-to-microsoft-azure-can-i-move-configuration-manager-servers-to-azure"></a>我的公司正在尝试尽可能多地将物理服务器移动到 Microsoft Azure，我能否将 Configuration Manager 服务器移动到 Azure？
+当然，支持这种方案。  请参阅[对 System Center Configuration Manager 的虚拟化环境的支持](/sccm/core/plan-design/configs/support-for-virtualization-environments)。
 
-### <a name="great-my-environment-requires-multiple-sites-should-all-child-primary-sites-be-in-azure-with-the-central-administration-site-or-on-premises-what-about-secondary-sites"></a>太棒了！ 我的環境需要多個站台。 是否所有的子主要站台都應該在 Azure 中，使用管理中心網站或內部部署？ 那次要站台呢？
-站台對站台通訊 (檔案型和資料庫複寫) 因裝載在 Azure 中的近距離而得益。 不過，所有用戶端相關的流量都與站台伺服器及站台系統無關。 如果使用無限行動數據方案的 Azure 和內部網路連線快速又穩定，將所有基礎結構裝載在 Azure 中也是一個選項。
+### <a name="great-my-environment-requires-multiple-sites-should-all-child-primary-sites-be-in-azure-with-the-central-administration-site-or-on-premises-what-about-secondary-sites"></a>很好！ 我的环境需要多个站点。 所有子主站点是应与管理中心站点一起位于 Azure 中还是位于本地？ 辅助站点呢？
+在 Azure 中托管，站点到站点通信（基于文件和数据库复制）可受益于邻近带来的便利性。 但是，所有与客户端相关的通信流会离站点服务器和站点系统较远。 如果通过不限流量计划使用快速稳定的网络连接 Azure 和 Intranet，则可以选择在 Azure 中托管所有基础结构。
 
-但若使用計量付費數據傳輸方案，要考慮可用的頻寬或成本，或 Azure 和內部網路之間的網路連線速度不夠快，或可能不夠穩定，請考慮將特定網站 (和站台系統) 放在內部，然後使用 Configuration Manager 內建的頻寬控制。
+但是，如果使用按流量计费的数据计划且受可用带宽或成本限制，或连接 Azure 与 Intranet 的网络较慢或不稳定，请考虑将特定站点（及站点系统）放置在本地，然后使用 Configuration Manager 中内置的带宽控件。
 
-### <a name="is-having-configuration-manager-in-azure-a-saas-scenario-software-as-a-service"></a>將 Configuration Manager 放在 Azure 中是 SaaS (軟體即服務) 案例嗎？
-否，這是 IaaS (基礎結構即服務)，因為 Configuration Manager 基礎結構伺服器是裝載在 Azure 虛擬機器中。
+### <a name="is-having-configuration-manager-in-azure-a-saas-scenario-software-as-a-service"></a>在 Azure 中设置 Configuration Manager 是否是一个 SaaS 方案（软件即服务）？
+否，它是 IaaS（基础结构即服务），因为是在 Azure 虚拟机中托管 Configuration Manager 基础结构服务器。
 
-### <a name="what-areas-should-i-pay-attention-to-when-considering-a-move-of-my-configuration-manager-infrastructure-to-azure"></a>將 Configuration Manager 基礎結構移至 Azure 時應注意哪些部分？
-這個問題很棒，以下是進行此決策時最重要的各個部分，本主題會在各節中一一探索︰
-1.  網路功能
+### <a name="what-areas-should-i-pay-attention-to-when-considering-a-move-of-my-configuration-manager-infrastructure-to-azure"></a>当考虑将 Configuration Manager 基础结构转移到 Azure 时应考虑哪些方面？
+问得好，以下是做决定时应考虑的最重要的方面，本主题分别通过不同的部分对各方面进行了探讨：
+1.  网络
 2.  可用性
-3.  效能
+3.  性能
 4.  成本
-5.  使用者體驗
+5.  用户体验
 
-## <a name="networking"></a>網路功能
-### <a name="what-about-networking-requirements-should-i-use-expressroute-or-an-azure-vpn-gateway"></a>那網路需求呢，我應該使用 ExpressRoute 或 Azure VPN 閘道？
-網路功能是非常重要的決策。 網路速度和延遲會影響站台伺服器和遠端站台系統與任何站台系統用戶端之間進行通訊的功能。 建議您使用 ExpressRoute。 但 Configuration Manager 對您使用 Azure VPN 閘道沒有任何限制。 您應該仔細從這個基礎結構檢閱您的需求 (效能、修補、軟體發佈、作業系統部署)，再進行您的決定。 每項解決方案都要考慮的事項包括︰
+## <a name="networking"></a>网络
+### <a name="what-about-networking-requirements-should-i-use-expressroute-or-an-azure-vpn-gateway"></a>有些什么网络要求？应使用 ExpressRoute 还是 Azure VPN 网关？
+有关网络的决策是一项非常重要的决策。 网络速度和延迟会影响站点服务器和远程站点系统之间的功能以及任何客户端与站点系统之间的通信。 我们的建议是使用 ExpressRoute。 但不存在会阻止使用 Azure VPN 网关的 Configuration Manager 限制。 应仔细斟酌对此基础结构的需求（性能、修补、软件分发、操作系统部署），然后再做决定。 需要为每个解决方案考虑的事项包括：
 
- - **ExpressRoute** (建議選項)
-  - 資料中心的自然擴充 (可結合多個資料中心)
-  - Azure 資料中心和基礎結構之間的私人連線
-  - 不經過公用網際網路
-  - 提供穩定性、高速、低延遲、高安全性
-  - 提供高達 10 Gbps 的速度和無限行動數據方案選項
- - **VPN 閘道**
-  - 站對站/點對站 VPN
-  - 流量經過公用網際網路
-  - 使用網際網路通訊協定安全性 (IPsec) 和網際網路金鑰交換 (IKE)
+ - **ExpressRoute**（推荐）
+  - 自然地扩展到数据中心（可联接多个数据中心）
+  - Azure 数据中心与基础结构之间的专用连接
+  - 不使用公共 Internet
+  - 提供可靠性、高速度、更低的延迟和高安全性
+  - 高达 10gbps 的速度和不限流量计划选项
+ - **VPN 网关**
+  - 站点到站点/点到站点 VPN
+  - 通信流不经过公共 Internet
+  - 使用 Internet 协议安全性 (IPsec) 和 Internet 密钥交换 (IKE)
 
-### <a name="expressroute-has-many-different-options-like-unlimited-vs-metered-different-speed-options-and-premium-add-on-which-should-i-choose"></a>ExpressRoute 有許多不同的選項，例如無限行動數據與計量付費數據、不同速度的選項及超值的附加元件。 我該選哪一種？
-您要根據實作案例以及計劃散發的資料量選取選項。 站台伺服器與發佈點之間的 Configuration Manager 資料傳輸是可以控制的，但是站台伺服器對站台伺服器的通訊無法控制。   當您使用計量付費數據傳輸方案時，將特定網站 (和站台系統) 放在內部部署與使用 [Configuration Manager 內建的頻寬控制](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management)有助於控制使用 Azure 的成本。
+### <a name="expressroute-has-many-different-options-like-unlimited-vs-metered-different-speed-options-and-premium-add-on-which-should-i-choose"></a>ExpressRoute 有多种不同的选项，如不限流量和按流量计费的选项、不同速度的选项和高级加载项。 应选择哪一种？
+选择哪一种取决于要实现的方案和计划分发的数据量。 可控制站点服务器和分发点之间的 Configuration Manager 数据传输，但不能控制站点服务器到站点服务器之间的通信。   如果使用按流量计费的数据计划，则可将特定站点（以及站点系统）放置在本地，并使用 [Configuration Manager 的内置带宽控件](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management)来帮助控制使用 Azure 的成本。
 
-### <a name="what-about-installation-requirements-like-active-directory-domains-do-i-still-need-to-join-my-site-servers-to-an-active-directory-domain"></a>像 Active Directory 網域這樣的安裝需求呢？ 我還需要將站台伺服器加入 Active Directory 網域嗎？
-是。 當您移到 Azure 時，[支援的設定](/sccm/core/plan-design/configs/supported-configurations)保持不變，包括安裝 Configuration Manager 的 Active Directory 需求。
+### <a name="what-about-installation-requirements-like-active-directory-domains-do-i-still-need-to-join-my-site-servers-to-an-active-directory-domain"></a>有什么安装要求（比如 Active Directory 域）？ 是否仍需要将站点服务器加入到 Active Directory 域？
+是。 移动到 Azure 后，[支持的配置](/sccm/core/plan-design/configs/supported-configurations)保持不变，包括安装 Configuration Manager 时的 Active Directory 要求。
 
-### <a name="i-understand-the-need-to-join-my-site-servers-to-an-active-directory-domain-but-can-i-use-azure-active-directory"></a>我知道站台伺服器必須加入 Active Directory 網域，但是可以使用 Azure Active Directory 嗎？
-否，目前不支援 Azure Active Directory。 您的站台伺服器仍必須是 [Windows Active Directory 網域](/sccm/core/plan-design/configs/support-for-active-directory-domains)的成員。
+### <a name="i-understand-the-need-to-join-my-site-servers-to-an-active-directory-domain-but-can-i-use-azure-active-directory"></a>我了解需要将站点服务器加入到 Active Directory 域，但是否可使用 Azure Active Directory？
+否，目前不支持 Azure Active Directory。 所有站点服务器仍必须为 [Windows Active Directory 域](/sccm/core/plan-design/configs/support-for-active-directory-domains)的成员。
 
 
 
 ## <a name="availability"></a>可用性
-### <a name="one-of-the-reasons-i-am-moving-infrastructure-to-azure-is-the-promise-of-high-availability-can-i-take-advantage-of-high-availability-options-like-azure-vm-availability-sets-for-vms-that-i-will-use-for-configuration-manager"></a>我將基礎結構移至 Azure 的原因之一是它承諾高可用性。 我可以將像 Azure VM 可用性設定組這樣的高可用性選項，用在 Configuration Manager 要使用的 VM 嗎？
-是！ Azure VM 可用性設定組可用於備援的站台系統角色，例如發佈點或管理點。
+### <a name="one-of-the-reasons-i-am-moving-infrastructure-to-azure-is-the-promise-of-high-availability-can-i-take-advantage-of-high-availability-options-like-azure-vm-availability-sets-for-vms-that-i-will-use-for-configuration-manager"></a>我打算将基础结构转移到 Azure 的原因之一是产品和服务所承诺的高可用性。 是否可利用高可用性选项，例如将用于 Configuration Manager 的 VM 的 Azure VM 可用性集？
+可以！ Azure VM 可用性集可用于冗余的站点系统角色，例如分发点或管理点。
 
-您也可以將它們用於 Configuration Manager 站台伺服器。 例如，管理中心網站和主要站台全部可位於相同的可用性設定組中，以利確保它們不會同時重新開機。
+还可以将其用于 Configuration Manager 站点服务器。 例如，管理中心站点和主站点可全部位于同一可用性集中，这能帮助确保其不会同时重启。
 
-### <a name="how-can-i-make-my-database-highly-available-can-i-use-azure-sql-database-or-do-i-have-to-use-microsoft-sql-server-in-a-vm"></a>我該如何讓資料庫具有高可用性？ 我可以使用 Azure SQL Database 嗎？ VM 中必須使用 Microsoft SQL Server 嗎？
-VM 中必須使用 Microsoft SQL Server。 Configuration Manager 目前不支援 Azure SQL Server。 但是 SQL server 可以使用 AlwaysOn 可用性群組這類的功能。 從 Configuration Manager 1602 版開始建議使用並正式支援 [AlwaysOn 可用性群組](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database)。
+### <a name="how-can-i-make-my-database-highly-available-can-i-use-azure-sql-database-or-do-i-have-to-use-microsoft-sql-server-in-a-vm"></a>如何让数据库高度可用？ 是否可以使用 Azure SQL 数据库？ 或是否必须在 VM 中使用 Microsoft SQL Server？
+需在 VM 中使用 Microsoft SQL Server。 Configuration Manager 目前不支持 Azure SQL Server。 但 AlwaysOn 可用性组等功能可用于 SQL server。 从 Configuration Manager 版本 1602 开始，正式支持和推荐使用 [AlwaysOn 可用性组](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database)。
 
-### <a name="can-i-use-azure-load-balancers-with-site-system-roles-like-management-points--or-software-update-points"></a>Azure 負載平衡器可以和如管理點或軟體更新點這樣的站台系統角色一起使用嗎？
-雖然 Configuration Manager 未使用 Azure 負載平衡器測試，但只要是向應用程式開放的功能，應該不會對正常作業有任何負面影響。
-
-
-## <a name="performance"></a>效能
-### <a name="what-factors-affect-performance-in-this-scenario"></a>本案例中影響效能的因素
-[Azure VM 的大小與類型](https://azure.microsoft.com/documentation/articles/virtual-machines-size-specs)、Azure VM 的磁碟 (建議使用進階儲存體，尤其是 SQL Server)、網路延遲和速度都是最重要的部分。
-
-### <a name="so-tell-me-more-about-azure-virtual-machines-what-size-vms-should-i-use"></a>那麼，告訴我更多關於 Azure 虛擬機器的情況吧，我該使用何種大小的 VM？
-一般情況下，計算能力 (CPU 和記憶體) 必須符合 [recommended hardware for System Center Configuration Manager](/sccm/core/plan-design/configs/recommended-hardware) (System Center Configuration Manager 的建議硬體)。 但是一般電腦硬體和 Azure VM 之間有一些差異，特別是關係到這些 VM 使用的磁碟時。  您使用的 VM 大小取決於環境的大小，以下提供您一些建議︰
-- 凡是大小相當大的生產環境部署，建議使用 “**S**” 類別的 Azure VM。 這是因為它們可以使用進階儲存體磁碟。  非 "S" 類別的 VM 使用 Blob 儲存體，而且一般不會符合可接受生產體驗的必要效能需求。
-- 多個進階儲存體磁碟應該用於較高的級別，且與 Windows 磁碟管理主控台中最大的 IOPS 等量。  
-- 建議您在初始站台部署期間使用較佳或多個進階磁碟 (例如用 P30 而非 P20，在等量磁碟區用 2xP30 而非 1xP30)。 接著，若站台後來因為額外負載需要增加 VM 大小，您就可以利用較大的 VM 大小來提供的額外 CPU 和記憶體。 您也會有預先準備好的磁碟，可以利用較大的 VM 大小所允許的額外 IOPS 輸送量。
+### <a name="can-i-use-azure-load-balancers-with-site-system-roles-like-management-points--or-software-update-points"></a>可否将站点系统角色（如管理点或软件更新点）与 Azure 负载均衡器一起使用？
+虽然未就 Configuration Manager 与 Azure 负载均衡器的配合使用进行测试，但如果该功能对该应用程序是透明的，将二者配合使用应不会影响正常操作和运行。
 
 
+## <a name="performance"></a>性能
+### <a name="what-factors-affect-performance-in-this-scenario"></a>此方案中，哪些因素会影响性能？
+[Azure VM 大小和类型](https://azure.microsoft.com/documentation/articles/virtual-machines-size-specs)、Azure VM 磁盘（建议使用高级存储，尤其是对于 SQL Server）、网络延迟和速度是最重要的几个方面。
 
-下表列出主要和管理中心網站用於各種大小安裝的初始建議磁碟計數︰
+### <a name="so-tell-me-more-about-azure-virtual-machines-what-size-vms-should-i-use"></a>可否提供有关 Azure 虚拟机的详细信息？应使用何种大小的虚拟机？
+一般情况下，计算能力（CPU 和内存）需满足[用于 System Center Configuration Manager 的推荐硬件](/sccm/core/plan-design/configs/recommended-hardware)。 但常规计算机硬件与 Azure VM 之间有些区别，尤其涉及到这些虚拟机使用的磁盘时。  使用的虚拟机的大小取决于环境的规模，这里有一些建议：
+- 对于任何大规模的生产部署，建议使用“S”级 Azure VM。 这是因为这些 VM 可利用高级存储磁盘。  非“S”级 VM 使用 Blob 存储，通常不符合可接受的生产体验所需的性能要求。
+- 对于较大的规模，应使用多个高级存储磁盘，并在 Windows 磁盘管理控制台中将其进行分区以获得最大 IOPS。  
+- 建议在初始站点部署期间使用较好的或多个高级磁盘（如使用 P30 而不是 P20，在带区卷中使用 2 个 P30 而不是 1 个 P30）。 之后，如果站点因额外负荷需要增加 VM 的大小，则可利用较大 VM 提供的额外 CPU 和内存空间。 此外，已配置好的磁盘也可充分利用较大 VM 所允许的额外 IOPS 吞吐量。
 
-**共置的站台資料庫**：站台伺服器上具有站台資料庫的主要或管理中心網站︰
 
-| 桌面用戶端    |建議的 VM 大小|建議的磁碟|
+
+下表列出针对各种规模的安装，建议在主站点和管理中心站点处使用的初始磁盘数：
+
+**位于同一位置的站点数据库** - 主站点或管理中心站点的站点数据库位于站点服务器上：
+
+| 桌面客户端    |建议的 VM 大小|建议的磁盘空间|
 |--------------------|-------------------|-----------------|
-|**最多 25 k**       |   DS4_V2          |2xP30 (等量)  |
-|**25 k 到 50 k**      |   DS13_V2         |2xP30 (等量)  |
-|**50 k 至 100 k**     |   DS14_V2         |3xP30 (等量)  |
+|**最多 25k**       |   DS4_V2          |2xP30（带区）  |
+|**25k 到 50k**      |   DS13_V2         |2xP30（带区）  |
+|**50k 到 100k**     |   DS14_V2         |3xP30（带区）  |
 
 
-**遠端站台資料庫**：遠端伺服器上具有站台資料庫的主要或管理中心網站︰
+**远程站点数据库** - 主站点或管理中心站点的站点数据库位于远程服务器上：
 
-| 桌面用戶端    |建議的 VM 大小|建議的磁碟 |
+| 桌面客户端    |建议的 VM 大小|建议的磁盘空间 |
 |--------------------|-------------------|------------------|
-|**最多 25 k**       | 站台伺服器：F4S </br>資料庫伺服器：DS12_V2 | 站台伺服器：1xP30 </br>資料庫伺服器：2xP30 (等量)  |
-|**25 k 到 50 k**      | 站台伺服器：F4S </br>資料庫伺服器：DS13_V2 | 站台伺服器：1xP30 </br>資料庫伺服器：2xP30 (等量)   |
-|**50 k 至 100 k**     | 站台伺服器：F8S </br>資料庫伺服器：DS14_V2 | 站台伺服器：2xP30 (等量)   </br>資料庫伺服器：3xP30 (等量)   |
+|**最多 25k**       | 站点服务器：F4S </br>数据库服务器：DS12_V2 | 站点服务器：1xP30 </br>数据库服务器：2xP30（带区）  |
+|**25k 到 50k**      | 站点服务器：F4S </br>数据库服务器：DS13_V2 | 站点服务器：1xP30 </br>数据库服务器：2xP30（带区）   |
+|**50k 到 100k**     | 站点服务器：F8S </br>数据库服务器： DS14_V2 | 站点服务器：2xP30（带区）   </br>数据库服务器：3xP30（带区）   |
 
-下圖顯示 DS14_V2 上 50k 至 100k 之用戶端的設定範例，其在等量磁碟區中有 3xP30 個磁碟，並有不同的邏輯磁碟區以供 Configuration Manager 安裝和資料庫檔案使用：![VM)disks](media/vm_disks.png)  
+下面显示了 DS14_V2 上 50k 到 100k 客户端的示例配置，其中 3xP30 磁盘位于带区卷中，Configuration Manager 安装和数据库文件具有单独的逻辑卷：![VM)disks](media/vm_disks.png)  
 
 
 
-## <a name="user-experience"></a>使用者體驗
-### <a name="you-mention-that-user-experience-is-one-of-the-main-areas-of-importance-why-is-that"></a>您提到的使用者體驗是很重要的主要部分之一，為什麼會這樣？
-您對網路功能、可用性、效能和 Configuration Manager 站台伺服器位置的決定，都會直接影響您的使用者。 我們相信移至 Azure 應該對您的使用者透明公開，他們才不會在與 Configuration Manager 的日常互動中感受到變化。
+## <a name="user-experience"></a>用户体验
+### <a name="you-mention-that-user-experience-is-one-of-the-main-areas-of-importance-why-is-that"></a>为什么说用户体验是非常重要的一个方面？
+所做的有关网络、可用性、性能和放置 Configuration Manager 站点服务器的位置的决策会直接影响用户。 我们认为转移到 Azure 这一操作对用户应是透明的，由此确保其与 Configuration Manager 的日常交互不会发生变化。
 
-### <a name="ok-i-get-it-i-plan-to-install-a-single-stand-alone-primary-site-on-an-azure-virtual-machine-and-i-want-to-make-sure-my-costs-are-low-should-i-place-remote-site-systems-like-management-points-distribution-points-and-software-update-points-on-azure-virtual-machines-as-well-or-on-premises"></a>好，我了解了。 我打算在 Azure 虛擬機器上安裝單一的獨立主要站台，而且希望確保成本低廉。 我是不是也應該將 (遠端) 站台系統 (例如管理點、發佈點和軟體更新點) 放在 Azure 虛擬機器上，還是放在內部部署？
-除了從站台伺服器到發佈點的通訊以外，這些網站中伺服器對伺服器的通訊可能會在任何時間發生，並且不會使用任何機制控制網路頻寬的使用。 因為您無法控制站台系統之間的通訊，所以應該考慮與這些通訊相關的任何費用。
+### <a name="ok-i-get-it-i-plan-to-install-a-single-stand-alone-primary-site-on-an-azure-virtual-machine-and-i-want-to-make-sure-my-costs-are-low-should-i-place-remote-site-systems-like-management-points-distribution-points-and-software-update-points-on-azure-virtual-machines-as-well-or-on-premises"></a>好的，明白了。 我计划在 Azure 虚拟机上安装单个独立主站点，并且想要确保成本较低。 是否也应将（远程）站点系统（例如，管理点、分发点和软件更新点）放置在 Azure 虚拟机上，还是应将其放置在本地？
+除了站点服务器与分发点之间的通信之外，站点中的这些服务器对服务器通信随时都可能发生，并且不使用任何机制来控制网络带宽的使用。 由于无法控制站点系统之间的通信，应考虑与这些通信相关的所有成本。
 
-網路速度和延遲也是要考慮的其他因素。 速度慢又不穩定的網路會影響站台伺服器和遠端站台系統之間的功能，也會影響站台系統的所有用戶端通訊。 也應該考慮使用指定站台系統的受管理用戶端數目，以及目前正在使用的功能。
-一般可以使用一般指引，因為它和 WAN 連結及站台系統有關，可以作為起點。 在理想情況下，Azure 和內部網路之間選取和接收的網路輸送量，和與快速網路連線狀況良好的 WAN 是一致的。
+网络速度和延迟也是需要考虑的重要因素。 较慢或不稳定的网络可能会影响站点服务器和远程站点系统之间的功能以及任何客户端与站点系统之间的通信。 还应考虑使用给定站点系统的托管客户端以及用户主动使用的功能的数量。
+一般情况下，可使用常规指导，因为作为起始点，它与 WAN 链接和站点系统相关。 理想情况下，所选择和所接收的 Azure 与 intranet 之间的吞吐量会与通过快速网络良好连接的 WAN 一致。
 
-### <a name="what-about-content-distribution-and-content-management-should-standard-distribution-points-be-in-azure-or-on-premises-and-should-i-use-branchcache-or-pull-distribution-points-on-premises-or-should-i-make-exclusive-use-of-cloud-distribution-points"></a>內容發佈與內容管理又是如何？ 標準發佈點應該位在 Azure 或內部部署？我應該使用 BranchCache 或內部部署提取發佈點？ 還是應該專用雲端發佈點？
-內容管理的方法與站台伺服器和站台系統十分相似。
-- 如果使用無限行動數據方案的 Azure 和內部網路連線快速又穩定，將標準發佈點裝載在 Azure 中也是一個選項。
--  如果您使用計量付費數據傳輸方案，而且要考量頻寬成本，或者 Azure 和內部網路之間的網路連線速度不夠快或不穩定，則可能要考慮其他方法。 這些包括尋找內部部署的標準或提取發佈點，以及使用 BranchCache。 使用雲端架構發佈點也是一個選項，但支援的內容類型會有所限制 (例如，不支援軟體更新套件)。
+### <a name="what-about-content-distribution-and-content-management-should-standard-distribution-points-be-in-azure-or-on-premises-and-should-i-use-branchcache-or-pull-distribution-points-on-premises-or-should-i-make-exclusive-use-of-cloud-distribution-points"></a>内容分发和内容管理呢？ 标准分发点应位于 Azure 中还是位于本地？应在本地使用 BranchCache 还是拉取分发点？ 或者，是否应以独占方式使用云分发点？
+内容管理的方法与站点服务器和站点系统管理非常相似。
+- 如果通过不限流量计划使用快速稳定的网络连接 Azure 和 Intranet，则可以选择在 Azure 中托管所有标准分发点。
+-  如果使用按流量计费的数据计划且需考虑带宽成本，或者 Azure 与 Intranet 之间的网络连接不快或不稳定，则可以考虑其他方案。 这些方案包括在本地放置标准或拉取分发点以及使用 BranchCache。 也可以选择使用基于云的分发点，但在支持的内容类型上存在一些限制（例如，不支持软件更新包）。
 
 > [!NOTE]
->  如果需要 PXE 支援，則必須使用內部部署發佈點 (標準或提取) 回應開機要求。 [目前不支援在 Azure VM 上執行 WDS](https://technet.microsoft.com/library/hh831764(v=ws.11).aspx)。
+>  如果需要 PXE 支持，则必须使用本地分发点（标准或拉取）来响应启动请求。 [目前不支持在 Azure VM 上运行 WDS](https://technet.microsoft.com/library/hh831764(v=ws.11).aspx)。
 
 
-### <a name="while-i-am-ok-with-the-limitations-of-cloud-based-distribution-points-i-dont-want-to-put-my-management-point-into-a-dmz-even-though-that-is-needed-to-support-my-internet-based-clients-do-i-have-any-other-options"></a>雖然我可以接受雲端架構發佈點的限制，但我不想將管理點放入 DMZ，即使必須這樣才能支援以網際網路為基礎的用戶端。 我有任何其他選項嗎？
-是！ 我們在 Configuration Manager 1610 版推出了[雲端管理閘道器](/sccm/core/clients/manage/manage-clients-internet#cloud-management-gateway)作為發行前版本功能 (這項功能最先是以[雲端 Proxy 服務](/sccm/core/get-started/capabilities-in-technical-preview-1606#a-namecloudproxyacloud-proxy-service-for-managing-clients-on-the-internet)出現在 Technical Preview 1606 版中)。
+### <a name="while-i-am-ok-with-the-limitations-of-cloud-based-distribution-points-i-dont-want-to-put-my-management-point-into-a-dmz-even-though-that-is-needed-to-support-my-internet-based-clients-do-i-have-any-other-options"></a>我了解并能接受基于云的分发点的限制，但不想将管理点置于 DMZ 内，即使这是支持基于 Internet 的客户端所需的。 是否有其他选择？
+可以！ 在 Configuration Manager 1610 版本中，我们引入了[云管理网关](/sccm/core/clients/manage/manage-clients-internet#cloud-management-gateway)作为预发行功能。 （此功能最先出现在 Technical Preview 1606 版本中，用作[云代理服务](/sccm/core/get-started/capabilities-in-technical-preview-1606#a-namecloudproxyacloud-proxy-service-for-managing-clients-on-the-internet)）。
 
-**雲端管理閘道**可讓您輕鬆管理網際網路上的 Configuration Manager 用戶端。 部署至 Microsoft Azure 且需要 Azure 訂用帳戶的服務，使用稱為雲端管理閘道連接器端點的新角色，連線到內部部署的 Configuration Manager 基礎結構。 在它部署及設定好後，用戶端就可以存取內部部署的 Configuration Manager 站台系統角色，不論它們是連接到內部的私人網路還是網際網路。
+**云管理网关**提供一种简单的方法来管理 Internet 上的 Configuration Manager 客户端。 该服务部署到 Microsoft Azure 且需要 Azure 订阅，它使用名为云管理网关连接点的新角色连接到本地 Configuration Manager 基础结构。 部署并配置好该服务后，客户端便可以访问本地 Configuration Manager 站点系统角色，而不管它们是连接到内部专用网络还是 Internet 上。
 
-您可以在環境中開始使用雲端管理閘道，並提供意見反應，幫助我們改進服務。 如需發行前版本功能的資訊，請參閱[使用更新的發行前版本功能](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkprereleasea-use-pre-release-features-from-updates)。
+接着可以开始在环境中使用云管理网关，并向我们提供反馈以帮助优化该服务。 有关预发行功能的信息，请参阅[使用更新中的预发行功能](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkprereleasea-use-pre-release-features-from-updates)。
 
-### <a name="i-also-heard-that-you-have-another-new-feature-called-peer-cache-introduced-as-a-pre-release-feature-in-version-1610-is-that-different-than-branchcache-which-one-should-i-choose"></a>我還聽說你們有另一個稱為「對等快取」的新功能，其在 1610 版中當成發行前版本功能引進。 它和 BranchCache 不一樣嗎？ 我該選哪一種？
-是的，它們完全不一樣。 [對等快取](/sccm/core/plan-design/hierarchy/client-peer-cache)是 100% 的原生 Configuration Manager 技術，而 BranchCache 則是 Windows 功能。 兩者對您都很有用，BranchCache 使用廣播尋找所需的內容，而對等快取則使用 Configuration Managers 一般發佈流程和界限群組設定。
+### <a name="i-also-heard-that-you-have-another-new-feature-called-peer-cache-introduced-as-a-pre-release-feature-in-version-1610-is-that-different-than-branchcache-which-one-should-i-choose"></a>我还听说，在版本 1610 中引入了另一个名为“对等缓存”的新功能作为预发布功能。 此功能是否与 BranchCache 不同？ 应选择哪一种？
+是的，完全不同。 [对等缓存](/sccm/core/plan-design/hierarchy/client-peer-cache)是 100% 本机 Configuration Manager 技术，而 BranchCache 是 Windows 的一个功能。 两者各有各自的用途；BranchCache 使用广播来查找所需的内容，而“对等缓存”则使用 Configuration Manager 常规分发工作流和边界组设置。
 
-任何用戶端都可以設定為對等快取來源。 然後，當管理點提供與內容來源位置有關的用戶端資訊時，它們會提供有該用戶端要求內容的發佈點和對等快取來源的詳細資料。
+可以将任何客户端配置为对等缓存源。 然后，当管理点提供有关内容源位置的客户端信息时，它们会提供分发点和任何包含客户端所需内容的对等缓存源的详细信息。
 
 
 ## <a name="cost"></a>成本
-### <a name="ok-tell-me-a-bit-about-the-cost-will-this-be-a-cost-effective-solution-for-me"></a>好的，請告訴我成本相關訊息。 這是符合我成本效益的解決方案嗎？
-很難說，因為每個環境都不同。 最佳做法是使用 Microsoft Azure 價格計算機計算環境成本︰https://azure.microsoft.com/pricing/calculator/
+### <a name="ok-tell-me-a-bit-about-the-cost-will-this-be-a-cost-effective-solution-for-me"></a>好的，请提供一些成本方面的信息。 这对我来说是划算的解决方案吗？
+很难说，因为环境存在差异。 最佳办法就是使用 Microsoft Azure 定价计算器为环境估算成本： https://azure.microsoft.com/pricing/calculator/
 
-## <a name="additional-resources"></a>其他資源
-**基本概念︰** http://azure.microsoft.com/documentation/articles/fundamentals-introduction-to-azure/
+## <a name="additional-resources"></a>其他资源
+**基础知识：** http://azure.microsoft.com/documentation/articles/fundamentals-introduction-to-azure/
 
-**Azure VM 電腦類型︰**
- - Azure 電腦大小：https://azure.microsoft.com/documentation/articles/virtual-machines-size-specs/  
- - VM 定價：http://azure.microsoft.com/pricing/details/virtual-machines/  
- - 儲存體定價：http://azure.microsoft.com/pricing/details/storage/
+**Azure VM 计算机类型：**
+ - Azure 计算机大小：https://azure.microsoft.com/documentation/articles/virtual-machines-size-specs/  
+ - VM 定价： http://azure.microsoft.com/pricing/details/virtual-machines/  
+ - 存储定价：http://azure.microsoft.com/pricing/details/storage/
 
-**磁碟效能考量：**    
- - 進階磁碟簡介︰http://azure.microsoft.com/blog/2014/12/11/introducing-premium-storage-high-performance-storage-for-azure-virtual-machine-workloads/  
- - 進階磁碟詳細資訊︰http://azure.microsoft.com/documentation/articles/storage-premium-storage-preview-portal/   
- - 儲存體最大大小和效能目標的便利圖表集︰https://azure.microsoft.com/documentation/articles/storage-scalability-targets/  
- - 進階儲存體幕後玩法的其他簡介 + 大神玩家資料︰http://azure.microsoft.com/blog/2015/04/16/azure-premium-storage-now-generally-available-2/
+**磁盘性能注意事项：**    
+ - 高级磁盘简介：http://azure.microsoft.com/blog/2014/12/11/introducing-premium-storage-high-performance-storage-for-azure-virtual-machine-workloads/  
+ - 高级磁盘详情：http://azure.microsoft.com/documentation/articles/storage-premium-storage-preview-portal/   
+ - 易于使用的最大存储大小和存储性能目标图表集：https://azure.microsoft.com/documentation/articles/storage-scalability-targets/  
+ - 其他介绍 + 一些有关高级存储工作原理的超酷 uber-geek 数据： http://azure.microsoft.com/blog/2015/04/16/azure-premium-storage-now-generally-available-2/
 
 **可用性：**
- - Azure IaaS 上線時間 SLA︰https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_0/  
- - 可用性設定組說明︰https://azure.microsoft.com/documentation/articles/virtual-machines-manage-availability/
+ - Azure IaaS 正常运行时间 SLA：https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_0/  
+ - 所述的可用性集：https://azure.microsoft.com/documentation/articles/virtual-machines-manage-availability/
 
-**連線能力：**
- - 快速路由與Azure VPN：http://azure.microsoft.com/blog/2014/06/10/expressroute-or-virtual-network-vpn-whats-right-for-me/
- - 快速路由定價：http://azure.microsoft.com/pricing/details/expressroute/
- - 快速路由詳細資訊：http://azure.microsoft.com/documentation/articles/expressroute-introduction/
+**连接性：**
+ - Express Route 与Azure VPN：http://azure.microsoft.com/blog/2014/06/10/expressroute-or-virtual-network-vpn-whats-right-for-me/
+ - Express Route 定价：http://azure.microsoft.com/pricing/details/expressroute/
+ - Express Route 详情：http://azure.microsoft.com/documentation/articles/expressroute-introduction/
 
  

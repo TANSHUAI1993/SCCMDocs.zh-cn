@@ -1,6 +1,6 @@
 ---
-title: "規劃報告 | Microsoft Docs"
-description: "從安裝詳細資料到安全性和網路頻寬，請務必規劃 Configuration Manager 中的報告。"
+title: "规划报告 | Microsoft Docs"
+description: "从安装详细信息到安全性和网络带宽，规划 Configuration Manager 中的报表至关重要。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -17,52 +17,52 @@ manager: angrobe
 ms.openlocfilehash: 119f501057bf44e483be31db20b88326b3d05ebb
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="planning-for-reporting-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的報告規劃
+# <a name="planning-for-reporting-in-system-center-configuration-manager"></a>规划 System Center Configuration Manager 中的报告
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager 中的報告提供一組工具和資源，可協助您使用 SQL Server Reporting Services 的進階報告功能。 下列各節可協助您規劃 Configuration Manager 中的報告功能。  
+System Center Configuration Manager 提供了一组工具和资源，可帮助你使用 SQL Server Reporting Services 的高级报表功能。 使用以下部分协助规划 Configuration Manager 中的报表。  
 
-##  <a name="BKMK_InstallReportingServicesPoint"></a> 判斷 Reporting Services 點的安裝位置  
- 當您在站台中執行 Configuration Manager 報告時，報告即可存取連線站台資料庫中的資訊。 下列章節可協助您判斷 Reporting Services 點的安裝位置，以及應使用的資料來源。  
-
-> [!NOTE]  
->  如需在 Configuration Manager 中規劃站台系統的詳細資訊，請參閱[新增站台系統角色](../deploy/configure/add-site-system-roles.md)。  
-
-###  <a name="BKMK_SupportedSiteServers"></a> 支援的站台系統伺服器  
- 您可以將 Reporting Services 點安裝在管理中心網站和主要網站上，也可以安裝在站台中的多個站台系統，以及階層中的其他站台上。 次要站台不支援 Reporting Services 點。 站台中的第一個 Reporting Services 點會設定為預設的報告伺服器。 您可以在站台中新增多個 Reporting Services 點，但 Configuration Manager 報告會主動使用每個站台的預設 Reporting Services 點。 您可以將 Reporting Services 點安裝在站台伺服器或遠端站台系統上。 不過，最佳作法是在遠端站台系統伺服器上使用 Reporting Services。  
-
-###  <a name="BKMK_DataReplication"></a> 資料複寫的考量  
- Configuration Manager 會將複寫資料分類為全域資料或站台資料。 全域資料是指系統管理員使用者所建立並複寫至階層中所有站台的物件，但次要站台只能接收全域資料子集。 全域資料的範例包括軟體部署、軟體更新、集合，以及以角色為基礎的系統管理安全性範圍。 站台資料是指 Configuration Manager 主要站台和用戶端回報至主要站台時建立的作業資訊。 網站資料會複寫到管理中心網站，但不會複寫到其他主要網站。 網站資料範例包括硬體清查資料、狀態訊息、警示，以及以查詢為基礎之集合的結果。 站台資料只會出現在管理中心站台，以及產生資料的主要站台。  
-
- 考量下列因素可以協助您決定 Reporting Services 點的安裝位置：  
-
--   以管理中心網站資料庫為報告資料來源的 Reporting Services 點，可以存取 Configuration Manager 階層中的所有全域資料和站台資料。 如果您所需要的報告必須包含階層中多個站台的站台資料，請考慮將 Reporting Services 點安裝在管理中心網站中的站台系統上，並且以管理中心網站的資料庫為報告資料來源。  
-
--   以主要站台資料庫為報告資料來源的 Reporting Services 點只能存取本機主要站台和任何子次要站台的全域資料和站台資料。 Configuration Manager 階層中其他主要站台的站台資料不會複寫至主要站台，因此 Reporting Services 無法存取該資料。 如果您需要的報告必須包含特定主要站台的站台資料，或是全域資料，但您不希望報告使用者存取其他主要站台的站台資料，請將 Reporting Services 點安裝在主要站台的站台系統中，並且以主要站台的資料庫為報告資料來源。  
-
-###  <a name="BKMK_NetworkBandwidth"></a> 網路頻寬考量  
- 同一個站台中的站台系統伺服器會使用伺服器訊息區 (SMB)、HTTP 或 HTTPS 彼此通訊 (因站台設定而有所不同)。 由於這些通訊未受管理，隨時可能發生，而且不受網路頻寬控制，請先檢閱可用的網路頻寬再將 Reporting Services 點角色安裝在站台系統中。  
+##  <a name="BKMK_InstallReportingServicesPoint"></a> 确定 Reporting Services 点的安装位置  
+ 当在站点中运行 Configuration Manager 报表时，报表可以访问所连接的站点数据库中的信息。 使用下列部分来帮助你确定 Reporting Services 点的安装位置和要使用的数据源。  
 
 > [!NOTE]  
->  如需規劃站台系統的詳細資訊，請參閱[新增站台系統角色](../deploy/configure/add-site-system-roles.md)。  
+>  有关在 Configuration Manager 中规划站点系统的详细信息，请参阅[添加站点系统角色](../deploy/configure/add-site-system-roles.md)。  
 
-##  <a name="BKMK_RoleBaseAdministration"></a> 規劃以角色為基礎之系統管理的報告  
- 報告的安全性與 Configuration Manager 中的其他物件類似，您可以指派安全性角色和權限給系統管理使用者。 系統管理使用者只能執行和修改他們擁有相關安全性權限的報告。 若要在 Configuration Manager 主控台中執行報告，您必須具有 [站台] 權限的 [讀取] 權限，以及針對特定物件設定的權限。  
+###  <a name="BKMK_SupportedSiteServers"></a> 支持的站点系统服务器  
+ 可以将 Reporting Services 点安装在管理中心站点和主站点上，以及安装在层次结构中的某个站点和其他站点的多个站点系统上。 在辅助站点上不支持 Reporting Services 点。 站点中的第一个 Reporting Services 点被配置为默认报表服务器。 可以在一个站点中添加更多的 Reporting Services 点，但 Configuration Manager 报表主要使用每个站点中的默认报表服务器。 可以将 Reporting Services 点安装在站点服务器或远程站点系统上。 但是，出于性能方面的原因，最佳方案是在远程站点系统服务器上使用 Reporting Services。  
 
- 不過，與 Configuration Manager 中其他物件不同的是，在 Configuration Manager 主控台中設定系統管理員使用者的安全性權限後，也必須在 Reporting Services 中設定。 當您在 Configuration Manager 主控台中設定安全性權限時，Reporting Services 點會連線至 Reporting Services，並且設定適當的報告權限。 例如，[軟體更新管理員]  安全性角色擁有與其相關聯的 [執行報告]  和 [修改報告]  權限。 只獲得 [軟體更新管理員]  角色指派的系統管理員使用者，只能執行和修改軟體更新報告。 Configuration Manager 主控台不會顯示其他物件的報告。 未與特定 Configuration Manager 安全物件建立任何關聯性的報告是例外。 就這些報告而言，系統管理員使用者必須擁有 [站台]  的 [讀取]  權限才能執行報告，而要有 [站台]  的 [修改]  權限才能修改報告。  
+###  <a name="BKMK_DataReplication"></a> 数据复制注意事项  
+ Configuration Manager 将它复制的数据分为全局数据和站点数据两类。 全局数据是指由管理用户创建并复制到整个层次结构中的所有站点的对象，不过辅助站点仅会获得部分全局数据。 全局数据的例子包括：软件部署、软件更新、集合和基于角色的管理安全作用域。 站点数据是指 Configuration Manager 主站点和向主站点报告的客户端创建的操作信息。 站点数据复制到管理中心站点，但不复制到其他主站点。 站点数据的例子包括：硬件清单数据、状态消息、警报和基于查询的集合的结果。 站点数据仅在管理中心站点和它源自的主站点中可见。  
 
- 針對以角色為基礎的系統管理，已完全啟用報告。 包含於 Configuration Manager 的所有報告資料，會依照執行報告之系統管理使用者權限進行篩選。 具特定角色的系統管理使用者，只能檢視針對其角色定義的資訊。  
+ 请考虑下列因素，以帮助你确定 Reporting Services 点的安装位置：  
 
- 如需報告安全性權限的詳細資訊，請參閱[設定報告](configuring-reporting.md)。  
+-   使用管理中心站点数据库作为报表数据源的 Reporting Services 点可以访问 Configuration Manager 层次结构中的所有全局和站点数据。 如果需要包含层次结构中多个站点的站点数据的报表，请考虑在管理中心站点中的站点系统上安装 Reporting Services 点，并使用管理中心站点的数据库作为报表数据源。  
 
- 如需 Configuration Manager 中規劃站台系統的詳細資訊，請參閱[設定以角色為基礎的系統管理](../deploy/configure/configure-role-based-administration.md)。  
+-   使用子主站点数据库作为报表数据源的 Reporting Services 点只能访问本地主站点和任何子辅助站点的全局数据及站点数据。 Configuration Manager 层次结构中的其他主站点的站点数据均不会复制到主站点，因此 Reporting Services 无法访问这些数据。 如果需要包含特定主站点的站点数据或全局数据的报表，但不希望报表用户能够访问其他主站点中的站点数据，请在主站点中的站点系统上安装 Reporting Services 点，并使用主站点的数据库作为报表数据源。  
 
-## <a name="next-steps"></a>後續步驟  
- 下列其他主題可協助您規劃 Configuration Manager 中的報告功能：  
+###  <a name="BKMK_NetworkBandwidth"></a> 网络带宽注意事项  
+ 同一个站点中的站点系统服务器使用服务器消息块 (SMB)、HTTP 或 HTTPS 相互通信，具体取决于你如何配置站点。 由于这些通信不受管理，而且可能随时发生，同时不会对网络带宽进行控制，因此，在将 Reporting Services 点角色安装到站点系统上之前，请查看可用的网络带宽。  
 
--   [System Center Configuration Manager 中報告的必要條件](../../../core/servers/manage/prerequisites-for-reporting.md)  
--   [System Center Configuration Manager 的報告最佳做法](../../../core/servers/manage/best-practices-for-reporting.md)  
+> [!NOTE]  
+>  有关规划站点系统的详细信息，请参阅[添加站点系统角色](../deploy/configure/add-site-system-roles.md)。  
+
+##  <a name="BKMK_RoleBaseAdministration"></a> 针对报告规划基于角色的管理  
+ 报表安全与 Configuration Manager 中的其他角色很相似，具体而言，可以将安全角色和权限分配给管理用户。 管理用户只能运行和修改他们具有相应安全权限的报表。 要运行 Configuration Manager 控制台中的报表，必须具有对“站点”许可和为特定对象配置的许可的“读取”权限。  
+
+ 但是，与 Configuration Manager 中的其他对象不同的是，对于在 Configuration Manager 控制台中为管理用户设置的安全权限，也必须在 Reporting Services 中配置这些权限。 在 Configuration Manager 控制台中配置安全权限时，Reporting Services 点会连接到 Reporting Services 并为报表设置适当的权限。 例如，“软件更新管理员”  安全角色具有关联的“运行报表”  和“修改报表”  权限。 仅获分配“软件更新管理员”  角色的管理用户只能运行和修改软件更新的报表。 其他对象的报表不会显示在 Configuration Manager 控制台中。 这方面的例外是，某些报表并未与特定的 Configuration Manager 安全对象关联。 对于这些报表，管理用户必须具有“站点”  权限的“读取”  权才能运行报表，以及“站点”  权限的“修改”  权才能修改报表。  
+
+ 对于基于角色的管理，报表已完全启用。 将根据运行报表的管理用户的权限对 Configuration Manager 附带的所有报表数据进行筛选。 具有特定角色的管理用户只能查看为其角色定义的信息。  
+
+ 有关报表的安全权限的详细信息，请参阅[配置报表](configuring-reporting.md)。  
+
+ 有关 Configuration Manager 中规划站点系统的详细信息，请参阅[配置基于角色的管理](../deploy/configure/configure-role-based-administration.md)。  
+
+## <a name="next-steps"></a>后续步骤  
+ 下列的附加主题可帮助你在 Configuration Manager 中规划报表：  
+
+-   [System Center Configuration Manager 中报表的先决条件](../../../core/servers/manage/prerequisites-for-reporting.md)  
+-   [System Center Configuration Manager 中报表的最佳做法](../../../core/servers/manage/best-practices-for-reporting.md)  

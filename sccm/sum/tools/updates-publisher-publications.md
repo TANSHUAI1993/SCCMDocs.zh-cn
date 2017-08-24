@@ -1,6 +1,6 @@
 ---
-title: "管理發行集 | Microsoft Docs"
-description: "使用 System Center Updates Publisher 以發行集的形式管理軟體更新群組。"
+title: "管理发布项 | Microsoft Docs"
+description: "使用 System Center Updates Publisher 将各组软件更新作为发布项进行管理"
 ms.custom: na
 ms.date: 4/29/2017
 ms.prod: configuration-manager
@@ -18,88 +18,88 @@ robots: NOINDEX, NOFOLLOW
 ms.openlocfilehash: ddea7af935d5be880b96e383401061f8aa11e6da
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="manage-publications-in-updates-publisher"></a>在 Updates Publisher 中管理發行集
+# <a name="manage-publications-in-updates-publisher"></a>管理 Updates Publisher 中的发布项
 
-*適用於：System Center Updates Publisher*
+*适用范围：System Center Updates Publisher*
 
-您可以使用發行集來以單一物件形式管理更新與配套群組。 這包含將更新發行到管理伺服器，並以群組的形式匯出發行集，來與另一個 Updates Publisher 安裝搭配使用。
+可以使用发布项将各组更新和捆绑包作为一个对象进行管理。 这包括将更新发布到管理服务器，以及将发布项导出为组，以供其他 Updates Publisher 安装项使用。
 
-## <a name="create-publications"></a>建立發行集
-建立發行集的方式有兩種：
+## <a name="create-publications"></a>创建发布项
+发布项的创建方式有两种：
 
--   當您在 [更新工作區] 中管理更新和配套時，可以將它們[指派](/sccm/sum/tools/manage-updates-with-updates-publisher#assign-updates-and-bundles-to-a-publication)給當時建立的新發行集。
+-   在“更新工作区”中管理更新和捆绑包时，可以将它们[分配](/sccm/sum/tools/manage-updates-with-updates-publisher#assign-updates-and-bundles-to-a-publication)给同一时间创建的新发布项。
 
--   在 [發行集工作區] 中，您可以使用功能區 [發行集] 索引標籤上的 [建立] 按鈕。 此方法可讓您建立發行集以供日後使用。 稍後當您指派更新時，便可以使用此發行集。
+-   在“发布项工作区”中，可以使用功能区中“发布项”选项卡上的“创建”按钮。 使用这种方法创建的发布项可供将来使用。 稍后，可以在分配更新时使用此发布项。
 
-## <a name="rename-a-publication"></a>將發行集重新命名
-若要將發行集重新命名，請從 [發行集工作區] 內選取發行集，然後在功能區的 [發行集] 索引標籤上，選擇 [編輯]。
+## <a name="rename-a-publication"></a>重命名发布项
+若要重命名发布项，请从“发布项工作区”中选择发布项，然后在功能区的“发布项”选项卡上，选择“编辑”。
 
-## <a name="change-the-publication-type-of-updates-in-a-publication"></a>變更發行集中更新的發行集類型
-從 [發行集工作區] 中，您可修改指派到發行集的更新和配套的 [發行集類型]。
+## <a name="change-the-publication-type-of-updates-in-a-publication"></a>在发布项中更改更新的发布项类别
+在“发布项工作区”中，可以修改分配给发布项的更新和捆绑包的**发布项类型**。
 
-1. 選取包含您要修改之更新的發行集，然後從 [所有 &lt;發行集名稱> 成員更新] 清單中選取一或多個更新或配套。
+1. 选择包含要修改的更新的发布项，然后在“全部 &lt;发布项名称> 成员更新”列表中选择一个或多个更新或捆绑包。
 
-2. 接下來，在 [常用] 索引標籤上，選擇下列其中一個選項。 可用的選項取決於您所選取之更新的發行集類型。
+2. 接下来，在“开始”选项卡上，选择以下任一选项。 可用选项因已选择的更新的发布项类型而异。
 
-  -   **自動**
-  -   **完整內容**
-  -   **僅中繼資料**
+  -   **自动**
+  -   **完整内容**
+  -   **仅元数据**
 
-做出變更之後，您可能需要重新整理發行集檢視以查看新的值。
+更改后，可能需要刷新发布项视图，才能看到新值。
 
-如需不同發行集類型的相關資訊，請參閱[將更新與配套指派到發行集](/sccm/sum/tools/manage-updates-with-updates-publisher#assign-updates-and-bundles-to-a-publication)。
+若要了解不同的发布项类型，请参阅[将更新和捆绑包分配给发布项](/sccm/sum/tools/manage-updates-with-updates-publisher#assign-updates-and-bundles-to-a-publication)。
 
 > [!TIP]    
-> 設定配套的發行集類型之後，該配套中的所有軟體更新都會以該配套的發行集類型進行發行。
+> 设置捆绑包的发布项类型后，捆绑包中的所有软件更新都会使用此捆绑包的发布项类型进行发布。
 
-## <a name="remove-updates-from-a-publication"></a>從發行集中移除更新
-若要從發行集移除更新或配套，請在 [發行集工作區] 中選取要修改的發行集，然後選取您要移除的更新和配套。 接下來，在功能區的 [常用] 索引標籤上，選擇 [移除]。
+## <a name="remove-updates-from-a-publication"></a>删除发布项中的更新
+若要删除发布项中的更新或捆绑包，请在“发布项工作区”中选择要修改的发布项，然后选择要删除的更新和捆绑包。 接下来，从功能区的“开始”选项卡中，选择“删除”。
 
-當更新從發行集中移除後，仍可以在 Updates Publisher 存放庫中取得它們。
+从发布项中删除的更新在 Updates Publisher 存储库中仍有。
 
-## <a name="publish-publications"></a>發行發行集
-當您發行更新與配套時，Updates Publisher 會將有關那些更新與配套的資訊 (中繼資料) 或甚至可能是更新的二進位檔案 (完整內容) 新增到更新伺服器，以便部署到裝置。
+## <a name="publish-publications"></a>发布发布项
+发布更新和捆绑包时，Updates Publisher 会向更新服务器添加这些更新和捆绑包的相关信息（元数据），可能还会添加更新的二进制文件（完整内容），以供部署到设备。
 
-您必須先設定 Updates Publisher 的[更新伺服器](/sccm/sum/tools/updates-publisher-options#update-server)選項，才能使用發行選項。 若要開啟此設定選項，請移至 [更新工作區] &gt;[概觀] 並選取 [設定 WSUS 與簽署憑證]。 您也可以移至 Updates Publisher 選項中的 [更新伺服器] 頁面。
+必须先为 Updates Publisher 配置[“更新服务器”](/sccm/sum/tools/updates-publisher-options#update-server)选项，然后才能进行发布。 若要打开此配置选项，请依次转到“更新工作区”&gt;“概述”，然后选择“配置 WSUS 和签名证书”。 还可以转到 Updates Publisher 选项的“更新服务器”页。
 
 > [!NOTE]   
-> Updates Publisher 只能發行大小不超過 375 MB 的更新。
+> Updates Publisher 只能发布大小不超过 375 MB 的更新。
 
-### <a name="to-publish-a-publication"></a>發行發行集
+### <a name="to-publish-a-publication"></a>如何发布发布项
 
-1.  移至 [發行集工作區]，然後選取包含要發行或匯出之更新或配套群組的發行集。 接著，從功能區的 [常用] 索引標籤選擇 [發行]。
+1.  转到“发布项工作区”，选择包含要发布或导出的一组更新或捆绑包的发布项。 然后，从功能区的“开始”选项卡中，选择“发布”
 
-2.  在 [發行] 精靈的 [選取] 頁面上，您可以選擇使用新的發行憑證簽署所有更新，但是無法變更發行集類型。
+2.  在“发布”向导的“选择”页中，可以选择使用新的发布证书对所有更新进行签名，但不能更改发布项类型。
 
-3.  完成精靈。
+3.  完成向导。
 
-  若發行失敗，系統會顯示 UpdatesPublisher.log 檔案的連結給您，以提供更詳細的資訊。
+  如果发布失败，将会看到指向 UpdatesPublisher.log 文件的链接，其中介绍了详细信息。
 
-## <a name="export-a-publication"></a>匯出發行集
-您可以從 Updates Publisher 存放庫中匯出發行集。 這麼做會匯出已指派到該發行集的更新和配套，並建立更新目錄。 然後您可以[新增](/sccm/sum/tools/updates-publisher-catalogs#add-software-update-catalogs)目錄並將它[匯入](/sccm/sum/tools/updates-publisher-catalogs#mport-updates)到另一個 Updates Publisher 執行個體。 您也可以[匯出](/sccm/sum/tools/manage-updates-with-updates-publisher#export-updates)不是發行集之一部分的更新。
+## <a name="export-a-publication"></a>导出发布项
+可以从 Updates Publisher 存储库中导出发布项。 这样可以导出分配给相应发布项的更新和捆绑包，并创建更新目录。 然后，可以[添加](/sccm/sum/tools/updates-publisher-catalogs#add-software-update-catalogs)目录，并将其[导入](/sccm/sum/tools/updates-publisher-catalogs#mport-updates)其他 Updates Publisher 实例。 还可以[导出](/sccm/sum/tools/manage-updates-with-updates-publisher#export-updates)不属于发布项的更新。
 
-若要匯出更新，請移至 [發行集工作區] 並選取包含要匯出之更新的發行集。 一次只能選取一個發行集。
+若要导出发布项，请转到“发布项工作区”，然后选择包含要导出的更新的发布项。 一次只能选择一个发布项。
 
-選取發行集之後，從功能區的 [常用] 索引標籤選擇 [匯出]，然後提供目錄匯出的路徑與檔案名稱。
+选择发布项后，从功能区的“开始”选项卡中选择“导出”，然后提供目录导出的路径和文件名。
 
-您也可以將相依軟體更新做為匯出的一部分一起匯出。
+还可以视需要导出（添加）从属软件更新。
 
-## <a name="rename-a-publication"></a>將發行集重新命名
-若要將發行集重新命名，請從 [發行集工作區] 選取發行集，然後從功能區的 [發行集] 索引標籤上選擇 [編輯]。
+## <a name="rename-a-publication"></a>重命名发布项
+若要重命名发布项，请从“发布项工作区”中选择发布项，然后在功能区的“发布项”选项卡上，选择“编辑”。
 
-## <a name="delete-a-publication"></a>刪除發行集
-若要刪除發行集，請從 [發行集工作區] 選取發行集，然後從功能區的 [發行集] 索引標籤上選擇 [刪除]。
+## <a name="delete-a-publication"></a>删除发布项
+若要删除发布项，请从“发布项工作区”中选择发布项，然后在功能区的“发布项”选项卡上，选择“删除”。
 
-當更新從 Updates Publisher 移除之後，發行集中的更新仍可在 Updates Publisher 存放庫中取得。
+从 Updates Publisher 中删除的发布项中的更新在 Updates Publisher 存储库中仍有。
 
-## <a name="expire-or-reactivate-updates-and-bundles"></a>使更新和配套到期，或是重新啟動更新和配套
-您可以使用 [更新工作區] 來選取更新和配套，並使它們到期或是重新啟動它們。 您可以任意次數地使更新和配套到期並重新啟動它們。
+## <a name="expire-or-reactivate-updates-and-bundles"></a>终止或重新激活更新和捆绑包
+可以使用“更新工作区”选择并终止或重新激活更新和捆绑包。 可以根据需要多次终止和重新激活更新和捆绑包。
 
--   **若要使更新或配套到期**，請在 [更新工作區] 中選取一或多個未過期的更新或配套，然後從 [常用] 索引標籤選擇 [到期]。 在您將更新或配套以到期的狀態發行到 Configuration Manager 之前，都可以重新啟動它們。
+-   **若要终止更新或捆绑包**，请在“更新工作区”中选择一个或多个未终止的更新或捆绑包，然后在“开始”选项卡中选择“终止”。 将更新或捆绑包的终止状态发布到 Configuration Manager 中之前，都可以重新激活。
 
-    在您可以將自訂更新或配套從 Configuration Manager 移除 (刪除) 之前，必須先使它到期，並將其到期狀態發行到 Configuration Manager。 更新或配套在 Configuration Manager 中到期之後，您就無法再部署或重新啟動該更新或配套。
+    必须先终止自定义更新或捆绑包，并将其终止状态发布到 Configuration Manager 中，然后才能将其从 Configuration Manager 中删除。 当更新或捆绑包的终止状态发布到 Configuration Manager 中后，便无法再部署或重新激活更新或捆绑包。
 
--   **若要將更新或配套重新啟動**，請在 [更新工作區] 中選取一或多個已到期的更新，然後從工作區的 [常用] 索引標籤選取 [重新啟動]。 如果已到期的更新先前已經以到期的狀態發行到 Configuration Manager，您就無法將它重新啟動。
+-   **若要重新激活更新或捆绑包**，请在“更新工作区”中选择一个或多个已终止的更新或捆绑包，然后在“开始”选项卡中选择“重新激活”。 如果之前已将已终止更新的终止状态发布到 Configuration Manager 中，则无法重新激活。

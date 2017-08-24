@@ -1,6 +1,6 @@
 ---
-title: "內容管理安全性和隱私權 | Microsoft Docs"
-description: "在 System Center Configuration Manager 中最佳化內容管理的安全性與隱私權。"
+title: "内容管理安全和隐私 | Microsoft Docs"
+description: "优化 System Center Configuration Manager 中内容管理的安全和隐私。"
 ms.custom: na
 ms.date: 3/1/2017
 ms.prod: configuration-manager
@@ -17,49 +17,49 @@ manager: angrobe
 ms.openlocfilehash: c4b9d13079c313879c6d43b10867c616fa962668
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="security-and-privacy-for-content-management-for-system-center-configuration-manager"></a>System Center Configuration Manager 內容管理的安全性與隱私權
+# <a name="security-and-privacy-for-content-management-for-system-center-configuration-manager"></a>System Center Configuration Manager 中内容管理的安全和隐私
 
-*適用對象：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-本主題包含 System Center Configuration Manager 中內容管理的安全性和隱私權資訊。 請搭配下列主題閱讀：  
+本主题包括有关 System Center Configuration Manager 中内容管理的安全和隐私的信息。 请结合以下主题阅读本主题：  
 
--   [System Center Configuration Manager 的應用程式管理安全性與隱私權](../../../apps/plan-design/security-and-privacy-for-application-management.md)  
+-   [System Center Configuration Manager 中应用程序管理的安全和隐私](../../../apps/plan-design/security-and-privacy-for-application-management.md)  
 
--   [System Center Configuration Manager 中軟體更新的安全性和隱私權](/sccm/sum/plan-design/security-and-privacy-for-software-updates)  
+-   [System Center Configuration Manager 中软件更新的安全和隐私](/sccm/sum/plan-design/security-and-privacy-for-software-updates)  
 
--   [System Center Configuration Manager 中作業系統部署的安全性和隱私權](../../../osd/plan-design/security-and-privacy-for-operating-system-deployment.md)  
+-   [System Center Configuration Manager 中操作系统部署的安全和隐私](../../../osd/plan-design/security-and-privacy-for-operating-system-deployment.md)  
 
-##  <a name="BKMK_Security_ContentManagement"></a> 內容管理的安全性最佳做法  
- 利用下列安全性最佳作法進行內容管理：  
+##  <a name="BKMK_Security_ContentManagement"></a> 内容管理的最佳安全方案  
+ 为内容管理使用以下最佳安全方案：  
 
- **對於內部網路上的發佈點，請考慮使用 HTTPS 和 HTTP 的優缺點**：在大部分案例下，使用 HTTP 和套件存取帳戶以獲得授權，能提供比使用具加密但沒有授權的 HTTPS 更高的安全性。 不過，如果您的內容中包含機密資料，而您想要在傳送時加密資料，請使用 HTTPS。  
+ **对于 Intranet 上的分发点，请考虑使用 HTTPS 和 HTTP 的优缺点**：在大多数情况下，相对于包含加密但未经授权的 HTTPS，使用授权的 HTTP 和包访问帐户具有更高的安全性。 但是，如果内容中有你希望在传输过程加密的敏感数据，请使用 HTTPS。  
 
--   **當您對發佈點使用 HTTPS 時**，Configuration Manager 不會使用套件存取帳戶以授權內容存取，但內容透過網路傳送時會經過加密。  
+-   **如果为分发点使用 HTTPS**，则 Configuration Manager 不会使用包访问帐户来授予内容访问权限，但在通过网络传输内容时会对内容进行加密。  
 
--   **當您對發佈點使用 HTTP 時**，可以使用封裝存取帳戶進行授權，但內容透過網路傳送時不會經過加密。  
-
-
-**如果您對發佈點使用 PKI 用戶端驗證憑證，而不是自我簽署的憑證，請用強式密碼保護憑證檔案 (.pfx)。如果您將檔案儲存在網路上，在將檔案匯入 Configuration Manager 時保護網路通道**：如果您需要密碼才能匯入發佈點用來與管理點進行通訊的用戶端驗證憑證，這就有助於保護憑證不受攻擊者利用。 在網路位置和站台伺服器之間使用伺服器訊息區 (SMB) 簽署或 IPsec，以防止攻擊者竄改憑證檔案。  
-
-**從站台伺服器移除發佈點角色**：根據預設，發佈點會與站台伺服器安裝在相同的伺服器上。 用戶端不需要直接與站台伺服器進行通訊，因此若要減少攻擊層面，請將發佈點角色指派至其他站台系統，並且從站台伺服器中移除。  
-
-**保護套件存取層級的內容**：發佈點共用允許所有使用者的 [讀取] 存取權限。 若要限制哪些使用者可存取內容，針對 HTTP 設定發佈點時，請使用套件存取帳戶。 這不適用於雲端架構的發佈點，因為其不支援套件存取帳戶。 如需套件存取帳戶的詳細資訊，請參閱[管理帳戶以存取內容](../../../core/plan-design/hierarchy/manage-accounts-to-access-content.md)。
+-   **如果为分发点使用 HTTP**，可以使用包访问帐户来进行授权，但在通过网络传输内容时不会对内容进行加密。  
 
 
-**當您新增發佈點站台系統角色時，如果 Configuration Manager 安裝 IIS，請在發佈點安裝完成時移除 HTTP 重新導向或 IIS 管理指令碼及工具**：發佈點不需要 HTTP 重新導向或 IIS 管理指令碼及工具。 若要減少攻擊層面，請移除 Web 伺服器 (IIS) 角色的這些角色服務。  如需有關發佈點上 Web 伺服器 (IIS) 角色之角色服務的詳細資訊，請參閱[站台與站台系統必要條件](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)。  
+**如果为分发点使用 PKI 客户端身份验证证书（而不是自签名证书），请使用强密码保护证书文件 (.pfx)。如果在网络上存储文件，将文件导入到 Configuration Manager 时**，请确保网络通道的安全性：需要密码来导入客户端身份验证证书（分发点用它与管理点通信）时，这可帮助保护证书免受攻击者的攻击。 在网络位置和站点服务器之间使用服务器消息块 (SMB) 签名或 IPsec 防止攻击者篡改证书文件。  
 
-**建立套件時設定套件存取權限**：由於對套件檔案上存取帳戶的變更只有在重新發佈套件時才會生效，因此初次建立套件時，務必小心設定套件存取權限。 當套件很大或是會發佈到多個發佈點，且內容發佈的網路頻寬容量有限時，這點特別重要。  
+**从站点服务器删除分发点角色**：默认情况下，分发点和站点服务器安装在同一服务器上。 客户端不必与站点服务器直接通信，因此，为了减少攻击面，请将分发点角色分配给其他站点系统，并将其从站点服务器中删除。  
 
-**實作存取控制以保護包含預先設置內容的媒體**：預先設置內容經過壓縮，但未加密。 攻擊者就可以讀取及修改之後下載到裝置的檔案。 Configuration Manager 用戶端會拒絕遭竄改的內容，但仍會下載它。  
+**保护包访问级别的内容**：分发点共享允许所有用户读取访问。 要限制可访问内容的用户，请在为 HTTP 配置了分发点时使用包访问帐户。 这一点不适用于基于云的分发点，这些分发点不支持包访问帐户。 有关包访问帐户的详细信息，请参阅[管理帐户以访问内容](../../../core/plan-design/hierarchy/manage-accounts-to-access-content.md)。
 
-**僅使用附有 Configuration Manager 之 ExtractContent 命令列工具 (ExtractContent.exe) 來匯入預先設置的內容，並確定經過 Microsoft 簽署**：若要避免竄改及提高權限，請僅使用附有 Configuration Manager 的授權命令列工具。  
 
-**保護站台伺服器與套件來源位置之間通訊通道的安全**：當您建立應用程式和套件時，在站台伺服器與套件來源位置之間使用 IPsec 或 SMB 簽署。 這樣有助於避免攻擊者竄改來源檔案。  
+**如果 Configuration Manager 在添加分发点站点系统角色时安装 IIS，请在分发点安装完成时删除 HTTP 重定向或 IIS 管理脚本和工具**：分发点不需要 HTTP 重定向或 IIS 管理脚本和工具。 为了减少攻击面，请为 Web 服务器 (IIS) 角色删除这些角色服务。  有关分发点 Web 服务器 (IIS) 角色的角色服务的详细信息，请参阅[站点和站点系统要求](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)。  
 
-**如果您在安裝任何發佈點角色之後，將站台設定選項變更為使用自訂網站，而不是預設網站，請移除預設虛擬目錄**：當您從預設網站切換為自訂網站時，Configuration Manager 不會移除舊的虛擬目錄。 移除 Configuration Manager 原本在預設網站下建立的虛擬目錄：  
+**创建包时，请设置包访问权限**：由于只有在重新分发包时，对包文件上的访问帐户所做的更改才会生效，因此请在第一次创建包时仔细设置包访问权限。 当包很大或分发到许多分发点时，以及当用于内容分发的网络带宽容量有限时，这一点尤其重要。  
+
+**实施访问控制来保护包含预留内容的媒体**：预留内容已压缩但未加密。 攻击者可读取和修改随后下载到设备的文件。 Configuration Manager 客户端会拒绝被篡改的内容，但仍将进行下载。  
+
+**仅通过使用 Configuration Manager 提供的 ExtractContent 命令行工具 (ExtractContent.exe) 导入预安排内容，并确保其经过 Microsoft 签名**：若要避免篡改和特权提升，请仅使用 Configuration Manager 提供的已授权命令行工具。  
+
+**保护站点服务器和包源位置之间的信道**：创建应用程序和包时，在站点服务器和包源位置之间使用 IPsec 或 SMB 签名。 这可帮助防止攻击者篡改源文件。  
+
+**如果在安装任何分发点角色之后更改站点配置选项以使用自定义网站（而不是默认网站），请删除默认虚拟目录**：从默认网站切换为自定义网站时，Configuration Manager 不会删除之前的虚拟目录。 删除 Configuration Manager 最初在默认网站下创建的虚拟目录：  
 
 -   SMS_DP_SMSPKG$  
 
@@ -69,26 +69,26 @@ ms.lasthandoff: 08/07/2017
 
 -   NOCERT_SMS_DP_SMSSIG$  
 
-**若是雲端式發佈點，保護您的訂閱詳細資料及憑證**：當您使用雲端式發佈點時，請保護高價值的項目，包括您 Azure 訂用帳戶的使用者名稱和密碼、Azure 管理憑證，以及雲端式發佈點服務憑證。 安全保存憑證，如果設定雲端架構的發佈點時要透過網路瀏覽憑證，請在站台系統伺服器與來源位置之間使用 IPsec 或 SMB 簽署。  
+**针对基于云的分发点，保护订阅的详细信息和证书**：使用基于云的分发点时，需保护高价值项目（包括 Azure 订阅的用户名和密码、Azure 管理证书和基于云的分发点服务证书）。 安全地存储证书，如果在配置基于云的分发点时通过网络浏览到这些证书，请在站点系统服务器和源位置之间使用 IPsec 或 SMB 签名。  
 
-**雲端式發佈點︰為繼續獲得服務，請監視憑證的到期日**：Configuration Manager 在雲端式發佈點服務的匯入憑證管理即將到期時，不會向您提出警告。 您必須在 Configuration Manager 之外另行監視到期日，並請確定在到期日之前更新並匯入新憑證。 如果您向外部憑證授權單位 (CA) 購買 Configuration Manager 雲端架構的發佈點服務憑證，這點就相當重要，因為您可能需要額外的時間來取得更新的憑證。  
+**对于基于云的分发点：为了服务持续性起见，监视证书的过期日期**：用于管理基于云的分发点服务的已导入证书即将过期时，Configuration Manager 不会发出警告。 必须独立于 Configuration Manager 监视过期日期，并确保在过期日期之前续订然后导入新证书。 如果从外部证书颁发机构 (CA) 购买 Configuration Manager 基于云的分发点服务证书，这一点特别重要，因为你可能需要额外的时间来获取续订的证书。  
 
- 如果這兩個憑證中的任一個已過期，雲端服務管理員就會產生狀態訊息識別碼 **9425**，而 CloudMgr.log 檔案會包含項目以指出憑證**處於過期狀態**，其中也會以 UTC 格式記錄到期日。  
+ 如果任一证书过期，则“云服务管理器”将生成状态消息 ID **9425**， CloudMgr.log 文件将包含一个通过过期日期和登录 UTC 指示证书**处于过期状态**的条目。  
 
-## <a name="security-considerations-for-content-management"></a>內容管理的安全性考量  
-規劃內容管理時，請考量下列項目︰  
+## <a name="security-considerations-for-content-management"></a>内容管理的安全注意事项  
+在规划内容管理时，请考虑以下内容：  
 
--   用戶端只會驗證下載的內容。  
+-   客户端不会在下载内容之前对其进行验证。  
 
-     Configuration Manager 用戶端只有在內容下載到其用戶端快取後，才會驗證內容上的雜湊。 如果攻擊者竄改下載的檔案清單或內容本身，則下載程序可能佔用相當大的網路頻寬，這樣只會讓用戶端在遭遇無效的雜湊時捨棄內容。  
+     Configuration Manager 客户端只有在将内容下载到其客户端缓存后才会验证内容上的哈希。 如果攻击者篡改要下载的文件列表或篡改内容本身，则下载进程可能仅会占用客户端的大量网络带宽，并随后会在遇到无效哈希时丢弃内容。  
 
--   當您使用雲端式發佈點時，存取內容時會自動將範圍限制在您的企業中，因此您無法進一步限制在選取的使用者或群組中。  
+-   使用基于云的分发点时，会将内容自动限制为仅供你的企业访问，并且你无法将其进一步限制为仅供所选用户或组访问。  
 
--   當您使用雲端架構的發佈點時，管理點會驗證用戶端，然後使用 Configuration Manager 權杖來存取雲端架構的發佈點。 權杖的有效時間為八個小時。 這表示，如果某個用戶端因不再受信任而遭到封鎖，它可繼續從雲端式發佈點下載內容，直到此權杖的有效期間到期。 這種情況下，因為用戶端遭到封鎖，所以管理點不會對用戶端發出另一個權杖。  
+-   使用基于云的分发点时，客户端将通过管理点进行验证，然后使用 Configuration Manager 令牌来访问基于云的分发点。 令牌的有效期为 8 小时。 这意味着，如果你因为客户端不再受信任而将其阻止，则在此令牌的有效期过期之前，客户端可继续从基于云的分发点下载内容。 此时，管理点将不会为该客户端发出其他令牌，因为该客户端已被阻止。  
 
-     若要防止封鎖的用戶端在八小時的時間範圍內下載內容，您可以從 Configuration Manager 主控台中 [系統管理] 工作區之 [階層設定] 的 [雲端] 節點，停止雲端服務。  
+     为避免被阻止的客户端在这 8 小时内下载内容，可从 Configuration Manager 控制台“管理”工作区中“云”节点的“层次结构配置”中停止云服务。  
 
-##  <a name="BKMK_Privacy_ContentManagement"></a> 內容管理的隱私權資訊  
- Configuration Manager 不會在內容檔案中包含任何使用者資料，雖然管理使用者可能選擇這樣做。  
+##  <a name="BKMK_Privacy_ContentManagement"></a> 内容管理的隐私信息  
+ Configuration Manager 不会在内容文件中包括任何用户数据（虽然管理用户可能会选择这样做）。  
 
- 在您設定內容管理之前，請先考慮隱私權需求。  
+ 在配置内容管理之前，请考虑隐私要求。  

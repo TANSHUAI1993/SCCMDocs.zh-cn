@@ -1,6 +1,6 @@
 ---
-title: "建立非作業系統部署的工作順序 | Microsoft Docs"
-description: "建立與部署作業系統無關的工作順序，例如散發軟體、更新驅動程式、編輯使用者狀態等等。"
+title: "创建用于非操作系统部署的任务序列 | Microsoft Docs"
+description: "创建与部署操作系统不相关的任务序列，如软件分发、更新驱动程序和编辑用户状态等。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -17,40 +17,40 @@ manager: angrobe
 ms.openlocfilehash: b4b04907f2cd48d81e864e46ca47c14a0b98a9f7
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="create-a-task-sequence-for-non-operating-system-deployments-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 建立非作業系統部署的工作順序
+# <a name="create-a-task-sequence-for-non-operating-system-deployments-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 创建用于非操作系统部署的任务序列
 
-*適用對象：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager 中的工作順序是用來將環境中的各種工作自動化。 這些工作主要針對部署作業系統來進行設計和測試。  Configuration Manager 具有許多其他功能，這些功能應為您在某些案例中所使用的主要技術，像是[應用程式安裝](../../apps/understand/introduction-to-application-management.md)、[軟體更新安裝](../../sum/understand/software-updates-introduction.md)、[設定組態](../../compliance/understand/ensure-device-compliance.md)，或自訂自動化。 還有其他的 Microsoft System Center 自動化技術，例如 [Orchestrator](https://technet.microsoft.com/library/hh237242.aspx) 和 [Service Management Automation](https://technet.microsoft.com/library/dn469260.aspx) 等等，都是您應該考慮的項目。  
+System Center Configuration Manager 中的任务序列用于自动在环境中执行各种任务。 这些任务经过测试主要设计用于部署操作系统。  Configuration Manager具有许多其他功能，这些功能应是用于以下这些方案的主要技术：[应用程序安装](../../apps/understand/introduction-to-application-management.md)[软件更新安装](../../sum/understand/software-updates-introduction.md)、[设置配置](../../compliance/understand/ensure-device-compliance.md)或自定义自动化。 此外，你也可以考虑诸如 [Orchestrator](https://technet.microsoft.com/library/hh237242.aspx) 和 [Service Management Automation](https://technet.microsoft.com/library/dn469260.aspx) 等其他 Microsoft System Center 自动化技术。  
 
-工作順序的強大功能在於其彈性，以及您可以如何使用這些工作順序來設定用戶端設定、發佈軟體、更新驅動程式、編輯使用者狀態，並執行與作業系統部署無關的其他工作。 您可以建立自訂工作順序以新增任何數量的工作。 Configuration Manager 支援使用非作業系統部署的自訂工作順序。 不過，如果工作順序導致不想要或不一致的結果，請查看如何簡化作業。 做法是使用較簡單的步驟、將動作分成多個工作順序，或採取分段方式來建立和測試工作順序。
+任务序列的强大功能在于其灵活性以及如何使用它们配置客户端设置、分发软件、更新驱动程序、编辑用户状态并执行独立于操作系统部署的其他任务。 你可以创建自定义任务序列以添加任意数量的任务。 Configuration Manager 中支持使用非操作系统部署的自定义任务序列。 但是，如果任务序列导致不需要或不一致的结果，请设法简化操作。 通过使用简化的步骤、在多个任务序列之间划分操作，或通过采用阶段方法创建和测试任务序列，可完成此操作。
 
- 支援在非作業系統部署自訂工作順序中使用下列步驟：  
+ 支持将以下步骤用于非操作系统部署自定义任务序列：  
 
--   [檢查整備程度](../understand/task-sequence-steps.md#BKMK_CheckReadiness)  
+-   [检查准备情况](../understand/task-sequence-steps.md#BKMK_CheckReadiness)  
 
--   [連線到網路資料夾](../understand/task-sequence-steps.md#BKMK_ConnectToNetworkFolder)  
+-   [连接到网络文件夹](../understand/task-sequence-steps.md#BKMK_ConnectToNetworkFolder)  
 
--   [下載套件內容](../understand/task-sequence-steps.md#BKMK_DownloadPackageContent)  
+-   [下载包内容](../understand/task-sequence-steps.md#BKMK_DownloadPackageContent)  
 
--   [安裝應用程式](../understand/task-sequence-steps.md#BKMK_InstallApplication)  
+-   [安装应用程序](../understand/task-sequence-steps.md#BKMK_InstallApplication)  
 
--   [安裝套件](../understand/task-sequence-steps.md#BKMK_InstallPackage)  
+-   [安装包](../understand/task-sequence-steps.md#BKMK_InstallPackage)  
 
--   [安裝軟體更新](../understand/task-sequence-steps.md#BKMK_InstallSoftwareUpdates)  
+-   [安装软件更新](../understand/task-sequence-steps.md#BKMK_InstallSoftwareUpdates)  
 
--   [重新啟動電腦](../understand/task-sequence-steps.md#a-namebkmkrestartcomputera-restart-computer)  
+-   [重启计算机](../understand/task-sequence-steps.md#a-namebkmkrestartcomputera-restart-computer)  
 
--   [執行命令列](../understand/task-sequence-steps.md#BKMK_RunCommandLine)  
+-   [运行命令行](../understand/task-sequence-steps.md#BKMK_RunCommandLine)  
 
--   [執行 PowerShell 指令碼](../understand/task-sequence-steps.md#BKMK_RunPowerShellScript)  
+-   [运行 PowerShell 脚本](../understand/task-sequence-steps.md#BKMK_RunPowerShellScript)  
 
--   [設定動態變數](../understand/task-sequence-steps.md#BKMK_SetDynamicVariables)  
+-   [设置动态变量](../understand/task-sequence-steps.md#BKMK_SetDynamicVariables)  
 
--   [設定工作順序變數](../understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable)  
+-   [设置任务序列变量](../understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable)  
 
-## <a name="next-steps"></a>後續步驟
-[部署工作順序](manage-task-sequences-to-automate-tasks.md#a-namebkmkdeploytsa-deploy-a-task-sequence)
+## <a name="next-steps"></a>后续步骤
+[部署任务序列](manage-task-sequences-to-automate-tasks.md#a-namebkmkdeploytsa-deploy-a-task-sequence)

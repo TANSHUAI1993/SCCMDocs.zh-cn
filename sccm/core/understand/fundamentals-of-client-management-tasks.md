@@ -1,6 +1,6 @@
 ---
-title: "用戶端管理基本概念 | Microsoft Docs"
-description: "深入了解您執行以管理 System Center Configuration Manager 用戶端的工作。"
+title: "客户端管理基础知识 | Microsoft Docs"
+description: "了解有关用于管理 System Center Configuration Manager 客户端运行的任务的详细信息。"
 ms.custom: na
 ms.date: 12/30/2016
 ms.prod: configuration-manager
@@ -17,48 +17,48 @@ manager: angrobe
 ms.openlocfilehash: 0fee4f4ba462e59859ac93c4218b67cb26bdd6f6
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="fundamentals-of-client-management-tasks-for-system-center-configuration-manager"></a>System Center Configuration Manager 的用戶端管理基本概念
+# <a name="fundamentals-of-client-management-tasks-for-system-center-configuration-manager"></a>System Center Configuration Manager 的客户端管理任务基础
 
-適用於：System Center Configuration Manager (最新分支)
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-安裝 System Center Configuration Manager 用戶端之後，您可以執行數項工作來管理用戶端。  有些工作是從 Configuration Manager 主控台執行。 其他工作則是從 Configuration Manager 用戶端應用程式執行。 Configuration Manager 用戶端應用程式是與 Configuration Manager 用戶端軟體一起安裝。
+安装 System Center Configuration Manager 客户端后，可以运行几个任务来管理客户端。  可从 Configuration Manager 控制台运行一些任务。 可从 Configuration Manager 客户端应用程序运行其他任务。 使用 Configuration Manager 客户端软件安装 Configuration Manager 客户端应用程序。
 
-## <a name="configuration-manager-console-tasks"></a>Configuration Manager 主控台工作
- 在 Configuration Manager 主控台中，您可以執行各種用戶端管理工作︰  
+## <a name="configuration-manager-console-tasks"></a>Configuration Manager 控制台任务
+ 可在 Configuration Manager 控制台中执行不同的客户端管理任务：  
 
--   部署應用程式、軟體更新、維護指令碼及作業系統。 設定特定日期和時間的安裝、將軟體設為使用者要求時即可安裝，或設定解除安裝應用程式。  
+-   部署应用程序、软件更新、维护脚本和操作系统。 可将安装配置为在指定日期和时间进行，在用户请求时提供可供安装的软件，或配置要卸载的应用程序。  
 
--   協助保護您的電腦不受惡意程式碼侵襲及其他安全性威脅，並在偵測到問題時通知您。  
+-   帮助计算机抵御恶意软件和安全威胁，并在检测到问题时通知你。  
 
--   定義要監視的用戶端組態設定，並針對不符合規範的設定加以補救。  
+-   定义要监视并在违反符合性时修正的客户端配置的设置。  
 
--   收集硬體和軟體清查資訊，其中包括在 Microsoft 監視及協調授權資訊。  
+-   收集硬件和软件清单信息，包括来自 Microsoft 的监视和协调许可证信息。  
 
--   使用遠端控制對電腦進行疑難排解。  
+-   使用远程控制对计算机进行故障排除。  
 
--   執行電源管理設定來管理與監視電腦的電源消耗。  
+-   实施电源管理设置，以管理和监视计算机的功耗。  
 
-Configuration Manager 主控台會以幾近即時的方式監視先前的工作。 Configuration Manager 主控台中提供每個工作的通知和狀態資訊。 若要擷取資料和歷史趨勢，請使用 SQL Server Reporting Services 的整合式報告功能。 用戶端會將詳細資料以用戶端狀態的形式提交給站台。  用戶端狀態資訊提供有關用戶端健全狀況和用戶端活動的資料，在主控台中或透過使用 Configuration Manager 的內建報表均可檢視這項資訊。 此資料可協助識別沒有回應的電腦，在某些情況下還會自動補救問題。  
+Configuration Manager 控制台几乎可实时监视之前的任务。 Configuration Manager 控制台中提供每个任务的通知和状态信息。 若要捕获数据和分析历史趋势，请使用集成的 SQL Server Reporting Services 报表功能。 客户端将详细信息作为客户端状态提交给站点。  客户端状态信息提供客户端和客户端的活动运行状况的相关数据，并且可以在控制台中或使用 Configuration Manager 的内置报表查看此客户端状态信息。 此数据帮助识别未响应的计算机，而且在一些情况下可以自动修正问题。  
 
- 如需用戶端管理工作的詳細資訊，請參閱[如何管理 System Center Configuration Manager 中的用戶端](../../core/clients/manage/manage-clients.md)和[如何在 System Center Configuration Manager 中管理 Linux 和 UNIX 伺服器的用戶端](../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md)。 若要了解如何使用報表，請參閱   
-            [System Center Configuration Manager 的報告簡介](../../core/servers/manage/introduction-to-reporting.md)。  
+ 有关客户端管理任务的详细信息，请参阅[如何在 System Center Configuration Manager 中管理客户端](../../core/clients/manage/manage-clients.md)和[如何在 System Center Configuration Manager 中管理 Linux 和 UNIX 服务器客户端](../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md)。 若要了解报表的使用，请参阅   
+            [System Center Configuration Manager 中的报表简介](../../core/servers/manage/introduction-to-reporting.md)。  
 
-## <a name="configuration-manager-client-application"></a>Configuration Manager 用戶端應用程式  
- 當您安裝 Configuration Manager 用戶端軟體時，也會安裝 Configuration Manager 用戶端應用程式。 與軟體中心不同，Configuration Manager 用戶端應用程式的設計對象是技術服務人員，而非使用者。 部分設定選項需要有本機系統管理權限，且大部分選項都需要具備 Configuration Manager 用戶端應用程式運作方式的技術知識。 您可以使用此應用程式在用戶端上執行下列工作︰  
+## <a name="configuration-manager-client-application"></a>Configuration Manager 客户端应用程序  
+ 安装 Configuration Manager 客户端软件时，同时也会安装 Configuration Manager 客户端应用程序。 与软件中心不同的是，Configuration Manager 客户端应用程序是为技术支持工程师而不是最终用户设计的。 使用某些配置选项需要本地管理权限，而且使用大部分选项都要求掌握有关 Configuration Manager 客户端应用程序工作原理的技术知识。 可以使用此应用程序在客户端上执行下列任务：  
 
--   檢視用戶端內容，例如組建編號、其指派的站台、與其通訊的管理點，以及用戶端使用的是公開金鑰基礎結構 (PKI) 憑證還是自我簽署憑證。  
+-   查看有关客户端的属性，例如内部版本号、为它分配的站点、它与之通信的管理点以及客户端使用的是公钥基础结构 (PKI) 证书还是自签名证书。  
 
--   確認在第一次安裝用戶端之後是否已成功下載用戶端原則。 也確認是否根據 Configuration Manager 主控台中所設定的用戶端設定，如預期地啟用或停用用戶端設定。  
+-   第一次安装客户端后，确认该客户端已成功安装客户端策略。 还要根据 Configuration Manager 控制台中配置的客户端设置，确认已按预期启用或禁用客户端设置。  
 
--   啟動用戶端動作。 例如，如果最近已變更 Configuration Manager 主控台設定，而您不想等到下次排程時間，即可下載用戶端原則。  
+-   启动客户端操作。 例如，如果最近在 Configuration Manager 控制台中更改了配置，且不希望等到下次计划时间，则可以下载客户端策略。  
 
--   將用戶端手動指派至 Configuration Manager 站台，或嘗試找到站台。 然後針對發佈至網域名稱系統 (DNS) 的管理點指定 DNS 尾碼。  
+-   手动将客户端分配到 Configuration Manager 站点，或尝试查找站点。 然后为发布到 DNS 的管理点指定域名系统 (DNS) 后缀。  
 
--   設定可暫時儲存檔案的用戶端快取。 然後，在需要更多磁碟空間來安裝軟體時，刪除快取中的檔案。  
+-   配置临时存储文件的客户端缓存。 如果需要更多的磁盘空间来安装软件，则删除缓存中的文件。  
 
--   針對以網際網路為基礎的用戶端管理進行設定。  
+-   配置用于执行基于 Internet 的客户端管理的设置。  
 
--   檢視部署至用戶端的設定基準、起始相容性評估及檢視相容性報告。  
+-   查看已部署到客户端的配置基线，启动符合性评估，以及查看符合性报告。  

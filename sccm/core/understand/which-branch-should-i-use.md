@@ -1,6 +1,6 @@
 ---
-title: "應該使用哪個分支 | Microsoft Docs"
-description: "了解 System Center Configuration Manager 可用分支之間的差異。"
+title: "应该使用哪一个分支 | Microsoft Docs"
+description: "了解 System Center Configuration Manager 可用分支之间的差异。"
 ms.custom: na
 ms.date: 05/02/2017
 ms.prod: configuration-manager
@@ -17,137 +17,137 @@ manager: angrobe
 ms.openlocfilehash: 26356a80bd8c78d4517253bae73e53d8d8f3a73a
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="which-branch-of-configuration-manager-should-i-use"></a>我應該使用哪個 Configuration Manager 分支？
+# <a name="which-branch-of-configuration-manager-should-i-use"></a>应该使用 Configuration Manager 的哪一个分支？
 
-*適用於：System Center Configuration Manager (最新分支、長期維護分支和 Technical Preview)*
+*适用范围：System Center Configuration Manager（Current Branch、Long-Term Servicing Branch 和 Technical Preview）*
 
 
-從 2016 年 10 月開始，System Center Configuration Manager 有三個分支可使用。 請使用本主題協助選擇正確的分支。
+从 2016 年 10 月开始，System Center Configuration Manager 有三个分支可用。 使用本主题帮助选择适合的分支。
 
 > [!TIP]  
-> 同一個階層中的所有站台必須執行相同的分支。 不支援在不同站台具有不同分支的階層。
+> 层次结构中的所有站点必须运行相同的分支。 不支持在各个网站运行不同分支的层次结构。
 
-## <a name="current-branch-of-system-center-configuration-manager"></a>System Center Configuration Manager 的最新分支
-這是您希望選項能取得最新特性和功能的生產環境所使用的授權分支。 這是您有下列其中一種產品時使用的分支：System Center Datacenter、System Center Standard、System Center Configuration Manager 或對等訂閱權限。 如需軟體保證和授權選項的詳細資訊，請參閱 [System Center Configuration Manager 的授權和分支](learn-more-editions.md)。
+## <a name="current-branch-of-system-center-configuration-manager"></a>System Center Configuration Manager 的 Current Branch
+此经过许可的分支可用于需要获取最新功能的选项的生产环境。 如果拥有以下项之一，应使用该分支：System Center 数据中心、System Center Standard、System Center Configuration Manager 或等效订阅权限。 有关软件保障和许可选项的详细信息，请参阅 [System Center Configuration Manager 的许可和分支](learn-more-editions.md)。
 
 
 >  [!TIP]
-> 最新分支可以安裝成不需要授權的評估版。 評估版可使用 180 天，並支援升級至最新分支的授權版本。
+> Current Branch 可作为无需许可证的评估版进行安装。 评估版可使用 180 天，并支持升级到 Current Branch 的许可版。
 
-最新分支一年會更新數次新功能。 每個更新版本在發行後都有一年支援。 您必須在一年到期日當天或之前，更新至最新分支的較新版本。 較新版本的更新會提供為主控台內更新。
+Current Branch 一年更新几次，更新时提供新的功能。 每个更新版本在其发布后一年内受支持。 必须在 1 年期限到期之前或到期日当天升级到 Current Branch 的较新版本。 较新版本的更新以控制台内更新的形式提供。
 
-若要將最新分支安裝為新站台或從 System Center 2012 Configuration Manager Service Pack 2 或 System Center 2012 R2 Configuration Manager Service Pack 1 升級，請使用 System Cener 2016 所附 DVD 或屬於 System Center Configuration Manager 獨立版的 System Center Configuration Manager [基準媒體](/sccm/core/servers/manage/updates#baseline-and-update-versions)。 System Center Configuration Manager 的授權方式會決定您對此媒體的存取權。 較新的基準版本 (如 1702) 不支援安裝 LTSB。
+若要将 Current Branch 作为新站点进行安装，或者安装为来自 System Center 2012 Configuration Manager Service Pack 2 或 System Center 2012 R2 Configuration Manager Service Pack 1 的升级，则需要使用 System Center Configuration Manager 的[基线介质](/sccm/core/servers/manage/updates#baseline-and-update-versions)，该介质以 DVD 形式随附在 System Cener 2016 中，或者作为 System Center Configuration Manager 的一部分单独发行。 对此介质的访问权取决于 System Center Configuration Manager 的许可方式。 更高的基线版本（如 1702）不支持安装 LTSB。
 
-您也可以使用基準媒體來安裝新站台，它會是最新分支評估版。 如果只想安裝評估版，您可以從 [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection) 網站取得軟體。
+还可使用基线介质安装充当 Current Branch 评估版的新站点。 如果想仅安装评估版，可从 [TechNet 评估中心](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection)网站获取软件。
 
 >  [!NOTE]
-> 使用基準媒體安裝新 Configuration Manager 階層的站台。 如果先前已安裝 1511 版這類基準版本，請使用主控台內更新將站台更新為新的版本 (例如 1606 版)。
+> 使用基线介质安装新的 Configuration Manager 层次结构的站点。 如果以前安装了基准版本（如版本 1511），请使用控制台内部更新将站点更新到新版本（如 1606）。
 >
-> 使用主控台內更新所更新的站台，會產生和使用基準媒體安裝的新站台一樣的站台。
+> 使用控制台内部更新更新后的站点与使用基线介质安装新站点的效果一样。
 >
-> 如需詳細資訊，請參閱 [System Center Configuration Manager 的更新](/sccm/core/servers/manage/updates)。
+> 有关详细信息，请参阅 [System Center Configuration Manager 的更新](/sccm/core/servers/manage/updates)。
 
-**最新分支的功能**
-- 收到啟用新功能的[主控台內更新](/sccm/core/servers/manage/install-in-console-updates)。
-- 收到提供現有功能安全性及品質修正程式的主控台內更新。
-- 必要時支援頻外更新。 請參閱[使用更新註冊工具](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes)或[使用 Hotfix 安裝程式](/sccm/core/servers/manage/use-the-hotfix-installer-to-install-updates)。
-- 可與 Microsoft Intune 和其他雲端服務及基礎結構交互操作。
-- 支援與其他 Configuration Manager 安裝彼此間互相[移轉資料](/sccm/core/migration/migrate-data-between-hierarchies)。
-- 支援從舊版 Configuration Manager 升級。
-- 支援安裝為評估版，未來可從此版升級為完整授權版安裝。
+**Current Branch 的功能**
+- 接收[控制台中更新](/sccm/core/servers/manage/install-in-console-updates)，使新功能可用。
+- 接收控制台中更新，为现有功能提供安全和质量修补程序。
+- 必要时支持带外更新。 请参阅[使用更新注册工具](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes)或[使用修补程序安装程序](/sccm/core/servers/manage/use-the-hotfix-installer-to-install-updates)。
+- 可以与 Microsoft Intune 和其他基于云的服务和基础结构交互操作。
+- 支持与其他 Configuration Manager 安装之间的[数据迁移](/sccm/core/migration/migrate-data-between-hierarchies)。
+- 支持从以前版本的 Configuration Manager 升级。
+- 支持安装评估版本，以后可以升级到完全许可的安装。
 
-最新分支的初始版本是 1511 版。 後續更新的版本包括 1602、1606 等等。 每個版本都會保留一年的支援，Microsoft 建議您最新版一發行即予以更新。 您有一年的時間可以更新為較新版本，也可以略過更新逕行安裝最新的可用版本。 因為每個版本都會累積，如果您略過更新而安裝最新版本，仍然可以從舊版存取所有功能和增強功能。
+Current Branch 的初始版本是版本 1511。 后续更新包括版本 1602 和 1606 等。 各版本的有效期为 1 年，Microsoft 建议在最新版本发布后立即更新。 较旧版本最多可使用一年，之后需要更新到较新版本，也可跳过更新，直接安装最新的可用版本。 由于每个版本是累积更新，因此如果跳过更新并安装最新版本，仍可获取来自以前版本的所有功能和改进。
 
-如需詳細資訊，請參閱[最新分支版本的支援](/sccm/core/servers/manage/current-branch-versions-supported)。
+有关详细信息，请参阅[对 Current Branch 版本的支持](/sccm/core/servers/manage/current-branch-versions-supported)。
 
-**更新選項**
-- 利用使用中的軟體保證，您可以安裝最新分支版本的主控台內更新。  
-- 沒有任何選項可將最新分支轉換成 Technical Preview。 Technical Preview 是不需要授權的個別安裝。
-- 沒有任何選項可將最新分支轉換成長期維護分支 (LTSB)。 您必須解除安裝最新分支，再將 LTSB 安裝為新安裝。
+**更新选项**
+- 通过可用的软件保障，可以安装 Current Branch 版本的控制台中更新。  
+- 无法将 Current Branch 转换为 Technical Preview。 Technical Preview 是不需要许可证的单独安装。
+- 无法将 Current Branch 转换为 Long-Term Servicing Branch (LTSB)。 必须卸载 Current Branch，然后将 LTSB 作为新安装进行安装。
 
-##  <a name="long-term-servicing-branch-of-system-center-configuration"></a>System Center Configuration 的長期維護分支
-這是 Configuration Manager 客戶實際執行時使用的授權分支，這些客戶使用最新分支，且其 Configuration Manager 軟體保證 (SA) 或對等訂閱權限在 2016 年 10 月 1 日後才到期。 如需軟體保證和授權選項的詳細資訊，請參閱 [System Center Configuration Manager 的授權和分支](learn-more-editions.md)。
+##  <a name="long-term-servicing-branch-of-system-center-configuration"></a>System Center Configuration Manager 的 Long-Term Servicing Branch
+这是获得许可且适用于生产的分支，面向正在使用 Current Branch 且允许其 Configuration Manager 软件保障 (SA) 或等效订阅权限在 2016 年 10 月 1 日后过期的 Configuration Manager 客户。 有关软件保障和许可选项的详细信息，请参阅 [System Center Configuration Manager 的许可和分支](learn-more-editions.md)。
 
-LTSB 是以 1606 版為基礎。 這個分支不會收到提供新功能或更新現有功能的主控台內更新。 但會提供重要的安全性修正程式。 若要安裝 LTSB，您必須使用 1606 版[基準媒體](/sccm/core/servers/manage/updates#baseline-and-update-versions)，亦即 System Center 2016 或 System Center Configuration Manager 隨附的 DVD。
+LTSB 基于版本 1606。 该分支不会收到提供新功能或更新现有功能的控制台中更新。 但是，提供了关键安全修补程序。 若要安装 LTSB，你必须使用版本 1606 [基线介质](/sccm/core/servers/manage/updates#baseline-and-update-versions)，基线介质以 DVD 形式随附在 System Center 2016 或 System Center Configuration Manager 中。
 
-若要將 LTSB 安裝為新的站台或從支援的 Configuration Manager 2012 站台升級，請使用 1606 版的[基準媒體](/sccm/core/servers/manage/updates#baseline-and-update-versions) DVD，隨附於 System Center 2016 或 System Center Configuration Manager (最新分支和長期維護分支 1606) 版本。 您可以使用基準媒體來安裝執行 1606 版最新分支的新站台，或執行長期維護分支的新站台。
+若要将 LTSB 作为新站点或作为来自受支持的 Configuration Manager 2012 站点的升级对其进行安装，请使用版本 1606 [基线介质](/sccm/core/servers/manage/updates#baseline-and-update-versions)，该基线介质以 DVD 形式随附在 System Center 2016 或 System Center Configuration Manager (Current Branch and Long-Term Servicing Branch 1606) 版本中。 可使用基线介质安装运行 Current Branch 版本 1606 的新站点或运行 Long-Term Servicing Branch 的新站点。
 
 > [!TIP]  
-> 若要了解 System Center 2016，請參閱 [System Center 2016](https://technet.microsoft.com/system-center-docs/system-center) 文件。 這份文件也會告訴您如何取得 System Center 2016，但需要 microsoft 軟體授權合約或類似的權限。
+> 若要了解 System Center 2016，请参阅 [System Center 2016 文档](https://technet.microsoft.com/system-center-docs/system-center)。 本文档还说明如何获取 System Center 2016（需要 Microsoft 许可证协议或类似权限）。
 
-> 若要在大量授權服務中心 (VLSC) 中尋找 System Center Configuration Manager 1606 版，請前往 [VLSC](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) 的 [下載和金鑰] 索引標籤，並搜尋 "system center config"，然後選取 [System Center Config Mgr (最新分支與 LTSB)]。
+> 若要在批量许可服务中心 (VLSC) 查找 System Center Configuration Manager 版本 1606，请转到 [VLSC](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) 的“下载和密钥”选项卡，搜索“system center config”，然后选择“System Center Config Mgr (当前分支和 LTSB)”。
 
-> 您也可以從 [TechNet Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-technical-preview) 下載 System Center 2016 評估版。
+> 也可从 [TechNet 评估中心](https://www.microsoft.com/evalcenter/evaluate-system-center-technical-preview)获取 System Center 2016 评估版。
 
 **LTSB 的功能**
--   收到提供重要安全性修正程式的主控台內更新
-- 在 Configuration Manager 的 SA 合約或對等權限過期時提供安裝選項
-- 當您有 Configuration Manager 的目前 SA 合約或對等權限時，支援升級 (轉換) 至最新分支
+-   接收提供关键安全修补程序的控制台内部更新
+- SA 协议或 Configuration Manager 的等效权限过期后，提供安装选项
+- 如果当前具有 SA 协议或 Configuration Manager 等效权限，支持升级（转换）到 Current Branch
 
 **限制**  
-LTSB 是以最新分支 1606 版為基礎，並具有下列限制：
-- LTSB 在正式運作後 (2016 年 10 月) 會提供 10 年的重大安全性更新支援，過後此分支的支援即到期。 如需技術支援週期的詳細資訊，請參閱 [Microsoft 週期原則](https://support.microsoft.com/en-us/lifecycle)。
-- 支援一組有限的伺服器和用戶端作業系統及相關技術 (如 SQL Server 版本) 清單。 如需此分支支援項目的詳細資訊，請參閱[支援的長期維護分支設定](supported-configurations-for-ltsb.md)。
-- 不會收到新功能的更新。
-- 不支援新增 Microsoft Intune 訂閱，因此無法使用下列項目：
-  - 混合式 MDM 設定的 Intune
- - 內部部署 MDM
--   不支援使用 Windows 10 服務儀表板、服務計畫、Windows 10 最新分支 (CB) 或最新商務分支 (CBB)。
-- 不支援 Windows 10 LTSB 和 Windows Server 的未來版本。
--   不支援 Asset Intelligence。
--   不支援雲端式發佈點。
--   不支援將 Exchange Online 的支援作為 Exchange Connector。
--   不支援任何發行前版本功能。
+LTSB 以 Current Branch 版本 1606 为基础，具有以下限制：
+- 正式发布（2016 年 10 月）后，支持 LTSB 的 10 年关键安全更新，此后，此分支的支持将过期。 有关支持生命周期的详细信息，请参阅 [Microsoft 生命周期策略](https://support.microsoft.com/en-us/lifecycle)。
+- 支持有限数量的服务器和客户端操作系统以及相关技术（如 SQL Server 版本）。 有关此分支支持功能的详细信息，请参阅 [Long-Term Servicing Branch 支持的配置](supported-configurations-for-ltsb.md)。
+- 不接收新功能的更新。
+- 不支持添加 Microsoft Intune 订阅，即阻止使用：
+  - 混合 MDM 配置中的 Intune
+ - 本地 MDM
+-   不支持使用 Windows 10 服务仪表板和服务计划、Windows 10 Current Branch (CB) 或 Current Branch for Business (CBB)。
+- 不支持 Windows 10 LTSB 和 Windows Server 的未来版本。
+-   不支持资产智能。
+-   不支持基于云的分发点。
+-   不支持将 Exchange 连接器用作 Exchange Online。
+-   不支持任何预发行版本功能。
 
 
 
-**更新選項**
-- 您可以將 LTSB 安裝轉換成最新分支安裝。 支援在 LTSB 支援到期前後轉換為最新分支。
+**更新选项**
+- 可以将 LTSB 安装转换为 Current Branch 安装。 对 LTSB 的支持过期前或过期后，支持转换为 Current Branch。
 
-  若要轉換，您必須擁有使用中的 Microsoft 軟體保證協議。 如需詳細資訊，請參閱下列連結：
-  - [將長期維護分支升級至最新分支](convert-to-current-branch.md)
-  - [System Center Configuration Manager 的授權和分支](learn-more-editions.md)
-  - [Configuration Manager 的更新](/sccm/core/servers/manage/updates)中的[基準和更新版本](/sccm/core/servers/manage/updates#baseline-and-update-versions)
-- 沒有任何選項可將 LTSB 轉換成 Technical Preview。 Technical Preview 是不需要授權的個別安裝。
--   您無法將最新分支的評估版升級為 LTSB 安裝。
+  若要转换，必须具有与 Microsoft 签署的可用的软件保障协议。 有关详细信息，请参阅以下链接：
+  - [将 Long-Term Servicing Branch 升级到 Current Branch](convert-to-current-branch.md)
+  - [System Center Configuration Manager 的许可和分支](learn-more-editions.md)
+  - [Configuration Manager 的更新](/sccm/core/servers/manage/updates)中的[基线和更新版本](/sccm/core/servers/manage/updates#baseline-and-update-versions)
+- 无法将 LTSB 转换为 Technical Preview。 Technical Preview 是不需要许可证的单独安装。
+-   不可将 Current Branch 的评估版升级到 LTSB 安装。
 
 
-## <a name="technical-preview-for-system-center-configuration-manager"></a>System Center Configuration Manager 的 Technical Preview
-Technical Preview 是用於實驗室環境，讓您了解並試用開發中的 Configuration Manager 最新功能。 Technical Preview 在生產環境中不受支援，也不需要有軟體保證的授權協議。
+## <a name="technical-preview-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview
+Technical Preview 适用于在实验室环境中了解和试用为 Configuration Manager 开发的的最新功能。 Technical Preview 不支持在生产环境中使用，并且不需要具有软件保障许可证协议。
 
-若要安裝執行 Technical Preview 的新站台，請使用最新版 [System Center Configuration Manager Technical Preview 的基準媒體](/sccm/core/get-started/technical-preview#install-and-update-the-technical-preview)。 安裝 Technical Preview 之後，每個月都有新版的主控台內更新。
+若要安装运行 Technical Preview 的新站点，使用最新 [System Center Configuration Manager Technical Preview 的基线介质](/sccm/core/get-started/technical-preview#install-and-update-the-technical-preview)。 安装 Technical Preview 后，每月提供作为控制台中更新的新版本。
 
 **Technical Preview 的功能**
--  以最新分支的最新基準版本為基礎
--  收到將安裝更新為最新版 Technical Preview 的主控台內更新
--  我們的開發人員希望您能對隨附的開發中新功能提供意見反應
--  收到僅適用於 Technical Preview 分支的更新
+-  基于 Current Branch 的最新基线版本
+-  接收控制台内部更新，该更新将安装更新到 Technical Preview 最新版
+-  内附正在开发且开发人员希望你提供反馈的新功能
+-  接收仅适用于 Technical Preview 分支的更新
 
 **限制**
--  [支援是有限的](/sccm/core/get-started/technical-preview#requirements-and-limitatins-for-the-techincal-preview)，包括只有一部主要站台及最多 10 個用戶端。  
--  無法升級至最新分支或 LTSB。
--  不支援使用移轉將資料匯入或匯出至另一個 Configuration Manager 安裝。
--  不支援從舊版 Configuration Manager 升級。
--  不支援安裝為評估版。
+-  [有限支持](/sccm/core/get-started/technical-preview#requirements-and-limitatins-for-the-techincal-preview)，仅包括单个主站点和最多 10 个客户端。  
+-  不能升级到 Current Branch 或 LTSB。
+-  不支持使用迁移将数据导入或导出到另一个 Configuration Manager 安装。
+-  不支持从以前版本的 Configuration Manager 升级。
+-  不支持安装评估版本。
 
-Technical Preview 首度推出的功能，通常會加入最新分支的新更新中。 每個新的 Technical Preview 版本都包含舊版 Technical Preview 的功能，即使這些功能已加入至最新分支。
+先引入 Technical Preview 中的功能通常会在之后的更新中添加到 Current Branch。 每个新的 Technical Preview 版本都包括以前 Technical Preview 版本的功能，即使这些功能已添加到 Current Branch，也是如此。
 
-如需詳細資訊，請參閱 [Technical Preview for System Center Configuration Manager](/sccm/core/get-started/technical-preview) 。
+有关详细信息，请参阅 [System Center Configuration Manager Technical Preview](/sccm/core/get-started/technical-preview)。
 
-**更新選項**
--   您可以安裝新版 Technical Preview 的任何主控台內更新。
--   沒有任何選項可將 Technical Preview 轉換成最新分支或 LTSB。
+**更新选项**
+-   对于新的 Technical Preview 版本，可以安装任何控制台中更新。
+-   无法将 Technical Preview 转换为 Current Branch 或 LTSB。
 
 
-## <a name="identify-your-branch-and-version"></a>識別您的分支和版本
-當您檢視 Configuration Manager 站台的版本資訊時，也可確認分支。
+## <a name="identify-your-branch-and-version"></a>识别分支和版本
+查看 Configuration Manager 站点的版本信息时，也可确认分支。
 
 **版本**   
-若要檢查站台的版本，請在主控台中，移至主控台左上角的 [關於 System Center Configuration Manager]，[站台版本] 會在該處顯示。 如需站台版本的清單，請參閱 []()。
+若要查看网站的版本，请转到控制台左上角的“关于 System Center Configuration Manager”，调出“网站版本”。 有关网站版本列表，请参阅 []()。
 
 **分支**  
-若要確認站台的分支 (為 LTSB 或最新分支)，請移至主控台的 [系統管理] > [站台設定] > [站台]，並開啟 [階層設定]。 如果其中具有可以轉換為最新分支的作用中選項，即表示站台執行 LTSB 版本。 當站台執行最新分支時，此選項即會呈現灰色。
-如需 Configuration Manager 不同版本的資訊，請參閱 [Configuration Manager 的更新](/sccm/core/servers/manage/updates)中的＜基準和更新版本＞。
+若要确认站点分支（是 LTSB 还是 Current Branch），在控制台中转至“管理” > “站点配置” > “站点”，并打开“层次结构设置”。 如果有转换为 Current Branch 的选项，而且选项处于活动状态，该站点运行 LTSB 版本。 如果站点运行 Current Branch，此选项将灰显。
+若要了解 Configuration Manager 的不同版本，请参阅 [Configuration Manager 更新](/sccm/core/servers/manage/updates)中的“基线和更新版本”。

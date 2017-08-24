@@ -1,6 +1,6 @@
 ---
-title: "新增站台系統角色 | Microsoft Docs"
-description: "了解 Configuration Manager 站台系統角色，以及如何新增角色以擴充站台的功能和容量。"
+title: "添加站点系统角色 | Microsoft Docs"
+description: "了解 Configuration Manager 站点系统角色，以及如何添加它们以扩展站点的功能和容量。"
 ms.custom: na
 ms.date: 2/7/2017
 ms.prod: configuration-manager
@@ -18,34 +18,34 @@ manager: angrobe
 ms.openlocfilehash: 1ad4abf1f06ed24bd1d505648280b5e5d80220c7
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="add-site-system-roles-for-system-center-configuration-manager"></a>為 System Center Configuration Manager 新增站台系統角色
+# <a name="add-site-system-roles-for-system-center-configuration-manager"></a>添加 System Center Configuration Manager 的站点系统角色
 
-*適用對象：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-每個 System Center Configuration Manager 站台都支援多個站台系統角色。 每個角色都會擴充站台的功能與容量，以提供服務給站台以及管理裝置與使用者。 站台系統伺服器上的每個站台系統角色，都必須來自相同的站台。   
+每个 System Center Configuration Manager 站点支持多个站点系统角色。 每个角色可扩展站点的功能和容量，以为站点提供服务并管理设备和用户。 站点系统服务器上的每个站点系统角色必须来自同一站点。   
 
-Configuration Manager 不支援單一站台系統伺服器上多個站台的站台系統角色。  
+Configuration Manager 不支持单一站点系统服务器上多个站点的站点系统角色。  
 
 > [!TIP]  
->  如果您不熟悉站台系統角色的基本概念，或不熟悉站台伺服器、站台系統伺服器與站台系統角色之間的差異，請參閱 [Configuration Manager 的基礎](../../../../core/understand/fundamentals.md)。  
+>  如果不熟悉站点系统角色的基础知识或站点服务器、站点系统服务器和站点系统角色之间的差别，请参阅 [System Center Configuration Manager 基础知识](../../../../core/understand/fundamentals.md)。  
 
- 下列主題將詳細說明安裝站台系統角色的程序與相關詳細資料：  
+ 以下主题详细介绍了安装站点系统角色的过程和相关详细信息：  
 
--   [為 System Center Configuration Manager 安裝站台系統角色](../../../../core/servers/deploy/configure/install-site-system-roles.md)  
+-   [安装 System Center Configuration Manager 的站点系统角色](../../../../core/servers/deploy/configure/install-site-system-roles.md)  
 
-     本主題提供基本指導，讓您了解如何使用兩個主控台內部精靈安裝新站台系統角色。  
+     本主题提供有关使用可用于安装新站点系统角色的两个控制台中向导的基本指南。  
 
--   [在 Microsoft Azure 中，安裝 System Center Configuration Manager 的雲端架構發佈點](../../../../core/servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure.md)  
+-   [在 Microsoft Azure 中安装 System Center Configuration Manager 基于云的分发点](../../../../core/servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure.md)  
 
-    若您想使用 Microsoft Azure 來裝載部署至用戶端的內容，本主題的資訊能協助您設定必要的憑證檔案，讓 Configuration Manager 與 Microsoft Azure 通訊及使用您的 Microsoft Azure 訂用帳戶。 此外，您必須設定名稱解析，好讓用戶端找到您的雲端式發佈點。  
+    如果想要使用 Microsoft Azure 托管部署到客户端的内容，则本主题中的信息可帮助你设置所需证书文件，以使 Configuration Manager 可以与 Microsoft Azure 订阅通信并使用该订阅。 此外，需要设置名称解析使客户端可以查找基于云的分发点。  
 
--   [為 System Center Configuration Manager 中的內部部署行動裝置管理安裝站台系統角色](../../../../mdm/get-started/install-site-system-roles-for-on-premises-mdm.md)  
+-   [在 System Center Configuration Manager 中为本地移动设备管理安装站点系统角色](../../../../mdm/get-started/install-site-system-roles-for-on-premises-mdm.md)  
 
-     本主題將協助您順利設定您的站台系統角色，以使用 Configuration Manager 內部部署 MDM 來支援管理現代裝置。  
+     本主题有助于你成功设置站点系统角色，以支持使用 Configuration Manager 本地 MDM 管理新式设备。  
 
--   [System Center Configuration Manager 之站台系統角色的設定選項](../../../../core/servers/deploy/configure/configuration-options-for-site-system-roles.md)  
+-   [System Center Configuration Manager 站点系统角色的配置选项](../../../../core/servers/deploy/configure/configuration-options-for-site-system-roles.md)  
 
-     有些站台系統角色支援需要更多詳細資料的設定，但使用者介面不足以說明。 本主題提供這些詳細資料。  
+     某些站点系统角色支持需要比用户界面中可以说明的更多详细信息的配置。 本主题提供这些详细信息。  

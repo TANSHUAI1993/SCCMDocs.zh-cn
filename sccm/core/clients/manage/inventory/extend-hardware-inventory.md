@@ -1,6 +1,6 @@
 ---
-title: "擴充硬體清查 | Microsoft Docs"
-description: "了解擴充 System Center Configuration Manager 中的硬體清查的方法。"
+title: "扩展硬件清单 | Microsoft Docs"
+description: "了解扩展 System Center Configuration Manager 中的硬件清单的方法。"
 ms.custom: na
 ms.date: 02/22/2017
 ms.prod: configuration-manager
@@ -18,139 +18,139 @@ manager: angrobe
 ms.openlocfilehash: 3e5517e1710d0d12e51fba58efda5dc5edd08544
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="how-to-extend-hardware-inventory-in-system-center-configuration-manager"></a>如何擴充 System Center Configuration Manager 中的硬體清查
+# <a name="how-to-extend-hardware-inventory-in-system-center-configuration-manager"></a>How to extend hardware inventory in System Center Configuration Manager
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-硬體清查會使用 Windows Management Instrumentation (WMI) 從 Windows 電腦讀取資訊。 WMI 是 Microsoft 的 Web 架構企業管理 (WBEM) 實作，而 WBEM 是一種用於存取企業中管理資訊的業界標準。 在舊版 Configuration Manager 中，您可以修改站台伺服器上的檔案 sms_def.mof 來擴充硬體清查。 這個檔案包含一份可由硬體清查讀取的 WMI 類別清單。 如果您編輯這個檔案，則可以啟用和停用現有類別，也會建立新的類別來進行清查。  
+硬件清单通过使用 Windows Management Instrumentation (WMI) 从 Windows 电脑读取信息。 WMI 是基于 Web 的企业管理 (WBEM) 的 Microsoft 实现，是用于访问企业中管理信息的行业标准。 在以前版本的 Configuration Manager 中，可以通过修改站点服务器上的文件 sms_def.mof 扩展硬件清单。 此文件包含可由硬件清单读取的 WMI 类的列表。 如果编辑此文件，则你可以启用和禁用现有类，还能将新类创建到清单。  
 
-Configuration.mof 檔案用來定義用戶端上要由硬體清查所清查的資料類別，而且從 Configuration Manager 2012 以來不曾變更過。 您可以建立資料類別來清查現有或自訂 WMI 儲存機制資料類別，或用戶端系統上的登錄機碼。  
+Configuration.mof 文件用于定义要通过客户端上的硬件清单列出清单的数据类，与 Configuration Manager 2012 相比并无变化。 你可以创建数据类，以列出客户端系统上存在的现有或自定义 WMI 存储库数据类或注册表项的清单。  
 
- Configuration.mof 檔案也會定義並註冊存取硬體清查期間的裝置資訊的 WMI 提供者。 註冊提供者會定義要使用的提供者的類型和提供者支援的類別。  
+ Configuration.mof 文件还定义并注册 WMI 提供程序用于访问在硬件清单期间的设备信息。 通过注册提供程序，可以定义要使用的提供程序类型和提供程序支持的类。  
 
- Configuration Manager 用戶端要求原則時 (例如，其標準用戶端原則輪詢間隔期間)，Configuration.mof 會連接到原則本文。 這個檔案是然後下載並編譯的用戶端。 當您新增、 修改或刪除 Configuration.mof 檔案中的資料類別時，用戶端會自動編譯存貨相關的資料類別不會對這些變更。 不需要採取進一步的動作，就可以清查 Configuration Manager 用戶端上的新增或修改過的資料類別。 此檔案位於主要站台伺服器上的 **<CM 安裝位置\>\Inboxes\clifiles.src\hinv\\\** 中。  
+ 当 Configuration Manager 客户端请求策略时（例如，在其标准客户端策略轮询间隔期间），Configuration.mof 将被附加到策略正文。 然后下载此文件并对其进行了编译的客户端。 当添加、 修改或删除 Configuration.mof 文件中的数据类时，客户端将自动编译对清单相关的数据类进行这些更改。 不需要执行进一步的操作来列出 Configuration Manager 客户端上新数据类或已修改数据类的清单。 此文件在主站点服务器上的位置是 **<CMInstallLocation\>\Inboxes\clifiles.src\hinv\\**。  
 
- 在 Configuration Manager 中，您無法再像 Configuration Manager 2007 中一樣編輯 sms_def.mof 檔案。 相反地，您可以啟用和停用 WMI 類別，以及使用用戶端設定來新增硬體清查所收集的新類別。 Configuration Manager 提供下列方法來擴充硬體清查。  
+ 在 Configuration Manager 中，不能再像在 Configuration Manager 2007 中那样编辑 sms_def.mof 文件。 相反，你可以启用和禁用 WMI 类，并通过使用客户端设置来添加硬件清单将收集的新类。 Configuration Manager 提供了以下方法来扩展硬件清单。  
 
 > [!NOTE]  
->  如果您已經手動變更 Configuration.mof 檔案來新增自訂清查類別，這些變更將會在您更新到 1602 版時遭到複寫。 若要在更新之後繼續使用自訂類別，您必須在更新到 1602 版之後，將這些變更新增到 Configuration.mof 檔案的 "Added extensions" 區段。  
-> 不過，您不能修改此區段以外的任何部分，因為這些區段是保留給 Configuration Manager 修改。 您可以在下列目錄中找到您自訂的 Configuration.mof 備份︰  
-> **< CM 安裝目錄\>\data\hinvarchive\\**。  
+>  如果手动更改了 Configuration.mof 文件以添加自定义清单类，则在更新到版本 1602 时，这些更改将被覆盖。 若要在更新后继续使用自定义类，必须在更新到 1602 后将这些类添加到 Configuration.mof 文件的“已添加扩展”部分中。  
+> 但是，请勿修改此部分上的任何内容，因为这些部分保留供 Configuration Manager 修改。 自定义 Configuration.mof 的备份位于：  
+> **<CM Install dir\>\data\hinvarchive\\**。  
 
-|方法|詳細資訊|  
+|方法|更多信息|  
 |------------|----------------------|  
-|啟用或停用現有的庫存類別|啟用或停用預設清查類別，或建立自訂用戶端設定，讓您可從指定集合的用戶端收集不同的硬體清查類別。 請參閱本主題中的[啟用或停用現有清查類別](#BKMK_Enable)程序。|  
-|加入新的庫存類別|從另一部裝置的 WMI 命名空間新增清查類別。 請參閱本主題中的[新增清查類別](#BKMK_Add)程序。|  
-|匯入和匯出硬體清查類別|從 Configuration Manager 主控台匯入和匯出其中包含清查類別的管理物件格式 (MOF) 檔案。 請參閱本主題中的[匯入硬體清查類別](#BKMK_Import)和[匯出硬體清查類別](#BKMK_Export)程序。|  
-|建立 NOIDMIF 檔案|使用 NOIDMIF 檔案收集 Configuration Manager 無法清查的用戶端裝置相關資訊。 例如，您可能要收集裝置的資產數字資訊存在於只要在裝置上的標籤。 NOIDMIF 清查會自動關聯於它所收集從用戶端裝置。 請參閱本主題中的[建立 NOIDMIF 檔案](#BKMK_NOIDMIF)。|  
-|建立 IDMIF 檔案|您可使用 IDMIF 檔案，來收集組織中尚未與 Configuration Manager 用戶端建立關聯之資產的資訊，例如投影機、 影印機及網路印表機。 請參閱本主題中的[建立 IDMIF 檔案](#BKMK_IDMIF)。|  
+|启用或禁用现有的清单类|启用或禁用默认清单类，或创建允许你从指定的客户端集合收集不同的硬件清单类的自定义客户端设置。 请参阅本主题中的[若要启用或禁用现有清单类](#BKMK_Enable)过程。|  
+|添加一个新的清单类|从另一台设备的 WMI 命名空间添加一个新的清单类。 请参阅本主题中的[若要添加新的清单类](#BKMK_Add)过程。|  
+|导入和导出硬件清单类|从 Configuration Manager 控制台导入和导出包含清单类的托管对象格式 (MOF) 文件。 请参阅本主题中的[若要导入硬件清单类](#BKMK_Import)和[若要导出硬件清单类](#BKMK_Export)过程。|  
+|创建 NOIDMIF 文件|使用 NOIDMIF 文件可收集有关无法由 Configuration Manager 列出清单的客户端设备的信息。 例如，您可能想要收集设备资产编号的信息仅作为在设备上的标签存在。 NOIDMIF 清单是自动与收集从客户端设备相关联。 请参阅本主题中的[若要创建 NOIDMIF 文件](#BKMK_NOIDMIF)。|  
+|创建 IDMIF 文件|使用 IDMIF 文件收集组织中不与 Configuration Manager 客户端关联的资产的相关信息，例如，投影仪、复印机和网络打印机。 请参阅本主题中的[若要创建 IDMIF 文件](#BKMK_IDMIF)。|  
 
-## <a name="procedures-to-extend-hardware-inventory"></a>擴充硬體清查的程序  
-這些程序可協助您設定硬體清查的預設用戶端設定並套用至您的階層中的所有用戶端。 如果您只想要將這些設定套用至部分用戶端，請建立自訂用戶端裝置設定，並將它指派給特定用戶端集合。 請參閱[如何在 System Center Configuration Manager 中設定用戶端設定](../../../../core/clients/deploy/configure-client-settings.md)。  
+## <a name="procedures-to-extend-hardware-inventory"></a>扩展硬件清单的过程  
+这些过程帮助您配置硬件清单的默认客户端设置和它们适用于层次结构中的所有客户端。 如果希望这些设置仅应用于某些客户端，请创建自定义客户端设备设置，并将它分配给特定客户端的集合。 请参阅[如何在 System Center Configuration Manager 中配置客户端设置](../../../../core/clients/deploy/configure-client-settings.md)。  
 
-###  <a name="BKMK_Enable"></a> 啟用或停用現有清查類別  
+###  <a name="BKMK_Enable"></a> 若要启用或禁用现有清单类  
 
-1.  在 Configuration Manager 主控台中，選擇 [系統管理] > [用戶端設定] > [預設用戶端設定]。  
+1.  在 Configuration Manager 控制台中，选择“管理” > “客户端设置” > “默认客户端设置”。  
 
-4.  在 [首頁] 索引標籤的 [內容] 群組中，選擇 [內容]。  
+4.  在“主页”选项卡上的“属性”组中，选择“属性”。  
 
-5.  在 [預設用戶端設定] 對話方塊中，選擇 [硬體清查]。  
+5.  在“默认客户端设置”对话框中，选择“硬件清单”。  
 
-6.  在 **裝置設定** 清單中，按一下 **設定類別**。  
+6.  在 **设备设置** 列表中，单击 **设置类**。  
 
-7.  在 **硬體清查類別**  對話方塊中，選取或清除的類別和要收集的硬體清查類別屬性。 您可以展開以選取或清除該類別中的個別屬性的類別。 使用 **清查類別搜尋** 欄位搜尋個別類別。  
+7.  在 **硬件清单类** 对话框框中，选中或清除的类和类属性，以按照硬件清单收集。 您可以展开以选择或清除使该类中的各个属性的类。 使用 **清单类搜索** 字段以单个类中搜索。  
 
     > [!IMPORTANT]  
-    >  將新的類別新增至 Configuration Manager 硬體清查時，收集並傳送到站台伺服器的清查檔案大小將會增加。 這可能會對網路和 Configuration Manager 站台的效能造成負面影響。 啟用只想要收集的清查類別。  
+    >  将新类添加到 Configuration Manager 硬件清单时，收集和发送到站点服务器的清单文件的大小将增加。 这可能会对你的网络和 Configuration Manager 站点的性能产生负面影响。 启用您想要收集的清单类。  
 
 
-###  <a name="BKMK_Add"></a> 新增清查類別  
+###  <a name="BKMK_Add"></a> 若要添加新的清单类  
 
-您只能新增清查類別從最上層伺服器階層中以及藉由修改預設的用戶端設定。 此選項無法使用。 當您建立自訂的裝置設定
+只能从最高级别服务器层次结构中并通过修改默认客户端设置中添加清单类。 当创建自定义设备设置此选项不可用。
 
-1.  在 Configuration Manager 主控台中，選擇 [系統管理] > [用戶端設定] > [預設用戶端設定]。  
+1.  在 Configuration Manager 控制台中，选择“管理” > “客户端设置” > “默认客户端设置”。  
 
-4.  在 [首頁] 索引標籤的 [內容] 群組中，選擇 [內容]。  
+4.  在“主页”选项卡上的“属性”组中，选择“属性”。  
 
-5.  在 [預設用戶端設定] 對話方塊中，選擇 [硬體清查]。  
+5.  在“默认客户端设置”对话框中，选择“硬件清单”。  
 
-6.  在 [裝置設定] 清單中，選擇 [設定類別]。  
+6.  在“设备设置”列表中，选择“设置类”。  
 
-7.  在 [硬體清查類別] 對話方塊中，選擇 [新增]。  
+7.  在“硬件清单类”对话框中，选择“添加”。  
 
-8.  在 **加入硬體清查類別**  對話方塊中按一下 **連接**。  
+8.  在 **添加硬件清单类** 对话框中，单击 **连接**。  
 
-9. 在 **連線到 Windows Management Instrumentation (WMI)**  對話方塊中，指定您將從中擷取 WMI 類別以及要用來擷取類別的 WMI 命名空間的電腦名稱。 如果您想要擷取您所指定的 WMI 命名空間底下的所有類別、 按一下 **遞迴**。 如果您要連接到電腦不是本機電腦，提供有權存取 WMI 遠端電腦上的帳戶登入認證。  
+9. 在 **连接到 Windows Management Instrumentation (WMI)** 对话框框中，指定将用于检索 WMI 类要用于检索这些类的 WMI 命名空间的计算机的名称。 如果您想要检索您指定的 WMI 命名空间下的所有类中，单击 **递归**。 如果您要连接到计算机不是本地计算机，提供有权访问远程计算机上的 WMI 的帐户的登录凭据。  
 
-10. 選擇 [連線]。  
+10. 选择“连接”。  
 
-11. 在 [新增硬體清查類別] 對話方塊的 [清查類別] 清單中，選取您想要新增至 Configuration Manager 硬體清查的 WMI 類別。  
+11. 在“添加硬件清单类”对话框的“清单类”列表中，选择想要添加到 Configuration Manager 硬件清单的 WMI 类。  
 
-12. 如果您想要編輯所選取 WMI 類別的相關資訊，請選擇 [編輯]，然後在 [類別限定詞] 對話方塊中提供下列資訊：  
+12. 如果想要编辑所选的 WMI 类的相关信息，请选择“编辑”，然后在“类限定符”对话框框中，提供以下信息：  
 
-    -   **顯示名稱** - 這將會顯示在資源總管中。  
+    -   **显示名称** - 这将显示在资源浏览器中。  
 
-    -   **內容** – 指定將用來顯示 WMI 類別之每個內容的單位。  
+    -   **属性** - 指定将在其中显示 WMI 类的每个属性的单元。  
 
-     您也可以指定屬性做為索引鍵屬性來唯一識別每個類別的執行個體。 如果此類別定義任何索引鍵和多個執行個體的類別會報告從用戶端，只有最新發現的執行個體儲存在資料庫中。  
+     此外可以将属性指定为键属性来帮助唯一地标识每个类的实例。 如果类未定义任何键，从客户端报告的类的多个实例只能找到的最新的实例存储在数据库中。  
 
-     完成內容的設定之後，請按一下 [確定] 關閉 [類別限定詞] 對話方塊和其他開啟對話方塊。 
+     完成属性配置后，单击“确定”关闭“类限定符”对话框和其他打开的对话框。 
 
 
-###  <a name="BKMK_Import"></a> 匯入硬體清查類別  
+###  <a name="BKMK_Import"></a> 若要导入硬件清单类  
 
-當您修改預設的用戶端設定時您可以只匯入清查類別。 不過，您可以使用自訂用戶端設定匯入不包含結構描述變更，例如變更從現有類別的屬性資訊 **True** 至 **False**。  
+当您修改默认客户端设置时，只可以导入清单类。 但是，您可以使用自定义客户端设置导入不包含架构更改，例如，更改从现有类的属性的信息 **True** 到 **False**。  
 
-1.  在 Configuration Manager 主控台中，選擇 [系統管理] >  [用戶端設定] > [預設用戶端設定]。  
+1.  在 Configuration Manager 控制台中，选择“管理” >  “客户端设置” > “默认客户端设置”。  
 
-4.  在 [首頁] 索引標籤的 [內容] 群組中，選擇 [內容]。  
+4.  在“主页”选项卡上的“属性”组中，选择“属性”。  
 
-5.  在 [預設用戶端設定] 對話方塊中，選擇 [硬體清查]。  
+5.  在“默认客户端设置”对话框中，选择“硬件清单”。  
 
-6.  在 [裝置設定] 清單中，選擇 [設定類別]。  
+6.  在“设备设置”列表中，选择“设置类”。  
 
-7.  在 [硬體清查類別] 對話方塊中，選擇 [匯入]。  
+7.  在“硬件清单类”对话框中，选择“导入”。  
 
-8.  在 [匯入] 對話方塊中，選取您要匯入的管理物件格式 (MOF) 檔案，然後選擇 [確定]。 檢閱將匯入的項目，然後按一下 [匯入]。  
+8.  在“导入”对话框中，选择想要导入的托管对象格式 (MOF) 文件，然后选择“确定”。 查看要导入的项，然后单击“导入”。  
 
-###  <a name="BKMK_Export"></a> 匯出硬體清查類別  
+###  <a name="BKMK_Export"></a> 若要导出硬件清单类  
 
-1.  在 Configuration Manager 主控台中，選擇 [系統管理] > [用戶端設定] > [預設用戶端設定]。  
+1.  在 Configuration Manager 控制台中，选择“管理” > “客户端设置” > “默认客户端设置”。  
 
-4.  在 [首頁] 索引標籤的 [內容] 群組中，選擇 [內容]。  
+4.  在“主页”选项卡上的“属性”组中，选择“属性”。  
 
-5.  在 [預設用戶端設定] 對話方塊中，選擇 [硬體清查]。  
+5.  在“默认客户端设置”对话框中，选择“硬件清单”。  
 
-6.  在 [裝置設定] 清單中，選擇 [設定類別]。  
+6.  在“设备设置”列表中，选择“设置类”。  
 
-7.  在 [硬體清查類別] 對話方塊中，選擇 [匯出]。  
+7.  在“硬件清单类”对话框中，选择“导出”。  
 
     > [!NOTE]  
-    >  當您匯出類別時時就會匯出所有目前選取的類別。  
+    >  导出类时，将导出所有当前所选的类。  
 
-8.  在 [匯出] 對話方塊中，指定您要將類別匯出至其中的管理物件格式 (MOF) 檔案，然後選擇 [儲存] 。  
+8.  在“导出”对话框中，指定想要将类导出到的托管对象格式 (MOF) 文件，然后选择“保存”。  
 
-## <a name="how-to-use-management-information-files-mif-files-to-extend-hardware-inventory"></a>如何使用管理資訊檔案 (MIF 檔案) 來擴充硬體清查  
- 使用管理資訊格式 (MIF) 檔案，來延伸透過 Configuration Manager 從用戶端收集到的硬體清查資訊。 硬體清查期間 MIF 檔案中儲存的資訊加入至用戶端清查報告，並儲存在網站資料庫，您可以在其中使用您使用預設用戶端清查資料的相同方式中的資料。 有兩種類型的 MIF 檔案 NOIDMIF 和 IDMIF。
-
-> [!IMPORTANT]  
->  將資訊從 MIF 檔案新增至 Configuration Manager 資料庫之前，您必須建立或匯入其類別資訊。 如需詳細資訊，請參閱本主題中的 [新增清查類別](#BKMK_Add) 和 [匯入硬體清查類別](#BKMK_Import) 小節。  
-
-###  <a name="BKMK_NOIDMIF"></a> 建立 NOIDMIF 檔案  
- NOIDMIF 檔案可以用來將資訊新增至 Configuration Manager 通常無法收集且與特定用戶端裝置相關聯的用戶端硬體清查。 例如，許多公司都會使用資產編號來標示組織中的每部電腦，然後手動將這些電腦編成目錄。 當您建立 NOIDMIF 檔案時，這項資訊可以新增至 Configuration Manager 資料庫並用於查詢和報告。 如需建立 NOIDMIF 檔案的相關資訊，請參閱 Configuration Manager SDK 文件。  
+## <a name="how-to-use-management-information-files-mif-files-to-extend-hardware-inventory"></a>如何使用管理信息文件（MIF 文件）扩展硬件清单  
+ 使用管理信息格式 (MIF) 文件扩展 Configuration Manager 从客户端收集的硬件清单信息。 在硬件清单过程中，存储在 MIF 文件中的信息被添加到客户端清单报表并存储在站点数据库中，使用站点数据库中数据的方式可以与使用默认客户端清单数据的方式相同。 有两种类型的 MIF 文件，文件 NOIDMIF 和 IDMIF。
 
 > [!IMPORTANT]  
->  當您建立 NOIDMIF 檔案時，必須將其儲存為 ANSI 編碼格式。 Configuration Manager 無法讀取以 UTF-8 編碼格式儲存的 NOIDMIF 檔案。  
+>  必须为 MIF 文件创建或导入类信息，才能将其中数据添加到 Configuration Manager 数据库。 有关详细信息，请参阅本主题中的 [若要添加新的清单类](#BKMK_Add) 和 [若要导入硬件清单类](#BKMK_Import) 部分。  
 
- 建立 NOIDMIF 檔案之後，請將其儲存至每個用戶端上的 *%Windir%***\CCM\Inventory\Noidmifs** 資料夾。 在下次排程的硬體清查週期，Configuration Manager 會從這個資料夾中的 NODMIF 檔案收集資訊。  
+###  <a name="BKMK_NOIDMIF"></a> 若要创建 NOIDMIF 文件  
+ NOIDMIF 文件可用于将信息添加到通常不能被 Configuration Manager 收集且与特定客户端设备相关联的客户端硬件清单。 例如，许多公司用一个资产编号标记组织中的每台计算机，然后对其进行手动分类。 创建 NOIDMIF 文件时，可将此信息添加到 Configuration Manager 数据库并用于查询和报告。 有关创建 NOIDMIF 文件的信息，请参阅 Configuration Manager SDK 文档。  
 
-###  <a name="BKMK_IDMIF"></a> 建立 IDMIF 檔案  
- IDMIF 檔案可以用來將資產相關資訊新增至 Configuration Manager 資料庫，而這些資產通常無法透過 Configuration Manager 進行清查而且與特定用戶端裝置不相關。 例如，您可以使用 IDMIFS 收集下列項目的相關資訊：投影機，DVD 播放機、影印機或不包含 Configuration Manager 用戶端的其他設備。 如需建立 IDMIF 檔案的相關資訊，請參閱 Configuration Manager SDK 文件。  
+> [!IMPORTANT]  
+>  创建 NOIDMIF 文件时，必须以 ANSI 编码格式保存它。 Configuration Manager 无法读取以 UTF-8 编码格式保存的 NOIDMIF 文件。  
 
- 建立 IDMIF 檔案之後，請將其儲存至用戶端電腦上的 *%Windir%***\CCM\Inventory\Idmifs** 資料夾。 在下次排程的硬體清查週期，Configuration Manager 會從這個檔案收集資訊。 您必須宣告新類別，藉由新增或匯入這些檔案中包含的資訊。  
+ 创建 NOIDMIF 文件后，将其存储在每个客户端上的 %Windir%\CCM\Inventory\Noidmifs 文件夹中。 Configuration Manager 将在下一个计划的硬件清单周期中从此文件夹中的 NODMIF 文件收集信息。  
+
+###  <a name="BKMK_IDMIF"></a> 若要创建 IDMIF 文件  
+ IDMIF 文件可用于将有关资产（通常不能被 Configuration Manager 列出清单并且不与特定客户端设备相关联）的信息添加到 Configuration Manager 数据库。 例如，可以使用 IDMIFS 收集有关投影仪、DVD 播放机、复印机或不包含 Configuration Manager 客户端的其他设备的信息。 有关创建 IDMIF 文件的信息，请参阅 Configuration Manager SDK 文档。  
+
+ 创建 IDMIF 文件后，将其存储在客户端计算机上的 %Windir%\CCM\Inventory\Idmifs 文件夹中。 Configuration Manager 将在下一个计划的硬件清单周期中从此文件收集信息。 您必须声明通过添加或将其导入该文件中包含的信息的新类。  
 
 > [!NOTE]
-> MIF 檔案可能包含大量資料，而且收集這項資料可能會對站台效能造成負面影響。 只在需要時才啟用 MIF 收集，並在硬體清查設定中設定 [自訂 MIF 檔案大小上限 (KB)]  選項。 如需詳細資訊，請參閱 [System Center Configuration Manager 中的硬體清查簡介](introduction-to-hardware-inventory.md)。
+> MIF 文件可能包含大量数据，收集这些数据可能对你网站的性能产生负面影响。 仅在需要时启用 MIF 收集，并在硬件清单设置中配置“最大自定义 MIF 文件大小 (KB)”选项。 有关详细信息，请参阅 [System Center Configuration Manager 中的硬件清单简介](introduction-to-hardware-inventory.md)。

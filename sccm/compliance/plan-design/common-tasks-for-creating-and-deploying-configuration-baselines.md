@@ -1,6 +1,6 @@
 ---
-title: "設定基準的一般工作 - Configuration Manager | Microsoft Docs"
-description: "了解如何建立與部署 System Center Configuration Manager 設定基準。"
+title: "配置基线的常见任务 - Configuration Manager | Microsoft Docs"
+description: "了解如何创建和部署 System Center Configuration Manager 配置基线。"
 ms.custom: na
 ms.date: 07/12/2017
 ms.prod: configuration-manager
@@ -18,70 +18,70 @@ manager: angrobe
 ms.openlocfilehash: 5bf4457af6bedf7bc9cd73c879f1857209c0725d
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="common-tasks-for-creating-and-deploying-configuration-baselines-with-system-center-configuration-manager"></a>以 System Center Configuration Manager 建立及部署組態基準的一般工作
+# <a name="common-tasks-for-creating-and-deploying-configuration-baselines-with-system-center-configuration-manager"></a>System Center Configuration Manager 用于创建和部署配置基线的常见任务
 
-*適用對象：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-本主題包含常見的案例，協助您了解如何建立及部署 System Center Configuration Manager 設定基準。  
+本主题包含帮助了解有关如何创建和部署 System Center Configuration Manager 配置基线的常用方案。  
 
- 如果您已經熟悉合規性設定，則可在[建立設定基準](../../compliance/deploy-use/create-configuration-baselines.md)和[部署設定基準](../../compliance/deploy-use/deploy-configuration-baselines.md)主題中找到所用全部功能的詳細資訊文件。  
+ 如果已熟悉符合性设置，可以在[创建配置基线](../../compliance/deploy-use/create-configuration-baselines.md)和[部署配置基线](../../compliance/deploy-use/deploy-configuration-baselines.md)主题中找到有关你使用的所有功能的详细文档。  
 
- 開始之前，請參閱 [Get started with compliance settings in System Center Configuration Manager](../../compliance/get-started/get-started-with-compliance-settings.md) (開始使用 System Center Configuration Manager 的相容性設定)，了解相容性設定的一些基本概念，另請參閱[規劃及設定相容性設定](../../compliance/plan-design/plan-for-and-configure-compliance-settings.md)，實作任何必要條件。  
+ 在开始之前，请阅读 [System Center Configuration Manager 中的符合性设置入门](../../compliance/get-started/get-started-with-compliance-settings.md)以了解有关符合性设置的一些基础知识，另请阅读[规划和配置符合性设置](../../compliance/plan-design/plan-for-and-configure-compliance-settings.md)来实施任何必要的先决条件。  
 
-## <a name="create-a-configuration-baseline"></a>建立組態基準  
- 在這個範例中，您只為執行 Configuration Manager 用戶端的 Windows 10 電腦建立了設定項目。  
+## <a name="create-a-configuration-baseline"></a>创建配置基线  
+ 在本例中，已创建了仅针对运行 Configuration Manager 客户端的 Windows 10 电脑的配置项目。  
 
- 這個組態項目會在 Windows 10 電腦上強制執行至少 6 個字元的必要密碼。 組態項目的名稱是 **Windows 10 密碼強化**。  
+ 此配置项目强制要求在 Windows 10 电脑上输入至少 6 位字符的密码。 配置项目名为“Windows 10 密码实施” 。  
 
-使用下列程序來學習如何將這個設定項目加入設定基準中以進行部署。  
+使用下面的过程了解如何将此配置项目添加到配置基线以准备部署。  
 
-1.  在 Configuration Manager 主控台中，按一下 [資產與相容性] > [相容性設定] > [設定基準]。  
+1.  在 Configuration Manager 控制台中，单击“资产和符合性” > “符合性设置” > “配置基线”。  
 
-3.  在 [常用]  索引標籤上，按一下 [建立]  群組中的 [建立組態基準] 。  
+3.  在“主页”  选项卡上的“创建”  组中，单击“创建配置基线” 。  
 
-4.  在 [建立設定基準] 對話方塊中，設定下列各項設定：  
+4.  在“创建配置基线”  对话框中，配置以下设置：  
 
-    -   **名稱** - 輸入 **Windows 10 密碼** (或您選擇的另一個名稱)  
+    -   **名称** – 输入 **Windows 10 密码** （或你选择的另一名称）  
 
-5.  按一下 [新增]  > 。  
+5.  单击“添加”  > 。  
 
-6.  在 [新增設定項目]  對話方塊中，選取之前建立的 [Windows 10 密碼強化]  設定項目，然後按一下 [新增] 。  
+6.  在“添加配置项目”  对话框中，选择之前创建的“Windows 10 密码实施”  配置项目，然后单击“添加” 。  
 
-7.  按一下 [確定]，關閉 [新增設定項目] 對話方塊並返回 [建立設定基準] 對話方塊。
+7.  单击“确定”以关闭“添加配置项目”  对话框并返回到“创建配置基线”  对话框。
 
-8.  按一下 [確定]  關閉 [建立組態基準]  對話方塊。  
+8.  单击“确定”  以关闭“创建配置基线”  对话框。  
 
- 您現在可以看到 Configuration Manager 主控台 [設定基準] 節點中的設定基準。  
+ 现在，可以看到在 Configuration Manager 控制台的“配置基线”节点中创建的配置基线。  
 
-## <a name="deploy-the-configuration-baseline"></a>部署設定基準  
- 在這個範例中，您要將在上一個程序中建立的設定基準部署到電腦集合。  
+## <a name="deploy-the-configuration-baseline"></a>部署配置基线  
+ 在本例中，会将前一过程中创建的配置基线部署到计算机集合中。  
 
-1.  在 Configuration Manager 主控台中，按一下 [資產與相容性] > [相容性設定] > [設定基準]。  
+1.  在 Configuration Manager 控制台中，单击“资产和符合性” > “符合性设置” > “配置基线”。  
 
-3.  從組態基準清單中，選取 [Windows 10 密碼] 。  
+3.  从配置基线列表中选择“Windows 10 密码” 。  
 
-4.  在 [首頁]  索引標籤的 [部署]  群組中，按一下 [部署] 。  
+4.  在“主页”  选项卡上的“部署”  组中，单击“部署” 。  
 
-5.  在 [部署設定基準] 對話方塊中，設定下列各項設定：  
+5.  在“部署配置基线”  对话框中，配置以下设置：  
 
-    -   **選取的組態基準**：確定 **Windows 10 密碼** 組態基準已自動加入到這份清單中。  
+    -   **所选配置基线** – 确保“Windows 10 密码”  配置基线已自动添加到此列表中。  
 
-    -   **支援時補救不符合要求的規則**：選取這個方塊，確保當目標裝置沒有正確的設定時，Configuration Manager 會進行補救。  
+    -   **修正非符合性规则(如果支持)** - 勾选此框，以确保如果目标设备上没有正确的设置，则通过 Configuration Manager 进行修正。  
 
-    -   **集合**：按一下 [瀏覽] 來選擇電腦集合，以評估及補救設定基準的合規性。 在這個範例中，組態基準已部署至內建的 [所有桌面和伺服器用戶端]  集合。  
+    -   **集合** – 单击“浏览”  以选择在其上评估配置基线并针对符合性进行修正的计算机集合。 在本例中，已将配置基线部署到内置“所有台式计算机和服务器客户端”  集合。  
 
         > [!TIP]  
-        >  如果您選擇的集合中有不執行 Windows 10 的電腦或裝置，請別擔心。 只要您在建立的設定項目中設定了支援的平台，就只會評估 Windows 10 電腦的合規性。  
+        >  不要担心选择的集合是否包含不运行 Windows 10 的计算机或设备。 只要在创建的配置项目中配置支持的平台，则只针对 Windows 10 电脑评估符合性。  
 
-    -   必要時，請設定評估設定基準的排程。 否則，請保留 **7 天**的預設值。  
+    -   如有必要，配置用于评估配置基线的计划。 否则，请保留默认值“7 天” 。  
 
-7.  按一下 [確定]  關閉 [部署組態基準]  對話方塊並建立部署。  
+7.  单击“确定”  以关闭“部署配置基线”  对话框并创建部署。  
 
- 如果想要快速瀏覽這項部署的相容性統計資料，請在 [監視]  工作區中按一下 [部署] 。 在畫面底部，您會看到 [合規性統計資料] 圖表。  
+ 如果想要快速了解此部署的合规性统计信息，请在“监视”  工作区中，单击“部署” 。 在屏幕底部，可看到“符合性统计信息”图表。  
 
-## <a name="next-steps"></a>後續步驟 
+## <a name="next-steps"></a>后续步骤 
 
-如需如何監視設定基準的詳細資訊，請參閱[監視合規性設定](../../compliance/deploy-use/monitor-compliance-settings.md)。  
+有关如何监视配置基线的详细信息，请参阅[监视符合性设置](../../compliance/deploy-use/monitor-compliance-settings.md)。  

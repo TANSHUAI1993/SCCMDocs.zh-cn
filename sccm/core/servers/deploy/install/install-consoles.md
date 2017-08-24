@@ -1,6 +1,6 @@
 ---
-title: "安裝主控台 | Microsoft Docs"
-description: "閱讀如何安裝 Configuration Manager 主控台以連線至管理中心網站或主要站台。"
+title: "安装控制台 | Microsoft Docs"
+description: "阅读安装 Configuration Manager 控制台以连接到管理中心站点或主站点的信息。"
 ms.custom: na
 ms.date: 1/3/2017
 ms.prod: configuration-manager
@@ -17,80 +17,80 @@ manager: angrobe
 ms.openlocfilehash: 88ecbc48fd03ce988f04408d0378844cbed1de2b
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="install-the-system-center-configuration-manager-console"></a>安裝 System Center Configuration Manager 主控台
+# <a name="install-the-system-center-configuration-manager-console"></a>安装 System Center Configuration Manager 控制台
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-系統管理員會使用 System Center Configuration Manager 主控台來管理 Configuration Manager 環境。 每個 Configuration Manager 主控台都可以連線至管理中心網站或主要站台。 不過，您無法將 Configuration Manager 主控台連線至次要站台。
+管理员使用 System Center Configuration Manager 控制台管理 Configuration Manager 环境。 每个 Configuration Manager 控制台可以连接到管理中心站点或主站点。 但是，无法将 Configuration Manager 控制台连接到辅助站点。
 
 > [!NOTE]  
->  執行主控台的系統管理員所看到的物件，取決於指派給其使用者帳戶的權限。 如需以角色為基礎之系統管理的詳細資訊，請參閱 [System Center Configuration Manager 以角色為基礎之系統管理的基礎](../../../../core/understand/fundamentals-of-role-based-administration.md)。  
+>  运行控制台的管理员可以看到哪些对象取决于他们的用户帐户所分配到的权限。 有关基于角色的管理的详细信息，请参阅 [System Center Configuration Manager 的基于角色的管理基础](../../../../core/understand/fundamentals-of-role-based-administration.md)。  
 
- 您可以在站台伺服器安裝期間透過 [安裝精靈] 安裝 Configuration Manager 主控台，也可以執行使用 [安裝精靈] 的獨立安裝應用程式。  
+ 可在站点服务器安装期间通过安装向导安装 Configuration Manager 控制台，或者可以运行使用安装向导的独立安装应用程序。  
 
- 請使用以下程序，利用獨立應用程式安裝 Configuration Manager 主控台。  
+ 请按照以下过程使用独立应用程序安装 Configuration Manager 控制台。  
 
-## <a name="to-install-the-configuration-manager-console-by-using-the-setup-wizard"></a>使用安裝精靈安裝 Configuration Manager 主控台  
+## <a name="to-install-the-configuration-manager-console-by-using-the-setup-wizard"></a>始终使用安装向导安装 Configuration Manager 控制台  
 
-1.  確定您符合這些需求：  
+1.  验证满足这些要求：  
 
-    -  您具有執行主控台之電腦上的**本機系統管理員**權限。  
+    -  具有将在其中运行控制台的计算机上的**本地管理员**权限。  
 
-    -   您具有 Configuration Manager 主控台安裝檔位置的**讀取**權限。  
+    -   具有 Configuration Manager 控制台安装文件位置的**读取**权限。  
 
-2.  移至其中一個位置︰  
+2.  请转到以下位置之一：  
 
-    -   在站台伺服器上，移至 **<*Configuration Manager 站台伺服器安裝路徑*>\Tools\ConsoleSetup**。  
+    -   在站点服务器上，转到 **<*Configuration Manager 站点服务器安装路径*>\Tools\ConsoleSetup**。  
 
-    -   從 Configuration Manager 來源媒體中，移至 **<*Configuration Manager 原始程式碼*>\Smssetup\Bin\I386**。  
+    -   从 Configuration Manager 源媒体中，浏览到 **<*Configuration Manager 源文件*>\Smssetup\Bin\I386**。  
 
     > [!TIP]  
-    >  最佳做法是從站台伺服器，而不是從 System Center Configuration Manager 安裝媒體起始 Configuration Manager 主控台安裝。 站台伺服器安裝方法會將 Configuration Manager 主控台安裝檔案與站台的支援語言套件，複製到 **Tools\ConsoleSetup** 子資料夾。 不論站台伺服器上支援的語言為何，或電腦上執行的作業系統語言設定為何，從安裝媒體安裝 Configuration Manager 主控台一律都會安裝英文版。 您也可以選擇將 **ConsoleSetup** 資料夾複製到替代位置，以啟動安裝。
+    >  最佳做法是，从站点服务器而不是从 System Center Configuration Manager 安装媒体启动 Configuration Manager 控制台安装。 站点服务器安装方法会将 Configuration Manager 控制台安装文件和站点的支持语言包复制到 **Tools\ConsoleSetup** 子文件夹中。 从安装媒体中安装 Configuration Manager 控制台始终会安装英文版，与站点服务器上支持的语言或在计算机上运行的操作系统的语言设置无关。 你可以根据需要将 **ConsoleSetup** 文件夹复制到替代位置以启动安装。
 
-3.  若要開啟 Configuration Manager 主控台安裝精靈，請按兩下 **consolesetup.exe**。  
+3.  若要打开 Configuration Manager 控制台安装向导，请双击“consolesetup.exe”。  
 
     > [!IMPORTANT]  
-    >  請一律使用 consolesetup.exe 安裝 Configuration Manager 主控台。 雖然 Configuration Manager 主控台可藉由執行 adminconsole.msi 加以安裝，但此方法不會執行必要條件或相依性檢查，且安裝可能會不正確。  
+    >  请始终使用 consoleSetup.exe 来安装 Configuration Manager 控制台。 虽然可以通过运行 AdminConsole.msi 来安装 Configuration Manager 控制台，但此方法不会运行先决条件或依赖关系检查，因此可能不会正确进行安装。  
 
-4.  在精靈中，選取 [下一步]。  
+4.  在向导中，选择“下一步”。  
 
-5.  在 [站台伺服器] 頁面上，輸入 Configuration Manager 主控台要連線之站台伺服器的完整網域名稱 (FQDN)。  
+5.  在“站点服务器”页面上，输入 Configuration Manager 控制台将连接的站点服务器的完全限定域名 (FQDN)。  
 
-6.  在 [安裝資料夾] 頁面上，輸入 Configuration Manager 主控台的安裝資料夾。 資料夾路徑結尾不可有空格，路徑中不可有 Unicode 字元。  
+6.  在“安装文件夹”页面上，输入 Configuration Manager 控制台的安装文件夹。 文件夹路径不得包含尾随空格或 Unicode 字符。  
 
-7.  在 [客戶經驗改進計畫] 頁面上，選取是否要加入客戶經驗改進計畫 (CEIP)。  
+7.  在“客户体验改善计划”页上，选择是否参加客户体验改善计划 (CEIP)。  
 
-8.  在 [安裝準備就緒] 頁面上，選取 [安裝] 即可安裝 Configuration Manager 主控台。  
+8.  在“准备安装”页面上，选择“安装”以安装 Configuration Manager 控制台。  
 
-## <a name="to-install-the-configuration-manager-console-from-a-command-prompt"></a>從命令提示字元安裝 Configuration Manager 主控台  
+## <a name="to-install-the-configuration-manager-console-from-a-command-prompt"></a>从命令提示符安装 Configuration Manager 控制台  
 
-1.  在安裝 Configuration Manager 主控台的伺服器上，開啟命令提示字元視窗，並移至下列其中一個位置：  
+1.  在安装 Configuration Manager 控制台的服务器上，打开命令提示符窗口并转到以下位置之一：  
 
-    -   **<*Configuration Manager 站台伺服器安裝路徑*>\Tools\ConsoleSetup**  
+    -   **<*Configuration Manager 站点服务器安装路径*>\Tools\ConsoleSetup**  
 
-    -   **<*Configuration Manager 安裝媒體*>\SMSSETUP\BIN\I386**  
+    -   **<*Configuration Manager 安装媒体*>\SMSSETUP\BIN\I386**  
 
     > [!TIP]  
-    >  不論電腦上執行的作業系統語言設定為何，當您從命令提示字元安裝 Configuration Manager 主控台時，一律都會安裝英文版。 若要安裝非英文版的 Configuration Manager 主控台，您必須[使用安裝精靈安裝 Configuration Manager 主控台](#to-install-the-configuration-manager-console-by-using-the-setup-wizard)。  
+    >  从命令提示符中安装 Configuration Manager 控制台时，会始终安装英文版，与在计算机上运行的操作系统的语言设置无关。 若要以非英语语言安装 Configuration Manager 控制台，则必须[使用安装向导安装 Configuration Manager 控制台](#to-install-the-configuration-manager-console-by-using-the-setup-wizard)。  
 
-2.  在命令提示字元中，輸入 **consolesetup.exe**。 選擇下列命令列選項。  
+2.  在命令提示符处，键入“consolesetup.exe”。 从以下命令行选项中进行选择。  
 
-|  命令列選項     | 說明     |
+|  命令行选项     | 描述     |
   | :------------- | :------------- |
-  |/q|自動安裝 Configuration Manager。 只有在使用此選項時，才需要 **EnableSQM**、 **TargetDir**和 **DefaultSiteServerName** 選項。|  
-  |/uninstall|解除安裝 Configuration Manager 主控台。 當您搭配 **/q** 選項使用時，必須指定此選項。|  
-  |LangPackDir|指定包含語言檔案的資料夾路徑。 您可以使用 **安裝程式下載程式** 來下載語言檔案。 如果未使用此選項，則安裝程式會在目前資料夾中尋找語言資料夾。 如果沒有找到語言資料夾，則安裝程式只會繼續安裝英文版。 如需詳細資訊，請參閱[安裝程式下載程式](setup-downloader.md)。|  
-  |TargetDir|指定安裝資料夾以安裝 Configuration Manager 主控台。 只有在使用 **/q** 選項時，才需要此選項。|  
-  |EnableSQM|指定是否加入客戶經驗改進計畫 (CEIP)。 使用 **1** 的值加入 CEIP，**0** 的值則不加入計畫。 只有在使用 **/q** 選項時，才需要此選項。|  
-  |DefaultSiteServerName|指定主控台開啟時所連線的網站伺服器 FQDN。 只有在使用 **/q** 選項時，才需要此選項。|  
+  |/q|以无人参与的方式安装 Configuration Manager 控制台。 使用此选项时，需要 **EnableSQM**、 **TargetDir**和 **DefaultSiteServerName** 选项。|  
+  |/uninstall|卸载 Configuration Manager 控制台。 与 **/q** 选项配合使用时，必须首先指定此选项。|  
+  |LangPackDir|指定包含语言文件的文件夹的路径。 你可以使用 **安装程序下载程序** 下载语言文件。 如果未使用此选项，则安装程序会在当前文件夹中查找语言文件夹。 如果未找到语言文件夹，则安装程序仅继续安装英文版。 有关详细信息，请参阅[安装程序下载程序](setup-downloader.md)。|  
+  |TargetDir|指定安装文件夹以安装 Configuration Manager 控制台。 当你使用 **/q** 选项时，需要此选项。|  
+  |EnableSQM|指定是否要加入客户体验改善计划 (CEIP)。 使用 **1** 的值加入 CEIP，使用 **0** 的值不加入计划。 当你使用 **/q** 选项时，需要此选项。|  
+  |DefaultSiteServerName|指定打开控制台时控制台所连接到的站点服务器的 FQDN。 当你使用 **/q** 选项时，需要此选项。|  
 
 
-  **範例：**
+  **示例：**
 
-  -  **consolesetup.exe /q TargetDir="D:\Program Files\ConfigMgr" EnableSQM=1 DefaultSiteServerName=MyServer.Contoso.com**  
+  -  c**onsolesetup.exe /q TargetDir="D:\Program Files\ConfigMgr" EnableSQM=1 DefaultSiteServerName=MyServer.Contoso.com**  
 
   -  **consolesetup.exe /q LangPackDir=C:\Downloads\ConfigMgr TargetDir="D:\Program Files\ConfigMgr" Console EnableSQM=1 DefaultSiteServerName=MyServer.Contoso.com**  
 

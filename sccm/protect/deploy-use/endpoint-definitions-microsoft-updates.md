@@ -1,6 +1,6 @@
 ---
-title: "來自網路共用的 Endpoint Protection 惡意程式碼定義 | Microsoft Docs"
-description: "了解如何啟用從 Microsoft Updates 針對 Configuration Manager 下載 Endpoint Protection 惡意程式碼定義。"
+title: "网络共享中的 Endpoint Protection 恶意软件定义 | Microsoft Docs"
+description: "了解如何可以实现从 Microsoft 更新为 Configuration Manager 下载 Endpoint Protection 的恶意软件定义。"
 ms.custom: na
 ms.date: 02/14/2017
 ms.prod: configuration-manager
@@ -17,30 +17,30 @@ manager: angrobe
 ms.openlocfilehash: 58c468fc3d4427cc1f2a8f197ab784a767151203
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="enable-endpoint-protection-malware-definitions-to-download-from-microsoft-updates-for-configuration-manager"></a>啟用 Endpoint Protection 惡意程式碼定義，從 Microsoft Updates 針對 Configuration Manager 下載
+# <a name="enable-endpoint-protection-malware-definitions-to-download-from-microsoft-updates-for-configuration-manager"></a>实现从 Microsoft 更新为 Configuration Manager 下载 Endpoint Protection 恶意软件定义
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 
- 當您選擇從 Microsoft Update 下載定義更新檔時，用戶端會在反惡意程式碼原則對話方塊 [定義更新]  區段中所定義的間隔檢查 Microsoft Update 網站。
+ 当你选择从 Microsoft 更新下载定义更新时，客户端将按照反恶意软件策略对话框的“定义更新”  部分中定义的间隔检查 Microsoft 更新网站。
 
- 當用戶端並沒有 Configuration Manager 站台的連線，或是要讓使用者可以初始定義更新時，這個方法就很有用。
-
-> [!IMPORTANT]
->  用戶端必須要能夠在網際網路上存取 Microsoft Update，以使用這個方法來下載定義更新。
-
-## <a name="using-the-microsoft-malware-protection-center-to-download-definitions"></a>使用 Microsoft 惡意程式碼防護中心下載定義
- 您可以將用戶端設定為從 Microsoft 惡意程式碼防護中心下載定義更新。 如果 Endpoint Protection 用戶端尚無法從其他來源下載更新，則會使用此選項來下載定義更新。 如果 Configuration Manager 基礎結構發生問題造成無法傳遞更新時，此更新方法就很有用。
+ 当客户端不具有到 Configuration Manager 站点的连接或当你希望用户能够启动定义更新时，此方法会很有用。
 
 > [!IMPORTANT]
->  用戶端必須要能夠在網際網路上存取 Microsoft Update，以使用這個方法來下載定義更新。
+>  客户端必须在 Internet 上具有对 Microsoft 更新的访问权限，才能够使用此方法下载定义更新。
+
+## <a name="using-the-microsoft-malware-protection-center-to-download-definitions"></a>使用 Microsoft 恶意软件防护中心下载定义
+ 你可以将客户端配置为从 Microsoft 恶意软件防护中心下载定义更新。 如果 Endpoint Protection 客户端未能够从另一源下载更新，则使用此选项下载定义更新。 如果 Configuration Manager 基础结构存在阻止更新交付的问题，此更新方法会很有用。
+
+> [!IMPORTANT]
+>  客户端必须在 Internet 上具有对 Microsoft 更新的访问权限，才能够使用此方法下载定义更新。
 
 
 > [!div class="button"]
 [下一步 >](endpoint-antimalware-policies.md)
 
 > [!div class="button"]
-[上一步 >](endpoint-configure-alerts.md)
+[返回 >](endpoint-configure-alerts.md)

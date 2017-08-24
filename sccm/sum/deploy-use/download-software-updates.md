@@ -1,6 +1,6 @@
 ---
-title: "下載軟體更新 - Configuration Manager | Microsoft Docs"
-description: "使用 [下載軟體更新精靈] 下載軟體更新，並將它們發佈到發佈點，以準備好部署至用戶端。"
+title: "下载软件更新 - Configuration Manager | Microsoft Docs"
+description: "使用下载软件更新向导下载软件更新，并将它们分发到分发点，以准备部署到客户端。"
 keywords: 
 author: dougeby
 ms.author: dougeby
@@ -14,22 +14,22 @@ ms.assetid: de78e8d3-043f-4cd3-97e0-4dfb824fd3fb
 ms.openlocfilehash: f38f72f9f547b82c92789f02975cbd0193b79b2d
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="download-software-updates"></a>下載軟體更新  
+# <a name="download-software-updates"></a>下载软件更新  
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-您有幾種方式可以下載 Configuration Manager 中的軟體更新。 當您建立自動部署規則 (ADR)，或手動部署軟體更新時，軟體更新會下載到站台伺服器上的內容庫。 接著，軟體更新會複製到與設定之部署套件相關聯之發佈點上的內容庫。 如果您想要在部署之前下載軟體更新，可以使用「下載更新精靈」。 如此將可讓您在將軟體更新部署至用戶端電腦之前先確認軟體更新可以在發佈點上使用。  
+你可以使用一些方法在 Configuration Manager 中下载软件更新。 创建自动部署规则 (ADR) 或手动部署软件更新时，软件更新会下载到站点服务器上的内容库。 随后软件更新会复制到与配置的部署包关联的分发点上的内容库。 如果要在部署软件更新之前下载软件更新，则可以使用下载更新向导。 通过执行此操作，你可以在将软件更新部署到客户端计算机之前验证软件更新在分发点上是否可用。  
 
 > [!NOTE]  
->  如需監視內容狀態的相關資訊，請參閱 [Content status monitoring](../deploy-use/monitor-software-updates.md#BKMK_ContentStatus)。  
+>  有关监视内容状态的信息，请参阅 [Content status monitoring](../deploy-use/monitor-software-updates.md#BKMK_ContentStatus)。  
 
-利用下列程序，藉由「下載軟體更新精靈」下載軟體更新。  
+使用以下过程和下载软件更新向导下载软件更新。  
 
-#### <a name="to-download-software-updates"></a>下載軟體更新  
-[!INCLUDE[下載更新](..\includes\downloadupdates.md)]
+#### <a name="to-download-software-updates"></a>下载软件更新  
+[!INCLUDE[downloadupdates](..\includes\downloadupdates.md)]
 <!---
 1.  In the Configuration Manager console, navigate to **Software Library** > **Software Updates**.  
 

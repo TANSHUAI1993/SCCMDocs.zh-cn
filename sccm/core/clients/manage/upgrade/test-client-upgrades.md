@@ -1,6 +1,6 @@
 ---
-title: "測試進入生產階段前集合的用戶端升級 | Microsoft Docs"
-description: "在 System Center Configuration Manager 中測試進入生產階段前集合的用戶端升級。"
+title: "测试客户端升级预生产集合 | Microsoft Docs"
+description: "在 System Center Configuration Manager 中的预生产集合中测试客户端升级。"
 ms.custom: na
 ms.date: 05/04/2017
 ms.prod: configuration-manager
@@ -18,70 +18,70 @@ manager: angrobe
 ms.openlocfilehash: 572ef13883f7930e69ec1f1f53c9bfe029898c81
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="how-to-test-client-upgrades-in-a-pre-production-collection-in-system-center-configuration-manager"></a>如何測試 System Center Configuration Manager 的進入生產階段前集合用戶端升級
+# <a name="how-to-test-client-upgrades-in-a-pre-production-collection-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中的预生产集合中测试客户端升级
 
-*適用於︰System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-您可以先在進入生產階段前集合中測試新的 Configuration Manager 用戶端版本，然後用它來升級站台的其餘部分。  當您這樣做時，只會將屬於測試集合的裝置升級。 一旦測試過用戶端之後，您就可以升級該用戶端，讓站台的其餘部分都能使用新版本的用戶端軟體。
+可以在升级站点的其余部分之前，在预生产集合中测试新 Configuration Manager 客户端版本。  执行此操作时，仅升级属于测试集合的设备。 只要有机会测试客户端，就可以提升客户端，使客户端软件的新版本可用于该站点的其余部分。
 
 > [!NOTE]
-> 若要將測試用戶端升階至生產環境，您必須以具備**系統高權限管理員**的安全性角色和**全部**的安全性範圍的使用者身分來登入。 如需詳細資訊，請參閱[以角色為基礎的系統管理基本概念](/sccm/core/understand/fundamentals-of-role-based-administration)。 您也必須登入至已連線到管理中心網站或最上層獨立主要站台的伺服器。
+> 若要将测试客户端提升至生产，则必须作为具有**完全权限管理员**安全角色和**全部**安全作用域的用户登录。 有关详细信息，请参阅[基于角色的管理基础](/sccm/core/understand/fundamentals-of-role-based-administration)。 还必须登录到连接到管理中心站点或顶级独立主站点的服务器。
 
- 測試進入生產階段前集合中的用戶端有 3 個基本步驟。  
+ 在预生产环境中测试客户端包含 3 个基本步骤。  
 
-1.  設定自動升級用戶端使用進入生產階段前集合。  
+1.  配置自动客户端升级以使用预生产集合。  
 
-2.  安裝包含新版用戶端的 Configuration Manager 更新。  
+2.  安装包括新版本客户端的 Configuration Manager 更新。  
 
-3.  將新用戶端升階到生產環境。  
+3.  将新客户端提升为生产客户端。  
 
-##  <a name="to-configure-automatic-client-upgrades-to-use-a-pre-production-collection"></a>設定自動升級用戶端使用進入生產階段前集合  
+##  <a name="to-configure-automatic-client-upgrades-to-use-a-pre-production-collection"></a>配置自动客户端升级以使用预生产集合  
 
-1. [設定集合](..\collections\create-collections.md)，內含您要在其中部署進入生產階段前用戶端的電腦。 請不要在進入生產階段前集合中包含工作群組電腦。 它們無法使用發佈點所需的驗證來存取進入生產階段前用戶端套件。   
+1. [设置](..\collections\create-collections.md)包含想要向其部署预生产客户端的计算机的集合。 不要在预生产集合中包含工作组计算机。 工作组计算机无法使用分发点需要的身份验证来访问预生产客户端包。   
 
-1.  在 Configuration Manager 主控台中，開啟 [系統管理] > [站台設定] > [站台]，然後選擇 [階層設定]。  
+1.  在 Configuration Manager 控制台中，打开“管理” > “站点配置” > “站点”，选择“层次结构设置”。  
 
-     在 [階層設定屬性]  的 [用戶端升級] 索引標籤中：  
+     在“层次结构设置属性”  的“客户端升级” 选项卡上：  
 
-    -   選取 [使用進入生產階段前用戶端自動升級進入生產階段前集合的所有用戶端]   
+    -   选择“使用预生产客户端自动升级预生产集合中的全部客户端”   
 
-    -   輸入要做為進入生產階段前集合的集合名稱  
+    -   输入要用作预生产集合的集合的名称  
 
-![測試用戶端升級](media/test-client-upgrades.png)
+![测试客户端升级](media/test-client-upgrades.png)
 
 >[!NOTE]
->若要變更這些設定，您的帳戶必須是「系統高權限管理員」安全性角色，以及「全部」安全性範圍的成員。
+>要更改这些设置，你的帐户必须是**完全权限管理员**安全角色和**所有**安全范围的成员。
 
 
-##  <a name="to-install-a-configuration-manager-update-that-includes-a-new-version-of-the-client"></a>安裝包含新版用戶端的 Configuration Manager 更新  
+##  <a name="to-install-a-configuration-manager-update-that-includes-a-new-version-of-the-client"></a>若要安装包括新版本客户端的 Configuration Manager 更新  
 
-1.  在 Configuration Manager 主控台中，開啟 [系統管理] > [更新與服務]，選取 [可用] 更新，然後選擇 [安裝更新套件]。 (1702 版之前，[更新與服務] 位於 [系統管理] > [雲端服務] 底下)。
+1.  在 Configuration Manager 控制台中，打开“管理” > “更新和服务”，选择“可用”更新，然后选择“安装更新包”。 （在版本 1702 之前，“更新和服务”在“管理” > “云服务”下。）
 
-     如需安裝更新的詳細資訊，請參閱 [System Center Configuration Manager 的更新](../../../../core/servers/manage/updates.md)  
+     有关安装更新的详细信息，请参阅 [System Center Configuration Manager 的更新](../../../../core/servers/manage/updates.md)  
 
-2.  在安裝更新期間，在精靈的 [用戶端選項] 頁面上選取 [在進入生產階段前集合中測試]。  
+2.  在安装更新的过程中，在向导的“客户端选项”页面中，选择“在预生产集合中测试”。  
 
-3.  完成精靈的其餘部分，並安裝更新套件。  
+3.  完成向导中的其余步骤，安装更新包。  
 
-     完成精靈之後，進入生產階段前集合中的用戶端會開始部署更新的用戶端。 您可以監視升級用戶端的部署，請前往 **[監視]** > **[用戶端狀態]** > **[進入生產階段前用戶端部署]**。 如需詳細資訊，請參閱[如何在 Configuration Manager 中設定用戶端狀態](../../../../core/clients/deploy/monitor-client-deployment-status.md)。
+     完成向导后，预生产集合中的客户端将开始部署更新的客户端。 你可以通过转到“监视” > “客户端状态” > “预生产客户端部署”监视已升级客户端的部署。 有关详细信息，请参阅[如何在 System Center Configuration Manager 中监视客户端部署状态](../../../../core/clients/deploy/monitor-client-deployment-status.md)。
 
     > [!NOTE]
-    > 在進入生產階段前集合中，裝載站台系統角色之電腦上的部署狀態可能會報告為 [不符合標準]，即使用戶端已成功部署也一樣。 當您將用戶端升階為生產階段時，就會正確報告部署狀態。
+    > 即使在已成功部署客户端时，托管预生产集合中站点系统角色的计算机上的部署状态也可能被报告为“不符合”。 当你将客户端提升为生产时，则会正常报告部署状态。
 
-##  <a name="to-promote-the-new-client-to-production"></a>將新用戶端升級到生產環境  
+##  <a name="to-promote-the-new-client-to-production"></a>若要将新客户端提升至生产  
 
-1.  在 Configuration Manager 主控台中，開啟 [系統管理] > [更新與服務]，然後選擇 [將生產階段前用戶端升階]。 (1702 版之前，[更新與服務] 位於 [系統管理] > [雲端服務] 底下)。
+1.  在 Configuration Manager 控制台中，打开“管理” > “更新和服务”，然后选择“提升预生产客户端”。 （在版本 1702 之前，“更新和服务”在“管理” > “云服务”下。）
 
     > [!TIP]
-    > 當您監視 **[監視]** [用戶端狀態] **[進入生產階段前用戶端部署]** > **中主控台的用戶端部署時，也可以使用** > **[Promote Pre-production Client (將生產階段前用戶端升階)]**按鈕。
+    > 在控制台中通过“监视” > 客户端状态” > “预生产客户端部署”监视客户端部署时，还可使用“提升预生产客户端”按钮。
 
-2.  檢閱在生產階段和生產階段前的用戶端版本，請確定指定了正確的生產階段前集合，然後依序按一下 [升階] 及 [是]。  
+2.  查看生产和预生产中的客户端版本，确保已指定正确的预生产集合，然后依次单击“提升”、“是”。  
 
-3.  對話方塊關閉後，更新的用戶端版本將會取代階層中使用的用戶端版本。 接著可以升級整個站台的用戶端。 如需詳細資訊，請參閱[如何在 System Center Configuration Manager 中升級 Windows 電腦的用戶端](../../../../core/clients/manage/upgrade/upgrade-clients-for-windows-computers.md)。  
+3.  对话框关闭后，更新的客户端版本将替代在你的层次结构中使用的客户端版本。 然后可以为整个站点升级客户端。 有关详细信息，请参阅[如何在 System Center Configuration Manager 中升级 Windows 计算机的客户端](../../../../core/clients/manage/upgrade/upgrade-clients-for-windows-computers.md)。  
 
 >[!NOTE]
->若要啟用生產階段前用戶端，或是將生產階段前用戶端升級為生產階段用戶端，您的帳戶必須是針對 [更新套件] 物件具有「讀取」和「修改」權限的安全性角色成員。
->用戶端升級會遵循您所設定的任何 Configuration Manager 維護時段。
+>要启用预生产客户端，或者将预生产客户端升级到生产客户端，你的帐户必须是安全角色的成员，该角色具有**读取**和**修改**  **Update Packages** 对象的权限。
+>客户端升级按已配置的任意 Configuration Manager 维护时段进行。

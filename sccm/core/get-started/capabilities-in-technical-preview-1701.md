@@ -1,6 +1,6 @@
 ---
 title: "Technical Preview 1701 Configuration Manager 中的功能"
-description: "了解 System Center Configuration Manager Technical Preview 1701 版中可用的功能。"
+description: "了解 System Center Configuration Manager Technical Preview（版本 1701）中的可用功能。"
 ms.custom: na
 ms.date: 01/23/2017
 ms.prod: configuration-manager
@@ -17,140 +17,140 @@ manager: angrobe
 ms.openlocfilehash: b330c97a0853d1673f1cf7e0691891b72407fa51
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
 # <a name="capabilities-in-technical-preview-1701-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1701 中的功能
 
-適用於︰System Center Configuration Manager (Technical Preview)
+*适用范围：System Center Configuration Manager (Technical Preview)*
 
 
 
-本文介紹 System Center Configuration Manager Technical Preview 1701 版中可用的功能。 您可以安裝此版本，以更新並新增功能至 Configuration Manager Technical Preview 站台。 安裝此版本的 Technical Preview 之前，請檢閱 [System Center Configuration Manager 的 Technical Preview](../../core/get-started/technical-preview.md) 簡介主題，以熟悉使用 Technical Preview 的一般需求和限制、如何在版本之間進行更新，以及如何針對 Technical Preview 中的功能提供意見反應。    
+本文介绍了 System Center Configuration Manager Technical Preview（版本 1701）中的可用功能。 可以安装此版本以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。 在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。    
 
 
-**以下是您可以使用此版本試用的新功能。**  
+**以下是可以试用的此版本的新功能。**  
 
-## <a name="boundary-groups-improvements-for-software-update-points"></a>軟體更新點的界限群組增強功能
-從此 Preview 開始，您現在可以使用界限群組來建立用戶端與軟體更新點的關聯。 這是擴充界限群組變更來管理其他站台系統角色之持續性工作的一部分。  界限群組變更一開始是在 Technical Preview 1609 和 1610 版最新分支中引進。  
+## <a name="boundary-groups-improvements-for-software-update-points"></a>软件更新点的边界组改进
+从此预览版开始，现在可使用边界组将客户端与软件更新点关联。 这属于将边界组更改扩展到管理其他站点系统角色的持续工作中的一部分。  Technical Preview 1609 和版本 1610 中的 Current Branch 首次引入了边界组更改。  
 
-使用此 Preview，您可以使用新界限群組行為來管理用戶端可使用的軟體更新點，與如何管理用戶端可使用的發佈點類似︰  
+在此预览版中，可使用新边界组行为管理客户可使用的软件更新点，方法类似于管理客户端可使用的分发点：  
 
-- 您可以設定界限群組，來關聯可裝載軟體更新點的一或多部伺服器。
-- 搜尋新軟體更新點的用戶端將嘗試使用與其目前界限群組建立關聯的軟體更新點。
-- 如果用戶端無法連線到其目前軟體更新點，而且從其目前界限群組找不到軟體更新點，用戶端使用後援行為來擴充它可使用的可用軟體更新點集區。    
+- 配置边界组，使其与一个或多个托管软件更新点的服务器关联。
+- 正在寻找新软件更新点的客户端将尝试使用与其当前边界组关联的软件更新点。
+- 如果客户端无法获取当前软件更新点，并无法从当前边界组找到软件更新点，客户端会使用“回退”行为扩展可使用的软件更新点的可用池。    
 
-如需界限群組的詳細資訊，請參閱最新分支內容中的[界限群組](/sccm/core/servers/deploy/configure/boundary-groups)。
+若要深入了解边界组，请参阅 Current Branch 内容中的[边界组](/sccm/core/servers/deploy/configure/boundary-groups)。
 
-不過，使用此 Preview，只會局部實作軟體更新點的界限群組。 您可以新增軟體更新點並設定包含軟體更新點的鄰近界限群組，但尚未支援軟體更新點的後援時間，而且用戶端將等待兩個小時再啟動後援。
+但是在此预览版中，仅部分实现了软件更新点的边界组。 可添加软件更新点和配置包含软件更新点的邻居边界组，但是尚不支持软件更新点的回退时间，并且在启动回退前，客户端需要等待 2 个小时。
 
-以下說明這個 Technical Preview 的軟體更新點行為︰  
+下面介绍了此 Technical Preview 中软件更新点的行为：  
 
--   **新的用戶端會使用界限群組來選取軟體更新點，**在安裝 1701 版之後安裝的用戶端，會從與用戶端界限群組建立關聯的軟體更新點中選取軟體更新點。
+-   **新客户端使用边界组选择软件更新点，**安装版本 1701 后所安装的客户端从那些与客户端边界组关联的软件更新点中选取一个。
 
-  這會取代先前行為，即用戶端從共用用戶端樹系的軟體更新點清單中隨機選取軟體更新點。   
+  这将替代以前的行为，即客户端从共享客户端林的软件更新点列表中随机选取一个。   
 
--   **先前安裝的用戶端會繼續使用其目前軟體更新點，直到它們後援以找到新的軟體更新點。**
-先前安裝的用戶端以及已有軟體更新點的用戶端將繼續使用該軟體更新點，直到它們後援。 這包括未與用戶端目前界限群組建立關聯的軟體更新點。 它們不會立即從其目前界限群組嘗試尋找並使用軟體更新點。
+-   **以前安装的客户端继续使用当前的软件更新点，直到它们回退找到新的软件更新点。**
+回退前，以前安装的客户端以及已具有软件更新点的客户端将继续使用该软件更新点。 这包括未与客户端当前边界组关联的软件更新点。 它们不会直接尝试从当前边界组查找和使用软件更新点。
 
-  只有在用戶端無法連線其目前軟體更新點之後，已有軟體更新點的用戶端才會開始使用這個新的界限群組行為，並啟動後援。
-這項延遲在切換至新行為時是刻意設計的。 原因是用戶端與新的軟體更新點同步處理資料時，軟體更新點的變更可能會導致使用大量網路頻寬。 轉換延遲有助於避免讓網路飽和，讓所有用戶端同時切換至新的軟體會更新點。
+  仅在客户端无法获取其当前软件更新点和启动回退时，已具有软件更新点的客户端才会开始使用这个新边界组行为。
+切换到新行为时发生这种延迟是故意为之的。 原因在于软件更新点的更改可导致网络带宽的大量使用，因为客户端会与新软件更新点同步数据。 过渡中的延迟有助于在所有客户端同时切换到新软件更新点时避免网络饱和。
 
--   **後援時間的設定：**此 Technical Preview 不支援用戶端在啟動後援來搜尋新軟體更新點時的設定。 這包括 [Fallback times (in minutes)]\(後援時間 (分鐘)) 和 [Never fallback]\(永不後援) 的設定，而您可以針對不同的界限群組關聯性設定這些項目。
+-   **回退时间配置：**此 Technical Preview 中不支持配置客户端启动回退以搜索新软件更新点的时间。 这包括配置“回退时间(以分钟为单位)”和“从不回退”，可以针对不同边界组关系进行配置。
 
-  相反地，用戶端會保留其目前行為，即用戶端會先嘗試連線至其目前軟體更新點兩個小時，再啟動後援，來尋找它可使用的新軟體更新點。
+  但是，客户端可将客户端尝试连接到其当前软件更新点的当前行为保留 2 小时，然后再启动回退以查找可用的新软件更新点。
 
-  用戶端確實使用後援時，將會使用進行後援的界限群組設定，來建立可用軟體更新點集區。 此集區包括用戶端「目前界限群組」、「鄰近界限群組」和用戶端「站台預設界限群組」中的所有軟體更新點。
+  客户端使用回退时，将使用回退的边界组配置创建可用软件更新点的池。 该池包括客户端当前边界组、邻居边界组和客户端站点默认边界组中的所有软件更新点。
 
-- **設定預設站台界限群組：**  
- 請考慮將軟體更新點新增至 *Default-Site-Boundary-Group&lt;台碼>*。 這確保不是另一個界限群組成員的用戶端可以後援來尋找軟體更新點。
-
-
-若要管理界限群組的軟體更新點，請使用[現行分支文件中的程序](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#procedures-for-boundary-groups)，但是，請記住您可能設定的後援時間尚未用於軟體更新點。
+- **配置默认站点边界组：**  
+ 考虑将软件更新点添加到 Default-Site-Boundary-Group&lt;sitecode>。 这可确保非另一边界组成员的客户端可回退以查找软件更新点。
 
 
-## <a name="hardware-inventory-collects-uefi-information"></a>硬體清查會收集 UEFI 資訊
-新的硬體清查類別 (**SMS_Firmware**) 和屬性 (**UEFI**) 都可以協助您判斷是否以 UEFI 模式啟動電腦。 以 UEFI 模式啟動電腦時，**UEFI** 屬性設為 [TRUE]。 在硬體清查中，預設會啟用此項目。 如需硬體清查的詳細資訊，請參閱[如何設定硬體清查](/sccm/core/clients/manage/inventory/configure-hardware-inventory)。
+若要管理边界组的软件更新点，请使用 [Current Branch 文档中的流程](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#procedures-for-boundary-groups)，但请记住，你可以配置的回退时间还不能用于软件更新点。
 
-## <a name="improvements-to-operating-system-deployment"></a>作業系統部署增強功能
-我們已對作業系統部署進行下列改善，其中許多都是使用者意見反應的結果。
-- [**Support for more applications for the Install Applications task sequence step**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/17062207-task-sequence-allow-more-than-9-applications-in-t) (安裝應用程式工作順序步驟的多個應用程式支援)：我們已在 [安裝應用程式] 工作順序步驟中，將您可安裝的應用程式數目上限增加到 99。 先前的數目上限是 9 個應用程式。
-- [**Select multiple apps in the Install App task sequence step**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/15459978-when-adding-items-to-an-install-application-step) (在安裝應用程式工作順序步驟中選取多個應用程式)：在工作順序編輯器中，將應用程式新增至 [安裝應用程式] 工作順序步驟時，現在可以從 [選取要安裝的應用程式] 窗格中選取多個應用程式。
-- [**Expire standalone media**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/14448564-provide-a-method-for-expiring-standalone-media) (獨立媒體到期)：建立獨立媒體時，有新的選項可在媒體上設定選擇性開始和到期日。 預設會停用這些設定。 在獨立媒體執行之前，會將這些日期與電腦上的系統時間進行比較。 系統時間早於開始時間或晚於到期時間時，不會啟動獨立媒體。 使用 New-CMStandaloneMedia PowerShell Cmdlet，也可以使用這些選項。
-- [**Support for additional content in stand-alone media**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8341257-support-installation-of-packages-apps-via-dynamic) (獨立媒體中其他內容的支援)：獨立媒體現在支援其他內容。 您可以選取要在媒體上分段的其他套件、驅動程式套件和應用程式，以及工作順序中所參考的其他內容。 先前，只會在獨立媒體上分段工作順序中所參考的內容。
-- [**Configurable timeout for Auto Apply Driver task sequence step**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/17153660-auto-apply-driver-timeout) (自動套用驅動程式工作順序步驟的可設定逾時)：現在提供新的工作順序變數，可在提出 HTTP 類別目錄要求時於 [自動套用驅動程式] 工作順序步驟上設定逾時值。 下列是可用的變數和預設值 (秒)︰
-   - SMSTSDriverRequestResolveTimeOut 預設：60
-   - SMSTSDriverRequestConnectTimeOut 預設：60
-   - SMSTSDriverRequestSendTimeOut 預設：60
-   - SMSTSDriverRequestReceiveTimeOut 預設：480
-- [**套件識別碼現在會顯示在工作順序步驟中**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/16167430-display-packageid-when-viewing-a-task-sequence-ste)：任何參考套件、驅動程式套件、作業系統映像、開機映像或作業系統升級套件的工作順序步驟現在會顯示所參考物件的套件識別碼。 工作順序步驟參考應用程式時，將會顯示物件識別碼。
-- **組建版本所追蹤的 Windows 10 ADK**：組建版本現在會追蹤 Windows 10 ADK，確保自訂 Windows 10 開機映像時可提供更多的支援體驗。 例如，如果站台使用 Windows ADK for Windows 10 1607 版，則只能在主控台中自訂 10.0.14393 版的開機映像。 如需自訂 WinPE 版本的詳細資料，請參閱[自訂開機映像](/sccm/osd/get-started/customize-boot-images)。
-- **無法再變更預設開機映像來源路徑**：預設開機映像是透過 Configuration Manager 所管理，而且無法再於 Configuration Manager 主控台中或使用 Configuration Manager SDK 來變更預設開機映像來源路徑。 您可以繼續設定自訂開機映像的自訂來源路徑。
 
-## <a name="host-software-updates-on-cloud-based-distribution-points"></a>在雲端式發佈點上裝載軟體更新
-從此 Preview 版本開始，您可以使用雲端式發佈點來裝載軟體更新套件。 不過，因為您可以設定用戶端直接從 Microsoft Update 下載軟體更新，所以請考慮將軟體更新套件部署至雲端式發佈點可能造成的額外成本。
+## <a name="hardware-inventory-collects-uefi-information"></a>硬件清单将收集 UEFI 信息
+新的硬件清单类 (**SMS_Firmware**) 和属性 (**UEFI**) 可帮助确定是否以 UEFI 模式启动计算机。 如果以 UEFI 模式启动计算机，则 **UEFI** 属性设为 **TRUE**。 默认情况下，这在硬件清单中处于启用状态。 有关硬件清单的详细信息，请参阅[如何配置硬件清单](/sccm/core/clients/manage/inventory/configure-hardware-inventory)。
 
-如需使用雲端式發佈點的資訊，請參閱 Configuration Manager 最新分支內容中的[使用雲端式發佈點](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point)。
+## <a name="improvements-to-operating-system-deployment"></a>对操作系统部署的改进
+我们对操作系统部署做了以下改进，大部分改进根据用户语音反馈进行的。
+- [**支持更多应用程序执行“安装应用程序”任务序列步骤**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/17062207-task-sequence-allow-more-than-9-applications-in-t)：增加了应用程序的最大数量，因此可以在“安装应用程序”任务序列步骤中安装最多 99 个应用程序。 以前的最大数量为 9 个应用程序。
+- [**在“安装应用”任务序列步骤中选择多个应用**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/15459978-when-adding-items-to-an-install-application-step)：在任务序列编辑器中向“安装应用程序”任务序列步骤添加应用程序时，现在可从“选择要安装的应用程序”面板选择多个应用程序。
+- [**过期独立介质**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/14448564-provide-a-method-for-expiring-standalone-media)：创建独立介质时，可使用新选项对介质设置可选开始日期和到期日期。 默认情况下，这些设置处于禁用状态。 独立介质运行前，该日期将与计算机上的系统时间进行比较。 如果系统时间早于开始时间或晚于过期时间，则独立介质不会启动。 也可通过使用 New-CMStandaloneMedia PowerShell cmdlet 启用这些选项。
+- [**独立介质中支持额外内容**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8341257-support-installation-of-packages-apps-via-dynamic)：独立介质中现在支持额外内容。 可选择将额外的包、驱动程序包和应用程序，以及任务序列中引用的其他内容暂存在介质中。 以前，仅任务序列中引用的内容才暂存在独立介质中。
+- [**“自动应用驱动程序”任务序列步骤可配置超时**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/17153660-auto-apply-driver-timeout)：在发出 HTTP 目录请求时，新任务序列变量现在可在“自动应用驱动程序”任务序列步骤中配置超时值。 下面是可用的变量和默认值（以秒为单位）：
+   - SMSTSDriverRequestResolveTimeOut 默认值：60
+   - SMSTSDriverRequestConnectTimeOut 默认值：60
+   - SMSTSDriverRequestSendTimeOut 默认值：60
+   - SMSTSDriverRequestReceiveTimeOut 默认值：480
+- [**任务序列步骤现在会显示包 ID**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/16167430-display-packageid-when-viewing-a-task-sequence-ste)：任何引用包、驱动程序包、操作系统映像、启动映像或操作系统升级包的任务序列步骤现在将显示引用对象的包 ID。 任务序列步骤引用应用程序时，将显示对象 ID。
+- **通过内部版本号跟踪 Windows 10 ADK**：现在可通过内部版本号跟踪 Windows 10 ADK，确保自定义 Windows 10 启动映像时有更多受支持的体验。 例如，如果站点使用适用于 Windows 10 的 Windows ADK（版本 1607），那么控制台中仅可自定义版本号为 10.0.14393 的启动映像。 若要深入了解如何自定义 WinPE 版本，请参阅[自定义启动映像](/sccm/osd/get-started/customize-boot-images)。
+- **默认启动映像源路径无法再进行更改**：默认启动映像由 Configuration Manager 托管，并且无法再在 Configuration Manager 控制台中或通过使用 Configuration Manager SDK 更改默认启动映像源路径。 可继续为自定义启动映像配置自定义源路径。
 
-## <a name="validate-device-health-attestation-data-via-management-points"></a>透過管理點來驗證裝置健全狀況證明資料
+## <a name="host-software-updates-on-cloud-based-distribution-points"></a>使用基于云的分发点托管软件更新
+从此预览版本开始，可使用基于云的分发点来托管软件更新包。 但是，因为可将客户端配置为从 Microsoft 更新直接下载软件更新，所以请考虑将软件更新包部署到基于云的分发点时将产生的额外费用。
 
-從此 Preview 版本開始，您可以設定管理點來驗證雲端或內部部署健全狀況證明服務的健全狀況證明報告資料。 [管理點元件內容] 對話方塊中的新 [進階選項] 索引標籤可讓您 [新增]、[編輯] 或 [移除] [On-premises device health attestation service URL]\(內部部署裝置健全狀況證明服務 URL)。 您也可以將用戶端代理程式的 [自訂裝置設定] 指定為 [Use on-premises Health Attestation Service]\(使用內部部署健全狀況證明服務)。  此設定設為 [是] 時，將會啟用報告到內部部署管理點，而非雲端式服務。
+若要深入了解如何使用基于云的分发点，请参阅 Configuration Manager 的 Current Branch 内容中的[使用基于云的分发点](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point)。
 
-### <a name="try-it-out"></a>試試看
+## <a name="validate-device-health-attestation-data-via-management-points"></a>通过管理点验证设备运行状况证明数据
 
-- **在管理點上啟用內部部署裝置健全狀況證明**<br>  在 Configuration Manager 主控台中，瀏覽至管理點，並開啟 [管理點元件內容]，然後按一下 [進階選項] 索引標籤。 按一下 [新增]，然後指定內部部署 URL (例如，https://10.10.10.10) 作為 [On-premises device health attestation service URL]\(內部部署裝置健全狀況證明服務 URL)。
-- **啟用用戶端代理程式的內部部署管理點健全狀況證明報告**<br>在 Configuration Manager 主控台中，選擇 [系統管理] > [用戶端設定]，然後按兩下或建立新的 [自訂裝置設定]。 選取 [電腦代理程式]，並將 [Use on-premises Health Attestation Service]\(使用內部部署健全狀況證明服務) 設為 [是]。 如果將 [Enable communication with Device Health Attestation Service]\(啟用與裝置健全狀況證明服務之間的通訊)  設為 [是]，並將 [Use on-premises Health Attestation]\(使用內部部署健全狀況證明) 設為 [否]，則管理點將會使用雲端式裝置健全狀況證明服務。
+从此预览版本开始，可配置管理点以验证云或本地运行状况证明服务的运行状况证明报告数据。 通过“管理点组件属性”对话框中的新“高级选项”，可“添加”、“编辑”或“删除”“本地设备运行状况证明服务 URL”。 还可将客户端代理的“自定义设备设置”指定为“使用本地运行状况证明服务”。  将此设置设为“是”将启用向本地管理点（而不是基于云的服务）报告。
 
-## <a name="use-the-oms-connector-for-microsoft-azure-government-cloud"></a>針對 Microsoft Azure Government 雲端使用 OMS 連接器
-使用此 Technical Preview，您現在可以使用 Microsoft Operations Management Suite (OMS) 連接器連線至 Microsoft Azure Government 雲端上的 OMS 工作區。  
+### <a name="try-it-out"></a>试试看
 
-若要這樣做，您可以修改設定檔以指向 Government 雲端，然後安裝 OMS 連接器。
+- **在管理点上启用本地设备运行状况证明**<br>  在 Configuration Manager 控制台中，导航到管理点，打开“管理点组件属性”，然后单击“高级选项”选项卡。 单击“添加”，然后为“本地设备运行状况证明服务 URL”指定本地 URL（例如 https://10.10.10.10）。
+- **为客户端代理启用本地管理点运行状况证明报告**<br>在 Configuration Manager 控制台中，选择“管理” > “客户端设置”，然后双击或创建新的“自定义设备设置”。 选择“计算机代理”，然后将“使用本地运行状况证明服务”设为“是”。 如果将“启用与设备运行状况证明服务的通信”设为“是”，并将“使用本地运行状况证明”设为“否”，则管理点将使用基于云的设备运行状况证明服务。
 
-### <a name="set-up-an-oms-connector-to-microsoft-azure-government-cloud"></a>設定 Microsoft Azure Government 雲端的 OMS 連接器
-1.  在任何已安裝 Configuration Manager 主控台的電腦上，編輯下列設定檔以指向 Government 雲端：&lt;CM 安裝路徑>\AdminConsole\bin\Microsoft.configurationManagmenet.exe.config
+## <a name="use-the-oms-connector-for-microsoft-azure-government-cloud"></a>将 OMS 连接器用于 Microsoft Azure 政府云
+在此 Technical Preview 中，现在可使用 Microsoft Operations Management Suite (OMS) 连接器连接 Microsoft Azure 政府云上的 OMS 工作区。  
 
-  **編輯︰**
+为此，请修改配置文件，使其指向政府云，然后安装 OMS 连接器。
 
-    將設定名稱 *FairFaxArmResourceID* 的值變更為等於 “https://management.usgovcloudapi.net/”
+### <a name="set-up-an-oms-connector-to-microsoft-azure-government-cloud"></a>设置连接到 Microsoft Azure 政府云的 OMS 连接器
+1.  在任何安装了 Configuration Manager 控制台的计算机上，编辑以下配置文件，使其指向政府云：***&lt;CM 安装路径>\AdminConsole\bin\Microsoft.configurationManagmenet.exe.config***
 
-   - **原始：** &lt;setting name="FairFaxArmResourceId" serializeAs="String">   
-      &lt;>&lt;/value>   
-      &lt;/設定>
+  **编辑：**
 
-   - **已編輯：**     
-      &lt;設定名稱="FairFaxArmResourceId" serializeAs="String"> &lt;>https://management.usgovcloudapi.net/&lt;/值>  
-      &lt;/設定>
+    将设置名称 FairFaxArmResourceID 的值更改为等于“https://management.usgovcloudapi.net/”
 
-  將設定名稱 *FairFaxAuthorityResource* 的值變更為等於 "https://login.microsoftonline.com/"
+   - **初始：**&lt;setting name="FairFaxArmResourceId" serializeAs="String">   
+      &lt;value>&lt;/value>   
+      &lt;/setting>
 
-  - **原始：**&lt;設定名稱="FairFaxAuthorityResource" serializeAs="String">   
-    &lt;>&lt;/value>
+   - **编辑后：**     
+      &lt;setting name="FairFaxArmResourceId" serializeAs="String"> &lt;value>https://management.usgovcloudapi.net/&lt;/value>  
+      &lt;/setting>
 
-    - **已編輯：**&lt;設定名稱="FairFaxAuthorityResource" serializeAs="String">   
-    &lt;值>https://login.microsoftonline.com/&lt;/值>
+  将设置名称 FairFaxAuthorityResource 的值更改为等于“https://login.microsoftonline.com/”
 
-2.  儲存具有這兩項變更的檔案之後，請重新啟動相同電腦上的 Configuration Manager 主控台，然後使用該主控台來安裝 OMS 連接器。 若要安裝連接器，請使用[將資料從 Configuration Manager 同步處理至 Microsoft Operations Management Suite](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite) 中的資訊，然後選取 Microsoft Azure Government 雲端上的 [Operations Management Suite 工作區]。
+  - **原始：**&lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
+    &lt;value>&lt;/value>
 
-3.  安裝 OMS 連接器之後，即可在使用任何連線至該站台的主控台時連線 Government 雲端。
+    - **编辑后：**&lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
+    &lt;value>https://login.microsoftonline.com/&lt;/value>
 
-## <a name="android-and-ios-versions-are-no-longer-targetable-in-creation-wizards-for-hybrid-mdm"></a>混合式 MDM 的建立精靈無法再將目標設為 Android 與 iOS 版本
+2.  保存包含这两种更改的文件后，请在同一台计算机上重启 Configuration Manager 控制台，然后使用该控制台安装 OMS 连接器。 若要安装连接器，请使用[将数据从 Configuration Manager 同步到 Microsoft Operations Management Suite](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite) 中的信息，选择 Microsoft Azure 政府云上的 **Microsoft Operations Management Suite**。
 
-從混合式行動裝置管理 (MDM) 的這個技術預覽版開始，您在為受 Intune 管理的裝置建立新原則及設定檔時，不再需要以 Android 或 iOS 的特定版本為目標。 取而代之的是選擇下列其中一種裝置類型：
+3.  OMS 连接器安装后，使用任何连接到站点的控制台时，可使用与政府云的连接。
+
+## <a name="android-and-ios-versions-are-no-longer-targetable-in-creation-wizards-for-hybrid-mdm"></a>在混合 MDM 的创建向导中，不再以 Android 和 iOS 版本为目标
+
+自用于混合移动设备管理 (MDM) 的此技术预览起，为 Intune 托管设备创建新策略和配置文件时，无需再将特定版本的 Android 和 iOS 作为目标。 转而选择下述某个设备类型：
 
 - Android
-- Samsung KNOX 標準 4.0 及更新版本
+- Samsung KNOX 标准版 4.0 及更高版本
 - iPhone
 - iPad
 
-這項變更會影響精靈建立下列項目︰
+此更改会影响以下项的创建向导：
 
-- 設定項目
-- 相容性原則
-- 憑證設定檔
-- 電子郵件設定檔
-- VPN 設定檔
-- Wi-Fi 設定檔
+- 配置项目
+- 相容性策略
+- 证书配置文件
+- 电子邮件配置文件
+- VPN 配置文件
+- Wi-Fi 配置文件
 
-透過這項變更，混合式部署可更快為 Android 及 iOS 版本提供支援，而不需要新的 Configuration Manager 版本或延伸模組。 一旦 Intune 獨立版支援新版本，使用者就能將其行動裝置更新為該版本。
+由于此更改，混合部署可为 Android 和 iOS 新版本更快提供支持，无需新的 Configuration Manager 版本或扩展。 Intune 独立版中支持新版本后，用户就可将其移动设备升级到此版本。
 
-為了防止升級舊版 Configuration Manager 時發生問題，這些項目的屬性頁面中還是會有行動作業系統版本。 如果您仍有需要將特定版本設為目標，可以建立新項目，然後在新建項目的屬性頁面上指定設為目標的版本。
+为防止从 Configuration Manager 先前版本升级时出现问题，移动操作系统版本仍在这些项的属性页中可用。 如果仍需以特定版本为目标，可创建新项，然后在新创建的项的属性页上指定目标版本。

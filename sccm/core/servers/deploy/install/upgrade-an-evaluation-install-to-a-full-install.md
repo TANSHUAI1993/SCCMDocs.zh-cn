@@ -1,6 +1,6 @@
 ---
-title: "升級評估安裝 | Microsoft Docs"
-description: "了解如何將 System Center Configuration Manager 的評估安裝升級至完整安裝。"
+title: "升级评估版安装 | Microsoft Docs"
+description: "了解如何将评估版安装升级到 System Center Configuration Manager 的完整安装。"
 ms.custom: na
 ms.date: 2/7/2017
 ms.prod: configuration-manager
@@ -17,38 +17,38 @@ manager: angrobe
 ms.openlocfilehash: 8f951805c2fc25059965c15c94934c0f8546735c
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="upgrade-an-evaluation-installation-of-system-center-configuration-manager-to-a-full-installation"></a>將 System Center Configuration Manager 的評估安裝升級完整安裝
+# <a name="upgrade-an-evaluation-installation-of-system-center-configuration-manager-to-a-full-installation"></a>将 System Center Configuration Manager 的评估版安装升级到完整安装
 
-*適用對象：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-如果安裝的是 System Center Configuration Manager 評估版，則在 180 天之後，Configuration Manager 主控台會變成唯讀，直到您在安裝程式的 [站台維護] 頁面中啟用產品為止。 在 180 天時限之前或之後的任何時間，都可以選擇將評估安裝升級為完整安裝。  
+如果将 System Center Configuration Manager 作为评估版进行安装，那么 180 天后，Configuration Manager 控制台会变为只读，直至从安装程序的“站点维护”页激活产品。 在 180 天期限之前或之后，可随时选择将评估安装升级到完整安装。  
 
 > [!NOTE]  
->  將 Configuration Manager 主控台連線至 Configuration Manager 的評估安裝時，主控台標題列會顯示評估安裝到期前的剩餘天數。 天數不會自動重新整理，而且只有在您重新連線到站台時才會更新。  
+>  将 Configuration Manager 控制台连接到 Configuration Manager 评估版时，此控制台的标题栏会显示该评估版安装到期前的剩余天数。 此天数不会自动刷新，而且仅在建立新的站点连接时才会更新。  
 
- 您可以升級下列執行評估安裝的站台：  
+ 可升级运行评估版安装的以下站点：  
 
--   管理中心網站  
--   主要網站  
+-   管理中心站点  
+-   主站点  
 
-由於次要網站不被視為評估安裝，在主要網站升級為完整安裝之後，您不需要修改次要網站。  
+由于未将辅助站点视为评估安装，因此你无需在辅助站点的主父站点升级到完整安装后对其进行修改。  
 
-評估版升級為授權版本的必要條件：  
+将评估版升级到许可版的先决条件：  
 
--   升級期間必須要有有效的產品。  
--   您的帳戶對於站台安裝所在的電腦，必須具有**系統管理員**權限。  
+-   必须具有在升级过程中使用的有效产品。  
+-   帐户必须具有对安装该站点的计算机的“管理员”权限。  
 
-### <a name="to-upgrade-an-evaluation-version-of-configuration-manager-to-a-licensed-version"></a>將 Configuration Manager 評估版升級為授權版  
+### <a name="to-upgrade-an-evaluation-version-of-configuration-manager-to-a-licensed-version"></a>将 Configuration Manager 的评估版升级到许可版  
 
-1.  在站台伺服器上，從 Configuration Manager 安裝資料夾 (**%path%\BIN\X64**) 執行 **Setup.exe** (Configuration Manager 安裝程式)。 因為當您從安裝媒體執行安裝程式時無法使用站台維護選項，所以您必須執行位於站台伺服器之 Configuration Manager 資料夾中的安裝程式複本。  
-2.  在 [開始之前] 頁面上，選取 [下一步]。  
-3.  在 [開始使用] 頁面上，選取 [執行站台維護或重設此站台]，然後選取 [下一步]。  
-4.  在 [站台維護] 頁面上，選取 [將評估版升級為授權版]，輸入有效的產品金鑰，然後選取 [下一步]。  
-5.  在 [Microsoft 軟體授權條款] 頁面上，閱讀並接受授權條款，然後選取 [下一步]。  
-6.  在 [設定] 頁面上，選取 [關閉] 以完成精靈。  
+1.  在站点服务器上，在 Configuration Manager 安装文件夹 (**%path%\BIN\X64**) 中运行 **Setup.exe**（Configuration Manager 安装程序）。 必须在 Configuration Manager 文件夹中运行位于站点服务器上的安装程序副本，因为从安装媒体运行安装程序时，站点维护选项不可用。  
+2.  在“开始之前”页面上，选择“下一步”。  
+3.  在“入门”页上，选择“执行站点维护或重置此站点”，然后选择“下一步”。  
+4.  在“站点维护”页上，选择“从评估版升级为许可版”，输入有效的产品密钥，然后选择“下一步”。  
+5.  在“Microsoft 软件许可条款”页上，阅读并接受许可条款，然后选择“下一步”。  
+6.  在“确认”页上，选择“关闭”以完成向导。  
 
     > [!NOTE]  
-    >  仍然連線至升級站台之 Configuration Manager 主控台的標題列，在將主控台重新連線至站台之前，可能會指出該站台仍為評估版。  
+    >  与升级的站点保持连接的 Configuration Manager 控制台的标题栏可能会指明站点仍为评估版本，直到将控制台重新连接到该站点为止。  

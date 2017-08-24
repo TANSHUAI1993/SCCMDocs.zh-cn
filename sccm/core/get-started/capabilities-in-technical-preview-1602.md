@@ -1,6 +1,6 @@
 ---
 title: "Technical Preview 1602 Configuration Manager 中的功能"
-description: "了解 System Center Configuration Manager Technical Preview 1602 版中可用的功能。"
+description: "了解 System Center Configuration Manager Technical Preview 1602 版中的可用功能。"
 ms.custom: na
 ms.date: 01/23/2017
 ms.prod: configuration-manager
@@ -18,44 +18,44 @@ robots: noindex,nofollow
 ms.openlocfilehash: 2354f885aaf69683004ad78f0e1978e78fee9145
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="capabilities-in-technical-preview-1602-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1602 中的功能
+# <a name="capabilities-in-technical-preview-1602-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1602 版中的功能
 
-適用於︰System Center Configuration Manager (Technical Preview)
+*适用范围：System Center Configuration Manager (Technical Preview)*
 
-本文介紹 System Center Configuration Manager Technical Preview 1602 版中可用的功能。 您可以安裝此版本，以更新並新增功能至 Configuration Manager Technical Preview 站台。 安裝此版本的 Technical Preview 之前，請檢閱 [System Center Configuration Manager 的 Technical Preview](../../core/get-started/technical-preview.md) 簡介主題，以熟悉使用 Technical Preview 的一般需求和限制、如何在版本之間進行更新，以及如何針對 Technical Preview 中的功能提供意見反應。  
+本文介绍了 System Center Configuration Manager Technical Preview 1602 版中的可用功能。 可以安装此版本以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。 在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。  
 
- 以下是您可以使用此版本試用的新功能。  
+ 以下是可以试用的此版本的新功能。  
 
-##  <a name="BKMK_MDM"></a> 行動裝置管理的增強功能  
+##  <a name="BKMK_MDM"></a>对移动设备管理的改进  
 
-### <a name="ios-activation-lock"></a>iOS 啟用鎖定  
- System Center Configuration Manager 可以協助您管理 iOS 啟用鎖定，這是 iOS 7.1 和更新版本裝置之「尋找我的 iPhone」應用程式中的功能。 當裝置上使用「尋找我的 iPhone」應用程式時，啟用鎖定會自動啟用。 啟用之後，就必須輸入使用者的 Apple ID 和密碼，才能夠讓所有人：  
+### <a name="ios-activation-lock"></a>iOS 激活锁定  
+ System Center Configuration Manager 可以帮助你管理 iOS 激活锁定，这是适用于 iOS 7.1 及更高版本设备的“查找我的 iPhone”应用的功能。 当设备上使用了“查到我的 iPhone”应用时，激活锁定自动启用。 启用后，任何人都必须先输入用户的 Apple ID 和密码，然后才能执行以下操作：  
 
--   關閉「尋找我的 iPhone」  
+-   关闭“查找我的 iPhone”  
 
--   清除裝置  
+-   擦除设备  
 
--   重新啟動裝置  
+-   重新激活设备  
 
- Configuration Manager 可以要求執行 iOS 7.1 和更新版本之受監督和不受監督裝置的啟用鎖定狀態。 針對受監督的裝置，Intune 可以擷取啟用鎖定略過碼並直接發給裝置。  
+ Configuration Manager 可以请求运行 iOS 7.1 和更高版本的已监管设备和非监管设备的激活锁定状态。 对于监管设备而言，Intune 可以检索绕过激活锁定代码并直接将代码发布到设备。  
 
- 如需詳細資訊，請參閱[使用 Configuration Manager 的啟用鎖定略過協助保護 iOS 裝置](/sccm/mdm/deploy-use/manage-ios-activation-lock)  
+ 有关详细信息，请参阅[通过 Configuration Manager 的绕过激活锁定帮助保护 iOS 设备](/sccm/mdm/deploy-use/manage-ios-activation-lock)  
 
-##  <a name="BKMK_SC1601"></a> 1602 版本中對軟體中心的改進  
+##  <a name="BKMK_SC1601"></a>版本 1602 中对软件中心的改进  
 
-### <a name="refresh-pc-machine-and-user-policy-from-software-center"></a>從軟體中心重新整理 PC 電腦和使用者原則  
- 新的 [同步原則] 選項已新增至軟體中心的 [選項] > [電腦維護] 頁面，讓電腦重新整理它的 Configuration Manager 電腦和使用者原則。  
+### <a name="refresh-pc-machine-and-user-policy-from-software-center"></a>从软件中心刷新 PC 计算机和用户策略  
+ 已将新选项“同步策略”添加到软件中心的“选项” > “计算机维护”页面，该操作可让电脑刷新其 Configuration Manager 计算机和用户策略。  
 
-##  <a name="BKMK_Win10Servicing"></a> Windows 10 服務的增強功能  
- 在 1602 Technical Preview 中，我們新增了下列 Windows 10 服務增強功能：  
+##  <a name="BKMK_Win10Servicing"></a>对 Windows 10 维护服务的改进  
+ 在 1602 Technical Preview 中，我们为 Windows 10 维护服务添加了以下改进：  
 
--   新的服務方案篩選選項。  您現在可以篩選 [語言]、[必要] 和 [標題]。 只有符合指定準則的升級會新增至相關聯的部署。  
+-   用于维护服务计划的新的筛选器选项。  现在可以筛选“语言”、“必需”和“标题”。 只有满足指定条件的升级项才会添加到关联部署中。  
 
--   當您選取 [升級] 分類進行軟體更新同步處理時，將出現警告對話方塊，讓您知道需要 WSUS [Hotfix 3095113](https://support.microsoft.com/kb/3095113) 才能順利同步處理軟體更新，且 Windows 10 服務才能正常運作。  在對話方塊中，您可以移至 Hotfix 的知識庫文章。  
+-   选择软件更新同步的“升级”分类时，将显示一个警告对话框，告知需要 WSUS [修补程序 3095113](https://support.microsoft.com/kb/3095113) 才能成功同步软件更新，并且 Windows 10 维护服务才能正常工作。  从该对话框，你可以转到该修补程序的知识库文章。  
 
--   可用的 Windows 10 升級現在只顯示於 Configuration Manager 主控台的 [Windows 10 服務] \ [所有 Windows 10 更新] 節點。 這些更新不會再顯示於 [軟體更新] \ [所有軟體更新] 節點。  
+-   可用的 Windows 10 升级现在仅显示在 Configuration Manager 控制台的“Windows 10 维护服务” \ “所有 Windows 10 更新”节点中。 这些更新不再显示在“软件更新” \ “所有软件更新”节点中。  
 
--   系統將以對話方塊提示啟動 Windows 10 升級套件的使用者，讓他們知道其將升級作業系統。  
+-   启动 Windows 10 升级包的最终用户将会收到一个提示对话框，告知用户将升级自己的操作系统。  

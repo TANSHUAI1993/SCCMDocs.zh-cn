@@ -1,6 +1,6 @@
 ---
-title: "使用 System Center Configuration Manager 部署 Windows To Go | Microsoft Docs"
-description: "了解如何在 System Center Configuration Manager 中佈建 Windows To Go，建立從外部磁碟機開機的 Windows To Go 工作區。"
+title: "使用 System Center Configuration Manager 部署 Windows to Go | Microsoft Docs"
+description: "了解如何在 System Center Configuration Manager 中设置 Windows To Go 以创建从外部驱动器启动的 Windows To Go 工作区。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -18,451 +18,451 @@ manager: angrobe
 ms.openlocfilehash: a8b1a42c43438553cfbb62328bed933378bb344c
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="deploy-windows-to-go-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 部署 Windows To Go
+# <a name="deploy-windows-to-go-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 部署 Windows to Go
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-本主題說明在 System Center Configuration Manager 中佈建 Windows To Go 的步驟。 Windows To Go 是 Windows 8 的企業版功能，可用於建立 Windows To Go 工作區，無論電腦執行哪一種作業系統，只要符合 Windows 7 或 Windows 8 的憑證需求，就可以從以 USB 連接的外部磁碟機啟動 Windows To Go 工作區。 Windows To Go 工作區可以使用企業應用於桌上型電腦和膝上型電腦的映像，管理方法也相同。  
+本主题提供用于在 System Center Configuration Manager 中设置 Windows To Go 的步骤。 Windows To Go 是 Windows 8 的企业功能，利用此功能，可以创建一个 Windows To Go 工作区，无论计算机上运行哪种操作系统，均可以在满足 Windows 7 或 Windows 8 认证要求的计算机上从 USB 连接的外部驱动器中启动该工作区。 Windows To Go 工作区可以使用企业对其台式机和便携计算机使用的相同映像，并且可以用相同的方式接受管理。  
 
- 如需 Windows To Go 的詳細資訊，請參閱 [Windows To Go 功能概觀](http://go.microsoft.com/fwlink/p/?LinkId=263433)。  
+ 有关 Windows To Go 的详细信息，请参阅 [Windows To Go 功能概述](http://go.microsoft.com/fwlink/p/?LinkId=263433)。  
 
-## <a name="provision-windows-to-go"></a>佈建 Windows To Go  
- Windows To Go 是儲存在 USB 連接的外部磁碟機中的作業系統。 佈建 Windows To Go 磁碟機的方式與佈建其他作業系統部署的方式相似。 不過，由於 Windows To Go 的設計是以使用者為中心，而且是具高度機動性的解決方案，因此必須運用稍微不同的方法佈建這些磁碟機。  
+## <a name="provision-windows-to-go"></a>设置 Windows To Go  
+ Windows To Go 是存储在通过 USB 连接的外部驱动器的操作系统上。 你可以设置 Windows To Go 驱动器，设置方法与设置其他操作系统部署的方法非常相似。 但是，因为 Windows To Go 旨在成为以用户为中心的高机动性解决方案，因此你必须采用略微不同的方法来设置这些驱动器。  
 
- 就高層級而言，Windows To Go 是分為兩個階段的部署，可讓您設定 Windows To Go 裝置及用於部署作業系統的預先設置內容。 您可以在盡量不影響使用者及縮短使用者電腦停機時間的情況下完成這項部署。 預先設置電腦後，您必須完成佈建程序，確保電腦準備就緒，可供使用者使用。 佈建程序與目前的作業系統部署程序相似。 以下列出預先設置內容和佈建 Windows To Go 的一般工作流程：  
+ 在高级别，Windows To Go 是一个包含两个阶段的部署，它允许你配置 Windows To Go 设备以及为操作系统部署预留内容。 你能够以对用户影响最小的方式完成此操作，并且可以限制用户的计算机的停机时间。 在预留计算机之后，你必须完成设置过程以确保计算机可供用户使用。 设置过程类似于当前的操作系统部署过程。 下面列出了用于预留内容和设置 Windows To Go 的一般工作流：  
 
-1.  [佈建 Windows To Go 的必要條件](#BKMK_Prereqs)  
+1.  [设置 Windows To Go 的先决条件](#BKMK_Prereqs)  
 
-2.  [建立預先設置的媒體](#BKMK_CreatePrestagedMedia)  
+2.  [创建预留媒体](#BKMK_CreatePrestagedMedia)  
 
-3.  [建立 Windows To Go Creator 套件](#BKMK_CreatePackage)  
+3.  [创建 Windows To Go Creator 包](#BKMK_CreatePackage)  
 
-4.  [更新工作順序以啟用 Windows To Go 的 BitLocker](#BKMK_UpdateTaskSequence)  
+4.  [更新任务序列以对 Windows To Go 启用 BitLocker](#BKMK_UpdateTaskSequence)  
 
-5.  [部署 Windows To Go Creator 套件和工作順序](#BKMK_Deployments)  
+5.  [部署 Windows To Go Creator 包和任务序列](#BKMK_Deployments)  
 
-6.  [使用者執行 Windows To Go Creator](#BKMK_UserExperience)  
+6.  [用户运行 Windows To Go Creator](#BKMK_UserExperience)  
 
-7.  [Configuration Manager 設定與設置 Windows To Go 磁碟機](#BKMK_ConfigureStageDrive)  
+7.  [Configuration Manager 配置和暂存 Windows To Go 驱动器](#BKMK_ConfigureStageDrive)  
 
-8.  [使用者登入 Windows 8](#BKMK_UserLogsIn)  
+8.  [用户登录到 Windows 8](#BKMK_UserLogsIn)  
 
-###  <a name="BKMK_Prereqs"></a> 佈建 Windows To Go 的必要條件  
- 佈建 Windows To Go 之前，必須在 Configuration Manager 中完成下列步驟：  
+###  <a name="BKMK_Prereqs"></a> 设置 Windows To Go 的先决条件  
+ 在设置 Windows To Go 之前，你必须在 Configuration Manager 中完成以下操作：  
 
--   **將開機映像發佈至發佈點**  
+-   **将启动映像分发到分发点**  
 
-     建立預先設置媒體之前，您必須將開機映像發佈至發佈點。  
-
-    > [!NOTE]  
-    >  開機映像可用來將作業系統安裝到您 Configuration Manager 環境中的目的地電腦。 開機映像中包含某個 Windows PE 版本，會安裝作業系統以及任何其他必要的裝置驅動程式。 Configuration Manager 提供兩種開機映像：一種支援 x86 平台，另一種支援 x64 平台。 您也可以自行建立開機映像。 如需詳細資訊，請參閱[管理開機映像](../get-started/manage-boot-images.md)。  
-
--   **將 Windows 8 作業系統映像發佈至發佈點**  
-
-     建立預先設置媒體之前，必須將 Windows 8 作業系統映像發佈至發佈點。  
+     创建预留媒体之前，必须将启动映像分发到分发点。  
 
     > [!NOTE]  
-    >  作業系統映像均為 WIM 格式的檔案，代表經過壓縮的參照檔案和資料夾集合，必須要有 WIM 檔案，才能成功地在電腦上安裝及設定作業系統。 如需詳細資訊，請參閱[管理作業系統映像](../get-started/manage-operating-system-images.md)。  
+    >  启动映像用于在 Configuration Manager 环境中的目标计算机上安装操作系统。 它们包含用于安装操作系统的 Windows PE 的某个版本，以及任何其他所需的设备驱动程序。 Configuration Manager 提供两个启动映像：一个用于支持 x86 平台，另一个用于支持 x64 平台。 你也可以创建自己的启动映像。 有关详细信息，请参阅[管理启动映像](../get-started/manage-boot-images.md)。  
 
--   **建立部署 Windows 8 的工作順序**  
+-   **将 Windows 8 操作系统映像包分发到分发点**  
 
-     您必須建立用於部署 Windows 8 的工作順序，當您建立預先設置媒體時將參照此工作順序。 如需詳細資訊，請參閱[管理工作順序，將工作自動化](manage-task-sequences-to-automate-tasks.md)。  
+     创建预留媒体之前，必须将 Windows 8 操作系统映像包分发到分发点。  
 
-###  <a name="BKMK_CreatePrestagedMedia"></a> 建立預先設置的媒體  
- 預先設置的媒體包含用於啟動目的地電腦的開機映像，以及將套用於目的地電腦的作業系統映像。 您可以使用開機映像啟動以預先設置媒體佈建的電腦。 之後，該電腦可以執行現有的作業系統部署工作順序，以安裝完整的作業系統部署。 媒體中不包含部署作業系統的工作順序。  
+    > [!NOTE]  
+    >  操作系统映像是 .WIM 格式的文件，它们代表着经过压缩的集合，此集合包含在计算机上成功安装和配置操作系统所需的引用文件及文件夹。 有关详细信息，请参阅[管理操作系统映像](../get-started/manage-operating-system-images.md)。  
 
- 除了作業系統映像和開機映像之外，您還可以在預先設置階段新增應用程式和裝置驅動程式之類的內容。 這樣可以縮短部署作業系統所需的時間，並且可以減少網路流量，因為內容已經存放在磁碟機中了。  
+-   **创建用于部署 Windows 8 的任务序列**  
 
- 利用下列程序建立預先設置媒體。  
+     你必须创建 Windows 8 部署的任务序列，创建预留媒体时将引用此任务序列。 有关详细信息，请参阅[管理任务序列以自动执行任务](manage-task-sequences-to-automate-tasks.md)。  
 
-#### <a name="to-create-prestaged-media"></a>建立預先設置的媒體  
+###  <a name="BKMK_CreatePrestagedMedia"></a> 创建预留媒体  
+ 预留媒体包含用于启动目标计算机的启动映像，以及应用到目标计算机的操作系统映像。 通过使用启动映像，可以启动用预留媒体设置的计算机。 然后，该计算机可以运行现有操作系统部署任务序列，以安装完整的操作系统部署。 此媒体不包含用于部署操作系统的任务序列。  
 
-1.  在 Configuration Manager 主控台中，按一下 [軟體程式庫] 。  
+ 你可以在预留阶段添加内容，如应用程序和设备驱动程序，以及操作系统映像包和启动映像。 这会减少部署操作系统所需的时间以及减少网络流量，因为内容已经在驱动器上。  
 
-2.  在 [軟體程式庫]  工作區中，展開 [作業系統] ，然後按一下 [工作順序] 。  
+ 使用以下过程来创建预留媒体。  
 
-3.  在 [首頁]  索引標籤的 [建立]  群組中，按一下 [建立工作順序媒體]  以啟動 [建立工作順序媒體精靈]。  
+#### <a name="to-create-prestaged-media"></a>创建预留媒体  
 
-4.  在 [選取媒體類型]  頁面上指定下列資訊，然後按 [下一步] 。  
+1.  在 Configuration Manager 控制台中，单击“软件库” 。  
 
-    -   選取 [預先設置的媒體] 。  
+2.  在“软件库”工作区中，展开“操作系统”，然后单击“任务序列”。  
 
-    -   選取 [允許自動部署作業系統]  ，在不需使用者互動的情況下開機進入 Windows To Go 部署。  
+3.  在“主页”  选项卡上的“创建”  组中，单击“创建任务序列媒体”  以启动创建任务序列媒体向导。  
 
-        > [!IMPORTANT]  
-        >  搭配使用此選項和 SMSTSPreferredAdvertID 自訂變數 (會在此程序中稍後設定)，不需使用者互動，而且電腦會在偵測到 Windows To Go 磁碟機時自動開機進入 Windows To Go 部署。 如果媒體已設定密碼保護，仍然會提示使用者輸入密碼。 如果使用 [允許自動部署作業系統]  設定，但未設定 SMSTSPreferredAdvertID 變數，當您部署工作順序時便會出現錯誤。  
+4.  在“选择媒体类型”  页上，指定以下信息，然后单击“下一步” 。  
 
-5.  在 [媒體管理]  頁面上指定下列資訊，然後按 [下一步] 。  
+    -   选择“预留媒体” 。  
 
-    -   如果您想要允許管理點根據網站界限的用戶端位置將媒體重新導向至其他管理點，請選取 [動態媒體]  。  
-
-    -   如果只想要讓媒體與指定的管理點連繫，請選取 [以網站為基礎的媒體]  。  
-
-6.  在 [媒體內容]   頁面上指定下列資訊，然後按 [下一步] 。  
-
-    -   **建立者**：指定媒體的建立者。  
-
-    -   **版本**：指定媒體的版本號碼。  
-
-    -   **註解**：指定媒體用途的唯一描述。  
-
-    -   **媒體檔案**：指定輸出檔案的名稱和路徑。 精靈會將輸出檔案寫入此位置。 例如︰**\\\伺服器名稱\資料夾\outputfile.wim**  
-
-7.  在 [安全性]  頁面指定下列資訊，然後按 [下一步] 。  
-
-    -   選取 [啟用未知電腦支援]，可讓媒體將作業系統部署至未受 Configuration Manager 管理的電腦。 Configuration Manager 資料庫中沒有這些電腦的記錄。 未知電腦包括：  
-
-        -   未安裝 Configuration Manager 用戶端的電腦  
-
-        -   未匯入 Configuration Manager 的電腦  
-
-        -   Configuration Manager 未探索到的電腦  
-
-    -   選取 [使用密碼保護媒體]  ，然後輸入強式密碼，協助防範他人未經授權存取媒體。 當您指定密碼時，使用者必須提供密碼才能使用預先設置的媒體。  
+    -   选择“允许无人参与的操作系统部署”  ，以在无用户干预的情况下启动到 Windows To Go 部署。  
 
         > [!IMPORTANT]  
-        >  為安全起見，請一律指定密碼，協助保護預先設置媒體。  
+        >  将此选项与 SMSTSPreferredAdvertID 自定义变量（在此过程中后面设置）一起使用时，不需要用户干预，计算机在检测到 Windows To Go 驱动器时将自动启动到 Windows To Go 部署。 如果针对密码保护配置了媒体，则仍会提示用户输入密码。 如果使用“允许无人参与的操作系统部署”  设置而不配置 SMSTSPreferredAdvertID 变量，则在部署任务序列时将出错。  
+
+5.  在“媒体管理”  页上，指定以下信息，然后单击“下一步” 。  
+
+    -   如果要允许管理点根据客户端在站点边界中的位置将媒体重定向到另一个管理点，请选择“动态媒体”  。  
+
+    -   如果希望媒体仅与指定的管理点联系，请选择“基于站点的媒体”  。  
+
+6.  在“媒体属性”   页上，指定以下信息，然后单击“下一步” 。  
+
+    -   **创建者**：指定创建媒体的人员。  
+
+    -   **版本**：指定媒体的版本号。  
+
+    -   **注释**：指定媒体用途的唯一说明。  
+
+    -   **媒体文件**：指定输出文件的名称和路径。 向导会将输出文件写入到此位置。 例如：**\\\servername\folder\outputfile.wim**  
+
+7.  在“安全”  页上，指定以下信息，然后单击“下一步” 。  
+
+    -   选择“启用未知计算机支持”，使媒体能够将操作系统部署到不是由 Configuration Manager 托管的计算机上。 Configuration Manager 数据库中没有这些计算机的记录。 未知计算机包括下列各项：  
+
+        -   未安装 Configuration Manager 客户端的计算机  
+
+        -   未导入到 Configuration Manager 中的计算机  
+
+        -   未被 Configuration Manager 发现的计算机  
+
+    -   选中“使用密码保护媒体”  ，并输入强密码来帮助防止未经授权访问媒体。 如果指定密码，则用户必须提供该密码才能使用预留媒体。  
+
+        > [!IMPORTANT]  
+        >  作为最佳安全方案，请始终分配密码来帮助保护预留媒体。  
 
         > [!NOTE]  
-        >  使用密碼保護預先設置媒體時，即使媒體的設定為 [允許自動部署作業系統]  ，仍然會提示使用者輸入密碼。  
+        >  如果用密码保护预留媒体，则会提示用户输入密码，即使使用“允许无人参与的操作系统部署”  设置配置了媒体也不例外。  
 
-    -   對於 HTTP 通訊，請選取 [建立自我簽署媒體憑證] ，然後指定憑證的開始日和到期日。  
+    -   对于 HTTP 通信，选择“创建自签名媒体证书” ，然后指定该证书的开始日期和到期日期。  
 
-    -   對於 HTTPS 通訊，請選取 [匯入 PKI 憑證] ，然後指定要匯入的憑證及其密碼。  
+    -   对于 HTTPS 通信，选择“导入 PKI 证书” ，然后指定要导入的证书及其密码。  
 
-         如需開機映像所使用之此用戶端憑證的詳細資訊，請參閱 [PKI 憑證需求](../../core/plan-design/network/pki-certificate-requirements.md)。  
+         有关用于启动映像的此客户端证书的详细信息，请参阅 [PKI 证书要求](../../core/plan-design/network/pki-certificate-requirements.md)。  
 
-    -   **使用者裝置親和性**：若要在 Configuration Manager 中支援使用者為中心的管理，請指定要如何讓媒體為使用者與目的地電腦建立關聯。 如需作業系統部署如何支援使用者裝置親和性的詳細資訊，請參閱[為使用者與目的地電腦建立關聯](../get-started/associate-users-with-a-destination-computer.md)。  
+    -   **用户设备相关性**：若要在 Configuration Manager 中支持以用户为中心的管理，请指定希望媒体如何将用户与目标计算机相关联。 有关操作系统部署如何支持用户设备相关性的详细信息，请参阅[如何将用户与目标计算机相关联](../get-started/associate-users-with-a-destination-computer.md)。  
 
-        -   如果要讓媒體自動為使用者與目的地電腦建立關聯，請指定 [允許自動核准使用者裝置親和性]  。 此功能是以作業系統部署工作順序的動作為基礎。 在此案例中，工作順序會在將作業系統部署至目的地電腦時，為指定的使用者和目的地電腦建立關聯性。  
+        -   如果你希望媒体自动将用户与目标计算机关联，请指定“通过自动批准允许用户设备相关性”  。 此功能以部署操作系统的任务序列的操作为基础。 在此方案中，当任务序列将操作系统部署到目标计算机时，它会在指定的用户和目标计算机之间创建关系。  
 
-        -   如果您希望媒體在授與核准後讓使用者與目的地電腦產生關聯，請指定 [允許使用者親和性等待系統管理員核准]  。 此功能是以部署作業系統的工作順序範圍為基礎。 在此案例中，工作順序會建立指定的使用者與目的地電腦之間的關聯性，但是會等候系統管理使用者核准，才部署作業系統。  
+        -   如果希望媒体获得批准后将用户与目标计算机关联，请指定“允许用户设备相关性挂起管理员批准”  。 此功能以部署操作系统的任务序列的作用域为基础。 在此方案中，任务序列在指定用户和目标计算机之间创建关系，但在部署操作系统之前等待管理用户的批准。  
 
-        -   如果您不希望媒體讓使用者與目的地電腦產生關聯，請指定 [不允許使用者裝置親和性]  。 在此案例中，工作順序在部署作業系統時，就不會將使用者與目的地電腦產生關聯。  
+        -   如果不希望媒体将用户与目标计算机关联，请指定“不允许用户设备相关性”  。 在此方案中，当任务序列部署操作系统时，它不会将用户与目标计算机关联。  
 
-8.  在 [工作順序]  頁面中，指定您在上一節中建立的 Windows 8 工作順序。  
+8.  在“任务序列”  页上，指定在上一部分中创建的 Windows 8 任务序列。  
 
-9. 在 [開機映像]  頁面上指定下列資訊，然後按 [下一步] 。  
+9. 在“启动映像包”  页上，指定以下信息，然后单击“下一步” 。  
 
     > [!IMPORTANT]  
-    >  已發佈之開機映像的架構，必須適用於目的地電腦的架構。 例如，x64 目的地電腦可以啟動並執行 x86 或 x64 開機映像。 不過，x86 目的地電腦只能啟動並執行 x86 開機映像。 若是在 EFI 模式下的 Windows 8 認證電腦，必須使用 x64 開機映像。  
+    >  分发的启动映像的体系结构必须适合于目标计算机的体系结构。 例如，x64 目标计算机可启动和运行 x86 或 x64 启动映像。 但是，x86 目标计算机只能启动和运行 x86 启动映像。 对于 EFI 模式下的 Windows 8 认证计算机，你必须使用 x64 启动映像。  
 
-    -   **開機映像**：指定用於啟動目的地電腦的開機映像。  
+    -   **启动映像**：指定用于启动目标计算机的启动映像。  
 
-    -   **發佈點**：指定裝載開機映像的發佈點。 精靈會從發佈點擷取開機映像，並將其寫入至媒體。  
-
-        > [!NOTE]  
-        >  系統管理使用者必須具備 [讀取]  存取權限，才能存取發佈點上的開機映像內容。 如需詳細資訊，請參閱[管理帳戶以存取內容](../../core/plan-design/hierarchy/manage-accounts-to-access-content.md)。  
-
-    -   如果您在此精靈的 [媒體管理]  頁面中選取 [以站台為基礎的媒體]  ，請在 [管理點]  方塊中指定從主要站台進行管理的管理點。  
-
-    -   如果在精靈的 [媒體管理]  頁面中選取了 [動態媒體]  ，請在 [相關聯的管理點]  方塊中指定欲使用的主要站台管理點，以及初始通訊的優先順序。  
-
-10. 在 [映像]  頁面上指定下列資訊，然後按 [下一步] 。  
-
-    -   **映像封裝**：指定包含 Windows 8 作業系統映像的封裝。  
-
-    -   **映像索引**：指定封裝包含多個作業系統映像時應部署的映像。  
-
-    -   **發佈點**：指定裝載開機映像封裝的發佈點。 精靈會從發佈點擷取作業系統映像，並將其寫入至媒體。  
+    -   **分发点**：指定托管启动映像的分发点。 向导将从分发点中检索启动映像并将其写入媒体。  
 
         > [!NOTE]  
-        >  系統管理使用者必須具備 [讀取]  存取權限，才能存取發佈點上的作業系統映像內容。 如需詳細資訊，請參閱[管理帳戶以存取內容](../../core/plan-design/hierarchy/manage-accounts-to-access-content.md)。  
+        >  管理用户必须对分发点上的启动映像内容具有“读取”  访问权限。 有关详细信息，请参阅[管理帐户以访问内容](../../core/plan-design/hierarchy/manage-accounts-to-access-content.md)。  
 
-11. 在 [選取應用程式]  頁面中，指定要包含在媒體檔案中的應用程式內容，然後按 [下一步] 。  
+    -   如果在此向导的“媒体管理”  页上选择了“基于站点的媒体”  ，请在“管理点”  框中指定主站点中的管理点。  
 
-12. 在 [選取套件]  頁面中，指定其他要包含在媒體檔案中的套件內容，然後按 [下一步] 。  
+    -   如果在向导的“媒体管理”  页上选择了“动态媒体”  ，请在“关联的管理点”  框中指定要使用的主站点管理点以及初始通信的优先级顺序。  
 
-13. 在 [選取驅動程式套件]  頁面中，指定要包含在媒體檔案中的驅動程式套件內容，然後按 [下一步] 。  
+10. 在“映像”  页上，指定以下信息，然后单击“下一步” 。  
 
-14. 在 [發佈點]  頁面中，選取一個或多個包含工作順序所需內容的發佈點，然後按 [下一步] 。  
+    -   **映像包**：指定包含 Windows 8 操作系统映像包的包。  
 
-15. 在 [自訂]  頁面指定下列資訊，然後按 [下一步] 。  
+    -   **映像索引**：指定在包包含多个操作系统映像的情况下要部署的映像。  
 
-    -   **變數**：指定工作順序用於部署作業系統的變數。 若為 Windows To Go，使用 SMSTSPreferredAdvertID 變數可利用下列格式自動選取 Windows To Go 部署：  
+    -   **分发点**：指定托管操作系统映像包的分发点。 向导将从分发点中检索操作系统映像并将其写入媒体。  
 
-         SMSTSPreferredAdvertID = {*DeploymentID*}，其中 DeploymentID 是與您將用於完成 Windows To Go 磁碟機佈建程序之工作順序的部署識別碼。  
+        > [!NOTE]  
+        >  管理用户必须对分发点上的操作系统映像包内容具有“读取”  访问权限。 有关详细信息，请参阅[管理帐户以访问内容](../../core/plan-design/hierarchy/manage-accounts-to-access-content.md)。  
+
+11. 在“选择应用程序”  页上，选择要包含在媒体文件中的应用程序内容，然后单击“下一步” 。  
+
+12. 在“选择包”  页上，选择要包含在媒体文件中的其他包内容，然后单击“下一步” 。  
+
+13. 在“选择驱动程序包”  页上，选择要包含在媒体文件中的驱动程序包内容，然后单击“下一步” 。  
+
+14. 在“分发点”  页上，选择包含任务序列所需的内容的一个或多个分发点，然后单击“下一步” 。  
+
+15. 在“自定义”  页上，指定以下信息，然后单击“下一步” 。  
+
+    -   **变量**：指定任务序列用于部署操作系统的变量。 对于 Windows To Go，请使用 SMSTSPreferredAdvertID 变量通过以下格式自动选择 Windows To Go 部署：  
+
+         SMSTSPreferredAdvertID = {*DeploymentID*}，其中 DeploymentID 是与将用于完成 Windows To Go 驱动器设置过程的任务序列关联的部署 ID。  
 
         > [!TIP]  
-        >  搭配使用此變數和設為自動執行的工作順序 (會在此程序中稍後設定)，不需使用者互動，而且電腦會在偵測到 Windows To Go 磁碟機時自動開機進入 Windows To Go 部署。 如果媒體已設定密碼保護，仍然會提示使用者輸入密碼。  
+        >  将此变量与设置为以无人参与模式运行（在此过程中前面设置）的任务序列一起使用时，不需要用户干预，计算机在检测到 Windows To Go 驱动器时将自动启动到 Windows To Go 部署。 如果针对密码保护配置了媒体，则仍会提示用户输入密码。  
 
-    -   **啟動前置命令**：指定您要在工作順序執行前執行的啟動前置命令。 啟動前置命令可以是在執行工作順序以安裝作業系統前，能夠在 Windows PE 中與使用者互動的指令碼或可執行檔。 針對 Windows To Go 部署，設定下列各項：  
+    -   **预先启动命令**：指定想要在运行任务序列之前运行的任何预启动命令。 预启动命令可能是可在运行任务序列以安装操作系统之前在 Windows PE 中与用户交互的脚本或可执行文件。 为 Windows To Go 部署配置以下各项：  
 
-        -   **OSDBitLockerPIN**：Windows To Go 的 BitLocker 需要使用複雜密碼。 在啟動前置命令中設定 **OSDBitLockerPIN** 變數，以便為 Windows To Go 磁碟機設定 BitLocker 複雜密碼。  
+        -   **OSDBitLockerPIN**：适用于 Windows To Go 的 BitLocker 需要密码。 将“OSDBitLockerPIN”  变量设置为预启动命令的一部分，以为 Windows To Go 驱动器设置 BitLocker 密码。  
 
             > [!WARNING]  
-            >  為 BitLocker 啟用複雜密碼後，使用者必須在每次電腦開機至 Windows To Go 磁碟機時輸入複雜密碼。  
+            >  针对密码启用 BitLocker 后，每次计算机启动到 Windows To Go 驱动器时，用户必须输入密码。  
 
-        -   **SMSTSUDAUsers**：指定目的地電腦的主要使用者。 使用此變數收集使用者名稱，然後再使用該使用者名稱，為使用者和裝置建立關聯。 如需詳細資訊，請參閱[為使用者與目的地電腦建立關聯](../get-started/associate-users-with-a-destination-computer.md)。  
+        -   **SMSTSUDAUsers**：指定目标计算机的主要用户。 使用此变量收集用户名，然后可以使用用户名关联用户和设备。 有关详细信息，请参阅[将用户与目标计算机相关联](../get-started/associate-users-with-a-destination-computer.md)。  
 
             > [!TIP]  
-            >  若要擷取使用者名稱，您可以在啟動前置命令中建立一個輸入方塊，讓使用者輸入他們的使用者名稱，然後再以該值設定變數。 例如，您可以新增以下行列至啟動前置命令指令碼檔案中：  
+            >  要检索用户名，你可以在预启动命令中创建一个输入框，让用户输入其用户名，然后设置此变量和值。 例如，你可以将以下行添加到预启动命令脚本文件中：  
             >   
             >  `UserID = inputbox("Enter Username" ,"Enter your username:","",400,0)`  
             >   
             >  `env("SMSTSUDAUsers") = UserID`  
 
-         如需如何建立指令碼檔案作為啟動前置命令的詳細資訊，請參閱[工作順序媒體的啟動前置命令](../understand/prestart-commands-for-task-sequence-media.md)。  
+         有关如何创建要用作预启动命令的脚本文件的详细信息，请参阅[任务序列媒体的预启动命令](../understand/prestart-commands-for-task-sequence-media.md)。  
 
-16. 完成精靈。  
-
-    > [!NOTE]  
-    >  精靈可能需要很長的時間才能完成預先設置的媒體檔案。  
-
-###  <a name="BKMK_CreatePackage"></a> 建立 Windows To Go Creator 套件  
- 進行 Windows To Go 部署期間，您必須建立套件以部署預先設置的媒體檔案。 套件必須包含可以設定 Windows To Go 磁碟機，以及將預先設置的媒體解壓縮到磁碟機的工具。 利用下列程序建立 Windows To Go Creator 套件。  
-
-#### <a name="to-create-the-windows-to-go-creator-package"></a>建立 Windows To Go Creator 套件  
-
-1.  在裝載 Windows To Go Creator 套件檔案的伺服器上，為套件來源檔案建立來源資料夾。  
+16. 完成向导。  
 
     > [!NOTE]  
-    >  站台伺服器的電腦帳戶，必須擁有來源資料夾的 **讀取** 存取權限。  
+    >  向导完成预留媒体文件可能需要很长一段时间。  
 
-2.  將您在 [Create prestaged media](#BKMK_CreatePrestagedMedia) 一節中建立的預先設置的媒體檔案，複製到套件來源資料夾。  
+###  <a name="BKMK_CreatePackage"></a> 创建 Windows To Go Creator 包  
+ 在部署 Windows To Go 过程中，你必须创建包以部署预留媒体文件。 包必须包括配置 Windows To Go 驱动器并将预留媒体提取到驱动器的工具。 使用下面的过程可创建 Windows To Go Creator 包。  
 
-3.  將 Windows To Go Creator 工具 (WTGCreator.exe) 複製到套件來源資料夾。 建立者工具可於下列位置的任何主要站台伺服器取得：<*ConfigMgrInstallationFolder*>\OSD\Tools\WTG\Creator。  
+#### <a name="to-create-the-windows-to-go-creator-package"></a>创建 Windows To Go Creator 包  
 
-4.  使用 [建立套件和程式精靈] 建立套件和程式。  
+1.  在要承载 Windows To Go Creator 包文件的服务器上，创建包源文件的源文件夹。  
 
-5.  在 Configuration Manager 主控台中，按一下 [軟體程式庫] 。  
+    > [!NOTE]  
+    >  站点服务器的计算机帐户必须具有对源文件夹的“读取”  访问权限。  
 
-6.  在 [軟體程式庫]  工作區中，展開 [應用程式管理] ，然後按一下 [套件] 。  
+2.  将在 [Create prestaged media](#BKMK_CreatePrestagedMedia) 部分中创建的预留媒体文件复制到包源文件夹。  
 
-7.  在 [首頁]  索引標籤的 [建立]  群組中，按一下 [建立套件] 。  
+3.  将 Windows To Go Creator 工具 (WTGCreator.exe) 复制到包源文件夹中。 此 Creator 工具在任何主站点服务器上的以下位置中均可用：<ConfigMgrInstallationFolder>\OSD\Tools\WTG\Creator。  
 
-8.  在 [套件]  頁面上，指定套件的名稱和描述。 例如，輸入 **Windows To Go** 作為封裝名稱，並指定 **Package to configure a Windows To Go drive using System Center Configuration Manager** 作為封裝描述。  
+4.  通过使用创建包和程序向导来创建包和程序。  
 
-9. 選取 [此套件包含來源檔案] ，指定您在步驟 1 中建立的套件來源資料夾路徑，然後按 [下一步] 。  
+5.  在 Configuration Manager 控制台中，单击“软件库” 。  
 
-10. 在 [程式類型]  頁面上，選取 [標準程式] ，然後按 [下一步] 。  
+6.  在“软件库”  工作区中，展开“应用程序管理” ，然后单击“包” 。  
 
-11. 在 [標準程式]  頁面上，指定下列各項：  
+7.  在“主页”  选项卡上的“创建”  组中，单击“创建包” 。  
 
-    -   **名稱**：指定程式的名稱。 例如，輸入 **Creator** 作為程式名稱。  
+8.  在“包”  页上，指定包的名称和描述。 例如，输入 **Windows To Go** 作为包的名称，并指定 **Package to configure a Windows To Go drive using System Center Configuration Manager** 为包的描述。  
 
-    -   **命令列**：輸入 **WTGCreator.exe /wim:PrestageName.wim**，其中 PrestageName 是預先設置的檔案名稱，該檔案已由您建立且複製到 Windows To Go Creator 封裝的封裝來源資料夾中。  
+9. 选择“此包包含源文件” ，指定在步骤 1 中创建的包源文件夹的路径，然后单击“下一步” 。  
 
-         您可以選擇新增下列選項：  
+10. 在“程序类型”  页上，选择“标准程序” ，然后单击“下一步” 。  
 
-        -   **enableBootRedirect**：命令列選項，用於將 Windows To Go 啟動選項變更為允許開機重新導向。 當您使用此選項時，電腦將會從 USB 開機，不需要變更電腦韌體的開機順序，或讓使用者在啟動期間從開機選項中選取選項。 如果偵測到 Windows To Go 磁碟機，電腦會開機至該磁碟機。  
+11. 在“标准程序”  页上，指定下列信息：  
 
-    -   **執行**：指定 [一般]  ，根據系統和程式預設值執行程式。  
+    -   **名称**：指定程序的名称。 例如，键入 **Creator** 作为程序名。  
 
-    -   **程式可執行**：指定程式是否只能在使用者登入時執行。  
+    -   “命令行”：键入 **WTGCreator.exe /wim:PrestageName.wim**，其中 PrestageName 是你创建并复制到 Windows To Go Creator 包的包源文件夹的预留文件的名称。  
 
-    -   **執行模式**：指定程式是否要以登入的使用者權限執行，或是以系統管理權限執行。 Windows To Go Creator 需要使用提升的權限來執行。  
+         你可以根据需要添加下列选项：  
 
-    -   選取 [允許使用者檢視程式安裝並與其互動] ，然後按 [下一步] 。  
+        -   **enableBootRedirect**：此命令行选项用于更改 Windows To Go 启动选项以允许启动重定向。 使用此选项时，计算机将从 USB 中启动，而不必在计算机固件中更改启动顺序或者在启动过程中让用户在启动选项列表中选择。 如果检测到 Windows To Go 驱动器，则计算机会启动到该驱动器。  
 
-12. 在 [需求] 頁面中，指定下列項目：  
+    -   **运行**：指定“常规”  以基于系统和程序默认值运行程序。  
 
-    -   **平台需求**：選取適用的 Windows 8 平台以允許佈建。  
+    -   **程序可以运行**：指定程序是否只能在用户登录时运行。  
 
-    -   **預估的磁碟空間**：指定 Windows To Go Creator 的封裝來源資料夾大小。  
+    -   **运行模式**：指定是将使用登录用户权限还是管理权限来运行程序。 运行 Windows To Go Creator 需要提升的权限。  
 
-    -   **允許的執行時間上限 (分鐘)**：指定程式預期在用戶端電腦上執行的時間上限。 根據預設，此值設為 120 分鐘。  
+    -   选择“允许用户查看程序安装并与之交互” ，然后单击“下一步” 。  
+
+12. 在“要求”页上，指定下列各项：  
+
+    -   **平台要求**：选择相应的 Windows 8 平台以允许进行设置。  
+
+    -   **估计磁盘空间**：指定 Windows To Go Creator 的包源文件夹的大小。  
+
+    -   **最大允许运行时间(分钟)**：指定预计程序在客户端计算机上运行的最长时间。 默认情况下，此值设置为 120 分钟。  
 
         > [!IMPORTANT]  
-        >  如果使用維護期間作為此程式執行的集合，則若 [允許的執行時間上限]  比排程的維護期間長，便會發生衝突。 如果執行時間上限設為 [未知] ，則會在維護期間啟動，但會在維護期間關閉後繼續執行直到完成或失敗為止。 如果您將執行時間上限設定為超過任何維護期間的特定時間長度 (未設定 [未知])，則該程式將不會執行。  
+        >  当你使用此程序运行的维护时段进行收集时，如果“最大允许运行时间”  大于计划的维护时段，就可能出现冲突。 如果最大运行时间设置为“未知” ，程序将在维护时段启动，会继续运行到维护时段结束后完成或失败。 如果你将最大运行时间设置为特定时段（没有设置为“未知”），此时段大于任何可用维护时段的长度，那么程序就不会运行。  
 
         > [!NOTE]  
-        >  如果此值設定為 [未知]，Configuration Manager 會將允許的執行時間上限設定為 12 小時 (720 分鐘)。  
+        >  如果值设置为“未知”，则 Configuration Manager 会将最大允许运行时间设置为 12 小时（720 分钟）。  
 
         > [!NOTE]  
-        >  如果超過執行時間上限 (由使用者設定，或設定為預設值)，Configuration Manager 會在選取 [以系統管理權限執行]，且未在 [標準程式] 頁面選取 [允許使用者檢視程式安裝並與其互動] 時，停止程式。  
+        >  如果超出最大运行时间（无论是由用户设置的值还是默认值），则在“标准程序”页上选中了“使用管理权限运行”而未选择“允许用户查看程序安装并与之交互”时，Configuration Manager 将停止该程序。  
 
-     按 [下一步]  ，並且完成精靈。  
+     单击“下一步”  并完成向导。  
 
-###  <a name="BKMK_UpdateTaskSequence"></a> 更新工作順序以啟用 Windows To Go 的 BitLocker  
- Windows To Go 可在未使用 TPM 的外部可開機磁碟機上，啟用 BitLocker。 因此，您必須使用不同的工具來設定 Windows To Go 磁碟機上的 BitLocker。 若要啟用 BitLocker，您必須在執行 **設定 Windows 和 ConfigMgr** 步驟後，新增動作至工作順序。  
+###  <a name="BKMK_UpdateTaskSequence"></a> 更新任务序列以对 Windows To Go 启用 BitLocker  
+ Windows To Go 在外部可启动驱动器上启用 BitLocker 而不使用 TPM。 因此，必须使用单独的工具在 Windows To Go 驱动器上配置 BitLocker。 要启用 BitLocker，必须在“安装 Windows 和 ConfigMgr”  步骤之后向任务序列添加操作。  
 
 > [!NOTE]  
->  Windows To Go 的 BitLocker 需要使用複雜密碼。 在 [Create prestaged media](#BKMK_CreatePrestagedMedia) 步驟中，您可使用 OSDBitLockerPIN 變數在啟動前置命令中設定複雜密碼。  
+>  适用于 Windows To Go 的 BitLocker 需要密码。 在 [Create prestaged media](#BKMK_CreatePrestagedMedia) 步骤中，你可以使用 OSDBitLockerPIN 变量将密码设置为预启动命令的一部分。  
 
- 利用下列程序更新 Windows 8 工作順序，以啟用 Windows To Go 的 BitLocker。  
+ 使用以下过程更新 Windows 8 任务序列以对 Windows To Go 启用 BitLocker。  
 
-#### <a name="to-update-the-windows-8-task-sequence-to-enable-bitlocker"></a>更新 Windows 8 工作順序以啟用 BitLocker  
+#### <a name="to-update-the-windows-8-task-sequence-to-enable-bitlocker"></a>更新 Windows 8 任务序列以启用 BitLocker  
 
-1.  在 Configuration Manager 主控台中，按一下 [軟體程式庫] 。  
+1.  在 Configuration Manager 控制台中，单击“软件库” 。  
 
-2.  在 [軟體程式庫]  工作區中，展開 [應用程式管理] ，然後按一下 [套件] 。  
+2.  在“软件库”  工作区中，展开“应用程序管理” ，然后单击“包” 。  
 
-3.  在 [首頁]  索引標籤的 [建立]  群組中，按一下 [建立套件] 。  
+3.  在“主页”  选项卡上的“创建”  组中，单击“创建包” 。  
 
-4.  在 [套件]  頁面上，指定套件的名稱和描述。 例如，輸入 **BitLocker for Windows To Go** 作為封裝名稱，並指定 **Package to update BitLocker for Windows To Go** 作為封裝描述。  
+4.  在“包”  页上，指定包的名称和描述。 例如，键入 **BitLocker for Windows To Go** 作为包的名称，并指定 **Package to update BitLocker for Windows To Go** 为包的描述。  
 
-5.  選取 [此套件包含來源檔案] ，指定 Windows To Go 的 BitLocker 工具，然後按 [下一步] 。 BitLocker 工具可於下列位置的任何 Configuration Manager 主要站台伺服器取得：<Configuration Manager 安裝資料夾>\OSD\Tools\WTG\BitLocker\  
+5.  选择“此包包含源文件” ，指定适用于 Windows To Go 的 BitLocker 工具的位置，然后单击“下一步” 。 此 BitLocker 工具在任何 Configuration Manager 主站点服务器上的以下位置中均可用：<ConfigMgrInstallationFolder>\OSD\Tools\WTG\BitLocker\  
 
-6.  在 [程式類型]  頁面上，選取 [不建立程式] 。  
+6.  在“程序类型”  页上，选择“不创建程序” 。  
 
-7.  按 [下一步]  ，並且完成精靈。  
+7.  单击“下一步”  并完成向导。  
 
-8.  在 Configuration Manager 主控台中，按一下 [軟體程式庫] 。  
+8.  在 Configuration Manager 控制台中，单击“软件库” 。  
 
-9. 在 [軟體程式庫]  工作區中，展開 [作業系統] ，然後按一下 [工作順序] 。  
+9. 在“软件库”  工作区中，展开“操作系统” ，然后单击“任务序列” 。  
 
-10. 選取您在預先設置媒體中參照的 Windows 8 工作順序。  
+10. 选择在预留媒体中引用的 Windows 8 任务序列。  
 
-11. 在 [首頁]  索引標籤的 [工作順序]  群組中，按一下 [編輯] 。  
+11. 在“主页”  选项卡上的“任务序列”  组中，单击“编辑” 。  
 
-12. 按一下 [設定 Windows 和 ConfigMgr]  步驟，按一下 [新增] 和 [一般] ，然後按一下 [執行命令列] 。 [執行命令列] 步驟會加在 [設定 Windows 和 ConfigMgr] 步驟之後。  
+12. 依次单击“安装 Windows 和 ConfigMgr”  步骤、“添加” 、“常规” 和“运行命令行” 。 “运行命令行”步骤将添加到“安装 Windows 和 ConfigMgr”步骤之后。  
 
-13. 在 [執行命令列]  步驟的 [內容]  索引標籤上，新增下列各項：  
+13. 在“运行命令行”  步骤的“属性”  选项卡上，添加以下各项：  
 
-    1.  **名稱**：指定命令列的名稱，例如 **Enable BitLocker for Windows To Go**。  
+    1.  **名称**：指定命令行的名称，例如 **Enable BitLocker for Windows To Go**。  
 
-    2.  **命令列**：i386\osdbitlocker_wtg.exe /Enable /pwd:< *None&#124;AD*>  
+    2.  **命令行**：i386\osdbitlocker_wtg.exe /Enable /pwd:< None&#124;AD>  
 
-         參數：  
+         参数：  
 
-        -   /pwd:<None&#124;AD> - 指定 BitLocker 密碼復原模式。 如果您在命令列中使用 /Enable 參數，便需使用此參數。  
+        -   /pwd:<None&#124;AD> - 指定 BitLocker 密码恢复模式。 当你在命令行中使用 /Enable 参数时，需要此参数。  
 
-             選取 [AD]  設定 BitLocker 磁碟機加密，將受到 BitLocker 保護的磁碟機備份復原資訊備份到 Active Directory 網域服務 (AD DS)。 備份受 BitLocker 保護磁碟機的復原密碼，可讓系統管理使用者在磁碟機遭到鎖定時復原該磁碟機。 這麼做可確定屬於企業的加密資料，永遠可由經授權的使用者進行存取。 當您指定 [無] 時，使用者必須負責保存復原密碼或復原金鑰的複本。 如果使用者遺失該資訊或在離開組織前忘了將磁碟機解密，系統管理員便無法輕易存取磁碟機。  
+             选择“AD”  以将 BitLocker 驱动器加密配置为将 BitLocker 保护的驱动器的恢复信息备份到 Active Directory 域服务 (AD DS)。 通过为 BitLocker 保护的驱动器备份恢复密码，管理用户可以在驱动器被锁定的情况下恢复驱动器。 这样可确保授权的用户始终可以访问属于企业的加密数据。 如果指定“无” ，则用户负责保留恢复密码或恢复密钥的副本。 如果用户丢失该信息，或者在离开组织之前忽略了解密驱动器，则管理用户无法轻松地访问驱动器。  
 
-        -   /wait:<TRUE&#124;FALSE> - 指定是否要等完成加密後，再完成工作順序。  
+        -   /wait:<TRUE&#124;FALSE> - 指定任务序列在完成之前是否等待加密完成。  
 
-    3.  選取 [套件] ，然後指定您在此程序開始時所建立的套件。  
+    3.  选择“包” ，然后指定在此过程之初创建的包。  
 
-    4.  在 [選項]  索引標籤上，新增下列條件：  
+    4.  在“选项”  选项卡上，添加以下条件：  
 
-        -   條件 = Task Sequence Variable  
+        -   条件 = 任务序列变量  
 
-        -   變數 = _SMSTSWTG  
+        -   变量 = _SMSTSWTG  
 
-        -   條件 = Equals  
+        -   条件 = 等于  
 
         -   值 = True  
 
     > [!NOTE]  
-    >  可能是在新命令列步驟之後的 [啟用 BitLocker]  步驟，不會用來啟用 Windows To Go 的 BitLocker。 不過，您可以在工作順序中保留此步驟，以便在不使用 Windows To Go 磁碟機的 Windows 8 部署中使用。  
+    >  “启用 BitLocker”  步骤可能在新命令行步骤之后，并且不用于为 Windows To Go 启用 BitLocker。 但是，你可以在任务序列中保留此步骤，以用于不使用 Windows To Go 驱动器的 Windows 8 部署。  
 
-###  <a name="BKMK_Deployments"></a> 部署 Windows To Go Creator 套件和工作順序  
- Windows To Go 是一個混合部署程序。 因此，您必須部署 Windows To Go Creator 套件和 Windows 8 工作順序。 利用下列程序完成部署程序。  
+###  <a name="BKMK_Deployments"></a> 部署 Windows To Go Creator 包和任务序列  
+ Windows To Go 是混合部署过程。 因此，你必须部署 Windows To Go Creator 包和 Windows 8 任务序列。 使用以下过程来完成部署过程。  
 
-#### <a name="to-deploy-the-windows-to-go-creator-package"></a>部署 Windows To Go Creator 套件  
+#### <a name="to-deploy-the-windows-to-go-creator-package"></a>部署 Windows To Go Creator 包  
 
-1.  在 Configuration Manager 主控台中，按一下 [軟體程式庫] 。  
+1.  在 Configuration Manager 控制台中，单击“软件库” 。  
 
-2.  在 [軟體程式庫]  工作區中，展開 [應用程式管理] ，然後按一下 [套件] 。  
+2.  在“软件库”  工作区中，展开“应用程序管理” ，然后单击“包” 。  
 
-3.  選取您在 [建立 Windows To Go Creator 套件](#BKMK_CreatePackage) 步驟建立的 Windows To Go 套件。  
+3.  选择在 [创建 Windows To Go Creator 包](#BKMK_CreatePackage) 步骤中创建的 Windows To Go 包。  
 
-4.  在 [首頁]  索引標籤的 [部署]  群組中，按一下 [部署] 。  
+4.  在“主页”  选项卡上的“部署”  组中，单击“部署” 。  
 
-5.  在 [一般]  頁面上，指定以下設定：  
+5.  在“常规”  页上，指定下列设置：  
 
-    1.  **軟體**：確認已選取 Windows To Go 封裝。  
+    1.  “软件”：验证是否已选中 Windows To Go 包。  
 
-    2.  **集合**：按一下 [瀏覽]  以選取要部署 Windows To Go 封裝的集合。  
+    2.  “集合”：单击“浏览”  以选择要将 Windows To Go 包部署到的集合。  
 
-    3.  **使用與此集合相關聯的預設發佈點群組**：如果您想要將封裝內容儲存在集合預設發佈點群組中，請選取此選項。 如果您還沒有為所選的集合及發佈點群組建立關聯，將無法使用此選項。  
+    3.  “使用与此集合关联的默认分发点组”：如果你想将包内容存储在集合默认分发点组中，请选择此选项。 如果未将所选集合与分发点组关联，则此选项将不可用。  
 
-6.  在 [內容]  頁面按一下 [新增]  ，然後選取要部署與此套件及程式相關聯之內容的發佈點或發佈點群組。  
+6.  在“内容”  页上，单击“添加”  ，然后选择要将与此包和程序关联的内容部署到的分发点或分发点组。  
 
-7.  在 [部署設定]  頁面上，針對部署類型選取 [可用]  ，然後按 [下一步] 。  
+7.  在“部署设置”  页上，为部署类型选择“可用”  ，然后单击“下一步” 。  
 
-8.  在 [排程] 上，設定此套件和程式的部署時間，或可供用戶端裝置使用的時間。  
+8.  在“计划” 上，配置将部署此包和程序或将其提供给客户端设备的时间。  
 
-     此頁面上的選項會因部署動作設定為 [可用]  或 [必要] 而有所不同。  
+     视部署操作设置为“可用”  还是“必需” 而定，此页上的选项将有所不同。  
 
-9. 在 [排程] 上，設定下列設定，然後按 [下一步] 。  
+9. 在“计划” 上，配置以下设置，然后单击“下一步” 。  
 
-    1.  **排程此部署的可用時間**：指定可在目的地電腦上執行封裝和程式的日期和時間。 當您選取 [UTC] 時，此設定可確保套件及程式會根據目的地電腦的當地時間，於相同的時間 (而不是不同的時間) 提供給多部目的地電腦使用。  
+    1.  **计划此部署将在何时变为可用**：指定包和程序在目标计算机上可以运行的日期和时间。 如果选中“UTC” ，则此设置可以确保包和程序按照目标计算机上的本地时间同时（而不是在不同时间）可用于多个目标计算机。  
 
-    2.  **排程此部署的到期時間**：指定目的地電腦上封裝和程式到期的日期和時間。 當您選取 [UTC] 時，此設定可確保工作順序會根據目的地電腦的當地時間，於相同的時間 (而不是不同的時間) 在目的地電腦上到期。  
+    2.  **计划此部署将在何时过期**：指定包和程序在目标计算机上过期的日期和时间。 如果选中“UTC” ，则此设置确保任务序列按照目标计算机上的本地时间同时（而不是在不同时间）在多台目标计算机上过期。  
 
-10. 在精靈的 [使用者經驗]  頁面上，指定以下資訊：  
+10. 在向导的“用户体验”  页上，指定下列信息：  
 
-    -   **軟體安裝**：允許在任何已設定的維護期間以外的時間安裝軟體。  
+    -   “软件安装”：允许在任何已配置维护时段外安装软件。  
 
-    -   **系統重新啟動 (如果是完成安裝所需)**：允許在軟體安裝需要時，於設定的維護期間以外的時間重新啟動裝置。  
+    -   “系统重新启动（如果要求完成安装）”：当软件安装需要时，允许在已配置的维护时段之外重新启动设备。  
 
-    -   **Embedded 裝置**：將封裝和程式部署到啟用寫入篩選器的 Windows Embedded 裝置時，您可以指定在暫時重疊上安裝封裝和程式，並於稍後再認可變更，或是在安裝期限或維護期間認可變更。 當您在安裝期限或維護期間認可變更時，需要重新啟動裝置才能保存裝置的變更。  
+    -   “嵌入式设备”：将包和程序部署到启用了写入筛选器的 Windows 嵌入式设备时，你可以指定将包和程序安装在临时覆盖区上并稍后提交更改，或者在安装截止时或在维护时段内提交更改。 如果在安装截止时或在维护时段内提交更改，则需要重新启动，而且更改将保留在设备上。  
 
-11. 在 [發佈點]  頁面上，指定下列資訊：  
+11. 在“分发点”  页上，指定下列信息：  
 
-    -   **部署選項** ：指定 [從發佈點下載內容並在本機執行] 。  
+    -   “部署选项”： 指定“从分发点下载内容并本地运行” 。  
 
-    -   **允許用戶端與同一個子網路上的其他用戶端共用內容**：選取這個選項，以允許用戶端從已下載且快取內容的網路上的其他用戶端下載內容以降低網路的負載。 此選項會利用 Windows BranchCache，可以在執行 Windows Vista SP2 以及更新版本的電腦上使用。  
+    -   **允许客户端与同一子网上的其他客户端共享内容**：选择此选项，通过允许客户端从网络上已下载并缓存了内容的其他客户端下载内容来减轻网络上的负载。 此选项使用 Windows BranchCache 并且可以在运行 Windows Vista SP2 和更高版本的计算机上使用。  
 
-    -   **允許用戶端使用內容的後援來源位置**：指定是否允許用戶端進行後援，並且在內容於慣用好發佈點上不可用時，使用非慣用發佈點作為內容的來源位置。  
+    -   **所有客户端使用内容的回退源位置**：指定是否允许客户端在首选分发点上没有内容时回退并使用非首选分发点作为内容的源位置。  
 
-12. 完成精靈。  
+12. 完成向导。  
 
-#### <a name="to-deploy-the-windows-8-task-sequence"></a>若要部署 Windows 8 工作順序  
+#### <a name="to-deploy-the-windows-8-task-sequence"></a>部署 Windows 8 任务序列  
 
-1.  在 Configuration Manager 主控台中，按一下 [軟體程式庫] 。  
+1.  在 Configuration Manager 控制台中，单击“软件库” 。  
 
-2.  在 [軟體程式庫]  工作區中，展開 [作業系統] ，然後按一下 [工作順序] 。  
+2.  在“软件库”  工作区中，展开“操作系统” ，然后单击“任务序列” 。  
 
-3.  選取您在 [Prerequisites to provision Windows To Go](#BKMK_Prereqs) 步驟中所建立的 Windows 8 工作順序。  
+3.  选择在 [Prerequisites to provision Windows To Go](#BKMK_Prereqs) 步骤中创建的 Windows 8 任务序列。  
 
-4.  在 [首頁]  索引標籤的 [部署]  群組中，按一下 [部署] 。  
+4.  在“主页”  选项卡上的“部署”  组中，单击“部署” 。  
 
-5.  在 [一般]  頁面上，指定以下設定：  
+5.  在“常规”  页上，指定下列设置：  
 
-    1.  **工作順序**：確認選取了 Windows 8 工作順序。  
+    1.  **任务序列**：验证是否选择了 Windows 8 任务序列。  
 
-    2.  **集合**：按一下 [瀏覽]  以選取包含使用者可能佈建 Windows To Go 之所有裝置的集合。  
-
-        > [!IMPORTANT]  
-        >  如果您在 [Create prestaged media](#BKMK_CreatePrestagedMedia) 一節中所建立的預先設置媒體使用 SMSTSPreferredAdvertID 變數，您可以將工作順序佈建到 **所有系統** 集合並且指定 [內容]  頁面上的 [僅限 Windows PE (隱藏)]  設定。 由於工作順序已經隱藏，因此僅可供媒體使用。  
-
-    3.  **使用與此集合相關聯的預設發佈點群組**：如果您想要將封裝內容儲存在集合預設發佈點群組中，請選取此選項。 如果您還沒有為所選的集合及發佈點群組建立關聯，將無法使用此選項。  
-
-6.  在 [部署設定]  頁面上，設定下列設定，然後按 [下一步] 。  
-
-    -   **目的**：選取 [可用] 。 部署工作順序至使用者時，使用者會看見工作順序發佈在「應用程式類別目錄」中，並且可依需求要求該工作順序。 如果部署工作順序至裝置，則使用者會看見工作順序列在「軟體中心」中，並且可依需求安裝該工作順序。  
-
-    -   **提供給下列項目使用**：指定工作順序是否可以使用 Configuration Manager 用戶端、媒體或 PXE。  
+    2.  “集合”：单击“浏览”  ，以选择包含用户可能为其设置 Windows To Go 的所有设备的集合。  
 
         > [!IMPORTANT]  
-        >  為自動工作順序部署使用 [僅媒體和 PXE (隱藏)]  設定。 選取 [允許自動部署作業系統]  並將 SMSTSPreferredAdvertID 變數設為預先設置媒體的一部分，以在偵測到 Windows To Go 磁碟時自動開機至 Windows To Go 部署而不需要使用者互動。 如需這些預先設置媒體設定的詳細資訊，請參閱 [Create prestaged media](#BKMK_CreatePrestagedMedia) 一節。  
+        >  如果你在 [Create prestaged media](#BKMK_CreatePrestagedMedia) 部分中创建的预留媒体使用 SMSTSPreferredAdvertID 变量，则你可以将任务序列部署到“所有系统”  集合，并且可以在“内容”  页上指定“仅 Windows PE (隐藏)”  设置。 由于隐藏了任务序列，因此它将只对媒体可用。  
 
-7.  在 [排程]  頁面上，設定下列設定，然後按 [下一步] 。  
+    3.  “使用与此集合关联的默认分发点组”：如果你想将包内容存储在集合默认分发点组中，请选择此选项。 如果未将所选集合与分发点组关联，则此选项将不可用。  
 
-    1.  **排程此部署的可用時間**：指定工作順序可在目的地電腦上執行的日期和時間。 選取 [UTC] 時，此設定可確保工作順序以目的地電腦的本機時間為根據，在同一時間而非不同時間內由多個目的地電腦使用。  
+6.  在“部署设置”  页上，配置下列设置，然后单击“下一步” 。  
 
-    2.  **排程此部署的到期時間**：指定工作順序在目的地電腦上的到期日期和時間。 當您選取 [UTC] 時，此設定可確保工作順序會根據目的地電腦的當地時間，於相同的時間 (而不是不同的時間) 在目的地電腦上到期。  
+    -   **目的**：选择“可用” 。 将任务序列部署到用户时，用户将在应用程序目录中看到发布的任务序列，并可根据需要请求该任务序列。 如果将任务序列部署到设备，则用户将在软件中心看到该任务序列，并可根据需要安装它。  
 
-8.  在 [使用者經驗]  頁面上，指定下列資訊：  
+    -   **可用于以下项目**：指定任务序列是否可用于 Configuration Manager 客户端、媒体或者 PXE。  
 
-    -   **顯示工作順序進度**：指定 Configuration Manager 用戶端是否顯示工作順序進度。  
+        > [!IMPORTANT]  
+        >  将“仅媒体和 PXE (隐藏)”  设置用于自动化任务序列部署。 选择“允许无人参与的操作系统部署”  ，并将 SMSTSPreferredAdvertID 变量设置为预留媒体的一部分，以让计算机在检测到 Windows To Go 驱动器时在无用户干预的情况下自动启动到 Windows To Go 部署。 有关这些预留媒体设置的详细信息，请参阅 [Create prestaged media](#BKMK_CreatePrestagedMedia) 部分。  
 
-    -   **軟體安裝**：指定是否允許使用者在排程時間後，於設定的維護期間之外安裝軟體。  
+7.  在“计划”  页上，配置下列设置，然后单击“下一步” 。  
 
-    -   **系統重新啟動 (如果是完成安裝所需)**：允許在軟體安裝需要時，於設定的維護期間以外的時間重新啟動裝置。  
+    1.  **计划此部署将在何时变为可用**：指定任务序列在目标计算机上可以运行的日期和时间。 如果选中“UTC” ，则此设置确保任务序列按照目标计算机上的本地时间可以同时（而不是在不同时间）在多台目标计算机上可用。  
 
-    -   **Embedded 裝置**：將封裝和程式部署到啟用寫入篩選器的 Windows Embedded 裝置時，您可以指定在暫時重疊上安裝封裝和程式，並於稍後再認可變更，或是在安裝期限或維護期間認可變更。 當您在安裝期限或維護期間認可變更時，需要重新啟動裝置才能保存裝置的變更。  
+    2.  **计划此部署将在何时过期**：指定任务序列在目标计算机上过期的日期和时间。 如果选中“UTC” ，则此设置确保任务序列按照目标计算机上的本地时间同时（而不是在不同时间）在多台目标计算机上过期。  
 
-    -   **以網際網路為基礎的用戶端**：指定是否允許工作順序在網際網路型用戶端上執行。 此設定不支援如安裝作業系統等軟體的作業。 此選項僅適用於在標準作業系統內執行作業的一般指令碼式工作順序。  
+8.  在“用户体验”  页上，指定下列信息：  
 
-9. 在 [警示]  頁面上，指定您想要這項工作順序部署的警示設定，然後按 [下一步] 。  
+    -   **显示任务序列进度**：指定 Configuration Manager 客户端是否显示任务序列的进度。  
 
-10. 在 [發佈點]  頁面上，指定下列資訊，然後按 [下一步] 。  
+    -   **软件安装**：指定在计划的时间之后是否允许用户在已配置的维护时段之外安装软件。  
 
-    -   **部署選項**：選取 [執行工作順序以視需要將內容下載到本機] 。  
+    -   “系统重新启动（如果要求完成安装）”：当软件安装需要时，允许在已配置的维护时段之外重新启动设备。  
 
-    -   **當沒有本機發佈點可用時，使用遠端發佈點**：指定用戶端是否可在速度慢且不可靠的網路上使用發佈點來下載工作順序所需要的內容。  
+    -   “嵌入式设备”：将包和程序部署到启用了写入筛选器的 Windows 嵌入式设备时，你可以指定将包和程序安装在临时覆盖区上并稍后提交更改，或者在安装截止时或在维护时段内提交更改。 如果在安装截止时或在维护时段内提交更改，则需要重新启动，而且更改将保留在设备上。  
 
-    -   **允許用戶端使用內容的後援來源位置**：
-        - *在 1610 版之前*，您可以選取 [允許內容的後援來源位置] 核取方塊，讓位於這些界限群組以外的用戶端回復，並在沒有其他發佈點可用時，將發佈點當成內容的來源位置使用。
-        - *從 1610 版開始*，您無法再設定 [允許內容的後援來源位置]。  相反地，您可以設定界限群組之間的關聯性，以決定用戶端何時可以開始搜尋其他界限群組中的有效內容來源位置。 
+    -   **基于 Internet 的客户端**：指定是否允许在基于 Internet 的客户端上运行任务序列。 此设置不支持安装诸如操作系统之类的软件的操作。 请将此选项仅用于在标准操作系统中执行操作的基于通用脚本的任务序列。  
 
-11. 完成精靈。  
+9. 在“警报”页上，为此任务序列部署指定所需的警报设置，然后单击“下一步”。  
 
-###  <a name="BKMK_UserExperience"></a> 使用者執行 Windows To Go Creator  
- 部署 Windows To Go 套件與 Windows 8 工作順序後，使用者就可使用 Windows To Go Creator。 如果 Windows To Go Creator 已部署到裝置，使用者可以前往軟體類別目錄或是「軟體中心」並執行 Windows To Go Creator。 下載建立程式套件後，工作列上會顯示閃爍的圖示。 使用者可按一下圖示並使用顯示的對話方塊來選取 Windows To Go 磁碟以進行佈建 (除非使用了磁碟命令列選項)。 如果磁碟不符合 Windows To Go 的需求或是如果磁碟沒有足夠的可用磁碟空間以安裝映像，建立程式就會顯示錯誤訊息。 使用者可以確認將從確認頁面套用的磁碟與映像。 建立程式設定並將內容預先設置到 Windows To Go 磁碟的同時，程式會顯示進度對話方塊。 預先設置作業完成後，建立程式會顯示提示以重新啟動電腦並開機至 Windows To Go 磁碟。  
+10. 在“分发点”  页上，指定以下信息，然后单击“下一步” 。  
+
+    -   **部署选项**：选择“需要时通过运行任务序列本地下载内容” 。  
+
+    -   **在没有本地分发点可用的情况下使用远程分发点**：指定客户端是否可以使用慢速和不可靠网络上的分发点来下载任务序列所需的内容。  
+
+    -   **允许客户端使用内容源位置回退**：
+        - 版本 1610 之前，可选中“允许内容源位置回退”复选框，以便在没有其他分发点可用时让这些边界组外部的客户端回退并使用分发点作为内容的源位置。
+        - 从 1610 版起，用户不能再配置“允许内容源位置回退”。  取而代之的是，可配置边界组之间的关系，以确定客户端何时可以开始搜索有效内容源位置的其他边界组。 
+
+11. 完成向导。  
+
+###  <a name="BKMK_UserExperience"></a> 用户运行 Windows To Go Creator  
+ 在部署 Windows To Go 包和 Windows 8 任务序列之后，用户可以使用 Windows To Go Creator。 用户可以转到软件目录或软件中心（如果 Windows To Go Creator 已部署到设备），然后运行 Windows To Go Creator 程序。 在下载 Creator 包之后，任务栏上会显示一个闪烁的图标。 如果用户单击此图标，则会显示一个对话框，以便让用户选择要设置的 Windows To Go 驱动器（除非使用了 /drive 命令行选项）。 如果驱动器不符合对 Windows To Go 的要求，或者如果驱动器没有足够的可用磁盘空间来安装映像，则 Creator 程序会显示错误消息。 用户可以通过确认页来验证驱动器和将应用的映像。 在 Creator 配置内容并将其预留到 Windows To Go 驱动器时，它会显示进度对话框。 在预留完成后，Creator 会提示重新启动计算机以启动到 Windows To Go 驱动器。  
 
 > [!NOTE]  
->  如果您並未在 [Create a Windows To Go Creator package](#BKMK_CreatePackage) 一節中啟用開機重新導向作為建立程式的一部分，系統可能會要求使用者在每次系統重新啟動時手動開機至 Windows To Go 磁碟。  
+>  如果在 [Create a Windows To Go Creator package](#BKMK_CreatePackage) 部分中没有在 Creator 程序的命令行中启用启动重定向，则用户可能需要在每次系统重新启动时手动启动到 Windows To Go 驱动器。  
 
-###  <a name="BKMK_ConfigureStageDrive"></a> Configuration Manager 設定與設置 Windows To Go 磁碟機  
- 電腦重新啟動至 Windows To Go 磁碟後，磁碟將開機至 Windows PE 並連線至管理點以取得原則來完成作業系統部署。 Configuration Manager 設定與設置磁碟機。 Configuration Manager 設置磁碟後，使用者可以重新啟動電腦以結束佈建程序 (例如加入網域或安裝應用程式)。 此程序對於任何預先設置媒體來說皆為相同。  
+###  <a name="BKMK_ConfigureStageDrive"></a> Configuration Manager 配置和暂存 Windows To Go 驱动器  
+ 在计算机重启到 Windows To Go 驱动器之后，此驱动器将引导到 Windows PE，并连接到管理点以获得策略，以便完成操作系统部署。 Configuration Manager 配置和暂存驱动器。 在 Configuration Manager 暂存此驱动器之后，用户可以重新启动计算机，以完成设置过程（例如加入域或安装应用程序）。 此过程对于任何预留媒体都是相同的。  
 
-###  <a name="BKMK_UserLogsIn"></a> 使用者登入 Windows 8  
- Configuration Manager 完成佈建程序並顯示 Windows 8 鎖定螢幕後，使用者即可登入作業系統。  
+###  <a name="BKMK_UserLogsIn"></a> 用户登录到 Windows 8  
+ 在 Configuration Manager 完成设置过程并且显示 Windows 8 锁屏之后，用户可以登录到操作系统。  

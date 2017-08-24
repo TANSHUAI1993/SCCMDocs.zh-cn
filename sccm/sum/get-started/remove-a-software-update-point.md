@@ -1,6 +1,6 @@
 ---
-title: "移除軟體更新點 | Microsoft Docs"
-description: "請依照此程序，以從站台的 Configuration Manager 主控台移除軟體更新點站台系統角色。"
+title: "删除软件更新点 | Microsoft Docs"
+description: "按照此过程可通过 Configuration Manager 控制台删除站点中的软件更新点站点系统角色。"
 keywords: 
 author: dougeby
 ms.author: dougeby
@@ -14,26 +14,26 @@ ms.assetid: 2486375c-d4a2-4cf2-9124-9bee02bbf173
 ms.openlocfilehash: 22de02c51be3a0cd66b1be0f04b2fbdeb897858c
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-#  <a name="BKMK_RemoveSUP"></a> 移除軟體更新點站台系統角色  
+#  <a name="BKMK_RemoveSUP"></a> 删除软件更新点站点系统角色  
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-您可以從站台的 Configuration Manager 主控台移除軟體更新點站台系統角色。 用戶端原則會更新，並從清單中移除軟體更新點。 當您移除站台上的最後一個軟體更新點時，軟體更新點清單將不會包含任何軟體更新點，而實際上該站台的軟體更新會停用。 當主要站台上有超過一個軟體更新點，而且您移除設定為同步處理來源的軟體更新點時，就必須在站台上選擇另一個軟體更新點作為新的同步處理來源。  
+可以通过 Configuration Manager 控制台删除站点中的软件更新点站点系统角色。 客户端策略将更新，以便从列表中删除软件更新点。 在删除站点中的最后一个软件更新点时，软件更新点列表将不包含软件更新点，而且实质上将在站点中禁用软件更新。 如果主站点中有多个软件更新点，而且你删除了配置为同步源的软件更新点，则必须将站点中的另一个软件更新点选为新的同步源。  
 
 > [!NOTE]  
->  您從站台系統移除軟體更新點站台角色時，請至少稍候 15 分鐘，再重新安裝軟體更新點站台角色。  
+>  从站点系统中删除软件更新点站点角色时，请等待至少 15 分钟，然后再重新安装软件更新点站点角色。  
 
- 利用下列程序移除軟體更新點。  
+ 使用下列过程来删除软件更新点。  
 
-#### <a name="to-remove-the-software-update-point"></a>若要移除軟體更新點  
+#### <a name="to-remove-the-software-update-point"></a>删除软件更新点  
 
-1.  在 **Configuration Manager** 主控台中，按一下 [系統管理] 。  
+1.  在“Configuration Manager”  控制台中，单击“管理” 。  
 
-2.  在 [系統管理] 工作區中，展開 [站台設定] ，然後按一下 [伺服器和站台系統角色] 。  
+2.  在“管理”工作区中，展开“站点配置” ，然后单击“服务器和站点系统角色” 。  
 
-3.  選取包含要移除之軟體更新點的站台系統伺服器，然後在 [站台系統角色] 中選取 [軟體更新點] 。  
+3.  选择带有要删除的软件更新点的站点系统服务器，然后在“站点系统角色” 中选择“软件更新点” 。  
 
-4.  在 [站台角色]  索引標籤的 [站台角色]  群組中，按一下 [移除角色] 。 確認您想要移除軟體更新點，或為站台的其他軟體更新點選取新的同步處理來源。  
+4.  在“站点角色”  选项卡上的“站点角色”  组中，单击“删除角色” 。 确认要删除软件更新点，或者在该站点为其他软件更新点选择新的同步源。  

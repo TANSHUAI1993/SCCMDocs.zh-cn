@@ -1,8 +1,8 @@
-## <a name="microsoft-open-source-code-of-conduct"></a>Microsoft 開放原始碼管理辦法
+## <a name="microsoft-open-source-code-of-conduct"></a>Microsoft 开源行为准则
 
-此專案已採用 [Microsoft 開放原始碼管理辦法 (英文)](https://opensource.microsoft.com/codeofconduct/)。
-如需詳細資訊，請參閱[管理辦法常見問題集 (英文)](https://opensource.microsoft.com/codeofconduct/faq/)，如果有任何其他問題或意見，請連絡 [opencode@microsoft.com](mailto:opencode@microsoft.com)。 
+此项目采用了 [Microsoft 开源行为准则](https://opensource.microsoft.com/codeofconduct/)。
+有关更多信息，请参阅[行为准则常见问题解答](https://opensource.microsoft.com/codeofconduct/faq/)，或者就任何其他问题或意见与 [opencode@microsoft.com](mailto:opencode@microsoft.com) 联系。 
 
-# <a name="docsmicrosoftcom-github-repository"></a>Docs.microsoft.com 的 Github 存放庫
+# <a name="docsmicrosoftcom-github-repository"></a>Docs.microsoft.com Github 存储库
 
-您已找到存放發行至 [https://docs.microsoft.com](https://docs.microsoft.com/.) (Microsoft 雲端與企業部門之技術內容的所在) 之內容來源檔案的其中一個 GitHub 存放庫。
+你已经找到了一个 GitHub 存储库，其中包含已发布到 [https://docs.microsoft.com](https://docs.microsoft.com/.) 的内容源，这是 Microsoft 云和企业部门的所有技术内容的根源。

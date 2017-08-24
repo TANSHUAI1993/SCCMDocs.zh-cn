@@ -1,6 +1,6 @@
 ---
 title: Updates Publisher | Microsoft Docs
-description: "使用 System Center Updates Publisher 以管理自訂更新"
+description: "使用 System Center Updates Publisher 管理自定义更新"
 ms.custom: na
 ms.date: 4/29/2017
 ms.prod: configuration-manager
@@ -18,49 +18,49 @@ robots: NOINDEX, NOFOLLOW
 ms.openlocfilehash: f4951c204b32da58174b94a539b380c278fa9756
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="system-center-updates-publisher"></a>System Center 更新發行者
+# <a name="system-center-updates-publisher"></a>System Center Updates Publisher
 
-*適用於：System Center Updates Publisher*
+*适用范围：System Center Updates Publisher*
 
-System Center Updates Publisher (Updates Publisher) 是一個獨立的工具，可讓獨立軟體廠商或企業營運應用程式開發人員管理自訂更新。 這包含具有相依性的更新 (例如驅動程式和更新配套)。
+System Center Updates Publisher (Updates Publisher) 是一款独立工具，可方便独立软件供应商或业务线应用程序开发者管理自定义更新。 这包括具有依赖项的更新，如驱动程序和更新捆绑包。
 
-Updates Publisher 可用於：
+使用 Updates Publisher，可以执行下列操作：
 
--   從外部目錄 (非 Microsoft 的更新目錄) 匯入更新。
--   修改更新定義，包括適用性及部署中繼資料。
--   將更新匯出至外部目錄。
--   將更新發行至更新伺服器。
+-   导入外部目录（非 Microsoft 更新目录）中的更新。
+-   修改更新定义（包括适用性和部署元数据）。
+-   将更新导出到外部目录中。
+-   将更新发布到更新服务器。
 
-將更新發行到更新伺服器之後，您便可以使用 System Center Configuration Manager 來偵測那些更新，並將它們部署至受管理的裝置。
+将更新发布到更新服务器后，可以使用 System Center Configuration Manager 检测这些更新，并将其部署到受管理设备中。
 
 > [!TIP]  
-> 目前仍持續支援舊版的 [System Center Updates Publisher 2011 (英文)](http://go.microsoft.com/fwlink/?LinkId=848111)。 此更新版本保留相同的功能，但能支援額外的作業系統、提供可簡化某些作業的新功能，並有更新的使用者介面。
+> 旧版 [System Center Updates Publisher 2011](http://go.microsoft.com/fwlink/?LinkId=848111) 仍受支持。 此更新版保留了相同的功能，区别在于支持其他操作系统，新增了可简化某些任务的功能，并更新了用户界面。
 
-## <a name="workspaces"></a>工作區
-當您開啟 Updates Publisher 時，預設會顯示 [更新工作區] 的 [概觀] 節點。
+## <a name="workspaces"></a>工作区
+打开 Updates Publisher 时，默认打开的是“更新工作区”的“概述”节点。
 
-![Updates Publisher 主控台](media/console1.png)   
-
-
-Updates Publisher 具有四個工作區來協助整理其功能。
+![Updates Publisher 控制台](media/console1.png)   
 
 
-**更新工作區：**使用此工作區來[建立](/sccm/sum/tools/create-updates-with-updates-publisher)及[管理](/sccm/sum/tools/manage-updates-with-updates-publisher)軟體更新和更新配套。 這包含將更新和配套指派至發行集，以及發行和匯出至另一個 Updates Publisher 存放庫。
-
-**發行集工作區：**這是您[管理發行集](/sccm/sum/tools/updates-publisher-publications)的位置。 發行集是您所建立之更新的群組，以簡化更新的匯出及發行。
-
-管理發行集包括將更新發行到伺服器，來讓用戶端可以尋找並安裝更新、匯出更新和配套以供另一個 Updates Publisher 安裝使用，或是修改發行集的內容或詳細資料。
+Updates Publisher 有四个工作区，可方便整理。
 
 
+**更新工作区：**使用此工作区可[创建](/sccm/sum/tools/create-updates-with-updates-publisher)和[管理](/sccm/sum/tools/manage-updates-with-updates-publisher)软件更新和更新捆绑包。 这包括将更新和捆绑包分配给发布项、发布它们，以及将它们导出到其他 Updates Publisher 存储库中。
 
-**規則工作區：**您可以在此[管理適用性規則](/sccm/sum/tools/updates-publisher-applicability-rules)並儲存它們，然後搭配您部署的更新使用。 規則有兩種：
+**发布项工作区：**可以在其中[管理发布项](/sccm/sum/tools/updates-publisher-publications)。 发布项是创建的一组更新，以便于简化更新的导出和发布。
 
--   可安裝的規則 - 這些規則可協助判斷用戶端是否應安裝更新。
--   已安裝的規則 - 這些規則會驗證更新是否已安裝。
+管理发布项包括将更新发布到服务器以便客户端能够查找和安装更新、导出更新和捆绑包以供其他 Updates Publisher 安装项使用，或修改发布项的内容或详细信息。
 
-**目錄工作區：**使用此工作區來新增及[管理軟體更新目錄](/sccm/sum/tools/updates-publisher-catalogs)。 這包含將軟體更新從那些目錄匯入到 Updates Publisher 存放庫。
-## <a name="first-steps"></a>第一步
-若要開始使用，請先[安裝](/sccm/sum/tools/install-updates-publisher) Updates Publisher，然後[設定 Updates Publisher 的選項](/sccm/sum/tools/updates-publisher-options)。
+
+
+**规则工作区：**可以在其中[管理适用性规则](/sccm/sum/tools/updates-publisher-applicability-rules)，此类规则可以进行保存，随后与部署的更新结合使用。 规则分为两种类型：
+
+-   可安装规则 - 此类规则有助于确定客户端是否应安装更新。
+-   已安装规则 - 此类规则可验证更新是否已安装。
+
+**目录工作区：**使用此工作区可添加和[管理软件更新目录](/sccm/sum/tools/updates-publisher-catalogs)。 这包括将目录中的软件更新导入 Updates Publisher 存储库。
+## <a name="first-steps"></a>前几个步骤
+首先进行[安装](/sccm/sum/tools/install-updates-publisher)，然后为 Updates Publisher [配置选项](/sccm/sum/tools/updates-publisher-options)。

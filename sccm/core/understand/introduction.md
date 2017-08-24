@@ -1,6 +1,6 @@
 ---
-title: "簡介 | Microsoft Docs"
-description: "了解 System Center Configuration Manager 的簡介基本資訊。"
+title: "简介 | Microsoft Docs"
+description: "获取基本信息，作为对 System Center Configuration Manager 的简介。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -17,204 +17,204 @@ manager: angrobe
 ms.openlocfilehash: 76f907b17df0dd2f102e34ca3cfb3ffc813c0004
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="introduction-to-system-center-configuration-manager"></a>Introduction to System Center Configuration Manager (System Center Configuration Manager 簡介)
+# <a name="introduction-to-system-center-configuration-manager"></a>System Center Configuration Manager 简介
 
-適用於：System Center Configuration Manager (最新分支)
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager (Microsoft System Center 管理解決方案套件中的產品) 可協助您在內部部署和雲端中管理裝置和使用者。  
+System Center Configuration Manager 作为 Microsoft System Center 管理解决方案套件中的一种产品，有助于在本地和云中管理设备和用户。  
 
-**您可以使用 Configuration Manager 協助：**   
--   透過減少手動工作，並讓您專注於高價值專案，來提高 IT 生產力與效率。  
--   最大化硬體和軟體投資。  
--   適時提供正確的軟體，來加強使用者產能。  
+**使用 Configuration Manager 有助于：**   
+-   减少手动任务并让你专注处理高价值项目，从而提高 IT 工作效率和效率。  
+-   最大程度实现硬件和软件投资。  
+-   在适当时间提供正确的软件，从而提高用户的工作效率。  
 
-**Configuration Manager 可協助您提供更高效益的 IT 服務，方法是啟用：**  
+**Configuration Manager 可实现以下各项，帮助提供更有效的 IT 服务：**  
 
--   安全且可擴充的軟體部署。  
--   合規性設定管理。  
--   伺服器、桌上型電腦、膝上型電腦和行動裝置的全面性資產管理。  
+-   安全和可伸缩的软件部署。  
+-   符合性设置管理。  
+-   服务器、台式计算机、笔记本电脑和移动设备的全面资产管理。  
 
-**可擴充並與現有的 Microsoft 技術和解決方案搭配使用。**  
+**Configuration Manager 扩展现有的 Microsoft 技术和解决方案并与之协同工作。**  
 
-例如，Configuration Manager 可整合：  
+例如，Configuration Manager 可与以下各项集成：  
 
--   Microsoft Intune 以管理各種行動裝置平台。  
--   Windows Server Update Services (WSUS) 來管理軟體更新。  
--   憑證服務。  
+-   Microsoft Intune，管理各种移动设备平台。  
+-   Windows Server 更新服务 (WSUS)，管理软件更新。  
+-   证书服务。  
 -   Exchange Server 和 Exchange Online。  
--   Windows 群組原則。
+-   Windows 组策略。
 -   DNS。   
--   Windows Automated Deployment Kit (Windows ADK) 和使用者狀態移轉工具 (USMT)。  
--   Windows 部署服務 (WDS)。  
--   遠端桌面和遠端協助。  
+-   Windows 自动部署工具包 (Windows ADK) 和用户状态迁移工具 (USMT)。  
+-   Windows 部署服务 (WDS)。  
+-   远程桌面和远程协助。  
 
-Configuration Manager 也會使用：  
+Configuration Manager 也可使用：  
 
--   Active Directory 網域服務提供安全性、服務位置和組態，以及探索您要管理的使用者和裝置。  
--   Microsoft SQL Server 作為分散式變更管理資料庫，並與 SQL Server Reporting Services (SSRS) 整合以產生報告，用來管理及追蹤管理活動。  
--   擴充管理功能並使用 Internet Information Services (IIS) 的 Web 服務的站台系統角色。
--   背景智慧型傳送服務 (BITS) 和 BranchCache 可協助管理可用的網路頻寬。  
+-   Active Directory 域服务来获得安全性、服务定位和配置，并使用它来发现要管理的用户和设备。  
+-   Microsoft SQL Server 作为分布式变更管理数据库，并与 SQL Server Reporting Services (SSRS) 集成以生成报表来监视和跟踪管理活动。  
+-   站点系统角色，可扩展管理功能并使用 Internet Information Services (IIS) 的 Web 服务。
+-   后台智能传输服务 (BITS) 和 BranchCache 来帮助管理可用的网络带宽。  
 
-若要成功運用 Configuration Manager，您必須先徹底規劃並測試管理功能，再於生產環境中使用 Configuration Manager。 Configuration Manager 是功能強大的管理應用程式，因此可能會影響組織中的每一部電腦。 若您部署及管理 Configuration Manager 時仔細規劃並考量業務需求，Configuration Manager 就能減少您的系統管理負荷與整體擁有成本。  
+若要成功使用 Configuration Manager，必须首先全面规划和测试管理功能，之后才在生产环境中使用 Configuration Manager。 Configuration Manager 是一款功能强大的管理应用程序，可能会潜在地影响组织中的每台计算机。 如果在部署和管理 Configuration Manager 时经过了仔细规划并考虑了业务要求，Configuration Manager 可降低管理开销和总拥有成本。  
 
-請使用下列主題以及本主題的其他各節，深入了解 Configuration Manager。  
+请参阅以下主题以及本主题中的其他部分来详细了解 Configuration Manager。  
 
 
-**本文件庫中的相關主題：**  
+**本文档库中的相关主题：**  
 
--   [System Center Configuration Manager 的功能](../../core/plan-design/changes/features-and-capabilities.md)  
--   [選擇 System Center Configuration Manager 的裝置管理解決方案](../../core/plan-design/choose-a-device-management-solution.md)  
--   [System Center Configuration Manager 和 System Center 2012 Configuration Manager 之間的變更](../../core/plan-design/changes/what-has-changed-from-configuration-manager-2012.md)
--   [System Center Configuration Manager 的基礎](../../core/understand/fundamentals.md)  
--   [建置專屬實驗室環境來評估 System Center Configuration Manager](/sccm/core/get-started/set-up-your-lab)
--   [尋找使用 System Center Configuration Manager 的說明](../../core/understand/find-help.md)  
--   [System Center Configuration Manager 的已移除和已淘汰功能](../../core/plan-design/changes/removed-and-deprecated-features.md)  
+-   [System Center Configuration Manager 的特性和功能](../../core/plan-design/changes/features-and-capabilities.md)  
+-   [为 System Center Configuration Manager 选择设备管理解决方案](../../core/plan-design/choose-a-device-management-solution.md)  
+-   [自 System Center 2012 Configuration Manager 以来 System Center Configuration Manager 中更改的内容](../../core/plan-design/changes/what-has-changed-from-configuration-manager-2012.md)
+-   [System Center Configuration Manager 基础知识](../../core/understand/fundamentals.md)  
+-   [通过构建自己的实验室环境来评估 System Center Configuration Manager](/sccm/core/get-started/set-up-your-lab)
+-   [查找使用 System Center Configuration Manager 的帮助](../../core/understand/find-help.md)  
+-   [System Center Configuration Manager 中已删除和已弃用的功能](../../core/plan-design/changes/removed-and-deprecated-features.md)  
 
-##  <a name="BKMK_Console"></a> Configuration Manager 主控台  
- 在您安裝 Configuration Manager 之後，可使用 Configuration Manager 主控台設定站台和用戶端，並執行和監視管理工作。 此主控台是主要系統管理點，可讓您管理多個網站。  
+##  <a name="BKMK_Console"></a> Configuration Manager 控制台  
+ 安装 Configuration Manager 后，使用 Configuration Manager 控制台来配置站点和客户端，以及运行和监视管理任务。 此控制台是主要管理位置，并允许你管理多个站点。  
 
- 您可以使用主控台執行次要主控台，以支援特定用戶端管理工作，例如：  
+ 你可以使用控制台来运行对特定客户端管理任务提供支持的辅助控制台，如：  
 
--   **資源總管**，可檢視硬體和軟體清查資訊。  
--   **遠端控制**，可從遠端連線至用戶端電腦執行疑難排解工作。  
+-   **资源浏览器**，用于查看硬件和软件清单信息。  
+-   **远程控制**，用于远程连接到客户端计算机以执行故障排除任务。  
 
-您可以在其他電腦上安裝 Configuration Manager 主控台，並使用以 Configuration Manager 角色為基礎的系統管理來限制存取權，以及系統管理使用者可以在主控台中查看哪些項目。  
+可在其他计算机上安装 Configuration Manager 控制台，并且通过使用基于 Configuration Manager 角色的管理，限制访问并限制管理用户可以在控制台中看到的内容。  
 
-如需詳細資訊，請參閱[安裝 System Center Configuration Manager 主控台](../../core/servers/deploy/install/install-consoles.md)。
+有关详细信息，请参阅[安装 System Center Configuration Manager 控制台](../../core/servers/deploy/install/install-consoles.md)。
 
-##  <a name="BKMK_ApplicationCatalog"></a> 應用程式類別目錄、軟體中心和公司入口網站  
- **「應用程式類別目錄」** 是一個網站，使用者可在該網站上瀏覽，針對其 Windows 電腦要求軟體。 若要使用「應用程式類別目錄」，您必須為站台安裝「應用程式類別目錄」Web 服務點和「應用程式類別目錄」網站點。  
+##  <a name="BKMK_ApplicationCatalog"></a> 应用程序目录、软件中心和公司门户  
+ **应用程序目录** 是一个网站，用户可在其中浏览并请求适用于基于 Windows 的电脑的软件。 要使用应用程序目录，你必须为站点安装应用程序目录 Web 服务点和应用程序目录网站点。  
 
- **「軟體中心」**是一種應用程式，其會在 Windows 電腦安裝 Configuration Manager 用戶端時一併安裝。 使用者會執行此應用程式來要求軟體，以及管理 Configuration Manager 部署給他們的軟體。 「軟體中心」可讓使用者執行下列作業：  
+ **软件中心**是在基于 Windows 的计算机上安装 Configuration Manager 客户端时所安装的一个应用程序。 用户运行此应用程序来请求软件，并管理 Configuration Manager 为其部署的软件。 软件中心使用户能够执行下列操作：  
 
--   從「應用程式類別目錄」瀏覽及安裝軟體。  
--   檢視其軟體要求歷程記錄。  
--   設定 Configuration Manager 可以在何時將軟體安裝在裝置上。  
--   如果系統管理使用者啟用遠端控制，則可以設定遠端控制的存取設定。  
+-   从应用程序目录中浏览和安装软件。  
+-   查看其软件请求历史记录。  
+-   配置 Configuration Manager 在设备上安装软件的时间。  
+-   配置远程控制的访问权限设置（如果管理用户启用了远程控制）。  
 
-**公司入口網站**是一個提供與「應用程式類別目錄」類似功能的應用程式或網站，但不適用於以 Microsoft Intune 註冊的行動裝置。  
+**公司门户**是一个应用或网站，提供与应用程序目录类似的功能，但适用于通过 Microsoft Intune 注册的移动设备。  
 
-如需詳細資訊，請參閱[開始使用 System Center Configuration Manager 的應用程式管理](../../apps/understand/introduction-to-application-management.md)。  
+有关详细信息，请参阅 [System Center Configuration Manager 中的应用程序管理入门](../../apps/understand/introduction-to-application-management.md)。  
 
-###  <a name="BKMK_Client"></a> Configuration Manager 內容 (在 Windows 電腦上)  
- 在 Windows 電腦上安裝 Configuration Manager 用戶端時，會將 Configuration Manager 安裝在控制台中。 因為用戶端設定是在 Configuration Manager 主控台中執行，所以通常您不需要設定此應用程式。 此應用程式可幫助系統管理使用者和技術服務人員解決個別用戶端的問題。  
+###  <a name="BKMK_Client"></a> Configuration Manager 属性（在 Windows 电脑上）  
+ 在 Windows 计算机上安装 Configuration Manager 客户端时，将在控制面板中安装 Configuration Manager。 通常，不必配置此应用程序，因为客户端配置是在 Configuration Manager 控制台中执行的。 此应用程序可帮助管理用户和技术支持排除个别客户端的问题。  
 
- 如需用戶端部署的詳細資訊，請參閱 [System Center Configuration Manager 中的用戶端安裝方法](../../core/clients/deploy/plan/client-installation-methods.md)。  
+ 有关客户端部署的详细信息，请参阅 [System Center Configuration Manager 中的客户端安装方法](../../core/clients/deploy/plan/client-installation-methods.md)。  
 
-##  <a name="BKMK_ExampleScenarios"></a> Configuration Manager 的範例案例  
- 下列範例案例示範 Trey Research 這家公司如何使用 System Center Configuration Manager，讓使用者能夠：  
+##  <a name="BKMK_ExampleScenarios"></a> Configuration Manager 的示例方案  
+ 以下示例方案演示名为 Trey Research 的公司如何使用 System Center Configuration Manager 来使用户：  
 
--   更具生產力。  
--   統一裝置的合規性管理，以提供更流暢的系統管理體驗。
--   簡化裝置管理以降低 IT 作業成本。  
+-   工作效率更高。  
+-   统一设备的符合性管理以获得更流畅的管理体验。
+-   简化设备管理以降低 IT 运营成本。  
 
-在所有案例中，Adam 是 Configuration Manager 的主要系統管理員。  
+在所有方案中，Adam 是 Configuration Manager 的主要管理员。  
 
-###  <a name="BKMK_ScenarioEmpower"></a> 範例案例：確保使用者能夠從任何裝置存取應用程式  
- Trey Research 想要確保員工能夠而且盡可能有效率地存取需要的應用程式。 Adam 將這些公司需求對應到下列案例：  
+###  <a name="BKMK_ScenarioEmpower"></a>示例方案：通过确保从任何设备访问应用程序来提高用户的工作效率  
+ Trey Research 希望确保员工能够尽可能高效地访问所需的应用程序。 Adam 将这些公司要求映射到以下方案：  
 
-|需求|目前的用戶端管理狀態|未來的用戶端管理狀態|  
+|要求|当前客户端管理状态|将来的客户端管理状态|  
 |-----------------|-------------------------------------|------------------------------------|  
-|新員工一上任就能有效率地執行工作。|當員工進入公司時，初次登入後需等候安裝應用程式。|當員工進入公司時，一登入，應用程式就已安裝且立即可用。|  
-|員工可快速且輕鬆地要求其他需要的軟體。|員工需要其他應用程式時，就會向技術支援人員提出票證。 然後，他們通常會等待兩天來處理票證以及安裝應用程式。|員工需要其他應用程式時，可以從網站要求它們。 如果沒有授權限制，則會立即安裝它們。 如果有授權限制，使用者必須先請求核准，才能安裝應用程式。<br /><br /> 網站只會向使用者顯示允許其安裝的應用程式。|  
-|如果裝置符合受監視且強制執行的安全性原則，員工可以在工作時使用行動裝置。<br /><br /> 這些原則包括強制執行強式密碼、在裝置處於非使用狀態一段時間之後將裝置鎖定，以及從遠端抹除遺失或遭竊的裝置。|員工可將其行動裝置連線至 Exchange Server 以便使用電子郵件服務。 但是，在預設 Exchange ActiveSync 信箱原則中，只有少數報告可確認其符合安全性原則。 個人使用行動裝置可能遭到禁止，除非 IT 能夠確認與原則相符。|IT 組織可透過必要的設定報告行動裝置的安全性相容性。 這項確認可讓使用者繼續在工作時使用其行動裝置。 如果行動裝置遺失或遭竊，使用者可從遠端抹除，技術服務人員亦可抹除任何報告為遺失或遭竊的使用者行動裝置。<br /><br /> 提供於 PKI 環境中註冊行動裝置的功能，以獲得額外的安全性與控制。|  
-|即使員工不在辦公桌附近，也能提高生產力。|員工不在辦公桌附近且沒有可攜式電腦時，就無法使用可在整個公司內使用的 Kiosk 電腦存取其應用程式。|員工可使用 Kiosk 電腦存取其應用程式和資料。|  
-|通常，企業永續性優先於安裝必要的應用程式和軟體更新。|必要的應用程式和軟體更新會在白天安裝，且經常中斷使用者的工作，因為其電腦變慢或在安裝期間重新啟動。|使用者可設定其工作時間，避免在其使用電腦時安裝必要的軟體。|  
+|新员工从第一天起就能高效工作。|员工加入公司时，必须在第一次登录后等待安装应用程序。|员工加入公司时，在登录后应用程序已安装就绪，可供使用。|  
+|员工可快速轻松地请求其他所需的软件。|员工需要其他应用程序时，向技术支持提交票证。 然后通常需要两天时间，等待票证得到处理并安装应用程序。|员工需要其他应用程序时，可从网站中请求这些应用程序。 如果没有许可限制，则会立即安装应用程序。 如果有许可限制，则用户必须首先请求批准，然后才能安装应用程序。<br /><br /> 网站仅向用户显示允许他们安装的应用程序。|  
+|如果员工的移动设备符合所监视和实施的安全策略，则员工可以在工作中使用这些设备。<br /><br /> 这些策略包括强制实施强密码、处于非活动状态一段时间后锁定设备，以及远程擦除丢失或被盗设备。|员工将其移动设备连接到 Exchange Server 来获得电子邮件服务。 但很少有报告来确认这些设备符合默认 Exchange ActiveSync 邮箱策略中的安全策略。 除非 IT 确认符合策略，否则个人使用移动设备存在会被禁止的风险。|IT 组织可报告移动设备与必需设置的安全符合性。 这种确认使用户能够继续在工作中使用其移动设备。 用户可在其移动设备丢失或被盗时远程擦除移动设备，并且支持人员可擦除报告为丢失或被盗的任何用户的移动设备。<br /><br /> 在 PKI 环境提供移动设备注册以实现额外的安全性和控制。|  
+|员工即使不在办公桌前也可高效工作。|员工不在办公桌前并且没有便携计算机时，无法使用公司范围内可用的网亭计算机来访问其应用程序。|员工可使用网亭计算机来访问其应用程序和数据。|  
+|通常，业务连续性优先于安装所需的应用程序和软件更新。|在白天安装所需的应用程序和软件更新，并频繁打断用户的工作，因为用户的计算机在安装期间速度会慢，或者会重启。|用户可配置其工作时间以防止在用户使用计算机时安装所需的软件。|  
 
- 為了要符合需求，Adam 會使用這些 Configuration Manager 管理功能和設定選項：  
+ 为了满足要求，Adam 使用以下 Configuration Manager 管理功能和配置选项：  
 
--   應用程式管理  
--   行動裝置管理  
+-   应用程序管理  
+-   移动设备管理  
 
-他使用下表中的設定步驟實作這些選項：  
+他通过使用下表中的配置步骤来实施这些项目：  
 
-|設定步驟|結果|  
+|配置步骤|结果|  
 |-------------------------|-------------|  
-|Adam 確定新使用者在 Active Directory 中擁有使用者帳戶，並在 Configuration Manager 中為這些使用者建立新的查詢式集合。 他接著建立一個對應使用者帳戶與他們將使用之主要電腦的檔案，為這些使用者定義裝置親和性，然後將此檔案匯入至 Configuration Manager。<br /><br /> Configuration Manager 中已建立新使用者必須具備的應用程式。 他接著將具有必要用途的應用程式部署至包含新使用者的集合。|由於已採用使用者裝置親和性資訊，因此可在使用者登入前，將應用程式安裝至每一個使用者的主要電腦。<br /><br /> 應用程式隨時可在使用者順利登入後立即使用。|  
-|Adam 安裝及設定應用程式類別目錄網站系統角色，讓使用者可以瀏覽要安裝的應用程式。 他接著建立這些具有可用之用途的應用程式部署，然後將這些應用程式部署至包含新使用者的集合。<br /><br /> 對於具有受限制授權數目的應用程式，Adam 設定這些應用程式以要求核准。|使用者現在可以使用應用程式類別目錄來瀏覽允許他們安裝的應用程式。 使用者接著可以立即安裝應用程式，或要求核准，並返回應用程式類別目錄，以便在技術服務人員核准其要求後返回要安裝它們的應用程式類別目錄。|  
-|Adam 在 Configuration Manager 中建立 Exchange Server 連接器，用來管理連線至公司內部部署 Exchange Server 的行動裝置。 他使用安全性設定來設定此連接器，包括要求設定強式密碼，以及要求在一段期間內未活動後鎖定行動裝置。<br /><br /> 為了執行 Windows Phone 8、Windows RT 和 iOS 的裝置進行其他管理，Adam 取得 Microsoft Intune 訂閱。 他接著會安裝服務連接點站台系統角色。 此行動裝置管理解決方案可為公司提供針對這些裝置進行較佳的管理支援。 這包括讓使用者能夠在這些裝置上安裝應用程式，以及廣泛地設定管理。 此外，行動裝置連線會使用由 Intune 自動建立及部署的 PKI 憑證來進行保護。<br /><br /> 設定好要搭配使用 Configuration Manager 的服務連接點和訂閱之後，Adam 傳送一封電子郵件給擁有這些行動裝置的使用者，讓他們按一下連結即可啟動註冊程序。<br /><br /> 針對由 Microsoft Intune 註冊的行動裝置，Adam 使用相容性設定來為這些行動裝置設定安全性設定。 這些設定包括要求設定強式密碼，以及要求在一段期間內未活動後鎖定行動裝置。|使用這兩種行動裝置管理解決方案，IT 組織現在可以提供有關將在公司網路上使用之行動裝置，以及使用已設定安全性設定之相容性的報告資訊。<br /><br /> 使用者可以查看當行動裝置遺失或遭竊時，如何使用應用程式類別目錄或公司入口網站，從遠端抹除行動裝置。 技術服務人員也可以使用 Configuration Manager 主控台，指示使用者如何從遠端抹除行動裝置。<br /><br /> 此外，對於由 Microsoft Intune 註冊的行動裝置，Adam 現在可以為使用者部署要安裝的行動應用程式、從這些裝置收集更多清查資料，以及藉由存取更多設定，對這些裝置進行較佳的管理控制。|  
-|Trey Research 有好幾部 kiosk 電腦，供造訪辦公室的員工使用。 員工想要在登入時使用他們的應用程式。 不過，Adam 不想要在每一部電腦的本機上安裝所有應用程式。<br /><br /> 為了達成此目的，Adam 建立了包含兩種部署類型的必要應用程式：<br /><br /> **第一個：**一個完整的本機安裝應用程式，其要求為只能安裝在使用者的主要裝置上。<br /><br /> **第二個：**一個虛擬版本的應用程式，其要求為不得安裝在使用者的主要裝置上。|當造訪員工登入 kiosk 電腦時，kiosk 電腦的桌面上會顯示其所需的應用程式圖示。 當他們執行應用程式時，是以虛擬應用程式的方式進行串流處理。 透過這種方式，他們可以執行的工作就像是坐在他們的桌上型電腦前一樣。|  
-|Adam 讓使用者瞭解他們可以在軟體中心內設定工作時間，並且可以選取選項，以防止在此期間以及在簡報模式時，進行軟體部署活動。|由於使用者可以控制 Configuration Manager 將軟體部署至電腦的時間，因此使用者在工作日時可以保有較佳的生產力。|  
+|Adam 确保新用户具有 Active Directory 用户帐户，并在 Configuration Manager 中为这些用户创建基于查询的新集合。 然后，他通过创建将用户帐户映射到这些用户将使用的主计算机的文件，为他们定义用户设备相关性，然后将此文件导入 Configuration Manager。<br /><br /> 已在 Configuration Manager 中创建新用户必须具有的应用程序。 然后，他将目的为“必需”的应用程序部署到包含新用户的集合。|由于存在用户设备相关性信息，因此在用户登录前，应用程序会安装在每个用户的一台或多台主计算机上。<br /><br /> 用户成功登录后，应用程序立即可供使用。|  
+|Adam 安装和配置应用程序目录站点系统角色，以便用户可以浏览要安装的应用程序。 他创建目的为“可用”的应用程序部署，然后将这些应用程序部署到包含新用户的集合。<br /><br /> 对于许可证数量受限的应用程序，Adam 将这些应用程序配置为要求批准。|用户现在可以使用应用程序目录浏览允许他们安装的应用程序。 然后，用户可以立即安装应用程序，或者请求批准并返回应用程序目录，以在技术支持批准其请求后安装这些应用程序。|  
+|Adam 在 Configuration Manager 中创建 Exchange Server 连接器，以管理连接至公司的本地 Exchange Server 的移动设备。 他使用安全设置来配置此连接器，这些安全设置包括要求强密码以及在一段不活动期后锁定移动设备。<br /><br /> 为了对运行 Windows Phone 8、Windows RT 以及 iOS 的设备进行额外的管理，Adam 获取了 Microsoft Intune 订阅。 然后安装了服务连接点站点系统角色。 对于这些设备，该移动设备管理解决方案为公司提供了更大的管理支持。 这包括使应用程序可供用户安装在这些设备上以及广泛的设置管理。 此外，通过使用由 Intune 自动创建和部署的 PKI 证书，确保移动设备连接安全。<br /><br /> 通过配置服务连接点和订阅使用 Configuration Manager 后，Adam 给拥有这些移动设备的用户发送了一封电子邮件，请他们单击链接以开始注册流程。<br /><br /> 对于通过 Microsoft Intune 注册的移动设备，Adam 使用符合性设置来配置这些移动设备的安全设置。 这些设置包括要求设置强密码以及在一段不活动期后锁定移动设备。|借助这两个移动设备管理解决方案，IT 组织现在可以提供关于正在公司网络上使用的移动设备的报表信息，以及它们与配置的安全设置的符合性。<br /><br /> 用户会获得演示，了解在其移动设备丢失或被盗时如何使用应用程序目录或公司门户远程擦除移动设备。 支持人员还会获得指引，了解如何通过使用 Configuration Manager 控制台为用户远程擦除移动设备。<br /><br /> 此外，对于通过 Microsoft Intune 注册的移动设备，Adam 现在可以为用户部署要安装的移动应用程序、收集这些设备的更多清单数据以及凭借能够访问更多的设置而对这些设备进行更好的管理控制。|  
+|Trey Research 拥有一些供办事处的来访员工使用的网亭计算机。 员工希望无论自己在何处登录，都可以使用其应用程序。 但是，Adam 不希望在每台计算机上均以本地方式安装所有应用程序。<br /><br /> 为此，Adam 创建了具有两种部署类型的必需的应用程序：<br /><br /> **第一种：**应用程序的本地完全安装，这类应用程序必须仅安装在用户的主要设备上。<br /><br /> **第二种：**应用程序的虚拟版本，这类应用程序不得安装在用户的主要设备上。|来访员工登录网亭计算机时，会在网亭计算机的桌面上见到以图标形式显示的他们所必需的应用程序。 运行应用程序时，它会以虚拟应用程序的形式进行流式处理。 因此，他们可以与坐在自己的台式机前工作一样高效。|  
+|Adam 使用户了解到他们可以在软件中心配置自己的工作时间，并可选择选项以防在此期间以及计算机处于演示模式下时进行软件部署活动。|由于用户可以控制 Configuration Manager 将软件部署到其计算机上的时间，因此用户在其工作日中能始终更为高效。|  
 
- 這些設定步驟和結果，讓 Trey Research 能確實從任何裝置存取應用程式，以順利對員工授權。  
+ 通过确保从任何设备均可访问应用程序，这些配置步骤和结果使 Trey Research 成功使其员工具有更高的生产力。  
 
-###  <a name="BKMK_ScenarioUnify"></a> 範例案例：整合裝置的相容性管理  
- Trey Research 想要整合用戶端管理解決方案，以確定他們的電腦執行的防毒軟體會自動保持最新狀態。 即：  
+###  <a name="BKMK_ScenarioUnify"></a> 示例方案：统一设备的符合性管理  
+ Trey Research 希望获得统一的客户端管理解决方案，该方案确保其计算机运行自动保持更新的防病毒软件。 即：  
 
--   [Windows 防火牆] 已啟用。  
--   已安裝重大軟體更新。  
--   已設定特定登錄機碼。  
--   受管理的行動裝置無法安裝或執行未簽署的應用程式。  
+-   Windows 防火墙已启用。  
+-   已安装关键软件更新。  
+-   已设置特定的注册表项。  
+-   托管的移动设备无法安装或运行未签名的应用程序。  
 
-公司還想要將此防護擴充至網際網路，以保護從內部網路移至網際網路的膝上型電腦。  
+该公司还希望将此保护扩展到 Internet，以保护从 Intranet 移至 Internet 的便携式计算机。  
 
-Adam 將這些公司需求對應到下列案例：  
+Adam 将这些公司要求映射到以下方案：  
 
-|需求|目前的用戶端管理狀態|未來的用戶端管理狀態|  
+|要求|当前客户端管理状态|将来的客户端管理状态|  
 |-----------------|-------------------------------------|------------------------------------|  
-|所有電腦執行的反惡意程式碼軟體皆已更新定義檔，並啟用 Windows 防火牆。|不同的電腦會執行不一定會保持最新狀態的不同反惡意程式碼解決方案。 雖然預設會啟用 Windows 防火牆，但是使用者有時會予以停用。<br /><br /> 如果在電腦上偵測到惡意程式碼，系統會要求使用者與技術服務人員聯繫。|所有執行相同反惡意程式碼解決方案的電腦，會自動下載最新的定義更新檔，並在使用者停用時自動重新啟用 Windows 防火牆。<br /><br /> 如果偵測到惡意程式碼，技術支援人員會自動收到通知。|  
-|所有電腦在發行的第一個月內安裝重大軟體更新。|雖然已在電腦上安裝軟體更新，但許多電腦並未自動安裝重大軟體更新，直到發行後的兩到三個月才會安裝。 如此一來，在此期間內受到攻擊的可能性便會提高。<br /><br /> 對於未安裝重大軟體更新的電腦，技術支援人員會先送出電子郵件，要求使用者安裝更新。 對於保持不相容的電腦，工程師會從遠端連線至這些電腦，並手動安裝遺失的軟體更新。|在指定的當月內改善目前的合規率超過 95%，而不是傳送電子郵件或要求技術協助人員手動進行安裝。|  
-|可定期檢查特定應用程式的安全性設定，並視需要進行補救。|執行複雜啟動指令碼的電腦，需仰賴電腦群組成員資格來重設特定應用程式的登錄值。<br /><br /> 由於這些指令碼只會在啟動時執行，某些電腦會保留好幾天，因此技術支援人員無法根據時間檢查設定漂移。|會檢查登錄值並自動進行補救，而不需仰賴電腦群組成員資格或重新啟動電腦。|  
-|行動裝置無法安裝或執行不安全的應用程式。|系統會要求使用者不要從網際網路下載及執行可能不安全的應用程式。 但沒有控制項可以用於監視或強制執行此設定。|使用 Microsoft Intune 或 Configuration Manager 所管理的行動裝置，會自動防止安裝或執行未簽署的應用程式。|  
-|從內部網路移至網際網路的膝上型電腦，必須保持安全狀態。|對於旅行的使用者，他們經常無法每天透過 VPN 連線進行連線。 這些膝上型電腦會不符合安全性需求的規範。|網際網路連線是膝上型電腦用來保持相容性與安全性需求的唯一方法。 使用者不需要登入或使用 VPN 連線。|  
+|在所有计算机上运行具有最新定义文件的防恶意软件并启用 Windows 防火墙。|不同计算机运行不同的反恶意软件解决方案，这些解决方案并非始终保持最新。 尽管在默认情况下已启用 Windows 防火墙，但用户有时会将其禁用。<br /><br /> 如果在用户计算机上检测到恶意软件，则将要求他们与技术支持联系。|在所有计算机上运行相同的防恶意软件解决方案，该解决方案会自动下载最新的定义更新文件，并在用户将 Windows 防火墙禁用时自动将其重新启用。<br /><br /> 如果检测到恶意软件，则将自动通过电子邮件通知技术支持。|  
+|在关键软件更新发布的首个月内，在所有计算机上安装这些关键的软件更新。|尽管在计算机上已安装软件更新，但许多计算机不会自动安装关键软件更新，而会直到关键软件更新已发布两个月或三个月后才安装。 这将使这些计算机在此期间内容易受到攻击。<br /><br /> 对于未安装关键软件更新的计算机，技术支持首先会发出要求用户安装更新的电子邮件。 对于仍然不符合规定的计算机，工程师会远程连接到这些计算机并手动安装缺失的软件更新。|在指定月份将当前符合率提升到 95% 以上，而不用发出电子邮件或要求技术支持手动安装这些更新。|  
+|定期检查特定应用程序的安全设置并在必要时进行修正。|计算机运行依赖于计算机的组成员身份的复杂启动脚本，以重置特定应用程序的注册表值。<br /><br /> 由于这些脚本仅在启动时运行并且有些计算机会持续数日保持开启状态，因此技术支持无法及时检查是否存在配置漂移。|注册表值会接受检查并自动修正，而不依赖计算机组成员身份或重启计算机。|  
+|移动设备无法安装或运行不安全的应用程序。|要求用户不通过 Internet 下载和运行可能不安全的应用程序。 但是没有落实用于监视或强制实施该要求的控制措施。|使用 Microsoft Intune 或 Configuration Manager 管理的移动设备会自动防止安装或运行未签名的应用程序。|  
+|必须保持从 Intranet 移至 Internet 的便携式计算机的安全。|对于外出的用户，他们常常无法每天都通过 VPN 连接进行连接。 这会导致这些笔记本电脑不符合安全要求。|Internet 连接会是便携式计算机保持符合安全要求的全部要求。 用户不必登录或使用 VPN 连接。|  
 
- 為了要符合需求，Adam 會使用這些 Configuration Manager 管理功能和設定選項：  
+ 为了满足要求，Adam 使用以下 Configuration Manager 管理功能和配置选项：  
 
 -   Endpoint Protection  
--   軟體更新  
--   相容性設定  
--   行動裝置管理  
--   以網際網路為基礎的用戶端管理  
+-   软件更新  
+-   符合性设置  
+-   移动设备管理  
+-   基于 Internet 的客户端管理  
 
-他使用下表中的設定步驟實作這些選項：  
+他通过使用下表中的配置步骤来实施这些项目：  
 
-|設定步驟|結果|  
+|配置步骤|结果|  
 |-------------------------|-------------|  
-|Adam 設定了 Endpoint Protection。 他也啟用用戶端設定以解除安裝其他反惡意程式碼解決方案，以及啟用 Windows 防火牆。 他設定了自動部署規則，使電腦會定期檢查及安裝最新的定義更新。|單一反惡意程式碼解決方案可協助保護所有電腦，方法是使用最小的系統管理負荷。 由於技術支援人員會在偵測到反惡意程式碼時自動收到電子郵件通知，因此可以快速地解決問題。 這有助於防止其他電腦遭到攻擊的情形。|  
-|為了要協助提供合規率，Adam 使用了自動部署規則、定義伺服器的維護期間，以及調查針對休眠的電腦使用網路喚醒的優缺點。|重大軟體更新的相容性會增加及降低使用者或技術支援人員手動安裝軟體更新的需求。|  
-|Adam 會使用相容性設定來檢查指定的應用程式是否存在。 當偵測到應用程式時，設定項目接著會檢查登錄值，並在不符合合規性時自動進行補救。|使用部署至所有電腦的設定項目及設定基準，以及每天檢查合規性，就不再需要仰賴電腦成員資格的個別指令碼，也不需要重新啟動電腦。|  
-|Adam 會針對已註冊的行動裝置使用相容性設定，並設定 Exchange Server 連接器，使得未經簽署的應用程式無法在行動裝置上安裝及執行。|藉由禁止未經簽署的應用程式，行動裝置會自動保護它們不受可能有害的應用程式所影響。|  
-|Adam 確定站台系統伺服器和電腦具有 Configuration Manager 為進行 HTTPS 連線所需的 PKI 憑證。 它接著會在接受網際網路用戶端連線的周邊網路中安裝其他站台系統角色。|從內部網路移至網際網路的電腦，會在使用網際網路連線時，自動繼續接受 Configuration Manager 的管理。 這些電腦不需要使用者登入他們的電腦或連線至 VPN 連線。<br /><br /> 這些電腦會繼續受到反惡意程式碼和 Windows 防火牆、軟體更新和設定項目的管理。 如此一來，相容性層級便會自動提高。|  
+|Adam 配置 Endpoint Protection。 启用客户端设置以卸载其他反恶意软件解决方案，并启用 Windows 防火墙。 他配置自动部署规则，以便计算机定期检查和安装最新的定义更新。|单一的防恶意软件解决方案有助于以最小的管理开销保护所有的计算机。 由于检测到反恶意软件时会自动通过电子邮件通知技术支持，因此可以快速解决问题。 这有助于防止其他计算机遭受攻击。|  
+|为了便于提升符合率，Adam 运用自动部署规则，定义服务器的维护时段，并且调查为休眠的计算机使用 LAN 唤醒的优点和缺点。|关键软件更新的符合性提高，而用户或技术支持手动安装软件更新的要求降低。|  
+|Adam 使用符合性设置来检查是否存在指定的应用程序。 检测到应用程序后，配置项目随即会检查注册表值并在注册表值不符时自动对其进行修正。|通过使用部署到所有计算机并且每日均会执行符合性检查的配置项目和配置基线，不再需要依赖计算机成员身份和计算机重启的单独脚本。|  
+|Adam 为已注册的移动设备使用符合性设置并配置 Exchange Server 连接器，从而禁止在移动设备上安装和运行未签名的应用程序。|由于禁止未签名的应用程序，移动设备会自动防范可能有害的应用程序。|  
+|Adam 确保站点系统服务器和计算机均具有 Configuration Manager 针对 HTTPS 连接而要求的 PKI 证书。 然后安装外围网络中的附加站点系统角色，这些角色接受来自 Internet 的客户端连接。|Configuration Manager 将继续自动管理从 Intranet 移至 Internet 的计算机（当这些计算机具有 Internet 连接时）。 这些计算机并不依赖用户登录他们的计算机或连接至 VPN。<br /><br /> 这些计算机会继续在防恶意软件和 Windows 防火墙、软件更新以及配置项目方面得到管理。 结果，符合性级别将自动提升。|  
 
- 這些設定步驟和結果，使得 Trey Research 能順利整合裝置的相容性管理。  
+ 这些配置步骤和结果导致 Trey Research 公司成功统一了设备的符合性管理。  
 
-###  <a name="BKMK_ScenarioSimplify"></a> 範例案例：簡化裝置的用戶端管理  
- Trey Research 想要讓所有新電腦自動安裝公司的 Windows 7 基礎電腦映像。 在這些電腦上安裝作業系統映像後，必須管理及監視使用者在這些電腦上安裝的其他軟體。 儲存高度機密資訊的電腦，比其他電腦需要限制更多的管理原則。 例如，技術支援工程師不得從遠端進行連線、必須輸入 BitLocker PIN 才能重新啟動，以及只有本機系統管理員可以安裝軟體。  
+###  <a name="BKMK_ScenarioSimplify"></a> 示例方案：简化设备的客户端管理  
+ Trey Research 希望所有新计算机均能自动安装他们公司的运行 Windows 7 的基本计算机映像。 在这些计算机上安装操作系统映像后，必须就用户安装的附加软件对计算机进行管理和监视。 如果计算机上存储着高度机密的信息，则必须对该类计算机实施比其他计算机具有更多限制的管理策略。 例如，技术支持工程师不得远程连接到这类计算机，必须使用 BitLocker PIN 条目才能重启，并且仅限本地管理员才能安装软件。  
 
- Adam 將這些公司需求對應到下列案例：  
+ Adam 将这些公司要求映射到以下方案：  
 
-|需求|目前的用戶端管理狀態|未來的用戶端管理狀態|  
+|要求|当前客户端管理状态|将来的客户端管理状态|  
 |-----------------|-------------------------------------|------------------------------------|  
-|新電腦已安裝 Windows 7。|技術支援人員為使用者安裝及設定 Windows 7，然後將電腦傳送到對應的位置。|新電腦直接進入最終目的地、加入網路，並自動安裝及設定 Windows 7。|  
-|電腦必須能接受管理和監視。 這包括收集硬體和軟體清查資料，以協助判斷授權需求。|Configuration Manager 用戶端是使用自動用戶端推入安裝進行部署。 技術支援人員會調查為何安裝失敗，以及用戶端為何未在預期時間內傳送清查資料的原因。<br /><br /> 因為未符合安裝相依性，同時用戶端上的 WMI 可能已損壞，所以失敗頻率很高。|從電腦收集的用戶端安裝和清查資料較為可靠，技術支援人員介入的需求較少。 報告中會顯示授權資訊的軟體使用量。|  
-|某些電腦必須使用較嚴格的管理原則。|由於這些電腦需使用較嚴格的管理原則，因此目前並未受到 Configuration Manager 的管理。|使用 Configuration Manager 管理這些電腦來容納例外狀況，而不造成額外的系統管理成本。|  
+|新计算机已安装 Windows 7。|技术支持为用户安装和配置了 Windows 7，然后将计算机发往用户各自的位置。|新计算机会直接发往最终目的地，接入网络，并自动安装和配置 Windows 7。|  
+|必须管理和监视计算机。 这包括收集有助于确定许可要求的硬件和软件清单数据。|通过使用自动客户端请求安装来部署 Configuration Manager 客户端。 技术支持将调查安装故障以及未在预期时间发送清单数据的客户端。<br /><br /> 故障频发，因为未满足安装依赖性以及客户端上的 WMI 损坏。|从计算机中收集的客户端安装和清单数据更为可靠，仅需较少的技术支持干预。 报表将针对许可证信息展示软件的使用情况。|  
+|有些计算机必须具有更为严格的管理策略。|由于存在更为严格的管理策略，因此目前不通过 Configuration Manager 来管理这些计算机。|通过使用 Configuration Manager 来管理这些计算机以应对异常情况，无需额外的管理开销。|  
 
- 為了要符合需求，Adam 會使用這些 Configuration Manager 管理功能和設定選項：  
+ 为了满足要求，Adam 使用以下 Configuration Manager 管理功能和配置选项：  
 
--   作業系統部署  
--   用戶端部署和用戶端狀態  
--   相容性設定  
--   用戶端設計  
--   清查方法和 Asset Intelligence  
--   以角色為基礎的系統管理  
+-   操作系统部署  
+-   客户端部署和客户端状态  
+-   符合性设置  
+-   客户端设置  
+-   清单方法和资产智能  
+-   基于角色的管理  
 
-他使用下表中的設定步驟實作這些選項：  
+他通过使用下表中的配置步骤来实施这些项目：  
 
-|設定步驟|結果|  
+|配置步骤|结果|  
 |-------------------------|-------------|  
-|Adam 從一台電腦擷取作業系統映像，該電腦已安裝 Windows 7 並已依照公司規格進行設定。 接著使用未知的電腦支援和 PXE，將作業系統部署到新電腦。 同時他也將 Configuration Manager 用戶端安裝為作業系統部署的一部分。|沒有技術服務人員的介入，新電腦已啟動並以更快的速度執行。|  
-|Adam 設定自動全站台用戶端推入安裝，自動於任何探索到的電腦上安裝 Configuration Manager 用戶端。 如此便可確保即使用戶端未製作任何電腦的映像，該電腦仍會自動安裝用戶端，並可由 Configuration Manager 管理。<br /><br /> Adam 設定用戶端狀態在探索到任何用戶端問題時，自動加以補救。 他同時設定用戶端設定以啟用必要清查資料的收集，也設定 Asset Intelligence。|同時安裝用戶端與作業系統的速度較快且較可靠，不需等 Configuration Manager 探索到該電腦之後，才試著將用戶端來源檔案安裝到電腦上。 不過，將自動用戶端推入選項保留啟用，對已安裝作業系統的電腦來說，可作為備份方法，提供該電腦在連線到網路時自動安裝用戶端。<br /><br /> 用戶端設定可確保用戶端定期將清查資訊傳送到網站。 此設定加上用戶端狀態測試，可協助在幾乎沒有技術服務人員介入情況下，使用戶端持續執行。 例如，在偵測到 WMI 損毀時自動加以補救。<br /><br /> Asset Intelligence 報告可協助監視軟體使用和授權。|  
-|Adam 為需要較嚴密原則設定的電腦建立一個集合。 接著為此集合建立自訂用戶端裝置設定，以停用遠端控制、啟用 BitLocker PIN 輸入以及僅允許本機系統管理員安裝軟體。<br /><br /> Adam 設定了以角色為基礎的系統管理，如此一來技術服務人員便無法看到這些電腦的集合。 這樣有助於確保這些電腦不會被意外當成一般標準電腦來管理。|這些電腦現在是由 Configuration Manager 管理，但具有不需要新站台的專用設定。<br /><br /> 技術服務人員看不到這些電腦的集合。 這有助於減少電腦不小心傳送標準電腦之部署和指令碼的可能性。|  
+|Adam 从装有 Windows 7 并按公司规范配置的计算机中捕获操作系统映像。 然后，通过使用未知的计算机支持和 PXE，他将操作系统部署到新的计算机。 他还将 Configuration Manager 客户端作为操作系统部署的一部分进行安装。|无需技术支持工程师的干预，新的计算机能够更快速地启动并正常运行。|  
+|Adam 配置自动站点范围的客户端请求安装，在所发现的任何计算机上安装 Configuration Manager 客户端。 这确保未利用客户端映像化的任何计算机仍然安装客户端，使计算机受 Configuration Manager 管理。<br /><br /> Adam 配置客户端状态，以自动修正所发现的任何客户端问题。 他还配置客户端设置以启用对所需清单数据的收集，以及配置资产智能。|与等待 Configuration Manager 发现计算机，然后尝试在计算机上安装客户端源文件相比，将客户端与操作系统一起安装更为快速和可靠。 但是，通过启用自动客户端请求选项，为已安装操作系统的计算机提供备用方法，以在计算机连接到网络时安装客户端。<br /><br /> 客户端设置确保客户端定期向站点发送其清单信息。 除了客户端状态测试之外，这有助于在最大程度减少技术支持干预的情况下让客户端保持运行。 例如，会检测并自动修正 WMI 损坏。<br /><br /> 资产智能报表帮助监视软件的使用情况和许可证。|  
+|Adam 为必须具有更严格策略设置的计算机创建集合。 然后为此集合创建自定义客户端设备设置，包括禁用远程控制、启用 BitLocker PIN 输入和仅允许本地管理员安装软件。<br /><br /> Adam 配置基于角色的管理，这样一来，技术支持工程师无法查看此计算机集合。 这有助于确保不会意外地将这些计算机作为标准计算机进行管理。|这些计算机现在由 Configuration Manager 管理，但具有无需新站点的特定设置。<br /><br /> 技术支持工程师无法查看这些计算机的集合。 这有助于降低向这些计算机发送适用于标准计算机的部署和脚本的可能性。|  
 
- Trey Research 報告顯示這些設定步驟和結果已成功地簡化裝置的用戶端管理。  
+ 这些配置步骤和结果导致 Trey Research 成功简化了设备的客户端管理。  
 
-##  <a name="BKMK_NextSteps"></a> 後續步驟  
- 安裝 Configuration Manager 之前，請先熟悉一些專屬於 Configuration Manager 的基本概念和詞彙。  
+##  <a name="BKMK_NextSteps"></a> 后续步骤  
+ 在安装 Configuration Manager 之前，可以熟悉特定于 Configuration Manager 的一些基本概念和术语。  
 
--   如果您已熟悉 System Center 2012 Configuration Manager，請參閱 [System Center Configuration Manager 和 System Center 2012 Configuration Manager 之間的變更](../../core/plan-design/changes/what-has-changed-from-configuration-manager-2012.md)以了解新功能。  
--   如需 System Center Configuration Manager 的高階技術概觀，請參閱 [System Center Configuration Manager 的基礎](../../core/understand/fundamentals.md)。  
+-   如果已熟悉 System Center 2012 Configuration Manager，请参阅[自 System Center 2012 Configuration Manager 以来 System Center Configuration Manager 中更改的内容](../../core/plan-design/changes/what-has-changed-from-configuration-manager-2012.md)了解新功能。  
+-   有关 System Center Configuration Manager 的高级技术概述，请参阅 [System Center Configuration Manager 基础知识](../../core/understand/fundamentals.md)。  
 
-若您已熟悉這些基本概念，請使用 System Center Configuration Manager 文件來協助您成功地部署與使用 Configuration Manager。  
+熟悉了基本概念后，使用 System Center Configuration Manager 文档帮助成功部署和使用 Configuration Manager。  

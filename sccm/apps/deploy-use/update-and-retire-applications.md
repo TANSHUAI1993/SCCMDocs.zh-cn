@@ -1,6 +1,6 @@
 ---
-title: "更新和淘汰應用程式 | Microsoft Docs"
-description: "使用 System Center Configuration Manager 修改、取代或解除安裝已部署的應用程式。"
+title: "更新和停用应用程序 | Microsoft Docs"
+description: "使用 System Center Configuration Manager 修订、取代或卸载部署的应用程序。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -17,24 +17,24 @@ manager: angrobe
 ms.openlocfilehash: 805e04c447747b4d12350b692880dbc005bd7168
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="update-and-retire-applications-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 更新及淘汰應用程式
+# <a name="update-and-retire-applications-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 更新和停用应用程序
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 
-最後，您可能會想要變更應用程式、解除安裝應用程式，或將已部署的應用程式取代為新的應用程式。 System Center Configuration Manager 提供下列功能，協助您更新和淘汰應用程式：  
+最后，用户可能希望更改、卸载应用程序，或者将已部署的应用程序替换为新的应用程序。 System Center Configuration Manager 可为用户提供这些功能，帮助更新和停用应用程序：  
 
--   **修訂應用程式**。 變更應用程式或部署類型時，Configuration Manager 會維護這些變更的歷程記錄。 您隨時都可以將應用程式還原到先前的修訂版本。 您也可以檢視其內容、還原之前的應用程式修訂，或刪除舊的修訂。  
+-   **修订应用程序**。 对应用程序或部署类型进行更改时，Configuration Manager 将维护这些更改的历史记录。 你可以随时将应用程序还原到以前的修订版本。 也可以查看其属性、还原应用程序的以前版本或删除旧版本。  
 
-  如需詳細資訊，請參閱[應用程式修訂](revise-and-supersede-applications.md#application-revisions)。  
+  有关详细信息，请参阅[应用程序修订](revise-and-supersede-applications.md#application-revisions)。  
 
--   **取代應用程式**。 您可以使用取代關聯性升級或取代現有應用程式。 當您取代應用程式時，您可以指定新的部署類型來取代被取代應用程式的部署類型。 您也可以設定是否要先升級或解除安裝已取代的應用程式，再安裝取代的應用程式。  
+-   **取代应用程序**。 可通过使用取代相关来替换或升级现有应用程序。 取代应用程序时，可以指定新的部署类型来替换被取代应用程序的部署类型。 另外，还可决定安装取代应用程序前，是否升级或卸载被取代应用程序。  
 
-  如需詳細資訊，請參閱[應用程式取代](revise-and-supersede-applications.md#application-supersedence)。  
+  有关详细信息，请参阅[应用程序取代](revise-and-supersede-applications.md#application-supersedence)。  
 
--   **解除安裝應用程式**。 Configuration Manager 可輕鬆地解除安裝應用程式。 這可以透過無訊息方式完成，而不需要應用程式或裝置使用者介入。  
+-   **卸载应用程序**。 Configuration Manager 可轻松卸载应用程序。 此操作可以在在无提示的情况下完成，而不需要应用程序或设备用户干预。  
 
-  如需詳細資訊，請參閱[解除安裝應用程式](uninstall-applications.md)。  
+  有关详细信息，请参阅[卸载应用程序](uninstall-applications.md)。  

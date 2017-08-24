@@ -1,6 +1,6 @@
 ---
-title: "評估 Configuration Manager | Microsoft Docs"
-description: "建立實驗室環境，以評估貴組織使用 System Center Configuration Manager 的效能。"
+title: "评估 Configuration Manager | Microsoft Docs"
+description: "创建实验室环境来评估 System Center Configuration Manager 在组织中的使用情况。"
 ms.custom: na
 ms.date: 2/28/2017
 ms.prod: configuration-manager
@@ -18,50 +18,50 @@ manager: angrobe
 ms.openlocfilehash: d7ea785ab1beee09b9adda735a87f89bc9481620
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="evaluate-system-center-configuration-manager-by-building-your-own-lab-environment"></a>建置專屬實驗室環境來評估 System Center Configuration Manager
+# <a name="evaluate-system-center-configuration-manager-by-building-your-own-lab-environment"></a>通过构建你自己的实验室环境来评估 System Center Configuration Manager
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
- 了解如何建立實驗室環境，以評估貴組織使用 System Center Configuration Manager 的效能。  
+ 了解如何创建实验室环境来评估 System Center Configuration Manager 在组织中的使用。  
 
- System Center Configuration Manager 是管理使用者、裝置和軟體的工具，複雜且功能強大。 最好先完成 System Center Configuration Manager 的全面評估再進行完整部署，以便結合概念性的了解與實際操作練習。  
+ System Center Configuration Manager 是一种功能全面的强大工具，用于管理用户、设备和软件。 在进行完整部署之前最好全面评估 System Center Configuration Manager，以便将概念性理解和实际练习相结合。  
 
- 本指南主要適用對象為評估 Configuration Manager 在公司環境中使用效能的系統管理員。  
+ 本指南主要针对在企业环境中评估 Configuration Manager 的使用情况的管理员：  
 
--   想要全面管理電腦、伺服器和行動裝置之解決方案的系統管理員  
+-   需要完全管理电脑、服务器和移动设备的解决方案的管理员  
 
--   要求內部部署裝置管理安全性及雲端式裝置管理靈活性之高安全性產業的系統管理員  
+-   既要求本地设备管理的安全性、又要求基于云的设备管理的灵活性的高安全性行业中的管理员  
 
--   想要管理相應增加之內部部署伺服器架構的系統管理員  
+-   需要扩大其本地服务器体系结构的管理员  
 
-## <a name="what-this-lab-does"></a>這個實驗室可以達成的目標  
- 建立這個實驗室環境的主要目標是提供開始使用 Configuration Manager 的一般知識，以及加強對 Configuration Manager 的了解。 您將使用兩部伺服器來逐步完成 Configuration Manager 目前版本的快速組件：  
+## <a name="what-this-lab-does"></a>此实验室能做什么  
+ 创建此实验室环境的主要目的是提供着手使用 Configuration Manager 所需的常规知识，并增强对 Configuration Manager 的理解。 将通过使用以下两台服务器引导用户快速组装 Configuration Manager 的当前版本：  
 
--   一部裝載 Active Directory、網域控制站和 DNS 伺服器  
+-   一台用于托管 Active Directory、域控制器和 DNS 服务器  
 
--   一部裝載 Configuration Manager 和所有相關聯的 SQL Server 元件  
+-   另一台用于托管 Configuration Manager 以及所有关联的 SQL Server 组件  
 
-用戶端電腦已安裝在 Hyper-V 內。 實驗室本身也可以當成完全虛擬化的系統，在單一伺服器上執行。  
+在 Hyper-V 内安装客户端计算机。 实验室本身也可以作为完全虚拟化的系统在一台服务器上运行。  
 
-## <a name="what-this-lab-does-not-do"></a>這個實驗室無法達成的目標  
- 這個實驗室不會帶您完成所有 Configuration Manager 案例。 其設計宗旨也不是立即移轉至使用中環境。  
+## <a name="what-this-lab-does-not-do"></a>此实验室不能做什么  
+ 此实验室不会向用户介绍所有 Configuration Manager 方案。 不能将此实验室立即迁移到活动环境中。  
 
- 當您建置這個實驗室時，您會有可以運作的功能環境。 但是這個環境不會為系統效能、硬碟空間管理和 SQL Server 存放裝置這類因素進行最佳化。  
+ 构建此实验室，你将获得一个用于工作的功能性环境。 但是，此环境不会针对系统性能、硬盘空间管理和 SQL Server 存储等因素进行优化。  
 
-##  <a name="BKMK_EvalRec"></a> 建置實驗室之前的建議閱讀  
- [Documentation for System Center Configuration Manager 文件](http://docs.microsoft.com/sccm/)提供豐富的內容。 建議您在開始建置實驗室之前先閱讀本文件庫中的下列主題︰  
+##  <a name="BKMK_EvalRec"></a> 构建实验室前的推荐读物  
+ [System Center Configuration Manager 文档](http://docs.microsoft.com/sccm/)中提供了大量内容。 建议用户在开始构建实验室前，阅读此库的以下主题：  
 
--   如需了解 Configuration Manager 主控台、使用者入口網站和範例案例的核心概念，請參閱 [System Center Configuration Manager 簡介](../../core/understand/introduction.md)。  
+-   在 [System Center Configuration Manager 简介](../../core/understand/introduction.md)中，可以了解 Configuration Manager 控制台、最终用户门户和示例方案的核心概念。  
 
--   如需了解 Configuration Manager 的主要管理功能，請參閱 [System Center Configuration Manager 的功能](../../core/plan-design/changes/features-and-capabilities.md)。  
+-   在 [System Center Configuration Manager 的特性和功能](../../core/plan-design/changes/features-and-capabilities.md)中，可以了解 Configuration Manager 的主要管理功能。  
 
--   閱讀 [System Center Configuration Manager 的基礎](../../core/understand/fundamentals.md)以充實知識。  
+-   [System Center Configuration Manager 基础知识](../../core/understand/fundamentals.md)有助于巩固理解。  
 
--   如需了解安全性角色的重要性，請參閱 [System Center Configuration Manager 以角色為基礎的系統管理基本概念](../../core/understand/fundamentals-of-role-based-administration.md)。  
+-   在 [System Center Configuration Manager 的基于角色的管理基础](../../core/understand/fundamentals-of-role-based-administration.md)中，可以了解安全角色的重要性。  
 
--   如需了解內容管理，請參閱[內容管理的概念](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)。  
+-   在[内容管理的概念](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)中，可以了解内容管理。  
 
--   如需了解如何成功支援整個部署的每日作業，請參閱[了解用戶端如何找到 System Center Configuration Manager 的站台資源和服務](../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md)。  
+-   在[了解客户端如何为 System Center Configuration Manager 查找站点资源和服务](../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md)中，可以了解如何成功支持部署中的所有日常任务。  

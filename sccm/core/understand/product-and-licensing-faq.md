@@ -1,6 +1,6 @@
 ---
-title: "產品和授權常見問題集 | Microsoft Docs"
-description: "尋找 System Center Configuration Manager 常見產品和授權問題答案。"
+title: "产品和许可常见问题解答 | Microsoft Docs"
+description: "查找 System Center Configuration Manager 产品和许可常见问题的答案。"
 ms.custom: na
 ms.date: 2/28/2017
 ms.prod: configuration-manager
@@ -17,62 +17,62 @@ manager: angrobe
 ms.openlocfilehash: c1a276ad1ed6d10d286ab389ab3f05ec780c4e58
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="frequently-asked-questions-for-system-center-configuration-manager-branches-and-licensing"></a>System Center Configuration Manager 分支和授權常見問題集
+# <a name="frequently-asked-questions-for-system-center-configuration-manager-branches-and-licensing"></a>System Center Configuration Manager 分支和许可的常见问题解答
 
- *適用於：System Center Configuration Manager (長期維護分支)*
+ *适用范围：System Center Configuration Manager (Long-Term Servicing Branch)*
 
 ## <a name="summary"></a>摘要
-此常見問題集解決 System Center Configuration Manager 最新分支 (CB) 和長期維護分支 (LTSB) 版本的常見授權問題，可透過 Microsoft 大量授權方案取得。 這僅供參考，不會替代或取代任何涵蓋 System Center Configuration Manager 授權的文件。 如需完整詳細資料和授權資訊，請在[這裡](https://www.microsoft.com/licensing/product-licensing/system-center-2016.aspx)參閱大量授權的 System Center 2016 頁面和[產品條款](http://www.microsoft.com/licensing/about-licensing/product-licensing.aspx)。 「產品條款」描述所有 Microsoft 產品大量授權的使用條款。
+此常见问题解答涉及通过 Microsoft 批量许可计划提供的 System Center Configuration Manager Current Branch (CB) 和 Long-Term Servicing Branch (LTSB) 版本的常见许可问题。 此常见问题解答用于参考，不会取代或替换任何涉及 System Center Configuration Manager 许可的文档。 有关许可的完整详细信息，请参阅[此处](https://www.microsoft.com/licensing/product-licensing/system-center-2016.aspx)的批量许可 System Center 2016 页和[产品条款](http://www.microsoft.com/licensing/about-licensing/product-licensing.aspx)。 产品术语描述批量许可中所有 Microsoft 产品的使用条款。
 
-如需 System Center Configuration Manager 功能的詳細資訊，請參閱 Microsoft [System Center Configuration Manager](https://www.microsoft.com/cloud-platform/system-center-configuration-manager) 產品頁面。
-
-
+有关 System Center Configuration Manager 功能的详细信息，请参阅 Microsoft [System Center Configuration Manager](https://www.microsoft.com/cloud-platform/system-center-configuration-manager) 产品页
 
 
-## <a name="system-center-configuration-manager-licensing-faq"></a>System Center Configuration Manager 授權常見問題集
 
-1.  **什麼是最新分支 (CB)？**   
-最新分支是 System Center Configuration Manager 的生產環境就緒組建，可提供使用中服務模型。 此服務模型就像使用 Windows 10 或 Windows Server 2016 Nano 伺服器安裝選項的體驗。 這個方法支援正在「雲端節奏」移動而且想要更快速創新的客戶。 運用最新分支服務模型，System Center Configuration Manager 客戶可繼續接收新的功能。 基於此原因，只有具有 System Center Configuration Manager 授權之使用中軟體保證或對等訂閱權限的客戶，才能安裝和使用 System Center Configuration Manager 最新分支。
 
-2.  **什麼是長期維護分支 (LTSB)？**  
-長期維護分支是 System Center Configuration Manager 的生產環境就緒組建，適用於允許軟體保證或對等訂閱權限過期的客戶。 相較於最新分支，LTSB 的[功能有限](/sccm/core/understand/introduction-to-the-ltsb#features-that-are-not-available-in-the-ltsb-of-configuration-manager)。 允許軟體保證或對等訂閱權限過期的客戶必須解除安裝 System Center Configuration Manager 最新分支。 擁有 System Center Configuration Manager 永久授權權限的客戶接著會安裝和使用在過期當下時最新之 System Center Configuration Manager 的 LTSB 組建。
+## <a name="system-center-configuration-manager-licensing-faq"></a>System Center Configuration Manager 授权常见问题解答
 
-3.  **我已看到授權內容中所使用的 SA 和 L&SA。對於 System Center Configuration Manager，這些的意義為何？**    
-SA (軟體保證) 和 L&SA (授權和軟體保證) 是授與 System Center Configuration Manager 使用權限的授權選項。 SA 是從先前協議更新 SA 涵蓋範圍之客戶的選項。 L&SA 是購買新授權和 SA 涵蓋範圍之客戶的選項。
-  - 軟體保證 (SA)：客戶必須具有 System Center Configuration Manager 授權的使用中 SA 或對等訂閱權限，才能安裝和使用 System Center Configuration Manager 的最新分支選項。    
+1.  **什么是 Current Branch (CB)？**   
+Current Branch 是提供活动服务模型的 System Center Configuration Manager 生产就绪版本。 这种服务模型类似于使用 Windows 10 或 Windows Server 2016 Nano Server 安装选项。 此方法支持以“云节奏”迁移并希望加快创新速度的客户。 通过 Current Branch 服务模型，System Center Configuration Manager 客户可继续接收新功能。 因此，只有具有 System Center Configuration Manager 许可证上的可用软件保障或等效订阅权限的客户可安装和使用 System Center Configuration Manager 的 Current Branch。
 
-        -   雖然 SA 對部分 Microsoft 產品是選擇性項目，但是取得 System Center Configuration Manager 最新分支使用權限的唯一方式是使用 SA (或對等訂閱權限)。  如需詳細資訊，請參閱 https://www.microsoft.com/en-us/licensing/licensing-programs/FAQ-Software-Assurance.aspx。
+2.  **什么是 Long Term Servicing Branch (LTSB)？**  
+Long-Term Servicing Branch 是 System Center Configuration Manager 的生产就绪版本，适用于允许软件保障或等效订阅权限过期的客户。 与 Current Branch 相比，LTSB 的[功能缩减](/sccm/core/understand/introduction-to-the-ltsb#features-that-are-not-available-in-the-ltsb-of-configuration-manager)。 允许软件保障或等效订阅权限过期的客户必须卸载 System Center Configuration Manager 的 Current Branch。 如果客户对 System Center Configuration Manager 具有永久许可权限，则可在过期时安装并使用 System Center Configuration Manager 最新版的 LTSB 版本。
 
-      - Microsoft 授權和軟體保證 (L&SA)。 購買 System Center Configuration Manager 新授權的客戶必須取得 L&SA (授權和 SA 涵蓋範圍)。   
+3.  **我知道许可内容中使用 SA 和 L&SA。它们在 System Center Configuration Manager 中的含义是什么？**    
+SA（软件保障）和 L&SA（许可证和软件保障）是授权使用 System Center Configuration Manager 的许可选项。 SA 选项适用于从之前的协议续订 SA 范围的客户。 L&SA 选项适用于购买新的许可证和 SA 范围的客户。
+  - 软件保障 (SA)：客户必须在 System Center Configuration Manager 许可证上具有可用 SA 或具有等效的订阅权限，才可安装和使用 System Center Configuration Manager 的 Current Branch。    
 
-         - SA 會授與最新分支的使用權限。
+        -   虽然对于某些 Microsoft 产品来说 SA 是可选选项，但获取使用 System Center Configuration Manager Current Branch 的权限的唯一方法是使用 SA（或等效订阅权限）。  有关详细信息，请参阅 https://www.microsoft.com/zh-cn/licensing/licensing-programs/FAQ-Software-Assurance.aspx。
 
-       - 不過，如果您的 SA 到期，但仍有 System Center Configuration Manager 的授權，則無法再使用最新分支。 請參閱此常見問題集中的第 6 點：***如果我的 SA 到期，並且已有 L&SA，我可以獲得什麼？***
+      - Microsoft 许可证和软件保障 (L&SA)。 购买新的 System Center Configuration Manager 许可证的客户必须获取 L&SA（许可证和 SA 范围）。   
 
-       在下列位置深入了解授權產品：https://www.microsoft.com/licensing/licensing-programs 和 http://www.microsoftvolumelicensing.com/ProductResults.aspx?doc=Product%20Terms,OST&fid=64。
+         - SA 授予使用 Current Branch 的权限。
 
-4.  **我已讀過「對等訂閱」這個詞，那指的是什麼程式？**   
-       對等訂閱指的是 [Enterprise Mobility + Security](http://www.microsoftvolumelicensing.com/ProductResults.aspx?doc=Product%20Terms,OST&fid=51) (EMS) 或 [Secure Productive Enterprise](https://www.microsoft.com/secure-productive-enterprise/default.aspx) (SPE) 這類程式。 可以是其他程式，但這些最常見。 這些在 Microsoft 大量授權產品條款中稱為管理授權對等授權。
+       - 如果 SA 过期，你仍拥有 System Center Configuration Manager 的许可证，但无法再使用 Current Branch。 请参阅此常见问题解答中的编号 6：***如果 SA 过期且拥有 L&SA，我可使用的功能是什么？***
 
-5.  **我有 Enterprise Mobility + Security 但已過期，我現在必須怎麼做？**  
-       EMS 會授與 System Center Configuration Manager 的使用權限 (最新分支和長期維護分支)。 這些權限到期時，您就不再有權使用任一分支，而且必須予以解除安裝。  
+       有关许可证产品/服务的详细信息，请访问 https://www.microsoft.com/licensing/licensing-programs  和 http://www.microsoftvolumelicensing.com/ProductResults.aspx?doc=Product%20Terms,OST&fid=64。
 
-6.  **如果我的 SA 到期，並且已有 L&SA，我可以獲得什麼？**   
-   如果您的 SA 在 2016 年 10 月 1 日之後過期，則根據取得 L&SA 的方案，您可以保留永久授權來使用長期維護分支 (LTSB)。 如果您目前使用最新分支，則必須安裝它，然後安裝 LTSB。 不支援從最新分支移轉至或轉換成 LTSB。
+4.  **我遇到了术语“等效订阅”，这是指什么计划？**   
+       等效订阅指[企业移动性 + 安全性](http://www.microsoftvolumelicensing.com/ProductResults.aspx?doc=Product%20Terms,OST&fid=51) (EMS) 或 [Secure Productive Enterprise](https://www.microsoft.com/secure-productive-enterprise/default.aspx) (SPE) 等计划。 可能还涉及其他计划，但以上计划是最常见的。 Microsoft 批量许可产品条款将这些计划称为“管理许可证的等效许可证”。
 
-  如果您的 SA 在 2016 年 10 月 1 日之前過期，但保留 System Center Configuration Manager 的永久授權，則持續使用的唯一選項是安裝和使用 System Center 2012 R2 Configuration Manager 和其可用的 Service Pack。 您的 SA 到期之後，會要求您解除安裝最新分支，並重新安裝產品的該舊版本。 不支援從 System Center Configuration Manager 最新分支移轉至或降級至舊版 Configuration Manager。
+5.  **我拥有企业移动性 + 安全性，但已过期，现在必须执行什么操作？**  
+       EMS 授予使用 System Center Configuration Manager（Current Branch 和 Long-Term Servicing Branch）的权限。 这些权限过期时，你不再有权使用任一分支且必须卸载。  
 
-7. **我「擁有」最新分支嗎？**   
-  不會。 您有使用中 SA 時，即有權使用最新分支。 例如，透過 *L&SA*，*SA* 到期時，您只會有「L (授權)」權限，但這不包括使用最新分支的權限。 如果您的 L 提供永久權限，則可以使用 System Center Configuration Manager 長期維護分支 (或者，如果您的 SA 在 2016 年 10 月 1 日之前過期，則為 System Center 2012 R2 Configuration Manager ) 來取代最新分支。
+6.  **如果 SA 过期且拥有 L&SA，我可使用的功能是什么？**   
+   如果 SA 在 2016 年 10 月 1 日后过期，可保留使用 Long-Term Servicing Branch (LTSB) 的永久许可证，具体取决于你是从什么计划下获取 L&SA。 如果当前使用 Current Branch，必须将其卸载，然后安装 LTSB。 不支持从 Current Branch 迁移到或转换为 LTSB。
 
-8. **我可以購買 System Center Configuration Manager 獨立版，而不需要購買 SA 嗎？**      
-  不會。  取得 System Center Configuration Manager 使用權限的唯一方法是取得具有 SA 的授權。 有些開發人員計劃 (如 MSDN) 會提供 System Center Configuration Manager 來進行開發和測試，但不是用於生產。
+  如果 SA 在 2016 年 10 月 1 日前过期并保留了 System Center Configuration Manager 的永久许可证，则继续使用的唯一选择是安装和使用 System Center 2012 R2 Configuration Manager 及其可用的服务包。 SA 过期时需要卸载 Current Branch，并重新安装该产品的早期版本。 不支持从 System Center Configuration Manager Current Branch 迁移到或降级为 Configuration Manager 的早期版本。
 
-9. **我看到主控台所提供之 System Center Configuration Manager 的更新，例如 1610 版。我有權可以安裝它嗎？**   
-  如果您有使用中 *SA*，則可以這麼做。 如果您沒有使用中 SA，則必須解除安裝最新分支，接著安裝 LTSB 的 System Center Configuration Manager。 LTSB 不會接收 System Center Configuration Manager 累加版本的更新，但會根據支援週期來接收安全性更新。
+7. **我是否“拥有”Current Branch？**   
+  否。 当你具有可用 SA 时，有权使用 Current Branch。 例如，通过 *L&SA*，当 *SA* 过期时，你仅具有 *L（许可证）*权限，这不包括使用 Current Branch 的权限。 如果 L 提供永久权限，可使用 System Center Configuration Manager 的 Long-Term Servicing Branch（或如果 SA 在 2016 年 10 月 1 日前过期，则使用 System Center 2012 R2 Configuration Manager）代替 Current Branch。
 
-10. **我的訂閱結束日期與 SA 到期日相同嗎？**    
-  如果 *SA* 或訂閱為使用中，則您具有 System Center Configuration Manager 最新分支的使用權限。 使用中訂閱相當於具有使用中 *SA*，但沒有永久「“L” (授權)」。 訂閱結束之後，您必須解除安裝最新分支，而且沒有使用 LTSB 的權限。
+8. **是否可以单独购买 System Center Configuration Manager，而不购买 SA？**      
+  否。  获取使用 System Center Configuration Manager 的权限的唯一方法是获取具有 SA 的许可证。 开发人员计划（如 MSDN）中提供的 System Center Configuration Manager 用于开发和测试目的，但不用作生产用途。
+
+9. **我发现我的控制台中提供 System Center Configuration Manager 的更新，如版本 1610。我是否有权安装它？**   
+  如果你拥有可用 *SA*，则有权安装它。 如果没有可用 SA，则必须卸载 Current Branch，然后安装 System Center Configuration Manager 的 LTSB。 LTSB 不会接收 System Center Configuration Manager 增量版本的更新，但会接收基于支持生命周期的安全更新。
+
+10. **订阅结束日期是否与 SA 过期日期相同？**    
+  如果 *SA* 或订阅处于可用状态，则有权使用 System Center Configuration Manager Current Branch。 可用订阅等效于具有可用 *SA*，但没有永久“L”（许可证）。 订阅结束后，必须卸载 Current Branch 且没有权限使用 LTSB。

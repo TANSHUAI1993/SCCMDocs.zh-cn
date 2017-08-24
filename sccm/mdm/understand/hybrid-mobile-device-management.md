@@ -1,6 +1,6 @@
 ---
-title: "混合式行動裝置管理 (MDM) - Configuration Manager & Microsoft Intune | Microsoft Docs"
-description: "了解搭配 System Center Configuration Manager 和 Microsoft Intune 的混合式行動裝置管理 (MDM)。"
+title: "混合移动设备管理 (MDM) - Configuration Manager 和 Microsoft Intune | Microsoft Docs"
+description: "了解使用 System Center Configuration Manager 和 Microsoft Intune 的混合移动设备管理 (MDM)。"
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
@@ -18,31 +18,31 @@ manager: angrobe
 ms.openlocfilehash: e54478a03807c939ffa64ff39a21ef6f9ea4ae2d
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="hybrid-mobile-device-management-mdm-with-system-center-configuration-manager-and-microsoft-intune"></a>Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune
+# <a name="hybrid-mobile-device-management-mdm-with-system-center-configuration-manager-and-microsoft-intune"></a>使用 System Center Configuration Manager 和 Microsoft Intune 的混合移动设备管理 (MDM)
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 
-您可以使用 Configuration Manager 和 Microsoft Intune 管理 iOS、Windows 和 Android 裝置。 您可從 Configuration Manager 主控台來處理所有管理工作，並透過網際網路執行與 Microsoft Intune 線上服務緊密整合的其他管理工作。  您可以使用 Configuration Manager，讓使用者在其裝置上透過安全的受管理方式來存取公司資源。 使用裝置管理功能時，您可以保護公司資料，同時讓使用者能夠註冊其個人或公司擁有的裝置以便存取公司資料。 裝置管理功能：
+可使用 Configuration Manager 和 Microsoft Intune 管理 iOS、Windows 和 Android 设备。 可通过 Configuration Manager 控制台处理所有管理任务，还可处理通过 Internet 与 Microsoft Intune 联机服务无缝集成的其余管理任务。  可借助 Configuration Manager 允许用户以安全的托管方式访问其设备上的公司资源。 通过使用设备管理，你可以保护公司数据，同时允许用户注册其个人设备或公司拥有的设备，以访问公司数据。 设备上的管理功能：
 
--   淘汰或抹除裝置
--   設定包括密碼、安全性、漫遊、加密和無線通訊等相容性設定。
--   將商務營運 (LOB) 應用程式部署到裝置
--   將 App 部署到連線 Windows 市集、Windows Phone 市集、App Store 或 Google Play 的裝置。
--   收集硬體清查
--   使用內建報告來收集軟體清查
+-   停用和擦除设备
+-   配置密码、安全性、漫游、加密和无线通信等符合性设置
+-   将业务线 (LOB) 应用部署到设备
+-   将应用部署到连接到 Windows 应用商店、Windows Phone 应用商店、应用商店或 Google Play 的设备
+-   收集硬件清单
+-   使用内置报表收集软件清单
 
-若要了解混合式 MDM 有哪些新功能，請參閱 [What's new in hybrid mobile device management](../understand/whats-new-in-hybrid-mobile-device-management.md) (混合式行動裝置管理的新功能)。
+若要阅读有关哪些新功能可用于混合 MDM 的信息，请参阅[混合移动设备管理中的新增功能](../understand/whats-new-in-hybrid-mobile-device-management.md)。
 
-本文件假設您使用 Configuration Manager 來管理電腦，且有意搭配 Intune 來擴充 Configuration Manager 主控台以管理行動裝置。 若要了解 Intune 和混合式行動裝置管理之間的差異，請參閱 [Choose between Microsoft Intune standalone and hybrid mobile device management with System Center Configuration Manager](choose-between-standalone-intune-and-hybrid-mobile-device-management.md) (在搭配 System Center Configuration Manager 使用 Microsoft Intune 獨立或混合式行動裝置管理之間進行選擇)。
+本文假设你正在使用 Configuration Manager 管理计算机，并且对使用 Intune 扩展 Configuration Manager 控制台来管理移动设备感兴趣。 若要了解 Intune 和混合移动设备管理之间的差异，请参阅[在 Microsoft Intune 独立版和使用 System Center Configuration Manager 的混合移动设备管理之间选择](choose-between-standalone-intune-and-hybrid-mobile-device-management.md)。
 
-在使用 Intune 來擴充 Configuration Manager 之後，您即可註冊並管理公司擁有的裝置，或賦予使用者註冊其個人裝置的權限。 您也可以使用 Configuration Manager，搭配 Intune 來管理公司擁有的裝置。
+使用 Intune 扩展 Configuration Manager 后，可注册和管理公司拥有的设备或授予用户注册其个人设备的权限。 还可以使用 Configuration Manager 通过 Intune 管理公司拥有的设备。
 
-## <a name="hybrid-mdm-enrollment"></a>混合式 MDM 註冊
-若要對裝置採取混合式管理，您必須為這些裝置註冊服務。 透過裝置來進行裝置註冊的方式，取決於裝置類型、擁有權和所需的管理層級。
-- 「自備裝置」(BYOD) 註冊方式可讓使用者註冊其個人電話、平板電腦或電腦。
-- 公司擁有的裝置 (CYOD) 註冊方式可啟用遠端抹除、共用裝置或裝置使用者親和性這類管理案例。
-- 如果您使用 [Exchange ActiveSync](../plan-design/device-enrollment-methods.md#mobile-device-management-with-exchange-activesync-and-configuration-manager) (不論內部部署或裝載在雲端中)，即可啟用簡單的 Intune 管理功能，而不需要註冊。 您也可以使用 [Intune 用戶端軟體](/intune/deploy-use/manage-windows-pcs-with-microsoft-intune)來管理 Windows 電腦。
+## <a name="hybrid-mdm-enrollment"></a>混合 MDM 注册
+若要对设备进行混合管理，设备必须向该服务注册。 设备的注册方式取决于设备类型、所有权和所需的管理级别。
+- “自带设备办公”(BYOD) 注册允许用户注册其个人电话、平板电脑或电脑。
+- 公司拥有的设备 (COD) 注册启用管理方案，如远程擦除、共享的设备或设备的用户关联。
+- 如果使用本地或在云中托管的 [Exchange ActiveSync](../plan-design/device-enrollment-methods.md#mobile-device-management-with-exchange-activesync-and-configuration-manager)，则无需注册即可启用简单的 Intune 管理。 还可使用 [Intune 客户端软件](/intune/deploy-use/manage-windows-pcs-with-microsoft-intune)管理 Windows 电脑。

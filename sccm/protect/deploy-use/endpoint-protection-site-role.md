@@ -1,6 +1,6 @@
 ---
-title: "建立 Endpoint Protection 點站台系統角色 | Microsoft Docs"
-description: "了解如何設定 Endpoint Protection 以在 Configuration Manager 用戶端電腦上管理安全性和惡意程式碼。"
+title: "创建 Endpoint Protection 点站点系统角色 | Microsoft Docs"
+description: "了解如何将 Endpoint Protection 配置为管理 Configuration Manager 客户端计算机上的安全和恶意软件。"
 defintion: 
 definition: 
 ms.custom: na
@@ -19,67 +19,67 @@ manager: angrobe
 ms.openlocfilehash: 6e717bcbe5ef8c3f2efa717d0cebb9e675e7c127
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="create-an-endpoint-protection-point-site-system-role"></a>建立 Endpoint Protection 點站台系統角色
+# <a name="create-an-endpoint-protection-point-site-system-role"></a>创建 Endpoint Protection 点站点系统角色
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
- 必須先安裝 Endpoint Protection 點站台系統角色，才能使用 Endpoint Protection。 其只能安裝在一部站台系統伺服器上，而且必須安裝於管理中心網站或獨立主要站台的階層頂端。
+ 必须先安装 Endpoint Protection 点站点系统角色，然后才能使用 Endpoint Protection。 必须将其仅安装在一个站点系统服务器上，并且必须将其安装在管理中心站点或独立主站点上层次结构的顶部。
 
- 根據您想為 Endpoint Protection 安裝新的站台系統伺服器，還是是使用現有的站台系統伺服器，使用下列其中一項程序。
- - [安裝在新的站台系統伺服器](#new-site-system-server)
- - [安裝在現有的站台系統伺服器](#existing-site-system-server)
+ 根据是要为 Endpoint Protection 安装新的站点系统服务器还是使用现有站点系统服务器的具体情况，使用以下过程之一：
+ - [安装新的站点系统服务器](#new-site-system-server)
+ - [安装现有站点系统服务器](#existing-site-system-server)
 
 > [!IMPORTANT]
->  當您安裝 Endpoint Protection 點時，裝載 Endpoint Protection 點的伺服器上會安裝 Endpoint Protection 用戶端。 此用戶端的服務和掃描已停用，使其能與任何安裝在伺服器上的現有反惡意程式碼解決方案同時存在。 如果您之後啟用此伺服器以供 Endpoint Protection 管理，並選取要移除任何協力廠商反惡意程式碼解決方案的選項，將不會移除協力廠商產品。 您必須手動解除安裝此產品。
+>  安装 Endpoint Protection 点时，会在托管 Endpoint Protection 点的服务器上安装 Endpoint Protection 客户端。 在此客户端上禁用服务和扫描以使其能够与服务器上安装的任何现有反恶意软件解决方案共存。 如果之后使此服务器由 Endpoint Protection 进行管理，并选择可删除任何第三方反恶意软件解决方案的选项，将不会删除第三方产品。 必须手动卸载此产品。
 
-## <a name="new-site-system-server"></a>新增網站系統伺服器
+## <a name="new-site-system-server"></a>新建站点系统服务器
 
-1.  在 Configuration Manager 主控台中，按一下 [系統管理] 。
+1.  在 Configuration Manager 控制台中，单击“管理” 。
 
-2.  在 [系統管理]  工作區中，展開 [網站設定] ，然後按一下 [伺服器和網站系統角色] 。
+2.  在“管理”  工作区中，展开“站点配置” ，然后单击“服务器和站点系统角色” 。
 
-3.  在 [首頁]  索引標籤的 [建立]  群組中，按一下 [建立網站系統伺服器] 。
+3.  在“主页”  选项卡上的“创建”  组中，单击“创建站点系统服务器” 。
 
-4.  在 [一般]  頁面上，指定網站系統的一般設定，然後按 [下一步] 。
+4.  在“常规”  页上，指定站点系统的常规设置，然后单击“下一步” 。
 
-5.  於 [系統角色選取]  頁面上，在可用角色的清單中選取 [Endpoint Protection 點]  ，然後按一下 [下一步] 。
+5.  在“系统角色选择”  页上的可用角色列表中选择“Endpoint Protection 点”  ，然后单击“下一步” 。
 
-6.  在 [Endpoint Protection]  頁面上，選取 [我接受 Endpoint Protection 授權條款]  核取方塊，然後按一下 [下一步] 。
-
-    > [!IMPORTANT]
-    >  除非您接受授權條款，否則無法在 Configuration Manager 中使用 Endpoint Protection。
-
-7.  在 [雲端保護服務] 頁面上，選取您想傳送給 Microsoft 以協助開發新定義的資訊層級，然後按一下 [下一步]。
-
-    > [!NOTE]
-    >  這個選項會設定預設使用的雲端保護服務 (先前稱為 Microsoft Active Protection Service 或 MAPS) 設定。 然後，您可以為每個您所建立的反惡意程式碼原則設定自訂設定。 加入雲端保護服務，藉由將惡意程式碼範例提供給 Microsoft，協助 Microsoft 將反惡意程式碼定義維持在最新的狀態，進而讓您的電腦更安全。 此外，您加入雲端保護服務之後，Endpoint Protection 用戶端便可以使用動態特徵碼服務，在新的定義發佈到 Windows Update 之前，先行下載這些定義。 如需詳細資訊，請參閱[如何在 System Center Configuration Manager 中建立和部署 Endpoint Protection 的反惡意程式碼原則](endpoint-antimalware-policies.md)。
-
-8.  完成精靈。
-
-
-## <a name="existing-site-system-server"></a>現有的網站系統伺服器
-
-1.  在 Configuration Manager 主控台中，按一下 [系統管理] 。
-
-2.  在 [系統管理] 工作區中，展開 [站台設定]、按一下 [伺服器和站台系統角色]，然後選取要用於 Endpoint Protection 的伺服器。
-
-3.  在 [首頁]  索引標籤的 [伺服器]  群組中，按一下 [新增網站系統角色] 。
-
-4.  在 [一般]  頁面上，指定網站系統的一般設定，然後按 [下一步] 。
-
-5.  於 [系統角色選取]  頁面上，在可用角色的清單中選取 [Endpoint Protection 點]  ，然後按一下 [下一步] 。
-
-6.  在 [Endpoint Protection]  頁面上，選取 [我接受 Endpoint Protection 授權條款]  核取方塊，然後按一下 [下一步] 。
+6.  在“Endpoint Protection”  页上，选择“我接受 Endpoint Protection 许可条款”  复选框，然后单击“下一步” 。
 
     > [!IMPORTANT]
-    >  除非您接受授權條款，否則無法在 Configuration Manager 中使用 Endpoint Protection。
+    >  必须接受许可条款，才能在 Configuration Manager 中使用 Endpoint Protection。
 
-7.  在 [雲端保護服務] 頁面上，選取您想傳送給 Microsoft 以協助開發新定義的資訊層級，然後按一下 [下一步]。
+7.  在“云保护服务”页面上，选择想要发送到 Microsoft 以帮助开发新定义的信息的级别，然后单击“下一步”。
 
     > [!NOTE]
-    >  這個選項會設定預設使用的雲端保護服務 (先前稱為 MAPS) 設定。 您可以為每個您設定的反惡意程式碼原則設定自訂設定。 如需詳細資訊，請參閱[如何在 System Center Configuration Manager 中建立和部署 Endpoint Protection 的反惡意程式碼原則](endpoint-antimalware-policies.md)。
+    >  此选项配置默认使用的云保护服务（以前称为 Microsoft Active Protection Service 或 MAPS）设置。 然后可以为你创建的每个反恶意软件策略配置自定义设置。 加入云保护服务，通过为 Microsoft 提供有助于 Microsoft 将反恶意软件定义保持为最新状态的恶意软件示例，以此来帮助计算机保持更加安全的状态。 此外，在加入云保护服务后，Endpoint Protection 客户端可以使用动态签名服务在新定义发布到 Windows 更新前先下载这些新定义。 有关详细信息，请参阅[如何在 System Center Configuration Manager 中为 Endpoint Protection 创建和部署反恶意软件策略](endpoint-antimalware-policies.md)。
 
-8.  完成精靈。
+8.  完成向导。
+
+
+## <a name="existing-site-system-server"></a>现有站点系统服务器
+
+1.  在 Configuration Manager 控制台中，单击“管理” 。
+
+2.  在“管理”工作区中，展开“站点配置”，单击“服务器和站点系统角色”，然后选择想用于 Endpoint Protection 的服务器。
+
+3.  在“主页”  选项卡上的“服务器”  组中，单击“添加站点系统角色” 。
+
+4.  在“常规”  页上，指定站点系统的常规设置，然后单击“下一步” 。
+
+5.  在“系统角色选择”  页上的可用角色列表中选择“Endpoint Protection 点”  ，然后单击“下一步” 。
+
+6.  在“Endpoint Protection”  页上，选择“我接受 Endpoint Protection 许可条款”  复选框，然后单击“下一步” 。
+
+    > [!IMPORTANT]
+    >  必须接受许可条款，才能在 Configuration Manager 中使用 Endpoint Protection。
+
+7.  在“云保护服务”页面上，选择想要发送到 Microsoft 以帮助开发新定义的信息的级别，然后单击“下一步”。
+
+    > [!NOTE]
+    >  此选项配置默认使用的云保护服务（以前称为 MAPS）设置。 然后可以为你配置的每个反恶意软件策略配置自定义设置。 有关详细信息，请参阅[如何在 System Center Configuration Manager 中为 Endpoint Protection 创建和部署反恶意软件策略](endpoint-antimalware-policies.md)。
+
+8.  完成向导。

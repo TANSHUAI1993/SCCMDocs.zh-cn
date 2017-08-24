@@ -1,6 +1,6 @@
 ---
-title: "裝置合規性政策 | Microsoft Docs"
-description: "了解如何在 System Center Configuration Manager 中管理相容性原則，使裝置符合條件式存取原則。"
+title: "设备合规性策略 | Microsoft Docs"
+description: "了解如何在 System Center Configuration Manager 中管理合规性策略以使设备符合条件访问策略。"
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
@@ -18,56 +18,56 @@ manager: angrobe
 ms.openlocfilehash: bcaa2a9b5474e06bf344dc4fd47dbb160ea36297
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="device-compliance-policies-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的裝置相容性原則
+# <a name="device-compliance-policies-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的设备合规性策略
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager 中的**相容性原則**會定義裝置必須符合才能被條件式存取原則視為符合規範的規則與設定。 您也可以使用相容性原則，來監視和修復與條件式存取無關的裝置相容性問題。  
+System Center Configuration Manager 中的**合规性策略**定义设备必须遵从的规则和设置，以便被视为符合条件访问策略。 也可使用符合性策略来监视和修正独立于条件访问的设备符合性问题。  
 
 
 > [!IMPORTANT]  
->  本文說明 Microsoft Intune 所管理裝置的相容性原則。    如需 System Center Configuration Manager 所管理電腦的相容性原則，請參閱[管理 System Center Configuration Manager 所管理之電腦對 O365 服務的存取](../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)。  
+>  本文介绍了由 Microsoft Intune 管理的设备的合规性策略。    由 System Center Configuration Manager 管理的电脑的合规性策略在[管理对由 System Center Configuration Manager 管理的电脑的 O365 服务的访问](../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)中进行了说明。  
 
- 這些規則包括需求，例如︰  
+ 这些规则包括类似于下面这样的要求：  
 
--   存取裝置用的 PIN 和密碼
+-   用于访问设备的 PIN 和密码
 
--   裝置上儲存資料的加密
+-   存储在设备上的数据的加密
 
--   裝置為 jailbroken 或根目錄  
+-   设备是否已越狱或取得 root 权限  
 
--   裝置上的電子郵件是否由 Intune 原則管理，或裝置是否被 Windows 裝置健康情況證明服務回報為狀況不良。
--   無法安裝在裝置上的應用程式。
+-   设备上的电子邮件是否由 Intune 策略管理，或者设备是否被 Windows 设备运行状况证明服务报告为不正常。
+-   无法在设备上安装的应用。
 
 
- 您可以將相容性原則部署到使用者集合。 將相容性原則部署到使用者時，即會檢查所有使用者裝置的相容性。  
+ 将符合性策略部署到用户集合。 将合规性策略部署到用户后，会对所有用户设备检查合规性。  
 
- 下表列出相容性原則支援的裝置類型，以及在將該原則與條件式存取原則搭配使用時如何管理不相容的設定。  
+ 下表列出了合规性策略支持的设备类型，也列出了当该策略与条件访问策略一起使用时托管不符合合规性的设置的方式。  
 
-|規則|Windows 8.1 及更新版本|Windows Phone 8.1 和更新版本|iOS 6.0 和更新版本|Android 4.0 和更新版本、Samsung Knox Standard 4.0 和更新版本、Android for Work|  
+|规则|Windows 8.1 及更高版本|Windows Phone 8.1 及更高版本|iOS 6.0 及更高版本|Android 4.0 及更高版本、Samsung KNOX Standard 4.0 及更高版本、Android for Work|  
 |----------|---------------------------|---------------------------------|-----------------------|---------------------------|-----------------------------------------|  
-|**PIN 碼或密碼設定**|已修復|已修復|已修復|已隔離|  
-|**裝置加密**|N/A|已修復|已修復 (藉由設定 PIN 碼)|已隔離<br>(Android for Work 一律會加密)|  
-|**已進行 JB 或 Root 破解的裝置**|N/A|N/A|隔離 (非設定)|隔離 (非設定)|  
-|**電子郵件設定檔**|N/A|N/A|已隔離|N/A|  
-|**最低 OS 版本**|已隔離|已隔離|已隔離|已隔離|  
-|**最高 OS 版本**|已隔離|已隔離|已隔離|已隔離|  
-|**裝置健康情況證明 (1602 更新)**|設定不適用於 Windows 8.1<br /><br /> 已隔離 Windows 10 和 Windows 10 行動裝置版。|N/A|N/A|N/A|  
-|**無法安裝的應用程式**|N/A|N/A|已隔離|已隔離|
+|**PIN 或密码配置**|已修正|已修正|已修正|已隔离|  
+|**设备加密**|不适用|已修正|已修正（通过设置 PIN）|已隔离<br>（Android for Work 始终加密）|  
+|**已越狱或取得 root 权限的设备**|不适用|不适用|已隔离（非设置）|已隔离（非设置）|  
+|**电子邮件配置文件**|不适用|不适用|已隔离|不适用|  
+|**最低操作系统版本**|已隔离|已隔离|已隔离|已隔离|  
+|**最高操作系统版本**|已隔离|已隔离|已隔离|已隔离|  
+|**设备运行状况证明（1602 更新）**|设置不适用于 Windows 8.1<br /><br /> Windows 10 和 Windows 10 移动版已隔离。|不适用|不适用|不适用|  
+|**不能安装的应用**|不适用|不适用|已隔离|已隔离|
 
- **已修復** = 相容性由裝置作業系統執行 (例如強制使用者設定 PIN 碼)。  永遠不可能發生設定值不相容的情況。  
+ **修正** = 法规遵从性由设备操作系统强制执行（例如，强制用户设置 PIN）。  设置永远不会不符合要求。  
 
- **已隔離** = 裝置作業系統不會強制要求相容性 (例如，Android 裝置不會強制要求使用者加密裝置)。  在此情況下：  
+ **已隔离** = 设备操作系统并不强制合规性（例如，Android 设备不强制用户加密设备）。  这种情况下：  
 
--   如果使用者是條件式存取原則的目標，則將會封鎖該裝置。  
+-   如果条件访问策略将用户作为目标，则会阻止设备。  
 
--   公司入口網站或 Web 入口網站將通知使用者任何相容性相關問題。  
+-   公司门户或 Web 门户将通知用户任何合规性问题。  
 
 
-### <a name="next-steps"></a>後續步驟  
-[建立及部署裝置相容性原則](create-compliance-policy.md)
-### <a name="see-also"></a>請參閱  
- [管理 System Center Configuration Manager 中的服務存取權](../../protect/deploy-use/manage-access-to-services.md)
+### <a name="next-steps"></a>后续步骤  
+[创建和部署设备合规性策略](create-compliance-policy.md)
+### <a name="see-also"></a>另请参阅  
+ [在 System Center Configuration Manager 中管理对服务的访问](../../protect/deploy-use/manage-access-to-services.md)

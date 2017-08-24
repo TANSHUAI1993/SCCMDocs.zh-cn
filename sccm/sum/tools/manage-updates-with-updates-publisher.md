@@ -1,6 +1,6 @@
 ---
 title: "管理更新 | Microsoft Docs"
-description: "管理您使用 System Center Updates Publisher 部署並建立的更新"
+description: "管理使用 System Center Updates Publisher 部署和创建的更新"
 ms.custom: na
 ms.date: 4/29/2017
 ms.prod: configuration-manager
@@ -18,121 +18,121 @@ robots: NOINDEX, NOFOLLOW
 ms.openlocfilehash: 1d6c3b1db14867bdbc5cae8ded099d9024a79549
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="manage-software-updates-in-updates-publisher"></a>在 Updates Publisher 中管理軟體更新
+# <a name="manage-software-updates-in-updates-publisher"></a>管理 Updates Publisher 中的软件更新
 
-*適用於：System Center Updates Publisher*     
+*适用范围：System Center Updates Publisher*     
 
-在 System Center Updates Publisher 中，您可以使用 [更新工作區] 來管理您匯入到存放庫的軟體更新與配套。  
+在 System Center Updates Publisher 中，可以使用“更新工作区”管理已导入存储库中的软件更新和捆绑包。  
 
-管理工作包含複製及編輯更新與配套、設定更新與配套的到期日或將其重新啟用，以及將更新與配套指派到發行集。 您也可以匯出自訂類別目錄，以搭配其他 Updates Publisher 安裝使用。
+管理任务包括复制、编辑和终止或重新激活更新和捆绑包，以及将更新和捆绑包分配给发布项。 此外，还可以导出自定义目录，以供其他 Updates Publisher 安装项使用。
 
-取得您可以管理的更新：
--  [新增更新類別目錄](/sccm/sum/tools/updates-publisher-catalogs#add-software-update-catalogs)到您的 Updates Publisher 安裝
--  將更新從該類別目錄[匯入](/sccm/sum/tools/updates-publisher-catalogs#import-updates)到您的存放庫。
+若要获取可以管理的更新，请执行以下操作：
+-  [将更新目录添加](/sccm/sum/tools/updates-publisher-catalogs#add-software-update-catalogs)到 Updates Publisher 安装项中
+-  将目录中的更新[导入](/sccm/sum/tools/updates-publisher-catalogs#import-updates)存储库中。
 
-您也可以[建立自己的更新](/sccm/sum/tools/create-updates-with-updates-publisher)。
+还可以[创建你自己的更新](/sccm/sum/tools/create-updates-with-updates-publisher)。
 
 
 
-## <a name="create-a-duplicate-of-an-update"></a>建立更新的重複項
-您可以為存放庫中的更新建立重複項 (或稱複本)。 接著，您可以修改該複本，而非修改原始更新。 您無法建立更新配套的複本。
+## <a name="create-a-duplicate-of-an-update"></a>创建更新副本
+可以创建存储库中更新的副本。 然后，可以修改副本，而不用修改原始更新。 无法创建更新捆绑包的副本。
 
-若要建立複本，請在 [更新工作區]中選取更新，然後選擇 [建立複本]。 更新的複本會出現在 [更新工作區] 中的相同位置，且其名稱會附加「複本」字樣。
+若要创建副本，请在“更新工作区”中依次选择更新和“复制”。 更新的副本与其在“更新工作区”中的同一位置处显示，但名称中添加了“(副本)”一词。
 
-您建立的新複本會具有「未到期」狀態，但其他則會維持原始更新的設定。
+虽然新建的副本处于“未终止”状态，但保留了原始更新的设置。
 
-## <a name="edit-updates-and-bundles"></a>編輯更新與配套
-您可以選取存放庫中的更新與配套來修改它們。
+## <a name="edit-updates-and-bundles"></a>编辑更新和捆绑包
+可以选择存储库中的更新和捆绑包进行修改。
 
-在 [更新工作區] 中，選取更新或配套，然後從 [常用] 索引標籤選取 [編輯] 以開啟編輯精靈。 更新與配套各有彼此獨立但密切相關的精靈，它們會呈現與[建立更新](/sccm/sum/tools/create-updates-with-updates-publisher#the-create-update-wizard)或[建立配套](/sccm/sum/tools/create-updates-with-updates-publisher#the-create-bundle-wizard)精靈相同的選項。
+在“更新工作区”中，选择更新或捆绑包，然后在“开始”选项卡中选择“编辑”，打开编辑向导。 虽然更新和捆绑包各自有向导，但它们密切相关，显示[“创建更新”](/sccm/sum/tools/create-updates-with-updates-publisher#the-create-update-wizard)或[“创建捆绑包”](/sccm/sum/tools/create-updates-with-updates-publisher#the-create-bundle-wizard)向导中的相同选项。
 
-編輯時，您可以變更與更新或配套有關的任何可用詳細資料，以便它可以在您的環境中使用。 例如，您可以編輯適用性或優先順序規則，或變更語言。 您也可以變更產品與廠商以將更新或配套移至自訂資料夾，以根據您自己的用途將更新組成群組。
+编辑时，可以更改与更新或捆绑包相关的任意可用详细信息，以便能够在环境中使用。 例如，可以编辑适用性或优先规则，也可以更改语言。 还可以更改产品和供应商，将更新或捆绑包移到自定义文件夹中，从而对更新进行分组，以供你自己使用。
 
-## <a name="assign-updates-and-bundles-to-a-publication"></a>將更新與配套指派到發行集
-您可以在 [更新工作區] 中選取更新與配套，然後從 [常用] 索引標籤選擇 [指派]，以將它們新增到發行集。 這樣會啟動 [指派軟體更新] 精靈。
--  如需有關如何以單一工作形式選取及發行更新與配套的詳細資訊，請參閱[發行更新與配套](#publish-updates-and-bundles-from-the-updates-workspace)。
--  如需有關如何以單一物件形式管理更新與配套群組的詳細資訊，請參閱[管理發行集](/sccm/sum/tools/updates-publisher-publications)。 將更新指派到發行集之後，您可以管理該發行集，而該發行集接著會包含所有其受指派的更新。
+## <a name="assign-updates-and-bundles-to-a-publication"></a>将更新和捆绑包分配给发布项
+可以在“更新工作区”中选择更新和捆绑包，然后从功能区的“开始”选项卡中选择“分配”，将其添加到发布项中。 这会启动“分配软件更新”向导。
+-  请参阅[发布更新和捆绑包](#publish-updates-and-bundles-from-the-updates-workspace)，了解如何选择更新和捆绑包，并将其作为一个任务进行发布。
+-  若要了解如何将各组更新和捆绑包作为一个对象进行管理，请参阅[管理发布项](/sccm/sum/tools/updates-publisher-publications)。 将更新分配给发布项后，可以管理相应的发布项，继而会覆盖所有已分配更新。
 
-當您將更新指派到發行集時：
+将更新和捆绑包分配给发布项后：
 
--   您可以在相同的發行集中包括已到期與未到期的更新與配套。
+-   可以在同一发布项中添加已终止和未终止的更新和捆绑包。
 
--   指定發行集類型：
+-   指定发布项类型：
 
-    -   **完整內容** – 這會將更新的完整內容發行到您的 WSUS 伺服器。 這包括中繼資料與更新二進位檔案。
+    -   **完整内容** - 这会将更新的完整内容发布到 WSUS 服务器。 包括元数据和更新二进制文件。
 
-    -   **僅中繼資料** – 這只會發行中繼資料，不會發行更新二進位檔案。 當您想要收集合規性資料時，可以選擇此選項。
+    -   **仅元数据** - 仅发布元数据；不发布更新二进制文件。 如果要收集符合性数据，可以选择此选项。
 
-    -   **自動** – 只有當您已將 Updates Publisher 連線到 Configuration Manager 時，才能使用此模式 (請參閱 [ConfigMgr Server](/sccm/sum/tools/updates-publisher-options#configmgr-server) 選項)。
+    -   **自动** - 只有在已连接 Updates Publisher 和 Configuration Manager 时，此模式才可用（请参阅 [ConfigMgr 服务器](/sccm/sum/tools/updates-publisher-options#configmgr-server)选项。）
 
-    使用此類型時，Updates Publisher 會查詢 Configuration Manager 以判斷應該以 [完整內容] 或 [僅中繼資料] 選項發行更新或配套。 只有當更新符合 [要求的用戶端計數閾值] 與 [套件來源大小閾值]\(在 Updates Publisher 選項的 [ConfigMgr Server] 頁面所指定) 時，才會發行更新的完整內容。
+    使用此类型，Updates Publisher 可以查询 Configuration Manager，以确定应发布更新或捆绑包的完整内容还是仅元数据。 仅当更新满足 Updates Publisher 选项的“ConfigMgr 服务器”页中指定的“请求客户端计数阈值”和“包源大小阈值”时，才会发布更新的完整内容。
 
--   選取發行集：
+-   选择发布项：
 
-    -   當您已建立想要使用的發行集時，請使用 [指派軟體更新至現有發行集]。 必須至少有一個發行集存在，此選項才能使用。
+    -   如果已创建要使用的发布项，请使用“将软件更新分配给现有发布项”。 只有在至少有一个发布项时，此选项才可用。
 
-    -   當您沒有適用的發行集時，請使用 [指派軟體更新至新發行集]。 這樣會以您指定的名稱建立新發行集。
+    -   如果没有合适的发布项，请使用“将软件更新分配给新发布项”。 这会创建采用你指定的名称的新发布项。
 
-將更新指派至發行集之後，您可以使用 [發行集工作區] 以群組方式[發行](/sccm/sum/tools/updates-publisher-publications#publish-pubilcations)或[匯出](/sccm/sum/tools/updates-publisher-publications#export-a-pubilcation)發行集。
+将更新分配给发布项后，可以使用“发布项工作区”将发布项作为组进行[发布](/sccm/sum/tools/updates-publisher-publications#publish-pubilcations)或[导出](/sccm/sum/tools/updates-publisher-publications#export-a-pubilcation)。
 
-## <a name="publish-updates-and-bundles-from-the-updates-workspace"></a>從 [更新工作區] 發行更新與配套
-當您發行更新與配套時，Updates Publisher 會將有關那些更新與配套的資訊 (中繼資料) 或甚至可能是更新的二進位檔案 (完整內容) 新增到更新伺服器，以便部署到裝置。
+## <a name="publish-updates-and-bundles-from-the-updates-workspace"></a>在“更新工作区”中发布更新和捆绑包
+发布更新和捆绑包时，Updates Publisher 会向更新服务器添加这些更新和捆绑包的相关信息（元数据），可能还会添加更新的二进制文件（完整内容），以供部署到设备。
 
-您必須先設定 Updates Publisher 的[更新伺服器](/sccm/sum/tools/updates-publisher-options#update-server)選項，才能使用發行選項。 若要開啟此設定選項，請移至 [更新工作區] &gt;[概觀] 並選取 [設定 WSUS 與簽署憑證]。 您也可以移至 Updates Publisher 選項中的 [更新伺服器] 頁面。
+必须先为 Updates Publisher 配置[“更新服务器”](/sccm/sum/tools/updates-publisher-options#update-server)选项，然后才能进行发布。 若要打开此配置选项，请依次转到“更新工作区”&gt;“概述”，然后选择“配置 WSUS 和签名证书”。 还可以转到 Updates Publisher 选项的“更新服务器”页。
 
-發行更新與配套有兩種方式：
--   直接從 [更新工作區] 發行 (請參閱下列程序：「發行更新與配套」)。
--   從 [發行集工作區] 以[發行集](/sccm/sum/tools/updates-publisher-publications#publish-pubilcations)形式發行。  
+发布更新和捆绑包的方法有两种：
+-   直接在“更新工作区”中发布。 （请参阅以下过程*如何发布更新和捆绑包*。）
+-   作为[发布项](/sccm/sum/tools/updates-publisher-publications#publish-pubilcations)在“发布项工作区”中发布。  
 
 > [!NOTE]   
-> Updates Publisher 只能發行大小不超過 375 MB 的更新。
+> Updates Publisher 只能发布大小不超过 375 MB 的更新。
 
-### <a name="to-publish-updates-and-bundles"></a>發行更新與配套
-1.  移至 [更新工作區] 並選取您要發行的一或多個更新與配套。 接著，從功能區的 [常用] 索引標籤選擇 [發行]。
+### <a name="to-publish-updates-and-bundles"></a>如何发布更新和捆绑包
+1.  转到“更新工作区”，并选择一个或多个要发布的更新和捆绑包。 然后，从功能区的“开始”选项卡中，选择“发布”
 
-2.  在 [發行精靈] 的 [選取] 頁面上，選取更新發行方式。 選項與用於[指派更新](#assign-updates-and-bundles-to-a-publication)的選項相同：[完整內容]、[僅中繼資料] 或 [自動]。
+2.  在“发布”向导的“选择”页中，选择所需的更新发布方式。 选项与[分配更新](#assign-updates-and-bundles-to-a-publication)时相同：“完整内容”、“仅元数据”或“自动”。
 
-    您也可以選擇使用新的發行憑證來簽署所有更新。
+    还可以选择使用新发布证书对所有更新进行签名。
 
-3.  完成精靈。
+3.  完成向导。
 
-若發行失敗，系統會顯示 UpdatesPublisher.log 檔案的連結給您，以提供更詳細的資訊。
+如果发布失败，将会看到指向 UpdatesPublisher.log 文件的链接，其中介绍了详细信息。
 
-## <a name="export-updates"></a>匯出更新
-您可以從 Updates Publisher 存放庫匯出更新與配套，以建立自訂更新類別目錄。 接著，您可以[新增](/sccm/sum/tools/updates-publisher-catalogs#add-software-update-catalogs)類別目錄並將它[匯入](/sccm/sum/tools/updates-publisher-catalogs#mport-updates)到另一個 Updates Publisher 執行個體 (您也可以[將更新匯出為發行集](/sccm/sum/tools/updates-publisher-publications##export-a-publication))。
+## <a name="export-updates"></a>导出更新
+可以导出 Updates Publisher 存储库中的更新和捆绑包，从而创建自定义更新目录。 然后，可以[添加](/sccm/sum/tools/updates-publisher-catalogs#add-software-update-catalogs)目录，并将其[导入](/sccm/sum/tools/updates-publisher-catalogs#mport-updates)其他 Updates Publisher 实例。 （还可以[将更新导出为发布项](/sccm/sum/tools/updates-publisher-publications##export-a-publication)。）
 
-若要直接匯出，請移至 [更新工作區] > [所有軟體更新]，並選取一或多個更新與配套。 您無法匯出廠商或產品資料夾，但可以選取某個資料夾，然後選取該資料夾中的更新來匯出。
+若要直接导出，请依次转到“更新工作区” > “所有软件更新”，然后选择一个或多个更新和捆绑包。 无法导出供应商或产品文件夹，但可以选择一个文件夹，然后选择导出其中的更新。
 
-選取一或多個更新之後，從功能區的 [常用] 索引標籤選擇 [匯出]，然後為類別目錄匯出作業提供路徑與檔案名稱。
+对于选定的一个或多个更新，请从功能区的“开始”选项卡中选择“导出”，然后提供目录导出的路径和文件名。
 
-您將可以找到用於匯出 (包括) 相依軟體更新的選項。
+可以视需要导出（添加）从属软件更新。
 
-## <a name="delete-updates-and-bundles"></a>刪除更新與配套
-您可以刪除更新與更新的配套，以將它們從 Updates Publisher 存放庫移除。
+## <a name="delete-updates-and-bundles"></a>删除更新和捆绑包
+可以从 Updates Publisher 存储库中删除更新和更新捆绑包。
 
-移至 [更新工作區]  > [所有軟體更新]，並選取一或多個個別更新。 接著，從功能區的 [常用] 索引標籤選擇 [刪除]。
+依次转到“更新工作区” > “所有软件更新”，并单独选择一个或多个更新。 然后，从功能区的“开始”选项卡中，选择“删除”。
 
--   若您的選取範圍只包含尚未發行或已到期的更新或配套，系統會要求您確認刪除再將它們移除。
+-   如果只选择了尚未发布或已终止的更新或捆绑包，需要在删除之前确认删除。
 
--   若您的選取範圍包括已發行且尚未到期的更新或配套，系統會顯示警告。 您應該將那些更新設定為[到期](/sccm/sum/tools/updates-publisher-pubilcations#expire-or-reactivate-updates-and-bundles)並發行該變更，再將它們從存放庫刪除。  
+-   如果选择的更新或捆绑包已发布且尚未终止，则会看到警告。 应先[终止](/sccm/sum/tools/updates-publisher-pubilcations#expire-or-reactivate-updates-and-bundles)这些更新并发布更改，然后才能将更新从存储库中删除。  
 
-若將某個更新或配套從廠商刪除並重新匯入該類別目錄，該更新會還原到您的存放庫。
+如果在删除供应商提供的更新或捆绑包后又重新导入相应目录，更新会还原到存储库中。
 
-## <a name="manage-vendor-and-product-folders"></a>管理廠商與產品資料夾
-若要檢視廠商清單，以及您已匯入或建立更新之每個廠商的產品，請移至 [更新工作區] > [概觀] > [所有軟體更新]。
+## <a name="manage-vendor-and-product-folders"></a>管理供应商和产品文件夹
+若要查看已导入或创建的更新的供应商和产品列表，请依次转到“更新工作区” > “概述” > “所有软件更新”。
 
-當您使用精靈來匯入或建立軟體更新或配套時，廠商與產品的資料夾會自動由 Updates Publisher 建立。 您也可以手動建立這些資料夾。
+使用向导导入或创建软件更新或捆绑包时，Updates Publisher 会自动创建供应商和产品文件夹。 也可以手动创建这些文件夹。
 
--   若要建立廠商資料夾，請在 [更新工作區] 的瀏覽窗格中，在 [所有軟體更新] 上按一下滑鼠右鍵，然後選擇 [建立廠商]。
+-   若要创建供应商文件夹，请在“更新工作区”的导航窗格中右键单击“所有软件更新”，然后选择“创建供应商”。
 
--   若要在廠商資料夾下建立產品資料夾，請在廠商資料夾上按一下滑鼠右鍵，然後選擇 [建立產品]。
+-   若要在供应商文件夹下创建产品文件夹，请右键单击供应商文件夹，然后选择“创建产品”。
 
-除了建立資料夾之外，您也可以重新命名或刪除存放庫中的任何廠商或產品資料夾。 若要這樣做，請在資料夾上按一下滑鼠右鍵，然後選擇您要的選項 ([重新命名] 或 [刪除])。 刪除資料夾會移除資料夾中的所有更新與配套，並將其產品資料夾從 Updates Publisher 存放庫移除。
+除了能够创建文件夹之外，还可以重命名或删除存储库中的任意供应商或产品文件夹。 为此，请右键单击文件夹，然后选择所需的选项（“重命名”或“删除”）。 删除文件夹同时也会从 Updates Publisher 存储库中删除此文件夹及其产品文件夹中的所有更新和捆绑包。
 
-您可以在廠商與產品資料夾 (包括您建立的資料夾) 中移動更新。 若要將更新或配套移動到新資料夾，您必須選取更新或配套，然後 [編輯] 更新或配套。 接著，在 [編輯更新] 精靈的 [資訊] 頁面上，您可以重新指派廠商與產品。 當 [編輯更新] 精靈完成時，會套用變更並將更新移動到新資料夾。
+可以在供应商和产品文件夹（包括你创建的文件夹）之间移动更新。 若要将更新或捆绑包移到新文件夹中，必须选择并**编辑**更新或捆绑包。 然后，可以在“编辑更新”向导的“信息”页中重新分配供应商和产品。 “编辑更新”向导完成后，更改会得到应用，更新也会移到新文件夹中。
 
-## <a name="view-the-xml-of-an-update-or-bundle"></a>檢視更新或配套的 XML
-您可以在 [更新工作區] 中選取單一更新或配套，然後選擇 [檢視] XML 以顯示該更新的 XML 結構。 沒有任何選項可用來直接編輯 XML 結構。
+## <a name="view-the-xml-of-an-update-or-bundle"></a>查看更新或捆绑包的 XML
+可以在“更新工作区”中选择一个更新或捆绑包，然后选择“查看 XML”，查看更新的 XML 结构。 没有可直接编辑 XML 结构的选项。

@@ -1,6 +1,6 @@
 ---
-title: "用戶端安裝方法 | Microsoft Docs"
-description: "了解 System Center Configuration Manager 的用戶端安裝方法。"
+title: "客户端安装方法 | Microsoft Docs"
+description: "了解 System Center Configuration Manager 的客户端安装方法。"
 ms.custom: na
 ms.date: 04/25/2017
 ms.prod: configuration-manager
@@ -18,129 +18,129 @@ manager: angrobe
 ms.openlocfilehash: edca31249cc2bb3e0c67265962815c82e3f4711e
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="client-installation-methods-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的用戶端安裝方法
+# <a name="client-installation-methods-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的客户端安装方法
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-您可以使用不同的方法來安裝 Configuration Manager 用戶端軟體。 您可以使用其中一種方法或多種方法的組合。 在本主題中，您可以閱讀每種方法的相關資訊，以了解哪種方法最適合您的組織。  
+你可以使用不同的方法安装 Configuration Manager 客户端软件。 可使用一种方法或多种方法的组合。 在本主题中，你可以阅读每种方法的相关内容，从而了解最适合组织的方法。  
 
-## <a name="client-push-installation"></a>用戶端推入安裝  
+## <a name="client-push-installation"></a>客户端请求安装  
 
- **支援的用戶端平台：** Windows  
+ **支持的客户端平台：** Windows  
 
- **優點**  
+ **优点**  
 
--   可將用戶端安裝在單一電腦或一組電腦上，或是安裝至查詢結果。  
+-   可用于将客户端安装在一台计算机、一组计算机或查询到的计算机上。  
 
--   可用於在所有探索的電腦上自動安裝用戶端。  
+-   可用于自动将客户端安装在发现的所有计算机上。  
 
--   會自動使用在 [用戶端推入安裝內容]  對話方塊中，[用戶端]  索引標籤上定義的用戶端安裝內容。  
+-   自动使用在“客户端请求安装属性”  对话框中的“客户端”  选项卡上定义的客户端安装属性。  
 
- **缺點**  
+ **缺点**  
 
--   推入至大量集合時，可能會使網路流量增高。  
+-   在推送到大型集合时，可能会导致网络流量很高。  
 
--   只能用於 Configuration Manager 已探索的電腦。  
+-   只能在 Configuration Manager 已发现的计算机上使用。  
 
--   不可用於將用戶端安裝於工作群組中。  
+-   无法用于在工作组中安装客户端。  
 
--   必須指定用戶端推入安裝帳戶，且此帳戶在目標用戶端電腦上必須具有系統管理權限。  
+-   必须指定在目标客户端计算机中具有管理权限的客户端请求安装帐户。  
 
--   必須在用戶端電腦上設定 Windows 防火牆的例外狀況，才能完成用戶端推入安裝。  
+-   必须在客户端计算机上配置 Windows 防火墙例外，以便能够完成客户端请求安装。  
 
--   您無法取消用戶端推入安裝。 在站台上使用此用戶端安裝方法時，Configuration Manager 會嘗試將用戶端安裝在所有探索的資源上，一旦失敗，會在 7 天內連續重試。  
+-   无法取消客户端请求安装。 在将此客户端安装方法用于站点时，Configuration Manager 会尝试将客户端安装在发现的所有资源上，并会重试任何失败的安装（不超过 7 天）。  
 
- 如需此安裝方法的詳細資訊，請參閱[如何在 System Center Configuration Manager 中將用戶端部署至 Windows 電腦](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md)。  
+ 有关安装方法的详细信息，请参阅[如何在 System Center Configuration Manager 中将客户端部署到 Windows 计算机](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md)。  
 
-## <a name="software-update-point-based-installation"></a>以軟體更新點為基礎的安裝  
- **支援的用戶端平台：** Windows  
+## <a name="software-update-point-based-installation"></a>基于软件更新点的安装  
+ **支持的客户端平台：** Windows  
 
- **優點：**  
+ **优点：**  
 
--   可以使用現有的軟體更新基礎結構管理用戶端軟體。  
+-   可以使用现有的软件更新基础架构来管理客户端软件。  
 
--   如果 Active Directory 網域服務中的 Windows Server Update Services (WSUS) 和 [群組原則] 設定均正確無誤，則可在新電腦上自動安裝用戶端軟體。  
+-   如果正确配置 Windows Server Update Services (WSUS) 和 Active Directory 域服务中的组策略设置，则可以自动在新计算机上安装客户端软件。  
 
--   安裝用戶端前不需要先探索電腦。  
+-   在可以安装客户端之前，无需发现计算机。  
 
--   電腦可以讀取已發佈至 Active Directory 網域服務的用戶端安裝內容。  
+-   计算机可以读取已发布到 Active Directory 域服务的客户端安装属性。  
 
--   如果之前已移除用戶端軟體，將會重新安裝。  
+-   如果删除了客户端软件，将会重新安装它。  
 
--   不需在目標用戶端電腦設定及維護安裝帳戶。  
+-   你无需为目标客户端计算机配置和维护安装帐户。  
 
- **缺點：**  
+ **缺点：**  
 
--   需要運作正常的軟體更新基礎結構作為必要條件。  
+-   需要正常运行的软件更新基础结构作为必备组件。  
 
--   用戶端安裝和軟體更新必須使用同一個伺服器，且該伺服器必須位於主要站台中。  
+-   必须将相同的服务器用于客户端安装和软件更新，而且此服务器必须位于主站点中。  
 
--   若要安裝新的用戶端，必須在 Active Directory 網域服務中使用用戶端的主動式軟體更新點和連接埠來設定群組原則物件 (GPO)。  
+-   若要安装新的客户端，必须利用客户端的活动软件更新点和端口来配置 Active Directory 域服务中的组策略对象 (GPO)。  
 
--   如果未延伸 Configuration Manager 的 Active Directory 架構，您必須使用 [群組原則] 設定來佈建含用戶端安裝內容的電腦。  
+-   如果没有为 Configuration Manager 扩展 Active Directory 架构，则必须使用组策略设置来设置计算机的客户端安装属性。  
 
- 如需此安裝方法的詳細資訊，請參閱[如何在 System Center Configuration Manager 中將用戶端部署至 Windows 電腦](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md)。  
+ 有关安装方法的详细信息，请参阅[如何在 System Center Configuration Manager 中将客户端部署到 Windows 计算机](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md)。  
 
-## <a name="group-policy-installation"></a>群組原則安裝  
- **支援的用戶端平台：** Windows  
+## <a name="group-policy-installation"></a>组策略安装  
+ **支持的客户端平台：** Windows  
 
- **優點：**  
+ **优点：**  
 
--   安裝用戶端前不需要先探索電腦。  
+-   在可以安装客户端之前，无需发现计算机。  
 
--   可用於全新安裝或升級用戶端。  
+-   可用于安装新客户端或执行升级。  
 
--   電腦可以讀取已發佈至 Active Directory 網域服務的用戶端安裝內容。  
+-   计算机可以读取已发布到 Active Directory 域服务的客户端安装属性。  
 
--   不需在目標用戶端電腦設定及維護安裝帳戶。  
+-   你无需为目标客户端计算机配置和维护安装帐户。  
 
- **缺點：**  
+ **缺点：**  
 
--   如果安裝大量用戶端，可能會使網路流量增高。  
+-   如果安装大量客户端，可能会导致网络流量很高。  
 
--   如果未延伸 Configuration Manager 的 Active Directory 架構，您必須使用 [群組原則] 設定，將用戶端安裝內容新增至站台中的電腦。  
+-   如果没有为 Configuration Manager 扩展 Active Directory 架构，则必须使用组策略设置将客户端安装属性添加到站点中的计算机。  
 
- 如需此安裝方法的詳細資訊，請參閱[如何在 System Center Configuration Manager 中將用戶端部署至 Windows 電腦](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md)。  
+ 有关安装方法的详细信息，请参阅[如何在 System Center Configuration Manager 中将客户端部署到 Windows 计算机](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md)。  
 
-## <a name="logon-script-installation"></a>登入指令碼安裝  
- **支援的用戶端平台：** Windows  
+## <a name="logon-script-installation"></a>登录脚本安装  
+ **支持的客户端平台：** Windows  
 
- **優點：**  
+ **优点：**  
 
--   安裝用戶端前不需要先探索電腦。  
+-   在可以安装客户端之前，无需发现计算机。  
 
--   支援使用 CCMSetup 命令列屬性。  
+-   支持使用 CCMSetup 的命令行属性。  
 
- **缺點：**  
+ **缺点：**  
 
--   如果在短時間內安裝大量用戶端，可能會使網路流量增高。  
+-   如果在短时间内安装大量客户端，可能会导致网络流量很高。  
 
--   如果使用者不常登入網路，可能需花很長的時間才能安裝在所有用戶端電腦上。  
+-   如果用户并非经常登录到网络，则可能需要很长时间才能安装到所有客户端计算机。  
 
- 如需此安裝方法的詳細資訊，請參閱[如何在 System Center Configuration Manager 中將用戶端部署至 Windows 電腦](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md)。  
+ 有关安装方法的详细信息，请参阅[如何在 System Center Configuration Manager 中将客户端部署到 Windows 计算机](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md)。  
 
-## <a name="manual-installation"></a>手動安裝  
- **支援的用戶端平台：** Windows、UNIX/Linux、Mac OS X  
+## <a name="manual-installation"></a>手动安装  
+ **支持的客户端平台：**Windows、UNIX/Linux、Mac OS X  
 
- **優點：**  
+ **优点：**  
 
--   安裝用戶端前不需要先探索電腦。  
+-   在可以安装客户端之前，无需发现计算机。  
 
--   可供測試之用。  
+-   可用于测试目的。  
 
--   支援使用 CCMSetup 命令列屬性。  
+-   支持使用 CCMSetup 的命令行属性。  
 
- **缺點：**  
+ **缺点：**  
 
--   不提供自動化功能，因此相當耗時。  
+-   无自动化，因此耗费时间。  
 
- 如需有關如何在每個平台手動安裝用戶端的詳細資訊，請參閱下列主題：  
+ 有关如何在每个平台上手动安装客户端的详细信息，请参阅以下内容：  
 
--   [如何在 System Center Configuration Manager 中將用戶端部署至 Windows 電腦](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md)  
+-   [如何在 System Center Configuration Manager 中将客户端部署到 Windows 计算机](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md)  
 
--   [如何在 System Center Configuration Manager 中將用戶端部署至 UNIX 和 Linux 伺服器](../../../../core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md)  
+-   [如何在 System Center Configuration Manager 中将客户端部署到 UNIX 和 Linux 服务器](../../../../core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md)  
 
--   [How to deploy clients to Macs in System Center Configuration Manager](../../../../core/clients/deploy/deploy-clients-to-macs.md) (如何在 System Center Configuration Manager 中將用戶端部署至 Mac 電腦)  
+-   [如何在 System Center Configuration Manager 中将客户端部署到 Mac](../../../../core/clients/deploy/deploy-clients-to-macs.md)  

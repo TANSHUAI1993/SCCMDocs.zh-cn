@@ -1,6 +1,6 @@
 ---
-title: "支援的設定 | Microsoft Docs"
-description: "識別重要設定和需求，讓您可以規劃、部署和維護作用中的 System Center Configuration Manager 部署。"
+title: "支持的配置 | Microsoft Docs"
+description: "标识重要配置和要求，以便可以规划、部署和维护功能性 System Center Configuration Manager 部署。"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -18,56 +18,56 @@ manager: angrobe
 ms.openlocfilehash: aad46e9ab893b9bb3e32d35c17b9678b3a265c99
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="supported-configurations-for-system-center-configuration-manager"></a>System Center Configuration Manager 的支援設定
+# <a name="supported-configurations-for-system-center-configuration-manager"></a>System Center Configuration Manager 支持的配置
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager 是內部部署解決方案，利用伺服器、用戶端、網路設定和其他產品 (例如 Microsoft Intune、SQL Server 和 Azure)。
+作为本地解决方案，System Center Configuration Manager 会使用服务器、客户端、网络配置和其他产品（如 Microsoft Intune、SQL Server 和 Azure）。
 
-本主題和下列主題中的資訊是為了協助您識別重要設定、需求和限制，讓您可以規劃、部署和維護作用中 Configuration Manager 部署。  這項資訊是 Configuration Manager 站台、階層和受管理裝置的基礎結構所特有。
+对于标识重要配置、要求和限制，以便可以规划、部署和维护功能性 Configuration Manager 部署，本主题及后续主题中的信息至关重要。  此信息特定于 Configuration Manager 站点、层次结构和托管设备的基础结构。
 
-Configuration Manager 功能需要更特定設定時，功能特定文件會包含該資訊，而且該資訊補充更一般的設定詳細資料。  
+如果 Configuration Manager 功能需要更具体的配置，相关信息会包含在特定于功能的文档中，作为对较通用配置详细信息的补充。  
 
- Configuration Manager 支援下列主題所述的產品和技術。 不過，本內容所含的內容並不代表任何超出產品個別支援週期之產品的支援延伸。 已超出其支援週期的產品不支援搭配 Configuration Manager 使用。 如需 Microsoft 支援週期的詳細資訊，請造訪 [Microsoft 支援週期](http://go.microsoft.com/fwlink/p/?LinkId=208270) 網站。  
+ 以下各主题中所述的产品和技术受 Configuration Manager 支持。 但是，它们包括在此内容中并不表示对任何超出该产品个体支持生命周期的产品的扩展支持。 不支持将超出其支持生命周期的产品与 Configuration Manager 一起使用。 有关 Microsoft 支持生命周期的详细信息，请访问 [Microsoft 支持生命周期](http://go.microsoft.com/fwlink/p/?LinkId=208270) 网站。  
 
 > [!NOTE]  
->  如需 Microsoft 支援週期原則的相關資訊，請前往 Microsoft 支援週期原則常見問題集網站，位於 [Microsoft 支援週期原則常見問題集](http://go.microsoft.com/fwlink/p/?LinkId=31976)。  
+>  有关 Microsoft 支持生命周期策略的信息，请转到 Microsoft 支持生命周期支持策略常见问题网站：[Microsoft 支持生命周期策略常见问题](http://go.microsoft.com/fwlink/p/?LinkId=31976)。  
 
- 此外，除非已在 [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/) (企業行動力和安全性部落格) 上公告下列主題中未列出的產品和產品版本，否則 System Center Configuration Manager 不予支援。  有些時候，此部落格上的內容會早於本文件內容的更新。
+ 此外，System Center Configuration Manager 不支持以下主题中未列出的产品和产品版本，除非它们已在[企业移动性和安全性博客](https://blogs.technet.microsoft.com/enterprisemobility/)上公布。  此博客上的内容有时会早于本文档正文的更新。
 
 
--  [大小和縮放比例](../../../core/plan-design/configs/size-and-scale-numbers.md)  
-了解不同 Configuration Manager 階層設計中支援的站台數目、每個站台的站台系統角色以及用戶端或裝置。
+-  [大小和扩展数量](../../../core/plan-design/configs/size-and-scale-numbers.md)  
+了解 Configuration Manager 的不同层次结构设计中支持的站点数、每个站点的站点系统角色数以及客户端或设备数。
 
--  [站台和站台系統必要條件](../../../core/plan-design/configs/site-and-site-system-prerequisites.md)  
-了解 Windows Server 上支援不同站台類型和站台系統角色所需的設定。
+-  [站点和站点系统先决条件](../../../core/plan-design/configs/site-and-site-system-prerequisites.md)  
+了解 Windows Server 支持不同站点类型和站点系统角色所需的配置。
 
--  [支援的站台系統伺服器作業系統](../../../core/plan-design/configs/supported-operating-systems-for-site-system-servers.md)  
-了解您可以用作站台伺服器或站台系統伺服器的作業系統。
+-  [站点系统服务器支持的操作系统](../../../core/plan-design/configs/supported-operating-systems-for-site-system-servers.md)  
+了解可以用作站点服务器或站点系统服务器的操作系统。
 
--  [用戶端和裝置的支援作業系統](../../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md)  
-了解您可以使用 Configuration Manager 管理的作業系統，包括 Windows、Windows Embedded、Linux 和 UNIX、Mac，以及行動裝置。
+-  [客户端和设备支持的操作系统](../../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md)  
+了解可以使用 Configuration Manager 进行管理的操作系统，包括 Windows、Windows Embedded、Linux 和 UNIX、Mac 以及移动设备。
 
--  [支援的主控台作業系統](../../../core/plan-design/configs/supported-operating-systems-consoles.md)  
-了解哪些作業系統可以裝載 Configuration Manager 主控台，以提供用來管理部署的存取點。  
+-  [控制台支持的操作系统](../../../core/plan-design/configs/supported-operating-systems-consoles.md)  
+了解可以托管 Configuration Manager 控制台以便为管理部署提供访问点的操作系统。  
 
--  [SQL Server 版本支援](../../../core/plan-design/configs/support-for-sql-server-versions.md)  
-了解可裝載站台資料庫和報表資料庫的 SQL Server 版本，以及您可以使用的必要設定和選擇性設定。
+-  [支持 SQL Server 版本](../../../core/plan-design/configs/support-for-sql-server-versions.md)  
+了解哪些版本的 SQL Server 可以托管站点数据库和报表数据库，以及了解必需配置和可以使用的可选配置。
 
--  [高可用性選項](../../../protect/understand/high-availability-options.md)  
-了解可在設計環境以協助維護 Configuration Manager 部署的高階可用服務時實作的選項。
+-  [高可用性选项](../../../protect/understand/high-availability-options.md)  
+了解设计环境以帮助为 Configuration Manager 部署维护高可用服务级别时可以实现的选项。
 
--  [建議的硬體](../../../core/plan-design/configs/recommended-hardware.md)  
-了解可協助您識別用來裝載 Configuration Manager 站台和主要服務之正確硬體和設定的指導方針。
+-  [推荐硬件](../../../core/plan-design/configs/recommended-hardware.md)  
+了解有关可帮助确定适合于托管 Configuration Manager 站点和关键服务的硬件和配置的指导。
 
--  [Active Directory 網域支援](../../../core/plan-design/configs/support-for-active-directory-domains.md)  
-了解 Configuration Manager 所需要和支援的支援 Active Directory 網域設定。
+-  [对 Active Directory 域的支持](../../../core/plan-design/configs/support-for-active-directory-domains.md)  
+了解 Configuration Manager 需要和支持的受支持 Active Directory 域配置。
 
--  [Windows 功能和網路支援](../../../core/plan-design/configs/support-for-windows-features-and-networks.md)  
-了解支援的 Windows 技術 (例如 BranchCache 和重複資料刪除)，以及與 Configuration Manager 搭配使用時的限制。
+-  [对 Windows 功能和网络的支持](../../../core/plan-design/configs/support-for-windows-features-and-networks.md)  
+了解支持的 Windows 技术（如 BranchCache 和重复数据删除）以及与 Configuration Manager 配合使用的限制。
 
--  [虛擬化環境支援](../../../core/plan-design/configs/support-for-virtualization-environments.md)  
-深入了解如何使用支援的虛擬機器技術。
+-  [对虚拟化环境的支持](../../../core/plan-design/configs/support-for-virtualization-environments.md)  
+深入了解如何使用支持的虚拟机技术。

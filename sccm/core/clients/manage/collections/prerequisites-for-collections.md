@@ -1,6 +1,6 @@
 ---
-title: "集合必要條件 | Microsoft Docs"
-description: "取得在 System Center Configuration Manager 中使用集合的必要條件。"
+title: "集合先决条件 | Microsoft Docs"
+description: "在 System Center Configuration Manager 中获取使用集合的先决条件。"
 ms.custom: na
 ms.date: 2/22/2017
 ms.prod: configuration-manager
@@ -18,18 +18,18 @@ manager: angrobe
 ms.openlocfilehash: 41fc3eb20a7441939eb0dc80bc121c8f3ea322b2
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="prerequisites-for-collections-in-system-center-configuration-manager"></a>System Center Configuration Manager 中集合的必要條件
+# <a name="prerequisites-for-collections-in-system-center-configuration-manager"></a>System Center Configuration Manager 中集合的先决条件
 
-*適用於：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager 中的集合只包含產品內的相依性。  
+System Center Configuration Manager 中的集合仅包含产品内部的依赖关系。  
 
-## <a name="configuration-manager-dependencies"></a>Configuration Manager 相依性  
+## <a name="configuration-manager-dependencies"></a>Configuration Manager 依赖关系  
 
-|相依性|詳細資訊|  
+|依赖关系|更多信息|  
 |----------------|----------------------|  
-|Reporting Services 點|必須先安裝 Reporting Services 點站台系統角色，才能執行集合的報告。 如需詳細資訊，請參閱 [Reporting in System Center Configuration Manager](../../../../core/servers/manage/reporting.md) (System Center Configuration Manager 中的報告)。|  
-|若要管理集合，必須授與特定的安全性權限。|您必須具備下列安全性權限，才能管理相容性設定：<br /><br /> - 建立和管理集合：[集合] 物件的 [建立]、[刪除]、[修改]、[修改資料夾]、[移動物件]、[讀取] 和 [讀取資源]。<br /><br /> - 管理集合設定：[集合] 物件的 [修改集合設定]。<br /><br /> 需要所有集合資料夾 (包括根資料夾) 的 [修改資料夾]  權限。|  
+|Reporting Services 点|在运行集合的报表前，必须先安装 Reporting Services 点站点系统角色。 有关详细信息，请参阅 [System Center Configuration Manager 中的报表](../../../../core/servers/manage/reporting.md)。|  
+|必须授予特定的安全权限来管理集合|必须具有以下安全权限才能管理符合性设置：<br /><br /> - 若要创建和管理集合：“集合”对象的“创建”、“删除”、“修改”、“修改文件夹”、“移动对象”、“读取”和“读取资源”。<br /><br /> - 若要管理集合设置：“集合”对象的“修改集合设置”。<br /><br /> 所有集合文件夹（包括根文件夹）都需要“修改文件夹”  权限。|  

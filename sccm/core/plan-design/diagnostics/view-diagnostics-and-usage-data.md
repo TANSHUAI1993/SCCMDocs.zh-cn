@@ -1,6 +1,6 @@
 ---
-title: "檢視診斷資料 | Microsoft Docs"
-description: "檢視診斷和使用方式資料，確認 System Center Configuration Manager 階層不包含任何機密資訊。"
+title: "查看诊断数据 | Microsoft Docs"
+description: "查看诊断和使用情况数据，确保 System Center Configuration Manager 层次结构中未包含敏感信息。"
 ms.custom: na
 ms.date: 3/27/2017
 ms.prod: configuration-manager
@@ -17,34 +17,34 @@ manager: angrobe
 ms.openlocfilehash: 0932e2b2a4f3e13c35d6b7b0446083f1c233ce03
 ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.contentlocale: zh-TW
+ms.contentlocale: zh-CN
 ms.lasthandoff: 08/07/2017
 ---
-# <a name="how-to-view-diagnostics-and-usage-data-for-system-center-configuration-manager"></a>如何檢視 System Center Configuration Manager 的診斷和使用方式資料
+# <a name="how-to-view-diagnostics-and-usage-data-for-system-center-configuration-manager"></a>如何查看 System Center Configuration Manager 的诊断和使用情况数据
 
-*適用對象：System Center Configuration Manager (最新分支)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-您可以檢視 System Center Configuration Manager 階層的診斷和使用方式資料，以確認未包含任何機密或可識別資訊。 遙測資料會彙總並儲存在站台資料庫的 **TEL_TelemetryResults** 資料表中，而且會格式化為可以程式設計方式使用且更有效率。 雖然下列選項可讓您檢視傳送至 Microsoft 的精確資料，但並不適用於其他用途，例如資料分析。  
+你可以查看 System Center Configuration Manager 层次结构中的诊断和使用情况数据，确保其中未包括敏感信息或身份信息。 遥测数据在站点数据库的 **TEL_TelemetryResults** 表中汇总并存储，并设置为可用于高效编程的格式。 尽管以下选项可让你查看究竟向 Microsoft 发送了哪些数据，但这些数据不会用于其他目的（如数据分析）。  
 
-下列 SQL 命令可用來檢視這個資料表的內容，並顯示已傳送的精確資料。 (您也可以將這份資料匯出成文字檔)：  
+使用以下 SQL 命令来查看此表的内容，并显示发送的确切数据。 （还可以将此数据导出到文本文件）：  
 
 -   **SELECT \* FROM TEL_TelemetryResults**  
 
 > [!NOTE]  
->  在安裝 1602 版之前，儲存遙測資料的資料表是 **TelemetryResults**。  
+>  在安装 1602 版之前，存储遥测数据的表是 **TelemetryResults**。  
 
-當服務連接點處於離線模式時，您可以使用服務連接工具，將目前的診斷和使用方式資料匯出成逗點分隔值 (CSV) 檔案。 請使用 **-Export** 參數在服務連接點上執行服務連接工具。  
+当服务连接点处于脱机模式时，可以使用服务连接工具将当前诊断和使用情况数据导出到逗号分隔值 (CSV) 文件中。 使用 **-Export** 参数在服务连接点上运行服务连接工具。  
 
-##  <a name="bkmk_hashes"></a> 單程雜湊  
-一些資料是由隨機英數字元字串所組成。 Configuration Manager 使用採用單程雜湊的 SHA-256 演算法，以確保不會收集可能的敏感性資料。 此演算法會將資料維持在仍可用於進行相互關聯和比較的狀態。 例如，單程雜湊會針對每個資料表名稱擷取，而不是收集站台資料庫中的資料表名稱。 如此可確保不會顯示您所建立的自訂資料表名稱或其他人的產品附加元件。 然後，我們可以對產品預設隨附的 SQL 資料表名稱進行相同的單程雜湊，再比較兩個查詢結果，以判斷您的資料庫結構描述與產品預設值的差異。 此資訊可接著用來改進需要變更 SQL 結構描述的更新。  
+##  <a name="bkmk_hashes"></a>单向哈希  
+某些数据包含由随机字母数字字符构成的字符串。 Configuration Manager 使用 SHA-256 算法（此算法使用单向哈希）来确保不会收集可能敏感的数据。 该算法让数据仍可用于关联和比较方面的用途。 例如，单向哈希是根据每个表名进行捕获，而不是在站点数据库中收集表的名称。 这可确保由用户或其他产品附加设备创建的任何自定义表名称不可见。 然后，对于在默认情况下随产品一起提供的 SQL 表名称，我们可以执行相同的单向哈希，并对比两个查询的结果，以确定数据库架构距离产品默认设置的偏差。 比较结果可用于改进需要更改 SQL 架构的更新。  
 
-檢視未經處理的資料時，每個資料列都會出現一個通用的雜湊值。 這是階層識別碼。 此雜湊值是用來確保資料與相同的階層相互關聯，但不識別客戶或來源。  
+查看原始数据时，每行数据中将显示一个常见哈希值。 这是层次结构 ID。 此哈希值用于在不识别客户或来源的情况下确保数据与同一层次结构关联。  
 
-#### <a name="to-see-how-the-one-way-hash-works"></a>了解單程雜湊的運作方式  
+#### <a name="to-see-how-the-one-way-hash-works"></a>查看单向哈希的工作原理  
 
-1.  在 SQL Management Studio 中針對 Configuration Manager 資料庫執行下列 SQL 陳述式來取得階層識別碼︰**select [dbo].[fnGetHierarchyID]\(\)**  
+1.  通过在 SQL Management Studio 中针对 Configuration Manager 数据库运行以下 SQL 语句来获取层次结构 ID：**select [dbo].[fnGetHierarchyID]\(\)**  
 
-2.  使用下列 Windows PowerShell 指令碼來執行從資料庫取得之 GUID 的單程雜湊。 然後，您可以將此識別碼與未經處理資料中的階層識別碼做比較，以了解我們如何遮蔽此資料。  
+2.  使用以下 Windows PowerShell 脚本来执行从数据库中获取的 GUID 的单向哈希。 然后可以将此与原始数据中的层次结构 ID 比较，以了解我们如何掩蔽此数据。  
 
     ```  
     Param( [Parameter(Mandatory=$True)] [string]$value )  
