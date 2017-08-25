@@ -6,23 +6,20 @@ ms.date: 01/04/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2a216814-ca8c-4d2e-bcef-dc00966a3c9f
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: af06fb10d905e3fe447c6cd6ed35dac10488161f
-ms.openlocfilehash: 1bf519ad4593f6a08d7dc393f9fab91c70b51b25
-ms.contentlocale: zh-cn
-ms.lasthandoff: 01/05/2017
-
-
+ms.openlocfilehash: 6145cb69c69dba1eb1b9842079ee1a33686bb18a
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="plan-for-security-in-system-center-configuration-manager"></a>规划 System Center Configuration Manager 中的安全性
 
@@ -294,7 +291,7 @@ Configuration Manager 中受信任的根密钥的功能类似于公钥基础结�
 
 8.  在显示“TrustedRootKey”实例的新“查询结果”窗口中，双击“TrustedRootKey=@”。  
 
-9. 在“TrustedRootKey=@对象编辑器”对话框内的“属性”部分中，向下滚动到“TrustedRootKey CIM_STRING”。 右列中的字符串是受信任的根密钥。 验证它是否与文件 &lt;Configuration Manager 目录\>**\bin\mobileclient.tcf** 中的 **SMSPublicRootKey** 值匹配。  
+9. 在“TrustedRootKey=@ 的对象编辑器”  对话框内的“属性”  部分中，向下滚动到“TrustedRootKey CIM_STRING” 。 右列中的字符串是受信任的根密钥。 验证它是否与文件 &lt;Configuration Manager 目录\>**\bin\mobileclient.tcf** 中的 **SMSPublicRootKey** 值匹配。  
 
 ##  <a name="BKMK_PlanningForSigningEncryption"></a> 规划签名和加密  
  使用 PKI 证书进行所有客户端通信时，不必规划签名和加密以帮助保护客户端数据通信。 但是，如果将运行 IIS 的任何站点系统设置为允许 HTTP 客户端连接，则必须确定如何帮助保护站点客户端通信。  
@@ -310,4 +307,3 @@ Configuration Manager 中受信任的根密钥的功能类似于公钥基础结�
 
 ### <a name="see-also"></a>另请参阅
 [System Center Configuration Manager 的加密控件技术参考](../../../protect/deploy-use/cryptographic-controls-technical-reference.md)。  
-

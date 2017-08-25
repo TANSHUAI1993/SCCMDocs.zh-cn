@@ -4,23 +4,21 @@ description: "了解 System Center Configuration Manager Technical Preview（版
 ms.custom: na
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bceab2e8-2f05-4a17-9ac8-a7a558670fb7
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dab5da5a4b5dfb3606a8a6bd0c70a0b21923fff9
 ms.openlocfilehash: bcb14a2be312d4d8a4a9c235652c7bf971a7a976
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="capabilities-in-technical-preview-1612-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1612 中的功能
 
@@ -52,11 +50,11 @@ ms.lasthandoff: 05/17/2017
 
 | 步骤         | 详细信息  |
 |:------:|-----------|  
-| **1**  |     站点服务器传输和存储站点数据库中的数据。  |  
-| **2** |      根据其计划和配置，数据仓库服务点可从站点数据库获取数据。  |  
+| **1**  |  站点服务器传输和存储站点数据库中的数据。  |  
+| **2** |   根据其计划和配置，数据仓库服务点可从站点数据库获取数据。  |  
 | **3** |  数据仓库服务点可传输和储存数据仓库数据库中的一份已同步数据的副本。 |  
 | **A** |  通过使用内置报表，可提出数据请求，该请求将通过 SQL Server Reporting Services 传递到 Reporting Services 点。 |  
-| **B** |      大多数报表针对当前信息，然后对站点数据库运行这些请求。 |  
+| **B** |   大多数报表针对当前信息，然后对站点数据库运行这些请求。 |  
 | **C** | 报表通过使用类别为**数据仓库**的其中一个报表请求历史数据时，则会对数据仓库数据库运行该请求。   |  
 
 ### <a name="prerequisites-for-the-data-warehouse-service-point-and-database"></a>数据仓库服务点和数据库的必备组件
@@ -87,12 +85,12 @@ ms.lasthandoff: 05/17/2017
 - **Configuration Manager 数据库设置：**   
   - **服务器名称** - 指定承载站点数据库的服务器的 FQDN。 如果不使用 SQL Server 的默认实例，则必须采用如下格式在 FQDN 后指定实例：***&lt;Sqlserver_FQDN>\&lt;Instance_name>***
   - **数据库名称** - 指定站点数据库的名称。
-  -    **验证** - 单击“验证”可确保已成功连接站点数据库。
+  - **验证** - 单击“验证”可确保已成功连接站点数据库。
 </br></br>
 - **数据仓库数据库设置：**
-  -    **服务器名称** - 指定承载数据仓库服务点和数据库的服务器的 FQDN。 如果不使用 SQL Server 的默认实例，则必须采用如下格式在 FQDN 后指定实例：***&lt;Sqlserver_FQDN>\&lt;Instance_name>***
-  -    **数据库名称** - 指定数据仓库数据库的 FQDN。  Configuration Manager 将使用此名称创建数据库。 如果指定 SQL server 实例上已存在的数据库名称，则 Configuration Manager 将使用该数据库。
-  -    **验证** - 单击“验证”可确保已成功连接站点数据库。
+  - **服务器名称** - 指定承载数据仓库服务点和数据库的服务器的 FQDN。 如果不使用 SQL Server 的默认实例，则必须采用如下格式在 FQDN 后指定实例：***&lt;Sqlserver_FQDN>\&lt;Instance_name>***
+  - **数据库名称** - 指定数据仓库数据库的 FQDN。  Configuration Manager 将使用此名称创建数据库。 如果指定 SQL server 实例上已存在的数据库名称，则 Configuration Manager 将使用该数据库。
+  - **验证** - 单击“验证”可确保已成功连接站点数据库。
 
 “同步设置”页面：   
 - **数据设置：**
@@ -109,7 +107,7 @@ ms.lasthandoff: 05/17/2017
 #### <a name="troubleshoot-installation-and-data-synchronization"></a>安装和数据同步故障排除
 使用以下日志，调查数据仓库服务点安装或数据同步方面的问题：
 - **DWSSMSI.log** 和 **DWSSSetup.log** - 使用这些日志调查安装数据仓库服务点时的错误。
--     **Microsoft.ConfigMgrDataWarehouse.log** – 使用此日志调查站点数据库和数据仓库数据库之间的数据同步。
+-   **Microsoft.ConfigMgrDataWarehouse.log** – 使用此日志调查站点数据库和数据仓库数据库之间的数据同步。
 
 ### <a name="reporting"></a>报表
 安装数据仓库站点系统角色之后，可在 Reporting Services 点上找到以下报告，其类别为**数据仓库**：
@@ -145,7 +143,7 @@ ms.lasthandoff: 05/17/2017
 
 可以查看以下 Configuration Manager 日志，确认是否已成功重新安装站点系统角色：  
 - **DWSSMSI.log** 和 **DWSSSetup.log** - 使用这些日志调查安装数据仓库服务点时的错误。
--     **Microsoft.ConfigMgrDataWarehouse.log** – 使用此日志调查站点数据库和数据仓库数据库之间的数据同步。
+-   **Microsoft.ConfigMgrDataWarehouse.log** – 使用此日志调查站点数据库和数据仓库数据库之间的数据同步。
 
 
 ## <a name="content-library-cleanup-tool"></a>内容库清理工具
@@ -175,7 +173,7 @@ ms.lasthandoff: 05/17/2017
   2. **删除模式**：使用 **/delete** 开关运行工具时，工具将以删除模式运行。
 
      - 以此模式运行工具时，可从分发点的内容库删除指定分发点上的孤立内容。
-     -     删除每个文件之前，系统将提示用户确认是否要删除文件。  若要删除，请选择“是”；若不删除，请选择“否”；或者选择“删除所有”，跳过后续提示并删除所有孤立内容。  
+     -  删除每个文件之前，系统将提示用户确认是否要删除文件。  若要删除，请选择“是”；若不删除，请选择“否”；或者选择“删除所有”，跳过后续提示并删除所有孤立内容。  
      </br>
 
      我们建议在假设模式下运行该工具，并查看生成的日志文件，然后再使用 /delete 开关运行该工具。  
@@ -224,9 +222,9 @@ ms.lasthandoff: 05/17/2017
 
 ### <a name="try-it-out"></a>试试看
 配置一列可执行文件
-1.    在任何部署类型的属性页上，选择“安装程序处理”选项卡。
-2.    单击“添加”，向列表添加一个额外的可执行文件（例如，**Edge.exe**）
-3.    单击“确定”以关闭部署类型属性对话框。
+1.  在任何部署类型的属性页上，选择“安装程序处理”选项卡。
+2.  单击“添加”，向列表添加一个额外的可执行文件（例如，**Edge.exe**）
+3.  单击“确定”以关闭部署类型属性对话框。
 
 现在，向用户或设备部署此应用程序，但其中一个添加的可执行文件正在运行时，最终用户会看到“软件中心”对话框，告知用户由于某个应用程序正在运行而导致安装失败。
 
@@ -256,16 +254,16 @@ ms.lasthandoff: 05/17/2017
 
 ### <a name="to-enable-the-download-of-express-installation-files-for-windows-10-updates-on-the-server"></a>在服务器上启用 Windows 10 更新的快速安装文件下载
 若要开始同步 Windows 10 快速安装文件的元数据，则必须在软件更新点属性中将其启用。
-1.    在 Configuration Manager 控制台中，导航到“管理” > “站点配置” > “站点”。
-2.    选择管理中心站点或独立主站点。
-3.    在“主页”  选项卡上的“设置”  组中，单击“配置站点组件” ，再单击“软件更新点” 。 在“更新文件”选项卡上，选择“下载所有 Windows 10 已审核更新和快速安装文件的完整文件”。
+1.  在 Configuration Manager 控制台中，导航到“管理” > “站点配置” > “站点”。
+2.  选择管理中心站点或独立主站点。
+3.  在“主页”  选项卡上的“设置”  组中，单击“配置站点组件” ，再单击“软件更新点” 。 在“更新文件”选项卡上，选择“下载所有 Windows 10 已审核更新和快速安装文件的完整文件”。
 
 ### <a name="to-enable-support-for-clients-to-download-and-install-express-installation-files"></a>启用客户端对下载并安装快速安装文件的支持
 若要在客户端上启用快速安装文件支持，则必须在客户端设置的软件更新分区中启用客户端上的快速安装文件。 这将创建新的 HTTP 侦听器，该侦听器会侦听在指定的端口下载快速安装文件的请求。 在客户端上部署客户端设置启用此功能后，会尝试下载当前月份的 Windows 10 累计更新和上一月份的更新之间的增量文件（客户端必须运行支持快速安装文件的 Windows 10 版本）。
-1.    在“软件更新点组件”属性中启用快速安装文件支持（上一过程）。
-2.    在 Configuration Manager 控制台中，导航到“管理” > “客户端设置”。
-3.    选择相应的客户端设置，然后在“主页”选项卡上，单击“属性”。
-4.    选择“软件更新”页，将“在客户端上启用快速更新安装”设置配置为“是”，并将“下载快速更新内容所用端口”设置配置为客户端上 HTTP 侦听器所使用的端口。
+1.  在“软件更新点组件”属性中启用快速安装文件支持（上一过程）。
+2.  在 Configuration Manager 控制台中，导航到“管理” > “客户端设置”。
+3.  选择相应的客户端设置，然后在“主页”选项卡上，单击“属性”。
+4.  选择“软件更新”页，将“在客户端上启用快速更新安装”设置配置为“是”，并将“下载快速更新内容所用端口”设置配置为客户端上 HTTP 侦听器所使用的端口。
 
 
 ## <a name="odata-endpoint-data-access"></a>OData 终结点数据访问
@@ -322,4 +320,3 @@ Azure Active Directory (AD) 载入会创建一个其他云服务使用的 Config
 ## <a name="change-to-configuring-multi-factor-authentication-for-device-enrollment"></a>更改为配置多重身份验证以进行设备注册
 
 现在，可为在 Azure 门户中进行设备注册设置多重身份验证 (MFA)，Configuration Manager 控制台中已删除 MFA 选项。 有关设置注册 MFA 的详细信息，请参阅 [Microsoft Intune 主题](https://docs.microsoft.com/en-us/intune/deploy-use/multi-factor-authentication-azure-active-directory)。
-

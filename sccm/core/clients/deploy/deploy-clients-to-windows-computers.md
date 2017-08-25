@@ -2,27 +2,24 @@
 title: "部署 Windows 客户端 | Microsoft Docs"
 description: "了解如何在 System Center Configuration Manager 中将客户端部署到 Windows 计算机。"
 ms.custom: na
-ms.date: 04/23/2017
+ms.date: 08/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 341f0d0b-f907-44cf-9e10-e1b41fc15f82
-caps.latest.revision: 13
-caps.handback.revision: 0
+caps.latest.revision: "13"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9555a16d97224a1cf49a426ab225468b07403f60
-ms.openlocfilehash: 0e5e624fdfc2b5ee5b497d1063bd4e2d15df578b
-ms.contentlocale: zh-cn
-ms.lasthandoff: 12/30/2016
-
-
+ms.openlocfilehash: 9ac54136b93ee366c16cafe89036a79e808980dc
+ms.sourcegitcommit: 06aef618f72c700f8a716a43fb8eedf97c62a72b
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/21/2017
 ---
 # <a name="how-to-deploy-clients-to-windows-computers-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中部署客户端到 Windows 计算机
 
@@ -58,13 +55,10 @@ ms.lasthandoff: 12/30/2016
 6.  选择是否要在域控制器上安装客户端。  
 
 7.  在“帐户”选项卡上，指定 Configuration Manager 连接到要安装客户端软件的计算机时要使用的一个或多个帐户。 单击“创建”图标，输入“用户名”和“密码”（不超过 38 个字符），确认密码，然后单击“确定”。 必须指定至少一个客户端推送安装帐户，此帐户在你想要安装客户端的每台计算机上必须具有本地管理员权限。 如果未指定客户端推送安装帐户，则 Configuration Manager 会尝试使用站点系统计算机帐户，这将导致跨域客户端推送失败。  
-
-    
     > [!NOTE]  
     >  如果你打算使用辅助站点中的客户端请求安装方法，则必须在启动客户端请求的辅助站点中指定帐户。  
     >   
     >  有关客户端请求安装帐户的详细信息，请参阅下一个过程，即“使用客户端请求安装向导”。  
-
 8.  完成“安装属性”选项卡。
 
      如果已为 Configuration Manager 扩展架构，此选项卡中指定的[客户端安装属性](../../../core/clients/deploy/about-client-installation-properties.md)将发布到 Active Directory 域服务，并由不使用安装属性运行 CCMSetup 的客户端安装读取。  
@@ -296,8 +290,8 @@ CCMSetup.exe /MP:mpserver.contoso.com /UsePKICert SMSSITECODE=ABC CCMHOSTNAME=se
     > [!IMPORTANT]  
     >  请不要在 CCMSetup.exe 命令行属性中为客户端指定 Configuration Manager 站点代码。  
 
-2.  在命令提示符下，键入 **net stop ccmexec** 以确保“SMS 代理主机”  服务 (Ccmexec.exe) 不在主映像计算机上运行。  
-
+2.  在命令提示符下，键入 **net stop ccmexec** 以确保“SMS 代理主机”  服务 (Ccmexec.exe) 不在主映像计算机上运行。
+3.  从引用计算机上的“Windows”文件夹中删除文件“SMSCFG.INI”。  
 3.  删除存储在主映像计算机上的本地计算机存储中的任何证书。  例如，你使用公钥基础结构 (PKI) 证书，则在映像计算机之前，必须在“计算机”  和“用户”  的“个人”  存储中删除证书。
 
 4.  如果客户端将与主映像计算机安装在不同的 Configuration Manager 层次结构中，请从主映像计算机中删除受信任的根密钥。  
@@ -470,7 +464,7 @@ CCMSetup.exe /MP:mpserver.contoso.com /UsePKICert SMSSITECODE=ABC CCMHOSTNAME=se
 
 5.  将组策略对象分配给要通过 Configuration Manager 客户端安装属性设置的计算机。  
 
- 有关 Windows 组策略的信息，请参阅 Windows Server 文档。  
+有关 Windows 组策略的信息，请参阅 Windows Server 文档。  
 
-### <a name="see-also"></a>另请参阅
-[System Center Configuration Manager 中的客户端安装方法](../../../core/clients/deploy/plan/client-installation-methods.md)
+## <a name="next-steps"></a>后续步骤
+如需安装 Configuration Manager 客户端方面的更多帮助，请参阅 [System Center Configuration Manager 中的客户端安装方法](../../../core/clients/deploy/plan/client-installation-methods.md)。

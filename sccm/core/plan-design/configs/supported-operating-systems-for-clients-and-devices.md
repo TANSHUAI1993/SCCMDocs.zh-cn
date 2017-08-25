@@ -2,25 +2,23 @@
 title: "支持的客户端和设备 | Microsoft Docs"
 description: "了解 System Center Configuration Manager 对客户端和设备支持的操作系统。"
 ms.custom: na
-ms.date: 2/6/2017
+ms.date: 8/16/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d5166b16ffbe46af561b1ce98c0494cc4aaa72a8
-ms.openlocfilehash: cd7b8bf35aeb26c8b7b37f6faa51c9a09138fdb9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
-
+ms.openlocfilehash: 82be9b005ec87199f3191612f720f4cc267a4e5c
+ms.sourcegitcommit: db7b7ec347638efd05cdba474e8a8f8535516116
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/16/2017
 ---
 # <a name="supported-operating-systems-for-clients-and-devices-for-system-center-configuration-manager"></a>System Center Configuration Manager 的客户端和设备支持的操作系统
 
@@ -68,7 +66,7 @@ ms.lasthandoff: 05/17/2017
 -   **Windows 7 SP1**（x86、x64）：专业版、企业版和旗舰版    
 
 -   **Windows Server 2016 (x64) 的 Server Core 安装** <sup>2</sup>
-  - 从版本 1606（或 2016 年 10 月发布的 1606 基准版本）开始，支持该操作系统，并提供 KB3186654 中的修补程序汇总。 
+  - 从版本 1606（或 2016 年 10 月发布的 1606 基准版本）开始，支持该操作系统，并提供 KB3186654 中的修补程序汇总。
 
 
 -   **Windows Server 2012 R2 (x64) 的 Server Core 安装** <sup>2</sup>    
@@ -124,6 +122,8 @@ ms.lasthandoff: 05/17/2017
 -   **Windows Embedded POSReady 7**（x86、x64）    
 
 -   **Windows Embedded Standard 7 SP1**（x86、x64）    
+
+以下操作系统基于 Windows XP Embedded，仅适用于 Configuration Manager 版本 1610 及更低版本。 [自版本 1702 起，不再支持这些嵌入操作系统](/sccm/core/plan-design/changes/removed-and-deprecated-features#client-operating-systems)。  
 
 -   **WEPOS 1.1 SP3** (x86)    
 
@@ -351,4 +351,3 @@ Configuration Manager 支持连接到 Exchange Server 的设备的有限管理�
 -   **Exchange Server 2013**  
 
 -   **Exchange Online (Office 365)**：这包括 Business Productivity Online Standard Suite  
-

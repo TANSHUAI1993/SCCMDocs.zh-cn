@@ -8,17 +8,14 @@ ms.date: 05/01/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
+ms.openlocfilehash: 84b617b3e83636ab4578174ef40e786dcf1178cd
+ms.sourcegitcommit: 06aef618f72c700f8a716a43fb8eedf97c62a72b
 ms.translationtype: HT
-ms.sourcegitcommit: afe0ecc4230733fa76e41bf08df5ccfb221da7c8
-ms.openlocfilehash: df6e809aadd3d69275c137c92629ab8426bbdcb7
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/04/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/21/2017
 ---
-
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>为 Configuration Manager 设置云管理网关
 
 *适用范围：System Center Configuration Manager (Current Branch)*
@@ -26,6 +23,9 @@ ms.lasthandoff: 08/04/2017
 从 1610 版开始，在 Configuration Manager 中设置云管理网关的过程包括以下步骤：
 
 ## <a name="step-1-configure-required-certificates"></a>第 1 步：配置必需证书
+
+> [!TIP]  
+> 请求获取证书前，请确认相应 Azure 域名（例如，GraniteFalls.CloudApp.Net）是否唯一。 为此，请登录 [Microsoft Azure 门户](https://manage.windowsazure.com)，单击“新建”，再依次选择“云服务”和“自定义创建”。 在“URL”字段中，键入相应域名（不要单击选中用于创建服务的复选标记）。 门户将反映域名是可用，还是已被其他服务使用。
 
 ## <a name="option-1-preferred---use-the-server-authentication-certificate-from-a-public-and-globally-trusted-certificate-provider-like-verisign"></a>选项 1（首选）- 使用受信任的全球公共证书提供程序（如 VeriSign）提供的服务器身份验证证书
 
@@ -43,7 +43,6 @@ ms.lasthandoff: 08/04/2017
 
 采用针对基于云的分发点的同一方法，为云管理网关创建自定义 SSL 证书。 按照[为基于云的分发点部署服务证书](/sccm/core/plan-design/network/example-deployment-of-pki-certificates)中的说明，但以不同方式执行以下操作：
 
-- 在设置新证书模板时，向为 Configuration Manager 服务器设置的安全组提供**读取**和**注册**权限。
 - 请求自定义 Web 服务器证书时，为以 **cloudapp.net** 结尾的证书公用名称提供 FQDN（以便在 Azure 公有云上使用云管理网关），或为以 **usgovcloudapp.net** 结尾的证书公用名词提供 FQDN（以便用于 Azure 政府云）。
 
 
@@ -69,6 +68,9 @@ ms.lasthandoff: 08/04/2017
 
 7.  使用默认证书格式完成证书导出向导。 记下创建的根证书的名称和位置。 需要在[后面的步骤](#step-4-set-up-cloud-management-gateway)中使用它来配置云管理网关。
 
+>[!NOTE]
+>如果客户端证书是由从属证书颁发机构颁发，需要为链中的每个证书重复执行这一步。
+
 ## <a name="step-3-upload-the-management-certificate-to-azure"></a>步骤 3：将管理证书上传到 Azure
 
 Configuration Manager 需要 Azure 管理证书来访问 Azure API 和配置云管理网关。 有关如何上传管理证书的详细信息和说明，请参阅 Azure 文档中的以下文章：
@@ -80,74 +82,6 @@ Configuration Manager 需要 Azure 管理证书来访问 Azure API 和配置云�
 >[!IMPORTANT]
 >请确保复制与管理证书关联的订阅 ID。 在[下一步](#step-4-set-up-cloud-management-gateway)中需要使用此 ID 在 Configuration Manager 控制台中配置云管理网关。
 
-### <a name="subordinate-ca-certificates-and-azure"></a>从属 CA 证书和 Azure
-
-如果证书由从属 CA (subCA) 颁发，并且企业 PKI 基础结构不在 Internet 中，则使用此过程将证书上传到 Azure。 
-
-1. 在 Azure 门户中设置云管理网关后，找到云管理网关服务并转到“证书”选项卡。 在此选项卡中上传 subCA 证书。 如果有多个 subCA 证书，则需要全部上传。 
-2. 证书上传完成后，记录其指纹。 
-3. 使用此脚本将指纹添加到站点数据库：
-    
-```
-
-    DIM serviceCName
-    DIM subCAThumbprints
-
-    ' Verify arguments
-    IF WScript.Arguments.Count <> 2 THEN
-    WScript.StdOut.WriteLine "Usage: CScript UpdateSubCAThumbprints.vbs <ServiceCName> <SubCA cert thumbprints, separated by ;>"
-    WScript.Quit 1
-    END IF
-
-    'Get arguments
-    serviceCName = WScript.Arguments.Item(0)
-    subCAThumbprints = WScript.Arguments.Item(1)
-
-    'Find SMS Provider
-    WScript.StdOut.WriteLine "Searching for SMS Provider for local site..."
-    SET objSMSNamespace = GetObject("winmgmts:{impersonationLevel=impersonate}!\\.\root\sms")
-    SET results = objSMSNamespace.ExecQuery("SELECT * From SMS_ProviderLocation WHERE ProviderForLocalSite = true")
-
-    'Process the results
-    FOR EACH var in results
-    siteCode = var.SiteCode
-    NEXT
-
-    IF siteCode = "" THEN
-    WScript.StdOut.WriteLine "Failed to locate SMS provider."
-    WScript.Quit 1
-    END IF
-
-    WScript.StdOut.WriteLine "SiteCode = " & siteCode 
-
-    ' Connect to the SMS namespace
-    SET objWMIService = GetObject("winmgmts:{impersonationLevel=impersonate}!\\.\root\sms\site_" & siteCode)
-
-    'Get instance of SMS_AzureService
-    DIM query
-    query = "SELECT * From SMS_AzureService WHERE ServiceType = 'CloudProxyService' AND ServiceCName = '" & serviceCName & "'"
-    WScript.StdOut.WriteLine "Run WQL query: " &  query
-    SET objInstances = objWMIService.ExecQuery(query)
-
-    IF IsNull(objInstances) OR (objInstances.Count = 0) THEN
-    WScript.StdOut.WriteLine "Failed to get Azure_Service instance."
-    WScript.Quit 1
-    END IF
-
-    FOR EACH var IN objInstances
-    SET azService = var
-    NEXT
-
-    WScript.StdOut.WriteLine "Update [SubCACertThumbprint] to " & subCAThumbprints
-
-    'Update SubCA cert thumbprints
-    azService.Properties_.item("SubCACertThumbprint") = subCAThumbprints
-
-    'Save data back to provider
-    azService.Put_
-
-    WScript.StdOut.WriteLine "[SubCACertThumbprint] is updated successfully."
-```
 
 
 ## <a name="step-4-set-up-cloud-management-gateway"></a>步骤 4：设置云管理网关
@@ -173,7 +107,7 @@ Configuration Manager 需要 Azure 管理证书来访问 Azure API 和配置云�
 
     - 指定从自定义 SSL 证书中导出的私钥（.pfx 文件）。
 
-    - 指定从客户端证书导出的根证书。
+    - 指定从客户端证书导出的根证书（以及任何从属证书）。 向导最多接受两个根证书和四个从属证书。
 
     -   指定创建新证书模板时使用的同一服务名称 FQDN。 必须根据使用的 Azure 云，为 FQDN 服务名称指定以下其中一种后缀：
 
@@ -207,7 +141,7 @@ Configuration Manager 需要 Azure 管理证书来访问 Azure API 和配置云�
 
 ## <a name="step-7-configure-roles-for-cloud-management-gateway-traffic"></a>步骤 7：为云管理网关通信配置角色
 
-设置云管理网关的最后一步是配置站点系统角色以接受云管理网关通信。 对于 Tech Preview 1606，云管理网关只支持管理点、分发点和软件更新点角色。 必须分别配置每个角色。
+设置云管理网关的最后一步是配置站点系统角色以接受云管理网关通信。 云管理网关仅支持管理点和软件更新点角色。 必须分别配置每个角色。
 
 1. 在 Configuration Manager 控制台中，转到“管理” > “站点配置” > “服务器和站点系统角色”。
 
@@ -215,7 +149,7 @@ Configuration Manager 需要 Azure 管理证书来访问 Azure API 和配置云�
 
 3. 选择“角色”，然后选择“属性”。
 
-4. 在角色属性表中的“客户端连接”下，选择“HTTPS”，选中“允许 Configuration Manager 云管理网关通信”旁边的复选框，然后选择“确定”。 为其余角色重复这些步骤。
+4. 在角色属性表中的“客户端连接”下，选中“允许 Configuration Manager 云管理网关通信”旁边的框，再选择“确定”。 为其余角色重复这些步骤。 根据安全最佳做法，还建议启用“HTTPS”选项，但这并不是一项强制性要求。
 
 ## <a name="step-8-configure-clients-for-cloud-management-gateway"></a>步骤 8：配置云管理网关的客户端
 
@@ -237,4 +171,3 @@ Configuration Manager 需要 Azure 管理证书来访问 Azure API 和配置云�
 ## <a name="next-steps"></a>后续步骤
 
 [监视云管理网关的客户端](monitor-clients-cloud-management-gateway.md)
-

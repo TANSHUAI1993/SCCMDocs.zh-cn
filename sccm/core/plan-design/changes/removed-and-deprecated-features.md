@@ -2,26 +2,24 @@
 title: "弃用的功能 | Microsoft Docs"
 description: "了解有关 System Center Configuration Manager 不再支持的功能、产品和操作系统的信息。"
 ms.custom: na
-ms.date: 06/27/2017
+ms.date: 08/16/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: d8c8b44c-1e8a-42b6-bab4-23c72a0a6169
-caps.latest.revision: 15
-caps.handback.revision: 0
+caps.latest.revision: "15"
+caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
+ms.openlocfilehash: 8ac7009014a4652a36acf69ebfe9ccab3ba8ecbd
+ms.sourcegitcommit: 3ce56c7350411d8cc3d3cb9b4054f9ada9b0ed54
 ms.translationtype: HT
-ms.sourcegitcommit: ef42d1483053e9a6c502f4ebcae5a231aa6ba727
-ms.openlocfilehash: 98fa323cb94013d875e2cea41b80fff8cc75b6b2
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/26/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/17/2017
 ---
 # <a name="removed-and-deprecated-features-for-system-center-configuration-manager"></a>System Center Configuration Manager 的已删除和已弃用的功能
 
@@ -71,7 +69,7 @@ ms.lasthandoff: 07/26/2017
 |**操作系统**|**首次宣布弃用**|**删除的支持**|  
 |-|-|-|  
 |Windows XP|2015 年 10 月|版本 1511|  
-|Windows XP Embedded|2015 年 10 月|版本 1702|  
+|Windows XP Embedded <br><br> 这包括所有[基于 XP 的嵌入操作系统](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices#windows-embedded-computers)。|2015 年 10 月|版本 1702|  
 |Windows Server 2003|2015 年 10 月|版本 1511|  
 |Windows Server 2003 R2|2015 年 10 月|版本 1511|  
 |Windows Vista|2015 年 10 月|版本 1511|  
@@ -102,9 +100,10 @@ ms.lasthandoff: 07/26/2017
 |带外管理- 在 System Center 2012 Configuration Manager 中找到|2015 年 10 月 16 日|版本 1511|
 |任务序列： <br /> - OSDPreserveDriveLetter  <br /><br /> 现在，在操作系统部署期间，默认情况下，Windows 安装程序会确定要使用的最佳驱动器号（通常为 C:）。 如果想要指定使用另一个驱动器，可以在“应用操作系统”任务序列步骤中更改位置。 转到“选择要应用此操作系统的位置”设置，选择“特定逻辑驱动器号”，然后选择要使用的驱动器。 |2016 年 6 月 20 日 |版本 1606 |
 |任务序列： <br /> - 将磁盘转换为动态磁盘 <br /> - 安装部署工具 |2016 年 11 月 18 日|对这些任务序列的支持随 2017 年 6 月 1 日后发布的首个更新结束。|
-|软件中心将呈现新式外观。 并且本应仅出现在依赖于 Silverlight 的应用程序目录中的应用（用户可用的应用）现在将出现在“应用程序”选项卡中的软件中心。 应用程序目录仍然可以通过软件中心的“安装状态”选项卡中的链接进行访问。<br><br>在未来几个月，以前版本的软件中心将不再可用。<br><br>你可以通过启用客户端设置“计算机代理” > “使用新的软件中心”来使用新的软件中心。<br><br>有关软件中心的详细信息，请参阅[规划和配置 System Center Configuration Manager 中的应用程序管理](https://docs.microsoft.com/sccm/apps/plan-design/plan-for-and-configure-application-management)。|2016 年 12 月 13 日|以前版本的软件中心支持在 2018 年 1 月 1 日后发布的第一个更新后结束。|
+|软件中心具有富有现代感的全新外观。 在未来几个月，以前版本的软件中心将不再可用。<br><br>你可以通过启用客户端设置“计算机代理” > “使用新的软件中心”来使用新的软件中心。<br><br>有关软件中心的详细信息，请参阅[规划和配置 System Center Configuration Manager 中的应用程序管理](https://docs.microsoft.com/sccm/apps/plan-design/plan-for-and-configure-application-management)。|2016 年 12 月 13 日|以前版本的软件中心支持在 2018 年 1 月 1 日后发布的第一个更新后结束。|
+|随着版本 1511 软件中心新体验的提供，之前仅在应用程序目录（用户可用应用程序）中显示的应用程序，现在显示在软件中心内。 </br></br>由于软件中心现在提供应用程序目录这一主要功能，因此在接下来的几个月中将不再提供基于 Web 的应用程序目录体验。|2017 年 8 月 11日| 对应用程序目录网站用户体验的支持终于 2018 年 6 月 1 日后发布的首个更新|
 |利用 Configuration Manager 管理虚拟硬盘 (VHD)。 </br></br>这包括去除使用任务序列创建新 VHD 或管理 VHD 的选项，以及去除 Configuration Manager 控制台的虚拟硬盘节点。 </br></br>去除这种支持后，虽然现有 VHD 将不被删除，但再也无法从 Configuration Manager 控制台内访问。  |2017 年 1 月 6 日 |对 VHD 的支持将在 2017 年 6 月 1 日后随首个更新的发布而结束。|
-|System Center Configuration Manager 升级评估工具。 </br></br>升级评估工具依赖于 System Center Configuration Manager 和应用程序兼容性工具包 (ACT) 6.x。 ACT 的最终版本随附在 Windows 10 v1511 ADK 中。 由于不再对 ACT 进行任何更新，因此将停止对升级评估工具的支持。 </br></br>升级评估工具将由[升级准备](/sccm/core/clients/manage/upgrade/upgrade-analytics)功能取代。 弃用通知已于 2016 年 9 月 12 日添加到 [UAT 的下载页面](https://www.microsoft.com/download/details.aspx?id=37145)。 |9/12/2016  | 2017 年 7 月 11 日 |  
+|System Center Configuration Manager 升级评估工具。 </br></br>升级评估工具依赖于 System Center Configuration Manager 和应用程序兼容性工具包 (ACT) 6.x。 ACT 的最终版本随附在 Windows 10 v1511 ADK 中。 由于不再对 ACT 进行任何更新，因此将停止对升级评估工具的支持。 </br></br>升级评估工具将由[升级准备](/sccm/core/clients/manage/upgrade/upgrade-analytics)功能取代。 弃用通知已于 2016 年 9 月 12 日添加到 [UAT 的下载页面](https://www.microsoft.com/download/details.aspx?id=37145)。 |9/12/2016  | 2017 年 7 月 11 日 |
 
 
 <br></br>
@@ -121,4 +120,3 @@ ms.lasthandoff: 07/26/2017
  System Center Configuration Manager 已不再支持网络访问保护。 该功能已在 Windows Server 2012 R2 中弃用并从 Windows 10 中删除。  
 
  有关网络访问保护备选方案，请参阅 *网络策略和访问服务概述* 的 [已弃用功能](https://technet.microsoft.com/library/hh831683.aspx)部分。
-

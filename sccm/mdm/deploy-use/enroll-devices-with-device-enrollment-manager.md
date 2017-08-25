@@ -2,32 +2,29 @@
 title: "向设备注册管理器注册设备 - Configuration Manager | Microsoft Docs"
 description: "使用 System Center Configuration Manager 向设备注册管理器注册企业拥有的设备。"
 ms.custom: na
-ms.date: 03/24/2017
+ms.date: 08/15/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2905f26e-7859-497d-b995-5ff48261efa2
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 7573590763c68a4c97d388be1e64054c318da9cc
-ms.openlocfilehash: 8c491636925670732e6af67d8c1c741e4793ef96
-ms.contentlocale: zh-cn
-ms.lasthandoff: 05/17/2017
-
-
+ms.openlocfilehash: c90ecca1ee46523d16fc1cf11495e40707631e03
+ms.sourcegitcommit: db7b7ec347638efd05cdba474e8a8f8535516116
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/16/2017
 ---
 # <a name="enroll-devices-with-device-enrollment-manager-with-configuration-manager"></a>使用 Configuration Manager 向设备注册管理器注册设备
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-组织可以使用 Intune 来管理大量带有单一用户帐户的移动设备。 *设备注册管理器* (DEM) 帐户是专用的用户帐户，可注册最多 1,000 台设备。 将现有用户添加到要为其提供专用 DEM 功能的 DEM 帐户。 每个已注册的设备使用单个许可证。 我们建议你将通过此帐户注册的设备作为没有用户关联性的共享设备使用，而不是个人专用设备。  
+组织可以使用 Intune 来管理大量带有单一用户帐户的移动设备。 设备注册管理器 (DEM) 帐户是用于注册设备的特殊用户帐户。 将现有用户添加到要为其提供专用 DEM 功能的 DEM 帐户。 每个已注册的设备使用单个许可证。 我们建议你将通过此帐户注册的设备作为没有用户关联性的共享设备使用，而不是个人专用设备。  
 
 ## <a name="enroll-corporate-owned-devices-with-the-device-enrollment-manager"></a>使用设备注册管理器注册企业自有设备  
  你可以指定存储管理员或主管，例如，允许用户执行下列操作的设备注册管理员用户帐户：  
@@ -67,24 +64,14 @@ ms.lasthandoff: 05/17/2017
 7.  设备注册管理器现在可以使用相同的过程注册移动设备，同最终用户在公司门户中针对“个人携带设备”(BYOD) 方案采用的过程相同。  
 
 #### <a name="delete-a-device-enrollment-manager-from-intune"></a>从 Intune 删除设备注册管理员  
+删除设备注册管理器不会影响注册的设备。 删除设备注册管理器时：  
+- 不会取消注册任何已注册的设备  
+- 仍能够完全管理注册的设备  
+- 已删除的设备注册管理员帐户凭据仍有效，能够登录到公司门户来访问应用  
+- 已删除的设备注册管理员帐户凭据仍无法擦除或停用设备  
+- 已删除的设备注册管理员帐户与注册的设备的关系仍存在，但不可以注册任何其他设备
 
 1.  在 Configuration Manager 控制台中，单击“管理” 。  
-
 2.  在“管理”  工作区中，展开“云服务” ，并单击“Microsoft Intune 订阅” 。 选择要添加设备注册管理器的 Microsoft Intune 订阅，然后单击“属性”。  
-
 3.  在“Microsoft Intune 订阅属性”对话框中，单击“设备注册管理器”选项卡。  
-
 4.  “搜索”想要删除的设备注册管理器，单击“删除”，然后单击“确定”。  
-
- 删除设备注册管理器不会影响注册的设备。 删除设备注册管理器时：  
-
--   注册的设备均不会受到影响  
-
--   仍能够完全管理注册的设备  
-
--   已删除的设备注册管理员帐户凭据仍有效，能够登录到公司门户来访问应用  
-
--   已删除的设备注册管理员帐户凭据仍无法擦除或停用设备  
-
--   已删除的设备注册管理员帐户与注册的设备的关系仍存在，但不可以注册任何其他设备
-

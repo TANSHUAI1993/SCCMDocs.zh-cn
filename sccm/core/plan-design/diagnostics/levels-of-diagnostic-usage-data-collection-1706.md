@@ -6,8 +6,7 @@ ms.date: 07/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 14ee4fb0-7790-45a6-906e-6e55627d4079
@@ -33,12 +32,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
+ms.openlocfilehash: 12f1e810c1eb194ec322a916e4e0c1a4c19be414
+ms.sourcegitcommit: db7b7ec347638efd05cdba474e8a8f8535516116
 ms.translationtype: HT
-ms.sourcegitcommit: 0663ba84762c44a5c303562548499f195bae9e1c
-ms.openlocfilehash: df28bfbb49c78cafe11b87c04ac4c6c9cf370a08
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/01/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/16/2017
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1706-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1706 的诊断使用情况数据收集的级别
 
@@ -191,6 +189,10 @@ System Center Configuration Manager 版本 1706 收集三个级别的诊断和�
    - 主动管理技术 (AMT) 客户端版本
 
    - BIOS 使用年限（年）
+   
+   - [新增] 统计已启用安全启动的设备
+   
+   - [新增] 按 TPM 状态统计设备
 
    - 客户端自动升级：部署配置包括客户端试点和排除使用情况（扩展的互操作性客户端）
 
@@ -503,4 +505,3 @@ System Center Configuration Manager 版本 1706 收集三个级别的诊断和�
 - Intune 托管设备的 EAS 条件访问策略的类型（阻止或隔离）
 
 - 适用于企业的 Windows 应用商店应用程序详细信息（已同步的应用程序的非聚合列表，包括 AppID、联机或脱机状态，以及购买的许可证总数）
-

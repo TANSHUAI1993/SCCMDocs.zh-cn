@@ -6,21 +6,19 @@ ms.date: 7/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 7e4ec207-bb49-401f-af1b-dd705ecb465d
-caps.latest.revision: 0
+caps.latest.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
+ms.openlocfilehash: e0b887169f0c8ae6901d1c6fd6a498df9596c2b4
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
-ms.openlocfilehash: 0d6527abba24b685151ae63feaae29b30d1e2cc9
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/29/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="configure-sql-server-always-on-availability-groups-for-configuration-manager"></a>为 Configuration Manager 配置 SQL Server AlwaysOn 可用性组
 
@@ -106,7 +104,7 @@ ms.lasthandoff: 07/29/2017
 
 
 
-## <a name="add-and-remove-synchronous-replica-members"></a>添加和删除同步的副本成员  
+## <a name="add-or-remove-synchronous-replica-members"></a>添加或删除同步副本成员  
 当站点数据库在可用性组中托管时，请使用以下过程添加或删除同步的副本成员。 有关支持的副本的类型和数量信息，请参阅准备使用可用性组主题的[先决条件](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database#prerequisites)下的“可用性组配置”。
 
 若要完成以下过程，你使用的帐户必须是：
@@ -114,25 +112,13 @@ ms.lasthandoff: 07/29/2017
 -   托管或将托管站点数据库的每个 SQL Server 上的 Sysadmin。
 
 
-### <a name="to-add-a-new-synchronous-replica-member"></a>添加新的同步副本成员
-1.  将新的服务器作为辅助副本添加到可用性组。 请参阅 SQL Server 文档库中的[将辅助副本添加到可用性组 (SQL Server)](/sql/database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server)。
-
-2.  通过运行 **Preinst.exe /stopsite** 停止 Configuration Manager 站点。 请参阅[层次结构维护工具](/sccm/core/servers/manage/hierarchy-maintenance-tool-preinst.exe)。
-
-3.  使用 SQL Server 创建主要副本中站点数据库的备份，然后将该备份还原到新的辅助副本服务器。 请参阅 SQL Server 文档中的[创建完整数据库备份](/sql/relational-databases/backup-restore/create-a-full-database-backup-sql-server)和[使用 SSMS 还原数据库备份](/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms)。
-
-4.  配置每个辅助副本。 为可用性组中的每个辅助副本执行以下操作：
-
-    1.  确保站点服务器的计算机帐户是每个可用性组成员计算机上“本地管理员”组的成员。
-
-    2.  从先决条件中运行[验证脚本](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database#prerequisites)，以确认正确配置了每个副本上的站点数据库。
-
-    3.  如有必要配置新副本，将主要副本手动故障转移到新的辅助副本，然后执行所需的设置。 请参阅 SQL Server 文档中的[执行可用性组的计划手动故障转移](/sql/database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server)。
-
-5.  通过启动站点组件管理器 (**sitecomp**) 和 **SMS_Executive** 服务重启站点。
+### <a name="to-add-a-new-synchronous-replica-member"></a>添加新的同步副本成员  
+将次要副本添加到用于 Configuration Manager 的可用性组，这是一个非常复杂的动态过程，具体步骤和过程因各个环境而异。 我们仍在努力改进 Configuration Manager，以简化此过程。 在此期间，如果需要添加次要副本，请参阅以下 TechNet 博客，以获取指导
+-   [ConfigMgr 1702：将新节点（次要副本）添加到现有 SQL AO AG](https://blogs.technet.microsoft.com/umairkhan/2017/07/17/configmgr-1702-adding-a-new-node-secondary-replica-to-an-existing-sql-ao-ag/)
 
 ### <a name="to-remove-a-replica-member"></a>删除副本成员
-对于此过程，请使用 SQL Server 文档中[从可用性组删除辅助副本](/sql/database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server)部分的信息。
+对于此过程，请使用 SQL Server 文档中[从可用性组删除辅助副本](/sql/database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server)部分的信息。  
+
 
 ## <a name="configure-an-asynchronous-commit-replica"></a>配置异步提交副本
 从 Configuration Manager 版本 1706 开始，可以将异步副本添加到用于 Configuration Manager 的可用性组。 要执行此操作，无需运行配置同步副本所需的配置脚本。 （这是因为不支持将该异步副本用作站点数据库。）请参阅 [SQL Server 文档](https://msdn.microsoft.com/library/hh213247(v=sql.120).aspx(d=robot))，了解有关如何将辅助副本添加到可用性组的信息。
@@ -186,4 +172,3 @@ ms.lasthandoff: 07/29/2017
 9.  为新的数据库位置提供此信息后，使用常规过程和配置完成安装。 安装完成后，站点将重启并开始使用新的数据库位置。    
 
 10. 若要清理原为可用性组成员的服务器，请按照 SQL Server 文档中[删除可用性组](/sql/database-engine/availability-groups/windows/remove-an-availability-group-sql-server)中的指导进行操作。
-

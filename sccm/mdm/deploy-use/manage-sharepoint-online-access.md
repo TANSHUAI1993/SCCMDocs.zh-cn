@@ -6,23 +6,20 @@ ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 49cec466-1676-4fe2-a2fe-5004f01d735e
-caps.latest.revision: 11
-caps.handback.revision: 0
+caps.latest.revision: "11"
+caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2c723fe7137a95df271c3612c88805efd8fb9a77
-ms.openlocfilehash: 58a82b29743cb37a5d358f020cf11b91d6f6f42e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 03/06/2017
-
-
+ms.openlocfilehash: c564c1fc25c5156a2d9ddfa1b4123024c658bf61
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="manage-sharepoint-online-access-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中管理 SharePoint Online 访问
 
@@ -203,4 +200,3 @@ Office 桌面应用程序可以访问运行以下系统的电脑上的 SharePoin
 ### <a name="see-also"></a>另请参阅  
 
  [在 System Center Configuration Manager 中管理对服务的访问](../../protect/deploy-use/manage-access-to-services.md)
-

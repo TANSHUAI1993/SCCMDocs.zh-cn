@@ -6,19 +6,19 @@ ms.date: 12/30/2016
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: df2e57b9-6445-4067-98e7-ace85d4e6aa6
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-translationtype: Human Translation
-ms.sourcegitcommit: 34809ddf7819eab5deb3995cd8138c7b38cd2f9a
 ms.openlocfilehash: 9fdff6049d6e5cde1032864e5d7aa8df71e53686
-
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="what39s-new-in-version-1606-of-system-center-configuration-manager"></a>System Center Configuration Manager 1606 版中的新增功能
 
@@ -35,7 +35,7 @@ System Center Configuration Manager 的更新 1606 作为控制台内部更新�
 
 
 
-## <a name="a-nameupdatesandservicingaupdates-and-servicing"></a><a name="updatesandservicing"></a>更新和维护服务
+## <a name="updatesandservicing"></a>更新和维护服务
 
 ### <a name="changes-for-the-updates-and-servicing-node"></a>更新和维护服务节点的更改
 Configuration Manager 控制台中的更新和维护服务节点更改如下：
@@ -81,10 +81,10 @@ Configuration Manager 控制台中的更新和维护服务节点更改如下：
 
 
 
-## <a name="a-nameaccessibilitya-accessibility"></a><a name="accessibility"></a>辅助功能
+## <a name="accessibility"></a>辅助功能
 若要在工作区的不同节点之间导航，现可输入节点名称的第一个字母。 每次按键都会将光标移动到以该字母开头的下一节点。 对于拥有屏幕阅读器的用户，阅读器会读出该节点的名称。 有关辅助功能选项的详细信息，请参阅 [System Center Configuration Manager 中的辅助功能](../../../core/understand/accessibility-features.md)。
 
-## <a name="a-nameadministrationaadministration"></a><a name="administration"></a>管理
+## <a name="administration"></a>管理
 Configuration Manager 控制台中的管理更改如下：
 ### <a name="oms-connector"></a>OMS 连接器
 
@@ -225,9 +225,3 @@ Endpoint Protection 可以帮助管理和监视 Windows Defender 高级威胁防
 
 ## <a name="remote-control"></a>远程控制
 在远程控制会话中从共享剪贴板传输内容前，允许用户选择接受或拒绝文件传输。 用户在每个会话中只需授予一次权限，而查看者无法授予自己继续文件传输的权限。 可在“管理”工作区中找到此新设置。 转到“客户端设置”，然后在“默认设置”中打开“远程工具”窗格。
-
-
-
-<!--HONumber=Dec16_HO5-->
-
-

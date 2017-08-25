@@ -6,25 +6,21 @@ ms.date: 07/31/2017
 ms.prod: configuration-manager
 ms.reviewer: dudeso
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5e5d854c-9cc1-4dd8-b33f-0fcac675b395
-caps.latest.revision: 13
-caps.handback.revision: 0
+caps.latest.revision: "13"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
+ms.openlocfilehash: 3921748d3c99c2a35b670f3ca121dc7ab92d43bc
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
 ms.translationtype: HT
-ms.sourcegitcommit: 3c75c1647954d6507f9e28495810ef8c55e42cda
-ms.openlocfilehash: 4bb1f4a068563a5fe6f384708e10269dcd3229da
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/29/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/07/2017
 ---
-
-
 # <a name="device-guard-management-with-configuration-manager"></a>使用 Configuration Manager 进行的 Device Guard 管理
 
 *适用范围：System Center Configuration Manager (Current Branch)*
@@ -97,6 +93,9 @@ Device Guard 同时包含基于软件和基于硬件的安全功能。 可配置
     - 信任包括在操作系统部署映像中的应用 
 7.  单击“下一步”，然后完成向导。
 
+>[!IMPORTANT]
+>仅支持在运行 Configuration Manager 客户端版本 1706 或更高版本的客户端电脑上，添加受信任文件或文件夹。 如果 Device Guard 策略中有包含规则，并将此策略部署到运行旧版 Configuration Manager 客户端的客户端电脑，将无法应用此策略。 升级旧版客户端可以解决此问题。 不包括任何包含规则的策略仍可应用于旧版 Configuration Manager 客户端。
+
 ## <a name="how-to-deploy-a-device-guard-policy"></a>如何部署 Device Guard 策略
 1.  在 Configuration Manager 控制台中，单击“资产和符合性” 。
 2.  在“资产和符合性”工作区中，展开“Endpoint Protection”，然后单击“Device Guard 策略”。
@@ -130,7 +129,6 @@ Device Guard 同时包含基于软件和基于硬件的安全功能。 可配置
 - 使用 Configuration Manager 在配备 Device Guard 策略的客户端电脑上启用可配置代码完整性时，该策略不会阻止具有本地管理员权限的用户绕过 Device Guard 策略或执行不受信任的软件。 
 - 阻止具有本地管理员权限的用户禁用可配置代码完整性的唯一方法是部署已签名二进制策略。 此部署可以通过组策略完成，但是 Configuration Manager 中目前不支持此操作。
 - 将 Configuration Manager 设置为客户端电脑上的托管安装程序使用 AppLocker 策略。 AppLocker 仅用于标识托管安装程序，整个强制过程通过可配置代码完整性进行。 
-
 
 
 

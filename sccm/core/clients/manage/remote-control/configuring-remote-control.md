@@ -6,23 +6,20 @@ ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: dudeso
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 45affc27-aa11-4249-9493-082ac23a3a3d
-caps.latest.revision: 4
-caps.handback.revision: 0
+caps.latest.revision: "4"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 9206b82eca02877c30eebf146d42bcca7290eb42
-ms.openlocfilehash: 20c28a625adb69f239b9c0e7673e57dd39e8d561
-ms.contentlocale: zh-cn
-ms.lasthandoff: 12/30/2016
-
-
+ms.openlocfilehash: 3a386c23c81f413d7d161780bdc0ab3a5b9eccae
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="configuring-remote-control-in-system-center-configuration-manager"></a>配置 System Center Configuration Manager 中的远程控制
 
@@ -54,7 +51,7 @@ ms.lasthandoff: 12/30/2016
 
 > [!NOTE]
 >
-> 特殊键（如 ~!#@$%,）将不会正确转换。
+> 无法正确转换特殊键（如 ~!#@$%）。
 
 
 ## <a name="keyboard-shortcuts-for-the-remote-control-viewer"></a>远程控制查看器的键盘快捷键
@@ -69,4 +66,3 @@ ms.lasthandoff: 12/30/2016
 |Alt+Delete|显示 Windows 菜单。|  
 |Ctrl+Alt+减号（位于数字键盘）|将本地计算机的活动窗口复制到远程计算机剪贴板。|  
 |Ctrl+Alt+加号（位于数字键盘）|将整个本地计算机的活动窗口窗口区复制到远程计算机剪贴板。|  
-

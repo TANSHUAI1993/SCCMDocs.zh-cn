@@ -2,10 +2,9 @@
 title: Technical Preview 1707 | Microsoft Docs
 description: "了解适用于 System Center Configuration Manager 的 Technical Preview 版本 1707 中的可用功能。"
 ms.custom: na
-ms.date: 07/28/2017
+ms.date: 08/14/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -14,12 +13,11 @@ ms.assetid: cb405ba0-8792-4ab7-988b-2f835f3a9550
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
+ms.openlocfilehash: 7ee2fd78c6c502394016ba077d42714041ad01c6
+ms.sourcegitcommit: 10f17229c5a359f040cb7f8f5e7bd868a34ac086
 ms.translationtype: HT
-ms.sourcegitcommit: 6e890862fd02786b675e2b7abaca7ede7c0e977a
-ms.openlocfilehash: 91fd850f055a7e892a54487307109a291e336696
-ms.contentlocale: zh-cn
-ms.lasthandoff: 07/28/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/15/2017
 ---
 # <a name="capabilities-in-technical-preview-1707-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1707 中的功能
 
@@ -33,6 +31,17 @@ ms.lasthandoff: 07/28/2017
 -   **Issue Name**. Details
     Workaround details.
 -->
+
+**此 Technical Preview 中的已知问题：**
+-   **如果站点服务器处于被动模式，无法更新到预览版本 1707**。 如果运行的是预览版本 1706，且[主站点服务器处于被动模式](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability)，必须先卸载被动模式站点服务器，然后才能将预览站点成功更新到版本 1707。 可以在站点运行版本 1707 后，重新安装被动模式站点服务器。
+
+  若要卸载被动模式站点，请执行以下操作：
+  1. 在控制台中，依次转到“管理” > “概述” > “站点配置” > “服务器和站点系统角色”，再选择被动模式站点服务器。
+  2. 在“站点系统角色”窗格中，右键单击“站点服务器”角色，再选择“删除角色”。
+  3. 右键单击被动模式站点服务器，再选择“删除”。
+  4. 卸载站点服务器后，在处于主动模式的主站点服务器上重启服务 CONFIGURATION_MANAGER_UPDATE。
+
+
 
 **以下是可以试用的此版本的新功能。**  
 
@@ -89,13 +98,13 @@ Surface 设备仪表板提供有关在环境中找到的 Surface 设备的信息
 
 通过上一 Technical Preview 中引入的新功能，可[从 Configuration Manager 控制台创建并运行 PowerShell 脚本](/sccm/core/get-started/capabilities-in-technical-preview-1706#create-and-run-powershell-scripts-from-the-configuration-manager-console)。
 在此 Technical Preview 中，对此功能进行了扩展。 Configuration Manager 现可读取 PowerShell 脚本，并在创建脚本向导中显示脚本内任何参数。 可在向导中为该参数提供脚本运行时要使用的值。 也可将该参数留空。 如果留空，将需要在运行脚本时提供参数的值。
+在此技术预览版中，必须提供脚本需要的所有参数。 在将来发布的版本中，我们计划提供可选的脚本参数。
 
 ### <a name="try-it-out"></a>试试看！
 
-1. 按照说明[从 Configuration Manager 控制台创建并运行 PowerShell 脚本](/sccm/core/get-started/capabilities-in-technical-preview-1706#create-and-run-powershell-scripts-from-the-configuration-manager-console)。 
+1. 按照说明[从 Configuration Manager 控制台创建并运行 PowerShell 脚本](/sccm/core/get-started/capabilities-in-technical-preview-1706#create-and-run-powershell-scripts-from-the-configuration-manager-console)。
 2. 在“创建脚本向导”的新“脚本参数”页上，选择一个参数，然后单击“编辑”。
 3. 为所选参数提供参数值，然后单击“确定”。
 4. 完成向导。
 
 脚本运行时，将使用你配置的任何参数值。
-

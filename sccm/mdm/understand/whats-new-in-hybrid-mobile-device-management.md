@@ -6,21 +6,19 @@ ms.date: 06/30/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-hybrid
+ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: Mtillman
 ms.author: mtillman
 manager: angrobe
+ms.openlocfilehash: 93609815ab4d93eddb99b8461dda9f4b4bf8058e
+ms.sourcegitcommit: 9a6f8e028fb5eb2e752da70f42a5b548339bd8f4
 ms.translationtype: HT
-ms.sourcegitcommit: c0d94b8e6ca6ffd82e879b43097a9787e283eb6d
-ms.openlocfilehash: 8e660c667daec9b1f7630e15599df5e3cfe55b5e
-ms.contentlocale: zh-cn
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/14/2017
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager 和 Microsoft Intune 的混合移动设备管理中的新增功能
 
@@ -58,6 +56,7 @@ ms.lasthandoff: 08/02/2017
 - [新设备符合性策略规则](/sccm/core/plan-design/changes/whats-new-in-version-1706#new-device-compliance-policy-rules)
 - [不使用 Configuration Manager 客户端管理的 Windows 10 设备适用的新配置设置](/sccm/core/plan-design/changes/whats-new-in-version-1706#new-configuration-settings-for-windows-10-devices-that-are-not-managed-with-the-configuration-manager-client)
 - [macOS VPN 配置文件的 Cisco (IPSec) 支持](/sccm/core/get-started/capabilities-in-technical-preview-1706#cisco-ipsec-support-for-macos-vpn-profiles)
+- [Android 和 iOS 注册限制](/sccm/core/plan-design/changes/whats-new-in-version-1706#android-and-ios-enrollment-restrictions) 
 
 ## <a name="june-2017"></a>2017 年 6 月
 
@@ -347,4 +346,3 @@ Windows Phone 8.1 平台的主流支持已终止。 Windows 8.1 PC 支持不会�
 
 - [以前的混合 MDM 功能](whats-new-hybrid-archive.md)
 - [System Center 2012 Configuration Manager 中的 MDM 的新增功能](https://technet.microsoft.com/library/mt445560.aspx)
-

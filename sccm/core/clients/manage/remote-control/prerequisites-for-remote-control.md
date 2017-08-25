@@ -6,23 +6,20 @@ ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c1b2057e-b74f-43fa-a293-763a8f866d3d
-caps.latest.revision: 6
-caps.handback.revision: 0
+caps.latest.revision: "6"
+caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fc392e4440e84614f92218e9c7a09ec1c2c64f53
-ms.openlocfilehash: eafa0d85935c2009cc63d17b06ed83a4666d7fac
-ms.contentlocale: zh-cn
-ms.lasthandoff: 12/16/2016
-
-
+ms.openlocfilehash: 12c602ddfa237768af497324440091e17e597ae9
+ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="prerequisites-for-remote-control-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中远程控制的先决条件
 
@@ -44,21 +41,7 @@ System Center Configuration Manager 中的远程控制具有外部依赖关系�
 >  不需要 Windows 服务作为远程控制的外部依赖关系。  
 
 ### <a name="supported-operating-systems-for-the-remote-control-viewer"></a>支持远程控制查看器的操作系统  
- 以下列表提供有关支持远程控制查看器的操作系统的信息。 有关支持的客户端操作系统的信息，请参阅 [System Center Configuration Manager 支持的配置](../../../../core/plan-design/configs/supported-configurations.md)。  
-
-|操作系统|查看器支持|更多信息|  
-|----------------------|--------------------|----------------------|  
-|Windows XP（32 位）|是|若要在此操作系统上运行远程控制查看器，必须先从 Microsoft 下载中心下载并安装[远程桌面连接 (RDC) 客户端更新 7.0 (KB969084)](https://www.microsoft.com/en-us/download/details.aspx?id=12767)。|  
-|Windows XP（64 位）|否|无更多信息。|  
-|Windows Vista（32 位）|是|若要在此操作系统上运行远程控制查看器，必须先从 Microsoft 下载中心下载并安装[远程桌面连接 (RDC) 客户端更新 7.0 (KB969084)](https://www.microsoft.com/en-us/download/details.aspx?id=12767)。|  
-|Windows Vista（64 位）|是|若要在此操作系统上运行远程控制查看器，必须先从 Microsoft 下载中心下载并安装[远程桌面连接 (RDC) 客户端更新 7.0 (KB969084)](https://www.microsoft.com/en-us/download/details.aspx?id=12767)。|  
-|Windows 7（32 位）|是|无更多信息。|  
-|Windows 7（64 位）|是|无更多信息。|  
-|Windows Server 2003（32 位）|否|无更多信息。|  
-|Windows Server 2003（64 位）|否|无更多信息。|  
-|Windows Server 2008（32 位）|否|无更多信息。|  
-|Windows Server 2008（64 位）|否|无更多信息。|  
-|Windows Server 2008 R2（64 位）|是|无更多信息。|  
+在 Configuration Manager 控制台支持的所有操作系统上，支持使用远程控制查看器。 有关信息，请参阅 [System Center Configuration Manager 控制台支持的配置](../../../../core/plan-design/configs/supported-operating-systems-consoles.md)。   
 
 ## <a name="configuration-manager-dependencies"></a>Configuration Manager 依赖关系  
 
@@ -66,5 +49,4 @@ System Center Configuration Manager 中的远程控制具有外部依赖关系�
 |----------------|----------------------|  
 |必须为客户端启用远程控制|默认情况下，安装 Configuration Manager时，不启用远程控制。 有关如何启用和配置远程控制的信息，请参阅[在 System Center Configuration Manager 中配置远程控制](../../../../core/clients/manage/remote-control/configuring-remote-control.md)。|  
 |Reporting Services 点|在远程控制的报表前，必须先安装 Reporting Services 点站点系统角色。 有关详细信息，请参阅 [System Center Configuration Manager 中的报表](../../../../core/servers/manage/reporting.md)。|  
-|管理远程控制的安全权限|若要访问集合资源并从 Configuration Manager 控制台中启动远程控制会话：“控制 AMT”、“读取”、“读取资源”以及“集合”对象的“远程控制”权限。<br /><br /> “远程工具操作人员”安全角色包括这些在 Configuration Manager 中管理远程控制所需要的权限。<br /><br /> 有关详细信息，请参阅[为 System Center Configuration Manager 配置基于角色的管理](../../../../core/servers/deploy/configure/configure-role-based-administration.md)。<br /><br /> 此外，还必须通过使用“远程工具”  客户端设置中的“远程控制和远程协助允许的查看者”  选项将你想授予使用远程控制和远程协助权限的用户添加到远程控制允许的查看列表当中。|  
-
+|管理远程控制的安全权限|若要访问集合资源并从 Configuration Manager 控制台启动远程控制会话，需要拥有“集合”对象的“读取”、“读取资源”和“远程控制”权限。<br /><br /> “远程工具操作人员”安全角色包括这些在 Configuration Manager 中管理远程控制所需要的权限。<br /><br /> 有关详细信息，请参阅[为 System Center Configuration Manager 配置基于角色的管理](../../../../core/servers/deploy/configure/configure-role-based-administration.md)。<br /><br /> 此外，还必须将获准的查看器添加到“远程工具”客户端设置中的“获准的远程控制和远程协助查看器”列表中，它们才有权使用远程控制。
