@@ -93,7 +93,7 @@ Markdown 文件中的 URL 会转换为可单击链接。
 
 1. 这
 1. 是
-1. 某个
+1. 一个
 1. 已排序
 1. 列表  
 
@@ -180,7 +180,7 @@ Markdown 文件中的 URL 会转换为可单击链接。
 
 ## <a name="alerts"></a>警报
 
-### <a name="note"></a>备注
+### <a name="note"></a>注意
 
 > [!NOTE]
 > 这是注意
@@ -195,7 +195,7 @@ Markdown 文件中的 URL 会转换为可单击链接。
 > [!TIP]
 > 这是提示
 
-### <a name="important"></a>重要
+### <a name="important"></a>重要说明
 
 > [!IMPORTANT]
 > 这是重要说明
