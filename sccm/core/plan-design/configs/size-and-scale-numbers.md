@@ -14,11 +14,11 @@ caps.latest.revision: "4"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: f539e2d282b56e56a9c58c773788325b27ea6b37
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 9c50f6633a5ca04b62f4c3b06119fb1fbcab2643
+ms.sourcegitcommit: 974fbc4408028c8be28911e5cd646efcf47c7f15
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/28/2017
 ---
 # <a name="size-and-scale-numbers-for-system-center-configuration-manager"></a>System Center Configuration Manager 的大小和扩展数量
 
@@ -56,18 +56,9 @@ ms.lasthandoff: 08/07/2017
 
 -   一个管理中心站点最多可支持 25 个子主站点。  
 
-**应用程序目录网站点：**  
-
--   你可以在主站点安装“应用程序目录”网站点的多个实例。  
-
-    > [!TIP]  
-    >  最佳做法是，当“应用程序目录”网站点和“应用程序目录”Web 服务点为位于 Intranet 上的客户端提供服务时，将它们一起安装在相同的站点系统上。  
-
-    -   为改进性能，计划每个实例最多支持 50,000 个客户端。  
-
-    -   此站点系统角色的每个实例支持层次结构所支持的最大客户端数。  
 
 ## <a name="bkmk_roles"></a> Site system roles    
+
 
 **应用程序目录 web 服务点：**  
 
@@ -79,6 +70,18 @@ ms.lasthandoff: 08/07/2017
     -   为改进性能，计划每个实例最多支持 50,000 个客户端。  
 
     -   此站点系统角色的每个实例支持层次结构所支持的最大客户端数。  
+
+**应用程序目录网站点：**  
+
+-   你可以在主站点安装“应用程序目录”网站点的多个实例。  
+
+    > [!TIP]  
+    >  最佳做法是，当“应用程序目录”网站点和“应用程序目录”Web 服务点为位于 Intranet 上的客户端提供服务时，将它们一起安装在相同的站点系统上。  
+
+    -   为改进性能，计划每个实例最多支持 50,000 个客户端。  
+
+    -   此站点系统角色的每个实例支持层次结构所支持的最大客户端数。  
+
 
 **分发点：**  
 

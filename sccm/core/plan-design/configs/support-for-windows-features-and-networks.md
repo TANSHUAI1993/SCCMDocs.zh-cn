@@ -2,7 +2,7 @@
 title: "对 Windows 功能的支持 | Microsoft Docs"
 description: "了解 System Center Configuration Manager 支持的 Windows 和网络功能。"
 ms.custom: na
-ms.date: 3/30/2017
+ms.date: 8/24/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: e040552dab21ba9a71e06a78f6acc2ffe1b0eb61
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: be9b7e84fecfa7a07c411c3d46168e5485e0dfab
+ms.sourcegitcommit: 974fbc4408028c8be28911e5cd646efcf47c7f15
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/28/2017
 ---
 # <a name="support-for-windows-features-and-networks-in-system-center-configuration-manager"></a>对 System Center Configuration Manager 中的 Windows 功能和网络的支持
 
@@ -49,7 +49,7 @@ ms.lasthandoff: 08/07/2017
 -   **配置客户端：**    
     -   必须针对 BranchCache 分布式缓存模式配置可支持 BranchCache 的客户端。  
     -   必须启用用于 BITS 客户端设置的操作系统设置以支持 BranchCache。   <br /> <br />
-        
+
     若要了解如何配置客户端以支持 BranchCache，请参阅[配置适用于 Windows 10 更新的 BranchCache](https://technet.microsoft.com/itpro/windows/manage/waas-branchcache) 中的[配置客户端](https://technet.microsoft.com/itpro/windows/manage/waas-branchcache#configure-clients-for-branchcache)部分。
 
 
@@ -80,9 +80,11 @@ Configuration Manager 提供对工作组中的客户端的支持。
 ##  <a name="bkmmk_datadedup"></a> 重复数据删除  
 Configuration Manager 在以下操作系统上支持将重复数据删除用于分发点：  
 
+-   Windows Server 2016
+-   Windows Server 2012 R2  
 -   Windows Server 2012  
 
--   Windows Server 2012 R2  
+
 
 > [!IMPORTANT]  
 >  托管包源文件的卷不能标记为重复数据删除。 这是因为重复数据删除使用重新分析点，但 Configuration Manager 不支持使用有文件存储在重新分析点上的内容源位置。  
