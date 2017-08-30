@@ -14,11 +14,11 @@ caps.latest.revision: "5"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 82be9b005ec87199f3191612f720f4cc267a4e5c
-ms.sourcegitcommit: db7b7ec347638efd05cdba474e8a8f8535516116
+ms.openlocfilehash: f9dd3b3e8f7a2878cd549bf289e1ee5536ee73fc
+ms.sourcegitcommit: 974fbc4408028c8be28911e5cd646efcf47c7f15
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 08/28/2017
 ---
 # <a name="supported-operating-systems-for-clients-and-devices-for-system-center-configuration-manager"></a>System Center Configuration Manager 的客户端和设备支持的操作系统
 
@@ -56,8 +56,7 @@ ms.lasthandoff: 08/16/2017
 
 -   **Windows Server 2008 SP2**（x86、x64）：标准版、企业版、数据中心版 <sup>1</sup>    
 
--   **Windows 10**：专业版、企业版  
-   有关不同 Configuration Manager 版本支持的不同 Windows 10 发布版本的相关详细信息，请参阅[对 Windows 10 各版本的支持](/sccm/core/plan-design/configs/support-for-windows-10)。
+-   **Windows 10** 有关不同 Configuration Manager 版本支持的不同 Windows 10 发布版本的相关详细信息，请参阅[对 Windows 10 各版本的支持](/sccm/core/plan-design/configs/support-for-windows-10)。
 
 -   **Windows 8.1**（x86、x64）：专业版、企业版    
 

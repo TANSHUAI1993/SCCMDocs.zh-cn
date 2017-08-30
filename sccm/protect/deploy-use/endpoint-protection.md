@@ -14,11 +14,11 @@ caps.latest.revision: "11"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.openlocfilehash: 3c31271f3e3ae7aa45da03b3d75fd78242330646
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 76319b935695df204b4b83a645504079c60db12b
+ms.sourcegitcommit: 974fbc4408028c8be28911e5cd646efcf47c7f15
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/28/2017
 ---
 # <a name="endpoint-protection"></a>Endpoint Protection
 
@@ -91,9 +91,9 @@ System Center Configuration Manager 中的 Endpoint Protection 支持为 Configu
 ## <a name="endpoint-protection-client-for-mac-computers-and-linux-servers"></a>适用于 Mac 计算机和 Linux 服务器的 Endpoint Protection 客户端  
  System Center Endpoint Protection 包括适用于 Linux 和 Mac 计算机的 Endpoint Protection 客户端。 这些客户端未提供 Configuration Manager；相反，必须从 [Microsoft 批量许可服务中心](https://www.microsoft.com/licensing/servicecenter/default.aspx)下载以下产品。  
 
--   适用于 Mac 的 System Center 2012 Endpoint Protection  
+-   适用于 Mac 的 System Center Endpoint Protection  
 
--   适用于 Linux 的 System Center 2012 Endpoint Protection  
+-   适用于 Linux 的 System Center Endpoint Protection  
 
 
 > [!IMPORTANT]  
@@ -108,7 +108,13 @@ System Center Configuration Manager 中的 Endpoint Protection 支持为 Configu
 2. 选择网站顶部的“下载和密钥”选项卡。
 3. 筛选产品 **System Center Endpoint Protection (Current Branch)**。
 4. 单击链接以**下载**
-5. 单击“继续” 。 应能看到若干文件，其中一个名为：**System Center Endpoint Protection (current branch - version 1606) for Linux OS and Macintosh OS Multilanguage   32/64 bit   1507 MB ISO**。
-6. 单击箭头图标，下载该文件。 文件名为 **SW_DVD5_Sys_Ctr_Endpnt_Prtctn_1606_MultiLang_EptProt_Lin_Mac_MLF_X21-30777.ISO**。
+5. 单击“继续” 。 应能看到若干文件，其中一个名为：System Center Endpoint Protection (current branch - version 1606) for Linux OS and Macintosh OS Multilanguage   32/64 bit   1579 MB ISO。
+6. 单击箭头图标，下载该文件。 文件名为 SW_DVD5_Sys_Ctr_Endpnt_Prtctn_1606_MultiLang_-2_EptProt_Lin_Mac_MLF_X21-44498.ISO。
+
+此 2017 年 7 月更新 (X21 44498) 包括以下部分：
+
+- 适用于 Mac 的 System Center Endpoint Protection 4.5.28.1（更新的安装证书）
+- 适用于 Linux 的 System Center Endpoint Protection 4.5.18.0（新语言包）
+- 适用于 Linux 的 System Center Endpoint Protection 文档（有关实时保护的已修订指南）
 
  有关如何安装和管理适用于 Linux 和 Mac 计算机的 Endpoint Protection 客户端，请使用这些产品随附的文档，该文档位于“文档”  文件夹。

@@ -2,7 +2,7 @@
 title: "站点先决条件 | Microsoft Docs"
 description: "了解如何将 Windows 计算机配置为 System Center Configuration Manager 站点系统服务器。"
 ms.custom: na
-ms.date: 1/17/2017
+ms.date: 8/25/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 0b1d2d619d6cdaf36cc22ef461ea1505b5cacc41
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 09749a3045ca6eebf1363b6e53cd8607b5f32578
+ms.sourcegitcommit: 974fbc4408028c8be28911e5cd646efcf47c7f15
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/28/2017
 ---
 # <a name="site-and-site-system-prerequisites-for-system-center-configuration-manager"></a>System Center Configuration Manager 的站点和站点系统先决条件
 
@@ -27,7 +27,7 @@ ms.lasthandoff: 08/07/2017
 
  基于 Windows 的计算机要求特定配置，以支持用作 System Center Configuration Manager 站点系统服务器。  
 
-
+ 
  对于某些产品，例如软件更新点的 Windows Server 更新服务 (WSUS)，需要参考产品文档来确定此产品适用的其他先决条件和限制。 此处仅包含直接应用于 Configuration Manager 的配置。   
 
 > [!NOTE]  
@@ -66,9 +66,7 @@ ms.lasthandoff: 08/07/2017
 
 **Windows ADK：**  
 
--   安装或升级管理中心站点或主站点之前，必须安装要安装或升级到的 Configuration Manager 版本所需的 Windows 评估和部署工具包 (ADK) 版本。  
-
-    -   1511 版本的 Configuration Manager 需要 Windows ADK 的 Windows 10 RTM (10.0.10240) 版本。  
+-   安装或升级管理中心站点或主站点之前，必须安装要安装或升级到的 Configuration Manager 版本所需的 Windows 评估和部署工具包 (ADK) 版本。 有关支持 Windows 10 作为客户端主题的信息，请参阅 [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk)。  
 
 -   有关此要求的详细信息，请参阅[操作系统部署的基础架构要求](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment)。  
 
@@ -115,9 +113,7 @@ ms.lasthandoff: 08/07/2017
 ###  <a name="bkmk_2012smsprovpreq"></a> SMS 提供程序服务器  
 **Windows ADK：**  
 
--   安装 SMS 提供程序实例的计算机必须具备要安装或升级到的 Configuration Manager 版本所需的 Windows ADK 版本。  
-
-    -   1511 版本的 Configuration Manager 需要 Windows ADK 的 Windows 10 RTM (10.0.10240) 版本。  
+-   安装 SMS 提供程序实例的计算机必须具备要安装或升级到的 Configuration Manager 版本所需的 Windows ADK 版本。 有关支持 Windows 10 作为客户端主题的信息，请参阅 [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk)。
 
 -   有关此要求的详细信息，请参阅[操作系统部署的基础架构要求](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment)。  
 
@@ -448,9 +444,7 @@ ms.lasthandoff: 08/07/2017
 
 **Windows ADK：**  
 
--   安装或升级管理中心站点或主站点之前，必须安装正在安装或升级到的 Configuration Manager 版本所需的 Windows ADK 版本。  
-
-    -   1511 版本的 Configuration Manager 需要 Windows ADK 的 Windows 10 RTM (10.0.10240) 版本。  
+-   安装或升级管理中心站点或主站点之前，必须安装正在安装或升级到的 Configuration Manager 版本所需的 Windows ADK 版本。  有关支持 Windows 10 作为客户端主题的信息，请参阅 [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk)。  
 
 -   有关此要求的详细信息，请参阅[操作系统部署的基础架构要求](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment)。  
 
@@ -495,9 +489,7 @@ ms.lasthandoff: 08/07/2017
 ###  <a name="bkmk_2008smsprovpreq"></a> SMS 提供程序服务器  
 **Windows ADK：**  
 
--   安装 SMS 提供程序实例的计算机必须具备要安装或升级到的 Configuration Manager 版本所需的 Windows ADK 版本。  
-
-    -   1511 版本的 Configuration Manager 需要 Windows ADK 的 Windows 10 RTM (10.0.10240) 版本。  
+-   安装 SMS 提供程序实例的计算机必须具备要安装或升级到的 Configuration Manager 版本所需的 Windows ADK 版本。 有关支持 Windows 10 作为客户端主题的信息，请参阅 [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk)。  
 
 -   有关此要求的详细信息，请参阅[操作系统部署的基础架构要求](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment)。  
 

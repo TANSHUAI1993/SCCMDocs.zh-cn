@@ -2,7 +2,7 @@
 title: "数据仓库 | Microsoft 文档"
 description: "System Center Configuration Manager 的数据仓库服务点和数据库"
 ms.custom: na
-ms.date: 7/31/2017
+ms.date: 8/25/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ caps.latest.revision:
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: eedbf12d3bf628666efc90c85a8dfab37e4dc9ab
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 744614d7e1ec97a4d4b4646c45cb41d734c6be34
+ms.sourcegitcommit: 974fbc4408028c8be28911e5cd646efcf47c7f15
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/28/2017
 ---
 #  <a name="the-data-warehouse-service-point-for-system-center-configuration-manager"></a>System Center Configuration Manager 的数据仓库服务点
 *适用范围：System Center Configuration Manager (Current Branch)*
@@ -49,8 +49,8 @@ ms.lasthandoff: 08/07/2017
 - 安装站点系统角色的计算机要求具有 .NET Framework 4.5.2 或更高版本。
 - 安装站点系统角色的计算机的计算机帐户用于将数据与数据仓库数据库同步。 此帐户要求具有以下权限：  
   - 在将托管数据仓库数据库的计算机上是**管理员**。
-  - 对数据仓库数据库具有 **DB_owner** 权限。
-  - 顶层站点站点数据库的 DB_reader 和 execute 权限。
+  - 对数据仓库数据库具有 DB_Creator 权限。
+  - 对顶层站点站点数据库具有 DB_owner 或带 execute 的 DB_reader 权限。
 - 数据仓库数据库需要使用 SQL Server 2012 或更高版本。 版本可以是 Standard、Enterprise 或 Datacenter。
 - 支持以下 SQL Server 配置来托管仓库数据库：  
   - 默认实例

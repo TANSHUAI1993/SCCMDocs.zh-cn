@@ -2,7 +2,7 @@
 title: "发行说明 - Configuration Manager | Microsoft Docs"
 description: "有关产品中尚未解决或 Microsoft 知识库文章中未涵盖的紧急问题，请参阅这些说明。"
 ms.custom: na
-ms.date: 08/21/2017
+ms.date: 08/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 24f30bddb345e3a08d4b655d89693c226005cb0e
-ms.sourcegitcommit: 06aef618f72c700f8a716a43fb8eedf97c62a72b
+ms.openlocfilehash: e54c2cd1c3e83609bff6a8cb64fb3c23b26a4eaa
+ms.sourcegitcommit: 974fbc4408028c8be28911e5cd646efcf47c7f15
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 08/28/2017
 ---
 # <a name="release-notes-for-system-center-configuration-manager"></a>System Center Configuration Manager 的发行说明
 
@@ -27,15 +27,23 @@ ms.lasthandoff: 08/21/2017
 
 在 System Center Configuration Manager 中，产品发行说明限于尚未在产品（通过在控制台中更新可用）中解决的或者未在 Microsoft 知识库文章中详细介绍的紧急问题。  
 
- 有关影响核心方案的已知问题，此信息在 System Center Configuration Manager 文档库中的在线产品文档中传达。  
+有关影响核心方案的已知问题的信息将在 System Center Configuration Manager 文档库中的在线产品文档中传达。  
 
 > [!TIP]  
 >  本主题包含 System Center Configuration Manager 的当前分支的发行说明。 对于 Technical Preview for System Center Configuration Manager，请参阅 [Technical Preview for System Center Configuration Manager](../../../../core/get-started/technical-preview.md)  
+
+有关使用不同版本引入的新功能的信息，请参阅以下内容：
+- [版本 1706 中的新增功能](/sccm/core/plan-design/changes/whats-new-in-version-1706)  
+- [版本 1702 中的新增功能](/sccm/core/plan-design/changes/whats-new-in-version-1702)
+- [版本 1610 中的新增功能](/sccm/core/plan-design/changes/whats-new-in-version-1610)
+   
+
 
 ## <a name="setup-and-upgrade"></a>安装和升级  
 
 ### <a name="after-you-update-a-configuration-manager-console-using-consolesetupexe-from-the-site-server-folder-recent-language-pack-changes-are-not-available"></a>使用站点服务器文件夹中的 ConsoleSetup.exe 更新 Configuration Manager 控制台后，最近的语言包更改不可用
 <!--  SMS 486420  Applicability should be 1610 and 1702.  -->
+*以下内容适用于版本 1610 和 1702。*   
 使用站点服务器安装文件夹中的 ConsoleSetup.exe 对控制台运行就地更新后，最近安装的语言包可能不可用。 此错误发生在以下情况下：
 - 你的站点运行版本 1610 或 1702。
 - 通过站点服务器安装文件夹中的 ConsoleSetup.exe 就地更新控制台。
@@ -47,7 +55,8 @@ ms.lasthandoff: 08/21/2017
 
 ### <a name="with-version-1702-the-default-site-boundary-group-is-configured-for-use-for-site-assignment"></a>使用版本 1702，默认站点边界组配置为用于站点分配
 <!--  SMS 486380   Applicability should only be to 1702. -->
-使用版本 1702，默认站点边界组参考选项卡选中“将此边界组用于站点分配”，将站点列为“分配的站点”并变灰，以使配置无法编辑或删除。
+*以下内容适用于版本 1702。*  
+默认站点边界组参考选项卡选中“将此边界组用于站点分配”，将站点列为“分配的站点”并灰显，以使配置无法编辑或删除。
 
 **解决方法：** 无。 你可以忽略此设置。 虽然该组已启用站点分配，但默认站点边界组不用于站点分配。 使用 1702，此配置确保默认站点边界组与正确的站点相关联。
 
@@ -104,7 +113,8 @@ ConfigMgrSetup.log
 
 ### <a name="service-connection-tool-throws-an-exception-when-sql-server-is-remote-or-when-shared-memory-is-disabled"></a>当 SQL 服务器处于远程状态，或共享内存被禁用时，服务连接工具将引发异常
 <!-- 479223   Fixed in 1702 and later   -->
-从版本 1606 开始，当下列情况之一存在时，服务连接工具将引发异常：  
+*以下内容适用于版本 1610 以及更早版本。*  
+当存在以下一种情况，服务连接工具将引发异常：  
  -  站点数据库远离承载服务连接点的计算机，并使用非标准端口（1433 以外的端口）
  -  站点数据库与服务连接点位于同一服务器上，但禁用了 SQL 协议**共享内存**
 
@@ -131,8 +141,9 @@ ConfigMgrSetup.log
 ## <a name="client-deployment-and-upgrade"></a>客户端部署和升级  
 
 ### <a name="client-installation-fails-with-error-code-0x8007064c"></a>客户端安装失败（显示错误代码 0x8007064c）
-<!--- SMS 486973 -->
-将客户端部署到 Windows 计算机时，安装失败。 ccmsetup.log 文件包含条目“文件 'C:\WINDOWS\ccmsetup\Silverlight.exe' 返回了故障代码 1612。 安装失败”，后跟条目“InstallFromManifest 失败 0x8007064c”。
+<!--- SMS 486973  applies 1606 to 1706. Not yet fixed. -->
+*以下内容适用于所有活动版本的 Configuration Manager。*   
+将客户端部署到 Windows 计算机的所有活动版本时，安装失败。 ccmsetup.log 文件包含条目“文件 'C:\WINDOWS\ccmsetup\Silverlight.exe' 返回了故障代码 1612。 安装失败”，后跟条目“InstallFromManifest 失败 0x8007064c”。
 
 **解决方法：**这是由于以前安装的 Silverlight 版本损坏所致。 可以尝试在受影响的计算机上运行以下工具来解决此问题：[https://support.microsoft.com/help/17588/fix-problems-that-block-programs-from-being-installed-or-removed](https://support.microsoft.com/help/17588/fix-problems-that-block-programs-from-being-installed-or-removed)
 
@@ -158,6 +169,7 @@ ConfigMgrSetup.log
 
 ### <a name="when-a-high-risk-deployment-dialog-is-visible-to-a-user-subsequent-high-risk-dialogs-with-a-sooner-deadline-are-not-displayed"></a>对用户显示高风险部署对话框时，不会显示截止时间较早的后续高风险对话框
 <!-- Fixed in 1702 and later -->
+*以下内容适用于版本 1610 以及更早版本。*   
 为用户创建并部署高风险任务部署后，会向用户显示一个高风险对话框。 如果用户不关闭该对话框，你可创建并部署另一个高风险部署（截止时间早于第一个对话框），用户在关闭原始对话框之前不会收到更新的对话框。 部署仍将运行至配置的截止时间。
 
 **解决方法**：  
@@ -169,6 +181,7 @@ ConfigMgrSetup.log
 
 ### <a name="importing-an-office-365-client-settings-from-a-configuration-file-fails-when-it-contains-unsupported-languages"></a>包含不受支持的语言时，无法从配置文件导入 Office 365 客户端设置
 <!-- 489258  Fixed in 1706  -->
+*以下内容适用于版本 1702 以及更早版本。*   
 如果从现有的 XML 配置文件导入 Office 365 客户端设置，且该文件包含 Office 365 ProPlus 客户端不支持的语言，则会出现错误。 有关详细信息，请参阅[从 Office 365 客户端管理仪表板将 Office 365 应用部署到客户端](/sccm/sum/deploy-use/manage-office-365-proplus-updates#to-deploy-office-365-apps-to-clients-from-the-office-365-client-management-dashboard)。
 
 **解决方法**：    
@@ -207,6 +220,7 @@ ConfigMgrSetup.log
 
 ### <a name="antimalware-policy-fails-to-apply-on-windows-server-2016-core"></a>反恶意软件政策无法应用于 Windows Server 2016 Core
 <!--  Product Studio bug 485370 added 04 19 2017   Fixed in 1702 -->
+*以下内容适用于版本 1610 以及更早版本。*  
 反恶意软件政策无法应用于 Windows Server 2016 Core。  错误代码为 0x80070002。  ConfigSecurityPolicy.exe 缺少依赖项。
 
 **解决方法：**2017 年 5 月 9 日发布的[知识库文章 4019472](https://support.microsoft.com/help/4019472/windows-10-update-kb4019472) 解决了此问题。

@@ -13,11 +13,11 @@ ms.assetid: cb405ba0-8792-4ab7-988b-2f835f3a9550
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 7ee2fd78c6c502394016ba077d42714041ad01c6
-ms.sourcegitcommit: 10f17229c5a359f040cb7f8f5e7bd868a34ac086
+ms.openlocfilehash: 3572004fa43db3e84295b68599dd95e0447f4c65
+ms.sourcegitcommit: 974fbc4408028c8be28911e5cd646efcf47c7f15
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/15/2017
+ms.lasthandoff: 08/28/2017
 ---
 # <a name="capabilities-in-technical-preview-1707-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1707 中的功能
 
@@ -35,7 +35,7 @@ ms.lasthandoff: 08/15/2017
 **此 Technical Preview 中的已知问题：**
 -   **如果站点服务器处于被动模式，无法更新到预览版本 1707**。 如果运行的是预览版本 1706，且[主站点服务器处于被动模式](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability)，必须先卸载被动模式站点服务器，然后才能将预览站点成功更新到版本 1707。 可以在站点运行版本 1707 后，重新安装被动模式站点服务器。
 
-  若要卸载被动模式站点，请执行以下操作：
+  若要卸载被动模式站点服务器，请执行以下操作：
   1. 在控制台中，依次转到“管理” > “概述” > “站点配置” > “服务器和站点系统角色”，再选择被动模式站点服务器。
   2. 在“站点系统角色”窗格中，右键单击“站点服务器”角色，再选择“删除角色”。
   3. 右键单击被动模式站点服务器，再选择“删除”。
