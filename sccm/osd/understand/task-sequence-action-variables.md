@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 6049ec2369e0a97b21ce6523ba8448335385ab9a
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 675ebf053de98c6ad93a53ae218696012aef96f7
+ms.sourcegitcommit: 5b4fd2d36f06be5bcc7f8ebbfb92c48b7240085d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="task-sequence-action-variables-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的任务序列操作变量
 
@@ -187,15 +187,6 @@ ms.lasthandoff: 08/07/2017
 |SMSConnectNetworkFolderPassword<br /><br /> (input)|指定用于连接到网络共享的网络密码。|  
 |SMSConnectNetworkFolderPath<br /><br /> (input)|指定连接的网络路径。<br /><br /> 例如：<br /><br /> **"\\\servername\sharename"**|  
 
-###  <a name="BKMK_ConvertDisk"></a> 将磁盘转换为动态磁盘任务序列操作变量  
- 此操作的变量指定要从基本磁盘转换到动态磁盘的物理磁盘的编号。 有关与这些变量相关联的任务序列步骤的详细信息，请参阅[将磁盘转换为动态磁盘](task-sequence-steps.md#BKMK_ConvertDisktoDynamic)。  
-
-#### <a name="details"></a>详细信息  
-
-|操作变量名称|描述|  
-|--------------------------|-----------------|  
-|OSDConvertDiskIndex<br /><br /> (input)|指定转换的物理磁盘编号。|  
-
 ###  <a name="BKMK_EnableBitLocker"></a> 启用 BitLocker 任务序列操作变量  
  此操作的变量指定用于在目标计算机上启用 BitLocker 的恢复密码和启动密钥选项。 有关与这些变量相关联的任务序列步骤的详细信息，请参阅[启用 BitLocker](task-sequence-steps.md#BKMK_EnableBitLocker)。  
 
@@ -276,7 +267,7 @@ ms.lasthandoff: 08/07/2017
 |OSDStateStorePath<br /><br /> (output)|保存或还原用户状态的状态迁移点上的文件夹的 UNC 路径。|  
 
 ###  <a name="BKMK_RestartComputer"></a> 重新启动计算机任务序列操作变量  
- 此操作的变量指定用于重新启动目标计算机的信息。 有关与这些变量相关联的任务序列步骤的详细信息，请参阅[重新启动计算机](task-sequence-steps.md#a-namebkmkrestartcomputera-restart-computer)。  
+ 此操作的变量指定用于重新启动目标计算机的信息。 有关与这些变量相关联的任务序列步骤的详细信息，请参阅[重新启动计算机](task-sequence-steps.md#BKMK_RestartComputer)。  
 
 #### <a name="details"></a>详细信息  
 
