@@ -2,7 +2,7 @@
 title: "规划将客户端部署到 Linux 和 UNIX 计算机 | Microsoft Docs"
 description: "在 System Center Configuration Manager 中规划 Linux 和 UNIX 计算机的客户端部署。"
 ms.custom: na
-ms.date: 04/23/2017
+ms.date: 08/30/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.openlocfilehash: 367ffb919a1adb9a0530f7357a0fcf1e6636af08
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: c5385ec5d7e41812df5c2a33d528614547819157
+ms.sourcegitcommit: 5b4fd2d36f06be5bcc7f8ebbfb92c48b7240085d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="planning-for-client-deployment-to-linux-and-unix-computers-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中规划 Linux 和 UNIX 计算机的客户端部署
 
@@ -51,14 +51,6 @@ ms.lasthandoff: 08/07/2017
 ###  <a name="BKMK_ClientDeployExternalforLnU"></a> Configuration Manager 的外部依赖关系：  
  下表描述了所需的 UNIX 和 Linux 操作系统和程序包依赖关系。  
 
- **Red Hat Enterprise Linux ES 版本 4**  
-
-|所需程序包|描述|最低版本|  
-|----------------------|-----------------|---------------------|  
-|glibc|C 标准库|2.3.4-2|  
-|Openssl|OpenSSL 库；安全网络通信协议|0.9.7a-43.1|  
-|PAM|可插入身份验证模块|0.77-65.1|  
-
  **Red Hat Enterprise Linux Server 版本 5.1 (Tikanga)**  
 
 |所需程序包|描述|最低版本|  
@@ -75,15 +67,6 @@ ms.lasthandoff: 08/07/2017
 |Openssl|OpenSSL 库；安全网络通信协议|1.0.0-4|  
 |PAM|可插入身份验证模块|1.1.1-4|  
 
- **Solaris 9 SPARC**  
-
-|所需程序包|描述|最低版本|  
-|----------------------|-----------------|---------------------|  
-|所需的操作系统修补程序|PAM 内存泄漏|112960-48|  
-|SUNWlibC|Sun Workshop Compilers Bundled libC (sparc)|5.9,REV=2002.03.18|  
-|SUNWlibms|Forte 开发人员捆绑在一起共享 libm (sparc)|5.9,REV=2001.12.10|  
-|Openssl|SMCosslg (sparc)<br /><br /> Sun 未提供适用于 Solaris 9 SPARC 的 OpenSSL 版本。 可以从 Sunfreeware 中获得某个版本。|0.9.7g|  
-|PAM|可插入身份验证模块<br /><br /> SUNWcsl，Core Solaris (共享的 Libs) (sparc)|11.9.0,REV=2002.04.06.15.27|  
 
  **Solaris 10 SPARC**  
 
@@ -132,15 +115,6 @@ ms.lasthandoff: 08/07/2017
 |SUNWcsr|Core Solaris, (Root)|11.11, REV=2009.11.11|  
 |SUNWopenssl-libraries|OpenSSL Libraries (Usr)|11.11.0,REV=2010.05.25.01.00|  
 
- **SUSE Linux Enterprise Server 9 (i586)**  
-
-|所需程序包|描述|最低版本|  
-|----------------------|-----------------|---------------------|  
-|Service Pack 4|SUSE Linux Enterprise Server 9||  
-|OS Patch lib gcc-41.rpm|标准共享库|41-4.1.2_20070115-0.6|  
-|OS Patch lib stdc++-41.rpm|标准共享库|41-4.1.2_20070115-0.6|  
-|Openssl|OpenSSL 库；安全网络通信协议|0.9.7d-15.35|  
-|PAM|可插入身份验证模块|0.77-221-11|  
 
  **SUSE Linux Enterprise Server 10 SP1 (i586)**  
 
@@ -173,13 +147,6 @@ ms.lasthandoff: 08/07/2017
 |Openssl|OpenSSL 库；安全网络通信协议|0.9.8 或 1.0|  
 |PAM|可插入身份验证模块|0.99.6.2-3.14|  
 
- **IBM AIX 5L 5.3**  
-
-|所需程序包|描述|最低版本|  
-|----------------------|-----------------|---------------------|  
-|操作系统版本|操作系统的版本|AIX 5.3，Technology Level 6，Service Pack 5|  
-|xlC.rte|XL C/C++ Runtime|9.0.0.2|  
-|openssl.base|OpenSSL 库；安全网络通信协议|0.9.8.4|  
 
  **IBM AIX 6.1**  
 
@@ -197,33 +164,6 @@ ms.lasthandoff: 08/07/2017
 |xlC.rte|XL C/C++ Runtime||  
 |OpenSSL/openssl.base|OpenSSL 库；安全网络通信协议||  
 
- **HP-UX 11i v2 IA 64**  
-
-|所需程序包|描述|最低版本|  
-|----------------------|-----------------|---------------------|  
-|HPUXBaseOS|基操作系统|B.11.23|  
-|HPUXBaseAux|HP-UX 基操作系统辅助|B.11.23.0706|  
-|HPUXBaseAux.openssl|OpenSSL 库；安全网络通信协议|A.00.09.07l.003|  
-|PAM|可插入身份验证模块|在 HP-UX 上，PAM 是核心操作系统组件的一部分。 没有其它依赖关系。|  
-
- **HP-UX 11i v2 PA-RISC**  
-
-|所需程序包|描述|最低版本|  
-|----------------------|-----------------|---------------------|  
-|HPUX11i-OE|HP-UX 基础操作环境|B.11.23.0706|  
-|OS-Core.MinimumRuntime.CORE-SHLIBS|兼容开发工具库|B.11.23|  
-|HPUXBaseAux|HP-UX 基操作系统辅助|B.11.23.0706|  
-|HPUXBaseAux.openssl|OpenSSL 库；安全网络通信协议|A.00.09.071.003|  
-|PAM|可插入身份验证模块|在 HP-UX 上，PAM 是核心操作系统组件的一部分。 没有其它依赖关系。|  
-
- **HP-UX 11i v3 PA-RISC**  
-
-|所需程序包|描述|最低版本|  
-|----------------------|-----------------|---------------------|  
-|HPUX11i-OE|HP-UX 基础操作环境|B.11.31.0709|  
-|OS-Core.MinimumRuntime.CORE2-SHLIBS|特定 IA 仿真器库|B.11.31|  
-|openssl/Openssl.openssl|OpenSSL 库；安全网络通信协议|A.00.09.08d.002|  
-|PAM|可插入身份验证模块|在 HP-UX 上，PAM 是核心操作系统组件的一部分。 没有其它依赖关系。|  
 
  **HP-UX 11i v3 IA64**  
 
@@ -285,13 +225,8 @@ ms.lasthandoff: 08/07/2017
 ##  <a name="BKMK_NoSHA-256"></a>关于不支持 SHA-256 的 Linux 和 UNIX 操作系统  
  作为 Configuration Manager 客户端受到支持的以下 Linux 和 UNIX 操作系统发布了不支持 SHA-256 的 OpenSSL 版本：  
 
--   Red Hat Enterprise Linux 版本 4 (x86/x64)  
+-   Solaris 版本 10 (SPARC/x86)  
 
--   Solaris 版本 9 (SPARC) 和 Solaris 版本 10 (SPARC/x86)  
-
--   SUSE Linux Enterprise Server 版本 9 (x86)  
-
--   版本 HP-UX 11iv2 (PA-RISH/IA64)  
 
  若要使用 Configuration Manager 管理这些操作系统，必须使用使客户端跳过 SHA-256 验证的命令行开关安装适用于 Linux 和 UNIX 的 Configuration Manager 客户端。 在这些操作系统版本上运行的 Configuration Manager 客户端在安全级别低于支持 SHA-256 的客户端的模式下运行。 这种运行较不安全的模式具有以下行为：  
 

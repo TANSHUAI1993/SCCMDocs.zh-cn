@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: e0726febc4c36a26c5e067914734838bf2681e6c
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 18a987141e212158424924402859799ba42f8eae
+ms.sourcegitcommit: 5b4fd2d36f06be5bcc7f8ebbfb92c48b7240085d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="task-sequence-steps-in-system-center-configuration-manager"></a>System Center Configuration 中的任务序列步骤
 
@@ -139,7 +139,7 @@ ms.lasthandoff: 08/07/2017
  选择此选项，使目标计算机加入指定的工作组。 在“工作组”行中输入工作组的名称。 此值可被“捕获网络设置”  任务序列步骤所捕获的值替代。  
 
  **加入域**  
- 选择此选项以将目标计算机加入指定的域。 指定或浏览到域，如 *fabricam.com*。 指定或浏览到组织单位的轻型目录访问协议 (LDAP) 路径（即 LDAP//OU=computers，DC=Fabricam.com，C=com）。  
+ 选择此选项以将目标计算机加入指定的域。 指定或浏览到域，如 *fabricam.com*。指定或浏览到组织单位的轻型目录访问协议 (LDAP) 路径（如 LDAP//OU=computers，DC=Fabricam.com，C=com）。  
 
  **帐户**  
  单击“设置”  以指定拥有将计算机加入域所需权限的帐户。 在“Windows 用户帐户”对话框中，可以使用下列格式输入用户名：**Domain\User**。  
@@ -551,31 +551,6 @@ ms.lasthandoff: 08/07/2017
 
 -   指定运行步骤必须满足的条件。  
 
-##  <a name="BKMK_ConvertDisktoDynamic"></a>将磁盘转换为动态磁盘  
- 使用“将磁盘转换为动态磁盘”任务序列步骤将物理磁盘从基本磁盘类型转换为动态磁盘类型。  
-
- 标准操作系统或 Windows PE 中均可运行此步骤。 有关此操作的任务序列变量的详细信息，请参阅 [Convert Disk to Dynamic Task Sequence Action Variables](task-sequence-action-variables.md#BKMK_ConvertDisk)。  
-
-### <a name="details"></a>详细信息  
- 在此步骤的“属性”  选项卡上，可以配置此部分描述的设置。  
-
- 此外，使用“选项”  选项卡可执行以下操作：  
-
--   禁用该步骤。  
-
--   指定在运行该步骤时若出现错误，任务序列是否继续。  
-
--   指定运行步骤必须满足的条件。  
-
- **Name**  
- 描述此步骤所采取操作的用户定义的短名。  
-
- **描述**  
- 有关此步骤所采取操作的更详细信息。  
-
- **磁盘编号**  
- 将被转换的磁盘的物理磁盘编号。  
-
 ##  <a name="BKMK_DisableBitLocker"></a>禁用 BitLocker  
  使用“禁用 BitLocker”任务序列步骤可在当前操作系统驱动器或特定驱动器上禁用 BitLocker 加密。 此操作使得密钥保护程序在硬盘驱动器上以明文形式显示，但是不会解密该驱动器的内容。 因此，此操作几乎立刻完成。  
 
@@ -874,35 +849,6 @@ ms.lasthandoff: 08/07/2017
  **如果应用程序失败，继续安装列表中的其他应用程序**  
  此设置指定在单个应用程序安装失败时该步骤继续。 如果指定了此设置，任务序列将不考虑返回的任何安装错误而继续。 如果未指定此设置，则在安装失败时任务序列将立即终止。  
 
-##  <a name="BKMK_InstallDeploymentTools"></a>安装部署工具  
- 使用“安装部署工具”任务序列步骤来安装包含 Sysprep 部署工具的 Configuration Manager 包。  
-
-### <a name="details"></a>详细信息  
- 在此步骤的“属性”  选项卡上，可以配置此部分描述的设置。  
-
- 此外，使用“选项”  选项卡可执行以下操作：  
-
--   禁用该步骤。  
-
--   指定在运行该步骤时若出现错误，任务序列是否继续。  
-
--   指定运行步骤必须满足的条件。  
-
- **Name**  
- 描述此步骤所采取操作的用户定义的短名。  
-
- **描述**  
- 有关此步骤所采取操作的更详细信息。  
-
- **Sysprep 包**  
- 此设置指定包含以下操作系统的 Sysprep 部署工具的 Configuration Manager 包：  
-
--   Windows XP SP3  
-
--   Windows XP X64 SP2  
-
--   Windows Server 2003 SP2  
-
 ##  <a name="BKMK_InstallPackage"></a>安装包
 
  使用“安装包”  任务序列步骤将软件作为任务序列的一部分进行安装。 此步骤运行时，安装会立即开始而不等待策略轮询间隔。  
@@ -1068,6 +1014,9 @@ Configuration Manager 版本 1606 中引入了一个新的任务序列变量 SMS
 使用“准备 ConfigMgr 客户端以便捕获”步骤来删除 Configuration Manager 客户端，或配置引用计算机上的客户端，使其准备在映像化过程中进行捕获。
 
 从 Configuration Manager 版本 1610 开始，“准备 ConfigMgr 客户端”一步将完全删除 Configuration Manager 客户端，而不是仅删除密钥信息。 任务序列每次部署捕获的操作系统映像时，都将安装新的 Configuration Manager 客户端。  
+
+> [!Note]  
+>  仅在执行“生成并捕获引用操作系统映像包”任务序列期间才会删除客户端。 其他捕获方法，如捕获媒体或自定义任务序列等，将不会删除客户端。
 
 在 Configuration Manager 版本 1610 之前，此步骤执行以下任务：  
 
