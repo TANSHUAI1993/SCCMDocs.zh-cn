@@ -14,11 +14,11 @@ caps.latest.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 22203b358830903cf2e531c0532ae3111b8265fc
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 3046003f000c8abde28a5b6e3bcb88b159be5357
+ms.sourcegitcommit: 2a1328da3facb20b0c78f3b12adbb5fdbe0dcc11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="configure-azure-services-for-use-with-configuration-manager"></a>配置用于 Configuration Manager 的 Azure 服务
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 08/07/2017
 
 使用“配置 Azure 服务”向导配置以下 Azure 服务：
 -   **云管理**   
-    [使用 Azure Active Directory (Azure AD) 支持客户端进行身份验证]()。 还可以[配置 Azure AD 用户发现](/sccm/core/servers/deploy/configure/configure-discovery-methods#azureaadisc)。
+    [使用 Azure Active Directory (Azure AD) 支持客户端进行身份验证](/sccm/core/clients/deploy/deploy-clients-cmg-azure)。 还可以[配置 Azure AD 用户发现](/sccm/core/servers/deploy/configure/configure-discovery-methods#azureaadisc)。
 -   **OMS 连接器**
     [连接到 Operations Manager Suite](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite) (OMS)，并将集合等数据同步到 OMS Log Analytics。
 -   **升级就绪情况**
@@ -85,7 +85,7 @@ Azure 服务 Web 应用将 Configuration Manager 站点连接到 Azure AD，这�
 
 6.  在向导的“发现”页上，单击“启用 Azure Active Directory 用户发现”，然后单击“设置”。
 在“Azure AD 用户发现设置”对话框中，配置出现发现的时间计划。 此外，还可以启用增量发现，用于仅查看 Azure AD 中新增或更改的帐户。 详细了解 [Azure AD 用户发现](/sccm/core/servers/deploy/configure/about-discovery-methods#azureaddisc)。
- 
+
  7. 完成向导。
 
 此时，已将 Configuration Manager 站点连接到 Azure AD。

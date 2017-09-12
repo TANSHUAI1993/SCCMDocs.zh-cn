@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: e54c2cd1c3e83609bff6a8cb64fb3c23b26a4eaa
-ms.sourcegitcommit: 974fbc4408028c8be28911e5cd646efcf47c7f15
+ms.openlocfilehash: 4e818ffd943208eab323b1558f825bd87f3ddc4c
+ms.sourcegitcommit: 13599667ea77c16db1aebe64f8a6748c268f0b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/11/2017
 ---
 # <a name="release-notes-for-system-center-configuration-manager"></a>System Center Configuration Manager 的发行说明
 
@@ -148,17 +148,6 @@ ConfigMgrSetup.log
 **解决方法：**这是由于以前安装的 Silverlight 版本损坏所致。 可以尝试在受影响的计算机上运行以下工具来解决此问题：[https://support.microsoft.com/help/17588/fix-problems-that-block-programs-from-being-installed-or-removed](https://support.microsoft.com/help/17588/fix-problems-that-block-programs-from-being-installed-or-removed)
 
 ## <a name="operating-system-deployment"></a>操作系统部署  
-
-### <a name="if-the-boot-image-contains-drivers-the-image-fails-to-reload-the-current-windows-pe-version-from-the-windows-assessment-and-deployment-kit-adk"></a>如果启动映像包含驱动程序，那么映像将无法从 Windows 评估和部署工具包 (ADK) 重载最新版 Windows PE
-<!-- 495087 -->
-可以使用更新分发点向导，将存储有启动映像的分发点更新为包含 Windows 评估和部署工具包 (ADK) 安装目录中的最新版 Windows PE。 若要更新，请打开更新分发点向导，再选中“从 Windows ADK 为此启动映像重载最新版 PE”。
-
-不过，如果启动映像包含驱动程序，将无法更新。 相反，向导会从 ADK 重载映像，显示用户可以消除的异常对话框，再显示成功屏幕。 不过，最新的 Configuration Manager 客户端组件不会添加到启动映像。 分发点上的启动映像不会进行更新。
-
-**解决方法**：运行更新分发点向导两次。
-
-1. 运行向导，并选中“从 Windows ADK 为此启动映像重载最新版 PE”。 这将获取最新版 Windows PE。
-2. 再次运行向导，并取消选中“从 Windows ADK 为此启动映像重载最新版 PE”。 这将获得最新的客户端二进制文件，并更新分发点上的启动映像。
 
 ### <a name="servicing-plans-create-a-lot-of-duplicate-software-update-groups-and-deployments-by-default"></a>默认情况下，维护计划会创建大量重复的软件更新组和部署  
 默认情况下，创建维护计划向导目前会在每个软件更新同步之后运行。 每次运行向导时，都会创建新的软件更新组和部署。 例如，如果你有每天多次运行的软件更新同步计划，创建维护计划向导每天都会创建多个并且可能相同的软件更新组和部署。  
