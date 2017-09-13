@@ -2,7 +2,7 @@
 title: "安装使用 1606 基线介质的站点 | Microsoft Docs"
 description: "安装或升级到 System Center Configuration Manager 的 LTSB。"
 ms.custom: na
-ms.date: 08/25/2017
+ms.date: 09/06/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ caps.latest.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 7e7b2fa4114b3bc7c63653ba036a3f5345ce017d
-ms.sourcegitcommit: 974fbc4408028c8be28911e5cd646efcf47c7f15
+ms.openlocfilehash: 82ec84923cc60e7a91d4afa4e9f59564fd416055
+ms.sourcegitcommit: 2a1328da3facb20b0c78f3b12adbb5fdbe0dcc11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="install-and-upgrade-with-the-version-1606-baseline-media-for-system-center-configuration-manager"></a>使用 1606 版基线介质安装或升级 System Center Configuration Manager
 
@@ -126,7 +126,7 @@ ms.lasthandoff: 08/28/2017
 ### <a name="in-place-upgrade-paths-for-the-1606-baseline-media"></a>1606 版基线介质的就地升级路径
 可以使用 1606 版基线介质将以下版本升级到 System Center Configuration Manager 的许可版本：
 - System Center 2012 R2 Configuration Manager Service Pack 1
-- System Center 2012 R2 Configuration Manager Service Pack
+- System Center 2012 R2 Configuration Manager（不带 Service Pack）
 - System Center 2012 Configuration Manager Service Pack 2
 - System Center 2012 Configuration Manager Service Pack 1
 

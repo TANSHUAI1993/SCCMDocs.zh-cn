@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 32b24b3637dfafe401ea1d9f51b3769aa749f544
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 09e1105521f5e72830c2816d04e16690064f4f64
+ms.sourcegitcommit: 40f2a4e3cc546e6bfd10f195a8e87af2b0780928
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="task-sequence-built-in-variables-in-system-center-configuration-manager"></a>ystem Center Configuration Manager 中的任务序列内置变量
 
@@ -97,6 +97,6 @@ ms.lasthandoff: 08/07/2017
 |SMSTSRebootMessage|指定需要重新启动时显示在关机对话框中的消息。 如果未设置此变量，则显示默认消息。<br /><br /> 例如：<br /><br /> **此计算机将由任务序列管理器重新启动**。|  
 |SMSTSRebootRequested|指示当前任务序列步骤完成后，请求重新启动。 如果需要重新启动，则仅将此变量设置为 **true**，任务序列管理器将在此任务序列步骤后重新启动计算机。 任务序列步骤必须设置此任务序列变量，如果其需要重新启动以完成任务序列步骤。 重新启动计算机后，任务序列将继续从下一个任务序列步骤运行。|  
 |SMSTSRetryRequested|在完成当前的任务序列步骤后，将请求重试。 如果设置任务序列变量， **SMSTSRebootRequested** 必须设置为 **true**。 重新启动计算机后，任务序列管理器将重新运行相同的任务序列步骤。|  
-|SMSTSSoftwareUpdateScanTimeout| 让你能够在执行[安装软件更新](task-sequence-steps.md#BKMK_InstallSoftwareUpdates)任务序列步骤期间控制软件更新扫描的超时。 例如，如果有大量要安装的软件更新，你可能会增加默认值。 默认值为 30 分钟。 |
+|SMSTSSoftwareUpdateScanTimeout| 让你能够在执行[安装软件更新](task-sequence-steps.md#BKMK_InstallSoftwareUpdates)任务序列步骤期间控制软件更新扫描的超时。 例如，如果有大量要安装的软件更新，你可能会增加默认值。 默认值为 1,800 秒（30 分钟）。 请注意，变量值以秒为单位。 |
 |SMSTSUDAUsers|指定目标计算机的主要用户。 通过使用以下格式指定用户。 使用逗号 (，) 分隔多个用户。<br /><br /> 例如：<br /><br /> **domain\user1、domain\user2、domain\user3**<br /><br /> 有关如何将用户与目标计算机关联的详细信息，请参阅[将用户与目标计算机关联](../get-started/associate-users-with-a-destination-computer.md)。|  
 |SMSTSWaitForSecondReboot|从 Configuration Manager 版本 1602 开始，可使用这一可选的任务序列变量在软件更新安装需要两次重启时帮助控制客户端行为。 必须在[安装软件更新](task-sequence-steps.md#BKMK_InstallSoftwareUpdates)步骤之前设置此变量，以防软件更新安装的第二次重启导致任务序列失败。<br /><br /> 设置 SMSTSWaitForSecondReboot 的值（以秒为单位），指定安装软件更新步骤期间，任务序列在计算机重启时的暂停时长，预留充足的时间，以防还有第二次重启。 <br />例如，将 SMSTSWaitForSecondReboot 设置为 600，即重启后任务序列将暂停 10 分钟，然后运行其他任务序列步骤。 当单个安装软件更新任务序列步骤中需安装数百个软件更新时，这一功能十分有用。|  

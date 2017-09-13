@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: robstackmsft
 ms.author: robstack
 manager: angrobe
-ms.openlocfilehash: 3921748d3c99c2a35b670f3ca121dc7ab92d43bc
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 2d305df5e67c3f46360e1735cb6fe263afbaed41
+ms.sourcegitcommit: 2a1328da3facb20b0c78f3b12adbb5fdbe0dcc11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="device-guard-management-with-configuration-manager"></a>使用 Configuration Manager 进行的 Device Guard 管理
 
@@ -104,7 +104,7 @@ Device Guard 同时包含基于软件和基于硬件的安全功能。 可配置
 5.  完成后，单击“确定”以部署策略。 
 
 在客户端电脑上处理策略后，根据“计算机重新启动”的“客户端设置”在该客户端上计划重启。
-重启客户端电脑后，策略才会生效。**
+重启客户端电脑后，策略才会生效。
 
 ## <a name="how-to-monitor-a-device-guard-policy"></a>如何监控 Device Guard 策略
 

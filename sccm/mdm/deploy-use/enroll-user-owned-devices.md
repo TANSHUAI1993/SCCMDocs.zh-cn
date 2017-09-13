@@ -2,7 +2,7 @@
 title: "使用 Configuration Manager 注册用户拥有的设备以用于混合部署 | Microsoft Docs"
 description: "了解使用 Configuration Manager 注册用户拥有的设备以用于混合部署的不同方法。"
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 09/08/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -11,21 +11,21 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2bdaa8a7-6a64-4b0e-b617-309dcd912c45
 caps.latest.revision: "13"
-author: mtillman
-ms.author: mtillman
+author: nathbarn
+ms.author: nathbarn
 manager: angrobe
-ms.openlocfilehash: 6793e4736fe2603dfaef9f98b0fb54e5584aa7cd
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 56bd6bfd900a8ecbb149392de62889970ddedb60
+ms.sourcegitcommit: 40f2a4e3cc546e6bfd10f195a8e87af2b0780928
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="enroll-user-owned-devices-for-hybrid-deployments-with-configuration-manager"></a>使用 Configuration Manager 注册用户拥有的设备以用于混合部署
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-用户拥有的设备 (BYOD) 可通过多种方法进行管理，具体取决于设备及其购买方式。  
+注册用户拥有的设备以便管理，通常将这一过程称为“携带自己的设备”，简称“BYOD”。 用户实现此过程的方式如下：在设备（iOS、macOS 和 Android）上安装公司门户应用并登录，或向设备添加工作或学校帐户并加入域 (Windows)。 此过程向 Intune 注册设备，授予用户访问 Intune 所托管的资源的权限，并使 Intune 管理某些设备设置，如要求 PIN 等。
 
-启用注册后，可通过公司门户应用注册用户拥有的设备。
+要将设备纳入管理，作为管理员，必须首先[设置移动设备管理](setup-hybrid-mdm.md)并[启用注册](enable-platform-enrollment.md)。 一旦启用了注册，用户便可以注册自己的设备。 要与用户共享的注意事项和步骤，请参阅[如何使最终用户了解 Microsoft Intune](https://docs.microsoft.com/intune/end-user-educate)。
 
-[有关 Microsoft Intune 最终用户体验的资源](https://docs.microsoft.com/en-us/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune)回顾了一些最终用户注册其设备后采用以执行不同任务的步骤。
+购买设备的公司或学校可以利用可[管理公司拥有的设备](enroll-company-owned-devices.md)的程序。

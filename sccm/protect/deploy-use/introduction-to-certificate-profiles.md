@@ -2,7 +2,7 @@
 title: "证书配置文件简介 | Microsoft Docs"
 description: "了解 System Center Configuration Manager 中的证书配置文件如何与 Active Directory 证书服务一起使用。"
 ms.custom: na
-ms.date: 07/25/2017
+ms.date: 09/11/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,18 +14,18 @@ caps.latest.revision: "7"
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.openlocfilehash: 7b1c0e449f3d1ef42e279e8707df6bf1df163b3f
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: e269b5836648d0d227e91a017512c16217e42646
+ms.sourcegitcommit: 13599667ea77c16db1aebe64f8a6748c268f0b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/11/2017
 ---
 # <a name="introduction-to-certificate-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的证书配置文件简介
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
 
-证书配置文件使用 Active Directory 证书服务和网络设备注册服务角色设置托管设备的身份验证证书，以便用户能够无缝地访问公司资源。 例如，可以创建和部署证书配置文件来为用户提供必要的证书，从而启动 VPN 和无线连接。 
+证书配置文件使用 Active Directory 证书服务和网络设备注册服务角色设置托管设备的身份验证证书，以便用户能够无缝地访问公司资源。 例如，可以创建和部署证书配置文件来为用户提供必要的证书，从而启动 VPN 和无线连接。
 
 证书配置文件可自动配置用户设备，以便能够访问诸如 Wi-Fi 网络和 VPN 服务器等公司资源，而不必手动安装证书或使用带外进程。 证书配置文件还有助于保持公司资源的安全，因为你可使用受企业公钥基础结构 (PKI) 支持的更安全的设置。 例如，你可以要求对所有 Wi-fi 和 VPN 连接进行服务器身份验证，因为你已经在托管设备上设置了所需证书。   
 
@@ -52,7 +52,7 @@ ms.lasthandoff: 08/07/2017
 
 -   **个人信息交换 (.pfx)** - 可为设备或用户请求一个 .pfx（又称 PKCS #12）证书。
 
-    可以通过从现有证书[导入凭据](/sccm/mdm/deploy-use/import-pfx-certificate-profiles.md)或[定义证书](/sccm/mdm/deploy-use/create-pfx-certificate-profiles.md)颁发机构来处理请求的方式创建 PFX 证书配置文件。
+    从现有证书中[导入凭据](/sccm/mdm/deploy-use/import-pfx-certificate-profiles)或[定义证书](/sccm/mdm/deploy-use/create-pfx-certificate-profiles)颁发机构来处理请求，可通过这样的方式创建 PFX 证书配置文件。
 
     从版本 1706 开始，可以将 Microsoft 或 Entrust 用作“个人信息交换 (.pfx)”证书的证书颁发机构。
 

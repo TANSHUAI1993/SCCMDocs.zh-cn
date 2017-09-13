@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.openlocfilehash: e4a53caab7d76b604a3fee7dcfc4dc48f22b0fb0
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 23ff28189c8010c21ed8b23c35598746a4f09fe7
+ms.sourcegitcommit: 13599667ea77c16db1aebe64f8a6748c268f0b45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/11/2017
 ---
 # <a name="vpn-profiles-on-mobile-devices-in-system-center-configuration-manager"></a>System Center Configuration Manager 中移动设备上的 VPN 配置文件
 
@@ -37,16 +37,16 @@ ms.lasthandoff: 08/07/2017
 
  |连接类型|iOS 和 macOS X|Android|Windows 8.1|Windows RT|Windows RT 8.1|Windows Phone 8.1|Windows 10 桌面和移动版|  
  |---------------------|----------------------|-------------|-----------------|----------------|--------------------|-----------------------|-----------------------------------|  
- |Cisco AnyConnect|是|是|否|否|否|否|是 (OMA-URI)|
+ |Cisco AnyConnect|是|是|否|否|否|否|是|
  |Cisco (IPSec)|仅限 iOS|否|否|否|否|否|否|  
  |脉冲安全|是|是|是|否|是|是|是|  
  |F5 Edge Client|是|是|是|否|是|是|是|  
  |Dell SonicWALL Mobile Connect|是|是|是|否|是|是|是|  
  |Check Point Mobile VPN|是|是|是|否|是|是|是|  
  |Microsoft SSL (SSTP)|否|否|是|是|是|否|否|  
- |Microsoft Automatic|否|否|是|是|是|否|是 (OMA-URI)|  
- |IKEv2|是（自定义策略）|否|是|是|是|是|是 (OMA-URI)|  
- |PPTP|是|否|是|是|是|否|是 (OMA-URI)|  
+ |Microsoft Automatic|否|否|是|是|是|否|是|  
+ |IKEv2|是（自定义策略，iOS 9 及更高版本）|否|是|是|是|是|是|  
+ |PPTP|是|否|是|是|是|否|是|  
  |L2TP|是|否|是|是|是|否|是 (OMA-URI)|  
 
 ## <a name="create-vpn-profiles"></a>创建 VPN 配置文件
@@ -104,7 +104,7 @@ ms.lasthandoff: 08/07/2017
             - 选择“启用此 VPN 连接的条件性访问”可以确保连接到 VPN 的设备在连接前进行了条件性访问合规性测试。 [System Center Configuration Manager 中的设备符合性策略](https://docs.microsoft.com/en-us/sccm/protect/deploy-use/device-compliance-policies.md)中介绍了符合性策略。
             - 选中“启用使用替代证书进行单一登录(SSO)”可以选择除 VPN 身份验证证书以外的其他证书来验证设备符合性。 如果选中此选项，请输入 VPN 客户端应查找的正确证书的“EKU”（以逗号分隔的列表）和“颁发者哈希”。
 
-         - 对于 **Windows 信息保护**，请输入企业管理的公司标识（通常是组织的主域，例如 *contoso.com*）。 可以指定组织拥有的多个域，只需用“|”字符来分隔域即可。 例如，*contoso.com|newcontoso.com*。   
+         - 对于 **Windows 信息保护**，请输入企业管理的公司标识（通常是组织的主域，例如 *contoso.com*）。可以指定组织拥有的多个域，只需用“|”字符来分隔域即可。 例如，*contoso.com|newcontoso.com*。   
             有关 Windows 信息保护的详细信息，请参阅[使用 Microsoft Intune 创建 Windows 信息保护 (WIP) 策略](https://technet.microsoft.com/en-us/itpro/windows/keep-secure/create-wip-policy-using-intune)。   
 
          ![为 VPN 配置条件性访问](media/vpn-conditional-access.png)

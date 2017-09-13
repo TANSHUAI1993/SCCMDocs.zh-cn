@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: cc678c1133b1944f55bcad309cf9ede9f0660b57
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 5668ba3ead3b7415508f9ecf02f2e119c3cd9cc6
+ms.sourcegitcommit: 2a1328da3facb20b0c78f3b12adbb5fdbe0dcc11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="manage-boot-images-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 管理启动映像
 
@@ -49,11 +49,10 @@ Configuration Manager 提供两个默认启动映像：一个用于支持 x86 �
 通过使用安装过程从 Configuration Manager 2012 升级到 Configuration Manager CB 时，Configuration Manager 将重新生成默认启动映像。 这包括已更新的 Windows ADK 中的新 Window PE 版本、新版本的 Configuration Manager 客户端，且所有自定义项保持不变。 不会修改自定义启动映像。
 
 ### <a name="update-distribution-points-with-the-boot-image"></a>利用启动映像更新分发点
-从 Configuration Manager 控制台中的“启动映像”节点使用“更新分发点”操作时，Configuration Manager 使用客户端组件、驱动程序、自定义项等更新默认启动映像。    
+从 Configuration Manager 控制台中的“启动映像”节点使用“更新分发点”操作时，Configuration Manager 使用客户端组件、驱动程序、自定义项等更新目标启动映像。    
 
 从 Configuration Manager 版本 1706 开始，可以选择在启动映像中从 Windows ADK 安装目录重载最新版本的 Windows PE。 更新分发点向导的“常规”页提供有关安装在站点服务器上的 Windows ADK 版本、启动映像中使用 Windows PE 的 Windows ADK 版本以及 Configuration Manager 客户端版本的信息。 你可以使用此信息来帮助你决定是否重载启动映像。 此外，当你在“启动映像”节点中查看启动映像时，新列（**客户端版本**）已添加，这样你就了解每个启动映像使用的 Configuration Manager 客户端是哪个版本。    
 
-不会修改自定义启动映像。
 
 ##  <a name="BKMK_BootImageCustom"></a>自定义启动映像  
  Configuration Manager 控制台基于来自受支持的 Windows ADK 版本中的 Windows PE 版本时，可从 Configuration Manager 控制台自定义启动映像或[修改启动映像](#BKMK_ModifyBootImages)。 使用新版本升级站点并且安装新版本的 Windows ADK 时，不会使用新版本的 Windows ADK 更新自定义启动映像（不在默认启动映像位置）。 发生这种情况时，你不再能够在 Configuration Manager 控制台中自定义启动映像。 但是，它们将继续如同升级之前一样正常工作。  

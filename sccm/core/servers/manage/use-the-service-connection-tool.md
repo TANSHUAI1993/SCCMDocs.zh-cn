@@ -2,7 +2,7 @@
 title: "服务连接工具 | Microsoft Docs"
 description: "了解该工具使你能够连接到 Configuration Manager 云服务以手动上传使用情况信息。"
 ms.custom: na
-ms.date: 4/7/2017
+ms.date: 09/06/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ caps.latest.revision: "11"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 0da80521bf223a765c3731f8ad59623d85a4c9fa
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 8039ee0c704bbe570ec3e45ba648f779923087c6
+ms.sourcegitcommit: 2a1328da3facb20b0c78f3b12adbb5fdbe0dcc11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="use-the-service-connection-tool-for-system-center-configuration-manager"></a>使用适用于 System Center Configuration Manager 的服务连接工具
 
@@ -81,7 +81,7 @@ ms.lasthandoff: 08/07/2017
 你还需要将 ServiceConnectionTool 文件夹及其所有内容复制到 U 盘中，或者采用其他方法使它在步骤 3 和 4 即将使用的计算机上可用。  
 
 ### <a name="overview"></a>概述
-**使用服务连接工具主要有三个步骤：**  
+#### <a name="there-are-three-primary-steps-to-using-the-service-connection-tool"></a>使用服务连接工具主要有三个步骤  
 
 1.  **准备**：此步骤在托管服务连接点的计算机上运行。 工具运行时，将使用情况数据放入 .cab 文件中并将其存储在 U 盘上（或指定的替代传输位置）。  
 
@@ -91,15 +91,28 @@ ms.lasthandoff: 08/07/2017
 
 从版本 1606 开始，当连接到 Microsoft 时，可以一次性上传多个 .cab 文件（每个文件来自不同的层次结构），并指定代理服务器和代理服务器的用户。   
 
-**若要上传多个 .cab 文件，请执行以下操作：**
+#### <a name="to-upload-multiple-cab-files"></a>上传多个 .cab 文件
  -  将从独立的层次结构中导出的每个 .cab 文件放在同一文件夹中。 每个文件的名称必须是唯一的，如有必要，可以手动重命名。
  -  然后，当运行命令将数据上传到 Microsoft 时，指定包含 .cab 文件的文件夹。 （在更新 1606 之前，每次仅可以从一个层次结构上传数据，并且此工具需要你指定文件夹中的 .cab 文件的名称。）
  -  然后，在层次结构的服务连接点上运行导入任务时，此工具仅自动导入该层次结构的数据。  
 
-**若要指定代理服务器，请执行以下操作：**  
+#### <a name="to-specify-a-proxy-server"></a>指定代理服务器
 可以使用以下可选参数来指定代理服务器（有关使用这些参数的详细信息可在本主题的命令行参数部分中找到）：
   - **-proxyserveruri [FQDN_of_proxy_sever]**  使用此参数指定要用于此连接的代理服务器。
   -  **-proxyusername [username]**  当必须为代理服务器指定用户时，请使用此参数。
+
+#### <a name="specify-the-type-of-updates-to-download"></a>指定要下载的更新的类型
+从版本 1706 开始，工具默认下载行为已更改，工具支持用于控制下载的文件的选项。
+-   默认情况下，工具仅下载对站点版本适用的最新可用更新。 不下载修补程序。
+
+要修改此行为，请使用以下参数之一更改下载哪些文件。 根据工具运行时上传的 .cab 文件中的数据确定站点版本。
+-   -downloadall  此选项下载所有内容，包括更新和修补程序，而不考虑站点的版本。
+-   -downloadhotfix  此选项下载所有修补程序，而不考虑站点的版本。
+-   -downloadsiteversion  此选项下载版本高于站点版本的更新和修补程序。
+
+使用 -downloadsiteversion 的示例命令行：
+- serviceconnectiontool.exe -connect  -downloadsiteversion -usagedatasrc D:\USB -updatepackdest D:\USB\UpdatePacks
+
 
 
 

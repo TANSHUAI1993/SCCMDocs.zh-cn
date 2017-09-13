@@ -2,7 +2,7 @@
 title: "预声明具有 IMEI 或 iOS 序列号的设备 | Microsoft Docs"
 description: "预声明具有 IMEI 或 iOS 序列号的公司拥有的设备。"
 ms.custom: na
-ms.date: 08/15/2017
+ms.date: 09/01/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -14,11 +14,11 @@ caps.latest.revision: "3"
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.openlocfilehash: 7d139a2c74c0f29604f2f3d9b8e2739364633f17
-ms.sourcegitcommit: db7b7ec347638efd05cdba474e8a8f8535516116
+ms.openlocfilehash: 424f04b2b3ad4c7ef91f884bbf5bae3580ea6b85
+ms.sourcegitcommit: cd1f9c58e55f1c9a19acd743ec6a8824c39fd3a1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 09/05/2017
 ---
 # <a name="predeclare-devices-with-imei-or-ios-serial-numbers"></a>预声明具有 IMEI 或 iOS 序列号的设备
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 08/16/2017
 为公司拥有的 iOS 设备上载序列号时，它们必须与公司注册配置文件成对使用。 然后，必须使用 Apple 的设备注册程序 (DEP) 或 Apple 配置器注册这些设备，以使其显示为公司所有。
 
 >[!NOTE]
->Android 设备（不包括 Samsung Knox Standard 设备）必须有 SIM 卡，才能通过 IMEI 号码预声明并注册为公司拥有的设备。
+>Android 设备（不包括 Samsung Knox Standard 设备）必须已分配有电话号码，才能通过 IMEI 号码预声明并注册为公司拥有的设备。
 
 ## <a name="how-to-predeclare-corporate-owned-devices"></a>如何预声明公司拥有的设备
 

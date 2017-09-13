@@ -14,11 +14,11 @@ caps.latest.revision:
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: dab99748902df0fad32a1e2adad0c05e0dd8bdc9
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: c8110d9f5fec9027d34570623c32a7474e01b9af
+ms.sourcegitcommit: 2a1328da3facb20b0c78f3b12adbb5fdbe0dcc11
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="checklist-for-installing-update-1706-for-system-center-configuration-manager"></a>用于为 System Center Configuration Manager 安装更新 1706 的清单
 
@@ -62,7 +62,6 @@ ms.lasthandoff: 08/07/2017
 > - 管理中心站点和子主站点之间的**复制链接**显示为未升级。 这会在更新包安装状态中显示为“完成”状态，并带有监视复制初始化的警告。 在控制台的监视节点中，这将显示为*正在配置链接*。
 
 
-
 ## <a name="checklist"></a>清单
 
 **确保所有站点都运行支持更新到 1706 的 System Center Configuration Manager 版本：**   
@@ -86,9 +85,9 @@ ms.lasthandoff: 08/07/2017
 
 有关详细信息，请参阅[站点和站点系统先决条件](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)。
 
-**查看适用于 Windows 10 的 Windows 评估和部署工具包 (ADK) 版本** Windows 10 ADK 应为版本 1607 或更高版本。 如果必须更新 ADK，请在开始更新 Configuration Manager 前进行此操作。 这可确保默认启动映像自动更新为最新版本的 Windows PE。 （自定义启动映像必须手动更新。）
+**查看适用于 Windows 10 的 Windows 评估和部署工具包 (ADK) 版本** Windows 10 ADK 应为版本 1703 或更高版本。 （有关受支持的 Windows ADK 版本的详细信息，请参阅 [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk)。）如果必须更新 Windows ADK，请在开始更新 Configuration Manager 前进行此操作。 这可确保默认启动映像自动更新为最新版本的 Windows PE。 （自定义启动映像必须手动更新。）
 
-如果在更新 ADK 之前更新该站点，请参阅博客 [Configuration Manager and the Windows ADK for Windows 10, version 1607](https://blogs.technet.microsoft.com/enterprisemobility/2016/09/09/configuration-manager-and-the-windows-adk-for-windows-10-version-1607/)（适用于 Windows 10 的 Configuration Manager 和 Windows ADK，版本 1607）获取可用于重新生成启动映像的脚本。
+如果在更新 Windows ADK 前更新站点，请参阅[利用启动映像更新分发点](/sccm/osd/get-started/manage-boot-images#update-distribution-points-with-the-boot-image)，了解 Configuration Manager 1706 版中对此过程的改进。
 
 **查看站点和层次结构状态，并确认没有未解决的问题：** 更新站点之前，请解决远程计算机上安装的站点服务器、站点数据库服务器和站点系统角色的所有操作问题。 由于现有的操作问题，站点更新可能会失败。
 

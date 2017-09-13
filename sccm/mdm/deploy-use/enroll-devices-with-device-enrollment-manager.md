@@ -2,7 +2,7 @@
 title: "向设备注册管理器注册设备 - Configuration Manager | Microsoft Docs"
 description: "使用 System Center Configuration Manager 向设备注册管理器注册企业拥有的设备。"
 ms.custom: na
-ms.date: 08/15/2017
+ms.date: 09/08/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ caps.latest.revision: "8"
 author: nathbarn
 ms.author: nathbarn
 manager: angrobe
-ms.openlocfilehash: c90ecca1ee46523d16fc1cf11495e40707631e03
-ms.sourcegitcommit: db7b7ec347638efd05cdba474e8a8f8535516116
+ms.openlocfilehash: dcc35fb6ebe385d07a3b60e8968e06dec8ad60af
+ms.sourcegitcommit: 40f2a4e3cc546e6bfd10f195a8e87af2b0780928
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="enroll-devices-with-device-enrollment-manager-with-configuration-manager"></a>使用 Configuration Manager 向设备注册管理器注册设备
 
@@ -40,7 +40,7 @@ ms.lasthandoff: 08/16/2017
 -  若要将公司应用部署到使用设备注册管理器管理的设备，则需要将公司门户应用作为**必需的安装**到设备注册管理器的用户帐户。 然后，设备注册管理器可以启动公司门户应用来安装其他应用。
 - 为了提高性能，公司门户应用仅显示本地设备。 仅管理员可以从 Configuration Manager 控制台远程管理其他的 DEM 设备
 - 设备注册管器帐户不能使用公司门户网站。 打开公司门户应用。
-- （仅限 iOS）如果你使用 DEM 来注册 iOS 设备，则无法使用 Apple Configurator 或 Apple 设备注册计划 (DEP) 来注册设备。
+- 如果使用 DEM 来注册 iOS 设备，则无法使用 Apple Configurator 或 Apple 设备注册计划 (DEP) 来注册设备。 （仅限 iOS） 
 
  **设备注册管理器的示例方案：**   
 一家餐厅想为服务员提供销售点平板电脑，为厨房员工提供订单监视器。 员工无需访问公司数据或作为用户登录。 Intune 管理员创建设备注册管理员帐户并使用该帐户注册公司自有设备。 或者，管理员也可以将设备注册管理员凭据交给餐厅经理，允许他或她注册和管理设备。  
