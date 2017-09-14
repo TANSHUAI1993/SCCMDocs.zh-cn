@@ -49,6 +49,7 @@
 ### [iOS 批量采购的应用](deploy-use/manage-volume-purchased-ios-apps.md)
 ### [创建 Windows Phone 应用程序](deploy-use/creating-windows-phone-applications.md)
 ### [创建 Android 应用程序](deploy-use/creating-android-applications.md)
+### [Android 应用配置策略](deploy-use/configure-android-apps-with-app-configuration-policies.md)
 ### [移动应用程序管理策略](deploy-use/protect-apps-using-mam-policies.md)
 ### [托管浏览器策略](deploy-use/manage-internet-access-using-managed-browser-policies.md)
 ### [适用于企业的 Windows 应用商店应用](deploy-use/windows-store-for-business.md)
