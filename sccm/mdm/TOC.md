@@ -55,8 +55,12 @@
 ### [适用于企业的 Windows 应用商店应用](deploy-use/windows-store-for-business.md)
 
 ## [管理 Intune 订阅](deploy-use/manage-intune-subscriptions.md)
-
 ## [更改 MDM 机构](deploy-use/change-mdm-authority.md)
+## [开始从混合 MDM 迁移到 Intune 独立版本](deploy-use/migrate-hybridmdm-to-intunesa.md) 
+### [将 Configuration Manager 数据导入 Microsoft Intune](deploy-use/migrate-import-data.md)
+### [准备 Intune 以便进行用户迁移](deploy-use/migrate-prepare-intune.md)
+### [更改特定用户的 MDM 机构（混合 MDM 机构）](deploy-use/migrate-mixed-authority.md)
+### [更改 MDM 机构](deploy-use/migrate-change-mdm-authority.md)
 
 ## 管理资源访问
 ### [创建 Wi-Fi 配置文件](deploy-use/create-wifi-profiles.md)
