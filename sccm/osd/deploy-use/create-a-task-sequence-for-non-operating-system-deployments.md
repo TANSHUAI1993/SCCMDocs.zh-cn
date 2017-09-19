@@ -14,11 +14,11 @@ caps.latest.revision: "6"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: b4b04907f2cd48d81e864e46ca47c14a0b98a9f7
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: a50354070c03ad8acbd21432a192f949c0a196fa
+ms.sourcegitcommit: 31c670a4bce74fd64a7d46ebf7702f65b80d4147
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/13/2017
 ---
 # <a name="create-a-task-sequence-for-non-operating-system-deployments-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 创建用于非操作系统部署的任务序列
 
@@ -42,7 +42,7 @@ System Center Configuration Manager 中的任务序列用于自动在环境中�
 
 -   [安装软件更新](../understand/task-sequence-steps.md#BKMK_InstallSoftwareUpdates)  
 
--   [重启计算机](../understand/task-sequence-steps.md#a-namebkmkrestartcomputera-restart-computer)  
+-   [重启计算机](../understand/task-sequence-steps.md#BKMK_RestartComputer)   
 
 -   [运行命令行](../understand/task-sequence-steps.md#BKMK_RunCommandLine)  
 
@@ -52,5 +52,5 @@ System Center Configuration Manager 中的任务序列用于自动在环境中�
 
 -   [设置任务序列变量](../understand/task-sequence-steps.md#BKMK_SetTaskSequenceVariable)  
 
-## <a name="next-steps"></a>后续步骤
-[部署任务序列](manage-task-sequences-to-automate-tasks.md#a-namebkmkdeploytsa-deploy-a-task-sequence)
+## <a name="next-steps"></a>后续步骤 
+[部署任务序列](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS)

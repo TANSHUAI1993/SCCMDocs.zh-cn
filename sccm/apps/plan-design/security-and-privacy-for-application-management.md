@@ -11,14 +11,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4d26deed-3b16-4116-b640-f618f2c20f5a
 caps.latest.revision: "8"
-author: robstackmsft
-ms.author: robstack
+author: mattbriggs
+ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: 6ee99fa0c07676f004e41a50bf16d0d17604e790
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 96d55db25f8e48313e04590730e50e04c6fee3fc
+ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="security-and-privacy-for-application-management-in-system-center-configuration-manager"></a>System Center Configuration Manager 中应用程序管理的安全和隐私
 

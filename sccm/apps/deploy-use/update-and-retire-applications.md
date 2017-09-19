@@ -11,14 +11,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 68ac8a07-8e54-4a3c-91e3-e50dc1cabf5d
 caps.latest.revision: "9"
-author: robstackmsft
-ms.author: robstack
+author: mattbriggs
+ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: 805e04c447747b4d12350b692880dbc005bd7168
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 4bbbb73985855cd88bf9675cc3cf0a1e81551a80
+ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="update-and-retire-applications-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 更新和停用应用程序
 

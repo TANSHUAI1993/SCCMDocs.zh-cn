@@ -11,14 +11,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e025c48c-1514-4ab7-836c-e0635aaa993a
 caps.latest.revision: "6"
-author: robstackmsft
-ms.author: robstack
+author: mattbriggs
+ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: 3a89abc81cd70f4e499bf4e3087fd53915377c44
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 8fcd8d8172978fdeb1a11b7fa7e79d294591f796
+ms.sourcegitcommit: f6a428a8db7145affa388f59e0ad880bdfcf17b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="create-android-applications-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 创建 Android 应用程序
 

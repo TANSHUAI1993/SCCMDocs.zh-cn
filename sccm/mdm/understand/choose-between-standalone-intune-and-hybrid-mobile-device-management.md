@@ -14,18 +14,18 @@ caps.latest.revision: "10"
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 26c36df77c21254c7ad2b8a45906bd3706f9ec65
-ms.sourcegitcommit: 06aef618f72c700f8a716a43fb8eedf97c62a72b
+ms.openlocfilehash: 5c9e80fc5bc3f0629e1c27a4928b8a51cfe1ee7e
+ms.sourcegitcommit: 948644072bd158b156f782a4376bcd50fac7c73a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="choose-between-microsoft-intune-standalone-and-hybrid-mobile-device-management-with-system-center-configuration-manager"></a>在 Microsoft Intune 独立版与使用 System Center Configuration Manager 实现的混合移动设备管理之间做出选择
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
 有关使用 Microsoft Intune 进行移动设备管理 (MDM) 的最常见问题之一是“应该将 Intune 与 Configuration Manager（混合 MDM）进行集成还是应该在只涉及云的配置中运行 Intune 独立版本？” 要回答这个问题，应仔细比较两个选项。
-
+ 
 ## <a name="intune-standalone"></a>Intune 独立版
 Intune 独立版是 Microsoft 推荐的部署拓扑。 Intune 独立版是仅涉及云的 MDM 解决方案，并使用可从全世界任意位置访问的 Web 控制台进行管理。 Intune 数据中心托管于北美、欧洲和亚洲。 由于 Intune 是云服务，因此可在较短时间范围内将 Intune 管理部署到设备。
 

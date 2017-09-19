@@ -11,14 +11,14 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 54ef5fbb-521d-4ca5-a1c5-61e6f538d71e
 caps.latest.revision: "8"
-author: robstackmsft
-ms.author: robstack
+author: arob98
+ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 3e323ab90ec4cc274581e19065fd7d81c0c11c35
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: b1d191485308a49c50f48e4b3a89c2fb96940d28
+ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="determine-whether-to-block-clients-in-system-center-configuration-manager"></a>确定是否在 System Center Configuration Manager 中阻止客户端
 

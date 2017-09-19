@@ -12,14 +12,14 @@ ms.topic: article
 ms.assetid: b3731ad0-2a24-4042-994e-5e4c1230e3fe
 caps.latest.revision: "18"
 caps.handback.revision: "0"
-author: robstackmsft
-ms.author: robstack
+author: arob98
+ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 337814fd5ba49ed17fc97aba49f79f02df817f4e
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 387f6303611010ab3d72f796455409ebfff65099
+ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="remotely-synchronize-policy-on-intune-enrolled-devices-from-the-configuration-manager-console"></a>从 Configuration Manager 控制台中远程同步已注册 Intune 的设备上的策略
 

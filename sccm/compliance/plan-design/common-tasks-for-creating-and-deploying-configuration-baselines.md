@@ -12,14 +12,14 @@ ms.topic: article
 ms.assetid: 4bb6afeb-d267-4f9b-ade2-26e5400c223b
 caps.latest.revision: "6"
 caps.handback.revision: "0"
-author: robstackmsft
-ms.author: robstack
+author: andredm7
+ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 5bf4457af6bedf7bc9cd73c879f1857209c0725d
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: ef622eb61885a0152314cbe990107b0d703ac11f
+ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="common-tasks-for-creating-and-deploying-configuration-baselines-with-system-center-configuration-manager"></a>System Center Configuration Manager 用于创建和部署配置基线的常见任务
 

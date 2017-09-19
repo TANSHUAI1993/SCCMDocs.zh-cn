@@ -11,14 +11,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9e83007f-e81c-4b7e-b47e-b01d7b19cfbc
 caps.latest.revision: "5"
-author: robstackmsft
-ms.author: robstack
+author: lleonard-msft
+ms.author: alleonar
 manager: angrobe
-ms.openlocfilehash: b3a63f6c55c317c9c84d4394dfdcb9f1cbbbc90b
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 72446887d5f9d3baf083ad528a8e5e1e508dccb2
+ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="managing-compliance-on-devices-managed-with-intune"></a>管理使用 Intune 管理的设备上的符合性
 

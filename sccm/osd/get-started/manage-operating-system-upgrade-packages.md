@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 5fef04f26b12bced073332fd1f7b4e7c7bd7d398
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 35f527f83799125aa298b99e2cc56867435272ec
+ms.sourcegitcommit: 31c670a4bce74fd64a7d46ebf7702f65b80d4147
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/13/2017
 ---
 # <a name="manage-operating-system-upgrade-packages-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 管理操作系统升级包
 
@@ -59,7 +59,7 @@ System Center Configuration Manager 中的升级包包含用于在计算机上�
  你现在可以将操作系统安装程序分发到部署任务序列访问的分发点。  
 
 ##  <a name="BKMK_DistributeBootImages"></a> 将操作系统映像分发到分发点  
- 将采用与分发其他内容相同的方式将操作系统映像分发到分发点。 大多数情况下，部署操作系统之前必须将操作系统映像分发到至少一个分发点。 关于分发操作系统映像的步骤，请参阅 [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkdistributea-distribute-content)。  
+ 将采用与分发其他内容相同的方式将操作系统映像分发到分发点。 大多数情况下，部署操作系统之前必须将操作系统映像分发到至少一个分发点。 关于分发操作系统映像的步骤，请参阅 [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute)。  
 
 ##  <a name="BKMK_OSUpgradePkgApplyUpdates"></a> 将软件更新应用于操作系统升级包  
  从 Configuration Manager 版本 1602 开始，可以将新的软件更新应用于操作系统升级包中的操作系统映像。 必须将软件更新基础结构实施到位，成功同步软件更新，并将软件更新下载到站点服务器上的内容库后才可将软件更新应用于升级包。 有关详细信息，请参阅[部署软件更新](../../sum/deploy-use/deploy-software-updates.md)。  

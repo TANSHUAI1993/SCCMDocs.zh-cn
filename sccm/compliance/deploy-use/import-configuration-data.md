@@ -12,14 +12,14 @@ ms.topic: article
 ms.assetid: 309b9a09-a611-4ba2-90ab-dde51582cf87
 caps.latest.revision: "6"
 caps.handback.revision: "0"
-author: robstackmsft
-ms.author: robstack
+author: andredm7
+ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 60d0642618a3074fc50a848f1189f4d6559ca916
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: d770a2f305856560de70014cc39a95207f0efab5
+ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="import-configuration-data-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 导入配置数据
 

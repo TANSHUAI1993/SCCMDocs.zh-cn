@@ -12,14 +12,14 @@ ms.topic: article
 ms.assetid: 30080620-20d3-4c38-b8dd-db5516e1acae
 caps.latest.revision: "5"
 caps.handback.revision: "0"
-author: robstackmsft
-ms.author: robstack
+author: andredm7
+ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: e42b13c68ecaeac94245838c2f42e2790799de2b
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: f844b44333f5bf2c728ce84588210212ee270eec
+ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="security-and-privacy-for-queries-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的查询的安全和隐私
 

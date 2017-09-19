@@ -12,14 +12,14 @@ ms.topic: article
 ms.assetid: b0c9db74-841e-46eb-8924-957cde968bf7
 caps.latest.revision: "8"
 caps.handback.revision: "0"
-author: robstackmsft
-ms.author: robstack
+author: arob98
+ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: cd8c644d07dab0010dc211df8ce4f2dc6e1fa7ae
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 89b0b89ae6acfb6e9d82dfb6d233fe131969924c
+ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="upgrade-windows-devices-with-the-edition-upgrade-policy-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中使用版本升级策略升级 Windows 设备
 

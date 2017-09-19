@@ -11,14 +11,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ff633013-5313-4cd3-949c-56d45e777280
 caps.latest.revision: "10"
-author: robstackmsft
-ms.author: robstack
+author: mattbriggs
+ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: 349fcf335e7faddbcbd2ffe0ece7e711465f28df
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: af3479a75a1024bdcf9ce6c354c073ee5fb837b6
+ms.sourcegitcommit: f6a428a8db7145affa388f59e0ad880bdfcf17b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="create-ios-applications-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 创建 iOS 应用程序
 

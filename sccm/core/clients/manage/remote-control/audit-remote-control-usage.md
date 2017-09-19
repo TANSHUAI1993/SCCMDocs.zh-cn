@@ -12,14 +12,14 @@ ms.topic: article
 ms.assetid: 5c975e69-0cc0-4afd-b7fb-b7182162a933
 caps.latest.revision: "5"
 caps.handback.revision: "0"
-author: robstackmsft
-ms.author: robstack
+author: arob98
+ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 4259ecfca48ccdffa83247e9ab5a65b3f006c5d9
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 5c584a90e9bd2ead4440a0581438c5a336ed2612
+ms.sourcegitcommit: f6a428a8db7145affa388f59e0ad880bdfcf17b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="how-to-audit-remote-control-usage-in-system-center-configuration-manager"></a>如何审核 System Center Configuration Manager 中的远程控制使用
 
