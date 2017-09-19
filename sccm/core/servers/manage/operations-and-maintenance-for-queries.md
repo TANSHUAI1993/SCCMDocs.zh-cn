@@ -12,14 +12,14 @@ ms.topic: article
 ms.assetid: f050ee45-bcab-4a3b-9050-4952f5e2ec2e
 caps.latest.revision: "4"
 caps.handback.revision: "0"
-author: robstackmsft
-ms.author: robstack
+author: andredm7
+ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 82648626882ddd23db0e40cfb18621a5953a1786
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 11309ba74d9e0d1cbd20cbfc676efbe14e004462
+ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="operations-and-maintenance-for-queries-in-system-center-configuration-manager"></a>System Center Configuration Manager 中查询的操作和维护
 

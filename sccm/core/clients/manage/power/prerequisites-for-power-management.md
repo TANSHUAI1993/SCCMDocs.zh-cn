@@ -12,14 +12,14 @@ ms.topic: article
 ms.assetid: 9c062f13-3c1f-4621-9cae-de0e322aa03f
 caps.latest.revision: "4"
 caps.handback.revision: "0"
-author: robstackmsft
-ms.author: robstack
+author: arob98
+ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 711ef491899846b86bfed0355ac7fd0f9d509c4f
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 5247bf1ce5b04264bc0d3e04c5de7f98300905c9
+ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="prerequisites-for-power-management-in-system-center-configuration-manager"></a>System Center Configuration Manager 中电源管理的先决条件
 

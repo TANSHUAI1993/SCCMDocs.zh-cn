@@ -12,14 +12,14 @@ ms.topic: article
 ms.assetid: 49ef2ed2-2e15-4637-8b63-1d5b7f9c17e1
 caps.latest.revision: "10"
 caps.handback.revision: "0"
-author: robstackmsft
-ms.author: robstack
+author: arob98
+ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 572ef13883f7930e69ec1f1f53c9bfe029898c81
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 5b6e60e7c6225e37dd345e99c703505e346cd0a4
+ms.sourcegitcommit: f6a428a8db7145affa388f59e0ad880bdfcf17b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="how-to-test-client-upgrades-in-a-pre-production-collection-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中的预生产集合中测试客户端升级
 
@@ -83,5 +83,5 @@ ms.lasthandoff: 08/07/2017
 3.  对话框关闭后，更新的客户端版本将替代在你的层次结构中使用的客户端版本。 然后可以为整个站点升级客户端。 有关详细信息，请参阅[如何在 System Center Configuration Manager 中升级 Windows 计算机的客户端](../../../../core/clients/manage/upgrade/upgrade-clients-for-windows-computers.md)。  
 
 >[!NOTE]
->要启用预生产客户端，或者将预生产客户端升级到生产客户端，你的帐户必须是安全角色的成员，该角色具有**读取**和**修改**  **Update Packages** 对象的权限。
+>要启用预生产客户端，或者将预生产客户端升级到生产客户端，你的帐户必须是安全角色的成员，该角色具有**读取**和**修改 ** **Update Packages** 对象的权限。
 >客户端升级按已配置的任意 Configuration Manager 维护时段进行。

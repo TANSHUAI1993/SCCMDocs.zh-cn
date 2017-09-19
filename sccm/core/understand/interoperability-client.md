@@ -11,13 +11,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 600086d5-bd9e-4ac1-8ace-c7a62de80dc2
 caps.latest.revision: "0"
-author: robstackmsft
-ms.author: robstack
-ms.openlocfilehash: 6487a7c0eb958c74ca4c6a7233747966110eceb9
-ms.sourcegitcommit: b41d3e5c7f0c87f9af29e02de3e6cc9301eeafc4
+author: arob98
+ms.author: angrobe
+manager: angrobe
+ms.openlocfilehash: 9772224be78eee2777137225a59b53b1fd77a627
+ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="use-the-configuration-manager-client-software-for-extended-interoperability-with-future-versions-of-a-current-branch-site"></a>使用 Configuration Manager 客户端软件，实现与未来 Current Branch 站点版本的扩展互操作性
 

@@ -12,14 +12,14 @@ ms.topic: article
 ms.assetid: 8c6eabc4-5dda-4682-b03e-3a450e6ef65a
 caps.latest.revision: "8"
 caps.handback.revision: "0"
-author: robstackmsft
-ms.author: robstack
+author: andredm7
+ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 72fc94c6449649656a7e8b81659c2b5cc2551107
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: d12faf657ca99dd572f1b28eb398783426fcdf8c
+ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="remote-connection-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的远程连接配置文件
 

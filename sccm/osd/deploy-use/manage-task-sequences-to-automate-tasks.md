@@ -14,11 +14,11 @@ caps.latest.revision: "10"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 2f3d66362c49d28a52d7f9c535eb0b3b4cc4eaf7
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: c9d94ffb61ed7a7fa40a01eedc763a16a8df30cb
+ms.sourcegitcommit: 31c670a4bce74fd64a7d46ebf7702f65b80d4147
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/13/2017
 ---
 # <a name="manage-task-sequences-to-automate-tasks-in-system-center-configuration-manager"></a>管理任务序列以在 System Center Configuration Manager 中自动执行任务
 
@@ -196,7 +196,7 @@ ms.lasthandoff: 08/07/2017
 
 8.  完成向导。  
 
- 可以预留任务序列中引用的内容。 Configuration Manager 创建压缩的预安排内容文件，该文件包含所选内容的文件、关联依赖项和关联元数据。 然后，你可以在站点服务器、辅助站点或分发点中手动导入内容。 有关如何预留内容文件的详细信息，请参阅[预留内容](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkprestagea-use-prestaged-content)。  
+ 可以预留任务序列中引用的内容。 Configuration Manager 创建压缩的预安排内容文件，该文件包含所选内容的文件、关联依赖项和关联元数据。 然后，你可以在站点服务器、辅助站点或分发点中手动导入内容。 有关如何预留内容文件的详细信息，请参阅[预留内容](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_prestage)。  
 
 ##  <a name="BKMK_DeployTS"></a>部署任务序列  
  使用以下过程将任务序列部署到集合中的计算机。  
@@ -464,7 +464,7 @@ ms.lasthandoff: 08/07/2017
 |**复制**|为所选的任务序列创建副本。 在要根据现有的任务序列创建新的任务序列时，你可能会发现此操作很有用。<br /><br /> 为某个文件夹中的任务序列创建副本时，副本会在该文件夹中列出，直至你刷新任务序列节点为止。  刷新后，副本将出现在根文件夹中。|  
 |**禁用**|禁用任务序列，以便它无法在计算机上运行。 可以将禁用的任务序列部署到计算机，但在启用任务序列之前，计算机不会运行它。|  
 |**启用**|启用任务序列，以便可以运行它。 在启用已部署的任务序列后，无需重新部署它。|  
-|**创建预留的内容文件**|启动“创建预留的内容文件向导”以预留任务序列内容。 有关如何创建预留的内容文件的信息，请参阅[预安排内容](../../core/servers/deploy/configure/deploy-and-manage-content.md#a-namebkmkprestagea-use-prestaged-content)。|  
+|**创建预留的内容文件**|启动“创建预留的内容文件向导”以预留任务序列内容。 有关如何创建预留的内容文件的信息，请参阅[预安排内容](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_prestage)。|  
 |**移动**|将所选的任务序列移动到另一个文件夹。|  
 
 ## <a name="next-steps"></a>后续步骤

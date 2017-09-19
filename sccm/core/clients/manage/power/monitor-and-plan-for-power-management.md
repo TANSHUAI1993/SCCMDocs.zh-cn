@@ -12,14 +12,14 @@ ms.topic: article
 ms.assetid: 507bf676-2679-4e4d-8831-3ffc9cf8557e
 caps.latest.revision: "6"
 caps.handback.revision: "0"
-author: robstackmsft
-ms.author: robstack
+author: arob98
+ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: b308329635400438cebc4935efe79b46e607fd58
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 409b16bc184796a2508fcc6b7049a79ed4cfe2e4
+ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="how-to-monitor-and-plan-for-power-management-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中监视和计划电源管理
 

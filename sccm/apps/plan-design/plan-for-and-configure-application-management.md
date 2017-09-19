@@ -11,14 +11,14 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 2be84a1d-ebb9-47ae-8982-c66d5b92a52a
 caps.latest.revision: "13"
-author: robstackmsft
-ms.author: robstack
+author: mattbriggs
+ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: 46cc3fcfd9516cf1c124e24b50d0aac0cb0025dc
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: c8034497299a9b5646674031a40fdee49d55ff7c
+ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="plan-for-and-configure-application-management-in-system-center-configuration-manager"></a>规划和配置 System Center Configuration Manager 中的应用程序管理
 
@@ -52,7 +52,7 @@ ms.lasthandoff: 08/07/2017
 
  在 System Center Configuration Manager 中，对于用户如何更改设置、浏览应用程序和安装应用程序，现在有两个选项：  
 
--   **新的软件中心** - 新的软件中心具有新式外观。 并且本应仅出现在依赖于 Silverlight 的应用程序目录中的应用（用户可用的应用）现在将出现在“应用程序”选项卡下的软件中心。 应用程序目录仍然可以通过软件中心的“安装状态”选项卡下的链接进行访问。  
+-   **新的软件中心** - 新的软件中心具有新式外观。 并且本应仅出现在依赖于 Silverlight 的应用程序目录中的应用（用户可用的应用）现在将出现在“应用程序”选项卡下的软件中心。应用程序目录仍然可以通过软件中心的“安装状态”选项卡下的链接进行访问。  
 
      你可以通过启用客户端设置“计算机代理” **计算机代理** > **使用新的软件中心**。  
 

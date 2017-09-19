@@ -12,14 +12,14 @@ ms.topic: get-started-article
 ms.assetid: 406bbdbf-ab4a-4121-a68b-154f96ea14ec
 caps.latest.revision: "5"
 caps.handback.revision: "0"
-author: robstack
-ms.author: robstackmsft
+author: arob98
+ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 63e033fdb436930ac5f37e7408ca9292bc444560
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: a181bd78f1925fa2f17aa4071ea81f58ae1570af
+ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="how-to-configure-client-communication-ports-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中配置客户端通信端口
 

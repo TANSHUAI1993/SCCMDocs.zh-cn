@@ -12,14 +12,14 @@ ms.topic: article
 ms.assetid: 2d5f871a-19dc-4bd3-a3ad-4230c7a69f1b
 caps.latest.revision: "7"
 caps.handback.revision: "0"
-author: robstackmsft
-ms.author: robstack
+author: mattbriggs
+ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: 8a59a1769eec4cd6d78d7686a1d8008e832dd924
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 6aedab4ab23749061ec103e0de92edafdad13d33
+ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="how-to-create-global-conditions-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中创建全局条件
 
@@ -184,7 +184,7 @@ ms.lasthandoff: 08/07/2017
 
         -   **XPath 查询** - 指定用于评估客户端计算机上的符合性的有效完整 XML 路径语言 (XPath) 查询。  
 
-        -   “命名空间” - 打开“XML 命名空间” **XML**  对话框来确定要在 XPath 查询期间使用的命名空间和前缀。  
+        -   “命名空间” - 打开“XML 命名空间” **XML ** 对话框来确定要在 XPath 查询期间使用的命名空间和前缀。  
 
 3.  在“数据类型”  下拉列表中，选择在用于检查要求之前条件将返回的数据的格式。  
 

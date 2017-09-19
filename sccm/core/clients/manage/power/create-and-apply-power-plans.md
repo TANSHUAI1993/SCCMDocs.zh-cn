@@ -12,14 +12,14 @@ ms.topic: article
 ms.assetid: 738eddaa-52e2-467f-b453-821ef2884d47
 caps.latest.revision: "6"
 caps.handback.revision: "0"
-author: robstackmsft
-ms.author: robstack
+author: arob98
+ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: de81da31b524cebe8e820766a64ecc5fdb7e4771
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 480bb382098af039ac714061ae84dc5257fdaddb
+ms.sourcegitcommit: f6a428a8db7145affa388f59e0ad880bdfcf17b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="how-to-create-and-apply-power-plans-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中创建并应用电源计划
 

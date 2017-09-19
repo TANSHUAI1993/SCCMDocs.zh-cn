@@ -11,14 +11,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 784c295c-b8b8-4202-ab9f-665908d49d6d
 caps.latest.revision: "5"
-author: robstackmsft
-ms.author: robstack
+author: mattbriggs
+ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: 42d21d10489bffe32b875384f8801686239a0ba4
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: ded2a085510def60d388d9754da9c2c41de565d4
+ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="monitor-applications-from-the-system-center-configuration-manager-console"></a>监视 System Center Configuration Manager 控制台中的应用程序
 

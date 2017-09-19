@@ -12,14 +12,14 @@ ms.topic: article
 ms.assetid: 435c923c-ea30-4dce-8afd-48962ed85502
 caps.latest.revision: "5"
 caps.handback.revision: "0"
-author: robstackmsft
-ms.author: robstack
+author: arob98
+ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: e111ac2545dd9e0b96a50c10246bb75d286a737a
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 7d2125464103cf0c040592c9f7ddbc25ae022758
+ms.sourcegitcommit: f6a428a8db7145affa388f59e0ad880bdfcf17b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="configuring-power-management-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中配置电源管理
 

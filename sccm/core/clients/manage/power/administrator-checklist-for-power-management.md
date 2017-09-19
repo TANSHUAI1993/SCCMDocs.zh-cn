@@ -12,14 +12,14 @@ ms.topic: article
 ms.assetid: 94e42cbe-9df8-4228-a04e-0ad7626180ca
 caps.latest.revision: "6"
 caps.handback.revision: "0"
-author: robstackmsft
-ms.author: robstack
+author: arob98
+ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: e6a7a0b853be930b558cdd739b90285ebb8538e7
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 8779acc39a5a0f8d5affef387d0ec242a59b4038
+ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="administrator-checklist-for-power-management-in-system-center-configuration-manager"></a>System Center Configuration Manager 中电源管理的管理员清单
 

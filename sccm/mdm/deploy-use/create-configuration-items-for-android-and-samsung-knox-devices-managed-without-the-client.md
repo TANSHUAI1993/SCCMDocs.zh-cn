@@ -12,14 +12,14 @@ ms.topic: article
 ms.assetid: 7b66f3c4-e3bb-4f6a-abd5-55be649ff90d
 caps.latest.revision: "17"
 caps.handback.revision: "0"
-author: robstackmsft
-ms.author: robstack
+author: andredm7
+ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: c9961c2e9866199571a1b39a7b185cb6bb96f998
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: e58d84542d5c475fef6c2c04676c50a150681099
+ms.sourcegitcommit: f6a428a8db7145affa388f59e0ad880bdfcf17b5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/14/2017
 ---
 # <a name="how-to-create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-system-center-configuration-manager-client"></a>如何为没有使用 System Center Configuration Manager 客户端管理的 Android 和 Samsung KNOX 设备创建配置项目
 
@@ -183,7 +183,7 @@ Android for Work 具有配置项的两个设置组：
 
 - **工作配置文件**。 启用以下 Android for Work 设置：
   - **允许在工作和个人配置文件之间共享数据**
-  - **在设备处于锁定状态时隐藏工作配置文件通知** (Android 6.0 +)
+  - **在设备处于锁定状态时隐藏工作配置文件通知 **(Android 6.0 +)
   - **设置默认应用权限策略** (Android 6.0+)
 
 要在 Android 工作配置文件中创建配置项目，请在“常规”页上选择“Android for Work”，并配置每个设置组的设置。 像往常一样将配置项添加到基准并进行部署。 这些设置仅适用于注册为 Android for Work 的设备，不适用于注册为 Android 的设备。

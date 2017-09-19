@@ -12,14 +12,14 @@ ms.topic: article
 ms.assetid: 28b240a4-d358-40ce-8006-c697b1622ece
 caps.latest.revision: "6"
 caps.handback.revision: "0"
-author: robstackmsft
-ms.author: robstack
+author: mattbriggs
+ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: b06539ded21eac71dda7da89dae96fda7a801260
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 7fe8818170906d2a741f407edca0aae838f1643a
+ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="simulate-application-deployments-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 模拟应用程序部署
 

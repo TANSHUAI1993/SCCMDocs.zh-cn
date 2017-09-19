@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.openlocfilehash: 23ff28189c8010c21ed8b23c35598746a4f09fe7
-ms.sourcegitcommit: 13599667ea77c16db1aebe64f8a6748c268f0b45
+ms.openlocfilehash: 5b5385cebe7952e519d59a239983733dd93e661e
+ms.sourcegitcommit: 31c670a4bce74fd64a7d46ebf7702f65b80d4147
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2017
+ms.lasthandoff: 09/13/2017
 ---
 # <a name="vpn-profiles-on-mobile-devices-in-system-center-configuration-manager"></a>System Center Configuration Manager 中移动设备上的 VPN 配置文件
 
@@ -52,7 +52,7 @@ ms.lasthandoff: 09/11/2017
 ## <a name="create-vpn-profiles"></a>创建 VPN 配置文件
 [如何在 System Center Configuration Manager 中创建 VPN 配置文件](../../protect/deploy-use/create-vpn-profiles.md)介绍了有关如何创建 VPN 配置文件的一般信息。
 
-###   <a name="windows-10-vpn-features-available-when-using-configuration-manager-with-intune"></a>将 Configuration Manager 与 Intune 结合使用时可用的 Windows 10 VPN 功能  
+## <a name="windows-10-vpn-features-available-when-using-configuration-manager-with-intune"></a>将 Configuration Manager 与 Intune 结合使用时可用的 Windows 10 VPN 功能  
 
 
 > [!NOTE]  
@@ -157,7 +157,7 @@ ms.lasthandoff: 09/11/2017
 
 **部署**：若要详细了解如何部署 VPN 配置文件，请参阅[部署 Wi-Fi、VPN、电子邮件和证书配置文件](../../protect/deploy-use/deploy-wifi-vpn-email-cert-profiles.md)。
 
-### <a name="next-steps"></a>后续步骤  
+## <a name="next-steps"></a>后续步骤  
  下面的主题可帮助你在 Configuration Manager 中规划、设置、操作和维护 VPN 配置文件。  
 
 -   [System Center Configuration Manager 中 VPN 配置文件的先决条件](../../protect/plan-design/prerequisites-for-wifi-vpn-profiles.md)  

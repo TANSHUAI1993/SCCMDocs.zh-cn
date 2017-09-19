@@ -12,14 +12,14 @@ ms.topic: article
 ms.assetid: 7daf71dc-3775-40d7-92e0-8679d7d90a78
 caps.latest.revision: "4"
 caps.handback.revision: "0"
-author: robstackmsft
-ms.author: robstack
+author: andredm7
+ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 093d24951e8d741bfcf2cedb7618ecf75300e035
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: a589d95cf770d669e1759d6da5b26a0ce9444e32
+ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="configuration-items-for-devices-managed-with-the-system-center-configuration-manager-client"></a>为使用 System Center Configuration Manager 客户端管理的设备配置项目
 

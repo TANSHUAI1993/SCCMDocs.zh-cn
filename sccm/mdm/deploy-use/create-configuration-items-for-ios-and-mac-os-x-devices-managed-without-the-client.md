@@ -12,17 +12,17 @@ ms.topic: article
 ms.assetid: 613a48ac-c55d-4c4a-94ea-d3747a1b10cb
 caps.latest.revision: "15"
 caps.handback.revision: "0"
-author: robstackmsft
-ms.author: robstack
+author: andredm7
+ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 6e2cb628217598480973d4f728a9e0a7cd5873e7
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 039173c9411a530348bf550e4be7b771756d57dc
+ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="how-to-create-configuration-items-for-ios-and-mac-os-x-devices-managed-with-intune"></a>如何为使用 Intune 管理的 iOS 和 Mac OS X 设备创建配置项
-使用 System Center Configuration Manager **iOS 和 Mac OS X** 配置项目为已在 Microsoft Intune 中注册或通过 Configuration Manager 进行本地管理的 iOS 和 Mac OS X 的设备管理设置。  
+使用 System Center Configuration Manager **iOS 和 Mac OS X **配置项目为已在 Microsoft Intune 中注册或通过 Configuration Manager 进行本地管理的 iOS 和 Mac OS X 的设备管理设置。  
   
 ### <a name="to-create-an-ios-and-mac-os-x-configuration-item"></a>若要创建 iOS 和 Mac OS X 配置项目  
   

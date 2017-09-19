@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 830f715b688cc9929a179da94eba9c81de8db11a
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: f44fa4ef0946d3500d15db536333adab571a5f64
+ms.sourcegitcommit: 31c670a4bce74fd64a7d46ebf7702f65b80d4147
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/13/2017
 ---
 # <a name="planning-considerations-for-automating-tasks-in-system-center-configuration-manager"></a>System Center Configuration Manager 中自动执行任务的规划注意事项
 
@@ -282,7 +282,7 @@ ms.lasthandoff: 08/07/2017
 ##  <a name="BKMK_TSNetworkAccessAccount"></a> 任务序列和网络访问帐户  
  虽然任务序列仅在本地系统帐户的上下文中运行，但在下列情况下，你可能需要配置网络访问帐户：  
 
--   必须正确配置网络访问帐户，否则，如果任务序列为了完成其任务而尝试访问分发点上的 Configuration Manager 包，它将会失败。 有关网络访问帐户的详细信息，请参阅[网络访问帐户](../../core/plan-design/hierarchy/manage-accounts-to-access-content.md#a-namebkmknaaa-network-access-account)。  
+-   必须正确配置网络访问帐户，否则，如果任务序列为了完成其任务而尝试访问分发点上的 Configuration Manager 包，它将会失败。 有关网络访问帐户的详细信息，请参阅[网络访问帐户](../../core/plan-design/hierarchy/manage-accounts-to-access-content.md#bkmk_NAA)。  
 
     > [!NOTE]  
     >  网络访问帐户从不用作用于运行程序、安装应用程序、安装更新或运行任务序列的安全性上下文，但可用于访问网络上的关联资源。  

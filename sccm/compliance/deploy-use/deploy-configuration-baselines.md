@@ -12,14 +12,14 @@ ms.topic: article
 ms.assetid: 9be8aaf3-075e-4acd-abd2-7459254e16e2
 caps.latest.revision: "7"
 caps.handback.revision: "0"
-author: robstackmsft
-ms.author: robstack
+author: andredm7
+ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 9c9e6b7780c7c10c20a60dbbbf506e916031eb88
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: b9c46766b953016d852c21317db72b45e23f1ee7
+ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="how-to-deploy-configuration-baselines-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中部署配置基线
 

@@ -12,14 +12,14 @@ ms.topic: article
 ms.assetid: 92c1ccca-a748-44cd-a52e-e41d34bf981d
 caps.latest.revision: "6"
 caps.handback.revision: "0"
-author: robstackmsft
-ms.author: robstack
+author: andredm7
+ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 75cd7e811262633d81d978265f21ec7ed3b61a58
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 12a75e8bdda681a2ef1520e834f764722788f0a4
+ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="monitor-compliance-settings-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中监视符合性设置
 

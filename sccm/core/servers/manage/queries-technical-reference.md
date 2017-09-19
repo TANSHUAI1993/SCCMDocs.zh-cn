@@ -11,14 +11,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 727bca0d-6458-48dc-9a63-3b66d9799ddb
 caps.latest.revision: "4"
-author: robstackmsft
-ms.author: robstack
+author: andredm7
+ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 44f454d2f7c9d317d1ad99ba724931b4631bd11e
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 3bd3b4527ce43e9a87105cb3ff6379afde84e531
+ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="queries-technical-reference-for-system-center-configuration-manager"></a>System Center Configuration Manager 中查询的技术参考
 

@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 4b3668094d576b1b8710f08b384aa2f7c5eb0cca
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 3a8e2759812dae2a328cd09efdc13f8534d14379
+ms.sourcegitcommit: 31c670a4bce74fd64a7d46ebf7702f65b80d4147
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/13/2017
 ---
 # <a name="create-a-task-sequence-to-capture-and-restore-user-state-in-system-center-configuration-manager"></a>创建任务序列以捕获和还原 System Center Configuration Manager 中的用户状态
 
@@ -56,7 +56,7 @@ ms.lasthandoff: 08/07/2017
 
     -   在“重试延迟(秒)”框中，指定任务序列在重试捕获数据之前等待的秒数。  
 
-    -   选择“如果计算机帐户未能连接到状态存储，则使用网络访问帐户”复选框以指定是否使用 Configuration Manager [网络访问帐户](../../core/plan-design/hierarchy/manage-accounts-to-access-content.md#a-namebkmknaaa-network-access-account)连接到状态存储。  
+    -   选择“如果计算机帐户未能连接到状态存储，则使用网络访问帐户”复选框以指定是否使用 Configuration Manager [网络访问帐户](../../core/plan-design/hierarchy/manage-accounts-to-access-content.md#bkmk_NAA)连接到状态存储。  
 
      在“选项”选项卡上，指定下列选项：  
 
@@ -141,7 +141,7 @@ ms.lasthandoff: 08/07/2017
 
     -   如果希望“还原用户状态”步骤在无法还原文件时继续执行，则选择“如果无法还原某些文件则继续”。  
 
-         如果使用本地链接存储用户状态，并且还原不成功，则管理用户可以手动删除为存储数据而创建的硬链接，否则任务序列可能会运行 USMTUtils 工具。 如果使用 USMTUtils 来删除硬链接，请在运行 USMTUtils 之后添加[重启计算机](../understand/task-sequence-steps.md#a-namebkmkrestartcomputera-restart-computer)步骤。  
+         如果使用本地链接存储用户状态，并且还原不成功，则管理用户可以手动删除为存储数据而创建的硬链接，否则任务序列可能会运行 USMTUtils 工具。 如果使用 USMTUtils 来删除硬链接，请在运行 USMTUtils 之后添加[重启计算机](../understand/task-sequence-steps.md#BKMK_RestartComputer)步骤。  
 
     -   选择“启用详细日志记录”，以指定在出错时将多少信息写入到日志文件中。  
 

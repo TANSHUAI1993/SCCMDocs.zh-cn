@@ -12,14 +12,14 @@ ms.topic: article
 ms.assetid: 101d7d4d-92db-419d-b2ae-3c1c1dea68e9
 caps.latest.revision: "6"
 caps.handback.revision: "0"
-author: robstackmsft
-ms.author: robstack
+author: arob98
+ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 744bc3792a02f13d3cf940cd1a4f2fd8749ee2f4
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 73e6b8c39b08bb661cb7ac66dad3c47d4abd09b0
+ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="about-client-installation-properties-published-to-active-directory-domain-services"></a>关于发布到 Active Directory 域服务的客户端安装属性
 
@@ -80,7 +80,7 @@ ms.lasthandoff: 08/07/2017
  实际上，可以在“客户端请求安装属性”对话框的“客户端”选项卡中指定客户端安装属性。 这些选项和有关客户端的站点设置存储在一个文件中，客户端在客户端安装过程中将读取此文件。  
 
 > [!NOTE]  
->  你无需在“客户端”  选项卡中为客户端请求安装指定任何 CCMSetup 属性，或者指定回退状态点或受信任的根密钥。 在使用客户端请求安装来安装客户端时，会自动向客户端提供这些设置。  
+>  你无需在“客户端”  选项卡中为客户端请求安装指定任何 CCMSetup 属性，或者指定回退状态点或受信任的根密钥。在使用客户端请求安装来安装客户端时，会自动向客户端提供这些设置。  
 
  如果将站点发布到 Active Directory 域服务，则在“客户端”选项卡中指定的任何属性都会发布到 Active Directory 域服务。 通过运行不带安装属性的 CCMSetup 来进行的客户端安装将读取这些设置。  
 

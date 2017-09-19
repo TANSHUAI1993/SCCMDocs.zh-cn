@@ -12,14 +12,14 @@ ms.topic: article
 ms.assetid: 03d1b3a9-41db-4d3a-a70e-e05ab5dc8141
 caps.latest.revision: "5"
 caps.handback.revision: "0"
-author: robstackmsft
-ms.author: robstack
+author: andredm7
+ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: f84d518670c0ece3c08c890d2293335518f7f8e9
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: a1bb67b786aa452452585f2f7a2aa7c9ca4e12bf
+ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="introduction-to-queries-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的查询简介
 

@@ -12,14 +12,14 @@ ms.topic: article
 ms.assetid: b48c693c-d2b0-4707-a5dd-fe92172c49fe
 caps.latest.revision: "7"
 caps.handback.revision: "0"
-author: robstackmsft
-ms.author: robstack
+author: andredm7
+ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 1a6084834384e695b49a71fe23833049c86f8dbc
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 07d4148559c36745e51be46957b1af3c4a94ce44
+ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="manage-configuration-data-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中管理配置数据
 
