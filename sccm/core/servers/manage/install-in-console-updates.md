@@ -2,7 +2,7 @@
 title: "控制台中更新 | Microsoft Docs"
 description: "System Center Configuration Manager 与 Microsoft 云服务同步，以获取可以从控制台中进行安装的更新。"
 ms.custom: na
-ms.date: 06/13/2017
+ms.date: 09/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ caps.latest.revision: "36"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 2bbc8935bee306ed0bc312cc43b8f5374a8df7ff
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 10ddbcc19da8c5fc6451f62500f17790a0349389
+ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/15/2017
 ---
 # <a name="install-in-console-updates-for-system-center-configuration-manager"></a>为 System Center Configuration Manager 安装控制台内部更新
 
@@ -105,6 +105,9 @@ System Center Configuration Manager 与 Microsoft 云服务同步，以获取更
 -   更新文件会在安装更新之前复制到其他站点。  
 
 -   选择安装更新时，先决条件检查会再次自动运行。  
+
+> [!NOTE]
+> 启动先决条件检查，然后查看状态时，安装阶段似乎处于活动状态，但实际上并未安装更新。 显示列出安装阶段，因为某些任务（如提取必需的二进制文件以运行检查）也是安装阶段的一部分。  
 
 以后在安装更新时，可以配置更新以忽略先决条件检查警告。  
 
@@ -288,7 +291,7 @@ System Center Configuration Manager 与 Microsoft 云服务同步，以获取更
 更新安装失败时，查看控制台内部反馈以确定针对警告和错误的解决方法。 还可以查看站点服务器上的 ConfigMgrPrereq.log 以了解更多详细信息。 重试更新安装之前，必须解决错误，并且应解决警告。  
 
 > [!TIP]  
-> 如果更新存在下载或复制问题，可以使用[更新重置工具](/sccm/core/servers/manage/update-reset-tool)。 可从运行版本 1706 或更高版本的站点获取此工具。 
+> 如果更新存在下载或复制问题，可以使用[更新重置工具](/sccm/core/servers/manage/update-reset-tool)。 可从运行版本 1706 或更高版本的站点获取此工具。
 
 准备重试安装更新时，选择失败的更新，然后选择适用的选项。 更新安装重试行为取决于开始重试的节点以及使用的重试选项。  
 

@@ -2,7 +2,7 @@
 title: "使用 Configuration Manager 创建和运行脚本 | Microsoft Docs"
 description: "使用 Configuration Manager 在客户端设备上创建和运行脚本。"
 ms.custom: na
-ms.date: 08/09/2017
+ms.date: 09/15/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,14 +12,14 @@ ms.topic: article
 ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 caps.latest.revision: "14"
 caps.handback.revision: "0"
-author: robstackmsft
-ms.author: robstack
+author: lleonard-msft
+ms.author: alleonar
 manager: angrobe
-ms.openlocfilehash: ed84f7900eee5c04728d0e4d1b46027c36327bec
-ms.sourcegitcommit: b41d3e5c7f0c87f9af29e02de3e6cc9301eeafc4
+ms.openlocfilehash: e6b29cd85504742e8638a55db2f6c4ecc8ab3e55
+ms.sourcegitcommit: 5ca89204716750eaaceb01bba40b35b85c7122ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 09/18/2017
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>从 Configuration Manager 控制台创建并运行 PowerShell 脚本
 
@@ -44,8 +44,8 @@ Configuration Manager 客户端必须从版本 1706 运行客户端，否则稍�
 
 要使用这些脚本，你必须是相应 Configuration Manager 安全角色的成员。
 
-- 导入并编写脚本 - 对于“符合性设置管理员”安全角色中的“SMS 脚本”，你的帐户必须具有“创建”权限。
-- 批准或拒绝脚本 - 对于“符合性设置管理员”安全角色中的“SMS 脚本”，你的帐户必须具有“批准”权限。
+- 导入并编写脚本 - 对于“完全权限管理员”安全角色中的“SMS 脚本”，帐户必须具有“创建”权限。
+- 批准或拒绝脚本 - 对于“完全权限管理员”安全角色中的“SMS 脚本”，帐户必须具有“批准”权限。
 - 运行脚本 - 对于“符合性设置管理员”安全角色中的“集合”，你的帐户必须具有“运行脚本”权限。
 
 有关 Configuration Manager 安全角色的详细信息，请参阅[基于角色的管理基础](/sccm/core/understand/fundamentals-of-role-based-administration)。
@@ -78,9 +78,9 @@ Configuration Manager 客户端必须从版本 1706 运行客户端，否则稍�
 
 #### <a name="create-a-folder"></a>创建一个文件夹
 
-New-Item "c:\scripts" - 键入文件名称 
- 
- 
+New-Item "c:\scripts" - 键入文件名称
+
+
 #### <a name="create-a-file"></a>创建文件
 
 New-Item c:\scripts\new_file.txt - 键入文件名称
