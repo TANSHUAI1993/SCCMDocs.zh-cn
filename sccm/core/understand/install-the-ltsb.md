@@ -14,11 +14,11 @@ caps.latest.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 82ec84923cc60e7a91d4afa4e9f59564fd416055
-ms.sourcegitcommit: 2a1328da3facb20b0c78f3b12adbb5fdbe0dcc11
+ms.openlocfilehash: 06565bc52e2c409b905bbc448262cf9da25eabb0
+ms.sourcegitcommit: 4c3906cf9614420cb8527da9e48978eb0b8f0e7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/22/2017
 ---
 # <a name="install-and-upgrade-with-the-version-1606-baseline-media-for-system-center-configuration-manager"></a>使用 1606 版基线介质安装或升级 System Center Configuration Manager
 
@@ -86,7 +86,7 @@ ms.lasthandoff: 09/08/2017
 
   **密钥名称：SABranchOptions**
    -    **SAActive = 1**
-   -  **= 1**
+   - ** = 1**
 
 
 > [!IMPORTANT]  
@@ -126,7 +126,7 @@ ms.lasthandoff: 09/08/2017
 ### <a name="in-place-upgrade-paths-for-the-1606-baseline-media"></a>1606 版基线介质的就地升级路径
 可以使用 1606 版基线介质将以下版本升级到 System Center Configuration Manager 的许可版本：
 - System Center 2012 R2 Configuration Manager Service Pack 1
-- System Center 2012 R2 Configuration Manager（不带 Service Pack）
+- 不含服务包的 System Center 2012 R2 Configuration Manager（这要求使用 2016 年 12 月 15 日发布的适用于版本 1606 的基线媒体）。
 - System Center 2012 Configuration Manager Service Pack 2
 - System Center 2012 Configuration Manager Service Pack 1
 

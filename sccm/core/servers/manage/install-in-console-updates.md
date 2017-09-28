@@ -14,11 +14,11 @@ caps.latest.revision: "36"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 10ddbcc19da8c5fc6451f62500f17790a0349389
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 5302b5712e33c753d0193a32498bc02a2241428c
+ms.sourcegitcommit: 474e6ddbaaeac4ba17d8172321e08deeb0140d0a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 09/19/2017
 ---
 # <a name="install-in-console-updates-for-system-center-configuration-manager"></a>为 System Center Configuration Manager 安装控制台内部更新
 
@@ -106,8 +106,8 @@ System Center Configuration Manager 与 Microsoft 云服务同步，以获取更
 
 -   选择安装更新时，先决条件检查会再次自动运行。  
 
-> [!NOTE]
-> 启动先决条件检查，然后查看状态时，安装阶段似乎处于活动状态，但实际上并未安装更新。 显示列出安装阶段，因为某些任务（如提取必需的二进制文件以运行检查）也是安装阶段的一部分。  
+> [!NOTE]   
+> 启动先决条件检查，然后查看状态时，安装阶段似乎处于活动状态，但实际上并未安装更新。 为了运行先决条件检查，更新过程从内容库中提取包，并将它置于暂存文件夹（在其中可以访问当前的先决条件检查）。  这与安装更新时运行的过程相同。 因此，“安装”显示为“正在安装”。 “安装”类别中仅显示“提取更新程序包”步骤。  
 
 以后在安装更新时，可以配置更新以忽略先决条件检查警告。  
 

@@ -2,7 +2,7 @@
 title: "Windows Hello 企业版设置 | Microsoft Docs"
 description: "了解如何将 Windows Hello 企业版与 System Center Configuration Manager 集成。"
 ms.custom: na
-ms.date: 08/10/2017
+ms.date: 09/21/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ caps.latest.revision: "17"
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.openlocfilehash: 1985428df0f82ef2e0a92fdec86189d5ffa03aee
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 43586e55f2c0c5cf117b94c61250f26ba4233f53
+ms.sourcegitcommit: 4c3906cf9614420cb8527da9e48978eb0b8f0e7a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 09/22/2017
 ---
 # <a name="windows-hello-for-business-settings-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的 Windows Hello 企业版设置
 
@@ -65,8 +65,11 @@ ms.lasthandoff: 09/15/2017
 |||||
 |-|-|-|-|
 |Windows 客户端版本|Configuration Manager 1602 或 1606|Configuration Manager 1610|Configuration Manager 1702 或更高版本|
-|Windows 10 周年更新|无需修补程序<br><br>无需权限<br><br>无需 Windows 架构更新|无需修补程序<br><br>无需权限<br><br>无需 Windows 架构更新|无需进行操作|
+|Windows 10 周年更新|无需修补程序<br><br>无需权限<br><br>无需 Windows 架构更新|无需修补程序（见“警告”）<br><br>无需权限<br><br>无需 Windows 架构更新|配置权限<br><br>将 Windows Server 2016 架构应用于 Active Directory|
 |Windows 10 创意者更新或更高版本|不支持|安装[此修补程序](https://support.microsoft.com/help/4010155/update-rollup-for-system-center-configuration-manager-current-branch-v)<br><br>配置权限<br><br>将 Windows Server 2016 架构应用于 Active Directory|配置权限<br><br>将 Windows Server 2016 架构应用于 Active Directory|
+
+> [!WARNING]
+> 虽然 Configuration Manager 1610 和 Windows 10 周年更新并不需要[修补程序](https://support.microsoft.com/help/4010155/update-rollup-for-system-center-configuration-manager-current-branch-v)，但仍可以安装。  如果安装了修补程序，需要配置权限，并将 Windows Server 2016 架构应用于 Active Directory。
 
 ## <a name="to-configure-permissions"></a>配置权限的具体步骤
 

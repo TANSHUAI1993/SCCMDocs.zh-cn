@@ -12,11 +12,11 @@ ms.assetid: 409e26e1-7716-4f1d-a0ee-34feabf20792
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: a2954b3c6f9a09b7246347e780c4cfc49ba39ca1
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: ff7f6c3b9f183502c95a2c551b1131c5abf1dd90
+ms.sourcegitcommit: 474e6ddbaaeac4ba17d8172321e08deeb0140d0a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/19/2017
 ---
 # <a name="what39s-new-in-version-1702-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1702 中的新增功能
 
@@ -256,7 +256,13 @@ Windows 10 创意者更新引入了一个简单的转换工具，可自动执行
 
 由于此更改，混合部署可为 Android 和 iOS 新版本更快提供支持，无需新的 Configuration Manager 版本或扩展。 Intune 独立版中支持新版本后，用户就可将其移动设备升级到此版本。
 
-为防止从 Configuration Manager 先前版本升级时出现问题，移动操作系统版本仍在这些项的属性页中可用。 如果仍需以特定版本为目标，可创建新项，然后在新创建的项的属性页上指定目标版本。
+为防止从 Configuration Manager 先前版本升级时出现问题，移动操作系统版本仍在这些项的属性页中可用。 如果仍需以特定版本为目标，可创建新项，然后在新创建的项的属性页上指定目标版本。 
+
+> [!NOTE]
+> 属性页中的最后一个移动操作系统版本包括此版本以及所有后续版本。 在属性页中，可以选择下列选项，指定高于 Android 7 和 iOS 10 的目标操作系统： 
+> - **Android 7 及更高版本**
+> - **所有 iOS 10 及更高版本的 iPhone 或 iPod touch 设备**
+> - **所有 iOS 10 及更高版本的 iPad 设备**
 
 ### <a name="android-for-work-support"></a>Android for Work 支持
 从 1702 开始，Microsoft Intune 的混合移动设备管理现在支持 Android for Work 设备注册和管理。 托管的 Android for Work 设备指南：

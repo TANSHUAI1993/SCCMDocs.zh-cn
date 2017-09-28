@@ -2,7 +2,7 @@
 title: "受支持的 Active Directory 域 | Microsoft Docs"
 description: "获取 Active Directory 域中 System Center Configuration Manager 站点系统的成员身份要求。"
 ms.custom: na
-ms.date: 3/23/2017
+ms.date: 9/18/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 2654ab4eaaaf6a4bf3bd7dca9908e7033647dc2c
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 813c2f55a5815ae3739149abc3f650a750d52cd8
+ms.sourcegitcommit: 474e6ddbaaeac4ba17d8172321e08deeb0140d0a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/19/2017
 ---
 # <a name="supported-active-directory-domains-for-system-center-configuration-manager"></a>对于 System Center Configuration Manager 受支持的 Active Directory 域
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 08/07/2017
 
 -   不支持对托管站点系统角色的计算机进行以下更改：  
 
-    -   域成员身份  
+    -   域成员资格（这包括从域中删除站点系统，然后重新加入同一域）。
 
     -   域名  
 
@@ -82,6 +82,6 @@ Configuration Manager 支持在具有非连续命名空间的域中安装站点�
 
 -   Active Directory 域服务中的单标签域必须使用具有有效顶级域的非连续 DNS 命名空间配置。  
 
-     **例如：** Contoso 的单标签域配置为在 contoso.com 的 DNS 中具有非连续命名空间。 因此，当在 Configuration Manager 中为 Contoso 域中的计算机指定 DNS 后缀时，应指定 Contoso.com 而不是 Contoso。  
+     **例如：** Contoso 的单标签域配置为在 contoso.com 的 DNS 中具有非连续命名空间。因此，当在 Configuration Manager 中为 Contoso 域中的计算机指定 DNS 后缀时，应指定 Contoso.com 而不是 Contoso。  
 
 -   系统上下文中的站点服务器之间的分布式组件对象模型 (DCOM) 连接必须使用 Kerberos 身份验证成功完成。  

@@ -2,7 +2,7 @@
 title: "Configuration Manager 使用的端口 | Microsoft Docs"
 description: "了解有关 System Center Configuration Manager 用于连接的必需的和可自定义端口。"
 ms.custom: na
-ms.date: 3/20/2017
+ms.date: 09/19/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,18 +15,18 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 78caa69e10f5d386daab1e61e484d4d134469708
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: ac443971a725a7eeecaeea877b8e9636ebb4990b
+ms.sourcegitcommit: 51654bf8b5615eb99084d0a20d18ca3fccfa83a1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/20/2017
 ---
 # <a name="ports-used-in-system-center-configuration-manager"></a>System Center Configuration Manager 中使用的端口
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager 是分布式客户端/服务器系统。 Configuration Manager 的分布式性质意味着可在站点服务器、站点系统和客户端之间建立连接。 某些连接使用不可配置的端口，而某些连接支持指定的自定义端口。 如果使用防火墙、路由器、代理服务器或 IPsec 等任何端口筛选技术，必须验证所需的端口是否可用。  
-
+    
 > [!NOTE]  
 >  如果通过 SSL 桥接支持基于 Internet 的客户端，则除了满足端口要求，可能还必须允许某些 HTTP 谓词和标头遍历防火墙。   
 
@@ -167,7 +167,7 @@ Configuration Manager 不允许您为以下通信类型配置端口：
 |描述|UDP|TCP|  
 |-----------------|---------|---------|  
 |全局编录 LDAP|--|3268|  
-|全局编录 LDAP SSL|--|3269|  
+
 
 ###  <a name="BKMK_PortsClient-MP"></a> 客户端 -- > 管理点  
 
@@ -295,9 +295,7 @@ Configuration Manager 不允许您为以下通信类型配置端口：
 |描述|UDP|TCP|  
 |-----------------|---------|---------|  
 |轻型目录访问协议 (LDAP)|--|389|  
-|LDAP（安全套接字层 [SSL] 连接）|636|636|  
 |全局编录 LDAP|--|3268|  
-|全局编录 LDAP SSL|--|3269|  
 |RPC 终结点映射程序|135|135|  
 |RPC|--|动态（请参阅备注 6 **动态端口**）|  
 
@@ -391,9 +389,7 @@ Configuration Manager 不允许您为以下通信类型配置端口：
 |描述|UDP|TCP|  
 |-----------------|---------|---------|  
 |轻型目录访问协议 (LDAP)|--|389|  
-|LDAP（安全套接字层 [SSL] 连接）|636|636|  
 |全局编录 LDAP|--|3268|  
-|全局编录 LDAP SSL|--|3269|  
 |RPC 终结点映射程序|135|135|  
 |RPC|--|动态（请参阅备注 6 **动态端口**）|  
 
@@ -641,17 +637,9 @@ Configuration Manager 不允许您为以下通信类型配置端口：
 ### <a name="bkmk_discovery"></a>发现和发布
 使用下列端口发现和发布站点信息：
  - 轻型目录访问协议 (LDAP)：389
- - LDAP（安全套接字层 [SSL] 连接）：636
-
-
  - 全局编录 LDAP：3268
- - 全局编录 LDAP SSL：3269
-
-
  - RPC 端点映射程序：135
  - RPC：动态分配的高 TCP 端口
-
-
  - TCP：1024: 5000
  - TCP：49152: 65535
 

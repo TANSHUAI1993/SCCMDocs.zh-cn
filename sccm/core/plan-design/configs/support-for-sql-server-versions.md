@@ -2,7 +2,7 @@
 title: "支持的 SQL Server 版本 | Microsoft Docs"
 description: "获取托管 System Center Configuration Manager 站点数据库的 SQL Server 版本和配置要求。"
 ms.custom: na
-ms.date: 05/10/2017
+ms.date: 09/21/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ caps.latest.revision: "21"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: b35e45b9514297e2f9ce405a3244462ed735f39f
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 0e6613873c09b5e5df4f25ce0dbc16c289ccbd41
+ms.sourcegitcommit: b13fa2885acaa21f16c48df789f1edacb5a4f7cc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/21/2017
 ---
 # <a name="supported-sql-server-versions-for-system-center-configuration-manager"></a>System Center Configuration Manager 支持的 SQL Server 版本
 
@@ -212,7 +212,7 @@ SQL Server 事务复制仅支持将对象复制到配置为使用[数据库副�
  **SQL Server 服务：**  
  你可以将 SQL Server 服务配置为使用以下账户运行：  
 
--   **域本地用户**帐户：  
+-   低权限域用户帐户：  
 
     -   这是最佳做法，并且可能要求你手动注册该帐户的服务主体名称 (SPN)。  
 

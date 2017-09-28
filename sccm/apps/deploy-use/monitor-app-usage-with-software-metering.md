@@ -2,7 +2,7 @@
 title: "使用软件计数监视应用使用情况 | Microsoft Docs"
 description: 
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 09/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ caps.latest.revision: "8"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: d7bc0bebeb0355156553376a3535ed76d5e44835
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 87bafd8ce28d58993666057b6c5bfd8bdc0c4ed9
+ms.sourcegitcommit: 51654bf8b5615eb99084d0a20d18ca3fccfa83a1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 09/20/2017
 ---
 # <a name="software-metering-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的软件计数
 
@@ -86,7 +86,7 @@ ms.lasthandoff: 09/15/2017
         >
         >  如果为“文件名”  指定了值，则此框是可选的。
 
-    -   **版本** - 要计数的可执行文件的版本。 您可以使用通配符 (*) 表示任何字符串，也可以使用通配符 (?) 表示任何单个字符。 如果要计数可执行文件的所有版本，请使用默认值 (\*)。
+    -   **版本** - 要计数的可执行文件的版本。 可以使用通配符 (&#42;) 表示任何一串字符，也可以使用通配符 (?) 表示 任何一个字符。 若要计量可执行文件的所有版本，请使用默认值 (&#42;)。
 
     -   **语言** - 要计数的可执行文件的语言。 默认值为正在使用的操作系统的当前区域设置。 如果你通过单击“浏览”  按钮来选择要计数的可执行文件，则当文件标头中存在语言信息，系统会自动填充此框。 要对文件的所有语言版本计数，请在下拉列表中选择“任何”  。
 

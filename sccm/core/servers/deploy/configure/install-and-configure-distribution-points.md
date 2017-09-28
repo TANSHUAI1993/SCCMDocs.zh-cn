@@ -2,7 +2,7 @@
 title: "管理分发点 | Microsoft Docs"
 description: "使用分发点以承载部署到设备和用户的内容（文件和软件）。 此处介绍如何安装和配置这些分发点。"
 ms.custom: na
-ms.date: 2/14/2017
+ms.date: 09/18/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,16 +14,16 @@ caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 4c94e4de5bbfe621492e8682c9424a48eb38196d
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 0213b48c24461cbab5a9acab720064e0e26fa568
+ms.sourcegitcommit: 474e6ddbaaeac4ba17d8172321e08deeb0140d0a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/19/2017
 ---
 # <a name="install-and-configure-distribution-points-for-system-center-configuration-manager"></a>为 System Center Configuration Manager 安装和配置分发点
 
 *适用范围：System Center Configuration Manager (Current Branch)*
- 
+
 安装 System Center Configuration Manager 分发点以承载部署到设备和用户的内容（文件和软件）。 还可以创建分发点组，该组可简化管理分发点以及将内容分发到分发点的方式。  
 
  安装新的分发点（使用安装向导）或管理现有分发点属性（通过编辑分发点属性）时，可配置大多数分发点设置。 有几个设置仅安装或编辑时才可用，但无法同时可用：  
@@ -45,7 +45,8 @@ ms.lasthandoff: 08/07/2017
     -   **为分发点的数据传输配置计划**  
 
 ##  <a name="bkmk_install"></a>安装分发点  
- 你必须将站点系统服务器指定为分发点，然后才能将内容提供给客户端计算机使用。 你可以将分发点站点角色添加到新站点系统服务器，或将站点角色添加到现有站点系统服务器。  
+你必须将站点系统服务器指定为分发点，然后才能将内容提供给客户端计算机使用。 必须还将分发点分配给至少一个[边界组](/sccm/core/servers/deploy/configure/boundary-groups#distribution-points)，然后本地客户端计算机才能将此分发点用作内容源位置。 你可以将分发点站点角色添加到新站点系统服务器，或将站点角色添加到现有站点系统服务器。
+
 
  安装新的分发点时，可使用安装向导来帮助完成可用设置的配置。 开始之前，请注意以下问题：  
 
@@ -339,7 +340,7 @@ ms.lasthandoff: 08/07/2017
 >  虽然使用计算机的本地时间来指定内容验证计划，但 Configuration Manager 控制台仍会在 UTC 中显示该计划。  
 
 ### <a name="boundary-group"></a>边界组  
-管理为其分配此分发点的边界组。 可以将边界组与分发点关联。 在内容部署过程中，客户端必须位于与分发点关联的边界组中，才能将其用作内容的源位置。
+管理为其分配此分发点的边界组。 计划将分发点添加到至少一个边界组。 在内容部署过程中，客户端必须位于与分发点关联的边界组中，才能将此分发点用作内容源位置。
 
 此外：
 

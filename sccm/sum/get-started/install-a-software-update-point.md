@@ -69,7 +69,7 @@ ms.lasthandoff: 08/07/2017
 ### <a name="configure-ssl-communications-to-wsus"></a>配置与 WSUS 的 SSL 通信  
  你可以在向导的“常规”页上或软件更新点属性的“常规”选项卡上配置 SSL 通信。  
 
- 有关如何使用 SSL 的详细信息，请参阅 [Decide whether to configure WSUS to use SSL](../plan-design/plan-for-software-updates.md#BKMK_WSUSandSSL)。  
+ 有关如何使用 SSL 的详细信息，请参阅 [决定是否将 WSUS 配置为使用 SSL](../plan-design/plan-for-software-updates.md#BKMK_WSUSandSSL)。  
 
 ### <a name="wsus-server-connection-account"></a>WSUS 服务器连接帐户  
  你可以配置要在站点服务器连接到软件更新点上运行的 WSUS 时使用的帐户。 如果不配置此帐户，Configuration Manager 将使用要连接到 WSUS 的站点服务器的计算机帐户。 在向导的“代理和帐户设置”页上或“软件更新点属性”中的“代理和帐户设置”选项卡上配置 WSUS 服务器连接帐户。  可以在向导的不同位置中配置帐户，具体情况视使用的 Configuration Manager 版本而定。  

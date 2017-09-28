@@ -91,7 +91,7 @@ ms.lasthandoff: 08/26/2017
 1.  在控制台的设备节点中，找到要重启的设备。
 2.  右键单击设备，选择“客户端通知”，然后选择“重新启动”。 这将打开一个有关重启的信息窗口。 单击“确定” 确认重启请求。
 
-当客户端收到通知时，将打开“软件中心”通知窗口以通知用户重启。 默认情况下，重启会在 90 分钟后发生。 可以通过配置[客户端设置](/sccm/core/clients/deploy/configure-client-settings)来修改重启时间。 重启行为的设置可在默认设置的“计算机重启”[](/sccm/core/clients/deploy/about-client-settings#computer-restart)选项卡上找到。
+当客户端收到通知时，将打开“软件中心”通知窗口以通知用户重启。 默认情况下，重启会在 90 分钟后发生。 可以通过配置[客户端设置](/sccm/core/clients/deploy/configure-client-settings)来修改重启时间。 重启行为的设置可在默认设置的[“计算机重启”](/sccm/core/clients/deploy/about-client-settings#computer-restart)选项卡上找到。
 
 
 ### <a name="try-it-out"></a>试试看！

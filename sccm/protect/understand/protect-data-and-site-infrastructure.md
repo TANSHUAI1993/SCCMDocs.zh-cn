@@ -11,14 +11,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2117f786-d521-4790-9e8d-ec096c63c9d7
 caps.latest.revision: "8"
-author: Robstack
-ms.author: robstack
+author: arob98
+ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: d527cb4bfb55ca50c8d2a0fed7c427af5747fe99
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 0270a9039a42a4ed070a3a3a577a8848e662f577
+ms.sourcegitcommit: 474e6ddbaaeac4ba17d8172321e08deeb0140d0a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/19/2017
 ---
 # <a name="protect-data-and-site-infrastructure-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 保护数据和站点基础架构
 

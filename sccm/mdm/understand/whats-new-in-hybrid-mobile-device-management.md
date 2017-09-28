@@ -14,11 +14,11 @@ caps.latest.revision: "40"
 author: Mtillman
 ms.author: mtillman
 manager: angrobe
-ms.openlocfilehash: c93ba688ba33c309e4d12e924061718e5a33759e
-ms.sourcegitcommit: 31c670a4bce74fd64a7d46ebf7702f65b80d4147
+ms.openlocfilehash: 2ef4964a74e000feac029b158f6fe0c52e3de370
+ms.sourcegitcommit: 51654bf8b5615eb99084d0a20d18ca3fccfa83a1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 09/20/2017
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager 和 Microsoft Intune 的混合移动设备管理中的新增功能
 
@@ -36,9 +36,30 @@ ms.lasthandoff: 09/13/2017
 |**Configuration Manager Technical Preview 中的新增功能**| 此类别下列出的所有功能仅适用于指定的 Technical Preview 版本。 若要试用这些功能，必须安装功能说明中指定的 Technical Preview 版本。 有关详细信息，请参阅 [System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)。|
 |**Configuration Manager (Current Branch) 中的新增功能**| 此类别下列出的所有功能仅适用于指定的 Configuration Manager (Current Branch) 版本，例如版本 1511 或 1602。 如果要为混合部署使用较旧版本的 Configuration Manager，则必须升级到功能说明中指定的 Configuration Manager (Current Branch) 版本。 有关详细信息，请参阅[升级到 System Center Configuration Manager](../../core/servers/deploy/install/upgrade-to-configuration-manager.md)。|
 
+## <a name="september-2017"></a>2017 年 9 月
+
+### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能     
+
+- **向最终用户额外发送有关 Android Oreo 公司门户应用的推送通知** <!--1475932-->    
+    最终用户可以看到其他通知，其中指明了 Android Oreo 公司门户应用何时执行后台任务，如从 Intune 服务检索策略。 这进一步提高了透明度，可方便最终用户了解公司门户应用何时在其设备上执行管理任务。 这是 Android Oreo 公司门户应用的全部[公司门户 UI 优化](https://blogs.technet.microsoft.com/intunesupport/2017/08/21/android-8-0-o-behaviour-changes-and-microsoft-intune)中的一部分。 
+
+- **告知最终用户可以看到哪些 iOS 设备信息** <!--739894-->    
+    在 iOS 公司门户应用上，我们还在“设备详细信息”屏幕中添加了“所有权类型”。 这样，用户可以直接从此页在 Intune 最终用户文档中找到隐私的相关详情。用户还可以在“关于”屏幕上找到此类信息。 
+
+- **Android 公司门户应用的表述更易于理解** <!---1396349-->       
+    Android 公司门户应用的注册流程进行了简化，新增了文本，更易于最终用户进行注册。 若有自定义注册文档，不妨进行更新，以反映新屏幕。 有关示例图像，可以访问 [Intune 最终用户应用的 UI 更新](https://docs.microsoft.com/intune/whats-new-app-ui#week-of-september-11-2017)页。
+
+- **将 Windows 10 公司门户应用添加到 Windows 信息保护允许策略** <!-- 677129 -->    
+    Windows 10 公司门户应用已更新为支持 Windows 信息保护 (WIP)。 可以将应用添加到 WIP 允许策略。 此更改生效后，无需再将应用添加到“豁免”列表。 
+
+- **添加了 iOS 8.0 不再受支持的通知**    
+    添加了 iOS 8.0 不再受支持的通知。 有关详细信息，请参阅[通知](#notices)。
+
 ## <a name="august-2017"></a>2017 年 8 月
 
-### <a name="new-signed-in-experience-for-android-company-portal-users-and-app-protection-policy-users----621669---"></a>针对 Android 公司门户用户和应用保护策略用户的全新登录体验<!-- 621669 -->
+### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能     
+
+- **为 Android 公司门户用户和应用保护策略用户提供了新登录体验** <!-- 621669 -->    
 最终用户现在可以使用 Android 公司门户应用浏览应用、管理设备和查看 IT 联系人信息，而无需注册其 Android 设备。 此外，如果最终用户已使用受 Intune 应用保护策略保护的应用并启动了 Android 公司门户，则最终用户将不会再收到注册设备的提示。
 
 
@@ -311,6 +332,10 @@ Configuration Manager (Current Branch) 1702 版本中还包括以下其他混合
 
 
 ## <a name="notices"></a>通知
+
+### <a name="end-of-support-for-ios-80"></a>iOS 8.0 不再受支持 
+<!---1164477--->
+托管应用和 iOS 公司门户应用将要求必须使用 iOS 9.0 及更高版本，才能访问公司资源。 9 月前未更新的设备将无法再访问公司门户或这些应用。 
 
 ### <a name="platform-support-reminder-windows-phone-81-mainstream-support-ended-july-11-2017"></a>平台支持提醒：Windows Phone 8.1 主流支持将于 2017 年 7 月 11 日终止
 <!-- 1327781 -->
