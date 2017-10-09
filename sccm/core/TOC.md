@@ -103,6 +103,7 @@
 ###  [设置实验室](get-started/set-up-your-lab.md)
 
 ##   [技术预览](get-started/technical-preview.md)
+###  [1709 中的功能](get-started/capabilities-in-technical-preview-1709.md)
 ###  [1708 中的功能](get-started/capabilities-in-technical-preview-1708.md)
 ###  [1707 中的功能](get-started/capabilities-in-technical-preview-1707.md)
 ###  [1706 中的功能](get-started/capabilities-in-technical-preview-1706.md)
@@ -115,12 +116,12 @@
 ###  [1611 中的功能](get-started/capabilities-in-technical-preview-1611.md)
 ###  [1610 中的功能](get-started/capabilities-in-technical-preview-1610.md)
 ###  [1609 中的功能](get-started/capabilities-in-technical-preview-1609.md)
-###  [1608 中的功能](get-started/capabilities-in-technical-preview-1608.md)
-###  [1607 中的功能](get-started/capabilities-in-technical-preview-1607.md)
-###  [1606 中的功能](get-started/capabilities-in-technical-preview-1606.md)
-###  [1605 中的功能](get-started/capabilities-in-technical-preview-1605.md)
 
 <!-- No longer in support, and all features are in the Current Branch
+###  [Capabilities in 1608](get-started/capabilities-in-technical-preview-1608.md)
+###  [Capabilities in 1607](get-started/capabilities-in-technical-preview-1607.md)
+###  [Capabilities in 1606](get-started/capabilities-in-technical-preview-1606.md)
+###  [Capabilities in 1605](get-started/capabilities-in-technical-preview-1605.md)
 ###  [Capabilities in 1604](get-started/capabilities-in-technical-preview-1604.md)
 ###  [Capabilities in 1603](get-started/capabilities-in-technical-preview-1603.md)
 ###  [Capabilities in 1602](get-started/capabilities-in-technical-preview-1602.md)
