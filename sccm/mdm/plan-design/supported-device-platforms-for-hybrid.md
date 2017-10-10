@@ -2,7 +2,7 @@
 title: "混合 MDM 的受支持的平台 | Microsoft Docs"
 description: "混合 MDM 的受支持的平台。"
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 09/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: Mtillman
 ms.author: mtillman
 manager: angrobe
-ms.openlocfilehash: 8e7caef5b7271a9c850513cad26b49426bc0c7a2
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: d5cebd7301582b1f7ebff58e145c47636685b66b
+ms.sourcegitcommit: 8faf42135a8dc9c384407e64f3f8ba204fb15847
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="supported-device-platforms-for-hybrid-mdm"></a>混合 MDM 的受支持的平台
 

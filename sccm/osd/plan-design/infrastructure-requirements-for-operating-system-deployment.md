@@ -14,11 +14,11 @@ caps.latest.revision: "24"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: 167e639cdb9995fd743787cc9fbf364ec70f6ed9
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 523c7e7fd406274b0c0d88fcc4bd6b6247fa34e8
+ms.sourcegitcommit: c145e515843a0f37c2e5ca5dbd22072a219d06b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/03/2017
 ---
 # <a name="infrastructure-requirements-for-operating-system-deployment-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的操作系统部署的基础架构要求
 
@@ -40,7 +40,7 @@ System Center 2012 Configuration Manager 中的操作系统部署具有外部依
 
 -   Windows 预安装环境 (Windows PE)
 
-有关可对不同版本 Configuration Manager 使用的 Windows 10 ADK 版本列表，请参阅[对作为客户端的 Windows 10 的支持](https://docs.microsoft.com/en-us/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk)。
+有关可对不同版本 Configuration Manager 使用的 Windows 10 ADK 版本列表，请参阅[对作为客户端的 Windows 10 的支持](https://docs.microsoft.com/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk)。
 
  <sup>1</sup> SMS 提供程序站点系统服务器上不需要 USMT。  
 

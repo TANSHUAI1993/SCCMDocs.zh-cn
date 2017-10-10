@@ -16,11 +16,11 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: noindex
-ms.openlocfilehash: 5b5540c35c02df6e3d06e4aa9269b8da3238233e
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 5ec1e9368e836382b143d7b2bf9d1a6a7bc2fa22
+ms.sourcegitcommit: 96b79fa091f44e8e6ac5652f6cbbb4b873a8bad9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/09/2017
 ---
 # <a name="schema-extensions-for-system-center-configuration-manager"></a>System Center Configuration Manager 的架构扩展
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 08/07/2017
 
 -   建议扩展 Active Directory 架构，但这不是必需的。  
 
-在 [扩展 Active Directory 架构](https://msdnstage.redmond.corp.microsoft.com/en-US/library/mt345589\(TechNet.10\).aspx)之前，你应该熟悉 Active Directory 域服务并熟悉 [修改 Active Directory 架构](https://technet.microsoft.com/library/cc759402\(v=ws.10\).aspx)。  
+在 [扩展 Active Directory 架构](https://docs.microsoft.com/en-us/sccm/core/plan-design/network/extend-the-active-directory-schema)之前，你应该熟悉 Active Directory 域服务并熟悉 [修改 Active Directory 架构](https://technet.microsoft.com/library/cc759402\(v=ws.10\).aspx)。  
 
 ## <a name="considerations-for-extending-the-active-directory-schema-for-configuration-manager"></a>扩展 Configuration Manager 的 Active Directory 架构时的注意事项  
 
