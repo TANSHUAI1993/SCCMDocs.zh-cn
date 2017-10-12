@@ -2,7 +2,7 @@
 title: "SQL Server AlwaysOn | Microsoft 文档"
 description: "计划将 SQL Server AlwaysOn 可用性组与 SCCM 配合使用。"
 ms.custom: na
-ms.date: 7/31/2017
+ms.date: 09/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ caps.latest.revision: "16"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: c746365238e1255d73387a9496521bb03a56b21b
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 3e275f6203a9e0b9210bfbadbf9addf64f6533d8
+ms.sourcegitcommit: 8faf42135a8dc9c384407e64f3f8ba204fb15847
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>准备将 SQL Server AlwaysOn 可用性组与 Configuration Manager 配合使用
 
@@ -100,7 +100,7 @@ Configuration Manager 支持在以下位置使用可用性组：
 
 -     RCP 终结点映射程序 - **TCP 135**   
 -     服务器消息块 – **TCP 445**  
-    数据库移动完成后，可以删除此端口。从版本 1702 开始，不再需要此端口。*
+    数据库移动完成后，可以删除此端口。从版本 1702 开始，不再需要此端口。
 -     SQL Server Service Broker -  **TCP 4022**
 -     SQL over TCP – **TCP 1433**   
 
@@ -210,8 +210,11 @@ Configuration Manager 支持在以下位置使用可用性组：
 ## <a name="limitations-and-known-issues"></a>限制和已知问题
 以下限制适用于所有方案。   
 
-**不支持 Basic 可用性组：**  
-随着 SQL Server 2016 Standard 版本的推出，[Basic 可用性组](https://msdn.microsoft.com/library/mt614935.aspx)不支持对次要副本的读取访问，这是与 Configuration Manager 配合使用的要求。
+不受支持的 SQL Server 选项和配置：
+- 基本可用性组  
+  随着 SQL Server 2016 Standard 版本的推出，[Basic 可用性组](https://msdn.microsoft.com/library/mt614935.aspx)不支持对次要副本的读取访问，这是与 Configuration Manager 配合使用的要求。
+- 故障转移群集实例  
+  与 Configuration Manager 一起使用的副本不支持[故障转移群集实例](/sql/sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server)。
 
 **托管其他可用性组的 SQL Server：**   
 在 Configuration Manager 版本 1610 之前，当 SQL Server 上的可用性组托管除用于 Configuration Manager 的组之外的一个或多个可用性组时，每个其他可用性组中的每个副本必须在运行 Configuration Manager 安装程序或安装 Configuration Manager 更新时进行以下配置：

@@ -1,6 +1,6 @@
 ---
 title: "更改 MDM 机构 | Microsoft 文档"
-description: "了解如何将 MDM 机构从 Configuration Manager（混合）更改为 Intune (Standalone)，反之亦然。"
+description: "了解如何将 MDM 机构从 Configuration Manager（混合）更改为 Intune 独立版"
 keywords: 
 author: dougeby
 manager: angrobe
@@ -9,14 +9,17 @@ ms.topic: article
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: cc397ab5-125f-4f17-905b-fab980194f49
-ms.openlocfilehash: d24e6e736397a4612db7b47e997d8cb1f97c4de9
-ms.sourcegitcommit: 948644072bd158b156f782a4376bcd50fac7c73a
+ms.openlocfilehash: 489c01f92d42ed12ac5464307a16713ca898d251
+ms.sourcegitcommit: 8ac9c2c9ba1fdcbb7cc8d5be898586865fcf67c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/07/2017
 ---
 # <a name="change-your-mdm-authority"></a>更改 MDM 机构
 从 Configuration Manager 1610 版本开始，可以更改 MDM 机构而无需联系 Microsoft 支持部门，也无需取消注册并重新注册现有的受管理设备。 本主题提供将从 Configuration Manager 控制台（混合）配置的现有 Microsoft Intune 租户更改为 Intune 独立版的步骤。
+
+> [!Note]    
+> 如果要更改现有的 Microsoft Intune 租户，同时将 MDM 机构设置为 Intune、Configuration Manager（混合），请参阅[更改 MDM 机构](https://docs.microsoft.com/intune-classic/deploy-use/change-mdm-authority)。
 
 > [!Important]    
 > 本主题旨在当以前尚未迁移用户时更改 MDM 机构。 若要在[迁移用户子集](migrate-hybridmdm-to-intunesa.md)后更改 MDM 机构，请参阅[更改 MDM 机构](migrate-change-mdm-authority.md)。

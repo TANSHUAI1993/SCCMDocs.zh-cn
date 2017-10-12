@@ -14,11 +14,11 @@ caps.latest.revision:
 author: mtillman
 ms.author: mtillman
 manager: angrobe
-ms.openlocfilehash: 4fd2d3b8aae6a2f42e7c6a87723d16368be30984
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: d353f47671a0c1e67c34bb9641fa9dd007b9f8be
+ms.sourcegitcommit: c145e515843a0f37c2e5ca5dbd22072a219d06b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/03/2017
 ---
 # <a name="troubleshoot-lookout-integration-with-intune"></a>使用 Intune 对 Lookout 集成进行故障排除
 
@@ -34,7 +34,7 @@ Lookout MTP 配置为仅允许来自已配置的 Azure AD 组的用户访问。 
 
 * 电子邮件：enterprisesupport@lookout.com
 * 登录 [MTP 控制台](http://aad.lookout.com)，导航到“支持”模块。
-* 转到：https://enterprise.support.lookout.com/hc/en-us/requests，提出支持请求。
+* 转到 https://enterprise.support.lookout.com/hc/requests，然后提出支持请求。
 
 ### <a name="unable-to-sign-in"></a>无法登录
 在 Azure AD 全局管理员用户尚未接受初始 Lookout 安装程序时，可能会看到以下错误。
@@ -73,7 +73,7 @@ Lookout MTP 配置为仅允许来自已配置的 Azure AD 组的用户访问。 
 在 Lookout MTP 控制台的“设备”模块中，管理员可以选择该设备，然后选择将其删除。   设备所有者下一次打开 Lookout for Work 应用并点击“激活”时，设备状态将执行完整的重新同步。
 
 ### <a name="the-owner-of-the-device-is-no-longer-using-this-device"></a>设备的所有者将不能再使用此设备
-必须擦除设备并要求新用户按[本主题](https://docs.microsoft.com/en-us/sccm/mdm/deploy-use/wipe-lock-reset-devices#full-wipe)中所述方法进行注册。
+必须擦除设备并要求新用户按[本主题](https://docs.microsoft.com/sccm/mdm/deploy-use/wipe-lock-reset-devices#full-wipe)中所述方法进行注册。
 
 
 此外，可转到 Lookout MTP 控制台的“设备”模块，然后选择“删除”。

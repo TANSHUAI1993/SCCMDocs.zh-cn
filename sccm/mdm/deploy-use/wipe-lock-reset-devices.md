@@ -2,7 +2,7 @@
 title: "使用 System Center Configuration Manager，通过远程擦除、锁定或密码重置功能保护数据 | Microsoft Docs"
 description: "使用 System Center Configuration Manager，通过完全擦除、选择性擦除、远程锁定或密码重置功能保护设备数据。"
 ms.custom: na
-ms.date: 03/27/2017
+ms.date: 09/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,14 +12,14 @@ ms.topic: article
 ms.assetid: 770da7bd-02dd-474a-9604-93ff1ea0c1e4
 caps.latest.revision: "18"
 caps.handback.revision: "0"
-author: nathbarn
-ms.author: nathbarn
+author: dougeby
+ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 351fdc6328dd0859d60e00b128963df738e69f81
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: ea92d7b4656a04f312f04c19cac6b17df931c9c5
+ms.sourcegitcommit: db079cd7322e7d4926b2df0ccb37e752c570d902
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="protect-data-with-remote-wipe-lock-or-passcode-reset-by-using-system-center-configuration-manager"></a>使用 System Center Configuration Manager，通过远程擦除、锁定或密码重置功能保护数据
 
@@ -179,6 +179,9 @@ EFS 选择性擦除当前支持的数据和应用：
 |Windows RT 8.1 |不支持。|  
 |Windows 8.1 电脑 |不支持。|  
 
+> [!Note]    
+> 必须在环境中的顶层站点上执行密码重置操作。 例如，如果使用管理中心站点，则只能在该站点中执行该操作。 如果使用独立的主站点，则只能在该站点执行该操作。
+
 #### <a name="to-reset-the-passcode-on-a-mobile-device-remotely-in-configuration-manager"></a>在 Configuration Manager 中远程重置移动设备上的密码  
 
 1. 在 Configuration Manager 控制台中，选择“资产和符合性”，然后选择“设备”。 或者，可以选择“设备集合”并选择一个集合。  
@@ -206,6 +209,9 @@ EFS 选择性擦除当前支持的数据和应用：
 |Windows Phone 8 和 Windows Phone 8.1|支持。|  
 |Windows RT 8.1 |如果设备的当前用户是注册设备的相同用户，则支持。|  
 |Windows 8.1|如果设备的当前用户是注册设备的相同用户，则支持。|  
+
+> [!Note]    
+> 必须在环境中的顶层站点上执行远程锁定操作。 例如，如果使用管理中心站点，则只能在该站点中执行该操作。 如果使用独立的主站点，则只能在该站点执行该操作。
 
 #### <a name="to-lock-a-mobile-device-remotely-through-the-configuration-manager-console"></a>通过 Configuration Manager 控制台远程锁定移动设备  
 

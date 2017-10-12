@@ -2,7 +2,7 @@
 title: "Configuration Manager 的混合 MDM 中的新增功能 | Microsoft Docs"
 description: "了解 Configuration Manager 和 Intune 的混合部署可用的新移动设备管理功能。"
 ms.custom: na
-ms.date: 06/30/2017
+ms.date: 10/04/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -10,25 +10,29 @@ ms.technology: configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
-caps.latest.revision: "40"
-author: Mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 2ef4964a74e000feac029b158f6fe0c52e3de370
-ms.sourcegitcommit: 51654bf8b5615eb99084d0a20d18ca3fccfa83a1
+ms.openlocfilehash: 6c2c6ffee3b2084ede61e5602a78bf5ca82446f6
+ms.sourcegitcommit: 6c70e0af8d9af208009641786a3b555db4482e97
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2017
+ms.lasthandoff: 10/05/2017
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager 和 Microsoft Intune 的混合移动设备管理中的新增功能
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-本文提供有关 System Center Configuration Manager 和 Microsoft Intune 的混合部署的可用的新移动设备管理 (MDM) 功能的详细信息。  
+本文提供有关 System Center Configuration Manager 和 Microsoft Intune 的混合部署的可用的新移动设备管理 (MDM) 功能的详细信息。     
+
+> [!Note]    
+> Azure 上的 Intune 是 Microsoft 建议的 MDM 解决方案。     
+> - 若有详细了解 Intune 独立版中的新增功能和更新，请参阅 [Intune 中的新增功能](https://docs.microsoft.com/intune/whats-new)。    
+> - 有关如何迁移到 Intune 独立版的详细信息，请参阅[将混合 MDM 用户和设备迁移到 Intune 独立版](https://docs.microsoft.com/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa)。
+> - 有关 Intune 和混合 MDM 的 UI 更新的详细信息，请参阅 [Intune 最终用户应用的 UI 更新](https://docs.microsoft.com/intune/whats-new-app-ui)。 
 
 ##  <a name="compatibility-with-configuration-manager-versions"></a>与 Configuration Manager 版本的兼容性  
-
- 本文的每个部分都列出了混合功能，并按 3 个不同类别进行分类。 请使用以下指南，确定每个类别中的功能与不同版本的 Configuration Manager 的兼容性：  
+本文的每个部分都列出了混合功能，并按 3 个不同类别进行分类。 请使用以下指南，确定每个类别中的功能与不同版本的 Configuration Manager 的兼容性：  
 
 |功能类别|描述|
 |-|-|
@@ -40,8 +44,8 @@ ms.lasthandoff: 09/20/2017
 
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能     
 
-- **向最终用户额外发送有关 Android Oreo 公司门户应用的推送通知** <!--1475932-->    
-    最终用户可以看到其他通知，其中指明了 Android Oreo 公司门户应用何时执行后台任务，如从 Intune 服务检索策略。 这进一步提高了透明度，可方便最终用户了解公司门户应用何时在其设备上执行管理任务。 这是 Android Oreo 公司门户应用的全部[公司门户 UI 优化](https://blogs.technet.microsoft.com/intunesupport/2017/08/21/android-8-0-o-behaviour-changes-and-microsoft-intune)中的一部分。 
+- 向 Windows 10 版公司门户应用中添加了刷新操作 <!-- 1132468 -->    
+    通过 Windows 10 版公司门户应用，用户可以通过下拉刷新或在桌面上按 F5 来刷新应用中的数据。
 
 - **告知最终用户可以看到哪些 iOS 设备信息** <!--739894-->    
     在 iOS 公司门户应用上，我们还在“设备详细信息”屏幕中添加了“所有权类型”。 这样，用户可以直接从此页在 Intune 最终用户文档中找到隐私的相关详情。用户还可以在“关于”屏幕上找到此类信息。 

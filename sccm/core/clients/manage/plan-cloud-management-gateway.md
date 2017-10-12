@@ -1,18 +1,18 @@
 ---
 title: "规划云管理网关 | Microsoft Docs"
 description: 
-ms.date: 06/07/2017
+ms.date: 10/06/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: d3e658714c30a1eba64f94e248d5e11095ca1dcb
-ms.sourcegitcommit: f6a428a8db7145affa388f59e0ad880bdfcf17b5
+ms.openlocfilehash: c3d036eb91d16ed95c26bbf2bcce1e37851f90a2
+ms.sourcegitcommit: 8ac9c2c9ba1fdcbb7cc8d5be898586865fcf67c0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/07/2017
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>在 Configuration Manager 中规划云管理网关
 
@@ -46,9 +46,9 @@ ms.lasthandoff: 09/14/2017
 
     -   客户端部署
     -   自动站点分配
-    -   用户策略
     -   应用程序目录（包括软件审批请求）
     -   完整的操作系统部署 (OSD)
+    -   任务序列（全部）
     -   Configuration Manager 控制台
     -   远程工具
     -   报表网站
@@ -61,7 +61,7 @@ ms.lasthandoff: 09/14/2017
 ## <a name="cost-of-cloud-management-gateway"></a>云管理网关的费用
 
 >[!IMPORTANT]
->下面提供的费用信息仅用作估算用途。 环境可能具有其他可影响使用云管理网关总费用的变量。
+>以下费用信息仅用作估算用途。 环境可能具有其他可影响使用云管理网关总费用的变量。
 
 云管理网关使用以下 Microsoft Azure 功能，这些功能会向 Azure 订阅帐户收取费用：
 
@@ -78,7 +78,7 @@ ms.lasthandoff: 09/14/2017
 
 -   出站数据传输
 
-    -   流出服务之外的数据会产生费用... 请参阅 [Azure 带宽定价详细信息](https://azure.microsoft.com/en-us/pricing/details/bandwidth/)以帮助确定潜在的费用。
+    -   流出服务之外的数据会产生费用。 请参阅 [Azure 带宽定价详细信息](https://azure.microsoft.com/pricing/details/bandwidth/)以帮助确定潜在的费用。
 
     -   出于估算目的，可假设基于 Internet 的客户端每隔一小时执行策略刷新，每个客户端每月大约耗费 100 MB。
 
@@ -111,14 +111,14 @@ ms.lasthandoff: 09/14/2017
 
 ### <a name="how-is-the-cloud-management-gateway-deployed"></a>如何部署云管理网关？
 
-服务连接点上的云服务管理器组件负责处理所有 CMG 部署任务。 此外，它还可以监视并报告 Azure AD 中的服务运行状况和日志信息。
+服务连接点上的云服务管理器组件负责处理所有 CMG 部署任务。 此外，它还可以监视并报告 Azure AD 中的服务运行状况和日志信息。 确保服务连接点处于[联机模式](/sccm/core/servers/deploy/configure/about-the-service-connection-point#bkmk_modes)。
 
 #### <a name="certificate-requirements"></a>证书要求
 
 必须有以下证书，才能保护 CMG：
 
 - **管理证书** - 这可以是包括自签名证书在内的任何证书。 可以使用上载到 Azure AD 中的公共证书或导入 Configuration Manager 的[含私钥的 PFX](/sccm/mdm/deploy-use/create-pfx-certificate-profiles)，从而使用 Azure AD 进行身份验证。
-- **Web 服务证书** - 建议使用公共 CA 证书来获取客户端的本机信任。 必须在公共 DNS 注册机构中创建 CName。 不支持使用通配符证书。
+- **Web 服务证书** - 建议使用公共 CA 证书来获取客户端的本机信任。 在公共 DNS 注册机构中创建 CName。 不支持使用通配符证书。
 - **上载到 CMG 中的根/SubCA 证书** - CMG 需要对客户端 PKI 证书进行全链验证。 如果使用企业 CA 颁发客户端 PKI 证书，且 Internet 上没有其根或从属 CA，那么就必须将其上载到 CMG 中。
 
 #### <a name="deployment-process"></a>部署过程
@@ -131,6 +131,9 @@ ms.lasthandoff: 09/14/2017
 - 在 Azure AD 服务器上设置 CMG 组件，然后在 Internet Information Services (IIS) 中配置终结点、HTTP 处理程序和服务
 
 如果更改 CMG 的配置，则会启动配置 CMG 部署。
+
+### <a name="where-do-i-set-up-the-cloud-management-gateway"></a>在哪里设置云管理网关？
+可在层次结构的顶层站点创建云管理网关。 如果该站点为管理中心站点，则可在子级主站点创建 CMG 连接点。
 
 ### <a name="how-does-the-cloud-management-gateway-help-ensure-security"></a>云管理网关是如何帮助确保安全性的？
 
@@ -164,7 +167,7 @@ URL 对每个管理点都是唯一的。 然后，Configuration Manager 客户�
 
 ### <a name="what-ports-are-used-by-the-cloud-management-gateway"></a>云管理网关使用哪些端口？
 
-- 在本地网络上，不需要使用任何入站端口。 部署 CMG 后将会自动在 CMG 上创建各种端口。
+- 本地网络不需要任何入站端口。 部署 CMG 后将会自动在 CMG 上创建各种端口。
 - 除了端口 443，CMG 连接点还需要使用一些出站端口。
 
 |||||

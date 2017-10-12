@@ -14,11 +14,11 @@ caps.latest.revision: "15"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 5148fe852e4d63e1cfd2d5b9c62369155dbecb89
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: ef515da67a7293de60a7678dee69e9785d339352
+ms.sourcegitcommit: 96b79fa091f44e8e6ac5652f6cbbb4b873a8bad9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/09/2017
 ---
 # <a name="about-client-installation-properties-in-system-center-configuration-manager"></a>关于 System Center Configuration Manager 中的客户端安装属性
 
@@ -179,7 +179,7 @@ CCMSetup 放弃下载客户端安装文件之前将尝试的时间长度 - 以�
 
  如果未指定，则客户端将在建立 HTTPS 连接之前检查 CRL。  
 
- 有关客户端 CRL 检查的详细信息，请参阅 [Plan for Security 中的 System Center Configuration Manager](../../plan-design/security/plan-for-security.md#BKMK_PlanningForCRLs) 中的[Plan for security 中的 System Center Configuration Manager](../../plan-design/security/plan-for-security.md)。  
+ 有关客户端 CRL 检查的详细信息，请参阅[规划 System Center Configuration Manager 中的安全性](../../plan-design/security/plan-for-security.md)中的[规划 PKI 证书吊销](../../plan-design/security/plan-for-security.md#BKMK_PlanningForCRLs)。  
 
  示例：`CCMSetup.exe /UsePKICert /NoCRLCheck`  
 
@@ -332,7 +332,7 @@ CCMSetup 放弃下载客户端安装文件之前将尝试的时间长度 - 以�
 
  不要将此选项与 SMSSITECODE=AUTO 安装属性一起指定。 基于 Internet 的客户端必须直接分配到基于 Internet 的站点。  
 
- 示例：`CCMSetup.exe  /UsePKICert/ CCMHOSTNAME="SMSMP01.corp.contoso.com"`  
+ 示例：`CCMSetup.exe  /UsePKICert CCMHOSTNAME="SMSMP01.corp.contoso.com"`  
 
 ### <a name="ccmhttpport"></a>CCMHTTPPORT
 
@@ -402,7 +402,7 @@ CCMSetup 放弃下载客户端安装文件之前将尝试的时间长度 - 以�
 
 指定接收和处理 Configuration Manager 客户端计算机发送的状况消息的回退状态点。  
 
-有关回退状态点的详细信息，请参阅[确定是否需要回退状态点](/sccm/core/clients/deploy/plan#determine-if-you-need-a-fallback-status-point)。  
+有关回退状态点的详细信息，请参阅[确定是否需要回退状态点](/sccm/core/clients/deploy/plan/determine-the-site-system-roles-for-clients#determine-if-you-need-a-fallback-status-point)。  
 
 示例：`CCMSetup.exe FSP=SMSFP01`  
 

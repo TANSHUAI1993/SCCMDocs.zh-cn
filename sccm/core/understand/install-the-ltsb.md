@@ -14,11 +14,11 @@ caps.latest.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 06565bc52e2c409b905bbc448262cf9da25eabb0
-ms.sourcegitcommit: 4c3906cf9614420cb8527da9e48978eb0b8f0e7a
+ms.openlocfilehash: 247fbe5313c17be906802acfaa6952ab3358122e
+ms.sourcegitcommit: a17f5dece340a70cedbec03d19938dab90ae60b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 10/06/2017
 ---
 # <a name="install-and-upgrade-with-the-version-1606-baseline-media-for-system-center-configuration-manager"></a>使用 1606 版基线介质安装或升级 System Center Configuration Manager
 
@@ -86,7 +86,7 @@ ms.lasthandoff: 09/22/2017
 
   **密钥名称：SABranchOptions**
    -    **SAActive = 1**
-   - ** = 1**
+   -  **= 1**
 
 
 > [!IMPORTANT]  
@@ -121,14 +121,14 @@ ms.lasthandoff: 09/22/2017
 **升级到 LTSB：**  
 - 升级前清单中要遵循的附加步骤。
 - 在安装期间，必须选择 LTSB，这样才能为软件保障协议指定详细信息。
-- 只能升级可运行 System Center 2012 Configuration Manager Service Pack 2 或 System Center 2012 R2 Configuration Manager Service Pack 1 的站点。
+- 只能升级运行以下版本的站点：System Center 2012 Configuration Manager with Service Pack 1、System Center 2012 Configuration Manager with Service Pack 2、System Center 2012 R2 Configuration Manager with Service Pack 1 或 System Center 2012 R2 Configuration Manager（不含服务包）。
 
 ### <a name="in-place-upgrade-paths-for-the-1606-baseline-media"></a>1606 版基线介质的就地升级路径
 可以使用 1606 版基线介质将以下版本升级到 System Center Configuration Manager 的许可版本：
 - System Center 2012 R2 Configuration Manager Service Pack 1
 - 不含服务包的 System Center 2012 R2 Configuration Manager（这要求使用 2016 年 12 月 15 日发布的适用于版本 1606 的基线媒体）。
 - System Center 2012 Configuration Manager Service Pack 2
-- System Center 2012 Configuration Manager Service Pack 1
+- System Center 2012 Configuration Manager with Service Pack 1（这要求使用 2016 年 12 月 15 日发布的适用于版本 1606 的基线媒体。）
 
 
 此介质还可用于将 Current Branch 的未经许可评估版升级到完全许可版本。

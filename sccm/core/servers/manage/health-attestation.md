@@ -2,7 +2,7 @@
 title: "运行状况证明 | Microsoft Docs"
 description: "了解可在 Configuration Manager 控制台中查看的设备运行状况证明功能。"
 ms.custom: na
-ms.date: 03/27/2017
+ms.date: 10/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ caps.latest.revision: "17"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.openlocfilehash: 54b3433a002b8ef29059bab04458138348f95d66
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 11d58237ea1e88785f6991450b3e898562b23918
+ms.sourcegitcommit: a17f5dece340a70cedbec03d19938dab90ae60b1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/06/2017
 ---
 # <a name="health-attestation-for-system-center-configuration-manager"></a>System Center Configuration Manager 的运行状况证明
 
@@ -37,9 +37,9 @@ ms.lasthandoff: 08/07/2017
 
  **要求：**  
 
--   运行 Windows 10 版本 1607 或 Windows Server 2016 版本 1607 的客户端设备，并[启用了设备运行状况证明](https://technet.microsoft.com/windows-server-docs/security/device-health-attestation)
--    启用了 TPM 1.2 或 TPM 2 的设备
--   Configuration Manager 客户端代理和has.spserv.microsoft.com（端口 443）运行状况证明服务（云管理）之间的通信或使用启用了设备运行状况证明的管理点（本地）
+-   运行 Windows 10 版本 1607 或 Windows Server 2016 版本 1607 的客户端设备，并[启用了设备运行状况证明](https://technet.microsoft.com/windows-server-docs/security/device-health-attestation)。
+-   启用了 TPM 1.2 或 TPM 2 的设备。
+-   使用云管理时，Configuration Manager 客户端代理和使用 has.spserv.microsoft.com（端口 443）运行状况证明服务的管理点（云管理）之间的通信。 位于本地时，客户端须能够与启用了设备运行状况证明的管理点进行通信。
 
 ### <a name="how-to-enable-health-attestation-service-communication-on-configuration-manager-client-computers"></a>如何在 Configuration Manager 客户端计算机上启用运行状况证明服务通信
 

@@ -15,11 +15,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 8dac6df60b07461d6410d305723b3f03fb09fa16
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 0619da4cba35d6163761a90e28b39c1976f61b48
+ms.sourcegitcommit: 96b79fa091f44e8e6ac5652f6cbbb4b873a8bad9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/09/2017
 ---
 # <a name="recommended-hardware-for-system-center-configuration-manager"></a>用于 System Center Configuration Manager 的推荐硬件
 
@@ -43,7 +43,7 @@ ms.lasthandoff: 08/07/2017
 
 ###  <a name="bkmk_ScaleSiteServer"></a>站点服务器  
 
-|独立主站点|CPU（核心数）|内存(GB)|SQL Server 的内存分配 (%)|  
+|网站配置|CPU（核心数）|内存(GB)|SQL Server 的内存分配 (%)|  
 |-------------------------------|---------------|---------------|----------------------------------------|  
 |数据库站点角色在同一服务器上的独立主站点服务器<sup>1</sup>|16|96|80|  
 |具有远程站点数据库的独立主站点服务器|8|16|-|  
