@@ -3,11 +3,11 @@ layout: HubPage
 hide_bc: True
 title: "System Center Configuration Manager 文档"
 description: "了解如何使用 System Center Configuration Manager。"
-ms.openlocfilehash: 6a4079f2c89130ce4bbd24b0015f0b873021f9b6
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 652ea335d40c920f322a4aa24fb195a736e3f3a5
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 <div id="main" class="v2">
     <div class="container">
