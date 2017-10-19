@@ -48,7 +48,7 @@ ms.lasthandoff: 08/07/2017
 5.  在“创建注册配置文件”中，键入注册配置文件的名称，然后选择你希望具有该注册配置文件的用户使用的管理站点代码。 单击“确定”  数次以退出“默认设置”页。  
 
 > [!NOTE]  
->  如果你希望将注册配置文件部署到的已发现用户的子集，则可以使用用户集合，并创建要部署到该集合的自定义客户端设置。 有关创建自定义客户端设置的信息，请参阅 [How to configure client settings in System Center Configuration Manager](../../core/clients/deploy/configure-client-settings.md)  
+>  如果你希望将注册配置文件部署到的已发现用户的子集，则可以使用用户集合，并创建要部署到该集合的自定义客户端设置。 有关创建自定义客户端设置的信息，请参阅 [如何在 System Center Configuration Manager 中配置客户端设](../../core/clients/deploy/configure-client-settings.md)  
 
 ##  <a name="bkmk_addClient"></a> 为注册的设备设置其他客户端设置  
  除了为新式设备设置注册配置文件之外，还可以设置其他客户端设置以便在注册设备时配置它们。  有关设置客户端设置的信息，请参阅[如何在 System Center Configuration Manager 中配置客户端设置](../../core/clients/deploy/configure-client-settings.md)。  
