@@ -771,7 +771,7 @@ Configuration Manager 日志文件存储在多个位置中，该位置取决于�
  下表列出了包含与使用 LAN 唤醒相关的信息的日志文件。  
 
 > [!NOTE]  
->  使用唤醒代理对 LAN 唤醒进行补充时，会在客户端上记录此活动。 例如，请参阅本主题的[客户端操作](#BKMK_ClientOpLogs)部分中的 CcmExec.log 和 SleepAgent_<*domain*\>@SYSTEM_0.log。  
+>  使用唤醒代理对 LAN 唤醒进行补充时，会在客户端上记录此活动。 例如，请参阅本主题的[客户端操作](#BKMK_ClientOpLogs)部分中的 CcmExec.log 和 SleepAgent_<*domain*\>@SYSTEM_0.log 。  
 
 |日志名称|说明|带有日志文件的计算机|  
 |--------------|-----------------|----------------------------|  
