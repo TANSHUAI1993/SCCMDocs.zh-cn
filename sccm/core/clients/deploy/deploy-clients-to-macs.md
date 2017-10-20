@@ -125,7 +125,7 @@ ms.lasthandoff: 09/15/2017
 
         -   “域\名称”。 例如：“contoso\mnorth”  
 
-        -   'user@domain'. 例如：“mnorth@contoso.com”  
+        -   'user@domain'.  例如：“mnorth@contoso.com”  
 
             > [!IMPORTANT]  
             >  使用电子邮件地址填充“用户名”字段时，Configuration Manager 将自动使用该电子邮件地址的域名和注册代理点服务器的默认名称填充“服务器名称”字段。 如果此域名和服务器名称与注册代理点服务器的名称不匹配，请告知用户在注册其 Mac 计算机时要使用的正确名称。  
@@ -157,7 +157,7 @@ ms.lasthandoff: 09/15/2017
 
     -   “域\名称”。 例如：“contoso\mnorth”  
 
-    -   'user@domain'. 例如：“mnorth@contoso.com”  
+    -   'user@domain'.  例如：“mnorth@contoso.com”  
 
      用户名和对应的密码必须与被授予 Mac 客户端证书模板的“读取”和“注册”权限的 Active Directory 用户帐户匹配。  
 
