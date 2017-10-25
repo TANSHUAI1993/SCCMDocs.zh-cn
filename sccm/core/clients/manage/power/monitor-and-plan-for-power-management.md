@@ -141,7 +141,7 @@ ms.lasthandoff: 09/15/2017
 
 |报表名称|详细信息|  
 |-----------------|-------------|  
-|**Computer Activity by Computer**|单击计算机名称，查看所选报告期间该计算机的特定活动。 这些活动包括“计算机已打开”（计算机是否已打开？）、“监视器已打开”（监视器是否已打开？）和“用户活动”（从计算机鼠标、键盘或远程桌面连接检测到活动）。<br /><br /> 有关详情，请参阅本主题中的 [Computer Activity by Computer Report](#BKMK_Comp_Activity_by_computer) 。|  
+|<bpt id="p1">**</bpt>Computer Activity by Computer<ept id="p1">**</ept>|单击计算机名称，查看所选报告期间该计算机的特定活动。 这些活动包括“计算机已打开”（计算机是否已打开？）、“监视器已打开”（监视器是否已打开？）和“用户活动”（从计算机鼠标、键盘或远程桌面连接检测到活动）。<br /><br /> 有关详情，请参阅本主题中的 [Computer Activity by Computer Report](#BKMK_Comp_Activity_by_computer) 。|  
 
 ###  <a name="BKMK_Computer_Details"></a> 计算机详细信息报表  
  “计算机详细信息”  报表显示应用到指定计算机的电源功能、电源设置和电源计划的相关详细信息。 此报表由“按计算机列出的计算机活动”  报表、“具有多个电源计划的计算机”  报表、“电源功能”  报表和“电源设置详细信息”  报表调用。 而不是由站点管理员直接运行。  
@@ -533,7 +533,7 @@ ms.lasthandoff: 09/15/2017
 
 |报表名称|详细信息|  
 |-----------------|-------------|  
-|**Insomnia Computer Details**|单击“受影响计算机”  列中的数字可查看因所选原因无法进入睡眠或休眠状态的计算机的列表。<br /><br /> 有关详情，请参阅本主题中的 [Insomnia Computer Details Report](#BKMK_Insomnia_Computer_Details) 。|  
+|<bpt id="p1">**</bpt>Insomnia Computer Details<ept id="p1">**</ept>|单击“受影响计算机”  列中的数字可查看因所选原因无法进入睡眠或休眠状态的计算机的列表。<br /><br /> 有关详情，请参阅本主题中的 [Insomnia Computer Details Report](#BKMK_Insomnia_Computer_Details) 。|  
 
 ###  <a name="BKMK_Capabilites"></a> 电源功能报表  
  “电源功能”  报表显示指定集合中计算机的电源管理硬件功能。 通常在电源管理的监视阶段中使用此报表来确定组织中计算机的电源管理功能。 然后可使用报表中显示的信息来创建应用电源计划的计算机的集合，或从电源管理中排除的计算机的集合。 此报表显示的电源管理功能包括：  
@@ -595,7 +595,7 @@ ms.lasthandoff: 09/15/2017
 
 |报表名称|详细信息|  
 |-----------------|-------------|  
-|**Power Settings Details**|单击“计算机”  列中的计算机数，以查看使用该行中电源设置的所有计算机的列表。<br /><br /> 有关详情，请参阅本主题中的 [Power Settings Details Report](#BKMK_Settings_Details) 。|  
+|<bpt id="p1">**</bpt>Power Settings Details<ept id="p1">**</ept>|单击“计算机”  列中的计算机数，以查看使用该行中电源设置的所有计算机的列表。<br /><br /> 有关详情，请参阅本主题中的 [Power Settings Details Report](#BKMK_Settings_Details) 。|  
 
 ###  <a name="BKMK_Settings_Details"></a> Power Settings Details report  
  “电源设置详细信息”  报表显示“电源设置”  报表中选定计算机的详细信息。 此报表由“电源设置”  报表调用，而不是由站点管理员直接运行。  
