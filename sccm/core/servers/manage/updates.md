@@ -113,7 +113,7 @@ Configuration Manager 的某些更新可用作现有基础结构的控制台中�
 
 -   当服务连接点处于联机模式时，站点将每天与 Microsoft 同步，以自动确定适用于你的基础结构的新更新。  若要下载更新和用于更新的 redist 文件，则承载服务连接点站点系统角色的计算机使用**系统**上下文访问以下 Internet 位置：go.microsoft.com 和 download.microsoft.com。 有关服务连接点连接到的其他位置的信息，请参阅[关于 System Center Configuration Manager 中的服务连接点](../../../core/servers/deploy/configure/about-the-service-connection-point.md)中的 [Internet 访问要求](../../../core/servers/deploy/configure/about-the-service-connection-point.md#bkmk_urls)。  
 
--   当服务连接点处于脱机模式时，请使用服务连接工具手动与 Microsoft 云同步。 有关详细信息，请参阅 [Use the Service Connection Tool for System Center Configuration Manager](../../../core/servers/manage/use-the-service-connection-tool.md)。  
+-   当服务连接点处于脱机模式时，请使用服务连接工具手动与 Microsoft 云同步。 有关详细信息，请参阅 [使用适用于 System Center Configuration Manager 的服务连接工具](../../../core/servers/manage/use-the-service-connection-tool.md)。  
 
 -   凭借控制台中更新，无需再单独查找和安装单个更新、服务包和新功能。  
 
