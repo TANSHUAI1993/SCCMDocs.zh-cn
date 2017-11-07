@@ -1,5 +1,6 @@
 ---
-title: "升级客户端 | Microsoft Docs"
+title: "升级客户端"
+titleSuffix: Configuration Manager
 description: "获取有关如何在 System Center Configuration Manager 中升级客户端的信息。"
 ms.custom: na
 ms.date: 04/23/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "8"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 80665e0369880bc6c46a76b22c9c89f068df1b0d
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 2ca66dd36a5c31f75a5ba12f31d67b35cf52cd65
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="upgrade-clients-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中升级客户端
 
