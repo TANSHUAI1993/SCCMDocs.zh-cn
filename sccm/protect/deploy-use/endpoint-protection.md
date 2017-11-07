@@ -1,5 +1,6 @@
 ---
-title: Endpoint Protection | Microsoft Docs
+title: Endpoint Protection
+titleSuffix: Configuration Manager
 description: "学习如何为 Configuration Manager 层次结构中的客户端计算机管理反恶意软件策略和 Windows 防火墙安全性。"
 ms.custom: na
 ms.date: 02/6/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "11"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.openlocfilehash: 76319b935695df204b4b83a645504079c60db12b
-ms.sourcegitcommit: 974fbc4408028c8be28911e5cd646efcf47c7f15
+ms.openlocfilehash: 308c69f4631a1bcc28f7d8460a4aa3abb02f0650
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="endpoint-protection"></a>Endpoint Protection
 

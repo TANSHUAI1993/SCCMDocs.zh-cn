@@ -1,5 +1,6 @@
 ---
-title: "准备未知计算机部署 | Microsoft Docs"
+title: "准备未知计算机部署"
+titleSuffix: Configuration Manager
 description: "了解如何在 System Center Configuration Manager 环境中将操作系统部署到不受 Configuration Manager 管理的计算机。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 445e76950f0605da917f3d0e7e71557d969e3c2d
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 726439e1f5f38dd0d63f7a2de1299d076c690df4
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="prepare-for-unknown-computer-deployments-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中准备未知计算机部署
 

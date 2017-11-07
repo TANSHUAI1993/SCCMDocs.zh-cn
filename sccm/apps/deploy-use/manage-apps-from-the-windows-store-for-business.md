@@ -1,5 +1,6 @@
 ---
-title: "管理来自适用于企业的 Windows 应用商店的应用 | Microsoft Docs"
+title: "管理来自适用于企业的 Windows 应用商店的应用"
+titleSuffix: Configuration Manager
 description: "使用 System Center Configuration Manager 管理并部署来自适用于企业的 Windows 应用商店的应用"
 ms.custom: na
 ms.date: 7/31/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "11"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: ed7c3724e4804911f713e1239661fc53514300b2
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 2dd6a2f9c62903119ba8c8374dcf222199c19fd5
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="manage-apps-from-the-windows-store-for-business-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 管理来自适用于企业的 Windows 应用商店的应用
 [适用于企业的 Windows 应用商店](https://www.microsoft.com/business-store)中可以为组织查找并采购 Windows 应用（单个或批量）。 通过将应用商店连接到 Configuration Manager，可以使用 Configuration Manager 同步已购买的应用列表。 然后，可以在 Configuration Manager 控制台中查看这些应用，并按照部署任何其他应用的方式进行部署。

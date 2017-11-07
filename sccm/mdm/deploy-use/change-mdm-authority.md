@@ -1,19 +1,20 @@
 ---
-title: "更改 MDM 机构 | Microsoft 文档"
+title: "更改 MDM 机构"
+titleSuffix: Configuration Manager
 description: "了解如何将 MDM 机构从 Configuration Manager（混合）更改为 Intune 独立版"
 keywords: 
 author: dougeby
 manager: angrobe
-ms.date: 09/14/2017
+ms.date: 10/04/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: cc397ab5-125f-4f17-905b-fab980194f49
-ms.openlocfilehash: 489c01f92d42ed12ac5464307a16713ca898d251
-ms.sourcegitcommit: 8ac9c2c9ba1fdcbb7cc8d5be898586865fcf67c0
+ms.openlocfilehash: cbf45c5f9f04affc65243fdc4c8410d4ff033c1e
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="change-your-mdm-authority"></a>更改 MDM 机构
 从 Configuration Manager 1610 版本开始，可以更改 MDM 机构而无需联系 Microsoft 支持部门，也无需取消注册并重新注册现有的受管理设备。 本主题提供将从 Configuration Manager 控制台（混合）配置的现有 Microsoft Intune 租户更改为 Intune 独立版的步骤。
@@ -75,7 +76,7 @@ ms.lasthandoff: 10/07/2017
     In the [Azure portal](https://azure.portal.com), choose **More Services** &gt; **Monitoring + Management** &gt; **Intune**. On the **Intune** blade, choose **Device enrollment** &gt; **Apple Enrollment** &gt; **Apple MDM Push Certificate**, and then select **Download your CSR** to download and save the .csr file locally.   
     <br/>
     **Microsoft Intune administration console**   -->
-   在 [Microsoft Intune管理控制台](http://manage.microsoft.com)中，转到“管理”&gt;“移动设备管理”&gt;“iOS 和 Mac OS X”&gt;“上载 APNs 证书”，然后选择“下载 APN 证书请求”。 本地保存证书签名请求 (.csr) 文件。
+   在 [Microsoft Intune管理控制台](http://manage.microsoft.com)中，转到“管理”&gt;“移动设备管理”&gt;“iOS 和 Mac OS X”&gt;“上载 APNs 证书”，然后选择“下载 APN 证书请求”。 本地保存证书签名请求 (.csr) 文件。    
    > [!IMPORTANT]    
    > 下载新的证书签名请求。 请勿使用现有文件，否则它将失败。
 

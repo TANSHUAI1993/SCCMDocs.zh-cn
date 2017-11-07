@@ -1,5 +1,6 @@
 ---
-title: "站点和层次结构基础知识 | Microsoft Docs"
+title: "站点和层次结构基础知识"
+titleSuffix: Configuration Manager
 description: "获取有关 System Center Configuration Manager 站点和层次结构的基本信息。"
 ms.custom: na
 ms.date: 12/30/2016
@@ -14,17 +15,17 @@ caps.latest.revision: "6"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: f13f38be2a19ab8a1ead246e5272515dd0570984
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: be4fb2b8d4c49981f7a801aff2175d4f0762e8c3
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="fundamentals-of-sites-and-hierarchies-for-system-center-configuration-manager"></a>System Center Configuration Manager 的站点和层次结构基础知识
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-必须在 Active Directory 域中安装 System Center Configuration Manager 部署。 此部署的基础包括组成站点层次结构的一个或多个 Configuration Manager 站点。 从单站点到多站点层次结构，安装的站点类型和位置在必要时提供扩展（扩大）部署的能力，并向托管用户和设备提供重要服务。
+必须在 Active Directory 域中安装 System Center Configuration Manager 部署。 此部署的基础包括组成站点层次结构的一个或多个 Configuration Manager 站点。 从单站点到多站点层次结构，安装的站点类型和位置在必要时提供纵向扩展（扩大）部署的能力，并向托管用户和设备提供重要服务。
 
 ## <a name="hierarchies-of-sites"></a>站点的层次结构
 首次安装 System Center Configuration Manager 时，安装的第一个 Configuration Manager 站点将确定层次结构的作用域。 将以第一个 Configuration Manager 为基础管理企业中的设备和用户。 此第一个站点必须为管理中心站点或独立主站点。  

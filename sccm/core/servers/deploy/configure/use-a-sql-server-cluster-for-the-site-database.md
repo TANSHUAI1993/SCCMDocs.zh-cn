@@ -1,5 +1,6 @@
 ---
-title: "SQL Server 群集 | Microsoft Docs"
+title: "SQL Server 群集"
+titleSuffix: Configuration Manager
 description: "使用 SQL Server 群集托管 System Center Configuration Manager 站点数据库。 包括受支持选项的相关信息。"
 ms.custom: na
 ms.date: 2/28/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 53f119bbb1f8827a9c23c8b747840350bbb92790
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 5ffc99b0b5c2ab21e65368ae42d3edbb48411476
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="use-a-sql-server-cluster-for-the-system-center-configuration-manager-site-database"></a>对 System Center Configuration Manager 站点数据库使用 SQL Server 群集。
 

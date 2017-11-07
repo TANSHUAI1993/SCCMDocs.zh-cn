@@ -1,5 +1,6 @@
 ---
-title: "基于云的分发点 | Microsoft Docs"
+title: "基于云的分发点"
+titleSuffix: Configuration Manager
 description: "了解有关配合使用 System Center Configuration Manager 和基于云的分发点的配置和限制。"
 ms.custom: na
 ms.date: 3/27/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "9"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 8caf3319d93b98680ed4a719a8db714c7e4e96ce
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 7defec5e771fa210d25bfa0cbfab5216fcabcf6b
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="use-a-cloud-based-distribution-point-with-system-center-configuration-manager"></a>将基于云的分发点用于 System Center Configuration Manager
 

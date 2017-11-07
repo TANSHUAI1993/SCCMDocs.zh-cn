@@ -1,5 +1,6 @@
 ---
-title: "使用任务序列管理虚拟硬盘 | Microsoft Docs"
+title: "使用任务序列来管理虚拟硬盘"
+titleSuffix: Configuration Manager
 description: "通过 Configuration Manager 创建和修改 VHD、添加应用程序和软件更新，以及将 VHD 发布到 System Center Virtual Machine Manager (VMM)。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "5"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: f77af4b8fcb193ed44511c0e5eea7290f55dbbf8
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 586eec745bdf86a42a9d33fb9e1163f03efa1c59
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="use-a-task-sequence-to-manage-virtual-hard-disks-in-system-center-configuration-manager"></a>使用任务序列来管理 System Center Configuration Manager 中的虚拟硬盘
 

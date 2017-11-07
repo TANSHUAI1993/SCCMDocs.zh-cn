@@ -1,5 +1,6 @@
 ---
-title: "查询的操作和维护 | Microsoft Docs"
+title: "查询的操作和维护"
+titleSuffix: Configuration Manager
 description: "请参阅有关 System Center Configuration Manager 中的查询的主题列表。 重点是操作和维护。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 11309ba74d9e0d1cbd20cbfc676efbe14e004462
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 5109976d01b2e56ef454ed9bee0dba93769013e6
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="operations-and-maintenance-for-queries-in-system-center-configuration-manager"></a>System Center Configuration Manager 中查询的操作和维护
 

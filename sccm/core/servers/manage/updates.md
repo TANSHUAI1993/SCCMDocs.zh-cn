@@ -1,5 +1,6 @@
 ---
-title: "更新 | Microsoft Docs"
+title: "更新"
+titleSuffix: Configuration Manager
 description: "了解称为**更新与维护服务**的控制台中服务方法，该方法可轻松找到并安装建议的更新。"
 ms.custom: na
 ms.date: 07/31/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: d46aca88111d4ee0e96b75ca5a3ec57aa4274d6d
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: bca724f15dc18d7273bbca122b6428b4704a5d43
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="updates-for-system-center-configuration-manager"></a>System Center Configuration Manager 的更新
 
@@ -111,9 +112,9 @@ Configuration Manager 的某些更新可用作现有基础结构的控制台中�
 
 将服务连接点站点系统角色与 Microsoft 云服务和下载中心同步时，Configuration Manager 会发现新的更新：  
 
--   当服务连接点处于联机模式时，站点将每天与 Microsoft 同步，以自动确定适用于你的基础结构的新更新。  若要下载更新和用于更新的 redist 文件，则承载服务连接点站点系统角色的计算机使用**系统**上下文访问以下 Internet 位置：go.microsoft.com 和 download.microsoft.com。 有关服务连接点连接到的其他位置的信息，请参阅[关于 System Center Configuration Manager 中的服务连接点](../../../core/servers/deploy/configure/about-the-service-connection-point.md)中的 [Internet 访问要求](../../../core/servers/deploy/configure/about-the-service-connection-point.md#bkmk_urls)。  
+-   当服务连接点处于联机模式时，站点将每天与 Microsoft 同步，以自动确定适用于你的基础结构的新更新。  若要下载更新和用于更新的 redist 文件，则承载服务连接点站点系统角色的计算机使用**系统**上下文访问以下 Internet 位置：go.microsoft.com 和 download.microsoft.com。有关服务连接点连接到的其他位置的信息，请参阅[关于 System Center Configuration Manager 中的服务连接点](../../../core/servers/deploy/configure/about-the-service-connection-point.md)中的 [Internet 访问要求](../../../core/servers/deploy/configure/about-the-service-connection-point.md#bkmk_urls)。  
 
--   当服务连接点处于脱机模式时，请使用服务连接工具手动与 Microsoft 云同步。 有关详细信息，请参阅 [使用适用于 System Center Configuration Manager 的服务连接工具](../../../core/servers/manage/use-the-service-connection-tool.md)。  
+-   当服务连接点处于脱机模式时，请使用服务连接工具手动与 Microsoft 云同步。 有关详细信息，请参阅 [Use the Service Connection Tool for System Center Configuration Manager](../../../core/servers/manage/use-the-service-connection-tool.md)。  
 
 -   凭借控制台中更新，无需再单独查找和安装单个更新、服务包和新功能。  
 

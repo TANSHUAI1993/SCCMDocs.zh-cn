@@ -1,5 +1,6 @@
 ---
-title: "对 Windows Defender 或 Endpoint Protection 客户端进行故障排除 | Microsoft Docs"
+title: "对 Windows Defender 或 Endpoint Protection 客户端进行故障排除"
+titleSuffix: Configuration Manager
 description: "了解如何对 Windows Defender 和 Endpoint Protection 进行故障排除。"
 ms.custom: na
 ms.date: 01/03/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.openlocfilehash: 1b096e71f5131214fb4e235e84d0b7f63e566831
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: b667db471a16faef057f49a0a26759849e03f237
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="troubleshooting-windows-defender-or-endpoint-protection-client"></a>对 Windows Defender 或 Endpoint Protection 客户端进行故障排除
 
@@ -141,7 +142,7 @@ ms.lasthandoff: 08/07/2017
 
      **Mpcmdrun -RemoveDefinitions -all**  
 
-     **Exit**  
+     <bpt id="p1">**</bpt>Exit<ept id="p1">**</ept>  
 
 3.  重新启动计算机。  
 

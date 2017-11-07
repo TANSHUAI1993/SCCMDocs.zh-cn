@@ -1,5 +1,6 @@
 ---
-title: "配置发现 | Microsoft Docs"
+title: "配置发现"
+titleSuffix: Configuration Manager
 description: "配置发现方法，以在 Configuration Manager 站点运行，从而找到可以从网络基础结构和 Active Directory 管理的资源。"
 ms.custom: na
 ms.date: 7/31/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 34a539ceaea6b070f81a28d2c0a9ce388e26cfeb
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 108721f0ad5107a3b61cfeb82120a275f2f96fdf
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="configure-discovery-methods-for-system-center-configuration-manager"></a>配置 System Center Configuration Manager 的发现方法
 
@@ -391,7 +392,7 @@ ms.lasthandoff: 08/07/2017
 
 8.  若要配置供 SNMP 搜索使用的最大路由器跃点数，请选择“SNMP”选项卡，然后从“最大跃点数”下拉列表中选择跃点数。  
 
-9. 要配置 SNMP 设备，选择“SNMP 设备”选项卡。 如果未列出设备，请选择“新建”图标![新建图标](media/Disc_new_Icon.gif)。 在“新建 SNMP 设备”对话框中，指定 SNMP 设备的 IP 地址或设备名称，然后选择“确定”。  
+9. 要配置 SNMP 设备，选择“SNMP 设备”选项卡。如果未列出设备，请选择“新建”图标![新建图标](media/Disc_new_Icon.gif)。 在“新建 SNMP 设备”对话框中，指定 SNMP 设备的 IP 地址或设备名称，然后选择“确定”。  
 
     > [!NOTE]  
     >  如果指定设备名称，则 Configuration Manager 必须能够将 NetBIOS 名称解析为 IP 地址。  

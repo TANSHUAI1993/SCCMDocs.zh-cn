@@ -1,5 +1,6 @@
 ---
-title: "如何在 System Center Configuration Manager 中创建 VPN 配置文件 | Microsoft Docs"
+title: "如何创建 VPN 配置文件 "
+titleSuffix: Configuration Manager
 description: "了解如何在 System Center Configuration Manager 中创建 VPN 配置文件。"
 ms.custom: 
 ms.date: 4/19/2017
@@ -15,11 +16,11 @@ author: lleonard-msft
 caps.handback.revision: "0"
 ms.author: alleonar
 ms.manager: angrobe
-ms.openlocfilehash: 359fcfd9754fb5c81763bc44cac45376ea3ab0b8
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 4e8a082bff8b0f734da620669ddf403c0fe3eca6
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-create-vpn-profiles-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中创建 VPN 配置文件
 

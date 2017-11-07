@@ -1,5 +1,6 @@
 ---
-title: "管理操作系统升级包 | Microsoft Docs"
+title: "管理操作系统升级包"
+titleSuffix: Configuration Manager
 description: "了解如何管理 System Center Configuration Manager 中的操作系统升级包。"
 ms.custom: na
 ms.date: 12/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 35f527f83799125aa298b99e2cc56867435272ec
-ms.sourcegitcommit: 31c670a4bce74fd64a7d46ebf7702f65b80d4147
+ms.openlocfilehash: e0996f57d7d9fbcb9926c16f718b65073c78b3bc
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="manage-operating-system-upgrade-packages-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 管理操作系统升级包
 

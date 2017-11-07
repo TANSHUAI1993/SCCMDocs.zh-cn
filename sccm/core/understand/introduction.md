@@ -1,5 +1,6 @@
 ---
-title: "简介 | Microsoft Docs"
+title: "简介"
+titleSuffix: Configuration Manager
 description: "获取基本信息，作为对 System Center Configuration Manager 的简介。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "16"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 76f907b17df0dd2f102e34ca3cfb3ffc813c0004
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 012d81b6a27d55c4a286bab6edaa7bad3f93cf46
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="introduction-to-system-center-configuration-manager"></a>System Center Configuration Manager 简介
 

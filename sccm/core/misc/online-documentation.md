@@ -1,5 +1,6 @@
 ---
-title: "联机文档 | Microsoft Docs"
+title: "联机文档"
+titleSuffix: Configuration Manager
 ms.custom: na
 ms.date: 10/06/2016
 ms.reviewer: na
@@ -14,11 +15,11 @@ caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 73bb5d4236469746102fd4893c53f20aaee122d5
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: e770509bffcd5a011451b1f97f6ca7363b44632b
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="online-documentation-for-system-center-configuration-manager"></a>System Center Configuration Manager 的联机文档
 

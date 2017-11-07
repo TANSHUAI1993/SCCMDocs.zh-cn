@@ -1,5 +1,6 @@
 ---
-title: "准备软件更新管理 | Microsoft Docs"
+title: "准备软件更新管理"
+titleSuffix: Configuration Manager
 description: "若要准备管理更新，请完成以下任务以显示 System Center Configuration Manager 控制台中的符合性评估数据。"
 keywords: 
 author: dougeby
@@ -11,11 +12,11 @@ ms.prod: configuration-manager
 ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: 01907900-e28b-4cd7-9479-42906416707b
-ms.openlocfilehash: 5c34bd1ea108dffda10c30281fb9c97ba38ae1ae
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 91c6e3654375073977a50cfffb0cf784d091ef98
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="prepare-for-software-updates-management"></a>准备软件更新管理
 

@@ -1,5 +1,6 @@
 ---
-title: "创建用于安装操作系统的任务序列 | Microsoft Docs"
+title: "创建用于安装操作系统的任务序列"
+titleSuffix: Configuration Manager
 description: "在 System Center Configuration Manager 中使用任务序列，自动在目标计算机上安装操作系统映像和其他内容。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "13"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 41aa6cf69a746f0ab67d804f1ee0c70db05d65ee
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 47210939c66bb31d173c7e406a66c764d5008879
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="create-a-task-sequence-to-install-an-operating-system-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中创建用于安装操作系统的任务序列
 

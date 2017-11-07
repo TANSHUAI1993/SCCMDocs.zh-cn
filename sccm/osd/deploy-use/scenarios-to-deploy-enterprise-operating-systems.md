@@ -1,5 +1,6 @@
 ---
-title: "部署企业操作系统的方案 | Microsoft Docs"
+title: "部署企业版操作系统的方案"
+titleSuffix: Configuration Manager
 description: "了解多种使用 System Center Configuration Manager 部署企业操作系统的方案。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "11"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: b1bea8b1b890f7c96a432835d28ad840a9b6873d
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: d7934c3d757ec0ede6553d9c17b3d36117da3892
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="scenarios-to-deploy-enterprise-operating-systems-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 部署企业操作系统的方案
 

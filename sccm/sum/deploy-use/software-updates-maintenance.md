@@ -1,5 +1,6 @@
 ---
-title: "软件更新维护 | Microsoft Docs"
+title: "软件更新维护"
+titleSuffix: Configuration Manager
 description: "若要在 Configuration Manager 中维护更新，可以计划 WSUS 清理任务，也可以手动运行它。"
 keywords: 
 author: dougeby
@@ -11,11 +12,11 @@ ms.prod: configuration-manager
 ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: 4b0e2e90-aac7-4d06-a707-512eee6e576c
-ms.openlocfilehash: 1590c623f7bc2f42a8617f110de5321212732a03
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 51e103b09ced9916fc76f9c87654379b538248b4
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="software-updates-maintenance"></a>软件更新维护
 

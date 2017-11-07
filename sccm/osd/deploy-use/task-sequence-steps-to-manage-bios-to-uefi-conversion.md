@@ -1,5 +1,6 @@
 ---
-title: "管理 BIOS 转换为 UEFI 所采用的任务序列步骤 | Configuration Manager"
+title: "管理 BIOS 转换为 UEFI 所采用的任务序列步骤"
+titleSuffix: Configuration Manager
 description: "了解如何自定义操作系统部署任务的序列，以便为到 UEFI 的转换准备 FAT32 分区。"
 ms.custom: na
 ms.date: 03/24/2017
@@ -13,11 +14,11 @@ ms.assetid: bd3df04a-902f-4e91-89eb-5584b47d9efa
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 528ce515c86c4e778532290026a90a46476c4576
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 58a5c60e2d8b819051916b49911a236a9c5ac4ee
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="task-sequence-steps-to-manage-bios-to-uefi-conversion"></a>管理 BIOS 转换为 UEFI 所采用的任务序列步骤
 Windows 10 提供了许多需要启用 UEFI 的设备的新安全功能。 你可能拥有支持 UEFI 的新式 Windows 电脑，但正在使用旧版 BIOS。 将设备转换为 UEFI 需要你转到每台电脑、对硬盘重新分区并重新配置固件。 通过在 Configuration Manager 中使用任务序列，你可以准备用于 BIOS 到 UEFI 转换的硬盘，作为就地升级过程的一部分从 BIOS 转换为 UEFI，并收集 UEFI 信息作为硬件清单的一部分。

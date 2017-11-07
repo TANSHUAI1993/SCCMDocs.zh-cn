@@ -1,5 +1,6 @@
 ---
-title: "自定义启动映像 - Configuration Manager | Microsoft Docs"
+title: "自定义启动映像 "
+titleSuffix: Configuration Manager
 description: "了解使用 Configuration Manager 或部署映像服务和管理 (DISM) 命令行工具自定义启动映像的几种方式。"
 ms.custom: na
 ms.date: 01/23/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: ab2ecb64c9c80b4effed79ba08769c99473db0c4
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 4c1d721c9fb0b01f15f1f0468bc797ffffb9e345
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="customize-boot-images-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 自定义启动映像
 

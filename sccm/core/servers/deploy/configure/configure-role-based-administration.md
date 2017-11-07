@@ -1,5 +1,6 @@
 ---
-title: "配置基于角色的管理 | Microsoft Docs"
+title: "配置基于角色的管理"
+titleSuffix: Configuration Manager
 ms.custom: na
 ms.date: 2/14/2017
 ms.prod: configuration-manager
@@ -14,11 +15,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 3eea3a6e5f23808570ded4be3bd7412954518b96
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 776e3f133404bf2fba9a0d2687c9c5e7575f6ff5
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="configure-role-based-administration-for-system-center-configuration-manager"></a>为 System Center Configuration Manager 配置基于角色的管理   
 

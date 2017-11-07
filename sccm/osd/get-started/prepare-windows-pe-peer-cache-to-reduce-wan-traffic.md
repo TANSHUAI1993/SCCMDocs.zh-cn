@@ -1,5 +1,6 @@
 ---
-title: "准备 Windows PE 对等缓存来减少 WAN 流量 | Microsoft Docs"
+title: "准备 Windows PE 对等缓存来减少 WAN 流量"
+titleSuffix: Configuration Manager
 description: "Windows PE 对等缓存适用于 Windows PE，在没有本地分发点的情况下，可从本地对等缓存中获取内容并将 WAN 流量降到最低。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "11"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 814c6133a30b1116d05aaeafddb0dfb7fe2a390e
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: bb0ed6809d1350c4ce28e20d1a83082a51c2e687
+ms.sourcegitcommit: 1132886e07d0c0a87dcc7eeef4577dd8d8840023
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 11/01/2017
 ---
 # <a name="prepare-windows-pe-peer-cache-to-reduce-wan-traffic-in-system-center-configuration-manager"></a>准备 Windows PE 对等缓存以减少 System Center Configuration Manager 中的 WAN 流量
 
@@ -26,7 +27,7 @@ ms.lasthandoff: 08/07/2017
 
 在 System Center Configuration Manager 中部署新的操作系统时，运行任务序列的计算机可使用 Windows PE 对等缓存从本地对等计算机（对等缓存源）中获取内容，而无需从分发点下载内容。 这有助于最大限度减小没有本地分发点的分支机构场景中的广域网 (WAN) 流量。  
 
- Windows PE 对等缓存与 [Windows BranchCache](http://technet.microsoft.com/library/mt617255\(TechNet.10\).aspx#bkmk_branchcache)类似，但是在 Windows 预安装环境 (Windows PE) 中运行。 如果从操作系统上下文（例如客户端软件中心）启动任务序列，则不会使用 Windows PE 对等缓存。 以下术语用于描述使用 Windows PE 对等缓存的客户端：  
+ Windows PE 对等缓存与 [Windows BranchCache](http://technet.microsoft.com/library/mt617255\(TechNet.10\).aspx#bkmk_branchcache)类似，但是在 Windows 预安装环境 (Windows PE) 中运行。 以下术语用于描述使用 Windows PE 对等缓存的客户端：  
 
 -   “对等缓存客户端”  是配置为使用 Windows PE 对等缓存的计算机。  
 

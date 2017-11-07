@@ -1,5 +1,6 @@
 ---
-title: "监视操作系统部署 | Microsoft Docs"
+title: "监视操作系统部署"
+titleSuffix: Configuration Manager
 description: "为帮助你监视操作系统部署对象，Configuration Manager 控制台提供了警报、报表和各种状态指示器。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 154c0a286e6b9ccedc7545eb010967ac00d35407
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 2e738b0ae9bd16829857edfaae0fb7e398979627
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="monitor-operating-system-deployments-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中监视操作系统部署
 
@@ -93,4 +94,4 @@ Configuration Manager 控制台提供了以下方式来帮助你监视操作系�
 
 3.  选择要查看其分发点状态信息的分发点。  
 
-4.  在结果窗格中，单击“详细信息”  选项卡。 此时会显示分发点的状态信息。  
+4.  在结果窗格中，单击“详细信息”  选项卡。此时会显示分发点的状态信息。  

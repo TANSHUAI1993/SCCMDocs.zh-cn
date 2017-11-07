@@ -1,5 +1,6 @@
 ---
-title: "卸载应用程序 | Microsoft Docs"
+title: "卸载应用程序"
+titleSuffix: Configuration Manager
 description: "使用 System Center Configuration Manager 卸载应用程序"
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: 1e9c5506b94eecc1c95af5f31ad4c2d923c2b74f
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 11b6f7ad65296131622b707fcb68d77183e3a288
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="uninstall-applications-with-system-center-configuration-manager"></a>通过 System Center Configuration Manager 卸载应用程序
 

@@ -1,5 +1,6 @@
 ---
-title: "电源管理的先决条件 | Microsoft Docs"
+title: "电源管理的先决条件"
+titleSuffix: Configuration Manager
 description: "获取 System Center Configuration Manager 中电源管理的先决条件。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 5247bf1ce5b04264bc0d3e04c5de7f98300905c9
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 79cda9025c13f2cc76f67f89dba1fcdfdaa52ae2
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="prerequisites-for-power-management-in-system-center-configuration-manager"></a>System Center Configuration Manager 中电源管理的先决条件
 

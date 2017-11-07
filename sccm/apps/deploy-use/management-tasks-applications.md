@@ -1,5 +1,6 @@
 ---
-title: "System Center Configuration Manager 应用程序的管理任务 | Microsoft Docs"
+title: "应用程序的管理任务"
+titleSuffix: Configuration Manager
 description: "管理 System Center Configuration Manager 应用程序和部署类型。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "8"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: 679f1034db1b5fdef4b582446405440b0c47867e
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 8d4cc2cd8de9626b6911dc50dbdec2ccdaada94c
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="management-tasks-for-system-center-configuration-manager-applications"></a>System Center Configuration Manager 应用程序的管理任务
 

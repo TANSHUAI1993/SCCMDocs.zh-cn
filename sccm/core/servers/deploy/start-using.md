@@ -1,5 +1,5 @@
 ---
-title: "开始使用 System Center Configuration Manager | Microsoft Docs"
+title: "开始使用 System Center Configuration Manager"
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
@@ -14,11 +14,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 1786209f1a1b0d1caab9e31414bfccb690c8e659
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 668bfbc671d3e4c788d03a9646ce63410a4a58d3
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="start-using-system-center-configuration-manager"></a>开始使用 System Center Configuration Manager
 

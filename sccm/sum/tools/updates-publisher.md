@@ -1,5 +1,6 @@
 ---
-title: Updates Publisher | Microsoft Docs
+title: "更新发布服务器"
+titleSuffix: Configuration Manager
 description: "使用 System Center Updates Publisher 管理自定义更新"
 ms.custom: na
 ms.date: 4/29/2017
@@ -15,11 +16,11 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: NOINDEX, NOFOLLOW
-ms.openlocfilehash: f4951c204b32da58174b94a539b380c278fa9756
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 356e63b3743f17d4c0b3985723c26e51ce9dd6c8
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="system-center-updates-publisher"></a>System Center Updates Publisher
 

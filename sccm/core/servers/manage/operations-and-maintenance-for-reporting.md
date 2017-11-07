@@ -1,5 +1,6 @@
 ---
-title: "报表的操作和维护 | Microsoft Docs"
+title: "报告的操作和维护 "
+titleSuffix: Configuration Manager
 description: "了解管理 System Center Configuration Manager 中的报表和报表订阅的详细信息。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "5"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: df572cd0c64c82e25164430a53e1b893b3ba3cf5
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 05a81cdfd46ba2bf0bea17b06bd72f79296b3930
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="operations-and-maintenance-for-reporting-in-system-center-configuration-manager"></a>System Center Configuration Manager 中报告的操作和维护
 
@@ -89,7 +90,7 @@ ms.lasthandoff: 08/07/2017
 
 3.  单击要修改其属性的报表的报表类别，然后单击报表的链接。 报表将在报表管理器中打开。  
 
-4.  单击“属性”选项卡。 你可以修改报表名称和描述。  
+4.  单击“属性”选项卡。你可以修改报表名称和描述。  
 
 5.  完成后，单击“应用”。 报表属性保存在报表服务器上，Configuration Manager 控制台将检索报表的更新报表属性。  
 

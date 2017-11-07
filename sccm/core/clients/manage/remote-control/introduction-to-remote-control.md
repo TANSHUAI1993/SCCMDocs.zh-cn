@@ -1,5 +1,6 @@
 ---
-title: "远程控制 | Microsoft Docs"
+title: "远程控制"
+titleSuffix: Configuration Manager
 description: "获取 System Center Configuration Manager 中的远程控制简介。"
 ms.custom: na
 ms.date: 04/23/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 0944564b94a257f0c92dbe7b0364672a1550a4cc
-ms.sourcegitcommit: f6a428a8db7145affa388f59e0ad880bdfcf17b5
+ms.openlocfilehash: 4033b03358fc41fdda78c1d83ef3509a3aa9e206
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="introduction-to-remote-control-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的远程控制简介
 

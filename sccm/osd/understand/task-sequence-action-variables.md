@@ -1,5 +1,6 @@
 ---
-title: "任务序列操作变量 | Microsoft Docs"
+title: "任务序列操作变量"
+titleSuffix: Configuration Manager
 description: "使用序列操作变量（如网络设置变量）来指定 Configuration Manager 任务序列中单个步骤的配置设置。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 675ebf053de98c6ad93a53ae218696012aef96f7
-ms.sourcegitcommit: 5b4fd2d36f06be5bcc7f8ebbfb92c48b7240085d
+ms.openlocfilehash: 8c1462ca922f23250ffa44c6433f01a8220d3ad7
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="task-sequence-action-variables-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的任务序列操作变量
 
@@ -76,7 +77,7 @@ ms.lasthandoff: 08/30/2017
 |OSDEnableTCPIPFiltering<br /><br /> (input)|指定是否启用 TCP/IP 筛选。<br /><br /> 有效值：<br /><br /> **“true”**<br /><br /> **“false”** （默认值）|  
 |OSDJoinAccount<br /><br /> (input)|指定用于将目标计算机添加到 Windows 域的网络帐户。|  
 |OSDJoinPassword<br /><br /> (input)|指定用于将目标计算机添加到 Windows 域的网络密码。|  
-|OSDNetworkJoinType<br /><br /> (input)|指定目标计算机是否加入 Windows 域或工作组。<br /><br /> “0” 指示目标计算机加入 Windows 域。 “1” 指定计算机加入工作组。<br /><br /> 有效值：<br /><br /> **"0"**<br /><br /> **"1"**|  
+|OSDNetworkJoinType<br /><br /> (input)|指定目标计算机是否加入 Windows 域或工作组。<br /><br /> “0” 指示目标计算机加入 Windows 域。 “1” 指定计算机加入工作组。<br /><br /> 有效值：<br /><br /> <bpt id="p1">**</bpt>"0"<ept id="p1">**</ept><br /><br /> <bpt id="p1">**</bpt>"1"<ept id="p1">**</ept>|  
 |OSDDNSSuffixSearchOrder<br /><br /> (input)|指定目标计算机的 DNS 搜索顺序。|  
 |OSDWorkgroupName<br /><br /> (input)|指定目标计算机加入的工作组的名称。<br /><br /> 您必须指定此值或 **OSDDomainName** 值。 工作组名称最多可使用 32 个字符。<br /><br /> 例如：<br /><br /> **“计帐”**|  
 
@@ -231,7 +232,7 @@ ms.lasthandoff: 08/30/2017
 |OSDJoinDomainOUName<br /><br /> (input)|指定目标计算机加入的组织单位 (OU) 的 RFC 1779 格式名称。 如果指定了值，该值必须包含完整路径。 Windows 域的 OU 名称长度必须介于 0 到 32,767 个字符之间。 如果 **OSDJoinType** 变量设置为“1”（加入工作组），则不设置此值。<br /><br /> 例如：<br /><br /> **LDAP://OU=MyOu,DC=MyDom,DC=MyCompany,DC=com**|  
 |OSDJoinPassword<br /><br /> (input)|指定目标计算机加入 Windows 域使用的网络密码。 如果未指定变量，则会尝试使用空密码。 如果变量 **OSDJoinType** 变量被设置为 “**0**”（加入域），则此值是必需的。|  
 |OSDJoinSkipReboot<br /><br /> (input)|指定在目标计算机加入域或工作组后是否跳过重新启动。<br /><br /> 有效值：<br /><br /> **“true”**<br /><br /> **“false”**|  
-|OSDJoinType<br /><br /> (input)|指定目标计算机是否加入 Windows 域或工作组。 若要将目标计算机加入到 Windows 域中，请指定“**0**”。 若要将目标计算机加入到工作组中，请指定“**1**”。<br /><br /> 有效值：<br /><br /> **"0"**<br /><br /> **"1"**|  
+|OSDJoinType<br /><br /> (input)|指定目标计算机是否加入 Windows 域或工作组。 若要将目标计算机加入到 Windows 域中，请指定“**0**”。 若要将目标计算机加入到工作组中，请指定“**1**”。<br /><br /> 有效值：<br /><br /> <bpt id="p1">**</bpt>"0"<ept id="p1">**</ept><br /><br /> <bpt id="p1">**</bpt>"1"<ept id="p1">**</ept>|  
 |OSDJoinWorkgroupName<br /><br /> (input)|指定目标计算机加入的工作组的名称。 工作组的名称长度必须介于 1 到 32 个字符之间。<br /><br /> 例如：<br /><br /> **“计帐”**|  
 
 ###  <a name="BKMK_PrepareWindowsCapture"></a> 为捕获任务序列操作变量准备 Windows  

@@ -1,5 +1,6 @@
 ---
-title: "任务序列媒体的预启动命令 | Microsoft Docs"
+title: "任务序列媒体的预启动命令"
+titleSuffix: Configuration Manager
 description: "创建脚本以用于预启动命令，分发与预启动命令关联的内容，以及在媒体中配置预启动命令。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 1c396534425179c6828d48acc578295167c566be
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 52a4dccfe547f8c25759669dd1b09976302d5c50
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="prestart-commands-for-task-sequence-media-in-system-center-configuration-manager"></a>System Center Configuration Manager 中任务序列媒体的预启动命令
 

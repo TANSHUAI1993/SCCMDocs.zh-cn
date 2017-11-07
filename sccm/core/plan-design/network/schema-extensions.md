@@ -1,5 +1,6 @@
 ---
-title: "架构扩展 | Microsoft Docs"
+title: "架构扩展"
+titleSuffix: Configuration Manager
 description: "扩展 Active Directory 架构以支持 System Center Configuration Manager。"
 ms.custom: na
 ms.date: 2/7/2017
@@ -16,11 +17,11 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: noindex
-ms.openlocfilehash: 5ec1e9368e836382b143d7b2bf9d1a6a7bc2fa22
-ms.sourcegitcommit: 96b79fa091f44e8e6ac5652f6cbbb4b873a8bad9
+ms.openlocfilehash: 3067a4b2b53f57b45a81d56b4505a84831df39f1
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="schema-extensions-for-system-center-configuration-manager"></a>System Center Configuration Manager 的架构扩展
 

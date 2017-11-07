@@ -1,5 +1,6 @@
 ---
-title: "维护任务 | Microsoft Docs"
+title: "维护任务"
+titleSuffix: Configuration Manager
 description: "了解针对 Configuration Manager 站点和层次结构执行的维护任务以及何时执行它们。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 90b6e4434abc5573a364c769bd835e08e5dff16d
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 37937ef36d3b9a9dd48e6ab23ac9ce3be894f957
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="maintenance-tasks-for-system-center-configuration-manager"></a>System Center Configuration Manager 的维护任务
 

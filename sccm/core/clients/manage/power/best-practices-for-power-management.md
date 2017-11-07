@@ -1,5 +1,6 @@
 ---
-title: "电源管理的最佳实践 | Microsoft Docs"
+title: "电源管理的最佳方案"
+titleSuffix: Configuration Manager
 description: "获取 System Center Configuration Manager 中电源管理的最佳方案。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 68b8be80152da52be427a3d2fdbf5c466029add6
-ms.sourcegitcommit: f6a428a8db7145affa388f59e0ad880bdfcf17b5
+ms.openlocfilehash: f4fac4064102439857904d3227ba65878ac6c65f
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="best-practices-for-power-management-in-system-center-configuration-manager"></a>System Center Configuration Manager 中电源管理的最佳方案
 

@@ -1,5 +1,6 @@
 ---
-title: "使用 System Center Configuration Manager 创建预留媒体 | Microsoft Docs"
+title: "创建预留媒体"
+titleSuffix: Configuration Manager
 description: "在 System Center Configuration Manager 中创建预留媒体来简化几个方案中的 Windows 部署。"
 ms.custom: na
 ms.date: 04/11/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "12"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 33abf3853d912d423e427db4d35fb4a16167164e
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 4b10aab0674e4066b399c636ecf2226ae109260e
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="create-prestaged-media-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 创建预留媒体
 

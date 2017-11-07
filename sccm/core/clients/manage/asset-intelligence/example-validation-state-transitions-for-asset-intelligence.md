@@ -1,5 +1,6 @@
 ---
-title: "资产智能的示例验证状态转换 | Microsoft Docs"
+title: "资产智能的验证状态转换示例"
+titleSuffix: Configuration Manager
 description: "请参阅 System Center Configuration Manager 中的资产智能验证状态转换示例。"
 ms.custom: na
 ms.date: 2/22/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: f280e06f34c0ed355b7c2652c571e36eb6684c59
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 469234a229d641bc897f5be6f4076be5cf72b64e
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="example-validation-state-transitions-for-asset-intelligence-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的资产智能验证状态转换示例
 

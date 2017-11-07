@@ -1,5 +1,6 @@
 ---
-title: "规划报告 | Microsoft Docs"
+title: "规划报表"
+titleSuffix: Configuration Manager
 description: "从安装详细信息到安全性和网络带宽，规划 Configuration Manager 中的报表至关重要。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "6"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 119f501057bf44e483be31db20b88326b3d05ebb
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 9d7c8de64c412b19fff4fa8c4193a020de680407
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="planning-for-reporting-in-system-center-configuration-manager"></a>规划 System Center Configuration Manager 中的报告
 

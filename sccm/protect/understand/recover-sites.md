@@ -1,5 +1,6 @@
 ---
-title: "站点恢复 | Microsoft Docs"
+title: "站点恢复"
+titleSuffix: Configuration Manager
 description: "了解如何恢复 System Center Configuration Manager 站点。"
 ms.custom: na
 ms.date: 6/5/2017
@@ -14,11 +15,11 @@ caps.latest.revision:
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: f5aff56e9948536944140fbadb0539c7a4e20f26
-ms.sourcegitcommit: 5ca89204716750eaaceb01bba40b35b85c7122ba
+ms.openlocfilehash: 96785ea5abcb4ae67952ad8243c36bf6b238daca
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2017
+ms.lasthandoff: 10/12/2017
 ---
 #  <a name="recover-a-configuration-manager-site"></a>恢复 Configuration Manager 站点
 

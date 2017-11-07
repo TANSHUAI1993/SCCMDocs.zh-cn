@@ -1,5 +1,6 @@
 ---
-title: "规划操作系统部署互操作性 | Microsoft Docs"
+title: "规划操作系统部署互操作性"
+titleSuffix: Configuration Manager
 description: "了解单一层次结构中的不同 System Center Configuration Manager 站点使用不同版本时的互操作性问题。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "10"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 50a4b75b8c8c1cb6f7a8e696abad285f99080fcd
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: b096ea4d6dfb4df13691c662d196f638d30d5da4
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="planning-for-operating-system-deployment-interoperability-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中规划操作系统部署互操作性
 

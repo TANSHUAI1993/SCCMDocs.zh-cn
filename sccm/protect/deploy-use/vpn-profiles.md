@@ -1,5 +1,6 @@
 ---
-title: "System Center Configuration Manager 中的 VPN 配置文件 | Microsoft Docs"
+title: "VPN 配置文件"
+titleSuffix: Configuration Manager
 description: "了解如何使用 System Center Configuration Manager 中的 VPN 配置文件将 VPN 设置部署到组织中的用户。"
 ms.custom: na
 ms.date: 11/27/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: e07a80c1a59043b74cda7219f78c5fef66989ba8
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 02d9178dbfe8cb00d38367d0dfcb2f521d4c26a0
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="vpn-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的 VPN 配置文件
 
@@ -43,7 +44,7 @@ ms.lasthandoff: 08/07/2017
 |---------------------|-----------------|----------------|--------------------|----------------|  
 |**Cisco AnyConnect**|否|否|否|否|  
 |**Pulse Secure**|是|否|是|是|  
-| **F5 Edge Client**|是|否|是|是|  
+|**F5 Edge Client**|是|否|是|是|  
 |**Dell SonicWALL Mobile Connect**|是|否|是|是|  
 |**Check Point Mobile VPN**|是|否|是|是|  
 |**Microsoft SSL (SSTP)**|是|是|是|否|  

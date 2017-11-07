@@ -1,5 +1,6 @@
 ---
-title: "导入配置数据 | Microsoft Docs"
+title: "导入配置数据"
+titleSuffix: Configuration Manager
 description: "如果配置数据为 cabinet 文件格式，并且符合受支持的服务建模语言架构，则将它导入。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: d770a2f305856560de70014cc39a95207f0efab5
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: c7273ff47edb4a6d39d8c85b2d349ee7315edb17
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="import-configuration-data-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 导入配置数据
 

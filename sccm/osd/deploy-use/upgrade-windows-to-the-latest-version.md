@@ -1,5 +1,6 @@
 ---
-title: "将 Windows 升级到最新版本 | Microsoft Docs"
+title: "将 Windows 升级到最新版本"
+titleSuffix: Configuration Manager
 description: "了解如何使用 Configuration Manager 将操作系统从 Windows 7 或更高版本升级到 Windows 10。"
 ms.custom: na
 ms.date: 02/06/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "13"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 412c2c644cc7f17f307c02b84471f3ee494045ec
-ms.sourcegitcommit: 31c670a4bce74fd64a7d46ebf7702f65b80d4147
+ms.openlocfilehash: ff6477b21f5befb421f85c2204c1b0f1d75742f1
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="upgrade-windows-to-the-latest-version-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 将 Windows 升级到最新版本
 

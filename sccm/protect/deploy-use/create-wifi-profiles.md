@@ -1,5 +1,6 @@
 ---
-title: "如何创建 Wi-Fi 配置文件 | Microsoft Docs"
+title: "如何创建 Wi-Fi 配置文件"
+titleSuffix: Configuration Manager
 description: "了解如何在 System Center Configuration Manager 中使用 Wi-Fi 配置文件为组织中的用户部署无线网络设置。"
 ms.custom: na
 ms.date: 12/11/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: f1ae976899de1fd3efcbde0c7268f071a5d0218b
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 24bc4ad8290bfa1a8b298374d5adf7ab1841398e
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="create-wi-fi-profiles"></a>创建 Wi-Fi 配置文件
 
@@ -106,7 +107,7 @@ ms.lasthandoff: 08/07/2017
 6. **仅适用于 iOS 设备：**  
  配置 Wi-Fi 连接所需的任何证书的信息。 必须配置客户端证书以及受信任的服务器证书名称或根证书，如下所示：  
 
-    -   **受信任的服务器证书名称**：如果设备连接到的服务器使用服务器身份验证证书来识别服务器并帮助保护信道的安全，请在该证书的使用者名称或使用者备用名称中输入一个或多个名称。 名称通常为服务器完全限制的域名。 例如，服务器证书在证书使用者中具有公用名 srv1.contoso.com，则输入“srv1.contoso.com” 。 如果服务器证书具有多个在使用者可选名称中指定的名称，请输入每个名称，以分号分隔。  
+    -   **受信任的服务器证书名称**：如果设备连接到的服务器使用服务器身份验证证书来识别服务器并帮助保护信道的安全，请在该证书的使用者名称或使用者备用名称中输入一个或多个名称。 名称通常为服务器完全限制的域名。 例如，服务器证书在证书使用者中具有公用名 srv1.contoso.com，则输入“srv1.contoso.com” 。如果服务器证书具有多个在使用者可选名称中指定的名称，请输入每个名称，以分号分隔。  
 
     > [!TIP]  
     >  如果将使用你为 iOS 设备 EAP 或客户端身份验证选择的客户端证书来向远程身份验证拨入用户服务 (RADIUS) 服务器（例如正在运行网络策略服务器的服务器）进行验证，则你必须将使用者可选名称设置为用户主体名称。  

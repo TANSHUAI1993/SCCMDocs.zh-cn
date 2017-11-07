@@ -1,5 +1,6 @@
 ---
-title: "准备操作系统部署 | Microsoft Docs"
+title: "准备操作系统部署"
+titleSuffix: Configuration Manager
 description: "阅读这些文章，了解为准备操作系统部署，在 Configuration Manager 必须做的事情。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "3"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: dcc35f39b6ece8b466fc3770c6b9f304180eb42a
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: de4f57adc187d21a0f954299299912176e7692ab
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="prepare-for-operating-system-deployment-in-system-center-configuration-manager"></a>准备 System Center Configuration Manager 中的操作系统部署
 

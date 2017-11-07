@@ -1,5 +1,6 @@
 ---
-title: "使用应用配置策略配置 iOS 应用 | Microsoft Docs"
+title: Configure iOS apps with app configuration policies
+titleSuffix: Configuration Manager
 description: "通过在用户运行应用之前向其部署应用配置策略，帮助消除运行 iOS 8 或更高版本的设备上的配置问题。"
 ms.custom: na
 ms.date: 03/05/2017
@@ -12,14 +13,14 @@ ms.topic: article
 ms.assetid: f0a78038-ea22-4826-9c07-1771b7dd2e8d
 caps.latest.revision: "18"
 caps.handback.revision: "0"
-author: mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 50aea2afaf34974ca92ac58b6569bff56403a9ab
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 905b0925f88395942c954561aa0828c15d3ba758
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="apply-settings-to-ios-apps-with-app-configuration-policies-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中将设置应用于使用应用配置策略的 iOS 应用
 

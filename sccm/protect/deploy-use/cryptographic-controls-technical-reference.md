@@ -1,5 +1,6 @@
 ---
-title: "加密控制技术参考 | Microsoft Docs"
+title: "加密控制技术参考"
+titleSuffix: Configuration Manager
 description: "了解有关在 System Center Configuration Manager 中签名和加密如何帮助防范来自数据读取的攻击。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "6"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 09d319ce817c925ac002a27733d2ce35464eeca7
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 616a781ee40fc3cde7f6c4c6525da74560a9072f
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="cryptographic-controls-technical-reference"></a>加密控制技术参考
 

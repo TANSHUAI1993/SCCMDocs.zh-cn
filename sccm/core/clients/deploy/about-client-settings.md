@@ -1,5 +1,6 @@
 ---
-title: "客户端设置 | Microsoft Docs"
+title: "客户端设置"
+titleSuffix: Configuration Manager
 description: "通过使用 System Center Configuration Manager 中的管理控制台选择客户端设置。"
 ms.custom: na
 ms.date: 08/01/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 5eeeb9337926b983c26f681bff043fa1598dd4ee
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: f34479d6cf0c1153615c612480f204b71a8d84cb
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="about-client-settings-in-system-center-configuration-manager"></a>关于 System Center Configuration Manager 中的客户端设置
 

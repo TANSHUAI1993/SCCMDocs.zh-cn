@@ -1,5 +1,6 @@
 ---
-title: "国际支持 | Microsoft Docs"
+title: "国际支持"
+titleSuffix: Configuration Manager
 description: "配置 System Center Configuration Manager 以符合特定的国际要求。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 3bab51be96445f766e8f5bbf54eee854e5d09cee
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: b3ff505c4e5a9eedc3a89fbfc5a54825d5849308
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="international-support-in-system-center-configuration-manager"></a>System Center Configuration Manager 的国际支持
 

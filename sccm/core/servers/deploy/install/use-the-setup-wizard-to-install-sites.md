@@ -1,5 +1,6 @@
 ---
-title: "安装向导 | Microsoft Docs"
+title: "安装向导"
+titleSuffix: Configuration Manager
 ms.custom: na
 ms.date: 7/24/2017
 ms.prod: configuration-manager
@@ -13,11 +14,11 @@ caps.latest.revision: "3"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 678f1b35fe6f7649dacb766f7c671f4ec8ea1435
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 88aaed5b4b0fb126bb4042aabfb1acaebbaa86ca
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="use-the-setup-wizard-to-install-system-center-configuration-manager-sites"></a>使用安装向导安装 System Center Configuration Manager 站点
 

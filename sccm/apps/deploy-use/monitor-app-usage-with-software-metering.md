@@ -1,5 +1,6 @@
 ---
-title: "使用软件计数监视应用使用情况 | Microsoft Docs"
+title: "使用软件计数监视应用使用情况"
+titleSuffix: Configuration Manager
 description: 
 ms.custom: na
 ms.date: 09/20/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "8"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: 87bafd8ce28d58993666057b6c5bfd8bdc0c4ed9
-ms.sourcegitcommit: 51654bf8b5615eb99084d0a20d18ca3fccfa83a1
+ms.openlocfilehash: c44d606efbbcd099bdcd6d5f83aad156525d9279
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="software-metering-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的软件计数
 

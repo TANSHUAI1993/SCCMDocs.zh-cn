@@ -1,5 +1,6 @@
 ---
-title: "查询简介 | Microsoft Docs"
+title: "查询简介"
+titleSuffix: Configuration Manager
 description: "可创建和运行查询，在 System Center Configuration Manager 层次结构中查找与查询条件相匹配的对象。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: a1bb67b786aa452452585f2f7a2aa7c9ca4e12bf
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: f2a97ad3047c4e26a6c1823efca52d39e45c3b6e
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="introduction-to-queries-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的查询简介
 

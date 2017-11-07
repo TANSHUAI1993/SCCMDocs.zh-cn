@@ -1,5 +1,6 @@
 ---
-title: "管理批量采购的 iOS 应用 | Microsoft Docs"
+title: Manage volume-purchased iOS apps
+titleSuffix: Configuration Manager
 description: "部署、管理和跟踪通过 iOS App Store 购买的应用的许可证。"
 ms.custom: na
 ms.date: 05/12/2017
@@ -12,14 +13,14 @@ ms.topic: article
 ms.assetid: 7c3b9316-247b-490b-a363-8f8553821579
 caps.latest.revision: "18"
 caps.handback.revision: "0"
-author: mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: ce706e938f558406044f7890c80bb7156c3b262b
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: c5ce168afe8668c67d7a66aaf79fce91d082afd5
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="manage-volume-purchased-ios-apps-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 管理批量购买的 iOS 应用
 

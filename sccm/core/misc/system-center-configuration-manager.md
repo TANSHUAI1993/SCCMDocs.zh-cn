@@ -1,5 +1,5 @@
 ---
-title: System Center Configuration Manager | Microsoft Docs
+title: System Center Configuration Manager
 ms.custom: na
 ms.date: 10/06/2016
 ms.reviewer: na
@@ -15,11 +15,11 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: noindex,nofollow
-ms.openlocfilehash: 10fb029b4e3f9d3386df616a1a238674443d2c76
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: ae5da6a5812ed62c413e0ec6b8d76d06dcf0cd63
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="system-center-configuration-manager"></a>System Center Configuration Manager
 

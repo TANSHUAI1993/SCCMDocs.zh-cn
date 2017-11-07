@@ -1,5 +1,6 @@
 ---
-title: "监视内容 | Microsoft Docs"
+title: "监视内容"
+titleSuffix: Configuration Manager
 description: "了解如何使用 Configuration Manager 控制台监视分发的内容。"
 ms.custom: na
 ms.date: 4/17/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 7659d5789b8ce4e9e0b585a331c8f68869c9492d
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: b260cf989fbda471b514d06d927e9b2c55d35c1b
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="monitor-content-you-have-distributed-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 监视分发的内容
 
@@ -55,7 +56,7 @@ ms.lasthandoff: 08/07/2017
 还可管理仍在向分发点进行的分发或未能成功向分发点分发内容的分发：  
 
 -   当在“资产详细信息”窗格中查看针对分发点的分发作业的部署状态消息时，可使用取消或重新分发内容选项。 此窗格位于“内容状态”节点的“正在进行”选项卡或“错误”选项卡中。  
--   此外，当在“正在进行”选项卡上查看作业详细信息时，作业详细信息会显示作业完成的百分比。 当查看“错误”选项卡中的作业详细信息时，作业详细信息还会显示作业的剩余重试次数以及下次重试之前的等待时间。  
+-   此外，当在“正在进行”选项卡上查看作业详细信息时，作业详细信息会显示作业完成的百分比。当查看“错误”选项卡中的作业详细信息时，作业详细信息还会显示作业的剩余重试次数以及下次重试之前的等待时间。  
 
 当你取消尚未完成的部署时，用于传输该内容的分发作业将停止：  
 
@@ -148,7 +149,7 @@ ms.lasthandoff: 08/07/2017
 
 3.  选择要查看其分发点状态信息的分发点。  
 
-4.  在结果窗格中，单击“详细信息”  选项卡。 此时会显示分发点的状态信息。  
+4.  在结果窗格中，单击“详细信息”  选项卡。此时会显示分发点的状态信息。  
 
 ## <a name="client-data-sources-dashboard"></a>客户端数据源仪表板
 从 1610 版起，可以使用“客户端数据源”仪表板，来帮助了解环境中[对等缓存](/sccm/core/plan-design/hierarchy/client-peer-cache)的使用。 客户端下载内容后，仪表板将开始显示数据，并将该信息报告给网站。 此过程最多可能需要 24 小时。

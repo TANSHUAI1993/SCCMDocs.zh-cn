@@ -1,5 +1,6 @@
 ---
-title: "替换现有计算机和传输设置 | Microsoft Docs"
+title: "替换现有计算机和传输设置"
+titleSuffix: Configuration Manager
 description: "在 Configuration Manager 中，从部署方法中进行选择，如可启动媒体、多播或软件中心，以将现有计算机替换成新计算机。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "6"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 08e9603944e378593598d70c1c11c8a1b1f2f13b
-ms.sourcegitcommit: f6a428a8db7145affa388f59e0ad880bdfcf17b5
+ms.openlocfilehash: efa6ad5bd5358139b3da23b226041f8599dc9454
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="replace-an-existing-computer-and-transfer-settings-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 替换现有计算机和传输设置
 

@@ -1,5 +1,6 @@
 ---
-title: "高可用性 | Microsoft Docs"
+title: "高可用性"
+titleSuffix: Configuration Manager
 description: "了解如何使用维持高可用性服务的选项部署 System Center Configuration Manager。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "4"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: d3e9afb90cdc85bc7299626b642c52be659e3bdf
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: dd38deccb7fb4fb572fb60519b4084db387baec7
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="high-availability-options-for-system-center-configuration-manager"></a>System Center Configuration Manager 的高可用性选项
 

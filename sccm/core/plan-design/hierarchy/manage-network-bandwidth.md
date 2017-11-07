@@ -1,5 +1,6 @@
 ---
-title: "管理用于内容的网络带宽 | Microsoft Docs"
+title: "管理用于内容的网络带宽"
+titleSuffix: Configuration Manager
 description: "配置 System Center Configuration Manager 的计划、限制和预安排内容。"
 ms.custom: na
 ms.date: 2/6/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: d9dff97126c34a726677de60dd7647370c553b6e
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 5431f23c16ed452223ad931266adad4c20739124
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="manage-network-bandwidth-for-content"></a>管理用于内容的网络带宽
 为帮助管理用于 System Center Configuration Manager 内容管理过程的网络带宽，可以使用内置控件进行计划和限制。 也可以使用预留内容。 以下几部分详细说明了这些选项。

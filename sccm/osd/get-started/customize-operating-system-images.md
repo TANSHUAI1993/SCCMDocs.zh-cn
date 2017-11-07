@@ -1,5 +1,6 @@
 ---
-title: "自定义操作系统映像 - Configuration Manager | Microsoft Docs"
+title: "自定义操作系统映像 "
+titleSuffix: Configuration Manager
 description: "使用捕获和生成任务序列、手动配置或这两者的组合来自定义操作系统映像。"
 ms.custom: na
 ms.date: 01/23/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 485cb3ca4988f983c1ec71b6c8daf136571bf0ea
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 973a8df54d1acab48803b34bf18494b2ae7f6054
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="customize-operating-system-images-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 自定义操作系统映像
 

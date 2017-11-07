@@ -1,5 +1,6 @@
 ---
-title: "为使用 Intune 管理的 Windows 8.1 和 Windows 10 设备创建配置项 | Microsoft Docs"
+title: "为使用 Intune 管理的 Windows 8.1 和 Windows 10 设备创建配置项"
+titleSuffix: Configuration Manager
 description: "使用 System Center Configuration Manager Windows 10 配置项目，管理 Windows 10 计算机的设置。"
 ms.custom: na
 ms.date: 07/31/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: f691ef725e969f55044bafef3fdd66ead2366a6c
-ms.sourcegitcommit: f6a428a8db7145affa388f59e0ad880bdfcf17b5
+ms.openlocfilehash: 7f5a50ae6ea05af7e864cf94df3063d70bd737b4
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-create-configuration-items-for-windows-81-and-windows-10-devices-managed-without-the-system-center-configuration-manager-client"></a>如何为没使用 System Center Configuration Manager 客户端管理的 Windows 8.1 和 Windows 10 设备创建配置项目
 

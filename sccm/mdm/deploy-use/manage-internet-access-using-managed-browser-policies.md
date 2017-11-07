@@ -1,5 +1,6 @@
 ---
-title: "使用托管浏览器策略管理 Internet 访问 | Microsoft Docs"
+title: "使用托管浏览器策略管理 Internet 访问"
+titleSuffix: Configuration Manager
 description: "部署 Intune Managed Browser 来管理和限制 Internet 访问。"
 ms.custom: na
 ms.date: 03/05/2017
@@ -12,14 +13,14 @@ ms.topic: article
 ms.assetid: 8e25e00c-c9a8-473f-bcb7-ea989f6ca3c5
 caps.latest.revision: "6"
 caps.handback.revision: "0"
-author: mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: d2dd2c25a2714851ba1e71414cabcef38d3ce014
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 3aea2a65733a52ab532d451b21ae98fbc0f122c6
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="manage-internet-access-using-managed-browser-policies-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 的托管浏览器策略管理 Internet 访问
 

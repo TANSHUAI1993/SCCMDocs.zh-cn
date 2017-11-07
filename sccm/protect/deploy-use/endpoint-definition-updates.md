@@ -1,5 +1,6 @@
 ---
-title: "配置 Endpoint Protection | Microsoft Docs"
+title: "配置 Endpoint Protection"
+titleSuffix: Configuration Manager
 description: "了解如何在 System Center Configuration Manager 中使用 Endpoint protection 选择和配置方法以便使反恶意软件定义在客户端计算机上保持最新状态。"
 ms.custom: na
 ms.date: 02/14/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "21"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.openlocfilehash: b5da7900a4f8e2f330c4dcb2cac00b45099bd909
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: b0b178fad73b6490c4bfeb8ec4aaa7348e7cb2a2
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 #  <a name="configure-definition-updates-for-endpoint-protection"></a>为 Endpoint Protection 配置定义更新  
 

@@ -1,5 +1,6 @@
 ---
-title: "使用移动应用程序管理策略保护应用 | Microsoft Docs"
+title: "使用移动应用程序管理策略保护应用"
+titleSuffix: Configuration Manager
 description: "修改部署的应用的功能，使它们符合公司的合规性和安全策略。"
 ms.custom: na
 ms.date: 03/05/2017
@@ -12,14 +13,14 @@ ms.topic: article
 ms.assetid: 28115475-e563-4e16-bf30-f4c9fe704754
 caps.latest.revision: "18"
 caps.handback.revision: "0"
-author: mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 50c137f159b0ef631f7173b8eec190182ce41cee
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 12633eced1850b718bf7cad019cd943305a7d9fb
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="protect-apps-using-mobile-application-management-policies-in-system-center-configuration-manager"></a>使用 System Center Configuration Manager 中的移动应用程序管理策略保护应用
 
@@ -131,7 +132,7 @@ ms.lasthandoff: 08/07/2017
 |**访问需要公司凭据**|要求用户必须输入其公司登录信息，才能访问该应用。|  
 |**访问要求设备符合公司策略**|仅允许设备在未越狱或获取根权限时使用此应用。|  
 |**在一定时间后重新检查访问要求（分钟）**|指定应用启动后重新检查访问要求前的时间段（在“超时”字段中）。<br /><br /> 在“离线宽限期”字段，如果设备离线，指定应用重新检查访问要求前的时间段。|  
-|**加密应用数据**|指定加密与本应用相关的所有数据，包括外部存储的数据，例如存储在 SD 卡上的数据。<br /><br /> **适用于 iOS 的加密**<br /><br /> 对于与 Configuration Manager 移动应用程序管理策略关联的应用，使用操作系统提供的设备级加密对静止数据进行加密。 通过必须由 IT 管理员设置的设备 PIN 策略启用此操作。 需要 PIN 时，根据移动应用程序管理策略的设置对数据进行加密。 正如 Apple 文档所述，[iOS 7 所使用的模块经过了 FIPS 140-2 的认证](http://support.apple.com/en-us/HT202739)。<br /><br /> **适用于 Android 的加官**<br /><br /> 对于与 Configuration Manager 移动应用程序管理策略关联的应用，加密由 Microsoft 提供。 根据移动应用程序管理策略的设置，数据在文件 I/O 运行过程中同步加密。 Android 上托管的应用利用平台加密库使用 CBC 模式的 AES-128 加密。 加密方法没有获得 FIPS 140-2 认证。 设备存储中的内容始终处于加密状态。|  
+|**加密应用数据**|指定加密与本应用相关的所有数据，包括外部存储的数据，例如存储在 SD 卡上的数据。<br /><br /> **适用于 iOS 的加密**<br /><br /> 对于与 Configuration Manager 移动应用程序管理策略关联的应用，使用操作系统提供的设备级加密对静止数据进行加密。 通过必须由 IT 管理员设置的设备 PIN 策略启用此操作。需要 PIN 时，根据移动应用程序管理策略的设置对数据进行加密。 正如 Apple 文档所述，[iOS 7 所使用的模块经过了 FIPS 140-2 的认证](http://support.apple.com/en-us/HT202739)。<br /><br /> **适用于 Android 的加官**<br /><br /> 对于与 Configuration Manager 移动应用程序管理策略关联的应用，加密由 Microsoft 提供。 根据移动应用程序管理策略的设置，数据在文件 I/O 运行过程中同步加密。 Android 上托管的应用利用平台加密库使用 CBC 模式的 AES-128 加密。 加密方法没有获得 FIPS 140-2 认证。 设备存储中的内容始终处于加密状态。|  
     |**“阻止屏幕捕捉”** （仅限于 Android 设备）|指定在使用该应用时，阻止设备的屏幕捕捉功能。|  
 
 6)  在“托管浏览器”页上，选择允许托管浏览器只打开列表中的 URL 或是阻止托管浏览器打开列表中的 URL，然后选择“下一步”。  

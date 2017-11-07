@@ -1,5 +1,6 @@
 ---
-title: "发布站点数据 | Microsoft Docs"
+title: "发布站点数据"
+titleSuffix: Configuration Manager
 description: "了解如何将 Configuration Manager 站点发布到 Active Directory 域服务。"
 ms.custom: na
 ms.date: 2/7/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "8"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: bcfb002c503485f03ba27d7346acb61d0d3c6087
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 8969a7a97e11fe0c01999e828578f3748cffa74b
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="publish-site-data-for-system-center-configuration-manager"></a>发布 System Center Configuration Manager 的站点数据
 

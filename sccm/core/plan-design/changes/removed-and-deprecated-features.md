@@ -1,5 +1,6 @@
 ---
-title: "弃用的功能 | Microsoft Docs"
+title: "已弃用的功能"
+titleSuffix: Configuration Manager
 description: "了解有关 System Center Configuration Manager 不再支持的功能、产品和操作系统的信息。"
 ms.custom: na
 ms.date: 08/16/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 8ac7009014a4652a36acf69ebfe9ccab3ba8ecbd
-ms.sourcegitcommit: 3ce56c7350411d8cc3d3cb9b4054f9ada9b0ed54
+ms.openlocfilehash: 7a87e03cdade6339bc0ea0055edf8791e197e6f1
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="removed-and-deprecated-features-for-system-center-configuration-manager"></a>System Center Configuration Manager 的已删除和已弃用的功能
 

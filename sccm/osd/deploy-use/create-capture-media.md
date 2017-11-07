@@ -1,5 +1,6 @@
 ---
-title: "创建捕获介质 - Configuration Manager | Microsoft Docs"
+title: "创建捕获媒体 "
+titleSuffix: Configuration Manager
 description: "使用“创建任务序列媒体向导”在 Configuration Manager 中创建捕获媒体，以从引用计算机中捕获操作系统映像。"
 ms.custom: na
 ms.date: 01/23/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 5acf800ff5aebd849e294393337755145a60cca5
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: c25eade287d254907c7d7d02948eb25a88ed0a11
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="create-capture-media-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 创建捕获媒体
 

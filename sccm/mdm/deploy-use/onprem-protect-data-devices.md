@@ -1,5 +1,6 @@
 ---
 title: "保护本地移动设备管理中的数据和设备 "
+titleSuffix: Configuration Manager
 description: "在 Configuration Manager 中保护本地移动设备管理中的数据和设备。"
 ms.custom: na
 ms.date: 03/05/2017
@@ -12,14 +13,14 @@ ms.topic: article
 ms.assetid: 692b86d5-dea7-4414-9e1f-043d2cadfd3b
 caps.latest.revision: "18"
 caps.handback.revision: "0"
-author: mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 88ab415ed3617ae5385636ad23bd02809979b55a
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 2a05d082602c1fad277f76f8c12cb9a98c37b589
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="protect-data-and-devices-in-on-premises-mobile-device-management"></a>保护本地移动设备管理中的数据和设备
 

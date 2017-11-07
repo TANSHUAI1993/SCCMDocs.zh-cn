@@ -1,5 +1,6 @@
 ---
-title: "报告简介 | Microsoft Docs"
+title: "报表简介"
+titleSuffix: Configuration Manager
 description: "了解在 Configuration Manager 中管理报表可使用的工具和资源集。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "7"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 5846ca3c91626491b03b36dd17b454bb9382a8dc
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: eab08e56ac133f412dd70386002eabb29ecb7115
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="introduction-to-reporting-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的报表简介
 

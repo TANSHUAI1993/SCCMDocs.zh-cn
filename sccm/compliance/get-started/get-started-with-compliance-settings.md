@@ -1,5 +1,6 @@
 ---
-title: "符合性设置入门 | Microsoft Docs"
+title: "符合性设置入门"
+titleSuffix: Configuration Manager
 description: "了解 System Center Configuration Manager 中符合性设置的工作原理。 此外，还可以了解需要知道的核心概念。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "11"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: b9f997caf5ca4753f95ab2e2cf680bdac40d29b7
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: b1171f806d1bda9671fd5817362285a461ee2d44
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="get-started-with-compliance-settings-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的符合性设置入门
 

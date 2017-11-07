@@ -1,5 +1,6 @@
 ---
-title: "创建用于非操作系统部署的任务序列 | Microsoft Docs"
+title: "为非操作系统部署创建任务序列"
+titleSuffix: Configuration Manager
 description: "创建与部署操作系统不相关的任务序列，如软件分发、更新驱动程序和编辑用户状态等。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "6"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: a50354070c03ad8acbd21432a192f949c0a196fa
-ms.sourcegitcommit: 31c670a4bce74fd64a7d46ebf7702f65b80d4147
+ms.openlocfilehash: 8d230cd6bba3bcc911f0762eea43e8cec56f0535
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="create-a-task-sequence-for-non-operating-system-deployments-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 创建用于非操作系统部署的任务序列
 

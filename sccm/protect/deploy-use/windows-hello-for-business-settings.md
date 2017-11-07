@@ -1,5 +1,6 @@
 ---
-title: "Windows Hello 企业版设置 | Microsoft Docs"
+title: "Windows Hello 企业版设置"
+titleSuffix: Configuration Manager
 description: "了解如何将 Windows Hello 企业版与 System Center Configuration Manager 集成。"
 ms.custom: na
 ms.date: 09/21/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "17"
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.openlocfilehash: 43586e55f2c0c5cf117b94c61250f26ba4233f53
-ms.sourcegitcommit: 4c3906cf9614420cb8527da9e48978eb0b8f0e7a
+ms.openlocfilehash: 195a5f8e595b6a8597e8c8c8d9046c5864f46526
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="windows-hello-for-business-settings-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的 Windows Hello 企业版设置
 

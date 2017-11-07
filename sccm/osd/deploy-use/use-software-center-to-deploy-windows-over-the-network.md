@@ -1,5 +1,6 @@
 ---
-title: "使用软件中心通过网络部署 Windows | Microsoft Docs"
+title: "使用软件中心通过网络部署 Windows"
+titleSuffix: Configuration Manager
 description: "可将操作系统部署到软件中心，使用新版 Windows 刷新现有计算机或将 Windows 升级到最新版本。"
 ms.custom: na
 ms.date: 6/16/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "5"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: 8988409c68b7f69439ed03872c316b2139d25616
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: b9fe1248c59b8093b5e69780ff6f08e798408714
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="use-software-center-to-deploy-windows-over-the-network-with-system-center-configuration-manager"></a>使用软件中心与 System Center Configuration Manager 一起通过网络部署 Windows
 

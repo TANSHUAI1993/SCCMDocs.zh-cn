@@ -1,5 +1,6 @@
 ---
-title: "硬件清单 | Microsoft Docs | Linux UNIX "
+title: "适用于 Linux 和 UNIX 的硬件清单"
+titleSuffix: Configuration Manager
 description: "了解如何在 System Center Configuration Manager 中使用 Linux 和 UNIX 的硬件清单。"
 ms.custom: na
 ms.date: 02/22/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "6"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: b6776fbe0cfca23244d767cffd554a2ef4567a2d
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 6f71478f6a2a8e5a2a41068624debfe3ac3e915d
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="hardware-inventory-for-linux-and-unix-in-system-center-configuration-manager"></a>System Center Configuration Manager 中 Linux 和 UNIX 的硬件清单
 

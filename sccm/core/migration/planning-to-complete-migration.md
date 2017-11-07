@@ -1,5 +1,6 @@
 ---
-title: "完成迁移 | Microsoft Docs"
+title: "完成迁移"
+titleSuffix: Configuration Manager
 description: "了解如何在源层次结构不再包含数据后，完成到 System Center Configuration Manager 目标层次结构的迁移。"
 ms.custom: na
 ms.date: 1/12/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: eb1d2e320df02b26423ed4341d5bd1568b9444ad
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 574e8897043651b7c80c4d61b86773ae02f412c2
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="plan-to-complete-migration-in-system-center-configuration-manager"></a>规划在 System Center Configuration Manager 中完成迁移
 

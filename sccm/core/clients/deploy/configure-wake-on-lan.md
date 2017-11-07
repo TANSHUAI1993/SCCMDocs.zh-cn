@@ -1,5 +1,6 @@
 ---
-title: "配置 LAN 唤醒 | Microsoft Docs"
+title: "配置 LAN 唤醒"
+titleSuffix: Configuration Manager
 description: "在 System Center Configuration Manager 中选择 LAN 唤醒设置。"
 ms.custom: na
 ms.date: 04/23/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "7"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: c033d569c17ad894f1e7a1621a8d39e6932e69cd
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: b2250b64609bc4c39a81312e1b41586a55f576df
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-configure-wake-on-lan-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中配置 LAN 唤醒
 

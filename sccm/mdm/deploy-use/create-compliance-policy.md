@@ -1,5 +1,6 @@
 ---
-title: "创建和部署设备合规性策略 | Microsoft Docs"
+title: "创建和部署设备合规性策略"
+titleSuffix: Configuration Manager
 description: "了解如何在 System Center Configuration Manager 中创建和部署设备合规性策略。"
 ms.custom: na
 ms.date: 03/05/2017
@@ -15,11 +16,11 @@ author: andredm7
 ms.author: andredm
 manager: angrobe
 robots: noindex
-ms.openlocfilehash: 6630d0170df22f46f14df241ffd8d48266c69263
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: bf0099cdf4df1b7421a257e910c8682e63f8ee1e
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="create-and-deploy-a-device-compliance-policy"></a>创建和部署设备合规性策略
 
@@ -238,7 +239,7 @@ ms.lasthandoff: 08/07/2017
   * Android 4.0+
   * Samsung KNOX 标准版 4.0+
 
-* **允许的最高操作系统版本**。 当设备使用的操作系统版本高于规则中指定的版本时，将阻止访问公司资源，并要求用户联系其 IT 管理员。 除非变更规则以允许该操作系统版本，否则该设备将不能用于访问公司资源。
+* **允许的最高操作系统版本**。 当设备使用的操作系统版本高于规则中指定的版本时，将阻止访问公司资源，并要求用户联系其 IT 管理员。除非变更规则以允许该操作系统版本，否则该设备将不能用于访问公司资源。
 
   **在以下设备上受支持：**
   * Windows Phone 8+
@@ -268,7 +269,7 @@ ms.lasthandoff: 08/07/2017
   **在以下设备上受支持：**
   * Windows 10 和 Windows 10 移动版
 
-- **无法在设备上安装的应用**。 如果用户安装的应用来自管理员非符合性应用列表，则该应用将在尝试访问公司电子邮件和支持条件性访问的其他公司资源时受阻。 将应用添加到管理员定义的非符合性列表时，此规则要求输入应用名称和应用 ID。 也可添加应用发布者，但并非必需。
+- **无法在设备上安装的应用**。 如果用户安装的应用来自管理员非符合性应用列表，则该应用将在尝试访问公司电子邮件和支持条件性访问的其他公司资源时受阻。 将应用添加到管理员定义的非符合性列表时，此规则要求输入应用名称和应用 ID。也可添加应用发布者，但并非必需。
 
     **在以下设备上受支持：**
       * iOS 6+

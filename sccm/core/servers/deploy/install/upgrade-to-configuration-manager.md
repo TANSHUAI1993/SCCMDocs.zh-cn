@@ -1,5 +1,5 @@
 ---
-title: "升级到 System Center Configuration Manager | Microsoft Docs"
+title: "升级到 System Center Configuration Manager"
 description: "了解从运行 System Center 2012 Configuration Manager 的站点和层次结构成功进行就地升级的步骤。"
 ms.custom: na
 ms.date: 6/6/2017
@@ -14,11 +14,11 @@ caps.latest.revision: "21"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: e65c22240555563cdb011849562069baf5d5887f
-ms.sourcegitcommit: 4c3906cf9614420cb8527da9e48978eb0b8f0e7a
+ms.openlocfilehash: b16d9779c130bd83304d1b369c48c7e691bd8db3
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="upgrade-to-system-center-configuration-manager"></a>升级到 System Center Configuration Manager
 

@@ -1,5 +1,6 @@
 ---
-title: "将用户和设备与用户设备相关性相链接 | Microsoft Docs"
+title: "将用户和设备与用户设备相关性相链接"
+titleSuffix: Configuration Manager
 description: "将用户和设备与用户设备相关性相链接，并自动将应用部署到与用户关联的所有设备。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: 141b4e7df4fb3fa4aed3a5a90c6197bf7636a3a0
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 1066028d0cd20521d78780ae2fdfbce91a0860b2
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="link-users-and-devices-with-user-device-affinity-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中将用户和设备与用户设备相关性相链接
 

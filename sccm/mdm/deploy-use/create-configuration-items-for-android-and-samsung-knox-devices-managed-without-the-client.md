@@ -1,5 +1,6 @@
 ---
-title: "为使用 Intune 管理的 Android 和 Samsung KNOX 标准版设备创建配置项 | Microsoft Docs"
+title: "为使用 Intune 管理的 Android 和 Samsung KNOX 标准版设备创建配置项"
+titleSuffix: Configuration Manager
 description: "使用 System Center Configuration Manager Android 和 Samsung KNOX 标准版配置项目管理设备的设置。"
 ms.custom: na
 ms.date: 03/27/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: e58d84542d5c475fef6c2c04676c50a150681099
-ms.sourcegitcommit: f6a428a8db7145affa388f59e0ad880bdfcf17b5
+ms.openlocfilehash: 3fa824c94b02ed7141c7051bab86fa64a4a9ee49
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-system-center-configuration-manager-client"></a>如何为没有使用 System Center Configuration Manager 客户端管理的 Android 和 Samsung KNOX 设备创建配置项目
 

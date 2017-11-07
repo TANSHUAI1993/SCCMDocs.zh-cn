@@ -1,5 +1,6 @@
 ---
-title: "包传输管理器 | Microsoft Docs"
+title: "包传输管理器"
+titleSuffix: Configuration Manager
 description: "了解 System Center Configuration Manager 中的包传输管理器如何将内容从站点服务器传输到远程分发点。"
 ms.custom: na
 ms.date: 2/8/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "3"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 54e54409a1792c7e28620a5e3cea3e8d8695c7d4
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 7cc724404411ff2ef4897e1bb422f523f357f8eb
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="package-transfer-manager-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的包传输管理器
 

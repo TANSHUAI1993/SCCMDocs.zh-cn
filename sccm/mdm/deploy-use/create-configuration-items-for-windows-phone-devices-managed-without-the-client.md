@@ -1,5 +1,6 @@
 ---
-title: "如何为使用 Intune 管理的 Windows Phone 设备创建配置项 | Microsoft Docs"
+title: "如何为使用 Intune 管理的 Windows Phone 设备创建配置项"
+titleSuffix: Configuration Manager
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
@@ -14,11 +15,11 @@ caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 092bb15e6c1d5cdfb5b8670ad46028a6daa49b8b
-ms.sourcegitcommit: f6a428a8db7145affa388f59e0ad880bdfcf17b5
+ms.openlocfilehash: f0a032bfa1d8d6383caf3065678d9b0a4dd3dde0
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-create-configuration-items-for-windows-phone-devices-managed-without-the-system-center-configuration-manager-client"></a>如何为未使用 System Center Configuration Manager 客户端管理的 Windows Phone 设备创建配置项目
 使用 System Center Configuration Manager **Windows Phone** 配置项目，为已在 Microsoft Intune 中注册或通过 Configuration Manager 本地管理的 Windows Phone 设备管理设置。  

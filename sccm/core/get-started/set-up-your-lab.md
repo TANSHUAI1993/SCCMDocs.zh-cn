@@ -1,5 +1,6 @@
 ---
-title: "设置 System Center Configuration Manager 实验室 | Microsoft Docs"
+title: "设置实验室"
+titleSuffix: Configuration Manager
 description: "设置实验室以便使用模拟现实活动评估 Configuration Manager。"
 ms.custom: na
 ms.date: 09/21/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: a8bacdbde00973cfd45963b355c8f810ab06a83d
-ms.sourcegitcommit: 4c3906cf9614420cb8527da9e48978eb0b8f0e7a
+ms.openlocfilehash: df0997f921bfe31bd5bac0d530d4c4fac7331a6e
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="set-up-your-system-center-configuration-manager-lab"></a>设置你的 System Center Configuration Manager 实验室
 
@@ -163,7 +164,7 @@ ms.lasthandoff: 09/22/2017
 
 #### <a name="to-install-net-and-activate-windows-communication-foundation"></a>若要安装 .NET 并且激活 Windows Communication Foundation：  
 
-1.  打开 **Server Manager**，然后导航到“管理” 。 单击“添加角色和功能”  以打开“添加角色和功能向导” ** Wizard.**。  
+1.  打开 **Server Manager**，然后导航到“管理” 。 单击“添加角色和功能”  以打开“添加角色和功能向导”  **Wizard.**。  
 
 2.  查看“开始前”  面板提供的信息，然后单击“下一步” 。  
 

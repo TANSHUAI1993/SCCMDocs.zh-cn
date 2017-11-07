@@ -1,5 +1,6 @@
 ---
-title: "System Center Configuration Manager 的最佳安全做法和隐私信息 | Microsoft Docs"
+title: "安全最佳方案和隐私信息"
+titleSuffix: Configuration Manager
 description: "查找可提供 System Center Configuration Manager 的安全最佳方案和隐私信息的资源。"
 ms.custom: na
 ms.date: 1/3/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "10"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 135a30085a1a02f75e9a88ed5f9ded06e9c33367
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: fca78c3a453344d80562aa7e457f6c15f257db09
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="security-best-practices-and-privacy-information-for-system-center-configuration-manager"></a>System Center Configuration Manager 的安全最佳方案和隐私信息
 

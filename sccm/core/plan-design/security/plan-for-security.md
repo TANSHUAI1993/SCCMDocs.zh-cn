@@ -1,5 +1,6 @@
 ---
-title: "规划 System Center Configuration Manager 中的安全性 | Microsoft Docs"
+title: "规划安全性"
+titleSuffix: Configuration Manager
 description: "获取 System Center Configuration Manager 中安全相关的最佳安全方案和其他信息。"
 ms.custom: na
 ms.date: 01/04/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 6145cb69c69dba1eb1b9842079ee1a33686bb18a
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 8f63d1b762b296cb6b6aa56480a5cddf7a3249dc
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="plan-for-security-in-system-center-configuration-manager"></a>规划 System Center Configuration Manager 中的安全性
 
@@ -131,7 +132,7 @@ ms.lasthandoff: 08/07/2017
 
 在大多数情况下，Configuration Manager 客户端会正确标识唯一适合的 PKI 证书。 但是，当情况不是这样，而是根据客户端身份验证功能选择证书时，可设置下列两种替代选择方法：  
 
--   在客户端证书的“使用者名称”中进行部分字符串匹配。 如果你在主题字段中使用计算机的完全限定的域名 (FQDN) 并且想基于域后缀选择证书，则此不区分大小写的匹配很适用，例如 **contoso.com**。 但是，你可以使用此选择方法在证书使用者名称中标识任何连续字符串，以将此证书与客户端证书存储中的其他证书区分开来。  
+-   在客户端证书的“使用者名称”中进行部分字符串匹配。 如果你在主题字段中使用计算机的完全限定的域名 (FQDN) 并且想基于域后缀选择证书，则此不区分大小写的匹配很适用，例如 **contoso.com**。但是，你可以使用此选择方法在证书使用者名称中标识任何连续字符串，以将此证书与客户端证书存储中的其他证书区分开来。  
 
     > [!NOTE]  
     >  你无法将使用者可选名称 (SAN) 部分字符串匹配用作站点设置。 虽然可以使用 CCMSetup 为 SAN 指定部分字符串匹配，但在下列情况下将由站点属性对其进行覆盖：  

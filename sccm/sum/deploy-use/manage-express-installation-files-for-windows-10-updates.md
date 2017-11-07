@@ -1,5 +1,6 @@
 ---
-title: "管理 Windows 10 更新的快速安装文件| Microsoft 文档"
+title: "管理 Windows 10 更新的快速安装文件"
+titleSuffix: Configuration Manager
 description: "Configuration Manager 支持 Windows 10 快速安装文件，所需下载文件更小，在客户端上安装速度更快。"
 keywords: 
 author: dougeby
@@ -11,11 +12,11 @@ ms.prod: configuration-manager
 ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: b8d8af88-e8ac-4deb-921b-975e2d2afd80
-ms.openlocfilehash: baffb5f026bd63c50f878214e71d2c9e9b8b51c2
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 1ec69b5679f726f20da4ff0f63d9271e5d06cee3
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="manage-express-installation-files-for-windows-10-updates"></a>管理 Windows 10 更新的快速安装文件
 从 Configuration Manager 版本 1702 起，Configuration Manager 支持 Windows 10 更新的快速安装文件。 如果使用支持版本的 Windows 10，可通过 Configuration Manager 设置只下载本月的 Windows 10 累积更新和上月更新之间的更改。 在没有快速安装文件的情况下，Configuration Manager 每个月都会下载完整的 Windows 10 累积更新（包括先前月份的所有更新）。 使用快速安装文件，所需下载文件更小，在客户端上安装更快速。

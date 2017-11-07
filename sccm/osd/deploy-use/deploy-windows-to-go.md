@@ -1,5 +1,6 @@
 ---
-title: "使用 System Center Configuration Manager 部署 Windows to Go | Microsoft Docs"
+title: "部署 Windows To Go"
+titleSuffix: Configuration Manager
 description: "了解如何在 System Center Configuration Manager 中设置 Windows To Go 以创建从外部驱动器启动的 Windows To Go 工作区。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: a8b1a42c43438553cfbb62328bed933378bb344c
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 91e3fa4aba93dc3012fe1e702f50c4f9438a69e8
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="deploy-windows-to-go-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 部署 Windows to Go
 
@@ -222,7 +223,7 @@ ms.lasthandoff: 08/07/2017
     > [!NOTE]  
     >  站点服务器的计算机帐户必须具有对源文件夹的“读取”  访问权限。  
 
-2.  将在 [创建预留媒体](#BKMK_CreatePrestagedMedia) 部分中创建的预留媒体文件复制到包源文件夹。  
+2.  将在 [Create prestaged media](#BKMK_CreatePrestagedMedia) 部分中创建的预留媒体文件复制到包源文件夹。  
 
 3.  将 Windows To Go Creator 工具 (WTGCreator.exe) 复制到包源文件夹中。 此 Creator 工具在任何主站点服务器上的以下位置中均可用：<ConfigMgrInstallationFolder>\OSD\Tools\WTG\Creator。  
 
@@ -281,7 +282,7 @@ ms.lasthandoff: 08/07/2017
  Windows To Go 在外部可启动驱动器上启用 BitLocker 而不使用 TPM。 因此，必须使用单独的工具在 Windows To Go 驱动器上配置 BitLocker。 要启用 BitLocker，必须在“安装 Windows 和 ConfigMgr”  步骤之后向任务序列添加操作。  
 
 > [!NOTE]  
->  适用于 Windows To Go 的 BitLocker 需要密码。 在 [创建预留媒体](#BKMK_CreatePrestagedMedia) 步骤中，你可以使用 OSDBitLockerPIN 变量将密码设置为预启动命令的一部分。  
+>  适用于 Windows To Go 的 BitLocker 需要密码。 在 [Create prestaged media](#BKMK_CreatePrestagedMedia) 步骤中，你可以使用 OSDBitLockerPIN 变量将密码设置为预启动命令的一部分。  
 
  使用以下过程更新 Windows 8 任务序列以对 Windows To Go 启用 BitLocker。  
 
@@ -410,7 +411,7 @@ ms.lasthandoff: 08/07/2017
     2.  “集合”：单击“浏览”  ，以选择包含用户可能为其设置 Windows To Go 的所有设备的集合。  
 
         > [!IMPORTANT]  
-        >  如果你在 [创建预留媒体](#BKMK_CreatePrestagedMedia) 部分中创建的预留媒体使用 SMSTSPreferredAdvertID 变量，则你可以将任务序列部署到“所有系统”  集合，并且可以在“内容”  页上指定“仅 Windows PE (隐藏)”  设置。 由于隐藏了任务序列，因此它将只对媒体可用。  
+        >  如果你在 [Create prestaged media](#BKMK_CreatePrestagedMedia) 部分中创建的预留媒体使用 SMSTSPreferredAdvertID 变量，则你可以将任务序列部署到“所有系统”  集合，并且可以在“内容”  页上指定“仅 Windows PE (隐藏)”  设置。 由于隐藏了任务序列，因此它将只对媒体可用。  
 
     3.  “使用与此集合关联的默认分发点组”：如果你想将包内容存储在集合默认分发点组中，请选择此选项。 如果未将所选集合与分发点组关联，则此选项将不可用。  
 
@@ -421,7 +422,7 @@ ms.lasthandoff: 08/07/2017
     -   **可用于以下项目**：指定任务序列是否可用于 Configuration Manager 客户端、媒体或者 PXE。  
 
         > [!IMPORTANT]  
-        >  将“仅媒体和 PXE (隐藏)”  设置用于自动化任务序列部署。 选择“允许无人参与的操作系统部署”  ，并将 SMSTSPreferredAdvertID 变量设置为预留媒体的一部分，以让计算机在检测到 Windows To Go 驱动器时在无用户干预的情况下自动启动到 Windows To Go 部署。 有关这些预留媒体设置的详细信息，请参阅 [创建预留媒体](#BKMK_CreatePrestagedMedia) 部分。  
+        >  将“仅媒体和 PXE (隐藏)”  设置用于自动化任务序列部署。 选择“允许无人参与的操作系统部署”  ，并将 SMSTSPreferredAdvertID 变量设置为预留媒体的一部分，以让计算机在检测到 Windows To Go 驱动器时在无用户干预的情况下自动启动到 Windows To Go 部署。 有关这些预留媒体设置的详细信息，请参阅 [Create prestaged media](#BKMK_CreatePrestagedMedia) 部分。  
 
 7.  在“计划”  页上，配置下列设置，然后单击“下一步” 。  
 
@@ -459,7 +460,7 @@ ms.lasthandoff: 08/07/2017
  在部署 Windows To Go 包和 Windows 8 任务序列之后，用户可以使用 Windows To Go Creator。 用户可以转到软件目录或软件中心（如果 Windows To Go Creator 已部署到设备），然后运行 Windows To Go Creator 程序。 在下载 Creator 包之后，任务栏上会显示一个闪烁的图标。 如果用户单击此图标，则会显示一个对话框，以便让用户选择要设置的 Windows To Go 驱动器（除非使用了 /drive 命令行选项）。 如果驱动器不符合对 Windows To Go 的要求，或者如果驱动器没有足够的可用磁盘空间来安装映像，则 Creator 程序会显示错误消息。 用户可以通过确认页来验证驱动器和将应用的映像。 在 Creator 配置内容并将其预留到 Windows To Go 驱动器时，它会显示进度对话框。 在预留完成后，Creator 会提示重新启动计算机以启动到 Windows To Go 驱动器。  
 
 > [!NOTE]  
->  如果在 [创建 Windows To Go Creator 包](#BKMK_CreatePackage) 部分中没有在 Creator 程序的命令行中启用启动重定向，则用户可能需要在每次系统重新启动时手动启动到 Windows To Go 驱动器。  
+>  如果在 [Create a Windows To Go Creator package](#BKMK_CreatePackage) 部分中没有在 Creator 程序的命令行中启用启动重定向，则用户可能需要在每次系统重新启动时手动启动到 Windows To Go 驱动器。  
 
 ###  <a name="BKMK_ConfigureStageDrive"></a> Configuration Manager 配置和暂存 Windows To Go 驱动器  
  在计算机重启到 Windows To Go 驱动器之后，此驱动器将引导到 Windows PE，并连接到管理点以获得策略，以便完成操作系统部署。 Configuration Manager 配置和暂存驱动器。 在 Configuration Manager 暂存此驱动器之后，用户可以重新启动计算机，以完成设置过程（例如加入域或安装应用程序）。 此过程对于任何预留媒体都是相同的。  

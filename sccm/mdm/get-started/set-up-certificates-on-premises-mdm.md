@@ -1,5 +1,6 @@
 ---
-title: "设置证书 | Microsoft Docs"
+title: "设置证书 "
+titleSuffix: Configuration Manager
 description: "为 System Center Configuration Manager 中的本地移动设备管理设置受信任通信的证书。"
 ms.custom: na
 ms.date: 03/05/2017
@@ -12,14 +13,14 @@ ms.topic: get-started-article
 ms.assetid: 2a7d7170-1933-40e9-96d6-74a6eb7278e2
 caps.latest.revision: "27"
 caps.handback.revision: "0"
-author: Mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 3d695a2a40fd86ad991a26db3dcecbbb9ca186cc
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 860f6e3f418a15ecfb79e9cbac5e6a09e17feb1a
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="set-up-certificates-for-trusted-communications-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>为 System Center Configuration Manager 中的本地移动设备管理的受信任通信设置证书
 

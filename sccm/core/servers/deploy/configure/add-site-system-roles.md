@@ -1,5 +1,6 @@
 ---
-title: "添加站点系统角色 | Microsoft Docs"
+title: "添加站点系统角色"
+titleSuffix: Configuration Manager
 description: "了解 Configuration Manager 站点系统角色，以及如何添加它们以扩展站点的功能和容量。"
 ms.custom: na
 ms.date: 2/7/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 1ad4abf1f06ed24bd1d505648280b5e5d80220c7
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 780e9ed6965ed72578964fbea2fb2e9a281ebd68
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="add-site-system-roles-for-system-center-configuration-manager"></a>添加 System Center Configuration Manager 的站点系统角色
 

@@ -1,5 +1,6 @@
 ---
-title: "管理更新目录 | Microsoft Docs"
+title: "管理更新目录"
+titleSuffix: Configuration Manager
 description: "管理 System Center Updates Publisher 中的软件更新目录"
 ms.custom: na
 ms.date: 4/29/2017
@@ -15,11 +16,11 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 7451d699e0e5e146b0538a57deca595188d113bf
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 2e26b1097767b2f7697e56881601d628d28e8390
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="manage-software-update-catalogs-in-updates-publisher"></a>管理 Updates Publisher 中的软件更新目录
 

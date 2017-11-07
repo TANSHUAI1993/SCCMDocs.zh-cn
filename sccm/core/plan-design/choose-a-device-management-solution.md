@@ -1,5 +1,6 @@
 ---
-title: "选择设备管理解决方案 - Configuration Manager | Microsoft Docs"
+title: "选择设备管理解决方案 "
+titleSuffix: Configuration Manager
 description: "了解 System Center Configuration Manager 提供的用于管理电脑、服务器和设备的解决方案。"
 ms.custom: na
 ms.date: 12/08/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 9989ea1bf4cb74a6286ebae9de7614ed622de5b6
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 311bdaf6cef45e2b52a14de07caf58c8846121a0
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="choose-a-device-management-solution-for-system-center-configuration-manager"></a>选择 System Center Configuration Manager 的设备管理解决方案
 
