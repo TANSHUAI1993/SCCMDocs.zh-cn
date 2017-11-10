@@ -1,5 +1,6 @@
 ---
-title: "证书和安全性 | Microsoft Docs"
+title: "证书和安全"
+titleSuffix: Configuration Manager
 description: "管理 System Center Updates Publisher 中的证书和安全性"
 ms.custom: na
 ms.date: 4/29/2017
@@ -15,11 +16,11 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: NOINDEX, NOFOLLOW
-ms.openlocfilehash: c43af95a539a9284e4e49822b284783e02f9fa21
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: effe8c193eef133ba8a6549d52a522d8f61b2511
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="manage-certificates-and-security-for-updates-publisher"></a>管理 Updates Publisher 中的证书和安全性
 
@@ -39,7 +40,7 @@ ms.lasthandoff: 08/07/2017
 
 3.  选择“另一台计算机”，键入更新服务器的名称或单击“浏览”找到更新服务器计算机，然后依次单击“完成”、“关闭”和“确定”。
 
-4.  依次展开“证书(*更新服务器名称*)**”**和“WSUS”，然后单击“证书”。
+4.  依次展开**“证书(*更新服务器名称*)”**和**“WSUS”**，然后单击**“证书”**。
 
 5.  在结果窗格中，右键单击相应证书，然后依次单击“所有任务”和“导出”。
 
@@ -69,7 +70,7 @@ ms.lasthandoff: 08/07/2017
 
 3.  选择“另一台计算机”，键入更新服务器的名称或单击“浏览”找到更新服务器计算机，然后依次单击“完成”、“关闭”和“确定”。
 
-4.  依次展开“证书(*更新服务器名称*)**”**和“WSUS”，然后单击“证书”。
+4.  依次展开**“证书(*更新服务器名称*)”**和**“WSUS”**，然后单击**“证书”**。
 
 5.  右键单击结果窗格中的证书，然后依次单击“所有任务”和“导出”。 使用默认设置完成“证书导出向导”，创建包含向导中指定的名称和位置的导出证书文件。
 
