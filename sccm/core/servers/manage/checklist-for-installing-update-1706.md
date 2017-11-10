@@ -1,5 +1,6 @@
 ---
-title: "1706 的清单 | System Center Configuration Manager"
+title: "1706 清单"
+titleSuffix: Configuration Manager
 description: "了解更新到 System Center Configuration Manager 版本 1706 之前需要执行的操作。"
 ms.custom: na
 ms.date: 07/31/2017
@@ -14,11 +15,11 @@ caps.latest.revision:
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: c8110d9f5fec9027d34570623c32a7474e01b9af
-ms.sourcegitcommit: 2a1328da3facb20b0c78f3b12adbb5fdbe0dcc11
+ms.openlocfilehash: 8bfaef2b19449cf6fe1487b32cffcdb5731f1602
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="checklist-for-installing-update-1706-for-system-center-configuration-manager"></a>用于为 System Center Configuration Manager 安装更新 1706 的清单
 

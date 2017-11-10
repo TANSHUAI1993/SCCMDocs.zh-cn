@@ -1,5 +1,6 @@
 ---
-title: "迁移清单 | Microsoft Docs"
+title: "迁移清单"
+titleSuffix: Configuration Manager
 description: "使用管理员清单有助于规划 System Center Configuration Manager 的迁移策略。"
 ms.custom: na
 ms.date: 12/29/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 36f7c37e4da3f2bce64a25d266dae57d9fe98c36
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 3476709feb8524dda92694efb16af1569f490f62
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="administrator-checklists-for-migration-planning-in-system-center-configuration-manager"></a>System Center Configuration Manager 中针对迁移规划的管理员清单
 

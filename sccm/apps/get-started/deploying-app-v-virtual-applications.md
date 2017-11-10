@@ -1,5 +1,6 @@
 ---
-title: "部署 App-V 虚拟应用程序 | Microsoft Docs"
+title: "部署 App-V 虚拟应用程序"
+titleSuffix: Configuration Manager
 description: "请参阅创建和部署虚拟应用程序时必须考虑的注意事项。"
 ms.custom: na
 ms.date: 02/16/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: d2cc5e62a894c4e3ae9adb185f5f0433b0365722
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: bf324f458c37fa137e24179eb4455fcbe75c855d
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="deploy-app-v-virtual-applications-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 部署 App-V 虚拟应用程序
 

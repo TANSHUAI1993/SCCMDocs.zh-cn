@@ -1,5 +1,6 @@
 ---
-title: "站点管理安全和隐私 | Microsoft Docs"
+title: "站点管理的安全和隐私"
+titleSuffix: Configuration Manager
 description: "优化 System Center Configuration Manager 中站点管理的安全和隐私。"
 ms.custom: na
 ms.date: 3/1/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "8"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: a60b8c103a303dcae0bd66f3060d5a8f17d1cef9
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 8ac421cca154f99251c13e1dcd0bed21e5b68078
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="security-and-privacy-for-site-administration-in-system-center-configuration-manager"></a>System Center Configuration Manager 中站点管理的安全和隐私
 

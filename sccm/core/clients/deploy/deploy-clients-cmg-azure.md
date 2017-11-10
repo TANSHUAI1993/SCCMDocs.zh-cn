@@ -1,5 +1,6 @@
 ---
-title: "从 Internet 安装并分配客户端 | Microsoft Docs"
+title: "从 Internet 安装并分配客户端"
+titleSuffix: Configuration Manager
 description: "从 Internet 安装并分配 System Center Configuration Manager 客户端。"
 ms.custom: na
 ms.date: 8/07/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: d783cc2f12400084ad1cd62a338a31c9747c05fb
-ms.sourcegitcommit: f6a428a8db7145affa388f59e0ad880bdfcf17b5
+ms.openlocfilehash: 2ef7580f94864094e9420eb0f5a5c5b4dc9d6d24
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="install-and-assign-configuration-manager-windows-10-clients-using-azure-ad-for-authentication"></a>安装并分配 Configuration Manager Windows 10 客户端（使用 Azure AD 进行身份验证）
 

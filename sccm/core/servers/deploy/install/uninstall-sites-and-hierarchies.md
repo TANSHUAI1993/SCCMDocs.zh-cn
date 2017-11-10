@@ -1,5 +1,6 @@
 ---
-title: "卸载站点 | Microsoft Docs"
+title: "卸载站点"
+titleSuffix: Configuration Manager
 description: "卸载 System Center Configuration Manager 站点时，请使用这些详细信息作为指南。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 6ad06753dc0e1d0958f7131afbf3ecb75eecb2e3
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 8a8571e844be796c7f87f7742dce6c311d7195ea
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="uninstall-sites-and-hierarchies-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中卸载站点和层次结构
 

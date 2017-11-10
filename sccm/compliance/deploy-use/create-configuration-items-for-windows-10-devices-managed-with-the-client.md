@@ -1,5 +1,6 @@
 ---
-title: "为客户端托管的 Windows 10 创建配置项 - Configuration Manager | Microsoft Docs"
+title: "创建客户端托管的 Windows 10 的配置项目 "
+titleSuffix: Configuration Manager
 description: "使用 System Center Configuration Manager Windows 10 配置项目管理由 Configuration Manager 客户端管理的 Windows 10 计算机的设置。"
 ms.custom: na
 ms.date: 03/28/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: be1a88341b08c454537279b27a27ce4fb90998de
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 4f22ab22ec666c55962231bf92a42b25c4a7c127
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-create-configuration-items-for-windows-10-devices-managed-with-the-system-center-configuration-manager-client"></a>如何为使用 System Center Configuration Manager 客户端管理的 Windows 10 设备创建配置项目
 使用 System Center Configuration Manager **Windows 10** 配置项目管理由 Configuration Manager 客户端管理的 Windows 10 计算机的设置。  

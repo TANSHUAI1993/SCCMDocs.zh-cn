@@ -1,5 +1,6 @@
 ---
-title: "配置站点 | Microsoft Docs"
+title: "配置站点"
+titleSuffix: Configuration Manager
 description: "查阅此清单以确保你考虑到会同时影响站点和层次结构的最常见配置。"
 ms.custom: na
 ms.date: 2/7/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "15"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 862f420c063cb44c419d4904fbb4696efb739758
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: e71a2153571fdaa069c8e75827661eb7c939d57a
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="configure-sites-and-hierarchies-for-system-center-configuration-manager"></a>配置 System Center Configuration Manager 的站点和层次结构
 

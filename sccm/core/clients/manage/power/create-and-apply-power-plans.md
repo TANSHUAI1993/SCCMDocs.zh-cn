@@ -1,5 +1,6 @@
 ---
-title: "创建并应用电源计划 | Microsoft Docs"
+title: "创建并应用电源计划"
+titleSuffix: Configuration Manager
 description: "在 System Center Configuration Manager 中创建和应用电源计划。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 480bb382098af039ac714061ae84dc5257fdaddb
-ms.sourcegitcommit: f6a428a8db7145affa388f59e0ad880bdfcf17b5
+ms.openlocfilehash: ec32a0b1591fffe77ace91f478e03302f429c957
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-create-and-apply-power-plans-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中创建并应用电源计划
 

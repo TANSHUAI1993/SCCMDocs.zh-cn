@@ -1,5 +1,6 @@
 ---
-title: "审核远程控制使用 | Microsoft Docs"
+title: "审核远程控制使用"
+titleSuffix: Configuration Manager
 description: "审核 System Center Configuration Manager 中的远程控制使用。"
 ms.custom: na
 ms.date: 04/23/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 5c584a90e9bd2ead4440a0581438c5a336ed2612
-ms.sourcegitcommit: f6a428a8db7145affa388f59e0ad880bdfcf17b5
+ms.openlocfilehash: 46d465464c1059c5ce81a89cdabe330cf06eb8e6
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-audit-remote-control-usage-in-system-center-configuration-manager"></a>如何审核 System Center Configuration Manager 中的远程控制使用
 

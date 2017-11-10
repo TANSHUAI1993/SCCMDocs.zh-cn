@@ -1,5 +1,6 @@
 ---
-title: "为托管的电脑管理对 O365 服务的访问 | Microsoft Docs"
+title: "为托管的电脑管理对 O365 服务的访问"
+titleSuffix: Configuration Manager
 description: "了解如何为由 System Center Configuration Manager 管理的电脑配置条件访问。"
 ms.custom: na
 ms.date: 03/05/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "15"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: aede531a0406c3d30c9cca957896e002ed22ae51
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: a49e53ca81d8bd01747c41ab9c25de7fd6396f32
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="manage-access-to-o365-services-for-pcs-managed-by-system-center-configuration-manager"></a>管理对由 System Center Configuration Manager 管理的电脑的 O365 服务的访问
 
@@ -74,7 +75,7 @@ ms.lasthandoff: 08/07/2017
 
     -   对于 Windows 7 电脑，必须通过 System Center Configuration Manager 将设备注册软件包部署到 Windows 7 电脑。 [将已加入 Windows 域的设备自动注册到 Azure Active Directory](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1) 主题包含更多详细信息。  
 
--   必须使用[启用了](https://support.office.com/en-US/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a)新式验证的 Office 2013 或 Office 2016。  
+-   必须使用启用了[](https://support.office.com/en-US/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a)新式验证的 Office 2013 或 Office 2016。  
 
  下面介绍的步骤适用于 Exchange Online 和 SharePoint Online  
 

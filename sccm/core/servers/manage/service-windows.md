@@ -1,5 +1,6 @@
 ---
-title: "服务时段 | Microsoft Docs"
+title: "服务时段"
+titleSuffix: Configuration Manager
 description: "使用服务时段控制 System Center Configuration Manager 站点安装更新的时间。"
 ms.custom: na
 ms.date: 1/11/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: d06a2a955ff59fa84bb844033fe31874fc735087
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: d8b4cb7492b488a1f7056617b165b4aa656ee26e
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 #  <a name="service-windows-for-site-servers"></a>站点服务器的服务时段
 

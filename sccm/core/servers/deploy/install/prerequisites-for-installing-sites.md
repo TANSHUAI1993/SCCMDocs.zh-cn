@@ -1,5 +1,6 @@
 ---
-title: "站点的先决条件 | Microsoft Docs"
+title: "站点的先决条件"
+titleSuffix: Configuration Manager
 description: "了解安装不同类型的 System Center Configuration Manager 站点所需的先决条件。"
 ms.custom: na
 ms.date: 7/31/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: d46a8b66ace45d25da9d86f2e91b19ae1d6875ab
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 167f7db44ba19c6c97571c691c63d68edd47af93
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="prerequisites-for-installing-system-center-configuration-manager-sites"></a>安装 System Center Configuration Manager 站点的先决条件
 

@@ -1,5 +1,6 @@
 ---
-title: "创建自定义报表 | Microsoft Docs"
+title: "创建自定义报表"
+titleSuffix: Configuration Manager
 description: "定义报表模型以满足你的业务需求，然后将报表模型部署到 Configuration Manager。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 9951dd9333ebef00c7acd5d72b20a02382e3206c
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 56274cbec336219a7734d23bf1bade8a7892de30
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="creating-custom-report-models-for-system-center-configuration-manager-in-sql-server-reporting-services"></a>在 SQL Server Reporting Services 中的 System Center Configuration Manager 创建自定义报表模型
 
@@ -64,36 +65,36 @@ ms.lasthandoff: 08/07/2017
 
 ###  <a name="BKMK_DefineReportModelDataSource"></a> 为报表模型定义数据源  
 
-1.  在“SQL Server Business Intelligence Development Studio”  的“解决方案资源管理器” 窗格中，右键单击“数据源”  以选择“添加新数据源” 。  
+1.  在“SQL Server Business Intelligence Development Studio”的“解决方案资源管理器” 窗格中，右键单击“数据源”以选择“添加新数据源”。  
 
-2.  在“欢迎使用数据源向导”  页上，单击“下一步” 。  
+2.  在“欢迎使用数据源向导”页上，单击“下一步”。  
 
-3.  在“选择如何定义连接”  页上，验证是否选择了“基于现有连接或新连接创建数据源”  ，然后单击“新建” 。  
+3.  在“选择如何定义连接”页上，验证是否选择了“基于现有连接或新连接创建数据源”，然后单击“新建”。  
 
-4.  在“连接管理器”  对话框中，为数据源指定以下连接属性：  
+4.  在“连接管理器”对话框中，为数据源指定以下连接属性：  
 
     -   **服务器名称**：键入 Configuration Manager 站点数据库服务器的名称，或在列表中选择该名称。 如果你使用的是命名的实例（而不是默认实例），请键入 &lt;数据库服务器>\\&lt;实例名称>。  
 
-    -   选择“使用 Windows 身份验证” 。  
+    -   选择“使用 Windows 身份验证”。  
 
     -   在“选择或输入数据库名称”列表中，选择 Configuration Manager 站点数据库的名称。  
 
-5.  要验证数据库连接，请单击“测试连接” 。  
+5.  要验证数据库连接，请单击“测试连接”。  
 
-6.  如果连接成功，请单击“确定”  关闭“连接管理器”  对话框。 如果连接未成功，请验证你输入的信息是否正确，然后再次单击“测试连接”  。  
+6.  如果连接成功，请单击“确定”关闭“连接管理器”对话框。 如果连接未成功，请验证你输入的信息是否正确，然后再次单击“测试连接”。  
 
-7.  在“选择如何定义连接”  页上，验证是否选择了“基于现有连接或新连接创建数据源”  ，验证你刚刚指定的数据源是否在“数据连接” 中处于选定状态，然后单击“下一步” 。  
+7.  在“选择如何定义连接”页上，验证是否选择了“基于现有连接或新连接创建数据源”，验证你刚刚指定的数据源是否在“数据连接”中处于选定状态，然后单击“下一步”。  
 
-8.  在“数据源名称” 中，为数据源指定一个名称，然后单击“完成” 。 对于本例，请键入 **Simple_Model**。  
+8.  在“数据源名称”中，为数据源指定一个名称，然后单击“完成”。 对于本例，请键入 **Simple_Model**。  
 
-9. 数据源“Simple_Model.ds”  将显示在“解决方案资源管理器”  中的“数据源”  节点下。  
+9. 数据源“Simple_Model.ds”将显示在“解决方案资源管理器”中的“数据源”节点下。  
 
     > [!NOTE]  
-    >  要编辑现有数据源的属性，请在“解决方案资源管理器”  窗格的“数据源”  文件夹中双击该数据源，以在数据源设计器中显示数据源属性。  
+    >  要编辑现有数据源的属性，请在“解决方案资源管理器”窗格的“数据源”文件夹中双击该数据源，以在数据源设计器中显示数据源属性。  
 
 ###  <a name="BKMK_DefineReportModelDataSourceView"></a> 为报表模型定义数据源视图  
 
-1.  在“解决方案资源管理器” 中，右键单击“数据源视图”  以选择“添加新数据源视图” 。  
+1.  在“解决方案资源管理器”中，右键单击“数据源视图”以选择“添加新数据源视图”。  
 
 2.  在“欢迎使用数据源视图向导”  页上，单击“下一步” 。 将显示“选择数据源”  页。  
 

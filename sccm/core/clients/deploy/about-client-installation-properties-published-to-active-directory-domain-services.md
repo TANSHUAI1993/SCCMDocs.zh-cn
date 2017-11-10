@@ -1,5 +1,6 @@
 ---
-title: "Active Directory 域服务中的客户端安装属性 | Microsoft Docs"
+title: "Active Directory 域服务中的客户端安装属性"
+titleSuffix: Configuration Manager
 description: "在 System Center Configuration Manager 中使用发布到 Active Directory 域服务的客户端安装属性。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 73e6b8c39b08bb661cb7ac66dad3c47d4abd09b0
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: ece29d218140ffd28ac83a16e9999ba420f228a5
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="about-client-installation-properties-published-to-active-directory-domain-services"></a>关于发布到 Active Directory 域服务的客户端安装属性
 

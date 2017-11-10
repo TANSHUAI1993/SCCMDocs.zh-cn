@@ -1,5 +1,6 @@
 ---
-title: "部署 Mac 客户端 | Microsoft Docs"
+title: "部署 Mac 客户端"
+titleSuffix: Configuration Manager
 description: "了解如何在 System Center Configuration Manager 中将客户端部署到 Mac 计算机。"
 ms.custom: na
 ms.date: 05/04/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "12"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: af6faf4cd317452f635ec30e74a3aa2e14f1662a
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 1b7f20a48e0e7219d933c367fb9f0315fc287dfd
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-deploy-clients-to-macs"></a>How to deploy clients to Macs
 
@@ -125,7 +126,7 @@ ms.lasthandoff: 09/15/2017
 
         -   “域\名称”。 例如：“contoso\mnorth”  
 
-        -   'user@domain'.  例如：“mnorth@contoso.com”  
+        -   'user@domain'. 例如：“mnorth@contoso.com”  
 
             > [!IMPORTANT]  
             >  使用电子邮件地址填充“用户名”字段时，Configuration Manager 将自动使用该电子邮件地址的域名和注册代理点服务器的默认名称填充“服务器名称”字段。 如果此域名和服务器名称与注册代理点服务器的名称不匹配，请告知用户在注册其 Mac 计算机时要使用的正确名称。  
@@ -157,7 +158,7 @@ ms.lasthandoff: 09/15/2017
 
     -   “域\名称”。 例如：“contoso\mnorth”  
 
-    -   'user@domain'.  例如：“mnorth@contoso.com”  
+    -   'user@domain'. 例如：“mnorth@contoso.com”  
 
      用户名和对应的密码必须与被授予 Mac 客户端证书模板的“读取”和“注册”权限的 Active Directory 用户帐户匹配。  
 

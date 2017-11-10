@@ -1,5 +1,6 @@
 ---
-title: "为客户端托管的 Windows 计算机创建配置项 - Configuration Manager | Microsoft Docs"
+title: "创建客户端托管的 Windows 计算机的配置项目 "
+titleSuffix: Configuration Manager
 description: "使用自定义 Windows 台式机和服务器配置项目管理 Windows 计算机和服务器的设置。"
 ms.custom: na
 ms.date: 11/18/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 9fe28782744a419acad9c1acec49ff8db6c0eaa6
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: ed3aa1ce9e21c7c486cc40deb804a8687a1cd4f2
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-system-center-configuration-manager-client"></a>如何为使用 System Center Configuration Manager 客户端管理的 Windows 台式机和服务器计算机创建配置项目
 

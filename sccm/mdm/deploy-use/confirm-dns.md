@@ -1,5 +1,6 @@
 ---
-title: "使用 System Center Configuration Manager 确认域名要求 | Microsoft Docs"
+title: "确认域名要求"
+titleSuffix: Configuration Manager
 description: "使用 System Center Configuration Manager 确认域名要求。"
 ms.custom: na
 ms.date: 03/21/2017
@@ -12,14 +13,14 @@ ms.topic: article
 ms.assetid: 522c2e82-20eb-4f38-859b-d55640b24e32
 caps.latest.revision: "18"
 caps.handback.revision: "0"
-author: nathbarn
-ms.author: nathbarn
+author: arob98
+ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 35b24294073956a6bdb14cae07705f56d31e00a9
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 152a93559e8587d096552da800b1b84c7bb8bd28
+ms.sourcegitcommit: 1132886e07d0c0a87dcc7eeef4577dd8d8840023
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 11/01/2017
 ---
 # <a name="confirm-domain-name-requirements-with-system-center-configuration-manager-and-microsoft-intune"></a>使用 System Center Configuration Manager 和 Microsoft Intune 确认域名要求
 

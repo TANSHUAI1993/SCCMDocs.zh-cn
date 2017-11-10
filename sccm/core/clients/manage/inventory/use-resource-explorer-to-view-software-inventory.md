@@ -1,5 +1,6 @@
 ---
-title: "查看软件清单 | Microsoft Docs | 资源浏览器"
+title: "使用资源浏览器查看软件清单"
+titleSuffix: Configuration Manager
 description: "使用资源浏览器查看 System Center Configuration Manager 中的软件清单。"
 ms.custom: na
 ms.date: 2/22/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: b76bcf65c61b0a2690a468d375ac95b1334d5298
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 242bd336fcb13172097e26187a48c924dbd9acb6
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-use-resource-explorer-to-view-software-inventory-in-system-center-configuration-manager"></a>如何使用资源浏览器来查看 System Center Configuration Manager 中的软件清单
 

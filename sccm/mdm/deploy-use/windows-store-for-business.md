@@ -1,5 +1,6 @@
 ---
-title: "System Center Configuration Manager 中的 WSfB | Microsoft Docs"
+title: "使用适用于企业的 Windows 应用商店"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager 中的 WSfB。"
 ms.custom: na
 ms.date: 03/05/2017
@@ -12,14 +13,14 @@ ms.topic: article
 ms.assetid: 8c13d593-3120-47a8-8fae-eff497afcd73
 caps.latest.revision: "18"
 caps.handback.revision: "0"
-author: mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: d9481f2d557056df039cf72b6d6503e80ddd2ba5
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 276d2c18b41cc0303c9eee4ba852c05b8415a300
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="wsfb-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的 WSfB
 

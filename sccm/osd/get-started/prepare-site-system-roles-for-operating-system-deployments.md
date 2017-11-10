@@ -1,5 +1,6 @@
 ---
-title: "为操作系统部署准备站点系统角色 | Microsoft Docs"
+title: "为操作系统部署准备站点系统角色"
+titleSuffix: Configuration Manager
 description: "在 System Center Configuration Manager 中部署操作系统之前，请配置站点系统角色。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 11c0f169afebdb071fefb5ce300fd1ae3481a94f
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: c07172bec1032b021c2d7b7ccaabe33c96b930d2
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="prepare-site-system-roles-for-operating-system-deployments-with-system-center-configuration-manager"></a>在 System Center Configuration Manager 中准备操作系统部署的站点系统角色
 
@@ -67,7 +68,7 @@ ms.lasthandoff: 08/07/2017
 
 2.  选择要配置的分发点，然后在“主页”选项卡上的“属性”组中，单击“属性”。  
 
-3.  在分发点的属性页上，单击“PXE”  选项卡。 然后选择“为客户端启用 PXE 支持”以在此分发点上启用 PXE。  
+3.  在分发点的属性页上，单击“PXE”选项卡，然后选择“为客户端启用 PXE 支持”，以在此分发点上启用 PXE。  
 
 4.  在“查看 PXE 的所需端口”对话框中，单击“是”，以确认你想要启用 PXE。 Configuration Manager 将在 Windows 防火墙上自动配置默认端口。 如果你使用其他防火墙，则必须手动配置这些端口。  
 

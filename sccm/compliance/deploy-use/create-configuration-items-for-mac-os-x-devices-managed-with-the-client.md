@@ -1,5 +1,6 @@
 ---
-title: "为客户端托管的 Mac 创建配置项 - Configuration Manager | Microsoft Docs"
+title: "创建客户端托管的 Mac 的配置项目 "
+titleSuffix: Configuration Manager
 description: "使用 System Center Configuration Manager Mac OS X 配置项目管理对 Mac OS X 设备的设置。"
 ms.custom: na
 ms.date: 03/28/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 6910710badd0937cbdf1471e4f3f050590e2e769
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 1947bc8907d00a2f6d78acee5f563fa9b7f6cf78
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-create-configuration-items-for-mac-os-x-devices-managed-with-the-system-center-configuration-manager-client"></a>如何为使用 System Center Configuration Manager 客户端管理的 Mac OS X设备创建配置项目
 使用 System Center Configuration Manager **Mac OS X（自定义）**配置项目，管理由 Configuration Manager 客户端托管的 Mac OS X 设备的设置。  

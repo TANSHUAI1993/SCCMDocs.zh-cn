@@ -1,5 +1,6 @@
 ---
-title: "从 System Center Configuration Manager 共享应用程序 | Microsoft Docs"
+title: "软件中心的共享应用程序"
+titleSuffix: Configuration Manager
 description: "在 System Center Configuration Manager 的软件中心共享应用程序链接。"
 ms.custom: na
 ms.date: 07/31/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: 9e6b32caa6c5f27f3b535b224c2a9fe31905547f
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 3433a61ae561cacb103c868da367b57ecf627c05
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="share-an-application-from-software-center"></a>从软件中心共享应用程序
 

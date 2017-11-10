@@ -1,5 +1,6 @@
 ---
-title: "创建 Endpoint Protection 点站点系统角色 | Microsoft Docs"
+title: "创建 Endpoint Protection 点站点系统角色"
+titleSuffix: Configuration Manager
 description: "了解如何将 Endpoint Protection 配置为管理 Configuration Manager 客户端计算机上的安全和恶意软件。"
 defintion: 
 definition: 
@@ -16,11 +17,11 @@ caps.latest.revision: "21"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.openlocfilehash: 6e717bcbe5ef8c3f2efa717d0cebb9e675e7c127
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: a52f01ad365ca637b2bfda51657d0294e1bf268f
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="create-an-endpoint-protection-point-site-system-role"></a>创建 Endpoint Protection 点站点系统角色
 

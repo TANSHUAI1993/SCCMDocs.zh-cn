@@ -1,5 +1,6 @@
 ---
-title: "客户端托管的设备的常见符合性管理任务 - Configuration Manager | Microsoft Docs"
+title: "客户端托管设备的常见符合性管理任务 "
+titleSuffix: Configuration Manager
 description: "通过完成一些常见方案，了解 System Center Configuration Manager 符合性设置。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "8"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 84b030284602853aab6c99268a74444a693edec7
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 0e70e565f7e1000aa452487cdd71ae165dd0c67b
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="common-tasks-for-managing-compliance-on-devices-with-the-system-center-configuration-manager-client"></a>使用 System Center Configuration Manager 客户端在设备上管理符合性的常见任务
 

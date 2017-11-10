@@ -1,5 +1,6 @@
 ---
-title: "基于风险限制访问权限 | Microsoft Docs"
+title: "基于风险限制访问权限"
+titleSuffix: Configuration Manager
 description: "根据设备、网络和应用程序风险限制对公司资源的访问权限。"
 ms.custom: na
 ms.date: 04/25/2017
@@ -14,11 +15,11 @@ caps.latest.revision:
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 21841d97387f07f53993d957641f9ad892d723c2
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 41ac07550bdabe35533e00d1071db4cb967766a3
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="manage-access-to-company-resource-based-on-device-network-and-application-risk"></a>根据设备、网络和应用程序风险管理对公司资源的访问权限
 

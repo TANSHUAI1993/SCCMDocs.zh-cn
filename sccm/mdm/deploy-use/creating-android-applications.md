@@ -1,5 +1,6 @@
 ---
-title: "创建 Android 应用程序 | Microsoft Docs"
+title: "创建 Android 应用程序"
+titleSuffix: Configuration Manager
 description: "请参阅创建和部署适用于 Android 设备的应用程序时必须考虑的注意事项。"
 ms.custom: na
 ms.date: 07/31/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "6"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: 8fcd8d8172978fdeb1a11b7fa7e79d294591f796
-ms.sourcegitcommit: f6a428a8db7145affa388f59e0ad880bdfcf17b5
+ms.openlocfilehash: 2ec4f4fdd1e351379922302e81af88e311a37c8e
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="create-android-applications-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 创建 Android 应用程序
 

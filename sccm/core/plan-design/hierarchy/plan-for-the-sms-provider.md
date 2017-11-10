@@ -1,5 +1,6 @@
 ---
-title: "规划 SMS 提供程序 | Microsoft Docs"
+title: "规划 SMS 提供程序"
+titleSuffix: Configuration Manager
 description: "了解 SMS 提供程序如何帮助你管理 System Center Configuration Manager。"
 ms.custom: na
 ms.date: 2/7/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "8"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 547dc39d5659c7c2e6f1ca670caddc127dbf22c4
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 5ee2ebea24fed329a4e5974c67d95c6d854484e2
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="plan-for-the-sms-provider-for-system-center-configuration-manager"></a>为 System Center Configuration Manager 规划 SMS 提供程序
 

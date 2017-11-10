@@ -1,5 +1,6 @@
 ---
-title: "使用 Microsoft Intune 注册的移动设备的软件清单 | Microsoft Docs"
+title: "Microsoft Intune 注册的移动设备的软件清单"
+titleSuffix: Configuration Manager
 description: "使用 Microsoft Intune 注册的移动设备的软件清单。"
 ms.custom: na
 ms.date: 03/05/2017
@@ -12,14 +13,14 @@ ms.topic: article
 ms.assetid: a0eae17a-60a8-4132-91af-0b10ad338c92
 caps.latest.revision: "18"
 caps.handback.revision: "0"
-author: mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 2ed79d02535768de136947e4a5b63ad186d9a3cd
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: c0a583de1a0b24bd31c0d55c1acb54f480bb4230
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="software-inventory-for-mobile-devices-enrolled-with-microsoft-intune"></a>Microsoft Intune 注册的移动设备的软件清单
 

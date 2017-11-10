@@ -1,5 +1,6 @@
 ---
-title: "自定义数据库文件位置 | Microsoft Docs"
+title: "自定义数据库文件位置"
+titleSuffix: Configuration Manager
 description: "了解如何为 SQL Server 数据库文件指定自定义位置。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "3"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: cfac2c03c1b71b40c68d8acd5fbd96c5e98caaa9
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: dae48a5374dd1e4ec90e3e0d10a7335cff55ddc7
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="custom-locations-for-system-center-configuration-manager-site-database-files"></a>System Center Configuration Manager 站点数据库文件的自定义位置
 

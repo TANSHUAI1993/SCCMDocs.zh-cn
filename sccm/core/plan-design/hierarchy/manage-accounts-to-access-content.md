@@ -1,5 +1,6 @@
 ---
-title: "访问 System Center Configuration Manager 中的内容的帐户 | Microsoft Docs"
+title: "用于访问内容的帐户"
+titleSuffix: Configuration Manager
 description: "了解有关客户端用于访问 System Center Configuration Manager 内容的帐户的信息。"
 ms.custom: na
 ms.date: 2/6/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "4"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 0e982d08d54af39b13f553fc531a200f921e94a6
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 3767fe81db62d8604de02d7a5867ce03a09ba2e4
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="manage-accounts-to-access-content-in-system-center-configuration-manager"></a>管理帐户以访问 System Center Configuration Manager 中的内容
 
@@ -64,7 +65,7 @@ ms.lasthandoff: 08/07/2017
 
 2.  在“设置”组中，选择“配置站点组件” > “软件分发”。  
 
-3.  选择“网络访问帐户”选项卡。 设置一个或多个帐户，然后选择“确定”。  
+3.  选择“网络访问帐户”选项卡。设置一个或多个帐户，然后选择“确定”。  
 
 ##  <a name="bkmk_Paa"></a>包访问帐户  
  可使用包访问帐户设置 NTFS 文件系统权限，以指定可以访问分发点上的包内容的用户和用户组。 默认情况下，Configuration Manager 仅向通用的“用户”和“管理员”帐户授予访问权限。 但是，你可以通过使用其他的 Windows 帐户或组来控制客户端计算机的访问权限。 移动设备不使用包访问帐户，因为这些设备始终会匿名检索包内容。  

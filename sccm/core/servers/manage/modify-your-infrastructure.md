@@ -1,5 +1,6 @@
 ---
-title: "修改基础结构 | Microsoft Docs"
+title: "修改基础结构"
+titleSuffix: Configuration Manager
 description: "了解如何更改所部署的 Configuration Manager 基础结构或执行可对其产生影响的操作。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: a5228c4984347be4b115bfa5563791fa2fb7319c
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 5bf39d5d20d94b4dda666741c5887edfbc82ca0f
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="modify-your-system-center-configuration-manager-infrastructure"></a>修改你的 System Center Configuration Manager 基础结构
 

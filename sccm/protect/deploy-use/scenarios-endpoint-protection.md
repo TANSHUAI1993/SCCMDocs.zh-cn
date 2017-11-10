@@ -1,5 +1,6 @@
 ---
-title: "方案 - Endpoint Protection 保护计算机免受恶意软件侵害 | Microsoft Docs"
+title: "方案 - Endpoint Protection 保护计算机免受恶意软件侵害"
+titleSuffix: Configuration Manager
 description: "了解如何在 Configuration Manager 中实现 Endpoint Protection，使计算机免受恶意软件侵害。"
 ms.custom: na
 ms.date: 03/13/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "8"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.openlocfilehash: b98684d44874ff246e4d675039c6e443aee82a62
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: a0aa02a9091ea9ecdd060f1e7023e9d3f95269a1
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="example-scenario-using-system-center-endpoint-protection-to-protect-computers-from-malware-in-system-center-configuration-manager"></a>示例方案：使用 System Center Endpoint Protection 来保护计算机在 System Center Configuration Manager 中免受恶意软件侵害
 

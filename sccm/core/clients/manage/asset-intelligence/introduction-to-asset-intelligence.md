@@ -1,5 +1,6 @@
 ---
-title: "资产智能简介 | Microsoft Docs"
+title: "资产智能简介"
+titleSuffix: Configuration Manager
 description: "获取 System Center Configuration Manager 中的资产智能简介。"
 ms.custom: na
 ms.date: 2/22/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 879dc3f04f361af955afbc4db180d097073e8d41
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 349f5998c0d5e96a626e901ae99fee76541d1b4e
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="introduction-to-asset-intelligence-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的资产智能简介
 

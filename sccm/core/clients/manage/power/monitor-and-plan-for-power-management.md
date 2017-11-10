@@ -1,5 +1,6 @@
 ---
-title: "监视和计划电源管理 | Microsoft Docs"
+title: "监视和计划电源管理"
+titleSuffix: Configuration Manager
 description: "了解如何在 System Center Configuration Manager 中监视和规划电源管理。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 409b16bc184796a2508fcc6b7049a79ed4cfe2e4
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: ce89941550d02ef80bf9f7e9bab83850dda9e981
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-monitor-and-plan-for-power-management-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中监视和计划电源管理
 

@@ -1,5 +1,6 @@
 ---
-title: "在本地移动设备管理中管理设备 | Microsoft Docs"
+title: "在本地移动设备管理中管理设备"
+titleSuffix: Configuration Manager
 description: "使用 Configuration Manager 在本地移动设备管理中管理设备。"
 ms.custom: na
 ms.date: 03/05/2017
@@ -12,14 +13,14 @@ ms.topic: article
 ms.assetid: 6e233f17-8ead-4984-a3fa-12687c4381ee
 caps.latest.revision: "18"
 caps.handback.revision: "0"
-author: mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 92009c96ccc5f4124b300873ff77088ea1712c19
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 8ff9a7ea8897ce3666d98873728f35619888aa55
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="manage-devices-for-on-premises-mobile-device-management"></a>在本地移动设备管理中管理设备
 

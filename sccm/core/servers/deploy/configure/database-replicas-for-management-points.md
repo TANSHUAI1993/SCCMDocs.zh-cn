@@ -1,5 +1,6 @@
 ---
-title: "管理点数据库副本 | Microsoft Docs"
+title: "管理点数据库副本"
+titleSuffix: Configuration Manager
 description: "使用数据库副本可减少管理点对站点数据库服务器施加的 CPU 负载。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "9"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 130c053c9f2a1817dd85b1f3c01285aab19d59cb
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: c33bed2244e259edc0c5a7bb547be8bf69213920
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="database-replicas-for-management-points-for-system-center-configuration-manager"></a>System Center Configuration Manager 管理点的数据库副本
 
@@ -455,7 +456,7 @@ System Center Configuration Manager 主站点可以使用数据库副本来减�
 ###  <a name="bkmk_supscript"></a> 单个 SQL Server 上附加数据库副本的补充脚本  
  当你使用第 4 步中的脚本在 SQL Server 上配置数据库副本服务器的自签名证书（其中 SQL Server 已具有你计划继续使用的数据库副本）时，必须使用原始脚本修改后的版本。 以下修改使脚本无法删除服务器上的现有证书，并创建具有唯一友好名称的后续证书。  编辑原始脚本，如下所示：  
 
--   注释掉（阻止运行）脚本条目 **# Delete existing cert if one exists** 和 **# Create the new cert**之间的每一行。 若要如此，请添加“#”  **#**  作为每个适用行的第一个字符。  
+-   注释掉（阻止运行）脚本条目 **# Delete existing cert if one exists** 和 **# Create the new cert**之间的每一行。若要如此，请添加“#”  **#**  作为每个适用行的第一个字符。  
 
 -   对于使用此脚本配置的每个后续数据库副本，请更新证书的友好名称。  若要如此，请编辑行 **$enrollment.CertificateFriendlyName = "ConfigMgr SQL Server Identification Certificate"** 并将 **ConfigMgr SQL Server Identification Certificate** 替换为新名称，如  **ConfigMgr SQL Server Identification Certificate1**。  
 

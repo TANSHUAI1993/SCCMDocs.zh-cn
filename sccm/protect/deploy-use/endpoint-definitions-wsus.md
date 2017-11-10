@@ -1,5 +1,6 @@
 ---
-title: "WSUS 中的 Endpoint Protection 恶意软件定义 | Microsoft Docs"
+title: "WSUS 中的 Endpoint Protection 恶意软件定义"
+titleSuffix: Configuration Manager
 definition: Learn how to configure Windows Server Updates Services to auto-approve definition updates.
 ms.custom: na
 ms.date: 02/14/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "21"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.openlocfilehash: 0e606b25065fa25c782d1b5f3fbf164e60733353
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: fcc0e1909705fb1954c58c438438792a4866d3bf
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="enable-endpoint-protection-malware-definitions-to-download-from-windows-server-update-services-wsus-for-configuration-manager"></a>启用 Endpoint Protection 恶意软件定义，以便从 Server Update Services (WSUS) 为 Configuration Manager 下载定义
 

@@ -1,8 +1,9 @@
 ---
-title: "Configuration Manager Technical Preview | Microsoft 文档"
+title: "Technical Preview 版本"
+titleSuffix: Configuration Manager
 description: "了解可让你试用 System Center Configuration Manager 中的新功能和新特性的 Technical Preview 版本。"
 ms.custom: na
-ms.date: 09/28/2017
+ms.date: 10/30/2017
 ms.prod: configuration-manager
 ms.reviewer: nab
 ms.suite: na
@@ -14,11 +15,11 @@ caps.latest.revision: "157"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 429e20185bd23519f78c37ded39f2638d0c80ced
-ms.sourcegitcommit: 8ac9c2c9ba1fdcbb7cc8d5be898586865fcf67c0
+ms.openlocfilehash: 0f6fb329dae1dda18bbb1869dc77872a2a6a1b98
+ms.sourcegitcommit: 5437b2823bada8f8c9e67940f584953b9d190628
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2017
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="technical-preview-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview
 
@@ -93,10 +94,6 @@ ms.lasthandoff: 10/07/2017
 可以在基线版本发布后的 1 年内安装此基线版本。 但是，在安装新的技术预览站点时，我们建议使用可用的最新基线版本。
 -  **Technical Preview 1703** - Configuration Manager Technical Preview 1703 可作为 Configuration Manager Technical Preview 的控制台内更新，以及[作为 TechNet 评估中心网站中提供的新基线版本](http://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview)。
 
-<!-- out of support. Use baseline 1703
--  **Technical Preview 1610** - The Configuration Manager Technical Preview 1610 was available as both an in-console update for the Configuration Manager Technical Preview, and as a baseline version. If you have media for installing 1610, we recommend you download version 1703 and install that version instead.
--->
-
 
 
 ##  <a name="BKMK_TPFeedback"></a> 提供反馈  
@@ -110,19 +107,26 @@ ms.lasthandoff: 10/07/2017
 
 
 ##  <a name="bkmk_tpCaps"></a>最新技术预览版中提供的功能  
- 以下是每个 Configuration Manager Technical Preview 提供的功能。  从某一技术预览版开始提供的功能，在其后的版本中将保持可用。 同样，已添加到 System Center Configuration Manager 发行版本 (Current Branch) 的功能在后续的 Technical Preview 中将保持可用。  请单击查看每个预览版本的内容，了解有关特定功能的详细信息。  
+以下是每个 Configuration Manager Technical Preview 提供的功能。  从某一技术预览版开始提供的功能，在其后的版本中将保持可用。 同样，已添加到 System Center Configuration Manager 发行版本 (Current Branch) 的功能在后续的 Technical Preview 中将保持可用。  请单击查看每个预览版本的内容，了解有关特定功能的详细信息。  
 
  |功能 |Technical Preview 版本 |Current Branch 版本|  
  |----------------|---------------------|--------------------|
- |Configuration Manager 控制台中改进了 VPN 配置文件体验<!-- 1313282 --> | [Tech Preview 1709](capabilities-in-technical-preview-1709.md) |![未添加](media/Red_X.gif)    |
- |适用于 Windows 10 设备的共同管理|[Tech Preview 1709](capabilities-in-technical-preview-1709.md#co-management-for-windows-10-devices)|![未添加](media/Red_X.gif)    |
-
-
+ |Windows Analytics 设备运行状况的 Windows 10 遥测 <!--1356148 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#limit-windows-10-enhanced-telemetry-to-only-send-data-relevant-to-windows-analytics-device-health) |![未添加](media/Red_X.gif)    |
+ |对软件中心图标的改进 <!-- 1356194 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#software-center-no-longer-distorts-icons-larger-than-250x250) |![未添加](media/Red_X.gif)    |
+ |检查软件中心中共同托管的设备的符合性<!-- 1356374 -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md#check-compliance-from-software-center-for-co-managed-devices)|![未添加](media/Red_X.gif)    |
+ |对 CNG 证书的有限支持<!-- 1356191 -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md#limited-support-for-cng-certificates)|![未添加](media/Red_X.gif)    |
+ |对攻击防护的支持 <!--1355468 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#support-for-exploit-guard) |![未添加](media/Red_X.gif)    |
+ |对挂起的计算机重启的改进性说明   <!-- 1356283  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|![未添加](media/Red_X.gif)    |
+ |设备防护策略更改   <!-- 1355092  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|![未添加](media/Red_X.gif)    |
+ |配置和部署 Windows Defender 应用程序防护策略   <!-- 1351960  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|![未添加](media/Red_X.gif)    |
+ 
 ## <a name="capabilities-delivered-in-previous-technical-previews"></a>以前的技术预览版中提供的功能
  当 Current Branch 的最低支持版本提供技术预览版本的所有功能时，将从下表删除该预览版本的详细信息。  
 
  |功能 |Technical Preview 版本 |Current Branch 版本|  
  |----------------|---------------------|--------------------|
+ |Configuration Manager 控制台中改进了 VPN 配置文件体验<!-- 1313282 --> | [Tech Preview 1709](capabilities-in-technical-preview-1709.md) |![未添加](media/Red_X.gif)    |
+ |适用于 Windows 10 设备的共同管理|[Tech Preview 1709](capabilities-in-technical-preview-1709.md#co-management-for-windows-10-devices)|![未添加](media/Red_X.gif)    |
  |从 Configuration Manager 部署 PowerShell 脚本时指定脚本参数的改进<!-- 1236459 -->|[Tech Preview 1708](capabilities-in-technical-preview-1708.md#improvements-for-specifying-script-parameters-when-you-deploy-powershell-scripts-from-configuration-manager)|![未添加](media/Red_X.gif)|
  |管理见解<!-- 1353967 --> |[Tech Preview 1708](capabilities-in-technical-preview-1708.md#management-insights)|![未添加](media/Red_X.gif)|
  |从 Configuration Manager 控制台重启计算机<!-- 1356283 --> |[Tech Preview 1708](capabilities-in-technical-preview-1708.md#restart-computers-from-the-configuration-manager-console)|![未添加](media/Red_X.gif)|
@@ -272,3 +276,4 @@ ms.lasthandoff: 10/07/2017
 ## <a name="see-also"></a>另请参阅  
 [System Center Configuration Manager 中的新增功能](/sccm/core/plan-design/changes/whats-new-incremental-versions)  
  [System Center Configuration Manager 简介](../../core/understand/introduction.md)
+

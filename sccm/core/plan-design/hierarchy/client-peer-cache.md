@@ -1,5 +1,6 @@
 ---
-title: "客户端对等缓存 | System Center Configuration Manager"
+title: "客户端对等缓存"
+titleSuffix: Configuration Manager
 description: "使用 System Center Configuration Manager 部署内容时，将对等缓存用于客户端内容源位置。"
 ms.custom: na
 ms.date: 7/31/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "3"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 89fcd16887ae77299f9d18472ee6a1ba56794eca
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 20438f51a67fb29da21c879620870caf3328121d
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>用于 Configuration Manager 客户端的对等缓存
 

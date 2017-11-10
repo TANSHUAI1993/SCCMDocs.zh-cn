@@ -1,5 +1,6 @@
 ---
-title: "电子邮件配置文件安全和隐私 | Microsoft Docs"
+title: "电子邮件配置文件的安全和隐私"
+titleSuffix: Configuration Manager
 description: "了解在 System Center Configuration Manager 中管理设备的电子邮件配置文件的最佳安全方案。"
 ms.custom: na
 ms.date: 12/28/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Nbigman
 ms.author: nbigman
 manager: angrobe
-ms.openlocfilehash: 17707f931a4fa58b225ce14f04c2a19648585bc4
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 0faa84a53fba59b81156ef21d73fbed24cc9961a
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="security-and-privacy-for-email-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager 中电子邮件配置文件的安全和隐私
 

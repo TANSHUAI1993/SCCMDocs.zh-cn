@@ -1,5 +1,6 @@
 ---
-title: "Current Branch 版本 | Microsoft Docs"
+title: "Current Branch 版本"
+titleSuffix: Configuration Manager
 description: "查看 System Center Configuration Manager 的版本历史记录，并了解有关提供的各个服务阶段。"
 ms.custom: na
 ms.date: 7/31/2017
@@ -15,11 +16,11 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: noindex,nofollow
-ms.openlocfilehash: 1c02d2c51964fed960ffab42175762c1b04e6445
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 3907a8f764ddd4dcea992875d0181b93d4760b42
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="support-for-system-center-configuration-manager-current-branch-versions"></a>对 System Center Configuration Manager Current Branch 版本的支持
 

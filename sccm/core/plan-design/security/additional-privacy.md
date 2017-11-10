@@ -1,8 +1,8 @@
 ---
-title: "System Center Configuration Manager 隐私声明 - 其他信息 | Microsoft Docs"
+title: "System Center Configuration Manager 隐私声明 - 其他信息"
 description: "了解 Microsoft 如何收集和使用来自 System Center Configuration Manager 部署的数据。"
 ms.custom: na
-ms.date: 12/30/2016
+ms.date: 10/13/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -34,11 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.openlocfilehash: ef7b3656f9b4a31e07227aa4e864448d0dd1fcdc
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 28caf163507692ad7d7b3cfa85536a88d94584ec
+ms.sourcegitcommit: 18ac58374d2d513fe2a197c80f7c8c6890a7d612
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/16/2017
 ---
 # <a name="additional-information-about-privacy-for-system-center-configuration-manager"></a>关于 System Center Configuration Manager 隐私的其他信息
 
@@ -107,7 +107,7 @@ Microsoft 使用该信息来运行和改进 Microsoft Bing 地图以及其他 Mi
 ## <a name="microsoft-intune-subscription"></a>Microsoft Intune 订阅
 购买了 Microsoft Intune 订阅的客户可以使用 Configuration Manager 管理其通过 Microsoft Intune 连接的移动设备。 [Microsoft Online Services 隐私声明](http://go.microsoft.com/fwlink/?LinkId=262214)适用于 Microsoft Online Services，包括 Microsoft Intune。 如果客户已拥有 Microsoft Intune 订阅，[Microsoft Online Services 隐私声明](http://go.microsoft.com/fwlink/?LinkId=262214)应配合本隐私声明释读。
 
-与 Microsoft Intune 之间的所有通信都使用 HTTPS。 若要配置 Microsoft Intune 订阅以及下载配置 iOS 支持所需的证书签名请求 (CSR)，管理员必须使用其组织帐户和密码登录到 Microsoft Intune。 这些凭据未存储在 Configuration Manager 内。 与 Microsoft Intune 之间的所有其他通信都使用 Microsoft Intune 自动生成的 PKI 证书进行身份验证。
+与 Microsoft Intune 之间的所有通信都使用 HTTPS。 若要配置 Microsoft Intune 订阅以及下载配置 iOS 支持所需的证书签名请求 (CSR)，管理员必须使用其工作帐户和密码登录到 Microsoft Intune。 这些凭据未存储在 Configuration Manager 内。 与 Microsoft Intune 之间的所有其他通信都使用 Microsoft Intune 自动生成的 PKI 证书进行身份验证。
 
 为了管理连接到 Microsoft Intune 的设备，会将某些信息发送到 Microsoft Intune 以及从 Microsoft Intune 接收某些信息。 此信息包括分配给服务的所有用户的用户主体名称 (UPN)，以及 Microsoft Intune 托管的那些设备的设备清单信息。 分配给 Manage.Microsoft.com 分发点的内容的元数据（例如应用程序名称、发布者和版本）会发送到 Microsoft Intune。 分配给 Manage.Microsoft.com 分发点的实际二进制内容在上传到 Microsoft Intune 之前会被加密。
 

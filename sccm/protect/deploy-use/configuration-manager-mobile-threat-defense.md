@@ -1,5 +1,6 @@
 ---
-title: "移动威胁防御 | System Center Configuration Manager"
+title: "移动威胁防御"
+titleSuffix: Configuration Manager
 description: "根据设备、网络和应用程序风险，通过 Configuration Manager 和 Intune 移动威胁防御合作伙伴保护对公司资源的访问"
 ms.custom: na
 ms.date: 03/02/2017
@@ -14,11 +15,11 @@ caps.latest.revision:
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 25d68e7b16afe8e24939897f01f173d3daa7fa09
-ms.sourcegitcommit: 621b9f8fedf7f1d53ea7abd804af4b63c85dbeb1
+ms.openlocfilehash: 83911f35dbe8fc7bc24a4885929fbdf5660e7285
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="intune-mobile-threat-defense-connectors-in-configuration-manager"></a>Configuration Manager 中的 Intune 移动威胁防御连接器
 

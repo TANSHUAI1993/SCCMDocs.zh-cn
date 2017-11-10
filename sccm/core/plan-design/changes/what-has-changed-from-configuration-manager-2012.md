@@ -1,5 +1,5 @@
 ---
-title: "自 Configuration Manager 2012 以来的更改 | Microsoft Docs "
+title: "自 Configuration Manager 2012 以来的更改 "
 description: "识别与 System Center 2012 Configuration Manager 相比，System Center Configuration Manger 中更改的内容和新功能。"
 ms.custom: na
 ms.date: 05/02/2017
@@ -14,11 +14,11 @@ caps.latest.revision: "51"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 0a3eb93a99533a1569d8f72ca01d6dfcdc75da20
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 97882e89076b994c60760621dbab3fa8e75126fc
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="what39s-changed-in-system-center-configuration-manager-from-system-center-2012-configuration-manager"></a>自 System Center 2012 Configuration Manager 以来 System Center Configuration Manager 中更改的内容
 
@@ -64,7 +64,7 @@ ms.lasthandoff: 08/07/2017
 
 -   使应用到部署的更新在 Configuration Manager 控制台中可用。  
 
-此站点系统角色支持联机和脱机操作模式。 有关详细信息，请参阅 [关于 System Center Configuration Manager 中的服务连接点](../../../core/servers/deploy/configure/about-the-service-connection-point.md)。  
+此站点系统角色支持联机和脱机操作模式。 有关详细信息，请参阅 [About the service connection point in System Center Configuration Manager](../../../core/servers/deploy/configure/about-the-service-connection-point.md)。  
 
 ##  <a name="bkmk_usage"></a> 使用数据收集  
  System Center Configuration Manager 收集有关站点和基础结构的使用情况数据。 编译此信息并通过服务连接点将其提交给 Microsoft 云服务。 需要启用 Configuration Manager 下载部署的更新，此部署应用于你使用的 Configuration Manager 版本。 设置服务连接点时，可以指定收集到的数据级别以及它是自动提交（联机模式）还是手动提交（脱机模式）。  
@@ -106,7 +106,7 @@ ms.lasthandoff: 08/07/2017
 
 -   通过 System Center Configuration Manager，可部署运行 Windows 10 及更高版本设备的通用 Windows 平台 (UWP) 应用。 请参阅[使用 System Center Configuration Manager 创建 Windows 应用程序](../../../apps/get-started/creating-windows-applications.md)。  
 
--   软件中心具有富有现代感的全新外观。 此前仅出现在应用程序目录中的应用（用户可用的应用）现在将出现在“应用程序”选项卡下的软件中心中。 这将使这些部署更易于被发现，并且用户不必参考应用程序目录。 此外，不再需要启用了 Silverlight 的浏览器了。 请参阅[规划和配置 System Center Configuration Manager 中的应用程序管理](../../../apps/plan-design/plan-for-and-configure-application-management.md)。  
+-   软件中心具有富有现代感的全新外观。 此前仅出现在应用程序目录中的应用（用户可用的应用）现在将出现在“应用程序”选项卡下的软件中心中。这将使这些部署更易于被发现，并且用户不必参考应用程序目录。 此外，不再需要启用了 Silverlight 的浏览器了。 请参阅[规划和配置 System Center Configuration Manager 中的应用程序管理](../../../apps/plan-design/plan-for-and-configure-application-management.md)。  
 
 -   通过 MDM 的新 Windows Installer 安装程序类型让你可以创建基于 Windows Installer 的应用并将其部署到运行 Windows 10 的已注册 PC 上。 请参阅[使用 System Center Configuration Manager 创建 Windows 应用程序](../../../apps/get-started/creating-windows-applications.md)。  
 

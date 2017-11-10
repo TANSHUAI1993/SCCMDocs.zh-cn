@@ -1,5 +1,6 @@
 ---
-title: "应该使用哪一个分支 | Microsoft Docs"
+title: "应该使用哪一个分支"
+titleSuffix: Configuration Manager
 description: "了解 System Center Configuration Manager 可用分支之间的差异。"
 ms.custom: na
 ms.date: 05/02/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 26356a80bd8c78d4517253bae73e53d8d8f3a73a
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 047ffc0953db4a4cc5d543d880136ce61fa99fa7
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="which-branch-of-configuration-manager-should-i-use"></a>应该使用 Configuration Manager 的哪一个分支？
 
@@ -149,5 +150,4 @@ Technical Preview 适用于在实验室环境中了解和试用为 Configuration
 若要查看网站的版本，请转到控制台左上角的“关于 System Center Configuration Manager”，调出“网站版本”。 有关网站版本列表，请参阅 []()。
 
 **分支**  
-若要确认站点分支（是 LTSB 还是 Current Branch），在控制台中转至“管理” > “站点配置” > “站点”，并打开“层次结构设置”。 如果有转换为 Current Branch 的选项，而且选项处于活动状态，该站点运行 LTSB 版本。 如果站点运行 Current Branch，此选项将灰显。
-若要了解 Configuration Manager 的不同版本，请参阅 [Configuration Manager 更新](/sccm/core/servers/manage/updates)中的“基线和更新版本”。
+若要确认站点分支（是 LTSB 还是 Current Branch），在控制台中转至“管理” > “站点配置” > “站点”，并打开“层次结构设置”。 如果有转换为 Current Branch 的选项，而且选项处于活动状态，该站点运行 LTSB 版本。 如果站点运行 Current Branch，此选项将灰显。若要了解 Configuration Manager 的不同版本，请参阅 [Configuration Manager 更新](/sccm/core/servers/manage/updates)中的“基线和更新版本”。

@@ -1,5 +1,6 @@
 ---
-title: "大小和扩展 | Microsoft Docs"
+title: "大小和扩展"
+titleSuffix: Configuration Manager
 description: "确定需要用来支持 System Center Configuration Manager 环境中设备的站点系统角色和站点的数量。"
 ms.custom: na
 ms.date: 07/24/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "4"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 9c50f6633a5ca04b62f4c3b06119fb1fbcab2643
-ms.sourcegitcommit: 974fbc4408028c8be28911e5cd646efcf47c7f15
+ms.openlocfilehash: c0277fed7db5803aa2b2246ca879640136dce02a
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="size-and-scale-numbers-for-system-center-configuration-manager"></a>System Center Configuration Manager 的大小和扩展数量
 
@@ -54,7 +55,6 @@ ms.lasthandoff: 08/28/2017
 
 -   辅助站点不支持子站点。  
 
--   一个管理中心站点最多可支持 25 个子主站点。  
 
 
 ## <a name="bkmk_roles"></a> Site system roles    

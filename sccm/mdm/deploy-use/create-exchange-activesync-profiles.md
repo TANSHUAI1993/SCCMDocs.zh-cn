@@ -1,5 +1,6 @@
 ---
-title: "创建 Exchange ActiveSync 电子邮件配置文件 | Microsoft Docs"
+title: "创建 Exchange ActiveSync 电子邮件配置文件"
+titleSuffix: Configuration Manager
 description: "了解如何在 System Center Configuration Manager 中创建和配置适用于 Microsoft Intune 的电子邮件配置文件。"
 ms.custom: na
 ms.date: 07/28/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.openlocfilehash: 0af556b5b63b465a99650c8889eae3adbf7307f6
-ms.sourcegitcommit: 13599667ea77c16db1aebe64f8a6748c268f0b45
+ms.openlocfilehash: 0211acbd546ac207e640a43d012c1f82399ace53
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="exchange-activesync-email-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的 Exchange ActiveSync 电子邮件配置文件
 

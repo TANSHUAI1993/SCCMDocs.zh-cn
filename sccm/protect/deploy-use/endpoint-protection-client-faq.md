@@ -1,5 +1,6 @@
 ---
-title: "Endpoint Protection 客户端的常见问题 | Microsoft Docs"
+title: "Endpoint Protection 客户端的常见问题"
+titleSuffix: Configuration Manager
 description: "获取有关 Windows Defender 和 Endpoint Protection 常见问题的解答。"
 ms.custom: na
 ms.date: 02/14/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "15"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.openlocfilehash: b88bc5f734b85527b81e5848deb0617db4c8dfbc
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: de813a38d6278a60189667165bf4911bd314f14a
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="endpoint-protection-client-frequently-asked-questions"></a>Endpoint Protection 客户端的常见问题
 
@@ -62,7 +63,7 @@ ms.lasthandoff: 08/07/2017
     |监视计算机上的文件和程序活动|此选项是在文件和程序开始在你的计算机上运行时进行监视，然后它会对你发出警报，通知你它们要执行的任何操作和要对它们执行的操作。 这非常重要，因为恶意软件会利用已安装程序的漏洞在你不知情的情况下运行恶意或不需要的软件。 例如，当你启动经常使用的程序时，间谍软件可以在后台运行。 Windows Defender 监视你的程序，并在检测到可疑活动时向你发出警报。|  
     |启用行为监视|此选项可监视传统防病毒检测方法可能检测不到的可疑模式的行为集合。|  
 
-    |启用网络检查系统|此选项可帮助保护计算机免受已知漏洞的零日攻击、减小发现漏洞和应用更新之间的时间段。|  
+    |启用网络检查系统|此选项可帮助保护计算机免受已知漏洞的“零日”攻击、减小发现漏洞和应用更新之间的时间段。|  
 
 -   **扫描选项** - 可以使用 Windows Defender 扫描可能给你的计算机带来风险的潜在威胁，如病毒、间谍软件以及其他恶意软件。 你也可以用它来计划定期扫描，并删除在扫描过程中检测到的恶意软件。  
 

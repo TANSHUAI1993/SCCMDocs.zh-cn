@@ -1,5 +1,6 @@
 ---
-title: "网络共享中的 Endpoint Protection 恶意软件定义 | Microsoft Docs"
+title: "网络共享中的 Endpoint Protection 恶意软件定义"
+titleSuffix: Configuration Manager
 ms.custom: na
 ms.date: 02/14/2017
 ms.prod: configuration-manager
@@ -13,11 +14,11 @@ caps.latest.revision: "21"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.openlocfilehash: 7bd9f6bc1b6314b7889543d0d6042893538736fc
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 24933b9b2bc92791825e29c00205840f6e358bbf
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="using-the-microsoft-malware-protection-center-to-download-definitions"></a>使用 Microsoft 恶意软件防护中心下载定义
 

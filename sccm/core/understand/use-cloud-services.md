@@ -1,5 +1,6 @@
 ---
-title: "将云服务与 Configuration Manager 结合使用 | Microsoft Docs"
+title: "使用云服务来补充本地基础结构"
+titleSuffix: Configuration Manager
 description: "为 System Center Configuration Manager 预配云资源，补充本地基础结构。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 52f7c63d155d5c34f0f12e13020767dec1867dab
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: f3a167433f90dc111d8f7e5e912db7360df5bfcf
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="use-cloud-services-with-system-center-configuration-manager"></a>将云服务用于 System Center Configuration Manager
 

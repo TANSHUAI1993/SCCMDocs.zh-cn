@@ -1,5 +1,6 @@
 ---
-title: "Configuration Manager 使用的端口 | Microsoft Docs"
+title: "用于连接的端口"
+titleSuffix: Configuration Manager
 description: "了解有关 System Center Configuration Manager 用于连接的必需的和可自定义端口。"
 ms.custom: na
 ms.date: 09/19/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: ac443971a725a7eeecaeea877b8e9636ebb4990b
-ms.sourcegitcommit: 51654bf8b5615eb99084d0a20d18ca3fccfa83a1
+ms.openlocfilehash: 663c64926e4653da3f7ee580ff01abb39cb85bee
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="ports-used-in-system-center-configuration-manager"></a>System Center Configuration Manager 中使用的端口
 

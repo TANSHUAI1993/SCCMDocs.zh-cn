@@ -1,5 +1,6 @@
 ---
-title: "管理发布项 | Microsoft Docs"
+title: "管理发布内容"
+titleSuffix: Configuration Manager
 description: "使用 System Center Updates Publisher 将各组软件更新作为发布项进行管理"
 ms.custom: na
 ms.date: 4/29/2017
@@ -15,11 +16,11 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: NOINDEX, NOFOLLOW
-ms.openlocfilehash: ddea7af935d5be880b96e383401061f8aa11e6da
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 07e0acadae6cab050f7f0c0b0165e2baa5ff4d68
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="manage-publications-in-updates-publisher"></a>管理 Updates Publisher 中的发布项
 
@@ -98,7 +99,7 @@ ms.lasthandoff: 08/07/2017
 ## <a name="expire-or-reactivate-updates-and-bundles"></a>终止或重新激活更新和捆绑包
 可以使用“更新工作区”选择并终止或重新激活更新和捆绑包。 可以根据需要多次终止和重新激活更新和捆绑包。
 
--   **若要终止更新或捆绑包**，请在“更新工作区”中选择一个或多个未终止的更新或捆绑包，然后在“开始”选项卡中选择“终止”。 将更新或捆绑包的终止状态发布到 Configuration Manager 中之前，都可以重新激活。
+-   **若要终止更新或捆绑包**，请在“更新工作区”中选择一个或多个未终止的更新或捆绑包，然后在“开始”选项卡中选择“终止”。将更新或捆绑包的终止状态发布到 Configuration Manager 中之前，都可以重新激活。
 
     必须先终止自定义更新或捆绑包，并将其终止状态发布到 Configuration Manager 中，然后才能将其从 Configuration Manager 中删除。 当更新或捆绑包的终止状态发布到 Configuration Manager 中后，便无法再部署或重新激活更新或捆绑包。
 

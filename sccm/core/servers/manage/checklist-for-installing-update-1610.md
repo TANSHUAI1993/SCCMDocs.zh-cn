@@ -1,5 +1,6 @@
 ---
-title: "1610 的清单 | System Center Configuration Manager"
+title: "1610 清单"
+titleSuffix: Configuration Manager
 description: "了解更新到 System Center Configuration Manager 版本 1610 之前需要执行的操作。"
 ms.custom: na
 ms.date: 6/6/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "7"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 54b243fd33ed13b8ccde48fa5e2525204455d96c
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: b6451acbb17b849e8d291fa33d2cb47b16a4439f
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="checklist-for-installing-update-1610-for-system-center-configuration-manager"></a>用于为 System Center Configuration Manager 安装更新 1610 的清单
 

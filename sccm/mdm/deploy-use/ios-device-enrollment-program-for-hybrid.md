@@ -1,5 +1,6 @@
 ---
-title: "通过设备注册计划 (DEP) 注册 iOS 设备 - Configuration Manager | Microsoft Docs"
+title: "注册设备注册计划 (DEP) iOS 设备 "
+titleSuffix: Configuration Manager
 description: "在 Configuration Manager 中使用 Intune 为混合部署启用 iOS 设备注册计划 (DEP) 注册。"
 ms.custom: na
 ms.date: 09/22/2017
@@ -11,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 78d44adc-9b1c-4bc6-b72d-e93873916ea6
 caps.latest.revision: "9"
-author: mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: f34f7527c14e1be6229212bfb2d8fd022ee6defe
-ms.sourcegitcommit: 8faf42135a8dc9c384407e64f3f8ba204fb15847
+ms.openlocfilehash: 1d8a1765b599daa98014feeb3d88efe9a07cb907
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="ios-device-enrollment-program-dep-enrollment-for-hybrid-deployments-with-configuration-manager"></a>使用 Configuration Manager 进行混合部署的 iOS 设备注册计划 (DEP) 注册
 

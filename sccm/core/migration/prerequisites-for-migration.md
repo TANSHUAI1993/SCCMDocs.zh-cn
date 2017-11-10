@@ -1,5 +1,6 @@
 ---
-title: "迁移先决条件 | Microsoft Docs"
+title: "迁移先决条件"
+titleSuffix: Configuration Manager
 description: "了解支持的 Configuration Manager 版本、支持的源站点语言和迁移所需的配置。"
 ms.custom: na
 ms.date: 3/7/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: cd90f5462ac4bb4c0a2021e6d5dde65161b9c5f6
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: b1f4942562bf9e1f460ba9e4dae488e57a345e35
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="prerequisites-for-migration-in-system-center-configuration-manager"></a>System Center Configuration Manager 中迁移的先决条件
 

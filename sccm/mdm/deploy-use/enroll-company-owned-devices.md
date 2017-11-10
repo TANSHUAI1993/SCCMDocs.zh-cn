@@ -1,5 +1,6 @@
 ---
-title: "注册公司拥有的设备 - Configuration Manager | Microsoft Docs"
+title: "注册公司拥有的设备 "
+titleSuffix: Configuration Manager
 description: "了解使用 Configuration Manager 注册公司拥有的设备以用于混合部署的不同方法。"
 ms.custom: na
 ms.date: 03/05/2017
@@ -11,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e2754ce6-1460-4ddd-9050-2cc87e7964f4
 caps.latest.revision: "13"
-author: mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: f0b503d8c9eba2dd1b6eb4c41ec40c001b727326
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 5b1e05e45ec6193eeef5e48cfa8d8476a92dde56
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="enroll-company-owned-devices-for-hybrid-deployments-with-configuration-manager"></a>使用 Configuration Manager 注册公司拥有的设备以用于混合部署
 

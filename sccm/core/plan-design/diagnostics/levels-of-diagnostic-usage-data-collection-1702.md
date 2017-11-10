@@ -1,5 +1,6 @@
 ---
-title: "1702 的诊断数据 | System Center Configuration Manager"
+title: "1702 的诊断数据"
+titleSuffix: Configuration Manager
 description: "了解 System Center Configuration Manager 版本 1702 收集的诊断和使用情况数据的级别。"
 ms.custom: na
 ms.date: 3/27/2017
@@ -32,11 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.openlocfilehash: 0e1d93712150fb3d6fabc3f057711eba1194c3ad
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: a8a3f143acd34f370ebf6187cdb7dcaefcefe5eb
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1702-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1702 的诊断使用情况数据收集的级别
 

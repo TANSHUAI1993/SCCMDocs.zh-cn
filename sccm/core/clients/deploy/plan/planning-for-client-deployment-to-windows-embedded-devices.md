@@ -1,5 +1,6 @@
 ---
-title: "规划 Windows Embedded 设备的客户端部署 | Microsoft Docs"
+title: "规划 Windows Embedded 设备的客户端部署"
+titleSuffix: Configuration Manager
 description: "在 System Center Configuration Manager 中规划 Windows Embedded 设备的客户端部署。"
 ms.custom: na
 ms.date: 04/23/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 513dcb2a224a6e60553fdc602813e9fe47116235
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: c4f3d8a9b043707340e56d3ae483ad66ca17dc10
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="planning-for-client-deployment-to-windows-embedded-devices-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中计划 Windows Embedded 设备的客户端部署
 

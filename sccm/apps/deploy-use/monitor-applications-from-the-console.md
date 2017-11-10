@@ -1,5 +1,6 @@
 ---
-title: "监视 System Center Configuration Manager 控制台中的应用程序 | Microsoft Docs"
+title: "从控制台监视应用程序"
+titleSuffix: Configuration Manager
 description: "使用 Configuration Manager 中的“监视”工作区监视软件的部署，包括更新、符合性设置和应用程序。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "5"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: ded2a085510def60d388d9754da9c2c41de565d4
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 015f4410f576fac90d913abfa30064b2eecb2a5b
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="monitor-applications-from-the-system-center-configuration-manager-console"></a>监视 System Center Configuration Manager 控制台中的应用程序
 

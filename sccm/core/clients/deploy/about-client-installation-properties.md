@@ -1,5 +1,6 @@
 ---
-title: "客户端安装属性 | Microsoft Docs"
+title: "客户端安装属性"
+titleSuffix: Configuration Manager
 description: "了解 System Center Configuration Manager 中的客户端安装属性。"
 ms.custom: na
 ms.date: 01/04/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "15"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: ef515da67a7293de60a7678dee69e9785d339352
-ms.sourcegitcommit: 96b79fa091f44e8e6ac5652f6cbbb4b873a8bad9
+ms.openlocfilehash: 903a415a936bc62aad5c889d5d8f6572ba9759c1
+ms.sourcegitcommit: 5437b2823bada8f8c9e67940f584953b9d190628
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="about-client-installation-properties-in-system-center-configuration-manager"></a>关于 System Center Configuration Manager 中的客户端安装属性
 
@@ -53,7 +54,7 @@ ms.lasthandoff: 10/09/2017
 
  例如：  
 
- 'CCMSetup.exe /mp:SMSMP01 /logon SMSSITECODE=S01 FSP=SMSFSP01`  
+      'CCMSetup.exe /mp:SMSMP01 /logon SMSSITECODE=S01 FSP=SMSFSP01`  
 
  此示例将执行以下操作：  
 

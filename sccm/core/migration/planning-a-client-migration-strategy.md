@@ -1,5 +1,6 @@
 ---
-title: "规划客户端迁移 | Microsoft Docs"
+title: "规划客户端迁移"
+titleSuffix: Configuration Manager
 description: "了解将客户端从源层次结构迁移到 System Center Configuration Manager 目标层次结构的任务。"
 ms.custom: na
 ms.date: 12/30/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "6"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: b52ca4059dfeed08cabf1f75319da40d6499622f
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 8e41135266565890c793f7920482a4455f05fbde
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="plan-a-client-migration-strategy-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中规划客户端迁移策略
 

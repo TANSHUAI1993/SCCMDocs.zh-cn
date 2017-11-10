@@ -1,5 +1,6 @@
 ---
-title: "安装程序命令行选项 | Microsoft Docs"
+title: "安装程序的命令行选项"
+titleSuffix: Configuration Manager
 description: "使用本文中的信息从命令行配置脚本或安装 System Center Configuration Manager。"
 ms.custom: na
 ms.date: 03/27/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "3"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 04fe7b3e674287c4255563ab4a308e54d0b6c3aa
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 21b35888b6d3790736f204faca4458227fe0b6d3
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="command-line-options-for-setup-in-system-center-configuration-manager"></a>System Center Configuration Manager 中适用于安装程序的命令行选项
 

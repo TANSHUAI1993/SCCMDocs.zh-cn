@@ -1,5 +1,6 @@
 ---
-title: "启用符合性策略中的设备防护规则 | Microsoft Docs"
+title: "启用符合性策略中的设备防护规则"
+titleSuffix: Configuration Manager
 description: "启用设备合规性策略中的移动威胁防护规则。"
 ms.custom: na
 ms.date: 03/05/2017
@@ -11,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 99a5b715-f172-46e1-ac27-ad55bde66d0d
 caps.latest.revision: 
-author: mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: faa92e150686e615164ce3f5435b77a65305aab3
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: d74360ce800f030e85e2b87defc1de3376c6aee5
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="enable-device-threat-protection-rule-in-the-compliance-policy"></a>启用合规性策略中的设备威胁防护规则
 

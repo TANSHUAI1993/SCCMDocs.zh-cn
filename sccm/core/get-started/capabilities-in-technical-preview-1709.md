@@ -1,5 +1,6 @@
 ---
-title: Technical Preview 1709 | Microsoft Docs
+title: Technical Preview 1709
+titleSuffix: Configuration Manager
 description: "了解适用于 System Center Configuration Manager 的 Technical Preview 版本 1709 中的可用功能。"
 ms.custom: na
 ms.date: 09/28/2017
@@ -13,11 +14,11 @@ ms.assetid: a3ef6bdc-a204-4c4c-a02f-2bd03f35183e
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 3348bc91e6810c873d50cb4efd3efb9fbd024bd3
-ms.sourcegitcommit: 96b79fa091f44e8e6ac5652f6cbbb4b873a8bad9
+ms.openlocfilehash: 90e31c26204323e33560270044ebac7dfe135684
+ms.sourcegitcommit: 1573a1bd0bd58fefb1ea651b3ea8d6fd53eff546
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2017
+ms.lasthandoff: 10/17/2017
 ---
 # <a name="capabilities-in-technical-preview-1709-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1709 中的功能
 
@@ -43,8 +44,8 @@ ms.lasthandoff: 10/09/2017
 
 **以下是可以试用的此版本的新功能。**  
 
-## <a name="improved-vpn-profile-experience-in-configuration-manager-console----1313282---"></a>Configuration Manager 控制台中改进了 VPN 配置文件体验<!-- 1313282 -->
-
+## <a name="improved-vpn-profile-experience-in-configuration-manager-console"></a>Configuration Manager 控制台中改进了 VPN 配置文件体验
+<!-- 1313282 -->
 在此版本中，我们更新了 VPN 配置文件向导和属性页，以显示选定平台相应的设置。 具体而言：
 
 - 每个平台均有其自己的工作流，这意味着新的 VPN 配置文件仅包含平台支持的设置。
@@ -80,8 +81,7 @@ ms.lasthandoff: 10/09/2017
 
 ## <a name="co-management-for-windows-10-devices"></a>适用于 Windows 10 设备的共同管理    
 <!-- 1350871 -->
-许多客户想要使用一种基于云的简单低成本解决方案通过管理移动设备的相同方式来管理 Windows 10 设备。 然而，实现从传统管理到现代管理的转换可能具有挑战性。 共同管理即是一种解决方案，可以通过 Configuration Manager和 Intune 同时管理 Windows 10 设备，并且设备可联接到 Active Directory (AD) 和 Azure Active Directory (Azure AD)，随着时间推移持续进行现代化。 它是一种解决方案，在传统管理与现代管理之间架起一座桥梁，为你提供利用分阶段的方法实现转换的途径。  
-
+许多客户想要使用一种基于云的简单低成本解决方案通过管理移动设备的相同方式来管理 Windows 10 设备。 然而，实现从传统管理到现代管理的转换可能具有挑战性。 从 Windows 10 版本 1607（也称为周年更新）开始，可以将 Windows 10 设备同时联接到本地 Active Directory (AD) 和基于云的 Azure AD（混合 Azure AD）。 共同管理将利用此项改进，并使你能够同时使用 Configuration Manager 和 Intune 来管理 Windows 10 设备。 它是一种解决方案，在传统管理与现代管理之间架起一座桥梁，为你提供利用分阶段的方法实现转换的途径。 
 
 ### <a name="prerequisites"></a>先决条件
 必须具备以下先决条件才能实现共同管理。 存在一般先决条件，以及针对现有 Configuration Manager 客户端和不属于该客户端的设备的不同先决条件。
@@ -111,7 +111,7 @@ ms.lasthandoff: 10/09/2017
 ### <a name="workloads-you-can-switch-to-intune"></a>可以切换到 Intune 的工作负荷
 启用共同管理后，Configuration Manager 将继续管理所有工作负荷。 如果决定已准备就绪，即可使 Intune 开始管理可用的工作负荷。 在此版本中，可以使 Intune 管理以下工作负荷。   
 
-#### <a name="compliance-policies"></a>符合性策略
+#### <a name="compliance-policies"></a>相容性策略
 符合性策略定义设备必须遵从的规则和设置，以便将设备视为符合条件访问策略。 也可使用符合性策略来监视和修正独立于条件访问的设备符合性问题。 有关详细信息，请参阅[设备符合性策略](https://docs.microsoft.com/en-us/sccm/mdm/deploy-use/device-compliance-policies)。  
 
 #### <a name="windows-update-for-business-policies"></a>适用于企业的 Windows 更新策略
@@ -210,7 +210,6 @@ ccmsetup.msi CCMSETUPCMD="/mp:https://contoso.cloudapp.net/CCM_Proxy_MutualAuth/
     - 生产：如果选择此设置，将对所有支持的 Windows 10 设备启用共同管理。 使用一个或多个集合配置排除组。 将不对属于此组中任意集合的成员的设备使用共同管理。 
 5. 在“启用”页中，选择“试点”或“全部”（具体取决于“暂存”页中所配置的设置），在 Intune 中启用自动注册，然后单击“下一步”。 如果选择“试点”，仅属于试点组成员的 Configuration Manager 客户端可在 Intune 中自动注册。 这使你能够对客户端子集启用共同管理，以初步测试共同管理，并使用分阶段的方式推出共同管理。 
 6. 在“工作负荷”页中选择是否将 Configuration Manager 工作负荷切换为由 Intune 托管，然后单击“下一步”。 使用滑块来选择是否将工作负荷切换到试点组或所有 Windows 10 设备（具体取决于在“暂存”页中所配置的设置）。 
-
 7. 要启用共同管理，请完成向导。  
 
 <!--### Modify your co-management settings

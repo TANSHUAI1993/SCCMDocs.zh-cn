@@ -1,5 +1,6 @@
 ---
-title: "选择 Intune 独立版或混合 MDM | Microsoft Docs"
+title: "选择 Intune 独立版或混合 MDM"
+titleSuffix: Configuration Manager
 description: "选择是使用 Intune 和 Configuration Manager 部署混合移动设备管理还是运行 Intune 独立版。"
 ms.custom: na
 ms.date: 07/18/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "10"
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 5c9e80fc5bc3f0629e1c27a4928b8a51cfe1ee7e
-ms.sourcegitcommit: 948644072bd158b156f782a4376bcd50fac7c73a
+ms.openlocfilehash: 993a3ada8b887adb52be468ea4e936140a455bca
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="choose-between-microsoft-intune-standalone-and-hybrid-mobile-device-management-with-system-center-configuration-manager"></a>在 Microsoft Intune 独立版与使用 System Center Configuration Manager 实现的混合移动设备管理之间做出选择
 

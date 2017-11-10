@@ -1,5 +1,6 @@
 ---
-title: "配置可用性组 | Microsoft 文档"
+title: "配置可用性组"
+titleSuffix: Configuration Manager
 description: "通过 SCCM 设置和管理 SQL Server AlwaysOn 可用性组。"
 ms.custom: na
 ms.date: 7/31/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: e0b887169f0c8ae6901d1c6fd6a498df9596c2b4
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 12ba7c1cbfdb0c3ab9885e839b05a48862ea0e5d
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="configure-sql-server-always-on-availability-groups-for-configuration-manager"></a>为 Configuration Manager 配置 SQL Server AlwaysOn 可用性组
 
@@ -61,7 +62,7 @@ ms.lasthandoff: 08/07/2017
       -    在“添加副本”页面，配置以下内容：
           -    副本：指定将托管辅助副本的服务器。
 
-          -    侦听器：指定“侦听器 DNS 名称”作为完整 DNS 名称，如 **&lt;Listener_Server>.fabrikam.com**。 将 Configuration Manager 配置为使用可用性组中的站点数据库时，将使用此名称。
+          -    侦听器：指定“侦听器 DNS 名称”作为完整 DNS 名称，如 **&lt;Listener_Server>.fabrikam.com**。将 Configuration Manager 配置为使用可用性组中的站点数据库时，将使用此名称。
 
       -    在“选择初始数据同步”页面，选择“完整”。 该向导创建可用性组后，向导将备份主数据库和事务日志。 然后在托管次要副本的每个服务器上还原它们。 （如果不使用此步骤，则需要将站点数据库的副本还原到托管辅助副本的每个服务器，并将该数据库手动联接到组。）   
 

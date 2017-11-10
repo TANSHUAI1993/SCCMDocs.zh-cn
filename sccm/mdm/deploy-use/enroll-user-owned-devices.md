@@ -1,5 +1,6 @@
 ---
-title: "使用 Configuration Manager 注册用户拥有的设备以用于混合部署 | Microsoft Docs"
+title: "注册用户拥有的设备以用于混合部署"
+titleSuffix: Configuration Manager
 description: "了解使用 Configuration Manager 注册用户拥有的设备以用于混合部署的不同方法。"
 ms.custom: na
 ms.date: 09/08/2017
@@ -11,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2bdaa8a7-6a64-4b0e-b617-309dcd912c45
 caps.latest.revision: "13"
-author: nathbarn
-ms.author: nathbarn
+author: arob98
+ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 56bd6bfd900a8ecbb149392de62889970ddedb60
-ms.sourcegitcommit: 40f2a4e3cc546e6bfd10f195a8e87af2b0780928
+ms.openlocfilehash: 9bc0e23680ff2c7a5099938e546e50e03f998f5e
+ms.sourcegitcommit: 1132886e07d0c0a87dcc7eeef4577dd8d8840023
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 11/01/2017
 ---
 # <a name="enroll-user-owned-devices-for-hybrid-deployments-with-configuration-manager"></a>使用 Configuration Manager 注册用户拥有的设备以用于混合部署
 

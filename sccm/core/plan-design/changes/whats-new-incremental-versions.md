@@ -1,5 +1,6 @@
 ---
-title: "System Center Configuration Manager 增量版本 | Microsoft Docs"
+title: "增量版本"
+titleSuffix: Configuraton Manager
 description: "了解如何安装和管理 System Center Configuration Manager 更新。"
 ms.custom: na
 ms.date: 7/31/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "4"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 043c9521f4a94ea2df5cebb4ca1c0b1127f0edbc
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 5ebbf4e1dd0e67a879250c559bdae5c7be3dfc91
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="whats-new-in-system-center-configuration-manager-incremental-versions"></a>System Center Configuration Manager 增量版本中的新增功能
 
@@ -27,7 +28,7 @@ ms.lasthandoff: 08/07/2017
 
 
 
- System Center Configuration Manager 使用控制台中的[更新与维护服务](/sccm/core/servers/manage/updates)进程，轻松发现并安装 Configuration Manager 更新。 这意味着不再需要跟踪服务包或累积更新版本。 无需再搜索下载最新版本或更新。
+ System Center Configuration Manager 使用控制台中的[更新与维护服务](/sccm/core/servers/manage/updates)进程，轻松发现并安装 Configuration Manager 更新。 这意味着不再需要跟踪服务包或累积更新版本。无需再搜索下载最新版本或更新。
 
  相反，若要将产品更新到 Current Branch 的新版本，可使用 Configuration Manager 控制台查找，然后[安装控制台中更新](../../../core/servers/manage/install-in-console-updates.md)。 每年都会发布几次包括产品更新的新版本。 还会在每个版本中引入新功能。  
 

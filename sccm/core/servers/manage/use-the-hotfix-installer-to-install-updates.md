@@ -1,5 +1,6 @@
 ---
-title: "修补程序安装程序 | Microsoft Docs"
+title: "修补程序安装程序"
+titleSuffix: Configuration Manager
 description: "了解何时以及如何通过 Configuration Manager 的修补程序安装更新。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "9"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 8ffc7383e895909e6e6c4b8a7875fd5f0df2220e
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 2ffb5c913a6863de3dbf1415961bb6987033b6ea
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="use-the-hotfix-installer-to-install-updates-for-system-center-configuration-manager"></a>使用修补程序安装程序来安装 System Center Configuration Manager 的更新
 

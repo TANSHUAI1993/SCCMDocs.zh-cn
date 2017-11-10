@@ -1,5 +1,6 @@
 ---
-title: "使用 System Center Configuration Manager 和 Microsoft Intune 设置 Android 混合设备管理 | Microsoft Docs"
+title: "使用 Microsoft Intune 设置 Android 混合设备管理"
+titleSuffix: Configuration Manager
 description: "使用 Configuration Manager 和 Intune 准备管理 Android 移动设备。"
 ms.custom: na
 ms.date: 08/11/2017
@@ -12,14 +13,14 @@ ms.topic: get-started-article
 ms.assetid: c517fe34-0130-465b-a020-bdb555878778
 caps.latest.revision: "9"
 caps.handback.revision: "0"
-author: nathbarn
-ms.author: nathbarn
+author: arob98
+ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 53ecc86ecc000e0ab9e81f683e8e8171e9a66f35
-ms.sourcegitcommit: 9a6f8e028fb5eb2e752da70f42a5b548339bd8f4
+ms.openlocfilehash: 4b638b0325aa5f75d60a008ea60531a818ec76c2
+ms.sourcegitcommit: 1132886e07d0c0a87dcc7eeef4577dd8d8840023
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 11/01/2017
 ---
 # <a name="set-up-android-hybrid-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>使用 System Center Configuration Manager 和 Microsoft Intune 设置 Android 混合设备管理
 

@@ -1,5 +1,6 @@
 ---
-title: "了解有关授权和分支的详细情况 | Microsoft Docs"
+title: "了解有关授权和分支的详细情况"
+titleSuffix: Configuration Manager
 description: "请使用本主题，了解有关 2016 年 10 月发行的 System Center Configuration Manager（包括 Current Branch 1606 版、Long-Term Servicing Branch (LTSB) 和 Current Branch 的评估安装）的可用安装选项的许可要求。"
 ms.custom: na
 ms.date: 10/12/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 90e16b316872cb370c9c2e645f46ac12afab7107
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 88cc85a98b9281ec07ead766c415bebe46c5a82c
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="licensing-and-branches-for-system-center-configuration-manager"></a>System Center Configuration Manager 的许可和分支
 

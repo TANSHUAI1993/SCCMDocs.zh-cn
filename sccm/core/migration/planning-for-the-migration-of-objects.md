@@ -1,5 +1,6 @@
 ---
-title: "迁移对象 | Microsoft Docs"
+title: "迁移对象"
+titleSuffix: Configuration Manager
 description: "了解如何在 System Center Configuration Manager 环境中规划跨层次结构的对象迁移。"
 ms.custom: na
 ms.date: 1/12/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 17f3955aa7c63a13bab03b46002f7de0b0ec38fe
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 74fe97e13ba876763159480d0a28445b30d834d2
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="plan-for-the-migration-of-configuration-manager-objects-to-system-center-configuration-manager"></a>规划将 Configuration Manager 对象迁移到 System Center Configuration Manager
 

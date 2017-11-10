@@ -1,5 +1,6 @@
 ---
-title: "在新计算机上安装 Windows - Configuration Manager | Microsoft Docs"
+title: "在新计算机上安装 Windows "
+titleSuffix: Configuration Manager
 description: "通过 PXE、OEM 或独立介质在新计算机（裸机）上使用 Configuration Manager 安装操作系统。"
 ms.custom: na
 ms.date: 01/23/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "8"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 63a26ff688ca2ec0c121a93a6c96bba2f76776e8
-ms.sourcegitcommit: 31c670a4bce74fd64a7d46ebf7702f65b80d4147
+ms.openlocfilehash: df034ea70cc6facea66bd35a9e1e685491b67d9e
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="install-a-new-version-of-windows-on-a-new-computer-bare-metal-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 在新计算机（裸机）上安装新版本的 Windows
 

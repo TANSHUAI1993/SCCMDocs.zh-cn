@@ -1,5 +1,6 @@
 ---
-title: "查看诊断数据 | Microsoft Docs"
+title: "查看诊断数据"
+titleSuffix: Configuration Manager
 description: "查看诊断和使用情况数据，确保 System Center Configuration Manager 层次结构中未包含敏感信息。"
 ms.custom: na
 ms.date: 3/27/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "8"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 0932e2b2a4f3e13c35d6b7b0446083f1c233ce03
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: c28f5978e59bfe159dda7a850ab73dd84c19a137
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-view-diagnostics-and-usage-data-for-system-center-configuration-manager"></a>如何查看 System Center Configuration Manager 的诊断和使用情况数据
 

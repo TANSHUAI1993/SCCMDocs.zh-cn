@@ -1,5 +1,6 @@
 ---
-title: "适用性规则 |Microsoft 文档"
+title: "适用性规则"
+titleSuffix: Configuration Manager
 description: "管理 System Center Updates Publisher 中的适用性规则"
 ms.custom: na
 ms.date: 4/29/2017
@@ -15,11 +16,11 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 2925abda07abaa46ad56b9b433ce003c22aede5e
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: bab3c0f928767378f885c7631f7f9bdd6b13e15e
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="manage-applicability-rules-in-updates-publisher"></a>管理 Updates Publisher 中的适用性规则
 

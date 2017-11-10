@@ -1,8 +1,9 @@
 ---
-title: "对 Windows 10 的支持 | Microsoft Docs"
+title: "支持 Windows 10"
+titleSuffix: Configuration Manager
 description: "了解支持作为客户端或 OSD 对 System Center Configuration Manager 使用的 Windows 10 版本。"
 ms.custom: na
-ms.date: 7/31/2017
+ms.date: 10/11/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +15,11 @@ caps.latest.revision: "5"
 author: brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 1d2e6e128531237ed76f94584aa42f76067db164
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 8ce7230a3aa64b78937b305fee4dc8e3f38abead
+ms.sourcegitcommit: f9c38b87fcd543ab8a5d7a7f446b42fd3e55450c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/19/2017
 ---
 # <a name="support-for-windows-10-for-system-center-configuration-manager"></a>支持对 System Center Configuration Manager 使用 Windows 10  
 
@@ -40,10 +41,11 @@ ms.lasthandoff: 08/07/2017
 |Windows 10 版本                    |Configuration Manager 1610          |    Configuration Manager 1702          |    Configuration Manager 1706 |
 |---------------------|-----|-----|-----|
 |企业版 2015 长期服务                   |![支持](media/green_check.png) |![支持](media/green_check.png) |![支持](media/green_check.png) |
-|1511  <br />（*请参见版本*）           |![支持](media/green_check.png) |![支持](media/green_check.png) |![支持](media/green_check.png) |
 |企业版 2016 长期服务                   |![支持](media/green_check.png) |![支持](media/green_check.png) |![支持](media/green_check.png) |
-|1607   <br />周年更新<br />（*请参见版本*）   |![支持](media/green_check.png) |![支持](media/green_check.png)            |![支持](media/green_check.png) |
-|1703   <br />创意者更新<br />（*请参见版本*）      |![不支持](media/Red_X.png)   |![后向兼容](media/blue_compat.png) |![支持](media/green_check.png) |
+|1607   <br />（也称为周年更新）<br />（*请参见版本*）   |![支持](media/green_check.png) |![支持](media/green_check.png)            |![支持](media/green_check.png) |
+|1703   <br />（也称为创意者更新）<br />（*请参见版本*）      |![不支持](media/Red_X.png)   |![后向兼容](media/blue_compat.png) |![支持](media/green_check.png) |
+|1709   <br />（也称为 Fall Creators Update）<br />（*请参见版本*） |![不支持](media/Red_X.png)   |![不支持](media/Red_X.png)   |![后向兼容](media/blue_compat.png) |
+
 
 
 **版本：**企业版、专业版、教育版、专业教育版   
@@ -62,9 +64,9 @@ ms.lasthandoff: 08/07/2017
 
 |Windows 10 ADK 版本  |Configuration Manager 1610 |Configuration Manager 1702   |Configuration Manager 1706 |
 |--------------------|-----|-----|-----|
-|1511  |![不支持](media/Red_X.png)             |![不支持](media/Red_X.png)              |![不支持](media/Red_X.png)|
 |1607  |![支持](media/green_check.png)           |![后向兼容](media/blue_compat.png) |![不支持](media/Red_X.png)|
 |1703  |![不支持](media/Red_X.png)             |![支持](media/green_check.png)            |![支持](media/green_check.png) |  
+|1709  |![不支持](media/Red_X.png)             |![不支持](media/Red_X.png)              |![支持](media/green_check.png) |  
 
 |项|
 |--|

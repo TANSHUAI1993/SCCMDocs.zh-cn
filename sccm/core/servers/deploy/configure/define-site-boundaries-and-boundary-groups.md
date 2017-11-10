@@ -1,5 +1,6 @@
 ---
-title: "使用边界和边界组 | Microsoft Docs"
+title: "使用边界和边界组"
+titleSuffix: Configuration Manager
 description: "使用边界和边界组为你所管理的设备定义网络位置和可访问的站点系统。"
 ms.custom: na
 ms.date: 3/27/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "10"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 0fea1dece0768a2b7bcd3fcedc2288ea2d52e73d
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 5980b33cef6e7711e09c3199150bf60008d1a73b
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="define-site-boundaries-and-boundary-groups-for-system-center-configuration-manager"></a>为 System Center Configuration Manager 定义站点边界和边界组
 

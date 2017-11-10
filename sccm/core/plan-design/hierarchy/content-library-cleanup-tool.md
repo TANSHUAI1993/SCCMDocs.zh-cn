@@ -1,5 +1,6 @@
 ---
-title: "内容库清理工具 | Microsoft Docs"
+title: "内容库清理工具"
+titleSuffix: Configuration Manager
 description: "使用内容库清理工具删除不再与 System Center Configuration Manager 部署关联的孤立内容。"
 ms.custom: na
 ms.date: 4/7/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "4"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 76e6772bdd5cbd32d525e728f6ebc988b045da78
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: c5bb9c055378c769613de45ffd776bbbdc1d0080
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="the-content-library-cleanup-tool-for-system-center-configuration-manager"></a>适用于 System Center Configuration Manager 的内容库清理工具
 

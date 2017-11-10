@@ -1,5 +1,6 @@
 ---
-title: "客户端管理基础知识 | Microsoft Docs"
+title: "客户端管理基础"
+titleSuffix: Configuration Manager
 description: "了解有关用于管理 System Center Configuration Manager 客户端运行的任务的详细信息。"
 ms.custom: na
 ms.date: 12/30/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "4"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 0fee4f4ba462e59859ac93c4218b67cb26bdd6f6
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: a88be6397e1e2b1f86a517d2c068e1c0cb8a40bc
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="fundamentals-of-client-management-tasks-for-system-center-configuration-manager"></a>System Center Configuration Manager 的客户端管理任务基础
 

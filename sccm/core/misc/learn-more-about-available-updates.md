@@ -1,5 +1,6 @@
 ---
-title: "了解更新 | Microsoft Docs"
+title: "了解更新"
+titleSuffix: Configuration Manager
 ms.custom: na
 ms.date: 10/06/2016
 ms.reviewer: na
@@ -15,11 +16,11 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: noindex,nofollow
-ms.openlocfilehash: c94b0a9ba5694948ff6f14c568e776de20207b01
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: a341e69fc9c79fda4b05414fbedd311ee3117710
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="learn-more-about-available-updates-for-system-center-configuration-manager"></a>了解有关 System Center Configuration Manager 可用更新的详细信息
 

@@ -1,5 +1,6 @@
 ---
-title: "关于升级、更新和安装 | Microsoft Docs"
+title: "关于升级、更新和安装"
+titleSuffix: Configuration Manager
 description: "了解在管理 Configuration Manager 基础结构时，“安装”、“更新”和“升级”三个术语之间的差异。"
 ms.custom: na
 ms.date: 1/11/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 6bd6cd7ea3c41fa1d70e17a1290c9f1f74cc9e37
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: b78f35e60365742ceda9773ae63eae5bb3d5b538
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="about-upgrade-update-and-install-for-site-and-hierarchy-infrastructure"></a>关于站点和层次结构基础结构的升级、更新和安装
 

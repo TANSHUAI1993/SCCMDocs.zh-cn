@@ -1,5 +1,6 @@
 ---
-title: "服务连接工具 | Microsoft Docs"
+title: "服务连接工具"
+titleSuffix: Configuration Manager
 description: "了解该工具使你能够连接到 Configuration Manager 云服务以手动上传使用情况信息。"
 ms.custom: na
 ms.date: 09/06/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "11"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 8039ee0c704bbe570ec3e45ba648f779923087c6
-ms.sourcegitcommit: 2a1328da3facb20b0c78f3b12adbb5fdbe0dcc11
+ms.openlocfilehash: dda4a9b3977d55dbe3e2a0bf746a658eadc788d5
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="use-the-service-connection-tool-for-system-center-configuration-manager"></a>使用适用于 System Center Configuration Manager 的服务连接工具
 

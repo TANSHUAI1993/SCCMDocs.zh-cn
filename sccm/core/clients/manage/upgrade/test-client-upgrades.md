@@ -1,5 +1,6 @@
 ---
-title: "测试客户端升级预生产集合 | Microsoft Docs"
+title: "测试客户端升级预生产集合"
+titleSuffix: Configuration Manager
 description: "在 System Center Configuration Manager 中的预生产集合中测试客户端升级。"
 ms.custom: na
 ms.date: 05/04/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 5b6e60e7c6225e37dd345e99c703505e346cd0a4
-ms.sourcegitcommit: f6a428a8db7145affa388f59e0ad880bdfcf17b5
+ms.openlocfilehash: e301c3df57d3f625157015692374e512e00dfc60
+ms.sourcegitcommit: 1132886e07d0c0a87dcc7eeef4577dd8d8840023
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 11/01/2017
 ---
 # <a name="how-to-test-client-upgrades-in-a-pre-production-collection-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中的预生产集合中测试客户端升级
 
@@ -39,8 +40,10 @@ ms.lasthandoff: 09/14/2017
 3.  将新客户端提升为生产客户端。  
 
 ##  <a name="to-configure-automatic-client-upgrades-to-use-a-pre-production-collection"></a>配置自动客户端升级以使用预生产集合  
+> [!IMPORTANT]
+> 工作组计算机不支持预生产客户端部署。 工作组计算机无法使用分发点需要的身份验证来访问预生产客户端包。  当最新客户端被提升为生产客户端时，它们将收到此客户端。
 
-1. [设置](..\collections\create-collections.md)包含想要向其部署预生产客户端的计算机的集合。 不要在预生产集合中包含工作组计算机。 工作组计算机无法使用分发点需要的身份验证来访问预生产客户端包。   
+1. [设置](..\collections\create-collections.md)包含想要向其部署预生产客户端的计算机的集合。   
 
 1.  在 Configuration Manager 控制台中，打开“管理” > “站点配置” > “站点”，选择“层次结构设置”。  
 

@@ -1,5 +1,6 @@
 ---
-title: "监视客户端 - 结合使用 Windows Analytics 和 Configuration Manager | Microsoft Docs"
+title: "使用 Windows Analytics 监视客户端"
+titleSuffix: Configuration Manager
 description: "Windows Analytics 是在 Operations Management Suite 上运行的一组解决方案，借助这些解决方案，可以利用环境中的设备报告的 Windows 遥测数据获取关于环境当前状态的宝贵见解。"
 ms.custom: na
 ms.date: 07/31/2017
@@ -14,32 +15,32 @@ caps.latest.revision: "23"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: adabe8f475eb12dd44005ec07344e8565be20582
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 4d8c0eef8c85645ceb6f12aaf776ce1b1f82cbdd
+ms.sourcegitcommit: d025a2cbd1ed82f42f67255c97b913f2163b3baf
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="use-windows-analytics-with-configuration-manager"></a>结合使用 Windows Analytics 和 Configuration Manager
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-[Windows Analytics](https://www.microsoft.com/en-us/WindowsForBusiness/windows-analytics) 是在 [Operations Management Suite](/azure/operations-management-suite/operations-management-suite-overview) 上运行的一组解决方案。 通过这些解决方案可以形成对环境当前状态的见解。 环境中的设备报告 Windows 遥测数据。 可通过 [Operations Management Suite Web 门户](https://mms.microsoft.com)中的解决方案访问和分析此数据。 对于[升级就绪情况](/sccm/core/clients/manage/upgrade/upgrade-analytics)，还可通过将升级就绪情况连接到 Configuration Manager，直接在 Configuration Manager 控制台的监视节点中获取此数据。
+[Windows Analytics](https://www.microsoft.com/WindowsForBusiness/windows-analytics) 是在 [Operations Management Suite](/azure/operations-management-suite/operations-management-suite-overview) 上运行的一组解决方案。 通过这些解决方案可以深入了解环境的当前状态。 你环境中的设备可报告 Windows 遥测数据，并可通过 [Operations Management Suite Web 门户](https://mms.microsoft.com)中的解决方案访问和分析此数据。 此外，对于[升级就绪情况](/sccm/core/clients/manage/upgrade/upgrade-analytics)，还可以在 Configuration Manager 控制台的“监视”节点中，通过将“升级就绪情况”连接到 Configuration Manager 直接操作数据。
 
-Windows Analytics 使用的 Windows 遥测数据不会直接传输到 Configuration Manager 站点服务器。 客户端计算机将 Windows 遥测数据发送到遥测服务。 然后，相关数据将传输到组织的其中一个 OMS 工作区中托管的 Windows Analytics 解决方案。 随后 Configuration Manager 可以通过上下文中的链接将你转到 Web 门户中的相关数据，或者直接显示已连接到 Configuration Manager 的解决方案中的数据。 此外，还可以直接从 Operation Management Suite Web 门户查询此数据。
+Windows Analytics 使用的 Windows 遥测数据不会直接传输到 Configuration Manager 站点服务器。 客户端计算机将 Windows 遥测数据发送到遥测服务，然后相关数据被传输到在组织的一个 OMS 工作区中托管的 Windows Analytics 解决方案。 随后 Configuration Manager 可以通过上下文中的链接将你转到 Web 门户中的相关数据，或者直接显示已连接到 Configuration Manager 的解决方案中的数据。 此外，还可以直接从 Operation Management Suite Web 门户查询此数据。
 
 >[!Important]
 >Configuration Manager 站点服务器报告给 Microsoft 的 [Configuration Manager 诊断和使用情况数据](../../plan-design/diagnostics/diagnostics-and-usage-data.md)完全独立于 Windows Analytics 和 Windows 遥测。
 
 ## <a name="configure-clients-to-report-data-to-windows-analytics"></a>将客户端配置为向 Windows Analytics 报告数据
 
-若要使客户端设备向 Windows Analytics 报告数据，设备必须配置与为组织托管 Windows Analytics 数据的 Operations Management Suite 工作区关联的商业 ID 键。 设备还必须配置为报告与特定解决方案或你想要使用的解决方案对应的遥测级别的遥测数据。 
+若要使客户端设备向 Windows Analytics 报告数据，设备必须配置与为组织托管 Windows Analytics 数据的 Operations Management Suite 工作区关联的商用 ID 键。 设备还必须配置为报告与特定解决方案或你想要使用的解决方案对应的遥测级别的遥测数据。 
 
 ### <a name="configure-windows-analytics-client-settings"></a>配置 Windows Analytics 客户端设置
 若要配置 Windows Analytics，请在 Configuration Manager 控制台中选择“管理” > “客户端设置”，双击“创建自定义设备客户端设置”，然后选中“Windows Analytics”。  
 
 然后，导航到“Windows Analytics”设置选项卡，配置以下内容：
-  -  **商用 ID**  
+  -  **商用 ID 键**  
 商用 ID 键可用于将你管理的设备中的信息映射到托管你组织的 Windows Analytics 数据的 OMS 工作区。 如果已配置用于 Upgrade Readiness 的商用 ID 键，请使用此 ID。 如果还没有配置商用 ID 键，请参阅[生成商用 ID 键]( https://technet.microsoft.com/itpro/windows/deploy/upgrade-readiness-get-started#generate-your-commercial-id-key)。
 
   -  **Windows 10 设备的遥测级别**   

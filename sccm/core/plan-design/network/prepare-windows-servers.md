@@ -1,5 +1,6 @@
 ---
-title: "准备 Windows Server | Microsoft Docs"
+title: "准备 Windows Server"
+titleSuffix: Configuration Manager
 description: "确保计算机满足用作 System Center Configuration Manager 的站点服务器或站点系统服务器的先决条件。"
 ms.custom: na
 ms.date: 2/14/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 9b97dedb5d2be0bd2e47260033e6e4361467dc4e
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 77fee006aaf7c55c05fc66106fef1ecfc4d27d08
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="prepare-windows-servers-to-support-system-center-configuration-manager"></a>准备 Windows Server 以支持 System Center Configuration Manager
 

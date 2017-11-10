@@ -1,5 +1,6 @@
 ---
-title: "创建远程连接配置文件 | Microsoft Docs"
+title: "创建远程连接配置文件"
+titleSuffix: Configuration Manager
 description: "使用 System Center Configuration Manager 远程连接配置文件使用户可以远程连接到工作计算机。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: d12faf657ca99dd572f1b28eb398783426fcdf8c
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 8ca0b961f075f41984d6dbba7321c375940a8622
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="remote-connection-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的远程连接配置文件
 

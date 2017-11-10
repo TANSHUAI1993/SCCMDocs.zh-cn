@@ -1,5 +1,6 @@
 ---
-title: "报告最佳实践 | Microsoft Docs"
+title: "报表最佳做法"
+titleSuffix: Configuration Manager
 description: "阅读有关使用 System Center Configuration Manager 的报表功能的一些有用提示。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 759258999f3eaa810803a6a7f856f00fe7771a9e
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: b66e4417658e8a5f25056ed37b5367d57ff72781
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="best-practices-for-reporting-in-system-center-configuration-manager"></a>System Center Configuration Manager 中报告的最佳做法
 

@@ -1,5 +1,6 @@
 ---
-title: "备份站点 | Microsoft 文档"
+title: "备份站点"
+titleSuffix: Configuration Manager
 description: "在 System Center Configuration Manager 中出现故障或数据丢失之前备份站点。"
 ms.custom: na
 ms.date: 6/5/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "22"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 7deb00d4b67eabf3238907b337a9d0367c3d99cc
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 7dae5ada647146713b884b09d0eda1c7ec6531ef
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="back-up-a-configuration-manager-site"></a>备份 Configuration Manager 站点
 

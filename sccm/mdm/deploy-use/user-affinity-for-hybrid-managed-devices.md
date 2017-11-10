@@ -1,5 +1,6 @@
 ---
-title: "Configuration Manager 中混合托管设备的用户关联 | Microsoft Docs"
+title: "混合托管设备的用户关联"
+titleSuffix: Configuration Manager
 description: "配置 Configuration Manager 中托管设备的用户关联。"
 ms.custom: na
 ms.date: 03/05/2017
@@ -11,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b5d520a7-e9e5-40ee-91f9-f2684214beb6
 caps.latest.revision: "6"
-author: mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: d039792a88b9e7704f37718a88f841dd9216d1b1
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: ea496402fa72c3145038701d65af5a72dd9fd3c4
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="user-affinity-for-hybrid-managed-devices-in-configuration-manager"></a>Configuration Manager 中混合托管设备的用户关联
 

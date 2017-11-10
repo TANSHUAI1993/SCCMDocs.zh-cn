@@ -1,5 +1,6 @@
 ---
-title: "PKI 证书要求 | Microsoft Docs"
+title: "PKI 证书要求"
+titleSuffix: Configuration Manager
 description: "查找 System Center Configuration Manager 可能需要的 PKI 证书的要求。"
 ms.custom: na
 ms.date: 04/24/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "17"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: ee4062a97d2653467145c74fe0c42a60186f85a5
-ms.sourcegitcommit: f6a428a8db7145affa388f59e0ad880bdfcf17b5
+ms.openlocfilehash: f5afa9fd9823cfbaa305b4d4e88f89be7004bd60
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="pki-certificate-requirements-for-system-center-configuration-manager"></a>System Center Configuration Manager 的 PKI 证书要求
 

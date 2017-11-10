@@ -1,5 +1,6 @@
 ---
-title: "升级 macOS 客户端 - Configuration Manager | Microsoft Docs"
+title: "升级 macOS 客户端 "
+titleSuffix: Configuration Manager
 description: "在 System Center Configuration Manager 中升级 Mac 计算机上的客户端。"
 ms.custom: na
 ms.date: 04/23/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "10"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 08dff3f2280fef5f15e3c9d584884e4a52ed186d
-ms.sourcegitcommit: f6a428a8db7145affa388f59e0ad880bdfcf17b5
+ms.openlocfilehash: 7ce260a4d93e58e31ec14219c317c793d4b9bb32
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-upgrade-clients-on-mac-computers-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中升级 Mac 计算机的客户端
 

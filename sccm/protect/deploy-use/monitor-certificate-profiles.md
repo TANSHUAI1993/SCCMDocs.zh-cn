@@ -1,5 +1,6 @@
 ---
-title: "监视证书配置文件 | Microsoft Docs"
+title: "监视证书配置文件"
+titleSuffix: Configuration Manager
 description: "了解如何监视 System Center Configuration Manager 证书配置文件的符合性状态。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 84e275fa5b17bc703da22fb686ef9050d17e557f
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: eaefae0c51af91e4419ef15cf02b8250c3d2efd8
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-monitor-certificate-profiles-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中监视证书配置文件
 

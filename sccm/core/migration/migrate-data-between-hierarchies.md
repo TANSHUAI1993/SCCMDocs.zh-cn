@@ -1,5 +1,6 @@
 ---
-title: "迁移数据 | Microsoft Docs"
+title: "迁移数据"
+titleSuffix: Configuration Manager
 description: "了解如何将数据从源层次结构传输到 System Center Configuration Manager 目标层次结构。"
 ms.custom: na
 ms.date: 12/29/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: dface33392c2a2a662522656eabf0936b52b28fc
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: d832e820421784ce33df880463632050741eedd7
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="migrate-data-between-hierarchies-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中层次结构之间迁移数据
 

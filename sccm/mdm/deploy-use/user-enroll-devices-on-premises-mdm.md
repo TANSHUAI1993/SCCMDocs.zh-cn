@@ -1,5 +1,6 @@
 ---
-title: "用户如何向本地 MDM 注册设备 - Configuration Manager | Microsoft Docs"
+title: "用户如何向本地 MDM 注册设备 "
+titleSuffix: Configuration Manager
 description: "了解用户如何在 System Center Configuration Manager 中向本地移动设备管理注册设备。"
 ms.custom: na
 ms.date: 03/05/2017
@@ -12,14 +13,14 @@ ms.topic: get-started-article
 ms.assetid: 59004b34-b64f-4d77-898c-07bf3dc75430
 caps.latest.revision: "9"
 caps.handback.revision: "0"
-author: Mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 8c7438c2cc0bc66654eb3e74de10553df53181d9
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: c63cf121c75d5920e51987236f33707afcc08c6b
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-users-enroll-devices-with-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>用户如何在 System Center Configuration Manager 中向本地移动设备管理注册设备
 
@@ -47,29 +48,29 @@ ms.lasthandoff: 08/07/2017
 
 ##  <a name="bkmk_enrollDesk"></a> 注册 Windows 10 计算机  
 
-1.  在 Windows 10 计算机上，转到“设置” 。  
+1.  在 Windows 10 计算机上，转到“设置”。  
 
-2.  单击“帐户” ，然后单击“工作单位访问” 。  
+2.  单击“帐户”，然后单击“工作单位访问”。  
 
-3.  在“工作单位访问”下的“连接到工作单位或学校” 中，单击“连接” ，输入工作电子邮件地址，然后单击“继续” 。  
+3.  在“工作单位访问”下的“连接到工作单位或学校”中，单击“连接”，输入工作电子邮件地址，然后单击“继续”。  
 
 4.  输入承载注册代理点站点系统角色的服务器的 FQDN，然后单击“继续”。  
 
-5.  在“连接到服务”中，输入你的工作电子邮件密码，然后单击“登录” 。  
+5.  在“连接到服务”中，输入你的工作电子邮件密码，然后单击“登录”。  
 
-6.  单击“跳过”  以记住登录信息，不久过后将连接设备。  
+6.  单击“跳过”以记住登录信息，不久过后将连接设备。  
 
 ##  <a name="bkmk_enrollMob"></a> 注册 Windows 10 移动版设备  
 
-1.  在 Windows 10 移动版设备上，转到“设置” 。  
+1.  在 Windows 10 移动版设备上，转到“设置”。  
 
-2.  单击“帐户” ，然后单击“工作单位访问” 。  
+2.  单击“帐户”，然后单击“工作单位访问”。  
 
-3.  单击“连接” 。  
+3.  单击“连接”。  
 
-4.  输入你的工作电子邮件地址以及承载注册代理点站点系统角色的服务器的 FQDN。 单击“连接” 。  
+4.  输入你的工作电子邮件地址以及承载注册代理点站点系统角色的服务器的 FQDN。 单击“连接”。  
 
-5.  在下一个屏幕上，输入你的工作电子邮件地址和密码，然后单击“登录” 。 不久过后，设备将完成注册。 单击“Done”（完成） 。  
+5.  在下一个屏幕上，输入你的工作电子邮件地址和密码，然后单击“登录”。 不久过后，设备将完成注册。 单击“Done”（完成）。  
 
 ##  <a name="bkmk_verify"></a> 验证设备注册  
  可以在 Configuration Manager 控制台中验证是否已成功注册设备。  

@@ -1,8 +1,9 @@
 ---
-title: "使用 System Center Configuration Manager，通过远程擦除、锁定或密码重置功能保护数据 | Microsoft Docs"
+title: "使用远程擦除、锁定或密码重置保护数据"
+titleSuffix: Configuration Manager
 description: "使用 System Center Configuration Manager，通过完全擦除、选择性擦除、远程锁定或密码重置功能保护设备数据。"
 ms.custom: na
-ms.date: 09/28/2017
+ms.date: 10/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: ea92d7b4656a04f312f04c19cac6b17df931c9c5
-ms.sourcegitcommit: db079cd7322e7d4926b2df0ccb37e752c570d902
+ms.openlocfilehash: 55d49c388b4ea60627f72ffe61796c70de6f9416
+ms.sourcegitcommit: a5f8b5cfdabf0298e4302e24210e725a06a9de82
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 10/30/2017
 ---
 # <a name="protect-data-with-remote-wipe-lock-or-passcode-reset-by-using-system-center-configuration-manager"></a>使用 System Center Configuration Manager，通过远程擦除、锁定或密码重置功能保护数据
 
@@ -39,6 +40,9 @@ System Center Configuration Manager 提供选择性擦除、完全擦除、远�
 如果需要保护遗失设备的安全或者停用正在使用的设备，你可以向设备发出擦除命令。  
 
 向设备发出“完全擦除”  命令以将设备还原为其出厂默认值。 这将删除所有公司及用户数据和设置。 可以在 Windows Phone、iOS、Android 和 Windows 10 上执行完全擦除。  
+
+> [!NOTE]
+> 你只能对公司拥有的设备执行完全擦除。
 
 > [!NOTE]
 > 擦除版本早于 1511，且 RAM 小于 4 GB 的 Windows 10 设备可能会使该设备不响应。 [了解详细信息](https://technet.microsoft.com/library/mt592024.aspx#full-wipe-disables-windows-10-devices-with-less-than-4-gb-ram)。

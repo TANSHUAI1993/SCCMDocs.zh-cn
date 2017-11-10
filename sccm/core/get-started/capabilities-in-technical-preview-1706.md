@@ -1,5 +1,6 @@
 ---
-title: "Technical Preview 1706 | Microsoft 文档"
+title: Technical Preview 1706
+titleSuffix: Configuration Manager
 description: "了解在 System Center Configuration Manager 的 Technical Preview 1706 中的可用功能。"
 ms.custom: na
 ms.date: 09/15/2017
@@ -13,11 +14,11 @@ ms.assetid: ca3b4714-2a16-495e-8a17-1d87991d5556
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 5633047669f9730446159781c4ac0b1248178bf4
-ms.sourcegitcommit: 5ca89204716750eaaceb01bba40b35b85c7122ba
+ms.openlocfilehash: 5849c79acaf943f3a8ebb1bb7f862029f6d50903
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="capabilities-in-technical-preview-1706-for-system-center-configuration-manager"></a>在 System Center Configuration Manager 的 Technical Preview 1706 中的功能
 

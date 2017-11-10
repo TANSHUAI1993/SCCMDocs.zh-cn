@@ -1,5 +1,6 @@
 ---
-title: "定义边界组 | Microsoft Docs"
+title: "定义边界组"
+titleSuffix: Configuration Manager
 description: "了解将客户端链接到 System Center Configuration Manager 中的站点系统的边界组。"
 ms.custom: na
 ms.date: 7/31/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "10"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 5debc6559f4b1c213e8ca513d685941c9e669063
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: b0b2532a525fbf9b7a4942831e6066638b881665
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="configure-boundary-groups-for-system-center-configuration-manager"></a>配置 System Center Configuration Manager 的边界组
 
@@ -60,7 +61,7 @@ ms.lasthandoff: 08/07/2017
 ## <a name="fallback"></a>回退
 若要防止客户端在其当前边界组中找不到可用站点系统时出现问题，请定义用于定义回退行为的边界组之间的关系。 回退允许客户端将搜索范围扩展到附加的边界组，以查找可用的站点系统。
 
-关系在边界组属性“关系”选项卡上配置。 在配置关系时，你将定义指向邻居边界组的链接。 对于受支持的每种类型的站点系统角色，你可以配置独立设置以回退到该邻居边界组。 例如，在配置特定边界组的关系时，你可以设置分发点的回退在 20 分钟后发生而不是默认的 120 分钟。 有关更广泛的示例，请参阅[使用边界组的示例](#example-of-using-boundary-groups)。
+关系在边界组属性“关系”选项卡上配置。在配置关系时，你将定义指向邻居边界组的链接。 对于受支持的每种类型的站点系统角色，你可以配置独立设置以回退到该邻居边界组。 例如，在配置特定边界组的关系时，你可以设置分发点的回退在 20 分钟后发生而不是默认的 120 分钟。 有关更广泛的示例，请参阅[使用边界组的示例](#example-of-using-boundary-groups)。
 
 如果客户端无法在其当前的边界组中查找可用的站点系统角色，客户端将使用以分钟为单位的回退时间以确定多长时间后可以开始搜索与该邻居边界组相关联的可用站点系统。  
 
@@ -78,7 +79,7 @@ ms.lasthandoff: 08/07/2017
 -   不在与层次结构中任何边界组关联的边界上的客户端使用分配站点中的默认站点边界组来识别它们可以使用的有效站点系统角色。
 
 管理默认站点边界组的回退：
-- 你可以转到站点默认边界组的属性并更改“默认行为”选项卡上的值。 将在此处所做的更改应用到*所有*指向此边界组的隐式链接。 在你从另一个边界组配置显式链接到此默认站点边界组时，可以覆盖这些设置。
+- 你可以转到站点默认边界组的属性并更改“默认行为”选项卡上的值。将在此处所做的更改应用到*所有*指向此边界组的隐式链接。 在你从另一个边界组配置显式链接到此默认站点边界组时，可以覆盖这些设置。
 - 你可以转至你创建的边界组属性并更改将转到默认站点边界组的显式链接的值。 为回退或块回退设置以分钟为单位的新的时间时，所做的更改会影响你正在配置的链接。 显式链接的配置会覆盖默认站点边界组“默认行为”选项卡上的配置。
 
 
@@ -355,6 +356,6 @@ ms.lasthandoff: 08/07/2017
 
  1.  在 Configuration Manager 控制台中，单击“管理” > “站点配置” > “站点”，然后在“主页”选项卡上选择“层次结构设置”。  
 
- 2.  在“层次结构设置”的“常规”  选项卡上，选择“客户端首选使用边界组中指定的管理点” 。  
+ 2.  在“层次结构设置”的“常规”选项卡上，选择“客户端首选使用边界组中指定的管理点”。  
 
- 3.  单击“确定”  关闭对话框并保存配置。  
+ 3.  单击“确定”关闭对话框并保存配置。  

@@ -1,5 +1,6 @@
 ---
-title: "部署企业操作系统的方法 | Microsoft Docs"
+title: "部署企业版操作系统的方法"
+titleSuffix: Configuration Manager
 description: "了解可用于在 System Center Configuration Manager 环境中部署企业操作系统的方法。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "6"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 6cec9275009ac19ad65a03792c1bc4d0c528ea4c
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: eeb5014f4ca32986e603bb6615187a582ef7bf8f
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="methods-to-deploy-enterprise-operating-systems-using-system-center-configuration-manager"></a>使用 System Center Configuration Manager 部署企业版操作系统的方法
 

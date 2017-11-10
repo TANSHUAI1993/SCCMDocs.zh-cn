@@ -1,5 +1,6 @@
 ---
-title: "Technical Preview 1701 Configuration Manager 中的功能"
+title: "Technical Preview 1701 中的功能"
+titleSuffix: Configuration Manager
 description: "了解 System Center Configuration Manager Technical Preview（版本 1701）中的可用功能。"
 ms.custom: na
 ms.date: 01/23/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: b330c97a0853d1673f1cf7e0691891b72407fa51
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 56c2ceea56eec984715d61f8d195c1b47fd3c571
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="capabilities-in-technical-preview-1701-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1701 中的功能
 
@@ -98,7 +99,7 @@ ms.lasthandoff: 08/07/2017
 
 ### <a name="try-it-out"></a>试试看
 
-- **在管理点上启用本地设备运行状况证明**<br>  在 Configuration Manager 控制台中，导航到管理点，打开“管理点组件属性”，然后单击“高级选项”选项卡。 单击“添加”，然后为“本地设备运行状况证明服务 URL”指定本地 URL（例如 https://10.10.10.10）。
+- **在管理点上启用本地设备运行状况证明**<br>  在 Configuration Manager 控制台中，导航到管理点，打开“管理点组件属性”，然后单击“高级选项”选项卡。单击“添加”，然后为“本地设备运行状况证明服务 URL”指定本地 URL（例如 https://10.10.10.10）。
 - **为客户端代理启用本地管理点运行状况证明报告**<br>在 Configuration Manager 控制台中，选择“管理” > “客户端设置”，然后双击或创建新的“自定义设备设置”。 选择“计算机代理”，然后将“使用本地运行状况证明服务”设为“是”。 如果将“启用与设备运行状况证明服务的通信”设为“是”，并将“使用本地运行状况证明”设为“否”，则管理点将使用基于云的设备运行状况证明服务。
 
 ## <a name="use-the-oms-connector-for-microsoft-azure-government-cloud"></a>将 OMS 连接器用于 Microsoft Azure 政府云

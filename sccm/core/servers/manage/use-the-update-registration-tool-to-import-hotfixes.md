@@ -1,5 +1,6 @@
 ---
-title: "更新注册工具 | Microsoft Docs"
+title: "更新注册工具"
+titleSuffix: Configuration Manager
 description: "了解何时以及如何使用更新注册工具来手动将更新导入 Configuration Manager 控制台。"
 ms.custom: na
 ms.date: 3/27/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "8"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 35a4c201f73469fdfaa5bb8629e91886f7ae8751
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 2f63fba399a9d53376667056bb4032d92d6a6cd6
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="use-the-update-registration-tool-to-import-hotfixes-to-system-center-configuration-manager"></a>使用更新注册工具将修补程序导入 System Center Configuration Manager
 

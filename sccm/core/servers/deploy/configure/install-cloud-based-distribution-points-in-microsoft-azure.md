@@ -1,5 +1,6 @@
 ---
-title: "安装基于云的分发点 | Microsoft Docs"
+title: "安装基于云的分发点"
+titleSuffix: Configuration Manager
 description: "了解在 Microsoft Azure 中，开始使用基于云的分发点需要执行的操作。"
 ms.custom: na
 ms.date: 2/8/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "7"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 39b35cccf78bba4e69a7de0ca3a5a8dc516201e3
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 3ce4e78fd49ab328e6d9037e429885e9770c9738
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="install-cloud-based-distribution-points-in-microsoft-azure-for-system-center-configuration-manager"></a>在 Microsoft Azure 中安装 System Center Configuration Manager 基于云的分发点
 
@@ -79,7 +80,7 @@ ms.lasthandoff: 08/07/2017
     -   对于“证书文件”，请指定 .pfx 文件（其中包含已导出的 Configuration Manager 基于云的分发点服务）。 然后输入密码。  
 
         > [!NOTE]  
-        >  将在“服务 FQDN”框中自动填写证书使用者名称。 多数情况下，无需编辑该名称。 在测试环境中使用通配证书的情况除外。 例如，该情况下可能未指定主机名，因此具有相同 DNS 后缀的多台计算机均可使用该证书。 此情况下，证书使用者具有类似于 **CN=\*.contoso.com** 的值，并且 Configuration Manager 将显示消息指示必须指定正确的 FQDN。 单击“确定”  关闭消息，然后在 DNS 后缀前输入特定名称以提供完整的 FQDN。 例如，可以添加 **clouddp1** 以指定 **clouddp1.contoso.com**的完整服务 FQDN。 域中的服务 FQDN 必须唯一，且与所有加入域的设备均不匹配。  
+        >  将在“服务 FQDN”框中自动填写证书使用者名称。 多数情况下，无需编辑该名称。 在测试环境中使用通配证书的情况除外。 例如，该情况下可能未指定主机名，因此具有相同 DNS 后缀的多台计算机均可使用该证书。 此情况下，证书使用者具有类似于 **CN=\*.contoso.com** 的值，并且 Configuration Manager 将显示消息指示必须指定正确的 FQDN。 单击“确定”  关闭消息，然后在 DNS 后缀前输入特定名称以提供完整的 FQDN。 例如，可以添加 **clouddp1** 以指定 **clouddp1.contoso.com**的完整服务 FQDN。域中的服务 FQDN 必须唯一，且与所有加入域的设备均不匹配。  
         >   
         >  仅支持在测试环境中使用通配证书。  
 

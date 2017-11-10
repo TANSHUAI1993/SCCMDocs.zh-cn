@@ -1,8 +1,9 @@
 ---
-title: "支持的 SQL Server 版本 | Microsoft Docs"
+title: "支持的 SQL Server 版本"
+titleSuffix: Configuration Manager
 description: "获取托管 System Center Configuration Manager 站点数据库的 SQL Server 版本和配置要求。"
 ms.custom: na
-ms.date: 09/21/2017
+ms.date: 10/10/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +15,11 @@ caps.latest.revision: "21"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 0e6613873c09b5e5df4f25ce0dbc16c289ccbd41
-ms.sourcegitcommit: b13fa2885acaa21f16c48df789f1edacb5a4f7cc
+ms.openlocfilehash: 740a37478b4159fb9dcbfd9eaceeeaa307edd745
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="supported-sql-server-versions-for-system-center-configuration-manager"></a>System Center Configuration Manager 支持的 SQL Server 版本
 
@@ -103,6 +104,12 @@ SQL Server 事务复制仅支持将对象复制到配置为使用[数据库副�
 -   主站点  
 -   辅助站点
 
+### <a name="sql-server-2012-sp4-standard-enterprise"></a>SQL Server 2012 SP4：标准版、企业版  
+ 可将此版本的 SQL Server 与以下产品的非最低累计更新版本一起使用：  
+
+-   管理中心站点  
+-   主站点  
+-   辅助站点  
 
 ### <a name="sql-server-2012-sp3-standard-enterprise"></a>SQL Server 2012 SP3：标准版、企业版  
  可将此版本的 SQL Server 与以下产品的非最低累计更新版本一起使用：  

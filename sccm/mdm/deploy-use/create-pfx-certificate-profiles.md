@@ -1,5 +1,6 @@
 ---
-title: "使用证书颁发机构创建 PFX 证书配置文件 | Microsoft Docs"
+title: "使用证书颁发机构创建 PFX 证书配置文件"
+titleSuffix: Configuration Manager
 description: "了解如何使用 System Center Configuration Manager 中的 PFX 文件生成支持加密数据交换的用户特定证书。"
 ms.custom: na
 ms.date: 04/04/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.openlocfilehash: 43d8b2217763681be69711fce93c020a65da1cd8
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 26bbe68fb593404d59389de223212511e6b44ed5
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-create-pfx-certificate-profiles-using-a-certificate-authority"></a>如何使用证书颁发机构创建 PFX 证书配置文件
 

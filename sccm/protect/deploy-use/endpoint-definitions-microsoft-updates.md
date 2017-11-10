@@ -1,5 +1,6 @@
 ---
-title: "网络共享中的 Endpoint Protection 恶意软件定义 | Microsoft Docs"
+title: "网络共享中的 Endpoint Protection 恶意软件定义"
+titleSuffix: Configuration Manager
 description: "了解如何可以实现从 Microsoft 更新为 Configuration Manager 下载 Endpoint Protection 的恶意软件定义。"
 ms.custom: na
 ms.date: 02/14/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "21"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.openlocfilehash: 58c468fc3d4427cc1f2a8f197ab784a767151203
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: af84a6da08407955f7e086038151c645956844e5
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="enable-endpoint-protection-malware-definitions-to-download-from-microsoft-updates-for-configuration-manager"></a>实现从 Microsoft 更新为 Configuration Manager 下载 Endpoint Protection 恶意软件定义
 

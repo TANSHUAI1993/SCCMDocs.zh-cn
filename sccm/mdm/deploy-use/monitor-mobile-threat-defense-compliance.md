@@ -1,5 +1,6 @@
 ---
-title: "监视移动威胁防御符合性 | System Center Configuration Manager"
+title: "监视移动威胁防御符合性"
+titleSuffix: Configuration Manager
 description: "监视来自 Configuration Manager 管理器控制台的移动威胁防御合作伙伴符合性状态"
 ms.custom: na
 ms.date: 03/21/2017
@@ -14,11 +15,11 @@ caps.latest.revision:
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 8edf83a0f761dfc16274ce49c3aa2b878c7fe6cd
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 33c2d3c05020d0c06344bfe6bb67a35f7d75e51d
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="monitor-mobile-threat-defense-compliance"></a>**监视移动威胁防御符合性**
 

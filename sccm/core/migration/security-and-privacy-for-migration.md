@@ -1,5 +1,6 @@
 ---
-title: "迁移安全和隐私 | Microsoft Docs"
+title: "迁移安全和隐私"
+titleSuffix: Configuration Manager
 description: "获取到 System Center Configuration Manager 环境的迁移的安全最佳方案和隐私信息。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 8aa6971d75924ab5bcacd70c330913097ecf8717
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: e068cc0055a1f65ad0fe53be08bb996831d9a288
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="security-and-privacy-for-migration-to-system-center-configuration-manager"></a>有关迁移到 System Center Configuration Manager 的安全性和隐私
 

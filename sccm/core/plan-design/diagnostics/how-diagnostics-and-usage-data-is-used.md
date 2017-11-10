@@ -1,5 +1,6 @@
 ---
-title: "诊断数据的使用 | Microsoft Docs"
+title: "使用诊断数据"
+titleSuffix: Configuration Manager
 description: "了解 Microsoft 如何使用 System Center Configuration Manager 收集的诊断和使用情况数据。"
 ms.custom: na
 ms.date: 12/29/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "5"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 9864f6ba7b9a2211c99b1a5d9ebd582e01ccfeb6
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: e6395421e88baf822bc0a8971119b6fe360e6680
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-diagnostics-and-usage-data-is-used-for-system-center-configuration-manager"></a>如何将诊断和使用情况数据用于 System Center Configuration Manager
 

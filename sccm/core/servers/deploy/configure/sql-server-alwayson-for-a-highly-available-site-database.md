@@ -1,5 +1,6 @@
 ---
-title: "SQL Server AlwaysOn | Microsoft 文档"
+title: SQL Server AlwaysOn
+titleSuffix: Configuration Manager
 description: "计划将 SQL Server AlwaysOn 可用性组与 SCCM 配合使用。"
 ms.custom: na
 ms.date: 09/22/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "16"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 3e275f6203a9e0b9210bfbadbf9addf64f6533d8
-ms.sourcegitcommit: 8faf42135a8dc9c384407e64f3f8ba204fb15847
+ms.openlocfilehash: 24eaa33f1f9b333894817f089149e2cbed35df75
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>准备将 SQL Server AlwaysOn 可用性组与 Configuration Manager 配合使用
 
@@ -75,7 +76,7 @@ Configuration Manager 支持在以下位置使用可用性组：
 -   对于 1706 之前的版本，最多可以有两个同步次要副本。
 -   从版本 1706 开始，可以在可用性组中使用与所用 SQL Server 版本支持的数量和类型相同的副本。
 
-    可以使用异步提交副本来恢复同步副本。 请参阅备份和恢复主题中的[站点数据库恢复选项]( /sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption)，了解有关如何实现此操作的信息。
+-   从版本 1706 开始，可以使用异步提交副本来恢复同步副本。 请参阅备份和恢复主题中的[站点数据库恢复选项]( /sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption)，了解有关如何实现此操作的信息。
     > [!CAUTION]  
     > Configuration Manager 不支持故障转移后使用异步提交副本作为站点数据库。
 由于 Configuration Manager 不会验证异步提交副本的状态来确认它是否为最新，而[此类副本设计可以为不同步]( https://msdn.microsoft.com/library/ff877884(SQL.120).aspx(d=robot)#Availability%20Modes)，因此，使用异步提交副本作为站点数据库可能会危及站点和数据的完整性。

@@ -1,5 +1,6 @@
 ---
-title: "使用 System Center Configuration Manager 管理 Intune 订阅 | Microsoft Docs"
+title: "管理 Intune 订阅"
+titleSuffix: Configuration Manager
 description: "使用 System Center Configuration Manager 管理 Intune 订阅。"
 ms.custom: na
 ms.date: 06/02/2017
@@ -12,14 +13,14 @@ ms.topic: article
 ms.assetid: 9b494767-68c1-47b1-9a86-591bff0ad491
 caps.latest.revision: "18"
 caps.handback.revision: "0"
-author: mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 2cb4d724c8b78657458a30c0bb020f67c6b62795
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: a6bb27adeddc366526df699b69e95c6e7d6482ae
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="manage-an-intune-subscription-associated-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 管理 Intune 订阅
 

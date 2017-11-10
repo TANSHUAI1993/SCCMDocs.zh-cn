@@ -1,5 +1,6 @@
 ---
-title: "对 Windows 功能的支持 | Microsoft Docs"
+title: "对 Windows 功能的支持"
+titleSuffix: Configuration Manager
 description: "了解 System Center Configuration Manager 支持的 Windows 和网络功能。"
 ms.custom: na
 ms.date: 8/24/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: be9b7e84fecfa7a07c411c3d46168e5485e0dfab
-ms.sourcegitcommit: 974fbc4408028c8be28911e5cd646efcf47c7f15
+ms.openlocfilehash: 8688b4ed3b29bf380510ada475988dfe7cbc45b8
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="support-for-windows-features-and-networks-in-system-center-configuration-manager"></a>对 System Center Configuration Manager 中的 Windows 功能和网络的支持
 

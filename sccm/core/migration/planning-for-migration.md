@@ -1,5 +1,6 @@
 ---
-title: "规划迁移 | Microsoft Docs"
+title: "迁移计划"
+titleSuffix: Configuration Manager
 description: "将数据迁移到 System Center Configuration Manager 目标层次结构之前，了解有关站点和层次结构的信息。"
 ms.custom: na
 ms.date: 1/12/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: fffef1e95e1dfa03971f140a6e5a7fff9bfe5e27
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: b5162cfb8154ec23593533900a91da42239e3516
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="plan-for-migration-to-system-center-configuration-manager"></a>规划向 System Center Configuration Manager 的迁移
 

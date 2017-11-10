@@ -1,5 +1,6 @@
 ---
-title: "维护任务参考 | Microsoft Docs"
+title: "维护任务参考"
+titleSuffix: Configuration Manager
 description: "阅读每个 System Center Configuration Manager 站点维护任务的详细信息，以及是否默认启用这些任务。"
 ms.custom: na
 ms.date: 3/8/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: a2d4420c2274a9b1ceb47ffd267849fdb5a55a61
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 6cff26b689b3fb1139d235295530faa9d30f9bf6
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="reference-for-maintenance-tasks-for-system-center-configuration-manager"></a>System Center Configuration Manager 维护任务参考
 
@@ -297,7 +298,7 @@ ms.lasthandoff: 08/07/2017
 
 **更新应用程序的可用目标**：使用此任务使 Configuration Manager 重新计算将策略和应用程序部署到集合中的资源的映射。 将策略或应用程序部署到集合时，Configuration Manager 将在部署的对象和集合成员之间创建初始映射。
 
-这些映射存储在表中供快速引用。 当集合成员身份更改时，将更新这些存储的映射以反映这些更改。 但是，这些映射有可能未能同步。 例如，如果站点无法正确处理一个通知文件，那么在对映射的更改中可能无法反映此更改。 此任务可以基于当前的集合成员身份刷新映射。  
+这些映射存储在表中供快速引用。 当集合成员身份更改时，将更新这些存储的映射以反映这些更改。 但是，这些映射有可能未能同步。例如，如果站点无法正确处理一个通知文件，那么在对映射的更改中可能无法反映此更改。 此任务可以基于当前的集合成员身份刷新映射。  
 
 -   管理中心站点：不可用    
 -   **主站点**：已启用    

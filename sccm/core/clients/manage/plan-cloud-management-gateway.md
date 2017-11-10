@@ -1,5 +1,6 @@
 ---
-title: "规划云管理网关 | Microsoft Docs"
+title: "规划云管理网关"
+titleSuffix: Configuration Manager
 description: 
 ms.date: 10/06/2017
 ms.prod: configuration-manager
@@ -8,11 +9,11 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: c3d036eb91d16ed95c26bbf2bcce1e37851f90a2
-ms.sourcegitcommit: 8ac9c2c9ba1fdcbb7cc8d5be898586865fcf67c0
+ms.openlocfilehash: ffe7b2aa025b20d5b1d1a718e0eaa045817a66ee
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>在 Configuration Manager 中规划云管理网关
 

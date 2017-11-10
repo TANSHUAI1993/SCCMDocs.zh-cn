@@ -1,5 +1,6 @@
 ---
-title: "部署 Windows 客户端 | Microsoft Docs"
+title: "部署 Windows 客户端"
+titleSuffix: Configuration Manager
 description: "了解如何在 System Center Configuration Manager 中将客户端部署到 Windows 计算机。"
 ms.custom: na
 ms.date: 08/20/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: f03102c170e1e7de3a11349f4a66380c4291dcac
-ms.sourcegitcommit: f6a428a8db7145affa388f59e0ad880bdfcf17b5
+ms.openlocfilehash: 31b8ffc12c483f5c10063a305101de5ca98cbd8b
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-deploy-clients-to-windows-computers-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中部署客户端到 Windows 计算机
 

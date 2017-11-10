@@ -1,5 +1,6 @@
 ---
-title: "Endpoint Protection 恶意软件定义 | Microsoft Docs"
+title: "Endpoint Protection 恶意软件定义"
+titleSuffix: Configuration Manager
 description: "了解如何配置 Configuration Manager 软件更新以将定义更新交付到客户端计算机。"
 ms.custom: na
 ms.date: 10/06/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "21"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.openlocfilehash: d2c29ea4c2b49142c6e63e2b5e829271098eac70
-ms.sourcegitcommit: 8ac9c2c9ba1fdcbb7cc8d5be898586865fcf67c0
+ms.openlocfilehash: cf488babe28267c2438e03fa94c514c872f960c7
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 #  <a name="using-configuration-manager-software-updates-to-deliver-definition-updates"></a>使用 Configuration Manager 软件更新将定义更新交付
 

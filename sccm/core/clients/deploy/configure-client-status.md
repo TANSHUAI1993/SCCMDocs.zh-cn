@@ -1,5 +1,6 @@
 ---
-title: "配置客户端状态 | Microsoft Docs"
+title: "配置客户端状态"
+titleSuffix: Configuration Manager
 description: "在 System Center Configuration Manager 中选择客户端状态设置。"
 ms.custom: na
 ms.date: 04/23/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: fc898bf2433ab99eb0da9c60bd0e890bba97a415
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 5db52925515e65797a43ed35775460369f742f49
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-configure-client-status-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中配置客户端状态
 

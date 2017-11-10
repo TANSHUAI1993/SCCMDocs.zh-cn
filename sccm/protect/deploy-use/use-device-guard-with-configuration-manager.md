@@ -1,5 +1,6 @@
 ---
-title: "如何管理 Windows Device Guard | Microsoft Docs"
+title: "如何管理 Windows Device Guard"
+titleSuffix: Configuration Manager
 description: "了解如何使用 System Center Configuration Manager 管理 Windows Device Guard。"
 ms.custom: na
 ms.date: 07/31/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 4555f7a9a6b5efd0fa01e9a101ea16bae7685117
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: db96f69ed0330447bf473fbef86b5f02462a679c
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="device-guard-management-with-configuration-manager"></a>使用 Configuration Manager 进行的 Device Guard 管理
 

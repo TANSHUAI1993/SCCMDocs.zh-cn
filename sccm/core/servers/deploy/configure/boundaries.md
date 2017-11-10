@@ -1,5 +1,6 @@
 ---
-title: "定义边界 | Microsoft Docs"
+title: "定义边界"
+titleSuffix: Configuration Manager
 description: "了解如何在 Intranet 上定义可包含你要管理的设备的网络位置。"
 ms.custom: na
 ms.date: 3/27/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "10"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: bed70809008fde5e2b0215f4dce049402edf83ba
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: fda54ad44a037a7b7952f6339c33625759a79e17
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="define-network-locations-as-boundaries-for-system-center-configuration-manager"></a>将网络位置定义为 System Center Configuration Manager 的边界
 

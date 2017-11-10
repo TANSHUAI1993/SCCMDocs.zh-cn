@@ -1,5 +1,6 @@
 ---
-title: "集合先决条件 | Microsoft Docs"
+title: "集合先决条件"
+titleSuffix: Configuration Manager
 description: "在 System Center Configuration Manager 中获取使用集合的先决条件。"
 ms.custom: na
 ms.date: 2/22/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 41fc3eb20a7441939eb0dc80bc121c8f3ea322b2
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 5696a4cc81d8be889f6040a2f9610e1aec17d271
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="prerequisites-for-collections-in-system-center-configuration-manager"></a>System Center Configuration Manager 中集合的先决条件
 

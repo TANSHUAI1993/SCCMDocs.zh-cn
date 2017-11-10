@@ -1,5 +1,6 @@
 ---
-title: "Technical Preview 1511 Configuration Manager 中的功能"
+title: "Technical Preview 1511 中的功能"
+titleSuffix: Configuration Manager
 description: "了解 System Center Configuration Manager Technical Preview 1511 版中的可用功能。"
 ms.custom: na
 ms.date: 01/23/2017
@@ -15,11 +16,11 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: noindex,nofollow
-ms.openlocfilehash: d0bde2c085cc9b330bc772e68081d629ca9e2f11
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: e5b841bd1b84fc20263b6a47bf7c056bf63f956a
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="capabilities-in-technical-preview-1511-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1511 版中的功能
 

@@ -1,5 +1,6 @@
 ---
-title: "部署 Lookout for Work 应用 | Microsoft Docs"
+title: "为工作应用部署 Lookout"
+titleSuffix: Configuration Manager
 description: "配置和部署 Lookout for Work 应用。"
 ms.custom: na
 ms.date: 03/05/2017
@@ -11,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3f62b763-4347-453d-b0a7-1f4a0d1d4105
 caps.latest.revision: 
-author: mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 59f43c922d1d3bc64625733014b0def1e42c4d2d
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 02da89a5df37f328c387aa453f532e82b5153f87
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="configure-and-deploy-lookout-for-work-apps"></a>配置和部署 Lookout for Work 应用
 

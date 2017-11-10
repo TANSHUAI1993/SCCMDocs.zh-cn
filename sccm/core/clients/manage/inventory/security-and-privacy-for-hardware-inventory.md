@@ -1,5 +1,6 @@
 ---
-title: "硬件清单安全和隐私 | Microsoft Docs"
+title: "硬件清单安全和隐私"
+titleSuffix: Configuration Manager
 description: "获取 System Center Configuration Manager 中硬件清单的安全和隐私信息。"
 ms.custom: na
 ms.date: 2/22/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "6"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: ec182ec3102e0f4ae8bcf3d1ef843b25510b6ce6
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: d08bae2cceada5393e58bf8ad2e4a603277f5dfc
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="security-and-privacy-for-hardware-inventory-in-system-center-configuration-manager"></a>System Center Configuration Manager 中硬件清单的安全和隐私
 

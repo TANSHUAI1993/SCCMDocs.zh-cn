@@ -1,5 +1,6 @@
 ---
-title: "规划站点系统角色 | Microsoft Docs"
+title: "规划站点系统角色"
+titleSuffix: Configuration Manager
 description: "在规划 System Center Configuration Manager 层次结构时，请考虑站点系统服务器和站点系统角色。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -14,11 +15,11 @@ caps.latest.revision: "11"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 0a3704a2d3b75ed7e0a7f718b681448ab6fc078d
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 1c8a0667bc9848ee86c170161d21ac2f14d9f588
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="plan-for-site-system-servers-and-site-system-roles-for-system-center-configuration-manager"></a>为 System Center Configuration Manager 规划站点系统服务器和站点系统角色
 

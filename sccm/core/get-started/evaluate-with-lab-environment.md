@@ -1,5 +1,6 @@
 ---
-title: "评估 Configuration Manager | Microsoft Docs"
+title: "在实验室环境中评估"
+titleSuffix: Configuration Manager
 description: "创建实验室环境来评估 System Center Configuration Manager 在组织中的使用情况。"
 ms.custom: na
 ms.date: 2/28/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: d7ea785ab1beee09b9adda735a87f89bc9481620
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 8649f6686adad908b7806d22983aaf20171609ba
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="evaluate-system-center-configuration-manager-by-building-your-own-lab-environment"></a>通过构建你自己的实验室环境来评估 System Center Configuration Manager
 

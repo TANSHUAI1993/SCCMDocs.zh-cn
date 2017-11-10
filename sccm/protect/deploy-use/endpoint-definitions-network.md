@@ -1,5 +1,6 @@
 ---
-title: "网络共享中的 Endpoint Protection 恶意软件定义 | Microsoft Docs"
+title: "网络共享中的 Endpoint Protection 恶意软件定义"
+titleSuffix: Configuration Manager
 description: "了解如何从 Microsoft 手动下载最新定义更新，然后将客户端配置为下载这些定义。"
 ms.custom: na
 ms.date: 02/14/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "21"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.openlocfilehash: 110bd9a9d04b27ef6794145fae66dbd910308bdc
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 3487238d7fdcd6e152bd5f578b20fb3fb5690978
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="enable-endpoint-protection-malware-definitions-to-download-from-a-network-share-for-configuration-manager"></a>启用 Endpoint Protection 恶意软件定义，以便从网络共享为 Configuration Manager 下载定义
 
@@ -33,21 +34,21 @@ ms.lasthandoff: 08/07/2017
 
 ## <a name="to-configure-definition-downloads-from-a-file-share"></a>若要从文件共享配置定义下载
 
-1.  在 Configuration Manager 控制台中，单击“资产和符合性” 。
+1.  在 Configuration Manager 控制台中，单击“资产和符合性”。
 
-2.  在“资产和符合性”  工作区中，展开“Endpoint Protection” ，然后单击“反恶意软件策略” 。
+2.  在“资产和符合性”工作区中，展开“Endpoint Protection”，然后单击“反恶意软件策略”。
 
-3.  打开“默认反恶意软件策略”  的属性页，或创建新的反恶意软件策略。 有关如何创建反恶意软件策略的详细信息，请参阅[如何在 System Center Configuration Manager 中为 Endpoint Protection 创建和部署反恶意软件策略](endpoint-antimalware-policies.md)。
+3.  打开“默认反恶意软件策略”的属性页，或创建新的反恶意软件策略。 有关如何创建反恶意软件策略的详细信息，请参阅[如何在 System Center Configuration Manager 中为 Endpoint Protection 创建和部署反恶意软件策略](endpoint-antimalware-policies.md)。
 
-4.  在反恶意软件属性对话框的“定义更新”  部分中，单击“设置源” 。
+4.  在反恶意软件属性对话框的“定义更新”部分中，单击“设置源”。
 
-5.  在“配置定义更新源”  对话框中，选择“来自 UNC 文件共享的更新” 。
+5.  在“配置定义更新源”对话框中，选择“来自 UNC 文件共享的更新”。
 
-6.  单击“确定”  以关闭“配置定义更新源”  对话框。
+6.  单击“确定”以关闭“配置定义更新源”对话框。
 
-7.  单击“设置路径” 。 然后，在“配置定义更新 UNC 路径”  对话框中，添加一个或多个指向网络共享上定义更新文件位置的 UNC 路径。
+7.  单击“设置路径”。 然后，在“配置定义更新 UNC 路径”对话框中，添加一个或多个指向网络共享上定义更新文件位置的 UNC 路径。
 
-8.  单击“确定”  以关闭“配置定义更新 UNC 路径”  对话框。
+8.  单击“确定”以关闭“配置定义更新 UNC 路径”对话框。
 
 
 > [!div class="button"]

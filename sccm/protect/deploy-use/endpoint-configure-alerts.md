@@ -1,5 +1,6 @@
 ---
-title: "配置 Endpoint Protection 警报 | Microsoft Docs"
+title: "配置 Endpoint Protection 警报"
+titleSuffix: Configuration Manager
 description: "了解如何在 System Center Configuration Manager 中配置 Endpoint Protection 警报。"
 ms.custom: na
 ms.date: 03/23/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "21"
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.openlocfilehash: 7f4329b289b606dee5bf31aad8207de52667229f
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 91df245565cfe99f79a18618d62c00f0cea579d2
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 #  <a name="configure-alerts-for-endpoint-protection-in-configuration-manager"></a>在 Configuration Manager 中为 Endpoint Protection 配置警报
 
@@ -90,7 +91,7 @@ ms.lasthandoff: 08/07/2017
 
 ## <a name="alert-for-outdated-malware-client"></a>过时的恶意软件客户端的警报
 
-从 Configuration Manager 版本 1702 开始，可以配置警报，以确保 Endpoint Protection 客户端不会过时。 现在，可通过转到“资产和符合性” > “概述” > “设备” > “所有桌面和服务器客户端”来查看“反恶意软件客户端版本”和“Endpoint Protection 部署状态”。 若要查看警报，请在“监视”工作区中查看“警报”。 如果超过 20% 托管客户端运行反恶意软件的过期版本，将显示“反恶意软件客户端版本已过期”警报。 此警报不会出现在“监视” > “概述”选项卡中。 若要更新过期的反恶意软件客户端，可启用反恶意软件客户端的软件更新。
+从 Configuration Manager 版本 1702 开始，可以配置警报，以确保 Endpoint Protection 客户端不会过时。 现在，可通过转到“资产和符合性” > “概述” > “设备” > “所有桌面和服务器客户端”来查看“反恶意软件客户端版本”和“Endpoint Protection 部署状态”。 若要查看警报，请在“监视”工作区中查看“警报”。 如果超过 20% 托管客户端运行反恶意软件的过期版本，将显示“反恶意软件客户端版本已过期”警报。 此警报不会出现在“监视” > “概述”选项卡中。若要更新过期的反恶意软件客户端，可启用反恶意软件客户端的软件更新。
 
 若要配置生成警报的百分比，请展开“监视” > “警报” > “所有警报”，双击“反恶意软件客户端已过期”，然后修改“如果具有过期版本的反恶意软件客户端的托管客户端百分比超过以下值，发出警报”选项。
 

@@ -1,5 +1,6 @@
 ---
-title: "安装控制台 | Microsoft Docs"
+title: "安装控制台"
+titleSuffix: Configuration Manager
 description: "阅读安装 Configuration Manager 控制台以连接到管理中心站点或主站点的信息。"
 ms.custom: na
 ms.date: 1/3/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "3"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 88ecbc48fd03ce988f04408d0378844cbed1de2b
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: f367f94f809863403ed562a65cf44f21de698005
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="install-the-system-center-configuration-manager-console"></a>安装 System Center Configuration Manager 控制台
 

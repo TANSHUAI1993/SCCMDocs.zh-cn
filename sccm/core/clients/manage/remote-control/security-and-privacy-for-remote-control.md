@@ -1,5 +1,6 @@
 ---
-title: "远程控制安全和隐私 | Microsoft Docs"
+title: "远程控制安全和隐私"
+titleSuffix: Configuration Manager
 description: "获取 System Center Configuration Manager 中远程控制的安全和隐私信息。"
 ms.custom: na
 ms.date: 04/23/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: d2f12805017517db803bc7d1942aa1ea2d752ec7
-ms.sourcegitcommit: f6a428a8db7145affa388f59e0ad880bdfcf17b5
+ms.openlocfilehash: 4923aee0e55f42f679c6f17ea0fd760c1909f9ef
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="security-and-privacy-for-remote-control-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的远程控制的安全和隐私
 

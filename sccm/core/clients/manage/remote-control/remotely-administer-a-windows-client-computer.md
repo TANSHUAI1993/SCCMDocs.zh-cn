@@ -1,5 +1,6 @@
 ---
-title: "远程管理 Windows 计算机 | Microsoft Docs"
+title: "远程管理 Windows 计算机"
+titleSuffix: Configuration Manager
 description: "使用 System Center Configuration Manager 管理远程 Windows 客户端计算机。"
 ms.custom: na
 ms.date: 07/27/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 9ce5adccb9944daa4fb2b0ab132fc7cf52bd7b1b
-ms.sourcegitcommit: f6a428a8db7145affa388f59e0ad880bdfcf17b5
+ms.openlocfilehash: 7cce5f2deab7ec6f5c16628dc53e4d1cb5507f37
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-remotely-administer-a-windows-client-computer-by-using-system-center-configuration-manager"></a>如何使用 System Center Configuration Manager 远程管理 Windows 客户端计算机
 

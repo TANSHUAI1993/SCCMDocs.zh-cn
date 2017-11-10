@@ -1,5 +1,6 @@
 ---
-title: "迁移内容 | Microsoft Docs"
+title: "迁移内容"
+titleSuffix: Configuration Manager
 description: "将数据迁移到 System Center Configuration Manager 目标层次结构中时，使用分发点来管理内容。"
 ms.custom: na
 ms.date: 12/30/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 25619d91522193178e0415f649ca4b34c94ecc89
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 09e4fd0237d16cdaa25ba3c26a8661bd14fd6692
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="plan-a-content-deployment-migration-strategy-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中规划内容部署迁移策略
 
@@ -113,7 +114,7 @@ Configuration Manager 将内容转换为单实例存储后，Configuration Manag
 > [!WARNING]  
 >  在升级分支分发点之前，请卸载 Configuration Manager 2007 客户端软件。 在升级安装了 Configuration Manager 2007 客户端软件的分支分发点时，将从计算机中删除以前部署到计算机的内容，并且分发点的升级将失败。  
 
-若要标识适合于 Configuration Manager 控制台（位于“源层次结构”节点）中的升级的分发点，请选择源站点，然后选择“共享的分发点”选项卡。 适合的分发点在“适合升级”  列中显示“是”  。  
+若要标识适合于 Configuration Manager 控制台（位于“源层次结构”节点）中的升级的分发点，请选择源站点，然后选择“共享的分发点”选项卡。适合的分发点在“适合升级”  列中显示“是”  。  
 
 在升级 Configuration Manager 2007 辅助站点服务器上安装的分发点时，将从源层次结构中卸载辅助站点。 尽管此方案称为辅助站点升级，但这种情况仅适用于分发点站点系统角色。 结果是不会升级辅助站点，而是会将其卸载。 这会在曾经是辅助站点服务器的计算机上留下一个目标层次结构中的分发点。 如果计划升级辅助站点上的分发点，请参阅本主题中的[计划升级 Configuration Manager 2007 辅助站点](#BKMK_UpgradeSS)。  
 
@@ -180,7 +181,7 @@ Configuration Manager 将内容转换为单实例存储后，Configuration Manag
 
 -   共享分发点不能与任何附加站点系统角色共存。  
 
-若要标识适合于 Configuration Manager 控制台（位于“源层次结构”节点）中的重新分配的分发点，请选择源站点，然后选择“共享的分发点”选项卡。 适合的分发点在“适合重新分配”列（在 System Center 2012 R2 Configuration Manager 之前的版本中，此列名为“适合升级”）中显示“是”。  
+若要标识适合于 Configuration Manager 控制台（位于“源层次结构”节点）中的重新分配的分发点，请选择源站点，然后选择“共享的分发点”选项卡。适合的分发点在“适合重新分配”列（在 System Center 2012 R2 Configuration Manager 之前的版本中，此列名为“适合升级”）中显示“是”。  
 
 ###  <a name="BKMK_ReassignProcess"></a> 分发点重新分配过程  
  可以使用 Configuration Manager 控制台重新分配从活动的源层次结构中共享的分发点。 重新分配共享的分发点时，分发点会从其源站点中卸载，然后作为与你在目标层次结构中指定的主站点或辅助站点相连的分发点进行安装。  

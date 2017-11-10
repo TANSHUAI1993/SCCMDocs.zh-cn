@@ -1,5 +1,6 @@
 ---
-title: "部署应用程序 | Microsoft Docs"
+title: "部署应用程序"
+titleSuffix: Configuration Manager
 description: "使用 System Center Configuration Manager 为应用程序创建部署类型或模拟部署。"
 ms.custom: na
 ms.date: 7/31/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: 801c21e0015d63f736fb2207e85f484dc50d56dc
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 31c8a2e212de8c112b68d68e108db3463516142f
+ms.sourcegitcommit: b36f8c8b06e4b2e13f8c1500a82af79a071ab4f6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/20/2017
 ---
 # <a name="deploy-applications-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 部署应用程序
 
@@ -171,6 +172,7 @@ ms.lasthandoff: 09/15/2017
 
 >[!Tip]
 >与版本 1702 一起引入，这是预发布功能。 要启用该功能，请参阅 [System Center Configuration Manager 中的预发布功能](https://docs.microsoft.com/sccm/core/servers/manage/pre-release-features)。
+> 从版本 1706 开始，此功能不再属于预发行功能。
 
 在部署类型的“属性”对话框中，在“安装行为”选项卡上，你可以指定其中一个或多个可执行文件，如果正在运行，则阻止部署类型的安装。 用户必须先关闭运行中的可执行文件（或者因为部署的特定要求而自动关闭），然后才能安装部署类型。 要进行配置，请执行以下操作：
 

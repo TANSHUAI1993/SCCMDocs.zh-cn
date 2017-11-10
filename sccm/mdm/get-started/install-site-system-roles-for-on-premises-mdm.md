@@ -1,5 +1,6 @@
 ---
-title: "为本地 MDM 安装角色 - Configuration Manager | Microsoft Docs"
+title: "安装本地 MDM 角色 "
+titleSuffix: Configuration Manager
 description: "在 System Center Configuration Manager 中为本地移动设备管理安装站点系统角色。"
 ms.custom: na
 ms.date: 03/05/2017
@@ -11,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: c3cf9f64-c2b9-4ace-9527-2aba6d4eef04
 caps.latest.revision: "9"
-author: Mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 4913606e2f8a36e0004f711b24ecd836d0485124
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: d8d107f1ba3720e7974cda5bbbcd7bfefe9301cc
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="install-site-system-roles-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中为本地移动设备管理安装站点系统角色
 

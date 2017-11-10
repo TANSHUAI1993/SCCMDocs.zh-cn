@@ -1,5 +1,6 @@
 ---
-title: "Configuration Manager 的日志文件 | Microsoft Docs"
+title: "用于解决问题的日志文件"
+titleSuffix: Configuration Manager
 description: "使用日志文件解决 System Center Configuration Manager 层次结构中的问题。"
 ms.custom: na
 ms.date: 7/03/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 28597cf1cb269fff0872c7f79ef961496aea32ab
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: b9c0425b00e707e8ccdacd9315a82b0293593aea
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="log-files-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的日志文件
 
@@ -758,7 +759,7 @@ Configuration Manager 日志文件存储在多个位置中，该位置取决于�
 |ServiceWindowManager.log|记录有关维护时段评估的详细信息。|客户端|  
 |SmsWusHandler.log|记录有关 Microsoft 更新清单工具的扫描过程的详细信息。|客户端|  
 |StateMessage.log|记录有关创建并发送到管理点的软件更新状态消息的详细信息。|客户端|  
-|SUPSetup.log|记录有关软件更新点安装的详细信息。 当软件更新点安装完成后，会向此日志文件写入 **Installation was successful** 。|站点系统服务器|  
+|SUPSetup.log|记录有关软件更新点安装的详细信息。 当软件更新点安装完成后，会向此日志文件写入 **Installation was successful**。|站点系统服务器|  
 |UpdatesDeployment.log|记录有关客户端上的部署的详细信息，包括软件更新激活、评估和强制执行。 详细日志记录显示有关与客户端用户界面交互的其他信息。|客户端|  
 |UpdatesHandler.log|记录有关软件更新符合性扫描以及在客户端上下载和安装软件更新的详细信息。|客户端|  
 |UpdatesStore.log|记录有关在符合性扫描周期中接受评估的软件更新的符合性状态的详细信息。|客户端|  
@@ -771,7 +772,7 @@ Configuration Manager 日志文件存储在多个位置中，该位置取决于�
  下表列出了包含与使用 LAN 唤醒相关的信息的日志文件。  
 
 > [!NOTE]  
->  使用唤醒代理对 LAN 唤醒进行补充时，会在客户端上记录此活动。 例如，请参阅本主题的[客户端操作](#BKMK_ClientOpLogs)部分中的 CcmExec.log 和 SleepAgent_<*domain*\>@SYSTEM_0.log 。  
+>  使用唤醒代理对 LAN 唤醒进行补充时，会在客户端上记录此活动。 例如，请参阅本主题的[客户端操作](#BKMK_ClientOpLogs)部分中的 CcmExec.log 和 SleepAgent_<*domain*\>@SYSTEM_0.log。  
 
 |日志名称|说明|带有日志文件的计算机|  
 |--------------|-----------------|----------------------------|  

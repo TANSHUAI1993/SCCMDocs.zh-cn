@@ -1,5 +1,6 @@
 ---
-title: Technical Preview 1708 | Microsoft Docs
+title: Technical Preview 1708
+titleSuffix: Configuration Manager
 description: "了解适用于 System Center Configuration Manager 的 Technical Preview 版本 1708 中的可用功能。"
 ms.custom: na
 ms.date: 08/25/2017
@@ -13,11 +14,11 @@ ms.assetid: 3c061ceb-3bdb-4d4f-8c60-344964bd416b
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 022c9b2540f7ed403c38521c8e68f6c416c15c7c
-ms.sourcegitcommit: 974fbc4408028c8be28911e5cd646efcf47c7f15
+ms.openlocfilehash: b6868221f2efb766cf6a96e844617c75ad1e4c50
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/26/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="capabilities-in-technical-preview-1708-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1708 中的功能
 

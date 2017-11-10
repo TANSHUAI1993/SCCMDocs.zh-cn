@@ -1,5 +1,6 @@
 ---
-title: "使用 System Center Configuration Manager 和 Microsoft Intune 设置 iOS 和 Mac 混合设备管理 | Microsoft Docs"
+title: "使用 Microsoft Intune 设置 iOS 和 Mac 混合设备管理"
+titleSuffix: Configuration Manager
 description: "使用 System Center Configuration Manager 和 Microsoft Intune 设置 iOS 设备管理。"
 ms.custom: na
 ms.date: 08/11/2017
@@ -12,14 +13,14 @@ ms.topic: get-started-article
 ms.assetid: 5eae4400-58ca-4c71-804c-6a585cd3df5d
 caps.latest.revision: "10"
 caps.handback.revision: "0"
-author: nathbarn
-ms.author: nathbarn
+author: arob98
+ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: d84d6f3dba65f1d8114ef2eef9f19a2bb5389027
-ms.sourcegitcommit: 9a6f8e028fb5eb2e752da70f42a5b548339bd8f4
+ms.openlocfilehash: f15b82a0e04979f49fb8e2ab6bec6535783ac6e0
+ms.sourcegitcommit: 1132886e07d0c0a87dcc7eeef4577dd8d8840023
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2017
+ms.lasthandoff: 11/01/2017
 ---
 # <a name="set-up-ios-hybrid-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>设置 iOS 混合使用 System Center Configuration Manager 和 Microsoft Intune 的设备管理
 
@@ -63,7 +64,7 @@ MDM Push Certificate 用于在管理服务、Intune 和注册的 iOS 移动设�
 2.  在“主页”选项卡上的“订阅”组中，单击“配置平台” > “iOS”。  
 
 3.  在“Microsoft Intune 订阅属性”  对话框中，选择“iOS”  选项卡并单击选择“启用 iOS 注册”  复选框。  
-4.  单击“浏览” 并转到“从 Apple 下载的 APNs 证书(.cer)文件”。 Configuration Manager 会显示 APNs 证书信息。 单击“确定”  ，将 APNs 证书保存到 Intune。  
+4.  单击“浏览” 并转到“从 Apple 下载的 APNs 证书(.cer)文件”。 Configuration Manager 会显示 APNs 证书信息。 单击“确定”，将 APN 证书保存到 Intune。  
 
 设置完成后，需要让用户知道如何注册其设备。 请参阅[用户需要了解的有关设备注册的内容](https://docs.microsoft.com/intune/end-user-educate)。 此信息适用于 Microsoft Intune 和 Configuration Manager 托管的移动设备。
 

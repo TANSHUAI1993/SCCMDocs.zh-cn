@@ -1,5 +1,6 @@
 ---
-title: "准备步骤 | Microsoft Docs"
+title: "准备步骤 "
+titleSuffix: Configuration Manager
 description: "准备在 System Center Configuration Manager 中通过本地移动设备管理对设备进行管理。"
 ms.custom: na
 ms.date: 03/05/2017
@@ -11,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 1ef60106-8f31-46d6-95a6-25a6495f22c7
 caps.latest.revision: "4"
-author: Mtillman
-ms.author: mtillman
+author: dougeby
+ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 85bdadaaaeed9a42cfa5165d2b9f0f3ef434dc03
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 6c2275480cbecf35997e38185e0cead28cff10fc
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="preparation-steps-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>用于 System Center Configuration Manager 中本地移动设备管理的准备步骤
 

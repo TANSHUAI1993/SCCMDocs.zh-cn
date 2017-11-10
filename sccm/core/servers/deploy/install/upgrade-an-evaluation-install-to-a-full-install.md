@@ -1,5 +1,6 @@
 ---
-title: "升级评估版安装 | Microsoft Docs"
+title: "升级评估版安装"
+titleSuffix: Configuration Manager
 description: "了解如何将评估版安装升级到 System Center Configuration Manager 的完整安装。"
 ms.custom: na
 ms.date: 2/7/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "3"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 8f951805c2fc25059965c15c94934c0f8546735c
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 942ac0a1d7681cb1efb06ff477a27a7c5c57654b
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="upgrade-an-evaluation-installation-of-system-center-configuration-manager-to-a-full-installation"></a>将 System Center Configuration Manager 的评估版安装升级到完整安装
 

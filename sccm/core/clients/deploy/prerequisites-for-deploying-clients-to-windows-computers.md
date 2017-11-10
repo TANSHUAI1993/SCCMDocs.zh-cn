@@ -1,5 +1,6 @@
 ---
-title: "Windows 客户端部署先决条件 | Microsoft Docs"
+title: "Windows 客户端部署先决条件"
+titleSuffix: Configuration Manager
 description: "了解在 System Center Configuration Manager 中将客户端部署到 Windows 计算机的先决条件。"
 ms.custom: na
 ms.date: 04/23/2017
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 98e86323aa9f6dad1c76b98947338d97dd12f3db
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 44847d8a4bde2212c84a4f405b18730ec8f51b0a
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="prerequisites-for-deploying-clients-to-windows-computers-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中将客户端部署到 Windows 计算机的先决条件
 

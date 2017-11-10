@@ -1,5 +1,6 @@
 ---
-title: "配置硬件清单 | Microsoft Docs | 移动设备"
+title: "配置移动设备的硬件清单"
+titleSuffix: Configuration Manager
 description: "配置通过 Microsoft Intune 和 System Center Configuration Manager 注册的移动设备的硬件清单。"
 ms.custom: na
 ms.date: 03/05/2017
@@ -14,11 +15,11 @@ caps.latest.revision: "7"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 7ab9042a525e07b8e3107479cedeec6b99f7bc86
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: c176955c3fcfe40f2089b84c50a982906b59f04d
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="how-to-configure-hardware-inventory-for-mobile-devices-enrolled-by-microsoft-intune-and-system-center-configuration-manager"></a>如何配置通过 Microsoft Intune 和 System Center Configuration Manager 注册的移动设备的硬件清单
 

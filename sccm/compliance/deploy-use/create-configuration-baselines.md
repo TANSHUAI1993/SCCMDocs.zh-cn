@@ -1,5 +1,6 @@
 ---
-title: "创建配置基线 | Microsoft Docs"
+title: "创建配置基线"
+titleSuffix: Configuration Manager
 description: "在 System Center Configuration Manager 中创建可以部署到集合的配置基线。"
 ms.custom: na
 ms.date: 10/06/2016
@@ -15,11 +16,11 @@ caps.handback.revision: "0"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 1283322a775f030d3b312396691c374914604970
-ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
+ms.openlocfilehash: 1556594e439439ef30418d384d537d5efb6b46fc
+ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="create-configuration-baselines-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中创建配置基线
 
@@ -46,11 +47,11 @@ System Center Configuration Manager 中的配置基线包含预定义的配置�
 
 5.  “配置数据”  列表将显示此配置基线中包含的所有配置项目或配置基线。 单击“添加”  可向列表中添加新配置项目或配置基线。 您可以选择下列项目:  
 
-    -   **Configuration Items**  
+    -   <bpt id="p1">**</bpt>Configuration Items<ept id="p1">**</ept>  
 
     -   **软件更新**  
 
-    -   **Configuration Baselines**  
+    -   <bpt id="p1">**</bpt>Configuration Baselines<ept id="p1">**</ept>  
       > [!IMPORTANT]
       > 必须将每个配置基线限制为不超过 1000 个软件更新。
 6.  使用“更改目的”  列表来指定在“配置数据”  列表中选择的配置项目的行为。 从以下选项中选择：  
