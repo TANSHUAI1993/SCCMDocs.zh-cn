@@ -15,11 +15,11 @@ caps.latest.revision: "26"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: e4ebbcec6df0bd5fdf5f94788d00f590d5e38d4d
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: b9b15a781adef81e970adf50b8b6f26dd75d95f8
+ms.sourcegitcommit: b517c791554500209435bca21fbf3ef8a26828c9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/08/2017
 ---
 # <a name="manage-windows-as-a-service-using-system-center-configuration-manager"></a>使用 System Center Configuration Manager 将 Windows 作为服务进行管理
 
@@ -60,7 +60,7 @@ ms.lasthandoff: 10/12/2017
 ##  <a name="BKMK_ServicingDashboard"></a> Windows 10 维护服务仪表板  
  Windows 10 维护服务仪表板提供了有关环境中的 Windows 10 计算机和活动维护服务计划的信息以及符合性信息等。 Windows 10 维护服务仪表板中的数据依赖于安装服务连接点。 该仪表板具有以下磁贴：  
 
--   **“Windows 10 使用情况”磁贴**：提供 Windows 10 公共内部版本的细分。 将 Windows 预览体验内部版本和对你的站点为未知的任何内部版本列为**其他**。 服务连接点将下载告知其 Windows 内部版本的元数据，然后将此数据与发现数据进行比较。  
+-   **“Windows 10 使用情况”磁贴**：提供 Windows 10 公共内部版本的细分。 将 Windows 预览体验内部版本和对你的站点为未知的任何内部版本列为 **其他** 。 服务连接点将下载告知其 Windows 内部版本的元数据，然后将此数据与发现数据进行比较。  
 
 -   **“Windows 10 环”磁贴**：按分支和就绪状态提供 Windows 10 的细分。 LTSB 段将全部为 LTSB 版本（而第一个磁贴将分解特定版本。 例如，Windows 10 LTSB 2015）。 “可以发布”  段对应于 CB，而“可用于业务”  段为 CBB。  
 
