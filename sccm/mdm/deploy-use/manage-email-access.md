@@ -15,11 +15,11 @@ caps.latest.revision: "24"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: 8ab177067d0308b863274a7ae05574374b0af4ba
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: a83c2030de8a146dad7bf2258e8a983c8ab6c45e
+ms.sourcegitcommit: 922d6d9c91ba2158b938df381277be1b5f1d434a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/13/2017
 ---
 # <a name="manage-email-access-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中管理对电子邮件的访问
 
@@ -39,7 +39,7 @@ ms.lasthandoff: 10/12/2017
 
 -   Android 4.0 及更高版本、Samsung KNOX 标准版 4.0 及更高版本  
 
--   iOS 7.1 及更高版本  
+-   iOS 9.0 及更高版本  
 
 -   Windows Phone 8.1 及更高版本  
 
@@ -93,7 +93,7 @@ Office 桌面应用程序可以访问运行以下系统的电脑上的 Exchange 
 
 -   Android 4.0 及更高版本、Samsung KNOX 标准版 4.0 及更高版本  
 
--   iOS 7.1 及更高版本  
+-   iOS 9.0 及更高版本  
 
 -   Windows Phone 8.1 及更高版本  
 

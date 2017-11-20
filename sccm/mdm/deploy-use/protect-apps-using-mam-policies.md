@@ -16,11 +16,11 @@ caps.handback.revision: "0"
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 12633eced1850b718bf7cad019cd943305a7d9fb
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 4eedd96fd399cf9577da8069bd0c8d5702f50d7b
+ms.sourcegitcommit: 922d6d9c91ba2158b938df381277be1b5f1d434a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/13/2017
 ---
 # <a name="protect-apps-using-mobile-application-management-policies-in-system-center-configuration-manager"></a>使用 System Center Configuration Manager 中的移动应用程序管理策略保护应用
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 10/12/2017
 
 -   运行 Android 4 和更高版本的设备  
 
--   运行 iOS 7 和更高版本的设备  
+-   运行 iOS 9 及更高版本的设备  
 
 还可使用移动应用管理策略保护不由 Intune 管理的设备上的应用。 可使用这项新功能，将移动应用管理策略应用到连接到 Office 365 服务的应用。 此操作不支持用于连接到本地 Exchange 或 SharePoint 的应用。  
 

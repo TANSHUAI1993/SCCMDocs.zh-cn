@@ -16,11 +16,11 @@ caps.handback.revision: "0"
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.openlocfilehash: 3f4f25d39fd7f4106ec6f7a1d6ebe4716be067ad
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 5780eb6da6e6a72b7fb3504283ef5362842c9ef7
+ms.sourcegitcommit: 922d6d9c91ba2158b938df381277be1b5f1d434a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/13/2017
 ---
 # <a name="how-to-create-wi-fi-profiles-for-mobile-devices-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中为移动设备创建 Wi-Fi 配置文件
 
@@ -34,9 +34,9 @@ ms.lasthandoff: 10/12/2017
 
 -   运行 Windows 10 桌面或移动版的设备  
 
--   运行 iOS 8 的 iPhone 设备  
+-   运行 iOS 9 的 iPhone 设备  
 
--   运行 iOS 8 的 iPad 设备  
+-   运行 iOS 9 的 iPad 设备  
 
 -   运行版本 4 或更高版本的 Android 设备
 

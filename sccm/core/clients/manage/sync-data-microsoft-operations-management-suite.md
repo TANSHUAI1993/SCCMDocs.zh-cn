@@ -15,11 +15,11 @@ caps.latest.revision: "9"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: bbb76fda4ef831f358923946b3c16b821194bf6b
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 166f7c73f2050657a85bd5160f74c40cfd87fd7f
+ms.sourcegitcommit: 922d6d9c91ba2158b938df381277be1b5f1d434a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/13/2017
 ---
 #  <a name="sync-data-from-configuration-manager-to-the-microsoft-operations-management-suite"></a>将数据从 Configuration Manager 同步到 Microsoft Operations Management Suite
 
@@ -90,7 +90,7 @@ ms.lasthandoff: 10/12/2017
 
 ### <a name="install-the-oms-connector"></a>安装 OMS 连接器  
 1. 在 Configuration Manager 控制台中，配置你的[层次结构以使用预发行功能](/sccm/core/servers/manage/pre-release-features)，然后启用 OMS 连接器。  
-
+0
 2. 接下来，转到“管理” > “云服务” > “OMS 连接器”。 在功能区中，单击“创建 Operations Management Suite 连接”。 这会打开“Operation Management Suite Wizard 连接向导”。 选择“下一步”。  
 
 
@@ -134,13 +134,13 @@ ms.lasthandoff: 10/12/2017
       &lt;setting name="FairFaxArmResourceId" serializeAs="String"> &lt;value>https://management.usgovcloudapi.net/&lt;/value>  
       &lt;/setting>
 
-  将设置名称 FairFaxAuthorityResource 的值更改为等于“https://login.microsoftonline.com/”
+  将设置名称 FairFaxAuthorityResource 的值更改为等于“https://login.microsoftonline.us/”
 
   - **原始：**&lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
     &lt;value>&lt;/value>
 
     - **编辑后：**&lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
-    &lt;value>https://login.microsoftonline.com/&lt;/value>
+    &lt;value>https://login.microsoftonline.us/&lt;/value>
 
 2.  保存包含这两种更改的文件后，请在同一台计算机上重启 Configuration Manager 控制台，然后使用该控制台安装 OMS 连接器。 若要安装连接器，请使用[将数据从 Configuration Manager 同步到 Microsoft Operations Management Suite](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite) 中的信息，选择 Microsoft Azure 政府云上的 **Microsoft Operations Management Suite**。
 
