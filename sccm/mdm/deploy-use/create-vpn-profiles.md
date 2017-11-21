@@ -3,7 +3,7 @@ title: "VPN 配置文件"
 titleSuffix: Configuration Manager
 description: "System Center Configuration Manager 中移动设备上的 VPN 配置文件。"
 ms.custom: na
-ms.date: 07/26/2017
+ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,11 +16,11 @@ caps.handback.revision: "0"
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.openlocfilehash: 40446ce656bd446f890b9b1349ab0b95742cadb8
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: b60a1b9e85b00cbaba54db4ea4cd92a1038c3fcf
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="vpn-profiles-on-mobile-devices-in-system-center-configuration-manager"></a>System Center Configuration Manager 中移动设备上的 VPN 配置文件
 
@@ -71,8 +71,8 @@ ms.lasthandoff: 10/12/2017
 > [!IMPORTANT]
 > 我们建议你保护编译来用于每个应用 VPN 配置的关联应用的所有列表。 如果未经授权的用户更改你的列表，且你将此表导入每应用 VPN 应用列表中，则可能会向不应拥有访问权限的应用授予 VPN 访问权限。 保护应用列表的一种方法是使用访问控制列表 (ACL)。
 
-
-1.  在向导的“身份验证方法”页上，指定下列信息：  
+1. 在“创建 VPN 配置文件向导”的“支持的平台”页上，选择将在其中安装 VPN 配置文件的操作系统。也可以选择“全选”，将 VPN 配置文件安装在所有可用的操作系统中。  
+2.  在向导的“身份验证方法”页上，指定下列信息：  
 
     -   **身份验证方法**：选择 VPN 连接将使用的身份验证方法。 可用的方法视连接类型而定，如此表中所示。  
 
@@ -112,46 +112,13 @@ ms.lasthandoff: 10/12/2017
 
          如果受运行 Configuration Manager 的 Windows 版本_和_选定授权方法支持，可以选择“配置”，打开“Windows 属性”对话框，并配置身份验证方法属性。  如果“配置”遭禁用，请使用其他方法来配置身份验证方法属性。
 
-2.  在“创建 VPN 配置文件向导”的“代理设置”页上，如果 VPN 连接使用的是代理服务器，请选中“配置此 VPN 配置文件的代理设置”框。 然后提供代理服务器信息。 有关详细信息，请参阅 Windows Server 文档。  
+3.  在“创建 VPN 配置文件向导”的“代理设置”页上，如果 VPN 连接使用的是代理服务器，请选中“配置此 VPN 配置文件的代理设置”框。 然后提供代理服务器信息。 有关详细信息，请参阅 Windows Server 文档。  
 
     > [!NOTE]  
     >  在 Windows 8.1 计算机上，只有在使用此计算机连接 VPN 之后，VPN 配置文件才会显示代理信息。  
 
 
-3. 根据需要，配置其他 DNS 设置。  
- 在“配置自动 VPN 连接”页上，可以配置以下设置：  
-
-    -   **按需启用 VPN**：如果要为 Windows Phone 8.1 设备配置更多 DNS 设置，请使用此选项。 此设置仅适用于 Windows Phone 8.1 设备，并且只能在将要部署到 Windows Phone 8.1 设备的 VPN 配置文件上启用。
-
-    -   **DNS 后缀列表**（仅适用于 Windows Phone 8.1 设备）：配置将建立 VPN 连接的域。 对于指定的每个域，请添加 DNS 后缀、DNS 服务器地址和下面的一项按需操作：  
-
-        -   **从不建立**：从不建立 VPN 连接。  
-
-        -   **需要时建立**：仅在设备需要连接资源时建立 VPN 连接。  
-
-        -   **始终建立**：始终建立 VPN 连接。  
-
-    -   **合并**：将配置的所有 DNS 后缀复制到“受信任的网络列表”。  
-
-    -   **受信任的网络列表**（仅适用于 Windows Phone 8.1 设备）：每行指定一个 DNS 后缀。 如果该设备处于受信任的网络中，将不会打开 VPN 连接。  
-
-    -   **后缀搜索列表**（仅适用于 Windows Phone 8.1 设备）：每行指定一个 DNS 后缀。 使用短名称连接网站时，将搜索每个 DNS 后缀。  
-
-     例如，假设指定了 DNS 后缀“domain1.contoso.com”和“domain2.contoso.com”，然后转到 URL **http://mywebsite**。 将搜索以下地址：  
-
-    -   **http://mywebsite.domain1.contoso.com**  
-
-    -   **http://mywebsite.domain2.contoso.com**  
-
-    > [!NOTE]  
-    >  仅适用于 Windows Phone 8.1 设备  
-    >   
-    >  如果选择了“通过 VPN 连接发送所有网络流量”选项，*且* VPN 连接使用的是完整隧道，那么 VPN 连接会使用第一个设备配置文件自动建立。 若要使用其他配置文件建立连接，请将相应配置文件设置为默认值。  
-    >   
-    >  如果*未*选择“通过 VPN 连接发送所有网络流量”选项，*且* VPN 连接使用的是隧道分离，那么 VPN 连接会自动针对已配置的路由或连接专用 DNS 后缀进行建立。  
-
-
-4. 在“创建 VPN 配置文件向导”的“支持的平台”页上，选择将在其中安装 VPN 配置文件的操作系统。也可以选择“全选”，将 VPN 配置文件安装在所有可用的操作系统中。  
+4. 根据需要，配置其他 DNS 设置。  
 
 5. 完成该向导。 此时，“资产和符合性”工作区中的“VPN 配置文件”节点会显示新建的 VPN 配置文件。  
 

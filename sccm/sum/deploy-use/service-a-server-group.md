@@ -1,5 +1,6 @@
 ---
-title: "为服务器组提供服务 | Microsoft Docs"
+title: "为服务器组提供服务"
+titleSuffix: Configuration Manager
 description: "System Center Configuration Manager 控制台提供警报和状态以监视更新和符合性。"
 keywords: 
 author: dougeby
@@ -11,19 +12,18 @@ ms.prod: configuration-manager
 ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: 304a83ea-0f72-437d-9688-2e6e0c7526dd
-ms.openlocfilehash: ae09a02dd5d67113b9a7e2ce146c844efa4caf55
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 12382015f2b673103c3c0d8fc9c0cbf29511a434
+ms.sourcegitcommit: 986fc2d54f7c5fa965fd4df42f4db4ecce6b79cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 11/17/2017
 ---
->[!IMPORTANT]
->这是 Configuration Manager 版本 1606 和版本 1610 中提供的预发行功能。 预发行功能包含在产品中，用于在生产环境中进行早期测试，但不应将其视为生产就绪。 必须启用此功能，使其可供使用。 有关详细信息，请参阅[使用更新中的预发行功能](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease)。
-
-
 # <a name="service-a-server-group"></a>为服务器组提供服务
 
 *适用范围：System Center Configuration Manager (Current Branch)*
+
+>[!IMPORTANT]
+>预发行功能是指 Current Branch 中的功能，用于在生产环境中的早期测试。 这些功能完全受支持，但仍在开发过程中，所以在从预发行类别中划出之前，可能会有所变更。 必须启用此功能，使其可供使用。 有关详细信息，请参阅[使用更新中的预发行功能](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease)。
 
 从 System Center Configuration Manager 版本 1606 开始，可以为集合配置服务器组设置，以定义集合中安装软件更新的计算机的数量、百分比和顺序。 还可以配置预先部署和后期部署 PowerShell 脚本以运行自定义操作。
 

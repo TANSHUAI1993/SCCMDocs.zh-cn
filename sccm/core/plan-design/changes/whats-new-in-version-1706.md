@@ -13,11 +13,11 @@ ms.assetid: ac034143-003e-4629-aac2-99eaffef4db1
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 9b3248f30470ee8250efcbf171642ea476627d68
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 2889de0709096aa481ca6203c5ab2bac1f064d5e
+ms.sourcegitcommit: c4a1bafcd004638d264a93d307c70d8b6f7fe023
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="what39s-new-in-version-1706-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1706 的新增功能
 
@@ -189,10 +189,6 @@ Version 1706 drops support for the following products:
 从此版本开始，你可以使用三个新的移动应用程序管理 (MAM) 策略设置：
 
 - 阻止屏幕捕获(仅限 Android 设备)：指定在使用该应用时，阻止设备的屏幕捕获功能。
-
-- 禁用联系人同步：阻止应用将数据保存到设备上的本机“联系人”应用。
-
-- 禁用打印：阻止应用打印工作或学校数据。
 
 请参阅[使用 Configuration Manager 中的应用保护策略来保护应用](https://docs.microsoft.com/sccm/mdm/deploy-use/protect-apps-using-mam-policies)，尝试新的应用保护策略设置。
 

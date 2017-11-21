@@ -1,5 +1,6 @@
 ---
-title: "安装和配置软件更新点 | Microsoft 文档"
+title: "安装和配置软件更新点"
+titleSuffix: Configuration Manager
 description: "主站点需要管理中心站点上的软件更新点，以便评估软件更新合规性，并将软件更新部署到客户端。"
 keywords: 
 author: dougeby
@@ -11,11 +12,11 @@ ms.prod: configuration-manager
 ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: b099a645-6434-498f-a408-1d438e394396
-ms.openlocfilehash: 7d369384d133c90a15e01df50ac53992d61f3873
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: c17dd40175bac5ecc4361e905f009f1ed5c2f5a4
+ms.sourcegitcommit: 986fc2d54f7c5fa965fd4df42f4db4ecce6b79cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="install-and-configure-a-software-update-point"></a>安装和配置软件更新点  
 
@@ -69,7 +70,7 @@ ms.lasthandoff: 08/07/2017
 ### <a name="configure-ssl-communications-to-wsus"></a>配置与 WSUS 的 SSL 通信  
  你可以在向导的“常规”页上或软件更新点属性的“常规”选项卡上配置 SSL 通信。  
 
- 有关如何使用 SSL 的详细信息，请参阅 [决定是否将 WSUS 配置为使用 SSL](../plan-design/plan-for-software-updates.md#BKMK_WSUSandSSL)。  
+ 有关如何使用 SSL 的详细信息，请参阅 [Decide whether to configure WSUS to use SSL](../plan-design/plan-for-software-updates.md#BKMK_WSUSandSSL)。  
 
 ### <a name="wsus-server-connection-account"></a>WSUS 服务器连接帐户  
  你可以配置要在站点服务器连接到软件更新点上运行的 WSUS 时使用的帐户。 如果不配置此帐户，Configuration Manager 将使用要连接到 WSUS 的站点服务器的计算机帐户。 在向导的“代理和帐户设置”页上或“软件更新点属性”中的“代理和帐户设置”选项卡上配置 WSUS 服务器连接帐户。  可以在向导的不同位置中配置帐户，具体情况视使用的 Configuration Manager 版本而定。  

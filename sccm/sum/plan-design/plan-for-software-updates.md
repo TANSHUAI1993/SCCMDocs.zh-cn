@@ -1,5 +1,6 @@
 ---
-title: "规划软件更新 | Microsoft Docs"
+title: "规划软件更新"
+titleSuffix: Configuration Manager
 description: "在 System Center Configuration Manager 生产环境中使用软件更新之前，需要规划软件更新点基础结构。"
 keywords: 
 author: dougeby
@@ -11,11 +12,11 @@ ms.prod: configuration-manager
 ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
-ms.openlocfilehash: 8b739a01a6bb5cacf0f7109e2e6fa3b31dd666d3
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: e111d5abf263a90ac020aca863d495cb717154db
+ms.sourcegitcommit: 986fc2d54f7c5fa965fd4df42f4db4ecce6b79cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="plan-for-software-updates-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中规划软件更新
 
