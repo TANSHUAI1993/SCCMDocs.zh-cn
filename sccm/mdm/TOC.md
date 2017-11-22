@@ -72,6 +72,7 @@
 
 ## [管理条件访问](deploy-use/manage-access-to-services.md)
 ### [设备合规性策略](deploy-use/device-compliance-policies.md)
+#### [针对非符合性的操作](deploy-use/actions-for-noncompliance.md)
 ### [创建设备合规性策略](deploy-use/create-compliance-policy.md)
 ### [管理电子邮件访问权限](deploy-use/manage-email-access.md)
 ### [管理 SharePoint Online 访问权限](deploy-use/manage-sharepoint-online-access.md)

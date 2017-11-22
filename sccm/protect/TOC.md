@@ -52,6 +52,8 @@
 
 ### [Windows 防火墙策略](deploy-use/create-windows-firewall-policies.md)
 ### [Windows Defender 高级威胁防护](deploy-use/windows-defender-advanced-threat-protection.md)
+### [创建和部署攻击防护策略](deploy-use/create-deploy-exploit-guard-policy.md)
+### [创建和部署应用程序防护策略](deploy-use/create-deploy-application-guard-policy.md)
 ### [反恶意软件和防火墙任务](deploy-use/endpoint-antimalware-firewall.md)
 ### [Endpoint Protection 方案](deploy-use/scenarios-endpoint-protection.md)
 ### [Endpoint Protection 客户端帮助](deploy-use/endpoint-protection-client-help.md)

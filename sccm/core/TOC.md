@@ -27,10 +27,11 @@
 ###  [特性和功能](plan-design/changes/features-and-capabilities.md)
 ###  [自 Configuration Manager 2012 以来的更改内容](plan-design/changes/what-has-changed-from-configuration-manager-2012.md)
 ###  [增量版本中的新增功能](plan-design/changes/whats-new-incremental-versions.md)
+###  [版本 1710 中的新增功能](plan-design/changes/whats-new-in-version-1710.md)
 ###  [版本 1706 中的新增功能](plan-design/changes/whats-new-in-version-1706.md)
 ###  [版本 1702 中的新增功能](plan-design/changes/whats-new-in-version-1702.md)
-###  [版本 1610 中的新增功能](plan-design/changes/whats-new-in-version-1610.md)
 <!--
+###  [What's new in version 1610](plan-design/changes/whats-new-in-version-1610.md)
 ###  [What's new in version 1606](plan-design/changes/whats-new-in-version-1606.md)
 ###  [What's new in version 1602](plan-design/changes/whats-new-in-version-1602.md)
 -->
@@ -74,14 +75,15 @@
 ###  [准备 Windows Servers 以支持站点系统](plan-design/network/prepare-windows-servers.md)
 ###  [站点系统服务器网站](plan-design/network/websites-for-site-system-servers.md)
 ###  [PKI 证书要求](plan-design/network/pki-certificate-requirements.md)
+###  [CNG 证书概述](plan-design/network/cng-certificates-overview.md)
 
 ##   [诊断和使用情况数据](plan-design/diagnostics/diagnostics-and-usage-data.md)
 ###  [如何使用诊断和使用情况数据](plan-design/diagnostics/how-diagnostics-and-usage-data-is-used.md)
+###  [1710 的诊断数据](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1710.md)
 ###  [1706 的诊断数据](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1706.md)
 ###  [1702 的诊断数据](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1702.md)
-###  [1610 的诊断数据](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1610.md)
-
 <!--
+###  [Diagnostic data for 1610](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1610.md)
 ###  [Diagnostic data for 1606](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1606.md)
 ###  [Diagnostic data for 1602](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1602.md)
 ###  [Diagnostic data for 1511](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1511.md)
@@ -228,10 +230,11 @@
 ###  [使用服务连接工具](servers/manage/use-the-service-connection-tool.md)
 ###  [使用更新注册工具](servers/manage/use-the-update-registration-tool-to-import-hotfixes.md)
 ###  [使用修补程序安装程序](servers/manage/use-the-hotfix-installer-to-install-updates.md)
+###  [用于安装更新 1710 的核对清单](servers/manage/checklist-for-installing-update-1710.md)
 ###  [用于安装更新 1706 的核对清单](servers/manage/checklist-for-installing-update-1706.md)
 ###  [安装更新程序 1702 的核对清单](servers/manage/checklist-for-installing-update-1702.md)
-###  [用于安装更新 1610 的核对清单](servers/manage/checklist-for-installing-update-1610.md)
 <!-- Deprecated from Content - still published but out of TOC:
+###  [Checklist for installing update 1610](servers/manage/checklist-for-installing-update-1610.md)
 ###  [Checklist for installing update 1606](servers/manage/checklist-for-installing-update-1606.md)
 ###  [Checklist for installing update 1602](servers/manage/checklist-for-installing-update-1602.md)
 -->
@@ -305,6 +308,10 @@
 ###  [如何管理 Linux 和 UNIX 客户端](clients/manage/manage-clients-for-linux-and-unix-servers.md)
 ###  [将数据同步到 OMS](clients/manage/sync-data-microsoft-operations-management-suite.md)
 ###  [维护 Mac 客户端](clients/manage/maintain-mac-clients.md)
+
+##   [适用于 Windows 10 设备的共同管理](clients/manage/co-management-overview.md)
+###  [准备 Windows 10 设备进行共同管理](clients/manage/co-management-prepare.md)
+###  [将 Configuration Manager 工作负荷切换到 Intune](clients/manage/co-management-switch-workloads.md)
 
 ##   [在 Internet 上管理客户端](clients/manage/manage-clients-internet.md)
 ###  [规划云管理网关](clients/manage/plan-cloud-management-gateway.md)
