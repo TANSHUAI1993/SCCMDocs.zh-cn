@@ -16,11 +16,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 98f9f44373b854b61714c21105a28b3240b4a7f7
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 48530c177a03b66dbc126025ca61e0078bc89d9f
+ms.sourcegitcommit: 5ec9f8c312688bf7f4de4d6007b121d743b80c4d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/14/2017
 ---
 # <a name="create-a-task-sequence-to-capture-an-operating-system-in-system-center-configuration-manager"></a>创建任务序列来捕获 System Center Configuration Manager 中的操作系统
 
@@ -171,6 +171,9 @@ ms.lasthandoff: 10/12/2017
 9. 仅当引用计算机上安装了 Configuration Manager 客户端时才使用此步骤。  
 
      依次单击**添加**和**映像**，然后单击[准备 ConfigMgr 客户端以便捕获](../understand/task-sequence-steps.md#BKMK_PrepareConfigMgrClientforCapture)。 此任务序列步骤在引用计算机上获得 Configuration Manager 客户端，并且准备该客户端用于进行捕获（这是映像创建过程的一部分）。  
+
+    > [!Note]  
+    >  任务序列不支持卸载 Configuration Manager 客户端。
 
 10. 依次单**添加**和**映像**，然后单击[准备 Windows 以便捕获](../understand/task-sequence-steps.md#BKMK_PrepareWindowsforCapture)。 此任务序列操作运行 Sysprep，然后将计算机重新启动到为该任务序列指定的 Windows PE 启动映像。 要使此操作成功完成，引用计算机不可加入域。  
 

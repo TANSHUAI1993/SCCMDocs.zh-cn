@@ -1,21 +1,22 @@
 ---
-title: "管理 Office 365 ProPlus 更新 | Microsoft Docs"
+title: "管理 Office 365 ProPlus 更新"
+titleSuffix: Configuration Manager
 description: "Configuration Manager 将 Office 365 客户端更新从 WSUS 目录同步到站点服务器，使更新可部署到客户端。"
 keywords: 
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 05/31/2017
+ms.date: 10/04/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
-ms.openlocfilehash: 902d7f7216ca7bb585afae587a6706e2332da9d3
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: a1ac97e60bc35ee3e98212cf17e33ed2b73301b9
+ms.sourcegitcommit: 986fc2d54f7c5fa965fd4df42f4db4ecce6b79cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manage-office-365-proplus-with-configuration-manager"></a>使用 Configuration Manager 管理 Office 365 ProPlus
 
@@ -46,7 +47,7 @@ Office 365 客户端管理仪表板提供以下信息的相关图表：
 若要在 Configuration Manager 控制台中查看 Office 365 客户端管理仪表板，请依次转到“软件库” > “概述” > “Office 365 客户端管理”。 在仪表板顶部，使用“集合”下拉列表设置按特定集合的成员筛选仪表板数据。
 
 ### <a name="display-data-in-the-office-365-client-management-dashboard"></a>在 Office 365 客户端管理仪表板中显示数据
-Office 365 客户端管理仪表板中显示的数据来自硬件清单。 必须先启用硬件清单，并选择“Office 365 专业增强版配置”硬件清单类，然后仪表板中才能显示数据。
+Office 365 客户端管理仪表板中显示的数据来自硬件清单。 启用硬件清单，并选择“Office 365 ProPlus 配置”硬件清单类，以便在仪表板中显示数据。
 #### <a name="to-display-data-in-the-office-365-client-management-dashboard"></a>若要在 Office 365 客户端管理仪表板中显示数据
 1. 启用硬件清单（如果尚未启用）。 有关详细信息，请参阅[配置硬件清单](\sccm\core\clients\manage\configure-hardware-inventory)。
 2. 在 Configuration Manager 控制台中，导航到“管理” > “客户端设置” > “默认客户端设置”。  
@@ -80,7 +81,7 @@ Office 365 客户端管理仪表板在硬件清单得到报告的同时开始显
 3. 在“应用程序设置”页上，提供应用的名称和说明，输入文件的下载位置，然后单击“下一步”。 必须将位置指定为 &#92;&#92;server&#92;share。
 4. 在“导入客户端设置”页上，选择是从现有的 XML 配置文件导入 Office 365 客户端设置还是手动指定设置，然后单击“下一步”。  
 
-    如果具有现有的配置文件，请输入文件的位置并跳到步骤 7。 请注意，必须采用 &#92;&#92;*server*&#92;*share*&#92;*filename*.XML 形式指定位置。
+    如果具有现有的配置文件，请输入文件的位置并跳到步骤 7。 必须采用 \\server\share\filename.XML 形式指定位置。
     > [!IMPORTANT]    
     > XML 配置文件必须仅包含 [Office 365 ProPlus 客户端支持的语言](https://technet.microsoft.com/library/cc179219&#40;v=office.16&#41;.aspx)。
 
@@ -104,7 +105,7 @@ Office 365 客户端管理仪表板在硬件清单得到报告的同时开始显
 1.  在本主题的**使用 Configuration Manager 管理 Office 365 客户端更新的要求**部分，验证使用 Configuration Manager 管理 Office 365 客户端更新的[要求](https://technet.microsoft.com/library/mt628083.aspx)。  
 
 2.  [配置软件更新点](../get-started/configure-classifications-and-products.md)来同步 Office 365 客户端更新。 针对分类设置**更新**，并为产品选择 **Office 365 客户端**。 将软件更新点配置为使用“更新”分类后，同步软件更新。
-3.  使 Office 365 客户端可以从 Configuration Manager 接收更新。 为此，可使用 Configuration Manager 客户端设置或组策略。 使用下列方法之一启用客户端：   
+3.  使 Office 365 客户端可以从 Configuration Manager 接收更新。 可使用 Configuration Manager 客户端设置或组策略启动客户端。   
 
     **方法 1**：自 Configuration Manager 版本 1606 起，可使用 Configuration Manager 客户端设置来管理 Office 365 客户端代理。 配置此设置和部署 Office 365 更新后，Configuration Manager 客户端代理将与 Office 365 客户端代理通信，从分发点下载 Office 365 更新并进行安装。 Configuration Manager 盘点了 Office 365 ProPlus 客户端设置的步骤。    
 
@@ -119,17 +120,30 @@ Office 365 客户端管理仪表板在硬件清单得到报告的同时开始显
 4. [将 Office 365 更新部署](deploy-software-updates.md)到客户端。   
 
 > [!Important]
-> 必须下载并部署 Office 365 客户端上配置的语言的更新。 例如，假设 Office 365 客户端上配置的语言为 en-us 和 de-de。 在站点服务器上，对适用的 Office 365 更新只下载并部署 en-us 内容。 当用户通过软件中心启动安装以获取此更新时，此更新将在下载内容时挂起。   
+> 必须下载并部署 Office 365 客户端上配置的语言的更新。 例如，假设 Office 365 客户端上配置的语言为 en-us 和 de-de。 在站点服务器上，对适用的 Office 365 更新只下载并部署 en-us 内容。 当用户通过软件中心启动此更新的安装时，此更新将在下载内容时挂起。   
 
 ## <a name="restart-behavior-and-client-notifications-for-office-365-updates"></a>Office 365 更新的重启行为和客户端通知
 将更新部署到 Office 365 客户端时，重启行为和客户端通知会存在差异，具体取决于所拥有的 Configuration Manager 版本。 下表提供了有关客户端收到 Office 365 更新时的最终用户体验的信息：
 
-|Configuration Manager 版本 |结束用户体验|  
+|Configuration Manager 版本 |最终用户体验|  
 |----------------|---------------------|
 |1610 之前|设置重启标志，并在计算机重启后安装更新。|
 |1610|安装更新前，关闭 Office 365 应用且不发出警告|
 |包含更新的 1610 <br/>1702|设置重启标志，并在计算机重启后安装更新。|
 |1706|安装更新前，客户端收到弹出消息、应用内通知及倒计时对话框。|
+
+> [!Important]
+> 在 Configuration Manager 版本 1706 中，请注意以下详细信息：
+>
+>- 对于截止时间在未来 48 小时内并已下载更新内容的必需应用，通知图标显示在任务栏的通知区域中。 
+>- 对于截止时间在未来 7.5 小时内并已下载更新内容的必需应用，将显示倒计时对话框。 在达到截止时间前，用户可以将倒计时对话框推迟三次。 推迟后，倒计时会在两个小时后再次显示。 如果没有推迟，则会显示 30 分钟倒计时，且在倒计时到期时安装更新。
+>- 用户单击通知区域中的图标前，不会显示弹出通知。 此外，如果通知区域已最小化，除非用户打开或展开通知区域，否则不能看到通知图标。 
+>- 通知和倒计时对话框可在用户没有主动使用设备进行工作时（如当设备整晚处于锁定状态时）启动，因此，可能会强制关闭设备上运行的 Office 应用以安装更新。 在关闭应用前，Office 将保存应用数据，防止数据丢失。 
+>- 如果已过截止时间或配置为尽快开始，则可能会在没有通知的情况下强制关闭正在运行的 Office 应用。 
+>- 如果用户在截止时间之前安装 Office 更新，Configuration Manager 会在达到截止时间时验证是否已安装更新。 如果在设备上未检测到更新，则会安装更新。 
+>- 在下载更新之前，应用内通知栏不会显示于正在运行的 Office 应用中。 下载更新后，应用内通知仅为新打开的应用显示。
+>- 对于由服务窗口触发的或安排在非营业时间的 Office 更新，则可能会在没有通知的情况下强制关闭正在运行的 Office 应用以安装更新。 
+
 
 
 ## <a name="add-languages-for-office-365-update-downloads"></a>添加 Office 365 更新下载语言

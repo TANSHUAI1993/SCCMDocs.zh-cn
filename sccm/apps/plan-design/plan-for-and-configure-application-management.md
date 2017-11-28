@@ -3,7 +3,7 @@ title: "规划和配置应用程序管理"
 titleSuffix: Configuration Manager
 description: "实现和配置用于在 System Center Configuration Manager 中部署应用程序的所需依赖关系。"
 ms.custom: na
-ms.date: 02/09/2017
+ms.date: 11/07/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.latest.revision: "13"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: 66317bea84adbddf2d2e94c30a4a72e19229439b
-ms.sourcegitcommit: 18ac58374d2d513fe2a197c80f7c8c6890a7d612
+ms.openlocfilehash: cd06d3ee2ea14c9ff1b9cf09980c2b25a5263db9
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/16/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="plan-for-and-configure-application-management-in-system-center-configuration-manager"></a>规划和配置 System Center Configuration Manager 中的应用程序管理
 
@@ -142,7 +142,7 @@ ms.lasthandoff: 10/16/2017
 
 4.  查看并配置与用户通知、应用程序目录和软件中心相关的设置。 例如：  
 
-    1.  “计算机代理”组：  
+    1.  “计算机代理” 组：  
 
         -   默认应用程序目录网站点。  
 
@@ -163,11 +163,11 @@ ms.lasthandoff: 10/16/2017
 
         -   允许用户从电源管理中排除其设备。  
 
-    3.  “远程工具”组：  
+    3.  “远程工具” 组：  
 
         -   用户可以在软件中心内更改策略或通知设置。  
 
-    4.  “用户和设备相关性”组：  
+    4.  “用户和设备相关性” 组：  
 
         -   允许用户定义其主要设备。  
 
@@ -185,6 +185,26 @@ ms.lasthandoff: 10/16/2017
 1. 如果未安装应用程序目录网站点站点服务器角色，则软件中心将显示“计算机代理”客户端设置（软件中心中显示的“组织名称”）中指定的组织名称。 有关说明，请参阅[如何配置客户端设置](https://docs.microsoft.com/sccm/core/clients/deploy/configure-client-settings)。
 2. 如果已安装应用程序目录网站点站点服务器角色，则软件中心将显示在应用程序目录网站点站点服务器角色属性中指定的组织名称和颜色。 有关详细信息，请参阅[应用程序目录网站点的配置选项](https://docs.microsoft.com/sccm/core/servers/deploy/configure/configuration-options-for-site-system-roles#BKMK_ApplicationCatalog_Website)。
 3. 如果已配置 Microsoft Intune 订阅且已连接到 Configuration Manager，则软件中心将显示 Intune 订阅属性中指定的组织名称、颜色和公司徽标。 有关详细信息，请参阅 [Configuring the Microsoft Intune subscription](https://docs.microsoft.com/sccm/mdm/deploy-use/setup-hybrid-mdm#step-3-configure-intune-subscription)。
+
+#### <a name="to-manually-set-software-center-branding"></a>手动设置软件中心品牌
+<!-- 1351224 -->
+使用 1710 版本，可以手动添加企业品牌元素，并在“软件中心”上指定选项卡的可见性。 可以添加“软件中心”特定公司名称、设置“软件中心”配置颜色主题、设置公司徽标，并设置客户端设备的可见选项卡。
+
+1. 在“Configuration Manager”控制台中，选择“管理” > “客户端设置”。 单击所需的客户端设置实例。
+2. 在“主页”选项卡上的“属性”组中，选择“属性”。
+3. 在“默认设置”对话框中，选择“软件中心”。
+4. 将“选择新设置以指定公司信息”选择为“是”，来启用“软件中心”自定义设置。
+5. 键入“公司名称”。
+6. 选择“软件中心的配色方案”。
+7. 单击“浏览”导航到“软件中心”的徽标。 徽标必须为 400 x 100 像素的 JPEG 或 PNG，最大大小为 750 KB。
+8. 选择“是”使选项卡在客户端设备的“软件中心”中可见。 至少一个选项卡必须是可见的：
+
+    -  启用“应用程序”选项卡
+    -  启用“更新”选项卡
+    -  启用“操作系统”选项卡
+    -  启用“安装状态”选项卡
+    -  启用“设备符合性”选项卡
+    -  启用“选项”选项卡
 
 > [!IMPORTANT]  
 >  软件中心品牌每 14 天与 Intune 服务同步一次。 因此，在 Configuration Manager 中显示在 Intune 中所做的更改之前可能会有延迟。

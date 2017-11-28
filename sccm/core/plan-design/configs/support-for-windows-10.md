@@ -3,7 +3,7 @@ title: "支持 Windows 10"
 titleSuffix: Configuration Manager
 description: "了解支持作为客户端或 OSD 对 System Center Configuration Manager 使用的 Windows 10 版本。"
 ms.custom: na
-ms.date: 10/11/2017
+ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.latest.revision: "5"
 author: brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 8ce7230a3aa64b78937b305fee4dc8e3f38abead
-ms.sourcegitcommit: f9c38b87fcd543ab8a5d7a7f446b42fd3e55450c
+ms.openlocfilehash: aae4a3d504ea5dad901a6248cb219aff7a03b585
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="support-for-windows-10-for-system-center-configuration-manager"></a>支持对 System Center Configuration Manager 使用 Windows 10  
 
@@ -38,13 +38,13 @@ ms.lasthandoff: 10/19/2017
 -   下面的信息补充了[客户端和设备支持的操作系统](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices)。
 -   如果使用 Configuration Manager 的 Long-Term Servicing Branch，请参阅 [Long-Term Servicing Branch 的支持配置](/sccm/core/understand/supported-configurations-for-ltsb)。
 
-|Windows 10 版本                    |Configuration Manager 1610          |    Configuration Manager 1702          |    Configuration Manager 1706 |
+|Windows 10 版本                    |  Configuration Manager 1702          |    Configuration Manager 1706 |Configuration Manager 1710          |  
 |---------------------|-----|-----|-----|
-|企业版 2015 长期服务                   |![支持](media/green_check.png) |![支持](media/green_check.png) |![支持](media/green_check.png) |
-|企业版 2016 长期服务                   |![支持](media/green_check.png) |![支持](media/green_check.png) |![支持](media/green_check.png) |
+|企业版 2015 长期服务                   |![支持](media/green_check.png) |![支持](media/green_check.png) | ![支持](media/green_check.png) |
+|企业版 2016 长期服务                   |![支持](media/green_check.png) |![支持](media/green_check.png) | ![支持](media/green_check.png) |
 |1607   <br />（也称为周年更新）<br />（*请参见版本*）   |![支持](media/green_check.png) |![支持](media/green_check.png)            |![支持](media/green_check.png) |
-|1703   <br />（也称为创意者更新）<br />（*请参见版本*）      |![不支持](media/Red_X.png)   |![后向兼容](media/blue_compat.png) |![支持](media/green_check.png) |
-|1709   <br />（也称为 Fall Creators Update）<br />（*请参见版本*） |![不支持](media/Red_X.png)   |![不支持](media/Red_X.png)   |![后向兼容](media/blue_compat.png) |
+|1703   <br />（也称为创意者更新）<br />（*请参见版本*）      |![后向兼容](media/blue_compat.png) |![支持](media/green_check.png) | ![支持](media/green_check.png) |
+|1709   <br />（也称为 Fall Creators Update）<br />（*请参见版本*） |![不支持](media/Red_X.png)   |![后向兼容](media/blue_compat.png) | ![支持](media/green_check.png) |
 
 
 
@@ -62,11 +62,11 @@ ms.lasthandoff: 10/19/2017
 
 下表列出了可以对不同版本 Configuration Manager 使用的 Windows 10 ADK 版本。
 
-|Windows 10 ADK 版本  |Configuration Manager 1610 |Configuration Manager 1702   |Configuration Manager 1706 |
+|Windows 10 ADK 版本  |Configuration Manager 1702   |Configuration Manager 1706 |Configuration Manager 1710 |
 |--------------------|-----|-----|-----|
-|1607  |![支持](media/green_check.png)           |![后向兼容](media/blue_compat.png) |![不支持](media/Red_X.png)|
-|1703  |![不支持](media/Red_X.png)             |![支持](media/green_check.png)            |![支持](media/green_check.png) |  
-|1709  |![不支持](media/Red_X.png)             |![不支持](media/Red_X.png)              |![支持](media/green_check.png) |  
+|1607  |![后向兼容](media/blue_compat.png) |![不支持](media/Red_X.png)| ![不支持](media/Red_X.png) |
+|1703  |![支持](media/green_check.png)            |![支持](media/green_check.png) | ![后向兼容](media/blue_compat.png)|
+|1709  |![不支持](media/Red_X.png)              |![支持](media/green_check.png) | ![支持](media/green_check.png)|
 
 |项|
 |--|

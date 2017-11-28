@@ -15,11 +15,11 @@ caps.latest.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 047ffc0953db4a4cc5d543d880136ce61fa99fa7
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: a1d9144db864d261c13992a2ef4d01223d927d88
+ms.sourcegitcommit: c4a1bafcd004638d264a93d307c70d8b6f7fe023
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="which-branch-of-configuration-manager-should-i-use"></a>应该使用 Configuration Manager 的哪一个分支？
 
@@ -147,7 +147,7 @@ Technical Preview 适用于在实验室环境中了解和试用为 Configuration
 查看 Configuration Manager 站点的版本信息时，也可确认分支。
 
 **版本**   
-若要查看网站的版本，请转到控制台左上角的“关于 System Center Configuration Manager”，调出“网站版本”。 有关网站版本列表，请参阅 []()。
+若要查看网站的版本，请转到控制台左上角的“关于 System Center Configuration Manager”，调出“网站版本”。 有关站点版本的列表，请参阅[基准和更新版本](/sccm/core/servers/manage/updates#bkmk_Baselines)。
 
 **分支**  
 若要确认站点分支（是 LTSB 还是 Current Branch），在控制台中转至“管理” > “站点配置” > “站点”，并打开“层次结构设置”。 如果有转换为 Current Branch 的选项，而且选项处于活动状态，该站点运行 LTSB 版本。 如果站点运行 Current Branch，此选项将灰显。若要了解 Configuration Manager 的不同版本，请参阅 [Configuration Manager 更新](/sccm/core/servers/manage/updates)中的“基线和更新版本”。

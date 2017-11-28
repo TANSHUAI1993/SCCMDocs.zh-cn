@@ -3,7 +3,7 @@ title: "使用移动应用程序管理策略保护应用"
 titleSuffix: Configuration Manager
 description: "修改部署的应用的功能，使它们符合公司的合规性和安全策略。"
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,11 +16,11 @@ caps.handback.revision: "0"
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 4eedd96fd399cf9577da8069bd0c8d5702f50d7b
-ms.sourcegitcommit: 922d6d9c91ba2158b938df381277be1b5f1d434a
+ms.openlocfilehash: 3365f46026178d30c9bffa5078d251186d0ffba3
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="protect-apps-using-mobile-application-management-policies-in-system-center-configuration-manager"></a>使用 System Center Configuration Manager 中的移动应用程序管理策略保护应用
 
@@ -134,6 +134,8 @@ ms.lasthandoff: 11/13/2017
 |**在一定时间后重新检查访问要求（分钟）**|指定应用启动后重新检查访问要求前的时间段（在“超时”字段中）。<br /><br /> 在“离线宽限期”字段，如果设备离线，指定应用重新检查访问要求前的时间段。|  
 |**加密应用数据**|指定加密与本应用相关的所有数据，包括外部存储的数据，例如存储在 SD 卡上的数据。<br /><br /> **适用于 iOS 的加密**<br /><br /> 对于与 Configuration Manager 移动应用程序管理策略关联的应用，使用操作系统提供的设备级加密对静止数据进行加密。 通过必须由 IT 管理员设置的设备 PIN 策略启用此操作。需要 PIN 时，根据移动应用程序管理策略的设置对数据进行加密。 正如 Apple 文档所述，[iOS 7 所使用的模块经过了 FIPS 140-2 的认证](http://support.apple.com/en-us/HT202739)。<br /><br /> **适用于 Android 的加官**<br /><br /> 对于与 Configuration Manager 移动应用程序管理策略关联的应用，加密由 Microsoft 提供。 根据移动应用程序管理策略的设置，数据在文件 I/O 运行过程中同步加密。 Android 上托管的应用利用平台加密库使用 CBC 模式的 AES-128 加密。 加密方法没有获得 FIPS 140-2 认证。 设备存储中的内容始终处于加密状态。|  
     |**“阻止屏幕捕捉”** （仅限于 Android 设备）|指定在使用该应用时，阻止设备的屏幕捕捉功能。|  
+    |**禁用联系人同步**| 从版本 1710 开始，此选项阻止应用将数据保存到设备上的本机“联系人”应用。 如果选择“否”，应用可将数据保存到设备上的本机“联系人”应用。|  
+    |**禁用打印**| 从版本 1710 开始，此选项阻止应用打印工作或学校数据。 |  
 
 6)  在“托管浏览器”页上，选择允许托管浏览器只打开列表中的 URL 或是阻止托管浏览器打开列表中的 URL，然后选择“下一步”。  
 有关详细信息，请参阅[使用托管浏览器策略管理 Internet 访问](manage-internet-access-using-managed-browser-policies.md)。  

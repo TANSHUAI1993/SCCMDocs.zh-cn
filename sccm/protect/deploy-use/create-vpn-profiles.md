@@ -3,7 +3,7 @@ title: "如何创建 VPN 配置文件 "
 titleSuffix: Configuration Manager
 description: "了解如何在 System Center Configuration Manager 中创建 VPN 配置文件。"
 ms.custom: 
-ms.date: 4/19/2017
+ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,11 +16,11 @@ author: lleonard-msft
 caps.handback.revision: "0"
 ms.author: alleonar
 ms.manager: angrobe
-ms.openlocfilehash: 4e8a082bff8b0f734da620669ddf403c0fe3eca6
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 21fc286cdcc05244e1895ded5623d346e6cb8ebe
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-create-vpn-profiles-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中创建 VPN 配置文件
 
@@ -34,16 +34,19 @@ ms.lasthandoff: 10/12/2017
 
 1.  在 Configuration Manager 控制台中，选择“资产和符合性” > “符合性设置” > “公司资源访问” > “VPN 配置文件”。  
 
-3.  在“主页”选项卡上的“创建”组中，选择“创建 VPN 配置文件”。  
+2.  在“主页”选项卡上的“创建”组中，选择“创建 VPN 配置文件”。  
 
 
-1.  完成“常规”页。 ，并注意以下事项：  
+3.  完成“常规”页。 注意以下事项：  
+
+    - 选择适当的“平台”。
+
+       - 如果选择了 Windows 8.1 平台，你可以选择“从文件中导入现有 VPN 配置文件项”将已导出到 XML 文件的 VPN 配置文件信息导入。
 
     - VPN 配置文件名称中不要使用字符 \\/:*?&lt;>&#124; 或空格。 Windows Server VPN 配置文件不支持这些字符。  
 
-     -   选择“从文件中导入现有 VPN 配置文件项”，将已导出到 XML 文件的 VPN 配置文件信息导入（仅适用于 Windows 8.1 和 Windows RT）。  
 
-1.  在“连接”页面上，指定以下内容：  
+4.  在“连接”页面上，指定以下内容：  
 
     -   **连接类型**：选择 VPN 连接类型。 可从下表的连接类型中进行选择。  
 

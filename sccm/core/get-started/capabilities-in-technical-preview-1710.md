@@ -3,7 +3,7 @@ title: "Technical Preview 1710 | Microsoft 文档"
 titleSuffix: Configuration Manager
 description: "了解适用于 System Center Configuration Manager 的 Technical Preview 版本 1710 中的可用功能。"
 ms.custom: na
-ms.date: 10/30/2017
+ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.reviewer: na
@@ -14,11 +14,11 @@ ms.assetid: f4706a58-1f11-4eab-b1eb-3d1a0da02d0f
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 813fdc40c4a0eb7c2dd3c1831bac1ba1667fe247
-ms.sourcegitcommit: 5437b2823bada8f8c9e67940f584953b9d190628
+ms.openlocfilehash: 309d677c0b8c692548d649346bb35bfa9d2a81f3
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="capabilities-in-technical-preview-1710-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1710 中的功能
 
@@ -52,6 +52,19 @@ ms.lasthandoff: 10/31/2017
  -  Task 1
  -  Task 2              
 -->
+
+## <a name="improvements-for-deploying-powershell-scripts-from-configuration-manager"></a>针对从 Configuration Manager 部署 PowerShell 脚本的改进
+在此版本中，现在部署的 PowerShell 脚本支持使用以下改进： 
+- **安全作用域**。  脚本现在使用安全作用域来控制脚本创作和执行。 这是通过分配代表用户组的标记来完成的。 有关使用安全作用域的详细信息，请参阅[为 System Center Configuration Manager 配置基于角色的管理](../../core/servers/deploy/configure/configure-role-based-administration.md)。
+- **实时监视**。 监视中的脚本运行状态和脚本运行的实时状态同步。
+- **参数验证**。 脚本中的每一个参数都有一个“脚本参数属性”对话框，可以在此处添加该参数的验证信息。 添加验证信息后，如果为参数输入了和验证不符的值，那么将收到错误消息。
+
+PowerShell 脚本部署首次在 Technical Preview[ Tech Preview 1706](/sccm/core/get-started/capabilities-in-technical-preview-1706#create-and-run-powershell-scripts-from-the-configuration-manager-console) 中引入。 在 [Tech Preview 1707](/sccm/core/get-started/capabilities-in-technical-preview-1707#add-parameters-when-you-deploy-powershell-scripts-from-configuration-manager) 和之后的 [Tech Preview 1708](/sccm/core/get-started/capabilities-in-technical-preview-1708#improvements-for-specifying-script-parameters-when-you-deploy-powershell-scripts-from-configuration-manager) 中提供了其他改进。
+
+
+### <a name="try-it-out"></a>试试看！
+
+若要尝试使用运行脚本功能，请参阅[创建并运行脚本](../../apps/deploy-use/create-deploy-scripts.md)。
 
 
 
@@ -104,7 +117,7 @@ ms.lasthandoff: 10/31/2017
 ### <a name="create-an-exploit-guard-policy----1355468---"></a>创建攻击防护策略  <!--1355468 -->
 1.  在 Configuration Manager 控制台中，转到“资产和符合性” > “Endpoint Protection”，然后单击“Windows Defender 攻击防护”。
 2.  在“主页”选项卡上的“创建”组中，单击“创建攻击策略”。
-3.  在“创建配置项目向导”的“常规”页面上，指定配置项目的名称和可选描述。
+3.  在“创建配置项目向导”  的“常规” 页面上，指定配置项目的名称和可选描述。
 4.  接下来，选择你想要通过此策略管理的攻击防护组件。 然后，对于你选择的每个组件，可以配置更多详细信息。
   - 攻击面减少：配置你想要阻止或审核的 Office 威胁、脚本威胁和电子邮件威胁。 此外，还可以从该规则中排除特定文件或文件夹。
   - 受控文件夹访问权限：配置阻止或审核，然后添加可绕过此策略的应用。  另外，还可以指定默认情况下未受保护的其他文件夹。
@@ -116,7 +129,7 @@ ms.lasthandoff: 10/31/2017
 创建攻击防护策略后，使用“部署攻击防护策略”向导对其进行部署。 若要执行此操作，打开 Configuration Manager 控制台，进入“资产和符合性” > “Endpoint Protection”，然后单击“部署攻击防护策略”。
 
 ## <a name="limited-support-for-cng-certificates"></a>对 CNG 证书的有限支持
-<!-- 1356191 --> 
+<!-- 1356191 -->
 从此版本开始，现在可以将[加密 API：下一代 (CNG)](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx) 证书模板针用于以下场景：
 
 - 客户端注册和与 HTTPS 管理点的通信。   
@@ -184,13 +197,13 @@ ms.lasthandoff: 10/31/2017
 ## <a name="configure-and-deploy-windows-defender-application-guard-policies----1351960---"></a>配置和部署 Windows Defender 应用程序防护策略 <!-- 1351960 -->
 
 [Windows Defender 应用程序防护](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97)是一项新的 Windows 功能，通过在操作系统的其他部分无法访问的安全隔离容器中打开不受信任的网站来帮助保护用户安全。 在此 Technical Preview 版中，我们使用在配置后部署到集合的 Configuration Manager 符合性设置增加了对配置此功能的支持。 此功能将在 64 位版本的 Windows 10 创意者更新预览版 (codename: RS2) 中发布。 现在，若要测试此功能，必须使用此更新的预览版本。
- 
+
 ### <a name="before-you-start"></a>开始之前
 若要创建和部署 Windows Defender 应用程序防护策略，必须使用网络隔离策略配置要部署此策略的 Windows 10 设备。 有关详细信息，请参阅稍后引用的博客文章。 此功能仅适用于当前的 Windows 10 预览体验成员版本。 若要对其进行测试，客户端必须运行最新的 Windows 10 预览体验成员版本。
 
 ### <a name="try-it-out"></a>试试看！
 
-若要了解有关 Windows Defender 应用程序防护的基础知识，请阅读[博客文章]((https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97))。
+若要了解有关 Windows Defender 应用程序防护的基础知识，请阅读[博客文章](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97)。
 
 若要创建策略，并浏览可用设置，请执行以下操作：
 1. 在“Configuration Manager”控制台中，选择“资产和符合性”。
@@ -202,7 +215,7 @@ ms.lasthandoff: 10/31/2017
     > [!NOTE]
     > Windows 10 电脑仅在客户端上存储一个网络隔离列表。 在此版本中，可以创建两种网络隔离列表（一种从 Windows 信息保护创建，另一种从 Windows Defender 应用程序防护创建），并将其部署到客户端。 如果部署两个策略，两个网络隔离列表必须匹配。 如果部署的列表与同一个客户端不匹配，则部署失败。
 
-    可在 [Windows 信息保护文档](https://docs.microsoft.com/windows/threat-protection/windows-information-protection/create-wip-policy-using-sccm)中找到有关如何指定网络定义的详细信息。 
+    可在 [Windows 信息保护文档](https://docs.microsoft.com/windows/threat-protection/windows-information-protection/create-wip-policy-using-sccm)中找到有关如何指定网络定义的详细信息。
 
 6. 结束后，完成向导操作，并将策略部署到一个或多个 Windows 10 设备。
 

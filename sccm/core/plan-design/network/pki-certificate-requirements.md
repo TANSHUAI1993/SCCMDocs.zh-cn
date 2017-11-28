@@ -3,7 +3,7 @@ title: "PKI 证书要求"
 titleSuffix: Configuration Manager
 description: "查找 System Center Configuration Manager 可能需要的 PKI 证书的要求。"
 ms.custom: na
-ms.date: 04/24/2017
+ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,21 +15,26 @@ caps.latest.revision: "17"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: f5afa9fd9823cfbaa305b4d4e88f89be7004bd60
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: c9d95f6282820a41db762c143b3aa2f6d4fadf3e
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="pki-certificate-requirements-for-system-center-configuration-manager"></a>System Center Configuration Manager 的 PKI 证书要求
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-以下各个表列出了 System Center Configuration Manager 可能需要的公钥基础结构 (PKI) 证书。 此信息假定用户对 PKI 证书有着基本了解。 如需逐步部署指南，请参阅 [System Center Configuration Manager PKI 证书的分步部署示例：Windows Server 2008 证书颁发机构](/sccm/core/plan-design/network/example-deployment-of-pki-certificates)。 有关 Active Directory 证书服务的详细信息，请参阅下列文档：  
+以下各个表列出了 System Center Configuration Manager 可能需要的公钥基础结构 (PKI) 证书。 此信息假定用户对 PKI 证书有着基本了解。 如需逐步部署指南，请参阅 [System Center Configuration Manager PKI 证书的分步部署示例：Windows Server 2008 证书颁发机构](/sccm/core/plan-design/network/example-deployment-of-pki-certificates)。 
+
+有关 Active Directory 证书服务的详细信息，请参阅下列文档：  
 
 -   对于 Windows Server 2012： [Active Directory 证书服务概述](http://go.microsoft.com/fwlink/p/?LinkId=286744)  
 
--   对于 Windows Server 2008： [Windows Server 2008 中的 Active Directory 证书服务](http://go.microsoft.com/fwlink/p/?LinkId=115018)  
+-   对于 Windows Server 2008： [Windows Server 2008 中的 Active Directory 证书服务](http://go.microsoft.com/fwlink/p/?LinkId=115018)
+
+有关将下一代加密技术 (CNG) API 证书用于 Configuration Manager 的详细信息，请参阅 [CNG 证书概述](cng-certificates-overview.md)。
+
 
 > [!IMPORTANT]  
 > System Center Configuration Manager 支持安全哈希算法 2 (SHA-2) 证书。 SHA-2 证书引入了重大的安全改进功能。 因此，建议执行以下操作：

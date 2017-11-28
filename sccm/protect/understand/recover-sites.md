@@ -3,7 +3,7 @@ title: "站点恢复"
 titleSuffix: Configuration Manager
 description: "了解如何恢复 System Center Configuration Manager 站点。"
 ms.custom: na
-ms.date: 6/5/2017
+ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.latest.revision:
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 96785ea5abcb4ae67952ad8243c36bf6b238daca
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 497860c9b5698271d7ca6e4683e99350100f596f
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/21/2017
 ---
 #  <a name="recover-a-configuration-manager-site"></a>恢复 Configuration Manager 站点
 
@@ -30,6 +30,12 @@ Configuration Manager 站点出现故障或者站点数据库中发生数据丢�
 此主题中的各节可帮助你恢复 Configuration Manager 站点。 要创建备份，请参阅 [Configuration Manager 备份](/sccm/protect/understand/backup-and-recovery)。
 
 ## <a name="considerations-before-recovering-a-site"></a>恢复站点前的注意事项
+> [!Important]  
+> 此信息仅适用于站点恢复方案。  在升级本地基础结构并未主动恢复故障站点时，请查看以下主题中的信息：
+> - [升级本地基础结构](/sccm/core/servers/manage/upgrade-on-premises-infrastructure)
+> - [修改基础结构](/sccm/core/servers/manage/modify-your-infrastructure)
+
+
 **必须使用相同版本的 SQL Server：**例如，不支持将 SQL Server 2014 上运行的数据库还原到 SQL Server 2016。 同样，也不支持还原在 SQL Server 2016 标准版和 SQL Server 2016 企业版上运行的站点数据库。
 -   不能将 SQL Server 设置为 **单用户模式**。
 -   确保 .MDF 和 .LDF 文件有效。 恢复站点时，不会对正在还原的文件的状态进行检查。
@@ -124,7 +130,7 @@ Configuration Manager 站点出现故障或者站点数据库中发生数据丢�
 使用以下过程之一来帮助恢复站点服务器和站点数据库。
 
 ### <a name="to-start-a-site-recovery-in-the-setup-wizard"></a>在安装向导中启动站点恢复
-1.  将 [CD.Latest](/sccm/core/servers/manage/the-cd.latest-folde) 文件夹复制到 Configuration Manager 安装文件夹之外的位置。
+1.  将 [CD.Latest](/sccm/core/servers/manage/the-cd.latest-folder) 文件夹复制到 Configuration Manager 安装文件夹之外的位置。
 从 CD.Latest 文件夹的副本中，运行 Configuration Manager 安装向导。
 
 2.  在“入门”  页上，选择“恢复站点” ，然后单击“下一步” 。

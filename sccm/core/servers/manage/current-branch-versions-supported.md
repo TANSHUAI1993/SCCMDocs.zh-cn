@@ -3,7 +3,7 @@ title: "Current Branch 版本"
 titleSuffix: Configuration Manager
 description: "查看 System Center Configuration Manager 的版本历史记录，并了解有关提供的各个服务阶段。"
 ms.custom: na
-ms.date: 7/31/2017
+ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,32 +16,37 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: noindex,nofollow
-ms.openlocfilehash: 3907a8f764ddd4dcea992875d0181b93d4760b42
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 628c01d3f746155076e5bab68a38c0a50c73697d
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="support-for-system-center-configuration-manager-current-branch-versions"></a>对 System Center Configuration Manager Current Branch 版本的支持
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-Microsoft 计划每年发布几次 System Center Configuration Manager Current Branch 的更新。 对于每个更新版本，仍为自其通用版本 (GA) 发布日期起 12 个月内受支持。 我们会在这 12 个月内始终提供技术支持。 但是，我们的支持结构现在是动态的，会发展为两个不同的服务阶段，具体取决于最新 Current Branch 版本的可用性。  
+Microsoft 计划每年发布几次 System Center Configuration Manager Current Branch 的更新。 对于 1710 前发布的 Configuration Manager 版本，支持期为 12 个月。 从 1710 版本开始后，对于每个更新版本，仍为自其通用版本 (GA) 发布日期起 18 个月内受支持。 我们会在整个支持期内始终提供技术支持。 但是，我们的支持结构是动态的，会发展为两个不同的服务阶段，具体取决于最新 Current Branch 版本的可用性。  
 
 -   安全更新和关键更新服务阶段 - 运行最新 Current Branch 版本的 Configuration Manager 时，你会收到安全更新和关键更新。  
 
--   安全更新（仅限）服务阶段 - 发布新的 Current Branch 版本之后，对较旧分支的支持会减少为仅在 12 个月支持生命周期的剩余时间内提供安全更新（如图 1 所示）。  
+-   （仅限）安全更新服务阶段 - 新的 Current Branch 版本发布之后，对较旧分支的支持会减少为仅在该版本支持生命周期的剩余时间内提供安全更新（如图 1 所示）。  
 
- ![CM&#95;Servicing&#95;support&#95;timeline](../../../core/servers/manage/media/CM_Servicing_support_timeline.png "CM_Servicing_support_timeline")  
-图 1. Current Branch 服务支持发布周期重叠示例。
+ ![CM&#95;Servicing&#95;support&#95;timeline](media/CM_Servicing_support_timeline1.png "CM_Servicing_support_timeline")  
+图 1. Current Branch 服务支持发布周期重叠示例。 此示例用于说明该周期，并不代表实际或预期的发布日期。
 
 > [!NOTE]  
->  最新 Current Branch 版本始终处于安全更新和关键更新服务阶段。 这意味着如果遇到需要关键更新的代码缺陷，则必须安装最新 Current Branch 版本才会接收修补程序。 所有其他受支持的 Current Branch 版本仅有资格接收安全更新。 所有支持都会在 Current Branch 版本的 12 个月生命周期过期之后结束。 那时客户必须更新到受支持的 Current Branch 版本。  
+>  最新 Current Branch 版本始终处于安全更新和关键更新服务阶段。 此支持声明意味着如果遇到需要关键更新的代码缺陷，则必须安装最新 Current Branch 版本才会接收修补程序。 所有其他受支持的 Current Branch 版本仅有资格接收安全更新。
+> - 对于版本 1710 以及之后的版本，所有支持都会在 Current Branch 版本的 18 个月生命周期过期之后结束。
+> - 对于 1710 之前的版本，将在 12 个月生命周期过期之后结束支持。
+
+> 我们建议在当前版本的支持到期之前，将 Configuration Manager 的部署更新到最新版本。
 
  **版本历史记录**  
 
 |版本|可用日期|支持结束日期|  
 |-------------|-----------------------|----------------------|  
+|1710|2017 年 11 月 20 日|2018 年 11 月 20 日|
 |1706|2017 年 7 月 31 日|2018 年 7 月 31 日|
 |1702|2017 年 3 月 27 日|2018 年 3 月 27 日|
 |1610|2016 年 11 月 18 日|2017 年 11 月 18 日|
@@ -52,4 +57,4 @@ Microsoft 计划每年发布几次 System Center Configuration Manager Current B
 
 
 
-有关作为控制台中更新或基准的版本号和可用性的信息，请参阅[基准和更新版本](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)。
+有关作为控制台中更新或基准的版本号和可用性的信息，请参阅[基线和更新版本](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)。

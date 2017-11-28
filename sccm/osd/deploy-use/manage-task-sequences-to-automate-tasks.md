@@ -3,9 +3,9 @@ title: "管理任务序列来自动执行任务"
 titleSuffix: Configuration Manager
 description: "可以创建、编辑、部署、导入和导出任务序列，以在 System Center Configuration Manager 环境中对其进行管理。"
 ms.custom: na
-ms.date: 03/24/2017
+ms.date: 11/15/2017
 ms.prod: configuration-manager
-ms.reviewer: na
+ms.reviewer: nac
 ms.suite: na
 ms.technology: configmgr-osd
 ms.tgt_pltfrm: na
@@ -15,11 +15,11 @@ caps.latest.revision: "10"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 0174a95f1d3a487cab66d8152a3de70d91b07635
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 44e6afbfac3ef1e8318991854c8fdd22ead4c6ed
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="manage-task-sequences-to-automate-tasks-in-system-center-configuration-manager"></a>管理任务序列以在 System Center Configuration Manager 中自动执行任务
 
@@ -446,6 +446,22 @@ ms.lasthandoff: 10/12/2017
 5.  根据需要为 Configuration Manager 指定要在评估任务序列变量时使用的优先级。  
 
 6.  将所有变量添加到集合之后，单击“确定”。  
+
+## <a name="add-child-task-sequences-to-a-task-sequence"></a>将子任务序列添加到任务序列
+
+从 Configuration Manager 版本 1710 开始，可以添加运行另一个任务序列的新任务序列步骤。 这将创建任务序列之间的父子关系。 这允许创建更多可重复使用的模块式任务序列。
+
+将子任务序列添加到任务序列时，请考虑以下事项：
+
+ - 父和子任务序列有效地组合成客户端运行的单个策略。
+ - 该环境是全局环境。 例如，如果变量由父任务序列设置，然后由子任务序列更改，那么之后变量将保持更改。 类似地，如果子任务序列创建了一个新变量，那么该变量可用于父任务序列中的其余步骤。
+ - 对于单个任务序列操作，状态消息均按正常发送。
+ - 任务序列将条目写入 smsts.log 文件，包括在子任务序列启动时使其清晰明确的新日志条目。
+
+### <a name="to-add-a-child-task-sequence-to-a-task-sequence"></a>将子任务序列添加到任务序列
+
+1. 在任务序列编辑器中，单击“添加”，选择“常规”，然后单击“运行任务序列”。
+2. 单击“浏览”，选择子任务序列。  
 
 ##  <a name="BKMK_AdditionalActionsTS"></a>用于管理任务序列的其他操作  
  选择任务序列时，可以使用其他操作来管理任务序列。  

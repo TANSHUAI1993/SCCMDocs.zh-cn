@@ -1,21 +1,22 @@
 ---
-title: "软件更新简介 | Microsoft Docs"
+title: "软件更新简介"
+titleSuffix: Configuration Manager
 description: "了解 System Center Configuration Manager 中的软件更新的基础知识。"
 keywords: 
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 10/06/2016
+ms.date: 10/30/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: e9778b13-c8a3-40eb-8655-34ac8ce9cdaa
-ms.openlocfilehash: 2904b904bbaf155f016f55fbd36af80308a42d76
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: 66aa73e5c1aae68feeacb0eabe6233845289d104
+ms.sourcegitcommit: 986fc2d54f7c5fa965fd4df42f4db4ecce6b79cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="introduction-to-software-updates-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的软件更新简介
 
@@ -254,7 +255,7 @@ System Center Configuration Manager 中的软件更新提供了一组工具和�
 ##  <a name="BKMK_DeploymentProcess"></a> 软件更新部署过程  
  部署软件更新之后或在自动部署规则运行和部署软件更新时，会将部署分配策略添加到站点的计算机策略中。 系统会将软件更新从下载位置（Internet 或网络共享文件夹）下载到包源。 系统会从包源中将软件更新复制到站点服务器上的内容库，然后复制到分发点上的内容库。  
 
- 当部署的目标集合中的客户端计算机收到计算机策略时，软件更新客户端代理会启动评估扫描。 客户端代理在收到部署后不久会将分发点中所需软件更新的内容下载到本地客户端缓存，但会等到部署的“软件可用时间”  设置之后才能安装软件更新。 在用户手动启动安装之前，不会下载可选部署（没有安装截止时间的部署）中的软件更新。  
+ 当部署的目标集合中的客户端计算机收到计算机策略时，软件更新客户端代理会启动评估扫描。 客户端代理在部署的“软件可用时间”设置时将分发点中所需软件更新的内容下载到本地客户端缓存，然后即可安装软件更新。 在用户手动启动安装之前，不会下载可选部署（没有安装截止时间的部署）中的软件更新。  
 
  过了配置的截止时间之后，软件更新客户端代理将执行扫描以验证是否仍然需要软件更新。 然后，它会检查客户端计算机上的本地缓存，以验证软件更新源文件是否仍然可用。 最后，客户端安装软件更新。 如果为了为其他部署腾出空间而从客户端缓存中删除了内容，则客户端会将分发点中的软件更新重新下载到客户端缓存。 软件更新将始终下载到客户端缓存，而不考虑配置的最大客户端缓存大小。 当安装完成时，客户端代理会验证是否不再需要软件更新，然后将状态消息发送给管理点，以指明客户端上现在已经安装了软件更新。  
 

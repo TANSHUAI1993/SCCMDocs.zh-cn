@@ -3,7 +3,7 @@ title: "创建应用程序"
 titleSuffix: Configuration Manager
 description: "使用 System Center Configuration Manager 创建和部署应用程序和部署类型。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 11/07/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,11 +16,11 @@ caps.handback.revision: "0"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: 6896a4905b9eecf520dae2c887100df472963356
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: f680b692f3ae92fb8a5e8b6640ed053ceedba436
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-applications-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 创建应用程序
 
@@ -119,7 +119,7 @@ System Center Configuration Manager 应用程序具有将软件部署到设备�
 
     -   **关键字** - 以在“所选语言”下拉列表中选择的语言输入关键字的列表。 这些关键字将帮助软件中心的用户搜索应用程序。  
 
-    -   **图标** - 选择“浏览”从可用图标中为此应用程序选择一个图标。 如果不指定图标，则会为此应用程序使用默认图标。  
+    -   **图标** - 选择“浏览”从可用图标中为此应用程序选择一个图标。 如果不指定图标，则会为此应用程序使用默认图标。 现在图标的像素大小最大可设置为 512 x 512。
 
     -   **将此应用显示为特色应用并在公司门户中突出显示** - 选择此选项可在公司门户中突出显示应用。  
 

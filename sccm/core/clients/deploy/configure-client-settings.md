@@ -15,11 +15,11 @@ caps.latest.revision: "5"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 7d63aa43062b331dde993ae5f59f1d2a7e846482
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 20a8f91d10d98542f08e440bcfbc1a6f98a51932
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-configure-client-settings-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中配置客户端设置
 
@@ -66,6 +66,19 @@ ms.lasthandoff: 10/12/2017
 10. 查看刚刚创建的自定义客户端设置的顺序。 如果有多个自定义客户端设置，则会依据其序号应用这些设置。 如果存在任何冲突，则具有最低序号的设置优先于其他设置。 若要更改序号，请在“主页”选项卡上的“客户端设置”组中选择“上移项目”或“下移项目”。  
 
  当客户端计算机下一次下载客户端策略时，将使用这些设置对它们进行配置。 若要为单一客户端启动策略检索，请参阅[如何管理 System Center Configuration Manager 中的客户端](../../../core/clients/manage/manage-clients.md)中的[为 Configuration Manager 客户端启动策略检索](../../../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval)。  
+
+## <a name="limit-windows-10-enhanced-telemetry-to-only-send-data-relevant-to-windows-analytics-device-health"></a>限制 Windows 10 增强遥测只发送与 Windows Analytics 设备运行状况相关的数据
+<!-- 1356148 -->
+
+在 1710 更新中，可以将 Windows 10 遥测数据收集级别设置为“增强(受限)”。 该设置使你能够在环境中获得对设备的可操作见解，而无需设备通过 Windows 10 版本 1709 或更高版本报告“增强”遥测级别的所有数据。
+
+“增强(受限)”遥测级别包括来自基本级别的指标，以及从与 Windows Analytics 相关的“增强”级别中收集的数据子集。 有关遥测级别的详细信息，请参阅[遥测级别](https://docs.microsoft.com/windows/configuration/configure-windows-telemetry-in-your-organization#telemetry-levels)。
+
+1.  在 Configuration Manager 控制台中，选择“管理” > “客户端设置” > “默认客户端设置”。  
+
+2.  在“主页”选项卡上，选择“属性”。  
+
+3.  打开“云服务”，并将 Windows 10 遥测设置为“增强”。
 
 ##  <a name="view-client-settings"></a>查看客户端设置  
  如果已将多个客户端设置部署到同一设备、用户或用户组，则设置的优先顺序和组合可能会很复杂。 查看客户端设置：  

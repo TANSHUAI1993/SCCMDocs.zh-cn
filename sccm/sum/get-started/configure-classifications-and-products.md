@@ -1,21 +1,22 @@
 ---
-title: "配置要同步的分类和产品 | Microsoft Docs"
+title: "配置要同步的分类和产品"
+titleSuffix: Configuration Manager
 description: "按照以下步骤在 Configuration Manager 控制台中配置要同步的分类和产品。"
 keywords: 
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.date: 10/06/2016
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
-ms.openlocfilehash: 2da61e6e06850b36543b9fd41bd9a7d2368006fb
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+ms.openlocfilehash: f36ff74b794e57b51742c40d10bd25a9cb4a13a5
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 11/21/2017
 ---
 #  <a name="configure-classifications-and-products-to-synchronize"></a>配置要同步的分类和产品  
 
@@ -52,16 +53,16 @@ ms.lasthandoff: 08/07/2017
     >       
 
     > [!NOTE]    
-    > 从 Configuration Manager 版本 1706 开始，还可以选择“包括 Microsoft Surface 驱动程序和固件更新”复选框来同步 Microsoft Surface 驱动程序。 所有软件更新点都必须运行 Windows Server 2016 才能成功同步 Surface 驱动程序。     
-    >    
-    > 这是预发行功能。 预发行功能包含在产品中，用于在生产环境中进行早期测试，但不应将其视为生产就绪。 必须启用此功能，使其可供使用。 有关详细信息，请参阅[使用更新中的预发行功能](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease)。
+    > 从 Configuration Manager 版本 1706 开始，可以选中“包括 Microsoft Surface 驱动程序和固件更新”复选框来同步 Microsoft Surface 驱动程序。 所有软件更新点都必须运行 Windows Server 2016 才能成功同步 Surface 驱动程序。 如果启用 Surface 驱动程序后，在运行 Windows Server 2012 的计算机上启用软件更新点，则驱动程序更新的扫描结果不准确。 这会导致在 Configuration Manager 控制台和 Configuration Manager 报表中显示不正确的符合性数据。  
+    > 
+    > “包含 Microsoft Surface 驱动程序和固件更新”复选框在 Configuration Manager 版本 1710 中始终可用。 但这是 Configuration Manager 版本 1706 中的预发行功能，须将其打开才可用。 预发行功能是指 Current Branch 中的功能，用于在生产环境中的早期测试。 这些功能完全受支持，但仍在开发过程中，所以在从预发行类别中划出之前，可能会有所变更。 有关详细信息，请参阅[使用更新中的预发行功能](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease)。
 
 5.  在“产品”  选项卡上，指定要为其同步软件更新的产品，然后单击“关闭” 。  
 
     > [!NOTE]  
-    >  每个软件更新的元数据都定义了更新适用于的产品。 产品是指特定版本的操作系统或应用程序，例如 Microsoft Windows Server 2012。 产品家族是指从中派生单个产品的基本操作系统或应用程序。 产品系列的示例是 Windows，而 Windows Server 2012 是其成员之一。 可以指定产品系列或产品系列中的各个产品。 你选择的产品越多，同步软件更新所需的时间就越长。  
+    >  每个软件更新的元数据都定义了更新适用于的产品。 产品是指特定版本的操作系统或应用程序，例如 Microsoft Windows Server 2012。 产品家族是指从中派生单个产品的基本操作系统或应用程序。 产品系列的示例是 Windows，而 Windows Server 2012 是其成员之一。 可以指定产品系列或产品系列中的各个产品。 选择的产品越多，同步软件更新所需的时间就越长。  
     >   
-    >  在软件更新适用于多个产品，而且至少选择了一个要同步的产品时，即使没有选择某些产品，所有产品都将出现在 Configuration Manager 控制台中。 例如，Windows Server 2012 是你选择的唯一操作系统，而且软件更新应用于 Windows 8 和 Windows Server 2012，那么，这两个产品都将显示在 Configuration Manager 控制台中。  
+    >  在软件更新适用于多个产品，而且至少选择了一个要同步的产品时，即使没有选择某些产品，所有产品也会出现在 Configuration Manager 控制台中。 例如，Windows Server 2012 是你选择的唯一操作系统，而且软件更新适用于 Windows 8 和 Windows Server 2012，那么，这两个产品都会显示在 Configuration Manager 控制台中。  
 
     > [!IMPORTANT]  
     >  Configuration Manager 存储产品和产品系列的列表，你在初次安装软件更新点时可以从此列表中进行选择。 如果某些产品和产品系列是在发布 Configuration Manager 之后发布的，那么，在完成软件更新同步（这将更新可供你从中进行选择的可用产品和产品系列的列表）之前，可能无法选择它们。  

@@ -3,7 +3,7 @@ title: "客户端设置"
 titleSuffix: Configuration Manager
 description: "通过使用 System Center Configuration Manager 中的管理控制台选择客户端设置。"
 ms.custom: na
-ms.date: 08/01/2017
+ms.date: 11/17/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,11 +16,11 @@ caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: f34479d6cf0c1153615c612480f204b71a8d84cb
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 46429a02debaaaa90562b9586af57e43a9aab92c
+ms.sourcegitcommit: b74c1beaabbb628fdf5d6948fa9a6ad719fd5035
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="about-client-settings-in-system-center-configuration-manager"></a>关于 System Center Configuration Manager 中的客户端设置
 
@@ -71,7 +71,7 @@ System Center Configuration Manager 中的所有客户端设置在 Configuration
 - **配置客户端缓存大小**
 
   Windows 计算机上的客户端缓存会保存用于安装应用程序和程序的临时文件。 选择“是”，然后指定：
-    - 最大缓存大小 (MB)。 
+    - 最大缓存大小 (MB)。
     - 最大缓存大小（占磁盘的百分比）。
 客户端缓存大小可以扩展到最大大小（按 MB 或磁盘百分比指定），以较小者为准。 如果此选项为“否”，则默认大小为 5,120 MB。
 
@@ -288,6 +288,8 @@ System Center Configuration Manager 中的所有客户端设置在 Configuration
  有关维护时段的详细信息，请参阅[如何在 System Center Configuration Manager 中使用维护时段](../../../core/clients/manage/collections/use-maintenance-windows.md)。  
 
 ##  <a name="endpoint-protection"></a>Endpoint Protection  
+>  [!Tip]   
+> 除了以下信息，还可以在[示例方案：使用 System Center Endpoint Protection 来保护计算机在 System Center Configuration Manager 中免受恶意软件侵害](/sccm/protect/deploy-use/scenarios-endpoint-protection)中查找关于使用 Endpoint Protection 客户端设置的其他详细信息。
 
 -   **在客户端计算机上管理 Endpoint Protection 客户端**  
 

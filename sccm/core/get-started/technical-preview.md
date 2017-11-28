@@ -3,7 +3,7 @@ title: "Technical Preview 版本"
 titleSuffix: Configuration Manager
 description: "了解可让你试用 System Center Configuration Manager 中的新功能和新特性的 Technical Preview 版本。"
 ms.custom: na
-ms.date: 10/30/2017
+ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.reviewer: nab
 ms.suite: na
@@ -15,11 +15,11 @@ caps.latest.revision: "157"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: 0f6fb329dae1dda18bbb1869dc77872a2a6a1b98
-ms.sourcegitcommit: 5437b2823bada8f8c9e67940f584953b9d190628
+ms.openlocfilehash: c03581ba5d582d6b86f17c7ec34c3e6e0e8d627e
+ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="technical-preview-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 10/31/2017
 
  由于这是技术预览版，因此详细信息和功能可能有所更改。  
 
- 本主题包含适用于所有的技术预览版本的信息，并且列出了每个新功能及功能首次在其中出现的技术预览版本，例如，版本 1701 表示 2017 年 1 月。 这些功能的详细信息将专门在各预览版本的单独主题中详细介绍。  
+ 本主题包含适用于所有的技术预览版本的信息，并且列出了每个新功能及功能首次在其中出现的技术预览版本，例如，版本 1710 表示 2017 年 10 月。 这些功能的详细信息将专门在各预览版本的单独主题中详细介绍。  
 
  有关 Configuration Manager 的 Current Branch 中新增功能的信息，请参阅 [System Center Configuration Manager 中的新增功能](/sccm/core/plan-design/changes/what-has-changed-from-configuration-manager-2012)。
 
@@ -83,7 +83,7 @@ ms.lasthandoff: 10/31/2017
 ##  <a name="bkmk_install"></a> 安装并更新技术预览版  
  System Center Configuration Manager Technical Preview 与 System Center Configuration Manager 的当前版本是不同的。  
 
- 若要使用技术预览版，必须先安装技术预览版内部版本的 **基线版本** 。 安装基线版本之后，可使用 **控制台内部更新** 来升级此内部版本，以便使用最新预览版使你的安装程序保持最新。     通常，每个月都会提供新版本的 Technical Preview。
+ 若要使用技术预览版，必须先安装技术预览版内部版本的 **基线版本** 。 安装基线版本之后，可使用 **控制台内部更新** 来升级此内部版本，以便使用最新预览版使你的安装程序保持最新。 通常，每个月都会提供新版本的 Technical Preview。
 
 每个预览版的支持时间在发布三个后续版本后结束。 也就是说，发布 1708 版时，将不再支持 1704 版，但是仍支持 1705、1706 和 1707 版。 如果基线版本不再受支持（如 1703 版），仍然支持安装新的 Technical Preview 站点（直到新基线版本可用），只要之后将该安装产品更新为受支持的版本即可。 更新时，如果控制台中未显示可用的最新版本，请更新到提供的最新版本，然后重复此过程直至可安装 Technical Preview 的最新版本。
 
@@ -92,8 +92,8 @@ ms.lasthandoff: 10/31/2017
 
 **Technical Preview 的活动基线版本：**  
 可以在基线版本发布后的 1 年内安装此基线版本。 但是，在安装新的技术预览站点时，我们建议使用可用的最新基线版本。
--  **Technical Preview 1703** - Configuration Manager Technical Preview 1703 可作为 Configuration Manager Technical Preview 的控制台内更新，以及[作为 TechNet 评估中心网站中提供的新基线版本](http://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview)。
-
+-  **Technical Preview 1711** - Configuration Manager Technical Preview 1711 可作为 Configuration Manager Technical Preview 的控制台内更新，以及作为 [TechNet 评估中心网站](http://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview)中提供的新基线版本。
+-  **Technical Preview 1703** - Configuration Manager Technical Preview 1703 可同时用作 Configuration Manager Technical Preview 的控制台内更新和基线版本。 如果正在安装新基线版本，我们建议使用 1711 版。
 
 
 ##  <a name="BKMK_TPFeedback"></a> 提供反馈  
@@ -111,31 +111,42 @@ ms.lasthandoff: 10/31/2017
 
  |功能 |Technical Preview 版本 |Current Branch 版本|  
  |----------------|---------------------|--------------------|
+ |对运行任务序列步骤的改进<!-- 1261338 --> | [Tech Preview 1711](capabilities-in-technical-preview-1711.md) |![未添加](media/Red_X.gif)    |
+ |允许在安装应用程序时进行用户交互<!-- 1356976 --> | [Tech Preview 1711](capabilities-in-technical-preview-1711.md) |![未添加](media/Red_X.gif)    |
+ |Windows 10 的新符合性策略<!-- 1356976 --> | [Tech Preview 1711](capabilities-in-technical-preview-1711.md#new-compliance-policy-options-for-windows-10) |![未添加](media/Red_X.gif)    |
+
+
+## <a name="capabilities-delivered-in-previous-technical-previews"></a>以前的技术预览版中提供的功能
+ 当 Current Branch 的最低支持版本提供技术预览版本的所有功能时，将从下表删除该预览版本的详细信息。  
+
+ |功能 |Technical Preview 版本 |Current Branch 版本|  
+ |----------------|---------------------|--------------------|
  |Windows Analytics 设备运行状况的 Windows 10 遥测 <!--1356148 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#limit-windows-10-enhanced-telemetry-to-only-send-data-relevant-to-windows-analytics-device-health) |![未添加](media/Red_X.gif)    |
  |对软件中心图标的改进 <!-- 1356194 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#software-center-no-longer-distorts-icons-larger-than-250x250) |![未添加](media/Red_X.gif)    |
- |检查软件中心中共同托管的设备的符合性<!-- 1356374 -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md#check-compliance-from-software-center-for-co-managed-devices)|![未添加](media/Red_X.gif)    |
+ |检查软件中心中共同托管的设备的符合性<!-- 1356374 -->|[Tech Preview 1710](capabilities-in-technical-preview-1710.md#check-compliance-from-software-center-for-co-managed-devices)|![未添加](media/Red_X.gif)    |
  |对 CNG 证书的有限支持<!-- 1356191 -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md#limited-support-for-cng-certificates)|![未添加](media/Red_X.gif)    |
- |对攻击防护的支持 <!--1355468 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#support-for-exploit-guard) |![未添加](media/Red_X.gif)    |
- |对挂起的计算机重启的改进性说明   <!-- 1356283  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|![未添加](media/Red_X.gif)    |
- |设备防护策略更改   <!-- 1355092  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|![未添加](media/Red_X.gif)    |
- |配置和部署 Windows Defender 应用程序防护策略   <!-- 1351960  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|![未添加](media/Red_X.gif)    |
- 
+ |对攻击防护的支持 <!--1355468 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#support-for-exploit-guard) |[版本 1710](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy)    |
+ |对挂起的计算机重启的改进性说明   <!-- 1356283  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|[版本 1710](/sccm/core/clients/manage/manage-clients)    |
+ |设备防护策略更改   <!-- 1355092  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|[版本 1710](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)    |
+ |配置和部署 Windows Defender 应用程序防护策略   <!-- 1351960  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|[版本 1710](/sccm/protect/deploy-use/create-deploy-application-guard-policy)    |
+ |针对从 Configuration Manager 部署 PowerShell 脚本的改进<!-- 1236459 -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md#improvements-for-deploying-powershell-scripts-from-configuration-manager) | [版本 1710](/sccm/apps/deploy-use/create-deploy-scripts)
+
 ## <a name="capabilities-delivered-in-previous-technical-previews"></a>以前的技术预览版中提供的功能
  当 Current Branch 的最低支持版本提供技术预览版本的所有功能时，将从下表删除该预览版本的详细信息。  
 
  |功能 |Technical Preview 版本 |Current Branch 版本|  
  |----------------|---------------------|--------------------|
  |Configuration Manager 控制台中改进了 VPN 配置文件体验<!-- 1313282 --> | [Tech Preview 1709](capabilities-in-technical-preview-1709.md) |![未添加](media/Red_X.gif)    |
- |适用于 Windows 10 设备的共同管理|[Tech Preview 1709](capabilities-in-technical-preview-1709.md#co-management-for-windows-10-devices)|![未添加](media/Red_X.gif)    |
- |从 Configuration Manager 部署 PowerShell 脚本时指定脚本参数的改进<!-- 1236459 -->|[Tech Preview 1708](capabilities-in-technical-preview-1708.md#improvements-for-specifying-script-parameters-when-you-deploy-powershell-scripts-from-configuration-manager)|![未添加](media/Red_X.gif)|
+ |适用于 Windows 10 设备的共同管理|[Tech Preview 1709](capabilities-in-technical-preview-1709.md#co-management-for-windows-10-devices)|[版本 1710](/sccm/core/clients/manage/co-management-overview.md)|
+ |从 Configuration Manager 部署 PowerShell 脚本时指定脚本参数的改进<!-- 1236459 -->|[Tech Preview 1708](capabilities-in-technical-preview-1708.md#improvements-for-specifying-script-parameters-when-you-deploy-powershell-scripts-from-configuration-manager)|[版本 1710](/sccm/apps/deploy-use/create-deploy-scripts)|
  |管理见解<!-- 1353967 --> |[Tech Preview 1708](capabilities-in-technical-preview-1708.md#management-insights)|![未添加](media/Red_X.gif)|
- |从 Configuration Manager 控制台重启计算机<!-- 1356283 --> |[Tech Preview 1708](capabilities-in-technical-preview-1708.md#restart-computers-from-the-configuration-manager-console)|![未添加](media/Red_X.gif)|
+ |从 Configuration Manager 控制台重启计算机<!-- 1356283 --> |[Tech Preview 1708](capabilities-in-technical-preview-1708.md#restart-computers-from-the-configuration-manager-console)|[版本 1710](/sccm/core/clients/manage/manage-clients) |
  |软件中心自定义<!-- 1351224 --> |[Tech Preview 1708](capabilities-in-technical-preview-1708.md#software-center-customization)|![未添加](media/Red_X.gif)|
-|对于适用于 Windows 10 和 Office 365 的快速安装文件的客户端对等缓存支持|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#client-peer-cache-support-for-express-installation-files-for-windows-10-and-office-365)|![未添加](media/Red_X.gif)|
+|对于适用于 Windows 10 和 Office 365 的快速安装文件的客户端对等缓存支持|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#client-peer-cache-support-for-express-installation-files-for-windows-10-and-office-365)|[版本 1706](/sccm/core/plan-design/hierarchy/client-peer-cache#requirements-and-considerations-for-peer-cache)|
  |Surface 仪表板|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#surface-device-dashboard)|![未添加](media/Red_X.gif)|
- |配置和部署 Windows Defender 应用程序防护策略|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#configure-and-deploy-windows-defender-application-guard-policies)|![未添加](media/Red_X.gif)|
- |从 Configuration Manager 部署 PowerShell 脚本时，添加参数|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#add-parameters-when-you-deploy-powershell-scripts-from-configuration-manager)|![未添加](media/Red_X.gif)|
- |新移动应用程序管理策略设置|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#new-mobile-application-management-policy-settings)|![未添加](media/Red_X.gif)|
+ |配置和部署 Windows Defender 应用程序防护策略|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#configure-and-deploy-windows-defender-application-guard-policies)|[版本 1710](/sccm/protect/deploy-use/create-deploy-application-guard-policy)|
+ |从 Configuration Manager 部署 PowerShell 脚本时，添加参数|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#add-parameters-when-you-deploy-powershell-scripts-from-configuration-manager)|[版本 1710](/sccm/apps/deploy-use/create-deploy-scripts)|
+ |新移动应用程序管理策略设置|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#new-mobile-application-management-policy-settings)|[版本 1710](/sccm/mdm/deploy-use/protect-apps-using-mam-policies#step-3-create-an-application-management-policy)|
  |改进了软件更新点的边界组|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#improved-boundary-groups-for-software-update-points)|[版本 1706](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points)|
  |站点服务器角色的高可用性|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#site-server-role-high-availability) |![未添加](media/Red_X.gif)|
  |在 Device Guard 策略中包括对特定文件和文件夹的信任|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#include-trust-for-specific-files-and-folders-in-a-device-guard-policy)|[版本 1706](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)|
@@ -144,7 +155,7 @@ ms.lasthandoff: 10/31/2017
  |辅助功能改进 |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#accessibility-improvements)|[版本 1706](/sccm/core/understand/accessibility-features)|
  |升级就绪情况的 Azure 服务向导支持 |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#changes-to-the-azure-services-wizard-to-support-upgrade-readiness)|[版本 1706](/sccm/core/servers/deploy/configure/azure-services-wizard)|
  |云服务的新客户端设置|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#new-client-settings-for-cloud-services)|[版本 1706](/sccm/core/clients/deploy/deploy-clients-cmg-azure)|
- |从 Configuration Manager 控制台创建并运行 PowerShell 脚本|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#create-and-run-powershell-scripts-from-the-configuration-manager-console)|[版本 1706](/sccm/apps/deploy-use/create-deploy-scripts)|
+ |从 Configuration Manager 控制台创建并运行 PowerShell 脚本|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#create-and-run-powershell-scripts-from-the-configuration-manager-console)|[版本 1710](/sccm/apps/deploy-use/create-deploy-scripts)|
  |PXE 网络启动对 IPv6 的支持 |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#pxe-network-boot-support-for-ipv6)|![未添加](media/Red_X.gif)|
  |管理 Microsoft Surface 驱动程序更新 |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#manage-microsoft-surface-driver-updates)|[版本 1706](/sccm/core/plan-design/changes/whats-new-in-version-1706#manage-microsoft-surface-driver-updates)|
  |配置 Windows Update for Business 延迟策略 |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#configure-windows-update-for-business-deferral-policies)|[版本 1706](/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10#configure-windows-update-for-business-deferral-policies)|
@@ -157,7 +168,7 @@ ms.lasthandoff: 10/31/2017
  |支持 Entrust 证书颁发机构|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#support-for-entrust-certification-authorities)|[版本 1706](/sccm/mdm/deploy-use/create-pfx-certificate-profiles)|
  |macOS VPN 配置文件的 Cisco (IPSec) 支持|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#cisco-ipsec-support-for-macos-vpn-profiles)|[版本 1706](/sccm/protect/deploy-use/vpn-profiles)|
  |Azure AD 和云管理的新功能|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#new-capabilities-for-azure-ad-and-cloud-management)|[版本 1706](/sccm/core/plan-design/changes/whats-new-in-version-1706#azure-ad-integration-with-configuration-manager)|
- |配置和部署 Windows Defender 应用程序防护策略|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#configure-and-deploy-windows-defender-application-guard-policies)|![未添加](media/Red_X.gif)|
+ |配置和部署 Windows Defender 应用程序防护策略|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#configure-and-deploy-windows-defender-application-guard-policies)|[版本 1710](/sccm/protect/deploy-use/create-deploy-application-guard-policy)|
  |更新重置工具  |[Tech Preview 1705](capabilities-in-technical-preview-1705.md#update-reset-tool)|[版本 1706](/sccm/core/servers/manage/update-reset-tool)|
  |高 DPI 控制台支持  |[Tech Preview 1705](capabilities-in-technical-preview-1705.md#high-dpi-console-support)|[版本 1706](/sccm/core/plan-design/changes/whats-new-in-version-1706#high-dpi-console-support)|
  |对等缓存功能改进  |[Tech Preview 1705](capabilities-in-technical-preview-1705.md#peer-cache-improvements) |[版本 1706](/sccm/core/plan-design/hierarchy/client-peer-cache#requirements-and-considerations-for-peer-cache)|
@@ -276,4 +287,3 @@ ms.lasthandoff: 10/31/2017
 ## <a name="see-also"></a>另请参阅  
 [System Center Configuration Manager 中的新增功能](/sccm/core/plan-design/changes/whats-new-incremental-versions)  
  [System Center Configuration Manager 简介](../../core/understand/introduction.md)
-

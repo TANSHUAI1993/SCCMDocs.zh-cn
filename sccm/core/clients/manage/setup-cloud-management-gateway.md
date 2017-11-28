@@ -1,42 +1,41 @@
 ---
-title: "设置云管理网关 | Microsoft Docs"
+title: "设置云管理网关"
+titleSuffix: Configuration Manager
 description: 
-author: robstackmsft
-ms.author: robstack
+author: arob98
+ms.author: angrobe
 manager: angrobe
-ms.date: 05/01/2017
+ms.date: 09/26/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: 84b617b3e83636ab4578174ef40e786dcf1178cd
-ms.sourcegitcommit: 06aef618f72c700f8a716a43fb8eedf97c62a72b
+ms.openlocfilehash: 7463cd7199098b21843fd5b99ed284a12ff91e00
+ms.sourcegitcommit: 986fc2d54f7c5fa965fd4df42f4db4ecce6b79cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>为 Configuration Manager 设置云管理网关
 
-*适用范围：System Center Configuration Manager (Current Branch)*
-
-从 1610 版开始，在 Configuration Manager 中设置云管理网关的过程包括以下步骤：
+*适用于：System Center Configuration Manager (Current Branch)* 在 Configuration Manager 中设置云管理网关的过程包括以下步骤：
 
 ## <a name="step-1-configure-required-certificates"></a>第 1 步：配置必需证书
 
 > [!TIP]  
 > 请求获取证书前，请确认相应 Azure 域名（例如，GraniteFalls.CloudApp.Net）是否唯一。 为此，请登录 [Microsoft Azure 门户](https://manage.windowsazure.com)，单击“新建”，再依次选择“云服务”和“自定义创建”。 在“URL”字段中，键入相应域名（不要单击选中用于创建服务的复选标记）。 门户将反映域名是可用，还是已被其他服务使用。
 
-## <a name="option-1-preferred---use-the-server-authentication-certificate-from-a-public-and-globally-trusted-certificate-provider-like-verisign"></a>选项 1（首选）- 使用受信任的全球公共证书提供程序（如 VeriSign）提供的服务器身份验证证书
+### <a name="option-1-preferred---use-the-server-authentication-certificate-from-a-public-and-globally-trusted-certificate-provider-like-verisign"></a>选项 1（首选）- 使用受信任的全球公共证书提供程序（如 VeriSign）提供的服务器身份验证证书
 
 如果使用此方法，客户端会自动信任证书，无需自行创建自定义 SSL 证书。
 
 1. 在组织的公共域名服务 (DNS) 中创建规范名称记录 (CNAME)，以便将云管理网关服务的别名创建为公共证书使用的易记名称。
-例如，Contoso 将云管理网关服务命名为 **GraniteFalls**，在 Azure 中的命名为 **GraniteFalls.CloudApp.Net**。 在 Contoso 的公共 DNS contoso.com 命名空间中，DNS 管理员为实际主机名 **GraniteFalls.CloudApp.net** 新建 **GraniteFalls.Contoso.com** 的 CNAME 记录。
+例如，Contoso 将云管理网关服务命名为 GraniteFalls，在 Azure 中的命名为 GraniteFalls.CloudApp.Net。 在 Contoso 的公共 DNS contoso.com 命名空间中，DNS 管理员为实际主机名 GraniteFalls.CloudApp.net 新建 GraniteFalls.Contoso.com 的 CNAME 记录。
 2. 接下来，使用 CNAME 别名的公用名称 (CN) 向公共提供程序请求获取服务器身份验证证书。
 例如，Contoso 对证书 CN 使用 **GraniteFalls.Contoso.com**。
 3. 使用此证书在 Configuration Manager 控制台中创建云管理网关服务。
-    - 为此云服务（从“证书文件”）添加服务器证书时，在“创建云管理网关向导”的“设置”页上，该向导会从证书 CN 中提取主机名作为服务名称，然后将其附加到 **cloudapp.net**（或 Azure 美国政府云的 **usgovcloudapp.net**）中作为服务 FQDN，以便在 Azure 中创建服务。
+    - 在“创建云管理网关”向导的“设置”页上：为此云服务（从“证书文件”）添加服务器证书时，该向导会从证书 CN 中提取主机名作为服务名称，然后将其附加到 cloudapp.net（或 Azure 美国政府云的 usgovcloudapp.net）中作为服务 FQDN，以便在 Azure 中创建服务。
 例如，在 Contoso 中创建云管理网关时，从证书 CN 中提取主机名 **GraniteFalls**，以便将 Azure 中的实际服务创建为 **GraniteFalls.CloudApp.net**。
 
 ### <a name="option-2---create-a-custom-ssl-certificate-for-cloud-management-gateway-in-the-same-way-as-for-a-cloud-based-distribution-point"></a>选项 2 - 为云管理网关创建自定义 SSL 证书，方法与为基于云的分发点创建时相同
@@ -50,7 +49,7 @@ ms.lasthandoff: 08/21/2017
 
 导出网络上所用的客户端证书根的最简捷的方法就是打开已加入域且有客户端证书的一台计算机上的客户端证书并进行复制。
 
-> [!NOTE] 
+> [!NOTE]
 >
 > 希望通过云管理网关管理的任何计算机以及托管云管理网关连接点的站点系统服务器都需要客户端证书。 如果需要将客户端证书添加到任何这类计算机上，请参阅[为 Windows 计算机部署客户端证书](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_client2008_cm2012)。
 
@@ -58,7 +57,7 @@ ms.lasthandoff: 08/21/2017
 
 2.  在“文件”菜单中，选择“添加/删除管理单元...”。
 
-3.  在“添加或删除管理单元”对话框中，选择“证书” > “添加 &gt;” > “计算机帐户” > “下一步” > “本地计算机” > “完成”。 
+3.  在“添加或删除管理单元”对话框中，选择“证书” > “添加 &gt;” > “计算机帐户” > “下一步” > “本地计算机” > “完成”。
 
 4.  转到“证书”&gt;“个人”&gt;“证书”。
 
@@ -122,7 +121,7 @@ Configuration Manager 需要 Azure 管理证书来访问 Azure API 和配置云�
 
 5. 如果想要通过 14 天阈值监视云管理网关通信，请选择打开阈值警报的复选框。 然后，指定阈值，以及引发不同警报级别所依据的百分比。 完成后选择“下一步”。
 
-6. 检查设置，然后选择“下一步”。 Configuration Manager 开始设置服务。 关闭向导后，需花费 5 到 15 分钟时间在 Azure 中完整配置该服务。 检查新设置的云管理网关的“状态”，以确定服务是否已准备就绪。
+6. 检查设置，然后选择“下一步”。 Configuration Manager 开始设置服务。 关闭向导后，需花费 5 到 15 分钟时间在 Azure 中完整配置该服务。 检查新的云管理网关的“状态”，以确定服务是否已准备就绪。
 
 ## <a name="step-5-configure-primary-site-for-client-certification-authentication"></a>步骤 5：配置客户端证书身份验证的主站点
 
@@ -141,7 +140,7 @@ Configuration Manager 需要 Azure 管理证书来访问 Azure API 和配置云�
 
 ## <a name="step-7-configure-roles-for-cloud-management-gateway-traffic"></a>步骤 7：为云管理网关通信配置角色
 
-设置云管理网关的最后一步是配置站点系统角色以接受云管理网关通信。 云管理网关仅支持管理点和软件更新点角色。 必须分别配置每个角色。
+设置云管理网关的最后一步是配置站点系统角色以接受云管理网关通信。 云管理网关仅支持管理点和软件更新点角色。 分别配置每个角色。
 
 1. 在 Configuration Manager 控制台中，转到“管理” > “站点配置” > “服务器和站点系统角色”。
 
@@ -155,7 +154,7 @@ Configuration Manager 需要 Azure 管理证书来访问 Azure API 和配置云�
 
 在完整配置云管理网关和站点系统角色并进行运行之后，客户端将在下一位置请求中自动获取云管理网关服务的位置。 客户端必须位于公司网络，才能接收云管理网关服务的位置。 位置请求的轮询周期为 24 小时。 如果不想等待按正常计划执行的位置请求，可以通过重新启动计算机上的 SMS 代理主机服务 (ccmexec.exe) 强制执行该请求。
 
-在客户端上配置云管理网关服务的位置后，它可自动确定是在 Intranet 还是 Internet 上。 如果客户端可以联系域控制器或本地管理点，该客户端会将其用于与 Configuration Manager 进行通信；否则，它会认为位于 Internet 上，并使用云管理网关的位置来进行通信。
+在客户端上配置云管理网关服务的位置后，它可自动确定是在 Intranet 还是 Internet 上。 如果客户端可以联系域控制器或本地管理点，该客户端会将其用于与 Configuration Manager 进行通信。 否则，客户端会将其视为位于 Internet 上，并使用云管理网关服务的位置进行通信。
 
 >[!NOTE]
 > 可以强制客户端始终使用云管理网关，不管它是位于 Intranet 还是 Internet 上。 若要执行该操作，请在客户端计算机上设置以下注册表项：\
