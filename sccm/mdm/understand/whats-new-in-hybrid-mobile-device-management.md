@@ -14,11 +14,11 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 29dd4bff6d35712c23d66751db16a00aa761b8b4
-ms.sourcegitcommit: 922d6d9c91ba2158b938df381277be1b5f1d434a
+ms.openlocfilehash: 4877d05004bd883a3ae0ad353a78643cf559275e
+ms.sourcegitcommit: 536f7295e9ea361f1f9ead6c25f3685deb041ad8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager 和 Microsoft Intune 的混合移动设备管理中的新增功能
 
@@ -46,9 +46,42 @@ ms.lasthandoff: 11/13/2017
 
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
 
+- **提供了适用于 macOS 的公司门户应用程序** <!--1541700--> macOS 上的 Intune 公司门户具有更新的体验，该体验已进行了优化，对于用户已注册的所有设备它均可以清楚地显示用户所需的所有信息和符合性通知。 此外，将 Intune 公司门户部署到设备后，适用于 macOS 的 Microsoft 自动更新将为其提供更新。 可以从 macOS 设备登录到 Intune 公司门户网站来下载适用于 macOS 的新 Intune 公司门户。
+
+- **Microsoft Planner 现已成为移动应用管理 (MAM) 已批准应用程序列表的一部分** <!-- 1248473 --> 适用于 iOS 和 Android 的 Microsoft Planner 应用程序现已成为移动应用管理 (MAM) 已批准应用程序的一部分。 该应用程序可通过 Azure 门户中的“Intune 应用保护”边栏选项卡配置到所有租户。 有关详细信息，请参阅 [MAM 已批准应用列表](https://www.microsoft.com/cloud-platform/microsoft-intune-apps)。
+
 - **访问 iOS 的托管应用日志** <!-- 1469920 --> 安装了 Managed Browser 的最终用户现在可查看所有 Microsoft 已发布应用的管理状态，并可针对托管 iOS 应用的疑难问题发送日志。
   
   若要了解如何在运行于 iOS 设备上的 Managed Browser 中启用疑难解答模式，请参阅[如何在 iOS 上使用 Managed Browser 访问托管应用日志](https://docs.microsoft.com/intune/app-configuration-managed-browser#how-to-access-to-managed-app-logs-using-the-managed-browser-on-ios)。
+
+- **版本 2.9.0 中适用于 iOS 的公司门户的设备安装工作流改进** 我们改进了适用于 iOS 的公司门户应用中的设备安装工作流。 语言更贴近用户，并尽可能地将屏幕合并。 我们还通过在整个安装文本中使用贵公司的名称，使语言更具有针对性。 可在[应用 UI 中的新增功能](https://docs.microsoft.com/intune/whats-new-app-ui#week-of-november-13-2017)页上查看此更新的工作流。
+
+- **适用于 Android 的公司门户应用程序的反馈提示** <!--1165249--> 适用于 Android 的公司门户应用程序现在可请求最终用户反馈。 此反馈将直接发送给 Microsoft，并且最终用户将有机会在公开的 Google Play 商店中评价该应用程序。 反馈不是必填项，可轻松消除此提示，以便用户可以继续使用此应用。 
+
+- **通知最终用户可以看到 Windows 10 设备的哪些设备信息** <!--1337920--> 我们已将“所有权类型”添加到适用于 Windows 10 的公司门户应用程序的“设备详细信息”屏幕上。 这样，用户可以直接从此页在 Intune 最终用户文档中找到隐私的相关详情。用户还可以在“关于”屏幕上找到此类信息。
+
+- **为 Android 设备提供了新的“解析”操作** <!--1583480--> 适用于 Android 的公司门户应用“更新设备设置”页面上引入了“解析”操作。 选择此选项可使最终用户直接进入导致其设备为不符合设备的设置。 适用于 Android 的公司门户应用程序当前支持将此操作用于[设备密码](https://docs.microsoft.com/intune-user-help/set-your-pin-or-password-android)、[设备加密](https://docs.microsoft.com/intune-user-help/encrypt-your-device-android)、[USB 调试](https://docs.microsoft.com/intune-user-help/you-need-to-turn-off-usb-debugging-android)和[未知源](https://docs.microsoft.com/intune-user-help/you-need-to-turn-off-unknown-sources-android)设置。 
+
+
+### <a name="new-in-configuration-manager-current-branch"></a>Configuration Manager (Current Branch) 中的新增功能
+
+- **新的移动应用程序管理策略设置** <!-- 1324760 --> 以下设置已添加到移动应用程序管理策略设置：
+  - **禁用联系人同步**：阻止应用将数据保存到设备上的本机“联系人”应用。
+  - **禁用打印**：阻止应用打印工作或学校数据。
+
+  请参阅[使用 Configuration Manager 中的应用保护策略来保护应用](/sccm/mdm/deploy-use/protect-apps-using-mam-policies)，尝试新的应用保护策略设置。
+
+- **Windows 10 ARM64 设备支持** <!-- 1355000 --> 运行 Windows 10 的 ARM64 设备支持混合移动设备管理 (MDM) 方案（当这些设备可用时）。 有关详细信息，请参阅 [Windows 10 ARM64 设备支持](/sccm/core/plan-design/changes/whats-new-in-version-1710#windows-10-arm64-device-support)。
+
+- **改进了 Configuration Manager 控制台中的 VPN 配置文件体验** <!-- 1318232 --> 在此版本中，我们更新了 VPN 配置文件向导和属性页，以显示选定平台相应的设置。 此功能以前可在 Configuration Manager Technical Preview 1709 中使用，现在可在 Intune 和 Configuration Manager (Current Branch) 1710 版本的混合部署中使用：
+  - [改进了 Configuration Manager 控制台中的 VPN 配置文件体验](/sccm/core/plan-design/changes/whats-new-in-version-1710#improved-vpn-profile-experience-in-configuration-manager-console)。
+
+
+改进了 Configuration Manager 控制台中的 VPN 配置文件体验
+
+### <a name="new-in-configuration-manger-technical-preview-1711"></a>Configuration Manager Technical Preview 1711 中的新增功能
+
+- **适用于 Windows 10 的新符合性策略选项** 现在可以为 Windows 10 设备配置符合性策略的新选项。 新的设置包括防火墙、用户帐户控制、Windows Defender 防病毒和操作系统内部版本版本控制的策略。 有关详细信息，请参阅[适用于 Windows 10 的新符合性策略选项](/sccm/core/get-started/capabilities-in-technical-preview-1711#new-compliance-policy-options-for-windows-10)。
 
 
 ## <a name="october-2017"></a>2017 年 10 月
