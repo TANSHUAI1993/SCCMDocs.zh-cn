@@ -16,11 +16,11 @@ caps.handback.revision: "0"
 author: Brenduns
 ms.author: brenduns
 manager: angrobe
-ms.openlocfilehash: ecd458cc5f86a65926d44481c894228bae5f5fbe
-ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
+ms.openlocfilehash: 5dff8641767270272bc671f19841214a141b1ea3
+ms.sourcegitcommit: ccf28bcc317f0e3cee49dae2d5b6a999ff11e956
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="updates-for-system-center-configuration-manager"></a>System Center Configuration Manager 的更新
 
@@ -75,7 +75,7 @@ Configuration Manager 的某些更新可用作现有基础结构的控制台中�
 
 |版本 |可用日期|[支持结束日期](/sccm/core/servers/manage/current-branch-versions-supported) |Baseline|控制台中更新|  
 |-------------|-----------|------------|--------------|------------------------|  
-|[1710](/sccm/core/plan-design/changes/whats-new-in-version-1710)<br /><br /> 5.00.8577.1000|2017 年 11 月 20 日|2018 年 11 月 20 日|否|是|
+|[1710](/sccm/core/plan-design/changes/whats-new-in-version-1710)<br /><br /> 5.00.8577.1000|2017 年 11 月 20 日|2019 年 5 月 20 日|否|是|
 |[1706](/sccm/core/plan-design/changes/whats-new-in-version-1706)<br /><br /> 5.00.8540.1000|2017 年 7 月 31 日|2018 年 7 月 31 日|否|是|
 |[1702](/sccm/core/plan-design/changes/whats-new-in-version-1702)<br /><br /> 5.00.8498.1000|2017 年 3 月 27 日| 2018 年 3 月 27 日|是|是|
 |[1610](/sccm/core/plan-design/changes/whats-new-in-version-1610)<br /><br /> 5.00.8458.1000|2016 年 11 月 18 日| 2017 年 11 月 18 日|否|是|

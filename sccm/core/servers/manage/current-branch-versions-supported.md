@@ -3,7 +3,7 @@ title: "Current Branch 版本"
 titleSuffix: Configuration Manager
 description: "查看 System Center Configuration Manager 的版本历史记录，并了解有关提供的各个服务阶段。"
 ms.custom: na
-ms.date: 11/20/2017
+ms.date: 11/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,11 +16,11 @@ author: Brenduns
 ms.author: brenduns
 manager: angrobe
 robots: noindex,nofollow
-ms.openlocfilehash: 628c01d3f746155076e5bab68a38c0a50c73697d
-ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
+ms.openlocfilehash: 8909c4de81ef0ca914120a67be1634380dc50c53
+ms.sourcegitcommit: 29196ffba45b16b2b6a2dc71de981dead850c41c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="support-for-system-center-configuration-manager-current-branch-versions"></a>对 System Center Configuration Manager Current Branch 版本的支持
 
@@ -44,9 +44,9 @@ Microsoft 计划每年发布几次 System Center Configuration Manager Current B
 
  **版本历史记录**  
 
-|版本|可用日期|支持结束日期|  
+|版本 |可用日期 |支持结束日期|  
 |-------------|-----------------------|----------------------|  
-|1710|2017 年 11 月 20 日|2018 年 11 月 20 日|
+|1710|2017 年 11 月 20 日|2019 年 5 月 20 日 |
 |1706|2017 年 7 月 31 日|2018 年 7 月 31 日|
 |1702|2017 年 3 月 27 日|2018 年 3 月 27 日|
 |1610|2016 年 11 月 18 日|2017 年 11 月 18 日|
