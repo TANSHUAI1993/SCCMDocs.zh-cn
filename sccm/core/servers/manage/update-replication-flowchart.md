@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d38ea401-4695-4b4c-bd8d-95bdc2c67f5a
 caps.latest.revision: "5"
-author: Brenduns
-ms.author: brenduns
+author: mestew
+ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 6a4c55701e3b023029c36d2ad81b21193e94fd64
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 5db0dd3feba0552b7ccc694ee4ff45d6b37ebe81
+ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="flowchart---update-replication-for-system-center-configuration-manager"></a>流程图 - 更新 System Center Configuration Manager 的副本
 

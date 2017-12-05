@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 5db2926f-f03e-49c7-b44b-e89b1a5a6779
 caps.latest.revision: "10"
-author: Brenduns
-ms.author: brenduns
+author: mestew
+ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: b0b2532a525fbf9b7a4942831e6066638b881665
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: cccb59cfa4466234ef55a43b81333567f007b98e
+ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="configure-boundary-groups-for-system-center-configuration-manager"></a>配置 System Center Configuration Manager 的边界组
 
@@ -356,6 +356,6 @@ ms.lasthandoff: 10/12/2017
 
  1.  在 Configuration Manager 控制台中，单击“管理” > “站点配置” > “站点”，然后在“主页”选项卡上选择“层次结构设置”。  
 
- 2.  在“层次结构设置”的“常规”选项卡上，选择“客户端首选使用边界组中指定的管理点”。  
+ 2.  在“层次结构设置”的“常规”  选项卡上，选择“客户端首选使用边界组中指定的管理点” 。  
 
- 3.  单击“确定”关闭对话框并保存配置。  
+ 3.  单击“确定”  关闭对话框并保存配置。  

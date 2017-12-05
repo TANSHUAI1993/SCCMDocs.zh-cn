@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: b1970688-0cd2-404f-a17f-9e2aa4a78758
 caps.latest.revision: "11"
 caps.handback.revision: "0"
-author: brenduns
-ms.author: brenduns
+author: erikje
+ms.author: erikje
 manager: angrobe
-ms.openlocfilehash: df0997f921bfe31bd5bac0d530d4c4fac7331a6e
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: a95dda6f536ff9c608abb03d94692b2d9fc6093c
+ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="set-up-your-system-center-configuration-manager-lab"></a>设置你的 System Center Configuration Manager 实验室
 

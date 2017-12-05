@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 21a80050-6452-4b7d-8424-99bddf9fa1f4
 caps.latest.revision: "3"
-author: Brenduns
-ms.author: brenduns
+author: mestew
+ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 8c7c582902ed856567ab496f774625acdb323887
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: a9d2fddd1210fc9b83026e27aafefd50fc5aac4d
+ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="supported-operating-systems-for-system-center-configuration-manager-consoles"></a>System Center Configuration Manager 控制台支持的操作系统
 

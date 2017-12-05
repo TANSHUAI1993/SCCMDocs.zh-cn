@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7e8ab8ca-41ef-467a-943b-a115d88cafe0
 caps.latest.revision: 
-author: Brenduns
-ms.author: brenduns
+author: mestew
+ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 57d53a66b5bf12796e9e37e7ab3d13c8a5c95d72
-ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
+ms.openlocfilehash: bf015eed67fc28faad259f4c3a54ad51ab33d531
+ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="checklist-for-installing-update-1710-for-system-center-configuration-manager"></a>用于为 System Center Configuration Manager 安装更新 1710 的清单
 

@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 caps.latest.revision: "16"
-author: Brenduns
-ms.author: brenduns
+author: mestew
+ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 93aec5773f56ad28950ae75db54739d04124794f
-ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
+ms.openlocfilehash: 42d5a059e11dffc7890ec78ce7361ebfe905a050
+ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>准备将 SQL Server AlwaysOn 可用性组与 Configuration Manager 配合使用
 
@@ -101,7 +101,7 @@ Configuration Manager 支持在以下位置使用可用性组：
 
 -     RCP 终结点映射程序 - **TCP 135**   
 -     服务器消息块 – **TCP 445**  
-    数据库移动完成后，可以删除此端口。从版本 1702 开始，不再需要此端口。
+    数据库移动完成后，可以删除此端口。从版本 1702 开始，不再需要此端口。*
 -     SQL Server Service Broker -  **TCP 4022**
 -     SQL over TCP – **TCP 1433**   
 

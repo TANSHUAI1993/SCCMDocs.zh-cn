@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: 3e839a3e-e476-4ec2-bf29-21e78180441d
 caps.latest.revision: "6"
 caps.handback.revision: "0"
-author: Brenduns
-ms.author: brenduns
+author: mstewart
+ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 7ed80c49057d5376e7f67d54777cf70402c6cbea
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: cdcb91e97d5663aea55a8201546c66683e1d4d97
+ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="get-ready-for-system-center-configuration-manager"></a>为 System Center Configuration Manager 做准备
 

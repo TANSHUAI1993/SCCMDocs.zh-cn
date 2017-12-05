@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: b2bf493e-1e10-496f-a139-2646522703ed
 caps.latest.revision: "7"
 caps.handback.revision: "0"
-author: Brenduns
-ms.author: brenduns
+author: aaroncz
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: b5162cfb8154ec23593533900a91da42239e3516
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 76ee1377f0ee555f9a939c5282df16cee73ecf61
+ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="plan-for-migration-to-system-center-configuration-manager"></a>规划向 System Center Configuration Manager 的迁移
 

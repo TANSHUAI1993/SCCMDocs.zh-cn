@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: 01b30260-f03a-4851-a549-d1b76e8cfc69
 caps.latest.revision: "25"
 caps.handback.revision: "0"
-author: brenduns
-ms.author: brenduns
+author: erikje
+ms.author: erikje
 manager: angrobe
-ms.openlocfilehash: 8649f6686adad908b7806d22983aaf20171609ba
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 3f9916efa2ff250a1ae8cba4cf63ce7527561dee
+ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="evaluate-system-center-configuration-manager-by-building-your-own-lab-environment"></a>通过构建你自己的实验室环境来评估 System Center Configuration Manager
 

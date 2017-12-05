@@ -12,14 +12,14 @@ ms.technology: configmgr-other
 ms.topic: article
 ms.assetid: 8b31fd3e-875a-4a31-9498-5b050aadce32
 caps.latest.revision: "2"
-author: Brenduns
-ms.author: brenduns
+author: erikje
+ms.author: erikje
 manager: angrobe
-ms.openlocfilehash: b58595bd02a78dea4f8925765dae344c3234a047
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 1ab5ce458b4892422aa82ae99ed69ae2eb671583
+ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="capabilities-in-technical-preview-1610-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1610 版中的功能
 

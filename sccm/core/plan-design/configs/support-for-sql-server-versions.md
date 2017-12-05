@@ -3,7 +3,7 @@ title: "支持的 SQL Server 版本"
 titleSuffix: Configuration Manager
 description: "获取托管 System Center Configuration Manager 站点数据库的 SQL Server 版本和配置要求。"
 ms.custom: na
-ms.date: 10/10/2017
+ms.date: 11/30/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 35e237b6-9f7b-4189-90e7-8eca92ae7d3d
 caps.latest.revision: "21"
-author: Brenduns
-ms.author: brenduns
+author: mestew
+ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 740a37478b4159fb9dcbfd9eaceeeaa307edd745
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 7006d6cd03da53daf0f6cb59cc4ef83e7e800a1e
+ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="supported-sql-server-versions-for-system-center-configuration-manager"></a>System Center Configuration Manager 支持的 SQL Server 版本
 
@@ -95,8 +95,6 @@ SQL Server 事务复制仅支持将对象复制到配置为使用[数据库副�
 -   主站点  
 -   辅助站点
 
-
-
 ### <a name="sql-server-2014-sp1-standard-enterprise"></a>SQL Server 2014 SP1：标准版、企业版  
  可将此版本的 SQL Server 与以下产品的非最低累计更新版本一起使用：  
 
@@ -136,8 +134,6 @@ SQL Server 事务复制仅支持将对象复制到配置为使用[数据库副�
 -   管理中心站点  
 -   主站点
 -   辅助站点
-
-
 
 ### <a name="sql-server-2016-express-sp1"></a>SQL Server 2016 Express SP1  
 可将此版本的 SQL Server 与以下产品的非最低累计更新版本一起使用：

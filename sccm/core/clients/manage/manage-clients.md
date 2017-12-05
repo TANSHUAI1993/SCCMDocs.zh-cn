@@ -15,11 +15,11 @@ caps.latest.revision: "17"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: ae1bc53cf15b2a1746656667f7bf546742432c11
-ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
+ms.openlocfilehash: 8afb217524d5c2236fb07b13cb42ca50ae200183
+ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="how-to-manage-clients-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中管理客户端
 
@@ -269,12 +269,7 @@ Configuration Manager 客户端会在接收部署之后立即下载所需软件�
 
 2.  在“缓存”选项卡上，设置空间和位置属性。 默认位置为 *%windir%*\ccmcache。  
 
-5.  若要删除缓存文件夹中的文件，请选择“删除文件”。  
-
-    > [!NOTE]
-    >
-    > 缓存文件夹是常规的 Windows 文件夹，因此可使用脚本、实用工具或 PowerShell cmdlet `Remove-Item` 自动删除文件夹内容。
-
+3.  若要删除缓存文件夹中的文件，请选择“删除文件”。  
 
 ### <a name="to-configure-client-cache-size-in-client-settings"></a>在客户端设置中配置客户端缓存大小
 
