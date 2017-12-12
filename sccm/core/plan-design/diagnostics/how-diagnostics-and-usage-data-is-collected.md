@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: becfa825-b19f-448c-ab82-bb929255e4ae
 caps.latest.revision: "5"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: a879bd0eba04ffef1f3c6c6ce8426c380aefc1d3
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: ba18ae0eae0d55d098646670d7208bcdb27d7a4a
+ms.sourcegitcommit: da27d37cc4e4e06cf23758846cdd7acb617f744b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="how-diagnostics-and-usage-data-is-collected-by-system-center-configuration-manager"></a>System Center Configuration Manager 如何收集诊断和使用情况数据
 

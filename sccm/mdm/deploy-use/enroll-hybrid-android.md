@@ -16,11 +16,11 @@ caps.handback.revision: "0"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 4b638b0325aa5f75d60a008ea60531a818ec76c2
-ms.sourcegitcommit: 1132886e07d0c0a87dcc7eeef4577dd8d8840023
+ms.openlocfilehash: c9b35122f6afbb4fffbbff48b919fd696939c897
+ms.sourcegitcommit: 51cfce302fa8ddf633ad1f379b1161c0617089b8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2017
+ms.lasthandoff: 12/11/2017
 ---
 # <a name="set-up-android-hybrid-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>使用 System Center Configuration Manager 和 Microsoft Intune 设置 Android 混合设备管理
 
@@ -60,7 +60,7 @@ ms.lasthandoff: 11/01/2017
 > 一个已知的问题将阻止“仅为这些组中的用户将受支持设备作为 Android for Work 设备管理”选项按预期方式正常运行。 指定 Azure AD 组中的用户设备将注册为 Android 而不是 Android for Work。 若要启用 Android for Work，必须使用“将所有受支持设备作为 Android for Work 管理”选项。
 
 
-设置完成后，需要让用户知道如何注册其设备。 请参阅[用户需要了解的有关设备注册的内容](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune)。 此信息适用于 Microsoft Intune 和 Configuration Manager 托管的移动设备。
+设置完成后，需要让用户知道如何注册其设备。 请参阅[用户需要了解的有关设备注册的内容](https://docs.microsoft.com/en-us/intune/end-user-educate)。 此信息适用于 Microsoft Intune 和 Configuration Manager 托管的移动设备。
 
 完成绑定后，可以在 Intune 门户中看到帐户名和组织名称。 此时，可关闭两个浏览器。
 

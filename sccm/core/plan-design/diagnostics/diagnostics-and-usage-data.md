@@ -3,7 +3,7 @@ title: "诊断和使用情况数据"
 titleSuffix: Configuration Manager
 description: "了解 System Center Configuration Manager 收集的关于其自身的诊断和使用情况数据。"
 ms.custom: na
-ms.date: 3/27/2017
+ms.date: 12/07/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: 88ac4e55-d47b-4c94-b9c3-704c6a48b845
 caps.latest.revision: "9"
 caps.handback.revision: "0"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: c70f7bc6e0b69685a8446a6d599b0b10f7508ac1
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 16f45e7ab72cff486d7565fb2577a3b65ee9efaf
+ms.sourcegitcommit: da27d37cc4e4e06cf23758846cdd7acb617f744b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="diagnostics-and-usage-data-for-system-center-configuration-manager"></a>System Center Configuration Manager 的诊断和使用情况数据
 
@@ -40,11 +40,13 @@ System Center Configuration Manager 收集有关自身的诊断和使用情况�
 -   [如何将诊断和使用情况数据用于 System Center Configuration Manager](../../../core/plan-design/diagnostics/how-diagnostics-and-usage-data-is-used.md)  
 
 -   诊断使用情况数据收集的级别：
+    - [1710 的诊断数据](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1710)  
+    - [1706 的诊断数据](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1706)    
     - [1702 的诊断数据](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1702)      
-    - [1610 的诊断数据](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1610)  
-    - [1606 的诊断数据](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1606)    
 
 <!--
+    - [Diagnostic data for 1610](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1610)  
+    - [Diagnostic data for  1606](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1606)    
     - [Diagnostic data for 1602](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1602)
     - [Diagnostic data for  1511](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1511)
 -->

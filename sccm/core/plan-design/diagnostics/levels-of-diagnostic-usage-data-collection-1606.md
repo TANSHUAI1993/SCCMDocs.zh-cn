@@ -12,7 +12,7 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f7350d03-f440-4744-82d4-75f8c6c25028
 caps.latest.revision: "4"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
 translation.priority.ht:
@@ -33,11 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.openlocfilehash: 2ed462d32dbc409066f3a4ec438c123936e87dda
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 7497f0e862f0464e85231d1bc6f0c532f2f4eaf9
+ms.sourcegitcommit: da27d37cc4e4e06cf23758846cdd7acb617f744b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1606-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1606 的诊断使用情况数据收集的级别
 
