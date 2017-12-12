@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c5a42100-2f60-4952-b495-918025ea6559
 caps.latest.revision: "4"
-author: Brenduns
-ms.author: brenduns
+author: mestew
+ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: c0277fed7db5803aa2b2246ca879640136dce02a
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: bda1ab737a3af5e13f180771cc17c9850165906c
+ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="size-and-scale-numbers-for-system-center-configuration-manager"></a>System Center Configuration Manager 的大小和扩展数量
 
@@ -147,7 +147,10 @@ ms.lasthandoff: 10/12/2017
  例如，在集成 Microsoft Intune 时，层次结构中可以支持 700,000 台台式机、最多 25,000 个 Mac 和 Windows CE 7.0 和最多 300,000 台基于云的设备 - 总共 1,025,000 台设备。 如果支持通过本地 MDM 管理的设备，那么层次结构支持的设备总数为 825,000 台设备。  
 
 > [!IMPORTANT]  
->  在管理中心站点使用标准版 SQL Server 的层次结构中，层次结构最多可支持 50,000 台台式机和设备。 在独立主站点上使用的 SQL Server 版本不限制该站点容量，以便其支持最大的规定客户端数量。  
+>  在管理中心站点使用标准版 SQL Server 的层次结构中，层次结构最多可支持 50,000 台台式机和设备。 要支持 50,000 个以上的桌面和设备，必须使用 SQL Server 的企业版。 此要求仅适用于中央管理站点，并不适用于独立主站点或子主站点，在这些站点上使用的 SQL Server 版本不限制该站点容量，以支持规定的客户端数。   
+
+
+ 在独立主站点上使用的 SQL Server 版本不限制该站点容量，以便其支持最大的规定客户端数量。  
 
 
 ###  <a name="bkmk_chipri"></a>子主站点  

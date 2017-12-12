@@ -13,14 +13,14 @@ ms.topic: get-started-article
 ms.assetid: d8c8b44c-1e8a-42b6-bab4-23c72a0a6169
 caps.latest.revision: "15"
 caps.handback.revision: "0"
-author: Brenduns
-ms.author: brenduns
+author: mestew
+ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 7a87e03cdade6339bc0ea0055edf8791e197e6f1
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 95df27d4bf21a2cb1b6d613415a3eff4c3a73552
+ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="removed-and-deprecated-features-for-system-center-configuration-manager"></a>System Center Configuration Manager 的已删除和已弃用的功能
 
@@ -89,7 +89,7 @@ ms.lasthandoff: 10/12/2017
 
 如果需要升级你的 SQL Server 版本，我们建议使用以下方法（难度从简单到复杂）。
 1. [就地升级 SQL Server](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#a-namebkmksupconfigupgradedbsrva-upgrade-sql-server-on-the-site-database-server)（推荐）。
-2. 在新计算机上安装新版本的 SQL Server，然后使用 Configuration Manager 设置的[数据库移动选项](/sccm/core/servers/manage/modify-your-infrastructure#a-namebkmkdbconfiga-modify-the-site-database-configuration)将站点服务器指向新的 SQL Server。
+2. 在一台新计算机上安装 SQL Server 的新版本。 然后使用 Configuration Manager 设置的[数据库移动选项](/sccm/core/servers/manage/modify-your-infrastructure#a-namebkmkdbconfiga-modify-the-site-database-configuration)将站点服务器指向新的 SQL Server。
 3. 使用[备份和恢复](/sccm/protect/understand/backup-and-recovery)。
 
 
@@ -104,7 +104,7 @@ ms.lasthandoff: 10/12/2017
 |软件中心具有富有现代感的全新外观。 在未来几个月，以前版本的软件中心将不再可用。<br><br>你可以通过启用客户端设置“计算机代理” > “使用新的软件中心”来使用新的软件中心。<br><br>有关软件中心的详细信息，请参阅[规划和配置 System Center Configuration Manager 中的应用程序管理](https://docs.microsoft.com/sccm/apps/plan-design/plan-for-and-configure-application-management)。|2016 年 12 月 13 日|以前版本的软件中心支持在 2018 年 1 月 1 日后发布的第一个更新后结束。|
 |随着版本 1511 软件中心新体验的提供，之前仅在应用程序目录（用户可用应用程序）中显示的应用程序，现在显示在软件中心内。 </br></br>由于软件中心现在提供应用程序目录这一主要功能，因此在接下来的几个月中将不再提供基于 Web 的应用程序目录体验。|2017 年 8 月 11日| 对应用程序目录网站用户体验的支持终于 2018 年 6 月 1 日后发布的首个更新|
 |利用 Configuration Manager 管理虚拟硬盘 (VHD)。 </br></br>这包括去除使用任务序列创建新 VHD 或管理 VHD 的选项，以及去除 Configuration Manager 控制台的虚拟硬盘节点。 </br></br>去除这种支持后，虽然现有 VHD 将不被删除，但再也无法从 Configuration Manager 控制台内访问。  |2017 年 1 月 6 日 |对 VHD 的支持将在 2017 年 6 月 1 日后随首个更新的发布而结束。|
-|System Center Configuration Manager 升级评估工具。 </br></br>升级评估工具依赖于 System Center Configuration Manager 和应用程序兼容性工具包 (ACT) 6.x。 ACT 的最终版本随附在 Windows 10 v1511 ADK 中。 由于不再对 ACT 进行任何更新，因此将停止对升级评估工具的支持。 </br></br>升级评估工具将由[升级准备](/sccm/core/clients/manage/upgrade/upgrade-analytics)功能取代。 弃用通知已于 2016 年 9 月 12 日添加到 [UAT 的下载页面](https://www.microsoft.com/download/details.aspx?id=37145)。 |9/12/2016  | 2017 年 7 月 11 日 |
+|System Center Configuration Manager 升级评估工具。 </br></br>升级评估工具依赖于 System Center Configuration Manager 和应用程序兼容性工具包 (ACT) 6.x。 ACT 的最终版本随附在 Windows 10 v1511 ADK 中。 由于不再对 ACT 进行任何更新，因此将停止对升级评估工具的支持。 </br></br>升级评估工具将由[升级准备](/sccm/core/clients/manage/upgrade/upgrade-analytics)功能取代。 弃用通知已于 2016 年 9 月 12 日添加到 [UAT 的下载页面](https://www.microsoft.com/download/details.aspx?id=37145)。 | 2016 年 9 月 12 日  | 2017 年 7 月 11 日 |
 
 
 <br></br>

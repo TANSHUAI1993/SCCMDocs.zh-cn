@@ -3,7 +3,7 @@ title: "发行说明 "
 titleSuffix: Configuration Manager
 description: "有关产品中尚未解决或 Microsoft 知识库文章中未涵盖的紧急问题，请参阅这些说明。"
 ms.custom: na
-ms.date: 08/23/2017
+ms.date: 11/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,14 +13,14 @@ ms.topic: get-started-article
 ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
 caps.latest.revision: "41"
 caps.handback.revision: "0"
-author: Brenduns
-ms.author: brenduns
+author: mestew
+ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 2571cfbff1373db05279918af776d8be81a5c322
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 8030ce7f98ebb34d9581ad036513b9b1c879c0ad
+ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="release-notes-for-system-center-configuration-manager"></a>System Center Configuration Manager 的发行说明
 
@@ -37,30 +37,10 @@ ms.lasthandoff: 10/12/2017
 - [版本 1706 中的新增功能](/sccm/core/plan-design/changes/whats-new-in-version-1706)  
 - [版本 1702 中的新增功能](/sccm/core/plan-design/changes/whats-new-in-version-1702)
 - [版本 1610 中的新增功能](/sccm/core/plan-design/changes/whats-new-in-version-1610)
-   
+
 
 
 ## <a name="setup-and-upgrade"></a>安装和升级  
-
-### <a name="after-you-update-a-configuration-manager-console-using-consolesetupexe-from-the-site-server-folder-recent-language-pack-changes-are-not-available"></a>使用站点服务器文件夹中的 ConsoleSetup.exe 更新 Configuration Manager 控制台后，最近的语言包更改不可用
-<!--  SMS 486420  Applicability should be 1610 and 1702.  -->
-*以下内容适用于版本 1610 和 1702。*   
-使用站点服务器安装文件夹中的 ConsoleSetup.exe 对控制台运行就地更新后，最近安装的语言包可能不可用。 此错误发生在以下情况下：
-- 你的站点运行版本 1610 或 1702。
-- 通过站点服务器安装文件夹中的 ConsoleSetup.exe 就地更新控制台。
-
-出现此问题时，重新安装的控制台不会使用配置的最新语言包集。 未返回任何错误，但控制台可用的语言包没有变化。  
-
-**解决方法：**卸载当前控制台，然后作为新安装重新安装控制台。 你可以使用站点服务器安装文件夹中的 ConsoleSetup.exe。 在安装过程中，请确保选择你要使用的语言包文件。
-
-
-### <a name="with-version-1702-the-default-site-boundary-group-is-configured-for-use-for-site-assignment"></a>使用版本 1702，默认站点边界组配置为用于站点分配
-<!--  SMS 486380   Applicability should only be to 1702. -->
-*以下内容适用于版本 1702。*  
-默认站点边界组参考选项卡选中“将此边界组用于站点分配”，将站点列为“分配的站点”并灰显，以使配置无法编辑或删除。
-
-**解决方法：** 无。 你可以忽略此设置。 虽然该组已启用站点分配，但默认站点边界组不用于站点分配。 使用 1702，此配置确保默认站点边界组与正确的站点相关联。
-
 
 
 ### <a name="when-installing-a-long-term-service-branch-site-using-version-1606-a-current-branch-site-is-installed"></a>使用版本 1606 安装 Long-Term Service Branch 站点时，将安装 Current Branch 站点
@@ -112,29 +92,6 @@ ConfigMgrSetup.log
  - 手动删除 *cd.latest\redist\languagepack\zhh* 文件夹，然后再次运行安装程序。
 
 
-### <a name="service-connection-tool-throws-an-exception-when-sql-server-is-remote-or-when-shared-memory-is-disabled"></a>当 SQL 服务器处于远程状态，或共享内存被禁用时，服务连接工具将引发异常
-<!-- 479223   Fixed in 1702 and later   -->
-*以下内容适用于版本 1610 以及更早版本。*  
-当存在以下一种情况，服务连接工具将引发异常：  
- -  站点数据库远离承载服务连接点的计算机，并使用非标准端口（1433 以外的端口）
- -  站点数据库与服务连接点位于同一服务器上，但禁用了 SQL 协议**共享内存**
-
-异常类似于以下示例：
- - *未处理的异常：System.Data.SqlClient.SqlException：与 SQL Server 建立连接时发生与网络相关或特定于实例的错误。找不到或无法访问服务器。验证实例名称是否正确，且 SQL Server 是否配置为允许远程连接。（提供程序：命名管道提供程序，错误：40 - 无法打开到 SQL Server 的连接）--*
-
-**解决方法**：在使用该工具期间，必须修改承载服务连接点的服务器的注册表，以包含有关 SQL Server 端口的信息：
-
-   1.   在使用该工具之前，请编辑以下注册表项，并将正在使用的端口号添加到 SQL Server 的名称：
-    - 项：   HKLM\Microsoft\SMS\COMPONENTS\SMS_DMP_UPLOADER\
-      - 值：&lt;SQL Server 名称>
-    - 添加：**,&lt;PORT>**
-
-    例如，要将端口 *15001* 添加到名为 *testserver.test.net* 的服务器，则结果项为：***HKLM\Software\Microsoft\SMS\COMPONENTS\SMS_DMP_UPLOADER\testserver.test.net,15001***
-
-   2.   将端口添加到注册表后，该工具应能正常运作。  
-
-   3.   工具使用完成后，对于 **-connect** 和 **-import** 步骤，请将注册表项更改回原始值。  
-
 
 <!-- ## Backup and recovery  -->
 
@@ -157,15 +114,6 @@ ConfigMgrSetup.log
 创建维护计划后，打开维护计划的属性，转到“评估计划”选项卡，选择“按计划运行此规则”，单击“自定义”，然后创建自定义计划。 例如，你可以将维护计划设置为每 60 天运行一次。  
 
 
-### <a name="when-a-high-risk-deployment-dialog-is-visible-to-a-user-subsequent-high-risk-dialogs-with-a-sooner-deadline-are-not-displayed"></a>对用户显示高风险部署对话框时，不会显示截止时间较早的后续高风险对话框
-<!-- Fixed in 1702 and later -->
-*以下内容适用于版本 1610 以及更早版本。*   
-为用户创建并部署高风险任务部署后，会向用户显示一个高风险对话框。 如果用户不关闭该对话框，你可创建并部署另一个高风险部署（截止时间早于第一个对话框），用户在关闭原始对话框之前不会收到更新的对话框。 部署仍将运行至配置的截止时间。
-
-**解决方法**：  
-用户必须在关闭第一个高风险部署对话框后，才能查看下一个高风险部署对话框。
-
-
 
 ## <a name="software-updates"></a>软件更新
 
@@ -180,6 +128,12 @@ ConfigMgrSetup.log
 
 
 ## <a name="mobile-device-management"></a>移动设备管理  
+
+### <a name="beginning-with-version-1710-you-can-no-longer-deploy-windows-phone-81-vpn-profiles-to-windows-10------503274--should-be-fixed-by-1802-if-not-sooner---"></a>从版本 1710 开始，不能再将 Windows Phone 8.1 VPN 配置文件部署到 Windows 10 <!-- 503274  Should be fixed by 1802, if not sooner -->
+在 1710 版本中，已不可能使用 Windows Phone 8.1 工作流创建 VPN 配置文件，Windows 10 设备同样如此。 针对这些配置文件，创建向导中不再显示“支持的平台”页面，而在后端自动选择 Windows Phone 8.1；在属性页面中，“支持的平台”页面可用，但不显示 Windows 10 选项。
+
+解决方法：对 Windows 10 设备使用 Windows 10 VPN 配置文件工作流。 如果这不适用于你的环境，请联系支持部门。 如果需要，支持部门可帮助添加 Windows 10 目标。
+
 
 ### <a name="full-wipe-disables-windows-10-devices-with-less-than-4-gb-ram"></a>完全擦除会禁用 RAM 小于 4 GB 的 Windows 10 设备
 在 RAM 小于 4 GB 的 Windows 10 RTM 设备（早于版本 1511 的版本）上执行完全擦除可能会使该设备不可用。 尝试擦除该设备后，设备无法启动且无响应。
@@ -204,20 +158,4 @@ ConfigMgrSetup.log
 
 <!-- ## Reports and monitoring    -->
 <!-- ## Conditional access   -->
-
-
-## <a name="endpoint-protection"></a>Endpoint Protection
-
-### <a name="antimalware-policy-fails-to-apply-on-windows-server-2016-core"></a>反恶意软件政策无法应用于 Windows Server 2016 Core
-<!--  Product Studio bug 485370 added 04 19 2017   Fixed in 1702 -->
-*以下内容适用于版本 1610 以及更早版本。*  
-反恶意软件政策无法应用于 Windows Server 2016 Core。  错误代码为 0x80070002。  ConfigSecurityPolicy.exe 缺少依赖项。
-
-**解决方法：**2017 年 5 月 9 日发布的[知识库文章 4019472](https://support.microsoft.com/help/4019472/windows-10-update-kb4019472) 解决了此问题。
-
-
-### <a name="windows-defender-advanced-threat-protection-policies-fail-on-older-client-agents"></a>无法在更早的客户端代理上使用 Windows Defender 高级威胁防护策略
-<!-- Product Studio bug 462286 added  05 25 2017 and valid until July 2017 GA release      Fixed in 1610 -->
-从 Configuration Manager 版本 1610 或更高站点服务器创建的 Windows Defender 高级威胁防护策略无法应用到 Configuration Manager 版本 1606 和更早版本的客户端。  未载入客户端，且策略评估报告错误。 Windows Defender 高级威胁防护配置中的“部署状态”显示“错误”。
-
-解决方法：将 Configuration Manager 客户端升级到版本 1610 或更高版本。
+<!-- ## Endpoint Protection -->

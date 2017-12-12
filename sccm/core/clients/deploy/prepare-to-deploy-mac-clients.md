@@ -3,7 +3,7 @@ title: "将客户端软件部署到 Mac 的准备工作"
 titleSuffix: Configuration Manager
 description: "将 Configuration Manager 客户端部署到 Mac 计算机前的配置任务。"
 ms.custom: na
-ms.date: 05/04/2017
+ms.date: 11/28/2017
 ms.prod: configuration-manager
 ms.reviewer: aaroncz
 ms.suite: na
@@ -15,17 +15,17 @@ caps.latest.revision: "12"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: b878c7b0328e89ff7b12bf44167fd12444a0cba4
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 1d096111250af4061c94e71f8dc602ccae2d4607
+ms.sourcegitcommit: 1dd051d8548a19b724bb8f9e6a2278a4901ed916
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="prepare-to-deploy-client-software-to-macs"></a>将客户端软件部署到 Mac 的准备工作
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-按照下列步骤，确保你已准备好[将 Configuration Manager 客户端部署到 Mac 计算机](/sccm/core/clients/deploy/deploy-clients-to-macs)。 
+按照下列步骤，确保你已准备好[将 Configuration Manager 客户端部署到 Mac 计算机](/sccm/core/clients/deploy/deploy-clients-to-macs)。
 
 ## <a name="mac-prerequisites"></a>Mac 先决条件
 
@@ -33,9 +33,9 @@ Mac 客户端安装包未与 Configuration Manager 媒体一同提供。 可从 
 
 **支持的版本：**  
 
--   **Mac OS X 10.6** (Snow Leopard) 
+-   **Mac OS X 10.6** (Snow Leopard)
 
--   **Mac OS X 10.7** (Lion) 
+-   **Mac OS X 10.7** (Lion)
 
 -   **Mac OS X 10.8** (Mountain Lion)
 
@@ -49,11 +49,13 @@ Mac 客户端安装包未与 Configuration Manager 媒体一同提供。 可从 
 
 -   **Mac OS X 10.12** (macOS Sierra)  
 
+-   **Mac OS X 10.13** (macOS High Sierra )  
+
 ## <a name="certificate-requirements"></a>证书要求
 在 Mac 计算机上安装和管理客户端需要公钥基础结构 (PKI) 证书。 PKI 证书通过使用手动身份验证和加密的数据传输来保护 Mac 计算机和 Configuration Manager 站点之间的通信的安全。 Configuration Manager 可通过将 Microsoft 证书服务与企业证书颁发机构 (CA)、Configuration Manager 注册点和注册代理点站点系统角色一起使用，从而请求和安装用户客户端证书。 或者，如果证书满足 Configuration Manager 的要求，你可以独立于 Configuration Manager 请求和安装计算机证书。   
-  
+
 Configuration Manager Mac 客户端始终执行证书吊销检查。 不能禁用此功能。  
-  
+
 如果 Mac 客户端由于无法找到 CRL 而无法确认服务器证书的证书吊销状态，它们将无法成功连接到 Configuration Manager 站点系统。 特别是，对于所在的林与证书颁发机构不同的 Mac 客户端，请检查你的 CRL 设计以确保 Mac 客户端可找到并连接到 CRL 分发点 (CDP) 以便连接站点系统服务器。  
 
 在 Mac 计算机上安装 Configuration Manager 客户端之前，请决定安装客户端证书的方式：  
@@ -83,7 +85,7 @@ Configuration Manager Mac 客户端始终执行证书吊销检查。 不能禁�
 
 Web 服务器证书必须包含在站点系统属性中指定的 Internet FQDN。 但不可通过 Internet 访问的服务器也支持 Mac 计算机。 如果不需要基于 Internet 的客户端管理，你可以为 Internet FQDN 指定 Intranet FQDN 值。  
 
-可在管理点、分发点和注册代理点的 Web 服务器证书中指定站点系统的 Internet FQDN 值。 
+可在管理点、分发点和注册代理点的 Web 服务器证书中指定站点系统的 Internet FQDN 值。
 
 有关创建和安装此 Web 服务器证书的部署示例，请参阅[为运行 IIS 的站点系统部署 Web 服务器证书](../../plan-design/network/example-deployment-of-pki-certificates.md#BKMK_webserver2008_cm2012)。  
 
@@ -119,10 +121,10 @@ Web 服务器证书必须包含在站点系统属性中指定的 Internet FQDN�
 
  尽管安装客户端无需分发点，但是，如果要在安装客户端之后将软件部署到这些计算机，则必须配置分发点以允许来自 Internet 的客户端连接。  
 
- 
+
 ### <a name="to-configure-management-points-and-distribution-points-to-support-macs"></a>配置管理点和分发点以支持 Mac  
 
-在开始此过程之前，请确保运行管理点和分发点的站点系统服务器配置为包含 Internet FQDN。 如果这些服务器不支持基于 Internet 的客户端管理，则可以将 Intranet FQDN 指定为 Internet FQDN 值。 
+在开始此过程之前，请确保运行管理点和分发点的站点系统服务器配置为包含 Internet FQDN。 如果这些服务器不支持基于 Internet 的客户端管理，则可以将 Intranet FQDN 指定为 Internet FQDN 值。
 
 这些站点系统角色必须位于主站点中。  
 

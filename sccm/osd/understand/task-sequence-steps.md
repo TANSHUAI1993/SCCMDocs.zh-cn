@@ -16,11 +16,11 @@ caps.handback.revision: "0"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 02d3ca5ed494c20266125686f26b66cebcc7c2a2
-ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
+ms.openlocfilehash: 40a2d91baf8c02cdda96e9520ce155032272ebdd
+ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="task-sequence-steps-in-system-center-configuration-manager"></a>System Center Configuration 中的任务序列步骤
 
@@ -538,22 +538,6 @@ ms.lasthandoff: 11/21/2017
 
  **确保要刷新的当前 OS**  
  选择此设置，验证目标计算机上安装的操作系统是否满足你指定的要求。 默认情况下，使用值 **CLIENT**选择此设置。  
-
-##  <a name="child-task-sequence"></a>子任务序列
-
-从 Configuration Manager 版本 1710 开始，可以添加运行另一个任务序列的新任务序列步骤。 这将创建任务序列之间的父子关系。 使用子任务序列，你可以创建模块化、可重复使用的任务序列。
-
-将子任务序列添加到任务序列时，请考虑以下事项：
-
- - 父和子任务序列有效地组合成客户端运行的单个策略。
- - 该环境是全局环境。 例如，如果变量由父任务序列设置，然后由子任务序列更改，那么之后变量将保持更改。 类似地，如果子任务序列创建了一个新变量，那么该变量可用于父任务序列中的其余步骤。
- - 对于单个任务序列操作，状态消息均按正常发送。
- - 任务序列将条目写入 smsts.log 文件，包括在子任务序列启动时使其清晰明确的新日志条目。
-
-### <a name="details"></a>详细信息
-
-1. 在任务序列编辑器中，单击“添加”，选择“常规”，然后单击“运行任务序列”。
-2. 单击“浏览”，选择子任务序列。  
 
 ##  <a name="BKMK_ConnectToNetworkFolder"></a>连接到网络文件夹  
  使用“连接到网络文件夹”任务序列操作来创建到共享网络文件夹的连接。  
@@ -1423,6 +1407,22 @@ Configuration Manager 版本 1606 中引入了一个新的任务序列变量 SMS
 
 > [!IMPORTANT]  
 >  PowerShell 1.0 不支持未定义和旁路执行策略。  
+
+##  <a name="child-task-sequence"></a> 运行任务序列
+
+从 Configuration Manager 版本 1710 开始，可以添加运行另一个任务序列的新任务序列步骤。 这将创建任务序列之间的父子关系。 使用子任务序列，可以创建模块化、可重复使用的任务序列。
+
+将子任务序列添加到任务序列时，请考虑以下事项：
+
+ - 父和子任务序列有效地组合成客户端运行的单个策略。
+ - 该环境是全局环境。 例如，如果变量由父任务序列设置，然后由子任务序列更改，那么之后变量将保持更改。 类似地，如果子任务序列创建了一个新变量，那么该变量可用于父任务序列中的其余步骤。
+ - 对于单个任务序列操作，状态消息均按正常发送。
+ - 任务序列将条目写入 smsts.log 文件，包括在子任务序列启动时使其清晰明确的新日志条目。
+
+### <a name="details"></a>详细信息
+
+1. 在任务序列编辑器中，单击“添加”，选择“常规”，然后单击“运行任务序列”。
+2. 单击“浏览”，选择子任务序列。  
 
 ##  <a name="BKMK_SetDynamicVariables"></a>设置动态变量  
  使用“设置动态变量”  任务序列步骤执行以下操作：  

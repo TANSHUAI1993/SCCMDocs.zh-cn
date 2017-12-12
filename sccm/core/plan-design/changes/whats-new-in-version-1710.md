@@ -10,14 +10,14 @@ ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bc6c3e5f-b9e2-400e-9d9d-446ff93c520c
-author: Brenduns
-ms.author: brenduns
+author: mestew
+ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 33a5bff1e202822ce3ec5755958d34af461957e9
-ms.sourcegitcommit: 536f7295e9ea361f1f9ead6c25f3685deb041ad8
+ms.openlocfilehash: 83bd5fc972bc0bef07b206e160463db71837e827
+ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="what39s-new-in-version-1710-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1710 的新增功能
 
@@ -28,8 +28,8 @@ System Center Configuration Manager Current Branch 的更新 1710 作为控制�
 > [!TIP]  
 > 若要安装新站点，必须使用 Configuration Manager 的基准版本。  
 >  了解详细信息：    
->   - [安装新站点](https://technet.microsoft.com/library/mt590197.aspx)  
->   - [在站点上安装更新](https://technet.microsoft.com/library/mt607046.aspx)  
+>   - [安装新站点](/sccm/core/servers/deploy/install/installing-sites)  
+>   - [在站点上安装更新](/sccm/core/servers/manage/updates)  
 >   - [基准和更新版本](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)  
 
 以下各节提供有关 Configuration Manager 版本 1710 中引入的更改和新功能的详细信息。  
@@ -60,13 +60,13 @@ Version 1710 drops support for the following products:
 <!-- 1350871 -->
 从 Windows 10 版本 1607（也称为周年更新）开始，可以将 Windows 10 设备同时联接到本地 Active Directory (AD) 和基于云的 Azure AD（混合 Azure AD）。 共同管理将利用此项改进，并使你能够同时使用 Configuration Manager 和 Intune 来管理 Windows 10 设备。 它是一种解决方案，在传统管理与现代管理之间架起一座桥梁，为你提供利用分阶段的方法实现转换的途径。 有关详细信息，请参阅[适用于 Windows 10 设备的共同管理](/sccm/core/clients/manage/co-management-overview)。
 
-### <a name="restart-computers-form-the-configuration-manager-console-----1356283---"></a>从 Configuration Manager 控制台重启计算机<!-- 1356283 -->
+### <a name="restart-computers-from-the-configuration-manager-console-----1356283---"></a>从 Configuration Manager 控制台重启计算机<!-- 1356283 -->
 从此版本开始，用户可以使用 Configuration Manager 控制台标识需要重启的客户端设备，然后使用客户端通知操作来重启它们。
 
 请参阅[如何在 System Center Configuration Manager 中管理客户端](/sccm/core/clients/manage/manage-clients#restart-clients)
 
 
-<!--  ## Compliance settings  -->
+<!-- ## Compliance settings -->
 
 
 ## <a name="application-management"></a>应用程序管理
@@ -130,6 +130,10 @@ Version 1710 drops support for the following products:
 
 
 ## <a name="mobile-device-management"></a>移动设备管理
+
+### <a name="actions-for-non-compliance"></a>针对非符合性的操作 
+<!--1321366 -->    
+现在可配置一系列以时间排序的应用于不符合设备的操作。 例如，可通过电子邮件通知不符合设备的最终用户，或将这些设备标记为不符合。 有关详细信息，请参阅[设置针对非符合性的操作](/sccm/mdm/deploy-use/actions-for-noncompliance)。
 
 ### <a name="windows-10-arm64-device-support"></a>Windows 10 ARM64 设备支持
 <!-- 1355000 -->
