@@ -5,23 +5,23 @@ description: "了解如何将部分用户的 MDM 机构从混合 MDM 更改为 I
 keywords: 
 author: dougeby
 manager: dougeby
-ms.date: 09/14/2017
+ms.date: 12/05/2017
 ms.topic: article
 ms.prod: configmgr-hybrid
 ms.service: 
 ms.technology: 
 ms.assetid: 6f0201d7-5714-4ba0-b2bf-d1acd0203e9a
-ms.openlocfilehash: 31d1d84c225d041f644669f0d3279e6bcd3f75ba
-ms.sourcegitcommit: 986fc2d54f7c5fa965fd4df42f4db4ecce6b79cb
+ms.openlocfilehash: 643b33810c2862e2d1c602bfe941c36605ad2631
+ms.sourcegitcommit: 8c6e9355846ff6a73c534c079e3cdae09cf13c45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="change-the-mdm-authority-for-specific-users-mixed-mdm-authority"></a>更改特定用户的 MDM 机构（混合 MDM 机构） 
 
 *适用范围：System Center Configuration Manager (Current Branch)*    
 
-若要在同一租户中配置混合 MDM 机构，可以选择部分用户在 Intune 中管理，其他用户则由混合 MDM 管理（Intune 与 Configuration Manager 集成）。 本主题介绍如何开始将用户移至 Intune 独立版，并假定你已完成以下步骤：
+若要在同一租户中配置混合 MDM 机构，可以选择部分用户在 Intune 中管理，其他用户则由混合 MDM 管理（Intune 与 Configuration Manager 集成）。 本文介绍如何开始将用户移至 Intune 独立版，并假定你已完成以下步骤：
 - 使用数据导入工具[将 Configuration Manager 对象导入 Intune](migrate-import-data.md)（可选）。
 - [准备适用于用户迁移的 Intune](migrate-prepare-intune.md) 以确保在迁移用户及其设备后仍能继续对其进行管理。
 
@@ -32,9 +32,7 @@ ms.lasthandoff: 11/17/2017
 
 ## <a name="things-to-know-before-you-migrate-users"></a>迁移用户前需知事项
 - 分阶段迁移期间，Configuration Manager 中任何现有的 MDM 策略或应用继续适用于混合 MDM 设备。
-- 用户被将添加至你指定为迁移组的 AAD 组。 所有与迁移组中用户相关联的设备都在 Intune 中管理。
-- 如果设备被添加至 AAD 组，则将被忽略，除非设备未关联用户。
-- 未在 AAD 组中标记为迁移的用户将自动继承租户级 MDM 机构 (Configuration Manager)。
+- 集合中与 Intune 订阅关联的用户的设备可以在混合 MDM 中注册。 只要用户具有 Intune/EMS 许可证，将在 Intune 中管理与不在集合中的用户相关联的所有设备。 
 - 将用户迁移至 Intune 时，该用户和设备会在约 15 分钟后出现在 Azure 门户的 Intune 中。  
 - 将用户迁移至 Intune 独立版时，请为 Intune 独立版和混合 MDM 的设备继续管理 Configuration Manager 中的以下设置：
     - [Apple Push Notification 服务 (APNS) 证书](/sccm/mdm/deploy-use/enroll-hybrid-ios-mac)
@@ -49,10 +47,10 @@ ms.lasthandoff: 11/17/2017
     - Windows SLK
     - 公司门户品牌    
       
-> [!Important]    
+  > [!Important]    
   > 使用 Configuration Manager 控制台继续编辑租户级策略。 [更改租户级 MDM 机构](change-mdm-authority.md)为 Intune 后，将在 Azure 上 Intune 中管理这些策略。 
 - 建议不要迁移已在 Configuration Manager 中添加为设备注册管理员的任何用户帐户。 接下来，将租户级 MDM 机构更改为 Intune 后，这些用户帐户将准确迁移。 如果在租户级 MDM 机构更改前迁移设备注册管理员用户帐户，则必须在 Azure 上 Intune 中手动将该用户添加为设备注册管理员。 但是使用设备注册管理员注册的设备不会成功迁移。 必须致电支持部门来迁移这些设备。 更多详细信息，请参阅[添加设备注册管理员](https://docs.microsoft.com/en-us/intune/device-enrollment-manager-enroll#add-a-device-enrollment-manager)。
-- 使用设备注册管理员注册的设备和未关联用户的设备不会迁移至新的 MDM 机构。 对于这些设备，需要致电支持部门寻求相关帮助。 不支持运行 MDM 机构重置，否则将擦除 Intune 中的数据。 必须从 Configuration Manager 控制台[更改 MDM 机构](migrate-change-mdm-authority.md)。
+- 使用设备注册管理员注册的设备和无[用户关联](/sccm/mdm/deploy-use/user-affinity-for-hybrid-managed-devices)的设备不会自动迁移至新的 MDM 机构。 若要切换这些 MDM 设备的管理机构，请参阅[迁移不具备用户关联的设备](#migrate-devices-without-user-affinity)。
 
 ## <a name="migrate-users-to-intune"></a>将用户迁移至 Intune
 若要测试 Intune 配置是否按预期运行，请先迁移一小部分用户及其设备。 接着，确认一切按预期运行后就可以开始迁移具有更多用户的更多 AAD 组及用户设备。
@@ -67,7 +65,7 @@ ms.lasthandoff: 11/17/2017
 > [!Note] 
 > 如果为 Intune 订阅选择了“所有用户”集合，就不能对排除集合添加规则。 请基于“所有用户”集合创建一个新集合，验证此集合是否包含预期的用户，然后编辑 Intune 订阅以使用这个新集合。 可以从新集合中排除用户集合以迁移用户。 
 
-若要将测试用户组迁移至 Intune，请创建包含要迁移的用户的用户集合，然后从用于 Intune 订阅的集合中排除该用户集合。   
+若要将测试用户组迁移至 Intune，请创建包含待迁移用户的用户集合，然后从用于 Intune 订阅的集合中排除该用户集合。   
 
 下图概述了用户迁移工作原理。
 
@@ -85,6 +83,91 @@ ms.lasthandoff: 11/17/2017
 
 ## <a name="migrate-additional-users"></a>迁移其他用户
 验证 Intune 独立版按预期正常运行后，就可以开始迁移其他用户。 如同创建测试用户集合一样，创建包含要迁移的用户的集合，并从 Intune 订阅关联的集合中排除这些集合。 有关详细信息，请参阅[与 Intune 订阅关联的集合](#collection-associated-with-your-intune-subscription)。
+
+## <a name="migrate-devices-without-user-affinity"></a>迁移无用户关联的设备
+使用设备注册管理员注册的设备和无[用户关联](/sccm/mdm/deploy-use/user-affinity-for-hybrid-managed-devices)的设备不会自动迁移至新的 MDM 机构。 可以在以下方案中，使用 Switch-MdmDeviceAuthority PowerShell cmdlet 来切换 Intune 和 Configuration Manager 管理机构： 
+
+-   方案 1：使用 Switch-MdmDeviceAuthority cmdlet 迁移所选的设备并验证是否可以在 Azure 中使用 Intune 来管理它们。 然后，准备就绪后，可以[将租户的 MDM 机构更改为 Intune](migrate-change-mdm-authority.md) 以完成设备迁移。 
+-   方案 2：当准备好将租户的 MDM 机构更改为 Intune 时，你可以执行以下操作来迁移无用户关联的设备：
+    - 使用 cmdlet 来更改无用户关联的设备的 MDM 机构，然后[将租户的 MDM 机构更改为 Intune](migrate-change-mdm-authority.md)。    
+    - 将租户的 MDM 机构更改为 Intune 后，致电支持部门来切换无用户关联的设备。
+
+若要切换这些 MDM 设备的管理机构，可以使用 Switch-MdmDeviceAuthority cmdlet 来切换 Intune 和 Configuration Manager 管理机构。 
+
+### <a name="cmdlet-switch-mdmdeviceauthority"></a>Cmdlet Switch-MdmDeviceAuthority
+
+#### <a name="synopsis"></a>简述
+该 cmdlet 可切换无用户关联的 MDM 设备（例如，批量注册的设备）的管理机构。 在你运行 cmdlet 时，cmdlet 将为基于管理机构的指定设备切换 Intune 和 Configuration Manager 管理机构。
+
+### <a name="syntax"></a>语法
+`Switch-MdmDeviceAuthority -DeviceIds <Guid[]> [-Credential <PSCredential>] [-Force] [-LogFilePath <string>] [-LoggingLevel {Off | Critical | Error | Warning | Information | Verbose | ActivityTracing | All}] [-Confirm] [-WhatIf] [<CommonParameters>]`
+
+
+### <a name="parameters"></a>参数
+``` powershell
+-Credential <PSCredential>
+Credential for Intune Tenant Admin or Service Admin account to use when switching device management authorities. The user is prompted for credentials if the parameter is not specified.
+
+-DeviceIds <Guid[]>
+The ids of the MDM devices that need to have their management authority switched. The device ids are unique identifiers for the devices displayed by the Configuration Manager console.
+
+-Force [<SwitchParameter>]
+Specify parameter to disable the Should Continue prompt.<br>
+ 
+-LogFilePath <string>
+Path to log file location.
+ 
+-LoggingLevel <SourceLevels>
+The log level used to determine the type of logs that need to be written to the log file.
+ 
+The following are the possible values for LoggingLevel:
+
+  - ActivityTracing
+  - All
+  - Critical
+  - Error
+  - Information
+  - Off
+  - Verbose
+  - Warning
+ 
+-Confirm [<SwitchParameter>]
+Prompts you for confirmation before executing the command.
+ 
+-WhatIf [<SwitchParameter>]
+Describes what would happen if you executed the command without actually executing the command.
+ 
+<CommonParameters>
+This cmdlet supports the common parameters: Verbose, Debug,
+ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+OutBuffer, PipelineVariable, and OutVariable. For more information, see
+[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+```
+
+### <a name="example-1"></a>示例 1
+
+``` powershell
+C:\PS>Switch-MdmDeviceAuthority -Credential $creds -DeviceIds $deviceIds
+ 
+  DeviceId       : 62e6ea43-18f8-4278-bcd4-a4baed2c6d24
+  Success        : True
+  FailureReason  :
+  NewAuthority   : Intune
+  CompletionTime : 11/15/2017 8:00:11 PM
+ 
+Description
+ 
+-----------
+ 
+Successfully switched the management authority of the device from Configuration Manager to Intune.
+```
+### <a name="remarks"></a>备注
+``` powershell
+To see the examples, type: "get-help Switch-MdmDeviceAuthority -examples".
+For more information, type: "get-help Switch-MdmDeviceAuthority -detailed".
+For technical information, type: "get-help Switch-MdmDeviceAuthority -full".
+For online help, type: "get-help Switch-MdmDeviceAuthority -online".
+```
 
 ## <a name="next-steps"></a>后续步骤
 迁移了用户并测试过 Intune 功能后，请考虑是否已准备好为 Intune 租户[更改 MDM 机构](migrate-change-mdm-authority.md)，从 Configuration Manager 更改为 Intune。 

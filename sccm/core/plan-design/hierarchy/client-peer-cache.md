@@ -3,7 +3,7 @@ title: "客户端对等缓存"
 titleSuffix: Configuration Manager
 description: "使用 System Center Configuration Manager 部署内容时，将对等缓存用于客户端内容源位置。"
 ms.custom: na
-ms.date: 11/20/2017
+ms.date: 12/07/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -15,11 +15,11 @@ caps.latest.revision: "3"
 author: aaroncz
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 60f70d3e24f6290fb022b9bd8ca1512b0ed3d719
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: cadc62ab21ac8cd43120a5baa79dd635a12b4069
+ms.sourcegitcommit: 2dc9c83e57e9734ffc4a93f79cd71285036eeb8b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>用于 Configuration Manager 客户端的对等缓存
 
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/01/2017
  -  若要将内容共享为对等缓存源，那么对等缓存客户端需满足以下条件：
     -  必须已加入域。 但是，未加入域的客户端可以获取已加入域的对等缓存源中的内容。
     -  必须是正在查找该内容的客户端当前边界组的成员。 客户端使用回退来查找相邻边界组中的内容时，相邻边界组中的对等缓存客户端不包括在可用内容源位置的池中。 有关当前边界组和相邻边界组的详细信息，请参阅[边界组](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups##a-namebkmkboundarygroupsa-boundary-groups)。
- - Configuration Manager 客户端缓存中保留的每种类型的内容均可使用对等缓存提供给其他客户端。
+ - Configuration Manager 客户端缓存中保留的每种类型的内容均可使用对等缓存提供给其他客户端，包括 Office 365 文件和快速安装文件。<!--SMS.500850-->
  -  对等缓存不会代替其他解决方案（如 BranchCache）的使用，而是并行工作以便提供更多选项，用于扩展传统内容部署解决方案（如分发点）。 这是一种无需依赖于 BranchCache 的自定义解决方案，因此即使不启用或不使用 Windows BranchCache，此解决方案依然可正常运作。
 
 ### <a name="operations"></a>操作

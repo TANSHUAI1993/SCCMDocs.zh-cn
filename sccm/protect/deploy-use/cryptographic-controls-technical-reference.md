@@ -1,25 +1,23 @@
 ---
 title: "加密控制技术参考"
 titleSuffix: Configuration Manager
-description: "了解有关在 System Center Configuration Manager 中签名和加密如何帮助防范来自数据读取的攻击。"
+description: "了解在 System Center Configuration Manager 中签名和加密如何帮助防范来自数据读取的攻击。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/5/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
 ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 0c63dcc5-a1bd-4037-959a-2e6ba0fd1b2c
-caps.latest.revision: "6"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 616a781ee40fc3cde7f6c4c6525da74560a9072f
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: ebaff93d346b53afea8770fbe0634112bcecf82d
+ms.sourcegitcommit: 372171a5cd8d143d6d47b651018cda0c91cad67c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="cryptographic-controls-technical-reference"></a>加密控制技术参考
 
@@ -279,5 +277,14 @@ System Center Configuration Manager 使用签名和加密帮助保护 Configurat
 
  在管理点使用自签名客户端证书第一次对客户端进行身份验证时，此机制提供最低的安全性，因为任何计算机都能生成自签名证书。 在这种情况下，必须利用批准手段来强化客户端标识过程。 只应批准受信任的计算机 - 由 Configuration Manager 自动批准或由管理用户手动批准。 有关详细信息，请参阅 [System Center Configuration Manager 中终结点之间的通信](../../core/plan-design/hierarchy/communications-between-endpoints.md)中的审批部分。  
 
-##  <a name="about-ssl-vulnerabilities"></a>有关 SSL 漏洞  
- 我们建议禁用 SSL 3.0，启用 TLS 1.1 和 1.2 以及重新排序 TLS 相关密码套件，以提高 Configuration Manager 服务器的安全性。 你可以在 [此知识库文章](https://support.microsoft.com/en-us/kb/245030/)中了解如何执行这些操作。 此操作不会影响 Configuration Manager 的功能。  
+## <a name="to-make-configuration-manager-servers-more-secure"></a>使 Configuration Manager 服务器更加安全  
+若要使 Configuration Manager 服务器更加安全，请执行以下操作：
+
+-   启用 TLS 1.2
+
+    若要启用 TLS 1.2 for Configuration Manager，请参阅以下知识库文章：[如何启用 TLS 1.2 for Configuration Manager]( https://support.microsoft.com/en-us/help/4040243/how-to-enable-tls-1-2-for-configuration-manager)。
+-   禁用 SSL 3.0、TLS 1.0 和 TLS 1.1 
+-   重新排序与 TLS 相关的密码套件 
+
+有关详细信息，请参阅以下知识库文章：[如何限制 Schannel.dll 中某些加密算法和协议的使用](https://support.microsoft.com/en-us/kb/245030/)。 这些操作不会影响 Configuration Manager 的功能。
+

@@ -3,7 +3,7 @@ title: "了解有关授权和分支的详细情况"
 titleSuffix: Configuration Manager
 description: "请使用本主题，了解有关 2016 年 10 月发行的 System Center Configuration Manager（包括 Current Branch 1606 版、Long-Term Servicing Branch (LTSB) 和 Current Branch 的评估安装）的可用安装选项的许可要求。"
 ms.custom: na
-ms.date: 10/12/2016
+ms.date: 12/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,11 +16,11 @@ caps.handback.revision: "0"
 author: aaroncz
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 0890b25f4b5b96a8d39b0dcf6f0aa659c07265db
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: bcb25fc6faad3d5f7162ae4ceb200c6de1c1c25b
+ms.sourcegitcommit: 8c6e9355846ff6a73c534c079e3cdae09cf13c45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="licensing-and-branches-for-system-center-configuration-manager"></a>System Center Configuration Manager 的许可和分支
 
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/01/2017
 
 |分支|许可|详细信息|
 |----------------|---------------------|--------------------|
-|Current Branch | 需要 Configuration Manager 的可用的软件保障协议（或等效权限）。 </br></br> 请参阅本主题中的[软件保障和 Current Branch](#software-assurance-and-the-current-Branch)。| 支持在希望接收来自 Microsoft 的定期质量和功能更新的生产环境中使用。 </br></br> 此分支提供使用所有功能和改进的访问权限。 </br></br> 每个版本更新发布后，支持期限为一 (1) 年，此后必须更新到[受支持](/sccm/core/servers/manage/current-branch-versions-supported)的较新版本。|
+|Current Branch | 需要 Configuration Manager 的可用的软件保障协议（或等效权限）。 </br></br> 请参阅本主题中的[软件保障和 Current Branch](#software-assurance-and-the-current-Branch)。| 支持在希望接收来自 Microsoft 的定期质量和功能更新的生产环境中使用。 </br></br> 此分支提供使用所有功能和改进的访问权限。 </br></br> 对于 1710 前发布的 Configuration Manager 版本，支持期为 12 个月。 从 1710 版本开始，对于每个更新版本，支持器仍为自通用版本发布日期起 18 个月。 有关详细信息，请参阅[对 System Center Configuration Manager Current Branch 版本的支持](/sccm/core/servers/manage/current-branch-versions-supported)。|
 |Long-Term Servicing Branch (LTSB)| 在发布日（2016 年 10 月 1 日）需要具有与 Microsoft 签订的最新软件保障协议 </br></br> 请参阅本主题中的[软件保障和 LTSB](#software-assurance-and-the-ltsb)。 | 支持在生产环境中使用。 适用于 Configuration Manager 的软件保障 (SA) 或等效订阅权限于 2016 年 10 月 1 日后过期的客户。 </br></br> 与 Current Branch 相比，此分支有所限制。 </br></br> 对于此分支，提供 Configuration Manager 的关键安全更新，但不提供新功能。 |
 |Current Branch 的评估安装| 不需要与 Microsoft 签订软件保障协议。 | [评估安装](https://www.microsoft.com/en-us/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection)始终是 Current Branch，使用期限为 180 天。 </br></br> 可将评估安装升级到 Current Branch 的完整安装。 不能将评估安装升级到 Long-Term Servicing Branch。|
 

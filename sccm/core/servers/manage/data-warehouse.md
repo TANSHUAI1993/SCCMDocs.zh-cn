@@ -3,7 +3,7 @@ title: "数据仓库"
 titleSuffix: Configuration Manager
 description: "System Center Configuration Manager 的数据仓库服务点和数据库"
 ms.custom: na
-ms.date: 8/25/2017
+ms.date: 12/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.latest.revision:
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 2e6ac983e5ca63dacb77f2e26515d7123748d64d
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 4d420ce623c834401383231d00e3f361342f2d2e
+ms.sourcegitcommit: 52b956cfe32c3f06ae68d6ba6fc3244ce5a66325
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/06/2017
 ---
 #  <a name="the-data-warehouse-service-point-for-system-center-configuration-manager"></a>System Center Configuration Manager 的数据仓库服务点
 *适用范围：System Center Configuration Manager (Current Branch)*
@@ -27,9 +27,7 @@ ms.lasthandoff: 12/04/2017
 从 1702 版开始，可以使用数据仓库服务点存储和报告关于 Configuration Manager 部署的长期历史数据。
 
 > [!TIP]
-> 在 1702 版中，数据仓库服务点属于预发行功能。 若要启用此功能，请参阅[使用预发行功能](/sccm/core/servers/manage/pre-release-features)。
-
-> 从版本 1706 开始，此功能不再属于预发行功能。
+> 此功能在 1702 版本中首次引入，属于[预发行功能](/sccm/core/servers/manage/pre-release-features)。 从版本 1706 开始，此功能不再属于预发行功能。
 
 数据仓库最多支持 2 TB 数据，且具有跟踪更改的时间戳。 通过从 Configuration Manager 站点数据库自动同步到数据仓库数据库可实现数据存储。 然后，可从 Reporting Services 点访问此信息。 同步到数据仓库数据库的数据将保留三年。 内置任务会定期删除超过三年的数据。
 

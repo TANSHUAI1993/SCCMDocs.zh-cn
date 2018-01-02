@@ -3,7 +3,7 @@ title: "Endpoint Protection 客户端的常见问题"
 titleSuffix: Configuration Manager
 description: "获取有关 Windows Defender 和 Endpoint Protection 常见问题的解答。"
 ms.custom: na
-ms.date: 02/14/2017
+ms.date: 12/09/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e3aaa9d2-a40e-42b1-ad75-5a115351729e
 caps.latest.revision: "15"
-author: NathBarn
-ms.author: nathbarn
+author: arob98
+ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: a3fb0bc39f1606f1a65b5623c9567819b1a0c52e
-ms.sourcegitcommit: 5d46ed593b1cc461ea3f6ff6917bcd272b095ed7
+ms.openlocfilehash: 2656a5c40dbd2916ef36268936a4e2163ebde14d
+ms.sourcegitcommit: 372171a5cd8d143d6d47b651018cda0c91cad67c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="endpoint-protection-client-frequently-asked-questions"></a>Endpoint Protection 客户端的常见问题
 
@@ -203,7 +203,7 @@ ms.lasthandoff: 11/29/2017
 
 ##  <a name="what-is-real-time-protection"></a>什么是实时保护？  
 
- 通过实时保护可以使 Windows Defender 时刻监视你的计算机，并且当潜在威胁如病毒和间谍软件尝试自行安装或在你的计算机上运行时向你发出警报。 由于此功能是 Windows Defender 帮助保护你的计算机所采取的方法的重要组成部分，因此需确保实时保护始终处于打开状态。 如果实时保护被关闭，Windows Defender 会发出通知，将计算机的状态更改为“面临风险”。  
+ 通过实时保护可以使 Windows Defender 时刻监视你的计算机，并且当潜在威胁如病毒和间谍软件尝试自行安装或在你的计算机上运行时向你发出警报。 由于此功能是 Windows Defender 帮助保护你的计算机所采取的方法的重要组成部分，因此需确保实时保护始终处于打开状态。 如果实时保护被关闭，Windows Defender 会通知你，并将计算机的状态更改为“有风险”。  
 
  每当实时保护检测到威胁或潜在威胁时，Windows Defender 会显示一条通知。 你可从以下选项中进行选择：  
 
@@ -219,7 +219,7 @@ ms.lasthandoff: 11/29/2017
 |扫描所有下载|此选项可监视下载的文件和程序，包括通过 Windows Internet Explorer 和 Microsoft Outlook ® Express 自动下载的文件，例如 ActiveX® 控件和软件安装程序。 这些文件可通过浏览器自身下载、安装或运行。 恶意软件，包括病毒、间谍软件和其他可能不需要的软件可以包含在这些文件中，并在你不知情的情况下安装。<br /><br /> 使用此实时保护选项，Windows Defender 可以始终监视你的计算机，并检查你可能已下载的任何恶意文件或程序。 此监视功能意味着 Windows Defender 不需要通过要求检查你可能想要下载的任何文件或程序来减慢你的浏览或电子邮件速度。|  
 |监视计算机上的文件和程序活动|此选项是在文件和程序开始在你的计算机上运行时进行监视，然后它会对你发出警报，通知你它们要执行的任何操作和要对它们执行的操作。 这非常重要，因为恶意软件会利用已安装程序的漏洞在你不知情的情况下运行恶意或不需要的软件。 例如，当你启动经常使用的程序时，间谍软件可以在后台运行。 Windows Defender 监视你的程序，并在检测到可疑活动时向你发出警报。|  
 |启用行为监视|此选项可监视传统防病毒检测方法可能检测不到的可疑模式的行为集合。|  
-|启用网络检查系统|此选项可帮助保护计算机免受已知漏洞的“零日”攻击、减小发现漏洞和应用更新之间的时间段。|  
+|启用网络检查系统|此选项可帮助保护计算机免受已知漏洞的零日攻击、缩小发现漏洞和应用更新之间的时间段。|  
 
 ### <a name="to-turn-off-real-time-protection"></a>要关闭实时保护  
 

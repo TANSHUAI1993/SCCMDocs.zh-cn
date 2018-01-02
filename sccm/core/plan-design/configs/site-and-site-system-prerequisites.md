@@ -15,11 +15,11 @@ caps.latest.revision: "5"
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 34886a38ed4b797b254e3fb83eb66588c7e1d116
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 2c87cf0e63e4b95f5b94b6cda9e2aa40c4389184
+ms.sourcegitcommit: 8c6e9355846ff6a73c534c079e3cdae09cf13c45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="site-and-site-system-prerequisites-for-system-center-configuration-manager"></a>System Center Configuration Manager 的站点和站点系统先决条件
 
@@ -258,8 +258,9 @@ ms.lasthandoff: 12/04/2017
     > [!NOTE]  
     >  当配置分发点以在运行 Windows Server 2012 或更高版本的服务器上支持 PXE 或多播时，将自动安装和配置 WDS。  
 
+<!--sms.503672 -Clarified BITS use-->
 > [!NOTE]  
-> 分发点站点系统角色不需要后台智能传输服务 (BITS)。 在分发点计算机上配置 BITS 时，不使用分发点计算机上的 BITS 来辅助通过使用 BITS 的客户端下载内容。  
+> 当分发点传输内容时，它将使用内置于 Windows 操作系统的“后台智能传输服务” (BITS) 进行传输。 分发点角色不需要安装可选的 BITS IIS 服务器扩展功能，因为客户端不会向其上传信息。  
 
 ###  <a name="bkmk_2012EPPpreq"></a> Endpoint Protection 点  
 **Windows Server 角色和功能：**  
@@ -626,8 +627,9 @@ ms.lasthandoff: 12/04/2017
     > [!NOTE]  
     >  当配置分发点以在运行 Windows Server 2012 或更高版本的服务器上支持 PXE 或多播时，将自动安装和配置 WDS。  
 
+<!--sms.503672 -Clarified BITS use-->
 > [!NOTE]  
-> 分发点站点系统角色不需要后台智能传输服务 (BITS)。 在分发点计算机上配置 BITS 时，不使用分发点计算机上的 BITS 来辅助通过使用 BITS 的客户端下载内容。  
+> 当分发点传输内容时，它将使用内置于 Windows 操作系统的“后台智能传输服务” (BITS) 进行传输。 分发点角色不需要安装可选的 BITS IIS 服务器扩展功能，因为客户端不会向其上传信息。   
 
 
 ###  <a name="bkmk_2008EPPpreq"></a> Endpoint Protection 点  

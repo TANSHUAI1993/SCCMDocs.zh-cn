@@ -3,7 +3,7 @@ title: "创建用于升级操作系统的任务序列"
 titleSuffix: Configuration Manager
 description: "System Center Configuration Manager 中的任务序列可自动将操作系统从 Windows 7 或更高版本升级到 Windows 10。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.latest.revision: "12"
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 2787c8a692321a49cf287fc2f09858690360dc25
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 002acbcff01105e612e8c090606a6aa5d45a014b
+ms.sourcegitcommit: 52b956cfe32c3f06ae68d6ba6fc3244ce5a66325
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="create-a-task-sequence-to-upgrade-an-operating-system-in-system-center-configuration-manager"></a>创建任务序列来升级 System Center Configuration Manager 中的操作系统
 
@@ -78,7 +78,7 @@ ms.lasthandoff: 10/12/2017
 ## <a name="configure-pre-cache-content"></a>配置预先缓存内容
 从版本 1702 开始，对于任务序列的可用部署，可选择使用预先缓存功能，让客户端在用户安装内容之前仅下载相关内容。
 > [!TIP]  
-> 在 1702 版本中引入，预先缓存是一项预发行功能。 若要启用此功能，请参阅[使用更新中的预发行功能](/sccm/core/servers/manage/pre-release-features)。
+> 此功能在 1702 版本中首次引入，属于[预发行功能](/sccm/core/servers/manage/pre-release-features)。 从版本 1706 开始，此功能不再属于预发行功能。
 
 例如，假设要部署 Windows 10 就地升级任务序列，只想为所有用户提供单个任务序列，并且具有多个体系结构和/或语言。 在版本 1702 之前，如果创建可用部署，然后用户在软件中心中单击“安装”，则将在此时下载内容。 这在安装准备启动之前增加了额外时间。 另外，将下载任务序列中引用的所有内容。 这包括所有语言和体系结构的操作系统升级包。 如果每个包大小都约为 3 GB，则下载包可能会很大。
 

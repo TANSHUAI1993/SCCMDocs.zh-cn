@@ -3,7 +3,7 @@ title: "监视内容"
 titleSuffix: Configuration Manager
 description: "了解如何使用 Configuration Manager 控制台监视分发的内容。"
 ms.custom: na
-ms.date: 4/17/2017
+ms.date: 12/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.latest.revision: "5"
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 5b1c0401c0b1ce2aa8765ccfb8898b90cf7a5c93
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 62d783735e64b6f3f11dae9af6ac5a7584d689ef
+ms.sourcegitcommit: 52b956cfe32c3f06ae68d6ba6fc3244ce5a66325
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="monitor-content-you-have-distributed-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 监视分发的内容
 
@@ -155,7 +155,8 @@ ms.lasthandoff: 12/04/2017
 从 1610 版起，可以使用“客户端数据源”仪表板，来帮助了解环境中[对等缓存](/sccm/core/plan-design/hierarchy/client-peer-cache)的使用。 客户端下载内容后，仪表板将开始显示数据，并将该信息报告给网站。 此过程最多可能需要 24 小时。
 
 > [!TIP]  
-> “客户端对等缓存”和“客户端数据源”仪表板均为 1610 版本中引入的预发行功能。 必须先启用“客户端对等缓存”，“客户端数据源”仪表板才能在控制台中显示。 若要启用“客户端对等缓存”，请参阅[使用更新中的预发行功能](/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease)。 从启用到开始显示数据，最长需要 24 小时。
+> “客户端对等缓存”和“客户端数据源”仪表板均为 1610 版本中首次引入的[预发行功能](/sccm/core/servers/manage/pre-release-features)。 从版本 1710 开始，这些功能不再属于预发行功能。 必须先启用“客户端对等缓存”，“客户端数据源”仪表板才能在控制台中显示。
+
 
 在控制台中，转到“监视” > “分发状态” > “客户端数据源”。 在此处可以选择要应用于仪表板的时间段。 然后在显示中，可以选择要查看其信息的边界组或包。 查看信息时，可以将鼠标悬停在表面上方，以查看有关不同内容或策略源的更多详细信息。
 

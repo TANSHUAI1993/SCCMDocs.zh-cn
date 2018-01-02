@@ -3,7 +3,7 @@ title: "部署应用程序"
 titleSuffix: Configuration Manager
 description: "使用 System Center Configuration Manager 为应用程序创建部署类型或模拟部署。"
 ms.custom: na
-ms.date: 7/31/2017
+ms.date: 12/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,11 +16,11 @@ caps.handback.revision: "0"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: 31c8a2e212de8c112b68d68e108db3463516142f
-ms.sourcegitcommit: b36f8c8b06e4b2e13f8c1500a82af79a071ab4f6
+ms.openlocfilehash: 97d1ac775a3b38f63372f0ab01243dfdfeb4edb5
+ms.sourcegitcommit: 52b956cfe32c3f06ae68d6ba6fc3244ce5a66325
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/20/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="deploy-applications-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 部署应用程序
 
@@ -171,8 +171,7 @@ ms.lasthandoff: 10/20/2017
 ## <a name="how-to-check-for-running-executable-files-before-installing-an-application"></a>如何在安装应用程序之前检查正在运行的可执行文件
 
 >[!Tip]
->与版本 1702 一起引入，这是预发布功能。 要启用该功能，请参阅 [System Center Configuration Manager 中的预发布功能](https://docs.microsoft.com/sccm/core/servers/manage/pre-release-features)。
-> 从版本 1706 开始，此功能不再属于预发行功能。
+> 此功能在 1702 版本中首次引入，属于[预发行功能](/sccm/core/servers/manage/pre-release-features)。 从版本 1706 开始，此功能不再属于预发行功能。
 
 在部署类型的“属性”对话框中，在“安装行为”选项卡上，你可以指定其中一个或多个可执行文件，如果正在运行，则阻止部署类型的安装。 用户必须先关闭运行中的可执行文件（或者因为部署的特定要求而自动关闭），然后才能安装部署类型。 要进行配置，请执行以下操作：
 

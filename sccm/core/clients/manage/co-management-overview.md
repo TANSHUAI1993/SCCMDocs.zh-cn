@@ -10,15 +10,15 @@ ms.prod: configuration-manager
 ms.service: 
 ms.technology: 
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: c0a577c6076630f0615f953091f35c4f3c2d0a7d
-ms.sourcegitcommit: 536f7295e9ea361f1f9ead6c25f3685deb041ad8
+ms.openlocfilehash: 4b582d5fbd9e2e916c439b149e117f1a65da98bf
+ms.sourcegitcommit: 5f4a584d4a833b0cc22bd8c47da7dd55aced97fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="co-management-for-windows-10-devices"></a>适用于 Windows 10 设备的共同管理    
 <!-- 1350871 -->
-许多客户想要使用一种基于云的简单低成本解决方案通过管理移动设备的相同方式来管理 Windows 10 设备。 然而，实现从传统管理到现代管理的转换可能具有挑战性。 在 Windows 10 版本 1709（也称为 Fall Creators Update）及更高版本中，可以将 Windows 10 设备同时联接到本地 Active Directory (AD) 和基于云的 Azure AD（混合 Azure AD）。 从 Configuration Manager 1710 版本开始，共同管理利用此项改进，并使你能够使用 Configuration Manager 和 Intune 来同时管理 Windows 10 设备。 它是一种解决方案，在传统管理与现代管理之间架起一座桥梁，为你提供利用分阶段的方法实现转换的途径。 
+许多客户想要使用一种基于云的简单低成本解决方案通过管理移动设备的相同方式来管理 Windows 10 设备。 然而，实现从传统管理到现代管理的转换可能具有挑战性。 在以前的 Windows 10 更新中，已经可以将 Windows 10 设备同时联接到本地 Active Directory (AD) 和基于云的 Azure AD（混合 Azure AD）。 从 Configuration Manager 1710 版本开始，共同管理利用此项改进来使你能够使用 Configuration Manager 和 Intune 来同时管理 Windows 10 设备版本 1709（也称为 Fall Creators Update）。 它是一种解决方案，在传统管理与现代管理之间架起一座桥梁，为你提供利用分阶段的方法实现转换的途径。 
 
 有两个实现共同管理的主要方式。  其中一个是预配了 Configuration Manager 的共同管理，这种情况中，由 Configuration Manager 管理且加入了混合 Azure AD 的 Windows 10 设备注册到 Intune。 另一个是预配了 Intune 的共同管理，设备在 Intune 中注册然后安装有 Configuration Manager 客户端，从而实现共同管理的状态。  
 

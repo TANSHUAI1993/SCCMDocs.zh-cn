@@ -15,11 +15,11 @@ caps.latest.revision: "9"
 author: aaroncz
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: ea8eead4706472a02f216b432ea9f2e6bdf23f66
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: f0feba771dcc75d84cd1233fea562472ff6c1158
+ms.sourcegitcommit: 8c6e9355846ff6a73c534c079e3cdae09cf13c45
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="use-a-pull-distribution-point-with-system-center-configuration-manager"></a>将请求分发点用于 System Center Configuration Manager
 
@@ -105,8 +105,10 @@ System Center Configuration Manager 的请求分发点是一个标准分发点�
 -   此框架是在将分发点配置为请求分发点时由 **Pulldp.msi** 进行配置。 该框架不需要 Configuration Manager 客户端。  
 
 -   安装请求分发点后，分发点计算机上的 CCMExec 服务必须运行，以便请求分发点正常工作。  
+<!--sms.503672 -Clarified BITS use-->
+-   当请求分发点传输内容时，它将使用内置于 Windows 操作系统的“后台智能传输服务” (BITS) 进行传输。 请求分发点不需要安装可选 BITS IIS 服务器扩展功能。
 
--   请求分发点传输内容时，它会使用 **后台智能传输服务** (BITS) 传输内容，在分发点计算机上的 **datatransferservice.log** 和 **pulldp.log** 中记录其操作。  
+-  请求分发点会在分发点计算机上的 datatransferservice.log 和 pulldp.log 中记录其操作。
 
 ## <a name="see-also"></a>另请参阅  
  [System Center Configuration Manager 中内容管理的基础知识](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management)   

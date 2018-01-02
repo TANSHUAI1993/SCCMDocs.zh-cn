@@ -3,7 +3,7 @@ title: "管理 SharePoint Online 访问"
 titleSuffix: Configuration Manager
 description: "了解如何使用 System Center Configuration Manager SharePoint Online 条件访问策略管理对 OneDrive 的访问。"
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 12/09/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: 49cec466-1676-4fe2-a2fe-5004f01d735e
 caps.latest.revision: "11"
 caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
+author: arob98
+ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 2c1d7cd3462a54a064ec47d0b375ee4cdb25a4b4
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 99b2aca418b7ce28a4216b38e711b3d38973e2b7
+ms.sourcegitcommit: 372171a5cd8d143d6d47b651018cda0c91cad67c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="manage-sharepoint-online-access-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中管理 SharePoint Online 访问
 

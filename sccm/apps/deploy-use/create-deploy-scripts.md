@@ -3,7 +3,7 @@ title: "创建和运行脚本"
 titleSuffix: Configuration Manager
 description: "在客户端设备上创建并运行 Powershell 脚本。"
 ms.custom: na
-ms.date: 11/20/2017
+ms.date: 11/29/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,31 +16,31 @@ caps.handback.revision: "0"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: angrobe
-ms.openlocfilehash: 964f6d39c4c1afc82ff4336821740923d27cd569
-ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
+ms.openlocfilehash: 1472f697ae8b82e6268433aa6398fcc10a429994
+ms.sourcegitcommit: 5f4a584d4a833b0cc22bd8c47da7dd55aced97fa
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>从 Configuration Manager 控制台创建并运行 PowerShell 脚本
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
+>[!TIP]
+>运行 PowerShell 脚本的能力在版本 1706 中引入，它是一项预发行功能。 要启用脚本，请参阅 [System Center Configuration Manager 中的预发布功能](/sccm/core/servers/manage/pre-release-features)。
+
 现在可以更好地将运行 Powershell 脚本的能力与 System Center Configuration Manager 集成。 Powershell 的优势是创建复杂而易懂的自动执行脚本，并能与较大社区分享。 脚本简化了自定义工具生成，便于软件管理，并让你快速完成常见任务，能够更轻松、更一致地完成大型工作。
 
 将此集成到 System Center Configuration Manager，可以使用“运行脚本”功能来执行以下操作：
 
-- 创建并编辑用于 Configuration Manager 的脚本。
-- 通过角色和安全作用域管理脚本使用  
+- 创建并编辑用于 System Center Configuration Manager 的脚本。
+- 通过角色和安全作用域管理脚本使用。 
 - 在集合或独立的本地托管 Windows 电脑上运行脚本。
 - 从客户端设备获取快速聚合的脚本结果。
 - 监视脚本执行，并查看脚本输出中生成的报告。
 
->[!IMPORTANT]
+>[!WARNING]
 >脚本有如此强大的功能，记得在使用它们时仔细小心。 我们内置了额外的保护措施来帮助你；分离的角色和作用域。 运行脚本之前请务必验证脚本的准确性，并确保它们来自受信任的源，以防发生意外的脚本执行操作。 请注意扩展字符或其他混淆，并了解一下保护脚本的相关信息。
-
->[!TIP]
->PowerShell 与版本 1706 一起引入，是一项预发行功能。 要启用脚本，请参阅 [System Center Configuration Manager 中的预发布功能](/sccm/core/servers/manage/pre-release-features)。
 
 ## <a name="prerequisites"></a>先决条件
 
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/21/2017
 - 要使用这些脚本，你必须是相应 Configuration Manager 安全角色的成员。
 - 导入并编写脚本 - 对于“完全权限管理员”安全角色中的“SMS 脚本”，帐户必须具有“创建”权限。
 - 批准或拒绝脚本 - 对于“完全权限管理员”安全角色中的“SMS 脚本”，帐户必须具有“批准”权限。
-- 运行脚本 - 对于“符合性设置管理员”安全角色中的“集合”，你的帐户必须具有“运行脚本”权限。
+- 运行脚本 - 对于“完全权限管理员”安全角色中的“集合”，你的帐户必须具有“运行脚本”权限。
 
 有关 Configuration Manager 安全角色的详细信息，请参阅[基于角色的管理基础](/sccm/core/understand/fundamentals-of-role-based-administration)。
 
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/21/2017
 “运行脚本”目前支持：
 
 - 脚本语言：PowerShell
-- 参数类型：整数和字符串
+- 参数类型：整数、字符串和列表
 
 ## <a name="run-script-authors-and-approvers"></a>“运行脚本”的创建者和审批者
 
@@ -122,77 +122,81 @@ ms.lasthandoff: 11/21/2017
 
 #### <a name="example-firstname"></a>示例：FirstName
 
-在此示例中，你可以设置字符串参数“FirstName”的属性。 请注意可选字段“自定义错误”。 此字段可用于添加有关特定字段的用户指南以及针对和字符串参数交互的用户指南，此示例中字符串参数为“FirstName”。
+在此示例中，你可以设置字符串参数“FirstName”的属性。
 
 ![脚本参数 - 字符串](./media/run-scripts/RS-parameters-string.png)
+
+
+“脚本参数属性”对话框的验证部分包含供你使用的以下字段：
+
+- 最小长度 - FirstName 字段的最小字符数。
+- 最大长度 - FirstName 字段的最大字符数
+- RegEx - 正则表达式的简称。 有关使用正则表达式的详细信息，请参阅下一部分中的“使用正则表达式验证”。
+- 自定义错误 - 用于添加你自己的自定义错误消息，该消息将取代任何系统验证错误消息。
+
+#### <a name="using-regular-expression-validation"></a>使用正则表达式验证
+
+正则表达式是一种紧凑的编程形式，用于检查一串字符的编码验证。 例如，可以通过将 `[^A-Z]` 放入“RegEx”字段，来检查“FirstName”字段中是否缺少大写字母字符。
+
+.NET Framework 支持此对话框的正则表达式处理。 有关使用正则表达式的指南，请参阅 [.NET 正则表达式](https://docs.microsoft.com/dotnet/standard/base-types/regular-expressions)。 
+
 
 ## <a name="script-examples"></a>脚本示例
 
 以下几个示例对你希望用于此功能的脚本进行了说明。
 
-### <a name="create-a-folder"></a>创建一个文件夹
+### <a name="create-a-new-folder-and-file"></a>创建新文件夹和文件
+
+此脚本在给定命名输入的情况下，在其中创建一个新文件夹和一个文件。
 
 ``` powershell
-New-Item "c:\scripts" -type folder name
-```
-
-### <a name="create-a-file"></a>创建文件
-
-```powershell
-New-Item "c:\scripts\new_file.txt" -type file name
-```
-
-### <a name="ping-a-given-computer"></a>对给定计算机执行 Ping 操作
-
-此脚本采用了一个字符串，并将其作为“ping”操作的参数。
-
-``` powershell
-Param
-(
- [String][Parameter(Mandatory=$True, Position=1)] $Computername
+Param(
+[Parameter(Mandatory=$True)]
+[string]$FolderName,
+[Parameter(Mandatory=$True)]
+[string]$FileName,
 )
 
-Ping $Computername
+New-Item $FolderName -type directory
+New-Item $FileName -type file
 ```
 
-### <a name="get-battery-status"></a>获取电池状态
+### <a name="get-os-version"></a>获取 OS 版本
 
-此脚本使用 WMI 对计算机查询它的电池状态。
+此脚本使用 WMI 来查询计算机的 OS 版本。
 
 ``` powershell
-Write-Output (Get-WmiObject -Class Win32_Battery).BatteryStatus
-
+Write-Output (Get-WmiObject -Class Win32_operatingSystem).Caption
 ```
 
 ## <a name="run-a-script"></a>运行脚本
 
-脚本经批准后，就可以在你选择的集合上运行了。 脚本执行开始之后，它通过高优先级系统快速启动，并在一小时内执行。 使用较慢的状态消息系统返回脚本结果。
+经批准后，脚本就可以在单个设备或集合上运行。 脚本开始执行后，它通过会在一小时内超时的高优先级系统快速启动。 然后使用状态消息系统返回脚本结果。
+
+要为脚本选择目标集合：
 
 1. 在 Configuration Manager 控制台中，单击“资产和符合性” 。
 2. 在“资产和符合性”工作区中，单击“设备集合”。
 3. 在“设备集合”列表中，单击要在其中运行脚本的设备集合。
-4. 在“主页”选项卡的“所有系统”组中，单击“运行脚本”。
+4. 选择所选集合，单击“运行脚本”。
 5. 在“运行脚本”向导的“脚本”页，从列表中选择一个脚本。 仅显示已批准的脚本。
 6. 单击“下一步”，然后完成向导。
 
 >[!IMPORTANT]
->如果脚本未运行（例如因为目标客户端关闭），则在这一小时内你必须再次运行它。
+>如果脚本未运行（例如，因为目标设备关闭），则在这一小时内你必须再次运行。
 
 ### <a name="target-machine-execution"></a>目标计算机执行
+
 脚本在目标客户端上作为“系统”或“计算机”帐户执行。 此帐户的网络访问权限是受限的。 必须对通过该脚本进行的任何远程系统访问和访问位置进行相应的预配置。
 
-## <a name="work-flow-and-monitoring"></a>工作流和监视
+## <a name="script-monitoring"></a>脚本监视
 
-下面是“运行脚本”作为工作流所包含的内容：创建、批准、运行和监视。
+在设备集合上启动脚本运行以后，请使用采用以下过程来监视该操作。 从版本 1710 开始就可以在脚本执行时进行实时监视，也能返回至某个给定“运行脚本”执行的报告。 <br>
 
-![运行脚本 - 工作流](./media/run-scripts/RS-run-scripts-work-flow.png)
-
-### <a name="script-monitoring"></a>脚本监视
-
-在设备集合上启动脚本运行以后，请使用采用以下过程来监视该操作。 从版本 1710 开始就可以在脚本执行时进行实时监视，也能返回至某个给定“运行脚本”执行的报告。
+![脚本监视器 - 脚本运行状态](./media/run-scripts/RS-monitoring-three-bar.png)
 
 1. 在 Configuration Manager 控制台中，单击“监视” 。
-2. 在“监视”工作区中，单击“脚本状态”。 ![脚本监视器 - 脚本运行状态](./media/run-scripts/RS-monitoring-three-bar.png)
+2. 在“监视”工作区中，单击“脚本状态”。
 3. 在“脚本状态”列表中，可以查看在客户端设备上运行的每个脚本的结果。 脚本退出代码为“0”通常表示脚本已成功运行。
 
 ## <a name="see-also"></a>另请参阅
