@@ -52,7 +52,7 @@
 ### [Android 应用配置策略](deploy-use/configure-android-apps-with-app-configuration-policies.md)
 ### [移动应用程序管理策略](deploy-use/protect-apps-using-mam-policies.md)
 ### [托管浏览器策略](deploy-use/manage-internet-access-using-managed-browser-policies.md)
-### [适用于企业的 Windows 应用商店应用](deploy-use/windows-store-for-business.md)
+### [适用于企业的 Microsoft Store 应用](deploy-use/windows-store-for-business.md)
 
 ## [管理 Intune 订阅](deploy-use/manage-intune-subscriptions.md)
 ## [更改 MDM 机构](deploy-use/change-mdm-authority.md)

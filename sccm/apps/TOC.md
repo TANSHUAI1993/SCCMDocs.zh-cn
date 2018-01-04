@@ -31,7 +31,7 @@
 ## 管理应用程序
 ### [管理任务](deploy-use/management-tasks-applications.md)
 ### [用户设备相关性](deploy-use/link-users-and-devices-with-user-device-affinity.md)
-### [适用于企业批量采购应用的 Windows 应用商店](deploy-use/manage-apps-from-the-windows-store-for-business.md)
+### [适用于企业的 Microsoft Store 批量采购的应用](deploy-use/manage-apps-from-the-windows-store-for-business.md)
 ### [App-V 虚拟环境](deploy-use/create-app-v-virtual-environments.md)
 
 ## 更新和停用应用程序
