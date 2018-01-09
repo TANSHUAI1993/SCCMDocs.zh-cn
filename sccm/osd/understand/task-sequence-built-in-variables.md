@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: 02bc6bd4-ca53-4e22-8b80-d8ee5fe72567
 caps.latest.revision: "15"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: d584c6db85a5466e76a79f398e635ba93f8081ff
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: e29efd4de847a861afa75a7a10868cad30e4cf97
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="task-sequence-built-in-variables-in-system-center-configuration-manager"></a>ystem Center Configuration Manager 中的任务序列内置变量
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 10/12/2017
 ## <a name="task-sequence-built-in-variable-list"></a>任务序列内置变量列表  
  下面的列表描述了 Configuration Manager 中可用的内置变量：  
 
-|内置变量名称|描述|  
+|内置变量名称|说明|  
 |-----------------------------|-----------------|  
 |_OSDDetectedWinDir|从 Configuration Manager 版本 1602 开始，在 Windows PE 启动时，任务序列会在计算机的硬盘驱动器上扫描是否以前已安装操作系统。 Windows 文件夹位置存储在此变量中。 你可以将任务序列配置为从环境中检索该值，并将其用于指定相同的 Windows 文件夹位置进行新的操作系统安装。|  
 |_OSDDetectedWinDrive|从 Configuration Manager 版本 1602 开始，在 Windows PE 启动时，任务序列会在计算机的硬盘驱动器上扫描是否以前已安装操作系统。  安装操作系统的硬盘驱动器位置存储在此变量中。 你可以将任务序列配置为从环境中检索该值，并将其用于指定相同的硬盘驱动器位置以供新的操作系统使用。|  
@@ -94,7 +94,7 @@ ms.lasthandoff: 10/12/2017
 |SMSTSPostAction|指定任务序列完成后运行的命令。 例如，你可使用此变量指定任务序列将操作系统部署到设备后，在嵌入的设备上启用写筛选器的脚本。|  
 |SMSTSPreferredAdvertID|强制运行目标计算机上的特定目标部署。 可通过媒体或 PXE 的预启动命令对其进行设置。 如果设置此变量，则任务序列覆盖任何必需的部署。|  
 |SMSTSPreserveContent|此变量用于标志在部署后将保留在 Configuration Manager 客户端缓存中的任务序列内容。 这与使用 SMSTSPersisContent（仅任务序列持续期间保留内容）不同，并且使用任务序列缓存，而非 Configuration Manager 客户端缓存。<br /><br /> 例如：<br /><br /> SMSTSPreserveContent = **TRUE** 可启用此功能。|  
-|SMSTSRebootDelay|指定在计算机重新启动之前要等待多少秒。 如果此变量没有设置为 0，则任务序列管理器将在重新启动之前显示通知对话。<br /><br /> 例如：<br /><br /> **0**<br /><br /> **30**|  
+|SMSTSRebootDelay|指定在计算机重新启动之前要等待多少秒。 如果此变量没有设置为 0，则任务序列管理器将在重新启动之前显示通知对话。<br /><br /> 示例：<br /><br /> **0**<br /><br /> **30**|  
 |SMSTSRebootMessage|指定需要重新启动时显示在关机对话框中的消息。 如果未设置此变量，则显示默认消息。<br /><br /> 例如：<br /><br /> **此计算机将由任务序列管理器重新启动**。|  
 |SMSTSRebootRequested|指示当前任务序列步骤完成后，请求重新启动。 如果需要重新启动，则仅将此变量设置为 **true**，任务序列管理器将在此任务序列步骤后重新启动计算机。 任务序列步骤必须设置此任务序列变量，如果其需要重新启动以完成任务序列步骤。 重新启动计算机后，任务序列将继续从下一个任务序列步骤运行。|  
 |SMSTSRetryRequested|在完成当前的任务序列步骤后，将请求重试。 如果设置任务序列变量， **SMSTSRebootRequested** 必须设置为 **true**。 重新启动计算机后，任务序列管理器将重新运行相同的任务序列步骤。|  

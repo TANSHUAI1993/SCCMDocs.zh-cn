@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: d8d5c345-1e91-410b-b8a9-0170dcfa846e
 caps.latest.revision: "12"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: eae8f16a43dd8b1c6f6c695fbefafbb26084ff36
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: b85199d1109d216cbb7d7368717b99c110ec3219
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="manage-user-state-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中管理用户状态
 
@@ -112,7 +112,7 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="to-create-a-computer-association"></a>创建计算机关联  
 
-1.  在 Configuration Manager 控制台中，单击“资产和符合性” 。  
+1.  在 Configuration Manager 控制台中，单击“资产和符合性”。  
 
 2.  在“资产和符合性”  工作区中，单击“用户状态迁移” 。  
 

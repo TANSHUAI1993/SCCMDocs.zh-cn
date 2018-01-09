@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: 066caf00-e419-4efb-93d3-ba4ba878297c
 caps.latest.revision: "7"
 caps.handback.revision: "0"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 29d9afc22aaed516cc3e193d0ced1145354e0afb
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 6e046ed675614f15f2ea1a03ff3cf86f295da2da
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="plan-for-the-migration-of-configuration-manager-objects-to-system-center-configuration-manager"></a>规划将 Configuration Manager 对象迁移到 System Center Configuration Manager
 

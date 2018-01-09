@@ -12,7 +12,7 @@ ms.topic: article
 ms.assetid: 1fcc921f-085f-4b0b-9c53-1e0707211076
 caps.latest.revision: "5"
 caps.handback.revision: "0"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
 translation.priority.ht:
@@ -34,11 +34,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.openlocfilehash: 3cf73a424d9e8ad9e339b24d89a3a2afac0165b7
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 5332d02f4d128516f310a2edff897b4efc5b971b
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="additional-information-about-privacy-for-system-center-configuration-manager"></a>关于 System Center Configuration Manager 隐私的其他信息
 

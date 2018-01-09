@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 035b7f73-8b78-4ed1-835e-a31f9a5c4a02
 caps.latest.revision: "5"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 13c2177a45edf57e1ca417c7c4d371256a4dbf7e
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: ab7b1db1d1e4e422350f9f961ed816150c85d4c5
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="fundamentals-of-security-for-system-center-configuration-manager"></a>System Center Configuration Manager 安全性的基础知识
 

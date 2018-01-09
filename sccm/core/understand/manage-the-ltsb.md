@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8da2887a-fd8e-438c-b926-849c121f7fdf
 caps.latest.revision: "0"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: f8a630ef351bf5a01878c764b504f823f9ef5e82
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 74c51cfc4c53f5edf8cfc8043a7b81fe833cc832
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="manage-the-long-term-servicing-branch-of-configuration-manager"></a>管理 Configuration Manager 的 Long Term Servicing Branch
 

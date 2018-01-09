@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: c6b9ccd2-78d9-4f0e-b25a-70d0866300ba
 caps.latest.revision: "21"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 533b3942136255dd396df81529dad100d4db0a95
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: ef9ee10c94cea3e9d8437a8d8b3df8427d0cc524
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="create-stand-alone-media-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 创建独立媒体
 
@@ -57,7 +57,7 @@ Configuration Manager 中的独立媒体包含在未连接 Configuration Manager
 >     
 > “WMI method SMS_TaskSequencePackage.GetClientConfigPolicies failed (0x80041001)”    
 > 
-> 对于包含**安装包**步骤的独立媒体，必须在启用了软件分发代理的主站点上创建独立媒体，或者必须在任务序列中的 [安装 Windows 和 ConfigMgr](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) 步骤之后和第一个**安装包**步骤之前添加一个[运行命令行](../understand/task-sequence-steps.md#BKMK_RunCommandLine)步骤。 “运行命令行”步骤运行 WMIC 命令，以便在第一个安装包步骤运行之前启用软件分发代理。 可以在“运行命令行”任务序列步骤中使用以下命令：    
+> 对于包含**安装包**步骤的独立媒体，必须在启用了软件分发代理的主站点上创建独立媒体，或者必须在任务序列中的 [安装 Windows 和 ConfigMgr](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) 步骤之后和第一个**安装包**步骤之前添加一个[运行命令行](../understand/task-sequence-steps.md#BKMK_RunCommandLine)步骤。 “运行命令行”  步骤运行 WMIC 命令，以便在第一个安装包步骤运行之前启用软件分发代理。 可以在“运行命令行”任务序列步骤中使用以下命令：    
 >    
 > *WMIC /namespace:\\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE*
 
@@ -110,7 +110,7 @@ Configuration Manager 中的独立媒体包含在未连接 Configuration Manager
          > [!IMPORTANT]  
          >  如果选择现有的 .iso 映像，任务序列媒体向导将在你进入向导的下一页后立即从驱动器或共享中删除该映像。 即使随后取消该向导，也会删除这个现有的映像。  
 
-     单击“下一步”。  
+     单击“下一步” 。  
 
 6.  在“安全”页，从以下设置中进行选择，然后单击“下一步”：
     - **使用密码保护媒体**：输入强密码来帮助保护媒体。 如果指定了密码，则必须提供密码才能使用媒体。  
@@ -135,7 +135,7 @@ Configuration Manager 中的独立媒体包含在未连接 Configuration Manager
     > [!NOTE]  
     >  必须具有对分发点上的内容库的“读取”访问权限。  
 
-12. 在“自定义”页上，指定以下信息，然后单击“下一步”。  
+12. 在“自定义”  页上，指定以下信息，然后单击“下一步” 。  
 
     -   指定任务序列用于部署操作系统的变量。  
 
@@ -156,7 +156,7 @@ Configuration Manager 中的独立媒体包含在未连接 Configuration Manager
 > [!NOTE]  
 >  您始终必须使用任务序列媒体向导来创建独立媒体。  
 
-|任务序列组或步骤|描述|  
+|任务序列组或步骤|说明|  
 |---------------------------------|-----------------|  
 |捕获文件和设置 - **（新建任务序列组）**|创建任务序列组。 任务序列组将保留在一起以更好地组织和错误控制类似的任务序列步骤。|  
 |捕获 Windows 设置|使用此任务序列步骤来确定目标计算机之前重置映像上现有的操作系统从捕获的 Microsoft Windows 设置。 您可以捕获计算机名称、 用户和组织信息和时区设置。|  

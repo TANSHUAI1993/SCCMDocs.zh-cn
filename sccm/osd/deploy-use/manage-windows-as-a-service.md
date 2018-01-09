@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: da1e687b-28f6-43c4-b14a-ff2b76e60d24
 caps.latest.revision: "26"
-author: Dougeby
-ms.author: dougeby
+author: mestew
+ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: b9b15a781adef81e970adf50b8b6f26dd75d95f8
-ms.sourcegitcommit: b517c791554500209435bca21fbf3ef8a26828c9
+ms.openlocfilehash: 3848d0d6a9f3b5d778879c598bf859fb1e8a7ac7
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="manage-windows-as-a-service-using-system-center-configuration-manager"></a>使用 System Center Configuration Manager 将 Windows 作为服务进行管理
 
@@ -104,7 +104,7 @@ ms.lasthandoff: 11/08/2017
 
 #### <a name="to-create-a-windows-10-servicing-plan"></a>创建 Windows 10 维护服务计划  
 
-1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+1.  在 Configuration Manager 控制台中，单击“软件库”。  
 
 2.  在“软件库”工作区中，展开“Windows 10 维护服务” ，然后单击“维护服务计划” 。  
 
@@ -123,7 +123,7 @@ ms.lasthandoff: 11/08/2017
         > [!NOTE]  
         >  从 Configuration Manager 版本 1602 开始，部署高风险部署（例如维护服务计划）时，“选择集合”窗口中将仅显示满足站点属性中配置的部署验证设置的自定义集合。
         >    
-        > 高风险部署始终局限于自定义集合、你所创建的集合和内置“未知计算机”  集合。 创建高风险部署时，无法选择“所有系统”等内置集合。 取消选中“隐藏成员数大于站点最低大小配置的集合”以查看所含客户端少于配置的最大大小的全部自定义集合。 有关详细信息，请参阅[用于管理高风险部署的设置](../../protect/understand/settings-to-manage-high-risk-deployments.md)。  
+        > 高风险部署始终局限于自定义集合、你所创建的集合和内置“未知计算机”集合。 创建高风险部署时，无法选择“所有系统”等内置集合。 取消选中“隐藏成员数大于站点最低大小配置的集合”以查看所含客户端少于配置的最大大小的全部自定义集合。 有关详细信息，请参阅[用于管理高风险部署的设置](../../protect/understand/settings-to-manage-high-risk-deployments.md)。  
         >  
         > 部署验证设置基于集合的当前成员身份。 部署维护服务计划后，不会重新评估高风险部署设置的集合成员身份。  
         >  
@@ -168,7 +168,7 @@ ms.lasthandoff: 11/08/2017
 
     -   安装截止时间：选择以下设置之一以指定部署中的软件更新的安装截止时间：  
 
-        -   尽快：选择此设置以尽快自动安装部署中的软件更新。  
+        -   “尽快”：选择此设置以尽快自动安装部署中的软件更新。  
 
         -   特定时间：选择此设置以在特定日期和时间自动安装部署中的软件更新。 通过将已配置的“特定时间”间隔添加到“软件可用时间”，Configuration Manager 可确定安装软件更新的截止时间。  
 
@@ -236,7 +236,7 @@ ms.lasthandoff: 11/08/2017
 
 #### <a name="to-modify-the-properties-of-a-servicing-plan"></a>修改维护服务计划的属性  
 
-1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+1.  在 Configuration Manager 控制台中，单击“软件库”。  
 
 2.  在“软件库”工作区中，展开“Windows 10 维护服务” ，单击“维护服务计划” ，然后选择要修改的维护服务计划。  
 
@@ -246,7 +246,7 @@ ms.lasthandoff: 11/08/2017
 
     **部署设置**：在“部署设置”选项卡上，配置以下设置：  
 
-    -   “部署类型”：指定软件更新部署的部署类型。 选择“必需”以创建强制性软件更新部署，部署会在配置的安装截止时间之前在客户端上自动安装软件更新。 选择“可用”以创建可供用户从软件中心中安装的可选软件更新部署。  
+    -   署类型：指定软件更新部署的部署类型。 选择“必需”以创建强制性软件更新部署，部署会在配置的安装截止时间之前在客户端上自动安装软件更新。 选择“可用”以创建可供用户从软件中心中安装的可选软件更新部署。  
 
         > [!IMPORTANT]  
         >  创建软件更新部署之后，你稍后无法更改部署的类型。  
@@ -268,7 +268,7 @@ ms.lasthandoff: 11/08/2017
 
     - 指定当软件更新的内容在首选分发点上不可用时客户端是否下载和安装回退分发点中的软件更新。  
 
-    -   **允许客户端与同一子网上的其他客户端共享内容**：指定是否为内容下载启用 BranchCache。 有关 BranchCache 的详细信息，请参阅[内容管理的基本概念](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#branchcache)。  
+    -   允许客户端与同一子网上的其他客户端共享内容：指定是否为内容下载启用 BranchCache。 有关 BranchCache 的详细信息，请参阅[内容管理的基本概念](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#branchcache)。  
 
     -   指定在分发点上没有软件更新的情况下是否让客户端从 Microsoft 更新下载软件更新。
         > [!IMPORTANT]
@@ -276,7 +276,7 @@ ms.lasthandoff: 11/08/2017
 
     -   指定是否允许客户端在安装截止日期之后下载内容（如果客户端使用按流量计费的 Internet 连接）。 Internet 提供商有时根据你在按流量计费的 Internet 连接上发送和接收的数据量计费。   
 
-    **警报**：在“警报”选项卡上，配置 Configuration Manager 和 System Center Operations Manager 为此部署生成警报的方式。 只有在“部署设置”页上将“部署类型”  设置为“必需”  时，才可以配置警报。  
+    **警报**：在“警报”选项卡上，配置 Configuration Manager 和 System Center Operations Manager 为此部署生成警报的方式。 只有在“部署设置”页上将“部署类型”设置为“必需”时，才可以配置警报。  
 
     > [!NOTE]  
-    >  你可以从“软件库”  工作区的“软件更新”  节点中查看最新软件更新警报。  
+    >  你可以从“软件库”工作区的“软件更新”节点中查看最新软件更新警报。  

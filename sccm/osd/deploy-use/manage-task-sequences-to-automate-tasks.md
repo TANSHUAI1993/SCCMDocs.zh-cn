@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a1f099f1-e9b5-4189-88b3-f53e3b4e4add
 caps.latest.revision: "10"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 44e6afbfac3ef1e8318991854c8fdd22ead4c6ed
-ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
+ms.openlocfilehash: b3071905a368ff9bc8e932d91f9b1e7d707b106b
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="manage-task-sequences-to-automate-tasks-in-system-center-configuration-manager"></a>管理任务序列以在 System Center Configuration Manager 中自动执行任务
 
@@ -476,7 +476,7 @@ ms.lasthandoff: 11/21/2017
 
  使用下表以了解有关其他一些用于管理任务序列的操作的详细信息。  
 
-|操作|描述|  
+|操作|说明|  
 |------------|-----------------|  
 |**复制**|为所选的任务序列创建副本。 在要根据现有的任务序列创建新的任务序列时，你可能会发现此操作很有用。<br /><br /> 为某个文件夹中的任务序列创建副本时，副本会在该文件夹中列出，直至你刷新任务序列节点为止。  刷新后，副本将出现在根文件夹中。|  
 |**禁用**|禁用任务序列，以便它无法在计算机上运行。 可以将禁用的任务序列部署到计算机，但在启用任务序列之前，计算机不会运行它。|  

@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: c7c94ba0-d709-4129-8077-075a8abaea1c
 caps.latest.revision: "4"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 936dead7461162779d85796808a8a94e9b8bc44a
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: f5fa0951ff07ad4d4722b521c5039078a7baaec4
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="preprovision-bitlocker-in-windows-pe-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 预先设置在 Windows PE 中的 BitLocker
 

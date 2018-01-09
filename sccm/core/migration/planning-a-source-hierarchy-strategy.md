@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: 4800a800-66c8-4c35-aebe-e413a23790c1
 caps.latest.revision: "6"
 caps.handback.revision: "0"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: f56d21095e4a781c0a490ff0a6f3a4e05007755f
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: f6020cb9a995069c7542200ecb0ce2520ff25bb8
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="plan-a-source-hierarchy-strategy-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中规划源层次结构策略
 

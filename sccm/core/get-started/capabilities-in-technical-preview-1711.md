@@ -14,17 +14,17 @@ ms.assetid: 2e68dc12-6776-437a-9138-45cd7d4bf9cf
 author: erikje
 ms.author: erikje
 manager: angrobe
-ms.openlocfilehash: e970dff4ea295694fcc5cf80e238baf2c9d081b5
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: b740c422a71e625ccc110a043028cf986cdffb20
+ms.sourcegitcommit: ed8b2438ef85c9160741ef61f9171be41dd1ae0a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/17/2017
 ---
 # <a name="capabilities-in-technical-preview-1711-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1711 中的功能
 
 *适用范围：System Center Configuration Manager (Technical Preview)*
 
-本文介绍了 System Center Configuration Manager Technical Preview（版本 1711）中的可用功能。 可以安装此版本以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。 在安装此 Technical Preview 前，请查看 [System Center Configuration Manager 的 Technical Preview](../../core/get-started/technical-preview.md)，熟悉使用 Technical Preview 的常规要求和限制，如何在两版本之间进行更新，以及如何对 Technical Preview 中的有关功能提供反馈。     
+本文介绍了 System Center Configuration Manager Technical Preview（版本 1711）中的可用功能。 你可以安装此版本，以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。 在安装此 Technical Preview 前，请查看 [System Center Configuration Manager 的 Technical Preview](../../core/get-started/technical-preview.md)，熟悉使用 Technical Preview 的常规要求和限制，如何在两版本之间进行更新，以及如何对 Technical Preview 中的有关功能提供反馈。     
 
 
 <!--  Known Issues Template   
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/01/2017
   3. 右键单击被动模式站点服务器，再选择“删除”。
   4. 卸载站点服务器后，在处于主动模式的主站点服务器上重启服务 CONFIGURATION_MANAGER_UPDATE。
 
-**以下是可以试用的此版本的新功能。**  
+**以下是此版本可以试用的新功能。**  
 
 <!--  Section Template
 ##  FEATURE
@@ -109,20 +109,6 @@ ms.lasthandoff: 12/01/2017
 1. 创建或编辑应用程序。
 2. 将应用程序部署到客户端。
 3. 从软件中心安装应用程序。 应该显示应用程序安装界面。 最终用户应该遵循应用程序安装向导，应用程序将成功安装。
-
-## <a name="new-compliance-policy-options-for-windows-10"></a>Windows 10 的新符合性策略选项
-以下是可以为 Windows 10 设备配置的新符合性策略。
-- **要求防火墙**。  指定设备是否必须启用防火墙并监视所有网络。
-- **要求用户帐户控制**。 指定设备必需启用用户帐户控制。
-- **Defender**：
-  - **要求 Windows Defender 防病毒**。  要求设备已启用 Windows Defender 防病毒。
-  - **Windows Defender 防病毒版本**。  指定设备必须安装的最低版本的间谍软件定义。
-  - **要求当前 Windows Defender 防病毒签名**。 验证设备 Window Defender 防病毒签名是否为最新的。
-  - **要求实时保护**。  指定设备是否必须启用 Windows Defender 防病毒实时保护。
-- **有效的操作系统版本**。  指定最低和最高操作系统版本要求。  
-
-使用“创建符合性策略”向导配置这些策略，并在将规则添加到正在配置的策略时，选择这些新选项。  
-了解如何[创建](/sccm/mdm/deploy-use/create-compliance-policy#create-a-compliance-policy)并[部署](/sccm/mdm/deploy-use/create-compliance-policy#deploy-a-compliance-policy)符合性策略。
 
 
 

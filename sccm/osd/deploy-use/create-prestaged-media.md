@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ff6e7267-302a-4563-815e-cdc0d1a4b60f
 caps.latest.revision: "12"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 4b10aab0674e4066b399c636ecf2226ae109260e
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: a26fc3daf17aefe24a46ece561fc2ceaf5284ffb
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="create-prestaged-media-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 创建预留媒体
 
@@ -39,7 +39,7 @@ System Center Configuration Manager 中的预留媒体是 Windows 映像格式 (
 ##  <a name="BKMK_CreatePrestagedMedia"></a> 如何创建预留媒体  
  在使用“创建任务序列媒体向导”创建预留媒体之前，请确保满足以下所有条件：  
 
-|任务|描述|  
+|任务|说明|  
 |----------|-----------------|  
 |启动映像|请考虑以下将用于在任务序列中部署操作系统的启动映像的相关事项：<br /><br /> -   启动映像的体系结构必须适合于目标计算机的体系结构。 例如，x64 目标计算机可启动和运行 x86 或 x64 启动映像。 但是，x86 目标计算机只能启动和运行 x86 启动映像。<br />-   确保启动映像包含预配目标计算机所需的网络和大容量存储驱动程序。|  
 |创建用于部署操作系统的任务序列|作为预留媒体的一部分，必须指定用于部署操作系统的任务序列。<br /><br /> -   有关创建新任务序列的步骤，请参阅[创建用于安装操作系统的任务序列](../../osd/deploy-use/create-a-task-sequence-to-install-an-operating-system.md)。<br />-   有关任务序列的详细信息，请参阅[Manage task sequences to automate tasks](../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md)（管理任务序列以自动执行任务）。|  
@@ -53,7 +53,7 @@ System Center Configuration Manager 中的预留媒体是 Windows 映像格式 (
 
 #### <a name="to-create-prestaged-media"></a>创建预留媒体  
 
-1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+1.  在 Configuration Manager 控制台中，单击“软件库”。  
 
 2.  在“软件库”工作区中，展开“操作系统”，然后单击“任务序列”。  
 
