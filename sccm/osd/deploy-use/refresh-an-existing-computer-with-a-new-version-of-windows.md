@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b189a346-8c0d-4870-a876-0719fbb0ab04
 caps.latest.revision: "7"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: a7a3f61793e92453b8ccc048192d3ae858a78a4a
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 2a5489c35acc82c6fc11a0e83b7a5101b2e472fb
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="refresh-an-existing-computer-with-a-new-version-of-windows-using-system-center-configuration-manager"></a>通过 System Center Configuration Manager，使用新版本的 Windows 刷新现有的计算机
 

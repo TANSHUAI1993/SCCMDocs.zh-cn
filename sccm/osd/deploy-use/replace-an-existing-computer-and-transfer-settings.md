@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d28f4363-9e8a-4c54-9cb7-0594fabfff26
 caps.latest.revision: "6"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: efa6ad5bd5358139b3da23b226041f8599dc9454
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 862b3b8da0c1f9be0a5883c3f07b2759606d0fc1
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="replace-an-existing-computer-and-transfer-settings-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 替换现有计算机和传输设置
 

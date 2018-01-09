@@ -13,14 +13,14 @@ ms.topic: get-started-article
 ms.assetid: 07ce872e-1558-42ad-b5ad-582c5b1bdbb4
 caps.latest.revision: "22"
 caps.handback.revision: "0"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: f4bfad43e6ed47b8b69ba35865a3a36b833723c5
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 845ec5210b9055ff9c52039a32f008b1baa36413
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="design-a-hierarchy-of-sites-for-system-center-configuration-manager"></a>设计 System Center Configuration Manager 的站点层次结构
 
