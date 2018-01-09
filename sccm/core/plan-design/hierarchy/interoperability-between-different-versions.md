@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9b0a7859-747f-4495-a2f4-13fd5991f897
 caps.latest.revision: "8"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 5b7b4c938ae057e7bcb7f281ddb266ade0cdafb4
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 66bfb130a27ed8e4b8b9d052a672ef7f72b56f59
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="interoperability-between-different-versions-of-system-center-configuration-manager"></a>System Center Configuration Manager 不同版本之间的互操作性
 

@@ -13,14 +13,14 @@ ms.topic: get-started-article
 ms.assetid: 104fb4cc-6e83-40a3-8e6b-ac909fb9ec7d
 caps.latest.revision: "5"
 caps.handback.revision: "0"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 4366ea22ff654b787a3b350ed6a0b58dfbdd8e7d
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 2db5658958cbeef0c3c49922b06d8ae288fbea37
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="plan-for-the-site-database-for-system-center-configuration-manager"></a>为 System Center Configuration Manager 规划站点数据库
 

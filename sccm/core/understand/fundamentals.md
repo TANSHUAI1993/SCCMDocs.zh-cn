@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: cc4cdb35-f0b4-42b5-9cec-6431a8c30793
 caps.latest.revision: "11"
 caps.handback.revision: "0"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 1ea8c62ce4b0dd68042b08e91dd4d4d7a7b07aa8
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 7474544b5008117846bda2bba6670d768250b3cc
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="fundamentals-of-system-center-configuration-manager"></a>System Center Configuration Manager 基础知识
 

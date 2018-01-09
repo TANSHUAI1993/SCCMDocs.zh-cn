@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: 10eb8958-3848-49d7-95c0-16119b624580
 caps.latest.revision: "11"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: c25eade287d254907c7d7d02948eb25a88ed0a11
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: be797589052a45f239629a5db56b79102257cdfd
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="create-capture-media-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 创建捕获媒体
 
@@ -35,10 +35,10 @@ ms.lasthandoff: 10/12/2017
 
 通过使用创建任务序列媒体向导来创建捕获媒体。 在运行向导之前，请确保满足下列所有条件：  
 
-|任务|描述|  
+|任务|说明|  
 |----------|-----------------|  
 |启动映像|请考虑以下关于将在任务序列中用于捕获操作系统的启动映像信息：<br /><br /> -   启动映像的体系结构必须适合于目标计算机的体系结构。 例如，x64 目标计算机可启动和运行 x86 或 x64 启动映像。 但是，x86 目标计算机只能启动和运行 x86 启动映像。<br />-   确保启动映像包含预配目标计算机所需的网络和大容量存储驱动程序。|  
-|分发与任务序列关联的所有内容|必须将任务序列所需的所有内容至少分发到一个分发点。 这包括启动映像、操作系统映像和其他相关联的文件。 向导在创建独立媒体时从分发点中收集信息。 必须具有对该分发点上的内容库的 **读取** 访问权限。  有关详细信息，请参阅[分发内容](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute)。|  
+|分发与任务序列关联的所有内容|必须将任务序列所需的所有内容至少分发到一个分发点。 这包括启动映像、操作系统映像和其他相关联的文件。 向导在创建独立媒体时从分发点中收集信息。 必须具有对该分发点上的内容库的**读取**访问权限。  有关详细信息，请参阅[分发内容](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute)。|  
 |准备可移动的 USB 驱动器|对于可移动的 USB 驱动器：<br /><br /> 如果你要使用可移动的 USB 驱动器，该 USB 驱动器必须连接到运行向导的计算机，并且 USB 驱动器必须可被 Windows 检测为可移动设备。 向导将在创建媒体时直接写入 USB 驱动器。|  
 |创建一个输出文件夹|对于 CD/DVD 集：<br /><br /> 在运行创建任务序列媒体向导以便为 CD 或 DVD 集创建媒体之前，你必须为向导创建的输出文件创建一个文件夹。 为 CD 或 DVD 集创建的媒体将以 .iso 文件形式直接写入该文件夹。|  
 
@@ -46,7 +46,7 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="to-create-capture-media"></a>创建捕获媒体  
 
-1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+1.  在 Configuration Manager 控制台中，单击“软件库”。  
 
 2.  在“软件库”工作区中，展开“操作系统”，然后单击“任务序列”。  
 

@@ -12,15 +12,15 @@ ms.service:
 ms.technology: configmgr-other
 ms.assetid: 1fa7d0d9-4bb5-4475-82ff-0d5da4a3da61
 caps.latest.revision: "4"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
 robots: noindex,nofollow
-ms.openlocfilehash: 395ff0f59858590609934e470c433fed33b02a9c
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: e6acf1fd540b09dd4d535356679ed08083fcc75d
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="learn-more-about-available-updates-for-system-center-configuration-manager"></a>了解有关 System Center Configuration Manager 可用更新的详细信息
 

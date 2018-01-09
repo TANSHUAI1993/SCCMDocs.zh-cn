@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f74fdb86-c7c2-447f-91f6-b42df6370d7f
 caps.latest.revision: "11"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: d7934c3d757ec0ede6553d9c17b3d36117da3892
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 29dfaf4521ae0fe10994538c5ced907a6223cae7
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="scenarios-to-deploy-enterprise-operating-systems-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 部署企业操作系统的方案
 

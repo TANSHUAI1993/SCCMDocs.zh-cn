@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: c6777fb0-0754-4abf-8a1b-7639d23e9391
 caps.latest.revision: "8"
 caps.handback.revision: "0"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: bc3237b701a49aa176c924323710beea3dcc6fa9
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 0b6fa22a7bc3de7bb5bc0d26f8e35b51d55c5e72
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="ports-used-in-system-center-configuration-manager"></a>System Center Configuration Manager 中使用的端口
 
@@ -81,32 +81,32 @@ Configuration Manager 不允许您为以下通信类型配置端口：
 
 ###  <a name="BKMK_PortsAI"></a>资产智能同步点 -- > Microsoft  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |安全超文本传输协议 (HTTPS)|--|443|  
 
 ###  <a name="BKMK_PortsAI-to-SQL"></a> 资产智能同步点 -- > SQL Server  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |SQL over TCP|--|1433（请参阅备注 2 **可用的备用端口**）|  
 
 ###  <a name="BKMK_PortsAppCatalogService-SQL"></a> 应用程序目录 Web 服务点 -- > SQL Server  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |SQL over TCP|--|1433（请参阅备注 2 **可用的备用端口**）|  
 
 ###  <a name="BKMK_PortsAppCatalogWebSitePoint_AppCatalogWebServicePoint"></a> 应用程序目录网站点 -- > 应用程序目录 Web 服务点  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |超文本传输协议 (HTTP)|--|80（请参阅备注 2 **可用的备用端口**）|  
 |安全超文本传输协议 (HTTPS)|--|443（请参阅备注 2 **可用的备用端口**）|  
 
 ###  <a name="BKMK_PortsClient-AppCatalogWebsitePoint"></a> 客户端 -- > 应用程序目录网站点  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |超文本传输协议 (HTTP)|--|80（请参阅备注 2 **可用的备用端口**）|  
 |安全超文本传输协议 (HTTPS)|--|443（请参阅备注 2 **可用的备用端口**）|  
@@ -116,41 +116,41 @@ Configuration Manager 不允许您为以下通信类型配置端口：
 
 此通信用于确认网络上的另一台客户端计算机是否处于唤醒状态。 ICMP 有时称为 TCP/IP ping 命令。 ICMP 没有 UDP 或 TCP 协议号，因此未在下表中列出。 但是，这些客户端计算机或者子网中的介入性网络设备上的任何基于主机的防火墙都必须允许 ICMP 流量，以便成功进行唤醒代理通信。  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |LAN 唤醒|9（请参阅备注 2 **可用的备用端口**）|--|  
 |唤醒代理|25536（请参阅备注 2 **可用的备用端口**）|--|  
 
 ###  <a name="BKMK_PortsClient-PolicyModule"></a> 客户端 -- &gt; Configuration Manager 策略模块（网络设备注册服务）  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |超文本传输协议 (HTTP)||80|  
 |安全超文本传输协议 (HTTPS)|--|443|  
 
 ###  <a name="BKMK_PortsClient-CloudDP"></a> 客户端 -- > 基于云的分发点  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |安全超文本传输协议 (HTTPS)|--|443|  
 
 ###  <a name="BKMK_PortsClient-DP"></a> 客户端 -- > 分发点  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |超文本传输协议 (HTTP)|--|80（请参阅备注 2 **可用的备用端口**）|  
 |安全超文本传输协议 (HTTPS)|--|443（请参阅备注 2 **可用的备用端口**）|  
 
 ###  <a name="BKMK_PortsClient-DP2"></a> 客户端 -- > 配置进行多播的分发点  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |服务器消息块 (SMB)|--|445|  
 |多播协议|63000-64000|--|  
 
 ###  <a name="BKMK_PortsClient-DP3"></a> 客户端 -- > 为 PXE 配置的分发点  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |动态主机配置协议 (DHCP)|67 和 68|--|  
 |普通文件传输协议 (TFTP)|69（请参阅备注 4 **普通文件传输协议 (TFTP) 后台程序**）|--|  
@@ -158,21 +158,21 @@ Configuration Manager 不允许您为以下通信类型配置端口：
 
 ###  <a name="BKMK_PortsClient-FSP"></a> 客户端 -- > 回退状态点  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |超文本传输协议 (HTTP)|--|80（请参阅备注 2 **可用的备用端口**）|  
 
 ###  <a name="BKMK_PortsClient-GCDC"></a> 客户端 -- > 全局编录域控制器  
  如果 Configuration Manager 客户端是工作组计算机或者配置为仅限 Internet 通信，则该客户端不会联系全局目录服务器。  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |全局编录 LDAP|--|3268|  
 
 
 ###  <a name="BKMK_PortsClient-MP"></a> 客户端 -- > 管理点  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |客户端通知（在回退到 HTTP 或 HTTPS 之前的默认通信）|--|10123（请参阅备注 2 **可用的备用端口**）|  
 |超文本传输协议 (HTTP)|--|80（请参阅备注 2 **可用的备用端口**）|  
@@ -180,14 +180,14 @@ Configuration Manager 不允许您为以下通信类型配置端口：
 
 ###  <a name="BKMK_PortsClient-SUP"></a> 客户端 -- > 软件更新点  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |超文本传输协议 (HTTP)|--|80 或 8530（请参阅备注 3 **Windows Server Update Services**）|  
 |安全超文本传输协议 (HTTPS)|--|443 或 8531（请参阅备注 3 **Windows Server Update Services**）|  
 
 ###  <a name="BKMK_PortsClient-SMP"></a> 客户端 -- > 状态迁移点  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |超文本传输协议 (HTTP)|--|80（请参阅备注 2 **可用的备用端口**）|  
 |安全超文本传输协议 (HTTPS)|--|443（请参阅备注 2 **可用的备用端口**）|  
@@ -195,41 +195,41 @@ Configuration Manager 不允许您为以下通信类型配置端口：
 
 ###  <a name="BKMK_PortsConsole-Client"></a> Configuration Manager 控制台 -- > 客户端  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |远程控制（控制）|--|2701|  
 |远程辅助（RDP 和 RTC）|--|3389|  
 
 ###  <a name="BKMK_PortsConsole-Internet"></a> Configuration Manager 控制台 -- > Internet  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |超文本传输协议 (HTTP)|--|80|  
 
 ###  <a name="BKMK_PortsConsole-RSP"></a> Configuration Manager 控制台 -- > Reporting Services 点  
 
 
-|描述|UDP|TCP|
+|说明|UDP|TCP|
 |-----------------|---------|---------|   
 |超文本传输协议 (HTTP)|--|80（请参阅备注 2 **可用的备用端口**）|  
 |安全超文本传输协议 (HTTPS)|--|443（请参阅备注 2 **可用的备用端口**）|  
 
 ###  <a name="BKMK_PortsConsole-Site"></a> Configuration Manager 控制台 -- > 站点服务器  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |RPC（最初连接到 WMI，以找到提供程序系统）|--|135|  
 
 ###  <a name="BKMK_PortsConsole-Provider"></a> Configuration Manager 控制台 -- > SMS 提供程序  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |RPC 终结点映射程序|135|135|  
 |RPC|--|动态（请参阅备注 6 **动态端口**）|  
 
 ###  <a name="BKMK_PortsCertificateRegistationPoint_PolicyModule"></a> Configuration Manager 策略模块（网络设备注册服务）-- > 证书注册点  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |安全超文本传输协议 (HTTPS)|--|443（请参阅备注 2 **可用的备用端口**）|  
 
@@ -244,56 +244,56 @@ Configuration Manager 不允许您为以下通信类型配置端口：
 
 -   报告包下载的状态（拉取分发点）
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |超文本传输协议 (HTTP)|--|80（请参阅备注 2 **可用的备用端口**）|  
 |安全超文本传输协议 (HTTPS)|--|443（请参阅备注 2 **可用的备用端口**）|  
 
 ###  <a name="BKMK_PortsEndpointProtection_Internet"></a>Endpoint Protection 点 -- > Internet  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |超文本传输协议 (HTTP)|--|80|  
 
 ###  <a name="BKMK_PortsEP-to-SQL"></a> Endpoint Protection 点 -- > SQL Server  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |SQL over TCP|--|1433（请参阅备注 2 **可用的备用端口**）|  
 
 ###  <a name="BKMK_PortsEnrollmentProxyEnrollmentPoint"></a> 注册代理点 -- > 注册点  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |安全超文本传输协议 (HTTPS)|--|443（请参阅备注 2 **可用的备用端口**）|  
 
 ###  <a name="BKMK_PortsEnrollmentEnrollmentSQL"></a> 注册点 -- > SQL Server  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |SQL over TCP|--|1433（请参阅备注 2 **可用的备用端口**）|  
 
 ###  <a name="BKMK_PortsExchangeConnectorHosted"></a> Exchange Server 连接器 -- &gt; Exchange Online  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |通过 HTTPS 进行的 Windows 远程管理|--|5986|  
 
 ###  <a name="BKMK_PortsExchangeConnectorOnPrem"></a> Exchange Server 连接器 -- > 本地 Exchange Server  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |通过 HTTP 进行的 Windows 远程管理|--|5985|  
 
 ###  <a name="BKMK_PortsMacEnrollmentProxyPoint"></a> Mac 计算机 -- > 注册代理点  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |安全超文本传输协议 (HTTPS)|--|443|  
 
 ###  <a name="BKMK_PortsMP-DC"></a> 管理点 -- > 域控制器  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |轻型目录访问协议 (LDAP)|--|389|  
 |全局编录 LDAP|--|3268|  
@@ -303,7 +303,7 @@ Configuration Manager 不允许您为以下通信类型配置端口：
 ###  <a name="BKMK_PortsMP-Site"></a> 管理点 &lt; -- > 站点服务器  
  （请参阅备注 5 **站点服务器和站点系统之间的通信**）  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |RPC 终结点映射程序|--|135|  
 |RPC|--|动态（请参阅备注 6 **动态端口**）|  
@@ -311,38 +311,38 @@ Configuration Manager 不允许您为以下通信类型配置端口：
 
 ###  <a name="BKMK_PortsMP-SQL"></a> 管理点 -- > SQL Server  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |SQL over TCP|--|1433（请参阅备注 2 **可用的备用端口**）|  
 
 ###  <a name="BKMK_PortsMobileDeviceClient-EnrollmentProxyPoint"></a> 移动设备 -- > 注册代理点  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |安全超文本传输协议 (HTTPS)|--|443|  
 
 ###  <a name="BKMK_PortsMobileDeviceClient-WindowsIntune"></a> 移动设备 -- > Microsoft Intune  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |安全超文本传输协议 (HTTPS)|--|443|  
 
 ###  <a name="BKMK_PortsRSP-SQL"></a> Reporting Services 点 -- > SQL Server  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |SQL over TCP|--|1433（请参阅备注 2 **可用的备用端口**）|  
 
 ###  <a name="BKMK_PortsIntuneConnector-WindowsIntune"></a> 服务连接点 -- > Microsoft Intune  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |安全超文本传输协议 (HTTPS)|--|443|
 有关详细信息，请参阅服务连接点的 [Internet 访问要求](/sccm/core/servers/deploy/configure/about-the-service-connection-point#bkmk_urls)。
 
 ###  <a name="BKMK_PortsAppCatalogWebServicePoint_SiteServer"></a> 站点服务器 &lt; -- > 应用程序目录 Web 服务点  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |服务器消息块 (SMB)|--|445|  
 |RPC 终结点映射程序|135|135|  
@@ -350,7 +350,7 @@ Configuration Manager 不允许您为以下通信类型配置端口：
 
 ###  <a name="BKMK_PortsAppCatalogWebSitePoint_SiteServer"></a> 站点服务器 &lt; -- > 应用程序目录网站点  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |服务器消息块 (SMB)|--|445|  
 |RPC 终结点映射程序|135|135|  
@@ -358,7 +358,7 @@ Configuration Manager 不允许您为以下通信类型配置端口：
 
 ###  <a name="BKMK_PortsSite-AISP"></a> 站点服务器&lt; -- > 资产智能同步点  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |服务器消息块 (SMB)|--|445|  
 |RPC 终结点映射程序|135|135|  
@@ -366,20 +366,20 @@ Configuration Manager 不允许您为以下通信类型配置端口：
 
 ###  <a name="BKMK_PortsSite-Client"></a> 站点服务器 -- > 客户端  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |LAN 唤醒|9（请参阅备注 2 **可用的备用端口**）|--|  
 
 ###  <a name="BKMK_PortsSiteServer-CloudDP"></a> 站点服务器 -- > 基于云的分发点  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |安全超文本传输协议 (HTTPS)|--|443|  
 
 ###  <a name="BKMK_PortsSite-DP"></a> 站点服务器 -- > 分发点  
  （请参阅备注 5 **站点服务器和站点系统之间的通信**）  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |服务器消息块 (SMB)|--|445|  
 |RPC 终结点映射程序|135|135|  
@@ -387,7 +387,7 @@ Configuration Manager 不允许您为以下通信类型配置端口：
 
 ###  <a name="BKMK_PortsSite-DC"></a> 站点服务器 -- > 域控制器  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |轻型目录访问协议 (LDAP)|--|389|  
 |全局编录 LDAP|--|3268|  
@@ -396,7 +396,7 @@ Configuration Manager 不允许您为以下通信类型配置端口：
 
 ###  <a name="BKMK_PortsCertificateRegistrationPoint_SiteServer"></a> 站点服务器 &lt; -- > 证书注册点  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |服务器消息块 (SMB)|--|445|  
 |RPC 终结点映射程序|135|135|  
@@ -404,7 +404,7 @@ Configuration Manager 不允许您为以下通信类型配置端口：
 
 ###  <a name="BKMK_PortsEndpointProtection_SiteServer"></a>站点服务器&lt; -- > Endpoint Protection 点  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |服务器消息块 (SMB)|--|445|  
 |RPC 终结点映射程序|135|135|  
@@ -412,7 +412,7 @@ Configuration Manager 不允许您为以下通信类型配置端口：
 
 ###  <a name="BKMK_EnrollmentPoint_SiteServer"></a> 站点服务器 &lt; -- > 注册点  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |服务器消息块 (SMB)|--|445|  
 |RPC 终结点映射程序|135|135|  
@@ -420,7 +420,7 @@ Configuration Manager 不允许您为以下通信类型配置端口：
 
 ###  <a name="BKMK_EnrollmentProxyPoint_SiteServer"></a> 站点服务器 &lt; -- > 注册代理点  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |服务器消息块 (SMB)|--|445|  
 |RPC 终结点映射程序|135|135|  
@@ -429,7 +429,7 @@ Configuration Manager 不允许您为以下通信类型配置端口：
 ###  <a name="BKMK_PortsSite-FSP"></a> 站点服务器 &lt; -- > 回退状态点  
  （请参阅备注 5 **站点服务器和站点系统之间的通信**）  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |服务器消息块 (SMB)|--|445|  
 |RPC 终结点映射程序|135|135|  
@@ -437,14 +437,14 @@ Configuration Manager 不允许您为以下通信类型配置端口：
 
 ###  <a name="BKMK_PortSite-Internet"></a> 站点服务器 -- > Internet  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |超文本传输协议 (HTTP)|--|80（请参阅备注 1 **代理服务器端口**）|  
 
 ###  <a name="BKMK_PortsIssuingCA_SiteServer"></a> 站点服务器 &lt; -- > 证书颁发机构 (CA)  
  当你使用证书注册点部署证书配置文件时，将使用此通信。 层次结构中的每个站点服务器均不使用该通信。 而仅用于层次结构顶部的站点服务器。  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |RPC 终结点映射程序|135|135|  
 |RPC (DCOM)|--|动态（请参阅备注 6 **动态端口**）|  
@@ -452,7 +452,7 @@ Configuration Manager 不允许您为以下通信类型配置端口：
 ###  <a name="BKMK_PortsSite-RSP"></a> 站点服务器 &lt; -- > Reporting Services 点  
  （请参阅备注 5 **站点服务器和站点系统之间的通信**）  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |服务器消息块 (SMB)|--|445|  
 |RPC 终结点映射程序|135|135|  
@@ -460,19 +460,19 @@ Configuration Manager 不允许您为以下通信类型配置端口：
 
 ###  <a name="BKMK_PortsSite-Site"></a> 站点服务器 &lt; -- > 站点服务器  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |服务器消息块 (SMB)|--|445|  
 
 ###  <a name="BKMK_PortsSite-SQL"></a> 站点服务器 -- > SQL Server  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |SQL over TCP|--|1433（请参阅备注 2 **可用的备用端口**）|  
 
  安装使用远程 SQL Server 托管站点数据库的站点期间，必须在站点服务器和 SQL Server 之间打开以下端口：  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |服务器消息块 (SMB)|--|445|  
 |RPC 终结点映射程序|135|135|  
@@ -480,7 +480,7 @@ Configuration Manager 不允许您为以下通信类型配置端口：
 
 ###  <a name="BKMK_PortsSite-Provider"></a> 站点服务器 -- > SMS 提供程序  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |服务器消息块 (SMB)|--|445|  
 |RPC 终结点映射程序|135|135|  
@@ -489,7 +489,7 @@ Configuration Manager 不允许您为以下通信类型配置端口：
 ###  <a name="BKMK_PortsSite-SUP"></a> 站点服务器 &lt; -- > 软件更新点  
  （请参阅备注 5 **站点服务器和站点系统之间的通信**）  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |服务器消息块 (SMB)|--|445|  
 |超文本传输协议 (HTTP)|--|80 或 8530（请参阅备注 3 **Windows Server Update Services**）|  
@@ -498,26 +498,26 @@ Configuration Manager 不允许您为以下通信类型配置端口：
 ###  <a name="BKMK_PortsSite-SMP"></a> 站点服务器 &lt; -- > 状态迁移点  
  （请参阅备注 5 **站点服务器和站点系统之间的通信**）  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |服务器消息块 (SMB)|--|445|  
 |RPC 终结点映射程序|135|135|  
 
 ###  <a name="BKMK_PortsProvider-SQL"></a> SMS 提供程序 -- &gt; SQL Server  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |SQL over TCP|--|1433（请参阅备注 2 **可用的备用端口**）|  
 
 ###  <a name="BKMK_PortsSUP-Internet"></a> 软件更新点 -- > Internet  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |超文本传输协议 (HTTP)|--|80（请参阅备注 1 **代理服务器端口**）|  
 
 ###  <a name="BKMK_PortsSUP-WSUS"></a> 软件更新点 -- > 上游 WSUS 服务器  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |超文本传输协议 (HTTP)|--|80 或 8530（请参阅备注 3 **Windows Server Update Services**）|  
 |安全超文本传输协议 (HTTPS)|--|443 或 8531（请参阅备注 3 **Windows Server Update Services**）|  
@@ -525,7 +525,7 @@ Configuration Manager 不允许您为以下通信类型配置端口：
 ###  <a name="BKMK_PortsSQL-SQL"></a> SQL Server --&gt; SQL Server  
  需要一个站点中的 SQL Server 直接与其父或子站点的 SQL Server 通信，才可进行站点间的数据库复制。  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |SQL Server 服务|--|1433（请参阅备注 2 **可用的备用端口**）|  
 |SQL Server Service Broker|--|4022（请参阅备注 2 **可用的备用端口**）|  
@@ -535,7 +535,7 @@ Configuration Manager 不允许您为以下通信类型配置端口：
 
 ###  <a name="BKMK_PortsStateMigrationPoint-to-SQL"></a> 状态迁移点 -- > SQL Server  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |SQL over TCP|--|1433（请参阅备注 2 **可用的备用端口**）|  
 
@@ -584,7 +584,7 @@ Configuration Manager 不允许您为以下通信类型配置端口：
 
 -   从 UNC 路径下载定义文件的 Endpoint Protection 客户端
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |服务器消息块 (SMB)|--|445|  
 
@@ -699,7 +699,7 @@ Configuration Manager 不允许您为以下通信类型配置端口：
 ###  <a name="BKMK_ServerPorts"></a> Windows Server 使用的端口  
  下表列出了 Windows Server 使用的一些关键端口及其各自的功能。 有关 Windows Server 服务和网络端口要求的更完整的列表，请参阅 [Windows 服务器系统的服务概述和网络端口要求](http://go.microsoft.com/fwlink/p/?LinkID=123652)。  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |域名系统 (DNS)|53|53|  
 |动态主机配置协议 (DHCP)|67 和 68|--|  

@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e18be4d1-9f6e-477c-a79d-c46014b4a03a
 caps.latest.revision: "9"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 90946f98277658532c7238c0c8486b72e1175207
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 3af9ca608ed69d912d79659d1d7a3bf49f2fbd65
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="security-and-privacy-for-system-center-configuration-manager"></a>System Center Configuration Manager 的安全性和隐私
 

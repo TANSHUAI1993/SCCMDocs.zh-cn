@@ -11,14 +11,14 @@ ms.technology: configmgr-other
 ms.topic: article
 ms.assetid: d24257d8-8136-47f4-8e0d-34021356dc37
 caps.latest.revision: "2"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: c21ebf6e608655504664fe7fa6a1bdc3f96850eb
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: d73ab50e5fc9472a977951f6c2d5bbd3fd408c39
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="configuration-manager-on-azure---frequently-asked-questions"></a>Azure 上的 Configuration Manager - 常见问题解答
 *适用范围：System Center Configuration Manager (Current Branch)*

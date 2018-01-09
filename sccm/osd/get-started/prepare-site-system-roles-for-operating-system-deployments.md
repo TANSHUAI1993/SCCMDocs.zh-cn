@@ -13,14 +13,14 @@ ms.topic: get-started-article
 ms.assetid: 0ef5f3ce-b0e4-4775-b5c2-b245e45b4194
 caps.latest.revision: "11"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: c07172bec1032b021c2d7b7ccaabe33c96b930d2
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 379a77ad83916a4a4660aea8816b353dd8c11c60
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="prepare-site-system-roles-for-operating-system-deployments-with-system-center-configuration-manager"></a>在 System Center Configuration Manager 中准备操作系统部署的站点系统角色
 
@@ -140,13 +140,13 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="to-enable-multicast-for-a-distribution-point"></a>为分发点启用多播  
 
-1.  在 Configuration Manager 控制台中，单击“管理” 。  
+1.  在 Configuration Manager 控制台中，单击“管理”。  
 
 2.  在“管理”  工作区中，展开“概述” ，然后选择“分发点”  节点。  
 
 3.  选择要用于对操作系统映像进行多播的分发点。  
 
-4.  在“主页”  选项卡上的“属性”  组中，单击“属性” 。  
+4.  在“主页”选项卡上的“属性”组中，单击“属性”。  
 
 5.  选择“多播”  选项卡，并配置以下选项：  
 

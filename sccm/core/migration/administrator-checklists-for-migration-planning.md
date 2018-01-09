@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: 295fdf07-93cc-490c-acdd-ce3ee88cb36f
 caps.latest.revision: "7"
 caps.handback.revision: "0"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: eadd04193a31405c8416c611ebac6580130ca632
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 2bf39fbf27020ed1f518e44cddd8e236c8ca762f
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="administrator-checklists-for-migration-planning-in-system-center-configuration-manager"></a>System Center Configuration Manager 中针对迁移规划的管理员清单
 

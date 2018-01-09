@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: b9b22655-b8c1-461f-8047-3a7e906f647a
 caps.latest.revision: "12"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: e0996f57d7d9fbcb9926c16f718b65073c78b3bc
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: b70e8ecd32957f19b9738d14c94c7e54b0312ea5
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="manage-operating-system-upgrade-packages-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 管理操作系统升级包
 
@@ -33,7 +33,7 @@ System Center Configuration Manager 中的升级包包含用于在计算机上�
 
 #### <a name="to-add-an-operating-system-upgrade-package"></a>若要添加操作系统升级包  
 
-1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+1.  在 Configuration Manager 控制台中，单击“软件库”。  
 
 2.  在“软件库”  工作区中，展开“操作系统” ，然后单击“操作系统升级包” 。  
 
@@ -47,7 +47,7 @@ System Center Configuration Manager 中的升级包包含用于在计算机上�
     > [!IMPORTANT]  
     >  限制对安装源文件的访问，以防止受到恶意篡改。  
 
-5.  在“常规”  页上，指定以下信息，然后单击“下一步” 。 当你有多个操作系统安装程序时，此信息在用于标识时非常有用。  
+5.  在“常规”页上，指定以下信息，然后单击“下一步”。 当你有多个操作系统安装程序时，此信息在用于标识时非常有用。  
 
     -   **名称**：指定操作系统安装程序的名称。  
 
@@ -71,7 +71,7 @@ System Center Configuration Manager 中的升级包包含用于在计算机上�
 
 #### <a name="to-apply-software-updates-to-an-operating-system-upgrade-package"></a>将软件更新应用于操作系统升级包  
 
-1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+1.  在 Configuration Manager 控制台中，单击“软件库”。  
 
 2.  在“软件库”  工作区中，展开“操作系统” ，然后单击“操作系统升级包” 。  
 

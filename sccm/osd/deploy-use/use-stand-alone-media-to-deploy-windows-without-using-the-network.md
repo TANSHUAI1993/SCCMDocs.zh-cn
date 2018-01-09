@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 58a0d2ae-de76-401f-b854-7a5243949033
 caps.latest.revision: "16"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 1da213763c99af69963b12b15fa8413f9e1965dc
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 02f7c1d549b38c6bddb31fef91de49b0aa1d7969
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="use-stand-alone-media-to-deploy-windows-without-using-the-network-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中使用独立媒体部署 Windows，而不使用网络
 
@@ -61,7 +61,7 @@ System Center Configuration Manager 中的独立媒体包含在计算机上部�
 >   
 >  `"WMI method SMS_TaskSequencePackage.GetClientConfigPolicies failed (0x80041001)"`
 >   
->  对于包含 **安装包**步骤的独立媒体，必须在启用了软件分发代理的主站点上创建独立媒体，或者必须在任务序列中的 [安装 Windows 和 ConfigMgr](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) 步骤之后和第一个**安装包** 步骤之前添加一个[运行命令行](../understand/task-sequence-steps.md#BKMK_RunCommandLine) 步骤。 “运行命令行”步骤运行 WMIC 命令，以便在第一个安装包步骤运行之前启用软件分发代理。 可以在“运行命令行”  任务序列步骤中使用以下命令：  
+>  对于包含 **安装包**步骤的独立媒体，必须在启用了软件分发代理的主站点上创建独立媒体，或者必须在任务序列中的 [安装 Windows 和 ConfigMgr](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) 步骤之后和第一个**安装包** 步骤之前添加一个[运行命令行](../understand/task-sequence-steps.md#BKMK_RunCommandLine) 步骤。 “运行命令行”  步骤运行 WMIC 命令，以便在第一个安装包步骤运行之前启用软件分发代理。 可以在“运行命令行”  任务序列步骤中使用以下命令：  
 >   
 >  **命令行**：**WMIC /namespace:\\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE**  
 

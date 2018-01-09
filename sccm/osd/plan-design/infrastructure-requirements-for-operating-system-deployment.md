@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 1dc74219-7ff5-4e3b-b4f6-5aad663bb75b
 caps.latest.revision: "24"
-author: mattbriggs
-ms.author: mabrigg
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 0b90cb20707340bec6fc7d5ddbab6f39d78e10bf
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 30b6a4e009d1e44fff124dc5814bdd2e6445a63a
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="infrastructure-requirements-for-operating-system-deployment-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的操作系统部署的基础架构要求
 

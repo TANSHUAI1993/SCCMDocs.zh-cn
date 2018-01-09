@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: 8eed50f5-80a4-422e-8aa6-a7ccb2171475
 caps.latest.revision: "8"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 91e3fa4aba93dc3012fe1e702f50c4f9438a69e8
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 9d902f75911b484d22d38b07cea40e1c00ea0d93
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="deploy-windows-to-go-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 部署 Windows to Go
 
@@ -81,7 +81,7 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="to-create-prestaged-media"></a>创建预留媒体  
 
-1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+1.  在 Configuration Manager 控制台中，单击“软件库”。  
 
 2.  在“软件库”工作区中，展开“操作系统”，然后单击“任务序列”。  
 
@@ -229,7 +229,7 @@ ms.lasthandoff: 10/12/2017
 
 4.  通过使用创建包和程序向导来创建包和程序。  
 
-5.  在 Configuration Manager 控制台中，单击“软件库” 。  
+5.  在 Configuration Manager 控制台中，单击“软件库”。  
 
 6.  在“软件库”  工作区中，展开“应用程序管理” ，然后单击“包” 。  
 
@@ -276,7 +276,7 @@ ms.lasthandoff: 10/12/2017
         > [!NOTE]  
         >  如果超出最大运行时间（无论是由用户设置的值还是默认值），则在“标准程序”页上选中了“使用管理权限运行”而未选择“允许用户查看程序安装并与之交互”时，Configuration Manager 将停止该程序。  
 
-     单击“下一步”  并完成向导。  
+     单击“下一步”并完成向导。  
 
 ###  <a name="BKMK_UpdateTaskSequence"></a> 更新任务序列以对 Windows To Go 启用 BitLocker  
  Windows To Go 在外部可启动驱动器上启用 BitLocker 而不使用 TPM。 因此，必须使用单独的工具在 Windows To Go 驱动器上配置 BitLocker。 要启用 BitLocker，必须在“安装 Windows 和 ConfigMgr”  步骤之后向任务序列添加操作。  
@@ -288,7 +288,7 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="to-update-the-windows-8-task-sequence-to-enable-bitlocker"></a>更新 Windows 8 任务序列以启用 BitLocker  
 
-1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+1.  在 Configuration Manager 控制台中，单击“软件库”。  
 
 2.  在“软件库”  工作区中，展开“应用程序管理” ，然后单击“包” 。  
 
@@ -300,11 +300,11 @@ ms.lasthandoff: 10/12/2017
 
 6.  在“程序类型”  页上，选择“不创建程序” 。  
 
-7.  单击“下一步”  并完成向导。  
+7.  单击“下一步”并完成向导。  
 
-8.  在 Configuration Manager 控制台中，单击“软件库” 。  
+8.  在 Configuration Manager 控制台中，单击“软件库”。  
 
-9. 在“软件库”  工作区中，展开“操作系统” ，然后单击“任务序列” 。  
+9. 在“软件库”工作区中，展开“操作系统”，然后单击“任务序列”。  
 
 10. 选择在预留媒体中引用的 Windows 8 任务序列。  
 
@@ -396,13 +396,13 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="to-deploy-the-windows-8-task-sequence"></a>部署 Windows 8 任务序列  
 
-1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+1.  在 Configuration Manager 控制台中，单击“软件库”。  
 
-2.  在“软件库”  工作区中，展开“操作系统” ，然后单击“任务序列” 。  
+2.  在“软件库”工作区中，展开“操作系统”，然后单击“任务序列”。  
 
 3.  选择在 [Prerequisites to provision Windows To Go](#BKMK_Prereqs) 步骤中创建的 Windows 8 任务序列。  
 
-4.  在“主页”  选项卡上的“部署”  组中，单击“部署” 。  
+4.  在“主页”选项卡上的“部署”组中，单击“部署”。  
 
 5.  在“常规”  页上，指定下列设置：  
 

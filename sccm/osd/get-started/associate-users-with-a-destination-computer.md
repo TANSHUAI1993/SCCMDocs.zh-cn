@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: 07c3c6d9-f056-4c4d-bc70-ede5ca933807
 caps.latest.revision: "9"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 4c0231057c2ac154b050cc7020eb1fbb4ed93228
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: a6aa06da33cbc537db30c7c885d9ca449ff7221c
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="associate-users-with-a-destination-computer-in-system-center-configuration-manager"></a>将用户与 System Center Configuration Manager 中的目标计算机关联
 

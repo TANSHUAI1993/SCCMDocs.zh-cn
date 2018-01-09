@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 5d5d6273-0d8a-43c7-865a-cdb1736dcae3
 caps.latest.revision: "8"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 2ae9f17fd6d0695c78560b303b42011827a13b6d
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 36f4e9e94e794998a59453f709bf6248975d8792
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="plan-for-the-sms-provider-for-system-center-configuration-manager"></a>为 System Center Configuration Manager 规划 SMS 提供程序
 
@@ -175,7 +175,7 @@ Configuration Manager 管理用户使用 SMS 提供程序访问存储在数据�
 ##  <a name="BKMK_SMSProvNamespace"></a> 关于 SMS 提供程序命名空间  
 SMS 提供程序的结构由 WMI 架构来定义。 架构命名空间描述 SMS 提供程序架构内 Configuration Manager 数据的位置。 下表包含 SMS 提供程序使用的一些常见命名空间。  
 
-|Namespace|描述|  
+|Namespace|说明|  
 |---------------|-----------------|  
 |Root\SMS\site_*&lt;site code\>*|Configuration Manager 控制台、资源浏览器、Configuration Manager 工具和脚本广泛使用的 SMS 提供程序。|  
 |Root\SMS\SMS_ProviderLocation|站点的 SMS 提供程序计算机的位置。|  

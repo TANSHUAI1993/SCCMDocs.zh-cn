@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: 9e447e34-0943-49ed-b6ba-3efebf3566c1
 caps.latest.revision: "10"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 726439e1f5f38dd0d63f7a2de1299d076c690df4
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: e3196bede5f069ae5012624b3ecaaf68713d9fe0
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="prepare-for-unknown-computer-deployments-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中准备未知计算机部署
 

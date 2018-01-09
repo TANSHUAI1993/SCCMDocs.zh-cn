@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: cf014eb0-f8c2-4d37-b8d7-368d63a10b89
 caps.latest.revision: "11"
 caps.handback.revision: "0"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 258bdb1950100c087039d9790dcdd8c879288efa
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 8b2e55a2be2572a380ae994389a8a1c9c402aed7
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="migrate-data-between-hierarchies-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中层次结构之间迁移数据
 

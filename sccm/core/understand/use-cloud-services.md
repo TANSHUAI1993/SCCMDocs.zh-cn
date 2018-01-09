@@ -13,14 +13,14 @@ ms.topic: get-started-article
 ms.assetid: 24fca61e-9cdb-447a-ad7a-f4d2e4fd6704
 caps.latest.revision: "10"
 caps.handback.revision: "0"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: b39a6e0e7dae3092530b180b81010b37f9c8ebca
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 81f111f0d0061901f5f3b471f02c8035bfcac481
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="use-cloud-services-with-system-center-configuration-manager"></a>将云服务用于 System Center Configuration Manager
 

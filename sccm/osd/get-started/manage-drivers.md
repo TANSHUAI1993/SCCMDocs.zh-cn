@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: 84802d55-112e-4f7f-9a48-74a80d91a0f4
 caps.latest.revision: "10"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 43b9f954d6cca162606136c9b64a72daebee7f3d
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: f03f5d0e8c6d4653e25e50d615d5d50e00d9cda0
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="manage-drivers-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中管理驱动程序
 
@@ -55,7 +55,7 @@ System Center Configuration Manager 提供了驱动程序目录，可用于管�
 
 #### <a name="to-create-a-driver-package"></a>创建驱动程序包  
 
-1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+1.  在 Configuration Manager 控制台中，单击“软件库”。  
 
 2.  在“软件库”  工作区中，展开“操作系统” ，然后单击“驱动程序包” 。  
 
@@ -104,7 +104,7 @@ System Center Configuration Manager 提供了驱动程序目录，可用于管�
 
 #### <a name="to-import-windows-device-drivers-into-the-driver-catalog"></a>将 Windows 设备驱动程序导入驱动程序目录  
 
-1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+1.  在 Configuration Manager 控制台中，单击“软件库”。  
 
 2.  在“软件库”  工作区中，展开“操作系统” ，然后单击“驱动程序” 。  
 
@@ -171,7 +171,7 @@ System Center Configuration Manager 提供了驱动程序目录，可用于管�
 
 #### <a name="to-modify-the-device-drivers-in-a-driver-package"></a>若要更改驱动程序包中的设备驱动程序  
 
-1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+1.  在 Configuration Manager 控制台中，单击“软件库”。  
 
 2.  在“软件库”  工作区中，展开“操作系统” ，然后单击“驱动程序” 。  
 
@@ -200,7 +200,7 @@ System Center Configuration Manager 提供了驱动程序目录，可用于管�
 
 #### <a name="to-modify-the--device-drivers-associated-with-a-boot-image"></a>若要修改与启动映像关联的设备驱动程序  
 
-1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+1.  在 Configuration Manager 控制台中，单击“软件库”。  
 
 2.  在“软件库”  工作区中，展开“操作系统” ，然后单击“驱动程序” 。  
 
@@ -254,9 +254,9 @@ System Center Configuration Manager 提供了驱动程序目录，可用于管�
 
 #### <a name="use-a-task-sequence-to-install-device-drivers"></a>使用任务序列安装设备驱动程序  
 
-1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+1.  在 Configuration Manager 控制台中，单击“软件库”。  
 
-2.  在“软件库”  工作区中，展开“操作系统” ，然后单击“任务序列” 。  
+2.  在“软件库”工作区中，展开“操作系统”，然后单击“任务序列”。  
 
 3.  在“任务序列”  节点中，选择为了安装设备驱动程序而要修改的任务序列，然后单击“编辑” 。  
 

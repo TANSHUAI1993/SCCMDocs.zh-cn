@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d9a1c545-8301-492c-832f-2c108ff93c77
 caps.latest.revision: "12"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 5835bde38cb940d2e38df4a38146753a6842f1d7
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 31f18ce9df3fcdb133589ce5214cef96372ee1b0
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="introduction-to-operating-system-deployment-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的操作系统部署简介
 

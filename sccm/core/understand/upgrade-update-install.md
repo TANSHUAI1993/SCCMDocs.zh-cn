@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: 17fab17f-304d-4f6a-87c7-30ab4f5521ed
 caps.latest.revision: "0"
 caps.handback.revision: "0"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 048678f63cb09f4cd06c2537c5741ba307e6497c
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 98ece2b96053f077f057682be65c485131f51446
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="about-upgrade-update-and-install-for-site-and-hierarchy-infrastructure"></a>关于站点和层次结构基础结构的升级、更新和安装
 

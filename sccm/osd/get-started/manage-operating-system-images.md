@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: fab13949-371c-4a4c-978e-471db1e54966
 caps.latest.revision: "17"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 4408865626009b35162e4d7408248d9ab2bdd7d2
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: e0ddf9801430984efb63ac593d1f60b8fbfe0f59
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="manage-operating-system-images-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 管理操作系统映像
 
@@ -61,7 +61,7 @@ Configuration Manager 中的操作系统映像以 Windows 映像 (WIM) 文件格
 
 #### <a name="to-add-an-operating-system-image-to-a-site"></a>若要将操作系统映像添加到站点  
 
-1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+1.  在 Configuration Manager 控制台中，单击“软件库”。  
 
 2.  在“软件库”  工作区中，展开“操作系统” ，然后单击“操作系统映像包” 。  
 
@@ -93,7 +93,7 @@ Configuration Manager 中的操作系统映像以 Windows 映像 (WIM) 文件格
 
 #### <a name="to-apply-software-updates-to-an-operating-system-image"></a>将软件更新应用于操作系统映像  
 
-1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+1.  在 Configuration Manager 控制台中，单击“软件库”。  
 
 2.  在“软件库”  工作区中，展开“操作系统” ，然后单击“操作系统映像包” 。  
 
@@ -120,13 +120,13 @@ Configuration Manager 中的操作系统映像以 Windows 映像 (WIM) 文件格
 
 #### <a name="to-modify-an-operating-system-image-package-to-use-multicast"></a>修改操作系统映像包以使用多播  
 
-1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+1.  在 Configuration Manager 控制台中，单击“软件库”。  
 
 2.  在“软件库”  工作区中，展开“操作系统” ，然后单击“操作系统映像包” 。  
 
 3.  选择要分发到启用了多播的分发点的操作系统映像。  
 
-4.  在“主页”  选项卡上的“属性”  组中，单击“属性” 。  
+4.  在“主页”选项卡上的“属性”组中，单击“属性”。  
 
 5.  选择“分发设置”  选项卡，并配置以下选项：  
 

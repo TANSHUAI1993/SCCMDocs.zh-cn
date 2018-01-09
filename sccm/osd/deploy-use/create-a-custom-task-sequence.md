@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: b9800a66-7541-47ca-8276-da8ef6cb6d1b
 caps.latest.revision: "6"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: e25b60b64ae2ed75091c4f5b0ffa0f9eca4c6cac
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: add5ad2ed82e394b62613951fcaad6c38fee2465
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="create-a-custom-task-sequence-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 创建自定义任务序列
 
@@ -33,9 +33,9 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="to-create-a-custom-task-sequence"></a>创建自定义任务序列  
 
-1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+1.  在 Configuration Manager 控制台中，单击“软件库”。  
 
-2.  在“软件库”  工作区中，展开“操作系统” ，然后单击“任务序列” 。  
+2.  在“软件库”工作区中，展开“操作系统”，然后单击“任务序列”。  
 
 3.  在“主页”  选项卡上的“创建”  组中，单击“创建任务序列”  以启动创建任务序列向导。  
 

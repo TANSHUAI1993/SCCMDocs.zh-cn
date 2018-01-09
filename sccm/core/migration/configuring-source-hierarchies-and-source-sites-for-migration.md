@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: ccce7cb5-e18f-4337-8adf-2018edca3c00
 caps.latest.revision: "5"
 caps.handback.revision: "0"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 6a5613a8f1235f28020d116f9ff6f70d1cd5284d
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 7977f66c71da300c59c7781f09975ca08ddea0b9
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="configure-source-hierarchies-and-source-sites-for-migration-to-system-center-configuration-manager"></a>配置源层次结构和源站点以迁移到 System Center Configuration Manager
 
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/01/2017
 
 ### <a name="to-configure-a-source-hierarchy"></a>配置源层次结构   
 
-1.  在 Configuration Manager 控制台中，单击“管理” 。  
+1.  在 Configuration Manager 控制台中，单击“管理”。  
 
 2.  在“管理”  工作区中，展开“迁移” ，然后单击“源层次结构” 。  
 
@@ -83,7 +83,7 @@ ms.lasthandoff: 12/01/2017
 
 ### <a name="to-identify-additional-source-sites-in-the-source-hierarchy"></a>确定源层次结构中的其他源站点 
 
-1.  在 Configuration Manager 控制台中，单击“管理” 。  
+1.  在 Configuration Manager 控制台中，单击“管理”。  
 
 2.  在“管理”  工作区中，展开“迁移” ，然后单击“源层次结构” 。  
 

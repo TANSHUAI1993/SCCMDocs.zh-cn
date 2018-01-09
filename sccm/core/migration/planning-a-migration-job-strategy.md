@@ -13,15 +13,15 @@ ms.topic: article
 ms.assetid: a70bfbd4-757a-4468-9312-1c3b373ef9fc
 caps.latest.revision: "6"
 caps.handback.revision: "0"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
 robots: noindex
-ms.openlocfilehash: bd333d4417926514055195100791d630958797c2
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 96fb65352042c7785dded06251b57cea04b293d7
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="plan-a-migration-job-strategy-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中规划迁移作业策略
 

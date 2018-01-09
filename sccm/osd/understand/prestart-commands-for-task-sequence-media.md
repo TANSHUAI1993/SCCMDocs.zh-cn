@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: ccc9f652-2953-4c38-8a90-c799484105ca
 caps.latest.revision: "6"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 52a4dccfe547f8c25759669dd1b09976302d5c50
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 3a1b39bb988d305c02d85ef168789d081637c084
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="prestart-commands-for-task-sequence-media-in-system-center-configuration-manager"></a>System Center Configuration Manager 中任务序列媒体的预启动命令
 
@@ -52,7 +52,7 @@ env("MyCustomVariable") = "varname"
 
 #### <a name="to-create-a-prestart-command-in-media"></a>在媒体中创建预启动命令  
 
-1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+1.  在 Configuration Manager 控制台中，单击“软件库”。  
 
 2.  在“软件库”工作区中，展开“操作系统”，然后单击“任务序列”。  
 

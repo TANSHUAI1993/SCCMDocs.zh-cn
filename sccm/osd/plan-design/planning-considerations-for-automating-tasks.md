@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: fc497a8a-3c54-4529-8403-6f6171a21c64
 caps.latest.revision: "13"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: cfd3e33006f05b4270266b3c8b316764d29cdb0d
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 5d044e7c7869faeb0b3ea24e24ff40674a63920e
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="planning-considerations-for-automating-tasks-in-system-center-configuration-manager"></a>System Center Configuration Manager 中自动执行任务的规划注意事项
 
@@ -190,7 +190,7 @@ ms.lasthandoff: 10/12/2017
 
  有关如何创建任务序列的详细信息，请参阅[创建任务序列](../deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_CreateTaskSequence)。  
 
-##  <a name="BKMK_TSEdit"></a> 编辑任务序列  
+##  <a name="BKMK_TSEdit"></a>编辑任务序列  
  可以使用“任务序列编辑器”编辑任务序列。 编辑器可以对任务序列进行以下更改：  
 
 -   你可以在任务序列中添加或删除步骤。  

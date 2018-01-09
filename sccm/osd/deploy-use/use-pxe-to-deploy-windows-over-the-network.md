@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: da5f8b61-2386-4530-ad54-1a5c51911f07
 caps.latest.revision: "19"
 caps.handback.revision: "0"
-author: mattbriggs
-ms.author: mabrigg
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 017a8f0d5b38145f6708e61ff5d7b2c3614b62a0
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 1ae9c9385abe90a38169f5d539be944f03817007
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="use-pxe-to-deploy-windows-over-the-network-with-system-center-configuration-manager"></a>使用 PXE 与 System Center Configuration Manager 一起通过网络部署 Windows
 

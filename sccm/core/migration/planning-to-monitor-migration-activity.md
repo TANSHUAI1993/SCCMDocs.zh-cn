@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: fc731d3f-edd7-4049-b17b-653d6693a564
 caps.latest.revision: "4"
 caps.handback.revision: "0"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: f8daba77fc05f2200124d4c29a6081c9376659e9
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: ee5c65b41678bd5c86170f2d7a20b1d2fc569226
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="planning-to-monitor-migration-activity-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中规划监视迁移活动
 

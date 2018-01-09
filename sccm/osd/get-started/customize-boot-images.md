@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: 9cbfc406-d009-446d-8fee-4938de48c919
 caps.latest.revision: "15"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 4c1d721c9fb0b01f15f1f0468bc797ffffb9e345
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 184768e87406051508c8dcacfa63db5ff85c3732
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="customize-boot-images-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 自定义启动映像
 
@@ -133,7 +133,7 @@ Configuration Manager 的每个版本都支持特定版本的 Windows 评估和�
 
 8.  将更新的启动映像添加到 Configuration Manager，以使其在你的任务序列中可用。 使用下列步骤导入更新后的启动映像：  
 
-    1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+    1.  在 Configuration Manager 控制台中，单击“软件库”。  
 
     2.  在“软件库”  工作区中，展开“操作系统” ，然后单击“启动映像包” 。  
 
@@ -157,7 +157,7 @@ Configuration Manager 的每个版本都支持特定版本的 Windows 评估和�
 
 9. 你可以在启动映像中启用命令解释器以在 Windows PE 中对其进行调试和疑难解答。 使用以下步骤启用命令解释器。  
 
-    1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+    1.  在 Configuration Manager 控制台中，单击“软件库”。  
 
     2.  在“软件库”  工作区中，展开“操作系统” ，然后单击“启动映像包” 。  
 
@@ -177,7 +177,7 @@ Configuration Manager 的每个版本都支持特定版本的 Windows 评估和�
 
 10. 但是，你必须将启动映像分发到分发点、分发点组或与分发点组关联的集合，然后才能在任务序列中使用该启动映像。 使用以下步骤分发启动映像。  
 
-    1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+    1.  在 Configuration Manager 控制台中，单击“软件库”。  
 
     2.  在“软件库”  工作区中，展开“操作系统” ，然后单击“启动映像包” 。  
 
@@ -249,7 +249,7 @@ Configuration Manager 的每个版本都支持特定版本的 Windows 评估和�
 
 8.  将更新的启动映像添加到 Configuration Manager，以使其在你的任务序列中可用。 使用下列步骤导入更新后的启动映像：  
 
-    1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+    1.  在 Configuration Manager 控制台中，单击“软件库”。  
 
     2.  在“软件库”  工作区中，展开“操作系统” ，然后单击“启动映像包” 。  
 
@@ -273,7 +273,7 @@ Configuration Manager 的每个版本都支持特定版本的 Windows 评估和�
 
 9. 你可以在启动映像中启用命令解释器以在 Windows PE 中对其进行调试和疑难解答。 使用以下步骤启用命令解释器。  
 
-    1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+    1.  在 Configuration Manager 控制台中，单击“软件库”。  
 
     2.  在“软件库”  工作区中，展开“操作系统” ，然后单击“启动映像包” 。  
 
@@ -293,7 +293,7 @@ Configuration Manager 的每个版本都支持特定版本的 Windows 评估和�
 
 10. 但是，你必须将启动映像分发到分发点、分发点组或与分发点组关联的集合，然后才能在任务序列中使用该启动映像。 使用以下步骤分发启动映像。  
 
-    1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+    1.  在 Configuration Manager 控制台中，单击“软件库”。  
 
     2.  在“软件库”  工作区中，展开“操作系统” ，然后单击“启动映像包” 。  
 

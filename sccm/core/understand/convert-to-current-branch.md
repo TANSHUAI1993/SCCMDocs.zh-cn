@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ec5b54cf-62b7-4ed1-9bb3-e8c63b9641c8
 caps.latest.revision: "0"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 4fee1fd8572592df46dcfa7d86f6288a4e488bba
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 8adc118643cdc9bb4db8226b6d5c5f14a20898a4
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="upgrade-the-long-term-servicing-branch-to-the-current-branch"></a>将 Long-Term Servicing Branch 升级到 Current Branch
 

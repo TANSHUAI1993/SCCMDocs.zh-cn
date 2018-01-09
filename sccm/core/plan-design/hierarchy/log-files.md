@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 caps.latest.revision: "9"
 caps.handback.revision: "0"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 1463aa5a64de50b31ad0fc94709e2b41fd1c3bb0
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: c310e23b543e8767a393ca5bf87a224a9269e359
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="log-files-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的日志文件
 
@@ -444,7 +444,7 @@ Configuration Manager 日志文件存储在多个位置中，该位置取决于�
 ###  <a name="BKMK_AILog"></a>资产智能  
  下表列出的日志文件包含与资产智能相关的信息。  
 
-|日志名称|描述|带有日志文件的计算机|  
+|日志名称|说明|带有日志文件的计算机|  
 |--------------|-----------------|----------------------------|  
 |AssetAdvisor.log|记录资产智能清单操作的活动。|客户端|  
 |aikbmgr.log|记录有关收件箱中用于更新资产智能目录的 XML 文件处理的详细信息。|站点服务器|  

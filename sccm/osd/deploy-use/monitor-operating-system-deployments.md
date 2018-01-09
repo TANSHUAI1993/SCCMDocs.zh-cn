@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: 08085d94-295c-432f-b5e3-9736bce0193b
 caps.latest.revision: "6"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 2e738b0ae9bd16829857edfaae0fb7e398979627
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 2540bc214530318c7efa75020ea0ea59ca5f6b85
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="monitor-operating-system-deployments-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中监视操作系统部署
 
@@ -43,7 +43,7 @@ Configuration Manager 控制台提供了以下方式来帮助你监视操作系�
 
 #### <a name="to-monitor-deployment-status"></a>监视部署状态  
 
-1.  在 Configuration Manager 控制台中，单击“监视” 。  
+1.  在 Configuration Manager 控制台中，单击“监视”。  
 
 2.  在“监视”工作区中，单击“部署” 。  
 
@@ -62,7 +62,7 @@ Configuration Manager 控制台提供了以下方式来帮助你监视操作系�
 
 #### <a name="to-monitor-content-status"></a>监视内容状态  
 
-1.  在 Configuration Manager 控制台中，单击“监视” 。  
+1.  在 Configuration Manager 控制台中，单击“监视”。  
 
 2.  在“监视”工作区中，展开“分发状态” ，然后单击“内容状态” 。 此时会显示包。  
 
@@ -75,7 +75,7 @@ Configuration Manager 控制台提供了以下方式来帮助你监视操作系�
 
 #### <a name="to-monitor-distribution-point-group-status"></a>监视分发点组状态  
 
-1.  在 Configuration Manager 控制台中，单击“监视” 。  
+1.  在 Configuration Manager 控制台中，单击“监视”。  
 
 2.  在“监视”工作区中，展开“分发状态” ，然后单击“分发点组状态” 。 此时会显示分发点组。  
 
@@ -88,7 +88,7 @@ Configuration Manager 控制台提供了以下方式来帮助你监视操作系�
 
 #### <a name="to-monitor-distribution-point-configuration-status"></a>监视分发点配置状态  
 
-1.  在 Configuration Manager 控制台中，单击“监视” 。  
+1.  在 Configuration Manager 控制台中，单击“监视”。  
 
 2.  在“监视”工作区中，展开“分发状态” ，然后单击“分发点配置状态” 。 此时会显示分发点。  
 

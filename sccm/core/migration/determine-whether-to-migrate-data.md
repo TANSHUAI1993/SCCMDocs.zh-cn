@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: 99222dc8-0e1e-4513-8302-7a1acf671e9b
 caps.latest.revision: "6"
 caps.handback.revision: "0"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 76d2c34cf701e17ade0a11ec0c95f99f321996a3
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 822bc5b4e17bdc611243fadfb13c551b0a8237a8
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="determine-whether-to-migrate-data-to-system-center-configuration-manager"></a>确定是否将数据迁移到 System Center Configuration Manager
 

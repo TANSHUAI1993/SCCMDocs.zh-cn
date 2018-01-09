@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: 495b87ae-41a4-49ba-abe2-d4f7d22ac0d4
 caps.latest.revision: "0"
 caps.handback.revision: "0"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: bcb25fc6faad3d5f7162ae4ceb200c6de1c1c25b
-ms.sourcegitcommit: 8c6e9355846ff6a73c534c079e3cdae09cf13c45
+ms.openlocfilehash: 8c5fcb718cf03a1e779212207d696cfa5fe9f0e2
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="licensing-and-branches-for-system-center-configuration-manager"></a>System Center Configuration Manager 的许可和分支
 

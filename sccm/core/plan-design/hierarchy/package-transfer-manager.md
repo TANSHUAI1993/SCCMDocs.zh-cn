@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3359f254-dd48-42b7-9eab-c92a3417e3fb
 caps.latest.revision: "3"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 5a7310cb811103832cb56e7688d8a80d134469cf
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: eef88b25119558c78c57e2df665507be6d70698f
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="package-transfer-manager-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的包传输管理器
 

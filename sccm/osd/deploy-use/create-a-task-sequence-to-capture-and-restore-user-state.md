@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: d566d85c-bf7a-40e7-8239-57640a1db5f4
 caps.latest.revision: "7"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 5bb55816481db8b93baada07d36c72dd39b62478
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 3fb30240c7d926657e01a4b9e03cef38fd2ee128
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="create-a-task-sequence-to-capture-and-restore-user-state-in-system-center-configuration-manager"></a>创建任务序列以捕获和还原 System Center Configuration Manager 中的用户状态
 
@@ -119,7 +119,7 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="to-add-task-sequence-steps-to-restore-the-user-state"></a>添加任务序列步骤以还原用户状态  
 
-1.  在“任务序列”列表中，选择一个任务序列，然后单击“编辑”。  
+1.  在“任务序列”  列表中，选择一个任务序列，然后单击“编辑” 。  
 
 2.  将[还原用户状态](../understand/task-sequence-steps.md#BKMK_RestoreUserState)步骤添加到任务序列。 在“任务序列编辑器”对话框中，单击“添加”，指向“用户状态”，再单击“还原用户状态”。 此步骤与状态迁移点建立连接。 为“还原用户状态”步骤指定下列属性和选项，然后单击“确定”。  
 

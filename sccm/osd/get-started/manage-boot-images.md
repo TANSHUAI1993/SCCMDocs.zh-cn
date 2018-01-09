@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: 97f2d81a-2c58-442c-88bc-defd5a1cd48f
 caps.latest.revision: "23"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 1f169dbf645096777f3fd244d24ca5be92efa180
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 21cd2d2f8087cb39dc47fbcca01ec700d79f41d0
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="manage-boot-images-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 管理启动映像
 
@@ -86,7 +86,7 @@ Configuration Manager 提供两个默认启动映像：一个用于支持 x86 �
 
 #### <a name="to-add-a-boot-image"></a>添加启动映像  
 
-1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+1.  在 Configuration Manager 控制台中，单击“软件库”。  
 
 2.  在“软件库”  工作区中，展开“操作系统” ，然后单击“启动映像包” 。  
 
@@ -142,7 +142,7 @@ Configuration Manager 提供两个默认启动映像：一个用于支持 x86 �
 
 #### <a name="to-modify-the-properties-of-a-boot-image"></a>修改启动映像的属性  
 
-1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+1.  在 Configuration Manager 控制台中，单击“软件库”。  
 
 2.  在“软件库”  工作区中，展开“操作系统” ，然后单击“启动映像包” 。  
 
@@ -236,7 +236,7 @@ Configuration Manager 提供两个默认启动映像：一个用于支持 x86 �
 
 #### <a name="to-configure-a-boot-image-to-deploy-from-a-pxe-enabled-distribution-point"></a>若要配置一个启动映像以从启用 PXE 的分发点部署  
 
-1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+1.  在 Configuration Manager 控制台中，单击“软件库”。  
 
 2.  在“软件库”  工作区中，展开“操作系统” ，然后单击“启动映像包” 。  
 

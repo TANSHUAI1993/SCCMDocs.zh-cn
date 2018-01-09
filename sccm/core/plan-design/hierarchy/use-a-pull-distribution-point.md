@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7d8f530b-1a39-4a9d-a2f0-675b516da7e4
 caps.latest.revision: "9"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: f0feba771dcc75d84cd1233fea562472ff6c1158
-ms.sourcegitcommit: 8c6e9355846ff6a73c534c079e3cdae09cf13c45
+ms.openlocfilehash: b4acf5753c8629bcd0f4e2ef5a97bfcb570e9d24
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="use-a-pull-distribution-point-with-system-center-configuration-manager"></a>将请求分发点用于 System Center Configuration Manager
 

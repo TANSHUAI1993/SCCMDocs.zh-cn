@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3cd9c725-6b42-427d-9191-86e67f84e48c
 caps.latest.revision: "9"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 69b6e2c1b1795e82e44c1519a2371dbf5834036c
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 87c60ac597baa8726333e317f42924130dd1a685
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="use-a-cloud-based-distribution-point-with-system-center-configuration-manager"></a>将基于云的分发点用于 System Center Configuration Manager
 

@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ee8d611f-aa0c-4efd-b0ad-dbd14d0a0623
 caps.latest.revision: "0"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: f98f5f2c7bb0f9304d614b005ceeef9c9c66eeb7
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 5c30fff2e7d2cfe16858cd9d31eb8cfd0f5436dd
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="frequently-asked-questions-for-system-center-configuration-manager-branches-and-licensing"></a>System Center Configuration Manager 分支和许可的常见问题解答
 

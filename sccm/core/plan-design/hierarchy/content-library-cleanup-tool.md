@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 226cbbb2-9afa-4e2e-a472-be989c0f0e11
 caps.latest.revision: "4"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 25cd63970741dfb242be9566fa54f348dea2b665
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 334b79e675ea7804128b0feb9678de4ad06dbc93
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="the-content-library-cleanup-tool-for-system-center-configuration-manager"></a>适用于 System Center Configuration Manager 的内容库清理工具
 

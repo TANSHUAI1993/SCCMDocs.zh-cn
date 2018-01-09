@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: 5ee5928f-3d72-4b00-8156-1e0d1030a96c
 caps.latest.revision: "6"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: f3286fb0afc5a5023ecd725e74606a585c5fa478
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 0cf0213b83f6bbaf0aabff24b16162dbe215bcf1
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="security-and-privacy-for-operating-system-deployment-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的操作系统部署的安全和隐私
 

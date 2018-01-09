@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 86cd5382-8b41-45db-a4f0-16265ae22657
 caps.latest.revision: "3"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: cadc62ab21ac8cd43120a5baa79dd635a12b4069
-ms.sourcegitcommit: 2dc9c83e57e9734ffc4a93f79cd71285036eeb8b
+ms.openlocfilehash: ed1da87da42ffdbf0bb869e6a64b99e216f1b3c2
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>用于 Configuration Manager 客户端的对等缓存
 

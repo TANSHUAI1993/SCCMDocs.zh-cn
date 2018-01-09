@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a3be4f8f-3d44-4e3c-9fa1-e85f30a36e72
 caps.latest.revision: "0"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: fb72cf0a2982fe4cbefd63e8ae27d169066557c2
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 9985ff5db4357b6b18de1ef58de40bc631d6cc6b
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="which-branch-of-configuration-manager-should-i-use"></a>应该使用 Configuration Manager 的哪一个分支？
 

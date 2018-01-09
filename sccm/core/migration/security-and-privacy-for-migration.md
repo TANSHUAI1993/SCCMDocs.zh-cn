@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: 6893fce1-7ad5-4151-9ba9-3096871e8e4a
 caps.latest.revision: "5"
 caps.handback.revision: "0"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: f7cbcca0456b3ae1da93b67fade845a0847d58ac
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 6c2fb0fe7ff3c126d1dcd70dd69103f9690f2938
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="security-and-privacy-for-migration-to-system-center-configuration-manager"></a>有关迁移到 System Center Configuration Manager 的安全性和隐私
 

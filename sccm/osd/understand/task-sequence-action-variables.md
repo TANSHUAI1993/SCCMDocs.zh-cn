@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: e2269031-0977-4f01-a274-420e00630575
 caps.latest.revision: "10"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 8c1462ca922f23250ffa44c6433f01a8220d3ad7
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: da1a9b9d73a06a099b71e59cbf3621791eaed527
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="task-sequence-action-variables-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的任务序列操作变量
 
@@ -44,7 +44,7 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="details"></a>详细信息  
 
-|操作变量名称|描述|  
+|操作变量名称|说明|  
 |--------------------------|-----------------|  
 |OSDDataImageIndex<br /><br /> (input)|指定应用于目标计算机上的映像的索引值。|  
 |OSDWipeDestinationPartition<br /><br /> (input)|指定是否删除位于目标分区上的文件。<br /><br /> 有效值：<br /><br /> **“true”** （默认值）<br /><br /> **“false”**|  
@@ -54,7 +54,7 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="details"></a>详细信息  
 
-|操作变量名称|描述|  
+|操作变量名称|说明|  
 |--------------------------|-----------------|  
 |OSDApplyDriverBootCriticalContentUniqueID<br /><br /> (input)|指定要从驱动程序包中进行安装的大容量存储驱动程序的内容 ID。 如果没有指定，则不安装大容量存储驱动程序。|  
 |OSDApplyDriverBootCriticalINFFile<br /><br /> (input)|指定要安装的大容量存储驱动程序的 INF 文件。<br /><br /> <br /><br /> 如果设置了 OSDApplyDriverBootCriticalContentUniqueID，则需要此任务序列变量。|  
@@ -67,7 +67,7 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="details"></a>详细信息  
 
-|操作变量名称|描述|  
+|操作变量名称|说明|  
 |--------------------------|-----------------|  
 |OSDAdapter<br /><br /> (input)|此任务序列变量是一个数组变量。 数组中的每个元素都代表计算机上单个网络适配器的设置。 通过将数组变量名称与基于零的网络适配器下标及属性名称组合，访问为每个适配器定义的设置。<br /><br /> <br /><br /> 如果使用此任务序列操作配置多个网络适配器，则第二个网络适配器的属性使用变量名称中的索引来定义；例如，OSDAdapter1EnableDHCP、OSDAdapter1IPAddressList、OSDAdapter1DNSDomain、OSDAdapter1WINSServerList 和 OSDAdapter1EnableWINS 等。<br /><br /> <br /><br /> 例如，以下变量名称可用于为将由此任务序列操作配置的第一个网络适配器定义属性：<br /><br /> <ul><li>**OSDAdapter0EnableDHCP** – 设置为“true”将为适配器启用动态主机配置协议 (DHCP)。<br />    此设置是必需的。 可用的值有：True 或 False。</li><li>**OSDAdapter0IPAddressList** – 以逗号分隔的适配器 IP 地址列表。 除非 **EnableDHCP** 设置为 **false**，否则将忽略此属性。<br />    此设置是必需的。</li><li>**OSDAdapter0SubnetMask** – 以逗号分隔的子网掩码列表。 除非 **EnableDHCP** 设置为 **false**，否则将忽略此属性。<br />    此设置是必需的。</li><li>**OSDAdapter0Gateways** – 以逗号分隔的 IP 网关地址列表。 除非 **EnableDHCP** 设置为 **false**，否则将忽略此属性。<br />    此设置是必需的。</li><li>**OSDAdapter0DNSDomain** - 适配器的域名系统 (DNS) 域。</li><li>**OSDAdapter0DNSServerList** – 以逗号分隔的适配器 DNS 服务器列表。<br />    此设置是必需的。</li><li>设置**OSDAdapter0EnableDNSRegistration** - **true** 以在 DNS 中为适配器注册 IP 地址。</li><li>**OSDAdapter0EnableFullDNSRegistration** - 设置为 **true** 将根据计算机的完整 DNS 名称在 DNS 中为适配器注册 IP 地址。</li><li>**OSDAdapter0EnableIPProtocolFiltering** - 设置为 **true** 将在适配器上启用 IP 协议筛选。</li><li>**OSDAdapter0IPProtocolFilterList** – 以逗号分隔的协议列表，这些协议被允许在 IP 的上层运行。 如果 **EnableIPProtocolFiltering** 设置为 **false**，将忽略此属性。</li><li>**OSDAdapter0EnableTCPFiltering** - 设置为 **true** 将为适配器启用 TCP 端口筛选。</li><li>**OSDAdapter0TCPFilterPortList** – 以逗号分隔的端口列表，这些端口将被授予对 TCP 的访问权限。 如果 **EnableTCPFiltering** 设置为 **false**，将忽略此属性。</li><li>**OSDAdapter0TcpipNetbiosOptions** – TCP/IP 上层的 NetBIOS 选项。 可能的值如下：<br /><br /> <ul><li>0 - 使用 DHCP 服务器中的 NetBIOS 设置。</li><li>1 - 启用 TCP/IP 上层的 NetBIOS。</li><li>2 - 禁用 TCP/IP 上层的 NetBIOS。</li></ul></li><li>**OSDAdapter0EnableWINS** - 设置为 **true** 将为名称解析使用 WINS。</li><li>**OSDAdapter0WINSServerList** – 以逗号分隔的 WINS 服务器 IP 地址列表。 除非 **EnableWINS** 设置为 **true**，否则将忽略此属性。</li><li>**OSDAdapter0MacAddress** – 媒体访问控制器 (MAC) 地址，用于匹配物理网络适配器的设置。</li><li>**OSDAdapter0Name** – 显示在网络连接控制面板程序中的网络连接的名称。 该名称的长度介于 0 到 255 个字符之间。</li><li>**OSDAdapter0Index** – 设置数组中网络适配器设置的下标。<br /><br />     OSDAdapterCount=1<br />    OSDAdapter0EnableDHCP=FALSE<br />    OSDAdapter0IPAddressList=192.168.0.40<br />    OSDAdapter0SubnetMask=255.255.255.0<br />    OSDAdapter0Gateways=192.168.0.1<br />    OSDAdapter0DNSSuffix=contoso.com</li></ul>|  
 |OSDAdapterCount<br /><br /> (input)|指定目标计算机上安装的网络适配器的数目。 在设置 **OSDAdapterCount** 值时，必须为每个适配器的所有配置选项设置值。 例如，如果为一个特定的适配器设置 **OSDAdapterTCPIPNetbiosOptions** 值，那么也必须设置该适配器的所有值。<br /><br /> <br /><br /> 如果未指定此值，将忽略所有的 **OSDAdapter** 值。|  
@@ -86,7 +86,7 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="details"></a>详细信息  
 
-|操作变量名称|描述|  
+|操作变量名称|说明|  
 |--------------------------|-----------------|  
 |OSDConfigFileName<br /><br /> (input)|指定与操作系统部署包关联的操作系统部署答案文件的文件名。|  
 |OSDImageIndex<br /><br /> (input)|指定应用于目标计算机上的 WIM 文件的映像索引值。|  
@@ -98,7 +98,7 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="details"></a>详细信息  
 
-|操作变量名称|描述|  
+|操作变量名称|说明|  
 |--------------------------|-----------------|  
 |OSDComputerName<br /><br /> (input)|指定目标计算机的名称。<br /><br /> 例如：<br /><br /> **“%_SMSTSMachineName%”** （默认）|  
 |OSDProductKey<br /><br /> (input)|指定 Windows 产品密钥。 指定的值字符数必须介于 1 和 255 之间。|  
@@ -115,7 +115,7 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="details"></a>详细信息  
 
-|操作变量名称|描述|  
+|操作变量名称|说明|  
 |--------------------------|-----------------|  
 |OSDAutoApplyDriverCategoryList<br /><br /> (input)|驱动程序目录类别唯一 ID 的以逗号分隔的列表。 如果已指定，在安装驱动程序时，“自动应用驱动程序”  任务序列操作仅考虑至少在上述其中一个类别中的驱动程序。 此值是可选的，默认情况下不设置。 可以通过枚举站点上的 **SMS_CategoryInstance** 对象列表来获取可用的类别 ID。|  
 |OSDAllowUnsignedDriver<br /><br /> (input)|指定是否将 Windows 配置为允许安装未签名的设备驱动程序。 部署 Windows Vista 和更高版本的操作系统时不使用此任务序列变量。<br /><br /> 有效值：<br /><br /> **“true”**<br /><br /> **“false”** （默认值）|  
@@ -126,17 +126,17 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="details"></a>详细信息  
 
-|操作变量名称|描述|  
+|操作变量名称|说明|  
 |--------------------------|-----------------|  
-|OSDMigrateAdapterSettings<br /><br /> (input)|指定是否捕获网络适配器设置（TCP/IP、DNS 和 WINS）的配置信息。<br /><br /> 例如：<br /><br /> **“true”** （默认值）<br /><br /> **“false”**|  
-|OSDMigrateNetworkMembership<br /><br /> (input)|指定是否将工作组或域成员身份信息作为操作系统部署的一部分进行迁移。<br /><br /> 例如：<br /><br /> **“true”** （默认值）<br /><br /> **“false”**|  
+|OSDMigrateAdapterSettings<br /><br /> (input)|指定是否捕获网络适配器设置（TCP/IP、DNS 和 WINS）的配置信息。<br /><br /> 示例：<br /><br /> **“true”** （默认值）<br /><br /> **“false”**|  
+|OSDMigrateNetworkMembership<br /><br /> (input)|指定是否将工作组或域成员身份信息作为操作系统部署的一部分进行迁移。<br /><br /> 示例：<br /><br /> **“true”** （默认值）<br /><br /> **“false”**|  
 
 ###  <a name="BKMK_CaptureOperatingSystemImage"></a> 捕获操作系统映像任务序列操作变量  
  此操作的变量指定有关正在捕获的操作系统映像的详细信息，例如存储映像的位置、映像创作者以及映像的描述。 有关与这些变量关联的任务序列步骤的详细信息，请参阅[捕获操作系统映像](task-sequence-steps.md#BKMK_CaptureOperatingSystemImage)。  
 
 #### <a name="details"></a>详细信息  
 
-|操作变量名称|描述|  
+|操作变量名称|说明|  
 |--------------------------|-----------------|  
 |OSDCaptureAccount<br /><br /> (input)|指定在网络共享上有权限存储捕获的映像的 Windows 帐户名称。|  
 |OSDCaptureAccountPassword<br /><br /> (input)|指定用于将捕获映像存储到网络共享的 Windows 帐户的密码。|  
@@ -151,7 +151,7 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="details"></a>详细信息  
 
-|操作变量名称|描述|  
+|操作变量名称|说明|  
 |--------------------------|-----------------|  
 |OSDStateStorePath<br /><br /> (input)|保存用户状态的文件夹的 UNC 或本地路径名称。 无默认值。|  
 |OSDMigrateAdditionalCaptureOptions<br /><br /> (input)|指定捕获用户状态时使用的，但未显示在 Configuration Manager 用户界面中的用户状态迁移工具 (USMT) 命令行选项。 其他选项以附加到自动生成的 USMT 命令行的字符串形式指定。<br /><br /> <br /><br /> 在运行任务序列之前，使用此任务序列变量指定的 USMT 选项未通过精确度验证。|  
@@ -167,7 +167,7 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="details"></a>详细信息  
 
-|操作变量名称|描述|  
+|操作变量名称|说明|  
 |--------------------------|-----------------|  
 |OSDMigrateComputerName<br /><br /> (input)|指定是否迁移计算机名称。<br /><br /> 有效值：<br /><br /> **“true”** （默认值）<br /><br /> **“false”**<br /><br /> 如果值为“true”，则将 OSDComputerName 变量设置为计算机的 NetBIOS 名称。|  
 |OSDComputerName<br /><br /> (output)|设置为计算机的 NetBIOS 名称。 仅当 OSDMigrateComputerName 变量设置为“true”时设置该值。|  
@@ -181,10 +181,10 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="details"></a>详细信息  
 
-|操作变量名称|描述|  
+|操作变量名称|说明|  
 |--------------------------|-----------------|  
 |SMSConnectNetworkFolderAccount<br /><br /> (input)|指定用于连接到网络共享的管理员帐户。|  
-|SMSConnectNetworkFolderDriveLetter<br /><br /> (input)|指定要连接的网络驱动器号。 此值是可选的；如果不指定此值，网络连接将不映射到某个驱动器号。 如果指定此值，其范围必须为 D: 到 Z:。  此外，不要使用 X:，因为它在 Windows PE 阶段中是 Windows PE 使用的驱动器号。<br /><br /> 例如：<br /><br /> **“D:”**<br /><br /> **“E:”**|  
+|SMSConnectNetworkFolderDriveLetter<br /><br /> (input)|指定要连接的网络驱动器号。 此值是可选的；如果不指定此值，网络连接将不映射到某个驱动器号。 如果指定此值，其范围必须为 D: 到 Z:。  此外，不要使用 X:，因为它在 Windows PE 阶段中是 Windows PE 使用的驱动器号。<br /><br /> 示例：<br /><br /> **“D:”**<br /><br /> **“E:”**|  
 |SMSConnectNetworkFolderPassword<br /><br /> (input)|指定用于连接到网络共享的网络密码。|  
 |SMSConnectNetworkFolderPath<br /><br /> (input)|指定连接的网络路径。<br /><br /> 例如：<br /><br /> **"\\\servername\sharename"**|  
 
@@ -193,7 +193,7 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="details"></a>详细信息  
 
-|操作变量名称|描述|  
+|操作变量名称|说明|  
 |--------------------------|-----------------|  
 |OSDBitLockerRecoveryPassword<br /><br /> (input)|“启用 BitLocker”  任务序列操作使用指定的值作为恢复密码，而不是生成随机恢复密码。 此值必须是有效的数字 BitLocker 恢复密码。|  
 |OSDBitLockerStartupKey<br /><br /> (input)|“启用 BitLocker”任务序列操作使用受信任的平台模块 (TPM) 作为启动密钥，而不是为密钥管理选项“仅 USB 上的启动密钥” 生成随机启动密钥。 此值必须是一个有效的 256 位 Base-64 编码的 BitLocker 启动密钥。|  
@@ -203,7 +203,7 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="details"></a>详细信息  
 
-|操作变量名称|描述|  
+|操作变量名称|说明|  
 |--------------------------|-----------------|  
 |OSDDiskIndex<br /><br /> (input)|指定要分区的物理磁盘编号。|  
 |OSDDiskpartBiosCompatibilityMode<br /><br /> (input)|指定在对硬盘进行分区以便与某些类型的 BIOS 兼容时是否禁用缓存对齐优化。 此操作在部署 Windows XP 或 Windows Server 2003 操作系统时非常必要。 有关详细信息，请参阅 Microsoft 知识库中的 [文章 931760](http://go.microsoft.com/fwlink/?LinkId=134081) 和 [文章 931761](http://go.microsoft.com/fwlink/?LinkId=134082) 。<br /><br /> 有效值：<br /><br /> **“true”**<br /><br /> **“false”** （默认值）|  
@@ -216,7 +216,7 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="details"></a>详细信息  
 
-|操作变量名称<br /><br /> (input)|描述|  
+|操作变量名称<br /><br /> (input)|说明|  
 |----------------------------------------|-----------------|  
 |SMSInstallUpdateTarget<br /><br /> (input)|指定是否安装所有更新或仅安装必备更新。<br /><br /> 有效值：<br /><br /> **“全部”**<br /><br /> **“必需”**|  
 
@@ -225,7 +225,7 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="details"></a>详细信息  
 
-|操作变量名称|描述|  
+|操作变量名称|说明|  
 |--------------------------|-----------------|  
 |OSDJoinAccount<br /><br /> (input)|指定目标计算机加入 Windows 域时使用的帐户。 此变量是加入域时必需的变量。|  
 |OSDJoinDomainName<br /><br /> (input)|指定目标计算机加入的 Windows 域的名称。 Windows 域的名称长度必须介于 1 到 255 个字符之间。|  
@@ -240,7 +240,7 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="details"></a>详细信息  
 
-|操作变量名称|描述|  
+|操作变量名称|说明|  
 |--------------------------|-----------------|  
 |OSDBuildStorageDriverList<br /><br /> (input)|指定 sysprep 是否构建大容量存储设备驱动程序列表。 此设置仅应用于 Windows XP 和 Windows Server 2003。 它会使用所有大容量存储设备驱动程序上的信息来填充 sysprep.inf 的 [SysprepMassStorage] 部分，这些驱动程序受到要捕获的映像的支持。<br /><br /> 有效值：<br /><br /> **“true”**<br /><br /> **“false”** （默认值）|  
 |OSDKeepActivation<br /><br /> (input)|指定 sysprep 是否重置产品激活标志。<br /><br /> 有效值：<br /><br /> **“true”**<br /><br /> **“false”** （默认值）|  
@@ -251,7 +251,7 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="details"></a>详细信息  
 
-|操作变量名称|描述|  
+|操作变量名称|说明|  
 |--------------------------|-----------------|  
 |OSDStateStorePath<br /><br /> (input)|从中还原用户状态的位置的 UNC 或本地路径名。 此值由“捕获用户状态”  任务序列操作和“还原用户状态”  任务序列操作这两者使用。|  
 
@@ -260,7 +260,7 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="details"></a>详细信息  
 
-|操作变量名称|描述|  
+|操作变量名称|说明|  
 |--------------------------|-----------------|  
 |OSDStateFallbackToNAA<br /><br /> (input)|当计算机帐户无法连接到状态迁移点时，指定是否将该网络访问帐户作为回退使用。<br /><br /> 有效值：<br /><br /> **“true”**<br /><br /> **“false”** （默认值）|  
 |OSDStateSMPRetryCount<br /><br /> (input)|指定在步骤失败前，任务列表步骤尝试查找状态迁移点的次数。 指定的计数必须介于 0 和 600 之间。|  
@@ -272,17 +272,17 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="details"></a>详细信息  
 
-|操作变量名称|描述|  
+|操作变量名称|说明|  
 |--------------------------|-----------------|  
 |SMSRebootMessage<br /><br /> (input)|指定重新启动计算机之前要向用户显示的消息。 如果未设置此变量，则显示默认消息文本。 指定的消息不能超过 512 个字符。<br /><br /> 例如：<br /><br /> -“此计算机将重新启动;请保存工作。”|  
-|SMSRebootTimeout<br /><br /> (input)|指定计算机重新启动之前向用户显示警告的秒数。 指定零秒表示不显示重新启动消息。<br /><br /> 例如：<br /><br /> **“0”** （默认）<br /><br /> **"5"**<br /><br /> **"10"**|  
+|SMSRebootTimeout<br /><br /> (input)|指定计算机重新启动之前向用户显示警告的秒数。 指定零秒表示不显示重新启动消息。<br /><br /> 示例：<br /><br /> **“0”** （默认）<br /><br /> **"5"**<br /><br /> **"10"**|  
 
 ###  <a name="BKMK_RestoreUserState"></a> 还原用户状态任务序列操作变量  
  此操作的变量指定用于还原目标计算机的用户状态的信息，例如从中还原用户状态的文件夹的路径名称以及是否还原本地计算机帐户。 有关与这些变量相关联的任务序列步骤的详细信息，请参阅[还原用户状态](task-sequence-steps.md#BKMK_RestoreUserState)。  
 
 #### <a name="details"></a>详细信息  
 
-|操作变量名称|描述|  
+|操作变量名称|说明|  
 |--------------------------|-----------------|  
 |OSDStateStorePath<br /><br /> (input)|从中还原用户状态的文件夹的 UNC 或本地路径名。|  
 |OSDMigrateContinueOnRestore<br /><br /> (input)|指定即使无法还原某些文件，也要继续还原用户状态。<br /><br /> 有效值：<br /><br /> **“true”** （默认值）<br /><br /> **“false”**|  
@@ -297,10 +297,10 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="details"></a>详细信息  
 
-|操作变量名称|描述|  
+|操作变量名称|说明|  
 |--------------------------|-----------------|  
 |SMSTSDisableWow64Redirection<br /><br /> (input)|默认情况下，在 64 位操作系统上运行时，使用 WOW64 文件系统重定向程序查找并运行命令行中的程序，以便找到 32 位版本的操作系统程序和 DLL。 将此变量设置为“true”以禁用 WOW64 文件系统重定向程序，以便可以找到本机 64 位版本的操作系统程序和 DLL。 在 32 位操作系统上运行时，此变量没有任何作用。|  
-|WorkingDirectory<br /><br /> (input)|指定命令行操作的开始目录。 指定的目录名称不能超过 255 个字符。<br /><br /> 例如：<br /><br /> -   **"C:\\"**<br />-   **“%SystemRoot%”**|  
+|WorkingDirectory<br /><br /> (input)|指定命令行操作的开始目录。 指定的目录名称不能超过 255 个字符。<br /><br /> 示例：<br /><br /> -   **"C:\\"**<br />-   **“%SystemRoot%”**|  
 |SMSTSRunCommandLineUserName<br /><br /> (input)|指定运行命令行所依据的帐户。 此值为用户名或域\用户名形式的字符串。|  
 |SMSTSRunCommandLinePassword<br /><br /> (input)|为 SMSTSRunCommandLineUserName 变量所指定的帐户指定密码。|  
 
@@ -309,7 +309,7 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="details"></a>详细信息  
 
-|操作变量名称<br /><br /> (input)|描述|  
+|操作变量名称<br /><br /> (input)|说明|  
 |----------------------------------------|-----------------|  
 |_SMSTSMake|指定计算机的品牌。|  
 |_SMSTSModel|指定计算机的型号。|  
@@ -325,7 +325,7 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="details"></a>详细信息  
 
-|操作变量名称<br /><br /> (input)|描述|  
+|操作变量名称<br /><br /> (input)|说明|  
 |----------------------------------------|-----------------|  
 |SMSClientInstallProperties<br /><br /> (input)|指定在安装 Configuration Manager 客户端时应使用的客户端安装属性。|  
 
@@ -334,6 +334,6 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="details"></a>详细信息  
 
-|操作变量名称<br /><br /> (input)|描述|  
+|操作变量名称<br /><br /> (input)|说明|  
 |----------------------------------------|-----------------|  
 |OSDSetupAdditionalUpgradeOptions<br /><br /> (input)|指定在 Windows 10 升级过程中添加到安装程序的其他命令行选项。 命令行选项未验证。 因此，请检查你输入的选项是否准确。<br /><br /> 有关详细信息，请参阅 [Windows 安装程序命令行选项](https://msdn.microsoft.com/library/windows/hardware/dn938368\(v=vs.85\).aspx)。|  
