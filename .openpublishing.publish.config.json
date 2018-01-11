@@ -55,16 +55,16 @@
       }
     }
   ],
-  "branch_target_mapping": {
-    "live": [
-      "Publish",
-      "Pdf"
+"branch_target_mapping": {
+     "live-sxs": [
+           "Publish",
+           "Pdf" 
     ],
-    "master": [
-      "Publish",
-      "Pdf"
+    "live": [
+           "Publish",
+           "Pdf"
     ]
-  },
+},
   "need_generate_pdf_url_template": true,
   "need_generate_pdf": false,
   "need_generate_intellisense": false,
