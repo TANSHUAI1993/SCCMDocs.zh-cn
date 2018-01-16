@@ -3,7 +3,7 @@ title: "支持的 SQL Server 版本"
 titleSuffix: Configuration Manager
 description: "获取托管 System Center Configuration Manager 站点数据库的 SQL Server 版本和配置要求。"
 ms.custom: na
-ms.date: 11/30/2017
+ms.date: 12/18/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.latest.revision: "21"
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 7006d6cd03da53daf0f6cb59cc4ef83e7e800a1e
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: ccc07aa709c0a168a8df7a1bd7944e9399bec13f
+ms.sourcegitcommit: 3dea4342f79909c5064289bd18ed36269812e30c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/19/2017
 ---
 # <a name="supported-sql-server-versions-for-system-center-configuration-manager"></a>System Center Configuration Manager 支持的 SQL Server 版本
 
@@ -67,21 +67,29 @@ SQL Server 事务复制仅支持将对象复制到配置为使用[数据库副�
 
  除非另行指定，System Center Configuration Manager 的所有活动版本均支持以下版本的 SQL Server。 如果支持新的 SQL Server 版本或添加 Service Pack，则将显示添加该支持的 Configuration Manager 版本。 同样，如果弃用支持，则查找有关受影响的 Configuration Manager 版本的详细信息。   
 
-对特定 SQL Server Service Pack 的支持包括该 Service Pack 的累积更新，除非累积更新中断该基本 Service Pack 版本的向后兼容性。 如果没有另行说明 Service Pack 版本，则支持是针对不带 Service Pack 的 SQL Server 版本。 将来，如果针对该版本发布 Service Pack，单独的支持声明将在支持该新的 Service Pack 版本前宣布。
+对特定 SQL Server Service Pack 的支持包括累积更新，除非中断对基本 Service Pack 版本的后向兼容性。 如果没有另行说明 Service Pack 版本，则支持是针对不带 Service Pack 的 SQL Server 版本。 将来如果针对某个 SQL Server 版本发布 Service Pack，单独的支持声明将在支持该新的 Service Pack 版本前宣布。
 
 
 > [!IMPORTANT]  
 >  为管理中心站点上的数据库使用 SQL Server Standard 时，会限制层次结构可支持的客户端总数。 请参阅[调整大小和扩展数量](../../../core/plan-design/configs/size-and-scale-numbers.md)。
 
+### <a name="sql-server-2017-standard-enterprise"></a>SQL Server 2017：标准版、企业版  
+自 [Configuration Manager 版本 1710](https://docs.microsoft.com/en-us/sccm/core/plan-design/changes/whats-new-in-version-1710) 起，此版本的 SQL Server 最低可与以下站点的[累积更新版本 2](https://support.microsoft.com/help/4052574) 一起使用： 
+
+-   管理中心站点  
+-   主站点  
+-   辅助站点  
+<!--SMS.498506-->
+
 ### <a name="sql-server-2016-sp1-standard-enterprise"></a>SQL Server 2016 SP1：标准版、企业版  
-可将此版本的 SQL Server 与以下产品的非最低累计更新版本一起使用：  
+可将此版本的 SQL Server 与以下站点的非最低累积更新版本一起使用：  
 
 -   管理中心站点  
 -   主站点  
 -   辅助站点  
 
 ### <a name="sql-server-2016-standard-enterprise"></a>SQL Server 2016：标准版、企业版  
-可将此版本的 SQL Server 与以下产品的非最低累计更新版本一起使用：  
+可将此版本的 SQL Server 与以下站点的非最低累积更新版本一起使用：  
 
 -   管理中心站点  
 -   主站点  
@@ -89,28 +97,28 @@ SQL Server 事务复制仅支持将对象复制到配置为使用[数据库副�
 
 
 ### <a name="sql-server-2014-sp2-standard-enterprise"></a>SQL Server 2014 SP2：标准版、企业版  
-可将此版本的 SQL Server 与以下产品的非最低累计更新版本一起使用：  
+可将此版本的 SQL Server 与以下站点的非最低累积更新版本一起使用：  
 
 -   管理中心站点  
 -   主站点  
 -   辅助站点
 
 ### <a name="sql-server-2014-sp1-standard-enterprise"></a>SQL Server 2014 SP1：标准版、企业版  
- 可将此版本的 SQL Server 与以下产品的非最低累计更新版本一起使用：  
+ 可将此版本的 SQL Server 与以下站点的非最低累积更新版本一起使用：  
 
 -   管理中心站点  
 -   主站点  
 -   辅助站点
 
 ### <a name="sql-server-2012-sp4-standard-enterprise"></a>SQL Server 2012 SP4：标准版、企业版  
- 可将此版本的 SQL Server 与以下产品的非最低累计更新版本一起使用：  
+ 可将此版本的 SQL Server 与以下站点的非最低累积更新版本一起使用：  
 
 -   管理中心站点  
 -   主站点  
 -   辅助站点  
 
 ### <a name="sql-server-2012-sp3-standard-enterprise"></a>SQL Server 2012 SP3：标准版、企业版  
- 可将此版本的 SQL Server 与以下产品的非最低累计更新版本一起使用：  
+ 可将此版本的 SQL Server 与以下站点的非最低累积更新版本一起使用：  
 
 -   管理中心站点  
 -   主站点  
@@ -118,7 +126,7 @@ SQL Server 事务复制仅支持将对象复制到配置为使用[数据库副�
 
 <!-- Support for this service pack version has been dropped by Microsoft    
 ### SQL Server 2012 SP2: Standard, Enterprise   
- You can use this version of SQL Server with no minimum cumulative update version for the following:  
+ You can use this version of SQL Server with no minimum cumulative update version for the following sites:  
 
 -   A central administration site  
 -   A primary site  
@@ -129,40 +137,45 @@ SQL Server 事务复制仅支持将对象复制到配置为使用[数据库副�
   [从版本 1702 开始](/sccm/core/plan-design/changes/removed-and-deprecated-features#deprecated-support-for-sql-server-versions-as-a-site-database)，不支持此版本的 SQL Server。  
  在使用 1702 之前版本的 Configuration Manager 时，此版本的 SQL Server 仍受支持。
 
-当受到你的 Configuration Manager 版本的支持时，可将此版本的 SQL Server 与以下产品的非最低累积更新版本一起使用：  
+受 Configuration Manager 版本支持时，可将此版本的 SQL Server 与以下站点的非最低累积更新版本一起使用：  
 
 -   管理中心站点  
 -   主站点
 -   辅助站点
 
+### <a name="sql-server-2017-express"></a>SQL Server 2017 Express   
+自 [Configuration Manager 版本 1710](https://docs.microsoft.com/en-us/sccm/core/plan-design/changes/whats-new-in-version-1710) 起，此版本的 SQL Server 最低可与以下站点的[累积更新版本 2](https://support.microsoft.com/help/4052574) 一起使用：
+-   辅助站点
+<!--SMS.498506-->
+
 ### <a name="sql-server-2016-express-sp1"></a>SQL Server 2016 Express SP1  
-可将此版本的 SQL Server 与以下产品的非最低累计更新版本一起使用：
+可将此版本的 SQL Server 与以下站点的非最低累积更新版本一起使用：
 -   辅助站点
 
 ### <a name="sql-server-2016-express"></a>SQL Server 2016 Express
-可将此版本的 SQL Server 与以下产品的非最低累计更新版本一起使用：
+可将此版本的 SQL Server 与以下站点的非最低累积更新版本一起使用：
 -   辅助站点
 
 
 ### <a name="sql-server-2014-express-sp2"></a>SQL Server 2014 Express SP2   
-可将此版本的 SQL Server 与以下产品的非最低累计更新版本一起使用：  
+可将此版本的 SQL Server 与以下站点的非最低累积更新版本一起使用：  
 
 -   辅助站点  
 
 
 ### <a name="sql-server-2014-express-sp1"></a>SQL Server 2014 Express SP1   
- 可将此版本的 SQL Server 与以下产品的非最低累计更新版本一起使用：  
+ 可将此版本的 SQL Server 与以下站点的非最低累积更新版本一起使用：  
 
 -   辅助站点  
 
 ### <a name="sql-server-2012-express-sp3"></a>SQL Server 2012 Express SP3  
-可将此版本的 SQL Server 与以下产品的非最低累计更新版本一起使用：  
+可将此版本的 SQL Server 与以下站点的非最低累积更新版本一起使用：  
 
 -   辅助站点  
 
 <!-- Support for this service pack version has been dropped by Microsoft   
 ### SQL Server 2012 Express SP2   
- You can use this version of SQL Server with no minimum cumulative update version for the following:  
+ You can use this version of SQL Server with no minimum cumulative update version for the following sites:  
 
 -   A secondary site  
 -->
@@ -188,7 +201,7 @@ SQL Server 事务复制仅支持将对象复制到配置为使用[数据库副�
  Configuration Manager 需要“Windows 身份验证”来验证与数据库的连接。  
 
  **SQL Server 实例：**  
- 必须为每个站点使用专用的 SQL Server 实例。 可以为 **命名实例** 或 **默认实例**。  
+ 必须为每个站点使用专用的 SQL Server 实例。 此实例可以为命名实例或默认实例。  
 
  **SQL Server 内存：**  
  通过使用 SQL Server Management Studio 和设置“服务器内存选项”下的“最小服务器内存”设置来保留 SQL Server 的内存。 有关如何设置固定的内存量的详细信息，请参阅 [如何：设置固定的内存量 (SQL Server Management Studio)](http://go.microsoft.com/fwlink/p/?LinkId=233759)。  
@@ -227,7 +240,7 @@ SQL Server 事务复制仅支持将对象复制到配置为使用[数据库副�
 
 运行 SQL Server 的计算机不使用其本地系统帐户运行 SQL Server 服务时，必须配置帐户的 SPN，该帐户在 Active Directory 域服务中运行 SQL Server 服务。 （使用系统帐户时，将为你自动注册 SPN。）
 
-有关站点数据库 SPN 的信息，请参阅[修改 System Center Configuration Manager 基础结构](../../../core/servers/manage/modify-your-infrastructure.md)主题中的[管理站点数据库服务器的 SPN](../../../core/servers/manage/modify-your-infrastructure.md#bkmk_SPN)。  
+有关站点数据库 SPN 的信息，请参阅[修改 System Center Configuration Manager 基础结构](../../../core/servers/manage/modify-your-infrastructure.md)一文中的[管理站点数据库服务器的 SPN](../../../core/servers/manage/modify-your-infrastructure.md#bkmk_SPN)。  
 
 有关如何更改 SQL Server 服务所使用帐户的信息，请参阅[如何：为 SQL Server（SQL Server 配置管理器）更改服务启动帐户](http://go.microsoft.com/fwlink/p/?LinkId=237661)。  
 
@@ -242,7 +255,7 @@ SQL Server Reporting Services 是安装可运行报表的 Reporting Services 点
 对于与 SQL Server 数据库引擎的通信和站点间复制，可以使用默认的 SQL Server 端口配置，也可以指定自定义端口：  
 
 -   **站点间通信**使用 SQL Server Service Broker，它默认使用端口 TCP 4022。  
--   SQL Server 数据库引擎与各种 Configuration Manager 站点系统角色之间的**站点内通信**默认使用端口 TCP 1433。 下列站点系统角色直接与 SQL Server 数据库进行通信：  
+-   SQL Server 数据库引擎与各种 Configuration Manager 站点系统角色之间的站点内通信默认使用端口 TCP 1433。 下列站点系统角色直接与 SQL Server 数据库进行通信：  
 
     -   管理点  
     -   SMS 提供程序计算机  

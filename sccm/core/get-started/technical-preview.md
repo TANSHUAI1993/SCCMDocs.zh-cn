@@ -3,7 +3,7 @@ title: "Technical Preview 版本"
 titleSuffix: Configuration Manager
 description: "了解可让你试用 System Center Configuration Manager 中的新功能和新特性的 Technical Preview 版本。"
 ms.custom: na
-ms.date: 11/20/2017
+ms.date: 12/22/2017
 ms.prod: configuration-manager
 ms.reviewer: nab
 ms.suite: na
@@ -12,24 +12,24 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 caps.latest.revision: "157"
-author: erikje
-ms.author: erikje
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 209beadba5b575afbd7d00cc52deb7a790d41c38
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 692cf74cbae3f176bab254aeec0e63c10929cfcc
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="technical-preview-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview
 
 *适用范围：System Center Configuration Manager (Technical Preview)*
 
-**欢迎使用 System Center Configuration Manager Technical Preview**。 本主题提供了有关不断完善的预览版的详细信息，该版本包括我们正在开发的功能。 每个版本的 Technical Preview 都会引入尚未包含在 System Center Configuration Manager 的 Current Branch 中的新功能。 这些功能最终可能会包含在当前分支版本的更新中，但在确定和添加功能之前，我们希望你有机会试用它们并向我们提供反馈。  
+**欢迎使用 System Center Configuration Manager Technical Preview**。 本文提供了有关不断完善的预览版的详细信息，该版本包括我们正在开发的功能。 每个版本的 Technical Preview 都会引入尚未包含在 Configuration Manager 的 Current Branch 中的新功能。 这些功能最终可能会包含在当前分支版本的更新中，但在确定和添加功能之前，我们希望你有机会试用它们并向我们提供反馈。  
 
  由于这是技术预览版，因此详细信息和功能可能有所更改。  
 
- 本主题包含适用于所有的技术预览版本的信息，并且列出了每个新功能及功能首次在其中出现的技术预览版本，例如，版本 1710 表示 2017 年 10 月。 这些功能的详细信息将专门在各预览版本的单独主题中详细介绍。  
+ 本文包含适用于所有版本的 Technical Preview 的信息。 还列出了每个新功能及其首次出现的 Technical Preview 版本，例如版本 1712 表示 2017 年 12 月。 这些功能将专门在各预览版的单独主题中详细介绍。  
 
  有关 Configuration Manager 的 Current Branch 中新增功能的信息，请参阅 [System Center Configuration Manager 中的新增功能](/sccm/core/plan-design/changes/what-has-changed-from-configuration-manager-2012)。
 
@@ -53,9 +53,9 @@ ms.lasthandoff: 12/01/2017
     -   **/testdbupgrade**    
 
 
--   默认情况下，在使用技术预览时，服务连接点设置为联机模式，且不支持更改为脱机模式。
+-   默认情况下，如果使用 Technical Preview，则服务连接点安装为联机模式。 它不支持更改为脱机模式。
 
--   Technical Preview 的每个特定版本的详细信息中会随附其他限制或要求（如果适用）  
+-   每个特定版本的 Technical Preview 的单独文章中包括其他限制或要求（如果适用）。
 
 -   不支持迁移到此预览版或从此预览版进行迁移。  
 
@@ -73,7 +73,7 @@ ms.lasthandoff: 12/01/2017
     -   SQL Server 2012（含 Service Pack 3）或更高版本
 
 
--   站点最多支持 10 个客户端，这些客户端必须在以下操作系统之一上运行：  
+-   站点最多支持 10 个客户端，这些客户端必须运行 Windows 的以下版本之一：  
 
       -   Windows 10  
       -   Windows 8.1  
@@ -83,23 +83,22 @@ ms.lasthandoff: 12/01/2017
 ##  <a name="bkmk_install"></a> 安装并更新技术预览版  
  System Center Configuration Manager Technical Preview 与 System Center Configuration Manager 的当前版本是不同的。  
 
- 若要使用技术预览版，必须先安装技术预览版内部版本的 **基线版本** 。 安装基线版本之后，可使用 **控制台内部更新** 来升级此内部版本，以便使用最新预览版使你的安装程序保持最新。 通常，每个月都会提供新版本的 Technical Preview。
+ 若要使用 Technical Preview，必须先安装 Technical Preview 内部版本的“基线版本”。 安装基线版本之后，可使用 **控制台内部更新** 来升级此内部版本，以便使用最新预览版使你的安装程序保持最新。 通常，每个月都会提供新版本的 Technical Preview。
 
-每个预览版的支持时间在发布三个后续版本后结束。 也就是说，发布 1708 版时，将不再支持 1704 版，但是仍支持 1705、1706 和 1707 版。 如果基线版本不再受支持（如 1703 版），仍然支持安装新的 Technical Preview 站点（直到新基线版本可用），只要之后将该安装产品更新为受支持的版本即可。 更新时，如果控制台中未显示可用的最新版本，请更新到提供的最新版本，然后重复此过程直至可安装 Technical Preview 的最新版本。
+每个预览版的支持时间在发布三个后续版本后结束。 也就是说，发布 1708 版时，将不再支持 1704 版，但是仍支持 1705、1706 和 1707 版。 如果基线版本不再受支持，仍然支持安装新的 Technical Preview 站点（直到新基线版本可用），只要之后将该安装产品更新为受支持的版本即可。 更新到最新可用版本，然后重复此流程直到可以安装 Technical Preview 最新版为止。
 
 > [!TIP]  
 >  当你将更新安装到技术预览版时，即可将预览安装更新到此新的技术预览版。    技术预览版安装绝不会升级到当前的分支安装，也不会从当前分支版本获取更新。  
 
 **Technical Preview 的活动基线版本：**  
 可以在基线版本发布后的 1 年内安装此基线版本。 但是，在安装新的技术预览站点时，我们建议使用可用的最新基线版本。
--  **Technical Preview 1711** - Configuration Manager Technical Preview 1711 可作为 Configuration Manager Technical Preview 的控制台内更新，以及作为 [TechNet 评估中心网站](http://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview)中提供的新基线版本。
--  **Technical Preview 1703** - Configuration Manager Technical Preview 1703 可同时用作 Configuration Manager Technical Preview 的控制台内更新和基线版本。 如果正在安装新基线版本，我们建议使用 1711 版。
+-  **Technical Preview 1711** - Configuration Manager Technical Preview 1711 可同时用作控制台内更新和新的基线版本。 [从 TechNet 评估中心](http://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview)下载基线版本。
 
 
 ##  <a name="BKMK_TPFeedback"></a> 提供反馈  
- 我们希望收到有关技术预览版的反馈。 若要提交关于每个预览版中的功能的反馈，请使用指向我们的反馈表的链接，该反馈表位于 Microsoft Connect 站点上的 [Configuration Manager 反馈计划](https://connect.microsoft.com/ConfigurationManagervnext/Feedback)页中。  
+ 欢迎提供有关技术预览版功能的反馈。 有关详细信息，请参阅[产品反馈](../understand/find-help.md#product-feedback)。
 
- 此外，如果你对于想要看到的新功能有任何想法，也请让我们知道。 若要提交新的想法，并为他人提交的想法投票，请 [访问我们的用户之声页面](http://configurationmanager.uservoice.com)。  
+如果你对于想要看到的新功能有任何想法，也请让我们知道。 若要提交新的想法，并为他人提交的想法投票，请 [访问我们的用户之声页面](http://configurationmanager.uservoice.com)。  
 
 <!--   ##  <a name="bdmk_tpknownissues"></a> General changes introduced in Technical Previews    -->
 
@@ -107,180 +106,64 @@ ms.lasthandoff: 12/01/2017
 
 
 ##  <a name="bkmk_tpCaps"></a>最新技术预览版中提供的功能  
-以下是每个 Configuration Manager Technical Preview 提供的功能。  从某一技术预览版开始提供的功能，在其后的版本中将保持可用。 同样，已添加到 System Center Configuration Manager 发行版本 (Current Branch) 的功能在后续的 Technical Preview 中将保持可用。  请单击查看每个预览版本的内容，了解有关特定功能的详细信息。  
+以下是最新 Configuration Manager Technical Preview 版本中提供的功能。  某个旧版 Technical Preview 中可用的功能在其后的版本中仍然可用。 同样，已添加到 Configuration Manager Current Branch 的功能在 Technical Preview 版本中仍然可用。  请单击查看每个预览版本的内容，了解有关特定功能的详细信息。  
+
+<!-- This is the full list of new features in the latest TP release -->
+
+### <a name="technical-preview-version-1712"></a>Technical Preview 版本 1712
+- [请勿自动升级被取代的应用程序](capabilities-in-technical-preview-1712.md#do-not-automatically-upgrade-superseded-applications) <!-- 1351266 --> 
+- [安装软件中心中的多个应用程序](capabilities-in-technical-preview-1712.md#install-multiple-applications-in-software-center) <!-- 1357126 --> 
+- [Configuration Manager 客户端安装中的更改](capabilities-in-technical-preview-1712.md#change-in-the-configuration-manager-client-install) <!-- 1356195 --> 
+- [更改为 Surface 设备仪表板](capabilities-in-technical-preview-1712.md#change-to-the-surface-device-dashboard) <!-- 1355788 --> 
+- [对 Office 365 客户端管理仪表板的改进](capabilities-in-technical-preview-1712.md#improvements-to-office-365-client-management-dashboard) <!-- 1357281 --> 
+- [对 Configuration Manager 控制台的改进](capabilities-in-technical-preview-1712.md#improvements-to-the-configuration-manager-console) <!-- 1357280,1357282 --> 
+- [对操作系统部署的改进](capabilities-in-technical-preview-1712.md#improvements-to-operating-system-deployment) <!-- SMS 500897 --> 
+- [Windows 10 反馈中心应用集成](capabilities-in-technical-preview-1712.md#windows-10-feedback-hub-app-integration) <!-- NA -->
+
+
+
+
+## <a name="capabilities-delivered-in-recent-supported-technical-previews"></a>最新受支持的 Technical Preview 中提供的功能
+以下是旧版 Configuration Manager Technical Preview 提供且依然受支持的功能。 
+
+<!-- This is the full list of new features in the past three TP releases. Each month, add features from the list above to the top of this table. Then remove the bottom of this list (and/or move individual items not in CB to the third table below). -->
 
  |功能 |Technical Preview 版本 |Current Branch 版本|  
  |----------------|---------------------|--------------------|
- |对运行任务序列步骤的改进<!-- 1261338 --> | [Tech Preview 1711](capabilities-in-technical-preview-1711.md) |![未添加](media/Red_X.gif)    |
+ |运行任务序列步骤 <!-- 1261338 --> | [Tech Preview 1711](capabilities-in-technical-preview-1711.md) |[版本 1710](/sccm/osd/understand/task-sequence-steps#child-task-sequence)    |
  |允许在安装应用程序时进行用户交互<!-- 1356976 --> | [Tech Preview 1711](capabilities-in-technical-preview-1711.md) |![未添加](media/Red_X.gif)    |
- |Windows 10 的新符合性策略<!-- 1356976 --> | [Tech Preview 1711](capabilities-in-technical-preview-1711.md#new-compliance-policy-options-for-windows-10) |![未添加](media/Red_X.gif)    |
-
-
-## <a name="capabilities-delivered-in-previous-technical-previews"></a>以前的技术预览版中提供的功能
- 当 Current Branch 的最低支持版本提供技术预览版本的所有功能时，将从下表删除该预览版本的详细信息。  
-
- |功能 |Technical Preview 版本 |Current Branch 版本|  
- |----------------|---------------------|--------------------|
- |Windows Analytics 设备运行状况的 Windows 10 遥测 <!--1356148 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#limit-windows-10-enhanced-telemetry-to-only-send-data-relevant-to-windows-analytics-device-health) |![未添加](media/Red_X.gif)    |
- |对软件中心图标的改进 <!-- 1356194 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#software-center-no-longer-distorts-icons-larger-than-250x250) |![未添加](media/Red_X.gif)    |
- |检查软件中心中共同托管的设备的符合性<!-- 1356374 -->|[Tech Preview 1710](capabilities-in-technical-preview-1710.md#check-compliance-from-software-center-for-co-managed-devices)|![未添加](media/Red_X.gif)    |
- |对 CNG 证书的有限支持<!-- 1356191 -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md#limited-support-for-cng-certificates)|![未添加](media/Red_X.gif)    |
+ |Windows Analytics 设备运行状况的 Windows 10 遥测 <!--1356148 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#limit-windows-10-enhanced-telemetry-to-only-send-data-relevant-to-windows-analytics-device-health) |[版本 1710](/sccm/core/plan-design/changes/whats-new-in-version-1710#reporting)    |
+ |对软件中心图标的改进 <!-- 1356194 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#software-center-no-longer-distorts-icons-larger-than-250x250) |[版本 1710](/sccm/apps/plan-design/plan-for-and-configure-application-management#supplemental-procedures-to-install-and-configure-the-application-catalog-and-software-center)    |
+ |检查软件中心中共同托管的设备的符合性<!-- 1356374 -->|[Tech Preview 1710](capabilities-in-technical-preview-1710.md#check-compliance-from-software-center-for-co-managed-devices)|[版本 1710](/sccm/core/clients/manage/co-management-overview)    |
+ |对 CNG 证书的有限支持<!-- 1356191 -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md#limited-support-for-cng-certificates)|[版本 1710](/sccm/core/plan-design/network/cng-certificates-overview)    |
  |对攻击防护的支持 <!--1355468 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#support-for-exploit-guard) |[版本 1710](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy)    |
  |对挂起的计算机重启的改进性说明   <!-- 1356283  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|[版本 1710](/sccm/core/clients/manage/manage-clients)    |
  |设备防护策略更改   <!-- 1355092  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|[版本 1710](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)    |
  |配置和部署 Windows Defender 应用程序防护策略   <!-- 1351960  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|[版本 1710](/sccm/protect/deploy-use/create-deploy-application-guard-policy)    |
  |针对从 Configuration Manager 部署 PowerShell 脚本的改进<!-- 1236459 -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md#improvements-for-deploying-powershell-scripts-from-configuration-manager) | [版本 1710](/sccm/apps/deploy-use/create-deploy-scripts)
+ |Configuration Manager 控制台中改进了 VPN 配置文件体验<!-- 1313282 --> | [Tech Preview 1709](capabilities-in-technical-preview-1709.md) |[版本 1710](/sccm/protect/deploy-use/create-vpn-profiles)    |
+ |适用于 Windows 10 设备的共同管理|[Tech Preview 1709](capabilities-in-technical-preview-1709.md#co-management-for-windows-10-devices)|[版本 1710](/sccm/core/clients/manage/co-management-overview.md)|
+ 
 
 ## <a name="capabilities-delivered-in-previous-technical-previews"></a>以前的技术预览版中提供的功能
- 当 Current Branch 的最低支持版本提供技术预览版本的所有功能时，将从下表删除该预览版本的详细信息。  
+以下是旧版 Configuration Manager Technical Preview 提供的特定功能。 这些功能在更高版本中保持可用，但在 Current Branch 版本中还不可用。 
 
- |功能 |Technical Preview 版本 |Current Branch 版本|  
- |----------------|---------------------|--------------------|
- |Configuration Manager 控制台中改进了 VPN 配置文件体验<!-- 1313282 --> | [Tech Preview 1709](capabilities-in-technical-preview-1709.md) |![未添加](media/Red_X.gif)    |
- |适用于 Windows 10 设备的共同管理|[Tech Preview 1709](capabilities-in-technical-preview-1709.md#co-management-for-windows-10-devices)|[版本 1710](/sccm/core/clients/manage/co-management-overview.md)|
- |从 Configuration Manager 部署 PowerShell 脚本时指定脚本参数的改进<!-- 1236459 -->|[Tech Preview 1708](capabilities-in-technical-preview-1708.md#improvements-for-specifying-script-parameters-when-you-deploy-powershell-scripts-from-configuration-manager)|[版本 1710](/sccm/apps/deploy-use/create-deploy-scripts)|
- |管理见解<!-- 1353967 --> |[Tech Preview 1708](capabilities-in-technical-preview-1708.md#management-insights)|![未添加](media/Red_X.gif)|
- |从 Configuration Manager 控制台重启计算机<!-- 1356283 --> |[Tech Preview 1708](capabilities-in-technical-preview-1708.md#restart-computers-from-the-configuration-manager-console)|[版本 1710](/sccm/core/clients/manage/manage-clients) |
- |软件中心自定义<!-- 1351224 --> |[Tech Preview 1708](capabilities-in-technical-preview-1708.md#software-center-customization)|![未添加](media/Red_X.gif)|
-|对于适用于 Windows 10 和 Office 365 的快速安装文件的客户端对等缓存支持|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#client-peer-cache-support-for-express-installation-files-for-windows-10-and-office-365)|[版本 1706](/sccm/core/plan-design/hierarchy/client-peer-cache#requirements-and-considerations-for-peer-cache)|
- |Surface 仪表板|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#surface-device-dashboard)|![未添加](media/Red_X.gif)|
- |配置和部署 Windows Defender 应用程序防护策略|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#configure-and-deploy-windows-defender-application-guard-policies)|[版本 1710](/sccm/protect/deploy-use/create-deploy-application-guard-policy)|
- |从 Configuration Manager 部署 PowerShell 脚本时，添加参数|[Tech Preview 1707](capabilities-in-technical-preview-1707.md#add-parameters-when-you-deploy-powershell-scripts-from-configuration-manager)|[版本 1710](/sccm/apps/deploy-use/create-deploy-scripts)|
- |新移动应用程序管理策略设置|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#new-mobile-application-management-policy-settings)|[版本 1710](/sccm/mdm/deploy-use/protect-apps-using-mam-policies#step-3-create-an-application-management-policy)|
- |改进了软件更新点的边界组|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#improved-boundary-groups-for-software-update-points)|[版本 1706](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points)|
- |站点服务器角色的高可用性|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#site-server-role-high-availability) |![未添加](media/Red_X.gif)|
- |在 Device Guard 策略中包括对特定文件和文件夹的信任|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#include-trust-for-specific-files-and-folders-in-a-device-guard-policy)|[版本 1706](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)|
- |隐藏任务序列进度|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#hide-task-sequence-progress)|![未添加](media/Red_X.gif)|
- |指定安装内容和卸载内容的不同内容位置|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#specify-a-different-content-location-for-install-content-and-uninstall-content)|[版本 1706](/sccm/core/get-started/capabilities-in-technical-preview-1706#hide-task-sequence-progress)|
- |辅助功能改进 |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#accessibility-improvements)|[版本 1706](/sccm/core/understand/accessibility-features)|
- |升级就绪情况的 Azure 服务向导支持 |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#changes-to-the-azure-services-wizard-to-support-upgrade-readiness)|[版本 1706](/sccm/core/servers/deploy/configure/azure-services-wizard)|
- |云服务的新客户端设置|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#new-client-settings-for-cloud-services)|[版本 1706](/sccm/core/clients/deploy/deploy-clients-cmg-azure)|
- |从 Configuration Manager 控制台创建并运行 PowerShell 脚本|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#create-and-run-powershell-scripts-from-the-configuration-manager-console)|[版本 1710](/sccm/apps/deploy-use/create-deploy-scripts)|
- |PXE 网络启动对 IPv6 的支持 |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#pxe-network-boot-support-for-ipv6)|![未添加](media/Red_X.gif)|
- |管理 Microsoft Surface 驱动程序更新 |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#manage-microsoft-surface-driver-updates)|[版本 1706](/sccm/core/plan-design/changes/whats-new-in-version-1706#manage-microsoft-surface-driver-updates)|
- |配置 Windows Update for Business 延迟策略 |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#configure-windows-update-for-business-deferral-policies)|[版本 1706](/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10#configure-windows-update-for-business-deferral-policies)|
- |iOS 注册限制|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#android-and-ios-enrollment-restrictions)|[版本 1706](/sccm/mdm/deploy-use/enroll-hybrid-ios-mac#configure-enrollment-restrictions)|
- |Android 注册限制|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#android-and-ios-enrollment-restrictions)|[版本 1706](/sccm/mdm/deploy-use/enroll-hybrid-android#enable-android-enrollment)|
- |针对复制粘贴的 Android for Work 应用程序管理策略|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#android-for-work-application-management-policy-for-copy-paste)|[版本 1706](/sccm/mdm/deploy-use/create-configuration-items-for-android-for-work-devices-managed-without-the-client#android-for-work-configuration-item-settings-reference)|
- |新 Windows 配置项设置|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#new-windows-configuration-item-settings)|[版本 1706](/sccm/mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client)|
- |新设备符合性策略规则|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#new-device-compliance-policy-rules)|[版本 1706](/sccm/mdm/deploy-use/create-compliance-policy)|
- |用于条件访问的符合性策略的“设备运行状况证明”评估|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#device-health-attestation-assessment-for-compliance-policies-for-conditional-access)|![未添加](media/Red_X.gif)|
- |支持 Entrust 证书颁发机构|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#support-for-entrust-certification-authorities)|[版本 1706](/sccm/mdm/deploy-use/create-pfx-certificate-profiles)|
- |macOS VPN 配置文件的 Cisco (IPSec) 支持|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#cisco-ipsec-support-for-macos-vpn-profiles)|[版本 1706](/sccm/protect/deploy-use/vpn-profiles)|
- |Azure AD 和云管理的新功能|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#new-capabilities-for-azure-ad-and-cloud-management)|[版本 1706](/sccm/core/plan-design/changes/whats-new-in-version-1706#azure-ad-integration-with-configuration-manager)|
- |配置和部署 Windows Defender 应用程序防护策略|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#configure-and-deploy-windows-defender-application-guard-policies)|[版本 1710](/sccm/protect/deploy-use/create-deploy-application-guard-policy)|
- |更新重置工具  |[Tech Preview 1705](capabilities-in-technical-preview-1705.md#update-reset-tool)|[版本 1706](/sccm/core/servers/manage/update-reset-tool)|
- |高 DPI 控制台支持  |[Tech Preview 1705](capabilities-in-technical-preview-1705.md#high-dpi-console-support)|[版本 1706](/sccm/core/plan-design/changes/whats-new-in-version-1706#high-dpi-console-support)|
- |对等缓存功能改进  |[Tech Preview 1705](capabilities-in-technical-preview-1705.md#peer-cache-improvements) |[版本 1706](/sccm/core/plan-design/hierarchy/client-peer-cache#requirements-and-considerations-for-peer-cache)|
- |SQL Server Always On 可用性组改进 |[Tech Preview 1705](capabilities-in-technical-preview-1705.md#improvements-for-sql-server-always-on-availability-groups) |[版本 1706](/sccm/core/plan-design/changes/whats-new-in-version-1706#improvements-for-sql-server-always-on-availability-groups)|
- |改进了 Office 365 更新的用户通知|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#improved-user-notifications-for-office-365-updates) |[版本 1706](/sccm/sum/deploy-use/manage-office-365-proplus-updates#restart-behavior-and-client-notifications-for-office-365-updates)|
- |使用 Azure 服务向导配置与 OMS 的连接|[Tech Preview 1705](capabilities-in-technical-preview-1705.md#use-azure-services-wizard-to-configure-a-connection-to-oms) |[版本 1706](/sccm/core/servers/deploy/configure/azure-services-wizard)|
- |使用应用配置策略配置 Android 应用  |[Tech Preview 1704](capabilities-in-technical-preview-1704.md#configure-android-apps-with-app-configuration-policies)|![未添加](media/Red_X.gif)|
- |硬件清单收集安全启动信息 |[Tech Preview 1704](capabilities-in-technical-preview-1704.md#hardware-inventory-collects-secure-boot-information)|[版本 1706](/sccm/core/plan-design/changes/whats-new-in-version-1706#hardware-inventory-collects-secure-boot-information)|
- |将子任务序列添加到任务序列|[Tech Preview 1704](capabilities-in-technical-preview-1704.md#add-child-task-sequences-to-a-task-sequence)|![未添加](media/Red_X.gif)|
- |重载当前的 Windows PE 版本的启动映像 |[Tech Preview 1704](capabilities-in-technical-preview-1704.md#reload-boot-images-with-current-windows-pe-version)|[版本 1706](/sccm/osd/get-started/manage-boot-images#update-distribution-points-with-the-boot-image)|
- |对操作系统部署的改进<!-- This item does not track to be added to the Current Branch. It is covered by various other incremental work. --> |[Tech Preview 1704](capabilities-in-technical-preview-1704.md#improvements-to-operating-system-deployment)|![未添加](media/Red_X.gif)|
- |将批量采购的 iOS 应用部署到设备集合|[Tech Preview 1703](capabilities-in-technical-preview-1703.md#deploy-volume-purchased-ios-apps-to-device-collections)|[版本 1702](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps)|
- |指向软件中心中应用程序的直接链接|[Tech Preview 1703](capabilities-in-technical-preview-1703.md#direct-links-to-applications-in-software-center)|[版本 1706](/sccm/apps/deploy-use/share-applications)
- |Configuration Manager Windows 客户端计算机的 PFX 证书|[Tech Preview 1703](capabilities-in-technical-preview-1703.md#pfx-certificates-for-configuration-manager-windows-client-computers)|[版本 1706](/sccm/protect/deploy-use/create-certificate-profiles)|
- |配置 Azure 服务向导|[Tech Preview 1703](capabilities-in-technical-preview-1703.md#configure-azure-services-wizard)|[版本 1706](/sccm/core/servers/deploy/configure/azure-services-wizard)|
- |在操作系统升级任务序列中从 BIOS 转换为 UEFI| [Tech Preview 1703](capabilities-in-technical-preview-1703.md#convert-from-bios-to-uefi-during-an-in-place-upgrade) |[版本 1702](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion#convert-from-bios-to-uefi-during-an-in-place-upgrade)|
- |可折叠的任务序列组| [Tech Preview 1703](capabilities-in-technical-preview-1703.md#collapsible-task-sequence-groups) |[版本 1706](/sccm/core/plan-design/changes/whats-new-in-version-1706#collapsible-task-sequence-groups)|
- |用于配置 Windows Analytics for Upgrade Readiness 的客户端设置 | [Tech Preview 1703](capabilities-in-technical-preview-1703.md#client-settings-to-configure-windows-analytics-for-upgrade-readiness) |[版本 1706](/sccm/core/clients/manage/monitor-windows-analytics#configure-clients-to-report-data-to-windows-analytics)|
- |iOS 设备的新符合性设置|[Tech Preview 1702](capabilities-in-technical-preview-1702.md#new-compliance-settings-for-ios-devices)|[版本 1702](/sccm/mdm/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client)|
- |创建具有 S/MIME 支持的 PFX 证书|[Tech Preview 1702](capabilities-in-technical-preview-1702.md#create-pfx-certificates-with-s-mime-support)|[版本 1706](/sccm/mdm/deploy-use/create-pfx-certificate-profiles)|
- |在安装应用程序之前检查运行的可执行文件|[Tech Preview 1702](capabilities-in-technical-preview-1702.md#check-for-running-executable-files-before-installing-an-application)|[版本 1702](/sccm/apps/deploy-use/deploy-applications)|
- |从 Configuration Manager 控制台发送反馈 | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#send-feedback-from-the-configuration-manager-console)    |[版本 1702](/sccm/core/plan-design/changes/whats-new-in-version-1702#send-feedback-from-the-configuration-managercconsole)  |
- |更新和维护服务的更改  | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#changes-for-updates-and-servicing)  |[版本 1702](/sccm/core/plan-design/changes/whats-new-in-version-1702#changes-for-updates-and-servicing) |
- |对等缓存功能改进  | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#peer-cache-improvements) |[版本 1702](/sccm/core/plan-design/hierarchy/client-peer-cache)|
- |使用 Azure Active Directory<!-- This item does not track to be added to the Current Branch. It is covered by various other incremental work. --> | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#azurediscovery) |![未添加](media/Red_X.gif)|
- |条件性访问设备符合性策略改进 | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#conditional-access-device-compliance-policy-improvements) |[版本 1702](/sccm/mdm/deploy-use/create-compliance-policy)|
- |反恶意软件客户端版本警报 | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#antimalware-client-version-alert) |[版本 1702](/sccm/protect/deploy-use/endpoint-configure-alerts?branch=live#alert-for-outdated-malware-client)|
- |Windows Update for Business 更新的符合性评估 | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#compliance-assessment-for-windows-update-for-business-updates) |![未添加](media/Red_X.gif)|
- |针对影响重大的任务序列，改进软件中心设置和消息通知|[Tech Preview 1702](capabilities-in-technical-preview-1702.md#antimalware-client-version-alert)|[版本 1702](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#set-a-task-sequence-as-a-high-impact-task-sequence)|
- |Android for Work 支持| [Tech Preview 1702](capabilities-in-technical-preview-1702.md#android-for-work-support) |[版本 1702](/sccm/mdm/deploy-use/enroll-hybrid-android#enable-android-for-work-enrollment)|
- |软件更新点的边界组改进 | [Tech Preview 1701](capabilities-in-technical-preview-1701.md#boundary-groups-improvements-for-software-update-points)    |[版本 1702](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points)  |
- |硬件清单将收集 UEFI 信息 | [Tech Preview 1701](capabilities-in-technical-preview-1701.md#hardware-inventory-collects-uefi-information)|[版本 1702](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion#hardware-inventory-collects-uefi-information) |
- |对操作系统部署的改进| [Tech Preview 1701](capabilities-in-technical-preview-1701.md#improvements-to-operating-system-deployment)|[版本 1702](/sccm/core/plan-design/changes/whats-new-in-version-1702#operating-system-deployment) |
- |使用基于云的分发点托管软件更新| [Tech Preview 1701](capabilities-in-technical-preview-1701.md#host-software-updates-on-cloud-based-distribution-points)|[版本 1702](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#plan-to-use-a-cloud-based-distribution-point) |
- |通过管理点验证设备运行状况证明数据| [Tech Preview 1701](capabilities-in-technical-preview-1701.md#validate-device-health-attestation-data-via-management-points)| [版本 1702](/sccm/core/servers/manage/health-attestation) |
- |适用于 Microsoft Azure 政府云的 OMS 连接器 |[Tech Preview 1701](capabilities-in-technical-preview-1701.md#use-the-oms-connector-for-microsoft-azure-government-cloud) |[版本 1702](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite#fairfaxconfig) |
- |在创建向导中，不再以 Android 和 iOS 版本为目标 |[Tech Preview 1701](capabilities-in-technical-preview-1701.md#android-and-ios-versions-are-no-longer-targetable-in-creation-wizards-for-hybrid-mdm) |[版本 1702](/sccm/core/plan-design/changes/whats-new-in-version-1702#android-and-ios-versions-are-no-longer-targetable-in-creation-wizards-for-hybrid-mdm) |
- |OData 终结点数据访问 |[Tech Preview 1612](capabilities-in-technical-preview-1612.md#odata-endpoint-data-access)|![未添加](media/Red_X.gif)|
- |数据仓库服务点 |[Tech Preview 1612](capabilities-in-technical-preview-1612.md#the-data-warehouse-service-point)|[版本 1702](/sccm/core/servers/manage/data-warehouse)|
- |内容库清理工具 |[Tech Preview 1612](capabilities-in-technical-preview-1612.md#content-library-cleanup-tool)|[版本 1702](/sccm/core/plan-design/hierarchy/content-library-cleanup-tool) |
- |控制台中搜索功能的改进 |[Tech Preview 1612](capabilities-in-technical-preview-1612.md#improvements-for-in-console-search)|[版本 1702](/sccm/core/plan-design/changes/whats-new-in-version-1702#improvements-for-in-console-search)|
- |如果指定的程序正在运行，则阻止安装应用程序|[Tech Preview 1612](capabilities-in-technical-preview-1612.md#prevent-installation-of-an-application-if-a-specified-program-is-running)|[版本 1702](/sccm/apps/deploy-use/deploy-applications)|
- |新的 Windows Hello 企业版最终用户通知|[Tech Preview 1612](capabilities-in-technical-preview-1612.md#new-windows-hello-for-business-notification-for-end-users)|[版本 1702](/sccm/core/plan-design/changes/whats-new-in-version-1702#new-windows-hello-for-business-notification-for-end-users)|
- |Configuration Manager 中适用于企业的 Windows 应用商店支持|[Tech Preview 1612](capabilities-in-technical-preview-1612.md#windows-store-for-business-support-in-configuration-manager)|[版本 1702](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)|
- |任务序列失败时返回上一页|[Tech Preview 1612](capabilities-in-technical-preview-1612.md#return-to-previous-page-when-a-task-sequence-fails)|[版本 1702](/sccm/core/plan-design/changes/whats-new-in-version-1702#operating-system-deployment)|
- |Windows 10 更新的快速安装文件支持|[Tech Preview 1612](capabilities-in-technical-preview-1612.md#express-installation-files-support-for-windows-10-updates)|[版本 1702](/sccm/sum/deploy-use/manage-express-installation-files-for-windows-10-updates)|
- |Azure Active Directory 载入|[Tech Preview 1612](capabilities-in-technical-preview-1612.md#azure-active-directory-onboarding)|[版本 1706](/sccm/core/servers/deploy/configure/azure-services-wizard)|
- |更改为配置多重身份验证以进行设备注册|[Tech Preview 1612](capabilities-in-technical-preview-1612.md#change-to-configuring-multi-factor-authentication-for-device-enrollment)|![未添加](media/Red_X.gif)|
- |部署和任务序列的预先缓存内容 |[Tech Preview 1611](capabilities-in-technical-preview-1611.md#pre-cache-content-for-available-deployments-and-task-sequences)|[版本 1702](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content)|
- |Windows Defender 配置设置|[Tech Preview 1610](capabilities-in-technical-preview-1610.md#windows-defender-configuration-settings)|[版本 1610](/sccm/compliance/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client)|
- |从管理员控制台请求策略同步|[Tech Preview 1610](capabilities-in-technical-preview-1610.md#request-policy-sync-from-administrator-console)|[版本 1610](/sccm/mdm/deploy-use/sync-intune-device)|
- |“所有公司拥有的设备”节点的附加安全角色支持|[Tech Preview 1610](capabilities-in-technical-preview-1610.md#additional-security-role-support)|[版本 1610](/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management#new-hybrid-features-in-november-2016)|
- |Windows 10 VPN 配置文件的条件访问|[Tech Preview 1610](capabilities-in-technical-preview-1610.md#conditional-access-for-windows-10-vpn-profiles)|[版本 1610](/sccm/protect/deploy-use/create-vpn-profiles#configure-the-authentication-method-for-the-vpn-profile)|
- |按自动部署规则中的内容大小进行筛选|[Tech Preview 1610](capabilities-in-technical-preview-1610.md#filter-by-content-size-in-automatic-deployment-rules)|[版本 1610](/sccm/core/plan-design/changes/whats-new-in-version-1610#filter-by-content-size-in-automatic-deployment-rules) |
- |改进了“所需软件”对话框功能|[Tech Preview 1610](capabilities-in-technical-preview-1610.md#improved-functionality-for-required-software-dialogs)|[版本 1610](/sccm/apps/deploy-use/deploy-applications)|
- |拒绝以前批准的应用程序请求|[Tech Preview 1610](capabilities-in-technical-preview-1610.md#deny-previously-approved-application-requests)|[版本 1610](/sccm/apps/deploy-use/deploy-applications)|
- |从自动升级中排除客户端|[Tech Preview 1610](capabilities-in-technical-preview-1610.md#exclude-clients-from-automatic-upgrade)|[版本 1610](/sccm/core/clients/manage/upgrade/exclude-clients-windows)|
- |Endpoint Protection 的改进|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#improvements-to-endpoint-protection)|[版本 1610](/sccm/protect/deploy-use/endpoint-antimalware-policies#cloud-protection-service)|
- |增加了“注册的设备”的数量|[Tech Preview 1609](/sccm/mdm/deploy-use/enable-platform-enrollment)|[版本 1610](/sccm/mdm/deploy-use/enable-platform-enrollment)|
- |其他 Apple DEP 设置|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#additional-apple-dep-settings)|[版本 1610](/sccm/mdm/deploy-use/ios-device-enrollment-program-for-hybrid)|
- |适用于企业的 Windows 应用商店与 Configuration Manager 集成的增强功能|[Tech Preview 1609](capabilities-in-technical-preview-1609.md)|[版本 1610](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)|
- |配置项目的新符合性设置|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#new-compliance-settings-for-configuration-items)|[版本 1610](/sccm/compliance/deploy-use/create-configuration-items)|
- |与 Upgrade Analytics 的集成|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#integration-with-upgrade-analytics)|[版本 1610](/sccm/core/clients/manage/upgrade/upgrade-analytics)|
- |Windows 10 VPN 混合配置文件的本机连接类型|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#native-connection-types-for-windows-10-vpn-hybrid-profiles)|![未添加](media/Red_X.gif)|
- |边界组的改进|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#improvements-for-boundary-groups)|[版本 1610](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#BKMK_BoundaryGroups)|
- |Office 365 客户端管理仪表板|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#office-365-client-management-dashboard)|[版本 1610](/sccm/sum/deploy-use/manage-office-365-proplus-updates#office-365-client-management-dashboard)|
- |将 Office 365 应用部署到客户端|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#deploy-office-365-apps-to-clients)|[版本 1702](/sccm/sum/deploy-use/manage-office-365-proplus-updates#deploy-office-365-apps)|
- |对于 BIOS 到 UEFI 转换的改进|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#BKMK_UEFIConversion)|[版本 1610](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion)|
- |Intune 合规性图表|[Tech Preview 1609](capabilities-in-technical-preview-1609.md#intune-compliance-charts)|[版本 1610](/sccm/protect/deploy-use/create-compliance-policy#monitor-the-compliance-policy)|
+<!-- This is the list of individual features that are still in TP (not in CB). Note there is no third column in this table! Each month review and remove from this list for anything that's now available in CB. Copy from the bottom of the list above any individual feature that is still in TP and add to the top of this list (then remove the third column) -->
+
+ |功能 |Technical Preview 版本 |  
+ |----------------|---------------------|
+ |管理见解<!-- 1353967 --> |[Tech Preview 1708](capabilities-in-technical-preview-1708.md#management-insights)|
+ |Surface 设备仪表板 <!-- 1355788 --> |[Tech Preview 1707](capabilities-in-technical-preview-1707.md#surface-device-dashboard)|
+ |站点服务器角色的高可用性 <!-- 1128774 --> |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#site-server-role-high-availability) |
+ |PXE 网络启动对 IPv6 的支持 <!-- 1269793 --> |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#pxe-network-boot-support-for-ipv6)|
+ |用于条件访问的符合性策略的“设备运行状况证明”评估 <!-- 1235616 -->|[Tech Preview 1706](capabilities-in-technical-preview-1706.md#device-health-attestation-assessment-for-compliance-policies-for-conditional-access)|
+ |使用 Azure Active Directory<!-- 1322145? --> | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#azurediscovery) |
+ |Windows Update for Business 更新的符合性评估 <!-- 1235390 --> | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#compliance-assessment-for-windows-update-for-business-updates) |
+ |OData 终结点数据访问 <!-- 1321523 --> |[Tech Preview 1612](capabilities-in-technical-preview-1612.md#odata-endpoint-data-access)|
+ |对资产智能的改进<!-- 1307390 --> |[Tech Preview 1608](capabilities-in-technical-preview-1608.md#improvements-to-asset-intelligence)|
+ |最终用户可从公司门户安装应用 <!-- 1037233? --> |[Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_End)|
 
 
- <!--  TP 1608 and earlier have aged out of support. Features from these previews are either in the minimum supported Current Branch version, or are not scheduled for inclusion.
- |Improvements to the Prepare ConfigMgr Client for Capture task sequence step|[Tech Preview 1608](capabilities-in-technical-preview-1608.md#improvements-to-the-prepare-configmgr-client-for-capture-task-sequence-step)|[Version 1610](/sccm/osd/understand/task-sequence-steps#BKMK_PrepareConfigMgrClientforCapture)|
- |Improvements to Software Center|[Tech Preview 1608](capabilities-in-technical-preview-1608.md#improvements-to-software-center)|[Version 1610](/sccm/core/plan-design/changes/whats-new-in-version-1610#general-improvements-to-software-center)|
- |Improvements to Asset Intelligence|[Tech Preview 1608](capabilities-in-technical-preview-1608.md#improvements-to-asset-intelligence)|N/A|
- |Remote control keyboard translation|[Tech Preview 1608](capabilities-in-technical-preview-1608.md#remote-control-keyboard-translation)|[Version 1702](/sccm/core/clients/manage/remote-control/configuring-remote-control#enable-keyboard-translation)|
- |Improvements to the Windows 10 Edition Upgrade Policy|[Tech Preview 1607](capabilities-in-technical-preview-1607.md#dmp_edition)|[Version 1610](/sccm/compliance/deploy-use/upgrade-windows-version)|
- |Customizable Branding for Software Center Dialogs|[Tech Preview 1607](capabilities-in-technical-preview-1607.md#customizable-branding-for-software-center-dialogs)|[Version 1610](/sccm/core/plan-design/changes/whats-new-in-version-1610#customizable-branding-for-software-center-dialogs)|  
- |Multiple device management points for On-premises Mobile Device Management|[Tech Preview 1606](capabilities-in-technical-preview-1606.md#dmp_onprem)|[Version 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#on-premises-mobile-device-management)|
- |Automatically categorize devices into collections|[Tech Preview 1606](capabilities-in-technical-preview-1606.md#dmp_category)|[Version 1606](/sccm/core/clients/manage/collections/automatically-categorize-devices-into-collections) |
- |Enforcement grace period for required application and software update deployments|[Tech Preview 1606](capabilities-in-technical-preview-1606.md#dmp_grace)|[Version 1610](/sccm/apps/deploy-use/deploy-applications)|
- |Using Configuration Manager as a Managed Installer with Device Guard|[Tech Preview 1606](capabilities-in-technical-preview-1606.md#dmp_devg)|[Version 1702](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)|
- |Cloud management gateway (formerly Cloud Proxy Service)|[Tech Preview 1606](capabilities-in-technical-preview-1606.md#cloud_proxy) | [Version 1610](/sccm/core/clients/manage/plan-cloud-management-gateway)|  
- |Manage the Office 365 client agent in Configuration Manager|[Tech Preview 1606](capabilities-in-technical-preview-1606.md#manage_o365) |[Version 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#software-updates)|  
- |The OSDPreserveDriveLetter task sequence variable has been deprecated|[Tech Preview 1606](capabilities-in-technical-preview-1606.md#osdpreservedriveletter) |[Version 1606](/sccm/osd/understand/task-sequence-built-in-variables) |
- |Changes for the Updates and Servicing Node|[Tech Preview 1606](capabilities-in-technical-preview-1606.md#updatesandservicing)|[Version 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#updates-and-servicing) |
- |Per-app VPN for Windows 10 devices|[Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_PerAppVPN)|[Version 1606](/sccm/protect/deploy-use/create-vpn-profiles)|  
- |Improvements to the Install software updates task sequence|[Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_InstallSU)|[Version 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#operating-system-deployment)|  
- |Improvements to the Prepare ConfigMgr Client for Capture task sequence step |[Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_PrepareConfigMgrClient)|[Version 1610](/sccm/osd/understand/task-sequence-steps#BKMK_PrepareConfigMgrClientforCapture) |
- |Grace period for required application deployments |[Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_Grace)|N/A|  
- |New experience for remote device actions |[Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_Remote)|[Version 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#device-configuration-and-protection)|  
- |Windows Store for Business apps |[Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_WSFB)|[Version 1606](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)|  
- |General improvements for volume-purchased apps|[Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_VPP2)|[Version 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606)|  
- |Enterprise Data Protection (EDP)|[Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_VPP)|[Version 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606)|  
- |End users can install apps from the Company Portal |[Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_End)|N/A|  
- |New tabs for Updates and Operating Systems in Software Center|[Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_SW1)|[Version 1606 ](/sccm/core/plan-design/changes/whats-new-in-version-1606#application-management)|  
- |Service a server group |[Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_ServerGroups)|[Version 1606](/sccm/sum/deploy-use/service-a-server-group)|   
- |Support for Windows Defender Advanced Threat Protection service |[Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_ATP)|[Version 1606](/sccm/protect/deploy-use/windows-defender-advanced-threat-protection)|  
- |New restart options for Windows 10 clients after software update installation|[Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_RestartOptions)|[Version 1606](/sccm/sum/plan-design/plan-for-software-updates#restart-options-for-Windows-10-clients-after-software-update-installation)|  
- |On-premises Device Health Attestation |[Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_DHA)|[Version 1606](/sccm/core/servers/manage/health-attestation)|  
- |Pre-declare corporate-owned devices with IMEI or iOS serial number|[Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_IMEI)|[Version 1606](/sccm/mdm/deploy-use/predeclare-devices-with-hardware-id)|  
- |Manage volume-purchased apps from the Windows Store for Business| [Tech Preview 1604](capabilities-in-technical-preview-1604.md#BKMK_WindowsVPP)|[Version 1606](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)|  
- |Improvements to Microsoft Passport for Work management|[Tech Preview 1604](capabilities-in-technical-preview-1604.md#BKMK_PFW)|[Version 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#device-configuration-and-protection)|  
- |Option for clients to switch to a new software update point|[Tech Preview 1604](capabilities-in-technical-preview-1604.md#bkmk_switchsup)|[Version 1606](/sccm/sum/plan-design/plan-for-software-updates#BKMK_ManuallySwitchSUPs)|  
- |Client settings to manage Client Cache Settings and client Peer Cache |[Tech Preview 1604](capabilities-in-technical-preview-1604.md#bkmk_peercache)|Client Settings: [Version 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#administration)<br/>Peer Cache: [Version 1610](/sccm/core/plan-design/hierarchy/client-peer-cache)|  
- |Support for Passport for Work as a KSP |[Tech Preview 1604](capabilities-in-technical-preview-1604.md#bkmk_passport)|[Version 1606](/sccm/protect/deploy-use/create-certificate-profiles)|  
- |On-premises Device Health Attestation|[Tech Preview 1604](capabilities-in-technical-preview-1604.md#bkmk_onpremdha)|[Version 1606](/sccm/core/servers/manage/health-attestation)|  
- |SmartLock setting for Android devices|[Tech Preview 1604](capabilities-in-technical-preview-1604.md#BKMK_Smart)|[Version 1606](/sccm/compliance/deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client#android-and-samsung-knox-configuration-item-settings-reference)|  
- |Improvements to Software Center|[Tech Preview 1603](capabilities-in-technical-preview-1603.md#BKMK_SC1603)|[Version 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#application-management)|  
- |Improvements to remote control|[Tech Preview 1603](capabilities-in-technical-preview-1603.md#BKMK_RC1603)|[Version 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#remote-control)|  
- |Customize the RamDisk TFTP block size and window size on PXE-enabled distribution points|[Tech Preview 1603](capabilities-in-technical-preview-1603.md#BKMK_RamDiskTFTP)|[Version 1606](/sccm/core/plan-design/changes/whats-new-in-version-1606#operating-system-deployment)|  
--->
 
 
 

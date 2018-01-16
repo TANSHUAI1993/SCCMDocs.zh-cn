@@ -3,7 +3,7 @@ title: "混合 MDM 中的新增功能"
 titleSuffix: Configuration Manager
 description: "了解 Configuration Manager 和 Intune 的混合部署可用的新移动设备管理功能。"
 ms.custom: na
-ms.date: 11/29/2017
+ms.date: 01/04/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -14,11 +14,11 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 189e737eca5dee5bca3f0748cd1b4d944f868565
-ms.sourcegitcommit: 4af1da9c18f5bdff31426cf1d58c7d949372292d
+ms.openlocfilehash: 243daf8626e329214ce1b94f109d19773bbc57c5
+ms.sourcegitcommit: 2da6b06818371e93f28e36cadf3a154d50ce5bf4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager 和 Microsoft Intune 的混合移动设备管理中的新增功能
 
@@ -35,11 +35,18 @@ ms.lasthandoff: 12/01/2017
 ##  <a name="compatibility-with-configuration-manager-versions"></a>与 Configuration Manager 版本的兼容性  
 本文的每个部分都列出了混合功能，并按 3 个不同类别进行分类。 请使用以下指南，确定每个类别中的功能与不同版本的 Configuration Manager 的兼容性：  
 
-|功能类别|描述|
+|功能类别|说明|
 |-|-|
 |**Microsoft Intune 中的新增功能** | 一般情况下，此类别下列出的所有功能都应适用于所有 Configuration Manager 版本。 这包括 System Center 2012 R2 Configuration Manager 版本，因为这些功能仅需要 Intune 服务，不需要 Configuration Manager 中的其他功能。|
 |**Configuration Manager Technical Preview 中的新增功能**| 此类别下列出的所有功能仅适用于指定的 Technical Preview 版本。 若要试用这些功能，必须安装功能说明中指定的 Technical Preview 版本。 有关详细信息，请参阅 [System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)。|
 |**Configuration Manager (Current Branch) 中的新增功能**| 此类别下列出的所有功能仅适用于指定的 Configuration Manager (Current Branch) 版本，例如版本 1511 或 1602。 如果要为混合部署使用较旧版本的 Configuration Manager，则必须升级到功能说明中指定的 Configuration Manager (Current Branch) 版本。 有关详细信息，请参阅[升级到 System Center Configuration Manager](../../core/servers/deploy/install/upgrade-to-configuration-manager.md)。|
+
+## <a name="december-2017"></a>2017 年 12 月
+
+### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
+
+- **Android 企业版现在支持可用的应用程序部署**    
+  除了“必选”以外，现在还可以将 Android 企业版（也就是之前的 Android for Work）应用部署为“可用”。 有关详细信息，请参阅[使用 System Center Configuration Manager 创建 Android 应用程序](/sccm/mdm/deploy-use/creating-android-applications)。
 
 
 ## <a name="november-2017"></a>2017 年 11 月
@@ -374,9 +381,9 @@ Configuration Manager (Current Branch) 1702 版本中还包括以下其他混合
 
   有关批量购买的 iOS 应用的详细信息，请参阅[管理批量购买的 iOS 应用](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps)。
 
-- **适用于企业的 Windows 应用商店支持业务线应用**
+- **对适用于企业的 Microsoft Store 中的业务线应用的支持**
 
-  现在，可以从适用于企业的 Windows 应用商店同步自定义业务线应用。
+  现在可以同步来自适用于企业的 Microsoft Store 的自定义业务线应用。
 
 - **新移动威胁防御监视工具**
 

@@ -3,7 +3,7 @@ title: SQL Server AlwaysOn
 titleSuffix: Configuration Manager
 description: "计划将 SQL Server AlwaysOn 可用性组与 SCCM 配合使用。"
 ms.custom: na
-ms.date: 11/20/2017
+ms.date: 12/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ caps.latest.revision: "16"
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 42d5a059e11dffc7890ec78ce7361ebfe905a050
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 7efd0c76a0723a98661b0861eb16298eee524f35
+ms.sourcegitcommit: f1535281b2c3fecff773b722c3f7590bf6ba10a0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>准备将 SQL Server AlwaysOn 可用性组与 Configuration Manager 配合使用
 
@@ -78,7 +78,7 @@ Configuration Manager 支持在以下位置使用可用性组：
 
 -   从版本 1706 开始，可以使用异步提交副本来恢复同步副本。 请参阅备份和恢复主题中的[站点数据库恢复选项]( /sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption)，了解有关如何实现此操作的信息。
     > [!CAUTION]  
-    > Configuration Manager 不支持故障转移后使用异步提交副本作为站点数据库。
+    > Configuration Manager 不支持[故障转移](https://go.microsoft.com/fwlink/?linkid=626885)使用异步提交副本作为站点数据库。
 由于 Configuration Manager 不会验证异步提交副本的状态来确认它是否为最新，而[此类副本设计可以为不同步]( https://msdn.microsoft.com/library/ff877884(SQL.120).aspx(d=robot)#Availability%20Modes)，因此，使用异步提交副本作为站点数据库可能会危及站点和数据的完整性。
 
 每个副本成员必须：
@@ -101,7 +101,7 @@ Configuration Manager 支持在以下位置使用可用性组：
 
 -     RCP 终结点映射程序 - **TCP 135**   
 -     服务器消息块 – **TCP 445**  
-    数据库移动完成后，可以删除此端口。从版本 1702 开始，不再需要此端口。*
+    数据库移动完成后，可以删除此端口。从版本 1702 开始，不再需要此端口。
 -     SQL Server Service Broker -  **TCP 4022**
 -     SQL over TCP – **TCP 1433**   
 

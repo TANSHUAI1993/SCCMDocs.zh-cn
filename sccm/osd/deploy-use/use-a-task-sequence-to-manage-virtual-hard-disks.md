@@ -12,14 +12,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0212b023-804a-4f84-b880-7a59cdb49c67
 caps.latest.revision: "5"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 586eec745bdf86a42a9d33fb9e1163f03efa1c59
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 89e30f81648aff16de2f7db55cbdda06cf69551d
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="use-a-task-sequence-to-manage-virtual-hard-disks-in-system-center-configuration-manager"></a>使用任务序列来管理 System Center Configuration Manager 中的虚拟硬盘
 
@@ -73,9 +73,9 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="to-create-the-task-sequence-to-create-the-vhd"></a>创建任务序列以创建 VHD  
 
-1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+1.  在 Configuration Manager 控制台中，单击“软件库”。  
 
-2.  在“软件库”  工作区中，展开“操作系统” ，然后单击“任务序列” 。  
+2.  在“软件库”工作区中，展开“操作系统”，然后单击“任务序列”。  
 
 3.  在“主页”  选项卡上的“创建”  组中，单击“创建任务序列”  以启动创建任务序列向导。  
 
@@ -95,9 +95,9 @@ ms.lasthandoff: 10/12/2017
 
     -   “映像”：如果操作系统映像包有多个映像，请指定要安装的操作系统映像的索引。  
 
-    -   “产品秘钥”：指定要安装的 Windows 操作系统的产品密钥。 你可以指定编码的批量许可证密钥和标准产品密钥。 如果使用非编码的产品密钥，则必须通过短划线 (-) 分隔每组 5 个字符。 例如： *XXXXX-XXXXX-XXXXX-XXXXX-XXXXX*  
+    -   **产品密钥**：指定要安装的 Windows 操作系统的产品密钥。 你可以指定编码的批量许可证密钥和标准产品密钥。 如果使用非编码的产品密钥，则必须通过短划线 (-) 分隔每组 5 个字符。 例如： *XXXXX-XXXXX-XXXXX-XXXXX-XXXXX*  
 
-    -   “服务器授权模式”：指定服务器许可证为“每客户” , 或未指定许可证。 如果服务器许可证为“每服务器” ，则还需指定服务器连接的最大数量。  
+    -   **服务器授权模式**：指定服务器授权为“每客户”、“每服务器”或不指定授权。 如果服务器许可证为“每服务器” ，则还需指定服务器连接的最大数量。  
 
     -   指定如何处理在部署操作系统映像时使用的管理员帐户。  
 
@@ -134,7 +134,7 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="to-create-a-vhd"></a>创建 VHD  
 
-1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+1.  在 Configuration Manager 控制台中，单击“软件库”。  
 
 2.  在“软件库”  工作区中，展开“操作系统” ，然后单击“虚拟硬盘” 。  
 
@@ -192,9 +192,9 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="to-create-a-custom-task-sequence-to-modify-the-vhd"></a>创建自定义任务序列以修改 VHD  
 
-1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+1.  在 Configuration Manager 控制台中，单击“软件库”。  
 
-2.  在“软件库”  工作区中，展开“操作系统” ，然后单击“任务序列” 。  
+2.  在“软件库”工作区中，展开“操作系统”，然后单击“任务序列”。  
 
 3.  在“主页”  选项卡上的“创建”  组中，单击“创建任务序列”  以启动创建任务序列向导。  
 
@@ -214,7 +214,7 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="to-add-task-sequence-steps-to-the-custom-task-sequence"></a>将任务序列步骤添加到自定义任务序列中  
 
-1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+1.  在 Configuration Manager 控制台中，单击“软件库”。  
 
 2.  在“软件库”  工作区中，展开“操作系统” ，单击“任务序列” ，然后选择在上一个过程中创建的自定义任务序列。  
 
@@ -231,7 +231,7 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="to-modify-a-vhd"></a>修改 VHD  
 
-1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+1.  在 Configuration Manager 控制台中，单击“软件库”。  
 
 2.  在“软件库”  工作区中，展开“操作系统” ，单击“虚拟硬盘” ，然后选择要修改的 VHD。  
 
@@ -283,7 +283,7 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="to-apply-software-updates-to-a-vhd"></a>将软件更新应用于 VHD  
 
-1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+1.  在 Configuration Manager 控制台中，单击“软件库”。  
 
 2.  在“软件库”  工作区中，展开“操作系统” ，然后单击“虚拟硬盘” 。  
 
@@ -313,7 +313,7 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="to-import-a-vhd-to-vmm"></a>将 VHD 导入到 VMM  
 
-1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+1.  在 Configuration Manager 控制台中，单击“软件库”。  
 
 2.  在“软件库”  工作区中，展开“操作系统” ，然后单击“虚拟硬盘” 。  
 

@@ -3,7 +3,7 @@ title: "创建查询"
 titleSuffix: Configuration Manager
 description: "了解如何在 System Center Configuration Manager 中创建和导入查询。 包括示例查询和提示。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 12/11/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: 868049d3-3209-47ec-b34a-9cc26941893a
 caps.latest.revision: "5"
 caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: cbd9710cec365323e754d2109c8c61c29a4c301f
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 32400ebcd834e3b98bf0f1ff6a1f6b41d8e12076
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="how-to-create-queries-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中创建查询
 
@@ -43,7 +43,7 @@ ms.lasthandoff: 10/12/2017
 
 5.  在“对象类型”列表中，选择希望查询返回的对象类型。 下表描述了可以搜索的一些对象类型的示例：  
 
-    |对象类型|描述|  
+    |对象类型|说明|  
     |-----------------|-----------------|  
     |**系统资源**|用于搜索典型的系统属性，例如设备的 NetBIOS 名称、客户端版本、客户端 IP 地址和 Active Directory 域服务信息。|  
     |**用户资源**|用于搜索典型的用户信息，例如用户名、用户组名和安全组名。|  
@@ -54,7 +54,7 @@ ms.lasthandoff: 10/12/2017
 7.  在“查询名称”*&lt;\>* “语句属性”对话框的“常规”选项卡中，指定此查询返回的属性和显示方式。 选择“新建”图标，以添加新属性。 还可以选择“显示查询语言”，以直接以 WMI 查询语言 (WQL) 输入或编辑查询。 有关 WMI 查询的示例，请参阅本主题中的 [Example WQL queries](#BKMK_Example) 部分。  
 
     > [!TIP]  
-    > 可以使用下列 MSDN 参考文档，以帮助构造自己的 WQL 查询：  
+    > 可以使用以下 MSDN 参考文档来帮助您构造您自己的 WQL 查询：  
     >   
     > -   [WQL (SQL for WMI)](http://go.microsoft.com/fwlink/p/?LinkId=256653)  
     > -   [WHERE 子句](http://go.microsoft.com/fwlink/p/?LinkId=256654)  
@@ -67,7 +67,7 @@ ms.lasthandoff: 10/12/2017
 
 9. 在“查询名称”*&lt;\>* “语句属性”对话框的“联接”选项卡中，可以将两个不同属性的数据合并到查询结果中。 虽然在为查询结果选择不同的属性时，Configuration Manager 会自动创建查询联接，但“联接”选项卡提供了更多高级选项。 下表中列出了 System Center 2012 Configuration Manager 支持的属性类：  
 
-    |联接类型|描述|  
+    |联接类型|说明|  
     |---------------|-----------------|  
     |内部|只显示匹配的结果 - 始终由自动创建的联接使用。|  
     |左|显示基属性的所有结果，同时，只显示联接属性的匹配结果。|  
@@ -178,6 +178,10 @@ Select SMS_R_System.ClientEdition from SMS_R_System where SMS_R_System.ClientEdi
 |Android|11|  
 |Intel 片上系统|12|  
 |UNIX 和 Linux 服务器|13|  
+|Apple macOS (MDM)|14|
+|Microsoft HoloLens (MDM)|15|
+|Microsoft Surface Hub (MDM)|16|
+|Android for Work|17|
 
  例如，如果想要查询只返回 Mac 计算机，请使用以下查询：  
 

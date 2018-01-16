@@ -3,7 +3,7 @@ title: "1706 清单"
 titleSuffix: Configuration Manager
 description: "了解更新到 System Center Configuration Manager 版本 1706 之前需要执行的操作。"
 ms.custom: na
-ms.date: 07/31/2017
+ms.date: 12/19/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -15,11 +15,11 @@ caps.latest.revision:
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 7a3d3f127fe9555852d51981b16295dbd0b38903
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: b9acbf4a80bed52f0c720f70ee62042d1e90dd62
+ms.sourcegitcommit: 2867fd119256ec670fc5ae65cdc8a80d39f9b4d4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="checklist-for-installing-update-1706-for-system-center-configuration-manager"></a>用于为 System Center Configuration Manager 安装更新 1706 的清单
 
@@ -126,6 +126,8 @@ Configuration Manager 无法更新使用网络负载均衡 (NLB) 群集来托管
 站点数据库维护任务在更新安装过程中运行时，更新安装可能会失败。 在禁用任务之前，请记录该任务的计划，以便在安装更新之后可恢复其配置。
 
 有关详细信息，请参阅 [System Center Configuration Manager 的维护任务](/sccm/core/servers/manage/maintenance-tasks)和 [System Center Configuration Manager 维护任务参考](/sccm/core/servers/manage/reference-for-maintenance-tasks)。
+
+**暂时停止 System Center Configuration Manager 服务器上的所有防病毒软件：**更新站点之前，请确保 Configuration Manager 服务器上的防病毒软件已停止。 <!--SMS.503481--> 
 
 **在管理中心站点和主站点上创建站点数据库备份：** 更新站点之前，请备份站点数据库，以确保具有用于灾难恢复的成功备份。
 

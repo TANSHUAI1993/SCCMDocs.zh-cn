@@ -15,11 +15,11 @@ caps.latest.revision: "6"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: 2ec4f4fdd1e351379922302e81af88e311a37c8e
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: c512cba550e405c866204af981aba75639665de2
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="create-android-applications-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 创建 Android 应用程序
 
@@ -48,7 +48,7 @@ Configuration Manager 支持以下适用于 Android 的应用类型的部署：
 |设备类型|支持的操作|
 |-|-|
 |Android|可用、必需 用户必须同意安装和卸载。|
-|Android for Work | **必需** |
+|Android for Work |可用、必需 |
 
 ## <a name="approve-and-deploy-android-for-work-apps"></a>批准和部署 Android for Work 应用
 作为 Configuration Manager 管理员，你还可以在 [Play for Work 网站](https://play.google.com/work)中批准应用，并将这些应用部署到托管的 Android for Work 设备。
@@ -65,3 +65,5 @@ Configuration Manager 支持以下适用于 Android 的应用类型的部署：
 8. 转到“软件库” > “概述” > “应用程序管理” > “应用程序”，选择 Android for Work 应用，然后照常部署。
 
 若要将 Play for Work 应用与 Configuration Manager 同步，首先必须在 Play for Work 网站上至少批准一个应用。
+
+部署为“可用”的应用会显示在带有工作徽章的 Google Play 应用中，而不是公司门户。 这样便可从受信任的源部署应用（带有工作徽章的 Google Play 应用就是受信任的源），而不必允许来自不受信任的源的应用。

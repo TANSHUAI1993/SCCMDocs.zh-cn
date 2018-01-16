@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: 25e4ac68-0e78-4bbe-b8fc-3898b372c4e8
 caps.latest.revision: "19"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 48530c177a03b66dbc126025ca61e0078bc89d9f
-ms.sourcegitcommit: 5ec9f8c312688bf7f4de4d6007b121d743b80c4d
+ms.openlocfilehash: c376a6b600e775f532410ad467b99cda1fbfc575
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="create-a-task-sequence-to-capture-an-operating-system-in-system-center-configuration-manager"></a>创建任务序列来捕获 System Center Configuration Manager 中的操作系统
 
@@ -53,9 +53,9 @@ ms.lasthandoff: 11/14/2017
 
 #### <a name="to-create-a-task-sequence-that-builds-and-captures-an-operating-system-image"></a>创建用于构建和捕获操作系统映像的任务序列  
 
-1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+1.  在 Configuration Manager 控制台中，单击“软件库”。  
 
-2.  在“软件库”  工作区中，展开“操作系统” ，然后单击“任务序列” 。  
+2.  在“软件库”工作区中，展开“操作系统”，然后单击“任务序列”。  
 
 3.  在“主页”  选项卡上的“创建”  组中，单击“创建任务序列”  以启动创建任务序列向导。  
 
@@ -78,9 +78,9 @@ ms.lasthandoff: 11/14/2017
 
     -   “映像索引”：指定要安装的操作系统。 如果操作系统映像包含多个版本，则选择你想要安装的版本。  
 
-    -   “产品秘钥”：指定要安装的 Windows 操作系统的产品密钥。 你可以指定编码的批量许可证密钥和标准产品密钥。 如果使用非编码的产品密钥，则必须通过短划线 (-) 分隔每组 5 个字符。 例如： *XXXXX-XXXXX-XXXXX-XXXXX-XXXXX*  
+    -   **产品密钥**：指定要安装的 Windows 操作系统的产品密钥。 你可以指定编码的批量许可证密钥和标准产品密钥。 如果使用非编码的产品密钥，则必须通过短划线 (-) 分隔每组 5 个字符。 例如： *XXXXX-XXXXX-XXXXX-XXXXX-XXXXX*  
 
-    -   “服务器授权模式”：指定服务器许可证为“每客户” , 或未指定许可证。 如果服务器许可证为“每服务器” ，则还需指定服务器连接的最大数量。  
+    -   **服务器授权模式**：指定服务器授权为“每客户”、“每服务器”或不指定授权。 如果服务器许可证为“每服务器” ，则还需指定服务器连接的最大数量。  
 
     -   指定如何处理在部署操作系统时使用的管理员帐户。  
 
@@ -152,9 +152,9 @@ ms.lasthandoff: 11/14/2017
 
 #### <a name="to-capture-an-operating-system-from-an-existing-reference-computer"></a>从现有引用计算机中捕获操作系统  
 
-1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+1.  在 Configuration Manager 控制台中，单击“软件库”。  
 
-2.  在“软件库”  工作区中，展开“操作系统” ，然后单击“任务序列” 。  
+2.  在“软件库”工作区中，展开“操作系统”，然后单击“任务序列”。  
 
 3.  在“主页”  选项卡上的“创建”  组中，单击“创建任务序列”  以启动创建任务序列向导。  
 

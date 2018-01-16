@@ -15,11 +15,11 @@ caps.latest.revision: "7"
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 8099e90fcd16b677b260d1d693c69d0cbe698295
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: c0746dc168394cda88bad682fc3ba185e83758f7
+ms.sourcegitcommit: 2867fd119256ec670fc5ae65cdc8a80d39f9b4d4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="checklist-for-installing-update-1610-for-system-center-configuration-manager"></a>用于为 System Center Configuration Manager 安装更新 1610 的清单
 
@@ -116,6 +116,8 @@ Configuration Manager 无法更新使用网络负载均衡 (NLB) 群集来托管
 站点数据库维护任务在更新安装过程中运行时，更新安装可能会失败。 在禁用任务之前，请记录该任务的计划，以便在安装更新之后可恢复其配置。
 
 有关详细信息，请参阅 [System Center Configuration Manager 的维护任务](/sccm/core/servers/manage/maintenance-tasks)和 [System Center Configuration Manager 维护任务参考](/sccm/core/servers/manage/reference-for-maintenance-tasks)。
+
+**暂时停止 System Center Configuration Manager 服务器上的所有防病毒软件：**更新站点之前，请确保 Configuration Manager 服务器上的防病毒软件已停止。 <!--SMS.503481-->
 
 **在管理中心站点和主站点上创建站点数据库备份：** 更新站点之前，请备份站点数据库，以确保具有用于灾难恢复的成功备份。
 

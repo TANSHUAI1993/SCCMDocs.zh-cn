@@ -15,11 +15,11 @@ caps.latest.revision: "9"
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: 166f7c73f2050657a85bd5160f74c40cfd87fd7f
-ms.sourcegitcommit: 922d6d9c91ba2158b938df381277be1b5f1d434a
+ms.openlocfilehash: bfe500c160bf2ddffd060baabb44cda81337e1cc
+ms.sourcegitcommit: 92c3f916e6bbd35b6208463ff406e0247664543a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2017
+ms.lasthandoff: 01/02/2018
 ---
 #  <a name="sync-data-from-configuration-manager-to-the-microsoft-operations-management-suite"></a>将数据从 Configuration Manager 同步到 Microsoft Operations Management Suite
 
@@ -27,7 +27,7 @@ ms.lasthandoff: 11/13/2017
 
 可以使用 Azure 服务向导配置从 Configuration Manager 到 Operations Management Suite (OMS) 云服务的连接。 从版本 1706 开始，向导将替换以前的工作流，以配置此连接。 对于较早的版本，请参阅[将数据从 Configuration Manager 同步到 Microsoft Operations Management Suite（1702 及更早版本）](#Sync-data-from-Configuration-Manager-to-the-Microsoft-Operations-Management-Suite-(1702-and-earlier))。
 
--   该向导用于配置适用于 Configuration Manager 的云服务，如 OMS、适用于企业的 Windows 应用商店 (WSfB) 和 Azure Active Directory (Azure AD)。  
+-   该向导用于配置适用于 Configuration Manager 的云服务，如 OMS、适用于企业的 Microsoft Store 和 Azure Active Directory (Azure AD)。  
 
 -   Configuration Manager 连接到 OMS 以实现[日志分析](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite)或[升级就绪情况](/sccm/core/clients/manage/upgrade/upgrade-analytics)等功能。
 

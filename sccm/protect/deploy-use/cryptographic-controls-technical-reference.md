@@ -3,21 +3,21 @@ title: "加密控制技术参考"
 titleSuffix: Configuration Manager
 description: "了解在 System Center Configuration Manager 中签名和加密如何帮助防范来自数据读取的攻击。"
 ms.custom: na
-ms.date: 12/5/2017
+ms.date: 12/8/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
 ms.technology: configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
-author: arob98
-ms.author: angrobe
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: ebaff93d346b53afea8770fbe0634112bcecf82d
-ms.sourcegitcommit: 372171a5cd8d143d6d47b651018cda0c91cad67c
+ms.openlocfilehash: 2c1ed6f4c93f74719ab3fe5d723f7dc01eb1ede7
+ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="cryptographic-controls-technical-reference"></a>加密控制技术参考
 
@@ -277,8 +277,8 @@ System Center Configuration Manager 使用签名和加密帮助保护 Configurat
 
  在管理点使用自签名客户端证书第一次对客户端进行身份验证时，此机制提供最低的安全性，因为任何计算机都能生成自签名证书。 在这种情况下，必须利用批准手段来强化客户端标识过程。 只应批准受信任的计算机 - 由 Configuration Manager 自动批准或由管理用户手动批准。 有关详细信息，请参阅 [System Center Configuration Manager 中终结点之间的通信](../../core/plan-design/hierarchy/communications-between-endpoints.md)中的审批部分。  
 
-## <a name="to-make-configuration-manager-servers-more-secure"></a>使 Configuration Manager 服务器更加安全  
-若要使 Configuration Manager 服务器更加安全，请执行以下操作：
+## <a name="about-ssl-vulnerabilities"></a>有关 SSL 漏洞
+若要提高 Configuration Manager 客户端和服务器的安全性，请执行以下操作：
 
 -   启用 TLS 1.2
 
@@ -286,5 +286,5 @@ System Center Configuration Manager 使用签名和加密帮助保护 Configurat
 -   禁用 SSL 3.0、TLS 1.0 和 TLS 1.1 
 -   重新排序与 TLS 相关的密码套件 
 
-有关详细信息，请参阅以下知识库文章：[如何限制 Schannel.dll 中某些加密算法和协议的使用](https://support.microsoft.com/en-us/kb/245030/)。 这些操作不会影响 Configuration Manager 的功能。
+有关详细信息，请参阅[如何限制使用特定的加密算法和 Schannel.dll 中的协议](https://support.microsoft.com/en-us/kb/245030/)以及 [Prioritizing Schannel Cipher Suites](https://msdn.microsoft.com/en-us/library/windows/desktop/bb870930.aspx)（以优先顺序排列 Schannel 密码套件）。 这些操作不会影响 Configuration Manager 的功能。
 

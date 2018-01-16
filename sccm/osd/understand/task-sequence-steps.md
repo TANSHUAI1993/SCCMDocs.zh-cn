@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 caps.latest.revision: "26"
 caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
+author: aczechowski
+ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 40a2d91baf8c02cdda96e9520ce155032272ebdd
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 77ce50cf363c9429f9ef38aa2acf5b898bc8052d
+ms.sourcegitcommit: b97aa456b392d817bc9723cbd5c0ce6602e7ae34
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/28/2017
 ---
 # <a name="task-sequence-steps-in-system-center-configuration-manager"></a>System Center Configuration 中的任务序列步骤
 
@@ -760,7 +760,7 @@ ms.lasthandoff: 12/01/2017
  **卷**  
  指定有关要创建的分区或卷的信息，包括：  
 
--   Name  
+-   名称  
 
 -   剩余磁盘空间  
 
@@ -1084,7 +1084,7 @@ Configuration Manager 版本 1606 中引入了一个新的任务序列变量 SMS
  选择此选项以阻止 Sysprep 重置产品激活标志。  
 
 ##  <a name="BKMK_PreProvisionBitLocker"></a>预设置 BitLocker  
- 在 Windows PE 中，使用“预设置 BitLocker”  任务序列步骤可在驱动器上启用 BitLocker。 由于仅加密使用的磁盘空间，因此加密时间要短得多。 安装操作系统后，使用 [启用 BitLocker](#BKMK_EnableBitLocker) 任务序列步骤应用密钥管理选项。 此步骤仅可在 Windows PE 中运行。 不能在标准操作系统中运行。  
+ 在 Windows PE 中，使用“预设置 BitLocker”任务序列步骤可在驱动器上启用 BitLocker。 由于仅加密使用的磁盘空间，因此加密时间要短得多。 安装操作系统后，使用 [启用 BitLocker](#BKMK_EnableBitLocker) 任务序列步骤应用密钥管理选项。 此步骤仅可在 Windows PE 中运行。 不能在标准操作系统中运行。  
 
 > [!IMPORTANT]  
 >  若要预设置 BitLocker，至少需要安装 Windows 7 操作系统，并且计算机上必须支持且启用 TPM。  
@@ -1304,7 +1304,7 @@ Configuration Manager 版本 1606 中引入了一个新的任务序列变量 SMS
 
  如果文件名没有指定文件扩展名，则 Configuration Manager 会尝试查找 .com、.exe 和 .bat。 如果文件扩展名不是可执行文件，则 Configuration Manager 会尝试应用本地关联。 例如，如果命令行为 readme.gif，则 Configuration Manager 会启动目标计算机上指定的应用程序来打开 .gif 文件。  
 
- 例如：  
+ 示例：  
 
  **setup.exe /a**  
 
@@ -1319,7 +1319,7 @@ Configuration Manager 版本 1606 中引入了一个新的任务序列变量 SMS
  **开始位置**  
  指定程序的可执行文件夹，最多 127 个字符。 此文件夹可以是目标计算机上的绝对路径，也可以是包含包的分发点文件夹的相对路径。 此字段是可选的。  
 
- 例如：  
+ 示例：  
 
  **c:\officexp**  
 
@@ -1477,7 +1477,7 @@ Configuration Manager 版本 1606 中引入了一个新的任务序列变量 SMS
 
 -   **品牌和型号：**使用此规则类别可评估计算机的品牌和型号的值。 品牌和型号均必须评估为 true，规则才能评估为 true。   
 
-    从 Configuration Manager 版本 1610 开始，用户可以将星号 (*****) 和问号 (**?**) 指定为通配符，其中 ***** 匹配多个字符和 **?** 匹配单一字符。 例如，字符串 "DELL*900?" 将匹配 DELL-ABC-9001 和 DELL9009。
+    从 Configuration Manager 版本 1610 开始，用户可以将星号 (*) 和问号 (?) 指定为通配符，其中 * 匹配多个字符和 ? 匹配单一字符。 例如，字符串 "DELL*900?" 将匹配 DELL-ABC-9001 和 DELL9009。 
 
 -   **任务序列变量：**使用此规则类别可添加要评估的任务序列变量、条件和值。 当为变量设置的值符合指定条件时，规则评估为 true。  
 

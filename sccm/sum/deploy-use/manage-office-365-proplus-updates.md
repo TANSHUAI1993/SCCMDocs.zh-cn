@@ -3,20 +3,20 @@ title: "管理 Office 365 ProPlus 更新"
 titleSuffix: Configuration Manager
 description: "Configuration Manager 将 Office 365 客户端更新从 WSUS 目录同步到站点服务器，使更新可部署到客户端。"
 keywords: 
-author: dougeby
-ms.author: dougeby
+author: mestew
+ms.author: mstewart
 manager: angrobe
-ms.date: 10/04/2017
+ms.date: 12/28/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
-ms.openlocfilehash: a1ac97e60bc35ee3e98212cf17e33ed2b73301b9
-ms.sourcegitcommit: 986fc2d54f7c5fa965fd4df42f4db4ecce6b79cb
+ms.openlocfilehash: b951e72635806c12bd0ec0dd66e382a767b99b43
+ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="manage-office-365-proplus-with-configuration-manager"></a>使用 Configuration Manager 管理 Office 365 ProPlus
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/17/2017
 
 - [部署 Office 365 更新](#deploy-office-365-updates)：自 Configuration Manager 版本 1602 起，可以使用软件更新管理工作流管理 Office 365 客户端更新。 当 Microsoft 将新的 Office 365 客户端更新发布到 Office 内容交付网络 (CDN) 时，Microsoft 还会将更新包发布到 Windows Server 更新服务 (WSUS)。 将 Office 365 客户端更新从 WSUS 目录同步到站点服务器之后，更新可部署到客户端。    
 
-- [添加 Office 365 更新下载语言](#add-languages-for-office-365-update-downloads)：自 Configuration Manager 版本 1610 起，可以添加对 Configuration Manager 的支持，以下载 Office 365 支持的任意语言的更新，无论语言是否受 Configuration Manager 支持。  
+- [添加 Office 365 更新下载的语言](#add-languages-for-office-365-update-downloads)：自 Configuration Manager 版本 1610 起，可以添加对 Configuration Manager 的支持，以下载 Office 365 支持的任意语言的更新。 这意味着只要 Office 365 支持，Configuration Manager 就可不必支持该语言。  
 
 - [更改更新频道](#change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager)：可以使用组策略向 Office 365 客户端分发注册表项值更改，从而更改更新频道。
 
@@ -55,8 +55,7 @@ Office 365 客户端管理仪表板中显示的数据来自硬件清单。 启�
 4. 在**默认客户端设置**对话框中，单击**硬件清单**。  
 5. 在**设备设置**列表中，单击**设置类**。  
 6. 在“硬件清单类”对话框中，选择“Office 365 ProPlus 配置”。  
-7.  单击**确定**以保存所做的更改并关闭**硬件清单类**对话框。  
-Office 365 客户端管理仪表板在硬件清单得到报告的同时开始显示数据。
+7.  单击**确定**以保存所做的更改并关闭**硬件清单类**对话框。 <br/>Office 365 客户端管理仪表板在硬件清单得到报告的同时开始显示数据。
 
 ## <a name="deploy-office-365-apps"></a>部署 Office 365 应用  
 自版本 1702 起，可以通过 Office 365 客户端管理仪表板启动 Office 365 安装程序，以执行首次 Office 365 应用安装。 该向导可让你配置 Office 365 安装设置、从 Office 内容交付网络 (CDN) 下载文件以及创建并部署文件的脚本应用程序。 只有在客户端上安装 Office 365 后，才能使用 Office 365 更新。
@@ -85,10 +84,9 @@ Office 365 客户端管理仪表板在硬件清单得到报告的同时开始显
     > [!IMPORTANT]    
     > XML 配置文件必须仅包含 [Office 365 ProPlus 客户端支持的语言](https://technet.microsoft.com/library/cc179219&#40;v=office.16&#41;.aspx)。
 
-5. 在“客户端产品”页上，依次选择使用的 Office 365 套件、想要包括的应用程序、应包括的任何其他 Office 产品，然后单击“下一步”。
+5. 在“客户端产品”页上，请选择使用的 Office 365 套件。 选择想要包括的应用程序。 选择应包括的任何其他 Office 产品，然后单击“下一步”。
 6. 在“客户端设置”页上，选择要包括的设置，然后单击“下一步”。
-7. 在“部署”页上，选择是否部署该应用程序，然后单击“下一步”。  
-如果选择不部署向导中的包，请跳到步骤 9。
+7. 在“部署”页上，选择是否部署该应用程序，然后单击“下一步”。 <br/>如果选择不部署向导中的包，请跳到步骤 9。
 8. 像配置典型应用程序那样，配置该向导页的其余部分。 有关详细信息，请参阅[创建和部署应用程序](/sccm/apps/get-started/create-and-deploy-an-application)。
 9. 完成向导。
 10. 可以依次转到“软件库” > “概述” > “应用管理” > “应用”，部署或编辑应用。    
@@ -96,13 +94,13 @@ Office 365 客户端管理仪表板在硬件清单得到报告的同时开始显
 使用 Office 365 安装程序创建和部署 Office 365 应用程序后，默认情况下，Configuration Manager 不会管理 Office 更新。 若要允许 Office 365 客户端从 Configuration Manager 接收更新，请参阅[使用 Configuration Manager 部署 Office 365 更新](#deploy-office-365-updates-with-configuration-manager)。
 
 >[!NOTE]
->部署 Office 365 应用后，可以创建自动部署规则以维护该应用。 若要创建 Office 365 应用的自动部署规则，请单击 Office 365 客户端管理仪表板中的“创建 ADR”，然后在选择选择该产品时选择“Office 365 客户端”。 有关详细信息，请参阅[自动部署软件更新](/sccm/sum/deploy-use/automatically-deploy-software-updates)。
+>部署 Office 365 应用后，可以创建自动部署规则以维护该应用。 要创建 Office 365 应用的自动部署规则，请单击 Office 365 客户端管理仪表板中的“创建 ADR”。 选择产品时，请选择“Office 365 客户端”。 有关详细信息，请参阅[自动部署软件更新](/sccm/sum/deploy-use/automatically-deploy-software-updates)。
 
 
 ## <a name="deploy-office-365-updates"></a>部署 Office 365 更新
 使用以下步骤通过 Configuration Manager 部署 Office 365 更新：
 
-1.  在本主题的**使用 Configuration Manager 管理 Office 365 客户端更新的要求**部分，验证使用 Configuration Manager 管理 Office 365 客户端更新的[要求](https://technet.microsoft.com/library/mt628083.aspx)。  
+1.  在本文章的“使用 Configuration Manager 管理 Office 365 客户端更新的要求”部分，验证使用 Configuration Manager 管理 Office 365 客户端更新的[要求](https://technet.microsoft.com/library/mt628083.aspx)。  
 
 2.  [配置软件更新点](../get-started/configure-classifications-and-products.md)来同步 Office 365 客户端更新。 针对分类设置**更新**，并为产品选择 **Office 365 客户端**。 将软件更新点配置为使用“更新”分类后，同步软件更新。
 3.  使 Office 365 客户端可以从 Configuration Manager 接收更新。 可使用 Configuration Manager 客户端设置或组策略启动客户端。   
@@ -164,8 +162,7 @@ Office 365 客户端管理仪表板在硬件清单得到报告的同时开始显
 6. 从第一个查询结果开始，打开每个对象，直到找到 **PropertyName** 属性为 **AdditionalUpdateLanguagesForO365** 的对象。
 7. 选择“Value2”，然后单击“编辑属性”。  
 ![编辑 Value2 属性](..\media\3-queryresult.png)
-8. 向“Value2”属性添加其他语言，然后单击“保存属性”。  
-例如，pt-pt（葡萄牙语 - 葡萄牙）、af-za（南非荷兰语 - 南非），以及 nn-no（挪威尼诺斯克文 - 挪威）等等。  
+8. 向“Value2”属性添加其他语言，然后单击“保存属性”。 <br/> 例如，pt-pt（葡萄牙语 - 葡萄牙）、af-za（南非荷兰语 - 南非），以及 nn-no（挪威尼诺斯克文 - 挪威）等等。  
 ![在属性编辑器中添加语言](..\media\4-props.png)  
 9. 依次单击“关闭”、“关闭”、“保存属性”、“保存对象”（如果此时单击“关闭”，将放弃值）和“关闭”，再单击“退出”，退出 Windows Management Intstrumentation 测试器。
 10. 在 Configuration Manager 控制台中，转到“软件库” > “概述” > “Office 365 客户端管理” > “Office 365 更新”。
@@ -176,18 +173,22 @@ Office 365 客户端管理仪表板在硬件清单得到报告的同时开始显
 ## <a name="change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager"></a>在使 Office 365 客户端可从 Configuration Manager 接收更新后更改更新频道
 若要在将 Office 365 客户端启用为从 Configuration Manager 接收更新后更改更新频道，请使用组策略向 Office 365 客户端分发注册表项值更改。 更改 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration\CDNBaseUrl** 注册表项以使用以下值之一：
 
-- 当前频道：  
+- 每月频道 <br/>
+<i>（以前为当前频道）</i>：  
   **CDNBaseUrl** = http&#58;//officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60
 
-- 延期频道：  
+- 半年频道 <br/>
+<i>（以前为延期频道）</i>：  
   **CDNBaseUrl** = http&#58;//officecdn.microsoft.com/pr/7ffbc6bf-bc32-4f92-8982-f9dd17fd3114
 
-- 当前频道的首次发布：  
+- 每月频道(定向)<Br/>
+ <i>（以前为当前频道的首次发布）</i>：  
   **CDNBaseUrl** = http&#58;//officecdn.microsoft.com/pr/64256afe-f5d9-4f86-8936-8840a6a4f5be
 
-- 延期频道的首次发布：  
+- 半年频道(定向) <br/>
+<i>（以前为延期频道的首次发布）</i>：  
   **CDNBaseUrl** = http&#58;//officecdn.microsoft.com/pr/b8f9b850-328d-4355-9145-c59439a0c4cf
-
+<!--the channel names changed in Sept 2017- https://docs.microsoft.com/en-us/DeployOffice/overview-of-update-channels-for-office-365-proplus?ui=en-US&rs=en-US&ad=US>
 
 
 <!--- You can create an Office 365 app without using the Office 365 Installation Wizard. To do this, you use the Office 2016 Deployment Tool (ODT) to download Office installation source files to a network share, generate Configure.xml that specifies the correct Office version and channel, and so on. Then, create an app for the files using the normal app management process.

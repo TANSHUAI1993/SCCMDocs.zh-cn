@@ -16,11 +16,11 @@ caps.handback.revision: "0"
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: c5ce168afe8668c67d7a66aaf79fce91d082afd5
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 1411675b11074b610d7370f93eafd7359cfb46ee
+ms.sourcegitcommit: 92c3f916e6bbd35b6208463ff406e0247664543a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="manage-volume-purchased-ios-apps-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 管理批量购买的 iOS 应用
 
@@ -104,7 +104,7 @@ ms.lasthandoff: 10/12/2017
 1.  在 Configuration Manager 控制台中，选择“软件库” > “应用程序管理” > “应用商店应用的许可证信息”。  
 
 3.  选择要部署的应用，然后在“主页”选项卡的“创建”组中，选择“创建应用程序”。
-所创建的 Configuration Manager 应用程序包含适用于企业的 Windows 应用商店应用。 然后，可以像对任何其他 Configuration Manager 应用程序一样部署并监视此应用程序。
+所创建的 Configuration Manager 应用程序包含适用于企业的 Microsoft Store 应用。 然后，可以像对任何其他 Configuration Manager 应用程序一样部署并监视此应用程序。
 
     > [!IMPORTANT]  
     > 必须选择部署目的为“必需”。 当前不支持可用的安装。

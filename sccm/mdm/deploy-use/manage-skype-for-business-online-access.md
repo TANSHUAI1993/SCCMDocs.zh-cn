@@ -3,7 +3,7 @@ title: "管理 Skype for Business Online 访问"
 titleSuffix: Configuration Manager
 description: "了解如何使用条件访问策略管理对 Skype for Business Online 的访问。"
 ms.custom: na
-ms.date: 03/05/2017
+ms.date: 12/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,67 +15,66 @@ caps.latest.revision: "6"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: b7886d3e8f181d6d9316c5438dd948b21a658648
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 3c1d0c84dc28fb886048cf8d7ea310c2b4dfc4aa
+ms.sourcegitcommit: 92c3f916e6bbd35b6208463ff406e0247664543a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="manage-skype-for-business-online-access"></a>管理 Skype for Business Online 访问
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
 
-基于你指定的条件，使用  **Skype for Business Online** 的条件访问策略管理对 Skype for Business Online 的访问权限。  
+基于你指定的条件，使用 Skype for Business Online 的条件访问策略管理对 Skype for Business Online 的访问权限。  
 
 
  当目标用户尝试在其设备上使用 Skype for Business Online 时，将评估以下方面：![ConditionalAccess_SFBFlow](media/ConditionalAccess_SFBFlow.png)  
 
 ## <a name="prerequisites"></a>先决条件  
 
--   为 Skype for Business Online 启用新式验证。 填充该 [连接窗体](https://connect.microsoft.com/office/Survey/NominationSurvey.aspx?SurveyID=17299&ProgramID=8715) 以在新式验证程序中注册。  
+-   为 Skype for Business Online 启用[新式验证](https://aka.ms/SkypeModernAuth)。   
 
--   所有最终用户都必须使用 Skype for Business Online。 如果你的部署中同时具有 Skype for Business Online 和本地 Skype for Business，则条件访问策略不会应用于最终用户。  
+-   你的所有用户必须使用 Skype for Business Online。 如果部署中同时具有 Skype for Business Online 和本地 Skype for Business，则条件访问策略不会应用于本地用户。  
 
 -   需要访问 Skype for Business Online 的设备必须：  
 
-    -   是 Android 或 iOS 设备。  
+    -   是 Android 或 iOS 设备
 
-    -   向 Intune 注册。  
+    -   已向 Microsoft Intune 注册
 
-    -   符合任何已部署的 Intune 合规性策略。  
+    -   符合任何已部署的 Microsoft Intune 符合性策略
 
- 基于指定的条件，设备状态存储在可授予或阻止访问的 Azure Active Directory 中。  
+ Azure Active Directory 保存设备状态，并可基于指定的条件授权访问或阻止访问。  
 如果不满足条件，则用户将在登录时看到以下消息的其中一条：  
 
--   如果设备未向 Intune 注册，或未在 Azure Active Directory 中注册，则会显示一条消息，说明如何安装公司门户应用并进行注册。  
+-   如果设备未向 Microsoft Intune 注册，或未在 Azure Active Directory 中注册，则会显示一条说明告知用户如何安装公司门户应用并进行注册。  
 
--   如果设备不合规，则会显示一条消息，将用户定向到 Intune 公司门户网站或公司门户应用，用户可在其中找到有关该问题及其修正方式的信息。  
+-   如果设备不符合，则会显示一条消息，引导用户转到公司门户网站或公司门户应用。 公司门户中包含关于此问题及其修复方法的信息。  
 
 ## <a name="configure-conditional-access-for-skype-for-business-online"></a>为 Skype for Business Online 配置条件访问  
 
 ### <a name="step-1-configure-active-directory-security-groups"></a>步骤 1：配置 Active Directory 安全组  
- 在开始之前，针对条件访问策略配置 Azure Active Directory 安全组。 你可以在 Office 365 管理中心中配置这些组。 这些组包含将作为目标的用户，或从策略中免除的用户。 如果将某个用户设定为策略的目标，则其使用的每个设备必须合规才能访问资源。  
+ 在开始之前，针对条件访问策略配置 Azure Active Directory 安全组。 在 Office 365 管理中心中配置这些组。 这些组包含作为策略目标的用户或从策略排除的用户。 如果将某个用户设定为策略的目标，则其使用的每个设备必须合规才能访问资源。  
 
  你可以指定两种组类型以用于 Skype for Business 策略：  
 
--   目标组 â€“ 包含将应用策略的用户组  
+-   **目标组**包含将应用策略的用户  
 
--   免除组 â€“ 包含从策略中免除的用户组（可选）  
-    如果用户位于两个组中，则会将其从策略中免除。  
+-   **免除组**包含从策略中排除的用户  
+    如果用户位于两个组中，则会将其免除。  
 
 ### <a name="step-2-configure-and-deploy-a-compliance-policy"></a>步骤 2：配置和部署合规性策略  
- 确保创建合规性策略并将其部署到设定为 Skype for Business Online 策略目标的所有设备。  
+ 创建符合性策略并将其部署到被设定为 Skype for Business Online 策略目标的所有设备。  
 
- 有关如何配置合规性策略的详细信息，请参阅[管理 System Center Configuration Manager 中的设备合规性策略](../../protect/deploy-use/device-compliance-policies.md)。  
+ 有关如何配置符合性策略的详细信息，请参阅[管理设备符合性策略](../../protect/deploy-use/device-compliance-policies.md)。  
 
 > [!NOTE]  
->  如果你尚未部署合规性策略，但是启用了 Skype for Business Online 策略，则允许所有已向 Intune 注册的目标设备进行访问。  
+>  如果你尚未部署符合性策略，但是启用了 Skype for Business Online 策略，则允许所有已向 Microsoft Intune 注册的目标设备进行访问。  
 
- 准备就绪后，继续执行步骤 3。  
 
 ### <a name="step-3-configure-the-skype-for-business-online-policy"></a>步骤 3：配置 Skype for Business Online 策略  
- 接下来，配置策略以要求只有托管及合规的设备才能访问 Skype for Business Online。 此策略会存储在 Azure Active Directory 中。  
+ 配置策略以要求只有托管及符合性设备才能访问 Skype for Business Online。 此策略存储在 Azure Active Directory 中。  
 
 1.  在 [Microsoft Intune 管理控制台](https://manage.microsoft.com)中，单击“策略” > “条件访问” > “Skype for Business Online 策略”。  
 
@@ -89,7 +88,7 @@ ms.lasthandoff: 10/12/2017
 
     -   Android  
 
-4.  在“目标组” 下，单击“修改”  以选择将应用策略的 Azure Active Directory 安全组。 你可以选择将其应用于所有用户或仅针对特定用户组。  
+4.  在“目标组”下，单击“修改”以选择要应用策略的 Azure Active Directory 安全组。 可以选择将此策略应用于所有用户或仅针对特定用户组。  
 
 5.  在“免除组” 下，可以选择“修改”  以选择从此策略中免除的 Azure Active Directory 安全组。  
 
@@ -102,11 +101,11 @@ ms.lasthandoff: 10/12/2017
 
  选择任何移动设备组，然后在“设备”选项卡上，选择以下“筛选器”之一：  
 
--   **未向 AAD 注册的设备** â€“ 阻止这些设备访问 Skype for Business Online。  
+-   未向 AAD 注册的设备会被阻止访问 Skype for Business Online
 
--   **不合规的设备** â€“ 阻止这些设备访问 Skype for Business Online。  
+-   不符合的设备会被阻止访问 Skype for Business Online  
 
--   **已向 AAD 注册的合规设备** â€“ 这些设备可以访问 Skype for Business Online。  
+-   已向 AAD 注册的符合性设备可以访问 Skype for Business Online  
 
 ### <a name="see-also"></a>另请参阅  
 

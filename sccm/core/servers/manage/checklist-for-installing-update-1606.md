@@ -15,11 +15,11 @@ caps.latest.revision: "7"
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 640267b1ff16ba3cc31296187e3e3b3bbe670faa
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: ce41852584f11d881c24c201867e13124595eba8
+ms.sourcegitcommit: 2867fd119256ec670fc5ae65cdc8a80d39f9b4d4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="checklist-for-installing-update-1606-for-system-center-configuration-manager"></a>用于为 System Center Configuration Manager 安装更新 1606 的清单
 
@@ -100,7 +100,9 @@ System Center Configuration Manager Current Branch 的版本 1606 是一项更�
 
 站点数据库维护任务在更新安装过程中运行时，更新安装可能会失败。 在禁用任务之前，请记录该任务的计划，以便在安装更新之后可恢复其配置。  
 
-有关详细信息，请参阅 [System Center Configuration Manager 的维护任务](../../../core/servers/manage/maintenance-tasks.md)和 [System Center Configuration Manager 维护任务参考](../../../core/servers/manage/reference-for-maintenance-tasks.md)。  
+有关详细信息，请参阅 [System Center Configuration Manager 的维护任务](../../../core/servers/manage/maintenance-tasks.md)和 [System Center Configuration Manager 维护任务参考](../../../core/servers/manage/reference-for-maintenance-tasks.md)。 
+
+**暂时停止 System Center Configuration Manager 服务器上的所有防病毒软件：**更新站点之前，请确保 Configuration Manager 服务器上的防病毒软件已停止。 <!--SMS.503481--> 
 
  **在管理中心站点和主站点上创建站点数据库备份：** 更新站点之前，请备份站点数据库，以确保具有用于灾难恢复的成功备份。   
 

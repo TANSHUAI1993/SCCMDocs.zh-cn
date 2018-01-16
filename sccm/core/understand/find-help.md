@@ -3,7 +3,7 @@ title: "查找帮助"
 titleSuffix: Configuration Manager
 description: "查找有关 System Center Configuration Manager 的其他信息的资源。"
 ms.custom: na
-ms.date: 2/8/2017
+ms.date: 12/22/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,61 +13,61 @@ ms.topic: article
 ms.assetid: 86810629-cf2a-43e8-86a2-847444119fc1
 caps.latest.revision: "19"
 caps.handback.revision: "0"
-author: aaroncz
+author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 205f59db7d0d830ab7fe31aee929d59da3d0aae1
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 73c057af033a91535d79c743e05df83601112626
+ms.sourcegitcommit: 92c3f916e6bbd35b6208463ff406e0247664543a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="find-help-for-using-system-center-configuration-manager"></a>查找使用 System Center Configuration Manager 的帮助
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-请使用以下资源，获取有关 System Center Configuration Manager 的其他信息：  
+本文提供了多个资源来查找关于使用 Configuration Manager 的帮助。  
 
--   [信息和支持](#bkmk_Info)  
+有关产品辅助功能的帮助，请参阅 [System Center Configuration Manager 中的辅助功能](../../core/understand/accessibility-features.md)。
 
-    -   [搜索文档库](#BKMK_SearchTips)  
 
-    -   [System Center Configuration Manager 团队博客](#BKMK_ProductGroupBlog)  
-    -   [支持选项和社区资源](#BKMK_SupportOptions)
-
-  有关辅助功能的帮助，请参阅 [Accessibility features in System Center Configuration Manager](../../core/understand/accessibility-features.md)（System Center Configuration Manager 中的辅助功能）。
-
-##  <a name="bkmk_Info"></a> 信息和支持  
+##  <a name="bkmk_Info"></a> 产品文档  
  请使用以下有关 Configuration Manager 的其他信息的资源。  
 
--   **若要访问最新的 System Center Configuration Manager 产品文档：**请使用 TechNet [System Center Configuration Manager 的文档库](http://go.microsoft.com/fwlink/p/?LinkId=691974)。
+-   若要访问最新的产品文档，请从[库索引](https://docs.microsoft.com/sccm/)开始
 
--   **若要提供有关文档的反馈：**请在 [System Center Configuration Manager 反馈（文档）](https://configurationmanager.uservoice.com/forums/300492-ideas/category/112371-documentation)中使用“User Voice”提交反馈。  
+-   若要提供有关文档的反馈，请通过 [UserVoice](https://configurationmanager.uservoice.com/forums/300492-ideas/category/112371-documentation) 进行提交  
 
--   **若要下载文档的存档副本：**请转到 TechNet 库：
-
-    - [版本 1602](https://gallery.technet.microsoft.com/documentation-for-system-ea90eaf1)
-    - [版本 1511](https://gallery.technet.microsoft.com/documentation-for-system-ea90eaf1)
 
 ###  <a name="BKMK_SearchTips"></a> 搜索文档库  
  使用下列搜索提示来帮助你查找所需信息：  
 
--   使用首选的搜索引擎查找 System Center Configuration Manager 的内容时，可通过包含以下两个术语将搜索结果的范围缩小为当前内容库：**SCCM** 和 **Docs**。
+-   使用首选的搜索引擎查找 Configuration Manager 的内容时，可通过包含以下两个术语将搜索结果的范围缩小为当前内容库：SCCM 和 Docs。
 
--   请使用与在用户界面 (UI) 和联机文档中所看到的词条相匹配的搜索词，而不使用可能会在社区内容中看到的非正式词条或缩写。 例如，搜索“management point”（管理点）而不是“MP”、搜索“deployment type”（部署类型）而不是“DT”，以及搜索“software updates”（软件更新）而不是“SUM”。  
+-   使用和用户界面以及在线文档中的术语相匹配的搜索词。 避免使用可能在社区内容中见过的非正式术语或缩写。 例如，搜索“management point”（管理点）而不是“MP”、搜索“deployment type”（部署类型）而不是“DT”，以及搜索“software updates”（软件更新）而不是“SUM”。  
 
--   在 TechNet 或帮助文件中的页面上搜索时（例如，选择 Ctrl+F1，并在“查找”框中输入搜索词），结果不包括折叠的部分中的文本。 要搜索折叠部分中的文本，请在搜索页面之前展开这些部分。 要执行此操作，可选择页面顶部的“全部展开”按钮，或者双击任何折叠部分。 展开所有部分后，则可以通过在页面上进行搜索来搜索该页面上的所有部分。  
+-   若要对正在 docs.microsoft.com 浏览的文章进行搜索，请选择 Ctrl+F 并在浏览器的“查找”框中输入搜索词。 
 
--   要搜索帮助文件中的主题，请选择 F1，然后在“查找”对话框中输入搜索词。 帮助文件不支持“全部展开”选项，必须先手动展开各个折叠部分，然后才能在页面上进行搜索来查找那些部分中的文本。  
+-   Docs.microsoft.com 上的每篇文章都包括以下字段以帮助搜索内容：
+    - 右上角的“搜索”。 若要在所有文章中进行搜索，请在这里输入搜索词。 Configuration Manager 库中的文章自动包括“ConfigMgr”作用域。
+    - 左侧目录上方的“筛选器”。 若要对当前目录进行搜索，请在这里输入搜索词。 此字段仅匹配出现在文章标题中的搜索词。 
 
--   请尽可能使用 TechNet 在线库，而不是下载的文档。 TechNet 包含最新信息，并且你搜索的信息可能不在下载的文档中，或者可能有修正或额外的在线信息。  
 
--   如果发现搜索本地存储的文档更快捷轻松，可以选择 TechNet 中的多个主题并将它们保存在本地。 首先，登录 TechNet。 然后，在想要保存在本地的页面顶部，选择“导出”（位于“打印”旁）。 然后你会看到“导出多组页面”  横幅，你可以添加和删除要保存的页面。 然后选择“管理页面”以将其导出。 有关详细信息，请选择横幅中的“帮助”。  
+## <a name="product-feedback"></a>产品反馈
+通过 Windows 10 内置的[反馈中心应用](https://support.microsoft.com/en-us/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app)报告潜在的产品缺陷。 添加新的反馈时，请务必选择“企业管理”类别，然后选择下列子类别之一：
+ - 配置管理器客户端
+ - Configuration Manager 控制台
+ - Configuration Manager 操作系统部署
+ - Configuration Manager 服务器
 
-###  <a name="BKMK_ProductGroupBlog"></a> System Center Configuration Manager 团队博客  
- Configuration Manager 工程和合作伙伴团队使用 [System Center Configuration Manager 团队博客](http://go.microsoft.com/fwlink/?LinkId=191941)为用户提供有关 Configuration Manager 和相关技术的技术信息和其他新闻。 我们的博客文章补充了产品文档和支持信息。  
+继续使用我们的[用户之声页面](http://configurationmanager.uservoice.com/)，为 Configuration Manager 中新功能想法投票。
 
-###  <a name="BKMK_SupportOptions"></a> 支持选项和社区资源  
+
+##  <a name="BKMK_ProductGroupBlog"></a> Configuration Manager 团队博客  
+ Configuration Manager 工程和合作伙伴团队使用[企业移动性 + 安全性博客](https://cloudblogs.microsoft.com/enterprisemobility/?product=system-center-configuration-manager)为用户提供有关 Configuration Manager 和相关技术的技术信息和其他新闻。 我们的博客文章补充了产品文档和支持信息。  
+
+
+##  <a name="BKMK_SupportOptions"></a> 支持选项和社区资源  
  下列链接提供有关支持选项和社区资源的信息：  
 
 -   [Microsoft 支持](http://go.microsoft.com/fwlink/?LinkId=243064)  
@@ -75,3 +75,4 @@ ms.lasthandoff: 12/01/2017
 -   [Configuration Manager 社区：System Center Configuration Manager (Current Branch) 生存指南](http://social.technet.microsoft.com/wiki/contents/articles/33035.system-center-configuration-manager-current-branch-survival-guide.aspx )  
 
 -   [Configuration Manager 论坛页面](https://social.technet.microsoft.com/Forums/en-US/home?category=ConfigMgrCB)  
+    <!-- NOTE: the above URL requires "en-US" for the category to work -->

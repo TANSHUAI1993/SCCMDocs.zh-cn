@@ -15,11 +15,11 @@ caps.latest.revision: "8"
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: d8f3a963d0fccb3469e751e1ca3319368ae92506
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: ff7fef664780730510f17d723a1d13ca691405af
+ms.sourcegitcommit: 0a6b2c53ff4445b5d4f3638fdb0b489d54e333d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="manage-mobile-devices-with-system-center-configuration-manager-and-exchange"></a>使用 System Center Configuration Manager 和 Exchange 管理移动设备
 
@@ -89,7 +89,9 @@ ms.lasthandoff: 10/12/2017
     -   **Get-ActiveSyncOrganizationSettings**  
 
     -   **Get-ExchangeServer**  
-
+    
+    -   **Get-Mailbox**
+    
     -   **Get-Recipient**  
 
     -   **Set-ADServerSettings**  
@@ -112,7 +114,7 @@ ms.lasthandoff: 10/12/2017
     > [!TIP]  
     >  如果你尝试在没有所需 cmdlet 的情况下安装或使用 Exchange Server 连接器，你将在站点服务器计算机上 EasDisc.log 文件中看到随 `Invoking cmdlet <cmdlet> failed` 消息一起记录的错误。  
 
-2.  在 Configuration Manager 控制台中，单击“管理” 。  
+2.  在 Configuration Manager 控制台中，单击“管理”。  
 
 3.  在“管理”  工作区中，展开“层次结构配置” ，然后单击“Exchange Server 连接器” 。  
 

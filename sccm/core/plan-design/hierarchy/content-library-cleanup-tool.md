@@ -29,7 +29,7 @@ ms.lasthandoff: 01/04/2018
 
 该工具只影响你运行该工具时指定的分发点上的内容。 该工具无法删除站点服务器上的内容库中的内容。
 
-你可以在管理中心站点或主站点的站点服务器上的 *%CM_Installation_Path%\cd.latest\SMSSETUP\TOOLS\ContentLibraryCleanup\* 文件夹中找到 **ContentLibraryCleanup.exe**。
+你可以在管理中心站点或主站点的站点服务器上的 \*%CM_Installation_Path%\cd.latest\SMSSETUP\TOOLS\ContentLibraryCleanup\* 文件夹中找到 **ContentLibraryCleanup.exe**。
 
 ## <a name="requirements"></a>要求  
  该工具一次只能对一个分发点运行。  

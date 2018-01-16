@@ -11,11 +11,11 @@ ms.prod: configmgr-hybrid
 ms.service: 
 ms.technology: 
 ms.assetid: 6f0201d7-5714-4ba0-b2bf-d1acd0203e9a
-ms.openlocfilehash: 643b33810c2862e2d1c602bfe941c36605ad2631
-ms.sourcegitcommit: 8c6e9355846ff6a73c534c079e3cdae09cf13c45
+ms.openlocfilehash: 59fb06d14002f781e0448a64bb0064b4add2f087
+ms.sourcegitcommit: ac9268e31440ffe91b133c2ba8405d885248d404
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="change-the-mdm-authority-for-specific-users-mixed-mdm-authority"></a>更改特定用户的 MDM 机构（混合 MDM 机构） 
 
@@ -49,6 +49,7 @@ ms.lasthandoff: 12/06/2017
       
   > [!Important]    
   > 使用 Configuration Manager 控制台继续编辑租户级策略。 [更改租户级 MDM 机构](change-mdm-authority.md)为 Intune 后，将在 Azure 上 Intune 中管理这些策略。 
+-   如果使用代码签名证书，建议以分阶段的方式迁移用户。 在移动设备迁移后，证书颁发机构可以请求新的证书。 通过使用分阶段的方法来迁移用户（及其设备），可限制同时进行证书颁发机构请求的数量。
 - 建议不要迁移已在 Configuration Manager 中添加为设备注册管理员的任何用户帐户。 接下来，将租户级 MDM 机构更改为 Intune 后，这些用户帐户将准确迁移。 如果在租户级 MDM 机构更改前迁移设备注册管理员用户帐户，则必须在 Azure 上 Intune 中手动将该用户添加为设备注册管理员。 但是使用设备注册管理员注册的设备不会成功迁移。 必须致电支持部门来迁移这些设备。 更多详细信息，请参阅[添加设备注册管理员](https://docs.microsoft.com/en-us/intune/device-enrollment-manager-enroll#add-a-device-enrollment-manager)。
 - 使用设备注册管理员注册的设备和无[用户关联](/sccm/mdm/deploy-use/user-affinity-for-hybrid-managed-devices)的设备不会自动迁移至新的 MDM 机构。 若要切换这些 MDM 设备的管理机构，请参阅[迁移不具备用户关联的设备](#migrate-devices-without-user-affinity)。
 

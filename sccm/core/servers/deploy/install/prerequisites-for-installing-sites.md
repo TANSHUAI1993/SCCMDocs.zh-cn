@@ -15,11 +15,11 @@ caps.latest.revision: "5"
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 2875a90b1f2ae853563d7716fcfe634efd551fe5
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 07e57a15834d2f29444f47b9503cc04947f36150
+ms.sourcegitcommit: 92c3f916e6bbd35b6208463ff406e0247664543a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="prerequisites-for-installing-system-center-configuration-manager-sites"></a>安装 System Center Configuration Manager 站点的先决条件
 
@@ -106,7 +106,7 @@ ms.lasthandoff: 12/04/2017
 服务：  
 -       [Operations Manager Suite](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite)   (OMS)
 -       [升级就绪情况](/sccm/core/clients/manage/upgrade/upgrade-analytics)
--       [适用于企业的 Windows 应用商店](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)
+-       [适用于企业的 Microsoft Store](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)
 
 请执行以下步骤，解决此问题：
  1.    在 Configuration Manager 控制台中，从 Azure 服务节点删除 Azure 服务。

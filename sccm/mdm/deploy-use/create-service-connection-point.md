@@ -16,11 +16,11 @@ caps.handback.revision: "0"
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 9ae26c55cf92c954a54311e2e698353bbe359a83
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: ee038d8579d63f2afbf0b677181dd06751403ba0
+ms.sourcegitcommit: 0a6b2c53ff4445b5d4f3638fdb0b489d54e333d3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="create-a-service-connection-point-with-system-center-configuration-manager-and-microsoft-intune"></a>使用 System Center Configuration Manager 和 Microsoft Intune 创建服务连接点
 
@@ -36,9 +36,9 @@ ms.lasthandoff: 10/12/2017
 
 ## <a name="configure-the-service-connection-point-role"></a>配置服务连接点角色
 
-1.  在 Configuration Manager 控制台中，单击“管理” 。
+1.  在 Configuration Manager 控制台中，单击“管理”。
 
-2.  在“管理”工作区中，展开“站点”，然后单击“服务器和站点系统角色”。
+2.  在“管理”工作区中，展开“站点配置”，然后单击“服务器和站点系统角色”。
 
 3.  使用关联的步骤将“服务连接点”  角色添加到新的或现有的站点系统服务器：
 

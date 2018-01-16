@@ -15,11 +15,11 @@ caps.latest.revision: "9"
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: dd62748f853915d71fcbad1964f5a67785aaf3f6
-ms.sourcegitcommit: 1132886e07d0c0a87dcc7eeef4577dd8d8840023
+ms.openlocfilehash: 95808d4fd743d5cc18cacb69bb38bc729acdda25
+ms.sourcegitcommit: 92c3f916e6bbd35b6208463ff406e0247664543a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="set-up-windows-hybrid-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>设置 Windows 混合使用 System Center Configuration Manager 和 Microsoft Intune 的设备管理
 
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/01/2017
 3.  在功能区中，单击“配置平台”，然后选择 Windows 平台：
     - 对于 Windows 电脑和笔记本电脑，请选择“Windows”，然后执行以下步骤：
       1. 在“常规”选项卡上，单击“启用 Windows 注册”复选框。
-      2. 如果使用证书进行代码签名并部署公司门户应用，请浏览到“代码签名证书”。 设备用户还可以从 Windows 应用商店安装公司门户应用，或者你可以在没有代码签名的情况下部署来自适用于企业的 Windows 应用商店中的应用。
+      2. 如果使用证书进行代码签名并部署公司门户应用，请浏览到“代码签名证书”。 设备用户还可从 Microsoft Store 安装公司门户应用，或部署适用于企业的 Microsoft Store 中的应用而无需进行代码签名。
       3. 你还可以配置 [Windows Hello 企业版设置](windows-hello-for-business-settings.md)。
     - 对于 Windows 手机和平板电脑，请选择“Windows Phone”，然后执行以下步骤：
       1. 在“常规”选项卡上，单击“Windows Phone 8.1 和 Windows 10 移动版”复选框。 不再支持 Windows Phone 8.0。
@@ -107,13 +107,13 @@ ms.lasthandoff: 11/01/2017
 
 虽然可选择性创建 CNAME DNS 条目，但 CNAME 记录可简化用户的注册。 如果找不到注册 CNAME 记录，系统会提示用户手动输入 MDM 服务器名称 enrollment.manage.microsoft.com。
 
-|类型|主机名|指向|TTL|  
+|键入|主机名|指向|TTL|  
 |----------|---------------|---------------|---|
 |CNAME|EnterpriseEnrollment.company_domain.com|EnterpriseEnrollment-s.manage.microsoft.com| 1 小时|
 
 如果具有多个 UPN 后缀，你需要为每个域名创建一个 CNAME，并将每个 CNAME 指向 EnterpriseEnrollment-s.manage.microsoft.com。例如，如果 Contoso 的用户使用 name@contoso.com，但也使用 name@us.contoso.com 和 name@eu.constoso.com 作为其电子邮件/UPN，则 Contoso DNS 管理员需要创建以下 CNAME。
 
-|类型|主机名|指向|TTL|  
+|键入|主机名|指向|TTL|  
 |----------|---------------|---------------|---|
 |CNAME|EnterpriseEnrollment.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com|1 小时|
 |CNAME|EnterpriseEnrollment.us.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com|1 小时|

@@ -33,11 +33,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.openlocfilehash: ce5239340032db7deb5bcb20d00aba77c9b140e2
-ms.sourcegitcommit: da27d37cc4e4e06cf23758846cdd7acb617f744b
+ms.openlocfilehash: 1129da43f9c50d21f2ce8392721c77a4e614e410
+ms.sourcegitcommit: 92c3f916e6bbd35b6208463ff406e0247664543a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1710-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1710 的诊断使用情况数据收集的级别
 
@@ -168,7 +168,7 @@ System Center Configuration Manager 版本 1710 收集三个级别的诊断和�
 
    - 按卸载内容设置计算的 Windows Installer 部署类型数值
 
-   - 适用于企业的 Windows 应用商店应用的计数和同步统计信息（包括汇总的应用类型、许可应用的状态、联机和脱机许可应用的数量）  
+   - 适用于企业的 Microsoft Store 应用的计数和同步统计信息（包括汇总的应用类型、已许可的应用状态、联机和脱机已许可的应用数量）  
 
    - 维护时段类型和持续时间  
 
@@ -519,4 +519,4 @@ System Center Configuration Manager 版本 1710 收集三个级别的诊断和�
 
 - Intune 托管设备的 EAS 条件访问策略的类型（阻止或隔离）
 
-- 适用于企业的 Windows 应用商店应用程序详细信息（已同步的应用程序的非聚合列表，包括 AppID、联机或脱机状态，以及购买的许可证总数）
+- 适用于企业的 Microsoft Store 应用程序详细信息（已同步的应用程序的非聚合列表，包括 AppID、联机或脱机状态，以及购买的许可证总数）
