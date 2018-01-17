@@ -3,7 +3,7 @@ title: "创建和运行脚本"
 titleSuffix: Configuration Manager
 description: "在客户端设备上创建并运行 Powershell 脚本。"
 ms.custom: na
-ms.date: 11/29/2017
+ms.date: 01/05/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 caps.latest.revision: "14"
 caps.handback.revision: "0"
-author: BrucePerlerMS
-ms.author: bruceper
+author: mestew
+ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 1472f697ae8b82e6268433aa6398fcc10a429994
-ms.sourcegitcommit: 5f4a584d4a833b0cc22bd8c47da7dd55aced97fa
+ms.openlocfilehash: b00dfb875ca032032a9782e9950247eb3fceb124
+ms.sourcegitcommit: 9de3d74030b7c3313c34b5cbe2dbe6e18a48c043
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>从 Configuration Manager 控制台创建并运行 PowerShell 脚本
 
@@ -75,15 +75,15 @@ ms.lasthandoff: 12/05/2017
 1. 在 Configuration Manager 控制台中，单击“软件库”。
 2. 在“软件库”工作区中，单击“脚本”。
 3. 在“脚本”列表中，选择想要批准或拒绝的脚本，然后在“主页”选项卡“脚本”组中，单击“批准/拒绝”。
-4. 在“批准或拒绝脚本”对话框中，选择“批准”或“拒绝”脚本，并根据需要输入有关你的决定的批注。  如果拒绝脚本，它将无法在客户端设备上运行。 <br>
+4. 在“批准或拒绝脚本”对话框中，选择“批准”或“拒绝”脚本。 （可选）输入有关你决定的注释。  如果拒绝脚本，它将无法在客户端设备上运行。 <br>
 ![脚本 - 批准](./media/run-scripts/RS-approval.png)
-5. 完成向导。 在“脚本”列表中可以看到“批准状态”列中发生的变化，具体要取决于你执行的操作。
+1. 完成向导。 在“脚本”列表中可以看到“批准状态”列中发生的变化，具体要取决于你执行的操作。
 
 ### <a name="allow-users-to-approve-their-own-scripts"></a>允许用户批准他们自己的脚本
 
 此批准主要用于脚本开发中的测试阶段。
 
-1. 在 Configuration Manager 控制台中，单击“管理” 。
+1. 在 Configuration Manager 控制台中，单击“管理”。
 2. 在“管理”工作区中，展开“站点配置”，然后单击“站点”。
 3. 在站点列表中，选择你的站点，然后在“主页”选项卡的“站点”组中，单击“层次结构设置”。
 4. 在“层次结构设置属性”对话框的“常规”选项卡中，清除“不允许脚本创建者批准他们自己的脚本”复选框。
@@ -106,13 +106,17 @@ ms.lasthandoff: 12/05/2017
     - 导入 - 将 PowerShell 脚本导入到控制台。 该脚本将在“脚本”字段中显示。
     - 清除 - 从“脚本”字段中删除当前脚本。
     - 脚本 - 显示当前导入的脚本。 你可以在此字段中根据需要编辑脚本。
-1. 完成向导。 新脚本将显示在“脚本”列表，且状态显示为“正等待审批”。 在客户端设备上运行此脚本之前，必须先批准它。
+5. 完成向导。 新脚本将显示在“脚本”列表，且状态显示为“正等待审批”。 在客户端设备上运行此脚本之前，必须先批准它。 
+
+> [!IMPORTANT]
+    >  避免在使用“运行脚本”功能时编写设备重启或 Configuration Manager 代理重启的脚本。 执行此操作可能会导致连续的重启状态。 如有需要，从 Configuration Manager 版本 1710 起，已经对启用重启设备的客户端通知功能提供了增强。 [等待重新启动列](/sccm/core/clients/manage/manage-clients#Restart-clients)可以帮助识别需要重启的设备。 
+<!--SMS503978--Script reboot warning-->
 
 ## <a name="script-parameters"></a>脚本参数
 *（随版本 1710 一起引入）*  
 将参数添加到脚本可以为你的工作提供更高的灵活性。 以下内容概述“运行脚本”功能的当前功能以及“字符串”和“整数”数据类型的脚本参数。 也提供了预设值列表。 如果脚本具有不受支持的数据类型，你将收到一个警告。
 
-在“创建脚本” 对话框中，单击“脚本”下的“脚本参数”。
+在“创建脚本”对话框中，单击“脚本”下的“脚本参数”。
 
 你的每一个脚本参数都有自己的对话框，用于添加更多细节以及验证信息。
 
@@ -175,7 +179,7 @@ Write-Output (Get-WmiObject -Class Win32_operatingSystem).Caption
 
 要为脚本选择目标集合：
 
-1. 在 Configuration Manager 控制台中，单击“资产和符合性” 。
+1. 在 Configuration Manager 控制台中，单击“资产和符合性”。
 2. 在“资产和符合性”工作区中，单击“设备集合”。
 3. 在“设备集合”列表中，单击要在其中运行脚本的设备集合。
 4. 选择所选集合，单击“运行脚本”。
@@ -191,11 +195,11 @@ Write-Output (Get-WmiObject -Class Win32_operatingSystem).Caption
 
 ## <a name="script-monitoring"></a>脚本监视
 
-在设备集合上启动脚本运行以后，请使用采用以下过程来监视该操作。 从版本 1710 开始就可以在脚本执行时进行实时监视，也能返回至某个给定“运行脚本”执行的报告。 <br>
+在设备集合上启动脚本运行以后，请使用采用以下过程来监视该操作。 从版本 1710 开始，你可以在脚本执行时进行实时监视，也可以返回至某个给定“运行脚本”执行的报告。 <br>
 
 ![脚本监视器 - 脚本运行状态](./media/run-scripts/RS-monitoring-three-bar.png)
 
-1. 在 Configuration Manager 控制台中，单击“监视” 。
+1. 在 Configuration Manager 控制台中，单击“监视”。
 2. 在“监视”工作区中，单击“脚本状态”。
 3. 在“脚本状态”列表中，可以查看在客户端设备上运行的每个脚本的结果。 脚本退出代码为“0”通常表示脚本已成功运行。
 

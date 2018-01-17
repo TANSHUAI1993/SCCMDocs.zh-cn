@@ -14,15 +14,15 @@ ms.assetid: ca3b4714-2a16-495e-8a17-1d87991d5556
 author: erikje
 ms.author: erikje
 manager: angrobe
-ms.openlocfilehash: d7819dd71a37bc581b629ac180f657134495f50c
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: cfb14ebb7b4f7eb9a008ad4464978778e57514a6
+ms.sourcegitcommit: d029b373113051634ed030545348a458eb7b25f4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="capabilities-in-technical-preview-1706-for-system-center-configuration-manager"></a>在 System Center Configuration Manager 的 Technical Preview 1706 中的功能
 
-*适用范围：System Center Configuration Manager（Technical Preview）*
+*适用范围：System Center Configuration Manager (Technical Preview)*
 
 本文将介绍在 System Center Configuration Manager 的 Technical Preview 1706 中的可用功能。 你可以安装此版本，以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。 在安装此 Technical Preview 前，请查看 [System Center Configuration Manager 的 Technical Preview](../../core/get-started/technical-preview.md)，熟悉使用 Technical Preview 的常规要求和限制，如何在两版本之间进行更新，以及如何对 Technical Preview 中的有关功能提供反馈。     
 
@@ -462,10 +462,10 @@ ms.lasthandoff: 12/01/2017
 已知问题：在 Technical Preview 1706 中，没有为 Microsoft 证书颁发机构颁发 PFX 证书。 这并不会影响导入的 PFX 证书或 SCEP 配置文件。
 
 
-## <a name="cisco-ipsec-support-for-macos-vpn-profiles"></a>macOS VPN 配置文件的 Cisco (IPsec) 支持
+## <a name="cisco-ipsec-support-for-ios-vpn-profiles"></a>iOS VPN 配置文件的 Cisco (IPsec) 支持
 <!-- 1321367 -->
 
-你可以使用 Cisco (IPsec) 作为连接类型创建 macOS VPN 配置文件。 有关详细信息，请参阅[创建 VPN 配置文件](https://docs.microsoft.com/en-us/sccm/mdm/deploy-use/create-vpn-profiles#create-vpn-profiles)。
+可以使用 Cisco (IPsec) 作为连接类型创建 iOS VPN 配置文件。 有关详细信息，请参阅[创建 VPN 配置文件](https://docs.microsoft.com/en-us/sccm/mdm/deploy-use/create-vpn-profiles#create-vpn-profiles)。
 
 
 ## <a name="new-windows-configuration-item-settings"></a>新 Windows 配置项设置

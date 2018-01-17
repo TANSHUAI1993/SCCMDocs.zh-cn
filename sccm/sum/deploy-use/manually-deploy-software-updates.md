@@ -12,11 +12,11 @@ ms.prod: configuration-manager
 ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: 57184274-5fea-4d79-a2b4-22e08ed26daf
-ms.openlocfilehash: 6aaa15ff4908fe7e71e0b9c14fc021a57ccbb727
-ms.sourcegitcommit: 986fc2d54f7c5fa965fd4df42f4db4ecce6b79cb
+ms.openlocfilehash: becab57c5f04bb67512d665175038f6c477b65b1
+ms.sourcegitcommit: e13bb2c86c40a88e5f4602beb1d31e4adc90e099
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/12/2018
 ---
 #  <a name="BKMK_ManualDeploy"></a>手动部署软件更新  
 
@@ -199,7 +199,7 @@ ms.lasthandoff: 11/17/2017
         > [!WARNING]  
         >  必须针对“LAN 唤醒”配置计算机和网络，然后才能使用此选项。  
 
-    -   详细信息级别：指定客户端计算机报告的状态消息的详细信息级别。  
+    -   “详细信息级别”：指定客户端计算机报告的状态消息的详细信息级别。  
 
 7.  在“计划”页上，配置下列设置：  
 
@@ -232,10 +232,10 @@ ms.lasthandoff: 11/17/2017
 
     -   用户通知：指定是否在配置的“软件可用时间”在客户端计算机上软件中心中显示软件更新通知，以及是否在客户端计算机上显示用户通知。 在“部署设置”页上将“部署类型”设置为“可用”时，你无法选择“在软件中心和所有通知中隐藏”。  
 
-    -   截止时间行为：*仅当“部署设置”页上的“部署类型”设置为“必需”时才可用。*    
+    -   截止时间行为：仅当“部署设置”页上的“部署类型”设置为“必需”时才可用。   
     指定到达软件更新部署的截止时间时要发生的行为。 指定是否安装部署中的软件更新。 另外，指定是否在安装软件更新后执行系统重启而不考虑配置的维护时段。 有关维护时段的详细信息，请参阅[如何使用维护时段](../../core/clients/manage/collections/use-maintenance-windows.md)。  
 
-    -   设备重启行为：*仅当部署设置页上的部署类型*设置为“必需”时才可用。    
+    -   设备重启行为：仅当“部署设置”页上的“部署类型”设置为“必需”时才可用。    
     指定安装软件更新后是否在服务器和工作站上抑制系统重启，以及是否需要重启系统以完成安装。  
 
         > [!IMPORTANT]  
@@ -259,7 +259,7 @@ ms.lasthandoff: 11/17/2017
 
     - 指定当软件更新的内容在首选分发点上不可用时客户端是否下载和安装回退分发点中的软件更新。  
 
-    - **允许客户端与同一子网上的其他客户端共享内容**：指定是否为内容下载启用 BranchCache。 有关 BranchCache 的详细信息，请参阅[内容管理的基本概念](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#branchcache)。  
+    - 允许客户端与同一子网上的其他客户端共享内容：指定是否为内容下载启用 BranchCache。 有关 BranchCache 的详细信息，请参阅[内容管理的基本概念](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#branchcache)。  
 
     - 如果软件更新当前在分发点上不可用，邻域或站点组从 Microsoft 更新下载内容：如果软件更新在分发点上不可用，选择此设置，可使连接到 Intranet 的客户端从 Microsoft 更新下载软件。 基于 Internet 的客户端可随时访问 Microsoft 更新，获取软件更新内容。
 

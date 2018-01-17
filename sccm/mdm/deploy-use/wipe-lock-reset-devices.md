@@ -16,11 +16,11 @@ caps.handback.revision: "0"
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 55d49c388b4ea60627f72ffe61796c70de6f9416
-ms.sourcegitcommit: a5f8b5cfdabf0298e4302e24210e725a06a9de82
+ms.openlocfilehash: e8121480f3a9d61ba0a04667407a305119d80e12
+ms.sourcegitcommit: ba23ff90709a5fde1a63c650ab0d848f441afc43
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="protect-data-with-remote-wipe-lock-or-passcode-reset-by-using-system-center-configuration-manager"></a>使用 System Center Configuration Manager，通过远程擦除、锁定或密码重置功能保护数据
 
@@ -171,17 +171,17 @@ EFS 选择性擦除当前支持的数据和应用：
 ##  <a name="passcode-reset"></a>密码重置  
 如果用户忘记密码，则你可以删除设备中的密码，或者在设备上强制使用新的临时密码，从而帮助用户解决问题。 下表列出了在不同移动平台上重置密码的方法。  
 
-|平台|密码重置|  
-|--------------|--------------------|  
-|iOS|支持以便清除设备中的密码。 不创建新的临时密码。|
-|macOS| 不支持。|
-|Android|支持并且创建临时密码。|
-|Android for Work | 不支持。|
-|Windows 10 电脑|不支持。|  
-|Windows 10 移动版|支持，已加入 Azure AD 的设备除外。|
-|Windows Phone 8.1|支持。|  
-|Windows RT 8.1 |不支持。|  
-|Windows 8.1 电脑 |不支持。|  
+| 平台                              | 密码重置                                                                               |
+|---------------------------------------|----------------------------------------------------------------------------------------------|
+| iOS                                   | 支持以便清除设备中的密码。 不创建新的临时密码。 |
+| macOS                                 | 不支持。                                                                               |
+| Android                               | 在早于 Android 7.0 的版本上受支持。 创建临时密码。                |
+| Android for Work                      | 不支持。                                                                               |
+| Windows 10 电脑                        | 不支持。                                                                               |
+| Windows 10 移动版                     | 支持，已加入 Azure AD 的设备除外。  |
+| Windows Phone 8 和 Windows Phone 8.1 | 支持。                                                                                   |
+| Windows RT 8.1                        | 不支持。                                                                               |
+| Windows 8.1 电脑                       | 不支持。                                                                               |
 
 > [!Note]    
 > 必须在环境中的顶层站点上执行密码重置操作。 例如，如果使用管理中心站点，则只能在该站点中执行该操作。 如果使用独立的主站点，则只能在该站点执行该操作。

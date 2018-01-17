@@ -3,7 +3,7 @@ title: "新版本 1710 |Microsoft Docs"
 titleSuffix: Configuration Manager
 description: "获取有关 System Center Configuration Manager 的 1710 版中引入的更改和新功能的详细信息。"
 ms.custom: na
-ms.date: 11/20/2017
+ms.date: 1/08/2018
 ms.reviewer: na
 ms.suite: na
 ms.technology: configmgr-other
@@ -13,11 +13,11 @@ ms.assetid: bc6c3e5f-b9e2-400e-9d9d-446ff93c520c
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 8431ebffc6d1aa463c5622bd67db8a140c0cfe69
-ms.sourcegitcommit: 2dc9c83e57e9734ffc4a93f79cd71285036eeb8b
+ms.openlocfilehash: f944d4625e2e67a82098bf3b4373ea5f0ed70619
+ms.sourcegitcommit: 9de3d74030b7c3313c34b5cbe2dbe6e18a48c043
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="what39s-new-in-version-1710-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1710 的新增功能
 
@@ -49,6 +49,9 @@ Version 1710 drops support for the following products:
 
 ### <a name="cloud-distribution-point-support-for-azure-government-cloud------sms491428---"></a>对 Azure 政府云的云分发点支持<!-- sms491428 -->
 现在可以在 Azure 政府云中使用[基于云的分发点](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point)。   
+
+### <a name="inventory-default-unit-revision----sms503697---"></a>清单默认单位修订 <!-- sms503697 -->
+由于设备现在包含的硬件大小单位为 GB、TB 和更大的规模，此版本将很多视图中使用的默认单位 (SMS_Units) 从 MB 更改为了 GB。 例如，v_gs_LogicalDisk.FreeSpace 值现在将以 GB 为单位进行报告。
 
 
 <!-- ## Migration  -->
@@ -145,7 +148,7 @@ Version 1710 drops support for the following products:
 - [注册设备](../../../mdm/deploy-use/enroll-hybrid-windows.md)
 - [执行远程的完全和选择性擦除操作](../../../mdm/deploy-use/wipe-lock-reset-devices.md)
 - [通过配置项目和基线管理设置](../../../mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md)
-- [管理符合性策略](../../../mdm/deploy-use/device-compliance-policies.md)
+- [管理符合性策略](../../../mdm/deploy-use/device-compliance-policies.md)和[条件访问](../../../protect/deploy-use/manage-access-to-services.md)
 - 通过以下内容管理对公司资源的访问：
    - [证书配置文件](../../../mdm/deploy-use/create-pfx-certificate-profiles.md)
    - [VPN 配置文件](../../../mdm/deploy-use/create-vpn-profiles.md)
@@ -153,6 +156,9 @@ Version 1710 drops support for the following products:
    - [电子邮件配置文件](../../../mdm/deploy-use/create-exchange-activesync-profiles.md)
 - [配置 Windows Hello 企业版策略](../../../mdm/deploy-use/windows-hello-for-business-settings.md)
 - [管理应用程序](../../../mdm/deploy-use/management-tasks-applications.md)
+
+> [!NOTE]
+> 部署为多个体系结构生成的 .appxbundle 应用程序可能无法在这些设备上运行，目前此方案不受支持。
 
 ### <a name="improved-vpn-profile-experience-in-configuration-manager-console"></a>改进了 Configuration Manager 控制台中的 VPN 配置文件体验 
 <!-- 1318232 -->
