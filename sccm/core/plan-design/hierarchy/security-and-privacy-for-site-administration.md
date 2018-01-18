@@ -124,7 +124,7 @@ Configuration Manager 自动创建和管理这些安全组。 这包括在删除
 
 定期审核管理用户分配及其授权级别以验证所需的更改。  
 
-有关配置基于角色的管理的详细信息，请参阅 [Configure role-based administration for System Center Configuration Manager](../../../core/servers/deploy/configure/configure-role-based-administration.md)。  
+有关配置基于角色的管理的详细信息，请参阅 [为 System Center Configuration Manager 配置基于角色的管理](../../../core/servers/deploy/configure/configure-role-based-administration.md)。  
 
 **在备份和还原时保护 Configuration Manager 备份和信道的安全。**  
 
@@ -305,7 +305,7 @@ Configuration Manager 中的一些站点系统角色需要 IIS。 通过保护 I
 ##  <a name="BKMK_Security_FSP"></a>回退状态点的最佳安全做法  
  如果在 Configuration Manager 中安装回退状态点，请使用下列最佳安全做法。  
 
- 有关安装回退状态点时的安全注意事项的详细信息，请参阅 [Determine Whether You Require a Fallback Status Point](../../../core/clients/deploy/plan/determine-the-site-system-roles-for-clients.md#determine-if-you-need-a-fallback-status-point)。  
+ 有关安装回退状态点时的安全注意事项的详细信息，请参阅 [确定你是否需要回退状态点](../../../core/clients/deploy/plan/determine-the-site-system-roles-for-clients.md#determine-if-you-need-a-fallback-status-point)。  
 
 
 **不要在站点系统上运行其他站点系统角色，也不要在域控制器上安装回退状态点。**  

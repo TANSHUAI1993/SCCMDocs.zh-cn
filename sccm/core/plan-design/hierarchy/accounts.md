@@ -72,7 +72,7 @@ Configuration Manager 使用此组来授予查看软件清单所收集的文件�
 |------------|----------------------|  
 |类型和位置|此组是在具有 SMS 提供程序的每台计算机上创建的本地安全组。<br /><br /> 卸载站点时，不会自动删除此组。 必须手动将其删除。|  
 |Membership|Configuration Manager 自动管理组成员身份。 默认情况下，层次结构中的每个管理用户以及站点服务器计算机帐户是站点中每台 SMS 提供程序计算机上的“SMS 管理员”组的成员。|  
-|权限|在 WMI 控制 MMC 管理单元中设置 SMS 管理员权限。 默认情况下，授予 SMS 管理员组对 Root\SMS 命名空间的 **Enable Account** 和 **Remote Enable** 权限。 经过身份验证的用户具有**执行方法**、**提供程序写入**和**启用帐户**权限。<br /><br /> 使用远程 Configuration Manager 控制台的管理员用户均需要同时对站点服务器计算机和 SMS 提供程序计算机拥有“远程激活 DCOM”权限。 最佳方案是将这些权限授予“SMS 管理员”以简化管理，而不是将这些权限直接授予用户或组。 有关详细信息，请参阅 [Configure DCOM permissions for remote Configuration Manager consoles](../../../core/servers/manage/modify-your-infrastructure.md#BKMK_ConfigDCOMforRemoteConsole) 主题中的 [Modify your System Center Configuration Manager infrastructure](../../../core/servers/manage/modify-your-infrastructure.md) 部分。|  
+|权限|在 WMI 控制 MMC 管理单元中设置 SMS 管理员权限。 默认情况下，授予 SMS 管理员组对 Root\SMS 命名空间的 **Enable Account** 和 **Remote Enable** 权限。 经过身份验证的用户具有**执行方法**、**提供程序写入**和**启用帐户**权限。<br /><br /> 使用远程 Configuration Manager 控制台的管理员用户均需要同时对站点服务器计算机和 SMS 提供程序计算机拥有“远程激活 DCOM”权限。 最佳方案是将这些权限授予“SMS 管理员”以简化管理，而不是将这些权限直接授予用户或组。 有关详细信息，请参阅 [为远程 Configuration Manager 控制台配置 DCOM 权限](../../../core/servers/manage/modify-your-infrastructure.md#BKMK_ConfigDCOMforRemoteConsole) 主题中的 [修改你的 System Center Configuration Manager 基础结构](../../../core/servers/manage/modify-your-infrastructure.md) 部分。|  
 
 ### <a name="smssitesystemtositeserverconnectionmpltsitecode"></a>SMS_SiteSystemToSiteServerConnection_MP_&lt;sitecode\>  
  远离站点服务器的 Configuration Manager 管理点使用此组来连接到站点数据库。 此组向管理点提供对站点服务器上的收件箱文件夹和站点数据库的访问权限。  

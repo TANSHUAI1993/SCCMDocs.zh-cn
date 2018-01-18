@@ -50,7 +50,7 @@ ms.lasthandoff: 12/12/2017
 
  Configuration Manager 客户端上的默认缓存大小对于大多数操作系统映像部署而言可能不够大。 如果计划将完整映像下载到客户端缓存，必须在目标计算机上调整 Configuration Manager 客户端缓存大小以适应所部署的映像的大小。  
 
- 有关详细信息，请参阅 [Configure the Client Cache for Configuration Manager Clients](../../core/clients/manage/manage-clients.md#BKMK_ClientCache)。  
+ 有关详细信息，请参阅 [为 Configuration Manager 客户端配置客户端缓存](../../core/clients/manage/manage-clients.md#BKMK_ClientCache)。  
 
 ## <a name="task-sequence-deployments"></a>任务序列部署  
  创建的任务序列可通过下列方式之一在 Configuration Manager 客户端计算机上部署操作系统映像：  

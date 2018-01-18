@@ -83,4 +83,4 @@ ms.lasthandoff: 12/12/2017
 
 -   **预留媒体**  
 
-     在创建任务序列媒体向导的“安全”  页上，选中“启用未知计算机支持”  复选框。 有关详细信息，请参阅 [Create prestaged media with System Center Configuration Manager](../deploy-use/create-prestaged-media.md)。  
+     在创建任务序列媒体向导的“安全”  页上，选中“启用未知计算机支持”  复选框。 有关详细信息，请参阅 [使用 System Center Configuration Manager 创建预留媒体](../deploy-use/create-prestaged-media.md)。  

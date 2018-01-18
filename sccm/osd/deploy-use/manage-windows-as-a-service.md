@@ -35,7 +35,7 @@ ms.lasthandoff: 12/12/2017
 ##  <a name="BKMK_Prerequisites"></a> 先决条件  
  要在 Windows 10 维护服务仪表板中查看数据，必须执行以下操作：  
 
--   Windows 10 计算机必须搭配使用 Configuration Manager 软件更新和 Windows Server Update Services (WSUS) 以进行软件更新管理。 当计算机使用适用于企业的 Windows 更新（或 Windows 预览体验）进行软件更新管理时，将不在 Windows 10 维护服务计划中评估计算机。 有关详细信息，请参阅 [Integration with Windows Update for Business in Windows 10](../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md)。  
+-   Windows 10 计算机必须搭配使用 Configuration Manager 软件更新和 Windows Server Update Services (WSUS) 以进行软件更新管理。 当计算机使用适用于企业的 Windows 更新（或 Windows 预览体验）进行软件更新管理时，将不在 Windows 10 维护服务计划中评估计算机。 有关详细信息，请参阅 [在 Windows 10 中与 Windows Update for Business 集成](../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md)。  
 
 -   必须在软件更新点和站点服务器上安装具有 [修补程序 3095113](https://support.microsoft.com/kb/3095113) 的 WSUS 4.0。 这将添加“升级”软件更新分类。 有关详细信息，请参阅[软件更新的先决条件](../../sum/plan-design/prerequisites-for-software-updates.md)。  
 

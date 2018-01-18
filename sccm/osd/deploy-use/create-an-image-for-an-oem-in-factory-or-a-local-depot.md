@@ -48,7 +48,7 @@ ms.lasthandoff: 12/12/2017
 -   **仅媒体和 PXE（隐藏）**  
 
 ## <a name="create-the-prestaged-media"></a>创建预留媒体  
- 创建要发送到的 OEM 或本地 depot 的预留媒体文件。 有关详细信息，请参阅 [Create prestaged media with System Center Configuration Manager](create-prestaged-media.md)。  
+ 创建要发送到的 OEM 或本地 depot 的预留媒体文件。 有关详细信息，请参阅 [使用 System Center Configuration Manager 创建预留媒体](create-prestaged-media.md)。  
 
 ## <a name="send-the-prestaged-media-file-to-the-oem-or-local-depot"></a>将预留媒体文件发送到 OEM 或本地 depot  
  将该媒体发送到 OEM 或本地 depot 以预留计算机。 预留媒体文件应用于计算机上已格式化的硬盘。  
