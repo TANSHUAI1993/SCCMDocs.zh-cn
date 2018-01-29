@@ -15,6 +15,7 @@
 ### [管理 Long-Term Servicing Branch](understand/manage-the-ltsb.md)
 ### [将 Long-Term Servicing Branch 升级到 Current Branch](understand/convert-to-current-branch.md)
 ##  [我应该使用 Configuration Manager 的哪一个分支](understand/which-branch-should-i-use.md)
+##  [服务型 Configuration Manager 和 Windows](understand/configuration-manager-and-windows-as-service.md)
 ##  [扩展互操作性客户端](understand/interoperability-client.md)
 ##  [System Center Configuration Manager 授权](understand/learn-more-editions.md)
 ##  [使用云服务](understand/use-cloud-services.md)
@@ -106,12 +107,13 @@
 
 <!-- Only show the current plus three, i.e., four total) -->
 ##   [技术预览](get-started/technical-preview.md)
+###  [1801 中的功能](get-started/capabilities-in-technical-preview-1801.md)
 ###  [1712 中的功能](get-started/capabilities-in-technical-preview-1712.md)
 ###  [1711 中的功能](get-started/capabilities-in-technical-preview-1711.md)
 ###  [1710 中的功能](get-started/capabilities-in-technical-preview-1710.md)
-###  [1709 中的功能](get-started/capabilities-in-technical-preview-1709.md)
 
 <!-- No longer in support
+###  [Capabilities in 1709](get-started/capabilities-in-technical-preview-1709.md)
 ###  [Capabilities in 1708](get-started/capabilities-in-technical-preview-1708.md)
 ###  [Capabilities in 1707](get-started/capabilities-in-technical-preview-1707.md)
 ###  [Capabilities in 1706](get-started/capabilities-in-technical-preview-1706.md)
