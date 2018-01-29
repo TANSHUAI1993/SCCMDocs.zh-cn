@@ -7,11 +7,12 @@ ms.date: 2/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 5d5d6273-0d8a-43c7-865a-cdb1736dcae3
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
@@ -44,7 +45,7 @@ Configuration Manager 管理用户使用 SMS 提供程序访问存储在数据�
 > [!IMPORTANT]  
 >  当承载站点的 SMS 提供程序的每台计算机都脱机时，Configuration Manager 控制台无法连接到该站点的数据库。  
 
- 若要了解如何管理 SMS 提供程序，请参阅 [Modify your System Center Configuration Manager infrastructure](../../../core/servers/manage/modify-your-infrastructure.md#BKMK_ManageSMSprovider) 中的 [Manage the SMS Provider](../../../core/servers/manage/modify-your-infrastructure.md)。  
+ 若要了解如何管理 SMS 提供程序，请参阅 [修改你的 System Center Configuration Manager 基础结构](../../../core/servers/manage/modify-your-infrastructure.md) 中的 [管理 SMS 提供程序](../../../core/servers/manage/modify-your-infrastructure.md#BKMK_ManageSMSprovider)。  
 
 ## <a name="prerequisites-to-install-the-sms-provider"></a>要安装 SMS 提供程序的先决条件  
 
