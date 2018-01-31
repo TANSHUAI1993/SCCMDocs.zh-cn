@@ -7,11 +7,12 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-osd
+ms.technology:
+- configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: e327ce38-6c07-4a27-b6eb-7e5bf74ed04b
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
@@ -25,7 +26,7 @@ ms.lasthandoff: 12/12/2017
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-当单一层次结构中的不同 System Center Configuration Manager 站点使用不同版本时，某些 Configuration Manager 功能不可用。 通常，无法在站点上或通过运行较低版本的客户端访问 Configuration Manager 的较新版本中的功能。 有关详细信息，请参阅 [Interoperability between different versions of System Center Configuration Manager](../../core/plan-design/hierarchy/interoperability-between-different-versions.md)。  
+当单一层次结构中的不同 System Center Configuration Manager 站点使用不同版本时，某些 Configuration Manager 功能不可用。 通常，无法在站点上或通过运行较低版本的客户端访问 Configuration Manager 的较新版本中的功能。 有关详细信息，请参阅 [System Center Configuration Manager 不同版本之间的互操作性](../../core/plan-design/hierarchy/interoperability-between-different-versions.md)。  
 
  在升级层次结构中的顶层站点和升级层次结构中运行具有较低版本的 Configuration Manager 的其他站点时，请考虑以下事项：  
 

@@ -7,12 +7,13 @@ ms.date: 3/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ec976930-7467-4d3c-b33c-991bf408a74a
-caps.latest.revision: "10"
-caps.handback.revision: "0"
+caps.latest.revision: 
+caps.handback.revision: 
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
@@ -87,7 +88,7 @@ ms.lasthandoff: 01/04/2018
 
         -   对于 Configuration Manager2007 SP2 源站点，此帐户需要对所有源站点对象具有“读取”权限。  
 
-        -   对于 System Center 2012 Configuration Manager 或 System Center Configuration Manager 源站点，此帐户需要对所有源站点对象具有“读取”权限，可通过使用基于角色的管理向帐户授予此权限。 有关如何使用基于角色的管理的信息，请参阅 [Fundamentals of role-based administration for System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md)。  
+        -   对于 System Center 2012 Configuration Manager 或 System Center Configuration Manager 源站点，此帐户需要对所有源站点对象具有“读取”权限，可通过使用基于角色的管理向帐户授予此权限。 有关如何使用基于角色的管理的信息，请参阅 [System Center Configuration Manager 的基于角色的管理基础](../../core/understand/fundamentals-of-role-based-administration.md)。  
 
     -   **源站点数据库帐户：** 此帐户用于访问源站点的 SQL Server 数据库，并需要源站点数据库的 **Connect**、 **Execute**和 **Select** 权限。  
 
@@ -114,7 +115,7 @@ ms.lasthandoff: 01/04/2018
 
      对于每个源站点，只会共享在使用 FQDN 配置的站点系统服务器上安装的分发点。  
 
-     此外，要共享 System Center 2012 Configuration Manager 或 System Center Configuration Manager 源站点中的分发点，“源站点帐户”（此帐户访问源站点服务器的 SMS 提供程序）必须具有对源站点上“站点”对象的“修改”权限。 通过使用基于角色的管理来向帐户授予此权限。 有关如何使用基于角色的管理的信息，请参阅 [Fundamentals of role-based administration for System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md)。  
+     此外，要共享 System Center 2012 Configuration Manager 或 System Center Configuration Manager 源站点中的分发点，“源站点帐户”（此帐户访问源站点服务器的 SMS 提供程序）必须具有对源站点上“站点”对象的“修改”权限。 通过使用基于角色的管理来向帐户授予此权限。 有关如何使用基于角色的管理的信息，请参阅 [System Center Configuration Manager 的基于角色的管理基础](../../core/understand/fundamentals-of-role-based-administration.md)。  
 
 
 -   **升级或重新分配分发点：**  
@@ -123,6 +124,6 @@ ms.lasthandoff: 01/04/2018
 
     -   若要升级 Configuration Manager2007 分发点，该帐户需要拥有对 Configuration Manager2007 站点服务器上“站点”类的“读取”、“执行”和“删除”权限，才能成功删除 Configuration Manager2007 源站点中的分发点  
 
-    -   若要重新分配 System Center 2012 Configuration Manager 或 System Center Configuration Manager 分发点，该帐户必须对源站点上的“站点”对象具有“修改”权限。 通过使用基于角色的管理来向帐户授予此权限。 有关如何使用基于角色的管理的信息，请参阅 [Fundamentals of role-based administration for System Center Configuration Manager](../../core/understand/fundamentals-of-role-based-administration.md)。  
+    -   若要重新分配 System Center 2012 Configuration Manager 或 System Center Configuration Manager 分发点，该帐户必须对源站点上的“站点”对象具有“修改”权限。 通过使用基于角色的管理来向帐户授予此权限。 有关如何使用基于角色的管理的信息，请参阅 [System Center Configuration Manager 的基于角色的管理基础](../../core/understand/fundamentals-of-role-based-administration.md)。  
 
      若要成功将分发点升级或重新分配到新层次结构，为源层次结构中用于管理分发点的站点上的客户端请求配置的端口必须与为将用于管理分发点的目标站点上的客户端请求配置的端口匹配。 有关客户端请求端口的信息，请参阅[如何在 System Center Configuration Manager 中配置客户端通信端口](../../core/clients/deploy/configure-client-communication-ports.md)。  

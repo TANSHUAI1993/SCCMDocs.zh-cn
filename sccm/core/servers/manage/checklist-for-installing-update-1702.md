@@ -7,11 +7,12 @@ ms.date: 06/06/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b587779e-1bd3-4ee3-8146-8e31f53499bd
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mestew
 ms.author: mstewart
 manager: angrobe
@@ -96,7 +97,7 @@ ms.lasthandoff: 12/20/2017
 
 **查看站点和层次结构状态，并确认没有未解决的问题：** 更新站点之前，请解决远程计算机上安装的站点服务器、站点数据库服务器和站点系统角色的所有操作问题。 由于现有的操作问题，站点更新可能会失败。
 
-有关详细信息，请参阅 [Use alerts and the status system for System Center Configuration Manager](/sccm/core/servers/manage/use-alerts-and-the-status-system)。
+有关详细信息，请参阅 [使用 System Center Configuration Manager 的警报和状态系统](/sccm/core/servers/manage/use-alerts-and-the-status-system)。
 
 **查看站点之间的文件和数据复制：**   
 确保站点之间的文件和数据库复制正常运行并且处于最新状态。 延迟或积压工作可能会阻止顺利、成功更新。

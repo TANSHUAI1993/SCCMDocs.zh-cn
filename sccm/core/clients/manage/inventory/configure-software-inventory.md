@@ -7,12 +7,13 @@ ms.date: 01/03/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: f86559de-092a-4ce8-9b43-5d7530e0b763
-caps.latest.revision: "5"
-caps.handback.revision: "0"
+caps.latest.revision: 
+caps.handback.revision: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
@@ -44,7 +45,7 @@ ms.lasthandoff: 01/04/2018
 
 7.  配置所需的客户端设置。 [关于 System Center Configuration Manager 中的客户端设置](../../../../core/clients/deploy/about-client-settings.md#software-inventory)主题中的[软件清单](../../../../core/clients/deploy/about-client-settings.md)部分中有客户端设置的清单。  
 
- 当客户端计算机下一次下载客户端策略时，将使用这些设置对它们进行配置。 要为单个客户端启动策略检索，请参阅 [How to manage clients in System Center Configuration Manager](../../../../core/clients/manage/manage-clients.md)。  
+ 当客户端计算机下一次下载客户端策略时，将使用这些设置对它们进行配置。 要为单个客户端启动策略检索，请参阅 [如何在 System Center Configuration Manager 中管理客户端](../../../../core/clients/manage/manage-clients.md)。  
 
  > [!TIP]  
         >   Inventoryprovider.log 中的错误代码 80041006 表示 WMI 提供程序内存不足。 即已达到提供程序的内存配额限制，清单提供程序无法继续工作。
