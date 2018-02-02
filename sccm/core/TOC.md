@@ -36,8 +36,10 @@
 ###  [What's new in version 1606](plan-design/changes/whats-new-in-version-1606.md)
 ###  [What's new in version 1602](plan-design/changes/whats-new-in-version-1602.md)
 -->
-###  [已删除和已弃用的功能](plan-design/changes/removed-and-deprecated-features.md)
-
+###  [已删除和已弃用的支持](plan-design/changes/deprecated/removed-and-deprecated.md)
+#### [已删除和已弃用的功能](plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)
+#### [对站点服务器已删除和已弃用的支持](plan-design/changes/deprecated/removed-and-deprecated-server.md)
+#### [对客户端已删除和已弃用的支持](plan-design/changes/deprecated/removed-and-deprecated-client.md)
 ##   [支持的配置](plan-design/configs/supported-configurations.md)
 ###  [大小和扩展数量](plan-design/configs/size-and-scale-numbers.md)
 ###  [站点和站点系统先决条件](plan-design/configs/site-and-site-system-prerequisites.md)

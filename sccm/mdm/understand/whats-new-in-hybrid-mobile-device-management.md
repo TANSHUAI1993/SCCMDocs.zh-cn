@@ -7,18 +7,19 @@ ms.date: 01/04/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-hybrid
+ms.technology:
+- configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 243daf8626e329214ce1b94f109d19773bbc57c5
-ms.sourcegitcommit: 2da6b06818371e93f28e36cadf3a154d50ce5bf4
+ms.openlocfilehash: 04ed2ac1abe54c3b8c7c86f210b35f5f52d80ef6
+ms.sourcegitcommit: c432624b8816f59d51a3c8ef68960ed4099d9124
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager 和 Microsoft Intune 的混合移动设备管理中的新增功能
 
@@ -40,6 +41,17 @@ ms.lasthandoff: 01/05/2018
 |**Microsoft Intune 中的新增功能** | 一般情况下，此类别下列出的所有功能都应适用于所有 Configuration Manager 版本。 这包括 System Center 2012 R2 Configuration Manager 版本，因为这些功能仅需要 Intune 服务，不需要 Configuration Manager 中的其他功能。|
 |**Configuration Manager Technical Preview 中的新增功能**| 此类别下列出的所有功能仅适用于指定的 Technical Preview 版本。 若要试用这些功能，必须安装功能说明中指定的 Technical Preview 版本。 有关详细信息，请参阅 [System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)。|
 |**Configuration Manager (Current Branch) 中的新增功能**| 此类别下列出的所有功能仅适用于指定的 Configuration Manager (Current Branch) 版本，例如版本 1511 或 1602。 如果要为混合部署使用较旧版本的 Configuration Manager，则必须升级到功能说明中指定的 Configuration Manager (Current Branch) 版本。 有关详细信息，请参阅[升级到 System Center Configuration Manager](../../core/servers/deploy/install/upgrade-to-configuration-manager.md)。|
+
+
+## <a name="january-2018"></a>2018 年 1 月
+
+### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
+
+- **适用于 Windows 10 的公司门户应用中提供远程锁定** <!--676506-->    
+  最终用户现在可以从适用于 Windows 10 的公司门户应用远程锁定他们的设备。 此功能将不会为他们当前使用的本地设备显示。
+
+- **为适用于 Windows 10 的公司门户应用符合性问题提供了更轻松的解决方案** <!--676546-->    
+  使用 Windows 设备的最终用户将能够点击公司门户应用中不符合的原因。 在可能的情况下，这会将用户直接带到设置应用中的正确位置来解决此问题。
 
 ## <a name="december-2017"></a>2017 年 12 月
 
@@ -114,6 +126,11 @@ ms.lasthandoff: 01/05/2018
 
 
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能  
+
+- **帮助用户使用适用于 Android 的公司门户应用** <!-- 1573324, 1573150, 1558616, 1564878 -->      
+  适用于 Android 的公司门户应用已为最终用户添加说明，帮助他们了解和自行解决（如有可能）新的用例。
+    - 如果最终用户已达到他们可添加的最大设备数，他们将被引导至 [Azure Active Directory 门户](https://account.activedirectory.windowsazure.com/r/#/profile)以移除设备。
+    - 为最终用户提供要遵守的步骤以帮助他们[修复 Samsung Knox 设备上的激活错误](https://go.microsoft.com/fwlink/?linkid=859718)或者[关闭节能模式](https://docs.microsoft.com/intune-user-help/power-saving-mode-android)。 如果这些解决方案都不能解决他们的问题，我们将提供如何[将日志提交到 Microsoft](https://docs.microsoft.com/intune-user-help/send-logs-to-microsoft-android) 的说明。
 
 - **Android 公司门户中的设备安装进度指示器**<!--1565657-->    
   适用于 Android 的公司门户应用在用户注册设备时显示设备安装进度指示器。 指示器显示新状态，从“安装设备...”开始，然后“注册设备...”，接下来“完成注册设备...”，最后“完成安装设备...”。  
