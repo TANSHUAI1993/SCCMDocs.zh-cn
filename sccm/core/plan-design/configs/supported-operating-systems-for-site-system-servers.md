@@ -7,19 +7,20 @@ ms.date: 06/27/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 17905b4c-3895-4ad4-a69c-5e0d0fc5a8c3
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: e7606e087e2540b49e8aa23c09d09831651ee48b
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 03618b541f8f00ccab69fa4ebcef81ffc146010c
+ms.sourcegitcommit: 645cd5a324bdd299906efa27eaca5885eafc9e9c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="supported-operating-systems-for-system-center-configuration-manager-site-system-servers"></a>System Center Configuration Manager 站点系统服务器支持的操作系统
 
@@ -29,7 +30,7 @@ ms.lasthandoff: 12/04/2017
 本文详细介绍了可用于托管 System Center Configuration Manager 站点或站点系统角色的 Windows 版本。
 
 
-将本主题中的信息和以下文章中的信息一起使用：
+将本文中的信息和以下文章中的信息一起使用：
 -   [用于 Configuration Manager 的推荐硬件](../../../core/plan-design/configs/recommended-hardware.md)
 -   [用于 Configuration Manager 的站点和站点系统先决条件](../../../core/plan-design/configs/site-and-site-system-prerequisites.md)
 -   [用于 Configuration Manager 的大小和扩展数量](../../../core/plan-design/configs/size-and-scale-numbers.md)
@@ -271,16 +272,18 @@ ms.lasthandoff: 12/04/2017
 
     -   分发点支持多种不同的配置，每种配置都有不同的要求。 在某些情况下，这些配置不仅支持在服务器上安装，而且支持在客户端操作系统上安装。 有关分发点可用选项的详细信息，请参阅[为 System Center Configuration Manager 管理内容和内容基础结构](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。  
 
-## <a name="windows-8-x86-x64-professional-and-enterprise"></a>Windows 8（x86、x64）：专业版和企业版
-**站点系统服务器：**  
+<!--## Windows 8 (x86, x64): Professional and Enterprise
+**Site system servers:**  
 
--   分发点  
+-   Distribution point  
 
-    -   此操作系统上的分发点不受 PXE 支持。  
+    -   Distribution points on this operating system are not supported for PXE.  
 
-    -   此操作系统版本上的分发点不支持多播。  
+    -   Distribution points on this operating system version do not support Multicast.  
 
-    -   分发点支持多种不同的配置，每种配置都有不同的要求。 在某些情况下，这些配置不仅支持在服务器上安装，而且支持在客户端操作系统上安装。 有关分发点可用选项的详细信息，请参阅[为 System Center Configuration Manager 管理内容和内容基础结构](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。  
+    -   Distribution points support several different configurations that each have different requirements. In some cases, these configurations support installation not only on servers, but on client operating systems. For more information about the options that are available for distribution points, see [Manage content and content infrastructure for System Center Configuration Manager](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+   
+    -  - -removed Jan 12,2018 sms505863-->
 
 ## <a name="windows-7-with-sp1-x86-x64-professional-enterprise-and-ultimate"></a>Windows 7 SP1（x86、x64）：专业版、企业版和旗舰版  
 **站点系统服务器：**  

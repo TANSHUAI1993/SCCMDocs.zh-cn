@@ -10,13 +10,14 @@ ms.date: 06/27/2017
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology: configmgr-sum
+ms.technology:
+- configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
-ms.openlocfilehash: e111d5abf263a90ac020aca863d495cb717154db
-ms.sourcegitcommit: 986fc2d54f7c5fa965fd4df42f4db4ecce6b79cb
+ms.openlocfilehash: e36048141400097950a7c24733f382acacb73131
+ms.sourcegitcommit: db9978135d7a6455d83dbe4a5175af2bdeaeafd8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="plan-for-software-updates-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中规划软件更新
 
@@ -25,7 +26,7 @@ ms.lasthandoff: 11/17/2017
 在 System Center Configuration Manager 生产环境中使用软件更新之前，需进行规划过程，这点十分重要。 很好地规划软件更新点基础结构对于成功的软件更新实现十分关键。
 
 ## <a name="capacity-planning-recommendations-for-software-updates"></a>软件更新的容量规划建议  
- 你可以使用下列建议作为基准，可帮助你确定适合于你的组织的软件更新容量规划的信息。 实际容量要求可能会与本主题中列出的建议有所不同，具体取决于以下标准：你的特定网络环境、用于承载软件更新点站点系统的硬件、安装的客户端的数量，以及服务器上安装的站点系统角色。  
+ 你可以使用下列建议作为基准，可帮助你确定适合于你的组织的软件更新容量规划的信息。 实际容量要求可能会与本文中列出的建议有所不同，具体取决于以下标准：你的特定网络环境、用于承载软件更新点站点系统的硬件、安装的客户端的数量，以及服务器上安装的站点系统角色。  
 
 ###  <a name="BKMK_SUMCapacity"></a> 软件更新点的容量规划  
  受支持客户端的数量取决于在软件更新点上运行的 Windows Server Update Services (WSUS) 版本，并且还取决于软件更新点站点系统角色是否与另一站点系统角色并存：  
@@ -77,7 +78,7 @@ ms.lasthandoff: 11/17/2017
 
 ###  <a name="BKMK_SUPSwitching"></a> 软件更新点切换  
 > [!NOTE]
-> 从版本 1702 开始，客户端使用边界组查找新的软件更新点，并在其当前软件更新点不再可用时回退并查找新的软件更新点。 可以向不同的边界组添加各个软件更新点，以控制客户端可以找到哪些服务器。 有关详细信息，请参阅[配置边界组](/sccm/core/servers/deploy/configure/boundary-groups)主题中的[软件更新点](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points)。
+> 从版本 1702 开始，客户端使用边界组查找新的软件更新点，并在其当前软件更新点不再可用时回退并查找新的软件更新点。 可以向不同的边界组添加各个软件更新点，以控制客户端可以找到哪些服务器。 有关详细信息，请参阅[配置边界组](/sccm/core/servers/deploy/configure/boundary-groups)一文中的[软件更新点](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points)。
 
 如果站点上有多个软件更新点，然后一个软件更新点失败或变得不可用，则客户端将连接到其他软件更新点并继续扫描最新的软件更新。 为客户端第一次分配了软件更新点后，会将该客户端一直分配给该软件更新点，除非它无法在该软件更新点上扫描软件更新。  
 
@@ -181,7 +182,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="BKMK_ConfigureFirewalls"></a> 配置防火墙  
  Configuration Manager 管理中心站点上的软件更新与软件更新点上运行的 WSUS 进行通信，这反过来会与同步源进行通信以同步软件更新元数据。 子站点上的软件更新点与父站点上的软件更新点通信。 如果主站点中有多个软件更新点，则其他软件更新点必须与安装在该站点中的第一个软件更新点（默认的软件更新点）通信。  
 
- 为了接受 WSUS 在以下方案中使用的 HTTP 或 HTTPS 端口，可能需要配置防火墙：当 Configuration Manager 软件更新点与 Internet 之间具有企业防火墙；当你具有软件更新点及其上游同步源；当你具有其他的软件更新点。 至 Microsoft 更新的连接始终配置为针对 HTTP 使用端口 80，针对 HTTPS 使用端口 443。 你可以将自定义端口用于从子站点中软件更新点上运行的 WSUS 至主站点中软件更新点上运行的 WSUS 的连接。 当安全策略不允许连接时，必须使用导出和导入同步方法。 有关详细信息，请参阅本主题中的 [同步源](#BKMK_SyncSource) 部分。 有关 WSUS 使用的端口的详细信息，请参阅[如何确定 System Center Configuration Manager 中 WSUS 使用的端口设置](../get-started/install-a-software-update-point.md#wsus-settings)。  
+ 为了接受 WSUS 在以下方案中使用的 HTTP 或 HTTPS 端口，可能需要配置防火墙：当 Configuration Manager 软件更新点与 Internet 之间具有企业防火墙；当你具有软件更新点及其上游同步源；当你具有其他的软件更新点。 至 Microsoft 更新的连接始终配置为针对 HTTP 使用端口 80，针对 HTTPS 使用端口 443。 你可以将自定义端口用于从子站点中软件更新点上运行的 WSUS 至主站点中软件更新点上运行的 WSUS 的连接。 当安全策略不允许连接时，必须使用导出和导入同步方法。 有关详细信息，请参阅本文中的[同步源](#BKMK_SyncSource)部分。 有关 WSUS 使用的端口的详细信息，请参阅[如何确定 System Center Configuration Manager 中 WSUS 使用的端口设置](../get-started/install-a-software-update-point.md#wsus-settings)。  
 
 #### <a name="restrict-access-to-specific-domains"></a>限制对特定域的访问  
  如果组织不允许向活动软件更新点与 Internet 之间的防火墙上的所有地址开放端口和协议，则可以限制访问以下域，以便 WSUS 和自动更新可以与 Microsoft 更新通信：  
@@ -323,5 +324,9 @@ ms.lasthandoff: 11/17/2017
 
 在 Configuration Manager 的以前版本中，当 Windows 8 和更高版本的计算机挂起重新启动时，以及当使用 Windows 电源选项（而不是从重新启动对话框）关闭或重新启动计算机时，计算机重新启动后“重新启动”对话框仍然保留并且计算机在配置的截止时间仍将需要重新启动。
 
+
 ## <a name="next-steps"></a>后续步骤
 规划软件更新之后，请参阅[准备软件更新管理](../get-started/prepare-for-software-updates-management.md)。
+
+**获取详细信息：** <br/>
+[服务型 Configuration Manager 和服务型 Windows 的基础知识](/sccm/core/understand/configuration-manager-and-windows-as-service.md)

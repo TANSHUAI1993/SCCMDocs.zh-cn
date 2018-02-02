@@ -3,32 +3,35 @@ title: "为托管的电脑管理对 O365 服务的访问"
 titleSuffix: Configuration Manager
 description: "了解如何为由 System Center Configuration Manager 管理的电脑配置条件访问。"
 ms.custom: na
-ms.date: 12/19/2017
+ms.date: 01/10/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-hybrid
+ms.technology:
+- configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 34024741-edfa-4088-8599-d6bafc331e62
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: bf38358d12c2617d924fe59bf7bf7457dfa95143
-ms.sourcegitcommit: 6c2aa79924c0e7fc64ef5e9003498fc00c349db9
+ms.openlocfilehash: e1f50ea65236473f059ded6ef85c37646e929e53
+ms.sourcegitcommit: e121d8d3dd82b9f2dde2cb5206cbee602ab8e107
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="manage-access-to-o365-services-for-pcs-managed-by-system-center-configuration-manager"></a>管理对由 System Center Configuration Manager 管理的电脑的 O365 服务的访问
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-从 Configuration Manager 的版本 1602 开始，可以为 System Center Configuration Manager 管理的电脑配置条件访问。  
+本文介绍如何为 Configuration Manager 管理的电脑配置条件访问。  
 
-> [!Tip]  
-> 此功能在版本 1602 中首次引入，属于[预发行功能](/sccm/core/servers/manage/pre-release-features)。 从版本 1702 开始，此功能不再属于预发行功能。
+<!--
+ >> [!Tip]  
+> This feature was first introduced in version 1602 as a [pre-release feature](/sccm/core/servers/manage/pre-release-features). Beginning with version 1702, this feature is no longer a pre-release feature.
+-->
 
 有关使用 Microsoft Intune 为注册设备和托管设备配置条件访问的信息，请参阅[在 System Center Configuration Manager 中管理服务访问权限](../../protect/deploy-use/manage-access-to-services.md)。 本文还介绍了已加入域但未对符合性进行评估的设备。
 
@@ -45,16 +48,16 @@ ms.lasthandoff: 12/21/2017
 
 ## <a name="supported-windows-servers"></a>支持的 Windows 服务器
 
--   2008 R2
--   2012
--   2012 R2
--   2016
+-   Windows Server 2008 R2
+-   Windows Server 2012
+-   Windows Server 2012 R2
+-   Windows Server 2016
 
     > [!IMPORTANT]
-    > 对于可能有多个用户同时登录的 Windows 服务器，必须将相同的条件访问策略部署到所有登录用户。
+    > 对于可能有多个用户同时登录的 Windows Servers，可将相同的条件访问策略部署到所有登录用户。
 
 ## <a name="configure-conditional-access"></a>配置条件访问  
- 若要设置条件访问，必须先创建符合性策略并配置条件访问策略。 为电脑配置条件访问策略时，可以要求电脑符合符合性策略，以便能够访问 Exchange Online 和 SharePoint Online 服务。  
+ 若要设置条件访问，必须先创建符合性策略并配置条件访问策略。 为电脑配置条件访问策略时，可以要求电脑是合规的，以便能够访问 Exchange Online 和 SharePoint Online 服务。  
 
 ### <a name="prerequisites"></a>先决条件  
 
@@ -81,7 +84,7 @@ ms.lasthandoff: 12/21/2017
 
 -   **需要在 Azure Active Directory 中注册：**此规则检查用户的设备是否在加入到 Azure AD 的地方运行，如果不是，则在 Azure AD 中自动注册该设备。 仅 Windows 8.1 支持自动注册。 对于 Windows 7 PC，请部署 MSI 来执行自动注册。 有关相关信息，请参阅[将设备自动注册到 Azure Active Directory](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)  
 
--   **在晚于特定天数的截止日期之前安装所有必需的更新：**此规则检查用户的设备是否在截止日期及你指定的宽限期内具有所需的所有更新（在所需的自动更新规则中指定），并自动安装任何挂起的所需更新。  
+-   **所有必需更新在特定天数后的截止时间内安装**：指定宽限期的值，宽限期自用户设备上的必需更新的部署截止日期算起。 添加此规则还会自动安装所有挂起的必需更新。 指定“必需的自动更新”规则中的必需更新。   
 
 -   **需要使用 BitLocker 驱动器加密功能：**此规则检查设备的主驱动器（例如 C:\\）是否使用 BitLocker 进行了加密。 如果主驱动器上未启用 Bitlocker 加密，则将阻止设备对电子邮件和 SharePoint 服务的访问。  
 
@@ -134,7 +137,7 @@ ms.lasthandoff: 12/21/2017
 
 5.  将 Windows 电脑要求设置为**设备必须是合规的选项**。  
 
-6.  在“目标组”下，单击“修改”以选择将应用策略的 Azure Active Directory 安全组。  
+6.  在“目标组”下，单击“修改”以选择要应用策略的 Azure Active Directory 安全组。  
 
     > [!NOTE]  
     >  同一安全用户组应用于部署合规性策略，目标组应用于条件访问策略。  

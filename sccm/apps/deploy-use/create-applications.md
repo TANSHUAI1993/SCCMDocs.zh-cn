@@ -7,20 +7,21 @@ ms.date: 11/07/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-app
+ms.technology:
+- configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
-caps.latest.revision: "14"
-caps.handback.revision: "0"
+caps.latest.revision: 
+caps.handback.revision: 
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: f680b692f3ae92fb8a5e8b6640ed053ceedba436
-ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
+ms.openlocfilehash: d7073b397cdf7b233f8264bd07019303a77a610f
+ms.sourcegitcommit: 2f6a13d208dcd8aa59c88f107791f9c4388e78e2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-applications-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 创建应用程序
 
@@ -274,7 +275,7 @@ System Center Configuration Manager 应用程序具有将软件部署到设备�
 
 下表包含可用于编写自己的应用程序检测脚本的 Microsoft Visual Basic (VB) 示例脚本。  
 
-|Visual Basic 示例脚本|描述|  
+|Visual Basic 示例脚本|说明|  
 |--------------------------------|-----------------|  
 |**WScript.Quit(1)**|此脚本返回不为零的退出代码，这表示它未成功运行。 在这种情况下，应用程序检测状态为未知。|  
 |**WScript.StdErr.Write "Script failed"**<br /><br /> **WScript.Quit(0)**|此脚本返回零退出代码，但是 STDERR 的值不为空，这表示脚本未成功运行。 在这种情况下，应用程序检测状态为未知。|  
@@ -337,7 +338,16 @@ System Center Configuration Manager 应用程序具有将软件部署到设备�
         > [!IMPORTANT]  
         >  如果“最大允许运行时间”  比计划维护时段长，则可能会发生冲突。 如果用户设置的最大运行时间超过了任何可用维护时段，该部署类型将不会运行。  
 
-2.  **估计安装时间(分钟)** - 指定安装部署类型将需要的估计时间。 将向软件中心的用户显示此项。  
+    -   **估计安装时间(分钟)** - 指定安装部署类型将需要的估计时间。 将向软件中心的用户显示此项。  
+
+    -   **指定特定重启行为**--指定安装后操作。 可用选项如下：  
+
+        -   **根据返回代码确定行为**--根据“返回代码”选项卡上配置的代码处理重新启动。软件中心将显示“可能需要重新启动”。  如果用户在安装期间登录，系统将进行提示，具体取决于部署的用户体验配置。  
+
+        -   **无特定操作**--安装后无需重新启动。  软件中心将报告无需重新启动。  
+        -   **软件安装计划可能强制设备重启**--Configuration Manager 不会控制或发起重新启动，但实际安装时可能发现此情况，而不发出警告。  安装程序发起重新启动时，使用此设置阻止 Configuration Manager 报告安装失败。  软件中心将显示“可能需要重新启动”。  
+
+        -   **Configuration Manager 客户端强制重启设备**--Configuration Manager 客户端在成功安装后会强制重启设备。  软件中心将报告需要重新启动。  如果用户在安装期间登录，系统将进行提示，具体取决于部署的用户体验配置。
 
 ## <a name="specify-requirements-for-the-deployment-type"></a>指定部署类型的要求  
 

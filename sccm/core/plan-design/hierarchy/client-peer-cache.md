@@ -7,19 +7,20 @@ ms.date: 12/07/2017
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 86cd5382-8b41-45db-a4f0-16265ae22657
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: ed1da87da42ffdbf0bb869e6a64b99e216f1b3c2
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+ms.openlocfilehash: 424f4030f2dd2a337a29d48ca831fa3a791de610
+ms.sourcegitcommit: e121d8d3dd82b9f2dde2cb5206cbee602ab8e107
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>用于 Configuration Manager 客户端的对等缓存
 
@@ -35,22 +36,22 @@ ms.lasthandoff: 01/04/2018
  -  通过客户端设置，可以使客户端能够使用对等缓存。
  -  若要将内容共享为对等缓存源，那么对等缓存客户端需满足以下条件：
     -  必须已加入域。 但是，未加入域的客户端可以获取已加入域的对等缓存源中的内容。
-    -  必须是正在查找该内容的客户端当前边界组的成员。 客户端使用回退来查找相邻边界组中的内容时，相邻边界组中的对等缓存客户端不包括在可用内容源位置的池中。 有关当前边界组和相邻边界组的详细信息，请参阅[边界组](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups##a-namebkmkboundarygroupsa-boundary-groups)。
- - Configuration Manager 客户端缓存中保留的每种类型的内容均可使用对等缓存提供给其他客户端，包括 Office 365 文件和快速安装文件。<!--SMS.500850-->
- -  对等缓存不会代替其他解决方案（如 BranchCache）的使用，而是并行工作以便提供更多选项，用于扩展传统内容部署解决方案（如分发点）。 这是一种无需依赖于 BranchCache 的自定义解决方案，因此即使不启用或不使用 Windows BranchCache，此解决方案依然可正常运作。
+    -  必须是正在查找该内容的客户端当前边界组的成员。 客户端使用回退来查找相邻边界组中的内容时，相邻边界组中的对等缓存客户端不包括在内容源位置列表中。 有关当前边界组和相邻边界组的详细信息，请参阅[边界组](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups##a-namebkmkboundarygroupsa-boundary-groups)。
+ - Configuration Manager 客户端使用对等缓存将缓存中每种类型的内容提供给其他客户端。 此内容包括 Office 365 文件和快速安装文件。<!--SMS.500850-->
+ -  对等缓存不替代 BranchCache 等其他解决方案的使用。 可结合使用对等缓存与其他解决方案，获得相较传统内容部署解决方案更丰富的方案，例如分发点。 对等缓存属于自定义解决方案，独立于 BranchCache。  如果未启用或使用 Windows BranchCache，对等缓存仍能正常发挥作用。
 
 ### <a name="operations"></a>操作
 
-将启用对等缓存的客户端设置部署到集合后，该集合的成员可以充当同一边界组中其他客户端的对等内容源：
+若要启用对等缓存，将客户端设置部署到集合。 然后，该集合的成员会充当同一边界组中其他客户端的对等内容源。
  -  充当对等内容源的客户端会将可用缓存内容列表提交到其管理点。
- -  然后，当该边界组中的下一个客户端请求该内容时，具有内容的每个对等缓存源都将作为潜在内容源返回，同时还将返回该边界组中的分发点和其他内容源位置。
- -  根据正常操作过程，查找内容的客户端将从为其提供的源池中选择其中一个内容源，然后继续尝试获取内容。
+ -  当边界组中的下一客户端请求该内容时，包含该内容且处于联机状态的每个对等缓存源返回到潜在的内容源列表中。 此列表还包括分发点及该边界组中的其他内容源位置。
+ -  按照常规进程，寻找内容的客户端从提供的列表中选择一个源。 然后，客户端尝试获取该内容。
 
 > [!NOTE]
-> 如果发生了向内容的相邻边界组的回退，则相邻边界组中的对等缓存内容源位置将不会添加到潜在内容源位置的客户端池中。  
+> 如果客户端回退到内容的相邻边界组，则相邻边界组中的对等缓存内容源位置将不会添加到潜在内容源位置的列表中。  
 
 
-虽然可以让所有客户端都加入为对等缓存源，但最佳做法还是仅选择最适合作为对等缓存源的那些客户端。  可以根据客户端的底盘类型、磁盘空间、网络连接等评估客户端的适用性。 有关可帮助选择要用于对等缓存的最佳客户端的详细信息，请参阅[这篇由 Microsoft 顾问撰写的博客](https://blogs.technet.microsoft.com/setprice/2016/06/29/pe-peer-cache-custom-reporting-examples/)。
+最佳做法是仅选择最适合的客户端作为对等缓存源。 根据底盘类型、磁盘空间和网络连接性等属性评估客户端的适用性。 有关可帮助选择要用于对等缓存的最佳客户端的详细信息，请参阅[这篇由 Microsoft 顾问撰写的博客](https://blogs.technet.microsoft.com/setprice/2016/06/29/pe-peer-cache-custom-reporting-examples/)。
 
 **对对等缓存源的有限访问权限**  
 从版本 1702 开始，当对等缓存源计算机满足以下任一条件时，对等缓存源计算机将拒绝对内容的请求：  
@@ -59,13 +60,13 @@ ms.lasthandoff: 01/04/2018
   -  磁盘 I/O 的 AvgDiskQueueLength 超过 10。
   -  该计算机没有其他可用连接。   
 
-使用 System Center Configuration Manager SDK 时，可以使用对等源功能的客户端配置服务器 WMI 类 (*SMS_WinPEPeerCacheConfig*) 配置这些设置。
+在 Configuration Manager SDK 中，使用对等源功能的客户端配置服务器 WMI 类 (SMS_WinPEPeerCacheConfig) 配置这些设置。
 
-如果计算机拒绝对内容的请求，请求计算机会继续在其可用内容源位置池中的备用源中搜索内容。   
+如果计算机拒绝对内容的请求，请求计算机会继续在可用内容源位置列表中搜索内容。   
 
 
 
-### <a name="monitoring"></a>monitoring   
+### <a name="monitoring"></a>监视   
 为了帮助了解对等缓存的使用，可以查看“客户端数据源”仪表板。 请参阅[客户端数据源仪表板](/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed#client-data-sources-dashboard)。
 
 从版本 1702 开始，可以使用以下三个报表来查看对等缓存使用。 在控制台中，转到“监视” > “报表” > “报表”。 所有报表均为一种类型的**软件分发内容**：
@@ -79,11 +80,11 @@ ms.lasthandoff: 01/04/2018
   - **已知问题：**不能从可用的参数中进行选择，而必须手动输入。 输入*边界组名称*和*拒绝类型*的值，如第一个报表所示。 例如，对于*拒绝类型*，你可以输入 *MaxCPULoad* 或 *MaxDiskIO*。
 
 3. **对等缓存源内容拒绝详细信息**：   
-  使用此报告来了解在被拒绝时所请求的内容。
+  使用此报表来了解客户端在被拒绝时所请求的内容。
 
- - **已知问题：**不能从可用的参数中进行选择，而必须手动输入。 输入在第一个报表（对等缓存源内容拒绝）中显示的*拒绝类型*值，然后输入你希望了解相关详细信息的内容源的*资源 ID*。  查找内容源的资源 ID：  
+ - **已知问题：**不能从可用的参数中进行选择，而必须手动输入。 如“对等缓存源内容拒绝”报表中所示，输入“拒绝类型”的值。 然后输入想要了解其详细信息的内容源的源 ID。  查找内容源的资源 ID：  
 
-    1. 在第二个报表（按条件的对等缓存源内容拒绝）的结果中查找显示为*对等缓存源*的计算机名称。  
+    1. 在按条件的对等缓存源内容拒绝报表的结果中查找显示为对等缓存源的计算机名称。  
     2. 接下来，转到“资产和合规性” > “设备”，然后搜索该计算机名称。 使用资源 ID 列中的值。  
 
 
@@ -92,19 +93,14 @@ ms.lasthandoff: 01/04/2018
 
 -   客户端只能传输来自其当前边界组中的对等缓存客户端中的内容。
 
--   在版本 1706 之前，客户端在其中使用对等缓存的每个站点必须使用[网络访问帐户](/sccm/core/plan-design/hierarchy/manage-accounts-to-access-content#a-namebkmknaaa-network-access-account)进行配置。 从版本 1706 开始，不再需要帐户，但有一个例外。  例外情况是：客户端使用对等缓存从软件中心获取并运行任务序列，并且该任务序列将客户端重新启动到 WinPE。  在此情况下，如果客户端处于 WinPE 中，则仍需要网络访问帐户，以便它可以访问对等缓存源以获取内容。
+-   在版本 1706 之前，客户端在其中使用对等缓存的每个站点必须使用[网络访问帐户](/sccm/core/plan-design/hierarchy/manage-accounts-to-access-content#a-namebkmknaaa-network-access-account)进行配置。 从版本 1706 开始，不再需要帐户，但有一个例外。  例外情况是：启用对等缓存的客户端从软件中心运行任务序列，并且该任务序列将重新启动到启动映像。 在此方案中，客户端仍需要网络访问帐户。 客户端位于 Windows PE 中时，它使用网络访问帐户从对等缓存源获取内容。
 
-    在需要时，对等缓存源计算机使用网络访问帐户对来自对等方的下载请求进行身份验证，且该帐户仅需要域用户权限即可实现此目的。
+    如有必要，对等缓存源计算机将使用网络访问帐户对来自对等项的下载请求进行身份验证。 为此，此帐户只需域用户权限。
 
--   因为对等缓存内容源的当前边界由该客户端上次提交的硬件清单决定，所以漫游到网络位置且在其他边界组中的客户端可能仍被视为其以前的边界组成员，以符合对等缓存的目的。 这可能导致提供给客户端的对等缓存内容源不在其直接网络位置中。 建议排除可能有此配置的客户端作为对等缓存源加入。
+-   客户端的上一次硬件清单提交可确定对等缓存内容源的当前边界。 出于对等缓存的目的，漫游到其他边界组的客户端可能仍是其以前边界组的成员。 此行为可能导致提供给客户端的对等缓存内容源不在其直接网络位置中。 建议排除可能有此配置的客户端作为对等缓存源加入。
+-    从版本 1706 开始，对等缓存客户端首先验证对等缓存内容源是否处于联机状态，然后再尝试下载内容。 <!--sms.498675-->
 
 ## <a name="to-configure-client-peer-cache-client-settings"></a>配置客户端对等缓存客户端设置
-1.  在 Configuration Manager 控制台中，转到“管理” > “客户端设置”，然后打开要使用的设备客户端设置对象。 还可以修改默认客户端设置对象。
-2.  从可用设置的列表中，选择“客户端缓存设置”。
-3.  将“在完整的 OS 中启用 Configuration Manager 客户端以共享内容”设置为“是”。
-4.  配置以下设置以定义要用于对等缓存的端口：  
-  -  **初始网络广播的端口**
-  -  **启用 HTTPS，以进行客户端对等通信**
-  -  **用于从对等中下载内容的端口 (HTTP/HTTPS)**
+有关配置客户端设置的信息，请参阅[客户端缓存设置](/sccm/core/clients/deploy/about-client-settings#client-cache-settings)。 有关详细信息，请参阅[如何配置客户端设置](/sccm/core/clients/deploy/configure-client-settings)。
 
-在启用了对等缓存的每台计算机上，如果 Windows 防火墙正在使用中，则 Configuration Manager 会将其配置为允许使用所配置的端口。
+在使用 Windows 防火墙且启用了对等缓存的客户端上，Configuration Manager 会配置在客户端设置中指定的防火墙端口。

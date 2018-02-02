@@ -7,19 +7,20 @@ ms.date: 1/3/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d39c201f-d364-4e7b-bde4-faa76d747f33
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: fab460a18ce3729fbffa0228ad2b861b70b84e12
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: ca1c62fc6034b33380d9075c4f5430954537781f
+ms.sourcegitcommit: e121d8d3dd82b9f2dde2cb5206cbee602ab8e107
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="install-the-system-center-configuration-manager-console"></a>安装 System Center Configuration Manager 控制台
 
@@ -44,9 +45,9 @@ ms.lasthandoff: 12/04/2017
 
 2.  请转到以下位置之一：  
 
-    -   在站点服务器上，转到 **<*Configuration Manager 站点服务器安装路径*>\Tools\ConsoleSetup**。  
+    -   在站点服务器上，转到 <Configuration Manager 站点服务器安装路径>\Tools\ConsoleSetup。  
 
-    -   从 Configuration Manager 源媒体中，浏览到 **<*Configuration Manager 源文件*>\Smssetup\Bin\I386**。  
+    -   从 Configuration Manager 源媒体中，浏览到 <Configuration Manager 源文件>\Smssetup\Bin\I386。  
 
     > [!TIP]  
     >  最佳做法是，从站点服务器而不是从 System Center Configuration Manager 安装媒体启动 Configuration Manager 控制台安装。 站点服务器安装方法会将 Configuration Manager 控制台安装文件和站点的支持语言包复制到 **Tools\ConsoleSetup** 子文件夹中。 从安装媒体中安装 Configuration Manager 控制台始终会安装英文版，与站点服务器上支持的语言或在计算机上运行的操作系统的语言设置无关。 你可以根据需要将 **ConsoleSetup** 文件夹复制到替代位置以启动安装。
@@ -70,16 +71,16 @@ ms.lasthandoff: 12/04/2017
 
 1.  在安装 Configuration Manager 控制台的服务器上，打开命令提示符窗口并转到以下位置之一：  
 
-    -   **<*Configuration Manager 站点服务器安装路径*>\Tools\ConsoleSetup**  
+    -   <Configuration Manager 站点服务器安装路径>\Tools\ConsoleSetup  
 
-    -   **<*Configuration Manager 安装媒体*>\SMSSETUP\BIN\I386**  
+    -   <Configuration Manager 安装媒体>\SMSSETUP\BIN\I386  
 
     > [!TIP]  
     >  从命令提示符中安装 Configuration Manager 控制台时，会始终安装英文版，与在计算机上运行的操作系统的语言设置无关。 若要以非英语语言安装 Configuration Manager 控制台，则必须[使用安装向导安装 Configuration Manager 控制台](#to-install-the-configuration-manager-console-by-using-the-setup-wizard)。  
 
 2.  在命令提示符处，键入“consolesetup.exe”。 从以下命令行选项中进行选择。  
 
-|  命令行选项     | 描述     |
+|  命令行选项     | 说明     |
   | :------------- | :------------- |
   |/q|以无人参与的方式安装 Configuration Manager 控制台。 使用此选项时，需要 **EnableSQM**、 **TargetDir**和 **DefaultSiteServerName** 选项。|  
   |/uninstall|卸载 Configuration Manager 控制台。 与 **/q** 选项配合使用时，必须首先指定此选项。|  
@@ -93,6 +94,6 @@ ms.lasthandoff: 12/04/2017
 
   -  c**onsolesetup.exe /q TargetDir="D:\Program Files\ConfigMgr" EnableSQM=1 DefaultSiteServerName=MyServer.Contoso.com**  
 
-  -  **consolesetup.exe /q LangPackDir=C:\Downloads\ConfigMgr TargetDir="D:\Program Files\ConfigMgr" Console EnableSQM=1 DefaultSiteServerName=MyServer.Contoso.com**  
+  -  **consolesetup.exe /q LangPackDir=C:\Downloads\ConfigMgr TargetDir="D:\Program Files\ConfigMgr Console" EnableSQM=1 DefaultSiteServerName=MyServer.Contoso.com**  
 
   -  **consolesetup.exe /uninstall /q**  

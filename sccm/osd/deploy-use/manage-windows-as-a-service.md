@@ -7,19 +7,20 @@ ms.date: 03/26/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-osd
+ms.technology:
+- configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: da1e687b-28f6-43c4-b14a-ff2b76e60d24
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 3848d0d6a9f3b5d778879c598bf859fb1e8a7ac7
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+ms.openlocfilehash: a67d75f27cbc2d53cc5d8c418e25232d88b4f067
+ms.sourcegitcommit: db9978135d7a6455d83dbe4a5175af2bdeaeafd8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="manage-windows-as-a-service-using-system-center-configuration-manager"></a>使用 System Center Configuration Manager 将 Windows 作为服务进行管理
 
@@ -50,7 +51,7 @@ ms.lasthandoff: 12/12/2017
     -   **操作系统内部版本**：指定操作系统内部版本。 例如，**10.0.10240** (RTM) 或 **10.0.10586**（版本 1511）  
 
 -   必须安装服务连接点并将其配置为“联机，持续连接”  模式，才能在 Windows 10 维护服务仪表板上查看数据。 处于离线模式时，在获取 Configuration Manager 服务更新之前，不会在仪表板中看到数据更新。   
-     有关详细信息，请参阅[关于服务连接点](../../core/servers/deploy/configure/about-the-service-connection-point.md)。  
+      有关详细信息，请参阅[关于服务连接点](../../core/servers/deploy/configure/about-the-service-connection-point.md)。  
 
 
 -   必须在运行 Configuration Manager 控制台的计算机上安装 Internet Explorer 9 或更高版本。  
@@ -280,3 +281,6 @@ ms.lasthandoff: 12/12/2017
 
     > [!NOTE]  
     >  你可以从“软件库”工作区的“软件更新”节点中查看最新软件更新警报。  
+
+**获取详细信息：** <br/>
+[服务型 Configuration Manager 和服务型 Windows 的基础知识](/sccm/core/understand/configuration-manager-and-windows-as-service.md)

@@ -3,24 +3,25 @@ title: "任务序列内置变量"
 titleSuffix: Configuration Manager
 description: "任务序列内置变量提供有关任务序列运行环境的信息，并且这些变量在整个任务序列期间均适用。"
 ms.custom: na
-ms.date: 03/26/2017
+ms.date: 01/12/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-osd
+ms.technology:
+- configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 02bc6bd4-ca53-4e22-8b80-d8ee5fe72567
-caps.latest.revision: "15"
-caps.handback.revision: "0"
+caps.latest.revision: 
+caps.handback.revision: 
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: e29efd4de847a861afa75a7a10868cad30e4cf97
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+ms.openlocfilehash: 29b2ae2a9a8ee41d11fbf7e032ef8262411f3dd0
+ms.sourcegitcommit: e121d8d3dd82b9f2dde2cb5206cbee602ab8e107
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="task-sequence-built-in-variables-in-system-center-configuration-manager"></a>ystem Center Configuration Manager 中的任务序列内置变量
 
@@ -81,8 +82,8 @@ ms.lasthandoff: 12/12/2017
 |SMSTSDriverRequestResolveTimeOut|在自动应用驱动程序任务序列步骤期间请求驱动程序目录时，使用此变量指定等待 HTTP 名称解析的秒数。 如果连接时间超过超时设置，则取消该请求。 默认情况下，超时时间设置为 60 秒。|
 |SMSTSDriverRequestSendTimeOut|在自动应用驱动程序任务序列步骤期间发送驱动程序目录请求时，使用此变量指定要使用的秒数。 如果该请求用时比超时设置更长，则取消该请求。 默认情况下，超时时间设置为 60 秒。|
 |SMSTSErrorDialogTimeout|当任务序列中发生错误时，显示对话框，在此变量指定的秒数后自动关闭。 默认情况下，该对话框将在 **900** 秒（15 分钟）后自动关闭。|  
-| TSDisableProgressUI | 使用此变量可以在任务序列的不同部分中隐藏或显示任务序列进度。 | 
-|TSErrorOnWarning|使用此变量指定任务序列引擎是否将应用程序安装任务序列步骤检测到的警告视为错误。 由于未满足要求而导致一个或多个应用程序或所需的依赖项未安装时，任务序列将 _TSAppInstallStatus 变量设置为 **Warning** 。 当你将 TSErrorOnWarning 变量设置为 **True** 且 _TSAppInstallStatus 变量设置为 Warning 时，它被视为错误。 值 **False** 是默认行为。| 
+| TSDisableProgressUI | <!-- 1354291 -->从 Configuration Manager 版本 1706 开始，使用此变量控制任务序列何时向最终用户显示进度。 在一个任务序列中多次设置此变量，在不同时间隐藏或显示进度。 若要隐藏任务序列进度，将此变量的值设为 True。 若要显示任务序列进度，将此变量的值设为 False。 | 
+| TSErrorOnWarning |使用此变量指定任务序列引擎是否将应用程序安装任务序列步骤检测到的警告视为错误。 由于未满足要求而导致一个或多个应用程序或所需的依赖项未安装时，任务序列将 _TSAppInstallStatus 变量设置为 **Warning** 。 当你将 TSErrorOnWarning 变量设置为 **True** 且 _TSAppInstallStatus 变量设置为 Warning 时，它被视为错误。 值 **False** 是默认行为。| 
 |SMSTSLanguageFolder|使用此变量可更改语言中性启动映像的显示语言。|  
 |SMSTSLocalDataDrive|指定运行任务序列时临时文件保存在目标计算机的位置。<br /><br /> 此变量必须在任务序列开始前设置，例如通过设置集合变量。 任务序列启动后，Configuration Manager 定义 _SMSTSMDataPath 变量。|  
 |SMSTSMP|使用此变量指定 Configuration Manager 管理点的 URL 或 IP 地址。|  
