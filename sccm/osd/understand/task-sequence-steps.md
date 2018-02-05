@@ -17,11 +17,11 @@ caps.handback.revision:
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 695d21eb065f4d89143644dad28bfdb711392ab9
-ms.sourcegitcommit: e121d8d3dd82b9f2dde2cb5206cbee602ab8e107
+ms.openlocfilehash: 158817547d40f09fb8bd30ebedd5aea6420a8571
+ms.sourcegitcommit: aee9ac45c15f27d8cf827890edcae94c03f5fd5e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="task-sequence-steps-in-system-center-configuration-manager"></a>System Center Configuration 中的任务序列步骤
 
@@ -52,7 +52,7 @@ ms.lasthandoff: 01/17/2018
 单击任务序列编辑器中的“添加”，选择“映像”，然后选择“应用数据映像”以添加此步骤。 
 
 ### <a name="properties"></a>属性  
- 在此步骤的“属性”选项卡上，请配置此部分描述的设置。  
+ 在此步骤的“属性”选项卡上，请配置此部分中描述的设置。  
 
  **映像包**  
  单击“浏览”以指定供此任务序列使用的“映像包”。 在“选择包”对话框中选择要安装的包。 每个现有映像包的关联属性信息显示在“选择包”对话框的底部。 使用下拉列表，从所选的“映像包”中选择要安装的“映像”。  
@@ -536,7 +536,7 @@ ms.lasthandoff: 01/17/2018
 
  -   **Configuration Manager 客户端缓存：**使用此选项可在客户端缓存中存储内容。 客户端充当其他对等缓存客户端的对等缓存源。 有关信息，请参阅[准备 Windows PE 对等缓存来减少 WAN 流量](../get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md)。  
 
- -   **自定义路径**  
+ -    **自定义路径**：使用此选项时，任务序列引擎首先会将包下载到任务序列工作目录，然后将它移动到指定的路径。 任务序列引擎会将包 ID 附加到路径中。 
    
 **将路径另存为变量**  
  可以将路径另存为一个可在另一任务序列步骤中使用的变量。 Configuration Manager 向变量名称中添加数字后缀。 例如，如果将变量 %mycontent% 指定为自定义变量，则为任务序列存储所有引用的内容的根目录。 此内容可能包含多个包。 然后，引用该变量时，添加数字后缀。 例如，对于第一个包，引用 %mycontent01%。 在子序列步骤（如升级操作系统）中引用变量时，将使用 %mycontent02% 或 %mycontent03%，其中的数字对应“下载包内容”步骤罗列包的顺序。  
