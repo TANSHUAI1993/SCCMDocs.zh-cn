@@ -16,11 +16,11 @@ caps.latest.revision:
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 2dcf7ab67c0f57d442f6ab0a0ea9f0f476fe8415
-ms.sourcegitcommit: bc86be110c8d2a7a076e17f433d8c5ffd51a7d04
+ms.openlocfilehash: 82df06873449d538b7efbe414a451d746d48e11f
+ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="supported-sql-server-versions-for-system-center-configuration-manager"></a>System Center Configuration Manager 支持的 SQL Server 版本
 
@@ -135,7 +135,7 @@ SQL Server 事务复制仅支持将对象复制到配置为使用[数据库副�
 -->
 
 ### <a name="sql-server-2008-r2-sp3-standard-enterprise-datacenter"></a>SQL Server 2008 R2 SP3：标准版、企业版、数据中心版     
-  [从版本 1702 开始](/sccm/core/plan-design/changes/removed-and-deprecated-features#deprecated-support-for-sql-server-versions-as-a-site-database)，不支持此版本的 SQL Server。  
+  [从版本 1702 开始](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-support-for-sql-server-versions-as-a-site-database)，不支持此版本的 SQL Server。  
  在使用 1702 之前版本的 Configuration Manager 时，此版本的 SQL Server 仍受支持。
 
 受 Configuration Manager 版本支持时，可将此版本的 SQL Server 与以下站点的非最低累积更新版本一起使用：  
