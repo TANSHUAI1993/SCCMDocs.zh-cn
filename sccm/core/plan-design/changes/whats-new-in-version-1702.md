@@ -6,18 +6,19 @@ ms.custom: na
 ms.date: 05/02/2017
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 409e26e1-7716-4f1d-a0ee-34feabf20792
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: aa8d80cf9c036e63dc74ffe78bc8d5b060d6053e
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: cf46bb32994ddb8a1fa3b9de0dbffc94228ad7fd
+ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="what39s-new-in-version-1702-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1702 中的新增功能
 
@@ -35,13 +36,13 @@ System Center Configuration Manager Current Branch 的更新 1702 作为控制�
 以下各节提供有关 Configuration Manager 版本 1702 中引入的更改和新功能的详细信息。  
 
 ## <a name="deprecated-features-and-operating-systems"></a>弃用的功能和操作系统
-在其施前，先在[删除和弃用的功能](/sccm/core/plan-design/changes/removed-and-deprecated-features)中了解有关支持更改的相关信息。
+在[已删除和已启用的项](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated)中实施支持更改之前，先了解这些更改。
 
 版本 1702 删除了对以下产品的支持：
-- **SQL Server 2008 R2**，针对站点数据库服务器。 在 2015 年 7 月 10 日[首次公布](/sccm/core/plan-design/changes/removed-and-deprecated-features#deprecated-support-for-sql-server-versions-as-a-site-database)要弃用支持。 在使用版本 1702 以前的 Configuration Manager 的版本时，此版本的 SQL Server 仍受支持。
-- **Windows Server 2008 R2**，针对站点系统服务器和大部分站点系统角色。 在 2015 年 7 月 10 日[首先公布](/sccm/core/plan-design/changes/removed-and-deprecated-features#deprecated-operating-systems)要弃用支持。 在使用版本 1702 以前的 Configuration Manager 的版本时，此版本的 Windows 仍受支持。  
-- **Windows Server 2008**，针对站点系统服务器和大部分站点系统角色。 在 2015 年 7 月 10 日[首先公布](/sccm/core/plan-design/changes/removed-and-deprecated-features#deprecated-operating-systems)要弃用支持。
-- **Windows XP Embedded**，作为客户端操作系统。 在 2015 年 7 月 10 日[首先公布](/sccm/core/plan-design/changes/removed-and-deprecated-features#deprecated-operating-systems)要弃用。 在使用版本 1702 以前的 Configuration Manager 的版本时，此版本的 Windows 仍受支持。
+- **SQL Server 2008 R2**，针对站点数据库服务器。 在 2015 年 7 月 10 日[首次公布](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-support-for-sql-server-versions-as-a-site-database)要弃用支持。 在使用版本 1702 以前的 Configuration Manager 的版本时，此版本的 SQL Server 仍受支持。
+- **Windows Server 2008 R2**，针对站点系统服务器和大部分站点系统角色。 在 2015 年 7 月 10 日[首先公布](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems)要弃用支持。 在使用版本 1702 以前的 Configuration Manager 的版本时，此版本的 Windows 仍受支持。  
+- **Windows Server 2008**，针对站点系统服务器和大部分站点系统角色。 在 2015 年 7 月 10 日[首先公布](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems)要弃用支持。
+- **Windows XP Embedded**，作为客户端操作系统。 在 2015 年 7 月 10 日[首先公布](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-client#deprecated-client-operating-systems)要弃用。 在使用版本 1702 以前的 Configuration Manager 的版本时，此版本的 Windows 仍受支持。
 
 
 

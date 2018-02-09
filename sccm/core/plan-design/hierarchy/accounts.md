@@ -7,20 +7,21 @@ ms.date: 2/9/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 72d7b174-f015-498f-a0a7-2161b9929198
-caps.latest.revision: "7"
-caps.handback.revision: "0"
+caps.latest.revision: 
+caps.handback.revision: 
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 518be0c1cb4c361d8802ed70779d192725eb8feb
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+ms.openlocfilehash: 1b8248cbbade7d46d1a1ad41edd704b5ad8d49aa
+ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="accounts-used-in-system-center-configuration-manager"></a>System Center Configuration Manager 中使用的帐户
 
@@ -29,7 +30,7 @@ ms.lasthandoff: 01/04/2018
 可以使用以下信息确定 System Center Configuration Manager 中使用的 Windows 组和帐户、它们的使用方式以及任何要求。  
 
 ## <a name="windows-groups-that-configuration-manager-creates-and-uses"></a>Configuration Manager 创建和使用的 Windows 组  
- Configuration Manager 会自动创建并在许多情况下自动维护以下 Windows 组。  
+ Configuration Manager 会自动创建并在许多情况下自动维护以下 Windows 组：  
 
 > [!NOTE]  
 >  当 Configuration Manager 在作为域成员的计算机上创建组时，该组为本地安全组。 如果计算机是域控制器，则该组是在域中的所有域控制器之间共享的域本地组。  
@@ -72,7 +73,7 @@ Configuration Manager 使用此组来授予查看软件清单所收集的文件�
 |------------|----------------------|  
 |类型和位置|此组是在具有 SMS 提供程序的每台计算机上创建的本地安全组。<br /><br /> 卸载站点时，不会自动删除此组。 必须手动将其删除。|  
 |Membership|Configuration Manager 自动管理组成员身份。 默认情况下，层次结构中的每个管理用户以及站点服务器计算机帐户是站点中每台 SMS 提供程序计算机上的“SMS 管理员”组的成员。|  
-|权限|在 WMI 控制 MMC 管理单元中设置 SMS 管理员权限。 默认情况下，授予 SMS 管理员组对 Root\SMS 命名空间的 **Enable Account** 和 **Remote Enable** 权限。 经过身份验证的用户具有**执行方法**、**提供程序写入**和**启用帐户**权限。<br /><br /> 使用远程 Configuration Manager 控制台的管理员用户均需要同时对站点服务器计算机和 SMS 提供程序计算机拥有“远程激活 DCOM”权限。 最佳方案是将这些权限授予“SMS 管理员”以简化管理，而不是将这些权限直接授予用户或组。 有关详细信息，请参阅 [为远程 Configuration Manager 控制台配置 DCOM 权限](../../../core/servers/manage/modify-your-infrastructure.md#BKMK_ConfigDCOMforRemoteConsole) 主题中的 [修改你的 System Center Configuration Manager 基础结构](../../../core/servers/manage/modify-your-infrastructure.md) 部分。|  
+|权限|在 WMI 控制 MMC 管理单元中设置 SMS 管理员权限。 默认情况下，授予 SMS 管理员组对 Root\SMS 命名空间的 **Enable Account** 和 **Remote Enable** 权限。 经过身份验证的用户具有**执行方法**、**提供程序写入**和**启用帐户**权限。<br /><br /> 使用远程 Configuration Manager 控制台的管理员用户均需要同时对站点服务器计算机和 SMS 提供程序计算机拥有“远程激活 DCOM”权限。 最佳方案是将这些权限授予“SMS 管理员”以简化管理，而不是将这些权限直接授予用户或组。 有关详细信息，请参阅[为远程 Configuration Manager 控制台配置 DCOM 权限](../../../core/servers/manage/modify-your-infrastructure.md#BKMK_ConfigDCOMforRemoteConsole)一文中的[修改你的 System Center Configuration Manager 基础结构](../../../core/servers/manage/modify-your-infrastructure.md)部分。|  
 
 ### <a name="smssitesystemtositeserverconnectionmpltsitecode"></a>SMS_SiteSystemToSiteServerConnection_MP_&lt;sitecode\>  
  远离站点服务器的 Configuration Manager 管理点使用此组来连接到站点数据库。 此组向管理点提供对站点服务器上的收件箱文件夹和站点数据库的访问权限。  
@@ -163,7 +164,7 @@ Configuration Manager 使用此组来授予查看软件清单所收集的文件�
 
  此帐户对存储捕获映像的网络共享必须具有“读取”  和“写入”  权限。  
 
- 如果在 Windows 中更改帐户的密码，则必须使用新密码更新任务序列。 Configuration Manager 客户端在下次下载客户端策略时将接收新密码。  
+ 如果在 Windows 中更改帐户的密码，则必须使用新密码更新任务序列。 Configuration Manager 客户端在下次下载客户端策略时接收新密码。  
 
  如果使用此帐户，则可以创建一个具有访问所需网络资源的最低权限的域用户帐户，并将其用于所有任务序列帐户。  
 
@@ -245,6 +246,8 @@ Configuration Manager 使用此组来授予查看软件清单所收集的文件�
 
 ### <a name="reporting-services-point-account"></a>Reporting Services 点帐户  
  SQL Server Reporting Services 使用 **Reporting Services 点帐户**从站点数据库中检索 Configuration Manager 报表的数据。 你指定的 Windows 用户帐户和密码经过加密，并存储在 SQL Server Reporting Services 数据库中。  
+>[!NOTE]
+>指定的帐户在承载 Reporting Services 数据库的计算机上必须具有“本地登录”权限。
 
 ### <a name="remote-tools-permitted-viewer-accounts"></a>远程工具“允许的查看者”帐户  
  你为远程控制指定的“允许的查看者”  帐户是一系列获准在客户端上使用远程工具功能的用户。  
@@ -255,7 +258,7 @@ Configuration Manager 使用此组来授予查看软件清单所收集的文件�
  对于管理员将安装和设置的站点系统，此帐户需要具有这些系统上的本地管理权限。 此外，此帐户还要求在这些系统上的安全策略中指定“从网络访问此计算机”。  
 
 > [!TIP]  
->  如果有多个域控制器，而且将跨域使用这些帐户，请在设置站点系统之前检查确认已复制这些帐户。  
+>  如果有多个域控制器，而且需跨域使用这些帐户，请在设置站点系统之前检查确认已复制这些帐户。  
 >   
 >  在指定位于要管理的每个站点系统上的本地帐户时，该配置比使用域帐户更安全，因为它在此帐户受到侵害时限制了攻击者可能造成的损害。 但是，域帐户更易于管理。 所以需就安全管理和有效管理进行权衡与协调。  
 
@@ -306,7 +309,7 @@ Configuration Manager 使用此组来授予查看软件清单所收集的文件�
 ### <a name="task-sequence-editor-domain-joining-account"></a>任务序列编辑器域加入帐户  
  在任务序列中，使用 **任务序列编辑器域加入帐户** 将最近映像化的计算机加入到域。 如果将“加入域或工作组”  步骤添加到任务序列，然后选择“加入域” ，则需要此帐户。 如果将“应用网络设置”步骤添加到任务序列，则也可以设置此帐户，但这不是必需的。  
 
- 此帐户需要获得计算机将加入的域中的“域加入”  权限。  
+ 此帐户需要获得计算机将加入的域中的“域加入”权限。  
 
 > [!TIP]  
 >  如果需要将此帐户用于任务序列，则可以创建一个具有访问所需网络资源的最低权限的域用户帐户，并将其用于所有任务序列帐户。  
@@ -339,8 +342,8 @@ Configuration Manager 使用此组来授予查看软件清单所收集的文件�
 >   
 >  切勿将此帐户设为域管理员。  
 >   
->  切勿为此帐户设置漫游配置文件。 任务序列运行时，它将为该帐户下载漫游配置文件。 这会导致该配置文件在本地计算机上面临易被访问的风险。  
+>  切勿为此帐户设置漫游配置文件。 任务序列运行时，它会为该帐户下载漫游配置文件。 这会导致该配置文件在本地计算机上面临易被访问的风险。  
 >   
 >  要限制此帐户的作用域。 例如，为每个任务序列创建不同的任务序列运行方式帐户，以便在某个帐户受到侵害时，只会损害该帐户能够访问的客户端计算机。  
 >   
->  如果命令行需要计算机上的管理权限，请考虑在所有将运行任务序列的计算机上为任务序列运行方式帐户单独创建一个本地管理员帐户。 不再需要该帐户时请立即将其删除。  
+>  如果命令行需要计算机上的管理权限，请考虑在所有运行任务序列的计算机上为任务序列运行方式帐户单独创建一个本地管理员帐户。 不再需要该帐户时请立即将其删除。  

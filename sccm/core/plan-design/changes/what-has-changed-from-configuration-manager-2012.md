@@ -6,19 +6,20 @@ ms.date: 05/02/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 3ae68fa6-8b30-45dd-9d12-50bb67cb4a9d
-caps.latest.revision: "51"
+caps.latest.revision: 
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: fb8b7dd27d890750fb93f02d38c0fd9d6c0feca6
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 6e0da4f8c42bb0b2275566eba35b1e06b2028c1b
+ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="what39s-changed-in-system-center-configuration-manager-from-system-center-2012-configuration-manager"></a>自 System Center 2012 Configuration Manager 以来 System Center Configuration Manager 中更改的内容
 
@@ -81,7 +82,7 @@ ms.lasthandoff: 12/04/2017
 ##  <a name="bkmk_out"></a> 弃用的功能  
  将从 Configuration Manager 控制台删除一些功能，如基于计算机的 [Intel 主动管理技术 (AMT) 的本机支持](#bkmk_AMT)。 将完全删除其他功能，如网络访问保护。 此外，不再支持某些较旧的 Microsoft 产品，如 Windows Vista、Windows Server 2008 和 SQL Server 2008。  
 
- 有关弃用功能的列表，请参阅 [System Center Configuration Manager 的已删除和已弃用的功能](../../../core/plan-design/changes/removed-and-deprecated-features.md)。  
+ 有关弃用功能的列表，请参阅 [System Center Configuration Manager 中已删除和已弃用的项](../../../core/plan-design/changes/deprecated/removed-and-deprecated.md)。  
 
  有关受支持的产品、操作系统和配置的详细信息，请参阅 [System Center Configuration Manager 支持的配置](../../../core/plan-design/configs/supported-configurations.md)。  
 

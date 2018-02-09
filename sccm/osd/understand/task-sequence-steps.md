@@ -17,11 +17,11 @@ caps.handback.revision:
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 158817547d40f09fb8bd30ebedd5aea6420a8571
-ms.sourcegitcommit: aee9ac45c15f27d8cf827890edcae94c03f5fd5e
+ms.openlocfilehash: 5320d7747f7e2c6164da8c1801e631b749935d6d
+ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="task-sequence-steps-in-system-center-configuration-manager"></a>System Center Configuration 中的任务序列步骤
 
@@ -1313,7 +1313,7 @@ SMSTSSoftwareUpdateScanTimeout 任务序列变量控制此步骤期间的软件�
  单击“浏览”，并选择此步骤要使用的 Configuration Manager 客户端安装包。  
 
  **如果可用，使用预生产客户端包**  
- 如有可用的预生产客户端包，则任务序列使用此包而非生产客户端包。 预生产客户端是在生产环境中用于测试的较新版本。 单击“浏览”，并选择此步骤要使用的预生产客户端安装包。  
+ 如有可用的预生产客户端包，并且该计算机是试点集合的成员，则任务序列使用此包而非生产客户端包。 预生产客户端是在生产环境中用于测试的较新版本。 单击“浏览”，并选择此步骤要使用的预生产客户端安装包。  
 
  **安装属性**  
  站点分配和默认配置由任务序列操作自动指定。 你可以使用此字段来指定安装客户端时使用的任何其他安装属性。 要输入多个安装属性，请使用空格分隔。  

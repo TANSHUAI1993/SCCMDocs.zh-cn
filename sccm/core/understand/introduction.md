@@ -7,19 +7,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3343eccf-bf09-41cd-9e68-03e893c7f904
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 76dfa18cb7f794be9102bf045cd4212adc7ad56f
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+ms.openlocfilehash: b63386f69ea05a610868de9bc85ff606d4ade73d
+ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="introduction-to-system-center-configuration-manager"></a>System Center Configuration Manager 简介
 
@@ -72,7 +73,7 @@ Configuration Manager 也可使用：
 -   [System Center Configuration Manager 基础知识](../../core/understand/fundamentals.md)  
 -   [通过构建自己的实验室环境来评估 System Center Configuration Manager](/sccm/core/get-started/set-up-your-lab)
 -   [查找使用 System Center Configuration Manager 的帮助](../../core/understand/find-help.md)  
--   [System Center Configuration Manager 中已删除和已弃用的功能](../../core/plan-design/changes/removed-and-deprecated-features.md)  
+-   [System Center Configuration Manager 中已删除和已弃用的项](../../core/plan-design/changes/deprecated/removed-and-deprecated.md)  
 
 ##  <a name="BKMK_Console"></a> Configuration Manager 控制台  
  安装 Configuration Manager 后，使用 Configuration Manager 控制台来配置站点和客户端，以及运行和监视管理任务。 此控制台是主要管理位置，并允许你管理多个站点。  

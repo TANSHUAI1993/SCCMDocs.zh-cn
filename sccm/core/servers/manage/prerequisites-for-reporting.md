@@ -3,24 +3,25 @@ title: "报告的先决条件"
 titleSuffix: Configuration Manager
 description: "了解影响在 System Center Configuration Manager 中使用报表的各种依赖关系。"
 ms.custom: na
-ms.date: 10/06/2016
+ms.date: 01/29/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9cc508a5-5023-4833-b776-ae9a6971138f
-caps.latest.revision: "5"
-caps.handback.revision: "0"
+caps.latest.revision: 
+caps.handback.revision: 
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: 09f6ebd47070c63d238a74242d4b04b84c95ef49
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 3feafa8a20bedfba381c29a5d7fe80a47517b6ab
+ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="prerequisites-for-reporting-in-system-center-configuration-manager"></a>System Center Configuration Manager 中报告的先决条件
 
@@ -49,17 +50,19 @@ System Center Configuration Manager 中的报表具有产品外部依赖关系�
  下表列出了 Reporting Services 点支持的 SQL Server 版本。  
 
 |SQL Server 版本|Reporting Services 点|  
-|------------------------|------------------------------|  
-|SQL Server 2008 SP2（至少包含累积更新 9）<br /><br /> -   Standard<br />-   Enterprise<br />-   Datacenter|是|  
-|SQL Server 2008 SP3（至少包含累积更新 4）<br /><br /> -   Standard<br />-   Enterprise<br />-   Datacenter|是|  
-|SQL Server 2008 R2 SP1（至少包含累积更新 6）<br /><br /> -   Standard<br />-   Enterprise<br />-   Datacenter|是|  
-|SQL Server 2008 R2 SP2<br /><br /> -   Standard<br />-   Enterprise<br />-   Datacenter|是|  
-|SQL Server Express 2008 R2 SP1（至少包含累积更新 4）|不支持|  
-|SQL Server Express 2008 R2 SP2|不支持|  
-|SQL Server 2012（至少包含累积更新 2）<br /><br /> -   Standard<br />-   Enterprise|是|  
-|SQL Server 2012 SP1（没有最低累积更新）<br /><br /> -   Standard<br />-   Enterprise|是|  
-|SQL Server 2014<br /><br /> -   Standard<br />-   Enterprise|是|
+|------------------------|------------------------------|
+|SQL Server 2017（至少包含累积更新 2）<br /><br /> -   Standard<br />-   Enterprise|是，从 Configuration Manager 1710 版开始|  
+|SQL Server 2016 SP1<br /><br /> -   Standard<br />-   Enterprise|是| 
 |SQL Server 2016<br /><br /> -   Standard<br />-   Enterprise|是|
-|SQL Server 2016 SP1<br /><br /> -   Standard<br />-   Enterprise|是|
+|SQL Server 2014 with SP2<br /><br /> -   Standard<br />-   Enterprise|是|
+|SQL Server 2014 with SP1<br /><br /> -   Standard<br />-   Enterprise|是|
+|SQL Server 2012 with SP4 <br /><br /> -   Standard<br />-   Enterprise|是|  
+|SQL Server 2012 with SP3 <br /><br /> -   Standard<br />-   Enterprise|是|  
+|SQL Server 2008 R2 with SP3<br /><br /> -   Standard<br />-   Enterprise<br />-   Datacenter|是，针对 Configuration Manager 1702 版之前的支持版本。|  
+|SQL Server Express 2008 R2 with SP3|不支持| 
+
+
+
+
 ## <a name="next-steps"></a>后续步骤
 [报表的操作和维护](operations-and-maintenance-for-reporting.md)
