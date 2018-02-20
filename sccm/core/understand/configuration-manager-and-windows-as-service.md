@@ -16,11 +16,11 @@ caps.latest.revision:
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 40894c4ebb562e5c979f1226349ff91c38516618
-ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
+ms.openlocfilehash: 6d93be3ec04396c9980b039617c673985090cdc6
+ms.sourcegitcommit: fbd4a9d2fa8ed4ddd3a0fecc4a2ec4fc0ccc3d0c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="keep-windows-10-up-to-date-in-the-enterprise-using-configuration-manager"></a>使用 Configuration Manager 让 Windows 10 在企业中保持最新
 
@@ -36,7 +36,7 @@ System Center Configuration Manager 提供对 Windows 10 的功能更新的全�
 |[支持周期](/sccm/core/servers/manage/current-branch-versions-supported)|介绍新的支持和服务模型。|
 |[已删除和已弃用的项](/sccm//core/plan-design/changes/deprecated/removed-and-deprecated)|针对可能会影响使用 Configuration Manager 的将来更改提出早期通知。|
 |[配置服务型 Configuration Manager](/sccm/core/servers/manage/updates)|介绍在控制台内部实现的、将功能更新应用于 Configuration Manager 的简单方法。|
-|[获取可用更新](/core/servers/manage/install-in-console-updates#get-available-updates)|介绍可用于获取新的 Configuration Manager 功能更新的两种模式。|
+|[获取可用更新](/sccm/core/servers/manage/install-in-console-updates.md#get-available-updates)|介绍可用于获取新的 Configuration Manager 功能更新的两种模式。|
 |[更新清单](/sccm/core/servers/manage/install-in-console-updates#bkmk_beforeinstall)|如果适用，提供特定于更新版本的清单。| 
 |[安装新的 Configuration Manager 功能更新](/sccm/core/servers/manage/install-in-console-updates#bkmk_install)|介绍功能更新的简单安装步骤。|
 |[支持 Windows 10](/sccm/core/plan-design/configs/support-for-windows-10)|提供 Windows 10（及 ADK）版本的支持矩阵。|
