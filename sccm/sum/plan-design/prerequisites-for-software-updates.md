@@ -3,26 +3,27 @@ title: "软件更新的先决条件"
 titleSuffix: Configuration Manager
 description: "了解 System Center Configuration Manager 中软件更新的先决条件。"
 keywords: 
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.date: 10/06/2016
+author: mestew
+ms.author: mstewart
+manager: dougeby
+ms.date: 02/02/2018
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology: configmgr-sum
+ms.technology:
+- configmgr-sum
 ms.assetid: fdf05118-162a-411e-b72e-386b9dc9a5e1
-ms.openlocfilehash: 905ecc023dd181a8d4801860898b05aff5e4e07f
-ms.sourcegitcommit: 986fc2d54f7c5fa965fd4df42f4db4ecce6b79cb
+ms.openlocfilehash: 1907ff5bf6b1146b967e64bd381915ac863b3e55
+ms.sourcegitcommit: 389c4e5b4e9953b74c13b1689195f99c526fa737
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="prerequisites-for-software-updates-in-system-center-configuration-manager"></a>System Center Configuration Manager 中软件更新的先决条件
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-本主题列出了 System Center Configuration Manager 中软件更新的先决条件。 对于这些先决条件中的每一个，在不同的表格中列出了外部依赖关系和内部依赖关系。  
+本文列出了 System Center Configuration Manager 中软件更新的先决条件。 对于这些先决条件中的每一个，在不同的表格中列出了外部依赖关系和内部依赖关系。  
 
 ## <a name="software-update-dependencies-external-to-configuration-manager"></a>Configuration Manager 软件更新的外部依赖关系  
  以下部分列出了软件更新的外部依赖关系。  
@@ -31,10 +32,10 @@ ms.lasthandoff: 11/17/2017
  Internet Information Services (IIS) 必须安装在站点系统服务器上才可运行软件更新点、管理点和分发点。 有关详细信息，请参阅[站点系统角色的先决条件](../../core/plan-design/configs/site-and-site-system-prerequisites.md)。  
 
 ### <a name="windows-server-update-services-wsus"></a>Windows Server Update Services (WSUS)  
- 软件更新同步和在客户端上进行的软件更新符合性评估扫描都需要使用 WSUS。 在创建软件更新点站点系统角色之前，必须安装 WSUS 服务器。 软件更新点支持以下版本的 WSUS：  
+ 软件更新同步和在客户端上进行的软件更新适用性扫描都需要使用 WSUS。 在创建软件更新点角色之前，必须安装 WSUS 服务器。 软件更新点支持以下版本的 WSUS：  
 
--   WSUS 4（Windows Server 2012 和 Windows Server 2012 R2 中的角色）  
-
+-   WSUS 10.0（Windows Server 2016 中的角色）
+-   WSUS 6.2 和 6.3（Windows Server 2012 和 Windows Server 2012 R2 中的角色）  
 -   WSUS 3.2（Windows Server 2008 R2 中的角色）  
 
  如果在一个站点上有多个软件更新点，请确保它们全都运行相同版本的 WSUS。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 11/17/2017
 >  不要使用 WSUS 管理控制台来配置 WSUS 设置。 Configuration Manager 连接到在软件更新点上运行的 WSUS，并配置适当的设置。  
 
 ### <a name="windows-update-agent-wua"></a>Windows 更新代理 (WUA)  
- 客户端上需要安装 WUA 客户端才能连接到 WSUS 服务器，以及检索那些必须接受符合性扫描的软件更新的列表。  
+ 客户端上必须安装 WUA 客户端才能连接到 WSUS 服务器。 WUA 检索为实现符合性而必须扫描的软件更新列表。  
 
  安装 Configuration Manager 时，会下载 WUA 的最新版本。 之后，安装 Configuration Manager 客户端时，如有必要将会升级 WUA。 但是，如果安装失败，你必须使用另一种方法来升级 WUA。  
 
@@ -71,19 +72,19 @@ ms.lasthandoff: 11/17/2017
  需要使用分发点来存储软件更新的内容。 有关如何安装分发点和管理内容的详细信息，请参阅[管理内容和内容基础结构](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。  
 
 ### <a name="client-settings-for-software-updates"></a>软件更新的客户端设置  
- 默认情况下，会为客户端启用软件更新。 但是，可以使用其他一些设置来控制客户端如何和何时评估软件更新的符合性，以及对如何安装软件更新进行控制。  
+ 客户端默认会启用软件更新。 但是，还可以使用其他一些设置来控制客户端评估软件更新符合性的方法和时间，以及控制软件更新的安装方式。  
 
  有关详细信息，请参阅以下内容：  
 
 -   [软件更新的客户端设置](../get-started/manage-settings-for-software-updates.md#BKMK_ClientSettings)。   
 
--   [软件更新客户端设置](../../core/clients/deploy/about-client-settings.md#software-updates)主题。  
+-   [软件更新客户端设置](../../core/clients/deploy/about-client-settings.md#software-updates)一文。  
 
 ### <a name="reporting-services-point"></a>Reporting Services 点  
- Reporting Services 点站点系统角色可以显示软件更新的报表。 此角色是可选的，但建议使用它。 有关如何创建 Reporting Services 点的详细信息，请参阅[配置报表](../../core/servers/manage/configuring-reporting.md)。  
+ Reporting Services 点站点系统角色可以显示软件更新的报表。 此角色是可选的，但建议使用它。 如需 Reporting Services 点创建方法的详细信息，请参阅[配置报表]。  
 
 ##  <a name="BKMK_RecoverUpgrades"></a> 在安装 KB 3095113 之前从同步升级分类中恢复  
- 必须在你的软件更新点和站点服务器上为 WSUS 安装 [修补程序 3095113](https://support.microsoft.com/kb/3095113) ，然后再同步 **升级** 分类。 如果在启用 **升级** 分类后未安装此修补程序，即使 WSUS 无法正确下载并部署 Windows 10 内部版本 1511 功能升级包，也能看见此功能升级选项。 如果你未先安装 [修补程序 3095113](https://support.microsoft.com/kb/3095113)就同步任何升级，则会使用不可用数据填充 WSUS 数据库 (SUSDB)，必须清除这些数据才能正确部署升级。  使用以下步骤从该问题中恢复。  
+ 必须在你的软件更新点和站点服务器上为 WSUS 安装 [修补程序 3095113](https://support.microsoft.com/kb/3095113) ，然后再同步 **升级** 分类。 如果在启用“升级”分类后未安装修补程序，即使 WSUS 无法正确下载并部署 Windows 10 内部版本 1511 功能升级包，也能看见此功能升级选项。 如果未先安装 [修补程序 3095113](https://support.microsoft.com/kb/3095113)就同步任何升级，则会使用不可用数据填充 WSUS 数据库 (SUSDB)。 必须先清除该数据，才能正确部署升级。 使用以下步骤从该问题中恢复。  
 
 #### <a name="to-recover-from-synchronizing-the-upgrades-classification-before-you-install-kb-3095113"></a>在安装 KB 3095113 之前从同步升级分类中恢复  
 

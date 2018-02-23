@@ -3,7 +3,7 @@ title: "混合 MDM 中的新增功能"
 titleSuffix: Configuration Manager
 description: "了解 Configuration Manager 和 Intune 的混合部署可用的新移动设备管理功能。"
 ms.custom: na
-ms.date: 01/04/2018
+ms.date: 02/06/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: aca30a199e38b2d4ed38a458694d98010b5e2496
-ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
+ms.openlocfilehash: c724d9eafde6aa9abc0d3f9bfa867418046b2ecb
+ms.sourcegitcommit: 389c4e5b4e9953b74c13b1689195f99c526fa737
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager 和 Microsoft Intune 的混合移动设备管理中的新增功能
 
@@ -46,6 +46,16 @@ ms.lasthandoff: 02/01/2018
 ## <a name="january-2018"></a>2018 年 1 月
 
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
+
+- **批准适用于 Android for Work 的公司门户应用**<!--1797090 -->    
+  如果你的组织使用 Android for Work，则需要手动批准适用于 Android 的公司门户应用，以便其可以继续从托管的 Google Play 商店接收自动更新。
+
+- **适用于 Intune 的条件访问策略仅可从 Azure 门户获取**  <!-- 1737088 1634311 -->    
+  从此版本开始，必须配置和管理 [Azure 门户](https://portal.azure.com)中的条件访问策略（“Azure Active Directory” > “条件访问”）。 为方便起见，也可以通过 Azure 门户中的“Intune” > “条件访问”，从 Intune 访问此边栏选项卡。
+
+- **符合性更新详细信息** <!--1637547 -->    
+  发送电子邮件以报告不符合设备时，会包括不符合设备的详细信息。 
+
 
 - Android 设备“解析”操作的新功能<!--1583480-->    
   适用于 Android 的公司门户应用正在扩展其更新设备设置的“解析”操作，以解决[设备加密问题](https://docs.microsoft.com/intune-user-help/encrypt-your-device-android)。

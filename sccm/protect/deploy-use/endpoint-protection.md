@@ -3,29 +3,30 @@ title: Endpoint Protection
 titleSuffix: Configuration Manager
 description: "学习如何为 Configuration Manager 层次结构中的客户端计算机管理反恶意软件策略和 Windows 防火墙安全性。"
 ms.custom: na
-ms.date: 02/6/2017
+ms.date: 02/09/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 76c90f64-d729-456b-8304-01852cd66fb6
-caps.latest.revision: "11"
-author: NathBarn
-ms.author: nathbarn
-manager: angrobe
-ms.openlocfilehash: 308c69f4631a1bcc28f7d8460a4aa3abb02f0650
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+caps.latest.revision: 
+author: mestew
+ms.author: mstewart
+manager: dougeby
+ms.openlocfilehash: 3f8d0d7934a539729793cd0307d6fa5d3e31bf3a
+ms.sourcegitcommit: fbde417e3c3002898bd216a7e110e725ae269893
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="endpoint-protection"></a>Endpoint Protection
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager 中的 Endpoint Protection 支持为 Configuration Manager 层次结构中的客户端计算机管理反恶意软件策略和 Windows 防火墙安全性。  
+Endpoint Protection 为 Configuration Manager 层次结构中的客户端计算机管理反恶意软件策略和 Windows 防火墙安全性。  
 
 > [!IMPORTANT]  
 >  必须获得使用 Endpoint Protection 的许可，才能管理 Configuration Manager 层次结构中的客户端。  
@@ -34,7 +35,7 @@ System Center Configuration Manager 中的 Endpoint Protection 支持为 Configu
 
 -   配置反恶意软件策略和 Windows 防火墙设置，管理所选的计算机组的 Windows Defender 高级威胁防护  
 -   使用 Configuration Manager 软件更新下载最新的反恶意软件定义文件，使客户端计算机保持最新  
--   发送电子邮件通知、使用控制台中的监视、查看报表，以在客户端计算机上检测到恶意软件时，通知管理用户  
+-   发送电子邮件通知、使用控制台内部监视，并查看报表。 当在客户端计算机上检测到恶意软件时，这些操作会通知管理用户。  
 
 自 Windows 10 和 Windows Server 2016 计算机起，Windows Defender 已经安装。 对于这些操作系统，Windows Defender 的管理客户端在 Configuration Manager 客户端安装时一起安装。 在 Windows 8.1 及更低版本的计算机上，Endpoint Protection 客户端随 Configuration Manager 客户端一起安装。 Windows Defender 和 Endpoint Protection 客户端具有以下功能：  
 
@@ -47,13 +48,13 @@ System Center Configuration Manager 中的 Endpoint Protection 支持为 Configu
 > [!NOTE]  
 >  Endpoint Protection 客户端可安装在运行 Hyper-V 的服务器以及具有受支持操作系统的来宾虚拟机上。 为防止 CPU 使用率过高，Endpoint Protection 操作配置有内置的随机化延迟，因此保护服务不会同时运行。  
 
- 此外，Configuration Manager 中的 Endpoint Protection 还可管理 Configuration Manager 控制台中的 Windows 防火墙设置。  
+ 此外，还可使用 Configuration Manager 控制台中的 Endpoint Protection 管理 Windows 防火墙设置。  
 
  [示例方案：使用 System Center Endpoint Protection 来保护计算机在 System Center Configuration Manager 中免受恶意软件侵害](scenarios-endpoint-protection.md) Endpoint Protection 和 Windows 防火墙。  
 
 
 ## <a name="managing-malware-with-endpoint-protection"></a>使用 Endpoint Protection 管理恶意软件  
- Configuration Manager 中的 Endpoint Protection 可用于创建包含 Endpoint Protection 客户端配置设置的反恶意软件策略。 然后可以将这些反恶意软件策略部署到客户端计算机，并在“监视”工作区中“安全性”下的“Endpoint Protection 状态”节点中或通过使用 Configuration Manager 报表来监视这些服务器。  
+ Configuration Manager 中的 Endpoint Protection 可用于创建包含 Endpoint Protection 客户端配置设置的反恶意软件策略。 将这些反恶意软件策略部署到客户端计算机 然后通过使用“监视”工作区中“安全性”下的“Endpoint Protection 状态”节点，监视符合性。 还可使用“报表”节点下的 Endpoint Protection 报表。  
 
  其他信息：  
 
@@ -77,12 +78,12 @@ System Center Configuration Manager 中的 Endpoint Protection 支持为 Configu
 >  Endpoint Protection 仅支持管理 Windows 防火墙。  
 
 
- 有关如何为 Endpoint Protection 创建和部署 Windows 防火墙策略的详细信息，请参阅[如何在 System Center Configuration Manager 中为 Endpoint Protection 创建和部署 Windows 防火墙策略](create-windows-firewall-policies.md)。  
+ 有关详细信息，请参阅[如何为 Endpoint Protection 创建和部署 Windows 防火墙策略](create-windows-firewall-policies.md)  
 
 
 ## <a name="windows-defender-advanced-threat-protection"></a>Windows Defender 高级威胁防护
 
-从 Configuration Manager (Current Branch) 版本 1606 开始，Endpoint Protection 可以帮助管理和监控 Windows Defender 高级威胁防护 (ATP)。 Windows Defender ATP 是一种新服务，可帮助企业检测、调查其网络上的高级攻击并做出响应。 请参阅 [Windows Defender 高级威胁防护](windows-defender-advanced-threat-protection.md)。
+Endpoint Protection 可以管理和监视 Windows Defender 高级威胁防护 (ATP)。 Windows Defender ATP 服务有助于企业检测、调查其网络上的高级攻击并做出响应。 有关详细信息，请参阅 [Windows Defender 高级威胁防护](windows-defender-advanced-threat-protection.md)
 
 ## <a name="endpoint-protection-workflow"></a>Endpoint Protection 工作流  
  可以借助以下关系图了解在 Configuration Manager 层次结构中实现 Endpoint Protection 的工作流。  
@@ -109,13 +110,12 @@ System Center Configuration Manager 中的 Endpoint Protection 支持为 Configu
 2. 选择网站顶部的“下载和密钥”选项卡。
 3. 筛选产品 **System Center Endpoint Protection (Current Branch)**。
 4. 单击链接以**下载**
-5. 单击“继续” 。 应能看到若干文件，其中一个名为：System Center Endpoint Protection (current branch - version 1606) for Linux OS and Macintosh OS Multilanguage   32/64 bit   1579 MB ISO。
-6. 单击箭头图标，下载该文件。 文件名为 SW_DVD5_Sys_Ctr_Endpnt_Prtctn_1606_MultiLang_-2_EptProt_Lin_Mac_MLF_X21-44498.ISO。
+5. 单击“继续” 。 应能看到若干文件，其中一个名为：System Center Endpoint Protection (current branch - version 1606) for Linux OS and Macintosh OS Multilanguage   32/64 bit   1878 MB ISO。
+6. 单击箭头图标，下载该文件。 文件名为 SW_DVD5_Sys_Ctr_Endpnt_Prtctn_1606_MultiLang_-3_EptProt_Lin_Mac_MLF_X21-67050.ISO。
 
-此 2017 年 7 月更新 (X21 44498) 包括以下部分：
+此 2018 年 1 月更新 (X21-67050) 包括以下版本：
 
-- 适用于 Mac 的 System Center Endpoint Protection 4.5.28.1（更新的安装证书）
-- 适用于 Linux 的 System Center Endpoint Protection 4.5.18.0（新语言包）
-- 适用于 Linux 的 System Center Endpoint Protection 文档（有关实时保护的已修订指南）
+- 适用于 Mac 4.5.32.0 的 System Center Endpoint Protection（支持 macOS 10.13 High Sierra）
+- 适用于 Linux 4.5.20.0 System Center Endpoint Protection 
 
- 有关如何安装和管理适用于 Linux 和 Mac 计算机的 Endpoint Protection 客户端，请使用这些产品随附的文档，该文档位于“文档”  文件夹。
+ 有关如何安装和管理适用于 Linux 和 Mac 计算机的 Endpoint Protection 客户端，请使用这些产品随附的文档。 此产品文档位于 .ISO 文件的“文档”文件夹。
