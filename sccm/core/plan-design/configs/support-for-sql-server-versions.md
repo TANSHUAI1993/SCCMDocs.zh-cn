@@ -3,7 +3,7 @@ title: "支持的 SQL Server 版本"
 titleSuffix: Configuration Manager
 description: "获取托管 System Center Configuration Manager 站点数据库的 SQL Server 版本和配置要求。"
 ms.custom: na
-ms.date: 12/18/2017
+ms.date: 02/14/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,11 +16,11 @@ caps.latest.revision:
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 82df06873449d538b7efbe414a451d746d48e11f
-ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
+ms.openlocfilehash: 5c17efa3498907fcc57d366965bec3b4198890bb
+ms.sourcegitcommit: 37e990d191028160486dbca286d2ea945bd5c8c3
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="supported-sql-server-versions-for-system-center-configuration-manager"></a>System Center Configuration Manager 支持的 SQL Server 版本
 
@@ -29,8 +29,8 @@ ms.lasthandoff: 02/01/2018
 每个 System Center Configuration Manager 站点都需要受支持的 SQL Server 版本和配置来托管站点数据库。  
 
 ##  <a name="bkmk_Instances"></a> SQL Server 实例和位置  
- **管理中心站点和主站点：**  
-站点数据库必须使用 SQL Server 的完整安装。  
+ **管理中心站点和主站点**  
+ 站点数据库必须使用 SQL Server 的完整安装。  
 
  SQL Server 可位于以下位置：  
 
@@ -45,7 +45,7 @@ ms.lasthandoff: 02/01/2018
 -   SQL Server AlwaysOn 可用性组。 此选项需要 Configuration Manager 1602 版或更高版本。 有关详细信息，请参阅[通过 SQL Server AlwaysOn 实现适用于 System Center Configuration Manager 的高可用性站点数据库](../../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)。
 
 
- **辅助站点：**  
+ **辅助站点**  
  站点数据库可使用完整安装的 SQL Server 或 SQL Server Express 的默认实例。  
 
  SQL Server 必须位于站点服务器计算机上。  
@@ -59,7 +59,7 @@ ms.lasthandoff: 02/01/2018
 SQL Server 事务复制仅支持将对象复制到配置为使用[数据库副本](https://technet.microsoft.com/library/mt608546.aspx)的管理点。  
 
 ##  <a name="bkmk_SQLVersions"></a> 支持的 SQL Server 版本  
- 在含有多个网站的层次结构中，只要满足以下条件，各个网站就可以使用不同版本的 SQL Server 托管网站数据库：
+ 在含有多个网站的层次结构中，各个网站可以使用不同版本的 SQL Server 托管网站数据库。 只要满足以下各项：
  -  Configuration Manager 支持你使用的 SQL Server 版本。
  -  Microsoft 仍支持你使用的 SQL Server 版本。
  -  SQL Server 支持在两个 SQL Server 版本之间进行复制。  例如，[SQL Server 不支持在 SQL Server 2008 R2 和 SQL Server 2016 之间进行复制](https://docs.microsoft.com/sql/relational-databases/replication/deprecated-features-in-sql-server-replication)。
@@ -185,34 +185,34 @@ SQL Server 事务复制仅支持将对象复制到配置为使用[数据库副�
 ##  <a name="bkmk_SQLConfig"></a> SQL Server 所需的配置  
  用于站点数据库（包括 SQL Server Express）的 SQL Server 的所有安装都需要以下内容。 Configuration Manager 将 SQL Server Express 作为辅助站点安装的一部分进行安装时，将为你自动创建这些配置。  
 
- **SQL Server 体系结构版本：**  
+ **SQL Server 体系结构版本**  
  Configuration Manager 需要 64 位版本的 SQL Server 以托管站点数据库。  
 
- **数据库排序规则：**  
+ **数据库排序规则**  
  在每个站点上，用于站点和站点数据库的 SQL Server 实例必须使用以下排序规则： **SQL_Latin1_General_CP1_CI_AS**。  
 
  Configuration Manager 支持对此排序规则的两种例外情况，以满足在 GB18030 中定义的标准，以便在中国使用。 有关详细信息，请参阅 [System Center Configuration Manager 的国际支持](../../../core/plan-design/hierarchy/international-support.md)。  
 
- **数据库兼容性级别：** </br>
+ **数据库兼容性级别** </br>
  Configuration Manager 要求站点数据库的兼容性级别不低于 Configuration Manager 版本支持的最低 SQL Server 版本。 例如，从版本 1702 开始，需要有高于或等于 110 的[数据库兼容性级别](https://docs.microsoft.com/sql/relational-databases/databases/view-or-change-the-compatibility-level-of-a-database)。 <!-- SMS.506266--> 
 
- **SQL Server 功能：**  
+ **SQL Server 功能**  
  仅“数据库引擎服务”  功能是每个站点服务器所必需的。  
 
- Configuration Manager 数据库复制不需要“SQL Server 复制”功能。 但是，如果要使用 [System Center Configuration Manager 管理点的数据库副本](../../../core/servers/deploy/configure/database-replicas-for-management-points.md)，则需进行此 SQL Server 配置。  
+ Configuration Manager 数据库复制不需要“SQL Server 复制”功能。 但是，当你使用 [System Center Configuration Manager 管理点的数据库副本](../../../core/servers/deploy/configure/database-replicas-for-management-points.md)时，则需进行此 SQL Server 配置。  
 
- **Windows 身份验证：**  
+ **Windows 身份验证**  
  Configuration Manager 需要“Windows 身份验证”来验证与数据库的连接。  
 
- **SQL Server 实例：**  
+ **SQL Server 实例**  
  必须为每个站点使用专用的 SQL Server 实例。 此实例可以为命名实例或默认实例。  
 
- **SQL Server 内存：**  
- 通过使用 SQL Server Management Studio 和设置“服务器内存选项”下的“最小服务器内存”设置来保留 SQL Server 的内存。 有关如何设置固定的内存量的详细信息，请参阅 [如何：设置固定的内存量 (SQL Server Management Studio)](http://go.microsoft.com/fwlink/p/?LinkId=233759)。  
+ **SQL Server 内存**  
+ 通过使用 SQL Server Management Studio 和设置“服务器内存选项”下的“最小服务器内存”设置来保留 SQL Server 的内存。 有关如何对此进行设置的详细信息，请参阅[如何：设置固定内存量 (SQL Server Management Studio)](http://go.microsoft.com/fwlink/p/?LinkId=233759)。  
 
--   **对于与站点服务器安装在同一台计算机上的数据库服务器：**将 SQL Server 的内存限制为可用可寻址系统内存的 50% 到 80%。  
+-   对于与站点服务器安装在同一台计算机上的数据库服务器：将 SQL Server 的内存限制为可用可寻址系统内存的 50% 到 80%。  
 
--   **对于专用的数据库服务器（远离站点服务器）：**将 SQL Server 的内存限制为可用可寻址系统内存的 80% 到 90%。  
+-   对于专用的数据库服务器（远离站点服务器）：将 SQL Server 的内存限制为可用可寻址系统内存的 80% 到 90%。  
 
 -   **对于使用中的每个 SQL Server 实例的缓冲池内存预留：**  
 
@@ -220,7 +220,7 @@ SQL Server 事务复制仅支持将对象复制到配置为使用[数据库副�
     -   对于主站点：设置至少 8 千兆字节 (GB)。  
     -   对于辅助站点：设置至少 4 千兆字节 (GB)。  
 
-**SQL 嵌套触发器：**  
+**SQL 嵌套触发器**  
  必须启用[SQL 嵌套触发器](http://go.microsoft.com/fwlink/?LinkId=528802) 。  
 
  **SQL Server CLR 集成**  
@@ -229,7 +229,7 @@ SQL Server 事务复制仅支持将对象复制到配置为使用[数据库副�
 ##  <a name="bkmk_optional"></a> SQL Server 可选配置  
  以下配置对使用完整 SQL Server 安装的每个数据库是可选的。  
 
- **SQL Server 服务：**  
+ **SQL Server 服务**  
  你可以将 SQL Server 服务配置为使用以下账户运行：  
 
 -   低权限域用户帐户：  
@@ -248,14 +248,14 @@ SQL Server 事务复制仅支持将对象复制到配置为使用[数据库副�
 
 有关如何更改 SQL Server 服务所使用帐户的信息，请参阅[如何：为 SQL Server（SQL Server 配置管理器）更改服务启动帐户](http://go.microsoft.com/fwlink/p/?LinkId=237661)。  
 
-**SQL Server Reporting Services：**  
+**SQL Server Reporting Services**  
 SQL Server Reporting Services 是安装可运行报表的 Reporting Services 点的必需条件。  
 
 > [!IMPORTANT]  
 > 将以前版本的 SQL Server 升级后，可能会看到以下错误：“报表生成器不存在”。    
 > 要修复此错误，必须重新安装 Reporting Services 点站点系统角色。
 
-**SQL Server 端口：**  
+**SQL Server 端口**  
 对于与 SQL Server 数据库引擎的通信和站点间复制，可以使用默认的 SQL Server 端口配置，也可以指定自定义端口：  
 
 -   **站点间通信**使用 SQL Server Service Broker，它默认使用端口 TCP 4022。  
@@ -279,4 +279,4 @@ SQL Server Reporting Services 是安装可运行报表的 Reporting Services 点
 如果需要升级 SQL Server 版本，建议采用以下由易到难的方法。
 1. [就地升级 SQL Server](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#a-namebkmksupconfigupgradedbsrva-upgrade-sql-server-on-the-site-database-server)（推荐）。
 2. 在新计算机上安装新版本的 SQL Server，然后使用 Configuration Manager 设置的[数据库移动选项](/sccm/core/servers/manage/modify-your-infrastructure#a-namebkmkdbconfiga-modify-the-site-database-configuration)将站点服务器指向新的 SQL Server。
-3. 使用[备份和恢复](/sccm/protect/understand/backup-and-recovery)。
+3. 使用[备份和恢复](/sccm/protect/understand/backup-and-recovery)。 支持在 SQL 升级方案中使用备份和恢复。 在查看[恢复站点前的注意事项](/sccm/protect/understand/recover-sites.md#considerations-before-recovering-a-site)时，可以忽略 SQL 版本控制要求。 

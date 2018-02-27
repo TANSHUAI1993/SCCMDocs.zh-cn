@@ -3,30 +3,31 @@ title: "升级本地基础结构"
 titleSuffix: Configuration Manager
 description: "了解如何升级基础结构（例如 SQL Server）和站点系统的站点操作系统。"
 ms.custom: na
-ms.date: 06/05/2017
+ms.date: 02/15/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8ca970dd-e71c-404f-9435-d36e773a0db2
-caps.latest.revision: "7"
-caps.handback.revision: "0"
+caps.latest.revision: 
+caps.handback.revision: 
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 3296fe01ebe7d3343a174ffd18483156683b69f7
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 8e17ffad2b972119c92e449bef8f086b950b106c
+ms.sourcegitcommit: fbd4a9d2fa8ed4ddd3a0fecc4a2ec4fc0ccc3d0c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="upgrade-on-premises-infrastructure-that-supports-system-center-configuration-manager"></a>升级支持 System Center Configuration Manager 的本地基础结构
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-使用本主题中的信息来帮助升级运行 System Center Configuration Manager 的服务器基础结构。  
+使用本文中的信息来帮助升级运行 System Center Configuration Manager 的服务器基础结构。  
 
  - 如果想要从早期版本的 Configuration Manager 升级到 System Center Configuration Manager，请参阅[升级到 System Center Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)。
 
@@ -43,9 +44,7 @@ ms.lasthandoff: 12/04/2017
     - 使用 Configuration Manager 版本 1602 或更高版本时，还支持将 Windows Server 2008 R2 升级到 Windows Server 2012 R2（[请参阅其他详细信息](#bkmk_from2008r2)）。
 
     > [!WARNING]  
-    >  升级到 Windows Server 2012 R2 之前， *必须从服务器中卸载 WSUS 3.2* 。  
-    >   
-    >  有关此关键步骤的信息，请参阅 Windows Server 文档中 [Windows Server Update Services 概述](https://technet.microsoft.com/library/hh852345.aspx)中的“新增和更改的功能”部分。  
+    >  升级到不同操作系统之前，必须从服务器卸载 WSUS。 可以保留 SUSDB，并在重新安装 WSUS 后将其重新附加。 有关此关键步骤的信息，请参阅 Windows Server 文档中 [Windows Server Update Services 概述](https://technet.microsoft.com/library/hh852345.aspx)中的“新增和更改的功能”部分。  
 
 若要升级服务器，请使用要升级到的目标操作系统所提供的升级过程。  参阅以下内容：
   -  Windows Server 文档中的 [Windows Server 2012 R2 的升级选项](https://technet.microsoft.com/library/dn303416.aspx)。  
@@ -57,6 +56,7 @@ ms.lasthandoff: 12/04/2017
 
 **升级之前：**  
 -   删除 System Center Endpoint Protection (SCEP) 客户端。 Windows Server 2016 具有内置的 Windows Defender，它会代替 SCEP 客户端。 SCEP 客户端的存在会阻止升级到 Windows Server 2016。
+-   如果已安装 WSUS 角色，则从服务器中将其删除。 可以保留 SUSDB，并在重新安装 WSUS 后将其重新附加。
 
 **升级之后：**
 -   确保 Windows Defender 已启用、设置为自动启动且正在运行。
@@ -93,7 +93,7 @@ ms.lasthandoff: 12/04/2017
 ### <a name="bkmk_2012r2"></a> Windows Server 2012 到 Windows Server 2012 R2
 
 **升级之前：**
--  不同于支持的其他方案，此方案升级前没有特别的注意事项。
+-   如果已安装 WSUS 角色，则从服务器中将其删除。 可以保留 SUSDB，并在重新安装 WSUS 后将其重新附加。
 
 **升级之后：**
   - 请确保针对以下站点系统角色，Windows 部署服务已启动，且正在运行（升级期间会停止该服务）：

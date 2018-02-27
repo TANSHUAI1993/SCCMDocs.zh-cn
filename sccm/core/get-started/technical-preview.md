@@ -3,7 +3,7 @@ title: "Technical Preview 版本"
 titleSuffix: Configuration Manager
 description: "了解可让你试用 System Center Configuration Manager 中的新功能和新特性的 Technical Preview 版本。"
 ms.custom: na
-ms.date: 01/19/2018
+ms.date: 02/09/2018
 ms.prod: configuration-manager
 ms.reviewer: nab
 ms.suite: na
@@ -16,11 +16,11 @@ caps.latest.revision:
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 975bd66bb86efb133ccd7017295e8108558f633d
-ms.sourcegitcommit: db9978135d7a6455d83dbe4a5175af2bdeaeafd8
+ms.openlocfilehash: 4f16216bd1bbb662cc8d532664ccd593f94d3898
+ms.sourcegitcommit: e15516983883a4dd002c4bdd114147b04b811021
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="technical-preview-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 01/22/2018
 
  由于此版本是技术预览版，因此详细信息和功能可能有所更改。  
 
- 本文包含适用于所有版本的 Technical Preview 的信息。 它还列出了每个新功能及其首次出现的 Technical Preview 版本，例如版本 1801 表示 2018 年 1 月。 这些功能将专门在各预览版的单独主题中详细介绍。  
+ 本文包含适用于所有版本的 Technical Preview 的信息。 它还列出了每个新功能及其首次出现的 Technical Preview 版本，例如版本 1802 表示 2018 年 2 月。 这些功能将专门在各预览版的单独主题中详细介绍。  
 
  有关 Configuration Manager 的 Current Branch 中新增功能的信息，请参阅 [System Center Configuration Manager 中的新增功能](/sccm/core/plan-design/changes/what-has-changed-from-configuration-manager-2012)。
 
@@ -60,7 +60,9 @@ ms.lasthandoff: 01/22/2018
 
 -   不支持迁移到此预览版或从此预览版进行迁移。  
 
--   不支持升级到此预览版。  
+-   不支持升级到此预览版。 
+
+-   不支持从 cd.latest 文件夹进行站点恢复。  <!--507106-->
 
 -   不支持从此预览版升级到生产版本（当前分支）。 但是，更新可用于预览版本时，可以从 Configuration Manager 控制台的“更新和与维护服务”节点查找并安装它们。 有关控制台中升级过程的视频，请观看 youtube.com 上的 [Installing ConfigMgr Update Packages（安装 ConfigMgr 更新包）](https://www.youtube.com/embed/KBd_EGFbUT8) 。  
 -   仅支持独立主站点。 不支持管理中心站点、多个主站点或辅助站点。  
@@ -112,16 +114,28 @@ ms.lasthandoff: 01/22/2018
 
 <!-- This is the full list of new features in the latest TP release -->
 
-### <a name="technical-preview-version-1801"></a>Technical Preview 版本 1801
-- [创建分阶段部署](capabilities-in-technical-preview-1801.md#create-phased-deployments)<!-- 1357405 --> 
-- [共同管理报告](capabilities-in-technical-preview-1801.md#co-management-reporting)<!-- 1356648 --> 
-- [自动部署规则评估计划改进](capabilities-in-technical-preview-1801.md#improvements-to-automatic-deployment-rule-evaluation-schedule)<!-- 1357133 --> 
-- [重新分配分发点](capabilities-in-technical-preview-1801.md#reassign-distribution-point)<!-- 1306937 --> 
-- [硬件清单改进](capabilities-in-technical-preview-1801.md#improvements-to-hardware-inventory)<!-- 1357389 --> 
-- [软件中心的客户端设置改进](capabilities-in-technical-preview-1801.md#improvements-to-client-settings-for-software-center)<!-- 1355146 --> 
-- [新的 Windows Defender 应用程序防护设置](capabilities-in-technical-preview-1801.md#new-settings-for-windows-defender-application-guard)<!-- 1356256 --> 
-- [运行脚本的改进](capabilities-in-technical-preview-1801.md#improvements-to-run-scripts)<!-- 1236459 --> 
-
+### <a name="technical-preview-version-1802"></a>Technical Preview 版本 1802
+- [使用共同管理将 Endpoint Protection 工作负荷转移到 Intune](capabilities-in-technical-preview-1802.md#transition-endpoint-protection-workload-to-intune-using-co-management) <!-- 1357365 -->
+- [配置 Windows 传递优化以使用 Configuration Manager 边界组](capabilities-in-technical-preview-1802.md#configure-windows-delivery-optimization-to-use-configuration-manager-boundary-groups) <!-- 1324696 --> 
+- [通过云管理网关执行的 Windows 10 就地升级任务序列](capabilities-in-technical-preview-1802.md#windows-10-in-place-upgrade-task-sequence-via-cloud-management-gateway) <!-- 1357149 -->
+- [对 Windows 10 就地升级任务序列的改进](capabilities-in-technical-preview-1802.md#improvements-to-windows-10-in-place-upgrade-task-sequence) <!-- 1357425 --> 
+- [对已启用 PXE 的分发点的改进](capabilities-in-technical-preview-1802.md#improvements-to-pxe-enabled-distribution-points) <!-- 1357580 --> 
+- [任务序列的部署模板](capabilities-in-technical-preview-1802.md#deployment-templates-for-task-sequences) <!-- 1357391 --> 
+- [产品生命周期仪表板](capabilities-in-technical-preview-1802.md#product-lifecycle-dashboard) <!--1319632 --> 
+- [报表改进](capabilities-in-technical-preview-1802.md#improvements-to-reporting) <!--1357653 --> 
+- [对软件中心的改进](capabilities-in-technical-preview-1802.md#improvements-to-software-center) <!--1357592 --> 
+- [运行脚本的改进](capabilities-in-technical-preview-1802.md#improvements-to-run-scripts)<!--1236459 --> 
+- [管理点的边界组回退](capabilities-in-technical-preview-1802.md#boundary-group-fallback-for-management-points) <!-- 1324594 --> 
+- [改进了对 CNG 证书的支持](capabilities-in-technical-preview-1802.md#improved-support-for-cng-certificates) <!-- 1357314 --> 
+- [云管理网关支持 Azure 资源管理器](capabilities-in-technical-preview-1802.md#cloud-management-gateway-support-for-azure-resource-manager) <!-- 1324735 --> 
+- [审批每台设备的用户的应用程序请求](capabilities-in-technical-preview-1802.md#approve-application-requests-for-users-per-device) <!-- 1357015 --> 
+- [在已加入 Azure AD 的设备上，使用软件中心来浏览和安装用户可用的应用程序](capabilities-in-technical-preview-1802.md#use-software-center-to-browse-and-install-user-available-applications-on-azure-ad-joined-devices) <!-- 1322613 --> 
+- [关于 Windows AutoPilot 设备信息的报表](capabilities-in-technical-preview-1802.md#report-on-windows-autopilot-device-information) <!-- 1351442 --> 
+- [对 Configuration Manager 的 Windows 设备攻击防护策略的改进](capabilities-in-technical-preview-1802.md#improvements-to-configuration-manager-policies-for-windows-device-exploit-guard) <!-- 1356220 -->
+- [Microsoft Edge 浏览器策略](capabilities-in-technical-preview-1802.md#microsoft-edge-browser-policies) <!-- 1357310 -->
+- [默认浏览器计数报表](capabilities-in-technical-preview-1802.md#report-for-default-browser-counts) <!-- 1357830 --> 
+- [Windows 10 ARM64 设备支持](capabilities-in-technical-preview-1802.md#support-for-windows-10-arm64-devices) <!-- 1353704 --> 
+- [分阶段部署的更改](capabilities-in-technical-preview-1802.md#changes-to-phased-deployments) <!-- 1357405 -->
 
 
 
@@ -135,8 +149,17 @@ Then remove the bottom of this list and/or move individual items not in CB to th
 
  |功能 |Technical Preview 版本 |Current Branch 版本|  
  |----------------|---------------------|--------------------|
+ |创建分阶段部署 <!-- 1357405 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#create-phased-deployments)  |![未添加](media/Red_X.gif)    |
+ |共同管理报告 <!-- 1356648 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#co-management-reporting)  |![未添加](media/Red_X.gif)    |
+ |自动部署规则评估计划改进 <!-- 1357133 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#improvements-to-automatic-deployment-rule-evaluation-schedule)  |![未添加](media/Red_X.gif)    |
+ |重新分配分发点 <!-- 1306937 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#reassign-distribution-point)  |![未添加](media/Red_X.gif)    |
+ |硬件清单改进 <!-- 1357389 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#improvements-to-hardware-inventory)  |![未添加](media/Red_X.gif)    |
+ |软件中心的客户端设置改进 <!-- 1355146 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#improvements-to-client-settings-for-software-center)  |![未添加](media/Red_X.gif)    |
+ |新的 Windows Defender 应用程序防护设置 <!-- 1356256 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#new-settings-for-windows-defender-application-guard)  |![未添加](media/Red_X.gif)    |
+ |运行脚本的改进 <!-- 1236459 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#improvements-to-run-scripts)  |![未添加](media/Red_X.gif)    |
  |不自动升级被取代的应用程序<!-- 1351266 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#do-not-automatically-upgrade-superseded-applications)  |![未添加](media/Red_X.gif)    | 
  |安装软件中心中的多个应用程序<!-- 1357126 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#install-multiple-applications-in-software-center)  |![未添加](media/Red_X.gif)    |
+ |基于客户端的 PXE 响应者服务 <!-- 1357148 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#client-based-pxe-responder-service)  |![未添加](media/Red_X.gif)    |
  |Configuration Manager 客户端安装中的更改<!-- 1356195 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#change-in-the-configuration-manager-client-install)  |![未添加](media/Red_X.gif)    | 
  |对 Surface 设备仪表板的更改<!-- 1355788 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#change-to-the-surface-device-dashboard)  |![未添加](media/Red_X.gif)    | 
  |对 Office 365 客户端管理仪表板的改进<!-- 1357281 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#improvements-to-office-365-client-management-dashboard)  |![未添加](media/Red_X.gif)    | 
@@ -144,15 +167,7 @@ Then remove the bottom of this list and/or move individual items not in CB to th
  |对操作系统部署的改进<!-- SMS 500897 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#improvements-to-operating-system-deployment)  |![未添加](media/Red_X.gif)    | 
  |运行任务序列步骤 <!-- 1261338 --> | [Tech Preview 1711](capabilities-in-technical-preview-1711.md) |[版本 1710](/sccm/osd/understand/task-sequence-steps#child-task-sequence)    |
  |允许在安装应用程序时进行用户交互<!-- 1356976 --> | [Tech Preview 1711](capabilities-in-technical-preview-1711.md) |![未添加](media/Red_X.gif)    |
- |Windows Analytics 设备运行状况的 Windows 10 遥测 <!--1356148 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#limit-windows-10-enhanced-telemetry-to-only-send-data-relevant-to-windows-analytics-device-health) |[版本 1710](/sccm/core/plan-design/changes/whats-new-in-version-1710#reporting)    |
- |对软件中心图标的改进 <!-- 1356194 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#software-center-no-longer-distorts-icons-larger-than-250x250) |[版本 1710](/sccm/apps/plan-design/plan-for-and-configure-application-management#supplemental-procedures-to-install-and-configure-the-application-catalog-and-software-center)    |
- |检查软件中心中共同托管的设备的符合性<!-- 1356374 -->|[Tech Preview 1710](capabilities-in-technical-preview-1710.md#check-compliance-from-software-center-for-co-managed-devices)|[版本 1710](/sccm/core/clients/manage/co-management-overview)    |
- |对 CNG 证书的有限支持<!-- 1356191 -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md#limited-support-for-cng-certificates)|[版本 1710](/sccm/core/plan-design/network/cng-certificates-overview)    |
- |对攻击防护的支持 <!--1355468 --> | [Tech Preview 1710](capabilities-in-technical-preview-1710.md#support-for-exploit-guard) |[版本 1710](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy)    |
- |对挂起的计算机重启的改进性说明   <!-- 1356283  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|[版本 1710](/sccm/core/clients/manage/manage-clients)    |
- |设备防护策略更改   <!-- 1355092  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|[版本 1710](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)    |
- |配置和部署 Windows Defender 应用程序防护策略   <!-- 1351960  -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md)|[版本 1710](/sccm/protect/deploy-use/create-deploy-application-guard-policy)    |
- |针对从 Configuration Manager 部署 PowerShell 脚本的改进<!-- 1236459 -->| [Tech Preview 1710](capabilities-in-technical-preview-1710.md#improvements-for-deploying-powershell-scripts-from-configuration-manager) | [版本 1710](/sccm/apps/deploy-use/create-deploy-scripts)
+
  
 
 ## <a name="capabilities-delivered-in-previous-technical-previews"></a>以前的技术预览版中提供的功能
