@@ -7,20 +7,21 @@ ms.date: 08/30/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-client
+ms.technology:
+- configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 44153689-70e8-42ad-9ae8-17ae35f6a2e3
-caps.latest.revision: "9"
-caps.handback.revision: "0"
+caps.latest.revision: 
+caps.handback.revision: 
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: d96a8aedd046e3a8dcd12e711ae19f53a901fceb
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 9df979fe98dc4d4ead18ff3cfb276612681c9bce
+ms.sourcegitcommit: b1fa7be6a6fa5bb7c49e90c0e28a21ba8b41c842
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="planning-for-client-deployment-to-linux-and-unix-computers-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中规划 Linux 和 UNIX 计算机的客户端部署
 
@@ -54,7 +55,7 @@ ms.lasthandoff: 10/12/2017
 
  **Red Hat Enterprise Linux Server 版本 5.1 (Tikanga)**  
 
-|所需程序包|描述|最低版本|  
+|所需程序包|说明|最低版本|  
 |----------------------|-----------------|---------------------|  
 |glibc|C 标准库|2.5-12|  
 |Openssl|OpenSSL 库；安全网络通信协议|0.9.8b-8.3.el5|  
@@ -62,16 +63,23 @@ ms.lasthandoff: 10/12/2017
 
  **Red Hat Enterprise Linux Server 版本 6**  
 
-|所需程序包|描述|最低版本|  
+|所需程序包|说明|最低版本|  
 |----------------------|-----------------|---------------------|  
 |glibc|C 标准库|2.12-1.7|  
 |Openssl|OpenSSL 库；安全网络通信协议|1.0.0-4|  
 |PAM|可插入身份验证模块|1.1.1-4|  
 
+ **Red Hat Enterprise Linux Server 版本 7**  
+
+|所需程序包|说明|最低版本|  
+|----------------------|-----------------|---------------------|  
+|glibc|C 标准库|2.17|  
+|Openssl|OpenSSL 库；安全网络通信协议|1.0.1|  
+|PAM|可插入身份验证模块|1.1.1-4|  
 
  **Solaris 10 SPARC**  
 
-|所需程序包|描述|最低版本|  
+|所需程序包|说明|最低版本|  
 |----------------------|-----------------|---------------------|  
 |所需的操作系统修补程序|PAM 内存泄漏|117463-05|  
 |SUNWlibC|Sun Workshop Compilers Bundled libC (sparc)|5.10, REV=2004.12.22|  
@@ -84,7 +92,7 @@ ms.lasthandoff: 10/12/2017
 
  **Solaris 10 x86**  
 
-|所需程序包|描述|最低版本|  
+|所需程序包|说明|最低版本|  
 |----------------------|-----------------|---------------------|  
 |所需的操作系统修补程序|PAM 内存泄漏|117464-04|  
 |SUNWlibC|Sun 研讨会编译器捆绑 libC (i386)|5.10,REV=2004.12.20|  
@@ -96,7 +104,7 @@ ms.lasthandoff: 10/12/2017
 
  **Solaris 11 SPARC**  
 
-|所需程序包|描述|最低版本|  
+|所需程序包|说明|最低版本|  
 |----------------------|-----------------|---------------------|  
 |SUNWlibC|Sun Workshop Compilers Bundled libC|5.11, REV=2011.04.11|  
 |SUNWlibmsr|Math & Microtasking Libraries (Root)|5.11, REV=2011.04.11|  
@@ -107,7 +115,7 @@ ms.lasthandoff: 10/12/2017
 
  **Solaris 11 x86**  
 
-|所需程序包|描述|最低版本|  
+|所需程序包|说明|最低版本|  
 |----------------|-----------|---------------|  
 |SUNWlibC|Sun Workshop Compilers Bundled libC|5.11, REV=2011.04.11|  
 |SUNWlibmsr|Math & Microtasking Libraries (Root)|5.11, REV=2011.04.11|  
@@ -119,22 +127,22 @@ ms.lasthandoff: 10/12/2017
 
  **SUSE Linux Enterprise Server 10 SP1 (i586)**  
 
-|所需程序包|描述|最低版本|  
+|所需程序包|说明|最低版本|  
 |----------------------|-----------------|---------------------|  
 |glibc-2.4-31.30|C 标准共享库|2.4-31.30|  
-|Openssl|OpenSSL 库；安全网络通信协议|0.9.8a-18.15|  
+|OpenSSL|OpenSSL 库；安全网络通信协议|0.9.8a-18.15|  
 |PAM|可插入身份验证模块|0.99.6.3-28.8|  
 
  **SUSE Linux Enterprise Server 11 (i586)**  
 
-|所需程序包|描述|最低版本|  
+|所需程序包|说明|最低版本|  
 |----------------------|-----------------|---------------------|  
 |glibc-2.9-13.2|C 标准共享库|2.9-13.2|  
 |PAM|可插入身份验证模块|pam-1.0.2-20.1|  
 
  **通用 Linux（Debian 包）Debian，Ubuntu Server**  
 
-|所需程序包|描述|最低版本|  
+|所需程序包|说明|最低版本|  
 |----------------------|-----------------|---------------------|  
 |libc6|C 标准共享库|2.3.6|  
 |Openssl|OpenSSL 库；安全网络通信协议|0.9.8 或 1.0|  
@@ -142,7 +150,7 @@ ms.lasthandoff: 10/12/2017
 
  **通用 Linux（RPM 包）CentOS，Oracle Linux**  
 
-|所需程序包|描述|最低版本|  
+|所需程序包|说明|最低版本|  
 |----------------------|-----------------|---------------------|  
 |glibc|C 标准共享库|2.5-12|  
 |Openssl|OpenSSL 库；安全网络通信协议|0.9.8 或 1.0|  
@@ -151,7 +159,7 @@ ms.lasthandoff: 10/12/2017
 
  **IBM AIX 6.1**  
 
-|所需程序包|描述|最低版本|  
+|所需程序包|说明|最低版本|  
 |----------------------|-----------------|---------------------|  
 |操作系统版本|操作系统的版本|AIX 6.1、任何 Technology Level 和 Service Pack|  
 |xlC.rte|XL C/C++ Runtime|9.0.0.5|  
@@ -159,7 +167,7 @@ ms.lasthandoff: 10/12/2017
 
  **IBM AIX 7.1 (Power)**  
 
-|所需程序包|描述|最低版本|  
+|所需程序包|说明|最低版本|  
 |----------------------|-----------------|---------------------|  
 |操作系统版本|操作系统的版本|AIX 7.1、任何 Technology Level 和 Service Pack|  
 |xlC.rte|XL C/C++ Runtime||  
@@ -168,7 +176,7 @@ ms.lasthandoff: 10/12/2017
 
  **HP-UX 11i v3 IA64**  
 
-|所需程序包|描述|最低版本|  
+|所需程序包|说明|最低版本|  
 |----------------------|-----------------|---------------------|  
 |HPUX11i-OE|HP-UX 基础操作环境|B.11.31.0709|  
 |OS-Core.MinimumRuntime.CORE-SHLIBS|特定 IA 开发库|B.11.31|  
@@ -240,7 +248,7 @@ ms.lasthandoff: 10/12/2017
 
  当安装适用于 Linux 和 UNIX 的 Configuration Manager 客户端时，安装脚本会检查操作系统版本。 默认情况下，如果操作系统版本被标识为未发布支持 SHA-256 的 OpenSSL 版本，则无法安装 Configuration Manager 客户端。  
 
- 若要在未发布支持 SHA-256 的 OpenSSL 版本的 Linux 和 UNIX 操作系统上安装 Configuration Manager 客户端，必须使用安装命令行开关 **ignoreSHA256validation**。 当在适当的 Linux 或 UNIX 操作系统上使用此命令行选项时，Configuration Manager 客户端将跳过 SHA-256 验证，并且在安装完成后，客户端将不会使用 SHA-256 来对它通过使用 HTTP 提交到站点系统的数据进行签名。 有关将 Linux 和 UNIX 客户端配置为使用证书的详细信息，请参阅本主题中的 [Planning for Security and Certificates for Linux and UNIX Servers](#BKMK_SecurityforLnU)。 有关需要 SHA-256 的信息，请参阅[配置 System Center Configuration Manager 中的安全](../../../../core/plan-design/security/configure-security.md)主题中的[配置签名和加密](../../../../core/plan-design/security/configure-security.md#BKMK_ConfigureSigningEncryption)。  
+ 若要在未发布支持 SHA-256 的 OpenSSL 版本的 Linux 和 UNIX 操作系统上安装 Configuration Manager 客户端，必须使用安装命令行开关 **ignoreSHA256validation**。 当在适当的 Linux 或 UNIX 操作系统上使用此命令行选项时，Configuration Manager 客户端将跳过 SHA-256 验证，并且在安装完成后，客户端将不会使用 SHA-256 来对它通过使用 HTTP 提交到站点系统的数据进行签名。 有关将 Linux 和 UNIX 客户端配置为使用证书的详细信息，请参阅本主题中的 [Planning for Security and Certificates for Linux and UNIX Servers](#BKMK_SecurityforLnU) 。 有关需要 SHA-256 的信息，请参阅[配置 System Center Configuration Manager 中的安全](../../../../core/plan-design/security/configure-security.md)主题中的[配置签名和加密](../../../../core/plan-design/security/configure-security.md#BKMK_ConfigureSigningEncryption)。  
 
 > [!NOTE]  
 >  命令行选项 **ignoreSHA256validation** 忽略使用支持 sha-256 的 OpenSSL 版本运行 Linux 和 UNIX 发布的版本的计算机上。  

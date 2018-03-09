@@ -5,18 +5,19 @@ description: "Configuration Manager 将 Office 365 客户端更新从 WSUS 目�
 keywords: 
 author: mestew
 ms.author: mstewart
-manager: angrobe
-ms.date: 12/28/2017
+manager: dougeby
+ms.date: 02/16/2018
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology: configmgr-sum
+ms.technology:
+- configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
-ms.openlocfilehash: b951e72635806c12bd0ec0dd66e382a767b99b43
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+ms.openlocfilehash: 2f765df84b94524cf56f6d1d9e051157f1a325ef
+ms.sourcegitcommit: 45ff3ffa040eada5656b17f47dcabd3c637bdb60
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="manage-office-365-proplus-with-configuration-manager"></a>使用 Configuration Manager 管理 Office 365 ProPlus
 
@@ -30,7 +31,7 @@ ms.lasthandoff: 01/04/2018
 
 - [部署 Office 365 更新](#deploy-office-365-updates)：自 Configuration Manager 版本 1602 起，可以使用软件更新管理工作流管理 Office 365 客户端更新。 当 Microsoft 将新的 Office 365 客户端更新发布到 Office 内容交付网络 (CDN) 时，Microsoft 还会将更新包发布到 Windows Server 更新服务 (WSUS)。 将 Office 365 客户端更新从 WSUS 目录同步到站点服务器之后，更新可部署到客户端。    
 
-- [添加 Office 365 更新下载的语言](#add-languages-for-office-365-update-downloads)：自 Configuration Manager 版本 1610 起，可以添加对 Configuration Manager 的支持，以下载 Office 365 支持的任意语言的更新。 这意味着只要 Office 365 支持，Configuration Manager 就可不必支持该语言。  
+- [添加 Office 365 更新下载的语言](#add-languages-for-office-365-update-downloads)：自 Configuration Manager 版本 1610 起，可以添加对 Configuration Manager 的支持，以下载 Office 365 支持的任意语言的更新。 这意味着只要 Office 365 支持，Configuration Manager 就可不必支持该语言。 在 Configuration Manager 版本 1610 之前，必须使用 Office 365 客户端上配置的语言下载和部署更新。 
 
 - [更改更新频道](#change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager)：可以使用组策略向 Office 365 客户端分发注册表项值更改，从而更改更新频道。
 
@@ -98,6 +99,8 @@ Office 365 客户端管理仪表板中显示的数据来自硬件清单。 启�
 
 
 ## <a name="deploy-office-365-updates"></a>部署 Office 365 更新
+从 Configuration Manager 版本 1706 开始，Office 365 客户端更新已移至“Office 365 客户端管理” >“Office 365 更新”节点。 这不会影响你的 ADR 配置。 
+
 使用以下步骤通过 Configuration Manager 部署 Office 365 更新：
 
 1.  在本文章的“使用 Configuration Manager 管理 Office 365 客户端更新的要求”部分，验证使用 Configuration Manager 管理 Office 365 客户端更新的[要求](https://technet.microsoft.com/library/mt628083.aspx)。  
@@ -118,7 +121,7 @@ Office 365 客户端管理仪表板中显示的数据来自硬件清单。 启�
 4. [将 Office 365 更新部署](deploy-software-updates.md)到客户端。   
 
 > [!Important]
-> 必须下载并部署 Office 365 客户端上配置的语言的更新。 例如，假设 Office 365 客户端上配置的语言为 en-us 和 de-de。 在站点服务器上，对适用的 Office 365 更新只下载并部署 en-us 内容。 当用户通过软件中心启动此更新的安装时，此更新将在下载内容时挂起。   
+> 在 Configuration Manager 版本 1610 之前，必须使用 Office 365 客户端上配置的语言下载和部署更新。 例如，假设 Office 365 客户端上配置的语言为 en-us 和 de-de。 在站点服务器上，对适用的 Office 365 更新只下载并部署 en-us 内容。 当用户从软件中心开始安装此更新时，该更新会在下载 de-de 内容时挂起。   
 
 ## <a name="restart-behavior-and-client-notifications-for-office-365-updates"></a>Office 365 更新的重启行为和客户端通知
 将更新部署到 Office 365 客户端时，重启行为和客户端通知会存在差异，具体取决于所拥有的 Configuration Manager 版本。 下表提供了有关客户端收到 Office 365 更新时的最终用户体验的信息：
@@ -131,7 +134,7 @@ Office 365 客户端管理仪表板中显示的数据来自硬件清单。 启�
 |1706|安装更新前，客户端收到弹出消息、应用内通知及倒计时对话框。|
 
 > [!Important]
-> 在 Configuration Manager 版本 1706 中，请注意以下详细信息：
+> 从 Configuration Manager 版本 1706 开始，请注意以下详细信息：
 >
 >- 对于截止时间在未来 48 小时内并已下载更新内容的必需应用，通知图标显示在任务栏的通知区域中。 
 >- 对于截止时间在未来 7.5 小时内并已下载更新内容的必需应用，将显示倒计时对话框。 在达到截止时间前，用户可以将倒计时对话框推迟三次。 推迟后，倒计时会在两个小时后再次显示。 如果没有推迟，则会显示 30 分钟倒计时，且在倒计时到期时安装更新。

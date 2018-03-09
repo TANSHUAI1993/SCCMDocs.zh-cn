@@ -15,11 +15,11 @@ ms.assetid: 4884a2d3-13ce-44e5-88c4-a66dc7ec6014
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1b5e8f744573680ab55fcfff26622e312206ca1a
-ms.sourcegitcommit: fbd4a9d2fa8ed4ddd3a0fecc4a2ec4fc0ccc3d0c
+ms.openlocfilehash: 162c47d867e78498650da685327c0fe296aa2eda
+ms.sourcegitcommit: b1fa7be6a6fa5bb7c49e90c0e28a21ba8b41c842
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="capabilities-in-technical-preview-1802-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1802 中的功能
 
@@ -318,9 +318,9 @@ Windows AutoPilot 是以现代方式载入和配置新 Windows 10 设备的一�
 
 
 
-## <a name="improvements-to-configuration-manager-policies-for-windows-device-exploit-guard"></a>对 Configuration Manager 的 Windows 设备攻击防护策略的改进
+## <a name="improvements-to-configuration-manager-policies-for-windows-defender-exploit-guard"></a>对 Configuration Manager 的 Windows Defender 攻击防护策略的改进
 <!-- 1356220 -->
-在 Configuration Manager 中，为 Windows 设备攻击防护添加了有关攻击面减少和受控文件夹访问权限组件的其他策略设置。
+在 Configuration Manager 中，为 [Windows Defender 攻击防护](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard)添加了有关攻击面减少和受控文件夹访问权限组件的其他策略设置。
 
 **受控文件夹访问权限的新设置**<br/>
 在配置受控文件夹访问权限时，有两个附加选项：“仅阻止磁盘扇区”和“仅审核磁盘扇区”。 这两个设置允许仅为引导扇区启用受控文件夹访问权限，而不启用对特定文件夹或默认受保护文件夹的保护。 

@@ -7,19 +7,20 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7341cc6e-9e08-41e4-bcc6-6c1ff12e85ca
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 37ad3eb2d7e6796dcd88b2b01b8b0cea97bb41fe
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 84fe2fd0959051ea42e555cb484c95fb82ec8fb3
+ms.sourcegitcommit: 1378532fac2620ddcfd31061982f344a290c2e67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="use-alerts-and-the-status-system-for-system-center-configuration-manager"></a>使用 System Center Configuration Manager 的警报和状态系统
 
@@ -136,7 +137,7 @@ ms.lasthandoff: 12/04/2017
 
 5.  在“操作”  选项卡上，修改在状态消息匹配筛选规则时要执行的操作。  
 
-6.  单击“确定”  以保存更改。  
+6.  单击“确定”以保存更改。  
 
 7.  单击“确定”  以关闭“状态筛选规则”  对话框。  
 
@@ -219,9 +220,9 @@ ms.lasthandoff: 12/04/2017
     |**推迟**|挂起警报监视，直至达到指定的日期。 达到指定日期时，将更新警报的状态。<br /><br /> 仅当启用了警报后，才能推迟警报。|  
     |**创建订阅**|打开“新建订阅”  对话框，在该对话框中，你可以创建针对所选警报的电子邮件订阅。|  
 
-##### <a name="to-configure-endpoint-protection-alerts-for-a-collection"></a>若要为集合配置 Endpoint Protection 警报  
+<!--##### To configure Endpoint Protection alerts for a collection  
 
-1.  挂起  
+1.  pending  -->
 
 ##### <a name="to-configure-client-status-alerts-for-a-collection"></a>若要为集合配置客户端状态警报  
 

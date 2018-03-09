@@ -3,7 +3,7 @@ title: "站点先决条件"
 titleSuffix: Configuration Manager
 description: "了解如何将 Windows 计算机配置为 System Center Configuration Manager 站点系统服务器。"
 ms.custom: na
-ms.date: 8/25/2017
+ms.date: 02/28/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,12 +15,12 @@ ms.assetid: 1392797b-76cb-46b4-a3e4-8f349ccaa078
 caps.latest.revision: 
 author: mestew
 ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: cb1b81fc0765e6754c7dea9ce421e41fcd58a70e
-ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
+manager: dougeby
+ms.openlocfilehash: 6d1be6375dde2df51aafe076e5613647ecca3c4c
+ms.sourcegitcommit: d0fc79214bc35ca172fd2023dfa617b977ee865b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="site-and-site-system-prerequisites-for-system-center-configuration-manager"></a>System Center Configuration Manager 的站点和站点系统先决条件
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 02/01/2018
  基于 Windows 的计算机要求特定配置，以支持用作 System Center Configuration Manager 站点系统服务器。  
 
  
- 对于某些产品，例如软件更新点的 Windows Server 更新服务 (WSUS)，需要参考产品文档来确定此产品适用的其他先决条件和限制。 此处仅包含直接应用于 Configuration Manager 的配置。   
+ 对于某些产品，例如软件更新点的 Windows Server Update Services (WSUS)，需要参考产品文档来确定使用的其他先决条件和限制。 此处仅包含直接应用于 Configuration Manager 的配置。   
 
 > [!NOTE]  
 >  2016 年 1 月，对 .NET Framework 4.0、4.5 和 4.5.1 的支持过期。 有关详细信息，请参阅 support.microsoft.com 处的 [Microsoft .NET Framework 支持生命周期策略常见问题解答](https://support.microsoft.com/gp/framework_faq?WT.mc_id=azurebg_email_Trans_943_NET452_Update)。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 02/01/2018
 
 -   每个站点系统服务器必须使用 64 位操作系统。 唯一的例外是分发点站点系统角色，它可以安装在某些 32 位操作系统上。  
 
--   在任意操作系统的 Server Core 安装上，站点系统不受支持。 对此情况的一个例外是分发点站点系统角色支持 Server Core 安装，无需 PXE 或多播支持。  
+-   在任意操作系统的 Server Core 安装上，站点系统不受支持。 例外是分发点站点系统角色支持 Server Core 安装，无需 PXE 或多播支持。  
 
 -   安装站点系统服务器后，不支持进行更改：  
 
@@ -50,9 +50,9 @@ ms.lasthandoff: 02/01/2018
 
     -   计算机的名称。  
 
-  如果必须更改其中的任何设置，必须首先从计算机中删除站点系统角色，然后在更改完成后再重新安装角色。 如果这会影响站点服务器计算机，则必须卸载站点，然后在更改完成后再重新安装站点。  
+  如果必须更改其中任何项，必须首先从计算机中删除站点系统角色，然后在更改完成后再重新安装角色。 对于影响站点服务器计算机的更改，则必须卸载站点，然后在更改完成后再重新安装站点。  
 
--   在 Windows Server 群集实例上，站点系统角色不受支持。 此情况的唯一例外是站点数据库服务器。  
+-   在 Windows Server 群集实例上，站点系统角色不受支持。 唯一例外是站点数据库服务器。  
 
 -   不支持更改任意 Configuration Manager 服务的启动类型或“登录身份”设置。 这样做可能会阻止关键服务正常运行。  
 
@@ -62,13 +62,13 @@ ms.lasthandoff: 02/01/2018
 
 -   .NET Framework 3.5 SP1（或更高版本）  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2（或更高版本）
 
 -   远程差分压缩  
 
 **Windows ADK：**  
 
--   安装或升级管理中心站点或主站点之前，必须安装要安装或升级到的 Configuration Manager 版本所需的 Windows 评估和部署工具包 (ADK) 版本。 有关支持 Windows 10 作为客户端主题的信息，请参阅 [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk)。  
+-   安装或升级管理中心站点或主站点之前，必须安装要安装或升级到的 Configuration Manager 版本所需的 Windows 评估和部署工具包 (ADK) 版本。 请参阅“支持 Windows 10 作为客户端”一文中的 [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk)。  
 
 -   有关此要求的详细信息，请参阅[操作系统部署的基础架构要求](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment)。  
 
@@ -83,7 +83,7 @@ ms.lasthandoff: 02/01/2018
 
 -   .NET Framework 3.5 SP1（或更高版本）  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2（或更高版本）   
 
 -   远程差分压缩  
 
@@ -115,7 +115,7 @@ ms.lasthandoff: 02/01/2018
 ###  <a name="bkmk_2012smsprovpreq"></a> SMS 提供程序服务器  
 **Windows ADK：**  
 
--   安装 SMS 提供程序实例的计算机必须具备要安装或升级到的 Configuration Manager 版本所需的 Windows ADK 版本。 有关支持 Windows 10 作为客户端主题的信息，请参阅 [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk)。
+-   安装 SMS 提供程序实例的计算机必须具备要安装或升级到的 Configuration Manager 版本所需的 Windows ADK 版本。 请参阅“支持 Windows 10 作为客户端”一文中的 [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk)。
 
 -   有关此要求的详细信息，请参阅[操作系统部署的基础架构要求](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment)。  
 
@@ -124,7 +124,7 @@ ms.lasthandoff: 02/01/2018
 
 -   .NET Framework 3.5 SP1（或更高版本）  
 
--   .NET Framework 4.5.2：  
+-   .NET Framework 4.5.2（或更高版本）：  
 
     -   ASP.NET 4.5  
 
@@ -159,7 +159,7 @@ ms.lasthandoff: 02/01/2018
 
 -   .NET Framework 3.5 SP1（或更高版本）  
 
--   .NET Framework 4.5.2：  
+-   .NET Framework 4.5.2（或更高版本）：  
 
     -   ASP.NET 4.5：  
 
@@ -194,12 +194,12 @@ ms.lasthandoff: 02/01/2018
 ###  <a name="bkmk_2012AIpreq"></a>资产智能同步点  
 **Windows Server 角色和功能：**  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2（或更高版本）  
 
 ###  <a name="bkmk_2012crppreq"></a>证书注册点  
 **Windows Server 角色和功能：**  
 
--   .NET Framework 4.5.2：  
+-   .NET Framework 4.5.2（或更高版本）：  
 
     -   HTTP 激活  
 
@@ -273,9 +273,9 @@ ms.lasthandoff: 02/01/2018
 
 -   .NET Framework 3.5（或更高版本）  
 
--   .NET Framework 4.5.2：  
+-   .NET Framework 4.5.2（或更高版本）：  
 
-     此站点系统角色安装时，Configuration Manager 将自动安装 .NET Framework 4.5.2。 此安装可将服务器置于重启挂起状态。 当挂起对 .NET Framework 的重启时，在服务器重启和安装完成之前，.NET 应用程序可能失败。  
+     此站点系统角色安装时，Configuration Manager 将自动安装 .NET Framework 4.5.2。 此安装可将服务器置于重启挂起状态。 如果挂起对 .NET Framework 的重启，在服务器重启和安装完成之前，.NET 应用程序可能失败。  
 
     -   HTTP 激活（和自动选择的选项）  
 
@@ -313,9 +313,9 @@ ms.lasthandoff: 02/01/2018
 
 -   .NET Framework 3.5（或更高版本）  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2（或更高版本） 
 
-     此站点系统角色安装时，Configuration Manager 将自动安装 .NET Framework 4.5.2。 此安装可将服务器置于重启挂起状态。 当挂起对 .NET Framework 的重启时，在服务器重启和安装完成之前，.NET 应用程序可能失败。  
+     此站点系统角色安装时，Configuration Manager 将自动安装 .NET Framework 4.5.2。 此安装可将服务器置于重启挂起状态。 如果挂起对 .NET Framework 的重启，在服务器重启和安装完成之前，.NET 应用程序可能失败。  
 
 **IIS 配置：**  
 
@@ -359,7 +359,7 @@ ms.lasthandoff: 02/01/2018
 ###  <a name="bkmk_2012MPpreq"></a>管理点  
 **Windows Server 角色和功能：**  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2（或更高版本） 
 
 -   BITS 服务器扩展（和自动选择的选项），或后台智能传输服务 (BITS)（和自动选择的选项）  
 
@@ -382,22 +382,22 @@ ms.lasthandoff: 02/01/2018
 ###  <a name="bkmk_2012RSpoint"></a> Reporting Services 点  
 **Windows Server 角色和功能：**  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2（或更高版本） 
 
 **SQL Server Reporting Services：**  
 
--   必须安装并配置至少一个 SQL Server 实例以在安装 Reporting Services 点之前支持 SQL Server Reporting Services。  
+-   安装并配置至少一个 SQL Server 实例以在安装 Reporting Services 点之前支持 SQL Server Reporting Services。  
 
 -   用于 SQL Server Reporting Services 的实例可以是用于站点数据库的同一实例。  
 
--   此外，只要其他 System Center 产品不具有对共享 SQL Server 实例的限制，则你使用的实例可与其他 System Center 产品共享。  
+-   此外，只要其他 System Center 产品对共享 SQL Server 实例没有限制，则你使用的实例可与其他 System Center 产品共享。  
 
 ###  <a name="bkmk_SCPpreq"></a>服务连接点  
 **Windows Server 角色和功能：**  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2（或更高版本） 
 
-     此站点系统角色安装时，Configuration Manager 将自动安装 .NET Framework 4.5.2。 此安装可将服务器置于重启挂起状态。 当挂起对 .NET Framework 的重启时，在服务器重启和安装完成之前，.NET 应用程序可能失败。  
+     此站点系统角色安装时，Configuration Manager 将自动安装 .NET Framework 4.5.2。 此安装可将服务器置于重启挂起状态。 如果挂起对 .NET Framework 的重启，在服务器重启和安装完成之前，.NET 应用程序可能失败。  
 
 **Visual C++ Redistributable：**  
 
@@ -410,7 +410,7 @@ ms.lasthandoff: 02/01/2018
 
 -   .NET Framework 3.5 SP1（或更高版本）  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2（或更高版本） 
 
 需要默认 IIS 配置。
 
@@ -432,14 +432,14 @@ ms.lasthandoff: 02/01/2018
 
 **下列内容适用于所有 Windows Communication Foundation (WCF) 激活要求：**  
 
--   可以在站点系统服务器上将 WCF 激活配置为 .NET Framework Windows 功能的一部分。 例如，在 Windows Server 2008 R2 上运行“添加功能向导”以在该服务器上安装其他功能。 在“选择功能”页上，依次展开“NET Framework 3.5.1 功能”、“WCF 激活”，然后选中“HTTP 激活”和“非 HTTP 激活”复选框来启用这些选项。  
+-   可以在站点系统服务器上将 WCF 激活配置为 .NET Framework Windows 功能的一部分。 例如，在 Windows Server 2008 R2 上运行“添加功能向导”以在该服务器上安装其他功能。 在“选择功能”页上，依次展开“NET Framework 3.5.1 功能”和“WCF 激活”。 同时选中“HTTP 激活”和“非 HTTP 激活”复选框以启用这些选项。  
 
 ###  <a name="bkmk_2008sspreq"></a>站点服务器：管理中心站点和主站点  
 **.NET Framework：**  
 
 -   .NET Framework 3.5 SP1（或更高版本）  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2（或更高版本） 
 
 **Windows 功能：**  
 
@@ -447,7 +447,7 @@ ms.lasthandoff: 02/01/2018
 
 **Windows ADK：**  
 
--   安装或升级管理中心站点或主站点之前，必须安装正在安装或升级到的 Configuration Manager 版本所需的 Windows ADK 版本。  有关支持 Windows 10 作为客户端主题的信息，请参阅 [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk)。  
+-   安装或升级管理中心站点或主站点之前，必须安装正在安装或升级到的 Configuration Manager 版本所需的 Windows ADK 版本。  请参阅“支持 Windows 10 作为客户端”一文中的 [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk)。  
 
 -   有关此要求的详细信息，请参阅[操作系统部署的基础架构要求](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment)。  
 
@@ -462,7 +462,7 @@ ms.lasthandoff: 02/01/2018
 
 -   .NET Framework 3.5 SP1（或更高版本）  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2（或更高版本）  
 
 **Visual C++ Redistributable：**  
 
@@ -492,14 +492,14 @@ ms.lasthandoff: 02/01/2018
 ###  <a name="bkmk_2008smsprovpreq"></a> SMS 提供程序服务器  
 **Windows ADK：**  
 
--   安装 SMS 提供程序实例的计算机必须具备要安装或升级到的 Configuration Manager 版本所需的 Windows ADK 版本。 有关支持 Windows 10 作为客户端主题的信息，请参阅 [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk)。  
+-   安装 SMS 提供程序实例的计算机必须具备要安装或升级到的 Configuration Manager 版本所需的 Windows ADK 版本。 请参阅“支持 Windows 10 作为客户端”一文中的 [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk)。  
 
 -   有关此要求的详细信息，请参阅[操作系统部署的基础架构要求](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment)。  
 
 ###  <a name="bkmk_2008acwspreq"></a>应用程序目录网站点  
 **.NET Framework：**  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2（或更高版本） 
 
 **IIS 配置：**
 
@@ -530,7 +530,7 @@ ms.lasthandoff: 02/01/2018
 
 -   .NET Framework 3.5 SP1（或更高版本）  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2（或更高版本） 
 
 **Windows Communication Foundation (WCF) 激活：**  
 
@@ -561,12 +561,12 @@ ms.lasthandoff: 02/01/2018
 ###  <a name="bkmk_2008AIpreq"></a>资产智能同步点  
 **.NET Framework：**  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2（或更高版本） 
 
 ###  <a name="bkmk_2008crppreq"></a>证书注册点  
 **.NET Framework：**  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2（或更高版本） 
 
 -   HTTP 激活  
 
@@ -599,7 +599,7 @@ ms.lasthandoff: 02/01/2018
 
     -   IIS 6 WMI 兼容性  
 
-使用自定义 IIS 配置时，可以删除不需要的选项，如下所示：  
+使用自定义 IIS 配置时，可以删除不需要的选项，例如以下各项：  
 
 -   常见 HTTP 功能：  
 
@@ -641,9 +641,9 @@ ms.lasthandoff: 02/01/2018
 ###  <a name="bkmk_2008Enrollpreq"></a>注册点  
 **.NET Framework：**  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2（或更高版本） 
 
-     安装此站点系统角色时，如果服务器未安装受支持的 .NET Framework 版本，Configuration Manager 将自动安装 .NET Framework 4.5.2。 此安装可将服务器置于重启挂起状态。 当挂起对 .NET Framework 的重启时，在服务器重启和安装完成之前，.NET 应用程序可能失败。  
+     安装此站点系统角色时，如果服务器未安装受支持的 .NET Framework 版本，Configuration Manager 将自动安装 .NET Framework 4.5.2。 此安装可将服务器置于重启挂起状态。 如果挂起对 .NET Framework 的重启，在服务器重启和安装完成之前，.NET 应用程序可能失败。  
 
 **Windows Communication Foundation (WCF) 激活：**  
 
@@ -670,7 +670,7 @@ ms.lasthandoff: 02/01/2018
 ###  <a name="bkmk_2008EnrollProxpreq"></a>注册代理点  
 **.NET Framework：**  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2（或更高版本） 
 
      安装此站点系统角色时，如果服务器未安装受支持的 .NET Framework 版本，Configuration Manager 将自动安装 .NET Framework 4.5.2。 此安装可将服务器置于重启挂起状态。 当挂起对 .NET Framework 的重启时，在服务器重启和安装完成之前，.NET 应用程序可能失败。  
 
@@ -708,7 +708,7 @@ ms.lasthandoff: 02/01/2018
 ###  <a name="bkmk_2008MPpreq"></a>管理点  
 **.NET Framework：**  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2（或更高版本）
 
 **IIS 配置：**
 
@@ -734,7 +734,7 @@ ms.lasthandoff: 02/01/2018
     -   IIS 6 WMI 兼容性  
 
 
-使用自定义 IIS 配置时，可以删除不需要的选项，如下所示：  
+使用自定义 IIS 配置时，可以删除不需要的选项，例如以下选项：  
 
 -   常见 HTTP 功能：  
 
@@ -749,11 +749,11 @@ ms.lasthandoff: 02/01/2018
 ###  <a name="bkmk_2008RSpoint"></a> Reporting Services 点  
 **.NET Framework：**  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2（或更高版本）  
 
 **SQL Server Reporting Services：**  
 
--   必须安装并配置至少一个 SQL Server 实例以在安装 Reporting Services 点之前支持 SQL Server Reporting Services。  
+-   安装并配置至少一个 SQL Server 实例以在安装 Reporting Services 点之前支持 SQL Server Reporting Services。  
 
 -   用于 SQL Server Reporting Services 的实例可以是用于站点数据库的同一实例。  
 
@@ -762,9 +762,9 @@ ms.lasthandoff: 02/01/2018
 ###  <a name="bkmk_2008SCPpreq"></a>服务连接点  
 **.NET Framework：**  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2（或更高版本） 
 
-     安装此站点系统角色时，如果服务器未安装受支持的 .NET Framework 版本，Configuration Manager 将自动安装 .NET Framework 4.5.2。 此安装可将服务器置于重启挂起状态。 当挂起对 .NET Framework 的重启时，在服务器重启和安装完成之前，.NET 应用程序可能失败。  
+     安装此站点系统角色时，如果服务器未安装受支持的 .NET Framework 版本，Configuration Manager 将自动安装 .NET Framework 4.5.2。 此安装可将服务器置于重启挂起状态。 如果挂起对 .NET Framework 的重启，在服务器重启和安装完成之前，.NET 应用程序可能失败。  
 
 **Visual C++ Redistributable：**  
 
@@ -777,7 +777,7 @@ ms.lasthandoff: 02/01/2018
 
 -   .NET Framework 3.5 SP1（或更高版本）  
 
--   .NET Framework 4.5.2  
+-   .NET Framework 4.5.2（或更高版本） 
 
 **IIS 配置：**
 

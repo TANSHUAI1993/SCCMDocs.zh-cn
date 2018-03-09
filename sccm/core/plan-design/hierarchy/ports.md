@@ -3,30 +3,31 @@ title: "用于连接的端口"
 titleSuffix: Configuration Manager
 description: "了解有关 System Center Configuration Manager 用于连接的必需的和可自定义端口。"
 ms.custom: na
-ms.date: 09/19/2017
+ms.date: 02/16/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c6777fb0-0754-4abf-8a1b-7639d23e9391
-caps.latest.revision: "8"
-caps.handback.revision: "0"
+caps.latest.revision: 
+caps.handback.revision: 
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 0b6fa22a7bc3de7bb5bc0d26f8e35b51d55c5e72
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+ms.openlocfilehash: 8db098f69180aac3785087af6ee305b3651094e5
+ms.sourcegitcommit: 1378532fac2620ddcfd31061982f344a290c2e67
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="ports-used-in-system-center-configuration-manager"></a>System Center Configuration Manager 中使用的端口
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager 是分布式客户端/服务器系统。 Configuration Manager 的分布式性质意味着可在站点服务器、站点系统和客户端之间建立连接。 某些连接使用不可配置的端口，而某些连接支持指定的自定义端口。 如果使用防火墙、路由器、代理服务器或 IPsec 等任何端口筛选技术，必须验证所需的端口是否可用。  
+System Center Configuration Manager 是分布式客户端/服务器系统。 Configuration Manager 的分布式性质意味着可在站点服务器、站点系统和客户端之间建立连接。 某些连接使用不可配置的端口，而某些连接支持指定的自定义端口。 如果使用防火墙、路由器、代理服务器或 IPsec 等任何端口筛选技术，请验证所需的端口是否可用。  
     
 > [!NOTE]  
 >  如果通过 SSL 桥接支持基于 Internet 的客户端，则除了满足端口要求，可能还必须允许某些 HTTP 谓词和标头遍历防火墙。   
@@ -205,6 +206,13 @@ Configuration Manager 不允许您为以下通信类型配置端口：
 |说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |超文本传输协议 (HTTP)|--|80|  
+|安全超文本传输协议 (HTTPS)|--|443|
+
+Configuration Manager 控制台使用 Internet 访问获取以下内容： 
+- 从 Microsoft 更新下载部署软件包的软件更新。
+- 功能区中的反馈项。
+- 控制台内的文档链接。
+<!--506823-->
 
 ###  <a name="BKMK_PortsConsole-RSP"></a> Configuration Manager 控制台 -- > Reporting Services 点  
 
@@ -689,12 +697,12 @@ Configuration Manager 不允许您为以下通信类型配置端口：
 >  在安装这些站点系统之前，请确保站点系统服务器上正在运行远程注册表服务；如果站点系统位于不同的 Active Directory 林中且不具有信任关系，则另请确保指定了站点系统安装帐户。  
 
 ###  <a name="BKMK_PortsClientInstall"></a> Configuration Manager 客户端安装使用的端口  
-安装客户端期间使用的端口取决于客户端部署方法。 有关各客户端部署方法所用端口的列表，请参阅 **System Center Configuration Manager 中客户端的 Windows 防火墙和端口设置**主题中的 [Configuration Manager 客户端部署期间使用的端口](../../../core/clients/deploy/windows-firewall-and-port-settings-for-clients.md)。 有关如何为客户端安装和安装后通信配置客户端上的 Windows 防火墙的信息，请参阅 [System Center Configuration Manager 中客户端的 Windows 防火墙和端口设置](../../../core/clients/deploy/windows-firewall-and-port-settings-for-clients.md)。  
+安装客户端期间使用的端口取决于客户端部署方法。 有关各客户端部署方法所用端口的列表，请参阅 [System Center Configuration Manager 中客户端的 Windows 防火墙和端口设置](../../../core/clients/deploy/windows-firewall-and-port-settings-for-clients.md)一文中的“Configuration Manager 客户端部署期间使用的端口”。 有关如何为客户端安装和安装后通信配置客户端上的 Windows 防火墙的信息，请参阅 [System Center Configuration Manager 中客户端的 Windows 防火墙和端口设置](../../../core/clients/deploy/windows-firewall-and-port-settings-for-clients.md)。  
 
 ###  <a name="BKMK_MigrationPorts"></a> 迁移使用的端口  
 运行“迁移”的站点服务器使用多个端口连接到源层次结构中的适用站点，以便收集源站点 SQL Server 数据库中的数据并共享分发点。  
 
- 有关这些端口的信息，请参阅 [System Center Configuration Manager 中迁移的先决条件](../../../core/migration/prerequisites-for-migration.md)主题中的[迁移的所需配置](../../../core/migration/prerequisites-for-migration.md#BKMK_Required_Configurations)部分。  
+ 有关这些端口的信息，请参阅 [System Center Configuration Manager 中迁移的先决条件](../../../core/migration/prerequisites-for-migration.md)一文中的[迁移的所需配置](../../../core/migration/prerequisites-for-migration.md#BKMK_Required_Configurations)部分。  
 
 ###  <a name="BKMK_ServerPorts"></a> Windows Server 使用的端口  
  下表列出了 Windows Server 使用的一些关键端口及其各自的功能。 有关 Windows Server 服务和网络端口要求的更完整的列表，请参阅 [Windows 服务器系统的服务概述和网络端口要求](http://go.microsoft.com/fwlink/p/?LinkID=123652)。  

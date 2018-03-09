@@ -3,28 +3,29 @@ title: "数据仓库"
 titleSuffix: Configuration Manager
 description: "System Center Configuration Manager 的数据仓库服务点和数据库"
 ms.custom: na
-ms.date: 12/05/2017
+ms.date: 02/26/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aaf43e69-68b4-469a-ad58-9b66deb29057
 caps.latest.revision: 
 author: mestew
 ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 4d420ce623c834401383231d00e3f361342f2d2e
-ms.sourcegitcommit: 52b956cfe32c3f06ae68d6ba6fc3244ce5a66325
+manager: dougeby
+ms.openlocfilehash: 954ec65bae15e087d6cf5afbcc8e0da1ebf83533
+ms.sourcegitcommit: be939893f0ceca4add8655ae2c24e42aa16aec38
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 02/27/2018
 ---
 #  <a name="the-data-warehouse-service-point-for-system-center-configuration-manager"></a>System Center Configuration Manager 的数据仓库服务点
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-从 1702 版开始，可以使用数据仓库服务点存储和报告关于 Configuration Manager 部署的长期历史数据。
+从版本 1702 开始，可以使用数据仓库服务点存储和报告关于 Configuration Manager 部署的长期历史数据。
 
 > [!TIP]
 > 此功能在 1702 版本中首次引入，属于[预发行功能](/sccm/core/servers/manage/pre-release-features)。 从版本 1706 开始，此功能不再属于预发行功能。
@@ -46,19 +47,20 @@ ms.lasthandoff: 12/06/2017
 ## <a name="prerequisites-for-the-data-warehouse-service-point"></a>数据仓库服务点的先决条件
 - 只有在层次结构的顶层站点中才会支持数据仓库站点系统角色。 （管理中心站点或独立主站点）。
 - 安装站点系统角色的计算机要求具有 .NET Framework 4.5.2 或更高版本。
+- 在数据仓库数据库上向 **Reporting Services 点帐户**授予 **db_datareader** 权限。 
 - 安装站点系统角色的计算机的计算机帐户用于将数据与数据仓库数据库同步。 此帐户要求具有以下权限：  
-  - 在将托管数据仓库数据库的计算机上是**管理员**。
+  - 对托管数据仓库数据库的计算机具有**管理员**权限。
   - 对数据仓库数据库具有 DB_Creator 权限。
-  - 对顶层站点站点数据库具有 DB_owner 或带 execute 的 DB_reader 权限。
+  - 对顶层站点的站点数据库具有 **DB_owner** 或带 **execute** 的 **DB_reader** 权限。
 - 数据仓库数据库需要使用 SQL Server 2012 或更高版本。 版本可以是 Standard、Enterprise 或 Datacenter。
 - 支持以下 SQL Server 配置来托管仓库数据库：  
   - 默认实例
   - 命名实例
   - SQL Server Always On 可用性组
   - SQL Server 故障转移群集
--   当数据仓库数据库是站点服务器数据库的远程数据库时，必须具有每个 SQL Server（用于托管数据库）单独的许可证。
 - 如果你使用[分布式视图](/sccm/core/servers/manage/data-transfers-between-sites#bkmk_distviews)，则必须在托管管理中心站点的站点数据库的同一服务器上安装数据仓库服务点站点系统角色。
 
+有关数据仓库数据库的 SQL Server 许可的信息，请参阅[产品和许可常见问题解答](/sccm/core/understand/product-and-licensing-faq)。 <!-- sms500967 -->
 
 
 > [!IMPORTANT]  
@@ -70,7 +72,7 @@ ms.lasthandoff: 12/06/2017
 
 
 ## <a name="install-the-data-warehouse"></a>安装数据仓库
-在顶层站点的任何站点系统上，每个层次结构都支持此角色的单个实例。 相对于站点系统角色而言，托管仓库数据库的 SQL Server 可以是本地的，也可以是远程的。 尽管数据仓库与在同一站点中安装的 Reporting Services 点兼容，但不需要将这两个站点系统角色安装在同一台服务器上。   
+在顶层站点的任何站点系统上，每个层次结构都支持此角色的单个实例。 相对于站点系统角色而言，托管仓库数据库的 SQL Server 可以是本地的，也可以是远程的。 数据仓库适用于安装在同一站点的 Reporting Services 点。 不需要在同一台服务器上安装两个站点系统角色。   
 
 若要安装该角色，请使用“添加站点系统角色向导”或“创建站点系统服务器向导”。 有关详细信息，请参阅[安装站点系统角色](/sccm/core/servers/deploy/configure/install-site-system-roles)。  
 
@@ -81,41 +83,30 @@ ms.lasthandoff: 12/06/2017
 
 “常规”页：
 -   **Configuration Manager 数据仓库数据库连接设置**：
- - **SQL Server 完全限定的域名**：  
- 指定托管数据仓库服务点和数据库的服务器的完全限定的域名 (FQDN)。
- - **SQL Server 实例名称(如果适用)**：   
- 如果不使用 SQL Server 的默认实例，必须指定该实例。
- - **数据库名称**：   
- 指定数据仓库数据库的名称。 数据库名称不能超过 10 个字符。 （在未来版本中，支持的名称长度会增加）。
- Configuration Manager 使用此名称创建数据仓库数据库。 如果指定 SQL Server 实例上已存在的数据库名称，则 Configuration Manager 会使用该数据库。
- - **用于连接的 SQL Server 端口**：   
- 指定为托管数据仓库数据库的 SQL Server 配置的 TCP/IP 端口号。 数据仓库同步服务使用此端口连接到数据仓库数据库。  
+     - **SQL Server 完全限定的域名**：指定托管数据仓库服务点数据库的服务器的完全限定的域名 (FQDN)。
+     - **SQL Server 实例名称（如果适用）**：如果不使用 SQL Server 的默认实例，必须指定该实例。
+     - **数据库名称**：指定数据仓库数据库的名称。 数据库名称不能超过 10 个字符。 （在未来版本中，支持的名称长度会增加）。
+     Configuration Manager 使用此名称创建数据仓库数据库。 如果指定 SQL Server 实例上已存在的数据库名称，则 Configuration Manager 会使用该数据库。
+     - **用于连接的 SQL Server 端口**：指定托管数据仓库数据库的 SQL Server 使用的 TCP/IP 端口号。 数据仓库同步服务使用此端口连接到数据仓库数据库。  
 
 “同步计划”页：   
 - **同步计划**：
- - **开始时间**：  
- 指定想要数据仓库开始同步的时间。
- - **定期模式**：
-    - **每天**：指定每天运行同步。
-    - **每周**：指定每周的某一天和每周重复进行同步。
+    - **开始时间**：指定想要数据仓库开始同步的时间。
+    - **定期模式**：
+         - **每天**：指定每天运行同步。
+         - **每周**：指定每周的某一天和每周重复进行同步。
 
 ## <a name="reporting"></a>报表
 安装数据仓库服务点后，同一站点上安装的 Reporting Services 点上将提供多个报表。 如果在安装 Reporting Services 点之前先安装数据仓库服务点，当稍后安装 Reporting Services 点时，将自动添加这些报表。
 
 数据仓库站点系统角色包括下列报表，并且其类别为**数据仓库**：
- - **应用程序部署 -历史记录**：   
- 查看有关特定应用程序和计算机的应用程序部署的详细信息。
+ - **应用程序部署 - 历史记录**：查看有关特定应用程序和计算机的应用程序部署的详细信息。
  - **Endpoint Protection 和软件更新符合性 - 历史记录**：查看缺少软件更新的计算机。  
- - **常规硬件清单 - 历史记录**：   
- 查看特定计算机的所有硬件清单。
- - **常规软件清单 - 历史记录**：   
- 查看特定计算机的所有软件清单。
- - **基础结构运行状况概述 - 历史记录**：  
- 显示 Configuration Manager 基础结构运行状况概述
- - **检测到的恶意软件列表 - 历史记录**：    
- 查看组织中检测到的恶意软件。
- - **软件分发摘要 - 历史记录**：   
- 特定播发和计算机的软件分发摘要。
+ - **常规硬件清单 - 历史记录**：查看特定计算机的所有硬件清单。
+ - **常规软件清单 - 历史记录**：查看特定计算机的所有软件清单。
+ - **基础结构运行状况概述 - 历史记录**：显示 Configuration Manager 基础结构运行状况概述。
+ - **检测到的恶意软件的列表 - 历史记录**：查看组织中检测到的恶意软件。
+ - **软件分发摘要 - 历史记录**：特定播发和计算机的软件分发摘要。
 
 
 ## <a name="expand-an-existing-stand-alone-primary-into-a-hierarchy"></a>将现有的独立主站点扩展到层次结构中
@@ -134,30 +125,27 @@ ms.lasthandoff: 12/06/2017
 > 将数据库还原到新服务器后，请确保新数据仓库数据库与原始数据仓库数据库上的数据库访问权限相同。  
 
 2.  使用 Configuration Manager 控制台从当前服务器删除数据仓库服务点站点系统角色。
-3.  重新安装数据仓库服务点并指定托管已还原数据仓库数据库的新 SQL Server 和实例的名称。
+3.  重新安装数据仓库服务点。 指定托管已还原数据仓库数据库的新 SQL Server 和实例的名称。
 4.  安装站点系统角色后，迁移即完成。
 
 ## <a name="troubleshooting-data-warehouse-issues"></a>解决数据仓库问题
-**日志文件**：  
+**日志文件**  
 使用以下日志，调查数据仓库服务点安装或数据同步方面的问题：
  - *DWSSMSI.log* 和 *DWSSSetup.log* - 使用这些日志调查安装数据仓库服务点时的错误。
  - *Microsoft.ConfigMgrDataWarehouse.log* – 使用此日志调查站点数据库和数据仓库数据库之间的数据同步。
 
 **设置失败**  
  当数据仓库为在某计算机上安装的第一个站点系统角色时，在远程站点系统服务器上安装数据仓库服务点将失败。  
-  - **解决方案**：   
-    请确保要安装数据仓库服务点的计算机上托管至少一个其他站点系统角色。  
+  - **解决方案**：请确保要安装数据仓库服务点的计算机上托管至少一个其他站点系统角色。  
 
 
 **已知同步问题**：   
 同步失败，同时 Microsoft.ConfigMgrDataWarehouse.log 中出现以下消息：“填充架构对象失败”  
- - **解决方案**：  
-    请确保托管站点系统角色的计算机的计算机帐户是数据仓库数据库上的 **db_owner**。
+ - **解决方案**：请确保托管站点系统角色的计算机的计算机帐户是数据仓库数据库上的 **db_owner**。
 
 当数据仓库数据库和 Reporting Servive 点位于不同的站点系统时，数据仓库报表将无法打开。  
 
- - **解决方案**：  
-    在数据仓库数据库上向 **Reporting Services 点帐户**授予 **db_datareader** 权限。
+ - **解决方案**：在数据仓库数据库上向 **Reporting Services 点帐户**授予 **db_datareader** 权限。
 
 打开数据仓库报表打开时，会返回以下错误：
 
@@ -169,7 +157,7 @@ ms.lasthandoff: 12/06/2017
 
     1. 打开 IIS，单击“服务器证书”，右键单击“创建自签名证书”，然后指定证书名称的“友好名称”为**数据仓库 SQL Server 标识证书**。 将证书存储选为“个人”。
     2. 打开“SQL Server 配置管理器”，在“SQL Server 网络置配”下右键单击选择“MSSQLSERVER 协议”下的“属性”。 然后，在“证书”选项卡上，选择“数据仓库 SQL Server 标识证书”作为证书，然后保存所做更改。  
-    3. 打开“SQL Server 配置管理器”，在“SQL Server 服务”下，重启“SQL Server 服务” 和“报告服务”。
+    3. 打开“SQL Server 配置管理器” 。 在“SQL Server 服务”下，重启“SQL Server 服务”和“Reporting Service”服务。
     4.  打开 Microsoft 管理控制台 (MMC)，然后添加**证书**的管理单元，选择以管理本地计算机的**计算机帐户**的证书。 然后，在 MMC 中，展开“个人”文件夹 >“证书”，然后将“数据仓库 SQL Server 标识证书”导出为 **DER 编码的二进制 X.509 (.CER)** 文件。    
   2.    在托管 SQL Server Reporting Services 的计算机上，打开 MMC，然后添加证书的管理单元。 然后选择以管理计算机帐户的证书。 在**受信任的根证书颁发机构**文件夹下，导入**数据仓库 SQL Server 标识证书**。
 
