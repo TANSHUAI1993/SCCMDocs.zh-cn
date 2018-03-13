@@ -3,23 +3,24 @@ title: "应该使用哪一个分支"
 titleSuffix: Configuration Manager
 description: "了解 System Center Configuration Manager 可用分支之间的差异。"
 ms.custom: na
-ms.date: 05/02/2017
+ms.date: 03/08/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a3be4f8f-3d44-4e3c-9fa1-e85f30a36e72
-caps.latest.revision: "0"
+caps.latest.revision: 
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 9985ff5db4357b6b18de1ef58de40bc631d6cc6b
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+ms.openlocfilehash: d762cf5e6932e17d8dfb0dd6c442c452028b5228
+ms.sourcegitcommit: b653342fb5d69a16e71b3548a7e9a2e47e54bf88
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="which-branch-of-configuration-manager-should-i-use"></a>应该使用 Configuration Manager 的哪一个分支？
 
@@ -77,7 +78,7 @@ LTSB 基于版本 1606。 该分支不会收到提供新功能或更新现有功
 若要将 LTSB 作为新站点或作为来自受支持的 Configuration Manager 2012 站点的升级对其进行安装，请使用版本 1606 [基线介质](/sccm/core/servers/manage/updates#baseline-and-update-versions)，该基线介质以 DVD 形式随附在 System Center 2016 或 System Center Configuration Manager (Current Branch and Long-Term Servicing Branch 1606) 版本中。 可使用基线介质安装运行 Current Branch 版本 1606 的新站点或运行 Long-Term Servicing Branch 的新站点。
 
 > [!TIP]  
-> 若要了解 System Center 2016，请参阅 [System Center 2016 文档](https://technet.microsoft.com/system-center-docs/system-center)。 本文档还说明如何获取 System Center 2016（需要 Microsoft 许可证协议或类似权限）。
+> 若要了解 System Center 2016，请参阅 [System Center 2016 文档](https://docs.microsoft.com/system-center/index)。 本文档还说明如何获取 System Center 2016（需要 Microsoft 许可证协议或类似权限）。
 
 > 若要在批量许可服务中心 (VLSC) 查找 System Center Configuration Manager 版本 1606，请转到 [VLSC](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) 的“下载和密钥”选项卡，搜索“system center config”，然后选择“System Center Config Mgr (当前分支和 LTSB)”。
 
@@ -90,7 +91,7 @@ LTSB 基于版本 1606。 该分支不会收到提供新功能或更新现有功
 
 **限制**  
 LTSB 以 Current Branch 版本 1606 为基础，具有以下限制：
-- 正式发布（2016 年 10 月）后，支持 LTSB 的 10 年关键安全更新，此后，此分支的支持将过期。 有关支持生命周期的详细信息，请参阅 [Microsoft 生命周期策略](https://support.microsoft.com/en-us/lifecycle)。
+- 正式发布（2016 年 10 月）后，支持 LTSB 的 10 年关键安全更新，此后，此分支的支持将过期。 有关支持生命周期的详细信息，请参阅 [Microsoft 生命周期策略](https://support.microsoft.com/lifecycle)。
 - 支持有限数量的服务器和客户端操作系统以及相关技术（如 SQL Server 版本）。 有关此分支支持功能的详细信息，请参阅 [Long-Term Servicing Branch 支持的配置](supported-configurations-for-ltsb.md)。
 - 不接收新功能的更新。
 - 不支持添加 Microsoft Intune 订阅，即阻止使用：
