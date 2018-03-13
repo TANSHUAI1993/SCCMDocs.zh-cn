@@ -2,18 +2,19 @@
 title: "规划云管理网关"
 titleSuffix: Configuration Manager
 description: 
-ms.date: 10/06/2017
+ms.date: 03/08/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.technology:
+- configmgr-client
 ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: b1063826841c37973e26954e164d867649c3fb9f
-ms.sourcegitcommit: c4a1bafcd004638d264a93d307c70d8b6f7fe023
+ms.openlocfilehash: 051d3fcba379aec83ea7c4dc1e407b3d3e774e12
+ms.sourcegitcommit: b653342fb5d69a16e71b3548a7e9a2e47e54bf88
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>在 Configuration Manager 中规划云管理网关
 
@@ -30,7 +31,7 @@ ms.lasthandoff: 11/20/2017
 
 ## <a name="requirements-for-cloud-management-gateway"></a>云管理网关的要求
 
--   运行云管理网关连接点的客户端计算机和站点系统服务器。
+-    运行云管理网关连接器的站点系统，以供基于 Internet 的客户端使用。
 
 -   来自内部 CA 的自定义 SSL 证书 - 用来加密客户端计算机的通信和对云管理网关服务器的标识进行身份验证。
 

@@ -7,19 +7,20 @@ ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-client
+ms.technology:
+- configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2c8f57cf-1968-48de-87fb-4897432ed6e0
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: 1abd791817af5b59e850cec4d529f57d9e541674
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 2df5127f3eb5049d1a4277fd25ce04c6de05999d
+ms.sourcegitcommit: b653342fb5d69a16e71b3548a7e9a2e47e54bf88
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="how-to-monitor-clients-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中监视客户端
 
@@ -31,7 +32,7 @@ ms.lasthandoff: 10/12/2017
 ##  <a name="bkmk_about"></a> 关于客户端状态  
  Configuration Manager 提供以下类型的信息作为客户端状态：  
 
--   **客户端联机状态** - 从 Configuration Manager 1602 版开始，此状态可指示计算机是否处于联机状态。 如果计算机连接到其已分配的管理点，则将其视为联机。  为指示客户端处于联机状态，它将向管理点发送类似 ping 的消息。 如果管理点在 5 分钟左右未收到消息，则将客户端视为处于脱机状态。  
+-   **客户端联机状态** - 从 Configuration Manager 1602 版开始，此状态可指示计算机是否处于联机状态。 如果计算机连接到分配的管理点，就视为联机。  为指示客户端处于联机状态，它将向管理点发送类似 ping 的消息。 如果管理点在 5 分钟左右未收到消息，则将客户端视为处于脱机状态。  
 
 -   **客户端活动** - 此状态将指示客户端是否在最近 7 天内主动使用 Configuration Manager。 如果客户端在 7 天内未请求策略更新、发送检测信号消息或发送硬件清单，则将客户端视为非活动状态。  
 

@@ -1,0 +1,88 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: "Microsoft Deployment Toolkit 文档"
+metadata:
+  document_id: bfb05467-f6ec-4cb2-b108-254972de2d06
+  title: "Microsoft Deployment Toolkit 文档"
+  description: "Microsoft Deployment Toolkit 提供一系列统一的工具、流程和指南，用于自动执行桌面和服务器部署。"
+  keywords: "免费软件, 工具, 流程, 工作流, 自动化, 部署, 自动, 分发"
+  author: arob98
+  ms.author: angrobe
+  manager: angrobe
+  ms.date: 12/27/2017
+  ms.topic: landing-page
+  ms.devlang: na
+  ms.prod: configuration-manager
+  ms.openlocfilehash: 56462ae538a2336f94a1883d099ad7b45c714633
+  ms.sourcegitcommit: 32bbc006a41868a6d9a708db5f7b372d9c71d985
+  ms.translationtype: HT
+  ms.contentlocale: zh-CN
+  ms.lasthandoff: 03/08/2018
+sections:
+- items:
+  - type: markdown
+    text: "Microsoft Deployment Toolkit 提供一系列统一的工具、流程和指南，用于自动执行桌面和服务器部署。"
+- items:
+  - type: list
+    style: cards
+    className: cardsM
+    columns: 2
+    items:
+    - href: whats-new-in-mdt.md
+      html: "<p>查看最近更新。</p>"
+      image:
+        src: https://docs.microsoft.com/media/common/i_whats-new.svg
+      title: "新增功能"
+    - href: release-notes.md
+      html: "<p>详细了解此版本中包含的修补程序和 bug。</p>"
+      image:
+        src: https://docs.microsoft.com/media/common/i_whats-new.svg
+      title: "发行说明"
+    - href: samples-guide.md
+      html: "<p>特定部署方案的示例配置设置。</p>"
+      image:
+        src: https://docs.microsoft.com/media/common/i_code-samples.svg
+      title: "示例指南"
+    - href: user-driven-installation-developers-guide.md
+      html: "<p>为组织自定义用户驱动安装。</p>"
+      image:
+        src: https://docs.microsoft.com/media/common/i_architecture.svg
+      title: "开发人员指南"
+- title: "快速入门"
+  items:
+  - type: list
+    style: cards
+    className: cardsM
+    columns: 3
+    items:
+    - href: lite-touch-installation-guide.md
+      title: "使用可启动的介质安装"
+      image:
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+    - href: user-driven-installation-guide.md
+      title: "用户驱动安装部署"
+      image:
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+    - href: sccm-guide.md
+      title: "部署到新计算机"
+      image:
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
+- title: "其他资源"
+  items:
+  - type: list
+    style: cards
+    className: cardsM
+    columns: 3
+    items:
+    - href: use-the-mdt.md
+      title: "使用 Lite-Touch、Zero-Touch 和用户驱动安装部署来执行部署。"
+      image:
+        src: https://docs.microsoft.com/media/common/i_api-reference.svg
+    - href: toolkit-reference.md
+      title: "有助于执行部署的配置设置。"
+      image:
+        src: https://docs.microsoft.com/media/common/i_download-install.svg
+    - href: troubleshooting-reference.md
+      title: "日志文件、错误代码和其他疑难解答详细信息。"
+      image:
+        src: https://docs.microsoft.com/media/common/i_support.svg

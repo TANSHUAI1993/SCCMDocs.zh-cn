@@ -16,11 +16,11 @@ caps.latest.revision:
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 4f16216bd1bbb662cc8d532664ccd593f94d3898
-ms.sourcegitcommit: e15516983883a4dd002c4bdd114147b04b811021
+ms.openlocfilehash: 1cb4d775985839ea7c4fb1b48a04ab0be64f5d8c
+ms.sourcegitcommit: 32bbc006a41868a6d9a708db5f7b372d9c71d985
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="technical-preview-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview
 
@@ -131,7 +131,7 @@ ms.lasthandoff: 02/14/2018
 - [审批每台设备的用户的应用程序请求](capabilities-in-technical-preview-1802.md#approve-application-requests-for-users-per-device) <!-- 1357015 --> 
 - [在已加入 Azure AD 的设备上，使用软件中心来浏览和安装用户可用的应用程序](capabilities-in-technical-preview-1802.md#use-software-center-to-browse-and-install-user-available-applications-on-azure-ad-joined-devices) <!-- 1322613 --> 
 - [关于 Windows AutoPilot 设备信息的报表](capabilities-in-technical-preview-1802.md#report-on-windows-autopilot-device-information) <!-- 1351442 --> 
-- [对 Configuration Manager 的 Windows 设备攻击防护策略的改进](capabilities-in-technical-preview-1802.md#improvements-to-configuration-manager-policies-for-windows-device-exploit-guard) <!-- 1356220 -->
+- [改进适用于 Windows Defender 攻击防护的 Configuration Manager 策略](capabilities-in-technical-preview-1802.md#improvements-to-configuration-manager-policies-for-windows-defender-exploit-guard) <!-- 1356220 -->
 - [Microsoft Edge 浏览器策略](capabilities-in-technical-preview-1802.md#microsoft-edge-browser-policies) <!-- 1357310 -->
 - [默认浏览器计数报表](capabilities-in-technical-preview-1802.md#report-for-default-browser-counts) <!-- 1357830 --> 
 - [Windows 10 ARM64 设备支持](capabilities-in-technical-preview-1802.md#support-for-windows-10-arm64-devices) <!-- 1353704 --> 
