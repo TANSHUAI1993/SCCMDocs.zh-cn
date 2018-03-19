@@ -10,7 +10,8 @@ ms.date: 10/06/2016
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: 
-ms.technology: configmgr-sum
+ms.technology:
+- configmgr-sum
 ms.assetid: ea8698c4-9df5-4cf5-8b62-ab93115b4769
 ms.openlocfilehash: 3a17fb317553c783250b92212315a6ea895105c6
 ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d

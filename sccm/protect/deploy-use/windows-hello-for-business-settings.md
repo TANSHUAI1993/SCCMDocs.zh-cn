@@ -7,11 +7,12 @@ ms.date: 09/21/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a95bc292-af10-4beb-ab56-2a815fc69304
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe

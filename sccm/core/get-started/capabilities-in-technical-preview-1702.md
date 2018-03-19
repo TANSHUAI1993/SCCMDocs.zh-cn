@@ -5,13 +5,14 @@ description: "了解 System Center Configuration Manager Technical Preview 1702 
 ms.custom: na
 ms.date: 02/24/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aedd608d-6db3-4ea5-851d-70f2dcda6bb5
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: erikje
 ms.author: erikje
 manager: angrobe

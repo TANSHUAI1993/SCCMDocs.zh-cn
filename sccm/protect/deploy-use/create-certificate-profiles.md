@@ -7,12 +7,13 @@ ms.date: 03/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 634d612c-92d7-4c03-873a-b2e730c9a72d
-caps.latest.revision: "16"
-caps.handback.revision: "0"
+caps.latest.revision: 
+caps.handback.revision: 
 author: Nbigman
 ms.author: nbigman
 manager: angrobe
