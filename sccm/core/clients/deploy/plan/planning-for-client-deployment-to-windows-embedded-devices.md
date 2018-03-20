@@ -65,7 +65,7 @@ ms.lasthandoff: 03/20/2018
 >
 > **对于仅使用 FBWF 的设备：**配置以下例外以在设备重启之间保留客户端状态和清单数据：  
 >   
->  -   CCMINSTALLDIR\\*.sdf  
+>  -   CCMINSTALLDIR\\\*.sdf  
 > -   CCMINSTALLDIR\ServiceData  
 > -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\StateSystem  
 >   
