@@ -7,20 +7,21 @@ ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-client
+ms.technology:
+- configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 038e61f9-f49d-41d1-9a9f-87bec9e00d5d
-caps.latest.revision: "7"
-caps.handback.revision: "0"
+caps.latest.revision: 
+caps.handback.revision: 
 author: arob98
 ms.author: angrobe
 manager: angrobe
 ms.openlocfilehash: c4f3d8a9b043707340e56d3ae483ad66ca17dc10
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.sourcegitcommit: 52080ef1b0f9a27c123711ef274ac3ffe070e8e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="planning-for-client-deployment-to-windows-embedded-devices-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中计划 Windows Embedded 设备的客户端部署
 
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/12/2017
 
  请注意，当禁用筛选器时，不应禁用筛选器驱动程序。 启动计算机时，这些驱动程序通常都将自动启动。 禁用驱动程序将阻止客户端的安装，或者将干扰写入筛选器业务流程，从而导致客户端操作失败。 以下是与必须保持运行状态的每个写入筛选器类型相关联的服务：  
 
-|写入筛选器类型|驱动程序|类型|描述|  
+|写入筛选器类型|驱动程序|键入|说明|  
 |-----------------------|------------|----------|-----------------|  
 |EWF|EWF|内核|在受保护的卷上实现扇区级别 I/O 重定向。|  
 |FBWF|FBWF|文件系统|在受保护的卷上实现文件级别 I/O 重定向。|  
