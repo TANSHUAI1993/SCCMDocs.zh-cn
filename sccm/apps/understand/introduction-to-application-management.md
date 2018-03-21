@@ -55,7 +55,7 @@ ms.lasthandoff: 03/20/2018
  可通过 Configuration Manager 部署以下应用类型：  
 
 - Windows Installer（*.msi 文件）
-- Windows 应用包（*.appx、*.appxbundle）
+- Windows 应用包（\*.appx、\*.appxbundle）
 - Windows 应用包（在 Windows 应用商店中）
 - Microsoft Application Virtualization 4
 - Microsoft Application Virtualization  5

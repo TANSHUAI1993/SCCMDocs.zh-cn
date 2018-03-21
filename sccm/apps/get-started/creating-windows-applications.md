@@ -33,8 +33,8 @@ ms.lasthandoff: 03/20/2018
 
 |设备类型|支持的文件类型|  
 |-----------------|---------------------|  
-|Windows RT 和 Windows RT 8.1|*.appx, \*.appxbundle|  
-|注册为移动设备的 Windows 8.1 和更高版本|*.appx, \*.appxbundle|  
+|Windows RT 和 Windows RT 8.1|\*.appx, \*.appxbundle|  
+|注册为移动设备的 Windows 8.1 和更高版本|\*.appx, \*.appxbundle|  
 
  支持以下部署操作：  
 
