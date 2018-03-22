@@ -32,3 +32,14 @@
 ## [管理 Windows 10 更新的快速安装文件](deploy-use/manage-express-installation-files-for-windows-10-updates.md)
 ## [在 Windows 10 中与适用于企业的 Windows 更新集成](deploy-use/integrate-windows-update-for-business-windows-10.md)
 ## [部署安全更新的示例方案](deploy-use/example-scenario-deploy-monitor-monthly-security-updates.md)
+
+# [System Center Updates Publisher](tools/updates-publisher.md)
+## [安装](tools/install-updates-publisher.md)
+## [配置选项](tools/updates-publisher-options.md)
+## [管理目录](tools/updates-publisher-catalogs.md)
+## [管理更新程序](tools/manage-updates-with-updates-publisher.md)
+## [管理发布内容](tools/updates-publisher-publications.md)
+## [新建更新程序](tools/create-updates-with-updates-publisher.md)
+## [适用性规则](tools/updates-publisher-applicability-rules.md)
+## [证书和安全](tools/updates-publisher-security.md)
+
