@@ -1,26 +1,27 @@
 ---
-title: "使用托管浏览器策略管理 Internet 访问"
+title: 使用托管浏览器策略管理 Internet 访问
 titleSuffix: Configuration Manager
-description: "部署 Intune Managed Browser 来管理和限制 Internet 访问。"
+description: 部署 Intune Managed Browser 来管理和限制 Internet 访问。
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-hybrid
+ms.technology:
+- configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8e25e00c-c9a8-473f-bcb7-ea989f6ca3c5
-caps.latest.revision: "6"
-caps.handback.revision: "0"
+caps.latest.revision: ''
+caps.handback.revision: ''
 author: dougeby
 ms.author: dougeby
 manager: angrobe
 ms.openlocfilehash: 3aea2a65733a52ab532d451b21ae98fbc0f122c6
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.sourcegitcommit: 52080ef1b0f9a27c123711ef274ac3ffe070e8e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="manage-internet-access-using-managed-browser-policies-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 的托管浏览器策略管理 Internet 访问
 
@@ -101,7 +102,7 @@ ms.lasthandoff: 10/12/2017
 
     -   对于 https，使用端口 443  
 
-     不支持对端口号使用通配符，例如，**http://www.contoso.com:\*** 和 **http://www.contoso.com: /\***  
+     不支持对端口号使用通配符，例如 http://www.contoso.com:\* 和 http://www.contoso.com: /\*  
 
 -   使用下表了解指定 URL 时可以使用的允许模式：  
 
@@ -134,9 +135,9 @@ ms.lasthandoff: 10/12/2017
 
     -   http://*  
 
-    -   “http://www.contoso.com:*”  
+    -   http://www.contoso.com:*  
 
-    -   “http://www.contoso.com: / *”  
+    -   http://www.contoso.com: /*  
 
 > [!NOTE]  
 >  始终允许 *.microsoft.com。  

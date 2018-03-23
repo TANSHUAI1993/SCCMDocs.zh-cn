@@ -1,25 +1,26 @@
 ---
-title: "控制台中更新"
+title: 控制台中更新
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager 与 Microsoft 云服务同步，以获取可以从控制台中进行安装的更新。"
+description: System Center Configuration Manager 与 Microsoft 云服务同步，以获取可以从控制台中进行安装的更新。
 ms.custom: na
 ms.date: 09/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c14a3607-253b-41fb-8381-ae2d534a9022
-caps.latest.revision: "36"
+caps.latest.revision: ''
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 081935ebb3ef2cc12d2023d86c0b68bbd816f2f3
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 5c202ede7be14bb60c6b28d87dfa77577597e955
+ms.sourcegitcommit: 52080ef1b0f9a27c123711ef274ac3ffe070e8e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="install-in-console-updates-for-system-center-configuration-manager"></a>为 System Center Configuration Manager 安装控制台内部更新
 
@@ -64,7 +65,7 @@ System Center Configuration Manager 与 Microsoft 云服务同步，以获取更
 若要在控制台中查看更新，用户必须具有基于角色且包含“更新包”安全类的管理安全角色。 此类授予访问权限以在 Configuration Manager 控制台中查看和管理更新。    
 
 **更新包类的信息：**  
-默认情况下，**更新包** (SMS_CM_Updatepackages) 是以下具有列出权限的内置安全角色的一部分：
+默认情况下， **更新包** (SMS_CM_Updatepackages) 是以下具有列出权限的内置安全角色的一部分：
  -  具有**修改**和**读取**权限的**完全权限管理员**：
     -   具有此安全角色并具有对所有安全域访问权限的用户可以查看和安装更新。 该用户还可以在安装过程中启用功能，在安装更新之后启用各个功能。
     - 具有此安全角色并具有对默认安全域访问权限的用户可以查看和安装更新。 该用户还可以在安装过程中启用功能，在安装更新之后查看功能。 但是，在安装更新完成后，此用户无法启用功能。
@@ -96,7 +97,8 @@ System Center Configuration Manager 与 Microsoft 云服务同步，以获取更
 
 - 从 1606 更新到 1610：请参阅 [1610 的安装更新清单](../../../core/servers/manage/checklist-for-installing-update-1610.md)。  
 
-- 从 1606 或 1610 更新到 1702：请参阅 [1702 更新的安装清单](../../../core/servers/manage/checklist-for-installing-update-1702.md)。
+- 从 1610、1702 或 1706 更新到 1710：请参阅 [1710 更新的安装清单](../../../core/servers/manage/checklist-for-installing-update-1710.md)。
+
 
 <!-- Removed as update guidance 6/6/2017. The Test DB Upgrade details are no longer recommended nor required. They live on in a new topic for customers who still want to use them. -->
 
@@ -199,7 +201,7 @@ System Center Configuration Manager 与 Microsoft 云服务同步，以获取更
 > 虽然控制台中不会显示辅助站点的版本，但可以使用 Configuration Manager SDK 确认站点版本。 请参阅 [SMS_Site Server WMI 类](https://technet.microsoft.com/library/hh442832(CMSDK.16).aspx)。
 
 
--   在层次结构中的所有站点均更新为新版本之前，你的层次结构会在混合版本模式下运行。 有关详细信息，请参阅 [Interoperability between different versions of System Center Configuration Manager](../../../core/plan-design/hierarchy/interoperability-between-different-versions.md)。  
+-   在层次结构中的所有站点均更新为新版本之前，你的层次结构会在混合版本模式下运行。 有关详细信息，请参阅 [System Center Configuration Manager 不同版本之间的互操作性](../../../core/plan-design/hierarchy/interoperability-between-different-versions.md)。  
 
 **5. 更新 Configuration Manager 控制台**  
 在管理中心站点或主站点更新之后，还必须更新连接到该站点的每个 Configuration Manager 控制台。 系统会在以下情况下提示你更新控制台：  

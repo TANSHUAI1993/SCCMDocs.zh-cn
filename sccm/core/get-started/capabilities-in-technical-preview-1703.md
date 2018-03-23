@@ -1,34 +1,35 @@
 ---
-title: "Technical Preview 1703 中的功能"
+title: Technical Preview 1703 中的功能
 titleSuffix: Configuration Manager
-description: "了解 System Center Configuration Manager Technical Preview 1703 版中的可用功能。"
+description: 了解 System Center Configuration Manager Technical Preview 1703 版中的可用功能。
 ms.custom: na
 ms.date: 03/24/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2e801f8c-d331-41ee-8f27-908448fc0951
-caps.latest.revision: "5"
+caps.latest.revision: ''
 author: erikje
 ms.author: erikje
 manager: angrobe
 ms.openlocfilehash: a44d6a0c9b02a529fe8776033e58e971af37e332
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.sourcegitcommit: 52080ef1b0f9a27c123711ef274ac3ffe070e8e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="capabilities-in-technical-preview-1703-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1703 中的功能
 
 *适用范围：System Center Configuration Manager (Technical Preview)*
 
-本文介绍了 System Center Configuration Manager Technical Preview（版本 1703）中的可用功能。 可以安装此版本以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。 在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。    
+本文介绍了 System Center Configuration Manager Technical Preview（版本 1703）中的可用功能。 你可以安装此版本，以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。 在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。    
 
 
-**以下是可以试用的此版本的新功能。**  
+**以下是此版本可以试用的新功能。**  
 
 ## <a name="deploy-volume-purchased-ios-apps-to-device-collections"></a>将批量采购的 iOS 应用部署到设备集合
 
@@ -56,11 +57,11 @@ ms.lasthandoff: 12/01/2017
 
 使用以下 URL 格式在特定应用程序中打开软件中心：
 
-**Softwarecenter:SoftwareId=*应用程序标识符***
+Softwarecenter:SoftwareId=*应用程序标识符*
 
 ### <a name="how-to-get-the-application-identifier-of-an-application"></a>如何获取应用程序的应用程序标识符。
 
-1.  在 Configuration Manager 控制台中，单击“软件库” 。
+1.  在 Configuration Manager 控制台中，单击“软件库”。
 2.  在“软件库”工作区中，展开“应用程序管理”，然后单击“应用程序”。
 3.  在“应用程序”视图中，右键单击其中一个列标题，然后在列表中选择“CI 唯一 ID”。 此时列表中将显示每个应用程序的唯一 ID。
 4.  记下要向其提供链接的应用程序的 **CI 唯一 ID**，例如：**ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f/2**
@@ -133,7 +134,7 @@ Technical preview 1703 引入了**配置 Azure 服务**向导。 此向导提供
 
 在控制台中，转到“管理” > “概述” > “云服务管理” > “Azure” > “Azure 服务”，然后选择“配置 Azure 服务”，选择一个“云服务”，然后选择“属性”。
 
-## <a name="convert-from-bios-to-uefi-during-an-in-place-upgrade"></a>在就地升级过程中从 BIOS 转换到 UEFI
+## <a name="convert-from-bios-to-uefi-during-an-in-place-upgrade"></a>在就地升级过程中从 BIOS 转换为 UEFI
 Windows 10 创意者更新引入了一个简单的转换工具，可自动执行对用于启用 UEFI 的硬件的硬盘重新分区的过程，并将该转换工具集成到 Windows 7 到 Windows 10 的就地升级过程中。 将此工具与你的操作系统升级任务序列和将固件从 BIOS 转换到 UEFI 的 OCM 工具组合使用时，可以在 Windows 10 创意者更新的就地升级过程中将你的计算机从 BIOS 转换到 UEFI。 有关详细信息，请参阅[管理 BIOS 转换为 UEFI 所采用的任务序列步骤](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion#convert-from-bios-to-uefi-during-an-in-place-upgrade)。
 
 ## <a name="collapsible-task-sequence-groups"></a>可折叠的任务序列组
