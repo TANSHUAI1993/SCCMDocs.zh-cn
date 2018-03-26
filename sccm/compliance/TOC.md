@@ -30,4 +30,5 @@
 ## [创建用户数据和配置文件配置项目](deploy-use/create-user-data-and-profiles-configuration-items.md)
 ## [创建远程连接配置文件](deploy-use/create-remote-connection-profiles.md)
 ## [将 Windows 设备升级到新版本](deploy-use/upgrade-windows-version.md)
+## [配置 Microsoft Edge 设置](deploy-use/browser-profiles.md)
 ## [监视符合性设置](deploy-use/monitor-compliance-settings.md)

@@ -40,3 +40,4 @@
 ### [卸载应用程序](deploy-use/uninstall-applications.md)
 
 ## [运行和管理脚本](deploy-use/create-deploy-scripts.md)
+### [了解 PowerShell 脚本安全性](deploy-use/learn-script-security.md)
