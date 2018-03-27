@@ -1,19 +1,20 @@
 ---
-title: "监视云管理网关 "
+title: '监视云管理网关 '
 titleSuffix: Configuration Manager
-description: 
+description: ''
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-client
+ms.technology:
+- configmgr-client
 ms.assetid: 15f72f80-9850-40ce-9c3a-443ba04b6a03
 author: arob98
 ms.author: angrobe
 manager: angrobe
 ms.openlocfilehash: d88749b09dd5e88f29240cc0db2f2ace7a2f06f4
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.sourcegitcommit: d03e4dee92a31dd214c528e895379f6013b7de82
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="monitor-cloud-management-gateway-in-configuration-manager"></a>在 Configuration Manager 中监视云管理网关
 
