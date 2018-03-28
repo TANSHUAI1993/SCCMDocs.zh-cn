@@ -92,7 +92,7 @@ ms.lasthandoff: 03/27/2018
 
 使用以下信息来了解有关指定允许和阻止列表中的 URL 时允许使用的格式和通配符。  
 
--   可以根据下面的允许模式列表中的规则使用通配符“**\***”。  
+-   可以根据下面的允许模式列表中的规则使用通配符“**\\***”。  
 
 -   在将 URL 输入列表时，确保对所有 URL 添加 **“http”** 或 **“https”** 作为前缀。  
 
@@ -111,7 +111,7 @@ ms.lasthandoff: 03/27/2018
     |http://www.contoso.com<br /><br /> 匹配单个页面|www.contoso.com|host.contoso.com<br /><br /> www.contoso.com/images<br /><br /> contoso.com/|  
     |http://contoso.com<br /><br /> 匹配单个页面|contoso.com/|host.contoso.com<br /><br /> www.contoso.com/images<br /><br /> www.contoso.com|  
     |http://www.contoso.com/*<br /><br /> 匹配以 www.contoso.com 开头的所有 URL|www.contoso.com<br /><br /> www.contoso.com/images<br /><br /> www.contoso.com/videos/tvshows|host.contoso.com<br /><br /> host.contoso.com/images|  
-    |http://*.contoso.com/\*<br /><br /> 匹配 contoso.com 下的所有子域|developer.contoso.com/resources<br /><br /> news.contoso.com/images<br /><br /> news.contoso.com/videos|contoso.host.com|  
+    |http://\*.contoso.com/\*<br /><br /> 匹配 contoso.com 下的所有子域|developer.contoso.com/resources<br /><br /> news.contoso.com/images<br /><br /> news.contoso.com/videos|contoso.host.com|  
     |http://www.contoso.com/images<br /><br /> 匹配单个文件夹|www.contoso.com/images|www.contoso.com/images/dogs|  
     |http://www.contoso.com:80<br /><br /> 匹配单个页面（使用端口号）|http://www.contoso.com:80||  
     |https://www.contoso.com<br /><br /> 匹配单个安全页面|https://www.contoso.com|http://www.contoso.com|  
@@ -121,11 +121,11 @@ ms.lasthandoff: 03/27/2018
 
     -   *.com  
 
-    -   *.contoso/\*  
+    -   \*.contoso/\*  
 
     -   www.contoso.com/*images  
 
-    -   www.contoso.com/*images\*pigs  
+    -   www.contoso.com/\*images\*pigs  
 
     -   www.contoso.com/page*  
 
