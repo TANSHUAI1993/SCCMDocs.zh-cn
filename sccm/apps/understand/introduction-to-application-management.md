@@ -1,7 +1,7 @@
 ---
-title: "应用程序管理简介"
+title: 应用程序管理简介
 titleSuffix: Configuration Manager
-description: "发现管理和部署 System Center Configuration Manager 应用程序所需的基本信息。"
+description: 发现管理和部署 System Center Configuration Manager 应用程序所需的基本信息。
 ms.custom: na
 ms.date: 12/23/2016
 ms.prod: configuration-manager
@@ -12,15 +12,15 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 08f711ba-83bf-4b5f-9520-a0778c6ae7eb
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
 ms.openlocfilehash: a8a66169f3c187f8fa0319548ddde23b399811f3
-ms.sourcegitcommit: 52080ef1b0f9a27c123711ef274ac3ffe070e8e0
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 03/27/2018
 ---
 # <a name="introduction-to-application-management-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的应用程序管理简介
 
@@ -55,7 +55,7 @@ ms.lasthandoff: 03/20/2018
  可通过 Configuration Manager 部署以下应用类型：  
 
 - Windows Installer（*.msi 文件）
-- Windows 应用包（\*.appx、\*.appxbundle）
+- Windows 应用包（*.appx、*.appxbundle）
 - Windows 应用包（在 Windows 应用商店中）
 - Microsoft Application Virtualization 4
 - Microsoft Application Virtualization  5
