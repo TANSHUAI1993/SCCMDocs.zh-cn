@@ -11,6 +11,11 @@
 ### [创建和部署配置基线](plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md)
 ## [安全和隐私](plan-design/security-and-privacy-for-compliance-settings.md)
 
+## [安全内容自动化协议 (SCAP) 扩展](plan-design/scap/about-scap.md)
+### [安装和配置 SCAP 扩展](plan-design/scap/install-configure-scap.md)
+### [导入 SCAP 符合性设置](plan-design/scap/import-scap-compliance-settings.md)
+### [SCAP 扩展疑难解答](plan-design/scap/troubleshooting-scap.md)
+
 # 部署和使用
 
 ## [创建配置项目](deploy-use/create-configuration-items.md)
