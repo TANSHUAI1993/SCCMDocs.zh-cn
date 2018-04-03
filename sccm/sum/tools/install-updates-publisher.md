@@ -1,26 +1,27 @@
 ---
-title: "安装 Updates Publisher"
+title: 安装 Updates Publisher
 titleSuffix: Configuration Manager
-description: "在环境中安装 System Center Updates Publisher"
+description: 在环境中安装 System Center Updates Publisher
 ms.custom: na
 ms.date: 07/03/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ab5cda93-b67c-4aa5-904d-7b63ce790aa0
-caps.latest.revision: "1"
+caps.latest.revision: 1
 author: mestew
 ms.author: mstewart
 manager: angrobe
 robots: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 629e7dd98b1b5ff7f240461b61893dfc433f61dc
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: ce65e58a2c1be0420077bddded7567ff931d041f
+ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="install-updates-publisher"></a>安装 Updates Publisher
 
@@ -109,7 +110,7 @@ ms.lasthandoff: 12/04/2017
 
 
 ## <a name="install-updates-publisher"></a>安装 Updates Publisher
-从 [Microsoft 下载中心](https://go.microsoft.com/fwlink/?linkid=847967)获取用于安装 System Center Updates Publisher 的 **UpdatesPubliser.msi**。
+从 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=55543)获取用于安装 System Center Updates Publisher 的 **UpdatesPubliser.msi**。
 
 若要安装 Updates Publisher，在满足*先决条件*的计算机上运行 **UpdatesPublisher.msi**。 安装程序会创建以下文件夹，以包含运行 Updates Publisher 所必需的文件：*&lt;path&gt;\Program Files\Microsoft\UpdatesPublisher*。
 

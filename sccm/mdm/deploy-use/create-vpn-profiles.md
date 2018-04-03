@@ -1,26 +1,27 @@
 ---
-title: "VPN 配置文件"
+title: VPN 配置文件
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager 中移动设备上的 VPN 配置文件。"
+description: System Center Configuration Manager 中移动设备上的 VPN 配置文件。
 ms.custom: na
 ms.date: 11/20/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-hybrid
+ms.technology:
+- configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 45388103-2410-4c7e-b4cf-73a1bda485fc
-caps.latest.revision: "18"
-caps.handback.revision: "0"
+caps.latest.revision: 18
+caps.handback.revision: 0
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
 ms.openlocfilehash: 1d98cd234b2444873f1ffa5819af74d507dfa9c1
-ms.sourcegitcommit: ba23ff90709a5fde1a63c650ab0d848f441afc43
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 03/27/2018
 ---
 # <a name="vpn-profiles-on-mobile-devices-in-system-center-configuration-manager"></a>System Center Configuration Manager 中移动设备上的 VPN 配置文件
 
