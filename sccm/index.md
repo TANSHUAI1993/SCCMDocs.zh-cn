@@ -1,8 +1,8 @@
 ---
 layout: HubPage
-hide_bc: 
-title: "System Center Configuration Manager 文档"
-description: "了解如何使用 System Center Configuration Manager。"
+hide_bc: true
+title: System Center Configuration Manager 文档
+description: 了解如何使用 System Center Configuration Manager。
 ms.topic: hub-page
 ms.openlocfilehash: 250f5cf0793f5afd396a82f96389c937ed9be14b
 ms.sourcegitcommit: 32bbc006a41868a6d9a708db5f7b372d9c71d985
