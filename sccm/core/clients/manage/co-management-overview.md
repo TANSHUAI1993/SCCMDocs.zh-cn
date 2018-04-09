@@ -1,20 +1,22 @@
 ---
-title: "适用于 Windows 10 设备的共同管理"
-description: "了解如何使用 Configuration Manager 和 Microsoft Intune 同时管理 Windows 10 设备。"
-keywords: 
-author: dougeby
-manager: angrobe
-ms.date: 11/20/2017
+title: 适用于 Windows 10 设备的共同管理
+titleSuffix: Configuration Manager
+description: 了解如何使用 Configuration Manager 和 Microsoft Intune 同时管理 Windows 10 设备。
+keywords: ''
+author: mestew
+ms.author: mstewart
+manager: dougeby
+ms.date: 03/22/2018
 ms.topic: article
 ms.prod: configuration-manager
-ms.service: 
-ms.technology: 
+ms.service: ''
+ms.technology: ''
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: 0cc11a05013fd9c25ee98ec35adcbe822d8a21fb
-ms.sourcegitcommit: 389c4e5b4e9953b74c13b1689195f99c526fa737
+ms.openlocfilehash: e4b8bd58d30cd87ffc461289edbfc5da9a684cda
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="co-management-for-windows-10-devices"></a>适用于 Windows 10 设备的共同管理    
 <!-- 1350871 -->
@@ -50,7 +52,7 @@ ms.lasthandoff: 02/09/2018
 - Configuration Manager 中的[云管理网关](/sccm/core/clients/manage/manage-clients-internet#cloud-management-gateway)（当你使用 Intune 安装 Configuration Manager 客户端时）
 
 ## <a name="workloads-you-can-switch-to-intune"></a>可以切换到 Intune 的工作负荷
-启用共同管理后，Configuration Manager 将继续管理所有工作负荷。 如果决定已准备就绪，即可使 Intune 开始管理可用的工作负荷。 可以使 Intune 管理以下工作负荷。   
+启用共同管理后，Configuration Manager 将继续管理所有工作负荷。 如果决定已准备就绪，即可使 Intune 开始管理可用的工作负荷。 可以使 Intune 管理以下工作负荷:   
 
 ### <a name="compliance-policies"></a>相容性策略
 符合性策略定义设备必须遵从的规则和设置，以便将设备视为符合条件访问策略。 也可使用符合性策略来监视和修正独立于条件访问的设备符合性问题。 有关详细信息，请参阅[设备符合性策略](/sccm/mdm/deploy-use/device-compliance-policies)。  
@@ -60,6 +62,10 @@ ms.lasthandoff: 02/09/2018
 
 ### <a name="resource-access-policies"></a>资源访问策略
 资源访问策略在设备上配置 VPN、Wi-Fi、电子邮件以及证书设置。 有关详细信息，请参阅[部署资源访问配置文件](/sccm/protect/deploy-use/deploy-wifi-vpn-email-cert-profiles)。
+
+### <a name="endpoint-protection"></a>Endpoint Protection 
+<!-- 1357365 -->
+从 Configuration Manager 1802 开始，Endpoint Protection 工作负荷可以转换到 Intune。 有关详细信息，请参阅[能够转换到 Intune 的工作负荷](/sccm/core/clients/manage/co-management-switch-workloads.md#Workloads-able-to-be-transitioned-to-Intune)和 [Configuration Manager 中的 Endpoint Protection](/sccm/protect/deploy-use/endpoint-protection)。
 
 ## <a name="architectural-overview-for-co-management"></a>共同管理体系结构概述
 下图提供共同管理的体系结构概述，以及它如何适用于现有的配置和 Intune 基础结构。

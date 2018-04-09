@@ -1,9 +1,9 @@
 ---
-title: "任务序列步骤"
+title: 任务序列步骤
 titleSuffix: Configuration Manager
-description: "了解可添加到 Configuration Manager 任务序列的任务序列步骤。"
+description: 了解可添加到 Configuration Manager 任务序列的步骤。
 ms.custom: na
-ms.date: 01/12/2018
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
-caps.latest.revision: 
-caps.handback.revision: 
+caps.latest.revision: 26
+caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 5320d7747f7e2c6164da8c1801e631b749935d6d
-ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
+manager: dougeby
+ms.openlocfilehash: ad68209784b78da5c6e75745094ba8e6bc002c44
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/27/2018
 ---
 # <a name="task-sequence-steps-in-system-center-configuration-manager"></a>System Center Configuration 中的任务序列步骤
 
@@ -509,6 +509,8 @@ ms.lasthandoff: 02/01/2018
 -   驱动程序包  
 
 -   包  
+
+-   启动映像
     
 此步骤适用于任务序列，从而在以下方案中升级操作系统：  
 

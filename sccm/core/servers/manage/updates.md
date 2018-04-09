@@ -1,26 +1,27 @@
 ---
-title: "更新"
+title: 更新
 titleSuffix: Configuration Manager
-description: "了解称为**更新与维护服务**的控制台中服务方法，该方法可轻松找到并安装建议的更新。"
+description: 了解称为“更新与维护服务”的控制台中服务方法，该方法可轻松找到并安装建议的更新。
 ms.custom: na
-ms.date: 11/20/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3a832943-580a-4a40-b454-961d0854ac2b
-caps.latest.revision: "51"
-caps.handback.revision: "0"
+caps.latest.revision: 51
+caps.handback.revision: 0
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: a90222d16391d1e75d041c95c048a1d8d19bf278
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 8be32aa07819239820711079e4ff3637e96367db
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="updates-for-system-center-configuration-manager"></a>System Center Configuration Manager 的更新
 
@@ -47,7 +48,7 @@ System Center Configuration Manager 使用称为“更新和服务”的控制�
 
 
 ##  <a name="bkmk_Baselines"></a> 基准和更新版本  
- System Center Configuration Manager Current Branch 的初始版本为版本 1511，即基准版本。 更高基线版本包括版本 1606 和 1702：
+ System Center Configuration Manager Current Branch 的初始版本为版本 1511，即基准版本。 更高基线版本包括版本 1702 和 1802：
 
 -   在新的层次结构中安装新站点时，请使用最新的基准版本。  
 
@@ -75,6 +76,7 @@ Configuration Manager 的某些更新可用作现有基础结构的控制台中�
 
 |版本 |可用日期|[支持结束日期](/sccm/core/servers/manage/current-branch-versions-supported) |Baseline|控制台中更新|  
 |-------------|-----------|------------|--------------|------------------------|  
+|[1802](/sccm/core/plan-design/changes/whats-new-in-version-1802)<br /><br /> 5.00.8634.1000|2018 年 3 月 22 日|2019 年 9 月 22 日|是|是|
 |[1710](/sccm/core/plan-design/changes/whats-new-in-version-1710)<br /><br /> 5.00.8577.1000|2017 年 11 月 20 日|2019 年 5 月 20 日|否|是|
 |[1706](/sccm/core/plan-design/changes/whats-new-in-version-1706)<br /><br /> 5.00.8540.1000|2017 年 7 月 31 日|2018 年 7 月 31 日|否|是|
 |[1702](/sccm/core/plan-design/changes/whats-new-in-version-1702)<br /><br /> 5.00.8498.1000|2017 年 3 月 27 日| 2018 年 3 月 27 日|是|是|
@@ -85,7 +87,7 @@ Configuration Manager 的某些更新可用作现有基础结构的控制台中�
 | 1511 <br /><br /> 5.00.8325.1000|2015 年 12 月 8 日| 2016 年 12 月 8 日|是|否|  
 
 
-（注释 1）1606 和 1702 基线介质作为 Microsoft System Center 2016 或 System Center Configuration Manager（Current Branch 和 Long-Term Servicing Branch）版的一部分在[批量许可服务中心](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC) 上提供。 例如，在 VLSC 上，可以搜索 System Center Config Mgr（Current Branch 和 LTSB），会返回 1606 和 1702 版本基线介质并且可供下载。
+（注释 1）1802 和 1702 基线介质作为 Microsoft System Center 2016 或 System Center Configuration Manager（Current Branch 和 Long-Term Servicing Branch）版的一部分在[批量许可服务中心](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC) 上提供。 例如，在 VLSC 上，可以搜索 System Center Config Mgr（Current Branch 和 LTSB），会返回 1802 和 1702 版本基线介质并且可供下载。
 
 若要检查 Configuration Manager 站点的版本，请在控制台中，转至控制台左上角的 **“关于 System Center Configuration Manager”** ，新站点和控制台版本将会显示在那里。  
 
@@ -93,7 +95,7 @@ Configuration Manager 的某些更新可用作现有基础结构的控制台中�
  使用 System Center Configuration Manager 的生产就绪型安装（也称为当前分支）时，通过“更新和维护服务”渠道可提供安装的大部分更新。 此方法标识、下载并提供适用于你当前基础结构版本和配置的更新，并且仅包含 Microsoft 针对所有客户建议的更新。   
  其中包括:  
 
--   新版本，如版本 1610、1702 或 1706。  
+-   新版本，如版本 1702、1706、1710 或 1802。  
 
 -   更新，包括当前版本的新功能。
 

@@ -1,26 +1,27 @@
 ---
-title: "对 Windows Defender 或 Endpoint Protection 客户端进行故障排除"
+title: 对 Windows Defender 或 Endpoint Protection 客户端进行故障排除
 titleSuffix: Configuration Manager
-description: "了解如何对 Windows Defender 和 Endpoint Protection 进行故障排除。"
+description: 了解如何对 Windows Defender 和 Endpoint Protection 进行故障排除。
 ms.custom: na
-ms.date: 01/03/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d837253e-fcc2-422a-9e2c-c78b938dfd8c
-caps.latest.revision: "7"
-caps.handback.revision: "0"
-author: NathBarn
-ms.author: nathbarn
-manager: angrobe
-ms.openlocfilehash: b667db471a16faef057f49a0a26759849e03f237
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+caps.latest.revision: 7
+caps.handback.revision: 0
+author: mestew
+ms.author: mstewart
+manager: dougeby
+ms.openlocfilehash: a8460cafce15e5fb97ace76983932841ec77412f
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 03/27/2018
 ---
 # <a name="troubleshooting-windows-defender-or-endpoint-protection-client"></a>对 Windows Defender 或 Endpoint Protection 客户端进行故障排除
 
@@ -100,7 +101,7 @@ ms.lasthandoff: 10/12/2017
 
 2.  如果你收到的错误消息中包含代码 0x80072f8f，那么该问题很可能是由你的计算机上不正确的日期或时间设置引起的。  
 
-3.  要重置你的计算机的日期或时间设置，请按照 [修复损坏的桌面快捷方式和常规系统维护任务](http://go.microsoft.com/fwlink/?LinkId=155579) (http://go.microsoft.com/fwlink/?LinkId=155579) 中的步骤执行。  
+3.  要重置计算机的日期或时间设置，请按照[修复损坏的桌面快捷方式和常规系统维护任务](http://go.microsoft.com/fwlink/?LinkId=155579) (http://go.microsoft.com/fwlink/?LinkId=155579)) 中的步骤执行。  
 
 ### <a name="step-4-rename-the-software-distribution-folder-on-your-computer"></a>步骤 4：重命名你的计算机上的 Software Distribution 文件夹  
 
@@ -153,16 +154,16 @@ ms.lasthandoff: 10/12/2017
 
 ### <a name="step-6-manually-install-the-virus-and-spyware-definition-updates"></a>步骤 6：手动安装病毒和间谍软件定义更新  
 
--   如果你运行的是 32 位 Windows 操作系统，请手动下载最新的更新，网址为 [http://go.microsoft.com/fwlink/?LinkID=87342](http://go.microsoft.com/fwlink/?LinkID=87342) (http://go.microsoft.com/fwlink/?LinkID=87342)。  
+-   如果运行 32 位 Windows 操作系统，请从 [http://go.microsoft.com/fwlink/?LinkID=87342](http://go.microsoft.com/fwlink/?LinkID=87342) (http://go.microsoft.com/fwlink/?LinkID=87342)) 手动下载最新更新。  
 
--   如果你运行的是 64 位 Windows 操作系统，请手动下载最新的更新，网址为 [http://go.microsoft.com/fwlink/?LinkID=87341](http://go.microsoft.com/fwlink/?LinkID=87341) (http://go.microsoft.com/fwlink/?LinkID=87341)。  
+-   如果运行 64 位 Windows 操作系统，请从 [http://go.microsoft.com/fwlink/?LinkID=87341](http://go.microsoft.com/fwlink/?LinkID=87341) (http://go.microsoft.com/fwlink/?LinkID=87341)) 手动下载最新更新。  
 
 -   单击“运行” 。 最新的更新将手动安装在你的计算机上。  
 
 
 ### <a name="step-7-contact-support"></a>步骤 7：联系技术支持人员  
 
--   如果这些步骤未能解决此问题，请与技术支持人员联系。 有关详细信息，请参阅 [客户支持](http://go.microsoft.com/fwlink/?LinkID=196174) (http://go.microsoft.com/fwlink/?LinkID=196174)。  
+-   如果这些步骤未能解决此问题，请与技术支持人员联系。 有关详细信息，请参阅[客户支持](http://go.microsoft.com/fwlink/?LinkID=196174) (http://go.microsoft.com/fwlink/?LinkID=196174))。  
 
 ##  <a name="starting-windows-defender-or-endpoint-protection-service"></a>启动 Windows Defender 或 Endpoint Protection 服务  
  **症状**  
@@ -238,8 +239,7 @@ ms.lasthandoff: 10/12/2017
 3.  如果你使用电缆调制解调器或 DSL 路由器，请确保路由器的连接和路由器与计算机的连接是牢固的。 请尝试拔掉电源关闭路由器和调制解调器。 等待几分钟，首先插入调制解调器的电源，再等待一分钟，插入路由器的电源，然后重新启动计算机。  
 
 ##  <a name="detected-threat-cant-be-remediated"></a>无法解决检测到的威胁  
- 当 Windows Defender 或   
-      Endpoint Protection 检测到隐藏在文件扩展名为 .zip 的压缩文件中或隐藏在网络共享中的潜在威胁时，它会尝试通过隔离或删除威胁来处理威胁。  
+ 当 Windows Defender 或 Endpoint Protection 检测到隐藏在文件扩展名为 .zip 的压缩文件中或隐藏在网络共享中的潜在威胁时，它会尝试通过隔离或删除威胁来处理此威胁。  
 
 ### <a name="remove-or-scan-the-file"></a>删除或扫描文件  
 

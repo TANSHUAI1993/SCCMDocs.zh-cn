@@ -1,20 +1,21 @@
 ---
-title: "准备 Windows 10 设备进行共同管理"
-description: "了解如何准备 Windows 10 设备进行共同管理。"
-keywords: 
-author: dougeby
-manager: angrobe
-ms.date: 11/20/2017
+title: 准备 Windows 10 设备进行共同管理
+description: 了解如何准备 Windows 10 设备进行共同管理。
+keywords: ''
+author: mestew
+ms.author: mstewart
+manager: dougeby
+ms.date: 03/22/2018
 ms.topic: article
 ms.prod: configuration-manager
-ms.service: 
-ms.technology: 
+ms.service: ''
+ms.technology: ''
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: 902787f173c714fd2a73cc657aad758bd79ce3c8
-ms.sourcegitcommit: 389c4e5b4e9953b74c13b1689195f99c526fa737
+ms.openlocfilehash: 61aef0351e32ef6cf31911a8dfd27e86de82f38c
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="prepare-windows-10-devices-for-co-management"></a>准备 Windows 10 设备进行共同管理
 可对已联接 AD 和 Azure AD 并在 Intune 中注册的 Windows 10 设备和 Configuration Manager 中的客户端启用共同管理。 对于新的 Windows 10 设备和已在 Intune 中注册的设备，请在可以进行共同管理前先安装 Configuration Manager 客户端。 对于已属于 Configuration Manager 客户端的 Windows 10 设备，可向 Intune 注册设备并在 Configuration Manager 控制台中启用共同管理。
@@ -23,7 +24,7 @@ ms.lasthandoff: 02/09/2018
 > Windows 10 移动设备不支持共同管理。
 
 ## <a name="command-line-to-install-configuration-manager-client"></a>安装 Configuration Manager 客户端的命令行
-须在适用于 Windows 10 设备（还不是 Configuration Manager 客户端）的 Intune 中创建应用。 在下一节中创建应用时，请使用以下命令行：
+在适用于 Windows 10 设备（还不是 Configuration Manager 客户端）的 Intune 中创建应用。 在下一节中创建应用时，请使用以下命令行：
 
 ccmsetup.msi CCMSETUPCMD="/mp:<云管理网关相互身份验证终结点 URL>/ CCMHOSTNAME=<云管理网关相互身份验证终结点 URL> SMSSiteCode=<站点代码> SMSMP=https://<MP 的 FQDN> AADTENANTID=<AAD 租户 ID> AADTENANTNAME=<租户名> AADCLIENTAPPID=<AAD 集成的 Server AppID> AADRESOURCEURI=https://<资源 ID>”
 
@@ -51,7 +52,7 @@ ccmsetup.msi CCMSETUPCMD="/mp:https://contoso.cloudapp.net/CCM_Proxy_MutualAuth/
 > [!Tip]
 > 可通过使用以下步骤查找站点的命令行参数：     
 > 1. 在 Configuration Manager 控制台中，转到“管理” > “概述” > “云服务” > “共同管理”。  
-> 2. 在“主页”选项卡的“管理”组中，选择“配置共同管理”以打开“共同管理载入”向导。    
+> 2. 在“主页”选项卡的“管理”组中，选择“配置共同管理”以打开“共同管理载入”向导 ****。    
 > 3. 在“订阅”页中，单击“登录”并登录到 Intune 租户，然后单击“下一步”。    
 > 4. 在“启用”页面的“在 Intune 中注册的设备”部分中单击“复制”，将命令行复制到剪贴板，然后将其保存，用在创建应用的过程中。  
 > 5. 单击“取消”退出向导。
@@ -62,7 +63,11 @@ ccmsetup.msi CCMSETUPCMD="/mp:https://contoso.cloudapp.net/CCM_Proxy_MutualAuth/
 
 ## <a name="new-windows-10-devices"></a>新的 Windows 10 设备
 对于新的 Windows 10 设备，可以使用 Autopilot 服务来配置全新体验，这包括将设备联接到 AD 和 Azure AD，以及在 Intune 中注册设备。 然后，在 Intune 中创建应用，部署 Configuration Manager 客户端。  
-1. 对新的 Windows 10 设备启用 AutoPilot。 有关详细信息，请参阅 [Windows AutoPilot 概述](https://docs.microsoft.com/windows/deployment/windows-10-auto-pilot)。  
+1. 对新的 Windows 10 设备启用 AutoPilot。 有关详细信息，请参阅 [Windows AutoPilot 概述](https://docs.microsoft.com/windows/deployment/windows-10-auto-pilot)。    
+
+   > [!NOTE]   
+   > 从 1802 版开始，使用 Configuration Manager 可收集和报告 Microsoft Store 商业版和教育版所需的设备信息。 此信息包括设备序列号、Windows 产品标识符和硬件标识符。 在 Configuration Manager 控制台中的“监视”工作区中，展开“报告”节点，展开“报表”，然后选择“硬件 - 常规”节点。 运行新的报表“Windows AutoPilot 设备信息”并查看结果。 在报表查看器中，单击“导出”图标，并选择“CSV (逗号分隔)”选项。 在保存该文件后，将数据上传到 Microsoft Store 商业版和教育版。 有关详细信息，请参阅[在 Microsoft Store 商业版和教育版中添加设备](https://docs.microsoft.com/microsoft-store/add-profile-to-devices#add-devices-and-apply-autopilot-deployment-profile)。
+
 2. 为设备在 Azure AD 中配置自动注册，以自动向 Intune 注册设备。 有关详细信息，请参阅 [针对 Microsoft Intune 注册 Windows 设备](https://docs.microsoft.com/intune/windows-enroll)。
 3. 使用 Configuration Manager 客户端程序包在 Intune 中创建应用，并将应用部署到要共同管理的 Windows 10 设备中。 执行[使用 Azure AD 安装来自 Internet 的应用](https://docs.microsoft.com/en-us/sccm/core/clients/deploy/deploy-clients-cmg-azure)的步骤时，请使用[安装 Configuration Manager 客户端的命令行](#command-line-to-install-configuration-manager-client)。   
 

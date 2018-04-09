@@ -1,9 +1,9 @@
 ---
-title: "客户端设置"
+title: 客户端设置
 titleSuffix: Configuration Manager
-description: "通过使用 System Center Configuration Manager 中的管理控制台选择客户端设置。"
+description: 了解用于控制客户端行为的默认和自定义设置
 ms.custom: na
-ms.date: 01/05/2018
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
-caps.latest.revision: 
-caps.handback.revision: 
+caps.latest.revision: 15
+caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: dddfde242a67a0b4a9311c0fb6f0b2f0e6742cc2
-ms.sourcegitcommit: fbd4a9d2fa8ed4ddd3a0fecc4a2ec4fc0ccc3d0c
+manager: dougeby
+ms.openlocfilehash: 42b9364fc88acc3f403db8d2ca9243a117fd78bf
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="about-client-settings-in-system-center-configuration-manager"></a>关于 System Center Configuration Manager 中的客户端设置
 
@@ -114,18 +114,19 @@ Configuration Manager 会自动配置 Windows 防火墙规则以允许此流量�
 
 将此设置为“是”，以便用户接收到基于 Internet 的计算机上的用户策略。 此外还需要满足以下要求：  
 
--   客户端和站点配置为基于 Internet 的客户端管理。
+-   将客户端和站点配置为[基于 Internet 的客户端管理](/sccm/core/clients/manage/plan-internet-based-client-management)或[云管理网关](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway)。  
 
 -   “在客户端上启用用户策略”设置为“是”。  
 
--   基于 Internet 的管理点可通过使用 Windows 身份验证（Kerberos 或 NTLM）成功地对用户进行身份验证。  
+-   基于 Internet 的管理点可通过使用 Windows 身份验证（Kerberos 或 NTLM）成功地对用户进行身份验证。 有关详细信息，请参阅[来自 Internet 的客户端通信的注意事项](../../../core/plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan)。  
+
+-   从 1710 版开始，云管理网关可使用 Azure Active Directory 成功对用户进行身份验证。 有关详细信息，请参阅[在加入 Azure AD 的设备上部署用户可用的应用程序](\sccm\apps\deploy-use\deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices)。  
 
 如果将此选项设置为“否”，或不满足之前的任何一个条件，则 Internet 上的计算机将仅收到计算机策略。 在此情况下，用户仍然能够查看、请求和安装基于 Internet 的应用程序目录中的应用程序。 如果此设置为“否”，但“在客户端上启用用户策略”为“是”，则在计算机连接到 Intranet 之前，用户不会收到用户策略。  
 
-有关在 Internet 上管理客户端的详细信息，请参阅[来自 Internet 或不受信任林的客户端通信的注意事项](../../../core/plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan)。  
-
 > [!NOTE]  
->  来自用户的应用程序批准请求不需要用户策略或用户身份验证。  
+>  对于基于 Internet 的客户端管理，来自用户的应用程序批准请求不需要用户策略或用户身份验证。 云管理网关不支持应用程序批准请求。   
+
 
 
 ## <a name="cloud-services"></a>云服务
@@ -228,7 +229,7 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
 ### <a name="use-new-software-center"></a>使用新的软件中心
 
-如果将此设置为“是”，则所有客户端计算机均使用软件中心。 软件中心显示以前只能在应用程序目录中访问的用户可用的应用。 应用程序目录需要 Silverlight，它对于软件中心来说不再是先决条件。   
+如果将此设置为“是”，则所有客户端计算机均使用软件中心。 软件中心显示以前只能在应用程序目录中访问的用户可用的应用。 应用程序目录需要 Silverlight，它对于软件中心来说不再是先决条件。 从 Configuration Manager 1802 起，默认设置为“是”。  
 
 仍然需要应用程序目录网站点站点系统角色和应用程序目录 Web 服务点站点系统角色来让用户可用的应用显示在软件中心。  
 
@@ -322,6 +323,21 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
 有关维护时段的详细信息，请参阅[如何在 System Center Configuration Manager 中使用维护时段](../../../core/clients/manage/collections/use-maintenance-windows.md)。
 
+
+
+## <a name="delivery-optimization"></a>传递优化
+
+<!-- 1324696 -->
+使用 Configuration Manager 边界组来定义和控制跨公司网络和到远程办公室的内容分发。 [Windows 传递优化](/windows/deployment/update/waas-delivery-optimization)是一种基于云的对等技术，用于在 Windows 10 设备之间共享内容。 从版本 1802 开始，配置传递优化以在对等方之间共享内容时使用边界组。
+
+ > [!Note]
+ > 传递优化仅可用于 Windows 10 客户端
+
+### <a name="use-configuration-manager-boundary-groups-for-delivery-optimization-group-id"></a>将 Configuration Manager 边界组用于交付优化组 ID
+ 选择“是”将边界组标识符用作客户端上的传递优化组标识符。 当客户端与传递优化云服务进行通信时，它使用此标识符来查找具有所需内容的对等方。 
+
+
+
 ##  <a name="endpoint-protection"></a>Endpoint Protection  
 >  [!Tip]   
 > 除了以下信息，还可以在[示例方案：使用 System Center Endpoint Protection 来保护计算机在 System Center Configuration Manager 中免受恶意软件侵害](/sccm/protect/deploy-use/scenarios-endpoint-protection)中查找关于使用 Endpoint Protection 客户端设置的详细信息。
@@ -330,11 +346,11 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
 若要在层次结构中的计算机上管理现有的 Endpoint Protection 和 Windows Defender 客户端，请选择“是”。  
 
-如果已经安装了 Endpoint Protection 客户端并且想要使用 Configuration Manager 来管理它，请选择此选项。 此单独安装包括使用 Configuration Manager 应用程序或包和程序的脚本化进程。
+如果已经安装了 Endpoint Protection 客户端并且想要使用 Configuration Manager 来管理它，请选择此选项。 此单独安装包括使用 Configuration Manager 应用程序或包和程序的脚本化进程。 从 Configuration Manager 1802 起，Windows 10 设备不需要安装 Endpoint Protection 代理。 但是，这些设备仍需启用“管理客户端计算机上的 Endpoint Protection 客户端”。 <!--503654-->
 
 ### <a name="install-endpoint-protection-client-on-client-computers"></a>在客户端计算机上安装 Endpoint Protection 客户端
 
-选择“是”可在尚未运行该客户端的客户端计算机上安装和启用 Endpoint Protection 客户端。  
+选择“是”可在尚未运行该客户端的客户端计算机上安装和启用 Endpoint Protection 客户端。 从 Configuration Manager 1802 起，Windows 10 客户端不需要安装 Endpoint Protection 代理。  
 
 > [!NOTE]  
 >  如果已安装 Endpoint Protection 客户端，选择“否”不会卸载 Endpoint Protection 客户端。 要卸载 Endpoint Protection 客户端，请将“在客户端计算机上管理 Endpoint Protection 客户端”客户端设置设为“否”。 然后，部署包和程序以卸载 Endpoint Protection 客户端。  
@@ -609,8 +625,14 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 - **软件中心的配色方案** </br>
 选择“选择颜色”，定义软件中心使用的主色调。
 - **选择在软件中心使用的徽标** </br>
-选择“浏览”，选择要在软件中心显示的图像。 徽标必须为 400 x 100 像素的 JPEG、PNG 或 BMP 格式，最大尺寸为 750 KB。 徽标文件名称不能包含空格。 <!--SMS.503731 space in filename, noticed BMP missing as filetype-->
+选择“浏览”，选择要在软件中心显示的图像。 徽标必须为 400 x 100 像素的 JPEG、PNG 或 BMP 格式，最大尺寸为 750 KB。 徽标文件名称不能包含空格。  
+         
+### <a name="bkmk_HideUnapproved"></a>在软件中心隐藏未批准的应用程序
+从 Configuration Manager 版本 1802 起，启用此选项后，软件中心会隐藏需批准的用户可用的应用程序。   <!--1355146-->
 
+### <a name="bkmk_HideInstalled"></a>在软件中心隐藏安装的应用程序
+从 Configuration Manager 版本 1802 起，启用此选项后，已安装的应用程序将不再显示在“应用程序”选项卡中。 安装或升级到 Configuration Manager 1802 时，此选项被设置为默认选项。  仍可在安装状态选项卡下查看安装的应用程序。<!--1357592-->   
+  
 ### <a name="software-center-tab-visibility"></a>软件中心选项卡的可见性
 将此组中的其他设置配置为“是”，以在软件中心显示以下选项卡：
 - **应用程序**
