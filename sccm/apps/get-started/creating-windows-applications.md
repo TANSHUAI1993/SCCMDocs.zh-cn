@@ -12,7 +12,7 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9181c84e-d74f-44ea-9bb9-f7805eb465fc
-caps.latest.revision: ''
+caps.latest.revision: 8
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
@@ -34,7 +34,7 @@ ms.lasthandoff: 03/27/2018
 |设备类型|支持的文件类型|  
 |-----------------|---------------------|  
 |Windows RT 和 Windows RT 8.1|\*.appx, \*.appxbundle|  
-|注册为移动设备的 Windows 8.1 和更高版本|*.appx, \*.appxbundle|  
+|注册为移动设备的 Windows 8.1 和更高版本|\*.appx, \*.appxbundle|  
 
  支持以下部署操作：  
 
