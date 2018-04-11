@@ -1,7 +1,7 @@
 ---
-title: "新版本 1710 |Microsoft Docs"
+title: 新版本 1710 |Microsoft Docs
 titleSuffix: Configuration Manager
-description: "获取有关 System Center Configuration Manager 的 1710 版中引入的更改和新功能的详细信息。"
+description: 获取有关 System Center Configuration Manager 的 1710 版中引入的更改和新功能的详细信息。
 ms.custom: na
 ms.date: 1/08/2018
 ms.reviewer: na
@@ -14,17 +14,23 @@ ms.assetid: bc6c3e5f-b9e2-400e-9d9d-446ff93c520c
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: c75ed431c6a786759e2ddcd6dc6b55d5b55412c7
-ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
+ms.openlocfilehash: e9d1ac44bf0455ff0b1caec94d07cfa734dfbeb0
+ms.sourcegitcommit: d8a4a53630351b3d677bbdc5d203e7d330472cba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="what39s-new-in-version-1710-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1710 的新增功能
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager Current Branch 的更新 1710 作为控制台内更新提供，用于运行版本 1610、1702 或 1706 的以前安装的站点。
+
+除了新增功能外，这一版还有其他变化（如缺陷修复）。 有关详细信息，请参阅 [System Center Configuration Manager Current Branch（版本 1710）的更改摘要](https://support.microsoft.com/help/4056470/summary-of-changes-in-system-center-configuration-manager-current-bran)。
+
+此外，现在还可以获取这一版的以下附加更新：
+- [System Center Configuration Manager Current Branch（版本 1710）更新汇总](https://support.microsoft.com/help/4057517/update-rollup-for-system-center-configuration-manager-current-branch-v)
+- [System Center Configuration Manager Current Branch（版本 1710）更新汇总 2](https://support.microsoft.com/en-us/help/4086143/update-rollup-2-for-system-center-configuration-manager-current-branch)
 
 > [!TIP]  
 > 若要安装新站点，必须使用 Configuration Manager 的基准版本。  
