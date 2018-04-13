@@ -1,25 +1,26 @@
 ---
-title: "预发行功能"
+title: 预发行功能
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager 中的预发行功能"
+description: System Center Configuration Manager 中的预发行功能
 ms.custom: na
-ms.date: 12/19/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6bce416b-761d-4b23-bd33-5b7c30edb10d
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: mestew
 ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 2ef961732431bd4314229e3da6a65df58592342f
-ms.sourcegitcommit: 6c2aa79924c0e7fc64ef5e9003498fc00c349db9
+manager: dougeby
+ms.openlocfilehash: c30fbeaad87b18750f65f90427366044d30c6609
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="pre-release-features-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的预发行功能
 *适用范围：System Center Configuration Manager (Current Branch)*
@@ -46,17 +47,19 @@ ms.lasthandoff: 12/21/2017
 
  |功能          |添加为预发行功能 | 添加为完整版功能|  
 |------------------|---------------------|---------------------|
-| 运行任务序列步骤 <!-- 1261338 --> |  [版本 1710](/sccm/osd/understand/task-sequence-steps#child-task-sequence) |![尚未发行](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-| Windows Defender 攻击防护 <!-- 1355468 --> |  [版本 1710](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) |![尚未发行](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-| 用于条件访问符合性策略的“设备运行状况证明”评估 <!-- 1235616 --> |  [版本 1710](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) |![尚未发行](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-| 从 Configuration Manager 控制台创建并运行 PowerShell 脚本 <!-- 1236459 --> |  [版本 1706](/sccm/apps/deploy-use/create-deploy-scripts)|![尚未发行](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
+|分阶段部署<!--1356837-->|[版本 1802](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence.md)|![尚未发行](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
+| 运行任务序列步骤 <!-- 1261338 --> |  [版本 1710](/sccm/osd/understand/task-sequence-steps#child-task-sequence) |[版本 1802](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#add-child-task-sequences-to-a-task-sequence)|
+| Windows Defender 攻击防护 <!-- 1355468 --> |  [版本 1710](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) |[版本 1802](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy)|
+| 用于条件访问符合性策略的“设备运行状况证明”评估 <!-- 1235616 --> |  [版本 1710](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) |[版本 1802](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)|
+| 从 Configuration Manager 控制台创建并运行 PowerShell 脚本 <!-- 1236459 --> |  [版本 1706](/sccm/apps/deploy-use/create-deploy-scripts)|[版本 1802](/sccm/apps/deploy-use/create-deploy-scripts)|
 | 管理 Microsoft Surface 驱动程序更新 <!-- 1098490 --> |  [版本 1706](/sccm/sum/get-started/configure-classifications-and-products) | [版本 1710](/sccm/sum/get-started/configure-classifications-and-products)|
 | 使用 Configuration Manager 进行 Device Guard 管理 <!-- 1319346 --> |  [版本 1702](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)|![尚未发行](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 | 任务序列内容预缓存 <!-- 1021244 --> |  [版本 1702](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content) | [版本 1706](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content)|
 | 在安装应用程序之前检查运行的可执行文件 <!-- 1284624 --> |   [版本 1702](/sccm/apps/deploy-use/deploy-applications#how-to-check-for-running-executable-files-before-installing-an-application) |[版本 1706](/sccm/apps/deploy-use/deploy-applications#how-to-check-for-running-executable-files-before-installing-an-application)|
 | 数据仓库服务点 <!-- 1277922 --> |  [版本 1702](/sccm/core/servers/manage/data-warehouse) |[版本 1706](/sccm/core/servers/manage/data-warehouse)|
 | 用于向客户端进行内容分发的对等缓存 <!-- 1101436 --> |  [版本 1610](/sccm/core/plan-design/hierarchy/client-peer-cache) | [版本 1710](/sccm/core/plan-design/hierarchy/client-peer-cache)|
-| 云管理网关 <!-- 1101764 --> |  [版本 1610](/sccm/core/clients/manage/plan-cloud-management-gateway) |![尚未发行](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
-| Microsoft Operations Management Suite 连接器 <!-- 1236739 --> | [版本 1606](../../../core/clients/manage/sync-data-microsoft-operations-management-suite.md) |![尚未发行](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
+| 云管理网关 <!-- 1101764 --> |  [版本 1610](/sccm/core/clients/manage/plan-cloud-management-gateway) |[版本 1802](/sccm/core/clients/manage/plan-cloud-management-gateway)|
+| Microsoft Operations Management Suite 连接器 <!-- 1236739 --> | [版本 1606](../../../core/clients/manage/sync-data-microsoft-operations-management-suite.md) |[版本 1802](../../../core/clients/manage/sync-data-microsoft-operations-management-suite.md)|
 | 维护群集感知集合（为服务器组提供服务） <!-- 1081776 --> | [版本 1602](../../../core/get-started/capabilities-in-technical-preview-1605.md#BKMK_ServerGroups)|![尚未发行](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 | 对由 System Center Configuration Manager 管理的电脑进行条件访问 <!--  --> | [版本 1602](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)     | [版本 1702](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)                     |
+<!--Image used = ![Not yet](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif) -->

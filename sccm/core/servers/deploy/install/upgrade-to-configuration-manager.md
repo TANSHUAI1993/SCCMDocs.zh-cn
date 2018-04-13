@@ -1,24 +1,25 @@
 ---
-title: "升级到 System Center Configuration Manager"
-description: "了解从运行 System Center 2012 Configuration Manager 的站点和层次结构成功进行就地升级的步骤。"
+title: 升级到 System Center Configuration Manager
+description: 了解从运行 System Center 2012 Configuration Manager 的站点和层次结构成功进行就地升级的步骤。
 ms.custom: na
-ms.date: 6/6/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: c64e7483-b4bb-4738-95f4-ecdaeb6a2ba6
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 770976309fbd5e8884dfec4bdaa29630ef1c02d0
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 72e11a04eb64d649749f2001ac4e3550c784132c
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="upgrade-to-system-center-configuration-manager"></a>升级到 System Center Configuration Manager
 
@@ -32,6 +33,14 @@ ms.lasthandoff: 12/04/2017
  > 管理 System Center Configuration Manager 站点和层次结构基础结构时，术语“升级”“更新”和“安装”用于描述三种不同概念。 若要了解每个术语的使用方法，请参阅[有关升级、更新和安装](/sccm/core/understand/upgrade-update-install)。
 
 ##  <a name="bkmk_path"></a> 就地升级路径  
+
+**升级到版本 1802**   
+如果具有版本 1702 基线介质，可以将下列版本升级到 System Center Configuration Manager 版本 1802 的完整许可版本：   
+-     System Center Configuration Manager 版本 1802 的评估版安装
+-     System Center 2012 Configuration Manager Service Pack 1
+-     System Center 2012 Configuration Manager Service Pack 2
+-     System Center 2012 R2 Configuration Manager
+-     System Center 2012 R2 Configuration Manager Service Pack 1
 
 **升级到版本 1702**   
 如果具有版本 1702 基线介质，可以将下列版本升级到 System Center Configuration Manager 版本 1702 的完整许可版本：   
@@ -274,7 +283,7 @@ Configuration Manager 不支持辅助站点备份，也不支持辅助站点数�
 
 若要针对升级测试数据库，请首先将站点数据库的副本还原到未承载 Configuration Manager 站点的 SQL Server 实例。 用于承载数据库副本的 SQL Server 版本必须是作为数据库副本源的 Configuration Manager 版本支持的 SQL Server 版本。  
 
-接下来，在还原站点数据库之后，在 SQL Server 计算机上，使用  **/TESTDBUPGRADE**  命令行选项从 System Center Configuration Manager 的源媒体文件夹中运行 Configuration Manager 安装程序。  
+接下来，在还原站点数据库之后，在 SQL Server 计算机上，使用 **/TESTDBUPGRADE** 命令行选项从 System Center Configuration Manager 的源媒体文件夹中运行 Configuration Manager 安装程序。  
 
 -   有关如何创建和还原站点数据库备份的信息，请参阅[适用于安装程序的命令行选项](../../../../core/servers/deploy/install/command-line-options-for-setup.md)。  
 -   有关 **/TESTDBUPGRADE** 命令行选项的信息，请参阅[适用于安装程序的命令行选项](../../../../core/servers/deploy/install/command-line-options-for-setup.md) 中的表。  
@@ -382,9 +391,9 @@ Configuration Manager 不支持辅助站点备份，也不支持辅助站点数�
     -   父主站点上的“基础结构管理员”或“完全权限管理员”安全角色  
     -   辅助站点的站点数据库上的系统管理员 (SA) 权限  
     </br>
-2.  在 Configuration Manager 控制台中，单击“管理” 。  
+2.  在 Configuration Manager 控制台中，单击“管理”。  
 
-3.  在“管理”  工作区中，展开“站点配置” ，然后单击“站点” 。  
+3.  在“管理”工作区中，展开“站点配置”，然后单击“站点”。  
 
 4.  选择要升级的辅助站点，然后在“主页”  选项卡上的“站点”  组中，单击“升级” 。  
 

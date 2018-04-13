@@ -1,9 +1,9 @@
 ---
-title: "数据仓库"
+title: 数据仓库
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager 的数据仓库服务点和数据库"
+description: System Center Configuration Manager 的数据仓库服务点和数据库
 ms.custom: na
-ms.date: 02/26/2018
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,15 +12,15 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aaf43e69-68b4-469a-ad58-9b66deb29057
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 954ec65bae15e087d6cf5afbcc8e0da1ebf83533
-ms.sourcegitcommit: be939893f0ceca4add8655ae2c24e42aa16aec38
+ms.openlocfilehash: 83bfc0e3d7bdf1ff8718c7c211c897e37b21a06b
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/23/2018
 ---
 #  <a name="the-data-warehouse-service-point-for-system-center-configuration-manager"></a>System Center Configuration Manager 的数据仓库服务点
 *适用范围：System Center Configuration Manager (Current Branch)*
@@ -88,6 +88,7 @@ ms.lasthandoff: 02/27/2018
      - **数据库名称**：指定数据仓库数据库的名称。 数据库名称不能超过 10 个字符。 （在未来版本中，支持的名称长度会增加）。
      Configuration Manager 使用此名称创建数据仓库数据库。 如果指定 SQL Server 实例上已存在的数据库名称，则 Configuration Manager 会使用该数据库。
      - **用于连接的 SQL Server 端口**：指定托管数据仓库数据库的 SQL Server 使用的 TCP/IP 端口号。 数据仓库同步服务使用此端口连接到数据仓库数据库。  
+     - **数据仓库服务点帐户**：从版本 1802 开始，指定连接到数据仓库数据库时 SQL Server Reporting Services 所使用的帐户。 
 
 “同步计划”页：   
 - **同步计划**：
@@ -96,8 +97,12 @@ ms.lasthandoff: 02/27/2018
          - **每天**：指定每天运行同步。
          - **每周**：指定每周的某一天和每周重复进行同步。
 
+
 ## <a name="reporting"></a>报表
 安装数据仓库服务点后，同一站点上安装的 Reporting Services 点上将提供多个报表。 如果在安装 Reporting Services 点之前先安装数据仓库服务点，当稍后安装 Reporting Services 点时，将自动添加这些报表。
+
+>[!WARNING]
+>在 Configuration Manager 版本 1802 中，为数据仓库点添加了备用凭据支持。 <!--507334-->如果从先前版本的 Configuration Manager 升级，则需指定 SQL Server Reporting Services 将用于连接到数据仓库数据库的凭据。 将不会打开数据仓库报表，直到指定了凭据。 要指定帐户，转到“管理” >“站点配置” >“服务器和站点系统角色”。 单击具有数据仓库服务点的服务器，然后右键单击数据仓库服务点角色。 选择“属性”，然后指定“数据仓库服务点帐户”。
 
 数据仓库站点系统角色包括下列报表，并且其类别为**数据仓库**：
  - **应用程序部署 - 历史记录**：查看有关特定应用程序和计算机的应用程序部署的详细信息。

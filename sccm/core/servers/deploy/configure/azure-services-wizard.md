@@ -1,100 +1,249 @@
 ---
-title: "Azure 服务向导"
+title: 配置 Azure 服务
 titleSuffix: Configuration Manager
-description: "关于 System Center Configuration Manager 的 Azure 服务向导。"
+description: 通过云管理、升级就绪情况、适用于企业的 Microsoft Store 以及 Operations Management Suite 等 Azure 服务连接 Configuration Manager 环境。
 ms.custom: na
-ms.date: 7/31/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: a26a653e-17aa-43eb-ab36-0e36c7d29f49
-caps.latest.revision: "0"
+caps.latest.revision: 0
 author: mestew
 ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 7646e8bc368e5c01ddef41592c513f7bd1643cdb
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+manager: dougeby
+ms.openlocfilehash: b86c73f3f5662a00ca0b7f80b0c785c37aff0b1a
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="configure-azure-services-for-use-with-configuration-manager"></a>配置用于 Configuration Manager 的 Azure 服务
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-从 Current Branch 版本 1706 开始，“Azure 服务向导”可简化用于 Configuration Manager 的 Azure 服务的配置过程。
-
-此向导使用“Azure AD Web 应用注册”提供订阅和配置详细信息，并对与 Azure AD 之间的通信进行身份验证，从而提供通用配置体验。 每次设置新 Configuration Manager 组件或 Azure 服务时，Web 应用都会输入此相同的信息。
-
-可以使用“Azure 服务”向导配置以下 Azure 服务：
--   **云管理**   
-    [使用 Azure Active Directory (Azure AD) 支持客户端进行身份验证](/sccm/core/clients/deploy/deploy-clients-cmg-azure)。 还可以[配置 Azure AD 用户发现](/sccm/core/servers/deploy/configure/configure-discovery-methods#azureaadisc)。
--   OMS 连接器
-    [连接到 Operations Management Suite](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite) (OMS)，并将集合等数据同步到 OMS Log Analytics。
--   **升级就绪情况**
-    [连接到升级就绪情况](/sccm/core/clients/manage/upgrade/upgrade-analytics)并查看客户端升级兼容性数据。
--   适用于企业的 Microsoft Store 连接到[适用于企业的 Microsoft Store](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)，并为你的组织获取应用以通过 Configuration Manager 进行部署。
-
-使用向导配置服务时，可以使用几个常见的操作。
-其中包括:
--   配置 Azure 环境：在向导的“应用”页中，选择所用的“Azure 环境”。 请参阅每个服务的内容，了解它是否仅支持 Azure 公有云或是否可以支持私有云。
--   创建或导入服务器应用：在向导的“应用”页上，可以“创建”和“导入”Azure Web 应用注册元数据。 可用选项取决于你配置的服务。 此外，某些服务可能需要更多的应用。 例如，“云管理”服务要求“Native Client”应用，该应用用于客户端以直接对与 Azure 服务之间的通信进行身份验证。
+使用“Azure 服务向导”简化用于 Configuration Manager 的 Azure 云服务的配置过程。 此向导通过使用 Azure Active Directory (Azure AD) Web 应用注册提供通用的配置体验。 这些应用提供订阅和配置详细信息，以及与 Azure AD 之间的身份验证通信。 每次使用 Azure 设置新的 Configuration Manager 组件或服务时，应用都会输入此相同的信息。
 
 
-有关 Azure Web 应用的信息，请参阅 [Azure App Service 中的身份验证和授权](/azure/app-service/app-service-authentication-overview)和 [Web 应用概述](/azure/app-service-web/app-service-web-overview)。
+
+## <a name="available-services"></a>可用服务
+
+使用此向导配置下列 Azure 服务：  
+
+-   **云管理**：此服务使用 Azure AD 支持站点和客户端进行身份验证。 此身份验证支持其他方案，例如：  
+
+    - [安装并分配 Configuration Manager Windows 10 客户端（使用 Azure AD 进行身份验证）](/sccm/core/clients/deploy/deploy-clients-cmg-azure)  
+
+    - [配置 Azure AD 用户发现](/sccm/core/servers/deploy/configure/configure-discovery-methods#azureaadisc)  
+
+    - 支持某些[云管理网关方案](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#scenarios)  
+
+-   **OMS 连接器**：[连接至 Operations Management Suite](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite) (OMS)。 将类似集合的数据同步至 OMS Log Analytics。  
+
+-   **升级就绪情况连接器**：连接至 Windows Analytics [升级就绪情况](/sccm/core/clients/manage/upgrade/upgrade-analytics)。 查看客户端升级兼容性数据。  
+
+-   **适用于企业的 Microsoft Store**：连接至[适用于企业的 Microsoft Store](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)。 为组织获取可使用 Configuration Manager 部署的 Microsoft Store 应用。  
+
+### <a name="service-details"></a>服务详细信息
+
+下表列出每个服务的详细信息。  
+
+- **租户**：可以配置的服务实例数量。 每个实例必须为不同的 Azure 租户。  
+
+- **云**：所有服务都支持全局 Azure 云，但是并非所有服务都支持私有云，例如 Azure 美国政府云。  
+
+- **Web 应用**：指定服务是否使用“Web 应用/API 类型”的 Azure AD 应用（在 Configuration Manager 中也被称为服务器应用）。  
+
+- **本机应用**：指定服务是否使用“本机”类型的 Azure AD 应用（在 Configuration Manager 中也被称为客户端应用）。  
+
+- **操作**：指定是否可以在 Configuration Manager Azure 服务向导中导入或创建这些应用。  
 
 
-## <a name="webapp"></a> 创建或导入与 Configuration Manager 结合使用的 Azure Active Directory Web 应用注册
+|服务  |租户  |云  |Web 应用  |本机应用  |操作  |
+|---------|---------|---------|---------|---------|---------|
+|云管理及</br>Azure AD 用户发现 | 多选 | 公共 | ![支持](media/green_check.png) | ![支持](media/green_check.png) | 导入、创建 |
+|OMS 连接器 | 一台 | 公共、私有 | ![支持](media/green_check.png) | ![不支持](media/Red_X.png) | 导入 |
+|Upgrade Readiness | 一台 | 公共 | ![支持](media/green_check.png) | ![不支持](media/Red_X.png) | 导入 |
+|适用于企业和教育的</br>Microsoft Store | 一台 | 公共 | ![支持](media/green_check.png) | ![不支持](media/Red_X.png) | 导入、创建 |
 
-Azure 服务 Web 应用注册将 Configuration Manager 站点连接到 Azure AD，这也是将 Azure 服务与基础结构结合使用的先决条件。 要执行此操作：
 
-1.  在 Configuration Manager 控制台的“管理”工作区中，展开“云服务”，然后单击“Azure 服务”。
-2.  在“主页”选项卡上的“Azure 服务”组中，单击“配置 Azure 服务”。
-3.  在“Azure 服务”向导的“Azure 服务”页上，选择要连接到 Configuration Manager 的 Azure 服务。
-4.  在向导的“常规”页上，指定一个名称和 Azure 服务的说明。
-5.  在向导的“应用”页上，从列表中选择 Azure 环境，然后单击“浏览”，以选择要用于配置 Azure 服务的“Web 应用”和“Native Client 应用”（仅在需要的情况下）。
+### <a name="about-azure-ad-apps"></a>关于 Azure AD 应用
 
-    **Web 应用：**浏览并打开“服务器应用”窗口。    
-      在“服务器应用”窗口中，选择要使用的服务器应用，然后单击“确定”。 服务器应用是包含 Azure 帐户配置的 Azure AD Web 应用注册，包括客户端的租户 ID、客户端 ID 和密钥。
-    如果没有可用的应用，请使用以下操作之一：
+不同的 Azure 服务需要在 Azue 门户进行不同的配置。 此外，针对 Azure 资源，每个服务的应用可能需要单独的权限。  
 
-    - 创建：基于你在 Configuration Manager 控制台中输入的信息自动创建 Web 应用注册 Azure AD。 提供应用的友好名称、主页 URL、应用 ID URI 和密钥有效期。 默认情况下，密钥有效期为一年。
-        
-        若要继续，现在必须使用 Azure AD 凭据登录以在 Azure 中完成 Web 应用的创建。 用于登录 Azure 的帐户不必与运行 Azure 服务向导的帐户相同。 登录 Azure 后，Configuration Manager 在 Azure 中为用户创建 Web 应用，包括用于 Web 应用的客户端 ID 和密钥。 之后，可在 Azure 门户中查看这些内容。
+你可以将一个应用用于多个服务。 在 Configuration Manager 和 Azure AD 中只需管理一个对象。 当应用的安全密钥到期时，只需刷新一个密钥。
 
-        使用“创建”配置 Web 应用时，Configuration Manager 可以在 Azure AD 中为你创建 Web 应用。
+最安全的配置是每个服务使用单独的应用。 一个服务的应用可能需要其他服务不需要的其他权限。 将一个应用用于不同的服务可能会向该应用提供超出其需求的更多权限。 
+
+在向导中创建其他 Azure 服务时，Configuration Manager 会重复使用服务之间通用的信息。 此行为让你无需多次输入同样的信息。 
+
+有关每个服务所需的应用权限及配置的详细信息，请查看相关 Configuration Manager 文章中的[可用服务](#available-services)部分。 
+
+有关 Azure 应用的详细信息，请从以下文章开始阅读：
+- [Azure 应用服务中的身份验证和授权](/azure/app-service/app-service-authentication-overview)
+- [Web 应用概述](/azure/app-service-web/app-service-web-overview)
+- [在 Azure AD 中注册应用程序的基本知识](/azure/active-directory/develop/active-directory-authentication-scenarios#basics-of-registering-an-application-in-azure-ad)  
+- [用 Azure Active Directory 租户注册应用程序](/azure/active-directory/active-directory-app-registration)
+
+
+
+## <a name="before-you-begin"></a>在开始之前
+
+决定好要连接到的服务后，请参考[服务详细信息](#service-details)中的表。 此表为你提供完成 Azure 服务向导所需的信息。 请提前与你的 Azure AD 管理员进行讨论。 决定是否提前在 Azure 门户中手动创建应用，然后将该应用的详细信息导入至 Configuration Manager。 或者使用 Configuration Manager 直接在 Azure AD 中创建应用。 若要从 Azure AD 收集必要数据，请查看本文其他部分中的信息。
+
+部分服务需要 Azure AD 应用具备特定的权限。 查看每个服务的信息以确定任何所需权限。 例如，在导入某个 Web 应用之前，Azure 管理员必须先在 [Azure 门户](https://portal.azure.com)中创建该应用。 在配置升级就绪情况或 OMS 连接器时，需要在相关 OMS 工作区的资源组上授予新创建的 Web 应用“参与者”权限。 此权限允许 Configuration Manager 访问该工作区。 分配权限时，在“添加用户”边栏选项卡中搜索应用注册的名称。 此过程与[向 Configuration Manager 提供 OMS 权限](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#provide-configuration-manager-with-permissions-to-oms)相同。 Azure 管理员必须在将应用导入 Configuration Manager 之前分配这些权限。
+
+
+
+## <a name="start-the-azure-services-wizard"></a>开始使用 Azure 服务向导
+
+1.  在 Configuration Manager 控制台中，转到“管理”工作区，展开“云服务”，然后选择“Azure 服务”节点。  
+
+2.  在功能区的“主页”选项卡上的“Azure 服务”组中，单击“配置 Azure 服务”。  
+
+3.  在 Azure 服务向导的“Azure 服务”页上进行以下操作：  
+
+    1. 指定 Configuration Manager 中的对象名称。  
+
+    2. 指定可选说明以帮助标识服务。  
+
+    3. 选择想要通过 Configuration Manager 连接到的 Azure 服务。  
+
+4. 单击“下一步”继续转至 Azure 服务向导的 [Azure 应用属性](#azure-app-properties)页。  
+
+
+
+## <a name="azure-app-properties"></a>Azure 应用属性
+
+先从 Azure 服务向导的“应用”页上的列表中选择“Azure 环境”。 根据[服务详细信息](#service-details)中的表，判定该服务当前可用的环境。
+
+应用页的其余部分根据特定服务而定。 根据[服务详细信息](#service-details)中的表，判定服务使用哪种应用以及可以进行什么操作。 
+- 如果应用支持导入和创建操作，请单击“浏览”。 此操作会打开[服务器应用对话框](#server-app-dialog)或[客户端应用对话框](#client-app-dialog)。
+- 如果应用只支持导入操作，请单击“导入”。 此操作会打开[导入应用对话框（服务器）](#import-apps-dialog-server)或[导入应用对话框（客户端）](#import-apps-dialog-client)。
+
+在此页面指定好应用后，单击“下一步”以继续转至 Azure 服务向导的[配置或发现](#configuration-or-discovery)页。
+
+### <a name="web-app"></a>Web 应用
+
+此应用为“Web 应用/API”类型的 Azure AD 应用（在 Configuration Manager 中也被称为服务器应用）。
+
+#### <a name="server-app-dialog"></a>服务器应用对话框
+
+在 Azure 服务向导的应用页上的“Web 应用”处单击“浏览”时，会打开服务器应用对话框。 对话框会显示一个列表，显示任何现有 Web 应用的以下属性：
+- 租户友好名称
+- 应用友好名称
+- 服务类型
+
+你可以从服务器应用对话框进行三种操作：
+- 如要重复使用现有 Web 应用，请从列表中选择它。 
+- 单击“导入”以打开[导入应用对话框](#import-apps-dialog-server)。
+- 单击“创建”以打开[创建服务器应用程序对话框](#create-server-application-dialog)。
+
+选择、导入或创建 Web 应用后，单击“确定”以关闭服务器应用对话框。 此操作会返回至 Azure 服务向导的[应用页](#azure-app-properties)。
+
+#### <a name="import-apps-dialog-server"></a>导入应用对话框（服务器）
+
+从 Azue 服务向导的服务器应用对话框或应用页单击“导入”时，会打开导入应用对话框。 此页可以输入 Azure 门户中已创建的 Azure AD Web 应用的相关信息。 它会将 Web 应用的元数据导入至 Configuration Manager。 指定下列信息：
+- **Azure AD 租户名称**
+- **Azure AD 租户 ID**
+- **应用程序名称**：应用的友好名称。
+- **客户端 ID**
+- **密钥**
+- **密钥到期日期**：从日历选择一个未来的日期。 
+- **应用 ID URI**：此值在 Azure AD 租户中必须是唯一的。 它在 Configuration Manager 客户端用于请求访问服务的访问令牌中。 默认值为 https://ConfigMgrService。  
+
+输入信息后，单击“验证”。 然后单击“确定”以关闭导入应用对话框。 此操作会返回 Azure 服务向导的[应用页](#azure-app-properties)或[服务器应用对话框](#server-app-dialog)。
+
+#### <a name="create-server-application-dialog"></a>创建服务器应用程序对话框
+
+在服务器应用对话框中单击“创建”时，会打开创建服务器应用程序对话框。 此页会自动在 Azure AD 中创建 Web 应用。 指定下列信息：
+- **应用程序名称**：应用的友好名称。
+- **主页 URL**：Configuration Manager 不使用此值，但是 Azure AD 需要它。 默认值为 https://ConfigMgrService。  
+- **应用 ID URI**：此值在 Azure AD 租户中必须是唯一的。 它在 Configuration Manager 客户端用于请求访问服务的访问令牌中。 默认值为 https://ConfigMgrService。  
+- **密钥有效期**：单击下拉列表，并选择“1 年”或“2 年”。 默认值为一年。
+
+单击“登录”以进行 Azure 管理用户的身份验证。 Configuration Manager 不保存这些凭据。 此角色不需要 Configuration Manager 中的权限，其帐户也不需要与运行 Azure 服务向导的帐户相同。 成功完成 Azure 身份验证后，该页面会显示 Azure AD 租户名称以供参考。 
+
+单击“确定”以在 Azure AD 中创建 Web 应用，并关闭创建服务器应用程序对话框。 此操作会返回至[服务器应用对话框](#server-app-dialog)。
+
+
+### <a name="native-client-app"></a>本机客户端应用
     
-    - 导入：输入关于 Azure AD web 应用注册的信息，该应用已在“Azure 门户”中创建，将该注册相关的元数据导入 Configuration Manager。 为应用和租户提供友好名称，然后为 Configuration Manager 要使用的 Azure Web 应用指定租户 ID、客户端 ID 和密钥。 验证此信息后，单击“确定”以继续。
-        > [!NOTE]
-        > 在使用“导入”之前，必须在 [Azure 门户](https://portal.azure.com)中创建 Web 应用 / API类型的 Azure AD 应用注册。 要了解有关如何创建应用注册的详细信息，请参阅[向 Azure Active Directory 租户注册应用程序](/azure/active-directory/active-directory-app-registration)。 当配置“升级就绪情况”或 Operations Management Suite 时，还需要将新注册的 Web 应用“参与者”权限授予包含相关 OMS 工作区的资源组，以便 Configuration Manager 能够访问该工作区。 要执行此操作，需要在分配权限时，在“添加用户”边栏选项卡中搜索应用注册的名称。 当[向 Configuration Manager 授予对 OMS 的权限](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#provide-configuration-manager-with-permissions-to-oms)以便连接到 [Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm)，也必须遵循此相同过程。 在应用导入到 Configuration Manager 之前，必须分配这些权限。
+此应用为“本机”类型的 Azure AD 应用（在 Configuration Manager 中中也被称为服客户端应用）。
+
+#### <a name="client-app-dialog"></a>客户端应用对话框
+
+在 Azure 服务向导的应用页上的“本机客户端应用”处单击“浏览”时，会打开客户端应用对话框。 对话框会显示一个列表，显示任何现有本机应用的以下属性：
+- 租户友好名称
+- 应用友好名称
+- 服务类型
+
+你可以从客户端应用对话框进行三种操作：
+- 如要重复使用现有本机应用，请从列表中选择它。 
+- 单击“导入”以打开[导入应用对话框](#import-apps-dialog-client)。
+- 单击“创建”以打开[创建客户端应用程序对话框](#create-client-application-dialog)。
+
+选择、导入或创建本机应用后，单击“确定”以关闭客户端应用对话框。 此操作会返回至 Azure 服务向导的[应用页](#azure-app-properties)。
+
+#### <a name="import-apps-dialog-client"></a>导入应用对话框（客户端）
+
+在客户端应用对话框中单击“导入”时，会打开导入应用对话框。 此页可以输入 Azure 门户中已创建的 Azure AD 本机应用的相关信息。 它会将本机应用的元数据导入至 Configuration Manager。 指定下列信息：
+- **应用程序名称**：应用的友好名称。
+- **客户端 ID** 
+
+输入信息后，单击“验证”。 然后单击“确定”以关闭导入应用对话框。 此操作会返回至[客户端应用对话框](#client-app-dialog)。
+
+#### <a name="create-client-application-dialog"></a>创建客户端应用程序对话框
+
+在客户端应用对话框中单击“创建”时，会打开创建客户端应用程序对话框。 此页会自动在 Azure AD 中创建本机应用。 指定下列信息：
+- **应用程序名称**：应用的友好名称。
+- **回复 URL**：Configuration Manager 不使用此值，但是 Azure AD 需要它。 默认值为 https://ConfigMgrService。 
+
+单击“登录”以进行 Azure 管理用户的身份验证。 Configuration Manager 不保存这些凭据。 此角色不需要 Configuration Manager 中的权限，其帐户也不需要与运行 Azure 服务向导的帐户相同。 成功完成 Azure 身份验证后，该页面会显示 Azure AD 租户名称以供参考。 
+
+单击“确定”以在 Azure AD 中创建本机应用，并关闭创建客户端应用程序对话框。 此操作会返回至[客户端应用对话框](#client-app-dialog)。
 
 
-    **本机客户端应用：**浏览并打开“客户端应用”窗口。  
-     在“客户端应用”窗口中，选择要使用的客户端应用，然后单击“确定”。
+## <a name="configuration-or-discovery"></a>配置或发现
 
-     如果没有可用的客户端应用，请使用以下操作之一：
-     - **创建**：若要创建新的客户端应用，请单击“创建”。 接下来，提供应用的友好名称和重定向 URL。
+在应用页指定 Web 应用和本机应用后，Azure 服务向导会根据要连接的服务转至“配置”或“发现”页。 此页的详细信息因不同的服务而异。 有关详细信息，请参阅以下文章之一：  
 
-         若要继续，现在必须使用 Azure AD 凭据登录以在 Azure 中完成 Web 应用的创建。 用于登录 Azure 的帐户不必与运行 Azure 服务向导的帐户相同。 登录 Azure 后，Configuration Manager 在 Azure AD 中为用户创建 Native Client 应用，包括客户端 ID 和密钥。 之后，可在 [Azure 门户](https://portal.azure.com)中查看这些内容。 
+-   **云管理**服务，**发现**页：[配置 Azure AD 用户发现](/sccm/core/servers/deploy/configure/configure-discovery-methods#azureaadisc)  
 
-     - 导入：使用 Azure 订阅中已存在的客户端应用。 为应用和客户端 ID 提供友好名称。 然后，单击“确定”继续。
+-   **OMS 连接器**服务，**配置**页：[配置到 OMS 的连接](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite#use-the-azure-services-wizard-to-configure-the-connection-to-oms)  
 
-  <!--  MOVE THIS AND STEP 6 TO configure Azure AD User Discover  content
-       [!TIP]  
-     When you use Import, the account you use to run the wizard must have the *Read directory data* application permission in the Azure portal. This is required to set the correct permissions for the App. When you use Create, Configuration Manager creates the app with the correct permissions. However, you still must give consent to the application in the Azure portal.   -->
+-   **升级准备情况连接器**服务，**配置**页：[使用 Azure 向导创建连接](/sccm/core/clients/manage/upgrade/upgrade-analytics#use-the-azure-wizard-to-create-the-connection)  
+
+-   **适用于企业的 Microsoft Store**服务，**配置**页：[设置适用于企业的 Microsoft Store 同步](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business#for-configuration-manager-version-1706-and-later)  
 
 
-6.  （仅在配置“云管理”服务时）在向导的“发现”页上，单击“启用 Azure Active Directory 用户发现”，然后单击“设置”。
-在“Azure AD 用户发现设置”对话框中，配置出现发现的时间计划。 此外，还可以启用增量发现，用于仅查看 Azure AD 中新增或更改的帐户。 详细了解 [Azure AD 用户发现](/sccm/core/servers/deploy/configure/about-discovery-methods#azureaddisc)。
+最后，通过“摘要”页、“进度”页和“完成”页完成 Azure 服务向导。 你已在 Configuration Manager 中完成一项 Azure 服务的配置。 重复执行此过程以配置其他 Azure 服务。
 
-7.  完成向导。
-
-此时，你已在 Configuration Manager 中完成一项 Azure 服务的配置。 可以重复执行此过程以配置其他 Azure 服务。
 
 ## <a name="view-the-configuration-of-an-azure-service"></a>查看 Azure 服务的配置
-可以查看已配置进行使用的 Azure 服务的属性。
+可以查看已配置进行使用的 Azure 服务的属性。 在 Configuration Manager 控制台中，转到“管理”工作区，展开“云服务”，然后选择“Azure 服务”。 选择想要查看或编辑的服务，然后单击“属性”。
 
-在控制台中，转到“管理” > “概述” > “云服务” > “Azure 服务”。 接下来，选择你想要查看或编辑的服务，然后单击“属性”。
+如果选择服务并单击功能区中的“删除”，则会删除 Configuration Manager 中的连接。 这不会从 Azure AD 删除该应用。 请你的 Azure 管理员删除不再需要的应用。 或运行 Azure 服务向导以导入应用。<!--483440-->
+
+
+## <a name="cloud-management-data-flow"></a>云管理数据流
+
+下图是一个概念性数据流，展示 Configuration Manager、Azure AD 与连接的云服务之间的交互。 此特定示例使用云管理服务，包括 Windows 10 客户端、服务器应用和客户端应用。 其他服务的流与之类似。
+
+![Configuration Manager 与 Azure AD 和云管理的数据流关系图](media/aad-auth.png)
+
+1.  Configuration Manager 管理员在 Azure AD 中导入或创建客户端应用和服务器应用。  
+
+2.  Configuration Manager Azure AD 用户发现方法运行。 站点使用 Azure AD 服务器应用令牌以向 Microsoft Graph 查询用户对象。  
+
+3.  站点存储关于用户对象的数据。 有关详细信息，请参阅 [Azure AD 用户发现](/sccm/core/servers/deploy/configure/about-discovery-methods#azureaddisc)。  
+
+4.  Configuration Manager 客户端请求 Azure AD 用户令牌。 客户端使用 Azure AD 客户端应用的应用程序 ID 发出声明，且将服务器应用作为受众。 有关详细信息，请参阅 [Azure AD 安全令牌中的声明](/azure/active-directory/develop/active-directory-authentication-scenarios#claims-in-azure-ad-security-tokens)。  
+
+5.  客户端通过向云管理网关和/或本地启用了 HTTPS 的管理点提供 Azure AD 令牌向站点进行身份验证。  
+
+

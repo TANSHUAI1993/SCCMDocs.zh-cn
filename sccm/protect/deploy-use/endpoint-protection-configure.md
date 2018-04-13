@@ -1,31 +1,32 @@
 ---
-title: "配置 Endpoint Protection"
+title: 配置 Endpoint Protection
 titleSuffix: Configuration Manager
-description: "了解如何将 Configuration Manager 设置为更新和分发 Windows Defender 的恶意软件定义。"
+description: 了解如何将 Configuration Manager 设置为更新和分发 Windows Defender 的恶意软件定义。
 ms.custom: na
-ms.date: 02/14/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: e63f2394-6eb1-4a33-bec5-8377fc62a34e
-caps.latest.revision: "21"
-author: NathBarn
-ms.author: nathbarn
-manager: angrobe
-ms.openlocfilehash: 5f005e7cd9c396fcf7e02aafefcb34c37ddab901
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+caps.latest.revision: 21
+author: mestew
+ms.author: mstewart
+manager: dougeby
+ms.openlocfilehash: 9e54b433224b86650178b4df0cd6d0f2ab827b6c
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="configure-endpoint-protection"></a>配置 Endpoint Protection
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-必须先执行本主题中详细介绍的配置步骤，然后才能使用 Endpoint Protection 管理 Configuration Manager 客户端计算机上的安全和恶意软件。  
+必须先执行本文详细介绍的配置步骤，然后才能使用 Endpoint Protection 管理 Configuration Manager 客户端计算机上的安全性和恶意软件。  
 
 ## <a name="how-to-configure-endpoint-protection-in-configuration-manager"></a>如何在 Configuration Manager 中配置 Endpoint Protection  
  Configuration Manager 中的 Endpoint Protection 具有外部依赖关系和产品内依赖关系。  
@@ -34,7 +35,8 @@ ms.lasthandoff: 10/12/2017
  使用下表来了解有关如何配置 Endpoint Protection 的步骤、详情及更多信息。  
 
 > [!IMPORTANT]  
->  如果管理 Windows 10 计算机的 Endpoint Protection，则必须配置 Configuration Manager 以更新和分发 Windows Defender 的恶意软件定义。 虽然 Windows 10 中包含了 Windows Defender，但仍然必须安装 SCEPInstall，并且仍然需要自定义 Endpoint Protection 的客户端设置（下面的**步骤 5**）  
+>  如果管理 Windows 10 计算机的 Endpoint Protection，则必须配置 Configuration Manager 以更新和分发 Windows Defender 的恶意软件定义。 虽然 Windows 10 中包含了 Windows Defender，但仍然必须安装 SCEPInstall，并且仍然需要自定义 Endpoint Protection 的客户端设置（下面的**步骤 5**） </br> </br>
+> 从 Configuration Manager 1802 开始，Windows 10 设备无需安装 Endpoint Protection 代理 (SCEPInstall)。 如果已在 Windows 10 设备上安装该代理，Configuration Manager 也不会将其删除。 管理员可在运行最低 1802 客户端版本的 Windows 10 设备上删除 Endpoint Protection 代理。 SCEPInstall.exe 可能仍然存在于某些计算机上的 C:\Windows\ccmsetup 中，但不应在新客户端安装中下载它。 Endpoint Protection 的自定义客户端设置（下面的**步骤 5**）仍然是必需的。 <!--503654-->
 
 |步骤|详细信息|  
 |-----------|-------------|  

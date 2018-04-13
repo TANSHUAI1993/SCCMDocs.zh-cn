@@ -1,25 +1,26 @@
 ---
-title: "配置 Endpoint Protection 客户端"
+title: 配置 Endpoint Protection 客户端
 titleSuffix: Configuration Manager
-description: "了解如何配置 Endpoint Protection 的自定义客户端设置，从而将其部署到层次结构中的计算机集合。"
+description: 了解如何配置 Endpoint Protection 的自定义客户端设置，从而将其部署到层次结构中的计算机集合。
 ms.custom: na
-ms.date: 02/14/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: e63f2394-6eb1-4a33-bec5-8377fc62a34e
-caps.latest.revision: "21"
-author: NathBarn
-ms.author: nathbarn
-manager: angrobe
-ms.openlocfilehash: de8f7411219446420a8c8bca00799d8d7d18fd2f
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+caps.latest.revision: 21
+author: mestew
+ms.author: mstewart
+manager: dougeby
+ms.openlocfilehash: 22c56bac25cc6e3129f2e8478bbae9fa8782de9f
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="configure-custom-client-settings-for-endpoint-protection"></a>为 Endpoint Protection 配置自定义客户端设置
 
@@ -28,11 +29,11 @@ ms.lasthandoff: 10/12/2017
 此过程为 Endpoint Protection 配置自定义客户端设置，使其可部署到层次结构中的计算机集合。
 
 > [!IMPORTANT]
->  除非你确信要将这些设置应用于层次结构中的所有计算机，否则请不要配置默认 Endpoint Protection 客户端设置。
+>  除非确定要将这些设置应用于层次结构中的所有计算机，否则请不要配置默认 Endpoint Protection 客户端设置。 
 
 ## <a name="to-enable-endpoint-protection-and-configure-custom-client-settings"></a>若要启用 Endpoint Protection 并配置自定义客户端设置
 
-1.  在 Configuration Manager 控制台中，单击“管理” 。
+1.  在 Configuration Manager 控制台中，单击“管理”。
 
 2.  在“管理”  工作区中，单击“客户端设置” 。
 
@@ -56,28 +57,30 @@ ms.lasthandoff: 10/12/2017
 ## <a name="how-to-provision-the-endpoint-protection-client-in-a-disk-image-in-configuration-manager"></a>如何在 Configuration Manager 中设置磁盘映像中的 Endpoint Protection 客户端
 你可以将 Endpoint Protection 客户端安装在打算用作 Configuration Manager 操作系统部署的磁盘映像源的计算机上。 此计算机通常称为引用计算机。 创建操作系统的映像之后，可以随后使用 Configuration Manager 操作系统部署将可能包含软件包（包括 Endpoint Protection）的映像部署到客户端计算机。
 
-本主题介绍了在引用计算机上安装和配置 Endpoint Protection 客户端的相关步骤
+本文介绍了在引用计算机上安装和配置 Endpoint Protection 客户端的相关步骤
 
 ### <a name="prerequisites-for-installing-the-endpoint-protection-client-on-the-reference-computer"></a>在引用计算机上安装 Endpoint Protection 客户端的先决条件
 下面的列表包含在引用计算机上安装 Endpoint Protection 客户端软件的必需先决条件。
 
--   必须具有对 Endpoint Protection 客户端安装包 **scepinstall.exe** 的访问权限。 此包位于站点服务器上 System Center Configuration Manager 安装文件夹的“客户端”文件夹中。
+-   必须具有对 Endpoint Protection 客户端安装包 **scepinstall.exe** 的访问权限。 此包位于站点服务器上 System Center Configuration Manager 安装文件夹的“客户端”文件夹中。 Windows 10 和 Windows Server 2016 已安装了 Windows Defender。 
 
 -   若要确保使用机构中所需的配置部署 Endpoint Protection 客户端，请创建一个反恶意软件策略，然后导出该策略。 可以随后指定要在手动安装 Endpoint Protection 客户端时使用的反恶意软件策略。 有关详细信息，请参阅[如何在 System Center Configuration Manager 中为 Endpoint Protection 创建和部署反恶意软件策略](endpoint-antimalware-policies.md)。
 
    > [!NOTE]
-   >  无法导出“默认客户端反恶意软件策略”  。
+   >  无法导出“默认客户端反恶意软件策略”。
 
 -   如果要使用最新的定义安装 Endpoint Protection 客户端，必须从 [Microsoft 恶意软件防护中心](http://go.microsoft.com/fwlink/?LinkID=200965)下载这些定义。
 
+>[!NOTE]
+> 从 Configuration Manager 1802 开始，Windows 10 设备无需安装 Endpoint Protection 代理 (SCEPInstall)。 如果已在 Windows 10 设备上安装该代理，Configuration Manager 也不会将其删除。 管理员可在运行最低 1802 客户端版本的 Windows 10 设备上删除 Endpoint Protection 代理。 SCEPInstall.exe 可能仍然存在于某些计算机上的 C:\Windows\ccmsetup 中，但不应在新客户端安装中下载它。 <!--503654-->
 ### <a name="how-to-install-the-endpoint-protection-client-software-on-the-reference-computer"></a>如何在引用计算机上安装 Endpoint Protection 客户端软件
-可以通过命令提示符以本地方式在引用计算机上安装 Endpoint Protection 客户端。 为此，你必须首先获取安装文件“scepinstall.exe” 。 你也可以使用预先配置的反恶意软件策略或以前导出的反恶意软件策略来安装客户端。
+可以通过命令提示符以本地方式在引用计算机上安装 Endpoint Protection 客户端。 为此，你必须首先获取安装文件“scepinstall.exe” 。 还可使用预先配置的或先前导出的反恶意软件策略来安装客户端。
 
 ## <a name="to-install-the-endpoint-protection-client-from-a-command-prompt"></a>通过命令提示符安装 Endpoint Protection 客户端
 
 1.  将 **scepinstall.exe** 从 System Center Configuration Manager 安装媒体上的“Client”文件夹复制到想要安装 Endpoint Protection 客户端软件的计算机上。
 
-2.  使用管理员权限打开命令提示符，导航到“scepinstall.exe”  所在的文件夹，然后运行下列命令，同时添加所需的任何其他命令行属性：
+2.  使用管理员特权打开命令提示符，导航到 scepinstall.exe 所在的文件夹，然后运行以下命令，添加所需的任何其他命令行属性：
 
    ```
    scepinstall.exe
@@ -85,7 +88,7 @@ ms.lasthandoff: 10/12/2017
 
     你可以指定下列命令行属性之一：
 
-   |属性|描述|
+   |属性|说明|
    |--------------|-----------------|
    |/s|指定将执行无提示安装。|
    |/q|指定将执行安装程序文件的无提示提取。|
@@ -99,7 +102,7 @@ ms.lasthandoff: 10/12/2017
 4.  如果下载了最新的更新定义包，请将该包复制到客户端计算机，然后双击该定义包进行安装。
 
    > [!NOTE]
-   >  Endpoint Protection 客户端安装完成后，客户端将自动执行定义更新检查。 如果此更新检查成功，则你不必手动安装最新的定义更新包。
+   >  Endpoint Protection 客户端安装完成后，客户端将自动执行定义更新检查。 如果此更新检查成功，则无需手动安装最新的定义更新包。
 
 ## <a name="to-install-the-client-software-with-an-antimalware-policy-from-the-command-prompt"></a>通过命令提示符使用反恶意软件策略安装客户端软件
 
@@ -116,18 +119,18 @@ ms.lasthandoff: 10/12/2017
 4.  如果下载了最新的定义包，请将该包复制到客户端计算机，然后双击该定义包进行安装。
 
    > [!NOTE]
-   >  Endpoint Protection 客户端安装完成后，客户端将自动执行定义更新检查。 如果此更新检查成功，则你不必手动安装最新的定义更新包。
+   >  Endpoint Protection 客户端安装完成后，客户端将自动执行定义更新检查。 如果此更新检查成功，则无需手动安装最新的定义更新包。
 
 ## <a name="verify-that-the-endpoint-protection-client-is-installed-correctly"></a>验证是否正确安装了 Endpoint Protection 客户端
 在引用计算机上安装 Endpoint Protection 客户端之后，请验证该客户端是否正常工作。
 
 ### <a name="to-verify-that-the-endpoint-protection-client-is-installed-correctly"></a>验证是否正确安装了 Endpoint Protection 客户端
 
-1.  在引用计算机上，从 Windows 通知区域中打开“System Center Endpoint Protection” 。
+1.  在引用计算机上，从 Windows 通知区域打开“System Center Endpoint Protection”。
 
 2.  在“System Center Endpoint Protection”对话框的“开始”选项卡上，验证“实时保护” 是否设置为“启用” 。
 
-3.  验证是否为“病毒和间谍软件定义”  显示了“最新” 。
+3.  验证“病毒和间谍软件定义”是否显示“最新”。
 
 4.  为了确保引用计算机已针对映像做好准备，请在“扫描选项” 下选择“完全” ，然后单击“立即扫描” 。
 
@@ -150,7 +153,7 @@ ms.lasthandoff: 10/12/2017
    ```
 
    > [!IMPORTANT]
-   >  以此方式运行注册表编辑器时请小心；PsExec.exe 中的 –s 选项使用 LocalSystem 权限运行注册表编辑器。
+   >  以此方式运行注册表编辑器时请小心；PsExec.exe 中的 –s 选项使用 LocalSystem 特权运行注册表编辑器。
 
 4.  在注册表编辑器中，导航到下列每个注册表项，并将其删除。
 

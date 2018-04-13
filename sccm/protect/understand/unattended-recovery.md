@@ -1,36 +1,39 @@
 ---
-title: "无人参与的恢复"
+title: 无人参与的恢复
 titleSuffix: Configuration Manager
-description: "使用脚本恢复 System Center Configuration Manager 中的站点。"
+description: 使用脚本恢复 System Center Configuration Manager 中的站点。
 ms.custom: na
-ms.date: 6/5/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 828c31d1-3d70-4412-b1a8-c92e7e504d39
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mestew
 ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: be561de1fd14245e3cf52148683611a307484d3d
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+manager: dougeby
+ms.openlocfilehash: fc6325d00e048fbbf54d740a89f78070fac6b0cb
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="unattended-site-recovery-for-configuration-manager"></a>Configuration Manager 的无人参与站点恢复   
 
-适用于：System Center Configuration Manager (Current Branch) 若要对 Configuration Manager 管理中心站点或主站点执行[无人参与恢复](/sccm/protect/understand/recover-sites#site-recovery-procedures)，可以创建无人参与安装脚本，并结合使用安装程序和 /script 命令选项。 此脚本提供的信息的类型与安装向导提示输入的信息的类型相同，不同的是没有默认设置。 必须为适用于你要使用的恢复类型的安装密钥指定所有值。
+*适用范围：System Center Configuration Manager (Current Branch)*
 
- 要使用 /script 安装程序命令行选项，你必须创建一个初始化文件并在 /script 安装程序命令行选项后面指定初始化文件名。 只要文件的名称具有 .ini 文件扩展名，文件的名称并不重要。 如果从命令行引用安装程序初始化文件，则必须提供文件的完整路径。 例如，安装程序初始化文件的名称为 setup.ini，并且此文件存储在 C:\setup 文件夹中，则命令行应为：
+ 要对 Configuration Manager 管理中心站点或主站点执行[无人参与恢复](/sccm/protect/understand/recover-sites#site-recovery-procedures)，可以创建一个无人参与安装脚本并将安装程序与 /script 命令选项一起使用。 此脚本提供的信息的类型与安装向导提示输入的信息的类型相同，不同的是没有默认设置。 必须为适用于你要使用的恢复类型的安装密钥指定所有值。
 
- **setup /script c:\setup\setup.ini**。
+ 若要使用 /script 安装程序命令行选项，必须创建一个初始化文件。 然后根据此 /script 选项指定此文件的名称。 只要文件的名称具有 .ini 文件扩展名，文件的名称并不重要。 如果从命令行引用安装程序初始化文件，则必须提供文件的完整路径。 例如，安装程序初始化文件的名称为 setup.ini，并且此文件存储在 C:\setup 文件夹中，则命令行应为：
+
+ `setup /script c:\setup\setup.ini`
 
 > [!IMPORTANT]  
->  你必须具有管理员权限才能运行安装程序。 使用无人参与脚本运行安装程序时，请使用“以管理员身份运行” 在管理员上下文中启动命令提示符。
+>  必须具有管理员权限才能运行安装程序。 使用无人参与脚本运行安装程序时，请使用“以管理员身份运行”在管理员上下文中启动命令提示符。
 
  脚本包含部分名称、项名称和值。 所需部分项名称因你正在为其编写脚本的恢复类型而异。 部分内项的顺序和文件中部分的顺序并不重要。 项不区分大小写。 当你为项提供值时，项名称后面必须跟一个等号 (=) 以及该项的值。
 
@@ -62,7 +65,7 @@ ms.lasthandoff: 12/04/2017
          1 = 恢复站点服务器和 SQL Server。   
          2 = 仅恢复站点服务器。  
          4 = 仅恢复 SQL Server。
-    -   **详细信息：** 指定安装程序是恢复站点服务器、SQL Server 还是两者都恢复。 设置 ServerRecoveryOptions 设置的以下值时需要关联的项：  
+    -   **详细信息：**指定安装程序是恢复站点服务器、SQL Server 还是两者都恢复。 设置 ServerRecoveryOptions 设置的以下值时需要关联的项：  
         -   **值 = 1** 你可以选择为 **SiteServerBackupLocation** 项指定值以使用站点备份来恢复站点。 如果未指定值，则会重新安装站点，而不是从备份集中还原站点。
 
              如果为 **DatabaseRecoveryOptions** 项（用于从备份中还原站点数据库）配置了值 **10** ，则需要 **BackupLocation** 项。
@@ -73,20 +76,20 @@ ms.lasthandoff: 12/04/2017
 
 -   **项名称：** DatabaseRecoveryOptions
 
-    -   **是否必需：** 可能
-    -   **值：** 10、20、40、80  
-         10 = 从备份中还原站点数据库。  
-         20 = 使用已通过另一种方法手动恢复的站点数据库。   
-         40 = 为站点创建新数据库。 没有可用的站点数据库备份时，请使用此选项。 通过其他站点中的复制来恢复全局数据和站点数据。  
-         80 = 跳过数据库恢复。
-    -   **详细信息：** 指定安装程序将如何恢复 SQL Server 中的站点数据库。 当 **ServerRecoveryOptions** 设置的值为 **1** 或 **4**时，需要此项。
+    -   **是否必需：**可能
+    -   **值：**   
+         - **10** = 从备份中还原站点数据库。  
+         - **20** = 使用已通过另一种方法手动恢复的站点数据库。   
+         - **40** = 为站点创建新数据库。 没有可用的站点数据库备份时，请使用此选项。 通过其他站点中的复制来恢复全局数据和站点数据。  
+         - **80** = 跳过数据库恢复。
+    -   **详细信息：**指定安装程序如何恢复 SQL Server 中的站点数据库。 当 **ServerRecoveryOptions** 设置的值为 **1** 或 **4**时，需要此项。
 
 
 -   **项名称：** ReferenceSite  
 
-    -   **是否必需：** 可能
+    -   **是否必需：**可能
     -   **值：**&lt;ReferenceSiteFQDN\>
-    -   **详细信息：** 指定在数据库备份早于更改跟踪保持期或者在没有备份的情况下恢复站点时，管理中心站点用于恢复全局数据的引用主站点。
+    -   **详细信息：**指定引用主站点。 如果数据库备份早于更改跟踪保持期，或者不使用备份来恢复站点，管理中心站点将使用此引用站点来恢复全局数据。
 
          如果未指定引用站点，并且备份早于更改跟踪保持期，则会使用管理中心站点中的还原数据重新初始化所有主站点。
 
@@ -103,7 +106,7 @@ ms.lasthandoff: 12/04/2017
 
 -   **项名称：** BackupLocation
 
-    -   **是否必需：** 可能
+    -   **是否必需：**可能
     -   &lt;PathToSiteDatabaseBackupSet\>
     -   **详细信息：** 指定站点数据库备份集的路径。 如果为 **ServerRecoveryOptions** 项配置了值 **1** 或 **4** ，并为 **DatabaseRecoveryOptions** 项配置了值 **10** ，则需要 **BackupLocation** 项。
 
@@ -113,8 +116,8 @@ ms.lasthandoff: 12/04/2017
 -   **项名称：** ProductID
     -   **是否必需：** 是
     -   **值：**   
-         xxxxx-xxxxx-xxxxx-xxxxx-xxxxx  
-          评估版
+         - xxxxx-xxxxx-xxxxx-xxxxx-xxxxx  
+         - 评估版
     -   **详细信息：**Configuration Manager 安装产品密钥，包括短划线。 输入 **Eval** 可以安装 Configuration Manager 的评估版。  
 
 
@@ -122,7 +125,7 @@ ms.lasthandoff: 12/04/2017
 
     -   **是否必需：** 是
     -   **值：**&lt;Site code\>
-    -   **详细信息：** 三个字母数字字符，用于唯一标识层次结构中的站点。 你必须指定在发生故障之前站点使用的站点代码。
+    -   **详细信息：**三个字母数字字符，用于唯一标识层次结构中的站点。 指定在发生故障之前站点使用的站点代码。
 
 
 -   **项名称：** SiteName
@@ -144,37 +147,39 @@ ms.lasthandoff: 12/04/2017
 
     -   **是否必需：** 是
     -   **值：**&lt;SMS 提供程序的 FQDN>
-    -   **详细信息：** 指定将托管 SMS 提供程序的服务器的 FQDN。 你必须指定在发生故障之前承载 SMS 提供程序的服务器。
+    -   **详细信息：**指定托管 SMS 提供程序的服务器的 FQDN。 指定在发生故障之前托管 SMS 提供程序的服务器。
 
          你可以在初始安装后为站点配置其他 SMS 提供程序。
 
 -   **项名称：** PrerequisiteComp
 
     -   **是否必需：** 是
-    -   **值：** 0 或 1  
+    -   **值：**0 或 1  
          0 = 下载   
          1 = 已下载
-    -   **详细信息：** 指定安装程序必备文件是否已下载。 例如，如果使用值 0，则安装程序将下载文件。  
+    -   **详细信息：**指定安装程序先决条件文件是否已下载。 例如，如果使用值 0，则安装程序将下载文件。  
 
 
 -   **项名称：** PrerequisitePath
 
     -   **是否必需：** 是
     -   **值：**&lt;*PathToSetupPrerequisiteFiles*>
-    -   **详细信息：** 指定安装程序必备文件的路径。 根据 **PrerequisiteComp** 值，安装程序将使用此路径来存储已下载文件或查找以前下载的文件。
+    -   **详细信息：**指定安装程序先决条件文件的路径。 根据 PrerequisiteComp 值，安装程序将使用此路径来存储已下载的文件或查找以前下载的文件。
 
 -   **项名称：** AdminConsole
 
-    -   **是否必需：** 可能
+    -   **是否必需：**可能
     -   **值：**0 或 1 0 = 不安装   
          1 = 安装
     -   **详细信息：**指定是否安装 Configuration Manager 控制台。 除非 **ServerRecoveryOptions** 设置的值为 **4**，否则此项为必需。
 
 
--   **项名称：** JoinCEIP
+-   **项名称：** JoinCEIP   
+    > [!Note]  
+    > 从 Configuration Manager 版本 1802 开始，从产品中删除了 CEIP 功能。
 
     -   **是否必需：** 是
-    -   **值：** 0 或 1  
+    -   **值：**0 或 1  
          0 = 不加入  
          1 = 加入
     -   **详细信息：** 指定是否加入客户体验改善计划。
@@ -185,23 +190,23 @@ ms.lasthandoff: 12/04/2017
 
     -   **是否必需：** 是
     -   **值：***&lt;SQLServerName\>*
-    -   **详细信息：**运行将托管站点数据库的 SQL Server 的服务器名称或群集实例名称。 你必须指定在发生故障之前承载站点数据库的同一服务器。
+    -   **详细信息：**运行托管站点数据库的 SQL Server 的服务器名称或群集实例名称。 指定在发生故障之前托管站点数据库的同一服务器。
 
 
 -   **项名称：** DatabaseName
 
     -   **是否必需：** 是
     -   **值：**&lt;SiteDatabaseName\> 或 &lt;InstanceName\>\\&lt;SiteDatabaseName\>
-    -   **详细信息：**要创建或用于安装管理中心站点数据库的 SQL Server 数据库的名称。 你必须指定在发生故障之前使用的同一数据库名称。
+    -   **详细信息：**要创建或用于安装管理中心站点数据库的 SQL Server 数据库的名称。 指定在发生故障之前使用的同一数据库名称。
 
         > [!IMPORTANT]  
-        >  如果未使用默认实例，你必须指定实例名称和站点数据库名称。
+        >  如果未使用默认实例，则必须指定实例名称和站点数据库名称。
 
 -   **项名称：**SQLSSBPort
 
-    -   **是否必需：**否
-    -   **值：**&lt;*SSBPortNumber*>
-    -   **详细信息：**指定 SQL Server 使用的 SQL Server Service Broker (SSB) 端口。 通常，SSB 配置为使用 TCP 端口 4022，但也支持其他端口。 你必须指定在发生故障之前使用的相同 SSB 端口。
+    -   **是否必需：** 否
+    -   **值：**&lt;SSBPortNumber>
+    -   **详细信息：** 指定 SQL Server 使用的 SQL Server Service Broker (SSB) 端口。 通常，SSB 配置为使用 TCP 端口 4022，但也支持其他端口。 指定在发生故障之前使用的相同 SSB 端口。
 
 ## <a name="recover-a-primary-site-unattended"></a>在无人参与的情况下恢复主站点
  使用下列信息，配置无人参与的安装程序脚本文件以恢复管理中心站点。
@@ -210,7 +215,7 @@ ms.lasthandoff: 12/04/2017
 
 -   **项名称：** Action
 
-    -   **是否必需：**是
+    -   **是否必需：** 是
     -   **值：**RecoverPrimarySite
     -   **详细信息：**恢复主站点
 
@@ -230,7 +235,7 @@ ms.lasthandoff: 12/04/2017
          1 = 恢复站点服务器和 SQL Server。   
          2 = 仅恢复站点服务器。  
          4 = 仅恢复 SQL Server。
-    -   **详细信息：** 指定安装程序是恢复站点服务器、SQL Server 还是两者都恢复。 设置 ServerRecoveryOptions 设置的以下值时需要关联的项：
+    -   **详细信息：**指定安装程序是恢复站点服务器、SQL Server 还是两者都恢复。 设置 ServerRecoveryOptions 设置的以下值时需要关联的项：
 
         -   **值 = 1** 你可以选择为 **SiteServerBackupLocation** 项指定值以使用站点备份来恢复站点。 如果未指定值，则会重新安装站点，而不是从备份集中还原站点。
 
@@ -242,13 +247,13 @@ ms.lasthandoff: 12/04/2017
 
 -   **项名称：** DatabaseRecoveryOptions
 
-    -   **是否必需：** 可能
-    -   **值：** 10、20、40、80  
-         10 = 从备份中还原站点数据库。  
-         20 = 使用已通过另一种方法手动恢复的站点数据库。     
-         40 = 为站点创建新数据库。 没有可用的站点数据库备份时，请使用此选项。 通过其他站点中的复制来恢复全局数据和站点数据。  
-         80 = 跳过数据库恢复。
-    -   **详细信息：** 指定安装程序将如何恢复 SQL Server 中的站点数据库。 当 **ServerRecoveryOptions** 设置的值为 **1** 或 **4**时，需要此项。
+    -   **是否必需：**可能
+    -   **值：**   
+         - **10** = 从备份中还原站点数据库。  
+         - **20** = 使用已通过另一种方法手动恢复的站点数据库。     
+         - **40** = 为站点创建新数据库。 没有可用的站点数据库备份时，请使用此选项。 通过其他站点中的复制来恢复全局数据和站点数据。  
+         - **80** = 跳过数据库恢复。
+    -   **详细信息：**指定安装程序如何恢复 SQL Server 中的站点数据库。 当 **ServerRecoveryOptions** 设置的值为 **1** 或 **4**时，需要此项。
 
 
 -   **项名称：**SiteServerBackupLocation
@@ -260,7 +265,7 @@ ms.lasthandoff: 12/04/2017
 
 -   **项名称：** BackupLocation
 
-    -   **是否必需：** 可能
+    -   **是否必需：**可能
     -   &lt;PathToSiteDatabaseBackupSet\>
     -   **详细信息：** 指定站点数据库备份集的路径。 如果为 **ServerRecoveryOptions** 项配置了值 **1** 或 **4** ，并为 **DatabaseRecoveryOptions** 项配置了值 **10** ，则需要 **BackupLocation** 项。
 
@@ -270,8 +275,8 @@ ms.lasthandoff: 12/04/2017
 
     -   **是否必需：** 是
     -   **值：**     
-         xxxxx-xxxxx-xxxxx-xxxxx-xxxxx  
-         评估版     
+         - xxxxx-xxxxx-xxxxx-xxxxx-xxxxx  
+         - 评估版     
     -   **详细信息：**Configuration Manager 安装产品密钥，包括短划线。 输入 **Eval** 可以安装 Configuration Manager 的评估版。  
 
 
@@ -279,7 +284,7 @@ ms.lasthandoff: 12/04/2017
 
     -   **是否必需：** 是
     -   **值：**&lt;Site code\>
-    -   **详细信息：** 三个字母数字字符，用于唯一标识层次结构中的站点。 你必须指定在发生故障之前站点使用的站点代码。
+    -   **详细信息：**三个字母数字字符，用于唯一标识层次结构中的站点。 指定在发生故障之前站点使用的站点代码。
 
 
 -   **项名称：** SiteName
@@ -302,24 +307,24 @@ ms.lasthandoff: 12/04/2017
 
     -   **是否必需：** 是
     -   **值：**&lt;SMS 提供程序的 FQDN>
-    -   **详细信息：** 指定将托管 SMS 提供程序的服务器的 FQDN。 你必须指定在发生故障之前承载 SMS 提供程序的服务器。
+    -   **详细信息：**指定托管 SMS 提供程序的服务器的 FQDN。 指定在发生故障之前托管 SMS 提供程序的服务器。
 
          你可以在初始安装后为站点配置其他 SMS 提供程序。
 
 -   **项名称：** PrerequisiteComp
 
     -   **是否必需：** 是
-    -   **值：** 0 或 1    
+    -   **值：**0 或 1    
          0 = 下载   
          1 = 已下载   
-    -   **详细信息：** 指定安装程序必备文件是否已下载。 例如，如果使用值 0，则安装程序将下载文件。
+    -   **详细信息：**指定安装程序先决条件文件是否已下载。 例如，如果使用值 0，则安装程序将下载文件。
 
 
 -   **项名称：** PrerequisitePath
 
     -   **是否必需：** 是
     -   **值：**&lt;*PathToSetupPrerequisiteFiles*>
-    -   **详细信息：** 指定安装程序必备文件的路径。 根据 **PrerequisiteComp** 值，安装程序将使用此路径来存储已下载文件或查找以前下载的文件。
+    -   **详细信息：**指定安装程序先决条件文件的路径。 根据 PrerequisiteComp 值，安装程序将使用此路径来存储已下载的文件或查找以前下载的文件。
 
 
 -   **项名称：** AdminConsole
@@ -330,10 +335,12 @@ ms.lasthandoff: 12/04/2017
          1 = 安装  
     -   **详细信息：**指定是否安装 Configuration Manager 控制台。 除非 **ServerRecoveryOptions** 设置的值为 **4**，否则此项为必需。
 
--   **项名称：** JoinCEIP
+-   **项名称：** JoinCEIP  
+    > [!Note]  
+    > 从 Configuration Manager 版本 1802 开始，从产品中删除了 CEIP 功能。
 
     -   **是否必需：** 是
-    -   **值：** 0 或 1    
+    -   **值：**0 或 1    
          0 = 不加入  
          1 = 加入
     -   **详细信息：** 指定是否加入客户体验改善计划。
@@ -345,31 +352,31 @@ ms.lasthandoff: 12/04/2017
 
     -   **是否必需：** 是
     -   **值：***&lt;SQLServerName\>*
-    -   **详细信息：**运行将托管站点数据库的 SQL Server 的服务器名称或群集实例名称。 你必须指定在发生故障之前承载站点数据库的同一服务器。
+    -   **详细信息：**运行托管站点数据库的 SQL Server 的服务器名称或群集实例名称。 指定在发生故障之前托管站点数据库的同一服务器。
 
 
 -   **项名称：** DatabaseName
 
     -   **是否必需：** 是
     -   **值：**&lt;SiteDatabaseName\> 或 &lt;InstanceName\>\\&lt;SiteDatabaseName\>
-    -   **详细信息：**要创建或用于安装管理中心站点数据库的 SQL Server 数据库的名称。 你必须指定在发生故障之前使用的同一数据库名称。
+    -   **详细信息：**要创建或用于安装管理中心站点数据库的 SQL Server 数据库的名称。 指定在发生故障之前使用的同一数据库名称。
 
         > [!IMPORTANT]    
-        >  如果未使用默认实例，你必须指定实例名称和站点数据库名称。
+        >  如果未使用默认实例，则必须指定实例名称和站点数据库名称。
 
 -   **项名称：**SQLSSBPort
 
-    -   **是否必需：**否
-    -   **值：**&lt;*SSBPortNumber*>
-    -   **详细信息：**指定 SQL Server 使用的 SQL Server Service Broker (SSB) 端口。 通常，SSB 配置为使用 TCP 端口 4022，但也支持其他端口。 你必须指定在发生故障之前使用的相同 SSB 端口。
+    -   **是否必需：** 否
+    -   **值：**&lt;SSBPortNumber>
+    -   **详细信息：** 指定 SQL Server 使用的 SQL Server Service Broker (SSB) 端口。 通常，SSB 配置为使用 TCP 端口 4022，但也支持其他端口。 指定在发生故障之前使用的相同 SSB 端口。
 
 **层次结构扩展选项**
 
--   **项名称：**CCARSiteServer
+-   **项名称：** CCARSiteServer
 
     -   **是否必需：**可能
     -   **值：** &lt;SiteCodeForCentralAdministrationSite>
-    -   **详细信息：**指定主站点加入 Configuration Manager 层次结构时将要附加到的管理中心站点。 如果在发生故障之前主站点已附加到管理中心站点，则此设置为必需。 你必须指定在发生故障之前用于管理中心站点的站点代码。
+    -   **详细信息：**指定主站点加入 Configuration Manager 层次结构时要附加到的管理中心站点。 如果在发生故障之前主站点已附加到管理中心站点，则此设置为必需。 指定在发生故障之前用于管理中心站点的站点代码。
 
 -   **项名称：** CASRetryInterval
 

@@ -1,9 +1,9 @@
 ---
-title: "推荐硬件"
+title: 推荐硬件
 titleSuffix: Configuration Manager
-description: "获取硬件建议，有助于在基本部署以上扩展 System Center Configuration Manager 环境。"
+description: 获取硬件建议，有助于在基本部署以上扩展 System Center Configuration Manager 环境。
 ms.custom: na
-ms.date: 05/04/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5267f0af-34d3-47a0-9ab8-986c41276e6c
-caps.latest.revision: 
-caps.handback.revision: 
+caps.latest.revision: 26
+caps.handback.revision: 0
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 5def3fdef8e9182cb624640fa54ff2eae224e6a1
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 8d0883c7c2a735a2e651d61083d4d45570408ebb
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="recommended-hardware-for-system-center-configuration-manager"></a>用于 System Center Configuration Manager 的推荐硬件
 
@@ -75,7 +75,7 @@ ms.lasthandoff: 12/04/2017
 
 -   将 **WsusPool 队列长度** 增加到 **2000**。  
 
--   将 **WsusPool 专用内存限制** 增加 4 倍，或设置为 **0**（无限制）。  
+-   将 WsusPool 专用内存限制增加 4 倍，或设置为 0（无限制）。  
 
 ###  <a name="bkmk_DiskSpace"></a>站点系统的磁盘空间  
  磁盘分配和配置会影响 Configuration Manager 的性能。 由于每个 Configuration Manager 环境都不同，因此，所实现的值可能会不同于下列指南的值。  
@@ -102,9 +102,9 @@ ms.lasthandoff: 12/04/2017
     > [!NOTE]  
     >  站点有 50,000 个或更多客户端时，请计划使用 4 个或更多临时数据库 .mdf 文件。  
 
--   管理中心站点的临时数据库大小通常比主站点的此大小要小得多。  
+-   管理中心站点的临时数据库大小通常比主站点的临时数据库大小要小得多。  
 
--   辅助站点数据库的大小有下列限制：  
+-   辅助站点数据库有下列大小限制：  
 
     -   SQL Server 2012 Express：10 GB  
 
@@ -120,7 +120,7 @@ ms.lasthandoff: 12/04/2017
 
 -   **磁盘空间：**500 MB 可用磁盘空间，含 5 GB 建议用于 Configuration Manager 客户端缓存。 如果使用自定义设置安装 Configuration Manager 客户端，则需要较少的磁盘空间：  
 
-    -   使用 CCMSetup 命令行属性/skipprereq 避免安装客户端不需要的文件。 例如，如果客户端不使用应用程序目录，则运行 **CCMSetup.exe /skipprereq:silverlight.exe**。  
+    -   使用 CCMSetup 命令行属性/skipprereq 避免安装客户端不需要的文件。 例如，如果客户端不使用应用程序目录，则运行 **CCMSetup.exe /skipprereq:silverlight.exe**。 从 Configuration Manager 1802 开始，将不再自动安装 Silverlight。  
 
     -   使用 Client.msi 属性 SMSCACHESIZE 设置小于默认为 5120 MB 的缓存文件。 最小大小为 1 MB。 例如， **CCMSetup.exe SMSCachesize=2** 创建大小为 2 MB 的缓存。  
 

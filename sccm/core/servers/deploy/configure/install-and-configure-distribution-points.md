@@ -1,31 +1,32 @@
 ---
-title: "管理分发点"
+title: 管理分发点
 titleSuffix: Configuration Manager
-description: "使用分发点以承载部署到设备和用户的内容（文件和软件）。 此处介绍如何安装和配置这些分发点。"
+description: 使用分发点托管部署到设备和用户的内容
 ms.custom: na
-ms.date: 09/18/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aebafaf9-b3d5-4a0f-9ee5-685758c037a1
-caps.latest.revision: "5"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: e7eab46d423ed37bde7ac5f325d6cd8175806302
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+caps.latest.revision: 5
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 1010e339c586922f818e1af1e193abba95dace7b
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="install-and-configure-distribution-points-for-system-center-configuration-manager"></a>为 System Center Configuration Manager 安装和配置分发点
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-安装 System Center Configuration Manager 分发点以承载部署到设备和用户的内容（文件和软件）。 还可以创建分发点组，该组可简化管理分发点以及将内容分发到分发点的方式。  
+安装 Configuration Manager 分发点以托骨干部署到设备和用户的内容文件。 创建分发点组以简化管理分发点和将内容分发到分发点的方式。  
 
  安装新的分发点（使用安装向导）或管理现有分发点属性（通过编辑分发点属性）时，可配置大多数分发点设置。 有几个设置仅安装或编辑时才可用，但无法同时可用：  
 
@@ -46,10 +47,10 @@ ms.lasthandoff: 12/04/2017
     -   **为分发点的数据传输配置计划**  
 
 ##  <a name="bkmk_install"></a>安装分发点  
-你必须将站点系统服务器指定为分发点，然后才能将内容提供给客户端计算机使用。 必须还将分发点分配给至少一个[边界组](/sccm/core/servers/deploy/configure/boundary-groups#distribution-points)，然后本地客户端计算机才能将此分发点用作内容源位置。 你可以将分发点站点角色添加到新站点系统服务器，或将站点角色添加到现有站点系统服务器。
+将站点系统服务器指定为分发点，然后才能将内容提供给客户端计算机使用。 必须将分发点分配给至少一个[边界组](/sccm/core/servers/deploy/configure/boundary-groups#distribution-points)，然后本地客户端计算机才能将此分发点用作内容源位置。 将分发点站点角色添加到新站点系统服务器，或将站点角色添加到现有站点系统服务器。
 
 
- 安装新的分发点时，可使用安装向导来帮助完成可用设置的配置。 开始之前，请注意以下问题：  
+ 安装新的分发点时，可使用安装向导来帮助完成可用设置的配置。 开始之前，请注意以下先决条件：  
 
 -   你必须拥有下列安全权限才能创建和配置分发点：  
 
@@ -61,7 +62,7 @@ ms.lasthandoff: 12/04/2017
 
     -   “站点” 对象的“管理操作系统部署证书”  权限  
 
--   承载分发点的服务器上必须安装 Internet Information Services (IIS)。 安装站点系统角色时，Configuration Manager 会为用户安装并配置 IIS。  
+-   在托管分发点的服务器上安装 Internet Information Services (IIS)。 安装站点系统角色时，Configuration Manager 会为用户安装并配置 IIS。  
 
 使用以下基本步骤安装或更改分发点。 有关可用配置选项的详细信息，请参阅本主题的[配置分发点](#bkmk_configs)部分。  
 
@@ -77,7 +78,7 @@ ms.lasthandoff: 12/04/2017
 
          在“主页”选项卡上的“服务器”组中，选择“添加站点系统角色”。 添加站点系统角色向导将会打开。  
 
-3.  在“常规”  页上，指定站点系统服务器的一般设置。 向现有站点系统服务器添加分发点时，请验证以前配置的值。  
+3.  在“常规”页上，指定站点系统服务器的一般设置。 向现有站点系统服务器添加分发点时，请验证以前配置的值。  
 
 4.  在“系统角色选择”页上，从可用角色列表中选择“分发点”，然后选择“下一步”。  
 
@@ -161,6 +162,42 @@ ms.lasthandoff: 12/04/2017
 
 3.  在“可用分发点组”中，选择要将所选分发点添加为其成员的分发点组，然后选择“确定”。  
 
+
+
+## <a name="reassign-a-distribution-point"></a>重新分配分发点
+<!-- 1306937 -->
+许多客户都有大型的 Configuration Manager 基础结构，并且正在减少主站点或辅助站点来简化其环境。 他们仍需要在分支机构位置保留分发点，以向托管客户提供内容。 这些分发点通常包含多个 TB 或更多的内容。 将此内容分发到这些远程服务器所需的时间和网络带宽成本高昂。 
+
+从 1802 版开始，此功能允许向其他主站点重新分配分发点，而无需重新分发内容。 此操作可更新站点系统分配，同时在服务器上保留所有内容。 如果需要重新分配多个分发点，请首先对一个分发点执行此操作，然后在其他服务器上继续，一次只能操作一个服务器。
+
+> [!IMPORTANT]
+> 目标服务器只能托管分发点角色。 如果站点系统服务器承载其他 Configuration Manager 服务器角色，例如状态迁移点，则无法重新分配分发点。 无法重新分配云分发点。 
+
+在重新分配分发点之前，将目标站点服务器的计算机帐户添加到目标分发点服务器上的本地管理员组。 
+
+请按照下列步骤操作以重新分配分发点：
+1. 在 Configuration Manager 控制台中，连接到管理中心站点。 
+2. 转到“管理”工作区，并选择“分发点”节点。
+3. 右键单击目标分发点，然后选择“重新分配分发点”。 
+4. 选择想要向其重新分配分发点的目标站点服务器和站点代码。 
+
+像添加新角色时那样监视重新分配。 最简单的方法是在几分钟后刷新控制台视图。 将站点代码列添加到视图中。 Configuration Manager 重新分配服务器时会更改此值。 如果尝试在刷新控制台视图之前在目标服务器上执行另一项操作，会出现“找不到对象”错误。 在服务器上开始任何其他操作之前，请确保此过程完成并刷新控制台视图。
+
+重新分配分发点后，请刷新服务器的证书。 新的站点服务器需要使用其公钥重新加密此证书，并将其存储在站点数据库中。 有关详细信息，请参阅分发点属性的“[常规](#general)”选项卡上的“创建自签名证书或导入分发点的公钥基础结构 (PKI) 客户端证书”设置。 
+- 对于 PKI 证书，无需创建新证书。 导入相同的 .PFX，并输入密码。
+- 对于自签名证书，请调整到期日期或时间以更新。
+如果不刷新证书，分发点仍提供内容，但以下功能会失败：
+    - 内容验证消息（distmgr.log 显示它无法解密该证书）
+    - 适用于客户端的 PXE 支持 
+
+### <a name="tips"></a>提示
+- 从管理中心站点执行此操作。 此操作有助于复制到主站点。
+- 请勿在将内容分发到目标服务器后，再尝试重新分配它。 在重新分配过程中，正在进行的分发内容任务可能会失败，但它会按正常重试。
+- 如果服务器也是 Configuration Manager 客户端，请确保也将该客户端重新分配到新的主站点。 此步骤对于使用客户端组件下载内容的拉取分发点尤为重要。
+- 此过程从旧站点的默认边界组中删除分发点。 如有必要，则需要手动将其添加到新站点的默认边界组。 所有其他边界组分配保持不变。
+
+
+
 ##  <a name="bkmk_configs"></a>配置分发点  
  各分发点支持各种不同的配置。 但是，并非所有分发点类型都支持所有配置。 例如，基于云的分发点不支持为 PXE 或多播启用的内容部署。 可在以下主题中找到有关特定限制的信息：  
 
@@ -207,7 +244,7 @@ ms.lasthandoff: 12/04/2017
 
     -   计划的使用必须包括客户端身份验证。  
 
-    -   必须能够导出私钥。  
+    -   运行导出私钥。  
 
     > [!TIP]  
     >  没有针对证书使用者或使用者备用名称 (SAN) 的特定要求，并且你可以为多个分发点使用同一证书。  
@@ -248,13 +285,18 @@ ms.lasthandoff: 12/04/2017
 -   使用箭头按钮调整请求分发点在尝试传输内容时与源分发点联系的顺序。 将首先联系具有最低值的分发点。  
 
 ### <a name="pxe"></a>PXE  
-指定是否在分发点上启用 PXE。 启用 PXE 时，Configuration Manager 将在服务器上安装 Windows 部署服务（如果需要）。 Windows 部署服务是执行 PXE 启动以安装操作系统的服务。 完成创建分发点向导后，Configuration Manager 将在 Windows 部署服务中安装使用 PXE 启动功能的提供程序。  
+指定是否在分发点上启用 PXE。 启用 PXE 时，Configuration Manager 会在服务器上安装 Windows 部署服务 (WDS)（如果需要）。 WDS 是执行 PXE 启动以安装操作系统的服务。 完成创建分发点向导后，Configuration Manager 将在使用 PXE 启动功能的 WDS 中安装提供程序。 
 
 在选择“为客户端启用 PXE 支持”时，请配置下列设置：  
 
--   **允许此分发点响应传入的 PXE 请求**：指定是否启用 Windows 部署服务以使其响应 PXE 服务请求。 使用此复选框来启用和禁用服务，而不从分发点中删除 PXE 功能。  
+ > [!Note]  
+ > 在“查看 PXE 的所需端口”对话框中，单击“是”，以确认你想要启用 PXE。 Configuration Manager 将在 Windows 防火墙上自动配置默认端口。 如果你使用其他防火墙，则必须手动配置这些端口。  
+ >   
+ > 如果在同一台服务器上安装 WDS 和 DHCP，则必须配置 WDS 以侦听不同端口。 默认情况下，DHCP 侦听同一端口。 有关详细信息，请参阅 [WDS 和 DHCP 在同一个服务器上时的注意事项](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment#BKMK_WDSandDHCP)。  
 
--   **启用未知计算机支持**：指定是否启用对 Configuration Manager 不管理的计算机的支持。  
+-   **允许此分发点响应传入的 PXE 请求**：指定是否启用 WDS 以响应 PXE 服务请求。 使用此复选框来启用和禁用服务，而不从分发点中删除 PXE 功能。  
+
+-   **启用未知计算机支持**：指定是否启用对 Configuration Manager 不管理的计算机的支持。 
 
 -   **当计算机使用 PXE 时要求密码**：为了提高 PXE 部署的安全性，请指定强密码。  
 
@@ -279,9 +321,9 @@ ms.lasthandoff: 12/04/2017
 > 2. 与 Configuration Manager 基础结构交互，以确定要采取的适当部署操作。  
 
 ### <a name="multicast"></a>多播  
-指定是否在分发点上启用多播。 启用多播时，Configuration Manager 会在服务器上安装 Windows 部署服务（如有需要）。  
+指定是否在分发点上启用多播。 启用多播时，Configuration Manager 会在服务器上安装 Windows 部署服务 (WDS)（如有需要）。  
 
-如果选中“启用多播以将数据同时发送到多个客户端”复选框，请配置下列设置：  
+如果启用多播以将数据同时发送到多个客户端，请配置下列设置：  
 
 -   **多播连接帐户**：指定在为多播配置 Configuration Manager 数据库连接时使用的帐户。  
 
@@ -307,6 +349,8 @@ ms.lasthandoff: 12/04/2017
 
 > [!NOTE]  
 >  多播部署将数据同时发送到多个 Configuration Manager 客户端，而不是通过单独连接向每个客户端发送数据副本，从而节省网络带宽。 有关使用操作系统多播的详细信息，请参阅[使用多播与 System Center Configuration Manager 一起通过网络部署 Windows](../../../../osd/deploy-use/use-multicast-to-deploy-windows-over-the-network.md)。  
+
+
 
 ### <a name="group-relationships"></a>组关系  
 
@@ -343,11 +387,7 @@ ms.lasthandoff: 12/04/2017
 ### <a name="boundary-group"></a>边界组  
 管理为其分配此分发点的边界组。 计划将分发点添加到至少一个边界组。 在内容部署过程中，客户端必须位于与分发点关联的边界组中，才能将此分发点用作内容源位置。
 
-此外：
-
-- 对于 1610 前的版本，可选中“允许客户端使用此站点系统作为内容的回退源位置”复选框，以便在没有其他分发点可用时让这些边界组外部的客户端回退并使用分发点作为内容的源位置。 有关边界组的详细信息，请参阅 [1511、1602 和 1606 版的边界组](/sccm/core/servers/deploy/configure/boundary-groups-for-1511-1602-and-1606)。 有关首选分发点的信息，请参阅 [System Center Configuration Manager 中内容管理的基本概念](../../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)。
-
-- 借助 1610 或更高版本，可配置边界组关系，定义客户端为查找内容而回退的时间以及可回退到的边界组。 有关详细信息，请参阅[边界组](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups)。
+配置边界组关系，定义客户端为查找内容而回退的时间以及可回退到的边界组。 有关详细信息，请参阅[边界组](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups)。
 
 
 ### <a name="schedule"></a>计划  

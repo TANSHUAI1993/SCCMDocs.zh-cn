@@ -1,20 +1,22 @@
 ---
-title: "System Center Configuration Manager 隐私声明 - 其他信息"
-description: "了解 Microsoft 如何收集和使用来自 System Center Configuration Manager 部署的数据。"
+title: 隐私声明 - 其他信息
+titleSuffix: Configuration Manager
+description: 了解 Microsoft 如何收集和使用来自 System Center Configuration Manager 的数据。
 ms.custom: na
-ms.date: 10/13/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1fcc921f-085f-4b0b-9c53-1e0707211076
-caps.latest.revision: "5"
-caps.handback.revision: "0"
+caps.latest.revision: 5
+caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 translation.priority.ht:
 - cs-cz
 - de-de
@@ -34,11 +36,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.openlocfilehash: 5332d02f4d128516f310a2edff897b4efc5b971b
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+ms.openlocfilehash: eb557a29b1412e136023b3e6caddf358732659e9
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="additional-information-about-privacy-for-system-center-configuration-manager"></a>关于 System Center Configuration Manager 隐私的其他信息
 
@@ -57,18 +59,22 @@ Configuration Manager 仅从站点 SQL Server 数据库收集数据，而不会�
 
 管理员可以通过转到 Configuration Manager 控制台的“使用情况数据”部分更改收集数据的级别。
 
-有关详细信息，请参阅[System Center Configuration Manager 的诊断和使用情况数据](http://go.microsoft.com/fwlink/?LinkID=626566)文章中有关使用情况数据级别和设置的“了解详情”一文。
+有关详细信息，请参阅 [System Center Configuration Manager 的诊断和使用情况数据](https://go.microsoft.com/fwlink/?LinkID=626566)文章中有关使用情况数据级别和设置的“了解详情”一文。
 
 
 ## <a name="customer-experience-improvement-program"></a>客户体验改善计划
+
+> [!Note]  
+> 从 Configuration Manager 版本 1802 开始，从产品中删除了 CEIP 功能。
+
 客户体验改善计划 (CEIP) 从 Configuration Manager 管理控制台中收集有关你的硬件配置以及你使用软件和服务的方式的基本信息，以便确定趋势和使用模式。 CEIP 还收集你遇到的错误的类型和编号、软件和硬件性能以及服务的速度。 我们不会收集你的姓名、地址或其他联系信息。 不从客户端计算机中收集任何 CEIP 数据。
 
 我们使用此信息来提高 Microsoft 软件和服务的质量、可靠性和性能。
 
-有关 CEIP 收集、处理或传输的信息的详情，请参阅 [CEIP 隐私声明](http://go.microsoft.com/fwlink/?LinkID=525211)。
+有关 CEIP 收集、处理或传输的信息的详情，请参阅 [CEIP 隐私声明](https://go.microsoft.com/fwlink/?LinkID=525211)。
 
 ## <a name="operations-management-suite-connector"></a>Operations Management Suite 连接器
-Microsoft Operations Management Suite 连接器可将数据（如集合）从 System Center Configuration Manager 同步到 Microsoft Operations Management Suite。 管理员配置此功能后，Microsoft Azure 订阅 ID 和密钥会存储在 Configuration Manager 数据库中。 Azure Active Directory 客户端密钥和 Microsoft Operations Management Suite 工作区共享的密钥均存储在本地 System Center Configuration Manager 数据库中。 System Center Configuration Manager 和 Microsoft Operations Management Suite 之间的所有通信都使用 HTTPS。 除随机化遥测数据之外，不会向 Microsoft 提供有关集合的任何其他信息。 有关 Microsoft Operations Management Suite 收集的信息的详细信息，请参阅 [Log Analytics 数据安全](http://go.microsoft.com/fwlink/?LinkId=823545)。
+Microsoft Operations Management Suite 连接器可将数据（如集合）从 System Center Configuration Manager 同步到 Microsoft Operations Management Suite。 管理员配置此功能后，Microsoft Azure 订阅 ID 和密钥会存储在 Configuration Manager 数据库中。 Azure Active Directory 客户端密钥和 Microsoft Operations Management Suite 工作区共享的密钥均存储在本地 System Center Configuration Manager 数据库中。 System Center Configuration Manager 和 Microsoft Operations Management Suite 之间的所有通信都使用 HTTPS。 除随机化遥测数据之外，不会向 Microsoft 提供有关集合的任何其他信息。 有关 Microsoft Operations Management Suite 收集的信息的详细信息，请参阅 [Log Analytics 数据安全](https://go.microsoft.com/fwlink/?LinkId=823545)。
 
 ## <a name="asset-intelligence"></a>资产智能
 资产智能使 IT 管理员能够定义、跟踪和主动管理与配置标准的符合性。 对部署以及物理和虚拟应用程序的使用进行计量和报告可帮助组织做出更明智的软件许可业务决策，并保持与许可协议的相容性。 从 Configuration Manager 客户端收集使用数据之后，管理员可以使用不同的功能来查看数据，包括集合、查询和报告。
@@ -96,16 +102,16 @@ Microsoft Cloud Protection Service 报告可用于改进 Microsoft 软件和服�
 
 Microsoft Cloud Protection Service 不会有意收集个人信息。 就算 Microsoft Cloud Protection Service 收集到任何个人信息，Microsoft 也不会使用该信息来识别用户的身份或与用户联系。
 
-有关可在产品文档中找到的收集数据的其他详细信息，请参阅 [System Center Configuration Manager 中的 Endpoint Protection](http://go.microsoft.com/fwlink/?LinkId=823547)。
+有关可在产品文档中找到的收集数据的其他详细信息，请参阅 [System Center Configuration Manager 中的 Endpoint Protection](https://go.microsoft.com/fwlink/?LinkId=823547)。
 
 ## <a name="site-hierarchy--geographical-view-with-bing-maps"></a>站点层次结构 - 包含 Bing 地图的地理视图
 站点层次结构 - 地理视图允许用户使用 Microsoft Bing 地图提供的地图查看 Configuration Manager 物理服务器拓扑。 为了启用此功能，会将你提供的位置信息从服务器发送到 Bing 地图 Web 服务。
 
-Microsoft 使用该信息来运行和改进 Microsoft Bing 地图以及其他 Microsoft 站点和服务。 有关详细信息，请参阅 [Microsoft 隐私声明](http://go.microsoft.com/fwlink/?LinkId=823548)。
+Microsoft 使用该信息来运行和改进 Microsoft Bing 地图以及其他 Microsoft 站点和服务。 有关详细信息，请参阅 [Microsoft 隐私声明](https://go.microsoft.com/fwlink/?LinkId=823548)。
 你可以选择不为站点层次结构使用地理视图。 “层次结构图表”视图允许你查看层次结构，且不使用 Bing 地图服务。
 
 ## <a name="microsoft-intune-subscription"></a>Microsoft Intune 订阅
-购买了 Microsoft Intune 订阅的客户可以使用 Configuration Manager 管理其通过 Microsoft Intune 连接的移动设备。 [Microsoft Online Services 隐私声明](http://go.microsoft.com/fwlink/?LinkId=262214)适用于 Microsoft Online Services，包括 Microsoft Intune。 如果客户已拥有 Microsoft Intune 订阅，[Microsoft Online Services 隐私声明](http://go.microsoft.com/fwlink/?LinkId=262214)应配合本隐私声明释读。
+购买了 Microsoft Intune 订阅的客户可以使用 Configuration Manager 管理其通过 Microsoft Intune 连接的移动设备。 [Microsoft Online Services 隐私声明](https://go.microsoft.com/fwlink/?LinkId=262214)适用于 Microsoft Online Services，包括 Microsoft Intune。 如果客户已拥有 Microsoft Intune 订阅，[Microsoft Online Services 隐私声明](https://go.microsoft.com/fwlink/?LinkId=262214)应配合本隐私声明释读。
 
 与 Microsoft Intune 之间的所有通信都使用 HTTPS。 若要配置 Microsoft Intune 订阅以及下载配置 iOS 支持所需的证书签名请求 (CSR)，管理员必须使用其工作帐户和密码登录到 Microsoft Intune。 这些凭据未存储在 Configuration Manager 内。 与 Microsoft Intune 之间的所有其他通信都使用 Microsoft Intune 自动生成的 PKI 证书进行身份验证。
 

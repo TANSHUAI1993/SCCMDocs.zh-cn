@@ -1,9 +1,9 @@
 ---
-title: "Configuration Manager 客户端中已弃用的项"
+title: Configuration Manager 客户端中已弃用的项
 titleSuffix: Configuration Manager
-description: "了解 System Center Configuration Manager 客户端不再支持的功能、产品和操作系统。"
+description: 了解 System Center Configuration Manager 客户端不再支持的功能、产品和操作系统。
 ms.custom: na
-ms.date: 01/25/2018
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 604ab835-bce3-4fe3-a7f3-3f059cfc0ecf
-caps.latest.revision: 
-caps.handback.revision: 
+caps.latest.revision: 15
+caps.handback.revision: 0
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 36b548eb4061eb16aa41f7f65ab53c185df3491d
-ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
+ms.openlocfilehash: a745a67e3f3f4c61b3fa3f863cdb25d74ca6cbf8
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="removed-and-deprecated-items-for-system-center-configuration-manager-clients"></a>System Center Configuration Manager 客户端中已删除和已弃用的项
 
@@ -37,6 +37,7 @@ ms.lasthandoff: 02/01/2018
 
 |**操作系统**|**首次宣布弃用**|**删除的支持**|  
 |-|-|-|
+|Linux 和 UNIX|2018 年 3 月 22 日||
 |Windows 8：专业版、企业版|2018 年 1 月 12 日||
 |Windows Embedded 8 Pro|2018 年 1 月 12 日||
 |Windows Embedded 8 Industry|2018 年 1 月 12 日||

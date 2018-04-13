@@ -1,9 +1,9 @@
 ---
 title: CEIP
 titleSuffix: Configuration Manager
-description: "了解 System Center Configuration Manager 的客户体验改善计划设置。"
+description: 了解“客户体验改善计划”设置
 ms.custom: na
-ms.date: 02/22/2018
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,19 +12,22 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bd5b34c9-7304-4743-81c3-96f1e0c80702
-caps.latest.revision: 
+caps.latest.revision: 4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5d49c3bc6080bd9a507c19a9504ccc802c75dacd
-ms.sourcegitcommit: be939893f0ceca4add8655ae2c24e42aa16aec38
+ms.openlocfilehash: d1cb071e780f2e1552495f3a0fa89c71bbef3cc0
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="customer-experience-improvement-program-ceip-for-system-center-configuration-manager"></a>System Center Configuration Manager 的客户体验改善计划 (CEIP)
 
 *适用范围：System Center Configuration Manager (Current Branch)*
+
+> [!Note]  
+> 从 Configuration Manager 版本 1802 开始，从产品中删除了 CEIP 功能。
 
 在 Configuration Manager 控制台的安装过程中，可以选择参与**客户体验改善计划** (CEIP)。 默认关闭 CEIP。 如果之前已启用，它将保持启用状态。  
 
