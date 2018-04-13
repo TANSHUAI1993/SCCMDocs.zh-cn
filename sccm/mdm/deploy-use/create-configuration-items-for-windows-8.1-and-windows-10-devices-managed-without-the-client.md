@@ -1,18 +1,19 @@
 ---
-title: "为使用 Intune 管理的 Windows 8.1 和 Windows 10 设备创建配置项"
+title: 为使用 Intune 管理的 Windows 8.1 和 Windows 10 设备创建配置项
 titleSuffix: Configuration Manager
-description: "使用 System Center Configuration Manager Windows 10 配置项目，管理 Windows 10 计算机的设置。"
+description: 使用 System Center Configuration Manager Windows 10 配置项目，管理 Windows 10 计算机的设置。
 ms.custom: na
 ms.date: 07/31/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-hybrid
+ms.technology:
+- configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 23e1e4dc-623a-4521-ad04-ae9482927097
-caps.latest.revision: "20"
-caps.handback.revision: "0"
+caps.latest.revision: 20
+caps.handback.revision: 0
 author: andredm7
 ms.author: andredm
 manager: angrobe
@@ -370,16 +371,16 @@ Windows 信息保护 (WIP) 帮助防范此可能的数据泄漏而不会妨碍�
 |**启用 SmartScreen**|使用 SmartScreen 检查用户下载的文件是否不包含恶意代码。|  
 |**允许弹出窗口**|允许或禁用浏览器弹出窗口。|  
 |**允许使用 Cookie**|允许或禁用 Cookie。|  
-|**允许自动填充**|允许使用 Edge 浏览器的自动填充功能。|  
-|**允许使用密码管理器**|允许使用 Edge 浏览器的密码管理器功能。|  
+|**允许自动填充**|允许使用 Microsoft Edge 浏览器的自动填充功能。|  
+|**允许使用密码管理器**|允许使用 Microsoft Edge 浏览器的密码管理器功能。|  
 |**企业模式站点列表位置**|指定在哪里可以找到你想使用企业模式打开的网站的列表。 用户无法编辑此列表。|
-|**阻止关于标志的访问**|防止最终用户在包含开发者和实验设置的 Edge 中访问 about:flags 页。|
+|**阻止关于标志的访问**|防止最终用户在包含开发者和实验设置的 Microsoft Edge 中访问 about:flags 页。|
 |**SmartScreen 提示重写**|允许最终用户绕过有关潜在恶意网站的 SmartScreen 筛选器警告。|
 |**文件的 SmartScreen 提示替代**|允许最终用户绕过有关下载潜在恶意文件的 SmartScreen 筛选器警告。|
 |**WebRTC localhost IP 地址**|使用 Web RTC 协议进行电话呼叫时，阻止显示用户 localhost IP 地址。|
 |**默认搜索引擎**|指定要使用的默认搜索引擎。 最终用户可以随时更改此值。|
 |**OpenSearch XML URL**|可以使用 OpenSearch XML 文件创建 Microsoft Edge 的搜索服务。<br>有关更多详细信息，请参阅 [OpenSearch](https://msdn.microsoft.com/library/windows/desktop/dd940337)。|
-|**主页(仅限桌面)**|添加你想要用作 Edge 浏览器主页的站点的列表（仅限桌面设备）。|  
+|**主页(仅限桌面)**|添加你想要用作 Microsoft Edge 浏览器主页的站点的列表（仅限桌面设备）。|  
 
 
 ### <a name="windows-defender"></a>Windows Defender
