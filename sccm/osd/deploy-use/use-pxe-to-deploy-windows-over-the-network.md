@@ -1,53 +1,60 @@
 ---
-title: "使用 PXE 通过网络部署 Windows"
+title: 通过网络将 PXE 用于 OSD
 titleSuffix: Configuration Manager
-description: "使用启动了 PXE 的操作系统部署来刷新计算机的操作系统或在一台新的计算机上安装新版本的 Windows。"
+description: 使用启动了 PXE 的 OS 部署来刷新计算机的操作系统或在一台新的计算机上安装新版本的 Windows。
 ms.custom: na
-ms.date: 06/15/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-osd
+ms.technology:
+- configmgr-osd
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: da5f8b61-2386-4530-ad54-1a5c51911f07
-caps.latest.revision: "19"
-caps.handback.revision: "0"
+caps.latest.revision: 19
+caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 1ae9c9385abe90a38169f5d539be944f03817007
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: 310807547df9fdb2ccd4f0098eec6b0b7ccca996
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="use-pxe-to-deploy-windows-over-the-network-with-system-center-configuration-manager"></a>使用 PXE 与 System Center Configuration Manager 一起通过网络部署 Windows
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager 中启动了预启动执行环境 (PXE) 的操作系统部署允许客户端计算机通过网络请求和部署操作系统。 在此部署方案中，将操作系统映像以及 x86 和 x64 Windows PE 启动映像发送到配置为接受 PXE 启动请求的分发点。
+如果 Configuration Manager 中的 OS 部署启动了预启动执行环境 (PXE)，则客户端可通过网络发出请求和部署操作系统。 在此部署方案中，将 OS 映像和启动映像发送到启用 PXE 的分发点。
 
 > [!NOTE]  
->  当创建一个仅针对 x64 BIOS 计算机的操作系统部署时，x64 启动映像和 x86 启动映像都必须在分发点上可用。
+>  当创建一个仅针对 x64 BIOS 计算机的 OS 部署时，x64 启动映像和 x86 启动映像都必须在分发点上可用。
 
-你可以在以下操作系统部署方案中使用启动了 PXE 的操作系统部署：
+可以在以下方案中使用启动了 PXE 的 OS 部署：
 
 -   [使用新版的 Windows 刷新现有的计算机](refresh-an-existing-computer-with-a-new-version-of-windows.md)  
 
 -   [在新计算机（裸机）上安装新版的 Windows](install-new-windows-version-new-computer-bare-metal.md)  
 
-完成其中一个操作系统部署方案中的步骤，然后使用以下部分来准备启动了 PXE 的部署。
+完成其中一个 OS 部署方案中的步骤，然后使用本文中的内容来准备启动了 PXE 的部署。
+
+
 
 ##  <a name="BKMK_Configure"></a> 配置至少一个分发点以接受 PXE 请求
-要将操作系统部署到发出 PXE 启动请求的客户端，请使用一个或多个配置为响应 PXE 启动请求的分发点。 有关在分发点上启用 PXE 的步骤，请参阅[配置分发点以接受 PXE 请求](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_PXEDistributionPoint)。
+要将操作系统部署到发出 PXE 启动请求的 Configuration Manager 客户端，必须配置一个或多个分发点以接受 PXE 请求。 配置分发点后，此分发点会响应 PXE 启动请求，并确定要执行的适当部署操作。 有关详细信息，请参阅[安装或修改分发点](../../core/servers/deploy/configure/install-and-configure-distribution-points.md#pxe)。  
+
+
 
 ## <a name="prepare-a-pxe-enabled-boot-image"></a>准备 PXE 启用的启动映像
-若要使用 PXE 来部署操作系统，必须将已启用 PXE 的 x86 和 x64 启动映像分发到一个或多个已启用 PXE 的分发点。 使用信息在启动映像上启用 PXE 并将启动映像分发到分发点：
+若要使用 PXE 来部署 OS，必须将已启用 PXE 的 x86 和 x64 启动映像分发到一个或多个已启用 PXE 的分发点。 使用信息在启动映像上启用 PXE 并将启动映像分发到分发点：
 
 -   要在启动映像上启用 PXE，请从启动映像属性中的“数据源”选项卡中，选择“从已启用 PXE 的分发点部署此启动映像”。
 
 -   如果更改启动映像的属性，请将启动映像重新分发到分发点。 有关详细信息，请参阅[分发内容](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute)。
+
+
 
 ##  <a name="BKMK_PXEExclusionList"></a> 创建 PXE 部署的排除列表
 使用 PXE 部署操作系统时，可以在每个分发点上创建一个排除列表。 将 MAC 地址添加到你希望分发点忽略的计算机的排除列表中。 列出的计算机将不接收 Configuration Manager 用于 PXE 部署的部署任务序列。
@@ -69,11 +76,20 @@ System Center Configuration Manager 中启动了预启动执行环境 (PXE) 的�
 
      进行此注册表更改后，无需重启服务器。
 
+
+
+## <a name="manage-duplicate-hardware-identifiers"></a>管理重复的硬件标识符
+如果有多台计算机具有重复的 SMBIOS 属性或使用的是共享的网络适配器，Configuration Manager 可能会将它们识别为同一个设备。 可以通过管理层次结构设置中的重复硬件标识符来缓解这些问题。 有关详细信息，请参阅[管理重复硬件标识符](/sccm/core/clients/manage/manage-clients#manage-duplicate-hardware-identifiers)。
+
+
+
 ##  <a name="BKMK_RamDiskTFTP"></a> RamDisk TFTP 块大小和窗口大小
-可以为启用 PXE 的分发点自定义 RamDisk TFTP 块大小和窗口大小（从 Configuration Manager 1606 版本开始）。 如果自定义了网络，则可能导致启动映像下载由于超时错误而失败，因为块大小或窗口大小太大。 通过 RamDisk TFTP 块大小和窗口大小自定义可以在使用 PXE 时优化 TFTP 流量，以满足特定网络要求。 在环境中测试自定义设置以确定最高效的方法。 有关详细信息，请参阅[在启用 PXE 的分发点上自定义 RamDisk TFTP 块大小和窗口大小](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_RamDiskTFTP)。
+可以为启用 PXE 的分发点自定义 RamDisk TFTP 块大小和窗口大小。 如果已自定义网络，较大的块或窗口可能会导致启动映像下载由于超时错误而失败。 通过 RamDisk TFTP 块大小和窗口大小自定义，可以在使用 PXE 时优化 TFTP 流量，以满足特定网络要求。 若要确定最高效的设置，请在环境中测试自定义设置。 有关详细信息，请参阅[在启用 PXE 的分发点上自定义 RamDisk TFTP 块大小和窗口大小](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_RamDiskTFTP)。
+
+
 
 ## <a name="configure-deployment-settings"></a>配置部署设置
-若要使用启动了 PXE 的操作系统部署，必须配置该部署以使操作系统对 PXE 启动请求可用。 可以在“部署软件向导”的“部署设置”页或部署属性的“部署设置”选项卡上配置可用的操作系统。 对于“可用于以下项目”  设置，请配置下述内容之一：
+若要使用启动了 PXE 的 OS 部署，必须配置该部署以使 OS 对 PXE 启动请求可用。 在部署属性中的“部署设置”选项卡上配置可用的操作系统。 对于“可用于以下项目”设置，请选择以下选项之一：
 
 -   Configuration Manager 客户端、媒体和 PXE
 
@@ -81,20 +97,24 @@ System Center Configuration Manager 中启动了预启动执行环境 (PXE) 的�
 
 -   仅媒体和 PXE（隐藏）
 
+
+
 ##  <a name="BKMK_Deploy"></a> 部署任务序列
-将操作系统部署到目标集合。 有关详细信息，请参阅 [Deploy a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS)。 当使用 PXE 部署操作系统时，你可以将部署配置为必需或可用。
+将 OS 部署到目标集合。 有关详细信息，请参阅 [Deploy a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS)。 当使用 PXE 部署操作系统时，你可以将部署配置为必需或可用。
 
--   所需的部署：所需的部署将使用 PXE，无需任何用户干预。 用户不能绕过 PXE 启动。 但是，如果用户在分发点响应之前取消 PXE 启动，则不会部署操作系统。
+-   所需的部署：所需的部署将使用 PXE，无需任何用户干预。 用户无法绕过 PXE 启动。 但是，如果用户在分发点响应之前取消 PXE 启动，则不会部署 OS。
 
--   **可用部署**：可用部署要求用户在目标计算机旁，以便他们能够按 F12 键以继续进行 PXE 启动过程。 如果由于没有用户在场而未按 F12，则计算机将启动到当前操作系统，或者将从下一个可用启动设备启动计算机。
+-   **可用部署**：可用部署要求用户在目标计算机旁。 用户必须按 F12 键，继续执行 PXE 启动过程。 如果由于没有用户在场而未按 F12，则计算机将启动到当前 OS，或者将从下一个可用启动设备启动计算机。
 
-通过清除分配给 Configuration Manager 集合或计算机的上一个 PXE 部署的状态，可以重新部署所需的 PXE 部署。 此操作将重置该部署的状态并重新安装最新的所需部署。
+通过清除分配给 Configuration Manager 集合或计算机的上一个 PXE 部署的状态，可以重新部署所需的 PXE 部署。 有关清除所需的 PXE 部署操作的详细信息，请参阅[管理客户端](/sccm/core/clients/manage/manage-clients#BKMK_ManagingClients_DevicesNode)或[管理集合](/sccm/core/clients/manage/collections/manage-collections#how-to-manage-device-collections)。 此操作将重置该部署的状态并重新安装最新的所需部署。
 
 > [!IMPORTANT]
 > PXE 协议不安全。 请确保 PXE 服务器和 PXE 客户端位于物理安全网络上，如在数据中心，以防止未经授权就访问你的站点。
 
+
+
 ##  <a name="how-is-the-boot-image-selected-for-clients-booting-with-pxe"></a>如何为通过 PXE 启动的客户端选择启动映像？
-当客户端通过 PXE 启动时，Configuration Manager 会提供一个启动映像给该客户端使用。 从 Configuration Manager 版本 1606 开始，Configuration Manager 将使用体系结构精确匹配的启动映像。 如果没有可用的体系结构精确匹配的启动映像，则 Configuration Manager 会使用具有兼容体系结构的启动映像。 下表提供了有关如何为通过 PXE 启动的客户端选择启动映像的详细信息。
+当客户端通过 PXE 启动时，Configuration Manager 会提供一个启动映像给该客户端使用。 Configuration Manager 使用体系结构精确匹配的启动映像。 如果没有可用的体系结构精确匹配的启动映像，则 Configuration Manager 会使用具有兼容体系结构的启动映像。 下表提供了有关如何为通过 PXE 启动的客户端选择启动映像的详细信息。
 1. Configuration Manager 会在站点数据库中查找与尝试启动的客户端的 MAC 地址或 SMBIOS 相匹配的系统记录。  
 
     > [!NOTE]

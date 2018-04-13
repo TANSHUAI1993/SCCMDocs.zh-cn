@@ -1,9 +1,9 @@
 ---
-title: "用于解决问题的日志文件"
+title: 故障排除的日志文件
 titleSuffix: Configuration Manager
-description: "使用日志文件解决 System Center Configuration Manager 层次结构中的问题。"
+description: 使用日志文件解决 Configuration Manager 客户端和站点系统中的问题。
 ms.custom: na
-ms.date: 02/14/2018
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,24 +12,24 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
-caps.latest.revision: 
-caps.handback.revision: 
+caps.latest.revision: 9
+caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b0f15b0c7cf983234f41e3f202be7d46ce4954e2
-ms.sourcegitcommit: fbd4a9d2fa8ed4ddd3a0fecc4a2ec4fc0ccc3d0c
+ms.openlocfilehash: 471730e056ca512f300ead234b9a8a9e4f10a835
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="log-files-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的日志文件
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-在 System Center Configuration Manager 中，客户端和站点服务器组件都将过程信息记录在单独的日志文件中。 可以使用这些日志文件中的信息来帮助解决 Configuration Manager 层次结构中可能出现的问题。 默认情况下，Configuration Manager 中的客户端和服务器组件日志记录已启用。   
+在 Configuration Manager 中，客户端和站点服务器组件都将进程信息记录在单独的日志文件中。 可以使用日志文件中的信息来帮助排除可能出现的问题。 Configuration Manager 默认启用客户端和服务器组件的日志记录。   
 
- 下列部分提供了可用的有关不同日志文件的详细信息。 可使用此信息来查看和监视 Configuration Manager 客户端和服务器日志以了解操作详细信息，并确定可帮助解决任何问题的错误信息。  
+ 下列部分提供了可用的有关不同日志文件的详细信息。 监视 Configuration Manager 客户端和服务器日志以了解操作详细信息，并查看可帮助解决问题的错误信息。  
 
 -   [关于 Configuration Manager 日志文件](#BKMK_AboutLogs)  
 
@@ -125,7 +125,7 @@ ms.lasthandoff: 02/19/2018
  若要查看日志，可以使用 Configuration Manager 日志查看器工具 CMTrace，该工具位于 Configuration Manager 源媒体的 \\SMSSetup\\Tools 文件夹中。 向已添加到“软件库”的所有启动映像中添加 CMTrace 工具。  
 
 ###  <a name="BKMK_LogOptions"></a>使用 Configuration Manager 服务管理器配置日志记录选项  
- 在 Configuration Manager 中，可更改日志文件存储位置和日志文件大小。  
+ 可更改 Configuration Manager 存储日志文件时使用的位置，以及日志文件的大小。  
 
  若要修改日志文件大小、更改日志文件名称和位置或强制多个组件写入单一日志文件，可执行以下步骤：  
 
@@ -141,7 +141,7 @@ ms.lasthandoff: 02/19/2018
 8.  选择“确定”保存配置。  
 
 ###  <a name="BKMK_LogLocation"></a>查找 Configuration Manager 日志  
-Configuration Manager 日志文件存储在多个位置中，该位置取决于创建日志文件的进程以及站点系统的配置。 由于计算机上的日志位置可能有所不同，因此如果需要对特定方案进行故障排除，请使用搜索功能在 Configuration Manager 计算机上查找相关日志文件。  
+Configuration Manager 将日志文件存储在不同的位置。 这些位置取决于创建日志文件的过程，以及站点系统的配置。 由于计算机上的日志位置可能有所不同，因此如果需要对特定方案进行故障排除，请使用搜索功能在 Configuration Manager 计算机上查找相关日志文件。  
 
 ##  <a name="BKMK_ClientLogs"></a>Configuration Manager 客户端日志  
 下列部分列出与客户端操作和客户端安装相关的日志文件。  
@@ -220,10 +220,10 @@ Configuration Manager 日志文件存储在多个位置中，该位置取决于�
 |client.msi.log|记录 client.msi 执行的安装任务。 可用于排除客户端安装问题或删除问题。|  
 
 ###  <a name="BKMK_LogFilesforLnU"></a>适用于 Linux 和 UNIX 的客户端  
- 适用于 Linux 和 UNIX 的 Configuration Manager 客户端将信息记录在以下日志文件中。  
+ 适用于 Linux 和 UNIX 的 Configuration Manager 客户端将信息记录在以下日志文件中：  
 
 > [!TIP]  
->  从累积更新 1 中适用于 Linux 和 UNIX 的客户端开始，可以使用 CMTrace 来查看适用于 Linux 和 UNIX 的客户端的日志文件。  
+>  使用 CMTrace 查看 Linux 和 UNIX 客户端的日志文件。  
 
 > [!NOTE]  
 >  在使用适用于 Linux 和 UNIX 的客户端的初始版本并引用本部分中的文档时，请替换对每个文件或进程的下列引用：  
@@ -266,7 +266,7 @@ Configuration Manager 日志文件存储在多个位置中，该位置取决于�
 有关 **logrotate**的信息，请参阅你使用的 Linux 和 UNIX 分发版的文档。  
 
 ###  <a name="BKMK_LogfilesforMac"></a>适用于 Mac 计算机的客户端  
-适用于 Mac 计算机的 Configuration Manager 客户端将信息记录在以下日志文件中。  
+适用于 Mac 计算机的 Configuration Manager 客户端将信息记录在以下日志文件中：  
 
 |日志名称|详细信息|  
 |--------------|-------------|  
@@ -338,7 +338,8 @@ Configuration Manager 日志文件存储在多个位置中，该位置取决于�
 |sinvproc.log|将有关软件清单数据的处理信息记录到站点数据库。|站点服务器|  
 |sitecomp.log|记录有关对安装在站点中的所有站点系统服务器上的站点组件进行维护的详细信息。|站点服务器|  
 |sitectrl.log|记录对数据库中的站点控制对象所做的站点设置更改。|站点服务器|  
-|sitestat.log|记录所有站点系统的监视进程的可用性和磁盘空间。|站点服务器|  
+|sitestat.log|记录所有站点系统的监视进程的可用性和磁盘空间。|站点服务器|
+|SMS_PhasedDeployment.log| 分阶段部署的日志文件，从 Configuration Manager 版本 1802 开始提供的预发布功能。|Configuration Manager 层次结构中的顶层站点|   
 |SmsAdminUI.log|记录 Configuration Manager 控制台活动。|运行 Configuration Manager 控制台的计算机|  
 |SMSAWEBSVCSetup.log|记录应用程序目录 Web 服务的安装活动。|站点系统服务器|  
 |smsbkup.log|记录站点备份过程的输出。|站点服务器|  
@@ -516,16 +517,15 @@ Configuration Manager 日志文件存储在多个位置中，该位置取决于�
 
 下表列出的日志文件包含与云管理网关相关的信息。
 
-||||
-|-|-|-|
 |日志名称|说明|带有日志文件的计算机|
-|CloudMgr.log|记录有关部署云管理网关服务、正在进行的服务状态，以及与服务相关联的使用数据的详细信息。<br>你可以配置日志记录级别编辑注册表 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\COMPONENTS\SMS_CLOUD_SERVICES_MANAGER\Logging level**|主站点服务器或 CAS 上的 installdir 文件夹。|
-|CMGSetup.log 或 CMG-*RoleInstanceID*-CMGSetup.log<sup>1</sup>|记录有关云管理网关部署（Azure 中的本地部署）的第二阶段的详细信息<br>你可以使用“Azure 门户\云服务配置”选项卡上的设置“跟踪级别”（“信息”（默认）、“详细”、“错误”）配置日志记录级别。|你的 Azure 服务器上的 **%approot%\logs**，或站点系统服务器上的 SMS/Logs 文件夹|
-|CMGHttpHandler.log 或 CMG-*RoleInstanceID*- CMGHttpHandler.log<sup>1</sup>|记录有关云管理网关 http 处理程序与 Azure 中的 Internet Information Services 绑定的详细信息<br>你可以使用“Azure 门户\云服务配置”选项卡上的设置“跟踪级别”（“信息”（默认）、“详细”、“错误”）配置日志记录级别。|你的 Azure 服务器上的 **%approot%\logs**，或站点系统服务器上的 SMS/Logs 文件夹|
-|CMGService.log 或 CMG-*RoleInstanceID*- CMGService.log<sup>1</sup>|记录有关 Azure 中云管理网关服务核心组件的详细信息<br>你可以使用“Azure 门户\云服务配置”选项卡上的设置“跟踪级别”（“信息”（默认）、“详细”、“错误”）配置日志记录级别。|你的 Azure 服务器上的 **%approot%\logs**，或站点系统服务器上的 SMS/Logs 文件夹|
-|SMS_Cloud_ProxyConnector.log|记录有关设置云管理网关服务和云管理网关连接点之间的连接的详细信息。|站点系统服务器|
+|--------------|-----------------|----------------------------|  
+|CloudMgr.log|记录有关部署云管理网关服务、正在进行的服务状态，以及与服务相关联的使用数据的详细信息。<br>通过在注册表项 HKLM\SOFTWARE\ Microsoft\SMS\COMPONENTS\ SMS_CLOUD_ SERVICES_MANAGER 中编辑“Logging level”的值，可以配置日志记录级别|主站点服务器或 CAS 上的 installdir 文件夹。|
+|CMGSetup.log<sup>1</sup>|记录有关云管理网关部署（Azure 中的本地部署）的第二阶段的详细信息<br>你可以使用“Azure 门户\云服务配置”选项卡上的设置“跟踪级别”（“信息”（默认）、“详细”、“错误”）配置日志记录级别。|你的 Azure 服务器上的 **%approot%\logs**，或站点系统服务器上的 SMS/Logs 文件夹|
+|CMGHttpHandler.log<sup>1</sup>|记录有关云管理网关 http 处理程序与 Azure 中的 Internet Information Services 绑定的详细信息<br>你可以使用“Azure 门户\云服务配置”选项卡上的设置“跟踪级别”（“信息”（默认）、“详细”、“错误”）配置日志记录级别。|你的 Azure 服务器上的 **%approot%\logs**，或站点系统服务器上的 SMS/Logs 文件夹|
+|CMGService.log<sup>1</sup>|记录有关 Azure 中云管理网关服务核心组件的详细信息<br>你可以使用“Azure 门户\云服务配置”选项卡上的设置“跟踪级别”（“信息”（默认）、“详细”、“错误”）配置日志记录级别。|你的 Azure 服务器上的 **%approot%\logs**，或站点系统服务器上的 SMS/Logs 文件夹|
+|SMS_Cloud_</br>ProxyConnector.log|记录有关设置云管理网关服务和云管理网关连接点之间的连接的详细信息。|站点系统服务器|
 
-<sup>1</sup> 这些是云服务管理器每 5 分钟从 Azure 存储同步的本地 Configuration Manager 日志文件。 云管理网关每 5 分钟将日志推送到 Azure 存储。 所以最大延迟为 10 分钟。 详细的开关将影响本地日志和远程日志。
+<sup>1</sup> 这些是云服务管理器每 5 分钟从 Azure 存储同步的本地 Configuration Manager 日志文件。 云管理网关每 5 分钟将日志推送到 Azure 存储。 所以最大延迟为 10 分钟。 详细的开关将影响本地日志和远程日志。 实际文件名包含服务名称和角色实例标识符。 例如，CMG-ServiceName-RoleInstanceID-CMGSetup.log
 
 - 对于部署疑难解答，请使用 **CloudMgr.log** 和 **CMGSetup.log**。
 - 对于服务运行状况疑难解答，请使用 **CMGService.log** 和 **SMS_Cloud_ProxyConnector.log**。
@@ -710,7 +710,8 @@ Configuration Manager 日志文件存储在多个位置中，该位置取决于�
 |smpmsi.log|记录有关状态迁移点的安装和配置详细信息。|站点系统服务器|  
 |smpperf.log|记录状态迁移点性能计数器更新。|站点系统服务器|  
 |smspxe.log|记录有关使用 PXE 启动的客户端作出的响应的详细信息，以及有关启动映像和启动文件的扩展的详细信息。|站点系统服务器|  
-|smssmpsetup.log|记录有关状态迁移点的安装和配置详细信息。|站点系统服务器|  
+|smssmpsetup.log|记录有关状态迁移点的安装和配置详细信息。|站点系统服务器|
+| SMS_PhasedDeployment.log| 分阶段部署的日志文件，从 Configuration Manager 版本 1802 开始提供的预发布功能。|Configuration Manager 层次结构中的顶层站点| 
 |Smsts.log|记录任务序列活动。|客户端|  
 |TSAgent.log|记录在启动任务序列之前的任务序列依赖项结果。|客户端|  
 |TaskSequenceProvider.log|记录在导入、导出或编辑任务序列时有关任务序列的详细信息。|站点系统服务器|  
@@ -729,7 +730,7 @@ Configuration Manager 日志文件存储在多个位置中，该位置取决于�
 
 |日志名称|说明|带有日志文件的计算机|  
 |--------------|-----------------|----------------------------|  
-|CMRcViewer.log|记录有关远程控制查看者的活动的详细信息。|运行远程控制查看器的计算机上的 %temp% 文件夹中|  
+|CMRcViewer.log|记录有关远程控制查看者的活动的详细信息。|运行远程控制查看器的计算机上的 %temp% 文件夹中。|  
 
 ###  <a name="BKMK_ReportLog"></a>报表  
  下表列出的 Configuration Manager 日志文件包含与报表相关的信息。  

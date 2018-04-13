@@ -1,25 +1,26 @@
 ---
-title: "大小和扩展"
+title: 大小和扩展
 titleSuffix: Configuration Manager
-description: "确定需要用来支持 System Center Configuration Manager 环境中设备的站点系统角色和站点的数量。"
+description: 确定需要用来支持环境中设备的站点系统角色和站点的数量。
 ms.custom: na
-ms.date: 07/24/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c5a42100-2f60-4952-b495-918025ea6559
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: mestew
 ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: bda1ab737a3af5e13f180771cc17c9850165906c
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+manager: dougeby
+ms.openlocfilehash: cc5ce67ffe7c18d4e7be4c9a74f2a0ca0ba0253c
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="size-and-scale-numbers-for-system-center-configuration-manager"></a>System Center Configuration Manager 的大小和扩展数量
 
@@ -27,7 +28,7 @@ ms.lasthandoff: 12/04/2017
 
 
 
-每个 System Center Configuration Manager 部署存在可支持的站点、站点系统角色和设备的最大数量。 这些数量因层次结构（使用的站点的类型和数量）和部署的站点系统角色而异。  以下几个方面的信息可帮助确定用于支持环境中需管理的设备的站点系统角色和站点的数量。
+每个 Configuration Manager 部署都存在可支持的站点、站点系统角色和设备的最大数量。 这些数量因层次结构（使用的站点的类型和数量）和部署的站点系统角色而异。 本文中的信息可帮助确定用于支持需要管理的设备的站点系统角色和站点的数量。
 
 将本主题中的信息和以下文章中的信息结合使用：
 -   [推荐硬件](../../../core/plan-design/configs/recommended-hardware.md)
@@ -36,22 +37,25 @@ ms.lasthandoff: 12/04/2017
 -   [站点和站点系统先决条件](../../../core/plan-design/configs/site-and-site-system-prerequisites.md)
 
 
-以下的支持数量基于对 Configuration Manager 使用推荐的硬件，并对所有可用的 Configuration Manager 功能使用默认配置。 如果不使用推荐的硬件，或者使用更高的自定义配置（例如运行硬件或软件清单的频率超过七天一次的默认频率），站点系统的性能可能会下降，并且可能无法满足所述的支持级别。
+这些支持数量基于为 Configuration Manager 使用推荐的硬件。 还基于所有可用的 Configuration Manager 功能的默认设置。 如果不使用推荐的硬件或使用效力较强的自定义设置时，站点系统的性能可能会降低。 站点系统可能不满足规定的支持级别。 （效力较强的客户端设置示例：比默认每七天一次更频繁地运行硬件或软件清单。）
 
 ##  <a name="bkmk_SiteSystemScale"></a>站点类型  
- **管理中心站点：**  
+
+### <a name="central-administration-site"></a>管理中心站点  
 
 -   一个管理中心站点最多可支持 25 个子主站点。  
 
-**主站点：**  
+
+### <a name="primary-site"></a>主站点  
 
 -   每个主站点最多支持 250 个辅助站点。  
 
 -   每个主站点的辅助站点数基于持续连接和可靠的广域网 (WAN) 连接。 对于具有少于 500 个客户端的位置，请考虑使用分发点而不是辅助站点。  
 
- 有关主站点可支持的客户端数和设备数的信息，请参阅本主题中的[站点和层次结构的客户端数量](#bkmk_clientnumbers)。  
+ 有关主站点可支持的客户端数和设备数的信息，请参阅[站点和层次结构的客户端数量](#bkmk_clientnumbers)。  
 
-**辅助站点：**  
+
+### <a name="secondary-site"></a>辅助站点  
 
 -   辅助站点不支持子站点。  
 
@@ -60,7 +64,7 @@ ms.lasthandoff: 12/04/2017
 ## <a name="bkmk_roles"></a> Site system roles    
 
 
-**应用程序目录 web 服务点：**  
+### <a name="application-catalog-web-service-point"></a>应用程序目录 Web 服务点  
 
 -   你可以在主站点安装“应用程序目录”Web 服务点的多个实例。  
 
@@ -71,7 +75,8 @@ ms.lasthandoff: 12/04/2017
 
     -   此站点系统角色的每个实例支持层次结构所支持的最大客户端数。  
 
-**应用程序目录网站点：**  
+
+### <a name="application-catalog-website-point"></a>应用程序目录网站点  
 
 -   你可以在主站点安装“应用程序目录”网站点的多个实例。  
 
@@ -83,7 +88,30 @@ ms.lasthandoff: 12/04/2017
     -   此站点系统角色的每个实例支持层次结构所支持的最大客户端数。  
 
 
-**分发点：**  
+### <a name="bkmk_cmg"></a> 云管理网关
+
+- 可以在主站点或管理中心站点安装多个云管理网关 (CMG) 的实例。  
+
+    > [!Tip]  
+    > 在层次结构中的管理中心站点创建 CMG。  
+
+    - 在 Azure 云服务中，一个 CMG 支持 1 到 16 个虚拟机 (VM) 实例。  
+
+    - 每个 CMG VM 实例支持 6,000 个并行客户端连接。 客户端数量超过受支持的数量导致 CMG 处于高负载状态时，它仍可处理请求，但可能会有延迟。  
+
+有关详细信息，请参阅 CMG [性能和规模](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#performance-and-scale)
+
+
+### <a name="cloud-management-gateway-connection-point"></a>云管理网关连接点
+
+- 可以在主站点安装 CMG 连接点的多个实例。  
+
+- 一个 CMG 连接点可以支持最多带有 4 个 VM 实例的 CMG。 如果 CMG 的 VM 实例多于 4 个，请添加第二个 CMG 连接点以保持负载平衡。 带有 16 个 VM 实例的 CMG 应与 4 个 CMG 连接点连接。
+
+有关详细信息，请参阅 CMG [性能和规模](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#performance-and-scale)
+
+
+### <a name="distribution-point"></a>分发点  
 
 -   每个站点的分发点：  
 
@@ -100,36 +128,41 @@ ms.lasthandoff: 12/04/2017
 -   每个分发点最多支持合并总计 10,000 个包和应用程序。  
 
 > [!WARNING]  
->  一个分发点可以支持的客户端实际数取决于网络速度和分发点计算机的硬件配置。  
+>  一个分发点可以支持的客户端的实际数量取决于网络速度和服务器的硬件配置。  
 >   
->  一个源分发点可以支持的请求分发点数同样取决于网络速度和源分发点计算机的硬件配置， 但这一数量还受已部署的内容量的影响。 这是因为与客户端不同的是，客户端通常在部署期间的不同时间访问内容，而所有请求分发点在同一时间请求内容 - 并可以请求所有可用内容，而不仅仅是适用于它们的内容，客户端则仅请求适用于它们的内容。 当太多处理负载放置在源分发点上时，将会导致将内容分发到你的环境中的预期分发点出现意外延迟。  
+>  一个源分发点可以支持的请求分发点的数量同样取决于网络速度和源分发点的硬件配置。 但这一数量还受已部署的内容量的影响。 这是因为请求分发点和客户端不同，各客户端通常在部署期间的不同时间访问内容，而所有请求分发点是同时请求内容的。 请求分发点可以请求所有可用内容，不仅是适用于它们的内容。 如果在源分发点上放置高处理负载，则可能在将内容分发至目标分发点的过程中出现意外的延迟。  
 
 
-**回退状态点：**  
+### <a name="fallback-status-point"></a>回退状态点  
 
 -   每个回退状态点最多可支持 100,000 个客户端。  
 
-**管理点：**  
+
+### <a name="management-point"></a>管理点  
 
 -   每个主站点最多支持 15 个管理点。  
 
     > [!TIP]  
-    >  请勿在从主站点服务器或站点数据库服务器通过慢速链接的服务器上安装管理点。  
+    >  请勿在主站点服务器或站点数据库服务器通过慢速链接的服务器上安装管理点。  
 
 -   每个辅助站点支持一个单一管理点，该管理点必须安装在辅助站点服务器上。  
 
- 有关管理点可支持的客户端数和设备数的信息，请参阅本主题中的[管理点](#bkmk_mp)一节。  
+ 有关管理点可支持的客户端数和设备数的信息，请参阅[管理点](#bkmk_mp)部分。  
 
-**软件更新点：**  
 
--   安装在站点服务器上的软件更新点最多可支持 25,000 个客户端。  
+### <a name="software-update-point"></a>软件更新点  
+
+-   安装在站点服务器上的软件更新点最多可支持 25,000 个客户端。   
 
 -   当远程计算机满足 Windows Server Update Services (WSUS) 支持此数量客户端的要求时，远离站点服务器的软件更新点最多可支持 150,000 个客户端。  
 
 -   默认情况下，Configuration Manager 不支持将软件更新点配置为网络负载平衡 (NLB) 群集。 但是，可以使用 Configuration Manager SDK 在 NLB 群集上配置最多 4 个软件更新点。  
 
+
+
 ##  <a name="bkmk_clientnumbers"></a>站点和层次结构的客户端数量  
  使用以下信息来确定站点中或层次结构中可以支持多少客户端和哪些客户端类型。  
+
 
 ###  <a name="bkmk_cas"></a>具有管理中心站点的层次结构  
 管理中心站点最多可支持包括对下列三组列出的设备数量总数：  
@@ -144,21 +177,22 @@ ms.lasthandoff: 12/04/2017
 
     -   300,000 台基于云的设备  
 
- 例如，在集成 Microsoft Intune 时，层次结构中可以支持 700,000 台台式机、最多 25,000 个 Mac 和 Windows CE 7.0 和最多 300,000 台基于云的设备 - 总共 1,025,000 台设备。 如果支持通过本地 MDM 管理的设备，那么层次结构支持的设备总数为 825,000 台设备。  
+ 例如，在集成 Microsoft Intune 时，层次结构中可以支持 700,000 台台式机、最多 25,000 个 Mac 和 Windows CE 7.0 设备以及最多 300,000 台基于云的设备。 此层次结构总共支持 1,025,000 台设备。 如果支持通过本地 MDM 管理的设备，那么层次结构支持的设备总数为 825,000 台设备。  
 
 > [!IMPORTANT]  
->  在管理中心站点使用标准版 SQL Server 的层次结构中，层次结构最多可支持 50,000 台台式机和设备。 要支持 50,000 个以上的桌面和设备，必须使用 SQL Server 的企业版。 此要求仅适用于中央管理站点，并不适用于独立主站点或子主站点，在这些站点上使用的 SQL Server 版本不限制该站点容量，以支持规定的客户端数。   
+>  在管理中心站点使用标准版 SQL Server 的层次结构中，层次结构最多可支持 50,000 台台式机和设备。 要支持 50,000 个以上的桌面和设备，必须使用 SQL Server 的企业版。 此要求仅适用于管理中心站点。 不适用于独立主站点或子主站点。 主站点所使用的 SQL Server 版本不会限制它能支持的客户端数量。   
 
 
  在独立主站点上使用的 SQL Server 版本不限制该站点容量，以便其支持最大的规定客户端数量。  
 
 
 ###  <a name="bkmk_chipri"></a>子主站点  
-包含管理中心站点的层次结构中的每个子主站点支持：  
+包含管理中心站点的层次结构中的每个子主站点支持以下数量的客户端：  
 
 -   总共 150,000 台客户端和设备，不局限于特定组或类型，只要不超过层次结构所支持的数量。 另请参阅对[嵌入式设备](#embedded)的支持。
 
-例如，一个支持 25,000 台（因为这是一个层次结构的上限数量）运行 Mac 和 Windows CE 7.0 的计算机的主站点，还可支持 125,000 个台式计算机。 这就使支持的设备总数达到子主站点支持的上限数量 - 150,000。
+例如，主站点支持 25,000 台 Mac 和 Windows CE 7.0 设备。 这个数量是针对层次结构的限制。 此主站点还可支持额外 125,000 台台式计算机。 子主站点支持的设备总数上限为 150,000。
+
 
 ###  <a name="bkmk_pri"></a>独立主站点  
 独立主站点支持下列数量的设备：  
@@ -178,13 +212,16 @@ ms.lasthandoff: 12/04/2017
 
 例如，支持 150,000 台台式机和 10,000 个 Mac 或 Windows CE 7.0 的独立主站点仅可额外支持 15,000 台设备。 这些设备可以是基于云的，也可以是使用本地 MDM 管理的。  
 
+
 ### <a name="embedded"></a>主站点和 Windows Embedded 设备
-主站点支持启用了基于文件的写入筛选器 (FBWF) 的 Windows Embedded 设备。 如果嵌入式设备没有启用写入筛选器，则主站点支持大量嵌入式设备，数量最多达该站点允许的设备数。 在主站点支持的设备总数中，其中最多 10,000 台设备可为 Windows Embedded 设备，前提是当这些设备是为[规划 Windows Embedded 设备的客户端部署](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices)的重要说明中列出的异常而配置时。 主站点仅支持 3,000 台启用了 EWF 且不是为异常配置的 Windows Embedded 设备。
+主站点支持启用了基于文件的写入筛选器 (FBWF) 的 Windows Embedded 设备。 如果嵌入式设备没有启用写入筛选器，则主站点支持大量嵌入式设备，数量最多可以达到该站点允许的设备数。 在主站点可支持的所有设备中，最多只能有 10,000 台 Windows Embedded 设备。 这些设备必须针对[规划 Windows Embedded 设备的客户端部署](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices)中重要说明中列出的异常进行配置。 主站点仅支持 3,000 台启用了 EWF 且不是为异常配置的 Windows Embedded 设备。
+
 
 ###  <a name="bkmk_sec"></a>辅助站点  
-辅助站点支持：  
+辅助站点支持以下数量的设备：  
 
 -   15,000 台台式机（运行 Windows、Linux 和 UNIX 的计算机）  
+
 
 ###  <a name="bkmk_mp"></a>管理点  
 每个管理点可以支持以下数目的设备：  

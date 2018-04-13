@@ -1,50 +1,52 @@
 ---
-title: "配置发现"
+title: 配置发现
 titleSuffix: Configuration Manager
-description: "配置发现方法，以在 Configuration Manager 站点运行，从而找到可以从网络基础结构和 Active Directory 管理的资源。"
+description: 配置发现方法，从网络、Active Directory 和 Azure Active Directory 找到要管理的资源。
 ms.custom: na
-ms.date: 7/31/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 49505eb1-d44d-4121-8712-e0f3d8b15bf5
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: mestew
 ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: f2d928e066702190eba32b2a2c06fe89636d59f6
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+manager: dougeby
+ms.openlocfilehash: 825b9b250000e8353b1428cbee45f8fda9a30c35
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="configure-discovery-methods-for-system-center-configuration-manager"></a>配置 System Center Configuration Manager 的发现方法
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
 
-配置发现方法，以在 System Center Configuration Manager site 站点运行，从而找到可以从网络基础结构和 Active Directory 管理的资源。 这需要启用要用于搜索环境的每种方法并进行配置。 （也可通过使用与启用相同的过程来禁用某种方法。）其中两个例外情况是检测信号发现和服务器发现：  
+配置发现方法，从网络、Active Directory 和 Azure Active Directory (Azure AD) 找到要管理的资源。 首先启用要用于搜索环境的每种方法，然后对这些方法进行配置。 也可通过使用与启用相同的过程来禁用某种方法。 此过程的其中两个例外情况是检测信号发现和服务器发现：  
 
--   默认情况下，安装 Configuration Manager 主站点时，检测信号已处于启用状态，并配置为按基本计划运行。 保持检测信号发现为启用状态是个好办法，因为此方法可确保设备的发现数据记录 (DDR) 保持最新。 有关检测信号发现的详细信息，请参阅[关于检测信号发现](../../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutHeartbeat)。  
+-   默认情况下，检测信号发现在安装 Configuration Manager 主站点时就已经启用。 它配置为按照一个基本计划运行。 请保持检测信号发现为启用状态。 此方法可确保设备的发现数据记录 (DDR) 保持最新。 有关检测信号发现的详细信息，请参阅[关于检测信号发现](../../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutHeartbeat)。  
 
--   服务器发现是一种自动发现方法，用于查找用作站点系统的计算机。 不能对其进行配置或将其禁用。  
+-   服务器发现是一种自动发现方法。 它查找用作站点系统的计算机。 不能对其进行配置或将其禁用。  
 
-**启用可配置的发现方法：**  
+### <a name="enable-a-configurable-discovery-method"></a>启用可配置的发现方法  
  > [!NOTE]  
- > 以下信息不适用于 Azure Active Directory 用户发现。 请参阅本主题后续部分的[配置 Azure AD 用户发现](#azureaadisc)。
+ > 以下信息不适用于 Azure AD 用户发现。 Azure AD 用户请参阅本文后续部分的[配置 Azure AD 用户发现](#azureaadisc)。
 
-1.  在 Configuration Manager 控制台中，依次选择“管理” > “层次结构配置”，然后选择“发现方法”。  
+1.  在 Configuration Manager 控制台中的“管理”工作区中，展开“层次结构配置”，然后选择“发现方法”。  
 
 2.  为要在其中启用发现的站点选择发现方法。  
 
-3.  在“主页”选项卡上的“属性”组中，选择“属性”，然后在“常规”选项卡上，选中“启用&lt;发现方法\>”复选框。  
+3.  在“主页”选项卡上的“属性”组中，选择“属性”。 接下来在“常规”选项卡上，选中“启用&lt;发现方法\>”复选框。  
 
      如果此复选框已处于选中状态，可以通过取消选中复选框来禁用发现方法。  
 
 4.  选择“确定”保存配置。  
+
 
 
 ##  <a name="BKMK_ConfigADForestDisc"></a>配置 Active Directory 林发现  
@@ -101,8 +103,10 @@ ms.lasthandoff: 12/04/2017
 
 4.  完成配置此林以用于 Active Directory 林发现的操作后，选择“确定”保存配置。  
 
+
+
 ##  <a name="BKMK_ConfigADDiscGeneral"></a>为计算机、用户或组配置 Active Directory 发现  
- 使用下列部分中的信息来配置计算机、用户或组的发现。 将使用这些发现方法：  
+ 使用下列部分中的信息通过以下发现方法之一来配置计算机、用户或组的发现：  
 
 -   Active Directory 组发现  
 
@@ -146,7 +150,7 @@ ms.lasthandoff: 12/04/2017
 
 7.  在“轮询计划”  选项卡上，配置完整发现轮询计划和增量发现。  
 
-8.  （可选）在“选项”选项卡上，可以配置选项以从发现中筛选出或排除过期计算机记录，并发现通讯组的成员身份。  
+8.  （可选）在“选项”选项卡上，可以配置选项以从发现中筛选出或排除过期计算机记录。 同时配置对分发组成员身份的发现。  
 
     > [!NOTE]  
     >  默认情况下，Active Directory 组发现只会发现安全组的成员身份。  
@@ -172,7 +176,7 @@ ms.lasthandoff: 12/04/2017
     3.  对于每个位置，指定要用作“Active Directory 发现帐户” 的帐户。  
 
         > [!TIP]  
-        >  对于指定的每个位置，你可以配置一组发现选项和唯一的 Active Directory 发现帐户。  
+        >  对于指定的每个位置，可以配置一组发现选项和唯一的 Active Directory 发现帐户。  
 
     4.  选择“确定”保存 Active Directory 容器配置。  
 
@@ -203,7 +207,7 @@ ms.lasthandoff: 12/04/2017
     3.  对于每个位置，指定要用作“Active Directory 发现帐户” 的帐户。  
 
         > [!NOTE]  
-        >  对于指定的每个位置，你可以配置一组唯一的发现选项和唯一的 Active Directory 发现帐户。  
+        >  对于指定的每个位置，可以配置一组唯一的发现选项和唯一的 Active Directory 发现帐户。  
 
     4.  选择“确定”保存 Active Directory 容器配置。  
 
@@ -213,11 +217,29 @@ ms.lasthandoff: 12/04/2017
 
 8.  完成为此站点配置 Active Directory 用户发现的操作后，选择“确定”保存配置。  
 
+
+
 ## <a name="azureaadisc"></a>配置 Azure AD 用户发现
-从版本 1706 开始，可在将 Configuration Manager 连接到 [Azure 订阅和 Azure Active Directory](/sccm/core/servers/deploy/configure/azure-services-wizard) 时配置 Azure Active Directory 用户发现。
+Azure AD 用户发现未启用，或与其他发现方法的配置相同。 在将 Configuration Manager 站点载入到 Azure AD 时对其进行配置。 为实现云管理而[配置 Azure 服务](/sccm/core/servers/deploy/configure/azure-services-wizard)时，也可启用和配置此发现方法。 
 
-将 Azure AD 用户发现配置为云管理的一部分。 主题“配置 Azure 服务以用于 Configuration Manager”的[创建 Azure Web 应用以用于 Configuration Manager](/sccm/core/servers/deploy/configure/Azure-services-wizard#webapp) 中详细介绍了执行此操作的过程。
+在配置云管理 Azure 服务时： 
+- 在向导的“发现”页上，单击“启用 Azure Active Directory 用户发现”。 
+- 单击“设置”。 
+- 在“Azure AD 用户发现设置”对话框中，配置出现发现的时间计划。 此外，还可以启用增量发现，仅用于查看 Azure AD 中新增或更改的帐户。 
 
+有关详细信息，请参阅 [Azure AD 用户发现](/sccm/core/servers/deploy/configure/about-discovery-methods#azureaddisc)。
+
+ > [!Important]  
+ > 将 Azure AD 应用导入 Configuration Manager 之前，需授予用于从 Azure AD 读取目录数据的服务器应用程序权限。 
+ >  - 在 [Azure 门户](https://portal.azure.com)中转至 Azure Active Directory 边栏选项卡。 
+ >  - 单击“应用注册”并在需要的时候切换为“所有应用”。 
+ >  - 选择类型为 Web 应用/API 的服务器应用，然后单击“设置”。 
+ >  - 单击“所需权限”，然后单击“授予权限”。
+ >  
+ > 如果服务器应用是从 Configuration Manager 中创建的，Azure AD 会自动创建该应用程序的权限。 仍需在 Azure 门户中向应用程序授予许可。
+
+ > [!Note]  
+ > 如果用户是联合标识或同步标识，则必须使用 Configuration Manager [Active Directory 用户发现](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser)和 Azure AD 用户发现。 有关混合标识的详细信息，请参阅[定义混合标识采用策略](/azure/active-directory/active-directory-hybrid-identity-design-considerations-identity-adoption-strategy)<!--497750-->。
 
 
 
@@ -237,11 +259,13 @@ ms.lasthandoff: 12/04/2017
 
 4.  配置客户端提交检测信号发现数据记录的频率，然后选择“确定”保存配置。  
 
+
+
 ##  <a name="BKMK_ConfigNetworkDisc"></a>配置网络发现  
- 使用下列部分中的信息来帮助你配置网络发现。  
+ 使用下列部分中的信息来帮助配置网络发现。  
 
 ###  <a name="BKMK_AboutConfigNetworkDisc"></a>关于配置网络发现  
- 在配置网络发现之前，你必须了解以下各项：  
+ 在配置网络发现之前，你必须了解下列主题：  
 
 -   网络发现的可用级别  
 
@@ -253,21 +277,21 @@ ms.lasthandoff: 12/04/2017
 
  下列部分提供有关网络发现的常见配置的信息。 你可以配置其中一个或多个配置以在同一发现轮次中使用。 如果使用多个配置，你必须规划可能影响发现结果的交互。  
 
- 例如，可能会希望发现使用特定 SNMP 共同体名称的所有简单网络管理协议 (SNMP) 设备。 此外，对于同一发现轮次，你可以禁用针对特定子网的发现。 当发现运行时，网络发现不会发现你已禁用的子网上具有指定共同体名称的 SNMP 设备。  
+ 例如，可能会希望发现使用特定 SNMP 共同体名称的所有简单网络管理协议 (SNMP) 设备。 此外，对于同一发现轮次，你可以禁用针对特定子网的发现。 当发现运行时，网络发现不会发现已禁用的子网上具有指定共同体名称的 SNMP 设备。  
 
 ####  <a name="BKMK_DetermineNetTopology"></a>确定网络拓扑  
  你可以使用仅拓扑发现来映射你的网络。 这种类型的发现不会发现潜在客户端。 仅拓扑网络发现依赖于 SNMP。  
 
  映射网络拓扑时，必须在“网络发现属性”对话框中的“SNMP”选项卡上配置“最大跃点数”。 只需一些跃点，便可以帮助控制运行发现时使用的网络带宽。 在发现网络的更多内容时，可以增加跃点数以更好地了解网络拓扑。  
 
- 了解网络拓扑后，可以配置网络发现的其他属性， 以在使用可用配置限制网络发现能够搜索的网络段时发现潜在的客户端及其操作系统。  
+ 了解网络拓扑后，可以配置网络发现的其他属性，从而在使用可用配置限制网络发现能够搜索的网络段时发现潜在的客户端及其操作系统。  
 
 ####  <a name="BKMK_LimitBySubnet"></a>使用子网限制搜索  
  可以将网络发现配置为在发现运行期间搜索特定子网。 默认情况下，网络发现会搜索运行发现的服务器的子网。 配置和启用的任何其他子网仅适用于 SNMP 和动态主机配置协议 (DHCP) 搜索选项。 当网络发现搜索域时，子网配置未对其进行限制。  
 
  如果你在“网络发现属性”  对话框中的“子网”  选项卡上指定一个或多个子网，则仅搜索标记为“已启用”  的子网。  
 
- 禁用子网后，会从发现中排除此子网，并且以下条件适用：  
+ 禁用子网后，会从发现中排除此子网，下列条件适用：  
 
 -   不在子网上运行基于 SNMP 的查询。  
 
@@ -280,7 +304,7 @@ ms.lasthandoff: 12/04/2017
 
  如果你在“网络发现属性”  对话框中的“域”  选项卡上指定一个或多个域，则仅搜索标记为“已启用”  的域。  
 
- 禁用域后，会从发现中排除此域，并且以下条件适用：  
+ 禁用域后，会从发现中排除此域，下列条件适用：  
 
 -   网络发现不查询该域中的域控制器。  
 
@@ -325,7 +349,7 @@ ms.lasthandoff: 12/04/2017
     -   在“子网”选项卡上，选中“搜索本地子网”复选框。  
 
         > [!TIP]  
-        >  如果知道构成网络的特定子网，则可以取消选中“搜索本地子网”复选框并使用“新建”图标![新建图标](media/Disc_new_Icon.gif)来添加要搜索的特定子网。 对于大型网络，通常最好一次仅搜索一两个子网，以最大程度降低网络带宽使用量。  
+        >  如果知道构成网络的特定子网，请取消选中“搜索本地子网”框。 然后使用“新建”图标![新建图标](media/Disc_new_Icon.gif)添加想要搜索的特定子网。 对于大型网络，通常最好一次仅搜索一两个子网，从而最大程度地降低网络带宽使用量。  
 
     -   在“域”选项卡上，选中“搜索本地域”复选框。  
 
@@ -399,10 +423,10 @@ ms.lasthandoff: 12/04/2017
 
 10. 若要将发现配置为查询 DHCP 客户端的特定 DHCP 服务器，请单击“DHCP”选项卡，然后配置以下一个或多个选项：  
 
-    -   若要在运行发现的计算机上查询 DHCP 服务器，请选中“始终使用站点服务器的 DHCP 服务器”复选框。  
+    -   若要在运行发现的计算机上查询 DHCP 服务器，请选择“始终使用站点服务器的 DHCP 服务器”。  
 
         > [!NOTE]  
-        >  为了使用此选项，服务器必须从 DHCP 服务器租赁其 IP 地址，并且不能使用静态 IP 地址。  
+        >  为了使用此选项，服务器必须从 DHCP 服务器租用其 IP 地址，并且不能使用静态 IP 地址。  
 
     -   要查询特定的 DHCP 服务器，选择“新建”图标![新建图标](media/Disc_new_Icon.gif)。 在“新建 DHCP 服务器”对话框中指定 DHCP 服务器的 IP 地址或服务器名称，然后选择“确定”。  
 
@@ -414,12 +438,12 @@ ms.lasthandoff: 12/04/2017
      可以配置多个重复计划以及多个无重复计划。  
 
     > [!NOTE]  
-    >  如果“计划”选项卡上同时显示多个计划，则所有计划均会根据在配置时该计划中指示的时间运行网络发现。 循环计划也是如此。  
+    >  如果“计划”选项卡上同时显示多个计划，则所有计划均会根据在配置时该计划中指示的时间运行网络发现。 定期计划的行为也是如此。  
 
 12. 选择“确定”保存配置。  
 
 ###  <a name="BKMK_HowToVerifyNetDisc"></a>如何验证网络发现是否已完成  
- 完成网络发现所需的时间可能因多种因素而异。 这些因素可能包括以下一项或多项：  
+ 完成网络发现所需的时间可能因下列一个或多个因素而异：  
 
 -   你的网络规模  
 
@@ -429,7 +453,7 @@ ms.lasthandoff: 12/04/2017
 
 -   正在运行的发现的类型  
 
-因为网络发现不会在发现完成时创建消息来通知你，所以你可以使用以下过程来验证是否完成了发现。  
+因为网络发现不会在发现完成时创建消息来通知你，所以可以使用以下过程来验证发现是否完成。  
 
 ##### <a name="to-verify-that-network-discovery-has-finished"></a>验证是否完成了网络发现  
 

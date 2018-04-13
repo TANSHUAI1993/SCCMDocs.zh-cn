@@ -1,33 +1,35 @@
 ---
-title: "创建和部署 Windows Defender 应用程序防护策略"
-titleSuffix: Configuration Manager
-description: "创建和部署 Windows Defender 应用程序防护策略。"
+title: 创建和部署 Windows Defender 应用程序防护策略
+titleSuffix: System Center Configuration Manager
+description: 创建和部署 Windows Defender 应用程序防护策略。
 ms.custom: na
-ms.date: 11/21/2017
+ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.assetid: 
-caps.latest.revision: "5"
-author: ErikjeMS
-ms.author: erikje
+ms.assetid: ''
+caps.latest.revision: 5
+author: mestew
+ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: db2508e5bbd1435fce432b6ef98d7968e68ea5ab
-ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
+ms.openlocfilehash: faa1a50b29fe4ba966812441243b81ee2d31b024
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/23/2018
 ---
-# <a name="create-and-deploy-windows-defender-application-guard-policy----1351960---"></a>创建和部署 Windows Defender 应用程序防护策略<!-- 1351960 -->
-
+# <a name="create-and-deploy-windows-defender-application-guard-policy"></a>创建和部署 Windows Defender 应用程序防护策略 
+*适用范围：System Center Configuration Manager (Current Branch)*
+<!-- 1351960 -->
 可以使用 Configuration Manager endpoint protection 创建和部署 [Windows Defender 应用程序保护策略](https://docs.microsoft.com/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview)。 这些策略通过在操作系统的其他部分无法访问的安全隔离容器中打开不受信任的网站来帮助保护用户安全。
 
 ## <a name="prerequisites"></a>先决条件
 
-若要创建和部署 Windows Defender 应用程序保护策略，必须使用 Windows 10 Fall Creator Update。 同样，必须使用网络隔离策略配置要部署此策略的 Windows 10 设备。 有关详细信息，请参阅 [Windows Defender 应用程序防护概述](https://docs.microsoft.com/en-us/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview)。 此功能仅适用于当前的 Windows 10 预览体验成员版本。 若要对其进行测试，客户端必须运行最新的 Windows 10 预览体验成员版本。
+若要创建和部署 Windows Defender 应用程序防护策略，必须使用 Windows 10 Fall Creator’s Update (1709)。 同样，必须使用网络隔离策略配置要部署此策略的 Windows 10 设备。 有关详细信息，请参阅 [Windows Defender 应用程序防护概述](https://docs.microsoft.com/en-us/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview)。 
 
 
 ## <a name="create-a-policy-and-to-browse-the-available-settings"></a>若要创建策略，并浏览可用设置，请执行以下操作：
@@ -35,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 1. 在 Configuration Manager 控制台中，选择“资产和符合性”。
 2. 在“资产和符合性”工作区中，选择“概述” > “终结点保护” > “Windows Defender 应用程序防护”。
 3. 在“主页”选项卡的“创建”组中，单击“创建 Windows Defender 应用程序防护策略”。
-4. 将此[博客文章](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#BmJGKPfSjHHzsMmI.97)用作参考，可以浏览和配置可用的设置。
+4. 将此[文章](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/configure-wd-app-guard)用作参考，浏览和配置可用的设置。 使用 Configuration Manager，可设置某些策略设置，请参阅[主机交互设置](#BKMK_HIS)和[应用程序行为](#BKMK_AppB)。
 5. 在“网络定义”页上，可指定公司标识并定义企业网络边界。
 
     > [!NOTE]
@@ -48,7 +50,36 @@ ms.lasthandoff: 11/21/2017
     > 
     > 
 
-6. 结束后，完成向导操作，并将策略部署到一个或多个 Windows 10 设备。
+6. 结束后，完成向导操作，并将策略部署到一个或多个 Windows 10 1709 设备。
+
+### <a name="bkmk_HIS"></a> 主机交互设置
+配置主机设备和应用程序防护容器之间的交互。 在 Configuration Manager 1802 之前的版本中，应用程序行为和主机交互都位于“设置”选项卡下。
+
+- **剪贴板** - 在 Configuration Manager 1802 之前的版本中，位于“设置”下
+    - 允许的内容类型
+        - 文本
+        - 映像
+- **打印：**
+    - 启用打印为 XPS
+    - 启用打印为 PDF
+    - 启用打印到本地打印机
+    - 启用打印到网络打印机
+- **图形：**（从 Configuration Manager 1802 版开始）
+    - 虚拟图形处理器访问
+- **文件：**（从 Configuration Manager 1802 版开始）
+    - 将下载的文件保存到主机
+
+### <a name="bkmk_ABS"></a> 应用程序行为设置
+在应用程序防护会话内配置应用程序行为。 在 Configuration Manager 1802 之前的版本中，应用程序行为和主机交互都位于“设置”选项卡下。
+
+- **内容：**
+   - 企业网站可以加载非企业内容，如第三方插件。
+- **其他：**
+    - 保留用户生成的浏览器数据
+    - 在独立的应用程序防护会话中审核安全性事件
+
+
 
 ## <a name="next-steps"></a>后续步骤
-若要了解有关 Windows Defender 应用程序防护的详细信息，请参阅[这篇博客文章](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#BmJGKPfSjHHzsMmI.97)。 此外，若要详细了解 Windows Defender 应用程序防护独立模式，请参阅[这篇博客文章](https://techcommunity.microsoft.com/t5/Windows-Insider-Program/Windows-Defender-Application-Guard-Standalone-mode/td-p/66903)。
+若要了解有关 Windows Defender 应用程序防护的详细信息：[Windows Defender 应用程序防护概述](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/wd-app-guard-overview)。
+[Windows Defender 应用程序防护常见问题解答](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-guard/faq-wd-app-guard)。
