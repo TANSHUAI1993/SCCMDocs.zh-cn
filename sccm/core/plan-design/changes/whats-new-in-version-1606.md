@@ -1,25 +1,26 @@
 ---
-title: "版本 1606 中的新增功能"
+title: 版本 1606 中的新增功能
 titleSuffix: Configuraton Manager
-description: "获取有关 System Center Configuration Manager 的 1606 版中引入的更改和新功能的详细信息。"
+description: 获取有关 System Center Configuration Manager 的 1606 版中引入的更改和新功能的详细信息。
 ms.custom: na
 ms.date: 12/30/2016
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: df2e57b9-6445-4067-98e7-ace85d4e6aa6
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: e26519de8ce0b905fd52ca6ab0762a406d2f1e2c
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 9c948e0ff84c4741d77b9096e52d3abd765aba7b
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="what39s-new-in-version-1606-of-system-center-configuration-manager"></a>System Center Configuration Manager 1606 版中的新增功能
 
@@ -89,7 +90,7 @@ Configuration Manager 控制台中的更新和维护服务节点更改如下：
 Configuration Manager 控制台中的管理更改如下：
 ### <a name="oms-connector"></a>OMS 连接器
 
-现在，可以将 Configuration Manager 作为集合从 System Center Configuration Manager 连接到 [Microsoft Operations Management Suite (OMS)](https://azure.microsoft.com/en-us/documentation/articles/operations-management-suite-overview/)。 这使得 Configuration Manager 部署中的数据（例如集合）在 OMS 中可见。 有关详细信息，请参阅此处的[将数据从 Configuration Manager 同步到 Microsoft Operations Management Suite](../../../core/clients/manage/sync-data-microsoft-operations-management-suite.md)。
+现在，可以将 Configuration Manager 作为集合从 System Center Configuration Manager 连接到 [Microsoft Operations Management Suite (OMS)](https://azure.microsoft.com/documentation/articles/operations-management-suite-overview/)。 这使得 Configuration Manager 部署中的数据（例如集合）在 OMS 中可见。 有关详细信息，请参阅此处的[将数据从 Configuration Manager 同步到 Microsoft Operations Management Suite](../../../core/clients/manage/sync-data-microsoft-operations-management-suite.md)。
 
 OMS 连接器是一种预发行功能。 若要启用此功能，请参阅[使用更新中的预发行功能](../../../core/servers/manage/install-in-console-updates.md#bkmk_prerelease)。
 

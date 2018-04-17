@@ -1,26 +1,27 @@
 ---
-title: "规划混合 MDM"
+title: 规划混合 MDM
 titleSuffix: Configuration Manager
-description: "使用 System Center Configuration Manager 和 Microsoft Intune 规划混合移动设备管理。"
+description: 使用 System Center Configuration Manager 和 Microsoft Intune 规划混合移动设备管理。
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-hybrid
+ms.technology:
+- configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: bb95154b-f63e-4491-896e-41d732c802f8
-caps.latest.revision: "34"
-caps.handback.revision: "0"
+caps.latest.revision: 34
+caps.handback.revision: 0
 author: dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: c9f8e5db619d657b4829c81ac631667f640e2ab1
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 39163089f88cda47e793979129914fb60143e497
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="plan-for-hybrid-mobile-device-management-mdm-with-system-center-configuration-manager-and-microsoft-intune"></a>使用 System Center Configuration Manager 和 Microsoft Intune 规划混合移动设备管理 (MDM)
 
@@ -28,7 +29,7 @@ ms.lasthandoff: 10/12/2017
 
 只能使用一种管理解决方案（即移动设备管理机构）来管理你的移动设备。 执行此设置之前，应[在 Microsoft Intune 独立版与使用 System Center Configuration Manager 实现的混合移动设备管理之间做出选择](../understand/choose-between-standalone-intune-and-hybrid-mobile-device-management.md)。
 
-此外，还可参阅 [Intune Deployment Planning, Design and Implementation Guide](https://docs.microsoft.com/en-us/intune/plan-design/introduction)（Intune 部署规划、设计和实施指南），了解制定部署计划、创建设计、载入 Intune 和进行生产实施的过程。
+此外，还可参阅 [Intune Deployment Planning, Design and Implementation Guide](https://docs.microsoft.com/intune/plan-design/introduction)（Intune 部署规划、设计和实施指南），了解制定部署计划、创建设计、载入 Intune 和进行生产实施的过程。
 
 - [支持的设备平台](supported-device-platforms-for-hybrid.md)介绍了由使用 Microsoft Intune 的 Configuration Manager 支持的移动设备平台。
 

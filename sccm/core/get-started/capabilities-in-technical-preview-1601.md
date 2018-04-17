@@ -1,32 +1,33 @@
 ---
-title: "Technical Preview 1601 中的功能"
+title: Technical Preview 1601 中的功能
 titleSuffix: Configuration Manager
-description: "了解 System Center Configuration Manager Technical Preview 1601 版中的可用功能。"
+description: 了解 System Center Configuration Manager Technical Preview 1601 版中的可用功能。
 ms.custom: na
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aae1cf2f-2c04-4f68-a03a-f4a925433c09
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: erikje
 ms.author: erikje
 manager: angrobe
 robots: noindex,nofollow
-ms.openlocfilehash: 70efb483ac15ba14497b884ed753032e8e48a4b5
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: b17a89ab08c99a1c3cd8a501e7d58d5b42a110a3
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="capabilities-in-technical-preview-1601-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1601 版中的功能
 
 *适用范围：System Center Configuration Manager (Technical Preview)*
 
-本文介绍 System Center Configuration Manager Technical Preview 1601 版中的可用功能。 可以安装此版本以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。      在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。  
+本文介绍 System Center Configuration Manager Technical Preview 1601 版中的可用功能。 你可以安装此版本，以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。      在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。  
 
  **此 Technical Preview 中的已知问题：**  
 
@@ -59,7 +60,7 @@ ms.lasthandoff: 12/01/2017
 
     -   将新的分发点站点系统角色添加到实验室站点。 新的分发点会使用新的客户端包升级预生产集合。  
 
-**以下是可以试用的此版本的新功能。**  
+**以下是此版本可以试用的新功能。**  
 
 ##  <a name="bkmk_hybrid1"></a>对 Microsoft Intune 集成的改进  
 在 1601 技术预览版中，我们添加了对以下功能的支持：  
@@ -79,11 +80,11 @@ ms.lasthandoff: 12/01/2017
 
     -   Microsoft Intune 订阅。 应在 Configuration Manager 控制台中配置 Microsoft Intune 订阅。  
 
-    -   [Azure AD 自动注册的先决条件](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1)。  
+    -   [Azure AD 自动注册的先决条件](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1)。  
 
     要使用该选项，你必须在 Configuration Manager 中创建具有以下所述特定规则的合规性策略，并在 Intune 控制台中设置条件访问策略。  此外，为确保仅允许合规的电脑访问，必须将 Windows 电脑要求设置为“设备必须合规”选项。 下面是适用于 System Center Configuration manager 管理的 PC 的合规性策略规则。  
 
-    -   **需要在 Azure ActiveDirectory 中注册：**此规则检查用户的设备是否在加入到 Azure AD 的地方运行，如果不是，则在 Azure AD 中自动注册该设备。 仅 Windows 8.1 支持自动注册。 对于 Windows 7 PC，请部署 MSI 来执行自动注册。 有关详细信息，请参阅[此处](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1)。  
+    -   **需要在 Azure ActiveDirectory 中注册：**此规则检查用户的设备是否在加入到 Azure AD 的地方运行，如果不是，则在 Azure AD 中自动注册该设备。 仅 Windows 8.1 支持自动注册。 对于 Windows 7 PC，请部署 MSI 来执行自动注册。 有关详细信息，请参阅[此处](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1)。  
 
     -   **在晚于特定天数的截止日期之前安装所有必需的更新：**此规则检查用户的设备是否在截止日期及指定的宽限期内具有所需的所有更新（在“所需的自动更新”规则中指定），并自动安装任何挂起的所需更新。  
 

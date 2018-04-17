@@ -1,26 +1,27 @@
 ---
-title: "设置实验室"
+title: 设置实验室
 titleSuffix: Configuration Manager
-description: "设置实验室以便使用模拟现实活动评估 Configuration Manager。"
+description: 设置实验室以便使用模拟现实活动评估 Configuration Manager。
 ms.custom: na
 ms.date: 09/21/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b1970688-0cd2-404f-a17f-9e2aa4a78758
-caps.latest.revision: "11"
-caps.handback.revision: "0"
+caps.latest.revision: 11
+caps.handback.revision: 0
 author: erikje
 ms.author: erikje
 manager: angrobe
-ms.openlocfilehash: a95dda6f536ff9c608abb03d94692b2d9fc6093c
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 3441cb417a0b8fc7979b71018f6cfa345c47a02d
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-up-your-system-center-configuration-manager-lab"></a>设置你的 System Center Configuration Manager 实验室
 
@@ -47,7 +48,7 @@ ms.lasthandoff: 12/01/2017
 
     -   **SQL_Latin1_General_CP1_CI_AS** 作为“SQL 排序规则”  类。  
 
-    -   **Windows 身份验证**， [而不是 SQL 身份验证](https://technet.microsoft.com/en-us/library/ms144284.aspx)， is required.  
+    -   **Windows 身份验证**， [而不是 SQL 身份验证](https://technet.microsoft.com/library/ms144284.aspx)， is required.  
 
     -   需要专用的 **SQL Server 实例**。  
 
@@ -391,7 +392,7 @@ Internet 信息服务 (IIS) 是可用来承载 Web 上找到的任何内容的�
 
 #### <a name="to-enable-a-configuration-manager-site-to-publish-site-information-to-your-active-directory-forest"></a>使 Configuration Manager 站点能够将站点信息发布到 Active Directory 林：  
 
-1.  在 Configuration Manager 控制台中，单击“管理” 。  
+1.  在 Configuration Manager 控制台中，单击“管理”。  
 
 2.  你将配置尚未发现的新林。  
 

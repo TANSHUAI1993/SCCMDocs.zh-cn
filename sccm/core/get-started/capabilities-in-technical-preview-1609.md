@@ -1,25 +1,26 @@
 ---
-title: "Technical Preview 1609 中的功能"
+title: Technical Preview 1609 中的功能
 titleSuffix: Configuration Manager
-description: "了解 System Center Configuration Manager Technical Preview 版本 1609 中的可用功能。"
+description: 了解 System Center Configuration Manager Technical Preview 版本 1609 中的可用功能。
 ms.custom: na
 ms.date: 01/23/2017
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.topic: article
 ms.assetid: e2a59116-b2e5-4dd2-90eb-0b8a5eb50b56
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: erikje
 ms.author: erikje
 manager: angrobe
-ms.openlocfilehash: e1cceae5f73d003be2fe64df9e6dbaa7badaf0c7
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 4beca8479e5adbfa24b597769b792fd91bed9a2c
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="capabilities-in-technical-preview-1609-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1609 中的功能
 
@@ -27,13 +28,13 @@ ms.lasthandoff: 12/01/2017
 
 
 
-本文介绍了 System Center Configuration Manager Technical Preview 版本 1609 中的可用功能。 可以安装此版本以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。      在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。    
+本文介绍了 System Center Configuration Manager Technical Preview 版本 1609 中的可用功能。 你可以安装此版本，以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。      在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。    
 
 **此 Technical Preview 中的已知问题：**  
 *  升级到 Configuration Manager 1609 Technical Preview 时，将删除已部署的任何版本升级策略。 若要继续使用这些策略，则必须重新创建并部署它们。
 
 
-**以下是可以试用的此版本的新功能。**  
+**以下是此版本可以试用的新功能。**  
 
 ## <a name="improvements-to-endpoint-protection"></a>Endpoint Protection 的改进
 Endpoint Protection 反恶意软件策略设置的改进 - 现在可以指定 Endpoint Protection 云保护服务在其中阻止可疑文件的级别。 一个新的设置，可以使管理员根据计算机遇到的大量恶意软件指定“危险的”计算机。
@@ -95,7 +96,7 @@ Upgrade Analytics 使你能够评估和分析设备的准备情况以及与 Wind
 
 我们添加了许多新设置，你可以在配置项目中将这些设置用于各种设备平台。
 这些设置之前存在于 Microsoft Intune 的独立配置中，现在结合使用 Intune 和 Configuration Manager 时可以使用这些设置。
-如果需要有关任何这些设置的帮助，请打开[使用 Microsoft Intune 策略管理设备上的设置和功能](https://docs.microsoft.com/en-us/intune/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies)，然后选择所需的平台设置副标题。
+如果需要有关任何这些设置的帮助，请打开[使用 Microsoft Intune 策略管理设备上的设置和功能](https://docs.microsoft.com/intune/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies)，然后选择所需的平台设置副标题。
 
 
 ### <a name="new-settings-for-android-devices"></a>适用于 Android 设备的新设置

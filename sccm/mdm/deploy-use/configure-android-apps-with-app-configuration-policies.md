@@ -1,26 +1,27 @@
 ---
-title: "使用应用配置策略配置 Android for Work 应用"
+title: 使用应用配置策略配置 Android for Work 应用
 titleSuffix: Configuration Manager
-description: "通过在用户运行应用之前向其部署应用配置策略，帮助消除运行 Android for Work 的设备上的配置问题。"
+description: 通过在用户运行应用之前向其部署应用配置策略，帮助消除运行 Android for Work 的设备上的配置问题。
 ms.custom: na
 ms.date: 09/12/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-hybrid
+ms.technology:
+- configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9126d188-7780-45a4-b21d-7fcf4fad7da2
-caps.latest.revision: "0"
-caps.handback.revision: "0"
+caps.latest.revision: 0
+caps.handback.revision: 0
 author: NathBarn
 ms.author: NathBarn
 manager: angrobe
-ms.openlocfilehash: 79d1b3fed3baa74c8ad195925ccda35713cb8865
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 0b1d4993e6ddb2301121a1e32b1672425e919dea
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="apply-settings-to-android-for-work-apps-with-app-configuration-policies-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中将设置应用于使用应用配置策略的 Android for Work 应用
 
@@ -35,7 +36,7 @@ ms.lasthandoff: 10/12/2017
 如果用户设置输入错误，则修复它们的重担将落到支持人员身上，并且应用部署也将变慢。 为了帮助避免这类问题，可以使用应用配置策略在用户运行应用前先部署所需设置。 这些设置自动与用户关联。 用户无需采取任何操作。
 无需将配置策略直接部署到用户和设备，只需部署应用时将策略与部署类型关联。 每当应用检查是否存在策略设置时（通常是应用首次运行时），便应用这些策略设置。
 
-Android 应用配置政策仅适用于运行 Android for Work 的设备。 应用配置策略适用于已从 Play for Work 应用商店批准的应用。 有关批量采购 Android 应用的详细信息，请参阅[如何向 Android for Work 设备部署应用](https://docs.microsoft.com/en-us/intune/deploy-use/android-for-work-apps)。
+Android 应用配置政策仅适用于运行 Android for Work 的设备。 应用配置策略适用于已从 Play for Work 应用商店批准的应用。 有关批量采购 Android 应用的详细信息，请参阅[如何向 Android for Work 设备部署应用](https://docs.microsoft.com/intune/deploy-use/android-for-work-apps)。
 
 有关应用安装类型的详细信息，请参阅[应用程序管理简介](/sccm/apps/understand/introduction-to-application-management)。
 

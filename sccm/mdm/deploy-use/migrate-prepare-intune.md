@@ -1,21 +1,21 @@
 ---
-title: "准备 Intune 以进行用户迁移"
+title: 准备 Intune 以进行用户迁移
 titleSuffix: Configuration Manager
-description: "了解如何在 Azure 上准备 Intune，以便从混合 MDM 迁移用户。"
-keywords: 
+description: 了解如何在 Azure 上准备 Intune，以便从混合 MDM 迁移用户。
+keywords: ''
 author: dougeby
 manager: dougeby
 ms.date: 12/05/2017
 ms.topic: article
 ms.prod: configmgr-hybrid
-ms.service: 
-ms.technology: 
+ms.service: ''
+ms.technology: ''
 ms.assetid: db97ae9e-34f4-4e10-a282-cd211f612bb4
-ms.openlocfilehash: 226586f0ee42cdad98b1d74f25421685d85e0dcf
-ms.sourcegitcommit: 8c6e9355846ff6a73c534c079e3cdae09cf13c45
+ms.openlocfilehash: 8d636f2c46f3fa14fbc76a605d2cf55a2c0375c6
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="prepare-intune-for-user-migration"></a>准备 Intune 以进行用户迁移 
 
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/06/2017
 因为已配置目录数据同步，用户和组很可能已位于 AAD 中。 若要确保你的用户属于正确的用户组，建议对你的 Intune 用户组进行审阅。 使策略、配置文件、应用等面向这些组。 请确保迁移至 Intune 独立版的用户属于正确的组。 
 
 ## <a name="configure-role-based-administration-control-rbac"></a>配置基于角色的管理控制 (RBAC)
-作为迁移的一部分，请在 Intune 中配置所有必需的 RBAC 角色，并将用户分配至这些角色。 请注意，Configuration Manager 和 Intune 中的 RBAC 有所不同，例如资源的范围。 有关详细信息，请参阅 [Intune 中基于角色的管理控制 (RBAC)](https://docs.microsoft.com/en-us/intune/role-based-access-control)。
+作为迁移的一部分，请在 Intune 中配置所有必需的 RBAC 角色，并将用户分配至这些角色。 请注意，Configuration Manager 和 Intune 中的 RBAC 有所不同，例如资源的范围。 有关详细信息，请参阅 [Intune 中基于角色的管理控制 (RBAC)](https://docs.microsoft.com/intune/role-based-access-control)。
 
 ## <a name="assign-apps-and-policies-to-aad-groups"></a>将应用和策略分配至 AAD 组
 如果在迁移进程中已完成[将 Configuration Manager 数据导入 Microsoft Intune](migrate-import-data.md) 的阶段，将不同的 Configuration Manager 对象迁移到了 Intune，那么可能很多对象已分配至 AAD 组。 但是应验证是否所有对象（应用、策略、配置文件等）均已分配至正确的 AAD 组。 如果对象分配正确，用户设备会在用户迁移后自动配置，并且此迁移应对用户透明。 有关将对象分配至 AAD 组的详细信息，请参阅以下内容： 
@@ -62,7 +62,7 @@ PowerShell 脚本可帮助你做好准备，将 Exchange 设备从 Configuration
 ### <a name="steps-to-ensure-conditional-access-works-properly-after-user-migration"></a>确保用户迁移后正常进行条件访问的步骤
 迁移用户后，为使条件访问能正常运行并确保用户可以继续访问其电子邮件服务器，请确保满足以下条件：
 - 如果 Exchange ActiveSync 默认访问级别设置 (DefaultAccessLevel) 被设置为“阻止”或“隔离”，则设备可能会无法访问电子邮件。 
-- 如果 Exchange Connector 安装在 Configuration Manager 中，并且“移动设备未由规则管理时的访问级别”设置的值为“允许访问”，那么在迁移用户之前必须在 Intune 中安装[本地 Exchange Connector](https://docs.microsoft.com/en-us/intune/conditional-access-exchange-create#configure-exchange-on-premises-access)。 在 Intune 中“高级 Exchange ActiveSync 访问设置”的“Exchange 本地部署”边栏选项卡上配置默认访问级别设置。 有关详细信息，请参阅[配置 Exchange 本地访问](https://docs.microsoft.com/intune/conditional-access-exchange-create#configure-exchange-on-premises-access)。
+- 如果 Exchange Connector 安装在 Configuration Manager 中，并且“移动设备未由规则管理时的访问级别”设置的值为“允许访问”，那么在迁移用户之前必须在 Intune 中安装[本地 Exchange Connector](https://docs.microsoft.com/intune/conditional-access-exchange-create#configure-exchange-on-premises-access)。 在 Intune 中“高级 Exchange ActiveSync 访问设置”的“Exchange 本地部署”边栏选项卡上配置默认访问级别设置。 有关详细信息，请参阅[配置 Exchange 本地访问](https://docs.microsoft.com/intune/conditional-access-exchange-create#configure-exchange-on-premises-access)。
 - 为两个连接器使用相同的配置。 最新配置的连接器将覆盖以前由其他连接器写入的 ActiveSync 组织设置。 如果以不同的方式配置连接器，它可能导致意外的条件访问更改。
 - 用户迁移至 Intune 独立版后，从面向 Configuration Manager 的条件访问中删除这些用户。
 

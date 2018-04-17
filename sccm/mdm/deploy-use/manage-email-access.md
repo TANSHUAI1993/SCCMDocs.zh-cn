@@ -1,25 +1,26 @@
 ---
-title: "管理电子邮件访问权限"
+title: 管理电子邮件访问权限
 titleSuffix: Configuration Manager
-description: "了解如何使用 System Center Configuration Manager 条件访问管理对 Exchange 电子邮件的访问。"
+description: 了解如何使用 System Center Configuration Manager 条件访问管理对 Exchange 电子邮件的访问。
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-hybrid
+ms.technology:
+- configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fa648e73-5fb8-4818-ab57-7466ffaf888e
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: a83c2030de8a146dad7bf2258e8a983c8ab6c45e
-ms.sourcegitcommit: 922d6d9c91ba2158b938df381277be1b5f1d434a
+ms.openlocfilehash: e36674d27757daab9ced4e7e8b51942a4929b5ff
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-email-access-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中管理对电子邮件的访问
 
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/13/2017
 
 Office 桌面应用程序可以访问运行以下系统的电脑上的 Exchange Online：  
 
--   已启用 [新式身份验证](https://support.office.com/en-US/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a) 的 Office 桌面 2013及更高版本。  
+-   已启用 [新式身份验证](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a) 的 Office 桌面 2013及更高版本。  
 
 -   Windows 7.0 或 Windows 8.1  
 
@@ -171,7 +172,7 @@ Office 桌面应用程序可以访问运行以下系统的电脑上的 Exchange 
 #### <a name="for-exchange-online-and-tenants-in-the-new-exchange-online-dedicated-environment"></a>对于 Exchange Online（和新 Exchange Online Dedicated 环境中的租户）
 
 >[!NOTE]
->此外，还可在 Azure AD 管理控制台中创建条件访问策略。 除多重身份验证之类的其他条件访问策略之外，Azure AD 管理控制台还允许创建 Intune 设备条件访问策略（在 Azure AD 中称为基于设备的条件访问策略）。 还可为第三方企业应用（如 Azure AD 支持的 Salesforce 和 Box）设置条件访问策略。 有关详细信息，请参阅[如何设置基于 Azure Active Directory 设备的条件访问策略，用于控制对 Azure Active Directory 连接的应用程序的访问](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-policy-connected-applications/)。
+>此外，还可在 Azure AD 管理控制台中创建条件访问策略。 除多重身份验证之类的其他条件访问策略之外，Azure AD 管理控制台还允许创建 Intune 设备条件访问策略（在 Azure AD 中称为基于设备的条件访问策略）。 还可为第三方企业应用（如 Azure AD 支持的 Salesforce 和 Box）设置条件访问策略。 有关详细信息，请参阅[如何设置基于 Azure Active Directory 设备的条件访问策略，用于控制对 Azure Active Directory 连接的应用程序的访问](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-policy-connected-applications/)。
 
  Exchange Online 的条件访问策略使用下面的流来评估是允许还是阻止设备。  
 
@@ -185,7 +186,7 @@ Office 桌面应用程序可以访问运行以下系统的电脑上的 Exchange 
 
 -   在 Azure Active Directory 中注册设备（向 Intune 注册设备时会自动发生此情况）。  
 
-     对于加入域的电脑，必须将它设置为 [自动向 Azure Active Directory 注册设备](https://azure.microsoft.com/en-us/documentation/articles/active-directory-conditional-access-automatic-device-registration/) 。  
+     对于加入域的电脑，必须将它设置为 [自动向 Azure Active Directory 注册设备](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/) 。  
 
 -   已激活电子邮件，这会将设备的 Exchange ActiveSync ID 与 Azure Active Directory 中的设备记录相关联（仅适用于 iOS 和 Android 设备）。  
 
@@ -215,11 +216,11 @@ Office 桌面应用程序可以访问运行以下系统的电脑上的 Exchange 
 
 ##### <a name="to-enable-the-exchange-online-policy"></a>若要启用 Exchange Online 策略  
 
-1.  在 Configuration Manager 控制台中，单击“资产和符合性” 。  
+1.  在 Configuration Manager 控制台中，单击“资产和符合性”。  
 
 2.  展开“符合性设置” ，展开“条件性访问” ，然后单击“Exchange Online” 。  
 
-3.  在“主页”  选项卡的“链接”  组，单击“在 Intune 控制台中配置条件性访问策略” 。 可能需要提供用于将 Configuration Manager 与 Intune 服务的任何全局管理员相连接的帐户的用户名和密码。  
+3.  在“主页”选项卡的“链接”组，单击“在 Intune 控制台中配置条件性访问策略”。 可能需要提供用于将 Configuration Manager 与 Intune 服务的任何全局管理员相连接的帐户的用户名和密码。  
 
      随即将打开 Intune 管理控制台。  
 
@@ -301,7 +302,7 @@ Office 桌面应用程序可以访问运行以下系统的电脑上的 Exchange 
 
 ##### <a name="to-enable-the-exchange-on-premises-policy"></a>若要启用 Exchange 内部部署策略  
 
-1.  在 Configuration Manager 控制台中，单击“资产和符合性” 。  
+1.  在 Configuration Manager 控制台中，单击“资产和符合性”。  
 
 2.  展开“符合性设置” ，展开“条件性访问” ，然后单击“本地 Exchange” 。  
 

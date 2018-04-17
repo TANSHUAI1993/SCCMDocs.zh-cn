@@ -16,11 +16,11 @@ caps.latest.revision: 5
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: faa1a50b29fe4ba966812441243b81ee2d31b024
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 3f122dc7ba1bce5aaf8fe0ac6e4c75165a9b5a0b
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-and-deploy-windows-defender-application-guard-policy"></a>创建和部署 Windows Defender 应用程序防护策略 
 *适用范围：System Center Configuration Manager (Current Branch)*
@@ -29,7 +29,7 @@ ms.lasthandoff: 03/23/2018
 
 ## <a name="prerequisites"></a>先决条件
 
-若要创建和部署 Windows Defender 应用程序防护策略，必须使用 Windows 10 Fall Creator’s Update (1709)。 同样，必须使用网络隔离策略配置要部署此策略的 Windows 10 设备。 有关详细信息，请参阅 [Windows Defender 应用程序防护概述](https://docs.microsoft.com/en-us/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview)。 
+若要创建和部署 Windows Defender 应用程序防护策略，必须使用 Windows 10 Fall Creator’s Update (1709)。 同样，必须使用网络隔离策略配置要部署此策略的 Windows 10 设备。 有关详细信息，请参阅 [Windows Defender 应用程序防护概述](https://docs.microsoft.com/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview)。 
 
 
 ## <a name="create-a-policy-and-to-browse-the-available-settings"></a>若要创建策略，并浏览可用设置，请执行以下操作：

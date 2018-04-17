@@ -1,26 +1,27 @@
 ---
-title: "创建 Exchange ActiveSync 电子邮件配置文件"
+title: 创建 Exchange ActiveSync 电子邮件配置文件
 titleSuffix: Configuration Manager
-description: "了解如何在 System Center Configuration Manager 中创建和配置适用于 Microsoft Intune 的电子邮件配置文件。"
+description: 了解如何在 System Center Configuration Manager 中创建和配置适用于 Microsoft Intune 的电子邮件配置文件。
 ms.custom: na
 ms.date: 07/28/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-hybrid
+ms.technology:
+- configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 120442be-179e-450c-a0c4-284046895da3
-caps.latest.revision: "4"
-caps.handback.revision: "0"
+caps.latest.revision: 4
+caps.handback.revision: 0
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
-ms.openlocfilehash: 5fc0d5e68e27b3bde9ed3aa45a439c8b333da1d6
-ms.sourcegitcommit: 922d6d9c91ba2158b938df381277be1b5f1d434a
+ms.openlocfilehash: ab429e2702ab1595b035c8e2895dad584be4061a
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="exchange-activesync-email-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的 Exchange ActiveSync 电子邮件配置文件
 
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/13/2017
 - Samsung KNOX 标准版（4 和更高版本）
 - Android for Work
 
-若要向设备部署电子邮件配置文件，必须在 Intune 中注册这些设备。 有关如何注册设备的信息，请参阅 [使用 Microsoft Intune 管理移动设备](https://technet.microsoft.com/en-us/library/dn646962.aspx)。
+若要向设备部署电子邮件配置文件，必须在 Intune 中注册这些设备。 有关如何注册设备的信息，请参阅 [使用 Microsoft Intune 管理移动设备](https://technet.microsoft.com/library/dn646962.aspx)。
 
 > [!NOTE]
 > Intune 提供两个 Android for Work 电子邮件配置文件，分别用于 Gmail 电子邮件应用和 Nine Work 电子邮件应用。 这些应用在 Google Play 商店中提供，支持与 Exchange 的连接。 若要启用电子邮件连接，请将其中一个电子邮件应用部署到用户的设备，然后创建并部署相应的配置文件。 Nine Work 等电子邮件应用可能需付费使用。 若有任何问题，请查看应用的许可详细信息或与应用公司联系。

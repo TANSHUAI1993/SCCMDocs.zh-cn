@@ -1,25 +1,26 @@
 ---
-title: "使用 Windows Analytics 监视客户端"
+title: 使用 Windows Analytics 监视客户端
 titleSuffix: Configuration Manager
-description: "Windows Analytics 是在 Operations Management Suite 上运行的一组解决方案，借助这些解决方案，可以利用环境中的设备报告的 Windows 遥测数据获取关于环境当前状态的宝贵见解。"
+description: Windows Analytics 是在 Operations Management Suite 上运行的一组解决方案，借助这些解决方案，可以利用环境中的设备报告的 Windows 遥测数据获取关于环境当前状态的宝贵见解。
 ms.custom: na
 ms.date: 01/02/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-client
+ms.technology:
+- configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: CF35CE87-3BA8-4A84-9BC8-ABCEA4666212
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 6e0b6ec99755b89213b540f22315038911b8eb29
-ms.sourcegitcommit: f1535281b2c3fecff773b722c3f7590bf6ba10a0
+ms.openlocfilehash: 15b1d07f35f774f3ec8f082a86c90ecb989a438e
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-windows-analytics-with-configuration-manager"></a>结合使用 Windows Analytics 和 Configuration Manager
 
@@ -64,6 +65,6 @@ Windows Analytics 使用的 Windows 遥测数据不会直接传输到 Configurat
 
 ## <a name="use-windows-analytics-to-identify-gaps-in-windows-information-protection-policies"></a>使用 Windows Analytics 确定 Windows 信息保护策略中的缺口
 
-配置了 [Windows 信息保护](https://docs.microsoft.com/en-us/windows/threat-protection/windows-information-protection/protect-enterprise-data-using-wip) (WIP) 策略的 Windows 10 版本 1703 及更高版本的设备报告关于可访问环境中的公司数据，但不属于 WIP 策略应用程序规则考虑范围的应用程序的遥测数据。 用户可能需要这些应用程序来保持工作效率，但 WIP 阻止用户的访问。 知悉用户有权访问公司数据，有助于对 Configuration Manager 中的 Windows 信息保护策略进行维护。 
+配置了 [Windows 信息保护](https://docs.microsoft.com/windows/threat-protection/windows-information-protection/protect-enterprise-data-using-wip) (WIP) 策略的 Windows 10 版本 1703 及更高版本的设备报告关于可访问环境中的公司数据，但不属于 WIP 策略应用程序规则考虑范围的应用程序的遥测数据。 用户可能需要这些应用程序来保持工作效率，但 WIP 阻止用户的访问。 知悉用户有权访问公司数据，有助于对 Configuration Manager 中的 Windows 信息保护策略进行维护。 
 
 可以使用此 [Operations Management Suite 查询](https://go.microsoft.com/fwlink/?linkid=849952)访问该 Windows 信息保护数据。

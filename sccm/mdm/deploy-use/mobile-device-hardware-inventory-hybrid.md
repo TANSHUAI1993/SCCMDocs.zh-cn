@@ -1,25 +1,26 @@
 ---
-title: "配置移动设备的硬件清单"
+title: 配置移动设备的硬件清单
 titleSuffix: Configuration Manager
-description: "配置通过 Microsoft Intune 和 System Center Configuration Manager 注册的移动设备的硬件清单。"
+description: 配置通过 Microsoft Intune 和 System Center Configuration Manager 注册的移动设备的硬件清单。
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-hybrid
+ms.technology:
+- configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 78a0aecc-f775-451e-aa05-56377ec91b1f
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: c176955c3fcfe40f2089b84c50a982906b59f04d
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: c3dcb39b50293d5c221a1b8b13fcfbf8aa53ad83
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-configure-hardware-inventory-for-mobile-devices-enrolled-by-microsoft-intune-and-system-center-configuration-manager"></a>如何配置通过 Microsoft Intune 和 System Center Configuration Manager 注册的移动设备的硬件清单
 
@@ -27,7 +28,7 @@ ms.lasthandoff: 10/12/2017
 
 在 Configuration Manager 中，可以使用 Microsoft Intune 连接器收集 iOS、Android 和 Windows 设备上的硬件清单。 有关如何配置硬件清单的信息，请参阅[如何在 System Center Configuration Manager 中扩展硬件清单](../../core/clients/manage/inventory/extend-hardware-inventory.md)。  
 
- 若要了解如何在 Microsoft Intune 中注册设备的信息，请参阅[使用 Microsoft Intune 管理移动设备](https://technet.microsoft.com/en-us/library/dn646962.aspx)。  
+ 若要了解如何在 Microsoft Intune 中注册设备的信息，请参阅[使用 Microsoft Intune 管理移动设备](https://technet.microsoft.com/library/dn646962.aspx)。  
 
 ## <a name="hardware-inventory-for-mobile-devices"></a>移动设备的硬件清单  
  下表列出了跨常用移动平台可用于硬件清单的清单类。  
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/12/2017
 
 |硬件清单类|iOS|  
 |------------------------------|---------|  
-|Name|Device_ComputerSystem.DeviceName|  
+|名称|Device_ComputerSystem.DeviceName|  
 |唯一的设备 ID|Device_ComputerSystem.UDID|  
 |序列号|Device_ComputerSystem.SerialNumber|  
 |电子邮件地址|Device_Email.OwnerEmailAddress|  
@@ -64,7 +65,7 @@ ms.lasthandoff: 10/12/2017
 
 |硬件清单类|Android|  
 |------------------------------|-------------|  
-|Name|不适用|  
+|名称|不适用|  
 |唯一的设备 ID|不适用|  
 |序列号|Device_ComputerSystem.SerialNumber|  
 |电子邮件地址|不适用|  
@@ -89,7 +90,7 @@ ms.lasthandoff: 10/12/2017
 
 |硬件清单类|Windows Phone 8 和 Windows Phone 8.1|  
 |------------------------------|-------------------------------------------|  
-|Name|Device_ComputerSystem.DeviceName|  
+|名称|Device_ComputerSystem.DeviceName|  
 |唯一的设备 ID|Device_ComputerSystem.DeviceClientID|  
 |序列号|不适用|  
 |电子邮件地址|Device_Email.OwnerEmailAddress|  
@@ -114,7 +115,7 @@ ms.lasthandoff: 10/12/2017
 
 |硬件清单类|Windows RT|  
 |------------------------------|----------------|  
-|Name|Device_ComputerSystem.DeviceName|  
+|名称|Device_ComputerSystem.DeviceName|  
 |唯一的设备 ID|Device_ComputerSystem.DeviceName|  
 |序列号|不适用|  
 |电子邮件地址|Device_Email.OwnerEmailAddress|  

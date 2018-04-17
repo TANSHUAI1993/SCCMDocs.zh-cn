@@ -1,11 +1,12 @@
 ---
 title: Technical Preview 1706
 titleSuffix: Configuration Manager
-description: "了解在 System Center Configuration Manager 的 Technical Preview 1706 中的可用功能。"
+description: 了解在 System Center Configuration Manager 的 Technical Preview 1706 中的可用功能。
 ms.custom: na
 ms.date: 09/15/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -14,11 +15,11 @@ ms.assetid: ca3b4714-2a16-495e-8a17-1d87991d5556
 author: erikje
 ms.author: erikje
 manager: angrobe
-ms.openlocfilehash: cfb14ebb7b4f7eb9a008ad4464978778e57514a6
-ms.sourcegitcommit: d029b373113051634ed030545348a458eb7b25f4
+ms.openlocfilehash: 9b44f5659caca86150de68d43001c06d9d1a831f
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="capabilities-in-technical-preview-1706-for-system-center-configuration-manager"></a>在 System Center Configuration Manager 的 Technical Preview 1706 中的功能
 
@@ -106,7 +107,7 @@ ms.lasthandoff: 01/09/2018
 
 -   将运行被动模式站点服务器的计算机：
 
-    -   必须满足[安装主站点的先决条件](https://docs.microsoft.com/en-us/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#primary-sites-and-the-central-administration-site)。
+    -   必须满足[安装主站点的先决条件](https://docs.microsoft.com/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#primary-sites-and-the-central-administration-site)。
 
     -   使用与主动模式站点服务器的版本相匹配的源文件进行安装。
 
