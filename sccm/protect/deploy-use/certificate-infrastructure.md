@@ -1,26 +1,27 @@
 ---
-title: "配置证书基础结构"
+title: 配置证书基础结构
 titleSuffix: Configuration Manager
-description: "了解如何在 System Center Configuration Manager 中配置证书注册。"
+description: 了解如何在 System Center Configuration Manager 中配置证书注册。
 ms.custom: na
 ms.date: 07/25/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 29ae59b7-2695-4a0f-a9ff-4f29222f28b3
-caps.latest.revision: "7"
-caps.handback.revision: "0"
+caps.latest.revision: 7
+caps.handback.revision: 0
 author: lleonard-msft
 ms.author: alleonar
 manager: angrobe
 ms.openlocfilehash: 9ef62bbf6269a6090f2345b10c24cc4df16c1e3b
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 03/27/2018
 ---
 # <a name="configure-certificate-infrastructure"></a>配置证书基础结构
 
@@ -96,7 +97,7 @@ ms.lasthandoff: 10/12/2017
 
      有关详细信息，请参阅 TechNet 上 PKI 技术库中的 [Certificate Services Tools and Settings（证书服务工具和设置）](http://go.microsoft.com/fwlink/p/?LinkId=309015) 。  
 
-8.  使用下列链接作为示例，验证网络设备注册服务是否工作： **https://server.contoso.com/certsrv/mscep/mscep.dll**。 你应会看到内置的网络设备注册服务网页。 此网页说明服务是什么，并且说明了网络设备使用该 URL 来提交证书请求。  
+8.  验证网络设备注册服务是否正常工作，例如使用以下链接进行验证：https://server.contoso.com/certsrv/mscep/mscep.dll。 你应会看到内置的网络设备注册服务网页。 此网页说明服务是什么，并且说明了网络设备使用该 URL 来提交证书请求。  
 
  既然配置了网络设备注册服务和依赖关系，即可安装和配置证书注册点。
 
@@ -130,7 +131,7 @@ ms.lasthandoff: 10/12/2017
     -   如果选择“处理 SCEP 证书请求”，请配置以下内容：
         -   证书注册点的**网站名称**、**HTTPS 端口号**和**虚拟应用程序名称**。 这些字段使用默认值自动填充。 
         -   **网络设备注册服务和根 CA 证书的 URL** -单击“添加”，然后在“添加 URL 和根 CA 证书”对话框中，指定以下内容：
-            - **网络设备注册服务的 URL**：采用以下格式指定 URL：https://*<server_FQDN>*/certsrv/mscep/mscep.dll。 例如，如果运行网络设备注册服务的服务器的 FQDN 为 server1.contoso.com，请键入 **https://server1.contoso.com/certsrv/mscep/mscep.dll**。
+            - **网络设备注册服务的 URL**：采用以下格式指定 URL：https://*<server_FQDN>*/certsrv/mscep/mscep.dll。 例如，如果运行网络设备注册服务的服务器的 FQDN 为 server1.contoso.com，请输入 https://server1.contoso.com/certsrv/mscep/mscep.dll。
             - **根 CA 证书**：浏览到并选择你在 **步骤 1：安装和配置网络设备注册服务及依赖关系**中创建和保存的 .cer 证书文件。 此根 CA 证书允许证书注册点验证 System Center Configuration Manager 策略模块将使用的客户端身份验证证书。  
 
     - 如果选择了“处理 PFX 证书请求”，则要为所选证书颁发机构配置连接详细信息和凭据。
@@ -162,7 +163,7 @@ ms.lasthandoff: 10/12/2017
 
     -   在站点系统服务器上，使用 <ConfigMgr Installation Path\>\Logs\crpsetup.log 文件和 <ConfigMgr Installation Path\>\Logs\crpmsi.log 文件。 成功的安装将返回退出代码 0。  
 
-    -   使用浏览器验证是否能连接到证书注册点的 URL - 例如，https://server1.contoso.com/CMCertificateRegistration。 你应会看到应用程序名称的“服务器错误”  页，包含 HTTP 404 描述。  
+    -   通过使用浏览器验证是否可连接到证书注册点的 URL，例如 https://server1.contoso.com/CMCertificateRegistration。 你应会看到应用程序名称的“服务器错误”  页，包含 HTTP 404 描述。  
 
 11. 找到证书注册点在主站点服务器计算机上的下列文件夹中自动创建的根 CA 的已导出证书文件：<ConfigMgr Installation Path\>\inboxes\certmgr.box。 将此文件保存到你稍后在运行网络设备注册服务的服务器上安装 System Center Configuration Manager 策略模块时可安全访问的安全位置。  
 
@@ -190,7 +191,7 @@ ms.lasthandoff: 10/12/2017
 
 4.  在“安装文件夹”  页上，接受策略模块的默认安装文件夹或指定其他文件夹，然后单击“下一步” 。  
 
-5.  在“证书注册点”  页上，使用站点系统服务器的 FQDN 以及证书注册点属性中指定的虚拟应用程序名称来指定证书注册点的 URL。 默认虚拟应用程序名称为 CMCertificateRegistration。 例如，如果站点系统服务器的 FQDN 为 server1.contoso.com，并且你使用默认虚拟应用程序名称，请指定 **https://server1.contoso.com/CMCertificateRegistration**。  
+5.  在“证书注册点”  页上，使用站点系统服务器的 FQDN 以及证书注册点属性中指定的虚拟应用程序名称来指定证书注册点的 URL。 默认虚拟应用程序名称为 CMCertificateRegistration。 例如，如果站点系统服务器的 FQDN 为 server1.contoso.com，而你使用了默认的虚拟应用程序名称，则指定 https://server1.contoso.com/CMCertificateRegistration。  
 
 6.  接受默认端口“443”  ，或指定证书注册点正在使用的其他端口号，然后单击“下一步” 。  
 
@@ -201,7 +202,7 @@ ms.lasthandoff: 10/12/2017
     > [!NOTE]  
     >  如果之前未保存此证书文件，则该文件位于站点服务器计算机上的 <ConfigMgr Installation Path\>\inboxes\certmgr.box 中。  
 
-9. 单击“下一步”  并完成向导。  
+9. 单击“下一步”并完成向导。  
 
  如果想要卸载 System Center Configuration Manager 策略模块，请使用控制面板中的“程序和功能”。 
 

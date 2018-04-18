@@ -1,25 +1,26 @@
 ---
-title: "部署 Mac 客户端"
+title: 部署 Mac 客户端
 titleSuffix: Configuration Manager
-description: "了解如何在 System Center Configuration Manager 中将客户端部署到 Mac 计算机。"
+description: 了解如何在 System Center Configuration Manager 中将客户端部署到 Mac 计算机。
 ms.custom: na
 ms.date: 05/04/2017
 ms.prod: configuration-manager
 ms.reviewer: aaroncz
 ms.suite: na
-ms.technology: configmgr-client
+ms.technology:
+- configmgr-client
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e46ad501-5d73-44ac-92de-0de14ef72b83
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: arob98
 ms.author: angrobe
 manager: angrobe
 ms.openlocfilehash: 1b7f20a48e0e7219d933c367fb9f0315fc287dfd
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 03/27/2018
 ---
 # <a name="how-to-deploy-clients-to-macs"></a>How to deploy clients to Macs
 
@@ -198,7 +199,7 @@ ms.lasthandoff: 10/12/2017
 > -   Configuration Manager 客户端安装创建的物料清单 (BOM) 文件和属性列表 (.plist) 文件。  
 > -   /Library/Application Support/Microsoft/CCM/Logs 文件夹的内容。  
 >   
->  CmDiagnostics 收集的信息会添加到一个 zip 文件中，该文件将保存到计算机的桌面上并且名为 cmdiag-*<主机名\>***-***&gt;日期和时间\>*.zip。***
+>  CmDiagnostics 收集的信息会添加到一个 zip 文件中，该文件将保存到计算机的桌面上并且命名为 cmdiag-*<hostname\>***-***&gt;date and time\>*.zip。***
 
 
 ##  <a name="use-a-certificate-request-and-installation-method-that-is-independent-from-configuration-manager"></a>使用与 Configuration Manager 无关的证书请求和安装方法  

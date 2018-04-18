@@ -1,7 +1,7 @@
 ---
-title: "升级本地基础结构"
+title: 升级本地基础结构
 titleSuffix: Configuration Manager
-description: "了解如何升级基础结构（例如 SQL Server）和站点系统的站点操作系统。"
+description: 了解如何升级基础结构（例如 SQL Server）和站点系统的站点操作系统。
 ms.custom: na
 ms.date: 02/15/2018
 ms.prod: configuration-manager
@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8ca970dd-e71c-404f-9435-d36e773a0db2
-caps.latest.revision: 
-caps.handback.revision: 
+caps.latest.revision: 7
+caps.handback.revision: 0
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 8e17ffad2b972119c92e449bef8f086b950b106c
-ms.sourcegitcommit: fbd4a9d2fa8ed4ddd3a0fecc4a2ec4fc0ccc3d0c
+ms.openlocfilehash: 5c4403588872e426a9346e6c4c50f1853b75f4b9
+ms.sourcegitcommit: 27da4be015f1496b7b89ebddb517a2685f1ecf74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="upgrade-on-premises-infrastructure-that-supports-system-center-configuration-manager"></a>升级支持 System Center Configuration Manager 的本地基础结构
 
@@ -74,6 +74,8 @@ ms.lasthandoff: 02/19/2018
 -   确保用于托管站点系统角色的每个服务器继续满足所有在该服务器上运行的[站点系统角色的所有先决条件](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)。 例如，可能需要重新安装 BITS、WSUS 或为 IIS 配置特定设置。
 
 -   恢复缺少的先决条件后，再次重启该服务器，以确保所有服务已启动并可操作。
+
+-   如果要升级主站点服务器，请[运行站点重置](/sccm/core/servers/manage/modify-your-infrastructure#bkmk_reset)。
 
 **远程 Configuration Manager 控制台的已知问题：**  
 将托管 SMS_Provider 实例的站点服务器或服务器升级到 Windows Server 2016 后，管理员用户可能无法将 Configuration Manager 控制台连接到该站点。 若要解决此问题，必须手动还原 WMI 中 SMS 管理员组的权限。 必须在此站点服务器以及每个托管 SMS_Provider 实例的远程服务器上设置权限：

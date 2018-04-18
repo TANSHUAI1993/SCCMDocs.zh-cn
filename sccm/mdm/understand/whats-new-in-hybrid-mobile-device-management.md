@@ -1,9 +1,9 @@
 ---
-title: "混合 MDM 中的新增功能"
+title: 混合 MDM 中的新增功能
 titleSuffix: Configuration Manager
-description: "了解 Configuration Manager 和 Intune 的混合部署可用的新移动设备管理功能。"
+description: 了解 Configuration Manager 和 Intune 的混合部署可用的新移动设备管理功能。
 ms.custom: na
-ms.date: 03/01/2018
+ms.date: 03/28/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -15,11 +15,11 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3b48c5296caecd66b5abb6d40578af2009ef0f11
-ms.sourcegitcommit: 6e4fca19083b5dbdcd841012f6e1051bb7c00eb8
+ms.openlocfilehash: 3c3d1c813c307e520b3a9709187937f0d3f732c7
+ms.sourcegitcommit: 27da4be015f1496b7b89ebddb517a2685f1ecf74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Configuration Manager 和 Microsoft Intune 的混合移动设备管理中的新增功能
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 03/05/2018
 > [!Note]    
 > Azure 上的 Intune 是 Microsoft 建议的 MDM 解决方案。     
 > - 若有详细了解 Intune 独立版中的新增功能和更新，请参阅 [Intune 中的新增功能](https://docs.microsoft.com/intune/whats-new)。    
-> - 有关如何迁移到 Intune 独立版的详细信息，请参阅[将混合 MDM 用户和设备迁移到 Intune 独立版](https://docs.microsoft.com/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa)。
+> - 若要详细了解如何迁移到 Intune 独立版，请参阅[将混合 MDM 用户和设备迁移到 Intune 独立版](https://docs.microsoft.com/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa)。
 > - 有关 Intune 和混合 MDM 的 UI 更新的详细信息，请参阅 [Intune 最终用户应用的 UI 更新](https://docs.microsoft.com/intune/whats-new-app-ui)。 
 
 ##  <a name="compatibility-with-configuration-manager-versions"></a>与 Configuration Manager 版本的兼容性  
@@ -41,6 +41,16 @@ ms.lasthandoff: 03/05/2018
 |**Microsoft Intune 中的新增功能** | 一般情况下，此类别下列出的所有功能都应适用于所有 Configuration Manager 版本。 这包括 System Center 2012 R2 Configuration Manager 版本，因为这些功能仅需要 Intune 服务，不需要 Configuration Manager 中的其他功能。|
 |**Configuration Manager Technical Preview 中的新增功能**| 此类别下列出的所有功能仅适用于指定的 Technical Preview 版本。 若要试用这些功能，必须安装功能说明中指定的 Technical Preview 版本。 有关详细信息，请参阅 [System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)。|
 |**Configuration Manager (Current Branch) 中的新增功能**| 此类别下列出的所有功能仅适用于指定的 Configuration Manager (Current Branch) 版本，例如版本 1511 或 1602。 如果要为混合部署使用较旧版本的 Configuration Manager，则必须升级到功能说明中指定的 Configuration Manager (Current Branch) 版本。 有关详细信息，请参阅[升级到 System Center Configuration Manager](../../core/servers/deploy/install/upgrade-to-configuration-manager.md)。|
+
+
+
+## <a name="march-2018"></a>2018 年 3 月
+
+### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
+
+#### <a name="azure-active-directory-web-sites-can-require-the-intune-managed-browser-app-and-support-single-sign-on-for-the-managed-browser-public-preview"></a>Azure Active Directory 网站可能需要 Intune Managed Browser 应用，且支持 Managed Browser（公共预览版）的单一登录
+<!-- 710595 --> 
+利用 Azure Active Directory (Azure AD)，现可在移动设备上将网站访问限制为仅可访问 Intune Managed Browser 应用。 在 Managed Browser 中，网站数据可保持安全并且独立于最终用户的个人数据。 此外，Managed Browser 支持受 Azure AD 保护的站点的单一登录功能。 通过登录 Managed Browser，或在设备上搭配使用 Managed Browser 和 Intune 管理的其他应用，用户无需输入凭据，Managed Browser 即可访问受 Azure AD 保护的公司站点。 此功能适用于 Outlook Web Access (OWA) 和 SharePoint Online 等站点，以及通过 Azure 应用代理访问的其他公司站点（如 Intranet 资源）。
 
 
 
@@ -457,7 +467,36 @@ Configuration Manager (Current Branch) 1702 版本中还包括以下其他混合
 
 ## <a name="notices"></a>通知
 
-### <a name="company-portal-for-windows-81-and-windows-phone-81-moving-to-sustaining-mode"></a>适用于 Windows 8.1 和 Windows Phone 8.1 的公司门户将移至维护模式 
+### <a name="windows-company-portal-send-feedback-option-may-no-longer-work"></a>Windows 公司门户的“发送反馈”选项可能失效
+
+Windows 公司门户应用上有一个“发送反馈”选项，用户可用它向 Microsoft 发送应用反馈。 自 2018 年 4 月 30 日起，只有 Windows 10 版本 1607 及更高版本上运行的 Windows 10 公司门户应用才能继续使用此选项。   
+
+#### <a name="how-does-this-affect-me"></a>这会对我产生哪些影响？
+
+如果尚未为最终用户安装 Windows 公司门户应用，请忽略此消息。
+
+如果任一最终用户具备公司门户应用，请注意，自 4 月 30 日期，以下情形中的应用不可再使用“发送反馈”按钮：  
+
+ - Windows 10 版本 1507 和版本 1511 上的 Windows 10 公司门户应用  
+
+ - Windows Phone 8.1 公司门户应用  
+
+对于受影响的设备，“发送反馈”选项会失效，且重试后仍不能成功运行。 若要将上述平台的体验反馈发送给 Microsoft，可使用下述备用反馈通道。
+
+#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>我需要如何准备应对此项变化？
+
+请告知最终用户出现此项变化，并在必要时更新用户指南。 
+
+让在 Windows Phone 8.1、Windows 10 版本 1507 和 Windows 10 版本 1511 上使用公司门户的最终用户了解有两个备用反馈通道可用。 最终用户可：  
+
+- 使用 Windows 10 上的反馈中心应用  
+- 发送电子邮件至 WinCPfeedback@microsoft.com  
+
+要求使用 Windows 10 版本 1607 或更高版本的最终用户将 Windows 公司门户更新到 Microsoft Store 中的最新版。
+
+
+
+### <a name="company-portal-for-windows-81-and-windows-phone-81-moving-to-sustaining-mode"></a>适用于 Windows 8.1 和 Windows Phone 8.1 的公司门户将转为维护模式 
 <!--1428681-->
 *2017 年 10 月 6日*   
  

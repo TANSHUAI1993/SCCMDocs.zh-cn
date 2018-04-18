@@ -3,7 +3,7 @@ title: 客户端安装属性
 titleSuffix: Configuration Manager
 description: 了解用于安装 Configuration Manager 客户端的 ccmsetup 命令行属性。
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 03/28/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,11 +16,11 @@ caps.latest.revision: 15
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 057b078767a08574a806cb6af1cdb3812148a457
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 40e844fbb15a101574d9628648dde0db59c855c4
+ms.sourcegitcommit: aed99ba3c5e9482199cb3fc5c92f6f3a160cb181
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="about-client-installation-properties-in-system-center-configuration-manager"></a>关于 System Center Configuration Manager 中的客户端安装属性
 
@@ -250,7 +250,21 @@ CCMSetup 放弃下载客户端安装文件之前将尝试下载的时长（以�
 
 
 
-##  <a name="clientMsiProps"></a> client.msi 属性  
+## <a name="ccmsetupMsiProps"></a> Ccmsetup.msi 属性  
+ 下面的属性可修改 ccmsetup.msi 的安装行为。
+
+### <a name="ccmsetupcmd"></a>CCMSETUPCMD 
+
+指定由 ccmsetup.msi 安装 ccmsetup.exe 之后传递给 ccmsetup.exe 的命令行属性。 将其他属性括在引号内。 当使用 Intune MDM 安装方法启动 Configuration Manager 客户端时使用此属性。 
+
+示例：`ccmsetup.msi CCMSETUPCMD="/mp:https://mp.contoso.com CCMHOSTNAME=mp.contoso.com"`
+
+ > [!Tip]
+ > Microsoft Intune 将该命令行限制为 1024 个字符。 
+
+
+
+##  <a name="clientMsiProps"></a> Client.msi 属性  
  下面的属性可修改 client.msi 的安装行为。 如果使用客户端请求安装方法，则也可以在“客户端请求安装属性”  对话框的“客户端”  选项卡中指定这些属性。  
 
 
@@ -282,16 +296,16 @@ Azure 管理员可从 Azure 门户获取该属性的值。 在“Azure Active Di
 
 示例：`ccmsetup.exe AADTENANTID=607b7853-6f6f-4d5d-b3d4-811c33fdd49a`
 
+<!-- 
+### AADTENANTNAME
 
-### <a name="aadtenantname"></a>AADTENANTNAME
+Specifies the Azure AD tenant name. This tenant is linked to Configuration Manager when you [configure Azure services](/sccm/core/servers/deploy/configure/azure-services-wizard) for Cloud Management. To obtain the value for this property, use the following steps:
+- On a Windows 10 device that is joined to the same Azure AD tenant, open a command prompt.
+- Run the following command: `dsregcmd.exe /status`
+- In the Device State section, find the **TenantName** value. For example, `TenantName : Contoso`
 
-指定 Azure AD 租户名称。 为云管理[配置 Azure 服务](/sccm/core/servers/deploy/configure/azure-services-wizard)时，此租户会链接到 Configuration Manager。 要获取此属性的值，请按以下步骤操作：
-- 在加入同一 Azure AD 租户的 Windows 10 设备上，打开命令提示符。
-- 运行以下命令：`dsregcmd.exe /status`
-- 在“设备状态”部分中，找到 TenantName 值。 例如 `TenantName : Contoso`
-
-示例：`ccmsetup.exe AADTENANTNAME=Contoso`
-
+Example: `ccmsetup.exe AADTENANTNAME=Contoso`
+-->
 
 ### <a name="ccmadmins"></a>CCMADMINS  
 

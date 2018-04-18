@@ -17,11 +17,11 @@ caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 42b9364fc88acc3f403db8d2ca9243a117fd78bf
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: bd03457abdd5cc4464c10227626ba72637c96f90
+ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="about-client-settings-in-system-center-configuration-manager"></a>关于 System Center Configuration Manager 中的客户端设置
 
@@ -801,8 +801,9 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
 当此设置为“是”时，它将启用 Office 365 安装设置配置。 还可以从 Office 内容传送网络 (CDN) 下载文件，以及将文件部署为 Configuration Manager 中的应用程序。 有关详细信息，请参阅[管理 Office 365 专业增强版](/sccm/sum/deploy-use/manage-office-365-proplus-updates)。
 
+### <a name="enable-third-party-software-updates"></a>启用第三方软件更新 
 
-
+如果将此选项设置为“是”，它将设置“允许 Intranet Microsoft 更新服务位置的签名更新”策略，并将签名证书安装到客户端上受信任的发布者库。 此客户端设置已添加到 Configuration Manager 1802 版中。
 ## <a name="state-messaging"></a>状态消息
 
 ### <a name="state-message-reporting-cycle-minutes"></a>状况消息报告周期（分钟）

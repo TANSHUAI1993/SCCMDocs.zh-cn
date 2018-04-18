@@ -1,7 +1,7 @@
 ---
-title: "使用移动应用程序管理策略保护应用"
+title: 使用移动应用程序管理策略保护应用
 titleSuffix: Configuration Manager
-description: "修改部署的应用的功能，使它们符合公司的合规性和安全策略。"
+description: 修改部署的应用的功能，使它们符合公司的合规性和安全策略。
 ms.custom: na
 ms.date: 11/20/2017
 ms.prod: configuration-manager
@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 28115475-e563-4e16-bf30-f4c9fe704754
-caps.latest.revision: 
-caps.handback.revision: 
+caps.latest.revision: 18
+caps.handback.revision: 0
 author: dougeby
 ms.author: dougeby
 manager: angrobe
 ms.openlocfilehash: 3365f46026178d30c9bffa5078d251186d0ffba3
-ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
+ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/27/2018
 ---
 # <a name="protect-apps-using-mobile-application-management-policies-in-system-center-configuration-manager"></a>使用 System Center Configuration Manager 中的移动应用程序管理策略保护应用
 
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/21/2017
 
 -   **获取策略托管应用的链接**：从应用商店查找并记录要部署的策略托管应用的 URL。  
 
-     例如，Microsoft Word for iPad 应用的 URL 是 **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**  
+     例如，Microsoft Word for iPad 应用的 URL 是 https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8  
 
 -   **创建包装的应用** - 使用主题[使用 Microsoft Intune 应用包装工具为移动应用程序管理准备 iOS 应用](https://technet.microsoft.com/library/dn878028.aspx)和[使用 Microsoft Intune 应用包装工具为移动应用程序管理准备 Android 应用](https://technet.microsoft.com/library/mt147413.aspx)中的信息创建包装的应用。  
 

@@ -17,11 +17,11 @@ caps.handback.revision: 0
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 29806161b29b87834c0cb4b1e478d92bff7a7b3c
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 19bb8b2c4e47dcc8a75db568e7f93541544a4566
+ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>从 Configuration Manager 控制台创建并运行 PowerShell 脚本
 
@@ -70,10 +70,6 @@ System Center Configuration Manager 具有运行 Powershell 脚本的集成功�
 >[!WARNING]
 >请注意，使用参数时会打开外围应用，可能存在 PowerShell 注入攻击风险。 可通过多种方法缓解和解决此问题，例如，使用正则表达式验证参数输入或使用预定义参数。 常见最佳做法是不在 PowerShell 脚本 中包含机密（不包含密码等）。 [详细了解 PowerShell 脚本安全性](/sccm/apps/deploy-use/learn-script-security)<!--There are external tools available to validate your PowerShell scripts such as the [PowerShell Injection Hunter](https://www.powershellgallery.com/packages/InjectionHunter/1.0.0) tool. -->
 
-
-## <a name="group-policy-considerations-for-scripts"></a>脚本的组策略注意事项
-<!--While running scripts on devices, Configuration Manager sets policy to allow local scripts and remote signed scripts.--> 
-通过组策略设置执行策略可能不允许脚本与 Configuration Manager 一起运行。 有关执行策略和如何设置执行策略的信息，请参阅文章[关于执行策略](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_execution_policies)。 <!--507185-->
 
 ## <a name="run-script-authors-and-approvers"></a>“运行脚本”的创建者和审批者
 
@@ -278,6 +274,10 @@ Write-Output (Get-WmiObject -Class Win32_operatingSystem).Caption
 - 收到未知结果或客户端脱机的脚本不会在图表或数据集中显示。 <!--507179-->
 - 由于脚本输出截断为 4 KB，因此请避免返回大型脚本输出。 <!--508488-->
 - 在低级别版本的客户端上运行 Configuration Manager 1802 版或更高版本时，某些脚本输出格式设置功能可能不可用。 <!--508487-->
+    - 如果 Configuration Manager 客户端版本低于 1802，你会得到一个字符串输出。
+    -  对于 Configuration Manager 客户端 1802 及更高版本，你会得到 JSON 格式。
+        - 例如，你可能得到两个结果，在一个客户端版本上显示 TEXT，在另一个版本上显示 "TEXT"（输出括在双引号中），这两个结果将作为两个不同的类别放入图表中。
+        - 如果需要解决此问题，请考虑针对两个不同的集合运行脚本。 一个集合包含 1802 以前的客户端，另一个集合包含 1802 及更高版本的客户端。 或者，你可以将脚本中的枚举对象转换为字符串值，以便它们以 JSON 格式正确显示。 
 - 将脚本中的枚举对象转换为字符串值，以便它们以 JSON 格式正确显示。 <!--508377-->![将枚举对象转换为字符串值](./media/run-scripts/enum-tostring-JSON.png)
 
 

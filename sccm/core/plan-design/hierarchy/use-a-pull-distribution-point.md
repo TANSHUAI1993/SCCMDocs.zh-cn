@@ -1,25 +1,26 @@
 ---
-title: "请求分发点"
+title: 请求分发点
 titleSuffix: Configuration Manager
-description: "了解通过 System Center Configuration Manager 使用请求分发点的配置和限制相关信息。"
+description: 了解通过 System Center Configuration Manager 使用请求分发点的配置和限制相关信息。
 ms.custom: na
 ms.date: 2/14/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7d8f530b-1a39-4a9d-a2f0-675b516da7e4
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: b4acf5753c8629bcd0f4e2ef5a97bfcb570e9d24
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+ms.openlocfilehash: 3ef93ae505c2af709a3bd1e6a0e7a278993a77ff
+ms.sourcegitcommit: 27da4be015f1496b7b89ebddb517a2685f1ecf74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="use-a-pull-distribution-point-with-system-center-configuration-manager"></a>将请求分发点用于 System Center Configuration Manager
 
@@ -45,14 +46,37 @@ System Center Configuration Manager 的请求分发点是一个标准分发点�
 
 -   将内容分发到请求分发点后，站点服务器上的包传输管理器将立即检查站点数据库，以确认内容在源分发点上是否可用。 如果它无法确认内容位于请求分发点的源分发点上，则会每隔 20 分钟重复检查一次，直至内容可用为止。  
 
--   当包传输管理器确认内容可用后，它将通知请求分发点下载内容。 请求分发点收到此通知后，将尝试从其源分发点下载内容。  
+-   当包传输管理器确认内容可用后，它将通知请求分发点下载内容。 如果此通知失败，它将根据请求分发点的软件分发组件“重试设置”进行重试。 请求分发点收到此通知后，将尝试从其源分发点下载内容。  
 
--   请求分发点完成内容下载后，会将此状态提交到管理点。 但是，如果在 60 分钟后未收到此状态，则包传输管理器将唤醒，并与请求分发点核对以确认请求分发点是否已下载了内容。 如果内容下载正在进行，则包传输管理器将休眠 60 分钟，之后再次与请求分发点核对。 此循环将持续，直至请求分发点完成内容传输。  
+-   在请求分发点下载内容时，包传输管理器将根据请求分发点的软件分发组件“状态轮询设置”轮询状态。  在请求分发点完成内容下载后，它会将此状态提交到管理点。
 
 在安装分发点时或在安装分发点后，你可以通过编辑分发点站点系统角色的属性来**配置请求分发点** 。  
 
 通过编辑分发点属性，可以删除**要成为请求分发点的配置**。 删除请求分发点配置后，分发点将恢复正常操作，并且站点服务器将管理以后将内容传输到分发点的方式。  
 
+## <a name="to-configure-software-distribution-component-for-pull-distribution-points"></a>配置请求分发点的软件分发组件
+
+1.  在 Configuration Manager 控制台中，选择“管理” > “站点”。  
+
+2.  选择所需的站点，然后选择“配置站点组件” > “软件分发”
+
+3. 选择“请求分发点”选项卡。  
+
+4.  在“重试设置”列表中，配置以下值：  
+
+    -   **重试次数**：包传输管理器尝试通知请求分发点下载内容的次数。  如果超过该次数，包传输管理器将取消传输。
+
+    -   **重试前的延迟(分钟)**：包传输管理器在两次尝试之间等待的分钟数。 
+
+5.  在“状态轮询设置”列表中，配置以下值：  
+
+    -   **轮询次数**：包传输管理器联系请求分发点以检索作业状态的次数。  如果在作业完成之前超过此次数，包传输管理器将取消传输。
+
+    -   **重试前的延迟(分钟)**：包传输管理器在两次尝试之间等待的分钟数。 
+    
+    > [!NOTE]  
+    >  当包传输管理器由于超过状态轮询重试次数而取消作业时，请求分发点将继续下载内容。  在它完成后，相应的状态消息会发送到包传输管理器，控制台将反映新状态。
+    
 ## <a name="limitations-for-pull-distribution-points"></a>请求分发点的限制  
 
 -   无法将基于云的分发点配置为请求分发点。  
@@ -61,12 +85,12 @@ System Center Configuration Manager 的请求分发点是一个标准分发点�
 
 -   **预留内容配置覆盖请求分发点配置**。 为预留内容配置的请求分发点将等待该内容。 它不会从源分发点中请求内容，并且，与具有预留内容配置的标准分发点相似，它也不会从站点服务器接收内容。  
 
--   请求分发点在传输内容时**不使用速率限制配置** 。 如果将以前安装的分发点配置为请求分发点，则会保存速率限制配置，但不使用此配置。 如果在以后删除请求分发点配置，则会实现以前配置的速率限制配置。  
+-   请求分发点在传输内容时**不使用计划或速率限制配置**。 如果将以前安装的分发点配置为请求分发点，则会保存计划和速率限制配置，但不使用这些配置。 如果在以后删除请求分发点配置，则会实现以前配置的计划和速率限制配置。  
 
     > [!NOTE]  
-    >  如果分发点配置为请求分发点，则在该分发点的属性中看不到“速率限制”  选项卡。  
+    >  如果分发点配置为请求分发点，则在该分发点的属性中看不到“计划”和“速率限制”选项卡。  
 
--   请求分发点不会为内容分发使用“重试设置”  。 可以为每个站点将“重试设置” 配置为“软件分发组件属性”  的一部分。 若要查看或配置这些属性，请在 Configuration Manager 控制台的“管理”工作区中展开“站点配置”，然后选择“站点”。 接着，在结果窗格中选择站点，然后在“主页”选项卡上选择“配置站点组件”。 最后，选择“软件分发”。  
+-   请求分发点不使用每个站点的“软件分发组件属性”的“常规”选项卡上的设置。  这包括“并发分发”和“多播重试”设置。  请使用“请求分发点”选项卡来配置请求分发点的设置。
 
 -   要从远程林内的源分发点中传输内容，则必须在承载请求分发点的计算机上安装 Configuration Manager 客户端。 必须配置为使用可以访问源分发点的网络访问帐户。  
 

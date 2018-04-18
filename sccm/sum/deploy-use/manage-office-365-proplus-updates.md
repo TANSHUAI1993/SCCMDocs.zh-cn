@@ -6,18 +6,18 @@ keywords: ''
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 03/22/2018
+ms.date: 03/26/2018
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: ''
 ms.technology:
 - configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
-ms.openlocfilehash: 5bd1a3afd7957e4db1b43e344a7b88e18de50695
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 4fbbe4b6792c51cd7adeeae3a96f81927153362c
+ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="manage-office-365-proplus-with-configuration-manager"></a>使用 Configuration Manager 管理 Office 365 ProPlus
 
@@ -174,6 +174,17 @@ Office 365 客户端管理仪表板中显示的数据来自硬件清单。 启�
 11. 现在，如果下载 Office 365 更新，将下载在向导中选择的语言的更新，并在此过程中配置更新。 若要验证是否下载了正确语言的更新，请转到更新的包源，再查找文件名中包含语言代码的文件。  
 ![使用其他语言的文件名](..\media\5-verification.png)
 
+## <a name="updating-office-365-during-task-sequences-when-office-365-is-installed-in-the-base-image"></a>在基础映像中安装 Office 365 后，在任务序列期间更新 Office 365
+当你安装已在映像中安装 Office 365 的操作系统时，更新通道注册表项值可能包含原始安装位置。 在这种情况下，更新扫描不会显示任何适用的 Office 365 客户端更新。 计划的 Office 自动更新任务每周运行几次。 该任务运行后，更新通道将指向已配置的 Office CDN URL，随后，扫描将显示这些适用的更新。 <!--510452-->
+
+若要确保通过设置更新通道找到适用的更新，请执行以下步骤：
+1. 在具有与 OS 基础映像相同 Office 365 版本的计算机上，打开任务计划程序 (taskschd.msc) 并标识 Office 365 自动更新任务。 它通常位于“任务计划程序库” >“Microsoft”>“Office”下。
+2. 右键单击自动更新任务，选择“属性”。
+3. 转到“操作”选项卡，单击“编辑”。 复制命令和所有参数。 
+4. 在 Configuration Manager 控制台中，编辑你的任务序列。
+5. 在任务序列中“安装更新”步骤的前面添加新的“运行命令行”步骤。 
+6. 复制从 Office 自动更新计划任务收集的命令和参数。 
+7. 单击" **确定**"。 
 
 ## <a name="change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager"></a>在使 Office 365 客户端可从 Configuration Manager 接收更新后更改更新频道
 若要在将 Office 365 客户端启用为从 Configuration Manager 接收更新后更改更新频道，请使用组策略向 Office 365 客户端分发注册表项值更改。 更改 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration\CDNBaseUrl** 注册表项以使用以下值之一：

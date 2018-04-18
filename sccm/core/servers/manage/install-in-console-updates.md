@@ -3,7 +3,7 @@ title: 控制台中更新
 titleSuffix: Configuration Manager
 description: 从 Microsoft 云安装 Configuration Manager 更新
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 03/28/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -16,11 +16,11 @@ caps.latest.revision: 36
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 5d364e35c8777c782499da978f0d1a31694278cc
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 054bbd8e7b1dd3f5d565afe60eb7e3379cc7a9ee
+ms.sourcegitcommit: aed99ba3c5e9482199cb3fc5c92f6f3a160cb181
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="install-in-console-updates-for-system-center-configuration-manager"></a>为 System Center Configuration Manager 安装控制台内部更新
 
@@ -217,6 +217,10 @@ Configuration Manager 与 Microsoft 云服务同步，以获取更新。 随后�
 建议立即安装更新。  
 
 控制台更新完成之后，可以验证控制台和站点版本是否正确。 转至控制台左上角的“关于 System Center Configuration Manager”。  
+
+ > [!Note]  
+ > 从 1802 版开始，控制台版本现在与站点版本略有不同。 控制台的次要版本现在对应于 Configuration Manager 发行版。 例如，在 Configuration Manager 1802 版中，初始站点版本为 5.0.8634.1000，初始控制台版本为 5.**1802**.1082.1700。 内部版本号 (1082) 和修订版本号 (1700) 可能会随 1802 发行版的未来修补程序而变化。
+
 
 
 ###  <a name="bkmk_toptier"></a> 在顶层站点上启动更新安装  

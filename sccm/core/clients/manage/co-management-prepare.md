@@ -1,45 +1,46 @@
 ---
-title: 准备 Windows 10 设备进行共同管理
+title: 准备 Windows 10 进行共同管理
+titleSuffix: Configuration Manager
 description: 了解如何准备 Windows 10 设备进行共同管理。
-keywords: ''
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 03/22/2018
+ms.date: 03/28/2018
 ms.topic: article
 ms.prod: configuration-manager
 ms.service: ''
 ms.technology: ''
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: 61aef0351e32ef6cf31911a8dfd27e86de82f38c
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: a45ded0f3824c148f64f9578e51cc112c05d9f78
+ms.sourcegitcommit: aed99ba3c5e9482199cb3fc5c92f6f3a160cb181
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="prepare-windows-10-devices-for-co-management"></a>准备 Windows 10 设备进行共同管理
-可对已联接 AD 和 Azure AD 并在 Intune 中注册的 Windows 10 设备和 Configuration Manager 中的客户端启用共同管理。 对于新的 Windows 10 设备和已在 Intune 中注册的设备，请在可以进行共同管理前先安装 Configuration Manager 客户端。 对于已属于 Configuration Manager 客户端的 Windows 10 设备，可向 Intune 注册设备并在 Configuration Manager 控制台中启用共同管理。
+可对已加入 AD 和 Azure AD 并在 Microsoft Intune 中注册的 Windows 10 设备和 Configuration Manager 中的客户端启用共同管理。 对于新的 Windows 10 设备和已在 Intune 中注册的设备，请在可以进行共同管理前先安装 Configuration Manager 客户端。 对于已属于 Configuration Manager 客户端的 Windows 10 设备，可向 Intune 注册设备并在 Configuration Manager 控制台中启用共同管理。
 
 > [!IMPORTANT]
 > Windows 10 移动设备不支持共同管理。
 
+
+
 ## <a name="command-line-to-install-configuration-manager-client"></a>安装 Configuration Manager 客户端的命令行
 在适用于 Windows 10 设备（还不是 Configuration Manager 客户端）的 Intune 中创建应用。 在下一节中创建应用时，请使用以下命令行：
 
-ccmsetup.msi CCMSETUPCMD="/mp:<云管理网关相互身份验证终结点 URL>/ CCMHOSTNAME=<云管理网关相互身份验证终结点 URL> SMSSiteCode=<站点代码> SMSMP=https://<MP 的 FQDN> AADTENANTID=<AAD 租户 ID> AADTENANTNAME=<租户名> AADCLIENTAPPID=<AAD 集成的 Server AppID> AADRESOURCEURI=https://<资源 ID>”
+`ccmsetup.msi CCMSETUPCMD="/mp:<URL of cloud management gateway mutual auth endpoint> CCMHOSTNAME=<URL of cloud management gateway mutual auth endpoint> SMSSiteCode=<Sitecode> SMSMP=https://<FQDN of MP> AADTENANTID=<AAD tenant ID> AADCLIENTAPPID=<Server AppID for AAD Integration> AADRESOURCEURI=https://<Resource ID>"`
 
 例如，如果具有以下值：
 
-- 云管理网关相互身份验证终结点 URL：https://contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100    
+- **云管理网关相互身份验证终结点 URL**：https:/&#47;contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500    
 
    >[!Note]    
    >对于云管理网关相互身份验证终结点 URL 值，使用 vProxy_Roles SQL 视图中的 MutualAuthPath 值。
 
-- 管理点 (MP) 的 FQDN：sccmmp.corp.contoso.com    
+- **管理点 (MP) 的 FQDN**：mp1.contoso.com    
 - 站点代码：PS1    
-- Azure AD 租户 ID：72F988BF-86F1-41AF-91AB-2D7CD011XXXX    
-- Azure AD 租户名称：contoso    
-- Azure AD 客户端应用 ID：bef323b3-042f-41a6-907a-f9faf0d1XXXX     
+- **Azure AD 租户 ID**：daf4a1c2-3a0c-401b-966f-0b855d3abd1a    
+- **Azure AD 客户端应用 ID**：7506ee10-f7ec-415a-b415-cd3d58790d97     
 - AAD 资源 ID URI：ConfigMgrServer    
 
   > [!Note]    
@@ -47,7 +48,7 @@ ccmsetup.msi CCMSETUPCMD="/mp:<云管理网关相互身份验证终结点 URL>/ 
 
 将使用以下命令行：
 
-ccmsetup.msi CCMSETUPCMD="/mp:https://contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100    CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100 SMSSiteCode=PS1 SMSMP=https://sccmmp.corp.contoso.com AADTENANTID=72F988BF-86F1-41AF-91AB-2D7CD011XXXX AADTENANTNAME=contoso  AADCLIENTAPPID=bef323b3-042f-41a6-907a-f9faf0d1XXXX AADRESOURCEURI=https://ConfigMgrServer”
+`ccmsetup.msi CCMSETUPCMD="/mp:https://contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500    CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=PS1 SMSMP=https://mp1.contoso.com AADTENANTID=daf4a1c2-3a0c-401b-966f-0b855d3abd1a AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://ConfigMgrServer"`
 
 > [!Tip]
 > 可通过使用以下步骤查找站点的命令行参数：     

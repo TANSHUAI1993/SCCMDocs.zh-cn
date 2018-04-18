@@ -1,25 +1,26 @@
 ---
-title: "管理移动设备 "
+title: '管理移动设备 '
 titleSuffix: Configuration Manager
-description: "通过在 System Center Configuration Manager 中使用 Exchange Server 连接器来管理移动设备。"
+description: 通过在 System Center Configuration Manager 中使用 Exchange Server 连接器来管理移动设备。
 ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-hybrid
+ms.technology:
+- configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: aba688d9-fd5b-4c42-8cb4-f7e1b161ef50
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: andredm7
 ms.author: andredm
 manager: angrobe
-ms.openlocfilehash: ff7fef664780730510f17d723a1d13ca691405af
-ms.sourcegitcommit: 0a6b2c53ff4445b5d4f3638fdb0b489d54e333d3
+ms.openlocfilehash: 23073ff562e1ca533e196fff0415efc0451d6fee
+ms.sourcegitcommit: 27da4be015f1496b7b89ebddb517a2685f1ecf74
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="manage-mobile-devices-with-system-center-configuration-manager-and-exchange"></a>使用 System Center Configuration Manager 和 Exchange 管理移动设备
 
@@ -107,6 +108,12 @@ ms.lasthandoff: 12/14/2017
     -   **New-ActiveSyncMailboxPolicy**  
 
     -   **Remove-ActiveSyncDevice**  
+    
+    -   **Get-CasMailbox**  
+    
+    -   **Get-User**  
+    
+    -   **Set-ActiveSyncOrganizationSettings**  
 
     > [!NOTE]  
     >  以下 Exchange Server 管理角色包括这些 cmdlet：“收件人管理”、“仅限查看组织管理”和“服务器管理”。 有关 Microsoft Exchange Server 2010 中的管理角色组的详细信息，请参阅 [了解管理角色组](http://go.microsoft.com/fwlink/p/?LinkId=212914)。  

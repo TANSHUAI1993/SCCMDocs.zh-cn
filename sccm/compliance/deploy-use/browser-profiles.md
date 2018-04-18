@@ -5,17 +5,17 @@ description: 在 Windows 10 客户端上配置 Microsoft Edge Web 浏览器设�
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 03/22/2018
+ms.date: 03/28/2018
 ms.topic: article
 ms.prod: configuration-manager
 ms.technology:
 - configmgr-other
 ms.assetid: 76477b4d-df41-4b25-8318-7d18d46ca2c6
-ms.openlocfilehash: 57393c00faa0cc26d785d91ad1c6ecb9407ba5da
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: cb162e030249b02018af52ad3266b6b8df5ce355
+ms.sourcegitcommit: aed99ba3c5e9482199cb3fc5c92f6f3a160cb181
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="configure-microsoft-edge-settings-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中配置 Microsoft Edge 设置
 
@@ -24,6 +24,7 @@ ms.lasthandoff: 03/23/2018
 <!-- 1357310 -->
 从 1802 版开始，在 Windows 10 客户端上使用 [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb265256) Web 浏览器的客户，可创建 Configuration Manager 符合性设置策略，以配置多个 Microsoft Edge 设置。 
 
+此策略仅适用于 Windows 10 1703 或更高版本上的客户端。 <!--511552-->
 
 
 ## <a name="policy-settings"></a>策略设置

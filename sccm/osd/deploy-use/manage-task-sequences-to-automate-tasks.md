@@ -16,11 +16,11 @@ caps.latest.revision: 10
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 5ec9266f33b318ac9c42f86840ebd7ac59713bdf
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 262bfa3991bbd95fad779da9520358d527a42b07
+ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="manage-task-sequences-to-automate-tasks-in-system-center-configuration-manager"></a>管理任务序列以在 System Center Configuration Manager 中自动执行任务
 
@@ -251,7 +251,14 @@ ms.lasthandoff: 03/23/2018
         >     - 如果集合包含服务器  
 
     -   备注（可选）：指定描述此任务序列部署的其他信息。  
-    - **选择部署模板**：从 Configuration Manager 1802 版开始，可以为任务序列保存和指定部署模板。 <!--1357391-->
+    - **选择部署模板**：从 Configuration Manager 1802 版开始，<!--1357391-->可以为任务序列保存和指定部署模板。     
+
+         > [!IMPORTANT]
+         > 在 Configuration Manager 1802 版中，某些项目未保存在模板中。  <!--510610--> 确保在运行部署向导时应用以下各项：
+         > - 软件安装 
+         > - 计划 
+         > - 预下载内容
+ 
 6.  在“部署设置”页上，指定以下信息，然后单击“下一步”。  
 
     -   目的：从下拉列表中，选择以下选项之一：  

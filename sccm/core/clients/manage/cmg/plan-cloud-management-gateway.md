@@ -10,11 +10,11 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 614c5ba3acb81f90a75726e8783125fb53a39a93
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: dabc248c1788ecad4d7b25c0a1f592e0ddeef826
+ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>在 Configuration Manager 中规划云管理网关
 
@@ -23,7 +23,7 @@ ms.lasthandoff: 03/23/2018
 云管理网关 (CMG) 提供一种简单的方法来管理 Internet 上的 Configuration Manager 客户端。 将 CMG 部署为 Microsoft Azure 中的云服务，即可管理在 Internet 上漫游的传统客户端，无需其他基础结构。 也不需要将本地基础结构向 Internet 公开。 
 
 > [!Tip]  
-> 此功能在 1610 版本中首次引入，属于[预发行功能](/sccm/core/servers/manage/pre-release-features)。 从版本 1802 开始，此功能不再属于预发行功能。
+> 此功能在 1610 版本中首次引入，属于[预发行功能](/sccm/core/servers/manage/pre-release-features)。 从 1802 版开始，此功能不再属于预发行功能。
 
 建立先决条件后，通过在 Configuration Manager 控制台中执行以下三个步骤创建 CMG：
 1. 将 CMG 云服务部署到 Azure。
@@ -155,7 +155,7 @@ CMG 向导仍提供使用 Azure 管理证书的“经典服务部署”选项。
 
 - 可能需要其他证书，具体取决于客户端操作系统版本和身份验证模型。 有关详细信息，请参阅 [CMG 证书](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway)。  
 
-    - 从版本 1802 起，必须配置所有[管理点使用 HTTPS](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#enable-management-point-for-https)。  
+    - 从 1802 版起，必须将所有启用了 CMG 的[**管理点配置为使用 HTTPS**](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#enable-management-point-for-https)。  
 
 - 对于 Windows 10 客户端可能需要与 Azure AD 集成。 有关详细信息，请参阅[配置 Azure 服务](/sccm/core/servers/deploy/configure/azure-services-wizard)。  
 
@@ -348,5 +348,5 @@ CMG 连接点站点系统支持使用 Web 代理。 有关配置代理的此角�
 - [云管理网关的证书](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway)
 - [云管理网关的安全和隐私](/sccm/core/clients/manage/cmg/security-and-privacy-for-cloud-management-gateway)
 - [云管理网关的大小和扩展数量](/sccm/core/plan-design/configs/size-and-scale-numbers#bkmk_cmg)
-- [有关云管理网关的常见问题](/sccm/core/clients/manage/cmg/cloud-management-gateway-faq)
+- [有关云管理网关的常见问题解答](/sccm/core/clients/manage/cmg/cloud-management-gateway-faq)
 - [设置云管理网关](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway)

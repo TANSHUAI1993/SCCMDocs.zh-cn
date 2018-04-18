@@ -1,39 +1,40 @@
 ---
-title: "Windows Defender 高级威胁防护"
+title: Windows Defender 高级威胁防护
 titleSuffix: Configuration Manager
-description: "了解如何管理和监视 Windows Defender 高级威胁防护，这是一项可帮助企业应对高级安全攻击的新服务。"
+description: 了解如何管理和监视 Windows Defender 高级威胁防护，这是一项可帮助企业应对高级安全攻击的新服务。
 ms.custom: na
 ms.date: 03/07/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a5fc033e-828e-4e45-9097-bbbd0697ebdf
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: NathBarn
 ms.author: nathbarn
 manager: angrobe
-ms.openlocfilehash: 561a03c7046accaa8e6d36407c75cbd4248188ce
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 84786d741eda2be24a7deb39478e68c68adc38fe
+ms.sourcegitcommit: aed99ba3c5e9482199cb3fc5c92f6f3a160cb181
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="windows-defender-advanced-threat-protection"></a>Windows Defender 高级威胁防护
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-从 Configuration Manager (Current Branch) 版本 1606 开始，Endpoint Protection 可以帮助管理和监控 Windows Defender 高级威胁防护 (ATP)。 Windows Defender ATP 是一种新服务，可帮助企业检测、调查其网络上的高级攻击并做出响应。  了解有关 [Windows Defender ATP](http://aka.ms/technet-wdatp) 的详细信息。 Configuration Manager 策略可帮助载入和监视托管的 Windows 10 版本 1607（内部版本 14328）或更高版本。
+自 Configuration Manager (当前分支) 版本 1606 起，Endpoint Protection 可帮助管理和监视 [Windows Defender 高级威胁防护 (ATP)](http://aka.ms/technet-wdatp)。 Windows Defender ATP 可帮助企业检测和调查其网络上的高级攻击并作出响应。  Configuration Manager 或 Microsoft Intune 策略可帮助载入和监视托管的 Windows 10 版本 1607（内部版本 14328）或更高版本。
 
-Windows Defender ATP 是 [Windows Security Center](https://securitycenter.windows.com)（Windows 安全中心）的一种服务。 通过添加和部署客户端载入配置文件，Configuration Manager 能够监视部署状态和 Windows Defender ATP 代理运行状况。 Windows Defender ATP 仅支持运行 Configuration Manager 客户端的电脑。 不支持本地移动设备管理和 Intune 混合 MDM 管理的计算机。
+Windows Defender ATP 是 [Windows Defender 安全中心](https://securitycenter.windows.com)提供的一种服务。 通过添加和部署客户端载入配置文件，Configuration Manager 能够监视部署状态和 Windows Defender ATP 代理运行状况。 可在运行 Configuration Manager 客户端或由 Microsoft Intune 管理的电脑上使用 Windows Defender ATP，但不可在 Intune 混合 MDM 管理的计算机上使用。
 
  **先决条件**  
 
 -   Windows Defender 高级威胁防护联机服务的订阅  
 -   运行 Windows 10、版本 1607 及更高版本的客户端计算机  
--   运行 Configuration Manager 1610 版或更高客户端代理的客户端计算机
+-   运行 Configuration Manager 客户端代理（版本最低为 1610）或由 Microsoft Intune 管理的客户端计算机
 
 ## <a name="how-to-create-an-onboarding-configuration-file"></a>如何创建载入配置文件  
 
@@ -52,9 +53,9 @@ Windows Defender ATP 是 [Windows Security Center](https://securitycenter.window
 
 1.  在 Configuration Manager 控制台中，导航到“资产和符合性” > “概述” > “Endpoint Protection” > “Windows Defender ATP 策略”，然后单击“创建 Windows Defender ATP 策略”。 将打开 Windows Defender ATP 策略向导。  
 
-2.  键入 Windows Defender ATP 策略的**名称**和**说明**，然后选择“载入”。 单击“下一步”。  
+2.  键入 Windows Defender ATP 策略的**名称**和**说明**，然后选择“载入”。 单击“下一步” 。  
 
-3.  **浏览**到组织的 Windows Defender ATP 云服务租户提供的配置文件。 单击“下一步”。  
+3.  **浏览**到组织的 Windows Defender ATP 云服务租户提供的配置文件。 单击“下一步” 。  
 
 4.  指定从托管设备收集和共享的文件示例以进行分析。  
 
@@ -62,7 +63,7 @@ Windows Defender ATP 是 [Windows Security Center](https://securitycenter.window
 
     -   **所有文件类型**  
 
-     单击“下一步”。  
+     单击“下一步” 。  
 
 5.  查看摘要，然后完成该向导。  
 
@@ -99,9 +100,9 @@ Windows Defender ATP 是 [Windows Security Center](https://securitycenter.window
 
 5.  在 Configuration Manager 控制台中，导航到“资产和符合性” > “概述” > “Endpoint Protection” > “Windows Defender ATP 策略”，然后单击“创建 Windows Defender ATP 策略”。 将打开 Windows Defender ATP 策略向导。  
 
-6.  键入 Windows Defender ATP 策略的**名称**和**说明**，选择“载出”。 单击“下一步”。  
+6.  键入 Windows Defender ATP 策略的**名称**和**说明**，选择“载出”。 单击“下一步” 。  
 
-7.  **浏览**到组织的 Windows Defender ATP 云服务租户提供的配置文件。 单击“下一步”。  
+7.  **浏览**到组织的 Windows Defender ATP 云服务租户提供的配置文件。 单击“下一步” 。  
 
 8.  查看摘要，然后完成该向导。  
 
