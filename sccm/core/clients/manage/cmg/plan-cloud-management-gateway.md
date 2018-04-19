@@ -2,7 +2,7 @@
 title: 规划云管理网关
 titleSuffix: Configuration Manager
 description: 规划和设计云管理网关 (CMG)，简化基于 Internet 的客户端管理。
-ms.date: 03/22/2018
+ms.date: 04/10/2018
 ms.prod: configuration-manager
 ms.technology:
 - configmgr-client
@@ -10,20 +10,26 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: dabc248c1788ecad4d7b25c0a1f592e0ddeef826
-ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
+ms.openlocfilehash: 2b207ffe95a078c955817d9251da3adbdf4de10d
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>在 Configuration Manager 中规划云管理网关
 
 *适用范围：System Center Configuration Manager (Current Branch)*
-
+ 
+<!--1101764-->
 云管理网关 (CMG) 提供一种简单的方法来管理 Internet 上的 Configuration Manager 客户端。 将 CMG 部署为 Microsoft Azure 中的云服务，即可管理在 Internet 上漫游的传统客户端，无需其他基础结构。 也不需要将本地基础结构向 Internet 公开。 
 
 > [!Tip]  
-> 此功能在 1610 版本中首次引入，属于[预发行功能](/sccm/core/servers/manage/pre-release-features)。 从 1802 版开始，此功能不再属于预发行功能。
+> 此功能在 1610 版本中首次引入，属于[预发行功能](/sccm/core/servers/manage/pre-release-features)。 从 1802 版开始，此功能不再属于预发行功能。  
+
+
+> [!Note]  
+> 默认情况下，Configuration Manager 不启用此项可选功能。 必须在使用前启用此功能。 有关详细信息，请参阅[启用更新中的可选功能](/sccm/core/servers/manage/install-in-console-updates#bkmk_options)。<!--505213-->  
+
 
 建立先决条件后，通过在 Configuration Manager 控制台中执行以下三个步骤创建 CMG：
 1. 将 CMG 云服务部署到 Azure。
@@ -186,6 +192,7 @@ CMG 向导仍提供使用 Azure 管理证书的“经典服务部署”选项。
 | Endpoint Protection     | ![支持](media/green_check.png) |
 | 硬件和软件清单     | ![支持](media/green_check.png) |
 | 客户端状态和通知     | ![支持](media/green_check.png) |
+| 运行脚本     | ![支持](media/green_check.png) |
 | 符合性设置     | ![支持](media/green_check.png) |
 | 客户端安装</br>（带 Azure AD 集成）     | ![支持](media/green_check.png)  (1706) |
 | 软件分发（以设备为目标）     | ![支持](media/green_check.png) |

@@ -3,7 +3,7 @@ title: 控制台中更新
 titleSuffix: Configuration Manager
 description: 从 Microsoft 云安装 Configuration Manager 更新
 ms.custom: na
-ms.date: 03/28/2018
+ms.date: 04/10/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,14 +13,14 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c14a3607-253b-41fb-8381-ae2d534a9022
 caps.latest.revision: 36
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 054bbd8e7b1dd3f5d565afe60eb7e3379cc7a9ee
-ms.sourcegitcommit: aed99ba3c5e9482199cb3fc5c92f6f3a160cb181
+ms.openlocfilehash: 9924346ccbd862aa4462075a3307b4ec40b955bc
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-in-console-updates-for-system-center-configuration-manager"></a>为 System Center Configuration Manager 安装控制台内部更新
 
@@ -324,7 +324,7 @@ Configuration Manager 与 Microsoft 云服务同步，以获取更新。 随后�
 #### <a name="retry-installation-for-the-site"></a>为站点重试安装  
  当某个更新处于以下状态之一时，可以在特定站点上重试该更新的安装：  
 
-  -   先决条件检查已通过但有一个或多个警告，并且未在更新向导中设置用于忽略先决条件检查警告的选项。 （“更新和维护服务”节点中“忽略先决条件警告”的更新值为“否”。）  
+  -   先决条件检查已通过但存在一个或多个警告，并且未在更新向导中设置用于忽略先决条件检查警告的选项。 （“更新和维护服务”节点中“忽略先决条件警告”的更新值为“否”。）  
   -   先决条件失败    
   -   安装失败    
 
@@ -369,10 +369,36 @@ Configuration Manager 与 Microsoft 云服务同步，以获取更新。 随后�
 
 若要查看可用功能及其状态，请在控制台中导航到“管理” > “更新和维护服务” > “功能”。
 
-当功能不可选时，它会自动安装，不会出现在“功能”节点中。  
+会自动安装不可选的功能。 该功能不会出现在“功能”节点中。  
+
+> [!Important]  
+> 在多站点层次结构中，只能从管理中心站点启用可选功能或预发布功能。 此行为确保层次结构中不会出现冲突。 <!--507197-->
+ 
+
+启用新功能或预发行功能时，配置管理器层次结构管理器 (HMAN) 必须在该功能可用之前处理更改。 更改的处理通常是即时的，但根据 HMAN 处理周期，最长需要 30 分钟才能完成。 处理更改后，必须重启控制台，然后才能查看与该功能相关的新节点。
+
+#### <a name="list-of-optional-features"></a>可选功能列表
+下面列出了 Configuration Manager 最新版本中的可选功能：<!--505213-->  
+- [托管电脑的条件访问](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)<!--1191496-->
+- [Passport for Work](/sccm/protect/deploy-use/windows-hello-for-business-settings)（也称为 Windows Hello 企业版）<!--1245704-->
+- [适用于 Windows 10 的 VPN](/sccm/protect/deploy-use/vpn-profiles)<!--1283610-->
+- [Windows Defender 攻击防护策略](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy)<!--1355468-->
+- [Microsoft Operations Management Suite (OMS) 连接器](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite)<!--1258052-->
+- [PFX 创建](/sccm/protect/deploy-use/introduction-to-certificate-profiles)<!--1321368-->
+- [客户端对等缓存](/sccm/core/plan-design/hierarchy/client-peer-cache)<!--1101436-->
+- [数据仓库服务点](/sccm/core/servers/manage/data-warehouse)<!--1277922-->
+- [云管理网关](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway)<!--1101764-->
+- [Surface 驱动程序更新](/sccm/sum/get-started/configure-classifications-and-products)<!--1098490-->
+- [任务序列内容预缓存](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content)<!--1021244-->
+- [运行任务序列步骤](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#add-child-task-sequences-to-a-task-sequence)<!--1261338-->
+- [创建和运行脚本](/sccm/apps/deploy-use/create-deploy-scripts)<!--1236459-->
+- [用于条件访问的符合性策略的设备运行状况证明评估](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)<!--1235616-->
+- [审批每台设备的用户的应用程序请求](/sccm/apps/deploy-use/deploy-applications#specify-deployment-settings) <!--1357015-->  
 
 
-启用新功能或预发行功能时，配置管理器层次结构管理器 (HMAN) 必须在该功能可用之前处理更改。 更改的处理通常是即时的，但根据 HMAN 处理周期，最长需要 30 分钟才能完成。 处理更改后，必须重新启动控制台，然后才能查看与该功能相关的新 UI。
+> [!Tip]  
+> 若要详细了解需要同意才能启用的功能，请参阅[预发布功能](/sccm/core/servers/manage/pre-release-features)。  
+> 若要详细了解仅在技术预览分支中可用的功能，请参阅[技术预览版](/sccm/core/get-started/technical-preview)。
 
 
 

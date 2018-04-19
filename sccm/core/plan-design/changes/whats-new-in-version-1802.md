@@ -3,7 +3,7 @@ title: 新的 1802 版
 titleSuffix: Configuration Manager
 description: 获取有关 Configuration Manager 1802 版中引入的更改和新功能的详细信息。
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 04/11/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,20 +12,27 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5bd637b1-d7a1-411b-877a-c7aae9741173
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9c9ff975a58e7c56375fa7740a0a5bb6ebfa6341
-ms.sourcegitcommit: 27da4be015f1496b7b89ebddb517a2685f1ecf74
+ms.openlocfilehash: a667c34dc39ef0578ff840e5603080b09c67c63c
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="whats-new-in-version-1802-of-system-center-configuration-manager"></a>System Center Configuration Manager 1802 版的新增功能
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
 Configuration Manager Current Branch 的 1802 更新作为控制台中更新提供。 将此更新应用于运行 1702、1706 或 1710 版的站点。 <!-- baseline only statement: -->安装新站点时，也可将其用作基准版本。
+
+除了新增功能外，这一版还有其他变化（如缺陷修复）。 有关详细信息，请参阅 [System Center Configuration Manager Current Branch（版本 1802）的更改摘要](https://support.microsoft.com/help/4101375)。
+
+<!--
+The following additional updates to this release are also now available:
+- [Update rollup for System Center Configuration Manager current branch, version 1710](https://support.microsoft.com/help/4057517)
+-->
 
 > [!TIP]  
 > 若要安装新站点，必须使用 Configuration Manager 的基准版本。  
