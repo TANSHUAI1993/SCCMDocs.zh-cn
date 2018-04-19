@@ -1,26 +1,27 @@
 ---
-title: "使用 Microsoft Intune 设置 Android 混合设备管理"
+title: 使用 Microsoft Intune 设置 Android 混合设备管理
 titleSuffix: Configuration Manager
-description: "使用 Configuration Manager 和 Intune 准备管理 Android 移动设备。"
+description: 使用 Configuration Manager 和 Intune 准备管理 Android 移动设备。
 ms.custom: na
 ms.date: 08/11/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-hybrid
+ms.technology:
+- configmgr-hybrid
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: c517fe34-0130-465b-a020-bdb555878778
-caps.latest.revision: "9"
-caps.handback.revision: "0"
+caps.latest.revision: 9
+caps.handback.revision: 0
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: c9b35122f6afbb4fffbbff48b919fd696939c897
-ms.sourcegitcommit: 51cfce302fa8ddf633ad1f379b1161c0617089b8
+ms.openlocfilehash: c75979e8485fa3ece2178af6d21ff06282206569
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-up-android-hybrid-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>使用 System Center Configuration Manager 和 Microsoft Intune 设置 Android 混合设备管理
 
@@ -43,7 +44,7 @@ ms.lasthandoff: 12/11/2017
 ## <a name="enable-android-for-work-enrollment"></a>启用 Android for Work 注册
 采用以下步骤，可使 Configuration Manager 通过工作配置文件管理 Android 设备。
 
-1. 在 https://accounts.google.com/SignUp 上创建一个 Google 帐户作为你的 Android for Work 管理帐户。 或者，使用与此 Intune 租户的所有 Android for Work 管理任务相关联的帐户登录。 此帐户可以是在管理 Android 设备的管理员之间共享的 Google 帐户。 组织使用此 Google 帐户，在 Play for Work 控制台中管理和发布应用。 此帐户将用于在 Play for Work 应用商店中批准应用，因此请记录帐户名和密码。
+1. 在 https://accounts.google.com/SignUp 上创建一个 Google 帐户作为你的 Android for Work 管理员帐户。 或者，使用与此 Intune 租户的所有 Android for Work 管理任务相关联的帐户登录。 此帐户可以是在管理 Android 设备的管理员之间共享的 Google 帐户。 组织使用此 Google 帐户，在 Play for Work 控制台中管理和发布应用。 此帐户将用于在 Play for Work 应用商店中批准应用，因此请记录帐户名和密码。
 2. 通过将 Google 帐户绑定到在 Configuration Manager 中托管的 Intune 租户来启用 Android 注册：
    1. 在 Configuration Manager 控制台的“管理”工作区中，选择“概述” > “云服务” > “Microsoft Intune 订阅”，然后选择你的 Intune 订阅。
    2. 在“主页”选项卡上的“订阅”组中，选择“配置平台” > “Android for Work”。
@@ -60,7 +61,7 @@ ms.lasthandoff: 12/11/2017
 > 一个已知的问题将阻止“仅为这些组中的用户将受支持设备作为 Android for Work 设备管理”选项按预期方式正常运行。 指定 Azure AD 组中的用户设备将注册为 Android 而不是 Android for Work。 若要启用 Android for Work，必须使用“将所有受支持设备作为 Android for Work 管理”选项。
 
 
-设置完成后，需要让用户知道如何注册其设备。 请参阅[用户需要了解的有关设备注册的内容](https://docs.microsoft.com/en-us/intune/end-user-educate)。 此信息适用于 Microsoft Intune 和 Configuration Manager 托管的移动设备。
+设置完成后，需要让用户知道如何注册其设备。 请参阅[用户需要了解的有关设备注册的内容](https://docs.microsoft.com/intune/end-user-educate)。 此信息适用于 Microsoft Intune 和 Configuration Manager 托管的移动设备。
 
 完成绑定后，可以在 Intune 门户中看到帐户名和组织名称。 此时，可关闭两个浏览器。
 

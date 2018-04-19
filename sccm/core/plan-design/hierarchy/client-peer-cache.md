@@ -1,9 +1,9 @@
 ---
-title: "客户端对等缓存"
+title: 客户端对等缓存
 titleSuffix: Configuration Manager
-description: "使用 System Center Configuration Manager 部署内容时，将对等缓存用于客户端内容源位置。"
+description: 使用 System Center Configuration Manager 部署内容时，将对等缓存用于客户端内容源位置。
 ms.custom: na
-ms.date: 12/07/2017
+ms.date: 04/10/2018
 ms.reviewer: na
 ms.suite: na
 ms.prod: configuration-manager
@@ -12,24 +12,30 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 86cd5382-8b41-45db-a4f0-16265ae22657
-caps.latest.revision: 
+caps.latest.revision: 3
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 424f4030f2dd2a337a29d48ca831fa3a791de610
-ms.sourcegitcommit: e121d8d3dd82b9f2dde2cb5206cbee602ab8e107
+manager: dougeby
+ms.openlocfilehash: 99eef9faf6ac66f65d16020b703e3a64d9beb9d0
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>用于 Configuration Manager 客户端的对等缓存
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-从 System Center Configuration Manager 版本 1610 开始，可以使用**对等缓存**来帮助管理向远程位置中客户端的内容部署。 对等缓存是内置 Configuration Manager 解决方案，使客户端能够直接从本地缓存将内容与其他客户端共享。   
+<!--1101436-->
+使用“对等缓存”有助于管理部署到远程位置客户端的内容。 对等缓存是内置 Configuration Manager 解决方案，使客户端能够直接从本地缓存将内容与其他客户端共享。   
 
 > [!TIP]  
-> 此功能在 1610 版本中首次引入，属于[预发行功能](/sccm/core/servers/manage/pre-release-features)。 从版本 1710 开始，此功能不再属于预发行功能。
+> 此功能在 1610 版本中首次引入，属于[预发行功能](/sccm/core/servers/manage/pre-release-features)。 从版本 1710 开始，此功能不再属于预发行功能。  
+
+
+> [!Note]  
+> 默认情况下，Configuration Manager 不启用此项可选功能。 必须在使用前启用此选项。 有关详细信息，请参阅[启用更新中的可选功能](/sccm/core/servers/manage/install-in-console-updates#bkmk_options)。<!--505213-->  
+
 
 ## <a name="overview"></a>概述
 对等缓存客户端是能够使用对等缓存功能的 Configuration Manager 客户端。 具有可与其他客户端共享的内容的对等缓存客户端是对等缓存源。
@@ -38,7 +44,7 @@ ms.lasthandoff: 01/17/2018
     -  必须已加入域。 但是，未加入域的客户端可以获取已加入域的对等缓存源中的内容。
     -  必须是正在查找该内容的客户端当前边界组的成员。 客户端使用回退来查找相邻边界组中的内容时，相邻边界组中的对等缓存客户端不包括在内容源位置列表中。 有关当前边界组和相邻边界组的详细信息，请参阅[边界组](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups##a-namebkmkboundarygroupsa-boundary-groups)。
  - Configuration Manager 客户端使用对等缓存将缓存中每种类型的内容提供给其他客户端。 此内容包括 Office 365 文件和快速安装文件。<!--SMS.500850-->
- -  对等缓存不替代 BranchCache 等其他解决方案的使用。 可结合使用对等缓存与其他解决方案，获得相较传统内容部署解决方案更丰富的方案，例如分发点。 对等缓存属于自定义解决方案，独立于 BranchCache。  如果未启用或使用 Windows BranchCache，对等缓存仍能正常发挥作用。
+ -  对等缓存不替代 BranchCache 等其他解决方案的使用。 可结合使用对等缓存与其他解决方案，获得相较传统内容部署解决方案更丰富的方案，例如分发点。 对等缓存属于自定义解决方案，独立于 BranchCache。 如果未启用或使用 Windows BranchCache，对等缓存仍能正常发挥作用。
 
 ### <a name="operations"></a>操作
 
@@ -82,7 +88,7 @@ ms.lasthandoff: 01/17/2018
 3. **对等缓存源内容拒绝详细信息**：   
   使用此报表来了解客户端在被拒绝时所请求的内容。
 
- - **已知问题：**不能从可用的参数中进行选择，而必须手动输入。 如“对等缓存源内容拒绝”报表中所示，输入“拒绝类型”的值。 然后输入想要了解其详细信息的内容源的源 ID。  查找内容源的资源 ID：  
+ - **已知问题：**不能从可用的参数中进行选择，而必须手动输入。 如“对等缓存源内容拒绝”报表中所示，输入“拒绝类型”的值。 然后输入想要了解其详细信息的内容源的源 ID。 查找内容源的资源 ID：  
 
     1. 在按条件的对等缓存源内容拒绝报表的结果中查找显示为对等缓存源的计算机名称。  
     2. 接下来，转到“资产和合规性” > “设备”，然后搜索该计算机名称。 使用资源 ID 列中的值。  
@@ -93,7 +99,7 @@ ms.lasthandoff: 01/17/2018
 
 -   客户端只能传输来自其当前边界组中的对等缓存客户端中的内容。
 
--   在版本 1706 之前，客户端在其中使用对等缓存的每个站点必须使用[网络访问帐户](/sccm/core/plan-design/hierarchy/manage-accounts-to-access-content#a-namebkmknaaa-network-access-account)进行配置。 从版本 1706 开始，不再需要帐户，但有一个例外。  例外情况是：启用对等缓存的客户端从软件中心运行任务序列，并且该任务序列将重新启动到启动映像。 在此方案中，客户端仍需要网络访问帐户。 客户端位于 Windows PE 中时，它使用网络访问帐户从对等缓存源获取内容。
+-   在版本 1706 之前，客户端在其中使用对等缓存的每个站点必须使用[网络访问帐户](/sccm/core/plan-design/hierarchy/manage-accounts-to-access-content#a-namebkmknaaa-network-access-account)进行配置。 从版本 1706 开始，不再需要帐户，但有一个例外。 例外情况是：启用对等缓存的客户端从软件中心运行任务序列，并且该任务序列将重新启动到启动映像。 在此方案中，客户端仍需要网络访问帐户。 客户端位于 Windows PE 中时，它使用网络访问帐户从对等缓存源获取内容。
 
     如有必要，对等缓存源计算机将使用网络访问帐户对来自对等项的下载请求进行身份验证。 为此，此帐户只需域用户权限。
 

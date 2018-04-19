@@ -1,26 +1,27 @@
 ---
-title: "监视证书配置文件"
+title: 监视证书配置文件
 titleSuffix: Configuration Manager
-description: "了解如何监视 System Center Configuration Manager 证书配置文件的符合性状态。"
+description: 了解如何监视 System Center Configuration Manager 证书配置文件的符合性状态。
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 98feaa06-64b1-4e86-a122-93017c97cd4f
-caps.latest.revision: "7"
-caps.handback.revision: "0"
+caps.latest.revision: 7
+caps.handback.revision: 0
 author: arob98
 ms.author: angrobe
 manager: angrobe
-ms.openlocfilehash: eaefae0c51af91e4419ef15cf02b8250c3d2efd8
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 6b0ae2042c1c463bce53c0c1a7438cc7102cd66e
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-monitor-certificate-profiles-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中监视证书配置文件
 
@@ -54,14 +55,14 @@ ms.lasthandoff: 10/12/2017
 
      证书的注册状态显示为数字。 使用下表了解每个数字的含意：  
 
-    |注册状态|描述|  
+    |注册状态|说明|  
     |-----------------------|-----------------|  
     |0x00000001|注册成功，并已颁发证书。|  
     |0x00000002|已提交请求并且正在等待注册，或者已在带外发出请求。|  
     |0x00000004|注册必须被推迟。|  
     |0x00000010|出现了错误。|  
     |0x00000020|注册状态未知。|  
-    |0x00000040|已跳过状态信息。 如果 HYPERLINK "http://msdn.microsoft.com/en-us/windows/ms721572" \l "_security_certification_authority_gly" 证书颁发机构无效或者尚未选中进行监视，便会出现此问题。|  
+    |0x00000040|已跳过状态信息。 如果 HYPERLINK "http://msdn.microsoft.com/windows/ms721572" \l "_security_certification_authority_gly" 证书颁发机构无效或者尚未选中进行监视，便会出现此问题。|  
     |0x00000100|注册被拒绝。|  
 
 ##  <a name="view-compliance-results-by-using-reports"></a>使用报表来查看符合性结果

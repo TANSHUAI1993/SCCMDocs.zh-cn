@@ -1,25 +1,26 @@
 ---
-title: "管理来自适用于企业的 Microsoft Store 的应用"
+title: 管理来自适用于企业的 Microsoft Store 的应用
 titleSuffix: Configuration Manager
-description: "使用 System Center Configuration Manager 管理并部署来自适用于企业的 Microsoft Store 的应用。"
+description: 使用 System Center Configuration Manager 管理并部署来自适用于企业的 Microsoft Store 的应用。
 ms.custom: na
 ms.date: 12/29/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-app
+ms.technology:
+- configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8cdb22a6-72d7-41f5-9bed-c098b1bcf675
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: 15644a8c1acdbde85c7ca194a72a10c3cc2c0fcc
-ms.sourcegitcommit: f1535281b2c3fecff773b722c3f7590bf6ba10a0
+ms.openlocfilehash: 89bb52b806c99395bca14be34d06611174823a3c
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-apps-from-the-microsoft-store-for-business-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 管理来自适用于企业的 Microsoft Store 的应用
 在[适用于企业的 Microsoft Store](https://www.microsoft.com/business-store) 中可以为组织查找和购买 Windows 应用（单个或批量）。 通过将应用商店连接到 Configuration Manager，可以使用 Configuration Manager 同步已购买的应用列表。 然后，可以在 Configuration Manager 控制台中查看这些应用，并按照部署任何其他应用的方式进行部署。
@@ -88,10 +89,10 @@ Configuration Manager 支持在具有 Configuration Manager 客户端的 Windows
 ### <a name="for-configuration-manager-versions-prior-to-1706"></a>对于 1706 之前的 Configuration Manager 版本
 
 在 Azure Active Directory 中，将 Configuration Manager 注册为“Web 应用和/或 Web API”管理工具。**此操作会提供客户端 ID，稍后需要使用它。**
-1. 在 [https://manage.windowsazure.com](https://manage.windowsazure.com) 的 Active Directory 节点中，选择 Azure Active Directory，然后单击“应用程序” > “添加”。
+1. 在 [https://manage.windowsazure.com](https://manage.windowsazure.com) 的 Active Directory 节点中，选择“Azure Active Directory”，然后单击“应用程序” > “添加”。
 2.  单击“添加我的组织正在开发的应用程序”。
 3.  为应用程序输入名称，选择“Web 应用程序”和/或“Web API”，然后单击“下一步”箭头。
-4.  为**登录 URL**和**应用 ID URI** 输入相同 URL。 该 URL 可以是任何内容，无需解析为实际地址。 例如，可以输入 *https://yourdomain/sccm*。
+4.  为**登录 URL**和**应用 ID URI** 输入相同 URL。 该 URL 可以是任何内容，无需解析为实际地址。 例如，可以输入 https://yourdomain/sccm。
 5.  完成向导。
 
 **在 Azure Active Directory 中，为已注册的管理工具创建客户端密钥**
@@ -99,7 +100,7 @@ Configuration Manager 支持在具有 Configuration Manager 客户端的 Windows
 2.  在“密钥”下，从列表中选择持续时间，然后单击“保存”。 此操作会创建一个新的客户端密钥。 成功将适用于企业的 Microsoft Store 载入到 Configuration Manager 之前，请勿导航离开此页面。
 
 在适用于企业的 Microsoft Store 中，将 Configuration Manager 配置为存储管理工具
-1.  打开 [https://businessstore.microsoft.com/zh-cn/managementtools](https://businessstore.microsoft.com/en-us/managementtools)，在出现提示时进行登录。
+1.  打开[https://businessstore.microsoft.com/managementtools](https://businessstore.microsoft.com/managementtools) 并按提示登录。
 2.  接受使用条款（如果需要）。
 3.  在“管理工具”下，单击“添加管理工具”。
 4.  在“按名称搜索工具”中，键入以前在 AAD 中创建的应用程序的名称，然后单击“添加”。
@@ -151,6 +152,6 @@ Configuration Manager 支持在具有 Configuration Manager 客户端的 Windows
 
 部署在线应用后，该应用的任何更新将直接来自 Microsoft Store。 此外，Configuration Manager 不会检查在线应用的版本符合性，只是 Windows 报告应用为已安装。  
 
-使用 Configuration Manager 客户端将脱机应用部署到 Windows 10 设备时，用户不能更新 Configuration Manager 部署外部的应用程序。 控制脱机应用的更新在多用户环境（如教室）中尤为重要。 用户可以选择使用[组策略](https://docs.microsoft.com/en-us/windows/configuration/stop-employees-from-using-microsoft-store#a-href-idblock-store-group-policyablock-microsoft-store-using-group-policy)来禁用 Microsoft Store。 
+使用 Configuration Manager 客户端将脱机应用部署到 Windows 10 设备时，用户不能更新 Configuration Manager 部署外部的应用程序。 控制脱机应用的更新在多用户环境（如教室）中尤为重要。 用户可以选择使用[组策略](https://docs.microsoft.com/windows/configuration/stop-employees-from-using-microsoft-store#a-href-idblock-store-group-policyablock-microsoft-store-using-group-policy)来禁用 Microsoft Store。 
 
 适用于企业的 Microsoft Store 管理员购买了一个脱机应用后，不要通过 Microsoft Store 将应用发布给用户。 此配置可确保用户无法安装或联机更新。 用户将仅通过 Configuration Manager 接收脱机应用更新。 

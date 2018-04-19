@@ -1,7 +1,7 @@
 ---
-title: "Technical Preview 1702 中的功能"
+title: Technical Preview 1702 中的功能
 titleSuffix: Configuration Manager
-description: "了解 System Center Configuration Manager Technical Preview 1702 版中的可用功能。"
+description: 了解 System Center Configuration Manager Technical Preview 1702 版中的可用功能。
 ms.custom: na
 ms.date: 02/24/2017
 ms.prod: configuration-manager
@@ -12,24 +12,24 @@ ms.suite: na
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: aedd608d-6db3-4ea5-851d-70f2dcda6bb5
-caps.latest.revision: 
+caps.latest.revision: 5
 author: erikje
 ms.author: erikje
 manager: angrobe
-ms.openlocfilehash: ed2a858c55cbf389a0e974f4699b5a9c548953ef
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+ms.openlocfilehash: 94c025a75cd0aef62ee00c11b8ee5a113fba2bb1
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="capabilities-in-technical-preview-1702-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1702 中的功能
 
 *适用范围：System Center Configuration Manager (Technical Preview)*
 
-本文介绍了 System Center Configuration Manager Technical Preview（版本 1702）中的可用功能。 可以安装此版本以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。 在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。    
+本文介绍了 System Center Configuration Manager Technical Preview（版本 1702）中的可用功能。 你可以安装此版本，以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。 在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。    
 
 
-**以下是可以试用的此版本的新功能。**  
+**以下是此版本可以试用的新功能。**  
 
 ##  <a name="send-feedback-from-the-configuration-manager-console"></a>从 Configuration Manager 控制台发送反馈
 
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/01/2017
 -  右键单击控制台中的任何对象时。   
     ![右键单击选项](./media/feedback-option.png)   
 
-选择“反馈”可打开浏览器并转到 Configuration Manager UserVoice 反馈网站，网址为：https://configurationmanager.uservoice.com/forums/300492-ideas。
+选择“反馈”将打开浏览器，并转到 https://configurationmanager.uservoice.com/forums/300492-ideasConfiguration Manager UserVoice 反馈网站。
 ##  <a name="changes-for-updates-and-servicing"></a>更新和维护服务的更改
 以下是此预览版引入的功能。
 
@@ -104,7 +104,7 @@ Azure AD 将设备存储在 **AADDC 计算机** OU 下。  进行下列配置：
 Azure AD 没有存储组的 OU。 将同一常规结构用作系统或用户查询并配置 LDAP 查询，以指向包含想要发现的组的 OU。
 
 有关 Azure AD 的详细信息，请参阅以下内容：  
- - azure.microsoft.com 上的 [Azure Active Directory 域服务](https://azure.microsoft.com/en-us/services/active-directory-ds)。
+ - azure.microsoft.com 上的 [Azure Active Directory 域服务](https://azure.microsoft.com/services/active-directory-ds)。
  - docs.microsoft.com 上的 [Active Directory 域服务文档](https://docs.microsoft.com/azure/active-directory-domain-services)。
 
 ## <a name="conditional-access-device-compliance-policy-improvements"></a>条件性访问设备符合性策略改进
@@ -149,13 +149,13 @@ Azure AD 没有存储组的 OU。 将同一常规结构用作系统或用户查�
 
 ### <a name="deploy-a-compliance-policy"></a>部署合规性策略
 1. 在 Configuration Manager 控制台中，转到“资产和符合性” > “符合性设置”然后单击“符合性策略”。
-2. 在“主页”  选项卡上的“部署”  组中，单击“部署” 。
+2. 在“主页”选项卡上的“部署”组中，单击“部署”。
 3. 在“部署符合性策略”  对话框中，单击  “浏览”以选择要将策略部署到的用户集合。
    此外，当策略不合规时可以选择选项以生成警报，还可配置将按其评估策略符合性的计划。
 4. 完成后，请单击“确定” 。
 
 ### <a name="monitor-the-compliance-policy"></a>监视合规性策略
-创建符合性策略后，可以在 Configuration Manager 控制台中监视符合性结果。 有关详细信息，请参阅[监视合规性策略](https://docs.microsoft.com/en-us/sccm/protect/deploy-use/create-compliance-policy#monitor-the-compliance-policy)。
+创建符合性策略后，可以在 Configuration Manager 控制台中监视符合性结果。 有关详细信息，请参阅[监视合规性策略](https://docs.microsoft.com/sccm/protect/deploy-use/create-compliance-policy#monitor-the-compliance-policy)。
 
 
 ## <a name="improvements-to-software-center-settings-and-notification-messages-for-high-impact-task-sequences"></a>针对影响重大的任务序列，改进软件中心设置和消息通知
@@ -301,7 +301,7 @@ Android for Work 是独立于 Android 的平台，你需要决定对支持工作
 以下各节介绍 Android for Work 管理。
 
 #### <a name="enable-android-for-work-management"></a>启用 Android for Work 管理
-1. 在 https://accounts.google.com/SignUp 创建 Google 帐户，作为 Android for Work 管理员帐户，并将其与此 Intune 租户的 Android for Work 管理任务相关联。 可以是在管理 Android 设备的管理员中共享的 Google 帐户。 组织使用此 Google 帐户，在 Play for Work 控制台中管理和发布应用。 此帐户将用于在 Play for Work 应用商店中批准应用，因此请记录帐户名和密码。
+1. 在 https://accounts.google.com/SignUp 创建 Google 帐户，作为 Android for Work 管理员帐户，此帐户将与此 Intune 租户的所有 Android for Work 管理任务相关联。 可以是在管理 Android 设备的管理员中共享的 Google 帐户。 组织使用此 Google 帐户，在 Play for Work 控制台中管理和发布应用。 此帐户将用于在 Play for Work 应用商店中批准应用，因此请记录帐户名和密码。
 2. 通过将 Google 帐户绑定到在 Configuration Manager 中托管的 Intune 租户来启用 Android 注册：
   1. 转到“管理” > “概述” > “云服务” > “Microsoft Intune 订阅”，然后选择 Intune 订阅。
   2. 在功能区中，单击“配置平台” > “Android”，并确保已选中“启用 Android 注册”。

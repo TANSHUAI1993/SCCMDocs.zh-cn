@@ -1,26 +1,27 @@
 ---
-title: "部署 App-V 虚拟应用程序"
+title: 部署 App-V 虚拟应用程序
 titleSuffix: Configuration Manager
-description: "请参阅创建和部署虚拟应用程序时必须考虑的注意事项。"
+description: 请参阅创建和部署虚拟应用程序时必须考虑的注意事项。
 ms.custom: na
-ms.date: 02/16/2017
+ms.date: 03/12/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-app
+ms.technology:
+- configmgr-app
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ddcad9f2-a542-4079-83ca-007d7cb44995
-caps.latest.revision: "11"
-caps.handback.revision: "0"
+caps.latest.revision: 11
+caps.handback.revision: 0
 author: mattbriggs
 ms.author: mabrigg
 manager: angrobe
-ms.openlocfilehash: bf324f458c37fa137e24179eb4455fcbe75c855d
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 99c259a20a7e9c9f34d7b355e6fea5d4c6861392
+ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deploy-app-v-virtual-applications-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 部署 App-V 虚拟应用程序
 
@@ -46,7 +47,7 @@ ms.lasthandoff: 10/12/2017
 
 -   对应用程序进行序列化时，必须将包保存到 Configuration Manager 可以访问的位置。 然后，你可以创建包含此虚拟应用程序的应用程序部署。  
 
--   Configuration Manager 不支持使用 App-V 的共享只读缓存功能。  
+-   Configuration Manager 不支持使用 App-V 4.6 的共享只读缓存功能。  
 
 -   Configuration Manager 支持 App-V 5 中的共享内容存储功能。  
 
@@ -66,7 +67,7 @@ ms.lasthandoff: 10/12/2017
      还必须使用知识库文章 [2645225](http://go.microsoft.com/fwlink/p/?LinkId=237322) 中所述的修补程序来更新 App-V 4.6 SP1 客户端，才能成功部署虚拟应用程序。  
 
 -   **App-V 5、App-V 5.0 SP1、App-V 5.0 SP2、App-V 5.0 SP3 和 App-V 5.1**：对于 App-V 5.0 SP2，必须安装[修补程序包 5](https://support.microsoft.com/en-us/kb/2963211) 或使用 App-V 5.0 SP3。  
--   **App-V 5.2**：这内置于 Windows 10 企业版（周年更新及更高版本）中。
+-   **App-V 5.2**：App-V 5.2 内置在 Windows 10 教育版（1607 及更高版本）、Windows 10 企业版（1607 及更高版本）和 Windows Server 2016 中。
 
 有关 Windows 10 的 App-V 的详细信息，请参阅下列主题：
 
@@ -83,7 +84,7 @@ ms.lasthandoff: 10/12/2017
 
 3.   **分发**：分发是在 Configuration Manager 分发点上提供 App-V 应用程序的过程。
 
-4.   **部署**：部署是在客户端计算机上提供应用程序的过程。 这在 App-V 完整基础结构中称为流式处理。  
+4.   **部署**：部署是在客户端计算机上提供应用程序的过程。 这在 App-V 完整基础结构中称为发布和流式处理。  
 
 ##  <a name="configuration-manager-virtual-application-delivery-methods"></a>Configuration Manager 虚拟应用程序传递方法  
 Configuration Manager 支持以下两种方法来向客户端传递虚拟应用程序：流式传递和本地传递（下载并执行）。
@@ -100,7 +101,7 @@ Configuration Manager 支持以下两种方法来向客户端传递虚拟应用�
 |此方法使用标准的网络协议对分发点中的包内容进行流式处理。<br /><br /> 虚拟应用程序的程序快捷方式调用至分发点的连接，因此可在需要时进行虚拟应用程序传递。<br /><br /> 此方法非常适合采用高带宽连接到分发点的客户端。<br /><br /> 当客户端收到通知它们当前版本已被取代的策略，并且客户端仅下载上一个版本中的更改时，可以获得在整个企业中分发的已更新虚拟应用程序。<br /><br /> 访问权限是在分发点上定义的，用于防止用户访问未授权的应用程序或包。|在用户首次运行应用程序之前，未对虚拟应用程序进行流式处理。 在此情况下，用户可能会收到虚拟应用程序的程序快捷方式，然后在首次运行虚拟应用程序之前从网络中断开。 如果用户在客户端处于脱机状态时尝试运行虚拟应用程序，则用户将看到一个错误，并且无法运行虚拟化应用程序，因为 Configuration Manager 分发点无法用于对应用程序进行流式处理。 在用户重新连接到网络并运行应用程序之前，应用程序将不可用。<br /><br /> 为了避免这种情况，你可以使用本地传递方法以向客户端传递虚拟应用程序，或者可以启用基于 Internet 的客户端管理以对传递进行流式传递。|  
 
 ###  <a name="local-delivery-download-and-execute"></a>本地传递（下载并执行）  
-使用本地传递方法时，Configuration Manager 客户端首先将整个虚拟应用程序包下载到 Configuration Manager 客户端缓存中。 然后，Configuration Manager 指示 App-V 客户端将应用程序从 Configuration Manager 缓存流式传递到 App-V 缓存。 如果将虚拟应用程序部署到客户端计算机，并且其内容不在 App-V 缓存中，则 App-V Client 会将 Configuration Manager 客户端缓存中的应用程序内容流式处理到 App-V 缓存中，然后运行该应用程序。 成功运行应用程序之后，可以将 Configuration Manager 客户端设置为在下一个删除周期中删除任何较旧版本的包，或者将其保留在 Configuration Manager 客户端缓存中。  
+下载并执行是使用 Configuration Manager 时最常用的方法，因为此方法和使用 Configuration Manager 传送其他应用程序格式的方式非常类似。 使用本地传递方法时，Configuration Manager 客户端首先将整个虚拟应用程序包下载到 Configuration Manager 客户端缓存中。 然后，Configuration Manager 指示 App-V 客户端将应用程序从 Configuration Manager 缓存流式传递到 App-V 缓存。 如果将虚拟应用程序部署到客户端计算机，并且其内容不在 App-V 缓存中，则 App-V Client 会将 Configuration Manager 客户端缓存中的应用程序内容流式处理到 App-V 缓存中，然后运行该应用程序。 成功运行应用程序之后，可以将 Configuration Manager 客户端设置为在下一个删除周期中删除任何较旧版本的包，或者将其保留在 Configuration Manager 客户端缓存中。 本地保留内容可以利用包内容传送优化方法（例如 BranchCache 和 PeerCache）。
 
 使用此表中的信息来帮助确定本地传递是否为最佳的传递方法：   
 
@@ -198,7 +199,7 @@ Configuration Manager 支持 App-V 5 共享内容存储功能。 有关详细信
 ### <a name="virtual-application-reports"></a>虚拟应用程序报表  
 可以使用下列报表在 Configuration Manager 环境中监视 App-V：  
 
-|报告名称|描述|  
+|报告名称|说明|  
 |-----------------|-----------------|  
 |APP-V 虚拟环境结果|显示有关对于所选的集合处于指定状态的所选虚拟环境的信息（仅限 App-V 5）。|  
 |资产的 App-V 虚拟环境结果|显示有关以下项目的信息：为指定的资产所选的虚拟环境，以及所选虚拟环境的任何部署类型（仅限 App-V 5）。|  
