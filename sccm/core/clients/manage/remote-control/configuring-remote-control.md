@@ -1,18 +1,19 @@
 ---
-title: "配置远程控制"
+title: 配置远程控制
 titleSuffix: Configuration Manager
-description: "在 System Center Configuration Manager 中设置远程控制。"
+description: 在 System Center Configuration Manager 中设置远程控制。
 ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
 ms.reviewer: dudeso
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 45affc27-aa11-4249-9493-082ac23a3a3d
-caps.latest.revision: "4"
-caps.handback.revision: "0"
+caps.latest.revision: 4
+caps.handback.revision: 0
 author: arob98
 ms.author: angrobe
 manager: angrobe
