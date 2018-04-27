@@ -292,13 +292,13 @@
 ###  [如何管理 Linux 和 UNIX 客户端](clients/manage/manage-clients-for-linux-and-unix-servers.md)
 ###  [将数据同步到 OMS](clients/manage/sync-data-microsoft-operations-management-suite.md)
 ###  [维护 Mac 客户端](clients/manage/maintain-mac-clients.md)
-### [共同管理面板](clients/manage/co-management-dashboard.md)
 
 ### [Surface 设备仪表板](clients/manage/surface-device-dashboard.md)
 
 ##   [适用于 Windows 10 设备的共同管理](clients/manage/co-management-overview.md)
 ###  [准备 Windows 10 设备进行共同管理](clients/manage/co-management-prepare.md)
 ###  [将 Configuration Manager 工作负荷切换到 Intune](clients/manage/co-management-switch-workloads.md)
+### [共同管理面板](clients/manage/co-management-dashboard.md)
 
 ##   [在 Internet 上管理客户端](clients/manage/manage-clients-internet.md)
 ###  [规划云管理网关](clients/manage/cmg/plan-cloud-management-gateway.md)

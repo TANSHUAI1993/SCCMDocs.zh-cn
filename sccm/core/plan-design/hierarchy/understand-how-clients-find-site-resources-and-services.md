@@ -1,25 +1,26 @@
 ---
-title: "查找站点资源"
+title: 查找站点资源
 titleSuffix: Configuration Manager
-description: "了解 System Center Configuration Manager 客户端如何以及何时使用服务定位查找站点资源。"
+description: 了解 System Center Configuration Manager 客户端如何以及何时使用服务定位查找站点资源。
 ms.custom: na
 ms.date: 2/7/2017
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ae72df4b-5f5d-4e19-9052-bda28edfbace
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: d0cbaf0b9f10926015cf203dbb28633976034162
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+ms.openlocfilehash: 76d9d486bf0c07da3d81596b1b065fe6532b29fe
+ms.sourcegitcommit: e4ca9fb1fad2caaf61bb46e0a12f4d6b96f15513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="learn-how-clients-find-site-resources-and-services-for-system-center-configuration-manager"></a>了解客户端如何查找 System Center Configuration Manager 的站点资源和服务
 
@@ -61,8 +62,8 @@ System Center Configuration Manager 客户端使用名为*服务定位*的进程
 
 客户端基于客户端当前网络位置和边界组配置，选择要与之通信的管理点。 即使已分配有管理点，这仍可能不是客户端使用的管理点。  
 
-    > [!NOTE]  
-    >  A client always uses the assigned management point for registration messages and certain policy messages, even when other communications are sent to a proxy or local management point.  
+   > [!NOTE]  
+   >  对于注册消息和特定策略消息，客户端始终使用已分配管理点，即使向代理管理点或本地管理点发送了其他通信。
 
 可使用首选管理点。 首选管理点是客户端的已分配站点中的管理点，它与客户端用于查找站点系统服务器的边界组相关联。 首选管理点作为站点系统服务器与边界组相关联，其关联方式与分发点或状态迁移点与边界组的关联方式类似。 如果为层次结构启用首选管理点，则当客户端从其已分配站点使用管理点时，它将在从其分配的站点使用其他管理点之前尝试使用首选管理点。  
 
