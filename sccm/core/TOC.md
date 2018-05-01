@@ -111,10 +111,10 @@
 
 <!-- Only show the current plus three; four total) -->
 ##   [技术预览](get-started/technical-preview.md)
+###  [1804 中的功能](get-started/capabilities-in-technical-preview-1804.md)
 ###  [1803 中的功能](get-started/capabilities-in-technical-preview-1803.md)
 ###  [1802 中的功能](get-started/capabilities-in-technical-preview-1802.md)
 ###  [1801 中的功能](get-started/capabilities-in-technical-preview-1801.md)
-###  [1712 中的功能](get-started/capabilities-in-technical-preview-1712.md)
 
 ##   [在层次结构之间迁移数据](migration/migrate-data-between-hierarchies.md)
 ###  [制定迁移计划](migration/planning-for-migration.md)
