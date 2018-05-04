@@ -3,7 +3,7 @@ title: 支持的站点系统服务器
 titleSuffix: Configuration Manager
 description: 了解可用来托管 System Center Configuration Manager 站点或站点系统角色的 Windows 版本。
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 04/17/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -13,21 +13,21 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 17905b4c-3895-4ad4-a69c-5e0d0fc5a8c3
 caps.latest.revision: 44
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5bcaddb38ea6ecf1c3b5e0543c676c6a99e06101
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 092fc9d47e0dc7bb7afe0e078bd835dd2d091226
+ms.sourcegitcommit: e23350fe65ff99228274e465b24b5e163769f38f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="supported-operating-systems-for-system-center-configuration-manager-site-system-servers"></a>System Center Configuration Manager 站点系统服务器支持的操作系统
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
 
-本文详细介绍了可用于托管 System Center Configuration Manager 站点或站点系统角色的 Windows 版本。
+本文详细介绍了可用于托管 Configuration Manager 站点或站点系统角色的 Windows 版本。
 
 
 将本文中的信息和以下文章中的信息一起使用：
@@ -85,6 +85,14 @@ ms.lasthandoff: 03/23/2018
 -   软件更新点  
 
 -   状态迁移点
+
+
+
+## <a name="windows-storage-server-2016"></a>Windows Storage Server 2016
+
+**站点系统服务器：**  
+
+-   分发点  
 
 
 
@@ -253,7 +261,10 @@ ms.lasthandoff: 03/23/2018
 
     -   分发点支持多种不同的配置，每种配置都有不同的要求。 在某些情况下，这些配置不仅支持在服务器上安装，而且支持在客户端操作系统上安装。 有关分发点可用选项的详细信息，请参阅[管理内容和内容基础结构](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。  
 
-
+## <a name="the-server-core-installation-of-windows-server-version-1709"></a>Windows Server（版本 1709）的服务器核心安装
+从 Configuration Manager 1710 开始，支持将 [Windows Server（版本 1709）](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709)用作具有以下限制的分发点：  
+  -   仅支持 x64 位版本。
+  -   此 OS 上的分发点不支持 PXE 或多播。  
 
 ## <a name="the-server-core-installation-of-windows-server-2016"></a>Windows Server 2016 的 Server Core 安装
 使用 KB3186654 中的修补程序汇总，支持将此 OS 用作分发点，但有以下限制：  

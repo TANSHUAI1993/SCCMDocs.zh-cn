@@ -1,7 +1,7 @@
 ---
-title: "站点先决条件"
+title: 站点先决条件
 titleSuffix: Configuration Manager
-description: "了解如何将 Windows 计算机配置为 System Center Configuration Manager 站点系统服务器。"
+description: 了解如何将 Windows 计算机配置为 System Center Configuration Manager 站点系统服务器。
 ms.custom: na
 ms.date: 02/28/2018
 ms.prod: configuration-manager
@@ -12,15 +12,15 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1392797b-76cb-46b4-a3e4-8f349ccaa078
-caps.latest.revision: 
+caps.latest.revision: 5
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: 6d1be6375dde2df51aafe076e5613647ecca3c4c
-ms.sourcegitcommit: d0fc79214bc35ca172fd2023dfa617b977ee865b
+ms.openlocfilehash: ae0a36acf4203fb5c7601a2960c0b5bb0a52082e
+ms.sourcegitcommit: ac06e034cc60db7b1acade1f541e26b6cc50506e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="site-and-site-system-prerequisites-for-system-center-configuration-manager"></a>System Center Configuration Manager 的站点和站点系统先决条件
 
@@ -62,7 +62,8 @@ ms.lasthandoff: 02/28/2018
 
 -   .NET Framework 3.5 SP1（或更高版本）  
 
--   .NET Framework 4.5.2（或更高版本）
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7 或 4.7.1
+    - 有关 .Net Framework 版本的详细信息，请参阅 [.NET Framework 版本和依赖关系](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
 
 -   远程差分压缩  
 
@@ -83,7 +84,8 @@ ms.lasthandoff: 02/28/2018
 
 -   .NET Framework 3.5 SP1（或更高版本）  
 
--   .NET Framework 4.5.2（或更高版本）   
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7 或 4.7.1
+    - 有关 .Net Framework 版本的详细信息，请参阅 [.NET Framework 版本和依赖关系](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)
 
 -   远程差分压缩  
 
@@ -124,9 +126,12 @@ ms.lasthandoff: 02/28/2018
 
 -   .NET Framework 3.5 SP1（或更高版本）  
 
--   .NET Framework 4.5.2（或更高版本）：  
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7 或 4.7.1
+    - ASP.NET 4.5 
 
-    -   ASP.NET 4.5  
+    - 有关 .Net Framework 版本的详细信息，请参阅 [.NET Framework 版本和依赖关系](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)  
+
+    
 
 **IIS 配置：**  
 
@@ -159,7 +164,7 @@ ms.lasthandoff: 02/28/2018
 
 -   .NET Framework 3.5 SP1（或更高版本）  
 
--   .NET Framework 4.5.2（或更高版本）：  
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7 或 4.7.1：  
 
     -   ASP.NET 4.5：  
 
@@ -194,12 +199,12 @@ ms.lasthandoff: 02/28/2018
 ###  <a name="bkmk_2012AIpreq"></a>资产智能同步点  
 **Windows Server 角色和功能：**  
 
--   .NET Framework 4.5.2（或更高版本）  
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7 或 4.7.1 
 
 ###  <a name="bkmk_2012crppreq"></a>证书注册点  
 **Windows Server 角色和功能：**  
 
--   .NET Framework 4.5.2（或更高版本）：  
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7 或 4.7.1：  
 
     -   HTTP 激活  
 
@@ -273,7 +278,7 @@ ms.lasthandoff: 02/28/2018
 
 -   .NET Framework 3.5（或更高版本）  
 
--   .NET Framework 4.5.2（或更高版本）：  
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7 或 4.7.1：  
 
      此站点系统角色安装时，Configuration Manager 将自动安装 .NET Framework 4.5.2。 此安装可将服务器置于重启挂起状态。 如果挂起对 .NET Framework 的重启，在服务器重启和安装完成之前，.NET 应用程序可能失败。  
 
@@ -313,7 +318,7 @@ ms.lasthandoff: 02/28/2018
 
 -   .NET Framework 3.5（或更高版本）  
 
--   .NET Framework 4.5.2（或更高版本） 
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7 或 4.7.1 
 
      此站点系统角色安装时，Configuration Manager 将自动安装 .NET Framework 4.5.2。 此安装可将服务器置于重启挂起状态。 如果挂起对 .NET Framework 的重启，在服务器重启和安装完成之前，.NET 应用程序可能失败。  
 
@@ -359,7 +364,7 @@ ms.lasthandoff: 02/28/2018
 ###  <a name="bkmk_2012MPpreq"></a>管理点  
 **Windows Server 角色和功能：**  
 
--   .NET Framework 4.5.2（或更高版本） 
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7 或 4.7.1 
 
 -   BITS 服务器扩展（和自动选择的选项），或后台智能传输服务 (BITS)（和自动选择的选项）  
 
@@ -382,7 +387,7 @@ ms.lasthandoff: 02/28/2018
 ###  <a name="bkmk_2012RSpoint"></a> Reporting Services 点  
 **Windows Server 角色和功能：**  
 
--   .NET Framework 4.5.2（或更高版本） 
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7 或 4.7.1 
 
 **SQL Server Reporting Services：**  
 
@@ -395,7 +400,7 @@ ms.lasthandoff: 02/28/2018
 ###  <a name="bkmk_SCPpreq"></a>服务连接点  
 **Windows Server 角色和功能：**  
 
--   .NET Framework 4.5.2（或更高版本） 
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7 或 4.7.1 
 
      此站点系统角色安装时，Configuration Manager 将自动安装 .NET Framework 4.5.2。 此安装可将服务器置于重启挂起状态。 如果挂起对 .NET Framework 的重启，在服务器重启和安装完成之前，.NET 应用程序可能失败。  
 
@@ -410,7 +415,7 @@ ms.lasthandoff: 02/28/2018
 
 -   .NET Framework 3.5 SP1（或更高版本）  
 
--   .NET Framework 4.5.2（或更高版本） 
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7 或 4.7.1 
 
 需要默认 IIS 配置。
 
@@ -439,7 +444,7 @@ ms.lasthandoff: 02/28/2018
 
 -   .NET Framework 3.5 SP1（或更高版本）  
 
--   .NET Framework 4.5.2（或更高版本） 
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7 或 4.7.1 
 
 **Windows 功能：**  
 
@@ -462,7 +467,7 @@ ms.lasthandoff: 02/28/2018
 
 -   .NET Framework 3.5 SP1（或更高版本）  
 
--   .NET Framework 4.5.2（或更高版本）  
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7 或 4.7.1 
 
 **Visual C++ Redistributable：**  
 
@@ -499,7 +504,7 @@ ms.lasthandoff: 02/28/2018
 ###  <a name="bkmk_2008acwspreq"></a>应用程序目录网站点  
 **.NET Framework：**  
 
--   .NET Framework 4.5.2（或更高版本） 
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7 或 4.7.1
 
 **IIS 配置：**
 
@@ -530,7 +535,7 @@ ms.lasthandoff: 02/28/2018
 
 -   .NET Framework 3.5 SP1（或更高版本）  
 
--   .NET Framework 4.5.2（或更高版本） 
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7 或 4.7.1 
 
 **Windows Communication Foundation (WCF) 激活：**  
 
@@ -561,12 +566,12 @@ ms.lasthandoff: 02/28/2018
 ###  <a name="bkmk_2008AIpreq"></a>资产智能同步点  
 **.NET Framework：**  
 
--   .NET Framework 4.5.2（或更高版本） 
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7 或 4.7.1
 
 ###  <a name="bkmk_2008crppreq"></a>证书注册点  
 **.NET Framework：**  
 
--   .NET Framework 4.5.2（或更高版本） 
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7 或 4.7.1 
 
 -   HTTP 激活  
 
@@ -641,7 +646,7 @@ ms.lasthandoff: 02/28/2018
 ###  <a name="bkmk_2008Enrollpreq"></a>注册点  
 **.NET Framework：**  
 
--   .NET Framework 4.5.2（或更高版本） 
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7 或 4.7.1 
 
      安装此站点系统角色时，如果服务器未安装受支持的 .NET Framework 版本，Configuration Manager 将自动安装 .NET Framework 4.5.2。 此安装可将服务器置于重启挂起状态。 如果挂起对 .NET Framework 的重启，在服务器重启和安装完成之前，.NET 应用程序可能失败。  
 
@@ -670,7 +675,7 @@ ms.lasthandoff: 02/28/2018
 ###  <a name="bkmk_2008EnrollProxpreq"></a>注册代理点  
 **.NET Framework：**  
 
--   .NET Framework 4.5.2（或更高版本） 
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7 或 4.7.1
 
      安装此站点系统角色时，如果服务器未安装受支持的 .NET Framework 版本，Configuration Manager 将自动安装 .NET Framework 4.5.2。 此安装可将服务器置于重启挂起状态。 当挂起对 .NET Framework 的重启时，在服务器重启和安装完成之前，.NET 应用程序可能失败。  
 
@@ -708,7 +713,7 @@ ms.lasthandoff: 02/28/2018
 ###  <a name="bkmk_2008MPpreq"></a>管理点  
 **.NET Framework：**  
 
--   .NET Framework 4.5.2（或更高版本）
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7 或 4.7.1
 
 **IIS 配置：**
 
@@ -749,7 +754,7 @@ ms.lasthandoff: 02/28/2018
 ###  <a name="bkmk_2008RSpoint"></a> Reporting Services 点  
 **.NET Framework：**  
 
--   .NET Framework 4.5.2（或更高版本）  
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7 或 4.7.1 
 
 **SQL Server Reporting Services：**  
 
@@ -762,7 +767,7 @@ ms.lasthandoff: 02/28/2018
 ###  <a name="bkmk_2008SCPpreq"></a>服务连接点  
 **.NET Framework：**  
 
--   .NET Framework 4.5.2（或更高版本） 
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7 或 4.7.1 
 
      安装此站点系统角色时，如果服务器未安装受支持的 .NET Framework 版本，Configuration Manager 将自动安装 .NET Framework 4.5.2。 此安装可将服务器置于重启挂起状态。 如果挂起对 .NET Framework 的重启，在服务器重启和安装完成之前，.NET 应用程序可能失败。  
 
@@ -777,7 +782,7 @@ ms.lasthandoff: 02/28/2018
 
 -   .NET Framework 3.5 SP1（或更高版本）  
 
--   .NET Framework 4.5.2（或更高版本） 
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7 或 4.7.1 
 
 **IIS 配置：**
 

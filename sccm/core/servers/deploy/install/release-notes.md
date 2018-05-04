@@ -3,7 +3,7 @@ title: 发行说明
 titleSuffix: Configuration Manager
 description: 了解有关产品中尚未解决或 Microsoft 知识库文章中未涵盖的紧急问题。
 ms.custom: na
-ms.date: 03/22/2018
+ms.date: 04/18/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -17,11 +17,11 @@ caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e22bc4818f10a1f60fdb2135eb705e46dbaa10a4
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 2eabcba6e56bd2a0a9977ab31610a9d747ab6207
+ms.sourcegitcommit: e23350fe65ff99228274e465b24b5e163769f38f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="release-notes-for-system-center-configuration-manager"></a>System Center Configuration Manager 的发行说明
 
@@ -101,6 +101,21 @@ ms.lasthandoff: 03/23/2018
 
 #### <a name="workaround"></a>解决方法
  创建维护计划后，打开维护计划的属性，转到“评估计划”选项卡，选择“按计划运行此规则”，单击“自定义”，然后创建自定义计划。 例如，你可以将维护计划设置为每 60 天运行一次。  
+
+
+### <a name="changing-office-365-client-setting-doesnt-apply"></a>更改 Office 365 客户端设置不适用 
+<!--511551-->
+适用于：Configuration Manager 版本 1802  
+
+部署[客户端设置](/sccm/core/clients/deploy/about-client-settings#enable-management-of-the-office-365-client-agent)，其中将“启用 Office 365 客户端代理的管理”配置为 `Yes`。 然后，将该设置更改为 `No` 或 `Not Configured`。 更新目标客户端上的策略后，Office 365 更新仍由 Configuration Manager 管理。 
+
+#### <a name="workaround"></a>解决方法
+将以下注册表值更改为 `0` 并重启 **Microsoft Office 即点即用服务** (ClickToRunSvc)：
+
+```
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\office\16.0\Common\officeupdate]
+"OfficeMgmtCOM"=dword:00000000
+```
 
 
 

@@ -13,11 +13,11 @@ ms.date: 03/22/2018
 ms.topic: article
 ms.service: ''
 ms.assetid: 60e2022f-a4f9-40dd-af01-9ecb37b43878
-ms.openlocfilehash: cdfe52768499b929db473ac08d42207059965ffd
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: d0cee0eb242011d6cc7b3085b4ae9df908604fa8
+ms.sourcegitcommit: ac06e034cc60db7b1acade1f541e26b6cc50506e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="switch-configuration-manager-workloads-to-intune"></a>将 Configuration Manager 工作负荷切换到 Intune
 在[准备 Windows 10 设备进行共同管理](co-management-prepare.md)中，你已准备好了 Windows 10 设备以便进行共同管理。 这些设备已加入 AD 和 Azure AD，并且它们已在 Intune 中注册，具有 Configuration Manager 客户端。 你可能仍然具有已联接到 AD 且具有 Configuration Manager 客户端的 Windows 10 设备，但该设备未联接到 Azure AD 或在 Intune 中注册。 以下步骤介绍如何启用共同管理，准备其余的 Windows 10 设备（没有进行 Intune 注册的 Configuration Manager 客户端）进行共同管理，并允许开始将特定的 Configuration Manager 工作负荷切换到 Intune。
@@ -43,10 +43,13 @@ ms.lasthandoff: 03/23/2018
 ## <a name="workloads-able-to-be-transitioned-to-intune"></a>能够转换到 Intune 的工作负荷
 某些工作负荷可以切换到 Intune。 当工作负荷可供转换时，系统将更新以下列表：
 1. 设备合规性策略
-2. 资源访问策略
+2. 资源访问策略：资源访问策略在设备上配置 VPN、Wi-Fi、电子邮件以及证书设置。 有关详细信息，请参阅[部署资源访问配置文件](https://docs.microsoft.com/intune/device-profiles)。
+      - 电子邮件配置文件
+      - Wi-Fi 配置文件
+      - VPN 配置文件
+      - 证书配置文件
 3. Windows 更新策略
 4. Endpoint Protection（从 Configuration Manager 1802 版开始）
-      - Windows Defender 防病毒
       - Windows Defender 应用程序防护
       - Windows Defender 防火墙
       - Windows Defender SmartScreen
@@ -60,6 +63,8 @@ ms.lasthandoff: 03/23/2018
 
 ## <a name="monitor-co-management"></a>监视共同管理
 启用共同管理后，可以使用以下方法监视共同管理设备：
+
+- [共同管理仪表板](/sccm/core/clients/manage/co-management-dashboard)
 - **SQL 视图和 WMI 类**：可以在 Configuration Manager 站点数据库或 SMS&#95;Client&#95;ComanagementState WMI 类中查询 v&#95;ClientCoManagementState SQL 视图。 结合 WMI 类中的信息，可以在 Configuration Manager 中创建自定义集合，帮助判定共同管理部署的状态。 更多详细信息，请参阅[如何创建集合](/sccm/core/clients/manage/collections/create-collections)。 下列字段在 SQL 视图和 WMI 类中可用： 
     - **MachineId**：为 Configuration Manager 客户端指定唯一的设备 ID。
     - **MDMEnrolled**：指定设备是否注册了 MDM。 

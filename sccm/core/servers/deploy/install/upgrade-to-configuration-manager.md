@@ -15,11 +15,11 @@ caps.latest.revision: 21
 author: mestew
 ms.author: mstewart
 manager: angrobe
-ms.openlocfilehash: 72e11a04eb64d649749f2001ac4e3550c784132c
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 2af440e68d3f37914299d899b3a0e565050f651b
+ms.sourcegitcommit: e4ca9fb1fad2caaf61bb46e0a12f4d6b96f15513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="upgrade-to-system-center-configuration-manager"></a>升级到 System Center Configuration Manager
 
@@ -35,7 +35,7 @@ ms.lasthandoff: 03/23/2018
 ##  <a name="bkmk_path"></a> 就地升级路径  
 
 **升级到版本 1802**   
-如果具有版本 1702 基线介质，可以将下列版本升级到 System Center Configuration Manager 版本 1802 的完整许可版本：   
+如果具有版本 1802 基线介质，可以将下列版本升级到 System Center Configuration Manager 版本 1802 的完整许可版本：   
 -     System Center Configuration Manager 版本 1802 的评估版安装
 -     System Center 2012 Configuration Manager Service Pack 1
 -     System Center 2012 Configuration Manager Service Pack 2

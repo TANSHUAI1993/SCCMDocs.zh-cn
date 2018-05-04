@@ -11,11 +11,11 @@ ms.prod: configuration-manager
 ms.service: ''
 ms.technology: ''
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: a45ded0f3824c148f64f9578e51cc112c05d9f78
-ms.sourcegitcommit: aed99ba3c5e9482199cb3fc5c92f6f3a160cb181
+ms.openlocfilehash: 93a991cb3fd78e44f5ae4434a9845a57450e1025
+ms.sourcegitcommit: e4ca9fb1fad2caaf61bb46e0a12f4d6b96f15513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="prepare-windows-10-devices-for-co-management"></a>准备 Windows 10 设备进行共同管理
 可对已加入 AD 和 Azure AD 并在 Microsoft Intune 中注册的 Windows 10 设备和 Configuration Manager 中的客户端启用共同管理。 对于新的 Windows 10 设备和已在 Intune 中注册的设备，请在可以进行共同管理前先安装 Configuration Manager 客户端。 对于已属于 Configuration Manager 客户端的 Windows 10 设备，可向 Intune 注册设备并在 Configuration Manager 控制台中启用共同管理。
@@ -23,6 +23,32 @@ ms.lasthandoff: 03/30/2018
 > [!IMPORTANT]
 > Windows 10 移动设备不支持共同管理。
 
+
+## <a name="prerequisites"></a>先决条件
+必须具备以下先决条件才能实现共同管理。 有一般先决条件，以及针对安装了 Configuration Manager 客户端的设备和未安装该客户端的设备的不同先决条件。
+### <a name="general-prerequisites"></a>一般先决条件
+以下是实现共同管理的一般先决条件：  
+
+- Configuration Manager 版本 1710 或更高版本
+- Azure AD
+- 适用于所有用户的 EMS 或 Intune 许可证
+- [Azure AD 自动注册](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment)已启用
+- Intune 订阅（Intune 中的 MDM 机构设置为 Intune）
+
+
+   > [!Note]  
+   > 如果具有混合 MDM 环境（Intune 与 Configuration Manager 集成），则无法实现共同管理。 但是，你可以开始将用户迁移到 Intune 独立版本，然后对其关联的 Windows 10 设备启用共同管理。 有关迁移到 Intune 独立版本的详细信息，请参阅[开始从混合 MDM 迁移到 Intune 独立版本](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa)。
+
+### <a name="additional-prerequisites-for-devices-with-the-configuration-manager-client"></a>针对安装了 Configuration Manager 客户端的设备的其他先决条件
+- Windows 10 版本 1709 或更高版本
+- [已联接混合 Azure AD](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)（联接到 AD 和 Azure AD）
+
+### <a name="additional-prerequisites-for-devices-without-the-configuration-manager-client"></a>针对未安装 Configuration Manager 客户端的设备的其他先决条件
+- Windows 10 版本 1709 或更高版本
+- Configuration Manager 中的[云管理网关](/sccm/core/clients/manage/manage-clients-internet#cloud-management-gateway)（当你使用 Intune 安装 Configuration Manager 客户端时）
+
+> [!IMPORTANT]
+> Windows 10 移动设备不支持共同管理。
 
 
 ## <a name="command-line-to-install-configuration-manager-client"></a>安装 Configuration Manager 客户端的命令行
@@ -39,8 +65,8 @@ ms.lasthandoff: 03/30/2018
 
 - **管理点 (MP) 的 FQDN**：mp1.contoso.com    
 - 站点代码：PS1    
-- **Azure AD 租户 ID**：daf4a1c2-3a0c-401b-966f-0b855d3abd1a    
-- **Azure AD 客户端应用 ID**：7506ee10-f7ec-415a-b415-cd3d58790d97     
+- Azure AD 租户 ID：60a413f4-c606-4744-8adb-9476ae3XXXXX    
+- Azure AD 客户端应用 ID：9fb9315f-4c42-405f-8664-ae63283XXXXX     
 - AAD 资源 ID URI：ConfigMgrServer    
 
   > [!Note]    
@@ -48,7 +74,7 @@ ms.lasthandoff: 03/30/2018
 
 将使用以下命令行：
 
-`ccmsetup.msi CCMSETUPCMD="/mp:https://contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500    CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=PS1 SMSMP=https://mp1.contoso.com AADTENANTID=daf4a1c2-3a0c-401b-966f-0b855d3abd1a AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://ConfigMgrServer"`
+`ccmsetup.msi CCMSETUPCMD="/mp:https://contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500    CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=PS1 SMSMP=https://mp1.contoso.com AADTENANTID=60a413f4-c606-4744-8adb-9476ae3XXXXX AADCLIENTAPPID=9fb9315f-4c42-405f-8664-ae63283XXXXX AADRESOURCEURI=https://ConfigMgrServer"`
 
 > [!Tip]
 > 可通过使用以下步骤查找站点的命令行参数：     

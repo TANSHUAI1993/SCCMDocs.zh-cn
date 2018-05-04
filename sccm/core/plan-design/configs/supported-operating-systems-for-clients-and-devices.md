@@ -1,9 +1,9 @@
 ---
-title: "支持的客户端和设备"
+title: 支持的客户端和设备
 titleSuffix: Configuration Manager
-description: "了解 System Center Configuration Manager 对客户端和设备支持的操作系统。"
+description: 了解 System Center Configuration Manager 对客户端和设备支持的操作系统。
 ms.custom: na
-ms.date: 8/30/2017
+ms.date: 04/17/2018
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
@@ -12,22 +12,22 @@ ms.technology:
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
-caps.latest.revision: 
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 614226e60f9bcd7b8e3c1330f52a4847e89e0880
-ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
+caps.latest.revision: 5
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: d6befce522bcfef293f36def39405e9555cd3510
+ms.sourcegitcommit: e23350fe65ff99228274e465b24b5e163769f38f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="supported-operating-systems-for-clients-and-devices-for-system-center-configuration-manager"></a>System Center Configuration Manager 的客户端和设备支持的操作系统
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
 
- System Center Configuration Manager 支持在多种 Windows、Mac、Linux 和 UNIX 计算机上安装客户端软件。  
+ Configuration Manager 支持在多种 Windows、Mac、Linux 和 UNIX 计算机上安装客户端软件。  
 
  **对所有客户端的要求和限制：**  
 
@@ -43,6 +43,8 @@ ms.lasthandoff: 02/01/2018
 
 -  **Windows Server 2016**：标准版、数据中心版 <sup>1</sup>
   - 从 Configuration Manager 版本 1606（或 2016 年 10 月发布的 1606 基准版本）开始，支持该操作系统，并提供 KB3186654 中的修补程序汇总。  
+
+-   **Windows Storage Server 2016**  
 
 -   **Windows Server 2012 R2** (x64)：标准版、数据中心版 <sup>1</sup>    
 
@@ -65,6 +67,9 @@ ms.lasthandoff: 02/01/2018
 <!---   **Windows 8** (x86, x64): Professional, Enterprise  -removed Jan 12,2018 sms505863-->
 
 -   **Windows 7 SP1**（x86、x64）：专业版、企业版和旗舰版    
+
+-   **Windows Server（版本 1709）的服务器核心安装 (x64)** <sup>2</sup>
+  - 此操作系统支持用于自 1710 开始的版本。
 
 -   **Windows Server 2016 (x64) 的 Server Core 安装** <sup>2</sup>
   - 从版本 1606（或 2016 年 10 月发布的 1606 基准版本）开始，支持该操作系统，并提供 KB3186654 中的修补程序汇总。

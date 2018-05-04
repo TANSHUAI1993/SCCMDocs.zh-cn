@@ -1,25 +1,26 @@
 ---
-title: "配置报表"
+title: 配置报表
 titleSuffix: Configuration Manager
-description: "阅读有关如何在 Configuration Manager 层次结构中设置报表，包括 SQL Server Reporting Services 的信息。"
+description: 阅读有关如何在 Configuration Manager 层次结构中设置报表，包括 SQL Server Reporting Services 的信息。
 ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.reviewer: na
 ms.suite: na
-ms.technology: configmgr-other
+ms.technology:
+- configmgr-other
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 55ae86a7-f0ab-4c09-b4da-89cd0e7fa0e0
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Dougeby
 ms.author: dougeby
 manager: angrobe
-ms.openlocfilehash: be8c36c73478e232254185681546f5f52c7d701f
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.openlocfilehash: 6d50a35dc86b80ea135c79fc2f9825162115b764
+ms.sourcegitcommit: f65d4d24f0533e5e196ece0d8a4df0fb3e30eba1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configuring-reporting-in-system-center-configuration-manager"></a>配置 System Center Configuration Manager 中的报表
 
@@ -52,7 +53,7 @@ ms.lasthandoff: 10/12/2017
 
 5.  在“数据库”页上，使用“本机”验证是否已配置“报表服务器模式”设置。  
 
-6.  在“报表管理器 URL”页上，单击“报表管理器站点标识”中的 URL 以测试报表管理器虚拟目录连接。 此时可能会打开“Windows 安全”对话框并提示你输入安全凭据。 默认情况下，将显示你的用户帐户。 输入你的密码，然后单击“确定”。 验证是否成功地打开了该网页。 关闭浏览器窗口。  
+6.  在“报表管理器 URL”页上，单击“报表管理器站点标识”中的 URL 以测试报表管理器虚拟目录连接。 此时可能会打开“Windows 安全”  对话框并提示你输入安全凭据。 默认情况下，将显示你的用户帐户。 输入你的密码，然后单击“确定”。 验证是否成功地打开了该网页。 关闭浏览器窗口。  
 
     > [!NOTE]  
     >  Configuration Manager 中的报表不需要 Reporting Services 报表管理器，但是如果想要在 Internet 浏览器上运行报表或使用报表管理器管理报表，则需要它。  
@@ -260,7 +261,7 @@ ms.lasthandoff: 10/12/2017
 
 3.  选择承载你要修改其设置的 Reporting Services 点的站点系统，然后在“站点系统角色”中选择“Reporting Services 点”。  
 
-4.  在“站点角色”选项卡上的“属性”组中，单击“属性”。  
+4.  在“站点角色”  选项卡上的“属性”  组中，单击“属性” 。  
 
 5.  在“Reporting Services 点属性”对话框上，你可以修改以下设置：  
 
@@ -290,7 +291,7 @@ ms.lasthandoff: 10/12/2017
 
 1.  在 Configuration Manager 控制台中，单击“监视”。  
 
-2.  在“监视”工作区中，展开“报表”，然后单击“报表”。  
+2.  在“监视”  工作区中，展开“报表” ，然后单击“报表” 。  
 
 3.  在“主页”选项卡上的“设置”组中，单击“报表选项”。  
 

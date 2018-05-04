@@ -15,11 +15,11 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c6918983bca3e598fd99a8f7670ada3f7e43cfa6
-ms.sourcegitcommit: d8a4a53630351b3d677bbdc5d203e7d330472cba
+ms.openlocfilehash: 6a47569ee56931d76a41e5f14ed56f8276d264fb
+ms.sourcegitcommit: e4ca9fb1fad2caaf61bb46e0a12f4d6b96f15513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Configuration Manager 和 Microsoft Intune 的混合移动设备管理中的新增功能
 
@@ -47,6 +47,24 @@ ms.lasthandoff: 04/03/2018
 ## <a name="april-2018"></a>2018 年 4 月
 
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
+
+#### <a name="updated-help-experience-on-company-portal-app-for-android"></a>Android 公司门户应用中更新的帮助体验 
+<!--1631531-->
+我们更新了适用于 Android 的公司门户应用中的帮助体验，以符合 Android 平台的最佳做法。 现在，当用户在应用中遇到问题时，他们可以点击“菜单” > “帮助”并执行以下操作：
+- 将诊断日志上传到 Microsoft。
+- 将描述问题和事件 ID 的电子邮件发送给公司支持人员。
+
+
+#### <a name="update-where-to-configure-your-app-protection-policies"></a>更新配置应用保护策略的位置 
+<!--2144597-->
+在 Microsoft Intune 服务的 Azure 门户中，我们将从“Intune 应用保护服务”边栏选项卡暂时重定向到“移动应用”边栏选项卡。 请注意，Intune 中“应用配置”下的“移动应用”边栏选项卡已包括所有应用保护策略。 直接转到 Intune 即可，无需转到“Intune 应用保护”。 在 2018 年 4 月，我们将停止重定向并将完全删除“Intune 应用保护服务”边栏选项卡，以便在 Intune 中只存在应用保护策略的一个位置。 
+
+**这会对我产生哪些影响？** 此更改将同时影响 Intune 独立版客户和混合版（带 Configuration Manager 的 Intune）客户。 此集成将有助于简化云管理。
+
+**我需要如何准备应对此项变化？** 请将 Intune 标记为收藏（而不是“Intune 应用保护服务”边栏选项卡），并确保熟悉 Intune 的“移动应用”边栏选项卡中的应用保护策略工作流。 我们将重定向一小段时间，然后删除“应用保护”边栏选项卡。 请记住，所有应用保护策略都已转到 Intune，可修改任何条件访问策略。 有关修改条件访问策略的详细信息，请参阅 [Azure Active Directory 中的条件访问](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)。 有关其他信息，请参阅[应用保护策略是什么？](/intune/app-protection-policy) 
+
+
+
 
 #### <a name="user-experience-update-for-the-company-portal-app-for-ios"></a>iOS 版公司门户应用的用户体验更新 
 <!--1412866-->
