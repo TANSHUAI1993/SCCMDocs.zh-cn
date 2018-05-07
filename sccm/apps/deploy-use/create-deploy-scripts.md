@@ -17,11 +17,11 @@ caps.handback.revision: 0
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.openlocfilehash: b9699b2f4bd1f18890d25582be9a8d20778b64be
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+ms.openlocfilehash: 7cfb969ab70c27859788732839f4715541e1b91e
+ms.sourcegitcommit: e4ca9fb1fad2caaf61bb46e0a12f4d6b96f15513
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>从 Configuration Manager 控制台创建并运行 PowerShell 脚本
 
@@ -141,7 +141,7 @@ System Center Configuration Manager 具有运行 Powershell 脚本的集成功�
          |SMS 脚本|删除|是|
          |SMS 脚本|修改|是|
 
-    **角色名称**：脚本创建者
+    **角色名称**：脚本审批者
     - **说明**：这些权限允许此角色批准脚本，但不能创建或运行脚本。 
     - **权限**：确保设置以下权限。
 
@@ -184,7 +184,8 @@ System Center Configuration Manager 具有运行 Powershell 脚本的集成功�
 你的每一个脚本参数都有自己的对话框，用于添加更多细节以及验证信息。
 
 >[!IMPORTANT]
-> 参数值不能包含单引号。 
+> 参数值不能包含单引号。 </br></br>
+> 在 Configuration Manager 版本 1802 中存在一个已知问题，即无法将带空格的参数正确传递给脚本。 如果在参数中使用空格，则只能将参数中的第一项传递给脚本，而空格后的所有项均不会传递。 要解决此问题，管理员可采用将空格替换为其他字符并进行转换的编写脚本的方法，或使用其他方法。
 
 
 ### <a name="parameter-validation"></a>参数验证
