@@ -1,6 +1,7 @@
 #   了解和探索
 ##  [Configuration Manager 简介](understand/introduction.md)
 ### [查找 Configuration Manager 的帮助](understand/find-help.md)
+### [如何使用文档](understand/use-docs.md)
 ### [辅助功能](understand/accessibility-features.md)
 ### [软件中心用户指导](understand/software-center.md)
 ##  [Configuration Manager 基础知识](understand/fundamentals.md)
