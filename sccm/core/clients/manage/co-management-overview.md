@@ -12,11 +12,11 @@ ms.prod: configuration-manager
 ms.service: ''
 ms.technology: ''
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: 1657cbacde468ef7c54f95524e0fa9607a1a0186
-ms.sourcegitcommit: e23350fe65ff99228274e465b24b5e163769f38f
+ms.openlocfilehash: 3d7ca4bb72f6f3f76855faac125385374347ba55
+ms.sourcegitcommit: d67c6246bb6027cd5501e772b0521f9272407c28
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="co-management-for-windows-10-devices"></a>适用于 Windows 10 设备的共同管理    
  通过以前的 Windows 10 更新，已经可以将 Windows 10 设备同时联接到本地 Active Directory (AD) 和基于云的 Azure AD（混合 Azure AD）。 从 Configuration Manager 1710 版本开始，共同管理利用此项改进，并使你能够使用 Configuration Manager 和 Intune 来同时管理 Windows 10（版本 1709）设备。 <!-- 1350871 -->
