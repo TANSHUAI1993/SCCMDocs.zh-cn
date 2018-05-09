@@ -1,22 +1,20 @@
 ---
-title: "删除软件更新点"
+title: 删除软件更新点
 titleSuffix: Configuration Manager
-description: "按照此过程可通过 Configuration Manager 控制台删除站点中的软件更新点站点系统角色。"
-keywords: 
-author: dougeby
-ms.author: dougeby
-manager: angrobe
+description: 按照此过程可通过 Configuration Manager 控制台删除站点中的软件更新点站点系统角色。
+author: aczechowski
 ms.date: 10/06/2016
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: 2486375c-d4a2-4cf2-9124-9bee02bbf173
-ms.openlocfilehash: b5493f2572ecca50aba87b8944eeab706c3942fd
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 585077c44b13d79da55e8ab140fd93998b8371c1
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 #  <a name="BKMK_RemoveSUP"></a> 删除软件更新点站点系统角色  
 

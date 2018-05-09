@@ -1,26 +1,20 @@
 ---
-title: "修补程序安装程序"
+title: 修补程序安装程序
 titleSuffix: Configuration Manager
-description: "了解何时以及如何通过 Configuration Manager 的修补程序安装更新。"
-ms.custom: na
+description: 了解何时以及如何通过 Configuration Manager 的修补程序安装更新。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: f3058277-c597-4dac-86d1-41b6f7e62b36
-caps.latest.revision: 
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 0ed8399c080994745f79f58818781e9d32be7e48
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 5c90889861db55a27da897e709b16b66edece08a
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-the-hotfix-installer-to-install-updates-for-system-center-configuration-manager"></a>使用修补程序安装程序来安装 System Center Configuration Manager 的更新
 
@@ -169,7 +163,7 @@ System Center Configuration Manager 的某些更新无法从 Microsoft 云服务
 5.  安装更新捆绑包时，会将 **update.sql** 提取到站点服务器上的以下位置：**\\\\&lt;Server Name\>\SMS_&lt;Site Code\>\Hotfix\\&lt;KB Number\>\update.sql**  
 
 ####  <a name="bkmk_provider"></a>更新运行 SMS 提供程序的计算机  
- 安装包含 SMS 提供程序的更新的更新捆绑之后，必须将更新部署到运行 SMS 提供程序的每台计算机。 唯一的例外是，你安装此更新捆绑的站点服务器上以前安装的 SMS 提供程序实例。 在你安装此更新捆绑时，会更新站点服务器上的 SMS 提供程序的本地实例。  
+ 安装包含 SMS 提供程序的更新的更新捆绑之后，必须将更新部署到运行 SMS 提供程序的每台计算机。 唯一的例外情况是，你安装更新捆绑的站点服务器上以前安装的 SMS 提供程序的实例。 在你安装此更新捆绑时，会更新站点服务器上的 SMS 提供程序的本地实例。  
 
  如果删除某计算机上的 SMS 提供程序，然后重新安装它，则之后必须在该计算机上重新安装 SMS 提供程序的更新。  
 

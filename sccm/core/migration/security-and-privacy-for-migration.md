@@ -1,26 +1,20 @@
 ---
-title: "迁移安全和隐私"
+title: 迁移安全和隐私
 titleSuffix: Configuration Manager
-description: "获取到 System Center Configuration Manager 环境的迁移的安全最佳方案和隐私信息。"
-ms.custom: na
+description: 获取到 System Center Configuration Manager 环境的迁移的安全最佳方案和隐私信息。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6893fce1-7ad5-4151-9ba9-3096871e8e4a
-caps.latest.revision: "5"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 6c2fb0fe7ff3c126d1dcd70dd69103f9690f2938
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: 8cc6c1cee04e815c8a34f24236333fb927ed44fc
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-and-privacy-for-migration-to-system-center-configuration-manager"></a>有关迁移到 System Center Configuration Manager 的安全性和隐私
 

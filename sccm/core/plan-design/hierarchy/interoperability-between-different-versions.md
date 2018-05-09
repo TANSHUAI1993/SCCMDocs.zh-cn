@@ -1,25 +1,20 @@
 ---
-title: "版本之间的互操作性"
+title: 版本之间的互操作性
 titleSuffix: Configuration Manager
-description: "了解如何避免同一网络上多个 System Center Configuration Manager 层次结构之间发生冲突。"
-ms.custom: na
+description: 了解如何避免同一网络上多个 System Center Configuration Manager 层次结构之间发生冲突。
 ms.date: 1/30/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9b0a7859-747f-4495-a2f4-13fd5991f897
-caps.latest.revision: "8"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 66bfb130a27ed8e4b8b9d052a672ef7f72b56f59
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: 712007dd8892e28316f277326b2182e5fe945f7b
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="interoperability-between-different-versions-of-system-center-configuration-manager"></a>System Center Configuration Manager 不同版本之间的互操作性
 

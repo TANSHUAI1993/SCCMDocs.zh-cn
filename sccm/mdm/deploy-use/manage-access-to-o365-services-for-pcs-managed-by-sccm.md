@@ -2,25 +2,19 @@
 title: 管理 O365 服务的访问权限
 titleSuffix: Configuration Manager
 description: 了解如何为由 System Center Configuration Manager 管理的电脑配置对 Office 365 服务的条件访问。
-ms.custom: na
 ms.date: 04/10/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 34024741-edfa-4088-8599-d6bafc331e62
-caps.latest.revision: 15
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1e02cb911397d5f1f837996318b12049d328c9c3
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+ms.openlocfilehash: 7bf7114382c956dcac6302b3fc11617ad6b5eeec
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-access-to-o365-services-for-pcs-managed-by-system-center-configuration-manager"></a>管理对由 System Center Configuration Manager 管理的电脑的 O365 服务的访问
 
@@ -30,7 +24,7 @@ ms.lasthandoff: 04/16/2018
 为由 System Center Configuration Manager 管理的电脑配置对 Office 365 服务的条件访问。  
 
 > [!Note]  
-> 默认情况下，Configuration Manager 不启用此项可选功能。 必须在使用前启用此选项。 有关详细信息，请参阅[启用更新中的可选功能](/sccm/core/servers/manage/install-in-console-updates#bkmk_options)。<!--505213-->  
+> 默认情况下，Configuration Manager 不启用此项可选功能。 必须在使用前启用此功能。 有关详细信息，请参阅[启用更新中的可选功能](/sccm/core/servers/manage/install-in-console-updates#bkmk_options)。<!--505213-->  
 
 
 有关使用 Microsoft Intune 为注册设备和托管设备配置条件访问的信息，请参阅[在 System Center Configuration Manager 中管理服务访问权限](../../protect/deploy-use/manage-access-to-services.md)。 本文还介绍了已加入域但未对符合性进行评估的设备。
@@ -101,7 +95,7 @@ ms.lasthandoff: 04/16/2018
     > 版本 1710 首次将设备运行状况证明的条件访问条件作为[预发布功能](/sccm/core/servers/manage/pre-release-features)引入。 从 1802 版开始，此功能不再属于预发行功能。<!--1235616-->  
 
     > [!Note]  
-    > 默认情况下，Configuration Manager 不启用此项可选功能。 必须在使用前启用此选项。 有关详细信息，请参阅[启用更新中的可选功能](/sccm/core/servers/manage/install-in-console-updates#bkmk_options)。<!--505213-->  
+    > 默认情况下，Configuration Manager 不启用此项可选功能。 必须在使用前启用此功能。 有关详细信息，请参阅[启用更新中的可选功能](/sccm/core/servers/manage/install-in-console-updates#bkmk_options)。<!--505213-->  
 
 ### <a name="step-2-evaluate-the-effect-of-conditional-access"></a>步骤 2。 评估条件访问的影响  
  运行“条件访问符合性报告”。 可以在“报表” > “符合性和设置管理”下的“监视”工作区中找到它。 此报表显示所有设备的符合性状态。 会阻止报告为不符合的设备访问 Exchange Online 和 SharePoint Online。  

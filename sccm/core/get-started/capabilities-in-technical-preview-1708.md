@@ -1,30 +1,26 @@
 ---
 title: Technical Preview 1708
 titleSuffix: Configuration Manager
-description: "了解适用于 System Center Configuration Manager 的 Technical Preview 版本 1708 中的可用功能。"
-ms.custom: na
+description: 了解适用于 System Center Configuration Manager 的 Technical Preview 版本 1708 中的可用功能。
 ms.date: 08/25/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3c061ceb-3bdb-4d4f-8c60-344964bd416b
-author: erikje
-ms.author: erikje
-manager: angrobe
-ms.openlocfilehash: 84d3b10bf5eede1ce7557adb74a1b11a38fad777
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: b6764acf3ecc1aaad4a19c9d56880e7bd5692464
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1708-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1708 中的功能
 
 *适用范围：System Center Configuration Manager (Technical Preview)*
 
-本文介绍了 System Center Configuration Manager Technical Preview（版本 1708）中的可用功能。 可以安装此版本以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。 在安装此 Technical Preview 前，请查看 [System Center Configuration Manager 的 Technical Preview](../../core/get-started/technical-preview.md)，熟悉使用 Technical Preview 的常规要求和限制，如何在两版本之间进行更新，以及如何对 Technical Preview 中的有关功能提供反馈。     
+本文介绍了 System Center Configuration Manager Technical Preview（版本 1708）中的可用功能。 你可以安装此版本，以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。 在安装此 Technical Preview 前，请查看 [System Center Configuration Manager 的 Technical Preview](../../core/get-started/technical-preview.md)，熟悉使用 Technical Preview 的常规要求和限制，如何在两版本之间进行更新，以及如何对 Technical Preview 中的有关功能提供反馈。     
 
 
 <!--  Known Issues Template   
@@ -44,7 +40,7 @@ ms.lasthandoff: 12/01/2017
 
 
 
-**以下是可以试用的此版本的新功能。**  
+**以下是此版本可以试用的新功能。**  
 
 <!--  Rough Section Template
 ##  FEATURE

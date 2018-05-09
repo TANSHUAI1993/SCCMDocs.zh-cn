@@ -1,26 +1,20 @@
 ---
-title: "配置客户端通信端口"
+title: 配置客户端通信端口
 titleSuffix: Configuration Manager
-description: "在 System Center Configuration Manager 设置客户端通信端口。"
-ms.custom: na
+description: 在 System Center Configuration Manager 设置客户端通信端口。
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 406bbdbf-ab4a-4121-a68b-154f96ea14ec
-caps.latest.revision: "5"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: caec28f9e791bcbc2c67b63c9ff8886f9b750bca
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: b6f90995d00767c1607cc74323ebe4feefc97130
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-configure-client-communication-ports-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中配置客户端通信端口
 
@@ -33,7 +27,7 @@ ms.lasthandoff: 10/12/2017
  客户端请求端口的默认值是 **80** （对于 HTTP 流量）和 **443** （对于 HTTPS 流量）。 仅在你不想使用这两个默认值时才更改它们。 使用自定义端口的典型情况是，你在 IIS 中使用自定义网站而不是默认网站。 如果更改 IIS 中的默认网站的默认端口号，而其他应用程序也使用此默认网站，则它们可能会失败。  
 
 > [!IMPORTANT]  
->  不要在不了解后果的情况下更改 Configuration Manager 中的端口号。 例如：  
+>  不要在不了解后果的情况下更改 Configuration Manager 中的端口号。 示例：  
 >   
 >  -   如果在站点配置中更改客户端请求服务的端口号，而且没有重新配置现有的客户端以使用新的端口号，则这些客户端将变为非管理的客户端。  
 > -   在配置非默认的端口号之前，请确保防火墙和所有介入性网络设备都能支持此配置，并在必要时对它们进行重新配置。 如果你将在 Internet 上管理客户端，并且更改默认的 HTTPS 端口号 443，则 Internet 上的路由器和防火墙可能会阻止此通信。  
@@ -60,7 +54,7 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="to-configure-the-client-communication-port-numbers-for-a-site"></a>配置站点的客户端通信端口号  
 
-1.  在 Configuration Manager 控制台中，单击“管理” 。  
+1.  在 Configuration Manager 控制台中，单击“管理”。  
 
 2.  在“管理”  工作区中，展开“站点配置” ，单击“站点” ，然后选择要配置的主站点。  
 

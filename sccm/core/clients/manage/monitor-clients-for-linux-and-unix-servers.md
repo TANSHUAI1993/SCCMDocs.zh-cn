@@ -1,25 +1,20 @@
 ---
-title: "监视 Linux/UNIX 客户端 "
+title: '监视 Linux/UNIX 客户端 '
 titleSuffix: Configuration Manager
-description: "在 System Center Configuration Manager 中监视 Linux 和 UNIX 服务器上的客户端。"
-ms.custom: na
+description: 在 System Center Configuration Manager 中监视 Linux 和 UNIX 服务器上的客户端。
 ms.date: 08/04/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d827cf91-b18f-4ee7-b538-24ba6f003ab9
-caps.latest.revision: "6"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 777842307b280a4f269d68bcb993f3cec6f2e3e3
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 68370a09dda49e16edd05fb545922f2e182f79a5
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-monitor-clients-for-linux-and-unix-servers-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中监视 Linux 和 UNIX 服务器的客户端
 

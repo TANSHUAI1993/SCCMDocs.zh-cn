@@ -1,25 +1,20 @@
 ---
-title: "Endpoint Protection 恶意软件定义"
+title: Endpoint Protection 恶意软件定义
 titleSuffix: Configuration Manager
-description: "了解如何配置 Configuration Manager 软件更新以将定义更新交付到客户端计算机。"
-ms.custom: na
+description: 了解如何配置 Configuration Manager 软件更新以将定义更新交付到客户端计算机。
 ms.date: 10/06/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: 3b9c4027-a98b-406b-935c-ccabcfe713df
-caps.latest.revision: "21"
-author: NathBarn
-ms.author: nathbarn
-manager: angrobe
-ms.openlocfilehash: cf488babe28267c2438e03fa94c514c872f960c7
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 414231d2cd07e583196b6b1abdd6530c3d49681a
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 #  <a name="using-configuration-manager-software-updates-to-deliver-definition-updates"></a>使用 Configuration Manager 软件更新将定义更新交付
 
@@ -33,7 +28,7 @@ ms.lasthandoff: 10/12/2017
 
 ## <a name="to-configure-an-automatic-deployment-rule-to-deliver-definition-updates"></a>若要配置自动部署规则以提供定义更新
 
-1.  在 Configuration Manager 控制台中，单击“软件库” 。
+1.  在 Configuration Manager 控制台中，单击“软件库”。
 
 2.  在“软件库”  工作区中，展开“软件更新” ，然后单击“自动部署规则” 。
 

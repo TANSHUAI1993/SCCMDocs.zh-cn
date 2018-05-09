@@ -1,25 +1,20 @@
 ---
-title: "语言包"
+title: 语言包
 titleSuffix: Configuration Manager
-description: "了解 System Center Configuration Manager 中可用的语言支持。"
-ms.custom: na
+description: 了解 System Center Configuration Manager 中可用的语言支持。
 ms.date: 1/3/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cd74e5f5-33f6-4566-8c9d-d6a93bfe71ed
-caps.latest.revision: "10"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: d7553cda2e9cc6bc1ff53afe1e357e767228db69
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: a198e15a1ef389d792acc73f2253aa4a704ac35a
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="language-packs-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的语言包
 

@@ -1,26 +1,20 @@
 ---
-title: "资产智能安全和隐私"
+title: 资产智能安全和隐私
 titleSuffix: Configuration Manager
-description: "获取 System Center Configuration Manager 中资产智能的安全和隐私信息。"
-ms.custom: na
+description: 获取 System Center Configuration Manager 中资产智能的安全和隐私信息。
 ms.date: 2/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d0c6f7a0-dcae-4e6d-aa28-35d464d97ff7
-caps.latest.revision: "5"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 6d33053f360d05a4efdb6da5e405d12fd3f0d89b
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 51bfe17980a7660ecdccfd13a11d6c7bcfd93e5f
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-and-privacy-for-asset-intelligence-in-system-center-configuration-manager"></a>System Center Configuration Manager 中资产智能的安全和隐私
 

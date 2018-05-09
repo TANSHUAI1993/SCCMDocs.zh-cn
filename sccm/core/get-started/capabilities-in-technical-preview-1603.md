@@ -1,32 +1,27 @@
 ---
-title: "Technical Preview 1603 中的功能"
+title: Technical Preview 1603 中的功能
 titleSuffix: Configuration Manager
-description: "了解 System Center Configuration Manager Technical Preview 1603 版中的可用功能。"
-ms.custom: na
+description: 了解 System Center Configuration Manager Technical Preview 1603 版中的可用功能。
 ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5f861b72-9f14-4d17-a512-4a79b660abe6
-caps.latest.revision: "8"
-author: erikje
-ms.author: erikje
-manager: angrobe
+author: aczechowski
 robots: noindex,nofollow
-ms.openlocfilehash: 9152016afe1d6333cb919f3b5eb155028dc6eae1
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 6d5ecf4e2d231a596012aa9f7d371f18ef0705a1
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1603-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1603 版中的功能
 
 *适用范围：System Center Configuration Manager (Technical Preview)*
 
-本文介绍了 System Center Configuration Manager Technical Preview 1603 版中的可用功能。 可以安装此版本以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。 或者，如果使用的是 System Center Technical Preview 5，此版本将作为 System Center Configuration Manager Technical Preview 的基准版本安装。 在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。  
+本文介绍了 System Center Configuration Manager Technical Preview 1603 版中的可用功能。 你可以安装此版本，以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。 或者，如果使用的是 System Center Technical Preview 5，此版本将作为 System Center Configuration Manager Technical Preview 的基准版本安装。 在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。  
 
  **此 Technical Preview 中的已知问题：**  
 
@@ -34,7 +29,7 @@ ms.lasthandoff: 12/01/2017
 
 -   站点服务器更新到 Technical Preview 1603 之后，客户端无法使用任何远程控制功能，直到它们也更新到版本 1603。  
 
- **以下是可以试用的此版本的新功能。**  
+ **以下是此版本可以试用的新功能。**  
 
 ##  <a name="BKMK_SC1603"></a>对软件中心的改进  
 

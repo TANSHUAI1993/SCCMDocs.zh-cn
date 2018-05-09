@@ -2,25 +2,19 @@
 title: 客户端对等缓存
 titleSuffix: Configuration Manager
 description: 使用 System Center Configuration Manager 部署内容时，将对等缓存用于客户端内容源位置。
-ms.custom: na
 ms.date: 04/10/2018
-ms.reviewer: na
-ms.suite: na
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 86cd5382-8b41-45db-a4f0-16265ae22657
-caps.latest.revision: 3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 99eef9faf6ac66f65d16020b703e3a64d9beb9d0
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+ms.openlocfilehash: b705a2cb8eccae3abe63c5de0680c712ab2e181e
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>用于 Configuration Manager 客户端的对等缓存
 
@@ -34,7 +28,7 @@ ms.lasthandoff: 04/16/2018
 
 
 > [!Note]  
-> 默认情况下，Configuration Manager 不启用此项可选功能。 必须在使用前启用此选项。 有关详细信息，请参阅[启用更新中的可选功能](/sccm/core/servers/manage/install-in-console-updates#bkmk_options)。<!--505213-->  
+> 默认情况下，Configuration Manager 不启用此项可选功能。 必须在使用前启用此功能。 有关详细信息，请参阅[启用更新中的可选功能](/sccm/core/servers/manage/install-in-console-updates#bkmk_options)。<!--505213-->  
 
 
 ## <a name="overview"></a>概述

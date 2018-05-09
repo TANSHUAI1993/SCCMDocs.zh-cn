@@ -1,25 +1,20 @@
 ---
-title: "管理点数据库副本"
+title: 管理点数据库副本
 titleSuffix: Configuration Manager
-description: "使用数据库副本可减少管理点对站点数据库服务器施加的 CPU 负载。"
-ms.custom: na
+description: 使用数据库副本可减少管理点对站点数据库服务器施加的 CPU 负载。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: b06f781b-ab25-4d9a-b128-02cbd7cbcffe
-caps.latest.revision: "9"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: f322d5dcd2f505f52e363e07801497ffa3bfdc7e
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 0893df43f7979fa3c36ba90ab400e399f96e6228
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="database-replicas-for-management-points-for-system-center-configuration-manager"></a>System Center Configuration Manager 管理点的数据库副本
 
@@ -399,7 +394,7 @@ System Center Configuration Manager 主站点可以使用数据库副本来减�
 
     7.  右键单击友好名称为“ConfigMgr SQL Server 标识证书” 的证书，单击“所有任务” ，然后选择“导出” 。  
 
-    8.  通过使用默认选项完成“证书导出向导”  ，并使用“.cer”  文件扩展名保存证书。  
+    8.  通过使用默认选项完成“证书导出向导”，并使用“.cer”文件扩展名保存证书。  
 
 2.  在管理点计算机上执行以下步骤，将数据库副本服务器的自签名证书添加到管理点上的“受信任人”证书存储：  
 
@@ -432,7 +427,7 @@ System Center Configuration Manager 主站点可以使用数据库副本来减�
      运行以下查询在数据库副本服务器上配置所需的详细信息，并导出数据库副本服务器的证书：**EXEC sp_BgbConfigSSBForReplicaDB '&lt;副本 SQL Server FQDN\>', '&lt;副本数据库名称\>', '&lt;证书备份文件路径\>'**  
 
     > [!NOTE]  
-    >  如果数据库副本服务器不在 SQL Server 的默认实例上，则对于此步骤，除了指定副本数据库名称之外，你还必须指定实例名称。 为此，请将**&lt;副本数据库名称\>**替换为**实例名称&lt;\\副本数据库名称\>**。  
+    >  如果数据库副本服务器不在 SQL Server 的默认实例上，则对于此步骤，除了指定副本数据库名称之外，你还必须指定实例名称。 为此，请将**&lt;副本数据库名称\>** 替换为**实例名称&lt;\\副本数据库名称\>**。  
 
      从数据库副本服务器中导出证书后，将证书的副本放在主站点数据库服务器上。  
 

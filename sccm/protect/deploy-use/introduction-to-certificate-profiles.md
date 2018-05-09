@@ -2,25 +2,19 @@
 title: 证书配置文件简介
 titleSuffix: Configuration Manager
 description: 了解 System Center Configuration Manager 中的证书配置文件如何与 Active Directory 证书服务一起使用。
-ms.custom: na
 ms.date: 04/10/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: 41dcc259-f147-4420-bff2-b65bdf8cff77
-caps.latest.revision: 7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0e82c9704c0505c8c7ed9ef3d04260ca74026999
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+ms.openlocfilehash: c4230b935b7fabc44743d57fcb2315348edb4274
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="introduction-to-certificate-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的证书配置文件简介
 
@@ -59,7 +53,7 @@ ms.lasthandoff: 04/16/2018
     从现有证书中[导入凭据](/sccm/mdm/deploy-use/import-pfx-certificate-profiles)或[定义证书](/sccm/mdm/deploy-use/create-pfx-certificate-profiles)颁发机构来处理请求，可通过这样的方式创建 PFX 证书配置文件。
 
     > [!Note]  
-    > 默认情况下，Configuration Manager 不启用此项可选功能。 必须在使用前启用此选项。 有关详细信息，请参阅[启用更新中的可选功能](/sccm/core/servers/manage/install-in-console-updates#bkmk_options)。<!--505213-->  
+    > 默认情况下，Configuration Manager 不启用此项可选功能。 必须在使用前启用此功能。 有关详细信息，请参阅[启用更新中的可选功能](/sccm/core/servers/manage/install-in-console-updates#bkmk_options)。<!--505213-->  
 
     从版本 1706 开始，可以将 Microsoft 或 Entrust 用作“个人信息交换 (.pfx)”证书的证书颁发机构。
 

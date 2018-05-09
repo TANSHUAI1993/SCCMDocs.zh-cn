@@ -1,25 +1,20 @@
 ---
-title: "自动将设备分类到集合"
+title: 自动将设备分类到集合
 titleSuffix: Configuration Manager
-description: "使用 System Center Configuration Manager 自动将设备分类到集合。"
-ms.custom: na
+description: 使用 System Center Configuration Manager 自动将设备分类到集合。
 ms.date: 04/23/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 98b038b4-1a13-4228-bdb8-a12194e32b0e
-caps.latest.revision: "5"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 2a9b311b0abbeb56d9043410ecbeb54ec244fbef
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: fcffc48431045fab2b2f69e112258c844ad184bb
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="automatically-categorize-devices-into-collections-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 自动将设备分类到集合
 

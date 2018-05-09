@@ -1,26 +1,20 @@
 ---
-title: "资产智能简介"
+title: 资产智能简介
 titleSuffix: Configuration Manager
-description: "获取 System Center Configuration Manager 中的资产智能简介。"
-ms.custom: na
+description: 获取 System Center Configuration Manager 中的资产智能简介。
 ms.date: 2/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 0bdfdef5-390f-4099-8bde-de51d9a89175
-caps.latest.revision: "7"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 349f5998c0d5e96a626e901ae99fee76541d1b4e
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 0c09160e88d8a713caadfdd9a6973fd436b4cad1
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="introduction-to-asset-intelligence-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的资产智能简介
 
@@ -122,13 +116,13 @@ System Center Configuration Manager 中的资产智能允许使用资产智能�
     > [!NOTE]  
     >  如果安装了资产智能同步点站点系统角色，则仅显示“资产智能”  主页的“资产智能目录同步”部分。  
 
--   **清单软件状态**：提供已列出清单的软件、软件类别以及由 Microsoft 标识、由管理员标识、等待联机标识或未标识并且未等待的软件家族的计数和百分比。 以表格式显示的信息显示每种对象的计数，以图表显示的信息显示每个对象的百分比。  
+-   **清单软件状态**：提供已列出清单的软件、软件类别以及由 Microsoft 标识、由管理员标识、等待联机标识或未标识并且未等待的软件家族的计数和百分比。 以表格格式显示的信息显示对于每个，计数并在图表中显示的信息显示为每个所占百分比。  
 
 ##  <a name="BKMK_AssetIntelligenceReports"></a> 资产智能报表  
  资产智能报表位于 Configuration Manager 控制台中，在“监视”工作区中“报表”节点下的“资产智能”文件夹中。 这些报表提供有关硬件、许可证管理和软件的信息。 有关 Configuration Manager 中报表的详细信息，请参阅 [System Center Configuration Manager 中的报表](../../../../core/servers/manage/reporting.md)。  
 
 > [!NOTE]  
->  资产智能报表中显示的已安装软件标题和许可证信息的数量的准确性可能会与安装的软件标题或环境中使用的许可证的实际数量不同。 形成这种差异的原因是为企业环境中安装的软件标题清点软件许可证信息所涉及的复杂依赖关系和限制。 请勿将资产智能报表用作确定所购买软件许可证符合性的唯一来源。  
+>  资产智能报表中显示的已安装软件标题和许可证信息的数量的准确性可能会与安装的软件标题或环境中使用的许可证的实际数量不同。 形成这种差异的原因是为企业环境中安装的软件标题清点软件许可证信息所涉及的复杂依赖关系和限制。 不要用于确定已购买的软件许可证符合性中将用作唯一的源资产智能报表。  
 
 ###  <a name="BKMK_HardwareReports"></a> 资产智能硬件报表  
  资产智能硬件报表提供有关组织中硬件资产的信息。 使用硬件清单信息（例如速度、内存、外围设备等），资产智能硬件报表可以显示有关 USB 设备、必须升级的硬件乃至未准备好执行特定软件升级的计算机的信息。  
@@ -146,7 +140,7 @@ System Center Configuration Manager 中的资产智能允许使用资产智能�
  资产智能软件报表提供有关组织中计算机上安装的软件家族、类别和特定软件标题的信息。 软件报表可显示有关浏览器帮助程序对象、自动启动的软件等的信息。 这些报表可用于识别广告软件、间谍软件和其他恶意软件，并且可以标识软件冗余，从而有助于简化软件购买和支持。  
 
 ###  <a name="BKMK_SoftwareIdTagReports"></a> 资产智能软件标识标记报表  
- 资产智能软件标识标记报表提供有关包含符合 ISO/IEC 19770-2 标准的软件标识标记的软件的信息。 软件标识标记提供用于标识安装的软件的授权信息。 启用 SMS_SoftwareTag 硬件清单报表类时，Configuration Manager 会收集有关具有软件标识标记的软件的信息。 以下报表提供有关软件的信息：  
+ 资产智能软件标识标记报告提供有关软件包含符合 ISO/IEC 19770-2 软件标识标志的信息。 软件标识标记提供用于标识安装的软件的授权信息。 启用 SMS_SoftwareTag 硬件清单报表类时，Configuration Manager 会收集有关具有软件标识标记的软件的信息。 以下报表提供有关软件的信息：  
 
 -   **软件 14A - 搜索启用软件标识标记的软件**：此报表提供启用了软件标识标记的已安装软件的计数。  
 
@@ -155,10 +149,10 @@ System Center Configuration Manager 中的资产智能允许使用资产智能�
 -   **软件 14C - 特定计算机上所安装的启用软件标识标记的软件**：此报表列出特定计算机上启用了特定软件标识标记的所有已安装软件。  
 
 ###  <a name="BKMK_ReportingLImitations"></a> 资产智能报表限制  
- 资产智能报表可以提供有关安装的软件标题及已购买且正在使用的软件许可证的大量信息。 然而，不应该将这些信息用作确定所购买软件许可证符合性的唯一来源。  
+ 资产智能报表可以提供大量有关已安装的软件标题的信息并购买了正在使用的软件许可证。 但是，您应该不使用此信息作为唯一的源用于确定已购买的软件许可证符合性。  
 
 ####  <a name="BKMK_ExampleDependencies"></a> 示例依赖关系  
- 资产智能报表中显示的已安装软件标题和许可证信息的数量的准确性可能会与当前使用的实际数量不同。 形成这种差异的原因是为企业环境中使用的软件标题清点软件许可证信息所涉及的复杂依赖关系。 以下举例演示了在使用资产智能的企业中，对可能影响资产智能报表准确性的已安装软件列出清单所涉及的依赖关系：  
+ 有关资产智能报表中显示的数量的准确性安装的软件标题和许可证信息可能会不同于当前使用的实际数量。 形成这种差异的原因是为企业环境中使用的软件标题清点软件许可证信息所涉及的复杂依赖关系。 以下举例演示了在使用资产智能的企业中，对可能影响资产智能报表准确性的已安装软件列出清单所涉及的依赖关系：  
 
  **客户端硬件清单依赖关系**  
  资产智能安装的软件报表基于通过扩展硬件清单启用资产智能报表，从 Configuration Manager 客户端收集的数据。 因为对硬件清单报表的这种依赖关系，资产智能报表将仅反映来自在启用了必需的资产智能 WMI 报表类的情况下，成功完成硬件清单进程的 Configuration Manager 客户端的数据。 另外，因为 Configuration Manager 客户端根据管理用户所定义的计划来执行硬件清单进程，所以在数据报表中可能出现延迟，此延迟会影响资产智能报表的准确性。 例如，已列出清单的受许可软件标题可能会在客户端完成成功的硬件清单周期之后卸载。 但是，该软件标题会在资产智能报表中显示为已安装，直到客户端的下一个计划硬件清单报表周期。  
@@ -167,7 +161,7 @@ System Center Configuration Manager 中的资产智能允许使用资产智能�
  因为资产智能报表基于使用标准 Configuration Manager 客户端硬件清单进程收集的已安装软件标题数据，所以可能未正确收集某些软件标题数据。 例如，不符合标准安装流程的软件安装或者在安装之前更改的软件安装可能导致资产智能报表不准确。  
 
 ####  <a name="BKMK_LegalLimitations"></a> 法律限制  
- 资产智能报表中显示的信息受诸多限制影响，其中显示的信息不表示法律、会计或其他专业建议。 资产智能报表提供的信息仅供参考，并且不应用作确定软件许可证使用情况符合性的唯一信息来源。  
+ 显示在资产智能报表都需要很多局限性和在其中显示的信息的信息不代表法律、 会计或其他专业建议。 资产智能报表提供的信息仅供参考，并且不应用作确定软件许可证使用情况符合性的唯一信息来源。  
 
  以下举例说明了在使用资产智能的企业中，对可能影响资产智能报表准确性的已安装软件和许可证使用情况列出清单所涉及的限制：  
 

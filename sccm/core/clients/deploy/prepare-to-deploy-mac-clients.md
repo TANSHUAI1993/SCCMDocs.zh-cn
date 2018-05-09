@@ -1,25 +1,20 @@
 ---
-title: "将客户端软件部署到 Mac 的准备工作"
+title: 将客户端软件部署到 Mac 的准备工作
 titleSuffix: Configuration Manager
-description: "将 Configuration Manager 客户端部署到 Mac 计算机前的配置任务。"
-ms.custom: na
+description: 将 Configuration Manager 客户端部署到 Mac 计算机前的配置任务。
 ms.date: 11/28/2017
 ms.prod: configuration-manager
-ms.reviewer: aaroncz
-ms.suite: na
 ms.technology: configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2285a953-6a86-4ed5-97dd-cd57b02bc1ee
-caps.latest.revision: "12"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 1d096111250af4061c94e71f8dc602ccae2d4607
-ms.sourcegitcommit: 1dd051d8548a19b724bb8f9e6a2278a4901ed916
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 748a56155ca7dbbcf6764c72cf5fdf37d24a277b
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prepare-to-deploy-client-software-to-macs"></a>将客户端软件部署到 Mac 的准备工作
 

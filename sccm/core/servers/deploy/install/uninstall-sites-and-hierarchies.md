@@ -1,26 +1,20 @@
 ---
-title: "卸载站点"
+title: 卸载站点
 titleSuffix: Configuration Manager
-description: "卸载 System Center Configuration Manager 站点时，请使用这些详细信息作为指南。"
-ms.custom: na
+description: 卸载 System Center Configuration Manager 站点时，请使用这些详细信息作为指南。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d466edd2-97f0-44c1-a73e-d71abbdbf4a8
-caps.latest.revision: "6"
-caps.handback.revision: "0"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 78d745ed9ed7e8f11f6fc165701dcf4a7004573c
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 0f87975d660a94d04cdd7d0e10816b6e2815fe53
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="uninstall-sites-and-hierarchies-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中卸载站点和层次结构
 

@@ -1,26 +1,20 @@
 ---
-title: "特性和功能"
+title: 特性和功能
 titleSuffix: Configuration Manager
-description: "了解 System Center Configuration Manager 的主要管理功能。"
-ms.custom: na
+description: 了解 System Center Configuration Manager 的主要管理功能。
 ms.date: 12/29/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5d388399-07ca-431c-a9b2-56c69771aa87
-caps.latest.revision: "18"
-caps.handback.revision: "0"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 71e1edc178e770d7c05007c258e8085a2e3fe984
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: fadc93d1977d5d066a6c4c3884bdbaeefb2a0c90
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="features-and-capabilities-of-system-center-configuration-manager"></a>System Center Configuration Manager 的特性和功能
 

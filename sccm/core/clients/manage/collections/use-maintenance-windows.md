@@ -1,26 +1,20 @@
 ---
-title: "使用维护时段"
+title: 使用维护时段
 titleSuffix: Configuration Manager
-description: "使用集合和维护时段在 System Center Configuration Manager 中有效管理客户端。"
-ms.custom: na
+description: 使用集合和维护时段在 System Center Configuration Manager 中有效管理客户端。
 ms.date: 02/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 4564ebcb-41a8-4eb0-afdb-2e1f0795cfa2
-caps.latest.revision: "6"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 960955af87cdae9c43b5b520c348e32e1f48ef32
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 18a870b111b141cb9b95664a2f66403ea37cb99e
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-use-maintenance-windows-in-system-center-configuration-manager"></a>如何在 Configuration Manager 中使用维护时段
 

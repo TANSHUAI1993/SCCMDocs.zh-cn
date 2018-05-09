@@ -2,26 +2,19 @@
 title: 规划本地 MDM
 titleSuffix: Configuration Manager
 description: 在 System Center Configuration Manager 中规划本地移动设备管理以管理移动设备。
-ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 02979fb8-ea7e-4ec6-b7e0-ecbfda73e52d
-caps.latest.revision: 9
-caps.handback.revision: 0
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: e1c6a5ccd003295d007e78f0745c30732e10c2df
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 10cddac80b9a7ea4bd912e2f52585cdcef7e70da
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="plan-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中规划本地移动设备管理
 
@@ -105,7 +98,7 @@ ms.lasthandoff: 10/12/2017
 
 -   现成体验 (OOBE) 预配包  
 
- 有关详细信息，请参阅 [为 System Center Configuration Manager 中的本地移动设备管理设置受信任通信的证书](../../mdm/get-started/set-up-certificates-on-premises-mdm.md)。  
+ 有关详细信息，请参阅 [Set up certificates for trusted communications for On-premises Mobile Device Management in System Center Configuration Manager](../../mdm/get-started/set-up-certificates-on-premises-mdm.md)。  
 
 ##  <a name="bkmk_enrollment"></a>注册注意事项  
  若要为本地移动设备管理启用设备注册，必须向用户授予注册权限，且其设备必须能够与承载所需站点系统角色的站点系统服务器实现受信任的通信。  

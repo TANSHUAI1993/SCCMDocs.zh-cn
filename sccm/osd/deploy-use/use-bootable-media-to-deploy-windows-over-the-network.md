@@ -1,25 +1,20 @@
 ---
-title: "使用可启动媒体通过网络部署 Windows"
+title: 使用可启动媒体通过网络部署 Windows
 titleSuffix: Configuration Manager
-description: "使用 System Center Configuration Manager 中的可启动媒体在启动目标计算机时部署操作系统。"
-ms.custom: na
+description: 使用 System Center Configuration Manager 中的可启动媒体在启动目标计算机时部署操作系统。
 ms.date: 6/16/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 999b5409-7e72-48d2-8554-4d44427ce383
-caps.latest.revision: "5"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 7ba166225c93440ddc56eb39692c80680330a94d
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: 4f7ec06d5bd5f23ac2b8afa2a288dfb8c971f950
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-bootable-media-to-deploy-windows-over-the-network-with-system-center-configuration-manager"></a>使用可启动媒体与 System Center Configuration Manager 一起通过网络部署 Windows
 

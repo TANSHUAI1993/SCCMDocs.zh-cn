@@ -1,25 +1,20 @@
 ---
-title: "内容库清理工具"
+title: 内容库清理工具
 titleSuffix: Configuration Manager
-description: "使用内容库清理工具删除不再与 System Center Configuration Manager 部署关联的孤立内容。"
-ms.custom: na
+description: 使用内容库清理工具删除不再与 System Center Configuration Manager 部署关联的孤立内容。
 ms.date: 4/7/2017
-ms.reviewer: na
-ms.suite: na
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 226cbbb2-9afa-4e2e-a472-be989c0f0e11
-caps.latest.revision: "4"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 334b79e675ea7804128b0feb9678de4ad06dbc93
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: 5d83b23673d8eea6e98f21ea30b6b802eb7e5595
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="the-content-library-cleanup-tool-for-system-center-configuration-manager"></a>适用于 System Center Configuration Manager 的内容库清理工具
 
@@ -29,7 +24,7 @@ ms.lasthandoff: 01/04/2018
 
 该工具只影响你运行该工具时指定的分发点上的内容。 该工具无法删除站点服务器上的内容库中的内容。
 
-你可以在管理中心站点或主站点的站点服务器上的 \*%CM_Installation_Path%\cd.latest\SMSSETUP\TOOLS\ContentLibraryCleanup\* 文件夹中找到 **ContentLibraryCleanup.exe**。
+你可以在管理中心站点或主站点的站点服务器上的 *%CM_Installation_Path%\cd.latest\SMSSETUP\TOOLS\ContentLibraryCleanup\* 文件夹中找到 **ContentLibraryCleanup.exe**。
 
 ## <a name="requirements"></a>要求  
  该工具一次只能对一个分发点运行。  

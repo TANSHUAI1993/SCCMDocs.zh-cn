@@ -1,31 +1,26 @@
 ---
-title: "Technical Preview 1605 中的功能"
+title: Technical Preview 1605 中的功能
 titleSuffix: Configuration Manager
-description: "了解 System Center Configuration Manager Technical Preview 1605 版中的可用功能。"
-ms.custom: na
+description: 了解 System Center Configuration Manager Technical Preview 1605 版中的可用功能。
 ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2bafd028-1923-4463-9e3e-ee41bc0c437b
-caps.latest.revision: "36"
-author: erikje
-ms.author: erikje
-manager: angrobe
-ms.openlocfilehash: 795b7658f5da8f863f208f01896ae2d7823ff2a6
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 05d87b253f2387dd8428f4b9fadea3fe5f3a48e8
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1605-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1605 版中的功能
 
 *适用范围：System Center Configuration Manager (Technical Preview)*
 
-本文介绍了 System Center Configuration Manager Technical Preview 1605 版中的可用功能。 可以安装此版本以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。      在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。  
+本文介绍了 System Center Configuration Manager Technical Preview 1605 版中的可用功能。 你可以安装此版本，以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。      在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。  
 
  **此 Technical Preview 中的已知问题：**  
 
@@ -33,7 +28,7 @@ ms.lasthandoff: 12/01/2017
 
 -   使用 Technical Preview 1604 的适用于企业的 Windows 应用商店功能，然后升级到 Technical Preview 1605 时，你将无法再查看载入的数据。 所有其他功能继续正常运行。 如果使用 Technical Preview 1604 进行载入，在安装 Technical Preview 1605 后仍可继续载入，并且无需采取进一步操作。  
 
- **以下是可以试用的此版本的新功能。**  
+ **以下是此版本可以试用的新功能。**  
 
 ##  <a name="BKMK_PerAppVPN"></a> Windows 10 设备的每应用 VPN  
  对于配合使用 Configuration Manager 和 Intune 管理的 Windows 10 设备，可添加一个应用列表，此列表可自动打开通过 Configuration Manager 管理控制台配置的 VPN 连接。 可以选择对这些应用限制 VPN 通信，也可以继续允许通过 VPN 连接进行所有通信。  
@@ -120,7 +115,7 @@ ms.lasthandoff: 12/01/2017
 
 3.  在适用于企业的 Windows 应用商店中，将 Configuration Manager 配置为存储管理工具。  
 
-    1.  打开 [https://businessstore.microsoft.com/zh-cn/managementtools](https://businessstore.microsoft.com/managementtools)，在出现提示时进行登录。  
+    1.  打开[https://businessstore.microsoft.com/en-us/managementtools](https://businessstore.microsoft.com/managementtools) 并按提示登录。  
 
     2.  接受使用条款（如果需要）。  
 
@@ -375,7 +370,7 @@ ms.lasthandoff: 12/01/2017
 
 2.  键入 Windows Defender ATP 策略的**名称**和**说明**，然后选择“载入”。 单击“下一步”。  
 
-3.  **浏览**到组织的 Windows Defender ATP 云服务租户提供的配置文件。 单击“下一步”。  
+3.  **浏览**到组织的 Windows Defender ATP 云服务租户提供的配置文件。 单击“下一步” 。  
 
 4.  指定从托管设备收集和共享的文件示例以进行分析。  
 

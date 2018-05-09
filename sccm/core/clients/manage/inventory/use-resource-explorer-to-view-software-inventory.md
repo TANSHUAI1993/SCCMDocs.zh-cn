@@ -1,26 +1,20 @@
 ---
-title: "使用资源浏览器查看软件清单"
+title: 使用资源浏览器查看软件清单
 titleSuffix: Configuration Manager
-description: "使用资源浏览器查看 System Center Configuration Manager 中的软件清单。"
-ms.custom: na
+description: 使用资源浏览器查看 System Center Configuration Manager 中的软件清单。
 ms.date: 2/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 4b7aa5f6-5ebd-49be-b7f3-4206caadc187
-caps.latest.revision: "5"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 242bd336fcb13172097e26187a48c924dbd9acb6
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 2678904b9e5393ea4be557866dee8dfa754ebbc6
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-use-resource-explorer-to-view-software-inventory-in-system-center-configuration-manager"></a>如何使用资源浏览器来查看 System Center Configuration Manager 中的软件清单
 

@@ -1,25 +1,20 @@
 ---
-title: "客户端部署规划"
+title: 客户端部署规划
 titleSuffix: Configuration Manager
-description: "计划在 System Center Configuration Manager 中部署客户端并准备基础结构。"
-ms.custom: na
+description: 计划在 System Center Configuration Manager 中部署客户端并准备基础结构。
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 518f9882-ce71-48c3-9f47-cd968cfb658d
-caps.latest.revision: "3"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: ed4fd972ab817aee574b7e84f75956a31ab3203a
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: cd5488f6ed1a52b35197fa7ef0eb775eafd33e01
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="planning-considerations-for-deploying-clients-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中部署客户端的规划注意事项
 

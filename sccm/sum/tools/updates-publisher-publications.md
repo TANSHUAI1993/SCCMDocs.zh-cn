@@ -1,26 +1,21 @@
 ---
-title: "管理发布内容"
+title: 管理发布内容
 titleSuffix: Configuration Manager
-description: "使用 System Center Updates Publisher 将各组软件更新作为发布项进行管理"
-ms.custom: na
+description: 使用 System Center Updates Publisher 将各组软件更新作为发布项进行管理
 ms.date: 4/29/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-sum
+ms.topic: conceptual
 ms.assetid: e6c1df1d-7728-4980-9199-bc32cde5439e
-caps.latest.revision: "1"
-author: mestew
-ms.author: mstewart
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 robots: NOINDEX, NOFOLLOW
-ms.openlocfilehash: e616738fa1ee0f67ee0515cc6590d9824527e6da
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: a6a1f8257c2a334b539499a5febbdb77729f0fb2
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-publications-in-updates-publisher"></a>管理 Updates Publisher 中的发布项
 

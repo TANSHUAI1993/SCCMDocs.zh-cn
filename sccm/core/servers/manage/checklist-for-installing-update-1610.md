@@ -1,26 +1,20 @@
 ---
-title: "1610 清单"
+title: 1610 清单
 titleSuffix: Configuration Manager
-description: "了解更新到 System Center Configuration Manager 版本 1610 之前需要执行的操作。"
-ms.custom: na
+description: 了解更新到 System Center Configuration Manager 版本 1610 之前需要执行的操作。
 ms.date: 6/6/2017
-ms.reviewer: na
-ms.suite: na
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 7b411cb0-4fd1-41f2-a2f6-33738a5bde96
-caps.latest.revision: 
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: c0746dc168394cda88bad682fc3ba185e83758f7
-ms.sourcegitcommit: 2867fd119256ec670fc5ae65cdc8a80d39f9b4d4
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 31367d3db55f64c375d451f2f08c8981ecfcb3d0
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="checklist-for-installing-update-1610-for-system-center-configuration-manager"></a>用于为 System Center Configuration Manager 安装更新 1610 的清单
 
@@ -32,7 +26,7 @@ ms.lasthandoff: 12/20/2017
 
 -   当更新列为“可用”时，此更新即可准备安装。 安装版本 1610, 之前，请查看以下[关于安装更新 1610](#about-installing-update-1610)和[清单](#checklist)信息，了解在开始更新之前要进行的配置。
 
--   如果更新显示为“正在下载”且未更改，请查看  **hman.log**  和  **dmpdownloader.log**  是否有误。
+-   如果更新显示为“正在下载”且未更改，请查看 **hman.log** 和 **dmpdownloader.log** 是否有误。
 
     -   通常情况下，还可以在站点服务器上重启 **SMS_Executive** 服务，以重启更新重新分发文件的下载。
 
@@ -83,7 +77,7 @@ ms.lasthandoff: 12/20/2017
 
 **查看站点和层次结构状态，并确认没有未解决的问题：** 更新站点之前，请解决远程计算机上安装的站点服务器、站点数据库服务器和站点系统角色的所有操作问题。 由于现有的操作问题，站点更新可能会失败。
 
-有关详细信息，请参阅 [使用 System Center Configuration Manager 的警报和状态系统](/sccm/core/servers/manage/use-alerts-and-the-status-system)。
+有关详细信息，请参阅 [Use alerts and the status system for System Center Configuration Manager](/sccm/core/servers/manage/use-alerts-and-the-status-system)。
 
 **查看站点之间的文件和数据复制：**   
 确保站点之间的文件和数据库复制正常运行并且处于最新状态。 延迟或积压工作可能会阻止顺利、成功更新。

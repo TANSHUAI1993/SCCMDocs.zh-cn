@@ -2,26 +2,20 @@
 title: 创建和部署设备合规性策略
 titleSuffix: Configuration Manager
 description: 了解如何在 System Center Configuration Manager 中创建和部署设备合规性策略。
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 0fd76043-d7ee-423d-8c5f-aa7e9ed58ce0
-caps.latest.revision: ''
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 robots: noindex
-ms.openlocfilehash: 2a576f3dac75d7c168b86ab0f26453706bda6115
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 3dd502e8ba9e03851af6ec58ad63d4aa805fe7b4
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-and-deploy-a-device-compliance-policy"></a>创建和部署设备合规性策略
 

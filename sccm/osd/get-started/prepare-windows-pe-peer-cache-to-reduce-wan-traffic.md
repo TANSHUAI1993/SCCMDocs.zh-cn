@@ -1,26 +1,20 @@
 ---
-title: "准备 Windows PE 对等缓存来减少 WAN 流量"
+title: 准备 Windows PE 对等缓存来减少 WAN 流量
 titleSuffix: Configuration Manager
-description: "Windows PE 对等缓存适用于 Windows PE，在没有本地分发点的情况下，可从本地对等缓存中获取内容并将 WAN 流量降到最低。"
-ms.custom: na
+description: Windows PE 对等缓存适用于 Windows PE，在没有本地分发点的情况下，可从本地对等缓存中获取内容并将 WAN 流量降到最低。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-osd
+ms.topic: conceptual
 ms.assetid: 6c64f276-b88c-4b1e-8073-331876a03038
-caps.latest.revision: 
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 24e6aaa404054f5b9ac477cc0dbdd6fa9cce1860
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: 90eaaec52076e4ac4fbaddf6cc07cf20359b5a68
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prepare-windows-pe-peer-cache-to-reduce-wan-traffic-in-system-center-configuration-manager"></a>准备 Windows PE 对等缓存以减少 System Center Configuration Manager 中的 WAN 流量
 
@@ -75,7 +69,7 @@ ms.lasthandoff: 12/12/2017
         > [!TIP]  
         >  客户端将使用 HTTPS 来下载可用的内容。 但是，HTTP 或 HTTPS 使用相同的端口号。  
 
--   在客户端上[为 Configuration Manager 客户端配置客户端缓存](../../core/clients/manage/manage-clients.md#BKMK_ClientCache) ，以确保其具有足够的空间来保留和存储部署的映像。 Windows PE 对等缓存不会影响客户端缓存的配置或行为。  
+-   在客户端上[Configure the Client Cache for Configuration Manager Clients](../../core/clients/manage/manage-clients.md#BKMK_ClientCache) ，以确保其具有足够的空间来保留和存储部署的映像。 Windows PE 对等缓存不会影响客户端缓存的配置或行为。  
 
 -   任务序列部署的部署选项必须配置为“当任务序列需要时在本地下载内容”。  
 

@@ -1,26 +1,20 @@
 ---
-title: "电子邮件配置文件的先决条件"
+title: 电子邮件配置文件的先决条件
 titleSuffix: Configuration Manager
-description: "了解 System Center Configuration Manager 中的电子邮件配置文件及其在产品外部和内部的依赖关系。"
-ms.custom: na
+description: 了解 System Center Configuration Manager 中的电子邮件配置文件及其在产品外部和内部的依赖关系。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: dccf0b73-43bd-4545-8914-114168ebad36
-caps.latest.revision: "5"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 599c8f921da3aa06dabd8e7e41f59d93ee7942bc
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 58e1f4b56c99cf29c112773b2a82c70695e58744
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="email-profile-prerequisites"></a>电子邮件配置文件先决条件
 

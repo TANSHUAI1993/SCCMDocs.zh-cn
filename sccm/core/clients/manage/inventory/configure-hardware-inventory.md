@@ -1,28 +1,22 @@
 ---
-title: "配置硬件清单"
+title: 配置硬件清单
 titleSuffix: Configuration Manager
-description: "在 System Center Configuration Manager 中设置所有客户端或某个集合的硬件清单。"
-ms.custom: na
+description: 在 System Center Configuration Manager 中设置所有客户端或某个集合的硬件清单。
 ms.date: 02/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 0e45290e-f8f7-4335-801e-570225d12c2b
-caps.latest.revision: "5"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 91f17e4ab9f828576ac1b11076a008289ff588a0
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 7b282fdb2f7cf3a200950484e4da5b9505c5b71c
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="how-to-configure-hardware-inventory-in-system-center-configuration-manager"></a>How to configure hardware inventory in System Center Configuration Manager
+# <a name="how-to-configure-hardware-inventory-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中配置硬件清单
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
@@ -47,4 +41,4 @@ ms.lasthandoff: 10/12/2017
 
 7.  配置所需的其他[硬件清单客户端设置](../../../../core/clients/deploy/about-client-settings.md#hardware-inventory)。  
 
-当客户端设备下一次下载客户端策略时，会使用这些设置对它们进行配置。 要为单个客户端启动策略检索，请参阅 [How to manage clients in System Center Configuration Manager](../../../../core/clients/manage/manage-clients.md)。  
+当客户端设备下一次下载客户端策略时，会使用这些设置对它们进行配置。 要为单个客户端启动策略检索，请参阅 [如何在 System Center Configuration Manager 中管理客户端](../../../../core/clients/manage/manage-clients.md)。  

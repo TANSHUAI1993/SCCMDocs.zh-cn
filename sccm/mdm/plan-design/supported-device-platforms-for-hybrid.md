@@ -2,26 +2,19 @@
 title: 混合 MDM 的受支持的平台
 titleSuffix: Configuration Manager
 description: 混合 MDM 的受支持的平台。
-ms.custom: na
 ms.date: 09/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 6b0732c8-1be8-44ba-8f8e-6fb2b67782e1
-caps.latest.revision: 9
-caps.handback.revision: 0
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 05d2950e54d713bb334349f7e04667c2f14c8b68
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 16cb6655a05c6f52cdf92f6900af3a63d46067bb
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="supported-device-platforms-for-hybrid-mdm"></a>混合 MDM 的受支持的平台
 

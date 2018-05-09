@@ -1,25 +1,20 @@
 ---
-title: "部署企业版操作系统的方法"
+title: 部署企业版操作系统的方法
 titleSuffix: Configuration Manager
-description: "了解可用于在 System Center Configuration Manager 环境中部署企业操作系统的方法。"
-ms.custom: na
+description: 了解可用于在 System Center Configuration Manager 环境中部署企业操作系统的方法。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3646d62d-355a-43fc-8569-c08dc2257ee5
-caps.latest.revision: "6"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: e560b1d90a096d6ad6b14181dfb5d0044ee5b8f5
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: 6fc86625c27ffbfdf0873ec787b889f4c0cacf6e
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="methods-to-deploy-enterprise-operating-systems-using-system-center-configuration-manager"></a>使用 System Center Configuration Manager 部署企业版操作系统的方法
 

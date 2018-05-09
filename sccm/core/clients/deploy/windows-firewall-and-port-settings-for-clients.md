@@ -1,26 +1,20 @@
 ---
-title: "Windows 客户端的防火墙和端口设置"
+title: Windows 客户端的防火墙和端口设置
 titleSuffix: Configuration Manager
-description: "在 System Center Configuration Manager 中选择客户端的 Windows 防火墙和端口设置。"
-ms.custom: na
+description: 在 System Center Configuration Manager 中选择客户端的 Windows 防火墙和端口设置。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dce4b640-c92f-401a-9873-ce9aa9262014
-caps.latest.revision: "8"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: fe9f98ad6567b4f691dcfe6f70868fc63d61a63d
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 193ee803fd0a6bacf043dbabc6550ef68a4a629a
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="windows-firewall-and-port-settings-for-clients-in-system-center-configuration-manager"></a>System Center Configuration Manager 中客户端的 Windows 防火墙和端口设置
 
@@ -115,14 +109,14 @@ System Center Configuration Manager 中运行 Windows 防火墙的客户端计�
 
 ### <a name="ports-that-are-used-for-all-installation-methods"></a>用于所有安装方法的端口  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |为客户端分配回退状态点时用于从客户端计算机向回退状态点进行传输的超文本传输协议 (HTTP)。|--|80（请参阅备注 1， **可用的备用端口**）|  
 
 ### <a name="ports-that-are-used-with-client-push-installation"></a>用于客户端请求安装的端口  
  除了使用下表中列出的端口之外，客户端请求安装还使用站点服务器向客户端计算机发出的 Internet 控制消息协议 (ICMP) 回显请求消息来确认网络上是否有客户端计算机。 ICMP 有时称为 TCP/IP ping 命令。 ICMP 没有 UDP 或 TCP 协议号，因此未在下表中列出。 但是，为了使客户端请求安装成功，任何干预网络设备（如防火墙）都必须容许 ICMP 流量。  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |站点服务器与客户端计算机之间的服务器消息块 (SMB)。|--|445|  
 |站点服务器与客户端计算机之间的 RPC 终结点映射程序。|135|135|  
@@ -132,7 +126,7 @@ System Center Configuration Manager 中运行 Windows 防火墙的客户端计�
 
 ### <a name="ports-that-are-used-with-software-update-point-based-installation"></a>用于基于软件更新点的安装的端口  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |用于从客户端计算机向软件更新点进行传输的超文本传输协议 (HTTP)。|--|80 或 8530（请参阅备注 2， **Windows Server Update Services**）|  
 |用于从客户端计算机向软件更新点进行传输的安全超文本传输协议 (HTTPS)。|--|443 或 8531（请参阅备注 2， **Windows Server Update Services**）|  
@@ -140,7 +134,7 @@ System Center Configuration Manager 中运行 Windows 防火墙的客户端计�
 
 ### <a name="ports-that-are-used-with-group-policy-based-installation"></a>用于基于组策略的安装的端口  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |在通过超文本传输协议 (HTTP) 进行连接时，用于从客户端计算机连接到管理点的 HTTP。|--|80（请参阅备注 1， **可用的备用端口**）|  
 |在通过安全超文本传输协议 (HTTPS) 进行连接时，用于从客户端计算机连接到管理点的 HTTPS。|--|433（请参阅备注 1， **可用的备用端口**）|  
@@ -148,7 +142,7 @@ System Center Configuration Manager 中运行 Windows 防火墙的客户端计�
 
 ### <a name="ports-that-are-used-with-manual-installation-and-logon-script-based-installation"></a>用于手动安装和基于登录脚本的安装的端口  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |客户端计算机与从中运行 CCMSetup.exe 的网络共享之间的服务器消息块 (SMB)。<br /><br /> 安装 Configuration Manager 时，会从管理点上的 &lt;InstallationPath\>\Client 文件夹中复制客户端安装源文件并自动共享这些文件。 但是，您可以在网络上的任何计算机上复制这些文件并创建新共享。 或者，您可以通过以本地方式运行 CCMSetup.exe 来消除此网络流量，例如，使用可移动媒体。|--|445|  
 |通过超文本传输协议 (HTTP) 进行连接且未指定 CCMSetup 命令行属性 **/source:&lt;Path\>** 时，用于从客户端计算机连接到管理点的 HTTP。|--|80（请参阅备注 1， **可用的备用端口**）|  
@@ -157,7 +151,7 @@ System Center Configuration Manager 中运行 Windows 防火墙的客户端计�
 
 ### <a name="ports-that-are-used-with-software-distribution-based-installation"></a>用于基于软件分发的安装的端口  
 
-|描述|UDP|TCP|  
+|说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |分发点与客户端计算机之间的服务器消息块 (SMB)。|--|445|  
 |在通过超文本传输协议 (HTTP) 进行连接时，用于从客户端连接到分发点的 HTTP。|--|80（请参阅备注 1， **可用的备用端口**）|  

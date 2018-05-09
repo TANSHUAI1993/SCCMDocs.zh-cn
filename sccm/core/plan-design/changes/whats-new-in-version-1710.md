@@ -2,23 +2,18 @@
 title: 新版本 1710 |Microsoft Docs
 titleSuffix: Configuration Manager
 description: 获取有关 System Center Configuration Manager 的 1710 版中引入的更改和新功能的详细信息。
-ms.custom: na
 ms.date: 1/08/2018
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: bc6c3e5f-b9e2-400e-9d9d-446ff93c520c
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: e9d1ac44bf0455ff0b1caec94d07cfa734dfbeb0
-ms.sourcegitcommit: d8a4a53630351b3d677bbdc5d203e7d330472cba
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: e33a56a2d7fe395265d76c668db91492c410046f
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="what39s-new-in-version-1710-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1710 的新增功能
 

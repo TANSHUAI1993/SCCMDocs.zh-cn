@@ -1,24 +1,20 @@
 ---
-title: "Technical Preview 1704 中的功能"
+title: Technical Preview 1704 中的功能
 titleSuffix: Configuration Manager
-description: "了解 System Center Configuration Manager Technical Preview（版本 1704）中的可用功能。"
-ms.custom: na
+description: 了解 System Center Configuration Manager Technical Preview（版本 1704）中的可用功能。
 ms.date: 4/21/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e318e705-20f2-417d-8cde-7dfe661b2fa7
-author: erikje
-ms.author: erikje
-manager: angrobe
-ms.openlocfilehash: 9151d2e60bbdc3ac4c34bde17f02fc956cb005b1
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: b86b1a4b8400be29f9b4c468c280fdd0a47385c3
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1704-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1704 中的功能
 
@@ -27,7 +23,7 @@ ms.lasthandoff: 12/01/2017
 本文介绍了 System Center Configuration Manager Technical Preview（版本 1704）中的可用功能。 可以安装此版本以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。 在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。    
 
 
-**以下是可以试用的此版本的新功能。**  
+**以下是此版本可以试用的新功能。**  
 
 ## <a name="configure-android-apps-with-app-configuration-policies"></a>使用应用配置策略配置 Android 应用
 可以使用 System Center Configuration Manager (Configuration Manager) 中的应用配置策略来分发用户在 Android for Work 设备上运行应用时可能需要的设置。 Android 应用配置政策仅适用于运行 Android for Work 的设备，并可从 Play for Work 商店应用到已批准应用。

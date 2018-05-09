@@ -1,26 +1,20 @@
 ---
-title: "了解更新"
+title: 了解更新
 titleSuffix: Configuration Manager
-ms.custom: na
 ms.date: 10/06/2016
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service: 
 ms.technology: configmgr-other
 ms.assetid: 1fa7d0d9-4bb5-4475-82ff-0d5da4a3da61
-caps.latest.revision: "4"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
+manager: dougeby
 robots: noindex,nofollow
-ms.openlocfilehash: e6acf1fd540b09dd4d535356679ed08083fcc75d
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+ms.openlocfilehash: d4b0d0553254bd3bd86dd2ade1a3c1afc5127ad2
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="learn-more-about-available-updates-for-system-center-configuration-manager"></a>了解有关 System Center Configuration Manager 可用更新的详细信息
 

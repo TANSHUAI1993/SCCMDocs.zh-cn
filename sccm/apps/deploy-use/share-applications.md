@@ -1,26 +1,20 @@
 ---
-title: "软件中心的共享应用程序"
+title: 软件中心的共享应用程序
 titleSuffix: Configuration Manager
-description: "在 System Center Configuration Manager 的软件中心共享应用程序链接。"
-ms.custom: na
+description: 在 System Center Configuration Manager 的软件中心共享应用程序链接。
 ms.date: 07/31/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2629c376-ec43-4f0e-a78b-4223cc9302bf
-caps.latest.revision: "0"
-caps.handback.revision: "0"
-author: mattbriggs
-ms.author: mabrigg
-manager: angrobe
-ms.openlocfilehash: 3433a61ae561cacb103c868da367b57ecf627c05
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 01dd24b091287c24d099ea0eddb9f267de54a277
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="share-an-application-from-software-center"></a>从软件中心共享应用程序
 

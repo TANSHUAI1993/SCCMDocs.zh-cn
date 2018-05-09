@@ -1,26 +1,20 @@
 ---
-title: "针对非符合性的操作"
+title: 针对非符合性的操作
 titleSuffix: Configuration Manager
-description: "了解如何通过 Configuration Manager 设置针对非符合性的操作"
-ms.custom: na
+description: 了解如何通过 Configuration Manager 设置针对非符合性的操作
 ms.date: 11/10/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ad8fa94d-45bb-4c94-8d86-31234c5cf21c
-caps.latest.revision: "18"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 1dd10d9452fae85f2ecc3d3077fba420454ef337
-ms.sourcegitcommit: 12d0d53e47bbf1a0bbd85015b8404a44589d1e14
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: be17e1f2b5c3fec02cdd6fc5f89aee9319c4dbb4
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-up-actions-for-non-compliance"></a>设置针对非符合性的操作
 

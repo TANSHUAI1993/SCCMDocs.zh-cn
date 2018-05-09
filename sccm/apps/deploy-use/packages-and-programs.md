@@ -1,26 +1,20 @@
 ---
-title: "包和程序"
+title: 包和程序
 titleSuffix: Configuration Manager
-description: "支持使用与 System Center Configuration Manager 配合使用的包和程序或应用程序的部署。"
-ms.custom: na
+description: 支持使用与 System Center Configuration Manager 配合使用的包和程序或应用程序的部署。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: caad0507-9913-415a-b13d-d36f8f0a1b80
-caps.latest.revision: "8"
-caps.handback.revision: "0"
-author: mattbriggs
-ms.author: mabrigg
-manager: angrobe
-ms.openlocfilehash: 7712721167edad5808c46827f68fc32a2b890bfd
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 6f34fd322e5f94550602d7883a0303d10059b702
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="packages-and-programs-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的包和程序
 

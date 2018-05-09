@@ -1,26 +1,20 @@
 ---
-title: "创建客户端托管的 Windows 10 的配置项目 "
+title: '创建客户端托管的 Windows 10 的配置项目 '
 titleSuffix: Configuration Manager
-description: "使用 System Center Configuration Manager Windows 10 配置项目管理由 Configuration Manager 客户端管理的 Windows 10 计算机的设置。"
-ms.custom: na
+description: 使用 System Center Configuration Manager Windows 10 配置项目管理由 Configuration Manager 客户端管理的 Windows 10 计算机的设置。
 ms.date: 03/28/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 14226fbe-dd07-4432-910b-130790624a4e
-caps.latest.revision: "17"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 4f22ab22ec666c55962231bf92a42b25c4a7c127
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: bdb48689efba4c6f884d4c36c1a4dee0bbcc6b65
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-configuration-items-for-windows-10-devices-managed-with-the-system-center-configuration-manager-client"></a>如何为使用 System Center Configuration Manager 客户端管理的 Windows 10 设备创建配置项目
 使用 System Center Configuration Manager **Windows 10** 配置项目管理由 Configuration Manager 客户端管理的 Windows 10 计算机的设置。  
@@ -32,7 +26,7 @@ ms.lasthandoff: 10/12/2017
   
 ### <a name="to-create-a-windows-10-configuration-item"></a>创建 Windows 10 配置项目  
   
-1.  在 Configuration Manager 控制台中，单击“资产和符合性” 。  
+1.  在 Configuration Manager 控制台中，单击“资产和符合性”。  
   
 2.  在“资产和符合性”  工作区中，展开“符合性设置” ，然后单击“配置项目” 。  
   
@@ -63,7 +57,7 @@ ms.lasthandoff: 10/12/2017
   
     -   **严重** - 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“严重”这一故障严重性。  
   
-    -   **事件严重** - 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“严重”这一故障严重性。 应用程序事件日志中也会以 Windows 事件的形式记录此严重性级别。  
+    -   **事件严重** - 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“严重”这一故障严重性。 此外会记录此严重性级别为应用程序事件日志中的 Windows 事件。  
   
 11. 在向导的“平台适用性”  页面上，查看任何与先前选择的受支持平台不兼容的设置。 你可以返回并删除这些设置，也可以继续。  
   

@@ -1,26 +1,20 @@
 ---
-title: "迁移源层次结构"
+title: 迁移源层次结构
 titleSuffix: Configuration Manager
-description: "配置源层次结构和源站点，使用户可以将数据迁移到 System Center Configuration Manager 环境。"
-ms.custom: na
+description: 配置源层次结构和源站点，使用户可以将数据迁移到 System Center Configuration Manager 环境。
 ms.date: 12/29/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ccce7cb5-e18f-4337-8adf-2018edca3c00
-caps.latest.revision: "5"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 7977f66c71da300c59c7781f09975ca08ddea0b9
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: d9ef1ca2dd2763cf5b96fd82031a2ef38ef64927
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-source-hierarchies-and-source-sites-for-migration-to-system-center-configuration-manager"></a>配置源层次结构和源站点以迁移到 System Center Configuration Manager
 

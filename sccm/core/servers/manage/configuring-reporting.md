@@ -2,25 +2,19 @@
 title: 配置报表
 titleSuffix: Configuration Manager
 description: 阅读有关如何在 Configuration Manager 层次结构中设置报表，包括 SQL Server Reporting Services 的信息。
-ms.custom: na
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 55ae86a7-f0ab-4c09-b4da-89cd0e7fa0e0
-caps.latest.revision: 6
-author: Dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 6d50a35dc86b80ea135c79fc2f9825162115b764
-ms.sourcegitcommit: f65d4d24f0533e5e196ece0d8a4df0fb3e30eba1
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 17b0147e82e2eb9a756bdab69eed7ab86f98a1e0
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configuring-reporting-in-system-center-configuration-manager"></a>配置 System Center Configuration Manager 中的报表
 

@@ -1,43 +1,20 @@
 ---
-title: "1610 的诊断数据"
+title: 1610 的诊断数据
 titleSuffix: Configuration Manager
-description: "了解 System Center Configuration Manager 版本 1610 收集的诊断和使用情况数据的级别。"
-ms.custom: na
+description: 了解 System Center Configuration Manager 版本 1610 收集的诊断和使用情况数据的级别。
 ms.date: 12/29/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: eb20eb90-bcc0-41de-bfea-638ea470c0dd
-caps.latest.revision: "4"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- hu-hu
-- it-it
-- ja-jp
-- ko-kr
-- nl-nl
-- pl-pl
-- pt-br
-- pt-pt
-- ru-ru
-- sv-se
-- tr-tr
-- zh-cn
-- zh-tw
-ms.openlocfilehash: c9b51142ca4c6b96e13ee171ebb6314f13b1fcda
-ms.sourcegitcommit: da27d37cc4e4e06cf23758846cdd7acb617f744b
+manager: dougeby
+ms.openlocfilehash: 658d005234469d8729b515e9deeb02e20e94c748
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1610-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1610 的诊断使用情况数据收集的级别
 
@@ -73,7 +50,7 @@ System Center Configuration Manager 版本 1610 收集三个级别的诊断和�
 
     - ***[新增]*** 预发布版本使用、安装程序媒体类型、分支类型
 
-    - ***[新增]***软件保障到期日期
+    - ***[新增]*** 软件保障到期日期
 
 - 数据库性能指标（复制处理信息、按处理器和磁盘使用情况排在前面的 SQL Server 存储过程）
 

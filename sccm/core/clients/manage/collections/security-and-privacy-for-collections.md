@@ -1,26 +1,20 @@
 ---
-title: "集合安全和隐私"
+title: 集合安全和隐私
 titleSuffix: Configuration Manager
-description: "获取 System Center Configuration Manager 中集合的最佳安全做法和隐私。"
-ms.custom: na
+description: 获取 System Center Configuration Manager 中集合的最佳安全做法和隐私。
 ms.date: 2/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 30bf2451-5415-4be2-ba8d-21759370cd83
-caps.latest.revision: "5"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 9990b4e31224f4f41e217108625c8b52a143c7c5
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: b9b19cfcddc2f477a5e70e8f3d25c3eb0c207814
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-and-privacy-for-collections-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的集合的安全和隐私
 
@@ -28,7 +22,7 @@ ms.lasthandoff: 10/12/2017
 
 本主题包含 System Center Configuration Manager 中集合的最佳安全做法和隐私信息。  
 
- 没有专门针对 Configuration Manager 中的集合的隐私信息。 集合是资源（如用户和设备）的容器。 集合成员身份通常依赖于 Configuration Manager 在标准操作过程中收集的信息。 例如，通过使用从发现或清单收集的资源信息，可以将集合配置为包含满足指定条件的设备。 集合还可以基于客户端管理操作的当前状态信息，例如正在部署软件和正在检查符合性。 除了这些基于查询的集合，管理用户还可以将资源添加到集合。  
+ 没有专门针对 Configuration Manager 中的集合的隐私信息。 集合是资源（如用户和设备）的容器。 集合成员身份通常依赖于 Configuration Manager 在标准操作过程中收集的信息。 例如，通过使用从发现或清单收集的资源信息，可以将集合配置为包含满足指定条件的设备。 集合还可以基于客户端管理操作的当前状态信息，例如正在部署软件和正在检查符合性。 除了这些基于查询的集合，管理用户也可以将资源添加到集合。  
 
  有关集合的详细信息，请参阅 [System Center Configuration Manager 中的集合简介](../../../../core/clients/manage/collections/introduction-to-collections.md)。 有关 Configuration Manager 操作（可用于配置集合成员身份）的任何最佳安全做法和隐私信息的详情，请参阅 [System Center Configuration Manager 的最佳安全做法和隐私信息](../../../../core/plan-design/security/security-best-practices-and-privacy-information.md)。  
 

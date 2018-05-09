@@ -1,25 +1,20 @@
 ---
-title: "发布站点数据"
+title: 发布站点数据
 titleSuffix: Configuration Manager
-description: "了解如何将 Configuration Manager 站点发布到 Active Directory 域服务。"
-ms.custom: na
+description: 了解如何将 Configuration Manager 站点发布到 Active Directory 域服务。
 ms.date: 2/7/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 17cf034f-eaff-43ce-bc8e-917213c1db74
-caps.latest.revision: "8"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 7cb32ff237ac6dfb4f656d7c6bfd06af9e7fd0e2
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: b7fa19ed6dbdcd745b911e235c95166a70c00f23
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="publish-site-data-for-system-center-configuration-manager"></a>发布 System Center Configuration Manager 的站点数据
 
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/04/2017
 
 ### <a name="to-enable-a-configuration-manager-site-to-publish-site-information-to-active-directory-forest"></a>使 Configuration Manager 站点能够将站点信息发布到 Active Directory 林
 
-1.  在 Configuration Manager 控制台中，单击“管理” 。  
+1.  在 Configuration Manager 控制台中，单击“管理”。  
 
 2.  在“管理”  工作区中，展开“站点配置” ，并单击“站点” 。 选择要发布其站点数据的站点。 然后，在“主页”选项卡上的“属性”组中，单击“属性”。  
 
@@ -52,7 +47,7 @@ ms.lasthandoff: 12/04/2017
 
 ### <a name="to-set-up-active-directory-forests-for-publishing"></a>针对发布设置 Active Directory 林  
 
-1.  在 Configuration Manager 控制台中，单击“管理” 。  
+1.  在 Configuration Manager 控制台中，单击“管理”。  
 
 2.  在“管理”  工作区中，单击“Active Directory 林” 。 如果 Active Directory 林发现之前已运行，你将在结果窗格中看到每个发现的林。 当 Active Directory 林发现运行时，将发现本地林和任何受信任林。 只有不受信任的林才必须手动添加。  
 

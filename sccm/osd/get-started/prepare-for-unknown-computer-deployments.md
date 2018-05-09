@@ -1,26 +1,20 @@
 ---
-title: "准备未知计算机部署"
+title: 准备未知计算机部署
 titleSuffix: Configuration Manager
-description: "了解如何在 System Center Configuration Manager 环境中将操作系统部署到不受 Configuration Manager 管理的计算机。"
-ms.custom: na
+description: 了解如何在 System Center Configuration Manager 环境中将操作系统部署到不受 Configuration Manager 管理的计算机。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9e447e34-0943-49ed-b6ba-3efebf3566c1
-caps.latest.revision: "10"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: e3196bede5f069ae5012624b3ecaaf68713d9fe0
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: 425ab566b5ddbfaad775d61609c0a4ccd98e96d0
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prepare-for-unknown-computer-deployments-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中准备未知计算机部署
 
@@ -83,4 +77,4 @@ ms.lasthandoff: 12/12/2017
 
 -   **预留媒体**  
 
-     在创建任务序列媒体向导的“安全”  页上，选中“启用未知计算机支持”  复选框。 有关详细信息，请参阅 [使用 System Center Configuration Manager 创建预留媒体](../deploy-use/create-prestaged-media.md)。  
+     在创建任务序列媒体向导的“安全”  页上，选中“启用未知计算机支持”  复选框。 有关详细信息，请参阅 [Create prestaged media with System Center Configuration Manager](../deploy-use/create-prestaged-media.md)。  

@@ -1,25 +1,20 @@
 ---
-title: "Technical Preview 1610 中的功能"
+title: Technical Preview 1610 中的功能
 titleSuffix: Configuration Manager
-description: "了解 System Center Configuration Manager Technical Preview 1610 版中的可用功能。"
-ms.custom: na
+description: 了解 System Center Configuration Manager Technical Preview 1610 版中的可用功能。
 ms.date: 01/23/2017
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8b31fd3e-875a-4a31-9498-5b050aadce32
-caps.latest.revision: "2"
-author: erikje
-ms.author: erikje
-manager: angrobe
-ms.openlocfilehash: 1ab5ce458b4892422aa82ae99ed69ae2eb671583
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 0798deff2f4904cb1cecac79251e7bc0688e0d4e
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1610-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1610 版中的功能
 
@@ -27,7 +22,7 @@ ms.lasthandoff: 12/01/2017
 
 
 
-本文介绍 System Center Configuration Manager Technical Preview 1610 版中的可用功能。 可以安装此版本以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。      在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。    
+本文介绍 System Center Configuration Manager Technical Preview 1610 版中的可用功能。 你可以安装此版本，以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。      在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。    
 
 
 **以下是可以试用的此版本的新功能。**  

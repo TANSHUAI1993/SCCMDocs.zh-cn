@@ -1,22 +1,20 @@
 ---
-title: "为服务器组提供服务"
+title: 为服务器组提供服务
 titleSuffix: Configuration Manager
-description: "System Center Configuration Manager 控制台提供警报和状态以监视更新和符合性。"
-keywords: 
-author: dougeby
-ms.author: dougeby
-manager: angrobe
+description: System Center Configuration Manager 控制台提供警报和状态以监视更新和符合性。
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ms.date: 12/07/2016
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: 304a83ea-0f72-437d-9688-2e6e0c7526dd
-ms.openlocfilehash: 12382015f2b673103c3c0d8fc9c0cbf29511a434
-ms.sourcegitcommit: 986fc2d54f7c5fa965fd4df42f4db4ecce6b79cb
+ms.openlocfilehash: cefdaec6aff16f0159f9811b6deb7379ab69a4ec
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="service-a-server-group"></a>为服务器组提供服务
 

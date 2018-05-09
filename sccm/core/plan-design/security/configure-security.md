@@ -1,25 +1,20 @@
 ---
-title: "配置安全性"
+title: 配置安全性
 titleSuffix: Configuration Manager
-description: "配置 System Center Configuration Manager 的安全相关选项。"
-ms.custom: na
+description: 配置 System Center Configuration Manager 的安全相关选项。
 ms.date: 12/30/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 552e7e3d-e584-4a7c-9155-0f796a14b678
-caps.latest.revision: "5"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 4066ec43e5553859d983671a0df549a67b2cfe59
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: 165f7fc0b73e288ac1718def96a50bc91a181cc2
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-security-in-system-center-configuration-manager"></a>配置 System Center Configuration Manager 中的安全性
 

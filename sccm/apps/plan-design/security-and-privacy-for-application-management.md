@@ -2,25 +2,19 @@
 title: 应用程序管理的安全和隐私
 titleSuffix: Configuration Manager
 description: 了解有关应用程序管理安全和隐私的指导和建议
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-app
+ms.topic: conceptual
 ms.assetid: 4d26deed-3b16-4116-b640-f618f2c20f5a
-caps.latest.revision: 8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c265833f248d2091f19c803bbfbd26b25d775787
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 80ae609bccd60e68cfee76878bd7a461b5f61716
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-and-privacy-for-application-management-in-system-center-configuration-manager"></a>System Center Configuration Manager 中应用程序管理的安全和隐私
 

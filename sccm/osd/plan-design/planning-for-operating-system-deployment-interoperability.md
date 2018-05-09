@@ -1,32 +1,26 @@
 ---
-title: "规划操作系统部署互操作性"
+title: 规划操作系统部署互操作性
 titleSuffix: Configuration Manager
-description: "了解单一层次结构中的不同 System Center Configuration Manager 站点使用不同版本时的互操作性问题。"
-ms.custom: na
+description: 了解单一层次结构中的不同 System Center Configuration Manager 站点使用不同版本时的互操作性问题。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-osd
+ms.topic: conceptual
 ms.assetid: e327ce38-6c07-4a27-b6eb-7e5bf74ed04b
-caps.latest.revision: 
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 41c7c83602f965cd4a225d38a00b90501206de45
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: 4faaae2d261837043b8b6ec208dd8b53b2a97b15
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="planning-for-operating-system-deployment-interoperability-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中规划操作系统部署互操作性
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-当单一层次结构中的不同 System Center Configuration Manager 站点使用不同版本时，某些 Configuration Manager 功能不可用。 通常，无法在站点上或通过运行较低版本的客户端访问 Configuration Manager 的较新版本中的功能。 有关详细信息，请参阅 [System Center Configuration Manager 不同版本之间的互操作性](../../core/plan-design/hierarchy/interoperability-between-different-versions.md)。  
+当单一层次结构中的不同 System Center Configuration Manager 站点使用不同版本时，某些 Configuration Manager 功能不可用。 通常，无法在站点上或通过运行较低版本的客户端访问 Configuration Manager 的较新版本中的功能。 有关详细信息，请参阅 [Interoperability between different versions of System Center Configuration Manager](../../core/plan-design/hierarchy/interoperability-between-different-versions.md)。  
 
  在升级层次结构中的顶层站点和升级层次结构中运行具有较低版本的 Configuration Manager 的其他站点时，请考虑以下事项：  
 

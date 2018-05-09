@@ -1,25 +1,20 @@
 ---
-title: "站点恢复"
+title: 站点恢复
 titleSuffix: Configuration Manager
-description: "了解如何恢复 System Center Configuration Manager 站点。"
-ms.custom: na
+description: 了解如何恢复 System Center Configuration Manager 站点。
 ms.date: 11/20/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: 19539f4d-1667-4b4c-99a1-9995f12cf5f7
-caps.latest.revision: 
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 74d01e151efa19f91104ad99f393f7e7b1a23836
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: bcc4181289e327537750d9790497c5451661de2e
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 #  <a name="recover-a-configuration-manager-site"></a>恢复 Configuration Manager 站点
 
@@ -166,7 +161,7 @@ Configuration Manager 站点出现故障或者站点数据库中发生数据丢�
 
 1.  打开 Configuration Manager 控制台并连接到恢复的站点。
 
-2.  在 Configuration Manager 控制台中，单击“管理” 。
+2.  在 Configuration Manager 控制台中，单击“管理”。
 
 3.  在“管理”  工作区中，展开“安全” ，然后单击“帐户” 。
 
@@ -200,7 +195,7 @@ Configuration Manager 站点出现故障或者站点数据库中发生数据丢�
 ### <a name="recover-content-files"></a>恢复内容文件
  站点数据库包含有关内容文件在站点服务器上的存储位置的信息，但在备份和恢复过程中不会备份或还原内容文件。 要完全恢复内容文件，你必须将内容库和包源文件还原到原始位置。 有很多用于恢复内容文件的方法，但最简单的方法是从站点服务器的文件系统备份中还原文件。
 
- 如果没有包源文件的文件系统备份，必须按照最初创建包时的方式手动复制或下载这些文件。 你可以在 SQL Server 中运行以下查询来查找所有包和应用程序的包源位置： `SELECT * FROM v_Package`。 你可以通过查看包 ID 的前三个字符来确定包源站点。 例如，如果包 ID 为 CEN00001，则源站点的站点代码为 CEN。 在还原包源文件时，必须将它们还原到发生故障之前所在的同一位置。
+ 如果没有包源文件的文件系统备份，必须按照最初创建包时的方式手动复制或下载这些文件。 你可以在 SQL Server 中运行以下查询来查找所有包和应用程序的包源位置：`SELECT * FROM v_Package`。 你可以通过查看包 ID 的前三个字符来确定包源站点。 例如，如果包 ID 为 CEN00001，则源站点的站点代码为 CEN。 在还原包源文件时，必须将它们还原到发生故障之前所在的同一位置。
 
  如果没有包含内容库的文件系统备份，则有下列还原选项：
 

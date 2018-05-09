@@ -1,25 +1,20 @@
 ---
-title: "创建 Linux 和 UNIX 服务器应用程序"
+title: 创建 Linux 和 UNIX 服务器应用程序
 titleSuffix: Configuration Manager
-description: "请参阅创建和部署适用于 Linux 和 Unix 设备的应用程序时必须考虑的注意事项。"
-ms.custom: na
+description: 请参阅创建和部署适用于 Linux 和 Unix 设备的应用程序时必须考虑的注意事项。
 ms.date: 04/13/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 79cd131a-1a24-4751-87c8-7f275e45d847
-caps.latest.revision: "7"
-author: mattbriggs
-ms.author: mabrigg
-manager: angrobe
-ms.openlocfilehash: 81a3ef6ee05a8f0f66ca1a70d56bc33017c66d9c
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 35ccc4944359b89bad3ccac52309a289f69933f7
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-linux-and-unix-server-applications-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 创建 Linux 和 UNIX 服务器应用程序
 

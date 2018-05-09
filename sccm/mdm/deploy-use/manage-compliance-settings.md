@@ -1,25 +1,20 @@
 ---
-title: "管理使用 Intune 管理的设备上的符合性"
+title: 管理使用 Intune 管理的设备上的符合性
 titleSuffix: Configuration Manager
-description: "通过完成一些常见方案，了解 System Center Configuration Manager 符合性设置。"
-ms.custom: na
+description: 通过完成一些常见方案，了解 System Center Configuration Manager 符合性设置。
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9e83007f-e81c-4b7e-b47e-b01d7b19cfbc
-caps.latest.revision: "5"
-author: lleonard-msft
-ms.author: alleonar
-manager: angrobe
-ms.openlocfilehash: 97f0ed47447dc5603a65563b0e87ec90bcc1fe42
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 012539cd5879691f0e42910c72cb03052e77b722
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="managing-compliance-on-devices-managed-with-intune"></a>管理使用 Intune 管理的设备上的符合性
 

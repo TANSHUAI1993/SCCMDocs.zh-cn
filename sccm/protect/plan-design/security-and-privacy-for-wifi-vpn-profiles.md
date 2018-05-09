@@ -1,26 +1,20 @@
 ---
-title: "Wi-Fi 和 VPN 配置文件的安全和隐私"
+title: Wi-Fi 和 VPN 配置文件的安全和隐私
 titleSuffix: Configuration Manager
-description: "了解在 System Center Configuration Manager 中管理设备的 Wi-Fi 和 VPN 配置文件的安全最佳做法。"
-ms.custom: na
+description: 了解在 System Center Configuration Manager 中管理设备的 Wi-Fi 和 VPN 配置文件的安全最佳做法。
 ms.date: 12/28/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: ef3ab519-9cf7-47fc-8831-d400e0e96df8
-caps.latest.revision: "4"
-caps.handback.revision: "0"
-author: Nbigman
-ms.author: nbigman
-manager: angrobe
-ms.openlocfilehash: 9c66945e498042ef013fb00f56cfb73598a9776f
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 6ba2cf8139cd1a5f416ff7877afc0a6b7b1ad081
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-and-privacy-for-wi-fi-and-vpn-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager 中 Wi-Fi 和 VPN 配置文件的安全性和隐私
 

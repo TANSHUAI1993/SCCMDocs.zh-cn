@@ -1,25 +1,20 @@
 ---
-title: "使用多播通过网络来部署 Windows"
+title: 使用多播通过网络来部署 Windows
 titleSuffix: Configuration Manager
-description: "在 System Center Configuration Manager 环境中使用多播，以便多台计算机可同时下载操作系统映像。"
-ms.custom: na
+description: 在 System Center Configuration Manager 环境中使用多播，以便多台计算机可同时下载操作系统映像。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4cafb7fc-380b-41b1-b83e-045aebfb7131
-caps.latest.revision: "13"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: d254b7ff1f66d73996cda66c0fb2134033868cb1
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: 648146f11336489f30f03c35cb3d648f161b5e69
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-multicast-to-deploy-windows-over-the-network-with-system-center-configuration-manager"></a>使用多播与 System Center Configuration Manager 一起通过网络部署 Windows
 

@@ -1,22 +1,20 @@
 ---
 title: 设置云管理网关
-titleSuffix: System Center Configuration Manager
+titleSuffix: Configuraton Manager
 description: 使用此分步过程来设置云管理网关 (CMG)。
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.date: 03/22/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service: ''
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: fb2a44897064e88f7ab6fd4f4b293520f54f1db7
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 04c1b262704ec6458bd9773c28c43a50d8fc0840
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>为 Configuration Manager 设置云管理网关
 
@@ -25,7 +23,7 @@ ms.lasthandoff: 03/23/2018
 此过程包括设置云管理网关 (CMG) 所需执行的步骤。 
 
 > [!Tip]
-> 此功能在 1610 版本中首次引入，属于[预发行功能](/sccm/core/servers/manage/pre-release-features)。 从版本 1802 开始，此功能不再属于预发行功能。
+> 此功能在 1610 版本中首次引入，属于[预发行功能](/sccm/core/servers/manage/pre-release-features)。 从 1802 版开始，此功能不再属于预发行功能。
 
 
 

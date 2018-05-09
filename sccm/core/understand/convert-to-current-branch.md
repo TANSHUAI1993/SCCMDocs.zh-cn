@@ -1,25 +1,20 @@
 ---
-title: "将 Long-Term Servicing Branch 升级到 Current Branch "
+title: '将 Long-Term Servicing Branch 升级到 Current Branch '
 titleSuffix: Configuration Manager
-description: "了解如何将 Long-Term Servicing Branch 站点转换为 Current Branch 站点。"
-ms.custom: na
+description: 了解如何将 Long-Term Servicing Branch 站点转换为 Current Branch 站点。
 ms.date: 2/8/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ec5b54cf-62b7-4ed1-9bb3-e8c63b9641c8
-caps.latest.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 8adc118643cdc9bb4db8226b6d5c5f14a20898a4
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: 2c739f52553aca8680328e581e183a5ca974ffdf
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="upgrade-the-long-term-servicing-branch-to-the-current-branch"></a>将 Long-Term Servicing Branch 升级到 Current Branch
 

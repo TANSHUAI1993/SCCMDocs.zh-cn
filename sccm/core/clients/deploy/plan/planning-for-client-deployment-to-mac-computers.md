@@ -1,26 +1,20 @@
 ---
-title: "规划在 Mac 计算机上部署客户端"
+title: 规划在 Mac 计算机上部署客户端
 titleSuffix: Configuration Manager
-description: "在 System Center Configuration Manager 中规划 Mac 计算机的客户端部署。"
-ms.custom: na
+description: 在 System Center Configuration Manager 中规划 Mac 计算机的客户端部署。
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 8d15ae3f-de42-461f-a907-c43873da22d2
-caps.latest.revision: "6"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 93f6313e25c7015bde10a5770cb4a8e170bff880
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 05268780bd6dc3b86052b694f360065f8f70d6e6
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="planning-for-client-deployment-to-mac-computers-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中规划 Mac 计算机的客户端部署
 

@@ -1,26 +1,21 @@
 ---
-title: "管理更新目录"
+title: 管理更新目录
 titleSuffix: Configuration Manager
-description: "管理 System Center Updates Publisher 中的软件更新目录"
-ms.custom: na
+description: 管理 System Center Updates Publisher 中的软件更新目录
 ms.date: 4/29/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-sum
+ms.topic: conceptual
 ms.assetid: 887f8029-1a3a-423c-a9c1-31dc0d693386
-caps.latest.revision: "1"
-author: mestew
-ms.author: mstewart
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 robots: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 3daed2374cd335475baaa238123a97a535f8f94b
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: a387a7c5a466dc2f44ad114788ff7d56dd468195
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-software-update-catalogs-in-updates-publisher"></a>管理 Updates Publisher 中的软件更新目录
 

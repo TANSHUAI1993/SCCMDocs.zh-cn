@@ -1,26 +1,20 @@
 ---
-title: "在本地移动设备管理中管理设备"
+title: 在本地移动设备管理中管理设备
 titleSuffix: Configuration Manager
-description: "使用 Configuration Manager 在本地移动设备管理中管理设备。"
-ms.custom: na
+description: 使用 Configuration Manager 在本地移动设备管理中管理设备。
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6e233f17-8ead-4984-a3fa-12687c4381ee
-caps.latest.revision: "18"
-caps.handback.revision: "0"
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 8ff9a7ea8897ce3666d98873728f35619888aa55
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 0a189b5467b1c76287e47ef4ad615d4bff7f4de6
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-devices-for-on-premises-mobile-device-management"></a>在本地移动设备管理中管理设备
 

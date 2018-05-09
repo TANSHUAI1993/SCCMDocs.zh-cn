@@ -1,26 +1,20 @@
 ---
-title: "服务时段"
+title: 服务时段
 titleSuffix: Configuration Manager
-description: "使用服务时段控制 System Center Configuration Manager 站点安装更新的时间。"
-ms.custom: na
+description: 使用服务时段控制 System Center Configuration Manager 站点安装更新的时间。
 ms.date: 1/11/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ca4886d4-7173-46be-8dcd-1657d5b0deb9
-caps.latest.revision: "4"
-caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: d8b4cb7492b488a1f7056617b165b4aa656ee26e
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 8b81efc7f31339bd7b19530ef603855f0ee8fad6
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 #  <a name="service-windows-for-site-servers"></a>站点服务器的服务时段
 

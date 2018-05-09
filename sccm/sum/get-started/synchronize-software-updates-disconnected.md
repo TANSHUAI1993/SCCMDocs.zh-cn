@@ -1,22 +1,20 @@
 ---
-title: "在无 Internet 连接的情况下同步更新 "
+title: '在无 Internet 连接的情况下同步更新 '
 titleSuffix: Configuration Manager
-description: "在断开 Internet 连接的顶层软件更新点上运行软件更新同步。"
-keywords: 
-author: dougeby
-ms.author: dougeby
-manager: angrobe
+description: 在断开 Internet 连接的顶层软件更新点上运行软件更新同步。
+author: aczechowski
 ms.date: 01/23/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: 1a997c30-8e71-4be5-89ee-41efb2c8d199
-ms.openlocfilehash: e10c3b1695e3ce652559242b0248e7dc818741b7
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: da6204a78ce45c72d2b8d5586d02c8692405f295
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="synchronize-software-updates-from-a-disconnected-software-update-point"></a>从断开连接的软件更新点中同步软件更新  
 

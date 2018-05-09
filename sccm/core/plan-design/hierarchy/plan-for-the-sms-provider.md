@@ -1,26 +1,20 @@
 ---
-title: "规划 SMS 提供程序"
+title: 规划 SMS 提供程序
 titleSuffix: Configuration Manager
-description: "了解 SMS 提供程序如何帮助你管理 System Center Configuration Manager。"
-ms.custom: na
+description: 了解 SMS 提供程序如何帮助你管理 System Center Configuration Manager。
 ms.date: 2/7/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 5d5d6273-0d8a-43c7-865a-cdb1736dcae3
-caps.latest.revision: 
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 36f4e9e94e794998a59453f709bf6248975d8792
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: 9807bab4a5edd60ebc8a4aaa000cea6b8c25afb0
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="plan-for-the-sms-provider-for-system-center-configuration-manager"></a>为 System Center Configuration Manager 规划 SMS 提供程序
 

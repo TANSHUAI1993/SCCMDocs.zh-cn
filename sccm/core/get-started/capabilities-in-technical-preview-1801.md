@@ -1,25 +1,20 @@
 ---
 title: Technical Preview 1801 | Microsoft Docs
 titleSuffix: Configuration Manager
-description: "了解 System Center Configuration Manager Technical Preview（版本 1801）中的可用功能。"
-ms.custom: na
+description: 了解 System Center Configuration Manager Technical Preview（版本 1801）中的可用功能。
 ms.date: 01/19/2018
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 5a352ae0-355f-4fcf-b863-fb0654f51c52
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: f4be3ffe817392bf8fefdcf4e481c739778025ff
-ms.sourcegitcommit: db9978135d7a6455d83dbe4a5175af2bdeaeafd8
+manager: dougeby
+ms.openlocfilehash: 995c84e51ec72b385390f76fabfe08d60c2832d7
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1801-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1801 中的功能
 

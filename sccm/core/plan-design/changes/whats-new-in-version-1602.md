@@ -1,26 +1,21 @@
 ---
-title: "版本 1602 中的新增功能"
+title: 版本 1602 中的新增功能
 titleSuffix: Configuraton Manager
-description: "获取有关 System Center Configuration Manager 的 1602 版中引入的更改和新功能的详细信息。"
-ms.custom: na
+description: 获取有关 System Center Configuration Manager 的 1602 版中引入的更改和新功能的详细信息。
 ms.date: 12/30/2016
-ms.reviewer: na
-ms.suite: na
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4021eca1-adfb-4e5a-adee-159263c29637
-caps.latest.revision: "3"
-author: mestew
-ms.author: mstewart
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 robots: noindex,nofollow
-ms.openlocfilehash: a9d6d0f4dcf2b57c21d54e35fb3f61668d2cbea3
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: cdc8797d436e50c60f17d4c26c802465608bb26a
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="what39s-new-in-version-1602-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1602 中的新增功能
 

@@ -1,25 +1,20 @@
 ---
-title: "使用诊断数据"
+title: 使用诊断数据
 titleSuffix: Configuration Manager
-description: "了解 Microsoft 如何使用 System Center Configuration Manager 收集的诊断和使用情况数据。"
-ms.custom: na
+description: 了解 Microsoft 如何使用 System Center Configuration Manager 收集的诊断和使用情况数据。
 ms.date: 12/29/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a8021bc8-2799-41f4-83c2-e27d1242028c
-caps.latest.revision: "5"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: d34305ddb158a01c0d79189705af597344a56f8d
-ms.sourcegitcommit: da27d37cc4e4e06cf23758846cdd7acb617f744b
+manager: dougeby
+ms.openlocfilehash: fac92818a56b9ef7c7e8e6b923fb0d833f9053c2
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-diagnostics-and-usage-data-is-used-for-system-center-configuration-manager"></a>如何将诊断和使用情况数据用于 System Center Configuration Manager
 

@@ -1,25 +1,20 @@
 ---
-title: "站点的先决条件"
+title: 站点的先决条件
 titleSuffix: Configuration Manager
-description: "了解安装不同类型的 System Center Configuration Manager 站点所需的先决条件。"
-ms.custom: na
+description: 了解安装不同类型的 System Center Configuration Manager 站点所需的先决条件。
 ms.date: 7/31/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 92b339ef-2723-4322-bec6-077b3e8846b0
-caps.latest.revision: "5"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 07e57a15834d2f29444f47b9503cc04947f36150
-ms.sourcegitcommit: 92c3f916e6bbd35b6208463ff406e0247664543a
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 6e45ec9aca5ee1a14f9058453497003814b2fdb0
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prerequisites-for-installing-system-center-configuration-manager-sites"></a>安装 System Center Configuration Manager 站点的先决条件
 

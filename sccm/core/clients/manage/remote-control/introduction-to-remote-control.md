@@ -1,26 +1,20 @@
 ---
-title: "远程控制"
+title: 远程控制
 titleSuffix: Configuration Manager
-description: "获取 System Center Configuration Manager 中的远程控制简介。"
-ms.custom: na
+description: 获取 System Center Configuration Manager 中的远程控制简介。
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 29350919-6a25-446b-a0da-05e8914fbb26
-caps.latest.revision: "4"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 4033b03358fc41fdda78c1d83ef3509a3aa9e206
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 6a6f6ea0d68a8ba8d2db20bd8a77d5e480314150
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="introduction-to-remote-control-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的远程控制简介
 

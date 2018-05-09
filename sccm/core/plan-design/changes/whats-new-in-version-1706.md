@@ -1,24 +1,19 @@
 ---
-title: "新版本 1706"
+title: 新版本 1706
 titleSuffix: Configuration Manager
-description: "获取有关 System Center Configuration Manager 的 1706 版中引入的更改和新功能的详细信息。"
-ms.custom: na
+description: 获取有关 System Center Configuration Manager 的 1706 版中引入的更改和新功能的详细信息。
 ms.date: 08/11/2017
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: ac034143-003e-4629-aac2-99eaffef4db1
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: fb6c377edee5cbf387398ed2166ca2cca0cdb765
-ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 925a881c6d9cf7249fc138027ceef2d225ee91e2
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="what39s-new-in-version-1706-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1706 的新增功能
 

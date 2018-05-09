@@ -4,17 +4,16 @@ titleSuffix: Configuration Manager
 description: 通过云管理网关 (CMG) 监视客户端和网络流量。
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-client
+ms.technology: configmgr-client
 ms.assetid: 15f72f80-9850-40ce-9c3a-443ba04b6a03
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 18a98ae924b985b08aed911797b07ef0a1974420
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: a4ecbeb2484297160797b7b5632c86cee4ff1122
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="monitor-cloud-management-gateway-in-configuration-manager"></a>在 Configuration Manager 中监视云管理网关
 

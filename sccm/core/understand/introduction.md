@@ -1,26 +1,20 @@
 ---
-title: "简介"
+title: 简介
 titleSuffix: Configuration Manager
-description: "获取基本信息，作为对 System Center Configuration Manager 的简介。"
-ms.custom: na
+description: 获取基本信息，作为对 System Center Configuration Manager 的简介。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 3343eccf-bf09-41cd-9e68-03e893c7f904
-caps.latest.revision: 
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: b63386f69ea05a610868de9bc85ff606d4ade73d
-ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
+manager: dougeby
+ms.openlocfilehash: f0986d713b47d15dc0298e413216a1e33fe2e937
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="introduction-to-system-center-configuration-manager"></a>System Center Configuration Manager 简介
 

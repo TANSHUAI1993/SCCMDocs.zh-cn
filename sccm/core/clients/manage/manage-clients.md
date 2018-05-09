@@ -1,25 +1,20 @@
 ---
-title: "管理客户端"
+title: 管理客户端
 titleSuffix: Configuration Manager
-description: "了解如何在 System Center Configuration Manager 中管理客户端。"
-ms.custom: na
+description: 了解如何在 System Center Configuration Manager 中管理客户端。
 ms.date: 12/21/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3986a992-c175-4b6f-922e-fc561e3d7cb7
-caps.latest.revision: "17"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 2065fd0910b1d89df3f8296c87ede15b89331568
-ms.sourcegitcommit: 528b1ce79803fecd34937a790e9b5cde282d4caa
+manager: dougeby
+ms.openlocfilehash: 623d7b6a048b7728e40adb3655dc1017408fb1d7
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-manage-clients-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中管理客户端
 
@@ -278,7 +273,7 @@ Configuration Manager 客户端会在接收部署之后立即下载所需软件�
 
 1.  在客户端计算机上的控制面板中，导航到“Configuration Manager” ，然后双击以打开属性。  
 
-2.  在“缓存”选项卡上，设置空间和位置属性。 默认位置为 *%windir%*\ccmcache。  
+2.  在“缓存”选项卡上，设置空间和位置属性。 默认位置为 *%windir%* \ccmcache。  
 
 3.  若要删除缓存文件夹中的文件，请选择“删除文件”。  
 

@@ -1,25 +1,20 @@
 ---
-title: "规划和配置符合性设置"
+title: 规划和配置符合性设置
 titleSuffix: Configuration Manager
-description: "了解在 System Center Configuration Manager 中使用符合性设置的先决条件和配置任务。"
-ms.custom: na
+description: 了解在 System Center Configuration Manager 中使用符合性设置的先决条件和配置任务。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 9ea20b01-676a-4cc2-b328-0098a41b202e
-caps.latest.revision: "8"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 970ebabc8a275f46cf005c6f3571c62d64889ea8
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 84643f38b5dd0c42a611ca50aaae6ab6d9f52405
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="plan-for-and-configure-compliance-settings-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中规划和配置符合性设置
 
@@ -43,7 +38,7 @@ ms.lasthandoff: 10/12/2017
 >  其他设备类型不需要任何特定的配置以评估符合性设置。  
 
 1.  在 Configuration Manager 控制台中，单击“管理” > “客户端设置” > “默认设置”。  
-2.  在“主页”  选项卡上的“属性”  组中，单击“属性” 。  
+2.  在“主页”选项卡上的“属性”组中，单击“属性”。  
 3.  在“默认设置”  对话框中，单击“符合性设置” 。  
 4.  为符合性设置配置下列客户端设置：
     - **在客户端上启用符合性评估** - 如果要在客户端设备上评估符合性，则设置为“True”。

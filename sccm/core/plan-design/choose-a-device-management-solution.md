@@ -1,26 +1,20 @@
 ---
-title: "选择设备管理解决方案 "
+title: '选择设备管理解决方案 '
 titleSuffix: Configuration Manager
-description: "了解 System Center Configuration Manager 提供的用于管理电脑、服务器和设备的解决方案。"
-ms.custom: na
+description: 了解 System Center Configuration Manager 提供的用于管理电脑、服务器和设备的解决方案。
 ms.date: 12/08/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 24633725-791a-4df7-8dce-2c24c1a19a03
-caps.latest.revision: "14"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 311bdaf6cef45e2b52a14de07caf58c8846121a0
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 616bf5549c80c94b1dd5d27dc15ea693c86e2ca2
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="choose-a-device-management-solution-for-system-center-configuration-manager"></a>选择 System Center Configuration Manager 的设备管理解决方案
 

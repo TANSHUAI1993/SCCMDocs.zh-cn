@@ -2,22 +2,19 @@
 title: 配置分类和产品
 titleSuffix: Configuration Manager
 description: 按照以下步骤在 Configuration Manager 控制台中配置要同步的软件更新分类和产品。
-keywords: ''
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.date: 04/10/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service: ''
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
-ms.openlocfilehash: 9ba0872b1d2e4ef5dd027df3f7c16a6b3a94e9ac
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+ms.openlocfilehash: a9af39cd5f57e8b2741facde269ea81bc1b10728
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 #  <a name="configure-classifications-and-products-to-synchronize"></a>配置要同步的分类和产品  
 
@@ -58,7 +55,7 @@ ms.lasthandoff: 04/16/2018
     >  
     > 此功能在 1706 版中首次引入，属于[预发行功能](/sccm/core/servers/manage/pre-release-features)。 从版本 1710 开始，此功能不再属于预发行功能。  
     >  
-    > 默认情况下，Configuration Manager 不启用此项可选功能。 必须在使用前启用此选项。 有关详细信息，请参阅[启用更新中的可选功能](/sccm/core/servers/manage/install-in-console-updates#bkmk_options)。<!--505213-->  
+    > 默认情况下，Configuration Manager 不启用此项可选功能。 必须在使用前启用此功能。 有关详细信息，请参阅[启用更新中的可选功能](/sccm/core/servers/manage/install-in-console-updates#bkmk_options)。<!--505213-->  
 
 5.  在“产品”  选项卡上，指定要为其同步软件更新的产品，然后单击“关闭” 。  
 

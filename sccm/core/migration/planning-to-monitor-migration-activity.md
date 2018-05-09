@@ -1,26 +1,20 @@
 ---
-title: "监视迁移"
+title: 监视迁移
 titleSuffix: Configuration Manager
-description: "了解如何使用 Configuration Manager 控制台来监视迁移作业的进度和成功情况。"
-ms.custom: na
+description: 了解如何使用 Configuration Manager 控制台来监视迁移作业的进度和成功情况。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fc731d3f-edd7-4049-b17b-653d6693a564
-caps.latest.revision: "4"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: ee5c65b41678bd5c86170f2d7a20b1d2fc569226
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: 2dfad7c9963862ff90934861973bf3862d745b98
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="planning-to-monitor-migration-activity-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中规划监视迁移活动
 

@@ -1,25 +1,20 @@
 ---
-title: "使用设备注册管理器注册设备 "
+title: '使用设备注册管理器注册设备 '
 titleSuffix: Configuration Manager
-description: "使用 System Center Configuration Manager 向设备注册管理器注册企业拥有的设备。"
-ms.custom: na
+description: 使用 System Center Configuration Manager 向设备注册管理器注册企业拥有的设备。
 ms.date: 09/08/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2905f26e-7859-497d-b995-5ff48261efa2
-caps.latest.revision: "8"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: edfda4c65ac42c228b80015653678af0dbad8da3
-ms.sourcegitcommit: 1132886e07d0c0a87dcc7eeef4577dd8d8840023
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 9a691bc98a26cdf56d22c03840997d9e0a380b7b
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="enroll-devices-with-device-enrollment-manager-with-configuration-manager"></a>使用 Configuration Manager 向设备注册管理器注册设备
 
@@ -50,7 +45,7 @@ ms.lasthandoff: 11/01/2017
 
 #### <a name="add-a-device-enrollment-manager"></a>添加一个设备注册管理器  
 
-1.  在 Configuration Manager 控制台中，单击“管理” 。  
+1.  在 Configuration Manager 控制台中，单击“管理”。  
 
 2.  在“管理”  工作区中，展开“云服务” ，并单击“Microsoft Intune 订阅” 。 选择要添加设备注册管理器的 Microsoft Intune 订阅，然后单击“属性”。  
 
@@ -72,7 +67,7 @@ ms.lasthandoff: 11/01/2017
 - 已删除的设备注册管理员帐户凭据仍无法擦除或停用设备  
 - 已删除的设备注册管理员帐户与注册的设备的关系仍存在，但不可以注册任何其他设备
 
-1.  在 Configuration Manager 控制台中，单击“管理” 。  
+1.  在 Configuration Manager 控制台中，单击“管理”。  
 2.  在“管理”  工作区中，展开“云服务” ，并单击“Microsoft Intune 订阅” 。 选择要添加设备注册管理器的 Microsoft Intune 订阅，然后单击“属性”。  
 3.  在“Microsoft Intune 订阅属性”对话框中，单击“设备注册管理器”选项卡。  
 4.  “搜索”想要删除的设备注册管理器，单击“删除”，然后单击“确定”。  

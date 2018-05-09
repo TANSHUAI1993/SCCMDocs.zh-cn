@@ -1,26 +1,20 @@
 ---
-title: "警报和状态系统"
+title: 警报和状态系统
 titleSuffix: Configuration Manager
-description: "配置警报，并使用状态系统以保持对 Configuration Manager 部署状态的实时了解。"
-ms.custom: na
+description: 配置警报，并使用状态系统以保持对 Configuration Manager 部署状态的实时了解。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 7341cc6e-9e08-41e4-bcc6-6c1ff12e85ca
-caps.latest.revision: 
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 84fe2fd0959051ea42e555cb484c95fb82ec8fb3
-ms.sourcegitcommit: 1378532fac2620ddcfd31061982f344a290c2e67
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 891366f7e5fa3f4fd2b8f9a8606e823f0a48c394
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-alerts-and-the-status-system-for-system-center-configuration-manager"></a>使用 System Center Configuration Manager 的警报和状态系统
 

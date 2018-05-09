@@ -1,26 +1,20 @@
 ---
-title: "验证 MDM 配置"
+title: 验证 MDM 配置
 titleSuffix: Configuration Manager
-description: "使用 System Center Configuration Manager 验证 MDM 配置。"
-ms.custom: na
+description: 使用 System Center Configuration Manager 验证 MDM 配置。
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 94ecfada-97d9-4d5f-bb04-63550dda5f47
-caps.latest.revision: "18"
-caps.handback.revision: "0"
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 507af48c6cc911dc5303055b3e0db7bc1c1a3b32
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 3c2d212268c2c9b875890bfe8e0640f68b7d831e
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="verify-mdm-configuration-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 验证 MDM 配置
 

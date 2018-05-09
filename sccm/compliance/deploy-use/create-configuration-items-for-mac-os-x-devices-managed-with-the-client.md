@@ -1,26 +1,20 @@
 ---
-title: "创建客户端托管的 Mac 的配置项目 "
+title: '创建客户端托管的 Mac 的配置项目 '
 titleSuffix: Configuration Manager
-description: "使用 System Center Configuration Manager Mac OS X 配置项目管理对 Mac OS X 设备的设置。"
-ms.custom: na
+description: 使用 System Center Configuration Manager Mac OS X 配置项目管理对 Mac OS X 设备的设置。
 ms.date: 03/28/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 722d5bf5-bedc-4dfc-b324-6eeb773874e9
-caps.latest.revision: "8"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 1947bc8907d00a2f6d78acee5f563fa9b7f6cf78
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: e6358c8e84d12c37418d7a1af459e775783efaa2
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-configuration-items-for-mac-os-x-devices-managed-with-the-system-center-configuration-manager-client"></a>如何为使用 System Center Configuration Manager 客户端管理的 Mac OS X设备创建配置项目
 使用 System Center Configuration Manager **Mac OS X（自定义）**配置项目，管理由 Configuration Manager 客户端托管的 Mac OS X 设备的设置。  
@@ -29,7 +23,7 @@ ms.lasthandoff: 10/12/2017
   
 ### <a name="to-create-a-custom-mac-os-x-configuration-item"></a>创建自定义 Mac OS X 配置项目  
   
-1.  在 Configuration Manager 控制台中，单击“资产和符合性”。  
+1.  在 Configuration Manager 控制台中单击“资产和符合性”。  
   
 2.  在“资产和符合性”  工作区中，展开“符合性设置” ，然后单击“配置项目” 。  
   
@@ -75,7 +69,7 @@ ms.lasthandoff: 10/12/2017
 11. 选择“数据类型”  ，它是用于评估设置之前条件返回数据的格式。  
   
     > [!NOTE]  
-    >  “浮点”  数据类型仅支持小数点后 3 个数字。  
+    >  **浮点数** 小数点后的数据类型支持只需 3 位数字。  
     >   
     >  Configuration Manager 不支持对 Mac 配置项目脚本设置使用**布尔**数据类型。 而应将数据类型设置为“整数”  ，并确保脚本返回一个整数值。  
   

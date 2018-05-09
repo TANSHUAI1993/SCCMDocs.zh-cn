@@ -1,24 +1,20 @@
 ---
-title: "Technical Preview 1711 | Microsoft 文档"
+title: Technical Preview 1711 | Microsoft 文档
 titleSuffix: Configuration Manager
-description: "了解适用于 System Center Configuration Manager 的 Technical Preview 版本 1711 中的可用功能。"
-ms.custom: na
+description: 了解适用于 System Center Configuration Manager 的 Technical Preview 版本 1711 中的可用功能。
 ms.date: 11/17/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2e68dc12-6776-437a-9138-45cd7d4bf9cf
-author: erikje
-ms.author: erikje
-manager: angrobe
-ms.openlocfilehash: b740c422a71e625ccc110a043028cf986cdffb20
-ms.sourcegitcommit: ed8b2438ef85c9160741ef61f9171be41dd1ae0a
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 6353b765f769dfa57ea57926d12bf2b254ba8f68
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1711-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1711 中的功能
 

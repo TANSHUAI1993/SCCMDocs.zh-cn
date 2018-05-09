@@ -1,26 +1,20 @@
 ---
-title: "维护任务"
+title: 维护任务
 titleSuffix: Configuration Manager
-description: "了解针对 Configuration Manager 站点和层次结构执行的维护任务以及何时执行它们。"
-ms.custom: na
+description: 了解针对 Configuration Manager 站点和层次结构执行的维护任务以及何时执行它们。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 625bb787-6d16-47a0-8b0f-b129cd909ca3
-caps.latest.revision: "7"
-caps.handback.revision: "0"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 001d1a4781f98ac376cc7500c7ccbef17018f35e
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 1491f12768e6ca523c3cd4a6ae80fb75f4a9ab6a
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="maintenance-tasks-for-system-center-configuration-manager"></a>System Center Configuration Manager 的维护任务
 

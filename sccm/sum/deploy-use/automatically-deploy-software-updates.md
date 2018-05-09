@@ -2,22 +2,19 @@
 title: 自动部署软件更新
 titleSuffix: Configuration Manager
 description: 通过将新的更新添加到与活动部署关联的更新组中或者使用 ADR，可自动部署软件更新。
-keywords: ''
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ms.date: 03/22/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service: ''
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-ms.openlocfilehash: afa0bd21d23dc0be50d90452ad5dd5d909542279
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 3b267e122370cc12ecec2f42dcb1dfc62c45fe63
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 #  <a name="BKMK_AutoDeploy"></a> 自动部署软件更新  
 

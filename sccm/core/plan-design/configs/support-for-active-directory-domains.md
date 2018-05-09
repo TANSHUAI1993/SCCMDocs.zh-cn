@@ -1,26 +1,20 @@
 ---
-title: "受支持的 Active Directory 域"
+title: 受支持的 Active Directory 域
 titleSuffix: Configuration Manager
-description: "获取 Active Directory 域中 System Center Configuration Manager 站点系统的成员身份要求。"
-ms.custom: na
+description: 获取 Active Directory 域中 System Center Configuration Manager 站点系统的成员身份要求。
 ms.date: 9/18/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8c5a13f8-42d5-4898-b7b6-e594dae8b335
-caps.latest.revision: "7"
-caps.handback.revision: "0"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 7ec8d6f3a37f48e7dc6032af5b30fb452171d14c
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: dcb0f5e82d0ef53524e9abfdb974605e3ae73db3
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="supported-active-directory-domains-for-system-center-configuration-manager"></a>对于 System Center Configuration Manager 受支持的 Active Directory 域
 

@@ -1,25 +1,20 @@
 ---
-title: "安全基础知识"
+title: 安全基础知识
 titleSuffix: Configuration Manager
-description: "了解有关 System Center Configuration Manager 的安全性层的信息。"
-ms.custom: na
+description: 了解有关 System Center Configuration Manager 的安全性层的信息。
 ms.date: 12/30/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 035b7f73-8b78-4ed1-835e-a31f9a5c4a02
-caps.latest.revision: "5"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: ab7b1db1d1e4e422350f9f961ed816150c85d4c5
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: 86191b4ebf1ba03cbc95776186c452f728cc1a2c
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fundamentals-of-security-for-system-center-configuration-manager"></a>System Center Configuration Manager 安全性的基础知识
 

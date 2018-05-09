@@ -1,27 +1,20 @@
 ---
-title: "规划将客户端部署到 Linux 和 UNIX 计算机"
+title: 规划将客户端部署到 Linux 和 UNIX 计算机
 titleSuffix: Configuration Manager
-description: "在 System Center Configuration Manager 中规划 Linux 和 UNIX 计算机的客户端部署。"
-ms.custom: na
+description: 在 System Center Configuration Manager 中规划 Linux 和 UNIX 计算机的客户端部署。
 ms.date: 08/30/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 44153689-70e8-42ad-9ae8-17ae35f6a2e3
-caps.latest.revision: 
-caps.handback.revision: 
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 9df979fe98dc4d4ead18ff3cfb276612681c9bce
-ms.sourcegitcommit: b1fa7be6a6fa5bb7c49e90c0e28a21ba8b41c842
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 7251ac6bf623236492f0843b8562a06e547c9cb1
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="planning-for-client-deployment-to-linux-and-unix-computers-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中规划 Linux 和 UNIX 计算机的客户端部署
 

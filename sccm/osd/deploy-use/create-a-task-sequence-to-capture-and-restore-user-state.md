@@ -1,26 +1,20 @@
 ---
-title: "创建任务序列以捕获和还原用户状态"
+title: 创建任务序列以捕获和还原用户状态
 titleSuffix: Configuration Manager
-description: "使用 System Center Configuration Manager 任务序列捕获和还原操作系统部署方案中的用户状态数据。"
-ms.custom: na
+description: 使用 System Center Configuration Manager 任务序列捕获和还原操作系统部署方案中的用户状态数据。
 ms.date: 06/07/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d566d85c-bf7a-40e7-8239-57640a1db5f4
-caps.latest.revision: "7"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 3fb30240c7d926657e01a4b9e03cef38fd2ee128
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: ab5cbaf481842cf814d5f1b90af4f6743bb8a803
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-task-sequence-to-capture-and-restore-user-state-in-system-center-configuration-manager"></a>创建任务序列以捕获和还原 System Center Configuration Manager 中的用户状态
 

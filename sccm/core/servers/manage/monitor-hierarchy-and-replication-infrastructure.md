@@ -1,26 +1,20 @@
 ---
-title: "监视复制"
+title: 监视复制
 titleSuffix: Configuration Manager
-description: "了解如何使用控制台中的“监视”工作区在 Configuration Manager 中监视基础结构和操作。"
-ms.custom: na
+description: 了解如何使用控制台中的“监视”工作区在 Configuration Manager 中监视基础结构和操作。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3fab4d67-8d2a-45ce-8b06-471280102cf6
-caps.latest.revision: "11"
-caps.handback.revision: "0"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 459a619d08a5d38c51301e2f6cff23a5d46a9464
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 04faf92545f84fdf53c522ad9aa0c74bbd5c4aa1
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="monitor-hierarchy-and-replication-infrastructure-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的监视层次结构和复制基础结构
 
@@ -239,6 +233,6 @@ Configuration Manager 提供了若干方法来监视层次结构的状态和操�
 3.  将鼠标指针短暂停留在两个站点之间的线条上以查看这些站点的全局和站点数据复制的状态。  
 
 ##### <a name="to-monitor-the-replication-status-for-a-replication-link"></a>监视复制链接的复制状态    
-1.  在 Configuration Manager 控制台中，单击“监视” 。  
+1.  在 Configuration Manager 控制台中，单击“监视”。  
 
 2.  在“监视”  工作区中，单击“数据库复制” ，然后选择要监视的链接的复制链接。 然后，在工作区中选择相应的选项卡以查看有关该链接的复制状态的不同详细信息。  

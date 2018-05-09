@@ -2,24 +2,19 @@
 title: Technical Preview 1803
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager Technical Preview 1803 版中提供的新功能。
-ms.custom: na
 ms.date: 03/27/2018
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 56dc4b07-5aa4-43e2-9be8-d26ae5ff5613
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f3c200fe699f85c195e41fc2b395a3d710b1788a
-ms.sourcegitcommit: d3863a9b34f9925515cabe9a290a6c733e10108b
+ms.openlocfilehash: dc4dc88b2a8fa9ba075fee51e187e02ae55c2cce
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1803-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1803 中的功能
 

@@ -2,26 +2,19 @@
 title: 对 Windows 功能的支持
 titleSuffix: Configuration Manager
 description: 了解 System Center Configuration Manager 支持的 Windows 和网络功能。
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 0cf4bacb-6b6d-4d4f-8640-b13fe15873de
-caps.latest.revision: 8
-caps.handback.revision: 0
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4a41efa9b4c33a77d6aa2fa9e806e24ae33cc330
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: c1b4dbb6986b5e617ae7a8eb2a0264ce799e87ca
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="support-for-windows-features-and-networks-in-system-center-configuration-manager"></a>对 System Center Configuration Manager 中的 Windows 功能和网络的支持
 

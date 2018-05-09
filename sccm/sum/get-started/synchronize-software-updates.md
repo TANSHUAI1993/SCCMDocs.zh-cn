@@ -1,23 +1,20 @@
 ---
-title: "管理软件更新同步"
+title: 管理软件更新同步
 titleSuffix: Configuration Manager
-description: "使用以下步骤可计划软件更新同步、手动启动软件更新同步，以及监视软件更新同步。"
-keywords: 
-author: dougeby
-ms.author: dougeby
-manager: angrobe
+description: 使用以下步骤可计划软件更新同步、手动启动软件更新同步，以及监视软件更新同步。
+author: aczechowski
 ms.date: 10/06/2016
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service: 
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: ea8698c4-9df5-4cf5-8b62-ab93115b4769
-ms.openlocfilehash: 3a17fb317553c783250b92212315a6ea895105c6
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 7e2e5493f1aaee448c6573d08a57a69aafb478c7
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 #  <a name="BKMK_SUMSync"></a> 同步软件更新
 
@@ -68,7 +65,7 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="to-monitor-the-software-updates-synchronization-process"></a>监视软件更新同步过程  
 
-  1.  在 Configuration Manager 控制台中，单击“监视” 。  
+  1.  在 Configuration Manager 控制台中，单击“监视”。  
 
   2.  在“监视”  工作区中，单击“软件更新点同步状态” 。  
 

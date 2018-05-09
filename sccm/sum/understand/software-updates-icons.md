@@ -1,22 +1,20 @@
 ---
-title: "用于软件更新的图标"
+title: 用于软件更新的图标
 titleSuffix: Configuration Manager
-description: "Configuration Manager 控制台包含指示已同步更新或软件更新组的状态的图标。"
-keywords: 
-author: dougeby
-ms.author: dougeby
-manager: angrobe
+description: Configuration Manager 控制台包含指示已同步更新或软件更新组的状态的图标。
+author: aczechowski
+manager: dougeby
 ms.date: 10/06/2016
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: 63c5ef72-5715-4d86-85a2-71beba469fab
-ms.openlocfilehash: 34a988fc530c4ebd57a818bbeee4f88a2c39959a
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.author: aaroncz
+ms.openlocfilehash: d772b4ede4c8bfe13c68597ec8fe9a1f3dccbf38
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="icons-used-for-software-updates-in-system-center-configuration-manager"></a>System Center Configuration Manager 中用于软件更新的图标
 

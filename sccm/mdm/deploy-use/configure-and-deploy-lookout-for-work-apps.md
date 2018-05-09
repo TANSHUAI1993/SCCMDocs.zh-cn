@@ -2,25 +2,19 @@
 title: 为工作应用部署 Lookout
 titleSuffix: Configuration Manager
 description: 配置和部署 Lookout for Work 应用。
-ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 3f62b763-4347-453d-b0a7-1f4a0d1d4105
-caps.latest.revision: ''
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 01c388377948ab362d60951cb8398a9276e668fb
-ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: a812ed059bc0d96c23af986c2051416c26f6a15a
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-and-deploy-lookout-for-work-apps"></a>配置和部署 Lookout for Work 应用
 

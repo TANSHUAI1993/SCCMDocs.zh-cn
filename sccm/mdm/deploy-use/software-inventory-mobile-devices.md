@@ -1,26 +1,20 @@
 ---
-title: "Microsoft Intune 注册的移动设备的软件清单"
+title: Microsoft Intune 注册的移动设备的软件清单
 titleSuffix: Configuration Manager
-description: "使用 Microsoft Intune 注册的移动设备的软件清单。"
-ms.custom: na
+description: 使用 Microsoft Intune 注册的移动设备的软件清单。
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a0eae17a-60a8-4132-91af-0b10ad338c92
-caps.latest.revision: "18"
-caps.handback.revision: "0"
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: c0a583de1a0b24bd31c0d55c1acb54f480bb4230
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: a1aa0bb03b2e27aebbbf1c080b32445bc7c58c47
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="software-inventory-for-mobile-devices-enrolled-with-microsoft-intune"></a>Microsoft Intune 注册的移动设备的软件清单
 

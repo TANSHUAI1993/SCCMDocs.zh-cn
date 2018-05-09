@@ -1,26 +1,20 @@
 ---
-title: "集合先决条件"
+title: 集合先决条件
 titleSuffix: Configuration Manager
-description: "在 System Center Configuration Manager 中获取使用集合的先决条件。"
-ms.custom: na
+description: 在 System Center Configuration Manager 中获取使用集合的先决条件。
 ms.date: 2/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: a53e4cf1-518a-4210-9c16-022c4261d2fe
-caps.latest.revision: "7"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 5696a4cc81d8be889f6040a2f9610e1aec17d271
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 12cbffb63ce449afedb9159174409fb5b1f7583f
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prerequisites-for-collections-in-system-center-configuration-manager"></a>System Center Configuration Manager 中集合的先决条件
 

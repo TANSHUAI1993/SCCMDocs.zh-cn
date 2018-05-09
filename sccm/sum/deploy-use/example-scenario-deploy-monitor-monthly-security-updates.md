@@ -1,22 +1,20 @@
 ---
-title: "部署和监视安全软件更新的示例方案"
+title: 部署和监视安全软件更新的示例方案
 titleSuffix: Configuration Manager
-description: "请使用此示例方案以了解如何在 Configuration Manager 中使用软件更新以部署和监视 Microsoft 每月发布的安全软件更新。"
-keywords: 
-author: dougeby
-ms.author: dougeby
-manager: angrobe
+description: 请使用此示例方案以了解如何在 Configuration Manager 中使用软件更新以部署和监视 Microsoft 每月发布的安全软件更新。
+author: aczechowski
+manager: dougeby
 ms.date: 10/06/2016
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
-ms.service: 
 ms.assetid: c32f757a-02da-43f2-b055-5cfd097d8c43
-ms.openlocfilehash: bec19340e9f349849d8dbc041799cece13e2f0fb
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+ms.author: aaroncz
+ms.openlocfilehash: eadb7dc9f3f9fc4f4ccca1b27257d8f05cb19ebc
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="example-scenario-for-using-system-center-configuration-manager-to-deploy-and-monitor-the-security-software-updates-released-monthly-by-microsoft"></a>使用 System Center Configuration Manager 部署和监视 Microsoft 每月发布的安全软件更新的示例方案
 

@@ -1,26 +1,20 @@
 ---
-title: "设置 Intune 订阅 "
+title: '设置 Intune 订阅 '
 titleSuffix: Configuration Manager
-description: "在 System Center Configuration Manager 中为本地移动设备管理设置 Intune 订阅。"
-ms.custom: na
+description: 在 System Center Configuration Manager 中为本地移动设备管理设置 Intune 订阅。
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 1e42b1c1-3d58-481f-8647-5c7ae640c5f5
-caps.latest.revision: "8"
-caps.handback.revision: "0"
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 61d446f7c8ff17c122529cc82ea28b01858a42d6
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: aa931c848bc3a25df452f8034530b6c740659e12
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-up-a-microsoft-intune-subscription-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中为本地移动设备管理设置 Microsoft Intune 订阅
 

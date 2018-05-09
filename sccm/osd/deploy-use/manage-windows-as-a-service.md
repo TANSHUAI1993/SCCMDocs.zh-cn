@@ -2,25 +2,19 @@
 title: 将 Windows 作为一项服务来管理
 titleSuffix: Configuration Manager
 description: 使用 Configuration Manager 查看 Windows 即服务 (WaaS) 的状态，创建维护服务计划以形成部署环，以及在 Windows 10 客户端即将结束支持时查看警报。
-ms.custom: na
 ms.date: 10/02/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-sum
+ms.topic: conceptual
 ms.assetid: da1e687b-28f6-43c4-b14a-ff2b76e60d24
-caps.latest.revision: 26
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 71f31b7adbffea0eb74983960a8b50c4d9b37033
-ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
+ms.openlocfilehash: 6a6c9295f96519f9897228d03b85c76246a13ca9
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-windows-as-a-service-using-system-center-configuration-manager"></a>使用 System Center Configuration Manager 将 Windows 作为服务进行管理
 

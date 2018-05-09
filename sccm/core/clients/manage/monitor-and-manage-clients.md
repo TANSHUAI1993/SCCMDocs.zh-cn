@@ -1,25 +1,20 @@
 ---
-title: "监视客户端"
+title: 监视客户端
 titleSuffix: Configuration Manager
-description: "了解如何在 System Center Configuration Manager 中监视和管理客户端。"
-ms.custom: na
+description: 了解如何在 System Center Configuration Manager 中监视和管理客户端。
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 110b65b3-2202-466f-bb5d-e5ee282506fc
-caps.latest.revision: "5"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: bbccacd1e0c54bec6f49dc53f60f6da5a89a4202
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 56ee10370807f016dfadf521a20ffc9722500a30
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="monitor-and-manage-clients-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中监视和管理客户端
 

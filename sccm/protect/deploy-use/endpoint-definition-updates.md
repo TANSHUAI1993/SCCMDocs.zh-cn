@@ -1,25 +1,20 @@
 ---
-title: "配置 Endpoint Protection"
+title: 配置 Endpoint Protection
 titleSuffix: Configuration Manager
-description: "了解如何在 System Center Configuration Manager 中使用 Endpoint protection 选择和配置方法以便使反恶意软件定义在客户端计算机上保持最新状态。"
-ms.custom: na
+description: 了解如何在 System Center Configuration Manager 中使用 Endpoint protection 选择和配置方法以便使反恶意软件定义在客户端计算机上保持最新状态。
 ms.date: 02/14/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: 537dd2a7-4e44-4877-b8dd-5e1499407f8d
-caps.latest.revision: "21"
-author: NathBarn
-ms.author: nathbarn
-manager: angrobe
-ms.openlocfilehash: b0b178fad73b6490c4bfeb8ec4aaa7348e7cb2a2
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: f650ba7bc703ec4fa0492fc86859cb8742e0510d
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 #  <a name="configure-definition-updates-for-endpoint-protection"></a>为 Endpoint Protection 配置定义更新  
 
@@ -47,7 +42,7 @@ ms.lasthandoff: 10/12/2017
 ## <a name="how-to-configure-definition-update-sources"></a>如何配置定义更新源
  使用以下过程配置要用于每个反恶意软件策略的定义更新源。
 
-1.  在 Configuration Manager 控制台中，单击“资产和符合性” 。
+1.  在 Configuration Manager 控制台中，单击“资产和符合性”。
 
 2.  在“资产和符合性”  工作区中，展开“Endpoint Protection” ，然后单击“反恶意软件策略” 。
 

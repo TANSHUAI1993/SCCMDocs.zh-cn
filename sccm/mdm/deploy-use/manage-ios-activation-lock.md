@@ -1,25 +1,20 @@
 ---
-title: "管理 iOS 激活锁定"
+title: 管理 iOS 激活锁定
 titleSuffix: Configuration Manager
-description: "使用 System Center Configuration Manager 管理 iOS 激活锁定。"
-ms.custom: na
+description: 使用 System Center Configuration Manager 管理 iOS 激活锁定。
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e2745bac-e1b4-4dac-8ac7-32f1c820bc9c
-caps.latest.revision: "9"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 3b372d9f766fa48b4b57fcd0658f66573ed02d12
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 4550116bd4635e7320e9cbdf18997e2e17ae0466
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-ios-activation-lock-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 管理 iOS 激活锁定
 
@@ -86,7 +81,7 @@ Configuration Manager 可以以下两种方法帮助你管理激活锁定：
 
 ## <a name="view-the-activation-lock-bypass-code"></a>查看绕过激活锁定代码
 
-1. 在 Configuration Manager 控制台中，单击“资产和符合性” 。
+1. 在 Configuration Manager 控制台中，单击“资产和符合性”。
 2. 在“资产和符合性”  工作区中，单击“设备” 。
 3. 选择在受监督模式下已启用激活锁定的注册设备。
 4. 在“主页”选项卡上，在“设备”组中，单击“远程设备操作” > “查看激活锁定绕过代码”。
@@ -94,7 +89,7 @@ Configuration Manager 可以以下两种方法帮助你管理激活锁定：
 
 ## <a name="bypass-activation-lock"></a>绕过激活锁定
 
-1. 在 Configuration Manager 控制台中，单击“资产和符合性” 。
+1. 在 Configuration Manager 控制台中，单击“资产和符合性”。
 2. 在“资产和符合性”  工作区中，单击“设备” 。
 3. 选择在受监督模式下已启用激活锁定的注册设备。
 3. 在“主页”选项卡上，在“设备”组中，单击“远程设备操作” > “绕过激活锁定”。

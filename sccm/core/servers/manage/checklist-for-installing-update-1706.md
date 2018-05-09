@@ -1,26 +1,20 @@
 ---
-title: "1706 清单"
+title: 1706 清单
 titleSuffix: Configuration Manager
-description: "了解更新到 System Center Configuration Manager 版本 1706 之前需要执行的操作。"
-ms.custom: na
+description: 了解更新到 System Center Configuration Manager 版本 1706 之前需要执行的操作。
 ms.date: 12/19/2017
-ms.reviewer: na
-ms.suite: na
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 7def067e-845c-4db3-9d56-fa1dcf2fd7c7
-caps.latest.revision: 
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: b9acbf4a80bed52f0c720f70ee62042d1e90dd62
-ms.sourcegitcommit: 2867fd119256ec670fc5ae65cdc8a80d39f9b4d4
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: e3a5f04367057510c257b211c302cd5576929a71
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="checklist-for-installing-update-1706-for-system-center-configuration-manager"></a>用于为 System Center Configuration Manager 安装更新 1706 的清单
 
@@ -32,7 +26,7 @@ ms.lasthandoff: 12/20/2017
 
 -   当更新列为“可用”时，此更新即可准备安装。 安装版本 1706 之前，请查看以下[关于安装更新 1706](#about-installing-update-1706) 和[清单](#checklist)的信息，了解在开始更新之前要进行的配置。
 
--   如果更新显示为“正在下载”且未更改，请查看  **hman.log**  和  **dmpdownloader.log**  是否有误。
+-   如果更新显示为“正在下载”且未更改，请查看 **hman.log** 和 **dmpdownloader.log** 是否有误。
 
     -   如果 dmpdownloader.log 指示 dmpdownloader 进程处于睡眠状态并且正在等待检查更新之前的间隔，你可以重新启动站点服务器上的 **SMS_Executive** 服务，以重新下载更新的再分发文件。
 
@@ -93,7 +87,7 @@ ms.lasthandoff: 12/20/2017
 
 **查看站点和层次结构状态，并确认没有未解决的问题：** 更新站点之前，请解决远程计算机上安装的站点服务器、站点数据库服务器和站点系统角色的所有操作问题。 由于现有的操作问题，站点更新可能会失败。
 
-有关详细信息，请参阅 [使用 System Center Configuration Manager 的警报和状态系统](/sccm/core/servers/manage/use-alerts-and-the-status-system)。
+有关详细信息，请参阅 [Use alerts and the status system for System Center Configuration Manager](/sccm/core/servers/manage/use-alerts-and-the-status-system)。
 
 **查看站点之间的文件和数据复制：**   
 确保站点之间的文件和数据库复制正常运行并且处于最新状态。 延迟或积压工作可能会阻止顺利、成功更新。
@@ -175,6 +169,6 @@ Configuration Manager 无法更新使用网络负载均衡 (NLB) 群集来托管
 
 ## <a name="known-issues"></a>已知问题 
 更新到版本 1706 后，每次 SMS_Executive 启动时，SMS_CERTIFICATE_MANAGER 都会创建以下警告状态消息：
--    Microsoft SQL Server报告SQL消息515，严重性16：[23000] [515] [Microsoft] [SQL Server Native Client 11.0] [SQL Server]无法将值NULL插入列“RowVersion”，表'CM_GF1.dbo.AAD_SecretChange_Notify'; 列不允许空值。 INSERT fails.
+-    Microsoft SQL Server reported SQL message 515, severity 16: [23000][515][Microsoft][SQL Server Native Client 11.0][SQL Server]Cannot insert the value NULL into column 'RowVersion', table 'CM_GF1.dbo.AAD_SecretChange_Notify'; column does not allow nulls. INSERT fails.
 
 可忽略此消息。  在更新到版本 1706 之前，未配置以使用任何云服务时会发生这种情况。 此问题将在将来的版本中解决。

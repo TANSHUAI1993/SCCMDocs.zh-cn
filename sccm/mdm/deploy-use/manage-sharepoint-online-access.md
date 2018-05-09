@@ -2,26 +2,19 @@
 title: 管理 SharePoint Online 访问
 titleSuffix: Configuration Manager
 description: 了解如何使用 System Center Configuration Manager SharePoint Online 条件访问策略管理对 OneDrive 的访问。
-ms.custom: na
 ms.date: 12/09/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 49cec466-1676-4fe2-a2fe-5004f01d735e
-caps.latest.revision: 11
-caps.handback.revision: 0
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: ac696941e701dd5d42500b2811bec136e64a28fe
-ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: f723110abdb94dd96fb2ed7f52af681d27fccf87
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-sharepoint-online-access-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中管理 SharePoint Online 访问
 
@@ -29,7 +22,7 @@ ms.lasthandoff: 03/28/2018
 
 
 SharePoint Online 的 Configuration Manager 条件访问策略可管理对 OneDrive for Business 文件（存储在 SharePoint Online 上）的访问。 根据所指定的条件进行访问。
-可通过所列平台的下述应用控制对 SharePoint Online 的访问：  
+你可以从所列平台的以下应用中控制对 SharePoint Online 的访问：  
 
 -   Microsoft Office Mobile (Android)  
 
@@ -85,14 +78,14 @@ Office 桌面应用程序可以访问运行以下系统的电脑上的 SharePoin
 
     阻止不受支持的浏览器的访问。  
 
--   对于电脑：  
+-   对于 PC：  
 
 
     -   如果策略设置为需要加入域，而电脑未加入域，将显示“请与 IT 管理员联系”消息。  
 
     -   如果策略设置为要求加入域或必须符合，而电脑不满足某项要求，将显示一条消息，其中说明了如何安装公司门户应用和进行注册。  
 
-可通过以下应用阻止对 SharePoint Online 的访问：  
+你可以从以下应用阻止对 SharePoint Online 的访问：  
 
 -   Microsoft Office Mobile (Android)  
 
@@ -113,7 +106,7 @@ Office 桌面应用程序可以访问运行以下系统的电脑上的 SharePoin
 ### <a name="step-1-configure-active-directory-security-groups"></a>步骤 1：配置 Active Directory 安全组  
  在开始之前，请针对条件访问策略配置 Azure AD 安全组。 你可以在 **“Office 365 管理中心”**，或 **“Intune 帐户门户”**中配置这些组。 这些组包含要作为目标或者要从策略中免除的用户。 如果将某用户设定为策略的目标，则其使用的每台设备必须符合条件才能访问资源。  
 
- 可在 SharePoint Online 策略中指定两种组类型：  
+ 你可以在 SharePoint Online 策略中指定两种组类型：  
 
 -   **目标组**：包含要应用策略的用户组  
 
@@ -127,7 +120,7 @@ Office 桌面应用程序可以访问运行以下系统的电脑上的 SharePoin
 > [!NOTE]   
 >  将符合性策略部署到 Intune 组或 Configuration Manager 集合，而条件访问策略以 Azure AD 安全组为目标。  
 
- 若要详细了解如何配置符合性策略，请参阅[管理 System Center Configuration Manager 中的设备符合性策略](../../protect/deploy-use/device-compliance-policies.md)。  
+ 有关如何配置合规性策略的详细信息，请参阅[管理 System Center Configuration Manager 中的设备合规性策略](../../protect/deploy-use/device-compliance-policies.md)。  
 
 > [!IMPORTANT]  
 >  如果尚未部署符合性策略，但之后启用了 SharePoint Online 策略，则用户可访问所有目标设备。  
@@ -199,7 +192,7 @@ Office 桌面应用程序可以访问运行以下系统的电脑上的 SharePoin
 
  条件访问策略将立即生效，无需进行部署。  
 
- 若要了解如何监视 Intune 控制台中的策略，请参阅[使用 Microsoft Intune 管理 SharePoint Online 访问](/intune-classic/deploy-use/restrict-access-to-sharepoint-online-with-microsoft-intune)。  
+ 请参阅[使用 Microsoft Intune 管理 SharePoint Online 访问](/intune-classic/deploy-use/restrict-access-to-sharepoint-online-with-microsoft-intune)，了解有关如何监视 Intune 控制台中的策略的信息。  
 
 ### <a name="see-also"></a>另请参阅  
 

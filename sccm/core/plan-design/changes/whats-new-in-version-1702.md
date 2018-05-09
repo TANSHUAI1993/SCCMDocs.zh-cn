@@ -1,24 +1,19 @@
 ---
-title: "新版本 1702"
+title: 新版本 1702
 titleSuffix: Configuration Manager
-description: "获取有关 System Center Configuration Manager 的 1702 版中引入的更改和新功能的详细信息。"
-ms.custom: na
+description: 获取有关 System Center Configuration Manager 的 1702 版中引入的更改和新功能的详细信息。
 ms.date: 05/02/2017
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 409e26e1-7716-4f1d-a0ee-34feabf20792
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: cf46bb32994ddb8a1fa3b9de0dbffc94228ad7fd
-ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 99e5cf970a2b4e1afa1a52d49be3afcc8c9d13fc
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="what39s-new-in-version-1702-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1702 中的新增功能
 

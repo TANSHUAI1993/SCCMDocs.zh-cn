@@ -1,26 +1,20 @@
 ---
-title: "规划证书模板权限"
+title: 规划证书模板权限
 titleSuffix: Configuration Manager
-description: "了解如何规划配置 System Center Configuration Manager 使用的证书模板所需的权限。"
-ms.custom: na
+description: 了解如何规划配置 System Center Configuration Manager 使用的证书模板所需的权限。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: eab0e09d-b09e-4c14-ab14-c5f87472522e
-caps.latest.revision: "5"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: e5c748297b318e5256f2064811151ae96a55fccd
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 44be093d079a06ac2cbc7e8fa82392fa3afd4f72
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="planning-for-certificate-template-permissions-for-certificate-profiles-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中规划证书配置文件的证书模板权限
 

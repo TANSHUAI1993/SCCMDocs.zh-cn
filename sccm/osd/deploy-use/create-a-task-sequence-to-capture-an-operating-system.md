@@ -1,26 +1,20 @@
 ---
-title: "创建用于捕获操作系统的任务序列"
+title: 创建用于捕获操作系统的任务序列
 titleSuffix: Configuration Manager
-description: "“构建和捕获”任务序列将构建可以包括特定驱动程序和软件更新，以及操作系统的引用计算机。"
-ms.custom: na
+description: “构建和捕获”任务序列将构建可以包括特定驱动程序和软件更新，以及操作系统的引用计算机。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 25e4ac68-0e78-4bbe-b8fc-3898b372c4e8
-caps.latest.revision: "19"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: c376a6b600e775f532410ad467b99cda1fbfc575
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: a1ef2883bfeb61df55ff045b76e9bc45a11b4da2
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-task-sequence-to-capture-an-operating-system-in-system-center-configuration-manager"></a>创建任务序列来捕获 System Center Configuration Manager 中的操作系统
 

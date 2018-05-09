@@ -1,26 +1,20 @@
 ---
-title: "证书配置文件的安全和隐私"
+title: 证书配置文件的安全和隐私
 titleSuffix: Configuration Manager
-description: "了解在 System Center Configuration Manager 中为用户和设备管理证书配置文件的最佳安全做法。"
-ms.custom: na
+description: 了解在 System Center Configuration Manager 中为用户和设备管理证书配置文件的最佳安全做法。
 ms.date: 12/28/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: 3393db41-900a-44c5-b950-2d46a35a198c
-caps.latest.revision: "7"
-caps.handback.revision: "0"
-author: Nbigman
-ms.author: nbigman
-manager: angrobe
-ms.openlocfilehash: e36df89f86afe95e922b7afa3bb1e6029b832b4d
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: d5e9d10844a344ea56eaebb315c92675a760c983
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-and-privacy-for-certificate-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager 中证书配置文件的安全和隐私
 

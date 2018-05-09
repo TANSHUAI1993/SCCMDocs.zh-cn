@@ -1,26 +1,20 @@
 ---
-title: "审核远程控制使用"
+title: 审核远程控制使用
 titleSuffix: Configuration Manager
-description: "审核 System Center Configuration Manager 中的远程控制使用。"
-ms.custom: na
+description: 审核 System Center Configuration Manager 中的远程控制使用。
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 5c975e69-0cc0-4afd-b7fb-b7182162a933
-caps.latest.revision: "5"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 46d465464c1059c5ce81a89cdabe330cf06eb8e6
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: b216df726ed46c54bcb4778f0f93b2d19f0f9321
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-audit-remote-control-usage-in-system-center-configuration-manager"></a>如何审核 System Center Configuration Manager 中的远程控制使用
 
@@ -38,7 +32,7 @@ ms.lasthandoff: 10/12/2017
 
 ### <a name="to-run-the-report-remote-control---all-computers-remote-controlled-by-a-specific-user"></a>运行报表“远程控制 - 特定用户远程控制的所有计算机”  
 
-1.  在 Configuration Manager 控制台中，单击“监视” 。  
+1.  在 Configuration Manager 控制台中，单击“监视”。  
 
 2.  在“监视”  工作区中，展开“报表” ，然后单击“报表” 。  
 
@@ -52,7 +46,7 @@ ms.lasthandoff: 10/12/2017
 
 ### <a name="to-run-the-report-remote-control---all-remote-control-information"></a>运行报表“远程控制 - 所有远程控制信息”  
 
-1.  在 Configuration Manager 控制台中，单击“监视” 。  
+1.  在 Configuration Manager 控制台中，单击“监视”。  
 
 2.  在“监视”  工作区中，展开“报表” ，然后单击“报表” 。  
 

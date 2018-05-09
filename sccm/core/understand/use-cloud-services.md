@@ -1,26 +1,20 @@
 ---
-title: "使用云服务来补充本地基础结构"
+title: 使用云服务来补充本地基础结构
 titleSuffix: Configuration Manager
-description: "为 System Center Configuration Manager 预配云资源，补充本地基础结构。"
-ms.custom: na
+description: 为 System Center Configuration Manager 预配云资源，补充本地基础结构。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 24fca61e-9cdb-447a-ad7a-f4d2e4fd6704
-caps.latest.revision: "10"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 81f111f0d0061901f5f3b471f02c8035bfcac481
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: 07eb6ec88a5f9b9f7985c317813b2ef7dd5534ff
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-cloud-services-with-system-center-configuration-manager"></a>将云服务用于 System Center Configuration Manager
 

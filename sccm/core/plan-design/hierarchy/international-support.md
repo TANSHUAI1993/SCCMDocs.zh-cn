@@ -1,26 +1,20 @@
 ---
-title: "国际支持"
+title: 国际支持
 titleSuffix: Configuration Manager
-description: "配置 System Center Configuration Manager 以符合特定的国际要求。"
-ms.custom: na
+description: 配置 System Center Configuration Manager 以符合特定的国际要求。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 46dd9cb2-a812-4b6a-a747-b840f92fef8b
-caps.latest.revision: "6"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 2b54bc3977d1c5b2aa67fb51ed582b8a220a56a6
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: bce6abd57cd50ff19339c29b97bda165109b79b1
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="international-support-in-system-center-configuration-manager"></a>System Center Configuration Manager 的国际支持
 

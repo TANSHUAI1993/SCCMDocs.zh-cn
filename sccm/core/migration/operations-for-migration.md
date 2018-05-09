@@ -1,25 +1,20 @@
 ---
-title: "迁移操作"
+title: 迁移操作
 titleSuffix: Configuration Manager
-description: "创建并运行作业，将数据和客户端迁移到 System Center Configuration Manager。"
-ms.custom: na
+description: 创建并运行作业，将数据和客户端迁移到 System Center Configuration Manager。
 ms.date: 12/30/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c28e3492-851a-40fc-ba13-67ebc2d8b41a
-caps.latest.revision: "6"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 286be682da590ca7a03717d29ff9b3714d4fac42
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: a038377e4b29852157fd0d92836f26f1b5e18433
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="operations-for-migrating-to-system-center-configuration-manager"></a>用于迁移到 System Center Configuration Manager 的操作
 

@@ -1,26 +1,20 @@
 ---
-title: "软件清单安全和隐私"
+title: 软件清单安全和隐私
 titleSuffix: Configuration Manager
-description: "获取 System Center Configuration Manager 中软件清单的安全和隐私信息。"
-ms.custom: na
+description: 获取 System Center Configuration Manager 中软件清单的安全和隐私信息。
 ms.date: 2/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 8e68e1fb-a8ec-4543-bb8a-cbbaf184a418
-caps.latest.revision: "5"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 6e784bc131b9006ba441c1fc32d67469e01bacad
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 5fef3c1892c015fcec42197c9af373506d8e426a
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-and-privacy-for-software-inventory-in-system-center-configuration-manager"></a>System Center Configuration Manager 中软件清单的安全和隐私
 

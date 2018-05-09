@@ -1,26 +1,20 @@
 ---
-title: "报表最佳做法"
+title: 报表最佳做法
 titleSuffix: Configuration Manager
-description: "阅读有关使用 System Center Configuration Manager 的报表功能的一些有用提示。"
-ms.custom: na
+description: 阅读有关使用 System Center Configuration Manager 的报表功能的一些有用提示。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 64f9d931-33f1-456f-a4e4-0ec077465bd0
-caps.latest.revision: "4"
-caps.handback.revision: "0"
-author: Dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: b66e4417658e8a5f25056ed37b5367d57ff72781
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 87ed3a0591107695a1f418b38f2e3f5cb9168c63
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="best-practices-for-reporting-in-system-center-configuration-manager"></a>System Center Configuration Manager 中报告的最佳做法
 

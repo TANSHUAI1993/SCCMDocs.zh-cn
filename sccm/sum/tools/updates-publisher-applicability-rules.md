@@ -1,26 +1,21 @@
 ---
-title: "适用性规则"
+title: 适用性规则
 titleSuffix: Configuration Manager
-description: "管理 System Center Updates Publisher 中的适用性规则"
-ms.custom: na
+description: 管理 System Center Updates Publisher 中的适用性规则
 ms.date: 4/29/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-sum
+ms.topic: conceptual
 ms.assetid: 3cf0c2cd-397a-4622-b11c-961f334fb7d7
-caps.latest.revision: "1"
-author: mestew
-ms.author: mstewart
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 robots: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 469081b31741812d0fe1b3e9f3d59fd29c93ee97
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 84705584328b09313bebd1e6c70a0063b2b0724f
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-applicability-rules-in-updates-publisher"></a>管理 Updates Publisher 中的适用性规则
 

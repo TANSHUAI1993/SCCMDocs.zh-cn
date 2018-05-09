@@ -1,26 +1,20 @@
 ---
-title: "预先设置 Windows PE 中的 BitLocker"
+title: 预先设置 Windows PE 中的 BitLocker
 titleSuffix: Configuration Manager
-description: "在部署操作系统之前，可通过 Configuration Manager 中的预设置 BitLocker 任务从 Windows 预安装环境启用 BitLocker。"
-ms.custom: na
+description: 在部署操作系统之前，可通过 Configuration Manager 中的预设置 BitLocker 任务从 Windows 预安装环境启用 BitLocker。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c7c94ba0-d709-4129-8077-075a8abaea1c
-caps.latest.revision: "4"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: f5fa0951ff07ad4d4722b521c5039078a7baaec4
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: ad4bfe99e841af5ccc4f6792fda664b8259a5369
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="preprovision-bitlocker-in-windows-pe-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 预先设置在 Windows PE 中的 BitLocker
 

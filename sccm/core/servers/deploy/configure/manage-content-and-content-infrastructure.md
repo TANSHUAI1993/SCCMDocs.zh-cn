@@ -1,26 +1,20 @@
 ---
-title: "内容基础结构"
+title: 内容基础结构
 titleSuffix: Configuration Manager
-description: "了解如何部署并管理 System Center Configuration Manager 的内容管理基础结构。"
-ms.custom: na
+description: 了解如何部署并管理 System Center Configuration Manager 的内容管理基础结构。
 ms.date: 2/7/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: ceff72f5-f19d-43a0-a8c0-72f1c09b9bf5
-caps.latest.revision: "17"
-caps.handback.revision: "0"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 5ddec4c3e33a10247eb0826bec88c78fde798f51
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 1c37ff5a794aa830c60de06054014ec942a4a44b
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-content-and-content-infrastructure-for-system-center-configuration-manager"></a>为 System Center Configuration Manager 管理内容和内容基础结构
 

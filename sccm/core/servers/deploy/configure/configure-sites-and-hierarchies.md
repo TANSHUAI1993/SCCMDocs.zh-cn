@@ -1,25 +1,20 @@
 ---
-title: "配置站点"
+title: 配置站点
 titleSuffix: Configuration Manager
-description: "查阅此清单以确保你考虑到会同时影响站点和层次结构的最常见配置。"
-ms.custom: na
+description: 查阅此清单以确保你考虑到会同时影响站点和层次结构的最常见配置。
 ms.date: 2/7/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 9efb4061-f642-48bd-8332-3357ff5b3118
-caps.latest.revision: "15"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 55daf30e3386e53f3711c07fa971750d6aa33423
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 8a74f998c7bae22d94f2471724c2d51de918dfc4
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-sites-and-hierarchies-for-system-center-configuration-manager"></a>配置 System Center Configuration Manager 的站点和层次结构
 
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/04/2017
 |------------|-------------|  
 |配置基于角色的管理|分离管理分配，从而控制哪些管理用户可在 Configuration Manager 环境中查看和管理不同对象和数据。<br /><br /> 配置基于角色的管理与层次结构中的所有站点共享。   <br/><br/>有关详细信息，请参阅[为 System Center Configuration Manager 配置基于角色的管理](../../../../core/servers/deploy/configure/configure-role-based-administration.md)。|  
 |将站点数据发布到 Active Directory 域服务 (AD DS)|让客户端轻松查找服务并高效使用站点资源。<br /><br /> 必须首先[扩展 System Center Configuration Manager 的 Active Directory 架构](../../../../core/plan-design/network/extend-the-active-directory-schema.md)，然后每个站点必须被单独配置为[发布 System Center Configuration Manager 的站点数据](../../../../core/servers/deploy/configure/publish-site-data.md)|  
-|配置服务连接点|在层次结构的顶层站点上，计划安装和配置服务连接点。 有关详细信息，请参阅[关于 System Center Configuration Manager 服务连接点](../../../../core/servers/deploy/configure/about-the-service-connection-point.md)。|  
+|配置服务连接点|在层次结构的顶层站点上，计划安装和配置服务连接点。 有关详细信息，请参阅 [关于 System Center Configuration Manager 中的服务连接点](../../../../core/servers/deploy/configure/about-the-service-connection-point.md)。|  
 |添加站点系统角色|为单独的站点安装一个或多个附加站点系统角色。  有关详细信息，请参阅[添加 System Center Configuration Manager 的站点系统角色](../../../../core/servers/deploy/configure/add-site-system-roles.md)。|  
 |配置站点边界和边界组|指定定义 Intranet 上网络位置的边界，其中包含要管理的设备。 然后配置边界组，使处于这些网络位置的客户端可以查找 Configuration Manager 资源。 有关详细信息，请参阅[为 System Center Configuration Manager 定义站点边界和边界组](../../../../core/servers/deploy/configure/define-site-boundaries-and-boundary-groups.md)。|  
 |配置分发点组|配置分发点的逻辑组可简化部署的管理。 有关详细信息，请参阅[为 System Center Configuration Manager 安装和配置分发点](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md)中的[管理分发点组](../../../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_manage)。|  

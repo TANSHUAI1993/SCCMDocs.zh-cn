@@ -1,26 +1,20 @@
 ---
-title: "资产智能常规许可证导入文件示例"
+title: 资产智能常规许可证导入文件示例
 titleSuffix: Configuration Manager
-description: "使用示例资产智能常规许可证文件，帮助在 System Center Configuration Manager 中导入软件许可证。"
-ms.custom: na
+description: 使用示例资产智能常规许可证文件，帮助在 System Center Configuration Manager 中导入软件许可证。
 ms.date: 2/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e6258333-a783-440b-b1af-f8023b782fbc
-caps.latest.revision: "5"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 8537622a418a141abf2b564b6211604ea85f7bab
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: d4ce90c28a8af0714f07ad5450d82202a7d5a543
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="example-asset-intelligence-general-license-import-file-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中的资产智能常规许可证导入文件示例
 
@@ -28,7 +22,7 @@ ms.lasthandoff: 10/12/2017
 
 本主题中的示例信息可用于创建常规软件许可证文件示例，以通过使用“导入软件许可证向导”将软件许可证导入到资产智能目录中。 你可以将下表复制并粘贴到新的 Microsoft Excel 电子表格中，并采用 .csv 文件扩展名保存，然后将其用作常规软件许可证导入文件示例以进行测试。 在创建许可证导入文件时，只有当电子表格中需要“名称”、“发布者”、“版本”和“有效数量”数据值时，才需要所有标题字段。 有关将软件许可证导入资产智能目录的详细信息，请参阅[在 System Center Configuration Manager 中配置资产智能](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md)。  
 
-|Name|发布者|版本|语言|有效数量|PO 编号|经销商名称|购买日期|购买的支持|支持到期日期|注释|  
+|名称|发布服务器|版本|语言|有效数量|PO 编号|经销商名称|购买日期|购买的支持|支持到期日期|注释|  
 |----------|---------------|-------------|--------------|-----------------------|--------------|------------------|--------------------|----------------------|---------------------------|--------------|  
 |软件标题 1|软件发布者|1.01|英语|1|采购编号|经销商名称|10/10/2010|0|10/10/2012|注释|  
 |软件标题 2|软件发布者|1.02|英语|1|采购编号|经销商名称|10/10/2010|0|10/10/2012|注释|  

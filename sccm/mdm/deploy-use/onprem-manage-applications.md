@@ -1,26 +1,20 @@
 ---
-title: "在本地移动设备管理中管理应用程序"
+title: 在本地移动设备管理中管理应用程序
 titleSuffix: Configuration Manager
-description: "在本地移动设备管理中管理应用程序。"
-ms.custom: na
+description: 在本地移动设备管理中管理应用程序。
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5f44b246-3467-4778-a5c2-047ce325da58
-caps.latest.revision: "18"
-caps.handback.revision: "0"
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 49665629fc5824b12b9fca10b34c4c1bfe49f236
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 78cefff25b2657a137ceae6971c80fc35f5163e0
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-applications-for-on-premises-mobile-device-management"></a>在本地移动设备管理中管理应用程序
 

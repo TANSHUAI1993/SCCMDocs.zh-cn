@@ -1,27 +1,20 @@
 ---
-title: "使用资产智能"
+title: 使用资产智能
 titleSuffix: Configuration Manager
-description: "在 System Center Configuration Manager 中执行常见的资产智能任务。"
-ms.custom: na
+description: 在 System Center Configuration Manager 中执行常见的资产智能任务。
 ms.date: 2/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: e8159bd9-5c2b-4d25-82f9-78fcfd732ba9
-caps.latest.revision: 
-caps.handback.revision: 
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 7838f087c18a2cfad6ff487ff987e638906faf6a
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 7d12fb7f3c7e14df57ec23074de23bfcf53e6c4b
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-use-asset-intelligence-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中使用资产智能
 
@@ -46,7 +39,7 @@ ms.lasthandoff: 10/12/2017
 
 ##### <a name="to-view-asset-intelligence-information-on-the-asset-intelligence-home-page"></a>若要查看“资产智能”主页上的资产智能信息  
 
-1.  在 Configuration Manager 控制台中，单击“资产和符合性” 。  
+1.  在 Configuration Manager 控制台中，单击“资产和符合性”。  
 
 2.  在“资产和符合性”  工作区中，单击“资产智能” 。 将显示资产智能报表。  
 
@@ -60,7 +53,7 @@ ms.lasthandoff: 10/12/2017
 
 ##### <a name="to-view-collected-asset-intelligence-information-by-using-asset-intelligence-reports"></a>若要通过使用资产智能报表查看收集的资产智能信息  
 
-1.  在 Configuration Manager 控制台中，单击“监视” 。  
+1.  在 Configuration Manager 控制台中，单击“监视”。  
 
 2.  在“监视”  工作区中，依次展开“报告” ，“报表” ，然后单击“资产智能” 。 将显示资产智能报表。  
 
@@ -79,7 +72,7 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="to-create-a-synchronization-schedule-for-the-asset-intelligence-catalog"></a>若要为资产智能目录创建同步计划  
 
-1.  在 Configuration Manager 控制台中，单击“资产和符合性” 。  
+1.  在 Configuration Manager 控制台中，单击“资产和符合性”。  
 
 2.  在“资产和符合性”  工作区中，单击“资产智能” 。  
 
@@ -99,7 +92,7 @@ ms.lasthandoff: 10/12/2017
 
 ###  <a name="BKMK_ManuallySynchronizeCatalog"></a> 若要手动同步资产智能目录  
 
-1.  在 Configuration Manager 控制台中，单击“资产和符合性” 。  
+1.  在 Configuration Manager 控制台中，单击“资产和符合性”。  
 
 2.  在“资产和符合性”  工作区中，单击“资产智能” 。  
 
@@ -115,7 +108,7 @@ ms.lasthandoff: 10/12/2017
 
 ##### <a name="to-create-a-user-defined-software-category"></a>若要创建用户定义的软件类别  
 
-1.  在 Configuration Manager 控制台中，单击“资产和符合性” 。  
+1.  在 Configuration Manager 控制台中，单击“资产和符合性”。  
 
 2.  在“资产和符合性”  工作区中，单击“资产智能” ，然后单击“目录” 。  
 
@@ -139,7 +132,7 @@ ms.lasthandoff: 10/12/2017
 
 ##### <a name="to-create-a-user-defined-software-family"></a>若要创建用户定义的软件系列  
 
-1.  在 Configuration Manager 控制台中，单击“资产和符合性” 。  
+1.  在 Configuration Manager 控制台中，单击“资产和符合性”。  
 
 2.  在“资产和符合性”  工作区中，单击“资产智能” ，然后单击“目录” 。  
 
@@ -155,13 +148,13 @@ ms.lasthandoff: 10/12/2017
 6.  在“完成”  页上，单击“关闭”  退出向导。  
 
 ###  <a name="BKMK_SoftwareLabels"></a> 软件标签  
- 你可以通过资产智能自定义软件标签创建筛选器，然后用筛选器对软件标题进行分组并通过使用资产智能报表查看它们。 例如，你可以创建被称为共享件的软件标签，将它与大量的应用程序相关联，然后运行报表以显示共享件软件标签的所有标题。 所有你添加到资产智能目录中的自定义软件标签的验证状态为“用户定义”  。  
+ 资产智能自定义软件标签，您可以创建可用于分组的软件标题和通过使用资产智能报表查看它们的筛选器。 例如，你可以创建被称为共享件的软件标签，将它与大量的应用程序相关联，然后运行报表以显示共享件软件标签的所有标题。 所有你添加到资产智能目录中的自定义软件标签的验证状态为“用户定义”  。  
 
  使用以下过程创建用户定义的自定义标签。  
 
 ##### <a name="to-create-a-user-defined-software-label"></a>若要创建用户定义的软件标签  
 
-1.  在 Configuration Manager 控制台中，单击“资产和符合性” 。  
+1.  在 Configuration Manager 控制台中，单击“资产和符合性”。  
 
 2.  在“资产和符合性”  工作区中，单击“资产智能” ，然后单击“目录” 。  
 
@@ -186,7 +179,7 @@ ms.lasthandoff: 10/12/2017
 
 ##### <a name="to-create-a-user-defined-hardware-requirements"></a>若要创建用户定义的硬件要求  
 
-1.  在 Configuration Manager 控制台中，单击“资产和符合性” 。  
+1.  在 Configuration Manager 控制台中，单击“资产和符合性”。  
 
 2.  在“资产和符合性”  工作区中，单击“资产智能” ，然后单击“硬件要求” 。  
 
@@ -222,13 +215,13 @@ ms.lasthandoff: 10/12/2017
 
 ##### <a name="to-modify-the-categorizations-for-software-titles"></a>若要修改软件标题的分类  
 
-1.  在 Configuration Manager 控制台中，单击“资产和符合性” 。  
+1.  在 Configuration Manager 控制台中，单击“资产和符合性”。  
 
 2.  在“资产和符合性”  工作区中，单击“资产智能” ，然后单击“清单软件” 。  
 
 3.  为你希望修改的分类选择一个或多个软件标题。  
 
-4.  在“主页”  选项卡上的“属性”  组中，单击“属性” 。  
+4.  在“主页”选项卡上的“属性”组中，单击“属性”。  
 
 5.  在“常规”  选项卡上，你可以修改以下分类信息：  
 
@@ -240,7 +233,7 @@ ms.lasthandoff: 10/12/2017
 
     -   **家族**：指定已列出清单的软件标题当前所分配的软件家族。  
 
-6.  单击“确定”  以保存更改。  
+6.  单击“确定”以保存更改。  
 
  使用以下过程将软件还原到原始分类信息。  
 
@@ -251,7 +244,7 @@ ms.lasthandoff: 10/12/2017
 
 ##### <a name="to-revert-categorization-information-to-original-settings"></a>若要将分类信息还原为原始设置  
 
-1.  在 Configuration Manager 控制台中，单击“资产和符合性” 。  
+1.  在 Configuration Manager 控制台中，单击“资产和符合性”。  
 
 2.  在“资产和符合性”  工作区中，单击“资产智能” ，然后单击“清单软件” 。  
 
@@ -286,7 +279,7 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="to-request-a-catalog-update-for-uncategorized-software-titles"></a>若要为未分类的软件标题请求目录更新  
 
-1.  在 Configuration Manager 控制台中，单击“资产和符合性” 。  
+1.  在 Configuration Manager 控制台中，单击“资产和符合性”。  
 
 2.  在“资产和符合性”  工作区中，单击“资产智能” ，然后单击“清单软件” 。  
 
@@ -310,13 +303,13 @@ ms.lasthandoff: 10/12/2017
     >  提交至 System Center Online 进行分类的软件在管理中心站点上具有验证状态为“挂起”  的软件在子主站点上仍然会显示为“未分类”  的验证状态。  
 
 ##  <a name="BKMK_ResolveSoftwareDetails"></a> 解决软件详细信息冲突  
- System Center Online 与现有软件详细信息存在冲突，因此在其已收到最近更新的软件分类详细信息之后，你可以选择如何解决该冲突。 当前具有冲突的软件的验证状态为“可更新” 。 在解决软件详细信息冲突之后，根据你指定的设置，软件分类信息将保留在资产智能目录中。 在解决冲突之后，对于相同软件分类值，软件详细信息冲突不会再次发生，除非 System Center Online 值发生变化。  
+ 在新更新的软件详细信息已经从 System Center Online 与现有软件详细信息冲突接收的分类之后, 可以选择如何解决该冲突。 当前具有冲突的软件的验证状态为“可更新” 。 在解决软件详细信息冲突之后，根据你指定的设置，软件分类信息将保留在资产智能目录中。 在解决冲突之后，对于相同软件分类值，软件详细信息冲突不会再次发生，除非 System Center Online 值发生变化。  
 
  使用以下过程解决软件详细信息冲突。  
 
 #### <a name="to-resolve-a-software-details-conflict"></a>解决软件详细信息冲突  
 
-1.  在 Configuration Manager 控制台中，单击“资产和符合性” 。  
+1.  在 Configuration Manager 控制台中，单击“资产和符合性”。  
 
 2.  在“资产和符合性”  工作区中，单击“资产智能” ，然后单击“清单软件” 。  
 

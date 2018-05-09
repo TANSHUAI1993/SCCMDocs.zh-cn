@@ -1,26 +1,20 @@
 ---
-title: "部署内容"
+title: 部署内容
 titleSuffix: Configuration Manager
-description: "为 System Center Configuration Manager 安装分发点之后，下面介绍如何开始将内容部署到它们。"
-ms.custom: na
+description: 为 System Center Configuration Manager 安装分发点之后，下面介绍如何开始将内容部署到它们。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: d50dcca0-4419-449d-a487-73abcadf328f
-caps.latest.revision: 
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 14d2d9cfc25f7445ad6e873f1969e1ffcd522737
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: c6a2a69047a8fee5ab0c1f4f0f13197178334f05
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deploy-and-manage-content-for-system-center-configuration-manager"></a>为 System Center Configuration Manager 部署和管理内容
 
@@ -53,7 +47,7 @@ ms.lasthandoff: 12/04/2017
 
 #### <a name="to-distribute-content-on-distribution-points"></a>在分发点上分发内容  
 
-1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+1.  在 Configuration Manager 控制台中，单击“软件库”。  
 
 2.  在“软件库”  工作区中，针对要分发的内容的类型选择以下步骤之一：  
 
@@ -191,7 +185,7 @@ ms.lasthandoff: 12/04/2017
 
 ##### <a name="to-assign-the-content-to-distribution-points"></a>将内容分配到分发点  
 
-1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+1.  在 Configuration Manager 控制台中，单击“软件库”。  
 
 2.  在“软件库”  工作区中，针对创建预留内容文件时选择的内容的类型选择以下步骤之一：  
 
@@ -290,11 +284,11 @@ ms.lasthandoff: 12/04/2017
 
 1.  使用以下步骤确认没有为预留的内容启用分发点。  
 
-    1.  在 Configuration Manager 控制台中，单击“管理” 。  
+    1.  在 Configuration Manager 控制台中，单击“管理”。  
 
     2.  在“管理”  工作区中，单击“分发点” ，然后选择位于站点服务器上的分发点。  
 
-    3.  在“主页”  选项卡上的“属性”  组中，单击“属性” 。  
+    3.  在“主页”选项卡上的“属性”组中，单击“属性”。  
 
     4.  在“常规”  选项卡上，确认未选中“为预留的内容启用此分发点”  复选框。  
 
@@ -325,7 +319,7 @@ ms.lasthandoff: 12/04/2017
 
 #### <a name="to-update-content-on-distribution-points"></a>更新分发点上的内容  
 
-1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+1.  在 Configuration Manager 控制台中，单击“软件库”。  
 
 2.  在“软件库”  工作区中，针对要分发的内容的类型选择以下步骤之一：  
 
@@ -363,7 +357,7 @@ ms.lasthandoff: 12/04/2017
 
 #### <a name="to-redistribute-content-from-package-properties"></a>从包属性中重新分发内容  
 
-1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+1.  在 Configuration Manager 控制台中，单击“软件库”。  
 
 2.  在“软件库”  工作区中，针对要分发的内容的类型选择以下步骤之一：  
 
@@ -381,27 +375,27 @@ ms.lasthandoff: 12/04/2017
 
     -   **启动映像**：展开“操作系统” >  “启动映像”，然后选择要重新分发的启动映像。  
 
-3.  在“主页”  选项卡上的“属性”  组中，单击“属性” 。  
+3.  在“主页”选项卡上的“属性”组中，单击“属性”。  
 
 4.  单击“内容位置”  选项卡，选择要在其中重新分发内容的分发点或分发点组，单击“重新分发” ，然后单击“确定” 。  
 
 #### <a name="to-redistribute-content-from-distribution-point-properties"></a>从分发点属性重新分发内容  
 
-1.  在 Configuration Manager 控制台中，单击“管理” 。  
+1.  在 Configuration Manager 控制台中，单击“管理”。  
 
 2.  在“管理”  工作区中，单击“分发点” ，然后选择要在其中重新分发内容的分发点。  
 
-3.  在“主页”  选项卡上的“属性”  组中，单击“属性” 。  
+3.  在“主页”选项卡上的“属性”组中，单击“属性”。  
 
 4.  单击“内容”  选项卡，选择要重新分发的内容，单击“重新分发” ，然后单击“确定” 。  
 
 #### <a name="to-redistribute-content-from-distribution-point-group-properties"></a>从分发点组属性中重新分发内容  
 
-1.  在 Configuration Manager 控制台中，单击“管理” 。  
+1.  在 Configuration Manager 控制台中，单击“管理”。  
 
 2.  在“管理”  工作区中，单击“分发点组” ，然后选择要在其中重新分发内容的分发点组。  
 
-3.  在“主页”  选项卡上的“属性”  组中，单击“属性” 。  
+3.  在“主页”选项卡上的“属性”组中，单击“属性”。  
 
 4.  单击“内容”  选项卡，选择要重新分发的内容，单击“重新分发” ，然后单击“确定” 。  
 
@@ -427,7 +421,7 @@ ms.lasthandoff: 12/04/2017
 
 #### <a name="to-remove-package-content-files-from-distribution-points"></a>从分发点中删除包内容文件  
 
-1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+1.  在 Configuration Manager 控制台中，单击“软件库”。  
 
 2.  在“软件库”  工作区中，针对要删除的内容的类型选择以下步骤之一：  
 
@@ -445,27 +439,27 @@ ms.lasthandoff: 12/04/2017
 
     -   **启动映像**：展开“操作系统” > “启动映像”，然后选择要删除的启动映像。  
 
-3.  在“主页”  选项卡上的“属性”  组中，单击“属性” 。  
+3.  在“主页”选项卡上的“属性”组中，单击“属性”。  
 
 4.  单击“内容位置”  选项卡，选择要从其中删除内容的分发点或分发点组，单击“删除” ，然后单击“确定” 。  
 
 #### <a name="to-remove-package-content-from-distribution-point-properties"></a>从分发点属性中删除包内容  
 
-1.  在 Configuration Manager 控制台中，单击“管理” 。  
+1.  在 Configuration Manager 控制台中，单击“管理”。  
 
 2.  在“管理”  工作区中，单击“分发点” ，然后选择要在其中删除内容的分发点。  
 
-3.  在“主页”  选项卡上的“属性”  组中，单击“属性” 。  
+3.  在“主页”选项卡上的“属性”组中，单击“属性”。  
 
 4.  单击“内容”  选项卡，选择要删除的内容，单击“删除” ，然后单击“确定” 。  
 
 #### <a name="to-remove-content-from-distribution-point-group-properties"></a>从分发点组属性中删除内容  
 
-1.  在 Configuration Manager 控制台中，单击“管理” 。  
+1.  在 Configuration Manager 控制台中，单击“管理”。  
 
 2.  在“管理”  工作区中，单击“分发点组” ，然后选择要在其中删除内容的分发点组。  
 
-3.  在“主页”  选项卡上的“属性”  组中，单击“属性” 。  
+3.  在“主页”选项卡上的“属性”组中，单击“属性”。  
 
 4.  单击“内容”  选项卡，选择要删除的内容，单击“删除” ，然后单击“确定” 。  
 
@@ -480,11 +474,11 @@ ms.lasthandoff: 12/04/2017
 
 #### <a name="to-initiate-content-validation-for-all-content-on-a-distribution-point"></a>启动对分发点上所有内容的内容验证  
 
-1.  在 Configuration Manager 控制台中，单击“管理” 。  
+1.  在 Configuration Manager 控制台中，单击“管理”。  
 
 2.  在“管理”  工作区中，单击“分发点” ，然后选择要在其中验证内容的分发点。  
 
-3.  在“主页”  选项卡上的“属性”  组中，单击“属性” 。  
+3.  在“主页”选项卡上的“属性”组中，单击“属性”。  
 
 4.  在“内容”  选项卡上，选择要在其中验证内容的包，单击“验证” ，单击“确定” ，然后单击“确定” 。 内容验证过程将针对分发点上的包启动。  
 
@@ -492,7 +486,7 @@ ms.lasthandoff: 12/04/2017
 
 #### <a name="to-initiate-content-validation-for-a-package"></a>针对某个包启动内容验证  
 
-1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+1.  在 Configuration Manager 控制台中，单击“软件库”。  
 
 2.  在“软件库”  工作区中，针对要验证的内容的类型选择以下步骤之一：  
 
@@ -510,7 +504,7 @@ ms.lasthandoff: 12/04/2017
 
     -   **启动映像**：展开“操作系统” > “启动映像”，然后选择要预留的启动映像。  
 
-3.  在“主页”  选项卡上的“属性”  组中，单击“属性” 。  
+3.  在“主页”选项卡上的“属性”组中，单击“属性”。  
 
 4.  在“内容位置”  选项卡上，选择要在其中验证内容的分发点或分发点组，单击“验证” ，单击“确定” ，然后单击“确定” 。 内容验证过程将针对所选分发点或分发点组上的内容启动。  
 

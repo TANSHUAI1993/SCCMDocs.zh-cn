@@ -1,26 +1,20 @@
 ---
-title: "部署 Windows To Go"
+title: 部署 Windows To Go
 titleSuffix: Configuration Manager
-description: "了解如何在 System Center Configuration Manager 中设置 Windows To Go 以创建从外部驱动器启动的 Windows To Go 工作区。"
-ms.custom: na
+description: 了解如何在 System Center Configuration Manager 中设置 Windows To Go 以创建从外部驱动器启动的 Windows To Go 工作区。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8eed50f5-80a4-422e-8aa6-a7ccb2171475
-caps.latest.revision: "8"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 9d902f75911b484d22d38b07cea40e1c00ea0d93
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: 12b7a28ff5ea0e2e1870c0c37edd8e056930b09f
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deploy-windows-to-go-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 部署 Windows to Go
 

@@ -1,32 +1,26 @@
 ---
-title: "查询的安全和隐私"
+title: 查询的安全和隐私
 titleSuffix: Configuration Manager
-description: "从站点数据库查询信息时，请了解最佳安全做法和隐私。"
-ms.custom: na
+description: 从站点数据库查询信息时，请了解最佳安全做法和隐私。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 30080620-20d3-4c38-b8dd-db5516e1acae
-caps.latest.revision: "5"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 6ab8498a2153dd272e9451aa58b68b4f804cd93a
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 2d84385782df17d4019d6de65bcc7006aeab8b24
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-and-privacy-for-queries-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的查询的安全和隐私
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager 中的查询允许基于指定条件从站点数据库中检索信息。 Configuration Manager 会在标准操作过程中收集站点数据库信息。 例如，通过使用从发现或清单收集的信息，可以配置查询来标识满足指定条件的设备。  
+System Center Configuration Manager 中的查询允许基于指定条件从站点数据库中检索信息。 Configuration Manager 会在标准操作过程中收集站点数据库信息。 例如，通过使用已从发现或清单收集的信息，可以配置标识设备满足指定的条件的查询。  
 
  有关查询的详细信息，请参阅 [System Center Configuration Manager 中的查询简介](../../../core/servers/manage/introduction-to-queries.md)。 有关 Configuration Manager 操作（收集可使用查询检索的信息）的最佳安全做法和隐私信息的详情，请参阅 [System Center Configuration Manager 的安全和隐私](../../../core/plan-design/security/security-and-privacy.md)。  
 

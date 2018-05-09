@@ -1,25 +1,20 @@
 ---
-title: "先决条件检查"
+title: 先决条件检查
 titleSuffix: Configuration Manager
-description: "查看 System Center Configuration Manager 的可用先决条件检查。 包括安全权限检查"
-ms.custom: na
+description: 查看 System Center Configuration Manager 的可用先决条件检查。 包括安全权限检查
 ms.date: 4/17/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6a279624-ffc9-41aa-8132-df1809708dd5
-caps.latest.revision: "12"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 9ae5abeb5fe175f2e01a05cbda1a21232b54dd70
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: f51f2d5f94a185f35a5d843d674a3dd8f1e8a275
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="list-of-prerequisite-checks-for-system-center-configuration-manager"></a>System Center Configuration Manager 的先决条件检查列表
 

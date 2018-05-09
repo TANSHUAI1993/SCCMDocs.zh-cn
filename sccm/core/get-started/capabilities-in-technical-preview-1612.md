@@ -2,25 +2,19 @@
 title: Technical Preview 1612 中的功能
 titleSuffix: Configuration Manager
 description: 了解 System Center Configuration Manager Technical Preview（版本 1612）中的可用功能。
-ms.custom: na
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: bceab2e8-2f05-4a17-9ac8-a7a558670fb7
-caps.latest.revision: 5
-author: erikje
-ms.author: erikje
-manager: angrobe
-ms.openlocfilehash: e0688c41978d95e0e1fd4da817e602a2c8a6483b
-ms.sourcegitcommit: f65d4d24f0533e5e196ece0d8a4df0fb3e30eba1
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: a72f7979c38a0a8782aa41fef66b7aa00af9bc0f
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1612-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1612 中的功能
 

@@ -1,25 +1,20 @@
 ---
-title: "安装站点系统角色"
+title: 安装站点系统角色
 titleSuffix: Configuration Manager
-description: "向导帮助用户将站点系统角色添加到站点中的现有站点系统服务器或新的站点系统服务器。"
-ms.custom: na
+description: 向导帮助用户将站点系统角色添加到站点中的现有站点系统服务器或新的站点系统服务器。
 ms.date: 2/7/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 61f5c774-7667-44ae-b8e4-a4951318b183
-caps.latest.revision: "4"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 82be333fcca636dfd68763cdfa7e97d0eaf14915
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 7edfc72195b289488242adcbd1903dbacf26bfe2
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-site-system-roles-for-system-center-configuration-manager"></a>安装 System Center Configuration Manager 的站点系统角色
 
@@ -41,7 +36,7 @@ System Center Configuration Manager 控制台具有可用于安装站点系统�
 
 ##  <a name="bkmk_Install"></a>在现有站点系统服务器上安装站点系统角色  
 
-1.  在 Configuration Manager 控制台中，单击“管理” 。  
+1.  在 Configuration Manager 控制台中，单击“管理”。  
 
 2.  在“管理”  工作区中，展开“站点配置” ，并单击“服务器和站点系统角色” 。 然后选择要用于新站点系统角色的服务器。  
 
@@ -63,7 +58,7 @@ System Center Configuration Manager 控制台具有可用于安装站点系统�
 
 ## <a name="to-install-site-system-roles-on-a-new-site-system-server"></a>在新的站点系统服务器上安装站点系统角色  
 
-1.  在 Configuration Manager 控制台中，单击“管理” 。  
+1.  在 Configuration Manager 控制台中，单击“管理”。  
 
 2.  在“管理”  工作区中，展开“站点配置” ，并单击“服务器和站点系统角色” 。  
 

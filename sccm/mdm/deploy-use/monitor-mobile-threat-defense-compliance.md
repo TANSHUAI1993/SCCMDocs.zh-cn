@@ -1,25 +1,20 @@
 ---
-title: "监视移动威胁防御符合性"
+title: 监视移动威胁防御符合性
 titleSuffix: Configuration Manager
-description: "监视来自 Configuration Manager 管理器控制台的移动威胁防御合作伙伴符合性状态"
-ms.custom: na
+description: 监视来自 Configuration Manager 管理器控制台的移动威胁防御合作伙伴符合性状态
 ms.date: 03/21/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 408190da-bea6-4122-9dd6-f90155040e88
-caps.latest.revision: 
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 33c2d3c05020d0c06344bfe6bb67a35f7d75e51d
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 24a066b30d6c220ecb5be8455a3150bd27936da7
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="monitor-mobile-threat-defense-compliance"></a>**监视移动威胁防御符合性**
 
@@ -58,7 +53,7 @@ ms.lasthandoff: 10/12/2017
 > [!IMPORTANT] 
 > 设备威胁防护选项卡仅在所选设备为移动设备时才会显示。
 
-|列名称|默认情况下可见|描述| 
+|列名称|默认情况下可见|说明| 
 |-|-|-|
 |**描述**| 是 | 有关移动威胁防御合作伙伴所提供的威胁的详细信息。 |
 |**上次更新时间**| 是 | 移动威胁防御合作伙伴上一次向 Intune 发送有关威胁的已更新的详细信息的时间。 |

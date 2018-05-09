@@ -1,26 +1,18 @@
 ---
-title: "准备部署"
+title: 准备部署
 titleSuffix: Configuration Manager
-description: "查找有助于规划 System Center Configuration Manager 部署的主题。"
-ms.custom: na
+description: 查找有助于规划 System Center Configuration Manager 部署的主题。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3e839a3e-e476-4ec2-bf29-21e78180441d
-caps.latest.revision: "6"
-caps.handback.revision: "0"
-author: mstewart
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: cdcb91e97d5663aea55a8201546c66683e1d4d97
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+author: aczechowski
+ms.openlocfilehash: b315cfcbfd9ff6b40bdf9547611a38d75863cfb4
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="get-ready-for-system-center-configuration-manager"></a>为 System Center Configuration Manager 做准备
 

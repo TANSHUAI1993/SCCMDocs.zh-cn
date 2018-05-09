@@ -1,10 +1,20 @@
- ---
-
-title: 软件更新的最佳做法 titleSuffix: "Configuration Manager" description: "使用 System Center Configuration Manager 中软件更新的最佳做法。"
-keywords: author: dougeby ms.author: dougeby manager: angrobe ms.date: 10/06/2018 ms.topic: article ms.prod: configuration-manager ms.service: ms.technology:
- - configmgr-sum ms.assetid: 6d20389a-9de2-4a64-bced-9fc4fa519174
-
-
+---
+title: 软件更新的最佳方案
+titleSuffix: Configuration Manager
+description: 使用 System Center Configuration Manager 中软件更新的最佳做法。
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.date: 10/06/2018
+ms.topic: conceptual
+ms.prod: configuration-manager
+ms.technology: configmgr-sum
+ms.assetid: 6d20389a-9de2-4a64-bced-9fc4fa519174
+ms.openlocfilehash: 0604c75aedfea5d82bd7d274c4a43edccb497f1e
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="best-practices-for-software-updates-in-system-center-configuration-manager"></a>System Center Configuration Manager 中软件更新的最佳方案
 

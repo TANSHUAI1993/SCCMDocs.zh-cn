@@ -1,27 +1,20 @@
 ---
-title: "迁移先决条件"
+title: 迁移先决条件
 titleSuffix: Configuration Manager
-description: "了解支持的 Configuration Manager 版本、支持的源站点语言和迁移所需的配置。"
-ms.custom: na
+description: 了解支持的 Configuration Manager 版本、支持的源站点语言和迁移所需的配置。
 ms.date: 3/7/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: ec976930-7467-4d3c-b33c-991bf408a74a
-caps.latest.revision: 
-caps.handback.revision: 
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 8079d5d8c329df47b71560734832ee14c68f0734
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: fde02837f281a6db182d3144d2009e6b56f0dc69
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prerequisites-for-migration-in-system-center-configuration-manager"></a>System Center Configuration Manager 中迁移的先决条件
 

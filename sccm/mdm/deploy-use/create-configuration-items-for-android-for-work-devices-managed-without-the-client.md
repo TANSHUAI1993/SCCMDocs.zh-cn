@@ -1,43 +1,18 @@
 ---
-title: "如何为使用 Intune 管理的 Android for Work 设备创建配置项"
+title: 如何为使用 Intune 管理的 Android for Work 设备创建配置项
 titleSuffix: Configuration Manager
-ms.custom: na
 ms.date: 2017-07-31
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: ab6784fd-8c57-4be9-858f-50fe39f2ff5f
-caps.latest.revision: "17"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-translation.priority.ht:
-- cs-cz
-- de-de
-- en-gb
-- es-es
-- fr-fr
-- hu-hu
-- it-it
-- ja-jp
-- ko-kr
-- nl-nl
-- pl-pl
-- pt-br
-- pt-pt
-- ru-ru
-- sv-se
-- tr-tr
-- zh-cn
-- zh-tw
-ms.openlocfilehash: 8170348da6151088580645154b8975355d470731
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+ms.openlocfilehash: ba70e4d3a87f2a305312449907730174c62c4775
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-configuration-items-for-android-for-work-devices-managed-with-intune"></a>如何为使用 Intune 管理的 Android for Work 设备创建配置项
 
@@ -45,7 +20,7 @@ ms.lasthandoff: 10/12/2017
 
 ### <a name="to-create-an-android-for-work-configuration-item"></a>创建 Android for Work 配置项目  
 
-1.  在 Configuration Manager 控制台中，单击“资产和符合性”。  
+1.  在 Configuration Manager 控制台中单击“资产和符合性”。  
 
 2.  在“资产和符合性”  工作区中，展开“符合性设置” ，然后单击“配置项目” 。  
 
@@ -76,7 +51,7 @@ ms.lasthandoff: 10/12/2017
 
     -   **严重** - 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“严重”这一故障严重性。  
 
-    -   **事件严重** - 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“严重”这一故障严重性。 应用程序事件日志中也会以 Windows 事件的形式记录此严重性级别。  
+    -   **事件严重** - 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“严重”这一故障严重性。 此外会记录此严重性级别为应用程序事件日志中的 Windows 事件。  
 
 11. 在向导的“平台适用性”  页面上，查看任何与先前选择的受支持平台不兼容的设置。 你可以返回并删除这些设置，也可以继续。  
 

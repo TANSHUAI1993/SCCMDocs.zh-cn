@@ -1,25 +1,20 @@
 ---
-title: "监视内容"
+title: 监视内容
 titleSuffix: Configuration Manager
-description: "了解如何使用 Configuration Manager 控制台监视分发的内容。"
-ms.custom: na
+description: 了解如何使用 Configuration Manager 控制台监视分发的内容。
 ms.date: 12/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 82e8a693-9adf-4ca3-8484-7e101c34c7c1
-caps.latest.revision: "5"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 62d783735e64b6f3f11dae9af6ac5a7584d689ef
-ms.sourcegitcommit: 52b956cfe32c3f06ae68d6ba6fc3244ce5a66325
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 44ddf230d33759787636e88f6edcdd79744fd7b2
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="monitor-content-you-have-distributed-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 监视分发的内容
 
@@ -75,7 +70,7 @@ ms.lasthandoff: 12/06/2017
 
 ### <a name="to-monitor-content-status"></a>监视内容状态  
 
-1.  在 Configuration Manager 控制台中，单击“监视” 。  
+1.  在 Configuration Manager 控制台中，单击“监视”。  
 
 2.  在“监视”  工作区中，展开“分发状态” ，然后单击“内容状态” 。 此时会显示包。  
 
@@ -85,7 +80,7 @@ ms.lasthandoff: 12/06/2017
 
 ### <a name="to-cancel-a-distribution-that-remains-in-progress"></a>取消仍在进行的分发  
 
-1.  在 Configuration Manager 控制台中，单击“监视” 。  
+1.  在 Configuration Manager 控制台中，单击“监视”。  
 
 2.  在“监视”  工作区中，展开“分发状态” ，然后单击“内容状态” 。 此时会显示包。  
 
@@ -97,7 +92,7 @@ ms.lasthandoff: 12/06/2017
 
 ### <a name="to-redistribute-content-that-failed-to-distribute"></a>重新分发未能分发的内容  
 
-1.  在 Configuration Manager 控制台中，单击“监视” 。  
+1.  在 Configuration Manager 控制台中，单击“监视”。  
 
 2.  在“监视”  工作区中，展开“分发状态” ，然后单击“内容状态” 。 此时会显示包。  
 
@@ -125,7 +120,7 @@ ms.lasthandoff: 12/06/2017
 
 ### <a name="to-monitor-distribution-point-group-status"></a>监视分发点组状态  
 
-1.  在 Configuration Manager 控制台中，单击“监视” 。  
+1.  在 Configuration Manager 控制台中，单击“监视”。  
 
 2.  在“监视”  工作区中，展开“分发状态” ，然后单击“分发点组状态” 。 此时会显示分发点组。  
 
@@ -143,7 +138,7 @@ ms.lasthandoff: 12/06/2017
 
 ### <a name="to-monitor-distribution-point-configuration-status"></a>监视分发点配置状态  
 
-1.  在 Configuration Manager 控制台中，单击“监视” 。  
+1.  在 Configuration Manager 控制台中，单击“监视”。  
 
 2.  在“监视”  工作区中，展开“分发状态” ，然后单击“分发点配置状态” 。 此时会显示分发点。  
 

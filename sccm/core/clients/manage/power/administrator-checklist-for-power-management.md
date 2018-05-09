@@ -1,26 +1,20 @@
 ---
-title: "电源管理的管理员清单"
+title: 电源管理的管理员清单
 titleSuffix: Configuration Manager
-description: "使用管理员清单，有助于规划和实现 System Center Configuration Manager 中的电源管理。"
-ms.custom: na
+description: 使用管理员清单，有助于规划和实现 System Center Configuration Manager 中的电源管理。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 94e42cbe-9df8-4228-a04e-0ad7626180ca
-caps.latest.revision: "6"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 547c364f4c33136ece9b90ceed298ec2fcb7329c
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: c556cb51ff071d40fcf5e4bb24c0b6b5f85c512a
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="administrator-checklist-for-power-management-in-system-center-configuration-manager"></a>System Center Configuration Manager 中电源管理的管理员清单
 

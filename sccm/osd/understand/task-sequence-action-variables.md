@@ -1,27 +1,20 @@
 ---
-title: "任务序列操作变量"
+title: 任务序列操作变量
 titleSuffix: Configuration Manager
-description: "使用序列操作变量（如网络设置变量）来指定 Configuration Manager 任务序列中单个步骤的配置设置。"
-ms.custom: na
+description: 使用序列操作变量（如网络设置变量）来指定 Configuration Manager 任务序列中单个步骤的配置设置。
 ms.date: 02/09/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-osd
+ms.topic: conceptual
 ms.assetid: e2269031-0977-4f01-a274-420e00630575
-caps.latest.revision: 
-caps.handback.revision: 
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2928ecb254d08e4ed08c5e79b55e210ce25dcb61
-ms.sourcegitcommit: fbde417e3c3002898bd216a7e110e725ae269893
+ms.openlocfilehash: 7f66203e335524fa922ec1b6ab3dd4dc5fb917b0
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="task-sequence-action-variables-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的任务序列操作变量
 

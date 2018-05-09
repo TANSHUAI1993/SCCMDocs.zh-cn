@@ -1,25 +1,20 @@
 ---
-title: "创建 Mac 计算机应用程序"
+title: 创建 Mac 计算机应用程序
 titleSuffix: Configuration Manager
-description: "请参阅创建和部署适用于 Mac 计算机的应用程序时必须考虑的注意事项。"
-ms.custom: na
+description: 请参阅创建和部署适用于 Mac 计算机的应用程序时必须考虑的注意事项。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ab1aecdd-d943-44f5-b0a9-e8fe7439e5d6
-caps.latest.revision: "9"
-author: mattbriggs
-ms.author: mabrigg
-manager: angrobe
-ms.openlocfilehash: 912632c672c49deefc946e089dad6a82454c4b67
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 3cbb7281cd7dd39a32a71105fe173f868947eef9
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-mac-computer-applications-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 创建 Mac 计算机应用程序
 
@@ -52,7 +47,7 @@ ms.lasthandoff: 10/12/2017
 
 |步骤|详细信息|  
 |----------|-------------|  
-|**步骤 1**：准备用于 Configuration Manager 的 Mac 应用程序|从 Mac 软件包中创建 Configuration Manager 应用程序之前，必须使用 Mac 计算机上的 **CMAppUtil** 工具将 Mac 软件转换为 Configuration Manager**.cmmac** 文件。|  
+|**步骤 1**：准备用于 Configuration Manager 的 Mac 应用程序|从 Mac 软件包中创建 Configuration Manager 应用程序之前，必须使用 Mac 计算机上的 **CMAppUtil** 工具将 Mac 软件转换为 Configuration Manager **.cmmac** 文件。|  
 |**步骤 2**：创建包含 Mac 软件的 Configuration Manager 应用程序|请使用“创建应用程序向导”为 Mac 软件创建应用程序。|  
 |**步骤 3**：创建 Mac 应用程序部署类型|只有在未从应用程序中自动导入此信息的情况下，才需要执行此步骤。|  
 |**步骤 4**：部署 Mac 应用程序|使用“部署软件向导”将应用程序部署到 Mac 计算机。|  

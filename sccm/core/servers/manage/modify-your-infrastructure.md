@@ -1,27 +1,20 @@
 ---
-title: "修改基础结构"
+title: 修改基础结构
 titleSuffix: Configuration Manager
-description: "了解如何更改所部署的 Configuration Manager 基础结构或执行可对其产生影响的操作。"
-ms.custom: na
+description: 了解如何更改所部署的 Configuration Manager 基础结构或执行可对其产生影响的操作。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: a7975dc8-46ab-4dae-86b6-dc3e3cf3b2f0
-caps.latest.revision: 
-caps.handback.revision: 
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 93456b2708afbdaac0ff3c68dc6c2d9927def7ad
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 7f798fdb1183b852bded92711cc5f489666f4f2a
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="modify-your-system-center-configuration-manager-infrastructure"></a>修改你的 System Center Configuration Manager 基础结构
 
@@ -362,7 +355,7 @@ SQL 服务器文档可帮助你 [手动注册 SPN](https://technet.microsoft.com
 
  更改这些设置：  
 
-1.  在“管理”  工作区中，展开“站点配置” ，然后单击“站点” 。  
+1.  在“管理”工作区中，展开“站点配置”，然后单击“站点”。  
 
 2.  选择想要配置的站点并打开该站点的“属性” 。  
 

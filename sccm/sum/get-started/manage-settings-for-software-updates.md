@@ -1,22 +1,20 @@
 ---
-title: "管理软件更新的设置"
+title: 管理软件更新的设置
 titleSuffix: Configuration Manager
-description: "了解安装软件更新点后适用于你的站点的软件更新的客户端设置。"
-keywords: 
-author: dougeby
-ms.author: dougeby
-manager: angrobe
+description: 了解安装软件更新点后适用于你的站点的软件更新的客户端设置。
+author: aczechowski
 ms.date: 03/26/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: 0d484c1a-e903-4bff-9e9b-e452c62e38a8
-ms.openlocfilehash: 54fb48ca210f66eabe8d438f0aa23d9ad82e0bd9
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: ad44beeb662cb0cd5cf083b18721d88a5b7360c4
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 #  <a name="BKMK_ManageSUSettings"></a>管理软件更新的设置  
 
@@ -56,7 +54,7 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="to-open-software-update-properties"></a>打开软件更新属性  
 
-1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+1.  在 Configuration Manager 控制台中，单击“软件库”。  
 2.  在“软件库”工作区中，展开“软件更新” ，并单击“所有软件更新” 。  
 3.  选择一个或多个软件更新，然后在“主页”  选项卡上的“属性”  组中，单击“属性”  。  
 

@@ -1,27 +1,20 @@
 ---
-title: "服务连接点"
+title: 服务连接点
 titleSuffix: Configuration Manager
-description: "了解此 Configuration Manager 站点系统角色，并了解和规划其使用范围。"
-ms.custom: na
+description: 了解此 Configuration Manager 站点系统角色，并了解和规划其使用范围。
 ms.date: 1/29/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: bc2282d5-0571-465b-9528-a555855eaacd
-caps.latest.revision: 
-caps.handback.revision: 
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: a029d54000dee669ae437a460ebcb31f359bfd27
-ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 7328d7053d1fb06487e255fe4a24d6955c99c4b0
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="about-the-service-connection-point-in-system-center-configuration-manager"></a>关于 System Center Configuration Manager 中的服务连接点
 

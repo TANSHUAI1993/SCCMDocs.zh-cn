@@ -1,25 +1,20 @@
 ---
-title: "报告的操作和维护 "
+title: '报告的操作和维护 '
 titleSuffix: Configuration Manager
-description: "了解管理 System Center Configuration Manager 中的报表和报表订阅的详细信息。"
-ms.custom: na
+description: 了解管理 System Center Configuration Manager 中的报表和报表订阅的详细信息。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b89bcfbf-f5b6-4fb1-bb5e-a5cc18ec0c78
-caps.latest.revision: "5"
-author: Dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 05a81cdfd46ba2bf0bea17b06bd72f79296b3930
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: fff4150d6b8b4529a6f63989447ee5acb725c92f
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="operations-and-maintenance-for-reporting-in-system-center-configuration-manager"></a>System Center Configuration Manager 中报告的操作和维护
 
@@ -49,7 +44,7 @@ ms.lasthandoff: 10/12/2017
 
 ##### <a name="to-run-a-report-in-the-configuration-manager-console"></a>若要在 Configuration Manager 控制台中运行报表  
 
-1.  在 Configuration Manager 控制台中，单击“监视”。  
+1.  在 Configuration Manager 控制台中，单击“监视” 。  
 
 2.  在“监视”工作区中，展开“报表”，然后单击“报表”以列出可用报表。  
 
@@ -146,7 +141,7 @@ ms.lasthandoff: 10/12/2017
 
     -   **路径**：单击“浏览”指定要在其中存储报表的文件夹。  
 
-     单击“下一步”。  
+     单击“下一步” 。  
 
 5.  在“模型选择”页上的列表中选择要用于创建此报表的可用模型。 当你选择报表模型时，“预览”部分将显示所选报表模型提供的 SQL Server 视图和实体。  
 
@@ -156,7 +151,7 @@ ms.lasthandoff: 10/12/2017
 
 8.  在 Microsoft 报表生成器中，创建报表布局，选择可用 SQL Server 视图中的数据，向报表中添加参数，诸如此类。 有关使用报表生成器来创建新报表的详细信息，请参阅报表生成器帮助。  
 
-9. 单击“运行”以运行报表。 验证报表是否提供了预期信息。 如果需要，单击“设计”返回到“设计”视图以修改报表。  
+9. 单击“运行”  以运行报表。 验证报表是否提供了预期信息。 如果需要，单击“设计”返回到“设计”视图以修改报表。  
 
 10. 单击“保存”将报表保存到报表服务器。 你可以在“监视”工作区的“报表”节点中运行和修改新报表。  
 
@@ -191,7 +186,7 @@ ms.lasthandoff: 10/12/2017
 
     -   **路径**：单击“浏览”指定要在其中存储报表的文件夹。  
 
-     单击“下一步”。  
+     单击“下一步” 。  
 
 5.  在“摘要”页上，检查配置设置。 单击“上一步”以更改设置，或单击“下一步”以在 Configuration Manager 中创建报表。  
 
@@ -201,7 +196,7 @@ ms.lasthandoff: 10/12/2017
 
 8.  单击“运行”以运行报表。 验证报表是否提供了预期信息。 如果需要，单击“设计”返回到“设计”视图以修改报表。  
 
-9. 单击“保存”将报表保存到报表服务器。 你可以在“监视”工作区的“报表”节点中运行新报表。  
+9. 单击“保存”  将报表保存到报表服务器。 你可以在“监视”工作区的“报表”节点中运行新报表。  
 
 ##  <a name="BKMK_ManageReportSubscriptions"></a>管理报表订阅  
  SQL Server Reporting Services 中的报表订阅使你能够配置按计划的间隔通过电子邮件自动交付指定报表或将指定报表自动交付到文件共享。 使用 System Center 2012 Configuration Manager 中的**创建订阅向导**来配置报表订阅。  
@@ -305,7 +300,7 @@ ms.lasthandoff: 10/12/2017
 
 -   在“监视”工作区中，展开“报表”，然后单击“报表”以列出可用报表。 可以选择一个报表文件夹，以仅列出与该文件夹关联的报表。  
 
--   选择要添加到订阅中的报表，然后在“主页”选项卡上的“报表组”部分中，单击“创建订阅”，以打开“创建订阅向导”。  
+-   选择要添加到订阅中的报表，然后在“主页”  选项卡上的“报表组”  部分中，单击“创建订阅”  以打开“创建订阅向导” 。  
 
 -   在“订阅传递”页上，配置下列设置：  
 
@@ -350,7 +345,7 @@ ms.lasthandoff: 10/12/2017
 
         -   **Word**：将报表保存为 Microsoft Word 文档。  
 
--   在“订阅计划”页上，为报表订阅选择下列传递计划选项之一：  
+-   在“订阅计划”  页上，为报表订阅选择下列传递计划选项之一：  
 
     -   **使用共享计划**：共享计划是以前定义的计划，可以由其他报表订阅使用。 选中此复选框，然后在列表中选择一个共享计划（如果已指定了任何共享计划的话）。  
 

@@ -2,25 +2,19 @@
 title: 管理电子邮件访问权限
 titleSuffix: Configuration Manager
 description: 了解如何使用 System Center Configuration Manager 条件访问管理对 Exchange 电子邮件的访问。
-ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: fa648e73-5fb8-4818-ab57-7466ffaf888e
-caps.latest.revision: 24
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: e36674d27757daab9ced4e7e8b51942a4929b5ff
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 52785e1f432e1a18d1e8264dc2c78134af9f006e
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-email-access-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中管理对电子邮件的访问
 
@@ -253,7 +247,7 @@ Office 桌面应用程序可以访问运行以下系统的电脑上的 Exchange 
 
     -   **设备必须是合规的。** 电脑必须在 Intune 中注册并且合规。 如果 PC 未注册，则会显示一条消息，其中包含有关如何注册的说明。  
 
-7.  在 **Outlook web access (OWA)**下，可以选择只允许通过受支持的浏览器访问 Exchange Online：Safari (iOS) 和 Chrome (Android)。 将阻止来自其他浏览器的访问。 你为 Outlook 应用程序访问选择的平台限制在此处同样适用。
+7.  在 **Outlook web access (OWA)** 下，可以选择只允许通过受支持的浏览器访问 Exchange Online：Safari (iOS) 和 Chrome (Android)。 将阻止来自其他浏览器的访问。 你为 Outlook 应用程序访问选择的平台限制在此处同样适用。
 
     在 **Android** 设备上，用户必须启用浏览器访问。  若要执行此操作，最终用户必须在注册的设备上启用“启用浏览器访问”选项，如下所示：
      1. 启动“公司门户应用”。

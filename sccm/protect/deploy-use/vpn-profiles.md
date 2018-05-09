@@ -2,26 +2,19 @@
 title: VPN 配置文件
 titleSuffix: Configuration Manager
 description: 了解如何使用 System Center Configuration Manager 中的 VPN 配置文件将 VPN 设置部署到组织中的用户。
-ms.custom: na
 ms.date: 04/10/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: c0f094f1-852e-4606-91db-97846d8f0772
-caps.latest.revision: 6
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d30e7cc834f1693f2cbcf2db840d650421062a19
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+ms.openlocfilehash: 7a9095ea946e024dcd633aa6457b21fe71988c85
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="vpn-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的 VPN 配置文件
 
@@ -35,7 +28,7 @@ ms.lasthandoff: 04/16/2018
  创建 VPN 配置文件时，可以纳入各种安全设置。 这些设置包括服务器验证和客户端身份验证（使用 Configuration Manager 证书配置文件预配）的证书。 有关详细信息，请参阅[证书配置文件](introduction-to-certificate-profiles.md)。  
 
 > [!Note]  
-> 默认情况下，Configuration Manager 不启用此项可选功能。 必须在使用前启用此选项。 有关详细信息，请参阅[启用更新中的可选功能](/sccm/core/servers/manage/install-in-console-updates#bkmk_options)。<!--505213-->  
+> 默认情况下，Configuration Manager 不启用此项可选功能。 必须在使用前启用此功能。 有关详细信息，请参阅[启用更新中的可选功能](/sccm/core/servers/manage/install-in-console-updates#bkmk_options)。<!--505213-->  
 
 
  若要查看通过 Microsoft Intune 使用 Configuration Manager 时可配置的设备，请参阅[移动设备上的 VPN 配置文件](/sccm/mdm/deploy-use/create-vpn-profiles)。  
@@ -47,7 +40,7 @@ ms.lasthandoff: 04/16/2018
 |---------------------|-----------------|----------------|--------------------|----------------|  
 |**Cisco AnyConnect**|否|否|否|否|  
 |**Pulse Secure**|是|否|是|是|  
-| **F5 Edge Client**|是|否|是|是|  
+|**F5 Edge Client**|是|否|是|是|  
 |**Dell SonicWALL Mobile Connect**|是|否|是|是|  
 |**Check Point Mobile VPN**|是|否|是|是|  
 |**Microsoft SSL (SSTP)**|是|是|是|否|  

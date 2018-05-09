@@ -1,22 +1,20 @@
 ---
-title: "将更新添加到更新组 "
+title: '将更新添加到更新组 '
 titleSuffix: Configuration Manager
-description: "手动或自动将软件更新添加到环境中的软件更新组。"
-keywords: 
-author: dougeby
-ms.author: dougeby
-manager: angrobe
+description: 手动或自动将软件更新添加到环境中的软件更新组。
+author: aczechowski
 ms.date: 01/23/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service: 
 ms.technology: configmgr-sum
 ms.assetid: a0767664-fd60-46a8-9da5-86cc431ce53c
-ms.openlocfilehash: da01e07749d1e185861941515cf1a4addbd45093
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: df213206ee673e872852958233973e4f091728b9
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-software-updates-to-an-update-group"></a>将软件更新添加到更新组  
 
@@ -26,7 +24,7 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="to-add-software-updates-to-a-new-software-update-group"></a>将软件更新添加到新的软件更新组  
 
-1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+1.  在 Configuration Manager 控制台中，单击“软件库”。  
 
 2.  在“软件库”工作区中，展开“软件更新” ，然后单击“所有软件更新” 。  
 
@@ -42,7 +40,7 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="to-add-software-updates-to-an-existing-software-update-group"></a>将软件更新添加到现有软件更新组中  
 
-1.  在 Configuration Manager 控制台中，单击“软件库” 。  
+1.  在 Configuration Manager 控制台中，单击“软件库”。  
 
 2.  在“软件库”工作区中，展开“软件更新” ，然后单击“所有软件更新” 。  
 
@@ -51,7 +49,7 @@ ms.lasthandoff: 10/12/2017
     > [!NOTE]  
     >  在“所有软件更新”节点上，默认情况下 Configuration Manager 只显示分类为“严重”和“安全”并且在过去 30 天内发布的软件更新。  
 
-4.  在“主页”  选项卡上的“更新”  组中，单击“编辑成员身份” 。  
+4.  在“主页”选项卡上的“更新”组中，单击“编辑成员身份”。  
 
 5.  选择要添加软件更新的软件更新组。  
 

@@ -1,26 +1,20 @@
 ---
-title: "迁移计划"
+title: 迁移计划
 titleSuffix: Configuration Manager
-description: "将数据迁移到 System Center Configuration Manager 目标层次结构之前，了解有关站点和层次结构的信息。"
-ms.custom: na
+description: 将数据迁移到 System Center Configuration Manager 目标层次结构之前，了解有关站点和层次结构的信息。
 ms.date: 1/12/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b2bf493e-1e10-496f-a139-2646522703ed
-caps.latest.revision: "7"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 390211f13fb6bac6dab5b133744ec01ec589bc77
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: 2091f3f41336413a49446a14b1190cce426c8277
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="plan-for-migration-to-system-center-configuration-manager"></a>规划向 System Center Configuration Manager 的迁移
 

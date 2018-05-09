@@ -1,26 +1,20 @@
 ---
-title: "源层次结构策略"
+title: 源层次结构策略
 titleSuffix: Configuration Manager
-description: "在配置 System Center Configuration Manager 迁移作业之前，请先配置源层次结构并从源站点中收集数据。"
-ms.custom: na
+description: 在配置 System Center Configuration Manager 迁移作业之前，请先配置源层次结构并从源站点中收集数据。
 ms.date: 1/3/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4800a800-66c8-4c35-aebe-e413a23790c1
-caps.latest.revision: "6"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: f6020cb9a995069c7542200ecb0ce2520ff25bb8
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: dfe31642342fee75046df7083f059955f011d26f
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="plan-a-source-hierarchy-strategy-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中规划源层次结构策略
 

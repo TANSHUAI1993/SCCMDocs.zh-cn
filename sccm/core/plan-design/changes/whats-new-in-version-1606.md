@@ -2,25 +2,19 @@
 title: 版本 1606 中的新增功能
 titleSuffix: Configuraton Manager
 description: 获取有关 System Center Configuration Manager 的 1606 版中引入的更改和新功能的详细信息。
-ms.custom: na
 ms.date: 12/30/2016
-ms.reviewer: na
-ms.suite: na
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: df2e57b9-6445-4067-98e7-ace85d4e6aa6
-caps.latest.revision: 40
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 9c948e0ff84c4741d77b9096e52d3abd765aba7b
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 9aec81239dbfb816cdc6eb66cc17875c5d484e79
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="what39s-new-in-version-1606-of-system-center-configuration-manager"></a>System Center Configuration Manager 1606 版中的新增功能
 

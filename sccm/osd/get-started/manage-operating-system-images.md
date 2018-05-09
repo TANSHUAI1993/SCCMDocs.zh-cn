@@ -1,26 +1,20 @@
 ---
-title: "管理操作系统映像"
+title: 管理操作系统映像
 titleSuffix: Configuration Manager
-description: "在 Configuration Manager 中，了解如何管理存储在 Windows 映像 (WIM) 文件中的操作系统映像。"
-ms.custom: na
+description: 在 Configuration Manager 中，了解如何管理存储在 Windows 映像 (WIM) 文件中的操作系统映像。
 ms.date: 12/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fab13949-371c-4a4c-978e-471db1e54966
-caps.latest.revision: "17"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: e0ddf9801430984efb63ac593d1f60b8fbfe0f59
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: 3b0931671c05604a0115c14a5e7fc5d9c6767b7c
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-operating-system-images-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 管理操作系统映像
 

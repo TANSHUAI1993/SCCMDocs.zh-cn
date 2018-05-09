@@ -1,26 +1,20 @@
 ---
-title: "客户端安全和隐私"
+title: 客户端安全和隐私
 titleSuffix: Configuration Manager
-description: "了解 System Center Configuration Manager 中客户端的安全和隐私。"
-ms.custom: na
+description: 了解 System Center Configuration Manager 中客户端的安全和隐私。
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: c1d71899-308f-49d5-adfa-3a3ec0163ed8
-caps.latest.revision: "10"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: b28a461894bcd1cffd3c98bfce9fcfe22cc7a8f0
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 89b7664067747c9afb04c3a5dd059e81cfb2716e
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-and-privacy-for-clients-in-system-center-configuration-manager"></a>System Center Configuration Manager 中客户端的安全和隐私
 

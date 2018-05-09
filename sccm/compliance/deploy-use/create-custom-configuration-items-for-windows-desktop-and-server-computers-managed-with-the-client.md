@@ -1,26 +1,20 @@
 ---
-title: "创建客户端托管的 Windows 计算机的配置项目 "
+title: '创建客户端托管的 Windows 计算机的配置项目 '
 titleSuffix: Configuration Manager
-description: "使用自定义 Windows 台式机和服务器配置项目管理 Windows 计算机和服务器的设置。"
-ms.custom: na
+description: 使用自定义 Windows 台式机和服务器配置项目管理 Windows 计算机和服务器的设置。
 ms.date: 11/18/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 1eb2fcaf-acac-4388-9b31-6cccafacaabe
-caps.latest.revision: "9"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: ed3aa1ce9e21c7c486cc40deb804a8687a1cd4f2
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: b2b2af6c022d854a6c6d623e3901abac70d42c7a
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-system-center-configuration-manager-client"></a>如何为使用 System Center Configuration Manager 客户端管理的 Windows 台式机和服务器计算机创建配置项目
 
@@ -235,7 +229,7 @@ ms.lasthandoff: 10/12/2017
 
             -   **包括子文件夹** – 如果也要搜索指定路径下面的任何子文件夹，请启用此选项。  
 
-            -   **此文件与 64 位应用程序关联** - 选择除了运行 64 位版本的 Windows 的 Configuration Manager 客户端上的 32 位系统文件位置 (*%windir%*\Syswow64) 外，是否还应搜索 64 位系统文件位置 (*%windir%*\System32)。  
+            -   **此文件与 64 位应用程序关联** - 选择除了运行 64 位版本的 Windows 的 Configuration Manager 客户端上的 32 位系统文件位置 (*%windir%* \Syswow64) 外，是否还应搜索 64 位系统文件位置 (*%windir%* \System32)。  
 
             -   **XPath 查询** -指定的有效完整 XML 路径语言 (XPath) 查询用于评估客户端计算机上的符合性。  
 
@@ -260,7 +254,7 @@ ms.lasthandoff: 10/12/2017
 ##  <a name="configure-compliance-rules"></a>配置符合性规则  
  使用以下过程可为配置项目配置符合性规则。  
 
- 符合性规则指定定义配置项目的符合性的条件。 设置可以评估的符合性之前，它必须具有至少一个符合性规则。 WMI、 注册表和脚本设置可以修正找到要不符合要求的值。 您可以创建新的规则或浏览到要在其中选择规则任何配置项目中的现有设置。  
+ 符合性规则指定定义配置项目的符合性的条件。 设置必须具有至少一个符合性规则，才能对它评估符合性。 WMI、 注册表和脚本设置可以修正找到要不符合要求的值。 您可以创建新的规则或浏览到要在其中选择规则任何配置项目中的现有设置。  
 
 ### <a name="to-create-a-compliance-rule"></a>若要创建符合性规则  
 

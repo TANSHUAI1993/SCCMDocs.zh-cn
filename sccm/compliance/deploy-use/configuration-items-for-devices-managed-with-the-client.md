@@ -1,26 +1,20 @@
 ---
-title: "客户端托管设备的配置项目 "
+title: '客户端托管设备的配置项目 '
 titleSuffix: Configuration Manager
-description: "了解如何配置使用 System Center Configuration Manager 客户端管理的 Windows 和 Mac 设备。"
-ms.custom: na
+description: 了解如何配置使用 System Center Configuration Manager 客户端管理的 Windows 和 Mac 设备。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-compliance
+ms.topic: conceptual
 ms.assetid: 7daf71dc-3775-40d7-92e0-8679d7d90a78
-caps.latest.revision: "4"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 77db856b22c4be009e805f3137e45355b1d88952
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: b5d8897eed2885c9b9e97c01fb544ad26ed703e4
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configuration-items-for-devices-managed-with-the-system-center-configuration-manager-client"></a>为使用 System Center Configuration Manager 客户端管理的设备配置项目
 

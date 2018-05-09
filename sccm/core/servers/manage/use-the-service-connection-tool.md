@@ -1,25 +1,20 @@
 ---
-title: "服务连接工具"
+title: 服务连接工具
 titleSuffix: Configuration Manager
-description: "了解该工具使你能够连接到 Configuration Manager 云服务以手动上传使用情况信息。"
-ms.custom: na
+description: 了解该工具使你能够连接到 Configuration Manager 云服务以手动上传使用情况信息。
 ms.date: 09/06/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6e4964c5-43cb-4372-9a89-b62ae6a4775c
-caps.latest.revision: "11"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 3e7b397c2ef3bfb1feb44599756752f56a2ad465
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 906b39f01b05600d86a045e07d3e28184e9360e8
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-the-service-connection-tool-for-system-center-configuration-manager"></a>使用适用于 System Center Configuration Manager 的服务连接工具
 

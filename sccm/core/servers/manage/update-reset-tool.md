@@ -1,26 +1,20 @@
 ---
-title: "更新重置工具"
+title: 更新重置工具
 titleSuffix: Configuration Manager
-description: "将更新重置工具用于 System Center Configuration Manager 的控制台中更新。"
-ms.custom: na
+description: 将更新重置工具用于 System Center Configuration Manager 的控制台中更新。
 ms.date: 7/31/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 25fa89d6-7e47-45a6-8f4e-70b77560fba6
-caps.latest.revision: "0"
-caps.handback.revision: "0"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: cf854b1ea571991c1f070d6b3896db7861fe020f
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: e6ae6ed46cc1db5f545182e4b4f6b46374b5c174
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="update-reset-tool"></a>更新重置工具
 
@@ -67,7 +61,7 @@ ms.lasthandoff: 12/04/2017
 
 **命令行参数：**  
 
-| 参数        |描述                 |  
+| 参数        |说明                 |  
 |------------------|----------------------------|  
 |**-S &lt;顶层站点的 SQL Server 的 FQDN>** | *必需* <br> 指定为层次结构的顶层站点托管站点数据库的 SQL Server 的 FQDN。    |  
 | **-D &lt;数据库名称>**                        | *必需* <br> 指定顶层站点的数据库的名称。  |  

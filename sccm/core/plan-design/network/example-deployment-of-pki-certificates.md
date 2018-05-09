@@ -1,25 +1,20 @@
 ---
-title: "部署 PKI 证书"
+title: 部署 PKI 证书
 titleSuffix: Configuration Manager
-description: "按照分步示例，了解创建和部署 System Center Configuration Manager 使用的 PKI 证书的方法。"
-ms.custom: na
+description: 按照分步示例，了解创建和部署 System Center Configuration Manager 使用的 PKI 证书的方法。
 ms.date: 02/14/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 3417ff88-7177-4a0d-8967-ab21fe7eba17
-caps.latest.revision: "11"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 092e3e752a27ab652f2b38c0ba43e6e2e26c99c8
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 0b34163bfb5aea716062882d4c2ebb1360bba2c9
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="step-by-step-example-deployment-of-the-pki-certificates-for-system-center-configuration-manager-windows-server-2008-certification-authority"></a>System Center Configuration Manager 的 PKI 证书的分步部署示例：Windows Server 2008 证书颁发机构
 
@@ -156,7 +151,7 @@ ms.lasthandoff: 10/12/2017
 
 13. 在“值”框中，指定将在 System Center Configuration Manager 站点系统属性中指定的 FQDN 值，然后选择“确定”关闭“证书属性”对话框。  
 
-     例如：  
+     示例：  
 
     -   如果站点系统将仅接受来自 Intranet 的客户端连接，并且站点系统服务器的 Intranet FQDN 为 **server1.internal.contoso.com**：输入 **server1.internal.contoso.com**，然后选择“添加”。  
 

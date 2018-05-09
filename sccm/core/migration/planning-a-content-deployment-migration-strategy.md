@@ -1,26 +1,20 @@
 ---
-title: "迁移内容"
+title: 迁移内容
 titleSuffix: Configuration Manager
-description: "将数据迁移到 System Center Configuration Manager 目标层次结构中时，使用分发点来管理内容。"
-ms.custom: na
+description: 将数据迁移到 System Center Configuration Manager 目标层次结构中时，使用分发点来管理内容。
 ms.date: 12/30/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 66f7759c-6272-4116-aad7-0d05db1d46cd
-caps.latest.revision: "8"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 7332ff4bf0ad10bd18e42485fb548eee70deaf04
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: d261b246c0718777be56425c7783d05f767575df
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="plan-a-content-deployment-migration-strategy-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中规划内容部署迁移策略
 

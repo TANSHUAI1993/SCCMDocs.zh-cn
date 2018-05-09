@@ -1,26 +1,20 @@
 ---
-title: "管理用于内容的网络带宽"
+title: 管理用于内容的网络带宽
 titleSuffix: Configuration Manager
-description: "配置 System Center Configuration Manager 的计划、限制和预安排内容。"
-ms.custom: na
+description: 配置 System Center Configuration Manager 的计划、限制和预安排内容。
 ms.date: 2/6/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e80d1151-91db-4a27-8411-a957297b67d0
-caps.latest.revision: "15"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: e7f5dbd76c19e85f41987bc9053943645830e0f7
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: 2d8587c0640d831a723b9ff7c3a6402d47ee2405
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-network-bandwidth-for-content"></a>管理用于内容的网络带宽
 为帮助管理用于 System Center Configuration Manager 内容管理过程的网络带宽，可以使用内置控件进行计划和限制。 也可以使用预留内容。 以下几部分详细说明了这些选项。

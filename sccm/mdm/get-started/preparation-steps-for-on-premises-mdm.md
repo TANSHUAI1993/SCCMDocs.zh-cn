@@ -1,25 +1,20 @@
 ---
-title: "准备步骤 "
+title: '准备步骤 '
 titleSuffix: Configuration Manager
-description: "准备在 System Center Configuration Manager 中通过本地移动设备管理对设备进行管理。"
-ms.custom: na
+description: 准备在 System Center Configuration Manager 中通过本地移动设备管理对设备进行管理。
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 1ef60106-8f31-46d6-95a6-25a6495f22c7
-caps.latest.revision: "4"
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 6c2275480cbecf35997e38185e0cead28cff10fc
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 711af365353d68020a7bbbef8026f452d4203ce3
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="preparation-steps-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>用于 System Center Configuration Manager 中本地移动设备管理的准备步骤
 

@@ -2,22 +2,19 @@
 title: 安装和配置软件更新点
 titleSuffix: Configuration Manager
 description: 主站点需要管理中心站点上的软件更新点，以便评估软件更新合规性，并将软件更新部署到客户端。
-keywords: ''
-author: dougeby
-ms.author: dougeby
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 ms.date: 05/30/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service: ''
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: b099a645-6434-498f-a408-1d438e394396
-ms.openlocfilehash: 19cc49355d931595f08f81685ca0549ad9cba4e5
-ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
+ms.openlocfilehash: 3b2bb1f6866bb5266f20fb94451bfbfd2ce675bb
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-and-configure-a-software-update-point"></a>安装和配置软件更新点  
 
@@ -25,9 +22,9 @@ ms.lasthandoff: 03/28/2018
 
 
 > [!IMPORTANT]  
->  在安装软件更新点站点系统角色 (SUP) 之前，必须验证服务器是否满足所需的依赖关系，并确定站点上的软件更新点基础结构。 若要深入了解如何规划软件更新和确定软件更新点基础结构，请参阅[规划软件更新](../plan-design/plan-for-software-updates.md)。  
+>  在安装软件更新点站点系统角色 (SUP) 之前，必须验证服务器是否满足所需的依赖关系，并确定站点上的软件更新点基础结构。 有关如何规划软件更新和确定软件更新点基础结构的详细信息，请参阅[规划软件更新](../plan-design/plan-for-software-updates.md)。  
 
- 管理中心站点和主站点上需具备软件更新点才可实现软件更新符合性评估并将软件更新部署到客户端。 辅助站点上不一定要有软件更新点。 必须在安装了 WSUS 的服务器上创建软件更新点站点系统角色。 软件更新点与 WSUS 服务交互以配置软件更新设置，并请求软件更新元数据的同步。 如果有 Configuration Manager 层次结构，请先在管理中心站点上安装和配置软件更新点，然后依次在子主站点上和根据需要在辅助站点上安装和配置软件更新点。 如果有独立主站点（而不是管理中心站点），请先在主站点上安装和配置软件更新点，然后根据需要在辅助站点上安装和配置软件更新点。 只有当你在顶层站点上配置软件更新点时，某些设置才可用。 视软件更新点安装在何处而定，你必须考虑不同的选项。  
+ 管理中心站点和主站点上需具备软件更新点才可实现软件更新符合性评估并将软件更新部署到客户端。 软件更新点在辅助站点上是可选的。 必须在安装了 WSUS 的服务器上创建软件更新点站点系统角色。 软件更新点与 WSUS 服务交互以配置软件更新设置，并请求软件更新元数据的同步。 如果有 Configuration Manager 层次结构，请先在管理中心站点上安装和配置软件更新点，然后依次在子主站点上和根据需要在辅助站点上安装和配置软件更新点。 如果有独立主站点（而不是管理中心站点），请先在主站点上安装和配置软件更新点，然后根据需要在辅助站点上安装和配置软件更新点。 只有当你在顶层站点上配置软件更新点时，某些设置才可用。 视软件更新点安装在何处而定，你必须考虑不同的选项。  
 
 > [!IMPORTANT]  
 >  你可以在站点上安装多个软件更新点。 你安装的第一个软件更新点配置为同步源，它从 Microsoft 更新或上游同步源中同步更新。 站点上的其他软件更新点配置为第一个软件更新点的副本。 因此，在你安装和配置初始软件更新点之后，某些设置不可用。  
@@ -35,7 +32,7 @@ ms.lasthandoff: 03/28/2018
 > [!IMPORTANT]  
 >  不支持在服务器上安装已配置和用作独立 WSUS 服务器的软件更新点站点系统，或使用软件更新点来直接管理 WSUS 客户端。 现有 WSUS 服务器仅支持作为活动软件更新点的上游同步源。 请参阅[从上游数据源位置同步](#BKMK_wsussync)
 
- 你可以将软件更新点站点系统角色添加到现有站点系统服务器，或者可以创建新站点系统服务器。 在“创建站点系统服务器向导”或“添加站点系统角色向导”的“系统角色选择”页上，根据是要将站点系统角色添加到新的还是现有站点服务器，选择“软件更新点”，然后在向导中配置软件更新点设置。 设置随所用的 Configuration Manager 版本而异。 有关如何安装站点系统角色的详细信息，请参阅[安装站点系统角色](../../core/servers/deploy/configure/install-site-system-roles.md)。  
+ 你可以将软件更新点站点系统角色添加到现有站点系统服务器，或者可以创建新站点系统服务器。 在“创建站点系统服务器向导”或“添加站点系统角色向导”的“系统角色选择”页上，根据是要将站点系统角色添加到新的还是现有站点服务器，选择“软件更新点”，然后在向导中配置软件更新点设置。 根据所使用的 Configuration Manager 版本，设置会有所不同。 有关如何安装站点系统角色的详细信息，请参阅[安装站点系统角色](../../core/servers/deploy/configure/install-site-system-roles.md)。  
 
  使用下列部分来了解有关站点上的软件更新点设置的信息。  
 
@@ -95,7 +92,7 @@ ms.lasthandoff: 03/28/2018
     > [!NOTE]  
     >  如果软件更新点与 Internet 之间存在防火墙，则可能需要将防火墙配置为接受用于 WSUS 网站的 HTTP 和 HTTPS 端口。 你也可以选择将防火墙上的访问权限局限于受限制的域。 有关如何规划支持软件更新的防火墙的详细信息，请参阅 [Configure firewalls](../plan-design/plan-for-software-updates.md#BKMK_ConfigureFirewalls)。  
 
--   **<a name="BKMK_wsussync"></a>**从上游数据源位置同步：使用此设置以从上游同步源同步软件更新元数据。 系统会将子主站点和辅助站点自动配置为将父站点 URL 用于此设置。 你可以选择将从现有的 WSUS 服务器同步软件更新。 指定 URL，如 https://WSUSServer:8531，其中 8531 是用于连接到 WSUS 服务器的端口。  
+-   **<a name="BKMK_wsussync"></a>** 从上游数据源位置同步：使用此设置以从上游同步源同步软件更新元数据。 系统会将子主站点和辅助站点自动配置为将父站点 URL 用于此设置。 你可以选择将从现有的 WSUS 服务器同步软件更新。 指定 URL，如 https://WSUSServer:8531，其中 8531 是用于连接到 WSUS 服务器的端口。  
 
 -   不要从 Microsoft 更新或上游数据源同步：使用此设置以在顶层站点上的软件更新点从 Ineternet 断开连接时手动同步软件更新。 有关详细信息，请参阅[从断开连接的软件更新点中同步软件更新](synchronize-software-updates-disconnected.md)。  
 

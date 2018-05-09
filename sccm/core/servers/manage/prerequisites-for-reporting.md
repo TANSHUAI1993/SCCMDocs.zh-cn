@@ -1,27 +1,20 @@
 ---
-title: "报告的先决条件"
+title: 报告的先决条件
 titleSuffix: Configuration Manager
-description: "了解影响在 System Center Configuration Manager 中使用报表的各种依赖关系。"
-ms.custom: na
+description: 了解影响在 System Center Configuration Manager 中使用报表的各种依赖关系。
 ms.date: 01/29/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 9cc508a5-5023-4833-b776-ae9a6971138f
-caps.latest.revision: 
-caps.handback.revision: 
-author: Dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 3feafa8a20bedfba381c29a5d7fe80a47517b6ab
-ms.sourcegitcommit: b13da5ad8ffd58e3b89fa6d7170e1dec3ff130a4
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: c9e20321a794f093dbb494034fe256c26be31480
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prerequisites-for-reporting-in-system-center-configuration-manager"></a>System Center Configuration Manager 中报告的先决条件
 

@@ -5,16 +5,15 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.date: 03/22/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
+ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
-ms.openlocfilehash: 0e4d2add8ece7f548955064a479d9545a1fc64e1
-ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
+ms.openlocfilehash: e62b748596aba1404d6b097e5aa0bf74266f055b
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>云管理网关证书
 
@@ -69,7 +68,7 @@ CMG 创建基于 Internet 的客户端要连接到的 HTTPS 服务。 此服务�
 
 ## <a name="azure-management-certificate"></a>Azure 管理证书
 
-经典服务部署需要此证书。Azure 资源管理器部署不需要此证书。
+经典服务部署需要此证书。Azure 资源管理器部署不需要此证书。*
 
 在 Azure 门户中的 Configuration Manager 控制台中创建 CMG 时需要提供此证书。
 
@@ -88,7 +87,7 @@ CMG 创建基于 Internet 的客户端要连接到的 HTTPS 服务。 此服务�
 
 ## <a name="client-authentication-certificate"></a>客户端身份验证证书
 
-运行未加入 Azure Active Directory (Azure AD) 的 Windows 7、Windows 8.1 和 Windows 10 设备的基于 Internet 的客户端需要此证书。CMG 连接点也需要此证书。加入 Azure AD 的 Windows 10 客户端不需要此证书。
+运行未加入 Azure Active Directory (Azure AD) 的 Windows 7、Windows 8.1 和 Windows 10 设备的基于 Internet 的客户端需要此证书。CMG 连接点也需要此证书。加入 Azure AD 的 Windows 10 客户端不需要此证书。*
 
 客户端使用此证书向 CMG 进行身份验证。 已加入混合域或云域的 Windows 10 设备不需要此证书，因为它们使用 Azure AD 进行身份验证。
 
@@ -97,7 +96,7 @@ CMG 创建基于 Internet 的客户端要连接到的 HTTPS 服务。 此服务�
 
 ### <a name="client-trusted-root-certificate-to-cmg"></a>针对 CMG 的客户端受信任的根证书
 
-使用客户端身份验证证书时需要此证书。如果所有客户端使用 Azure AD 进行身份验证，则不需要此证书。 
+使用客户端身份验证证书时需要此证书。如果所有客户端使用 Azure AD 进行身份验证，则不需要此证书。* 
 
 在 Configuration Manager 控制台中创建 CMG 时需要提供此证书。
 

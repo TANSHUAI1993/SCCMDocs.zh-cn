@@ -1,25 +1,20 @@
 ---
-title: "为工厂中的 OEM 或本地仓库创建映像"
+title: 为工厂中的 OEM 或本地仓库创建映像
 titleSuffix: Configuration Manager
-description: "将操作系统部署到未完全预配的计算机时，可使用预留媒体部署减少网络流量。"
-ms.custom: na
+description: 将操作系统部署到未完全预配的计算机时，可使用预留媒体部署减少网络流量。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a7d3df90-062d-4d57-9e9d-e137d3e7cd7f
-caps.latest.revision: "8"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: e12acb44cc78e0a6d118cfece538366263758aec
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: 0c8cf0af19017f4acfd95bcd01f8226229c05a14
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-an-image-for-an-oem-in-factory-or-a-local-depot-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 为工厂中的 OEM 或本地 depot 创建映像
 

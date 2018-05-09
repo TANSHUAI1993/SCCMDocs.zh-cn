@@ -1,24 +1,19 @@
 ---
-title: "规划 Endpoint Protection"
+title: 规划 Endpoint Protection
 titleSuffix: Configuration Manager
-ms.custom: na
 ms.date: 03/07/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 7610bbd3-a67f-4a09-8115-e35d40d43b42
-caps.latest.revision: "16"
-author: NathBarn
-ms.author: nathbarn
-manager: angrobe
-ms.openlocfilehash: 3ffb112dc1aaf71162b0f706f5c07fb6d08e47f9
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 0e8cd4a409718645d06f17c8cea36e7b06ec61d2
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="planning-for-endpoint-protection-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中规划 Endpoint Protection
 

@@ -2,22 +2,19 @@
 title: 管理 Office 365 ProPlus 更新
 titleSuffix: Configuration Manager
 description: Configuration Manager 将 Office 365 客户端更新从 WSUS 目录同步到站点服务器，使更新可部署到客户端。
-keywords: ''
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ms.date: 03/26/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service: ''
-ms.technology:
-- configmgr-sum
+ms.technology: configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
-ms.openlocfilehash: 4fbbe4b6792c51cd7adeeae3a96f81927153362c
-ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
+ms.openlocfilehash: a7c1786e9acce10d98da031d9d5df3b81f9a1a28
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-office-365-proplus-with-configuration-manager"></a>使用 Configuration Manager 管理 Office 365 ProPlus
 
@@ -43,7 +40,7 @@ Office 365 客户端管理仪表板提供以下信息的相关图表：
 - Office 365 客户端版本
 - Office 365 客户端语言
 - Office 365 客户端通道     
-  有关详细信息，请参阅 [Office 365 专业增强版的更新频道概述](https://technet.microsoft.com/library/mt455210.aspx)。
+  有关详细信息，请参阅 [Office 365 专业增强版的更新频道概述](/DeployOffice/overview-of-update-channels-for-office-365-proplus)。
 
 若要在 Configuration Manager 控制台中查看 Office 365 客户端管理仪表板，请依次转到“软件库” > “概述” > “Office 365 客户端管理”。 在仪表板顶部，使用“集合”下拉列表设置按特定集合的成员筛选仪表板数据。 从 Configuration Manager 1802 版开始，选择图形部分时，Office 365 客户端管理仪表板会显示相关设备的列表。
 
@@ -83,7 +80,7 @@ Office 365 客户端管理仪表板中显示的数据来自硬件清单。 启�
 
     如果具有现有的配置文件，请输入文件的位置并跳到步骤 7。 必须采用 \\server\share\filename.XML 形式指定位置。
     > [!IMPORTANT]    
-    > XML 配置文件必须仅包含 [Office 365 ProPlus 客户端支持的语言](https://technet.microsoft.com/library/cc179219&#40;v=office.16&#41;.aspx)。
+    > XML 配置文件必须仅包含 [Office 365 ProPlus 客户端支持的语言](/DeployOffice/office2016/language-identifiers-and-optionstate-id-values-in-office-2016)。
 
 5. 在“客户端产品”页上，请选择使用的 Office 365 套件。 选择想要包括的应用程序。 选择应包括的任何其他 Office 产品，然后单击“下一步”。
 6. 在“客户端设置”页上，选择要包括的设置，然后单击“下一步”。
@@ -103,7 +100,7 @@ Office 365 客户端管理仪表板中显示的数据来自硬件清单。 启�
 
 使用以下步骤通过 Configuration Manager 部署 Office 365 更新：
 
-1.  在本文章的“使用 Configuration Manager 管理 Office 365 客户端更新的要求”部分，验证使用 Configuration Manager 管理 Office 365 客户端更新的[要求](https://technet.microsoft.com/library/mt628083.aspx)。  
+1.  在本文章的“使用 Configuration Manager 管理 Office 365 客户端更新的要求”部分，验证使用 Configuration Manager 管理 Office 365 客户端更新的[要求](/DeployOffice/manage-updates-to-office-365-proplus-with-system-center-configuration-manager#requirements-for-using-configuration-manager-to-manage-office-365-client-updates)。  
 
 2.  [配置软件更新点](../get-started/configure-classifications-and-products.md)来同步 Office 365 客户端更新。 针对分类设置**更新**，并为产品选择 **Office 365 客户端**。 将软件更新点配置为使用“更新”分类后，同步软件更新。
 3.  使 Office 365 客户端可以从 Configuration Manager 接收更新。 可使用 Configuration Manager 客户端设置或组策略启动客户端。   
@@ -116,7 +113,7 @@ Office 365 客户端管理仪表板中显示的数据来自硬件清单。 启�
 
       3.  单击“软件更新”，并针对“启用 Office 365 客户端代理的管理”设置选择“是”。  
 
-    **方法 2**：使用 Office 部署工具或组策略[将 Office 365 客户端启用为从 Configuration Manager 接收更新](https://technet.microsoft.com/library/mt628083.aspx#BKMK_EnableClient)。  
+    **方法 2**：使用 Office 部署工具或组策略[将 Office 365 客户端启用为从 Configuration Manager 接收更新](/DeployOffice/manage-updates-to-office-365-proplus-with-system-center-configuration-manager#BKMK_EnableClient)。  
 
 4. [将 Office 365 更新部署](deploy-software-updates.md)到客户端。   
 

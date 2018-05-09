@@ -1,26 +1,20 @@
 ---
-title: "远程控制的先决条件"
+title: 远程控制的先决条件
 titleSuffix: Configuration Manager
-description: "获取在 System Center Configuration Manager 中远程控制的先决条件。"
-ms.custom: na
+description: 获取在 System Center Configuration Manager 中远程控制的先决条件。
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: c1b2057e-b74f-43fa-a293-763a8f866d3d
-caps.latest.revision: "6"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: e7287ae7df68ebbcb8f251b8d001233a647596ee
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 117ad9a087151db51c4cf33112ab662f53b9134e
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prerequisites-for-remote-control-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中远程控制的先决条件
 
@@ -39,7 +33,7 @@ System Center Configuration Manager 中的远程控制具有外部依赖关系�
  Configuration Manager 远程控制不能用于远程管理运行 Systems Management Server 2003 或 Configuration Manager 2007 的客户端计算机。  
 
 > [!NOTE]  
->  不需要 Windows 服务作为远程控制的外部依赖关系。  
+>  没有 Windows 服务是必需的因为远程控制的外部依赖关系。  
 
 ### <a name="supported-operating-systems-for-the-remote-control-viewer"></a>支持远程控制查看器的操作系统  
 在 Configuration Manager 控制台支持的所有操作系统上，支持使用远程控制查看器。 有关信息，请参阅 [System Center Configuration Manager 控制台支持的配置](../../../../core/plan-design/configs/supported-operating-systems-consoles.md)。   

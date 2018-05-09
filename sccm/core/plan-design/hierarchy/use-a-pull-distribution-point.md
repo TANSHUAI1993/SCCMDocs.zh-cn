@@ -2,25 +2,19 @@
 title: 请求分发点
 titleSuffix: Configuration Manager
 description: 了解通过 System Center Configuration Manager 使用请求分发点的配置和限制相关信息。
-ms.custom: na
 ms.date: 2/14/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 7d8f530b-1a39-4a9d-a2f0-675b516da7e4
-caps.latest.revision: 9
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 3ef93ae505c2af709a3bd1e6a0e7a278993a77ff
-ms.sourcegitcommit: 27da4be015f1496b7b89ebddb517a2685f1ecf74
+manager: dougeby
+ms.openlocfilehash: d6d6f68e913d261a5a23db85707ea0c9ac965cbd
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-a-pull-distribution-point-with-system-center-configuration-manager"></a>将请求分发点用于 System Center Configuration Manager
 

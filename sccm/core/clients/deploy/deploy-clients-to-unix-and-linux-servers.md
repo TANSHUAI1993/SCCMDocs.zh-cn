@@ -1,25 +1,20 @@
 ---
-title: "部署 Unix/Linux 客户端"
+title: 部署 Unix/Linux 客户端
 titleSuffix: Configuration Manager
-description: "了解如何在 System Center Configuration Manager 中将客户端部署到 UNIX 或 Linux 服务器。"
-ms.custom: na
+description: 了解如何在 System Center Configuration Manager 中将客户端部署到 UNIX 或 Linux 服务器。
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 15a4e323-9f42-4fea-bb14-f2b905d1f77c
-caps.latest.revision: "9"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 808997a423dbac6785c9da82f7b6bc8663168486
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 7caffbbccfa53ef4e502685263cb0d81c6e83535
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-deploy-clients-to-unix-and-linux-servers-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中如何将客户端部署到 UNIX 和 Linux 服务器
 
@@ -98,7 +93,7 @@ ms.lasthandoff: 10/12/2017
 
 -   **-mp &lt;server FQDN\>**  
 
-     必须的。 指定通过 FQDN，客户端将用作初始联系点的管理点服务器。  
+     必需。 指定通过 FQDN，客户端将用作初始联系点的管理点服务器。  
 
     > [!IMPORTANT]  
     >  此属性不会指定安装后为其分配客户端的管理点。  
@@ -108,7 +103,7 @@ ms.lasthandoff: 10/12/2017
 
 -   **-sitecode &lt;sitecode\>**  
 
-     必须的。 指定要将 Configuration Manager 客户端分配到的 Configuration Manager 主站点。  
+     必需。 指定要将 Configuration Manager 客户端分配到的 Configuration Manager 主站点。  
 
      示例：-sitecode S01  
 

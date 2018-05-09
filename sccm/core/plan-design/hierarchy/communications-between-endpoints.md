@@ -1,25 +1,20 @@
 ---
-title: "终结点之间的通信"
+title: 终结点之间的通信
 titleSuffix: Configuration Manager
-description: "了解 System Center Configuration Manager 站点系统和组件如何跨网络通信。"
-ms.custom: na
+description: 了解 System Center Configuration Manager 站点系统和组件如何跨网络通信。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 68fe0e7e-351e-4222-853a-877475adb589
-caps.latest.revision: "10"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 1ad0c5855ce9855801eda66d78f7f60829f26fbf
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: 603adb982f704c462e043d8c0974fc85a0748863
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="communications-between-endpoints-in-system-center-configuration-manager"></a>System Center Configuration Manager 中终结点之间的通信
 

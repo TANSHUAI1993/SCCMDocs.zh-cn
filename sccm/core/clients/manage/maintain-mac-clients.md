@@ -1,25 +1,20 @@
 ---
-title: "维护 Mac 客户端"
+title: 维护 Mac 客户端
 titleSuffix: Configuration Manager
-description: "Configuration Manager Mac 客户端的维护任务。"
-ms.custom: na
+description: Configuration Manager Mac 客户端的维护任务。
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: aaroncz
-ms.suite: na
 ms.technology: configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cf6337a2-700c-47f3-b6f8-5814f9b81e59
-caps.latest.revision: "12"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 18464a1ba604350e1c871b6bbddc5d03b1d3d956
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 32d36f041ed42ef0afa8fe0c0e052389587a2c8f
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="maintain-mac-clients"></a>维护 Mac 客户端
 *适用范围：System Center Configuration Manager (Current Branch)*

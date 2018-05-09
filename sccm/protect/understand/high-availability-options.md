@@ -1,25 +1,20 @@
 ---
-title: "高可用性"
+title: 高可用性
 titleSuffix: Configuration Manager
-description: "了解如何使用维持高可用性服务的选项部署 System Center Configuration Manager。"
-ms.custom: na
+description: 了解如何使用维持高可用性服务的选项部署 System Center Configuration Manager。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: 1a38421d-24c1-4fef-bf6c-42fce53109ac
-caps.latest.revision: "4"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: bfc40f13f166a4f4aeda4a363ec633a54206dce4
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: a1011aa1b30661d756d457a38ebc770a61fac07f
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="high-availability-options-for-system-center-configuration-manager"></a>System Center Configuration Manager 的高可用性选项
 

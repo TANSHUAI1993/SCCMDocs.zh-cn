@@ -1,26 +1,20 @@
 ---
-title: "创建服务连接点"
+title: 创建服务连接点
 titleSuffix: Configuration Manager
-description: "使用 System Center Configuration Manager 创建服务连接点。"
-ms.custom: na
+description: 使用 System Center Configuration Manager 创建服务连接点。
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 617abb22-d22f-41fb-a76b-1c4259e419d2
-caps.latest.revision: "18"
-caps.handback.revision: "0"
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: ee038d8579d63f2afbf0b677181dd06751403ba0
-ms.sourcegitcommit: 0a6b2c53ff4445b5d4f3638fdb0b489d54e333d3
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 3dfd02a84cef31c22023b7fc4cb75931dc82160f
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-service-connection-point-with-system-center-configuration-manager-and-microsoft-intune"></a>使用 System Center Configuration Manager 和 Microsoft Intune 创建服务连接点
 

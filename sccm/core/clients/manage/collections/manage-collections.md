@@ -1,26 +1,20 @@
 ---
-title: "管理集合"
+title: 管理集合
 titleSuffix: Configuration Manager
-description: "在 System Center Configuration Manager 中执行常见集合管理任务。"
-ms.custom: na
+description: 在 System Center Configuration Manager 中执行常见集合管理任务。
 ms.date: 4/25/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: e102fd1a-76df-4d8e-b1b0-10ee18318f67
-caps.latest.revision: "8"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 0655a1dc566657cb27cdc7537603871dc36cc568
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: b00b62a90f496eb19a77dcc431ccf157b1227923
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-manage-collections-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中管理集合
 
@@ -77,11 +71,11 @@ ms.lasthandoff: 10/12/2017
 |选项卡名称|更多信息|  
 |--------------|----------------------|  
 |**常规**|让你能够查看和配置有关所选集合的常规信息，包括集合名称和限定集合。|  
-|**成员身份规则**|让你能够配置定义此集合成员身份的成员身份规则。 有关详细信息，请参阅[如何在 System Center Configuration Manager 中创建集合](../../../../core/clients/manage/collections/create-collections.md)。|  
-|**电源管理**|让你能够配置向所选集合中计算机分配的电源管理计划。 有关详细信息，请参阅[电源管理简介](../../../../core/clients/manage/power/introduction-to-power-management.md)。|  
+|**成员身份规则**|您可以配置定义此集合的成员身份的成员身份规则。 有关详细信息，请参阅[如何在 System Center Configuration Manager 中创建集合](../../../../core/clients/manage/collections/create-collections.md)。|  
+|**电源管理**|您可以配置分配给所选集合中的计算机的电源管理计划。 有关详细信息，请参阅[电源管理简介](../../../../core/clients/manage/power/introduction-to-power-management.md)。|  
 |**部署**|显示已部署到所选集合的成员的任何软件。|  
 |**维护时段**|让你能够查看和配置应用于所选集合的成员的维护时段。 有关详细信息，请参阅[如何在 System Center Configuration Manager 中使用维护时段](../../../../core/clients/manage/collections/use-maintenance-windows.md)。|  
-|**集合变量**|让你能够配置应用于此集合并可由任务序列使用的变量。 有关详细信息，请参阅[任务序列内置变量](../../../../osd/understand/task-sequence-built-in-variables.md)。|  
-|**分发点组**|让你能够将一个或多个分发点组关联到所选集合的成员。 有关详细信息，请参阅[管理 System Center Configuration Manager 的内容和内容基础结构](../../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。|  
+|**集合变量**|允许您配置应用到此集合并可供任务序列变量。 有关详细信息，请参阅[任务序列内置变量](../../../../osd/understand/task-sequence-built-in-variables.md)。|  
+|**分发点组**|您可以将关联到所选集合的成员的一个或多个分发点组。 有关详细信息，请参阅[管理 System Center Configuration Manager 的内容和内容基础结构](../../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。|  
 |**安全**|显示可通过关联角色和安全作用域访问所选集合的管理用户。|  
 |**监视器**|让你能够配置何时对于客户端状态和 Endpoint Protection 生成警报。 有关详细信息，请参阅[如何在 System Center Configuration Manager 中配置客户端状态](../../../../core/clients/deploy/configure-client-status.md)和[如何在 System Center Configuration Manager 中监视 Endpoint Protection](../../../../protect/deploy-use/monitor-endpoint-protection.md)。|  

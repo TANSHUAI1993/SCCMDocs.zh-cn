@@ -1,25 +1,20 @@
 ---
-title: "规划报表"
+title: 规划报表
 titleSuffix: Configuration Manager
-description: "从安装详细信息到安全性和网络带宽，规划 Configuration Manager 中的报表至关重要。"
-ms.custom: na
+description: 从安装详细信息到安全性和网络带宽，规划 Configuration Manager 中的报表至关重要。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: ff920c84-d5c8-458c-b67f-bc7219b05690
-caps.latest.revision: "6"
-author: Dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 9d7c8de64c412b19fff4fa8c4193a020de680407
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 21b9e2b685890cde4c9cc2a0fa57bc9118dcc665
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="planning-for-reporting-in-system-center-configuration-manager"></a>规划 System Center Configuration Manager 中的报告
 

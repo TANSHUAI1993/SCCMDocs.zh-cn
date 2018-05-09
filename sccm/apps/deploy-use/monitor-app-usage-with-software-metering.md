@@ -2,25 +2,19 @@
 title: 使用软件计数监视应用使用情况
 titleSuffix: Configuration Manager
 description: 了解 System Center Configuration Manager 软件计数中可用的操作。
-ms.custom: na
 ms.date: 09/20/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-app
+ms.topic: conceptual
 ms.assetid: b1fdaee2-2816-4447-94cd-609f6948f215
-caps.latest.revision: 8
-author: mattbriggs
-ms.author: mabrigg
-manager: angrobe
-ms.openlocfilehash: 6864c1a7b10056d664706c25f958b3c73e6855a6
-ms.sourcegitcommit: a19e12d5c3198764901d44f4df7c60eb542e765f
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 66099b45fb04b18c84cd9a3973c1a4d93f0e93a6
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="software-metering-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的软件计数
 

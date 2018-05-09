@@ -1,26 +1,21 @@
 ---
-title: "管理更新"
+title: 管理更新
 titleSuffix: Configuration Manager
-description: "管理使用 System Center Updates Publisher 部署和创建的更新"
-ms.custom: na
+description: 管理使用 System Center Updates Publisher 部署和创建的更新
 ms.date: 4/29/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-sum
+ms.topic: conceptual
 ms.assetid: cd64994c-b426-4465-96cd-54b0edc2778d
-caps.latest.revision: "1"
-author: mestew
-ms.author: mstewart
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 robots: NOINDEX, NOFOLLOW
-ms.openlocfilehash: b6e2f2a117613087cd3ef561391cdcf665f0db6a
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: d0d69990fe99f9b08c9c14222a2d1a9c6ec06b4c
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-software-updates-in-updates-publisher"></a>管理 Updates Publisher 中的软件更新
 

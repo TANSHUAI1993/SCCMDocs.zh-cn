@@ -1,25 +1,20 @@
 ---
-title: "适用于 Linux 和 UNIX 的硬件清单"
+title: 适用于 Linux 和 UNIX 的硬件清单
 titleSuffix: Configuration Manager
-description: "了解如何在 System Center Configuration Manager 中使用 Linux 和 UNIX 的硬件清单。"
-ms.custom: na
+description: 了解如何在 System Center Configuration Manager 中使用 Linux 和 UNIX 的硬件清单。
 ms.date: 02/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 1026d616-2a20-4fb2-8604-d331763937f8
-caps.latest.revision: "6"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 6f71478f6a2a8e5a2a41068624debfe3ac3e915d
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 68e60611356cbaea3dc14a42776e89ecdc951008
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hardware-inventory-for-linux-and-unix-in-system-center-configuration-manager"></a>System Center Configuration Manager 中 Linux 和 UNIX 的硬件清单
 
@@ -118,7 +113,7 @@ ms.lasthandoff: 10/12/2017
      关于 **omicli** 和测试自定义提供程序的信息，请参阅 OMI 入门指南。  
 
 > [!TIP]  
->  使用软件分发来部署自定义提供程序和在每个 Linux 和 UNIX 客户端计算机上注册自定义提供程序。  
+>  若要部署自定义提供程序，以及如何注册每个 Linux 和 UNIX 的客户端计算机上的自定义提供程序使用软件分发。  
 
 ###  <a name="BKMK_AddLinuxProvidertoCM"></a> 在 Configuration Manager 中启用新清单类：  
  必须首先导入用于定义自定义提供程序架构的托管对象格式 (MOF) 文件，Configuration Manager 才可以报告由 Linux 和 UNIX 计算机上的新提供程序报告的清单。  

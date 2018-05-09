@@ -1,26 +1,20 @@
 ---
-title: "配置资产智能"
+title: 配置资产智能
 titleSuffix: Configuration Manager
-description: "在 System Center Configuration Manager 中设置资产智能"
-ms.custom: na
+description: 在 System Center Configuration Manager 中设置资产智能
 ms.date: 2/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.assetid: 08e0382d-de05-4a76-ba5c-7223173f7066
-caps.latest.revision: "7"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: d6137426c4960d0e9a9117fc78d3f26803b4f001
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 182006f0e4fcaf2304570ef4110527a61180c290
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-asset-intelligence-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中配置资产智能
 

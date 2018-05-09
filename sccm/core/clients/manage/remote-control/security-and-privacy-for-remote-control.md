@@ -1,26 +1,20 @@
 ---
-title: "远程控制安全和隐私"
+title: 远程控制安全和隐私
 titleSuffix: Configuration Manager
-description: "获取 System Center Configuration Manager 中远程控制的安全和隐私信息。"
-ms.custom: na
+description: 获取 System Center Configuration Manager 中远程控制的安全和隐私信息。
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 272ee86b-d3d9-4fd9-b5c4-73e490e1a1e4
-caps.latest.revision: "6"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 4923aee0e55f42f679c6f17ea0fd760c1909f9ef
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: fc49a74fe4e257acceaea54d7c423709998a87bd
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-and-privacy-for-remote-control-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的远程控制的安全和隐私
 
@@ -29,7 +23,7 @@ ms.lasthandoff: 10/12/2017
 本主题包括有关 System Center 2012 Configuration Manager 中远程控制的安全和隐私信息。  
 
 ##  <a name="BKMK_Security_HardwareInventory"></a> 远程控制安全最佳方案  
- 在使用远程控制管理客户端计算机时，请使用下列最佳安全方案。  
+ 当使用远程控制来管理客户端计算机时使用下列最佳安全方案。  
 
 |最佳安全方案|更多信息|  
 |----------------------------|----------------------|  

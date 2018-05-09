@@ -1,26 +1,20 @@
 ---
-title: "创建可启动媒体 "
+title: 创建可启动媒体
 titleSuffix: Configuration Manager
-description: "Configuration Manager 中的可启动媒体有助于更轻松地安装新版本的 Windows 或替换计算机和传输设置。"
-ms.custom: na
+description: Configuration Manager 中的可启动媒体有助于更轻松地安装新版本的 Windows 或替换计算机和传输设置。
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ead79e64-1b63-4d0d-8bd5-addff8919820
-caps.latest.revision: "11"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: f0dd624259e4f1b2a0bd14112a2cd25bb7a38767
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: d3b2ce474488ebf02c3a3c4a82def91d706b6bfc
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-bootable-media-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 创建可启动媒体
 

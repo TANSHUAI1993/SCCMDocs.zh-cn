@@ -1,25 +1,20 @@
 ---
-title: "部署 Wi-fi、VPN、电子邮件和证书配置文件"
+title: 部署 Wi-fi、VPN、电子邮件和证书配置文件
 titleSuffix: Configuration Manager
-description: "了解如何在 System Center Configuration Manager 中部署 Wi-Fi、VPN、电子邮件和证书配置文件。"
-ms.custom: na
+description: 了解如何在 System Center Configuration Manager 中部署 Wi-Fi、VPN、电子邮件和证书配置文件。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: 3753608d-b539-44dc-8e3f-b631319e7687
-caps.latest.revision: "5"
-author: Nbigman
-ms.author: nbigman
-manager: angrobe
-ms.openlocfilehash: 7e6b0038b5164a43a3198274a863d53750828776
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: faf8d48614bc3e27381d57d86fc24da9356aa3f0
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deploy-profiles-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中部署配置文件
 

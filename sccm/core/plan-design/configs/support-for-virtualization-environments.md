@@ -1,25 +1,20 @@
 ---
-title: "支持虚拟化"
+title: 支持虚拟化
 titleSuffix: Configuration Manager
-description: "获取在虚拟化环境中安装 System Center Configuration Manager 客户端和站点系统的要求"
-ms.custom: na
+description: 获取在虚拟化环境中安装 System Center Configuration Manager 客户端和站点系统的要求
 ms.date: 1/12/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1098e8c5-9676-4c2b-841b-ec88bd04e495
-caps.latest.revision: "6"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 941c0fffd351a7cc345c5bcc0529633c22c27ed5
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 374a1643c5ea439a7406bbb1f6b53322caa50871
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="support-for-virtualization-environments-for-system-center-configuration-manager"></a>对 System Center Configuration Manager 的虚拟化环境的支持
 

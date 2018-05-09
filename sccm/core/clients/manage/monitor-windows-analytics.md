@@ -2,25 +2,19 @@
 title: 使用 Windows Analytics 监视客户端
 titleSuffix: Configuration Manager
 description: Windows Analytics 是在 Operations Management Suite 上运行的一组解决方案，借助这些解决方案，可以利用环境中的设备报告的 Windows 遥测数据获取关于环境当前状态的宝贵见解。
-ms.custom: na
 ms.date: 01/02/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: CF35CE87-3BA8-4A84-9BC8-ABCEA4666212
-caps.latest.revision: 23
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 15b1d07f35f774f3ec8f082a86c90ecb989a438e
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+manager: dougeby
+ms.openlocfilehash: e792f421520798a0e000384aafcb99f31dc8eb14
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-windows-analytics-with-configuration-manager"></a>结合使用 Windows Analytics 和 Configuration Manager
 

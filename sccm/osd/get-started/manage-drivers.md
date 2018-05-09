@@ -1,26 +1,20 @@
 ---
-title: "管理驱动程序 "
+title: '管理驱动程序 '
 titleSuffix: Configuration Manager
-description: "使用 Configuration Manager 驱动程序目录导入设备驱动程序、在包中为驱动程序分组，然后这些将包分发到各个分发点。"
-ms.custom: na
+description: 使用 Configuration Manager 驱动程序目录导入设备驱动程序、在包中为驱动程序分组，然后这些将包分发到各个分发点。
 ms.date: 01/27/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 84802d55-112e-4f7f-9a48-74a80d91a0f4
-caps.latest.revision: "10"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: f03f5d0e8c6d4653e25e50d615d5d50e00d9cda0
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: 4eb97430bd5d7ae5cc50044f8049f41cb9b4cf08
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-drivers-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中管理驱动程序
 

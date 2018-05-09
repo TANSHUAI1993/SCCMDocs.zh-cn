@@ -1,26 +1,21 @@
 ---
-title: "更新发布服务器"
+title: 更新发布服务器
 titleSuffix: Configuration Manager
-description: "使用 System Center Updates Publisher 管理自定义更新"
-ms.custom: na
+description: 使用 System Center Updates Publisher 管理自定义更新
 ms.date: 4/29/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-sum
+ms.topic: conceptual
 ms.assetid: 2200b02b-e76b-4aa7-a77a-6dc5e70f1333
-caps.latest.revision: "1"
-author: mestew
-ms.author: mstewart
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 robots: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 6c0af411d51c2b56c5d8e6479112e6f9cb317971
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: 3a9c7758e394118041700192a393aff98f0d9087
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="system-center-updates-publisher"></a>System Center Updates Publisher
 
