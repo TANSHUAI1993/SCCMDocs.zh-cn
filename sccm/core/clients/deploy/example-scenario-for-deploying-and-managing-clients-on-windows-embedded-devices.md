@@ -79,7 +79,7 @@ Coho Vineyard & Winery 正在开设一家访客中心，需要运行 Windows Emb
 
      由于这些设备已加入了 Active Directory 域，因此她不必手动将它们批准为受信任的客户端，并从 Configuration Manager 控制台中确认它们已得到批准。  
 
-     有关详细信息，请参阅 [How to manage clients in System Center Configuration Manager](../../../core/clients/manage/manage-clients.md)。  
+     有关详细信息，请参阅 [如何在 System Center Configuration Manager 中管理客户端](../../../core/clients/manage/manage-clients.md)。  
 
 8.  为了安装交互式演示文稿软件，Jane 运行“部署软件向导”  并配置所需的应用程序。 在向导的“用户体验”  页上的“Windows Embedded 设备的写入筛选器处理”  部分，她接受选择“在截止时间或在维护时段内提交更改(需要重启)” 的默认选项。  
 

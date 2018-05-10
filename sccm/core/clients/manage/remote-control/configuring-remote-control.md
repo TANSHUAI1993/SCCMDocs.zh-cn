@@ -36,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 
     可以更改“ConfigMgr 远程控制”  对话框中出现的公司名，方法是配置“计算机代理”  客户端设置中的“在软件中心显示的组织名称”  值。  
 
- 当客户端计算机下一次下载客户端策略时，将使用这些设置进行配置。 要为单个客户端启动策略检索，请参阅 [How to manage clients in System Center Configuration Manager](../../../../core/clients/manage/manage-clients.md)。  
+ 当客户端计算机下一次下载客户端策略时，将使用这些设置进行配置。 要为单个客户端启动策略检索，请参阅 [如何在 System Center Configuration Manager 中管理客户端](../../../../core/clients/manage/manage-clients.md)。  
 
 #### <a name="enable-keyboard-translation"></a>启用键盘转换
 

@@ -26,7 +26,7 @@ ms.lasthandoff: 05/03/2018
 
  安装脚本 Configuration Manager 适用于 Linux 和 UNIX 的客户端支持的命令行属性。 某些命令行属性是必需的其他一些是可选。 例如，在安装客户端时，您必须指定由其与该站点的初始联系 Linux 或 UNIX 服务器的站点中的管理点。 有关命令行属性的完整列表，请参阅 [在 Linux 和 UNIX 服务器上安装客户端的命令行属性](#BKMK_CmdLineInstallLnUClient)。  
 
- 安装客户端后，在 Configuration Manager 控制台指定客户端设置，从而用和配置基于 Windows 的客户端相同的方式配置客户端代理。 有关详细信息，请参阅  [Client settings for Linux and UNIX servers](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ClientSettingsforLnU)。  
+ 安装客户端后，在 Configuration Manager 控制台指定客户端设置，从而用和配置基于 Windows 的客户端相同的方式配置客户端代理。 有关详细信息，请参阅  [Linux 和 UNIX 服务器的客户端设置](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ClientSettingsforLnU)。  
 
 ##  <a name="BKMK_AboutInstallPackages"></a> 有关客户端安装包和通用代理  
  若要在特定平台上安装适用于 Linux 和 UNIX 的客户端，你必须对要安装客户端的计算机使用合适的客户端安装包。 合适的客户端安装包是从 [Microsoft 下载中心](http://go.microsoft.com/fwlink/?LinkID=525184)下载的每个客户端的一部分。 除了客户端安装包，客户端下载内容还包括在每台计算机上管理客户端安装的 **install** 脚本。  
@@ -111,7 +111,7 @@ ms.lasthandoff: 05/03/2018
 
      可选。 指定通过 FQDN，客户端用于提交状态消息的回退状态点服务器。  
 
-     有关回退状态点的详细信息，请参阅 [Determine Whether You Require a Fallback Status Point](/sccm/core/clients/deploy/plan/determine-the-site-system-roles-for-clients#determine-if-you-need-a-fallback-status-point) 。  
+     有关回退状态点的详细信息，请参阅 [确定你是否需要回退状态点](/sccm/core/clients/deploy/plan/determine-the-site-system-roles-for-clients#determine-if-you-need-a-fallback-status-point) 。  
 
 
 -   **-dir &lt;directory\>**  
@@ -138,7 +138,7 @@ ms.lasthandoff: 05/03/2018
 
 -   **-UsePKICert &lt;parameter\>**  
 
-     可选。 公钥证书标准 (PKCS #12) 格式指定完整路径和文件名为 X.509 PKI 证书的名称。 此证书用于客户端身份验证。 如果在安装过程中未指定证书，则你需要添加或更改证书，请使用 **certutil** 实用工具。 有关 certutil 的信息，请参阅 [How to manage certificates on the client for Linux and UNIX](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ManageLinuxCerts) 。  
+     可选。 公钥证书标准 (PKCS #12) 格式指定完整路径和文件名为 X.509 PKI 证书的名称。 此证书用于客户端身份验证。 如果在安装过程中未指定证书，则你需要添加或更改证书，请使用 **certutil** 实用工具。 有关 certutil 的信息，请参阅 [如何管理 Linux 和 UNIX 客户端上的证书](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ManageLinuxCerts) 。  
 
      当您使用 **-UsePKICert**, ，还必须提供通过使用与 PKCS #12 文件相关联的密码 **-certpw** 命令行参数。  
 
@@ -187,13 +187,13 @@ ms.lasthandoff: 05/03/2018
 
 -   **-ignoreSHA256validation**  
 
-     可选。 指定客户端安装将 SHA 256 验证跳过。 在操作系统上安装客户端时使用此选项，该操作系统未使用支持 SHA-256 的 OpenSSL 版本发布。 有关详细信息，请参阅 [About Linux and UNIX Operating Systems That do not Support SHA-256](../../../core/clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers.md#BKMK_NoSHA-256)。  
+     可选。 指定客户端安装将 SHA 256 验证跳过。 在操作系统上安装客户端时使用此选项，该操作系统未使用支持 SHA-256 的 OpenSSL 版本发布。 有关详细信息，请参阅 [有关 Linux 和 UNIX 的操作系统，请执行不支持 sha-256](../../../core/clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers.md#BKMK_NoSHA-256)。  
 
 -   **-signcertpath &lt;file location\>**  
 
      可选。 指定的完整路径和 **.cer** 的站点服务器上的导出自签名证书的文件名。 如果 PKI 证书不可用，Configuration Manager 站点服务器自动生成自签名的证书。  
 
-     这些证书用于验证从管理点下载的客户端策略发送从预期的站点。 如果在安装过程中未指定证书，或者你需要更改证书，请使用 **certutil** 实用工具。 有关 certutil 的信息，请参阅 [How to manage certificates on the client for Linux and UNIX](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ManageLinuxCerts) 。  
+     这些证书用于验证从管理点下载的客户端策略发送从预期的站点。 如果在安装过程中未指定证书，或者你需要更改证书，请使用 **certutil** 实用工具。 有关 certutil 的信息，请参阅 [如何管理 Linux 和 UNIX 客户端上的证书](../../../core/clients/manage/manage-clients-for-linux-and-unix-servers.md#BKMK_ManageLinuxCerts) 。  
 
      此证书可通过 **SMS** 证书存储检索，并且具有“站点服务器”  使用者名称以及“站点服务器签名证书” 友好名称。  
 
@@ -232,4 +232,4 @@ ms.lasthandoff: 05/03/2018
 
  适用于 Linux 和 UNIX 的 Configuration Manager 客户端将在客户端安装时联系此管理点。 如果客户端无法联系管理点，客户端软件将不断重试直到成功。  
 
- 有关客户端如何查找管理点的详细信息，请参阅 [Locating Management Points](/sccm/core/clients/deploy/assign-clients-to-a-site#locating-management-points)。
+ 有关客户端如何查找管理点的详细信息，请参阅 [定位管理点](/sccm/core/clients/deploy/assign-clients-to-a-site#locating-management-points)。
