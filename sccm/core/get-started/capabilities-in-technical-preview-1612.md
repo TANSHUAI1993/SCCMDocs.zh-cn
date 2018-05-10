@@ -147,7 +147,7 @@ ms.lasthandoff: 05/03/2018
 
 此工具仅对其运行时用户指定的分发点上的内容有效，并不会从站点服务器上的内容库中删除内容。
 
-安装 Technical Preview 1612 后，可以在 Technical Preview 站点服务器中的 *%CM_Installation_Path%\cd.latest\SMSSETUP\TOOLS\ContentLibraryCleanup\* 文件夹中找到 **ContentLibraryCleanup.exe**。
+安装 Technical Preview 1612 后，可以在 Technical Preview 站点服务器中的 \*%CM_Installation_Path%\cd.latest\SMSSETUP\TOOLS\ContentLibraryCleanup\* 文件夹中找到 **ContentLibraryCleanup.exe**。
 
 随附此 Technical Preview 发布的工具旨在替换随附以往 Configuration Manager 产品发布的旧版类似工具。 尽管此工具版本将在 2017 年 3 月 1 日后停用，但新的版本将随附以后的 Technical Preview 发布，直到此工具作为 Current Branch 的一部分或生产就绪型带外版本进行发布。
 

@@ -67,7 +67,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  如果 Configuration Manager 客户端有多个网络适配器，并因此具有多个 IP 地址，则会随机分配用于评估客户端站点分配的 IP 地址。  
 
- 有关如何为站点分配配置边界组以及如何为自动站点分配配置回退站点的信息，请参阅 [Define site boundaries and boundary groups for System Center Configuration Manager](../../../core/servers/deploy/configure/define-site-boundaries-and-boundary-groups.md)。  
+ 有关如何为站点分配配置边界组以及如何为自动站点分配配置回退站点的信息，请参阅 [为 System Center Configuration Manager 定义站点边界和边界组](../../../core/servers/deploy/configure/define-site-boundaries-and-boundary-groups.md)。  
 
  使用自动站点分配的 Configuration Manager 客户端会尝试查找发布到 Active Directory 域服务的站点边界组。 如果此方法失败（例如，没有为 Configuration Manager 扩展 Active Directory 架构，或者客户端是工作组计算机），则客户端可以从管理点中获取边界组信息。  
 

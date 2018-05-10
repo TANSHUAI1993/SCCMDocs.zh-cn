@@ -1,26 +1,20 @@
 ---
-title: "升级客户端"
+title: 升级客户端
 titleSuffix: Configuration Manager
-description: "在 System Center Configuration Manager 中升级 Windows 计算机上的客户端。"
-ms.custom: na
+description: 在 System Center Configuration Manager 中升级 Windows 计算机上的客户端。
 ms.date: 05/04/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6143fd47-48ec-4bca-b53b-5b9b9f067bc3
-caps.latest.revision: "11"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 7e2319aaf8f1195118211493eeecb9f6d1872d2d
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 9fce0c0a8602b51c3d05e5181023a0f9d05ab0ca
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-upgrade-clients-for-windows-computers-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中升级 Windows 计算机的客户端
 
@@ -74,9 +68,9 @@ ms.lasthandoff: 10/12/2017
 
 ### <a name="to-configure-automatic-client-upgrades"></a>若要配置自动客户端升级  
 
-1.  在 Configuration Manager 控制台中，单击“管理” 。  
+1.  在 Configuration Manager 控制台中，单击“管理”。  
 
-2.  在“管理”  工作区中，展开“站点配置” ，然后单击“站点” 。  
+2.  在“管理”工作区中，展开“站点配置”，然后单击“站点”。  
 
 3.  在“主页”  选项卡上的“站点”  组中，单击“层次结构设置” 。  
 
