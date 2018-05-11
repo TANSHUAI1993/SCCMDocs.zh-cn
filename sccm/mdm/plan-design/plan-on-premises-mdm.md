@@ -98,7 +98,7 @@ ms.lasthandoff: 05/03/2018
 
 -   现成体验 (OOBE) 预配包  
 
- 有关详细信息，请参阅 [Set up certificates for trusted communications for On-premises Mobile Device Management in System Center Configuration Manager](../../mdm/get-started/set-up-certificates-on-premises-mdm.md)。  
+ 有关详细信息，请参阅 [为 System Center Configuration Manager 中的本地移动设备管理设置受信任通信的证书](../../mdm/get-started/set-up-certificates-on-premises-mdm.md)。  
 
 ##  <a name="bkmk_enrollment"></a>注册注意事项  
  若要为本地移动设备管理启用设备注册，必须向用户授予注册权限，且其设备必须能够与承载所需站点系统角色的站点系统服务器实现受信任的通信。  
