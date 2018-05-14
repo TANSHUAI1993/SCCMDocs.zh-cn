@@ -4,18 +4,17 @@ titleSuffix: Configuration Manager
 description: 了解 Configuration Manager Technical Preview 1804 版中提供的新功能。
 ms.date: 04/25/2018
 ms.prod: configuration-manager
-ms.technology:
-- configmgr-other
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 8af43618-ec60-4c3e-a007-12399d1335b9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 82de25f24771d4b66d58a550eb4caed6ad262869
-ms.sourcegitcommit: d67c6246bb6027cd5501e772b0521f9272407c28
+ms.openlocfilehash: 0fcdcc984e267e6c54ad7c6194e8494854f0a1ee
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1804-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1804 中的功能
 
@@ -176,6 +175,9 @@ Configuration Manager 服务器和客户端工具现在 Technical Preview 中提
 >  - 发送计划工具
 > 
 > <sup>1</sup> CMTrace 不依赖于 .NET 或 Windows Presentation Foundation (WPF)，因此仍在 Windows PE 启动映像中使用。
+
+### <a name="known-issues"></a>已知问题
+启动时，某些客户端和服务器工具可能意外退出。 此问题的原因是介质中缺少文件。 解决方法是：将 Microsoft.Diagnostics.Tracing.EventSource.dll 文件从 AdminConsole\bin 目录复制到 SMSSETUP\Tools\ClientTools 和 ServerTools 目录。 此文件的版本必须与 Configuration Manager 控制台使用的版本相同。 其他版本可能无法正常工作。 <!--513977-->
 
 
 
