@@ -2,26 +2,19 @@
 title: 创建和运行脚本
 titleSuffix: Configuration Manager
 description: 在客户端设备上创建并运行 Powershell 脚本。
-ms.custom: na
 ms.date: 04/10/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-app
+ms.topic: conceptual
 ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
-caps.latest.revision: 14
-caps.handback.revision: 0
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7cfb969ab70c27859788732839f4715541e1b91e
-ms.sourcegitcommit: e4ca9fb1fad2caaf61bb46e0a12f4d6b96f15513
+ms.openlocfilehash: fcf3bc335efc4c7436842b29d30c67c118ceb05d
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>从 Configuration Manager 控制台创建并运行 PowerShell 脚本
 
@@ -116,43 +109,50 @@ System Center Configuration Manager 具有运行 Powershell 脚本的集成功�
 1. 在 Configuration Manager 控制台中，转到“管理” >“安全性” >“安全角色”
 2. 右键单击一个角色，然后单击“复制”。 复制的角色已分配有权限。 确保仅获取所需的权限。 
 3. 为自定义角色提供“名称”和“说明”。 
-4. 按如下所述为安全角色分配权限。 
+4. 按如下所述为安全角色分配权限。  
 
-    ### <a name="security-role-permissions"></a>**安全角色权限**
+### <a name="security-role-permissions"></a>安全角色权限  
 
-     **角色名称**：脚本运行者
-    - **说明**：这些权限仅允许此角色运行之前创建且已由其他角色批准的脚本。 
-    - **权限**：确保将以下项设置为“是”。
-         |**类别**|**权限**|**状态**|
-         |---|---|---|
-         |收集|运行脚本|是|
-         |SMS 脚本|创建|是|
-         |SMS 脚本|读取|是|
+**角色名称**：脚本运行者  
+- **说明**：这些权限仅允许此角色运行之前创建且已由其他角色批准的脚本。  
+- **权限**：确保将以下项设置为“是”。  
 
-     **角色名称**：脚本创建者
-    - **说明**：这些权限允许此角色编写脚本，但不能批准或运行脚本。 
-    - **权限**：确保设置以下权限。
-    - 
-         |**类别**|**权限**|**状态**|
-         |---|---|---|
-         |收集|运行脚本|否|
-         |SMS 脚本|创建|是|
-         |SMS 脚本|读取|是|
-         |SMS 脚本|删除|是|
-         |SMS 脚本|修改|是|
+|类别|权限|状态|
+|---|---|---|
+|收集|运行脚本|是|
+|站点|读取|是|
+|SMS 脚本|创建|是|
+|SMS 脚本|读取|是|
 
-    **角色名称**：脚本审批者
-    - **说明**：这些权限允许此角色批准脚本，但不能创建或运行脚本。 
-    - **权限**：确保设置以下权限。
 
-         |**类别**|**权限**|**状态**|
-         |---|---|---|
-         |收集|运行脚本|否|
-         |SMS 脚本|读取|是|
-         |SMS 脚本|批准|是|
-         |SMS 脚本|修改|是|
+**角色名称**：脚本创建者  
+- **说明**：这些权限允许此角色编写脚本，但不能批准或运行脚本。  
+- **权限**：确保设置以下权限。
+ 
+|类别|权限|状态|
+|---|---|---|
+|收集|运行脚本|否|
+|站点|读取|是|
+|SMS 脚本|创建|是|
+|SMS 脚本|读取|是|
+|SMS 脚本|删除|是|
+|SMS 脚本|修改|是|
+
+
+**角色名称**：脚本审批者  
+- **说明**：这些权限允许此角色批准脚本，但不能创建或运行脚本。  
+- **权限**：确保设置以下权限。  
+
+|类别|权限|状态|
+|---|---|---|
+|收集|运行脚本|否|
+|站点|读取|是|
+|SMS 脚本|读取|是|
+|SMS 脚本|批准|是|
+|SMS 脚本|修改|是|
+
      
-**脚本创建者角色的 SMS 脚本权限示例**
+**脚本创建者角色的 SMS 脚本权限示例**  
 
  ![脚本创建者角色的 SMS 脚本权限示例](./media/run-scripts/script_authors_permissions.png)
 
