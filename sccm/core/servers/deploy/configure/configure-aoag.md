@@ -1,26 +1,20 @@
 ---
-title: "配置可用性组"
+title: 配置可用性组
 titleSuffix: Configuration Manager
-description: "通过 SCCM 设置和管理 SQL Server AlwaysOn 可用性组。"
-ms.custom: na
+description: 通过 SCCM 设置和管理 SQL Server AlwaysOn 可用性组。
 ms.date: 7/31/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 7e4ec207-bb49-401f-af1b-dd705ecb465d
-caps.latest.revision: 
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: d6b208da49e27775548ac6f544b7a7278b96d980
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 2baafa04c315ebc7512504f042c89615b7217b4c
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-sql-server-always-on-availability-groups-for-configuration-manager"></a>为 Configuration Manager 配置 SQL Server AlwaysOn 可用性组
 
@@ -89,14 +83,14 @@ ms.lasthandoff: 12/04/2017
 > 在混合配置中将 Microsoft Intune 与 Configuration Manager 结合使用时，从可用性组来回移动站点数据库将会触发数据与云重新同步。 无法避免此重新同步。
 
 ### <a name="to-configure-a-site-to-use-the-availability-group"></a>将站点配置为使用可用性组
-1.  从 **&lt;*Configuration Manager 站点安装文件夹*>\BIN\X64\setup.exe** 中运行“Configuration Manager 安装程序”。
+1.  从 &lt;Configuration Manager 站点安装文件夹>\BIN\X64\setup.exe 运行 Configuration Manager 安装程序。
 
-2.  在“入门”页上，选择“执行站点维护或重置此站点”，然后单击“下一步”。
+2.  在“入门”  页上，选择“执行站点维护或重置此站点” ，然后单击“下一步” 。
 
 3.  选择“修改 SQL Server 配置”选项，然后单击“下一步”。
 
 4.  为站点数据库重新配置以下内容：
-    -   SQL Server 名称：输入你在创建可用性组时配置的可用性组 listener 的虚拟名称。 虚拟名称应为完整的 DNS 名称，如 **&lt;*endpointServer*>.fabrikam.com**。  
+    -   SQL Server 名称：输入你在创建可用性组时配置的可用性组 listener 的虚拟名称。 虚拟名称应为完整的 DNS 名称，如 &lt;endpointServer>.fabrikam.com。  
 
     -   实例：此值必须为空，以便为可用性组的 listener 指定默认实例。 如果当前站点数据库在命名实例上运行，则会列出命名实例，并且必须清除这些实例。
 
@@ -158,9 +152,9 @@ ms.lasthandoff: 12/04/2017
 
 4.  在将承载站点数据库（主副本或在其中还原站点数据库的服务器）的服务器上，将站点数据库的备份模型从“完整”更改为”简单”。 请参阅 SQL Server 文档中的[查看或更改数据库的恢复模式](/sql/relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server)。  
 
-5.  从 **&lt;*Configuration Manager 站点安装文件夹*\BIN\X64\setup.exe** 运行 **Configuration Manager 安装程序**。
+5.  从 &lt;Configuration Manager 站点安装文件夹>\BIN\X64\setup.exe 运行 Configuration Manager 安装程序。
 
-6.  在“入门”页上，选择“执行站点维护或重置此站点”，然后单击“下一步”。  
+6.  在“入门”  页上，选择“执行站点维护或重置此站点” ，然后单击“下一步” 。  
 
 7.  选择“修改 SQL Server 配置”选项，然后单击“下一步”。  
 

@@ -2,26 +2,19 @@
 title: 为使用 Intune 管理的 Windows 8.1 和 Windows 10 设备创建配置项
 titleSuffix: Configuration Manager
 description: 使用 System Center Configuration Manager Windows 10 配置项目，管理 Windows 10 计算机的设置。
-ms.custom: na
 ms.date: 07/31/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 23e1e4dc-623a-4521-ad04-ae9482927097
-caps.latest.revision: 20
-caps.handback.revision: 0
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 7f5a50ae6ea05af7e864cf94df3063d70bd737b4
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 639fabbe1e2f51194669fc1f196d88140193a727
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-configuration-items-for-windows-81-and-windows-10-devices-managed-without-the-system-center-configuration-manager-client"></a>如何为没使用 System Center Configuration Manager 客户端管理的 Windows 8.1 和 Windows 10 设备创建配置项目
 
@@ -61,7 +54,7 @@ ms.lasthandoff: 10/12/2017
   
     -   **严重** - 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“严重”这一故障严重性。  
   
-    -   **事件严重** - 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“严重”这一故障严重性。 应用程序事件日志中也会以 Windows 事件的形式记录此严重性级别。  
+    -   **事件严重** - 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“严重”这一故障严重性。 此外会记录此严重性级别为应用程序事件日志中的 Windows 事件。  
   
 11. 在向导的“平台适用性”  页面上，查看任何与先前选择的受支持平台不兼容的设置。 你可以返回并删除这些设置，也可以继续。  
   
@@ -127,7 +120,7 @@ ms.lasthandoff: 10/12/2017
 |**自定义电子邮件帐户**|允许在设备上使用非 Microsoft 帐户。|  
 |**在 Windows Mail 应用中将 Microsoft 帐户设为可选**|配置此项可在 Windows Mail 中删除对 Microsoft 帐户的要求。|  
   
-### <a name="store"></a>存储  
+### <a name="store"></a>应用商店  
  这些设置仅适用于运行 Windows 10 和更高版本的设备。  
   
 |设置|详细信息|  
@@ -330,7 +323,7 @@ ms.lasthandoff: 10/12/2017
     |-------------|----------------------|  
     |**阻止的应用列表**|如果想要指定不允许用户安装的应用的列表，则选择此选项。|  
     |**允许的应用列表**|如果想要指定允许用户安装的应用的列表，则选择此选项。 阻止安装任何其他应用。|  
-    |**添加**|将应用添加到选定的列表。 在应用商店中指定你选择的名称（可选择使用应用发布者）和应用的 URL。<br /><br /> 若要从 Windows 应用商店指定 URL，请搜索想要使用的应用。<br /><br /> 打开应用页面，并将该 URL 复制到剪贴板。 你现在可以在允许的或阻止的应用列表中将它用作 URL。<br /><br /> **示例：** 在应用商店中搜索 **Skype** 应用。 你使用的 URL 是 http://www.windowsphone.com/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51。|  
+    |**添加**|将应用添加到选定的列表。 在应用商店中指定你选择的名称（可选择使用应用发布者）和应用的 URL。<br /><br /> 若要从 Windows 应用商店指定 URL，请搜索想要使用的应用。<br /><br /> 打开应用页面，并将该 URL 复制到剪贴板。 你现在可以在允许的或阻止的应用列表中将它用作 URL。<br /><br /> **示例** ：在应用商店中搜索“Skype”  应用。 你使用的 URL 为 http://www.windowsphone.com/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51。|  
     |**编辑**|允许你编辑选定应用的名称、发布者和 URL。|  
     |**移除**|从列表中删除选定的应用。|  
     |**导入**|导入你已在逗号分隔值文件中指定的应用列表。 在文件中使用格式、应用程序名称、发布者和应用 URL。|  
@@ -371,16 +364,16 @@ Windows 信息保护 (WIP) 帮助防范此可能的数据泄漏而不会妨碍�
 |**启用 SmartScreen**|使用 SmartScreen 检查用户下载的文件是否不包含恶意代码。|  
 |**允许弹出窗口**|允许或禁用浏览器弹出窗口。|  
 |**允许使用 Cookie**|允许或禁用 Cookie。|  
-|**允许自动填充**|允许使用 Microsoft Edge 浏览器的自动填充功能。|  
+|**允许自动填充**|允许使用 Edge 浏览器的自动填充功能。|  
 |**允许使用密码管理器**|允许使用 Microsoft Edge 浏览器的密码管理器功能。|  
 |**企业模式站点列表位置**|指定在哪里可以找到你想使用企业模式打开的网站的列表。 用户无法编辑此列表。|
-|**阻止关于标志的访问**|防止最终用户在包含开发者和实验设置的 Microsoft Edge 中访问 about:flags 页。|
+|**阻止关于标志的访问**|防止最终用户在包含开发者和实验设置的 Edge 中访问 about:flags 页。|
 |**SmartScreen 提示重写**|允许最终用户绕过有关潜在恶意网站的 SmartScreen 筛选器警告。|
 |**文件的 SmartScreen 提示替代**|允许最终用户绕过有关下载潜在恶意文件的 SmartScreen 筛选器警告。|
 |**WebRTC localhost IP 地址**|使用 Web RTC 协议进行电话呼叫时，阻止显示用户 localhost IP 地址。|
 |**默认搜索引擎**|指定要使用的默认搜索引擎。 最终用户可以随时更改此值。|
 |**OpenSearch XML URL**|可以使用 OpenSearch XML 文件创建 Microsoft Edge 的搜索服务。<br>有关更多详细信息，请参阅 [OpenSearch](https://msdn.microsoft.com/library/windows/desktop/dd940337)。|
-|**主页(仅限桌面)**|添加你想要用作 Microsoft Edge 浏览器主页的站点的列表（仅限桌面设备）。|  
+|**主页(仅限桌面)**|添加你想要用作 Edge 浏览器主页的站点的列表（仅限桌面设备）。|  
 
 
 ### <a name="windows-defender"></a>Windows Defender

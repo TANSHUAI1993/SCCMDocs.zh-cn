@@ -1,27 +1,20 @@
 ---
-title: "卸载应用程序"
+title: 卸载应用程序
 titleSuffix: Configuration Manager
-description: "使用 System Center Configuration Manager 卸载应用程序"
-ms.custom: na
+description: 使用 System Center Configuration Manager 卸载应用程序
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-app
+ms.topic: conceptual
 ms.assetid: 0ea3edaa-27c6-4391-9896-cd97d9c5d06d
-caps.latest.revision: 
-caps.handback.revision: 
-author: mattbriggs
-ms.author: mabrigg
-manager: angrobe
-ms.openlocfilehash: 11b6f7ad65296131622b707fcb68d77183e3a288
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 7587fa6d96d6f8737921c9e5edae992cdd0ea614
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="uninstall-applications-with-system-center-configuration-manager"></a>通过 System Center Configuration Manager 卸载应用程序
 
@@ -65,7 +58,7 @@ ms.lasthandoff: 10/12/2017
         > [!NOTE]  
         >  只有在“创建部署类型向导”的“常规”页上选择了“手动指定部署类型信息”选项后，才会显示“内容”页面。  
 
-    -   在“**<*部署类型名称*> 属性” **对话框的 **“程序”**选项卡上，在 **“卸载程序”**字段中指定用于卸载应用程序的命令行。  
+    -   在“<部署类型名称> 属性”对话框的“程序”选项卡上，在“卸载程序”字段中指定用于卸载应用程序的命令行。  
 
 2.  部署应用程序，然后在“部署软件向导”的“部署设置”页面中，选择“卸载”部署操作。  
 

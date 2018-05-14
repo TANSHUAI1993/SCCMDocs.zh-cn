@@ -1,25 +1,20 @@
 ---
-title: "设置 Lookout 订阅"
+title: 设置 Lookout 订阅
 titleSuffix: Configuration Manager
-description: "本主题提供有关如何配置 Lookout 设备威胁保护的详细信息。"
-ms.custom: na
+description: 本主题提供有关如何配置 Lookout 设备威胁保护的详细信息。
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6087b279-ba05-4824-b5e3-3af14f3d3cfe
-caps.latest.revision: 
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 142926bc41a79adc8d8300e413022fb0e3566c5a
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 08bf88c0f6660c213c47a5ed283b3be0431056a2
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-up-your-subscription-for--lookout-device-threat-protection"></a>设置订阅以使用 Lookout 设备威胁保护
 
@@ -59,7 +54,7 @@ Lookout 支持人员将使用主要联系人载入订阅，并使用收集的信
 
 ## <a name="configure-your-subscription-with-lookout-device-threat-protection"></a>使用 Lookout 设备威胁保护配置订阅
 ### <a name="step-1-set-up-your-device-threat-protection"></a>步骤 1：设置设备威胁防护
-Lookout 支持人员创建企业帐户后，你可以登录到 Lookout 控制台。   Lookout 会向公司的主要联系人发送一封电子邮件，并附带登录链接(url:https://aad.lookout.com/les?action=consent)
+Lookout 支持人员创建企业帐户后，你可以登录到 Lookout 控制台。   Lookout 会向公司的主要联系人发送一封电子邮件，并附带登录链接的 URL：https://aad.lookout.com/les?action=consent
 
 首次登录到 Lookout 控制台时，必须使用全局管理员 Azure AD 角色的用户帐户，因为 Lookout 需要此信息来注册 Azure AD 租户。   后续登录不需要用户具有此级别的 Azure AD 特权。  第一次登录时将显示同意页。 选择“接受”完成注册。
 

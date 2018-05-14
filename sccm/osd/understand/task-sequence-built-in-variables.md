@@ -2,26 +2,19 @@
 title: 任务序列内置变量
 titleSuffix: Configuration Manager
 description: 任务序列内置变量提供有关任务序列运行环境的信息，并且这些变量在整个任务序列期间均适用。
-ms.custom: na
 ms.date: 04/18/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-osd
+ms.topic: conceptual
 ms.assetid: 02bc6bd4-ca53-4e22-8b80-d8ee5fe72567
-caps.latest.revision: 15
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fe26982195e7cae639cc457dbba31e3dbd45b6d3
-ms.sourcegitcommit: e23350fe65ff99228274e465b24b5e163769f38f
+ms.openlocfilehash: d3ea1b35c5f220155cecafddaf3a2ff1acf5ed53
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="task-sequence-built-in-variables-in-system-center-configuration-manager"></a>ystem Center Configuration Manager 中的任务序列内置变量
 
@@ -78,7 +71,7 @@ ms.lasthandoff: 04/20/2018
 |SMSTSDriverReceiveTimeOut|到服务器的连接超时之前的秒数。|
 |SMSTSErrorDialogTimeout|当任务序列中发生错误时，它将显示对话框并包含相关错误。 任务序列在此变量指定的秒数后自动将其关闭。 默认情况下，该值为 900 秒（15 分钟）。|  
 | TSDisableProgressUI | <!-- 1354291 -->从 Configuration Manager 版本 1706 开始，使用此变量控制任务序列何时向最终用户显示进度。 若要在不同时间隐藏或显示进度，请在一个任务序列中多次设置此变量。 若要隐藏任务序列进度，将此变量的值设为 True。 若要显示任务序列进度，将此变量的值设为 False。 | 
-| SMSTSDisableStatusRetry | <!--512358--> 在断开连接的应用场景中，任务序列引擎重复尝试将状态消息发送到管理点。 在这种情况下，此行为会导致在任务序列处理过程中的延迟。 从 Configuration Manager 版本 1802 开始，将此变量设置为“True”后，任务序列引擎将不会尝试在第一次失败后重新发送状态消息。 此行为持续到下次重新启动，或将此变量的值设置为“False”。 注意：[任务序列状态报告](/sccm/core/servers/manage/list-of-reports#task-sequence---deployment-status)依赖这些状态消息，以显示进度、历史记录和每个步骤的详细信息。 | 
+| SMSTSDisableStatusRetry | <!--512358--> 在断开连接的应用场景中，任务序列引擎重复尝试将状态消息发送到管理点。 在这种情况下，此行为会导致在任务序列处理过程中的延迟。 从 Configuration Manager 版本 1802 开始，将此变量设置为“True”后，任务序列引擎将不会尝试在第一次消息发送失败之后重新发送状态消息。 该第一次尝试包含多次重试。<br/><br/>重启任务序列时，此变量的值仍然存在。 但任务序列会尝试发送初始状态消息。 该第一次尝试包含多次重试。 如果成功，任务序列会继续发送状态，不会考虑此变量的值。 如果状态发送失败，任务序列将使用此变量的值。<br/><br/>注意：[任务序列状态报告](/sccm/core/servers/manage/list-of-reports#task-sequence---deployment-status)依赖这些状态消息，以显示进度、历史记录和每个步骤的详细信息。 | 
 |SMSTSLanguageFolder|使用此变量可更改语言中性启动映像的显示语言。|  
 |SMSTSLocalDataDrive|指定运行任务序列时临时文件保存在目标计算机的位置。<br /><br /> 此变量必须在任务序列开始前设置，例如通过设置集合变量。 任务序列启动后，Configuration Manager 定义 _SMSTSMDataPath 变量。|  
 |SMSTSMP|使用此变量指定 Configuration Manager 管理点的 URL 或 IP 地址。|  

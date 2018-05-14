@@ -2,25 +2,19 @@
 title: 配置 Azure 服务
 titleSuffix: Configuration Manager
 description: 通过云管理、升级就绪情况、适用于企业的 Microsoft Store 以及 Operations Management Suite 等 Azure 服务连接 Configuration Manager 环境。
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: a26a653e-17aa-43eb-ab36-0e36c7d29f49
-caps.latest.revision: 0
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b86c73f3f5662a00ca0b7f80b0c785c37aff0b1a
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 7ff953d658c54c2cebbbfd29a6bba83fe65cc08e
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-azure-services-for-use-with-configuration-manager"></a>配置用于 Configuration Manager 的 Azure 服务
 
@@ -154,7 +148,7 @@ ms.lasthandoff: 03/23/2018
 - **客户端 ID**
 - **密钥**
 - **密钥到期日期**：从日历选择一个未来的日期。 
-- **应用 ID URI**：此值在 Azure AD 租户中必须是唯一的。 它在 Configuration Manager 客户端用于请求访问服务的访问令牌中。 默认值为 https://ConfigMgrService。  
+- **应用 ID URI**：此值在 Azure AD 租户中必须是唯一的。 它在 Configuration Manager 客户端用于请求访问服务的访问令牌中。 默认情况下，此值为 https://ConfigMgrService。  
 
 输入信息后，单击“验证”。 然后单击“确定”以关闭导入应用对话框。 此操作会返回 Azure 服务向导的[应用页](#azure-app-properties)或[服务器应用对话框](#server-app-dialog)。
 
@@ -162,8 +156,8 @@ ms.lasthandoff: 03/23/2018
 
 在服务器应用对话框中单击“创建”时，会打开创建服务器应用程序对话框。 此页会自动在 Azure AD 中创建 Web 应用。 指定下列信息：
 - **应用程序名称**：应用的友好名称。
-- **主页 URL**：Configuration Manager 不使用此值，但是 Azure AD 需要它。 默认值为 https://ConfigMgrService。  
-- **应用 ID URI**：此值在 Azure AD 租户中必须是唯一的。 它在 Configuration Manager 客户端用于请求访问服务的访问令牌中。 默认值为 https://ConfigMgrService。  
+- **主页 URL**：Configuration Manager 不使用此值，但是 Azure AD 需要它。 默认情况下，此值为 https://ConfigMgrService。  
+- **应用 ID URI**：此值在 Azure AD 租户中必须是唯一的。 它在 Configuration Manager 客户端用于请求访问服务的访问令牌中。 默认情况下，此值为 https://ConfigMgrService。  
 - **密钥有效期**：单击下拉列表，并选择“1 年”或“2 年”。 默认值为一年。
 
 单击“登录”以进行 Azure 管理用户的身份验证。 Configuration Manager 不保存这些凭据。 此角色不需要 Configuration Manager 中的权限，其帐户也不需要与运行 Azure 服务向导的帐户相同。 成功完成 Azure 身份验证后，该页面会显示 Azure AD 租户名称以供参考。 
@@ -201,7 +195,7 @@ ms.lasthandoff: 03/23/2018
 
 在客户端应用对话框中单击“创建”时，会打开创建客户端应用程序对话框。 此页会自动在 Azure AD 中创建本机应用。 指定下列信息：
 - **应用程序名称**：应用的友好名称。
-- **回复 URL**：Configuration Manager 不使用此值，但是 Azure AD 需要它。 默认值为 https://ConfigMgrService。 
+- **回复 URL**：Configuration Manager 不使用此值，但是 Azure AD 需要它。 默认情况下，此值为 https://ConfigMgrService。 
 
 单击“登录”以进行 Azure 管理用户的身份验证。 Configuration Manager 不保存这些凭据。 此角色不需要 Configuration Manager 中的权限，其帐户也不需要与运行 Azure 服务向导的帐户相同。 成功完成 Azure 身份验证后，该页面会显示 Azure AD 租户名称以供参考。 
 

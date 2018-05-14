@@ -1,27 +1,20 @@
 ---
-title: "规划站点数据库"
+title: 规划站点数据库
 titleSuffix: Configuration Manager
-description: "规划 System Center Configuration Manager 层次结构时，请考虑站点数据库和站点数据库服务器角色。"
-ms.custom: na
-ms.date: 03/08/20168
+description: 规划 System Center Configuration Manager 层次结构时，请考虑站点数据库和站点数据库服务器角色。
+ms.date: 03/08/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 104fb4cc-6e83-40a3-8e6b-ac909fb9ec7d
-caps.latest.revision: 
-caps.handback.revision: 
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 908ca61bc99db3ca93f46120a806cd9ae54c81f7
-ms.sourcegitcommit: b653342fb5d69a16e71b3548a7e9a2e47e54bf88
+manager: dougeby
+ms.openlocfilehash: f2dbdb4702a1deac4ae130e89c501e3d122f1b49
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="plan-for-the-site-database-for-system-center-configuration-manager"></a>为 System Center Configuration Manager 规划站点数据库
 
@@ -37,7 +30,7 @@ ms.lasthandoff: 03/12/2018
 
 -  若要使用非 SQL 可用性组，数据库恢复模式必须设置为“简单”  
 
-若要详细了解 SQL 恢复模式，请参阅[恢复模式 (SQL Server)] (https://docs.microsoft.com/sql/relational-databases/backup-restore/recovery-models-sql-server)。
+有关 SQL 恢复模式的更多信息，请参阅[恢复模式 (SQL Server)] (https://docs.microsoft.com/sql/relational-databases/backup-restore/recovery-models-sql-server)。
 
 以下 SQL Server 配置可以用于承载站点数据库：  
 

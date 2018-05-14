@@ -1,30 +1,26 @@
 ---
 title: Technical Preview 1705
 titleSuffix: Configuration Manager
-description: "了解在 System Center Configuration Manager 的 Technical Preview 1705 中的可用功能。"
-ms.custom: na
+description: 了解在 System Center Configuration Manager 的 Technical Preview 1705 中的可用功能。
 ms.date: 06/02/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 00684289-d21a-45f8-b1e3-c5c787d73096
-author: erikje
-ms.author: erikje
-manager: angrobe
-ms.openlocfilehash: 60415539a645e40f1b097897d4b255924d61f389
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 49205ac1d1fc2dd20cbd4a0844632c5f3d181e45
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1705-for-system-center-configuration-manager"></a>在 System Center Configuration Manager 的 Technical Preview 1705 中的功能
 
 *适用范围：System Center Configuration Manager（Technical Preview）*
 
-本文介绍了在 System Center Configuration Manager 的 Technical Preview 1705 中的可用功能。 可以安装此版本以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。 在安装此 Technical Preview 前，请查看 [System Center Configuration Manager 的 Technical Preview](../../core/get-started/technical-preview.md)，熟悉使用 Technical Preview 的常规要求和限制，如何在两版本之间进行更新，以及如何对 Technical Preview 中的有关功能提供反馈。    
+本文介绍了在 System Center Configuration Manager 的 Technical Preview 1705 中的可用功能。 你可以安装此版本，以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。 在安装此 Technical Preview 前，请查看 [System Center Configuration Manager 的 Technical Preview](../../core/get-started/technical-preview.md)，熟悉使用 Technical Preview 的常规要求和限制，如何在两版本之间进行更新，以及如何对 Technical Preview 中的有关功能提供反馈。    
 
 **此 Technical Preview 中的已知问题：**
 -   **Operations Manager 套件连接器不升级**。 从配置了 OMS 连接器的 Technical Preview 之前版本升级时，该连接器不会升级且在控制台中变得不再可用。 在升级后，必须[使用 Azure 服务向导](capabilities-in-technical-preview-1705.md#use-azure-services-wizard-to-configure-a-connection-to-oms)并重新建立到 OMS 工作区的连接。
@@ -38,7 +34,7 @@ ms.lasthandoff: 12/01/2017
     Workaround details.
 -->
 
-**以下是可以试用的此版本的新功能。**  
+**以下是此版本可以试用的新功能。**  
 
 <!--  Rough Section Template
 ##  FEATURE
@@ -84,7 +80,7 @@ ms.lasthandoff: 12/01/2017
 
 **命令行参数：**  
 
-| 参数        |描述                 |  
+| 参数        |说明                 |  
 |------------------|----------------------------|  
 |**-S &lt;顶层站点的 SQL Server 的 FQDN>** | *必需* <br> 必须指定为层次结构的顶层站点托管站点数据库的 SQL Server 的 FQDN。    |  
 | **-D &lt;数据库名称>**                        | *必需* <br> 必须指定顶层站点数据库的名称。  |  
@@ -250,7 +246,7 @@ ms.lasthandoff: 12/01/2017
 在开始之前，请确保客户端安装源文件已本地存储在用于安装此客户端的设备上。
 然后，使用[如何将客户端部署到 System Center Configuration Manager 中的 Windows 计算机](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#a-namebkmkmanuala-how-to-install-clients-manually)中的说明，使用以下安装命令行（将示例中的值替换为你自己的值）：
 
-**ccmsetup.exe /NoCrlCheck /Source:C:\CLIENT  CCMHOSTNAME=SCCMPROXYCONTOSO.CLOUDAPP.NET/CCM_Proxy_ServerAuth/72457598037527932 SMSSiteCode=HEC AADTENANTID=780433B5-E05E-4B7D-BFD1-E8013911E543 AADTENANTNAME=contoso  AADCLIENTAPPID=<GUID> AADRESOURCEURI=https://contososerver**
+ccmsetup.exe /NoCrlCheck /Source:C:\CLIENT  CCMHOSTNAME=SCCMPROXYCONTOSO.CLOUDAPP.NET/CCM_Proxy_ServerAuth/72457598037527932 SMSSiteCode=HEC AADTENANTID=780433B5-E05E-4B7D-BFD1-E8013911E543 AADTENANTNAME=contoso  AADCLIENTAPPID=<GUID> AADRESOURCEURI=https://contososerver
 
 - **/NoCrlCheck**：如果管理点或云管理网关使用非公共服务器证书，则客户端可能无法访问 CRL 位置。
 - **/Source**：本地文件夹 - 客户端安装文件的位置。

@@ -1,26 +1,20 @@
 ---
-title: "如何创建 Wi-Fi 配置文件"
+title: 如何创建 Wi-Fi 配置文件
 titleSuffix: Configuration Manager
-description: "了解如何在 System Center Configuration Manager 中使用 Wi-Fi 配置文件为组织中的用户部署无线网络设置。"
-ms.custom: na
+description: 了解如何在 System Center Configuration Manager 中使用 Wi-Fi 配置文件为组织中的用户部署无线网络设置。
 ms.date: 12/11/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: 321b19b2-a093-4b8f-995f-41f74b886eb5
-caps.latest.revision: "13"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 24bc4ad8290bfa1a8b298374d5adf7ab1841398e
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: b665143f40973c20307b99c15f94d773d43b4914
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-wi-fi-profiles"></a>创建 Wi-Fi 配置文件
 
@@ -74,7 +68,7 @@ ms.lasthandoff: 10/12/2017
 1.  在“Wi-Fi 配置文件”页，提供设备会将其显示为网络名称的名称。  
 
     > [!IMPORTANT]  
-    >  Configuration Manager 不支持在网络名称中使用单引号 (**â€˜**) 或逗号 (**,**) 字符。  
+    >  Configuration Manager 不支持在网络名称中使用单引号 (‘) 或逗号 (,) 字符。  
 
 2.  指定区分大小写的 **SSID**
 3.  选择其他适当的连接选项，包括：   如果有可能隐藏了 SSID，则**在网络未广播其名称 (SSID) 时连接**  

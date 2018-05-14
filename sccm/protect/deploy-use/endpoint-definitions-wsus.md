@@ -1,25 +1,20 @@
 ---
-title: "WSUS 中的 Endpoint Protection 恶意软件定义"
+title: WSUS 中的 Endpoint Protection 恶意软件定义
 titleSuffix: Configuration Manager
-definition: Learn how to configure Windows Server Updates Services to auto-approve definition updates.
-ms.custom: na
 ms.date: 02/14/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: a34d9401-83e4-471d-8e23-b8042fc11c90
-caps.latest.revision: "21"
-author: NathBarn
-ms.author: nathbarn
-manager: angrobe
-ms.openlocfilehash: fcc0e1909705fb1954c58c438438792a4866d3bf
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+description: 了解如何将 Windows Server 更新服务配置为自动批准定义更新。
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: b1c79a839ad1c83c96d7fe4583b46f6a3edbffba
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="enable-endpoint-protection-malware-definitions-to-download-from-windows-server-update-services-wsus-for-configuration-manager"></a>启用 Endpoint Protection 恶意软件定义，以便从 Server Update Services (WSUS) 为 Configuration Manager 下载定义
 
@@ -29,9 +24,9 @@ ms.lasthandoff: 10/12/2017
 
 ## <a name="to-synchronize-endpoint-protection-definition-updates-in-configuration-manager-software-updates"></a>在 Configuration Manager 软件更新中同步 Endpoint Protection 定义更新
 
-1.  在 Configuration Manager 控制台中，单击“管理” 。
+1.  在 Configuration Manager 控制台中，单击“管理”。
 
-2.  在“管理”  工作区中，展开“站点配置” ，然后单击“站点” 。
+2.  在“管理”工作区中，展开“站点配置”，然后单击“站点”。
 
 3.  选择包含你的软件更新点的站点。 在“设置”  组中，单击“配置站点组件” ，然后单击“软件更新点” 。
 

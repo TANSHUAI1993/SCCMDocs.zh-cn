@@ -1,21 +1,20 @@
 ---
-title: "更改特定用户的 MDM 机构（混合 MDM 机构）"
+title: 更改特定用户的 MDM 机构（混合 MDM 机构）
 titleSuffix: Configuration Manager
-description: "了解如何将部分用户的 MDM 机构从混合 MDM 更改为 Intune 独立版。"
-keywords: 
-author: dougeby
+description: 了解如何将部分用户的 MDM 机构从混合 MDM 更改为 Intune 独立版。
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-ms.date: 12/05/2017
-ms.topic: article
-ms.prod: configmgr-hybrid
-ms.service: 
-ms.technology: 
+ms.date: 04/30/2018
+ms.topic: conceptual
+ms.prod: configuration-manager
+ms.technology: configmgr-hybrid
 ms.assetid: 6f0201d7-5714-4ba0-b2bf-d1acd0203e9a
-ms.openlocfilehash: 59fb06d14002f781e0448a64bb0064b4add2f087
-ms.sourcegitcommit: ac9268e31440ffe91b133c2ba8405d885248d404
+ms.openlocfilehash: 46fb1333c58f3010acde4d064044a124050d211a
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="change-the-mdm-authority-for-specific-users-mixed-mdm-authority"></a>更改特定用户的 MDM 机构（混合 MDM 机构） 
 
@@ -105,45 +104,40 @@ ms.lasthandoff: 01/08/2018
 
 
 ### <a name="parameters"></a>参数
-``` powershell
--Credential <PSCredential>
-Credential for Intune Tenant Admin or Service Admin account to use when switching device management authorities. The user is prompted for credentials if the parameter is not specified.
+#### `-Credential <PSCredential>`
+切换设备管理权限时使用的 Azure AD 用户帐户的 PowerShell 凭据对象。 如果未指定参数，则会提示用户输入凭据。 此用户帐户的目录角色应为“全局管理员”或“受限管理员”，管理角色为“Intune 管理员”。
 
--DeviceIds <Guid[]>
-The ids of the MDM devices that need to have their management authority switched. The device ids are unique identifiers for the devices displayed by the Configuration Manager console.
+#### `-DeviceIds <Guid[]>`
+需要切换其管理权限的 MDM 设备的 ID。 设备 ID 是由 Configuration Manager 控制台显示的设备的唯一标识符。
 
--Force [<SwitchParameter>]
-Specify parameter to disable the Should Continue prompt.<br>
+#### `-Force [<SwitchParameter>]`
+指定参数以禁用“是否继续”提示。<br>
  
--LogFilePath <string>
-Path to log file location.
+#### `-LogFilePath <string>`
+日志文件位置的路径。
  
--LoggingLevel <SourceLevels>
-The log level used to determine the type of logs that need to be written to the log file.
+#### `-LoggingLevel <SourceLevels>`
+日志级别用于确定需要写入日志文件的日志类型。
  
-The following are the possible values for LoggingLevel:
+以下是 LoggingLevel 的可能值：
 
   - ActivityTracing
   - All
-  - Critical
-  - Error
-  - Information
+  - 严重
+  - 错误
+  - 信息
   - Off
-  - Verbose
-  - Warning
+  - 详细
+  - 警告
  
--Confirm [<SwitchParameter>]
-Prompts you for confirmation before executing the command.
+#### `-Confirm [<SwitchParameter>]`
+执行命令之前提示您确认。
  
--WhatIf [<SwitchParameter>]
-Describes what would happen if you executed the command without actually executing the command.
+#### `-WhatIf [<SwitchParameter>]`
+描述如果执行命令会发生什么情况，但不实际执行该命令。
  
-<CommonParameters>
-This cmdlet supports the common parameters: Verbose, Debug,
-ErrorAction, ErrorVariable, WarningAction, WarningVariable,
-OutBuffer, PipelineVariable, and OutVariable. For more information, see
-[about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
-```
+#### `<CommonParameters>`
+此 cmdlet 支持以下常见参数：Verbose、Debug、-ErrorAction、ErrorVariable、WarningAction、WarningVariable、OutBuffer、PipelineVariable 和 OutVariable。 有关详细信息，请参阅 [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216)。
 
 ### <a name="example-1"></a>示例 1
 
@@ -162,13 +156,13 @@ Description
  
 Successfully switched the management authority of the device from Configuration Manager to Intune.
 ```
+
 ### <a name="remarks"></a>备注
-``` powershell
-To see the examples, type: "get-help Switch-MdmDeviceAuthority -examples".
-For more information, type: "get-help Switch-MdmDeviceAuthority -detailed".
-For technical information, type: "get-help Switch-MdmDeviceAuthority -full".
-For online help, type: "get-help Switch-MdmDeviceAuthority -online".
-```
+- 若要查看此示例，请键入：`get-help Switch-MdmDeviceAuthority -examples`  
+- 要获取详细信息，请键入：`get-help Switch-MdmDeviceAuthority -detailed`  
+- 要获取技术信息，请键入：`get-help Switch-MdmDeviceAuthority -full`  
+- 要获取在线帮助，请键入：`get-help Switch-MdmDeviceAuthority -online`   
+
 
 ## <a name="next-steps"></a>后续步骤
 迁移了用户并测试过 Intune 功能后，请考虑是否已准备好为 Intune 租户[更改 MDM 机构](migrate-change-mdm-authority.md)，从 Configuration Manager 更改为 Intune。 

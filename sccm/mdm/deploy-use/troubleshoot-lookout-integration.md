@@ -1,25 +1,20 @@
 ---
-title: "对 Lookout 集成进行故障排除"
+title: 对 Lookout 集成进行故障排除
 titleSuffix: Configuration Manager
-description: "本主题介绍如何解决 Lookout 集成中的常见问题。"
-ms.custom: na
+description: 本主题介绍如何解决 Lookout 集成中的常见问题。
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e36b98c7-d0f4-4dd6-bac3-6a6c4b4bf841
-caps.latest.revision: 
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 244d32e98ad863f6c9ea1747b4f786c3a1279fc0
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: ee978543248e70182e12a3d6234cfd12be80dc98
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="troubleshoot-lookout-integration-with-intune"></a>使用 Intune 对 Lookout 集成进行故障排除
 
@@ -35,7 +30,7 @@ Lookout MTP 配置为仅允许来自已配置的 Azure AD 组的用户访问。 
 
 * 电子邮件：enterprisesupport@lookout.com
 * 登录 [MTP 控制台](http://aad.lookout.com)，导航到“支持”模块。
-* 转到 https://enterprise.support.lookout.com/hc/requests，然后提出支持请求。
+* 前往 https://enterprise.support.lookout.com/hc/requests 并提出支持请求。
 
 ### <a name="unable-to-sign-in"></a>无法登录
 在 Azure AD 全局管理员用户尚未接受初始 Lookout 安装程序时，可能会看到以下错误。

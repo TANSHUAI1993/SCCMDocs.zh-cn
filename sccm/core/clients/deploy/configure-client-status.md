@@ -1,27 +1,20 @@
 ---
-title: "配置客户端状态"
+title: 配置客户端状态
 titleSuffix: Configuration Manager
-description: "在 System Center Configuration Manager 中选择客户端状态设置。"
-ms.custom: na
+description: 在 System Center Configuration Manager 中选择客户端状态设置。
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: a2275ba2-c83d-43e7-90ed-418963a707fe
-caps.latest.revision: 
-caps.handback.revision: 
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 5db52925515e65797a43ed35775460369f742f49
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 8f919e647ae252731d60a98e01485a01aae10698
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-configure-client-status-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中配置客户端状态
 
@@ -31,7 +24,7 @@ ms.lasthandoff: 10/12/2017
 
 ##  <a name="BKMK_1"></a>配置客户端状态  
 
-1.  在 Configuration Manager 控制台中，单击“监视” 。  
+1.  在 Configuration Manager 控制台中，单击“监视”。  
 
 2.  在“监视”  工作区中，单击“客户端状态” ，然后，在“主页”  选项卡中，在“客户端状态”  组中单击“客户端状态设置” 。  
 
@@ -58,7 +51,7 @@ ms.lasthandoff: 10/12/2017
 
 ##  <a name="BKMK_Schedule"></a>配置客户端状态的计划  
 
-1.  在 Configuration Manager 控制台中，单击“监视” 。  
+1.  在 Configuration Manager 控制台中，单击“监视”。  
 
 2.  在“监视”  工作区中，单击“客户端状态” ，然后，在“主页”  选项卡中，在“客户端状态”  组中单击“计划客户端状态更新” 。  
 
@@ -69,7 +62,7 @@ ms.lasthandoff: 10/12/2017
 
 ##  <a name="BKMK_2"></a>配置客户端状态的警报  
 
-1.  在 Configuration Manager 控制台中，单击“资产和符合性” 。  
+1.  在 Configuration Manager 控制台中，单击“资产和符合性”。  
 
 2.  在“资产和符合性”  工作区中，单击“设备集合” 。  
 
@@ -78,7 +71,7 @@ ms.lasthandoff: 10/12/2017
     > [!NOTE]  
     >  无法为用户集合配置警报。  
 
-4.  在“&lt;集合名称\>”的“属性”对话框的“警报”选项卡上，单击“添加”。  
+4.  在“&lt;集合名称\> 属性”对话框的“警报”选项卡上，单击“添加”。  
 
     > [!NOTE]  
     >  仅在与你关联的安全角色具有警报的权限时，“警报”  选项卡才可见。  
@@ -93,7 +86,7 @@ ms.lasthandoff: 10/12/2017
 
     -   **引发警报** - 指定警报的阈值百分比。  
 
-7.  单击“确定”关闭“&lt;集合名称\>”的“属性”对话框。  
+7.  单击“确定”关闭“&lt;集合名称\> 属性”对话框。  
 
 ##  <a name="BKMK_3"></a>禁止计算机自动修正问题  
 

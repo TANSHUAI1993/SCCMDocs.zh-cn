@@ -1,26 +1,20 @@
 ---
-title: "为使用 Intune 管理的 iOS 和 Mac OS X 设备创建配置项"
+title: 为使用 Intune 管理的 iOS 和 Mac OS X 设备创建配置项
 titleSuffix: Configuration Manager
-description: "使用 System Center Configuration Manager iOS 和 Mac OS X 配置项管理 iOS and Mac OS X 设备的设置。"
-ms.custom: na
+description: 使用 System Center Configuration Manager iOS 和 Mac OS X 配置项管理 iOS and Mac OS X 设备的设置。
 ms.date: 03/28/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 613a48ac-c55d-4c4a-94ea-d3747a1b10cb
-caps.latest.revision: "15"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: d101ffc649928c1136386bc7979d4a37ad404af1
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 0a6925cdc1f3b3a5018cc4895820019d88254bd3
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-configuration-items-for-ios-and-mac-os-x-devices-managed-with-intune"></a>如何为使用 Intune 管理的 iOS 和 Mac OS X 设备创建配置项
 使用 System Center Configuration Manager **iOS 和 Mac OS X** 配置项目为已在 Microsoft Intune 中注册或通过 Configuration Manager 进行本地管理的 iOS 和 Mac OS X 的设备管理设置。  
@@ -58,7 +52,7 @@ ms.lasthandoff: 10/12/2017
   
     -   **严重** - 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“严重”这一故障严重性。  
   
-    -   **事件严重** - 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“严重”这一故障严重性。 应用程序事件日志中也会以 Windows 事件的形式记录此严重性级别。  
+    -   **事件严重** - 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“严重”这一故障严重性。 此外会记录此严重性级别为应用程序事件日志中的 Windows 事件。  
   
 11. 在向导的“平台适用性”  页面上，查看任何与先前选择的受支持平台不兼容的设置。 你可以返回并删除这些设置，也可以继续。  
   
@@ -124,7 +118,7 @@ ms.lasthandoff: 10/12/2017
 |**使用 Siri 从 Internet 查询用户生成的内容**(仅限监控模式)|允许 Siri 访问网站以回答问题。|
 
   
-###  <a name="store"></a>存储  
+###  <a name="store"></a>应用商店  
  这些设置仅适用于 iOS 设备。  
   
 |设置名|详细信息|  
@@ -243,7 +237,7 @@ ms.lasthandoff: 10/12/2017
   
          打开应用页面，并将该 URL 复制到剪贴板。 你现在可以在符合或不符合要求的应用列表中使用这个 URL。  
   
-         “示例：” 在应用商店中搜索“”  应用。 你使用的 URL 将为 **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**。  
+         “示例：” 在应用商店中搜索“”  应用。 你使用的 URL 将为 https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8。  
   
     -   **编辑** - 允许你编辑选定应用的名称、发布者和 URL。  
   
@@ -280,7 +274,7 @@ ms.lasthandoff: 10/12/2017
         >  若要查找应用的捆绑 ID，请在已安装此应用的 Mac 计算机上执行以下步骤：  
         >   
         >  1.  打开安装应用的文件夹（例如，“/Applications” ）  
-        > 2.  选择 *<应用名称\>*.app 捆绑，然后选择“显示包内容”  
+        > 2.  选择“<应用名称\>.app ”捆绑，然后选择“显示包内容”  
         > 3.  打开“Info.plist”  文件  
         > 4.  检查与“”   
         >   
@@ -335,7 +329,7 @@ ms.lasthandoff: 10/12/2017
   
         -   **严重** 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“严重”这一故障严重性。  
   
-        -   **事件严重** 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“严重”这一故障严重性。 应用程序事件日志中也会以 Windows 事件的形式记录此严重性级别。  
+        -   **事件严重** 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“严重”这一故障严重性。 此外会记录此严重性级别为应用程序事件日志中的 Windows 事件。  
   
 #### <a name="how-to-create-a-configuration-profile-file"></a>如何创建配置文件  
  可以通过以下两种方法创建用于自定义策略的配置文件：  
@@ -363,7 +357,7 @@ ms.lasthandoff: 10/12/2017
   
         -   复制页面 URL 并将此用作指定需在展台模式中运行的应用的 URL。  
   
-        -   “示例：” 搜索“” 。 你使用的 URL 将为 **https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8**。  
+        -   “示例：” 搜索“” 。 你使用的 URL 将为 https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8。  
   
     -   **触控** - 启用或禁用设备上的触摸屏。  
   
@@ -409,7 +403,7 @@ ms.lasthandoff: 10/12/2017
   
         -   **严重** 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“严重”这一故障严重性。  
   
-        -   **事件严重** 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“严重”这一故障严重性。 应用程序事件日志中也会以 Windows 事件的形式记录此严重性级别。  
+        -   **事件严重** 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“严重”这一故障严重性。 此外会记录此严重性级别为应用程序事件日志中的 Windows 事件。  
   
 ## <a name="see-also"></a>另请参阅  
  [未使用 System Center Configuration Manager 客户端管理的设备的配置项目](../../compliance/deploy-use/configuration-items-for-devices-managed-without-the-client.md)

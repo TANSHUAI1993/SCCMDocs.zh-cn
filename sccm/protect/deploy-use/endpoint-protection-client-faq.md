@@ -1,25 +1,20 @@
 ---
-title: "Endpoint Protection 客户端的常见问题"
+title: Endpoint Protection 客户端的常见问题
 titleSuffix: Configuration Manager
-description: "获取有关 Windows Defender 和 Endpoint Protection 常见问题的解答。"
-ms.custom: na
+description: 获取有关 Windows Defender 和 Endpoint Protection 常见问题的解答。
 ms.date: 12/09/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: e3aaa9d2-a40e-42b1-ad75-5a115351729e
-caps.latest.revision: "15"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 2656a5c40dbd2916ef36268936a4e2163ebde14d
-ms.sourcegitcommit: 372171a5cd8d143d6d47b651018cda0c91cad67c
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 7e86c8196cf2ff2473b066fccf741c2df20cd8f9
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="endpoint-protection-client-frequently-asked-questions"></a>Endpoint Protection 客户端的常见问题
 
@@ -158,7 +153,7 @@ ms.lasthandoff: 12/09/2017
 
 -   请确保你的防病毒和反间谍软件 Windows Defender 使用最新的更新应对潜在的威胁（请参阅“如何使病毒和间谍软件定义保持最新？”）。 此外请确保你始终使用最新版本的 Windows Defender。  
 
--   仅从可信的来源下载更新。 对于 Windows 操作系统，请始终访问 [Microsoft 更新](http://go.microsoft.com/fwlink/?LinkID=96304) (http://go.microsoft.com/fwlink/?LinkID=96304)，对于其他软件，请始终使用开发该软件的公司或个人的合法网站。  
+-   仅从可信的来源下载更新。 对于 Windows 操作系统，请始终访问 [Microsoft 更新](http://go.microsoft.com/fwlink/?LinkID=96304) (http://go.microsoft.com/fwlink/?LinkID=96304))，对于其他软件，请始终使用开发该软件的公司或个人的合法网站。  
 
 -   如果你收到一封带有附件的电子邮件，并且你不确定来源，那么你应该立即删除它。 不要从未知来源下载任何应用程序或文件，与其他用户交换文件时要小心。  
 
@@ -219,7 +214,7 @@ ms.lasthandoff: 12/09/2017
 |扫描所有下载|此选项可监视下载的文件和程序，包括通过 Windows Internet Explorer 和 Microsoft Outlook ® Express 自动下载的文件，例如 ActiveX® 控件和软件安装程序。 这些文件可通过浏览器自身下载、安装或运行。 恶意软件，包括病毒、间谍软件和其他可能不需要的软件可以包含在这些文件中，并在你不知情的情况下安装。<br /><br /> 使用此实时保护选项，Windows Defender 可以始终监视你的计算机，并检查你可能已下载的任何恶意文件或程序。 此监视功能意味着 Windows Defender 不需要通过要求检查你可能想要下载的任何文件或程序来减慢你的浏览或电子邮件速度。|  
 |监视计算机上的文件和程序活动|此选项是在文件和程序开始在你的计算机上运行时进行监视，然后它会对你发出警报，通知你它们要执行的任何操作和要对它们执行的操作。 这非常重要，因为恶意软件会利用已安装程序的漏洞在你不知情的情况下运行恶意或不需要的软件。 例如，当你启动经常使用的程序时，间谍软件可以在后台运行。 Windows Defender 监视你的程序，并在检测到可疑活动时向你发出警报。|  
 |启用行为监视|此选项可监视传统防病毒检测方法可能检测不到的可疑模式的行为集合。|  
-|启用网络检查系统|此选项可帮助保护计算机免受已知漏洞的零日攻击、缩小发现漏洞和应用更新之间的时间段。|  
+|启用网络检查系统|此选项可帮助保护计算机免受已知漏洞的“零日”攻击、缩小发现漏洞和应用更新之间的时间段。|  
 
 ### <a name="to-turn-off-real-time-protection"></a>要关闭实时保护  
 

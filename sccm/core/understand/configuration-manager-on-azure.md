@@ -1,24 +1,19 @@
 ---
-title: "Azure 上的 Configuration Manager"
-description: "有关在 Azure 环境中使用 Configuration Manager 的信息。"
-ms.custom: na
+title: Azure 上的 Configuration Manager
+description: 有关在 Azure 环境中使用 Configuration Manager 的信息。
 ms.date: 03/27/2017
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d24257d8-8136-47f4-8e0d-34021356dc37
-caps.latest.revision: "2"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: d73ab50e5fc9472a977951f6c2d5bbd3fd408c39
-ms.sourcegitcommit: ca9d15dfb1c9eb47ee27ea9b5b39c9f8cdcc0748
+manager: dougeby
+ms.openlocfilehash: 2b952e76fc21e3190430cdf34cb4a264918fd199
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configuration-manager-on-azure---frequently-asked-questions"></a>Azure 上的 Configuration Manager - 常见问题解答
 *适用范围：System Center Configuration Manager (Current Branch)*
@@ -153,25 +148,25 @@ ms.lasthandoff: 01/04/2018
 
 ## <a name="cost"></a>成本
 ### <a name="ok-tell-me-a-bit-about-the-cost-will-this-be-a-cost-effective-solution-for-me"></a>好的，请提供一些成本方面的信息。 这对我来说是划算的解决方案吗？
-很难说，因为环境存在差异。 最佳办法就是使用 Microsoft Azure 定价计算器为环境估算成本： https://azure.microsoft.com/pricing/calculator/
+很难说，因为环境存在差异。 最佳办法就是使用 Microsoft Azure 定价计算器为环境估算成本：https://azure.microsoft.com/pricing/calculator/
 
 ## <a name="additional-resources"></a>其他资源
-**基础知识：** http://azure.microsoft.com/documentation/articles/fundamentals-introduction-to-azure/
+基础知识：http://azure.microsoft.com/documentation/articles/fundamentals-introduction-to-azure/
 
 **Azure VM 计算机类型：**
  - Azure 计算机大小：https://azure.microsoft.com/documentation/articles/virtual-machines-size-specs/  
- - VM 定价： http://azure.microsoft.com/pricing/details/virtual-machines/  
+ - VM 定价：http://azure.microsoft.com/pricing/details/virtual-machines/  
  - 存储定价：http://azure.microsoft.com/pricing/details/storage/
 
 **磁盘性能注意事项：**    
  - 高级磁盘简介：http://azure.microsoft.com/blog/2014/12/11/introducing-premium-storage-high-performance-storage-for-azure-virtual-machine-workloads/  
- - 高级磁盘详情：http://azure.microsoft.com/documentation/articles/storage-premium-storage-preview-portal/   
- - 易于使用的最大存储大小和存储性能目标图表集：https://azure.microsoft.com/documentation/articles/storage-scalability-targets/  
- - 其他介绍 + 一些有关高级存储工作原理的超酷 uber-geek 数据： http://azure.microsoft.com/blog/2015/04/16/azure-premium-storage-now-generally-available-2/
+ - 高级磁盘深层信息：http://azure.microsoft.com/documentation/articles/storage-premium-storage-preview-portal/   
+ - 有关图表的最大大小和存储性能目标的综合信息：https://azure.microsoft.com/documentation/articles/storage-scalability-targets/  
+ - 另一篇简介以及一些有关高级存储深层工作原理的有用电脑数据：http://azure.microsoft.com/blog/2015/04/16/azure-premium-storage-now-generally-available-2/
 
 **可用性：**
- - Azure IaaS 正常运行时间 SLA：https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_0/  
- - 所述的可用性集：https://azure.microsoft.com/documentation/articles/virtual-machines-manage-availability/
+ - Azure IaaS 运行时间 SLA：https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_0/  
+ - 可用性集说明：https://azure.microsoft.com/documentation/articles/virtual-machines-manage-availability/
 
 **连接性：**
  - Express Route 与Azure VPN：http://azure.microsoft.com/blog/2014/06/10/expressroute-or-virtual-network-vpn-whats-right-for-me/

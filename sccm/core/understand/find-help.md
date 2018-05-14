@@ -2,56 +2,45 @@
 title: 查找帮助
 titleSuffix: Configuration Manager
 description: 查找有关 System Center Configuration Manager 的其他信息的资源。
-ms.custom: na
-ms.date: 12/22/2017
+ms.date: 04/30/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 86810629-cf2a-43e8-86a2-847444119fc1
-caps.latest.revision: 19
-caps.handback.revision: 0
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: bcf53c11a30aa2fc3995697f36f00960035bbe57
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+manager: dougeby
+ms.openlocfilehash: 2c9e2f0b570360b730f7a8659791a7f054200d36
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="find-help-for-using-system-center-configuration-manager"></a>查找使用 System Center Configuration Manager 的帮助
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-本文提供了多个资源来查找关于使用 Configuration Manager 的帮助。  
+本文以下部分提供多种资源，可用于查找有关使用 Configuration Manager 的帮助：  
 
-有关产品辅助功能的帮助，请参阅 [System Center Configuration Manager 中的辅助功能](../../core/understand/accessibility-features.md)。
+- [产品文档](#bkmk_Info)  
+
+- [分享产品反馈](#product-feedback)  
+
+- [关注 Configuration Manager 团队博客](#BKMK_ProductGroupBlog)  
+
+- [支持选项和社区资源](#BKMK_SupportOptions)  
+
+有关产品辅助功能的帮助，请参阅 [Configuration Manager 中的辅助功能](../../core/understand/accessibility-features.md)。  
 
 
 ##  <a name="bkmk_Info"></a> 产品文档  
- 请使用以下有关 Configuration Manager 的其他信息的资源。  
 
--   若要访问最新的产品文档，请从[库索引](https://docs.microsoft.com/sccm/)开始
+若要访问最新的产品文档，请从[库索引](https://docs.microsoft.com/sccm/)开始。  
 
--   若要提供有关文档的反馈，请通过 [UserVoice](https://configurationmanager.uservoice.com/forums/300492-ideas/category/112371-documentation) 进行提交  
+<a name="BKMK_SearchTips"></a>  
 
+有关搜索、提供反馈的提示和使用产品文档的详细信息，请参阅[如何使用文档](/sccm/core/understand/use-docs)。  
 
-###  <a name="BKMK_SearchTips"></a> 搜索文档库  
- 使用下列搜索提示来帮助你查找所需信息：  
-
--   使用首选的搜索引擎查找 Configuration Manager 的内容时，可通过包含以下两个术语将搜索结果的范围缩小为当前内容库：SCCM 和 Docs。
-
--   使用和用户界面以及在线文档中的术语相匹配的搜索词。 避免使用可能在社区内容中见过的非正式术语或缩写。 例如，搜索“management point”（管理点）而不是“MP”、搜索“deployment type”（部署类型）而不是“DT”，以及搜索“software updates”（软件更新）而不是“SUM”。  
-
--   若要对正在 docs.microsoft.com 浏览的文章进行搜索，请选择 Ctrl+F 并在浏览器的“查找”框中输入搜索词。 
-
--   Docs.microsoft.com 上的每篇文章都包括以下字段以帮助搜索内容：
-    - 右上角的“搜索”。 若要在所有文章中进行搜索，请在这里输入搜索词。 Configuration Manager 库中的文章自动包括“ConfigMgr”作用域。
-    - 左侧目录上方的“筛选器”。 若要对当前目录进行搜索，请在这里输入搜索词。 此字段仅匹配出现在文章标题中的搜索词。 
 
 
 ## <a name="product-feedback"></a>产品反馈

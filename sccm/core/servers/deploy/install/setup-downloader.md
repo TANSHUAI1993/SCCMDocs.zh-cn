@@ -1,26 +1,20 @@
 ---
-title: "安装程序下载程序"
+title: 安装程序下载程序
 titleSuffix: Configuration Manager
-description: "阅读有关此独立应用程序的信息，该应用程序可确保站点安装使用的是当前版本的关键安装文件。"
-ms.custom: na
+description: 阅读有关此独立应用程序的信息，该应用程序可确保站点安装使用的是当前版本的关键安装文件。
 ms.date: 3/1/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: bda87fc5-2e4c-4992-98a4-01770365038c
-caps.latest.revision: 
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: dec591ac845b6c54421197099e56d7a4a86783ae
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: f8948556ebee069e4ea1c8bf16302ef92fe7b3c1
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setup-downloader-for-system-center-configuration-manager"></a>System Center Configuration Manager 安装程序下载程序
 
@@ -56,7 +50,7 @@ ms.lasthandoff: 12/04/2017
 
 ## <a name="run-setup-downloader-from-a-command-prompt"></a>从命令提示符运行安装程序下载程序  
 
-1.  在命令提示符窗口中，转到 &lt;Configuration Manager installation media\>\SMSSETUP\BIN\X64**。   
+1.  在命令提示符窗口中，转到 &lt;Configuration Manager 安装介质\>\SMSSETUP\BIN\X64。   
 
 2.  若要打开安装程序下载程序，请运行“Setupdl.exe”。
 

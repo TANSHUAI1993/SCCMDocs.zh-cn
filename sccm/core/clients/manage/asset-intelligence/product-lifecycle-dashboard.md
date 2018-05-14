@@ -1,28 +1,21 @@
 ---
-title: "产品生命周期仪表板"
+title: 产品生命周期仪表板
 titleSuffix: Configuration Manager
-description: "在 System Center Configuration Manager 中获取有关产品生命周期仪表板的信息。"
-ms.custom: na
+description: 在 System Center Configuration Manager 中获取有关产品生命周期仪表板的信息。
 ms.date: 02/13/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 8b5b144a-0e5f-4fcc-87b2-33b9bcdb5655
-caps.latest.revision: 
-caps.handback.revision: 
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 robots: noindex,nofollow
-ms.openlocfilehash: cfc54c1beb92d0102897f77ce3c287cc0ef9e0f4
-ms.sourcegitcommit: fbd4a9d2fa8ed4ddd3a0fecc4a2ec4fc0ccc3d0c
+ms.openlocfilehash: 8f24fcd2d75d34e2d2d69c9c54f4f47991be7301
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-the-product-lifecycle-dashboard-to-manage-microsoft-lifecycle-policy-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中使用产品生命周期仪表板来管理 Microsoft 生命周期策略
 
@@ -72,7 +65,7 @@ ms.lasthandoff: 02/19/2018
     - 后续步骤 
 
 >[!IMPORTANT]
->为方便起见，我们提供了此仪表板中显示的信息，并且仅供公司内部使用。 不应仅依赖此信息来确认符合性。 请务必验证提供给你的信息的准确性，并通过访问 https://support.microsoft.com/zh-cn/lifecycle 来验证支持信息的可用性。
+>为方便起见，我们提供了此仪表板中显示的信息，并且仅供公司内部使用。 不应仅依赖此信息来确认符合性。 请务必验证提供给你的信息的准确性，并通过访问 https://support.microsoft.com/en-us/lifecycle 来验证支持信息的可用性。
 
 ## <a name="reporting"></a>报表
 在类别“产品生命周期”下添加以下新报表：

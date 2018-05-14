@@ -1,25 +1,20 @@
 ---
-title: "配置 Endpoint Protection 警报"
+title: 配置 Endpoint Protection 警报
 titleSuffix: Configuration Manager
-description: "了解如何在 System Center Configuration Manager 中配置 Endpoint Protection 警报。"
-ms.custom: na
+description: 了解如何在 System Center Configuration Manager 中配置 Endpoint Protection 警报。
 ms.date: 03/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: f504de3e-4caf-455c-80d7-a63f13f4c5d9
-caps.latest.revision: "21"
-author: NathBarn
-ms.author: nathbarn
-manager: angrobe
-ms.openlocfilehash: 91df245565cfe99f79a18618d62c00f0cea579d2
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 275ce06520174adf10100b77a8034620b072c93f
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 #  <a name="configure-alerts-for-endpoint-protection-in-configuration-manager"></a>在 Configuration Manager 中为 Endpoint Protection 配置警报
 
@@ -34,21 +29,21 @@ ms.lasthandoff: 10/12/2017
 
 ## <a name="steps-to-configure-alerts-for-endpoint-protection-in-configuration-manager"></a>在 Configuration Manager 中为 Endpoint Protection 配置警报的步骤
 
-1.  在 Configuration Manager 控制台中，单击“资产和符合性” 。
+1.  在 Configuration Manager 控制台中，单击“资产和符合性”。
 
-2.  在“资产和符合性”  工作区中，单击“设备集合” 。
+2.  在“资产和符合性”工作区中，单击“设备集合”。
 
 3.  在“设备集合”  列表中，选择要为其配置警报的集合，然后，在“主页”  选项卡中的“属性”  组中单击“属性” 。
 
     > [!NOTE]
     >  无法为用户集合配置警报。
 
-4.  如果你想要在 Configuration Manager 控制台的“监视”工作区中查看有关此集合的反恶意软件操作的详细信息，则在“<集合名称\>属性”对话框的“警报”选项卡中，选择“在 Endpoint Protection 仪表板中查看此集合”。
+4.  如果想要在 Configuration Manager 控制台的“监视”工作区中查看有关此集合的反恶意软件操作的详细信息，则在“<集合名称\> 属性”对话框的“警报”选项卡中，选择“在 Endpoint Protection 仪表板中查看此集合”。
 
     > [!NOTE]
     >  此选项不可用于“所有系统”  集合。
 
-5.  在“<集合名称\>属性”对话框的“警报”选项卡上，单击“添加”。
+5.  在“<集合名称\> 属性”对话框的“警报”选项卡上，单击“添加”。
 
 6.  在“添加新的集合警报”对话框中的“这些条件适用时生成警报”部分中，选择在指定的 Endpoint Protection 事件发生时想要 Configuration Manager 生成的警报，然后单击“确定”。
 
@@ -87,7 +82,7 @@ ms.lasthandoff: 10/12/2017
 
         -   **检测间隔（小时）：** 指定在其间必须发生指定的恶意软件检测次数的检测间隔（以小时为单位）。 指定一个介于“1”  到“168” 之间的数字。
 
-9. 单击“确定”关闭“<集合名称\>属性”对话框。  
+9. 单击“确定”关闭“<集合名称\> 属性”对话框。  
 
 ## <a name="alert-for-outdated-malware-client"></a>过时的恶意软件客户端的警报
 

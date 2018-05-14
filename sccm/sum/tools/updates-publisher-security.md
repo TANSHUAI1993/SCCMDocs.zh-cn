@@ -1,27 +1,21 @@
 ---
-title: "证书和安全"
+title: 证书和安全
 titleSuffix: Configuration Manager
-description: "管理 System Center Updates Publisher 中的证书和安全性"
-ms.custom: na
+description: 管理 System Center Updates Publisher 中的证书和安全性
 ms.date: 4/29/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-sum
+ms.topic: conceptual
 ms.assetid: a7f91e63-4750-402e-9970-dd14be7f76a3
-caps.latest.revision: 
-author: mestew
-ms.author: mstewart
-manager: angrobe
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
 robots: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 9d8812da3588b60f388288cef6f9a093731d873f
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+ms.openlocfilehash: b3ce22747cddc1371fb38718cc97b70cda8afcb1
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-certificates-and-security-for-updates-publisher"></a>管理 Updates Publisher 中的证书和安全性
 
@@ -41,7 +35,7 @@ ms.lasthandoff: 12/04/2017
 
 3.  选择“另一台计算机”，键入更新服务器的名称或单击“浏览”找到更新服务器计算机，然后依次单击“完成”、“关闭”和“确定”。
 
-4.  依次展开**“证书(*更新服务器名称*)”**和**“WSUS”**，然后单击**“证书”**。
+4.  依次展开“证书(更新服务器名称)”和“WSUS”，然后单击“证书”。
 
 5.  在结果窗格中，右键单击相应证书，然后依次单击“所有任务”和“导出”。
 
@@ -51,7 +45,7 @@ ms.lasthandoff: 12/04/2017
 
 8.  如果使用的是自签名证书（如“WSUS 发布者自签名”），请右键单击“受信任的根证书颁发机构”，然后依次单击“所有任务”和“导入”。 使用第 6 步中的导出文件完成“证书导入向导”。
 
-9.  右键单击“证书(*更新服务器名称*)**”**，单击“连接到另一台计算机”，输入 Updates Publisher 计算机的计算机名称，然后单击“确定”。
+9.  右键单击“证书(更新服务器名称)”，单击“连接到另一台计算机”，输入 Updates Publisher 计算机的计算机名称，然后单击“确定”。
 
 10. 如果 Updates Publisher 计算机远离更新服务器，请重复执行第 7-9 步，将证书导入 Updates Publisher 计算机上的证书存储。
 
@@ -71,7 +65,7 @@ ms.lasthandoff: 12/04/2017
 
 3.  选择“另一台计算机”，键入更新服务器的名称或单击“浏览”找到更新服务器计算机，然后依次单击“完成”、“关闭”和“确定”。
 
-4.  依次展开**“证书(*更新服务器名称*)”**和**“WSUS”**，然后单击**“证书”**。
+4.  依次展开“证书(更新服务器名称)”和“WSUS”，然后单击“证书”。
 
 5.  右键单击结果窗格中的证书，然后依次单击“所有任务”和“导出”。 使用默认设置完成“证书导出向导”，创建包含向导中指定的名称和位置的导出证书文件。
 
@@ -82,7 +76,7 @@ ms.lasthandoff: 12/04/2017
     -   对于证书颁发机构 (CA) 颁发的证书：将证书添加到“受信任的发布者”证书存储中。
 
     > [!NOTE]
-    > WUA 还会检查本地计算机上是否启用了“允许来自 Intranet Microsoft 更新服务位置的签名内容”组策略设置。 必须为 WUA 启用此策略设置，以扫描使用 Updates Publisher 创建和发布的更新。 若要详细了解如何启用此组策略设置，请参阅[如何在客户端计算机上配置组策略](https://technet.microsoft.com/library/bb530967.aspx(d=robot))。
+    > WUA 还会检查本地计算机上是否启用了“允许来自 Intranet Microsoft 更新服务位置的签名内容”组策略设置。 必须为 WUA 启用此策略设置，以扫描使用 Updates Publisher 创建和发布的更新。 若要详细了解如何启用此组策略设置，请参阅[如何在客户端计算机上配置组策略] (https://technet.microsoft.com/library/bb530967.aspx(d=robot))。
 
 
 

@@ -2,24 +2,19 @@
 title: 混合 MDM 中的新增功能
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 和 Intune 的混合部署可用的新移动设备管理功能。
-ms.custom: na
-ms.date: 04/02/2018
+ms.date: 05/01/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6a47569ee56931d76a41e5f14ed56f8276d264fb
-ms.sourcegitcommit: e4ca9fb1fad2caaf61bb46e0a12f4d6b96f15513
+ms.openlocfilehash: 3105f9597d1f3971d6ef1092a33b0077118a1a22
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Configuration Manager 和 Microsoft Intune 的混合移动设备管理中的新增功能
 
@@ -44,9 +39,43 @@ ms.lasthandoff: 04/18/2018
 
 
 
+## <a name="may-2018"></a>2018 年 5 月
+
+### <a name="new-in-configuration-manager-current-branch"></a>Configuration Manager (Current Branch) 中的新增功能
+
+#### <a name="support-for-new-versions-of-cisco-anyconnect-client-for-ios"></a>对适用于 iOS 的 Cisco AnyConnect 客户端新版本的支持
+<!--1357393-->
+你可以启用对适用于 iOS 4.0.7 或更高版本的 Cisco AnyConnect 的支持。 如果启用，现有 Cisco AnyConnect VPN 配置文件会标记为“Cisco 旧式 AnyConnect”，然后继续按照以前的方式工作。 “Cisco AnyConnect”选项适用于可与 iOS 4.0.7 或更高版本的 Cisco AnyConnect 配合使用的新 VPN 配置文件。
+
+有关启用此功能的详细信息，请参阅[预发行功能](/sccm/core/servers/manage/pre-release-features)。
+
+> [!Note]  
+> 继续使用适用于 macOS VPN 配置文件的“Cisco 旧式 AnyConnect”选项。 
+
+
+
 ## <a name="april-2018"></a>2018 年 4 月
 
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
+
+
+#### <a name="improved-device-tiles-in-the-windows-10-company-portal"></a>改进了 Windows 10 公司门户中的设备磁贴
+<!--2213364-->
+更新后的磁贴更易于视力较差的用户使用，还可使屏幕阅读工具提供更好的性能。
+
+
+#### <a name="test-the-company-portal-for-macos-on-virtual-machines"></a>在虚拟机上测试适用于 macOS 的公司门户
+<!--2216679-->
+我们已发布可帮助 IT 管理员在 Parallels Desktop 和 VMware Fusion 虚拟机上测试适用于 macOS 的公司门户应用的指南。 有关详细信息，请参阅[注册用于测试的虚拟 macOS 计算机](/intune/macos-enroll#enroll-virtual-macos-machines-for-testing)。
+
+
+#### <a name="send-diagnostic-reports-in-company-portal-app-for-macos"></a>在适用于 macOS 的公司门户应用中发送诊断报告
+<!--2216677-->
+适用于 macOS 设备的公司门户应用已进行更新，改进了用户报告 Intune 相关错误的方式。 员工可从公司门户应用中：
+
+- 将诊断报告直接上传给 Microsoft 开发人员团队。
+- 通过电子邮件将事件 ID 发送给公司的 IT 支持团队。
+
 
 #### <a name="updated-help-experience-on-company-portal-app-for-android"></a>Android 公司门户应用中更新的帮助体验 
 <!--1631531-->

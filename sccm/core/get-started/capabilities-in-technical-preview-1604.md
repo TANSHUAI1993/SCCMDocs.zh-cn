@@ -1,32 +1,27 @@
 ---
-title: "Technical Preview 1604 中的功能"
+title: Technical Preview 1604 中的功能
 titleSuffix: Configuration Manager
-description: "了解 System Center Configuration Manager Technical Preview 1604 版中的可用功能。"
-ms.custom: na
+description: 了解 System Center Configuration Manager Technical Preview 1604 版中的可用功能。
 ms.date: 01/23/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 684a5559-9e6e-469b-86ae-e768e9f0c9ac
-caps.latest.revision: "8"
-author: erikje
-ms.author: erikje
-manager: angrobe
+author: aczechowski
 robots: noindex,nofollow
-ms.openlocfilehash: a6a3bb10b751768cd0e3987b30c80b5953e8eda5
-ms.sourcegitcommit: 7fe45ff75f05f7cc03ad021db8119791abe18049
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: 113e22c33e9e8545c382373f3ba093dba3969939
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="capabilities-in-technical-preview-1604-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1604 版中的功能
 
 *适用范围：System Center Configuration Manager (Technical Preview)*
 
-本文介绍 System Center Configuration Manager Technical Preview 1604 版中的可用功能。 可以安装此版本以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。      在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。  
+本文介绍 System Center Configuration Manager Technical Preview 1604 版中的可用功能。 你可以安装此版本，以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。      在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。  
 
  以下是可以试用的此版本的新功能。  
 
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/01/2017
 
 1.  在 Azure Active Directory 中，将 Configuration Manager 注册为“Web 应用程序和/或 Web API”管理工具。 这会为你提供以后将需要的客户端 ID。  
 
-    1.  在 [https://manage.windowsazure.com](https://manage.windowsazure.com) 的 **Active Directory** 节点中，选择“Azure Active Directory”，然后单击“应用程序” > “添加”。  
+    1.  在 [https://manage.windowsazure.com](https://manage.windowsazure.com) 的 Active Directory 节点中，选择“Azure Active Directory”，然后单击“应用程序” > “添加”。  
 
     2.  单击“添加我的组织正在开发的应用程序”。  
 
@@ -63,7 +58,7 @@ ms.lasthandoff: 12/01/2017
 
 3.  在适用于企业的 Windows 应用商店中，将 Configuration Manager 配置为存储管理工具。  
 
-    1.  打开 [https://businessstore.microsoft.com/zh-cn/managementtools](https://businessstore.microsoft.com/en-us/managementtools)，在出现提示时进行登录。  
+    1.  打开[https://businessstore.microsoft.com/en-us/managementtools](https://businessstore.microsoft.com/en-us/managementtools) 并按提示登录。  
 
     2.  接受使用条款（如果需要）。  
 

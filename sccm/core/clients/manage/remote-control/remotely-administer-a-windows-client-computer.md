@@ -1,26 +1,20 @@
 ---
-title: "远程管理 Windows 计算机"
+title: 远程管理 Windows 计算机
 titleSuffix: Configuration Manager
-description: "使用 System Center Configuration Manager 管理远程 Windows 客户端计算机。"
-ms.custom: na
+description: 使用 System Center Configuration Manager 管理远程 Windows 客户端计算机。
 ms.date: 07/27/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 3c9648c4-645e-4e47-ae10-2da817b8c83b
-caps.latest.revision: "5"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 7cce5f2deab7ec6f5c16628dc53e4d1cb5507f37
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 4437ef8f88b18b7148eadbc3d125d8ac72fb240a
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-remotely-administer-a-windows-client-computer-by-using-system-center-configuration-manager"></a>如何使用 System Center Configuration Manager 远程管理 Windows 客户端计算机
 
@@ -87,7 +81,7 @@ ms.lasthandoff: 10/12/2017
 
 ### <a name="to-start-the-remote-control-viewer-from-the-windows-command-line"></a>若要从 Windows 命令行中启动远程控制查看器  
 
--   在 Windows 命令提示符处键入 <Configuration Manager Installation Folder\>**\AdminConsole\Bin\x64\CmRcViewer.exe**  
+-   在 Windows 命令提示符处，键入 <Configuration Manager 安装文件夹\>\AdminConsole\Bin\x64\CmRcViewer.exe*  
 
 CmRcViewer.exe 支持以下命令行选项：  
 

@@ -2,25 +2,19 @@
 title: 配置发现
 titleSuffix: Configuration Manager
 description: 配置发现方法，从网络、Active Directory 和 Azure Active Directory 找到要管理的资源。
-ms.custom: na
 ms.date: 03/22/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 49505eb1-d44d-4121-8712-e0f3d8b15bf5
-caps.latest.revision: 5
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 825b9b250000e8353b1428cbee45f8fda9a30c35
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: e7ac10fdc08569e519468633f30548c5c76b5838
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-discovery-methods-for-system-center-configuration-manager"></a>配置 System Center Configuration Manager 的发现方法
 
@@ -183,6 +177,9 @@ ms.lasthandoff: 03/23/2018
 6.  在“轮询计划”  选项卡上，配置完整发现轮询计划和增量发现。  
 
 7.  （可选）在“Active Directory 属性”  选项卡上，你可以为要发现的计算机配置其他 Active Directory 属性。 还会列出默认对象属性。  
+
+     > [!Tip]  
+     > 例如，你的组织在 Active Directory 中的计算机帐户上使用 Description 属性。 单击“自定义”，然后将 `Description` 添加为自定义属性。 此发现方法运行后，该属性将在 Configuration Manager 控制台的设备“属性”选项卡上显示。<!--513948-->
 
 8.  （可选）在“选项”选项卡上，可以配置选项以从发现中筛选出或排除过期计算机记录。  
 

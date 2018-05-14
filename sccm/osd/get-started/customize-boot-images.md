@@ -1,26 +1,20 @@
 ---
-title: "自定义启动映像 "
+title: '自定义启动映像 '
 titleSuffix: Configuration Manager
-description: "了解使用 Configuration Manager 或部署映像服务和管理 (DISM) 命令行工具自定义启动映像的几种方式。"
-ms.custom: na
+description: 了解使用 Configuration Manager 或部署映像服务和管理 (DISM) 命令行工具自定义启动映像的几种方式。
 ms.date: 01/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-osd
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9cbfc406-d009-446d-8fee-4938de48c919
-caps.latest.revision: "15"
-caps.handback.revision: "0"
 author: aczechowski
 ms.author: aaroncz
-manager: angrobe
-ms.openlocfilehash: 184768e87406051508c8dcacfa63db5ff85c3732
-ms.sourcegitcommit: 08f9854fb6c6d21e1e923b13e38a64d0bc2bc9a4
+manager: dougeby
+ms.openlocfilehash: 3532e6db7b4ece1676c9b9f41f9336274ac3d117
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="customize-boot-images-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 自定义启动映像
 
@@ -141,7 +135,7 @@ Configuration Manager 的每个版本都支持特定版本的 Windows 评估和�
 
     4.  在“数据源”  页上，指定以下选项，然后单击“下一步” 。  
 
-        -   在“路径”  框中，指定更新的启动映像文件的路径。 指定的路径必须是 UNC 格式的有效网络路径。 例如：**\\\\<**服务器名称**>\\<**WinPEWAIK 共享**>\winpe.wim**。  
+        -   在“路径”  框中，指定更新的启动映像文件的路径。 指定的路径必须是 UNC 格式的有效网络路径。 例如：\\\\<>\\<“WinPEWAIK 共享”>\winpe.wim****。  
 
         -   从“启动映像”  下拉列表中选择启动映像。 如果 WIM 文件包含多个启动映像，则会列出每个映像。  
 
@@ -165,7 +159,7 @@ Configuration Manager 的每个版本都支持特定版本的 Windows 评估和�
 
     4.  从命令提示符处键入 **wbemtest** 以打开 Windows Management Instrumentation 测试器。  
 
-    5.  在“命名空间”中键入 **\\\\<**SMS 提供程序计算机**>\root\sms\site_<**站点代码**>**，然后单击“连接”。  
+    5.  在“命名空间”中键入“\\\\<SMS Provider Computer>\root\sms\site_<sitecode>”，然后单击“连接”****。  
 
     6.  单击“打开实例”，键入 **sms_bootimagepackage.packageID="<packageID\>"**，然后单击“确定”。 对于 packageID，请输入在步骤 3 中标识的值。  
 
@@ -257,7 +251,7 @@ Configuration Manager 的每个版本都支持特定版本的 Windows 评估和�
 
     4.  在“数据源”  页上，指定以下选项，然后单击“下一步” 。  
 
-        -   在“路径”  框中，指定更新的启动映像文件的路径。 指定的路径必须是 UNC 格式的有效网络路径。 例如：**\\\\<**服务器名称**>\\<**WinPEWAIK 共享**>\winpe.wim**。  
+        -   在“路径”  框中，指定更新的启动映像文件的路径。 指定的路径必须是 UNC 格式的有效网络路径。 例如：\\\\<>\\<“WinPEWAIK 共享”>\winpe.wim****。  
 
         -   从“启动映像”  下拉列表中选择启动映像。 如果 WIM 文件包含多个启动映像，则会列出每个映像。  
 
@@ -281,7 +275,7 @@ Configuration Manager 的每个版本都支持特定版本的 Windows 评估和�
 
     4.  从命令提示符处键入 **wbemtest** 以打开 Windows Management Instrumentation 测试器。  
 
-    5.  在“命名空间”中键入 **\\\\<**SMS 提供程序计算机**>\root\sms\site_<**站点代码**>**，然后单击“连接”。  
+    5.  在“命名空间”中键入“\\\\<SMS Provider Computer>\root\sms\site_<sitecode>”，然后单击“连接”****。  
 
     6.  单击“打开实例”，键入 **sms_bootimagepackage.packageID="<packageID\>"**，然后单击“确定”。 对于 packageID，请输入在步骤 3 中标识的值。  
 

@@ -1,27 +1,20 @@
 ---
-title: "配置 Intune 订阅"
+title: 配置 Intune 订阅
 titleSuffix: Configuration Manager
-description: "使用 System Center Configuration Manager 配置 Intune 订阅。"
-ms.custom: na
+description: 使用 System Center Configuration Manager 配置 Intune 订阅。
 ms.date: 06/02/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 99de8fe7-560e-401a-8ab2-6d87d091be17
-caps.latest.revision: 
-caps.handback.revision: 
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 720ba9e11ea16f5318ba78504cfe455e1019ab3f
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 6ab10b0bc099aa58b1a0703bbc1c7b53c9de85cf
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-your-intune-subscription-with-system-center-configuration-manager-and-microsoft-intune"></a>使用 System Center Configuration Manager 和 Microsoft Intune 配置 Intune 订阅
 
@@ -66,7 +59,7 @@ Intune 订阅执行以下任务：
 
   -   **公司名称**：指定你的公司名称。
 
-  -   “指向公司隐私文档的 URL”：如果将公司隐私信息发布到可从 Internet 中访问的链接，请提供该链接以便用户可从公司门户中访问它，例如 http://www.contoso.com/CP_privacy.html。 隐私信息可阐明用户与你的公司分享了什么信息。
+  -   **指向公司隐私文档的 URL**：如果将公司隐私信息发布到可从 Internet 中访问的链接，请提供该链接以便用户可从公司门户中访问它，例如 http://www.contoso.com/CP_privacy.html。 隐私信息可阐明用户与你的公司分享了什么信息。
 
   -   **公司门户的配色方案**：（可选）更改公司门户的默认颜色（蓝色）。
 

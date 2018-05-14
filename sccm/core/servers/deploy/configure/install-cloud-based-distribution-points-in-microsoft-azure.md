@@ -1,25 +1,20 @@
 ---
-title: "安装基于云的分发点"
+title: 安装基于云的分发点
 titleSuffix: Configuration Manager
-description: "了解在 Microsoft Azure 中，开始使用基于云的分发点需要执行的操作。"
-ms.custom: na
+description: 了解在 Microsoft Azure 中，开始使用基于云的分发点需要执行的操作。
 ms.date: 2/8/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bb83ac87-9914-4a35-b633-ad070031aa6e
-caps.latest.revision: "7"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 6471ac81718666403127c0ebcfaa19c41d3af47b
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 2c9c79c5e635a50fecf02c46e2a134df87c2d784
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-cloud-based-distribution-points-in-microsoft-azure-for-system-center-configuration-manager"></a>在 Microsoft Azure 中安装 System Center Configuration Manager 基于云的分发点
 
@@ -104,7 +99,7 @@ ms.lasthandoff: 12/04/2017
 ##  <a name="BKMK_ConfigDNSforCloudDPs"></a>为基于云的分发点设置名称解析  
  客户端必须能够将基于云的分发点的名称解析为 Azure 管理的 IP 地址，然后才能访问基于云的分发点。 客户端分两个阶段执行此操作：  
 
-1.  客户端会将随 Configuration Manager 基于云的分发点服务证书一起提供的服务名称映射到 Azure 服务 FQDN。 此 FQDN 包含 GUID 和 **cloudapp.net**的 DNS 后缀。 GUID 是在安装基于云的分发点之后自动生成的。 若要在 Azure 门户中查看完整 FQDN，可参考云服务仪表板中的“站点 URL”。 站点 URL 的示例为“http://d1594d4527614a09b934d470.cloudapp.net” 。  
+1.  客户端会将随 Configuration Manager 基于云的分发点服务证书一起提供的服务名称映射到 Azure 服务 FQDN。 此 FQDN 包含 GUID 和 **cloudapp.net**的 DNS 后缀。 GUID 是在安装基于云的分发点之后自动生成的。 若要在 Azure 门户中查看完整 FQDN，可参考云服务仪表板中的“站点 URL”。 站点 URL 示例：http://d1594d4527614a09b934d470.cloudapp.net。  
 
 2.  客户端将 Azure 服务 FQDN 解析为 Azure 分配的 IP 地址。 此 IP 地址还可通过 Azure 门户的云服务仪表板查看，并命名为“公共虚拟 IP 地址(VIP)”。  
 
@@ -122,7 +117,7 @@ ms.lasthandoff: 12/04/2017
 
 #### <a name="to-set-up-proxy-settings-for-the-primary-site-server"></a>为主站点服务器设置代理设置  
 
-1.  在 Configuration Manager 控制台中，单击“管理” 。  
+1.  在 Configuration Manager 控制台中，单击“管理”。  
 
 2.  在“管理”  工作区中，展开“站点配置” ，并单击“服务器和站点系统角色” 。 然后选择用于管理基于云的分发点的主站点服务器。  
 

@@ -1,20 +1,25 @@
 ---
-title: ARTICLE TITLE | Microsoft Docs
-description: 
-keywords: 
-author: GITHUB USERNAME
-manager: ALIAS
-ms.date: 10/06/2016
-ms.topic: article
-ms.prod: 
-ms.service: 
-ms.technology: 
-ms.assetid: GET ONE FROM guidgenerator.com
-ms.openlocfilehash: a218011ded1ff3acc1dbd24471119b701f2cce23
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+title:
+- 文章标题小于等于 35 个字符
+titleSuffix: Configuration Manager
+description: ''
+ms.date: mm/dd/yyyy
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+ms.assetid:
+- GET ONE FROM guidgenerator.com
+author:
+- GITHUB USERNAME
+ms.author:
+- ALIAS
+manager:
+- ALIAS
+ms.openlocfilehash: bb0a23b8870d31136967b1bc594580bcc2cd0cd9
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="metadata-and-markdown-template"></a>元数据和 Markdown 模板
 
@@ -93,7 +98,7 @@ Markdown 文件中的 URL 会转换为可单击链接。
 
 1. 这
 1. 是
-1. 一个
+1. 某个
 1. 已排序
 1. 列表  
 
@@ -112,9 +117,9 @@ Markdown 文件中的 URL 会转换为可单击链接。
 
 ### <a name="unordered-lists"></a>未排序列表
 
-- 这
+- 此
 - 是
-- 一个
+- a
 - 项目符号
 - 列表
 
@@ -127,7 +132,7 @@ Markdown 文件中的 URL 会转换为可单击链接。
     - Peacock 夫人
     - Green 先生
 - 包含  
-- 其他
+- other
     1. Mustard 上校
     1. White 夫人
 - 列表
@@ -180,7 +185,7 @@ Markdown 文件中的 URL 会转换为可单击链接。
 
 ## <a name="alerts"></a>警报
 
-### <a name="note"></a>注意
+### <a name="note"></a>备注
 
 > [!NOTE]
 > 这是注意
@@ -195,7 +200,7 @@ Markdown 文件中的 URL 会转换为可单击链接。
 > [!TIP]
 > 这是提示
 
-### <a name="important"></a>重要说明
+### <a name="important"></a>重要
 
 > [!IMPORTANT]
 > 这是重要说明

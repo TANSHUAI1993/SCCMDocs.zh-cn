@@ -1,26 +1,20 @@
 ---
-title: "为使用 Intune 管理的 Android 和 Samsung KNOX 标准版设备创建配置项"
+title: 为使用 Intune 管理的 Android 和 Samsung KNOX 标准版设备创建配置项
 titleSuffix: Configuration Manager
-description: "使用 System Center Configuration Manager Android 和 Samsung KNOX 标准版配置项目管理设备的设置。"
-ms.custom: na
+description: 使用 System Center Configuration Manager Android 和 Samsung KNOX 标准版配置项目管理设备的设置。
 ms.date: 03/27/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7b66f3c4-e3bb-4f6a-abd5-55be649ff90d
-caps.latest.revision: "17"
-caps.handback.revision: "0"
-author: andredm7
-ms.author: andredm
-manager: angrobe
-ms.openlocfilehash: 3fa824c94b02ed7141c7051bab86fa64a4a9ee49
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: fbfcc2189e2ce06e6348936caad6c68de51f5bdb
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-system-center-configuration-manager-client"></a>如何为没有使用 System Center Configuration Manager 客户端管理的 Android 和 Samsung KNOX 设备创建配置项目
 
@@ -101,7 +95,7 @@ ms.lasthandoff: 10/12/2017
 |**应用程序之间的剪贴板共享**|允许用户使用剪贴板在应用之间进行复制和粘贴。|  |
 |**蓝牙**|允许在设备上使用蓝牙。|
 
-### <a name="store"></a>存储
+### <a name="store"></a>应用商店
 
 |设置|详细信息|  
 |------------------|-------------|  
@@ -172,7 +166,7 @@ ms.lasthandoff: 10/12/2017
 |-------------|----------------------|  
 |**不符合应用列表**|指定如果用户安装，将报告为不符合应用的应用列表。|  
 |**符合应用列表**|指定允许用户安装的应用列表。 安装的任何其他应用将报告为不相容。|  
-|**添加**|将应用添加到选定的列表。 在应用商店中指定你选择的名称（可选择使用应用发布者）和应用的 URL。<br /><br /> 若要从 [Google Play 应用部分](https://play.google.com/store/apps)指定 URL，请搜索想要使用的应用。<br /><br /> 打开应用页面，并将该 URL 复制到剪贴板。 你现在可以在符合或不符合要求的应用列表中使用这个 URL。<br /><br /> **示例：** 在 Google Play 中搜索 **Microsoft Office Mobile**。 你使用的 URL 将为 **https://play.google.com/store/apps/details?id=com.microsoft.office.officehub**。|  
+|**添加**|将应用添加到选定的列表。 在应用商店中指定你选择的名称（可选择使用应用发布者）和应用的 URL。<br /><br /> 若要从 [Google Play 应用部分](https://play.google.com/store/apps)指定 URL，请搜索想要使用的应用。<br /><br /> 打开应用页面，并将该 URL 复制到剪贴板。 你现在可以在符合或不符合要求的应用列表中使用这个 URL。<br /><br /> **示例：** 在 Google Play 中搜索 **Microsoft Office Mobile**。 你使用的 URL 将为https://play.google.com/store/apps/details?id=com.microsoft.office.officehub。|  
 |**编辑**|使你能够编辑选定应用的名称、发布者和 URL。|  
 |**移除**|从列表中删除选定的应用。|  
 |**导入**|导入你已在逗号分隔值文件中指定的应用列表。 在文件中使用格式应用程序名称、发布者和应用 URL。|  
@@ -211,7 +205,7 @@ Android for Work 具有配置项的两个设置组：
 
 - **具有不符合应用的用户的摘要**。 显示有关安装了不符合指定策略的应用的用户的信息。  
 
-有关如何使用报表的信息，请参阅 [System Center Configuration Manager 中的报表](../../core/servers/manage/reporting.md)。  
+有关如何使用报表的详细信息，请参阅 [System Center Configuration Manager 中的报表](../../core/servers/manage/reporting.md)。  
 
 ## <a name="see-also"></a>另请参阅  
 [未使用 System Center Configuration Manager 客户端管理的设备的配置项目](../../compliance/deploy-use/configuration-items-for-devices-managed-without-the-client.md)

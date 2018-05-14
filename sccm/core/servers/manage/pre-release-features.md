@@ -2,25 +2,19 @@
 title: 预发行功能
 titleSuffix: Configuration Manager
 description: 预发行功能是指 Current Branch 中的功能，用于在生产环境中的早期测试。
-ms.custom: na
-ms.date: 04/10/2018
+ms.date: 05/01/2018
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-other
+ms.topic: conceptual
 ms.assetid: 6bce416b-761d-4b23-bd33-5b7c30edb10d
-caps.latest.revision: 36
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6e3a6a8dd437238a9dd08b07494b51333283f41c
-ms.sourcegitcommit: fb84bcb31d825f454785e3d9d8be669e00fe2b27
+ms.openlocfilehash: d4e9664832b37dd05f001404012acab80fd87a43
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pre-release-features-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的预发行功能
 *适用范围：System Center Configuration Manager (Current Branch)*
@@ -50,7 +44,8 @@ ms.lasthandoff: 04/16/2018
 
  |功能          |添加为预发行功能 | 添加为完整版功能|  
 |------------------|---------------------|---------------------|
-|分阶段部署<!--1356837-->|[版本 1802](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence.md)|![尚未发行](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
+|iOS 支持 Cisco AnyConnect 4.0.07x 及更高版本<!--1357393-->|[版本 1802](/sccm/mdm/deploy-use/create-vpn-profiles)|![尚未发行](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
+|分阶段部署<!--1356837-->|[版本 1802](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)|![尚未发行](media/83c5d168-8faf-4e8e-920b-528e3c43ffd4.gif)|
 | 运行任务序列步骤 <!-- 1261338 --> |  [版本 1710](/sccm/osd/understand/task-sequence-steps#child-task-sequence) |[版本 1802](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#add-child-task-sequences-to-a-task-sequence)|
 | Windows Defender 攻击防护 <!-- 1355468 --> |  [版本 1710](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) |[版本 1802](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy)|
 | 用于条件访问符合性策略的“设备运行状况证明”评估 <!-- 1235616 --> |  [版本 1710](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) |[版本 1802](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)|

@@ -1,26 +1,20 @@
 ---
-title: "规划安全性"
+title: 规划安全性
 titleSuffix: Configuration Manager
-description: "获取 System Center Configuration Manager 中安全相关的最佳安全方案和其他信息。"
-ms.custom: na
+description: 获取 System Center Configuration Manager 中安全相关的最佳安全方案和其他信息。
 ms.date: 01/04/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2a216814-ca8c-4d2e-bcef-dc00966a3c9f
-caps.latest.revision: "6"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: 8f63d1b762b296cb6b6aa56480a5cddf7a3249dc
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 02ab0884b49a8b4ac6998b9994cec23f02f076ec
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="plan-for-security-in-system-center-configuration-manager"></a>规划 System Center Configuration Manager 中的安全性
 
@@ -58,7 +52,7 @@ ms.lasthandoff: 10/12/2017
 
 2.  导出无私钥的证书，安全地存储文件并从受保护的通道中访问它（例如，通过使用服务器消息块 (SMB) 签名或 IPsec）。  
 
-3.  将 Client.msi 属性 **SMSSIGNCERT=**&lt;完整路径和文件名\> 与 CCMSetup.exe 配合使用来安装客户端。  
+3.  将 Client.msi 属性 SMSSIGNCERT=&lt;完整路径和文件名\> 与 CCMSetup.exe 配合使用来安装客户端。  
 
 ###  <a name="BKMK_PlanningForCRLs"></a> 规划 PKI 证书吊销  
 将 PKI 证书用于 Configuration Manager 时，请规划客户端和服务器是否将使用证书吊销列表 (CRL) 来验证连接计算机上的证书以及如何进行。 CRL 是证书颁发机构 (CA) 创建并签名的文件，它包含 CA 曾经颁发但已吊销的证书列表。 CA 管理员可以吊销证书，例如，如果颁发的证书已确定或者疑似遭盗用。  
@@ -194,7 +188,7 @@ ms.lasthandoff: 10/12/2017
      也可以将 Configuration Manager HTTPS 准备情况评估工具 (**cmHttpsReadiness.exe**) 部署到计算机，并使用报表查看可以将客户端 PKI 证书用于 Configuration Manager 的计算机数量。  
 
     > [!NOTE]  
-    >  安装 Configuration Manager 客户端时，**cmHttpsReadiness.exe** 工具将安装在 %windir%**\CCM** 文件夹中。 在客户端上运行此工具时，你可以指定下列选项：  
+    >  安装 Configuration Manager 客户端时，cmHttpsReadiness.exe 工具将安装在 %windir%\CCM 文件夹中。 在客户端上运行此工具时，你可以指定下列选项：  
     >   
     >  -   /Store：&lt;名称\>  
     > -   /Issuers：&lt;列表\>  
@@ -250,7 +244,7 @@ Configuration Manager 中受信任的根密钥的功能类似于公钥基础结�
 
 #### <a name="to-pre-provision-a-client-with-the-trusted-root-key-by-using-a-file"></a>使用文件预先设置客户端和受信任的根密钥  
 
-1.  在文本编辑器中，打开文件 &lt;Configuration Manager 目录\>**\bin\mobileclient.tcf**。  
+1.  在文本编辑器中，打开文件 &lt;Configuration Manager 目录\>\bin\mobileclient.tcf。  
 
 2.  找到 **SMSPublicRootKey=** 条目，复制该行中的密钥，关闭文件而不进行任何更改。  
 
@@ -258,18 +252,18 @@ Configuration Manager 中受信任的根密钥的功能类似于公钥基础结�
 
 4.  保存此文件，将其放在所有计算机都可以访问但对其提供了防篡改保护的位置。  
 
-5.  使用接受 Client.msi 属性的任何安装方法来安装客户端，并指定 Client.msi 属性 **SMSROOTKEYPATH=**&lt;完整路径和文件名\>。  
+5.  使用接受 Client.msi 属性的任何安装方法来安装客户端，并指定 Client.msi 属性 SMSROOTKEYPATH=&lt;完整路径和文件名\>。  
 
     > [!IMPORTANT]  
     >  在客户端安装期间为增加安全性而指定受信任的根密钥时，还必须使用 Client.msi 属性 **SMSSITECODE=&lt;站点代码\>** 来指定站点代码。  
 
 #### <a name="to-pre-provision-a-client-with-the-trusted-root-key-without-using-a-file"></a>不使用文件来预先设置客户端和受信任的根密钥  
 
-1.  在文本编辑器中，打开文件 &lt;Configuration Manager 目录\>**\bin\mobileclient.tcf**。  
+1.  在文本编辑器中，打开文件 &lt;Configuration Manager 目录\>\bin\mobileclient.tcf。  
 
 2.  找到 SMSPublicRootKey= 条目，记录该行中的密钥或者将其复制到剪贴板，然后关闭文件而不进行任何更改。  
 
-3.  使用接受 Client.msi 属性的任何安装方法来安装客户端，并指定 Client.msi 属性 **SMSPublicRootKey=**&lt;密钥\>，其中 &lt;密钥\> 是从 mobileclient.tcf 中复制的字符串。  
+3.  使用接受 Client.msi 属性的任何安装方法来安装客户端，并指定 Client.msi 属性 SMSPublicRootKey=&lt;密钥\>，其中 &lt;密钥\> 是从 mobileclient.tcf 中复制的字符。  
 
     > [!IMPORTANT]  
     >  在客户端安装期间为增加安全性而指定受信任的根密钥时，还必须使用 Client.msi 属性 **SMSSITECODE=&lt;站点代码\>** 来指定站点代码。  
@@ -292,7 +286,7 @@ Configuration Manager 中受信任的根密钥的功能类似于公钥基础结�
 
 8.  在显示“TrustedRootKey”实例的新“查询结果”窗口中，双击“TrustedRootKey=@”。  
 
-9. 在“TrustedRootKey=@ 的对象编辑器”  对话框内的“属性”  部分中，向下滚动到“TrustedRootKey CIM_STRING” 。 右列中的字符串是受信任的根密钥。 验证它是否与文件 &lt;Configuration Manager 目录\>**\bin\mobileclient.tcf** 中的 **SMSPublicRootKey** 值匹配。  
+9. 在“TrustedRootKey=@ 的对象编辑器”  对话框内的“属性”  部分中，向下滚动到“TrustedRootKey CIM_STRING” 。 右列中的字符串是受信任的根密钥。 验证它是否与文件 &lt;Configuration Manager 目录\>\bin\mobileclient.tcf 中的 SMSPublicRootKey 值匹配。  
 
 ##  <a name="BKMK_PlanningForSigningEncryption"></a> 规划签名和加密  
  使用 PKI 证书进行所有客户端通信时，不必规划签名和加密以帮助保护客户端数据通信。 但是，如果将运行 IIS 的任何站点系统设置为允许 HTTP 客户端连接，则必须确定如何帮助保护站点客户端通信。  

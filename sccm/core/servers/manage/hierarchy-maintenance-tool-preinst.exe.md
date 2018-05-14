@@ -1,26 +1,20 @@
 ---
-title: "层次结构维护工具"
+title: 层次结构维护工具
 titleSuffix: Configuration Manager
-description: "了解层次结构维护工具的作用，以及使用它的原因。 包含命令行选项引用。"
-ms.custom: na
+description: 了解层次结构维护工具的作用，以及使用它的原因。 包含命令行选项引用。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cead6825-6113-4ba5-a381-ac3598dfee86
-caps.latest.revision: "7"
-caps.handback.revision: "0"
-author: mestew
-ms.author: mstewart
-manager: angrobe
-ms.openlocfilehash: 02bd5bfe0fc4ccc976d95b944bd51e9f0a276db0
-ms.sourcegitcommit: daa080cf220835f157a23e8c8e2bd2781b869bb7
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 4dd1bf9b4085b6e1591d5841bfc307398505f5d1
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hierarchy-maintenance-tool-preinstexe-for-system-center-configuration-manager"></a>System Center Configuration Manager 的层次结构维护工具 (Preinst.exe)
 
@@ -47,14 +41,14 @@ ms.lasthandoff: 12/04/2017
 
 运行层次结构维护工具时，必须使用下列语法：preinst.exe /&lt;option\>。 以下是命令行选项。  
 
- **/DELJOB &lt;*SiteCode*>** - 在站点上使用此选项可以删除从当前站点发出到指定目标站点的所有作业或命令。  
+ /DELJOB &lt;SiteCode> - 在站点上使用此选项可删除从当前站点发出到指定目标站点的所有作业或命令。  
 
- **/DELSITE &lt;*ChildSiteCodeToRemove*>** - 在父站点上使用此选项可从父站点的站点数据库中删除子站点的数据。 通常，在从站点服务器计算机中卸载站点之前，如果解除该计算机的授权，则使用此选项。  
+ /DELSITE &lt;ChildSiteCodeToRemove> - 在父站点上使用此选项可从父站点的站点数据库中删除子站点的数据。 通常，在从站点服务器计算机中卸载站点之前，如果解除该计算机的授权，则使用此选项。  
 
 > [!NOTE]  
 >  /DELSITE 选项不会在  参数指定的计算机上卸载站点。 此选项仅从 Configuration Manager 站点数据库中删除站点信息。  
 
-**/DUMP &lt;*SiteCode*>** - 在本地站点服务器上使用此选项可将站点控制映像写入到安装该站点的驱动器的根文件夹中。 可以将特定的站点控制映像写入到该文件夹，也可以写入层次结构中的所有站点控制文件。  
+/DUMP &lt;SiteCode> - 在本地站点服务器上使用此选项可将站点控制映像写入安装该站点的驱动器的根文件夹中。 可以将特定的站点控制映像写入到该文件夹，也可以写入层次结构中的所有站点控制文件。  
 
 -   /DUMP &lt;*SiteCode*> 仅写入指定站点的站点控制映像。  
 

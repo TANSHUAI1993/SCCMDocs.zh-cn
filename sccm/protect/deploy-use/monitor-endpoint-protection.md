@@ -1,25 +1,20 @@
 ---
-title: "监视 Endpoint Protection 状态"
+title: 监视 Endpoint Protection 状态
 titleSuffix: Configuration Manager
-description: "了解如何在 System Center Configuration Manager 层次结构中监视 Endpoint Protection。"
-ms.custom: na
+description: 了解如何在 System Center Configuration Manager 层次结构中监视 Endpoint Protection。
 ms.date: 03/13/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-protect
+ms.topic: conceptual
 ms.assetid: f4a1335c-bb3d-493e-a124-83a32a107dc8
-caps.latest.revision: "8"
-author: NathBarn
-ms.author: nathbarn
-manager: angrobe
-ms.openlocfilehash: 9e6356f8b3814ac49c26bfa4d319c3c9926a4382
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: f4e1ea4cb097381467774af9c3161079419d6840
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-monitor-endpoint-protection-status"></a>如何监视 Endpoint Protection 状态
 
@@ -29,7 +24,7 @@ ms.lasthandoff: 10/12/2017
 
 ##  <a name="BKMK_1"></a>如何使用“Endpoint Protection 状态”节点监视 Endpoint Protection  
 
-1.  在 Configuration Manager 控制台中，单击“监视” 。  
+1.  在 Configuration Manager 控制台中，单击“监视”。  
 
 2.  在“监视”工作区中，展开“安全性”，然后单击“Endpoint Protection 状态”。  
 
@@ -38,7 +33,7 @@ ms.lasthandoff: 10/12/2017
     > [!IMPORTANT]  
     >  集合是在以下情况下可供选择：  
     >   
-    >  -   当你在“<集合名称\>属性”对话框的“警报”选项卡上选择“在 Endpoint Protection 仪表板中查看此集合”时。  
+    >  -   当你在“<集合名称\> 属性”对话框的“警报”选项卡上选择“在 Endpoint Protection 仪表板中查看此集合”时。  
     > -   当你部署 Endpoint Protection 反恶意软件策略应用到集合。  
     > -   如果先启用然后部署 Endpoint Protection 到集合的客户端设置。  
 
@@ -49,7 +44,7 @@ ms.lasthandoff: 10/12/2017
 
 ##  <a name="BKMK_2"></a>如何在“资产和符合性”工作区中监视 Endpoint Protection  
 
-1.  在 Configuration Manager 控制台中，单击“资产和符合性” 。  
+1.  在 Configuration Manager 控制台中，单击“资产和符合性”。  
 
 2.  在 **资产和符合性** 工作区中，执行以下操作之一：  
 
@@ -62,7 +57,7 @@ ms.lasthandoff: 10/12/2017
 ##  <a name="BKMK_3"></a>如何使用报表监视 Endpoint Protection  
  使用以下报表可帮助查看有关层次结构中的 Endpoint Protection 的信息。 你还可以使用这些报表来帮助针对任何 Endpoint Protection 问题进行故障排除。 有关如何在 Configuration Manager 中配置报表的详细信息，请参阅 [System Center Configuration Manager 中的报表](../../core/servers/manage/reporting.md)和 [System Center Configuration Manager 中的日志文件](../../core/plan-design/hierarchy/log-files.md)。 Endpoint Protection 报表处于 Endpoint Protection 文件夹中。  
 
-|报告名称|描述|  
+|报告名称|说明|  
 |-----------------|-----------------|  
 |**反恶意软件活动报告**|显示指定集合的反恶意软件活动的概述。|  
 |**受感染的计算机**|显示在其检测到指定的威胁的计算机的列表。|  
@@ -72,7 +67,7 @@ ms.lasthandoff: 10/12/2017
 ## <a name="malware-alert-levels"></a>恶意软件警报级别  
  使用下表来标识可能会显示在报表中或显示在 Configuration Manager 控制台中的不同 Endpoint Protection 警报级别。  
 
-|警报级别|描述|  
+|警报级别|说明|  
 |-----------------|-----------------|  
 |**已失败**|Endpoint Protection 未能修正恶意软件。 检查有关错误的详细信息日志。<br /><br /> **注意：**有关 Configuration Manager 和 Endpoint Protection 日志文件的列表，请参阅 [System Center Configuration Manager 中的日志文件](../../core/plan-design/hierarchy/log-files.md)主题中的“Endpoint Protection”部分。|  
 |**已删除**|Endpoint Protection 已成功删除了恶意软件。|  

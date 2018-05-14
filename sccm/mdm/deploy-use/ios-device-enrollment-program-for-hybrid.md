@@ -1,31 +1,26 @@
 ---
-title: "注册设备注册计划 (DEP) iOS 设备 "
+title: '注册设备注册计划 (DEP) iOS 设备 '
 titleSuffix: Configuration Manager
-description: "在 Configuration Manager 中使用 Intune 为混合部署启用 iOS 设备注册计划 (DEP) 注册。"
-ms.custom: na
+description: 在 Configuration Manager 中使用 Intune 为混合部署启用 iOS 设备注册计划 (DEP) 注册。
 ms.date: 09/22/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 78d44adc-9b1c-4bc6-b72d-e93873916ea6
-caps.latest.revision: "9"
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 1d8a1765b599daa98014feeb3d88efe9a07cb907
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: a4a6d8d67060dbf7c5bc75892d2f231bce67df8f
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ios-device-enrollment-program-dep-enrollment-for-hybrid-deployments-with-configuration-manager"></a>使用 Configuration Manager 进行混合部署的 iOS 设备注册计划 (DEP) 注册
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-公司可以通过 Apple 的设备注册计划购买 iOS 设备，然后使用 Microsoft Intune 管理它们。 要利用 Apple 设备注册计划 (DEP) 管理企业所有的 iOS 设备，公司必须完成 Apple 所要求的步骤以加入该计划并通过该计划获取设备。 该过程的详细信息，可以通过以下网站获得：  [https://deploy.apple.com](https://deploy.apple.com)进行管理。该程序的优点包括免手动设置设备，无需通过 USB 将每个设备连接到计算机。  
+公司可以通过 Apple 的设备注册计划购买 iOS 设备，然后使用 Microsoft Intune 管理它们。 要利用 Apple 设备注册计划 (DEP) 管理企业所有的 iOS 设备，公司必须完成 Apple 所要求的步骤以加入该计划并通过该计划获取设备。 该过程的详细信息，可以通过以下网站获得：[https://deploy.apple.com](https://deploy.apple.com)。该程序的优点包括免手动设置设备，无需通过 USB 将每个设备连接到计算机。  
 
  在你可以通过 DEP 注册企业所有的 iOS 设备之前，你需要从 Apple 获得 DEP 令牌。 此令牌允许 Intune 同步有关你的企业所拥有的且加入了 DEP 的设备的信息。 它还允许 Intune 将注册配置文件上传到 Apple 并将设备分配到这些配置文件。  
 
@@ -39,7 +34,7 @@ ms.lasthandoff: 10/12/2017
 2.  **创建 DEP 令牌请求**   
     在 Configuration Manager 控制台中，依次展开“管理”工作区中的“层次结构配置”和“云服务”，然后单击“Microsoft Intune 订阅”。 单击“主页”选项卡上的“创建 DEP 令牌请求”，单击“浏览”指定 DEP 令牌请求的下载位置，然后单击“下载”。 将 DEP 令牌请求 (.pem) 文件保存到本地。 .pem 文件用于从 Apple 设备注册计划门户请求信任令牌 (.p7m)。  
 3.  **获取设备注册计划令牌**   
-    转到[设备注册计划门户](https://deploy.apple.com) (https://deploy.apple.com) 并使用你的公司 Apple ID 登录。 若要续订 DEP 令牌，必须在将来使用此 Apple ID。  
+    转到[设备注册计划门户](https://deploy.apple.com) (https://deploy.apple.com)) 并使用你的公司 Apple ID 登录。 若要续订 DEP 令牌，必须在将来使用此 Apple ID。  
     1.  在[设备注册计划门户](https://deploy.apple.com)中，转到“设备注册计划” > “管理服务器”，然后单击“添加 MDM 服务器”。  
     ![在设备注册计划门户中添加 MDM 服务器的屏幕截图](../media/enrollment-program-token-add-server.png)
     2.  输入“MDM 服务器名称”，然后单击“下一步”。 服务器名称供参考，用于识别 MDM 服务器。 它不是名称，也不是 Intune 或 Configuration Manager 服务器的 URL。  
@@ -97,7 +92,7 @@ ms.lasthandoff: 10/12/2017
 
 ## <a name="assign-dep-devices-for-management"></a>分配 DEP 设备以进行管理
 
-1. 转到[设备注册计划门户](https://deploy.apple.com) (https://deploy.apple.com) 并使用你的公司 Apple ID 登录。
+1. 转到[设备注册计划门户](https://deploy.apple.com) (https://deploy.apple.com)) 并使用你的公司 Apple ID 登录。
 2. 转到“部署计划” > “设备注册计划” > “管理设备”。 指定“选择设备”的方式，提供设备信息，并按设备“序列号”、“订单编号”或“上传 CSV 文件”指定详细信息。 接下来，选择“分配到服务器”并选择在步骤 3 中指定的 <*ServerName*>，然后单击“确定”。  
 ![正在添加设备的 Apple 设备注册计划门户的屏幕截图](../media/enrollment-program-token-specify-serial.png)
 

@@ -1,26 +1,20 @@
 ---
 title: Configure iOS apps with app configuration policies
 titleSuffix: Configuration Manager
-description: "通过在用户运行应用之前向其部署应用配置策略，帮助消除运行 iOS 8 或更高版本的设备上的配置问题。"
-ms.custom: na
+description: 通过在用户运行应用之前向其部署应用配置策略，帮助消除运行 iOS 8 或更高版本的设备上的配置问题。
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
 ms.technology: configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f0a78038-ea22-4826-9c07-1771b7dd2e8d
-caps.latest.revision: "18"
-caps.handback.revision: "0"
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 905b0925f88395942c954561aa0828c15d3ba758
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: e5d00b1efd02d3b096a0b64033b450f0da949eeb
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="apply-settings-to-ios-apps-with-app-configuration-policies-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中将设置应用于使用应用配置策略的 iOS 应用
 
@@ -39,7 +33,7 @@ ms.lasthandoff: 10/12/2017
 
 应用配置策略目前仅在运行 iOS 8 及更高版本的设备上可用，并且可用于下列应用程序类型：
 
-- **iOS 应用程序包（*.ipa 文件）**
+- **iOS 应用包（*.ipa 文件）**
 - **App Store 中的 iOS 应用程序包**
 
 有关应用安装类型的详细信息，请参阅[应用程序管理简介](/sccm/apps/understand/introduction-to-application-management)。

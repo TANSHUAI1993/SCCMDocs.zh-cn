@@ -1,26 +1,20 @@
 ---
-title: "配置电源管理"
+title: 配置电源管理
 titleSuffix: Configuration Manager
-description: "在 System Center Configuration Manager 中设置电源管理。"
-ms.custom: na
+description: 在 System Center Configuration Manager 中设置电源管理。
 ms.date: 10/06/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology: configmgr-other
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 435c923c-ea30-4dce-8afd-48962ed85502
-caps.latest.revision: "5"
-caps.handback.revision: "0"
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: ed6aa0ce35d93837ac133cccedb44dedaa4a9602
-ms.sourcegitcommit: c236214b2fcc13dae7bad96d7fb33f692868191d
+author: aczechowski
+manager: dougeby
+ms.author: aaroncz
+ms.openlocfilehash: ceb8c07c111818136db7c3815eee58cc87ae75c8
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configuring-power-management-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中配置电源管理
 
@@ -33,13 +27,13 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="to-enable-power-management-and-configure-client-settings"></a>如何启用电源管理并配置客户端设置  
 
-1.  在 Configuration Manager 控制台中，单击“管理” 。  
+1.  在 Configuration Manager 控制台中，单击“管理”。  
 
 2.  在“管理”  工作区中，单击“客户端设置” 。  
 
 3.  单击“默认客户端设置” 。  
 
-4.  在“主页”  选项卡上的“属性”  组中，单击“属性” 。  
+4.  在“主页”选项卡上的“属性”组中，单击“属性”。  
 
 5.  在“默认客户端设置”  对话框中，单击“电源管理” 。  
 
@@ -51,7 +45,7 @@ ms.lasthandoff: 10/12/2017
 
 8.  单击“确定”  以关闭“默认客户端设置”  对话框。  
 
- 当客户端计算机下一次下载客户端策略时，将使用这些设置对它们进行配置。 要为单个客户端启动策略检索，请参阅 [How to manage clients in System Center Configuration Manager](../../../../core/clients/manage/manage-clients.md)。  
+ 当客户端计算机下一次下载客户端策略时，将使用这些设置对它们进行配置。 要为单个客户端启动策略检索，请参阅 [如何在 System Center Configuration Manager 中管理客户端](../../../../core/clients/manage/manage-clients.md)。  
 
 ## <a name="exclude-computers-from-power-management"></a>从电源管理中排除计算机  
  你可以阻止计算机集合接收电源管理设置。 如果一台计算机是从电源管理设置中排除的任何集合的成员，该计算机将不会应用电源管理设置，即使它是应用电源管理设置的另一集合的成员。  
@@ -76,12 +70,12 @@ ms.lasthandoff: 10/12/2017
 
 #### <a name="to-exclude-a-collection-of-computers-from-power-management"></a>若要从电源管理中排除计算机集合  
 
-1.  在 Configuration Manager 控制台中，单击“资产和符合性” 。  
+1.  在 Configuration Manager 控制台中，单击“资产和符合性”。  
 
-2.  在“资产和符合性”  工作区中，单击“设备集合” 。  
+2.  在“资产和符合性”工作区中，单击“设备集合”。  
 
 3.  在“设备集合”  列表中，选择要从电源管理中排除的集合，然后，在“主页”  选项卡上的“属性”  组中单击“属性” 。  
 
-4.  在 *<Collection Name\>*“属性”对话框的“电源管理”选项卡上，选择“永远不将电源管理设置应用于此集合中的计算机”。  
+4.  在 <Collection Name\>“属性”对话框的“电源管理”选项卡上，选择“永远不将电源管理设置应用于此集合中的计算机”。  
 
-5.  单击“确定”以关闭 *<Collection Name\>*“属性”对话框并保存设置。  
+5.  单击“确定”以关闭 <Collection Name\>“属性”对话框并保存设置。  
