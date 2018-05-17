@@ -11,11 +11,11 @@ ms.assetid: 2ff0100c-b7ef-4e09-8c96-fc1898390b6d
 author: aczechowski
 ms.author: aaroncz
 manager: angrobe
-ms.openlocfilehash: fe61cecea2b2a4f4083933b937af90dfb61ea5bf
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+ms.openlocfilehash: 6b36da9f98749858829ab591571496532b26f290
+ms.sourcegitcommit: 7198ec49d9ce68c6d55bfb9e2d537b5442a132cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="microsoft-deployment-toolkit-samples-guide"></a>Microsoft Deployment Toolkit 示例指南  
  本指南是 Microsoft®Deployment Toolkit (MDT) 2013 的一部分，通过部署 Windows 操作系统和 Microsoft Office 来指导专家团队。 具体而言，本指南旨在提供特定部署方案的示例配置设置。  
@@ -3670,9 +3670,11 @@ Remove-item -path "DS002:\Task Sequences\Windows Vista Business Production Build
 -   ```  
     New-PSDrive -Name "DS002" -PSProvider MDTProvider -Root "D:\Production Deployment Share"  
     ```  
-
--   Update\-MDTDeploymentShare \-path "DS002:" \-Verbose  
-
+    
+-   ```
+    Update\-MDTDeploymentShare \-path "DS002:" \-Verbose  
+    ```
+    
 ###  <a name="CreateLinkedDeployShare"></a> 创建链接的部署共享  
  以下 Windows PowerShell 命令创建链接到 Production 部署共享的部署共享，并位于 \\\\*remote\_server\_name*\\Deployment$ share 下。 Everything 选择配置文件用于确定将哪些内容复制到链接的部署共享。 Production 部署共享中的内容将与已存在于 \\\\*remote\_server\_name*\\Deployment$ share 中的内容合并。  
 
@@ -3791,7 +3793,7 @@ Remove-item -path "DS002:\Media\MEDIA001" -Verbos
 
 5.  在“答案文件”窗格中，转到 4 specialize/Identification/Credentials。 右键单击“凭据”，然后单击“删除”。  
 
-6.  单击“完成” 。  
+6.  单击“是” 。  
 
 7.  保存答案文件，然后退出 Windows SIM。  
 
