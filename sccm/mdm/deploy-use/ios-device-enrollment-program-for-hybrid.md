@@ -10,11 +10,11 @@ ms.assetid: 78d44adc-9b1c-4bc6-b72d-e93873916ea6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a4a6d8d67060dbf7c5bc75892d2f231bce67df8f
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 31c94d3632014110302cb1815f72af0c26245dc9
+ms.sourcegitcommit: 95452daa3340d4d0818562bcbb53672cb16f8799
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="ios-device-enrollment-program-dep-enrollment-for-hybrid-deployments-with-configuration-manager"></a>使用 Configuration Manager 进行混合部署的 iOS 设备注册计划 (DEP) 注册
 
@@ -102,7 +102,10 @@ ms.lasthandoff: 05/03/2018
     > [!NOTE]
     > 在混合配置中，DEP 同步操作通过在 Configuration Manager 控制台中单击“DEP 同步”手动触发。
 
-4.  **分配 DEP 配置文件**<br>在“资产和符合性”工作区中，转到“公司拥有的所有设备” > “iOS” > “注册配置文件”。 选择 DEP 注册配置文件，然后在“主页”选项卡中单击“分配给设备”。 选择要使用此注册配置文件的设备，单击“添加”，然后单击“确定”。   
+4.  **分配 DEP 配置文件**<br>在“资产和符合性”工作区中，转到“公司拥有的所有设备” > “iOS” > “注册配置文件”。 选择 DEP 注册配置文件，然后在“主页”选项卡中单击“分配给设备”。 选择要使用此注册配置文件的设备，单击“添加”，然后单击“确定”。
+
+    > [!NOTE]
+    > 将 DEP 配置文件分配给设备后，只需使用另一个 DEP 配置文件来替换此配置文件。 但是，不能删除 DEP 配置文件分配。 若要从设备中删除 DEP 配置文件，必须取消注册该设备。  
      ![向 iOS 设备分配 DEP 配置文件的屏幕截图](../media/dep-assign-profile.png)
 
 ## <a name="distribute-devices-to-users"></a>将设备分发给用户

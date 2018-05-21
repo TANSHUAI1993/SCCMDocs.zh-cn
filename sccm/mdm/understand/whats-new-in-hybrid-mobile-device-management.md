@@ -2,7 +2,7 @@
 title: 混合 MDM 中的新增功能
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 和 Intune 的混合部署可用的新移动设备管理功能。
-ms.date: 05/01/2018
+ms.date: 05/09/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,11 +10,11 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3105f9597d1f3971d6ef1092a33b0077118a1a22
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 72aeff7874456c3866ccb658395b8706057bdfaf
+ms.sourcegitcommit: 7bec1331c4f3096e6a278ff9ea0e929cff0a9cb9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Configuration Manager 和 Microsoft Intune 的混合移动设备管理中的新增功能
 
@@ -41,6 +41,13 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="may-2018"></a>2018 年 5 月
 
+### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
+
+#### <a name="requesting-help-in-the-company-portal-for-windows-10"></a>在适用于 Windows 10 的公司门户中请求帮助 
+<!--1874137-->
+当用户启动工作流以获取相关问题的帮助时，适用于 Windows 10 的公司门户现在直接向 Microsoft 发送应用日志。 此行为有助于更轻松地进行故障排除并解决向 Microsoft 提出的问题。  
+
+
 ### <a name="new-in-configuration-manager-current-branch"></a>Configuration Manager (Current Branch) 中的新增功能
 
 #### <a name="support-for-new-versions-of-cisco-anyconnect-client-for-ios"></a>对适用于 iOS 的 Cisco AnyConnect 客户端新版本的支持
@@ -58,6 +65,9 @@ ms.lasthandoff: 05/03/2018
 
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
 
+#### <a name="intune-adapts-to-fluent-design-system-in-the-company-portal-app-for-windows-10"></a>Intune 适用于面向 Windows 10 的公司门户中的 Fluent Design System 
+<!--1195010-->
+适用于 Windows 10 的 Intune 公司门户应用经已更新 [Fluent Design System 的导航窗格视图](/windows/uwp/design/basics/navigation-basics)。 在应用程序旁边，会看到一个包含所有顶级页面的静态垂直列表。 单击任意链接可快速查看并在页面之间进行切换。 我们正不断努力在 Intune 中打造更具适应性、引人入胜且熟悉的体验，在此期间，你会看到多个更新，此更新正是第一个。 要查看更新的外观，请转到[应用 UI 中的新增功能](/intune/whats-new-app-ui)。
 
 #### <a name="improved-device-tiles-in-the-windows-10-company-portal"></a>改进了 Windows 10 公司门户中的设备磁贴
 <!--2213364-->
@@ -112,6 +122,35 @@ ms.lasthandoff: 05/03/2018
 ## <a name="march-2018"></a>2018 年 3 月
 
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
+
+#### <a name="windows-company-portal-send-feedback-option-may-no-longer-work"></a>Windows 公司门户的“发送反馈”选项可能失效
+<!--2070166-->
+Windows 公司门户应用上有一个“发送反馈”选项，用户可用它向 Microsoft 发送应用反馈。 自 2018 年 4 月 30 日起，只有 Windows 10 版本 1607 及更高版本上运行的 Windows 10 公司门户应用才能继续使用此选项。   
+
+**这会对我产生哪些影响？**
+
+如果尚未为最终用户安装 Windows 公司门户应用，请忽略此消息。
+
+如果任一最终用户具备公司门户应用，请注意，自 4 月 30 日期，以下情形中的应用不可再使用“发送反馈”按钮：  
+
+ - Windows 10 版本 1507 和版本 1511 上的 Windows 10 公司门户应用  
+
+ - Windows Phone 8.1 公司门户应用  
+
+对于受影响的设备，“发送反馈”选项会失效，且重试后仍不能成功运行。 若要将上述平台的体验反馈发送给 Microsoft，可使用下述备用反馈通道。
+
+**我需要如何准备应对此项变化？**
+
+请告知最终用户出现此项变化，并在必要时更新用户指南。 
+
+让在 Windows Phone 8.1、Windows 10 版本 1507 和 Windows 10 版本 1511 上使用公司门户的最终用户了解有两个备用反馈通道可用。 最终用户可：  
+
+- 使用 Windows 10 上的反馈中心应用  
+- 发送电子邮件至 WinCPfeedback@microsoft.com  
+
+要求使用 Windows 10 版本 1607 或更高版本的最终用户将 Windows 公司门户更新到 Microsoft Store 中的最新版。
+
+
 
 #### <a name="azure-active-directory-web-sites-can-require-the-intune-managed-browser-app-and-support-single-sign-on-for-the-managed-browser-public-preview"></a>Azure Active Directory 网站可能需要 Intune Managed Browser 应用，且支持 Managed Browser（公共预览版）的单一登录
 <!-- 710595 --> 
@@ -531,35 +570,6 @@ Configuration Manager (Current Branch) 1702 版本中还包括以下其他混合
 
 
 ## <a name="notices"></a>通知
-
-### <a name="windows-company-portal-send-feedback-option-may-no-longer-work"></a>Windows 公司门户的“发送反馈”选项可能失效
-
-Windows 公司门户应用上有一个“发送反馈”选项，用户可用它向 Microsoft 发送应用反馈。 自 2018 年 4 月 30 日起，只有 Windows 10 版本 1607 及更高版本上运行的 Windows 10 公司门户应用才能继续使用此选项。   
-
-#### <a name="how-does-this-affect-me"></a>这会对我产生哪些影响？
-
-如果尚未为最终用户安装 Windows 公司门户应用，请忽略此消息。
-
-如果任一最终用户具备公司门户应用，请注意，自 4 月 30 日期，以下情形中的应用不可再使用“发送反馈”按钮：  
-
- - Windows 10 版本 1507 和版本 1511 上的 Windows 10 公司门户应用  
-
- - Windows Phone 8.1 公司门户应用  
-
-对于受影响的设备，“发送反馈”选项会失效，且重试后仍不能成功运行。 若要将上述平台的体验反馈发送给 Microsoft，可使用下述备用反馈通道。
-
-#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>我需要如何准备应对此项变化？
-
-请告知最终用户出现此项变化，并在必要时更新用户指南。 
-
-让在 Windows Phone 8.1、Windows 10 版本 1507 和 Windows 10 版本 1511 上使用公司门户的最终用户了解有两个备用反馈通道可用。 最终用户可：  
-
-- 使用 Windows 10 上的反馈中心应用  
-- 发送电子邮件至 WinCPfeedback@microsoft.com  
-
-要求使用 Windows 10 版本 1607 或更高版本的最终用户将 Windows 公司门户更新到 Microsoft Store 中的最新版。
-
-
 
 ### <a name="company-portal-for-windows-81-and-windows-phone-81-moving-to-sustaining-mode"></a>适用于 Windows 8.1 和 Windows Phone 8.1 的公司门户将移至维护模式 
 <!--1428681-->

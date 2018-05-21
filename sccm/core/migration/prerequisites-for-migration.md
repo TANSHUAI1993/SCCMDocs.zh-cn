@@ -2,7 +2,7 @@
 title: 迁移先决条件
 titleSuffix: Configuration Manager
 description: 了解支持的 Configuration Manager 版本、支持的源站点语言和迁移所需的配置。
-ms.date: 3/7/2017
+ms.date: 5/7/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,11 +10,11 @@ ms.assetid: ec976930-7467-4d3c-b33c-991bf408a74a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fde02837f281a6db182d3144d2009e6b56f0dc69
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: da35641b7e00bfdae025d2978beaa541951487da
+ms.sourcegitcommit: 7198ec49d9ce68c6d55bfb9e2d537b5442a132cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="prerequisites-for-migration-in-system-center-configuration-manager"></a>System Center Configuration Manager 中迁移的先决条件
 
@@ -46,7 +46,7 @@ ms.lasthandoff: 05/03/2018
 
 
 ##  <a name="BKMK_SorceSiteLanguage"></a> 迁移支持的源站点语言  
- 在 Configuration Manager 层次结构之间迁移数据时，数据将采用 System Center Configuration Manager 的语言中性格式存储在目标层次结构中。 由于 Configuration Manager2007 不采用语言中性格式存储数据，因此在从 Configuration Manager2007 迁移的过程中，迁移过程必须将对象转换为此格式。 因此，迁移只支持安装有以下语言的 Configuration Manager 2007 源站点：  
+ 在 Configuration Manager 层次结构之间迁移数据时，数据将采用 System Center Configuration Manager 的语言中性格式存储在目标层次结构中。 由于 Configuration Manager 2007 不采用语言中性格式存储数据，因此在从 Configuration Manager 2007 迁移的过程中，迁移过程必须将对象转换为此格式。 因此，迁移只支持安装有以下语言的 Configuration Manager 2007 源站点：  
 
 -   英语  
 
@@ -79,7 +79,7 @@ ms.lasthandoff: 05/03/2018
 
     -   **源站点帐户：** 此帐户用于访问源站点的 SMS 提供程序。  
 
-        -   对于 Configuration Manager2007 SP2 源站点，此帐户需要对所有源站点对象具有“读取”权限。  
+        -   对于 Configuration Manager 2007 SP2 源站点，此帐户需要对所有源站点对象具有“读取”权限。  
 
         -   对于 System Center 2012 Configuration Manager 或 System Center Configuration Manager 源站点，此帐户需要对所有源站点对象具有“读取”权限，可通过使用基于角色的管理向帐户授予此权限。 有关如何使用基于角色的管理的信息，请参阅 [System Center Configuration Manager 的基于角色的管理基础](../../core/understand/fundamentals-of-role-based-administration.md)。  
 
@@ -115,7 +115,7 @@ ms.lasthandoff: 05/03/2018
 
      配置为从源站点的 SMS 提供程序中收集数据的“源站点访问帐户”  必须拥有以下权限：  
 
-    -   若要升级 Configuration Manager2007 分发点，该帐户需要拥有对 Configuration Manager2007 站点服务器上“站点”类的“读取”、“执行”和“删除”权限，才能成功删除 Configuration Manager2007 源站点中的分发点  
+    -   若要升级 Configuration Manager 2007 分发点，该帐户需要拥有对 Configuration Manager 2007 站点服务器上“站点”类的“读取”、“执行”和“删除”权限，才能成功删除 Configuration Manager 2007 源站点中的分发点  
 
     -   若要重新分配 System Center 2012 Configuration Manager 或 System Center Configuration Manager 分发点，该帐户必须对源站点上的“站点”对象具有“修改”权限。 通过使用基于角色的管理来向帐户授予此权限。 有关如何使用基于角色的管理的信息，请参阅 [System Center Configuration Manager 的基于角色的管理基础](../../core/understand/fundamentals-of-role-based-administration.md)。  
 

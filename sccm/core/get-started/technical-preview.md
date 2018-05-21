@@ -2,7 +2,7 @@
 title: Technical Preview 版本
 titleSuffix: Configuration Manager
 description: 了解可测试 Configuration Manager 中的新功能和新特性的 Technical Preview 版本。
-ms.date: 04/25/2018
+ms.date: 05/11/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,11 +10,11 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6b39f5eec4209e176374dcbdffc11183625c4967
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: a6a4faff728b14fae198f9709ca9ce9ca5d04455
+ms.sourcegitcommit: 021272d5858e5dbb650b95644736d1de3dab7d8a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/15/2018
 ---
 # <a name="technical-preview-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview
 
@@ -24,7 +24,7 @@ ms.lasthandoff: 05/03/2018
 
  由于此版本是技术预览版，因此详细信息和功能可能有所更改。  
 
- 本文包含适用于所有版本的 Technical Preview 的信息。 它还列出了每个新功能及其首次出现的 Technical Preview 版本，例如版本 1804 表示 2018 年 4 月。 这些功能将专门在各预览版的单独主题中详细介绍。  
+ 本文包含适用于所有版本的 Technical Preview 的信息。 它还列出了每个新功能及其首次出现的 Technical Preview 版本，例如版本 1805 表示 2018 年 5 月。 这些功能将专门在各预览版的单独主题中详细介绍。  
 
  有关 Configuration Manager 的 Current Branch 中新增功能的信息，请参阅 [System Center Configuration Manager 中的新增功能](/sccm/core/plan-design/changes/what-has-changed-from-configuration-manager-2012)。
 
@@ -108,30 +108,49 @@ ms.lasthandoff: 05/03/2018
 
 <!-- This is the full list of new features in the latest TP release -->
 
-### <a name="technical-preview-version-1804"></a>Technical Preview 1804 版
-- [配置用于站点服务器的远程内容库](capabilities-in-technical-preview-1804.md#configure-a-remote-content-library-for-the-site-server) <!--1357525--> 
-- [从 Configuration Manager 控制台提交反馈](capabilities-in-technical-preview-1804.md#bkmk_feedback) <!--1357542--> 
-- [支持中心](capabilities-in-technical-preview-1804.md#support-center) <!--1357489--> 
-- [Configuration Manager 工具包](capabilities-in-technical-preview-1804.md#configuration-manager-toolkit) <!--1357145--> 
-- [在批准撤消时卸载应用程序](capabilities-in-technical-preview-1804.md#uninstall-application-on-approval-revocation) <!--1357891--> 
-- [从发现中排除 Active Directory 容器](capabilities-in-technical-preview-1804.md#exclude-active-directory-containers-from-discovery) <!--1358143--> 
-- [指定应用程序目录网站链接在软件中心的可见性](capabilities-in-technical-preview-1804.md#specify-the-visibility-of-the-application-catalog-website-link-in-software-center) <!--1358214--> 
-- [按软件更新体系结构筛选自动部署规则](capabilities-in-technical-preview-1804.md#filter-automatic-deployment-rules-by-software-update-architecture) <!--1322266--> 
-- [对 OS 部署的改进](capabilities-in-technical-preview-1804.md#improvements-to-os-deployment) <!--1358330,1358493--> 
-- [对 Configuration Manager 控制台的改进](capabilities-in-technical-preview-1804.md#improvements-to-the-configuration-manager-console) <!--510252--> 
+### <a name="technical-preview-version-1805"></a>Technical Preview 1805 版
+- [使用手动配置的任务序列阶段创建分阶段部署](capabilities-in-technical-preview-1805.md#create-a-phased-deployment-with-manually-configured-phases-for-a-task-sequence) <!--1358148--> 
+- [对 Azure 资源管理器的云分发点支持](capabilities-in-technical-preview-1805.md#cloud-distribution-point-support-for-azure-resource-manager) <!--1322209--> 
+- [根据管理见解执行操作](capabilities-in-technical-preview-1805.md#take-actions-based-on-management-insights) <!--1357930--> 
+- [使用共同管理将设备配置工作负荷转移到 Intune](capabilities-in-technical-preview-1805.md#transition-device-configuration-workload-to-intune-using-co-management) <!--1357903--> 
+- [启用分发点以使用网络拥塞控制](capabilities-in-technical-preview-1805.md#enable-distribution-points-to-use-network-congestion-control) <!--1358112--> 
+- [云管理仪表板](capabilities-in-technical-preview-1805.md#cloud-management-dashboard) <!--1358461--> 
+- [CMPivot](capabilities-in-technical-preview-1805.md#cmpivot) <!--1358456--> 
+- [已改进安全客户端通信](capabilities-in-technical-preview-1805.md#improved-secure-client-communications) <!--1356889,1358228,1358460--> 
+- [启用第三方软件更新支持的改进](capabilities-in-technical-preview-1805.md#improvements-for-enabling-third-party-software-update-support) <!--1357605--> 
+- [对 Windows 10 就地升级任务序列的改进](capabilities-in-technical-preview-1805.md#improvements-to-windows-10-in-place-upgrade-task-sequence) <!--1358500--> 
+- [与客户端一起安装的 CMTrace](capabilities-in-technical-preview-1805.md#cmtrace-installed-with-client) <!--1357971--> 
+- [对 Configuration Manager 控制台的改进](capabilities-in-technical-preview-1805.md#improvement-to-the-configuration-manager-console) <!--1358202--> 
+- [对控制台反馈的改进](capabilities-in-technical-preview-1805.md#improvements-to-console-feedback) <!--1357542--> 
+- [对已启用 PXE 的分发点的改进](capabilities-in-technical-preview-1805.md#improvements-to-pxe-enabled-distribution-points) <!--1357580--> 
+- [对大型整数值硬件清单的改进](capabilities-in-technical-preview-1805.md#improvement-to-hardware-inventory-for-large-integer-values) <!--1357880--> 
+- [WSUS 维护改进](capabilities-in-technical-preview-1805.md#improvement-to-wsus-maintenance) <!--1357898--> 
+- [对 CNG 证书支持的改进](capabilities-in-technical-preview-1805.md#improvement-to-support-for-cng-certificates) <!--1357314--> 
+
+
+
 
 
 
 ## <a name="capabilities-delivered-in-recent-supported-technical-previews"></a>最新受支持的 Technical Preview 中提供的功能
 以下是旧版 Configuration Manager Technical Preview 提供且依然受支持的功能。 
 
-<!-- This is the full list of new features in the past three TP releases. 
+<!-- This is the full list of new features in the past THREE (3) TP releases. 
 Each month, add features from the list above to the top of this table. 
 Then remove the bottom of this list and/or move individual items not in CB to the third table below.
 -->
 
  |功能 |Technical Preview 版本 |Current Branch 版本|  
  |----------------|---------------------|--------------------|
+ | 配置用于站点服务器的远程内容库 <!--1357525--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#configure-a-remote-content-library-for-the-site-server)  | ![未添加](media/Red_X.gif) | 
+ | 从 Configuration Manager 控制台提交反馈 <!--1357542--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#bkmk_feedback)  | ![未添加](media/Red_X.gif) | 
+ | 支持中心 <!--1357489--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#support-center)  | ![未添加](media/Red_X.gif) | 
+ | Configuration Manager 工具包 <!--1357145--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#configuration-manager-toolkit)  | ![未添加](media/Red_X.gif) | 
+ | 在批准撤消时卸载应用程序 <!--1357891--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#uninstall-application-on-approval-revocation)  | ![未添加](media/Red_X.gif) | 
+ | 从发现中排除 Active Directory 容器 <!--1358143--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#exclude-active-directory-containers-from-discovery)  | ![未添加](media/Red_X.gif) | 
+ | 指定应用程序目录网站链接在软件中心的可见性 <!--1358214--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#specify-the-visibility-of-the-application-catalog-website-link-in-software-center)  | ![未添加](media/Red_X.gif) | 
+ | 按软件更新体系结构筛选自动部署规则 <!--1322266--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#filter-automatic-deployment-rules-by-software-update-architecture)  | ![未添加](media/Red_X.gif) | 
+ | 对操作系统部署的改进 <!--1358330,1358493--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#improvements-to-os-deployment) | ![未添加](media/Red_X.gif) | 
  | 请求分发点支持将云分发点作为源 <!--1321554--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#pull-distribution-points-support-cloud-distribution-points-as-source)  | ![未添加](media/Red_X.gif) | 
  | 客户端对等缓存中的部分下载支持可降低 WAN 利用率 <!--1357346--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#partial-download-support-in-client-peer-cache-to-reduce-wan-utilization)  | ![未添加](media/Red_X.gif) | 
  | 软件中心的维护时段 <!--1358131--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#maintenance-windows-in-software-center)  | ![未添加](media/Red_X.gif) | 
@@ -158,14 +177,6 @@ Then remove the bottom of this list and/or move individual items not in CB to th
  | Microsoft Edge 浏览器策略 <!-- 1357310 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#microsoft-edge-browser-policies) | [版本 1802](/sccm/compliance/deploy-use/browser-profiles) | 
  | 默认浏览器计数报表 <!-- 1357830 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#report-for-default-browser-counts) | [版本 1802](/sccm/core/servers/manage/list-of-reports#software---companies-and-products) | 
  | Windows 10 ARM64 设备支持 <!-- 1353704 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#support-for-windows-10-arm64-devices) | [版本 1802](/sccm/core/plan-design/configs/support-for-windows-10) |  
- | 创建分阶段部署 <!-- 1356837 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#create-phased-deployments) | [版本 1802](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence) |
- | 共同管理报告 <!-- 1356648 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#co-management-reporting) | [版本 1802](\sccm\core\clients\manage\client-management-dashboard) |
- | 自动部署规则评估计划改进 <!-- 1357133 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#improvements-to-automatic-deployment-rule-evaluation-schedule) | [版本 1802](/sccm/sum/deploy-use/automatically-deploy-software-updates#BKMK_CreateAutomaticDeploymentRule) |
- | 重新分配分发点 <!-- 1306937 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#reassign-distribution-point) | [版本 1802](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_reassign) |
- | 硬件清单改进 <!-- 1357389 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#improvements-to-hardware-inventory) | [版本 1802](/sccm/core/clients/manage/inventory/extend-hardware-inventory#BKMK_GreaterThan255) |
- | 软件中心的客户端设置改进 <!-- 1355146 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#improvements-to-client-settings-for-software-center) | [版本 1802](/sccm/core/clients/deploy/about-client-settings#BKMK_HideUnapproved) |
- | 新的 Windows Defender 应用程序防护设置 <!-- 1356256 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#new-settings-for-windows-defender-application-guard) | [版本 1802](/sccm/protect/deploy-use/create-deploy-application-guard-policy#BKMK_HIS) |
- | 运行脚本的改进 <!-- 1236459 --> | [Tech Preview 1801](capabilities-in-technical-preview-1801.md#improvements-to-run-scripts) | [版本 1802](/sccm/apps/deploy-use/create-deploy-scripts) |
  
   
 
