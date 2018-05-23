@@ -2,26 +2,19 @@
 title: 规划 Windows Embedded 设备的客户端部署
 titleSuffix: Configuration Manager
 description: 在 System Center Configuration Manager 中规划 Windows Embedded 设备的客户端部署。
-ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-client
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-client
+ms.topic: conceptual
 ms.assetid: 038e61f9-f49d-41d1-9a9f-87bec9e00d5d
-caps.latest.revision: ''
-caps.handback.revision: ''
-author: arob98
-ms.author: angrobe
-manager: angrobe
-ms.openlocfilehash: c4f3d8a9b043707340e56d3ae483ad66ca17dc10
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 6ca987411775ec3a6fbe626d4b34f83313673f5b
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="planning-for-client-deployment-to-windows-embedded-devices-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中计划 Windows Embedded 设备的客户端部署
 
@@ -63,9 +56,9 @@ ms.lasthandoff: 03/27/2018
 > [!IMPORTANT]  
 >  如果可以选择，请将基于文件的写入筛选器 (FBWF) 与 Configuration Manager 一起使用，以便提高效率和可伸缩性。
 >
-> **对于仅使用 FBWF 的设备：**配置以下例外以在设备重启之间保留客户端状态和清单数据：  
+> **对于仅使用 FBWF 的设备：** 配置以下例外以在设备重启之间保留客户端状态和清单数据：  
 >   
->  -   CCMINSTALLDIR\\*.sdf  
+>  -   CCMINSTALLDIR\\\*.sdf  
 > -   CCMINSTALLDIR\ServiceData  
 > -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\StateSystem  
 >   
@@ -81,7 +74,7 @@ ms.lasthandoff: 03/27/2018
 > -   CCMINSTALLDIR\ServiceData  
 > -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\StateSystem  
 >   
-> **对于仅使用 FBWF 和 UWF 的设备：**当工作组中的客户端使用证书向管理点进行身份验证时，还必须排除私钥以确保客户端继续与管理点通信。 在这些设备上配置以下例外：  
+> **对于仅使用 FBWF 和 UWF 的设备：** 当工作组中的客户端使用证书向管理点进行身份验证时，还必须排除私钥以确保客户端继续与管理点通信。 在这些设备上配置以下例外：  
 >   
 >  -   c:\Windows\System32\Microsoft\Protect  
 > -   c:\ProgramData\Microsoft\Crypto  
