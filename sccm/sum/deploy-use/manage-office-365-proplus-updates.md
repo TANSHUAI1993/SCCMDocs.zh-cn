@@ -10,11 +10,11 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
-ms.openlocfilehash: a7c1786e9acce10d98da031d9d5df3b81f9a1a28
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: a94ac00b8fce6098cbd829947f4e2fbdcb761b9e
+ms.sourcegitcommit: c5e078b8eee87f527e5b5a0c2eb687bb9d6896c5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="manage-office-365-proplus-with-configuration-manager"></a>使用 Configuration Manager 管理 Office 365 ProPlus
 
@@ -96,7 +96,7 @@ Office 365 客户端管理仪表板中显示的数据来自硬件清单。 启�
 
 
 ## <a name="deploy-office-365-updates"></a>部署 Office 365 更新
-从 Configuration Manager 版本 1706 开始，Office 365 客户端更新已移至“Office 365 客户端管理” >“Office 365 更新”节点。  移动不会影响 ADR 配置。 
+从 Configuration Manager 版本 1706 开始，Office 365 客户端更新已移至“Office 365 客户端管理” >“Office 365 更新”节点。 此移动不会影响当前 ADR 配置。 
 
 使用以下步骤通过 Configuration Manager 部署 Office 365 更新：
 

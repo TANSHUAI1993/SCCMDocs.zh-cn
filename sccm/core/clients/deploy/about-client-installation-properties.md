@@ -1,7 +1,7 @@
 ---
-title: 客户端安装属性
+title: 客户端安装参数和属性
 titleSuffix: Configuration Manager
-description: 了解用于安装 Configuration Manager 客户端的 ccmsetup 命令行属性。
+description: 了解用于安装 Configuration Manager 客户端的 ccmsetup 命令行参数和属性。
 ms.date: 03/28/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -10,17 +10,17 @@ ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 27479bf3db9ab0ed5d842f5cbf9db4e399a4168d
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 735a8da57c0225aee533568eb997dc82d9816d6b
+ms.sourcegitcommit: db6074317d5c68ebb5fc478be5bceeb441aa0737
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="about-client-installation-properties-in-system-center-configuration-manager"></a>关于 System Center Configuration Manager 中的客户端安装属性
+# <a name="about-client-installation-parameters-and-properties-in-system-center-configuration-manager"></a>关于 System Center Configuration Manager 中的客户端安装参数和属性。
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-使用 CCMSetup.exe 命令安装 Configuration Manager 客户端。 如果在命令行上提供客户端安装属性，它们则会修改安装行为。
+使用 CCMSetup.exe 命令安装 Configuration Manager 客户端。 如果在命令行上提供客户端安装参数，它们则会修改安装行为。 如果在命令行上提供客户端安装属性，它们则会修改已安装客户端代理的初始配置。
 
 
 
@@ -38,16 +38,16 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  在 Configuration Manager 中，不能直接运行 Client.msi 文件。  
 
- CCMSetup.exe 提供了可自定义安装的[命令行属性](#ccmsetup-exe-command-line-properties)。 还可以指定属性以修改 CCMSetup.exe 命令行中的 client.msi 行为。  
+ CCMSetup.exe 提供[命令行参数](#ccmsetup-exe-command-line-parameters)以自定义安装 -- 参数以反斜杠作为前缀，并按照约定采用小写。 在必要时，使用一个冒号紧跟所需的值来指定参数的值。 还可以提供属性以修改 CCMSetup.exe 命令行中的 client.msi 行为 -- 按照约定属性均采用大写。 使用等于号紧跟所需的值来指定参数的值。  
 
 > [!IMPORTANT]  
->  指定 client.msi 的属性之前，先指定 CCMSetup 属性。  
+>  指定 client.msi 的属性之前，先指定 CCMSetup 参数。  
 
  CCMSetup.exe 及支持文件位于 Configuration Manager 安装文件夹内“Client”文件夹中的站点服务器上。 该文件夹以 **&lt;站点服务器名称\>\SMS_&lt;站点代码 \>\Client** 的形式在网络上共享。  
 
  在命令提示符处，CCMSetup.exe 命令使用下列格式：  
 
- `CCMSetup.exe [<Ccmsetup properties>] [<client.msi setup properties>]`  
+ `CCMSetup.exe [<Ccmsetup parameters>] [<client.msi setup properties>]`  
 
  例如：  
 
@@ -64,7 +64,7 @@ ms.lasthandoff: 05/03/2018
 -   指示 client.msi 使用名为 SMSFP01 的回退状态点。  
 
 > [!NOTE]  
->  如果属性包含空格，则用引号括起来。  
+>  如果属性值包含空格，则用引号括起来。  
 
 
 > [!IMPORTANT]  
@@ -72,11 +72,11 @@ ms.lasthandoff: 05/03/2018
 
 
 
-##  <a name="ccmsetupexe-command-line-properties"></a>CCMSetup.exe 命令行属性  
+##  <a name="ccmsetupexe-command-line-parameters"></a>CCMSetup.exe 命令行参数  
 
 ### <a name=""></a>/?  
 
-打开显示 ccmsetup.exe 的命令行属性的“CCMSetup”  对话框。  
+打开显示 ccmsetup.exe 的命令行参数的“CCMSetup” 对话框。  
 
 示例： **ccmsetup.exe /?**  
 
@@ -85,7 +85,7 @@ ms.lasthandoff: 05/03/2018
  指定文件下载位置。 使用本地路径或 UNC 路径。 使用服务器消息块 (SMB) 协议下载文件。 若要使用 **/source**，用于客户端安装的 Windows 用户帐户对位置必须具有读取权限。
 
 > [!NOTE]  
->  可在命令行上多次使用 /source 属性，以指定备用下载位置。  
+>  可在命令行上多次使用 /source 参数，以指定备用下载位置。  
 
  示例：**ccmsetup.exe /source:"\\\computer\folder"**  
 
@@ -94,39 +94,39 @@ ms.lasthandoff: 05/03/2018
  指定计算机要连接到的源管理点。 计算机使用此管理点来查找最近的安装文件分发点。 如果没有分发点或者计算机在 4 个小时后无法从分发点下载文件，则将从指定的管理点下载文件。  
 
 > [!IMPORTANT]  
->  此属性用于指定初始管理点，以供计算机，查找下载源，此管理点可以是任何站点中的任何管理点。 它不会向管理点分配客户端。   
+>  此属性用于指定初始管理点，以供计算机查找下载源，此管理点可以是任何站点中的任何管理点。 它不会向管理点分配客户端。   
 
  计算机通过 HTTP 或 HTTPS 连接下载文件，具体情况视客户端连接的站点系统角色配置而定。 如果已配置，下载将使用 BITS 限制。 如果所有分发点和管理点都仅针对 HTTPS 客户端连接进行配置，则需验证客户端计算机是否具有有效的客户端证书。  
 
-可使用 /mp 命令行属性指定多个管理点。 如果计算机无法连接到第一个管理点，则会尝试连接指定列表中的下一个管理点。 在指定多个管理点时，请使用分号分隔各个值。
+可使用 /mp 命令行参数来指定多个管理点。 如果计算机无法连接到第一个管理点，则会尝试连接指定列表中的下一个管理点。 在指定多个管理点时，请使用分号分隔各个值。
 
-如果客户端使用 HTTPS 连接到管理点，通常必须指定 FQDN，而不是计算机名。 值必须匹配管理点的 PKI 证书使用者或使用者备用名称。 尽管 Configuration Manager 对于 Intranet 上的连接支持使用证书中的计算机名，但建议使用 FQDN，这是最为安全的做法。
+如果客户端使用 HTTPS 连接到管理点，通常必须指定 FQDN，而不是计算机名。 值必须匹配管理点的 PKI 证书使用者或使用者备用名称。 尽管 Configuration Manager 对于 Intranet 上的连接支持使用证书中的计算机名，但建议使用 FQDN。
 
 使用计算机名称时的示例：`ccmsetup.exe /mp:SMSMP01`  
 
 使用 FQDN 时的示例：`ccmsetup.exe /mp:smsmp01.contoso.com`  
 
-该属性可指定云管理网关的 URL。 使用此 URL 在基于 Internet 的设备上安装客户端。 要获取此属性的值，请按以下步骤操作：
+该参数可指定云管理网关的 URL。 使用此 URL 在基于 Internet 的设备上安装客户端。 要获取此参数的值，请按以下步骤操作：
 - 创建云管理网关。
 - 在活动的客户端上，以管理员身份打开 Windows PowerShell 命令提示符。 
 - 运行以下命令：`(Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate | Where-Object {$_.Type -eq "Internet"}).MP`
-- 附加“https://”前缀与 /mp 属性一起使用。
+- 附加“https://”前缀以与 /mp 参数一起使用。
 
 使用云管理网关 URL 时的示例：`ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72057598037248100`
 
  > [!Important]
- > 为 /mp 属性指定云管理网关的 URL 时，它必须以 https:// 开头。
+ > 为 /mp 参数指定云管理网关的 URL 时，它必须以 https:// 开头。
 
 
 ### <a name="retryltminutes"></a>/retry:&lt;分钟数\>
 
-CCMSetup.exe 无法下载安装文件时的重试间隔。 在达到 **downloadtimeout** 属性中指定的限制之前，CCMSetup 将不断重试。  
+CCMSetup.exe 无法下载安装文件时的重试间隔。 在达到 downloadtimeout 参数中指定的限制之前，CCMSetup 将不断重试。  
 
 示例：`ccmsetup.exe /retry:20`  
 
 ### <a name="noservice"></a>/noservice
 
-默认情况下阻止 CCMSetup 以服务方式运行。 当 CCMSetup 作为服务运行时，它在计算机的本地系统帐户的上下文中运行。 此帐户可能没有足够权限访问安装所需的网络资源。 借助 **/noservice**，CCMSetup.exe 将在你用于启动安装过程的用户帐户的上下文中运行。 此外，如果使用脚本来运行带 /service 属性的 CCMSetup.exe，CCMSetup.exe 将在服务启动后退出，并且可能无法正确报告安装详细信息。   
+默认情况下阻止 CCMSetup 以服务方式运行。 当 CCMSetup 作为服务运行时，它在计算机的本地系统帐户的上下文中运行。 此帐户可能没有足够权限访问安装所需的网络资源。 借助 **/noservice**，CCMSetup.exe 将在你用于启动安装过程的用户帐户的上下文中运行。 此外，如果使用脚本来运行带 /service 参数的 CCMSetup.exe，CCMSetup.exe 将在服务启动后退出，并且可能无法正确报告安装详细信息。   
 
 示例：`ccmsetup.exe /noservice`  
 
@@ -144,13 +144,13 @@ CCMSetup.exe 无法下载安装文件时的重试间隔。 在达到 **downloadt
 
 ### <a name="logon"></a>/logon
 
-如果已安装客户端的任何版本，该属性会指定应停止客户端安装。  
+如果已安装客户端的任何版本，该参数会指定应停止客户端安装。  
 
 示例：`ccmsetup.exe /logon`  
 
 ### <a name="forcereboot"></a>/forcereboot
 
- 指定如果需要重启才能完成安装，则 CCMSetup 应强制客户端计算机重启。 如果未指定此属性，则在需要重启时，CCMSetup 会退出， 然后在下一次手动重启后继续。  
+ 指定如果需要重启才能完成安装，则 CCMSetup 应强制客户端计算机重启。 如果未指定此参数，则在需要重启时，CCMSetup 会退出。 然后在下一次手动重启后继续。  
 
  示例：`CCMSetup.exe /forcereboot`  
 
@@ -178,10 +178,10 @@ CCMSetup 放弃下载客户端安装文件之前将尝试下载的时长（以�
 
 ### <a name="usepkicert"></a>/UsePKICert
 
- 如果指定，则客户端将使用包括客户端身份验证的 PKI 证书（如果证书可用）。 如果客户端找不到有效证书，则会使用带自签名证书的 HTTP 连接。 不使用此属性时，此行为是相同的。
+如果指定，则客户端将使用包括客户端身份验证的 PKI 证书（如果证书可用）。 如果客户端找不到有效证书，则会使用带自签名证书的 HTTP 连接。 不使用此参数时，此行为是相同的。
 
 > [!NOTE]  
->  某些情况下，安装客户端时不必指定此属性，并且仍可使用客户端证书。 这些情况包括使用客户端请求安装客户端以及基于软件更新点的客户端安装。 但是，无论何时你手动安装客户端并使用 **/mp** 属性指定配置为仅接受 HTTPS 客户端连接的管理点时，都必须指定此属性。 安装客户端进行仅限 Internet 的通信时，也必须指定此属性。 将 CCMALWAYSINF=1 属性与基于 Internet 的管理点和站点代码的属性一起使用。 若要详细了解基于 Internet 的客户端管理，请参阅[来自 Internet 或不受信任林的客户端通信的注意事项](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan)。  
+>  某些情况下，安装客户端时不必指定此参数，并且仍可使用客户端证书。 这些情况包括使用客户端请求安装客户端以及基于软件更新点的客户端安装。 但是，无论何时手动安装客户端并使用 /mp 参数指定配置为仅接受 HTTPS 客户端连接的管理点时，都必须指定此参数。 安装客户端进行仅限 Internet 的通信时，也必须指定此参数。 将 CCMALWAYSINF=1 属性与基于 Internet 的管理点 (CCMHOSTNAME) 和站点代码 (SMSSITECODE) 的属性一起使用。 若要详细了解基于 Internet 的客户端管理，请参阅[来自 Internet 或不受信任林的客户端通信的注意事项](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan)。  
 
  示例：`CCMSetup.exe /UsePKICert`  
 
@@ -199,8 +199,8 @@ CCMSetup 放弃下载客户端安装文件之前将尝试下载的时长（以�
 
 指定列出客户端安装属性的文本文件的名称。
 
-- 如果不指定 **/noservice** CCMSetup 属性，此文件必须位于 CCMSetup 文件夹，对于 32 位和 64 位操作系统，为 %Windir%\\Ccmsetup。
-- 如果指定 **/noservice** 属性，此文件必须位于你从中运行 CCMSetup.exe 的相同文件夹中。  
+- 如果不指定 /noservice CCMSetup 参数，此文件必须位于 CCMSetup 文件夹，对于 32 位和 64 位操作系统，为 %Windir%\\Ccmsetup。
+- 如果指定 /noservice 参数，此文件必须位于你从中运行 CCMSetup.exe 的相同文件夹中。  
 
 示例：`CCMSetup.exe /config:&lt;Configuration File Name.txt\>`  
 
@@ -210,7 +210,7 @@ CCMSetup 放弃下载客户端安装文件之前将尝试下载的时长（以�
 
 ### <a name="skipprereqltfilename"></a>/skipprereq:&lt;文件名\>
 
- 指定在安装 Configuration Manager 客户端时 CCMSetup.exe 不得安装指定的必备程序。 此属性支持输入多个值。 使用分号字符 (;) 来分隔各个值。  
+ 指定在安装 Configuration Manager 客户端时 CCMSetup.exe 不得安装指定的必备程序。 此参数支持输入多个值。 使用分号字符 (;) 来分隔各个值。  
 
 
  示例：`CCMSetup.exe /skipprereq:dotnetfx40_client_x86_x64.exe` 或 `CCMSetup.exe /skipprereq:dotnetfx40_client_x86_x64.exe;windowsupdateagent30_x86.exe`  
@@ -226,7 +226,7 @@ CCMSetup 放弃下载客户端安装文件之前将尝试下载的时长（以�
 示例：`CCMSetup.exe /ExcludeFeatures:ClientUI` 不在客户端上安装软件中心。  
 
 > [!NOTE]  
->  “ClientUI” 是 /ExcludeFeatures 属性唯一支持的值。  
+>  “ClientUI”是 /ExcludeFeatures 参数唯一支持的值。  
 
 
 
@@ -249,7 +249,7 @@ CCMSetup 放弃下载客户端安装文件之前将尝试下载的时长（以�
 
 ### <a name="ccmsetupcmd"></a>CCMSETUPCMD 
 
-指定由 ccmsetup.msi 安装 ccmsetup.exe 之后传递给 ccmsetup.exe 的命令行属性。 将其他属性括在引号内。 当使用 Intune MDM 安装方法启动 Configuration Manager 客户端时使用此属性。 
+指定由 ccmsetup.msi 安装 ccmsetup.exe 之后传递给 ccmsetup.exe 的命令行参数和属性。 将其他属性括在引号内。 当使用 Intune MDM 安装方法启动 Configuration Manager 客户端时使用此属性。 
 
 示例：`ccmsetup.msi CCMSETUPCMD="/mp:https://mp.contoso.com CCMHOSTNAME=mp.contoso.com"`
 
@@ -320,7 +320,7 @@ Example: `ccmsetup.exe AADTENANTNAME=Contoso`
 
  设置为 1，指定客户端始终以 Internet 为基础并永远不会连接到 Intranet。 客户端的连接类型显示为“始终连接 Internet” 。  
 
- 将此属性与 CCMHOSTNAME 结合使用，指定基于 Internet 的管理点的 FQDN。 也可将其与 CCMSetup 属性 /UsePKICert 以及站点代码结合使用。  
+ 将此属性与 CCMHOSTNAME 结合使用，指定基于 Internet 的管理点的 FQDN。 也可将其与 CCMSetup 参数 /UsePKICert 以及站点代码结合使用。  
 
  若要详细了解基于 Internet 的客户端管理，请参阅[来自 Internet 或不受信任林的客户端通信的注意事项](../../plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan)。  
 
