@@ -1,20 +1,27 @@
 ---
-title: 规划 Windows Embedded 设备的客户端部署
-titleSuffix: Configuration Manager
+title: 规划 Windows Embedded 设备的客户端部署 | Microsoft Docs
 description: 在 System Center Configuration Manager 中规划 Windows Embedded 设备的客户端部署。
+ms.custom: na
 ms.date: 04/23/2017
 ms.prod: configuration-manager
-ms.technology: configmgr-client
-ms.topic: conceptual
+ms.reviewer: na
+ms.suite: na
+ms.technology:
+- configmgr-client
+ms.tgt_pltfrm: na
+ms.topic: get-started-article
 ms.assetid: 038e61f9-f49d-41d1-9a9f-87bec9e00d5d
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-ms.openlocfilehash: 6ca987411775ec3a6fbe626d4b34f83313673f5b
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+caps.latest.revision: 7
+caps.handback.revision: 0
+author: arob98
+ms.author: angrobe
+manager: angrobe
+ms.openlocfilehash: 513dcb2a224a6e60553fdc602813e9fe47116235
+ms.sourcegitcommit: b438515490e04fb09c82a8af642d38e9a0605178
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/15/2017
+ms.locfileid: "22103598"
 ---
 # <a name="planning-for-client-deployment-to-windows-embedded-devices-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中计划 Windows Embedded 设备的客户端部署
 
@@ -24,7 +31,7 @@ ms.lasthandoff: 05/03/2018
 
  请注意，当禁用筛选器时，不应禁用筛选器驱动程序。 启动计算机时，这些驱动程序通常都将自动启动。 禁用驱动程序将阻止客户端的安装，或者将干扰写入筛选器业务流程，从而导致客户端操作失败。 以下是与必须保持运行状态的每个写入筛选器类型相关联的服务：  
 
-|写入筛选器类型|驱动程序|键入|说明|  
+|写入筛选器类型|驱动程序|类型|描述|  
 |-----------------------|------------|----------|-----------------|  
 |EWF|EWF|内核|在受保护的卷上实现扇区级别 I/O 重定向。|  
 |FBWF|FBWF|文件系统|在受保护的卷上实现文件级别 I/O 重定向。|  
@@ -58,7 +65,7 @@ ms.lasthandoff: 05/03/2018
 >
 > **对于仅使用 FBWF 的设备：** 配置以下例外以在设备重启之间保留客户端状态和清单数据：  
 >   
->  -   CCMINSTALLDIR\\\*.sdf  
+>  -   CCMINSTALLDIR\\*.sdf  
 > -   CCMINSTALLDIR\ServiceData  
 > -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\StateSystem  
 >   
