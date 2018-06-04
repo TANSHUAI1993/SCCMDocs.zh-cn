@@ -1,26 +1,21 @@
 ---
-title: 应用程序管理简介 | Microsoft Docs
+title: 应用程序管理简介
+titleSuffix: Configuration Manager
 description: 发现管理和部署 System Center Configuration Manager 应用程序所需的基本信息。
-ms.custom: na
 ms.date: 12/23/2016
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-app
-ms.tgt_pltfrm: na
-ms.topic: get-started-article
+ms.technology: configmgr-app
+ms.topic: conceptual
 ms.assetid: 08f711ba-83bf-4b5f-9520-a0778c6ae7eb
-caps.latest.revision: 18
-author: robstackmsft
-ms.author: robstack
-manager: angrobe
-ms.openlocfilehash: 959a36413d06bb225f260bd44c1d3d59efd44e69
-ms.sourcegitcommit: 51fc48fb023f1e8d995c6c4eacfda7dbec4d0b2f
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: bcdc5800a1c280c99289528c40e0efee8acf5ad5
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/07/2017
-ms.locfileid: "20784585"
+ms.lasthandoff: 05/03/2018
+ms.locfileid: "32336164"
 ---
 # <a name="introduction-to-application-management-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的应用程序管理简介
 
@@ -38,7 +33,7 @@ ms.locfileid: "20784585"
 
  可以通过应用程序执行更多操作。 阅读本指南即可了解这些内容。 下表介绍了在深入学习前需要了解的一些概念：  
 
-|概念|描述|    
+|概念|说明|    
 |-|-|  
 |**惠?**|在之前版本的 Configuration Manager 中，经常要创建包含你想要向其部署应用程序的设备的集合。 尽管仍然可以创建集合，但使用要求可以为应用程序部署指定更多的详细条件。<br /><br /> 例如，可以指定应用程序仅在运行 Windows 10 的计算机上安装。 接下来，可以将应用程序部署到设备，但它只会在运行 Windows 10 的设备上安装。<br /><br /> Configuration Manager 会评估要求，确定是否安装应用程序及其任何部署类型。 然后，它会确定用于安装应用程序的正确部署类型。 默认情况下，根据“计划部署的重新评估” 客户端设置，每七天重新评估一次要求规则以确保符合性。<br /><br /> 有关详细信息，请参阅[创建和部署应用程序](../../apps/get-started/create-and-deploy-an-application.md)。|  
 |**全局条件**|尽管要求用于单个应用程序中的特定部署类型，但也可创建全局条件。 这些条件是可用于任何应用程序和部署类型的预定义要求库。<br /><br /> Configuration Manager 包含一套内置全局条件，并且也可以创建自己的全局条件。<br /><br /> 有关详细信息，请参阅[创建全局条件](../../apps/deploy-use/create-global-conditions.md)。|  
@@ -55,7 +50,7 @@ ms.locfileid: "20784585"
  可通过 Configuration Manager 部署以下应用类型：  
 
 - Windows Installer（*.msi 文件）
-- Windows 应用包（*.appx、*.appxbundle）
+- Windows 应用包（\*.appx、\*.appxbundle）
 - Windows 应用包（在 Windows 应用商店中）
 - Microsoft Application Virtualization 4
 - Microsoft Application Virtualization  5
