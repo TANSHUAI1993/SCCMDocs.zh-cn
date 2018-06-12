@@ -10,16 +10,18 @@ manager: dougeby
 ms.date: 03/22/2018
 ms.topic: conceptual
 ms.assetid: 60e2022f-a4f9-40dd-af01-9ecb37b43878
-ms.openlocfilehash: 439e4e26c08b5a2710da0978ed2407d715bc86bd
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: ceb4004c7f4cc24ff17f0e9648cddb29cb26d898
+ms.sourcegitcommit: 493cc42f05b9388ef872e466e5a75d569642b9fc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569640"
 ---
 # <a name="switch-configuration-manager-workloads-to-intune"></a>将 Configuration Manager 工作负荷切换到 Intune
 在[准备 Windows 10 设备进行共同管理](co-management-prepare.md)中，你已准备好了 Windows 10 设备以便进行共同管理。 这些设备已加入 AD 和 Azure AD，并且它们已在 Intune 中注册，具有 Configuration Manager 客户端。 你可能仍然具有已联接到 AD 且具有 Configuration Manager 客户端的 Windows 10 设备，但该设备未联接到 Azure AD 或在 Intune 中注册。 以下步骤介绍如何启用共同管理，准备其余的 Windows 10 设备（没有进行 Intune 注册的 Configuration Manager 客户端）进行共同管理，并允许开始将特定的 Configuration Manager 工作负荷切换到 Intune。
 
 1. 在 Configuration Manager 控制台中，转到“管理” > “概述” > “云服务” > “共同管理”。    
+
 2. 在“主页”选项卡的“管理”组中，选择“配置共同管理”以打开“共同管理配置”向导 ****。    
 3. 在“订阅”页中，单击“登录”并登录到 Intune 租户，然后单击“下一步”。   
 4. 在“启用”页中，选择“试点”或“全部”，在 Intune 中启用自动注册，然后单击“下一步”。 如果选择“试点”，仅属于试点组成员的 Configuration Manager 客户端可在 Intune 中自动注册。 此选项允许对客户端子集启用共同管理，以初步测试共同管理，并使用分阶段的方式推出共同管理。 对于已在 Intune 中注册的设备，命令行可以用于将 Configuration Manager 客户端部署为 Intune 中的应用。 有关详细信息，请参阅[在 Intune 中注册的 Windows 10 设备](co-management-prepare.md#windows-10-devices-enrolled-in-intune)。
@@ -55,8 +57,8 @@ ms.lasthandoff: 05/03/2018
       - Windows Defender 应用程序控制
       - Windows Defender 安全中心
       - Windows Defender 高级威胁防护
-
-
+      - Windows 信息保护
+      
 
 ## <a name="monitor-co-management"></a>监视共同管理
 启用共同管理后，可以使用以下方法监视共同管理设备：
