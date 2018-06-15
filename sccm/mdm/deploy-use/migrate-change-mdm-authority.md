@@ -9,11 +9,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: be503ec9-5324-4f7c-bcf5-77204328e99c
-ms.openlocfilehash: b8bc778f4bcede45d3035b8b119fc3e4a4df4978
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: b295dad503b801ff9d04767f75c1688107016d0b
+ms.sourcegitcommit: 493cc42f05b9388ef872e466e5a75d569642b9fc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569674"
 ---
 # <a name="change-your-mdm-authority-to-intune-standalone"></a>将 MDM 机构更改为 Intune 独立版
 
@@ -53,7 +54,9 @@ ms.lasthandoff: 05/03/2018
 3.  登录到在 Configuration Manager 中设置 MDM 机构时最初使用的 Intune 租户。
 4.  单击“下一步”并完成向导。
 5.  MDM 机构现已重置。 Intune 订阅在 Configuration Manager 控制台的 Microsoft Intune 订阅节点中不再显示。
-6.  使用之前使用的同一 Intune 租户登录到 [Azure 门户中的 Intune](https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview)。    
+6.  登录到 [Intune 门户](https://aka.ms/IntunePortal)。
+7.  在 Microsoft Intune 边栏选项卡中单击“设备注册”。
+8.  “设备注册概述”边栏选项卡中会显示“MDM 机构”属性。
 
   > [!Important]    
   > 请勿使用 Intune 经典控制台。 必须登录到 Azure 门户中的 Intune。

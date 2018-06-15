@@ -10,11 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.assetid: 9e68de6e-2b33-442b-b674-a382728d9529
-ms.openlocfilehash: 4c45da7b5a4b7f8945b23d03d0fd551276205ee2
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: ff40af9dd40921b63f8b8bd13ba5c287c3bf9972
+ms.sourcegitcommit: e35d07870656eadd29faacc378ecd091ff3bdcfb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34848656"
 ---
 # <a name="software-center-user-guide"></a>软件中心用户指南
 
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/03/2018
 - **筛选器**：IT 管理员可能会创建各种应用程序。 如果可用，请单击下拉列表进行筛选，以便仅查看特定类别的应用程序。 选择“全部”可显示所有应用程序。
 - **排序方式**：重新排列应用程序列表。 默认情况下，此列表按“最近的”排序。
 - **搜索**：仍找不到要查找的内容？ 在“搜索”框中输入关键字来查找它！
--  切换视图：单击图标以在列表视图和磁贴视图之间进行切换。 默认情况下，应用程序列表显示为图形磁贴。 
+-  **切换视图：** 单击图标，在列表视图和磁贴视图之间进行切换。 默认情况下，应用程序列表显示为图形磁贴。 
     - 磁贴视图：IT 管理员可以自定义图标。 在每个磁贴下方显示应用程序名称、发布者和版本。 
     - 列表视图：此视图显示应用程序图标、名称、发布者、版本和状态。 
 

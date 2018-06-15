@@ -10,11 +10,12 @@ ms.assetid: 0ea3edaa-27c6-4391-9896-cd97d9c5d06d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7587fa6d96d6f8737921c9e5edae992cdd0ea614
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: e5b0ee5cb677cff5e57f24a20122fb017aea056c
+ms.sourcegitcommit: 493cc42f05b9388ef872e466e5a75d569642b9fc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569657"
 ---
 # <a name="uninstall-applications-with-system-center-configuration-manager"></a>通过 System Center Configuration Manager 卸载应用程序
 
@@ -41,7 +42,7 @@ ms.lasthandoff: 05/03/2018
 -   部署目的为“卸载”  的部署不会检查要求规则。 如果在运行部署的计算机上安装应用程序，则将会卸载它。  
 
 > [!IMPORTANT]  
-> 在可以利用“卸载” 这项部署操作来部署应用程序之前，必须删除部署到集合的应用程序的任何现有部署或模拟部署。  
+> 若要使用“卸载”操作部署应用程序，首先要删除此应用程序中现有的所有应用程序部署、模拟部署和任务序列部署。 
 
  有关如何创建部署类型的详细信息，请参阅[创建应用程序](../../apps/deploy-use/create-applications.md)。  
 

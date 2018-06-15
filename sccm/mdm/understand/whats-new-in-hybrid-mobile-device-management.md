@@ -2,7 +2,7 @@
 title: 混合 MDM 中的新增功能
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 和 Intune 的混合部署可用的新移动设备管理功能。
-ms.date: 05/09/2018
+ms.date: 06/04/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,11 +10,12 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 72aeff7874456c3866ccb658395b8706057bdfaf
-ms.sourcegitcommit: 7bec1331c4f3096e6a278ff9ea0e929cff0a9cb9
+ms.openlocfilehash: 62b86310b8a7eb183cc5e759e9c1087b80a72d6b
+ms.sourcegitcommit: 032e6e19b819863e43e36b24b57761d0a173d0dc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34754567"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Configuration Manager 和 Microsoft Intune 的混合移动设备管理中的新增功能
 
@@ -43,12 +44,29 @@ ms.lasthandoff: 05/10/2018
 
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
 
+#### <a name="intune-app-protection-policies-and-microsoft-edge"></a>Intune 应用保护策略和 Microsoft Edge 
+<!--1818968,1818969-->
+面向移动设备（iOS 和 Android）的 Microsoft Edge 浏览器现支持 Microsoft Intune 应用保护策略。 在 Microsoft Edge 应用程序中使用公司的 Azure Active Directory 帐户进行登录的 iOS 和 Android 设备用户受到 Intune 保护。 在 iOS 设备上，“需要使用托管浏览器获取 Web 内容”的策略允许用户在托管的 Microsoft Edge 中打开链接。
+
 #### <a name="requesting-help-in-the-company-portal-for-windows-10"></a>在适用于 Windows 10 的公司门户中请求帮助 
 <!--1874137-->
 当用户启动工作流以获取相关问题的帮助时，适用于 Windows 10 的公司门户现在直接向 Microsoft 发送应用日志。 此行为有助于更轻松地进行故障排除并解决向 Microsoft 提出的问题。  
 
 
 ### <a name="new-in-configuration-manager-current-branch"></a>Configuration Manager (Current Branch) 中的新增功能
+
+#### <a name="android-for-work-and-lookout-onboarding-moved-to-intune-on-azure"></a>Android for Work 和 Lookout 载入已移至 Azure 上的 Intune
+<!--2355022,2357366-->
+借助最新的 Intune 更新，可访问 Azure 门户中的 Intune，在混合移动设备管理租户上启用并管理 Android for Work 集成和 Lookout 移动威胁防御集成。 在此更新之前，只能在 Intune Classic (Silverlight) 门户中配置这些内容。
+ 
+注意：Lookout 是混合环境中唯一支持的移动威胁防御 (MTD) 提供程序。 如果之前已与任何其他 MTD 提供程序集成，它仍会在 Azure 门户的 Intune 中显示。 如果删除它的连接器，则不能再重新添加它。
+ 
+这些更改不影响现有功能。 继续使用 Configuration Manager 控制台管理相关应用、报告和策略。
+ 
+有关详细信息，请参阅下列文章：
+- [设置 Android 混合设备管理](/sccm/mdm/deploy-use/enroll-hybrid-android)
+- [根据设备、网络和应用程序风险管理对公司资源的访问权限](/sccm/mdm/deploy-use/lookout-mobile-threat-defense-in-configuration-manager)
+
 
 #### <a name="support-for-new-versions-of-cisco-anyconnect-client-for-ios"></a>对适用于 iOS 的 Cisco AnyConnect 客户端新版本的支持
 <!--1357393-->
@@ -454,119 +472,6 @@ Windows 公司门户应用上有一个“发送反馈”选项，用户可用它
 - **Cisco (IPsec) 支持 macOS VPN 配置文件**      
   你可以使用 Cisco (IPsec) 作为连接类型创建 macOS VPN 配置文件。 有关详细信息，请参阅[创建 VPN 配置文件](/sccm/mdm/deploy-use/create-vpn-profiles#create-vpn-profiles)。
   <!-- 1321367 -->
-
-
-## <a name="april-2017"></a>2017 年 4 月
-
-### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
-
-- **适用于 Managed Browser 的 MyApps**  
-  现在 Microsoft MyApps 改进了 Managed Browser 内部的支持。 不作为管理目标的 Managed Browser 用户将直接转至 MyApps 服务，这些用户可以在其中访问管理员预配的 SaaS 应用。 作为 Intune 管理目标的用户可以继续通过内置的 Managed Browser 书签访问 MyApps。
-
-- **Managed Browser 和公司门户的新图标**  
-  Managed Browser 将获得该应用的 Android 和 iOS 版的更新图标。 新图标将包含更新的 Intune 徽章，使其与企业移动性 + 安全性 (EM+S) 中的其他应用更为一致。 可以在 [Intune 应用 UI 页中的新增功能](https://docs.microsoft.com/intune/whats-new-app-ui)中查看 Managed Browser 的新图标。
-
-  公司门户还将获得该应用的 Android、iOS 和 Windows 版的更新图标，以改进与 EM+S 中的其他应用的一致性。 这些图标于四月至五月底逐步在平台上发布。
-
-- **Android 公司门户中的登录进度指示器**  
-  用户启动或重启应用时，Android 公司门户应用的更新程序将显示登录进度指示器。 允许用户访问应用前，指示器将经历以下新状态：开始是“正在连接...”，然后是“正在登录...”，接下来是“正在查看安全要求...”。 可以在 [Intune 应用 UI 页中的新增功能](https://docs.microsoft.com/intune/whats-new-app-ui)中查看适用于 Android 的公司门户应用的新屏幕。
-
-- **阻止应用访问 SharePoint Online**  
-  现在可以创建基于应用的条件访问策略来阻止未向其实施应用保护策略的应用访问 [SharePoint Online](https://docs.microsoft.com/intune-classic/deploy-use/mam-ca-for-sharepoint-online)。 在基于应用的条件访问方案中，可以指定想要让其具备使用 Azure 门户访问 SharePoint Online 的权限的应用。
-
-### <a name="new-in-configuration-manager-technical-preview-1704"></a>Configuration Manager Technical Preview 1704 中的新变化
-
-- **使用应用配置策略配置 Android 应用**  
-  当用户在 Android for Work 设备上运行应用时，可以在 Configuration Manager 中使用应用配置策略分发预配置的设置。 Android 应用配置政策仅适用于运行 Android for Work 的设备。 这些策略适用于已从 Play for Work 应用商店批准的应用。 有关详细信息，请参阅[使用应用配置策略配置 Android 应用](/sccm/core/get-started/capabilities-in-technical-preview-1704#configure-android-apps-with-app-configuration-policies)。
-
-
-
-## <a name="march-2017"></a>2017 年 3 月
-
-### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
-
-- **Android 适用的公司门户应用的最新用户体验**  
-  Android 适用的公司门户应用的用户界面具有更新式的外观。 值得注意的更新有：
-
-  - 颜色：“公司门户”选项卡的颜色与 IT 定义的品牌颜色相同。
-  - 应用：在“应用”选项卡中，更新了“特色应用”和“所有应用”按钮。
-  - 搜索：在“应用”选项卡中，“搜索”按钮是浮动的操作按钮。
-  - 导航应用：“所有应用”视图以选项卡形式呈现出“特色”、“所有”和“分类”视图，便于导航。
-  - 支持：更新了“我的设备”和“联系 IT”选项卡，以改善可读性。
-
-  有关这些更改的详细信息，请参阅 [Intune 最终用户应用的 UI 更新](https://docs.microsoft.com/intune/whats-new-app-ui)。
-
-- **Windows 10 公司门户的签名脚本**  
-  如果需要下载和旁加载 Windows 10 公司门户应用，现在可以使用脚本为你的组织简化应用签名过程。 若要下载该脚本及其使用说明，请参阅 TechNet 库中的 [Microsoft Intune Signing Script for Windows 10 Company Portal](https://aka.ms/win10cpscript)（Windows 10 公司门户适用的 Microsoft Intune 签名脚本）。 有关此公告的详细信息，请参阅 Intune 支持团队博客上的[更新 Windows 10 公司门户应用](https://blogs.technet.microsoft.com/intunesupport/2017/03/13/updating-your-windows-10-company-portal-app/)。
-
-- **改进了对中国的 Android 用户的支持**  
-  由于中国地区没有 Google Play 商店，Android 设备必须从中国的应用商店获取应用。 公司门户支持此工作流。 它可重定向中国的 Android 用户，以便从本地应用商店下载公司门户和 Outlook 应用。 启用条件访问策略后，此行为将同时提升有关移动设备管理和移动应用程序管理的用户体验。 以下中文应用商店可以提供 Android 适用的公司门户和 Outlook 应用：
-
-  - [百度](https://go.microsoft.com/fwlink/?linkid=836946)
-  - [小米](https://go.microsoft.com/fwlink/?linkid=836947)
-  - [腾讯](https://go.microsoft.com/fwlink/?linkid=836949)
-  - [华为](https://go.microsoft.com/fwlink/?linkid=836948)
-  - [豌豆荚](https://go.microsoft.com/fwlink/?linkid=836950)
-
-- **请确保公司门户应用处于最新状态**  
-  2016 年 12 月，我们发布了更新，当一组用户在注册 iOS、Android、Windows 8.1+ 或 Windows Phone 8.1+ 设备时，该更新将执行多重身份验证 (MFA)。 如果没有 Android (v5.0.3419.0+) 和 iOS (v2.1.17+) 适用的某些基准版本的公司门户应用，此功能将无法运行。
-
-  Intune 的管理功能在不断改进。 很多改进对所有受支持平台上的公司门户应用的更新进行了协调。 我们建议你将最新版本的公司门户应用安装在设备上。 这种做法可利用 Intune 的改进来获得最佳用户体验。
-
-  >[!Tip]
-  > 让用户将其设备设置为从相应的应用商店中自动更新应用。 如果通过网络共享提供 Android 公司门户应用，则可从 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=49140)下载最新版本。
-
-- **Microsoft Teams 现已在 iOS 和 Android 上启用了 MAM**  
-  适用于 iOS 和 Android 的 Microsoft Teams 应用现已启用 Intunes 移动应用管理 (MAM) 功能。 使你的团队能够跨设备自由地工作，同时确保对话和公司数据得到保护。 有关详细信息，请参阅企业移动性和安全性博客中的 [Microsoft Teams 公告](https://blogs.technet.microsoft.com/enterprisemobility/2017/03/14/microsoft-teams-is-now-generally-available-and-mam-enabled-on-ios-and-android/)。
-
-### <a name="new-in-configuration-manager-technical-preview-1703"></a>Configuration Manager Technical Preview 1703 中的新增功能
-
-- **对 Apple Volume Purchase Program 方案的额外支持**  
-   从 Technical Preview 1703 开始，现可支持以下 Volume Purchase Program (VPP) 方案：
-
-   - 设备授权 - 对于支持设备授权且部署到设备集合的应用，现在每个设备只需一个许可证。 以前，设备上每位用户都需要一个许可证。 有关详细信息，请参阅[将批量采购的 iOS 应用部署到设备集合](/sccm/core/get-started/capabilities-in-technical-preview-1703#deploy-volume-purchased-ios-apps-to-device-collections)。
-   - 将多个 VPP 令牌用于单个混合租户，且同时将两个令牌均用于管理 VPP 应用。
-   - 使用 VPP 教育令牌，且可区分企业和教育令牌。
-
-### <a name="new-in-configuration-manager-current-branch"></a>Configuration Manager (Current Branch) 中的新增功能
-
-以下功能以前在 Configuration Manager Technical Preview 版本中提供。 这些功能现在可用于 Intune 和 Configuration Manager (Current Branch) 版本 1702 的混合部署。
-
-- [Android for Work 支持](/sccm/core/plan-design/changes/whats-new-in-version-1702##android-for-work-support)
-- [针对不符合应用的符合性设置](/sccm/core/plan-design/changes/whats-new-in-version-1702#conditional-access-device-compliance-policy-improvements)
-- [PFX 证书创建和分发以及 S/MIME 支持](/sccm/core/plan-design/changes/whats-new-in-version-1702#improvements-to-certificate-profiles)
-- [混合 MDM 的创建向导中，Android 和 iOS 版本不再作为目标](/sccm/core/plan-design/changes/whats-new-in-version-1702#android-and-ios-versions-are-no-longer-targetable-in-creation-wizards-for-hybrid-mdm)
-
-Configuration Manager (Current Branch) 1702 版本中还包括以下其他混合功能：
-
-- **对 Apple Volume Purchase Program (VPP) 改进的支持**  
-  - 你现在可以将已授权的应用部署到设备以及用户。 部署应用时，将声明相应的许可证（如下所示），具体视应用是否支持设备授权而定：
-
-    | Configuration Manager 版本 | 应用是否支持设备授权？ | 部署集合类型 | 已声明的许可证 |
-    |-|-|-|-|
-    |早于 1702|是|用户|用户许可证|
-    |早于 1702|否|用户|用户许可证|
-    |早于 1702|是|设备|用户许可证|
-    |早于 1702|否|设备|用户许可证|
-    |1702 及更高版本|是|用户|用户许可证|
-    |1702 及更高版本|否|用户|用户许可证|
-    |1702 及更高版本|是|设备|设备许可证|
-    |1702 及更高版本|否|设备|用户许可证|
-
-  - 此外，你现在可以部署并跟踪你从 iOS Volume Purchase Program 教育版购买的应用。
-
-  - 你现在可以将多个 Apple 批量采购程序令牌与 Configuration Manager 相关联。
-
-  有关批量购买的 iOS 应用的详细信息，请参阅[管理批量购买的 iOS 应用](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps)。
-
-- **对适用于企业的 Microsoft Store 中的业务线应用的支持**  
-  现在可以同步来自适用于企业的 Microsoft Store 的自定义业务线应用。
-
-- **新移动威胁防御监视工具**  
-    现在，可以使用新方法通过移动威胁防御服务提供程序来监视符合性状态。
-
-    有关详细信息，请参阅[如何监视移动威胁防御合规性](/sccm/mdm/deploy-use/monitor-mobile-threat-defense-compliance)。
-
 
 
 ## <a name="notices"></a>通知

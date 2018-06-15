@@ -9,11 +9,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
-ms.openlocfilehash: e62b748596aba1404d6b097e5aa0bf74266f055b
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: fbae44d1344dd36d3c0a6faf2e50727dfa830ba0
+ms.sourcegitcommit: 8060ea520fb08629e1d5f249daffe825536673a5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35232364"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>云管理网关证书
 
@@ -34,14 +35,14 @@ CMG 创建基于 Internet 的客户端要连接到的 HTTPS 服务。 此服务�
  > 此证书需要使用全局唯一名称标识 Azure 中的服务。 请求证书前，请确认所需的 Azure 域名是否唯一。 例如，GraniteFalls.CloudApp.Net。 登录 [Microsoft Azure 门户](https://portal.azure.com)。 单击“创建资源”，选择“计算”类别，然后单击“云服务”。 在“DNS 名称”字段中，键入所需的前缀，例如 GraniteFalls。 界面将反映域名是否可用，或是否已被其他服务使用。 不要在门户中创建服务，仅使用此流程检查名称可用性。 
   
  > [!NOTE]
- > 从 1802 版开始，CMG 服务器身份验证证书支持通配符。 某些证书颁发机构颁发证书时将通配符用作主机名。 例如，.contoso.com**\***。某些组织使用通配符证书简化其 PKI 并降低维护成本。
+ > 从 1802 版开始，CMG 服务器身份验证证书支持通配符。 某些证书颁发机构颁发证书时将通配符用作主机名。 例如，.contoso.com**\***。 某些组织使用通配符证书简化其 PKI 并降低维护成本。
  <!--491233-->
 
 
 ### <a name="cmg-trusted-root-certificate-to-clients"></a>针对客户端的 CMG 受信任的根证书
 
 客户端必须信任 CMG 服务器身份验证证书。 有两种方法可实现此信任：
-- 使用公共和全局受信任的证书提供程序提供的证书。 例如（但不限于）VeriSign 或 Thawte。 Windows 客户端包括来自这些提供程序的受信任的根证书颁发机构 (CA)。 通过使用这些受信任提供程序中的一个提供程序发布的服务器身份验证证书，客户端会自动信任该证书。 
+- 使用公共和全局受信任的证书提供程序提供的证书。 例如（但不限于）DigiCert、Thawte 或 VeriSign。 Windows 客户端包括来自这些提供程序的受信任的根证书颁发机构 (CA)。 通过使用这些受信任提供程序中的一个提供程序发布的服务器身份验证证书，客户端会自动信任该证书。 
 - 使用公钥基础结构 (PKI) 中的企业 CA 颁发的证书。 大多数企业 PKI 实现会向 Windows 客户端添加受信任的根 CA。 例如，在组策略中使用 Active Directory 证书服务。 如果从客户端不自动信任的 CA 颁发 CMG 服务器身份验证证书，则需要向基于 Internet 的客户端添加 CA 受信任的根证书。
     - 还可以使用 Configuration Manager 证书配置文件在客户端上预配证书。 有关详细信息，请参阅[证书配置文件简介](/sccm/protect/deploy-use/introduction-to-certificate-profiles)。
 
@@ -68,7 +69,7 @@ CMG 创建基于 Internet 的客户端要连接到的 HTTPS 服务。 此服务�
 
 ## <a name="azure-management-certificate"></a>Azure 管理证书
 
-经典服务部署需要此证书。Azure 资源管理器部署不需要此证书。*
+经典服务部署需要此证书。Azure 资源管理器部署不需要此证书。
 
 在 Azure 门户中的 Configuration Manager 控制台中创建 CMG 时需要提供此证书。
 
@@ -87,7 +88,7 @@ CMG 创建基于 Internet 的客户端要连接到的 HTTPS 服务。 此服务�
 
 ## <a name="client-authentication-certificate"></a>客户端身份验证证书
 
-运行未加入 Azure Active Directory (Azure AD) 的 Windows 7、Windows 8.1 和 Windows 10 设备的基于 Internet 的客户端需要此证书。CMG 连接点也需要此证书。加入 Azure AD 的 Windows 10 客户端不需要此证书。*
+运行未加入 Azure Active Directory (Azure AD) 的 Windows 7、Windows 8.1 和 Windows 10 设备的基于 Internet 的客户端需要此证书。CMG 连接点也需要此证书。加入 Azure AD 的 Windows 10 客户端不需要此证书。
 
 客户端使用此证书向 CMG 进行身份验证。 已加入混合域或云域的 Windows 10 设备不需要此证书，因为它们使用 Azure AD 进行身份验证。
 
@@ -96,7 +97,7 @@ CMG 创建基于 Internet 的客户端要连接到的 HTTPS 服务。 此服务�
 
 ### <a name="client-trusted-root-certificate-to-cmg"></a>针对 CMG 的客户端受信任的根证书
 
-使用客户端身份验证证书时需要此证书。如果所有客户端使用 Azure AD 进行身份验证，则不需要此证书。* 
+使用客户端身份验证证书时需要此证书。如果所有客户端使用 Azure AD 进行身份验证，则不需要此证书。 
 
 在 Configuration Manager 控制台中创建 CMG 时需要提供此证书。
 

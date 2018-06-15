@@ -2,21 +2,20 @@
 title: 适用于 Windows 10 设备的共同管理
 titleSuffix: Configuration Manager
 description: 了解如何使用 Configuration Manager 和 Microsoft Intune 同时管理 Windows 10 设备。
-keywords: ''
-author: mestew
-ms.author: mstewart
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ms.date: 03/28/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: configuration-manager
-ms.service: ''
-ms.technology: ''
+ms.technology: configmgr-client
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: 3d7ca4bb72f6f3f76855faac125385374347ba55
-ms.sourcegitcommit: d67c6246bb6027cd5501e772b0521f9272407c28
+ms.openlocfilehash: 9324126014245b586ba8fed87c670ac829f6cb81
+ms.sourcegitcommit: 493cc42f05b9388ef872e466e5a75d569642b9fc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34703462"
 ---
 # <a name="co-management-for-windows-10-devices"></a>适用于 Windows 10 设备的共同管理    
  通过以前的 Windows 10 更新，已经可以将 Windows 10 设备同时联接到本地 Active Directory (AD) 和基于云的 Azure AD（混合 Azure AD）。 从 Configuration Manager 1710 版本开始，共同管理利用此项改进，并使你能够使用 Configuration Manager 和 Intune 来同时管理 Windows 10（版本 1709）设备。 <!-- 1350871 -->
@@ -52,14 +51,17 @@ ms.lasthandoff: 04/27/2018
 
 
 ### <a name="intune"></a>**Intune**
- - [如何设置 Intune 订阅。](/sccm/mdm/deploy-use/configure-intune-subscription) 或 https://docs.microsoft.com/en-us/intune/setup-steps
- - [开始从混合 MDM 迁移到 Intune 独立版本。](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa)
+ - [如何设置 Intune 订阅。](/sccm/mdm/deploy-use/configure-intune-subscription)或[设置 Intune](/intune/setup-steps)  
+ - [开始从混合 MDM 迁移到 Intune 独立版本](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa)  
+
+> [!Note]  
+> 如果具有混合 MDM 环境（Intune 与 Configuration Manager 集成），则无法实现共同管理。 但是，你可以开始将用户迁移到 Intune 独立版本，然后对其关联的 Windows 10 设备启用共同管理。 有关迁移到 Intune 独立版本的详细信息，请参阅[开始从混合 MDM 迁移到 Intune 独立版本](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa)。  
 
 
 ### <a name="enable-co-management"></a>启用共同管理 
  在 Configuration Manager 控制台中，转到“管理” > “概述” > “云服务” > “共同管理”。 从功能区中选择“配置共同管理”以打开“共同管理载入”向导 **** 
    
-1. 在“订阅”页中，单击“登录”并登录到 Intune 租户，然后单击“下一步”。    
+1. 在“订阅”页中，单击“登录”并登录到 Intune 租户，然后单击“下一步”。 请确保登录租户时所用的帐户已分配有 Intune 许可证，否则操作将失败且显示错误消息“无法识别用户”。   
 2. 在“启用”页中，选择“自动注册到 Intune”设置。 如果需要，复制已在 Intune 中注册的设备的命令行。 
 3. 在“工作负载”页上，为每个工作负载选择要移动的设备组以便使用 Intune 进行管理。
 4. 在“暂存”页中，选择一个设备集合作为“试点集合”。 验证“摘要”，然后完成该向导。 

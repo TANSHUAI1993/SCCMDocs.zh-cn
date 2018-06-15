@@ -2,7 +2,7 @@
 title: Technical Preview 版本
 titleSuffix: Configuration Manager
 description: 了解可测试 Configuration Manager 中的新功能和新特性的 Technical Preview 版本。
-ms.date: 05/11/2018
+ms.date: 06/01/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,11 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a6a4faff728b14fae198f9709ca9ce9ca5d04455
-ms.sourcegitcommit: 021272d5858e5dbb650b95644736d1de3dab7d8a
+ms.openlocfilehash: b7372e0b894e93a5a8ec15e54bfeb09e18be6c32
+ms.sourcegitcommit: 10a6e3444da631786e9b1729e79a5b728d54ca72
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753988"
 ---
 # <a name="technical-preview-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview
 
@@ -24,7 +25,7 @@ ms.lasthandoff: 05/15/2018
 
  由于此版本是技术预览版，因此详细信息和功能可能有所更改。  
 
- 本文包含适用于所有版本的 Technical Preview 的信息。 它还列出了每个新功能及其首次出现的 Technical Preview 版本，例如版本 1805 表示 2018 年 5 月。 这些功能将专门在各预览版的单独主题中详细介绍。  
+ 本文包含适用于所有版本的 Technical Preview 的信息。 它还列出了每个新功能及其首次出现的 Technical Preview 版本，例如版本 1806 表示 2018 年 6 月。 这些功能将专门在各预览版的单独主题中详细介绍。  
 
  有关 Configuration Manager 的 Current Branch 中新增功能的信息，请参阅 [System Center Configuration Manager 中的新增功能](/sccm/core/plan-design/changes/what-has-changed-from-configuration-manager-2012)。
 
@@ -90,7 +91,7 @@ ms.lasthandoff: 05/15/2018
 **Technical Preview 的活动基线版本：**
    
 可以在基线版本发布后的 1 年内安装此基线版本。 但是，在安装新的技术预览站点时，我们建议使用可用的最新基线版本。
--  **Technical Preview 1804** - Configuration Manager Technical Preview 1804 可同时用作控制台内更新和新的基线版本。 [从 TechNet 评估中心](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview)下载基线版本。
+-  **Technical Preview 1806** - Configuration Manager Technical Preview 1806 可同时用作控制台内更新和新的基线版本。 [从 TechNet 评估中心](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview)下载基线版本。
 
 
 ##  <a name="BKMK_TPFeedback"></a> 提供反馈  
@@ -108,27 +109,20 @@ ms.lasthandoff: 05/15/2018
 
 <!-- This is the full list of new features in the latest TP release -->
 
-### <a name="technical-preview-version-1805"></a>Technical Preview 1805 版
-- [使用手动配置的任务序列阶段创建分阶段部署](capabilities-in-technical-preview-1805.md#create-a-phased-deployment-with-manually-configured-phases-for-a-task-sequence) <!--1358148--> 
-- [对 Azure 资源管理器的云分发点支持](capabilities-in-technical-preview-1805.md#cloud-distribution-point-support-for-azure-resource-manager) <!--1322209--> 
-- [根据管理见解执行操作](capabilities-in-technical-preview-1805.md#take-actions-based-on-management-insights) <!--1357930--> 
-- [使用共同管理将设备配置工作负荷转移到 Intune](capabilities-in-technical-preview-1805.md#transition-device-configuration-workload-to-intune-using-co-management) <!--1357903--> 
-- [启用分发点以使用网络拥塞控制](capabilities-in-technical-preview-1805.md#enable-distribution-points-to-use-network-congestion-control) <!--1358112--> 
-- [云管理仪表板](capabilities-in-technical-preview-1805.md#cloud-management-dashboard) <!--1358461--> 
-- [CMPivot](capabilities-in-technical-preview-1805.md#cmpivot) <!--1358456--> 
-- [已改进安全客户端通信](capabilities-in-technical-preview-1805.md#improved-secure-client-communications) <!--1356889,1358228,1358460--> 
-- [启用第三方软件更新支持的改进](capabilities-in-technical-preview-1805.md#improvements-for-enabling-third-party-software-update-support) <!--1357605--> 
-- [对 Windows 10 就地升级任务序列的改进](capabilities-in-technical-preview-1805.md#improvements-to-windows-10-in-place-upgrade-task-sequence) <!--1358500--> 
-- [与客户端一起安装的 CMTrace](capabilities-in-technical-preview-1805.md#cmtrace-installed-with-client) <!--1357971--> 
-- [对 Configuration Manager 控制台的改进](capabilities-in-technical-preview-1805.md#improvement-to-the-configuration-manager-console) <!--1358202--> 
-- [对控制台反馈的改进](capabilities-in-technical-preview-1805.md#improvements-to-console-feedback) <!--1357542--> 
-- [对已启用 PXE 的分发点的改进](capabilities-in-technical-preview-1805.md#improvements-to-pxe-enabled-distribution-points) <!--1357580--> 
-- [对大型整数值硬件清单的改进](capabilities-in-technical-preview-1805.md#improvement-to-hardware-inventory-for-large-integer-values) <!--1357880--> 
-- [WSUS 维护改进](capabilities-in-technical-preview-1805.md#improvement-to-wsus-maintenance) <!--1357898--> 
-- [对 CNG 证书支持的改进](capabilities-in-technical-preview-1805.md#improvement-to-support-for-cng-certificates) <!--1357314--> 
-
-
-
+### <a name="technical-preview-version-1806"></a>Technical Preview 1806 版
+- [第三方软件更新](capabilities-in-technical-preview-1806.md#bkmk-3pupdate) <!--1352101-->
+- [为 Microsoft Edge 配置 Windows Defender SmartScreen 设置 ](capabilities-in-technical-preview-1806.md#configure-windows-defender-smartscreen-settings-for-microsoft-edge)<!--1353701-->
+- [通过 Microsoft Intune 为共同托管设备同步 MDM 策略](capabilities-in-technical-preview-1806.md#sync-mdm-policy-from-microsoft-intune-for-a-co-managed-device) <!--1357377-->
+- [使用共同管理将 Office 365 工作负荷转移到 Intune](capabilities-in-technical-preview-1806.md#transition-office-365-workload-to-intune-using-co-management) <!--1357841-->
+- [包转换管理器](capabilities-in-technical-preview-1806.md#package-conversion-manager) <!--1357861-->
+- [部署无内容的软件更新](capabilities-in-technical-preview-1806.md#deploy-software-updates-without-content) <!--1357933-->
+- [Office 自定义工具与 Office 365 安装程序集成](capabilities-in-technical-preview-1806.md#office-customization-tool-integration-with-the-office-365-installer) <!--1358149-->
+- [云管理网关的改进](capabilities-in-technical-preview-1806.md#improvements-to-cloud-management-gateway) <!--1358215,1358651,503899--> 
+- [安全客户端通信的改进](capabilities-in-technical-preview-1806.md#improvements-to-secure-client-communications) <!--1358278,1358279-->
+- [软件中心基础结构的改进](capabilities-in-technical-preview-1806.md#software-center-infrastructure-improvements) <!--1358309-->
+- [为设备上的所有用户预配 Windows 应用包](capabilities-in-technical-preview-1806.md#provision-windows-app-packages-for-all-users-on-a-device) <!--1358310-->
+- [Surface 仪表板的改进](capabilities-in-technical-preview-1806.md#improvements-to-the-surface-dashboard) <!--1358654-->
+- [硬件清单默认单位修订](capabilities-in-technical-preview-1806.md#hardware-inventory-default-unit-revision) <!--514442-->
 
 
 
@@ -142,7 +136,24 @@ Then remove the bottom of this list and/or move individual items not in CB to th
 
  |功能 |Technical Preview 版本 |Current Branch 版本|  
  |----------------|---------------------|--------------------|
- | 配置用于站点服务器的远程内容库 <!--1357525--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#configure-a-remote-content-library-for-the-site-server)  | ![未添加](media/Red_X.gif) | 
+ | 使用手动配置的任务序列阶段创建分阶段部署 <!--1358148--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#create-a-phased-deployment-with-manually-configured-phases-for-a-task-sequence)  | ![未添加](media/Red_X.gif) |  
+ | 对 Azure 资源管理器的云分发点支持 <!--1322209--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#cloud-distribution-point-support-for-azure-resource-manager)  | ![未添加](media/Red_X.gif) |  
+ | 根据管理见解执行操作 <!--1357930--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#take-actions-based-on-management-insights)  | ![未添加](media/Red_X.gif) |  
+ | 使用共同管理将设备配置工作负荷转移到 Intune <!--1357903--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#transition-device-configuration-workload-to-intune-using-co-management)  | ![未添加](media/Red_X.gif) |  
+ | 启用分发点以使用网络拥塞控制 <!--1358112--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#enable-distribution-points-to-use-network-congestion-control)  | ![未添加](media/Red_X.gif) |  
+ | 云管理仪表板 <!--1358461--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#cloud-management-dashboard)  | ![未添加](media/Red_X.gif) |  
+ | CMPivot <!--1358456--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#cmpivot)  | ![未添加](media/Red_X.gif) |  
+ | 已改进安全客户端通信 <!--1356889,1358228,1358460--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improved-secure-client-communications)  | ![未添加](media/Red_X.gif) |  
+ | 启用第三方软件更新支持的改进 <!--1357605--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvements-for-enabling-third-party-software-update-support)  | ![未添加](media/Red_X.gif) |  
+ | 对 Windows 10 就地升级任务序列的改进 <!--1358500--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvements-to-windows-10-in-place-upgrade-task-sequence)  | ![未添加](media/Red_X.gif) |  
+ | 与客户端一起安装的 CMTrace <!--1357971--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#cmtrace-installed-with-client)  | ![未添加](media/Red_X.gif) |  
+ | 对 Configuration Manager 控制台的改进 <!--1358202--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvement-to-the-configuration-manager-console)  | ![未添加](media/Red_X.gif) |  
+ | 对控制台反馈的改进 <!--1357542--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvements-to-console-feedback)  | ![未添加](media/Red_X.gif) |  
+ | 对已启用 PXE 的分发点的改进 <!--1357580--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvements-to-pxe-enabled-distribution-points)  | ![未添加](media/Red_X.gif) |  
+ | 对大整数值硬件清单的改进 <!--1357880--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvement-to-hardware-inventory-for-large-integer-values)  | ![未添加](media/Red_X.gif) |  
+ | WSUS 维护改进 <!--1357898--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvement-to-wsus-maintenance)  | ![未添加](media/Red_X.gif) |  
+ | 对 CNG 证书支持的改进 <!--1357314--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvement-to-support-for-cng-certificates)  | ![未添加](media/Red_X.gif) |  
+| 配置用于站点服务器的远程内容库 <!--1357525--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#configure-a-remote-content-library-for-the-site-server)  | ![未添加](media/Red_X.gif) | 
  | 从 Configuration Manager 控制台提交反馈 <!--1357542--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#bkmk_feedback)  | ![未添加](media/Red_X.gif) | 
  | 支持中心 <!--1357489--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#support-center)  | ![未添加](media/Red_X.gif) | 
  | Configuration Manager 工具包 <!--1357145--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#configuration-manager-toolkit)  | ![未添加](media/Red_X.gif) | 
@@ -158,25 +169,6 @@ Then remove the bottom of this list and/or move individual items not in CB to th
  | 对客户端启用第三方软件更新支持 <!--1357605--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#enable-third-party-software-update-support-on-clients)  | ![未添加](media/Red_X.gif) | 
  | 支持从监视视图中复制/粘贴资产详细信息 <!--1357552--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#enable-copypaste-of-asset-details-from-monitoring-views)  | ![未添加](media/Red_X.gif) | 
  | SCAP 扩展 <!--1357552--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#scap-extensions)  | ![未添加](media/Red_X.gif) | 
- | 使用共同管理将 Endpoint Protection 工作负荷转移到 Intune <!-- 1357365 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#transition-endpoint-protection-workload-to-intune-using-co-management) | [版本 1802](/sccm/core/clients/manage/co-management-switch-workloads#workloads-able-to-be-transitioned-to-intune) |  
- | 配置 Windows 传递优化以使用 Configuration Manager 边界组 <!-- 1324696 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#configure-windows-delivery-optimization-to-use-configuration-manager-boundary-groups) | [版本 1802](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#delivery-optimization) |  
- | 通过云管理网关执行的 Windows 10 就地升级任务序列 <!-- 1357149 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#windows-10-in-place-upgrade-task-sequence-via-cloud-management-gateway) | [版本 1802](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#deploy-windows-10-in-place-upgrade-via-cmg) |  
- | 对 Windows 10 就地升级任务序列的改进 <!-- 1357425 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#improvements-to-windows-10-in-place-upgrade-task-sequence) | [版本 1802](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system) |  
- | 对已启用 PXE 的分发点的改进 <!-- 1357580 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#improvements-to-pxe-enabled-distribution-points) | ![未添加](media/Red_X.gif) | 
- | 任务序列的部署模板 <!-- 1357391 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#deployment-templates-for-task-sequences) | [版本 1802](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS) |  
- | 产品生命周期仪表板 <!--1319632 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#product-lifecycle-dashboard) | ![未添加](media/Red_X.gif) | 
- | 报表改进 <!--1357653 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#improvements-to-reporting) | [版本 1802](/sccm/core/servers/manage/list-of-reports#operating-system) |  
- | 对软件中心的改进 <!--1357592 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#improvements-to-software-center) | [版本 1802](/sccm/core/clients/deploy/about-client-settings#BKMK_HideInstalled) |  
- | 管理点的边界组回退 <!-- 1324594 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#boundary-group-fallback-for-management-points) | [版本 1802](/sccm/core/servers/deploy/configure/boundary-groups#management-points) |  
- | 改进了对 CNG 证书的支持 <!-- 1357314 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#improved-support-for-cng-certificates) | [版本 1802](/sccm/core/plan-design/network/cng-certificates-overview) |  
- | 云管理网关支持 Azure 资源管理器 <!-- 1324735 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#cloud-management-gateway-support-for-azure-resource-manager) | [版本 1802](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager) |  
- | 审批每台设备的用户的应用程序请求 <!-- 1357015 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#approve-application-requests-for-users-per-device) | [版本 1802](/sccm/apps/deploy-use/deploy-applications#specify-deployment-settings) |  
- | 在已加入 Azure AD 的设备上，使用软件中心来浏览和安装用户可用的应用程序 <!-- 1322613 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#use-software-center-to-browse-and-install-user-available-applications-on-azure-ad-joined-devices) | [版本 1802](/sccm/apps/deploy-use/deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices) |  
- | 关于 Windows AutoPilot 设备信息的报表 <!-- 1351442 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#report-on-windows-autopilot-device-information) | [版本 1802](/sccm/core/clients/manage/co-management-prepare#new-windows-10-devices) |  
- | 对适用于 Windows Defender 攻击防护的 Configuration Manager 策略的改进 <!-- 1356220 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#improvements-to-configuration-manager-policies-for-windows-defender-exploit-guard) | [版本 1802](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) |  
- | Microsoft Edge 浏览器策略 <!-- 1357310 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#microsoft-edge-browser-policies) | [版本 1802](/sccm/compliance/deploy-use/browser-profiles) | 
- | 默认浏览器计数报表 <!-- 1357830 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#report-for-default-browser-counts) | [版本 1802](/sccm/core/servers/manage/list-of-reports#software---companies-and-products) | 
- | Windows 10 ARM64 设备支持 <!-- 1353704 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#support-for-windows-10-arm64-devices) | [版本 1802](/sccm/core/plan-design/configs/support-for-windows-10) |  
  
   
 
@@ -191,6 +183,8 @@ With each CB release, review and remove from this list for anything that's now a
 
  |功能 |Technical Preview 版本 |  
  |----------------|---------------------|
+ | 对已启用 PXE 的分发点的改进 <!-- 1357580 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#improvements-to-pxe-enabled-distribution-points) | 
+ | 产品生命周期仪表板 <!--1319632 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#product-lifecycle-dashboard) | 
  | 基于客户端的 PXE 响应者服务 <!-- 1357148 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#client-based-pxe-responder-service) |
  |站点服务器角色的高可用性 <!-- 1128774 --> |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#site-server-role-high-availability) |
  |PXE 网络启动对 IPv6 的支持 <!-- 1269793 --> |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#pxe-network-boot-support-for-ipv6)|

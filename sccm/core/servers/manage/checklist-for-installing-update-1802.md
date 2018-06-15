@@ -1,8 +1,8 @@
 ---
-title: 1802 的清单 | System Center Configuration Manager
+title: 1802 清单
 titleSuffix: Configuration Manager
 description: 了解更新到 System Center Configuration Manager 1802 版之前需要执行的操作。
-ms.date: 03/22/2018
+ms.date: 06/08/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,11 +10,12 @@ ms.assetid: 6af92de2-b2c7-4d5c-affd-6cce81979fb5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5f16f69e7b359112a03bb26c964ac0a6990c0b24
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 74fa4e9240cf4a3d369d6b20bcb9233fb6319a8d
+ms.sourcegitcommit: 690f64bd02139f893bd0b45e2e0f00ed6bb4e1c1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35259292"
 ---
 # <a name="checklist-for-installing-update-1802-for-system-center-configuration-manager"></a>用于为 System Center Configuration Manager 安装更新 1802 的清单
 
@@ -22,7 +23,7 @@ ms.lasthandoff: 05/03/2018
 
 使用 System Center Configuration Manager 的 Current Branch 时，可安装版本 1802 的控制台内部更新，从之前的版本更新层次结构。 <!-- baseline only statement: -->（由于版本 1802 也可用作[基线介质](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)，因此，可使用该安装介质安装新层次结构的第一个站点。）
 
-若要获取版本 1802 的更新，必须在层次结构的顶层站点上使用服务连接点站点系统角色。 其可处于联机或脱机模式。 层次结构从 Microsoft 下载更新包之后，可在“管理”&gt;“概述”&gt;“云服务”&gt;“更新和维护服务”下的控制台中找到它。
+要获取版本 1802 的更新，必须在层次结构的顶层站点上使用服务连接点。 站点系统角色可处于任一模式（联机或脱机）。 在层次结构从 Microsoft 下载更新包之后，可在“更新和服务”节点的“管理”工作区下的控制台中找到它。
 
 -   当更新列为“可用”时，此更新即可准备安装。 安装版本 1802 之前，请查看以下[关于安装更新 1802](#about-installing-update-1802) 和[清单](#checklist)的信息，了解在开始更新之前要进行的配置。
 
@@ -70,7 +71,7 @@ ms.lasthandoff: 05/03/2018
 
 有关详细信息，请参阅 [System Center Configuration Manager 的许可和分支](/sccm/core/understand/learn-more-editions)。
 
-**查看站点系统服务器上安装的 Microsoft.NET 版本：**站点安装此更新时，如果尚未安装 .NET Framework 4.5 或更高版本，则 Configuration Manager 会在承载以下站点系统角色之一的每台计算机上自动安装 .NET Framework 4.5.2：
+**查看站点系统服务器上安装的 Microsoft.NET 版本：** 站点安装此更新时，如果尚未安装 .NET Framework 4.5 或更高版本，则 Configuration Manager 会在承载以下站点系统角色之一的每台计算机上自动安装 .NET Framework 4.5.2：
 
 -   注册代理点
 -   注册点
@@ -95,7 +96,7 @@ ms.lasthandoff: 05/03/2018
 
 有关详细信息，请参阅 [System Center Configuration Manager 中的监视层次结构和复制基础结构](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure)主题中的[关于复制链接分析器](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure#BKMK_RLA)。
 
-**为托管站点、站点数据库服务器和远程站点系统角色的计算机上的操作系统安装所有合适的关键更新：**为 Configuration Manager 安装更新之前，请为每个适用的站点系统安装任何关键更新。 如果安装的更新需要重启，请在开始升级之前重启合适的计算机。
+**为托管站点、站点数据库服务器和远程站点系统角色的计算机上的操作系统安装所有合适的关键更新：** 为 Configuration Manager 安装更新之前，请为每个适用的站点系统安装任何关键更新。 如果安装的更新需要重启，请在开始升级之前重启合适的计算机。
 
 **在主站点上禁用管理点数据库副本：**   
 Configuration Manager 无法成功更新启用了管理点数据库副本的主站点。 安装 Configuration Manager 的更新之前禁用数据库复制。
@@ -123,7 +124,7 @@ Configuration Manager 无法更新使用网络负载均衡 (NLB) 群集来托管
 
 有关详细信息，请参阅 [System Center Configuration Manager 的维护任务](/sccm/core/servers/manage/maintenance-tasks)和 [System Center Configuration Manager 维护任务参考](/sccm/core/servers/manage/reference-for-maintenance-tasks)。
 
-**暂时停止 System Center Configuration Manager 服务器上的所有防病毒软件：**更新站点之前，请确保 Configuration Manager 服务器上的防病毒软件已停止。 <!--SMS.503481--> 
+**暂时停止 System Center Configuration Manager 服务器上的所有防病毒软件：** 更新站点之前，请确保 Configuration Manager 服务器上的防病毒软件已停止。 <!--SMS.503481--> 
 
 **在管理中心站点和主站点上创建站点数据库备份：** 更新站点之前，请备份站点数据库，以确保具有用于灾难恢复的成功备份。
 
@@ -141,10 +142,14 @@ Configuration Manager 无法更新使用网络负载均衡 (NLB) 群集来托管
 
 这可以帮助你控制层次结构中的站点安装更新的时间。 有关详细信息，请参阅[站点服务器的服务时段](/sccm/core/servers/manage/service-windows)。
 
+**查看支持的扩展：**   
+<!--SCCMdocs#587-->   
+如果使用 Microsoft 或 Microsoft 合作伙伴的其他产品扩展 Configuration Manager，请确认这些产品支持版本 1802。 检查产品供应商的此项信息。 例如，请查看 Microsoft Deployment Toolkit 的[发行说明](/sccm/mdt/release-notes)。
+
 **运行安装程序先决条件检查程序：**   
 当更新在控制台中列为“可用”时，可以独立运行先决条件检查程序，然后再安装更新。 （在站点上安装更新时，会再次运行必备组件检查程序。）
 
-若要从控制台运行先决条件检查，请转到“管理”>“概述”>“云服务”>“更新和维护服务”。 接着，右键单击“Configuration Manager 1802 更新包”，然后选择“运行先决条件检查”。
+若要从控制台运行先决条件检查，请转到“管理”工作区，并选择“更新和服务”。 选择 Configuration Manager 1802 更新包，然后在功能区单击“运行先决条件检查”。
 
 有关启动并监视先决条件检查的详细信息，请参阅[安装 System Center Configuration Manager 的控制台内部更新](/sccm/core/servers/manage/install-in-console-updates)主题中的**步骤 3：安装更新之前运行先决条件检查程序**。
 
@@ -167,3 +172,4 @@ Configuration Manager 无法更新使用网络负载均衡 (NLB) 群集来托管
 3.  为在开始更新前禁用的主站点中的管理点重新配置数据库副本。
 4.  重新配置开始更新前禁用的数据库维护任务。
 5.  如果在安装更新前已配置客户端试点，请按照你创建的计划升级客户端。
+6.  如果使用任何 Configuration Manager 扩展，请将其更新最新版本，以支持此 Configuration Manager 更新。 

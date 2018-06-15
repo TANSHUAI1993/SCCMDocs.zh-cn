@@ -10,11 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
-ms.openlocfilehash: 3dd5a7f9717843244ab8477a09b109261618f9aa
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 07616a1c03c0383e9001418043dc6cd7ec117c1d
+ms.sourcegitcommit: 493cc42f05b9388ef872e466e5a75d569642b9fc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34703479"
 ---
 # <a name="integration-with-windows-update-for-business-in-windows-10"></a>在 Windows 10 中与 Windows Update for Business 集成
 
@@ -72,9 +73,10 @@ ms.lasthandoff: 05/03/2018
 >从 Configuration Manager 1802 版开始，可以为 Windows 预览体验设置延迟策略。 <!--507201-->有关 Windows 预览体验计划的详细信息，请参阅 [Windows 预览体验计划企业版入门](https://docs.microsoft.com/windows/deployment/update/waas-windows-insider-for-business)。
 
 ### <a name="prerequisites"></a>先决条件
-由 Windows Update for Business 托管的 Windows 10 设备必须具有 Internet 连接。
+-   Windows 10 版本 1703 或更高版本
+-   必须连接 Internet 才能使用适用于企业的 Windows 更新托管的 Windows 10 设备
 
-#### <a name="to-create-a-windows-update-for-business-deferral-policy"></a>创建 Windows Update for Business 延迟策略
+#### <a name="to-create-a-windows-update-for-business-deferral-policy"></a>创建适用于企业的 Windows 更新延迟策略
 1. 在“软件库” > “Windows 10 维护服务” > “Windows Update for Business 策略”中
 2. 在“主页”选项卡的“创建”组中，选择“创建 Windows Update for Business 策略”，以打开“创建 Windows Update for Business 策略向导”。
 3. 在“常规”页上，提供策略的名称和描述。
