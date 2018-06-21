@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32352061"
 ---
 # <a name="how-to-create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-system-center-configuration-manager-client"></a>如何为没有使用 System Center Configuration Manager 客户端管理的 Android 和 Samsung KNOX 设备创建配置项目
 
@@ -166,7 +167,7 @@ ms.lasthandoff: 05/03/2018
 |-------------|----------------------|  
 |**不符合应用列表**|指定如果用户安装，将报告为不符合应用的应用列表。|  
 |**符合应用列表**|指定允许用户安装的应用列表。 安装的任何其他应用将报告为不相容。|  
-|**添加**|将应用添加到选定的列表。 在应用商店中指定你选择的名称（可选择使用应用发布者）和应用的 URL。<br /><br /> 若要从 [Google Play 应用部分](https://play.google.com/store/apps)指定 URL，请搜索想要使用的应用。<br /><br /> 打开应用页面，并将该 URL 复制到剪贴板。 你现在可以在符合或不符合要求的应用列表中使用这个 URL。<br /><br /> **示例：** 在 Google Play 中搜索 **Microsoft Office Mobile**。 你使用的 URL 将为https://play.google.com/store/apps/details?id=com.microsoft.office.officehub。|  
+|**添加**|将应用添加到选定的列表。 在应用商店中指定你选择的名称（可选择使用应用发布者）和应用的 URL。<br /><br /> 若要从 [Google Play 应用部分](https://play.google.com/store/apps)指定 URL，请搜索想要使用的应用。<br /><br /> 打开应用页面，并将该 URL 复制到剪贴板。 你现在可以在符合或不符合要求的应用列表中使用这个 URL。<br /><br /> **示例：** 在 Google Play 中搜索 **Microsoft Office Mobile**。 你使用的 URL 将为 https://play.google.com/store/apps/details?id=com.microsoft.office.officehub 。|  
 |**编辑**|使你能够编辑选定应用的名称、发布者和 URL。|  
 |**移除**|从列表中删除选定的应用。|  
 |**导入**|导入你已在逗号分隔值文件中指定的应用列表。 在文件中使用格式应用程序名称、发布者和应用 URL。|  

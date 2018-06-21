@@ -15,6 +15,7 @@ ms.sourcegitcommit: db6074317d5c68ebb5fc478be5bceeb441aa0737
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34220422"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-system-center-configuration-manager"></a>关于 System Center Configuration Manager 中的客户端安装参数和属性。
 
@@ -110,7 +111,7 @@ ms.lasthandoff: 05/17/2018
 - 创建云管理网关。
 - 在活动的客户端上，以管理员身份打开 Windows PowerShell 命令提示符。 
 - 运行以下命令：`(Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate | Where-Object {$_.Type -eq "Internet"}).MP`
-- 附加“https://”前缀以与 /mp 参数一起使用。
+- 附加 “https://” 前缀以与 /mp 参数一起使用。
 
 使用云管理网关 URL 时的示例：`ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72057598037248100`
 
