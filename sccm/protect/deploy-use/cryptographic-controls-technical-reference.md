@@ -9,11 +9,12 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c28964d8cf6b11e9999a9d0967422ececafe234b
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: dd37bb3f452f5018dd1130d43ead0117481f2aab
+ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "34450183"
 ---
 # <a name="cryptographic-controls-technical-reference"></a>加密控制技术参考
 
@@ -116,18 +117,7 @@ System Center Configuration Manager 使用签名和加密帮助保护 Configurat
 ### <a name="mobile-device-management-and-pki-certificates"></a>移动设备管理和 PKI 证书  
  如果移动运营商尚未锁定移动设备，则可以使用 Configuration Manager 或 Microsoft Intune 请求和安装客户端证书。 此证书在移动设备上的客户端与 Configuration Manager 站点系统或 Microsoft Intune 服务之间提供相互身份验证。 如果锁定了移动设备，则无法使用 Configuration Manager 或 Intune 部署证书。  
 
- 如果启用移动设备硬件清单，则 Configuration Manager 或 Intune 还会清点移动设备上安装的证书。  
-
-### <a name="out-of-band-management-and-pki-certificates"></a>带外管理和 PKI 证书  
- 基于 Intel AMT 的计算机的带外管理至少使用以下两种类型的 PKI 颁发的证书：AMT 设置证书和 Web 服务器证书。  
-
- 带外服务点使用 AMT 设置证书准备要进行带外管理的计算机。 将设置的基于 AMT 的计算机必须信任带外管理点提供的证书。 默认情况下，基于 AMT 的计算机被计算机制造商配置为使用外部证书颁发机构 (CA)，如 VeriSign、Go Daddy、Comodo 和 Starfield。 如果从外部 CA 之一购买设置证书，并配置 Configuration Manager 以使用此设置证书，则基于 AMT 的计算机将信任设置证书的 CA，设置将成功。 但是，使用你自己的内部 CA 颁发 AMT 设置证书是最佳安全方案。  
-
- 基于 AMT 的计算机在其防火墙内运行 Web 服务器组件，并且该 Web 服务器组件使用传输层安全性 (TLS) 对带外服务点的信道进行加密。 AMT BIOS 中没有用于手动配置证书的用户界面，因此必须具有 Microsoft 企业证书颁发机构，以自动审批基于 AMT 的计算机提出的证书请求。 请求将 PKCS#10 用于请求格式，该格式反过来使用 PKCS#7 将证书信息传输到基于 AMT 的计算机。  
-
- 虽然基于 AMT 的计算机会向管理它的计算机进行身份验证，但管理它的计算机上没有对应的客户端 PKI 证书。 相反，这些通信使用 Kerberos 或 HTTP 摘要式身份验证。 使用 HTTP 摘要时，系统使用 TLS 对其进行加密。  
-
- 对基于 AMT 的计算机进行带外管理时需要其他类型的证书：适用于经过 802.1X 身份验证的有线网络和无线网络的可选客户端证书。 基于 AMT 的计算机需要客户端证书以向 RADIUS 服务器进行身份验证。 为 EAP-TLS 身份验证配置 RADIUS 服务器时，始终需要客户端证书。 为 EAP-TTLS/MSCHAPv2 或 PEAPv0/EAP-MSCHAPv2 配置 RADIUS 服务器时，RADIUS 配置会指定是否需要客户端证书。 基于 AMT 的计算机使用 Web 服务器证书请求的过程请求此证书。  
+ 如果启用移动设备硬件清单，则 Configuration Manager 或 Intune 还会清点移动设备上安装的证书。   
 
 ### <a name="operating-system-deployment-and-pki-certificates"></a>操作系统部署和 PKI 证书  
  当你使用 Configuration Manager 来部署操作系统，并且管理点需要 HTTPS 客户端连接时，客户端计算机还必须具有证书才能与管理点通信，即使在该计算机处于过渡阶段（例如从任务序列媒体或支持 PXE 的分发点中启动）中时也是如此。 为了支持此方案，你必须创建一个 PKI 客户端身份验证证书，并使用私钥将其导出，然后将该证书导入到站点服务器属性并同时添加管理点的受信任根 CA 证书。  

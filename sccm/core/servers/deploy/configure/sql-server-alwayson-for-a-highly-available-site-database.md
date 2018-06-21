@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32342352"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>准备将 SQL Server AlwaysOn 可用性组与 Configuration Manager 配合使用
 
@@ -96,7 +97,7 @@ Configuration Manager 支持在以下位置使用可用性组：
 
 -     RCP 终结点映射程序 - **TCP 135**   
 -     服务器消息块 – **TCP 445**  
-    数据库移动完成后，可以删除此端口。从版本 1702 开始，不再需要此端口。*
+    数据库移动完成后，可以删除此端口。从版本 1702 开始，不再需要此端口。
 -     SQL Server Service Broker -  **TCP 4022**
 -     SQL over TCP – **TCP 1433**   
 
@@ -223,10 +224,10 @@ Configuration Manager 支持在以下位置使用可用性组：
 -   **允许任何只读连接**
 
 **不支持的数据库使用：**
--   **Configuration Manager 仅支持可用性组中的站点数据库：**不支持以下内容：
+-   **Configuration Manager 仅支持可用性组中的站点数据库：** 不支持以下内容：
     -   报表数据库
     -   WSUS 数据库
--   **预先存在的数据库：**不能使用副本上创建的新数据库。 而必须在配置可用性组时将现有 Configuration Manager 数据库的副本还原为主要副本。
+-   **预先存在的数据库：** 不能使用副本上创建的新数据库。 而必须在配置可用性组时将现有 Configuration Manager 数据库的副本还原为主要副本。
 
 **ConfigMgrSetup.log 中的安装错误：**  
 运行安装程序将站点数据库移到可用性组时，安装程序会尝试处理可用性组的次要副本上的数据库角色，并记录错误，如下所示：

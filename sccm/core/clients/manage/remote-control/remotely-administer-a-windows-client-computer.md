@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32338631"
 ---
 # <a name="how-to-remotely-administer-a-windows-client-computer-by-using-system-center-configuration-manager"></a>如何使用 System Center Configuration Manager 远程管理 Windows 客户端计算机
 
@@ -81,7 +82,7 @@ ms.lasthandoff: 05/03/2018
 
 ### <a name="to-start-the-remote-control-viewer-from-the-windows-command-line"></a>若要从 Windows 命令行中启动远程控制查看器  
 
--   在 Windows 命令提示符处，键入 <Configuration Manager 安装文件夹\>\AdminConsole\Bin\x64\CmRcViewer.exe*  
+-   在 Windows 命令提示符处，键入 <Configuration Manager 安装文件夹\>\AdminConsole\Bin\x64\CmRcViewer.exe ****  
 
 CmRcViewer.exe 支持以下命令行选项：  
 
