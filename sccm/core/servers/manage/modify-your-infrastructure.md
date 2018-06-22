@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32342556"
 ---
 # <a name="modify-your-system-center-configuration-manager-infrastructure"></a>修改你的 System Center Configuration Manager 基础结构
 
@@ -166,7 +167,7 @@ ms.lasthandoff: 05/03/2018
 -   “配置访问权限” ：在将站点数据库转移到新计算机时，将站点服务器的计算机帐户添加到运行 SQL Server 的计算机上的“本地管理员”  组。 如果为站点数据库使用 SQL Server 群集，你必须将该计算机帐户添加到每台 Windows Server 群集节点计算机的“本地管理员”  组。  
 
 -   **启用公共语言运行时 (CLR) 集成：**  在将数据库转移到 SQL Server 上的新实例或新 SQL Server 计算机时，你必须启用公共语言运行时 (CLR) 集成。 若要启用 CLR，请使用“SQL Server Management Studio”连接到承载站点数据库的 SQL Server 实例，并以查询形式运行以下存储过程：**sp_configure 'clr enabled',1; reconfigure**。  
--  **确保新的 SQL Server 具有访问备份位置的权限：**数据库移到新的服务器（包括 SQL Server AlwaysOn 可用性组或 SQL Server 群集）后，将 UNC 用于存储站点数据库备份时，应确保新 SQL Server 的计算机帐户具有对 UNC 位置的**写入**权限。  
+-  **确保新的 SQL Server 具有访问备份位置的权限：** 数据库移到新的服务器（包括 SQL Server AlwaysOn 可用性组或 SQL Server 群集）后，将 UNC 用于存储站点数据库备份时，应确保新 SQL Server 的计算机帐户具有对 UNC 位置的**写入**权限。  
 
 
 > [!IMPORTANT]  

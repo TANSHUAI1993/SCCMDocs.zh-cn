@@ -16,6 +16,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32345087"
 ---
 # <a name="how-to-use-the-configuration-manager-docs"></a>如何使用 Configuration Manager 文档
 

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32341587"
 ---
 # <a name="use-a-cloud-based-distribution-point-with-system-center-configuration-manager"></a>将基于云的分发点用于 System Center Configuration Manager
 

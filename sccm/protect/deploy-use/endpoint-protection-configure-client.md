@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32351211"
 ---
 # <a name="configure-custom-client-settings-for-endpoint-protection"></a>为 Endpoint Protection 配置自定义客户端设置
 

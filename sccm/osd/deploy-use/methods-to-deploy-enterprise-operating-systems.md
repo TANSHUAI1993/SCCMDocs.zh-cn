@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32346383"
 ---
 # <a name="methods-to-deploy-enterprise-operating-systems-using-system-center-configuration-manager"></a>使用 System Center Configuration Manager 部署企业版操作系统的方法
 

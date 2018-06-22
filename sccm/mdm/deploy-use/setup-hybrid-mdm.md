@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32347070"
 ---
 # <a name="setup-hybrid-mobile-device-management-mdm-with-system-center-configuration-manager-and-microsoft-intune"></a>使用 System Center Configuration Manager 和 Microsoft Intune 设置混合移动设备管理 (MDM)
 
@@ -41,5 +42,5 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="enroll-devices"></a>注册设备
 完成混合部署后，可以在 Configuration Manager 中通过多种方式注册设备：
-- **公司拥有的 (COD) 设备：**有关用于注册公司拥有的设备的不同平台特定方法的指导，请参阅[注册公司拥有的设备](enroll-company-owned-devices.md)。
-- **用户拥有的 (BYOD) 设备：**有关注册用户拥有的设备的方法的指导，请参阅[注册用户拥有的 (BYOD) 设备](enroll-hybrid-ios-mac.md)。
+- **公司拥有的 (COD) 设备：** 有关用于注册公司拥有的设备的不同平台特定方法的指导，请参阅[注册公司拥有的设备](enroll-company-owned-devices.md)。
+- **用户拥有的 (BYOD) 设备：** 有关注册用户拥有的设备的方法的指导，请参阅[注册用户拥有的 (BYOD) 设备](enroll-hybrid-ios-mac.md)。

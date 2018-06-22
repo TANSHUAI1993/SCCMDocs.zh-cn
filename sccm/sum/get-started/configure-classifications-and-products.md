@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32350674"
 ---
 #  <a name="configure-classifications-and-products-to-synchronize"></a>配置要同步的分类和产品  
 

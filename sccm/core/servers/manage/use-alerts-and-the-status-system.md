@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32342505"
 ---
 # <a name="use-alerts-and-the-status-system-for-system-center-configuration-manager"></a>使用 System Center Configuration Manager 的警报和状态系统
 
@@ -43,7 +44,7 @@ ms.lasthandoff: 05/03/2018
     > [!NOTE]  
     >  状态筛选规则不支持使用环境变量来运行外部命令。  
 
--   **状态报告：**可以配置服务器和客户端组件报告以修改将状态消息报告给 Configuration Manager 状态系统的方式，并指定发送状态消息的位置。  
+-   **状态报告：** 可以配置服务器和客户端组件报告以修改将状态消息报告给 Configuration Manager 状态系统的方式，并指定发送状态消息的位置。  
 
     > [!WARNING]  
     >  由于默认的报告设置适用于大多数环境，因此请小心更改这些设置。 在通过选择报告所有状态详细信息来提高状态报告的级别时，可能会增加要处理的状态消息的数量，从而增加 Configuration Manager 站点上的处理负载。 如果降低状态报告的级别，则可能会限制状态摘要生成器的实用性。  

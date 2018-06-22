@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32347580"
 ---
 # <a name="associate-users-with-a-destination-computer-in-system-center-configuration-manager"></a>将用户与 System Center Configuration Manager 中的目标计算机关联
 

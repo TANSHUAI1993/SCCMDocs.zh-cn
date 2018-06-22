@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32332104"
 ---
 # <a name="import-configuration-data-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 导入配置数据
 
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/03/2018
 1.  在 Configuration Manager 控制台中，单击“资产和符合性” > “配置项目”或“配置基线”
 2.  在“主页”选项卡上的“创建”组中，单击“导入配置数据”。  
 3.  在“导入配置数据向导”  的“选择文件” 页上，单击“添加” ，然后在“打开”  对话框中，选择要导入的 .cab 文件。  
-4.  如果希望可以在 Configuration Manager 控制台中编辑导入的配置数据，请选中“**创建已导入配置基线和配置项目的新副本”**复选框。  
+4.  如果希望可以在 Configuration Manager 控制台中编辑导入的配置数据，请选中“**创建已导入配置基线和配置项目的新副本”** 复选框。  
 5.  在“摘要”页上，查看将执行的操作，然后完成向导。  
 
 导入的配置数据会显示在“资产和符合性”工作区的“符合性设置”节点中。  

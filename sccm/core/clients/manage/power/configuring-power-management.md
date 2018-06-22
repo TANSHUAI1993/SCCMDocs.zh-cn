@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32333478"
 ---
 # <a name="configuring-power-management-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中配置电源管理
 

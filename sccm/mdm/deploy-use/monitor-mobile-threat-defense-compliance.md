@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32347529"
 ---
 # <a name="monitor-mobile-threat-defense-compliance"></a>**监视移动威胁防御符合性**
 
@@ -58,7 +59,7 @@ ms.lasthandoff: 05/03/2018
 |**描述**| 是 | 有关移动威胁防御合作伙伴所提供的威胁的详细信息。 |
 |**上次更新时间**| 是 | 移动威胁防御合作伙伴上一次向 Intune 发送有关威胁的已更新的详细信息的时间。 |
 |**威胁严重性**| 是 | 威胁严重性是单个威胁的定义，它基于“移动威胁防御合作伙伴”控制台中的管理员的配置。 它具有三个值：**低**、**中**或**高** |
-|**威胁状态**| 是 | 设备上威胁的当前状态。 可能的状态：**激活**、**已解决**或**已忽略：**表示用户忽略了设备上的威胁，但是威胁仍然存在。 |
+|**威胁状态**| 是 | 设备上威胁的当前状态。 可能的状态：**激活**、**已解决**或**已忽略：** 表示用户忽略了设备上的威胁，但是威胁仍然存在。 |
 |**威胁类型**| 是 | 威胁的移动威胁防御合作伙伴类型。 可能的值：**应用**、**文件**或**操作系统** |
 |**AAD 帐户 ID**| 否 | Azure Active Directory 唯一标识符。 |
 |**分类**| 是 | 移动威胁防御合作伙伴提供了威胁的分类。 可取值：**Root Enabler、Riskware、Adware、Chargeware、DataLeak、Trojan、Worm、Virus、Exploit、Backdoor、Bot、AppDropper、ClickFraud、Spam、Spyware、SurveillanceWare、Vulnerability、Unknown、Root Jailbrake、Connectivity、TollFraud、SideloadedApp** |

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32344606"
 ---
 # <a name="use-the-setup-wizard-to-install-system-center-configuration-manager-sites"></a>使用安装向导安装 System Center Configuration Manager 站点
 
@@ -108,9 +109,9 @@ ms.lasthandoff: 05/03/2018
         > [!NOTE]  
         > 安装程序不会验证所指定的站点代码是否未被使用，或者它是否具有保留名称。  
 
-    -   **站点名称：**每个站点都需要此友好名称，它可帮助你标识站点。  
+    -   **站点名称：** 每个站点都需要此友好名称，它可帮助你标识站点。  
 
-    -   **安装文件夹：**这是 Configuration Manager 安装的文件夹路径。 安装站点后，无法更改位置。 此外，该路径不能包含 Unicode 字符或尾随空格。  
+    -   **安装文件夹：** 这是 Configuration Manager 安装的文件夹路径。 安装站点后，无法更改位置。 此外，该路径不能包含 Unicode 字符或尾随空格。  
 
 11. 在“站点安装”页上，使用与你的方案匹配的以下选项：  
 
@@ -138,9 +139,9 @@ ms.lasthandoff: 05/03/2018
 
      如果使用自定义端口，请将该端口添加到 SQL Server 的 FQDN。 若要执行此操作，请在后续服务器的 FQDN 后附加逗号，然后附加端口号。   例如，对于服务器 SQLServer1.fabrikam.com，使用以下语句指定端口 1551：SQLServer1.fabrikam.com,1551
 
-    -   **实例名称：**此项默认为空。 它在站点服务器计算机上使用 SQL 的默认实例。  
+    -   **实例名称：** 此项默认为空。 它在站点服务器计算机上使用 SQL 的默认实例。  
 
-    -   **数据库名称：**默认情况下，将此设置为 CM_&lt;Sitecode\>。 可随意使用所指定的其他名称。  
+    -   **数据库名称：** 默认情况下，将此设置为 CM_&lt;Sitecode\>。 可随意使用所指定的其他名称。  
 
     -   **Service Broker 端口**：默认情况下，设置为使用默认 SQL Server Service Broker (SSB) 端口 4022。 SQL 通过该端口与其他站点的站点数据库直接通信。  
 

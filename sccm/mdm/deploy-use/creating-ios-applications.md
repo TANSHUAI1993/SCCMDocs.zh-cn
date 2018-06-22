@@ -2,25 +2,20 @@
 title: 创建 iOS 应用程序
 titleSuffix: Configuration Manager
 description: 请参阅创建和部署适用于 iOS 设备的应用程序时必须考虑的注意事项。
-ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: ff633013-5313-4cd3-949c-56d45e777280
-caps.latest.revision: ''
-author: mattbriggs
-ms.author: mabrigg
-manager: angrobe
-ms.openlocfilehash: 2b21a50b18384740eda8744c3442fe060325fd15
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 985a8177602bd32da0b6134eeddb564a44749d65
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2018
+ms.lasthandoff: 05/03/2018
+ms.locfileid: "32346424"
 ---
 # <a name="create-ios-applications-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 创建 iOS 应用程序
 

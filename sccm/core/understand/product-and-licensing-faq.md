@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32340295"
 ---
 # <a name="frequently-asked-questions-for-configuration-manager-branches-and-licensing"></a>Configuration Manager 分支和许可的常见问题解答
 
@@ -68,7 +69,7 @@ EMS 授予使用 System Center Configuration Manager（Current Branch 和 Long-T
 
 
 ### <a name="bkmk_owncb"></a>我是否“拥有”Current Branch？   
-否。 当你具有可用 SA 时，有权使用 Current Branch。 例如，通过 *L&SA*，当 *SA* 过期时，你仅具有 *L（许可证）*权限，这不包括使用 Current Branch 的权限。 如果 L 提供永久权限，可使用 System Center Configuration Manager 的 Long-Term Servicing Branch（或如果 SA 在 2016 年 10 月 1 日前过期，则使用 System Center 2012 R2 Configuration Manager）代替 Current Branch。
+否。 当你具有可用 SA 时，有权使用 Current Branch。 例如，通过 *L&SA*，当 *SA* 过期时，你仅具有 *L（许可证）* 权限，这不包括使用 Current Branch 的权限。 如果 L 提供永久权限，可使用 System Center Configuration Manager 的 Long-Term Servicing Branch（或如果 SA 在 2016 年 10 月 1 日前过期，则使用 System Center 2012 R2 Configuration Manager）代替 Current Branch。
 
 
 ### <a name="bkmk_standalone"></a>是否可以单独购买 System Center Configuration Manager，而不购买 SA？      

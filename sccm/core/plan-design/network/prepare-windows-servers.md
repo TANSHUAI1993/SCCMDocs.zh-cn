@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32339394"
 ---
 # <a name="prepare-windows-servers-to-support-system-center-configuration-manager"></a>准备 Windows Server 以支持 System Center Configuration Manager
 
@@ -121,14 +122,14 @@ ms.lasthandoff: 05/03/2018
 >  最佳安全方案是在专用 Web 服务器上运行 Configuration Manager。 如果必须在 Web 服务器上运行其他应用程序，请使用 Configuration Manager 的自定义网站。 有关详细信息，请参阅 [System Center Configuration Manager 中的站点系统服务器网站](../../../core/plan-design/network/websites-for-site-system-servers.md)。  
 
 ## <a name="http-verbs"></a>HTTP 谓词
-**管理点：**若要确保客户端与管理点通信成功，请确保管理点服务器允许使用以下 HTTP 谓词：  
+**管理点：** 若要确保客户端与管理点通信成功，请确保管理点服务器允许使用以下 HTTP 谓词：  
  - GET
  - POST
  - CCM_POST
  - HEAD
  - PROPFIND
 
-**分发点：**分发点需要以下 HTTP 谓词：
+**分发点：** 分发点需要以下 HTTP 谓词：
  - GET
  - HEAD
  - PROPFIND

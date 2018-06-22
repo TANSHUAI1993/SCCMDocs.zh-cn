@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32342420"
 ---
 # <a name="use-the-hotfix-installer-to-install-updates-for-system-center-configuration-manager"></a>使用修补程序安装程序来安装 System Center Configuration Manager 的更新
 
@@ -77,7 +78,7 @@ System Center Configuration Manager 的某些更新无法从 Microsoft 云服务
 |&lt;Product version\>-QFE-KB&lt;KB article ID\>-&lt;platform\>-&lt;language\>.exe|这是更新文件。 此文件的命令行由 Updatesetup.exe 进行管理。<br /><br /> 例如：<br />CM1511RTM-QFE-KB123456-X64-ENU.exe|  
 |Updatesetup.exe|此 .msi 包装管理更新捆绑的安装。<br /><br /> 运行更新时，Updatesetup.exe 会检测运行它的计算机的显示语言。 默认情况下，此更新的用户界面是英文。 但是，如果支持显示语言，则会以计算机的本地语言显示用户界面。|  
 |License_&lt;language\>.rtf|如果适用，每个更新都会包含支持语言的一个或多个许可证文件。|  
-|&lt;Product&updatetype>-&lt;product version\>-&lt;KB article ID\>-&lt;platform\>.msp|如果更新适用于 Configuration Manager 控制台或客户端，则更新捆绑包会包括单独的 Windows Installer 修补 (.msp) 文件。<br /><br /> 例如：<br /><br /> **Configuration Manager 控制台更新：** ConfigMgr1511 AdminUI KB1234567 i386.msp<br /><br /> **客户端更新：**ConfigMgr1511-client-KB1234567-i386.msp<br />ConfigMgr1511-client-KB1234567-x64.msp|  
+|&lt;Product&updatetype>-&lt;product version\>-&lt;KB article ID\>-&lt;platform\>.msp|如果更新适用于 Configuration Manager 控制台或客户端，则更新捆绑包会包括单独的 Windows Installer 修补 (.msp) 文件。<br /><br /> 例如：<br /><br /> **Configuration Manager 控制台更新：** ConfigMgr1511 AdminUI KB1234567 i386.msp<br /><br /> **客户端更新：** ConfigMgr1511-client-KB1234567-i386.msp<br />ConfigMgr1511-client-KB1234567-x64.msp|  
 
  默认情况下，更新捆绑会将其操作记录到站点服务器上的 .log 文件中。 此日志文件与更新捆绑同名，并且会写入到 **%SystemRoot%/Temp** 文件夹中。  
 

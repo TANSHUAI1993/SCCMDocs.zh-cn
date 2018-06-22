@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32345737"
 ---
 # <a name="manage-applications-for-on-premises-mobile-device-management"></a>在本地移动设备管理中管理应用程序
 

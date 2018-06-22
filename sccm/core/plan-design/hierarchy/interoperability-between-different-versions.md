@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32340261"
 ---
 # <a name="interoperability-between-different-versions-of-system-center-configuration-manager"></a>System Center Configuration Manager 不同版本之间的互操作性
 
@@ -67,8 +68,8 @@ ms.lasthandoff: 05/03/2018
 
 |对象|详细信息|  
 |------------|-------------|  
-|网络访问帐户|**从 System Center 2012 Configuration Manager 升级到 System Center Configuration Manager 时：**如果某 Configuration Manager 控制台连接到已更新为 System Center Configuration Manager 的管理中心站点，则通过该控制台查看网络访问帐户详细信息时，控制台不会显示在运行 System Center 2012 Configuration Manager 的主站点上配置的帐户的详细信息。 主站点升级到与管理中心站点相同的版本后，将可在控制台中看到帐户详细信息。<br /><br /> **在 System Center Configuration Manager 版本之间进行升级时：**如果某 Configuration Manager 控制台连接到已更新为 System Center Configuration Manager 新版本的管理中心站点，则通过该控制台查看网络访问帐户详细信息时，控制台不会显示在运行旧版本的主站点上配置的帐户的详细信息。 主站点升级到与管理中心站点相同的版本后，将可在控制台中看到帐户详细信息。|  
-|操作系统部署的启动映像|**从 System Center 2012 Configuration Manager 升级到 System Center Configuration Manager 时：**层次结构的顶层站点升级到 System Center Configuration Manager 时，默认启动映像会自动更新为基于 Windows 评估和部署工具包 10 (Windows ADK ) 的启动映像。 仅将这些启动映像用于对 System Center Configuration Manager 站点中客户端的部署。 有关详细信息，请参阅[在 System Center Configuration Manager 中规划操作系统部署互操作性](../../../osd/plan-design/planning-for-operating-system-deployment-interoperability.md)。<br /><br /> **在 System Center Configuration Manager 各版本之间升级时：**只要新版本的 cm6long 不更新当前使用的 Windows ADK 版本，就不会对启动映像造成影响。|  
+|网络访问帐户|**从 System Center 2012 Configuration Manager 升级到 System Center Configuration Manager 时：** 如果某 Configuration Manager 控制台连接到已更新为 System Center Configuration Manager 的管理中心站点，则通过该控制台查看网络访问帐户详细信息时，控制台不会显示在运行 System Center 2012 Configuration Manager 的主站点上配置的帐户的详细信息。 主站点升级到与管理中心站点相同的版本后，将可在控制台中看到帐户详细信息。<br /><br /> **在 System Center Configuration Manager 版本之间进行升级时：** 如果某 Configuration Manager 控制台连接到已更新为 System Center Configuration Manager 新版本的管理中心站点，则通过该控制台查看网络访问帐户详细信息时，控制台不会显示在运行旧版本的主站点上配置的帐户的详细信息。 主站点升级到与管理中心站点相同的版本后，将可在控制台中看到帐户详细信息。|  
+|操作系统部署的启动映像|**从 System Center 2012 Configuration Manager 升级到 System Center Configuration Manager 时：** 层次结构的顶层站点升级到 System Center Configuration Manager 时，默认启动映像会自动更新为基于 Windows 评估和部署工具包 10 (Windows ADK ) 的启动映像。 仅将这些启动映像用于对 System Center Configuration Manager 站点中客户端的部署。 有关详细信息，请参阅[在 System Center Configuration Manager 中规划操作系统部署互操作性](../../../osd/plan-design/planning-for-operating-system-deployment-interoperability.md)。<br /><br /> **在 System Center Configuration Manager 各版本之间升级时：** 只要新版本的 cm6long 不更新当前使用的 Windows ADK 版本，就不会对启动映像造成影响。|  
 |新建任务序列步骤|使用某 Configuration Manager 版本中介绍的步骤创建任务序列时（早期版本中不可用），可能会遇到下列问题：<br /><br /> --   尝试从运行 Configuration Manager 先前版本的站点编辑任务序列时出错。<br /><br /> -- 在运行早期版本 Configuration Manager 客户端的计算机上，任务序列不运行。|  
 |客户端到下层管理点的通信|对于与某个站点中的管理点通信的 Configuration Manager 客户端，如果该站点运行的版本比客户端低，则该客户端只能使用 Configuration Manager 的下层版本所支持的功能。 例如，如果将内容从近期升级的 System Center Configuration Manager 站点部署到与管理点通信的客户端，但该客户端尚未升级到此版本，则该客户端无法使用最新版本中的新增功能。|  
 

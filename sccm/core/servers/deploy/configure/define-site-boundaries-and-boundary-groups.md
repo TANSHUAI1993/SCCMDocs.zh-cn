@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32334838"
 ---
 # <a name="define-site-boundaries-and-boundary-groups-for-system-center-configuration-manager"></a>为 System Center Configuration Manager 定义站点边界和边界组
 
@@ -33,7 +34,7 @@ Intranet 上的客户端评估其当前网络位置，然后使用该信息确�
 
  客户端使用边界组以：  
 -   **查找分配的站点：** 边界组使客户端能够为客户端分配（自动站点分配）查找主站点。  
--   **查找可以使用的某些站点系统角色：**将边界组与某些站点系统角色相关联时，边界组向客户端提供在内容定位期间以及作为首选管理点使用的站点系统的列表。  
+-   **查找可以使用的某些站点系统角色：** 将边界组与某些站点系统角色相关联时，边界组向客户端提供在内容定位期间以及作为首选管理点使用的站点系统的列表。  
 
 位于 Internet 上或配置为仅 Internet 的客户端不使用边界信息。 这些客户端无法使用自动站点分配，并可始终从为其分配的站点中的任何分发点下载内容（如果分发点配置为允许来自 Internet 的客户端连接）。  
 

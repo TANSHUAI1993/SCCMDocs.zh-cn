@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32349681"
 ---
 # <a name="introduction-to-certificate-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的证书配置文件简介
 
@@ -35,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 
 **例如：** 所有员工都必须能够连接到多个公司位置的 Wi-fi 热点。 若要启用简单的用户连接，请先部署连接 Wi-Fi 所需的证书。 然后部署引用该证书的 Wi-Fi 配置文件。  
 
-**示例：**假设你的 PKI 已就位。 你希望采用更灵活安全的方法来部署证书。 用户应可在不影响安全性的情况下从个人设备访问公司资源。 使用特定设备平台支持的设置和协议配置证书配置文件。 随后设备可从面向 Internet 的注册服务器自动请求这些证书。 然后，配置 VPN 配置文件以使用这些证书，以便设备能够访问公司资源。  
+**示例：** 假设你的 PKI 已就位。 你希望采用更灵活安全的方法来部署证书。 用户应可在不影响安全性的情况下从个人设备访问公司资源。 使用特定设备平台支持的设置和协议配置证书配置文件。 随后设备可从面向 Internet 的注册服务器自动请求这些证书。 然后，配置 VPN 配置文件以使用这些证书，以便设备能够访问公司资源。  
 
 
 

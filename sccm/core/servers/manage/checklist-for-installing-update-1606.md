@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32341791"
 ---
 # <a name="checklist-for-installing-update-1606-for-system-center-configuration-manager"></a>用于为 System Center Configuration Manager 安装更新 1606 的清单
 
@@ -46,9 +47,9 @@ System Center Configuration Manager Current Branch 的版本 1606 是一项更�
 
 ## <a name="checklist"></a>清单  
 
- **确保所有站点都运行支持的 System Center Configuration Manager 版本：**开始安装更新 1606 之前，层次结构中的每个站点服务器都必须运行相同版本的 System Center Configuration Manager（版本 1511 或版本 1602）。
+ **确保所有站点都运行支持的 System Center Configuration Manager 版本：** 开始安装更新 1606 之前，层次结构中的每个站点服务器都必须运行相同版本的 System Center Configuration Manager（版本 1511 或版本 1602）。
 
- **查看站点系统服务器上安装的 Microsoft.NET 版本：**站点安装更新 1606 时，如果尚未安装 .NET Framework 4.5 或更高版本，则 Configuration Manager 会在承载以下站点系统角色之一的每台计算机上自动安装 .NET Framework 4.5.2：  
+ **查看站点系统服务器上安装的 Microsoft.NET 版本：** 站点安装更新 1606 时，如果尚未安装 .NET Framework 4.5 或更高版本，则 Configuration Manager 会在承载以下站点系统角色之一的每台计算机上自动安装 .NET Framework 4.5.2：  
 
 -   注册代理点  
 
@@ -70,22 +71,22 @@ System Center Configuration Manager Current Branch 的版本 1606 是一项更�
 
 对于数据库复制，可以在开始更新之前，使用复制链接分析器来帮助解决问题。 有关详细信息，请参阅 [System Center Configuration Manager 中的监视层次结构和复制基础结构](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md)主题中的[关于复制链接分析器](../../../core/servers/manage/monitor-hierarchy-and-replication-infrastructure.md#BKMK_RLA)。  
 
- **为承载站点、站点数据库服务器和远程站点系统角色的计算机上的操作系统安装所有合适的关键更新：**为 Configuration Manager 安装更新之前，请为每个适用的站点系统安装任何关键更新。 如果安装的更新需要重启，请在开始升级之前重启合适的计算机。  
+ **为承载站点、站点数据库服务器和远程站点系统角色的计算机上的操作系统安装所有合适的关键更新：** 为 Configuration Manager 安装更新之前，请为每个适用的站点系统安装任何关键更新。 如果安装的更新需要重启，请在开始升级之前重启合适的计算机。  
 
- **在主站点上禁用管理点数据库副本：**Configuration Manager 无法成功更新启用了管理点数据库副本的主站点。 安装 Configuration Manager 的更新之前禁用数据库复制。  
+ **在主站点上禁用管理点数据库副本：** Configuration Manager 无法成功更新启用了管理点数据库副本的主站点。 安装 Configuration Manager 的更新之前禁用数据库复制。  
 
 有关详细信息，请参阅 [System Center Configuration Manager 管理点的数据库副本](../../../core/servers/deploy/configure/database-replicas-for-management-points.md)。  
 
  **将 SQL Server AlwaysOn 可用性组设置为手动故障转移：**  
  在安装更新（例如版本 1606）之前，请确保将可用性组设置为手动故障转移。 站点更新后，可以将故障转移还原为自动进行故障转移。 有关详细信息，请参阅[站点数据库的 SQL Server AlwaysOn](../../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)。
 
- **重新配置使用 NLB 的软件更新点：**Configuration Manager 无法更新使用网络负载平衡 (NLB) 群集来承载软件更新点的站点。  
+ **重新配置使用 NLB 的软件更新点：** Configuration Manager 无法更新使用网络负载平衡 (NLB) 群集来承载软件更新点的站点。  
 
 如果为软件更新点使用 NLB 群集，请使用 Windows PowerShell 删除 NLB 群集。    
 
  有关详细信息，请参阅 [System Center Configuration Manager 的软件更新计划](../../../sum/plan-design/plan-for-software-updates.md)。  
 
- **在站点上的更新安装过程中，禁用每个站点上的所有站点维护任务：**安装更新之前，请禁用可能会在升级过程进行时运行的任何站点维护任务。 这包括但不限于以下各项：  
+ **在站点上的更新安装过程中，禁用每个站点上的所有站点维护任务：** 安装更新之前，请禁用可能会在升级过程进行时运行的任何站点维护任务。 这包括但不限于以下各项：  
 
 -   备份站点服务器  
 
@@ -97,7 +98,7 @@ System Center Configuration Manager Current Branch 的版本 1606 是一项更�
 
 有关详细信息，请参阅 [System Center Configuration Manager 的维护任务](../../../core/servers/manage/maintenance-tasks.md)和 [System Center Configuration Manager 维护任务参考](../../../core/servers/manage/reference-for-maintenance-tasks.md)。 
 
-**暂时停止 System Center Configuration Manager 服务器上的所有防病毒软件：**更新站点之前，请确保 Configuration Manager 服务器上的防病毒软件已停止。 <!--SMS.503481--> 
+**暂时停止 System Center Configuration Manager 服务器上的所有防病毒软件：** 更新站点之前，请确保 Configuration Manager 服务器上的防病毒软件已停止。 <!--SMS.503481--> 
 
  **在管理中心站点和主站点上创建站点数据库备份：** 更新站点之前，请备份站点数据库，以确保具有用于灾难恢复的成功备份。   
 
@@ -121,17 +122,17 @@ Configuration Manager does not support the backup of secondary sites nor does it
 Do not run a test database upgrade on the production site database. Doing so updates the site database and could render your site inoperable. For more information, For more information, see [Step 2: Test the database upgrade before installing an update](/sccm/core/servers/manage/install-in-console-updates#bkmk_step2) from **Before you install an in-console update**.
 -->
 
- **规划客户端试点：**安装更新客户端的更新后，可以在新的客户端更新部署和升级所有活动的客户端之前在预生产中对其进行测试。   
+ **规划客户端试点：** 安装更新客户端的更新后，可以在新的客户端更新部署和升级所有活动的客户端之前在预生产中对其进行测试。   
 
  若要利用此选项，在开始更新安装之前，必须将站点配置为支持预生产的自动升级。 有关详细信息，请参阅[在 System Center Configuration Manager 中升级客户端](../../../core/clients/manage/upgrade/upgrade-clients.md)和   
 [如何在 System Center Configuration Manager 中的预生产集合中测试客户端升级](../../../core/clients/manage/upgrade/test-client-upgrades.md)。  
 
- **规划通过服务时段来控制站点服务器安装更新的时间：**可以使用服务时段定义一个时间段，在此期间可以安装站点的更新。
+ **规划通过服务时段来控制站点服务器安装更新的时间：** 可以使用服务时段定义一个时间段，在此期间可以安装站点的更新。
 
 这可以帮助你控制层次结构中的站点安装更新的时间。
 版本 1606 之前，服务时段被称为维护时段。 有关详细信息，请参阅[站点服务器的服务时段](/sccm/core/servers/manage/service-windows)。  
 
- **运行安装程序必备组件检查程序：**安装更新 1606 之前，可以独立于更新安装来运行必备组件检查程序。 在站点上安装更新时，会再次运行必备组件检查程序。  
+ **运行安装程序必备组件检查程序：** 安装更新 1606 之前，可以独立于更新安装来运行必备组件检查程序。 在站点上安装更新时，会再次运行必备组件检查程序。  
 
 有关详细信息，请参阅 [System Center Configuration Manager 的更新](../../../core/servers/manage/install-in-console-updates.md)主题中的**步骤 3：安装更新之前运行先决条件检查程序**。  
 

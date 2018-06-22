@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32349205"
 ---
 # <a name="monitor-email-wi-fi-and-vpn-profiles-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中监视电子邮件、Wi-Fi 和 VPN 配置文件
 

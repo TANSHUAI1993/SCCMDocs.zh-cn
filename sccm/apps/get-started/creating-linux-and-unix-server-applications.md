@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32338207"
 ---
 # <a name="create-linux-and-unix-server-applications-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 创建 Linux 和 UNIX 服务器应用程序
 

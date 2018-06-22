@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32350164"
 ---
 # <a name="how-to-configure-hardware-inventory-for-mobile-devices-enrolled-by-microsoft-intune-and-system-center-configuration-manager"></a>如何配置通过 Microsoft Intune 和 System Center Configuration Manager 注册的移动设备的硬件清单
 
@@ -55,7 +56,7 @@ ms.lasthandoff: 05/03/2018
  **Outlook Web Access (OWA)**  
 
 > [!NOTE]  
->  **注意：**使用 Android 公司门户应用时，Android 清单类可用。  
+>  **注意：** 使用 Android 公司门户应用时，Android 清单类可用。  
 
 |硬件清单类|Android|  
 |------------------------------|-------------|  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32350470"
 ---
 # <a name="security-and-privacy-for-certificate-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager 中证书配置文件的安全和隐私
 
@@ -28,7 +29,7 @@ ms.lasthandoff: 05/03/2018
 |----------------------------|----------------------|  
 |确定并遵循网络设备注册服务的下列任何最佳安全方案，包括在 Internet Information Services (IIS) 中将网络设备注册服务网站配置为需要 SSL 和忽略客户端证书。|请参阅 TechNet 上 Active Directory 证书服务库中的 [Network Device Enrollment Service Guidance（网络设备注册服务指导）](http://go.microsoft.com/fwlink/p/?LinkId=309016) 。|  
 |在配置 SCEP 证书配置文件时，请选择设备和基础结构可支持的最安全选项。|确定、实施和遵循已为你的设备和基础结构推荐的任何最佳安全方案。|  
-|手动指定用户设备相关性，而不是允许用户确定其主设备。 此外，不要启用基于使用情况的配置。|如果在 SCEP 证书配置文件中单击“仅允许在用户主设备上进行证书注册”  选项，请不要考虑从用户处或从要成为权威设备的设备中收集的信息。 如果随此配置一起部署 SCEP 证书配置文件，并且受信任的管理用户未指定用户设备相关性，则未授权用户可能会收到提升的权限，并且会被授予身份验证证书。<br /><br /> **注意：**如果确实启用基于使用情况的配置，则会使用未受 System Center Configuration Manager 保护的状态消息收集此信息。 为了帮助减轻此威胁，请在客户端计算机和管理点之间使用 SMB 签名或 IPsec。|  
+|手动指定用户设备相关性，而不是允许用户确定其主设备。 此外，不要启用基于使用情况的配置。|如果在 SCEP 证书配置文件中单击“仅允许在用户主设备上进行证书注册”  选项，请不要考虑从用户处或从要成为权威设备的设备中收集的信息。 如果随此配置一起部署 SCEP 证书配置文件，并且受信任的管理用户未指定用户设备相关性，则未授权用户可能会收到提升的权限，并且会被授予身份验证证书。<br /><br /> **注意：** 如果确实启用基于使用情况的配置，则会使用未受 System Center Configuration Manager 保护的状态消息收集此信息。 为了帮助减轻此威胁，请在客户端计算机和管理点之间使用 SMB 签名或 IPsec。|  
 |不要为用户将“读取”和“注册”权限添加到证书模板，或者配置证书注册点以跳过证书模板检查。|尽管在为用户添加“读取”和“注册”安全权限的情况下，Configuration Manager 支持其他检查，并且可以在无法进行身份验证的情况下配置证书注册点以跳过此检查，但任何一种配置都不是最佳安全做法。 有关详细信息，请参阅[为 System Center Configuration Manager 中证书配置文件规划证书模板权限](../../protect/plan-design/planning-for-certificate-template-permissions.md)。|  
 
 ## <a name="privacy-information-for-certificate-profiles"></a>证书配置文件的隐私信息  

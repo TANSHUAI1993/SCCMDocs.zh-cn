@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32349545"
 ---
 # <a name="how-to-create-pfx-certificate-profiles-by-importing-certificate-details"></a>如何通过导入证书详细信息创建 PFX 证书配置文件
 

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32339853"
 ---
 # <a name="capabilities-in-technical-preview-1606-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 版本 1606 中的功能
 
@@ -35,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="dmp_category"></a>自动将设备分类到集合
 可创建设备类别，可将其用于配合使用 Microsoft Intune 和 Configuration Manager 时自动在设备集合中放置设备。 然后要求用户在 Intune 中注册设备时选择某个设备类别。 此外，还可以从 Configuration Manager 控制台中更改设备的类别。
 
-**重要提示：**此功能适用于 **2016 年 6** 月版本的 Microsoft Intune。 试用这些过程前，请确保已更新到此版本。
+**重要提示：** 此功能适用于 **2016 年 6** 月版本的 Microsoft Intune。 试用这些过程前，请确保已更新到此版本。
 
 ### <a name="try-it-out"></a>试试看！
 

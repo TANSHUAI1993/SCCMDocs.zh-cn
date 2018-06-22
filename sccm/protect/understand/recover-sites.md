@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32351704"
 ---
 #  <a name="recover-a-configuration-manager-site"></a>恢复 Configuration Manager 站点
 
@@ -31,13 +32,13 @@ Configuration Manager 站点出现故障或者站点数据库中发生数据丢�
 > - [修改基础结构](/sccm/core/servers/manage/modify-your-infrastructure)
 
 
-**必须使用相同版本的 SQL Server：**例如，不支持将 SQL Server 2014 上运行的数据库还原到 SQL Server 2016。 同样，也不支持还原在 SQL Server 2016 标准版和 SQL Server 2016 企业版上运行的站点数据库。
+**必须使用相同版本的 SQL Server：** 例如，不支持将 SQL Server 2014 上运行的数据库还原到 SQL Server 2016。 同样，也不支持还原在 SQL Server 2016 标准版和 SQL Server 2016 企业版上运行的站点数据库。
 -   不能将 SQL Server 设置为 **单用户模式**。
 -   确保 .MDF 和 .LDF 文件有效。 恢复站点时，不会对正在还原的文件的状态进行检查。
 
-**如果使用 SQL Server AlwaysOn 可用性组来托管站点数据库：**按照[准备使用 SQL Server Always On](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database#changes-for-site-recovery) 中所述修改恢复计划。
+**如果使用 SQL Server AlwaysOn 可用性组来托管站点数据库：** 按照[准备使用 SQL Server Always On](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database#changes-for-site-recovery) 中所述修改恢复计划。
 
-**使用数据库副本时：**还原为数据库副本配置的站点数据库之后，必须重新配置每个数据库副本（从而重新创建发布和订阅），然后才能使用数据库副本。
+**使用数据库副本时：** 还原为数据库副本配置的站点数据库之后，必须重新配置每个数据库副本（从而重新创建发布和订阅），然后才能使用数据库副本。
 
 ## <a name="determine-your-recovery-options"></a>确定恢复选项
 为 Configuration Manager 主站点服务器和管理中心站点恢复考虑两个主要方面；即站点服务器和站点数据库。
@@ -61,15 +62,15 @@ Configuration Manager 站点出现故障或者站点数据库中发生数据丢�
 
 ### <a name="site-database-recovery-options"></a>站点数据库恢复选项
 在运行安装程序时，你可以为站点数据库使用下列恢复选项：
--   **使用备份集恢复站点数据库：**如果具有在站点数据库出现故障之前，作为站点上所运行“备份站点服务器”维护任务的一部分创建的 Configuration Manager 站点数据库的备份，请使用此选项。 如果你具有层次结构，则会从主站点的管理中心站点或管理中心站点的引用主站点中检索在上次站点数据库备份之后对站点数据库所做的更改。 当你恢复独立主站点的站点数据库时，将会丢失上次备份之后所做的站点更改。
+-   **使用备份集恢复站点数据库：** 如果具有在站点数据库出现故障之前，作为站点上所运行“备份站点服务器”维护任务的一部分创建的 Configuration Manager 站点数据库的备份，请使用此选项。 如果你具有层次结构，则会从主站点的管理中心站点或管理中心站点的引用主站点中检索在上次站点数据库备份之后对站点数据库所做的更改。 当你恢复独立主站点的站点数据库时，将会丢失上次备份之后所做的站点更改。
 
    如果为层次结构中的站点恢复站点数据库，则管理中心站点与主站点的恢复行为不同，并且当上次备份在 SQL Server 更改跟踪保持期之内或之外时，恢复行为也不同。 有关详细信息，请参阅本主题中的 [站点数据库恢复方案](##site-database-recovery-scenarios) 部分。
   > [!NOTE]   
   > 如果选择使用备份集还原站点数据库，但站点数据库已经存在，则恢复将失败。  
 
--   **为此站点创建新数据库：**在没有 Configuration Manager 站点数据库的备份时使用此选项。 如果你具有层次结构，系统会创建一个新站点数据库，并使用主站点的管理中心站点或管理中心站点的引用主站点中的复制数据恢复数据。 当你恢复独立主站点或没有主站点的管理中心站点时，此选项不可用。
+-   **为此站点创建新数据库：** 在没有 Configuration Manager 站点数据库的备份时使用此选项。 如果你具有层次结构，系统会创建一个新站点数据库，并使用主站点的管理中心站点或管理中心站点的引用主站点中的复制数据恢复数据。 当你恢复独立主站点或没有主站点的管理中心站点时，此选项不可用。
 
--   **使用已手动恢复的站点数据库：**当已经恢复 Configuration Manager 站点数据库但必须完成恢复过程时，使用此选项。
+-   **使用已手动恢复的站点数据库：** 当已经恢复 Configuration Manager 站点数据库但必须完成恢复过程时，使用此选项。
     -   Configuration Manager 可以从 Configuration Manager 备份维护任务或从使用 DPM 或另一个进程执行的站点数据库备份中恢复站点数据库。 在 Configuration Manager 之外使用某种方法还原站点数据库之后，必须运行安装程序并选择此选项以完成站点数据库恢复。
 
     > [!NOTE]   
@@ -78,7 +79,7 @@ Configuration Manager 站点出现故障或者站点数据库中发生数据丢�
     -   如果你具有层次结构，则会从主站点的管理中心站点或管理中心站点的引用主站点中检索在上次站点数据库备份之后对站点数据库所做的更改。 当你恢复独立主站点的站点数据库时，将会丢失上次备份之后所做的站点更改。     
 
 
--   **跳过数据库恢复：**当 Configuration Manager 站点数据库服务器上未发生数据丢失时使用此选项。 仅当站点数据库所在的计算机不同于你正在恢复的站点服务器时，此选项才有效。
+-   **跳过数据库恢复：** 当 Configuration Manager 站点数据库服务器上未发生数据丢失时使用此选项。 仅当站点数据库所在的计算机不同于你正在恢复的站点服务器时，此选项才有效。
 
 ### <a name="sql-server-change-tracking-retention-period"></a>SQL Server 更改跟踪保持期
 系统为 SQL Server 中的站点数据库启用了更改跟踪。 利用更改跟踪，Configuration Manager 可以查询有关在上一个时刻之后对数据库表所做的更改的信息。 保持期指定更改跟踪信息将保留多长时间。 默认情况下，站点数据库被配置为具有 5 天保持期。 恢复站点数据库时，恢复过程在备份处于保持期内或保持期外这两种情况下会以不同方式继续进行。 例如，你的站点数据库服务器出现故障，并且上次备份是在 7 天之前，则它在保持期之外。
@@ -92,10 +93,10 @@ Configuration Manager 站点出现故障或者站点数据库中发生数据丢�
 -   将站点 XYZ 中的已复制数据插入到站点 ABC 的站点数据库中。
 
 #### <a name="example-scenario-1"></a>示例方案 1
-**主站点重新初始化管理中心站点中的全局数据：**恢复过程删除主站点数据库中主站点的现有全局数据，并将数据替换为从管理中心站点中复制的全局数据。
+**主站点重新初始化管理中心站点中的全局数据：** 恢复过程删除主站点数据库中主站点的现有全局数据，并将数据替换为从管理中心站点中复制的全局数据。
 
 #### <a name="example-scenario-2"></a>示例方案 2
-**管理中心站点重新初始化主站点中的站点数据：**恢复过程删除管理中心站点数据库中该主站点的现有站点数据，并将数据替换为从主站点中复制的站点数据。 其他主站点的站点数据不受影响。
+**管理中心站点重新初始化主站点中的站点数据：** 恢复过程删除管理中心站点数据库中该主站点的现有站点数据，并将数据替换为从主站点中复制的站点数据。 其他主站点的站点数据不受影响。
 
 ### <a name="site-database-recovery-scenarios"></a>站点数据库恢复方案
 从备份中还原站点数据库之后，Configuration Manager 会尝试还原上次数据库备份之后在站点和全局数据中所做的更改。 下面描述了从备份中还原站点数据库之后 Configuration Manager 启动的操作。

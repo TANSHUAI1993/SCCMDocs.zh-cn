@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32337711"
 ---
 # <a name="link-users-and-devices-with-user-device-affinity-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中将用户和设备与用户设备相关性相链接
 
@@ -79,7 +80,7 @@ System Center Configuration Manager (Configuration Manager) 中的用户设备�
     -   **利用使用情况数据自动配置用户设备相关性**。 要让站点自动创建用户设备相关性，请从下拉列表中选择 **True**。 如果选择 **False**，则必须批准所有的用户设备相关性分配。  
 
     > [!TIP]  
-    > **例如：**如果将“用户设备相关性阈值(分钟)”指定为 **60** 分钟，并将“用户设备相关性阈值(天)”指定为 **5** 天，那么，用户必须在 5 天内使用设备至少 60 分钟，才能自动创建用户设备相关性。  
+    > **例如：** 如果将“用户设备相关性阈值(分钟)”指定为 **60** 分钟，并将“用户设备相关性阈值(天)”指定为 **5** 天，那么，用户必须在 5 天内使用设备至少 60 分钟，才能自动创建用户设备相关性。  
 
 在自动创建用户设备相关性之后，Configuration Manager 会继续监视用户设备相关性阈值。 如果用户使用设备的时间降到所设置的阈值以下，则将删除用户设备相关性。 请将“用户设备相关性阈值(天)”的值设置为至少 **7** 天，以避免出现这种情况：在用户未登录时（例如在周末时），可能会丢失自动配置的用户设备相关性。  
 

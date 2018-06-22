@@ -14,6 +14,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32337405"
 ---
 # <a name="what39s-new-in-version-1710-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1710 的新增功能
 
@@ -76,7 +77,7 @@ Version 1710 drops support for the following products:
 
 ## <a name="application-management"></a>应用程序管理
 ### <a name="improvements-for-run-scripts------1236459---"></a>运行脚本的改进<!-- 1236459 -->
-此版本中将多项改进引入**“运行脚本”**功能，可将 PowerShell 脚本部署为在托管设备上运行。 1706 版本首次引入了此功能。
+此版本中将多项改进引入 **“运行脚本”** 功能，可将 PowerShell 脚本部署为在托管设备上运行。 1706 版本首次引入了此功能。
 
 改进包括：
 - 采用安全作用域帮助控制使用“运行脚本”的人员

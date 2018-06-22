@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32351636"
 ---
 # <a name="manage-windows-as-a-service-using-system-center-configuration-manager"></a>使用 System Center Configuration Manager 将 Windows 作为服务进行管理
 

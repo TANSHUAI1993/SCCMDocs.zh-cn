@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32335858"
 ---
 # <a name="plan-a-client-migration-strategy-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中规划客户端迁移策略
 
@@ -33,9 +34,9 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="Planning_for_Client_Agent_Migration"></a> 规划将客户端迁移到目标层次结构  
  从源层次结构中迁移客户端时，客户端计算机上的客户端软件将升级，以与目标层次结构的产品版本匹配。  
 
--   **Configuration Manager 2007 源层次结构：**从运行受支持版本的 Configuration Manager 源层次结构中迁移客户端时，客户端软件将升级到目标层次结构的客户端版本。  
+-   **Configuration Manager 2007 源层次结构：** 从运行受支持版本的 Configuration Manager 源层次结构中迁移客户端时，客户端软件将升级到目标层次结构的客户端版本。  
 
--   **System Center 2012 Configuration Manager 或更高版本的层次结构：**在产品版本相同的层次结构之间迁移客户端时，客户端软件不会更改或升级。 而是会从源层次结构重新分配到目标层次结构中的站点。  
+-   **System Center 2012 Configuration Manager 或更高版本的层次结构：** 在产品版本相同的层次结构之间迁移客户端时，客户端软件不会更改或升级。 而是会从源层次结构重新分配到目标层次结构中的站点。  
 
     > [!NOTE]  
     >  如果层次结构的产品版本不支持迁移到目标层次结构，请将源层次结构中的所有站点和客户端升级到兼容的产品版本。 源层次结构升级到支持的产品版本后，你可以在层次结构之间进行迁移。 有关详细信息，请参阅 [System Center Configuration Manager 中迁移的先决条件](../../core/migration/prerequisites-for-migration.md)中的[迁移支持的 Configuration Manager 版本](../../core/migration/prerequisites-for-migration.md#BKMK_SupportedMigrationVersions)。  

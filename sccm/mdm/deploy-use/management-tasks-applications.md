@@ -2,26 +2,20 @@
 title: 管理应用程序
 titleSuffix: Configuration Manager
 description: 在 System Center Configuration Manager 中管理应用程序。
-ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 8adbe2e2-de26-4a80-8bbd-a5f34b8bac79
-caps.latest.revision: ''
-caps.handback.revision: ''
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 4e61962ef4be43f4c32d79ba531d4e68534df6fe
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 26aff6a374da4c6822943083b24c1a7ac04ee91d
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2018
+ms.lasthandoff: 05/03/2018
+ms.locfileid: "32346492"
 ---
 # <a name="manage-applications-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中管理应用程序
 

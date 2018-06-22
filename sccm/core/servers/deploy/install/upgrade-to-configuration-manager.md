@@ -14,6 +14,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32342709"
 ---
 # <a name="upgrade-to-system-center-configuration-manager"></a>升级到 System Center Configuration Manager
 
@@ -399,6 +400,6 @@ Configuration Manager 不支持辅助站点备份，也不支持辅助站点数�
 将站点升级到新的 Service Pack 后，你可能必须完成其他任务以完成升级或重新配置站点。 这些任务可能包括升级 Configuration Manager 客户端或 Configuration Manager 控制台、重新启用管理点的数据库副本，或者还原所使用的并且在 Service Pack 升级后未保留的 Configuration Manager 功能的设置。  
 
 **辅助站点的已知问题：**  
-- **升级到版本 1511 时：**若要确保辅助站点上的客户端可以从辅助站点（代理管理点）找到管理点，请将管理点手动添加到还包含辅助站点上的分发点的边界组。  
+- **升级到版本 1511 时：** 若要确保辅助站点上的客户端可以从辅助站点（代理管理点）找到管理点，请将管理点手动添加到还包含辅助站点上的分发点的边界组。  
 
-- **升级到版本 1606 或更高版本时：**代理管理点会自动添加到包含辅助站点上的分发点的边界组。
+- **升级到版本 1606 或更高版本时：** 代理管理点会自动添加到包含辅助站点上的分发点的边界组。

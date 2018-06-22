@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32343678"
 ---
 # <a name="planning-for-client-deployment-to-linux-and-unix-computers-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中规划 Linux 和 UNIX 计算机的客户端部署
 
@@ -177,7 +178,7 @@ ms.lasthandoff: 05/03/2018
 |SysMgmtMin.openssl|OpenSSL 库；安全网络通信协议|A.00.09.08d.002|  
 |PAM|可插入身份验证模块|在 HP-UX 上，PAM 是核心操作系统组件的一部分。 没有其它依赖关系。|  
 
- **Configuration Manager 依赖项：**下表列出了支持 Linux 和 UNIX 的客户端的站点系统角色。 有关这些站点系统角色的详细信息，请参阅[为 System Center Configuration Manager 客户端确定站点系统角色](../../../../core/clients/deploy/plan/determine-the-site-system-roles-for-clients.md)。  
+ **Configuration Manager 依赖项：** 下表列出了支持 Linux 和 UNIX 的客户端的站点系统角色。 有关这些站点系统角色的详细信息，请参阅[为 System Center Configuration Manager 客户端确定站点系统角色](../../../../core/clients/deploy/plan/determine-the-site-system-roles-for-clients.md)。  
 
 |Configuration Manager 站点系统|更多信息|  
 |---------------------------------------|----------------------|  

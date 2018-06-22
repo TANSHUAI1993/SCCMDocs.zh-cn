@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32349511"
 ---
 # <a name="change-your-mdm-authority"></a>更改 MDM 机构
 你可以更改 MDM 颁发机构，而无需联系 Microsoft 支持部门，并且无需取消注册并重新注册现有的受管理设备。 本文提供将从 Configuration Manager 控制台（混合）配置的现有 Microsoft Intune 租户更改为由 Intune 独立版管理的步骤。 完成本文中的步骤后，设备将由 [Azure 门户](https://portal.azure.com)中的 Microsoft Intune 管理。 

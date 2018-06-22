@@ -14,6 +14,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32341485"
 ---
 # <a name="configure-role-based-administration-for-system-center-configuration-manager"></a>为 System Center Configuration Manager 配置基于角色的管理   
 

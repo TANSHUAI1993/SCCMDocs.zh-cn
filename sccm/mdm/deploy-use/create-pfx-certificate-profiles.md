@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32350956"
 ---
 # <a name="how-to-create-pfx-certificate-profiles-using-a-certificate-authority"></a>如何使用证书颁发机构创建 PFX 证书配置文件
 

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32336334"
 ---
 # <a name="administrator-checklists-for-migration-planning-in-system-center-configuration-manager"></a>System Center Configuration Manager 中针对迁移规划的管理员清单
 
@@ -38,7 +39,7 @@ ms.lasthandoff: 05/03/2018
 
     有关详细信息，请参阅 [System Center Configuration Manager 的基于角色的管理基础](../../core/understand/fundamentals-of-role-based-administration.md)。  
 
--   **评估网络和 Active Directory 拓扑：**查看现有的域结构和网络拓扑，并考虑它们如何影响层次结构的设计和迁移任务。  
+-   **评估网络和 Active Directory 拓扑：** 查看现有的域结构和网络拓扑，并考虑它们如何影响层次结构的设计和迁移任务。  
 
 -   **最终确定目标层次结构的设计：**  
 

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32344171"
 ---
 # <a name="schema-extensions-for-system-center-configuration-manager"></a>System Center Configuration Manager 的架构扩展
 
@@ -64,7 +65,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="capabilities-that-benefit-from-extending-the-schema"></a>受益于扩展架构的功能  
 **客户端计算机安装和站点分配** - 当 Windows 计算机安装新的客户端时，此客户端在 Active Directory 域服务中搜索安装属性。  
 
--   **变通方法：**如果不扩展此架构，可使用下列选项之一来提供计算机必须安装的配置详细信息：  
+-   **变通方法：** 如果不扩展此架构，可使用下列选项之一来提供计算机必须安装的配置详细信息：  
 
     -   <bpt id="p1">**</bpt>使用客户端推送安装**。 使用客户端安装方法前，请确保满足所有先决条件。 有关详细信息，请参阅[将客户端部署到 Windows 计算机的先决条件](/sccm/core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers)中的“安装方法依赖关系”部分。  
 

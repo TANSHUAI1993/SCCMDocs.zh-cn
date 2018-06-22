@@ -16,6 +16,7 @@ ms.sourcegitcommit: 7198ec49d9ce68c6d55bfb9e2d537b5442a132cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/09/2018
+ms.locfileid: "33915966"
 ---
 # <a name="microsoft-deployment-toolkit-samples-guide"></a>Microsoft Deployment Toolkit 示例指南  
  本指南是 Microsoft®Deployment Toolkit (MDT) 2013 的一部分，通过部署 Windows 操作系统和 Microsoft Office 来指导专家团队。 具体而言，本指南旨在提供特定部署方案的示例配置设置。  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32334108"
 ---
 # <a name="evaluate-system-center-configuration-manager-by-building-your-own-lab-environment"></a>通过构建你自己的实验室环境来评估 System Center Configuration Manager
 

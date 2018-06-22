@@ -2,26 +2,20 @@
 title: 使用托管浏览器策略管理 Internet 访问
 titleSuffix: Configuration Manager
 description: 部署 Intune Managed Browser 来管理和限制 Internet 访问。
-ms.custom: na
 ms.date: 03/05/2017
 ms.prod: configuration-manager
-ms.reviewer: na
-ms.suite: na
-ms.technology:
-- configmgr-hybrid
-ms.tgt_pltfrm: na
-ms.topic: article
+ms.technology: configmgr-hybrid
+ms.topic: conceptual
 ms.assetid: 8e25e00c-c9a8-473f-bcb7-ea989f6ca3c5
-caps.latest.revision: ''
-caps.handback.revision: ''
-author: dougeby
-ms.author: dougeby
-manager: angrobe
-ms.openlocfilehash: 3aea2a65733a52ab532d451b21ae98fbc0f122c6
-ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 8754219f36e30f2442178dc5521e05246948d3de
+ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2018
+ms.lasthandoff: 05/03/2018
+ms.locfileid: "32350140"
 ---
 # <a name="manage-internet-access-using-managed-browser-policies-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 的托管浏览器策略管理 Internet 访问
 
@@ -92,7 +86,7 @@ ms.lasthandoff: 03/27/2018
 
 使用以下信息来了解有关指定允许和阻止列表中的 URL 时允许使用的格式和通配符。  
 
--   可以根据下面的允许模式列表中的规则使用通配符“**\\***”。  
+-   可以根据下面的允许模式列表中的规则使用通配符“**\***”。  
 
 -   在将 URL 输入列表时，确保对所有 URL 添加 **“http”** 或 **“https”** 作为前缀。  
 
@@ -111,7 +105,7 @@ ms.lasthandoff: 03/27/2018
     |http://www.contoso.com<br /><br /> 匹配单个页面|www.contoso.com|host.contoso.com<br /><br /> www.contoso.com/images<br /><br /> contoso.com/|  
     |http://contoso.com<br /><br /> 匹配单个页面|contoso.com/|host.contoso.com<br /><br /> www.contoso.com/images<br /><br /> www.contoso.com|  
     |http://www.contoso.com/*<br /><br /> 匹配以 www.contoso.com 开头的所有 URL|www.contoso.com<br /><br /> www.contoso.com/images<br /><br /> www.contoso.com/videos/tvshows|host.contoso.com<br /><br /> host.contoso.com/images|  
-    |http://\*.contoso.com/\*<br /><br /> 匹配 contoso.com 下的所有子域|developer.contoso.com/resources<br /><br /> news.contoso.com/images<br /><br /> news.contoso.com/videos|contoso.host.com|  
+    |http://*.contoso.com/\*<br /><br /> 匹配 contoso.com 下的所有子域|developer.contoso.com/resources<br /><br /> news.contoso.com/images<br /><br /> news.contoso.com/videos|contoso.host.com|  
     |http://www.contoso.com/images<br /><br /> 匹配单个文件夹|www.contoso.com/images|www.contoso.com/images/dogs|  
     |http://www.contoso.com:80<br /><br /> 匹配单个页面（使用端口号）|http://www.contoso.com:80||  
     |https://www.contoso.com<br /><br /> 匹配单个安全页面|https://www.contoso.com|http://www.contoso.com|  
@@ -121,11 +115,11 @@ ms.lasthandoff: 03/27/2018
 
     -   *.com  
 
-    -   \*.contoso/\*  
+    -   *.contoso/\*  
 
     -   www.contoso.com/*images  
 
-    -   www.contoso.com/\*images\*pigs  
+    -   www.contoso.com/*images\*pigs  
 
     -   www.contoso.com/page*  
 

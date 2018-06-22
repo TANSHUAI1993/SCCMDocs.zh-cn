@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32342131"
 ---
 # <a name="install-in-console-updates-for-system-center-configuration-manager"></a>为 System Center Configuration Manager 安装控制台内部更新
 
@@ -332,7 +333,7 @@ Configuration Manager 与 Microsoft 云服务同步，以获取更新。 随后�
 ##  <a name="bkmk_after"></a> 站点安装更新之后  
 使用以下清单可完成在站点更新之后进行的常见任务和配置。   
 
-**确认站点到站点复制处于活动状态：**在 Configuration Manager 控制台中，转到以下位置以查看状态并确保复制处于活动状态：  
+**确认站点到站点复制处于活动状态：** 在 Configuration Manager 控制台中，转到以下位置以查看状态并确保复制处于活动状态：  
 
 -   “监视” > “概述” > “站点层次结构”  
 

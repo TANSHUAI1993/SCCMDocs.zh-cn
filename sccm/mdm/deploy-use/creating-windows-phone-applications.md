@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32347223"
 ---
 # <a name="create-windows-phone-applications-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 创建 Windows Phone 应用程序
 
@@ -54,8 +55,8 @@ System Center Configuration Manager 应用程序具有一个或多个部署类�
 |----------|----------------------|  
 |**步骤 1：** 获取最新的公司门户应用。|下载 [Windows Phone 8 公司门户应用](http://go.microsoft.com/fwlink/?LinkId=268440)。|  
 |**步骤 2：** 使用 Symantec 证书对公司门户应用进行签名。|有关如何对公司门户应用进行签名的信息，请参阅[使用 System Center Configuration Manager 和 Microsoft Intune 设置 Windows Phone 和 Windows 10 移动版混合设备管理](../../mdm/deploy-use/enroll-hybrid-windows.md)。|  
-|**步骤 3：**使用公司门户应用的最新版本创建新的应用程序，并指定取代关系。|有关详细信息，请参阅[创建应用程序](../../apps/deploy-use/create-applications.md)和[修订和取代应用程序](../../apps/deploy-use/revise-and-supersede-applications.md)。|  
-|**步骤 4：**将应用程序添加到 Microsoft Intune 订阅向导。|有关详细信息，请参阅[使用 System Center Configuration Manager 和 Microsoft Intune 设置 Windows Phone 和 Windows 10 版移动混合设备管理](../../mdm/deploy-use/enroll-hybrid-windows.md)。|  
-|**步骤 5：**删除向 Microsoft Intune 订阅向导添加公司门户应用时自动创建的部署。|Microsoft Intune 订阅已创建了此应用的自动部署，因为此部署将不支持取代。|  
-|**步骤 6：**创建应用程序的新部署。 在“部署软件向导”的“部署设置”页上，选中“自动升级此应用程序的任何取代版本”。|使用取代功能以及用取代关系创建的应用程序来创建新部署。|  
-|**步骤 7（可选）：**默认情况下，7 天后将在设备上安装取代应用。 为了更快地将公司门户应用部署到以前注册的设备，请将“计划部署的重新评估”设置更改为较低的值。<br /><br /> 如果将此值设置为低于默认值的值，则可能会对网络和客户端计算机性能有负面影响。|无更多信息。|  
+|**步骤 3：** 使用公司门户应用的最新版本创建新的应用程序，并指定取代关系。|有关详细信息，请参阅[创建应用程序](../../apps/deploy-use/create-applications.md)和[修订和取代应用程序](../../apps/deploy-use/revise-and-supersede-applications.md)。|  
+|**步骤 4：** 将应用程序添加到 Microsoft Intune 订阅向导。|有关详细信息，请参阅[使用 System Center Configuration Manager 和 Microsoft Intune 设置 Windows Phone 和 Windows 10 版移动混合设备管理](../../mdm/deploy-use/enroll-hybrid-windows.md)。|  
+|**步骤 5：** 删除向 Microsoft Intune 订阅向导添加公司门户应用时自动创建的部署。|Microsoft Intune 订阅已创建了此应用的自动部署，因为此部署将不支持取代。|  
+|**步骤 6：** 创建应用程序的新部署。 在“部署软件向导”的“部署设置”页上，选中“自动升级此应用程序的任何取代版本”。|使用取代功能以及用取代关系创建的应用程序来创建新部署。|  
+|**步骤 7（可选）：** 默认情况下，7 天后将在设备上安装取代应用。 为了更快地将公司门户应用部署到以前注册的设备，请将“计划部署的重新评估”设置更改为较低的值。<br /><br /> 如果将此值设置为低于默认值的值，则可能会对网络和客户端计算机性能有负面影响。|无更多信息。|  

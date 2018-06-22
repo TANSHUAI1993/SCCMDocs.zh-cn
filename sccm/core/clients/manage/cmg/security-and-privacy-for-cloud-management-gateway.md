@@ -14,6 +14,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32333733"
 ---
 # <a name="security-and-privacy-for-the-cloud-management-gateway"></a>云管理网关的安全和隐私
 

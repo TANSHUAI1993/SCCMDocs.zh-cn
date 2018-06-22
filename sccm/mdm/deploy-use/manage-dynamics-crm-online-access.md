@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32352770"
 ---
 # <a name="manage-dynamics-crm-online-access-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中管理 Dynamics CRM Online 访问
 

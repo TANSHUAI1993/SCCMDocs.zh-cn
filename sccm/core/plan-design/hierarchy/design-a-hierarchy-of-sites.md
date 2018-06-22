@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32344647"
 ---
 # <a name="design-a-hierarchy-of-sites-for-system-center-configuration-manager"></a>设计 System Center Configuration Manager 的站点层次结构
 
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="bkmk_topology"></a>层次结构拓扑  
  层次结构拓扑的范围从单一独立主站点一直到一组连接的主要和辅助站点，该组站点在层次结构顶级（顶层）站点处具有管理中心站点。   在层次结构中所用的站点类型和计数的关键驱动程序通常是你必须支持的设备的类型和数量，如下所示：   
 
- **独立主站点：**在单一主站点可支持所有设备和用户的管理时，使用独立主站点（请参阅[调整大小和扩展数量](/sccm/core/plan-design/configs/size-and-scale-numbers)）。 如果不同的地理位置可由单一主站点成功地提供服务，则该拓扑也成功。  若要帮助管理网络流量，可以使用首选的管理点和精心规划的内容基础结构（请参阅 [System Center Configuration Manager 中内容管理的基本概念](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)）。  
+ **独立主站点：** 在单一主站点可支持所有设备和用户的管理时，使用独立主站点（请参阅[调整大小和扩展数量](/sccm/core/plan-design/configs/size-and-scale-numbers)）。 如果不同的地理位置可由单一主站点成功地提供服务，则该拓扑也成功。  若要帮助管理网络流量，可以使用首选的管理点和精心规划的内容基础结构（请参阅 [System Center Configuration Manager 中内容管理的基本概念](../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)）。  
 
  此拓扑的好处包括：  
 
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/03/2018
 -   此选项可以将独立的主层次结构扩展到更大的具有管理中心站点的层次结构。 这使你随后能够安装新主站点以扩展部署的规模。  
 
 
-**带有一个或多个子主站点的管理中心站点：**在你需要多个主站点支持所有设备和用户的管理时，使用此拓扑。  当需要使用多于一个主站点时需要。 此拓扑的好处包括：  
+**带有一个或多个子主站点的管理中心站点：** 在你需要多个主站点支持所有设备和用户的管理时，使用此拓扑。  当需要使用多于一个主站点时需要。 此拓扑的好处包括：  
 
 
 -   最多支持 25 个主站点，这样能够扩展层次结构的规模。  

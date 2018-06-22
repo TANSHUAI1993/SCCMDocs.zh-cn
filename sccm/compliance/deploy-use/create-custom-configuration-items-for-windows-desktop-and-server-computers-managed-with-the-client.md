@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32342777"
 ---
 # <a name="how-to-create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-system-center-configuration-manager-client"></a>如何为使用 System Center Configuration Manager 客户端管理的 Windows 台式机和服务器计算机创建配置项目
 
@@ -91,7 +92,7 @@ ms.lasthandoff: 05/03/2018
 
     -   **描述:** 输入设置的说明。 最多可以使用 256 个字符。  
 
-    -   **设置类型：**在列表中，选择和配置要用于此设置的以下设置类型之一：  
+    -   **设置类型：** 在列表中，选择和配置要用于此设置的以下设置类型之一：  
 
         -   **Active Directory 查询**  
 
@@ -306,7 +307,7 @@ ms.lasthandoff: 05/03/2018
 
         -   **如果找不到此设置实例报告不符合性** – 配置项目报告不符合性如果客户端计算机上找不到此设置。  
 
-        -   **报表的不符合性严重性程度：**指定不符合此符合性规则时报告的严重性级别（在 Configuration Manager 报表中）。 可用的严重性级别如下：  
+        -   **报表的不符合性严重性程度：** 指定不符合此符合性规则时报告的严重性级别（在 Configuration Manager 报表中）。 可用的严重性级别如下：  
 
             -   **无** 不符合此符合性规则的计算机不报告故障严重性。  
 
@@ -329,7 +330,7 @@ ms.lasthandoff: 05/03/2018
 
             -   **该设置会发生以下次数：**  
 
-        -   **报表的不符合性严重性程度：**指定不符合此符合性规则时报告的严重性级别（在 Configuration Manager 报表中）。 可用的严重性级别如下：  
+        -   **报表的不符合性严重性程度：** 指定不符合此符合性规则时报告的严重性级别（在 Configuration Manager 报表中）。 可用的严重性级别如下：  
 
             -   **无** 不符合此符合性规则的计算机不报告故障严重性。  
 

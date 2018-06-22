@@ -14,6 +14,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32334294"
 ---
 # <a name="online-documentation-for-system-center-configuration-manager"></a>System Center Configuration Manager 的联机文档
 
@@ -44,11 +45,11 @@ ms.lasthandoff: 05/03/2018
 
 -   [System Center Configuration Manager 的安全性和隐私](https://technet.microsoft.com/library/mt622694.aspx)  
 
-**发行说明：**发行说明包含产品文档中未提供的信息，这些信息可能是成功安装并使用 System Center Configuration Manager 所需要的。 请参阅 [System Center Configuration Manager 的发行说明](https://technet.microsoft.com/library/mt592024.aspx)  
+**发行说明：** 发行说明包含产品文档中未提供的信息，这些信息可能是成功安装并使用 System Center Configuration Manager 所需要的。 请参阅 [System Center Configuration Manager 的发行说明](https://technet.microsoft.com/library/mt592024.aspx)  
 
-**查找帮助：**请参阅[查找使用 System Center Configuration Manager 的帮助](https://technet.microsoft.com/library/mt628521.aspx)：  
+**查找帮助：** 请参阅[查找使用 System Center Configuration Manager 的帮助](https://technet.microsoft.com/library/mt628521.aspx)：  
 
-**辅助功能：**请参阅 [Configuration Manager 控制台的辅助功能](https://technet.microsoft.com/library/mt628521.aspx)  
+**辅助功能：** 请参阅 [Configuration Manager 控制台的辅助功能](https://technet.microsoft.com/library/mt628521.aspx)  
 
 
 ## <a name="system-center-configuration-manager-technical-preview"></a>System Center Configuration Manager Technical Preview  

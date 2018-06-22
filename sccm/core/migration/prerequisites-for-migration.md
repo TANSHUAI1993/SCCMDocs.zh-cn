@@ -15,6 +15,7 @@ ms.sourcegitcommit: 7198ec49d9ce68c6d55bfb9e2d537b5442a132cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/09/2018
+ms.locfileid: "33915932"
 ---
 # <a name="prerequisites-for-migration-in-system-center-configuration-manager"></a>System Center Configuration Manager 中迁移的先决条件
 

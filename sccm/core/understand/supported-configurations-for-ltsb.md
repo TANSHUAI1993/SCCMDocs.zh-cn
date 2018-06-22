@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32344630"
 ---
 # <a name="supported-configurations-for-the-long-term-servicing-branch-of-system-center-configuration-manager"></a>System Center Configuration Manager 的 Long-Term Servicing Branch 支持的配置
 
@@ -28,7 +29,7 @@ ms.lasthandoff: 05/03/2018
 
 此外，不支持以下主题中未列出的产品和产品版本，除非它们已在 [Enterprise Mobility + Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/)（企业移动性和安全性博客）上公布。
 
-**将来支持的限制：**LTSB 对未来的服务器和客户端操作系统及产品依赖项提供有限的支持。 已针对发布生命期确定 LTSB 平台列表：
+**将来支持的限制：** LTSB 对未来的服务器和客户端操作系统及产品依赖项提供有限的支持。 已针对发布生命期确定 LTSB 平台列表：
 
 **Windows：**
 - 仅支持用于 Windows 的质量和安全更新。
@@ -81,8 +82,8 @@ LTSB 支持使用以下 Windows 计算机操作系统作为站点系统。  每�
 - Windows Server 2008 R2 SP1 的服务器核心安装 (x64)
 - Windows Server 2008 SP2 的服务器核心安装（x86、x64）
 
-**（注释 1）**Configuration Manager 支持数据中心版本，但未经认证。  
-**（注释 2）**若要支持客户端请求安装，运行此操作系统版本的计算机必须运行文件和存储服务服务器角色的文件服务器角色服务。 有关在 Server Core 计算机上安装 Windows 功能的详细信息，请参阅 Windows Server 2012 TechNet 库中的[在 Server Core 服务器上安装服务器角色和功能](https://technet.microsoft.com/library/jj574158(v=ws.11).aspx)。
+**（注释 1）** Configuration Manager 支持数据中心版本，但未经认证。  
+**（注释 2）** 若要支持客户端请求安装，运行此操作系统版本的计算机必须运行文件和存储服务服务器角色的文件服务器角色服务。 有关在 Server Core 计算机上安装 Windows 功能的详细信息，请参阅 Windows Server 2012 TechNet 库中的[在 Server Core 服务器上安装服务器角色和功能](https://technet.microsoft.com/library/jj574158(v=ws.11).aspx)。
 
 ### <a name="windows-embedded"></a>Windows Embedded
 可以在设备上安装客户端软件，使用 LTSB 管理以下 Windows Embedded 设备。  有关详细信息，请参阅[在 System Center Configuration Manager 中规划对 Windows Embedded 设备的客户端部署](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices)。

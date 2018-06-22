@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32351813"
 ---
 # <a name="manage-email-access-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中管理对电子邮件的访问
 
@@ -137,7 +138,7 @@ Office 桌面应用程序可以访问运行以下系统的电脑上的 Exchange 
 ### <a name="step-2-configure-user-groups-or-collections-for-the-conditional-access-policy"></a>步骤 2：为条件性访问策略配置用户组或集合  
  将条件性访问策略的目标设定为不同的用户组或集合，具体取决于策略类型。 这些组包含将作为目标的用户，或从策略中免除的用户。 如果将某个用户设定为策略的目标，则其使用的每个设备必须合规才能访问电子邮件。  
 
--   **对于 Exchange Online 策略** – 针对 Azure Active Directory 安全用户组。 你可以在 **“Office 365 管理中心”**，或 **“Intune 帐户门户”**中配置这些组。  
+-   **对于 Exchange Online 策略** – 针对 Azure Active Directory 安全用户组。 你可以在 **“Office 365 管理中心”**，或 **“Intune 帐户门户”** 中配置这些组。  
 
 -   **对于 Exchange 內部部署策略** – 针对 Configuration Manager 用户集合。 你可以在“资产和符合性”  工作区中进行配置。  
 
@@ -267,7 +268,7 @@ Office 桌面应用程序可以访问运行以下系统的电脑上的 Exchange 
 
 7.  对于**Exchange ActiveSync 邮件应用**，可以选择在设备不合规时阻止电子邮件访问 Exchange Online，并选择在 Intune 无法管理设备时是允许还是阻止访问电子邮件。  
 
-8.  在 **“目标组”**下，选择策略将应用到的 Active Directory 安全用户组。  
+8.  在 **“目标组”** 下，选择策略将应用到的 Active Directory 安全用户组。  
 
     > [!NOTE]  
     >  对于目标组中的用户，Intune 策略将替换 Exchange 规则和策略。  
@@ -277,7 +278,7 @@ Office 桌面应用程序可以访问运行以下系统的电脑上的 Exchange 
     >  -   用户未获 Intune 授权。  
     > -   用户已获 Intune 授权，但不属于条件访问策略所针对的任何安全组。  
 
-9. 在 **“免除组”**下，选择将会从此策略中免除的 Active Directory 安全用户组。 如果用户同时处于目标组和免除组中，则用户会从策略中免除，可以访问其电子邮件。  
+9. 在 **“免除组”** 下，选择将会从此策略中免除的 Active Directory 安全用户组。 如果用户同时处于目标组和免除组中，则用户会从策略中免除，可以访问其电子邮件。  
 
 10. 完成后，单击“保存” 。  
 

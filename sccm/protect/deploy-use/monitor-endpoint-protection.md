@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32348763"
 ---
 # <a name="how-to-monitor-endpoint-protection-status"></a>如何监视 Endpoint Protection 状态
 
@@ -69,7 +70,7 @@ ms.lasthandoff: 05/03/2018
 
 |警报级别|说明|  
 |-----------------|-----------------|  
-|**已失败**|Endpoint Protection 未能修正恶意软件。 检查有关错误的详细信息日志。<br /><br /> **注意：**有关 Configuration Manager 和 Endpoint Protection 日志文件的列表，请参阅 [System Center Configuration Manager 中的日志文件](../../core/plan-design/hierarchy/log-files.md)主题中的“Endpoint Protection”部分。|  
+|**已失败**|Endpoint Protection 未能修正恶意软件。 检查有关错误的详细信息日志。<br /><br /> **注意：** 有关 Configuration Manager 和 Endpoint Protection 日志文件的列表，请参阅 [System Center Configuration Manager 中的日志文件](../../core/plan-design/hierarchy/log-files.md)主题中的“Endpoint Protection”部分。|  
 |**已删除**|Endpoint Protection 已成功删除了恶意软件。|  
 |**已隔离**|Endpoint Protection 已将恶意软件移动到一个安全位置，并已阻止其运行，直到你将其删除或允许其运行。|  
 |**已清理**|恶意软件已清理受感染的文件中。|  

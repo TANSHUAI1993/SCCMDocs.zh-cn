@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32350786"
 ---
 #  <a name="using-configuration-manager-software-updates-to-deliver-definition-updates"></a>使用 Configuration Manager 软件更新将定义更新交付
 

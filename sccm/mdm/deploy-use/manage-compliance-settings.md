@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32351439"
 ---
 # <a name="managing-compliance-on-devices-managed-with-intune"></a>管理使用 Intune 管理的设备上的符合性
 

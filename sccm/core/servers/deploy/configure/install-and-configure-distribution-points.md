@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32342624"
 ---
 # <a name="install-and-configure-distribution-points-for-system-center-configuration-manager"></a>为 System Center Configuration Manager 安装和配置分发点
 
@@ -204,14 +205,14 @@ ms.lasthandoff: 05/03/2018
 ### <a name="general"></a>常规  
  配置常规分发点设置：  
 
--   **在 Configuration Manager 要求的情况下安装和配置 IIS：**选择此设置以让 Configuration Manager 在服务器上安装和配置 IIS（如果尚未安装）。 必须在所有分发点上安装 IIS。 如果服务器上未安装 IIS，并且未选择此设置，则必须安装 IIS，然后才能成功安装分发点。  
+-   **在 Configuration Manager 要求的情况下安装和配置 IIS：** 选择此设置以让 Configuration Manager 在服务器上安装和配置 IIS（如果尚未安装）。 必须在所有分发点上安装 IIS。 如果服务器上未安装 IIS，并且未选择此设置，则必须安装 IIS，然后才能成功安装分发点。  
 
     > [!NOTE]  
     >  此选项仅在安装新分发点时可用。  
 
-- **对此分发点启用和配置 BranchCache：**选择此设置以允许 Configuration Manager 在分发点服务器上配置 Windows BranchCache。 有关配合使用 Windows BranchCache 与 System Center Configuration Manager 的详细信息，请参阅*对 System Center Configuration Manager 中 Windows 功能和网络的支持*中的 [BranchCache](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#a-namebkmkbranchcachea-branchcache)。
+- **对此分发点启用和配置 BranchCache：** 选择此设置以允许 Configuration Manager 在分发点服务器上配置 Windows BranchCache。 有关配合使用 Windows BranchCache 与 System Center Configuration Manager 的详细信息，请参阅*对 System Center Configuration Manager 中 Windows 功能和网络的支持*中的 [BranchCache](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#a-namebkmkbranchcachea-branchcache)。
 
--   **配置客户端设备与分发点的通信方式：**无论是使用 HTTP 还是 HTTPS，都有一些优点和缺点。 有关详细信息，请参阅 [System Center Configuration Manager 中内容管理的基本概念](../../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)中的“安全最佳实践”。  
+-   **配置客户端设备与分发点的通信方式：** 无论是使用 HTTP 还是 HTTPS，都有一些优点和缺点。 有关详细信息，请参阅 [System Center Configuration Manager 中内容管理的基本概念](../../../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md)中的“安全最佳实践”。  
 
 -   **允许客户端进行匿名连接**：此设置指定分发点是否允许从 Configuration Manager 客户端到内容库的匿名连接。  
 

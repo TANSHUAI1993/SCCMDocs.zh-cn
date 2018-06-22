@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32333318"
 ---
 # <a name="support-for-virtualization-environments-for-system-center-configuration-manager"></a>对 System Center Configuration Manager 的虚拟化环境的支持
 
@@ -50,11 +51,11 @@ Configuration Manager 无法管理虚拟机，除非虚拟机处于联机状态�
 ##  <a name="bkmk_Azure"></a> Microsoft Azure 虚拟机  
  Configuration Manager 可在 Azure 中的虚拟机上运行，正如在实体公司网络中本地运行一样。 可以在以下方案中将 Configuration Manager 与 Azure 虚拟机配合使用：  
 
--   **方案 1：**可以在 Azure 虚拟机上运行 Configuration Manager，并使用它管理安装在其他 Azure 虚拟机上的客户端。  
+-   **方案 1：** 可以在 Azure 虚拟机上运行 Configuration Manager，并使用它管理安装在其他 Azure 虚拟机上的客户端。  
 
--   **方案 2：**可以在 Azure 虚拟机上运行 Configuration Manager，并使用它管理不在 Azure 上运行的客户端。  
+-   **方案 2：** 可以在 Azure 虚拟机上运行 Configuration Manager，并使用它管理不在 Azure 上运行的客户端。  
 
--   **方案 3：**可以在 Azure 虚拟机上运行不同的 Configuration Manager 站点系统角色，同时在物理公司网络（具有用于通信的相应网络连接）中运行其他角色。  
+-   **方案 3：** 可以在 Azure 虚拟机上运行不同的 Configuration Manager 站点系统角色，同时在物理公司网络（具有用于通信的相应网络连接）中运行其他角色。  
 
 如果网络 System Center Configuration Manager 要求以及支持的配置和硬件要求适用于在物理公司网络中安装本地 Configuration Manager，则这些要求也适用于在 Azure 虚拟机中进行安装。  
 

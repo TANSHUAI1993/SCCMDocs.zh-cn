@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32342454"
 ---
 # <a name="capabilities-in-technical-preview-1702-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1702 中的功能
 
@@ -112,7 +113,7 @@ Azure AD 没有存储组的 OU。 将同一常规结构用作系统或用户查�
 
 ### <a name="try-it-out"></a>试试看
 
-**方案：**识别可能通过将公司数据发送到公司外导致数据泄漏的应用或识别导致数据过度使用的应用，然后[创建条件性访问设备符合性策略](https://docs.microsoft.com/sccm/protect/deploy-use/create-compliance-policy)，将这些应用添加到不符合的应用列表中。 在用户删除已阻止的应用前，这将阻止访问支持条件性访问的公司资源。
+**方案：** 识别可能通过将公司数据发送到公司外导致数据泄漏的应用或识别导致数据过度使用的应用，然后[创建条件性访问设备符合性策略](https://docs.microsoft.com/sccm/protect/deploy-use/create-compliance-policy)，将这些应用添加到不符合的应用列表中。 在用户删除已阻止的应用前，这将阻止访问支持条件性访问的公司资源。
 
 ## <a name="antimalware-client-version-alert"></a>反恶意软件客户端版本警报
 从此预览版开始，如果超过 20%（默认值）托管客户端使用反恶意软件客户端（即 Windows Defender 或 Endpoint Protection 客户端）的过期版本，Configuration Manager Endpoint Protection 将发出警报。

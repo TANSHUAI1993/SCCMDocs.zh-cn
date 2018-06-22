@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32352645"
 ---
 # <a name="task-sequence-steps-in-system-center-configuration-manager"></a>System Center Configuration 中的任务序列步骤
 
@@ -388,9 +389,9 @@ ms.lasthandoff: 05/03/2018
  **使用文件系统访问进行复制**  
  启用此选项以指定任何以下设置：  
 
--   **在无法捕获某些文件时继续：**启用此设置以在无法捕获某些文件时继续迁移过程。 如果禁用此选项，则当无法捕获某个文件时，此步骤将失败。 默认情况下会启用此选项。  
+-   **在无法捕获某些文件时继续：** 启用此设置以在无法捕获某些文件时继续迁移过程。 如果禁用此选项，则当无法捕获某个文件时，此步骤将失败。 默认情况下会启用此选项。  
 
--   **使用链接而非复制文件的方式在本地捕获：**启用此设置以使用 NTFS 硬链接来捕获文件。  
+-   **使用链接而非复制文件的方式在本地捕获：** 启用此设置以使用 NTFS 硬链接来捕获文件。  
 
      有关使用硬链接迁移数据的详细信息，请参阅 [硬链接迁移存储](http://go.microsoft.com/fwlink/p/?LinkId=240222)  
 
@@ -529,7 +530,7 @@ ms.lasthandoff: 05/03/2018
 
  -   **任务序列工作目录**  
 
- -   **Configuration Manager 客户端缓存：**使用此选项可在客户端缓存中存储内容。 客户端充当其他对等缓存客户端的对等缓存源。 有关信息，请参阅[准备 Windows PE 对等缓存来减少 WAN 流量](../get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md)。  
+ -   **Configuration Manager 客户端缓存：** 使用此选项可在客户端缓存中存储内容。 客户端充当其他对等缓存客户端的对等缓存源。 有关信息，请参阅[准备 Windows PE 对等缓存来减少 WAN 流量](../get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md)。  
 
  -    **自定义路径**：使用此选项时，任务序列引擎首先会将包下载到任务序列工作目录，然后将它移动到指定的路径。 任务序列引擎会将包 ID 附加到路径中。 
    
@@ -580,13 +581,13 @@ BitLocker 可用于加密单个计算机系统上的多个驱动器（操作系�
  **选择要加密的驱动器**  
  指定要加密的驱动器。 要加密当前操作系统驱动器，请选择“当前操作系统驱动器”  ，然后配置以下其中一个密钥管理选项：  
 
--   **仅 TPM：**选择此选项，以仅使用受信任的平台模块 (TPM)。  
+-   **仅 TPM：** 选择此选项，以仅使用受信任的平台模块 (TPM)。  
 
--   **仅 USB 上的启动密钥：**选择此选项以使用存储在 USB 闪存驱动器上的启动密钥。 选择此选项时，BitLocker 将锁定正常启动过程，直至含有 BitLocker 启动密钥的 USB 设备连接到计算机。  
+-   **仅 USB 上的启动密钥：** 选择此选项以使用存储在 USB 闪存驱动器上的启动密钥。 选择此选项时，BitLocker 将锁定正常启动过程，直至含有 BitLocker 启动密钥的 USB 设备连接到计算机。  
 
--   **TPM 和 USB 上的启动密钥：**选择此选项以使用 TPM 和存储在 USB 闪存驱动器上的启动密钥。 选择此选项时，BitLocker 将锁定正常启动过程，直至含有 BitLocker 启动密钥的 USB 设备连接到计算机。  
+-   **TPM 和 USB 上的启动密钥：** 选择此选项以使用 TPM 和存储在 USB 闪存驱动器上的启动密钥。 选择此选项时，BitLocker 将锁定正常启动过程，直至含有 BitLocker 启动密钥的 USB 设备连接到计算机。  
 
--   **TPM 和 PIN：**选择此选项以使用 TPM 和个人标识号 (PIN)。 当选择此选项时，BitLocker 将锁定正常启动过程，直至用户提供 PIN。  
+-   **TPM 和 PIN：** 选择此选项以使用 TPM 和个人标识号 (PIN)。 当选择此选项时，BitLocker 将锁定正常启动过程，直至用户提供 PIN。  
    
 若要对特定非操作系统数据驱动器进行加密，请选择“特定驱动器” ，然后从列表中选择驱动器。  
 
@@ -1357,9 +1358,9 @@ SMSTSSoftwareUpdateScanTimeout 任务序列变量控制此步骤期间的软件�
 **在升级过程中向 Windows 安装程序提供以下驱动程序内容**  
  升级过程中将驱动程序添加到目标计算机。 此设置对应于 Windows 安装程序命令行选项“/InstallDriver”。 驱动程序必须与 Windows 10 兼容。 指定下列选项之一：  
 
--   **驱动程序包：**单击“浏览”  并从列表中选择现有的驱动程序包。  
+-   **驱动程序包：** 单击“浏览”  并从列表中选择现有的驱动程序包。  
 
--   **暂存内容：**选择此选项以指定驱动程序包的位置。 可以指定本地文件夹、网络路径或任务序列变量。 将变量用作源路径时，必须在任务序列中提前指定。 例如，通过使用 [Download Package Content](task-sequence-steps.md#BKMK_DownloadPackageContent) 步骤。  
+-   **暂存内容：** 选择此选项以指定驱动程序包的位置。 可以指定本地文件夹、网络路径或任务序列变量。 将变量用作源路径时，必须在任务序列中提前指定。 例如，通过使用 [Download Package Content](task-sequence-steps.md#BKMK_DownloadPackageContent) 步骤。  
 
 **超时 （分钟）**  
  指定 Configuration Manager 执行此步骤失败前的分钟数。 如果 Windows 安装程序停止进程但未终止，则此选项非常有用。  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32347325"
 ---
 # <a name="system-center-updates-publisher"></a>System Center Updates Publisher
 
@@ -44,19 +45,19 @@ System Center Updates Publisher (Updates Publisher) 是一款独立工具，可�
 Updates Publisher 有四个工作区，可方便整理。
 
 
-**更新工作区：**使用此工作区可[创建](/sccm/sum/tools/create-updates-with-updates-publisher)和[管理](/sccm/sum/tools/manage-updates-with-updates-publisher)软件更新和更新捆绑包。 这包括将更新和捆绑包分配给发布项、发布它们，以及将它们导出到其他 Updates Publisher 存储库中。
+**更新工作区：** 使用此工作区可[创建](/sccm/sum/tools/create-updates-with-updates-publisher)和[管理](/sccm/sum/tools/manage-updates-with-updates-publisher)软件更新和更新捆绑包。 这包括将更新和捆绑包分配给发布项、发布它们，以及将它们导出到其他 Updates Publisher 存储库中。
 
-**发布项工作区：**可以在其中[管理发布项](/sccm/sum/tools/updates-publisher-publications)。 发布项是创建的一组更新，以便于简化更新的导出和发布。
+**发布项工作区：** 可以在其中[管理发布项](/sccm/sum/tools/updates-publisher-publications)。 发布项是创建的一组更新，以便于简化更新的导出和发布。
 
 管理发布项包括将更新发布到服务器以便客户端能够查找和安装更新、导出更新和捆绑包以供其他 Updates Publisher 安装项使用，或修改发布项的内容或详细信息。
 
 
 
-**规则工作区：**可以在其中[管理适用性规则](/sccm/sum/tools/updates-publisher-applicability-rules)，此类规则可以进行保存，随后与部署的更新结合使用。 规则分为两种类型：
+**规则工作区：** 可以在其中[管理适用性规则](/sccm/sum/tools/updates-publisher-applicability-rules)，此类规则可以进行保存，随后与部署的更新结合使用。 规则分为两种类型：
 
 -   可安装规则 - 此类规则有助于确定客户端是否应安装更新。
 -   已安装规则 - 此类规则可验证更新是否已安装。
 
-**目录工作区：**使用此工作区可添加和[管理软件更新目录](/sccm/sum/tools/updates-publisher-catalogs)。 这包括将目录中的软件更新导入 Updates Publisher 存储库。
+**目录工作区：** 使用此工作区可添加和[管理软件更新目录](/sccm/sum/tools/updates-publisher-catalogs)。 这包括将目录中的软件更新导入 Updates Publisher 存储库。
 ## <a name="first-steps"></a>前几个步骤
 首先进行[安装](/sccm/sum/tools/install-updates-publisher)，然后为 Updates Publisher [配置选项](/sccm/sum/tools/updates-publisher-options)。

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32340142"
 ---
 # <a name="plan-for-and-configure-application-management-in-system-center-configuration-manager"></a>规划和配置 System Center Configuration Manager 中的应用程序管理
 
