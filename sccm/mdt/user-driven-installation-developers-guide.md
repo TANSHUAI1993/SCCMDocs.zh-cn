@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 03/27/2018
+ms.locfileid: "27821081"
 ---
 # <a name="user-driven-installation---developers-guide"></a>用户驱动的安装 - 开发人员指南
 用户驱动安装 (UDI) 有助于简化使用 Microsoft® System Center 2012 R2 Configuration Manager 中的操作系统部署 (OSD) 功能将 Windows® 客户端操作系统（如 Windows 8.1）部署到计算机的过程。 UDI 是 Microsoft Deployment Toolkit (MDT) 的一部分。  

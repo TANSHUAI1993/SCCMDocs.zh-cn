@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32338272"
 ---
 # <a name="capabilities-in-technical-preview-1712-for-system-center-configuration-manager"></a>适用于 System Center Configuration Manager 的 Technical Preview 1712 中的功能
 
@@ -70,7 +71,7 @@ ms.lasthandoff: 05/03/2018
  - 应用状态为可用（例如，尚未下载内容）
 
 ### <a name="try-it-out"></a>试试看！
-**在 Configuration Manager 控制台中：**根据可用或必需的情况，将用于安装的多个应用程序部署到用户或设备（截止日期在将来）。 不需要管理员批准。 有关详细信息，请参阅[部署应用程序](/sccm/apps/deploy-use/deploy-applications)。
+**在 Configuration Manager 控制台中：** 根据可用或必需的情况，将用于安装的多个应用程序部署到用户或设备（截止日期在将来）。 不需要管理员批准。 有关详细信息，请参阅[部署应用程序](/sccm/apps/deploy-use/deploy-applications)。
 
 **在软件中心中：**
  1. 默认情况下，“应用程序”选项卡应打开。 

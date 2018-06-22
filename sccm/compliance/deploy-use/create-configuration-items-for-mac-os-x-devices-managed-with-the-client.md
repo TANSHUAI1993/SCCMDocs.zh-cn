@@ -15,9 +15,10 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32335824"
 ---
 # <a name="how-to-create-configuration-items-for-mac-os-x-devices-managed-with-the-system-center-configuration-manager-client"></a>如何为使用 System Center Configuration Manager 客户端管理的 Mac OS X设备创建配置项目
-使用 System Center Configuration Manager **Mac OS X（自定义）**配置项目，管理由 Configuration Manager 客户端托管的 Mac OS X 设备的设置。  
+使用 System Center Configuration Manager **Mac OS X（自定义）** 配置项目，管理由 Configuration Manager 客户端托管的 Mac OS X 设备的设置。  
   
  Mac OS X 操作系统使用属性列表（或列表）文件来存储应用程序设置。 使用符合性设置来评估和修正属性列表文件中的设置。 还可以通过编写一个 Shell 脚本来管理 Mac OS X 设置，该脚本会返回一个值，可以评估和修正符合性。  
   

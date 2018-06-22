@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32339428"
 ---
 # <a name="install-the-system-center-configuration-manager-console"></a>安装 System Center Configuration Manager 控制台
 

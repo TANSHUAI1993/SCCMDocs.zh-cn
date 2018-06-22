@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11bf4ed40ed0cbb10500cc58bbecbd23c92bfe20
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 03/27/2018
+ms.locfileid: "27821011"
 ---
 # <a name="troubleshooting-reference-for-the-microsoft-deployment-toolkit"></a>Microsoft Deployment Toolkit 的疑难解答参考
  部署操作系统和应用程序以及迁移用户状态可能极具挑战性，即使是在具备相应工具和指南的情况下。 此参考随附 Microsoft® Deployment Toolkit (MDT) 2013 一并提供，其中列出当前的已知问题、其可能的解决方法以及疑难解答指南。  
@@ -276,7 +277,7 @@ The action "Zero Touch Installation - Validation" failed with exit code 5001
 
  此信息表示目标计算机上或者目标计算机和部署共享所在的服务器之间可能存在网络问题。 这些问题可能包括网络驱动程序安装错误或速度和双工设置不匹配。  
 
- **可能的解决方案 2：**使用 Microsoft Exchange 服务器错误代码查找实用程序。 此命令行实用程序在帮助错误代码转换方面非常有价值。 可从 [Microsoft 下载中心](http://www.microsoft.com/download/details.aspx?id=985)下载此程序。  
+ **可能的解决方案 2：** 使用 Microsoft Exchange 服务器错误代码查找实用程序。 此命令行实用程序在帮助错误代码转换方面非常有价值。 可从 [Microsoft 下载中心](http://www.microsoft.com/download/details.aspx?id=985)下载此程序。  
 
 ### <a name="review-of-sample-logs"></a>查看示例日志  
  MDT 创建可用于排查 MDT 部署过程中的问题的日志文件。 以下部分提供相关示例，介绍如何使用 MDT 日志文件排查部署进程相关问题：  
@@ -284,7 +285,7 @@ The action "Zero Touch Installation - Validation" failed with exit code 5001
 -   与 MDT 数据库 (MDT DB) 访问失败相关的问题，如[未能访问数据库](#FailuretoAccesstheDatabase)中所述  
 
 ####  <a name="FailuretoAccesstheDatabase"></a>未能访问数据库  
- **问题：**运行使用带众多分区的 CustomSettings.ini 文件的部署且通过“优先级”属性指定要处理的每个分区的优先级时出现错误。 BDD.log 包含以下错误消息：  
+ **问题：** 运行使用带众多分区的 CustomSettings.ini 文件的部署且通过“优先级”属性指定要处理的每个分区的优先级时出现错误。 BDD.log 包含以下错误消息：  
 
 -   ```  
     ERROR - Opening Record Set (Error Number = -2147217911) (Error Description: The SELECT permission was denied on the object 'ComputerAdministrators', database 'AdminDB', schema 'dbo'.)  
@@ -301,7 +302,7 @@ The action "Zero Touch Installation - Validation" failed with exit code 5001
 > [!NOTE]
 >  为清楚起见，上述日志文件的内容按用户通过 Trace32 程序查看时所显示的方式呈现。  
 
- **可能的解决方案：**如日志文件示例第一行所述，此问题表示数据库的访问权限被拒绝。 因此，脚本无法建立到数据库的安全连接，这可能是由于用户 ID 和密码不可用。 所以系统尝试使用计算机帐户访问数据库。 最简单的解决方式是向所有人授予数据库的“读取”访问权限。  
+ **可能的解决方案：** 如日志文件示例第一行所述，此问题表示数据库的访问权限被拒绝。 因此，脚本无法建立到数据库的安全连接，这可能是由于用户 ID 和密码不可用。 所以系统尝试使用计算机帐户访问数据库。 最简单的解决方式是向所有人授予数据库的“读取”访问权限。  
 
 ## <a name="troubleshooting"></a>疑难解答  
  在开始深度故障排除进程之前，请查看以下各项，确保已满足所有相关要求：  
@@ -318,7 +319,7 @@ The action "Zero Touch Installation - Validation" failed with exit code 5001
 -   安装 2007 Microsoft Office system 或相关文件时的安装错误 30029，如 [2007 Microsoft Office System](#MicrosoftOfficeSystem)中所述  
 
 ####  <a name="BlockedExecutables"></a>已阻止可执行文件  
- **问题：**如果从 Internet 下载安装源文件，则它们可能标记有一个或多个 NTFS 文件系统数据流。 有关 NTFS 数据流的详细信息，请参阅[文件流](http://msdn2.microsoft.com/library/aa364404\(VS.85\).aspx)。 NTFS 文件系统数据流的存在可能导致“打开文件 – 安全警告”提示。 只有在系统提示时单击“运行”，才能继续安装。  
+ **问题：** 如果从 Internet 下载安装源文件，则它们可能标记有一个或多个 NTFS 文件系统数据流。 有关 NTFS 数据流的详细信息，请参阅[文件流](http://msdn2.microsoft.com/library/aa364404\(VS.85\).aspx)。 NTFS 文件系统数据流的存在可能导致“打开文件 – 安全警告”提示。 只有在系统提示时单击“运行”，才能继续安装。  
 
  图 2 显示可使用“更多”命令行和[流实用程序](http://technet.microsoft.com/sysinternals/bb897440.aspx)查看 NTFS 文件系统数据流。  
 
@@ -327,17 +328,17 @@ The action "Zero Touch Installation - Validation" failed with exit code 5001
 
  **图 2.NTFS 数据流**  
 
- **可能的解决方案 1：**右键单击安装源文件，然后单击“属性”。 单击“解除阻止”后单击“确定”，删除文件中的 NTFS 文件系统数据流。 对每个由于存在一个或多个 NTFS 文件系统数据流而被阻止的安装源文件重复此过程。  
+ **可能的解决方案 1：** 右键单击安装源文件，然后单击“属性”。 单击“解除阻止”后单击“确定”，删除文件中的 NTFS 文件系统数据流。 对每个由于存在一个或多个 NTFS 文件系统数据流而被阻止的安装源文件重复此过程。  
 
- **可能的解决方案 2：**使用流实用程序（例如 REF \_Ref308173670 \\h 图 2 所示），删除安装源文件中的 NTFS 文件系统数据流。 流实用程序可立即删除一个或多个文件或文件夹中的 NTFS 文件系统数据流。  
+ **可能的解决方案 2：** 使用流实用程序（例如 REF \_Ref308173670 \\h 图 2 所示），删除安装源文件中的 NTFS 文件系统数据流。 流实用程序可立即删除一个或多个文件或文件夹中的 NTFS 文件系统数据流。  
 
 ####  <a name="LostNetworkConnections"></a>丢失网络连接  
- **问题：**如果安装设备驱动程序或更改设备和网络配置，安装可能失败。 这些更改可能导致网络连接失效，从而造成安装失败。  
+ **问题：** 如果安装设备驱动程序或更改设备和网络配置，安装可能失败。 这些更改可能导致网络连接失效，从而造成安装失败。  
 
- **可能的解决方案：**执行 ZTICacheUtil.vbs 脚本，以便下载和执行安装项。 此脚本旨在调整播发来进行下载和执行。 如果 Configuration Manager 分发点是基于 Web 的分布式创作且已启用版本管理和 BITS，则通过后台智能传输服务 \(BITS\) 进行下载。 同时，它修改 Configuration Manager，使其先运行 ZTICache.vbs 脚本，确保程序在部署过程中不删除自己。  
+ **可能的解决方案：** 执行 ZTICacheUtil.vbs 脚本，以便下载和执行安装项。 此脚本旨在调整播发来进行下载和执行。 如果 Configuration Manager 分发点是基于 Web 的分布式创作且已启用版本管理和 BITS，则通过后台智能传输服务 \(BITS\) 进行下载。 同时，它修改 Configuration Manager，使其先运行 ZTICache.vbs 脚本，确保程序在部署过程中不删除自己。  
 
 ####  <a name="MicrosoftOfficeSystem"></a>2007 Microsoft Office System  
- **问题：**部署 2007 Office system 且包含 Windows Installer 修补程序 \(MSP\) 文件时，安装可能失败，错误代码为 30029。  
+ **问题：** 部署 2007 Office system 且包含 Windows Installer 修补程序 \(MSP\) 文件时，安装可能失败，错误代码为 30029。  
 
  对 ZTIApplications.log 的进一步调查示以下消息：  
 
@@ -353,9 +354,9 @@ The action "Zero Touch Installation - Validation" failed with exit code 5001
     Application Microsoft Office 2007 Professional returned an unexpected return code: 30029  
     ```  
 
- **可能的解决方案 1：**将 MSP 文件重定位到“更新”目录，然后运行 setup.exe，但不指定 \/adminfile 选项。 若要深入了解如何在安装过程中部署更新，请参阅[部署 2007 Office system](http://technet.microsoft.com/library/cc303395\(v=Office.12\).aspx)。  
+ **可能的解决方案 1：** 将 MSP 文件重定位到“更新”目录，然后运行 setup.exe，但不指定 \/adminfile 选项。 若要深入了解如何在安装过程中部署更新，请参阅[部署 2007 Office system](http://technet.microsoft.com/library/cc303395\(v=Office.12\).aspx)。  
 
- **可能的解决方案 2：**验证确保 MSP 文件未选择“阻止模式”复选框。 若要深入了解如何配置此设置，请参阅 [2007 Office System 部署概述](http://technet.microsoft.com/library/bb490141.aspx)。  
+ **可能的解决方案 2：** 验证确保 MSP 文件未选择“阻止模式”复选框。 若要深入了解如何配置此设置，请参阅 [2007 Office System 部署概述](http://technet.microsoft.com/library/bb490141.aspx)。  
 
 ### <a name="autologon"></a>AutoLogon  
  查看自动登录问题和解决方案：  
@@ -365,20 +366,20 @@ The action "Zero Touch Installation - Validation" failed with exit code 5001
 -   由于用户凭据提示而出现的 LTI 和 ZTI 部署进程中断，如[提示输入用户凭据](#PromtedforUserCredentials)中所述  
 
 ####  <a name="LogonSecutiryBanners"></a>登录安全横幅  
- **问题：**在交互用户会话中处理 MDT 任务序列，这需要目标计算机能使用指定的管理帐户自动登录。 如果部署了强制执行登录安全横幅的组策略对象 \(GPO\) ，则将禁止自动登录，因为在用户接受所声明的策略之前，安全横幅会停止登录进程。  
+ **问题：** 在交互用户会话中处理 MDT 任务序列，这需要目标计算机能使用指定的管理帐户自动登录。 如果部署了强制执行登录安全横幅的组策略对象 \(GPO\) ，则将禁止自动登录，因为在用户接受所声明的策略之前，安全横幅会停止登录进程。  
 
- **可能的解决方案：**确保 GPO 应用到特定的组织单位 \(OU\) 且未包含在默认域 GPO 中。 将计算机添加到域时，请指定将它们添加到不受 GPO（强制执行登录安全横幅）影响的 OU。 在任务序列编辑器中，在最后的任务序列步骤中包含将计算机帐户重定位到所需的 OU 的脚本。  
+ **可能的解决方案：** 确保 GPO 应用到特定的组织单位 \(OU\) 且未包含在默认域 GPO 中。 将计算机添加到域时，请指定将它们添加到不受 GPO（强制执行登录安全横幅）影响的 OU。 在任务序列编辑器中，在最后的任务序列步骤中包含将计算机帐户重定位到所需的 OU 的脚本。  
 
 > [!NOTE]
 >  如果在重复使用现有的 Active Directory® 域服务 \(AD DS\) 帐户，请确保在部署到目标计算机之前，已将目标计算机的帐户重定位到不受 GPO（强制执行安全登录横幅）影响的 OU。  
 
 ####  <a name="PromtedforUserCredentials"></a>提示输入用户凭据  
- **问题：**已创建加入域的计算机的映像。 将新的映像部署到目标计算机时，部署进程停止，因为计算机不自动登录，且系统提示用户输入适当的凭据。 提供凭据且用户登录后，继续执行部署进程。  
+ **问题：** 已创建加入域的计算机的映像。 将新的映像部署到目标计算机时，部署进程停止，因为计算机不自动登录，且系统提示用户输入适当的凭据。 提供凭据且用户登录后，继续执行部署进程。  
 
- **可能的解决方案：**捕获映像时，源计算机不应加入域。 如果计算机已加入域，则将计算机加入工作组，重新捕获映像，再尝试部署到目标计算机来检查是否解决问题。  
+ **可能的解决方案：** 捕获映像时，源计算机不应加入域。 如果计算机已加入域，则将计算机加入工作组，重新捕获映像，再尝试部署到目标计算机来检查是否解决问题。  
 
 ### <a name="bios"></a>BIOS  
- **问题：**部署到配备 Intel vPro 技术的目标计算机时，可能结束部署且出现停止错误。 即使更新后的所有驱动程序均作为现成驱动程序包含在部署工作台中，目标计算机也不启动。  
+ **问题：** 部署到配备 Intel vPro 技术的目标计算机时，可能结束部署且出现停止错误。 即使更新后的所有驱动程序均作为现成驱动程序包含在部署工作台中，目标计算机也不启动。  
 
  可能的解决方案：检查目标计算机的基本输入\/输出系统 \(BIOS\) 中的设置，查看是否将默认串行高级技术附件模式配置为高级主机控制器接口 \(AHCI\)。 遗憾的是，默认情况下某些 Windows 操作系统不支持 AHCI。  
 
@@ -390,14 +391,14 @@ The action "Zero Touch Installation - Validation" failed with exit code 5001
 -   由于与数据库服务器中断连接而生成的错误，如[命名管道连接](#NamedPipeConnections)中所述  
 
 ####  <a name="BlockedSQLServerBrowserRequests"></a>已阻止 SQL Server 浏览器请求  
- **问题：**在 MDT 部署过程中，可从 Microsoft SQL Server® 数据库检索信息。 但是，可能生成与数据库服务器上防火墙配置错误相关的错误。  
+ **问题：** 在 MDT 部署过程中，可从 Microsoft SQL Server® 数据库检索信息。 但是，可能生成与数据库服务器上防火墙配置错误相关的错误。  
 
- **可能的解决方案：**Windows Server 的 Windows 防火墙有助于防止未经授权访问计算机资源的行为。 但如果防火墙配置错误，可能会阻止到 SQL Server 实例的连接。 若要访问受防火墙保护的 SQL Server 实例，请在运行 SQL Server 的计算机上配置防火墙。 若要深入了解如何为 SQL Server 配置防火墙端口，请参阅 Microsoft 支持文章：[如何在 Windows Server 2008 上打开 SQL Server 的防火墙端口？](http://support.microsoft.com/kb/968872)  
+ **可能的解决方案：** Windows Server 的 Windows 防火墙有助于防止未经授权访问计算机资源的行为。 但如果防火墙配置错误，可能会阻止到 SQL Server 实例的连接。 若要访问受防火墙保护的 SQL Server 实例，请在运行 SQL Server 的计算机上配置防火墙。 若要深入了解如何为 SQL Server 配置防火墙端口，请参阅 Microsoft 支持文章：[如何在 Windows Server 2008 上打开 SQL Server 的防火墙端口？](http://support.microsoft.com/kb/968872)  
 
 ####  <a name="NamedPipeConnections"></a>命名管道连接  
- **问题：**在 MDT 部署过程中，可从 SQL Server 数据库检索信息。 但是，可能生成与 SQL Server 连接中断相关的错误。 错误原因可能是未在 Microsoft SQL Server 中启用命名管道连接。  
+ **问题：** 在 MDT 部署过程中，可从 SQL Server 数据库检索信息。 但是，可能生成与 SQL Server 连接中断相关的错误。 错误原因可能是未在 Microsoft SQL Server 中启用命名管道连接。  
 
- **可能的解决方案：**要解决上述问题，请在 SQL Server 中启用命名管道。 同时指定 SQLShare 属性，在通过命名管道连接到外部数据库时需使用此属性。 使用命名管道进行连接时，请使用集成安全性建立到数据库的连接。 对于 LTI 部署，所指定的用户帐户建立到数据库的连接。 对于使用 Configuration Manager 的 ZTI 部署，网络访问帐户连接到数据库。 由于 Windows PE 默认情况下没有安全上下文，因此必须建立到数据库服务器的网络连接，以便为要进行连接的用户建立安全上下文。  
+ **可能的解决方案：** 要解决上述问题，请在 SQL Server 中启用命名管道。 同时指定 SQLShare 属性，在通过命名管道连接到外部数据库时需使用此属性。 使用命名管道进行连接时，请使用集成安全性建立到数据库的连接。 对于 LTI 部署，所指定的用户帐户建立到数据库的连接。 对于使用 Configuration Manager 的 ZTI 部署，网络访问帐户连接到数据库。 由于 Windows PE 默认情况下没有安全上下文，因此必须建立到数据库服务器的网络连接，以便为要进行连接的用户建立安全上下文。  
 
  SQLShare 属性指定的网络共享提供了一种连接到服务器以获取安全性上下文的方法。 必须具有共享的“读取”访问权限。 连接建立后，可接着建立到数据库的命名管道连接。 无需使用 SQLShare 属性，且在建立到数据库的 TCP\/IP 连接时不得使用此属性。  
 
@@ -477,19 +478,19 @@ The action "Zero Touch Installation - Validation" failed with exit code 5001
 -   出现“找不到 Wuredist.cab”错误消息，如 [ZTIWindowsUpdate](#ZTIWindowsUpdate) 中所述  
 
 ####  <a name="Credentials_script"></a> Credentials\_script  
- **问题：**在上次启动新部署的计算机期间，系统提示用户提供用户凭据且可能显示错误 0x80070035（表示找不到网络路径）。  
+ **问题：** 在上次启动新部署的计算机期间，系统提示用户提供用户凭据且可能显示错误 0x80070035（表示找不到网络路径）。  
 
- **可能的解决方案：**确保 WIM 文件不包含 MININT 和 \_SMSTaskSequence 文件夹。 要删除这些文件夹，请先使用 ImageX 实用程序装载 WIM 文件，然后再删除文件夹。  
+ **可能的解决方案：** 确保 WIM 文件不包含 MININT 和 \_SMSTaskSequence 文件夹。 要删除这些文件夹，请先使用 ImageX 实用程序装载 WIM 文件，然后再删除文件夹。  
 
 > [!NOTE]
 >  如果尝试从 WIM 文件删除文件夹时遇到“访问被拒绝”错误，请打开命令提示符窗口，切换到 WIM 文件中所含映像的根目录，然后运行 RD MININT 和 RD \_SMSTaskSequence。  
 
 ####  <a name="ZTIWindowsUpdate"></a>ZTIWindowsUpdate  
- **问题：**如果在部署期间使用 ZTIWindowsUpdate.wsf 脚本应用软件更新，请注意此脚本可能直接与 Microsoft 更新网站进行通信，以下载和安装所需的 Windows 更新代理二进制文件，扫描适用的软件更新，下载适用软件更新的二进制文件，然后安装下载的二进制文件。 此过程要求你的网络基础结构配置为允许目标计算机访问 Microsoft 更新网站。  
+ **问题：** 如果在部署期间使用 ZTIWindowsUpdate.wsf 脚本应用软件更新，请注意此脚本可能直接与 Microsoft 更新网站进行通信，以下载和安装所需的 Windows 更新代理二进制文件，扫描适用的软件更新，下载适用软件更新的二进制文件，然后安装下载的二进制文件。 此过程要求你的网络基础结构配置为允许目标计算机访问 Microsoft 更新网站。  
 
  如果部署共享不包含 Windows 更新代理安装文件，且目标计算机没有适当的 Internet 访问权限，则在 ZTIWindowsUpdate.log 和 BDD.log 文件中报告“找不到 wuredist.cab”错误。  
 
- **可能的解决方案：**按照 MDT 文档“工具箱参考”中的“ZTIWindowsUpdate.wsf”部分进行操作。  
+ **可能的解决方案：** 按照 MDT 文档“工具箱参考”中的“ZTIWindowsUpdate.wsf”部分进行操作。  
 
 ### <a name="deployment-shares"></a>部署共享  
  检查部署共享相关问题和解决方案：  
@@ -503,9 +504,9 @@ The action "Zero Touch Installation - Validation" failed with exit code 5001
 
 -   在 64 位操作系统上，MDT 始终使用 x64 WIMGAPI.DLL 文件；系统路径中仅能使用该文件。 在 32 位操作系统上，MDT 始终使用 x86 WIMGAPI.DLL 文件；系统路径中仅能使用该文件。 （配置管理器等其他产品使用 WIMGAPI.DLL 的 32 位版本，即使是在 64 位操作系统上也要管理和安装此版本。）  
 
- **问题：**尝试更新部署共享时，系统通知用户一个或多个 .wim 文件装载失败。  
+ **问题：** 尝试更新部署共享时，系统通知用户一个或多个 .wim 文件装载失败。  
 
- **可能的解决方案：**打开命令提示符窗口并运行“WIMGAPI.DLL 位于何处”。 对于列表中的第一个条目（搜索路径找到的第一个位置），请确保“版本”属性与安装的 Windows 评估和部署工具包 \(Windows ADK\) 的版本一致。 还要确保该属性与操作系统生成号一致。  
+ **可能的解决方案：** 打开命令提示符窗口并运行“WIMGAPI.DLL 位于何处”。 对于列表中的第一个条目（搜索路径找到的第一个位置），请确保“版本”属性与安装的 Windows 评估和部署工具包 \(Windows ADK\) 的版本一致。 还要确保该属性与操作系统生成号一致。  
 
 ### <a name="the-windows-deployment-wizard"></a>Windows 部署向导  
  查看 Windows 部署向导相关问题和解决方案：  
@@ -513,9 +514,9 @@ The action "Zero Touch Installation - Validation" failed with exit code 5001
 -   即使 LTI 配置为跳过向导页，仍显示 Windows 部署向导页，如[不跳过向导页](#WizardPagesareNotSkipped)中所述。  
 
 ####  <a name="WizardPagesareNotSkipped"></a>不跳过向导页  
- **问题：**即使 MDT DB 或 CustomSettings.ini 文件指定应跳过向导，仍显示向导页。  
+ **问题：** 即使 MDT DB 或 CustomSettings.ini 文件指定应跳过向导，仍显示向导页。  
 
- **可能的解决方案：**要正常跳过向导页，请包含适当时在 MDT DB 或 CustomSettings.ini 文件的此向导页上指定随同适当的值一同出现的所有属性。 如果所跳过的向导页的属性配置错误，则显示此页面。 若要深入了解需具备哪些属性才可确保跳过向导页，请参阅 MDT 文档“工具箱参考”的“提供所跳过的部署向导页的属性”部分。  
+ **可能的解决方案：** 要正常跳过向导页，请包含适当时在 MDT DB 或 CustomSettings.ini 文件的此向导页上指定随同适当的值一同出现的所有属性。 如果所跳过的向导页的属性配置错误，则显示此页面。 若要深入了解需具备哪些属性才可确保跳过向导页，请参阅 MDT 文档“工具箱参考”的“提供所跳过的部署向导页的属性”部分。  
 
 ### <a name="disks-and-partitioning"></a>磁盘和分区  
  查看磁盘分区问题和解决方案：  
@@ -536,19 +537,19 @@ The action "Zero Touch Installation - Validation" failed with exit code 5001
 -   在目标计算机上压缩驱动器 C，以提供足够的未分配磁盘空间，如[磁盘压缩问题](#ProblemswithShrinkingDisks)中所述  
 
 #####  <a name="ZTIBde.wsf"></a>ZTIBde.wsf 脚本失败，出现“无法打开注册表项 HKEY\_CURRENT\_USER\\Control Panel\\International\\LocaleName 进行读取”错误  
- **问题：**尝试在目标计算机的 ZTI 或 UDI 中部署 BitLocker 时，ZTIBde.wsf 脚本失败，出现“无法打开注册表项 HKEY\_CURRENT\_USER\\Control Panel\\International\\LocaleName 进行读取”错误。  
+ **问题：** 尝试在目标计算机的 ZTI 或 UDI 中部署 BitLocker 时，ZTIBde.wsf 脚本失败，出现“无法打开注册表项 HKEY\_CURRENT\_USER\\Control Panel\\International\\LocaleName 进行读取”错误。  
 
- **可能的解决方案：**在“UILanguage”属性中指定区域设置。 在 ZTI 和 UDI 中，ZTIBde.wsf 脚本在系统控制中运行，因此未加载完整的用户配置文件。 当 ZTIBde.wsf 脚本尝试读取区域设置信息时，信息未在注册表中，因为注册表（用户配置文件）未完全加载。 解决方法是在“UILanguage”属性中指定区域设置。  
+ **可能的解决方案：** 在“UILanguage”属性中指定区域设置。 在 ZTI 和 UDI 中，ZTIBde.wsf 脚本在系统控制中运行，因此未加载完整的用户配置文件。 当 ZTIBde.wsf 脚本尝试读取区域设置信息时，信息未在注册表中，因为注册表（用户配置文件）未完全加载。 解决方法是在“UILanguage”属性中指定区域设置。  
 
 #####  <a name="DevicesAppearasMultipleDriveLetters"></a>设备显示为多个驱动器号  
- **问题：**某些设备可能显示为多个逻辑驱动器号，具体取决于分区方式。 在某些情况下，它们可模拟 1.44 兆字节 \(MB\) 软盘驱动器和内存存储驱动器。 因此，Windows 可能向软盘模拟配置相同的设备驱动器号 A 和 B，并向内存存储驱动器分配 F。 默认情况下，MDT 脚本使用最低驱动器号（本例中为 A）。  
+ **问题：** 某些设备可能显示为多个逻辑驱动器号，具体取决于分区方式。 在某些情况下，它们可模拟 1.44 兆字节 \(MB\) 软盘驱动器和内存存储驱动器。 因此，Windows 可能向软盘模拟配置相同的设备驱动器号 A 和 B，并向内存存储驱动器分配 F。 默认情况下，MDT 脚本使用最低驱动器号（本例中为 A）。  
 
- **可能的解决方案：**更改 Windows 部署向导的“指定 BitLocker 恢复详细信息”页上的默认设置。 Windows 部署向导摘要页将显示一条警告，通知用户选用于存储 BitLocker 恢复信息的驱动器号。 此外，BDD.log 和 ZTIBDE.log 文件记录检测到的可移动媒体设备以及选用于存储 BitLocker 恢复信息的设备。  
+ **可能的解决方案：** 更改 Windows 部署向导的“指定 BitLocker 恢复详细信息”页上的默认设置。 Windows 部署向导摘要页将显示一条警告，通知用户选用于存储 BitLocker 恢复信息的驱动器号。 此外，BDD.log 和 ZTIBDE.log 文件记录检测到的可移动媒体设备以及选用于存储 BitLocker 恢复信息的设备。  
 
 #####  <a name="ProblemswithShrinkingDisks"></a>磁盘压缩问题  
- **问题：**目标计算机上未分配的磁盘空间不足，无法启用 BitLocker。 若要在目标计算机上部署 BitLocker，至少需使用 2 千兆字节 \(GB\) 未分配的磁盘空间来创建系统卷。 系统卷是包含 BIOS 启动计算机后加载 Windows 时所需的硬件特定文件的卷。  
+ **问题：** 目标计算机上未分配的磁盘空间不足，无法启用 BitLocker。 若要在目标计算机上部署 BitLocker，至少需使用 2 千兆字节 \(GB\) 未分配的磁盘空间来创建系统卷。 系统卷是包含 BIOS 启动计算机后加载 Windows 时所需的硬件特定文件的卷。  
 
- **可能的解决方案 1：**在现有计算机上，使用 Diskpart 工具压缩驱动器 C，以便创建系统卷。 但在某些情况下，Diskpart 工具可能无法将磁盘 C 压缩到能提供 2 GB 的未分配磁盘空间，这可能由磁盘 C 中的碎片磁盘空间导致。  
+ **可能的解决方案 1：** 在现有计算机上，使用 Diskpart 工具压缩驱动器 C，以便创建系统卷。 但在某些情况下，Diskpart 工具可能无法将磁盘 C 压缩到能提供 2 GB 的未分配磁盘空间，这可能由磁盘 C 中的碎片磁盘空间导致。  
 
  其中一种可能的解决方案是整理驱动器 C 的碎片。为此，请执行下列步骤：  
 
@@ -564,17 +565,17 @@ The action "Zero Touch Installation - Validation" failed with exit code 5001
 
     -   在驱动器 C 上备份数据，删除现有分区，创建新分区，然后将数据还原到新分区。  
 
- **可能的解决方案 2：**ZTIBDE.wsf 脚本运行磁盘准备工具 \(bdehdcfg.exe\)，并将系统卷分区大小默认配置为 2 GB。 必要时，可自定义 ZTIBDE.wsf 脚本以更改此默认值。 但不建议修改 MDT 脚本。  
+ **可能的解决方案 2：** ZTIBDE.wsf 脚本运行磁盘准备工具 \(bdehdcfg.exe\)，并将系统卷分区大小默认配置为 2 GB。 必要时，可自定义 ZTIBDE.wsf 脚本以更改此默认值。 但不建议修改 MDT 脚本。  
 
 ####  <a name="SupportforLoogicalandDynamicDisks"></a>支持逻辑和动态磁盘  
- **问题：**执行“刷新计算机”部署方案时，如果部署到使用逻辑驱动器或动态磁盘的目标计算机，部署过程可能失败。  
+ **问题：** 执行“刷新计算机”部署方案时，如果部署到使用逻辑驱动器或动态磁盘的目标计算机，部署过程可能失败。  
 
- **可能的解决方案：**MDT 不支持将操作系统部署到逻辑驱动器和动态磁盘。  
+ **可能的解决方案：** MDT 不支持将操作系统部署到逻辑驱动器和动态磁盘。  
 
 ### <a name="domain-join"></a>域加入  
- **问题：**在部署期间，使用 Windows 部署向导提供目标计算机所需的全部信息，包括凭据、域加入信息和静态 IP 配置。 安装完成后，看到系统未加入域，而是仍位于工作组中。  
+ **问题：** 在部署期间，使用 Windows 部署向导提供目标计算机所需的全部信息，包括凭据、域加入信息和静态 IP 配置。 安装完成后，看到系统未加入域，而是仍位于工作组中。  
 
- **可能的解决方案：**MDT 的 LTI 部署在操作系统启动并运行后配置静态 IP 信息。 如果目标计算机位于没有动态主机配置协议 \(DHCP\) 的网络段上，则 Unattend.xml 中指定的自动域加入将在不具备 DHCP 的情况下失败。  
+ **可能的解决方案：** MDT 的 LTI 部署在操作系统启动并运行后配置静态 IP 信息。 如果目标计算机位于没有动态主机配置协议 \(DHCP\) 的网络段上，则 Unattend.xml 中指定的自动域加入将在不具备 DHCP 的情况下失败。  
 
  配置 Unattend.xml 以加入工作组。 然后，使用内置的“从域中恢复”任务序列步骤在任务序列中添加步骤，以便在应用静态 IP 后加入域。  
 
@@ -630,9 +631,9 @@ The action "Zero Touch Installation - Validation" failed with exit code 5001
 -   Windows 部署服务服务器的 IP 地址是否位于建立连接的路由器上的 IP 帮助程序文件中？ 如果 IP 帮助程序文件中的 IP 地址列表太长，能否将 Windows 部署服务服务器地址移到靠近顶端的位置  
 
 ### <a name="restarting-the-deployment-process"></a>重启部署进程  
- **问题：**测试和排查新的或已修改的任务序列后，可能需要重启目标计算机，才能从头开始进行部署。 由于 MDT 通过将数据写入到硬盘来跟踪其进度，因此可能出现意外结果；每次重启目标计算机时，都在 MDT 上次重启时所处的状态将其恢复。  
+ **问题：** 测试和排查新的或已修改的任务序列后，可能需要重启目标计算机，才能从头开始进行部署。 由于 MDT 通过将数据写入到硬盘来跟踪其进度，因此可能出现意外结果；每次重启目标计算机时，都在 MDT 上次重启时所处的状态将其恢复。  
 
- **可能的解决方案：**要从头开始进行部署，请先删除 C:\\MININT and C:\\\_SMSTaskSequence 文件夹，然后再重启目标计算机。  
+ **可能的解决方案：** 要从头开始进行部署，请先删除 C:\\MININT and C:\\\_SMSTaskSequence 文件夹，然后再重启目标计算机。  
 
 ### <a name="sysprep"></a>Sysprep  
  查看 Sysprep 相关问题和解决方案：  
@@ -640,21 +641,21 @@ The action "Zero Touch Installation - Validation" failed with exit code 5001
 -   目标计算机未显示在适当的 AD DS OU 中，如 [计算机帐户位于错误的 OU 中](#ComputerAccountisintheWrongOU)中所述。  
 
 ####  <a name="ComputerAccountisintheWrongOU"></a>计算机帐户位于错误的 OU 中  
- **问题：**目标计算机已正确加入域，但计算机帐户位于错误的 OU 中。  
+ **问题：** 目标计算机已正确加入域，但计算机帐户位于错误的 OU 中。  
 
- **可能的解决方案 1：**如果预先存在目标计算机的帐户，则此帐户保留在其原始 OU 中。 若要将帐户移到指定的 OU，请添加使用自动化工具（如 Microsoft Visual Basic® Scripting Edition）的任务序列步骤来移动帐户。  
+ **可能的解决方案 1：** 如果预先存在目标计算机的帐户，则此帐户保留在其原始 OU 中。 若要将帐户移到指定的 OU，请添加使用自动化工具（如 Microsoft Visual Basic® Scripting Edition）的任务序列步骤来移动帐户。  
 
- **可能的解决方案 2：**验证指定的 OU 是否存在且其格式是否正确。 正确的 OU 格式应为 `OU=Reception,OU=NYC,DC=Woodgrovebank,DC=com`。  
+ **可能的解决方案 2：** 验证指定的 OU 是否存在且其格式是否正确。 正确的 OU 格式应为 `OU=Reception,OU=NYC,DC=Woodgrovebank,DC=com`。  
 
 ### <a name="configuration-manager"></a>配置管理器  
- **问题：**尝试通过“创建自签名 PXE 证书”选项创建 Configuration Manager PXE 服务点时，出现 REF \_Ref308174600 \\h 图 3 中所示的错误消息。  
+ **问题：** 尝试通过“创建自签名 PXE 证书”选项创建 Configuration Manager PXE 服务点时，出现 REF \_Ref308174600 \\h 图 3 中所示的错误消息。  
 
  ![TroubleshootingReference3](media/TroubleshootingReference3.jpg "TroubleshootingReference3")  
 图 SEQ Figure \\\* ARABIC 3. PXE 服务点错误  
 
  **图 SEQ Figure \\\* ARABIC 3.PXE 服务点错误**  
 
- **可能的解决方案：**如果当前配置的服务器上已存在 PXE 服务点，则在你卸载 PXE 服务点时，它可能未删除自创建证书。 从 C:\\Documents and Settings\\user\_name\\Application Data\\Microsoft\\Crypto\\RSA 中删除 PXE 证书文件夹（其中 user\_name 是执行当前配置或执行之前配置的用户的名称）。 删除文件夹后，Configuration Manager 控制台的“新建站点角色”向导应当能成功完成。  
+ **可能的解决方案：** 如果当前配置的服务器上已存在 PXE 服务点，则在你卸载 PXE 服务点时，它可能未删除自创建证书。 从 C:\\Documents and Settings\\user\_name\\Application Data\\Microsoft\\Crypto\\RSA 中删除 PXE 证书文件夹（其中 user\_name 是执行当前配置或执行之前配置的用户的名称）。 删除文件夹后，Configuration Manager 控制台的“新建站点角色”向导应当能成功完成。  
 
 ### <a name="task-sequences"></a>任务序列  
  查看任务序列相关问题和解决方案：  
@@ -670,21 +671,21 @@ The action "Zero Touch Installation - Validation" failed with exit code 5001
 -   针对任务序列不当配置“出错时继续”配置设置时可能出现的错误，如[使用“出错时继续”](#UseContinueonError)中所述。  
 
 ####  <a name="TaskSequenceDoesNotFinishSuccessfully"></a>任务序列未成功完成  
- **问题：**任务序列未成功完成或出现不可预测的行为。  
+ **问题：** 任务序列未成功完成或出现不可预测的行为。  
 
- **可能的解决方案：**可能在创建任务序列步骤后修改了“安装操作系统”任务序列步骤（针对 LTI）或“应用操作系统映像”任务序列步骤（针对 UDI 和 ZTI），这会导致不可预测的结果。 例如，如果创建任务序列来部署 32 位 Windows 8.1 映像，但之后将“安装操作系统”任务序列步骤或“应用操作系统映像”任务序列步骤更改为引用 64 位 Windows 8.1 映像，则任务序列可能无法成功运行。  
+ **可能的解决方案：** 可能在创建任务序列步骤后修改了“安装操作系统”任务序列步骤（针对 LTI）或“应用操作系统映像”任务序列步骤（针对 UDI 和 ZTI），这会导致不可预测的结果。 例如，如果创建任务序列来部署 32 位 Windows 8.1 映像，但之后将“安装操作系统”任务序列步骤或“应用操作系统映像”任务序列步骤更改为引用 64 位 Windows 8.1 映像，则任务序列可能无法成功运行。  
 
  建议创建新的任务序列来部署其他操作系统映像。  
 
 ####  <a name="OEMTaskSequenceIncorrectlyAppearsforBootImage"></a>OEM 任务序列错误地显示在为其他处理器体系结构创建的启动映像上  
- **问题：**基于 LTI OEM 任务序列模板的任务序列显示在具有不同处理器体系结构的启动映像上。 例如，部署 64 位操作系统的 OEM 任务序列显示在 32 位启动映像上。  
+ **问题：** 基于 LTI OEM 任务序列模板的任务序列显示在具有不同处理器体系结构的启动映像上。 例如，部署 64 位操作系统的 OEM 任务序列显示在 32 位启动映像上。  
 
- **可能的解决方案：**这是预期行为，原因是 LTI 中的 OEM 任务序列不被视为“特定于平台”，因此无论启动映像的处理体系结构如何，都将列出它。  
+ **可能的解决方案：** 这是预期行为，原因是 LTI 中的 OEM 任务序列不被视为“特定于平台”，因此无论启动映像的处理体系结构如何，都将列出它。  
 
 ####  <a name="BadTaskSequenceItem"></a>Windows 部署向导中显示“任务序列项错误\(OS GUID 无效\)”消息  
- **问题：**运行 Windows 部署向导时，向导显示“任务序列项错误\(OS GUID 无效\)”这一错误消息。 操作系统位于 OperatingSystem.xml 文件；但部署工作台中不显示操作系统。  
+ **问题：** 运行 Windows 部署向导时，向导显示“任务序列项错误\(OS GUID 无效\)”这一错误消息。 操作系统位于 OperatingSystem.xml 文件；但部署工作台中不显示操作系统。  
 
- **可能的解决方案：**原始操作系统源具有两个或更多关联的 WIM 文件。 已删除与任务序列关联的 SKU；但操作系统源的其他 SKU 仍然存在。 如果在 Windows 部署向导的“选择要在此计算机上执行的任务序列”向导页上选择引用已删除的 SKU 的任务序列，则在单击向导页上的“下一步”后将出现“任务序列项错误\(OS GUID 无效\)”错误消息。  
+ **可能的解决方案：** 原始操作系统源具有两个或更多关联的 WIM 文件。 已删除与任务序列关联的 SKU；但操作系统源的其他 SKU 仍然存在。 如果在 Windows 部署向导的“选择要在此计算机上执行的任务序列”向导页上选择引用已删除的 SKU 的任务序列，则在单击向导页上的“下一步”后将出现“任务序列项错误\(OS GUID 无效\)”错误消息。  
 
  要解决此问题，请执行以下任务之一：  
 
@@ -693,9 +694,9 @@ The action "Zero Touch Installation - Validation" failed with exit code 5001
 -   将任务序列更改为使用其他操作系统映像。  
 
 ####  <a name="ApplyNetworkSettings"></a>应用网络设置  
- **问题：**在部署工作台中配置网络连接名称时，系统出现验证错误，显示“请输入有效的网络适配器名称”消息。  
+ **问题：** 在部署工作台中配置网络连接名称时，系统出现验证错误，显示“请输入有效的网络适配器名称”消息。  
 
- **可能的解决方案：**删除指定的连接名称中的全部空格和无效字符。  
+ **可能的解决方案：** 删除指定的连接名称中的全部空格和无效字符。  
 
 ####  <a name="UseContinueonError"></a>使用“出错时继续”  
  如果 MDT 任务序列配置为出错时不继续操作，且该任务序列返回错误，则系统跳过该任务序列组中所有未执行的任务序列。 但是，要处理剩余的任务序列组。 请考虑下列各项：  
@@ -722,9 +723,9 @@ The action "Zero Touch Installation - Validation" failed with exit code 5001
 -   指向网络共享文件夹中的文档的快捷方式可能未正确还原，如[缺少桌面快捷方式](#MissingDesktopShortcuts)中所述。  
 
 ####  <a name="MissingDesktopShortcuts"></a>缺少桌面快捷方式  
- **问题：**使用 USMT 迁移用户数据时，可能未还原指向网络文档的快捷方式。 Scanstate 期间捕获了快捷方式，但永不在 Loadstate 期间还原到目标计算机。  
+ **问题：** 使用 USMT 迁移用户数据时，可能未还原指向网络文档的快捷方式。 Scanstate 期间捕获了快捷方式，但永不在 Loadstate 期间还原到目标计算机。  
 
- **可能的解决方案：**编辑 MigUser.xml 文件并对以下行添加注释：  
+ **可能的解决方案：** 编辑 MigUser.xml 文件并对以下行添加注释：  
 
  原始：  
 
@@ -744,7 +745,7 @@ The action "Zero Touch Installation - Validation" failed with exit code 5001
 -   LTI 和 ZTI 部署失败，BDD.log 文件中出现 WIM 文件错误，如 [WIM 文件已损坏](#CorruptWIMFile)中所述，。  
 
 ####  <a name="CorruptWIMFile"></a>WIM 文件已损坏  
- **问题：**部署映像时部署失败，且 BDD.log 中显示以下项：  
+ **问题：** 部署映像时部署失败，且 BDD.log 中显示以下项：  
 
 -   ```  
     The image \\Server\Deployment$\Operating Systems\Windows\version1.wim was not applied successfully by ImageX, rc = 2  
@@ -760,7 +761,7 @@ The action "Zero Touch Installation - Validation" failed with exit code 5001
 
  使用“数据无效”错误中的 ImageX 结果装载 WIM 文件，进行问题调查。 进一步的调查显示 .wim 文件的日期戳比当前日期早很多年。 情况可能是之前在读取或写入进程结束时关闭 .wim 文件之后，还有一个进程（例如病毒扫描程序）正在将此文件保持在打开状态。  
 
- **可能的解决方案：**通过备份媒体还原 .wim 文件。  
+ **可能的解决方案：** 通过备份媒体还原 .wim 文件。  
 
 ### <a name="windows-pe"></a>Windows PE  
  查看 Windows PE 相关问题和解决方案：  
@@ -772,30 +773,30 @@ The action "Zero Touch Installation - Validation" failed with exit code 5001
 -   由于设备驱动程序缺失或不适合，未启动 LTI 或 ZTI 部署进程，如[未启动部署进程 - 驱动程序缺失或不适合](#MissingorIncorrectDrivers)中所述。  
 
 ####  <a name="LimitedRamorWirelessNetworkAdapter"></a>未启动部署进程 - RAM 或无线网络适配器内存有限  
- **问题：**将映像部署到某些目标计算机时，Windows PE 将启动、运行“wpeinit”并打开命令提示符窗口，但实际上未启动部署进程。 通过映射来自目标计算机的网络驱动程序排查问题时发现未加载网络适配器驱动程序。  
+ **问题：** 将映像部署到某些目标计算机时，Windows PE 将启动、运行“wpeinit”并打开命令提示符窗口，但实际上未启动部署进程。 通过映射来自目标计算机的网络驱动程序排查问题时发现未加载网络适配器驱动程序。  
 
- **可能的解决方案 1：**由于 RAM 内存不足，不启动部署向导。 请验证确保目标计算机至少具有 512 MB 的 RAM，且共享视频所占内存不超过 64 MB（共 512 MB）。  
+ **可能的解决方案 1：** 由于 RAM 内存不足，不启动部署向导。 请验证确保目标计算机至少具有 512 MB 的 RAM，且共享视频所占内存不超过 64 MB（共 512 MB）。  
 
  MDT 支持的 Windows PE 版本不可在 RAM 内存量小于 512 MB 的目标计算机上运行。  
 
- **可能的解决方案 2：**不要在 Windows PE 映像中包含无线驱动程序。  
+ **可能的解决方案 2：** 不要在 Windows PE 映像中包含无线驱动程序。  
 
 ####  <a name="MissingComponents"></a>未启动部署进程 - 缺少组件  
- **问题：**排查失败的部署时，BDD.log 文件的评审列出以下项：  
+ **问题：** 排查失败的部署时，BDD.log 文件的评审列出以下项：  
 
 ```  
 ERROR - Unable to create ADODB.Connection object, impossible to query SQL Server: ActiveX component can't create object (429).  
 ```  
 
- **可能的解决方案：**此错误可能表示 Windows PE 映像不是使用 MDT 创建的。 如果使用的是 Configuration Manager，则不要使用此管理器创建的任何现有 Windows PE 映像，转而使用“导入 Microsoft 部署任务序列”向导创建映像。  
+ **可能的解决方案：** 此错误可能表示 Windows PE 映像不是使用 MDT 创建的。 如果使用的是 Configuration Manager，则不要使用此管理器创建的任何现有 Windows PE 映像，转而使用“导入 Microsoft 部署任务序列”向导创建映像。  
 
 > [!NOTE]
 >  Configuration Manager 创建的 Windows PE 映像包含支持脚本编写、XML 和 Windows Management Instrumentation (WMI) 的组件，但不具备支持 Microsoft ActiveX® 数据对象 (ADO) 的组件。  
 
 ####  <a name="MissingorIncorrectDrivers"></a>未启动部署进程 - 驱动程序缺失或不适合  
- **问题：**在部署到某些目标计算机时，Windows PE 将启动、运行“wpeinit”并打开命令提示符窗口，但实际上未启动部署进程。 通过映射来自目标计算机的网络驱动器排除故障时发现未加载网络适配器驱动程序。 X:\Windows\System32\Inf 中的 SetupAPI.log 文件评审指出，Windows PE 在配置网络适配器时生成错误，其中一个错误为“此驱动程序不可用于此平台。” 已将“现成可用的驱动程序”列表中的驱动程序加入到映像中。  
+ **问题：** 在部署到某些目标计算机时，Windows PE 将启动、运行“wpeinit”并打开命令提示符窗口，但实际上未启动部署进程。 通过映射来自目标计算机的网络驱动器排除故障时发现未加载网络适配器驱动程序。 X:\Windows\System32\Inf 中的 SetupAPI.log 文件评审指出，Windows PE 在配置网络适配器时生成错误，其中一个错误为“此驱动程序不可用于此平台。” 已将“现成可用的驱动程序”列表中的驱动程序加入到映像中。  
 
- **可能的解决方案：**Windows PE 的某个驱动程序可能与其他驱动程序冲突。 在部署工作台中配置 Windows PE 映像的设置时，创建仅包含网络适配器和存储驱动程序的 Windows PE 驱动程序组，然后将部署共享配置为仅使用 Windows PE 驱动程序组。  
+ **可能的解决方案：** Windows PE 的某个驱动程序可能与其他驱动程序冲突。 在部署工作台中配置 Windows PE 映像的设置时，创建仅包含网络适配器和存储驱动程序的 Windows PE 驱动程序组，然后将部署共享配置为仅使用 Windows PE 驱动程序组。  
 
 ## <a name="deployment-process-flow-charts"></a>部署过程流程图  
  本节提供两组 MDT 流程图：分别用于 LTI 部署和借助 Configuration Manager 的 ZTI 部署。 每个流程图都显示此部署类型期间运行的任务。  

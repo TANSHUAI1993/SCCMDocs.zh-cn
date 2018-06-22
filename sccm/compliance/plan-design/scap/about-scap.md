@@ -16,6 +16,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32336181"
 ---
 # <a name="about-the-security-content-automation-protocol-scap-extensions"></a>关于安全内容自动化协议 (SCAP) 扩展
 
@@ -80,11 +81,11 @@ System Center Configuration Manager 的 SCAP 扩展预发行版：
 
 # <a name="terms"></a>术语
 
-**OVAL ID：**符合 OVAL ID 格式的特定 OVAL 定义的标识符。
+**OVAL ID：** 符合 OVAL ID 格式的特定 OVAL 定义的标识符。
 
-**SCAP 结果数据流：**一个由 SCAP 组件以及 SCAP 组件之间的引用映射组成的捆绑包，用于保存输出（结果）内容。
+**SCAP 结果数据流：** 一个由 SCAP 组件以及 SCAP 组件之间的引用映射组成的捆绑包，用于保存输出（结果）内容。
 
-**SCAP 源数据流：**一个由 SCAP 组件以及 SCAP 组件之间的引用映射组成的捆绑包，用于保存输入（源）内容。
+**SCAP 源数据流：** 一个由 SCAP 组件以及 SCAP 组件之间的引用映射组成的捆绑包，用于保存输入（源）内容。
 
 # <a name="prepare-the-prerequisite-infrastructure"></a>准备必备的基础结构
 

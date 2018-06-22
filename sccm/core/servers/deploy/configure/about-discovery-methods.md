@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32342114"
 ---
 # <a name="about-discovery-methods-for-system-center-configuration-manager"></a>有关 System Center Configuration Manager 的发现方法
 
@@ -25,9 +26,9 @@ Configuration Manager 发现方法可用于在网络上查找不同设备，从 
 
 
 ##  <a name="bkmk_aboutForest"></a> Active Directory 林发现  
- **可配置：**是  
+ **可配置：** 是  
 
- **默认启用：**否  
+ **默认启用：** 否  
 
  可用于运行此方法的**帐户**：  
 
@@ -80,9 +81,9 @@ Active Directory 林发现操作记录在下列日志中：
 
 
 ##  <a name="bkmk_aboutGroup"></a> Active Directory 组发现  
-**可配置：**是  
+**可配置：** 是  
 
-**默认启用：**否  
+**默认启用：** 否  
 
 可用于运行此方法的**帐户**：  
 
@@ -124,9 +125,9 @@ Active Directory 组发现不支持可通过使用 Active Directory 系统发现
 
 
 ##  <a name="bkmk_aboutSystem"></a> Active Directory 系统发现  
-**可配置：**是  
+**可配置：** 是  
 
-**默认启用：**否  
+**默认启用：** 否  
 
 可用于运行此方法的**帐户**：  
 
@@ -164,9 +165,9 @@ Active Directory 组发现不支持可通过使用 Active Directory 系统发现
 
 
 ##  <a name="bkmk_aboutUser"></a> Active Directory 用户发现  
-**可配置：**是  
+**可配置：** 是  
 
-**默认启用：**否  
+**默认启用：** 否  
 
 可用于运行此方法的**帐户**：  
 
@@ -214,9 +215,9 @@ Azure AD 用户发现的操作记录在层次结构顶层站点服务器上的 S
 
 
 ##  <a name="bkmk_aboutHeartbeat"></a>检测信号发现  
-**可配置：**是  
+**可配置：** 是  
 
-**默认启用：**是  
+**默认启用：** 是  
 
 可用于运行此方法的**帐户**：  
 
@@ -254,9 +255,9 @@ Azure AD 用户发现的操作记录在层次结构顶层站点服务器上的 S
 
 
 ##  <a name="bkmk_aboutNetwork"></a>网络发现  
-**可配置：**是  
+**可配置：** 是  
 
-**默认启用：**否  
+**默认启用：** 否  
 
 可用于运行此方法的**帐户**：  
 
@@ -272,11 +273,11 @@ Azure AD 用户发现的操作记录在层次结构顶层站点服务器上的 S
 
 为使此方法成功发现资源，网络发现必须识别资源的 IP 地址以及子网掩码。 使用以下方法来确定对象的子网掩码：  
 
--   **路由器 ARP 缓存：**网络发现将查询路由器的 ARP 缓存来查找子网信息。 通常，路由器 ARP 缓存中的数据生存时间很短。 因此，当网络发现查询 ARP 缓存时，ARP 缓存可能不再包含有关所请求的对象的信息。  
+-   **路由器 ARP 缓存：** 网络发现将查询路由器的 ARP 缓存来查找子网信息。 通常，路由器 ARP 缓存中的数据生存时间很短。 因此，当网络发现查询 ARP 缓存时，ARP 缓存可能不再包含有关所请求的对象的信息。  
 
--   **DHCP：**网络发现查询指定的每个 DHCP 服务器，以发现 DHCP 服务器为其提供了租约的设备。 网络发现只支持运行 DHCP 的 Microsoft 实现的 DHCP 服务器。  
+-   **DHCP：** 网络发现查询指定的每个 DHCP 服务器，以发现 DHCP 服务器为其提供了租约的设备。 网络发现只支持运行 DHCP 的 Microsoft 实现的 DHCP 服务器。  
 
--   **SNMP 设备：**网络发现可以直接查询 SNMP 设备。 设备必须安装本地 SNMP 代理，网络发现才能查询该设备。 同时将网络发现配置为使用 SNMP 代理所使用的共同体名称。  
+-   **SNMP 设备：** 网络发现可以直接查询 SNMP 设备。 设备必须安装本地 SNMP 代理，网络发现才能查询该设备。 同时将网络发现配置为使用 SNMP 代理所使用的共同体名称。  
 
 当发现识别到可寻址 IP 的对象并且可以确定该对象的子网掩码时，它将为该对象创建 DDR。 由于不同类型的设备连接到网络，因此网络发现可以发现不支持 Configuration Manager 客户端的资源。 例如，可以发现但无法管理的设备包括打印机和路由器。  
 
@@ -411,7 +412,7 @@ Azure AD 用户发现的操作记录在层次结构顶层站点服务器上的 S
 
 
 ##  <a name="bkmk_aboutServer"></a>服务器发现  
-**可配置：**否  
+**可配置：** 否  
 
 除了用户可配置的发现方法之外，Configuration Manager 还使用名为**服务器发现** (SMS_WINNT_SERVER_DISCOVERY_AGENT) 的进程。 此发现方法为作为站点系统的计算机（如配置为管理点的计算机）创建资源记录。  
 

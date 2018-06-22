@@ -14,6 +14,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32346131"
 ---
 # <a name="using-the-microsoft-malware-protection-center-to-download-definitions"></a>使用 Microsoft 恶意软件防护中心下载定义
 

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 526ded222b69b5e75e8068ba09c5dda227c155c4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33078451"
 ---
 # <a name="how-to-deploy-clients-to-macs"></a>How to deploy clients to Macs
 
@@ -294,9 +295,9 @@ ms.lasthandoff: 05/03/2018
 
     -   **名称：删除 Mac 的 SMSID**  
 
-    -   **选择的设置：**选择“浏览”，然后选择先前指定的发现脚本。  
+    -   **选择的设置：** 选择“浏览”，然后选择先前指定的发现脚本。  
 
-    -   在**“以下值”** 字段中，输入 **“域/默认值对 (com.microsoft.ccmclient, SMSID) 不存在”**。  
+    -   在 **“以下值”** 字段中，输入 **“域/默认值对 (com.microsoft.ccmclient, SMSID) 不存在”**。  
 
     -   启用“当此设置不符合时运行指定的修正脚本” 选项。  
 

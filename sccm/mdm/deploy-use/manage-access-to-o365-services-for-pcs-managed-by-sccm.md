@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32350368"
 ---
 # <a name="manage-access-to-o365-services-for-pcs-managed-by-system-center-configuration-manager"></a>管理对由 System Center Configuration Manager 管理的电脑的 O365 服务的访问
 
@@ -76,15 +77,15 @@ ms.lasthandoff: 05/03/2018
 ### <a name="step-1-configure-compliance-policy"></a>步骤 1。 配置合规性策略  
  在 Configuration Manager 控制台中，使用以下规则创建合规性策略：  
 
--   **需要在 Azure Active Directory 中注册：**此规则检查用户的设备是否在加入到 Azure AD 的地方运行，如果不是，则在 Azure AD 中自动注册该设备。 仅 Windows 8.1 支持自动注册。 对于 Windows 7 PC，请部署 MSI 来执行自动注册。 有关相关信息，请参阅[将设备自动注册到 Azure Active Directory](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)  
+-   **需要在 Azure Active Directory 中注册：** 此规则检查用户的设备是否在加入到 Azure AD 的地方运行，如果不是，则在 Azure AD 中自动注册该设备。 仅 Windows 8.1 支持自动注册。 对于 Windows 7 PC，请部署 MSI 来执行自动注册。 有关相关信息，请参阅[将设备自动注册到 Azure Active Directory](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)  
 
 -   **所有必需更新在特定天数后的截止时间内安装**：指定宽限期的值，宽限期自用户设备上的必需更新的部署截止日期算起。 添加此规则还会自动安装所有挂起的必需更新。 指定“必需的自动更新”规则中的必需更新。   
 
--   **需要使用 BitLocker 驱动器加密功能：**此规则检查设备的主驱动器（例如 C:\\）是否使用 BitLocker 进行了加密。 如果主驱动器上未启用 Bitlocker 加密，则将阻止设备对电子邮件和 SharePoint 服务的访问。  
+-   **需要使用 BitLocker 驱动器加密功能：** 此规则检查设备的主驱动器（例如 C:\\）是否使用 BitLocker 进行了加密。 如果主驱动器上未启用 Bitlocker 加密，则将阻止设备对电子邮件和 SharePoint 服务的访问。  
 
--   **需要反恶意软件：**此规则检查是否启用并运行 System Center Endpoint Protection 或 Windows Defender。 如果未启用，则将阻止对电子邮件和 SharePoint 服务的访问。  
+-   **需要反恶意软件：** 此规则检查是否启用并运行 System Center Endpoint Protection 或 Windows Defender。 如果未启用，则将阻止对电子邮件和 SharePoint 服务的访问。  
 
--   **已由运行状况证明服务报告为运行状况良好：**此条件包括四个子规则，检查设备对设备运行状况证明服务的符合性。 有关详细信息，请参阅[运行状况证明](/sccm/core/servers/manage/health-attestation)。 
+-   **已由运行状况证明服务报告为运行状况良好：** 此条件包括四个子规则，检查设备对设备运行状况证明服务的符合性。 有关详细信息，请参阅[运行状况证明](/sccm/core/servers/manage/health-attestation)。 
 
     - **需要在设备上启用 BitLocker**
     - **需要在设备上启用安全启动** 

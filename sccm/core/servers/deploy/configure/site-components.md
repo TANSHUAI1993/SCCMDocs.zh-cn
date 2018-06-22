@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32334753"
 ---
 # <a name="site-components-for-system-center-configuration-manager"></a>System Center Configuration Manager 的站点组件
 
@@ -27,9 +28,9 @@ ms.lasthandoff: 05/03/2018
 
 ### <a name="software-distribution"></a>软件分发  
 
--   **内容分发设置：**可以指定设置，该设置可修改站点服务器将内容传输到其分发点的方式。 当增加用于并发分发设置的值时，内容分发可以使用更多的网络带宽。  
+-   **内容分发设置：** 可以指定设置，该设置可修改站点服务器将内容传输到其分发点的方式。 当增加用于并发分发设置的值时，内容分发可以使用更多的网络带宽。  
 
--   **网络访问帐户：**有关设置和使用网络访问帐户的信息，请参阅[网络访问帐户](../../../../core/plan-design/hierarchy/manage-accounts-to-access-content.md#bkmk_NAA)。  
+-   **网络访问帐户：** 有关设置和使用网络访问帐户的信息，请参阅[网络访问帐户](../../../../core/plan-design/hierarchy/manage-accounts-to-access-content.md#bkmk_NAA)。  
 
 ### <a name="software-update-point"></a>软件更新点  
 
@@ -37,7 +38,7 @@ ms.lasthandoff: 05/03/2018
 
 ### <a name="management-point"></a>管理点  
 
--   **管理点：**可设置站点，将有关其管理点的信息发布到 Active Directory 域服务。  
+-   **管理点：** 可设置站点，将有关其管理点的信息发布到 Active Directory 域服务。  
 
      Configuration Manager 客户端使用管理点查找服务，并查找站点信息（例如边界组成员身份和 PKI 证书选择选项）。 此外，客户端还使用管理点查找站点中的其他管理点以及从中下载软件的分发点。 管理点还可帮助客户端完成站点分配、下载客户端策略和上传客户端信息。  
 
@@ -52,7 +53,7 @@ ms.lasthandoff: 05/03/2018
 
  有关服务定位的信息，请参阅 [了解客户端如何查找 System Center Configuration Manager 的站点资源和服务](../../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md)。  
 
--   **在 DNS 中发布所选的 Intranet 管理点：**如果 Intranet 上的客户端无法从 Active Directory 域服务中查找管理点，请指定此选项。 但它们可以使用 DNS 服务定位资源记录 (SRV RR) 在为其分配的站点中查找管理点。  
+-   **在 DNS 中发布所选的 Intranet 管理点：** 如果 Intranet 上的客户端无法从 Active Directory 域服务中查找管理点，请指定此选项。 但它们可以使用 DNS 服务定位资源记录 (SRV RR) 在为其分配的站点中查找管理点。  
 
     要使 Configuration Manager 能够将 Intranet 管理点发布到 DNS，必须满足下列所有条件：  
 

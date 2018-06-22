@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32350735"
 ---
 # <a name="high-availability-options-for-system-center-configuration-manager"></a>System Center Configuration Manager 的高可用性选项
 
@@ -80,7 +81,7 @@ ms.lasthandoff: 05/03/2018
 
  在安装关键站点系统角色（如管理点和分发点）的多个实例时，你可以为客户端提供多余的联系点，以防特定站点系统服务器脱机。  
 
- **在站点上安装多个 SMS 提供程序实例：**SMS 提供程序为一个或多个 Configuration Manager 控制台提供管理联系点。 安装多个 SMS 提供程序时，可以提供联系点冗余以管理你的站点和层次结构。  
+ **在站点上安装多个 SMS 提供程序实例：** SMS 提供程序为一个或多个 Configuration Manager 控制台提供管理联系点。 安装多个 SMS 提供程序时，可以提供联系点冗余以管理你的站点和层次结构。  
 
 ##  <a name="bkmk_ssr"></a>站点系统角色的高可用性  
  在每个站点中，你可以部署站点系统角色，以提供想要客户端在该站点上使用的服务。 站点数据库包含站点和所有客户端的配置信息。 使用一个或多个可用选项提供站点数据库高可用性，并在需要时恢复站点和站点数据库。  

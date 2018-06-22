@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32332502"
 ---
 # <a name="introduction-to-software-inventory-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的软件清单简介
 
@@ -38,4 +39,4 @@ ms.lasthandoff: 05/03/2018
 
  Configuration Manager 可以发现双引导计算机，但只从在清单运行时处于活动状态的操作系统返回清单信息。  
 
-**移动设备：**有关在移动设备上收集安装的应用清单，请参阅[使用 Microsoft Intune 注册的移动设备的软件清单](../../../../mdm/deploy-use/software-inventory-mobile-devices.md)。
+**移动设备：** 有关在移动设备上收集安装的应用清单，请参阅[使用 Microsoft Intune 注册的移动设备的软件清单](../../../../mdm/deploy-use/software-inventory-mobile-devices.md)。

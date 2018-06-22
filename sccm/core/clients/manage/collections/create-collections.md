@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32337082"
 ---
 # <a name="how-to-create-collections-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中创建集合
 
@@ -74,7 +75,7 @@ ms.lasthandoff: 05/03/2018
 
 -   **导入查询语句** - 打开“浏览查询”对话框，在其中可以选择要用作集合的查询规则的 [Configuration Manager 查询](../../../../core/servers/manage/create-queries.md)。   
 
--   **资源类：**选择要搜索并添加到集合的资源的类型。 从“系统资源”  值中选择值以搜索从客户端计算机返回的清单数据，或从“未知计算机”  进行选择以选择未知计算机返回的值。  
+-   **资源类：** 选择要搜索并添加到集合的资源的类型。 从“系统资源”  值中选择值以搜索从客户端计算机返回的清单数据，或从“未知计算机”  进行选择以选择未知计算机返回的值。  
 
 -   **编辑查询语句** - 打开“查询语句属性”对话框，在其中可以创作要用作集合的规则的查询。 有关查询的详细信息，请参阅 [System Center Configuration Manager 的查询技术参考](../../../../core/servers/manage/queries-technical-reference.md)。  
 
@@ -134,7 +135,7 @@ ms.lasthandoff: 05/03/2018
 
 -   **属性名称**：选择与要搜索的资源类关联的属性。 例如，如果要按其组织单位 (OU) 名称来选择用户，则在“资源类”  列表中选择“用户资源”  ，并在“属性名称”  列表中选择“用户组织单位名称”  。  
 
--   **值：**输入想要搜索的值。 可以使用百分比字符 **%** 作为通配符。 例如，如果要搜索 Contoso OU 中的用户，请在此字段中输入“Contoso”。  
+-   **值：** 输入想要搜索的值。 可以使用百分比字符 **%** 作为通配符。 例如，如果要搜索 Contoso OU 中的用户，请在此字段中输入“Contoso”。  
 
 2.  在“选择资源”页上，在“资源”列表中选择要添加到集合的资源。  
 

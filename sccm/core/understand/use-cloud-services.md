@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32344698"
 ---
 # <a name="use-cloud-services-with-system-center-configuration-manager"></a>将云服务用于 System Center Configuration Manager
 
@@ -40,11 +41,11 @@ System Center Configuration Manager 支持多个基于云的选项。 这些选�
 ### <a name="azure-virtual-machines-for-cloud-based-infrastructure"></a>Azure 虚拟机（用于基于云的基础结构）  
  Configuration Manager 支持使用在 Azure 虚拟机中运行的计算机，正如在物理公司网络中进行本地运行一样。 你可在以下方案中使用 Azure 虚拟机：  
 
--   **方案 1：**可以在虚拟机中运行 Configuration Manager，并使用它管理其他虚拟机上安装的客户端。  
+-   **方案 1：** 可以在虚拟机中运行 Configuration Manager，并使用它管理其他虚拟机上安装的客户端。  
 
--   **方案 2：**可以在虚拟机中运行 Configuration Manager，并使用它管理不在 Azure 中运行的客户端。  
+-   **方案 2：** 可以在虚拟机中运行 Configuration Manager，并使用它管理不在 Azure 中运行的客户端。  
 
--   **方案 3：**可以在虚拟机中运行不同的 Configuration Manager 站点系统角色，同时在物理公司网络（具有用于通信的相应网络连接）中运行其他角色。  
+-   **方案 3：** 可以在虚拟机中运行不同的 Configuration Manager 站点系统角色，同时在物理公司网络（具有用于通信的相应网络连接）中运行其他角色。  
 
 如果网络、操作系统和硬件要求适用于在物理公司网络中安装 Configuration Manager，则相同的这些要求也适用于在 Azure 中安装 Configuration Manager。  
 

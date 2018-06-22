@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32342182"
 ---
 # <a name="deploy-and-manage-content-for-system-center-configuration-manager"></a>为 System Center Configuration Manager 部署和管理内容
 
@@ -152,9 +153,9 @@ ms.lasthandoff: 05/03/2018
 3.  在“主页”  选项卡上的“部署”  组中，单击“创建预留的内容文件” 。 创建预留内容文件向导将会打开。  
 
     > [!NOTE]  
-    >  **对于应用程序：**在“主页”选项卡上的“应用程序”组中，单击“创建预留的内容文件”。  
+    >  **对于应用程序：** 在“主页”选项卡上的“应用程序”组中，单击“创建预留的内容文件”。  
     >   
-    >  **对于包：**在“主页”选项卡上的 &lt;PackageName> 组中，单击“创建预留的内容文件”。  
+    >  **对于包：** 在“主页”选项卡上的 &lt;PackageName> 组中，单击“创建预留的内容文件”。  
 
 4.  在“常规”  页上，单击“浏览” ，选择预留的内容文件的位置，指定文件的名称，然后单击“保存” 。 你在主站点服务器、辅助站点服务器或分发点上使用此预留内容文件以导入内容和元数据。  
 

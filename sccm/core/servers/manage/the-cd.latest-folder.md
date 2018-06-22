@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32337167"
 ---
 # <a name="the-cdlatest-folder-for-system-center-configuration-manager"></a>System Center Configuration Manager 的 CD.Latest 文件夹
 
@@ -39,7 +40,7 @@ CD.Latest 文件夹包含一个名为 Redist 的文件夹，该文件夹包含�
 
 对于以下各项支出 CD.Latest 文件夹中的源文件：  
 
-1.  **备份和恢复：**若要恢复站点，必须使用 CD.Latest 文件夹中与站点匹配的源文件。 使用内置站点备份任务运行站点备份时，CD.Latest 文件夹作为备份的一部分包括在内。
+1.  **备份和恢复：** 若要恢复站点，必须使用 CD.Latest 文件夹中与站点匹配的源文件。 使用内置站点备份任务运行站点备份时，CD.Latest 文件夹作为备份的一部分包括在内。
 
     -   **当你在站点恢复中重新安装站点时，** 会从包含在你的备份中的 CD.Latest 文件夹安装站点。 此操作会使用与你的站点备份和站点数据库匹配的文件版本安装站点。  如果你无权访问正确的 CD.Latest 文件夹版本，你可以通过在实验室环境中安装站点，然后更新该站点以匹配你要恢复的版本，获取一个带有正确文件版本的 CD.Latest 文件夹。
 
