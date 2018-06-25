@@ -2,7 +2,7 @@
 title: 支持的站点系统服务器
 titleSuffix: Configuration Manager
 description: 了解可用来托管 System Center Configuration Manager 站点或站点系统角色的 Windows 版本。
-ms.date: 04/17/2018
+ms.date: 05/23/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,11 +10,12 @@ ms.assetid: 17905b4c-3895-4ad4-a69c-5e0d0fc5a8c3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: de7f340080111daf3f1b19e26aa838dc6db2e263
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: aa933186e95f084bd4e3e518e167a1cd301a4484
+ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "34474286"
 ---
 # <a name="supported-operating-systems-for-system-center-configuration-manager-site-system-servers"></a>System Center Configuration Manager 站点系统服务器支持的操作系统
 
@@ -254,6 +255,11 @@ ms.lasthandoff: 05/03/2018
     -   此 OS 上的分发点不支持多播。  
 
     -   分发点支持多种不同的配置，每种配置都有不同的要求。 在某些情况下，这些配置不仅支持在服务器上安装，而且支持在客户端操作系统上安装。 有关分发点可用选项的详细信息，请参阅[管理内容和内容基础结构](../../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。  
+
+## <a name="the-server-core-installation-of-windows-server-version-1803"></a>Windows Server（版本 1803）的服务器核心安装
+<!--503702-->从 Configuration Manager 1802 开始，支持将 [Windows Server（版本 1803）](https://docs.microsoft.com/windows-server/get-started/get-started-with-1803)用作具有以下限制的分发点：  
+  -   仅支持 x64 位版本。
+  -   此 OS 上的分发点不支持 PXE 或多播。  
 
 ## <a name="the-server-core-installation-of-windows-server-version-1709"></a>Windows Server（版本 1709）的服务器核心安装
 从 Configuration Manager 1710 开始，支持将 [Windows Server（版本 1709）](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709)用作具有以下限制的分发点：  

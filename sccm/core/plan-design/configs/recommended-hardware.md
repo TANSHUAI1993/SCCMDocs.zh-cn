@@ -2,7 +2,7 @@
 title: 推荐硬件
 titleSuffix: Configuration Manager
 description: 获取硬件建议，有助于在基本部署以上扩展 System Center Configuration Manager 环境。
-ms.date: 03/22/2018
+ms.date: 05/23/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,11 +10,12 @@ ms.assetid: 5267f0af-34d3-47a0-9ab8-986c41276e6c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ae2ba43c8e5c97dd0b8b9ba43c3e3fde1eb259f4
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 51d3a537fd7aa874fb2662bb6ec15fcfaa2124e5
+ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "34474320"
 ---
 # <a name="recommended-hardware-for-system-center-configuration-manager"></a>用于 System Center Configuration Manager 的推荐硬件
 
@@ -23,6 +24,7 @@ ms.lasthandoff: 05/03/2018
 以下建议是一些指南，可以帮助扩展 System Center Configuration Manager 环境，支持比非常基本的站点、站点系统和客户端部署更高级的部署。 这些指南并未打算将所有可能的站点和层次结构配置都包括在内。  
 
  请使用以下各部分中的这些信息作为指南来帮助你做好硬件规划，使默认的硬件配置能满足使用 Configuration Manager 可用功能的客户端和站点在处理负载方面的要求。  
+
 
 
 ##  <a name="bkmk_ScaleSieSystems"></a>站点系统  
@@ -109,15 +111,15 @@ ms.lasthandoff: 05/03/2018
 ### <a name="client-for-windows-computers"></a>Windows 计算机的客户端  
  以下是使用 Configuration Manager 管理基于 Windows 的计算机的最低要求，包括嵌入的操作系统：  
 
--   **处理器和内存：**请参阅计算机操作系统的处理器和 RAM 要求。  
+-   **处理器和内存：** 请参阅计算机操作系统的处理器和 RAM 要求。  
 
--   **磁盘空间：**500 MB 可用磁盘空间，含 5 GB 建议用于 Configuration Manager 客户端缓存。 如果使用自定义设置安装 Configuration Manager 客户端，则需要较少的磁盘空间：  
+-   **磁盘空间：** 500 MB 可用磁盘空间，含 5 GB 建议用于 Configuration Manager 客户端缓存。 如果使用自定义设置安装 Configuration Manager 客户端，则需要较少的磁盘空间：  
 
-    -   使用 CCMSetup 命令行属性/skipprereq 避免安装客户端不需要的文件。 例如，如果客户端不使用应用程序目录，则运行 **CCMSetup.exe /skipprereq:silverlight.exe**。 从 Configuration Manager 1802 开始，将不再自动安装 Silverlight。  
+    -   使用 CCMSetup 命令行属性/skipprereq 避免安装客户端不需要的文件。 例如，如果客户端不使用“应用程序目录”，则运行 `CCMSetup.exe /skipprereq:silverlight.exe`。 从 Configuration Manager 1802 开始，将不再自动安装 Silverlight。  
 
-    -   使用 Client.msi 属性 SMSCACHESIZE 设置小于默认为 5120 MB 的缓存文件。 最小大小为 1 MB。 例如， **CCMSetup.exe SMSCachesize=2** 创建大小为 2 MB 的缓存。  
+    -   使用 Client.msi 属性 SMSCACHESIZE 设置小于默认为 5120 MB 的缓存文件。 最小大小为 1 MB。 例如，`CCMSetup.exe SMSCachesize=2` 创建大小为 2 MB 的缓存。  
 
-    有关这些客户端安装设置的详细信息，请参阅[关于 System Center Configuration Manager 的客户端安装属性](../../../core/clients/deploy/about-client-installation-properties.md)。  
+    有关这些客户端安装设置的详细信息，请参阅[关于客户端安装属性](../../../core/clients/deploy/about-client-installation-properties.md)。  
 
     > [!TIP]  
     >  使用最小磁盘空间安装客户端适用于 Windows Embedded 设备，此设备的磁盘大小通常比标准 Windows 计算机的磁盘大小要小。  
@@ -126,11 +128,11 @@ ms.lasthandoff: 05/03/2018
 
  以下是 Configuration Manager 中可选功能的其他最低硬件要求。  
 
--   **操作系统部署：**384 MB RAM  
+-   **操作系统部署：** 384 MB RAM  
 
--   **软件中心：**500 MHz 处理器  
+-   **软件中心：** 500 MHz 处理器  
 
--   **远程控制：**Pentium 4 Hyper-Threaded 3 GHz（单核）或类似的 CPU，包含至少 1 GB RAM 以获得最佳体验  
+-   **远程控制：** Pentium 4 Hyper-Threaded 3 GHz（单核）或类似的 CPU，包含至少 1 GB RAM 以获得最佳体验  
 
 ### <a name="client-for-linux-and-unix"></a>适用于 Linux 和 UNIX 的客户端  
  以下是对使用 Configuration Manager 管理的 Linux 和 UNIX 服务器的最低要求。  
@@ -173,6 +175,6 @@ ms.lasthandoff: 05/03/2018
 
 |角色|CPU（核心数）|内存(GB)|硬盘空间 (GB)|  
 |----------|---------------|-------------------|-----------------------|  
-|站点和数据库服务器|2 - 4|7 - 12|100|  
+|站点和数据库服务器|2 - 4|8 - 12|100|  
 |站点系统服务器|1 - 4|2 - 4|50|  
 |客户端|1 - 2|1 - 3|30|  

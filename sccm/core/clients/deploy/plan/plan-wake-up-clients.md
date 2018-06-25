@@ -1,8 +1,8 @@
 ---
 title: 唤醒客户端
 titleSuffix: Configuration Manager
-description: 计划如何在 System Center Configuration Manager 中唤醒客户端。
-ms.date: 04/23/2017
+description: 计划如何在 System Center Configuration Manager 中使用 LAN 唤醒 (WOL) 唤醒客户端。
+ms.date: 05/23/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,31 +10,32 @@ ms.assetid: 52ee82b2-0b91-4829-89df-80a6abc0e63a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: aa5a0b30526f66add7dfb87fa988ed502cca1ee1
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 2f36ff6c28bd8a3fa23599652aff82ef0c721cad
+ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "34474134"
 ---
 # <a name="plan-how-to-wake-up-clients-in-system-center-configuration-manager"></a>计划如何在 System Center Configuration Manager 中唤醒客户端
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
- Configuration Manager 支持两项局域网 (LAN) 唤醒技术，以在你要安装必需的软件（如软件更新和应用程序）时唤醒处于睡眠模式下的计算机：传统唤醒数据包和 AMT 开机命令。  
+ Configuration Manager 支持传统唤醒数据包，以在你要安装必需的软件（如软件更新和应用程序）时唤醒处于睡眠模式下的计算机。  
 
 可以使用唤醒代理客户端设置来对传统唤醒数据包方法进行补充。 唤醒代理使用对等协议和选定的计算机来检查子网上的其他计算机是否已唤醒并在必要时唤醒这些计算机。 在为 LAN 唤醒配置站点并为唤醒代理配置客户端后，过程将按以下方式工作：  
 
-1.  安装有 Configuration Manager 的客户端并且未在子网上休眠的计算机将检查子网上的其他计算机是否已唤醒。 它们通过每隔 5 秒就相互发送 TCP/IP ping 命令来完成此操作。  
+1.  安装有 Configuration Manager 的客户端并且未在子网上休眠的计算机将检查子网上的其他计算机是否已唤醒。 它们通过每隔五秒就相互发送 TCP/IP ping 命令来完成此检查。  
 
 2.  如果其他计算机没有响应，则假定它们已休眠。 已唤醒的计算机将成为子网的“管理器计算机”。  
 
      可能由于计算机休眠以外的原因（例如，计算机已关闭、已从网络中移除或者不再应用代理唤醒客户端设置）而导致计算机可能无法响应，因此将于当地时间每天下午两点向计算机发送唤醒数据包 。 未响应的计算机将不会被认为在休眠并且唤醒代理不会将其唤醒。  
 
-     若要支持唤醒代理，必须为每个子网至少唤醒三台计算机。 若要实现此目的，必须为子网随机选择三台计算机作为“守护计算机”。 这意味着尽管任何配置的电源策略在一段不活动时间后处于睡眠或休眠状态，它们也将保持唤醒状态。 例如为了维护任务，守护计算机将遵守关闭或重启命令。 如果发生此事，则其余守护计算机将唤醒子网上的另一计算机，从而子网将继续拥有三台守护计算机。  
+     若要支持唤醒代理，必须为每个子网至少唤醒三台计算机。 若要实现此要求，必须为子网随机选择三台计算机作为“守护计算机”。 该状态意味着尽管任何配置的电源策略在一段不活动时间后处于睡眠或休眠状态，它们也将保持唤醒状态。 例如为了维护任务，守护计算机将遵守关闭或重启命令。 如果发生此操作，则其余守护计算机将唤醒子网上的另一计算机，从而子网将继续拥有三台守护计算机。  
 
 3.  管理器计算机将要求网络交换机为睡眠计算机将网络流量重定向到自身。  
 
-     此重定向是通过管理器计算机对使用睡眠计算机的 MAC 地址作为源地址的以太网帧进行广播实现的。 这使网络交换机按睡眠计算机已移至管理器计算机所在的同一端口来处理。 管理器计算机还会发送 ARP 包，以使睡眠计算机将 ARP 缓存中的条目保持最新。 管理器计算机还将代表睡眠计算机响应 ARP 请求，并使用睡眠计算机的 MAC 地址进行答复。  
+     此重定向是通过管理器计算机对使用睡眠计算机的 MAC 地址作为源地址的以太网帧进行广播实现的。 此行为使网络交换机按睡眠计算机已移至管理器计算机所在的同一端口来处理。 管理器计算机还会发送 ARP 包，以使睡眠计算机将 ARP 缓存中的条目保持最新。 管理器计算机还将代表睡眠计算机响应 ARP 请求，并使用睡眠计算机的 MAC 地址进行答复。  
 
     > [!WARNING]  
     >  在此过程中，睡眠计算机的 IP 至 MAC 映射将保持不变。 唤醒代理的工作方式是将其他网络适配器正在使用另一网络适配器所注册端口的情况通知网络交换机。 但是，这种称作 MAC 漂移的行为在标准网络操作中并不常见。 有些网络监控工具会查找此行为并可假定存在错误。 因此，这些监控工具可在你使用唤醒代理时生成警报或关闭端口。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 05/03/2018
 > [!IMPORTANT]  
 >  如果由独立团队负责网络基础结构和网络服务，则在评估和测试期间通知此团队并将其包括进来。 例如，在使用 802.1X 网络访问控制的网络上，唤醒代理将无法工作，而且可能会破坏网络服务。 此外，唤醒代理可能会导致某些网络监视工具在检测到与唤醒其他计算机相关的流量时生成警报。  
 
--   支持的客户端是 Windows 7、Windows 8、Windows Server 2008 R2 和 Windows Server 2012。  
+-   Wake On LAN 支持所有在[客户端和设备支持的操作系统](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices)中列为受支持客户端的 Windows 操作系统。  
 
 -   不支持在虚拟机上运行来宾操作系统。  
 
@@ -60,7 +61,7 @@ ms.lasthandoff: 05/03/2018
 
 -   如果计算机具有多个网络适配器，则你无法配置即将用于唤醒代理的适配器；选择是不确定的。 不过，所选的适配器记录在 SleepAgent_<DOMAIN\>@SYSTEM_0.log 文件中。  
 
--   网络必须允许 ICMP 回显请求（至少在子网中）。 你无法将用于发送 ICMP ping 命令的间隔配置为 5 秒。  
+-   网络必须允许 ICMP 回显请求（至少在子网中）。 你无法将用于发送 ICMP ping 命令的间隔配置为五秒。  
 
 -   通信未加密并且未经过身份验证，不支持 IPsec。  
 
@@ -80,7 +81,7 @@ ms.lasthandoff: 05/03/2018
 
  若要使用唤醒代理，除了配置主站点之外，还必须部署电源管理唤醒代理客户端设置。  
 
-还必须决定是使用子网导向型广播包还是单播包以及要使用什么 UDP 端口号。 默认情况下，传统唤醒数据包通过 UDP 端口 9 传输，但为便于提高安全级别，你可以为站点选择备用端口（如果干预路由器和防火墙支持该备用端口）。  
+决定是使用子网导向型广播包还是单播包以及要使用什么 UDP 端口号。 默认情况下，传统唤醒数据包通过 UDP 端口 9 传输，但为便于提高安全级别，你可以为站点选择备用端口（如果干预路由器和防火墙支持该备用端口）。  
 
 ### <a name="choose-between-unicast-and-subnet-directed-broadcast-for-wake-on-lan"></a>为 LAN 唤醒在单播和子网导向型广播之间选择  
  如果选择通过发送传统的唤醒数据包来唤醒计算机，则你必须决定是传输单播包，还是传输子网导向型广播包。 如果使用唤醒代理，则必须使用单播包。 或者，可使用下表来帮助你确定要选择的传输方法。  

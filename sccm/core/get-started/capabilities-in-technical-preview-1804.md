@@ -2,7 +2,7 @@
 title: Technical Preview 1804
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager Technical Preview 1804 版中提供的新功能。
-ms.date: 04/25/2018
+ms.date: 05/21/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,11 +10,12 @@ ms.assetid: 8af43618-ec60-4c3e-a007-12399d1335b9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0fcdcc984e267e6c54ad7c6194e8494854f0a1ee
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: a796c8cc23ab15e3fbeb09fca6ffa6f1dbd45bc3
+ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "34474337"
 ---
 # <a name="capabilities-in-technical-preview-1804-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1804 中的功能
 
@@ -28,9 +29,15 @@ ms.lasthandoff: 05/03/2018
 <!--  Known Issues Template   -->
 ## <a name="known-issues-in-this-technical-preview"></a>此 Technical Preview 中的已知问题
 
+### <a name="bkmk_ki-prereqs"></a> 下载更新的安装程序链接不起作用
+<!--514334-->如果从媒体运行安装程序，初始页将包含名为“获取最新的 Configuration Manager 更新”的链接，该链接在此版本中不起作用。 此链接用于下载安装所需的文件。
+
+#### <a name="workaround"></a>解决方法
+若要下载安装所需的文件，请运行安装向导。 在“先决条件下载”页上，使用“下载所需文件”选项。 
+
+
 ### <a name="bkmk_appcathttps"></a> 应用程序目录 Web 服务点不能是启用了 HTTPS 的服务点
-<!--512637-->
-如果应用程序目录 Web 服务点是启用了 HTTPS 的服务点：
+<!--512637--> 如果应用程序目录 Web 服务点是启用了 HTTPS 的服务点：
 
 - 可供用户使用的已部署的应用程序不会在软件中心显示  
 
@@ -50,8 +57,7 @@ ms.lasthandoff: 05/03/2018
 
 
 ## <a name="configure-a-remote-content-library-for-the-site-server"></a>配置用于站点服务器的远程内容库  
-<!--1357525-->
-若要释放主站点服务器上的硬盘空间，请将其[内容库](/sccm/core/plan-design/hierarchy/the-content-library)重新定位到另一个存储位置。 可以将内容库移至站点服务器上的另一个驱动器、单独服务器或者存储区域网络 (SAN) 中的容错磁盘。 我们建议 SAN，因为它提供了弹性存储，随着时间的推移，它会增长或收缩，以满足不断变化的内容需求。 
+<!--1357525-->若要释放主站点服务器上的硬盘空间，请将其[内容库](/sccm/core/plan-design/hierarchy/the-content-library)重新定位到另一个存储位置。 可以将内容库移至站点服务器上的另一个驱动器、单独服务器或者存储区域网络 (SAN) 中的容错磁盘。 我们建议 SAN，因为它提供了弹性存储，随着时间的推移，它会增长或收缩，以满足不断变化的内容需求。 
 
 此远程内容库是[站点服务器角色高可用性](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability)的新先决条件。 
 
@@ -85,7 +91,7 @@ ms.lasthandoff: 05/03/2018
 发送笑脸！ 现在可以就你的体验直接告知 Configuration Manager 团队。 从 Configuration Manager 控制台发送反馈很简单。 我们希望听到你的所有反馈：表扬、问题和建议。  
 
 ### <a name="try-it-out"></a>试试看！
- 尝试完成任务。 然后发送反馈，以便我们了解其运作状况。  
+ 尝试完成任务。 然后发送**反馈**，以便我们了解其运作状况。  
 
 1. 在 Configuration Manager 控制台中，单击功能区上方右上角的笑脸按钮。  
 
@@ -210,8 +216,7 @@ Configuration Manager 服务器和客户端工具现在 Technical Preview 中提
 
 
 ## <a name="exclude-active-directory-containers-from-discovery"></a>从发现中排除 Active Directory 容器
-<!--1358143-->
-若要减少发现的对象数，现在可以从 Active Directory 系统发现中排除特定容器。 此功能是 [UserVoice 反馈](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8414520-exclude-virtual-cluster-and-ou-from-discovery)的结果。
+<!--1358143--> 若要减少发现的对象数，现在可以从 Active Directory 系统发现中排除特定容器。 此功能是 [UserVoice 反馈](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8414520-exclude-virtual-cluster-and-ou-from-discovery)的结果。
 
 ### <a name="try-it-out"></a>试试看！
  尝试完成任务。 然后发送[反馈](#bkmk_feedback)，以便我们了解其运作状况。
@@ -257,8 +262,7 @@ Configuration Manager 服务器和客户端工具现在 Technical Preview 中提
 
 
 ## <a name="filter-automatic-deployment-rules-by-software-update-architecture"></a>通过软件更新体系结构更新自动部署规则
- <!--1322266-->
-现在可以筛选自动部署规则以排除 Itanium 和 ARM64 等体系结构。
+ <!--1322266--> 现在可以筛选自动部署规则以排除 Itanium 和 ARM64 等体系结构。
 
 ### <a name="try-it-out"></a>试试看！
 尝试完成任务。 然后发送[反馈](#bkmk_feedback)，以便我们了解其运作状况。
