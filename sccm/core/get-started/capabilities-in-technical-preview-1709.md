@@ -177,7 +177,7 @@ ccmsetup.msi CCMSETUPCMD="/mp:https://contoso.cloudapp.net/CCM_Proxy_MutualAuth/
 > [!Tip]
 >可通过使用以下步骤查找站点的命令行参数：     
 > 1. 在 Configuration Manager 控制台中，转到“管理” > “概述” > “云服务” > “共同管理”。  
-> 2. 在“主页”选项卡的“管理”组中，选择“配置共同管理”以打开“共同管理载入”向导 ****。    
+> 2. 在“主页”选项卡的“管理”组中，选择“配置共同管理”以打开“共同管理载入”向导。 ****    
 > 3. 在“订阅”页中，单击“登录”并登录到 Intune 租户，然后单击“下一步”。    
 > 4. 在“启用”页面的“在 Intune 中注册的设备”部分中单击“复制”，将命令行复制到剪贴板，然后将其保存，用在创建应用的过程中。  
 > 5. 单击“取消”退出向导。
@@ -200,7 +200,7 @@ ccmsetup.msi CCMSETUPCMD="/mp:https://contoso.cloudapp.net/CCM_Proxy_MutualAuth/
 在上一节中，你准备了 Windows 10 设备进行共同管理。 这些设备现已联接到 AD 和 Azure AD，并且它们已在 Intune 中注册，具有 Configuration Manager 客户端。 你可能仍然具有已联接到 AD 且具有 Configuration Manager 客户端的 Windows 10 设备，但该设备未联接到 Azure AD 或在 Intune 中注册。 以下步骤介绍如何启用共同管理，准备其余的 Windows 10 设备（没有进行 Intune 注册的 Configuration Manager 客户端）进行共同管理，并允许开始将特定的 Configuration Manager 工作负荷切换到 Intune。
 
 1. 在 Configuration Manager 控制台中，转到“管理” > “概述” > “云服务” > “共同管理”。    
-2. 在“主页”选项卡的“管理”组中，选择“配置共同管理”以打开“共同管理载入”向导 ****。    
+2. 在“主页”选项卡的“管理”组中，选择“配置共同管理”以打开“共同管理载入”向导。 ****    
 3. 在“订阅”页中，单击“登录”并登录到 Intune 租户，然后单击“下一步”。   
 4. 在“暂存”页中，配置以下设置并单击“下一步”：
     - 试点组：试点组包含选定的一个或多个集合。 在分阶段推出共同管理过程中使用此组。 可从小型测试集合开始，然后随着向更多用户和设备推出共同管理，向试点组添加更多集合。 可随时在共同管理属性中更改试点组中的集合。
