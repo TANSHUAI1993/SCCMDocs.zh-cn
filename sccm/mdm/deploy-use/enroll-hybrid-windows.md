@@ -65,7 +65,7 @@ ms.locfileid: "32349620"
 
 ### <a name="configure-automatic-mdm-enrollment"></a>配置自动进行 MDM 注册
 
-1. 登录到 [Azure 管理门户](https://portal.azure.com) (https://manage.windowsazure.com)， 然后选择“Azure Active Directory”。
+1. 登录到 [Azure 管理门户](https://portal.azure.com) (https://manage.windowsazure.com) ，然后选择“Azure Active Directory”。
 
   ![Azure 门户的屏幕截图](../media/auto-enroll-azure-main.png)
 

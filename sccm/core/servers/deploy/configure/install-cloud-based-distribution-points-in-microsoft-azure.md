@@ -42,7 +42,7 @@ ms.locfileid: "32338408"
 
 ### <a name="to-set-up-a-cloud-service-in-azure-for-a-distribution-point"></a>在 Azure 中为分发点设置云服务  
 
-1.  打开 Web 浏览器，转到 Azure 门户（网址为 https://manage.windowsazure.com），并访问你的帐户。  
+1.  打开 Web 浏览器，转到 Azure 门户 网址为 (https://manage.windowsazure.com） ，并访问你的帐户。  
 
 2.  单击“托管服务、存储帐户和 CDN”，然后选择“管理证书”。  
 
