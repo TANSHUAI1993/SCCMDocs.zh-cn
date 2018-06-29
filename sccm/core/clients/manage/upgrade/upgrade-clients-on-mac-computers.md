@@ -15,6 +15,7 @@ ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32334152"
 ---
 # <a name="how-to-upgrade-clients-on-mac-computers-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中升级 Mac 计算机的客户端
 
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/03/2018
 
  有关详细信息，请参阅[为 Mac 计算机创建和部署应用程序的补充过程](/sccm/apps/get-started/creating-mac-computer-applications#supplemental-procedures-to-create-and-deploy-applications-for-mac-computers)。  
 
-## <a name="step-5-create-and-deploy-an-application-containing-the-mac-client-files"></a>**步骤 5：**创建并部署包含 Mac 客户端文件的应用程序  
+## <a name="step-5-create-and-deploy-an-application-containing-the-mac-client-files"></a>**步骤 5：** 创建并部署包含 Mac 客户端文件的应用程序  
 
 1.  在 Configuration Manager 控制台中，从包含客户端安装文件的“CMClient.pkg.cmmac”文件创建应用程序。  
 
