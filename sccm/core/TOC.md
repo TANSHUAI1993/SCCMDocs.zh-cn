@@ -112,6 +112,7 @@
 
 <!-- Only show the current plus three; four total) -->
 ##   [技术预览](get-started/technical-preview.md)
+###  [1806.2 中的功能](get-started/capabilities-in-technical-preview-1806-2.md)
 ###  [1806 中的功能](get-started/capabilities-in-technical-preview-1806.md)
 ###  [1805 中的功能](get-started/capabilities-in-technical-preview-1805.md)
 ###  [1804 中的功能](get-started/capabilities-in-technical-preview-1804.md)
