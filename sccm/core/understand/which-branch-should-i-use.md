@@ -10,12 +10,12 @@ ms.assetid: a3be4f8f-3d44-4e3c-9fa1-e85f30a36e72
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 258d8ac160e9ee31189f8771fd6109d1bb17f714
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 4331ec4120141ab9aa20301b9a99c3c6ebeef568
+ms.sourcegitcommit: 0305e710f634529793ae73e5aac24168ee4fe02f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32341332"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042739"
 ---
 # <a name="which-branch-of-configuration-manager-should-i-use"></a>应该使用 Configuration Manager 的哪一个分支？
 
@@ -37,7 +37,7 @@ System Center Configuration Manager 的三个可用分支：Current Branch、Lon
 
 有关软件保障和许可选项的详细信息，请参阅 [System Center Configuration Manager 的许可和分支](learn-more-editions.md)以及 [Configuration Manager 分支和许可的常见问题解答](/sccm/core/understand/product-and-licensing-faq)。
 
-Current Branch 一年更新几次，更新时提供新的功能。 每个更新版本在其发布后一年内受支持。 请在 1 年期限到期之前或到期日当天更新到 Current Branch 的较新版本。 较新版本的更新以控制台内更新的形式提供。
+Microsoft 计划每年发布几次 System Center Configuration Manager Current Branch 的更新。 对于 1710 前发布的 Configuration Manager 版本，支持期为 12 个月。 从 1710 版本开始后，对于每个更新版本，仍为自其通用版本 (GA) 发布日期起 18 个月内受支持。 我们会在整个支持期内始终提供技术支持。 但是，我们的支持结构是动态的，会发展为两个不同的服务阶段，具体取决于最新 Current Branch 版本的可用性。 （有关详细信息，请参阅名为[对 System Center Configuration Manager Current Branch 版本的支持](https://docs.microsoft.com/sccm/core/servers/manage/current-branch-versions-supported)的主题。 较新版本的更新以控制台内更新的形式提供。
 
 若要将 Current Branch 作为新站点进行安装，请使用[基线介质](/sccm/core/servers/manage/updates#baseline-and-update-versions)。 也可使用基线介质从 System Center 2012 Configuration Manager Service Pack 2 或 System Center 2012 R2 Configuration Manager Service Pack 1 升级。 对此介质的访问权取决于组织对 System Center Configuration Manager 的许可方式。 
 

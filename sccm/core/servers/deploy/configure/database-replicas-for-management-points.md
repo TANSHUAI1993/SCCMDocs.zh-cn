@@ -10,11 +10,12 @@ ms.assetid: b06f781b-ab25-4d9a-b128-02cbd7cbcffe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0893df43f7979fa3c36ba90ab400e399f96e6228
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 5ab632367e6cc30210db00a61ee4d3b9c414fdbd
+ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36260806"
 ---
 # <a name="database-replicas-for-management-points-for-system-center-configuration-manager"></a>System Center Configuration Manager 管理点的数据库副本
 
@@ -78,9 +79,9 @@ System Center Configuration Manager 主站点可以使用数据库副本来减�
 
     -   [移动发布数据库副本的站点服务器数据库](#BKMK_DBReplicaOps_Move)  
 
--   **升级到 System Center Configuration Manager**：将站点从 System Center 2012 Configuration Manager 升级到 System Center Configuration Manager 之前，必须对管理点禁用数据库副本。  站点升级之后，可以为管理点重新配置数据库副本。  
+-   **升级到 System Center Configuration Manager**：将站点从 System Center 2012 Configuration Manager 升级到 System Center Configuration Manager Current Branch 或将 Configuration Manager Current Branch 更新到最新版本之前，必须对管理点禁用数据库副本。  站点升级之后，可以为管理点重新配置数据库副本。  
 
--   **单个 SQL Server 上的多个副本：**如果将数据库副本服务器配置为承载管理点的多个数据库副本（每个副本必须位于单独的实例上），则必须使用修改后的配置脚本（从下一节的第 4 步开始）来防止此服务器上先前配置的数据库副本覆盖当前使用的自签名证书。  
+-   **单个 SQL Server 上的多个副本：** 如果将数据库副本服务器配置为承载管理点的多个数据库副本（每个副本必须位于单独的实例上），则必须使用修改后的配置脚本（从下一节的第 4 步开始）来防止此服务器上先前配置的数据库副本覆盖当前使用的自签名证书。  
 
 ##  <a name="BKMK_DBReplica_Config"></a> 配置数据库副本  
 若要配置数据库副本，需要以下步骤：  

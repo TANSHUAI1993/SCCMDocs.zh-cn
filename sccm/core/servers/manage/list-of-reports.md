@@ -10,12 +10,12 @@ ms.assetid: b7332ed3-8003-454b-bb12-1fdf8721425c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d486907a7819758b27c9a644214ed4d5ec873762
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 705247080fc99a6a9dd7dfcb773b2220283cd7a6
+ms.sourcegitcommit: e3f7bb8cec4b37a311bc86098297534cab947de8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342539"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36759026"
 ---
 # <a name="list-of-reports-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的报表列表
 
@@ -28,7 +28,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="administrative-security"></a>管理安全  
- 以下报表在“管理安全”  类别下列出。  
+ 以下 6 份报表在“管理安全” 类别下列出。  
 
 |报告名称|说明|  
 |-----------------|-----------------|  
@@ -42,7 +42,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="alerts"></a>警报  
-
+以下 2 份报表在“警报” 类别下列出。  
 |报告名称|说明|  
 |-----------------|-----------------|  
 |**警报记分卡**|显示在指定的开始和完成日期之间生成的所有已推迟警报的摘要。|  
@@ -51,6 +51,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="asset-intelligence"></a>资产智能  
+以下 62 份报表在“资产智能” 类别下列出。  
 
 |报告名称|说明|  
 |-----------------|-----------------|  
@@ -120,6 +121,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="client-push"></a>客户端推送  
+以下 4 份报表在“客户端推送”类别下列出。  
 
 |报告名称|说明|  
 |-----------------|-----------------|  
@@ -131,6 +133,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="client-status"></a>客户端状态  
+以下 7 份报表在“客户端状态”类别下列出。  
 
 |报告名称|说明|  
 |-----------------|-----------------|  
@@ -145,6 +148,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="company-resource-access"></a>公司资源访问  
+以下 3 份报表在“公司资源访问”类别下列出。 
 
 |报告名称|说明|  
 |-----------------|-----------------|  
@@ -155,6 +159,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="compliance-and-settings-management"></a>符合性和设置管理  
+以下 22 份报表在“符合性和设置管理”类别下列出。 
 
 |报告名称|说明|  
 |-----------------|-----------------|  
@@ -184,6 +189,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="device-management"></a>设备管理  
+以下 37 份报表在“设备管理”类别下列出。 
 
 |报告名称|说明|  
 |-----------------|-----------------|  
@@ -228,6 +234,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="driver-management"></a>驱动程序管理  
+以下 13 份报表在“驱动程序管理”类别下列出。 
 
 |报告名称|说明|  
 |-----------------|-----------------|  
@@ -248,7 +255,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="endpoint-protection"></a>Endpoint Protection  
-
+以下 6 份报表在“Endpoint Protection”类别下列出。 
 |报告名称|说明|  
 |-----------------|-----------------|  
 |**反恶意软件活动报告**|显示反恶意软件活动的概述。|  
@@ -261,7 +268,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="hardware---cd-rom"></a>硬件 - CD-ROM  
-
+以下 4 份报表在“硬件 - CD-ROM”类别下列出。 
 |报告名称|说明|  
 |-----------------|-----------------|  
 |**特定计算机的 CD-ROM 信息**|显示有关指定计算机上的 CD-ROM 驱动器的信息。|  
@@ -272,6 +279,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="hardware---disk"></a>硬件 - 磁盘  
+以下 8 份报表在“硬件 - 磁盘”  类别下列出。 
 
 |报告名称|说明|  
 |-----------------|-----------------|  
@@ -287,6 +295,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="hardware---general"></a>硬件 - 常规  
+以下 5 份报表在“硬件 - 常规”类别下列出。
 
 |报告名称|说明|  
 |-----------------|-----------------|  
@@ -299,6 +308,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="hardware---memory"></a>硬件 - 内存  
+以下 5 份报表在“硬件 - 内存”类别下列出。
 
 |报告名称|说明|  
 |-----------------|-----------------|  
@@ -311,6 +321,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="hardware---modem"></a>硬件 - 调制解调器  
+以下 3 份报表在“硬件 - 调制解调器”类别下列出。
 
 |报告名称|说明|  
 |-----------------|-----------------|  
@@ -321,6 +332,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="hardware---network-adapter"></a>硬件 - 网络适配器  
+以下 3 份报表在“硬件 - 网络适配器”类别下列出。
 
 |报告名称|说明|  
 |-----------------|-----------------|  
@@ -331,6 +343,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="hardware---processor"></a>硬件 - 处理器  
+以下 5 份报表在“硬件 - 处理器”类别下列出。
 
 |报告名称|说明|  
 |-----------------|-----------------|  
@@ -343,6 +356,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="hardware---scsi"></a>硬件 - SCSI  
+以下 5 份报表在“硬件 - SCSI”类别下列出。
 
 |报告名称|说明|  
 |-----------------|-----------------|  
@@ -353,6 +367,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="hardware---security"></a>硬件 - 安全性
+以下 1 份报表在“硬件 - 安全性”类别下列出。
 
 |报告名称|说明|  
 |-----------------|-----------------|  
@@ -361,6 +376,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="hardware---sound-card"></a>硬件 – 声卡  
+以下 3 份报表在“硬件 - SCSI”类别下列出。
 
 |报告名称|说明|  
 |-----------------|-----------------|  
@@ -371,6 +387,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="hardware---video-card"></a>硬件 - 视频卡  
+以下 3 份报表在“硬件 - 视频卡”类别下列出。
 
 |报告名称|说明|  
 |-----------------|-----------------|  
@@ -381,6 +398,8 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="migration"></a>迁移  
+
+以下 5 份报表在“迁移”类别下列出。
 
 |报告名称|说明|  
 |-----------------|-----------------|  
@@ -394,6 +413,8 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 ## <a name="network"></a>网络  
 
+以下 6 份报表在“网络”类别下列出。
+
 |报告名称|说明|  
 |-----------------|-----------------|  
 |**按子网统计 IP 地址**|显示对每个 IP 子网列出清单的 IP 地址的数量。|  
@@ -406,6 +427,9 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="operating-system"></a>操作系统  
+
+以下 10 份报表在“操作系统”类别下列出。
+
 
 |报告名称|说明|  
 |-----------------|-----------------|  
@@ -423,6 +447,8 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="power-management"></a>电源管理  
+
+以下 18 份报表在“电源管理”类别下列出。
 
 |报告名称|说明|  
 |-----------------|-----------------|  
@@ -448,6 +474,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="replication-traffic"></a>复制流量  
+以下 10 份报表在“复制流量”类别下列出。
 
 |报告名称|说明|  
 |-----------------|-----------------|  
@@ -465,6 +492,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="site---client-information"></a>站点 - 客户端信息  
+以下 19 份报表在“站点 - 客户端信息”类别下列出。
 
 |报告名称|说明|  
 |-----------------|-----------------|  
@@ -491,6 +519,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="site---discovery-and-inventory-information"></a>站点 - 发现和清单信息  
+以下 10 份报表在“站点 - 发现和清单信息”类别下列出。
 
 |报告名称|说明|  
 |-----------------|-----------------|  
@@ -508,6 +537,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="site---general"></a>站点 - 常规  
+以下 3 份报表在“站点 - 常规”类别下列出。
 
 |报告名称|说明|  
 |-----------------|-----------------|  
@@ -518,6 +548,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="site---server-information"></a>站点 - 服务器信息  
+以下 1 份报表在“站点 - 服务器信息”类别下列出。
 
 |报告名称|说明|  
 |-----------------|-----------------|  
@@ -526,6 +557,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="software---companies-and-products"></a>软件 - 公司和产品  
+以下 15 份报表在“软件 - 公司和产品”类别下列出。
 
 |报告名称|说明|  
 |-----------------|-----------------|  
@@ -548,6 +580,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="software---files"></a>软件 - 文件  
+以下 5 份报表在“软件 - 文件”类别下列出。
 
 |报告名称|说明|  
 |-----------------|-----------------|  
@@ -560,6 +593,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="software-distribution---application-monitoring"></a>软件分发 - 应用程序监视  
+以下 10 份报表在“软件分发 - 应用程序监视”类别下列出。
 
 |报告名称|说明|  
 |-----------------|-----------------|  
@@ -577,6 +611,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="software-distribution---collections"></a>软件分发 - 集合  
+以下 3 份报表在“软件分发 - 集合”类别下列出。
 
 |报告名称|说明|  
 |-----------------|-----------------|  
@@ -587,6 +622,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="software-distribution---content"></a>软件分发 - 内容  
+以下 16 份报表在“软件分发 - 内容”类别下列出。
 
 |报告名称|说明|  
 |-----------------|-----------------|  
@@ -609,7 +645,8 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 
-## <a name="software-distribution---package-and-program-deployment"></a>软件分发 - 包和程序部署  
+## <a name="software-distribution---package-and-program-deployment"></a>软件分发 - 包和程序部署 
+以下 5 份报表在“软件分发 - 包和程序部署”类别下列出。
 
 |报告名称|说明|  
 |-----------------|-----------------|  
@@ -622,6 +659,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="software-distribution---package-and-program-deployment-status"></a>软件分发 - 包和程序部署状态  
+以下 5 份报表在“软件分发 - 包和程序部署状态”类别下列出。
 
 |报告名称|说明|  
 |-----------------|-----------------|  
@@ -634,6 +672,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="software-metering"></a>软件计数  
+以下 13 份报表在“软件计数”类别下列出。
 
 |报告名称|说明|  
 |-----------------|-----------------|  
@@ -654,6 +693,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="software-updates---a-compliance"></a>软件更新 - A 符合性  
+以下 8 份报表在“软件更新 - A 符合性”类别下列出。
 
 |报告名称|说明|  
 |-----------------|-----------------|  
@@ -669,6 +709,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="software-updates---b-deployment-management"></a>软件更新 - B 部署管理  
+以下 8 份报表在“软件更新 - B 部署管理”类别下列出。
 
 |报告名称|说明|  
 |-----------------|-----------------|  
@@ -684,6 +725,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="software-updates---c-deployment-states"></a>软件更新 - C 部署状态  
+以下 6 份报表在“软件更新 - C 部署状态”类别下列出。
 
 |报告名称|说明|  
 |-----------------|-----------------|  
@@ -697,6 +739,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="software-updates---d-scan"></a>软件更新 - D 扫描  
+以下 4 份报表在“软件更新 - D 扫描”类别下列出。
 
 |报告名称|说明|  
 |-----------------|-----------------|  
@@ -709,6 +752,8 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 ## <a name="software-updates---e-troubleshooting"></a>软件更新 - E 疑难解答  
 
+以下 4 份报表在“软件更新 - E 疑难解答”类别下列出。
+
 |报告名称|说明|  
 |-----------------|-----------------|  
 |**疑难解答 1 - 扫描错误**|显示站点上的扫描错误以及遇到各个错误的计算机的计数。|  
@@ -719,6 +764,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="state-migration"></a>状态迁移  
+以下 3 份报表在“状态迁移”类别下列出。
 
 |报告名称|说明|  
 |-----------------|-----------------|  
@@ -729,6 +775,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="status-messages"></a>状态消息  
+以下 12 份报表在“状态消息”类别下列出。
 
 |报告名称|说明|  
 |-----------------|-----------------|  
@@ -749,6 +796,8 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 ## <a name="status-messages---audit"></a>状态消息 - 审核  
 
+以下 3 份报表在“状态消息 - 审核”类别下列出。
+
 |报告名称|说明|  
 |-----------------|-----------------|  
 |**特定用户的所有审核消息**|显示指定用户的所有审核消息摘要。 审核消息描述 Configuration Manager 控制台中执行的操作，即在 Configuration Manager 中添加、修改或删除对象。|  
@@ -758,6 +807,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="task-sequence---deployment-status"></a>任务序列 - 部署状态  
+以下 11 份报表在“任务序列 - 部署状态”类别下列出。
 
 |报告名称|说明|  
 |-----------------|-----------------|  
@@ -776,6 +826,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="task-sequence---deployments"></a>任务序列 - 部署  
+以下 11 份报表在“任务序列 - 部署”类别下列出。
 
 |报告名称|说明|  
 |-----------------|-----------------|  
@@ -794,6 +845,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="task-sequence---progress"></a>任务序列 - 进度  
+以下 5 份报表在“任务序列 - 进度”类别下列出。
 
 |报告名称|说明|  
 |-----------------|-----------------|  
@@ -806,6 +858,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="task-sequences---references"></a>任务序列 - 引用  
+以下 1 份报表在“任务序列 - 引用”类别下列出。
 
 |报告名称|说明|  
 |-----------------|-----------------|  
@@ -815,6 +868,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 <!--
 ## Upgrade Assessment  
+The following 11 reports are listed under the **Upgrade Assessment** category.
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -835,6 +889,8 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 ## <a name="user---device-affinity"></a>用户 - 设备相关性  
 
+以下 2 份报表在“用户 - 设备相关性”类别下列出。
+
 |报告名称|说明|  
 |-----------------|-----------------|  
 |**按集合列出的挂起用户设备相关性关联**|此报表基于使用数据显示集合成员的所有挂起用户设备相关性分配。|  
@@ -843,6 +899,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="user-data-and-profiles-health"></a>用户数据和配置文件运行状况  
+以下 4 份报表在“用户数据和配置文件运行状况”类别下列出。
 
 |报告名称|说明|  
 |-----------------|-----------------|  
@@ -854,6 +911,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="users"></a>用户  
+以下 3 份报表在“用户”类别下列出。
 
 |报告名称|说明|  
 |-----------------|-----------------|  
@@ -864,6 +922,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="virtual-applications"></a>虚拟应用程序  
+以下 7 份报表在“虚拟应用程序”类别下列出。
 
 |报告名称|说明|  
 |-----------------|-----------------|  
@@ -878,6 +937,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="volume-purchase-programs---apple"></a>Volume Purchase Program - Apple
+以下 1 份报表在“Volume Purchase Programs - Apple”类别下列出。
 
 |报告名称|说明|  
 |-----------------|-----------------|  
@@ -886,6 +946,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="vulnerability-assessment"></a>漏洞评估
+以下 1 份报表在“漏洞评估”类别下列出。
 
 |报告名称|说明|  
 |-----------------|-----------------|  
@@ -894,6 +955,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="wake-on-lan"></a>LAN 唤醒  
+以下 7 份报表在“LAN 唤醒”类别下列出。
 
 |报告名称|说明|  
 |-----------------|-----------------|  

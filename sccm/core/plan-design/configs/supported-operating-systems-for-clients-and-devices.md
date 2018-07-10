@@ -10,11 +10,12 @@ ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d04f727ffeb3e5859103828ebb058e2532c6aacb
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: cb0145961b916abf4bf848bc8b5514967b705737
+ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36260755"
 ---
 # <a name="supported-operating-systems-for-clients-and-devices-for-system-center-configuration-manager"></a>System Center Configuration Manager 的客户端和设备支持的操作系统
 
@@ -38,7 +39,7 @@ ms.lasthandoff: 05/03/2018
 -  **Windows Server 2016**：标准版、数据中心版 <sup>1</sup>
   - 从 Configuration Manager 版本 1606（或 2016 年 10 月发布的 1606 基准版本）开始，支持该操作系统，并提供 KB3186654 中的修补程序汇总。  
 
--   **Windows Storage Server 2016**  
+-   **Windows Storage Server 2016**：工作组、标准版  
 
 -   **Windows Server 2012 R2** (x64)：标准版、数据中心版 <sup>1</sup>    
 
@@ -210,7 +211,7 @@ ms.lasthandoff: 05/03/2018
 
 -   有关客户端安装包和通用代理的信息，请参阅[如何在 System Center Configuration Manager 中将客户端部署到 UNIX 和 Linux 服务器](../../../core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md)。  
 
-**支持的版本：**通过使用指示的 .tar 文件，支持以下版本。  
+**支持的版本：** 通过使用指示的 .tar 文件，支持以下版本。  
 
 ### <a name="aix"></a>AIX  
 

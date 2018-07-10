@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
-ms.openlocfilehash: a94ac00b8fce6098cbd829947f4e2fbdcb761b9e
-ms.sourcegitcommit: c5e078b8eee87f527e5b5a0c2eb687bb9d6896c5
+ms.openlocfilehash: fa73ed132a00455b47355877b1c20e8d2f8c4f3a
+ms.sourcegitcommit: 59afe6f05333d4150afaf88ab0a85a979818e3fb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34270708"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957791"
 ---
 # <a name="manage-office-365-proplus-with-configuration-manager"></a>使用 Configuration Manager 管理 Office 365 ProPlus
 
@@ -25,9 +25,9 @@ ms.locfileid: "34270708"
 
 - [Office 365 客户端管理仪表板](#office-365-client-management-dashboard)：可以从 Office 365 客户端管理仪表板查看 Office 365 客户端信息。 从 Configuration Manager 1802 版开始，选择图形部分时，Office 365 客户端管理仪表板会显示相关设备的列表。 <!--1357281 -->
 
-- [部署 Office 365 应用](#deploy-office-365-apps)：自版本 1702 起，可以通过 Office 365 客户端管理仪表板启动 Office 365 安装程序，以简化首次 Office 365 应用安装。 该向导可让你配置 Office 365 安装设置、从 Office 内容交付网络 (CDN) 下载文件以及创建并部署脚本应用程序的内容。    
+- [部署 Office 365 应用](#deploy-office-365-apps)：自版本 1702 起，可以通过 Office 365 客户端管理仪表板启动 Office 365 安装程序，以简化首次 Office 365 应用安装。 该向导可让你配置 Office 365 安装设置、从 Office 内容分发网络 (CDN) 下载文件以及创建并部署脚本应用程序的内容。    
 
-- [部署 Office 365 更新](#deploy-office-365-updates)：可以使用软件更新管理工作流管理 Office 365 客户端更新。 当 Microsoft 将新的 Office 365 客户端更新发布到 Office 内容交付网络 (CDN) 时，Microsoft 还会将更新包发布到 Windows Server 更新服务 (WSUS)。 将 Office 365 客户端更新从 WSUS 目录同步到站点服务器之后，更新可部署到客户端。    
+- [部署 Office 365 更新](#deploy-office-365-updates)：可以使用软件更新管理工作流管理 Office 365 客户端更新。 当 Microsoft 将新的 Office 365 客户端更新发布到 Office 内容分发网络 (CDN) 时，Microsoft 还会将更新包发布到 Windows Server 更新服务 (WSUS)。 将 Office 365 客户端更新从 WSUS 目录同步到站点服务器之后，更新可部署到客户端。    
 
 - [添加 Office 365 更新下载的语言](#add-languages-for-office-365-update-downloads)：可以添加对 Configuration Manager 的支持，以下载 Office 365 支持的任意语言的更新。 这意味着只要 Office 365 支持，Configuration Manager 就可不必支持该语言。 在 Configuration Manager 版本 1610 之前，必须使用 Office 365 客户端上配置的语言下载和部署更新。 
 
@@ -48,7 +48,7 @@ Office 365 客户端管理仪表板提供以下信息的相关图表：
 ### <a name="display-data-in-the-office-365-client-management-dashboard"></a>在 Office 365 客户端管理仪表板中显示数据
 Office 365 客户端管理仪表板中显示的数据来自硬件清单。 启用硬件清单，并选择“Office 365 ProPlus 配置”硬件清单类，以便在仪表板中显示数据。 
 #### <a name="to-display-data-in-the-office-365-client-management-dashboard"></a>若要在 Office 365 客户端管理仪表板中显示数据
-1. 启用硬件清单（如果尚未启用）。 有关详细信息，请参阅[配置硬件清单](\sccm\core\clients\manage\configure-hardware-inventory)。
+1. 启用硬件清单（如果尚未启用）。 有关详细信息，请参阅[配置硬件清单](/sccm/core/clients/manage/inventory/configure-hardware-inventory)。
 2. 在 Configuration Manager 控制台中，导航到“管理” > “客户端设置” > “默认客户端设置”。  
 3. 在“主页”选项卡上的“属性”组中，单击“属性”。  
 4. 在**默认客户端设置**对话框中，单击**硬件清单**。  
@@ -57,7 +57,7 @@ Office 365 客户端管理仪表板中显示的数据来自硬件清单。 启�
 7.  单击**确定**以保存所做的更改并关闭**硬件清单类**对话框。 <br/>Office 365 客户端管理仪表板在硬件清单得到报告的同时开始显示数据。
 
 ## <a name="deploy-office-365-apps"></a>部署 Office 365 应用  
-自版本 1702 起，可以通过 Office 365 客户端管理仪表板启动 Office 365 安装程序，以执行首次 Office 365 应用安装。 该向导可让你配置 Office 365 安装设置、从 Office 内容交付网络 (CDN) 下载文件以及创建并部署文件的脚本应用程序。 只有在客户端上安装 Office 365 后，才能使用 Office 365 更新。
+自版本 1702 起，可以通过 Office 365 客户端管理仪表板启动 Office 365 安装程序，以执行首次 Office 365 应用安装。 该向导可让你配置 Office 365 安装设置、从 Office 内容分发网络 (CDN) 下载文件以及创建并部署文件的脚本应用程序。 只有在客户端上安装 Office 365 后，才能使用 Office 365 更新。
 
 对于旧版 Configuration Manager，必须按照以下步骤操作，才能在客户端上首次安装 Office 365 应用：
 - 下载 Office 365 部署工具 (ODT)
@@ -67,7 +67,7 @@ Office 365 客户端管理仪表板中显示的数据来自硬件清单。 启�
 
 ### <a name="requirements"></a>要求
 - 运行 Office 365 安装程序的计算机必须具有 Internet 访问权限。  
-- 运行 Office 365 安装程序的用户必须对向导中提供的文件位置共享具有**读取**和**写入**权限。
+- 运行 Office 365 安装程序的用户必须对向导中提供的文件位置共享具有读取和写入权限。
 - 如果收到 404 下载错误，将以下文件复制到用户的 %temp%文件夹中：
   - [releasehistory.xml](http://officecdn.microsoft.com/pr/wsus/releasehistory.cab)
   - [o365client_32bit.xml](http://officecdn.microsoft.com/pr/wsus/ofl.cab)  

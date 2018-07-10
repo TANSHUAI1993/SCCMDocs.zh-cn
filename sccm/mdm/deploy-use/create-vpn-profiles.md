@@ -2,7 +2,7 @@
 title: VPN 配置文件
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 中移动设备上的 VPN 配置文件。
-ms.date: 05/01/2018
+ms.date: 06/12/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,11 +10,12 @@ ms.assetid: 45388103-2410-4c7e-b4cf-73a1bda485fc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1b59c413fdd857db3aadd94b9851ad0778937a0a
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 9409b6cc71ea238755f40baf75e6211c447b547f
+ms.sourcegitcommit: 826e9ec385d6a1c1f3aa86ac202883154e0c1285
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37116491"
 ---
 # <a name="vpn-profiles-on-mobile-devices-in-system-center-configuration-manager"></a>System Center Configuration Manager 中移动设备上的 VPN 配置文件
 
@@ -55,9 +56,12 @@ ms.lasthandoff: 05/03/2018
    - 对于以下版本的 VPN 配置文件，请使用“Cisco AnyConnect”选项：
        - 带有 Cisco AnyConnect 4.0.7 或更高版本的 iOS
 
-     > [!Note]  
-     > 适用于 iOS 的 Cisco AnyConnect 4.0.07x 和更高版本是预发行功能。 若要启用此功能，请参阅[预发行功能](/sccm/core/servers/manage/pre-release-features)。  
-
+     > [!Tip]  
+     > 适用于 iOS 的 Cisco AnyConnect 4.0.07x 和更高版本作为[预发行功能](/sccm/core/servers/manage/pre-release-features)首次被引入版本 1802。 从[更新 4163547](https://support.microsoft.com/help/4163547) 开始到版本 1802，此功能不再属于预发行功能。  
+  
+  
+> [!Note]  
+> 混合 MDM 中的 VPN 配置文件不支持 F5 Access 2018。  
 
 
 ## <a name="windows-10-vpn-features-available-when-using-configuration-manager-with-intune"></a>将 Configuration Manager 与 Intune 结合使用时可用的 Windows 10 VPN 功能  
@@ -132,7 +136,7 @@ ms.lasthandoff: 05/03/2018
 
             - 选中“启用使用替代证书进行单一登录(SSO)”可以选择除 VPN 身份验证证书以外的其他证书来验证设备符合性。 如果选中此选项，请输入 VPN 客户端应查找的正确证书的“EKU”（以逗号分隔的列表）和“颁发者哈希”。  
 
-         - 对于 **Windows 信息保护**，请输入企业管理的公司标识（通常是组织的主域，例如 *contoso.com*）。可指定组织拥有的多个域，只需用“|”字符来分隔域即可。 例如，*contoso.com|newcontoso.com*。有关详细信息，请参阅[通过 Intune 创建和部署 Windows 信息保护应用保护策略](/intune/windows-information-protection-policy-create)。   
+         - 对于 **Windows 信息保护**，请输入企业管理的公司标识（通常是组织的主域，例如 *contoso.com*）。 可指定组织拥有的多个域，只需用“|”字符来分隔域即可。 例如，*contoso.com|newcontoso.com*。 有关详细信息，请参阅[通过 Intune 创建和部署 Windows 信息保护应用保护策略](/intune/windows-information-protection-policy-create)。   
 
          ![创建 VPN 配置文件向导，“身份验证方法”页](media/vpn-conditional-access.png)
 

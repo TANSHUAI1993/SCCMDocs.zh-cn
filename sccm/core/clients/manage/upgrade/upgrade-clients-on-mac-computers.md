@@ -10,12 +10,12 @@ ms.assetid: 74c60941-5eae-4905-9e58-252bdb39df96
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 667c8c3ea986e39627f3ed96e53719d6de74d3b2
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: fb0ef52bc3359e1b31b2e2237a87e58bf671bcb7
+ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334152"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36260830"
 ---
 # <a name="how-to-upgrade-clients-on-mac-computers-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中升级 Mac 计算机的客户端
 
@@ -56,7 +56,7 @@ ms.locfileid: "32334152"
 ## <a name="step-6-users-install-the-latest-client"></a>步骤 6：用户安装最新的客户端  
  将向 Mac 客户端的用户发出提示，指出 Configuration Manager 客户端的更新可用并且必须安装。 用户安装客户端后，他们必须重启其 Mac 计算机。  
 
- 计算机重启后，“计算机注册向导”将自动运行以请求新用户证书。  
+ 计算机重启后，“计算机注册向导”将自动运行以请求新用户证书。 仅在首次安装 SCCM 客户端时，才会自动执行计算机注册向导。 如果稍后尝试使用新安装程序更新客户端，则将不会再次执行该向导，因为它已具有有效的用户证书。 
 
  如果不希望使用 Configuration Manager 注册，而希望从 Configuration Manager 独立安装客户端证书，请参阅[配置已升级客户端以使用现有证书](#BKMK_UpgradingClient_MachineEnrollment)。  
 
