@@ -2,7 +2,7 @@
 title: 使用托管浏览器策略管理 Internet 访问
 titleSuffix: Configuration Manager
 description: 部署 Intune Managed Browser 来管理和限制 Internet 访问。
-ms.date: 03/05/2017
+ms.date: 07/06/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 8e25e00c-c9a8-473f-bcb7-ea989f6ca3c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8754219f36e30f2442178dc5521e05246948d3de
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 9fe64aef541a4e6405b0fbf6308afc6269d88f56
+ms.sourcegitcommit: f03cb34693b9806e9fecd3c0162de70cc8cb4b1e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350140"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37886478"
 ---
 # <a name="manage-internet-access-using-managed-browser-policies-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 的托管浏览器策略管理 Internet 访问
 
@@ -86,55 +86,55 @@ ms.locfileid: "32350140"
 
 使用以下信息来了解有关指定允许和阻止列表中的 URL 时允许使用的格式和通配符。  
 
--   可以根据下面的允许模式列表中的规则使用通配符“**\***”。  
+-   根据下面允许模式列表中的规则使用通配符 `*`（星号）。  
 
--   在将 URL 输入列表时，确保对所有 URL 添加 **“http”** 或 **“https”** 作为前缀。  
+-   在将 URL 输入列表时，请对所有 URL 添加 http 或 https 作为前缀。  
 
--   可以在地址中指定端口号。 如果未指定端口号，将使用以下值：  
+-   在地址中指定端口号。 如果未指定端口号，将使用以下值：  
 
     -   对于 http，使用端口 80  
 
     -   对于 https，使用端口 443  
 
-     不支持对端口号使用通配符，例如 http://www.contoso.com:\* 和 http://www.contoso.com: /\*  
+     不要为端口号使用通配符，因为这不受支持。 例如 `http://www.contoso.com:*`   
 
 -   使用下表了解指定 URL 时可以使用的允许模式：  
 
     |URL|匹配|不匹配|  
     |---------|-------------|--------------------|  
-    |http://www.contoso.com<br /><br /> 匹配单个页面|www.contoso.com|host.contoso.com<br /><br /> www.contoso.com/images<br /><br /> contoso.com/|  
-    |http://contoso.com<br /><br /> 匹配单个页面|contoso.com/|host.contoso.com<br /><br /> www.contoso.com/images<br /><br /> www.contoso.com|  
-    |http://www.contoso.com/*<br /><br /> 匹配以 www.contoso.com 开头的所有 URL|www.contoso.com<br /><br /> www.contoso.com/images<br /><br /> www.contoso.com/videos/tvshows|host.contoso.com<br /><br /> host.contoso.com/images|  
-    |http://*.contoso.com/\*<br /><br /> 匹配 contoso.com 下的所有子域|developer.contoso.com/resources<br /><br /> news.contoso.com/images<br /><br /> news.contoso.com/videos|contoso.host.com|  
-    |http://www.contoso.com/images<br /><br /> 匹配单个文件夹|www.contoso.com/images|www.contoso.com/images/dogs|  
-    |http://www.contoso.com:80<br /><br /> 匹配单个页面（使用端口号）|http://www.contoso.com:80||  
-    |https://www.contoso.com<br /><br /> 匹配单个安全页面|https://www.contoso.com|http://www.contoso.com|  
-    |http://www.contoso.com/images/*<br /><br /> 匹配单个文件夹和所有子文件夹|www.contoso.com/images/dogs<br /><br /> www.contoso.com/images/cats|www.contoso.com/videos|  
+    |`http://www.contoso.com`<br /><br /> 匹配单个页面|`www.contoso.com`|`host.contoso.com`<br /><br /> `www.contoso.com/images`<br /><br /> `contoso.com/`|  
+    |`http://contoso.com`<br /><br /> 匹配单个页面|`contoso.com`|`host.contoso.com`<br /><br /> `www.contoso.com/images`<br /><br /> `www.contoso.com`|  
+    |`http://www.contoso.com/*`<br /><br /> 匹配以 `www.contoso.com` 开头的所有 URL|`www.contoso.com`<br /><br /> `www.contoso.com/images`<br /><br /> `www.contoso.com/videos/tvshows`|`host.contoso.com`<br /><br /> `host.contoso.com/images`|  
+    |`http://*.contoso.com/*`<br /><br /> 匹配 contoso.com 下的所有子域|`developer.contoso.com/resources`<br /><br /> `news.contoso.com/images`<br /><br /> `news.contoso.com/videos`|`contoso.host.com`|  
+    |`http://www.contoso.com/images`<br /><br /> 匹配单个文件夹|`www.contoso.com/images`|`www.contoso.com/images/dogs`|  
+    |`http://www.contoso.com:80`<br /><br /> 匹配单个页面（使用端口号）|`http://www.contoso.com:80`||  
+    |`https://www.contoso.com`<br /><br /> 匹配单个安全页面|`https://www.contoso.com`|`http://www.contoso.com`|  
+    |`http://www.contoso.com/images/*`<br /><br /> 匹配单个文件夹和所有子文件夹|`www.contoso.com/images/dogs`<br /><br /> `www.contoso.com/images/cats`|`www.contoso.com/videos`|  
 
 -   以下是一些你不能指定的输入的示例：  
 
-    -   *.com  
+    -   `*.com`  
 
-    -   *.contoso/\*  
+    -   `*.contoso/*`  
 
-    -   www.contoso.com/*images  
+    -   `www.contoso.com/*images`  
 
-    -   www.contoso.com/*images\*pigs  
+    -   `www.contoso.com/*images*pigs`  
 
-    -   www.contoso.com/page*  
+    -   `www.contoso.com/page*`  
 
     -   IP 地址  
 
-    -   https://*  
+    -   `https://*`  
 
-    -   http://*  
+    -   `http://*`  
 
-    -   http://www.contoso.com:*  
+    -   `http://www.contoso.com:*`  
 
-    -   http://www.contoso.com: /*  
+    -   `http://www.contoso.com: /*`  
 
 > [!NOTE]  
->  始终允许 *.microsoft.com。  
+>  `*.microsoft.com` 始终允许。  
 
 ### <a name="how-conflicts-between-the-allow-and-block-list-are-resolved"></a>允许和阻止列表之间的冲突的解决方式  
  如果向一个设备部署多个托管浏览器策略，并且出现设置冲突，则将评估模式（允许或阻止）以及 URL 列表中的冲突。 发生冲突时，以下行为适用：  
