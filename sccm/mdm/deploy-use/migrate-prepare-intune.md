@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: db97ae9e-34f4-4e10-a282-cd211f612bb4
-ms.openlocfilehash: a2636713f8c121eecd826eeba060f8e3f8e865f3
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 0d71abbe33def6e12e75c2042e48f3d7ddcfe5c6
+ms.sourcegitcommit: 06d490d526070e17d77e86bc6c200899ded911cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353158"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38967141"
 ---
 # <a name="prepare-intune-for-user-migration"></a>准备 Intune 以进行用户迁移 
 
@@ -66,7 +66,7 @@ PowerShell 脚本可帮助你做好准备，将 Exchange 设备从 Configuration
 - 用户迁移至 Intune 独立版后，从面向 Configuration Manager 的条件访问中删除这些用户。
 
 ## <a name="configure-the-microsoft-intune-certificate-connector"></a>配置 Microsoft Intune 证书连接器
-如果通过 NDES 使用 SCEP 来颁发证书，需要配置 Microsoft Intune 证书连接器。 托管 Intune 中 NDES 连接器的计算机和托管 Configuration Manager 中 NDES 连接器的计算机不能相同。 有关详细信息，请参阅[使用 Intune 配置和管理 SCEP 证书](https://docs.microsoft.com/en-us/intune/certificates-scep-configure)。 
+如果通过 NDES 使用 SCEP 来颁发证书，需要配置 Microsoft Intune 证书连接器。 托管 Intune 中 NDES 连接器的计算机和托管 Configuration Manager 中 NDES 连接器的计算机不能相同。 有关详细信息，请参阅[使用 Intune 配置和管理 SCEP 证书](https://docs.microsoft.com/intune/certificates-scep-configure)。 
 
 > [!Important]    
 > 配置连接器之后，必须调整导入的 SCEP 配置文件以引用新的服务器 URL。
