@@ -10,12 +10,12 @@ ms.assetid: b1970688-0cd2-404f-a17f-9e2aa4a78758
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: a1799dcffa55de80c0c700a56301d7d71f3b4a48
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 14251bb062423a31bcf74d2079b2e1b667f61ba9
+ms.sourcegitcommit: 06d490d526070e17d77e86bc6c200899ded911cb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32341961"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38967158"
 ---
 # <a name="set-up-your-system-center-configuration-manager-lab"></a>设置你的 System Center Configuration Manager 实验室
 
@@ -30,7 +30,7 @@ ms.locfileid: "32341961"
 
      可以从 [TechNet 评估中心](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012)下载 Windows Server 2012 R2 的评估版。  
 
-     请考虑修改或禁用 Internet Explorer 增强的安全配置以便更轻松地访问在整个练习过程中引用的某些下载文件。 请查看 [Internet Explorer：增强的安全配置](https://technet.microsoft.com/en-us/library/dd883248\(v=ws.10\).aspx) 以获取其他信息。  
+     请考虑修改或禁用 Internet Explorer 增强的安全配置以便更轻松地访问在整个练习过程中引用的某些下载文件。 请查看 [Internet Explorer：增强的安全配置](https://technet.microsoft.com/library/dd883248\(v=ws.10\).aspx) 以获取其他信息。  
 
 -   **实验室环境中将 SQL Server 2012 SP2** 用于站点数据库。  
 
@@ -58,11 +58,11 @@ ms.locfileid: "32341961"
 
 -   **域控制器使用 Windows Server 2008 R2**（安装了 Active Directory 域服务）。 域控制器还充当 DHCP 的主机和 DNS 服务器以便用于完全限定的域名。  
 
-     有关其他信息，请查看此 [Active Directory 域服务概述](https://technet.microsoft.com/en-us/library/hh831484)。  
+     有关其他信息，请查看此 [Active Directory 域服务概述](https://technet.microsoft.com/library/hh831484)。  
 
 -   **Hyper-V 与几个虚拟机一起使用**，以验证在这些练习中执行的管理步骤是否按预期正常工作。 建议最少三个虚拟机，并已安装 Windows 7（或更高版本）。  
 
-     有关其他信息，请查看此 [Hyper-V 概述](https://technet.microsoft.com/en-us/library/hh831531.aspx)。  
+     有关其他信息，请查看此 [Hyper-V 概述](https://technet.microsoft.com/library/hh831531.aspx)。  
 
 -   **管理员权限** 。  
 
@@ -92,7 +92,7 @@ ms.locfileid: "32341961"
 使 Configuration Manager 客户端能够查询 Active Directory 域服务以找到站点资源所需的后续步骤列于后续程序上。  
 
 ##  <a name="BKMK_CreateSysMgmtLab"></a> 创建系统管理容器  
- 扩展架构时，Configuration Manager 不会在 Active Directory 域服务中自动创建所需的系统管理容器。 因此，你会为你的实验室创建此系统管理容器。 此步骤将要求你 [安装 ADSI 编辑器。](https://technet.microsoft.com/en-us/library/cc773354\(WS.10\).aspx#BKMK_InstallingADSIEdit)  
+ 扩展架构时，Configuration Manager 不会在 Active Directory 域服务中自动创建所需的系统管理容器。 因此，你会为你的实验室创建此系统管理容器。 此步骤将要求你 [安装 ADSI 编辑器。](https://technet.microsoft.com/library/cc773354\(WS.10\).aspx#BKMK_InstallingADSIEdit)  
 
  确保你以对 Active Directory 域服务中的“系统”  容器具有“创建所有子对象”  权限的帐户身份登录。  
 
@@ -136,7 +136,7 @@ ms.locfileid: "32341961"
 
 #### <a name="to-extend-the-active-directory-schema-using-extadschexe"></a>若要使用 extadsch.exe 来扩展 Active Directory 架构：  
 
-1.  创建架构主机域控制器的系统状态的备份。 有关备份主机域控制器的详细信息，请查看 [Windows Server Backup](https://technet.microsoft.com/en-us/library/cc770757.aspx)  
+1.  创建架构主机域控制器的系统状态的备份。 有关备份主机域控制器的详细信息，请查看 [Windows Server Backup](https://technet.microsoft.com/library/cc770757.aspx)  
 
 2.  导航至安装介质中的 **\SMSSETUP\BIN\X64** 。  
 
@@ -155,7 +155,7 @@ ms.locfileid: "32341961"
 
  **安装 .NET 并且 激活 Windows Communication Foundation**  
 
- 你需要安装这两种.NET 框架：首先安装 .NET 3.5.1，然后安装 .NET 4.5.2+。 你还需要激活 Windows Communication Foundation (WCF)。 WCF 通过面向服务的编程模型专为实现分布式计算、广泛的互操作性和直接支持服务方向提供可管理的方法，并简化了连接应用程序开发。 请查看 [什么是 Windows Communication Foundation？](https://technet.microsoft.com/en-us/subscriptions/ms731082\(v=vs.90\).aspx) ，了解关于 WCF 的其他见解。  
+ 你需要安装这两种.NET 框架：首先安装 .NET 3.5.1，然后安装 .NET 4.5.2+。 你还需要激活 Windows Communication Foundation (WCF)。 WCF 通过面向服务的编程模型专为实现分布式计算、广泛的互操作性和直接支持服务方向提供可管理的方法，并简化了连接应用程序开发。 请查看 [什么是 Windows Communication Foundation？](https://technet.microsoft.com/subscriptions/ms731082\(v=vs.90\).aspx) ，了解关于 WCF 的其他见解。  
 
 #### <a name="to-install-net-and-activate-windows-communication-foundation"></a>若要安装 .NET 并且激活 Windows Communication Foundation：  
 
@@ -197,25 +197,25 @@ ms.locfileid: "32341961"
 
 有关其他信息，请查看以下文章以了解为什么需要这些 .NET 框架：  
 
--   [.NET Framework 版本和依赖关系](https://technet.microsoft.com/en-us/library/bb822049.aspx)  
+-   [.NET Framework 版本和依赖关系](https://technet.microsoft.com/library/bb822049.aspx)  
 
--   [.NET Framework 4 RTM 应用程序兼容性演练](https://technet.microsoft.com/en-us/library/dd889541.aspx)  
+-   [.NET Framework 4 RTM 应用程序兼容性演练](https://technet.microsoft.com/library/dd889541.aspx)  
 
--   [如何：将 ASP.NET Web 应用程序更新到 ASP.NET 4](https://technet.microsoft.com/en-us/library/dd483478\(VS.100\).aspx)  
+-   [如何：将 ASP.NET Web 应用程序更新到 ASP.NET 4](https://technet.microsoft.com/library/dd483478\(VS.100\).aspx)  
 
 -   [Microsoft .NET Framework 支持生命周期策略常见问题](https://support.microsoft.com/en-us/gp/framework_faq?WT.mc_id=azurebg_email_Trans_943_NET452_Update)  
 
--   [CLR 全面透彻解析 - 进程内并行](https://msdn.microsoft.com/en-us/magazine/ee819091.aspx)  
+-   [CLR 全面透彻解析 - 进程内并行](https://msdn.microsoft.com/magazine/ee819091.aspx)  
 
 **启用 BITS、IIS 和 RDC**  
 
-[后台智能传输服务 (BITS)](https://technet.microsoft.com/en-us/library/dn282296.aspx) 用于需要在客户端和服务器之间异步传输文件的应用程序。 通过计数前台和后台传输的流，BITS 保留了其他网络应用程序的响应能力。 如果传输会话中断，则它还会自动恢复文件传输。  
+[后台智能传输服务 (BITS)](https://technet.microsoft.com/library/dn282296.aspx) 用于需要在客户端和服务器之间异步传输文件的应用程序。 通过计数前台和后台传输的流，BITS 保留了其他网络应用程序的响应能力。 如果传输会话中断，则它还会自动恢复文件传输。  
 
 因为此站点服务器也将用作管理点，所以你需要为此实验室安装 BITS。  
 
 Internet 信息服务 (IIS) 是可用来承载 Web 上找到的任何内容的灵活、可扩展的 Web 服务器。 由 Configuration Manager 将其用于大量站点系统角色。 有关 IIS 的其他信息，请查看 [System Center Configuration Manager 中的站点系统服务器网站](../../core/plan-design/network/websites-for-site-system-servers.md)。  
 
-[远程差分压缩 (RDC)](https://technet.microsoft.com/en-us/library/cc754372.aspx) 是应用程序可用于确定是否已对一组文件进行过任何更改的 API 集。 RDC 使应用程序能够仅复制文件已更改的部分，将网络流量保持在最低限度。  
+[远程差分压缩 (RDC)](https://technet.microsoft.com/library/cc754372.aspx) 是应用程序可用于确定是否已对一组文件进行过任何更改的 API 集。 RDC 使应用程序能够仅复制文件已更改的部分，将网络流量保持在最低限度。  
 
 #### <a name="to-enable-bits-iis-and-rdc-site-server-roles"></a>若要启用 BITS、IIS 和 RDC 站点服务器角色：  
 
