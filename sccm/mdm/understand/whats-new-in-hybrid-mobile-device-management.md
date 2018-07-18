@@ -2,7 +2,7 @@
 title: 混合 MDM 中的新增功能
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 和 Intune 的混合部署可用的新移动设备管理功能。
-ms.date: 07/05/2018
+ms.date: 07/12/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5d527d2fc4fdc52e132b6f603d9b83851e1693f3
-ms.sourcegitcommit: c9d0a4c24ce90825cb2d05e4fe37c5b41fa48a50
+ms.openlocfilehash: d2a705ed8b09e4c2de92baa22164cbe97f180462
+ms.sourcegitcommit: e54e9d4a735e72b84095e0017c5bec50af480207
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/09/2018
-ms.locfileid: "37923535"
+ms.lasthandoff: 07/14/2018
+ms.locfileid: "39039618"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Configuration Manager 和 Microsoft Intune 的混合移动设备管理中的新增功能
 
@@ -43,6 +43,17 @@ ms.locfileid: "37923535"
 ## <a name="july-2018"></a>2018 年 7 月
 
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
+
+#### <a name="support-for-security-enhancement-in-intune-service"></a>支持 Intune 服务中的安全性增强功能
+<!--2520152-->现可将未分配有任何符合性策略的设备指定为在混合环境中不符合条件。 在 Azure 门户的 Intune 中配置此设置。 强烈建议启用此功能来保护内部资源。
+
+此功能在混合租户中默认关闭。 启用此功能后，未分配有符合性策略的设备将被视为不符合条件。 如果还启用了条件访问，则这些设备无法再访问内部资源。 根据环境中的条件访问策略，此类资源可能是 Outlook 或 SharePoint。 如果关闭此设置，则这些设备继续持有当前访问级别。
+
+为帮助确定启动此功能所带来的影响，可参阅 [TechNet 库中的脚本](https://gallery.technet.microsoft.com/SQL-Query-for-Hybrid-MDM-5bcb8695)。 如果针对 Configuration Manager 数据库运行此脚本，它将列出不实施任何符合性策略的设备。
+
+有关详细信息，请参阅下列文章：
+- [Intune 服务中的安全性增强功能](https://aka.ms/compliance_policies)博客文章 
+- [Configuration Manager 中的设备符合性策略](/sccm/mdm/deploy-use/device-compliance-policies)
 
 #### <a name="updates-to-out-of-compliance-messages-in-company-portal-app"></a>更新公司门户应用中的不合规消息 
 <!--1832222--> 我们正在修改当设备不合规时向使用该设备的用户显示的消息。 消息原义未变，只是用更为友好的语言和更少的技术术语进行更新。 此外，我们还将刷新文档和修正步骤的链接，以使其保持最新。  
