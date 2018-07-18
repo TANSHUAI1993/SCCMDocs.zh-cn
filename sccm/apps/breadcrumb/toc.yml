@@ -1,0 +1,15 @@
+- name: Docs
+  tocHref: /
+  topicHref: /
+  items:
+    - name: 企业移动性 + 安全性
+      tocHref: /
+      topicHref: /enterprise-mobility-security
+      items:
+        - name: 配置管理器
+          tocHref: /sccm/
+          topicHref: /sccm/
+          items:
+            - name: 应用程序管理
+              tocHref: /sccm/osd/deploy-use
+              topicHref: /sccm/apps/understand/introduction-to-application-management
