@@ -10,12 +10,12 @@ ms.assetid: 2629c376-ec43-4f0e-a78b-4223cc9302bf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8a89c9d5a0fa4ea57a7824fe16b24120347ddaac
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: ed6174bcb3c99461b00ec5fc57d4508b9390747d
+ms.sourcegitcommit: acad0674b2743193f87990fb50194c4f17823a8e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32338027"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39146922"
 ---
 # <a name="deploy-applications-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 部署应用程序
 
@@ -102,7 +102,7 @@ ms.locfileid: "32338027"
 - **自动升级此应用程序的任何取代版本**：客户端使用取代应用程序升级应用程序的任何取代版本。    
 
     > [!NOTE]  
-    > 从版本 1802 开始，对于“可用”或“必需”安装目的，可启用或禁用此选项。 <!--1351266--> 
+    > 自版本 1802 起，对于“可用”安装目的，可启用或禁用此选项。 <!--1351266--> 
 
 
 ### <a name="specify-scheduling-settings-for-the-deployment"></a>为部署指定计划设置
@@ -195,8 +195,7 @@ ms.locfileid: "32338027"
 
 
 ## <a name="deploy-user-available-applications-on-azure-ad-joined-devices"></a>在加入 Azure AD 的设备上部署用户可用的应用程序
-<!-- 1322613 -->
-如果将应用程序以可用的方式部署到用户，从版本 1802 开始，他们可以通过 Azure Active Directory (Azure AD) 设备上的软件中心浏览和安装应用程序。  
+<!-- 1322613 --> 如果将应用程序部署为用户可用，自版本 1802 起，用户可以在 Azure Active Directory (Azure AD) 设备上通过软件中心浏览和安装应用程序。  
 
 #### <a name="prerequisites"></a>先决条件
 
