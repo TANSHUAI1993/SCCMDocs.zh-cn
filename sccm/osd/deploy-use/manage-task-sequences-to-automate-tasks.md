@@ -10,12 +10,12 @@ ms.assetid: a1f099f1-e9b5-4189-88b3-f53e3b4e4add
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 26d43b1ee065f3ae0b1221ca81e69f6cb1da6f6c
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 983b6b73c79c51792bf015c74d40466231fbaf3d
+ms.sourcegitcommit: 7c26485b600544a64a5cf2edca6f2f8f29fecde9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32351848"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39130664"
 ---
 # <a name="manage-task-sequences-to-automate-tasks-in-system-center-configuration-manager"></a>管理任务序列以在 System Center Configuration Manager 中自动执行任务
 
@@ -262,6 +262,9 @@ ms.locfileid: "32351848"
 
         -   必需：依据配置的计划自动部署任务序列。 如果任务序列未隐藏，则用户仍可以跟踪其部署状态。 用户还可在截止时间前使用软件中心安装任务序列。  
 
+        >  [!NOTE]  
+        >  如果多个用户登录设备，软件中心内可能无法显示包和任务序列部署。
+
     -   无论用户是否登录都根据计划自动部署：在部署任务序列时，此选项不可用。  
 
     -   **发送唤醒数据包**：如果将部署目的设置为“必需”，并选择此选项，则站点会在运行部署前向计算机发送一个唤醒数据包。 此数据包可在到达安装截止时间时将计算机从休眠中唤醒。 必须针对“LAN 唤醒”配置计算机和网络，然后才能使用此选项。  
@@ -478,8 +481,7 @@ ms.locfileid: "32351848"
 6.  将所有变量添加到集合之后，单击“确定”。  
 
 ## <a name="add-child-task-sequences-to-a-task-sequence"></a>将子任务序列添加到任务序列
-<!--1261338-->
-从 Configuration Manager 版本 1710 开始，可以添加运行另一个任务序列的新任务序列步骤。 此步骤将创建任务序列之间的父子关系。 使用此步骤可创建更多可重复使用的模块式任务序列。  
+<!--1261338--> 自 Configuration Manager 版本 1710 起，可以添加运行另一个任务序列的新任务序列步骤。 此步骤将创建任务序列之间的父子关系。 使用此步骤可创建更多可重复使用的模块式任务序列。  
 
 > [!Note]  
 > 默认情况下，Configuration Manager 不启用此项可选功能。 必须在使用前启用此功能。 有关详细信息，请参阅[启用更新中的可选功能](/sccm/core/servers/manage/install-in-console-updates#bkmk_options)。<!--505213-->  

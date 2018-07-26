@@ -10,12 +10,12 @@ ms.assetid: caad0507-9913-415a-b13d-d36f8f0a1b80
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 6f34fd322e5f94550602d7883a0303d10059b702
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 4815695ad67ac86491da9ea3274fd7db660c8190
+ms.sourcegitcommit: 7c26485b600544a64a5cf2edca6f2f8f29fecde9
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32341944"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39130640"
 ---
 # <a name="packages-and-programs-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的包和程序
 
@@ -212,6 +212,9 @@ System Center Configuration Manager 继续支持在 Configuration Manager 2007 �
 
         -   **必需**：包和程序会根据配置的计划自动进行部署。 但是，用户可以跟踪包和程序部署状态并通过使用软件中心在截止时间之前安装它。  
 
+        >  [!NOTE]  
+        >  如果多个用户登录设备，软件中心内可能无法显示包和任务序列部署。
+        
     -   **发送唤醒数据包**：如果部署目的设置为“必需”并且选择了此选项，则会在安装部署前向计算机发送一个唤醒数据包，以在安装截止时间到达时将计算机从休眠中唤醒。 可以使用此选项之前，必须将计算机配置为 LAN 唤醒。  
 
     -  **允许客户端使用按流量计费的 Internet 连接在安装截止时间之后下载内容(这可能会导致附加成本)**：如果需要，可选择此选项。  
