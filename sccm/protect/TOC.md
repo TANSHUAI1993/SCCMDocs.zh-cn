@@ -1,10 +1,5 @@
 # 了解和探索
 ## [概述](understand\protect-data-and-site-infrastructure.md)
-## [备份站点](understand/backup-and-recovery.md)
-## [恢复站点](understand/recover-sites.md)
-## [无人参与站点恢复](understand/unattended-recovery.md)
-## [高可用性选项](understand/high-availability-options.md)
-## [管理高风险部署](understand/settings-to-manage-high-risk-deployments.md)
 
 # 规划和设计
 ## [证书配置文件先决条件](plan-design/prerequisites-for-certificate-profiles.md)
