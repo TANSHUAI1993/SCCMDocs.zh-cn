@@ -32,6 +32,7 @@
 ## [优化 Windows 10 更新传递](deploy-use/optimize-windows-10-update-delivery.md)
 ## [管理 Windows 10 更新的快速安装文件](deploy-use/manage-express-installation-files-for-windows-10-updates.md)
 ## [在 Windows 10 中与适用于企业的 Windows 更新集成](deploy-use/integrate-windows-update-for-business-windows-10.md)
+## [第三方软件更新](deploy-use/third-party-software-updates.md)
 ## [部署安全更新的示例方案](deploy-use/example-scenario-deploy-monitor-monthly-security-updates.md)
 
 # [System Center Updates Publisher](tools/updates-publisher.md)

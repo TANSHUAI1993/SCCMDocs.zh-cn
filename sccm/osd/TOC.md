@@ -45,8 +45,9 @@
 ### [部署 Windows To Go](deploy-use/deploy-windows-to-go.md)
 
 ## [将 Windows 作为一项服务来管理](deploy-use/manage-windows-as-a-service.md)
+## [创建分阶段部署](deploy-use/create-phased-deployment-for-task-sequence.md)
+## [管理和监视分阶段部署](deploy-use/manage-monitor-phased-deployments.md)
 ## [监视操作系统部署](deploy-use/monitor-operating-system-deployments.md)
-## [针对任务序列创建分阶段部署](deploy-use/create-phased-deployment-for-task-sequence.md)
 
 ## [管理任务序列来自动执行任务](deploy-use/manage-task-sequences-to-automate-tasks.md)
 ### [创建用于安装操作系统的任务序列](deploy-use/create-a-task-sequence-to-install-an-operating-system.md)

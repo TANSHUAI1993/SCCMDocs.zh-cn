@@ -2,6 +2,7 @@
 ##  [Configuration Manager 简介](understand/introduction.md)
 ### [查找 Configuration Manager 的帮助](understand/find-help.md)
 ### [如何使用文档](understand/use-docs.md)
+### [使用控制台](servers/manage/admin-console.md)
 ### [辅助功能](understand/accessibility-features.md)
 ### [软件中心用户指导](understand/software-center.md)
 ##  [Configuration Manager 基础知识](understand/fundamentals.md)
@@ -30,15 +31,9 @@
 ###  [特性和功能](plan-design/changes/features-and-capabilities.md)
 ###  [自 Configuration Manager 2012 以来的更改内容](plan-design/changes/what-has-changed-from-configuration-manager-2012.md)
 ###  [增量版本中的新增功能](plan-design/changes/whats-new-incremental-versions.md)
+###  [1806 版中的新增功能](plan-design/changes/whats-new-in-version-1806.md)
 ###  [1802 版中的新增功能](plan-design/changes/whats-new-in-version-1802.md)
 ###  [版本 1710 中的新增功能](plan-design/changes/whats-new-in-version-1710.md)
-###  [版本 1706 中的新增功能](plan-design/changes/whats-new-in-version-1706.md)
-<!--
-###  [What's new in version 1702](plan-design/changes/whats-new-in-version-1702.md)
-###  [What's new in version 1610](plan-design/changes/whats-new-in-version-1610.md)
-###  [What's new in version 1606](plan-design/changes/whats-new-in-version-1606.md)
-###  [What's new in version 1602](plan-design/changes/whats-new-in-version-1602.md)
--->
 ###  [已删除和已弃用的项](plan-design/changes/deprecated/removed-and-deprecated.md)
 #### [已删除和已弃用的功能](plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md)
 #### [站点服务器已删除和弃用的项](plan-design/changes/deprecated/removed-and-deprecated-server.md)
@@ -65,6 +60,7 @@
 #### [使用基于云的分发点](plan-design/hierarchy/use-a-cloud-based-distribution-point.md)
 #### [使用请求分发点](plan-design/hierarchy/use-a-pull-distribution-point.md)
 #### [内容库](plan-design/hierarchy/the-content-library.md)
+#### [流程图 - 管理内容库](plan-design/hierarchy/manage-content-library-flowchart.md)
 #### [内容库清理工具](plan-design/hierarchy/content-library-cleanup-tool.md)
 #### [管理帐户以访问内容](plan-design/hierarchy/manage-accounts-to-access-content.md)
 #### [用于 Configuration Manager 客户端的对等缓存](plan-design/hierarchy/client-peer-cache.md)
@@ -84,17 +80,9 @@
 
 ##   [诊断和使用情况数据](plan-design/diagnostics/diagnostics-and-usage-data.md)
 ###  [如何使用诊断和使用情况数据](plan-design/diagnostics/how-diagnostics-and-usage-data-is-used.md)
+###  [1806 的诊断数据](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1806.md)
 ###  [1802 的诊断数据](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1802.md)
 ###  [1710 的诊断数据](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1710.md)
-###  [1706 的诊断数据](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1706.md)
-<!--
-###  [Diagnostic data for 1702](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1702.md)
-###  [Diagnostic data for 1610](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1610.md)
-###  [Diagnostic data for 1606](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1606.md)
-###  [Diagnostic data for 1602](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1602.md)
-###  [Diagnostic data for 1511](plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1511.md)
-
--->
 ###  [如何收集诊断和使用情况数据](plan-design/diagnostics/how-diagnostics-and-usage-data-is-collected.md)
 ###  [如何查看诊断和使用情况数据](plan-design/diagnostics/view-diagnostics-and-usage-data.md)
 ###  [客户体验改善计划 (CEIP)](plan-design/diagnostics/customer-experience-improvement-program-ceip.md)
@@ -175,9 +163,14 @@
 ###  [站点边界和边界组](servers/deploy/configure/define-site-boundaries-and-boundary-groups.md)
 #### [边界](servers/deploy/configure/boundaries.md)
 #### [边界组](servers/deploy/configure/boundary-groups.md)
-###  [准备使用 SQL Server Always On](servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)
-###  [配置 SQL Server Always On](servers/deploy/configure/configure-aoag.md)
-###  [使用 SQL Server 群集](servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md)
+###  [高可用性选项](servers/deploy/configure/high-availability-options.md)
+#### [站点服务器高可用性](servers/deploy/configure/site-server-high-availability.md)
+#### [流程图 - 被动站点服务器设置](servers/deploy/configure/passive-site-server-flowchart.md)
+#### [流程图 - 升级站点服务器（已规划）](servers/deploy/configure/promote-site-server-flowchart.md)
+#### [流程图 - 升级站点服务器（未规划）](servers/deploy/configure/promote-site-server-unplanned-flowchart.md)
+#### [准备使用 SQL Server Always On](servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)
+#### [配置 SQL Server Always On](servers/deploy/configure/configure-aoag.md)
+#### [使用 SQL Server 群集](servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md)
 ###  [数据库文件的自定义位置](servers/deploy/configure/custom-locations-for-site-database-files.md)
 ###  [配置基于角色的管理](servers/deploy/configure/configure-role-based-administration.md)
 ###  [配置 Azure 服务](servers/deploy/configure/azure-services-wizard.md)
@@ -193,12 +186,10 @@
 ###  [代理服务器支持](plan-design/network/proxy-server-support.md)
 ###  [发行说明](servers/deploy/install/release-notes.md)
 ###  [Unicode 和 ASCII 支持](plan-design/hierarchy/unicode-and-ascii-support.md)
-<!-- Deprecated from Content - still published but out of TOC:
-#### [Boundary groups for versions prior to 1610](servers/deploy/configure/boundary-groups-for-1511-1602-and-1606.md)
--->
 
 #    管理基础结构
-## [管理见解](servers/manage/management-insights.md)
+##   [管理见解](servers/manage/management-insights.md)
+##   [CMPivot](servers/manage/cmpivot.md)
 ##   [维护任务](servers/manage/maintenance-tasks.md)
 ###  [维护任务参考](servers/manage/reference-for-maintenance-tasks.md)
 ##   [修改基础结构](servers/manage/modify-your-infrastructure.md)
@@ -215,17 +206,17 @@
 ###  [使用服务连接工具](servers/manage/use-the-service-connection-tool.md)
 ###  [使用更新注册工具](servers/manage/use-the-update-registration-tool-to-import-hotfixes.md)
 ###  [使用修补程序安装程序](servers/manage/use-the-hotfix-installer-to-install-updates.md)
+###  [用于安装更新 1806 的清单](servers/manage/checklist-for-installing-update-1806.md)
 ###  [用于安装更新 1802 的清单](servers/manage/checklist-for-installing-update-1802.md)
 ###  [用于安装更新 1710 的核对清单](servers/manage/checklist-for-installing-update-1710.md)
-###  [用于安装更新 1706 的核对清单](servers/manage/checklist-for-installing-update-1706.md)
-<!-- Deprecated from Content - still published but out of TOC:
-###  [Checklist for installing update 1702](servers/manage/checklist-for-installing-update-1702.md)
-###  [Checklist for installing update 1610](servers/manage/checklist-for-installing-update-1610.md)
-###  [Checklist for installing update 1606](servers/manage/checklist-for-installing-update-1606.md)
-###  [Checklist for installing update 1602](servers/manage/checklist-for-installing-update-1602.md)
--->
 ###  [当前分支版本支持](servers/manage/current-branch-versions-supported.md)  
 
+##   备份和恢复
+###  [备份站点](servers/manage/backup-and-recovery.md)
+###  [恢复站点](servers/manage/recover-sites.md)
+###  [无人参与站点恢复](servers/manage/unattended-recovery.md)
+
+##   [站点失败影响](servers/manage/site-failure-impacts.md)
 
 ##   监视基础结构
 ###  [使用警报和状态系统](servers/manage/use-alerts-and-the-status-system.md)
@@ -249,6 +240,25 @@
 #### [创建自定义报表模型](servers/manage/creating-custom-report-models-in-sql-server-reporting-services.md)
 #### [报表的安全和隐私](servers/manage/security-and-privacy-for-reporting.md)
 ###  [数据仓库](servers/manage/data-warehouse.md)
+
+## [Configuration Manager 工具](support/tools.md)
+### [CMTrace](support/cmtrace.md) 
+### [客户端 Spy](support/clispy.md)
+### [部署监视工具](support/deployment-monitoring-tool.md)
+### [策略 Spy](support/policy-spy.md)
+### [Power Viewer 工具](support/power-viewer-tool.md)
+### [发送计划工具](support/send-schedule-tool.md)
+### [DP 作业队列管理器](support/dp-job-manager.md)
+### [集合评估查看器](support/ceviewer.md)
+### [内容库资源管理器](support/content-library-explorer.md)
+### [内容库传输](support/content-library-transfer.md)
+### [内容所有权工具](support/content-ownership-tool.md)
+### [基于角色的管理和审核工具](support/rbaviewer.md)
+### [运行计量摘要工具](support/run-meter-summ.md)
+
+<!--## [Support Center]-->
+
+## [管理高风险部署](servers/manage/settings-to-manage-high-risk-deployments.md)
 
 #    部署客户端
 ##   规划客户端部署

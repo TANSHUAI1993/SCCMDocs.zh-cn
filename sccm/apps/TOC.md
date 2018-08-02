@@ -20,12 +20,14 @@
 
 ## 部署应用程序
 ### [部署应用程序](deploy-use/deploy-applications.md)
+### [创建分阶段部署](../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)
 ### [共享应用程序](deploy-use/share-applications.md)
 ### [模拟应用程序部署](deploy-use/simulate-application-deployments.md)
 ### [部署 App-V 虚拟应用程序](get-started/deploying-app-v-virtual-applications.md)
 
 ## 监视应用程序
 ### [从控制台监视应用程序](deploy-use/monitor-applications-from-the-console.md)
+### [管理和监视分阶段部署](../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)
 ### [使用软件计数监视应用使用情况](deploy-use/monitor-app-usage-with-software-metering.md)
 
 ## 管理应用程序

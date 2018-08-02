@@ -13,7 +13,7 @@
 
 ## [安全内容自动化协议 (SCAP) 扩展](plan-design/scap/about-scap.md)
 ### [安装和配置 SCAP 扩展](plan-design/scap/install-configure-scap.md)
-### [导入 SCAP 符合性设置](plan-design/scap/import-scap-compliance-settings.md)
+### [部署和监视 SCAP 符合性](plan-design/scap/deploy-monitor-export.md)
 ### [SCAP 扩展疑难解答](plan-design/scap/troubleshooting-scap.md)
 
 # 部署和使用
