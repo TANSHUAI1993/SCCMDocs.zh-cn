@@ -10,12 +10,12 @@ ms.assetid: 3af2a69d-30e7-4dce-832d-82b7a1c082f8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 13742fcbeefacd2183b26c5083d6f8b3ee0ef60f
-ms.sourcegitcommit: d1bf26bcf0d78b37ac7598fab36eb58ca69b1dc5
+ms.openlocfilehash: 5183b30d9184f7119d1423b5773da2b692026ab7
+ms.sourcegitcommit: 64b343906afdd442189559119eea8e933642cbf8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37067604"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39342808"
 ---
 # <a name="capabilities-in-technical-preview-18062-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1806.2 中的功能
 
@@ -152,7 +152,7 @@ Steps to workaround, if any.
 尝试完成任务。 然后发送[反馈](capabilities-in-technical-preview-1804.md#bkmk_feedback)，以便我们了解其运作状况。
 
 1. 在 Configuration Manager 控制台中，[创建一个应用程序](/sccm/apps/deploy-use/create-applications)。 
-2. 将应用程序安装文件类型选择为 *Windows 应用包（*.appx、*.appxbundle、*.msix、*.msixbundle）**。
+2. 将应用程序安装文件类型选择为 Windows 应用包（\*.appx、\*.appxbundle、\*.msix、\*.msixbundle）。
 3. [将应用程序部署](/sccm/apps/deploy-use/deploy-applications)到运行最新 Windows Insider Preview 内部版本的客户端。
 
 

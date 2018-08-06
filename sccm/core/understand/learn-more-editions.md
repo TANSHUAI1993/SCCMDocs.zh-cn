@@ -10,12 +10,12 @@ ms.assetid: 495b87ae-41a4-49ba-abe2-d4f7d22ac0d4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a8ce492aa34fa130a11bde0d5823252a9d782960
-ms.sourcegitcommit: e35d07870656eadd29faacc378ecd091ff3bdcfb
+ms.openlocfilehash: 33cd99fd51bd7fabc1ae7f8379bcf2a69a5c4898
+ms.sourcegitcommit: f195190347a98b6c5be957564d33b6c4dfb610d7
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848622"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39309368"
 ---
 # <a name="licensing-and-branches-for-system-center-configuration-manager"></a>System Center Configuration Manager 的许可和分支
 
@@ -28,7 +28,7 @@ ms.locfileid: "34848622"
 
 
 **许可指定：**  
-[可在此处](http://go.microsoft.com/fwlink/?LinkId=800052)找到通过 Microsoft 批量许可计划购买的产品的完整条款和条件。
+[可在此处](https://go.microsoft.com/fwlink/?LinkId=800052)找到通过 Microsoft 批量许可计划购买的产品的完整条款和条件。
 
 
 ## <a name="system-center-configuration-manager-licensed-branches"></a>System Center Configuration Manager 已许可的分支  
@@ -95,16 +95,15 @@ LTSB 以 Current Branch 1606 版为基础，具有以下限制：
 使用以下链接可了解更多有关产品许可的详细信息。
 
 **Microsoft 批量许可服务中心 (VLSC) 链接：**
-- VLSC 概述：[https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx](https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx)。
+- [VLSC 概述](https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx)
 
-- Microsoft 批量许可产品条款：[http://go.microsoft.com/fwlink/?LinkId=800052](http://go.microsoft.com/fwlink/?LinkId=800052)。
+- [Microsoft 批量许可产品条款](https://go.microsoft.com/fwlink/?LinkId=800052)
 
-- 批量许可证客户可以从此处获得许可证摘要：[https://www.microsoft.com/Licensing/servicecenter/default.aspx](https://www.microsoft.com/Licensing/servicecenter/default.aspx)。  
-  转到“许可证”菜单，然后单击“许可证摘要”获取许可证概述。
+- 批量许可证客户可以从此处获得许可证摘要：[批量许可证服务中心](https://www.microsoft.com/Licensing/servicecenter/default.aspx)。 转到“许可证”菜单，然后单击“许可证摘要”获取许可证概述。
 
 **VLSC 视频：**
-- VLSC 工作原理培训视频：[https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx#tab=2](https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx#tab=2)。
+- [VLSC 工作原理培训视频](https://www.microsoft.com/en-us/Licensing/existing-customer/vlsc-training-and-resources.aspx#tab=2)  
 
-- 在何处查看可用的软件保障协议（从 43 秒左右开始）：[https://www.microsoft.com/showcase/video.aspx?uuid=fe1846cb-1d26-49fc-b064-57b25dcc31a0](https://www.microsoft.com/showcase/video.aspx?uuid=fe1846cb-1d26-49fc-b064-57b25dcc31a0)。
+- [在何处查看可用的软件保障协议](https://www.microsoft.com/showcase/video.aspx?uuid=fe1846cb-1d26-49fc-b064-57b25dcc31a0)（从 43 秒左右开始）  
 
-- 如何获取 VLSC 的权限：[https://www.microsoft.com/showcase/video.aspx?uuid=ac4ed1ca-d0a9-43cd-89fa-74ccb555dec4](https://www.microsoft.com/showcase/video.aspx?uuid=ac4ed1ca-d0a9-43cd-89fa-74ccb555dec4)。  可以将 VLSC 读取和写入权限委派给组织中的其他人。
+- [如何获取 VLSC 的权限](https://www.microsoft.com/showcase/video.aspx?uuid=ac4ed1ca-d0a9-43cd-89fa-74ccb555dec4)。 可以将 VLSC 读取和写入权限委派给组织中的其他人。
