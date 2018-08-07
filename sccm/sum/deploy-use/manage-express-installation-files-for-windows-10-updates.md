@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b8d8af88-e8ac-4deb-921b-975e2d2afd80
-ms.openlocfilehash: 5f29b7a5d82b58358bdecd5508391db219b2cedc
-ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
+ms.openlocfilehash: 54e91c729739d7bf1f0417a80a0143cc4969ed74
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36260918"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39383128"
 ---
 # <a name="manage-express-installation-files-for-windows-10-updates"></a>管理 Windows 10 更新的快速安装文件
 
@@ -58,4 +58,4 @@ Configuration Manager 支持 Windows 10 更新的快速安装文件。 将客户
 
 3. 选择相应的客户端设置，然后在功能区上单击“属性”。  
 
-4. 选择“软件更新”组。 配置为“是”，该设置将“在客户端上启用快速更新安装”。 通过客户端上 HTTP 侦听器使用的端口配置用于下载快速更新内容的端口。  
+4. 选择“软件更新”组。 配置为“是”，该设置将“在客户端上启用快速更新安装”。 通过客户端上 HTTP 侦听器使用的端口配置用于下载快速更新内容的端口。
