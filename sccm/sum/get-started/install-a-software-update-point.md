@@ -69,7 +69,7 @@ ms.locfileid: "32353073"
 ### <a name="configure-ssl-communications-to-wsus"></a>配置与 WSUS 的 SSL 通信  
  你可以在向导的“常规”页上或软件更新点属性的“常规”选项卡上配置 SSL 通信。  
 
- 有关如何使用 SSL 的详细信息，请参阅 [Decide whether to configure WSUS to use SSL](../plan-design/plan-for-software-updates.md#BKMK_WSUSandSSL)。  
+ 有关如何使用 SSL 的详细信息，请参阅 [决定是否将 WSUS 配置为使用 SSL](../plan-design/plan-for-software-updates.md#BKMK_WSUSandSSL)。  
 
 ### <a name="wsus-server-connection-account"></a>WSUS 服务器连接帐户  
  你可以配置要在站点服务器连接到软件更新点上运行的 WSUS 时使用的帐户。 如果不配置此帐户，Configuration Manager 将使用计算机帐户将站点服务器连接到 WSUS。 在向导的“代理和帐户设置”页上或“软件更新点属性”中的“代理和帐户设置”选项卡上配置 WSUS 服务器连接帐户。  可以在向导的不同位置中配置帐户，具体情况视使用的 Configuration Manager 版本而定。  
@@ -116,13 +116,13 @@ ms.locfileid: "32353073"
 ## <a name="supersedence-rules"></a>取代规则  
  在向导的“取代规则”页上或者在“软件更新点组件属性”中的“取代规则”选项卡上配置取代设置。 只能在顶层站点上配置取代规则。  
 
- 在此页上，你可以指定被取代的软件更新立即过期，这会阻止将它们包含在新部署中并标记现有部署，以指明被取代的软件更新包含一个或多个过期的软件更新。 或者，你可以指定被取代软件更新过期之前的时间段，从而允许你继续部署这些更新。 有关详细信息，请参阅 [Supersedence rules](../plan-design/plan-for-software-updates.md#BKMK_SupersedenceRules)。  
+ 在此页上，你可以指定被取代的软件更新立即过期，这会阻止将它们包含在新部署中并标记现有部署，以指明被取代的软件更新包含一个或多个过期的软件更新。 或者，你可以指定被取代软件更新过期之前的时间段，从而允许你继续部署这些更新。 有关详细信息，请参阅 [取代规则](../plan-design/plan-for-software-updates.md#BKMK_SupersedenceRules)。  
 
 > [!NOTE]  
 >  向导的“取代规则”页仅当在站点配置第一个软件更新点时可用。 当你安装其他软件更新点时，此页不会显示。  
 
 ## <a name="classifications"></a>分类  
- 在向导的“分类”页上或者在“软件更新点组件属性”的“分类”选项卡上配置分类设置。 有关软件更新分类的详细信息，请参阅 [Update classifications](../plan-design/plan-for-software-updates.md#BKMK_UpdateClassifications)。  
+ 在向导的“分类”页上或者在“软件更新点组件属性”的“分类”选项卡上配置分类设置。 有关软件更新分类的详细信息，请参阅 [更新分类](../plan-design/plan-for-software-updates.md#BKMK_UpdateClassifications)。  
 
 > [!NOTE]  
 >  向导的“分类”页仅当在站点配置第一个软件更新点时可用。 当你安装其他软件更新点时，此页不会显示。  
@@ -140,7 +140,7 @@ ms.locfileid: "32353073"
 >  当你首次在顶层站点上安装软件更新点时，请清除所有产品。 初次软件更新同步之后，请配置更新的列表中的产品，然后重新启动同步。 仅在顶层站点的软件更新点上配置此设置。  
 
 ## <a name="languages"></a>语言  
- 在向导的“语言”页上或者在“软件更新点组件属性”的“语言”选项卡上配置语言设置。 指定想要对其同步软件更新文件和摘要详细信息的语言。 在 Configuration Manager 层次结构中的每个软件更新点上配置“软件更新文件”设置。 “摘要详细信息”设置仅在顶层软件更新点上配置。 有关详细信息，请参阅 [Languages](../plan-design/plan-for-software-updates.md#BKMK_UpdateLanguages)。  
+ 在向导的“语言”页上或者在“软件更新点组件属性”的“语言”选项卡上配置语言设置。 指定想要对其同步软件更新文件和摘要详细信息的语言。 在 Configuration Manager 层次结构中的每个软件更新点上配置“软件更新文件”设置。 “摘要详细信息”设置仅在顶层软件更新点上配置。 有关详细信息，请参阅 [语言](../plan-design/plan-for-software-updates.md#BKMK_UpdateLanguages)。  
 
 > [!NOTE]  
 >  向导的“语言”页仅在安装管理中心站点的软件更新点时可用。 你可以在“软件更新点组件属性”内的“语言”选项卡中配置子站点中的软件更新文件语言。  
