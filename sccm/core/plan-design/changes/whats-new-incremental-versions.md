@@ -2,7 +2,7 @@
 title: 增量版本
 titleSuffix: Configuraton Manager
 description: 了解 Configuration Manager 最新更新中的新增功能。
-ms.date: 03/22/2018
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,14 +10,14 @@ ms.assetid: b57acf0b-05b7-46af-ad4c-f3e707bd3861
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 28b7819b915eb2dea8a34d1474141067ac7751b5
-ms.sourcegitcommit: 0305e710f634529793ae73e5aac24168ee4fe02f
+ms.openlocfilehash: 13037b857b890d400881d8d7173b7ca03dd83ebc
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042773"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39384120"
 ---
-# <a name="whats-new-in-system-center-configuration-manager-incremental-versions"></a>System Center Configuration Manager 增量版本中的新增功能
+# <a name="whats-new-in-configuration-manager-incremental-versions"></a>Configuration Manager 增量版本中的新增功能
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
@@ -27,11 +27,13 @@ ms.locfileid: "37042773"
 
  不同的更新版本会按年和月标识出来。 例如，版本 1511 标识的年月为 2015 年 11 月（Configuration Manager Current Branch 首次发布到制造阶段的月份）。 之后的更新具有类似 1802（表示更新创建于 2018 年 2 月）的版本名称。 这些更新版本是了解 Configuration Manager 安装的增量版本以及能在环境中启用哪些功能的关键。
 
+
+
 ## <a name="supported-versions"></a>支持的版本
  使用以下链接查看每个受支持版本的新增功能：
+  - [1806 版中的新增功能](../../../core/plan-design/changes/whats-new-in-version-1806.md)  
   - [1802 版中的新增功能](../../../core/plan-design/changes/whats-new-in-version-1802.md)
   - [版本 1710 中的新增功能](../../../core/plan-design/changes/whats-new-in-version-1710.md)
-  - [版本 1706 中的新增功能](../../../core/plan-design/changes/whats-new-in-version-1706.md)  
 
 
 对于 1710 前发布的 Configuration Manager 版本，支持期为 12 个月。 从 1710 版本开始后，对于每个更新版本，仍为自其通用版本 (GA) 发布日期起 18 个月内受支持。  了解最新的更新版本。 有关详细信息，请参阅[对 Configuration Manager Current Branch 版本的支持](../../../core/servers/manage/current-branch-versions-supported.md)。  

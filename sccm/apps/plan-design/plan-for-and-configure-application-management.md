@@ -2,7 +2,7 @@
 title: 规划和配置应用程序管理
 titleSuffix: Configuration Manager
 description: 实现和配置用于在 System Center Configuration Manager 中部署应用程序的所需依赖关系。
-ms.date: 11/07/2017
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 2be84a1d-ebb9-47ae-8982-c66d5b92a52a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 18d9fe80a1c5525457579dadbfeaeafa3425202d
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 626fbb8d431857b1b672fffd9f3ba0df8b2a3da0
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32340142"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39385195"
 ---
 # <a name="plan-for-and-configure-application-management-in-system-center-configuration-manager"></a>规划和配置 System Center Configuration Manager 中的应用程序管理
 
@@ -42,7 +42,7 @@ ms.locfileid: "32340142"
 |必须安装 APP-V 4.6 SP1 或更高版本的客户端才能运行虚拟应用程序|为了在 Configuration Manager 中创建虚拟应用程序，客户端计算机必须安装 App-V 4.6 SP1 或更高版本的客户端。<br /><br /> 此外，还必须使用在[知识库文章 2645225](http://go.microsoft.com/fwlink/p/?LinkId=237322) 中描述的修补程序来更新 App-V 客户端，才能部署虚拟应用程序。|  
 |应用程序目录 Web 服务点|应用程序目录 Web 服务点是站点系统角色，它向应用程序目录网站提供有关软件库中可用的软件的信息。<br /><br /> 有关如何配置此站点系统角色的详细信息，请参阅本文中的[配置软件中心和应用程序目录（仅适用于 Windows 电脑）](/sccm/apps/plan-design/plan-for-and-configure-application-management#configure-software-center-and-the-application-catalog-windows-pcs-only)。|  
 |应用程序目录网站点|应用程序目录网站点是站点系统角色，它向用户提供可用软件的列表。<br /><br /> 有关如何配置此站点系统角色的详细信息，请参阅本文中的[配置软件中心和应用程序目录（仅适用于 Windows 电脑）](/sccm/apps/plan-design/plan-for-and-configure-application-management#configure-software-center-and-the-application-catalog-windows-pcs-only)。|  
-|Reporting Services 点|若要使用 Configuration Manager 中的报表进行应用程序管理，必须首先安装和配置 Reporting Services 点。<br /><br /> 有关详细信息，请参阅 [System Center Configuration Manager 中的报表](../../core/servers/manage/reporting.md)。|  
+|Reporting Services 点|若要使用 Configuration Manager 中的报表进行应用程序管理，必须首先安装和配置 Reporting Services 点。<br /><br /> 有关详细信息，请参阅 [System Center Configuration Manager 中的报告](../../core/servers/manage/reporting.md)。|  
 |应用程序管理的安全权限|必须具有以下安全权限才能管理应用程序：<br /><br /> “应用程序作者”安全角色包含前面列出的在 Configuration Manager 中创建、更改和停用应用程序所需的权限。<br /><br /> **若要部署应用程序，请执行以下操作：**<br /><br /> “应用程序部署管理员”安全角色包含前面列出的在 Configuration Manager 中部署应用程序所需的权限。<br /><br /> “应用程序管理员”安全角色具有“应用程序作者”和“应用程序部署管理员”安全角色中的所有权限。<br /><br /> 有关详细信息，请参阅[配置基于角色的管理](../../core/servers/deploy/configure/configure-role-based-administration.md)。|  
 
 ##  <a name="configure-software-center-and-the-application-catalog-windows-pcs-only"></a>配置软件中心和应用程序目录（仅适用于 Windows PC）  
@@ -183,8 +183,7 @@ ms.locfileid: "32340142"
 3. 如果已配置 Microsoft Intune 订阅且已连接到 Configuration Manager，则软件中心将显示 Intune 订阅属性中指定的组织名称、颜色和公司徽标。 有关详细信息，请参阅 [Configuring the Microsoft Intune subscription](https://docs.microsoft.com/sccm/mdm/deploy-use/setup-hybrid-mdm#step-3-configure-intune-subscription)。
 
 #### <a name="to-manually-set-software-center-branding"></a>手动设置软件中心品牌
-<!-- 1351224 -->
-使用 1710 版本，可以手动添加企业品牌元素，并在“软件中心”上指定选项卡的可见性。 可以添加“软件中心”特定公司名称、设置“软件中心”配置颜色主题、设置公司徽标，并设置客户端设备的可见选项卡。
+<!-- 1351224 --> 使用 1710 版本，可以手动添加企业品牌元素，并在“软件中心”上指定选项卡的可见性。 可以添加“软件中心”特定公司名称、设置“软件中心”配置颜色主题、设置公司徽标，并设置客户端设备的可见选项卡。
 
 1. 在“Configuration Manager”控制台中，选择“管理” > “客户端设置”。 单击所需的客户端设置实例。
 2. 在“主页”选项卡上的“属性”组中，选择“属性”。
@@ -201,9 +200,13 @@ ms.locfileid: "32340142"
     -  启用“安装状态”选项卡
     -  启用“设备符合性”选项卡
     -  启用“选项”选项卡
+    -  为软件中心指定自定义选项卡（从版本 1806 开始）<!--1358132 -->
+        - 选项卡名称
+        - 内容 URL
 
 > [!IMPORTANT]  
->  软件中心品牌每 14 天与 Intune 服务同步一次。 因此，在 Configuration Manager 中显示在 Intune 中所做的更改之前可能会有延迟。
+> - 如果在软件中心将其用作自定义选项卡，某些网站功能可能无法工作。 将结果部署到客户端之前，请确保测试结果。 <!--519659--> 
+> - 软件中心品牌每 14 天与 Intune 服务同步一次。 因此，在 Configuration Manager 中显示在 Intune 中所做的更改之前可能会有延迟。
 
 ###  <a name="step-5-verify-that-the-application-catalog-is-operational"></a>步骤 5：验证应用程序目录是否可正常运行  
  使用以下过程来验证应用程序目录是否可正常运行。 可以从浏览器或软件中心中直接使用应用程序目录。  

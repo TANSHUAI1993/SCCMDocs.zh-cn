@@ -5,17 +5,17 @@ description: System Center Configuration Manager 控制台提供警报和状态�
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 11/20/2016
+ms.date: 07/30/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 9afd7b0f-5c8e-48bc-9a65-1f7d74103688
-ms.openlocfilehash: bc594fe6b870e1054033601a67209aa9ad72ccef
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: e51e2c8236b014063efe9734baf338ebe70d1eb3
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32351849"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39384477"
 ---
 # <a name="monitor-software-updates-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中监视软件更新
 
@@ -61,6 +61,26 @@ System Center Configuration Manager 提供了许多方式来帮助你监视软�
 
 ##  <a name="BKMK_SUReports"></a> 软件更新报表  
  软件更新的状态消息提供了有关软件更新的符合性的信息，以及有关软件更新部署的评估和强制状态的信息。 可以运行软件更新报表以显示这些状态消息。 可以使用 30 多个预定义的软件更新报表。 它们分为几个类别，可用于报告有关软件更新和部署的特定信息。 除了使用预先配置的报表之外，还可以按照企业的需求创建自定义软件更新报表。 有关详细信息，请参阅[报表的操作和维护](../../core/servers/manage/operations-and-maintenance-for-reporting.md)。  
+
+### <a name="recommended-software-updates-reports"></a>推荐的软件更新报表
+以下是一些有助于识别潜在问题的报表： 
+
+#### <a name="compliance-9---overall-health-and-compliance-starting-in-version-1806"></a>符合性 9 - 总体运行状况和符合性（自版本 1806 起）
+报告包括以下几个部分：
+
+- **正常客户端与总客户端**：此条形图比较了在指定时间段内与站点通信的“正常”客户端的数量和指定集合中的客户端总数。
+- **符合性概述**：此饼图显示了指定集合中活动客户端上的特定软件更新组的总体符合性状态。
+- **前 5 个不符合（按文章 ID）**：此条形图显示了特定组中在指定集合中的活动客户端上不符合的前五个软件更新。
+- 报告底部是具有更多详细信息的表，其中列出了指定组中的软件更新。
+
+#### <a name="management-2---updates-required-but-not-deployed"></a>管理 2 - 需要更新但未部署
+
+此报表显示已检测到为客户端必需但未部署到特定集合的特定更新分类中供应商特定的软件更新。 
+
+#### <a name="troubleshooting-2---deployment-errors"></a>疑难解答 2 - 部署错误
+
+此报表返回站点上的部署错误以及遇到各个错误的计算机的计数。 
+
 
 ##  <a name="BKMK_MonitorContent"></a> 监视内容  
  可以在 Configuration Manager 控制台中监视内容，以查看与关联的分发点相关的所有包类型的状态。 这可以包括包中的内容的内容验证状态、分配给特定分发点组的内容的状态、分配给分发点的内容的状态和每个分发点的可选功能（内容验证、PXE 和多播）的状态。  

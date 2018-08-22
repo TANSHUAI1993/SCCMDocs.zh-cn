@@ -5,24 +5,23 @@ description: 在 Windows 10 客户端上配置 Microsoft Edge Web 浏览器设�
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 03/28/2018
+ms.date: 07/30/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.assetid: 76477b4d-df41-4b25-8318-7d18d46ca2c6
-ms.openlocfilehash: 81bd0a59a24cab446668911f714548581c1347df
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 2b0b553b7281015bfee89f8409fd6c5e255d753c
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32343759"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39384137"
 ---
 # <a name="configure-microsoft-edge-settings-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中配置 Microsoft Edge 设置
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-<!-- 1357310 -->
-从 1802 版开始，在 Windows 10 客户端上使用 [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb265256) Web 浏览器的客户，可创建 Configuration Manager 符合性设置策略，以配置多个 Microsoft Edge 设置。 
+<!-- 1357310 -->自 1802 版起，如果是在 Windows 10 客户端上使用 [Microsoft Edge](https://technet.microsoft.com/microsoft-edge/bb265256) Web 浏览器的客户，请创建 Configuration Manager 符合性设置策略以配置多个 Microsoft Edge 设置。 
 
 此策略仅适用于 Windows 10 1703 或更高版本上的客户端。 <!--511552-->
 
@@ -44,14 +43,23 @@ ms.locfileid: "32343759"
 - 允许使用扩展：有关详细信息，请参阅 [AllowExtensions 浏览器策略](/windows/client-management/mdm/policy-csp-browser#browser-allowextensions)。
 
 
+### <a name="configure-windows-defender-smartscreen-settings-for-microsoft-edge"></a>为 Microsoft Edge 配置 Windows Defender SmartScreen 设置
+<!--1353701-->自版本 1806 起，此策略为 [Windows Defender SmartScreen](/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-overview) 添加了 3 个设置。 该策略现在包含“SmartScreen 设置”页上的以下附加设置：
+
+- **允许 SmartScreen**：指定是否允许 Windows Defender SmartScreen。 有关详细信息，请参阅 [AllowSmartScreen 浏览器策略](/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)。
+- **用户可以覆盖站点的 SmartScreen 提示**：指定用户是否可以覆盖有关潜在恶意网站的 Windows Defender SmartScreen 筛选器警告。 有关详细信息，请参阅 [PreventSmartScreenPromptOverride 浏览器策略](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)。
+- **用户可以覆盖文件的 SmartScreen 提示**：指定用户是否可以覆盖有关下载未验证文件的 Windows Defender SmartScreen 筛选器警告。 有关详细信息，请参阅[PreventSmartScreenPromptOverrideForFiles 浏览器策略](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)。
+
+
 
 ## <a name="create-the-microsoft-edge-browser-profile"></a>创建 Microsoft Edge 浏览器配置文件
 
-1. 在 Configuration Manager 控制台中，转到“资产和符合性”工作区。 展开“符合性设置”，并选择新的“Microsoft Edge 浏览器配置文件”节点。 单击“创建 Microsoft Edge 浏览器策略”的功能区选项。
+1. 在 Configuration Manager 控制台中，转到“资产和符合性”工作区。 展开“符合性设置”，然后选择“Microsoft Edge 浏览器配置文件”节点。 单击“创建 Microsoft Edge 配置文件”的功能区选项。
 2. 指定策略“名称”，根据需要输入“说明”，然后单击“下一步”。
-3. 在“设置”页上，将设置值更改为“已配置”以包括在此策略中，然后单击“下一步”。
-4. 在“支持的平台”页上，选择要在其中应用此策略的操作系统版本和体系结构，并单击“下一步”。 
-5. 完成向导。
+3. 在“常规设置”页上，将值更改为“已配置”，使设置包含在此策略中，然后单击“下一步”。 必须配置“将 Microsoft Edge 浏览器设为默认”设置才能继续操作。
+4. 在版本 1806 或更高版本中，请在“SmartScreen 设置”页上配置设置，然后单击“下一步”。 
+5. 在“支持的平台”页上，选择此策略要应用到的 OS 版本和体系结构，然后单击“下一步”。 
+6. 完成向导。
 
 
 
@@ -59,9 +67,9 @@ ms.locfileid: "32343759"
 
 1. 选择策略，然后单击功能区选项“部署”。
 2. 单击“浏览”以选择要在其中部署策略的用户或设备集合。 
-3. 根据需要选择其他选项。 
-    a. 当策略不合规时生成警报。 
-    b. 设置客户端评估设备与此策略符合性所依据的计划。
+3. 根据需要选择其他选项。  
+     a. 当策略不合规时生成警报。  
+     b. 设置客户端评估设备与此策略符合性所依据的计划。 
 4. 单击“确定”创建部署。
 
 

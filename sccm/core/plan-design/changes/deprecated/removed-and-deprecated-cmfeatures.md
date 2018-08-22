@@ -1,8 +1,8 @@
 ---
 title: 已弃用的功能
 titleSuffix: Configuration Manager
-description: 了解 System Center Configuration Manager 不再支持的功能。
-ms.date: 05/01/2018
+description: 了解 Configuration Manager 不再支持的功能。
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,14 +10,14 @@ ms.assetid: 287a6324-ae65-4d38-b2ef-198d47c91231
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 967c0ff71af5b3586568bf3f5d2fee7ed5b8bb06
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 8075fb0e00a0cc9bd8190bb2838431be8c2d1ce8
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32337728"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39382866"
 ---
-# <a name="removed-and-deprecated-features-for-system-center-configuration-manager"></a>System Center Configuration Manager 的已删除和已弃用的功能
+# <a name="removed-and-deprecated-features-for-configuration-manager"></a>Configuration Manager 中已删除和已弃用的功能
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
@@ -31,11 +31,12 @@ ms.locfileid: "32337728"
 
 |功能|首次宣布弃用|支持&nbsp;删除|  
 |-----------|---|--------------|  
-|此前仅出现在应用程序目录中的用户可用的应用现在将出现在新的软件中心中。 </br></br>因此，未来几个月将无法提供基于 Web 的应用程序目录体验。|2017 年 8 月 11日| 对应用程序目录网站用户体验的支持止于 2018 年 6 月 1 日后发布的首个更新|
+|应用程序目录网站点的 Silverlight 用户体验不再受支持。 用户应使用新的软件中心。 注意：应用程序目录网站点和 Web 服务点角色依然受支持。 在某些情况下，新的软件中心会与应用程序目录网站点进行通信。|2017 年 8 月 11日| 版本 1806|
 |以前版本的软件中心。<br><br>有关新软件中心的详细信息，请参阅[规划和配置应用程序管理](/sccm/apps/plan-design/plan-for-and-configure-application-management#configure-software-center-and-the-application-catalog-windows-pcs-only)。|2016 年 12 月 13 日|版本 1802|
 |利用 Configuration Manager 管理虚拟硬盘 (VHD)。 </br></br>此次弃用包括删除使用任务序列创建新 VHD 或管理 VHD 的选项，以及删除 Configuration Manager 控制台的虚拟硬盘节点。 </br></br>不会删除现有 VHD，但无法从 Configuration Manager 控制台中对其进行访问。  |2017 年 1 月 6 日 |版本 1710|
 |任务序列： <br /> - 将磁盘转换为动态磁盘 <br /> - 安装部署工具 |2016 年 11 月 18 日|版本 1710|
 |System Center Configuration Manager 升级评估工具。 </br></br>升级评估工具依赖于 System Center Configuration Manager 和应用程序兼容性工具包 (ACT) 6.x。 ACT 的最终版本随附在 Windows 10 v1511 ADK 中。 由于不再对 ACT 进行任何更新，因此会停止对升级评估工具的支持。 </br></br>升级评估工具将由[升级准备](/sccm/core/clients/manage/upgrade/upgrade-analytics)功能取代。 弃用通知已于 2016 年 9 月 12 日添加到 [UAT 的下载页面](https://www.microsoft.com/download/details.aspx?id=37145)。 | 2016 年 9 月 12 日  | 2017 年 7 月 11 日 |
+|带有网络负载均衡 (NLB) 群集的软件更新点 | 2016 年 2 月 27 日 | 版本 1702 | 
 |任务序列： <br /> - OSDPreserveDriveLetter  <br /><br /> 现在，在操作系统部署期间，默认情况下，Windows 安装程序会确定要使用的最佳驱动器号（通常为 C:）。 如果想要指定使用另一个驱动器，可以在“应用操作系统”任务序列步骤中更改位置。 转到“选择要应用此操作系统的位置”设置。 选择“特定逻辑驱动器号”并选择想要使用的驱动器。 |2016 年 6 月 20 日 |版本 1606 |
 |网络访问保护 (NAP)- 在 System Center 2012 Configuration Manager 中找到|2015 年 10 月|版本 1511|  
 |带外管理- 在 System Center 2012 Configuration Manager 中找到|2015 年 10 月 16 日|版本 1511|

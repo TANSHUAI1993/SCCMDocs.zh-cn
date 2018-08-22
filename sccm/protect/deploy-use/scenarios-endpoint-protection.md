@@ -1,8 +1,8 @@
 ---
-title: 方案 - Endpoint Protection 保护计算机免受恶意软件侵害
+title: 保护计算机免遭恶意软件攻击
 titleSuffix: Configuration Manager
 description: 了解如何在 Configuration Manager 中实现 Endpoint Protection，使计算机免受恶意软件侵害。
-ms.date: 03/22/2018
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,22 +10,31 @@ ms.assetid: 539c7a89-3c03-4571-9cb4-02d455064eeb
 author: aczechowski
 ms.author: aaroncz
 manager: doubeby
-ms.openlocfilehash: 40fe2c9e16c2828b2c575e8401a80f3cf2eac969
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 7d4d5d9479029af180120edc3daba3ff13a7e4d0
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32352560"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39383861"
 ---
-# <a name="example-scenario-using-system-center-endpoint-protection-to-protect-computers-from-malware-in-system-center-configuration-manager"></a>示例方案：使用 System Center Endpoint Protection 来保护计算机在 System Center Configuration Manager 中免受恶意软件侵害
+# <a name="example-scenario-use-endpoint-protection-to-protect-computers-from-malware"></a>示例方案：使用 Endpoint Protection 来保护计算机免遭恶意软件攻击
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-本文通过提供示例方案，说明了如何在 Configuration Manager 中实施 Endpoint Protection 以保护组织中的计算机免遭恶意软件攻击。  
+本文提供了示例方案，展示如何在 Configuration Manager 中实施 Endpoint Protection 以保护组织中的计算机免遭恶意软件攻击。  
 
- John 是 Woodgrove Bank 的 Configuration Manager 管理员。 该银行目前使用 System Center Endpoint Protection 来保护计算机免受恶意软件攻击。 此外，该银行使用 Windows 组策略来确保公司中的所有计算机上都启用了 Windows 防火墙，并确保在 Windows 防火墙阻止新程序时通知用户。  
 
- John 已受命将 Woodgrove Bank 的反恶意软件升级到 System Center Endpoint Protection，以便银行可以利用最新的反恶意软件功能并能够从 Configuration Manager 控制台集中管理反恶意软件解决方案。 此实现具有下列要求：  
+
+## <a name="scenario-overview"></a>方案概述
+
+John 是 Woodgrove Bank 的 Configuration Manager 管理员。 该银行目前使用 System Center Endpoint Protection 来保护计算机免受恶意软件攻击。 此外，该银行使用 Windows 组策略来确保公司中的所有计算机上都启用了 Windows 防火墙，并确保在 Windows 防火墙阻止新程序时通知用户。  
+
+John 已受命将 Woodgrove Bank 的反恶意软件升级到 System Center Endpoint Protection，以便银行可以利用最新的反恶意软件功能并能够从 Configuration Manager 控制台集中管理反恶意软件解决方案。 
+
+
+## <a name="business-requirements"></a>业务要求
+
+此实现具有下列要求：  
 
 -   使用 Configuration Manager 来管理组策略当前管理的 Windows 防火墙设置。  
 
@@ -43,9 +52,9 @@ ms.locfileid: "32352560"
 
     -   在任意 24 小时内检测到 3 种以上的不同类型的恶意软件  
 
--   卸载现有的反恶意软件解决方案。  
-
  米申随后执行以下步骤来实现 Endpoint Protection：  
+
+
 
 ##  <a name="steps-to-implement-endpoint-protection"></a>若要实现 Endpoint Protection 的步骤  
 
@@ -63,7 +72,7 @@ ms.locfileid: "32352560"
 |John 创建一个名为“Woodgrove Bank 服务器策略” 的自定义反恶意软件策略。 他只添加“计划扫描”  设置，并进行以下更改：<br /><br /> ：  <br /><br /> ：  <br /><br /> ： **1：00 AM**<br /><br /> “在客户端计算机上运行每日快速扫描”:  。|请参阅[如何在 System Center Configuration Manager 中为 Endpoint Protection 创建和部署反恶意软件策略](endpoint-antimalware-policies.md)。|  
 |John 将“Woodgrove Bank 服务器策略”  自定义反恶意软件策略部署到“Woodgrove Bank 服务器”  集合。|请参阅[如何为 Endpoint Protection 创建和部署反恶意软件策略](endpoint-antimalware-policies.md)一文中的“将反恶意软件策略部署到客户端计算机”。|  
 |John 为 Endpoint Protection 创建一组新的自定义客户端设备设置，并将其命名为“Woodgrove Bank Endpoint Protection 设置”。<br /><br /> **注意：** 如果不希望在层次结构中的所有客户端上安装并启用 Endpoint Protection，请确保在默认客户端设置中将选项“管理客户端计算机上的 Endpoint Protection 客户端”和“在客户端计算机上安装 Endpoint Protection 客户端”均配置为“否”。|有关详细信息，请参阅[为 Endpoint Protection 配置自定义客户端设置](endpoint-protection-configure-client.md)。|  
-|他为 Endpoint Protection 配置以下设置：<br /><br /> “管理客户端计算机上的 Endpoint Protection 客户端”:  <br /><br /> 此设置和值确保已安装的所有现有 Endpoint Protection 客户端将由 Configuration Manager 托管。<br /><br /> “在客户端计算机上安装 Endpoint Protection 客户端”:  。</br></br>**注意**从 Configuration Manager 1802 开始，Windows 10 设备不需要安装 Endpoint Protection 代理。 如果已在 Windows 10 设备上安装该代理，Configuration Manager 也不会将其删除。 管理员可在运行最低 1802 客户端版本的 Windows 10 设备上删除 Endpoint Protection 代理。<br /><br /> “安装 Endpoint Protection 之前自动删除以前安装的反恶意软件”:  。<br /><br /> 此设置和值可满足在安装和启用 Endpoint Protection 前删除现有反恶意软件的业务要求。|有关详细信息，请参阅[为 Endpoint Protection 配置自定义客户端设置](endpoint-protection-configure-client.md)。|  
+|他为 Endpoint Protection 配置以下设置：<br /><br /> “管理客户端计算机上的 Endpoint Protection 客户端”:  <br /><br /> 此设置和值确保已安装的所有现有 Endpoint Protection 客户端将由 Configuration Manager 托管。<br /><br /> “在客户端计算机上安装 Endpoint Protection 客户端”:  。</br></br>**注意**从 Configuration Manager 1802 开始，Windows 10 设备不需要安装 Endpoint Protection 代理。 如果已在 Windows 10 设备上安装该代理，Configuration Manager 也不会将其删除。 管理员可在运行最低 1802 客户端版本的 Windows 10 设备上删除 Endpoint Protection 代理。|有关详细信息，请参阅[为 Endpoint Protection 配置自定义客户端设置](endpoint-protection-configure-client.md)。|  
 |John 将“Woodgrove Bank Endpoint Protection 设置”客户端设置部署到“Endpoint Protection 保护的所有计算机”集合。|请参阅[在 Configuration Manager 中配置 Endpoint Protection](endpoint-antimalware-policies.md) 中的“为 Endpoint Protection 配置自定义客户端设置”。|  
 |John 使用创建的 Windows 防火墙策略向导创建策略通过配置域配置文件的以下设置：<br /><br /> 1) **启用 Windows 防火墙**：“是”<br /><br /> 2)<br />                    ： |请参阅[如何在 System Center Configuration Manager 中为 Endpoint Protection 创建和部署 Windows 防火墙策略](../../protect/deploy-use/create-windows-firewall-policies.md)|  
 |John 将新的防火墙策略部署到先前创建的“Endpoint Protection 保护的所有计算机”集合。|请参阅[如何在 System Center Configuration Manager 中为 Endpoint Protection 创建和部署 Windows 防火墙策略](create-windows-firewall-policies.md)中的“部署 Windows 防火墙策略”|  

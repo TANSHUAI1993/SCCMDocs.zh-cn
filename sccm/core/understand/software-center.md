@@ -5,17 +5,17 @@ description: 了解软件中心的功能和特性
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 03/22/2018
+ms.date: 07/30/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.assetid: 9e68de6e-2b33-442b-b674-a382728d9529
-ms.openlocfilehash: ff40af9dd40921b63f8b8bd13ba5c287c3bf9972
-ms.sourcegitcommit: e35d07870656eadd29faacc378ecd091ff3bdcfb
+ms.openlocfilehash: bcdc6298a7b1c429888acf2b7257cec072e9b878
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848656"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39383414"
 ---
 # <a name="software-center-user-guide"></a>软件中心用户指南
 
@@ -52,8 +52,7 @@ ms.locfileid: "34848656"
 
 
 ### <a name="install-multiple-applications"></a>安装多个应用程序 
-<!-- 1357126 -->
-一次安装多个应用程序，而不是等一个完成后再开始下一个。 并非所有应用程序都符合以下要求：
+<!-- 1357126 -->一次安装多个应用程序，不用等到一个程序完成后再安装下一个。 并非所有应用程序都符合以下要求：
 - 该应用对用户可见
 - 尚未下载或安装该应用
 - IT 管理员不需要获得批准即可安装该应用
@@ -96,8 +95,11 @@ ms.locfileid: "34848656"
 - **已安装**：软件中心已在此计算机上安装此应用程序。
 - **正在下载**：软件中心正在下载要在此计算机上安装的软件。
 - **失败**：软件中心在尝试安装软件时出错。
+- **计划在以下时间后安装**：显示在设备下一个维护时段安装即将推出的软件的日期和时间。 维护时段由 IT 管理员定义。<!--1358131-->
+    - 可在“全部”和“即将进行”选项卡中查看状态。 
+    - 可单击“立即安装”按钮，在维护时段时间之前进行安装。 
 
-
+IT 管理员可能会允许你从应用程序目录网站查看应用程序。 要查看该网站，请单击右上角的“打开应用程序目录网站”。 <!--1358214-->
 
 ## <a name="device-compliance"></a>设备符合性
 
@@ -134,3 +136,5 @@ IT 管理员可能会设置电源管理策略。 这些策略可帮助组织在�
 - **当我的计算机处于演示模式时暂停软件中心活动**：此设置默认处于启用状态。
 - **同步策略**：在 IT 管理员的指示下单击此按钮。此计算机会检查服务器中的所有更新，比如应用程序、软件更新或操作系统。
 
+## <a name="custom-tab-in-software-center"></a>软件中心的“自定义”选项卡
+IT 管理员可能已向软件中心添加了其他选项卡。 此选项卡由管理员命名并转到其指定的网站。 例如，你可能有一个名为“支持人员”的选项卡，它转到组织的支持人员网站。 <!--1358132-->

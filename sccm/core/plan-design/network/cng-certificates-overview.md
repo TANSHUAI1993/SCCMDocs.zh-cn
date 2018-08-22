@@ -2,7 +2,7 @@
 title: CNG 证书概述
 titleSuffix: Configuration Manager
 description: 了解对适用于 Configuration Manager 客户端和服务器的下一代加密技术证书的支持。
-ms.date: 03/22/2018
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: dba904ae-7c44-46db-ae63-999b9821cb46
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4a4f37330f94111bcc41b81d9127039056f69e2b
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 8b85961c14c3db69c3e02e776798588fadd0fc89
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334260"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39383147"
 ---
 # <a name="cng-certificates-overview"></a>CNG 证书概述
 <!-- 1356191 --> 
@@ -37,6 +37,10 @@ Configuration Manager 对下一代加密技术 (CNG) 证书提供有限支持。
 - 软件更新点
 - 状态迁移点     
 
+自版本 1806 起，CNG 证书将用于下述已启用 HTTPS 的服务器角色：
+
+- 证书注册点，包括具有 Configuration Manager 策略模块的 NDES 服务器<!--1357314-->
+
 > [!NOTE]
 > CNG 后向兼容 crypto API (CAPI)。 即使 CNG 支持已在客户端启用，CAPI 证书仍继续得到支持。
 
@@ -54,9 +58,11 @@ Configuration Manager 对下一代加密技术 (CNG) 证书提供有限支持。
 
 - 使用 CNG 证书创建云分发点。
 
-- 如果 NDES 策略模块使用 CNG 证书进行客户端身份验证，则其与证书注册点的通信会失败。
+- 如果 NDES 策略模块使用 CNG 证书进行客户端身份验证，则其与证书注册点的通信会失败。 
+    - 自 Configuration Manager 1806 起支持此方案。
 
 - 如果在创建任务序列媒体时指定 CNG 证书，则该向导无法创建可启动的媒体。
+    - 自 Configuration Manager 1806 起支持此方案。
 
 ## <a name="to-use-cng-certificates"></a>使用 CNG 证书
 
@@ -71,6 +77,7 @@ Configuration Manager 对下一代加密技术 (CNG) 证书提供有限支持。
 - “加密”选项卡
 
     - “提供程序类别”必须是“密钥存储提供者”。 （必需）
+    - **请求必须使用以下提供程序之一：** 必须要是 Microsoft 软件密钥存储提供程序。 
 
 > [!NOTE]
 > 对环境或组织的需求可能有所不同。 请联系 PKI 专家。 证书模板必须使用密钥存储提供者来利用 CNG，这一点要着重考虑。

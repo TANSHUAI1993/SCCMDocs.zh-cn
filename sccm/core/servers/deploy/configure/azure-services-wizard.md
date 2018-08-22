@@ -10,12 +10,12 @@ ms.assetid: a26a653e-17aa-43eb-ab36-0e36c7d29f49
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7ff953d658c54c2cebbbfd29a6bba83fe65cc08e
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 5607402171a3b771560ff439b1f1f99a6a947e83
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342335"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39383290"
 ---
 # <a name="configure-azure-services-for-use-with-configuration-manager"></a>配置用于 Configuration Manager 的 Azure 服务
 
@@ -63,7 +63,7 @@ ms.locfileid: "32342335"
 |云管理及</br>Azure AD 用户发现 | 多选 | 公共 | ![支持](media/green_check.png) | ![支持](media/green_check.png) | 导入、创建 |
 |OMS 连接器 | 一台 | 公共、私有 | ![支持](media/green_check.png) | ![不支持](media/Red_X.png) | 导入 |
 |Upgrade Readiness | 一台 | 公共 | ![支持](media/green_check.png) | ![不支持](media/Red_X.png) | 导入 |
-|适用于企业和教育的</br>Microsoft Store | 一台 | 公共 | ![支持](media/green_check.png) | ![不支持](media/Red_X.png) | 导入、创建 |
+|适用于企业和教育的</br>业务电话 | 一台 | 公共 | ![支持](media/green_check.png) | ![不支持](media/Red_X.png) | 导入、创建 |
 
 
 ### <a name="about-azure-ad-apps"></a>关于 Azure AD 应用
@@ -90,7 +90,7 @@ ms.locfileid: "32342335"
 
 决定好要连接到的服务后，请参考[服务详细信息](#service-details)中的表。 此表为你提供完成 Azure 服务向导所需的信息。 请提前与你的 Azure AD 管理员进行讨论。 决定是否提前在 Azure 门户中手动创建应用，然后将该应用的详细信息导入至 Configuration Manager。 或者使用 Configuration Manager 直接在 Azure AD 中创建应用。 若要从 Azure AD 收集必要数据，请查看本文其他部分中的信息。
 
-部分服务需要 Azure AD 应用具备特定的权限。 查看每个服务的信息以确定任何所需权限。 例如，在导入某个 Web 应用之前，Azure 管理员必须先在 [Azure 门户](https://portal.azure.com)中创建该应用。 在配置升级就绪情况或 OMS 连接器时，需要在相关 OMS 工作区的资源组上授予新创建的 Web 应用“参与者”权限。 此权限允许 Configuration Manager 访问该工作区。 分配权限时，在“添加用户”边栏选项卡中搜索应用注册的名称。 此过程与[向 Configuration Manager 提供 OMS 权限](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#provide-configuration-manager-with-permissions-to-oms)相同。 Azure 管理员必须在将应用导入 Configuration Manager 之前分配这些权限。
+部分服务需要 Azure AD 应用具备特定的权限。 查看每个服务的信息以确定任何所需权限。 例如，在导入某个 Web 应用之前，Azure 管理员必须先在 [Azure 门户](https://portal.azure.com)中创建该应用。 在配置升级就绪情况或 OMS 连接器时，需要在相关 OMS 工作区的资源组上授予新创建的 Web 应用“参与者”权限。 此权限允许 Configuration Manager 访问该工作区。 分配权限时，在 Azure 门户的“添加用户”区域中搜索应用注册的名称。 此过程与[向 Configuration Manager 提供 OMS 权限](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#provide-configuration-manager-with-permissions-to-oms)相同。 Azure 管理员必须在将应用导入 Configuration Manager 之前分配这些权限。
 
 
 
@@ -205,7 +205,7 @@ ms.locfileid: "32342335"
 
 ## <a name="configuration-or-discovery"></a>配置或发现
 
-在应用页指定 Web 应用和本机应用后，Azure 服务向导会根据要连接的服务转至“配置”或“发现”页。 此页的详细信息因不同的服务而异。 有关详细信息，请参阅以下文章之一：  
+在“应用”页指定 Web 应用和本机应用后，Azure 服务向导根据要连接的服务转到“配置”或“发现”页。 此页的详细信息因不同的服务而异。 有关详细信息，请参阅以下文章之一：  
 
 -   **云管理**服务，**发现**页：[配置 Azure AD 用户发现](/sccm/core/servers/deploy/configure/configure-discovery-methods#azureaadisc)  
 
@@ -213,16 +213,16 @@ ms.locfileid: "32342335"
 
 -   **升级准备情况连接器**服务，**配置**页：[使用 Azure 向导创建连接](/sccm/core/clients/manage/upgrade/upgrade-analytics#use-the-azure-wizard-to-create-the-connection)  
 
--   **适用于企业的 Microsoft Store**服务，**配置**页：[设置适用于企业的 Microsoft Store 同步](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business#for-configuration-manager-version-1706-and-later)  
+-   **适用于企业的 Microsoft Store**服务，**配置**页：[配置适用于企业的 Microsoft Store 同步](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business#bkmk_config)  
 
 
-最后，通过“摘要”页、“进度”页和“完成”页完成 Azure 服务向导。 你已在 Configuration Manager 中完成一项 Azure 服务的配置。 重复执行此过程以配置其他 Azure 服务。
+最后，通过“摘要”页、“进度”页和“完成”页完成 Azure 服务向导。 已在 Configuration Manager 中完成一项 Azure 服务的配置。 重复执行此过程以配置其他 Azure 服务。
 
 
 ## <a name="view-the-configuration-of-an-azure-service"></a>查看 Azure 服务的配置
-可以查看已配置进行使用的 Azure 服务的属性。 在 Configuration Manager 控制台中，转到“管理”工作区，展开“云服务”，然后选择“Azure 服务”。 选择想要查看或编辑的服务，然后单击“属性”。
+查看已配置进行使用的 Azure 服务的属性。 在 Configuration Manager 控制台中，转到“管理”工作区，展开“云服务”，然后选择“Azure 服务”。 选择想要查看或编辑的服务，然后单击“属性”。
 
-如果选择服务并单击功能区中的“删除”，则会删除 Configuration Manager 中的连接。 这不会从 Azure AD 删除该应用。 请你的 Azure 管理员删除不再需要的应用。 或运行 Azure 服务向导以导入应用。<!--483440-->
+如果选择服务并单击功能区中的“删除”，则会删除 Configuration Manager 中的连接。 这不会从 Azure AD 删除该应用。 请 Azure 管理员删除不再需要的应用。 或运行 Azure 服务向导以导入应用。<!--483440-->
 
 
 ## <a name="cloud-management-data-flow"></a>云管理数据流

@@ -2,7 +2,7 @@
 title: 产品和许可常见问题
 titleSuffix: Configuration Manager
 description: 查找 System Center Configuration Manager 产品和许可常见问题的答案。
-ms.date: 04/30/2018
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,21 +10,21 @@ ms.assetid: ee8d611f-aa0c-4efd-b0ad-dbd14d0a0623
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 781ffffac4367fb899c37c50492390a65244e17d
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 9e58e11bec9441f73bff021c8a6a24d150777cbe
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32340295"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39385535"
 ---
 # <a name="frequently-asked-questions-for-configuration-manager-branches-and-licensing"></a>Configuration Manager 分支和许可的常见问题解答
 
  *适用范围：System Center Configuration Manager (Current Branch)、System Center Configuration Manager (Long-Term Servicing Branch)*
 
 ## <a name="summary"></a>摘要
-此常见问题解答涉及通过 Microsoft 批量许可计划提供的 System Center Configuration Manager Current Branch 和 Long-Term Servicing Branch (LTSB) 版本的常见许可问题。 本文仅供参考。 它不会取代或替换任何涉及 System Center Configuration Manager 许可的文档。 有关详细信息，请参阅 [System Center 2016](https://www.microsoft.com/en-us/licensing/product-licensing/system-center-2016.aspx)<!-- this link doesn't work without some language code --> 的产品许可和[产品条款](http://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53)。 产品术语描述批量许可中所有 Microsoft 产品的使用条款。
+此常见问题解答涉及通过 Microsoft 批量许可计划提供的 System Center Configuration Manager Current Branch 和 Long-Term Servicing Branch (LTSB) 版本的常见许可问题。 本文仅供参考。 它不会取代或替换任何涉及 System Center Configuration Manager 许可的文档。 有关详细信息，请参阅 [System Center 2016](https://www.microsoft.com/en-us/licensing/product-licensing/system-center-2016.aspx)<!-- this link doesn't work without some language code --> 的产品许可和[产品条款](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53)。 产品术语描述批量许可中所有 Microsoft 产品的使用条款。
 
-有关 System Center Configuration Manager 功能的详细信息，请参阅[产品页](https://www.microsoft.com/cloud-platform/system-center-configuration-manager)。
+有关 Configuration Manager 功能的详细信息，请参阅[产品页面](https://www.microsoft.com/cloud-platform/system-center-configuration-manager)。
 
 
 
@@ -67,6 +67,8 @@ EMS 授予使用 System Center Configuration Manager（Current Branch 和 Long-T
 
 如果 SA 在 2016 年 10 月 1 日前过期并保留了 System Center Configuration Manager 的永久许可证，则继续使用的唯一选择是安装和使用 System Center 2012 R2 Configuration Manager 及其可用的服务包。 SA 过期时需要卸载 Current Branch，并重新安装该产品的早期版本。 不支持从 System Center Configuration Manager Current Branch 迁移到或降级为 Configuration Manager 的早期版本。   
 
+如果使用 System Center Endpoint Protection，则在 SA 过期时必须将其卸载。 System Center Endpoint Protection 不提供 *L（许可证）* 权限，也不提供永久权限。<!--506238--> 
+
 
 ### <a name="bkmk_owncb"></a>我是否“拥有”Current Branch？   
 否。 当你具有可用 SA 时，有权使用 Current Branch。 例如，通过 *L&SA*，当 *SA* 过期时，你仅具有 *L（许可证）* 权限，这不包括使用 Current Branch 的权限。 如果 L 提供永久权限，可使用 System Center Configuration Manager 的 Long-Term Servicing Branch（或如果 SA 在 2016 年 10 月 1 日前过期，则使用 System Center 2012 R2 Configuration Manager）代替 Current Branch。
@@ -76,7 +78,9 @@ EMS 授予使用 System Center Configuration Manager（Current Branch 和 Long-T
 否。 获取使用 System Center Configuration Manager 的权限的唯一方法是获取具有 SA 的许可证或通过等效订阅。 开发人员计划（如 MSDN）中提供的 System Center Configuration Manager 用于开发和测试目的，但不用作生产用途。
 
 
-### <a name="bkmk_update-rights"></a>我发现我的控制台中提供 System Center Configuration Manager 的更新，如版本 1610。 我是否有权安装它？   
+### 
+  <a name="bkmk_update-rights">
+  </a>我发现我的控制台中提供 System Center Configuration Manager 的更新，如版本 1610。 我是否有权安装它？   
 如果你拥有可用 *SA*，则有权安装它。 如果没有可用 SA，则必须卸载 Current Branch，然后安装 System Center Configuration Manager 的 LTSB。 LTSB 不会接收 System Center Configuration Manager 增量版本的更新，但会接收基于支持生命周期的安全更新。
 
 

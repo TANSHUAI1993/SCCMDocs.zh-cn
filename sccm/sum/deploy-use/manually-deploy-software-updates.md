@@ -1,314 +1,251 @@
 ---
 title: 手动部署软件更新
 titleSuffix: Configuration Manager
-description: 若要手动部署更新，请从 Configuration Manager 控制台选择更新并进行手动部署，或者将更新添加到一个更新组并部署该组。
+description: 手动创建软件部署，以使客户端获取所需的软件更新来保持最新状态，或者部署带外更新。
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 12/07/2016
+ms.date: 07/30/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 57184274-5fea-4d79-a2b4-22e08ed26daf
-ms.openlocfilehash: 3f79da78df10e97813b221ffca3df25396591fbc
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: a76582e853c2bcacdbd93723dc15b12d3b25f37c
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32352611"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39384434"
 ---
-#  <a name="BKMK_ManualDeploy"></a>手动部署软件更新  
+# <a name="manually-deploy-software-updates"></a>手动部署软件更新  
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
- 手动软件更新部署是从 Configuration Manager 控制台中选择软件更新并手动启动部署过程的过程。 或者，你可以将选择的软件更新添加到更新组，然后手动部署更新组。 在创建将管理进行中的每月软件更新部署的 ADR 之前，你通常将使用手动部署以用所需的软件更新使客户端设备保持最新。 你还将使用手动方法来部署带外软件更新。 如果需要帮助以确定适合的部署方式，请参阅[部署软件更新](deploy-software-updates.md)。
+手动软件更新部署是从 Configuration Manager 控制台中选择软件更新并手动启动部署过程的过程。 或者将选择的软件更新添加到更新组，然后手动部署更新组。 通常使用手动部署以使客户端获取所需的软件更新来保持最新状态。 然后，使用自动部署规则 (ADR) 管理正在进行的每月软件更新部署。 还可使用此手动方法来部署带外软件更新。 有关适合的部署方式的详细信息，请参阅[部署软件更新](deploy-software-updates.md)。
 
- 以下部分提供手动部署软件更新的步骤。  
+
 
 ##  <a name="BKMK_1SearchCriteria"></a>步骤 1：指定软件更新的搜索条件  
- Configuration Manager 控制台中可能会显示数千个软件更新。 手动部署软件更新的工作流中的第一步是标识想要部署的软件更新。 例如，你可以提供条件，以检索在 50 多台客户端设备上所需要的具有“安全”或“严重”软件更新分类的所有软件更新。  
+
+根据站点同步的产品和分类组合，Configuration Manager 控制台中可能会显示数千个软件更新。 手动部署软件更新的工作流中的第一步是标识想要部署的软件更新。 例如，显示具有“安全”或“严重”分类的 50 多个客户端设备所需的所有软件更新。  
 
 > [!IMPORTANT]  
->  可包含在单一软件更新部署中的软件更新的最大数目为 1000。  
+>  单个软件更新部署的软件更新数限制为 1000 个。  
 
-#### <a name="to-specify-search-criteria-for-software-updates"></a>指定软件更新的搜索条件  
+### <a name="process-to-specify-search-criteria-for-software-updates"></a>指定软件更新的搜索条件的过程  
 
-1.  在 Configuration Manager 控制台中，单击“软件库”。  
-
-2.  在“软件库”工作区中，展开“软件更新”，并单击“所有软件更新”。 此时会显示同步的软件更新。  
+1.  在 Configuration Manager 控制台中，转到“软件库”工作区，展开“软件更新”并单击“所有软件更新”。 此节点显示所有同步的软件更新。  
 
     > [!NOTE]  
-    >  在“所有软件更新”节点上，Configuration Manager 只显示分类为“严重”和“安全”并且已在过去 30 天内发布的软件更新。  
+    >  “所有软件更新”节点只显示具有“严重”和“安全”分类并且已在过去 30 天内发布的软件更新。  
 
-3.  在搜索窗格中，使用以下一个或两个步骤进行筛选以标识所需的软件更新：  
+2.  在搜索窗格中，筛选以标识所需的软件更新。 使用以下选项之一或同时使用：  
 
-    -   在搜索文本框中，键入将筛选软件更新的搜索字符串。 例如，键入特定软件更新的文章 ID 或公告 ID，或者输入将出现在一些软件更新的标题中的字符串。  
+    -   在搜索文本框中，键入筛选软件更新的搜索字符串。 例如，键入特定软件更新的文章或公告 ID。 或者输入显示在多个软件更新标题中的字符串。  
 
-    -   单击“添加条件”，选择想要用于筛选软件更新的条件，单击“添加”，然后为此条件提供值。  
+    -   单击“添加条件”并选择筛选软件更新的条件。 单击“添加”，然后提供条件的值。  
 
-4.  单击“搜索”以筛选软件更新。  
+3.  单击“搜索”以筛选软件更新。  
 
     > [!TIP]  
-    >  你可以选择在“搜索”选项卡上以及在“保存”组中保存筛选条件。  
+    >  保存常用的筛选条件。 在功能区中，单击选项以“保存当前搜索”。 单击“保存的搜索”，检索之前的搜索。   
 
-##  <a name="BKMK_2UpdateGroup"></a>步骤 2：创建包含软件更新的软件更新组  
- 软件更新组提供了一种有效方法，供你在准备部署过程中组织软件更新。 可将软件更新手动添加到软件更新组，或者，Configuration Manager 可以使用 ADR 将软件更新自动添加到新的或现有的软件更新组。 使用以下过程将软件更新手动添加到新软件更新组中。  
 
-#### <a name="to-manually-add-software-updates-to-a-new-software-update-group"></a>将软件更新手动添加到新软件更新组中  
 
-1.  在 Configuration Manager 控制台中，单击“软件库”。  
+##  <a name="BKMK_2UpdateGroup"></a>步骤 2：创建包含软件更新的软件更新组   
 
-2.  在“软件库”工作区中，单击“软件更新”。  
+通过软件更新组，可以在准备部署过程中组织软件更新。 使用以下过程将软件更新手动添加到新软件更新组中。  
 
-3.  选择要添加到新软件更新组中的软件更新。  
+### <a name="process-to-manually-add-software-updates-to-a-new-software-update-group"></a>将软件更新手动添加到新软件更新组中的过程  
 
-4.  在“主页”选项卡上的“更新”组中，单击“创建软件更新组”。  
+1.  在 Configuration Manager 控制台中，转到“软件库”工作区，然后选择“软件更新”。 选择所需的软件更新。  
 
-5.  指定软件更新组的名称并根据需要提供描述。 使用名称和描述提供足够的信息，供你确定软件更新组中软件更新的类型。 要继续，请单击“创建”。  
+2.  在功能区中，单击“创建软件更新组”。  
 
-6.  单击“软件更新组”节点以显示新软件更新组。  
+3.  指定软件更新组的名称并根据需要提供描述。 使用名称和描述提供足够的信息，供你确定软件更新组中更新的类型。 单击 **“创建”**。  
 
-7.  选择软件更新组，在“主页”选项卡内的“更新”组中，单击“显示成员”以显示组中所包含的软件更新的列表。  
+4.  选择“软件更新组”节点，然后选择新软件更新组。 若要显示组中的更新列表，请在功能区中单击“显示成员”。  
+
+
 
 ##  <a name="BKMK_3DownloadContent"></a>步骤 3：下载软件更新组的内容  
- 根据需要，在部署软件更新之前，你可以下载包含在软件更新组中的软件更新的内容。 你可以选择执行此操作，以便能够在部署软件更新之前验证内容在分发点上是否可用。 这将有助于你避免内容交付的任何意外问题。 你可以跳过此步骤，内容将在部署过程中下载和复制到分发点。 使用以下过程下载软件更新组中的软件更新的内容。  
+
+在部署软件更新之前，下载软件更新组中的软件更新的内容。 通过执行此步骤，可以在部署软件更新之前验证内容在分发点上是否可用。 它还可以帮助避免内容分发的任何意外问题。 如果跳过此步骤，作为部署过程的一部分，站点将下载内容并分布到分发点。 使用以下过程下载软件更新组中的软件更新的内容。  
 
 
-
-#### <a name="to-download-content-for-the-software-update-group"></a>下载软件更新组的内容
+### <a name="process-to-download-content-for-the-software-update-group"></a>下载软件更新组的内容的过程
 [!INCLUDE[downloadupdates](..\includes\downloadupdates.md)]
-<!--- 1.  In the Configuration Manager console, click **Software Library**.  
 
-2.  In the Software Library workspace, expand **Software Updates**, and click **Software Update Groups**.  
 
-3.  Select the software update group for which you want to download content.  
+### <a name="process-to-monitor-content-status"></a>监视内容状态的过程
+1. 若要监视软件更新的内容状态，请转到 Configuration Manager 控制台中的“监视”工作区。 展开“分发状态”，然后选择“内容状态”节点。  
 
-4.  On the **Home** tab, in the **Update Group** group, click **Download**. The **Download Software Updates Wizard** opens.  
+2. 选择以前标识的软件更新包，以下载软件更新组中的软件更新。  
 
-5.  On the **Deployment Package** page, configure the following settings:  
+3. 在功能区中，单击“查看状态”。  
 
-    1.  **Select deployment package**: Select this setting to use an existing deployment package for the software updates in the deployment.  
 
-        > [!NOTE]  
-        >  Software updates that have already been downloaded to the selected deployment package are not downloaded again.  
-
-    2.  **Create a new deployment package**: Select this setting to create a new deployment package for the software updates in the deployment. Configure the following settings:  
-
-        -   **Name**: Specifies the name of the deployment package. This must be a unique name that describes the package content. It is limited to 50 characters.  
-
-        -   **Description**: Specifies the description of the deployment package. The package description provides information about the package contents and is limited to 127 characters.  
-
-        -   **Package source**: Specifies the location of the software update source files.  Type a network path for the source location, for example, **\\\server\sharename\path**, or click **Browse** to find the network location. You must create the shared folder for the deployment package source files before you proceed to the next page.  
-
-            > [!NOTE]  
-            >  The deployment package source location that you specify cannot be used by another software deployment package.  
-
-            > [!IMPORTANT]  
-            >  The SMS Provider computer account and the user that is running the wizard to download the software updates must both have **Write** NTFS permissions on the download location. You should carefully restrict access to the download location in order to reduce the risk of attackers tampering with the software update source files.  
-
-            > [!IMPORTANT]  
-            >  You can change the package source location in the deployment package properties after Configuration Manager creates the deployment package. But if you do so, you must first copy the content from the original package source to the new package source location.  
-
-     Click **Next**.  
-
-6.  On the Distribution Points page, select the distribution points or distribution point groups that are used to host the software update files defined in the new deployment package, and then click **Next**.  
-
-7.  On the Distribution Settings page, specify the following settings:  
-
-    -   **Distribution priority**: Use this setting to specify the distribution priority for the deployment package. The distribution priority applies when the deployment package is sent to distribution points at child sites. Distribution packages are sent in priority order: **High**, **Medium**, or **Low**. Packages with identical priorities are sent in the order in which they were created. If there is no backlog, the package will process immediately regardless of its priority. By default, packages are sent using **Medium** priority.  
-
-    -   **Distribute the content for this package to preferred distribution points**: Use this setting to enable on-demand content distribution to preferred distribution points. When this setting is enabled, the management point creates a trigger for the distribution manager to distribute the content to all preferred distribution points when a client requests the content for the package and the content is not available on any preferred distribution points. For more information about preferred distribution points and on-demand content, see [Content source location scenarios](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#bkmk_CSLscenarios).  
-
-    -   **Prestaged distribution point settings**: Use this setting to specify how you want to distribute content to prestaged distribution points. Choose one of the following options:  
-
-        -   **Automatically download content when packages are assigned to distribution points**: Use this setting to ignore the prestage settings and distribute content to the distribution point.  
-
-        -   **Download only content changes to the distribution point**: Use this setting to prestage the initial content to the distribution point, and then distribute content changes to the distribution point.  
-
-        -   **Manually copy the content in this package to the distribution point**: Use this setting to always prestage content on the distribution point. This is the default setting.  
-
-         For more information about prestaging content to distribution points, see [Use Prestaged content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_prestage).  
-
-     Click **Next**.  
-
-8.  On the Download Location page, specify location that Configuration Manager will use to download the software update source files. As needed, use the following options:  
-
-    -   **Download software updates from the Internet**: Select this setting to download the software updates from the location on the Internet. This is the default setting.  
-
-    -   **Download software updates from a location on the local network**: Select this setting to download software updates from a local folder or shared network folder. Use this setting when the computer running the wizard does not have Internet access.  
-
-        > [!NOTE]  
-        >  When you use this setting, download the software updates from any computer with Internet access, and then copy the software updates to a location on the local network that is accessible from the computer running the wizard.  
-
-     Click **Next**.  
-
-9. On the Language Selection page, specify the languages for which the selected software updates are to be downloaded, and then click **Next**. Configuration Manager downloads the software updates only if they are available in the selected languages. Software updates that are not language-specific are always downloaded.  
-
-10. On the Summary page, verify the settings that you selected in the wizard, and then click **Next** to download the software updates.  
-
-11. On the Completion page, verify that the software updates were successfully downloaded, and then click **Close**. --->
-
-#### <a name="to-monitor-content-status"></a>监视内容状态
-1. 若要监视软件更新的内容状态，请单击 Configuration Manager 控制台中的“监视”。  
-
-2. 在“监视”工作区中，展开“分发状态”，然后单击“内容状态”。  
-
-3. 选择以前标识的软件更新包，以下载软件更新组中的软件更新。  
-
-4. 在“主页”选项卡上的“内容”组中，单击“查看状态”。  
 
 ##  <a name="BKMK_4DeployUpdateGroup"></a>步骤 4：部署软件更新组  
- 确定想要部署的软件更新并将这些软件更新添加到软件更新组中之后，你可以手动部署软件更新组中的软件更新。 使用以下过程手动部署软件更新组中的软件更新。  
 
-#### <a name="to-manually-deploy-the-software-updates-in-a-software-update-group"></a>手动部署软件更新组中的软件更新  
+确定想要部署的更新并将更新添加到软件更新组后，手动部署软件更新组。  
 
-1.  在 Configuration Manager 控制台中，单击“软件库”。  
+### <a name="process-to-manually-deploy-the-software-updates-in-a-software-update-group"></a>手动部署软件更新组中的软件更新的过程  
 
-2.  在“软件库”工作区中，展开“软件更新”，并单击“软件更新组”。  
+1.  在 Configuration Manager 控制台中，转到“软件库”工作区，展开“软件更新”，然后选择“软件更新组”节点。  
 
-3.  选择打算部署的软件更新组。  
+2.  选择想要部署的软件更新组。 在功能区中，单击“部署”。   
 
-4.  在“主页”选项卡上的“部署”组中，单击“部署”。 “部署软件更新向导”将会打开。  
+3.  在部署软件更新向导的“常规”页面上，配置以下设置：  
 
-5.  在“常规”页上，配置下列设置：  
+    -   名称：指定部署的名称。 部署必须具有唯一名称，以描述其目的以及将其与站点中的其他部署区分开来。 此名称字段的上限为 256 个字符。 默认情况下，Configuration Manager 用以下格式为部署自动提供名称：`Microsoft Software Updates - YYYY-MM-DD <time>`  
 
-    -   名称：指定部署的名称。 部署必须具有唯一名称，以描述部署的目的以及将其与 Configuration Manager 站点中的其他部署区分开来。 默认情况下，Configuration Manager 会用以下格式为部署自动提供名称：**Microsoft 软件更新 -** <日期><时间>  
+    -   说明：指定部署的说明。 可选择进行描述，提供部署概述。 包括有助于在站点中识别并区分其他部署的任何其他相关信息。 描述字段最多不超过 256 个字符，默认情况下为空白值。  
 
-    -   说明：指定部署的说明。 描述概述了部署和任何其他相关信息，以帮助在 Configuration Manager 站点内的其他项中标识和区分该部署。 描述字段是可选字段，最多不超过 256 个字符，默认情况下具有空白值。  
+    -   **软件更新/软件更新组**：验证所显示的软件更新组或软件更新是否正确。  
 
-    -   软件更新/软件更新组：验证所显示的软件更新组或软件更新是否正确。  
+    -   选择部署模板：指定是否要应用以前保存的部署模板。 配置部署模板以保存常用软件更新部署属性。 然后在将来部署软件更新时，应用此模板。 这些模板可节省时间并有助于确保类似部署的一致性。  
 
-    -   选择部署模板：指定是否要应用以前保存的部署模板。 你可以将部署模板配置为包含多个公用软件更新部署属性，然后在部署后续软件更新时应用模板，以确保类似部署保持一致并节省时间。  
+    -   **集合**：指定此部署的集合。 集合中的设备接收此部署中的软件更新。  
 
-    -   集合：指定部署的集合（如果适用）。 集合的成员会收到部署中定义的软件更新。  
+4.  在“部署设置”页面上配置下列设置：  
 
-6.  在“部署设置”页上配置下列设置：  
-
-    -   署类型：指定软件更新部署的部署类型。 选择“必需”以创建强制性软件更新部署，部署会在配置的安装截止时间之前在客户端上自动安装软件更新。 选择“可用”以创建可供用户从软件中心中安装的可选软件更新部署。  
+    -   署类型：指定软件更新部署的部署类型。  
 
         > [!IMPORTANT]  
-        >  创建软件更新部署之后，你稍后无法更改部署的类型。  
+        >  创建软件更新部署之后，无法更改部署的类型。  
+
+         - 选择“必需”，创建必需的软件更新部署。 在配置的安装截止时间之前，软件更新会自动安装在客户端上。  
+
+         - 选择“可用”，创建可选的软件更新部署。 用户可从软件中心安装此部署。  
 
         > [!NOTE]  
-        >  部署为“所需”的软件更新组将在后台下载，并且享有 BITS 设置（如果配置）。  
-        > 但是，部署为“可用”的软件更新组将在前台下载，并且将忽略 BITS 设置。  
+        >  将软件更新组部署为“必需”时，客户端在后台下载内容，并且享有 BITS 设置（如果配置）。  
+        > 
+        > 对于部署为“可用”的软件更新组，客户端在前台下载内容，并且忽略 BITS 设置。  
 
-    -   “使用 LAN 唤醒来唤醒所需部署的客户端”：指定在截止时间是否启用 LAN 唤醒，以将唤醒数据包发送到需要部署中的一个或多个软件更新的计算机。 在安装截止时间处于睡眠模式的任何计算机将被唤醒，以便软件更新安装可以启动。 处于睡眠模式且不需要部署中的任何软件更新的客户端不会启动。 默认情况下，此设置未启用，并且只有将“部署类型”设置为“必需”时才可用。  
+    -   **使用 LAN 唤醒来唤醒所需部署的客户端**：指定是否在截止时间启用 LAN 唤醒。 LAN 唤醒将唤醒数据包发送到需要部署中的一个或多个软件更新的计算机。 站点会在安装截止时间唤醒处于睡眠模式的所有计算机，以便启动安装。 处于睡眠模式且不需要部署中的任何软件更新的客户端不会启动。 默认情况下禁用此设置。 这仅适用于所需部署。 使用此选项前，请针对“LAN 唤醒”配置计算机和网络。 有关详细信息，请参阅[如何配置 LAN 唤醒](/sccm/core/clients/deploy/configure-wake-on-lan)。  
 
-        > [!WARNING]  
-        >  必须针对“LAN 唤醒”配置计算机和网络，然后才能使用此选项。  
+    -   **详细信息级别**：指定客户端报告到站点的状态消息的详细级别。  
 
-    -   “详细信息级别”：指定客户端计算机报告的状态消息的详细信息级别。  
+5.  在“计划”页上，配置下列设置：  
 
-7.  在“计划”页上，配置下列设置：  
+    -   **计划评估**：指定 Configuration Manager 评估可用时间和安装截止时间的时间。 选择使用协调世界时 (UTC) 或运行 Configuration Manager 控制台的计算机的本地时间。  
 
-    -   **计划评估**：指定是按照 UTC 还是按照运行 Configuration Manager 控制台的计算机的本地时间来计算可用的时间和安装截止时间。  
+        - 如果在此处选择“客户端本地时间”，并为“软件可用时间”选择“尽快”，则使用运行 Configuration Manager 控制台的计算机上的当前时间来评估何时有可用更新。 此行为与安装截止日期和客户端安装更新的时间相同。 如果客户端位于其他时区，则在客户端的时间到达评估时间时发生这些操作。  
 
-        > [!NOTE]  
-        >  选择本地时间，并为“软件可用时间”或“安装截止时间”选择“尽快”时，将使用运行 Configuration Manager 控制台的计算机上的当前时间来计算更新可用的时间或在客户端上安装更新的时间。 如果客户端位于其他时区，当客户端的时间达到评估时间时将发生这些操作。  
+    -   软件可用时间：选择以下设置之一以指定向客户端提供软件更新的时间：  
 
-    -   软件可用时间：选择以下设置之一以指定将向客户端提供软件更新的时间：  
+        -   **尽快**：尽快将部署中的软件更新提供给客户端。 创建部署并选择此设置后，Configuration Manager 将更新客户端策略。 在下一个客户端策略轮询周期，客户端将注意到部署并获得可安装的软件更新。  
 
-        -   尽快：选择此设置以尽快向客户端提供部署中的软件更新。 创建部署时，会更新客户端策略，通知客户端在其下一个客户端策略轮询周期进行部署，然后为安装提供软件更新。  
+        -   **特定时间**：在特定日期和时间向客户端提供部署中包含的软件更新。 创建部署并启用此设置后，Configuration Manager 将更新客户端策略。 在下一个客户端策略轮询周期，客户端将注意到部署。 但是，在配置的日期和时间之后，部署中的软件更新才可用于安装。  
 
-        -   特定时间：选择此设置以在特定日期和时间向客户端提供部署中的软件更新。 创建部署时，会更新客户端策略，通知客户端在其下一个客户端策略轮询周期进行部署。 但是，直到过了指定的日期和时间，才可以安装部署中的软件更新。  
-
-    -   安装截止时间：选择以下设置之一以指定部署中的软件更新的安装截止时间。  
-
-        > [!NOTE]  
-        >  只有在“部署设置”页上将“部署类型”设置为“必需”时才可以配置安装截止时间设置。  
+    -   **安装截止时间**：这些选项仅适用于所需部署。 选择以下设置之一以指定部署中的软件更新的安装截止时间  
 
         -   尽快：选择此设置以尽快自动安装部署中的软件更新。  
 
         -   特定时间：选择此设置以在特定日期和时间自动安装部署中的软件更新。  
 
-        > [!NOTE]  
-        >  实际安装截止时间是你配置的特定时间加上随机的一段时间（最多为 2 小时）。 这可以减少目标集合中同时安装部署中软件更新的所有客户端计算机的潜在影响。  
-        >   
-        >  你可以配置“计算机代理”客户端设置和“禁用截止时间随机化”，以对所需的软件更新禁用安装随机化延迟。 有关详细信息，请参阅 [Computer Agent](../../core/clients/deploy/about-client-settings.md#computer-agent)。  
+            - 实际安装截止时间为显示的截止时间加上随机的一段时间（最多为 2 小时）。 如果采用随机时间，这可降低集合中客户端同时安装部署中的更新所带来的潜在影响。   
 
-8.  在“用户体验”页上，请配置下列设置：  
+            - 要消除所需软件更新的安装随机化延迟，请在“计算机代理”组中将客户端设置配置为“禁用截止日期随机化”。 有关详细信息，请参阅[计算机代理客户端设置](/sccm/core/clients/deploy/about-client-settings#computer-agent)。  
 
-    -   用户通知：指定是否在配置的“软件可用时间”在客户端计算机上软件中心中显示软件更新通知，以及是否在客户端计算机上显示用户通知。 在“部署设置”页上将“部署类型”设置为“可用”时，你无法选择“在软件中心和所有通知中隐藏”。  
+    -  **根据用户首选项延迟执行此部署，直到客户端设置中定义的宽限期**：启用此设置可让客户有更多时间，超过截止日期安装所需的软件更新。  
 
-    -   截止时间行为：仅当“部署设置”页上的“部署类型”设置为“必需”时才可用。   
-    指定到达软件更新部署的截止时间时要发生的行为。 指定是否安装部署中的软件更新。 另外，指定是否在安装软件更新后执行系统重启而不考虑配置的维护时段。 有关维护时段的详细信息，请参阅[如何使用维护时段](../../core/clients/manage/collections/use-maintenance-windows.md)。  
+        - 此行为通常发生在计算机长时间关闭并需要安装许多软件更新或应用程序时。 例如，用户休假回来时，由于客户端安装的部署已过期，因此需要等待很长的时间。  
 
-    -   设备重启行为：仅当“部署设置”页上的“部署类型”设置为“必需”时才可用。    
-    指定安装软件更新后是否在服务器和工作站上抑制系统重启，以及是否需要重启系统以完成安装。  
+        - 在客户端设置中，通过“部署截止日期(小时)后执行的宽限期”属性来配置此宽限期。 有关详细信息，请参阅[计算机代理](/sccm/core/clients/deploy/about-client-settings#computer-agent)部分。 强制宽限期适用于启用此选项的所有部署，并针对部署了客户端设置的设备。  
 
-        > [!IMPORTANT]  
-        >  在服务器环境中，或者在不希望默认重启安装软件更新的计算机的情况下，抑制系统重启可能很有用。 但是，执行此操作可能会使计算机处于不安全状态，而允许强制重启有助于确保立即完成软件更新安装。
+        - 在截止日期之后，客户端将在用户配置的第一个非业务时间段内安装软件更新，直到此宽限期。 但是，用户仍可打开软件中心，随时安装软件更新。 一旦过了宽限期，对于未完成的部署，强制将恢复为正常行为。  
 
-    -   **Windows Embedded 设备的写入筛选器处理**：将软件更新部署到启用了写入筛选器的 Windows Embedded 设备时，你可以指定将软件更新安装在临时覆盖区上并稍后提交更改，或者在安装截止时或在维护时段内提交更改。 如果在安装截止时或在维护时段内提交更改，则需要重新启动，而且更改将保留在设备上。  
+6.  在“用户体验”页面上配置下列设置：  
 
-        > [!NOTE]  
-        >  将软件更新部署到 Windows Embedded 设备时，确保设备是配置了维护时段的集合的成员。  
+    -   **用户通知**：指定是否在软件中心已配置的“软件可用时间”上显示通知。 此设置还控制是否通知客户端计算机上的用户。 对于可用部署，无法选择“在软件中心和所有通知中隐藏”选项。  
 
-    - **重启时的软件更新部署重新评估行为**：从 Configuration Manager 版本 1606 开始，选择此设置可配置软件更新部署，使客户端在安装软件更新并重启后立即运行软件更新符合性扫描。 这使客户端可以检查在客户端重新启动之后成为适用状态的其他软件更新，以及随后在相同维护时段期间安装它们（并成为符合状态）。
+    -   **截止时间行为**：此设置仅对所需部署可配置。 指定软件更新部署达到任何已定义的维护时段外的截止日期时的行为。 选项包括是否要安装软件更新，以及安装后是否执行系统重启。 有关维护时段的详细信息，请参阅[如何使用维护时段](/sccm/core/clients/manage/collections/use-maintenance-windows)。  
 
-9. 在“警报”页上，配置 Configuration Manager 和 System Center Operations Manager 为此部署生成警报的方式。 只有在“部署设置”页上将“部署类型”设置为“必需”时，才可以配置警报。  
+    -   **设备重启行为**：此设置仅对所需部署可配置。 指定在需要重启才能完成更新安装的情况下，是否在服务器和工作站上抑制系统重启。  
 
-    > [!NOTE]  
-    >  你可以从“软件库”工作区的“软件更新”节点中查看最新软件更新警报。  
+        > [!WARNING]  
+        >  在服务器环境中或在不希望目标计算机默认重启时，抑制系统重启非常有用。 但是，这样做会使计算机处于不安全的状态。 允许强制重启有助于确保立即完成软件更新安装。  
 
-10. 在“下载设置”页上配置下列设置：  
+    -   **针对 Windows Embedded 设备的写入筛选器处理**：此设置控制通过写入筛选器启用的 Windows Embedded 设备的安装行为。 选择此选项可在安装截止时间或维护时段提交更改。 选择此选项后需要重启，然后所作更改才能保留在设备上。 否则，将安装更新并将其应用到临时覆盖，稍后再进行提交。  
 
-    - 指定当客户端连接到慢速网络或正在使用回退内容位置时是否将下载和安装软件更新。  
+        -  将软件更新部署到 Windows Embedded 设备时，请确保设备是配置了维护时段的集合的成员。  
 
-    - 指定当软件更新的内容在首选分发点上不可用时客户端是否下载和安装回退分发点中的软件更新。  
+    - **重启时的软件更新部署重新评估行为**：选择此设置可配置软件更新部署，使客户端在安装软件更新并重启后立即运行软件更新符合性扫描。 此设置允许客户端检查在客户端重启之后变为适用状态的其他更新，然后在同一维护时段内安装它们。  
 
-    - 允许客户端与同一子网上的其他客户端共享内容：指定是否为内容下载启用 BranchCache。 有关 BranchCache 的详细信息，请参阅[内容管理的基本概念](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#branchcache)。  
+7. 在“警报”页面上，配置 Configuration Manager 为此部署生成警报的方式 。 在“软件库”工作区的“软件更新”节点中查看来自 Configuration Manager 的最新软件更新警报。 如果还在使用 System Center Operations Manager，也请配置其警报。 只能为所需部署配置警报。  
 
-    - 如果软件更新当前在分发点上不可用，邻域或站点组从 Microsoft 更新下载内容：如果软件更新在分发点上不可用，选择此设置，可使连接到 Intranet 的客户端从 Microsoft 更新下载软件。 基于 Internet 的客户端可随时访问 Microsoft 更新，获取软件更新内容。
-
-    - 指定是否允许客户端在安装截止日期之后下载内容（如果客户端使用按流量计费的 Internet 连接）。 Internet 提供商有时根据你在按流量计费的 Internet 连接上发送和接收的数据量计费。  
+8. 在“下载设置”页面上，配置下列设置：  
 
     > [!NOTE]  
-    >  客户端请求部署中的软件更新的管理点中的内容位置。 下载行为取决于在此页面上配置分发点、部署包和设置的方式。 有关详细信息，请参阅 [Content source location scenarios](../../core/plan-design/hierarchy/content-source-location-scenarios.md)。  
+    >  客户端请求部署中的软件更新的管理点中的内容位置。 下载行为取决于在此页面上配置分发点、部署包和设置的方式。  
 
-11. 如果已经执行[步骤 3：下载软件更新组的内容](#BKMK_3DownloadContent)，则不会显示“部署包”、“分发点”和“语言选择”页，并且可以跳到向导的步骤 15。  
+    - 指定客户端在使用来自相邻或默认站点边界组的分发点时是否应下载并安装更新。  
 
-    > [!IMPORTANT]  
-    >  不会重新下载以前已经下载到站点服务器上的内容库中的软件更新。 甚至当你为软件更新创建新的部署包时也是如此。 如果以前已经下载了所有软件更新，则向导将跳到“语言选择”页（步骤 15）。  
+    - 指定在无法从当前或相邻边界组中的分发点获得软件更新的内容时，客户端是否应从站点默认边界组中的分发点下载并安装更新。  
 
-12. 在“部署包”页上，选择现有部署包，或者配置以下设置以指定新部署包：  
+    - 允许客户端与同一子网上的其他客户端共享内容：指定是否为内容下载启用 BranchCache。 有关详细信息，请参阅 [BranchCache](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#branchcache)。 自版本 1802 起，BranchCache 始终在客户端上启用。 此设置已删除，因为只要分发点支持，客户端就会使用 BranchCache。  
 
-    1.  名称：指定部署包的名称。 这必须是描述包内容的唯一名称。 它被限制为不超过 50 个字符。  
+    - **如果当前、相邻或站点边界组中的分发点不支持软件更新，则从 Microsoft 更新下载内容**：如果分发点不支持更新，请选择此设置，使连接了 Intranet 的客户端从Microsoft 更新下载软件更新。 基于 Internet 的客户端始终转到 Microsoft 更新获取软件更新内容。
 
-    2.  说明：指定提供有关该部署包的信息的说明。 该说明仅限于 127 个字符。  
+    - 指定在客户端使用按流量计费的 Internet 连接的情况下，是否允许客户端在安装截止日期之后下载内容。 Internet 提供商有时根据你在按流量计费的连接上发送和接收的数据量计费。  
 
-    3.  “包源”：指定软件更新源文件的位置。  键入源位置的网络路径，例如 **\\\server\sharename\path**，或单击“浏览”来查找网络位置。 在进入到下一页之前，必须为部署包源文件创建共享文件夹。  
+9. 在“部署包”页面上，请选择下列选项之一：  
 
-        > [!NOTE]  
-        >  其他软件部署包不能使用你指定的部署包源位置。  
+    > [!Note]  
+    > 如果已准备好执行[步骤 3：下载软件更新组的内容](#BKMK_3DownloadContent)，则向导不显示“部署包”、“分发点”和“语言选择”页。 跳到向导的[摘要](#bkmk_summary)页。  
+    > 
+    >  不会重新下载以前已经下载到站点服务器上的内容库中的软件更新。 甚至当为软件更新创建新的部署包时，此行为也是如此。 如果已经下载了所有软件更新，则向导将跳到[摘要](#bkmk_summary)页。  
 
-        > [!IMPORTANT]  
-        >  SMS 提供程序计算机帐户和运行向导下载软件更新的用户都必须对下载位置具有“写” NTFS 权限。 你应该仔细限制对此下载位置的访问，以减少攻击者篡改软件更新源文件的风险。  
+    - **选择部署包**：将这些更新添加到现有部署包。  
 
-        > [!IMPORTANT]  
-        >  在 Configuration Manager 创建部署包之后，可在部署包属性中更改包源位置。 但是，如果你执行此操作，则必须首先将原始包源中的内容复制到新包源位置。  
+    - **创建新的部署包**：将这些更新添加到新的部署包。 配置以下附加设置：  
 
-    4.  发送优先级：指定部署包的发送优先级。 Configuration Manager 在将包发送到分发点时将使用部署包的发送优先级。 部署包按优先级顺序发送：高、中或低。 具有相同优先级的包按照其创建顺序发送。 如果没有囤积，则将立即处理包，而不考虑其优先级。  
+        -  名称：指定部署包的名称。 使用描述包内容的唯一名称。 限制为不超过 50 个字符。  
 
-13. 在“分发点”页上，指定将承载软件更新文件的分发点或分发点组。 有关分发点的详细信息，请参阅[分发点配置](../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_configs)。  
+        -  说明：指定提供有关该部署包的信息的说明。 可选说明限制为不超过 127 个字符。  
 
-14. 在“下载位置”页上，指定是从 Internet 中还是从本地网络中下载软件更新文件。 配置下列设置：  
+        -  “包源”：指定软件更新源文件的位置。 键入源位置的网络路径（例如 `\\server\sharename\path`），或单击“浏览”以查找网络位置。 在继续进入到下一页之前，为部署包源文件创建共享文件夹。  
 
-    -   从 Internet 下载软件更新：选择此设置以从 Internet 上的指定位置下载软件更新。 默认情况下将启用此设置。  
+            - 不能将指定的位置用作另一软件部署包的源。  
 
-    -   从本地网络上的位置下载软件更新：选择此设置以从本地文件夹或共享的网络文件夹下载软件更新。 当运行向导的计算机无法访问 Internet 时，此设置很有用。 能够访问 Internet 的任何计算机可以先下载软件更新，然后将它们存储本地网络上的某个位置，以便在以后安装时访问。  
+            - 在 Configuration Manager 创建部署包之后，可在部署包属性中更改包源位置。 如果执行此操作，请先将原始包源中的内容复制到新的包源位置。  
 
-15. 在“语言选择”页上，为已选定要下载的软件更新选择语言。 只有在提供了与选择的语言对应的软件更新时才能下载软件更新。 并非特定于语言的软件更新是随时都能下载的。 默认情况下，向导会选择你已在软件更新点的属性中配置的语言。 在继续进入下一页之前，必须选择至少一种语言。 如果仅选择软件更新不支持的语言，则软件更新的下载将会失败。  
+            -  SMS 提供程序的计算机帐户和运行向导以下载软件更新的用户都必须具有对下载位置的“写入”权限。 限制对下载位置的访问。 此限制可降低攻击者篡改软件更新源文件的风险。  
 
-16. 在“摘要”页上查看设置。 若要将设置保存到部署模板中，请单击“另存为模板”，输入名称并选择要包括在模板中的设置，然后单击“保存”。 若要更改已配置的设置，请单击关联的向导页面，然后更改设置。  
+        -  发送优先级：指定部署包的发送优先级。 Configuration Manager 在将包发送到分发点时使用此优先级。 部署包按高、中或低这三个优先级顺序进行发送。 具有相同优先级的包按照其创建顺序发送。 如果没有积压工作 (backlog)，则立即处理包，而不考虑优先级。  
 
-    > [!WARNING]  
-    >  模板名称可以包含字母数字 ASCII 字符，以及 **\\**（反斜杠）或 **‘**（单引号）。  
+        - **启用二进制差异复制**：启用此设置可最大程度减少站点之间的网络流量。 二进制差异复制 (BDR) 仅更新包中已更改的内容，而不是更新整个包内容。 有关详细信息，请参阅[二进制差异复制](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#binary-differential-replication)。  
+
+    - **没有部署包**：自 1806 版本起，无需先下载内容并将其分发到分发点，即可将软件更新部署到设备。 处理非常大的更新内容时，此设置很有用。 希望客户端始终从 Microsoft 更新云服务中获取内容时，也请使用此设置。 在此方案中的客户端还可以从已具有所需内容的对等节点下载内容。 Configuration Manager 客户端继续管理内容下载，因此可以利用 Configuration Manager 对等缓存功能或其他技术，如交付优化。 此功能支持受 Configuration Manager 软件更新管理（包括 Windows 和 Office 更新）支持的任何更新类型。<!--1357933-->  
+
+10. 在“分发点”页面上，指定用于托管软件更新文件的分发点或分发点组。 有关分发点的详细信息，请参阅[分发点配置](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_configs)。  
+
+    > [!Note]  
+    > 如果已准备好执行[步骤 3：下载软件更新组的内容](#BKMK_3DownloadContent)，则向导不显示“部署包”、“分发点”和“语言选择”页。 跳到向导的[摘要](#bkmk_summary)页。  
+
+11. 在“下载位置”页面上，指定是从 Internet 还是从本地网络下载软件更新文件。 配置下列设置：  
+
+    -   **从 Internet 下载软件更新**：选择此设置以从 Internet 上的指定位置下载软件更新。 默认情况下将启用此设置。  
+
+    -   从本地网络上的位置下载软件更新：选择此设置以从本地目录或共享的文件夹下载软件更新。 运行向导的计算机无法访问 Internet 时，此设置很有用。 任何具有 Internet 访问的计算机都可预先下载软件更新。 然后，将其存储在可从运行向导的计算机访问的本地网络上的某个位置中。  
+
+12. 在“语言选择”页面上，选择站点按哪种语言下载所选的软件更新。 只有所选语言提供更新时，站点才能下载这些更新。 非语言特定的软件更新可随时下载。 默认情况下，向导会选择你已在软件更新点属性中配置的语言。 在继续进入下一页之前，必须选择至少一种语言。 只选择软件更新不支持的语言时，无法下载更新。  
+
+    > [!Note]  
+    > 如果已准备好执行[步骤 3：下载软件更新组的内容](#BKMK_3DownloadContent)，则向导不显示“部署包”、“分发点”和“语言选择”页。 跳到向导的[摘要](#bkmk_summary)页。  
+
+13. <a name="bkmk_summary"></a> 在“摘要”页上查看设置。 若要将设置保存到部署模板，请单击“另存为模板”。 输入名称并选择要包含在模板中的设置，然后单击“保存”。 若要更改已配置的设置，请单击关联的向导页面，然后更改设置。  
+
+    -  模板名称可包含字母数字 ASCII 字符以及 `\`（反斜杠）或 `'`（单引号）。  
 
 17. 单击“下一步”以部署软件更新。  
 
- 完成向导后，Configuration Manager 会将软件更新下载到站点服务器上的内容库、将软件更新分发到已配置的分发点，然后将软件更新组部署到目标集合中的客户端。 有关部署过程的详细信息，请参阅 [Software update deployment process](../understand/software-updates-introduction.md#BKMK_DeploymentProcess)。
+ 完成该向导后，Configuration Manager 会将软件更新下载到站点服务器上的内容库。 然后将该内容分发到已配置的分发点，并将软件更新组部署到目标集合中的客户端。 有关部署过程的详细信息，请参阅 [Software update deployment process](/sum/understand/software-updates-introduction#BKMK_DeploymentProcess)。  
+
+
 
 ## <a name="next-steps"></a>后续步骤
 [监视软件更新](monitor-software-updates.md)

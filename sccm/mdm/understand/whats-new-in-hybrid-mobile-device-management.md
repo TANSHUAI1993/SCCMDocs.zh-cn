@@ -2,7 +2,7 @@
 title: 混合 MDM 中的新增功能
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 和 Intune 的混合部署可用的新移动设备管理功能。
-ms.date: 07/12/2018
+ms.date: 08/01/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d2a705ed8b09e4c2de92baa22164cbe97f180462
-ms.sourcegitcommit: e54e9d4a735e72b84095e0017c5bec50af480207
+ms.openlocfilehash: cdb5720778366cea951476ad9b314b69bdd0c492
+ms.sourcegitcommit: 6e0e5b4b7779ce03e2b56b3b5f68f4ace1acedd8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2018
-ms.locfileid: "39039618"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467600"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Configuration Manager 和 Microsoft Intune 的混合移动设备管理中的新增功能
 
@@ -26,17 +26,20 @@ ms.locfileid: "39039618"
 > [!Note]    
 > Azure 上的 Intune 是 Microsoft 建议的 MDM 解决方案。     
 > - 若有详细了解 Intune 独立版中的新增功能和更新，请参阅 [Intune 中的新增功能](https://docs.microsoft.com/intune/whats-new)。    
-> - 有关如何迁移到 Intune 独立版的详细信息，请参阅[将混合 MDM 用户和设备迁移到 Intune 独立版](https://docs.microsoft.com/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa)。
+> - 有关如何迁移到 Intune 独立版的详细信息，请参阅[将混合 MDM 用户和设备迁移到 Intune 独立版](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa)。
 > - 有关 Intune 和混合 MDM 的 UI 更新的详细信息，请参阅 [Intune 最终用户应用的 UI 更新](https://docs.microsoft.com/intune/whats-new-app-ui)。 
 
+
+
 ##  <a name="compatibility-with-configuration-manager-versions"></a>与 Configuration Manager 版本的兼容性  
+
 本文的每个部分都列出了混合功能，并按 3 个不同类别进行分类。 请使用以下指南，确定每个类别中的功能与不同版本的 Configuration Manager 的兼容性：  
 
 |功能类别|说明|
 |-|-|
 |**Microsoft Intune 中的新增功能** | 一般情况下，此类别下列出的所有功能都应适用于所有 Configuration Manager 版本。 这包括 System Center 2012 R2 Configuration Manager 版本，因为这些功能仅需要 Intune 服务，不需要 Configuration Manager 中的其他功能。|
-|**Configuration Manager Technical Preview 中的新增功能**| 此类别下列出的所有功能仅适用于指定的 Technical Preview 版本。 若要试用这些功能，必须安装功能说明中指定的 Technical Preview 版本。 有关详细信息，请参阅 [System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)。|
-|**Configuration Manager (Current Branch) 中的新增功能**| 此类别下列出的所有功能仅适用于指定的 Configuration Manager (Current Branch) 版本，例如版本 1511 或 1602。 如果要为混合部署使用较旧版本的 Configuration Manager，则必须升级到功能说明中指定的 Configuration Manager (Current Branch) 版本。 有关详细信息，请参阅[升级到 System Center Configuration Manager](../../core/servers/deploy/install/upgrade-to-configuration-manager.md)。|
+|**Configuration Manager Technical Preview 中的新增功能**| 此类别下列出的所有功能仅适用于指定的 Technical Preview 分支。 若要试用这些功能，必须安装功能说明中指定的 Technical Preview 版本。 有关详细信息，请参阅 [Configuration Manager 的 Technical Preview](/sccm/core/get-started/technical-preview)。|
+|**Configuration Manager (Current Branch) 中的新增功能**| 此类别下列出的所有功能仅适用于指定的 Configuration Manager (Current Branch) 版本。 如果要为混合部署使用较旧版本的 Configuration Manager，请升级到功能说明中指定的 Configuration Manager (Current Branch) 版本。 有关详细信息，请参阅[升级到 Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)。|
 
 
 
@@ -49,7 +52,7 @@ ms.locfileid: "39039618"
 
 此功能在混合租户中默认关闭。 启用此功能后，未分配有符合性策略的设备将被视为不符合条件。 如果还启用了条件访问，则这些设备无法再访问内部资源。 根据环境中的条件访问策略，此类资源可能是 Outlook 或 SharePoint。 如果关闭此设置，则这些设备继续持有当前访问级别。
 
-为帮助确定启动此功能所带来的影响，可参阅 [TechNet 库中的脚本](https://gallery.technet.microsoft.com/SQL-Query-for-Hybrid-MDM-5bcb8695)。 如果针对 Configuration Manager 数据库运行此脚本，它将列出不实施任何符合性策略的设备。
+为帮助确定开启此功能所带来的影响，我们提供了 [TechNet 库中的脚本](https://gallery.technet.microsoft.com/SQL-Query-for-Hybrid-MDM-5bcb8695)。 如果针对 Configuration Manager 数据库运行此脚本，它将列出不实施任何符合性策略的设备。
 
 有关详细信息，请参阅下列文章：
 - [Intune 服务中的安全性增强功能](https://aka.ms/compliance_policies)博客文章 
@@ -58,14 +61,22 @@ ms.locfileid: "39039618"
 #### <a name="updates-to-out-of-compliance-messages-in-company-portal-app"></a>更新公司门户应用中的不合规消息 
 <!--1832222--> 我们正在修改当设备不合规时向使用该设备的用户显示的消息。 消息原义未变，只是用更为友好的语言和更少的技术术语进行更新。 此外，我们还将刷新文档和修正步骤的链接，以使其保持最新。  
 
-以下更新前后的文本是你将看到的对消息所做改进的一个示例：  
+以下文本是将看到的对消息所做改进的一个示例：  
 
-- 更新前：此设备未在 IT 管理员要求的指定时段内连接 Intune 服务。若要解决此问题，请打开设备上的公司门户应用，并单击“检查合规性”按钮。  
+- 更新前：此设备未在 IT 管理员要求的指定时段内连接 Intune 服务 *。* 若要解决此问题，请打开设备上的公司门户应用，并单击“检查合规性”按钮。  
 
 - 更新后：你的设备已有一段时间未签入组织。要重新建立连接，请打开设备上的公司门户应用，然后点击设备的“检查设置”。  
 
 #### <a name="select-device-categories-by-using-the-access-work-or-school-settings"></a>使用“访问工作单位或学校”设置选择设备类别 
 <!--1058963--> 如果你已启用[设备组映射](https://docs.microsoft.com/intune/device-group-mapping)，Windows 10 用户在通过“设置” > “帐户” > “访问工作单位或学校”中的“连接”按钮进行注册后，系统现在将提示他们选择设备类别。  
+
+#### <a name="new-browsing-experiences-in-the-company-portal-app-for-windows"></a>适用于 Windows 的公司门户应用中的全新浏览体验 
+<!--2317227--> 现在，在适用于 Windows 的公司门户应用中浏览或搜索应用时，可在现有的“平铺”视图和新增的“详细信息”视图之间切换。 新增视图列出应用程序详细信息，如名称、发布者、发布日期和安装状态。 
+
+通过“应用”页的“已安装”视图，可查看有关已完成和进行中的应用安装的详细信息。 若要查看新视图的外观，请参阅 [UI 中的新增内容](https://docs.microsoft.com/intune/whats-new-app-ui)。
+
+#### <a name="more-opportunities-to-sync-in-the-company-portal-app-for-windows"></a>更多在适用于 Windows 的公司门户应用中同步的机会  
+<!--2683177--> 通过适用于 Windows 的公司门户应用，现在可直接从 Windows 任务栏和“开始”菜单启动同步。 如果唯一的任务是同步设备并访问公司资源，那么此功能极其有用。 若要访问新功能，请右键单击固定到任务栏或“开始”菜单的公司门户图标。 在菜单选项中，选择“同步此设备”。 （此菜单也称为跳转列表。）公司门户将打开“设置”页并启动同步。有关更新过程的信息，请参阅[手动同步 Windows 设备](https://docs.microsoft.com/intune/intune-user-help/sync-your-device-manually-windows#sync-from-device-taskbar-or-start-menu)。
 
 
 
@@ -74,7 +85,7 @@ ms.locfileid: "39039618"
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
 
 #### <a name="access-to-macos-company-portal-pre-release-build"></a>访问 macOS 公司门户预发布版本 
-<!--1734766--> 使用 Microsoft 自动更新，通过加入预览体验计划注册以提早接收内部版本。 通过注册，可使你在更新的公司门户对最终用户可用前使用它。
+<!--1734766--> 使用 Microsoft 自动更新，通过加入预览体验计划注册以提早接收内部版本。 通过注册，可在更新的公司门户对最终用户可用前使用它。
 
 #### <a name="intune-app-protection-policies-and-microsoft-edge"></a>Intune 应用保护策略和 Microsoft Edge 
 <!--1818968,1818969--> 面向移动设备（iOS 和 Android）的 Microsoft Edge 浏览器现支持 Microsoft Intune 应用保护策略。 在 Microsoft Edge 应用程序中使用公司的 Azure Active Directory 帐户进行登录的 iOS 和 Android 设备用户受到 Intune 保护。 在 iOS 设备上，“需要使用托管浏览器获取 Web 内容”的策略允许用户在托管的 Microsoft Edge 中打开链接。
@@ -92,7 +103,7 @@ ms.locfileid: "39039618"
 ### <a name="new-in-configuration-manager-current-branch"></a>Configuration Manager (Current Branch) 中的新增功能
 
 #### <a name="android-for-work-and-lookout-onboarding-moved-to-intune-on-azure"></a>Android for Work 和 Lookout 载入已移至 Azure 上的 Intune
-<!--2355022,2357366--> 借助最新的 Intune 更新，可访问 Azure 门户中的 Intune，在混合移动设备管理租户上启用并管理 Android for Work 集成和 Lookout 移动威胁防御集成。 在此更新之前，只能在 Intune Classic (Silverlight) 门户中配置这些内容。
+<!--2355022,2357366--> 借助最新的 Intune 更新，可访问 Azure 门户中的 Intune，在混合移动设备管理租户上启用并管理 Android for Work 集成和 Lookout 移动威胁防御集成。 在此更新之前，只能在 Intune Classic (Silverlight) 门户中配置这些设置。
  
 注意：Lookout 是混合环境中唯一支持的移动威胁防御 (MTD) 提供程序。 如果之前已与任何其他 MTD 提供程序集成，它仍会在 Azure 门户的 Intune 中显示。 如果删除它的连接器，则不能再重新添加它。
  
@@ -143,11 +154,11 @@ ms.locfileid: "39039618"
 
 
 #### <a name="update-where-to-configure-your-app-protection-policies"></a>更新配置应用保护策略的位置 
-<!--2144597--> 在 Microsoft Intune 服务的 Azure 门户中，我们将从“Intune 应用保护服务”边栏选项卡暂时重定向到“移动应用”边栏选项卡。 请注意，Intune 中“应用配置”下的“移动应用”边栏选项卡已包括所有应用保护策略。 直接转到 Intune 即可，无需转到“Intune 应用保护”。 在 2018 年 4 月，我们将停止重定向并将完全删除“Intune 应用保护服务”边栏选项卡，以便在 Intune 中只存在应用保护策略的一个位置。 
+<!--2144597--> 在 Microsoft Intune 服务的 Azure 门户中，我们会暂时将用户从“Intune 应用保护”区域重定向到“移动应用”部分。 Intune 中“应用配置”下的“移动应用”部分已包括所有应用保护策略。 直接转到 Intune 即可，无需转到“Intune 应用保护”。 2018 年 4 月，我们将停止该重定向并完全删除“Intune 应用保护”。 在此之后，Intune 内只有一个管理应用保护策略的位置。 
 
-**这会对我产生哪些影响？** 此更改将同时影响 Intune 独立版客户和混合版（带 Configuration Manager 的 Intune）客户。 此集成将有助于简化云管理。
+**这一更改会对我产生哪些影响？** 此更改将同时影响 Intune 独立版客户和混合版（带 Configuration Manager 的 Intune）客户。 此集成将有助于简化云管理。
 
-**我需要如何准备应对此项变化？** 请将 Intune 标记为收藏（而不是“Intune 应用保护服务”边栏选项卡），并确保熟悉 Intune 的“移动应用”边栏选项卡中的应用保护策略工作流。 我们将重定向一小段时间，然后删除“应用保护”边栏选项卡。 请记住，所有应用保护策略都已转到 Intune，可修改任何条件访问策略。 有关修改条件访问策略的详细信息，请参阅 [Azure Active Directory 中的条件访问](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)。 有关其他信息，请参阅[应用保护策略是什么？](/intune/app-protection-policy) 
+**我需要如何准备应对此项变化？** 将“Intune”标记为收藏，而不是“Intune 应用保护”。 熟悉 Intune 内“移动应用”区域中的应用保护策略工作流。 我们将重定向一小段时间，然后删除“应用保护”。 请记住，所有应用保护策略都已转到 Intune，可修改任何条件访问策略。 有关修改条件访问策略的详细信息，请参阅 [Azure Active Directory 中的条件访问](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)。 有关详细信息，请参阅[什么是应用保护策略？](https://docs.microsoft.com/intune/app-protection-policy) 
 
 
 
@@ -161,7 +172,7 @@ ms.locfileid: "39039618"
 - 可为用户提供最新状态信息的附加进度条。
 - 改进了用户上传日志的方式，因此可在出现问题时更轻松地报告该问题。  
 
-要查看更新的外观，请转到[应用 UI 中的新增功能](/intune/whats-new-app-ui)。
+要查看更新的外观，请转到[应用 UI 中的新增功能](https://docs.microsoft.com/intune/whats-new-app-ui)。
 
 
 
@@ -172,11 +183,11 @@ ms.locfileid: "39039618"
 #### <a name="windows-company-portal-send-feedback-option-may-no-longer-work"></a>Windows 公司门户的“发送反馈”选项可能失效
 <!--2070166--> Windows 公司门户应用上有一个“发送反馈”选项，用户可用它向 Microsoft 发送应用反馈。 自 2018 年 4 月 30 日起，只有 Windows 10 版本 1607 及更高版本上运行的 Windows 10 公司门户应用才能继续使用此选项。   
 
-**这会对我产生哪些影响？**
+**这一更改会对我产生哪些影响？**
 
-如果尚未为最终用户安装 Windows 公司门户应用，请忽略此消息。
+如果尚未为最终用户安装 Windows 公司门户应用，则忽略此消息。
 
-如果任一最终用户具备公司门户应用，请注意，自 4 月 30 日期，以下情形中的应用不可再使用“发送反馈”按钮：  
+如果任一最终用户具有公司门户应用，则自 4 月 30 日起，以下情形中的应用不可再使用“发送反馈”按钮：  
 
  - Windows 10 版本 1507 和版本 1511 上的 Windows 10 公司门户应用  
 
@@ -186,7 +197,7 @@ ms.locfileid: "39039618"
 
 **我需要如何准备应对此项变化？**
 
-请告知最终用户出现此项变化，并在必要时更新用户指南。 
+请将此项变化告知最终用户，并在必要时更新用户指南。 
 
 让在 Windows Phone 8.1、Windows 10 版本 1507 和 Windows 10 版本 1511 上使用公司门户的最终用户了解有两个备用反馈通道可用。 最终用户可：  
 
@@ -220,7 +231,7 @@ ms.locfileid: "39039618"
   <!--1797090 -->  
 
 - **适用于 Intune 的条件访问策略仅可从 Azure 门户获取**   
-  从此版本开始，必须配置和管理 [Azure 门户](https://portal.azure.com)中的条件访问策略（“Azure Active Directory” > “条件访问”）。 为方便起见，也可以通过 Azure 门户中的“Intune” > “条件访问”，从 Intune 访问此边栏选项卡。
+  从此版本开始，必须配置和管理 [Azure 门户](https://portal.azure.com)中的条件访问策略（“Azure Active Directory” > “条件访问”）。 为方便起见，也可以通过 Azure 门户中的“Intune” > “条件访问”，从 Intune 访问这些设置。
   <!-- 1737088 1634311 --> 
 
 - **对符合性电子邮件的更新**    
@@ -263,7 +274,7 @@ ms.locfileid: "39039618"
   <!--1541700-->   
 
 - **Microsoft Planner 现已加入已批准应用的移动应用管理 (MAM) 列表**    
-  适用于 iOS 和 Android 的 Microsoft Planner 应用现在属于移动应用管理 (MAM) 的已批准应用。 通过 Azure 门户中的“Intune 应用保护”边栏选项卡将该应用配置到所有租户。 有关详细信息，请参阅 [MAM 已批准应用列表](https://www.microsoft.com/cloud-platform/microsoft-intune-apps)。
+  适用于 iOS 和 Android 的 Microsoft Planner 应用现在属于移动应用管理 (MAM) 的已批准应用。 从 Azure 门户中的“Intune 应用保护”将该应用配置到所有租户。 有关详细信息，请参阅 [MAM 已批准应用列表](https://www.microsoft.com/cloud-platform/microsoft-intune-apps)。
   <!-- 1248473 -->    
 
 - **访问 iOS 的托管应用日志**    
@@ -340,7 +351,7 @@ ms.locfileid: "39039618"
   <!--1565657-->    
 
 - **适用于 iOS 的公司门户上基于证书的身份验证支持**    
-  我们在适用于 IOS 的公司门户应用中添加了对基于证书的身份验证 (CBA) 的支持。 具有 CBA 的用户输入其用户名，然后点击“使用证书登录”链接。 CBA 已支持用于 Android 和 Windows 的公司门户应用。 你可以在[登录到公司门户应用](https://docs.microsoft.com/intune-user-help/sign-in-to-the-company-portal)页上了解详细信息。
+  我们在适用于 IOS 的公司门户应用中添加了对基于证书的身份验证 (CBA) 的支持。 具有 CBA 的用户输入其用户名，然后点击“使用证书登录”链接。 CBA 已支持用于 Android 和 Windows 的公司门户应用。 可以在[登录到公司门户应用](https://docs.microsoft.com/intune-user-help/sign-in-to-the-company-portal)页上了解详细信息。
   <!--1029830-->   
 
 - **对公司门户中设备安装工作流的改进**     
@@ -380,7 +391,7 @@ ms.locfileid: "39039618"
   <!--1171126, 1326920 -->     
 
 - **告知最终用户可以在注册设备上看到哪些设备信息**     
-  在所有公司门户应用上，我们在“设备详细信息”屏幕中添加了“所有权类型”。 此信息允许用户直接从[公司可以看到哪些信息？](https://docs.microsoft.com/intune-user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune)一文中找到隐私的相关详情。 此改进将在不久的将来在所有公司门户应用中推出。 我们在 [9 月](https://docs.microsoft.com/intune/whats-new#week-of-september-11-2017)宣布了适用于 iOS 的此功能。 
+  我们将在所有公司门户应用的“设备详细信息”屏幕中添加“所有权类型”。 此信息允许用户直接从[公司可以看到哪些信息？](https://docs.microsoft.com/intune-user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune)一文中找到隐私的相关详情。 此改进将在不久的将来在所有公司门户应用中推出。 我们在 [9 月](https://docs.microsoft.com/intune/whats-new#week-of-september-11-2017)宣布了适用于 iOS 的此功能。 
   <!--1165314-->     
 
 
@@ -464,7 +475,7 @@ ms.locfileid: "39039618"
   Windows 10 公司门户应用现在自动开始为安装了 Windows 10 创意者更新（版本 1703）的设备同步应用安装请求。 此行为会减少“挂起同步”状态期间出现的应用安装停止问题。 此外，用户还可以在应用中手动启动同步。 在[应用 UI 中的新增功能](https://docs.microsoft.com/intune/whats-new-app-ui)页上可以看到这些更改。
 
 - **Windows 10 公司门户的全新引导式体验**  
-  适用于 Windows 10 的公司门户应用为尚未进行标识或注册的设备提供引导式 Intune 演练体验。 新体验提供分步说明，可指导用户完成注册到 Azure Active Directory（条件访问功能需要）和 MDM 注册（设备管理功能需要）的过程。 从公司门户主页可以进入引导式体验。 如果用户没有完成注册，可以继续使用该应用，但可用功能会受到限制。
+  适用于 Windows 10 的公司门户应用为尚未进行标识或注册的设备提供引导式 Intune 演练体验。 新体验提供分步说明，指导用户完成注册到 Azure Active Directory（条件访问功能需要）和 MDM 注册（设备管理功能需要）的过程。 从公司门户主页可以进入引导式体验。 如果用户没有完成注册，可以继续使用该应用，但可用功能会受到限制。
 
   此更新仅在运行 Windows 10 周年更新（内部版本 1607）或更高版本的设备上可见。 在[应用 UI 中的新增功能](https://docs.microsoft.com/intune/whats-new-app-ui)页上可以看到这些更改。
 
@@ -500,24 +511,35 @@ ms.locfileid: "39039618"
   <!-- 1321367 -->
 
 
+
 ## <a name="notices"></a>通知
+
+### <a name="plan-for-change-upcoming-macos-and-intune-password-enforcement-change"></a>更改计划：即将推出的 macOS 和 Intune 密码强制实施更改
+<!--1873216--> 在 9 月的服务版本中，Intune 计划为运行 macOS 10.13 版本及更高版本的设备集成 Apple 新发布的“在下一次身份验证时更改密码”设置。 在引入此设置之前，MDM 提供程序无法验证设备上的密码是否已更改以确保符合性。 Intune 的配置和符合性策略仅确保密码下一次在设备上发生更改时，它被标记为符合。 在我们集成此 Apple 新功能时，MacOS 用户将收到更新密码的请求，即使其密码已经满足符合性。
+
+#### <a name="how-does-this-change-affect-me"></a>这一更改会对我产生哪些影响？
+此更改仅影响具有 macOS 设备策略的 Intune 独立或混合 MDM 客户。 Apple 引入了“在下次身份验证时更改密码”设置。 现在，在推送密码策略时，Intune 可以强制用户将密码更新为符合要求的密码。 如果阻止公司资源直至设备被标记为符合，那么需要知晓，最终用户在重置其密码之前可能会被阻止访问电子邮件或 SharePoint 站点等公司资源。 将来，对配置和符合性密码策略的所有更新都将强制目标用户更新其密码。
+
+#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>我需要如何准备应对此项变化？
+建议告知支持人员。 如果不希望强制实施此 macOS 设备策略，请取消分配或删除现有 macOS 策略。 在实施此更改之前，我们的客户研究表明大多数客户不会受到此更改影响。 最终用户通常都会在收到使用密码注册的请求后更新其密码，或重置其密码以保持符合性。  
+
 
 ### <a name="plan-for-change-intune-moving-to-support-ios-10-and-later-in-september-2018"></a>更改计划：Intune 将于 2018 年 9 月升级为支持 iOS 10 和更高版本 
 <!--2454656-->
 
-Apple 预期于 2018 年 9 月发布 iOS 12。 在发布后不久，我们即将 Intune 注册、公司门户和托管浏览器升级为支持 iOS 10 和更高版本。
+Apple 预期于 2018 年 9 月发布 iOS 12。 在发布后不久，我们会将 Intune 注册、公司门户和 Managed Browser 升级为支持 iOS 10 和更高版本。
 
-#### <a name="how-does-this-affect-me"></a>这会对我产生哪些影响？
+#### <a name="how-does-this-change-affect-me"></a>这一更改会对我产生哪些影响？
 
 Office 365 移动应用在 iOS 10 和更高版本上均受支持，因此，你可能已升级了你的操作系统或设备。 如果情况如此，此次更改对你不会有影响。
 
-但是，如果你使用的是下列任一设备，或者想要注册下列任一设备，请注意，这些设备仅支持 iOS 9 和更早版本。 若要继续访问 Intune 公司门户，必须在 9 月前将这些设备升级为支持 iOS 10 或更高版本的设备： 
+但是，如果使用的是下列任一设备，或者想要注册下列任一设备，这些设备仅支持 iOS 9 和更早版本。 若要继续访问 Intune 公司门户，必须在 9 月前将这些设备升级为支持 iOS 10 或更高版本的设备： 
 
 - iPhone 4S
 - iPod Touch 
 - iPad 2
-- iPad（第 3 代）
-- iPad Mini（第 1 代）
+- iPad（第三代）
+- iPad Mini（第一代）
 
 从 7 月开始，使用 iOS 9 和公司门户的已注册 MDM 的设备将收到升级其操作系统或设备的提示。 如果你使用应用保护策略，也可以设置“需要最低 iOS 操作系统(仅限警告)”访问设置。  
 
@@ -530,15 +552,15 @@ Office 365 移动应用在 iOS 10 和更高版本上均受支持，因此，你�
 
 从 2018 年 10 月 31 日起，Intune 将支持传输层安全性 (TLS) 协议版本 1.2，以提供一流的加密，确保我们的服务在默认情况下更为安全，并与 Microsoft Office 365 等其他 Microsoft 服务一致。 Office 将在 MC128929 中对此次更改进行说明。
 
-#### <a name="how-does-this-affect-me"></a>这会对我产生哪些影响？
+#### <a name="how-does-this-change-affect-me"></a>这一更改会对我产生哪些影响？
 
-自 2018 年 10 月 31 日起，Intune 将不再支持 TLS 协议版本 1.0 或 1.1。 所有客户端 - 服务器和浏览器 - 服务器组合都应使用 TLS 版本 1.2，以确保能够正常连接到 Intune。 请注意，此次更改将影响不再受 Intune 支持但仍通过 Intune 接收策略的最终用户设备，此类设备无法使用 TLS 版本 1.2。 这包括运行 Android 4.3 和更早版本的设备。 有关受影响的设备和浏览器的列表，请参阅以下其他信息。
+自 2018 年 10 月 31 日起，Intune 将不再支持 TLS 协议版本 1.0 或 1.1。 所有客户端 - 服务器和浏览器 - 服务器组合都应使用 TLS 版本 1.2，以确保能够正常连接到 Intune。 此更改影响不受 Intune 支持但仍通过 Intune 接收策略的最终用户设备，此类设备无法使用 TLS 版本 1.2。 这些设备包括运行 Android 4.3 和更早版本的设备。 有关受影响的设备和浏览器的列表，请访问以下链接。
 
-在 2018 年 10 月 31 日后，如果你遇到有关使用旧 TLS 版本的问题，作为解决方案的一部分，你将需要更新到 TLS 1.2 或支持 TLS 1.2 的设备。
+在 2018 年 10 月 31 日后，如果遇到有关使用旧 TLS 版本的问题，作为解决方法的一部分，请更新到 TLS 1.2 或支持 TLS 1.2 的设备。
 
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>我需要如何准备应对此项变化？
 
-我们建议在可能的情况下，主动删除环境中的 TLS 1.0 和 1.1 依赖项，并在操作系统级别禁用 TLS 1.0 和 1.1。 立即计划迁移到 TLS 1.2。 查看以下支持博客文章，了解现在不受 Intune 支持但仍可能接收策略的设备列表，这些设备将无法使用 TLS 版本 1.2 进行通信。 你可能需要通知这些最终用户，他们将无法访问公司资源。
+我们建议在可能的情况下，主动删除环境中的 TLS 1.0 和 1.1 依赖项，并在操作系统级别禁用 TLS 1.0 和 1.1。 立即计划迁移到 TLS 1.2。 查看以下支持博客文章，了解现在不受 Intune 支持但仍可能接收策略的设备列表，这些设备将无法使用 TLS 版本 1.2 进行通信。 可能需要通知这些最终用户，他们将无法访问公司资源。
 
 有关详细信息，请参阅[将 Intune 升级到 TLS 1.2 以进行加密](https://blogs.technet.microsoft.com/intunesupport/2018/06/05/intune-moving-to-tls-1-2-for-encryption/)。
 

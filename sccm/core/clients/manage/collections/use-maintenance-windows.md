@@ -2,7 +2,7 @@
 title: 使用维护时段
 titleSuffix: Configuration Manager
 description: 使用集合和维护时段在 System Center Configuration Manager 中有效管理客户端。
-ms.date: 02/22/2017
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,18 +10,18 @@ ms.assetid: 4564ebcb-41a8-4eb0-afdb-2e1f0795cfa2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 18a870b111b141cb9b95664a2f66403ea37cb99e
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 6512b42191b5ea627f5e8729fea29aab81ee1aed
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32332510"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39384325"
 ---
 # <a name="how-to-use-maintenance-windows-in-system-center-configuration-manager"></a>如何在 Configuration Manager 中使用维护时段
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-通过维护时段，可以定义对设备集合进行 Configuration Manager 操作的时间。 可以使用维护时段来帮助确保在不会影响工作效率的时段进行客户端配置更改。  
+通过维护时段，可以定义对设备集合进行 Configuration Manager 操作的时间。 可使用维护时段来帮助确保在不会影响工作效率的时段进行客户端配置更改。 从 Configuration Manager 版本 1806 开始，用户可从“软件中心”的“安装状态”选项卡查看其下一个维护时段的时间。 <!--1358131-->
 
  以下操作支持维护时段：  
 
@@ -48,13 +48,13 @@ ms.locfileid: "32332510"
 
  当用户从软件中心中启动应用程序安装时，应用程序将立即安装，而不考虑任何维护时段。  
 
- 如果目的为“必需”  的应用程序部署在非营业时间（由用户在软件中心中配置）内达到其安装期限，将安装应用程序。  
+ 如果目的为“必需”  的应用程序部署在非营业时间（由用户在软件中心中配置）内达到其安装期限，将安装应用程序。 
 
 ### <a name="how-to-configure-maintenance-windows"></a>如何配置维护时段  
 
 1.  在 Configuration Manager 控制台中，选择“资产和符合性”>  “设备集合”。  
 
-3.  在“设备集合”列表中，选择一个集合。 你不能为“所有系统”  集合创建维护时段。  
+3.  在“设备集合”列表中，选择一个集合。 无法为“所有系统”集合创建维护时段。  
 
 4.  在“主页”选项卡上的“属性”组中，选择“属性”。  
 
