@@ -60,7 +60,7 @@ ms.locfileid: "32340703"
 
 -   使应用到部署的更新在 Configuration Manager 控制台中可用。  
 
-此站点系统角色支持联机和脱机操作模式。 有关详细信息，请参阅 [About the service connection point in System Center Configuration Manager](../../../core/servers/deploy/configure/about-the-service-connection-point.md)。  
+此站点系统角色支持联机和脱机操作模式。 有关详细信息，请参阅 [关于 System Center Configuration Manager 服务连接点](../../../core/servers/deploy/configure/about-the-service-connection-point.md)。  
 
 ##  <a name="bkmk_usage"></a> 使用数据收集  
  System Center Configuration Manager 收集有关站点和基础结构的使用情况数据。 编译此信息并通过服务连接点将其提交给 Microsoft 云服务。 需要启用 Configuration Manager 下载部署的更新，此部署应用于你使用的 Configuration Manager 版本。 设置服务连接点时，可以指定收集到的数据级别以及它是自动提交（联机模式）还是手动提交（脱机模式）。  
