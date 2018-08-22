@@ -2,7 +2,7 @@
 title: 客户端设置
 titleSuffix: Configuration Manager
 description: 了解用于控制客户端行为的默认和自定义设置
-ms.date: 03/22/2018
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,18 +10,18 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a60e54ffac3ae029f07c2df555e905b55ca7b0b5
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 38306efc9fbd7b38a5c5f0dad57fbd1a1b2c0557
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342879"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39385399"
 ---
-# <a name="about-client-settings-in-system-center-configuration-manager"></a>关于 System Center Configuration Manager 中的客户端设置
+# <a name="about-client-settings-in-configuration-manager"></a>关于 Configuration Manager 中的客户端设置
 
 *适用于：System Center Configuration Manager (Current Branch)*
 
-通过“管理”工作区中的“客户端设置”节点来管理 Configuration Manager 控制台中的所有客户端设置。 Configuration Manager 附带一组默认设置。 如果更改默认的客户端设置，则这些设置将应用于层次结构中的所有客户端。 你也可以配置自定义客户端设置，当将这些设置分配给集合时，它们将替代默认客户端设置。 有关详细信息，请参阅[如何配置客户端设置](../../../core/clients/deploy/configure-client-settings.md)。
+通过“管理”工作区中的“客户端设置”节点来管理 Configuration Manager 控制台中的所有客户端设置。 Configuration Manager 附带一组默认设置。 如果更改默认的客户端设置，则这些设置将应用于层次结构中的所有客户端。 你也可以配置自定义客户端设置，当将这些设置分配给集合时，它们将替代默认客户端设置。 有关详细信息，请参阅[如何配置客户端设置](/sccm/core/clients/deploy/configure-client-settings)。
 
 下列部分更详细地描述了设置和选项。  
  
@@ -88,9 +88,9 @@ Configuration Manager 会自动配置 Windows 防火墙规则以允许此流量�
 
 ### <a name="enable-user-policy-on-clients"></a>在客户端上启用用户策略
 
-如果此选项设置为“是”并且使用[用户发现](../../../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser)，客户端会接收面向登录用户的应用程序和程序。  
+如果此选项设置为“是”并且使用[用户发现](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser)，客户端会接收面向登录用户的应用程序和程序。  
 
-应用程序目录从站点服务器接收用户的可用软件列表。 因此，此设置不必为“是”，用户也可从应用程序目录中查看和请求应用程序。 但如果此设置为“否”，则用户在使用应用程序目录时会出现以下无效行为：  
+应用程序目录从站点服务器接收用户的可用软件列表。 因此，此设置不必为“是”，用户也可从应用程序目录中查看和请求应用程序。 但如果此设置为“否”，则用户在使用应用程序目录时，以下行为无效：  
 
 -   用户无法安装他们在应用程序目录中看到的应用程序。  
 
@@ -106,13 +106,13 @@ Configuration Manager 会自动配置 Windows 防火墙规则以允许此流量�
 
 ### <a name="enable-user-policy-requests-from-internet-clients"></a>启用来自 Internet 客户端的用户策略请求
 
-将此设置为“是”，以便用户接收到基于 Internet 的计算机上的用户策略。 此外还需要满足以下要求：  
+将此选项设置为“是”，以便用户接收到基于 Internet 的计算机上的用户策略。 此外还需要满足以下要求：  
 
 -   将客户端和站点配置为[基于 Internet 的客户端管理](/sccm/core/clients/manage/plan-internet-based-client-management)或[云管理网关](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway)。  
 
 -   “在客户端上启用用户策略”设置为“是”。  
 
--   基于 Internet 的管理点可通过使用 Windows 身份验证（Kerberos 或 NTLM）成功地对用户进行身份验证。 有关详细信息，请参阅[来自 Internet 的客户端通信的注意事项](../../../core/plan-design/hierarchy/communications-between-endpoints.md#BKMK_clientspan)。  
+-   基于 Internet 的管理点可通过使用 Windows 身份验证（Kerberos 或 NTLM）成功地对用户进行身份验证。 有关详细信息，请参阅[来自 Internet 的客户端通信的注意事项](/sccm/core/plan-design/hierarchy/communications-between-endpoints#BKMK_clientspan)。  
 
 -   从 1710 版开始，云管理网关可使用 Azure Active Directory 成功对用户进行身份验证。 有关详细信息，请参阅[在加入 Azure AD 的设备上部署用户可用的应用程序](\sccm\apps\deploy-use\deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices)。  
 
@@ -126,7 +126,7 @@ Configuration Manager 会自动配置 Windows 防火墙规则以允许此流量�
 ## <a name="cloud-services"></a>云服务
 
 ### <a name="allow-access-to-cloud-distribution-point"></a>允许访问云分发点
-将此设置为“是”，以便客户端从云分发点获取内容。 此设置不需要设备基于 Internet。
+将此选项设置为“是”，以便客户端从云分发点获取内容。 此设置不需要设备基于 Internet。
 
 ### <a name="automatically-register-new-windows-10-domain-joined-devices-with-azure-active-directory"></a>在 Azure Active Directory 中自动注册已加入域的新 Windows 10 设备 
 配置 Azure Active Directory 支持混合联接时，Configuration Manager 会针对此功能配置 Windows 10 设备。 有关详细信息，请参阅[如何配置混合 Azure Active Directory 联接设备](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)。
@@ -139,13 +139,13 @@ Configuration Manager 会自动配置 Windows 防火墙规则以允许此流量�
 ##  <a name="compliance-settings"></a>符合性设置  
 
 ### <a name="enable-compliance-evaluation-on-clients"></a>启用在客户端上的符合性评估
-将此设置为“是”，以在此组中配置其他设置。
+将此选项设置为“是”，以在此组中配置其他设置。
  
 ### <a name="schedule-compliance-evaluation"></a>计划符合性评估
 选择“计划”，创建配置基线部署的默认计划。 可在“部署配置基线”对话框中为每个基线配置此值。  
 
 ### <a name="enable-user-data-and-profiles"></a>启用用户数据和配置文件
-如果希望部署[用户数据和配置文件](../../../compliance/deploy-use/create-user-data-and-profiles-configuration-items.md)配置项目，请选择“是”。
+如果希望部署[用户数据和配置文件](/sccm/compliance/deploy-use/create-user-data-and-profiles-configuration-items)配置项目，请选择“是”。
 
 
 
@@ -169,7 +169,7 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
 -   管理点为基于 Internet 的客户端提供基于 Internet 的应用程序目录网站点。 管理点为基于 Intranet 的客户端提供基于 Intranet 的应用程序目录网站点。  
 
-自动检测并不能保证为客户端提供最接近的应用程序目录网站点。 由于以下原因，你可能决定不使用“自动检测”：  
+自动检测并不能保证为客户端提供最接近的应用程序目录网站点。 由于以下原因，可能决定不使用“自动检测”选项：  
 
 -   你想要为客户端手动配置最近的服务器，或者确保客户端不跨慢速网络连接连接到服务器。  
 
@@ -215,7 +215,7 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
 如果更改此设置，则当用户下次加载其浏览器或刷新其当前打开的浏览器窗口时，更改将生效。  
 
-有关此设置的详细信息，请参阅 [Microsoft Silverlight 5 的证书以及应用程序目录所需的提升的信任模式](../../../apps/plan-design/security-and-privacy-for-application-management.md#BKMK_CertificatesSilverlight5)。  
+有关此设置的详细信息，请参阅 [Microsoft Silverlight 5 的证书以及应用程序目录所需的提升的信任模式](/sccm/apps/plan-design/security-and-privacy-for-application-management#BKMK_CertificatesSilverlight5)。  
 
 ### <a name="organization-name-displayed-in-software-center"></a>软件中心中显示的组织名称
 
@@ -223,19 +223,19 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
 ### <a name="use-new-software-center"></a>使用新的软件中心
 
-如果将此设置为“是”，则所有客户端计算机均使用软件中心。 软件中心显示以前只能在应用程序目录中访问的用户可用的应用。 应用程序目录需要 Silverlight，它对于软件中心来说不再是先决条件。 从 Configuration Manager 1802 起，默认设置为“是”。  
+如果将此选项设置为“是”，则所有客户端计算机均使用软件中心。 软件中心显示以前只能在应用程序目录中访问的用户可用的应用。 应用程序目录需要 Silverlight，它对于软件中心来说不再是先决条件。 从 Configuration Manager 1802 起，默认设置为“是”。  
 
 仍然需要应用程序目录网站点站点系统角色和应用程序目录 Web 服务点站点系统角色来让用户可用的应用显示在软件中心。  
 
-有关详细信息，请参阅[规划和配置应用程序管理](../../../apps/plan-design/plan-for-and-configure-application-management.md)。  
+有关详细信息，请参阅[规划和配置应用程序管理](/sccm/apps/plan-design/plan-for-and-configure-application-management)。  
 
 ### <a name="enable-communication-with-health-attestation-service"></a>启用与运行状况证明服务的通信
 
-将此设置为“是”，以便 Windows 10 设备使用[运行状况证明](/sccm/core/servers/manage/health-attestation)。 启用此设置时，还可配置以下设置。
+将此选项设置为“是”，以便 Windows 10 设备使用[运行状况证明](/sccm/core/servers/manage/health-attestation)。 启用此设置时，还可配置以下设置。
 
 ### <a name="use-on-premises-health-attestation-service"></a>使用本地运行状况证明服务
 
-将此设置为“是”，以便设备使用本地服务。 设置为“否”，以便设备使用 Microsoft 基于云的服务。  
+将此选项设置为“是”，以便设备使用本地服务。 设置为“否”，以便设备使用 Microsoft 基于云的服务。  
 
 ### <a name="install-permissions"></a>安装权限
 
@@ -304,7 +304,7 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
 ### <a name="grace-period-for-enforcement-after-deployment-deadline-hours"></a>部署截止日期后强制的宽限期（小时）
 
-如果希望为用户提供更多时间（超过截止时间）来安装所需的应用程序或软件更新部署，请将此设置为“是”。 此宽限期适用于计算机延期关闭以及用户需要安装大量应用程序或更新部署的情况。 例如，如果用户休假回来，客户端安装的应用程序部署已过期，而需要等待很长时间，此设置将有所帮助。 
+如果希望为用户提供更多时间（超过截止时间）来安装所需的应用程序或软件更新部署，请将此选项设置为“是”。 此宽限期适用于计算机延期关闭以及用户需要安装大量应用程序或更新部署的情况。 例如，如果用户休假回来，客户端安装的应用程序部署已过期，而需要等待很长时间，此设置将有所帮助。 
 
 设置 1 到 120 小时的宽限期。 将此设置和“根据用户偏好延迟此强制部署”的部署属性结合使用。 有关详细信息，请参阅[部署应用程序](/sccm/apps/deploy-use/deploy-applications)。
 
@@ -315,14 +315,13 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 -   **向用户显示一条临时通知，指示注销用户或重新启动计算机之前的间隔(分钟)**
 -   **显示用户无法关闭的对话框，该对话框显示注销用户或重新启动计算机之前的倒计时间隔(分钟)**
 
-有关维护时段的详细信息，请参阅[如何在 System Center Configuration Manager 中使用维护时段](../../../core/clients/manage/collections/use-maintenance-windows.md)。
+有关维护时段的详细信息，请参阅[如何在 System Center Configuration Manager 中使用维护时段](/sccm/core/clients/manage/collections/use-maintenance-windows)。
 
 
 
 ## <a name="delivery-optimization"></a>传递优化
 
-<!-- 1324696 -->
-使用 Configuration Manager 边界组来定义和控制跨公司网络和到远程办公室的内容分发。 [Windows 传递优化](/windows/deployment/update/waas-delivery-optimization)是一种基于云的对等技术，用于在 Windows 10 设备之间共享内容。 从版本 1802 开始，配置传递优化以在对等方之间共享内容时使用边界组。
+<!-- 1324696 -->使用 Configuration Manager 边界组来定义和控制跨公司网络和到远程办公室的内容分发。 [Windows 传递优化](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization)是一种基于云的对等技术，用于在 Windows 10 设备之间共享内容。 从版本 1802 开始，配置传递优化以在对等方之间共享内容时使用边界组。
 
  > [!Note]
  > 传递优化仅可用于 Windows 10 客户端
@@ -334,28 +333,30 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
 ##  <a name="endpoint-protection"></a>Endpoint Protection  
 >  [!Tip]   
-> 除了以下信息，还可以在[示例方案：使用 System Center Endpoint Protection 来保护计算机在 System Center Configuration Manager 中免受恶意软件侵害](/sccm/protect/deploy-use/scenarios-endpoint-protection)中查找关于使用 Endpoint Protection 客户端设置的详细信息。
+> 除了以下信息，还可以在[示例方案：使用 Endpoint Protection 来保护计算机免受恶意软件侵害](/sccm/protect/deploy-use/scenarios-endpoint-protection)中查找关于使用 Endpoint Protection 客户端设置的详细信息。
 
 ### <a name="manage-endpoint-protection-client-on-client-computers"></a>在客户端计算机上管理 Endpoint Protection 客户端
 
 若要在层次结构中的计算机上管理现有的 Endpoint Protection 和 Windows Defender 客户端，请选择“是”。  
 
-如果已经安装了 Endpoint Protection 客户端并且想要使用 Configuration Manager 来管理它，请选择此选项。 此单独安装包括使用 Configuration Manager 应用程序或包和程序的脚本化进程。 从 Configuration Manager 1802 起，Windows 10 设备不需要安装 Endpoint Protection 代理。 但是，这些设备仍需启用“管理客户端计算机上的 Endpoint Protection 客户端”。 <!--503654-->
+如果已经安装了 Endpoint Protection 客户端并且想要使用 Configuration Manager 来管理它，请选择此选项。 此单独安装包括使用 Configuration Manager 应用程序或包和程序的脚本化进程。 从 Configuration Manager 1802 开始，Windows 10 设备不需要安装 Endpoint Protection 代理。 但是，这些设备仍需启用“管理客户端计算机上的 Endpoint Protection 客户端”。 <!--503654-->
 
 ### <a name="install-endpoint-protection-client-on-client-computers"></a>在客户端计算机上安装 Endpoint Protection 客户端
 
-选择“是”可在尚未运行该客户端的客户端计算机上安装和启用 Endpoint Protection 客户端。 从 Configuration Manager 1802 起，Windows 10 客户端不需要安装 Endpoint Protection 代理。  
+选择“是”可在尚未运行该客户端的客户端计算机上安装和启用 Endpoint Protection 客户端。 从 Configuration Manager 1802 开始，Windows 10 客户端不需要安装 Endpoint Protection 代理。  
 
 > [!NOTE]  
 >  如果已安装 Endpoint Protection 客户端，选择“否”不会卸载 Endpoint Protection 客户端。 要卸载 Endpoint Protection 客户端，请将“在客户端计算机上管理 Endpoint Protection 客户端”客户端设置设为“否”。 然后，部署包和程序以卸载 Endpoint Protection 客户端。  
 
-### <a name="automatically-remove-previously-installed-antimalware-software-before-endpoint-protection-is-installed"></a>安装 Endpoint Protection 之前自动删除以前安装的反恶意软件
+<!-- removed in 1806, SMS 511544
+### Automatically remove previously installed antimalware software before Endpoint Protection is installed
 
-将此设置为“是”，以便 Endpoint Protection 客户端尝试卸载其他反恶意应用程序。 同一设备上的多个反恶意软件客户端可能会引发冲突，影响系统性能。
+Set this option to **Yes** for the Endpoint Protection client to attempt to uninstall other antimalware applications. Multiple antimalware clients on the same device can conflict, and impact system performance.
+-->
 
 ### <a name="allow-endpoint-protection-client-installation-and-restarts-outside-maintenance-windows-maintenance-windows-must-be-at-least-30-minutes-long-for-client-installation"></a>允许安装 Endpoint Protection 客户端和在维护时段以外重启。 维护时段必须至少为 30 分钟，以便安装客户端
 
-将此设置为“是”，使用维护时段替代典型的安装行为。 此设置符合可确保安全的系统维护优先级业务要求。 
+将此选项设置为“是”，使用维护时段替代典型的安装行为。 此设置符合可确保安全的系统维护优先级业务要求。 
 
 ### <a name="for-windows-embedded-devices-with-write-filters-commit-endpoint-protection-client-installation-requires-restarts"></a>对于带有写入筛选器的 Windows Embedded 设备，提交 Endpoint Protection 客户端安装（需要重新启动）
 
@@ -389,13 +390,13 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 输入新式设备轮询策略的分钟数。 此设置适用于通过本地移动设备管理托管的 Windows 10 设备。
 
 ### <a name="allow-users-to-enroll-mobile-devices-and-mac-computers"></a>允许用户注册移动设备和 Mac 计算机
-要启用基于用户注册旧设备，请将此设置为“是”，然后配置以下设置：
+要启用基于用户注册旧设备，请将此选项设置为“是”，然后配置以下设置：
 
 -   **注册配置文件** </br>
 选择“设置配置文件”，创建或选择一个注册配置文件。 有关详细信息，请参阅[为注册配置客户端设置](/sccm/core/clients/deploy/deploy-clients-to-macs#configure-client-settings-for-enrollment)。
 
 ### <a name="allow-users-to-enroll-modern-devices"></a>允许用户注册新式设备
-要启用基于用户注册新式设备，请将此设置为“是”，然后配置以下设置：
+要启用基于用户注册新式设备，请将此选项设置为“是”，然后配置以下设置：
 
 -   **新式设备注册配置文件** </br>
 选择“设置配置文件”，创建或选择一个注册配置文件。 有关详细信息，请参阅[创建允许用户注册新式设备的注册配置文件](/sccm/mdm/get-started/set-up-device-enrollment-on-premises-mdm#bkmk_createProf)。
@@ -425,7 +426,7 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
 ### <a name="hardware-inventory-classes"></a>硬件清单类
 
-选择“设置类”可扩展从客户端中收集的硬件信息，而无需手动编辑 sms_def.mof 文件。 有关详细信息，请参阅[如何配置硬件清单](../../../core/clients/manage/inventory/configure-hardware-inventory.md)。  
+选择“设置类”可扩展从客户端中收集的硬件信息，而无需手动编辑 sms_def.mof 文件。 有关详细信息，请参阅[如何配置硬件清单](/sccm/core/clients/manage/inventory/configure-hardware-inventory)。  
 
 ### <a name="collect-mif-files"></a>收集 MIF 文件
 
@@ -472,7 +473,7 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
     如果客户端达到按流量计费的 Internet 连接的数据传输限制，则客户端不再尝试与 Configuration Manager 站点通信。  
 
--   阻止：Configuration Manager 客户端采用按流量计费的 Internet 连接时不尝试与 Configuration Manager 站点通信。 这是默认选项。  
+-   **阻止**：Configuration Manager 客户端采用按流量计费的 Internet 连接时不尝试与 Configuration Manager 站点通信。 此选项为默认设置。  
 
 
 
@@ -480,7 +481,7 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
 ### <a name="allow-power-management-of-devices"></a>允许设备的电源管理
 
-将此设置为“是”，以启用客户端上的电源管理。 有关详细信息，请参阅[电源管理简介](/sccm/core/clients/manage/power/introduction-to-power-management)。
+将此选项设置为“是”，以启用客户端上的电源管理。 有关详细信息，请参阅[电源管理简介](/sccm/core/clients/manage/power/introduction-to-power-management)。
 
 ### <a name="allow-users-to-exclude-their-device-from-power-management"></a>允许用户从电源管理中排除其设备
 
@@ -490,29 +491,25 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
 指定“是”以在为单播包配置站点 LAN 唤醒设置后对其进行补充。  
 
-有关唤醒代理的详细信息，请参阅[规划如何在 System Center Configuration Manager 中唤醒客户端](../../../core/clients/deploy/plan/plan-wake-up-clients.md)。  
+有关唤醒代理的详细信息，请参阅[规划如何唤醒客户端](/sccm/core/clients/deploy/plan/plan-wake-up-clients)。  
 
 > [!WARNING]  
 >  在未首先了解唤醒代理的工作原理以及在测试环境中对其进行评估之前，请不要在生产网络中启用唤醒代理。  
 
 然后根据需要配置以下附加设置：
 
--   **唤醒代理端口号(UDP)**  </br>
-         客户端用于向处于睡眠状态的计算机发送唤醒数据包的端口号。 保留默认端口 25536，或将数字更改为所选的值。  
+-   **唤醒代理端口号 (UDP)**：客户端用于向处于睡眠状态的计算机发送唤醒数据包的端口号。 保留默认端口 25536，或将数字更改为所选的值。  
 
--   **LAN 唤醒端口号(UDP)** </br> 
-         保留默认值 9，除非在站点“属性”的“端口”选项卡上更改了 LAN 唤醒 (UDP) 端口号。  
+-   **LAN 唤醒端口号 (UDP)**：保留默认值 9，除非在站点“属性”的“端口”选项卡上更改了 LAN 唤醒 (UDP) 端口号。  
 
     > [!IMPORTANT]  
     >  此数字必须与站点“属性”中的数字匹配。 如果在一个位置更改此数字，则不会在其他位置自动更新此数字。  
 
--   **针对唤醒代理的 Windows Defender 防火墙例外** </br>
-         Configuration Manager 客户端自动配置运行 Windows Defender 防火墙的设备上的唤醒代理端口号。 选择“配置”指定所需的防火墙配置文件。
+-   **针对唤醒代理的 Windows Defender 防火墙例外**：Configuration Manager 客户端自动配置运行 Windows Defender 防火墙的设备上的唤醒代理端口号。 选择“配置”指定所需的防火墙配置文件。
 
-    如果客户端运行其他防火墙，则必须手动将其配置为允许“唤醒代理端口号(UDP)”。  
+    如果客户端运行其他防火墙，请手动将其配置为允许“唤醒代理端口号 (UDP)”。  
         
--   **DirectAccess 或其他介入的网络设备的 IPv6 前缀(如果需要)。请使用逗号指定多个项** </br>
-        输入唤醒代理在网络上运行所需的 IPv6 前缀。
+-   **DirectAccess 或其他介入的网络设备的 IPv6 前缀(如果需要)。请使用逗号指定多个项**：输入唤醒代理在网络上运行所需的 IPv6 前缀。
 
 
 
@@ -541,7 +538,7 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
 ### <a name="prompt-user-for-permission-to-transfer-content-from-shared-clipboard"></a>提示用户获取从共享剪贴板传输内容的权限
 
-在远程控制会话中从共享剪贴板传输内容前，允许用户选择接受或拒绝文件传输。 用户在每个会话中只需授予一次权限，而查看者无法授予自己继续文件传输的权限。
+在远程控制会话中从共享剪贴板传输内容前，允许用户选择接受或拒绝文件传输。 用户只需要在每个会话中授予一次权限。 查看者无法授予自身传输文件的权限。
 
 ### <a name="grant-remote-control-permission-to-local-administrators-group"></a>将远程控制权限授予本地管理员组
 
@@ -564,11 +561,11 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
 ### <a name="show-session-connection-bar"></a>显示会话连接栏
 
-将此设置为“是”，以在客户端上显示高可见性会话连接栏，指示远程控制会话处于活动状态。  
+将此选项设置为“是”，以在客户端上显示高可见性会话连接栏，指示远程控制会话处于活动状态。  
 
 ### <a name="play-a-sound-on-client"></a>在客户端上播放声音
 
-设置此选项，以当远程控制会话在客户端计算机上处于活动状态时用声音指明。 选择下列选项之一：
+设置此选项，以当远程控制会话在客户端计算机上处于活动状态时用声音指示。 选择下列选项之一：
 - **无声音**
 - **会话的开始和发送**（默认）
 - **在会话过程中重复**  
@@ -581,7 +578,7 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
 ### <a name="manage-solicited-remote-assistance-settings"></a>管理经请求的远程协助设置
 
-将此设置为“是”，允许 Configuration Manager 管理经请求的远程协助会话。  
+将此选项设置为“是”，允许 Configuration Manager 管理经请求的远程协助会话。  
 
 在经请求的远程协助会话中，客户端计算机上的用户向管理员发送远程协助请求。  
 
@@ -597,36 +594,39 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
 ### <a name="manage-remote-desktop-settings"></a>管理远程桌面设置
 
-将此设置为“是”，允许 Configuration Manager 管理计算机的远程桌面会话。  
+将此选项设置为“是”，允许 Configuration Manager 管理计算机的远程桌面会话。  
 
 ### <a name="allow-permitted-viewers-to-connect-by-using-remote-desktop-connection"></a>允许获得许可的查看者使用远程桌面连接进行连接
 
-将此设置为“是”，将允许查看者列表中指定的用户添加到客户端上的远程桌面本地用户组。  
+将此选项设置为“是”，将允许查看者列表中指定的用户添加到客户端上的远程桌面本地用户组。  
 
 ### <a name="require-network-level-authentication-on-computers-that-run-windows-vista-operating-system-and-later-versions"></a>在运行 Windows Vista 和更高版本的操作系统的计算机上要求网络级别身份验证
 
-将此设置为“是”，可使用网络级别身份验证 (NLA) 与客户端计算机建立远程桌面连接。 NLA 最初需要较少的远程计算机资源，因为它会在建立远程桌面连接之前完成用户身份验证。 使用 NLA 是一种更安全的配置。 因为 NLA 有助于保护计算机不受恶意用户或软件的攻击，并且可减小拒绝服务攻击带来的风险。  
+将此选项设置为“是”，可使用网络级别身份验证 (NLA) 与客户端计算机建立远程桌面连接。 NLA 最初需要较少的远程计算机资源，因为它会在建立远程桌面连接之前完成用户身份验证。 使用 NLA 是一种更安全的配置。 因为 NLA 有助于保护计算机不受恶意用户或软件的攻击，并且可减小拒绝服务攻击带来的风险。  
 
 
 
 ## <a name="software-center"></a>软件中心
 
 ### <a name="select-these-new-settings-to-specify-company-information"></a>选择这些新设置来指定公司信息
-将此设置为“是”，然后指定以下设置来打造组织的软件中心：
+将此选项设置为“是”，然后指定以下设置来打造组织的软件中心：
 
-- **公司名称** </br>
-输入用户在软件中心看到的组织名称。
-- **软件中心的配色方案** </br>
-选择“选择颜色”，定义软件中心使用的主色调。
-- **选择在软件中心使用的徽标** </br>
-选择“浏览”，选择要在软件中心显示的图像。 徽标必须为 400 x 100 像素的 JPEG、PNG 或 BMP 格式，最大尺寸为 750 KB。 徽标文件名称不能包含空格。  
+- **公司名称**：输入用户在软件中心看到的组织名称。  
+
+- **软件中心的配色方案**：单击“选择颜色”，定义软件中心使用的主色调。  
+
+- **为软件中心选择一个徽标**：单击“浏览”，选择要在软件中心显示的图像。 徽标必须为 400 x 100 像素的 JPEG、PNG 或 BMP 格式，最大尺寸为 750 KB。 徽标文件名称不能包含空格。  
          
 ### <a name="bkmk_HideUnapproved"></a>在软件中心隐藏未批准的应用程序
-从 Configuration Manager 版本 1802 起，启用此选项后，软件中心会隐藏需批准的用户可用的应用程序。   <!--1355146-->
+从 Configuration Manager 版本 1802 开始，如果启用此选项，软件中心会隐藏需批准的用户可用的应用程序。   <!--1355146-->
 
 ### <a name="bkmk_HideInstalled"></a>在软件中心隐藏安装的应用程序
-从 Configuration Manager 版本 1802 起，启用此选项后，已安装的应用程序将不再显示在“应用程序”选项卡中。 安装或升级到 Configuration Manager 1802 时，此选项被设置为默认选项。  仍可在安装状态选项卡下查看安装的应用程序。<!--1357592-->   
-  
+从 Configuration Manager 版本 1802 开始，如果启用此选项，已安装的应用程序将不再显示在“应用程序”选项卡中。安装或升级到 Configuration Manager 1802 时，此选项会设置为默认选项。 仍可在安装状态选项卡下查看安装的应用程序。<!--1357592-->   
+ 
+### <a name="bkmk_HideAppCat"></a>隐藏软件中心中的应用程序目录链接
+从 Configuration Manager 版本 1806 开始，可在软件中心中指定应用程序目录网站链接的可见性。 设置此选项后，用户将不会在软件中心的安装状态节点中看到应用程序目录网站链接。 <!--1358214-->
+
+
 ### <a name="software-center-tab-visibility"></a>软件中心选项卡的可见性
 将此组中的其他设置配置为“是”，以在软件中心显示以下选项卡：
 - **应用程序**
@@ -635,18 +635,24 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 - **安装状态**
 - **设备符合性**
 - **选项**
+- **为软件中心指定自定义选项卡**（从版本 1806 开始）<!--1358132-->
+    - **选项卡名称**
+    - **内容 URL**
 
-例如，如果你的组织不使用符合性策略，并且你希望在软件中心隐藏“设备合规性”选项卡，请将“启用‘设备合规性’选项卡”设置为“否”。
+>[!NOTE]
+> 如果在软件中心将其用作自定义选项卡，某些网站功能可能无法工作。 将结果部署到客户端之前，请确保测试结果。 <!--519659-->
+
+例如，如果你的组织不使用符合性策略，并且你希望在软件中心隐藏“设备符合性”选项卡，请将“启用‘设备符合性’选项卡”设置为“否”。
 
 
 
 ## <a name="software-deployment"></a>软件部署  
 
 ### <a name="schedule-re-evaluation-for-deployments"></a>计划部署的重新评估
-配置 Configuration Manager 为所有部署重新评估要求规则的时间计划。 默认值为每七天一次。  
+配置 Configuration Manager 为所有部署重新评估要求规则的计划。 默认值为每七天一次。  
 
 > [!IMPORTANT]  
->  我们建议不要将此值更改为低于默认值的值。 更加主动的重新评估计划会对网络和客户端计算机的性能产生负面影响。  
+>  请勿将此值更改为低于默认值的值。 更加主动的重新评估计划会对网络和客户端计算机的性能产生负面影响。  
 
 按以下步骤从客户端启动此操作：从“Configuration Manager”控制面板的“操作”选项卡中，选择“应用程序部署评估周期”。  
 
@@ -708,7 +714,7 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
     -   **文件的总大小超过(KB)时停止文件收集**：指定文件大小 (KB)，此后客户端会停止收集指定的文件。  
 
     > [!NOTE]  
-    >  站点服务器收集五个最近更改的收集文件版本，并将它们存储在 &lt;ConfigMgr installation directory\>\Inboxes\Sinv.box\Filecol 目录中。 如果自上次软件清单周期以来文件未发生更改，则不会再收集该文件。  
+    >  站点服务器收集五个最近更改的收集文件版本，并将它们存储在 `<ConfigMgr installation directory>\Inboxes\Sinv.box\Filecol` 目录中。 如果自上次软件清单周期以来文件未发生更改，则不会再收集该文件。  
     >   
     >  软件清单不收集超过 20 MB 的文件。  
     >   
@@ -717,7 +723,7 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
     > [!IMPORTANT]
     >  如果将软件清单配置为收集许多大型文件，此配置可能会对网络和站点服务器的性能产生负面影响。  
 
-    有关如何查看收集的文件的信息，请参阅[如何使用资源浏览器查看软件清单](../../../core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory.md)。  
+    有关如何查看收集的文件的信息，请参阅[如何使用资源浏览器查看软件清单](/sccm/core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory)。  
 
     选择“确定”以关闭“收集的文件属性”对话框。 添加想要收集的所有文件，然后选择“确定”以关闭“配置客户端设置”对话框。  
 
@@ -754,7 +760,7 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
 ### <a name="software-update-scan-schedule"></a>软件更新扫描计划
 
-选择“计划”，指定客户端启动符合性评估扫描的频率。 此扫描确定客户端上的软件更新的状态（例如必需或者已安装）。 有关符合性评估的详细信息，请参阅[软件更新符合性评估](../../../sum/understand/software-updates-introduction.md#BKMK_SUMCompliance)。  
+选择“计划”，指定客户端启动符合性评估扫描的频率。 此扫描确定客户端上的软件更新的状态（例如必需或者已安装）。 有关符合性评估的详细信息，请参阅[软件更新符合性评估](/sccm/sum/understand/software-updates-introduction#BKMK_SUMCompliance)。  
 
 默认情况下，此扫描使用简单的计划，每七天启动一次。 可以创建自定义计划。 可以指定确切的开始日期和时间，是使用通用协调时间 (UTC) 还是使用本地时间，并为一周中的特定日配置重复间隔。  
 
@@ -775,17 +781,18 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
 ### <a name="when-any-software-update-deployment-deadline-is-reached-install-all-other-software-update-deployments-with-deadline-coming-within-a-specified-period-of-time"></a>在达到任何软件更新部署截止时间时，安装所有截止时间在指定时间段内的其他软件更新部署
 
-将此设置为“是”，可安装截止时间在指定时间段内的所需部署中的所有软件更新。 在所需软件更新部署达到截止时间时，客户端会开始安装部署中的软件更新。 此设置确定是否要安装截止时间在指定时间段内的其他所需部署中的软件更新。  
+将此选项设置为“是”，可安装截止时间在指定时间段内的所需部署中的所有软件更新。 在所需软件更新部署达到截止时间时，客户端会开始安装部署中的软件更新。 此设置确定是否要安装截止时间在指定时间段内的其他所需部署中的软件更新。  
 
 使用此设置可加快所需软件更新的安装速度。 此设置还有可能增加客户端安全性、减少对用户的通知并减少客户端重启次数。 默认情况下，此设置设为“否” 。  
 
 ### <a name="period-of-time-for-which-all-pending-deployments-with-deadline-in-this-time-will-also-be-installed"></a>在此时间段内截止的所有挂起的部署在一定时间内也将进行安装。
 
-使用此设置可指定前一个设置的时间段。 可以输入介于 1 到 23 个小时和介于 1 到 365 天的值。 默认情况下，此设置将配置为 7 天。  
+使用此设置可指定前一个设置的时间段。 可以输入介于 1 到 23 个小时和介于 1 到 365 天的值。 默认情况下，此设置配置为七天。  
 
 ### <a name="enable-installation-of-express-installation-files-on-clients"></a>在客户端上启用快速安装文件的安装
 
-通过将此设置为“是”，客户端可以使用快速安装文件。 有关详细信息，请参阅[管理 Windows 10 更新的快速安装文件](/sccm/sum/deploy-use/manage-express-installation-files-for-windows-10-updates)。
+通过将此选项设置为“是”，客户端可以使用快速安装文件。 有关详细信息，请参阅[管理 Windows 10 更新的快速安装文件](/sccm/sum/deploy-use/manage-express-installation-files-for-windows-10-updates)。 
+
 
 ### <a name="port-used-to-download-content-for-express-installation-files"></a>用于为快速安装文件下载内容的端口
 
@@ -793,11 +800,14 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
 ### <a name="enable-management-of-the-office-365-client-agent"></a>启用 Office 365 客户端代理的管理
 
-当此设置为“是”时，它将启用 Office 365 安装设置配置。 还可以从 Office 内容传送网络 (CDN) 下载文件，以及将文件部署为 Configuration Manager 中的应用程序。 有关详细信息，请参阅[管理 Office 365 专业增强版](/sccm/sum/deploy-use/manage-office-365-proplus-updates)。
+当此选项设置为“是”时，它将启用 Office 365 安装设置配置。 还可以从 Office 内容分发网络 (CDN) 下载文件，以及将文件部署为 Configuration Manager 中的应用程序。 有关详细信息，请参阅[管理 Office 365 专业增强版](/sccm/sum/deploy-use/manage-office-365-proplus-updates)。
 
 ### <a name="enable-third-party-software-updates"></a>启用第三方软件更新 
 
 如果将此选项设置为“是”，它将设置“允许 Intranet Microsoft 更新服务位置的签名更新”策略，并将签名证书安装到客户端上受信任的发布者库。 此客户端设置已添加到 Configuration Manager 1802 版中。
+
+
+
 ## <a name="state-messaging"></a>状态消息
 
 ### <a name="state-message-reporting-cycle-minutes"></a>状况消息报告周期（分钟）
@@ -808,10 +818,10 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 ##  <a name="user-and-device-affinity"></a>用户和设备相关性  
 
 ### <a name="user-device-affinity-usage-threshold-minutes"></a>用户设备相关性使用情况阈值(分钟)
-指定在 Configuration Manager 创建用户设备相关性映射之前的分钟数。  默认情况下，此值为 2880 分钟（2 天）。
+指定在 Configuration Manager 创建用户设备相关性映射之前的分钟数。 默认情况下，此值为 2880 分钟（两天）。
 
 ### <a name="user-device-affinity-usage-threshold-days"></a>用户设备相关性使用情况阈值(天)
-指定客户端测量基于使用情况的设备相关性阈值的天数。  默认情况下，此值为 30 天。
+指定客户端测量基于使用情况的设备相关性阈值的天数。 默认情况下，此值为 30 天。
 
 > [!NOTE]  
 >  例如，将“用户设备相关性使用情况阈值(分钟)”指定为 60 分钟，将“用户设备相关性使用情况阈值(天)”指定为 5 天。 然后用户在 5 天内使用该设备必须达到 60 分钟，以创建该设备的自动相关性。  

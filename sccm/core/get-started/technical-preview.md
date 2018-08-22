@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ec9c4cdf54e6ffc55cc2983152f56492e5b1b354
-ms.sourcegitcommit: af4f8bd8dffe6fb05f51322ea9e94d335a2cc0c0
+ms.openlocfilehash: b60ebcf0ce94dfdc25466b31c9a64d0d556e1ac6
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 07/31/2018
-ms.locfileid: "39360709"
+ms.locfileid: "39385382"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Configuration Manager 的技术预览版
 
@@ -34,9 +34,9 @@ ms.locfileid: "39360709"
 ##  <a name="bkmk_reqs"></a>要求和限制  
 
 > [!IMPORTANT]     
->  Technical Preview 仅授权用于实验室环境。 Microsoft 可能无法提供支持服务，预览软件中某些功能可能不可用。 此外，相对于面向市场提供的软件，预览版软件可能采用简化的或不同的安全性、隐私性、可访问性、可用性和可靠性标准。  
+>  技术预览版仅授权用于实验室环境。 Microsoft 可能无法提供支持服务，预览软件中某些功能可能不可用。 此外，相对于面向市场提供的软件，预览版软件可能采用简化的或不同的安全性、隐私性、可访问性、可用性和可靠性标准。  
 
- 有关大多数产品的先决条件，请使用[支持的配置](/sccm/core/plan-design/configs/supported-configurations)中的信息。 以下是适用于技术预览分支的例外情况：  
+有关大多数产品的先决条件，请使用[支持的配置](/sccm/core/plan-design/configs/supported-configurations)中的信息。 以下是适用于技术预览分支的例外情况：  
 
 -   每次安装在活动状态 90 天后变为非活动状态。  
 
@@ -99,7 +99,7 @@ Microsoft 将支持每个技术预览版，直到三个连续的版本可用为�
 > 
 > 技术预览分支和当前分支版本在一年中有几次使用相同的版本号。 例如，有一个技术预览版 1802 和一个当前分支版本 1802。 
 
-   
+
 ### <a name="active-baseline-versions"></a>活动基线版本
    
 在基线版本发布后的 1 年内安装此基线版本。 在安装新的技术预览版站点时，如果当前有多个可用的基线版本，则使用最新的基线版本。
@@ -134,6 +134,7 @@ Microsoft 将支持每个技术预览版，直到三个连续的版本可用为�
 - [对脚本输出的改进](capabilities-in-technical-preview-1807.md#bkmk_script) <!--1236459-->
 - [对第三方软件更新的改进](capabilities-in-technical-preview-1807.md#bkmk_3pupdate) <!--1358714-->
 
+
 > [!Note]  
 > 某个旧版技术预览中可用的功能在其后的版本中仍然可用。 同样，已添加到 Configuration Manager 当前分支的功能在技术预览分支中仍然可用。   
 
@@ -150,61 +151,61 @@ Then remove the bottom of this list and/or move individual items not in CB to th
 
  |功能 |技术预览版 |当前分支版|  
  |----------------|---------------------|--------------------|
- | 分阶段部署改进 <!--1358577,1358147,1358578--> | [技术预览版 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_pod)  | ![未添加](media/Red_X.gif) |  
- | 支持新的 Windows 应用包格式 <!--1357427--> | [技术预览版 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_msix)  | ![未添加](media/Red_X.gif) |  
- | 客户端推送安全性改进 <!--1358204--> | [技术预览版 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_client-push)  | ![未添加](media/Red_X.gif) |  
- | 针对主动维护的管理见解 <!--1352184,et al--> | [技术预览版 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_insights)  | ![未添加](media/Red_X.gif) |  
- | 转移共同管理的设备的移动应用工作负载 <!--1357892--> | [技术预览版 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_comgmt)  | ![未添加](media/Red_X.gif) |  
- | 对等下载适用的边界组选项 <!--1356193--> | [技术预览版 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_bgoptions)  | ![未添加](media/Red_X.gif) |  
- | 自定义目录的第三方软件更新支持 <!--1358714--> | [技术预览版 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_3pupdate)  | ![未添加](media/Red_X.gif) |  
- | 云管理功能改进 <!--511980,515854--> | [技术预览版 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_cloud)  | ![未添加](media/Red_X.gif) |  
- | 新的软件更新符合性报告 <!--1357775--> | [技术预览版 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_report)  | ![未添加](media/Red_X.gif) |  
- | 第三方软件更新<!--1352101--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#bkmk-3pupdate)  | ![未添加](media/Red_X.gif) |  
- | 为 Microsoft Edge 配置 Windows Defender SmartScreen 设置<!--1353701--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#configure-windows-defender-smartscreen-settings-for-microsoft-edge)  | ![未添加](media/Red_X.gif) |  
- | 通过 Microsoft Intune 为共同管理的设备同步 MDM 策略<!--1357377--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#sync-mdm-policy-from-microsoft-intune-for-a-co-managed-device)  | ![未添加](media/Red_X.gif) |  
- | 使用共同管理将 Office 365 工作负荷转移到 Intune<!--1357841--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#transition-office-365-workload-to-intune-using-co-management)  | ![未添加](media/Red_X.gif) |  
- | 包转换管理器<!--1357861--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#package-conversion-manager)  | ![未添加](media/Red_X.gif) |  
- | 部署无内容的软件更新<!--1357933--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#deploy-software-updates-without-content)  | ![未添加](media/Red_X.gif) |  
- | Office 自定义工具与 Office 365 安装程序集成<!--1358149--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#office-customization-tool-integration-with-the-office-365-installer)  | ![未添加](media/Red_X.gif) |  
- | 云管理网关的改进<!--1358215,1358651,503899--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#improvements-to-cloud-management-gateway)   | ![未添加](media/Red_X.gif) |  
- | 安全客户端通信的改进<!--1358278,1358279--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#improvements-to-secure-client-communications)  | ![未添加](media/Red_X.gif) |  
- | 软件中心基础结构的改进<!--1358309--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#software-center-infrastructure-improvements)  | ![未添加](media/Red_X.gif) |  
- | 为设备上的所有用户预配 Windows 应用包<!--1358310--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#provision-windows-app-packages-for-all-users-on-a-device)  | ![未添加](media/Red_X.gif) |  
- | Surface 仪表板的改进<!--1358654--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#improvements-to-the-surface-dashboard)  | ![未添加](media/Red_X.gif) |  
- | 硬件清单默认单位修订<!--514442--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#hardware-inventory-default-unit-revision)  | ![未添加](media/Red_X.gif) |  
- | 使用手动配置的任务序列阶段创建分阶段部署 <!--1358148--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#create-a-phased-deployment-with-manually-configured-phases-for-a-task-sequence)  | ![未添加](media/Red_X.gif) |  
- | 对 Azure 资源管理器的云分发点支持 <!--1322209--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#cloud-distribution-point-support-for-azure-resource-manager)  | ![未添加](media/Red_X.gif) |  
- | 根据管理见解执行操作 <!--1357930--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#take-actions-based-on-management-insights)  | ![未添加](media/Red_X.gif) |  
- | 使用共同管理将设备配置工作负荷转移到 Intune <!--1357903--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#transition-device-configuration-workload-to-intune-using-co-management)  | ![未添加](media/Red_X.gif) |  
- | 启用分发点以使用网络拥塞控制 <!--1358112--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#enable-distribution-points-to-use-network-congestion-control)  | ![未添加](media/Red_X.gif) |  
- | 云管理仪表板 <!--1358461--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#cloud-management-dashboard)  | ![未添加](media/Red_X.gif) |  
- | CMPivot <!--1358456--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#cmpivot)  | ![未添加](media/Red_X.gif) |  
- | 已改进安全客户端通信 <!--1356889,1358228,1358460--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improved-secure-client-communications)  | ![未添加](media/Red_X.gif) |  
- | 启用第三方软件更新支持的改进 <!--1357605--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvements-for-enabling-third-party-software-update-support)  | ![未添加](media/Red_X.gif) |  
- | 对 Windows 10 就地升级任务序列的改进 <!--1358500--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvements-to-windows-10-in-place-upgrade-task-sequence)  | ![未添加](media/Red_X.gif) |  
- | 与客户端一起安装的 CMTrace <!--1357971--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#cmtrace-installed-with-client)  | ![未添加](media/Red_X.gif) |  
- | 对 Configuration Manager 控制台的改进 <!--1358202--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvement-to-the-configuration-manager-console)  | ![未添加](media/Red_X.gif) |  
- | 对控制台反馈的改进 <!--1357542--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvements-to-console-feedback)  | ![未添加](media/Red_X.gif) |  
- | 对已启用 PXE 的分发点的改进 <!--1357580--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvements-to-pxe-enabled-distribution-points)  | ![未添加](media/Red_X.gif) |  
- | 对大整数值硬件清单的改进 <!--1357880--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvement-to-hardware-inventory-for-large-integer-values)  | ![未添加](media/Red_X.gif) |  
- | WSUS 维护改进 <!--1357898--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvement-to-wsus-maintenance)  | ![未添加](media/Red_X.gif) |  
- | 对 CNG 证书支持的改进 <!--1357314--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvement-to-support-for-cng-certificates)  | ![未添加](media/Red_X.gif) |  
- | 配置用于站点服务器的远程内容库 <!--1357525--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#configure-a-remote-content-library-for-the-site-server)  | ![未添加](media/Red_X.gif) | 
- | 从 Configuration Manager 控制台提交反馈 <!--1357542--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#bkmk_feedback)  | ![未添加](media/Red_X.gif) | 
+ | 分阶段部署改进 <!--1358577,1358147,1358578--> | [技术预览版 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_pod)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | 支持新的 Windows 应用包格式 <!--1357427--> | [技术预览版 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_msix)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | 客户端推送安全性改进 <!--1358204--> | [技术预览版 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_client-push)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | 针对主动维护的管理见解 <!--1352184,et al--> | [技术预览版 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_insights)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | 转移共同管理的设备的移动应用工作负载 <!--1357892--> | [技术预览版 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_comgmt)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | 对等下载适用的边界组选项 <!--1356193--> | [技术预览版 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_bgoptions)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | 自定义目录的第三方软件更新支持 <!--1358714--> | [技术预览版 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_3pupdate)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | 云管理功能改进 <!--511980,515854--> | [技术预览版 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_cloud)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | 新的软件更新符合性报告 <!--1357775--> | [技术预览版 1806.2](capabilities-in-technical-preview-1806-2.md#bkmk_report)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | 第三方软件更新<!--1352101--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#bkmk-3pupdate)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | 为 Microsoft Edge 配置 Windows Defender SmartScreen 设置<!--1353701--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#configure-windows-defender-smartscreen-settings-for-microsoft-edge)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | 通过 Microsoft Intune 为共同管理的设备同步 MDM 策略<!--1357377--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#sync-mdm-policy-from-microsoft-intune-for-a-co-managed-device)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | 使用共同管理将 Office 365 工作负荷转移到 Intune<!--1357841--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#transition-office-365-workload-to-intune-using-co-management)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | 包转换管理器<!--1357861--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#package-conversion-manager)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | 部署无内容的软件更新<!--1357933--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#deploy-software-updates-without-content)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | Office 自定义工具与 Office 365 安装程序集成<!--1358149--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#office-customization-tool-integration-with-the-office-365-installer)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | 云管理网关的改进<!--1358215,1358651,503899--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#improvements-to-cloud-management-gateway)   | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | 安全客户端通信的改进<!--1358278,1358279--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#improvements-to-secure-client-communications)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | 软件中心基础结构的改进<!--1358309--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#software-center-infrastructure-improvements)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | 为设备上的所有用户预配 Windows 应用包<!--1358310--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#provision-windows-app-packages-for-all-users-on-a-device)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | Surface 仪表板的改进<!--1358654--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#improvements-to-the-surface-dashboard)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | 硬件清单默认单位修订<!--514442--> | [Tech Preview 1806](capabilities-in-technical-preview-1806.md#hardware-inventory-default-unit-revision)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | 使用手动配置的任务序列阶段创建分阶段部署 <!--1358148--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#create-a-phased-deployment-with-manually-configured-phases-for-a-task-sequence)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | 对 Azure 资源管理器的云分发点支持 <!--1322209--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#cloud-distribution-point-support-for-azure-resource-manager)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | 根据管理见解执行操作 <!--1357930--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#take-actions-based-on-management-insights)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | 使用共同管理将设备配置工作负荷转移到 Intune <!--1357903--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#transition-device-configuration-workload-to-intune-using-co-management)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | 启用分发点以使用网络拥塞控制 <!--1358112--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#enable-distribution-points-to-use-network-congestion-control)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | 云管理仪表板 <!--1358461--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#cloud-management-dashboard)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | CMPivot <!--1358456--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#cmpivot)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | 已改进安全客户端通信 <!--1356889,1358228,1358460--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improved-secure-client-communications)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | 启用第三方软件更新支持的改进 <!--1357605--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvements-for-enabling-third-party-software-update-support)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | 对 Windows 10 就地升级任务序列的改进 <!--1358500--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvements-to-windows-10-in-place-upgrade-task-sequence)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | 与客户端一起安装的 CMTrace <!--1357971--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#cmtrace-installed-with-client)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | 对 Configuration Manager 控制台的改进 <!--1358202--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvement-to-the-configuration-manager-console)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | 对控制台反馈的改进 <!--1357542--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvements-to-console-feedback)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | 对已启用 PXE 的分发点的改进 <!--1357580--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvements-to-pxe-enabled-distribution-points)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | 对大整数值硬件清单的改进 <!--1357880--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvement-to-hardware-inventory-for-large-integer-values)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | WSUS 维护改进 <!--1357898--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvement-to-wsus-maintenance)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | 对 CNG 证书支持的改进 <!--1357314--> | [Tech Preview 1805](capabilities-in-technical-preview-1805.md#improvement-to-support-for-cng-certificates)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) |  
+ | 配置用于站点服务器的远程内容库 <!--1357525--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#configure-a-remote-content-library-for-the-site-server)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) | 
+ | 从 Configuration Manager 控制台提交反馈 <!--1357542--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#bkmk_feedback)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) | 
  | 支持中心 <!--1357489--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#support-center)  | ![未添加](media/Red_X.gif) | 
- | Configuration Manager 工具包 <!--1357145--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#configuration-manager-toolkit)  | ![未添加](media/Red_X.gif) | 
- | 在批准撤消时卸载应用程序 <!--1357891--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#uninstall-application-on-approval-revocation)  | ![未添加](media/Red_X.gif) | 
- | 从发现中排除 Active Directory 容器 <!--1358143--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#exclude-active-directory-containers-from-discovery)  | ![未添加](media/Red_X.gif) | 
- | 指定应用程序目录网站链接在软件中心的可见性 <!--1358214--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#specify-the-visibility-of-the-application-catalog-website-link-in-software-center)  | ![未添加](media/Red_X.gif) | 
- | 按软件更新体系结构筛选自动部署规则 <!--1322266--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#filter-automatic-deployment-rules-by-software-update-architecture)  | ![未添加](media/Red_X.gif) | 
- | 对操作系统部署的改进 <!--1358330,1358493--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#improvements-to-os-deployment) | ![未添加](media/Red_X.gif) | 
- | 请求分发点支持将云分发点作为源 <!--1321554--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#pull-distribution-points-support-cloud-distribution-points-as-source)  | ![未添加](media/Red_X.gif) | 
- | 客户端对等缓存中的部分下载支持可降低 WAN 利用率 <!--1357346--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#partial-download-support-in-client-peer-cache-to-reduce-wan-utilization)  | ![未添加](media/Red_X.gif) | 
- | 软件中心的维护时段 <!--1358131--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#maintenance-windows-in-software-center)  | ![未添加](media/Red_X.gif) | 
- | 软件中心用于网页的自定义选项卡 <!--1358132--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#custom-tab-for-webpage-in-software-center)  | ![未添加](media/Red_X.gif) | 
- | 对客户端启用第三方软件更新支持 <!--1357605--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#enable-third-party-software-update-support-on-clients)  | ![未添加](media/Red_X.gif) | 
- | 支持从监视视图中复制/粘贴资产详细信息 <!--1357552--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#enable-copypaste-of-asset-details-from-monitoring-views)  | ![未添加](media/Red_X.gif) | 
- | SCAP 扩展 <!--1357552--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#scap-extensions)  | ![未添加](media/Red_X.gif) | 
+ | Configuration Manager 工具包 <!--1357145--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#configuration-manager-toolkit)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) | 
+ | 在批准撤消时卸载应用程序 <!--1357891--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#uninstall-application-on-approval-revocation)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) | 
+ | 从发现中排除 Active Directory 容器 <!--1358143--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#exclude-active-directory-containers-from-discovery)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) | 
+ | 指定应用程序目录网站链接在软件中心的可见性 <!--1358214--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#specify-the-visibility-of-the-application-catalog-website-link-in-software-center)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) | 
+ | 按软件更新体系结构筛选自动部署规则 <!--1322266--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#filter-automatic-deployment-rules-by-software-update-architecture)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) | 
+ | 对操作系统部署的改进 <!--1358330,1358493--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#improvements-to-os-deployment) | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) | 
+ | 请求分发点支持将云分发点作为源 <!--1321554--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#pull-distribution-points-support-cloud-distribution-points-as-source)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) | 
+ | 客户端对等缓存中的部分下载支持可降低 WAN 利用率 <!--1357346--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#partial-download-support-in-client-peer-cache-to-reduce-wan-utilization)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) | 
+ | 软件中心的维护时段 <!--1358131--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#maintenance-windows-in-software-center)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) | 
+ | 软件中心用于网页的自定义选项卡 <!--1358132--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#custom-tab-for-webpage-in-software-center)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) | 
+ | 对客户端启用第三方软件更新支持 <!--1357605--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#enable-third-party-software-update-support-on-clients)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) | 
+ | 支持从监视视图中复制/粘贴资产详细信息 <!--1357552--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#enable-copypaste-of-asset-details-from-monitoring-views)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) | 
+ | SCAP 扩展 <!--1357552--> | [Tech Preview 1803](capabilities-in-technical-preview-1803.md#scap-extensions)  | [版本 1806](/sccm/core/plan-design/changes/whats-new-in-version-1806) | 
  
   
 
@@ -218,23 +219,28 @@ Copy from the bottom of the list above any individual feature that is still in T
 With each CB release, review and remove from this list for anything that's now available in CB. 
 -->
 
- |功能 |技术预览版 |  
- |----------------|---------------------|
- | 对已启用 PXE 的分发点的改进 <!-- 1357580 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#improvements-to-pxe-enabled-distribution-points) | 
- | 产品生命周期仪表板 <!--1319632 --> | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#product-lifecycle-dashboard) | 
- | 基于客户端的 PXE 响应者服务 <!-- 1357148 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#client-based-pxe-responder-service) |
- |站点服务器角色的高可用性 <!-- 1128774 --> |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#site-server-role-high-availability) |
- |PXE 网络启动对 IPv6 的支持 <!-- 1269793 --> |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#pxe-network-boot-support-for-ipv6)|
- |使用 Azure Active Directory<!-- 1322145? --> | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#azurediscovery) |
- |Windows Update for Business 更新的符合性评估 <!-- 1235390 --> | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#compliance-assessment-for-windows-update-for-business-updates) |
- |OData 终结点数据访问 <!-- 1321523 --> |[Tech Preview 1612](capabilities-in-technical-preview-1612.md#odata-endpoint-data-access)|
- |对资产智能的改进<!-- 1307390 --> |[Tech Preview 1608](capabilities-in-technical-preview-1608.md#improvements-to-asset-intelligence)|
- |最终用户可从公司门户安装应用 <!-- 1037233? --> |[Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_End)|
+|功能 |Technical Preview 版本 |  
+|----------------|---------------------|
+| 基于客户端的 PXE 响应者服务 <!-- 1357148 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#client-based-pxe-responder-service) |
+|PXE 网络启动对 IPv6 的支持 <!-- 1269793 --> |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#pxe-network-boot-support-for-ipv6)|
+|使用 Azure Active Directory<!-- 1322145? --> | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#azurediscovery) |
+|Windows Update for Business 更新的符合性评估 <!-- 1235390 --> | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#compliance-assessment-for-windows-update-for-business-updates) |
+|OData 终结点数据访问 <!-- 1321523 --> |[Tech Preview 1612](capabilities-in-technical-preview-1612.md#odata-endpoint-data-access)|
+|对资产智能的改进<!-- 1307390 --> |[Tech Preview 1608](capabilities-in-technical-preview-1608.md#improvements-to-asset-intelligence)|
+|最终用户可从公司门户安装应用 <!-- 1037233? --> |[Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_End)|
+
+<!--Removed for 1806 CB:
+ |Site server role high availability <!-- 1128774  |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#site-server-role-high-availability) |
+ | Product lifecycle dashboard <!--1319632  | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#product-lifecycle-dashboard) | 
+ | Improvements to PXE-enabled distribution points <!-- 1357580  | [Tech Preview 1802](capabilities-in-technical-preview-1802.md#improvements-to-pxe-enabled-distribution-points) | 
+-->
 
 
 
-## <a name="see-also"></a>另请参阅
-  
+## <a name="see-also"></a>另请参阅  
+
+有关详细信息，请参阅下列文章：  
+
 - [在实验室中评估 Configuration Manager](/sccm/core/get-started/evaluate-with-lab-environment)
 - [Configuration Manager 增量版本中的新增功能](/sccm/core/plan-design/changes/whats-new-incremental-versions)  
 - [Configuration Manager 简介](/sccm/core/understand/introduction)

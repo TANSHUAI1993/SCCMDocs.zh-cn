@@ -2,7 +2,7 @@
 title: 内容管理基础
 titleSuffix: Configuration Manager
 description: 在 Configuration Manager 中使用工具和选项管理部署内容。
-ms.date: 06/15/2018
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,18 +10,18 @@ ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4419a563a65ab9d98a76dcf58b48ae00e0763dab
-ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
+ms.openlocfilehash: a8f4d93c7bfa73b04ed2c760db17b27e8f1f6de2
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36260728"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39385247"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Configuration Manager 中内容管理的基本概念
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-Configuration Manager 支持工具和选项的一个可靠系统，用于管理部署为应用程序、包、软件更新和 OS 部署的内容。 Configuration Manager 将内容存储在站点服务器和分发点上。 在不同位置间传输此内容时需要大量网络带宽。 为有效地规划和使用内容管理基础结构，建议了解可用选项和配置。 然后考虑如何使用它们以最好地适应网络环境和内容部署需求。  
+Configuration Manager 支持可靠的工具和选项系统来管理软件内容。 软件部署（如应用程序、包、软件更新和 OS 部署）都需要内容。 Configuration Manager 将内容存储在站点服务器和分发点上。 在不同位置间传输此内容时需要大量网络带宽。 为有效地规划和使用内容管理基础结构，首先了解可用选项和配置。 然后考虑如何使用它们以最好地适应网络环境和内容部署需求。  
 
 > [!TIP]    
 > 要详细了解内容分发进程以及帮助诊断和解决常规内容分发问题，请参阅[了解和解决 Microsoft Configuration Manager 中的内容分发问题](https://support.microsoft.com/help/4000401/content-distribution-in-mcm)。
@@ -41,7 +41,7 @@ Configuration Manager 支持工具和选项的一个可靠系统，用于管理�
 
 -   **多播连接帐户**：用于 OS 部署。  
 
-有关这些帐户的详细信息，请参阅[管理帐户以访问内容](../../../core/plan-design/hierarchy/manage-accounts-to-access-content.md)。
+有关这些帐户的详细信息，请参阅[管理帐户以访问内容](/sccm/core/plan-design/hierarchy/manage-accounts-to-access-content)。
 
 
 
@@ -59,11 +59,11 @@ Configuration Manager 支持工具和选项的一个可靠系统，用于管理�
 
  如果使用 BDR，Configuration Manager 将标识对以前已分发的每个内容集的源文件所做的更改。  
 
--   当源内容中的文件发生更改时，站点会创建内容集的新增量版本。 然后，它仅将更改的文件复制到目标站点和分发点。 如果重命名、移动了该文件，或更改了其内容，则将该文件视为已更改。 例如，替换了以前分发到若干站点的驱动程序包的一个驱动程序文件，则只会复制更改的驱动程序文件。  
+-   当源内容中的文件发生更改时，站点会创建内容的新增量版本。 然后，它仅将更改的文件复制到目标站点和分发点。 如果重命名、移动了该文件，或更改了其内容，则将该文件视为已更改。 例如，替换了以前分发到若干站点的驱动程序包的一个驱动程序文件，则只会复制更改的驱动程序文件。  
 
 -   在重新发送整个内容集之前，Configuration Manager 最多支持五个内容集增量版本。 第五次更新后，对内容集的下一次更改会使该站点创建新版本的内容集。 Configuration Manager 分发新版本的内容集以替换上一个内容集和其任何增量版本。 分发新的内容集后，对源文件进行的后续增量更改会再次通过 BDR 进行复制。  
 
-支持在层次结构中的每个父站点和子站点之间进行 BDR。 在站点内，支持在站点服务器及其常规分发点之间进行 BDR。 但是，拉取分发点和基于云的分发点不支持通过 BDR 来传输内容。 拉取分发点支持文件级增量，传输新的文件，但不是文件内的块。
+支持在层次结构中的每个父站点和子站点之间进行 BDR。 在站点内，支持在站点服务器及其常规分发点之间进行 BDR。 但是，拉取分发点和云分发点不支持通过 BDR 来传输内容。 拉取分发点支持文件级增量，传输新的文件，但不是文件内的块。
 
 应用程序始终使用二进制差异复制。 BDR 对于包是可选的，默认情况下未启用。 要对包使用 BDR，请为每个包启用此功能。 创建或编辑包时，选择“启用二进制差异复制”选项。   
 
@@ -89,10 +89,21 @@ Configuration Manager 支持工具和选项的一个可靠系统，用于管理�
 
 
 
+## <a name="windows-ledbat"></a>Windows LEDBAT
+<!--1358112--> Windows 低额外延迟后台传输 (LEDBAT) 是 Windows Server 的一项网络拥挤控制功能，可帮助管理后台网络传输。 对于在受支持版本的 Windows Server 上运行的分发点，请启用一个选项以帮助调整网络流量。 然后，客户端仅在允许的情况下使用网络带宽。 
+
+有关 Windows LEDBAT 的详细信息，请参阅[新建传输改进](https://blogs.technet.microsoft.com/networking/2016/07/18/announcing-new-transport-advancements-in-the-anniversary-update-for-windows-10-and-windows-server-2016/)博客文章。
+
+有关如何将 Windows LEDBAT 与 Configuration Manager 分发点一起使用的详细信息，在[配置分发点的常规设置时](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-general)，请参阅设置“调整下载速度以使用未使用的网络带宽 (Windows LEDBAT)”。
+
+
+
 ## <a name="peer-cache"></a>对等缓存
 客户端对等缓存可帮助管理对远程客户端内容的部署。 对等缓存是内置 Configuration Manager 解决方案，使客户端能够直接从本地缓存将内容与其他客户端共享。
 
-将启用对等缓存的客户端设置部署到集合后，该集合的成员可以充当同一边界组中其他客户端的对等内容源。
+首先将启用对等缓存的客户端设置部署到集合。 然后，该集合的成员可充当同一边界组中其他客户端的对等内容源。
+
+从版本 1806 开始，客户端对等缓存源可以将内容分成多个部分。 这些部分最大限度地减少了网络传输，从而降低了 WAN 利用率。 管理点提供更详细的内容部分跟踪。 它试图消除每个边界组多次下载相同内容的行为。<!--1357346-->
 
 有关详细信息，请参阅[用于 Configuration Manager 客户端的对等缓存](/sccm/core/plan-design/hierarchy/client-peer-cache)。
 
@@ -101,7 +112,7 @@ Configuration Manager 支持工具和选项的一个可靠系统，用于管理�
 ## <a name="windows-pe-peer-cache"></a>Windows PE 对等缓存
 使用 Configuration Manager 部署新 OS 时，运行任务序列的计算机可以使用 Windows PE 对等缓存。 它们从对等缓存源而不是从分发点下载内容。 此行为有助于最大限度减小没有本地分发点的分支机构方案中的 WAN 流量。
 
-有关详细信息，请参阅 [Windows PE 对等缓存](../../../osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md)。
+有关详细信息，请参阅 [Windows PE 对等缓存](/sccm/osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic)。
 
 
 
@@ -112,26 +123,45 @@ Configuration Manager 支持工具和选项的一个可靠系统，用于管理�
 
     -   分发点可使用 HTTP 或 HTTPS。  
 
-    -   仅当本地分发点不可用时，才使用基于云的分发点进行回退。  
+    -   仅当本地分发点不可用时，才使用云分发点进行回退。  
 
 -   **Internet**：  
 
-    -   要求分发点接受 HTTPS。  
+    -   要求面向 Internet 的分发点接受 HTTPS。  
 
-    -   可使用基于云的分发点进行回退。  
+    -   可使用云分发点。  
 
 -   **工作组**：  
 
     -   要求分发点接受 HTTPS。  
 
-    -   可使用基于云的分发点进行回退。  
+    -   可使用云分发点。  
+
+
+
+## <a name="content-source-priority"></a>内容源优先级
+
+当客户端需要内容时，它会向管理点发出内容位置请求。 管理点返回对所请求内容有效的源位置列表。 此列表因具体方案、使用的技术、站点设计、边界组和部署设置而异。 以下列表包含客户端可使用的所有可能的内容源位置，按其优先级排序：  
+
+1.  与客户端位于同一台计算机上的分发点
+2.  同一网络子网中的对等源
+3.  同一网络子网中的分发点
+4.  同一 Active Directory 站点中的对等源
+5.  同一 Active Directory 站点中的分发点
+6.  同一边界组中的对等源
+7.  当前边界组中的分发点
+8.  为回退配置的临近边界组中的分发点
+9.  默认站点边界组中的分发点 
+10. Windows 更新云服务
+11. 面向 Internet 的分发点
+12. Azure 中的云分发点
 
 
 
 ## <a name="content-library"></a>内容库  
  内容库是 Configuration Manager 中内容的单实例存储。 此库可减少分发内容的总体大小。  
 
-- 深入了解[内容库](../../../core/plan-design/hierarchy/the-content-library.md)。
+- 深入了解[内容库](/sccm/core/plan-design/hierarchy/the-content-library)。
 - 使用[内容库清理工具](/sccm/core/plan-design/hierarchy/content-library-cleanup-tool)删除不再与应用程序关联的内容。  
 
 
@@ -143,26 +173,29 @@ Configuration Manager 支持工具和选项的一个可靠系统，用于管理�
 
 -   **拉取分发点**：分发点的一种变体，该分发点获取其他分发点（源分发点）中的内容。 此过程与客户端从分发点下载内容的方式类似。 在站点服务器必须将内容直接分发给每个分发点时，拉取分发点有助于避免可能出现的网络带宽瓶颈。 [使用拉取分发点](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point)。
 
--   **基于云的分发点**：安装在 Microsoft Azure 中的分发点的变体。 [了解如何使用基于云的分发点](../../../core/plan-design/hierarchy/use-a-cloud-based-distribution-point.md)。  
+-   **云分发点**：安装在 Microsoft Azure 中的分发点的变体。 [了解如何使用云分发点](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point)。  
 
 
 标准分发点支持一系列配置和功能：  
 
 - 可使用“计划”或“带宽限制”等控件辅助控制此传输。  
-- 使用其他选项，包括“预留内容”和“拉取分发点”以最小化和控制网络消耗。 
+
+- 使用其他选项，包括“预留内容”和“拉取分发点”以最小化和控制网络消耗。  
+
 - “BranchCache”、“对等缓存”和“传递优化”是对等技术，用于减少部署内容时使用的网络带宽。  
-- OS 部署有不同的配置，例如 [PXE](../../../osd/get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_PXEDistributionPoint) 和[多播](../../../osd/get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_DPMulticast)
+
+- OS 部署有不同的配置，例如 [PXE](/sccm/osd/get-started/prepare-site-system-roles-for-operating-system-deployments#BKMK_PXEDistributionPoint) 和[多播](/sccm/osd/get-started/prepare-site-system-roles-for-operating-system-deployments#BKMK_DPMulticast)  
+
 - “移动设备”的选项   
   
-  
-基于云的分发点和拉取分发点支持许多此类配置，但具有特定于各分发点变体的限制。  
+云分发点和拉取分发点支持许多此类配置，但具有特定于各分发点变体的限制。  
 
 
 
 ## <a name="distribution-point-groups"></a>分发点组  
  分发点组是指可简化内容分发的分发点的逻辑分组。  
 
- 有关详细信息，请参阅[管理分发点组](../../../core/servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_manage)。
+ 有关详细信息，请参阅[管理分发点组](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_manage)。
 
 
 
@@ -196,17 +229,6 @@ Configuration Manager 支持工具和选项的一个可靠系统，用于管理�
 
 有关详细信息，请参阅[边界组](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups)。
 
-<!--
-**Version 1511, 1602, and 1606**   
-Fallback settings are related to the use of **preferred distribution points** and to content source locations that are used by clients.
-
--   By default, clients only download content from a preferred distribution point (one that is associated with the client's boundary groups).  
-
--   However, when a distribution point is configured with **Allow clients to use this site system as a fallback source location for content**, that distribution point is only offered as a valid content source to any client that can't get a deployment from one of its preferred distribution points.  
-
-For information about the different content location and fallback scenarios, see [Content source location scenarios](../../../core/plan-design/hierarchy/content-source-location-scenarios.md). For information about boundary groups, see [Boundary groups for versions 1511,1602, and 1606](/sccm/core/servers/deploy/configure/boundary-groups-for-1511-1602-and-1606).
--->
-
 
 
 ## <a name="network-bandwidth"></a>网络带宽  
@@ -227,19 +249,6 @@ For information about the different content location and fallback scenarios, see
 
 有关详细信息，请参阅[边界组](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups)。
 
-<!--
-**Version 1511, 1602, and 1606**   
- You can configure the network connection speed of each distribution point in a boundary group:  
-
--   Clients use this value when they connect to the distribution point.
-
--   By default, the network connection speed is configured as **Fast**, but it can also be set as **Slow**.  
-
--   The **network connection speed**, along with the configuration of a deployment, determine if a client can download content from a distribution point when the client is in an associated boundary group  
-
-For information about the different content location and fallback scenarios, see [Content source location scenarios](../../../core/plan-design/hierarchy/content-source-location-scenarios.md). For information about boundary groups, see [Boundary groups for versions 1511,1602, and 1606](/sccm/core/servers/deploy/configure/boundary-groups-for-1511-1602-and-1606).
--->
-
 
 
 ## <a name="on-demand-content-distribution"></a>按需内容分发  
@@ -247,39 +256,18 @@ For information about the different content location and fallback scenarios, see
 
 -   若要为部署启用此设置，请启用：“将此包的内容分发到首选分发点”。  
 
--   为部署启用此选项后，如果客户端尝试请求该内容而该内容在任何客户端首选分发点上都不可用，Configuration Manager 会将该内容自动分发到客户端首选分发点。  
+-   为部署启用此选项后，如果客户端请求该内容而该内容在任何客户端首选分发点上都不可用，Configuration Manager 会将该内容自动分发到客户端首选分发点。  
 
 -   尽管这会触发 Configuration Manager 将内容自动分发到客户端首选分发点，但客户端仍可在首选分发点接收到部署之前从其他分发点获取该内容。 若出现该行为，该内容将在该分发点上显示，供搜寻该部署的下一个客户端使用。  
 
 有关详细信息，请参阅[边界组](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups)。
-
-<!--
-If you use version 1511, 1602, or 1606, see  [Content source location scenarios](../../../core/plan-design/hierarchy/content-source-location-scenarios.md) for information about the different content location and fallback scenarios.
--->
 
 
 
 ## <a name="package-transfer-manager"></a>包传输管理器  
  包传输管理器是一个站点服务器组件，该组件可将内容传输到其他计算机上的分发点。  
 
- 有关详细信息，请参阅[包传输管理器](../../../core/plan-design/hierarchy/package-transfer-manager.md)。  
-
-
-
-<!--
-## Preferred distribution point  
- A preferred distribution point includes any distribution points that are associated with a client's current boundary groups.  
-
- You have the option to associate each distribution point with one or more boundary groups:  
-
--   This association helps the client identify distribution points from which it can download content.  
--   By default, clients can only download content from a preferred distribution point.  
-
-
-For more information:
- - If you use version 1610 or later, see [Boundary groups](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#boundary-groups).
- - If you use version 1511, 1602, or 1606, see [Content source location scenarios](../../../core/plan-design/hierarchy/content-source-location-scenarios.md).
--->
+ 有关详细信息，请参阅[包传输管理器](/sccm/core/plan-design/hierarchy/package-transfer-manager)。  
 
 
 

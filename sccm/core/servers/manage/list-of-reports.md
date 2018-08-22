@@ -2,7 +2,7 @@
 title: 报表列表
 titleSuffix: Configuration Manager
 description: 查看 Configuration Manager 提供的报表列表。 报表分为各种类别。
-ms.date: 03/22/2018
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: b7332ed3-8003-454b-bb12-1fdf8721425c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 705247080fc99a6a9dd7dfcb773b2220283cd7a6
-ms.sourcegitcommit: e3f7bb8cec4b37a311bc86098297534cab947de8
+ms.openlocfilehash: 9f4bbb8ec680248b31b1ddd8c457e62e9be44d4b
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36759026"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39385248"
 ---
 # <a name="list-of-reports-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的报表列表
 
@@ -705,7 +705,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 |**符合性 6 - 特定软件更新状态（辅助）**|显示针对指定软件更新处于每个符合性状态的计算机的计数和百分比。|  
 |**符合性 7 - 针对更新组处于特定符合性状态的计算机（辅助）**|显示集合中针对软件更新组具有指定总体符合性状态的所有计算机。|  
 |**符合性 8 - 针对更新处于特定符合性状态的计算机（辅助）**|显示集合中针对软件更新具有指定符合性状态的所有计算机。|  
-
+|**符合性 9 - 总体运行状况和符合性**|显示软件更新组的总体运行状况和符合性数据。 （从版本 1806 开始）| 
 
 
 ## <a name="software-updates---b-deployment-management"></a>软件更新 - B 部署管理  

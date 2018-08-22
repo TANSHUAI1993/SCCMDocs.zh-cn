@@ -2,7 +2,7 @@
 title: 服务连接点
 titleSuffix: Configuration Manager
 description: 了解此 Configuration Manager 站点系统角色，并了解和规划其使用范围。
-ms.date: 07/05/2018
+ms.date: 08/01/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: bc2282d5-0571-465b-9528-a555855eaacd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6002c077ae0a8e34f35a9d0e36d02f5950946bde
-ms.sourcegitcommit: 73b241a72db8f8f3bd7e269fc81ad49e14f01058
+ms.openlocfilehash: 560fa3480f00811f325eb22dda439facac36e6e4
+ms.sourcegitcommit: 6e0e5b4b7779ce03e2b56b3b5f68f4ace1acedd8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37843281"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39467668"
 ---
 # <a name="about-the-service-connection-point-in-system-center-configuration-manager"></a>关于 System Center Configuration Manager 中的服务连接点
 
@@ -80,6 +80,9 @@ System Center Configuration Manager 服务连接点是一个站点系统角色�
 
 ##  <a name="bkmk_urls"></a> Internet 访问要求  
 若要启用操作，托管服务连接点的计算机以及该计算机与 Internet 之间的任何防火墙必须通过 HTTPS 的传出端口“TCP 443”和 HTTP 的传出端口“TCP 80”与以下 Internet 位置传递通信。 服务连接点也支持使用 Web 代理（具有或不具有身份验证皆可）来使用这些位置。  如果需要配置 Web 代理帐户，请参阅：[System Center Configuration Manager 中的代理服务器支持](/sccm/core/plan-design/network/proxy-server-support)。
+
+> [!TIP]
+> 服务连接点在连接到 http://go.Microsoft.com 或 http://manage.Microsoft.com 时使用 Microsoft Intune 服务。 存在以下已知问题：如果已安装服务连接点角色的 Configuration Manager 站点系统上未安装 Baltimore CyberTrust 根证书、该证书已过期或已损坏，则 Intune 连接器会遇到连接问题。 有关详细信息，请参阅 [Configuration Manager 服务连接点不下载更新](https://support.microsoft.com/help/3187516)。
 
 **更新和维护服务**  
 

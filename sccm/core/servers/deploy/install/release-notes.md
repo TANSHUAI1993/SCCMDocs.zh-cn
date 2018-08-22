@@ -2,7 +2,7 @@
 title: 发行说明
 titleSuffix: Configuration Manager
 description: 了解有关产品中尚未解决或 Microsoft 知识库文章中未涵盖的紧急问题。
-ms.date: 04/18/2018
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,14 +10,14 @@ ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4aeacdbc73e21c3bae18111e22c8407eba865a87
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 9daf0fb53face0cf7ed56f2a45ab044fbfac203c
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32338153"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39385501"
 ---
-# <a name="release-notes-for-system-center-configuration-manager"></a>System Center Configuration Manager 的发行说明
+# <a name="release-notes-for-configuration-manager"></a>Configuration Manager 发行说明
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
@@ -26,12 +26,12 @@ ms.locfileid: "32338153"
 特定于功能的文档包含有关影响核心方案的已知问题的信息。  
 
 > [!TIP]  
->  本主题包含 Configuration Manager 当前分支的发行说明。 有关 Technical Preview 分支的信息，请参阅 [System Center Configuration Manager Technical Preview](../../../../core/get-started/technical-preview.md)  
+>  本主题包含 Configuration Manager 当前分支的发行说明。 有关技术预览分支的信息，请参阅[技术预览](../../../../core/get-started/technical-preview.md)  
 
 有关不同版本引入的新功能的信息，请参阅以下文章：
+- [1806 版中的新增功能](/sccm/core/plan-design/changes/whats-new-in-version-1806)  
 - [1802 版中的新增功能](/sccm/core/plan-design/changes/whats-new-in-version-1802)
 - [版本 1710 中的新增功能](/sccm/core/plan-design/changes/whats-new-in-version-1710)
-- [版本 1706 中的新增功能](/sccm/core/plan-design/changes/whats-new-in-version-1706)  
 
 
 
@@ -74,8 +74,7 @@ ms.locfileid: "32338153"
 ### <a name="azure-ad-enabled-clients-cant-communicate-with-management-point"></a>启用 Azure AD 的客户端无法与管理点通信
 <!--501089-->
 适用于：Configuration Manager 版本 1706
-<!--also fixed in 1710 HFRU-->
-在[安装和分配 Configuration Manager Windows 10 客户端（使用 Azure AD 进行身份验证）](/sccm/core/clients/deploy/deploy-clients-cmg-azure)的方案中，当启用 HTTPS 的管理点使用备用数据库凭据时，客户端通信将失败。 
+<!--also fixed in 1710 HFRU-->在[安装和分配 Configuration Manager Windows 10 客户端（使用 Azure AD 进行身份验证）](/sccm/core/clients/deploy/deploy-clients-cmg-azure)的方案中，当启用 HTTPS 的管理点使用备用数据库凭据时，客户端通信将失败**。 
 
 #### <a name="workaround"></a>解决方法
 执行以下操作之一来缓解此问题：
@@ -88,14 +87,6 @@ ms.locfileid: "32338153"
 
 
 ## <a name="software-updates"></a>软件更新
-
-### <a name="servicing-plans-create-many-duplicate-software-update-groups-and-deployments-by-default"></a>默认情况下，维护计划会创建许多重复的软件更新组和部署  
-<!-- 474326 -->
-默认情况下，创建维护计划向导目前会在每个软件更新同步之后运行。 每次运行向导时，都会创建新的软件更新组和部署。 例如，如果你有每天多次运行的软件更新同步计划，创建维护计划向导每天都会创建多个软件更新组和部署。  
-
-#### <a name="workaround"></a>解决方法
- 创建维护计划后，打开维护计划的属性，转到“评估计划”选项卡，选择“按计划运行此规则”，单击“自定义”，然后创建自定义计划。 例如，你可以将维护计划设置为每 60 天运行一次。  
-
 
 ### <a name="changing-office-365-client-setting-doesnt-apply"></a>更改 Office 365 客户端设置不适用 
 <!--511551-->

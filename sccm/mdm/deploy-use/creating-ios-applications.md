@@ -1,8 +1,8 @@
 ---
 title: 创建 iOS 应用程序
 titleSuffix: Configuration Manager
-description: 请参阅创建和部署适用于 iOS 设备的应用程序时必须考虑的注意事项。
-ms.date: 03/05/2017
+description: 如何在 Configuration Manager 中针对 iOS 设备创建和部署应用程序。
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,41 +10,26 @@ ms.assetid: ff633013-5313-4cd3-949c-56d45e777280
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 985a8177602bd32da0b6134eeddb564a44749d65
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 246ca26b8fab3a1006e8d72b803c298fe48df9df
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32346424"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39385229"
 ---
-# <a name="create-ios-applications-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 创建 iOS 应用程序
+# <a name="create-ios-applications-in-configuration-manager"></a>在 Configuration Manager 中创建 iOS 应用程序
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager 应用程序具有一个或多个部署类型，这些是将软件部署到设备所需的安装文件和信息。 部署类型还具有指定软件的部署时间和方法的规则。  
+Configuration Manager 应用程序具有一个或多个部署类型，包含将软件部署到设备所需的安装文件和信息。 部署类型还具有指定软件的部署时间和方法的规则。  
 
- 可以使用下列方法创建应用程序：  
+请参阅[创建应用程序](/sccm/apps/deploy-use/create-applications#bkmk_create)，了解创建 Configuration Manager 应用程序和部署类型的步骤。 
 
--   通过读取应用程序安装文件来自动创建应用程序和部署类型。  
+创建和部署适用于 iOS 设备的应用程序时，请记住以下注意事项：  
 
--   手动创建应用程序并稍后添加部署类型。  
+- Configuration Manager 支持部署 iOS .ipa 包。 不需要在导入 iOS 应用时指定属性列表 (.plist) 文件。 
 
--   从文件导入应用程序。  
-
-请参阅[启动创建应用程序向导](../../apps/deploy-use/create-applications.md#start-the-create-application-wizard)，了解创建 Configuration Manager 应用程序和部署类型所需的步骤。 此外，创建和部署适用于 iOS 设备的应用程序时，请记住以下注意事项。  
-
-## <a name="general-considerations"></a>一般注意事项  
- Configuration Manager 支持以下应用类型的部署：  
-
-|设备类型|受支持的文件|  
-|-----------------|---------------------|  
-|iOS|*.ipa<br /><br /> 在 System Center Configuration Manager 中，不需要在导入 iOS 应用时指定属性列表 (.plist) 文件。|  
-
- 支持以下部署操作：  
-
-|设备类型|支持的操作|  
-|-----------------|-----------------------|  
-|iOS|**可用**、**必需**。 用户必须同意安装和卸载。
+- 将 iOS 应用程序部署为“可用”或“必需”。 用户必须同意安装和卸载。
 
 > [!IMPORTANT]  
->  目前，最终用户无法从 iOS 的 Microsoft Intune 公司门户应用程序中安装公司应用程序。 这是由于 iOS 应用商店中发布的应用受到限制（请参阅应用商店查看准则，第 2 部分）。 用户可通过浏览到 Intune Web 门户 (portal.manage.microsoft.com) 在其设备上安装企业应用（包括托管的应用商店应用和业务线应用包）。 若要深入了解由 Intune 公司门户应用启用的移动管理功能，请参阅 [Enrolled device management capabilities in Microsoft Intune](https://technet.microsoft.com/library/dn600287.aspx)（Microsoft Intune 中的注册设备管理功能）。  
+>  目前，最终用户无法从 iOS 的 Microsoft Intune 公司门户应用中安装公司应用。 此限制源于 iOS 应用商店中发布的应用的限制。 （请参阅应用商店审核指南第 2 部分）。 用户可以通过浏览到其设备上的 Intune 门户来安装公司应用。 这些应用包括托管的应用商店应用和业务线应用包。 有关 Intune 公司门户应用启用的移动管理功能的详细信息，请参阅 [Microsoft Intune 中的注册设备管理功能](https://docs.microsoft.com/intune/device-enrollment)。  

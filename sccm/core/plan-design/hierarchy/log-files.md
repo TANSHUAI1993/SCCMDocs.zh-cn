@@ -2,7 +2,7 @@
 title: 故障排除的日志文件
 titleSuffix: Configuration Manager
 description: 使用日志文件解决 Configuration Manager 客户端和站点系统中的问题。
-ms.date: 03/22/2018
+ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,14 +10,14 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c068ea5a079d43148191e41dc9a2b4fb7a2e00c7
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 2bd3f76b982356fc444681d1990bee08e90b32fc
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342658"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39385280"
 ---
-# <a name="log-files-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的日志文件
+# <a name="log-files-in-configuration-manager"></a>Configuration Manager 中的日志文件
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
@@ -116,7 +116,7 @@ ms.locfileid: "32342658"
 ##  <a name="BKMK_AboutLogs"></a>关于 Configuration Manager 日志文件  
  Configuration Manager 中的大多数进程将操作信息写入专用于该进程的日志文件。 通过 **.log** 或 **.lo_** 文件扩展名标识这些日志文件。 Configuration Manager 将写入 .log 文件，直到该日志达到其最大大小。 当日志已满时，会将 .log 文件复制到名称相同但扩展名为 .lo_ 的文件，并且进程或组件将继续写入 .log 文件。 当 .log 文件再次达到其最大大小时，将覆盖 .lo_ 文件，并且该过程将重复。 某些组件会通过将日期和时间戳追加到日志文件名并保留 .log 扩展名来建立日志文件历史记录。 有关最大大小和 .lo_ 文件使用的例外情况是适用于 Linux 和 UNIX 的客户端。 有关适用于 Linux 和 UNIX 的客户端如何使用日志文件的信息，请参阅本文中的[管理适用于 Linux 和 UNIX 的客户端中的日志文件](#BKMK_ManageLinuxLogs)。  
 
- 若要查看日志，可以使用 Configuration Manager 日志查看器工具 CMTrace，该工具位于 Configuration Manager 源媒体的 \\SMSSetup\\Tools 文件夹中。 向已添加到“软件库”的所有启动映像中添加 CMTrace 工具。  
+ 若要查看日志，可以使用 Configuration Manager 日志查看器工具 CMTrace，该工具位于 Configuration Manager 源媒体的 \\SMSSetup\\Tools 文件夹中。 向已添加到“软件库”的所有启动映像中添加 CMTrace 工具。 从版本 1806 开始，CMTrace 日志查看工具自动与 Configuration Manager 客户端一起安装。<!--1357971--> 有关详细信息，请参阅 [CMTrace](/sccm/core/support/cmtrace)。 
 
 ###  <a name="BKMK_LogOptions"></a>使用 Configuration Manager 服务管理器配置日志记录选项  
  可更改 Configuration Manager 存储日志文件时使用的位置，以及日志文件的大小。  
@@ -333,6 +333,7 @@ Configuration Manager 将日志文件存储在不同的位置。 这些位置取
 |sitecomp.log|记录有关对安装在站点中的所有站点系统服务器上的站点组件进行维护的详细信息。|站点服务器|  
 |sitectrl.log|记录对数据库中的站点控制对象所做的站点设置更改。|站点服务器|  
 |sitestat.log|记录所有站点系统的监视进程的可用性和磁盘空间。|站点服务器|
+|SMS_ISVUPDATES_SYNCAGENT.log| 从 Configuration Manager 版本 1806 开始，用于同步第三方软件更新的日志文件。| Configuration Manager 层次结构中的顶层软件更新点。|
 |SMS_PhasedDeployment.log| 分阶段部署的日志文件，从 Configuration Manager 版本 1802 开始提供的预发布功能。|Configuration Manager 层次结构中的顶层站点|   
 |SmsAdminUI.log|记录 Configuration Manager 控制台活动。|运行 Configuration Manager 控制台的计算机|  
 |SMSAWEBSVCSetup.log|记录应用程序目录 Web 服务的安装活动。|站点系统服务器|  
@@ -411,7 +412,8 @@ Configuration Manager 将日志文件存储在不同的位置。 这些位置取
 |--------------|-----------------|----------------------------|  
 |objreplmgr.log|记录有关将软件更新通知文件从父站点复制到子站点的详细信息。|站点服务器|  
 |PatchDownloader.log|记录有关从更新源将软件更新下载到站点服务器上的下载目的地的过程的详细信息。|承载从中启动下载的 Configuration Manager 控制台的计算机|  
-|ruleengine.log|记录有关自动部署规则（涉及到标识、内容下载以及软件更新组和部署创建）的详细信息。|站点服务器|  
+|ruleengine.log|记录有关自动部署规则（涉及到标识、内容下载以及软件更新组和部署创建）的详细信息。|站点服务器| 
+|SMS_ISVUPDATES_SYNCAGENT.log| 从 Configuration Manager 版本 1806 开始，用于同步第三方软件更新的日志文件。| Configuration Manager 层次结构中的顶层软件更新点。| 
 |SUPSetup.log|记录有关软件更新点安装的详细信息。 当软件更新点安装完成后，会向此日志文件写入 **Installation was successful** 。|站点系统服务器|  
 |WCM.log|记录有关软件更新点配置的详细信息，以及有关连接到 WSUS 服务器的详细信息（以获取有关订阅的更新类别、分类和语言等信息）。|连接到 WSUS 服务器的站点服务器|  
 |WSUSCtrl.log|记录有关站点的配置、数据库连接和 WSUS 服务器健康状况的详细信息。|站点系统服务器|  
@@ -777,7 +779,8 @@ Configuration Manager 将日志文件存储在不同的位置。 这些位置取
 |RebootCoordinator.log|记录有关安装软件更新后在客户端计算机上协调系统重新启动的过程的详细信息。|客户端|  
 |ScanAgent.log|记录有关软件更新的扫描请求、WSUS 位置和相关操作的详细信息。|客户端|  
 |SdmAgent.log|记录有关对修正和符合性进行的跟踪的详细信息。 但是，软件更新日志文件 Updateshandler.log 可提供有关安装符合性所需的软件更新的更详细信息。<br /><br /> 此日志文件与符合性设置共享。|客户端|  
-|ServiceWindowManager.log|记录有关维护时段评估的详细信息。|客户端|  
+|ServiceWindowManager.log|记录有关维护时段评估的详细信息。|客户端|
+|SMS_ISVUPDATES_SYNCAGENT.log| 从 Configuration Manager 版本 1806 开始，用于同步第三方软件更新的日志文件。| Configuration Manager 层次结构中的顶层软件更新点。|  
 |SmsWusHandler.log|记录有关 Microsoft 更新清单工具的扫描过程的详细信息。|客户端|  
 |StateMessage.log|记录有关创建并发送到管理点的软件更新状态消息的详细信息。|客户端|  
 |SUPSetup.log|记录有关软件更新点安装的详细信息。 当软件更新点安装完成后，会向此日志文件写入 **Installation was successful** 。|站点系统服务器|  
