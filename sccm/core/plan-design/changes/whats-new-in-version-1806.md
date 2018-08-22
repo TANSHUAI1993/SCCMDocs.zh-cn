@@ -1,0 +1,521 @@
+---
+title: 1806 版中的新增功能
+titleSuffix: Configuration Manager
+description: 获取有关 Configuration Manager Current Branch 1806 版中引入的更改和新功能的详细信息。
+ms.date: 07/31/2018
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+ms.assetid: 0249dbd3-1e85-4d05-a9e5-420fbe44d850
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: 1c6ae28a50f3145420895b295ebe730fb7b2a9a7
+ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39386058"
+---
+# <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 1806 版中的新增功能
+
+*适用范围：System Center Configuration Manager (Current Branch)*
+
+Configuration Manager Current Branch 的 1806 更新作为控制台中更新提供。 将此更新应用于运行 1706、1710 或 1802 版的站点。 <!-- baseline only statement: When installing a new site, it's also available as a baseline version.-->
+
+> [!Important]  
+> 本文目前列出了此版本中的所有重要功能。 但是，并非所有部分都链接到更新的内容并提供有关新功能的进一步信息。 定期查看此页面以获取更新。 我们使用 [已更新] 标记标注更改。 内容最终确定后，将删除此标注。  
+
+<!--
+Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in System Center Configuration Manager current branch, version 1806](https://support.microsoft.com/help/4101375).
+-->
+
+<!--
+The following additional updates to this release are also now available:
+- [Update rollup for System Center Configuration Manager current branch, version 1806](https://support.microsoft.com/help/4057517)
+-->
+
+
+以下各节提供有关 Configuration Manager Current Branch 1806 版中的更改和新功能的详细信息。  
+
+
+
+<!--
+## Deprecated features and operating systems
+Learn about support changes before they are implemented in [removed and deprecated items](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated).
+
+Version 1806 drops support for the following products:
+-->
+
+
+
+## <a name="site-infrastructure"></a>站点基础结构
+
+### <a name="cmpivot"></a>CMPivot
+<!--1358456--> Configuration Manager 总是提供设备数据的大型集中式存储，客户可将其用于报告目的。 该站点通常每周都会收集这些数据。 CMPivot 是一种新的控制台中实用工具，现提供对环境中设备实时状态的访问。 它立即对目标集合中的所有连接设备运行查询，并返回结果。 然后你可以在工具中对此数据进行筛选和分组。 通过提供来自联机客户端的实时数据，可以更快地回答业务问题、解决问题并对安全事件作出响应。 
+
+有关详细信息，请参阅 [CMPivot](/sccm/core/servers/manage/cmpivot)。  
+
+
+### <a name="site-server-high-availability"></a>站点服务器高可用性
+<!--1128774--> 独立主站点服务器角色的高可用性是一个基于 Configuration Manager 的解决方案，用于安装被动模式下的其他主站点服务器。 被动模式下的站点服务器是对主动模式下的现有站点服务器的补充。 在需要时可立即使用被动模式下的站点服务器。 
+
+有关详细信息，请参阅下列文章： 
+- [站点服务器高可用性](/sccm/core/servers/deploy/configure/site-server-high-availability) 
+- [流程图 - 设置被动模式下的站点服务器](/sccm/core/servers/deploy/configure/passive-site-server-flowchart)
+- [流程图 - 升级站点服务器（已规划）](/sccm/core/servers/deploy/configure/promote-site-server-flowchart)
+- [流程图 - 升级站点服务器（未规划）](/sccm/core/servers/deploy/configure/promote-site-server-unplanned-flowchart)
+
+
+### <a name="improvements-to-management-insights"></a>管理见解的改进
+此版本包括对管理见解的以下改进：  
+
+- 某些管理见解现在可以选择执行一个操作。 此操作要么导航到控制台中的关联节点，要么显示基于查询的筛选视图。<!--1357930-->  
+
+- 新的主动维护组提供了六条新规则，有助于突出显示潜在的配置问题，以通过定期维护避免这些问题。<!--1352184-->  
+
+有关详细信息，请参阅[管理见解](/sccm/core/servers/manage/management-insights)。
+
+
+### <a name="configuration-manager-tools"></a>Configuration Manager 工具
+<!--1357145--> 服务器中现提供 Configuration Manager 服务器和客户端工具。 可在站点服务器的 `CD.Latest\SMSSETUP\Tools` 文件夹中找到它们。 无需进行其他安装。 
+
+有关详细信息，请参阅 [Configuration Manager 工具](/sccm/core/support/tools)。
+
+
+### <a name="exclude-active-directory-containers-from-discovery"></a>从发现中排除 Active Directory 容器
+<!--1358143--> 若要减少发现的对象数，请从 Active Directory 系统发现中排除特定容器。 
+
+
+
+## <a name="content-management"></a>内容管理
+
+### <a name="configure-a-remote-content-library-for-the-site-server"></a>配置用于站点服务器的远程内容库
+<!--1357525--> 要配置站点服务器高可用性或释放管理中心站点或主站点服务器上的硬盘空间，请将内容库重定位到另一个存储位置。 将内容库移至站点服务器上的另一个驱动器、单独服务器或者存储区域网络 (SAN) 中的容错磁盘。 
+
+有关详细信息，请参阅下列文章： 
+- [内容库](/sccm/core/plan-design/hierarchy/the-content-library)
+- [流程图 - 管理内容库](/sccm/core/plan-design/hierarchy/manage-content-library-flowchart)
+
+
+### <a name="cloud-distribution-point-support-for-azure-resource-manager"></a>对 Azure 资源管理器的云分发点支持
+<!--1322209--> 创建云分发点时，向导现提供选项来创建“Azure 资源管理器部署”。 Azure 资源管理器是一个现代平台，用于以单个实体（称为资源组）的方式来管理所有解决方案资源。 如果在 Azure 资源管理器中部署云分发点，站点将使用 Azure Active Directory 进行身份验证并创建必要的云资源。 此现代化部署不需要经典 Azure 管理证书。 
+
+云分发点的功能文档也进行了修订和补充。 有关详细信息，请参阅下列文章：
+- [使用云分发点](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point)   
+- [安装云分发点](/sccm/core/servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure)  
+
+
+### <a name="pull-distribution-points-support-cloud-distribution-points-as-source"></a>请求分发点支持将云分发点作为源  
+<!--1321554--> 许多客户在远程办公室或分支机构使用请求分发点，这些分发点通过 WAN 从源分发点下载内容。 如果远程办公室与 Internet 建立了更好的连接，或者为了减少 WAN 链路负载，现在可以在 Microsoft Azure 中使用云分发点作为源。 现在，当你在分发点属性的“请求分发点”选项卡上添加源时，站点中的所有云分发点都会列为可用的分发点。 两个站点系统角色的行为都保持不变。 
+
+有关详细信息，请参阅[使用请求分发点](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point)。
+
+
+### <a name="enable-distribution-points-to-use-network-congestion-control"></a>启用分发点以使用网络拥塞控制
+<!--1358112--> Windows 低额外延迟后台传输 (LEDBAT) 是 Windows Server 的一项功能，可帮助管理后台网络传输。 对于在受支持版本的 Windows Server 上运行的分发点，请启用一个选项以帮助调整网络流量。 客户端仅在允许的情况下使用网络带宽。 
+
+有关详细信息，请参阅 [Windows LEDBAT](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#windows-ledbat)。
+
+
+### <a name="partial-download-support-in-client-peer-cache-to-reduce-wan-utilization"></a>客户端对等缓存中的部分下载支持可降低 WAN 利用率
+<!--1357346--> 客户端对等缓存源现可以将内容分成多个部分。 这些部分最大限度地减少了网络传输，从而降低了 WAN 利用率。 管理点提供更详细的内容部分跟踪。 它试图消除每个边界组多次下载相同内容的行为。 
+
+有关详情，请参阅[部分下载支持](/sccm/core/plan-design/hierarchy/client-peer-cache#bkmk_parts)。 
+
+
+### <a name="boundary-group-options-for-peer-downloads"></a>对等下载适用的边界组选项
+<!--1356193-->边界组现在包含其他设置，可以让你更好地控制环境中的内容分发。 此版本添加了以下选项：  
+
+- **在此边界组中允许对等下载**：默认情况下启用此设置。 管理点向客户端提供包含对等源的内容位置的列表。 此设置还会影响交付优化组 ID 的使用。  
+
+- **在对等下载期间，仅使用同一子网内的对等项**：此设置取决于上面那个选项。 如果启用此选项，管理点将仅包含与客户端在同一子网中的内容位置列表对等源。  
+
+
+
+<!-- ## Migration  -->
+
+
+
+## <a name="client-management"></a>客户端管理
+
+### <a name="improvement-to-client-push-security"></a>客户端推送安全性改进
+<!--1358204--> 使用客户端推送方法安装 Configuration Manager 客户端时，该站点现在要求进行 Kerberos 相互身份验证。 此增强有助于保护服务器与客户端之间的通信。 
+
+有关详细信息，请参阅[如何使用客户端请求安装客户端](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientPush)。
+
+
+### <a name="bkmk_ehttp"></a> 增强的 HTTP 站点系统
+<!--1356889,1358228--> 建议对于所有 Configuration Manager 通信路径使用 HTTPS 通信，但由于管理 PKI 证书的开销，对一些客户来说可能是一个挑战。 Azure Active Directory (Azure AD) 集成的引入可以减少某些证书要求但不是所有证书要求。 
+
+此版本包括对客户端与站点系统之间的通信方式的改进。 在站点属性上，选择“客户端计算机通信”选项卡中的“HTTPS 或 HTTP”选项，然后启用新选项以“将 Configuration Manager 生成的证书用于 HTTP 站点系统”。 此功能是[预发布功能](/sccm/core/servers/manage/pre-release-features)。
+
+此选项支持以下主要方案：  
+
+- **HTTP 管理点的客户端**<!--1356889-->：[加入 Azure AD 的设备](https://docs.microsoft.com/azure/active-directory/device-management-introduction#azure-ad-joined-devices)可以通过云管理网关 (CMG) 与为 HTTP 配置的管理点进行通信。 站点服务器为管理点生成证书，使其能够通过安全通道进行通信。   
+
+- **HTTP 分发点的客户端**<!--1358228-->：工作组或加入 Azure AD 的客户端可以通过安全通道从为 HTTP 配置的分发点下载内容。   
+
+
+### <a name="azure-ad-device-identity"></a>Azure AD 设备标识 
+<!--1358460--> 没有 Azure AD 用户登录的[加入 Azure AD 的设备](https://docs.microsoft.com/azure/active-directory/device-management-introduction#azure-ad-joined-devices)或[混合 Azure AD 设备](https://docs.microsoft.com/azure/active-directory/device-management-introduction#hybrid-azure-ad-joined-devices)可以安全地与它的分配站点进行通信。 基于云的设备标识现只需使用 CMG 和管理点进行身份验证。  
+
+
+### <a name="cmtrace-installed-with-client"></a>与客户端一起安装的 CMTrace
+<!--1357971--> CMTrace 日志查看工具现自动与 Configuration Manager 客户端一起安装。 它被添加到客户端安装目录，默认情况下为 `%WinDir%\ccm\cmtrace.exe`。 
+
+有关详细信息，请参阅 [CMTrace](/sccm/core/support/cmtrace)。
+
+
+### <a name="cloud-management-dashboard"></a>云管理仪表板
+<!--1358461--> 新的云管理仪表板为云管理网关 (CMG) 使用情况提供一个集中视图。 通过 Azure AD 载入网站时，它还显示有关云用户和设备的数据。 在 Configuration Manager 控制台中，转到“监视”工作区。 选择“云管理”节点，并查看仪表板磁贴。  
+
+此功能还包括用于实时验证的 CMG 连接分析器，为疑难解答提供帮助。 控制台中的实用工具检查该服务的当前状态，以及通过 CMG 连接点通往任何允许 CMG 流量的管理点的通信通道。 在 Configuration Manager 控制台中，转到“管理”工作区。 展开“云服务”并选择“云管理网关”。 选择目标 CMG 实例，然后单击功能区中的“连接分析器”。
+
+
+### <a name="improvements-to-cloud-management-gateway"></a>云管理网关的改进
+
+1806 版包含对云管理网关 (CMG) 的以下改进：
+
+#### <a name="simplified-client-bootstrap-command-line"></a>简化了客户端启动命令行
+<!--1358215--> 通过 CMG 在 Internet 上安装 Configuration Manager 客户端时，命令行现在需要的属性更少。 在准备共同管理时，此次改进减少了 Microsoft Intune 中使用的命令行的大小。 
+
+在所有方案中都需要以下命令行属性：
+  - CCMHOSTNAME  
+  - SMSSITECODE  
+
+在使用 Azure AD 进行客户端身份验证而不是使用基于 PKI 的客户端身份验证证书时，需要以下属性：
+  - AADCLIENTAPPID  
+  - AADRESOURCEURI  
+
+如果客户端将漫游回 Intranet，则需要以下属性：
+  - SMSMP  
+
+下面的示例包含上述所有属性：   
+`ccmsetup.exe CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver SMSMP=https://mp1.contoso.com`
+
+<!--For more information, see [Client installation properties](/sccm/core/clients/deploy/about-client-installation-properties).-->
+
+#### <a name="download-content-from-a-cmg"></a>从 CMG 下载内容
+<!--1358651--> 以前，必须将云分发点和 CMG 作为单独的角色进行部署。 CMG 现在还可以向客户提供内容。 此功能减少了所需的证书和 Azure VM 的成本。 若要启用此功能，在 CMG 属性的“设置”选项卡上启用“允许 CMG 充当云分布点并提供 Azure 存储的内容”这个新选项。 
+
+#### <a name="trusted-root-certificate-isnt-required-with-azure-ad"></a>Azure AD 不需要受信任的根证书
+<!--503899--> 创建 CMG 时，不再需要在设置页上提供[受信任的根证书](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#cmg-trusted-root-certificate-to-clients)。 使用 Azure Active Directory (Azure AD) 进行客户端身份验证时不需要此证书，但往往在向导中需要。 如果使用 PKI 客户端身份验证证书，则仍须向 CMG 添加受信任的根证书。
+
+
+
+## <a name="co-management"></a>共同管理
+
+### <a name="sync-mdm-policy-from-microsoft-intune-for-a-co-managed-device"></a>通过 Microsoft Intune 为共同托管设备同步 MDM 策略
+<!--1357377--> 切换共同管理工作负荷时，共同托管设备自动从 Microsoft Intune 同步 MDM 策略。 当从 Configuration Manager 控制台的客户端通知中启动“下载计算机策略”操作时也会进行此同步。 
+
+有关详细信息，请参阅[将 Configuration Manager 工作负荷切换到 Intune](/sccm/core/clients/manage/co-management-switch-workloads)。
+
+
+### <a name="transition-new-workloads-to-intune-using-co-management"></a>使用共同管理将新的工作负荷转移到 Intune
+现在可以在启用共同管理后，将以下工作负荷从 Configuration Manager 转移到 Intune：  
+
+- **设备配置**<!--1357903-->：可通过此工作负荷使用 Intune 部署 MDM 策略，同时继续使用 Configuration Manager 来部署应用程序。  
+
+- **Office 365**<!--1357841-->：设备不会从 Configuration Manager 安装 Office 365 部署。  
+
+- **移动应用**<!--1357892-->：在公司门户中可以使用任何从 Intune 部署的可用应用。 从 Configuration Manager 部署的应用在软件中心可用。 此功能是[预发布功能](/sccm/core/servers/manage/pre-release-features)。  
+
+要转移工作负荷，请转到共同管理属性页并将工作负荷滚动条从 Configuration Manager 移到“试点”或“全部”。 
+
+有关详细信息，请参阅 [Windows 10 设备共同管理](/sccm/core/clients/manage/co-management-overview)。
+
+
+### <a name="support-for-multiple-hierarchies-to-one-intune-tenant"></a>支持将多个层次结构合并到一个 Intune 租户
+<!--1357944--> 某些客户拥有多个 Configuration Manager 层次结构，并希望将来让其合并到一个 Azure Active Directory 和 Microsoft Intune 租户。 共同管理现支持将多个 Configuration Manager 环境连接到同一个 Intune 租户。
+
+有关详细信息，请参阅[准备 Windows 10 设备进行共同管理](/sccm/core/clients/manage/co-management-prepare)。
+ 
+
+
+## <a name="compliance-settings"></a>符合性设置
+
+### <a name="configure-windows-defender-smartscreen-settings-for-microsoft-edge"></a>为 Microsoft Edge 配置 Windows Defender SmartScreen 设置
+<!--1353701--> Microsoft Edge 浏览器符合性设置策略添加了以下三个 Windows Defender SmartScreen 设置： 
+- 允许 SmartScreen
+- 用户可以替代站点的 SmartScreen 提示
+- 用户可以替代文件的 SmartScreen 提示
+
+有关详细信息，请参阅[配置 Microsoft Edge 设置](/sccm/compliance/deploy-use/browser-profiles)。
+
+
+### <a name="scap-extensions"></a>SCAP 扩展
+<!--1357552--> 将安全内容自动化协议 (SCAP) 内容转换为符合性设置基准，并使用控制台扩展名生成 SCAP 报告。 此功能还包含一个新仪表板，可用于直观显示客户端符合性和 XCCDF 规则符合性。 
+
+有关详细信息，请参阅[关于 SCAP 扩展](/sccm/compliance/plan-design/scap/about-scap)。
+
+
+
+## <a name="application-management"></a>应用程序管理
+
+### <a name="phased-deployment-of-applications"></a>应用程序的分阶段部署
+<!--1358147--> 为应用程序创建分阶段部署。 通过分阶段部署，可以根据可自定义条件和组进行协调安排，有序推出软件。 例如，将应用程序部署到试点集合，然后根据成功条件自动继续推出。 
+
+有关详细信息，请参阅下列文章：  
+
+- [创建分阶段部署](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
+
+- [管理和监视分阶段部署](/sccm/osd/deploy-use/manage-monitor-phased-deployments?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
+
+
+### <a name="provision-windows-app-packages-for-all-users-on-a-device"></a>为设备上的所有用户预配 Windows 应用包
+<!--1358310--> 使用 Windows 应用包为设备上的所有用户预配应用程序。 此方案的一个常见示例是将来自 Microsoft Store 商业版和教育版的应用（如 Minecraft 教育版）预配到学校学生使用的所有设备。 以前，Configuration Manager 仅支持按用户安装这些应用程序。 登录到新的设备后，学生不得不等会儿时间来访问应用。 现在，将应用预配到所有用户的设备时，他们的工作更快更高效。 
+
+有关详细信息，请参阅[创建 Windows 应用程序](/sccm/apps/get-started/creating-windows-applications#bkmk_provision)。
+
+
+### <a name="office-customization-tool-integration-with-the-office-365-installer"></a>Office 自定义工具与 Office 365 安装程序集成
+<!--1358149--> 现在 Office 自定义工具在 Configuration Manager 控制台中与 Office 365 安装程序集成。 为 Office 365 创建部署时，可动态配置最新的 Office 可管理性设置。 Microsoft 在发布 Office 365 的新版本时更新 Office 自定义工具。 通过此集成，当 Office 365 中的新可管理性设置可用时，你便可以立即使用。 
+
+有关详细信息，请参阅[部署 Office 365 应用](/sccm/sum/deploy-use/manage-office-365-proplus-updates#deploy-office-365-apps)。
+
+
+### <a name="support-for-new-windows-app-package-formats"></a>支持新的 Windows 应用包格式
+<!--1357427-->Configuration Manager 现在支持部署新的 Windows 10 应用包 (.msix) 和应用程序包 (.msixbundle) 格式。 
+
+有关详细信息，请参阅[创建 Windows 应用程序](/sccm/apps/get-started/creating-windows-applications#bkmk_general)。
+
+
+### <a name="uninstall-application-on-approval-revocation"></a>在批准撤消时卸载应用程序
+<!--1357891--> 撤消应用程序的批准时，行为已更改。 现在当你拒绝应用程序的请求时，客户端将从用户的设备卸载应用程序。 此行为需要启用[可选功能](https://docs.microsoft.com/en-us/sccm/core/servers/manage/install-in-console-updates#bkmk_options)“审批每台设备的用户的应用程序请求”。 
+
+有关详细信息，请参阅[部署应用程序](/sccm/apps/deploy-use/deploy-applications#bkmk_approval)。
+
+
+### <a name="package-conversion-manager"></a>包转换管理器 
+<!--1357861--> 包转换管理器现在是一个集成工具，你可以通过该工具将旧的 Configuration Manager 2007 包转换为 Configuration Manager Current Branch 应用程序。 然后，可以使用应用程序的功能，如依赖关系、要求规则和用户设备相关性。
+
+用户可以在 Configuration Manager 控制台中的“包”节点上开始执行以下操作：  
+
+   - **分析包**：通过分析包开始转换过程。  
+
+   - **转换包**：某些包可以通过此操作轻松地转换为应用程序。  
+
+   - **修复和转换**：有些包需要在转换为应用程序之前进行问题修复。  
+
+然后转到“监视”工作区中“包转换状态”仪表板。 这个新的仪表板显示站点中包的整体分析和转换状态。 此功能是[预发布功能](/sccm/core/servers/manage/pre-release-features)。
+
+
+
+## <a name="os-deployment"></a>OS 部署
+
+### <a name="improvements-to-phased-deployments"></a>分阶段部署改进
+
+此版本包括对分阶段部署的以下改进：  
+
+#### <a name="create-a-phased-deployment-with-manually-configured-phases"></a>使用手动配置的阶段创建分阶段部署
+<!--1358148--> 针对任务序列，现可在创建分阶段部署时手动配置阶段。 可从“创建分阶段部署”向导的“阶段”选项卡添加最多 10 个其他阶段。 你仍然可以自动创建默认的两阶段部署。 
+
+有段详细信息，请参阅[使用手动配置的阶段创建分阶段部署](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence#bkmk_manual)。
+
+#### <a name="phased-deployment-status"></a>分阶段部署状态
+<!--1358577-->现在分阶段部署具有本地监视体验。 从“监视”工作区中的“部署”节点，选择分阶段部署，然后单击功能区中的“分阶段部署状态”。 
+
+有关详细信息，请参阅[管理和监视分阶段部署](/sccm/osd/deploy-use/manage-monitor-phased-deployments)。  
+
+#### <a name="gradual-rollout-during-phased-deployments"></a>分阶段部署期间逐渐推出
+<!--1358578-->在分阶段部署期间，每个阶段的推出可以逐步进行。 此行为有助于缓解部署问题的风险，降低网络上因向客户端分发内容而导致的负载。 根据每个阶段的配置，此站点可以逐步使软件可用。 相对于使软件可用的时间，一个阶段中的每个客户端都有一个截止时间。 对于一个阶段中的所有客户端，可用时间和截止时间之间的时间窗都是相同的。 
+
+有关详细信息，请参阅[阶段设置](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence#bkmk_settings)。  
+
+
+### <a name="improvements-to-windows-10-in-place-upgrade-task-sequence"></a>对 Windows 10 就地升级任务序列的改进
+<!--1358500--> Windows 10 就地升级的默认任务序列模板现在包括在升级过程失败的情况下要添加的带建议操作的另一个新组。 这些操作有助于进行故障排除。 其中一个工具是 Windows [SetupDiag](https://docs.microsoft.com/windows/deployment/upgrade/setupdiag)。 它是一个独立的诊断工具，可获取有关 Windows 10 升级失败原因的详细信息。 
+
+有关详细信息，请参阅[创建用于升级 OS 的任务序列](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#recommended-task-sequence-steps-on-failure)。
+
+
+### <a name="improvements-to-pxe-enabled-distribution-points"></a>对已启用 PXE 的分发点的改进
+<!--1357580-->在分发点属性的“PXE”选项卡上，选中“在没有 Windows 部署服务的情况下启用 PXE 响应方”。 此选项在分发点上启用 PXE 响应方，而不需要 Windows 部署服务 (WDS)。 由于 WDS 不是必需的，因此已启用 PXE 的分发点可以是客户端或服务器 OS，包括 Windows Server Core。 这个新的 PXE 响应方服务支持 IPv6，还增强了远程办公室中已启用 PXE 的分发点的灵活性。 
+
+有关详细信息，请参阅[在分发点上启用 PXE](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe)。
+
+
+### <a name="network-access-account-not-required-for-some-scenarios"></a>某些方案不需要网络访问帐户
+<!--1358278,1358279--> [增强型 HTTP 站点系统](#bkmk_ehttp)功能还会删除网络访问帐户上的某些依赖项。 当启用“将 Configuration Manager 生成的证书用于 HTTP 站点系统”的新选项时，以下方案不需用网络访问帐户从分发点下载内容：  
+
+- 从启动媒体或 PXE 运行的任务序列
+- 从软件中心运行的任务序列  
+
+这些任务序列可以用于操作系统部署或者是自定义的。 它还支持工作组计算机。
+
+
+### <a name="other-improvements-to-os-deployment"></a>对 OS 部署的其他改进
+
+#### <a name="mask-sensitive-data-stored-in-task-sequence-variables"></a>屏蔽任务序列变量中存储的敏感数据
+<!--1358330--> 在[设置任务序列变量](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable)步骤中，选择新选项“不显示此值”。 例如，指定密码时。 
+
+#### <a name="mask-program-name-during-run-command-step-of-a-task-sequence"></a>在执行任务序列的“运行命令步骤”期间屏蔽程序名称
+<!--1358493--> 若要禁止显示或记录潜在的敏感数据，请将任务序列变量“OSDDoNotLogCommand”设置为 `TRUE`。 此变量在[运行命令行](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine)任务序列步骤中隐藏 smsts.log 中的程序名称。   
+
+#### <a name="task-sequence-variable-for-dism-parameters-when-installing-drivers"></a>安装驱动程序时 DISM 参数的任务序列变量
+<!--516679--> 要为 DISM 指定其他命令行参数，请使用新的任务序列变量 OSDInstallDriversAdditionalOptions。 启用[应用驱动程序包](/sccm/osd/understand/task-sequence-steps#BKMK_ApplyDriverPackage)步骤设置，以“使用递归选项通过运行 DISM 来安装驱动程序包”。 
+
+#### <a name="option-to-use-full-disk-encryption"></a>“使用全磁盘加密”选项
+<!--SCCMDocs-pr issue 2671--> [启用 BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_EnableBitLocker) 和[预配 BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_PreProvisionBitLocker) 步骤现在都包含“使用全磁盘加密”选项。 默认情况下，这些步骤会加密驱动器上的已用空间。 建议使用此默认行为，因为它更加快速高效。 如果贵组织需要在安装期间加密整个驱动器，请启用此选项。 Windows 安装程序会等待整个驱动器加密，所需时间较长（尤其是在大型驱动器上）。 
+
+
+
+## <a name="software-center"></a>软件中心
+
+### <a name="software-center-infrastructure-improvements"></a>软件中心基础结构的改进
+<!--1358309--> 不再需要应用程序目录角色，即可在软件中心显示用户可用的应用程序。 此项更改有助于减少向用户交付应用程序所需的服务器基础结构。 软件中心现在依靠管理点来获取此信息，通过将更大的环境分配给[边界组](/sccm/core/servers/deploy/configure/boundary-groups#management-points)来帮助它们更好地扩展。
+
+> [!Note]  
+> 1806 中不再需要应用程序目录站点和 Web 服务点角色，但该角色依然受支持。 
+> 
+> 应用程序目录网站点的 Silverlight 用户体验不再受支持。 有关详细信息，请参阅[已删除和已弃用的功能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)。  
+
+
+### <a name="specify-the-visibility-of-the-application-catalog-website-link-in-software-center"></a>指定应用程序目录网站链接在软件中心的可见性
+<!--1358214--> 使用客户端设置控制“打开应用程序目录网站”的链接是否显示在软件中心的“安装状态”节点中。  
+
+有关详细信息，请参阅[软件中心客户端设置](/sccm/core/clients/deploy/about-client-settings#software-center)。
+
+> [!Note]  
+> 应用程序目录网站点的 Silverlight 用户体验不再受支持。 有关详细信息，请参阅[已删除和已弃用的功能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)。  
+
+
+### <a name="custom-tab-for-webpage-in-software-center"></a>软件中心用于网页的自定义选项卡
+<!--1358132--> 使用客户端设置在软件中心创建自定义选项卡以打开网页。 此功能可让你以一致、可靠的方式向最终用户展示内容。 以下列表包含几个示例：  
+
+- 联系 IT 部门：有关如何联系组织 IT 部门的信息  
+
+- IT 支持中心：IT 自助操作，例如搜索知识库或创建支持票证。  
+
+- 最终用户文档：面向组织中的用户的文章，涉及各种 IT 主题，例如使用应用程序或升级到 Windows 10。  
+
+有关详细信息，请参阅[软件中心客户端设置](/sccm/core/clients/deploy/about-client-settings#software-center)和[软件中心用户指南](/sccm/core/understand/software-center)。
+
+
+### <a name="maintenance-windows-in-software-center"></a>软件中心的维护时段
+<!--1358131--> 软件中心现在显示下一个计划性维护时段。 在“安装状态”选项卡上，将视图从“全部”切换为“即将进行”。 它显示时间范围和计划部署列表。 如果没有将来的维护时段，则该列表为空。 
+
+有关详细信息，请参阅[如何使用维护时段](/sccm/core/clients/manage/collections/use-maintenance-windows)和[软件中心用户指南](/sccm/core/understand/software-center)。
+
+
+
+## <a name="software-updates"></a>软件更新
+
+### <a name="third-party-software-updates"></a>第三方软件更新
+<!--1357605, 1352101, 1358714--> 通过第三方软件更新，可以订阅 Configuration Manager 控制台中的合作伙伴目录，并将更新发布到 WSUS。 然后可以使用现有的软件更新管理进程来部署这些更新。 
+
+有关详细信息，请参阅[启用第三方更新](/sccm/sum/deploy-use/third-party-software-updates)。
+
+
+### <a name="deploy-software-updates-without-content"></a>部署无内容的软件更新
+<!--1357933--> 将软件更新部署到设备，而无需先下载内容并将其分发到分发点。 当处理非常大的更新内容时，或者当始终希望客户端从 Microsoft 更新云服务中获取内容时，此功能很有用。 在此方案中的客户端还可以从已具有所需内容的对等节点下载内容。 Configuration Manager 客户端继续管理内容下载，因此可以利用 Configuration Manager 对等缓存功能或其他技术，如交付优化。 此功能支持受 Configuration Manager 软件更新管理（包括 Windows 和 Office 更新）支持的任何更新类型。 
+
+有关详细信息，请参阅[手动部署软件更新](/sccm/sum/deploy-use/manually-deploy-software-updates)或[自动部署软件更新](/sccm/sum/deploy-use/automatically-deploy-software-updates)时的“无部署包”选项。
+
+
+### <a name="filter-automatic-deployment-rules-by-software-update-architecture"></a>通过软件更新体系结构更新自动部署规则
+ <!--1322266--> 现在可以筛选自动部署规则 (ADR) 以排除 Itanium 和 ARM64 等体系结构。 在“创建自动部署规则向导”的软件更新页面上，现可使用“体系结构”属性筛选器。 
+
+有关详细信息，请参阅[自动部署软件更新](/sccm/sum/deploy-use/automatically-deploy-software-updates)。
+
+
+### <a name="improved-wsus-maintenance"></a>改进了 WSUS 维护 
+<!--1357898--> 根据对软件更新点组件属性定义的取代规则，WSUS 清理向导现在会拒绝过期的更新。 
+
+有关详细信息，请参阅[软件更新维护](/sccm/sum/deploy-use/software-updates-maintenance)。
+
+
+
+## <a name="reporting"></a>报表
+
+### <a name="new-software-updates-compliance-report"></a>新的软件更新符合性报告
+<!--1357775-->查看软件更新符合性报告传统上包含最近未联系站点的客户端中的数据。 你可以通过“符合性 9 - 总体运行状况和符合性”这一新报告按“正常运行”客户端筛选特定软件更新组的符合性结果。 此报告显示你环境中的活动客户端的更真实的符合性状态。 
+
+有关详细信息，请参阅[软件更新报告](/sccm/sum/deploy-use/monitor-software-updates#BKMK_SUReports)。
+
+
+
+## <a name="inventory"></a>清单
+
+### <a name="bkmk_bigint"></a> 对大整数值硬件清单的改进
+<!--1357880--> 硬件清单之前对大于 4,294,967,296 (2^32) 的整数设定了限制。 对于诸如以字节为单位的硬盘大小之类的属性，可以达到此限制。 管理点不会处理超过此限制的整数值，因此数据库中不会存储任何值。 现在，此版本中的限制增加到了 18,446,744,073,709,551,616 (2^64)。 
+
+有关详细信息，请参阅[使用大整数值](/sccm/core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory#bkmk_bigint)。
+
+
+### <a name="hardware-inventory-default-unit-revision"></a>硬件清单默认单位修订
+<!--514442--> 在 [Configuration Manager 1710 版](/sccm/core/plan-design/changes/whats-new-in-version-1710#site-infrastructure)中，许多报表视图中使用的默认单元都从兆字节 (MB) 更改为千兆字节 (GB)。 由于[硬件清单的大整数值改进](#bkmk_bigint)，并且根据客户反馈，此默认单位现在又是 MB。
+
+
+
+<!-- ## Mobile device management -->
+
+
+
+<!-- ## Protect devices-->
+
+
+
+
+## <a name="configuration-manager-console"></a>Configuration Manager 控制台
+
+### <a name="product-lifecycle-dashboard"></a>产品生命周期仪表板
+<!--1319632--> 产品生命周期仪表板显示 Microsoft 产品（安装在由 Configuration Manager 托管的设备上）的 Microsoft 生命周期策略的状态。 它还提供有关环境中 Microsoft 产品的信息、可支持性状态以及支持结束日期。 使用仪表板了解对每个产品的支持的可用性。 这些信息有助于规划在到达当前支持结束日期之前，何时更新使用的 Microsoft 产品。   
+
+有关详细信息，请参阅[产品生命周期仪表板](/sccm/core/clients/manage/asset-intelligence/product-lifecycle-dashboard)。
+
+
+### <a name="copy-asset-details-from-monitoring-views"></a>支持从监视视图中复制资产详细信息
+<!--1357856-->“监视”工作区的以下区域现支持复制文本：  
+
+- 在“部署”节点中，选择部署，然后单击“查看状态”。 在“部署状态”视图的“资产详细信息”窗格中，选择一个或多个设备。  
+
+- 展开“分发状态”节点，然后选择“内容状态”。 选择一个软件，然后单击“查看状态”。 在“内容状态”视图的“资产详细信息”窗格中，选择一个或多个分发点。 
+
+右键单击资产，并选择“复制”。 此操作将选定的资产复制为包含完整详细信息的逗号分隔列表。 键盘快捷方式 CTRL + C 也适用于这些视图。 
+
+有关详细信息，请参阅 [1806 版中的控制台改进](/sccm/core/servers/manage/admin-console#console-improvements-in-version-1806)。
+
+
+### <a name="improvements-to-the-surface-dashboard"></a>Surface 仪表板的改进
+<!--1358654--> 此版本包括对 Surface 仪表板的以下改进：  
+
+- 选中特定图表部分时，Surface 仪表板现在会显示相关设备列表：  
+
+   - 单击“Surface 设备所占百分比”磁贴将打开 Surface 设备列表。  
+
+   - 单击“前五个固件版本”磁贴中的栏，将打开带有特定固件版本的 Surface 设备列表。  
+
+- 当从 Surface 仪表板查看这些设备列表时，可以右键单击设备以执行常见操作。  
+
+有关详细信息，请参阅 [Surface仪表板](/sccm/core/clients/manage/surface-device-dashboard)。
+
+
+### <a name="view-the-currently-signed-on-user-for-a-device"></a>查看设备的当前已登录用户
+<!--1358202--> 现在默认情况下，“资产和符合性”工作区的“设备”节点会显示“当前已登录用户”的列。 它还会显示任何特定于集合的设备列表。 此值与[客户端状态](/sccm/core/clients/manage/monitor-clients#bkmk_indStatus)同步保持最新。 当用户注销时，客户端会清除此值。 如果没有用户登录，则值为空。 
+
+有关详细信息，请参阅 [1806 版中的控制台改进](/sccm/core/servers/manage/admin-console#console-improvements-in-version-1806)。
+
+
+### <a name="submit-feedback-from-the-configuration-manager-console"></a>从 Configuration Manager 控制台提交反馈  
+<!--1357542-->
+
+发送笑脸！ 现在可以就你的体验直接告知 Configuration Manager 团队。 从 Configuration Manager 控制台发送反馈很简单。 我们希望听到你的所有反馈：表扬、问题和建议。 在 Configuration Manager 控制台中，单击功能区上方右上角的笑脸按钮。 该反馈将直接提交给 Configuration Manager 的 Microsoft 产品团队。 虽然仍然支持使用 Windows 10 反馈中心，但最好使用控制台内部的反馈机制。  
+
+有关详细信息，请参阅 [1806 版中的控制台改进](/sccm/core/servers/manage/admin-console#console-improvements-in-version-1806)和[产品反馈](/sccm/core/understand/find-help#BKMK_1806Feedback)。
+
+
+
+## <a name="next-steps"></a>后续步骤
+
+准备好安装此版本时，请参阅 [安装 Configuration Manager 的更新](/sccm/core/servers/manage/updates)。
+
+> [!TIP]  
+> 若要安装新站点，请使用 Configuration Manager 的基准版本。  
+>
+>  了解详细信息：    
+>   - [安装新站点](/sccm/core/servers/deploy/install/installing-sites)  
+>   - [基准和更新版本](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)  
+
+关于已知的重要问题，请参阅[发行说明](/sccm/core/servers/deploy/install/release-notes)。
