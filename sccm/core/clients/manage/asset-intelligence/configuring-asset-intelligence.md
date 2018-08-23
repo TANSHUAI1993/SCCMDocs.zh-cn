@@ -136,7 +136,7 @@ ms.locfileid: "32341009"
 
 2.  在“主页”选项卡上的“资产智能”组中，选择“导入软件许可证”。   
 
-4.  在“导入”  页上，指定是导入 Microsoft 批量许可 (MVLS) 文件（.xml 或 .csv）还是常规许可证声明文件 (.csv)。 有关创建常规许可证声明文件的详细信息，请参阅本主题后面的 [Create a general license statement information file for import](#BKMK_CreateGeneralLicenseStatement) 。  
+4.  在“导入”  页上，指定是导入 Microsoft 批量许可 (MVLS) 文件（.xml 或 .csv）还是常规许可证声明文件 (.csv)。 有关创建常规许可证声明文件的详细信息，请参阅本主题后面的 [创建常规许可证声明信息文件以便导入](#BKMK_CreateGeneralLicenseStatement) 。  
 
     > [!WARNING]  
     >  要下载可以导入资产智能目录的 .csv 格式的 MVLS 文件，请参阅 [Microsoft 批量许可服务中心](http://go.microsoft.com/fwlink/p/?LinkId=226547)。 要访问此信息，必须在网站上具有注册的帐户。 必须与 Microsoft 客户代表联系以了解有关如何获取 .xml 格式的 MVLS 文件的信息。  
@@ -148,7 +148,7 @@ ms.locfileid: "32341009"
 
 6. 完成向导。  
 
-###  <a name="BKMK_CreateGeneralLicenseStatement"></a> Create a general license statement information file for import  
+###  <a name="BKMK_CreateGeneralLicenseStatement"></a> 创建常规许可证声明信息文件以便导入  
  还可以使用以逗号分隔 (.csv) 文件格式手动创建的许可证导入文件将常规许可证声明导入资产智能目录中。  
 
 > [!NOTE]  
