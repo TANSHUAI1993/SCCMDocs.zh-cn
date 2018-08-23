@@ -242,7 +242,7 @@ ms.locfileid: "32343678"
 
  当安装适用于 Linux 和 UNIX 的 Configuration Manager 客户端时，安装脚本会检查操作系统版本。 默认情况下，如果操作系统版本被标识为未发布支持 SHA-256 的 OpenSSL 版本，则无法安装 Configuration Manager 客户端。  
 
- 若要在未发布支持 SHA-256 的 OpenSSL 版本的 Linux 和 UNIX 操作系统上安装 Configuration Manager 客户端，必须使用安装命令行开关 **ignoreSHA256validation**。 当在适当的 Linux 或 UNIX 操作系统上使用此命令行选项时，Configuration Manager 客户端将跳过 SHA-256 验证，并且在安装完成后，客户端将不会使用 SHA-256 来对它通过使用 HTTP 提交到站点系统的数据进行签名。 有关将 Linux 和 UNIX 客户端配置为使用证书的详细信息，请参阅本主题中的 [Planning for Security and Certificates for Linux and UNIX Servers](#BKMK_SecurityforLnU) 。 有关需要 SHA-256 的信息，请参阅[配置 System Center Configuration Manager 中的安全](../../../../core/plan-design/security/configure-security.md)主题中的[配置签名和加密](../../../../core/plan-design/security/configure-security.md#BKMK_ConfigureSigningEncryption)。  
+ 若要在未发布支持 SHA-256 的 OpenSSL 版本的 Linux 和 UNIX 操作系统上安装 Configuration Manager 客户端，必须使用安装命令行开关 **ignoreSHA256validation**。 当在适当的 Linux 或 UNIX 操作系统上使用此命令行选项时，Configuration Manager 客户端将跳过 SHA-256 验证，并且在安装完成后，客户端将不会使用 SHA-256 来对它通过使用 HTTP 提交到站点系统的数据进行签名。 有关将 Linux 和 UNIX 客户端配置为使用证书的详细信息，请参阅本主题中的 [规划 Linux 和 UNIX 服务器的安全性和证书](#BKMK_SecurityforLnU) 。 有关需要 SHA-256 的信息，请参阅[配置 System Center Configuration Manager 中的安全](../../../../core/plan-design/security/configure-security.md)主题中的[配置签名和加密](../../../../core/plan-design/security/configure-security.md#BKMK_ConfigureSigningEncryption)。  
 
 > [!NOTE]  
 >  命令行选项 **ignoreSHA256validation** 忽略使用支持 sha-256 的 OpenSSL 版本运行 Linux 和 UNIX 发布的版本的计算机上。  
