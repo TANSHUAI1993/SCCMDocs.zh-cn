@@ -1,6 +1,5 @@
 # 概述
 ## [什么是混合 MDM](understand/hybrid-mobile-device-management.md)
-## [选择 Intune 独立版或混合 MDM](understand/choose-between-standalone-intune-and-hybrid-mobile-device-management.md)
 ## [混合 MDM 中的新增功能](understand/whats-new-in-hybrid-mobile-device-management.md)
 
 # [规划和设计](plan-design/plan-hybrid-mobile-device-management.md)
