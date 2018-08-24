@@ -56,7 +56,7 @@
 ### [创建用于捕获和还原用户状态的任务序列](deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md)
 ### [使用任务序列管理虚拟硬盘](deploy-use/use-a-task-sequence-to-manage-virtual-hard-disks.md)
 
-## [自定义任务序列应用方案](deploy-use/custom-task-sequence-scenarios.md)
+## 自定义任务序列应用方案
 ### [创建自定义任务序列](deploy-use/create-a-custom-task-sequence.md)
 ### [创建用于非操作系统部署的任务序列](deploy-use/create-a-task-sequence-for-non-operating-system-deployments.md)
 ### [管理 BIOS 转换为 UEFI 所采用的任务序列步骤](deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md)

@@ -4,12 +4,12 @@ hide_bc: true
 title: System Center Configuration Manager 文档
 description: 了解如何使用 System Center Configuration Manager。
 ms.topic: hub-page
-ms.openlocfilehash: 250f5cf0793f5afd396a82f96389c937ed9be14b
-ms.sourcegitcommit: e3f7bb8cec4b37a311bc86098297534cab947de8
+ms.openlocfilehash: 9288732db8771d9ae83c006b1865683fe58ebc0e
+ms.sourcegitcommit: 98c3f7848dc9014de05541aefa09f36d49174784
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "29781756"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42587886"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -70,8 +70,8 @@ ms.locfileid: "29781756"
                                             <div class="cardText">
                                                 <h3>移动设备管理</h3>
                                                 <p><a href="/sccm/mdm/understand/hybrid-mobile-device-management">了解混合移动设备管理</a></p>
-                                                <p><a href="/sccm/mdm/deploy-use/setup-hybrid-mdm">使用 Intune 设置混合 MDM</a></p>
-                                                <p><a href="/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management">在 Intune 独立版和带 Configuration Manager 的混合 MDM 之间进行选择</a></p>
+                                                <p><a href="/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa">将混合 MDM 用户及其设备迁移至 Intune 独立版</a></p>
+                                                <p><a href="/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management">混合 MDM 中的新增功能</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -344,7 +344,7 @@ ms.locfileid: "29781756"
                                 </a>
                             </li>
                             <li>
-                                <a href="/sccm/mdm/deploy-use/setup-hybrid-mdm">
+                                <a href="/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -354,8 +354,8 @@ ms.locfileid: "29781756"
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>使用 Intune 设置混合 MDM</h3>
-                                                <p>启用 BYOD 方案，满足大多数公司拥有的设备管理策略的先决条件。</p>
+                                                <h3>将混合 MDM 用户及其设备迁移至 Intune 独立版</h3>
+                                                <p>使用分阶段方法将混合 MDM 迁移至推荐的 Intune 独立版解决方案。</p>
                                             </div>
                                         </div>
                                     </div>
@@ -363,7 +363,7 @@ ms.locfileid: "29781756"
                                 </a>
                             </li>
                             <li>
-                                <a href="/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management">
+                                <a href="/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
@@ -373,8 +373,8 @@ ms.locfileid: "29781756"
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>在 Intune 独立版和带 Configuration Manager 的混合 MDM 之间进行选择</h3>
-                                                <p>Intune 独立版或混合 MDM？ 为什么选择其中之一？ </p>
+                                                <h3>混合 MDM 中的新增功能</h3>
+                                                <p>了解混合 MDM 支持的 Intune 中的新增功能。</p>
                                             </div>
                                         </div>
                                     </div>
