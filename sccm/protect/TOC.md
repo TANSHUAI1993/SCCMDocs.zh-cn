@@ -29,7 +29,6 @@
 ## [证书配置文件](deploy-use/introduction-to-certificate-profiles.md)
 ### [创建证书配置文件](deploy-use/create-certificate-profiles.md)
 ### [配置证书基础结构](deploy-use/certificate-infrastructure.md)
-### [加密控制技术参考](deploy-use/cryptographic-controls-technical-reference.md)
 
 ## [Endpoint Protection](deploy-use/endpoint-protection.md)
 ### [配置 Endpoint Protection](deploy-use/endpoint-protection-configure.md)

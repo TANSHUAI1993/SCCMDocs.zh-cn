@@ -93,6 +93,7 @@
 ###  [隐私声明 – Configuration Manager Cmdlet 库](plan-design/security/privacy-statement-cmdlet-library.md)
 ###  [其他隐私信息](plan-design/security/additional-privacy.md)
 ###  [配置安全性](plan-design/security/configure-security.md)
+###  [加密控制技术参考](plan-design/security/cryptographic-controls-technical-reference.md)
 
 #    入门
 ##   [在实验室中评估 Configuration Manager](get-started/evaluate-with-lab-environment.md)
