@@ -1,26 +1,22 @@
 # 了解和探索
-## [操作系统部署简介](understand/introduction-to-operating-system-deployment.md)
-## [任务序列步骤](understand/task-sequence-steps.md)
-## [任务序列操作变量](understand/task-sequence-action-variables.md)
-## [任务序列内置变量](understand/task-sequence-built-in-variables.md)
-## [任务序列媒体的预启动命令](understand/prestart-commands-for-task-sequence-media.md)
+## [OS 部署简介](understand/introduction-to-operating-system-deployment.md)
 
 # 规划和设计
-## [操作系统部署的基础架构要求](plan-design/infrastructure-requirements-for-operating-system-deployment.md)
+## [OS 部署的基础架构要求](plan-design/infrastructure-requirements-for-operating-system-deployment.md)
 ## [自动执行任务的规划注意事项](plan-design/planning-considerations-for-automating-tasks.md)
-## [操作系统部署的安全和隐私](plan-design/security-and-privacy-for-operating-system-deployment.md)
-## [规划操作系统部署互操作性](plan-design/planning-for-operating-system-deployment-interoperability.md)
+## [OS 部署的安全和隐私](plan-design/security-and-privacy-for-operating-system-deployment.md)
+## [规划 OS 部署互操作性](plan-design/planning-for-operating-system-deployment-interoperability.md)
 
 # 入门
-## [为操作系统部署准备站点系统角色](get-started/prepare-site-system-roles-for-operating-system-deployments.md)
-## [准备操作系统部署](get-started/prepare-for-operating-system-deployment.md)
+## [为 OS 部署准备站点系统角色](get-started/prepare-site-system-roles-for-operating-system-deployments.md)
+## [准备进行 OS 部署](get-started/prepare-for-operating-system-deployment.md)
 ### [管理启动映像](get-started/manage-boot-images.md)
 #### [自定义启动映像](get-started/customize-boot-images.md)
 
-### [管理操作系统映像](get-started/manage-operating-system-images.md)
-#### [自定义操作系统映像](get-started/customize-operating-system-images.md)
+### [管理 OS 映像](get-started/manage-operating-system-images.md)
+#### [自定义 OS 映像](get-started/customize-operating-system-images.md)
 
-### [管理操作系统升级包](get-started/manage-operating-system-upgrade-packages.md)
+### [管理 OS 升级包](get-started/manage-operating-system-upgrade-packages.md)
 ### [管理驱动程序](get-started/manage-drivers.md)
 ### [管理用户状态](get-started/manage-user-state.md)
 ### [准备未知计算机部署](get-started/prepare-for-unknown-computer-deployments.md)
@@ -47,18 +43,18 @@
 ## [将 Windows 作为一项服务来管理](deploy-use/manage-windows-as-a-service.md)
 ## [创建分阶段部署](deploy-use/create-phased-deployment-for-task-sequence.md)
 ## [管理和监视分阶段部署](deploy-use/manage-monitor-phased-deployments.md)
-## [监视操作系统部署](deploy-use/monitor-operating-system-deployments.md)
+## [监视 OS 部署](deploy-use/monitor-operating-system-deployments.md)
 
 ## [管理任务序列来自动执行任务](deploy-use/manage-task-sequences-to-automate-tasks.md)
-### [创建用于安装操作系统的任务序列](deploy-use/create-a-task-sequence-to-install-an-operating-system.md)
-### [创建用于升级操作系统的任务序列](deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md)
-### [创建用于捕获操作系统的任务序列](deploy-use/create-a-task-sequence-to-capture-an-operating-system.md)
+### [创建用于安装 OS 的任务序列](deploy-use/create-a-task-sequence-to-install-an-operating-system.md)
+### [创建用于升级 OS 的任务序列](deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md)
+### [创建用于捕获 OS 的任务序列](deploy-use/create-a-task-sequence-to-capture-an-operating-system.md)
 ### [创建用于捕获和还原用户状态的任务序列](deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md)
 ### [使用任务序列管理虚拟硬盘](deploy-use/use-a-task-sequence-to-manage-virtual-hard-disks.md)
 
 ## 自定义任务序列应用方案
 ### [创建自定义任务序列](deploy-use/create-a-custom-task-sequence.md)
-### [创建用于非操作系统部署的任务序列](deploy-use/create-a-task-sequence-for-non-operating-system-deployments.md)
+### [创建非 OS 部署的任务序列](deploy-use/create-a-task-sequence-for-non-operating-system-deployments.md)
 ### [管理 BIOS 转换为 UEFI 所采用的任务序列步骤](deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md)
 ### [预先设置 Windows PE 中的 BitLocker](deploy-use/preprovision-bitlocker-in-windows-pe.md)
 
@@ -67,3 +63,10 @@
 ### [创建预留媒体](deploy-use/create-prestaged-media.md)
 ### [创建可启动媒体](deploy-use/create-bootable-media.md)
 ### [创建捕获媒体](deploy-use/create-capture-media.md)
+
+# 技术参考
+## [任务序列步骤](understand/task-sequence-steps.md)
+## [如何使用任务序列变量](understand/using-task-sequence-variables.md)
+## [任务序列变量](understand/task-sequence-variables.md)
+## [任务序列媒体的预启动命令](understand/prestart-commands-for-task-sequence-media.md)
+
