@@ -2,7 +2,7 @@
 title: 备份站点
 titleSuffix: Configuration Manager
 description: 了解如何在 Configuration Manager 中出现故障或数据丢失之前备份站点。
-ms.date: 07/30/2018
+ms.date: 08/24/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: f7832d83-9ae2-4530-8a77-790e0845e12f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 39af53c6ddfdb58f340432aa3392a046cdeef428
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 85ce1c4b5201c29ffa3543357f50a379c1b11e7f
+ms.sourcegitcommit: 84afecee44200e27d1d5bb5ed2d54fd6a8c51617
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39386208"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43053875"
 ---
 # <a name="back-up-a-configuration-manager-site"></a>备份 Configuration Manager 站点
 
@@ -129,7 +129,7 @@ ms.locfileid: "39386208"
 
 
 ## <a name="using-the-afterbackupbat-file"></a>使用 AfterBackup.bat 文件  
-成功备份站点后，备份任务会自动尝试运行名为 AfterBackup.bat 的脚本。 在 `<ConfigMgrInstallationFolder>\Inboxes\Smsbkup` 中的站点服务器上手动创建 AfterBackup.bat 文件。 如果 AfterBackup.bat 文件存在于正确的文件夹中，则该文件会在备份任务完成后自动运行。
+成功备份站点后，备份任务会自动尝试运行名为 AfterBackup.bat 的脚本。 在 `<ConfigMgrInstallationFolder>\Inboxes\Smsbkup.box` 中的站点服务器上手动创建 AfterBackup.bat 文件。 如果 AfterBackup.bat 文件存在于正确的文件夹中，则该文件会在备份任务完成后自动运行。
 
 AfterBackup.bat 文件可以让你在每个备份操作结束时存档备份快照。 它可以自动执行不属于备份站点服务器维护任务的其他备份后任务。 AfterBackup.bat 文件将存档和备份操作结合，从而确保将每个新备份快照存档。
 
