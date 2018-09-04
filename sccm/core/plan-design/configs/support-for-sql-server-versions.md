@@ -1,8 +1,8 @@
 ---
 title: 支持的 SQL Server 版本
 titleSuffix: Configuration Manager
-description: 获取托管 System Center Configuration Manager 站点数据库的 SQL Server 版本和配置要求。
-ms.date: 05/23/2018
+description: 获取托管 Configuration Manager 站点数据库的 SQL Server 版本和配置要求。
+ms.date: 08/14/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,14 +10,14 @@ ms.assetid: 35e237b6-9f7b-4189-90e7-8eca92ae7d3d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 431e26c24794b4854a1aed37ba85d4d44580791c
-ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
+ms.openlocfilehash: aed8014715431a2fb70647ae77f5009e0c89b3ab
+ms.sourcegitcommit: 98c3f7848dc9014de05541aefa09f36d49174784
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "34474269"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42584471"
 ---
-# <a name="supported-sql-server-versions-for-system-center-configuration-manager"></a>System Center Configuration Manager 支持的 SQL Server 版本
+# <a name="supported-sql-server-versions-for-configuration-manager"></a>Configuration Manager 支持的 SQL Server 版本
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
@@ -39,8 +39,8 @@ ms.locfileid: "34474269"
 
 -   SQL Server 的默认或已命名实例。  
 -   多个实例配置。  
--   SQL Server 群集。 请参阅[使用 SQL Server 群集托管站点数据库](../../../core/servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md)。
--   SQL Server AlwaysOn 可用性组。 此选项需要 Configuration Manager 1602 版或更高版本。 有关详细信息，请参阅[通过 SQL Server AlwaysOn 实现适用于 System Center Configuration Manager 的高可用性站点数据库](../../../core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md)。
+-   SQL Server 群集。 请参阅[使用 SQL Server 群集托管站点数据库](/sccm/core/servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database)。
+-   SQL Server AlwaysOn 可用性组。 有关详细信息，请参阅[高可用性站点数据库的 SQL Server AlwaysOn](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database)。
 
 
 ### <a name="secondary-sites"></a>辅助站点  
@@ -55,7 +55,7 @@ ms.locfileid: "34474269"
  -   群集共享卷 (CSV) 上的 SQL Server 群集
  -   SQL Server 数据库镜像技术和对等复制
 
-SQL Server 事务复制仅支持将对象复制到配置为使用[数据库副本](https://technet.microsoft.com/library/mt608546.aspx)的管理点。  
+SQL Server 事务复制仅支持将对象复制到配置为使用[数据库副本](/sccm/core/servers/deploy/configure/database-replicas-for-management-points)的管理点。  
 
 
 
@@ -63,17 +63,17 @@ SQL Server 事务复制仅支持将对象复制到配置为使用[数据库副�
  在含有多个网站的层次结构中，各个网站可以使用不同版本的 SQL Server 托管网站数据库。 只要满足以下各项：
  -  Configuration Manager 支持你使用的 SQL Server 版本。
  -  Microsoft 仍支持你使用的 SQL Server 版本。
- -  SQL Server 支持在两个 SQL Server 版本之间进行复制。  例如，[SQL Server 不支持在 SQL Server 2008 R2 和 SQL Server 2016 之间进行复制](https://docs.microsoft.com/sql/relational-databases/replication/deprecated-features-in-sql-server-replication)。
+ -  SQL Server 支持在两个 SQL Server 版本之间进行复制。 例如，SQL Server 不支持在 SQL Server 2008 R2 和 SQL Server 2016 之间进行复制。 有关详细信息，请参阅 [SQL Server 复制中的弃用功能](https://docs.microsoft.com/sql/relational-databases/replication/deprecated-features-in-sql-server-replication)。
 
 
 
- 除非另行指定，System Center Configuration Manager 的所有活动版本均支持以下版本的 SQL Server。 如果支持新的 SQL Server 版本或添加 Service Pack，则将显示添加该支持的 Configuration Manager 版本。 同样，如果弃用支持，则查找有关受影响的 Configuration Manager 版本的详细信息。   
+ 除非另行指定，否则 Configuration Manager 的所有活动版本均支持以下版本的 SQL Server。 如果支持新的 SQL Server 版本或添加 Service Pack，则将显示添加该支持的 Configuration Manager 版本。 同样，如果弃用支持，则查找有关受影响的 Configuration Manager 版本的详细信息。   
 
 对特定 SQL Server Service Pack 的支持包括累积更新，除非中断对基本 Service Pack 版本的后向兼容性。 如果没有另行说明 Service Pack 版本，则支持是针对不带 Service Pack 的 SQL Server 版本。 将来如果针对某个 SQL Server 版本发布 Service Pack，单独的支持声明将在支持该新的 Service Pack 版本前宣布。
 
 
 > [!IMPORTANT]  
->  为管理中心站点上的数据库使用 SQL Server Standard 时，会限制层次结构可支持的客户端总数。 请参阅[调整大小和扩展数量](../../../core/plan-design/configs/size-and-scale-numbers.md)。
+>  为管理中心站点上的数据库使用 SQL Server Standard 时，会限制层次结构可支持的客户端总数。 请参阅[调整大小和扩展数量](/sccm/core/plan-design/configs/size-and-scale-numbers)。
 
 ### <a name="sql-server-2017-standard-enterprise"></a>SQL Server 2017：标准版、企业版  
 自 [Configuration Manager 版本 1710](/sccm/core/plan-design/changes/whats-new-in-version-1710) 起，此版本的 SQL Server 最低可与以下站点的[累积更新版本 2](https://support.microsoft.com/help/4052574) 一起使用： 
@@ -133,24 +133,8 @@ SQL Server 事务复制仅支持将对象复制到配置为使用[数据库副�
 -   主站点  
 -   辅助站点  
 
-<!-- Support for this service pack version has been dropped by Microsoft    
-### SQL Server 2012 SP2: Standard, Enterprise   
- You can use this version of SQL Server with no minimum cumulative update version for the following sites:  
-
--   A central administration site  
--   A primary site  
--   A secondary site  
--->
-
 ### <a name="sql-server-2008-r2-sp3-standard-enterprise-datacenter"></a>SQL Server 2008 R2 SP3：标准版、企业版、数据中心版     
-  [从版本 1702 开始](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-support-for-sql-server-versions-as-a-site-database)，不支持此版本的 SQL Server。  
- 在使用 1702 之前版本的 Configuration Manager 时，此版本的 SQL Server 仍受支持。
-
-受 Configuration Manager 版本支持时，可将此版本的 SQL Server 与以下站点的非最低累积更新版本一起使用：  
-
--   管理中心站点  
--   主站点
--   辅助站点
+  不支持此版本的 SQL Server。 有关详细信息，请参阅 [SQL Server 版本作为站点数据库的已弃用支持](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-support-for-sql-server-versions-as-a-site-database)。  
 
 ### <a name="sql-server-2017-express"></a>SQL Server 2017 Express   
 自 [Configuration Manager 版本 1710](/sccm/core/plan-design/changes/whats-new-in-version-1710) 起，此版本的 SQL Server 最低可与以下站点的[累积更新版本 2](https://support.microsoft.com/help/4052574) 一起使用：
@@ -185,12 +169,6 @@ SQL Server 事务复制仅支持将对象复制到配置为使用[数据库副�
 
 -   辅助站点  
 
-<!-- Support for this service pack version has been dropped by Microsoft   
-### SQL Server 2012 Express SP2   
- You can use this version of SQL Server with no minimum cumulative update version for the following sites:  
-
--   A secondary site  
--->
 
 
 ##  <a name="bkmk_SQLConfig"></a> SQL Server 所需的配置  
@@ -202,7 +180,7 @@ SQL Server 事务复制仅支持将对象复制到配置为使用[数据库副�
 ### <a name="database-collation"></a>数据库排序规则  
  在每个站点上，用于站点和站点数据库的 SQL Server 实例必须使用以下排序规则： **SQL_Latin1_General_CP1_CI_AS**。  
 
- Configuration Manager 支持对此排序规则的两种例外情况，以满足在 GB18030 中定义的标准，以便在中国使用。 有关详细信息，请参阅 [System Center Configuration Manager 的国际支持](../../../core/plan-design/hierarchy/international-support.md)。  
+ Configuration Manager 支持对此排序规则的两种例外情况，以满足在 GB18030 中定义的标准，以便在中国使用。 有关详细信息，请参阅[国际支持](/sccm/core/plan-design/hierarchy/international-support)。  
 
 ### <a name="database-compatibility-level"></a>数据库兼容性级别   
  Configuration Manager 要求站点数据库的兼容性级别不低于 Configuration Manager 版本支持的最低 SQL Server 版本。 例如，从版本 1702 开始，需要有高于或等于 110 的[数据库兼容性级别](https://docs.microsoft.com/sql/relational-databases/databases/view-or-change-the-compatibility-level-of-a-database)。 <!-- SMS.506266--> 
@@ -210,16 +188,16 @@ SQL Server 事务复制仅支持将对象复制到配置为使用[数据库副�
 ### <a name="sql-server-features"></a>SQL Server 功能  
  仅“数据库引擎服务”  功能是每个站点服务器所必需的。  
 
- Configuration Manager 数据库复制不需要“SQL Server 复制”功能。 但是，当你使用 [System Center Configuration Manager 管理点的数据库副本](../../../core/servers/deploy/configure/database-replicas-for-management-points.md)时，则需进行此 SQL Server 配置。  
+ Configuration Manager 数据库复制不需要“SQL Server 复制”功能。 但是，当你使用[管理点的数据库副本](/sccm/core/servers/deploy/configure/database-replicas-for-management-points)时，则需进行此 SQL Server 配置。  
 
 ### <a name="windows-authentication"></a>Windows 身份验证  
  Configuration Manager 需要“Windows 身份验证”来验证与数据库的连接。  
 
 ### <a name="sql-server-instance"></a>SQL Server 实例  
- 必须为每个站点使用专用的 SQL Server 实例。 此实例可以为命名实例或默认实例。  
+ 为每个站点使用专用的 SQL Server 实例。 此实例可以为命名实例或默认实例。  
 
 ### <a name="sql-server-memory"></a>SQL Server 内存  
- 通过使用 SQL Server Management Studio 和设置“服务器内存选项”下的“最小服务器内存”设置来保留 SQL Server 的内存。 有关如何配置此设置的详细信息，请参阅[如何：设置固定内存量 (SQL Server Management Studio)](http://go.microsoft.com/fwlink/p/?LinkId=233759)。  
+ 通过使用 SQL Server Management Studio 和设置“服务器内存选项”下的“最小服务器内存”设置来保留 SQL Server 的内存。 有关如何配置此设置的详细信息，请参阅 [SQL Server 内存服务器配置选项](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options)。  
 
 -   对于与站点服务器安装在同一台计算机上的数据库服务器：将 SQL Server 的内存限制为可用可寻址系统内存的 50% 到 80%。  
 
@@ -232,10 +210,10 @@ SQL Server 事务复制仅支持将对象复制到配置为使用[数据库副�
     -   对于辅助站点：设置至少 4 千兆字节 (GB)。  
 
 ### <a name="sql-nested-triggers"></a>SQL 嵌套触发器  
- 必须启用[SQL 嵌套触发器](http://go.microsoft.com/fwlink/?LinkId=528802) 。  
+ 必须启用 SQL 嵌套触发器。 有关详细信息，请参阅[配置嵌套触发器服务器配置选项](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option) 
 
 ### <a name="sql-server-clr-integration"></a>SQL Server CLR 集成  
-  站点数据库要求启用 SQL Server 公共语言运行时 (CLR)。 这在 Configuration Manager 安装时会自动启用。 有关 CLR 的详细信息，请参阅 [SQL Server CLR 集成简介](https://msdn.microsoft.com/library/ms254498\(v=vs.110\).aspx)  
+  站点数据库要求启用 SQL Server 公共语言运行时 (CLR)。 此选项在 Configuration Manager 安装时会自动启用。 有关 CLR 的详细信息，请参阅 [SQL Server CLR 集成简介](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration)  
 
 
 
@@ -247,7 +225,7 @@ SQL Server 事务复制仅支持将对象复制到配置为使用[数据库副�
 
 -   低权限域用户帐户：  
 
-    -   这是最佳做法，并且可能要求你手动注册该帐户的服务主体名称 (SPN)。  
+    -   此配置是最佳做法，并且可能要求你手动注册该帐户的服务主体名称 (SPN)。  
 
 -   运行 SQL Server 的计算机的**本地系统**帐户：  
 
@@ -255,11 +233,11 @@ SQL Server 事务复制仅支持将对象复制到配置为使用[数据库副�
     -   使用本地系统帐户时，Configuration Manager 将自动注册 SQL Server 服务的 SPN。  
     -   为 SQL Server 服务使用本地系统帐户不是 SQL Server 最佳做法。  
 
-运行 SQL Server 的计算机不使用其本地系统帐户运行 SQL Server 服务时，必须配置帐户的 SPN，该帐户在 Active Directory 域服务中运行 SQL Server 服务。 （使用系统帐户时，将为你自动注册 SPN。）
+运行 SQL Server 的计算机不使用其本地系统帐户运行 SQL Server 服务时，配置帐户的 SPN，该帐户在 Active Directory 域服务中运行 SQL Server 服务。 （使用系统帐户时，将为你自动注册 SPN。）
 
-有关站点数据库 SPN 的信息，请参阅[修改 System Center Configuration Manager 基础结构](../../../core/servers/manage/modify-your-infrastructure.md)一文中的[管理站点数据库服务器的 SPN](../../../core/servers/manage/modify-your-infrastructure.md#bkmk_SPN)。  
+有关站点数据库 SPN 的信息，请参阅[管理站点数据库服务器的 SPN](/sccm/core/servers/manage/modify-your-infrastructure#bkmk_SPN)。  
 
-有关如何更改 SQL Server 服务所使用帐户的信息，请参阅[如何：为 SQL Server（SQL Server 配置管理器）更改服务启动帐户](http://go.microsoft.com/fwlink/p/?LinkId=237661)。  
+有关如何更改 SQL Server 服务使用的帐户的信息，请参阅 [SCM 服务 - 更改服务启动帐户](https://docs.microsoft.com/sql/database-engine/configure-windows/scm-services-change-the-service-startup-account)。  
 
 ### <a name="sql-server-reporting-services"></a>SQL Server Reporting Services  
 SQL Server Reporting Services 是安装可运行报表的 Reporting Services 点的必需条件。  
@@ -286,12 +264,16 @@ SQL Server Reporting Services 是安装可运行报表的 Reporting Services 点
 
 如果在运行 SQL Server 的计算机上启用防火墙，请确保将防火墙配置为不阻止你的部署使用的端口，以及位于与 SQL Server 通信的计算机之间的网络上任何位置处的端口。  
 
-有关演示如何将 SQL Server 配置为使用指定的端口的示例，请参阅 SQL Server TechNet 库中的 [如何：将服务器配置为侦听特定的 TCP 端口 (SQL Server Configuration Manager)](http://go.microsoft.com/fwlink/p/?LinkID=226349) 。  
+有关如何将 SQL Server 配置为使用特定端口的示例，请参阅[将服务器配置为侦听特定的 TCP 端口](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port)。  
 
 
 
 ## <a name="upgrade-options-for-sql-server"></a>SQL Server 的升级选项
-如果需要升级 SQL Server 版本，建议采用以下由易到难的方法。
-1. [就地升级 SQL Server](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#a-namebkmksupconfigupgradedbsrva-upgrade-sql-server-on-the-site-database-server)（推荐）。
-2. 在新计算机上安装新版本的 SQL Server，然后使用 Configuration Manager 设置的[数据库移动选项](/sccm/core/servers/manage/modify-your-infrastructure#a-namebkmkdbconfiga-modify-the-site-database-configuration)将站点服务器指向新的 SQL Server。
-3. 使用[备份和恢复](/sccm/protect/understand/backup-and-recovery)。 支持在 SQL 升级方案中使用备份和恢复。 在查看[恢复站点前的注意事项](/sccm/protect/understand/recover-sites.md#considerations-before-recovering-a-site)时，可以忽略 SQL 版本控制要求。 
+
+如果需要升级 SQL Server 版本，请使用以下方法（难度从简单到复杂）：  
+
+- [就地升级 SQL Server](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#a-namebkmksupconfigupgradedbsrva-upgrade-sql-server-on-the-site-database-server)（推荐）  
+
+- 在新计算机上安装新版本的 SQL Server，然后使用 Configuration Manager 设置的[数据库移动选项](/sccm/core/servers/manage/modify-your-infrastructure#a-namebkmkdbconfiga-modify-the-site-database-configuration)将站点服务器指向新的 SQL Server  
+
+- 使用[备份和恢复](/sccm/protect/understand/backup-and-recovery)。 支持在 SQL 升级方案中使用备份和恢复。 在查看[恢复站点前的注意事项](/sccm/protect/understand/recover-sites#considerations-before-recovering-a-site)时，可以忽略 SQL 版本控制要求。 

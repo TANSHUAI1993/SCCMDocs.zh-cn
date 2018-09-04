@@ -10,12 +10,12 @@ ms.assetid: 7996b3eb-5259-483b-af40-adae2943d123
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 24cb16ab17475bdd063949c7e3e2961b53341026
-ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
+ms.openlocfilehash: 21833d124ee998f0b943d2620370a2fcff264e28
+ms.sourcegitcommit: 7eebd112a9862bf98359c1914bb0c86affc5dbc0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "34450145"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42591639"
 ---
 # <a name="capabilities-in-technical-preview-1805-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1805 中的功能
 
@@ -166,7 +166,7 @@ Windows 低额外延迟后台传输 (LEDBAT) 是 Windows Server 的一项功能�
 ### <a name="prerequisites"></a>先决条件
 - Windows Server 版本 1709 上的一个分发点。  
 
-- 至少运行 Windows 10 版本 1607 的客户端设备。
+- 没有客户端先决条件。<!--SCCMDocs issue 699-->  
 
 
 ### <a name="try-it-out"></a>试试看！

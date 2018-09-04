@@ -24,7 +24,7 @@ ms.locfileid: "39383993"
 ## <a name="switch-configuration-manager-workloads-to-intune"></a>将 Configuration Manager 工作负荷切换到 Intune
 
 1. 在 Configuration Manager 控制台中，转到“管理” > “概述” > “云服务” > “共同管理”。    
-2. 在“主页”选项卡的“管理”组中，选择“配置共同管理”以打开“共同管理配置”向导 ****。    
+2. 在“主页”选项卡的“管理”组中，选择“配置共同管理”以打开“共同管理配置”向导。 ****    
 3. 在“订阅”页中，单击“登录”并登录到 Intune 租户，然后单击“下一步”。   
 4. 在“启用”页中，选择“试点”或“全部”，在 Intune 中启用自动注册，然后单击“下一步”。 如果选择“试点”，仅属于试点组成员的 Configuration Manager 客户端可在 Intune 中自动注册。 此选项允许对客户端子集启用共同管理，以初步测试共同管理，并使用分阶段的方式推出共同管理。 对于已在 Intune 中注册的设备，命令行可以用于将 Configuration Manager 客户端部署为 Intune 中的应用。 有关详细信息，请参阅[在 Intune 中注册的 Windows 10 设备](co-management-prepare.md#windows-10-devices-enrolled-in-intune)。
 5. 在“工作负荷”页中选择是否将 Configuration Manager 工作负荷切换为由试点 Intune 或 Intune 托管，然后单击“下一步”。 “试点 Intune”设置只为试点组中的设备切换已关联工作负荷。 “Intune”设置则为所有共同管理的 Windows 10 设备切换已关联工作负荷。 
