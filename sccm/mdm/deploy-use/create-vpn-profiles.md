@@ -10,12 +10,12 @@ ms.assetid: 45388103-2410-4c7e-b4cf-73a1bda485fc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9409b6cc71ea238755f40baf75e6211c447b547f
-ms.sourcegitcommit: 826e9ec385d6a1c1f3aa86ac202883154e0c1285
+ms.openlocfilehash: fdeb9d258c5c80fdd8d98d61943ace5469837d3d
+ms.sourcegitcommit: aca62bd3d267b1dbea46d4db6f32d797c5f6263c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37116491"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348012"
 ---
 # <a name="vpn-profiles-on-mobile-devices-in-system-center-configuration-manager"></a>System Center Configuration Manager 中移动设备上的 VPN 配置文件
 
@@ -61,7 +61,7 @@ ms.locfileid: "37116491"
   
   
 > [!Note]  
-> 混合 MDM 中的 VPN 配置文件不支持 F5 Access 2018。  
+> 适用于 iOS 的 F5 Access 版本 3.0 及更高版本不支持混合 MDM 中的 VPN 配置文件。 本产品也称为 F5 Access 2018。 如果需要为此 VPN 客户端创建 VPN 配置文件，请使用 Intune 独立版。 未来版本的 iOS，包括版本 12，将不支持 F5 Access 版本 2.1 或更低版本。 有关详细信息，请参阅 [Microsoft Intune 支持团队博客](https://aka.ms/iOS12_and_VPN)。
 
 
 ## <a name="windows-10-vpn-features-available-when-using-configuration-manager-with-intune"></a>将 Configuration Manager 与 Intune 结合使用时可用的 Windows 10 VPN 功能  

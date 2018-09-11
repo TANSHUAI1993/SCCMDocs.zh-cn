@@ -4,17 +4,18 @@ titleSuffix: Configuration Manager
 description: 了解如何通过 Configuration Manager 中的云管理网关和基于 Internet 的客户端管理来管理客户端。
 ms.date: 03/22/2018
 ms.prod: configuration-manager
+ms.topic: conceptual
 ms.technology: configmgr-client
 ms.assetid: c667d6af-80c4-485f-910c-896c0171fd00
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6296a171f2ef225dbbf647eb5e53103650d60c11
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 198b044a66bf81ea846d5e4febe655b78c04dd13
+ms.sourcegitcommit: 316899b08f2ef372993909e08e069f7edfed1d33
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32332254"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44111070"
 ---
 # <a name="manage-clients-on-the-internet-with-configuration-manager"></a>使用 Configuration Manager 管理 Internet 上的客户端
 

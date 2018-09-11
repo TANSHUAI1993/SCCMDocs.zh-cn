@@ -2,7 +2,7 @@
 title: 1806 版中的新增功能
 titleSuffix: Configuration Manager
 description: 获取有关 Configuration Manager Current Branch 1806 版中引入的更改和新功能的详细信息。
-ms.date: 07/31/2018
+ms.date: 08/29/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 0249dbd3-1e85-4d05-a9e5-420fbe44d850
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1c6ae28a50f3145420895b295ebe730fb7b2a9a7
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 89742711f17997487fec403d51c89a42ceff34ec
+ms.sourcegitcommit: 52ec30245ba559596d2f88a3eff70c467b4a056f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39386058"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43381034"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 1806 版中的新增功能
 
@@ -23,12 +23,12 @@ ms.locfileid: "39386058"
 
 Configuration Manager Current Branch 的 1806 更新作为控制台中更新提供。 将此更新应用于运行 1706、1710 或 1802 版的站点。 <!-- baseline only statement: When installing a new site, it's also available as a baseline version.-->
 
+始终查看安装此更新的最新清单。 有关详细信息，请参阅 [1806 的安装更新清单](/sccm/core/servers/manage/checklist-for-installing-update-1806)。 更新站点后，还可以查看[更新后清单](/sccm/core/servers/manage/checklist-for-installing-update-1806#post-update-checklist)。
+
 > [!Important]  
 > 本文目前列出了此版本中的所有重要功能。 但是，并非所有部分都链接到更新的内容并提供有关新功能的进一步信息。 定期查看此页面以获取更新。 我们使用 [已更新] 标记标注更改。 内容最终确定后，将删除此标注。  
 
-<!--
-Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in System Center Configuration Manager current branch, version 1806](https://support.microsoft.com/help/4101375).
--->
+除了新增功能外，这一版还有其他变化（如缺陷修复）。 有关详细信息，请参阅 [System Center Configuration Manager Current Branch（版本 1806）的更改摘要](https://support.microsoft.com/help/4459701)。
 
 <!--
 The following additional updates to this release are also now available:
@@ -40,10 +40,13 @@ The following additional updates to this release are also now available:
 
 
 
-<!--
-## Deprecated features and operating systems
-Learn about support changes before they are implemented in [removed and deprecated items](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated).
+## <a name="deprecated-features-and-operating-systems"></a>弃用的功能和操作系统
 
+在[已删除和已启用的项](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated)中实施支持更改之前，先了解这些更改。
+
+[已更新]截至 2018 年 8 月 14 日，混合移动设备管理功能已弃用。 有关详细信息，请参阅[什么是混合 MDM](/sccm/mdm/understand/hybrid-mobile-device-management)。<!--Intune feature 2683117-->  
+
+<!--
 Version 1806 drops support for the following products:
 -->
 
@@ -84,7 +87,10 @@ Version 1806 drops support for the following products:
 
 
 ### <a name="exclude-active-directory-containers-from-discovery"></a>从发现中排除 Active Directory 容器
-<!--1358143--> 若要减少发现的对象数，请从 Active Directory 系统发现中排除特定容器。 
+<!--1358143-->
+[已更新] 若要减少发现的对象数，请从 Active Directory 系统发现中排除特定容器。 
+
+有关详细信息，请参阅[配置 Active Directory 系统发现](/sccm/core/servers/deploy/configure/configure-discovery-methods#bkmk_config-adsd)。
 
 
 
@@ -125,11 +131,14 @@ Version 1806 drops support for the following products:
 
 
 ### <a name="boundary-group-options-for-peer-downloads"></a>对等下载适用的边界组选项
-<!--1356193-->边界组现在包含其他设置，可以让你更好地控制环境中的内容分发。 此版本添加了以下选项：  
+<!--1356193-->
+[已更新]边界组现在包含更多设置，可以让你更好地控制环境中的内容分发。 此版本添加了以下选项：  
 
-- **在此边界组中允许对等下载**：默认情况下启用此设置。 管理点向客户端提供包含对等源的内容位置的列表。 此设置还会影响交付优化组 ID 的使用。  
+- **允许在此边界组中进行对等下载**：管理点向客户端提供包含对等源的内容位置的列表。 此设置还会影响交付优化组 ID 的使用。  
 
-- **在对等下载期间，仅使用同一子网内的对等项**：此设置取决于上面那个选项。 如果启用此选项，管理点将仅包含与客户端在同一子网中的内容位置列表对等源。  
+- **对等下载期间，只能使用同一子网内的对等设备**：如果启用此选项，管理点将仅包含与客户端在同一子网中的内容位置列表对等源。  
+
+有关详细信息，请参阅[对等下载适用的边界组选项](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions)。
 
 
 
@@ -288,17 +297,10 @@ Version 1806 drops support for the following products:
 
 
 ### <a name="package-conversion-manager"></a>包转换管理器 
-<!--1357861--> 包转换管理器现在是一个集成工具，你可以通过该工具将旧的 Configuration Manager 2007 包转换为 Configuration Manager Current Branch 应用程序。 然后，可以使用应用程序的功能，如依赖关系、要求规则和用户设备相关性。
+<!--1357861-->
+[已更新] 包转换管理器现在是一个集成工具，你可以通过该工具将旧的包转换为 Configuration Manager Current Branch 应用程序。 然后，可以使用应用程序的功能，如依赖关系、要求规则和用户设备相关性。
 
-用户可以在 Configuration Manager 控制台中的“包”节点上开始执行以下操作：  
-
-   - **分析包**：通过分析包开始转换过程。  
-
-   - **转换包**：某些包可以通过此操作轻松地转换为应用程序。  
-
-   - **修复和转换**：有些包需要在转换为应用程序之前进行问题修复。  
-
-然后转到“监视”工作区中“包转换状态”仪表板。 这个新的仪表板显示站点中包的整体分析和转换状态。 此功能是[预发布功能](/sccm/core/servers/manage/pre-release-features)。
+有关详细信息，请参阅[包转换管理器](/sccm/apps/pcm/package-conversion-manager)。
 
 
 
@@ -348,16 +350,36 @@ Version 1806 drops support for the following products:
 ### <a name="other-improvements-to-os-deployment"></a>对 OS 部署的其他改进
 
 #### <a name="mask-sensitive-data-stored-in-task-sequence-variables"></a>屏蔽任务序列变量中存储的敏感数据
-<!--1358330--> 在[设置任务序列变量](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable)步骤中，选择新选项“不显示此值”。 例如，指定密码时。 
+ <!--1358330--> [已更新] 在“设置任务序列变量”步骤中，选择新选项“不显示此值”。 
+
+ 有关详细信息，请参阅[设置任务序列变量](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable)。 
 
 #### <a name="mask-program-name-during-run-command-step-of-a-task-sequence"></a>在执行任务序列的“运行命令步骤”期间屏蔽程序名称
-<!--1358493--> 若要禁止显示或记录潜在的敏感数据，请将任务序列变量“OSDDoNotLogCommand”设置为 `TRUE`。 此变量在[运行命令行](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine)任务序列步骤中隐藏 smsts.log 中的程序名称。   
+ <!--1358493--> [已更新] 若要禁止显示或记录潜在的敏感数据，请配置任务序列变量“OSDDoNotLogCommand”。  
+
+ 有关详细信息，请参阅[任务序列变量](/sccm/osd/understand/task-sequence-variables#OSDDoNotLogCommand)。 
 
 #### <a name="task-sequence-variable-for-dism-parameters-when-installing-drivers"></a>安装驱动程序时 DISM 参数的任务序列变量
-<!--516679--> 要为 DISM 指定其他命令行参数，请使用新的任务序列变量 OSDInstallDriversAdditionalOptions。 启用[应用驱动程序包](/sccm/osd/understand/task-sequence-steps#BKMK_ApplyDriverPackage)步骤设置，以“使用递归选项通过运行 DISM 来安装驱动程序包”。 
+ <!--516679/2840016--> [已更新] 要为 DISM 指定其他命令行参数，请使用新的任务序列变量“OSDInstallDriversAdditionalOptions”。 
+
+ 有关详细信息，请参阅[任务序列变量](/sccm/osd/understand/task-sequence-variables#OSDInstallDriversAdditionalOptions)。 
 
 #### <a name="option-to-use-full-disk-encryption"></a>“使用全磁盘加密”选项
-<!--SCCMDocs-pr issue 2671--> [启用 BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_EnableBitLocker) 和[预配 BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_PreProvisionBitLocker) 步骤现在都包含“使用全磁盘加密”选项。 默认情况下，这些步骤会加密驱动器上的已用空间。 建议使用此默认行为，因为它更加快速高效。 如果贵组织需要在安装期间加密整个驱动器，请启用此选项。 Windows 安装程序会等待整个驱动器加密，所需时间较长（尤其是在大型驱动器上）。 
+ <!--SCCMDocs-pr issue 2671--> [已更新]“启用 BitLocker”和“预配 BitLocker”步骤现在都包含“使用全磁盘加密”选项。 默认情况下，这些步骤会加密驱动器上的已用空间。 建议使用此默认行为，因为它更加快速高效。 
+
+ 有关详细信息，请参阅[启用 BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_EnableBitLocker) 和[预配 BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_PreProvisionBitLocker)。 
+
+#### <a name="client-provisioning-mode-isnt-enabled-with-windows-10-upgrade-compatibility-scan"></a>未对 Windows 10 升级兼容性扫描启用客户端预配模式
+ <!--SCCMDocs-pr issue 2812--> [已更新] 现在当你启用“在不启动升级的情况下执行 Windows 安装程序兼容性扫描”选项，“升级操作系统”任务序列步骤不会使配置管理器客户端进入预配模式。
+
+ 有关详细信息，请参阅[升级操作系统](/sccm/osd/understand/task-sequence-steps#BKMK_UpgradeOS)
+
+#### <a name="revised-documentation-for-task-sequence-variables"></a>任务序列变量的修订文档
+ [已更新] 两篇新文章现在都可用于了解任务序列变量：  
+
+ - [如何使用任务序列变量](/sccm/osd/understand/using-task-sequence-variables)是一篇新文章，介绍不同类型的变量、设置变量的方法，以及如何访问变量。  
+
+ - [任务序列变量](/sccm/osd/understand/task-sequence-variables)是对所有可用任务序列变量的引用。 本文将结合之前的文章，以将内置变量与操作变量相分离。 
 
 
 
@@ -509,7 +531,7 @@ Version 1806 drops support for the following products:
 
 ## <a name="next-steps"></a>后续步骤
 
-准备好安装此版本时，请参阅 [安装 Configuration Manager 的更新](/sccm/core/servers/manage/updates)。
+准备好安装此版本时，请参阅[安装 Configuration Manager 的更新](/sccm/core/servers/manage/updates)和 [1806 安装更新清单](/sccm/core/servers/manage/checklist-for-installing-update-1806)。
 
 > [!TIP]  
 > 若要安装新站点，请使用 Configuration Manager 的基准版本。  
@@ -519,3 +541,5 @@ Version 1806 drops support for the following products:
 >   - [基准和更新版本](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)  
 
 关于已知的重要问题，请参阅[发行说明](/sccm/core/servers/deploy/install/release-notes)。
+
+更新站点后，还可以查看[更新后清单](/sccm/core/servers/manage/checklist-for-installing-update-1806#post-update-checklist)。

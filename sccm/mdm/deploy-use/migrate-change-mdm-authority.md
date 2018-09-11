@@ -3,18 +3,19 @@ title: 将 MDM 机构更改为 Intune
 titleSuffix: Configuration Manager
 description: 了解如何将 MDM 机构从 Configuration Manager（混合）更改为 Intune 独立版。
 author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ms.date: 12/05/2017
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: be503ec9-5324-4f7c-bcf5-77204328e99c
-ms.openlocfilehash: b295dad503b801ff9d04767f75c1688107016d0b
-ms.sourcegitcommit: 493cc42f05b9388ef872e466e5a75d569642b9fc
+ms.openlocfilehash: d5efcb78ad5e732691cc2f214f81db0b357e0e19
+ms.sourcegitcommit: 316899b08f2ef372993909e08e069f7edfed1d33
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34569674"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44111104"
 ---
 # <a name="change-your-mdm-authority-to-intune-standalone"></a>将 MDM 机构更改为 Intune 独立版
 

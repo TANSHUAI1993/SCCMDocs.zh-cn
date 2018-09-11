@@ -3,18 +3,19 @@ title: 准备 Intune 以进行用户迁移
 titleSuffix: Configuration Manager
 description: 了解如何在 Azure 上准备 Intune，以便从混合 MDM 迁移用户。
 author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ms.date: 12/05/2017
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: db97ae9e-34f4-4e10-a282-cd211f612bb4
-ms.openlocfilehash: 0d71abbe33def6e12e75c2042e48f3d7ddcfe5c6
-ms.sourcegitcommit: 06d490d526070e17d77e86bc6c200899ded911cb
+ms.openlocfilehash: 7f4302071f9cd53576bb2b2922730ab9a0e897ff
+ms.sourcegitcommit: 316899b08f2ef372993909e08e069f7edfed1d33
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38967141"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44111053"
 ---
 # <a name="prepare-intune-for-user-migration"></a>准备 Intune 以进行用户迁移 
 

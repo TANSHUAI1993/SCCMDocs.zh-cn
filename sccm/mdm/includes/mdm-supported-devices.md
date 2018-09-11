@@ -5,7 +5,7 @@
 - 运行 Windows 10（家庭版、专业版、教育版和企业版）的电脑
 - 运行 Windows 10 IoT 企业版（x86、x64）的设备
 - 运行 Windows 10 IoT 移动企业版的设备
-- Windows 全息版及 Windows 全息企业版
+- Windows Holographic for Business
 - Mac OS X 10.9 及更高版本
 - Windows Phone 8.1、运行 Windows 8.1 和 Windows 8.1 RT 的电脑处于维护模式（不支持 Windows Embedded 8.1 Handheld）
 

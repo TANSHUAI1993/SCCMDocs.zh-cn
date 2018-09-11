@@ -3,18 +3,19 @@ title: 将数据导入 Microsoft Intune
 titleSuffix: Configuration Manager
 description: 将 Configuration Manager 数据导入 Microsoft Intune
 author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ms.date: 12/05/2017
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: b552391d-abc0-48a2-a429-93605a13a66a
-ms.openlocfilehash: dcd84e484f55cb799953bea83be917055ca1292a
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 89db0abe9a60e6850ae36e619483e0dcdc3e5360
+ms.sourcegitcommit: 316899b08f2ef372993909e08e069f7edfed1d33
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350691"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44111138"
 ---
 # <a name="import-configuration-manager-data-to-microsoft-intune"></a>将 Configuration Manager 数据导入 Microsoft Intune 
 

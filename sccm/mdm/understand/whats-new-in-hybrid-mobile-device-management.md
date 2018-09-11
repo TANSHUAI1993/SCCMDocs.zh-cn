@@ -2,7 +2,7 @@
 title: 混合 MDM 中的新增功能
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 和 Intune 的混合部署可用的新移动设备管理功能。
-ms.date: 08/01/2018
+ms.date: 08/29/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,18 +10,22 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cdb5720778366cea951476ad9b314b69bdd0c492
-ms.sourcegitcommit: 6e0e5b4b7779ce03e2b56b3b5f68f4ace1acedd8
+ms.openlocfilehash: 87a40300cfe13ec097d155093fbb7b70af3b459c
+ms.sourcegitcommit: 8661f10596f565ca2b7bdb5951388b44b3b622ee
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467600"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43193912"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Configuration Manager 和 Microsoft Intune 的混合移动设备管理中的新增功能
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
 本文提供有关 System Center Configuration Manager 和 Microsoft Intune 的混合部署的可用的新移动设备管理 (MDM) 功能的详细信息。     
+
+> [!Important]  
+> 截至 2018 年 8 月 14 日，混合移动设备管理已是一项[弃用功能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)。 有关详细信息，请参阅[什么是混合 MDM](/sccm/mdm/understand/hybrid-mobile-device-management)。<!--Intune feature 2683117-->  
+
 
 > [!Note]    
 > Azure 上的 Intune 是 Microsoft 建议的 MDM 解决方案。     
@@ -42,10 +46,32 @@ ms.locfileid: "39467600"
 |**Configuration Manager (Current Branch) 中的新增功能**| 此类别下列出的所有功能仅适用于指定的 Configuration Manager (Current Branch) 版本。 如果要为混合部署使用较旧版本的 Configuration Manager，请升级到功能说明中指定的 Configuration Manager (Current Branch) 版本。 有关详细信息，请参阅[升级到 Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)。|
 
 
+## <a name="august-2018"></a>2018 年 8 月
+
+### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
+
+### <a name="new-user-experience-update-for-the-company-portal-website"></a>公司门户网站的新用户体验更新
+<!--2000968--> 根据你的反馈，我们向公司门户网站添加了新功能。 在 Android、iOS 和 Windows 设备中，你将会看到现有功能和可用性体验显著提高。 站点区域已得到全新现代化的响应式设计。 这些区域包括设备详细信息、反馈和支持及设备概述。 此外你还会看到以下改进：
+
+- 简化了跨所有设备平台的工作流
+- 改进了设备标识和注册流
+- 更多有用的错误消息
+- 更友好的语言，减少了专业技术性术语
+- 能够共享指向应用的直接链接
+- 改善了大型应用目录的性能
+- 为所有用户增加了辅助功能
+
+
 
 ## <a name="july-2018"></a>2018 年 7 月
 
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
+
+#### <a name="updated-intune-app-sdk-for-android-is-now-available"></a>现推出了更新的 Intune App SDK for Android
+<!--2744271--> 推出了 Intune App SDK for Android 的更新版本，以支持 Android 9 Pie 版本。 如果你是应用开发人员，并使用 Intune SDK for Android，请安装 Intune app SDK 的更新版本。 此更新确保 Android 应用中的 Intune 功能继续在 Android 9 Pie 设备上正常使用。 此版本的 Intune App SDK 提供了一个内置插件来执行 SDK 更新。 你不必重写任何现有集成代码。 有关详细信息，请参阅 [Intune SDK for Android](https://github.com/msintuneappsdk/ms-intune-app-sdk-android)。 
+
+如果使用的是 Intune 的旧徽章样式，请切换以使用公文包图标。 有关品牌的详细信息，请参阅 [Intune 应用徽章系统](https://github.com/msintuneappsdk/intune-app-partner-badge)。
+
 
 #### <a name="support-for-security-enhancement-in-intune-service"></a>支持 Intune 服务中的安全性增强功能
 <!--2520152-->现可将未分配有任何符合性策略的设备指定为在混合环境中不符合条件。 在 Azure 门户的 Intune 中配置此设置。 强烈建议启用此功能来保护内部资源。
@@ -433,86 +459,11 @@ ms.locfileid: "39467600"
 
 
 
-## <a name="july-2017"></a>2017 年 7 月
-
-### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
-
-- **针对 Android 和 Windows Phone 添加了不再支持的通知**    
-    针对不再支持的 Android 和 Windows Phone 版本添加了新通知。 有关详细信息，请参阅[通知](#notices)。
-
-
-### <a name="new-in-configuration-manager-current-branch"></a>Configuration Manager (Current Branch) 中的新增功能
-
-以下功能以前在 Configuration Manager Technical Preview 版本中提供。 这些功能现在可用于 Intune 和 Configuration Manager (Current Branch) 版本 1706 的混合部署。
-
-- [支持 Entrust 证书颁发机构](/sccm/core/get-started/capabilities-in-technical-preview-1706#support-for-entrust-certification-authorities)
-- [新移动应用程序管理策略设置](/sccm/core/plan-design/changes/whats-new-in-version-1706#new-mobile-application-management-policy-settings)
-- [Android for Work 共享配置更新](/sccm/core/plan-design/changes/whats-new-in-version-1706#updates-to-android-for-work-sharing-configuration)
-- [新设备符合性策略规则](/sccm/core/plan-design/changes/whats-new-in-version-1706#new-device-compliance-policy-rules)
-- [不使用 Configuration Manager 客户端管理的 Windows 10 设备适用的新配置设置](/sccm/core/plan-design/changes/whats-new-in-version-1706#new-configuration-settings-for-windows-10-devices-that-are-not-managed-with-the-configuration-manager-client)
-- [macOS VPN 配置文件的 Cisco (IPSec) 支持](/sccm/core/get-started/capabilities-in-technical-preview-1706#cisco-ipsec-support-for-macos-vpn-profiles)
-- [Android 和 iOS 注册限制](/sccm/core/plan-design/changes/whats-new-in-version-1706#android-and-ios-enrollment-restrictions) 
-
-
-
-## <a name="june-2017"></a>2017 年 6 月
-
-### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
-
-- **更改 MDM 机构**    
-  从 Configuration Manager 1610 版本开始，可以更改 MDM 机构而无需联系 Microsoft 支持部门。 也无需取消注册并重新注册现有的托管设备。 有关详细信息，请参阅[更改 MDM 机构](/sccm/mdm/deploy-use/change-mdm-authority)。
-
-- **Managed Browser 和应用代理集成**    
-  Intune Managed Browser 现在可以与 Azure AD 应用程序代理服务集成，用户即使在远程工作时也可以访问内部网站。 浏览器的用户照常输入网站 URL，Managed Browser 会通过应用程序代理 Web 网关路由请求。 有关详细信息，请参阅[使用 Managed Browser 策略管理 Internet 访问权限](https://docs.microsoft.com/intune/app-configuration-managed-browser)。
-
-- **Android 公司门户应用现在提供全新的应用保护策略最终用户体验**  
-  根据客户反馈，我们修改了适用于 Android 的公司门户应用，现在显示“访问公司内容”按钮。 其目的在于，使最终用户在仅需要访问支持应用保护策略（Intune 移动应用程序管理的一项功能）的应用时，无需完成不必要的注册过程。 在[应用 UI 中的新增功能](https://docs.microsoft.com/intune/whats-new-app-ui)页上可以看到这些更改。
-
-- **可轻松删除公司门户的新菜单操作**  
-  根据用户反馈，适用于 Android 的公司门户应用已添加一个新的菜单操作，用于从设备删除公司门户。 此操作可从 Intune 管理中删除设备，这样用户就可以从设备中删除应用。 有关这些更改，可以参阅[应用 UI 中的新增功能](https://docs.microsoft.com/intune/whats-new-app-ui)页和 [Android 最终用户文档](https://docs.microsoft.com/intune-user-help/unenroll-your-device-from-intune-android)。
-
-- **对与 Windows 10 创意者更新之间的应用同步的改进**  
-  Windows 10 公司门户应用现在自动开始为安装了 Windows 10 创意者更新（版本 1703）的设备同步应用安装请求。 此行为会减少“挂起同步”状态期间出现的应用安装停止问题。 此外，用户还可以在应用中手动启动同步。 在[应用 UI 中的新增功能](https://docs.microsoft.com/intune/whats-new-app-ui)页上可以看到这些更改。
-
-- **Windows 10 公司门户的全新引导式体验**  
-  适用于 Windows 10 的公司门户应用为尚未进行标识或注册的设备提供引导式 Intune 演练体验。 新体验提供分步说明，指导用户完成注册到 Azure Active Directory（条件访问功能需要）和 MDM 注册（设备管理功能需要）的过程。 从公司门户主页可以进入引导式体验。 如果用户没有完成注册，可以继续使用该应用，但可用功能会受到限制。
-
-  此更新仅在运行 Windows 10 周年更新（内部版本 1607）或更高版本的设备上可见。 在[应用 UI 中的新增功能](https://docs.microsoft.com/intune/whats-new-app-ui)页上可以看到这些更改。
-
-- **对适用于 iOS 的公司门户应用中的应用磁贴的改进**  
-  我们更新了主页上的应用磁贴设计，现在可以反映你为公司门户设置的品牌颜色。 有关详细信息，请参阅[应用 UI 中的新增功能](https://docs.microsoft.com/intune/whats-new-app-ui)。
-
-- **帐户选取器现在可用于适用于 iOS 的公司门户应用**  
-  如果 iOS 设备用户使用其工作或学校帐户登录到其他 Microsoft 应用，则他们在登录到公司门户时，可以看到我们的新帐户选取器。 有关详细信息，请参阅[应用 UI 中的新增功能](https://docs.microsoft.com/intune/whats-new-app-ui)。
-
-### <a name="new-in-configuration-manager-technical-preview-1706"></a>Configuration Manager Technical Preview 1706 中的新增功能
-
-- **新 Windows 配置项设置**      
-  新的 Windows 配置项适用于密码、设备、存储和 Microsoft Edge 设置类别。 有关详细信息，请参阅[新 Windows 配置项设置](/sccm/core/get-started/capabilities-in-technical-preview-1706#new-windows-configuration-item-settings)。
-  <!-- 1354715 -->
-
-- **新设备符合性策略规则**   
-  对于以前仅适用于 Intune 独立版本的符合性策略，现在可以为其配置新选项。 有关详细信息，请参阅[设备符合性策略改进](/sccm/core/get-started/capabilities-in-technical-preview-1706#new-device-compliance-policy-rules)。
-
-- **Android 和 iOS 注册限制**       
-  管理员现在可以指定用户不能在其混合环境中注册个人 Android 或 iOS 设备。 此操作允许你将注册的设备限制为预先声明的公司自有设备，或仅注册了“设备注册计划”的 iOS 设备。 有关详细信息，请参阅 [Android 和 iOS 注册限制](/sccm/core/get-started/capabilities-in-technical-preview-1706#android-and-ios-enrollment-restrictions)。
-  <!-- 1290826 -->
-
-- **支持 Entrust 证书颁发机构**      
-  Configuration Manager 现在支持 Entrust 证书颁发机构。 此支持可将 PFX 证书传递到注册到 Microsoft Intune 的设备。    
-  <!-- 1350740 -->
-
-  在 Configuration Manager 中添加“证书注册点”角色时，你可以将 Entrust 配置为证书颁发机构。 在添加颁发 PFX 证书的新证书配置文件时，你可以选择 Microsoft 或 Entrust 证书颁发机构。
-
-  **已知问题**：在 Technical Preview 1706 中，没有为 Microsoft 证书颁发机构颁发 PFX 证书。 此问题不会影响导入的 PFX 证书或 SCEP 配置文件。
-
-- **Cisco (IPsec) 支持 macOS VPN 配置文件**      
-  你可以使用 Cisco (IPsec) 作为连接类型创建 macOS VPN 配置文件。 有关详细信息，请参阅[创建 VPN 配置文件](/sccm/mdm/deploy-use/create-vpn-profiles#create-vpn-profiles)。
-  <!-- 1321367 -->
-
-
-
 ## <a name="notices"></a>通知
+
+### <a name="plan-for-change-use-intune-on-azure-now-for-your-mdm-management"></a>更改计划：立刻使用 Azure 上的 Intune 进行 MDM 管理 
+<!--1227338--> 一年前，我们推出了 [Azure 上 Intune 的公共预览版](https://cloudblogs.microsoft.com/enterprisemobility/2016/12/07/public-preview-of-intune-on-azure/)，六个月前，我们推出了 Intune [新管理员体验的正式版](https://cloudblogs.microsoft.com/enterprisemobility/2017/06/08/the-new-intune-and-conditional-access-admin-consoles-are-ga/)。 自 2018 年 8 月 31 日起，我们将面向使用 Intune 独立版的客户关闭经典 Silverlight 控制台中的移动设备管理 (MDM)。 请改用 [Azure 上的 Intune](https://aka.ms/Intune_on_Azure) 满足 MDM 需求。 如果仍在使用经典控制台进行 MDM，请停止此做法并开始熟悉 Azure 上的 Intune。 我们不希望任何最终用户受到此次更改的影响。 Silverlight 中将保留使用 Intune 的经典电脑管理。 有关详细信息，请参阅 [Intune 支持团队博客文章](https://aka.ms/Intune_on_Azure_mdm)。
+
 
 ### <a name="plan-for-change-upcoming-macos-and-intune-password-enforcement-change"></a>更改计划：即将推出的 macOS 和 Intune 密码强制实施更改
 <!--1873216--> 在 9 月的服务版本中，Intune 计划为运行 macOS 10.13 版本及更高版本的设备集成 Apple 新发布的“在下一次身份验证时更改密码”设置。 在引入此设置之前，MDM 提供程序无法验证设备上的密码是否已更改以确保符合性。 Intune 的配置和符合性策略仅确保密码下一次在设备上发生更改时，它被标记为符合。 在我们集成此 Apple 新功能时，MacOS 用户将收到更新密码的请求，即使其密码已经满足符合性。
