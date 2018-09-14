@@ -309,7 +309,7 @@ Azure 存储服务对于单个文件支持每秒 500 个请求。 单个云分�
 
 ### <a name="azure-management-certificate"></a>Azure 管理证书
 
-经典服务部署需要此证书。Azure 资源管理器部署不需要此证书。*
+经典服务部署需要此证书。Azure 资源管理器部署不需要此证书。
 
 如果使用 Azure 经典部署方法，则需要 Azure 管理证书。 有关详细信息，请参阅“云管理网关证书”一文的 [Azure 管理证书](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#azure-management-certificate)部分。 Configuration Manager 站点服务器使用此证书对 Azure 进行身份验证，以创建和管理经典部署。  
 
