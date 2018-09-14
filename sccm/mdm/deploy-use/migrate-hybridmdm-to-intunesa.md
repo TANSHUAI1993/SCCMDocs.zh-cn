@@ -3,18 +3,19 @@ title: 将混合 MDM 资源迁移至 Intune 独立版
 titleSuffix: Configuration Manager
 description: 了解如何在 Azure 上将混合 MDM 用户及其设备迁移至 Intune。
 author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ms.date: 08/14/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: 1dd696ce-3e46-4dfa-a76d-592fe0f0320e
-ms.openlocfilehash: cff1a695f3f3227f7ec849b34b75762b082c3f31
-ms.sourcegitcommit: 98c3f7848dc9014de05541aefa09f36d49174784
+ms.openlocfilehash: 09ea3340d8474c69e6e346fc68120b8849159374
+ms.sourcegitcommit: 316899b08f2ef372993909e08e069f7edfed1d33
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42584554"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44111036"
 ---
 # <a name="migrate-hybrid-mdm-users-and-devices-to-intune-standalone"></a>将混合 MDM 用户及其设备迁移至 Intune 独立版
 
