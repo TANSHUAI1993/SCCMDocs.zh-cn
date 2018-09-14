@@ -2,7 +2,7 @@
 title: 使用 CMPivot 获得实时数据
 titleSuffix: Configuration Manager
 description: 了解如何在 Configuration Manager 中使用 CMPivot 实时查询客户端。
-ms.date: 07/30/2018
+ms.date: 08/21/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 32e2d6b9-148f-45e2-8083-98c656473f82
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0766bc765712fc493f01eb5aa807426ec44fa5d7
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 0429c62f68a111bc7f620d1c954d5c8cf944d1c1
+ms.sourcegitcommit: 7eebd112a9862bf98359c1914bb0c86affc5dbc0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385938"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42590050"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>在 Configuration Manager 中使用 CMPivot 获得实时数据
 
@@ -56,6 +56,8 @@ Configuration Manager 总是提供设备数据的大型集中式存储，客户�
 - 用户无法自定义实体属性、结果列或设备上的操作。  
 
 - 只有一个 CMPivot 实例可以在运行 Configuration Manager 控制台的计算机上同时运行。  
+
+- 在版本 1806 中，只有在组名为“管理员”时，对“管理员”实体的查询才起作用。 如果组名已本地化，则不起作用。 例如，法语“Administrateurs”。<!--SCCMDocs issue 759-->  
 
 
 
@@ -229,6 +231,20 @@ CMPivot 使用 Configuration Manager“快速通道”向客户端发送查询�
 
 查询在一小时后超时。 例如，一个集合有 500 台设备，450 个客户端当前处于联机状态。 这些活动设备接收查询后，几乎可以立即返回结果。 如果打开 CMPivot 窗口，当其他 50 个客户端联机时，它们也会收到查询并返回结果。 
 
+>[!TIP]
+> CMPivot 迭代会在以下日志文件中记录：
+>
+> 服务器端：
+> - SmsProv.log
+> - bgbServer.log
+> - StateSys.log
+>
+> 客户端：
+> - CCMNotificationAgent.log
+> - Scripts.log
+> - StateMessage.log
+>
+> 有关详细信息，请参阅[日志文件](/sccm/core/plan-design/hierarchy/log-files)。
 
 
 ## <a name="see-also"></a>另请参阅

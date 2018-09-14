@@ -10,12 +10,12 @@ ms.assetid: 6c64f276-b88c-4b1e-8073-331876a03038
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 90eaaec52076e4ac4fbaddf6cc07cf20359b5a68
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 69d8db3cceff45319ed4f2fc0b2962c3bb50b0f2
+ms.sourcegitcommit: be8c0182db9ef55a948269fcbad7c0f34fd871eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353631"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42756166"
 ---
 # <a name="prepare-windows-pe-peer-cache-to-reduce-wan-traffic-in-system-center-configuration-manager"></a>准备 Windows PE 对等缓存以减少 System Center Configuration Manager 中的 WAN 流量
 
@@ -23,7 +23,7 @@ ms.locfileid: "32353631"
 
 在 System Center Configuration Manager 中部署新的操作系统时，运行任务序列的计算机可使用 Windows PE 对等缓存从本地对等计算机（对等缓存源）中获取内容，而无需从分发点下载内容。 这有助于最大限度减小没有本地分发点的分支机构场景中的广域网 (WAN) 流量。  
 
- Windows PE 对等缓存与 [Windows BranchCache](http://technet.microsoft.com/library/mt617255\(TechNet.10\).aspx#bkmk_branchcache)类似，但是在 Windows 预安装环境 (Windows PE) 中运行。 以下术语用于描述使用 Windows PE 对等缓存的客户端：  
+ Windows PE 对等缓存与 [Windows BranchCache](/sccm/core/plan-design/configs/support-for-windows-features-and-networks#bkmk_branchcache)类似，但是在 Windows 预安装环境 (Windows PE) 中运行。 以下术语用于描述使用 Windows PE 对等缓存的客户端：  
 
 -   “对等缓存客户端”  是配置为使用 Windows PE 对等缓存的计算机。  
 
@@ -70,7 +70,7 @@ ms.locfileid: "32353631"
         > [!TIP]  
         >  客户端将使用 HTTPS 来下载可用的内容。 但是，HTTP 或 HTTPS 使用相同的端口号。  
 
--   在客户端上[Configure the Client Cache for Configuration Manager Clients](../../core/clients/manage/manage-clients.md#BKMK_ClientCache) ，以确保其具有足够的空间来保留和存储部署的映像。 Windows PE 对等缓存不会影响客户端缓存的配置或行为。  
+-   在客户端上[Configure the Client Cache for Configuration Manager Clients](/sccm/core/clients/manage/manage-clients#BKMK_ClientCache) ，以确保其具有足够的空间来保留和存储部署的映像。 Windows PE 对等缓存不会影响客户端缓存的配置或行为。  
 
 -   任务序列部署的部署选项必须配置为“当任务序列需要时在本地下载内容”。  
 
@@ -81,7 +81,7 @@ ms.locfileid: "32353631"
 
 -   对等缓存客户端可从另一个对等缓存客户端（对等缓存源）获取内容。  由于配置了客户端用于对等缓存，因此当客户端运行配置为保留缓存的内容的任务序列时，客户端将成为一个对等缓存源。  
 
--   客户端运行包含可选步骤（即 [Download Package Content](../understand/task-sequence-steps.md#BKMK_DownloadPackageContent)）的任务序列，该步骤用于预安排包含在 Windows PE 对等缓存任务序列中的相关内容。 使用此方法时：  
+-   客户端运行包含可选步骤（即 [Download Package Content](/sccm/osd/understand/task-sequence-steps#BKMK_DownloadPackageContent)）的任务序列，该步骤用于预安排包含在 Windows PE 对等缓存任务序列中的相关内容。 使用此方法时：  
 
     -   客户端无需安装正在部署的映像。  
 
@@ -129,7 +129,7 @@ ms.locfileid: "32353631"
 
      此变量用于标志在部署后将保留在 Configuration Manager 客户端缓存中的任务序列内容。 这与使用 SMSTSPersisContent（仅任务序列持续期间保留内容）不同，并且使用的是任务序列缓存，而不是 Configuration Manager 客户端缓存。  
 
- 有关详细信息，请参阅[任务序列内置变量](../understand/task-sequence-built-in-variables.md)。  
+ 有关详细信息，请参阅[任务序列变量](/sccm/osd/understand/task-sequence-variables)。  
 
 ###  <a name="BKMK_PeerCacheValidate"></a> 验证使用 Windows PE 对等缓存是否成功  
  在使用 Windows PE 对等缓存来部署和安装任务序列后，可以通过查看运行任务序列的客户端上的 **smsts.log** 来确认过程中是否成功使用对等缓存。  

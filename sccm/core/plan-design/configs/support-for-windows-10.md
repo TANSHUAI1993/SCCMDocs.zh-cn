@@ -10,12 +10,12 @@ ms.assetid: a1626a65-da22-49e0-9564-d2f752ea3f4b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f5aac395c71b76a0b83826e8f7c9de1e656aa884
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 588eeefc8f383a52150dc91e9837e51a718af33c
+ms.sourcegitcommit: be8c0182db9ef55a948269fcbad7c0f34fd871eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39383627"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42755854"
 ---
 # <a name="support-for-windows-10-in-configuration-manager"></a>Configuration Manager 支持使用 Windows 10  
 
@@ -85,3 +85,6 @@ ms.locfileid: "39383627"
 
  > [!Note]  
  > Configuration Manager 仅支持 Windows 10 ADK 的 x86 和 amd64 组件。 当前不支持 ARM 或 ARM64 组件。 
+
+> [!Tip]
+> 服务器 OS 部署的 ADK 版本支持：Windows Server 版本具有与关联的 Windows 10 版本相同的 ADK 需求。 例如，Windows Server 2016 的生成版本与 Windows 10 LTSB 2016 相同。

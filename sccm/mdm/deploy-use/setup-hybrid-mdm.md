@@ -2,7 +2,7 @@
 title: 设置混合 MDM
 titleSuffix: Configuration Manager
 description: 使用 Configuration Manager 和 Intune 设置混合设备注册。
-ms.date: 03/08/2018
+ms.date: 08/14/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,19 +10,26 @@ ms.assetid: bb95154b-f63e-4491-896e-41d732c802f8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fbc5b9abf63d95185795716cfcb9ebfaf3e2ec3d
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 23cfa8f3bb69d980c43ec37355c24c29c96056fd
+ms.sourcegitcommit: 98c3f7848dc9014de05541aefa09f36d49174784
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32347070"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42584940"
 ---
-# <a name="setup-hybrid-mobile-device-management-mdm-with-system-center-configuration-manager-and-microsoft-intune"></a>使用 System Center Configuration Manager 和 Microsoft Intune 设置混合移动设备管理 (MDM)
+# <a name="set-up-hybrid-mdm-with-configuration-manager-and-microsoft-intune"></a>使用 Configuration Manager 和 Microsoft Intune 设置混合 MDM
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
 
-必须先向 Intune 注册 iOS、Windows 和 Android 设备，然后才能使用 Configuration Manager 管理它们。 按照以下步骤可使用 Intune，通过 Configuration Manager 设置混合设备注册。 通过完成以下步骤，你会为用户启用“自带设备办公”(BYOD) 注册。 这些步骤也是[注册 BYOD设备](enroll-hybrid-ios-mac.md)和[注册公司拥有的设备](enroll-company-owned-devices.md)的先决条件。
+必须先向 Intune 注册 iOS、Windows 和 Android 设备，然后才能使用 Configuration Manager 管理它们。 按照以下步骤，使用 Intune 通过 Configuration Manager 设置混合设备注册。 通过完成以下步骤，即可为用户启用“自带设备办公”(BYOD) 注册。 这些步骤也是[注册 BYOD设备](enroll-hybrid-ios-mac.md)和[注册公司拥有的设备](enroll-company-owned-devices.md)的先决条件。
+
+> [!Important]  
+> 自 2018 年 8 月 14 日起，混合移动设备管理[功能停用](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)。 有关详细信息，请参阅[什么是混合 MDM](/sccm/mdm/understand/hybrid-mobile-device-management)。<!--Intune feature 2683117-->  
+
+
+
+## <a name="set-up-steps"></a>设置步骤
 
  |步骤|详细信息|  
  |-----------|-------------|  
@@ -35,12 +42,22 @@ ms.locfileid: "32347070"
  |**步骤 7：**[设置附加管理](set-up-additional-management.md)|（可选）为已注册的设备设置配置项目和条件访问|
  |**步骤 8：**[验证 MDM 配置](verify-mdm-configuration.md)|查看日志文件，以确认服务连接点已成功创建并且用户帐户在进行同步。|
 
+
+
+## <a name="enroll-devices"></a>注册设备
+
+完成混合部署后，可以在 Configuration Manager 中通过多种方式注册设备：
+
+- 公司拥有的 (COD) 设备：有关用于注册公司拥有的设备的不同平台特定方法的指导，请参阅[注册公司拥有的设备](enroll-company-owned-devices.md)  
+
+- 用户拥有的 (BYOD) 设备：有关注册用户拥有的设备的方法的指导，请参阅[注册用户拥有的 (BYOD) 设备](enroll-hybrid-ios-mac.md)  
+
+
+
+## <a name="see-also"></a>另请参阅
+
 需要 Intune 而不使用 Configuration Manager？
 > [!div class="button"]
 [查看 Intune 文档 >](https://docs.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune)
 
 
-## <a name="enroll-devices"></a>注册设备
-完成混合部署后，可以在 Configuration Manager 中通过多种方式注册设备：
-- **公司拥有的 (COD) 设备：** 有关用于注册公司拥有的设备的不同平台特定方法的指导，请参阅[注册公司拥有的设备](enroll-company-owned-devices.md)。
-- **用户拥有的 (BYOD) 设备：** 有关注册用户拥有的设备的方法的指导，请参阅[注册用户拥有的 (BYOD) 设备](enroll-hybrid-ios-mac.md)。

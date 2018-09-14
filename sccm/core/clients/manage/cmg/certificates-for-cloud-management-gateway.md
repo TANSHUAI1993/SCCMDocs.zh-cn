@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
-ms.openlocfilehash: fbae44d1344dd36d3c0a6faf2e50727dfa830ba0
-ms.sourcegitcommit: 8060ea520fb08629e1d5f249daffe825536673a5
+ms.openlocfilehash: 02a830d10263164e26902247856f999523092c76
+ms.sourcegitcommit: a849dab9333ebac799812624d6155f2a96b523ca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35232364"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42584408"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>云管理网关证书
 
@@ -63,7 +63,8 @@ CMG 创建基于 Internet 的客户端要连接到的 HTTPS 服务。 此服务�
 
 为 CMG 创建与云分发点相同的自定义 SSL 证书。 按照[为基于云的分发点部署服务证书](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_clouddp2008_cm2012)中的说明，但以不同方式执行以下操作：
 
-- 请求自定义 Web 服务器证书时，为证书公用名称提供 FQDN。 要在 Azure 公共云上使用 CMG，请对 Azure 美国政府云使用以 cloudapp.net 或 usgovcloudapp.net 结尾的名称。
+- 请求自定义 Web 服务器证书时，为证书公用名称提供 FQDN。 这可以是你拥有的公共域名，也可以利用 cloudapp.net 域。 如果使用你自己的公共域，请参阅以上过程，以便在组织的公共 DNS 中创建 DNS 别名。
+- 要在 Azure 公共云上使用 CMG 服务器证书的 cloudapp.net 公共域，请对 Azure 美国政府云使用以 cloudapp.net 或 usgovcloudapp.net 结尾的名称。
 
 
 

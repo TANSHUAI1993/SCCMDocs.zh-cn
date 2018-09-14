@@ -1,8 +1,8 @@
 ---
 title: 使用远程擦除、锁定或密码重置保护数据
 titleSuffix: Configuration Manager
-description: 使用 System Center Configuration Manager，通过完全擦除、选择性擦除、远程锁定或密码重置功能保护设备数据。
-ms.date: 10/27/2017
+description: 使用 Configuration Manager，通过完全擦除、选择性擦除、远程锁定或密码重置功能保护设备数据。
+ms.date: 08/14/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,28 +10,34 @@ ms.assetid: 770da7bd-02dd-474a-9604-93ff1ea0c1e4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 670667c21e85d7e5c174c051b6adbdca3eba55a8
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 21fed8dbba8cc5c8e96218459288b57364fe350e
+ms.sourcegitcommit: 98c3f7848dc9014de05541aefa09f36d49174784
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32352995"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42584442"
 ---
-# <a name="protect-data-with-remote-wipe-lock-or-passcode-reset-by-using-system-center-configuration-manager"></a>使用 System Center Configuration Manager，通过远程擦除、锁定或密码重置功能保护数据
+# <a name="protect-data-with-remote-wipe-lock-or-passcode-reset-by-using-configuration-manager"></a>使用 Configuration Manager，通过远程擦除、锁定或密码重置功能保护数据
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager 提供选择性擦除、完全擦除、远程锁定以及密码重置功能。 移动设备可以存储敏感的公司数据并提供对许多公司资源的访问。 为了保护设备，你可以发出以下命令：  
+Configuration Manager 提供选择性擦除、完全擦除、远程锁定以及密码重置功能。 移动设备可以存储敏感的公司数据并提供对许多公司资源的访问。 为了保护设备，你可以发出以下命令：  
 
-- 用于将设备还原为其出厂默认设置的完全擦除命令。  
+- 用于将设备还原为其出厂默认设置的完全擦除命令  
 
-- 只删除公司数据的选择性擦除命令。  
+- 只删除公司数据的选择性擦除命令  
 
-- 用于帮助保护设备安全的远程锁定可能会丢失。  
+- 用于帮助保护设备安全的远程锁定可能会丢失  
 
-- 重置设备密码。  
+- 重置设备密码  
+
+> [!Important]  
+> 自 2018 年 8 月 14 日起，混合移动设备管理[功能停用](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)。 有关详细信息，请参阅[什么是混合 MDM](/sccm/mdm/understand/hybrid-mobile-device-management)。<!--Intune feature 2683117-->  
+
+
 
 ## <a name="full-wipe"></a>完全擦除  
+
 如果需要保护遗失设备的安全或者停用正在使用的设备，你可以向设备发出擦除命令。  
 
 向设备发出“完全擦除”  命令以将设备还原为其出厂默认值。 这将删除所有公司及用户数据和设置。 可以在 Windows Phone、iOS、Android 和 Windows 10 上执行完全擦除。  
@@ -50,7 +56,10 @@ System Center Configuration Manager 提供选择性擦除、完全擦除、远�
 
 3. 选择“设备组”中的“远程设备操作”，然后选择“停用/擦除”。  
 
+
+
 ## <a name="selective-wipe"></a>选择性擦除  
+
 向设备发出“选择性擦除”  命令以仅删除公司数据。 下表按平台描述了将删除什么数据，以及执行选择性擦除后对设备上保留的数据的影响。  
 
 **Android**  
@@ -136,7 +145,10 @@ System Center Configuration Manager 提供选择性擦除、完全擦除、远�
 
 3. 选择“设备组”中的“远程设备操作”，然后选择“停用/擦除”。  
 
+
+
 ## <a name="wiping-efs-enabled-content"></a>擦除启用了 EFS 的内容  
+
 Windows 8.1 和 Windows RT 8.1 支持选择性擦除加密文件系统 (EFS) 加密的内容。 下列各项适用于启用 EFS 的内容的选择性擦除：  
 
 - 仅选择性擦除由 EFS 通过与 Intune 帐户相同的 Internet 域保护的应用和数据。 有关详细信息，请参阅 [设备数据管理的 Windows 选择性擦除](http://technet.microsoft.com/library/dn486874.aspx)。  
@@ -153,6 +165,7 @@ EFS 选择性擦除当前支持的数据和应用：
 
 - 使用 EFS 加密的文件和文件夹。 有关详细信息，请参阅 [加密文件系统的最佳方案](http://support.microsoft.com/kb/223316)。  
 
+
 ### <a name="best-practices-for-selective-wipe"></a>选择性擦除的最佳方案  
 
 - 为 iOS 和 Windows Phone 8.1 设备设置电子邮件配置文件，以便成功擦除电子邮件。  
@@ -163,7 +176,10 @@ EFS 选择性擦除当前支持的数据和应用：
 
 - 如果帐户已停用一年，那么 Intune 将停用该帐户，并将执行选择性擦除。  
 
+
+
 ##  <a name="passcode-reset"></a>密码重置  
+
 如果用户忘记密码，则你可以删除设备中的密码，或者在设备上强制使用新的临时密码，从而帮助用户解决问题。 下表列出了在不同移动平台上重置密码的方法。  
 
 | 平台                              | 密码重置                                                                               |
@@ -197,7 +213,10 @@ EFS 选择性擦除当前支持的数据和应用：
 
 3. 选择“设备组”中的“远程设备操作”，然后选择“显示密码状态”。  
 
+
+
 ## <a name="remote-lock"></a>远程锁定  
+
 如果用户丢失其设备，你可以远程锁定该设备。 下表列出了是如何在不同的移动平台上进行远程锁定的。  
 
 |平台|远程锁定|  
@@ -228,5 +247,8 @@ EFS 选择性擦除当前支持的数据和应用：
 
 3. 选择“设备组”中的“远程设备操作”，然后选择“显示远程锁定状态”。  
 
-### <a name="see-also"></a>另请参阅  
+
+
+## <a name="see-also"></a>另请参阅  
+
 [Windows Selective Wipe for Device Data Management](http://technet.microsoft.com/library/dn486874.aspx)（设备数据管理的 Windows 选择性擦除）   

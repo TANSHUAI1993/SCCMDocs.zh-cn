@@ -10,12 +10,12 @@ ms.assetid: b7332ed3-8003-454b-bb12-1fdf8721425c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9f4bbb8ec680248b31b1ddd8c457e62e9be44d4b
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 9d292d85ce5a30e56d7909d74b986ac408d29346
+ms.sourcegitcommit: 849391d3985b057027cae610bd3a79fdaa708b94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385248"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42584538"
 ---
 # <a name="list-of-reports-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的报表列表
 
@@ -51,7 +51,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 
 
 ## <a name="asset-intelligence"></a>资产智能  
-以下 62 份报表在“资产智能” 类别下列出。  
+以下 66 份报表在“资产智能”类别下列出。  
 
 |报告名称|说明|  
 |-----------------|-----------------|  
@@ -117,6 +117,10 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 |**软件 14A - 启用了软件标识标记的软件的搜索结果**|显示启用了软件标识标志的已安装软件的计数。|  
 |**软件 14B - 安装有启用了特定软件标识标记的软件的计算机**|显示安装有启用了指定软件标识标志的软件的所有计算机。|  
 |**软件 14C - 特定计算机上已安装的启用了软件标识标记的软件**|显示在指定计算机上启用了指定软件标识标志的所有已安装软件。|  
+|生命周期 01A - 具有特定软件产品的计算机|查看检测到指定产品的计算机列表。|
+|生命周期 02A - 组织中具有已过期产品的计算机列表|查看具有已过期产品的计算机。 可以按产品名称筛选此报表。|
+|生命周期 03A - 组织中发现的已过期产品列表|查看环境中生命周期已过期的产品的详细信息。|
+|生命周期 04A - 产品生命周期总体概览|查看产品生命周期列表。 按产品名称和有效期对列表进行筛选。|
 
 
 
@@ -186,6 +190,18 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 |**具有不合规应用的用户的摘要**|显示有关安装了不符合指定策略的应用的用户信息。|  
 |**接受条款和条件**|显示条款和条件项目以及每个用户已接受的版本。|  
 
+## <a name="data-warehouse"></a>数据仓库  
+以下 7 份报表在“数据仓库”类别下列出。 
+
+|报告名称|说明|  
+|-----------------|-----------------|  
+|应用程序部署|历史记录：查看有关特定应用程序和计算机的应用程序部署的详细信息。|
+|Endpoint Protection 和软件更新符合性|历史记录：查看缺少软件更新的计算机。|
+|常规硬件清单|历史记录：查看特定计算机的所有硬件清单。|
+|常规软件清单|历史记录：查看特定计算机的所有软件清单。|
+|**基础结构运行状况概述**|历史记录：显示 Configuration Manager 基础结构运行状况概述。|
+|**检测到的恶意软件列表**|历史记录：查看组织中检测到的恶意软件。|
+|软件分发摘要|历史记录：特定播发和计算机的软件分发摘要。|
 
 
 ## <a name="device-management"></a>设备管理  
@@ -443,7 +459,6 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 |**服务 - 特定计算机的服务信息**|显示有关指定计算机上的服务的摘要信息。|  
 |**特定集合的 Windows 10 维护服务详细信息**|显示有关特定集合的 Windows 10 维护服务的常规信息。|
 |**Windows Server 计算机**|显示运行 Windows Server 操作系统的计算机的列表。|  
-
 
 
 ## <a name="power-management"></a>电源管理  

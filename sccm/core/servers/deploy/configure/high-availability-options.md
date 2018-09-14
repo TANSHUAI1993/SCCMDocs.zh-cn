@@ -10,12 +10,12 @@ ms.assetid: 1a38421d-24c1-4fef-bf6c-42fce53109ac
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 18435bd43ed74daee646096d1e8d8b6ed7b7bc27
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 057310d7f580cfc61f23a53977716743ed906867
+ms.sourcegitcommit: 849391d3985b057027cae610bd3a79fdaa708b94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39386338"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42584498"
 ---
 # <a name="high-availability-options-for-configuration-manager"></a>Configuration Manager 的高可用性选项
 
@@ -25,7 +25,7 @@ ms.locfileid: "39386338"
 
 以下 Configuration Manager 选项支持高可用性：   
 
-- 从版本 1806 开始，对管理中心站点和每个主站点配置处于被动模式的额外站点服务器。  
+- 从版本 1806 开始，对任何独立主站点配置额外的处于被动模式的站点服务器。  
  
 - 在主站点和管理中心站点上为站点数据库配置 SQL Server Always On 可用性组。
 
@@ -70,7 +70,7 @@ Configuration Manager 的其他功能不提供实时服务。 这些功能包括
 ##  <a name="bkmk_snh"></a>站点和层次结构的高可用性  
 
 #### <a name="use-a-site-server-in-passive-mode"></a>使用被动模式下的站点服务器
-从版本 1806 开始，安装处于被动模式的额外站点服务器。 被动模式下的站点服务器是对主动模式下的现有站点服务器的补充。 在需要时可立即使用被动模式下的站点服务器。 有关详细信息，请参阅[站点服务器高可用性](/sccm/core/servers/deploy/configure/site-server-high-availability)。  
+从版本 1806 开始，为独立主站点安装处于被动模式的额外站点服务器。 被动模式下的站点服务器是对主动模式下的现有站点服务器的补充。 在需要时可立即使用被动模式下的站点服务器。 有关详细信息，请参阅[站点服务器高可用性](/sccm/core/servers/deploy/configure/site-server-high-availability)。  
 
 #### <a name="use-a-remote-content-library"></a>使用远程内容库
 从版本 1806 开始，将站点的内容库移动到提供高可用存储的远程位置。 此功能是实现站点服务器高可用性的必要条件。 有关详细信息，请参阅[内容库](/sccm/core/plan-design/hierarchy/the-content-library#bkmk_remote)。
@@ -81,7 +81,7 @@ Configuration Manager 中的所有软件内容都需要网络上的包源位置�
 #### <a name="use-a-sql-server-always-on-availability-group-to-host-the-site-database"></a>使用 SQL Server Always On 可用性组托管站点数据库  
 在 SQL Server Always On 可用性组上托管主站点和管理中心站点的站点数据库。 有关详细信息，请参阅[高可用性站点数据库的 SQL Server Always On](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database)。  
 
-#### <a name="use-a-sql-server-cluster-to-host-the-site-database"></a>使用 SQL Server 群集托管站点数据库  
+#### <a name="use-a-sql-server-cluster-to-host-the-site-database"></a>使用 SQL Server 群集承载站点数据库  
 对管理中心站点或主站点上的数据库使用 SQL Server 群集时，可以使用 SQL Server 中的内置故障转移支持。  
 
 辅助站点无法使用 SQL Server 群集，并且不支持备份或还原其站点数据库。 可以通过从其父主站点中重新安装辅助站点来恢复辅助站点。  

@@ -10,12 +10,12 @@ ms.assetid: 946b0f74-0794-4e8f-a6af-9737d877179b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a50aa9d2269830fa09c494c63c7681f1dbda3cc0
-ms.sourcegitcommit: 6e0e5b4b7779ce03e2b56b3b5f68f4ace1acedd8
+ms.openlocfilehash: 3c31b950ef59147f6f3f46c1cba7780b7789948c
+ms.sourcegitcommit: 4b7812b505e80f79fc90dfa8a6db06eea79a3550
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467583"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "42584584"
 ---
 # <a name="enable-third-party-updates"></a>启用第三方更新 
 
@@ -164,6 +164,7 @@ ms.locfileid: "39467583"
 -  Configuration Manager 具有目录 cab 文件格式的新版本。 新版本包含供应商二进制文件的证书。 批准并信任目录后，这些证书会添加到“管理”工作区中“安全”下的“证书”节点中。  
      - 只要下载 URL 为 https 且更新已签名，便仍然可以使用旧的目录 cab 文件版本。 由于二进制文件的证书不在 cab 文件中且还未获批准，因此内容将无法发布。 可以通过在“证书”节点中查找证书，取消阻止它，然后再次发布更新来解决此问题。 如果要发布使用不同证书签名的多个更新，需要取消阻止所使用的每个证书。
      - 有关详细信息，请参阅以下状态消息表中的状态消息 11523 和 11524。
+-  当顶级软件更新点上的第三方软件更新同步服务要求使用代理服务器进行 Internet 访问时，数字签名检查可能会失败。 若要缓解此问题，请在站点系统上配置 WinHTTP 代理设置。 有关详细信息，请参阅 [WinHTTP 的 Netsh 命令](https://go.microsoft.com/fwlink/p/?linkid=199086)。
 
 ## <a name="status-messages"></a>状态消息
 
@@ -176,7 +177,7 @@ ms.locfileid: "39467583"
 
 
 ## <a name="working-with-third-party-updates-video"></a>使用第三方更新视频
-<iframe width="560" height="315" src="https://www.youtube.com/embed/bvAQeDSJIbs?ecver=1" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ai8rLCLtuTI?rel=0" frameborder="0" allowfullscreen></iframe>
 
 
 

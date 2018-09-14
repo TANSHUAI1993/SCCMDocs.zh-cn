@@ -2,7 +2,7 @@
 title: 控制台中更新
 titleSuffix: Configuration Manager
 description: 从 Microsoft 云安装 Configuration Manager 更新
-ms.date: 07/30/2018
+ms.date: 08/22/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c14a3607-253b-41fb-8381-ae2d534a9022
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4ea03f3a91d086a3528047ac6fcd18ff09b03537
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 46aa845197010694e1a1c48ec1d3f18a13268cdf
+ms.sourcegitcommit: be8c0182db9ef55a948269fcbad7c0f34fd871eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385552"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42756123"
 ---
 # <a name="install-in-console-updates-for-configuration-manager"></a>为 Configuration Manager 安装控制台内更新
 
@@ -365,40 +365,13 @@ Configuration Manager 与 Microsoft 云服务同步，以获取更新。 随后�
 
 ##  <a name="bkmk_after"></a> 站点安装更新之后  
 
-使用以下清单可完成在更新站点之后进行的常见任务和配置。   
+站点更新后，查看更新后清单以寻找适用的版本：  
 
-#### <a name="confirm-site-to-site-replication-is-active"></a>确认站点到站点复制处于活动状态
-在 Configuration Manager 控制台中，转到以下位置以查看状态并确保复制处于活动状态：  
+- [版本 1806 的更新后清单](/sccm/core/servers/manage/checklist-for-installing-update-1806#post-update-checklist)  
 
--   “监视”工作区、“站点层次结构”节点  
+- [版本 1802 的更新后清单](/sccm/core/servers/manage/checklist-for-installing-update-1802#post-update-checklist)  
 
--   “监视”工作区、“数据库复制”节点  
-
-有关详细信息，请参阅下列文章：  
-- [监视层次结构和复制基础结构](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure)
-- [关于复制链接分析器](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure#BKMK_RLA)  
-
-#### <a name="confirm-that-servers-restarted-if-necessary"></a>确认服务器已重启（如果需要） 
-查看站点基础结构，确保适用的站点服务器和远程站点系统服务器已成功重启。 通常，仅当 Configuration Manager 安装 .NET 作为站点系统角色的先决条件时，站点服务器才重新启动。  
-
-#### <a name="update-standalone-configuration-manager-consoles"></a>更新独立的 Configuration Manager 控制台
-将所有远程 Configuration Manager 控制台更新为相同版本。 系统会在以下情况下提示你更新控制台：  
-
--   在控制台中转到新节点。  
-
--   打开控制台。  
-
-#### <a name="reconfigure-database-replicas-for-management-points"></a>重新配置管理点的数据库副本
-如果将数据库副本用于主站点中的管理点，请先卸载数据库副本，再升级站点。 更新主站点之后，为管理点重新配置数据库副本。 有关详细信息，请参阅[管理点的数据库副本](/sccm/core/servers/deploy/configure/database-replicas-for-management-points)。  
-
-#### <a name="reconfigure-any-disabled-maintenance-tasks"></a>重新配置已禁用的所有维护任务
-如果安装更新之前在站点上禁用了数据库[维护任务](/sccm/core/servers/manage/maintenance-tasks)，请在站点上重新配置这些任务。 使用更新之前就已经存在的相同设置。  
-
-#### <a name="upgrade-clients"></a>升级客户端
-有关信息，请参阅[如何升级 Windows 计算机的客户端](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers)。  
-
-#### <a name="additional-configurations"></a>其他配置
-查看在启动更新之前进行的更改，然后将这些配置还原到站点和层次结构。  
+- [版本 1710 的更新后清单](/sccm/core/servers/manage/checklist-for-installing-update-1710#post-update-checklist)  
 
 
 

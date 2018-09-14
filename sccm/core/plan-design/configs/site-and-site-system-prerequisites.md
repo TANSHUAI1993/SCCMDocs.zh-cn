@@ -10,12 +10,12 @@ ms.assetid: 1392797b-76cb-46b4-a3e4-8f349ccaa078
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 765f599af115e481197603fabd0f3698807ec13a
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 10dfebccd997a42f4c79e5d88bdf05e26585aebb
+ms.sourcegitcommit: 7eebd112a9862bf98359c1914bb0c86affc5dbc0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385314"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42589866"
 ---
 # <a name="site-and-site-system-prerequisites-for-configuration-manager"></a>用于 Configuration Manager 的站点和站点系统先决条件
 
@@ -84,7 +84,7 @@ ms.locfileid: "39385314"
 
 - .NET Framework 3.5 SP1（或更高版本）  
 
-- .NET Framework 4.5.2、4.6.1、4.6.2、4.7 或 4.7.1  
+- .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1 或 4.7.2  
 
     - 有关 .NET Framework 版本的详细信息，请参阅 [.NET Framework 版本和依赖关系](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)。
 
@@ -110,7 +110,7 @@ ms.locfileid: "39385314"
 
 - .NET Framework 3.5 SP1（或更高版本）  
 
-- .NET Framework 4.5.2、4.6.1、4.6.2、4.7 或 4.7.1  
+- .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1 或 4.7.2  
 
     - 有关 .NET Framework 版本的详细信息，请参阅 [.NET Framework 版本和依赖关系](https://docs.microsoft.com/dotnet/framework/migration-guide/versions-and-dependencies)。  
 
@@ -162,7 +162,7 @@ ms.locfileid: "39385314"
 
 - .NET Framework 3.5 SP1（或更高版本）  
 
-- .NET Framework 4.5.2、4.6.1、4.6.2、4.7 或 4.7.1  
+- .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1 或 4.7.2  
 
     - ASP.NET 4.5  
 
@@ -203,7 +203,7 @@ ms.locfileid: "39385314"
 
 -   .NET Framework 3.5 SP1（或更高版本）  
 
--   .NET Framework 4.5.2、4.6.1、4.6.2、4.7 或 4.7.1：  
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1 或 4.7.2：  
 
     -   ASP.NET 4.5：  
 
@@ -241,7 +241,7 @@ ms.locfileid: "39385314"
 
 #### <a name="windows-server-roles-and-features"></a>Windows Server 角色和功能  
 
--   .NET Framework 4.5.2、4.6.1、4.6.2、4.7 或 4.7.1 
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1 或 4.7.2 
 
 
 
@@ -249,7 +249,7 @@ ms.locfileid: "39385314"
 
 #### <a name="windows-server-roles-and-features"></a>Windows Server 角色和功能  
 
--   .NET Framework 4.5.2、4.6.1、4.6.2、4.7 或 4.7.1：  
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1 或 4.7.2：  
 
     -   HTTP 激活  
 
@@ -336,7 +336,7 @@ ms.locfileid: "39385314"
 
 -   .NET Framework 3.5（或更高版本）  
 
--   .NET Framework 4.5.2、4.6.1、4.6.2、4.7 或 4.7.1：  
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1 或 4.7.2：  
 
      此站点系统角色安装时，Configuration Manager 将自动安装 .NET Framework 4.5.2。 此安装可将服务器置于重启挂起状态。 如果挂起对 .NET Framework 的重启，在服务器重启和安装完成之前，.NET 应用程序可能失败。  
 
@@ -378,7 +378,7 @@ ms.locfileid: "39385314"
 
 -   .NET Framework 3.5（或更高版本）  
 
--   .NET Framework 4.5.2、4.6.1、4.6.2、4.7 或 4.7.1 
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1 或 4.7.2 
 
      此站点系统角色安装时，Configuration Manager 将自动安装 .NET Framework 4.5.2。 此安装可将服务器置于重启挂起状态。 如果挂起对 .NET Framework 的重启，在服务器重启和安装完成之前，.NET 应用程序可能失败。  
 
@@ -430,7 +430,7 @@ ms.locfileid: "39385314"
 
 #### <a name="windows-server-roles-and-features"></a>Windows Server 角色和功能  
 
--   .NET Framework 4.5.2、4.6.1、4.6.2、4.7 或 4.7.1 
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1 或 4.7.2 
 
 -   BITS 服务器扩展（和自动选择的选项），或后台智能传输服务 (BITS)（和自动选择的选项）  
 
@@ -456,7 +456,7 @@ ms.locfileid: "39385314"
 
 #### <a name="windows-server-roles-and-features"></a>Windows Server 角色和功能  
 
--   .NET Framework 4.5.2、4.6.1、4.6.2、4.7 或 4.7.1 
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1 或 4.7.2 
 
 #### <a name="sql-server-reporting-services"></a>SQL Server Reporting Services  
 
@@ -472,7 +472,7 @@ ms.locfileid: "39385314"
 
 #### <a name="windows-server-roles-and-features"></a>Windows Server 角色和功能  
 
--   .NET Framework 4.5.2、4.6.1、4.6.2、4.7 或 4.7.1 
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1 或 4.7.2 
 
      此站点系统角色安装时，Configuration Manager 将自动安装 .NET Framework 4.5.2。 此安装可将服务器置于重启挂起状态。 如果挂起对 .NET Framework 的重启，在服务器重启和安装完成之前，.NET 应用程序可能失败。  
 
@@ -490,7 +490,7 @@ ms.locfileid: "39385314"
 
 -   .NET Framework 3.5 SP1（或更高版本）  
 
--   .NET Framework 4.5.2、4.6.1、4.6.2、4.7 或 4.7.1 
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1 或 4.7.2 
 
 需要默认 IIS 配置。
 
@@ -508,7 +508,7 @@ ms.locfileid: "39385314"
 
 -   .NET Framework 3.5（或更高版本）  
 
--   .NET Framework 4.5.2、4.6.1、4.6.2、4.7 或 4.7.1：  
+-   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1 或 4.7.2：  
 
      此站点系统角色安装时，Configuration Manager 将自动安装 .NET Framework 4.5.2。 此安装可将服务器置于重启挂起状态。 如果挂起对 .NET Framework 的重启，在服务器重启和安装完成之前，.NET 应用程序可能失败。  
 

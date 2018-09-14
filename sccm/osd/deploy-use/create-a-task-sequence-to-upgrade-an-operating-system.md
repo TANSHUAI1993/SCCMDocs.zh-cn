@@ -10,12 +10,12 @@ ms.assetid: 7591e386-a9ab-4640-8643-332dce5aa006
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 483b5f8b285fb256005e31e01a0786cef6c8e11d
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: bddcd356a3ee221d5b67935a5be91bbe89d2afc2
+ms.sourcegitcommit: be8c0182db9ef55a948269fcbad7c0f34fd871eb
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39383079"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42756048"
 ---
 # <a name="create-a-task-sequence-to-upgrade-an-os-in-configuration-manager"></a>在 Configuration Manager 中创建任务序列来升级操作系统
 
@@ -155,7 +155,7 @@ ms.locfileid: "39383079"
 
 - 删除/暂停第三方安全程序：在此组中添加步骤，以删除或暂停第三方安全程序，如防病毒程序。  
 
-   - 如果使用的是第三方磁盘加密程序，请为 Windows 安装程序的加密驱动程序提供 `/ReflectDrivers` [命令行选项](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#23)。 在此组的任务序列中添加[设置任务序列变量](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable)步骤。 将任务序列变量设置为“OSDSetupAdditionalUpgradeOptions”。 将值设置为 `/ReflectDrivers`，并附加驱动程序的路径。 此[任务序列操作变量](/sccm/osd/understand/task-sequence-action-variables#upgrade-operating-system)附加了任务序列使用的 Windows 安装程序命令行。 请联系你的软件供应商，以获得有关此进程的任何其他指导。  
+   - 如果使用的是第三方磁盘加密程序，请为 Windows 安装程序的加密驱动程序提供 `/ReflectDrivers` [命令行选项](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#23)。 在此组的任务序列中添加[设置任务序列变量](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable)步骤。 将任务序列变量设置为“OSDSetupAdditionalUpgradeOptions”。 将值设置为 `/ReflectDrivers`，并附加驱动程序的路径。 此[任务序列变量](/sccm/osd/understand/task-sequence-variables#OSDSetupAdditionalUpgradeOptions)附加了任务序列使用的 Windows 安装程序命令行。 请联系你的软件供应商，以获得有关此进程的任何其他指导。  
 
 
 ### <a name="download-package-content-task-sequence-step"></a>下载包内容的任务序列步骤  
@@ -215,7 +215,7 @@ ms.locfileid: "39383079"
 
     - 有关 Configuration Manager 客户端日志的详细信息，请参阅 [Configuration Manager 客户端日志](/sccm/core/plan-design/hierarchy/log-files#BKMK_ClientLogs)。  
 
-    - 有关 _SMSTSLogPath 和其他有用变量的详细信息，请参阅[任务序列内置变量](/sccm/osd/understand/task-sequence-built-in-variables)。  
+    - 有关 _SMSTSLogPath 和其他有用变量的详细信息，请参阅[任务序列变量](/sccm/osd/understand/task-sequence-variables)。  
 
 - 运行诊断工具：若要运行其他诊断工具，请在此组中添加步骤。 请自动运行这些工具，以便在出现故障后立即收集系统中的其他信息。  
 
@@ -234,18 +234,18 @@ ms.locfileid: "39383079"
 
 - 在默认的“检查准备情况”步骤中，启用“确保最小可用磁盘空间 (MB)”。 对于 32 位 OS 升级包，将值设置为至少 16384 (16 GB)，对于 64 位设置为至少 20480 (20 GB)。  
 
-- 使用 SMSTSDownloadRetryCount [内置任务序列变量](/sccm/osd/understand/task-sequence-built-in-variables)重试下载策略。 当前在默认情况下，客户端重试两次；此变量设置为二 (2)。 如果客户端未连接到有线的 Intranet 网络，额外的重试会帮助客户端获得策略。 使用该变量不会产生负面的副作用，除了因无法下载策略导致的延迟故障。<!--501016--> 此外，也可以增加“SMSTSDownloadRetryDelay”变量的值（默认值为 15 秒）。  
+- 使用 SMSTSDownloadRetryCount [任务序列变量](/sccm/osd/understand/task-sequence-variables#SMSTSDownloadRetryCount)重试下载策略。 当前在默认情况下，客户端重试两次；此变量设置为二 (2)。 如果客户端未连接到有线的 Intranet 网络，额外的重试会帮助客户端获得策略。 使用该变量不会产生负面的副作用，除了因无法下载策略导致的延迟故障。<!--501016--> 此外，也可以增加“SMSTSDownloadRetryDelay”变量的值（默认值为 15 秒）。  
 
 - 执行内联兼容性评估：  
 
    - 在“准备升级”组中提前添加第二个“升级操作系统”步骤。 将其命名为“升级评估”。 指定相同的升级包，然后启用选项“不启动升级即执行 Windows 安装程序兼容性扫描”。 启用“选项”选项卡上的“出错时继续”。  
 
-   - 紧跟此“升级评估”步骤，添加“运行命令行”步骤。 指定以下命令行：</br> `cmd /c exit %_SMSTSOSUpgradeActionReturnCode%`</br>在“选项”选项卡上，添加以下条件： </br>`Task Sequence Variable _SMSTSOSUpgradeActionReturnCode not equals 3247440400` </br>此返回代码为 MOSETUP_E_COMPAT_SCANONLY (0xC1900210) 的等效十进制数，表示不存在任何问题的成功兼容性扫描。 如果“升级评估”步骤成功并返回此代码，任务序列会跳过此步骤。 否则，如果评估步骤返回任何其他返回代码，则此步骤的任务序列将失败，并会从 Windows 安装程序兼容性扫描中返回代码。  
+   - 紧跟此“升级评估”步骤，添加“运行命令行”步骤。 指定以下命令行：</br> `cmd /c exit %_SMSTSOSUpgradeActionReturnCode%`</br>在“选项”选项卡上，添加以下条件： </br>`Task Sequence Variable _SMSTSOSUpgradeActionReturnCode not equals 3247440400` </br>此返回代码为 MOSETUP_E_COMPAT_SCANONLY (0xC1900210) 的等效十进制数，表示不存在任何问题的成功兼容性扫描。 如果“升级评估”步骤成功并返回此代码，任务序列会跳过此步骤。 否则，如果评估步骤返回任何其他返回代码，则此步骤的任务序列将失败，并会从 Windows 安装程序兼容性扫描中返回代码。 有关 _SMSTSOSUpgradeActionReturnCode 的详细信息，请参阅[任务序列变量](/sccm/osd/understand/task-sequence-variables#SMSTSOSUpgradeActionReturnCode)。  
 
    - 有关详细信息，请参阅[升级操作系统](/sccm/osd/understand/task-sequence-steps#BKMK_UpgradeOS)。  
 
 - 如果要在此任务序列过程中将设备从 BIOS 更改为 UEFI，请参阅[在就地升级过程中从 BIOS 转换为 UEFI](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion#convert-from-bios-to-uefi-during-an-in-place-upgrade)。  
 
-- 如果使用 BitLocker 磁盘加密，则在默认情况下 Windows 安装程序会在升级期间自动将它暂停。 从 Windows 10 版本 1803 开始，Windows 安装程序包括了 `/BitLocker` 命令行参数，以便控制此行为。 如果安全要求需要磁盘加密全程保持活动状态，请使用“准备升级”组中的 OSDSetupAdditionalUpgradeOptions 任务序列变量来包含 `/BitLocker TryKeepActive`。 有关详细信息，请参阅 [Windows 安装程序命令行选项](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#33)。<!--SCCMDocs issue #494-->  
+- 如果使用 BitLocker 磁盘加密，则在默认情况下 Windows 安装程序会在升级期间自动将它暂停。 从 Windows 10 版本 1803 开始，Windows 安装程序包括了 `/BitLocker` 命令行参数，以便控制此行为。 如果安全要求需要磁盘加密全程保持活动状态，请使用“准备升级”组中的 OSDSetupAdditionalUpgradeOptions [任务序列变量](/sccm/osd/understand/task-sequence-variables#OSDSetupAdditionalUpgradeOptions)来包含 `/BitLocker TryKeepActive`。 有关详细信息，请参阅 [Windows 安装程序命令行选项](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options#33)。<!--SCCMDocs issue #494-->  
 
 - 部分客户删除了 Windows 10 中默认预配的应用。 例如，必应天气应用或 Microsoft Solitaire Collection。 在某些情况下，这些应用会在 Windows 10 后重新出现。 有关详细信息，请参阅[如何从 Windows 10 中彻底删除应用](https://docs.microsoft.com/windows/application-management/remove-provisioned-apps-during-update)。 向“准备升级”组中的任务序列添加“运行命令行”步骤。 指定类似以下示例的命令行：</br> `cmd /c reg delete "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Appx\AppxAllUserStore\Deprovisioned\Microsoft.BingWeather_8wekyb3d8bbwe" /f` <!--SCCMDocs issue #526-->  

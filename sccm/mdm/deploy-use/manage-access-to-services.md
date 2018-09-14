@@ -10,12 +10,12 @@ ms.assetid: 7b04727b-d563-422f-8d59-4dd66215d0b3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f354647ba9376ff18db1a4b63944ef31272308e1
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 9091c233ad18b2ab9ddea32819a37f3cc9484036
+ms.sourcegitcommit: a849dab9333ebac799812624d6155f2a96b523ca
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350572"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "42584433"
 ---
 # <a name="manage-access-to-services-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中管理对服务的访问
 
@@ -126,7 +126,7 @@ Exchange 内部部署支持的条件访问：
 
 
 ## <a name="requirements-for-skype-for-business-online"></a>Skype for Business Online 的要求
-条件访问至 SharePoint Online 支持运行以下操作系统的设备：
+条件访问 Skype Online 支持运行以下操作系统的设备：
  -   iOS 7.1 及更高版本
  -   Android 4.0 及更高版本
  -   Samsung KNOX 标准版 4.0 或更高版本

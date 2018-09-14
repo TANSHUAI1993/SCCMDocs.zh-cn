@@ -2,7 +2,7 @@
 title: 已弃用的功能
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 不再支持的功能。
-ms.date: 07/30/2018
+ms.date: 08/14/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 287a6324-ae65-4d38-b2ef-198d47c91231
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8075fb0e00a0cc9bd8190bb2838431be8c2d1ce8
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: a84d25203fc0addc32271446e1375c9013c0bb6e
+ms.sourcegitcommit: 98c3f7848dc9014de05541aefa09f36d49174784
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39382866"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42584636"
 ---
 # <a name="removed-and-deprecated-features-for-configuration-manager"></a>Configuration Manager 中已删除和已弃用的功能
 
@@ -31,6 +31,7 @@ ms.locfileid: "39382866"
 
 |功能|首次宣布弃用|支持&nbsp;删除|  
 |-----------|---|--------------|  
+|混合移动设备管理。 有关详细信息，请参阅[什么是混合 MDM](/sccm/mdm/understand/hybrid-mobile-device-management)。<!--Intune feature 2683117-->|2018 年 8 月 14 日|2019 年 9 月 1 日|
 |应用程序目录网站点的 Silverlight 用户体验不再受支持。 用户应使用新的软件中心。 注意：应用程序目录网站点和 Web 服务点角色依然受支持。 在某些情况下，新的软件中心会与应用程序目录网站点进行通信。|2017 年 8 月 11日| 版本 1806|
 |以前版本的软件中心。<br><br>有关新软件中心的详细信息，请参阅[规划和配置应用程序管理](/sccm/apps/plan-design/plan-for-and-configure-application-management#configure-software-center-and-the-application-catalog-windows-pcs-only)。|2016 年 12 月 13 日|版本 1802|
 |利用 Configuration Manager 管理虚拟硬盘 (VHD)。 </br></br>此次弃用包括删除使用任务序列创建新 VHD 或管理 VHD 的选项，以及删除 Configuration Manager 控制台的虚拟硬盘节点。 </br></br>不会删除现有 VHD，但无法从 Configuration Manager 控制台中对其进行访问。  |2017 年 1 月 6 日 |版本 1710|

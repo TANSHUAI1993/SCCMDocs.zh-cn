@@ -10,12 +10,12 @@ ms.assetid: d39c201f-d364-4e7b-bde4-faa76d747f33
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f17e479ef6b285cdb70960471dced73e83af520c
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: a8d1d0a727f0a4ad4a2bfc25141f7e2982494080
+ms.sourcegitcommit: b596d944e49f3c4912c6ca91915ed1418c17a1a2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32339428"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42584502"
 ---
 # <a name="install-the-system-center-configuration-manager-console"></a>安装 System Center Configuration Manager 控制台
 
@@ -85,14 +85,14 @@ ms.locfileid: "32339428"
   |/uninstall|卸载 Configuration Manager 控制台。 与 /q 选项配合使用时，请首先指定此选项。|  
   |LangPackDir|指定包含语言文件的文件夹的路径。 你可以使用 **安装程序下载程序** 下载语言文件。 如果未使用此选项，则安装程序会在当前文件夹中查找语言文件夹。 如果未找到语言文件夹，则安装程序仅继续安装英文版。 有关详细信息，请参阅[安装程序下载程序](setup-downloader.md)。|  
   |TargetDir|指定安装文件夹以安装 Configuration Manager 控制台。 当你使用 **/q** 选项时，需要此选项。|  
-  |EnableSQM|指定是否要加入客户体验改善计划 (CEIP)。 使用 **1** 的值加入 CEIP，使用 **0** 的值不加入计划。 当你使用 **/q** 选项时，需要此选项。</br></br>注意：从 Configuration Manager 版本 1802 开始，从产品中删除了 CEIP 功能。|  
+  |EnableSQM|指定是否要加入客户体验改善计划 (CEIP)。 使用 **1** 的值加入 CEIP，使用 **0** 的值不加入计划。 当你使用 **/q** 选项时，需要此选项。</br></br>注意：从 Configuration Manager 版本 1802 开始，从产品中删除了 CEIP 功能。  使用参数将导致安装失败。|  
   |DefaultSiteServerName|指定打开控制台时控制台所连接到的站点服务器的 FQDN。 当你使用 **/q** 选项时，需要此选项。|  
 
 
   ### <a name="examples"></a>示例
+  对于版本 1802 和更高版本，不包括 EnableSQM 参数
+  -  `ConsoleSetup.exe /q TargetDir="%ProgramFiles%\ConfigMgr Console" DefaultSiteServerName=MyServer.Contoso.com`
 
-  -  `consolesetup.exe /q TargetDir="D:\Program Files\ConfigMgr" EnableSQM=1 DefaultSiteServerName=MyServer.Contoso.com`  
+  -  `ConsoleSetup.exe /q TargetDir="C:\Program Files\ConfigMgr Console" DefaultSiteServerName=MyServer.Contoso.com EnableSQM=1  LangPackDir=C:\Downloads\ConfigMgr`  
 
-  -  `consolesetup.exe /q LangPackDir=C:\Downloads\ConfigMgr TargetDir="D:\Program Files\ConfigMgr Console" EnableSQM=1 DefaultSiteServerName=MyServer.Contoso.com`  
-
-  -  `consolesetup.exe /uninstall /q`  
+  -  `ConsoleSetup.exe /uninstall /q`  

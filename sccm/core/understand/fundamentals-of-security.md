@@ -10,12 +10,12 @@ ms.assetid: 035b7f73-8b78-4ed1-835e-a31f9a5c4a02
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 86191b4ebf1ba03cbc95776186c452f728cc1a2c
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 47b03d8e3f0828efc6f32627fb0298645b5998d1
+ms.sourcegitcommit: 98c3f7848dc9014de05541aefa09f36d49174784
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32338255"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42584460"
 ---
 # <a name="fundamentals-of-security-for-system-center-configuration-manager"></a>System Center Configuration Manager 安全性的基础知识
 
