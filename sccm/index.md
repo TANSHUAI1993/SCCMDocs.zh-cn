@@ -4,12 +4,12 @@ hide_bc: true
 title: System Center Configuration Manager 文档
 description: 了解如何使用 System Center Configuration Manager。
 ms.topic: hub-page
-ms.openlocfilehash: 939647a08abc6e884d6cfcfd12665a4101517596
-ms.sourcegitcommit: 5875553bd814b7f82c16125f690c4bd2b6dd3a2b
+ms.openlocfilehash: 9900d36ba6aae6dff5b5bbc99e6a83e6742abee2
+ms.sourcegitcommit: a4482cbc1496ddc0965fe518fa6c38e6d1ccf813
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44385093"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46014833"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -872,7 +872,7 @@ ms.locfileid: "44385093"
                                 </a>
                             </li>
                             <li>
-                                <a href="/sccm/apps/pcm">
+                                <a href="/sccm/apps/pcm/package-conversion-manager">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
