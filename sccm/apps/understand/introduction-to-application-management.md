@@ -1,8 +1,8 @@
 ---
 title: 应用管理简介
 titleSuffix: Configuration Manager
-description: 了解管理和部署 Configuration Manager 应用程序所需的基本信息。
-ms.date: 07/30/2018
+description: 了解管理和部署 Configuration Manager 中的应用程序所需的基本信息。
+ms.date: 08/31/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 08f711ba-83bf-4b5f-9520-a0778c6ae7eb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 70ab4136f39b4bf559c3d460ca1528bb4de0f6e1
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 0d4e83cbcb1c95303719b1d86ffc9a8969c16998
+ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39384284"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43893900"
 ---
 # <a name="introduction-to-application-management-in-configuration-manager"></a>Configuration Manager 中的应用程序管理简介
 
@@ -138,7 +138,7 @@ Configuration Manager 应用程序支持以用户为中心的管理，它可将�
 
 - iOS 应用包 (ipa)  
 
-- App Store 中的 iOS 应用包  
+- “应用商店中的 iOS 应用包”  
 
 - Android 应用包 (apk)  
 
@@ -186,9 +186,9 @@ Configuration Manager 客户端定期对应用程序部署进行重新评估。 
 - [软件中心用户指导](/sccm/core/understand/software-center)
 
 > [!Note]  
-> 版本 1806 中不再需要应用程序目录网站服务点角色，但该角色依然受支持。 
+> 1806 中不再需要应用程序目录站点和 Web 服务点角色，但该角色依然受支持。 
 > 
-> 版本 1806 不支持应用程序目录网站角色。 有关详细信息，请参阅[已删除和已弃用的功能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)。  
+> 应用程序目录网站点的 Silverlight 用户体验不再受支持。 有关详细信息，请参阅[已删除和已弃用的功能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)。  
 
 
 

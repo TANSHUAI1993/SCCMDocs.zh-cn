@@ -1,8 +1,8 @@
 ---
-title: 规划和配置应用程序管理
+title: 应用程序管理规划
 titleSuffix: Configuration Manager
-description: 实现和配置用于在 System Center Configuration Manager 中部署应用程序的所需依赖关系。
-ms.date: 07/30/2018
+description: 实现和配置用于在 Configuration Manager 中部署应用程序的所需依赖关系。
+ms.date: 08/31/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,237 +10,309 @@ ms.assetid: 2be84a1d-ebb9-47ae-8982-c66d5b92a52a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 626fbb8d431857b1b672fffd9f3ba0df8b2a3da0
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: df936f3ab5567840560497edd60a32f3bbb9c74d
+ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385195"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43893595"
 ---
-# <a name="plan-for-and-configure-application-management-in-system-center-configuration-manager"></a>规划和配置 System Center Configuration Manager 中的应用程序管理
+# <a name="plan-for-and-configure-application-management-in-configuration-manager"></a>在 Configuration Manager 中规划和配置应用程序管理
 
 *适用于：System Center Configuration Manager (Current Branch)*
 
-使用本文中的信息可帮助实现用于在 System Center Configuration Manager 中部署应用程序的所需依赖关系。  
+使用本文中的信息可帮助实现用于在 Configuration Manager 中部署应用程序的所需依赖关系。  
+
+
 
 ## <a name="dependencies-external-to-configuration-manager"></a>Configuration Manager 的外部依赖关系  
 
-|依赖关系|更多信息|  
-|------------------|----------------------|  
-|在运行应用程序目录网站点、应用程序目录 Web 服务点、管理点和分发点的站点系统服务器上，需要安装 Internet Information Services (IIS)。|有关此要求的详细信息，请参阅[支持的配置](../../core/plan-design/configs/supported-configurations.md)。|  
-|Configuration Manager 注册的移动设备|在对应用程序进行代码签名以将其部署到移动设备时，如果使用版本 3 模板（Windows Server 2008，企业版）生成了证书，请勿使用此证书。 此证书模板创建的证书与用于移动设备的 Configuration Manager 应用程序不兼容。<br /><br /> 如果使用 Active Directory 证书服务对移动设备应用程序进行代码签名，请勿使用版本 3 证书模板。|  
-|如果想自动创建用户设备相关性，必须将客户端配置为审核登录事件。|Configuration Manager 客户端从电脑的安全事件日志中读取类型为“成功”的登录事件，以确定自动的用户设备相关性。  通过以下两个审核策略，启用这些事件：<br>**审核帐户登录事件**<br>**审核登录事件**<br>若要自动在用户和设备之间创建关系，请确保在客户端计算机上启用这两个设置。 可以使用 Windows 组策略来配置这两个设置。|  
+
+### <a name="internet-information-services-iis"></a>Internet Information Services (IIS)
+
+在运行以下站点系统角色的服务器上，需要安装 IIS： 
+- 应用程序目录网站点  
+- 应用程序目录 Web 服务点  
+- 管理点  
+- 分发点  
+
+有关此要求的详细信息，请参阅[站点和站点系统角色的先决条件](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)。  
+
+
+### <a name="certificates-on-code-signed-applications-for-mobile-devices"></a>移动设备的代码签名应用程序证书
+
+在对应用程序进行代码签名以将其部署到移动设备时，如果使用版本 3 模板（Windows Server 2008，企业版）生成了证书，请勿使用此证书。 此证书模板创建的证书与用于移动设备的 Configuration Manager 应用程序不兼容。
+
+如果使用 Active Directory 证书服务对移动设备应用程序进行代码签名，请勿使用版本 3 证书模板。
+
+
+### <a name="audit-sign-in-events-for-user-device-affinity"></a>审核登录事件的用户设备相关性  
+
+如果想自动创建用户设备相关性，则需将客户端配置为审核登录事件。
+
+Configuration Manager 客户端从 Windows 的安全事件日志中读取类型为“成功”的登录事件，以确定自动的用户设备相关性。 通过以下两个审核策略，启用这些事件：
+- **审核帐户登录事件**
+- **审核登录事件**
+
+若要自动在用户和设备之间创建关系，请确保在客户端计算机上启用这两个设置。 可以使用 Windows 组策略来配置这两个设置。
+
+有关用户设备相关性的详细信息，请参阅[将用户和设备同用户设备相关性相链接](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity)。  
+
+
 
 ## <a name="configuration-manager-dependencies"></a>Configuration Manager 依赖关系   
 
-|依赖关系|更多信息|  
-|------------------|----------------------|  
-|管理点|客户端会与管理点联系，以下载客户端策略、查找内容和连接到应用程序目录。<br /><br /> 如果客户端无法访问管理点，则无法使用应用程序目录。|  
-|分发点|在可以将应用程序部署到客户端之前，层次结构中必须有至少一个分发点。 默认情况下，站点服务器在标准安装时启用分发点站点角色。 分发点的数量和位置因企业的特定要求而异。<br /><br /> 有关如何安装分发点和管理内容的详细信息，请参阅[管理内容和内容基础结构](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。|  
-|客户端设置|许多客户端设置都可以控制在客户端上安装应用程序的方式和用户在客户端上的体验。 这些客户端设置包括：<br /><br /><ul><li>计算机代理</li><li>计算机重启</li><li>软件部署</li><li>用户和设备相关性</li></ul> 有关这些客户端设置的详细信息，请参阅[关于客户端设置](../../core/clients/deploy/about-client-settings.md)。<br /><br /> 有关如何配置客户端设置的详细信息，请参阅[如何配置客户端设置](../../core/clients/deploy/configure-client-settings.md)。|  
-|应用程序目录发现的用户帐户 |Configuration Manager 必须先发现用户帐户，然后用户才能查看和请求应用程序目录中的应用程序。 有关详细信息，请参阅[运行发现](/sccm/core/servers/deploy/configure/run-discovery)。|  
-|必须安装 APP-V 4.6 SP1 或更高版本的客户端才能运行虚拟应用程序|为了在 Configuration Manager 中创建虚拟应用程序，客户端计算机必须安装 App-V 4.6 SP1 或更高版本的客户端。<br /><br /> 此外，还必须使用在[知识库文章 2645225](http://go.microsoft.com/fwlink/p/?LinkId=237322) 中描述的修补程序来更新 App-V 客户端，才能部署虚拟应用程序。|  
-|应用程序目录 Web 服务点|应用程序目录 Web 服务点是站点系统角色，它向应用程序目录网站提供有关软件库中可用的软件的信息。<br /><br /> 有关如何配置此站点系统角色的详细信息，请参阅本文中的[配置软件中心和应用程序目录（仅适用于 Windows 电脑）](/sccm/apps/plan-design/plan-for-and-configure-application-management#configure-software-center-and-the-application-catalog-windows-pcs-only)。|  
-|应用程序目录网站点|应用程序目录网站点是站点系统角色，它向用户提供可用软件的列表。<br /><br /> 有关如何配置此站点系统角色的详细信息，请参阅本文中的[配置软件中心和应用程序目录（仅适用于 Windows 电脑）](/sccm/apps/plan-design/plan-for-and-configure-application-management#configure-software-center-and-the-application-catalog-windows-pcs-only)。|  
-|Reporting Services 点|若要使用 Configuration Manager 中的报表进行应用程序管理，必须首先安装和配置 Reporting Services 点。<br /><br /> 有关详细信息，请参阅 [System Center Configuration Manager 中的报告](../../core/servers/manage/reporting.md)。|  
-|应用程序管理的安全权限|必须具有以下安全权限才能管理应用程序：<br /><br /> “应用程序作者”安全角色包含前面列出的在 Configuration Manager 中创建、更改和停用应用程序所需的权限。<br /><br /> **若要部署应用程序，请执行以下操作：**<br /><br /> “应用程序部署管理员”安全角色包含前面列出的在 Configuration Manager 中部署应用程序所需的权限。<br /><br /> “应用程序管理员”安全角色具有“应用程序作者”和“应用程序部署管理员”安全角色中的所有权限。<br /><br /> 有关详细信息，请参阅[配置基于角色的管理](../../core/servers/deploy/configure/configure-role-based-administration.md)。|  
 
-##  <a name="configure-software-center-and-the-application-catalog-windows-pcs-only"></a>配置软件中心和应用程序目录（仅适用于 Windows PC）  
+### <a name="management-point"></a>管理点
 
- 在 System Center Configuration Manager 中，对于用户如何更改设置、浏览应用程序和安装应用程序，现在有两个选项：  
+客户端会与管理点联系，以下载客户端策略、查找内容和连接到应用程序目录。 如果客户端无法访问管理点，则无法使用应用程序目录。
 
--   新的软件中心：新的软件中心具有新式外观。 并且本应仅出现在依赖于 Silverlight 的应用程序目录中的应用（用户可用的应用）现在将出现在“应用程序”选项卡下的软件中心。应用程序目录仍然可以通过软件中心的“安装状态”选项卡下的链接进行访问。  
+> [!Note]  
+> 从版本 1806 开始，不再需要应用程序目录角色，即可在软件中心显示用户可用的应用程序。 有关详细信息，请参阅[配置软件中心](#bkmk_userex)。<!--1358309-->  
+  
 
-     你可以通过启用客户端设置“计算机代理” **计算机代理** > **使用新的软件中心**。  
+### <a name="distribution-point"></a>分发点
 
-    > [!IMPORTANT]  
-    >  虽然不再需要连接到应用程序目录，但仍必须配置应用程序目录网站点和应用程序目录 Web 服务点，该内容将在下一节中详细介绍。  
+在可以将应用程序部署到客户端之前，层次结构中需要有至少一个分发点。 默认情况下，站点服务器在标准安装时启用分发点站点角色。 分发点的数量和位置因环境的特定要求而异。 
 
--   以前的软件中心和应用程序目录：默认情况下，用户会继续连接到以前版本的软件中心，并连接到应用程序目录（需要启用了 Silverlight 的 Web 浏览器）来浏览可用的应用程序。  
+有关如何安装分发点和管理内容的详细信息，请参阅[管理内容和内容基础结构](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure)。  
 
- 无论你选择使用哪个版本，当你在 Windows 电脑上安装 Configuration Manager 客户端时，都会自动安装软件中心。  
 
-    > [!TIP]  
-    >  用户看到的软件中心的版本取决于 Configuration Manager 客户端设置。 这样便能根据部署到集合的自定义客户端设置，灵活地控制使用哪个版本。 
+### <a name="reporting-services-point"></a>Reporting Services 点
 
-    > [!IMPORTANT]
-    > 在未来几个月，我们将删除以前版本的软件中心，并且它将不再可用。
-    > 你可以通过启用客户端设置“计算机代理” **计算机代理** > **使用新的软件中心**。 
+若要使用 Configuration Manager 中的报表进行应用程序管理，首先要安装和配置 Reporting Services 点。
 
-## <a name="steps-to-install-and-configure-the-application-catalog-and-software-center"></a>安装和配置应用程序目录及软件中心的步骤  
+有关详细信息，请参阅 [Configuration Manager 中的报告](/sccm/core/servers/manage/reporting)。  
+
+
+### <a name="client-settings"></a>客户端设置
+
+许多客户端设置都可以控制在客户端上安装应用程序的方式和用户在设备上的体验。 这些客户端设置包括以下组：
+- 计算机代理  
+- 计算机重启  
+- 软件中心  
+- 软件部署  
+- 用户和设备相关性  
+
+有关详细信息，请参阅下列文章：
+- [关于客户端设置](/sccm/core/clients/deploy/about-client-settings)  
+- [如何配置客户端设置](/sccm/core/clients/deploy/configure-client-settings)  
+
+
+### <a name="security-permissions-for-application-management"></a>应用程序管理的安全权限
+
+- “应用程序作者”安全角色包含创建、更改和停用应用程序所需的权限。  
+
+- “应用程序部署管理员”安全角色包含部署应用程序所需的权限。  
+
+- “应用程序管理员”安全角色具有“应用程序作者”和“应用程序部署管理员”安全角色中的所有权限。  
+
+有关详细信息，请参阅[配置基于角色的管理](/sccm/core/servers/deploy/configure/configure-role-based-administration)。  
+
+
+### <a name="app-v-46-sp1-or-later-client-to-run-virtual-applications"></a>必须安装 APP-V 4.6 SP1 或更高版本的客户端才能运行虚拟应用程序
+
+为了在 Configuration Manager 中创建虚拟应用程序，请在设备上安装 App-V 4.6 SP1 或更高版本。
+
+此外，还要使用在 [Microsoft 支持文章 2645225](https://support.microsoft.com/help/2645225) 中描述的修补程序来更新 App-V 客户端，才能部署虚拟应用程序。  
+
+
+### <a name="discovered-user-accounts-for-application-catalog"></a>应用程序目录发现的用户帐户
+
+Configuration Manager 必须先发现用户帐户，然后用户才能查看和请求应用程序目录中的应用程序。 有关详细信息，请参阅[运行发现](/sccm/core/servers/deploy/configure/run-discovery)。  
+
+
+### <a name="application-catalog-web-service-point"></a>应用程序目录 Web 服务点
+
+应用程序目录 Web 服务点是站点系统角色，它向用户访问的应用程序目录网站提供有关软件库中可用的软件的信息。
+
+有关如何配置此站点系统角色的详细信息，请参阅[配置软件中心](#bkmk_userex)。  
+
+> [!Note]  
+> 从版本 1806 开始，不再需要应用程序目录 Web 服务点角色，但仍受支持。<!--1358309-->  
+> 
+> 应用程序目录网站点的 Silverlight 用户体验不再受支持。 有关详细信息，请参阅[已删除和已弃用的功能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)。  
+
+
+### <a name="application-catalog-website-point"></a>应用程序目录网站点
+
+应用程序目录网站点是站点系统角色，它向用户提供可用软件的列表。
+` 有关如何配置此站点系统角色的详细信息，请参阅[配置软件中心](#bkmk_userex)。
+
+> [!Note]  
+> 从版本 1806 开始，不再需要应用程序目录网站点角色，但仍受支持。<!--1358309-->  
+> 
+> 应用程序目录网站点的 Silverlight 用户体验不再受支持。 有关详细信息，请参阅[已删除和已弃用的功能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)。  
+
+
+
+## <a name="bkmk_userex"></a> 配置软件中心  
+
+用户从软件中心更改设置、浏览和安装应用程序。 在 Windows 设备上安装 Configuration Manager 客户端时，它还会自动安装软件中心。 新软件中心将呈现新式外观。 并且本应仅出现在依赖于 Silverlight 的应用程序目录中的应用（用户可用的应用）现在将出现在“应用程序”选项卡下的软件中心。有关软件中心其他功能的详细信息，请参阅[软件中心用户指南](/sccm/core/understand/software-center)。  
+
+查看下列对软件中心的改进： 
+
+#### <a name="starting-in-version-1802"></a>自版本 1802 开始
+
+- 在“计算机代理”组中默认启用客户端设置“使用新的软件中心”。 不再支持以前版本的软件中心。 有关详细信息，请参阅[已删除和已弃用的功能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)。  
+
+- 用户可以浏览用户可用的应用程序并在加入 Azure Active Directory (Azure AD) 的设备上安装。 有关详细信息，请参阅[在加入 Azure AD 的设备上部署用户可用的应用程序](/sccm/apps/deploy-use/deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices)。  
+
+#### <a name="starting-in-version-1806"></a>自版本 1806 开始
+
+- 在软件中心的“安装状态”选项卡上指定应用程序目录网站链接的可见性。 有关详细信息，请参阅[软件中心](/sccm/core/clients/deploy/about-client-settings#software-center)客户端设置。  
+
+- 不再需要应用程序目录角色，即可在软件中心显示用户可用的应用程序。 此项更改有助于减少向用户交付应用程序所需的服务器基础结构。 软件中心现在依靠管理点来获取此信息，通过将更大的环境分配给[边界组](/sccm/core/servers/deploy/configure/boundary-groups#management-points)来帮助它们更好地扩展。<!--1358309-->  
+
+    > [!Note]  
+    > 如果当前正在使用应用程序目录，并将 Configuration Manager 更新到版本 1806，它将继续工作。 不再需要应用程序目录站点和 Web 服务点角色，但依然受支持。 应用程序目录网站点的 Silverlight 用户体验不再受支持。 有关详细信息，请参阅[已删除和已弃用的功能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)。 
+    > 
+    > 开始计划日后从基础结构中删除应用程序目录角色。 充分利用软件中心改进以使用管理点，并简化 Configuration Manager 环境。  
+
+使用下表来帮助了解软件中心的要求，具体取决于特定版本的 Configuration Manager：
+
+| 设备类型 | 站点版本 | 基础结构 | 
+|-----------------|--------------|----------------|
+| 加入了 Azure AD 的设备</br>（或者“已加入域的云”） | 1802 或 1806 | 所有应用程序部署的管理点 | 
+| Internet 上[已加入混合 Azure AD](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup) 的设备 | 1802 或 1806 | 云管理网关和所有应用程序部署的管理点 |
+| 本地 Active Directory 加入域的设备 | 1802 | 软件中心中用户可用的应用所需的应用程序目录 |
+| 本地 Active Directory 加入域的设备 | 1806 | 所有应用程序部署的管理点 |
+
+
+> [!Important]  
+> 若要利用新的 Configuration Manager 功能，请先将客户端更新到最新版本。 尽管在更新站点和控制台时 Configuration Manager 控制台中会显示新功能，但只有在客户端版本也是最新版本之后，完整方案才能正常运行。
+
+
+
+## <a name="branding-software-center"></a>打造软件中心品牌
+
+更改软件中心的外观，以满足组织构建品牌的要求。 此配置可帮助用户信任软件中心。 
+
+Configuration Manager 根据以下属性应用自定义软件中心品牌：  
+
+- 如果尚未安装应用程序目录（推荐）：  
+
+    1. 软件中心客户端设置。 有关详细信息，请参阅[关于客户端设置](/sccm/core/clients/deploy/about-client-settings#software-center)。  
+
+    2. “计算机代理”组中的“组织名称”客户端设置。 有关详细信息，请参阅[关于客户端设置](/sccm/core/clients/deploy/about-client-settings#computer-agent)。  
+
+- 如果已安装应用程序目录：  
+
+    1. 软件中心客户端设置。 有关详细信息，请参阅[关于客户端设置](/sccm/core/clients/deploy/about-client-settings#software-center)。  
+
+    2. 如果将 Microsoft Intune 订阅连接到 Configuration Manager，则软件中心将显示 Intune 订阅属性中指定的组织名称、颜色和公司徽标。 有关详细信息，请参阅 [Configuring the Microsoft Intune subscription](/sccm/mdm/deploy-use/configure-intune-subscription)。  
+
+    3. 在应用程序目录网站点属性中指定的组织名称和颜色。 有关详细信息，请参阅[应用程序目录网站点的配置选项](/sccm/core/servers/deploy/configure/configuration-options-for-site-system-roles#BKMK_ApplicationCatalog_Website)。  
+
+    4. “计算机代理”组中的“组织名称”客户端设置。 有关详细信息，请参阅[关于客户端设置](/sccm/core/clients/deploy/about-client-settings#computer-agent)。  
+
+#### <a name="configure-software-center-branding"></a>配置软件中心品牌
+<!-- 1351224 --> 通过添加组织的品牌元素并指定选项卡的可见性来自定义软件中心的外观。 
+
+有关详细信息，请参阅下列文章：
+- 客户端设置的[软件中心](/sccm/core/clients/deploy/about-client-settings#software-center)组  
+- [如何配置客户端设置](/sccm/core/clients/deploy/configure-client-settings)  
+
+
+
+## <a name="bkmk_appcat"></a> 安装和配置应用程序目录  
+
+> [!Note]  
+> 从版本 1806 开始，不再需要应用程序目录站点和 Web 服务点角色，但依然受支持。 有关详细信息，请参阅[配置软件中心](#bkmk_userex)。  
+> 
+> 应用程序目录网站点的 Silverlight 用户体验不再受支持。 有关详细信息，请参阅[已删除和已弃用的功能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)。  
 
 > [!IMPORTANT]  
->  执行这些步骤以前，请确保已满足之前所列的所有先决条件。  
+>  在执行这些步骤之前，请确保所有依赖项已就绪。 有关详细信息，请参阅本文以下各节：
+> - [Configuration Manager 的外部依赖关系](#dependencies-external-to-configuration-manager)  
+> - [Configuration Manager 依赖关系](#configuration-manager-dependencies)
 
-|步骤|详细信息|更多信息|  
-|-----------|-------------|----------------------|  
-|步骤 1：如果使用 HTTPS 连接，请确保已将 Web 服务器证书部署到站点系统服务器。|将 Web 服务器证书部署到将运行应用程序目录网站点和应用程序目录 Web 服务点的站点系统服务器。<br /><br /> 此外，如果希望客户端从 Internet 中使用应用程序目录，请将 Web 服务器证书部署到至少一个管理点站点系统服务器，并针对来自 Internet 的客户端连接对其进行配置。|有关证书要求的详细信息，请参阅 [PKI 证书要求](../../core/plan-design/network/pki-certificate-requirements.md)。|  
-|步骤 2：如果使用客户端 PKI 证书连接到管理点，请将客户端身份验证证书部署到客户端计算机。|尽管客户端不使用客户端 PKI 证书来连接到应用程序目录，但它们必须连接到管理点，然后才能使用应用程序目录。 在以下情况下，你必须将客户端身份验证证书部署到客户端计算机：<br /><br /><ul><li>Intranet 中的所有管理点只接受 HTTPS 客户端连接。</li><li>客户端从 Internet 连接到应用程序目录。</li></ul>|有关证书要求的详细信息，请参阅 [PKI 证书要求](../../core/plan-design/network/pki-certificate-requirements.md)。|  
-|**步骤 3：** 安装和配置应用程序目录 Web 服务点和应用程序目录网站。|必须将这两个站点系统角色安装在同一站点中。 你不必将它们安装在同一站点系统服务器上或安装在同一 Active Directory 林中。 但是，应用程序目录 Web 服务点必须位于站点数据库所在的林中。|有关站点系统角色布局的详细信息，请参阅[规划站点系统服务器和站点系统角色](../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md)。<br /><br /> 要配置应用程序目录 Web 服务点和应用程序目录网站点，请参阅**步骤 3：安装和配置应用程序目录站点系统角色**。|  
-|**步骤 4：** 为应用程序目录和软件中心配置客户端设置。|如果希望所有用户具有相同设置，请配置默认客户端设置。 否则，请为特定集合配置自定义客户端设置。|有关客户端设置的详细信息，请参阅[关于客户端设置](../../core/clients/deploy/about-client-settings.md)。<br /><br /> 有关如何配置这些客户端设置的详细信息，请参阅**步骤 4：为应用程序目录和软件中心配置客户端设置**。|  
-|**步骤 5：** 验证应用程序目录是否可正常运行。|可以从浏览器或软件中心中直接使用应用程序目录。|请参阅**步骤 5：验证应用程序目录是否可正常运行**。|  
 
-## <a name="supplemental-procedures-to-install-and-configure-the-application-catalog-and-software-center"></a>用于安装和配置应用程序目录和软件中心的补充过程  
- 如果上表中的步骤需要执行补充过程，请使用以下信息。  
+### <a name="step-1-web-server-certificate-for-https"></a>步骤 1：HTTPS 的 Web 服务器证书
 
-###  <a name="step-3-install-and-configure-the-application-catalog-site-system-roles"></a>步骤 3：安装和配置应用程序目录站点系统角色  
- 这些过程为应用程序目录配置站点系统角色。 请选择以下两个过程之一，具体取决于是安装新站点系统服务器还是使用现有站点系统服务器：  
+如果使用 HTTPS 连接，将 Web 服务器证书部署到应用程序目录网站点和应用程序目录 Web 服务点的站点系统服务器。 
+
+如果希望客户端使用 Internet 中的应用程序目录，将 Web 服务器证书部署到至少一个管理点。 将其配置为来自 Internet 的客户端连接。
+
+有关证书要求的详细信息，请参阅 [PKI 证书要求](/sccm/core/plan-design/network/pki-certificate-requirements)。  
+
+
+### <a name="step-2-client-authentication-certificate-for-https"></a>步骤 2：HTTPS 的客户端身份验证证书
+
+如果使用客户端 PKI 证书连接到管理点，请将客户端身份验证证书部署到客户端计算机。 尽管客户端不使用客户端 PKI 证书来连接到应用程序目录，但它们必须连接到管理点，然后才能使用应用程序目录。 
+
+在以下情况下，将客户端身份验证证书部署到客户端计算机：
+- Intranet 中的所有管理点只接受 HTTPS 客户端连接。
+- 客户端从 Internet 连接到应用程序目录。
+
+有关证书要求的详细信息，请参阅 [PKI 证书要求](/sccm/core/plan-design/network/pki-certificate-requirements)。  
+
+
+### <a name="step-3-install-and-configure-the-application-catalog-roles"></a>步骤 3：安装和配置应用程序目录角色
+
+在同个站点安装应用程序目录 Web 服务点和应用程序目录网站角色。 你不必将它们安装在同一服务器上或安装在同一 Active Directory 林中。 但是，应用程序目录 Web 服务点必须位于站点数据库所在的林中。
+
+有关服务器布局的详细信息，请参阅[规划站点系统服务器和站点系统角色](/sccm/core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles)。
 
 > [!NOTE]  
->  应用程序目录不能安装在辅助站点或管理中心站点上。  
+> 在主站点上安装应用程序目录。 无法在辅助站点或管理中心站点进行安装。  
 
-####  <a name="to-install-and-configure-the-application-catalog-site-systems-new-site-system-server"></a>安装和配置应用程序目录站点系统：新建站点系统服务器  
+在新的站点系统服务器或站点中的现有服务器上安装应用程序目录。 有关一般过程的详细信息，请参阅[安装站点系统角色](/sccm/core/servers/deploy/configure/install-site-system-roles)。 在向导中添加站点系统角色或创建站点系统服务器，从列表中选择以下角色：  
+- **应用程序目录 Web 服务点**  
+- **应用程序目录网站点**  
 
-1.  在 Configuration Manager 控制台中，选择“管理” > “站点配置” > “服务器和站点系统角色”。  
+> [!TIP]  
+>  如果希望客户端计算机通过 Internet 使用应用程序目录，请指定 Internet 完全限定的域名 (FQDN)。  
 
-3.  在“主页”选项卡上的“创建”组中，选择“创建站点系统服务器”。  
+#### <a name="verify-the-installation-of-these-site-system-roles"></a>验证这些站点系统角色的安装  
 
-4.  在“常规”页上，指定站点系统的常规设置，然后选择“下一步”。  
-
-    > [!TIP]  
-    >  如果希望客户端计算机通过 Internet 使用应用程序目录，请指定 Internet 完全限定的域名 (FQDN)。  
-
-5.  在“系统角色选择”页上，从可用角色列表选择“应用程序目录 Web 服务点”和“应用程序目录网站点”，然后选择“下一步”。  
-
-6.  完成剩余步骤。  
-
-####  <a name="to-install-and-configure-the-application-catalog-site-systems-existing-site-system-server"></a>安装和配置应用程序目录站点系统：现有站点系统服务器  
-
-1.  在 Configuration Manager 控制台中，选择“管理” > “站点配置” > “服务器和站点系统角色”，然后选择要用于应用程序目录的服务器。  
-
-3.  在“主页”选项卡上的“服务器”组中，选择“添加站点系统角色”。  
-
-4.  在“常规”页上，指定站点系统的常规设置，然后选择“下一步”。  
-
-    > [!TIP]  
-    >  如果希望客户端计算机通过 Internet 使用应用程序目录，请指定 Internet 完全限定的域名 (FQDN)。  
-
-5.  在“系统角色选择”页上，从可用角色列表选择“应用程序目录 Web 服务点”和“应用程序目录网站点”，然后选择“下一步”。  
-
-6.  完成剩余步骤。  
-
-7. 通过使用状态消息和查看日志文件来验证这些站点系统角色的安装：  
-
-    状态消息：使用组件“SMS_PORTALWEB_CONTROL_MANAGER”  和“SMS_AWEBSVC_CONTROL_MANAGER” 。  
+- 状态消息：使用组件“SMS_PORTALWEB_CONTROL_MANAGER”  和“SMS_AWEBSVC_CONTROL_MANAGER” 。  
 
     例如，“SMS_PORTALWEB_CONTROL_MANAGER”的状态 ID“1015”确认站点组件管理器已成功安装在应用程序目录网站点上。  
 
-    日志文件：搜索 **SMSAWEBSVCSetup.log** 和 **SMSPORTALWEBSetup.log**。  
+- 日志文件：搜索 **SMSAWEBSVCSetup.log** 和 **SMSPORTALWEBSetup.log**。  
 
     有关详细信息，请搜索 **awebsvcMSI.log** 和 **portlwebMSI.log** 日志文件。  
 
-###  <a name="step-4-configure-the-client-settings-for-the-application-catalog-and-software-center"></a>步骤 4：为应用程序目录和软件中心配置客户端设置  
- 此过程为应用程序目录和软件中心配置适用于层次结构中所有设备的默认客户端设置。 如果希望这些设置仅适用于某些设备，则可以创建自定义客户端设置并将其部署到一个集合，该集合中的设备具有特定设置。 有关如何创建自定义设备设置的详细信息，请参阅[如何在 System Center Configuration Manager 中配置客户端设置](../../core/clients/deploy/configure-client-settings.md)中的[如何创建和部署自定义客户端设置](../../core/clients/deploy/configure-client-settings.md#create-and-deploy-custom-client-settings)部分。  
 
-1.  在 Configuration Manager 控制台中，选择“管理” > “客户端设置” > “默认客户端设置”。  
+### <a name="step-4-configure-client-settings"></a>步骤 4：配置客户端设置
 
-3.  在“主页”选项卡上的“属性”组中，选择“属性”。  
+如果希望所有用户具有相同设置，请配置默认客户端设置。 否则，请为特定集合配置自定义客户端设置。
 
-4.  查看并配置与用户通知、应用程序目录和软件中心相关的设置。 例如：  
+有关详细信息，请参阅下列文章：
+- [关于客户端设置](/sccm/core/clients/deploy/about-client-settings)  
+    - 计算机代理  
+    - 计算机重启  
+    - 软件中心  
+    - 软件部署  
+    - 用户和设备相关性  
+- [如何配置客户端设置](/sccm/core/clients/deploy/configure-client-settings)  
 
-    1.  “计算机代理” 组：  
+Configuration Manager 客户端在下次下载客户端策略时将为设备配置这些设置。 若要为单个客户端触发策略检索，请参阅[如何管理客户端](/sccm/core/clients/manage/manage-clients)。
 
-        -   默认应用程序目录网站点。  
 
-        -   向 Internet Explorer 受信任的站点区域添加默认应用程序目录网站。  
+### <a name="step-5-verify-that-the-application-catalog-is-operational"></a>步骤 5：验证应用程序目录是否可正常运行
 
-        -   软件中心中显示的组织名称。  
-
-            > [!TIP]  
-            >  要指定显示在应用程序目录中的组织名称并配置网站主题，请使用应用程序目录网站属性上的“自定义”选项卡。  
-
-        -   使用新的软件中心。 如果想要使用新的软件中心，请设置为“是”，这可让用户浏览和安装可用的应用，而无需访问应用程序目录（需要启用了 Silverlight 的 Web 浏览器）。  
-
-        -   安装权限。  
-
-        -   显示关于新部署的通知。  
-
-    2.  “电源管理” 组：  
-
-        -   允许用户从电源管理中排除其设备。  
-
-    3.  “远程工具” 组：  
-
-        -   用户可以在软件中心内更改策略或通知设置。  
-
-    4.  “用户和设备相关性” 组：  
-
-        -   允许用户定义其主要设备。  
-
-    > [!NOTE]  
-    >  有关客户端设置的详细信息，请参阅 [About client settings in System Center Configuration Manager](../../core/clients/deploy/about-client-settings.md)。  
-
-5.  选择“确定”可关闭“默认客户端设置”对话框。  
-
-当客户端计算机下一次下载客户端策略时，将使用这些设置对它们进行配置。 若要为单个客户端启动策略检索，请参阅[如何管理客户端](../../core/clients/manage/manage-clients.md)。
-
-#### <a name="to-customize-software-center-branding"></a>自定义软件中心品牌
-
-根据以下规则应用软件中心的自定义品牌：
-
-1. 如果未安装应用程序目录网站点站点服务器角色，则软件中心将显示“计算机代理”客户端设置（软件中心中显示的“组织名称”）中指定的组织名称。 有关说明，请参阅[如何配置客户端设置](https://docs.microsoft.com/sccm/core/clients/deploy/configure-client-settings)。
-2. 如果已安装应用程序目录网站点站点服务器角色，则软件中心将显示在应用程序目录网站点站点服务器角色属性中指定的组织名称和颜色。 有关详细信息，请参阅[应用程序目录网站点的配置选项](https://docs.microsoft.com/sccm/core/servers/deploy/configure/configuration-options-for-site-system-roles#BKMK_ApplicationCatalog_Website)。
-3. 如果已配置 Microsoft Intune 订阅且已连接到 Configuration Manager，则软件中心将显示 Intune 订阅属性中指定的组织名称、颜色和公司徽标。 有关详细信息，请参阅 [Configuring the Microsoft Intune subscription](https://docs.microsoft.com/sccm/mdm/deploy-use/setup-hybrid-mdm#step-3-configure-intune-subscription)。
-
-#### <a name="to-manually-set-software-center-branding"></a>手动设置软件中心品牌
-<!-- 1351224 --> 使用 1710 版本，可以手动添加企业品牌元素，并在“软件中心”上指定选项卡的可见性。 可以添加“软件中心”特定公司名称、设置“软件中心”配置颜色主题、设置公司徽标，并设置客户端设备的可见选项卡。
-
-1. 在“Configuration Manager”控制台中，选择“管理” > “客户端设置”。 单击所需的客户端设置实例。
-2. 在“主页”选项卡上的“属性”组中，选择“属性”。
-3. 在“默认设置”对话框中，选择“软件中心”。
-4. 将“选择新设置以指定公司信息”选择为“是”，来启用“软件中心”自定义设置。
-5. 键入“公司名称”。
-6. 选择“软件中心的配色方案”。
-7. 单击“浏览”导航到“软件中心”的徽标。 徽标必须为 400 x 100 像素的 JPEG 或 PNG，最大大小为 750 KB。
-8. 选择“是”使选项卡在客户端设备的“软件中心”中可见。 至少一个选项卡必须是可见的：
-
-    -  启用“应用程序”选项卡
-    -  启用“更新”选项卡
-    -  启用“操作系统”选项卡
-    -  启用“安装状态”选项卡
-    -  启用“设备符合性”选项卡
-    -  启用“选项”选项卡
-    -  为软件中心指定自定义选项卡（从版本 1806 开始）<!--1358132 -->
-        - 选项卡名称
-        - 内容 URL
-
-> [!IMPORTANT]  
-> - 如果在软件中心将其用作自定义选项卡，某些网站功能可能无法工作。 将结果部署到客户端之前，请确保测试结果。 <!--519659--> 
-> - 软件中心品牌每 14 天与 Intune 服务同步一次。 因此，在 Configuration Manager 中显示在 Intune 中所做的更改之前可能会有延迟。
-
-###  <a name="step-5-verify-that-the-application-catalog-is-operational"></a>步骤 5：验证应用程序目录是否可正常运行  
- 使用以下过程来验证应用程序目录是否可正常运行。 可以从浏览器或软件中心中直接使用应用程序目录。  
+使用以下过程来验证应用程序目录是否可正常运行。 
 
 > [!NOTE]  
->  应用程序目录需要 Microsoft Silverlight，后者将为 Configuration Manager 客户端先决条件自动安装。 如果通过使用未安装 Configuration Manager 客户端的计算机从浏览器中直接使用应用程序目录，请首先验证计算机上是否安装了 Microsoft Silverlight。  
+>  若要获得应用程序目录用户体验，需安装 Microsoft Silverlight。 如果从浏览器中直接使用应用程序目录，请首先验证计算机上是否安装了 Microsoft Silverlight。  
 
 > [!TIP]  
->  应用程序目录在安装后未正常运行的大多数典型原因都是未满足先决条件。 确认应用程序目录站点系统角色的站点系统角色先决条件。 可以使用[支持的配置](../../core/plan-design/configs/supported-configurations.md)一文实现此目标。  
+>  应用程序目录在安装后未正常运行的大多数典型原因都是未满足先决条件。 确认应用程序目录站点系统角色的角色先决条件。 有关详细信息，请参阅[站点和站点系统先决条件](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)。  
+
+在浏览器中，输入应用程序目录网站的地址。 确认网页显示以下三个选项卡：“应用程序目录”、“我的应用程序请求”和“我的设备”。  
+
+为“应用程序目录”使用以下列表中适当的地址，其中 &lt;server&gt; 是计算机名、Intranet FQDN 或 Internet FQDN：  
+
+- HTTPS 客户端连接和默认站点系统角色设置：**https://&lt;server&gt;/CMApplicationCatalog**  
+
+- HTTP 客户端连接和默认站点系统角色设置：**http://&lt;server&gt;/CMApplicationCatalog**  
+
+- HTTPS 客户端连接和自定义站点系统角色设置：**https://&lt;server&gt;:&lt;port&gt;/&lt;web application name&gt;**  
+
+- HTTP 客户端连接和自定义站点系统角色设置：**http://&lt;server&gt;:&lt;port&gt;/&lt;web application name&gt;**  
 
 > [!NOTE]  
->  如果使用域管理员帐户登录，将不会显示来自于 Configuration Manager 客户端的通知消息（如指示新软件可用的消息）。  
+>  如果你登录到具有域管理员帐户的设备，Configuration Manager 客户端不会显示通知消息。 例如，消息指示新软件可用。  
 
-### <a name="to-use-the-application-catalog-directly-from-a-browser"></a>从浏览器中直接使用应用程序目录  
-
--   在浏览器中，输入应用程序目录网站的地址，并确认网页显示以下三个选项卡：“应用程序目录”、“我的应用程序请求”和“我的设备”。  
-
-     为“应用程序目录”选用以下列表中适当的地址，其中 &lt;server&gt; 是计算机名、Intranet FQDN 或 Internet FQDN：  
-
-    -   HTTPS 客户端连接和默认站点系统角色设置：**https://&lt;server&gt;/CMApplicationCatalog**  
-
-    -   HTTP 客户端连接和默认站点系统角色设置：**http://&lt;server&gt;/CMApplicationCatalog**  
-
-    -   HTTPS 客户端连接和自定义站点系统角色设置：**https://&lt;server&gt;:&lt;port&gt;/&lt;web application name&gt;**  
-
-    -   HTTP 客户端连接和自定义站点系统角色设置：**http://&lt;server&gt;:&lt;port&gt;/&lt;web application name&gt;**  
-
-### <a name="to-use-the-application-catalog-from-software-center-does-not-apply-to-the-new-version-of-software-center"></a>从软件中心（不适用于新版本软件中心）使用应用程序目录  
-
-1.  在客户端计算机上，选择“开始” > “所有程序” > “Microsoft System Center 2012” > “Configuration Manager” > “软件中心”。  
-
-2.  如果之前为软件中心配置了组织名称作为客户端设置，请确认此名称按指定方式显示。  
-
-3.  选择“从应用程序目录中查找其他应用程序”，并确认页面显示以下三个选项卡：“应用程序目录”、“我的应用程序请求”和“我的设备”。  
-
-> [!WARNING]  
->  安装了应用程序目录站点系统角色后，从软件中心选择“从应用程序目录中查找其他应用程序”链接时，将不会立即看到应用程序目录。 在客户端下一次下载其客户端策略后，或在安装了应用程序目录站点系统角色后最多 25 个小时内，将可以从软件中心中使用应用程序目录。  

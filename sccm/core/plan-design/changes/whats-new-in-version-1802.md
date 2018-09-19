@@ -10,12 +10,12 @@ ms.assetid: 5bd637b1-d7a1-411b-877a-c7aae9741173
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3da4edf50480821ac9b3677fe80c38e8ed3d7e28
-ms.sourcegitcommit: acad0674b2743193f87990fb50194c4f17823a8e
+ms.openlocfilehash: 0757e7f3fac12c2945a3eab860851b0debf28fd5
+ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39146974"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43893883"
 ---
 # <a name="whats-new-in-version-1802-of-system-center-configuration-manager"></a>System Center Configuration Manager 1802 版的新增功能
 
@@ -128,7 +128,7 @@ Configuration Manager 1802 中提供以下见解：
 <!-- 1357389 --> 对于硬件清单属性，可以将字符串长度配置为超过 255 个字符。 此更改仅适用于新添加的类和不为键的硬件清单属性。 有关详细信息，请参阅文章[扩展硬件清单](/sccm/core/clients/manage/inventory/extend-hardware-inventory#BKMK_GreaterThan255)。 
 
  ### <a name="deprecation-announcement-for-linux-and-unix-client-support"></a>Linux 和 Unix 客户端支持的弃用公告
- <!--510139--> Microsoft 计划从现在起大约一年后弃用 System Center Configuration Manager 中的 Linux 和 UNIX 客户端支持。因此，2019 年初的 SCCM 1902 发布中将不会包括这些客户端。  2018 年底的 Configuration Manager 1810 版将是包含 Linux 和 UNIX 客户端的最后一个版本，Configuration Manager 1810 的整个生命周期都将支持这些客户端。  Configuration Manager 1810 后，客户应考虑使用 Microsoft Operations Management Suite 管理 Linux 服务器。  OMS 具有广泛的 Linux 支持（包括面向 Linux 的端到端补丁管理），在大多数情况下优于 Configuration Manager 的功能。
+ <!--510139--> Microsoft 计划从现在起大约一年后弃用 System Center Configuration Manager 中的 Linux 和 UNIX 客户端支持。因此，2019 年初的 SCCM 1902 发布中将不会包括这些客户端。 2018 年底的 Configuration Manager 1810 版将是包含 Linux 和 UNIX 客户端的最后一个版本，Configuration Manager 1810 的整个生命周期都将支持这些客户端。 Configuration Manager 1810 后，客户应考虑使用 Microsoft Azure 管理来管理 Linux 服务器。 Azure 解决方案具有广泛的 Linux 支持（包括面向 Linux 的端到端补丁管理），在大多数情况下优于 Configuration Manager 的功能。
 
 ### <a name="surface-device-dashboard"></a>Surface 设备仪表板
 <!--1355788--> Surface 设备仪表板提供了环境中 Surface 设备的相关信息。 在控制台中，转到“监视” > “Surface 设备”。 可以查看以下项：

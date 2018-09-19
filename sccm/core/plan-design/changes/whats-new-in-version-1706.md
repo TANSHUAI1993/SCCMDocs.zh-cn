@@ -9,12 +9,12 @@ ms.assetid: ac034143-003e-4629-aac2-99eaffef4db1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 925a881c6d9cf7249fc138027ceef2d225ee91e2
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: b83dd71f144e49d6dd9021cfb432927019b3d4ff
+ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32339054"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43893723"
 ---
 # <a name="what39s-new-in-version-1706-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1706 的新增功能
 
@@ -42,35 +42,28 @@ Version 1706 drops support for the following products:
 ## <a name="site-infrastructure"></a>站点基础结构
 
 ### <a name="client-peer-cache-support-for-express-installation-files-for-windows-10-and-office-365"></a>对于适用于 Windows 10 和 Office 365 的快速安装文件的客户端对等缓存支持  
-<!-- 1352486 -->
-从此版本开始，对等缓存支持分发 Windows 10 的内容快速安装文件和 Office 365 的更新文件。 不需要其他配置来支持此更改。
+<!-- 1352486 --> 从此版本开始，对等缓存支持分发 Windows 10 的内容快速安装文件和 Office 365 的更新文件。 不需要其他配置来支持此更改。
 
 ### <a name="updates-for-the-data-warehouse"></a>数据仓库更新
-<!-- 1277922 -->
-数据仓库不再是预发行功能。 我们还更新了先决条件，加入了对 SQL Server Always On 可用性组和故障转移群集上的数据库的支持。 有关详细信息，请参阅[数据仓库服务点](/sccm/core/servers/manage/data-warehouse)。
+<!-- 1277922 --> 数据仓库不再是预发行功能。 我们还更新了先决条件，加入了对 SQL Server Always On 可用性组和故障转移群集上的数据库的支持。 有关详细信息，请参阅[数据仓库服务点](/sccm/core/servers/manage/data-warehouse)。
 
 ### <a name="accessibility-improvements"></a>辅助功能改进
-<!-- 1253000 -->
-我们添加了对 Configuration Manager 控制台辅助功能的其他改进。 有关详细信息，请参阅[辅助功能](/sccm/core/understand/accessibility-features)。
+<!-- 1253000 --> 我们添加了对 Configuration Manager 控制台辅助功能的其他改进。 有关详细信息，请参阅[辅助功能](/sccm/core/understand/accessibility-features)。
 
 ### <a name="improvements--for-sql-server-always-on-availability-groups"></a>SQL Server Always On 可用性组改进
-<!-- 1352094 -->
-借助此版本，现在可以在与 Configuration Manager 配合使用的 SQL Server AlwaysOn 可用性组中使用异步提交副本。 这意味着，你可以将其他副本添加到可用性组，用作场外（远程）备份，然后在灾难恢复方案中使用它们。  
+<!-- 1352094 --> 借助此版本，现在可以在与 Configuration Manager 配合使用的 SQL Server AlwaysOn 可用性组中使用异步提交副本。 这意味着，你可以将其他副本添加到可用性组，用作场外（远程）备份，然后在灾难恢复方案中使用它们。  
   -   Configuration Manager 支持使用异步提交副本来恢复同步副本。 请参阅备份和恢复主题中的[站点数据库恢复选项](/sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption)，了解有关如何实现此操作的信息。
   -   此版本不支持故障转移后使用异步提交副本作为站点数据库。
 有关详细信息，请参阅[准备使用 Always On 可用性组](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database)。
 
 ### <a name="update-reset-tool"></a>更新重置工具
-<!-- 1324589 -->
-从版本 1706 开始，Configuration Manager 主站点和管理中心站点包含 Configuration Manager 更新重置工具，即 CMUpdateReset.exe。 控制台中更新存在下载或复制问题时，可通过当前仍受支持的分支的任意版本使用此工具来修复问题。 有关详细信息，请参阅[更新重置工具](/sccm/core/servers/manage/update-reset-tool)。
+<!-- 1324589 --> 从版本 1706 开始，Configuration Manager 主站点和管理中心站点包含 Configuration Manager 更新重置工具，即 CMUpdateReset.exe。 控制台中更新存在下载或复制问题时，可通过当前仍受支持的分支的任意版本使用此工具来修复问题。 有关详细信息，请参阅[更新重置工具](/sccm/core/servers/manage/update-reset-tool)。
 
 ### <a name="high-dpi-console-support"></a>高 DPI 控制台支持  
-<!-- 1353476 -->
-使用此版本，应能修复在高 DPI 设备（如 Surface Book）上进行查看时，Configuration Manager 控制台如何缩放和显示 UI 不同部分的问题。
+<!-- 1353476 --> 使用此版本，应能修复在高 DPI 设备（如 Surface Book）上进行查看时，Configuration Manager 控制台如何缩放和显示 UI 不同部分的问题。
 
 ### <a name="improved-boundary-groups-for-software-update-points"></a>改进了软件更新点的边界组
-<!-- 1324591 -->
-此版本包括了针对软件更新点如何与边界组配合使用的多项改进。 以下内容总结了新的回退行为：
+<!-- 1324591 --> 此版本包括了针对软件更新点如何与边界组配合使用的多项改进。 以下内容总结了新的回退行为：
 -   现在，软件更新点的回退使用一个可配置的时间来回退到相邻边界组。
 -   独立于回退配置，客户端会尝试访问它使用了 120 分钟的最后一个软件更新点。 在 120 分钟无法访问该服务器后，客户端将检查其池中可用的软件更新点，以便找到一个新的软件更新点。
 -   如果在两个小时内无法连接到其原始服务器，则客户端会切换到一个短循环，以联系新的软件更新点。 这意味着，如果客户端无法连接到新的服务器，它就会从自己的可用服务器池中快速选择下一个服务器，并尝试进行连接。
@@ -78,13 +71,12 @@ Version 1706 drops support for the following products:
 有关详细信息，请参阅 Current Branch 的边界组主题中的[软件更新点](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points)。
 
 ### <a name="azure-ad-integration-with-configuration-manager"></a>Azure AD 与 Configuration Manager 集成
-<!-- 1248187, 1290765, 1258052, 1298097, 1319334, 1319883, 1352135, 1353331 -->
-在此版本中，我们改进了 Configuration Manager 与 Azure Active Directory (Azure AD) 的集成。  这些改进可简化配置用于 Configuration Manager 的 Azure 服务的方式，并可帮助管理通过 Azure AD 进行身份验证的客户端和用户。
+<!-- 1248187, 1290765, 1258052, 1298097, 1319334, 1319883, 1352135, 1353331 --> 在此版本中，我们改进了 Configuration Manager 与 Azure Active Directory (Azure AD) 的集成。  这些改进可简化配置用于 Configuration Manager 的 Azure 服务的方式，并可帮助管理通过 Azure AD 进行身份验证的客户端和用户。
 
 通过改进集成实现了以下功能：  
   -   Azure 服务向导 – 此向导提供了一种可替换单个工作流的常见配置体验，可供设置用于 Configuration Manager 的下列 Azure 服务。
       - 云管理：使用 Azure Active Directory (Azure AD) 支持客户端进行身份验证。 还可以配置 Azure AD 用户发现。
-      - OMS 连接器：连接到 Operations Manager Suite (OMS)，并将集合等数据同步到 OMS Log Analytics。
+      - Log Analytics 连接器连接到 Azure Log Analytics 并同步集合数据。
       - 升级就绪情况：连接到升级就绪情况并查看客户端升级兼容性数据。
       - 适用于企业的 Windows 应用商店：连接到适用于企业的 Windows 应用商店的在线商店并为组织获取应用，以通过 Configuration Manager 进行部署。
 
@@ -98,8 +90,7 @@ Version 1706 drops support for the following products:
 -   配置 Azure AD 用户发现。  使用 Azure 服务向导配置此新发现方法。 此新方法查询 Azure AD 以获取用户数据，然后可以将该数据与传统的发现数据一起使用。  支持完全同步和增量同步。  有关详细信息，请参阅 [Azure AD 用户发现](/sccm/core/servers/deploy/configure/about-discovery-methods#azureaddisc)。
 
 ### <a name="peer-cache-improvements"></a>对等缓存功能改进
-<!-- 1252345 -->
-对等缓存功能不再使用网络访问帐户对来自对等项的下载请求进行身份验证。 客户端仍然需要此帐户时，需要注意这一点。 启动到 WinPE 然后从对等缓存源访问内容的客户端仍然需要此帐户。 有关详细信息，请参阅[对等缓存的要求和注意事项](/sccm/core/plan-design/hierarchy/client-peer-cache#requirements-and-considerations-for-peer-cache)。
+<!-- 1252345 --> 对等缓存功能不再使用网络访问帐户对来自对等项的下载请求进行身份验证。 客户端仍然需要此帐户时，需要注意这一点。 启动到 WinPE 然后从对等缓存源访问内容的客户端仍然需要此帐户。 有关详细信息，请参阅[对等缓存的要求和注意事项](/sccm/core/plan-design/hierarchy/client-peer-cache#requirements-and-considerations-for-peer-cache)。
 
 
 <!-- ## Migration  -->
@@ -111,8 +102,7 @@ Version 1706 drops support for the following products:
 ## <a name="compliance-settings"></a>符合性设置
 
 ### <a name="new-configuration-settings-for-windows-10-devices-that-are-not-managed-with-the-configuration-manager-client"></a>不使用 Configuration Manager 客户端管理的 Windows 10 设备适用的新配置设置
-<!-- 1354715 -->
-在此版本中，我们添加了适用于使用 Intune 注册的或由 Configuration Manager 本地管理的 Windows 10 设备的新配置项目设置。 这些设置包括：
+<!-- 1354715 --> 在此版本中，我们添加了适用于使用 Intune 注册的或由 Configuration Manager 本地管理的 Windows 10 设备的新配置项目设置。 这些设置包括：
 
 - **密码**
     - 设备加密
@@ -182,8 +172,7 @@ Version 1706 drops support for the following products:
 有关详细信息，请参阅[从 Configuration Manager 控制台创建并运行 PowerShell 脚本](/sccm/apps/deploy-use/create-deploy-scripts)。
 
 ### <a name="new-mobile-application-management-policy-settings"></a>新移动应用程序管理策略设置    
-<!--1324760-->
-从此版本开始，你可以使用三个新的移动应用程序管理 (MAM) 策略设置：
+<!--1324760--> 从此版本开始，可以使用三个新的移动应用程序管理 (MAM) 策略设置：
 
 - 阻止屏幕捕获(仅限 Android 设备)：指定在使用该应用时，阻止设备的屏幕捕获功能。
 
@@ -207,8 +196,7 @@ Version 1706 drops support for the following products:
 在此版本中，我们对快速更新的下载时间进行了重大的改进。 有关详细信息，请参阅[管理 Windows 10 更新的快速安装文件](/sccm/sum/deploy-use/manage-express-installation-files-for-windows-10-updates)。
 
 ### <a name="manage-microsoft-surface-driver-updates"></a>管理 Microsoft Surface 驱动程序更新
-<!-- 1098490 -->
-你现在可以使用 Configuration Manager 来管理 Microsoft Surface 驱动程序更新。    
+<!-- 1098490 --> 现在可以使用 Configuration Manager 来管理 Microsoft Surface 驱动程序更新。    
 
 
 #### <a name="prerequisites"></a>先决条件
@@ -222,8 +210,7 @@ Version 1706 drops support for the following products:
 3. [部署同步的 Microsoft Surface 驱动程序](/sccm/sum/deploy-use/deploy-software-updates)
 
 ### <a name="configure-windows-update-for-business-deferral-policies"></a>配置 Windows Update for Business 延迟策略
-<!-- 1290890 -->
-现在，你可以针对 Windows 10 功能更新或直接由 Windows Update for Business 托管的 Windows 10 设备的质量更新，配置延迟策略。 你可以在“软件库” > “Windows 10 维护服务”下方的新“Windows Update for Business 策略”节点中管理延迟策略。
+<!-- 1290890 --> 现在，你可以针对 Windows 10 功能更新或直接由适用于企业的 Windows 更新托管的 Windows 10 设备的质量更新，配置延迟策略。 你可以在“软件库” > “Windows 10 维护服务”下方的新“Windows Update for Business 策略”节点中管理延迟策略。
 
 有关详细信息，请参阅[在 Windows 10 中与适用于企业的 Windows 更新集成](/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10#configure-windows-update-for-business-deferral-policies)。
 
@@ -233,8 +220,7 @@ Version 1706 drops support for the following products:
 ## <a name="reporting"></a>报表
 
 ### <a name="use-windows-analytics-with-configuration-manager"></a>结合使用 Windows Analytics 和 Configuration Manager
-<!-- 1318608 -->
-Windows Analytics 是 Operations Management Suite 上运行的一组解决方案。 通过这些解决方案可以形成对环境当前状态的见解。 环境中的设备报告 Windows 遥测数据。 用户可通过 Operations Management Suite Web 门户访问此数据。 对于升级就绪情况，可在 Configuration Manager 控制台的监视节点中直接获取此数据。
+<!-- 1318608 --> Windows Analytics 是一组解决方案，使你能够深入了解当前环境状态。 环境中的设备报告 Windows 遥测数据。 可通过 Azure 门户访问数据。 对于升级就绪情况，可在 Configuration Manager 控制台的监视节点中直接获取此数据。
 
 有关详细信息，请参阅[结合使用 Windows Analytics 和 Configuration Manager](/sccm/core/clients/manage/monitor-windows-analytics)。
 
@@ -244,22 +230,19 @@ Windows Analytics 是 Operations Management Suite 上运行的一组解决方案
 ## <a name="mobile-device-management"></a>移动设备管理
 
 ### <a name="updates-to-android-for-work-sharing-configuration"></a>Android for Work 共享配置更新
-<!-- 1338403 -->
-在此版本中，更新了“工作配置文件”设置组中的“允许工作和个人配置文件间的数据共享”设置的值。 还添加了自定义设置，用于阻止在工作个个人配置文件之间进行复制粘贴。
+<!-- 1338403 --> 在此版本中，更新了“工作配置文件”设置组中的“允许工作和个人配置文件间的数据共享”设置的值。 还添加了自定义设置，用于阻止在工作个个人配置文件之间进行复制粘贴。
 
 有关详细信息，请参阅 [Android for Work 设备的配置项](/sccm/mdm/deploy-use/create-configuration-items-for-android-for-work-devices-managed-without-the-client)。
 
 ### <a name="android-and-ios-enrollment-restrictions"></a>Android 和 iOS 注册限制
-<!-- 1290826 -->
-使用此版本，现在可以指定用户不能注册个人 Android 或 iOS 设备。 借助新的设备限制设置，可以限制为将 Android 设备注册为预声明设备。 对于 iOS 设备，可以阻止所有设备注册，使用 Apple 设备注册计划、Apple Configurator 或 Intune 设备注册管理器帐户注册的设备除外。
+<!-- 1290826 --> 使用此版本，现在可以指定用户不能注册个人 Android 或 iOS 设备。 借助新的设备限制设置，可以限制为将 Android 设备注册为预声明设备。 对于 iOS 设备，可以阻止所有设备注册，使用 Apple 设备注册计划、Apple Configurator 或 Intune 设备注册管理器帐户注册的设备除外。
 - 有关 Android 注册限制的详细信息，请参阅[设置 Android 设备管理](/sccm/mdm/deploy-use/enroll-hybrid-android)。
 - 有关 iOS 注册限制的详细信息，请参阅[配置 iOS 注册限制](/sccm/mdm/deploy-use/enroll-hybrid-ios-mac#configure-enrollment-restrictions)。
 
 ## <a name="protect-devices"></a>保护设备
 
 ### <a name="include-trust-for-specific-files-and-folders-in-a-device-guard-policy"></a>在 Device Guard 策略中包括对特定文件和文件夹的信任
-<!--1324676-->
-在此版本中，我们已向 Device Guard 策略管理添加了更多功能。
+<!--1324676--> 在此版本中，我们已向 Device Guard 策略管理添加了更多功能。
 
 现在可以选择在 Device Guard 策略中添加对特定文件或文件夹的信任。 此操作可让你：
 

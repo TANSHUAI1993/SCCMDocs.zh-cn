@@ -10,12 +10,12 @@ ms.assetid: b670cfaf-96a4-4fcb-9caa-0f2e8c2c6198
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7e445cd6e49617afde6f8acf043eeb4c707e1480
-ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
+ms.openlocfilehash: 801cd2cd35d370fbe469b16613da7f7592feff6e
+ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36261004"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43893802"
 ---
 # <a name="optimize-windows-10-update-delivery-with-configuration-manager"></a>使用 Configuration Manager 优化 Windows 10 更新传递
 
@@ -89,7 +89,7 @@ Configuration Manager 支持许多对等技术，包括：
 | 控制磁盘上的缓存大小 | 是 | 是 | 是 |
 | 发现对等源 | 自动 | 手动（客户端代理设置） | 自动 |
 | 对等发现 | 通过传递优化云服务（需要 Internet 访问） | 通过管理点（基于客户端边界组） | 广播 |
-| 报表 | 是（使用 Microsoft Operations Management Suite） | ConfigMgr 客户端数据源仪表板 | ConfigMgr 客户端数据源仪表板 |
+| 报表 | 是（使用 Windows Analytics） | ConfigMgr 客户端数据源仪表板 | ConfigMgr 客户端数据源仪表板 |
 | WAN 使用控制 | 是（本机，可通过组策略设置控制） | 边界组 | 仅限子网支持 |
 | 支持的内容类型 | - 快速更新（通过 ConfigMgr）</br> - Windows 和安全更新</br> - 驱动程序</br> - Windows 应用商店应用</br> - 适用于企业的 Windows 应用商店应用 | 所有 ConfigMgr 内容类型，包括在 [Windows PE](/sccm/osd/get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic) 中下载的映像 | 所有 ConfigMgr 内容类型，映像除外 |
 | 通过 ConfigMgr 管理 | 部分（客户端代理设置） | 是（客户端代理设置） | 是（客户端代理设置） |

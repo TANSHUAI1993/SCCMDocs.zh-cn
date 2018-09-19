@@ -10,12 +10,12 @@ ms.assetid: 6bce416b-761d-4b23-bd33-5b7c30edb10d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e72cdf667f96828fb6730cf3294c8d20ec553130
-ms.sourcegitcommit: 759098de944b8f7d5eedfc2bae2cb9a6ba15276f
+ms.openlocfilehash: 7b82bdfcbe69c7e9d59185fc6af20a85e65a6e7d
+ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43289248"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43893560"
 ---
 # <a name="pre-release-features-in-configuration-manager"></a>Configuration Manager 中的预发行功能
 
@@ -91,7 +91,7 @@ ms.locfileid: "43289248"
 | 数据仓库服务点 <!-- 1277922 --> |  [版本 1702](/sccm/core/servers/manage/data-warehouse) |[版本 1706](/sccm/core/servers/manage/data-warehouse)|
 | 用于向客户端进行内容分发的对等缓存 <!-- 1101436 --> |  [版本 1610](/sccm/core/plan-design/hierarchy/client-peer-cache) | [版本 1710](/sccm/core/plan-design/hierarchy/client-peer-cache)|
 | 云管理网关 <!-- 1101764 --> |  [版本 1610](/sccm/core/clients/manage/plan-cloud-management-gateway) |[版本 1802](/sccm/core/clients/manage/plan-cloud-management-gateway)|
-| Microsoft Operations Management Suite 连接器 <!-- 1236739 --> | [版本 1606](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite) |[版本 1802](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite)|
+| Log Analytics 连接器 <!-- 1236739 --> | [版本 1606](/sccm/core/clients/manage/sync-data-log-analytics) |[版本 1802](/sccm/core/clients/manage/sync-data-log-analytics)|
 | 维护群集感知集合（为服务器组提供服务） <!-- 1081776 --> | [版本 1602](/sccm/core/get-started/capabilities-in-technical-preview-1605#BKMK_ServerGroups)|![尚未发行](media/red_x.png)|
 | 对由 System Center Configuration Manager 管理的电脑进行条件访问 <!--  --> | [版本 1602](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)     | [版本 1702](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)                     |
 <!--Image used = ![Not yet](media/red_x.png) -->

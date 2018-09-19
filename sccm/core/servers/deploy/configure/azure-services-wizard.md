@@ -1,7 +1,7 @@
 ---
 title: 配置 Azure 服务
 titleSuffix: Configuration Manager
-description: 通过云管理、升级就绪情况、适用于企业的 Microsoft Store 以及 Operations Management Suite 等 Azure 服务连接 Configuration Manager 环境。
+description: 通过云管理、升级就绪情况、适用于企业的 Microsoft Store 以及 Log Analytics 等 Azure 服务连接 Configuration Manager 环境。
 ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -10,12 +10,12 @@ ms.assetid: a26a653e-17aa-43eb-ab36-0e36c7d29f49
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5607402171a3b771560ff439b1f1f99a6a947e83
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 1ea47941be51d1bf38de53203aad00c02d0a11d3
+ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39383290"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43893764"
 ---
 # <a name="configure-azure-services-for-use-with-configuration-manager"></a>配置用于 Configuration Manager 的 Azure 服务
 
@@ -37,7 +37,10 @@ ms.locfileid: "39383290"
 
     - 支持某些[云管理网关方案](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#scenarios)  
 
--   **OMS 连接器**：[连接至 Operations Management Suite](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite) (OMS)。 将类似集合的数据同步至 OMS Log Analytics。  
+-   Log Analytics 连接器：[连接到 Azure Log Analytics ](/sccm/core/clients/manage/sync-data-log-analytics)。 将集合数据同步到 Log Analytics。  
+
+    > [!Note]  
+    > 本文引用 Log Analytics 连接器（以前称为“OMS 连接器”）。 没有任何功能区别。 有关详细信息，请参阅 [Azure 管理 - 监视](https://docs.microsoft.com/azure/monitoring/#operations-management-suite)。  
 
 -   **升级就绪情况连接器**：连接至 Windows Analytics [升级就绪情况](/sccm/core/clients/manage/upgrade/upgrade-analytics)。 查看客户端升级兼容性数据。  
 
@@ -61,7 +64,7 @@ ms.locfileid: "39383290"
 |服务  |租户  |云  |Web 应用  |本机应用  |操作  |
 |---------|---------|---------|---------|---------|---------|
 |云管理及</br>Azure AD 用户发现 | 多选 | 公共 | ![支持](media/green_check.png) | ![支持](media/green_check.png) | 导入、创建 |
-|OMS 连接器 | 一台 | 公共、私有 | ![支持](media/green_check.png) | ![不支持](media/Red_X.png) | 导入 |
+|Log Analytics 连接器 | 一台 | 公共、私有 | ![支持](media/green_check.png) | ![不支持](media/Red_X.png) | 导入 |
 |Upgrade Readiness | 一台 | 公共 | ![支持](media/green_check.png) | ![不支持](media/Red_X.png) | 导入 |
 |适用于企业和教育的</br>业务电话 | 一台 | 公共 | ![支持](media/green_check.png) | ![不支持](media/Red_X.png) | 导入、创建 |
 
@@ -90,7 +93,7 @@ ms.locfileid: "39383290"
 
 决定好要连接到的服务后，请参考[服务详细信息](#service-details)中的表。 此表为你提供完成 Azure 服务向导所需的信息。 请提前与你的 Azure AD 管理员进行讨论。 决定是否提前在 Azure 门户中手动创建应用，然后将该应用的详细信息导入至 Configuration Manager。 或者使用 Configuration Manager 直接在 Azure AD 中创建应用。 若要从 Azure AD 收集必要数据，请查看本文其他部分中的信息。
 
-部分服务需要 Azure AD 应用具备特定的权限。 查看每个服务的信息以确定任何所需权限。 例如，在导入某个 Web 应用之前，Azure 管理员必须先在 [Azure 门户](https://portal.azure.com)中创建该应用。 在配置升级就绪情况或 OMS 连接器时，需要在相关 OMS 工作区的资源组上授予新创建的 Web 应用“参与者”权限。 此权限允许 Configuration Manager 访问该工作区。 分配权限时，在 Azure 门户的“添加用户”区域中搜索应用注册的名称。 此过程与[向 Configuration Manager 提供 OMS 权限](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#provide-configuration-manager-with-permissions-to-oms)相同。 Azure 管理员必须在将应用导入 Configuration Manager 之前分配这些权限。
+部分服务需要 Azure AD 应用具备特定的权限。 查看每个服务的信息以确定任何所需权限。 例如，在导入某个 Web 应用之前，Azure 管理员必须先在 [Azure 门户](https://portal.azure.com)中创建该应用。 在配置升级就绪情况或 Log Analytics 连接器时，需要在相关工作区的资源组上授予新创建的 Web 应用“参与者”权限。 此权限允许 Configuration Manager 访问该工作区。 分配权限时，在 Azure 门户的“添加用户”区域中搜索应用注册的名称。 此过程与[向 Configuration Manager 提供 Log Analytics 权限](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#grant-configuration-manager-with-permissions-to-log-analytics)相同。 Azure 管理员必须在将应用导入 Configuration Manager 之前分配这些权限。
 
 
 
@@ -209,7 +212,7 @@ ms.locfileid: "39383290"
 
 -   **云管理**服务，**发现**页：[配置 Azure AD 用户发现](/sccm/core/servers/deploy/configure/configure-discovery-methods#azureaadisc)  
 
--   **OMS 连接器**服务，**配置**页：[配置到 OMS 的连接](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite#use-the-azure-services-wizard-to-configure-the-connection-to-oms)  
+-   “Log Analytics 连接器”服务，“配置”页：[配置到 Log Analytics 的连接](/sccm/core/clients/manage/sync-data-log-analytics#configure-the-connection-to-log-analytics)  
 
 -   **升级准备情况连接器**服务，**配置**页：[使用 Azure 向导创建连接](/sccm/core/clients/manage/upgrade/upgrade-analytics#use-the-azure-wizard-to-create-the-connection)  
 

@@ -2,7 +2,7 @@
 title: 客户端设置
 titleSuffix: Configuration Manager
 description: 了解用于控制客户端行为的默认和自定义设置
-ms.date: 07/30/2018
+ms.date: 08/31/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 38306efc9fbd7b38a5c5f0dad57fbd1a1b2c0557
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: ff4cdcc52e9be329fcfa0fd2127c43255c73ad65
+ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385399"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43893866"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>关于 Configuration Manager 中的客户端设置
 
@@ -90,15 +90,7 @@ Configuration Manager 会自动配置 Windows 防火墙规则以允许此流量�
 
 如果此选项设置为“是”并且使用[用户发现](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutUser)，客户端会接收面向登录用户的应用程序和程序。  
 
-应用程序目录从站点服务器接收用户的可用软件列表。 因此，此设置不必为“是”，用户也可从应用程序目录中查看和请求应用程序。 但如果此设置为“否”，则用户在使用应用程序目录时，以下行为无效：  
-
--   用户无法安装他们在应用程序目录中看到的应用程序。  
-
--   用户看不到有关其应用程序批准请求的通知。 相反，他们必须刷新应用程序目录并检查审批状态。  
-
--   用户不会收到发布到应用程序目录的应用程序修订和更新。 但用户会在应用程序目录中看到对应用程序所做更改的信息。  
-
--   如果客户端在安装了应用程序目录中的应用程序后删除应用程序部署，则客户端会最多持续两天检查应用程序是否已安装。  
+应用程序目录从站点服务器接收用户的可用软件列表。 因此，此设置不必为“是”，用户也可从应用程序目录中查看和请求应用程序。 如果此设置为“否”，则用户无法安装他们在应用程序目录中看到的应用程序。  
 
 此外，如果此设置为“否”，则用户不会收到你为用户部署的所需应用程序。 用户也不会收到用户策略中的任何其他管理任务。  
 
@@ -161,42 +153,19 @@ Configuration Manager 会自动配置 Windows 防火墙规则以允许此流量�
 
 ### <a name="default-application-catalog-website-point"></a>默认应用程序目录网站点
 
-Configuration Manager 使用此设置将用户连接到软件中心中的应用程序目录。 选择“设置网站”，指定托管应用程序目录网站点的服务器。 输入其 NetBIOS 名称或 FQDN，指定自动检测，或指定自定义部署的 URL。 在大多数情况下，自动检测是最佳选择，因为它具有下列优点：  
+> [!Note]  
+> 从版本 1806 开始，不再需要应用程序目录网站点，但仍受支持。 有关详细信息，请参阅[配置软件中心](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex)。 
+> 
+> 应用程序目录网站点的 Silverlight 用户体验不再受支持。 有关详细信息，请参阅[已删除和已弃用的功能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)。  
 
--   如果站点具有应用程序目录网站点，则从其站点中向客户端自动提供应用程序目录网站点。  
-
--   客户端优先选择 Intranet 上启用 HTTPS 的应用程序目录网站点，而不是仅限 HTTP 的服务器。 此功能有助于防御恶意服务器。
-
--   管理点为基于 Internet 的客户端提供基于 Internet 的应用程序目录网站点。 管理点为基于 Intranet 的客户端提供基于 Intranet 的应用程序目录网站点。  
-
-自动检测并不能保证为客户端提供最接近的应用程序目录网站点。 由于以下原因，可能决定不使用“自动检测”选项：  
-
--   你想要为客户端手动配置最近的服务器，或者确保客户端不跨慢速网络连接连接到服务器。  
-
--   你想要控制哪些客户端连接到哪台服务器。 此配置可能出于测试、性能或商业原因。  
-
--   你不想等待 25 小时之久，或者不想客户端网络更改使用其他应用程序目录网站点。  
-
-如果指定应用程序目录网站点而不是使用自动检测，请指定 NetBIOS 名称而不是 intranet FQDN。 此配置可降低用户访问基于 Intranet 的应用程序目录时 Web 浏览器提示用户输入凭据的可能性。 要使用 NetBIOS 名称，必须应用下列条件：  
-
--   在应用程序目录网站点属性中指定 NetBIOS 名称。  
-
--   使用 WINS 或者所有客户端与应用程序目录网站点在同一域中。  
-
--   针对 HTTP 客户端连接配置应用程序目录网站点，或针对 HTTPS 配置服务器，并且 Web 服务器证书包含 NetBIOS 名称。  
-
-通常，当 URL 包含 FQDN 时会提示用户输入凭据，但当 URL 为 NetBIOS 名称时不会。 当用户从 Internet 进行连接时，应该始终提示用户，因为此连接必须使用 Internet FQDN。 对于基于 Internet 的客户端，当使用 Web 浏览器提示用户输入凭据时，请确保应用程序目录网站点可以连接到用户帐户的域控制器。 此配置允许用户使用 Kerberos 进行身份验证。  
-
-> [!NOTE]  
->  以下是自动检测的工作原理：  
->   
->  客户端向管理点提出服务位置请求。 如果存在与客户端在同一站点中的应用程序目录网站点，则会将此服务器作为应用程序目录服务器提供给客户端使用。 如果站点中有多个可用的应用程序目录网站点，则启用 HTTPS 的服务器优先于未启用 HTTPS 的服务器。 在进行此筛选之后，会为所有客户端提供服务器之一以用作应用程序目录。 Configuration Manager 不在多个服务器之间进行负载平衡。 如果客户端的站点不包含应用程序目录网站点，则管理点会不确定地从层次结构中返回应用程序目录网站点。  
->   
->  对于基于 Intranet 的客户端，如果为应用程序目录网站点配置应用程序目录 URL 的 NetBIOS 名称，管理点会使用该名称。 它不会使用 Intranet FQDN。 对于基于 Internet 的客户端，管理点向客户端仅提供 Internet FQDN。  
->   
->  每 25 个小时或者每当客户端检测到网络更改时，客户端便会提出此服务位置请求。 例如，如果客户端从 Intranet 移动到 Internet，那就是网络更改。 然后，如果客户端找到基于 Internet 的管理点，则基于 Internet 的管理点会向客户端提供基于 Internet 的应用程序目录网站点服务器。  
+Configuration Manager 使用此设置将用户连接到软件中心中的应用程序目录。 选择“设置网站”，指定托管应用程序目录网站点的服务器。 输入其 NetBIOS 名称或 FQDN，指定自动检测，或指定自定义部署的 URL。 在大多数情况下，自动检测是最佳选择。
 
 ### <a name="add-default-application-catalog-website-to-internet-explorer-trusted-sites-zone"></a>向 Internet Explorer 受信任的站点区域添加默认应用程序目录网站
+
+> [!Note]  
+> 从版本 1806 开始，不再需要应用程序目录网站点，但仍受支持。 有关详细信息，请参阅[配置软件中心](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex)。 
+> 
+> 应用程序目录网站点的 Silverlight 用户体验不再受支持。 有关详细信息，请参阅[已删除和已弃用的功能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)。  
 
 如果此选项为“是”，则客户端会将当前默认的应用程序目录网站 URL 自动添加到 Internet Explorer 受信任的站点区域。  
 
@@ -204,12 +173,12 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
 如果将此选项保留为“否”，则 Configuration Manager 客户端可能无法安装应用程序目录中的应用程序。 替代方法是在客户端使用的应用程序目录 URL 的另一个区域中配置这些 Internet Explorer 设置。  
 
-> [!NOTE]  
->  每当 Configuration Manager 将默认的应用程序目录 URL 添加到受信任的站点区域中时，Configuration Manager 会删除任何之前添加的应用程序目录 URL。  
->   
->  如果已在某个安全区域中指定了 URL，则 Configuration Manager 无法添加此 URL。 在此情况下，你必须从其他区域中删除此 URL，或者手动配置所需的 Internet Explorer 设置。  
-
 ### <a name="allow-silverlight-applications-to-run-in-elevated-trust-mode"></a>允许 Silverlight 应用程序在提升的信任模式下运行
+
+> [!Important]  
+> 自 Configuration Manager 版本 1802 起，客户端不再自动安装 Silverlight。
+> 
+> 从版本 1806 开始，应用程序目录网站点的 Silverlight 用户体验不再受支持。 用户应使用新的软件中心。 有关详细信息，请参阅[配置软件中心](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex)。  
 
 此设置必须为“是”，以便用户使用应用程序目录。  
 
@@ -219,15 +188,18 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
 ### <a name="organization-name-displayed-in-software-center"></a>软件中心中显示的组织名称
 
-键入用户在软件中心中看到的名称。 此品牌信息有助于用户将此应用程序识别为受信任的源。  
+键入用户在软件中心中看到的名称。 此品牌信息有助于用户将此应用程序识别为受信任的源。 有关此设置优先级的详细信息，请参阅[软件中心品牌打造](/sccm/apps/plan-design/plan-for-and-configure-application-management#branding-software-center)。  
 
 ### <a name="use-new-software-center"></a>使用新的软件中心
 
-如果将此选项设置为“是”，则所有客户端计算机均使用软件中心。 软件中心显示以前只能在应用程序目录中访问的用户可用的应用。 应用程序目录需要 Silverlight，它对于软件中心来说不再是先决条件。 从 Configuration Manager 1802 起，默认设置为“是”。  
+从 Configuration Manager 1802 起，默认设置为“是”。
 
-仍然需要应用程序目录网站点站点系统角色和应用程序目录 Web 服务点站点系统角色来让用户可用的应用显示在软件中心。  
+如果将此选项设置为“是”，则所有客户端计算机均使用软件中心。 软件中心显示以前只能在应用程序目录中访问的用户可用的应用。 应用程序目录需要 Silverlight，它对于软件中心来说不再是先决条件。   
 
-有关详细信息，请参阅[规划和配置应用程序管理](/sccm/apps/plan-design/plan-for-and-configure-application-management)。  
+从版本 1806 开始，不再需要应用程序目录站点和 Web 服务点角色，但依然受支持。 有关详细信息，请参阅[配置软件中心](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex)。 
+ 
+> [!Note]  
+> 应用程序目录网站点的 Silverlight 用户体验不再受支持。 有关详细信息，请参阅[已删除和已弃用的功能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)。  
 
 ### <a name="enable-communication-with-health-attestation-service"></a>启用与运行状况证明服务的通信
 

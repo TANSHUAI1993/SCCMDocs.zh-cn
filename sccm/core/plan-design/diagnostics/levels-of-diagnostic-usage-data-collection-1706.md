@@ -10,12 +10,12 @@ ms.assetid: 14ee4fb0-7790-45a6-906e-6e55627d4079
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0a855e332fe54779cc324ccf4fb2206a64b74110
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 8ed8aed38f20adb3558b61dd32a36f88fbac3b00
+ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344222"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43893502"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1706-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1706 的诊断使用情况数据收集的级别
 
@@ -214,11 +214,11 @@ System Center Configuration Manager 版本 1706 收集三个级别的诊断和�
 
   - 加入 Azure Active Directory 服务的客户端的计数
 
-  - 同步到 Operations Management Suite 的集合计数
+  - 同步到 Azure Log Analytics 的集合数
 
   - 升级分析连接器的计数
 
-  - 是否启用 Operations Management Suite 云连接器
+  - 是否启用了 Azure Log Analytics 云连接器
 
 
 

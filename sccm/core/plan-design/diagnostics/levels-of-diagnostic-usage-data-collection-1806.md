@@ -10,12 +10,12 @@ ms.assetid: a0287beb-70a9-4b57-a627-e7bfba27fd3b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5da60a9dd45b3993f9c1afd95c41a90956ec70c4
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: d964295134538cf281af214830a5bc416484be51
+ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385958"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43893665"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1806"></a>1806 版的诊断使用情况数据收集的级别
 
@@ -258,11 +258,11 @@ Configuration Manager 版本 1806 收集三个级别的诊断和使用情况数�
 
   - Azure Active Directory 应用程序和连接到 Configuration Manager 的服务的计数
 
-  - 同步到 Operations Management Suite 的集合计数
+  - 同步到 Azure Log Analytics 的集合数
 
   - 升级分析连接器的计数
 
-  - 是否启用 Operations Management Suite 云连接器  
+  - 是否启用了 Azure Log Analytics 云连接器  
 
   - ***[新增]*** 以云分发点作为源位置的请求分发点计数  
 

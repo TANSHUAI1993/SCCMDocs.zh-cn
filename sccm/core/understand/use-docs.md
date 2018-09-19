@@ -2,7 +2,7 @@
 title: 如何使用文档
 titleSuffix: Configuration Manager
 description: 了解关于使用 Configuration Manager 技术文档库的技巧。
-ms.date: 04/30/2018
+ms.date: 09/07/2018
 ms.prod: configuration-manager
 ms.technology:
 - configmgr-other
@@ -11,12 +11,12 @@ ms.assetid: b3d755bd-0870-4f1f-a56d-bfd3c7b492b9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 46bff7e26a5df326b686b07c37f1d58352755857
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 6bd4675d3b366c5f414467b76627e25b91259ef2
+ms.sourcegitcommit: 240d3199e1c6fa47af6eda499492b2527516ab18
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32345087"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44326197"
 ---
 # <a name="how-to-use-the-configuration-manager-docs"></a>如何使用 Configuration Manager 文档
 
@@ -63,9 +63,9 @@ ms.locfileid: "32345087"
 
 单击任意文章右上方的“反馈”链接，转到底部的“反馈”部分。 此部分与 GitHub 问题相集成。 有关与 GitHub 问题集成的详细信息，请参阅[文档平台博客文章](https://docs.microsoft.com/teamblog/a-new-feedback-system-is-coming-to-docs)。
 
-若要共享有关 Configuration Manager 产品本身的反馈，请单击“提供产品反馈”。 有关详细信息，请参阅[产品反馈](/sccm/core/understand/find-help#product-feedback)。 
+若要共享有关 Configuration Manager 产品本身的反馈，请单击“产品反馈”。 有关详细信息，请参阅[产品反馈](/sccm/core/understand/find-help#product-feedback)。 
 
-[GitHub 帐户](https://github.com/join)是提供文档反馈的先决条件。 用户登录后，会获得 MicrosoftDocs 的一次性授权。 然后，单击“提供文档反馈”输入标题和评论，再单击“提交反馈”。 此操作可为 [SCCMdocs 存储库](https://github.com/MicrosoftDocs/SCCMdocs/issues)中的目标文章提出一个新问题。
+[GitHub 帐户](https://github.com/join)是提供文档反馈的先决条件。 用户登录后，会获得 MicrosoftDocs 的一次性授权。 然后，单击“内容反馈”输入标题和评论，再单击“提交反馈”。 此操作可为 [SCCMdocs 存储库](https://github.com/MicrosoftDocs/SCCMdocs/issues)中的目标文章提出一个新问题。
 
 此集成还显示目标文章的任何现有未解决的问题或已关闭的问题。 如果存在任何此类问题，请在提交新问题之前先查看这些问题。 如果发现相关问题，请单击人脸图标以添加回应，或者可展开添加评论。 
 
@@ -106,15 +106,49 @@ ms.locfileid: "32345087"
 与 docs.microsoft.com 上的大多数内容一样，Configuration Manager 文档库在 GitHub 上也是使用开放源代码编写的。 此库接受并鼓励社区参与。 有关如何参与的详细信息，请参阅[参与者指南](https://docs.microsoft.com/contribute)。 创建一个 [GitHub 帐户](https://github.com/join)是唯一的先决条件。
 
 #### <a name="basic-steps-to-contribute-to-sccmdocs"></a>参与编辑 SCCM 文档的基本步骤
-1. 从目标文章中，单击“编辑”。 此操作可在 GitHub 中打开源文件。
-2. 若要编辑源文件，请单击铅笔图标。
-3. 在 Markdown 源中进行更改。 有关详细信息，请参阅 [How to use Markdown for writing Docs](https://docs.microsoft.com/contribute/how-to-write-use-markdown)（如何使用 Markdown 编写文档）。 
-4. 在“建议文件更改”部分中，输入描述已更改内容的公开提交评论。 然后单击“建议文件更改”。
-5. 向下滚动然后验证所做的更改。 单击“创建拉取请求”以打开窗体。 描述进行此更改的原因。 标记文章作者并请求他们查看。 单击“创建拉取请求”。
+1. 从目标文章中，单击“编辑”。 此操作可在 GitHub 中打开源文件。  
+
+2. 若要编辑源文件，请单击铅笔图标。  
+
+3. 在 Markdown 源中进行更改。 有关详细信息，请参阅 [How to use Markdown for writing Docs](https://docs.microsoft.com/contribute/how-to-write-use-markdown)（如何使用 Markdown 编写文档）。  
+
+4. 在“建议文件更改”部分中，输入描述已更改内容的公开提交评论。 然后单击“建议文件更改”。  
+
+5. 向下滚动然后验证所做的更改。 单击“创建拉取请求”以打开窗体。 描述进行此更改的原因。 标记文章作者并请求他们查看。 单击“创建拉取请求”。  
+
 
 ### <a name="what-to-contribute"></a>要参与的内容
-如果有兴趣参与但不知道从何处着手，请参阅以下建议：
-- 查看文章以确保准确性。 然后使用 `mm/dd/yyyy` 格式更新 ms.date 元数据。 此贡献有助于内容保持最新状态。
-- 根据经验添加说明、示例或指导。 此贡献借助社区的力量共享知识。  
-- 以非英语语言更正翻译。 此贡献可提高本地化内容的可用性。
-- 搜索针对社区的标签[精选问题](https://github.com/MicrosoftDocs/sccmdocs/issues?q=is:open+is:issue+label:good-first-issue)和[需要帮助](https://github.com/MicrosoftDocs/sccmdocs/issues?q=is:open+is:issue+label:help-wanted)的问题列表。 Microsoft 作者会将这些标签分配给适用于社区贡献的候选问题。
+
+如果有兴趣参与但不知道从何处着手，请参阅以下建议：  
+
+- 搜索针对社区的标签的问题列表：  
+    - [精选问题](https://github.com/MicrosoftDocs/sccmdocs/issues?q=is:open+is:issue+label:good-first-issue)   
+    - [需要帮助](https://github.com/MicrosoftDocs/sccmdocs/issues?q=is:open+is:issue+label:help-wanted)  
+
+    Microsoft 作者会将这些标签分配给适用于社区贡献的候选问题。  
+
+- 查看文章以确保准确性。 然后使用 `mm/dd/yyyy` 格式更新 ms.date 元数据。 此贡献有助于内容保持最新状态。  
+
+- 根据经验添加说明、示例或指导。 此贡献借助社区的力量共享知识。   
+
+- 以非英语语言更正翻译。 此贡献可提高本地化内容的可用性。  
+
+> [!Note]  
+> 如果你不是 Microsoft 员工，那么对于较大的贡献，需要签署贡献许可协议 (CLA)。 当贡献达到阈值，GitHub 会自动要求你签署此协议。  
+
+
+### <a name="tips"></a>提示
+
+贡献 Configuration Manager 文档时，请遵循以下通用准则：
+
+- 不要使用大型拉取请求来制造惊喜。 相反，请[提出问题](https://docs.microsoft.com/sccm/core/understand/use-docs#bkmk_docfeedback)并开始讨论。 然后，在你投入大量时间之前，我们会就某个方向表示同意。  
+
+- 阅读 [Microsoft 风格指南](https://aka.ms/MicrosoftStyle)。 了解[有关 Microsoft 风格和语态的前 10 个提示](https://docs.microsoft.com/style-guide/top-10-tips-style-voice)。  
+
+- 使用[拉取请求模板](https://github.com/MicrosoftDocs/SCCMdocs/blob/master/PULL_REQUEST_TEMPLATE.md)作为工作的起始点。  
+
+- 请按照 [GitHub 流工作流](https://guides.github.com/introduction/flow/)操作。  
+
+- 会经常推出有关你发布内容的博客和推文（或任何内容）！  
+
+（此列表借用自 [.NET 参与指南](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md#dos-and-donts)。）
