@@ -2,7 +2,7 @@
 title: 已弃用的功能
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 不再支持的功能。
-ms.date: 08/14/2018
+ms.date: 08/31/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 287a6324-ae65-4d38-b2ef-198d47c91231
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a84d25203fc0addc32271446e1375c9013c0bb6e
-ms.sourcegitcommit: 98c3f7848dc9014de05541aefa09f36d49174784
+ms.openlocfilehash: dbebfa1ef5d4851cfd6bbc118c2d7bab30f0b01f
+ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42584636"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43893444"
 ---
 # <a name="removed-and-deprecated-features-for-configuration-manager"></a>Configuration Manager 中已删除和已弃用的功能
 
@@ -32,8 +32,8 @@ ms.locfileid: "42584636"
 |功能|首次宣布弃用|支持&nbsp;删除|  
 |-----------|---|--------------|  
 |混合移动设备管理。 有关详细信息，请参阅[什么是混合 MDM](/sccm/mdm/understand/hybrid-mobile-device-management)。<!--Intune feature 2683117-->|2018 年 8 月 14 日|2019 年 9 月 1 日|
-|应用程序目录网站点的 Silverlight 用户体验不再受支持。 用户应使用新的软件中心。 注意：应用程序目录网站点和 Web 服务点角色依然受支持。 在某些情况下，新的软件中心会与应用程序目录网站点进行通信。|2017 年 8 月 11日| 版本 1806|
-|以前版本的软件中心。<br><br>有关新软件中心的详细信息，请参阅[规划和配置应用程序管理](/sccm/apps/plan-design/plan-for-and-configure-application-management#configure-software-center-and-the-application-catalog-windows-pcs-only)。|2016 年 12 月 13 日|版本 1802|
+|应用程序目录网站点的 Silverlight 用户体验不再受支持。 用户应使用新的软件中心。 注意：应用程序目录网站点和 Web 服务点角色依然受支持。 在某些情况下，新的软件中心会与应用程序目录网站点进行通信。 有关详细信息，请参阅[配置软件中心](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex)。<!--1358309-->|2017 年 8 月 11日| 版本 1806|
+|以前版本的软件中心。<br><br>有关新软件中心的详细信息，请参阅[规划和配置应用程序管理](/sccm/apps/plan-design/plan-for-and-configure-application-management##bkmk_userex)。|2016 年 12 月 13 日|版本 1802|
 |利用 Configuration Manager 管理虚拟硬盘 (VHD)。 </br></br>此次弃用包括删除使用任务序列创建新 VHD 或管理 VHD 的选项，以及删除 Configuration Manager 控制台的虚拟硬盘节点。 </br></br>不会删除现有 VHD，但无法从 Configuration Manager 控制台中对其进行访问。  |2017 年 1 月 6 日 |版本 1710|
 |任务序列： <br /> - 将磁盘转换为动态磁盘 <br /> - 安装部署工具 |2016 年 11 月 18 日|版本 1710|
 |System Center Configuration Manager 升级评估工具。 </br></br>升级评估工具依赖于 System Center Configuration Manager 和应用程序兼容性工具包 (ACT) 6.x。 ACT 的最终版本随附在 Windows 10 v1511 ADK 中。 由于不再对 ACT 进行任何更新，因此会停止对升级评估工具的支持。 </br></br>升级评估工具将由[升级准备](/sccm/core/clients/manage/upgrade/upgrade-analytics)功能取代。 弃用通知已于 2016 年 9 月 12 日添加到 [UAT 的下载页面](https://www.microsoft.com/download/details.aspx?id=37145)。 | 2016 年 9 月 12 日  | 2017 年 7 月 11 日 |
