@@ -10,12 +10,12 @@ ms.assetid: e83a7b0d-b381-4b4a-8eca-850385abbebb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cdf073aa3e9ca3be6062ea0e5e0528bb97937989
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: a3d4cbbf78639a135e9e36e3402f9920a6ef71ed
+ms.sourcegitcommit: 78d2dce465e3500653b252583a6903a006784c26
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32333396"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448780"
 ---
 # <a name="co-management-dashboard-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的共同管理仪表板
 *适用范围：System Center Configuration Manager (Current Branch)*
@@ -76,7 +76,7 @@ ms.locfileid: "32333396"
 ## <a name="next-steps"></a>后续步骤
 
 有关共同管理的详细信息，请参阅：
- - [适用于 Windows 10 设备的共同管理](/sccm/core/clients/manage/co-management-overview.md)
- - [准备 Windows 10 设备进行共同管理](/sccm/core/clients/manage/co-management-prepare.md)
+ - [适用于 Windows 10 设备的共同管理](/sccm/core/clients/manage/co-management-overview)
+ - [准备 Windows 10 设备进行共同管理](/sccm/core/clients/manage/co-management-prepare)
 
     

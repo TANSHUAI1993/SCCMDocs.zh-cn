@@ -10,16 +10,20 @@ ms.assetid: 0212b023-804a-4f84-b880-7a59cdb49c67
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d1963509bc4255e2a203e9ed562f5c51a3db0625
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: fc5af771d6ab15f4e26c22c5272abf2bb46de047
+ms.sourcegitcommit: 78d2dce465e3500653b252583a6903a006784c26
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32352146"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448882"
 ---
 # <a name="use-a-task-sequence-to-manage-virtual-hard-disks-in-system-center-configuration-manager"></a>使用任务序列来管理 System Center Configuration Manager 中的虚拟硬盘
 
 *适用范围：System Center Configuration Manager (Current Branch)*
+
+
+    > [!NOTE] 
+    >  Support for this feature was deprecated in version 1710. For more information, see [Removed and deprecated features for Configuration Manager](https://docs.microsoft.com/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).
 
 在 System Center Configuration Manager 中，可以通过 Configuration Manager 控制台管理虚拟硬盘 (VHD) 并将所创建的 VHD 集成到数据中心中。 具体而言，可以通过 Configuration Manager 控制台创建和修改 VHD、向 VHD 中添加应用程序和软件更新，以及将 VHD 发布到 System Center Virtual Machine Manager (VMM)。  
 

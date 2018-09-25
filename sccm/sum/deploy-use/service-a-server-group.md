@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 304a83ea-0f72-437d-9688-2e6e0c7526dd
-ms.openlocfilehash: cefdaec6aff16f0159f9811b6deb7379ab69a4ec
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 7c775df2446dbd0da1d9317982fc752dbfe5120a
+ms.sourcegitcommit: 4e4b71227309bee7e9f1285971f8235c67a9c502
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350538"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46533807"
 ---
 # <a name="service-a-server-group"></a>为服务器组提供服务
 
@@ -63,7 +63,7 @@ ms.locfileid: "32350538"
     >   
     >  `Write-Output "Universal Time: " + $a.ToUniversalTime()  |`  
     >   
-    >  `Out-File C:\temp\start.txt`  
+    >  `Out-File C:\Windows\Temp\start.txt`  
     >   
     >  **后期部署**  
     >   
@@ -73,7 +73,7 @@ ms.locfileid: "32350538"
     >   
     >  `Write-Output "Universal Time: " + $a.ToUniversalTime()  |`  
     >   
-    >  `Out-File C:\temp\end.txt`  
+    >  `Out-File C:\Windows\Temp\end.txt`  
 
 ## <a name="deploy-software-updates-to-the-server-group-and-monitor-status"></a>将软件更新部署到服务器组并监视状态  
 使用典型的部署过程将软件更新部署到服务器组集合。 部署软件更新后，可以在 Configuration Manager 控制台中监视软件更新部署。
