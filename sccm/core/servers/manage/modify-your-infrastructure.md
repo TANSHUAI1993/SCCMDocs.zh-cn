@@ -171,7 +171,7 @@ ms.locfileid: "32342556"
 
 
 > [!IMPORTANT]  
->  在转移具有一个或多个管理点数据库副本的数据库之前，你必须先删除数据库副本。 完成数据库转移后，你可以重新配置数据库副本。 有关详细信息，请参阅 [Database replicas for management points for System Center Configuration Manager](../../../core/servers/deploy/configure/database-replicas-for-management-points.md)。  
+>  在转移具有一个或多个管理点数据库副本的数据库之前，你必须先删除数据库副本。 完成数据库转移后，你可以重新配置数据库副本。 有关详细信息，请参阅 [System Center Configuration Manager 管理点的数据库副本](../../../core/servers/deploy/configure/database-replicas-for-management-points.md)。  
 
 ##  <a name="bkmk_SPN"></a>管理站点数据库服务器的 SPN  
 你可为站点数据库选择运行 SQL 服务的帐户：  

@@ -147,7 +147,7 @@ Configuration Manager 将数据库复制所复制的数据分为**全局数据**
 只要复制链接具有一类已对分布式视图启用的数据，子主站点就不会将该数据复制到管理中心站点。 关闭某类数据的分布式视图后，子主站点会立即恢复将该数据复制到管理中心站点，并将其作为普通数据复制的一部分。 但是，必须先在主站点和管理中心站点之间将包含此数据的复制组重新初始化，管理中心站点上才会提供此数据。 与此类似，卸载已启用分布式视图的主站点后，管理中心站点必须先完成其数据的重新初始化，然后才能在管理中心站点上访问已对分布式视图启用的数据。  
 
 > [!IMPORTANT]  
-> 在站点层次结构中的任何复制链接上使用分布式视图时，必须先关闭所有复制链接的分布式视图，才能卸载任何主站点。 有关详细信息，请参阅 [Uninstall a primary site that is configured with distributed views](../../../core/servers/deploy/install/uninstall-sites-and-hierarchies.md#BKMK_UninstallPrimaryDistViews)。  
+> 在站点层次结构中的任何复制链接上使用分布式视图时，必须先关闭所有复制链接的分布式视图，才能卸载任何主站点。 有关详细信息，请参阅 [卸载配置为具有分布式视图的主站点](../../../core/servers/deploy/install/uninstall-sites-and-hierarchies.md#BKMK_UninstallPrimaryDistViews)。  
 
 #### <a name="prerequisites-and-limitations-for-distributed-views"></a>分布式视图的先决条件和限制  
 
