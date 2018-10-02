@@ -10,12 +10,12 @@ ms.assetid: 32e2d6b9-148f-45e2-8083-98c656473f82
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0429c62f68a111bc7f620d1c954d5c8cf944d1c1
-ms.sourcegitcommit: 7eebd112a9862bf98359c1914bb0c86affc5dbc0
+ms.openlocfilehash: 2e0f74790437b34d1c5cd5dc00767ec782a51b45
+ms.sourcegitcommit: fe279229a90fdc8cddbb13c7ffdbbb22af0e25ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590050"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47229290"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>在 Configuration Manager 中使用 CMPivot 获得实时数据
 
@@ -78,7 +78,7 @@ Configuration Manager 总是提供设备数据的大型集中式存储，客户�
 
      - 单击其中一个实体将其添加到查询字符串。  
 
-     - 有关表运算符、聚合函数和标量函数的链接，请在 Web 浏览器中打开语言参考文档。 CMPivot 使用相同的查询语言作为 [Azure 日志分析](https://docs.loganalytics.io/docs/Language-Reference/Change-log)。  
+     - 有关表运算符、聚合函数和标量函数的链接，请在 Web 浏览器中打开语言参考文档。 CMPivot 使用相同的查询语言作为 [Azure 日志分析](https://docs.microsoft.com/azure/kusto/query/)。  
 
 3. 打开 CMPivot 窗口，查看来自客户端的结果。 关闭 CMPivot 窗口时，会话已完成。  
 
@@ -113,7 +113,7 @@ CMPivot 窗口包含以下元素：
 
 5. 通过查询窗格，可以在集合中生成或键入要在客户端上运行的查询。  
 
-    - CMPivot 使用同一查询语言的子集作为 [Azure Log Analytics](https://docs.loganalytics.io/docs/Language-Reference/Change-log)。  
+    - CMPivot 使用同一查询语言的子集作为 [Azure Log Analytics](https://docs.microsoft.com/azure/kusto/query/)。  
 
     - 在查询窗格中剪切、复制或粘贴内容。  
 

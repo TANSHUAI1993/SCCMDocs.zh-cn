@@ -10,12 +10,12 @@ ms.assetid: 7996b3eb-5259-483b-af40-adae2943d123
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 21833d124ee998f0b943d2620370a2fcff264e28
-ms.sourcegitcommit: 7eebd112a9862bf98359c1914bb0c86affc5dbc0
+ms.openlocfilehash: ebd51b397e37c69e8f6e8d1e154fc369347bd63a
+ms.sourcegitcommit: fe279229a90fdc8cddbb13c7ffdbbb22af0e25ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591639"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47229358"
 ---
 # <a name="capabilities-in-technical-preview-1805-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1805 中的功能
 
@@ -255,7 +255,7 @@ CMPivot 是一种新的控制台中实用工具，它提供对环境中设备实
 2. 界面进一步提供有关使用该工具的信息。 
      - 可以在顶部手动输入查询字符串，或单击联机文档中的链接。
      - 单击其中一个实体将其添加到查询字符串。 
-     - 有关表运算符、聚合函数和标量函数的链接，请在 Web 浏览器中打开语言参考文档。 CMPivot 使用相同的查询语言作为 [Azure 日志分析](https://docs.loganalytics.io/docs/Language-Reference/Change-log)。
+     - 有关表运算符、聚合函数和标量函数的链接，请在 Web 浏览器中打开语言参考文档。 CMPivot 使用相同的查询语言作为 [Azure 日志分析](https://docs.microsoft.com/azure/kusto/query/)。
 
 
 

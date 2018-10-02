@@ -11,10 +11,10 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.openlocfilehash: 939ab4b97a1a62eeae834873dd39e2f0d435527d
-ms.sourcegitcommit: 7eebd112a9862bf98359c1914bb0c86affc5dbc0
+ms.sourcegitcommit: 4e4b71227309bee7e9f1285971f8235c67a9c502
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
+ms.lasthandoff: 09/25/2018
 ms.locfileid: "42590091"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Configuration Manager 发行说明

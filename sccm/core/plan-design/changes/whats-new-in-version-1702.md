@@ -3,18 +3,19 @@ title: 新版本 1702
 titleSuffix: Configuration Manager
 description: 获取有关 System Center Configuration Manager 的 1702 版中引入的更改和新功能的详细信息。
 ms.date: 05/02/2017
+ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 409e26e1-7716-4f1d-a0ee-34feabf20792
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 99e5cf970a2b4e1afa1a52d49be3afcc8c9d13fc
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 6abf61488a96ec3299b606b10901b0787b82edc9
+ms.sourcegitcommit: fe279229a90fdc8cddbb13c7ffdbbb22af0e25ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32343045"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47229341"
 ---
 # <a name="what39s-new-in-version-1702-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1702 中的新增功能
 
@@ -219,7 +220,7 @@ Windows 10 创意者更新引入了一个简单的转换工具，可自动执行
 ## <a name="software-updates"></a>软件更新
 
 ### <a name="deploy-office-365-apps-to-clients"></a>将 Office 365 应用部署到客户端
-从版本 1702 起，可以从 Office 365 客户端管理仪表板启动 Office 365 安装程序，此程序可用于配置 Office 365 安装设置、从 Office 内容传送网络 (CDN) 下载文件，以及将文件部署为 Configuration Manager 中的应用程序。 有关详细信息，请参阅[管理 Office 365 ProPlus 更新](/sccm/sum/deploy-use/manage-office-365-proplus-updates#deploy-office-365-apps)。
+从版本 1702 起，可以从 Office 365 客户端管理仪表板启动 Office 365 安装程序，此程序可用于配置 Office 365 安装设置、从 Office 内容分发网络 (CDN) 下载文件，以及将文件部署为 Configuration Manager 中的应用程序。 有关详细信息，请参阅[管理 Office 365 ProPlus 更新](/sccm/sum/deploy-use/manage-office-365-proplus-updates#deploy-office-365-apps)。
 
 > [!IMPORTANT]
 > 在 Configuration Manager 中使用 Office 365 应用程序向导创建和部署的 Office 365 应用不会由 Configuration Manager 自动管理，除非启用软件更新客户端代理设置“再次启用 Office 365 客户端管理”。 有关详细信息，请参阅[关于客户端设置](/sccm/core/clients/deploy/about-client-settings)。

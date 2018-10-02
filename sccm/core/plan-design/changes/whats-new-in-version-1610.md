@@ -3,6 +3,7 @@ title: 新版本 1610
 titleSuffix: Configuration Manager
 description: 获取有关 System Center Configuration Manager 的 1610 版中引入的更改和新功能的详细信息。
 ms.date: 11/23/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: f7eb0803-3f8f-4ab6-825a-99ac11f5ba7d
@@ -10,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 9bb046cd08e4e9d8cff6e34ea88ce8e582e2c863
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: cb9b19c95caaf914fa1cbf040258c30ede2dc54a
+ms.sourcegitcommit: fe279229a90fdc8cddbb13c7ffdbbb22af0e25ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342046"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47229307"
 ---
 # <a name="what39s-new-in-version-1610-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1610 的新增功能
 
