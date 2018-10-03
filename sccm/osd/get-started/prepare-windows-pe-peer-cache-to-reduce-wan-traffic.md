@@ -70,7 +70,7 @@ ms.locfileid: "42756166"
         > [!TIP]  
         >  客户端将使用 HTTPS 来下载可用的内容。 但是，HTTP 或 HTTPS 使用相同的端口号。  
 
--   在客户端上[Configure the Client Cache for Configuration Manager Clients](/sccm/core/clients/manage/manage-clients#BKMK_ClientCache) ，以确保其具有足够的空间来保留和存储部署的映像。 Windows PE 对等缓存不会影响客户端缓存的配置或行为。  
+-   在客户端上[为 Configuration Manager 客户端配置客户端缓存](/sccm/core/clients/manage/manage-clients#BKMK_ClientCache) ，以确保其具有足够的空间来保留和存储部署的映像。 Windows PE 对等缓存不会影响客户端缓存的配置或行为。  
 
 -   任务序列部署的部署选项必须配置为“当任务序列需要时在本地下载内容”。  
 

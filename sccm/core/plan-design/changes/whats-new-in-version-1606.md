@@ -91,7 +91,7 @@ OMS 连接器是一种预发行功能。 若要启用此功能，请参阅[使�
 
 ### <a name="support-for-cache-size-in-client-settings"></a>在客户端设置中支持缓存大小
 
-现在，可以使用 Configuration Manager 控制台中的“客户端设置”在客户端计算机上配置缓存文件夹的大小。 以前，只能在安装或重新安装客户端软件时设置客户端缓存大小。 现在，可以将缓存大小指定为客户端设置（默认或自定义），然后将这些设置应用于客户端上的下一个策略更新，无需重新安装客户端。 有关详细信息，请参阅 [Configure the Client Cache for Configuration Manager Clients](../../../core/clients/manage/manage-clients.md#BKMK_ClientCache)。
+现在，可以使用 Configuration Manager 控制台中的“客户端设置”在客户端计算机上配置缓存文件夹的大小。 以前，只能在安装或重新安装客户端软件时设置客户端缓存大小。 现在，可以将缓存大小指定为客户端设置（默认或自定义），然后将这些设置应用于客户端上的下一个策略更新，无需重新安装客户端。 有关详细信息，请参阅 [为 Configuration Manager 客户端配置客户端缓存](../../../core/clients/manage/manage-clients.md#BKMK_ClientCache)。
 
 ## <a name="on-premises-mobile-device-management"></a>本地移动设备管理
 
