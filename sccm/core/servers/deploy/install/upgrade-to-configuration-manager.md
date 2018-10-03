@@ -228,7 +228,7 @@ Configuration Manager 不支持辅助站点备份，也不支持辅助站点数�
 
 **为主站点中的管理点重新配置数据库副本：**  
 如果将数据库副本用于主站点中的管理点，则必须先卸载数据库副本，再升级站点。 升级主站点之后，为管理点重新配置数据库副本。   
-有关详细信息，请参阅  [Database replicas for management points for System Center Configuration Manager](../../../../core/servers/deploy/configure/database-replicas-for-management-points.md)。  
+有关详细信息，请参阅  [System Center Configuration Manager 管理点的数据库副本](../../../../core/servers/deploy/configure/database-replicas-for-management-points.md)。  
 
 **重新配置在升级前禁用的任何数据库维护任务：**  
 如果升级之前在站点上禁用了数据库 [System Center Configuration Manager 维护任务的引用](../../../../core/servers/manage/reference-for-maintenance-tasks.md)，请使用与升级之前存在的相同设置在站点上重新配置这些任务。  

@@ -146,7 +146,7 @@ ms.locfileid: "33078451"
 
 4.  从 Mac 计算机上的工具文件夹中，键入以下内容：**sudo ./CMEnroll -s &lt;注册代理服务器名称> -ignorecertchainvalidation -u &lt;用户名'>**  
 
-    客户端安装后，Mac 计算机注册向导将在客户端安装后打开，以帮助你注册 Mac 计算机。 要用此方法注册客户端，请参见此主题中的 [To enroll the client by using the Mac Computer Enrollment Wizard](#BKMK_EnrollR2) 。  
+    客户端安装后，Mac 计算机注册向导将在客户端安装后打开，以帮助你注册 Mac 计算机。 要用此方法注册客户端，请参见此主题中的 [使用“Mac 计算机注册向导”注册客户端](#BKMK_EnrollR2) 。  
 
 5. 键入 Active Directory 用户帐户的密码。  输入此命令时，系统会要求输入两个密码：第一个提示用于运行命令的超级用户帐户。 第二个提示用于 Active Directory 用户帐户。 提示看起来相同，因此请确保按正确的顺序指定它们。  
 
