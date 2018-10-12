@@ -10,12 +10,12 @@ ms.assetid: 1392797b-76cb-46b4-a3e4-8f349ccaa078
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 10dfebccd997a42f4c79e5d88bdf05e26585aebb
-ms.sourcegitcommit: 7eebd112a9862bf98359c1914bb0c86affc5dbc0
+ms.openlocfilehash: 4ba23a42acb111f4ed7d0337552b2ea90b0268d6
+ms.sourcegitcommit: 78d2dce465e3500653b252583a6903a006784c26
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589866"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448916"
 ---
 # <a name="site-and-site-system-prerequisites-for-configuration-manager"></a>用于 Configuration Manager 的站点和站点系统先决条件
 
@@ -73,7 +73,7 @@ ms.locfileid: "42589866"
 - [注册代理点](#bkmk_2012EnrollProxpreq)
 - [回退状态点](#bkmk_2012FSPpreq)
 - [管理点](#bkmk_2012MPpreq)
-- [报表点](#bkmk_2012RSpoint)
+- [Reporting Services 点](#bkmk_2012RSpoint)
 - [服务连接点](#bkmk_SCPpreq)
 - [软件更新点](#bkmk_2012SUPpreq)
 - [状态迁移点](#bkmk_2012SMPpreq)
@@ -452,7 +452,7 @@ ms.locfileid: "42589866"
 
 
 
-##  <a name="bkmk_2012RSpoint"></a>报表点  
+##  <a name="bkmk_2012RSpoint"></a> Reporting Services 点  
 
 #### <a name="windows-server-roles-and-features"></a>Windows Server 角色和功能  
 

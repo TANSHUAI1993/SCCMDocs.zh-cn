@@ -3,18 +3,19 @@ title: 新版本 1710 |Microsoft Docs
 titleSuffix: Configuration Manager
 description: 获取有关 System Center Configuration Manager 的 1710 版中引入的更改和新功能的详细信息。
 ms.date: 1/08/2018
+ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: bc6c3e5f-b9e2-400e-9d9d-446ff93c520c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e33a56a2d7fe395265d76c668db91492c410046f
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 821c7f32799020948630cd873fead144ae21e39e
+ms.sourcegitcommit: fe279229a90fdc8cddbb13c7ffdbbb22af0e25ef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32337405"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47229256"
 ---
 # <a name="what39s-new-in-version-1710-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1710 的新增功能
 
@@ -63,8 +64,7 @@ Version 1710 drops support for the following products:
 ## <a name="client-management"></a>客户端管理
 
 ### <a name="co-management-for-windows-10-devices"></a>适用于 Windows 10 设备的共同管理    
-<!-- 1350871 -->
-在以前的 Windows 10 更新中，已经可以将 Windows 10 设备同时联接到本地 Active Directory (AD) 和基于云的 Azure AD（混合 Azure AD）。 从 Configuration Manager 1710 版本开始，共同管理利用此项改进来使你能够使用 Configuration Manager 和 Intune 来同时管理 Windows 10 设备版本 1709（也称为 Fall Creators Update）。 它是一种解决方案，在传统管理与现代管理之间架起一座桥梁，为你提供利用分阶段的方法实现转换的途径。 有关详细信息，请参阅[适用于 Windows 10 设备的共同管理](/sccm/core/clients/manage/co-management-overview)。
+<!-- 1350871 --> 在以前的 Windows 10 更新中，已经可以将 Windows 10 设备同时联接到本地 Active Directory (AD) 和基于云的 Azure AD（混合 Azure AD）。 从 Configuration Manager 1710 版本开始，共同管理利用此项改进来使你能够使用 Configuration Manager 和 Intune 来同时管理 Windows 10 设备版本 1709（也称为 Fall Creators Update）。 它是一种解决方案，在传统管理与现代管理之间架起一座桥梁，为你提供利用分阶段的方法实现转换的途径。 有关详细信息，请参阅[适用于 Windows 10 设备的共同管理](/sccm/core/clients/manage/co-management-overview)。
 
 ### <a name="restart-computers-from-the-configuration-manager-console-----1356283---"></a>从 Configuration Manager 控制台重启计算机<!-- 1356283 -->
 从此版本开始，用户可以使用 Configuration Manager 控制台标识需要重启的客户端设备，然后使用客户端通知操作来重启它们。
@@ -87,8 +87,7 @@ Version 1710 drops support for the following products:
 有关使用“运行脚本”的详细信息，请参阅[创建和运行脚本](../../../apps/deploy-use/create-deploy-scripts.md)。
 
 ### <a name="new-mobile-application-management-policy-settings"></a>新移动应用程序管理策略设置
-<!-- 1324760 -->
-以下设置已添加到移动应用程序管理策略设置：
+<!-- 1324760 --> 以下设置已添加到移动应用程序管理策略设置：
 - **禁用联系人同步**：阻止应用将数据保存到设备上的本机“联系人”应用。
 - **禁用打印**：阻止应用打印工作或学校数据。
 
@@ -101,8 +100,7 @@ Version 1710 drops support for the following products:
 
 ## <a name="operating-system-deployment"></a>操作系统部署
  > [!TIP]   
- > <!-- 1354281 -->
- > 从 Windows 10 版本 1709（也称为 Fall Creators Update）开始，Windows Media 包括多个版本。 在配置用于使用操作系统升级包或操作系统映像的任务序列时，请务必选择[支持供 Configuration Manager 使用的版本](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client)。
+ > <!-- 1354281 --> 从 Windows 10 版本 1709（也称为 Fall Creators Update）开始，Windows Media 包括多个版本。 在配置用于使用操作系统升级包或操作系统映像的任务序列时，请务必选择[支持供 Configuration Manager 使用的版本](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client)。
 
 ### <a name="add-child-task-sequences-to-a-task-sequence"></a>将子任务序列添加到任务序列
 <!-- 1261338 -->
@@ -112,8 +110,7 @@ Version 1710 drops support for the following products:
 若要了解有关子任务序列的详细信息，请参阅[子任务序列](/sccm/osd/understand/task-sequence-steps#child-task-sequence)。
 
 ## <a name="software-center-customization"></a>软件中心自定义
-<!-- 1351224 -->
-可以添加企业品牌元素，并在“软件中心”上指定选项卡的可见性。 可以添加“软件中心”特定公司名称、设置“软件中心”配置颜色主题、设置公司徽标，并设置客户端设备的可见选项卡。
+<!-- 1351224 --> 可以添加企业品牌元素，并在“软件中心”上指定选项卡的可见性。 可以添加“软件中心”特定公司名称、设置“软件中心”配置颜色主题、设置公司徽标，并设置客户端设备的可见选项卡。
 
 有关详细信息，请参阅[在 System Center Configuration Manager 中规划和配置应用程序管理](/sccm/apps/plan-design/plan-for-and-configure-application-management)。
 
@@ -201,8 +198,7 @@ Configuration Manager 对下一代加密技术 (CNG) 证书提供有限支持。
 可以使用 Configuration Manager Endpoint Protection [创建和部署 Windows Defender 应用程序防护策略](/sccm/protect/deploy-use/create-deploy-application-guard-policy)。
 
 ### <a name="device-guard-policy-changes"></a>设备防护策略更改
-<!-- 1355092 -->
-下面是三个与设备防护策略相关的更改：
+<!-- 1355092 --> 下面是三个与设备防护策略相关的更改：
 
 - 设备防护策略已被重命名为 Windows Defender 应用程序控制策略。 因此，举例来说，“创建设备防护策略”向导现命名为“创建 Windows Defender 应用程序控制策略”向导。
 - 使用 Windows 版本 1709 Fall Creators Update 的设备无需重启就能应用 Windows Defender 应用程序控制策略。 重新启动仍是默认设置，但你可以[关闭重启](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)。

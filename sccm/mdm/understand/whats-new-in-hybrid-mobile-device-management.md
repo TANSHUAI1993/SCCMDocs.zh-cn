@@ -2,7 +2,7 @@
 title: 混合 MDM 中的新增功能
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 和 Intune 的混合部署可用的新移动设备管理功能。
-ms.date: 08/29/2018
+ms.date: 09/18/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 87a40300cfe13ec097d155093fbb7b70af3b459c
-ms.sourcegitcommit: 8661f10596f565ca2b7bdb5951388b44b3b622ee
+ms.openlocfilehash: 195fb8c4ae584b9b5ccb2401b145d9c78a0be781
+ms.sourcegitcommit: 78d2dce465e3500653b252583a6903a006784c26
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43193912"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448865"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Configuration Manager 和 Microsoft Intune 的混合移动设备管理中的新增功能
 
@@ -24,7 +24,7 @@ ms.locfileid: "43193912"
 本文提供有关 System Center Configuration Manager 和 Microsoft Intune 的混合部署的可用的新移动设备管理 (MDM) 功能的详细信息。     
 
 > [!Important]  
-> 截至 2018 年 8 月 14 日，混合移动设备管理已是一项[弃用功能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)。 有关详细信息，请参阅[什么是混合 MDM](/sccm/mdm/understand/hybrid-mobile-device-management)。<!--Intune feature 2683117-->  
+> 自 2018 年 8 月 14 日起，混合移动设备管理[功能停用](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)。 有关详细信息，请参阅[什么是混合 MDM](/sccm/mdm/understand/hybrid-mobile-device-management)。<!--Intune feature 2683117-->  
 
 
 > [!Note]    
@@ -460,6 +460,54 @@ ms.locfileid: "43193912"
 
 
 ## <a name="notices"></a>通知
+
+### <a name="plan-for-change-intune-supports-macos-1012-and-higher-in-december"></a>计划更改：Intune 将在 12 月支持 macOS 10.12 及更高版本 
+<!--2970975--> 
+
+Apple 发布了 macOS 10.14，所以从 2018 年 12 月开始，Intune 将支持 macOS 10.12 及更高版本。 
+
+#### <a name="how-does-this-affect-me"></a>这会对我产生哪些影响？
+
+从 12 月开始，使用 macOS 10.11 及更早版本的设备的用户将无法使用公司门户注册 Intune。 若要继续获得支持和新功能，他们需要将设备升级到 macOS 10.12 或更高版本，并将公司门户应用升级到最新版本。 
+
+当前支持 macOS 10.12 和更高版本的设备有： 
+- MacBook（2009 后期版本或更高版本）  
+- iMac（2009 后期版本或更高版本）
+- MacBook Air（2010 后期版本或更高版本）  
+- MacBook Pro（2010 后期版本或更高版本）  
+- Mac Mini（2010 后期版本或更高版本）  
+- Mac Pro（2010 后期版本或更高版本）  
+
+12 月以后，未使用上述设备的最终用户将无法访问最新版本的 macOS 公司门户应用。 可以继续管理运行不受支持版本（低于 macOS 10.12 的版本）的现有已注册设备。
+
+#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>我需要如何准备应对此项变化？
+
+- 请要求自己的用户在 2018 年 12 月前将其设备升级到支持的 OS 版本。  
+- 检查 Azure 门户中的 Intune 报告，以查看可能受影响的设备或用户。 转到“设备” > “所有设备”，并按“OS”进行筛选。 可以添加其他列，帮助确定组织中哪些人员拥有运行 macOS 10.11 的设备。  
+- 若在使用混合移动设备管理 (MDM)，请在 Configuration Manager 控制台中转到“资产和符合性”工作区，并选择“设备”节点。 右键单击列以添加“操作系统”和”客户端版本”列。 然后按 OS 版本排序。 请注意，混合 MDM 现已弃用，应尽快迁移到 Azure 上的 Intune。 
+ 
+#### <a name="additional-information"></a>其他信息
+有关详细信息，请参阅[使用公司门户应用在 Intune 中注册 macOS 设备](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos-cp)。
+
+
+### <a name="plan-for-change-new-intune-support-experience-for-premier-customers"></a>计划更改：针对顶级客户的新 Intune 支持体验 
+<!--2828727--> 作为 Microsoft 顶级客户，当前可以使用 [Microsoft Premier Online (MPO) 门户](https://premier.microsoft.com)和 [Azure 上的 Intune](https://portal.azure.com) 来创建 Intune 的支持请求。 从 2018 年 12 月 3 日起，为了继续增强顶级支持体验，将仅能在 Azure 上的 Intune 中创建支持请求。
+
+#### <a name="how-does-this-affect-me"></a>这会对我产生哪些影响？
+12 月 3 日之后，将无法在 MPO 中创建支持请求。 如果尝试这样做，将会有一个无法忽略的提示将你重新定向至 Azure 上的 Intune。 在 Azure 门户中创建支持请求时，会将请求发送至针对 Intune 的 Microsoft 支持部门。 相关人员会及时诊断并解决你的问题。 如果在 MPO 门户中创建支持请求，则无法在 Azure 门户中查看它。 从现在开始，请仅在 Azure 上的 Intune 中创建支持请求。  
+
+如果使用混合移动设备管理（混合 MDM）或使用共同管理，可以继续使用 MPO 为 Configuration Manager 创建支持请求，但使用 Azure 门户为 Intune 创建支持请求。 这里再次提醒，混合 MDM 已被弃用，应计划尽快移动到 Azure 上的 Intune。 有关详细信息，请参阅[从混合移动设备管理移动到 Azure 上的 Intune](https://aka.ms/hybrid_notification)。
+
+请注意，只有具有全局管理员、Intune 服务管理员和服务支持管理员角色的用户才能在 Azure 门户中创建支持票证。
+
+#### <a name="what-can-i-do-to-prepare-for-this-change"></a>针对此更改，我可以做什么准备？
+- 停止使用 MPO 进行与 Intune 相关的支持请求。 使用 Azure 上的 Intune 来创建和管理所有 Intune 支持请求。  
+- 如有必要，请通知支持人员并更新文档。  
+- 如果你有不具备全局管理员或 Intune 服务管理员角色的用户当前正在 MPO 中创建支持请求，则请在 Azure Active Directory 中向其分配服务支持管理员角色。 用户需要其中一个角色才能在 Azure 门户中创建支持票证。  
+
+#### <a name="additional-information"></a>其他信息
+有关详细信息，请参阅 [Microsoft Intune 支持团队博客文章](https://aka.ms/IntuneSupport_MPO_to_Azure)。
+
 
 ### <a name="plan-for-change-use-intune-on-azure-now-for-your-mdm-management"></a>更改计划：立刻使用 Azure 上的 Intune 进行 MDM 管理 
 <!--1227338--> 一年前，我们推出了 [Azure 上 Intune 的公共预览版](https://cloudblogs.microsoft.com/enterprisemobility/2016/12/07/public-preview-of-intune-on-azure/)，六个月前，我们推出了 Intune [新管理员体验的正式版](https://cloudblogs.microsoft.com/enterprisemobility/2017/06/08/the-new-intune-and-conditional-access-admin-consoles-are-ga/)。 自 2018 年 8 月 31 日起，我们将面向使用 Intune 独立版的客户关闭经典 Silverlight 控制台中的移动设备管理 (MDM)。 请改用 [Azure 上的 Intune](https://aka.ms/Intune_on_Azure) 满足 MDM 需求。 如果仍在使用经典控制台进行 MDM，请停止此做法并开始熟悉 Azure 上的 Intune。 我们不希望任何最终用户受到此次更改的影响。 Silverlight 中将保留使用 Intune 的经典电脑管理。 有关详细信息，请参阅 [Intune 支持团队博客文章](https://aka.ms/Intune_on_Azure_mdm)。

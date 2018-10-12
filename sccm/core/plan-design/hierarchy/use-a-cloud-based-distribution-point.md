@@ -2,7 +2,7 @@
 title: 云分发点
 titleSuffix: Configuration Manager
 description: 规划和设计，以通过 Microsoft Azure 和 Configuration Manager 中的云分发点来分发软件内容。
-ms.date: 07/30/2018
+ms.date: 09/10/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 3cd9c725-6b42-427d-9191-86e67f84e48c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0c41fddef794049456529d9577275a21668717f5
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 79b17ba00274459401dc81035833163e75939be0
+ms.sourcegitcommit: 2badee2b63ae63687795250e298f463474063100
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385450"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45601137"
 ---
 # <a name="use-a-cloud-distribution-point-in-configuration-manager"></a>在 Configuration Manager 中使用云分发点
 
@@ -307,6 +307,18 @@ Azure 存储服务对于单个文件支持每秒 500 个请求。 单个云分�
 根据云分发点设计，你需要一个或多个数字证书。  
 
 
+### <a name="general-information"></a>常规信息
+<!--SCCMDocs issue #779--> 云分发点的证书支持以下配置：  
+
+- 4096 位密钥长度  
+
+- 从 1710 版开始，支持第 3 版证书。 有关详细信息，请参阅 [CNG 证书概述](/sccm/core/plan-design/network/cng-certificates-overview)。  
+
+- 从 1802 版开始，使用以下策略配置 Windows 时：系统加密：使用 FIPS 兼容的算法进行加密、哈希处理和签名  
+
+- 从 1802 版开始，支持 TLS 1.2。 有关详细信息，请参阅[加密控制技术参考](/sccm/core/plan-design/security/cryptographic-controls-technical-reference#about-ssl-vulnerabilities)。  
+
+
 ### <a name="azure-management-certificate"></a>Azure 管理证书
 
 经典服务部署需要此证书。Azure 资源管理器部署不需要此证书。
@@ -357,7 +369,7 @@ Azure 存储服务对于单个文件支持每秒 500 个请求。 单个云分�
 
 ### <a name="do-i-need-to-maintain-the-azure-virtual-machines"></a>我需要维护 Azure 虚拟机吗？
 
-不需要维护。 云分发点的设计使用 Azure 平台即服务 (PaaS)。 通过使用你提供的订阅，Configuration Manager 可创建必要的 VM、存储和网络。 Azure 可保护和更新虚拟机。 与服务架构 (IaaS) 一样，这些 VM 不是本地环境的一部分。 云分发点是将 Configuration Manager 环境扩展到云端的 PaaS。 有关详细信息，请参阅 [PaaS 云服务模型的安全优势](https://docs.microsoft.com/azure/security/security-paas-deployments#security-advantages-of-a-paas-cloud-service-model)。  
+不需要维护。 云分发点的设计使用 Azure 平台即服务 (PaaS)。 通过使用你提供的订阅，Configuration Manager 可创建必要的 VM、存储和网络。 Azure 可保护和更新虚拟机。 与基础结构即服务 (IaaS) 一样，这些 VM 不是本地环境的一部分。 云分发点是将 Configuration Manager 环境扩展到云端的 PaaS。 有关详细信息，请参阅 [PaaS 云服务模型的安全优势](https://docs.microsoft.com/azure/security/security-paas-deployments#security-advantages-of-a-paas-cloud-service-model)。  
 
 
 ### <a name="does-the-cloud-distribution-point-use-azure-cdn"></a>云分发点是否使用 Azure CDN？

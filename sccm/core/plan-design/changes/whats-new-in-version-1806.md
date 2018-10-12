@@ -2,7 +2,7 @@
 title: 1806 版中的新增功能
 titleSuffix: Configuration Manager
 description: 获取有关 Configuration Manager Current Branch 1806 版中引入的更改和新功能的详细信息。
-ms.date: 08/29/2018
+ms.date: 09/19/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 0249dbd3-1e85-4d05-a9e5-420fbe44d850
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 13dbffd442cfbe0ced30d46b9a93dd03418202c9
-ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
+ms.openlocfilehash: 3b5cb217b9351f5d2491070b447d0a96efe0aa29
+ms.sourcegitcommit: 4e4b71227309bee7e9f1285971f8235c67a9c502
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43893835"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46533773"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 1806 版中的新增功能
 
@@ -29,6 +29,8 @@ Configuration Manager Current Branch 的 1806 更新作为控制台中更新提�
 > 本文目前列出了此版本中的所有重要功能。 但是，并非所有部分都链接到更新的内容并提供有关新功能的进一步信息。 定期查看此页面以获取更新。 我们使用 [已更新] 标记标注更改。 内容最终确定后，将删除此标注。  
 
 除了新增功能外，这一版还有其他变化（如缺陷修复）。 有关详细信息，请参阅 [System Center Configuration Manager Current Branch（版本 1806）的更改摘要](https://support.microsoft.com/help/4459701)。
+
+若要详细了解用于 Configuration Manager 的 Windows PowerShell cmdlet 的更改，请参阅 [PowerShell 1806 发行说明](https://docs.microsoft.com/powershell/sccm/1806_release_notes?view=sccm-ps)。
 
 <!--
 The following additional updates to this release are also now available:
@@ -141,6 +143,13 @@ Version 1806 drops support for the following products:
 有关详细信息，请参阅[对等下载适用的边界组选项](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions)。
 
 
+### <a name="improvement-to-peer-cache-source-location-status"></a>改进对等缓存源位置状态
+<!--SCCMDocs issue 850-->
+ ***[已更新]*** Configuration Manager 能更有效地确定对等缓存源是否已漫游到其他位置。 此行为可确保管理点将其作为内容源提供给新位置的客户端，而不是旧位置的客户端。 如果将对等缓存功能与漫游的对等缓存源一起使用，则在将站点更新到版本 1806 之后，还会将所有对等缓存源更新为最新的客户端版本。 在至少将这些对等缓存源更新到版本 1806 后，管理点才会将它们包含在内容位置列表中。
+
+有关详细信息，请参阅[对等缓存的要求](/sccm/core/plan-design/hierarchy/client-peer-cache#requirements)。
+
+
 
 <!-- ## Migration  -->
 
@@ -177,9 +186,14 @@ Version 1806 drops support for the following products:
 
 
 ### <a name="cloud-management-dashboard"></a>云管理仪表板
-<!--1358461--> 新的云管理仪表板为云管理网关 (CMG) 使用情况提供一个集中视图。 通过 Azure AD 载入网站时，它还显示有关云用户和设备的数据。 在 Configuration Manager 控制台中，转到“监视”工作区。 选择“云管理”节点，并查看仪表板磁贴。  
+<!--1358461-->
+ ***[已更新]*** 新的云管理仪表板为云管理网关 (CMG) 使用情况提供一个集中视图。 通过 Azure AD 载入网站时，它还显示有关云用户和设备的数据。   
 
-此功能还包括用于实时验证的 CMG 连接分析器，为疑难解答提供帮助。 控制台中的实用工具检查该服务的当前状态，以及通过 CMG 连接点通往任何允许 CMG 流量的管理点的通信通道。 在 Configuration Manager 控制台中，转到“管理”工作区。 展开“云服务”并选择“云管理网关”。 选择目标 CMG 实例，然后单击功能区中的“连接分析器”。
+此功能还包括用于实时验证的 CMG 连接分析器，为疑难解答提供帮助。 控制台中的实用工具检查该服务的当前状态，以及通过 CMG 连接点通往任何允许 CMG 流量的管理点的通信通道。 
+
+有关详细信息，请参阅 [Monitor CMG](/sccm/core/clients/manage/cmg/monitor-clients-cloud-management-gateway) 文章的以下部分：  
+- [云管理仪表板](/sccm/core/clients/manage/cmg/monitor-clients-cloud-management-gateway#cloud-management-dashboard)  
+- [连接分析器](/sccm/core/clients/manage/cmg/monitor-clients-cloud-management-gateway#connection-analyzer)  
 
 
 ### <a name="improvements-to-cloud-management-gateway"></a>云管理网关的改进
@@ -187,26 +201,16 @@ Version 1806 drops support for the following products:
 1806 版包含对云管理网关 (CMG) 的以下改进：
 
 #### <a name="simplified-client-bootstrap-command-line"></a>简化了客户端启动命令行
-<!--1358215--> 通过 CMG 在 Internet 上安装 Configuration Manager 客户端时，命令行现在需要的属性更少。 在准备共同管理时，此次改进减少了 Microsoft Intune 中使用的命令行的大小。 
+<!--1358215-->
+ ***[已更新]*** 通过 CMG 在 Internet 上安装 Configuration Manager 客户端时，命令行现在需要的属性更少了。 在准备共同管理时，此次改进减少了 Microsoft Intune 中使用的命令行的大小。 
 
-在所有方案中都需要以下命令行属性：
-  - CCMHOSTNAME  
-  - SMSSITECODE  
-
-在使用 Azure AD 进行客户端身份验证而不是使用基于 PKI 的客户端身份验证证书时，需要以下属性：
-  - AADCLIENTAPPID  
-  - AADRESOURCEURI  
-
-如果客户端将漫游回 Intranet，则需要以下属性：
-  - SMSMP  
-
-下面的示例包含上述所有属性：   
-`ccmsetup.exe CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver SMSMP=https://mp1.contoso.com`
-
-<!--For more information, see [Client installation properties](/sccm/core/clients/deploy/about-client-installation-properties).-->
+有关详细信息，请参阅[准备 Windows 10 设备进行共同管理](/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client)。
 
 #### <a name="download-content-from-a-cmg"></a>从 CMG 下载内容
-<!--1358651--> 以前，必须将云分发点和 CMG 作为单独的角色进行部署。 CMG 现在还可以向客户提供内容。 此功能减少了所需的证书和 Azure VM 的成本。 若要启用此功能，在 CMG 属性的“设置”选项卡上启用“允许 CMG 充当云分布点并提供 Azure 存储的内容”这个新选项。 
+<!--1358651-->
+ ***[已更新]*** 以前需要将云分发点和 CMG 作为单独的角色进行部署。 CMG 现在还可以向客户提供内容。 此功能减少了所需的证书和 Azure VM 的成本。 
+
+有关详细信息，请参阅[修改 CMG](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#modify-a-cmg)。
 
 #### <a name="trusted-root-certificate-isnt-required-with-azure-ad"></a>Azure AD 不需要受信任的根证书
 <!--503899--> 创建 CMG 时，不再需要在设置页上提供[受信任的根证书](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#cmg-trusted-root-certificate-to-clients)。 使用 Azure Active Directory (Azure AD) 进行客户端身份验证时不需要此证书，但往往在向导中需要。 如果使用 PKI 客户端身份验证证书，则仍须向 CMG 添加受信任的根证书。

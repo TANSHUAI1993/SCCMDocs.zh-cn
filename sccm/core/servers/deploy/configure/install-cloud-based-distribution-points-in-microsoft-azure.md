@@ -10,12 +10,12 @@ ms.assetid: bb83ac87-9914-4a35-b633-ad070031aa6e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: afb32cd827a223ca9f317f2ddc96d9b176858d2d
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: ef8bfead4bb73871f990a455aef87971413701ba
+ms.sourcegitcommit: 2badee2b63ae63687795250e298f463474063100
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385331"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45601103"
 ---
 # <a name="install-a-cloud-distribution-point-for-configuration-manager"></a>为 Configuration Manager 安装云分发点
 
@@ -224,17 +224,22 @@ Configuration Manager 定期检查 Azure 服务。 如果服务未处于活动�
 
 还可以在 Configuration Manager 控制台的“管理”工作区中的“云服务”下的“云分发点”节点中，查看有关分发点的高级信息。 选择分发点，然后单击“属性”以查看更多详细信息。  
 
-编辑云分发点的属性时，可使用以下值进行编辑：  
+编辑云分发点的属性时，以下选项卡包括要编辑的设置：  
 
-- “设置”选项卡：  
+#### <a name="settings"></a>设置  
 
-    - **描述**  
+- **描述**  
 
-    - **证书文件**：在服务器身份验证证书过期之前，颁发具有相同公用名称的新证书。 然后在此处添加新证书，开始使用该服务。 如果证书过期，客户端将不信任该服务且不会使用该服务。  
+- **证书文件**：在服务器身份验证证书过期之前，颁发具有相同公用名称的新证书。 然后在此处添加新证书，开始使用该服务。 如果证书过期，客户端将不信任该服务且不会使用该服务。  
 
-- “警报”选项卡：调整存储和每月传输警报的数据阈值。  
+#### <a name="alerts"></a>警报
+调整存储和每月传输警报的数据阈值。  
 
-- “内容”选项卡：管理与本地分发点相同的内容。  
+#### <a name="content"></a>Content
+管理与本地分发点相同的内容。  
+
+
+### <a name="redeploy-the-service"></a>重新部署服务
 
 较重大的更改（例如以下配置）需要重新部署服务：
 - 经典部署方法改为 Azure 资源管理器部署方法
@@ -260,6 +265,11 @@ Configuration Manager 定期检查 Azure 服务。 如果服务未处于活动�
     2. 将必要的软件包内容分发到新的云分发点。  
 
     3. 删除经典云分发点。
+
+> [!Tip]  
+> 确定云分发点的当前部署模型：<!--SCCMDocs issue #611-->  
+> 1. 在 Configuration Manager 控制台中，转到“管理”工作区，展开“云服务”，然后选择“云分发点”节点。  
+> 2. 将“部署模型”属性作为列添加到列表视图中。 对于资源管理器部署，该属性为“Azure 资源管理器”。  
 
 
 ### <a name="stop-or-start-the-cloud-service-on-demand"></a>按需停止或启动云服务

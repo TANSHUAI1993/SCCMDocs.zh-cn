@@ -2,7 +2,7 @@
 title: 客户端对等缓存
 titleSuffix: Configuration Manager
 description: 使用 Configuration Manager 部署内容时，将客户端对等缓存用于源位置。
-ms.date: 07/30/2018
+ms.date: 09/19/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 86cd5382-8b41-45db-a4f0-16265ae22657
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c3dc6189f73b939f632581a8b50f05a72310111d
-ms.sourcegitcommit: be8c0182db9ef55a948269fcbad7c0f34fd871eb
+ms.openlocfilehash: b1d4e2b7dca44db7ddc5976edde59a04bc3cb45e
+ms.sourcegitcommit: 4e4b71227309bee7e9f1285971f8235c67a9c502
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42755990"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46533756"
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>用于 Configuration Manager 客户端的对等缓存
 
@@ -59,6 +59,8 @@ Configuration Manager 客户端使用对等缓存将缓存中每种类型的内�
 
  -  通常，查找内容的客户端会从所提供的列表中选择一个源。 然后，客户端尝试获取该内容。  
 
+从版本 1806 开始，边界组包含其他设置，可以更好地控制环境中的内容分发。 有关详细信息，请参阅[对等下载适用的边界组选项](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions)。<!--1356193-->
+
 > [!NOTE]  
 > 如果客户端回退到相邻边界组查找内容，管理点不会将相邻边界组中的对等缓存源添加到潜在内容源位置的列表中。  
 
@@ -98,9 +100,12 @@ Configuration Manager 客户端使用对等缓存将缓存中每种类型的内�
 
     - 必要时，对等缓存源会使用网络访问帐户对来自对等项的下载请求进行身份验证。 为此，此帐户只需域用户权限。  
 
-- 对等缓存源的当前边界由客户端的上一次检测信号发现提交内容决定。 出于对等缓存的目的，漫游到其他边界组的客户端可能仍是其以前边界组的成员。 此行为会导致提供给客户端的对等缓存源不在其直接网络位置中。 请不要将漫游客户端启用为对等缓存源。<!--SCCMDocs issue 641-->  
+- 使用 1802 及更早版本，对等缓存源的当前边界由客户端的上一次检测信号发现提交内容决定。 出于对等缓存的目的，漫游到其他边界组的客户端可能仍是其以前边界组的成员。 此行为会导致提供给客户端的对等缓存源不在其直接网络位置中。 请不要将漫游客户端启用为对等缓存源。<!--SCCMDocs issue 641-->  
 
-- 在尝试下载内容之前，对等缓存客户端先验证对等缓存源是否处于联机状态。<!--sms.498675--> 此验证通过客户端通知的“快速通道”进行，采用 TCP 端口 10123。<!--511673-->  
+    > [!Important]  
+    > 从版本 1806 开始，Configuration Manager 可以更有效地确定对等缓存源是否已漫游到其他位置。 此行为可确保管理点将其作为内容源提供给新位置的客户端，而不是旧位置的客户端。 如果将对等缓存功能与漫游的对等缓存源一起使用，则在将站点更新到版本 1806 之后，还会将所有对等缓存源更新为最新的客户端版本。 在至少将这些对等缓存源更新到版本 1806 后，管理点才会将它们包含在内容位置列表中。<!--SCCMDocs issue 850-->  
+
+- 在尝试下载内容之前，管理点先验证对等缓存源是否处于联机状态。<!--sms.498675--> 此验证通过客户端通知的“快速通道”进行，采用 TCP 端口 10123。<!--511673-->  
 
 > [!Note]  
 > 若要利用新的 Configuration Manager 功能，请先将客户端更新到最新版本。 尽管在更新站点和控制台时 Configuration Manager 控制台中会显示新功能，但只有在客户端版本也是最新版本之后，完整方案才能正常运行。  

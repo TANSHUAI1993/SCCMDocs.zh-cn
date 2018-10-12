@@ -2,7 +2,7 @@
 title: 故障排除的日志文件
 titleSuffix: Configuration Manager
 description: 使用日志文件解决 Configuration Manager 客户端和站点系统中的问题。
-ms.date: 07/30/2018
+ms.date: 09/10/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2bd3f76b982356fc444681d1990bee08e90b32fc
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 4435d39dd736db1058b06d09e5722a80a173bf6e
+ms.sourcegitcommit: 2badee2b63ae63687795250e298f463474063100
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385280"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45601205"
 ---
 # <a name="log-files-in-configuration-manager"></a>Configuration Manager 中的日志文件
 
@@ -517,9 +517,10 @@ Configuration Manager 将日志文件存储在不同的位置。 这些位置取
 |--------------|-----------------|----------------------------|  
 |CloudMgr.log|记录有关部署云管理网关服务、正在进行的服务状态，以及与服务相关联的使用数据的详细信息。<br>通过在注册表项 HKLM\SOFTWARE\ Microsoft\SMS\COMPONENTS\ SMS_CLOUD_ SERVICES_MANAGER 中编辑“Logging level”的值，可以配置日志记录级别|主站点服务器或 CAS 上的 installdir 文件夹。|
 |CMGSetup.log<sup>1</sup>|记录有关云管理网关部署（Azure 中的本地部署）的第二阶段的详细信息<br>你可以使用“Azure 门户\云服务配置”选项卡上的设置“跟踪级别”（“信息”（默认）、“详细”、“错误”）配置日志记录级别。|你的 Azure 服务器上的 **%approot%\logs**，或站点系统服务器上的 SMS/Logs 文件夹|
-|CMGHttpHandler.log<sup>1</sup>|记录有关云管理网关 http 处理程序与 Azure 中的 Internet Information Services 绑定的详细信息<br>你可以使用“Azure 门户\云服务配置”选项卡上的设置“跟踪级别”（“信息”（默认）、“详细”、“错误”）配置日志记录级别。|你的 Azure 服务器上的 **%approot%\logs**，或站点系统服务器上的 SMS/Logs 文件夹|
+|CMGHttpHandler.log<sup>1</sup>|记录有关云管理网关 http 处理程序与 Azure 中的 Internet Information Services 绑定的详细信息<br>你可以使用“Azure 门户\云服务配置”选项卡上的设置“跟踪级别”（“信息”（默认）、“详细”、“错误”）配置日志记录级别。<br>从版本 1806 开始，该日志不存在。 组件功能合并到 CMG 服务组件中。 请参阅 CMGService.log。<!--SCCMDocs-pr issue #2822-->|你的 Azure 服务器上的 **%approot%\logs**，或站点系统服务器上的 SMS/Logs 文件夹|
 |CMGService.log<sup>1</sup>|记录有关 Azure 中云管理网关服务核心组件的详细信息<br>你可以使用“Azure 门户\云服务配置”选项卡上的设置“跟踪级别”（“信息”（默认）、“详细”、“错误”）配置日志记录级别。|你的 Azure 服务器上的 **%approot%\logs**，或站点系统服务器上的 SMS/Logs 文件夹|
-|SMS_Cloud_</br>ProxyConnector.log|记录有关设置云管理网关服务和云管理网关连接点之间的连接的详细信息。|站点系统服务器|
+|SMS_Cloud_<br>ProxyConnector.log|记录有关设置云管理网关服务和云管理网关连接点之间的连接的详细信息。|站点系统服务器|
+|CMGContentService.log<sup>1</sup>|<!--SCCMDocs-pr issue #2822-->从版本 1806 开始，启用 CMG 从 Azure 存储中提供内容时，此日志会记录该服务的详细信息。|你的 Azure 服务器上的 **%approot%\logs**，或站点系统服务器上的 SMS/Logs 文件夹|
 
 <sup>1</sup> 这些是云服务管理器每 5 分钟从 Azure 存储同步的本地 Configuration Manager 日志文件。 云管理网关每 5 分钟将日志推送到 Azure 存储。 所以最大延迟为 10 分钟。 详细的开关将影响本地日志和远程日志。 实际文件名包含服务名称和角色实例标识符。 例如，CMG-ServiceName-RoleInstanceID-CMGSetup.log
 

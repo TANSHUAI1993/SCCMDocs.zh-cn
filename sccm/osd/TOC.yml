@@ -1,0 +1,132 @@
+items:
+- name: 了解和探索
+  items:
+  - name: OS 部署简介
+    href: understand/introduction-to-operating-system-deployment.md
+- name: 规划和设计
+  items:
+  - name: OS 部署的基础架构要求
+    href: plan-design/infrastructure-requirements-for-operating-system-deployment.md
+  - name: 自动执行任务的规划注意事项
+    href: plan-design/planning-considerations-for-automating-tasks.md
+  - name: OS 部署的安全和隐私
+    href: plan-design/security-and-privacy-for-operating-system-deployment.md
+  - name: 规划 OS 部署互操作性
+    href: plan-design/planning-for-operating-system-deployment-interoperability.md
+- name: 入门
+  items:
+  - name: 为 OS 部署准备站点系统角色
+    href: get-started/prepare-site-system-roles-for-operating-system-deployments.md
+  - name: 准备进行 OS 部署
+    href: get-started/prepare-for-operating-system-deployment.md
+    items:
+    - name: 管理启动映像
+      href: get-started/manage-boot-images.md
+      items:
+      - name: 自定义启动映像
+        href: get-started/customize-boot-images.md
+    - name: 管理 OS 映像
+      href: get-started/manage-operating-system-images.md
+      items:
+      - name: 自定义 OS 映像
+        href: get-started/customize-operating-system-images.md
+    - name: 管理 OS 升级包
+      href: get-started/manage-operating-system-upgrade-packages.md
+    - name: 管理驱动程序
+      href: get-started/manage-drivers.md
+    - name: 管理用户状态
+      href: get-started/manage-user-state.md
+    - name: 准备未知计算机部署
+      href: get-started/prepare-for-unknown-computer-deployments.md
+    - name: 将用户与目标计算机相关联
+      href: get-started/associate-users-with-a-destination-computer.md
+  - name: 准备 Windows PE 对等缓存来减少 WAN 流量
+    href: get-started/prepare-windows-pe-peer-cache-to-reduce-wan-traffic.md
+- name: 部署和使用
+  items:
+  - name: 部署企业版操作系统的方案
+    href: deploy-use/scenarios-to-deploy-enterprise-operating-systems.md
+    items:
+    - name: 将 Windows 升级到最新版本
+      href: deploy-use/upgrade-windows-to-the-latest-version.md
+    - name: 使用新版本的 Windows 刷新现有的计算机
+      href: deploy-use/refresh-an-existing-computer-with-a-new-version-of-windows.md
+    - name: 在新计算机（裸机）上安装新版本的 Windows
+      href: deploy-use/install-new-windows-version-new-computer-bare-metal.md
+    - name: 替换现有计算机和传输设置
+      href: deploy-use/replace-an-existing-computer-and-transfer-settings.md
+  - name: 部署企业版操作系统的方法
+    href: deploy-use/methods-to-deploy-enterprise-operating-systems.md
+    items:
+    - name: 使用 PXE 通过网络部署 Windows
+      href: deploy-use/use-pxe-to-deploy-windows-over-the-network.md
+    - name: 使用软件中心通过网络部署 Windows
+      href: deploy-use/use-software-center-to-deploy-windows-over-the-network.md
+    - name: 使用可启动媒体通过网络部署 Windows
+      href: deploy-use/use-bootable-media-to-deploy-windows-over-the-network.md
+    - name: 使用独立媒体部署 Windows，而不使用网络
+      href: deploy-use/use-stand-alone-media-to-deploy-windows-without-using-the-network.md
+    - name: 使用多播通过网络来部署 Windows
+      href: deploy-use/use-multicast-to-deploy-windows-over-the-network.md
+    - name: 为工厂中的 OEM 或本地仓库创建映像
+      href: deploy-use/create-an-image-for-an-oem-in-factory-or-a-local-depot.md
+    - name: 部署 Windows To Go
+      href: deploy-use/deploy-windows-to-go.md
+  - name: 将 Windows 作为一项服务来管理
+    href: deploy-use/manage-windows-as-a-service.md
+  - name: 创建分阶段部署
+    href: deploy-use/create-phased-deployment-for-task-sequence.md
+  - name: 管理和监视分阶段部署
+    href: deploy-use/manage-monitor-phased-deployments.md
+  - name: 监视 OS 部署
+    href: deploy-use/monitor-operating-system-deployments.md
+  - name: 管理任务序列来自动执行任务
+    href: deploy-use/manage-task-sequences-to-automate-tasks.md
+    items:
+    - name: 创建用于安装 OS 的任务序列
+      href: deploy-use/create-a-task-sequence-to-install-an-operating-system.md
+    - name: 创建用于升级 OS 的任务序列
+      href: deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md
+    - name: 创建用于捕获 OS 的任务序列
+      href: deploy-use/create-a-task-sequence-to-capture-an-operating-system.md
+    - name: 创建任务序列以捕获和还原用户状态
+      href: deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md
+    - name: 使用任务序列来管理虚拟硬盘
+      href: deploy-use/use-a-task-sequence-to-manage-virtual-hard-disks.md
+  - name: 自定义任务序列应用方案
+    items:
+    - name: 创建自定义任务序列
+      href: deploy-use/create-a-custom-task-sequence.md
+    - name: 创建非 OS 部署的任务序列
+      href: deploy-use/create-a-task-sequence-for-non-operating-system-deployments.md
+    - name: 管理 BIOS 转换为 UEFI 所采用的任务序列步骤
+      href: deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md
+    - name: 预先设置 Windows PE 中的 BitLocker
+      href: deploy-use/preprovision-bitlocker-in-windows-pe.md
+  - name: 创建任务序列媒体
+    href: deploy-use/create-task-sequence-media.md
+    items:
+    - name: 创建独立媒体
+      href: deploy-use/create-stand-alone-media.md
+    - name: 创建预留媒体
+      href: deploy-use/create-prestaged-media.md
+    - name: 创建可启动媒体
+      href: deploy-use/create-bootable-media.md
+    - name: 创建捕获媒体
+      href: deploy-use/create-capture-media.md
+- name: 技术参考
+  items:
+  - name: 任务序列步骤
+    href: understand/task-sequence-steps.md
+  - name: 如何使用任务序列变量
+    href: understand/using-task-sequence-variables.md
+  - name: 任务序列变量
+    href: understand/task-sequence-variables.md
+  - name: 任务序列媒体的预启动命令
+    href: understand/prestart-commands-for-task-sequence-media.md
+ms.openlocfilehash: 583f3b6e7fb239455e37253c205a8cc2fc0a5998
+ms.sourcegitcommit: 8661f10596f565ca2b7bdb5951388b44b3b622ee
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "48817551"

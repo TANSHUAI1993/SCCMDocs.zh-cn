@@ -1,0 +1,206 @@
+items:
+- name: 概述
+  items:
+  - name: 什么是混合 MDM
+    href: understand/hybrid-mobile-device-management.md
+  - name: 混合 MDM 中的新增功能
+    href: understand/whats-new-in-hybrid-mobile-device-management.md
+- name: 规划和设计
+  href: plan-design/plan-hybrid-mobile-device-management.md
+  items:
+  - name: 受支持的设备平台
+    href: plan-design/supported-device-platforms-for-hybrid.md
+  - name: 设备注册方法
+    href: plan-design/device-enrollment-methods.md
+- name: 入门
+  href: deploy-use/setup-hybrid-mdm.md
+  items:
+  - name: 创建 MDM 集合
+    href: deploy-use/create-mdm-collection.md
+  - name: 确认域名要求
+    href: deploy-use/confirm-dns.md
+  - name: 配置 Intune 订阅
+    href: deploy-use/configure-intune-subscription.md
+  - name: 添加条款和条件
+    href: deploy-use/terms-and-conditions.md
+  - name: 创建服务连接点
+    href: deploy-use/create-service-connection-point.md
+  - name: 启用平台注册
+    href: deploy-use/enable-platform-enrollment.md
+    items:
+    - name: iOS 和 MAC
+      href: deploy-use/enroll-hybrid-ios-mac.md
+    - name: Windows
+      href: deploy-use/enroll-hybrid-windows.md
+    - name: Android
+      href: deploy-use/enroll-hybrid-android.md
+  - name: 设置附加管理
+    href: deploy-use/set-up-additional-management.md
+  - name: 验证 MDM 配置
+    href: deploy-use/verify-mdm-configuration.md
+- name: 如何
+  items:
+  - name: 注册用户自有设备 (BYOD)
+    href: deploy-use/enroll-user-owned-devices.md
+  - name: 注册公司拥有的设备
+    href: deploy-use/enroll-company-owned-devices.md
+    items:
+    - name: iOS DEP 注册
+      href: deploy-use/ios-device-enrollment-program-for-hybrid.md
+    - name: Apple 配置器注册
+      href: deploy-use/ios-hybrid-enrollment-using-apple-configurator.md
+    - name: 设备注册管理器
+      href: deploy-use/enroll-devices-with-device-enrollment-manager.md
+    - name: 预声明硬件 ID
+      href: deploy-use/predeclare-devices-with-hardware-id.md
+    - name: 管理 iOS 激活锁定
+      href: deploy-use/manage-ios-activation-lock.md
+    - name: 用户设备相关性
+      href: deploy-use/user-affinity-for-hybrid-managed-devices.md
+  - name: 停用/擦除、锁定设备或将其重置
+    href: deploy-use/wipe-lock-reset-devices.md
+  - name: 配置硬件清单
+    href: deploy-use/mobile-device-hardware-inventory-hybrid.md
+  - name: 配置软件清单
+    href: deploy-use/software-inventory-mobile-devices.md
+  - name: 管理符合性设置
+    href: deploy-use/manage-compliance-settings.md
+    items:
+    - name: Windows 8.1 和 Windows 10
+      href: deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md
+    - name: Windows Phone
+      href: deploy-use/create-configuration-items-for-windows-phone-devices-managed-without-the-client.md
+    - name: iOS 和 Mac OS X
+      href: deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client.md
+    - name: Android 和 Samsung KNOX 标准版
+      href: deploy-use/create-configuration-items-for-android-and-samsung-knox-devices-managed-without-the-client.md
+    - name: Android for Work
+      href: deploy-use/create-configuration-items-for-android-for-work-devices-managed-without-the-client.md
+  - name: 同步注册有 Intune 的设备
+    href: deploy-use/sync-intune-device.md
+  - name: 管理应用程序
+    href: deploy-use/management-tasks-applications.md
+    items:
+    - name: 创建 iOS 应用程序
+      href: deploy-use/creating-ios-applications.md
+    - name: iOS 应用配置策略
+      href: deploy-use/configure-ios-apps-with-app-configuration-policies.md
+    - name: iOS 批量采购的应用
+      href: deploy-use/manage-volume-purchased-ios-apps.md
+    - name: 创建 Windows Phone 应用程序
+      href: deploy-use/creating-windows-phone-applications.md
+    - name: 创建 Android 应用程序
+      href: deploy-use/creating-android-applications.md
+    - name: Android 应用配置策略
+      href: deploy-use/configure-android-apps-with-app-configuration-policies.md
+    - name: 移动应用程序管理策略
+      href: deploy-use/protect-apps-using-mam-policies.md
+    - name: 托管浏览器策略
+      href: deploy-use/manage-internet-access-using-managed-browser-policies.md
+    - name: 适用于企业的 Microsoft Store 应用
+      href: deploy-use/windows-store-for-business.md
+  - name: 管理 Intune 订阅
+    href: deploy-use/manage-intune-subscriptions.md
+  - name: 更改 MDM 机构
+    href: deploy-use/change-mdm-authority.md
+  - name: 开始从混合 MDM 迁移到 Intune 独立版本
+    href: deploy-use/migrate-hybridmdm-to-intunesa.md
+    items:
+    - name: 将 Configuration Manager 数据导入 Microsoft Intune
+      href: deploy-use/migrate-import-data.md
+    - name: 准备 Intune 以进行用户迁移
+      href: deploy-use/migrate-prepare-intune.md
+    - name: 更改特定用户的 MDM 机构（混合 MDM 机构）
+      href: deploy-use/migrate-mixed-authority.md
+    - name: 更改 MDM 机构
+      href: deploy-use/migrate-change-mdm-authority.md
+  - name: 管理资源访问
+    items:
+    - name: 创建 Wi-Fi 配置文件
+      href: deploy-use/create-wifi-profiles.md
+    - name: 创建 PFX 证书配置文件
+      href: deploy-use/create-pfx-certificate-profiles.md
+    - name: 导入 PFX 证书配置文件
+      href: deploy-use/import-pfx-certificate-profiles.md
+    - name: VPN 配置文件
+      href: deploy-use/create-vpn-profiles.md
+    - name: 创建电子邮件配置文件
+      href: deploy-use/create-exchange-activesync-profiles.md
+    - name: Windows Hello 企业版设置
+      href: deploy-use/windows-hello-for-business-settings.md
+  - name: 管理条件访问
+    href: deploy-use/manage-access-to-services.md
+    items:
+    - name: 设备合规性策略
+      href: deploy-use/device-compliance-policies.md
+      items:
+      - name: 针对非符合性的操作
+        href: deploy-use/actions-for-noncompliance.md
+    - name: 创建设备合规性策略
+      href: deploy-use/create-compliance-policy.md
+    - name: 管理电子邮件访问权限
+      href: deploy-use/manage-email-access.md
+    - name: 管理 SharePoint Online 访问
+      href: deploy-use/manage-sharepoint-online-access.md
+    - name: 管理 Skype for Business Online 访问
+      href: deploy-use/manage-skype-for-business-online-access.md
+    - name: 管理 Dynamics CRM Online 访问权限
+      href: deploy-use/manage-dynamics-crm-online-access.md
+    - name: 管理 O365 服务的电脑访问权限
+      href: deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md
+  - name: 基于设备风险管理访问权限
+    href: deploy-use/mobile-threat-defense.md
+    items:
+    - name: 在 Configuration Manager 中查询
+      href: deploy-use/lookout-mobile-threat-defense-in-configuration-manager.md
+      items:
+      - name: 设置监视移动威胁防御
+        href: deploy-use/set-up-your-subscription-with-lookout.md
+      - name: 在 Intune 中启用 Lookout
+        href: deploy-use/enable-lookout-connection-in-intune.md
+      - name: 部署 Lookout for Work 应用
+        href: deploy-use/configure-and-deploy-lookout-for-work-apps.md
+      - name: 创建 Lookout 符合性策略
+        href: deploy-use/enable-device-threat-protection-rule-compliance-policy.md
+      - name: 对 Lookout 集成进行故障排除
+        href: deploy-use/troubleshoot-lookout-integration.md
+      - name: 监视移动威胁防御
+        href: deploy-use/monitor-mobile-threat-defense-compliance.md
+- name: 本地移动设备管理 (MDM)
+  items:
+  - name: 什么是本地 MDM
+    href: understand/manage-mobile-devices-with-on-premises-infrastructure.md
+  - name: 规划本地 MDM
+    href: plan-design/plan-on-premises-mdm.md
+  - name: 安装步骤
+    href: get-started/preparation-steps-for-on-premises-mdm.md
+    items:
+    - name: 设置 Intune 订阅
+      href: get-started/set-up-intune-subscription-on-premises-mdm.md
+    - name: 安装本地角色
+      href: get-started/install-site-system-roles-for-on-premises-mdm.md
+    - name: 设置证书
+      href: get-started/set-up-certificates-on-premises-mdm.md
+    - name: 设置进行注册
+      href: get-started/set-up-device-enrollment-on-premises-mdm.md
+  - name: 注册设备以实现本地 MDM
+    href: deploy-use/enroll-devices-on-premises-mdm.md
+    items:
+    - name: 用户注册
+      href: deploy-use/user-enroll-devices-on-premises-mdm.md
+    - name: 批量注册
+      href: deploy-use/bulk-enroll-devices-on-premises-mdm.md
+  - name: 管理设备
+    href: deploy-use/onprem-manage-devices.md
+  - name: 管理应用程序
+    href: deploy-use/onprem-manage-applications.md
+  - name: 保护数据和设备
+    href: deploy-use/onprem-protect-data-devices.md
+- name: 使用 Exchange 管理设备
+  href: deploy-use/manage-mobile-devices-with-exchange-activesync.md
+ms.openlocfilehash: 1ecf2c9c9264f7851982e59d47e0e42b9c8ca1ab
+ms.sourcegitcommit: 8661f10596f565ca2b7bdb5951388b44b3b622ee
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "48817550"

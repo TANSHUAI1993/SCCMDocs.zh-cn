@@ -10,12 +10,12 @@ ms.assetid: 946b0f74-0794-4e8f-a6af-9737d877179b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3c31b950ef59147f6f3f46c1cba7780b7789948c
-ms.sourcegitcommit: 4b7812b505e80f79fc90dfa8a6db06eea79a3550
+ms.openlocfilehash: fbcf7a7d76146cc11dd4bb57b86fe4752c694e02
+ms.sourcegitcommit: 1e782268d6c0211bd854b5860de72cfd6c6985c6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "42584584"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44697032"
 ---
 # <a name="enable-third-party-updates"></a>启用第三方更新 
 
@@ -36,13 +36,13 @@ ms.locfileid: "42584584"
 
 ## <a name="additional-requirements-when-the-sup-is-remote-from-the-top-level-site-server"></a>SUP 远离顶级站点服务器时的其他要求 
 
-1. 当 SUP 为远程时必须在 SUP 上启用 SSL。 
+1. 当 SUP 为远程时必须在 SUP 上启用 SSL。 这需要从内部证书颁发机构或通过公共提供程序生成的服务器身份验证证书。
     - [在 WSUS 上配置 SSL](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#bkmk_2.5.ConfigSSL)
         - 在 WSUS 上配置 SSL 时，请注意某些 Web 服务和虚拟目录始终是 HTTP 而不是 HTTPS。 
         - Configuration Manager 通过 HTTP 从 WSUS 内容目录下载软件更新包的第三方内容。   
     - [在 SUP 上配置 SSL](../get-started/install-a-software-update-point.md#configure-ssl-communications-to-wsus)
 
-2. 要允许创建自签名 WSUS 证书： 
+2. 将第三方更新 WSUS 签名证书配置设置为软件更新点组件属性中的 Configuration Manager 管理更新时，需要以下配置才能创建自签名 WSUS 签名证书： 
    - 应在 SUP 服务器上启用远程注册表。
    -  WSUS 服务器连接帐户应具有 SUP/WSUS 服务器上的远程注册表权限。 
 
@@ -50,7 +50,7 @@ ms.locfileid: "42584584"
 3. 在 Configuration Manager 站点服务器上创建以下注册表项： 
     - `HKLM\Software\Microsoft\Update Services\Server\Setup`，创建名为 EnableSelfSignedCertificates 的新 DWORD，其值为 `1`。 
 
-4. 在远程 SUP 服务器上向受信任的发布者和受信任的根存储安装证书：
+4. 在远程 SUP 服务器上向受信任的发布者和受信任的根存储安装自签名 WSUS 签名证书：
    - WSUS 服务器连接帐户应具有 SUP 服务器上的远程管理权限。
 
     如果无法使用此项，请将证书从本地计算机的 WSUS 存储导出到受信任的发布者和受信任的根存储中。 
@@ -69,7 +69,7 @@ ms.locfileid: "42584584"
 
 
 ## <a name="configure-the-wsus-signing-certificate"></a>配置 WSUS 签名证书
-需要决定是希望 Configuration Manager 自动管理第三方 WSUS 签名证书，还是需要手动配置证书。 
+需要决定是希望 Configuration Manager 使用自签名证书自动管理第三方 WSUS 签名证书，还是需要手动配置证书。 
 
 ### <a name="automatically-manage-the-wsus-signing-certificate"></a>自动管理 WSUS 签名证书
 如果不要求使用 PKI 证书，可以选择自动管理第三方更新的签名证书。 WSUS 证书管理是作为同步周期的一部分进行的，并记录在 `wsyncmgr.log` 中。 

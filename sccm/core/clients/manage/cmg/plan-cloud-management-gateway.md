@@ -2,7 +2,7 @@
 title: 规划云管理网关
 titleSuffix: Configuration Manager
 description: 规划和设计云管理网关 (CMG)，简化基于 Internet 的客户端管理。
-ms.date: 07/30/2018
+ms.date: 09/10/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2c60a269ade54c87c754fc9b5a3fb90deecd32f5
-ms.sourcegitcommit: 316899b08f2ef372993909e08e069f7edfed1d33
+ms.openlocfilehash: 9b25b7a5b7df42dc83bec18d38b44c7807e6dc1a
+ms.sourcegitcommit: 2badee2b63ae63687795250e298f463474063100
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44111155"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45601120"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>在 Configuration Manager 中规划云管理网关
 
@@ -56,7 +56,7 @@ ms.locfileid: "44111155"
 
 - 通过 Internet 在 Windows 10 设备上安装 Configuration Manager 客户端。 使用 Azure AD 允许设备对 CMG 进行身份验证，以注册和分配客户端。 可手动安装客户端，也可使用其他软件分发方法（如 Microsoft Intune）。  
 
-- 通过共同管理预配新设备。 CMG 不是共同管理所必须的。 但它有助于完成新设备的端到端方案，其中涉及 Windows AutoPilot、Azure AD、Microsoft Intune 和 Configuration Manager。  
+- 通过共同管理预配新设备。 CMG 不是共同管理所必需的。 但它有助于完成新设备的端到端方案，其中涉及 Windows AutoPilot、Azure AD、Microsoft Intune 和 Configuration Manager。  
 
 ### <a name="specific-use-cases"></a>特定用例
 在这些方案中，以下特定设备用例可能适用：
@@ -93,6 +93,8 @@ CMG 部署和操作包括以下组件：
 - 基于 Internet 的客户端使用“PKI 证书或 Azure AD”进行标识和身份验证。  
 
 - [云分发点](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point)按需向基于 Internet 的客户端提供内容。  
+
+    - 从版本 1806 开始，CMG 也可向客户端提供内容。 此功能减少了所需的证书和 Azure VM 的成本。 有关详细信息，请参阅[修改 CMG](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#modify-a-cmg) <!--1358651-->。  
 
 
 ### <a name="azure-resource-manager"></a>Azure 资源管理器
@@ -193,10 +195,10 @@ CMG 向导仍提供使用 Azure 管理证书的“经典服务部署”选项。
 | 客户端状态和通知     | ![支持](media/green_check.png) |
 | 运行脚本     | ![支持](media/green_check.png) |
 | 符合性设置     | ![支持](media/green_check.png) |
-| 客户端安装</br>（带 Azure AD 集成）     | ![支持](media/green_check.png)  (1706) |
+| 客户端安装<br>（带 Azure AD 集成）     | ![支持](media/green_check.png)  (1706) |
 | 软件分发（以设备为目标）     | ![支持](media/green_check.png) |
-| 软件分发（以用户为目标，必需）</br>（带 Azure AD 集成）     | ![支持](media/green_check.png)  (1710) |
-| 软件分发（以用户为目标，可用）</br>（[所有要求](/sccm/apps/deploy-use/deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices)） | ![支持](media/green_check.png)  (1802) |
+| 软件分发（以用户为目标，必需）<br>（带 Azure AD 集成）     | ![支持](media/green_check.png)  (1710) |
+| 软件分发（以用户为目标，可用）<br>（[所有要求](/sccm/apps/deploy-use/deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices)） | ![支持](media/green_check.png)  (1802) |
 | Windows 10 就地升级任务序列     | ![支持](media/green_check.png)  (1802) |
 | CMPivot     | ![支持](media/green_check.png)  (1806) |
 | 任何其他任务序列方案     | ![不支持](media/Red_X.png) |
@@ -217,7 +219,7 @@ CMG 向导仍提供使用 Azure 管理证书的“经典服务部署”选项。
 |--|
 |![支持](media/green_check.png) = 所有受支持的 Configuration Manager 版本的 CMG 都支持此功能  |
 |![支持](media/green_check.png) (YYMM) = 自 Configuration Manager YYMM 版起，CMG 支持此功能  |
-|![不支持](media/Red_X.png) ＝ CMG 不支持此功能 |
+|![不支持](media/Red_X.png) = CMG 不支持此功能 |
 
 
 
@@ -267,6 +269,9 @@ CMG 使用以下 Azure 组件，使用这些组件会向 Azure 订阅帐户收�
 - 对于其他任何必要内容（例如应用程序或第三方软件更新），必须分发到云分发点。 目前，CMG 仅支持从云分发点向客户端发送内容。  
 
 - 有关详细信息，请参阅使用[云分发点](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#bkmk_cost)所产生的成本。  
+
+- 从版本 1806 开始，CMG 也可向客户端提供内容。 此功能减少了所需的证书和 Azure VM 的成本。 有关详细信息，请参阅[修改 CMG](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#modify-a-cmg) <!--1358651-->。  
+
 
 #### <a name="other-costs"></a>其他成本
 
@@ -323,15 +328,15 @@ CMG 使用以下 Azure 组件，使用这些组件会向 Azure 订阅帐户收�
 | CMG 连接点     | HTTPS | 443        | CMG 服务       | 回退，将 CMG 通道构建为只有一个 VM 实例<sup>2</sup> |
 | CMG 连接点     |  HTTPS   | 10124-10139     | CMG 服务       | 回退，将 CMG 通道构建为有连两个或以上的 VM 实例<sup>3</sup> |
 | 客户端     |  HTTPS | 443         | CMG        | 常规客户端通信 |
-| CMG 连接点      | HTTPS 或 HTTP | 443 或 80         | 管理点</br>（版本 1706 或 1710） | 本地流量，端口取决于管理点配置 |
-| CMG 连接点      | HTTPS | 443      | 管理点</br>（版本 1802） | 本地流量必须经由 HTTPS |
+| CMG 连接点      | HTTPS 或 HTTP | 443 或 80         | 管理点<br>（版本 1706 或 1710） | 本地流量，端口取决于管理点配置 |
+| CMG 连接点      | HTTPS | 443      | 管理点<br>（版本 1802） | 本地流量必须经由 HTTPS |
 | CMG 连接点      | HTTPS 或 HTTP | 443 或 80         | 软件更新点 | 本地流量，端口取决于软件更新点配置 |
 
-<sup>1</sup> CMG 连接点先尝试与每个 CMG VM 实例建立长期 TCP-TLS 连接。 它会连接到端口 10140 上的第一个 VM 实例。 第二个 VM 实例使用端口 10141，直到端口 10155 上的第十六个实例。 TCP TLS 连接性能最佳，但不支持 Internet 代理。 如果 CMG 连接点无法通过 TCP-TLS 进行连接，则会回退到 HTTPS<sup>2</sup>。  
+<sup>1</sup> CMG 连接点先尝试与每个 CMG VM 实例建立长期 TCP-TLS 连接。 它会连接到端口 10140 上的第一个 VM 实例。 第二个 VM 实例使用端口 10141，直到端口 10155 上的第 16 个实例。 TCP TLS 连接性能最佳，但不支持 Internet 代理。 如果 CMG 连接点无法通过 TCP-TLS 进行连接，则会回退到 HTTPS<sup>2</sup>。  
 
 <sup>2</sup> 如果 CMG 连接点无法通过 TCP-TLS 连接到 CMG<sup>1</sup>，则会通过仅用于一个 VM 实例的 HTTPS 443 连接到 Azure 网络负载均衡器。  
 
-<sup>3</sup> 如果有两个或多个 VM 实例，则 CMG 连接点将为第一个 VM 实例使用 HTTPS 10124，而不是 HTTPS 443。 它会连接到 HTTPS 10125 上的第二个 VM 实例，直到 HTTPS 端口 10139 上的第十六个 VM 实例。
+<sup>3</sup> 如果有两个或多个 VM 实例，则 CMG 连接点将为第一个 VM 实例使用 HTTPS 10124，而不是 HTTPS 443。 它会连接到 HTTPS 10125 上的第二个 VM 实例，直到 HTTPS 端口 10139 上的第 16 个 VM 实例。
 
 
 ### <a name="internet-access-requirements"></a>Internet 访问要求

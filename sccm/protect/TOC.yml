@@ -1,0 +1,117 @@
+items:
+- name: 了解和探索
+  items:
+  - name: 概述
+    href: understand\protect-data-and-site-infrastructure.md
+- name: 规划和设计
+  items:
+  - name: 证书配置文件先决条件
+    href: plan-design/prerequisites-for-certificate-profiles.md
+    items:
+    - name: 证书配置文件的证书模板权限
+      href: plan-design/planning-for-certificate-template-permissions.md
+    - name: 证书配置文件的安全和隐私
+      href: plan-design/security-and-privacy-for-certificate-profiles.md
+  - name: 规划 Endpoint Protection
+    href: plan-design/planning-for-endpoint-protection.md
+  - name: 规划电子邮件、Wi-Fi 和 VPN 配置文件
+    href: plan-design/prerequisites-for-email-profiles.md
+    items:
+    - name: 电子邮件配置文件先决条件
+      href: plan-design/prerequisites-for-email-profiles.md
+    - name: Wi-Fi 和 VPN 配置文件先决条件
+      href: plan-design/prerequisites-for-wifi-vpn-profiles.md
+  - name: Wi-Fi 和 VPN 配置文件的安全和隐私
+    href: plan-design/security-and-privacy-for-wifi-vpn-profiles.md
+  - name: 电子邮件配置文件的安全和隐私
+    href: plan-design/security-and-privacy-for-email-profiles.md
+  - name: 证书配置文件的安全和隐私
+    href: plan-design/security-and-privacy-for-certificate-profiles.md
+- name: 部署和使用
+  items:
+  - name: VPN 配置文件
+    href: deploy-use/vpn-profiles.md
+    items:
+    - name: 创建 VPN 配置文件
+      href: deploy-use/create-vpn-profiles.md
+    - name: 查找每应用 VPN 的包系列名称 (PFN)
+      href: deploy-use/find-a-pfn-for-per-app-vpn.md
+  - name: Wi-Fi 配置文件
+    href: deploy-use/create-wifi-profiles.md
+    items:
+    - name: 创建 Wi-Fi 配置文件
+      href: deploy-use/create-wifi-profiles.md
+  - name: 证书配置文件
+    href: deploy-use/introduction-to-certificate-profiles.md
+    items:
+    - name: 创建证书配置文件
+      href: deploy-use/create-certificate-profiles.md
+    - name: 配置证书基础结构
+      href: deploy-use/certificate-infrastructure.md
+  - name: Endpoint Protection
+    href: deploy-use/endpoint-protection.md
+    items:
+    - name: 配置 Endpoint Protection
+      href: deploy-use/endpoint-protection-configure.md
+      items:
+      - name: 站点系统角色
+        href: deploy-use/endpoint-protection-site-role.md
+      - name: 警报
+        href: deploy-use/endpoint-configure-alerts.md
+      - name: 定义更新
+        href: deploy-use/endpoint-definition-updates.md
+        items:
+        - name: ConfigMgr 更新
+          href: deploy-use/endpoint-definitions-configmgr.md
+        - name: WSUS 更新
+          href: deploy-use/endpoint-definitions-wsus.md
+        - name: Microsoft 更新
+          href: deploy-use/endpoint-definitions-microsoft-updates.md
+        - name: 恶意软件防护中心
+          href: deploy-use/endpoint-definitions-protection-center.md
+        - name: 网络共享更新
+          href: deploy-use/endpoint-definitions-network.md
+      - name: 部署策略
+        href: deploy-use/endpoint-antimalware-policies.md
+      - name: 配置客户端
+        href: deploy-use/endpoint-protection-configure-client.md
+    - name: Windows 防火墙策略
+      href: deploy-use/create-windows-firewall-policies.md
+    - name: Windows Defender 高级威胁防护
+      href: deploy-use/windows-defender-advanced-threat-protection.md
+    - name: 创建和部署攻击防护策略
+      href: deploy-use/create-deploy-exploit-guard-policy.md
+    - name: 创建和部署应用程序防护策略
+      href: deploy-use/create-deploy-application-guard-policy.md
+    - name: 反恶意软件和防火墙任务
+      href: deploy-use/endpoint-antimalware-firewall.md
+    - name: Endpoint Protection 方案
+      href: deploy-use/scenarios-endpoint-protection.md
+    - name: Endpoint Protection 客户端帮助
+      href: deploy-use/endpoint-protection-client-help.md
+    - name: 客户端问题疑难解答
+      href: deploy-use/troubleshoot-endpoint-client.md
+    - name: Windows Defender FAQ
+      href: deploy-use/endpoint-protection-client-faq.md
+    - name: Device Guard 设置
+      href: deploy-use/use-device-guard-with-configuration-manager.md
+  - name: 部署 Wi-fi、VPN、电子邮件和证书配置文件
+    href: deploy-use/deploy-wifi-vpn-email-cert-profiles.md
+  - name: Windows Hello 企业版设置
+    href: deploy-use/windows-hello-for-business-settings.md
+  - name: 条款和条件设置
+    href: ../mdm/deploy-use/terms-and-conditions.md
+  - name: 监视器保护
+    items:
+    - name: 监视 Wi-fi、电子邮件和 VPN 配置文件
+      href: deploy-use/monitor-wifi-email-vpn-profiles.md
+    - name: 监视证书配置文件
+      href: deploy-use/monitor-certificate-profiles.md
+    - name: 监视 Endpoint Protection
+      href: deploy-use/monitor-endpoint-protection.md
+ms.openlocfilehash: b07b7146b336626bc478357808bc9a6d7941260f
+ms.sourcegitcommit: 8661f10596f565ca2b7bdb5951388b44b3b622ee
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "48817553"

@@ -10,12 +10,12 @@ ms.assetid: c14a3607-253b-41fb-8381-ae2d534a9022
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 46aa845197010694e1a1c48ec1d3f18a13268cdf
-ms.sourcegitcommit: be8c0182db9ef55a948269fcbad7c0f34fd871eb
+ms.openlocfilehash: 503255c571288fa0da0b0b81f3a76fc2b38bbb19
+ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42756123"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43893917"
 ---
 # <a name="install-in-console-updates-for-configuration-manager"></a>为 Configuration Manager 安装控制台内更新
 
@@ -412,7 +412,7 @@ Configuration Manager 与 Microsoft 云服务同步，以获取更新。 随后�
 - [数据仓库服务点](/sccm/core/servers/manage/data-warehouse)<!--1277922-->
 - [客户端对等缓存](/sccm/core/plan-design/hierarchy/client-peer-cache)<!--1101436-->
 - [PFX 创建](/sccm/protect/deploy-use/introduction-to-certificate-profiles)<!--1321368-->
-- [Microsoft Operations Management Suite (OMS) 连接器](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite)<!--1258052-->
+- [Azure Log Analytics 连接器](/sccm/core/clients/manage/sync-data-log-analytics) <!--1258052-->
 - [Windows Defender 攻击防护策略](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy)<!--1355468-->
 - [适用于 Windows 10 的 VPN](/sccm/protect/deploy-use/vpn-profiles)<!--1283610-->
 - [Passport for Work](/sccm/protect/deploy-use/windows-hello-for-business-settings)（也称为 Windows Hello 企业版）<!--1245704-->

@@ -10,12 +10,12 @@ ms.assetid: 91f9de33-b277-4500-acd6-e7d90a2947c9
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: c41a04d82edb46a234b6e5bd10d796e6544cbfad
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 27e8e3ef78947eb6623a56e670e176aaa2800f68
+ms.sourcegitcommit: 78d2dce465e3500653b252583a6903a006784c26
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32340176"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448899"
 ---
 # <a name="health-attestation-for-system-center-configuration-manager"></a>System Center Configuration Manager 的运行状况证明
 
@@ -56,8 +56,9 @@ ms.locfileid: "32340176"
 2. 右键单击支持本地设备运行状况证明客户端的管理点中的主站点或辅助站点，然后选择“配置站点组件” > “管理点”。 打开“管理点组件属性”页。
 3. 在“高级选项”选项卡上，选择“添加”并指定有效的本地设备运行状况证明服务 URL。 可以添加多个 URL。 如果指定了多个本地 URL，则客户端接收完整集合并随机选择要使用的集合。
 4.  在 Configuration Manager 控制台中，选择“管理” > “概述” > “客户端设置”。  选择对于“计算机代理”设置的选项卡。  
-5.  在“默认设置”对话框中，选择“计算机代理”，然后向下滚动到“使用本地运行状况证明服务”，并设置为“是”。
-6. 面向应报告具有客户端代理设置的设备运行状况的设备的集合，以启用设备运行状况证明报告。
+5.  向下滚动到“启用与运行状况证明服务的通信”的通信，并设置为“是”。
+7.  单击“使用本地运行状况证明服务”选项，然后设置为“是”。
+8. 面向应报告具有客户端代理设置的设备运行状况的设备的集合，以启用设备运行状况证明报告。
 
 还可以“编辑”或“删除”设备运行状况证明服务 URL。
 
