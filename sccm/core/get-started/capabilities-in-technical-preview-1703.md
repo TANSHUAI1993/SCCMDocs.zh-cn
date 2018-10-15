@@ -1,7 +1,7 @@
 ---
 title: Technical Preview 1703 中的功能
 titleSuffix: Configuration Manager
-description: 了解 System Center Configuration Manager Technical Preview 1703 版中的可用功能。
+description: 了解功能在技术预览版中提供有关 System Center Configuration Manager，版本 1703年。
 ms.date: 03/24/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -19,9 +19,9 @@ ms.locfileid: "32337150"
 ---
 # <a name="capabilities-in-technical-preview-1703-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1703 中的功能
 
-*适用范围：System Center Configuration Manager (Technical Preview)*
+*适用于： System Center Configuration Manager （技术预览版）*
 
-本文介绍了 System Center Configuration Manager Technical Preview（版本 1703）中的可用功能。 你可以安装此版本，以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。 在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。    
+本文介绍在技术预览版的 System Center Configuration Manager，版本 1703年中可用的功能。 你可以安装此版本，以更新 Technical Preview 站点的功能并向其添加新功能。 在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager 技术预览版](../../core/get-started/technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。    
 
 
 **以下是此版本可以试用的新功能。**  
