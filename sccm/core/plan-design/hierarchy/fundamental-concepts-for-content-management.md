@@ -10,12 +10,12 @@ ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a8f4d93c7bfa73b04ed2c760db17b27e8f1f6de2
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 5c3af900bae26262ba402ea258b8859ba07b999b
+ms.sourcegitcommit: 4f05517f7b284696a492a1b184cc5f25c5cda5e6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385247"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48891208"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Configuration Manager 中内容管理的基本概念
 
@@ -146,11 +146,9 @@ Configuration Manager 支持可靠的工具和选项系统来管理软件内容�
 1.  与客户端位于同一台计算机上的分发点
 2.  同一网络子网中的对等源
 3.  同一网络子网中的分发点
-4.  同一 Active Directory 站点中的对等源
-5.  同一 Active Directory 站点中的分发点
-6.  同一边界组中的对等源
-7.  当前边界组中的分发点
-8.  为回退配置的临近边界组中的分发点
+4.  同一边界组中的对等源
+5.  当前边界组中的分发点
+6.  为回退配置的临近边界组中的分发点
 9.  默认站点边界组中的分发点 
 10. Windows 更新云服务
 11. 面向 Internet 的分发点

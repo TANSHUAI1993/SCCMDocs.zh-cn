@@ -10,12 +10,12 @@ ms.assetid: ddef4d2a-f481-4020-9ddd-9cca5f9795cb
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 96fe34d713a1d9d3afb78dc59124865024e9eb77
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 47c6a046dac7cd4b5d0d16f0342d7e95ba3cc2a0
+ms.sourcegitcommit: 4f05517f7b284696a492a1b184cc5f25c5cda5e6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32347036"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48891140"
 ---
 # <a name="enable-endpoint-protection-malware-definitions-to-download-from-a-network-share-for-configuration-manager"></a>启用 Endpoint Protection 恶意软件定义，以便从网络共享为 Configuration Manager 下载定义
 
@@ -26,7 +26,7 @@ ms.locfileid: "32347036"
 > [!NOTE]
 >  客户端必须具有对共享文件夹的读取访问权限，才能够下载定义更新。
 
- 有关如何下载要存储在文件共享上的定义和引擎更新的详细信息，请参阅[安装最新的 Microsoft 反恶意软件和反间谍软件](http://www.microsoft.com/security/portal/Definitions/HowToForeFront.aspx)。
+ 有关如何下载要存储在文件共享上的定义和引擎更新的详细信息，请参阅[安装最新的 Microsoft 反恶意软件和反间谍软件](https://www.microsoft.com/wdsi/definitions)。
 
 ## <a name="to-configure-definition-downloads-from-a-file-share"></a>若要从文件共享配置定义下载
 
