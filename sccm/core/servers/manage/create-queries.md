@@ -10,12 +10,12 @@ ms.assetid: 868049d3-3209-47ec-b34a-9cc26941893a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6ba7adf52ce084d640bf53aef32678576d5828f5
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 12dd7a4d806a82e3c55898e249d1caa2a6ffb508
+ms.sourcegitcommit: 19fc4f27667d51502fc9d7d02d164f2837d65dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32340194"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461284"
 ---
 # <a name="how-to-create-queries-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中创建查询
 
@@ -113,7 +113,7 @@ SMS_R_System.OperatingSystemNameandVersion like "%Workstation 6.1%"
 
 ### <a name="computers-with-a-specific-software-package-installed"></a>安装特定软件包的计算机  
 
-使用以下查询来返回安装了特定软件包的所有计算机的 NetBIOS 名称和软件包名称。 本示例显示了已安装某个版本的 Microsoft Visio 的所有计算机。 用想要查询的软件包代替 `%Visio%`。  
+使用以下查询来返回安装了特定软件包的所有计算机的 NetBIOS 名称和软件包名称。 本示例显示了已安装某个版本的 Microsoft Visio 的所有计算机。 用想要查询的软件包代替 `Microsoft%Visio%`。  
 
 > [!TIP]  
 > 此查询通过使用 Windows 控制面板中程序列表中显示的名称来搜索软件包。  
@@ -124,7 +124,7 @@ SMS_G_System_ADD_REMOVE_PROGRAMS.DisplayName from
 SMS_R_System inner join SMS_G_System_ADD_REMOVE_PROGRAMS on   
 SMS_G_System_ADD_REMOVE_PROGRAMS.ResourceId =   
 SMS_R_System.ResourceId where   
-SMS_G_System_ADD_REMOVE_PROGRAMS.DisplayName like "%Visio%"  
+SMS_G_System_ADD_REMOVE_PROGRAMS.DisplayName like "Microsoft%Visio%"  
 ```  
 
 ### <a name="computers-that-are-in-a-specific-active-directory-domain-services-organizational-unit"></a>特定 Active Directory 域服务组织单位中的计算机
