@@ -10,12 +10,12 @@ ms.assetid: 6e4964c5-43cb-4372-9a89-b62ae6a4775c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1faabd64d11eeef8e825f22f7f661112813f5459
-ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
+ms.openlocfilehash: e0051b00f9c9540291db94c79a81c600c87ad59c
+ms.sourcegitcommit: 4f05517f7b284696a492a1b184cc5f25c5cda5e6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "34474303"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48891191"
 ---
 # <a name="use-the-service-connection-tool-for-system-center-configuration-manager"></a>使用适用于 System Center Configuration Manager 的服务连接工具
 
@@ -95,7 +95,7 @@ ms.locfileid: "34474303"
 
 #### <a name="to-specify-a-proxy-server"></a>指定代理服务器
 可以使用以下可选参数来指定代理服务器（有关使用这些参数的详细信息可在本主题的命令行参数部分中找到）：
-  - **-proxyserveruri [FQDN_of_proxy_sever]**  使用此参数指定要用于此连接的代理服务器。
+  - **-proxyserveruri [FQDN_of_proxy_server]** 使用此参数指定要用于此连接的代理服务器。
   -  **-proxyusername [username]**  当必须为代理服务器指定用户时，请使用此参数。
 
 #### <a name="specify-the-type-of-updates-to-download"></a>指定要下载的更新的类型

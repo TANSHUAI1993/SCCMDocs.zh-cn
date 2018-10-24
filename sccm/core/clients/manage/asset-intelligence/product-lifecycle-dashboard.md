@@ -10,12 +10,12 @@ ms.assetid: 8b5b144a-0e5f-4fcc-87b2-33b9bcdb5655
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f99aeba109ed4de3ef1b88b721b59eebb4653cb6
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: dd1a3a56bac6d7917c70db731b1735a195fae3df
+ms.sourcegitcommit: dfb2cb01c1608b848f2f2fee7c84500e7adcb7a4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39384625"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49101239"
 ---
 # <a name="manage-microsoft-lifecycle-policy-with-configuration-manager"></a>使用 Configuration Manager 管理 Microsoft 生命周期策略
 
@@ -63,7 +63,7 @@ ms.locfileid: "39384625"
 
 - **已过期的前五大产品**：此磁贴是一个整合的数据视图，显示在环境中找到的已过期的产品。 此图显示与操作系统及 SQL Server 产品的支持生命周期相比较已过期的已安装软件。  
 
-- **即将过期的前五大产品**：此磁贴是一个整合的数据视图，显示在环境中找到的即将在六个月内过期的产品。 此图显示与操作系统及 SQL Server 产品的支持生命周期相比较，将在六个月内过期的已安装软件。  
+- **即将过期的前五大产品**：此磁贴是一个整合的数据视图，显示在环境中找到的即将在十八个月内过期的产品。 此图显示与操作系统及 SQL Server 产品的支持生命周期相比较，将在十八个月内过期的已安装软件。  
 
 - **已安装产品的生命周期数据**：通过此磁贴可大致了解产品从支持到过期状态的转换过程。 该图表详细介绍了在其中安装产品的客户端数量、支持可用性状态，并提供了一个链接，用于详细了解要执行的后续步骤。 图表中包含以下信息：     
     - 剩余支持时间

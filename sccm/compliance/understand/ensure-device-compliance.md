@@ -10,12 +10,12 @@ ms.assetid: 7568c9aa-b99e-4466-bfc8-0301aa376930
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 42b3925fa94ae1672e4241a3cddc66cdc1774aaf
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 081e485211e3bb5b2b0d8e6a9606c4037c29d4e3
+ms.sourcegitcommit: 2deba3d3aaba47a532273bcd377da8e60f7b1a68
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32333053"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169594"
 ---
 # <a name="ensure-device-compliance-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 确保设备的合规性
 
