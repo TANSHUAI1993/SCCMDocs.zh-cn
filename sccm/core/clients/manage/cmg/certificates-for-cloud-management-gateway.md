@@ -107,7 +107,7 @@ CMG 创建基于 Internet 的客户端要连接到的 HTTPS 服务。 此服务�
 
 ## <a name="azure-management-certificate"></a>Azure 管理证书
 
-经典服务部署需要此证书。Azure 资源管理器部署不需要此证书。*
+经典服务部署需要此证书。 Azure 资源管理器部署不需要此证书。
 
 在 Azure 门户中的 Configuration Manager 控制台中创建 CMG 时需要提供此证书。
 
