@@ -10,12 +10,12 @@ ms.assetid: 5e5d854c-9cc1-4dd8-b33f-0fcac675b395
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3750e91d96c1ca3eda1ad0ca2fc67b5f627c7a03
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 2ccc918bf5f15798c201ed491dd3824bb20b2ebb
+ms.sourcegitcommit: 3dfe3f4401651afa9dc65d14a8944ae4e4198b3e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353546"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48862560"
 ---
 # <a name="device-guard-management-with-configuration-manager"></a>使用 Configuration Manager 进行的 Device Guard 管理
 
@@ -148,7 +148,7 @@ You can let locked-down devices run software with a good reputation as determine
 - 请勿使用“已启用强制”部署策略，然后再使用“仅审核”向同一设备部署策略。 此配置可能会允许不受信任的软件运行。
 - 使用 Configuration Manager 在客户端电脑上启用 Windows Defender 应用程序控制时，该策略不会阻止具有本地管理员权限的用户绕过应用程序控制策略或执行不受信任的软件。 
 - 阻止具有本地管理员权限的用户禁用应用程序控制的唯一方法是部署已签名二进制策略。 此部署可以通过组策略完成，但是 Configuration Manager 中目前不支持此操作。
-- 将 Configuration Manager 设置为客户端电脑上的托管安装程序使用 AppLocker 策略。 AppLocker 仅用于标识托管安装程序，整个强制过程通过应用程序进行。 
+- 将 Configuration Manager 设置为客户端电脑上的托管安装程序使用 AppLocker 策略。 AppLocker 仅用于标识托管安装程序，所有的强制过程均通过 Windows Defender 应用程序控制进行。 
 
 
 

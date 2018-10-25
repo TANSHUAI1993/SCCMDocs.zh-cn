@@ -2,7 +2,7 @@
 title: OSD 基础结构要求
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 中的 OS 部署的外部依赖关系和产品依赖关系及要求
-ms.date: 07/30/2018
+ms.date: 10/02/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 1dc74219-7ff5-4e3b-b4f6-5aad663bb75b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4e54c6c7d8f827a17c69f4e166aeb4dccca4272f
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 03ec9c046e1b32f137777f15393b5d26b49e5520
+ms.sourcegitcommit: 265d38d55ca0db043e3a7131a56f123e1d98aa5b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39382912"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48236151"
 ---
 # <a name="infrastructure-requirements-for-os-deployment-in-configuration-manager"></a>Configuration Manager 中的 OS 部署的基础结构要求
 
@@ -33,21 +33,6 @@ Configuration Manager 中的 OS 部署包含外部依赖关系和产品内的依
 
 Windows 评估和部署工具包 (ADK) 是一组工具和文档，为 Windows 的配置和部署提供支持。 Configuration Manager 使用 Windows ADK 自动执行诸如安装 Windows、捕获映像以及迁移用户配置文件和数据之类的操作。  
 
-必须在层次结构中顶层站点的站点服务器上、层次结构中每个主站点的站点服务器上以及 SMS 提供程序站点系统服务器上安装 Windows ADK 的以下功能：  
-
--   用户状态迁移工具 (USMT) <sup>1</sup>  
-
--   Windows 部署工具  
-
--   Windows 预安装环境 (Windows PE)  
-
-有关可用于不同 Configuration Manager 版本的 Windows 10 ADK 版本的列表，请参阅[对 Windows 10 的支持](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk)。
-
- <sup>1</sup> SMS 提供程序站点系统服务器上不需要 USMT。  
-
-> [!NOTE]  
->  在安装 Configuration Manager 站点之前，必须在每台站点服务器上手动安装 Windows ADK。  
-
 有关详细信息，请参阅下列文章：  
 
 - [面向 IT 专业人员的适用于 Windows 10 方案的 Windows ADK](https://docs.microsoft.com/windows/deployment/windows-adk-scenarios-for-it-pros)  
@@ -55,6 +40,37 @@ Windows 评估和部署工具包 (ADK) 是一组工具和文档，为 Windows �
 - [下载适用于 Windows 10 的 Windows ADK](https://docs.microsoft.com/windows-hardware/get-started/adk-install)  
 
 - [支持 Windows 10](/sccm/core/plan-design/configs/support-for-windows-10)  
+
+
+#### <a name="site-systems"></a>站点系统
+Windows ADK 是以下站点系统服务器的先决条件：
+
+- 层次结构中顶层站点的站点服务器  
+
+- 层次结构中每个主站点的站点服务器  
+
+- SMS 提供程序的每个实例  
+
+
+> [!NOTE]  
+> 在安装 Configuration Manager 站点之前，请在每个站点服务器上手动安装 Windows ADK。  
+
+#### <a name="windows-adk-features"></a>Windows ADK 功能
+安装 Windows ADK 的以下功能：  
+
+-   用户状态迁移工具 (USMT)  
+
+    > [!Note]  
+    > SMS 提供程序上不需要 USMT。
+
+-   Windows 部署工具  
+
+-   Windows 预安装环境 (Windows PE)  
+
+    > [!Important]  
+    > 从 Windows 10 版本 1809 开始，Windows PE 是单独的安装程序。 但是功能上没有任何区别。<!--SCCMDocs-pr issue 2908-->  
+
+有关可用于不同 Configuration Manager 版本的 Windows 10 ADK 版本的列表，请参阅[对 Windows 10 的支持](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk)。
 
 
 ### <a name="user-state-migration-tool-usmt"></a>用户状态迁移工具 (USMT)  
@@ -113,7 +129,7 @@ DHCP 是 PXE 部署所必需的。 你必须有正常运行的 DHCP 服务器（
 
 ### <a name="windows-device-drivers"></a>Windows 设备驱动程序  
 
-在目标计算机上安装 OS 时，可以使用 Windows 设备驱动程序。 在启动映像中运行 Windows PE 时也可使用它们。 有关详细信息，请参阅[管理驱动程序](/sccm/osd/get-started/manage-drivers)。  
+在目标计算机上安装 OS 时，可以使用 Windows 设备驱动程序。 在启动映像中运行 Windows PE 时也可使用。 有关详细信息，请参阅[管理驱动程序](/sccm/osd/get-started/manage-drivers)。  
 
 
 

@@ -10,12 +10,12 @@ ms.assetid: 463ce307-59dd-4abd-87b8-42ca9db178d7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8d783211396f3cdc9f14798ed7dc97e921e45554
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 793ba0f05c7a188a6bda9649c9d25922ce27d42c
+ms.sourcegitcommit: 3dfe3f4401651afa9dc65d14a8944ae4e4198b3e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385908"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48862458"
 ---
 # <a name="using-the-system-center-configuration-manager-console"></a>使用 System Center Configuration Manager 控制台
 
@@ -82,6 +82,17 @@ Configuration Manager 控制台中有四个工作区：
 在列的底部右键单击菜单，可对列进行排序或分组。 另外，也可单击列标题，对其进行排序。 
 
 ![Configuration Manager 按列分组](media/column-group-by.png)
+
+##<a name="console-command-line-options"></a>控制台命令行选项
+Microsoft System Center Configuration Manager 控制台具有下列命令行选项。
+
+|选项|说明|  
+|------------|-----------------|  
+|**/sms:debugview=1**|DebugView 包含在用于指定视图的所有 ResultView 中。 DebugView 显示原始属性（名称和值）。|  
+|**/sms:NamespaceView=1**|在 System Center Configuration Manager 控制台中显示命名空间视图。|  
+|**/sms:ResetSettings**|System Center Configuration Manager 控制台将忽略用户保留的连接和视图状态（不会重置 Microsoft 管理控制台窗口大小）。|  
+|**/sms:IgnoreExtensions**|禁用任何 System Center Configuration Manager 扩展。|  
+|**/sms:NoRestore**|System Center Configuration Manager 控制台将忽略上一个保留的节点导航。|  
 
 ## <a name="console-improvements-in-version-1806"></a>1806 版中的控制台改进
 在 Configuration Manager 1806 版中，添加了以下控制台改进：

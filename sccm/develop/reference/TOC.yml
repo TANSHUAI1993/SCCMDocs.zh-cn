@@ -605,7 +605,7 @@ items:
   href: core/clients/deploy/client-deployment-server-wmi-classes.md
   items:
   - name: SMS_ClientBaseline 服务器 WMI 类
-    href: core/clients/deploy/sms_clientbaseline-sever-wmi-class.md
+    href: core/clients/deploy/sms_clientbaseline-server-wmi-class.md
   - name: SMS_ClientBaselineItem 服务器 WMI 类
     href: core/clients/deploy/sms_clientbaselineitem-server-wmi-class.md
   - name: SMS_ClientBaselineStatus 服务器 WMI 类
@@ -2747,9 +2747,9 @@ items:
     href: misc/sms_windowsservicingstates-server-wmi-class.md
 - name: Configuration Manager 托管参考
   href: https://msdn.microsoft.com/library/mt767606.aspx
-ms.openlocfilehash: 4d2957dba2b07c768b41bd6110cf1fc3fcb72998
-ms.sourcegitcommit: 8661f10596f565ca2b7bdb5951388b44b3b622ee
+ms.openlocfilehash: ba172c1d11b9c3089e8cbeec1493cbeb0ebe4217
+ms.sourcegitcommit: 4f05517f7b284696a492a1b184cc5f25c5cda5e6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "48817556"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48891242"

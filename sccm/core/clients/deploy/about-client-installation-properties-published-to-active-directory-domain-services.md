@@ -10,12 +10,12 @@ ms.assetid: 101d7d4d-92db-419d-b2ae-3c1c1dea68e9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 585aa6ea6874ac6d6a5264b0f75d8dbcf39ddd0a
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 46ede93e8366b4ae387f7e04b83dcb33ce854c5e
+ms.sourcegitcommit: 3dfe3f4401651afa9dc65d14a8944ae4e4198b3e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334277"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48862509"
 ---
 # <a name="about-client-installation-properties-published-to-active-directory-domain-services"></a>关于发布到 Active Directory 域服务的客户端安装属性
 
@@ -73,12 +73,13 @@ ms.locfileid: "32334277"
 ## <a name="client-push-installation"></a>客户端请求安装  
  客户端请求安装不使用 Active Directory 域服务来获取安装属性。  
 
- 实际上，可以在“客户端请求安装属性”对话框的“客户端”选项卡中指定客户端安装属性。 这些选项和有关客户端的站点设置存储在一个文件中，客户端在客户端安装过程中将读取此文件。  
+ 而是，你可以在“客户端请求安装属性”对话框的“安装属性”选项卡中指定客户端安装属性。 这些选项和有关客户端的站点设置存储在一个文件中，客户端在客户端安装过程中将读取此文件。  
 
 > [!NOTE]  
->  你无需在“客户端”  选项卡中为客户端请求安装指定任何 CCMSetup 属性，或者指定回退状态点或受信任的根密钥。在使用客户端请求安装来安装客户端时，会自动向客户端提供这些设置。  
+>  你无需在“安装属性”选项卡中为客户端请求安装指定任何 CCMSetup 属性、回退状态点或受信任的根密钥。在使用客户端请求安装来安装客户端时，会自动向客户端提供这些设置。
+除了 Client.msi 属性之外，CCMSetup 还支持以下参数：/forcereboot、/skipprereq、/logon、/BITSPriority、/downloadtimeout 和 /forceinstall
 
- 如果将站点发布到 Active Directory 域服务，则在“客户端”选项卡中指定的任何属性都会发布到 Active Directory 域服务。 通过运行不带安装属性的 CCMSetup 来进行的客户端安装将读取这些设置。  
+ 如果将站点发布到 Active Directory 域服务，则在“安装属性”选项卡中指定的任何属性都会发布到 Active Directory 域服务。 通过运行不带安装属性的 CCMSetup 来进行的客户端安装将读取这些设置。  
 
 ## <a name="software-update-point-based-installation"></a>基于软件更新点的安装  
  基于软件更新点的安装方法不支持将安装属性添加到 CCMSetup 命令行中。  

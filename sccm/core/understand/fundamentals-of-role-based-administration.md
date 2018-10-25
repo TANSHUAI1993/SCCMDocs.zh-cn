@@ -10,12 +10,12 @@ ms.assetid: 0a2d6c3f-a4e4-4c19-b087-3caada480de9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6fa1ca03db8df7e2d02edfad3af99ca1749224ac
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 3b7916b386cb22f2d1869eface009bd10ff17d18
+ms.sourcegitcommit: 3dfe3f4401651afa9dc65d14a8944ae4e4198b3e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344715"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48862543"
 ---
 # <a name="fundamentals-of-role-based-administration-for-system-center-configuration-manager"></a>System Center Configuration Manager 的基于角色的管理基础
 
@@ -85,7 +85,7 @@ ms.locfileid: "32344715"
 
 2.  将这些管理任务对应到一个或多个内置的安全角色。  
 
-3.  如果某些管理用户执行多个安全角色的任务，则将多个安全角色分配给这些管理用户，而不是创建一个组合此类任务的新的安全角色。  
+3.  如果某些管理用户执行多个安全角色的任务，则将多个安全角色分配给这些管理用户，而不是创建一个组合此类任务的新安全角色。  
 
 4.  如果你确定的任务未能对应到内置的安全角色，则创建并测试新的安全角色。  
 

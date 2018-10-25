@@ -10,20 +10,20 @@ ms.assetid: 0212b023-804a-4f84-b880-7a59cdb49c67
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fc5af771d6ab15f4e26c22c5272abf2bb46de047
-ms.sourcegitcommit: 78d2dce465e3500653b252583a6903a006784c26
+ms.openlocfilehash: 49de1e2f94d1016f3c0139ccf534b85a718bf7e0
+ms.sourcegitcommit: 3dfe3f4401651afa9dc65d14a8944ae4e4198b3e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448882"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48862492"
 ---
 # <a name="use-a-task-sequence-to-manage-virtual-hard-disks-in-system-center-configuration-manager"></a>使用任务序列来管理 System Center Configuration Manager 中的虚拟硬盘
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
 
-    > [!NOTE] 
-    >  Support for this feature was deprecated in version 1710. For more information, see [Removed and deprecated features for Configuration Manager](https://docs.microsoft.com/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures).
+   > [!NOTE] 
+   >  1710 版中已弃用对此功能的支持。 有关详细信息，请参阅 [Configuration Manager 中已删除和已弃用的功能](https://docs.microsoft.com/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)。
 
 在 System Center Configuration Manager 中，可以通过 Configuration Manager 控制台管理虚拟硬盘 (VHD) 并将所创建的 VHD 集成到数据中心中。 具体而言，可以通过 Configuration Manager 控制台创建和修改 VHD、向 VHD 中添加应用程序和软件更新，以及将 VHD 发布到 System Center Virtual Machine Manager (VMM)。  
 

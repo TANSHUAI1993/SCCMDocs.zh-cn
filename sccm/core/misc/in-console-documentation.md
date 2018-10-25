@@ -9,12 +9,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 robots: noindex,nofollow
-ms.openlocfilehash: 12b10fe6c532a690dcb8fd1d3a69d742687db06c
-ms.sourcegitcommit: 5def8b0ca72daad99fe8901af232bf17f35da55d
+ms.openlocfilehash: d3c3b1c418650297f9fe02b839ccbc98a4204925
+ms.sourcegitcommit: 4f05517f7b284696a492a1b184cc5f25c5cda5e6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48793801"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48891157"
 ---
 <!-- 
 feature 1357546
@@ -34,16 +34,16 @@ This page displays in-console, under the Community workspace, Documentation node
 ## <a name="recommended"></a>建议 
 重要文章的手动特选列表。
 
-- [适用于 Windows 10 设备的共同管理](/sccm/core/clients/manage/co-management-overview)  
-- [CMPivot](/sccm/core/servers/manage/cmpivot)  
-- [创建并运行 PowerShell 脚本](/sccm/apps/deploy-use/create-deploy-scripts)  
-- [分阶段部署](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)  
-- [管理 Office 365 ProPlus 更新](/sccm/sum/deploy-use/manage-office-365-proplus-updates)  
-- [Configuration Manager Current Branch 和服务型 Windows 的基础知识](/sccm/core/understand/configuration-manager-and-windows-as-service)
-- [技术预览版](/sccm/core/get-started/technical-preview)
-- [使用云服务来补充本地基础结构](/sccm/core/understand/use-cloud-services)
-- [规划云管理网关](/sccm/core/clients/manage/plan-cloud-management-gateway)
-- [在层次结构之间迁移数据](/sccm/core/migration/migrate-data-between-hierarchies)
+- [适用于 Windows 10 设备的共同管理](https://docs.microsoft.com/sccm/core/clients/manage/co-management-overview)  
+- [CMPivot](https://docs.microsoft.com/sccm/core/servers/manage/cmpivot)  
+- [创建并运行 PowerShell 脚本](https://docs.microsoft.com/sccm/apps/deploy-use/create-deploy-scripts)  
+- [分阶段部署](https://docs.microsoft.com/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)  
+- [管理 Office 365 ProPlus 更新](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates)  
+- [Configuration Manager Current Branch 和服务型 Windows 的基础知识](https://docs.microsoft.com/sccm/core/understand/configuration-manager-and-windows-as-service)
+- [技术预览版](https://docs.microsoft.com/sccm/core/get-started/technical-preview)
+- [使用云服务来补充本地基础结构](https://docs.microsoft.com/sccm/core/understand/use-cloud-services)
+- [规划云管理网关](https://docs.microsoft.com/sccm/core/clients/manage/plan-cloud-management-gateway)
+- [在层次结构之间迁移数据](https://docs.microsoft.com/sccm/core/migration/migrate-data-between-hierarchies)
 
 
 
@@ -52,16 +52,16 @@ This page displays in-console, under the Community workspace, Documentation node
 
 | 页面视图 | 标题 | 
 | ----- | ----- | 
-| 27627 | [1806 版中的新增功能](/sccm/core/plan-design/changes/whats-new-in-version-1806) |
-| 19364 | [故障排除的日志文件](/sccm/core/plan-design/hierarchy/log-files) |
-| 11113 | [新 1802 版](/sccm/core/plan-design/changes/whats-new-in-version-1802) |
-| 9419 | [支持 Windows 10](/sccm/core/plan-design/configs/support-for-windows-10) |
-| 8688 | [更新和维护服务](/sccm/core/servers/manage/updates) |
-| 8423 | [安装控制台](/sccm/core/servers/deploy/install/install-consoles) |
-| 8408 | [将客户端部署到 Windows](/sccm/core/clients/deploy/deploy-clients-to-windows-computers) |
-| 8271 | [客户端安装参数和属性](/sccm/core/clients/deploy/about-client-installation-properties) |
-| 7751 | [管理 Office 365 ProPlus 更新](/sccm/sum/deploy-use/manage-office-365-proplus-updates) |
-| 7705 | [管理分发点](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points) |
+| 27627 | [1806 版中的新增功能](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1806) |
+| 19364 | [故障排除的日志文件](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/log-files) |
+| 11113 | [新 1802 版](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1802) |
+| 9419 | [支持 Windows 10](https://docs.microsoft.com/sccm/core/plan-design/configs/support-for-windows-10) |
+| 8688 | [更新和维护服务](https://docs.microsoft.com/sccm/core/servers/manage/updates) |
+| 8423 | [安装控制台](https://docs.microsoft.com/sccm/core/servers/deploy/install/install-consoles) |
+| 8408 | [将客户端部署到 Windows](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-to-windows-computers) |
+| 8271 | [客户端安装参数和属性](https://docs.microsoft.com/sccm/core/clients/deploy/about-client-installation-properties) |
+| 7751 | [管理 Office 365 ProPlus 更新](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates) |
+| 7705 | [管理分发点](https://docs.microsoft.com/sccm/core/servers/deploy/configure/install-and-configure-distribution-points) |
 
 
 
@@ -70,16 +70,16 @@ This page displays in-console, under the Community workspace, Documentation node
 
 | 上次审阅时间 | 标题 | 
 |-----|-----|
-| 2018 年 9 月 4 日 | [技术预览版](/sccm/core/get-started/technical-preview) |
-| 2018 年 9 月 4 日 | [技术预览版 1809](/sccm/core/get-started/capabilities-in-technical-preview-1809) |
-| 2018 年 8 月 30 日 | [配置发现](/sccm/core/servers/deploy/configure/configure-discovery-methods) |
-| 2018 年 8 月 29 日 | [客户端对等缓存](/sccm/core/plan-design/hierarchy/client-peer-cache) |
-| 2018 年 8 月 29 日 | [配置边界组](/sccm/core/servers/deploy/configure/boundary-groups) |
-| 2018 年 8 月 29 日 | [混合 MDM 中的新增功能](/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management) |
-| 2018 年 8 月 29 日 | [1806 版中的新增功能](/sccm/core/plan-design/changes/whats-new-in-version-1806) |
-| 2018 年 8 月 24 日 | [备份站点](/sccm/core/servers/manage/backup-and-recovery) |
-| 2018 年 8 月 24 日 | [包转换管理器](/sccm/apps/pcm/package-conversion-manager) |
-| 2018 年 8 月 23 日 | [先决条件检查](/sccm/core/servers/deploy/install/list-of-prerequisite-checks) |
+| 2018 年 9 月 4 日 | [技术预览版](https://docs.microsoft.com/sccm/core/get-started/technical-preview) |
+| 2018 年 9 月 4 日 | [技术预览版 1809](https://docs.microsoft.com/sccm/core/get-started/capabilities-in-technical-preview-1809) |
+| 2018 年 8 月 30 日 | [配置发现](https://docs.microsoft.com/sccm/core/servers/deploy/configure/configure-discovery-methods) |
+| 2018 年 8 月 29 日 | [客户端对等缓存](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/client-peer-cache) |
+| 2018 年 8 月 29 日 | [配置边界组](https://docs.microsoft.com/sccm/core/servers/deploy/configure/boundary-groups) |
+| 2018 年 8 月 29 日 | [混合 MDM 中的新增功能](https://docs.microsoft.com/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management) |
+| 2018 年 8 月 29 日 | [1806 版中的新增功能](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1806) |
+| 2018 年 8 月 24 日 | [备份站点](https://docs.microsoft.com/sccm/core/servers/manage/backup-and-recovery) |
+| 2018 年 8 月 24 日 | [包转换管理器](https://docs.microsoft.com/sccm/apps/pcm/package-conversion-manager) |
+| 2018 年 8 月 23 日 | [先决条件检查](https://docs.microsoft.com/sccm/core/servers/deploy/install/list-of-prerequisite-checks) |
 
 
 

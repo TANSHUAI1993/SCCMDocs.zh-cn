@@ -10,12 +10,12 @@ ms.assetid: 25e4ac68-0e78-4bbe-b8fc-3898b372c4e8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a1ef2883bfeb61df55ff045b76e9bc45a11b4da2
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 34536114e6cb1be8f256da385b3d69d07c17f676
+ms.sourcegitcommit: 3dfe3f4401651afa9dc65d14a8944ae4e4198b3e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32352163"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48862475"
 ---
 # <a name="create-a-task-sequence-to-capture-an-operating-system-in-system-center-configuration-manager"></a>创建任务序列来捕获 System Center Configuration Manager 中的操作系统
 
@@ -217,7 +217,7 @@ ms.locfileid: "32352163"
 |应用操作系统|使用此任务序列步骤在目标计算机上安装指定的操作系统映像。 此步骤首先删除目标计算机上相应的顺序磁盘卷上的所有文件（特定于 Configuration Manager 的控制文件除外），然后将 WIM 文件中包含的所有卷映像应用到该顺序磁盘卷。|  
 |应用 Windows 设置|使用此任务序列步骤配置目标计算机的 Windows 设置配置信息。|  
 |应用网络设置|使用此任务序列步骤指定目标计算机的网络或工作组配置信息。|  
-|应用设备驱动程序|使用此任务序列步骤匹配驱动程序，并将其作为操作系统部署的一部分进行安装。 你可以通过选择“考虑所有类别的驱动程序”  允许 Windows 安装程序搜索所有现有的驱动程序类别；或者选择“将驱动程序匹配限制为仅考虑所选类别的驱动程序” 以限制 Windows 安装程序搜索的驱动程序类别。<br /><br /> 此步骤使用只读 **_SMSTSMediaType** 任务序列变量。 如果关联值不等于 **FullMedia** ，则将运行此任务序列步骤。|  
+|应用设备驱动程序|在操作系统部署过程中，使用此任务序列步骤匹配和安装驱动程序。 你可以通过选择“考虑所有类别的驱动程序”  允许 Windows 安装程序搜索所有现有的驱动程序类别；或者选择“将驱动程序匹配限制为仅考虑所选类别的驱动程序” 以限制 Windows 安装程序搜索的驱动程序类别。<br /><br /> 此步骤使用只读 **_SMSTSMediaType** 任务序列变量。 如果关联值不等于 **FullMedia** ，则将运行此任务序列步骤。|  
 |安装 Windows 和 ConfigMgr|使用此任务序列步骤安装 Configuration Manager 客户端软件。 Configuration Manager 安装和注册 Configuration Manager 客户端 GUID。 你可以在“安装属性”  窗口中分配必要的安装参数。|  
 |安装更新|使用此任务序列步骤指定如何在目标计算机上安装软件更新。 在运行此任务序列步骤时，才会评估目标计算机是否有适用的软件更新。 此时，会与其他 Configuration Manager 托管客户端一样，评估目标计算机是否有合适的软件更新。<br /><br /> 此步骤使用只读 **_SMSTSMediaType** 任务序列变量。 如果关联值不等于 **FullMedia** ，则将运行此任务序列步骤。|  
 |捕获引用计算机 - **（新建任务序列组）**|创建其他任务序列组。 此组包含准备和捕获引用计算机的必需步骤。|  

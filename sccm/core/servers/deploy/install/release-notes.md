@@ -10,12 +10,12 @@ ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 939ab4b97a1a62eeae834873dd39e2f0d435527d
-ms.sourcegitcommit: 4e4b71227309bee7e9f1285971f8235c67a9c502
+ms.openlocfilehash: b31e0c84d0e3920024870361239e22bb90005ccb
+ms.sourcegitcommit: e7732dd67f19218cec576f70fe4ab44e2626b8e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "42590091"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48045209"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Configuration Manager 发行说明
 
@@ -82,9 +82,10 @@ ms.locfileid: "42590091"
 ## <a name="client-deployment-and-upgrade"></a>客户端部署和升级
 
 ### <a name="azure-ad-enabled-clients-cant-communicate-with-management-point"></a>启用 Azure AD 的客户端无法与管理点通信
-<!--501089-->
+<!--501089-->  
 适用于：Configuration Manager 版本 1706
-<!--also fixed in 1710 HFRU-->在[安装和分配 Configuration Manager Windows 10 客户端（使用 Azure AD 进行身份验证）](/sccm/core/clients/deploy/deploy-clients-cmg-azure)的方案中，当启用 HTTPS 的管理点使用备用数据库凭据时，客户端通信将失败**。 
+<!--also fixed in 1710 HFRU-->  
+在[安装和分配 Configuration Manager Windows 10 客户端（使用 Azure AD 进行身份验证）](/sccm/core/clients/deploy/deploy-clients-cmg-azure)的方案中，当启用 HTTPS 的管理点使用备用数据库凭据时，客户端通信将失败。 
 
 #### <a name="workaround"></a>解决方法
 执行以下操作之一来缓解此问题：

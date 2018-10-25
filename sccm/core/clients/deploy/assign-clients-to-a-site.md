@@ -10,12 +10,12 @@ ms.assetid: ba9b623f-6e86-4006-93f2-83d563de0cd0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 15467e83be28e884acb14309bdbb57768d7f19f0
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 2eb75af410ae1511ae105aa7a3a56659c8ef0442
+ms.sourcegitcommit: 3dfe3f4401651afa9dc65d14a8944ae4e4198b3e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344460"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48862407"
 ---
 # <a name="how-to-assign-clients-to-a-site-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中将客户端分配到一个站点
 
