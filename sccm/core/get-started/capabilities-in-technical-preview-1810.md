@@ -2,7 +2,7 @@
 title: 技术预览版 1810
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 技术预览分支版本 1810 中提供的新功能。
-ms.date: 10/03/2018
+ms.date: 10/05/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,16 +10,16 @@ ms.assetid: 8109d0fe-a8d8-4cf2-92a1-94afa5299719
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1e06250a5b88c3db000ee11662f4199f97232104
-ms.sourcegitcommit: 3dfe3f4401651afa9dc65d14a8944ae4e4198b3e
+ms.openlocfilehash: ab2f9ce34367e5042a4c02a3b7e2af3a73dc25dc
+ms.sourcegitcommit: dd785ad7146b8491c98ccd7804d0959a5c1fb034
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48862339"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49382974"
 ---
 # <a name="capabilities-in-configuration-manager-technical-preview-version-1810"></a>Configuration Manager 技术预览版 1810 中的功能 
 
-*适用范围：System Center Configuration Manager (Technical Preview)*
+*适用于： System Center Configuration Manager （技术预览版）*
 
 本文介绍 Configuration Manager 技术预览版 1810 中提供的功能。 安装此版本，以更新技术预览站点的功能并向其添加新功能。 
 
@@ -51,6 +51,8 @@ ms.locfileid: "48862339"
 [!INCLUDE [Management insights dashboard](includes/1810/1357979.md)]
 [!INCLUDE [In-console documentation dashboard](includes/1810/1357546.md)]
 [!INCLUDE [Improvements to driver maintenance](includes/1810/1358270.md)]
+[!INCLUDE [Task sequence support of Windows Autopilot for existing devices](includes/1810/1358333.md)]
+
 
 
 ## <a name="next-steps"></a>后续步骤
