@@ -1,6 +1,6 @@
 ---
 title: 控制台中文档
-ms.date: 05/03/2018
+ms.date: 09/05/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -9,16 +9,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 robots: noindex,nofollow
-ms.openlocfilehash: 0535e36c2531667e93507a149339fe8d85dc1398
-ms.sourcegitcommit: 7812956f93f95c81b4364230aea363559b79ea9f
+ms.openlocfilehash: 12b10fe6c532a690dcb8fd1d3a69d742687db06c
+ms.sourcegitcommit: 5def8b0ca72daad99fe8901af232bf17f35da55d
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/06/2018
-ms.locfileid: "33673443"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48793801"
 ---
 <!-- 
 feature 1357546
-This page displays in-console, under the Support workspace, Documentation node. 
+This page displays in-console, under the Community workspace, Documentation node. 
 -->
 
 
@@ -34,50 +34,52 @@ This page displays in-console, under the Support workspace, Documentation node.
 ## <a name="recommended"></a>建议 
 重要文章的手动特选列表。
 
-- [适用于 Windows 10 设备的共同管理](/sccm/core/clients/manage/co-management-overview)
+- [适用于 Windows 10 设备的共同管理](/sccm/core/clients/manage/co-management-overview)  
+- [CMPivot](/sccm/core/servers/manage/cmpivot)  
+- [创建并运行 PowerShell 脚本](/sccm/apps/deploy-use/create-deploy-scripts)  
+- [分阶段部署](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)  
+- [管理 Office 365 ProPlus 更新](/sccm/sum/deploy-use/manage-office-365-proplus-updates)  
 - [Configuration Manager Current Branch 和服务型 Windows 的基础知识](/sccm/core/understand/configuration-manager-and-windows-as-service)
 - [技术预览版](/sccm/core/get-started/technical-preview)
 - [使用云服务来补充本地基础结构](/sccm/core/understand/use-cloud-services)
 - [规划云管理网关](/sccm/core/clients/manage/plan-cloud-management-gateway)
-- [在 Windows 10 中与适用于企业的 Windows 更新集成](/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10)
 - [在层次结构之间迁移数据](/sccm/core/migration/migrate-data-between-hierarchies)
-- [升级就绪情况](/sccm/core/clients/manage/upgrade/upgrade-analytics)
 
 
 
 ## <a name="trending"></a>趋势
-2018 年 4 月的热门文章。
+2018 年 8 月的热门文章。
 
 | 页面视图 | 标题 | 
 | ----- | ----- | 
-| 23053 | [新 1802 版](/sccm/core/plan-design/changes/whats-new-in-version-1802) | 
-| 13785 | [故障排除的日志文件](/sccm/core/plan-design/hierarchy/log-files) | 
-| 8432 | [更新与维护服务](/sccm/core/servers/manage/updates) | 
-| 8149 | [新版本 1710](/sccm/core/plan-design/changes/whats-new-in-version-1710) | 
-| 7796 | [支持 Windows 10](/sccm/core/plan-design/configs/support-for-windows-10) | 
-| 7312 | [安装控制台](/sccm/core/servers/deploy/install/install-consoles) | 
-| 6978 | [管理 Office 365 ProPlus 更新](/sccm/sum/deploy-use/manage-office-365-proplus-updates) | 
-| 6160 | [支持的 SQL Server 版本](/sccm/core/plan-design/configs/support-for-sql-server-versions) | 
-| 6136 | [推荐硬件](/sccm/core/plan-design/configs/recommended-hardware) | 
-| 6110 | [适用于 Windows 10 设备的共同管理](/sccm/core/clients/manage/co-management-overview) | 
+| 27627 | [1806 版中的新增功能](/sccm/core/plan-design/changes/whats-new-in-version-1806) |
+| 19364 | [故障排除的日志文件](/sccm/core/plan-design/hierarchy/log-files) |
+| 11113 | [新 1802 版](/sccm/core/plan-design/changes/whats-new-in-version-1802) |
+| 9419 | [支持 Windows 10](/sccm/core/plan-design/configs/support-for-windows-10) |
+| 8688 | [更新和维护服务](/sccm/core/servers/manage/updates) |
+| 8423 | [安装控制台](/sccm/core/servers/deploy/install/install-consoles) |
+| 8408 | [将客户端部署到 Windows](/sccm/core/clients/deploy/deploy-clients-to-windows-computers) |
+| 8271 | [客户端安装参数和属性](/sccm/core/clients/deploy/about-client-installation-properties) |
+| 7751 | [管理 Office 365 ProPlus 更新](/sccm/sum/deploy-use/manage-office-365-proplus-updates) |
+| 7705 | [管理分发点](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points) |
 
 
 
 ## <a name="recently-updated"></a>最近更新
-上月修订的文章。
+包含最新更新和重要更新的文章。
 
 | 上次审阅时间 | 标题 | 
 |-----|-----|
-| 2018 年 5 月 1 日 | [混合 MDM 中的新增功能](/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management) | 
-| 2018 年 5 月 1 日 | [扩展互操作性客户端](/sccm/core/understand/interoperability-client) | 
-| 2018 年 4 月 30 日 | [查找帮助](/sccm/core/understand/find-help) | 
-| 2018 年 4 月 25 日 | [技术预览版](/sccm/core/get-started/technical-preview) | 
-| 2018 年 4 月 25 日 | [Technical Preview 1804](/sccm/core/get-started/capabilities-in-technical-preview-1804) | 
-| 2018 年 4 月 18 日 | [任务序列内置变量](/sccm/osd/understand/task-sequence-built-in-variables) | 
-| 2018 年 4 月 18 日 | [发行说明](/sccm/core/servers/deploy/install/release-notes) | 
-| 2018 年 4 月 17 日 | [支持的客户端和设备](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices) | 
-| 2018 年 4 月 17 日 | [支持的站点系统服务器](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers) | 
-| 2018 年 4 月 12日 | [SDK 新增功能](/sccm/develop/core/changes/what-s-new-in-the-system-center-configuration-manager-sdk) | 
+| 2018 年 9 月 4 日 | [技术预览版](/sccm/core/get-started/technical-preview) |
+| 2018 年 9 月 4 日 | [技术预览版 1809](/sccm/core/get-started/capabilities-in-technical-preview-1809) |
+| 2018 年 8 月 30 日 | [配置发现](/sccm/core/servers/deploy/configure/configure-discovery-methods) |
+| 2018 年 8 月 29 日 | [客户端对等缓存](/sccm/core/plan-design/hierarchy/client-peer-cache) |
+| 2018 年 8 月 29 日 | [配置边界组](/sccm/core/servers/deploy/configure/boundary-groups) |
+| 2018 年 8 月 29 日 | [混合 MDM 中的新增功能](/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management) |
+| 2018 年 8 月 29 日 | [1806 版中的新增功能](/sccm/core/plan-design/changes/whats-new-in-version-1806) |
+| 2018 年 8 月 24 日 | [备份站点](/sccm/core/servers/manage/backup-and-recovery) |
+| 2018 年 8 月 24 日 | [包转换管理器](/sccm/apps/pcm/package-conversion-manager) |
+| 2018 年 8 月 23 日 | [先决条件检查](/sccm/core/servers/deploy/install/list-of-prerequisite-checks) |
 
 
 
@@ -94,12 +96,13 @@ This page displays in-console, under the Support workspace, Documentation node.
 
 
 ## <a name="new-and-updated-support-articles"></a>新的和更新的支持文章
-2018 年 3 月或 4 月新的或更新的支持文章。
+2018 年 9 月新的或更新的支持文章。
 
-- [从 CAS 恢复主站点后，Configuration Manager 客户端不接收策略数据](https://support.microsoft.com/help/4095539)
-- [System Center Configuration Manager Current Branch（版本 1710）更新汇总 2](https://support.microsoft.com/help/4086143)
-- [System Center Configuration Manager Current Branch（版本 1710）中自动注册共同管理的设备失败](https://support.microsoft.com/help/4088970)
-- [Windows 10 部署提示在 Configuration Manager 中选择语言](https://support.microsoft.com/help/4088140)
+- [KB 4458169：对应用程序部署问题进行疑难解答的提示](https://support.microsoft.com/help/4458169)  
+- [KB 4346901：深入探讨 Configuration Manager Current Branch 中的软件更新 - 客户端操作](https://support.microsoft.com/help/4346901)  
+- [KB 4345216：[已修复] 软件中心在 Configuration Manager Current Branch 版本 1802 中意外终止](https://support.microsoft.com/help/4345216)  
+- [KB 4342419：[已修复] SMSExec.exe 服务在 Configuration Manager Current Branch 版本 1802 中重新分配分发点时意外终止](https://support.microsoft.com/help/4342419)  
+- [KB 4339794：[已修复] 无法在 Configuration Manager Current Branch 版本 1802 中下载 Windows 快速安装文件](https://support.microsoft.com/help/4339794)  
 
-> [!Tip]  
-> 要订阅新的 Configuration Manager 支持文章的 Atom 或 RSS 通知，请参阅[支持内容更新](https://support.microsoft.com/help/4089498/)并选择 System Center Configuration Manager。  
+
+要订阅新的 Configuration Manager 支持文章的 Atom 或 RSS 通知，请参阅[支持内容更新](https://support.microsoft.com/help/4089498/)并选择 System Center Configuration Manager。  
