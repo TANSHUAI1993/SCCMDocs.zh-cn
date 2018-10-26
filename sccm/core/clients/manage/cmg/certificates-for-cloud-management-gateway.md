@@ -135,7 +135,7 @@ CMG 创建基于 Internet 的客户端要连接到的 HTTPS 服务。 此服务�
 
 ### <a name="client-trusted-root-certificate-to-cmg"></a>针对 CMG 的客户端受信任的根证书
 
-*使用客户端身份验证证书时需要此证书。如果所有客户端使用 Azure AD 进行身份验证，则不需要此证书。 
+*使用客户端身份验证证书时需要此证书。如果所有客户端使用 Azure AD 进行身份验证，则不需要此证书*。 
 
 在 Configuration Manager 控制台中创建 CMG 时需要提供此证书。
 
