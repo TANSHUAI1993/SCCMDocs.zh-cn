@@ -126,7 +126,7 @@ CMG 创建基于 Internet 的客户端要连接到的 HTTPS 服务。 此服务�
 
 ## <a name="client-authentication-certificate"></a>客户端身份验证证书
 
-运行未加入 Azure Active Directory (Azure AD) 的 Windows 7、Windows 8.1 和 Windows 10 设备的基于 Internet 的客户端需要此证书。CMG 连接点也需要此证书。加入 Azure AD 的 Windows 10 客户端不需要此证书。*
+*运行未加入 Azure Active Directory (Azure AD) 的 Windows 7、Windows 8.1 和 Windows 10 设备的基于 Internet 的客户端需要此证书。CMG 连接点也需要此证书。加入 Azure AD 的 Windows 10 客户端不需要此证书*。
 
 客户端使用此证书向 CMG 进行身份验证。 已加入混合域或云域的 Windows 10 设备不需要此证书，因为它们使用 Azure AD 进行身份验证。
 
@@ -135,7 +135,7 @@ CMG 创建基于 Internet 的客户端要连接到的 HTTPS 服务。 此服务�
 
 ### <a name="client-trusted-root-certificate-to-cmg"></a>针对 CMG 的客户端受信任的根证书
 
-使用客户端身份验证证书时需要此证书。如果所有客户端使用 Azure AD 进行身份验证，则不需要此证书。* 
+*使用客户端身份验证证书时需要此证书。如果所有客户端使用 Azure AD 进行身份验证，则不需要此证书。 
 
 在 Configuration Manager 控制台中创建 CMG 时需要提供此证书。
 
