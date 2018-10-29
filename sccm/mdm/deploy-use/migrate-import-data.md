@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: b552391d-abc0-48a2-a429-93605a13a66a
-ms.openlocfilehash: 89db0abe9a60e6850ae36e619483e0dcdc3e5360
-ms.sourcegitcommit: 316899b08f2ef372993909e08e069f7edfed1d33
+ms.openlocfilehash: 655d7663a6597ce1b13fb26a5340d482be1ba7ed
+ms.sourcegitcommit: 8827ffaea108678da968a3623f072876990c830c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44111138"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49411304"
 ---
 # <a name="import-configuration-manager-data-to-microsoft-intune"></a>将 Configuration Manager 数据导入 Microsoft Intune 
 
@@ -55,6 +55,7 @@ ms.locfileid: "44111138"
 - 此工具将尝试提供无法导入某个对象的原因。 某些情况下，在将对象导入 Intune 之前，可以返回 Configuration Manager 控制台、修复问题，并再次启动 Configuration Manager 对象发现扫描，然后导入该对象。 有时可能需要或想要在 Intune 中手动重新创建这些对象。
 - 存在一些依赖于其他对象的配置文件。 如果要导入依赖于另一个对象的配置文件（如依赖于证书的电子邮件配置文件），则必须同时导入这两个对象，除非之前已使用相同用户从同一台计算机导入另一个对象。  
 - 运行此工具后，可能需要执行其他手动步骤。 例如，将应用和策略定向到 AAD 组。 
+- 如果已向用户分配任何 Web 应用（有时称为 Web 剪辑），应在迁移用户之前删除这些 Web 应用，然后在迁移完成后重新分配 Web 应用。 如果不执行此操作，在迁移后将难以管理 Web 剪辑。
 
 ## <a name="prerequisites"></a>先决条件
 - 对于 Configuration Manager 版本 1610 或更高版本 - 我们建议指定顶级站点并通过有权访问站点层次结构中所有对象的用户来运行此工具。 该工具仅发现运行该工具的用户有权访问的对象。 

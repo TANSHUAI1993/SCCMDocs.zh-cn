@@ -2,7 +2,7 @@
 title: 混合 MDM 中的新增功能
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 和 Intune 的混合部署可用的新移动设备管理功能。
-ms.date: 09/18/2018
+ms.date: 10/18/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 195fb8c4ae584b9b5ccb2401b145d9c78a0be781
-ms.sourcegitcommit: 78d2dce465e3500653b252583a6903a006784c26
+ms.openlocfilehash: 3082bb6d6cc96be8ba7a56e1e2bb5a6bcd32bc9b
+ms.sourcegitcommit: 19fc4f27667d51502fc9d7d02d164f2837d65dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448865"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461267"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Configuration Manager 和 Microsoft Intune 的混合移动设备管理中的新增功能
 
@@ -46,11 +46,38 @@ ms.locfileid: "46448865"
 |**Configuration Manager (Current Branch) 中的新增功能**| 此类别下列出的所有功能仅适用于指定的 Configuration Manager (Current Branch) 版本。 如果要为混合部署使用较旧版本的 Configuration Manager，请升级到功能说明中指定的 Configuration Manager (Current Branch) 版本。 有关详细信息，请参阅[升级到 Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)。|
 
 
+
+## <a name="october-2018"></a>2018 年 10 月
+
+### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
+
+#### <a name="access-to-key-profile-properties-using-the-company-portal-app"></a>使用公司门户应用访问键配置文件属性
+<!--772203-->  
+
+最终用户现在可以从公司门户应用访问键帐户属性和操作，例如密码重置。 
+
+#### <a name="pin-prompt-when-you-change-fingerprints-or-face-id-on-an-ios-device"></a>当你在 iOS 设备上更改指纹或 Face ID 时，系统将提示你输入 PIN  
+<!--2637704-->  
+
+当用户在其 iOS 设备上进行生物识别更改后，系统将提示用户输入 PIN。 这包括对已注册的指纹或 Face ID 进行的更改。 出现提示的时间取决于如何配置“以下时间过后重新检查访问要求(分钟)”超时。  未设置 PIN 时，系统将提示用户设置一个 PIN。  
+
+此功能仅适用于 iOS，并要求具有针对 iOS 集成 Intune APP SDK9（版本 8.1.1 或更高版本）的应用程序的参与。 集成 SDK 是必需的，以便可以在目标应用程序上强制执行行为。 此集成陆续进行，取决于特定应用程序团队。 参与的某些应用包括 WXP、Outlook、Managed Browser 和 Yammer。
+
+#### <a name="end-user-device-and-app-content-menu"></a>最终用户设备的应用内容菜单 
+<!--2771453-->  
+最终用户现在可以使用设备上的上下文菜单和应用来触发常见操作，例如，重命名设备或检查合规性。 
+
+#### <a name="windows-company-portal-keyboard-shortcuts"></a>Windows 公司门户快捷键
+<!--2771518-->  
+最终用户现在可以使用快捷键（加速器）在 Windows 公司门户中触发应用和设备操作。
+
+
+
 ## <a name="august-2018"></a>2018 年 8 月
 
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
 
-### <a name="new-user-experience-update-for-the-company-portal-website"></a>公司门户网站的新用户体验更新
+#### <a name="new-user-experience-update-for-the-company-portal-website"></a>公司门户网站的新用户体验更新
 <!--2000968--> 根据你的反馈，我们向公司门户网站添加了新功能。 在 Android、iOS 和 Windows 设备中，你将会看到现有功能和可用性体验显著提高。 站点区域已得到全新现代化的响应式设计。 这些区域包括设备详细信息、反馈和支持及设备概述。 此外你还会看到以下改进：
 
 - 简化了跨所有设备平台的工作流

@@ -10,12 +10,12 @@ ms.assetid: a7975dc8-46ab-4dae-86b6-dc3e3cf3b2f0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7f798fdb1183b852bded92711cc5f489666f4f2a
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 13d9e83adcdf0e125d1596ff93fbb1a0fa67c09f
+ms.sourcegitcommit: 8827ffaea108678da968a3623f072876990c830c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342556"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49411321"
 ---
 # <a name="modify-your-system-center-configuration-manager-infrastructure"></a>修改你的 System Center Configuration Manager 基础结构
 
@@ -284,7 +284,7 @@ SQL 服务器文档可帮助你 [手动注册 SPN](https://technet.microsoft.com
     -   **主站点**：您用于在此站点中运行站点重置的帐户必须是主站点服务器上的本地管理员，而且必须具有与“完全权限管理员”  这个基于角色的管理安全角色等效的权限。 如果主站点位于具有管理中心站点的层次结构中，则此帐户还必须是管理中心站点服务器上的本地管理员。  
 
 **站点重置的限制**
-  - 从版本 1602 开始，只要主要层次结构配置为支持[在预生产集合中测试客户端升级](/sccm/core/clients/manage/upgrade/test-client-upgrades)，则不能使用站点重置来更改安装在站点的服务器或客户端语言包。
+  - 从版本 1602 开始，只要层次结构配置为支持[在预生产集合中测试客户端升级](/sccm/core/clients/manage/upgrade/test-client-upgrades)，则不能使用站点重置来更改安装在站点的服务器或客户端语言包。
 
 #### <a name="to-perform-a-site-reset"></a>执行站点重置  
 

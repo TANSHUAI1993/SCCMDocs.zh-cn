@@ -10,12 +10,12 @@ author: aczechowski
 description: 了解如何将 Windows Server 更新服务配置为自动批准定义更新。
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: b1c79a839ad1c83c96d7fe4583b46f6a3edbffba
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 5aa857141b047fc0f9929ca72041980a8bc8b6a7
+ms.sourcegitcommit: 19fc4f27667d51502fc9d7d02d164f2837d65dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32349851"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461250"
 ---
 # <a name="enable-endpoint-protection-malware-definitions-to-download-from-windows-server-update-services-wsus-for-configuration-manager"></a>启用 Endpoint Protection 恶意软件定义，以便从 Server Update Services (WSUS) 为 Configuration Manager 下载定义
 
@@ -37,7 +37,7 @@ ms.locfileid: "32349851"
 
     -   对于 Windows 8.1 和更早版本，在“软件更新点组件属性”  对话框的“产品”  选项卡上，选择“Forefront Endpoint Protection 2010”  复选框。
 
-    -   对于 Windows 10 及更高版本，在“软件更新点组件属性”  对话框的“产品”  选项卡上，选择“Windows Defender”  和“Windows Technical Preview 2”  复选框。
+    -   对于 Windows 10 及更高版本，在“软件更新点组件属性”对话框的“产品”选项卡上，选中“Windows Defender”复选框。
 
 6.  单击“确定”  以关闭“软件更新点组件属性”  对话框。
 
@@ -51,7 +51,7 @@ ms.locfileid: "32349851"
 
     -   对于 Windows 8.1 和更早版本，在“软件更新点组件属性”  对话框的“产品”  选项卡上，选择“Forefront Endpoint Protection 2010”  复选框。
 
-    -   对于 Windows 10 及更高版本，在“软件更新点组件属性”  对话框的“产品”  选项卡上，选择“Windows Defender”  和“Windows Technical Preview 2”  复选框。
+    -   对于 Windows 10 及更高版本，在“软件更新点组件属性”对话框的“产品”选项卡上，选中“Windows Defender”复选框。
 
 3.  在“产品和分类”  对话框的“分类”  选项卡上，选择“定义更新”  和“更新”  复选框。
 

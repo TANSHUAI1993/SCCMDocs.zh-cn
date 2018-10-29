@@ -5,17 +5,17 @@ description: 使用自动部署规则 (ADR) 自动部署软件更新。
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 08/21/2018
+ms.date: 10/02/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-ms.openlocfilehash: 6c23dc7328e2618d42b70f12bf7df8aa22fddb91
-ms.sourcegitcommit: 7eebd112a9862bf98359c1914bb0c86affc5dbc0
+ms.openlocfilehash: 01c6de94fd4cb0d05b482c1c05df2f09780db7fd
+ms.sourcegitcommit: 8827ffaea108678da968a3623f072876990c830c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589020"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49411287"
 ---
 #  <a name="automatically-deploy-software-updates"></a>自动部署软件更新  
 
@@ -234,9 +234,9 @@ ms.locfileid: "42589020"
      - 警报
      - 下载设置  
 
+此外可以使用 Windows PowerShell cmdlet 以编程方式添加部署。 有关使用此方法的完整说明，请参阅 [New-CMSoftwareUpdateDeployment](https://docs.microsoft.com/powershell/module/configurationmanager/new-cmsoftwareupdatedeployment)。
 
 有关部署过程的详细信息，请参阅 [Software update deployment process](/sccm/sum/understand/software-updates-introduction#BKMK_DeploymentProcess)。
-
 
 
 ## <a name="next-steps"></a>后续步骤

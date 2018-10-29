@@ -10,12 +10,12 @@ ms.assetid: bb95154b-f63e-4491-896e-41d732c802f8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9f65c7665d5c055fc2a1636a1c9556b4ff75a4f7
-ms.sourcegitcommit: 98c3f7848dc9014de05541aefa09f36d49174784
+ms.openlocfilehash: 22e685889f51f3b35c3ba58e94d161816424b2a3
+ms.sourcegitcommit: dd785ad7146b8491c98ccd7804d0959a5c1fb034
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42584603"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49383008"
 ---
 # <a name="hybrid-mdm-with-configuration-manager-and-microsoft-intune"></a>使用 Configuration Manager 和 Microsoft Intune 的混合 MDM
 
@@ -23,7 +23,8 @@ ms.locfileid: "42584603"
 
 > [!Important]  
 > 自 2018 年 8 月 14 日起，混合移动设备管理[功能停用](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)。
-> <!--Intune feature 2683117--> 自从一年多前在 Azure 上推出以来，Intune 已经增加了数百个客户要求和市场领先的新服务功能。 Intune 现在提供的功能远远超过了混合移动设备管理 (MDM)。 Azure 上的 Intune 为你的企业移动需求提供了更深入集成的简化管理体验。
+> <!--Intune feature 2683117-->  
+> 自从一年多前在 Azure 上推出以来，Intune 已经增加了数百个客户要求和市场领先的新服务功能。 Intune 现在提供的功能远远超过了混合移动设备管理 (MDM)。 Azure 上的 Intune 为你的企业移动需求提供了更深入集成的简化管理体验。
 > 
 > 因此，大多数客户选择 Azure 上的 Intune 而不是混合 MDM。 随着越来越多的客户迁移到云，使用混合 MDM 的客户数量持续减少。 因此，Microsoft 将在 2019 年 9 月 1 日停用混合 MDM 服务产品。 请计划[迁移到 Azure 上的 Intune](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa) 以满足你的 MDM 需求。 
 > 

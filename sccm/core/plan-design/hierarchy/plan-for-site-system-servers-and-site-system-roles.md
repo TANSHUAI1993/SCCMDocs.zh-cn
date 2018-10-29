@@ -10,12 +10,12 @@ ms.assetid: 0a7415ba-2c53-4433-983e-780e92aa662f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6805aed620ea6bd41d1ec3460c1076b44d28f67a
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: f2c3052337b5c985798c15950a541086587176d1
+ms.sourcegitcommit: 19fc4f27667d51502fc9d7d02d164f2837d65dae
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385348"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461301"
 ---
 # <a name="plan-for-site-system-servers-and-site-system-roles-in-configuration-manager"></a>在 Configuration Manager 中规划站点系统服务器和站点系统角色
 
@@ -60,7 +60,7 @@ ms.locfileid: "39385348"
 站点将此角色分配给保留站点数据库实例的站点系统服务器。 只能通过以下方式才能将此角色移动到新服务器：运行安装程序来修改站点以使用其他 SQL Server 实例来托管站点数据库。  
 
 #### <a name="sms-provider"></a>SMS 提供程序
-将此角色分配给托管 SMS 提供程序实例的每台计算机。 该提供程序是 Configuration Manager 控制台和站点数据库之间的接口。 默认情况下，此角色将在管理中心站点和主站点的站点服务器上自动安装。 在每个站点安装其他实例，以提供对其他管理用户或冗余的访问权限。  
+站点将此角色分配给托管 SMS 提供程序实例的每台计算机。 该提供程序是 Configuration Manager 控制台和站点数据库之间的接口。 默认情况下，此角色将在管理中心站点和主站点的站点服务器上自动安装。 在每个站点安装其他实例，以提供对其他管理用户或冗余的访问权限。  
 
 若要安装其他提供程序，运行 Configuration Manager 安装程序来[管理 SMS 提供程序](/sccm/core/servers/manage/modify-your-infrastructure#BKMK_ManageSMSprovider)。 然后在其他计算机上安装其他提供程序。 仅在计算机上安装 SMS 提供程序的一个实例。 计算机必须位于站点服务器所在的同一域中。  
 
