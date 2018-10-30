@@ -2,7 +2,7 @@
 title: 技术预览版
 titleSuffix: Configuration Manager
 description: 了解可测试 Configuration Manager 中的新功能和新特性的技术预览分支。
-ms.date: 10/03/2018
+ms.date: 10/16/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,16 +10,16 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c43b501e8305f97f178d2eba9d3ab64fa9efe2a7
-ms.sourcegitcommit: 3dfe3f4401651afa9dc65d14a8944ae4e4198b3e
+ms.openlocfilehash: f19e998e803bdaeed2b72dac84ae866930ad0003
+ms.sourcegitcommit: 73dbd2146bd581a1b668b22b84b7cda68a487d05
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48862441"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49390626"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Configuration Manager 的技术预览版
 
-*适用范围：System Center Configuration Manager (Technical Preview)*
+*适用于： System Center Configuration Manager （技术预览版）*
 
 本文提供了有关 Configuration Manager 的每月技术预览分支的详细信息。 技术预览版介绍 Microsoft 正在开发的新功能。 它介绍 Configuration Manager 当前分支中尚未包含的新功能。 这些功能可能最终会包含在当前分支的更新中。 在我们最终发布这些功能前，我们希望你试用这些功能并向我们提供反馈。  
 
@@ -104,7 +104,7 @@ Microsoft 将支持每个技术预览版，直到三个连续的版本可用为�
    
 在基线版本发布后的 1 年内安装此基线版本。 在安装新的技术预览版站点时，如果当前有多个可用的基线版本，则使用最新的基线版本。
 
--  技术预览版 1806：Configuration Manager 技术预览版 1806 可同时用作控制台内更新和新的基线版本。 [从 TechNet 评估中心](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview)下载基线版本。
+-  技术预览版 1810.2：Configuration Manager 技术预览版 1810.2 可同时用作控制台内更新和新的基线版本。 从 [TechNet 评估中心](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview)下载基线版本。
 
 
 
@@ -124,20 +124,16 @@ Microsoft 将支持每个技术预览版，直到三个连续的版本可用为�
 
 <!-- This is the full list of new features in the latest TP release -->
 
-### <a name="technical-preview-version-1810"></a>技术预览版 1810
+### <a name="technical-preview-version-18102"></a>技术预览版 1810.2
 
-- [客户端安装的改进](capabilities-in-technical-preview-1810.md#bkmk_ccmsetup) <!--1358840-->
-- [共同托管设备所需的应用符合性策略](capabilities-in-technical-preview-1810.md#bkmk_app-compliance) <!--1358196-->
-- [共同管理仪表板的改进](capabilities-in-technical-preview-1810.md#bkmk_comgmt-report) <!--1358980-->
-- [新的边界组选项](capabilities-in-technical-preview-1810.md#bkmk_bgoptions) <!--1358749-->
-- [Windows 群集节点上的站点系统](capabilities-in-technical-preview-1810.md#bkmk_cluster) <!--1359132-->
-- [CMPivot 的改进](capabilities-in-technical-preview-1810.md#bkmk_cmpivot) <!--1359068-->
-- [脚本的改进](capabilities-in-technical-preview-1810.md#bkmk_scripts) <!--1358239-->
-- [用于唤醒设备的新客户端通知操作](capabilities-in-technical-preview-1810.md#bkmk_wakeup) <!--1317364-->
-- [对边界组的任务序列支持](capabilities-in-technical-preview-1810.md#bkmk_bgr-osd) <!--1359025-->
-- [管理见解仪表板](capabilities-in-technical-preview-1810.md#bkmk_insights) <!--1357979-->
-- [控制台内文档仪表板](capabilities-in-technical-preview-1810.md#bkmk_doc-dashboard) <!--1357546-->
-- [驱动程序维护的改进](capabilities-in-technical-preview-1810.md#bkmk_drivers) <!--1358270-->  
+<!--capabilities-in-technical-preview-1810-2.md#bkmk_anchor-->
+
+- [对集合评估的改进](capabilities-in-technical-preview-1810-2.md#bkmk_colleval) <!--1358981-->
+- [Configuration Manager 管理员身份验证](capabilities-in-technical-preview-1810-2.md#bkmk_auth) <!--1357013-->
+- [对等缓存源客户端版本的管理见解规则](capabilities-in-technical-preview-1810-2.md#bkmk_insights) <!--1358008-->
+- [对基于 Internet 的客户端设置的改进](capabilities-in-technical-preview-1810-2.md#bkmk_cmg) <!--1359181-->
+- [将应用程序转换为 MSIX](capabilities-in-technical-preview-1810-2.md#bkmk_msix) <!--1359029-->
+- [更改了用于唤醒设备的客户端通知操作](capabilities-in-technical-preview-1810-2.md#bkmk_wakeup) <!--1317364-->
 
 
 > [!Note]  
@@ -156,19 +152,25 @@ Then remove the bottom of this list and/or move individual items not in CB to th
 
  |功能 |技术预览版 |当前分支版|  
  |----------------|---------------------|--------------------|
+ | 客户端安装改进<!--1358840--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_ccmsetup) | ![未添加](media/Red_X.gif) | 
+ | 共同托管设备所需的应用符合性策略<!--1358196--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_app-compliance) | ![未添加](media/Red_X.gif) | 
+ | 对共同管理仪表板的改进<!--1358980--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_comgmt-report) | ![未添加](media/Red_X.gif) | 
+ | 新的边界组选项<!--1358749--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_bgoptions) | ![未添加](media/Red_X.gif) | 
+ | Windows 群集节点上的站点系统<!--1359132--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_cluster) | ![未添加](media/Red_X.gif) | 
+ | CMPivot 的改进 <!--1359068--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_cmpivot) | ![未添加](media/Red_X.gif) | 
+ | 脚本的改进<!--1358239--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_scripts) | ![未添加](media/Red_X.gif) | 
+ | 用于唤醒设备的新客户端通知操作<!--1317364--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_wakeup) | ![未添加](media/Red_X.gif) | 
+ | 对边界组的任务序列支持<!--1359025--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_bgr-osd) | ![未添加](media/Red_X.gif) | 
+ | 管理见解仪表板<!--1357979--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_insights) | ![未添加](media/Red_X.gif) | 
+ | 控制台内文档仪表板<!--1357546--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_doc-dashboard) | ![未添加](media/Red_X.gif) | 
+ | 对驱动程序维护的改进<!--1358270--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_drivers) | ![未添加](media/Red_X.gif) | 
+ | 针对现有设备的 Windows Autopilot 的任务序列支持<!--1358333--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_autopilot) | ![未添加](media/Red_X.gif) | 
  | CMPivot 的改进 <!--1359068--> | [技术预览版 1809](capabilities-in-technical-preview-1809.md#bkmk_cmpivot) | ![未添加](media/Red_X.gif) | 
  | 生命周期仪表板的改进 <!--1358702--> | [技术预览版 1809](capabilities-in-technical-preview-1809.md#bkmk_lifecycle) | ![未添加](media/Red_X.gif) | 
  | 数据仓库的改进 <!--1358870--> | [技术预览版 1809](capabilities-in-technical-preview-1809.md#bkmk_dataw) | ![未添加](media/Red_X.gif) | 
  | 软件更新的维护时段的改进 <!--vso2839307--> | [技术预览版 1809](capabilities-in-technical-preview-1809.md#bkmk_sum-mw) | ![未添加](media/Red_X.gif) | 
  | 软件更新的分阶段部署 <!--1358146--> | [技术预览版 1808](capabilities-in-technical-preview-1808.md#bkmk_pod) | ![未添加](media/Red_X.gif) | 
  | 修复应用程序的改进 <!--1357866--> | [技术预览版 1808](capabilities-in-technical-preview-1808.md#bkmk_repair) | ![未添加](media/Red_X.gif) | 
- | 社区中心 <!--1357766--> | [技术预览版 1807](capabilities-in-technical-preview-1807.md#bkmk_hub) | ![未添加](media/Red_X.gif) | 
- | 指定用于为脱机 OS 映像提供服务的驱动器 <!--1358924--> | [技术预览版 1807](capabilities-in-technical-preview-1807.md#bkmk_osd) | ![未添加](media/Red_X.gif) | 
- | 来自 Intune 的共同管理的设备同步活动 <!--1358565--> | [技术预览版 1807](capabilities-in-technical-preview-1807.md#bkmk_comgmt) | ![未添加](media/Red_X.gif) | 
- | 修复应用程序 <!--1357866--> | [技术预览版 1807](capabilities-in-technical-preview-1807.md#bkmk_app-repair) | ![未添加](media/Red_X.gif) | 
- | 通过电子邮件批准应用程序请求 <!--1321550--> | [技术预览版 1807](capabilities-in-technical-preview-1807.md#bkmk_email-approve) | ![未添加](media/Red_X.gif) | 
- | 对脚本输出的改进 <!--1236459--> | [技术预览版 1807](capabilities-in-technical-preview-1807.md#bkmk_script) | ![未添加](media/Red_X.gif) | 
- | 对第三方软件更新的改进 <!--1358714--> | [技术预览版 1807](capabilities-in-technical-preview-1807.md#bkmk_3pupdate) | ![未添加](media/Red_X.gif) | 
 
 
 
@@ -184,6 +186,13 @@ With each CB release, review and remove from this list for anything that's now a
 
 |功能 |Technical Preview 版本 |  
 |----------------|---------------------|
+| 社区中心 <!--1357766--> | [技术预览版 1807](capabilities-in-technical-preview-1807.md#bkmk_hub) | 
+| 指定用于为脱机 OS 映像提供服务的驱动器 <!--1358924--> | [技术预览版 1807](capabilities-in-technical-preview-1807.md#bkmk_osd) | 
+| 来自 Intune 的共同管理的设备同步活动 <!--1358565--> | [技术预览版 1807](capabilities-in-technical-preview-1807.md#bkmk_comgmt) | 
+| 修复应用程序 <!--1357866--> | [技术预览版 1807](capabilities-in-technical-preview-1807.md#bkmk_app-repair) | 
+| 通过电子邮件批准应用程序请求 <!--1321550--> | [技术预览版 1807](capabilities-in-technical-preview-1807.md#bkmk_email-approve) | 
+| 对脚本输出的改进 <!--1236459--> | [技术预览版 1807](capabilities-in-technical-preview-1807.md#bkmk_script) | 
+| 对第三方软件更新的改进 <!--1358714--> | [技术预览版 1807](capabilities-in-technical-preview-1807.md#bkmk_3pupdate) |
 |支持中心 <!--1357489--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#support-center)  | 
 |基于客户端的 PXE 响应者服务 <!-- 1357148 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#client-based-pxe-responder-service) |
 |PXE 网络启动对 IPv6 的支持 <!-- 1269793 --> |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#pxe-network-boot-support-for-ipv6)|
