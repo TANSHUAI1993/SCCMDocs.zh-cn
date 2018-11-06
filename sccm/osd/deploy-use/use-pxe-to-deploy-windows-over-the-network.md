@@ -10,12 +10,12 @@ ms.assetid: da5f8b61-2386-4530-ad54-1a5c51911f07
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4c6069f81c9a5d086ef7c3ed13312d4f878d524a
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 1efd4197e63ddc12c0afc9e37b633c38d0df0f14
+ms.sourcegitcommit: a52255da16c9f8b0b60a6c299a369347c7e01bef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39384085"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49989138"
 ---
 # <a name="use-pxe-to-deploy-windows-over-the-network-with-configuration-manager"></a>使用 PXE 和 Configuration Manager 通过网络部署 Windows
 
@@ -40,7 +40,8 @@ ms.locfileid: "39384085"
 
 要将操作系统部署到发出 PXE 启动请求的 Configuration Manager 客户端，必须配置一个或多个分发点以接受 PXE 请求。 配置分发点后，此分发点会响应 PXE 启动请求，并确定要执行的适当部署操作。 有关详细信息，请参阅[安装或修改分发点](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe)。  
 
-
+> [!NOTE]  
+>  配置单个已启用 PXE 的分发点以支持多个子网时，不支持使用 DHCP 选项。 在路由器上配置 IP 帮助程序，以允许 PXE 请求转发到已启用 PXE 的分发点。
 
 ## <a name="prepare-a-pxe-enabled-boot-image"></a>准备 PXE 启用的启动映像
 

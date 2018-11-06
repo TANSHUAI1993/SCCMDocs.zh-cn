@@ -10,12 +10,12 @@ ms.assetid: 86cd5382-8b41-45db-a4f0-16265ae22657
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b1d4e2b7dca44db7ddc5976edde59a04bc3cb45e
-ms.sourcegitcommit: 4e4b71227309bee7e9f1285971f8235c67a9c502
+ms.openlocfilehash: e5099be5ff6b34bcbc232e78056f1937a9508c4f
+ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46533756"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411419"
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>用于 Configuration Manager 客户端的对等缓存
 
@@ -94,7 +94,7 @@ Configuration Manager 客户端使用对等缓存将缓存中每种类型的内�
 
 - 客户端只能从其当前边界组的对等缓存源中下载内容。  
 
-- 下述列外情况不需要[网络访问帐户](/sccm/core/plan-design/hierarchy/manage-accounts-to-access-content#a-namebkmknaaa-network-access-account)：  
+- 下述列外情况不需要[网络访问帐户](/sccm/core/plan-design/hierarchy/accounts#network-access-account)：  
 
     - 当启用对等缓存的客户端从软件中心运行任务序列且重启到启动映像时，在站点中配置网络访问帐户。 当设备位于 Windows PE 中时，它使用网络访问帐户从对等缓存源获取内容。  
 

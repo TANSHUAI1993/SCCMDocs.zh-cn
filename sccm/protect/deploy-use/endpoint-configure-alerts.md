@@ -10,12 +10,12 @@ ms.assetid: f504de3e-4caf-455c-80d7-a63f13f4c5d9
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 78afa39b173abc79c4ed1cadc79f41ab32150ecf
-ms.sourcegitcommit: 3dfe3f4401651afa9dc65d14a8944ae4e4198b3e
+ms.openlocfilehash: 626c52b827e38a53ed3b8982963496f29f11acb5
+ms.sourcegitcommit: 5b3ff56018cfc6bda9643c9f1bebc575173f61bc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48862356"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083762"
 ---
 #  <a name="configure-alerts-for-endpoint-protection-in-configuration-manager"></a>在 Configuration Manager 中为 Endpoint Protection 配置警报
 
@@ -39,7 +39,7 @@ ms.locfileid: "48862356"
     > [!NOTE]
     >  无法为用户集合配置警报。
 
-4.  如果想要在 Configuration Manager 控制台的“监视”工作区中查看有关此集合的反恶意软件操作的详细信息，则在“<集合名称\> 属性”对话框的“警报”选项卡中，选择“在 Endpoint Protection 仪表板中查看此集合”。
+4.  如果想要在 Configuration Manager 控制台的“监视”工作区中查看有关此集合的反恶意软件操作的详细信息，请在“<集合名称\> 属性”对话框的“警报”选项卡中，选择“在 Endpoint Protection 仪表板中查看此集合”。
 
     > [!NOTE]
     >  此选项不可用于“所有系统”  集合。
@@ -83,7 +83,7 @@ ms.locfileid: "48862356"
 
         -   **检测间隔（小时）：** 指定在其间必须发生指定的恶意软件检测次数的检测间隔（以小时为单位）。 指定一个介于“1”  到“168” 之间的数字。
 
-9. 单击“确定”关闭“<集合名称\> 属性”对话框。  
+9. 单击“确定”以关闭“<集合名称\> 属性”对话框。  
 
 ## <a name="alert-for-outdated-malware-client"></a>过时的恶意软件客户端的警报
 

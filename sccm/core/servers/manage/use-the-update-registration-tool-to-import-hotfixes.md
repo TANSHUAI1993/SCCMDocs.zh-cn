@@ -10,12 +10,12 @@ ms.assetid: 8cc13635-85d6-4b07-a3ec-c42188bc5c74
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d82ae79ae3466eff753e92c232b2cdd40fbcb2cb
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 94f0da3fa9f4aa43ce4818b7b6edf752df53d66a
+ms.sourcegitcommit: ee434c53b3695a039b56298082b6f61f1006d9dd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32338476"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49943268"
 ---
 # <a name="use-the-update-registration-tool-to-import-hotfixes-to-system-center-configuration-manager"></a>使用更新注册工具将修补程序导入 System Center Configuration Manager
 
@@ -57,7 +57,7 @@ Configuration Manager 的某些更新无法从 Microsoft 云服务获取，只�
 
     修补程序进行注册之后，它会在 24 小时内在控制台中显示为新的更新。  你可以加快此进程：
 
-    - 打开 Configuration Manager 控制台并转到“管理” > “更新和服务”，然后单击“检查更新”。 （在版本 1702 之前，“更新和服务”在“管理” > “云服务”下。） 
+    - 打开 Configuration Manager 控制台并转到“管理” > “更新和维护”，然后单击“检查更新”。 （在版本 1702 之前，“更新和服务”在“管理” > “云服务”下。） 
 
     更新注册工具会将其操作记录到本地计算机上的 .log 文件。 该日志文件与修补程序 .exe 文件同名，并且会写入到 **%SystemRoot%Temp** 文件夹中。  
 

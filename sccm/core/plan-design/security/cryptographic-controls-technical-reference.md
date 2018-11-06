@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: aa92f935984b52458a3d7daf17a11077c519da84
-ms.sourcegitcommit: 3dfe3f4401651afa9dc65d14a8944ae4e4198b3e
+ms.openlocfilehash: cc98ee85ffe4fd419ccc2a2e16bf566144f8b670
+ms.sourcegitcommit: ee434c53b3695a039b56298082b6f61f1006d9dd
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48862526"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49943302"
 ---
 # <a name="cryptographic-controls-technical-reference"></a>加密控制技术参考
 
@@ -90,7 +90,7 @@ System Center Configuration Manager 使用签名和加密帮助保护 Configurat
  导入配置数据时，Configuration Manager 会验证文件的数字签名。 如果未对文件进行签名，或者数字签名验证检查失败，则会通知并提示你是否继续导入。 只有在你肯定信任发布者以及文件的完整性时，才继续导入配置数据。  
 
 ### <a name="encryption-and-hashing-for-client-notification"></a>客户端通知的加密和哈希处理  
- 如果使用客户端通知，则所有通信都使用服务器和客户端操作系统可以协商的 TLS 和最高加密。 例如，运行 Windows 7 的客户端计算机和运行 Windows Server 2008 R2 的管理点可以支持 128 位 AES 加密，而针对相同管理点运行 Vista 的客户端计算机将进行协商，以将标准降至 3DES 加密。 系统将进行相同的协商，以对客户端通知过程中传输的包进行哈希处理，从而使用 SHA-1 或 SHA-2。  
+ 如果使用客户端通知，则所有通信都使用服务器和客户端操作系统可以协商的 TLS 和最高加密。 例如，运行 Windows 7 的客户端计算机和运行 Windows Server 2008 R2 的管理点可以支持 128 位 AES 加密，而与相同管理点相比，运行 Vista 的客户端计算机将进行协商，以将标准降至 3DES 加密。 系统将进行相同的协商，以对客户端通知过程中传输的包进行哈希处理，从而使用 SHA-1 或 SHA-2。  
 
 ##  <a name="certificates-used-by-configuration-manager"></a>Configuration Manager 使用的证书  
  有关 Configuration Manager 可以使用的公钥基础结构 (PKI) 证书、任何特殊要求或限制以及证书的使用方式的列表，请参阅 [PKI 证书要求](/sccm/core/plan-design/network/pki-certificate-requirements)。 此列表包含支持的哈希算法和密钥长度。 大多数证书支持 SHA-256 和 2048 位密钥长度。  

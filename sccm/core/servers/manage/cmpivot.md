@@ -10,12 +10,12 @@ ms.assetid: 32e2d6b9-148f-45e2-8083-98c656473f82
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2e0f74790437b34d1c5cd5dc00767ec782a51b45
-ms.sourcegitcommit: fe279229a90fdc8cddbb13c7ffdbbb22af0e25ef
+ms.openlocfilehash: 29b0f577ad291899467d9c6fd305af9ef6b892eb
+ms.sourcegitcommit: 5b3ff56018cfc6bda9643c9f1bebc575173f61bc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47229290"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083796"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>在 Configuration Manager 中使用 CMPivot 获得实时数据
 
@@ -35,7 +35,7 @@ Configuration Manager 总是提供设备数据的大型集中式存储，客户�
 
 - 将目标设备升级到 Configuration Manager 客户端的最新版本。  
 
-- Configuration Manager 管理员需要 SMS Scripts 对象的读取权限，以及 Collection 对象的运行脚本权限。 “脚本运行程序”角色具有这些权限。 有关详细信息，请参阅[脚本的安全角色](/sccm/apps/deploy-use/create-deploy-scripts#bkmk_ScriptRoles)。  
+- Configuration Manager 管理员需要 SMS Scripts 对象的读取权限，以及 Collection 对象的运行脚本权限和默认作用域。 “脚本运行程序”角色具有这些权限。 有关详细信息，请参阅[脚本的安全角色](/sccm/apps/deploy-use/create-deploy-scripts#bkmk_ScriptRoles)。  
 
 - 若要收集有关以下实体的数据，目标客户端需要 PowerShell 5.0 版：  
     - 管理员

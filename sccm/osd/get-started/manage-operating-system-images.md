@@ -10,12 +10,12 @@ ms.assetid: fab13949-371c-4a4c-978e-471db1e54966
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3b0931671c05604a0115c14a5e7fc5d9c6767b7c
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 82909cced6783f73608f155e64b7dd30b4087b06
+ms.sourcegitcommit: a52255da16c9f8b0b60a6c299a369347c7e01bef
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350096"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49989155"
 ---
 # <a name="manage-operating-system-images-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 管理操作系统映像
 
@@ -109,6 +109,9 @@ Configuration Manager 中的操作系统映像以 Windows 映像 (WIM) 文件格
 7.  在“摘要”  页上，验证以下信息，然后单击“下一步” 。  
 
 8.  在“完成”  页上，验证软件更新是否已成功应用于操作系统映像。  
+
+> [!NOTE]  
+>  为了最大程度减少有效负载大小，OS 升级包和 OS 映像的维护过程将删除旧版本。  
 
 ##  <a name="BKMK_OSImageMulticast"></a>为多播部署准备操作系统映像  
  使用多播部署以允许多台计算机同时下载操作系统映像。 映像通过分发点多播给客户端，而不是让分发点通过单独连接向每个客户端发送映像的副本。 选择[使用多播通过网络部署 Windows](../deploy-use/use-multicast-to-deploy-windows-over-the-network.md) 操作系统部署方法时，必须先将操作系统映像包配置为支持多播，然后才能将操作系统映像分发到启用了多播的分发点。 使用下列过程来为现有操作系统映像包设置多播选项。  

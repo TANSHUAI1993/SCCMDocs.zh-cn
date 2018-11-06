@@ -2,7 +2,7 @@
 title: 预发行功能
 titleSuffix: Configuration Manager
 description: 预发行功能是指 Current Branch 中的功能，用于在生产环境中的早期测试。
-ms.date: 07/30/2018
+ms.date: 10/24/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 6bce416b-761d-4b23-bd33-5b7c30edb10d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7b82bdfcbe69c7e9d59185fc6af20a85e65a6e7d
-ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
+ms.openlocfilehash: e3b3b31c31725c6b9931d0c2cc67324c4b39f974
+ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43893560"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411130"
 ---
 # <a name="pre-release-features-in-configuration-manager"></a>Configuration Manager 中的预发行功能
 
@@ -75,7 +75,7 @@ ms.locfileid: "43893560"
 
 | 功能          | 添加为预发行功能 | 添加为完整版功能 |  
 |------------------|----------------------|-------------------------|
-| 增强的 HTTP 站点系统<!--1356889,1358228-->|版本 1806|![尚未发行](media/red_x.png)|
+| 增强的 HTTP 站点系统<!--1356889,1358228-->|[版本 1806](/sccm/core/plan-design/hierarchy/enhanced-http)|![尚未发行](media/red_x.png)|
 | 适用于共同托管设备的移动应用<!--1357892-->|[版本 1806](/sccm/core/clients/manage/co-management-switch-workloads#workloads-able-to-be-transitioned-to-intune)|![尚未发行](media/red_x.png)|
 | 包转换管理器<!--1357861-->|[版本 1806](/sccm/apps/pcm/package-conversion-manager)|![尚未发行](media/red_x.png)|
 | iOS 支持 Cisco AnyConnect 4.0.07x 及更高版本<!--1357393-->|[版本 1802](/sccm/mdm/deploy-use/create-vpn-profiles)| [具有更新 4163547 的版本 1802](/sccm/mdm/deploy-use/create-vpn-profiles) |
