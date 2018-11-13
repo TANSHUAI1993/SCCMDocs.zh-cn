@@ -2,7 +2,7 @@
 title: 使用 Microsoft Intune 的混合 MDM
 titleSuffix: Configuration Manager
 description: 了解使用 Configuration Manager 和 Microsoft Intune 的混合移动设备管理 (MDM)。
-ms.date: 08/14/2018
+ms.date: 11/02/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: bb95154b-f63e-4491-896e-41d732c802f8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 22e685889f51f3b35c3ba58e94d161816424b2a3
-ms.sourcegitcommit: dd785ad7146b8491c98ccd7804d0959a5c1fb034
+ms.openlocfilehash: f3d25120701c12b547727259002fc58a8f8f0780
+ms.sourcegitcommit: 97083c51057e2c4e0fe12c3b1f1b512250874c6a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383008"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50968129"
 ---
 # <a name="hybrid-mdm-with-configuration-manager-and-microsoft-intune"></a>使用 Configuration Manager 和 Microsoft Intune 的混合 MDM
 
@@ -38,7 +38,7 @@ ms.locfileid: "49383008"
 > 
 > - 许可将保持不变。 混合 MDM 中随附 Azure 上的 Intune 许可证。  
 > 
-> - 从 2018 年 11 月开始，Microsoft 将开始阻止新客户加入混合 MDM。  
+> - Configuration Manager 中的条件访问和本地 MDM 功能并未弃用。 即将对 Configuration Manager 进行的更改将允许这些功能在没有混合 MDM 的情况下运行。 
 > 
 > - 2019 年 9 月 1 日，任何剩余的混合 MDM 设备将不再接收策略、应用或安全更新。  
 > 

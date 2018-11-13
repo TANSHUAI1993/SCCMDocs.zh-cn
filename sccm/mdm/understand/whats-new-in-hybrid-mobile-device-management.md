@@ -2,7 +2,7 @@
 title: 混合 MDM 中的新增功能
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 和 Intune 的混合部署可用的新移动设备管理功能。
-ms.date: 10/18/2018
+ms.date: 10/31/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3082bb6d6cc96be8ba7a56e1e2bb5a6bcd32bc9b
-ms.sourcegitcommit: 19fc4f27667d51502fc9d7d02d164f2837d65dae
+ms.openlocfilehash: f51e54ede8df8c18ca8614f6a75c82c53bb7916c
+ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461267"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411521"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Configuration Manager 和 Microsoft Intune 的混合移动设备管理中的新增功能
 
@@ -51,14 +51,23 @@ ms.locfileid: "49461267"
 
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
 
+#### <a name="updates-for-application-transport-security"></a>针对应用传输安全进行更新 
+<!--748318--> Microsoft Intune 支持传输层安全性 (TLS) 1.2+，以提供一流的加密，确保 Intune 在默认情况下更为安全，并与 Microsoft Office 365 等其他 Microsoft 服务一致。 为了满足此要求，iOS 和 macOS 公司门户将强制执行 Apple 更新的应用程序传输层安全性 (ATS) 要求，这些要求也需要 TLS 1.2+。 ATS 用于对所有通过 HTTPS 的应用通信强制实施更严格的安全措施。 此更改会影响使用 iOS 和 macOS 公司门户应用的 Intune 客户。 有关详细信息，请参阅[将 Intune 升级到 TLS 1.2 以进行加密](https://blogs.technet.microsoft.com/intunesupport/2018/06/05/intune-moving-to-tls-1-2-for-encryption/)。
+
+#### <a name="remove-an-email-profile-from-a-device-even-when-theres-only-one-email-profile"></a>即使只有一个电子邮件配置文件，也可从设备中删除该电子邮件配置文件 
+<!--1818139--> 以前，如果要删除的电子邮件配置文件是设备中唯一的电子邮件配置文件，则无法从设备中删除它。 通过此更新，此行为发生了变化。 现可删除电子邮件配置文件，即使它是设备上唯一的电子邮件配置文件。 
+
+#### <a name="remove-pkcs-and-scep-certificates-from-your-devices"></a>从设备中删除 PKCS 和 SCEP 证书 
+<!--3218390--> 在某些情况下，即使删除组中的策略、删除配置或符合性部署或管理员更新现有 SCEP 或 PKCS 配置文件，PKCS 和 SCEP 证书仍保留在设备上。 
+
+此更新会改变该行为。 有些情况下，PKCS 和 SCEP 证书会从设备中删除，而有些情况下，这些证书会保留在设备上。 
+
 #### <a name="access-to-key-profile-properties-using-the-company-portal-app"></a>使用公司门户应用访问键配置文件属性
 <!--772203-->  
-
 最终用户现在可以从公司门户应用访问键帐户属性和操作，例如密码重置。 
 
 #### <a name="pin-prompt-when-you-change-fingerprints-or-face-id-on-an-ios-device"></a>当你在 iOS 设备上更改指纹或 Face ID 时，系统将提示你输入 PIN  
 <!--2637704-->  
-
 当用户在其 iOS 设备上进行生物识别更改后，系统将提示用户输入 PIN。 这包括对已注册的指纹或 Face ID 进行的更改。 出现提示的时间取决于如何配置“以下时间过后重新检查访问要求(分钟)”超时。  未设置 PIN 时，系统将提示用户设置一个 PIN。  
 
 此功能仅适用于 iOS，并要求具有针对 iOS 集成 Intune APP SDK9（版本 8.1.1 或更高版本）的应用程序的参与。 集成 SDK 是必需的，以便可以在目标应用程序上强制执行行为。 此集成陆续进行，取决于特定应用程序团队。 参与的某些应用包括 WXP、Outlook、Managed Browser 和 Yammer。
@@ -408,23 +417,23 @@ ms.locfileid: "49461267"
   <!--1029830-->   
 
 - **对公司门户中设备安装工作流的改进**     
-  我们改进了适用于 Android 的公司门户应用中的设备安装工作流。 语言更贴近贵公司的用语习惯，在可能的情况下我们还对屏幕进行了合并。 在[应用 UI 中的新增功能](https://docs.microsoft.com/intune/whats-new-app-ui#week-of-october-2-2017)页上可以看到这些改进。
+  我们改进了适用于 Android 的公司门户应用中的设备安装工作流。 语言更贴近贵公司的用语习惯，在可能的情况下我们还对屏幕进行了合并。 在[应用 UI 中的新增功能](https://docs.microsoft.com/intune/whats-new-app-ui#week-of-october-2-2017)页上可以看到这些改进。
   <!--1490692-->     
 
 - **关于在 Android 设备上访问联系人的请求的改进指导**     
-  适用于 Android 的公司门户应用通常需要最终用户接受“联系人”权限。 如果最终用户拒绝此访问权限，他们会看到一个应用内通知，提醒他们授予其条件访问权限。 
+  适用于 Android 的公司门户应用通常需要最终用户接受“联系人”权限。 如果最终用户拒绝此访问权限，他们会看到一个应用内通知，提醒他们授予其条件访问权限。 
   <!--1484985-->     
 
 - **适用于 Android 的安全启动修正**     
-  使用 Android 设备的最终用户可以点击公司门户应用中不符合的原因。 在可能的情况下，此操作将用户直接带到设置应用中的正确位置来解决此问题。 
+  使用 Android 设备的最终用户可以点击公司门户应用中不符合的原因。 在可能的情况下，此操作将用户直接带到设置应用中的正确位置来解决此问题。 
   <!--1490712-->    
 
 - **向最终用户额外发送有关 Android Oreo 公司门户应用的推送通知**    
-  最终用户可以看到其他通知，其中指明了 Android Oreo 公司门户应用何时执行后台任务，如从 Intune 服务检索策略。 通知进一步提高了透明度，可方便最终用户了解公司门户应用何时在其设备上执行管理任务。 此改进是 Android Oreo 公司门户应用的整体[公司门户 UI 优化](https://blogs.technet.microsoft.com/intunesupport/2017/08/21/android-8-0-o-behaviour-changes-and-microsoft-intune)中的一部分。 
+  最终用户可以看到其他通知，其中指明了 Android Oreo 公司门户应用何时执行后台任务，如从 Intune 服务检索策略。 通知进一步提高了透明度，可方便最终用户了解公司门户应用何时在其设备上执行管理任务。 此改进是 Android Oreo 公司门户应用的整体[公司门户 UI 优化](https://blogs.technet.microsoft.com/intunesupport/2017/08/21/android-8-0-o-behaviour-changes-and-microsoft-intune)中的一部分。 
   <!--1475932 -->     
 
 - **使用工作配置文件时适用于 Android 公司门户应用的新行为**     
-  当你使用工作配置文件注册 Android for Work 设备时，它是工作配置文件中在设备上执行管理任务的公司门户应用。 
+  当你使用工作配置文件注册 Android for Work 设备时，它是工作配置文件中在设备上执行管理任务的公司门户应用。 
 
   除非你在个人配置文件中使用启用了 MAM 的应用，否则适用于 Android 的公司门户应用将不再提供任何服务。 若要改进工作配置文件体验，Intune 将在工作配置文件成功注册后自动隐藏个人版公司门户应用。
 
@@ -436,7 +445,7 @@ ms.locfileid: "49461267"
   <!--1428681-->    
 
 - **块不受支持的 Samsung Knox 设备注册**   
-  公司门户应用仅尝试注册受支持的 Samsung Knox 设备。 若要避免阻止 MDM 注册的 KNOX 激活错误，只有在[由 Samsung 发布的设备列表](https://www.samsungknox.com/knox-supported-devices/knox-workspace)中显示设备时才会尝试进行设备注册。 Samsung 设备可以有支持 KNOX 的型号，而其他设备则没有。 在采购和部署之前，需与设备经销商验证 Knox 的兼容性。 可以在 [Android 和 Samsung KNOX Standard 策略设置](https://docs.microsoft.com/intune-classic/deploy-use/android-policy-settings-in-microsoft-intune#supported-samsung-knox-standard-devices)中找到经验证的设备的完整列表。
+  公司门户应用仅尝试注册受支持的 Samsung Knox 设备。 若要避免阻止 MDM 注册的 KNOX 激活错误，只有在[由 Samsung 发布的设备列表](https://www.samsungknox.com/knox-supported-devices/knox-workspace)中显示设备时才会尝试进行设备注册。 Samsung 设备可以有支持 KNOX 的型号，而其他设备则没有。 在采购和部署之前，需与设备经销商验证 Knox 的兼容性。 可以在 [Android 和 Samsung KNOX Standard 策略设置](https://docs.microsoft.com/intune-classic/deploy-use/android-policy-settings-in-microsoft-intune#supported-samsung-knox-standard-devices)中找到经验证的设备的完整列表。
   <!-- 1490695 -->     
 
 - **不再支持 Android 4.3 及更低版本**     
@@ -458,7 +467,7 @@ ms.locfileid: "49461267"
     <!-- 1132468 -->     
 
 - **告知最终用户可以看到哪些 iOS 设备信息**   
-    在 iOS 公司门户应用上，我们还在“设备详细信息”屏幕中添加了“所有权类型”。 此信息允许用户直接从 Intune 最终用户文档中找到隐私的相关详情。用户还可以在“关于”屏幕上找到此类信息。 
+    在 iOS 公司门户应用上，我们在“设备详细信息”屏幕中添加了“所有权类型”  ****。 此信息允许用户直接从 Intune 最终用户文档中找到隐私的相关详情。用户还可以在“关于”屏幕上找到此类信息。 
     <!--739894-->    
 
 - **Android 公司门户应用的表述更易于理解**   
@@ -574,33 +583,16 @@ Office 365 移动应用在 iOS 10 和更高版本上均受支持，因此，你�
 查看组织中受影响的设备或用户。 在 Azure 门户中的 Intune 中，转到“设备” > “所有设备”，并按“操作系统”进行筛选。  单击“列”以显示操作系统版本等详细信息。 要求你的用户在 9 月前将其设备升级到受支持的操作系统版本。
 
 
-### <a name="plan-for-change-intune-moving-to-tls-12"></a>更改计划：Intune 升级到 TLS 1.2
-
-从 2018 年 10 月 31 日起，Intune 将支持传输层安全性 (TLS) 协议版本 1.2，以提供一流的加密，确保我们的服务在默认情况下更为安全，并与 Microsoft Office 365 等其他 Microsoft 服务一致。 Office 将在 MC128929 中对此次更改进行说明。
-
-#### <a name="how-does-this-change-affect-me"></a>这一更改会对我产生哪些影响？
-
-自 2018 年 10 月 31 日起，Intune 将不再支持 TLS 协议版本 1.0 或 1.1。 所有客户端 - 服务器和浏览器 - 服务器组合都应使用 TLS 版本 1.2，以确保能够正常连接到 Intune。 此更改影响不受 Intune 支持但仍通过 Intune 接收策略的最终用户设备，此类设备无法使用 TLS 版本 1.2。 这些设备包括运行 Android 4.3 和更早版本的设备。 有关受影响的设备和浏览器的列表，请访问以下链接。
-
-在 2018 年 10 月 31 日后，如果遇到有关使用旧 TLS 版本的问题，作为解决方法的一部分，请更新到 TLS 1.2 或支持 TLS 1.2 的设备。
-
-#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>我需要如何准备应对此项变化？
-
-我们建议在可能的情况下，主动删除环境中的 TLS 1.0 和 1.1 依赖项，并在操作系统级别禁用 TLS 1.0 和 1.1。 立即计划迁移到 TLS 1.2。 查看以下支持博客文章，了解现在不受 Intune 支持但仍可能接收策略的设备列表，这些设备将无法使用 TLS 版本 1.2 进行通信。 可能需要通知这些最终用户，他们将无法访问公司资源。
-
-有关详细信息，请参阅[将 Intune 升级到 TLS 1.2 以进行加密](https://blogs.technet.microsoft.com/intunesupport/2018/06/05/intune-moving-to-tls-1-2-for-encryption/)。
-
-
 ### <a name="company-portal-for-windows-81-and-windows-phone-81-moving-to-sustaining-mode"></a>适用于 Windows 8.1 和 Windows Phone 8.1 的公司门户将移至维护模式 
 <!--1428681-->
 *2017 年 10 月 6 日*   
  
-从 2017 年 10 月开始，适用于 Windows 8.1 和 Windows Phone 8.1 的公司门户应用移至维护模式。 此模式意味着应用和现有方案（如注册和符合性）继续支持这些平台。 这些应用继续通过现有发布通道下载，如 Microsoft Store。 
+从 2017 年 10 月开始，适用于 Windows 8.1 和 Windows Phone 8.1 的公司门户应用移至维护模式。 此模式意味着应用和现有方案（如注册和符合性）继续支持这些平台。 这些应用继续通过现有发布通道下载，如 Microsoft Store。 
 
-一旦处于维护模式，这些应用仅接收重要的安全更新。 将不会对这些应用发布任何其他更新或功能。 对于新功能，我们建议将设备更新到 Windows 10 或 Windows 10 移动版。 
+一旦处于维护模式，这些应用仅接收重要的安全更新。 将不会对这些应用发布任何其他更新或功能。 对于新功能，我们建议将设备更新到 Windows 10 或 Windows 10 移动版。 
 
 ### <a name="end-of-support-for-ios-80"></a>iOS 8.0 不再受支持 
-<!---1164477---> 托管应用和 iOS 公司门户应用要求必须使用 iOS 9.0 及更高版本，才能访问公司资源。 9 月前未更新的设备无法再访问公司门户或这些应用。 
+<!---1164477---> 托管应用和 iOS 公司门户应用要求必须使用 iOS 9.0 及更高版本，才能访问公司资源。 9 月前未更新的设备无法再访问公司门户或这些应用。 
 
 ### <a name="platform-support-reminder-windows-phone-81-mainstream-support-ended-july-11-2017"></a>平台支持提醒：Windows Phone 8.1 主流支持将于 2017 年 7 月 11 日终止
 <!-- 1327781 -->

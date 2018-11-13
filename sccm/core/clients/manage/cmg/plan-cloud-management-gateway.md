@@ -2,7 +2,7 @@
 title: 规划云管理网关
 titleSuffix: Configuration Manager
 description: 规划和设计云管理网关 (CMG)，简化基于 Internet 的客户端管理。
-ms.date: 09/10/2018
+ms.date: 10/24/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9b25b7a5b7df42dc83bec18d38b44c7807e6dc1a
-ms.sourcegitcommit: 2badee2b63ae63687795250e298f463474063100
+ms.openlocfilehash: 0f7e598da0953a20412f6c8279b90a95c1d26581
+ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601120"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411470"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>在 Configuration Manager 中规划云管理网关
 
@@ -153,16 +153,19 @@ CMG 向导仍提供使用 Azure 管理证书的“经典服务部署”选项。
 
 - 服务连接点必须处于[联机模式](/sccm/core/servers/deploy/configure/about-the-service-connection-point#bkmk_modes)。   
 
-- 用于 CMG 的[服务器身份验证证书](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#cmg-server-authentication-certificate)。  
+- 用于 CMG 的[服务器身份验证证书](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_serverauth)。  
 
-- 如果使用 Azure 经典部署方法，则必须使用 [Azure 管理证书](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#azure-management-certificate)。  
+- 如果使用 Azure 经典部署方法，则必须使用 [Azure 管理证书](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_azuremgmt)。  
 
     > [!TIP]  
-    > 从 Configuration Manager 版本 1802 起，推荐使用 **Azure 资源管理器**部署模型。 它不需要此管理证书。  
+    > 从 Configuration Manager 版本 1802 起，Microsoft 推荐使用 Azure 资源管理器部署模型。 它不需要此管理证书。  
 
 - 可能需要其他证书，具体取决于客户端操作系统版本和身份验证模型。 有关详细信息，请参阅 [CMG 证书](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway)。  
 
-    - 从 1802 版起，必须将所有启用了 CMG 的[**管理点配置为使用 HTTPS**](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#enable-management-point-for-https)。  
+    - 从 1802 版起，必须将所有启用了 CMG 的[**管理点配置为使用 HTTPS**](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_mphttps)。  
+
+    - 从 1806 版开始，使用站点选项“使用 Configuration Manager 为 HTTP 站点系统生成的证书”时，管理点可以是 HTTP。 有关详细信息，请参阅[增强型 HTTP](/sccm/core/plan-design/hierarchy/enhanced-http)。  
+
 
 - 对于 Windows 10 客户端可能需要与 Azure AD 集成。 有关详细信息，请参阅[配置 Azure 服务](/sccm/core/servers/deploy/configure/azure-services-wizard)。  
 
@@ -325,8 +328,8 @@ CMG 使用以下 Azure 组件，使用这些组件会向 Azure 订阅帐户收�
 |---------|---------|---------|---------|---------|
 | 服务连接点     | HTTPS | 443        | Azure        | CMG 部署 |
 | CMG 连接点     |  TCP-TLS | 10140-10155        | CMG 服务        | 建立 CMG 通道的首选协议<sup>1</sup> |
-| CMG 连接点     | HTTPS | 443        | CMG 服务       | 回退，将 CMG 通道构建为只有一个 VM 实例<sup>2</sup> |
-| CMG 连接点     |  HTTPS   | 10124-10139     | CMG 服务       | 回退，将 CMG 通道构建为有连两个或以上的 VM 实例<sup>3</sup> |
+| CMG 连接点     | HTTPS | 443        | CMG 服务       | 回退协议，将 CMG 通道构建为只有一个 VM 实例<sup>2</sup> |
+| CMG 连接点     |  HTTPS   | 10124-10139     | CMG 服务       | 回退协议，将 CMG 通道构建为 2 个或更多 VM 实例<sup>3</sup> |
 | 客户端     |  HTTPS | 443         | CMG        | 常规客户端通信 |
 | CMG 连接点      | HTTPS 或 HTTP | 443 或 80         | 管理点<br>（版本 1706 或 1710） | 本地流量，端口取决于管理点配置 |
 | CMG 连接点      | HTTPS | 443      | 管理点<br>（版本 1802） | 本地流量必须经由 HTTPS |

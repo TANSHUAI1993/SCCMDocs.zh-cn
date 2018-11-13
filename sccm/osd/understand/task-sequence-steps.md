@@ -10,12 +10,12 @@ ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3e0b70a2b024555bd67f63b3a31a6408b07c273b
-ms.sourcegitcommit: be8c0182db9ef55a948269fcbad7c0f34fd871eb
+ms.openlocfilehash: bec95b13ecba5ae5238d758ae06566042a95d939
+ms.sourcegitcommit: 303d826f45c8fd9a05d8883afc1ca645e56bd576
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42756071"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269240"
 ---
 # <a name="task-sequence-steps-in-configuration-manager"></a>Configuration Manager 中的任务序列步骤
 
@@ -134,7 +134,7 @@ ms.locfileid: "42756071"
 
  使用此步骤指定目标计算机的网络或工作组配置信息。 任务序列将这些值存储在相应的答案文件中。 Windows 安装程序在“安装 Windows 和 ConfigMgr”操作过程中使用该答案文件。  
 
- 此任务序列步骤在完整 OS 或 Windows PE 中运行。 
+ 此任务序列步骤仅可在 Windows PE 中运行。 它不会在完整的 OS 中运行。 
 
  在此步骤中使用以下任务序列变量：  
  - [OSDAdapter](/sccm/osd/understand/task-sequence-variables#OSDAdapter)  
@@ -160,7 +160,7 @@ ms.locfileid: "42756071"
  选择此选项，使目标计算机加入指定的工作组。 在“工作组”行中输入工作组的名称。 此值可被“捕获网络设置”任务序列步骤所捕获的值替代。 
 
 #### <a name="join-a-domain"></a>加入域
- 选择此选项以将目标计算机加入指定的域。 指定或浏览到域，如 `fabricam.com`。 指定或浏览到组织单位的轻型目录访问协议 (LDAP) 路径。 例如：`LDAP//OU=computers, DC=Fabricam.com, C=com`。  
+ 选择此选项以将目标计算机加入指定的域。 指定或浏览到域，如 `fabricam.com`。 指定或浏览到组织单位的轻型目录访问协议 (LDAP) 路径。 例如： `LDAP//OU=computers, DC=Fabricam.com, C=com`。  
 
 #### <a name="account"></a>帐户
  单击“设置”  以指定拥有将计算机加入域所需权限的帐户。 在“Windows 用户帐户”对话框中，使用下列格式输入用户名：`Domain\User`。 有关详细信息，请参阅[域连接帐户](/sccm/core/plan-design/hierarchy/accounts#task-sequence-editor-domain-joining-account)。 

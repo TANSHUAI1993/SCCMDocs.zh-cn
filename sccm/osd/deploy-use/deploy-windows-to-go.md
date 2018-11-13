@@ -10,12 +10,12 @@ ms.assetid: 8eed50f5-80a4-422e-8aa6-a7ccb2171475
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 12b7a28ff5ea0e2e1870c0c37edd8e056930b09f
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: afc76b59d594c6b8f52062add480874ba5c5686d
+ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32351881"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411487"
 ---
 # <a name="deploy-windows-to-go-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 部署 Windows to Go
 
@@ -151,7 +151,7 @@ ms.locfileid: "32351881"
     -   **分发点**：指定托管启动映像的分发点。 向导将从分发点中检索启动映像并将其写入媒体。  
 
         > [!NOTE]  
-        >  管理用户必须对分发点上的启动映像内容具有“读取”  访问权限。 有关详细信息，请参阅[管理帐户以访问内容](../../core/plan-design/hierarchy/manage-accounts-to-access-content.md)。  
+        >  管理用户必须对分发点上的启动映像内容具有“读取”  访问权限。 有关详细信息，请参阅[包访问帐户](/sccm/core/plan-design/hierarchy/accounts#package-access-account)。  
 
     -   如果在此向导的“媒体管理”  页上选择了“基于站点的媒体”  ，请在“管理点”  框中指定主站点中的管理点。  
 
@@ -166,7 +166,7 @@ ms.locfileid: "32351881"
     -   **分发点**：指定托管操作系统映像包的分发点。 向导将从分发点中检索操作系统映像并将其写入媒体。  
 
         > [!NOTE]  
-        >  管理用户必须对分发点上的操作系统映像包内容具有“读取”  访问权限。 有关详细信息，请参阅[管理帐户以访问内容](../../core/plan-design/hierarchy/manage-accounts-to-access-content.md)。  
+        >  管理用户必须对分发点上的操作系统映像包内容具有“读取”  访问权限。 有关详细信息，请参阅[包访问帐户](/sccm/core/plan-design/hierarchy/accounts#package-access-account)。  
 
 11. 在“选择应用程序”  页上，选择要包含在媒体文件中的应用程序内容，然后单击“下一步” 。  
 

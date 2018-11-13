@@ -2,7 +2,7 @@
 title: 自动执行任务计划
 titleSuffix: Configuration Manager
 description: 在创建任务序列之前制定计划以利用 Configuration Manager 自动执行任务。
-ms.date: 08/17/2018
+ms.date: 10/29/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: fc497a8a-3c54-4529-8403-6f6171a21c64
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1ea1b104dfbdf23a080bc71da94b88cdcad31fa1
-ms.sourcegitcommit: be8c0182db9ef55a948269fcbad7c0f34fd871eb
+ms.openlocfilehash: 608b947e75ff29cf9653b2a12497918846556f4d
+ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42755942"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411283"
 ---
 # <a name="planning-considerations-for-automating-tasks-in-configuration-manager"></a>计划在 Configuration Manager 中自动执行任务的注意事项
 
@@ -236,18 +236,42 @@ ms.locfileid: "42755942"
 
 ##  <a name="BKMK_TSNetworkAccessAccount"></a> 任务序列和网络访问帐户  
 
- 虽然任务序列仅在本地系统帐户的上下文中运行，但在下列情况下，你可能需要配置[网络访问帐户](/sccm/core/plan-design/hierarchy/accounts#network-access)：  
+> [!Important]  
+> 自版本 1806 开始，某些 OS 部署情况不需要使用网络访问帐户。 有关详细信息，请参阅[增强型 HTTP](#enhanced-http)。
 
- - 如果任务序列尝试访问分发点上的 Configuration Manager 内容。 正确配置网络访问帐户，否则任务序列将失败。   
+虽然任务序列仅在本地系统帐户的上下文中运行，但在下列情况下，你可能需要配置[网络访问帐户](/sccm/core/plan-design/hierarchy/accounts#network-access-account)：  
 
- - 当使用启动映像来启动 OS 部署时。 在这种情况下，Configuration Manager 使用 Windows PE 环境，该环境不是一个完整的 OS。 Windows PE 环境使用自动生成的随机名称，该名称不是任何域的成员。 如果未正确配置网络访问帐户，计算机将无法访问任务序列所需的内容。  
+- 如果任务序列尝试访问分发点上的 Configuration Manager 内容。 正确配置网络访问帐户，否则任务序列将失败。   
+
+- 当使用启动映像来启动 OS 部署时。 在这种情况下，Configuration Manager 使用 Windows PE 环境，该环境不是一个完整的 OS。 Windows PE 环境使用自动生成的随机名称，该名称不是任何域的成员。 如果未正确配置网络访问帐户，计算机将无法访问任务序列所需的内容。  
+
+> [!NOTE]  
+>  网络访问帐户从不用作运行程序、安装应用程序、安装更新或运行任务序列的安全上下文。 网络访问帐户仅用于访问网络上的关联资源。  
+
+有关网络访问帐户的详细信息，请参阅[网络访问帐户](/sccm/core/plan-design/hierarchy/accounts#network-access-account)。  
 
 
- > [!NOTE]  
- >  网络访问帐户从不用作运行程序、安装应用程序、安装更新或运行任务序列的安全上下文。 网络访问帐户仅用于访问网络上的关联资源。  
+### <a name="enhanced-http"></a>增强型 HTTP
+<!--1358278-->
 
+自版本 1806 开始，当启用增强型 HTTP 时，以下情况不需要网络访问帐户即可从分发点下载内容：
+  
+- 从启动媒体或 PXE 运行的任务序列  
+- 从软件中心运行的任务序列  
 
- 有关网络访问帐户的详细信息，请参阅[网络访问帐户](/sccm/core/plan-design/hierarchy/manage-accounts-to-access-content#bkmk_NAA)。  
+这些任务序列可以用于操作系统部署或者是自定义的。 它还支持工作组计算机。
+ 
+有关详细信息，请参阅[增强型 HTTP](/sccm/core/plan-design/hierarchy/enhanced-http)。  
+
+> [!Note]  
+> 以下操作 OS 情况仍需要使用网络访问帐户：
+>  
+> - 任务序列[部署选项](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS)“需要时通过运行任务序列从分发点直接访问内容”   
+> - [请求状态存储](/sccm/osd/understand/task-sequence-steps#BKMK_RequestStateStore)步骤选项“如果计算机帐户无法连接到状态存储，请使用网络访问帐户” 
+> - 与不受信任的域或跨 Active Directory 林连接时 
+> - [应用 OS 映像](/sccm/osd/understand/task-sequence-steps#BKMK_ApplyOperatingSystemImage)步骤选项“直接从分发点访问内容” 
+> - 任务序列[高级设置](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#bkmk_prop-advanced)“首先运行其他程序” 
+> - [多播](/sccm/osd/deploy-use/use-multicast-to-deploy-windows-over-the-network)  
 
 
 

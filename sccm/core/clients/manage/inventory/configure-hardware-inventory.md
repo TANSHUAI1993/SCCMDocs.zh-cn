@@ -10,12 +10,12 @@ ms.assetid: 0e45290e-f8f7-4335-801e-570225d12c2b
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: a2051088b70c721250842548f877792adc84b38f
-ms.sourcegitcommit: 59afe6f05333d4150afaf88ab0a85a979818e3fb
+ms.openlocfilehash: 1b632a9b7b7b20bc8d6653d35b267043dde6660d
+ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36957774"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50410994"
 ---
 # <a name="how-to-configure-hardware-inventory-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中配置硬件清单
 
@@ -24,7 +24,10 @@ ms.locfileid: "36957774"
 此过程会为硬件清单配置默认客户端设置，并应用于层次结构中的所有客户端。 如果你希望这些设置仅应用于某些客户端，请创建自定义设备客户端设置，并将它分配给包含要使用硬件清单的设备的集合。 请参阅[如何在 System Center Configuration Manager 中配置客户端设置](../../../../core/clients/deploy/configure-client-settings.md)。  
 
 > [!NOTE]  
->  如果客户端设备从多组客户端设置收到硬件清单设置，则来自每组设置的硬件清单类会在客户端报告硬件清单时进行合并。  
+>  如果客户端设备从多组客户端设置收到硬件清单设置，则来自每组设置的硬件清单类会在客户端报告硬件清单时进行合并。 此外，不检查具有更高优先级的自定义客户端设置中的类并不会禁止客户端清点该类。 
+
+若要在除少数系统之外的大多数系统上禁用特定硬件清单类，需要在默认客户端设置中取消选中该类。 然后创建自定义客户端设置以启用该类，并将其部署到目标系统。
+
 
 ### <a name="to-configure-hardware-inventory"></a>若要配置硬件清单  
 

@@ -2,7 +2,7 @@
 title: 内容管理基础
 titleSuffix: Configuration Manager
 description: 在 Configuration Manager 中使用工具和选项管理部署内容。
-ms.date: 07/30/2018
+ms.date: 10/26/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5c3af900bae26262ba402ea258b8859ba07b999b
-ms.sourcegitcommit: 4f05517f7b284696a492a1b184cc5f25c5cda5e6
+ms.openlocfilehash: b73ead1492b143260d327f428db5a6183f84434c
+ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48891208"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411334"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Configuration Manager 中内容管理的基本概念
 
@@ -33,15 +33,19 @@ Configuration Manager 支持可靠的工具和选项系统来管理软件内容�
 ## <a name="accounts-used-for-content-management"></a>用于内容管理的帐户  
  以下帐户可用于内容管理：  
 
--   **网络访问帐户**：由客户端用于连接到分发点和访问内容。 默认先尝试计算机帐户。  
+#### <a name="network-access-account"></a>网络访问帐户
+由客户端用于连接到分发点和访问内容。 默认先尝试计算机帐户。  
 
-     拉取分发点还使用此帐户从远程林中的源分发点下载内容。  
+拉取分发点还使用此帐户从远程林中的源分发点下载内容。  
 
--   **包访问帐户**：默认情况下，Configuration Manager 向通用访问帐户“用户”和“管理员”授予访问分发点上的内容的权限。 但是，你可以配置其他权限来限制访问。   
+从 1806 版开始，某些方案不再需要网络访问帐户。 可使站点使用增强型 HTTP 与 Azure Active Directory 身份验证。<!--1358228--> 
 
--   **多播连接帐户**：用于 OS 部署。  
+有关详细信息，请参阅[网络访问帐户](/sccm/core/plan-design/hierarchy/accounts#network-access-account)。
 
-有关这些帐户的详细信息，请参阅[管理帐户以访问内容](/sccm/core/plan-design/hierarchy/manage-accounts-to-access-content)。
+#### <a name="package-access-account"></a>包访问帐户
+默认情况下，Configuration Manager 向通用访问帐户“用户”和“管理员”授予访问分发点上的内容的权限。 但是，你可以配置其他权限来限制访问。   
+
+有关详细信息，请参阅[包访问帐户](/sccm/core/plan-design/hierarchy/accounts#package-access-account)。
 
 
 

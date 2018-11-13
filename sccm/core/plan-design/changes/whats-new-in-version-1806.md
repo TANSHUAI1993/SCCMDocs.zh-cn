@@ -2,7 +2,7 @@
 title: 1806 版中的新增功能
 titleSuffix: Configuration Manager
 description: 获取有关 Configuration Manager Current Branch 1806 版中引入的更改和新功能的详细信息。
-ms.date: 09/19/2018
+ms.date: 10/26/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 0249dbd3-1e85-4d05-a9e5-420fbe44d850
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3b5cb217b9351f5d2491070b447d0a96efe0aa29
-ms.sourcegitcommit: 4e4b71227309bee7e9f1285971f8235c67a9c502
+ms.openlocfilehash: e5fd7c26c190407ba5e497068582704b03c71f00
+ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46533773"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411504"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 1806 版中的新增功能
 
@@ -25,17 +25,17 @@ Configuration Manager Current Branch 的 1806 更新作为控制台中更新提�
 
 始终查看安装此更新的最新清单。 有关详细信息，请参阅 [1806 的安装更新清单](/sccm/core/servers/manage/checklist-for-installing-update-1806)。 更新站点后，还可以查看[更新后清单](/sccm/core/servers/manage/checklist-for-installing-update-1806#post-update-checklist)。
 
+<!--
 > [!Important]  
-> 本文目前列出了此版本中的所有重要功能。 但是，并非所有部分都链接到更新的内容并提供有关新功能的进一步信息。 定期查看此页面以获取更新。 我们使用 [已更新] 标记标注更改。 内容最终确定后，将删除此标注。  
+> This article currently lists all significant features in this version. However, not all sections yet link to updated content with further information on the new features. Keep checking this page regularly for updates. Changes are noted with the ***[Updated]*** tag. This note will be removed when the content is finalized.  
+-->
 
-除了新增功能外，这一版还有其他变化（如缺陷修复）。 有关详细信息，请参阅 [System Center Configuration Manager Current Branch（版本 1806）的更改摘要](https://support.microsoft.com/help/4459701)。
+除了新增功能外，这一版还有其他变化（如缺陷修复）。 有关详细信息，请参阅 [Configuration Manager Current Branch（版本 1806）的更改摘要](https://support.microsoft.com/help/4459701)。
 
 若要详细了解用于 Configuration Manager 的 Windows PowerShell cmdlet 的更改，请参阅 [PowerShell 1806 发行说明](https://docs.microsoft.com/powershell/sccm/1806_release_notes?view=sccm-ps)。
 
-<!--
-The following additional updates to this release are also now available:
-- [Update rollup for System Center Configuration Manager current branch, version 1806](https://support.microsoft.com/help/4057517)
--->
+此外，现在还可以获取这一版的以下附加更新：
+- [Configuration Manager Current Branch（版本 1806）更新汇总](https://support.microsoft.com/help/4462978)
 
 
 以下各节提供有关 Configuration Manager Current Branch 1806 版中的更改和新功能的详细信息。  
@@ -46,7 +46,7 @@ The following additional updates to this release are also now available:
 
 在[已删除和已启用的项](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated)中实施支持更改之前，先了解这些更改。
 
-[已更新]截至 2018 年 8 月 14 日，混合移动设备管理功能已弃用。 有关详细信息，请参阅[什么是混合 MDM](/sccm/mdm/understand/hybrid-mobile-device-management)。<!--Intune feature 2683117-->  
+截至 2018 年 8 月 14 日，混合移动设备管理功能已弃用。 有关详细信息，请参阅[什么是混合 MDM](/sccm/mdm/understand/hybrid-mobile-device-management)。<!--Intune feature 2683117-->  
 
 <!--
 Version 1806 drops support for the following products:
@@ -89,8 +89,7 @@ Version 1806 drops support for the following products:
 
 
 ### <a name="exclude-active-directory-containers-from-discovery"></a>从发现中排除 Active Directory 容器
-<!--1358143-->
-[已更新] 若要减少发现的对象数，请从 Active Directory 系统发现中排除特定容器。 
+<!--1358143--> 若要减少发现的对象数，请从 Active Directory 系统发现中排除特定容器。 
 
 有关详细信息，请参阅[配置 Active Directory 系统发现](/sccm/core/servers/deploy/configure/configure-discovery-methods#bkmk_config-adsd)。
 
@@ -133,8 +132,7 @@ Version 1806 drops support for the following products:
 
 
 ### <a name="boundary-group-options-for-peer-downloads"></a>对等下载适用的边界组选项
-<!--1356193-->
-[已更新]边界组现在包含更多设置，可以让你更好地控制环境中的内容分发。 此版本添加了以下选项：  
+<!--1356193-->边界组现在包含其他设置，可以让你更好地控制环境中的内容分发。 此版本添加了以下选项：  
 
 - **允许在此边界组中进行对等下载**：管理点向客户端提供包含对等源的内容位置的列表。 此设置还会影响交付优化组 ID 的使用。  
 
@@ -144,8 +142,7 @@ Version 1806 drops support for the following products:
 
 
 ### <a name="improvement-to-peer-cache-source-location-status"></a>改进对等缓存源位置状态
-<!--SCCMDocs issue 850-->
- ***[已更新]*** Configuration Manager 能更有效地确定对等缓存源是否已漫游到其他位置。 此行为可确保管理点将其作为内容源提供给新位置的客户端，而不是旧位置的客户端。 如果将对等缓存功能与漫游的对等缓存源一起使用，则在将站点更新到版本 1806 之后，还会将所有对等缓存源更新为最新的客户端版本。 在至少将这些对等缓存源更新到版本 1806 后，管理点才会将它们包含在内容位置列表中。
+<!--SCCMDocs issue 850--> Configuration Manager 能更有效地确定对等缓存源是否已漫游到其他位置。 此行为可确保管理点将其作为内容源提供给新位置的客户端，而不是旧位置的客户端。 如果将对等缓存功能与漫游的对等缓存源一起使用，则在将站点更新到版本 1806 之后，还会将所有对等缓存源更新为最新的客户端版本。 在至少将这些对等缓存源更新到版本 1806 后，管理点才会将它们包含在内容位置列表中。
 
 有关详细信息，请参阅[对等缓存的要求](/sccm/core/plan-design/hierarchy/client-peer-cache#requirements)。
 
@@ -168,15 +165,13 @@ Version 1806 drops support for the following products:
 
 此版本包括对客户端与站点系统之间的通信方式的改进。 在站点属性上，选择“客户端计算机通信”选项卡中的“HTTPS 或 HTTP”选项，然后启用新选项以“将 Configuration Manager 生成的证书用于 HTTP 站点系统”。 此功能是[预发布功能](/sccm/core/servers/manage/pre-release-features)。
 
-此选项支持以下主要方案：  
-
-- **HTTP 管理点的客户端**<!--1356889-->：[加入 Azure AD 的设备](https://docs.microsoft.com/azure/active-directory/device-management-introduction#azure-ad-joined-devices)可以通过云管理网关 (CMG) 与为 HTTP 配置的管理点进行通信。 站点服务器为管理点生成证书，使其能够通过安全通道进行通信。   
-
-- **HTTP 分发点的客户端**<!--1358228-->：工作组或加入 Azure AD 的客户端可以通过安全通道从为 HTTP 配置的分发点下载内容。   
+有关详细信息，请参阅[增强型 HTTP](/sccm/core/plan-design/hierarchy/enhanced-http)。
 
 
 ### <a name="azure-ad-device-identity"></a>Azure AD 设备标识 
 <!--1358460--> 没有 Azure AD 用户登录的[加入 Azure AD 的设备](https://docs.microsoft.com/azure/active-directory/device-management-introduction#azure-ad-joined-devices)或[混合 Azure AD 设备](https://docs.microsoft.com/azure/active-directory/device-management-introduction#hybrid-azure-ad-joined-devices)可以安全地与它的分配站点进行通信。 基于云的设备标识现只需使用 CMG 和管理点进行身份验证。  
+
+有关详细信息，请参阅[增强型 HTTP](/sccm/core/plan-design/hierarchy/enhanced-http)。
 
 
 ### <a name="cmtrace-installed-with-client"></a>与客户端一起安装的 CMTrace
@@ -186,8 +181,7 @@ Version 1806 drops support for the following products:
 
 
 ### <a name="cloud-management-dashboard"></a>云管理仪表板
-<!--1358461-->
- ***[已更新]*** 新的云管理仪表板为云管理网关 (CMG) 使用情况提供一个集中视图。 通过 Azure AD 载入网站时，它还显示有关云用户和设备的数据。   
+<!--1358461--> 新的云管理仪表板为云管理网关 (CMG) 使用情况提供一个集中视图。 通过 Azure AD 载入网站时，它还显示有关云用户和设备的数据。   
 
 此功能还包括用于实时验证的 CMG 连接分析器，为疑难解答提供帮助。 控制台中的实用工具检查该服务的当前状态，以及通过 CMG 连接点通往任何允许 CMG 流量的管理点的通信通道。 
 
@@ -201,14 +195,12 @@ Version 1806 drops support for the following products:
 1806 版包含对云管理网关 (CMG) 的以下改进：
 
 #### <a name="simplified-client-bootstrap-command-line"></a>简化了客户端启动命令行
-<!--1358215-->
- ***[已更新]*** 通过 CMG 在 Internet 上安装 Configuration Manager 客户端时，命令行现在需要的属性更少了。 在准备共同管理时，此次改进减少了 Microsoft Intune 中使用的命令行的大小。 
+<!--1358215--> 通过 CMG 在 Internet 上安装 Configuration Manager 客户端时，命令行现在需要的属性更少。 在准备共同管理时，此次改进减少了 Microsoft Intune 中使用的命令行的大小。 
 
 有关详细信息，请参阅[准备 Windows 10 设备进行共同管理](/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client)。
 
 #### <a name="download-content-from-a-cmg"></a>从 CMG 下载内容
-<!--1358651-->
- ***[已更新]*** 以前需要将云分发点和 CMG 作为单独的角色进行部署。 CMG 现在还可以向客户提供内容。 此功能减少了所需的证书和 Azure VM 的成本。 
+<!--1358651--> 以前，必须将云分发点和 CMG 作为单独的角色进行部署。 CMG 现在还可以向客户提供内容。 此功能减少了所需的证书和 Azure VM 的成本。 
 
 有关详细信息，请参阅[修改 CMG](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#modify-a-cmg)。
 
@@ -301,8 +293,7 @@ Version 1806 drops support for the following products:
 
 
 ### <a name="package-conversion-manager"></a>包转换管理器 
-<!--1357861-->
-[已更新] 包转换管理器现在是一个集成工具，你可以通过该工具将旧的包转换为 Configuration Manager Current Branch 应用程序。 然后，可以使用应用程序的功能，如依赖关系、要求规则和用户设备相关性。
+<!--1357861--> 包转换管理器现在是一个集成工具，可通过它将旧的包转换为 Configuration Manager Current Branch 应用程序。 然后，可以使用应用程序的功能，如依赖关系、要求规则和用户设备相关性。
 
 有关详细信息，请参阅[包转换管理器](/sccm/apps/pcm/package-conversion-manager)。
 
@@ -350,36 +341,38 @@ Version 1806 drops support for the following products:
 
 这些任务序列可以用于操作系统部署或者是自定义的。 它还支持工作组计算机。
 
+有关详细信息，请参阅[任务序列和网络访问帐户](/sccm/osd/plan-design/planning-considerations-for-automating-tasks#BKMK_TSNetworkAccessAccount)。
+
 
 ### <a name="other-improvements-to-os-deployment"></a>对 OS 部署的其他改进
 
 #### <a name="mask-sensitive-data-stored-in-task-sequence-variables"></a>屏蔽任务序列变量中存储的敏感数据
- <!--1358330--> [已更新] 在“设置任务序列变量”步骤中，选择新选项“不显示此值”。 
+ <!--1358330--> 在**设置任务序列变量**步骤中，选择新选项“不显示此值”。 
 
  有关详细信息，请参阅[设置任务序列变量](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable)。 
 
 #### <a name="mask-program-name-during-run-command-step-of-a-task-sequence"></a>在执行任务序列的“运行命令步骤”期间屏蔽程序名称
- <!--1358493--> [已更新] 若要禁止显示或记录潜在的敏感数据，请配置任务序列变量“OSDDoNotLogCommand”。  
+ <!--1358493--> 若要禁止显示或记录潜在的敏感数据，请配置任务序列变量“OSDDoNotLogCommand”。  
 
  有关详细信息，请参阅[任务序列变量](/sccm/osd/understand/task-sequence-variables#OSDDoNotLogCommand)。 
 
 #### <a name="task-sequence-variable-for-dism-parameters-when-installing-drivers"></a>安装驱动程序时 DISM 参数的任务序列变量
- <!--516679/2840016--> [已更新] 要为 DISM 指定其他命令行参数，请使用新的任务序列变量“OSDInstallDriversAdditionalOptions”。 
+ <!--516679/2840016--> 要为 DISM 指定其他命令行参数，请使用新的任务序列变量 OSDInstallDriversAdditionalOptions。 
 
  有关详细信息，请参阅[任务序列变量](/sccm/osd/understand/task-sequence-variables#OSDInstallDriversAdditionalOptions)。 
 
 #### <a name="option-to-use-full-disk-encryption"></a>“使用全磁盘加密”选项
- <!--SCCMDocs-pr issue 2671--> [已更新]“启用 BitLocker”和“预配 BitLocker”步骤现在都包含“使用全磁盘加密”选项。 默认情况下，这些步骤会加密驱动器上的已用空间。 建议使用此默认行为，因为它更加快速高效。 
+ <!--SCCMDocs-pr issue 2671--> **启用 BitLocker** 和**预配 BitLocker** 步骤现在都包含“使用全磁盘加密”选项。 默认情况下，这些步骤会加密驱动器上的已用空间。 建议使用此默认行为，因为它更加快速高效。 
 
  有关详细信息，请参阅[启用 BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_EnableBitLocker) 和[预配 BitLocker](/sccm/osd/understand/task-sequence-steps#BKMK_PreProvisionBitLocker)。 
 
 #### <a name="client-provisioning-mode-isnt-enabled-with-windows-10-upgrade-compatibility-scan"></a>未对 Windows 10 升级兼容性扫描启用客户端预配模式
- <!--SCCMDocs-pr issue 2812--> [已更新] 现在当你启用“在不启动升级的情况下执行 Windows 安装程序兼容性扫描”选项，“升级操作系统”任务序列步骤不会使配置管理器客户端进入预配模式。
+ <!--SCCMDocs-pr issue 2812--> 现在，启用“在不启动升级的情况下执行 Windows 安装程序兼容性扫描”选项时，“升级操作系统”任务序列步骤不会使配置管理器客户端进入预配模式。
 
  有关详细信息，请参阅[升级操作系统](/sccm/osd/understand/task-sequence-steps#BKMK_UpgradeOS)
 
 #### <a name="revised-documentation-for-task-sequence-variables"></a>任务序列变量的修订文档
- [已更新] 两篇新文章现在都可用于了解任务序列变量：  
+ 现在，提供了两篇新文章用于了解任务序列变量：  
 
  - [如何使用任务序列变量](/sccm/osd/understand/using-task-sequence-variables)是一篇新文章，介绍不同类型的变量、设置变量的方法，以及如何访问变量。  
 
@@ -394,8 +387,7 @@ Version 1806 drops support for the following products:
 
 
 ### <a name="software-center-infrastructure-improvements"></a>软件中心基础结构的改进
-<!--1358309-->
-[已更新] 不再需要应用程序目录角色，即可在软件中心显示用户可用的应用程序。 此项更改有助于减少向用户交付应用程序所需的服务器基础结构。 软件中心现在依靠管理点来获取此信息，通过将更大的环境分配给[边界组](/sccm/core/servers/deploy/configure/boundary-groups#management-points)来帮助它们更好地扩展。
+<!--1358309--> 不再需要应用程序目录角色，即可在软件中心显示用户可用的应用程序。 此项更改有助于减少向用户交付应用程序所需的服务器基础结构。 软件中心现在依靠管理点来获取此信息，通过将更大的环境分配给[边界组](/sccm/core/servers/deploy/configure/boundary-groups#management-points)来帮助它们更好地扩展。
 
 有关详细信息，请参阅[配置软件中心](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex)  
 
