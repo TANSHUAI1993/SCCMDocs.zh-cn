@@ -10,12 +10,12 @@ ms.assetid: 6e4964c5-43cb-4372-9a89-b62ae6a4775c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e0051b00f9c9540291db94c79a81c600c87ad59c
-ms.sourcegitcommit: 4f05517f7b284696a492a1b184cc5f25c5cda5e6
+ms.openlocfilehash: e88d40317fe0c1385d78ab7b5919f0f766254598
+ms.sourcegitcommit: 303d826f45c8fd9a05d8883afc1ca645e56bd576
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48891191"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51269206"
 ---
 # <a name="use-the-service-connection-tool-for-system-center-configuration-manager"></a>使用适用于 System Center Configuration Manager 的服务连接工具
 
@@ -84,7 +84,7 @@ ms.locfileid: "48891191"
 
 2.  **连接**：此步骤中，在连接到 Internet 的远程计算机上运行该工具，以便上传使用情况数据和后续下载更新。  
 
-3.  **导入**：此步骤在托管服务连接点的计算机上运行。 工具运行时，导入下载的内容并将其添加到站点，然后你就可以从 Configuration Manager 控制台查看和安装这些更新。  
+3.  **导入**：此步骤在托管服务连接点的计算机上运行。 工具运行时，导入下载的更新并将其添加到站点，然后你就可以从 Configuration Manager 控制台查看和安装这些更新。  
 
 从版本 1606 开始，当连接到 Microsoft 时，可以一次性上传多个 .cab 文件（每个文件来自不同的层次结构），并指定代理服务器和代理服务器的用户。   
 
