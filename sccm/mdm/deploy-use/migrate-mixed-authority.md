@@ -1,36 +1,36 @@
 ---
-title: 更改特定用户的 MDM 机构（混合 MDM 机构）
+title: 更改 MDM 机构
 titleSuffix: Configuration Manager
-description: 了解如何将部分用户的 MDM 机构从混合 MDM 更改为 Intune 独立版。
+description: 了解如何将 MDM 机构从混合 MDM 更改为 Intune 独立版的特定用户 （混合 MDM 机构）。
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 08/14/2018
+ms.date: 11/14/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: 6f0201d7-5714-4ba0-b2bf-d1acd0203e9a
-ms.openlocfilehash: c0037c9aaffe1646415b6d62867c9065682710f9
-ms.sourcegitcommit: 7eebd112a9862bf98359c1914bb0c86affc5dbc0
-ms.translationtype: HT
+ms.openlocfilehash: 79cf4c2ec217a245bb5c4abbad40aad7188e0ac0
+ms.sourcegitcommit: 3772ece83823714b2aae46ec20523cc094701760
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590265"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51688460"
 ---
 # <a name="change-the-mdm-authority-for-specific-users-mixed-mdm-authority"></a>更改特定用户的 MDM 机构（混合 MDM 机构） 
 
-*适用范围：System Center Configuration Manager (Current Branch)*    
+*适用于：System Center Configuration Manager (Current Branch)*    
 
-若要在同一租户中配置混合 MDM 机构，可以选择部分用户在 Intune 中管理，其他用户则由混合 MDM 管理（Intune 与 Configuration Manager 集成）。 本文介绍如何开始将用户移至 Intune 独立版，并假定你已完成以下步骤：  
+您可以在同一租户中配置混合的 MDM 机构。 管理在 Microsoft Intune 和其他一些用户使用混合 mdm。 此文提供有关如何开始将用户移至 Intune 独立版的信息。 它假定你已完成以下步骤：  
 
 - 使用数据导入工具[将 Configuration Manager 对象导入 Intune](migrate-import-data.md)（可选）。  
 
-- [准备适用于用户迁移的 Intune](migrate-prepare-intune.md) 以确保在迁移用户及其设备后仍能继续对其进行管理。
+- [准备适用于用户迁移的 Intune](migrate-prepare-intune.md) 以确保在迁移用户及其设备后仍能继续对其进行管理。  
 
 > [!Note]    
-> 若决定要对租户执行将删除所有策略、应用和设备注册的完全重置，请致电支持部门寻求帮助。
+> 完全重置你的租户中删除所有策略、 应用和设备注册。 如果你决定你想要执行此过程，致电支持人员以获得帮助。  
 
-已迁移的用户及其设备将在 Intune 中管理，其他设备则继续在 Configuration Manager 中管理。 首先以一小组测试用户开始，验证一切是否按预期进行。 接着会逐渐迁移其他用户组，直到准备好将租户级 MDM 机构从 Configuration Manager 切换至 Intune 独立版。 
+管理已迁移的用户及其设备在 Intune 中。 继续管理 Configuration Manager 中的其他设备。 若要验证一切按预期方式工作，启动与小测试组用户。 然后逐渐迁移其他用户组。 在准备就绪时，为 Intune 独立版将租户级 MDM 机构从 Configuration Manager 切换。 
 
 > [!Important]  
 > 自 2018 年 8 月 13 日起，混合移动设备管理[功能停用](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)。 有关详细信息，请参阅[什么是混合 MDM](/sccm/mdm/understand/hybrid-mobile-device-management)。<!--Intune feature 2683117-->  
@@ -54,6 +54,9 @@ ms.locfileid: "42590265"
 
     - [设备注册计划](/sccm/mdm/deploy-use/ios-device-enrollment-program-for-hybrid)  
 
+        > [!Note]  
+        > 不需要重新创建你的 DEP 令牌或从 Configuration Manager 中删除它。 它会自动迁移到 Intune 24 小时后你租户的 MDM 机构从 Configuration Manager 更改为 Intune。 此更改是迁移的最后一步。 （如果在 24 小时内不会迁移 DEP 令牌，请联系 Microsoft 支持部门以获得帮助。）  
+
     - 注册配置文件  
 
     - [Volume Purchase Program (VPP) 许可证](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps)  
@@ -74,16 +77,16 @@ ms.locfileid: "42590265"
 
       
   > [!Important]    
-  > 使用 Configuration Manager 控制台继续编辑租户级策略。 [更改租户级 MDM 机构](change-mdm-authority.md)为 Intune 后，将在 Azure 上 Intune 中管理这些策略。  
+  > 使用 Configuration Manager 控制台继续编辑租户级策略。 检查完[更改租户级 MDM 机构](/sccm/mdm/deploy-use/change-mdm-authority)迁移至 Intune，已自动管理 Configuration Manager 中的租户级策略迁移到 Azure 上的 Intune。 此类策略的一个示例是 Apple Push Notification 服务 (APNs) 证书。<!--SCCMDocs issue #971-->  
 
 -   如果使用代码签名证书，建议以分阶段的方式迁移用户。 在移动设备迁移后，证书颁发机构可以请求新的证书。 通过使用分阶段的方法来迁移用户（及其设备），可限制同时进行证书颁发机构请求的数量。  
 
-- 不要迁移已在 Configuration Manager 中添加为设备注册管理员 (DEM) 的任何用户帐户。 接下来，将租户级 MDM 机构更改为 Intune 后，这些用户帐户将准确迁移。 如果在租户级 MDM 机构更改前迁移设备注册管理员用户帐户，则必须在 Azure 上 Intune 中手动将该用户添加为设备注册管理员。 但是使用设备注册管理员注册的设备不会成功迁移。 请致电支持部门来迁移这些设备。 有关详细信息，请参阅[添加设备注册管理器](https://docs.microsoft.com/en-us/intune/device-enrollment-manager-enroll#add-a-device-enrollment-manager)。  
+- 不要迁移已在 Configuration Manager 中添加为设备注册管理员 (DEM) 的任何用户帐户。 接下来，将租户级 MDM 机构更改为 Intune 后，这些用户帐户将准确迁移。 如果执行迁移之前租户级 MDM 机构更改的 DEM 用户帐户，必须手动将用户添加为 Azure 上 Intune 中 DEM。 但是，通过使用 DEM 注册的设备不会成功迁移。 请致电支持部门来迁移这些设备。 有关详细信息，请参阅[添加设备注册管理器](https://docs.microsoft.com/intune/device-enrollment-manager-enroll#add-a-device-enrollment-manager)。  
 
     > [!Note]  
     > 在混合机构模式下，不要通过从 ConfigMgr 云集合中删除帐户来将它们移动到 Intune。 如果这样做，用户将成为标准用户，并且不能注册 15 台以上的设备。 相反，一旦完全为租户切换 MDM 机构，就迁移这些用户及其设备。<!--Intune bug 2174210-->  
 
-- 使用设备注册管理员注册的设备和无[用户关联](/sccm/mdm/deploy-use/user-affinity-for-hybrid-managed-devices)的设备不会自动迁移至新的 MDM 机构。 若要切换这些 MDM 设备的管理机构，请参阅[迁移不具备用户关联的设备](#migrate-devices-without-user-affinity)。  
+- 通过使用 DEM 和设备，无需注册设备[用户相关性](/sccm/mdm/deploy-use/user-affinity-for-hybrid-managed-devices)不会自动迁移到新的 MDM 机构。 若要切换这些 MDM 设备的管理机构，请参阅[迁移不具备用户关联的设备](#migrate-devices-without-user-affinity)。  
 
 
 
@@ -95,16 +98,16 @@ ms.locfileid: "42590265"
 
 ## <a name="migrate-a-test-group-of-users-to-intune-standalone"></a>将测试用户组迁移至 Intune 独立版
 
-集合中与 Intune 订阅关联的用户的设备可以在混合 MDM 中注册。 从集合删除用户时，如果该用户具备分配的 Intune 许可证，他们的注册设备将迁移至 Intune 独立版。 如果还未对计划迁移的用户分配许可证，请参阅[将 Intune 许可证分配给用户帐户](https://docs.microsoft.com/intune/licenses-assign)。 在 Intune 订阅的集合中，可以从主集合中排除用户集合，以迁移已排除集合中的用户。 
+集合中与 Intune 订阅关联的用户的设备可以在混合 MDM 中注册。 如果用户具有分配的 Intune 许可证，可从集合中删除用户，当其已注册的设备迁移到 Intune 独立版。 你还没有已许可证分配给用户，如果你打算迁移，请参阅[分配 Intune 许可证分配给用户帐户](https://docs.microsoft.com/intune/licenses-assign)。 在 Intune 订阅的集合中，可以从主集合中排除用户集合，以迁移已排除集合中的用户。 
 
 在下面的示例中，“混合用户”集合包含“所有用户”集合中的所有成员。 此配置允许任何用户将设备注册到混合 MDM。 若要将用户迁移至 Intune 独立版，请选择“排除集合”并添加具有要迁移的用户的集合。 当准备好迁移更多用户时，添加其他包含这些用户的排除集合。 
 
 ![排除集合](../media/migrate-excludecollections.png)
 
 > [!Note]  
-> 如果为 Intune 订阅选择了“所有用户”集合，就不能对排除集合添加规则。 请基于“所有用户”集合创建一个新集合，验证此集合是否包含预期的用户，然后编辑 Intune 订阅以使用这个新集合。 可以从新集合中排除用户集合以迁移用户。 
+> 当你具有**所有用户**为 Intune 订阅选择的集合，不允许你将添加一个规则以排除集合。 创建新的集合基于**所有用户**集合。 验证集合包含预期的用户。 然后编辑 Intune 订阅以使用新的集合。 可以从新集合中排除用户集合以迁移用户。  
 
-若要将测试用户组迁移至 Intune，请创建包含待迁移用户的用户集合，然后从用于 Intune 订阅的集合中排除该用户集合。   
+若要将测试用户组迁移到 Intune，创建用户集合，其中包含要迁移的用户。 然后从用于 Intune 订阅集合中排除的用户集合。   
 
 下图概述了用户迁移工作原理。
 
@@ -130,7 +133,7 @@ ms.locfileid: "42590265"
 
 ## <a name="migrate-additional-users"></a>迁移其他用户
 
-验证 Intune 独立版按预期正常运行后，开始迁移其他用户。 如同创建测试用户集合一样，创建包含要迁移的用户的集合，并从 Intune 订阅关联的集合中排除这些集合。 有关详细信息，请参阅[与 Intune 订阅关联的集合](#collection-associated-with-your-intune-subscription)。
+验证 Intune 独立版按预期正常运行后，开始迁移其他用户。 就像使用一组测试用户创建集合，创建包含要迁移的用户的集合。 从与 Intune 订阅关联的集合中排除这些集合。 有关详细信息，请参阅[与 Intune 订阅关联的集合](#collection-associated-with-your-intune-subscription)。
 
 
 
@@ -138,9 +141,9 @@ ms.locfileid: "42590265"
 
 使用设备注册管理员注册的设备和无[用户关联](/sccm/mdm/deploy-use/user-affinity-for-hybrid-managed-devices)的设备不会自动迁移至新的 MDM 机构。 可以在以下方案中，使用 Switch-MdmDeviceAuthority PowerShell cmdlet 来切换 Intune 和 Configuration Manager 管理机构： 
 
--   方案 1：使用 Switch-MdmDeviceAuthority cmdlet 迁移所选的设备并验证是否可以在 Azure 中使用 Intune 来管理它们。 然后，准备就绪后，[将租户的 MDM 机构更改为 Intune](migrate-change-mdm-authority.md) 以完成设备迁移。  
+-   方案 1：使用*Switch-mdmdeviceauthority* cmdlet 迁移所选的设备，并验证可以在 Azure 中使用 Intune 管理它们。 然后，准备就绪后，[将租户的 MDM 机构更改为 Intune](migrate-change-mdm-authority.md) 以完成设备迁移。  
 
--   方案 2：当准备好将租户的 MDM 机构更改为 Intune 时，执行以下操作来迁移无用户关联的设备：  
+-   方案 2：如果你已准备好将租户的 MDM 机构更改为 Intune，执行以下操作来迁移无用户关联设备：  
 
     - 使用 cmdlet 来更改无用户关联的设备的 MDM 机构，然后[将租户的 MDM 机构更改为 Intune](migrate-change-mdm-authority.md)。     
 
@@ -150,8 +153,8 @@ ms.locfileid: "42590265"
 
 ### <a name="cmdlet-switch-mdmdeviceauthority"></a>Cmdlet Switch-MdmDeviceAuthority
 
-#### <a name="synopsis"></a>简述
-该 cmdlet 可切换无用户关联的 MDM 设备（例如，批量注册的设备）的管理机构。 在你运行 cmdlet 时，cmdlet 将为基于管理机构的指定设备切换 Intune 和 Configuration Manager 管理机构。
+#### <a name="synopsis"></a>摘要
+该 cmdlet 可切换无用户关联的 MDM 设备（例如，批量注册的设备）的管理机构。 该 cmdlet 将切换 Intune 和 Configuration Manager 管理机构。 它将切换为基于管理机构，当你运行 cmdlet 时指定的设备。
 
 ### <a name="syntax"></a>语法
 `Switch-MdmDeviceAuthority -DeviceIds <Guid[]> [-Credential <PSCredential>] [-Force] [-LogFilePath <string>] [-LoggingLevel {Off | Critical | Error | Warning | Information | Verbose | ActivityTracing | All}] [-Confirm] [-WhatIf] [<CommonParameters>]`
@@ -159,7 +162,7 @@ ms.locfileid: "42590265"
 
 ### <a name="parameters"></a>参数
 #### `-Credential <PSCredential>`
-切换设备管理权限时使用的 Azure AD 用户帐户的 PowerShell 凭据对象。 如果未指定参数，则会提示用户输入凭据。 此用户帐户的目录角色应为“全局管理员”或“受限管理员”，管理角色为“Intune 管理员”。
+切换设备管理权限时使用的 Azure AD 用户帐户的 PowerShell 凭据对象。 如果未指定参数，被提示用户提供凭据。 此用户帐户的目录角色应为“全局管理员”或“受限管理员”，管理角色为“Intune 管理员”。
 
 #### `-DeviceIds <Guid[]>`
 需要切换其管理机构的 MDM 设备的 ID。 设备 ID 是由 Configuration Manager 控制台显示的设备唯一标识符。
@@ -180,18 +183,18 @@ ms.locfileid: "42590265"
   - 严重
   - 错误
   - 信息
-  - Off
+  - 关闭
   - 详细
   - 警告
  
 #### `-Confirm [<SwitchParameter>]`
-执行命令之前提示您确认。
+将提示您在执行命令前进行确认。
  
 #### `-WhatIf [<SwitchParameter>]`
-描述如果执行命令会发生什么情况，但不实际执行该命令。
+描述如果执行该命令而不实际执行该命令会发生什么情况。
  
 #### `<CommonParameters>`
-此 cmdlet 支持以下常见参数：Verbose、Debug、-ErrorAction、ErrorVariable、WarningAction、WarningVariable、OutBuffer、PipelineVariable 和 OutVariable。 有关详细信息，请参阅 [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216)。
+此 cmdlet 支持以下公共参数：Verbose、 Debug、 ErrorAction、 ErrorVariable、 WarningAction、 WarningVariable、 OutBuffer、 PipelineVariable 和 OutVariable。 有关详细信息，请参阅 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216)。
 
 ### <a name="example-1"></a>示例 1
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: fdf05118-162a-411e-b72e-386b9dc9a5e1
-ms.openlocfilehash: 1c5377096ef67057f3f38bb71fb611b7993ecb6b
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: ffe1546e3d7561a0bbda787ef6b1aaeac6e8d2e0
+ms.sourcegitcommit: 2504617dc4db90e205327d06cab32f050e88dbf2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353100"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51505119"
 ---
 # <a name="prerequisites-for-software-updates-in-system-center-configuration-manager"></a>System Center Configuration Manager 中软件更新的先决条件
 
@@ -33,8 +33,10 @@ ms.locfileid: "32353100"
  软件更新同步和在客户端上进行的软件更新适用性扫描都需要使用 Windows Server Update Services (WSUS)。 在创建软件更新点角色之前，必须安装 WSUS 服务器。 软件更新点支持以下版本的 WSUS：  
 
 -   WSUS 10.0（Windows Server 2016 中的角色）
--   WSUS 6.2 和 6.3（Windows Server 2012 和 Windows Server 2012 R2 中的角色）  
--   WSUS 3.2（Windows Server 2008 R2 中的角色）  
+-   WSUS 6.2 和 6.3（Windows Server 2012 和 Windows Server 2012 R2 中的角色）
+
+>[!NOTE]
+>-   从版本 1702 开始，软件更新点角色不支持 Windows Server 2008 R2。 有关详细信息，请参阅[站点系统服务器支持的操作系统](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers#bkmk_2008r2sp1)。  
 
 如果在一个站点上有多个软件更新点，请确保它们全都运行相同版本的 WSUS。  
 

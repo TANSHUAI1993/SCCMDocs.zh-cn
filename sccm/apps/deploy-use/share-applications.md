@@ -10,12 +10,12 @@ ms.assetid: 2629c376-ec43-4f0e-a78b-4223cc9302bf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 01dd24b091287c24d099ea0eddb9f267de54a277
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 309a369358789e1948ab7b17ddb0e3619ae1b129
+ms.sourcegitcommit: 2504617dc4db90e205327d06cab32f050e88dbf2
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32332590"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51505153"
 ---
 # <a name="share-an-application-from-software-center"></a>从软件中心共享应用程序
 
@@ -26,4 +26,9 @@ ms.locfileid: "32332590"
 1. 选择“应用程序”，然后选择相应的应用程序。
 2. 单击 ![Share](media/share15.png)“共享”按钮。
 3. 单击窗口中的“复制”。
-4. 将 URL 粘贴到电子邮件中，以共享此应用程序。
+4. 将 URL 粘贴到电子邮件中，以共享此应用程序。  
+
+> [!TIP]  
+>  要在 Outlook 电子邮件中创建链接，请按下“Ctrl” + “K”，然后粘贴该 URL。  
+>  
+> 默认情况下，Outlook 会在收件人单击链接时显示软件中心协议的安全警报。 可通过向注册表添加可信协议密钥防止在环境中出现这种情况。 例如 `HKCU\Software\Policies\Microsoft\Office\16.0\Common\Security\Trusted Protocols\All Applications\softwarecenter:`  

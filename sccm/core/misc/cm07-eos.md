@@ -2,7 +2,7 @@
 title: 结束支持
 titleSuffix: Configuration Manager 2007
 description: 将于 2019 年 7 月 9 日结束对 System Center Configuration Manager 2007 和 Forefront Endpoint Protection 2010 的支持。
-ms.date: 09/19/2018
+ms.date: 11/05/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 robots: noindex,nofollow
-ms.openlocfilehash: c142b77ed20bb2b77f75a24bf1c6058151d950ac
-ms.sourcegitcommit: d020aee900c12c1f71cf402774c3befb435c8d9f
+ms.openlocfilehash: 04679fc70ffa326066f5755646193c8d0072f989
+ms.sourcegitcommit: 1f8731ed8f0308cb2cb576722adb0821a366e9ce
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46493838"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51223613"
 ---
 # <a name="product-end-of-support"></a>产品支持结束
 
@@ -43,6 +43,6 @@ Microsoft 推荐以下迁移方案：
 - [Configuration Manager 支持博客文章](https://blogs.technet.microsoft.com/configurationmgr/2018/03/30/configuration-manager-2007-approaching-end-of-support-what-you-need-to-know/)  
 - [Configuration Manager Current Branch简介](/sccm/core/understand/introduction)  
 - [有关如何迁移到 Configuration Manager Current Branch 的文档](/sccm/core/migration/migrate-data-between-hierarchies)  
-
+    - 本文还提供了相关视频，讨论并演示常见迁移方案。
 
 依然可在 [Microsoft TechNet](https://technet.microsoft.com/library/bb735860.aspx) 上使用 Configuration Manager 2007 文档库。

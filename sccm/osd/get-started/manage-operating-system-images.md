@@ -10,12 +10,12 @@ ms.assetid: fab13949-371c-4a4c-978e-471db1e54966
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 82909cced6783f73608f155e64b7dd30b4087b06
-ms.sourcegitcommit: a52255da16c9f8b0b60a6c299a369347c7e01bef
+ms.openlocfilehash: d442955d62989d3bbc7b32e0aba122a0853a3f14
+ms.sourcegitcommit: 1f8731ed8f0308cb2cb576722adb0821a366e9ce
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49989155"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51223664"
 ---
 # <a name="manage-operating-system-images-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 管理操作系统映像
 
@@ -35,9 +35,9 @@ Configuration Manager 中的操作系统映像以 Windows 映像 (WIM) 文件格
 
 -   **缺点**  
 
-    -   操作系统安装可能需要更多时间，因为操作系统安装完成后将进行应用安装和其他配置。  
+    -   操作系统安装可能需要更多时间，因为操作系统安装完成后将进行应用安装和其他配置。
 
- **捕获的映像**  
+**捕获的映像**  
 
  若要创建自定义操作系统映像，则构建具有所需的操作系统的引用计算机，并安装应用、配置设置等。然后，从引用计算机捕获操作系统映像以创建 WIM 文件。 你可以手动构建引用计算机，或者可以使用任务序列自动执行部分或所有构建步骤。   
 有关创建自定义操作系统映像的步骤，请参阅[自定义操作系统映像](customize-operating-system-images.md)。  
@@ -48,8 +48,9 @@ Configuration Manager 中的操作系统映像以 Windows 映像 (WIM) 文件格
 
 -   **缺点**  
 
-    -   操作系统安装可能需要更多时间，因为操作系统安装完成后将进行应用安装和其他配置。  
-
+    -   图像大小可能大于默认图像。
+    
+    -   在应用程序和工具需要更新时必须创建新图像。
 
 ##  <a name="BKMK_AddOSImages"></a>将操作系统映像添加到 Configuration Manager  
  在可以使用操作系统映像之前，必须先将映像添加到 Configuration Manager 站点。 使用以下过程将操作系统映像添加到站点。  

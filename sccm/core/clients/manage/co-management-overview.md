@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: a99983583aa8c21f8a987f3e20550752e7b77ba4
-ms.sourcegitcommit: 83806460b6fd88a1d08a2c97f4d72b9e36e04102
+ms.openlocfilehash: 1791217e22e2bcc6d5fd2603abee3aaced816afe
+ms.sourcegitcommit: 1f8731ed8f0308cb2cb576722adb0821a366e9ce
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39495554"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51223732"
 ---
 # <a name="co-management-for-windows-10-devices"></a>适用于 Windows 10 设备的共同管理    
 
@@ -72,7 +72,7 @@ ms.locfileid: "39495554"
 
  - Windows 10 设备必须加入 Azure AD。 它们可以是以下任一类型：  
 
-     - [已加入混合 Azure AD](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)，其中设备同时加入 Azure AD 和本地域  
+     - [混合 Azure AD 加入](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)，其中设备已加入到本地 Active Directory 且使用 Azure Active Directory 注册。
 
      - 仅限已加入 Azure AD。 （此类型有时称为“已加入云域”）<!--SCCMDocs issue 605-->
 
