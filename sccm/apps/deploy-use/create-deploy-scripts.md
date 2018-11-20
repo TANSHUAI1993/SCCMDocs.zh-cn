@@ -10,12 +10,12 @@ ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4435802ad67857ad9f79168f96aa046eae8f7097
-ms.sourcegitcommit: 471cf13bc1ff7543c3d32465df9eecff9aaaa5be
+ms.openlocfilehash: c9f3bc1b85ee9b8fbd8af47e22a826fe8d88377d
+ms.sourcegitcommit: c2c44329f1f9a2e6c14095360b4fc4aafabc27f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753643"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694954"
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>从 Configuration Manager 控制台创建并运行 PowerShell 脚本
 
@@ -226,7 +226,7 @@ Param(
 [Parameter(Mandatory=$True)]
 [string]$FolderName,
 [Parameter(Mandatory=$True)]
-[string]$FileName,
+[string]$FileName
 )
 
 New-Item $FolderName -type directory

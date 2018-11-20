@@ -1,8 +1,8 @@
 ---
 title: Endpoint Protection
 titleSuffix: Configuration Manager
-description: 学习如何为 Configuration Manager 层次结构中的客户端计算机管理反恶意软件策略和 Windows 防火墙安全性。
-ms.date: 02/09/2018
+description: 了解如何为客户端管理反恶意软件策略和 Windows 防火墙安全性。
+ms.date: 10/26/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 76c90f64-d729-456b-8304-01852cd66fb6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2da4b91411822b6274da3e165ff3e43e8752dc45
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 2a8cf57de0214080a1b581faa044950219d11355
+ms.sourcegitcommit: 3772ece83823714b2aae46ec20523cc094701760
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32352002"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681444"
 ---
 # <a name="endpoint-protection"></a>Endpoint Protection
 
@@ -85,18 +85,24 @@ Endpoint Protection 可以管理和监视 Windows Defender 高级威胁防护 (A
 
  ![Endpoint Protection 工作流](../media/Endpoint-Protection-Workflow.gif)  
 
+
+
 ## <a name="endpoint-protection-client-for-mac-computers-and-linux-servers"></a>适用于 Mac 计算机和 Linux 服务器的 Endpoint Protection 客户端  
- System Center Endpoint Protection 包括适用于 Linux 和 Mac 计算机的 Endpoint Protection 客户端。 这些客户端未提供 Configuration Manager；相反，必须从 [Microsoft 批量许可服务中心](https://www.microsoft.com/licensing/servicecenter/default.aspx)下载以下产品。  
 
--   适用于 Mac 的 System Center Endpoint Protection  
+> [!Important]  
+> 将于 2018 年 12 月 31 日结束对 Mac 版和 Linux 版 System Center Endpoint Protection (SCEP)（所有版本）的支持。 在支持结束后，将不再能够向 SCEP for Mac 和 SCEP for Linux 提供新的病毒定义。 有关详细信息，请参阅[“支持结束”博客文章](https://go.microsoft.com/fwlink/?linkid=870182)。  
 
--   适用于 Linux 的 System Center Endpoint Protection  
+ System Center Endpoint Protection 包括适用于 Linux 和 Mac 计算机的 Endpoint Protection 客户端。 不向这些客户端提供 Configuration Manager。 从 [Microsoft 批量许可服务中心](https://www.microsoft.com/licensing/servicecenter/default.aspx)下载以下产品：  
+
+-   System Center Endpoint Protection for Ma  
+
+-   System Center Endpoint Protection for Linux  
 
 
-> [!IMPORTANT]  
+> [!Note]  
 >  你必须是 Microsoft 批量许可客户才能下载适用于 Linux 和 Mac 的 Endpoint Protection 安装文件。  
 
- 不能从 Configuration Manager 控制台对这些产品进行管理。 然而，安装文件将提供 System Center Operations Manager 管理包，这让你可以通过使用 Operations Manager 来管理客户端。  
+ 不能通过 Configuration Manager 控制台管理这些产品。 System Center Operations Manager 管理包随附有安全文件，可用于管理 Linux 的客户端。  
 
 ### <a name="how-to-get-the-endpoint-protection-client-for-mac-computers-and-linux-servers"></a>如何获取适用于 Mac 计算机和 Linux 服务器的 Endpoint Protection 客户端
 
