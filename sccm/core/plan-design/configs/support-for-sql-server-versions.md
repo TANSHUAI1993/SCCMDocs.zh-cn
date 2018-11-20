@@ -10,12 +10,12 @@ ms.assetid: 35e237b6-9f7b-4189-90e7-8eca92ae7d3d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: aed8014715431a2fb70647ae77f5009e0c89b3ab
-ms.sourcegitcommit: 98c3f7848dc9014de05541aefa09f36d49174784
+ms.openlocfilehash: 962029dc6bc5584e1edf0bd26d4be3fc280d6204
+ms.sourcegitcommit: 147aae8300831c722a559087c735df0f761b2041
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42584471"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51645236"
 ---
 # <a name="supported-sql-server-versions-for-configuration-manager"></a>Configuration Manager 支持的 SQL Server 版本
 
@@ -73,7 +73,7 @@ SQL Server 事务复制仅支持将对象复制到配置为使用[数据库副�
 
 
 > [!IMPORTANT]  
->  为管理中心站点上的数据库使用 SQL Server Standard 时，会限制层次结构可支持的客户端总数。 请参阅[调整大小和扩展数量](/sccm/core/plan-design/configs/size-and-scale-numbers)。
+>  为管理中心站点上的数据库使用 SQL Server Standard 时，会限制层次结构可支持的客户端总数。 请参阅 [调整大小和扩展数量](/sccm/core/plan-design/configs/size-and-scale-numbers)。
 
 ### <a name="sql-server-2017-standard-enterprise"></a>SQL Server 2017：标准版、企业版  
 自 [Configuration Manager 版本 1710](/sccm/core/plan-design/changes/whats-new-in-version-1710) 起，此版本的 SQL Server 最低可与以下站点的[累积更新版本 2](https://support.microsoft.com/help/4052574) 一起使用： 
@@ -104,6 +104,12 @@ SQL Server 事务复制仅支持将对象复制到配置为使用[数据库副�
 -   主站点  
 -   辅助站点  
 
+### <a name="sql-server-2014-sp3-standard-enterprise"></a>SQL Server 2014 SP3：Standard、Enterprise  
+可将此版本的 SQL Server 与以下站点的非最低累积更新版本一起使用：  
+
+-   管理中心站点  
+-   主站点  
+-   辅助站点
 
 ### <a name="sql-server-2014-sp2-standard-enterprise"></a>SQL Server 2014 SP2：标准版、企业版  
 可将此版本的 SQL Server 与以下站点的非最低累积更新版本一起使用：  
@@ -152,12 +158,15 @@ SQL Server 事务复制仅支持将对象复制到配置为使用[数据库副�
 可将此版本的 SQL Server 与以下站点的非最低累积更新版本一起使用：
 -   辅助站点
 
+### <a name="sql-server-2014-express-sp3"></a>SQL Server 2014 Express SP3   
+可将此版本的 SQL Server 与以下站点的非最低累积更新版本一起使用：  
+
+-   辅助站点  
 
 ### <a name="sql-server-2014-express-sp2"></a>SQL Server 2014 Express SP2   
 可将此版本的 SQL Server 与以下站点的非最低累积更新版本一起使用：  
 
 -   辅助站点  
-
 
 ### <a name="sql-server-2014-express-sp1"></a>SQL Server 2014 Express SP1   
  可将此版本的 SQL Server 与以下站点的非最低累积更新版本一起使用：  
