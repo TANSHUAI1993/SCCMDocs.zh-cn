@@ -2,7 +2,7 @@
 title: 支持的客户端和设备
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 在客户端和设备上支持的操作系统版本。
-ms.date: 08/21/2018
+ms.date: 10/02/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8abe612272dd8a48a23ffdcb945aa7b6766afdb9
-ms.sourcegitcommit: 7eebd112a9862bf98359c1914bb0c86affc5dbc0
+ms.openlocfilehash: 82fd328d65e67df2506f31679ed3c1b3abc1262c
+ms.sourcegitcommit: e0209e4549e9828eb74089313dbee323ece1fc2f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42586396"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51598591"
 ---
 # <a name="supported-os-versions-for-clients-and-devices-for-configuration-manager"></a>Configuration Manager 在客户端和设备上支持的操作系统版本
 
@@ -33,10 +33,24 @@ ms.locfileid: "42586396"
 
 ##  <a name="windows-computers"></a>Windows 计算机  
 
- 使用 Configuration Manager 附带的客户端来管理以下 Windows 操作系统版本。 有关详细信息，请参阅[如何将客户端部署到 Windows 计算机](/sccm/core/clients/deploy/deploy-clients-to-windows-computers)。  
+ 若要管理以下 Windows OS 版本，请使用 Configuration Manager 随附的客户端。 有关详细信息，请参阅[如何将客户端部署到 Windows 计算机](/sccm/core/clients/deploy/deploy-clients-to-windows-computers)。  
 
 
-### <a name="supported-os-versions"></a>支持的操作系统版本  
+### <a name="supported-client-os-versions"></a>受支持的客户端 OS 版本
+
+-   **Windows 10**  
+
+    有关详细信息，请参阅 [Windows 10 支持](/sccm/core/plan-design/configs/support-for-windows-10)。  
+
+-   **Windows 8.1**（x86、x64）：专业版、企业版    
+
+-   **Windows 7 SP1**（x86、x64）：专业版、企业版和旗舰版    
+
+
+### <a name="supported-server-os-versions"></a>受支持的服务器 OS 版本
+
+-  **Windows Server 2019**：Standard、Datacenter <sup>[注 1](#bkmk_note1)</sup>  
+    （自 Configuration Manager 版本 1806 起。）
 
 -  Windows Server 2016：标准版、数据中心版<sup>[注释 1](#bkmk_note1)</sup>  
 
@@ -56,32 +70,30 @@ ms.locfileid: "42586396"
 
 -   Windows Server 2008 SP2（x86、x64）：标准版、企业版、数据中心版<sup>[注释 1](#bkmk_note1)</sup>    
 
--   **Windows 10**  
 
-    有关不同 Configuration Manager 版本支持的不同 Windows 10 发布版本的详细信息，请参阅[对 Windows 10 各版本的支持](/sccm/core/plan-design/configs/support-for-windows-10)。  
+#### <a name="server-core"></a>服务器核心
+以下版本专指 OS 的服务器核心安装。 <sup>[注 3](#bkmk_note3)</sup>  
 
--   **Windows 8.1**（x86、x64）：专业版、企业版    
+Windows Server 半年频道版本是服务器核心安装，如 Windows Server 版本 1809。 作为 Configuration Manager 客户端，它们与相关的 Windows 10 半年频道版本一样受到相同的支持。 有关详细信息，请参阅 [Windows 10 支持](/sccm/core/plan-design/configs/support-for-windows-10)。
 
--   **Windows 7 SP1**（x86、x64）：专业版、企业版和旗舰版    
 
--   Windows Server（版本 1709）的服务器核心安装 (x64) <sup>[注释 2](#bkmk_note2)</sup> <sup>[注释 3](#bkmk_note3)</sup>  
-    从 Configuration Manager 版本 1710 开始支持此操作系统版本。  
+-   **Windows Server 2019** (x64) <sup>[注 2](#bkmk_note2)</sup>  
 
--   Windows Server 2016 的服务器核心安装 (x64) <sup>[注释 2](#bkmk_note2)</sup> <sup>[注释 3](#bkmk_note3)</sup>  
+-   **Windows Server 2016** (x64) <sup>[注 2](#bkmk_note2)</sup>   
 
--   Windows Server 2012 R2 的服务器核心安装 (x64) <sup>[注释 2](#bkmk_note2)</sup> <sup>[注释 3](#bkmk_note3)</sup>    
+-   **Windows Server 2012 R2** (x64) <sup>[注 2](#bkmk_note2)</sup>     
 
--   Windows Server 2012 的服务器核心安装 (x64) <sup>[注释 2](#bkmk_note2)</sup> <sup>[注释 3](#bkmk_note3)</sup>    
+-   **Windows Server 2012** (x64) <sup>[注 2](#bkmk_note2)</sup>     
 
--    Windows Server 2008 R2（不带 Service Pack 或 SP1）的服务器核心安装 (x64) <sup>[注释 3](#bkmk_note3)</sup>    
+-   **Windows Server 2008 R2**（不含 Service Pack 或含 SP1 (x64)）     
 
--   Windows Server 2008 SP2 的服务器核心安装（x86、x64）<sup>[注释 3](#bkmk_note3)</sup>  
+-   **Windows Server 2008 SP2**（x86、x64）   
 
 #### <a name="bkmk_note1"></a>注释 1
- Configuration Manager 支持数据中心版本，但未经认证。 对于特定于 Windows Server Datacenter Edition 的问题，未提供修补程序支持。  
+ Configuration Manager 测试并支持 Windows Server Datacenter 版本，但没有 Windows Server 正式认证。 对于 Windows Server Datacenter Edition 专属问题，我们未提供 Configuration Manager 修补程序支持。 若要详细了解 Windows Server 认证计划，请参阅 [Windows Server Catalog](https://www.windowsservercatalog.com/)。 
 
 #### <a name="bkmk_note2"></a>注释 2
- 若要支持客户端请求安装，运行此操作系统版本的计算机必须运行文件的文件服务器角色服务和存储服务服务器角色。 有关在服务器核心计算机上安装 Windows 功能的信息，请参阅[使用 Windows PowerShell cmdlet 安装角色、角色服务和功能](https://docs.microsoft.com/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#BKMK_installwps)。  
+ 若要支持[客户端请求安装](/sccm/core/clients/deploy/plan/client-installation-methods#client-push-installation)，请添加文件和存储服务服务器角色的文件服务器服务。 若要详细了解如何在服务器核心上安装 Windows 功能，请参阅[使用 Windows PowerShell cmdlet 安装角色、角色服务和功能](https://docs.microsoft.com/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#BKMK_installwps)。  
 
 #### <a name="bkmk_note3"></a>注释 3
  任何版本的 Windows Server Core 上都不支持新的软件中心应用。<!--SCCMDocs issue 683-->
@@ -107,8 +119,6 @@ ms.locfileid: "42586396"
 
 -   应用程序目录不受任何 Windows Embedded 设备支持。  
 
--   能够监视基于 Windows XP 的 Windows Embedded 设备上检测到的恶意软件之前，必须在设备上安装 Microsoft Windows WMI 脚本包。 使用 Windows Embedded Target Designer 安装此包。 必须存在文件 **WBEMDISP.DLL** 和 **WBEMDISP.TLB** 且必须在嵌入式设备上的 **%windir%\System32\WBEM** 文件夹中注册，以确保报告检测到的恶意软件。  
-
 
 ### <a name="supported-os-versions"></a>支持的操作系统版本  
 
@@ -126,21 +136,6 @@ ms.locfileid: "42586396"
 -   **Windows Embedded POSReady 7**（x86、x64）    
 
 -   **Windows Embedded Standard 7 SP1**（x86、x64）    
-
-
-### <a name="unsupported-os-versions"></a>不支持的操作系统版本
-
-以下操作系统版本基于 Windows XP Embedded。 从版本 1702 开始，这些嵌入的操作系统版本将不受支持。 有关详细信息，请参阅[已弃用的客户端操作系统](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-client#deprecated-client-operating-systems)。  
-
--   **WEPOS 1.1 SP3** (x86)    
-
--   **Windows Embedded POSReady 2009** (x86)    
-
--   **Windows Fundamentals for Legacy PCs (WinFLP)** (x86)    
-
--   **Windows XP Embedded SP3** (x86)    
-
--   **Windows Embedded Standard 2009** (x86)  
 
 
 
@@ -328,15 +323,6 @@ ms.locfileid: "42586396"
 
 
 
-##  <a name="mobile-devices-enrolled-by-microsoft-intune"></a>Microsoft Intune 注册的移动设备  
-
- 有关将 Microsoft Intune 与 Configuration Manager 集成时可以管理的计算机和设备的详细信息，请参阅 Microsoft Intune 文档库中的以下文章：  
-
--   [Microsoft Intune 中的移动设备管理功能](https://docs.microsoft.com/intune/get-started/choose-how-to-manage-devices)  
--   [Microsoft Intune 中的 Windows PC 管理功能](https://docs.microsoft.com/intune/get-started/windows-pc-management-capabilities-in-microsoft-intune)  
-
-
-
 ##  <a name="bkmk_OnpremOS"></a>本地移动设备管理  
 
  Configuration Manager 提供内置功能来管理本地设备，无需安装客户端软件。 有关详细信息，请参阅[使用本地基础结构管理移动设备](/sccm/mdm/understand/manage-mobile-devices-with-on-premises-infrastructure)。  
@@ -368,7 +354,7 @@ ms.locfileid: "42586396"
 
 ##  <a name="bkmk_ExSrvConOS"></a> Exchange Server 连接器  
 
-Configuration Manager 支持连接到 Exchange Server 的设备的有限管理，无需安装 Configuration Manager 客户端。 有关详细信息，请参阅[使用 Configuration Manager 和 Exchange 管理移动设备](/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync)。  
+Configuration Manager 支持连接到 Exchange Server 的设备的有限管理，无需安装 Configuration Manager 客户端。 有关详细信息，请参阅[使用 Configuration Manager 和 Exchange 管理移动设备](/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync)。  
 
 
 ### <a name="supported-versions-of-exchange-server"></a>受支持的 Exchange Server 版本

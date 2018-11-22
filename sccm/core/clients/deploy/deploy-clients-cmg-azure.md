@@ -10,12 +10,12 @@ ms.assetid: a44006eb-8650-49f6-94e1-18fa0ca959ee
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 91ebb0c35687b231a6f08b7bc92cccb83cf0e602
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 490e5a614a98633629df98abcd554b02cec1261a
+ms.sourcegitcommit: ae03ad403b1732a5a61dec981e3a3010a0f09188
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344681"
+ms.lasthandoff: 11/17/2018
+ms.locfileid: "51860240"
 ---
 # <a name="install-and-assign-configuration-manager-windows-10-clients-using-azure-ad-for-authentication"></a>安装并分配 Configuration Manager Windows 10 客户端（使用 Azure AD 进行身份验证）
 
@@ -41,9 +41,7 @@ ms.locfileid: "32344681"
 
 - 除了管理点站点系统角色的[现有先决条件](/sccm/core/plan-design/configs/site-and-site-system-prerequisites#bkmk_2012MPpreq)，还需在此服务器上启用“ASP.NET 4.5”。 包括启用 ASP.NET 4.5 时自动选择的任何其他选项。  
 
-- 针对 HTTPS 模式配置所有管理点。 有关详细信息，请参阅 [PKI 证书要求](/sccm/core/plan-design/network/pki-certificate-requirements)和[为运行 IIS 的站点系统部署 Web 服务器证书](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_webserver2008_cm2012)。  
-    - 如果正在使用云管理网关，则只需为针对云管理网关启用的管理点配置 HTTPS。
-    - 如果要使用基于 Azure AD 令牌的身份验证在 Intranet 上部署客户端，则必须为这些客户端可能访问的所有管理点启用 HTTPS。 
+- 确定管理点是否需要 HTTPS。 有关详细信息，请参阅[为管理点启用 HTTPS](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_mphttps)。  
 
 - （可选）要部署基于 Internet 的客户端，请设置[云管理网关](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) (CMG)。 使用 Azure AD 进行身份验证的本地客户端不需要 CMG。  
 

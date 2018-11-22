@@ -10,12 +10,12 @@ ms.assetid: 68dc6acd-5848-47a4-b4c1-ffa40e47890b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5492382afdb523846fcdd40b68d498730073eb7e
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: f8450308f0719903bc4b3f74d6c2ab1ca5e17c59
+ms.sourcegitcommit: e0209e4549e9828eb74089313dbee323ece1fc2f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342437"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51598608"
 ---
 # <a name="reference-for-maintenance-tasks-for-system-center-configuration-manager"></a>System Center Configuration Manager 维护任务参考
 
@@ -120,7 +120,7 @@ ms.locfileid: "32342437"
 
 **删除过期的已注册设备**：从 1602 的更新开始，默认禁用此任务。 可使用此任务从站点数据库中删除有关未在指定时间内向该站点报告任何信息的移动设备的过期数据。
 
-此任务适用于通过 Microsoft Intune（混合）或 Configuration Manager 本地移动设备管理注册的设备。 有关使用 Configuration Manager 或 Intune 注册的设备的操作系统信息，请参阅 [System Center Configuration Manager 客户端和设备支持的操作系统](../../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md)中的 [Microsoft Intune 注册的移动设备](../../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md#mobile-devices-enrolled-by-microsoft-intune)部分。
+此任务适用于通过 Microsoft Intune（混合）或 Configuration Manager 本地移动设备管理注册的设备。 有关详细信息，请参阅[客户端和设备支持的操作系统](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices#bkmk_OnpremOS)。
 
 -   管理中心站点：不可用    
 -   **主站点**：未启用    

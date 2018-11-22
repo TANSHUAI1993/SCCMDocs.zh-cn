@@ -10,12 +10,12 @@ ms.assetid: 1a2a9b48-a95b-4643-b00c-b3079584ae2e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 025edee312e1c67eba9f9e4f812b03806f51dbbb
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 11474f54aaf7a9afe13d411b0dd469abb1eef963
+ms.sourcegitcommit: c2c44329f1f9a2e6c14095360b4fc4aafabc27f0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39384308"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694937"
 ---
 # <a name="prerequisites-for-deploying-clients-to-windows-computers-in-configuration-manager"></a>在 Configuration Manager 中将客户端部署到 Windows 计算机的先决条件
 
@@ -60,7 +60,7 @@ Configuration Manager 客户端具备外部依赖项。 这些依赖项取决于
 |Microsoft 策略平台 1.2.3514.0|需要该项以允许客户端评估符合性设置。|  
 |Microsoft Silverlight 5.1.41212.0|需要该项以支持应用程序目录网站用户体验。 自 Configuration Manager 1802 起，客户端不再自动安装 Silverlight。 应用程序目录的主要功能现在包含在软件中心内。 版本 1806 停止了对应用程序目录网站的支持。<!--1356195-->|  
 |Microsoft .NET Framework 版本 4.5.2|需要该项以支持客户端操作。 如果未安装 Microsoft .NET Framework 4.5 或更高版本，则自动将其安装在客户端计算机上。 有关详细信息，请参阅[有关 Microsoft .NET Framework 版本 4.5.2 的其他详细信息](#dotNet)。|  
-|Microsoft SQL Server Compact 3.5 SP2 组件|需要该项以存储与客户端操作相关的信息。|  
+|Microsoft SQL Server Compact 4.0 SP1 组件|需要该项以存储与客户端操作相关的信息。|  
 
 
 ####  <a name="dotNet"></a>有关 Microsoft .NET Framework 版本 4.5.2 的其他详细信息  
@@ -169,7 +169,7 @@ Microsoft .NET Framework 版本 4.5.2 可能需要重启才能完成安装。 �
 
 要访问 Configuration Manager 站点服务器域中的资源，请为该站点配置网络访问帐户。  
 
-要详细了解如何配置网络访问帐户，请参阅[内容管理的基本概念](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management)。  
+有关如何配置网络访问帐户的详细信息，请参阅[内容管理的基本概念](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management)。  
 
 
 #### <a name="software-distribution-based-installation-for-upgrades-only"></a>基于软件分发的安装（仅针对升级）  
@@ -260,7 +260,7 @@ Microsoft .NET Framework 版本 4.5.2 可能需要重启才能完成安装。 �
 
      “操作管理员”默认安全角色包括管理移动设备所需的权限。  
 
-     要详细了解如何配置安全权限，请参阅[基于角色的管理的基础](/sccm/core/understand/fundamentals-of-role-based-administration)和[配置基于角色的管理](/sccm/core/servers/deploy/configure/configure-role-based-administration)。  
+     有关如何配置安全权限的详细信息，请参阅[基于角色的管理的基础](/sccm/core/understand/fundamentals-of-role-based-administration)和[配置基于角色的管理](/sccm/core/servers/deploy/configure/configure-role-based-administration)。  
 
 
 ### <a name="firewall-requirements"></a>防火墙要求  
