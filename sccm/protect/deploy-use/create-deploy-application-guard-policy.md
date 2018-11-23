@@ -1,6 +1,6 @@
 ---
 title: 创建和部署 Windows Defender 应用程序防护策略
-titleSuffix: Configuraton Manager
+titleSuffix: Configuration Manager
 description: 创建和部署 Windows Defender 应用程序防护策略。
 ms.date: 03/22/2018
 ms.prod: configuration-manager
@@ -10,17 +10,16 @@ ms.assetid: 33a6c1d9-4dd8-411c-a748-693a5bd2ea5a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e7f0a1ccb71abb2fec27e0430bd4195dc85aceae
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 82423914b1d1f5cae8fa4ecea3d02ef02d23703a
+ms.sourcegitcommit: 2cc635835709fb8d86cdb63ea34233b36c94d4d8
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32348066"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52258904"
 ---
 # <a name="create-and-deploy-windows-defender-application-guard-policy"></a>创建和部署 Windows Defender 应用程序防护策略 
-*适用范围：System Center Configuration Manager (Current Branch)*
-<!-- 1351960 -->
-可以使用 Configuration Manager endpoint protection 创建和部署 [Windows Defender 应用程序保护策略](https://docs.microsoft.com/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview)。 这些策略通过在操作系统的其他部分无法访问的安全隔离容器中打开不受信任的网站来帮助保护用户安全。
+*适用于： System Center Configuration Manager (Current Branch)* 
+ <!-- 1351960 -->可以创建和部署[Windows Defender 应用程序防护](https://docs.microsoft.com/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview)策略通过使用配置管理器终结点保护。 这些策略通过在操作系统的其他部分无法访问的安全隔离容器中打开不受信任的网站来帮助保护用户安全。
 
 ## <a name="prerequisites"></a>先决条件
 
