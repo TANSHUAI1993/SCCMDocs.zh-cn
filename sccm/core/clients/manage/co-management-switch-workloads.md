@@ -1,6 +1,6 @@
 ---
 title: 将 Configuration Manager 工作负荷切换到 Intune
-titleSuffix: Configuraton Manager
+titleSuffix: Configuration Manager
 description: 了解如何将目前由 Configuration Manager 托管的工作负荷切换为由 Microsoft Intune 托管。
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -10,12 +10,12 @@ manager: dougeby
 ms.date: 07/30/2018
 ms.topic: conceptual
 ms.assetid: 60e2022f-a4f9-40dd-af01-9ecb37b43878
-ms.openlocfilehash: c1f5f96c4178068ced727cfe96b1c6fe8b60a0fc
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 739773e83213033103b414cc9bb79f7abccb230c
+ms.sourcegitcommit: 2cc635835709fb8d86cdb63ea34233b36c94d4d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39383993"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52258938"
 ---
 # <a name="switch-configuration-manager-workloads-to-intune"></a>将 Configuration Manager 工作负荷切换到 Intune
 在[准备 Windows 10 设备进行共同管理](co-management-prepare.md)中，你已准备好了 Windows 10 设备以便进行共同管理。 这些设备已加入 Azure AD（简称 AD），而且它们已在 Intune 中注册，具有 Configuration Manager 客户端。 你可能仍然具有已联接到 AD 且具有 Configuration Manager 客户端的 Windows 10 设备，但该设备未联接到 Azure AD 或在 Intune 中注册。 以下步骤介绍如何启用共同管理，准备其余的 Windows 10 设备（没有进行 Intune 注册的 Configuration Manager 客户端）进行共同管理，并允许开始将特定的 Configuration Manager 工作负荷切换到 Intune。
@@ -24,7 +24,7 @@ ms.locfileid: "39383993"
 ## <a name="switch-configuration-manager-workloads-to-intune"></a>将 Configuration Manager 工作负荷切换到 Intune
 
 1. 在 Configuration Manager 控制台中，转到“管理” > “概述” > “云服务” > “共同管理”。    
-2. 在“主页”选项卡的“管理”组中，选择“配置共同管理”以打开“共同管理配置”向导。    
+2. 在“主页”选项卡的“管理”组中，选择“配置共同管理”以打开“共同管理配置”向导。 ****    
 3. 在“订阅”页中，单击“登录”并登录到 Intune 租户，然后单击“下一步”。   
 4. 在“启用”页中，选择“试点”或“全部”，在 Intune 中启用自动注册，然后单击“下一步”。 如果选择“试点”，仅属于试点组成员的 Configuration Manager 客户端可在 Intune 中自动注册。 此选项允许对客户端子集启用共同管理，以初步测试共同管理，并使用分阶段的方式推出共同管理。 对于已在 Intune 中注册的设备，命令行可以用于将 Configuration Manager 客户端部署为 Intune 中的应用。 有关详细信息，请参阅[在 Intune 中注册的 Windows 10 设备](co-management-prepare.md#windows-10-devices-enrolled-in-intune)。
 5. 在“工作负荷”页中选择是否将 Configuration Manager 工作负荷切换为由试点 Intune 或 Intune 托管，然后单击“下一步”。 “试点 Intune”设置只为试点组中的设备切换已关联工作负荷。 “Intune”设置则为所有共同管理的 Windows 10 设备切换已关联工作负荷。 

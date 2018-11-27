@@ -10,12 +10,12 @@ ms.assetid: f4f9a5fd-f573-4b99-ad93-b2c76812e922
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e0a4369e9c302c687f15b29b0daafbf4329e22a5
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 7d6b957ebcc19dfe8c14dd781f71678db8e160af
+ms.sourcegitcommit: 1a1bac2d5ee0f20ce565d29798ee4dd99aaca044
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342301"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52281900"
 ---
 # <a name="install-and-upgrade-with-the-version-1606-baseline-media-for-system-center-configuration-manager"></a>使用 1606 版基线介质安装或升级 System Center Configuration Manager
 
@@ -23,7 +23,7 @@ ms.locfileid: "32342301"
 
 运行 Configuration Manager 的版本 1606 基线媒体中的安装程序时，可以安装 System Center Configuration Manager 的 Long-Term Servicing Branch 或 Current branch 网站。
 
-此基线介质以 DVD 形式提供，包含在 Microsoft System Center 2016 或 System Center Configuration Manager（Current Branch 和 Long-Term Servicing Branch 1606）版本中。 若要了解有关基线介质的信息，请参阅[基线和更新版本](/sccm/core/servers/manage/updates#baseline-and-udpate-versions)。
+此基线介质以 DVD 形式提供，包含在 Microsoft System Center 2016 或 System Center Configuration Manager（Current Branch 和 Long-Term Servicing Branch 1606）版本中。 若要了解有关基线介质的信息，请参阅[基线和更新版本](../servers/manage/updates.md#bkmk_Baselines)。
 
 
 如果使用 1606 版基线介质，安装（或升级到）的站点为：
