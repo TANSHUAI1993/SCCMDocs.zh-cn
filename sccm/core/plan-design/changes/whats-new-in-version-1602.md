@@ -1,6 +1,6 @@
 ---
 title: 版本 1602 中的新增功能
-titleSuffix: Configuraton Manager
+titleSuffix: Configuration Manager
 description: 获取有关 System Center Configuration Manager 的 1602 版中引入的更改和新功能的详细信息。
 ms.date: 12/30/2016
 ms.prod: configuration-manager
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 robots: noindex,nofollow
-ms.openlocfilehash: cdc8797d436e50c60f17d4c26c802465608bb26a
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: c6d085fd33513a32207a3b9acfdfe6fe91657a88
+ms.sourcegitcommit: 2cc635835709fb8d86cdb63ea34233b36c94d4d8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32338578"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52259040"
 ---
 # <a name="what39s-new-in-version-1602-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1602 中的新增功能
 
@@ -122,7 +122,7 @@ System Center Configuration Manager 的更新 1602 作为控制台内部更新�
  有关详细信息，请参阅[管理对由 System Center Configuration Manager 管理的电脑的 O365 服务的访问](../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)。  
 
 ### <a name="restricting-access-based-on-the-health-of-devices"></a>基于设备的运行状况限制访问  
- 现可根据运行状况证明服务所报告的设备的运行状况来限制对电子邮件和 0ffice 365 服务的访问。 此外，设备健康状况报告还包括由 Intune 管理的设备。  
+ 现可根据运行状况证明服务报告的设备的运行状况，限制对电子邮件和 Office 365 服务的访问。 此外，设备健康状况报告还包括由 Intune 管理的设备。  
 
  Configuration Manager 控制台中添加了新的合规性规则，该规则允许根据设备的运行状况状态指定应允许还是阻止访问设备。 有关运行状况证明服务及如何在 Intune 中报告设备的运行状况的详细信息，请参阅 [System Center Configuration Manager 的运行状况证明](../../../core/servers/manage/health-attestation.md)。  
 
