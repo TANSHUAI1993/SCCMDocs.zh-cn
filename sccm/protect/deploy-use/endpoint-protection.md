@@ -10,12 +10,12 @@ ms.assetid: 76c90f64-d729-456b-8304-01852cd66fb6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2a8cf57de0214080a1b581faa044950219d11355
-ms.sourcegitcommit: 3772ece83823714b2aae46ec20523cc094701760
+ms.openlocfilehash: 3e8c6cb33032b0c4283f3e35cbfa7b68535751ea
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681444"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456101"
 ---
 # <a name="endpoint-protection"></a>Endpoint Protection
 
@@ -90,13 +90,13 @@ Endpoint Protection 可以管理和监视 Windows Defender 高级威胁防护 (A
 ## <a name="endpoint-protection-client-for-mac-computers-and-linux-servers"></a>适用于 Mac 计算机和 Linux 服务器的 Endpoint Protection 客户端  
 
 > [!Important]  
-> 将于 2018 年 12 月 31 日结束对 Mac 版和 Linux 版 System Center Endpoint Protection (SCEP)（所有版本）的支持。 在支持结束后，将不再能够向 SCEP for Mac 和 SCEP for Linux 提供新的病毒定义。 有关详细信息，请参阅[“支持结束”博客文章](https://go.microsoft.com/fwlink/?linkid=870182)。  
+> 将于 2018 年 12 月 31 日结束对 Mac 版和 Linux 版 System Center Endpoint Protection (SCEP)（所有版本）的支持。 在支持结束后，将不再能够向 SCEP for Mac 和 SCEP for Linux 提供新的病毒定义。 有关详细信息，请参阅[“不再提供支持”博客文章](https://go.microsoft.com/fwlink/?linkid=870182)。  
 
  System Center Endpoint Protection 包括适用于 Linux 和 Mac 计算机的 Endpoint Protection 客户端。 不向这些客户端提供 Configuration Manager。 从 [Microsoft 批量许可服务中心](https://www.microsoft.com/licensing/servicecenter/default.aspx)下载以下产品：  
 
 -   System Center Endpoint Protection for Ma  
 
--   System Center Endpoint Protection for Linux  
+-   适用于 Linux 的 System Center Endpoint Protection  
 
 
 > [!Note]  
