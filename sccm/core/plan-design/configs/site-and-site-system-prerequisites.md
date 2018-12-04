@@ -10,12 +10,12 @@ ms.assetid: 1392797b-76cb-46b4-a3e4-8f349ccaa078
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4ba23a42acb111f4ed7d0337552b2ea90b0268d6
-ms.sourcegitcommit: 78d2dce465e3500653b252583a6903a006784c26
+ms.openlocfilehash: 00789c0c469e7de5ccd0b4dcac4130fdb14bb485
+ms.sourcegitcommit: 1439817f1309658b31008d7bafaab32fc5ef8789
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448916"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52820112"
 ---
 # <a name="site-and-site-system-prerequisites-for-configuration-manager"></a>用于 Configuration Manager 的站点和站点系统先决条件
 
@@ -416,7 +416,13 @@ ms.locfileid: "46448916"
 
 
 
-##  <a name="bkmk_2012FSPpreq"></a>回退状态点  
+##  <a name="bkmk_2012FSPpreq"></a>回退状态点 
+
+#### <a name="windows-server-roles-and-features"></a>Windows Server 角色和功能 
+
+-   BITS 服务器扩展（和自动选择的选项），或后台智能传输服务 (BITS)（和自动选择的选项） 
+
+#### <a name="iis-configuration"></a>IIS 配置 
 
 需要带有以下添加内容的默认 IIS 配置：  
 
