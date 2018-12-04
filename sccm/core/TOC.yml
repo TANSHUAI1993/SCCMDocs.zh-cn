@@ -75,6 +75,8 @@ items:
       href: plan-design/changes/whats-new-in-version-1806.md
     - name: 1802 版中的新增功能
       href: plan-design/changes/whats-new-in-version-1802.md
+    - name: 1710 版中的新增功能
+      href: plan-design/changes/whats-new-in-version-1710.md
     - name: 已删除和已弃用的项
       href: plan-design/changes/deprecated/removed-and-deprecated.md
       items:
@@ -172,6 +174,8 @@ items:
       href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1806.md
     - name: 1802 的诊断数据
       href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1802.md
+    - name: 1710 的诊断数据
+      href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1710.md
     - name: 如何收集诊断和使用情况数据
       href: plan-design/diagnostics/how-diagnostics-and-usage-data-is-collected.md
     - name: 如何查看诊断和使用情况数据
@@ -203,6 +207,8 @@ items:
   - name: Technical Preview
     href: get-started/technical-preview.md
     items:
+    - name: 1811 中的功能
+      href: get-started/capabilities-in-technical-preview-1811.md
     - name: "1810.2"
       href: get-started/capabilities-in-technical-preview-1810-2.md
     - name: 1810 中的功能
@@ -211,8 +217,6 @@ items:
       href: get-started/capabilities-in-technical-preview-1809.md
     - name: 1808 中的功能
       href: get-started/capabilities-in-technical-preview-1808.md
-    - name: 1807 中的功能
-      href: get-started/capabilities-in-technical-preview-1807.md
   - name: 在层次结构之间迁移数据
     href: migration/migrate-data-between-hierarchies.md
     items:
@@ -430,6 +434,8 @@ items:
       href: servers/manage/checklist-for-installing-update-1806.md
     - name: 用于安装更新 1802 的清单
       href: servers/manage/checklist-for-installing-update-1802.md
+    - name: 用于安装更新 1710 的清单
+      href: servers/manage/checklist-for-installing-update-1710.md
     - name: 当前分支版本支持
       href: servers/manage/current-branch-versions-supported.md
   - name: 备份和恢复
@@ -759,9 +765,9 @@ items:
       href: clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md
     - name: 升级 Mac 客户端
       href: clients/manage/upgrade/upgrade-clients-on-mac-computers.md
-ms.openlocfilehash: afc91b99ee040b4c338fb763d6f74a0d9a96005e
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 29028150b1747c5f6ca02b60101b23a8946c96c1
+ms.sourcegitcommit: 6126dfdf5c879db7d12c3eec019a88fa44521361
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456492"
+ms.lasthandoff: 12/04/2018
+ms.locfileid: "52830466"
