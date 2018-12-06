@@ -175,7 +175,7 @@ Configuration Manager 在下列情况下为客户端提供软件更新点列表�
 
 ###  <a name="BKMK_WSUSSyncSource"></a>使用现有的 WSUS 服务器作为顶级站点中的同步源  
 
-通常，层次结构中的顶层站点被配置为将软件更新元数据与 Microsoft 更新同步。 当组织安全策略不允许从顶级站点访问 Internet 时，请将顶级站点的同步源配置为使用现有 WSUS 服务器。 此 WSUS 服务器不在 Configuration Manager 层次结构中。 例如，你的 WSUS 服务器位于已连接到 Internet 的网络 (DMZ) 中，但顶级站点位于未访问 Internet 的内部网络中。 将 DMZ 中的 WSUS 服务器配置为软件更新元数据的同步源。 在 DMZ 中配置 WSUS 服务器，使用 Configuration Manager 中所需的相同条件同步软件更新。 否则，顶层站点可能无法对你期待的软件更新进行同步。 安装软件更新点时，请配置 WSUS 服务器连接帐户。 此帐户需要访问 DMZ 中的 WSUS 服务器。 同时请确认防火墙防允许流量通过相应的端口。 有关详细信息，请参阅[软件更新点用于同步源的端口](/sccm/core/plan-design/hierarchy/ports#BKMK_PortsSUP-WSUS)。  
+通常，层次结构中的顶层站点被配置为将软件更新元数据与 Microsoft 更新同步。 当组织安全策略不允许从顶级站点访问 Internet 时，请将顶级站点的同步源配置为使用现有 WSUS 服务器。 此 WSUS 服务器不在 Configuration Manager 层次结构中。 例如，你的 WSUS 服务器位于已连接到 Internet 的网络（外围网络）中，但顶级站点位于未访问 Internet 的内部网络中。 将外围网络中的 WSUS 服务器配置为软件更新元数据的同步源。 在外围网络中配置 WSUS 服务器，使用 Configuration Manager 中所需的相同条件同步软件更新。 否则，顶层站点可能无法对你期待的软件更新进行同步。 安装软件更新点时，请配置 WSUS 服务器连接帐户。 此帐户需要访问外围网络中的 WSUS 服务器。 同时请确认防火墙防允许流量通过相应的端口。 有关详细信息，请参阅[软件更新点用于同步源的端口](/sccm/core/plan-design/hierarchy/ports#BKMK_PortsSUP-WSUS)。  
 
 
 ###  <a name="BKMK_SUPSecSite"></a>辅助站点上的软件更新点  
