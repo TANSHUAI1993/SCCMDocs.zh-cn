@@ -2,7 +2,7 @@
 title: 混合 MDM 中的新增功能
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 和 Intune 的混合部署可用的新移动设备管理功能。
-ms.date: 12/05/2018
+ms.date: 10/31/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,16 +10,16 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c637703fc65b6d867dd1670ff40abc8214e6d234
-ms.sourcegitcommit: 4f34250aa850f13f415b7afe975a033d6a00fa9d
-ms.translationtype: MT
+ms.openlocfilehash: f51e54ede8df8c18ca8614f6a75c82c53bb7916c
+ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52978616"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50411521"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Configuration Manager 和 Microsoft Intune 的混合移动设备管理中的新增功能
 
-*适用于：System Center Configuration Manager (Current Branch)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 本文提供有关 System Center Configuration Manager 和 Microsoft Intune 的混合部署的可用的新移动设备管理 (MDM) 功能的详细信息。     
 
@@ -39,33 +39,11 @@ ms.locfileid: "52978616"
 
 本文的每个部分都列出了混合功能，并按 3 个不同类别进行分类。 请使用以下指南，确定每个类别中的功能与不同版本的 Configuration Manager 的兼容性：  
 
-|功能类别|Description|
+|功能类别|说明|
 |-|-|
 |**Microsoft Intune 中的新增功能** | 一般情况下，此类别下列出的所有功能都应适用于所有 Configuration Manager 版本。 这包括 System Center 2012 R2 Configuration Manager 版本，因为这些功能仅需要 Intune 服务，不需要 Configuration Manager 中的其他功能。|
 |**Configuration Manager Technical Preview 中的新增功能**| 此类别下列出的所有功能仅适用于指定的 Technical Preview 分支。 若要试用这些功能，必须安装功能说明中指定的 Technical Preview 版本。 有关详细信息，请参阅 [Configuration Manager 的 Technical Preview](/sccm/core/get-started/technical-preview)。|
 |**Configuration Manager (Current Branch) 中的新增功能**| 此类别下列出的所有功能仅适用于指定的 Configuration Manager (Current Branch) 版本。 如果要为混合部署使用较旧版本的 Configuration Manager，请升级到功能说明中指定的 Configuration Manager (Current Branch) 版本。 有关详细信息，请参阅[升级到 Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)。|
-
-
-
-## <a name="november-2018"></a>2018 年 11 月
-
-### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
-
-#### <a name="new-intune-device-subscription-sku"></a>新的 Intune 设备订阅的 SKU
-<!--3312071--> 若要帮助更低时管理在企业中，设备的成本的新的基于设备的订阅 SKU 现已推出。 此 Intune 设备 SKU 是每个设备每月获得许可。 价格因许可计划。 它目前在 Direct Channel、 企业协议 (EA)、 Microsoft 产品和服务程序 (MPSA)，并打开和云解决方案提供商 (CSP)。
-
-#### <a name="new-apps-support-with-app-protection-policies"></a>新的应用程序支持使用应用保护策略 
-<!--3330037--> 现在可以管理以下应用[Intune 应用保护策略](https://docs.microsoft.com/intune/app-protection-policies):
-
-- Stream (iOS)  
-- 应执行的操作 (Android、 iOS)  
-- PowerApps (Android、 iOS)  
-- 流 (Android、 iOS)  
-
-使用应用保护策略来保护这些应用，例如其他 Intune 策略托管应用的公司数据和控制数据传输。 
-
-> [!Note]  
-> 如果流尚未显示在控制台中，创建或编辑任何应用保护策略时添加流。 选择**更多应用**，然后指定*应用程序 ID*输入字段中的流。 用于 Android `com.microsoft.flow`，并为 iOS 使用`com.microsoft.procsimo`。  
 
 
 
@@ -147,9 +125,9 @@ ms.locfileid: "52978616"
 
 以下文本是将看到的对消息所做改进的一个示例：  
 
-- 之前：*此设备未连接所需的 IT 管理员联系。 在指定的时间段中的 Intune 服务*若要解决此问题，请打开设备上的公司门户应用，并单击“检查合规性”按钮。  
+- 更新前：此设备未在 IT 管理员要求的指定时段内连接 Intune 服务 *。* 若要解决此问题，请打开设备上的公司门户应用，并单击“检查合规性”按钮。  
 
-- 之后：*使用你的组织在一段尚未检查你的设备。* 要重新建立连接，请打开设备上的公司门户应用，然后点击设备的“检查设置”。  
+- 更新后：你的设备已有一段时间未签入组织。要重新建立连接，请打开设备上的公司门户应用，然后点击设备的“检查设置”。  
 
 #### <a name="select-device-categories-by-using-the-access-work-or-school-settings"></a>使用“访问工作单位或学校”设置选择设备类别 
 <!--1058963--> 如果你已启用[设备组映射](https://docs.microsoft.com/intune/device-group-mapping)，Windows 10 用户在通过“设置” > “帐户” > “访问工作单位或学校”中的“连接”按钮进行注册后，系统现在将提示他们选择设备类别。  
@@ -189,7 +167,7 @@ ms.locfileid: "52978616"
 #### <a name="android-for-work-and-lookout-onboarding-moved-to-intune-on-azure"></a>Android for Work 和 Lookout 载入已移至 Azure 上的 Intune
 <!--2355022,2357366--> 借助最新的 Intune 更新，可访问 Azure 门户中的 Intune，在混合移动设备管理租户上启用并管理 Android for Work 集成和 Lookout 移动威胁防御集成。 在此更新之前，只能在 Intune Classic (Silverlight) 门户中配置这些设置。
  
-注意：Lookout 是仅移动威胁防御 (MTD) 提供程序支持在混合环境中。 如果之前已与任何其他 MTD 提供程序集成，它仍会在 Azure 门户的 Intune 中显示。 如果删除它的连接器，则不能再重新添加它。
+注意：Lookout 是混合环境中唯一支持的移动威胁防御 (MTD) 提供程序。 如果之前已与任何其他 MTD 提供程序集成，它仍会在 Azure 门户的 Intune 中显示。 如果删除它的连接器，则不能再重新添加它。
  
 这些更改不影响现有功能。 继续使用 Configuration Manager 控制台管理相关应用、报告和策略。
  
@@ -391,8 +369,8 @@ ms.locfileid: "52978616"
 
 - **新移动应用程序管理策略设置**     
   以下设置已添加到移动应用程序管理策略设置：
-  - **禁用联系人同步**:阻止应用在设备上将数据保存到本机联系人应用。
-  - **禁用打印**:阻止应用打印工作或学校数据。
+  - **禁用联系人同步**：阻止应用将数据保存到设备上的本机“联系人”应用。
+  - **禁用打印**：阻止应用打印工作或学校数据。
   <!-- 1324760 -->    
 
   请参阅[使用 Configuration Manager 中的应用保护策略来保护应用](/sccm/mdm/deploy-use/protect-apps-using-mam-policies)，尝试新的应用保护策略设置。
@@ -519,7 +497,7 @@ ms.locfileid: "52978616"
 
 ## <a name="notices"></a>通知
 
-### <a name="plan-for-change-intune-supports-macos-1012-and-higher-in-december"></a>更改计划：Intune 支持 macOS 10.12 和更高版本中年 12 月 
+### <a name="plan-for-change-intune-supports-macos-1012-and-higher-in-december"></a>计划更改：Intune 将在 12 月支持 macOS 10.12 及更高版本 
 <!--2970975--> 
 
 Apple 发布了 macOS 10.14，所以从 2018 年 12 月开始，Intune 将支持 macOS 10.12 及更高版本。 
@@ -548,7 +526,7 @@ Apple 发布了 macOS 10.14，所以从 2018 年 12 月开始，Intune 将支持
 有关详细信息，请参阅[使用公司门户应用在 Intune 中注册 macOS 设备](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos-cp)。
 
 
-### <a name="plan-for-change-new-intune-support-experience-for-premier-customers"></a>更改计划：对于高级支持客户体验的新 Intune 支持 
+### <a name="plan-for-change-new-intune-support-experience-for-premier-customers"></a>计划更改：针对顶级客户的新 Intune 支持体验 
 <!--2828727--> 作为 Microsoft 顶级客户，当前可以使用 [Microsoft Premier Online (MPO) 门户](https://premier.microsoft.com)和 [Azure 上的 Intune](https://portal.azure.com) 来创建 Intune 的支持请求。 从 2018 年 12 月 3 日起，为了继续增强顶级支持体验，将仅能在 Azure 上的 Intune 中创建支持请求。
 
 #### <a name="how-does-this-affect-me"></a>这会对我产生哪些影响？
@@ -567,11 +545,11 @@ Apple 发布了 macOS 10.14，所以从 2018 年 12 月开始，Intune 将支持
 有关详细信息，请参阅 [Microsoft Intune 支持团队博客文章](https://aka.ms/IntuneSupport_MPO_to_Azure)。
 
 
-### <a name="plan-for-change-use-intune-on-azure-now-for-your-mdm-management"></a>更改计划：现在在 Azure 上使用 Intune MDM 管理 
+### <a name="plan-for-change-use-intune-on-azure-now-for-your-mdm-management"></a>更改计划：立刻使用 Azure 上的 Intune 进行 MDM 管理 
 <!--1227338--> 一年前，我们推出了 [Azure 上 Intune 的公共预览版](https://cloudblogs.microsoft.com/enterprisemobility/2016/12/07/public-preview-of-intune-on-azure/)，六个月前，我们推出了 Intune [新管理员体验的正式版](https://cloudblogs.microsoft.com/enterprisemobility/2017/06/08/the-new-intune-and-conditional-access-admin-consoles-are-ga/)。 自 2018 年 8 月 31 日起，我们将面向使用 Intune 独立版的客户关闭经典 Silverlight 控制台中的移动设备管理 (MDM)。 请改用 [Azure 上的 Intune](https://aka.ms/Intune_on_Azure) 满足 MDM 需求。 如果仍在使用经典控制台进行 MDM，请停止此做法并开始熟悉 Azure 上的 Intune。 我们不希望任何最终用户受到此次更改的影响。 Silverlight 中将保留使用 Intune 的经典电脑管理。 有关详细信息，请参阅 [Intune 支持团队博客文章](https://aka.ms/Intune_on_Azure_mdm)。
 
 
-### <a name="plan-for-change-upcoming-macos-and-intune-password-enforcement-change"></a>更改计划：即将推出的 macOS 和 Intune 强制更改密码
+### <a name="plan-for-change-upcoming-macos-and-intune-password-enforcement-change"></a>更改计划：即将推出的 macOS 和 Intune 密码强制实施更改
 <!--1873216--> 在 9 月的服务版本中，Intune 计划为运行 macOS 10.13 版本及更高版本的设备集成 Apple 新发布的“在下一次身份验证时更改密码”设置。 在引入此设置之前，MDM 提供程序无法验证设备上的密码是否已更改以确保符合性。 Intune 的配置和符合性策略仅确保密码下一次在设备上发生更改时，它被标记为符合。 在我们集成此 Apple 新功能时，MacOS 用户将收到更新密码的请求，即使其密码已经满足符合性。
 
 #### <a name="how-does-this-change-affect-me"></a>这一更改会对我产生哪些影响？
@@ -581,7 +559,7 @@ Apple 发布了 macOS 10.14，所以从 2018 年 12 月开始，Intune 将支持
 建议告知支持人员。 如果不希望强制实施此 macOS 设备策略，请取消分配或删除现有 macOS 策略。 在实施此更改之前，我们的客户研究表明大多数客户不会受到此更改影响。 最终用户通常都会在收到使用密码注册的请求后更新其密码，或重置其密码以保持符合性。  
 
 
-### <a name="plan-for-change-intune-moving-to-support-ios-10-and-later-in-september-2018"></a>更改计划：Intune 移动以在 2018 年 9 月中支持 iOS 10 及更高版本 
+### <a name="plan-for-change-intune-moving-to-support-ios-10-and-later-in-september-2018"></a>更改计划：Intune 将于 2018 年 9 月升级为支持 iOS 10 和更高版本 
 <!--2454656-->
 
 Apple 预期于 2018 年 9 月发布 iOS 12。 在发布后不久，我们会将 Intune 注册、公司门户和 Managed Browser 升级为支持 iOS 10 和更高版本。
@@ -616,7 +594,7 @@ Office 365 移动应用在 iOS 10 和更高版本上均受支持，因此，你�
 ### <a name="end-of-support-for-ios-80"></a>iOS 8.0 不再受支持 
 <!---1164477---> 托管应用和 iOS 公司门户应用要求必须使用 iOS 9.0 及更高版本，才能访问公司资源。 9 月前未更新的设备无法再访问公司门户或这些应用。 
 
-### <a name="platform-support-reminder-windows-phone-81-mainstream-support-ended-july-11-2017"></a>平台支持提醒：Windows Phone 8.1 主流支持结束 2017 年 7 月 11 日
+### <a name="platform-support-reminder-windows-phone-81-mainstream-support-ended-july-11-2017"></a>平台支持提醒：Windows Phone 8.1 主流支持将于 2017 年 7 月 11 日终止
 <!-- 1327781 -->
 *2017 年 7 月 11 日*
 
@@ -634,7 +612,7 @@ Windows Phone 8.1 平台的主流支持已终止。 Windows 8.1 PC 支持不会�
 
 
 
-## <a name="see-also"></a>请参阅
+## <a name="see-also"></a>另请参阅
 
 - [以前的混合 MDM 功能和注意事项](whats-new-hybrid-archive.md)
 - [System Center 2012 Configuration Manager 中的 MDM 的新增功能](https://technet.microsoft.com/library/mt445560.aspx)
