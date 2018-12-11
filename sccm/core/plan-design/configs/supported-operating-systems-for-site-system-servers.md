@@ -2,7 +2,7 @@
 title: 支持的站点系统服务器
 titleSuffix: Configuration Manager
 description: 了解可用来托管 Configuration Manager 站点或站点系统角色的 Windows 版本。
-ms.date: 10/02/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 17905b4c-3895-4ad4-a69c-5e0d0fc5a8c3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3fd8e815ab57730ad2186a7e75cd51f21012383a
-ms.sourcegitcommit: 265d38d55ca0db043e3a7131a56f123e1d98aa5b
+ms.openlocfilehash: 4aba91b232a187a72bbc2ea10f32a14a377a3870
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48236168"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456849"
 ---
 # <a name="supported-operating-systems-for-configuration-manager-site-system-servers"></a>Configuration Manager 站点系统服务器支持的操作系统
 
@@ -32,9 +32,46 @@ ms.locfileid: "48236168"
 
 
 
-## <a name="bkmk_2016"></a> Windows Server 2016：标准版和数据中心版
+## <a name="bkmk_2019"></a>Windows Server 2019
 
-使用 Configuration Manager 版本 1606 的更新汇总 1 ([KB3186654](https://support.microsoft.com/help/3186654))，此 OS 版本支持以下角色：
+适用于 Windows Server 2019：Standard 和 Datacenter 
+
+从版本 1810 开始，此 OS 版本支持以下角色：
+
+#### <a name="site-servers"></a>站点服务器
+
+-   管理中心站点  
+-   主站点  
+-   辅助站点  
+
+#### <a name="site-system-servers"></a>站点系统服务器
+
+-   应用程序目录 Web 服务点  
+-   应用程序目录网站点  
+-   资产智能同步点  
+-   证书注册点  
+-   云管理网关连接点  
+-   数据仓库服务点  
+-   分发点 <sup>[说明 1](#bkmk_note1)</sup>  
+-   Endpoint Protection 点  
+-   注册点  
+-   注册代理点  
+-   回退状态点  
+-   管理点
+-   Reporting Services 点  
+-   服务连接点  
+-   站点数据库服务器 <sup>[说明 2](#bkmk_note2)</sup>  
+-   SMS_Provider  
+-   软件更新点  
+-   状态迁移点
+
+
+
+## <a name="bkmk_2016"></a>Windows Server 2016
+
+适用于 Windows Server 2016：Standard 和 Datacenter
+
+此 OS 版本支持以下角色：
 
 #### <a name="site-servers"></a>站点服务器
 
@@ -73,7 +110,9 @@ ms.locfileid: "48236168"
 
 
 
-## <a name="bkmk_2012r2"></a> Windows Server 2012 R2 (x64)：标准版和数据中心版  
+## <a name="bkmk_2012r2"></a>Windows Server 2012 R2 
+
+适用于 Windows Server 2012 R2：Standard 和 Datacenter
 
 #### <a name="site-servers"></a>站点服务器
 
@@ -104,7 +143,9 @@ ms.locfileid: "48236168"
 
 
 
-## <a name="bkmk_2012"></a> Windows Server 2012 (x64)：标准版和数据中心版  
+## <a name="bkmk_2012"></a>Windows Server 2012  
+
+适用于 Windows Server 2012：Standard 和 Datacenter
 
 #### <a name="site-servers"></a>站点服务器
 
@@ -135,7 +176,9 @@ ms.locfileid: "48236168"
 
 
 
-## <a name="bkmk_2008r2sp1"></a> Windows Server 2008 R2 SP1 (x64)：标准版、企业版和数据中心版  
+## <a name="bkmk_2008r2sp1"></a>Windows Server 2008 R2 SP1   
+
+适用于 Windows Server 2008 R2 Service Pack 1：Standard、Enterprise 和 Datacenter
 
 根据 [Microsoft 支持生命周期](https://support.microsoft.com/lifecycle)中的详细信息，Windows Server 2008 R2 现处于外延支持，不再处于主流支持。 有关这些操作系统以后对 Configuration Manager 的站点系统服务器的支持情况的详细信息，请参阅[已弃用的服务器操作系统](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems)。  
 
@@ -148,11 +191,13 @@ ms.locfileid: "48236168"
 
 
 
-## <a name="bkmk_2008sp2"></a> Windows Server 2008 SP2（x86、x64）：标准版、企业版和数据中心版  
+## <a name="bkmk_2008sp2"></a>Windows Server 2008 SP2  
 
-根据 [Microsoft 支持生命周期](https://support.microsoft.com/lifecycle)中的详细信息，Windows Server 2008 现处于外延支持，不再处于主流支持。 有关这些操作系统以后对 Configuration Manager 的站点系统服务器的支持情况的详细信息，请参阅[已弃用的服务器操作系统](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems)。  
+适用于 Windows Server 2008 Service Pack 2（x86、x64）：Standard、Enterprise 和 Datacenter
 
-除分发点和拉取分发点外，站点服务器或站点系统角色均不支持此 OS。 继续使用 OS 作为分发点，直到此支持被宣布弃用或者此 OS 的扩展支持期到期为止。 有关详细信息，请参阅 [Installation of System Center Configuration Manager CB and LTSB fails on Windows Server 2008](https://support.microsoft.com/help/4015095)（在 Windows Server 2008 上安装 System Center Configuration Manager CB 和 LTSB 失败）。
+如 [Microsoft 支持生命周期](https://support.microsoft.com/lifecycle)中详细所述，Windows Server 2008 Service Pack 2 (SP2) 现处于外延支持，不再处于主流支持。 有关这些操作系统以后对 Configuration Manager 的站点系统服务器的支持情况的详细信息，请参阅[已弃用的服务器操作系统](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems)。  
+
+除分发点和拉取分发点外，站点服务器或站点系统角色均不支持此 OS。 继续使用 OS 作为分发点，直到此支持被宣布弃用或者此 OS 的扩展支持期到期为止。 有关详细信息，请参阅 [Installation of Configuration Manager CB and LTSB fails on Windows Server 2008](https://support.microsoft.com/help/4015095)（在 Windows Server 2008 上安装 Configuration Manager CB 和 LTSB 失败）。
 
 #### <a name="site-system-servers"></a>站点系统服务器
 -   分发点 <sup>[说明 1](#bkmk_note1)</sup>  
@@ -163,88 +208,34 @@ ms.locfileid: "48236168"
 
 
 
-## <a name="bkmk_win10"></a> Windows 10（x86、x64）：专业版和企业版  
+## <a name="bkmk_client"></a>客户端 OS 版本
 
-#### <a name="site-system-servers"></a>站点系统服务器
+以下客户端 OS 版本支持用作分发点 <sup>[说明 1](#bkmk_note1)</sup>：  
 
--   分发点 <sup>[说明 1](#bkmk_note1)</sup>  
+- Windows 10（x86、x64）：专业版和企业版
+- Windows 8.1（x86、x64）：专业版和企业版
+- Windows 7 SP1（x86、x64）：专业版、企业版和旗舰版
 
-    -   使用默认 Windows 部署服务的 PXE 不支持此 OS 上的分发点。 从版本 1806 开始，可选择“在没有 Windows 部署服务的情况下启用 PXE 响应程序”选项，通过 PXE 启用此 OS 上的分发点。 有关详细信息，请参阅[安装和配置分发点](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe)。  
+此支持存在以下限制：  
 
-    -   此 OS 版本上的分发点不支持多播。  
-
-
-
-## <a name="bkmk_win81"></a> Windows 8.1（x86、x64）：专业版和企业版  
-
-#### <a name="site-system-servers"></a>站点系统服务器
-
--   分发点 <sup>[说明 1](#bkmk_note1)</sup>  
-
-    -   使用默认 Windows 部署服务的 PXE 不支持此 OS 上的分发点。 从版本 1806 开始，可选择“在没有 Windows 部署服务的情况下启用 PXE 响应程序”选项，通过 PXE 启用此 OS 上的分发点。 有关详细信息，请参阅[安装和配置分发点](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe)。  
-
-    -   此 OS 版本上的分发点不支持多播。  
+- 此 OS 上的分发点不支持使用默认 Windows 部署服务的 PXE 或多播。 从版本 1806 开始，可选择“在没有 Windows 部署服务的情况下启用 PXE 响应程序”选项，通过 PXE 启用此 OS 上的分发点。 有关详细信息，请参阅[安装和配置分发点](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe)。  
 
 
 
-## <a name="bkmk_win7sp1"></a> Windows 7 SP1（x86、x64）：专业版、企业版和旗舰版  
+## <a name="bkmk_core"></a>服务器核心安装
 
-#### <a name="site-system-servers"></a>站点系统服务器
+支持将以下服务器 OS 版本的服务器核心安装用作一个分发点： 
 
--   分发点 <sup>[说明 1](#bkmk_note1)</sup>  
+- Windows Server 版本 1809（从 Configuration Manager 版本 1810 开始）  
+- Windows Server 版本 1803（从 Configuration Manager 版本 1802 开始）  
+- Windows Server 版本 1709（从 Configuration Manager 版本 1710 开始）  
+- Windows Server 2016  
+- Windows Server 2012 R2  
+- Windows Server 2012  
 
-    -   使用默认 Windows 部署服务的 PXE 不支持此 OS 上的分发点。 从版本 1806 开始，可选择“在没有 Windows 部署服务的情况下启用 PXE 响应程序”选项，通过 PXE 启用此 OS 上的分发点。 有关详细信息，请参阅[安装和配置分发点](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe)。  
+此支持存在以下限制：  
 
-    -   此 OS 版本上的分发点不支持多播。  
-
-
-
-## <a name="bkmk_core1803"></a> Windows Server（版本 1803）的服务器核心安装
-<!--503702-->从 Configuration Manager 1802 开始，支持将 [Windows Server（版本 1803）](https://docs.microsoft.com/windows-server/get-started/get-started-with-1803)用作具有以下限制的分发点：  
-
-  -   仅支持 x64 位版本。  
-
-  -   此 OS 上的分发点不支持使用默认 Windows 部署服务的 PXE 或多播。 从版本 1806 开始，可选择“在没有 Windows 部署服务的情况下启用 PXE 响应程序”选项，通过 PXE 启用此 OS 上的分发点。 有关详细信息，请参阅[安装和配置分发点](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe)。  
-
-
-
-## <a name="bkmk_core1709"></a> Windows Server（版本 1709）的服务器核心安装
-
-从 Configuration Manager 1710 开始，支持将 [Windows Server（版本 1709）](https://docs.microsoft.com/windows-server/get-started/get-started-with-1709)用作具有以下限制的分发点：  
-
-  -   仅支持 x64 位版本。  
-
-  -   此 OS 上的分发点不支持使用默认 Windows 部署服务的 PXE 或多播。 从版本 1806 开始，可选择“在没有 Windows 部署服务的情况下启用 PXE 响应程序”选项，通过 PXE 启用此 OS 上的分发点。 有关详细信息，请参阅[安装和配置分发点](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe)。  
-
-
-
-## <a name="bkmk_core2016"></a> Windows Server 2016 的服务器核心安装
-
-使用 Configuration Manager 版本 1606 的更新汇总 1 ([KB3186654](https://support.microsoft.com/help/3186654))，此 OS 版本支持用作具有以下限制的分发点：  
-
-  -   仅支持 x64 位版本。  
-
-  -   此 OS 上的分发点不支持使用默认 Windows 部署服务的 PXE 或多播。 从版本 1806 开始，可选择“在没有 Windows 部署服务的情况下启用 PXE 响应程序”选项，通过 PXE 启用此 OS 上的分发点。 有关详细信息，请参阅[安装和配置分发点](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe)。  
-
-
-
-## <a name="bkmk_core2012r2"></a> Windows Server 2012 R2 的服务器核心安装  
-
-支持将 Windows Server 2012 R2 的 Server Core 安装用作具有以下限制的分发点：  
-
--   仅支持 x64 位版本。
-
--   此 OS 上的分发点不支持使用默认 Windows 部署服务的 PXE 或多播。 从版本 1806 开始，可选择“在没有 Windows 部署服务的情况下启用 PXE 响应程序”选项，通过 PXE 启用此 OS 上的分发点。 有关详细信息，请参阅[安装和配置分发点](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe)。  
-
-
-
-## <a name="bkmk_core2012"></a> Windows Server 2012 的服务器核心安装  
-
-支持将 Windows Server 2012 的 Server Core 安装用作具有以下限制的分发点：  
-
--   仅支持 64 位版本。  
-
--   此 OS 上的分发点不支持使用默认 Windows 部署服务的 PXE 或多播。 从版本 1806 开始，可选择“在没有 Windows 部署服务的情况下启用 PXE 响应程序”选项，通过 PXE 启用此 OS 上的分发点。 有关详细信息，请参阅[安装和配置分发点](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe)。
+- 此 OS 上的分发点不支持使用默认 Windows 部署服务的 PXE 或多播。 从版本 1806 开始，可选择“在没有 Windows 部署服务的情况下启用 PXE 响应程序”选项，通过 PXE 启用此 OS 上的分发点。 有关详细信息，请参阅[安装和配置分发点](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_config-pxe)。  
 
 
 
