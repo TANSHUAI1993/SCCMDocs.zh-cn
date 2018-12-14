@@ -2,7 +2,7 @@
 title: 创建应用程序
 titleSuffix: Configuration Manager
 description: 使用部署类型、检测方法和安装软件要求创建应用程序。
-ms.date: 07/30/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 848b81ee9e1d6d9ebc189a2d8cb0126648f91be0
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 947dfac82db43e5cb21d8304d31be23219bb83aa
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385178"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456645"
 ---
 # <a name="create-applications-in-configuration-manager"></a>在 Configuration Manager 中创建应用程序
 
@@ -241,6 +241,10 @@ Configuration Manager 应用程序可定义有关应用的元数据。 应用程
 - **卸载程序**：（可选）指定卸载程序的名称和任何所需参数。  
 
     - **卸载开始于**：（可选）指定具有部署类型的卸载程序的文件夹。 此文件夹可以是客户端上的绝对路径。 也可以是包所在文件夹的分发点上的相对路径。  
+
+- **修复程序**：从版本 1810 开始，对于 Windows Installer 和脚本安装程序部署类型，可以选择指定修复程序的名称和任何所需参数。<!--1357866-->  
+
+    - **修复开始于**：（可选）指定具有部署类型的修复程序的文件夹。 此文件夹可以是客户端上的绝对路径。 也可以是包所在文件夹的分发点上的相对路径。  
 
 - **在 64 位客户端上以 32 位进程形式运行安装和卸载计划**：使用基于 Windows 的计算机上的 32 位文件和注册表位置来运行部署类型的安装程序。  
 
