@@ -10,12 +10,12 @@ ms.assetid: 035b7f73-8b78-4ed1-835e-a31f9a5c4a02
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 45b65e5ff35f93bb79418f00795aecab5cc208b9
-ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
+ms.openlocfilehash: 1a7d8e6fe1824ab2a7fe3cfb6f89965a4b5800c0
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411198"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456067"
 ---
 # <a name="fundamentals-of-security-for-configuration-manager"></a>Configuration Manager 安全性的基础知识
 
@@ -65,6 +65,8 @@ Configuration Manager 的安全性包括以下层：
 #### <a name="bkmk_layer-provider"></a> SMS 提供程序
 
 下一个安全层建立在通过 Windows Management Instrumentation (WMI)（具体指 SMS 提供程序）进行的访问的基础上。 SMS 提供程序是一种 Configuration Manager 组件，它授予用户访问权限以查询站点数据库中的信息。 默认情况下，只有本地 SMS 管理员组的成员才能访问该提供程序。 此组最初仅包含安装了 Configuration Manager 的用户。 若要向其他帐户授予对通用信息模型 (CIM) 存储库和 SMS 提供程序的权限，请将这些帐户添加到 SMS 管理员组中。  
+
+从版本 1810 开始，可以为管理员指定访问 Configuration Manager 站点的最低身份验证级别。 此功能强制管理员以要求的级别登录到 Windows。 <!--1357013-->  
 
 有关详细信息，请参阅[规划 SMS 提供程序](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider)。
 

@@ -10,12 +10,12 @@ ms.assetid: ec5b54cf-62b7-4ed1-9bb3-e8c63b9641c8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2c739f52553aca8680328e581e183a5ca974ffdf
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: f1683f69ae065d0523719edd3d24da52d499341b
+ms.sourcegitcommit: 1439817f1309658b31008d7bafaab32fc5ef8789
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32337500"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52819993"
 ---
 # <a name="upgrade-the-long-term-servicing-branch-to-the-current-branch"></a>将 Long-Term Servicing Branch 升级到 Current Branch
 
@@ -46,6 +46,6 @@ ms.locfileid: "32337500"
 
  1. 在控制台中，转到“管理” > “站点配置” > “站点”，然后打开“层次结构设置”。  
 
- 2. 选择选项将站点转换为 Current Branch，然后选择“应用”。  
+ 2. 在“层次结构设置”中，切换到“许可”标签。选择“转换为 Current Branch”选项，然后选择“应用”。  
 
 站点转换为 Current Branch 后，可以使用以前不可用的功能。

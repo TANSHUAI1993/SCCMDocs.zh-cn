@@ -2,7 +2,7 @@
 title: 故障排除的日志文件
 titleSuffix: Configuration Manager
 description: 使用日志文件解决 Configuration Manager 客户端和站点系统中的问题。
-ms.date: 09/10/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4435d39dd736db1058b06d09e5722a80a173bf6e
-ms.sourcegitcommit: 2badee2b63ae63687795250e298f463474063100
+ms.openlocfilehash: cf7ca86dd04d60f1ff914294a7430d9f4a7a2fb7
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601205"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456696"
 ---
 # <a name="log-files-in-configuration-manager"></a>Configuration Manager 中的日志文件
 
@@ -314,6 +314,7 @@ Configuration Manager 将日志文件存储在不同的位置。 这些位置取
 |mpMSI.log|记录有关管理点安装的详细信息。|站点服务器|  
 |MPSetup.log|记录管理点安装包装过程|站点服务器|  
 |netdisc.log|记录网络发现操作。|站点服务器|  
+|NotiCtrl.log|应用程序请求通知。|站点服务器|  
 |ntsvrdis.log|记录站点系统服务器的发现活动。|站点服务器|  
 |Objreplmgr|记录对复制的对象更改通知的处理。|站点服务器|  
 |offermgr.log|记录播发更新。|站点服务器|  
@@ -334,7 +335,7 @@ Configuration Manager 将日志文件存储在不同的位置。 这些位置取
 |sitectrl.log|记录对数据库中的站点控制对象所做的站点设置更改。|站点服务器|  
 |sitestat.log|记录所有站点系统的监视进程的可用性和磁盘空间。|站点服务器|
 |SMS_ISVUPDATES_SYNCAGENT.log| 从 Configuration Manager 版本 1806 开始，用于同步第三方软件更新的日志文件。| Configuration Manager 层次结构中的顶层软件更新点。|
-|SMS_PhasedDeployment.log| 分阶段部署的日志文件，从 Configuration Manager 版本 1802 开始提供的预发布功能。|Configuration Manager 层次结构中的顶层站点|   
+|SMS_PhasedDeployment.log| 分阶段部署的日志文件|Configuration Manager 层次结构中的顶层站点|   
 |SmsAdminUI.log|记录 Configuration Manager 控制台活动。|运行 Configuration Manager 控制台的计算机|  
 |SMSAWEBSVCSetup.log|记录应用程序目录 Web 服务的安装活动。|站点系统服务器|  
 |smsbkup.log|记录站点备份过程的输出。|站点服务器|  
@@ -436,6 +437,7 @@ Configuration Manager 将日志文件存储在不同的位置。 这些位置取
 |CCMSDKProvider.log|记录应用程序管理 SDK 的活动。|客户端|  
 |colleval.log|记录有关集合计算器创建、更改和删除集合时的详细信息。|站点系统服务器|  
 |ConfigMgrSoftwareCatalog.log|记录应用程序目录的活动（包括它使用 Silverlight 的情况）。|客户端|  
+|NotiCtrl.log|应用程序请求通知。|站点服务器|  
 |portlctl.log|记录针对应用程序目录网站点站点系统角色的监视活动。|站点系统服务器|  
 |portlwebMSI.log|记录应用程序目录网站角色的 MSI 安装活动。|站点系统服务器|  
 |PrestageContent.log|记录有关在远程预留分发点上使用 ExtractContent.exe 工具的详细信息。 此工具提取已导出到文件的内容。|站点系统服务器|  
@@ -708,7 +710,7 @@ Configuration Manager 将日志文件存储在不同的位置。 这些位置取
 |smpperf.log|记录状态迁移点性能计数器更新。|站点系统服务器|  
 |smspxe.log|记录有关使用 PXE 启动的客户端作出的响应的详细信息，以及有关启动映像和启动文件的扩展的详细信息。|站点系统服务器|  
 |smssmpsetup.log|记录有关状态迁移点的安装和配置详细信息。|站点系统服务器|
-| SMS_PhasedDeployment.log| 分阶段部署的日志文件，从 Configuration Manager 版本 1802 开始提供的预发布功能。|Configuration Manager 层次结构中的顶层站点| 
+| SMS_PhasedDeployment.log| 分阶段部署的日志文件|Configuration Manager 层次结构中的顶层站点| 
 |Smsts.log|记录任务序列活动。|客户端|  
 |TSAgent.log|记录在启动任务序列之前的任务序列依赖项结果。|客户端|  
 |TaskSequenceProvider.log|记录在导入、导出或编辑任务序列时有关任务序列的详细信息。|站点系统服务器|  

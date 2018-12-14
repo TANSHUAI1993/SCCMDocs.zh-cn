@@ -2,7 +2,7 @@
 title: 管理任务序列
 titleSuffix: Configuration Manager
 description: 创建、编辑、部署、导入和导出任务序列，在环境中管理任务并自动执行任务。
-ms.date: 08/17/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a1f099f1-e9b5-4189-88b3-f53e3b4e4add
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a6c1fb447719a36bd3c0cb7e2c91daf6a58d85ff
-ms.sourcegitcommit: be8c0182db9ef55a948269fcbad7c0f34fd871eb
+ms.openlocfilehash: 44cfb06c8d92568a4468c1f46b90ceeb259c3c1f
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42755918"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456628"
 ---
 # <a name="manage-task-sequences-to-automate-tasks-in-configuration-manager"></a>管理任务序列在 Configuration Manager 中自动执行任务
 
@@ -391,6 +391,9 @@ ms.locfileid: "42755918"
     -   在没有本地分发点可用的情况下使用远程分发点：指定客户端是否可以使用相邻边界组中的分发点来下载任务序列所需的内容。  
 
     - 允许客户端使用默认站点边界组中的分发点：指定当前或相邻边界组中的分发点中的内容不可用时，客户端是否应从站点默认边界组中的分发点下载内容。  
+
+        > [!Note]  
+        > 从版本 1810 开始，当设备运行任务序列并且需要获取内容时，它可以使用类似于 Configuration Manager 客户端的边界组行为。 有关详细信息，请参阅[对边界组的任务序列支持](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgr-osd)。<!--1359025-->  
 
 11. 从 Configuration Manager 1802 开始，如果希望保存设置以便再次使用，可单击“摘要”选项卡上的“另存为模板”。 为模板提供名称，然后选择要保存的设置。  
 

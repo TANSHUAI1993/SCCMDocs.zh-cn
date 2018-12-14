@@ -2,7 +2,7 @@
 title: 配置 Azure 服务
 titleSuffix: Configuration Manager
 description: 通过云管理、升级就绪情况、适用于企业的 Microsoft Store 以及 Log Analytics 等 Azure 服务连接 Configuration Manager 环境。
-ms.date: 03/22/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a26a653e-17aa-43eb-ab36-0e36c7d29f49
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1ea47941be51d1bf38de53203aad00c02d0a11d3
-ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
+ms.openlocfilehash: 0e1cdef0acc799fc60c622f11e4c9c7426dfc19c
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43893764"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456444"
 ---
 # <a name="configure-azure-services-for-use-with-configuration-manager"></a>配置用于 Configuration Manager 的 Azure 服务
 
@@ -63,19 +63,20 @@ ms.locfileid: "43893764"
 
 |服务  |租户  |云  |Web 应用  |本机应用  |操作  |
 |---------|---------|---------|---------|---------|---------|
-|云管理及</br>Azure AD 用户发现 | 多选 | 公共 | ![支持](media/green_check.png) | ![支持](media/green_check.png) | 导入、创建 |
+|云管理及<br>Azure AD 用户发现 | 多选 | 公共、私有 | ![支持](media/green_check.png) | ![支持](media/green_check.png) | 导入、创建 |
 |Log Analytics 连接器 | 一台 | 公共、私有 | ![支持](media/green_check.png) | ![不支持](media/Red_X.png) | 导入 |
 |Upgrade Readiness | 一台 | 公共 | ![支持](media/green_check.png) | ![不支持](media/Red_X.png) | 导入 |
-|适用于企业和教育的</br>业务电话 | 一台 | 公共 | ![支持](media/green_check.png) | ![不支持](media/Red_X.png) | 导入、创建 |
+|适用于企业和教育的<br>业务电话 | 一台 | 公共 | ![支持](media/green_check.png) | ![不支持](media/Red_X.png) | 导入、创建 |
 
 
 ### <a name="about-azure-ad-apps"></a>关于 Azure AD 应用
 
 不同的 Azure 服务需要在 Azue 门户进行不同的配置。 此外，针对 Azure 资源，每个服务的应用可能需要单独的权限。  
 
-你可以将一个应用用于多个服务。 在 Configuration Manager 和 Azure AD 中只需管理一个对象。 当应用的安全密钥到期时，只需刷新一个密钥。
+单个应用可用于多个服务。 在 Configuration Manager 和 Azure AD 中只需管理一个对象。 当应用的安全密钥到期时，只需刷新一个密钥。
 
-最安全的配置是每个服务使用单独的应用。 一个服务的应用可能需要其他服务不需要的其他权限。 将一个应用用于不同的服务可能会向该应用提供超出其需求的更多权限。 
+<!-- The most secure configuration is using separate apps for each service. An app for one service might require additional permissions that another service doesn't require. Using one app for different services can provide the app with more permissions than it otherwise requires. 
+ --> 
 
 在向导中创建其他 Azure 服务时，Configuration Manager 会重复使用服务之间通用的信息。 此行为让你无需多次输入同样的信息。 
 
@@ -91,9 +92,15 @@ ms.locfileid: "43893764"
 
 ## <a name="before-you-begin"></a>在开始之前
 
-决定好要连接到的服务后，请参考[服务详细信息](#service-details)中的表。 此表为你提供完成 Azure 服务向导所需的信息。 请提前与你的 Azure AD 管理员进行讨论。 决定是否提前在 Azure 门户中手动创建应用，然后将该应用的详细信息导入至 Configuration Manager。 或者使用 Configuration Manager 直接在 Azure AD 中创建应用。 若要从 Azure AD 收集必要数据，请查看本文其他部分中的信息。
+决定好要连接到的服务后，请参考[服务详细信息](#service-details)中的表。 此表为你提供完成 Azure 服务向导所需的信息。 请提前与你的 Azure AD 管理员进行讨论。 决定执行以下哪项操作： 
 
-部分服务需要 Azure AD 应用具备特定的权限。 查看每个服务的信息以确定任何所需权限。 例如，在导入某个 Web 应用之前，Azure 管理员必须先在 [Azure 门户](https://portal.azure.com)中创建该应用。 在配置升级就绪情况或 Log Analytics 连接器时，需要在相关工作区的资源组上授予新创建的 Web 应用“参与者”权限。 此权限允许 Configuration Manager 访问该工作区。 分配权限时，在 Azure 门户的“添加用户”区域中搜索应用注册的名称。 此过程与[向 Configuration Manager 提供 Log Analytics 权限](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#grant-configuration-manager-with-permissions-to-log-analytics)相同。 Azure 管理员必须在将应用导入 Configuration Manager 之前分配这些权限。
+- 在 Azure 门户中提前手动创建应用。 然后将应用详细信息导入 Configuration Manager。  
+
+- 使用 Configuration Manager 直接在 Azure AD 中创建应用。 若要从 Azure AD 收集必要数据，请查看本文其他部分中的信息。  
+
+部分服务需要 Azure AD 应用具备特定的权限。 查看每个服务的信息以确定任何所需权限。 例如，在导入某个 Web 应用之前，Azure 管理员必须先在 [Azure 门户](https://portal.azure.com)中创建该应用。 
+
+在配置升级就绪情况或 Log Analytics 连接器时，在相关工作区的资源组上授予新创建的 Web 应用“参与者”权限。 此权限允许 Configuration Manager 访问该工作区。 分配权限时，在 Azure 门户的“添加用户”区域中搜索应用注册的名称。 此过程与[向 Configuration Manager 提供 Log Analytics 权限](https://docs.microsoft.com/azure/log-analytics/log-analytics-sccm#grant-configuration-manager-with-permissions-to-log-analytics)相同。 Azure 管理员必须在将应用导入 Configuration Manager 之前分配这些权限。
 
 
 
@@ -101,7 +108,7 @@ ms.locfileid: "43893764"
 
 1.  在 Configuration Manager 控制台中，转到“管理”工作区，展开“云服务”，然后选择“Azure 服务”节点。  
 
-2.  在功能区的“主页”选项卡上的“Azure 服务”组中，单击“配置 Azure 服务”。  
+2.  在功能区的“主页”选项卡上的“Azure 服务”组中，选择“配置 Azure 服务”。  
 
 3.  在 Azure 服务向导的“Azure 服务”页上进行以下操作：  
 
@@ -111,7 +118,7 @@ ms.locfileid: "43893764"
 
     3. 选择想要通过 Configuration Manager 连接到的 Azure 服务。  
 
-4. 单击“下一步”继续转至 Azure 服务向导的 [Azure 应用属性](#azure-app-properties)页。  
+4. 选择“下一步”继续转至 Azure 服务向导的 [Azure 应用属性](#azure-app-properties)页。  
 
 
 
@@ -120,10 +127,12 @@ ms.locfileid: "43893764"
 先从 Azure 服务向导的“应用”页上的列表中选择“Azure 环境”。 根据[服务详细信息](#service-details)中的表，判定该服务当前可用的环境。
 
 应用页的其余部分根据特定服务而定。 根据[服务详细信息](#service-details)中的表，判定服务使用哪种应用以及可以进行什么操作。 
-- 如果应用支持导入和创建操作，请单击“浏览”。 此操作会打开[服务器应用对话框](#server-app-dialog)或[客户端应用对话框](#client-app-dialog)。
-- 如果应用只支持导入操作，请单击“导入”。 此操作会打开[导入应用对话框（服务器）](#import-apps-dialog-server)或[导入应用对话框（客户端）](#import-apps-dialog-client)。
 
-在此页面指定好应用后，单击“下一步”以继续转至 Azure 服务向导的[配置或发现](#configuration-or-discovery)页。
+- 如果应用同时支持导入和创建操作，请选择“浏览”。 此操作会打开[服务器应用对话框](#server-app-dialog)或[客户端应用对话框](#client-app-dialog)。  
+
+- 如果应用只支持导入操作，请选择“导入”。 此操作会打开[导入应用对话框（服务器）](#import-apps-dialog-server)或[导入应用对话框（客户端）](#import-apps-dialog-client)。
+
+在此页面指定好应用后，选择“下一步”以继续转至 Azure 服务向导的[配置或发现](#configuration-or-discovery)页。
 
 ### <a name="web-app"></a>Web 应用
 
@@ -131,21 +140,21 @@ ms.locfileid: "43893764"
 
 #### <a name="server-app-dialog"></a>服务器应用对话框
 
-在 Azure 服务向导的应用页上的“Web 应用”处单击“浏览”时，会打开服务器应用对话框。 对话框会显示一个列表，显示任何现有 Web 应用的以下属性：
+在 Azure 服务向导的应用页上的“Web 应用”选择“浏览”时，会打开服务器应用对话框。 对话框会显示一个列表，显示任何现有 Web 应用的以下属性：
 - 租户友好名称
 - 应用友好名称
 - 服务类型
 
 你可以从服务器应用对话框进行三种操作：
 - 如要重复使用现有 Web 应用，请从列表中选择它。 
-- 单击“导入”以打开[导入应用对话框](#import-apps-dialog-server)。
-- 单击“创建”以打开[创建服务器应用程序对话框](#create-server-application-dialog)。
+- 选择“导入”以打开[“导入应用”对话框](#import-apps-dialog-server)。
+- 选择“创建”以打开[“创建服务器应用程序”对话框](#create-server-application-dialog)。
 
-选择、导入或创建 Web 应用后，单击“确定”以关闭服务器应用对话框。 此操作会返回至 Azure 服务向导的[应用页](#azure-app-properties)。
+选择、导入或创建 Web 应用后，选择“确定”以关闭“服务器应用”对话框。 此操作会返回至 Azure 服务向导的[应用页](#azure-app-properties)。
 
 #### <a name="import-apps-dialog-server"></a>导入应用对话框（服务器）
 
-从 Azue 服务向导的服务器应用对话框或应用页单击“导入”时，会打开导入应用对话框。 此页可以输入 Azure 门户中已创建的 Azure AD Web 应用的相关信息。 它会将 Web 应用的元数据导入至 Configuration Manager。 指定下列信息：
+从 Azue 服务向导的服务器应用对话框或应用页选择“导入”时，会打开“导入应用”对话框。 此页可以输入 Azure 门户中已创建的 Azure AD Web 应用的相关信息。 它会将 Web 应用的元数据导入至 Configuration Manager。 指定下列信息：
 - **Azure AD 租户名称**
 - **Azure AD 租户 ID**
 - **应用程序名称**：应用的友好名称。
@@ -154,19 +163,19 @@ ms.locfileid: "43893764"
 - **密钥到期日期**：从日历选择一个未来的日期。 
 - **应用 ID URI**：此值在 Azure AD 租户中必须是唯一的。 它在 Configuration Manager 客户端用于请求访问服务的访问令牌中。 默认情况下，此值为 https://ConfigMgrService。  
 
-输入信息后，单击“验证”。 然后单击“确定”以关闭导入应用对话框。 此操作会返回 Azure 服务向导的[应用页](#azure-app-properties)或[服务器应用对话框](#server-app-dialog)。
+输入信息后，选择“验证”。 然后选择“确定”，关闭“导入应用”对话框。 此操作会返回 Azure 服务向导的[应用页](#azure-app-properties)或[服务器应用对话框](#server-app-dialog)。
 
 #### <a name="create-server-application-dialog"></a>创建服务器应用程序对话框
 
-在服务器应用对话框中单击“创建”时，会打开创建服务器应用程序对话框。 此页会自动在 Azure AD 中创建 Web 应用。 指定下列信息：
+在服务器应用对话框中选择“创建”时，会打开“创建服务器应用程序”对话框。 此页会自动在 Azure AD 中创建 Web 应用。 指定下列信息：
 - **应用程序名称**：应用的友好名称。
 - **主页 URL**：Configuration Manager 不使用此值，但是 Azure AD 需要它。 默认情况下，此值为 https://ConfigMgrService。  
 - **应用 ID URI**：此值在 Azure AD 租户中必须是唯一的。 它在 Configuration Manager 客户端用于请求访问服务的访问令牌中。 默认情况下，此值为 https://ConfigMgrService。  
-- **密钥有效期**：单击下拉列表，并选择“1 年”或“2 年”。 默认值为一年。
+- **密钥有效期**：从下拉列表中选择“1 年”或“2 年”。 默认值为一年。
 
-单击“登录”以进行 Azure 管理用户的身份验证。 Configuration Manager 不保存这些凭据。 此角色不需要 Configuration Manager 中的权限，其帐户也不需要与运行 Azure 服务向导的帐户相同。 成功完成 Azure 身份验证后，该页面会显示 Azure AD 租户名称以供参考。 
+选择“登录”以进行 Azure 管理用户的身份验证。 Configuration Manager 不保存这些凭据。 此角色不需要 Configuration Manager 中的权限，其帐户也不需要与运行 Azure 服务向导的帐户相同。 成功完成 Azure 身份验证后，该页面会显示 Azure AD 租户名称以供参考。 
 
-单击“确定”以在 Azure AD 中创建 Web 应用，并关闭创建服务器应用程序对话框。 此操作会返回至[服务器应用对话框](#server-app-dialog)。
+选择“确定”以在 Azure AD 中创建 Web 应用，并关闭“创建服务器应用程序”对话框。 此操作会返回至[服务器应用对话框](#server-app-dialog)。
 
 
 ### <a name="native-client-app"></a>本机客户端应用
@@ -175,35 +184,35 @@ ms.locfileid: "43893764"
 
 #### <a name="client-app-dialog"></a>客户端应用对话框
 
-在 Azure 服务向导的应用页上的“本机客户端应用”处单击“浏览”时，会打开客户端应用对话框。 对话框会显示一个列表，显示任何现有本机应用的以下属性：
+在 Azure 服务向导的“应用”页上的“本机客户端应用”选择“浏览”时，会打开“客户端应用”对话框。 对话框会显示一个列表，显示任何现有本机应用的以下属性：
 - 租户友好名称
 - 应用友好名称
 - 服务类型
 
 你可以从客户端应用对话框进行三种操作：
 - 如要重复使用现有本机应用，请从列表中选择它。 
-- 单击“导入”以打开[导入应用对话框](#import-apps-dialog-client)。
-- 单击“创建”以打开[创建客户端应用程序对话框](#create-client-application-dialog)。
+- 选择“导入”以打开[“导入应用”对话框](#import-apps-dialog-client)。
+- 选择“创建”以打开[“创建客户端应用程序”对话框](#create-client-application-dialog)。
 
-选择、导入或创建本机应用后，单击“确定”以关闭客户端应用对话框。 此操作会返回至 Azure 服务向导的[应用页](#azure-app-properties)。
+选择、导入或创建本机应用后，选择“确定”以关闭“客户端应用”对话框。 此操作会返回至 Azure 服务向导的[应用页](#azure-app-properties)。
 
 #### <a name="import-apps-dialog-client"></a>导入应用对话框（客户端）
 
-在客户端应用对话框中单击“导入”时，会打开导入应用对话框。 此页可以输入 Azure 门户中已创建的 Azure AD 本机应用的相关信息。 它会将本机应用的元数据导入至 Configuration Manager。 指定下列信息：
+在“客户端应用”对话框中选择“导入”时，会打开“导入应用”对话框。 此页可以输入 Azure 门户中已创建的 Azure AD 本机应用的相关信息。 它会将本机应用的元数据导入至 Configuration Manager。 指定下列信息：
 - **应用程序名称**：应用的友好名称。
 - **客户端 ID** 
 
-输入信息后，单击“验证”。 然后单击“确定”以关闭导入应用对话框。 此操作会返回至[客户端应用对话框](#client-app-dialog)。
+输入信息后，选择“验证”。 然后选择“确定”，关闭“导入应用”对话框。 此操作会返回至[客户端应用对话框](#client-app-dialog)。
 
 #### <a name="create-client-application-dialog"></a>创建客户端应用程序对话框
 
-在客户端应用对话框中单击“创建”时，会打开创建客户端应用程序对话框。 此页会自动在 Azure AD 中创建本机应用。 指定下列信息：
+在“客户端应用”对话框中选择“创建”时，会打开“创建客户端应用程序”对话框。 此页会自动在 Azure AD 中创建本机应用。 指定下列信息：
 - **应用程序名称**：应用的友好名称。
 - **回复 URL**：Configuration Manager 不使用此值，但是 Azure AD 需要它。 默认情况下，此值为 https://ConfigMgrService。 
 
-单击“登录”以进行 Azure 管理用户的身份验证。 Configuration Manager 不保存这些凭据。 此角色不需要 Configuration Manager 中的权限，其帐户也不需要与运行 Azure 服务向导的帐户相同。 成功完成 Azure 身份验证后，该页面会显示 Azure AD 租户名称以供参考。 
+选择“登录”以进行 Azure 管理用户的身份验证。 Configuration Manager 不保存这些凭据。 此角色不需要 Configuration Manager 中的权限，其帐户也不需要与运行 Azure 服务向导的帐户相同。 成功完成 Azure 身份验证后，该页面会显示 Azure AD 租户名称以供参考。 
 
-单击“确定”以在 Azure AD 中创建本机应用，并关闭创建客户端应用程序对话框。 此操作会返回至[客户端应用对话框](#client-app-dialog)。
+选择“确定”以在 Azure AD 中创建本机应用，并关闭“创建客户端应用程序”对话框。 此操作会返回至[客户端应用对话框](#client-app-dialog)。
 
 
 ## <a name="configuration-or-discovery"></a>配置或发现
@@ -223,9 +232,9 @@ ms.locfileid: "43893764"
 
 
 ## <a name="view-the-configuration-of-an-azure-service"></a>查看 Azure 服务的配置
-查看已配置进行使用的 Azure 服务的属性。 在 Configuration Manager 控制台中，转到“管理”工作区，展开“云服务”，然后选择“Azure 服务”。 选择想要查看或编辑的服务，然后单击“属性”。
+查看已配置进行使用的 Azure 服务的属性。 在 Configuration Manager 控制台中，转到“管理”工作区，展开“云服务”，然后选择“Azure 服务”。 选择想要查看或编辑的服务，然后选择“属性”。
 
-如果选择服务并单击功能区中的“删除”，则会删除 Configuration Manager 中的连接。 这不会从 Azure AD 删除该应用。 请 Azure 管理员删除不再需要的应用。 或运行 Azure 服务向导以导入应用。<!--483440-->
+如果选择服务并选择功能区中的“删除”，则会删除 Configuration Manager 中的连接。 这不会从 Azure AD 删除该应用。 请 Azure 管理员删除不再需要的应用。 或运行 Azure 服务向导以导入应用。<!--483440-->
 
 
 ## <a name="cloud-management-data-flow"></a>云管理数据流

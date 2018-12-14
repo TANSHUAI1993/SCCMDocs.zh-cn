@@ -1,8 +1,8 @@
 ---
 title: 控制台支持
 titleSuffix: Configuration Manager
-description: 了解 System Center Configuration Manager 控制台支持的操作系统。
-ms.date: 1/3/2017
+description: 了解可以安装 Configuration Manager 控制台的操作系统版本。
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,23 +10,23 @@ ms.assetid: 21a80050-6452-4b7d-8424-99bddf9fa1f4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8fc17e5a58735f232152639981d9c02c12752cf1
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: a1b2d5c5755be9b6a23167bad062795c8f18a0d8
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32332845"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52455746"
 ---
-# <a name="supported-operating-systems-for-system-center-configuration-manager-consoles"></a>System Center Configuration Manager 控制台支持的操作系统
+# <a name="supported-os-versions-for-configuration-manager-consoles"></a>Configuration Manager 控制台支持的操作系统版本
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
 
- 若要支持 System Center Configuration Manager 控制台，以下操作系统需要最低为 4.5.2 版本的 .NET Framework。 Windows 10 除外，它需要最低为 4.6 版本的 .NET Framework。  
+要支持 Configuration Manager 控制台，以下操作系统版本需要最低版本的 .NET Framework 4.5.2。 Windows 10 除外，它需要最低为 4.6 版本的 .NET Framework。  
+
+- **Windows Server 2019**：Standard、Datacenter（从版本 1810 开始）  
 
 -   **Windows Server 2016**：标准版、数据中心版  
-  - 从 Configuration Manager 版本 1606（或 2016 年 10 月发布的 1606 基线版本）开始，将支持 Windows Server 2016，并提供 KB3186654 中的修补程序汇总。  
-
 
 -   **Windows Server 2012 R2** (x64)：标准版、数据中心版  
 
@@ -38,6 +38,12 @@ ms.locfileid: "32332845"
 
 -   **Windows 8.1**（x86、x64）：专业版、企业版  
 
-<!---   **Windows 8** (x86, x64): Professional, Enterprise  -removed Jan 12,2018 sms505863-->
-
 -   **Windows 7 SP1**（x86、x64）：专业版、企业版、旗舰版  
+
+
+有关 Configuration Manager 控制台的详细信息，请参阅以下文章：
+
+- [安装控制台](/sccm/core/servers/deploy/install/install-consoles)  
+
+- [使用控制台](/sccm/core/servers/manage/admin-console)  
+

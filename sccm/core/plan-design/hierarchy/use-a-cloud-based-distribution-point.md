@@ -2,7 +2,7 @@
 title: 云分发点
 titleSuffix: Configuration Manager
 description: 规划和设计，以通过 Microsoft Azure 和 Configuration Manager 中的云分发点来分发软件内容。
-ms.date: 09/10/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 3cd9c725-6b42-427d-9191-86e67f84e48c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 79b17ba00274459401dc81035833163e75939be0
-ms.sourcegitcommit: 2badee2b63ae63687795250e298f463474063100
+ms.openlocfilehash: 4673da59da7fede2f425948472c31a620d13a258
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601137"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456288"
 ---
 # <a name="use-a-cloud-distribution-point-in-configuration-manager"></a>在 Configuration Manager 中使用云分发点
 
@@ -87,12 +87,15 @@ ms.locfileid: "45601137"
 ### <a name="azure-resource-manager"></a>Azure 资源管理器
 <!--1322209-->从版本 1806 起，使用 Azure 资源管理器部署来创建云分发点。 [Azure 资源管理器](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview)是一个现代平台，用于以单个实体（称为[资源组](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups)）的方式来管理所有解决方案资源。 如果在 Azure 资源管理器中部署云分发点，站点将使用 Azure Active Directory (Azure AD) 进行身份验证并创建必要的云资源。 此现代化部署不需要经典 Azure 管理证书。  
 
+> [!Note]  
+> 此功能不提供对 Azure 云服务提供商 (CSP) 的支持。 Azure 资源管理器中的云发分点部署将继续使用 CSP 不支持的经典云服务。 有关详细信息，请参阅 [Azure CSP 中可用的 Azure 服务](/azure/cloud-solution-provider/overview/azure-csp-available-services)。  
+
 云分发点向导仍提供使用 Azure 管理证书的“经典服务部署”选项。 若要简化资源的部署和管理，Microsoft 建议为所有新的云分发点使用 Azure 资源管理器部署模型。 如果可以，请通过资源管理器重新部署现有云分发点。
 
-Configuration Manager 不会将现有经典云分发点迁移到 Azure 资源管理器部署模型。 使用 Azure 资源管理器部署创建新的云分发点，然后删除经典云分发点。 
+> [!Important]  
+> 从版本 1810 开始，Configuration Manager 已弃用 Azure 的经典服务部署。 此版本是支持创建这些 Azure 部署的最后一个版本。 此功能将在 2019 年 7 月 1 日之后发布的第一个 Configuration Manager 版本中删除。 在此之前，请将 CMG 和云分发点移至 Azure 资源管理器部署。 <!--SCCMDocs-pr issue #2993-->  
 
-> [!IMPORTANT]  
-> 此功能不提供对 Azure 云服务提供商 (CSP) 的支持。 Azure 资源管理器中的云发分点部署将继续使用 CSP 不支持的经典云服务。 有关详细信息，请参阅 [Azure CSP 中可用的 Azure 服务](/azure/cloud-solution-provider/overview/azure-csp-available-services)。  
+Configuration Manager 不会将现有经典云分发点迁移到 Azure 资源管理器部署模型。 使用 Azure 资源管理器部署创建新的云分发点，然后删除经典云分发点。 
 
 
 ### <a name="hierarchy-design"></a>层次结构设计
@@ -134,12 +137,14 @@ Configuration Manager 不会将现有经典云分发点迁移到 Azure 资源管
 
 - 站点服务器需要 Internet 访问来部署和管理云服务。  
 
+- 使用 Azure 资源管理器部署方法时，请将 Configuration Manager 与 [Azure AD](/sccm/core/servers/deploy/configure/azure-services-wizard) 集成到云管理。 不需要 Azure AD 用户发现。  
+
 - 如果使用 Azure 经典部署方法，则需要 Azure 管理证书。 有关详细信息，请参阅以下[证书](#bkmk_certs)部分。   
 
     > [!TIP]  
     > 从 Configuration Manager 版本 1806 开始，使用 Azure 资源管理器部署模型。 它不需要此管理证书。  
-
-- 如果使用 Azure 资源管理器部署方法，请将 Configuration Manager 与 [Azure AD](/sccm/core/clients/deploy/deploy-clients-cmg-azure) 集成。 不需要 Azure AD 用户发现。  
+    > 
+    > 从版本 1810 开始弃用经典部署方法。   
 
 - 服务器身份验证证书。 有关详细信息，请参阅以下[证书](#bkmk_certs)部分。  
 
@@ -321,12 +326,14 @@ Azure 存储服务对于单个文件支持每秒 500 个请求。 单个云分�
 
 ### <a name="azure-management-certificate"></a>Azure 管理证书
 
-经典服务部署需要此证书。Azure 资源管理器部署不需要此证书。
+经典服务部署需要此证书。*Azure 资源管理器部署不需要此证书。
 
 如果使用 Azure 经典部署方法，则需要 Azure 管理证书。 有关详细信息，请参阅“云管理网关证书”一文的 [Azure 管理证书](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#azure-management-certificate)部分。 Configuration Manager 站点服务器使用此证书对 Azure 进行身份验证，以创建和管理经典部署。  
 
 > [!TIP]  
 > 从 Configuration Manager 版本 1806 开始，使用 Azure 资源管理器部署模型。 它不需要此管理证书。  
+> 
+> 从版本 1810 开始弃用经典部署方法。   
 
 要降低复杂性，请在所有 Azure 订阅和所有 Configuration Manager 站点中为云分发点和云管理网关的所有经典部署使用相同的 Azure 管理证书。
 

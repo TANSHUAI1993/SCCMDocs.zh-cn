@@ -2,7 +2,7 @@
 title: 诊断和使用情况数据
 titleSuffix: Configuration Manager
 description: 了解 System Center Configuration Manager 收集的关于其自身的诊断和使用情况数据。
-ms.date: 07/30/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 88ac4e55-d47b-4c94-b9c3-704c6a48b845
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 031815e741128d605bf7ee50079338eba7aa720b
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 132604418ce810fb78b397f3d5f322b10abe6bb3
+ms.sourcegitcommit: 1439817f1309658b31008d7bafaab32fc5ef8789
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39384103"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52820010"
 ---
 # <a name="diagnostics-and-usage-data-for-system-center-configuration-manager"></a>System Center Configuration Manager 的诊断和使用情况数据
 
@@ -33,28 +33,30 @@ Configuration Manager 收集有关自身的诊断和使用情况数据，Microso
 ## <a name="articles"></a>文章
  可在以下文章中详细了解 Configuration Manager 的诊断和使用情况数据：  
 
--   [如何使用诊断和使用情况数据](../../../core/plan-design/diagnostics/how-diagnostics-and-usage-data-is-used.md)  
+-   [如何使用诊断和使用情况数据](/sccm/core/plan-design/diagnostics/how-diagnostics-and-usage-data-is-used)  
 
 -   诊断使用情况数据收集的级别：
+    - [1810 的诊断数据](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1810)  
+
     - [1806 的诊断数据](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1806)  
 
     - [1802 的诊断数据](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1802)  
-
-    - [1710 的诊断数据](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1710)  
     
--   [如何收集诊断和使用情况数据](../../../core/plan-design/diagnostics/how-diagnostics-and-usage-data-is-collected.md)  
+    - [1710 的诊断数据](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1710)  
 
--   [如何查看诊断和使用情况数据](../../../core/plan-design/diagnostics/view-diagnostics-and-usage-data.md)  
+-   [如何收集诊断和使用情况数据](/sccm/core/plan-design/diagnostics/how-diagnostics-and-usage-data-is-collected)  
 
--   [客户体验改善计划 (CEIP)](../../../core/plan-design/diagnostics/customer-experience-improvement-program-ceip.md)  
+-   [如何查看诊断和使用情况数据](/sccm/core/plan-design/diagnostics/view-diagnostics-and-usage-data)  
+
+-   [客户体验改善计划 (CEIP)](/sccm/core/plan-design/diagnostics/customer-experience-improvement-program-ceip)  
 
      > [!Note]  
      > 从 Configuration Manager 版本 1802 开始，从产品中删除了 CEIP 功能。  
 
 
--   [有关诊断和使用情况数据的常见问题](../../../core/understand/frequently-asked-questions-about-diagnostics-and-usage-data.md)  
+-   [有关诊断和使用情况数据的常见问题](/sccm/core/understand/frequently-asked-questions-about-diagnostics-and-usage-data)  
 
 
 
 ## <a name="see-also"></a>另请参阅  
- [关于服务连接点](../../../core/servers/deploy/configure/about-the-service-connection-point.md)
+ [关于服务连接点](/sccm/core/servers/deploy/configure/about-the-service-connection-point)

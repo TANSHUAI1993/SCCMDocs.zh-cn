@@ -2,7 +2,7 @@
 title: 支持 Windows 10
 titleSuffix: Configuration Manager
 description: 了解支持作为客户端或 OSD 对 System Center Configuration Manager 使用的 Windows 10 版本
-ms.date: 10/02/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a1626a65-da22-49e0-9564-d2f752ea3f4b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ab8c0336b34fd3e9496d1fd7c5956aaca4c5cc32
-ms.sourcegitcommit: e0209e4549e9828eb74089313dbee323ece1fc2f
+ms.openlocfilehash: a02f904614e245a61e533164d25c0280e3a4d486
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51598540"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456120"
 ---
 # <a name="support-for-windows-10-in-configuration-manager"></a>Configuration Manager 支持使用 Windows 10  
 
@@ -51,16 +51,16 @@ Configuration Manager 版本将在[对该版本的支持](/sccm/core/servers/man
 <br/>
 下表列出了 Windows 10 的版本，这些版本可用作具有不同 Configuration Manager 版本的客户端。
 
-| Windows 10 版本 | Configuration Manager 1710 | Configuration Manager 1802 | Configuration Manager 1806 |
+| Windows 10 版本 | Configuration Manager 1710 | Configuration Manager 1802 | Configuration Manager 1806 | Configuration Manager 1810 |
 |---------------------|-----|-----|-----|-----|
-| Enterprise 2015 LTSB <!--10/14/2025-->   | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
-| Enterprise 2016 LTSB <!--10/13/2026-->   | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
-| Enterprise LTSC 2019 <!--10/10/2028-->   | ![不支持](media/Red_X.png)   | ![不支持](media/Red_X.png)   | ![支持](media/green_check.png) |
-| 1607   <!--04/09/2019-->   | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
-| 1703   <!--10/08/2019-->   | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
-| 1709   <!--04/14/2020-->   | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
-| 1803   <!--11/10/2020-->   | ![不支持](media/Red_X.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
-| 1809   <!--04/12/2021?-->   | ![不支持](media/Red_X.png) | ![不支持](media/Red_X.png) | ![支持](media/green_check.png) |
+| Enterprise 2015 LTSB <!--10/14/2025-->   | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
+| Enterprise 2016 LTSB <!--10/13/2026-->   | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
+| Enterprise LTSC 2019 <!--10/10/2028-->   | ![不支持](media/Red_X.png)   | ![不支持](media/Red_X.png)   | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
+| 1607   <!--04/09/2019-->   | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
+| 1703   <!--10/08/2019-->   | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
+| 1709   <!--04/14/2020-->   | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
+| 1803   <!--11/10/2020-->   | ![不支持](media/Red_X.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
+| 1809   <!--04/12/2021?-->   | ![不支持](media/Red_X.png) | ![不支持](media/Red_X.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
 
 <!-- lifecycle reference: https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet -->
 
@@ -85,12 +85,12 @@ Configuration Manager 版本将在[对该版本的支持](/sccm/core/servers/man
 
 下表列出了可用于不同版本 Configuration Manager 的 Windows 10 ADK 的版本。
 
-| Windows 10 ADK 版本  | Configuration Manager 1710 | Configuration Manager 1802 | Configuration Manager 1806 |
+| Windows 10 ADK 版本  | Configuration Manager 1710 | Configuration Manager 1802 | Configuration Manager 1806 | Configuration Manager 1810 |
 |--------------------|-----|-----|-----|-----|
-| 1703  | ![后向兼容](media/blue_compat.png) | ![后向兼容](media/blue_compat.png) | ![不支持](media/Red_X.png)   |
-| 1709  | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![后向兼容](media/blue_compat.png) |
-| 1803  | ![不支持](media/Red_X.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
-| 1809  | ![不支持](media/Red_X.png) | ![不支持](media/Red_X.png) | ![支持](media/green_check.png) |
+| 1703  | ![后向兼容](media/blue_compat.png) | ![后向兼容](media/blue_compat.png) | ![不支持](media/Red_X.png) | ![不支持](media/Red_X.png) |
+| 1709  | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![后向兼容](media/blue_compat.png) | ![不支持](media/Red_X.png)   |
+| 1803  | ![不支持](media/Red_X.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![后向兼容](media/blue_compat.png) |
+| 1809  | ![不支持](media/Red_X.png) | ![不支持](media/Red_X.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
 
 |项|
 |--|

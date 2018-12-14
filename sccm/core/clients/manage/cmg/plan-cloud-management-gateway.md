@@ -2,7 +2,7 @@
 title: 规划云管理网关
 titleSuffix: Configuration Manager
 description: 规划和设计云管理网关 (CMG)，简化基于 Internet 的客户端管理。
-ms.date: 10/24/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0f7e598da0953a20412f6c8279b90a95c1d26581
-ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
+ms.openlocfilehash: b059fd3b8511a3cbbf308ea7a3ee21a4ec9dbfaa
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411470"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456713"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>在 Configuration Manager 中规划云管理网关
 
@@ -98,12 +98,15 @@ CMG 部署和操作包括以下组件：
 
 
 ### <a name="azure-resource-manager"></a>Azure 资源管理器
-<!-- 1324735 -->自 1802 版本起，可使用“Azure 资源管理器部署”来创建 CMG。 [Azure 资源管理器](/azure/azure-resource-manager/resource-group-overview)是一个现代平台，用于以单个实体（称为[资源组](/azure/azure-resource-manager/resource-group-overview#resource-groups)）的方式来管理所有解决方案资源。 如果在 Azure 资源管理器中部署 CMG，站点将使用 Azure Active Directory (Azure AD) 进行身份验证并创建必要的云资源。 此现代化部署不需要经典 Azure 管理证书。  
+<!-- 1324735 -->自 1802 版本起，可使用“Azure 资源管理器部署”来创建 CMG。 [Azure 资源管理器](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview)是一个现代平台，用于以单个实体（称为[资源组](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups)）的方式来管理所有解决方案资源。 如果在 Azure 资源管理器中部署 CMG，站点将使用 Azure Active Directory (Azure AD) 进行身份验证并创建必要的云资源。 此现代化部署不需要经典 Azure 管理证书。  
+
+> [!Note]  
+> 此功能不提供对 Azure 云服务提供商 (CSP) 的支持。 Azure 资源管理器中的 CMG 部署将继续使用 CSP 不支持的经典云服务。 有关详细信息，请参阅 [Azure CSP 中可用的 Azure 服务](https://docs.microsoft.com/azure/cloud-solution-provider/overview/azure-csp-available-services)。 
 
 CMG 向导仍提供使用 Azure 管理证书的“经典服务部署”选项。 要简化资源的部署和管理，建议为所有新的 CMG 实例使用 Azure 资源管理器部署模型。 如果可以，请通过资源管理器重新部署现有 CMG 实例。 有关详细信息，请参阅[修改 CMG](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#modify-a-cmg)。
 
-> [!IMPORTANT]  
-> 此功能不提供对 Azure 云服务提供商 (CSP) 的支持。 Azure 资源管理器中的 CMG 部署将继续使用 CSP 不支持的经典云服务。 有关详细信息，请参阅 [Azure CSP 中可用的 Azure 服务](/azure/cloud-solution-provider/overview/azure-csp-available-services)。 
+> [!Important]  
+> 从版本 1810 开始，Configuration Manager 已弃用 Azure 的经典服务部署。 此版本是支持创建这些 Azure 部署的最后一个版本。 此功能将在 2019 年 7 月 1 日之后发布的第一个 Configuration Manager 版本中删除。 在此之前，请将 CMG 和云分发点移至 Azure 资源管理器部署。 <!--SCCMDocs-pr issue #2993-->  
 
 
 ### <a name="hierarchy-design"></a>层次结构设计
@@ -158,7 +161,9 @@ CMG 向导仍提供使用 Azure 管理证书的“经典服务部署”选项。
 - 如果使用 Azure 经典部署方法，则必须使用 [Azure 管理证书](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_azuremgmt)。  
 
     > [!TIP]  
-    > 从 Configuration Manager 版本 1802 起，Microsoft 推荐使用 Azure 资源管理器部署模型。 它不需要此管理证书。  
+    > 从 Configuration Manager 版本 1802 起，Microsoft 推荐使用 Azure 资源管理器部署模型。 它不需要此管理证书。 
+    > 
+    > 从版本 1810 开始弃用经典部署方法。   
 
 - 可能需要其他证书，具体取决于客户端操作系统版本和身份验证模型。 有关详细信息，请参阅 [CMG 证书](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway)。  
 
@@ -183,7 +188,7 @@ CMG 向导仍提供使用 Azure 管理证书的“经典服务部署”选项。
 
 - 使用网络负载均衡器的软件更新点不适用于 CMG。 <!--505311-->  
 
-- 从版本 1802 起，使用 Azure 资源模型的 CMG 部署不启用对 Azure 云服务提供程序 (CSP) 的支持。 Azure 资源管理器中的 CMG 部署将继续使用 CSP 不支持的经典云服务。 有关详细信息，请参阅 [Azure CSP 中可用的 Azure 服务](/azure/cloud-solution-provider/overview/azure-csp-available-services)  
+- 从版本 1802 起，使用 Azure 资源模型的 CMG 部署不启用对 Azure 云服务提供程序 (CSP) 的支持。 Azure 资源管理器中的 CMG 部署将继续使用 CSP 不支持的经典云服务。 有关详细信息，请参阅 [Azure CSP 中可用的 Azure 服务](https://docs.microsoft.com/azure/cloud-solution-provider/overview/azure-csp-available-services)  
 
 
 ### <a name="support-for-configuration-manager-features"></a>Configuration Manager 功能支持

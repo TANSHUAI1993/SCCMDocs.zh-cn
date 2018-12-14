@@ -10,12 +10,12 @@ ms.assetid: f053fa73-c553-4522-a6b9-f885f23fe57c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7057084ba976408f189a0d4fbb96f176bc0c6656
-ms.sourcegitcommit: 759098de944b8f7d5eedfc2bae2cb9a6ba15276f
+ms.openlocfilehash: 41dd6ad6f8a0292fdb16a0d727665b17e038f87b
+ms.sourcegitcommit: 1439817f1309658b31008d7bafaab32fc5ef8789
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43297261"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52820035"
 ---
 # <a name="package-conversion-manager"></a>包转换管理器
 
@@ -25,8 +25,9 @@ ms.locfileid: "43297261"
 
 从版本 1806 开始，包转换管理器可帮助你将旧的 Configuration Manager 包转换成应用程序。 应用程序会有很多其他好处，诸如依赖关系、要求规则、检测方法和用户设备相关性等。
 
-> [!Note]  
-> 在此 Configuration Manager 版本中，包转换管理器是一项预发行功能。 若要启用此功能，请参阅[预发行功能](/sccm/core/servers/manage/pre-release-features)。  
+> [!Tip]  
+> 此功能在版本 1806 中作为[预发行功能](/sccm/core/servers/manage/pre-release-features)首次引入。 从版本 1810 开始，此功能不再属于预发行功能。  
+
 
 一个 Configuration Manager 应用程序包含可部署到客户端设备的文件和程序。 但是，与旧版包和程序不同，应用程序可提供以用户为中心的其他功能。 例如，应用程序可能包含用于软件包、虚拟应用程序包或移动设备应用程序版本的本地安装的部署类型。
 
@@ -140,7 +141,7 @@ ms.locfileid: "43297261"
 > - 右键单击“包”节点。  
 > - 选择“文件夹”，然后选择“创建文件夹”。  
 > - 输入文件夹的名称，例如 `Not Converted`。  
-> - 单击“确定”。  
+> - 单击" **确定**"。  
 
 #### <a name="prepare-the-packages-for-conversion"></a>准备待转换的包
 
@@ -155,9 +156,9 @@ ms.locfileid: "43297261"
 
 测试包组应尽量包括满足以下条件的包：  
 
- - 至少一个测试包的就绪状态为“自动”。  
+ - 至少一个测试包的就绪状态为“自动” 。  
 
- - 至少一个测试包的就绪状态为“手动”。  
+ - 至少一个测试包的就绪状态为“手动” 。  
 
 理想情况下，测试包应为核心包，例如：  
 
@@ -181,7 +182,7 @@ ms.locfileid: "43297261"
 
 #### <a name="investigate-analysis-results"></a>调查分析结果
 
-分析测试包后，调查就绪状态为“手动”或“错误”的包。 确定其具有该状态的原因。 “手动”或“错误”就绪状态的一些常见原因包括：
+分析测试包后，调查就绪状态为“手动”  或“错误” 的包。 确定其具有该状态的原因。 “手动”  或“错误”  就绪状态的一些常见原因包括：
 
  - 包中没有在应用程序部署类型中创建检测方法时所需的信息。  
 

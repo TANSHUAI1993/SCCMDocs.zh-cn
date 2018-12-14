@@ -5,17 +5,17 @@ description: 使用此分步过程来设置云管理网关 (CMG)。
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 09/10/2018
+ms.date: 11/27/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: a5f356eef4d72040bd069fc17dd20fdbc3587cd6
-ms.sourcegitcommit: 2badee2b63ae63687795250e298f463474063100
+ms.openlocfilehash: 041ea28e91b77545b8984742b4199782d1edb6b7
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601052"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456526"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>为 Configuration Manager 设置云管理网关
 
@@ -38,13 +38,16 @@ ms.locfileid: "45601052"
 
 - 需要一个或多个 CMG 证书，具体取决于你的设计。 有关详细信息，请参阅[云管理网关的证书](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway)。  
 
-- 从版本 1802 开始，选择是使用“Azure 资源管理器部署”还是“经典服务部署”。 有关详细信息，请参阅 [Azure 资源管理器](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager)。 对于 CMG 的 Azure 资源管理器部署，需要满足以下要求：  
+- 自版本 1802 开始，选择“Azure 资源管理器部署”。 有关详细信息，请参阅 [Azure 资源管理器](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager)。 对于 CMG 的 Azure 资源管理器部署，需要满足以下要求：  
 
     - 与 [Azure AD](/sccm/core/servers/deploy/configure/azure-services-wizard) 集成以实现**云管理**。 不需要 Azure AD 用户发现。  
 
     - 订阅管理员需要进行登录。  
 
 - 对于 CMG 的经典服务部署，需要满足以下要求：  
+
+    > [!Important]  
+    > 从版本 1810 开始，Configuration Manager 已弃用 Azure 的经典服务部署。 开始使用适用于云管理网关的 Azure 资源管理器部署。 有关详细信息，请参阅 [CMG 规划](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager)。  
 
     - Azure 订阅 ID  
 
@@ -66,11 +69,14 @@ ms.locfileid: "45601052"
 
 2. 选择功能区中的“创建云管理网关”。  
 
-3. 从版本 1802 开始，在向导的“常规”页上，首先选择 CMG 部署方法“Azure 资源管理器部署”或“经典服务部署”。  
+3. 从版本 1802 开始，在向导的“常规”页上，选择“Azure 资源管理器部署”作为 CMG 部署方法。  
 
-    1. 对于“Azure 资源管理器部署”：选择“登录”以使用 Azure 订阅管理员帐户进行身份验证。 向导使用 Azure AD 集成先决条件过程中存储的 信息，自动填充其余字段。 如果拥有多个订阅，请选择要使用的所需订阅的**订阅 ID**。  
+    选择“登录”以使用 Azure 订阅管理员帐户进行身份验证。 向导使用 Azure AD 集成先决条件过程中存储的 信息，自动填充其余字段。 如果拥有多个订阅，请选择要使用的所需订阅的**订阅 ID**。
 
-    2. 对于“经典服务部署”*以及 Configuration Manager 版本 1706 和 1710*：输入 Azure **订阅 ID**。 然后选择“浏览”并选择 Azure 管理证书的 .PFX 文件。 
+    > [!Note]  
+    > 从版本 1810 开始，Configuration Manager 已弃用 Azure 的经典服务部署。 
+    > 
+    > 如果需要使用经典服务部署，请在此页面上选择该选项。 首先输入 Azure 订阅 ID。 然后选择“浏览”并选择 Azure 管理证书的 .PFX 文件。 
 
 4. 为此 CMG 指定 **Azure 环境**。 下拉列表中的选项可能会因部署方法而异。  
 

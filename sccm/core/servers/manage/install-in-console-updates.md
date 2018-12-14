@@ -2,7 +2,7 @@
 title: 控制台中更新
 titleSuffix: Configuration Manager
 description: 从 Microsoft 云安装 Configuration Manager 更新
-ms.date: 08/22/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: c14a3607-253b-41fb-8381-ae2d534a9022
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 503255c571288fa0da0b0b81f3a76fc2b38bbb19
-ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
+ms.openlocfilehash: 7635dce325a2612c144c6eaa9c733b7dffc7c251
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43893917"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456203"
 ---
 # <a name="install-in-console-updates-for-configuration-manager"></a>为 Configuration Manager 安装控制台内更新
 
@@ -105,11 +105,11 @@ Configuration Manager 与 Microsoft 云服务同步，以获取更新。 随后�
 
 若要了解开始更新前执行的操作，请查看适用的更新清单：
 
+- [用于安装更新 1810 的清单](/sccm/core/servers/manage/checklist-for-installing-update-1810)  
+
 - [用于安装更新 1806 的清单](/sccm/core/servers/manage/checklist-for-installing-update-1806)  
 
 - [用于安装更新 1802 的清单](/sccm/core/servers/manage/checklist-for-installing-update-1802)
-
-- [用于安装更新 1710 的核对清单](/sccm/core/servers/manage/checklist-for-installing-update-1710)  
 
 
 ###  <a name="bkmk_step2"></a> 步骤 2：安装更新之前运行先决条件检查程序  
@@ -367,11 +367,11 @@ Configuration Manager 与 Microsoft 云服务同步，以获取更新。 随后�
 
 站点更新后，查看更新后清单以寻找适用的版本：  
 
+- [版本 1810 的更新后清单](/sccm/core/servers/manage/checklist-for-installing-update-1810#post-update-checklist)  
+
 - [版本 1806 的更新后清单](/sccm/core/servers/manage/checklist-for-installing-update-1806#post-update-checklist)  
 
 - [版本 1802 的更新后清单](/sccm/core/servers/manage/checklist-for-installing-update-1802#post-update-checklist)  
-
-- [版本 1710 的更新后清单](/sccm/core/servers/manage/checklist-for-installing-update-1710#post-update-checklist)  
 
 
 
@@ -399,23 +399,23 @@ Configuration Manager 与 Microsoft 云服务同步，以获取更新。 随后�
 
 -->
 
-- [站点服务器高可用性](/sccm/core/servers/deploy/configure/site-server-high-availability)<!--1128774-->
+- [包转换管理器](/sccm/apps/pcm/package-conversion-manager) <!--1357861-->
 - [第三方软件更新](/sccm/sum/deploy-use/third-party-software-updates)<!--1357605,1352101,1358714-->
 - [审批每台设备的用户的应用程序请求](/sccm/apps/deploy-use/deploy-applications#specify-deployment-settings) <!--1357015-->  
 - [iOS 支持 Cisco AnyConnect 4.0.07x 及更高版本](/sccm/mdm/deploy-use/create-vpn-profiles)<!--1357393-->
 - [用于条件访问的符合性策略的设备运行状况证明评估](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)<!--1235616-->
 - [创建和运行脚本](/sccm/apps/deploy-use/create-deploy-scripts)<!--1236459-->
-- [运行任务序列步骤](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#add-child-task-sequences-to-a-task-sequence)<!--1261338-->
-- [任务序列内容预缓存](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content)<!--1021244-->
-- [Surface 驱动程序更新](/sccm/sum/get-started/configure-classifications-and-products)<!--1098490-->
-- [云管理网关](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway)<!--1101764-->
+- [运行任务序列步骤](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#add-child-task-sequences-to-a-task-sequence) <!--1261338-->
+- [任务序列内容预缓存](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content) <!--1021244-->
+- [Surface 驱动程序更新](/sccm/sum/get-started/configure-classifications-and-products) <!--1098490-->
+- [云管理网关](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) <!--1101764-->
 - [数据仓库服务点](/sccm/core/servers/manage/data-warehouse)<!--1277922-->
-- [客户端对等缓存](/sccm/core/plan-design/hierarchy/client-peer-cache)<!--1101436-->
-- [PFX 创建](/sccm/protect/deploy-use/introduction-to-certificate-profiles)<!--1321368-->
+- [客户端对等缓存](/sccm/core/plan-design/hierarchy/client-peer-cache) <!--1101436-->
+- [PFX 创建](/sccm/protect/deploy-use/introduction-to-certificate-profiles) <!--1321368-->
 - [Azure Log Analytics 连接器](/sccm/core/clients/manage/sync-data-log-analytics) <!--1258052-->
 - [Windows Defender 攻击防护策略](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy)<!--1355468-->
 - [适用于 Windows 10 的 VPN](/sccm/protect/deploy-use/vpn-profiles)<!--1283610-->
-- [Passport for Work](/sccm/protect/deploy-use/windows-hello-for-business-settings)（也称为 Windows Hello 企业版）<!--1245704-->
+- [Windows Hello 企业版](/sccm/protect/deploy-use/windows-hello-for-business-settings)（以前称为 Passport for Work）<!--1245704-->
 - [托管电脑的条件访问](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)<!--1191496-->
 
 

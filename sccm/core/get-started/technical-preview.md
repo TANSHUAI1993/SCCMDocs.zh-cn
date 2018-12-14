@@ -2,7 +2,7 @@
 title: 技术预览版
 titleSuffix: Configuration Manager
 description: 了解可测试 Configuration Manager 中的新功能和新特性的技术预览分支。
-ms.date: 10/16/2018
+ms.date: 12/03/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f19e998e803bdaeed2b72dac84ae866930ad0003
-ms.sourcegitcommit: 73dbd2146bd581a1b668b22b84b7cda68a487d05
+ms.openlocfilehash: 9381980f490d543b3018c206359d4a68b9ca69e4
+ms.sourcegitcommit: 6126dfdf5c879db7d12c3eec019a88fa44521361
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49390626"
+ms.lasthandoff: 12/04/2018
+ms.locfileid: "52830483"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Configuration Manager 的技术预览版
 
@@ -124,16 +124,15 @@ Microsoft 将支持每个技术预览版，直到三个连续的版本可用为�
 
 <!-- This is the full list of new features in the latest TP release -->
 
-### <a name="technical-preview-version-18102"></a>技术预览版 1810.2
+### <a name="technical-preview-version-1811"></a>技术预览版 1811
 
-<!--capabilities-in-technical-preview-1810-2.md#bkmk_anchor-->
+<!--capabilities-in-technical-preview-1811.md#bkmk_anchor-->
 
-- [对集合评估的改进](capabilities-in-technical-preview-1810-2.md#bkmk_colleval) <!--1358981-->
-- [Configuration Manager 管理员身份验证](capabilities-in-technical-preview-1810-2.md#bkmk_auth) <!--1357013-->
-- [对等缓存源客户端版本的管理见解规则](capabilities-in-technical-preview-1810-2.md#bkmk_insights) <!--1358008-->
-- [对基于 Internet 的客户端设置的改进](capabilities-in-technical-preview-1810-2.md#bkmk_cmg) <!--1359181-->
-- [将应用程序转换为 MSIX](capabilities-in-technical-preview-1810-2.md#bkmk_msix) <!--1359029-->
-- [更改了用于唤醒设备的客户端通知操作](capabilities-in-technical-preview-1810-2.md#bkmk_wakeup) <!--1317364-->
+- [请勿加载 Windows PowerShell 配置文件](capabilities-in-technical-preview-1811.md#bkmk_noprofile) <!--1359239-->
+- [本地 MDM 不再需要 Intune 连接](capabilities-in-technical-preview-1811.md#bkmk_opmdm) <!--1359124-->
+- [Configuration Manager 控制台通知](capabilities-in-technical-preview-1811.md#bkmk_notify) <!--1318035-->
+- [对任务序列媒体创建的改进](capabilities-in-technical-preview-1811.md#bkmk_tsmedia) <!--1359388-->
+- [对运行 PowerShell 脚本任务序列步骤的改进](capabilities-in-technical-preview-1811.md#bkmk_posh) <!--1359389-->
 
 
 > [!Note]  
@@ -150,27 +149,30 @@ Each month, add features from the list above to the top of this table.
 Then remove the bottom of this list and/or move individual items not in CB to the third table below.
 -->
 
- |功能 |技术预览版 |当前分支版|  
- |----------------|---------------------|--------------------|
- | 客户端安装改进<!--1358840--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_ccmsetup) | ![未添加](media/Red_X.gif) | 
- | 共同托管设备所需的应用符合性策略<!--1358196--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_app-compliance) | ![未添加](media/Red_X.gif) | 
- | 对共同管理仪表板的改进<!--1358980--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_comgmt-report) | ![未添加](media/Red_X.gif) | 
- | 新的边界组选项<!--1358749--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_bgoptions) | ![未添加](media/Red_X.gif) | 
- | Windows 群集节点上的站点系统<!--1359132--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_cluster) | ![未添加](media/Red_X.gif) | 
- | CMPivot 的改进 <!--1359068--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_cmpivot) | ![未添加](media/Red_X.gif) | 
- | 脚本的改进<!--1358239--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_scripts) | ![未添加](media/Red_X.gif) | 
- | 用于唤醒设备的新客户端通知操作<!--1317364--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_wakeup) | ![未添加](media/Red_X.gif) | 
- | 对边界组的任务序列支持<!--1359025--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_bgr-osd) | ![未添加](media/Red_X.gif) | 
- | 管理见解仪表板<!--1357979--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_insights) | ![未添加](media/Red_X.gif) | 
+ | 功能 | 技术预览版 | 当前分支版 |  
+ |---------|---------------------------|------------------------|
+ | 对集合评估的改进 <!--1358981--> | [技术预览版 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_colleval) | 版本 1810 | 
+ | Configuration Manager 管理员身份验证 <!--1357013--> | [技术预览版 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_auth) | 版本 1810 | 
+ | 对等缓存源客户端版本的管理见解规则 <!--1358008--> | [技术预览版 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_insights) | 版本 1810 | 
+ | 对基于 Internet 的客户端设置的改进 <!--1359181--> | [技术预览版 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_cmg) | 版本 1810 | 
+ | 将应用程序转换为 MSIX <!--1359029--> | [技术预览版 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_msix) | 版本 1810 | 
+ | 客户端安装改进<!--1358840--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_ccmsetup) | 版本 1810 | 
+ | 共同托管设备所需的应用符合性策略<!--1358196--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_app-compliance) | 版本 1810 | 
+ | 对共同管理仪表板的改进<!--1358980--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_comgmt-report) | 版本 1810 | 
+ | 新的边界组选项<!--1358749--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_bgoptions) | 版本 1810 | 
+ | Windows 群集节点上的站点系统<!--1359132--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_cluster) | 版本 1810 | 
+ | CMPivot 的改进 <!--1359068--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_cmpivot) | 版本 1810 | 
+ | 脚本的改进<!--1358239--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_scripts) | 版本 1810 | 
+ | 用于唤醒设备的新客户端通知操作<!--1317364--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_wakeup) | 版本 1810 | 
+ | 对边界组的任务序列支持<!--1359025--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_bgr-osd) | 版本 1810 | 
+ | 管理见解仪表板<!--1357979--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_insights) | 版本 1810 | 
  | 控制台内文档仪表板<!--1357546--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_doc-dashboard) | ![未添加](media/Red_X.gif) | 
- | 对驱动程序维护的改进<!--1358270--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_drivers) | ![未添加](media/Red_X.gif) | 
- | 针对现有设备的 Windows Autopilot 的任务序列支持<!--1358333--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_autopilot) | ![未添加](media/Red_X.gif) | 
- | CMPivot 的改进 <!--1359068--> | [技术预览版 1809](capabilities-in-technical-preview-1809.md#bkmk_cmpivot) | ![未添加](media/Red_X.gif) | 
- | 生命周期仪表板的改进 <!--1358702--> | [技术预览版 1809](capabilities-in-technical-preview-1809.md#bkmk_lifecycle) | ![未添加](media/Red_X.gif) | 
- | 数据仓库的改进 <!--1358870--> | [技术预览版 1809](capabilities-in-technical-preview-1809.md#bkmk_dataw) | ![未添加](media/Red_X.gif) | 
- | 软件更新的维护时段的改进 <!--vso2839307--> | [技术预览版 1809](capabilities-in-technical-preview-1809.md#bkmk_sum-mw) | ![未添加](media/Red_X.gif) | 
- | 软件更新的分阶段部署 <!--1358146--> | [技术预览版 1808](capabilities-in-technical-preview-1808.md#bkmk_pod) | ![未添加](media/Red_X.gif) | 
- | 修复应用程序的改进 <!--1357866--> | [技术预览版 1808](capabilities-in-technical-preview-1808.md#bkmk_repair) | ![未添加](media/Red_X.gif) | 
+ | 对驱动程序维护的改进<!--1358270--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_drivers) | 版本 1810 | 
+ | 针对现有设备的 Windows Autopilot 的任务序列支持<!--1358333--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_autopilot) | 版本 1810 | 
+ | CMPivot 的改进 <!--1359068--> | [技术预览版 1809](capabilities-in-technical-preview-1809.md#bkmk_cmpivot) | 版本 1810 | 
+ | 生命周期仪表板的改进 <!--1358702--> | [技术预览版 1809](capabilities-in-technical-preview-1809.md#bkmk_lifecycle) | 版本 1810 | 
+ | 数据仓库的改进 <!--1358870--> | [技术预览版 1809](capabilities-in-technical-preview-1809.md#bkmk_dataw) | 版本 1810 | 
+ | 软件更新的维护时段的改进 <!--vso2839307--> | [技术预览版 1809](capabilities-in-technical-preview-1809.md#bkmk_sum-mw) | 版本 1810 | 
 
 
 
@@ -184,23 +186,16 @@ Copy from the bottom of the list above any individual feature that is still in T
 With each CB release, review and remove from this list for anything that's now available in CB. 
 -->
 
-|功能 |Technical Preview 版本 |  
-|----------------|---------------------|
+| 功能        | 技术预览版 |  
+|----------------|---------------------------|
 | 社区中心 <!--1357766--> | [技术预览版 1807](capabilities-in-technical-preview-1807.md#bkmk_hub) | 
-| 指定用于为脱机 OS 映像提供服务的驱动器 <!--1358924--> | [技术预览版 1807](capabilities-in-technical-preview-1807.md#bkmk_osd) | 
 | 来自 Intune 的共同管理的设备同步活动 <!--1358565--> | [技术预览版 1807](capabilities-in-technical-preview-1807.md#bkmk_comgmt) | 
-| 修复应用程序 <!--1357866--> | [技术预览版 1807](capabilities-in-technical-preview-1807.md#bkmk_app-repair) | 
-| 通过电子邮件批准应用程序请求 <!--1321550--> | [技术预览版 1807](capabilities-in-technical-preview-1807.md#bkmk_email-approve) | 
-| 对脚本输出的改进 <!--1236459--> | [技术预览版 1807](capabilities-in-technical-preview-1807.md#bkmk_script) | 
-| 对第三方软件更新的改进 <!--1358714--> | [技术预览版 1807](capabilities-in-technical-preview-1807.md#bkmk_3pupdate) |
-|支持中心 <!--1357489--> | [Tech Preview 1804](capabilities-in-technical-preview-1804.md#support-center)  | 
-|基于客户端的 PXE 响应者服务 <!-- 1357148 --> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#client-based-pxe-responder-service) |
-|PXE 网络启动对 IPv6 的支持 <!-- 1269793 --> |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#pxe-network-boot-support-for-ipv6)|
-|使用 Azure Active Directory<!-- 1322145? --> | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#azurediscovery) |
-|Windows Update for Business 更新的符合性评估 <!-- 1235390 --> | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#compliance-assessment-for-windows-update-for-business-updates) |
-|OData 终结点数据访问 <!-- 1321523 --> |[Tech Preview 1612](capabilities-in-technical-preview-1612.md#odata-endpoint-data-access)|
-|对资产智能的改进<!-- 1307390 --> |[Tech Preview 1608](capabilities-in-technical-preview-1608.md#improvements-to-asset-intelligence)|
-|最终用户可从公司门户安装应用 <!-- 1037233? --> |[Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_End)|
+| 基于客户端的 PXE 响应者服务 <!--1357148--> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#client-based-pxe-responder-service) |
+| PXE 网络启动对 IPv6 的支持 <!--1269793--> |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#pxe-network-boot-support-for-ipv6)|
+| 使用 Azure Active Directory<!--1322145--> | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#azurediscovery) |
+| Windows Update for Business 更新的符合性评估 <!--1235390--> | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#compliance-assessment-for-windows-update-for-business-updates) |
+| 对资产智能的改进<!--1307390--> | [Tech Preview 1608](capabilities-in-technical-preview-1608.md#improvements-to-asset-intelligence) |
+| 最终用户可从公司门户安装应用 <!--1037233?--> | [Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_End) |
 
 
 

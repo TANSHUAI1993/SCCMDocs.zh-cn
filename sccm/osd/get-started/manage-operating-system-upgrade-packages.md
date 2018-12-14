@@ -1,8 +1,8 @@
 ---
-title: 管理操作系统升级包
+title: 管理 OS 升级包
 titleSuffix: Configuration Manager
-description: 了解如何管理 System Center Configuration Manager 中的操作系统升级包。
-ms.date: 12/06/2016
+description: 了解如何在 Configuration Manager 中管理 OS 升级包。
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,83 +10,66 @@ ms.assetid: b9b22655-b8c1-461f-8047-3a7e906f647a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1caaf1b63a5773e61c3e8d7b500e9d0acfca1010
-ms.sourcegitcommit: a52255da16c9f8b0b60a6c299a369347c7e01bef
+ms.openlocfilehash: f7b8b18cbec5a3b5972a448e8a70339533dc11fb
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49989121"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456000"
 ---
-# <a name="manage-operating-system-upgrade-packages-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 管理操作系统升级包
+# <a name="manage-os-upgrade-packages-with-configuration-manager"></a>使用 Configuration Manager 管理 OS 升级包
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager 中的升级包包含用于在计算机上升级现有操作系统的 Windows 安装程序源文件。 使用以下部分管理 Configuration Manager 中的操作系统升级包。
+Configuration Manager 中的 OS 升级包包含用于在计算机上升级现有 OS 的 Windows 安装程序源文件。 本文介绍如何添加、分发和维护 OS 升级包。
 
-##  <a name="BKMK_AddOSUpgradePkgs"></a> 将操作系统升级包添加到 Configuration Manager  
- 在使用操作系统升级包之前，必须先将该包添加到 Configuration Manager 站点。 使用以下过程将操作系统升级包添加的站点：  
 
-#### <a name="to-add-an-operating-system-upgrade-package"></a>若要添加操作系统升级包  
 
-1.  在 Configuration Manager 控制台中，单击“软件库”。  
+##  <a name="BKMK_AddOSUpgradePkgs"></a> 添加 OS 升级包  
 
-2.  在“软件库”  工作区中，展开“操作系统” ，然后单击“操作系统升级包” 。  
+在使用 OS 升级包之前，请先将其添加到 Configuration Manager 站点。 
 
-3.  在“主页”  选项卡上的“创建”  组中，单击“添加操作系统升级包”  以启动“添加操作系统升级向导”。  
+1.  在 Configuration Manager 控制台中，转到“软件库”工作区，展开“操作系统”，然后选择“操作系统升级包”节点。  
 
-4.  在“数据源”  页上，指定操作系统升级包的安装源文件的网络路径。 例如，指定安装源文件所在位置的 UNC **\\\server\path**。  
+2.  在功能区的“主页”选项卡上的“创建”组中，选择“添加操作系统升级包”。 此操作将启动“添加操作系统升级向导”。  
 
-    > [!NOTE]  
-    >  安装源文件包含 Setup.exe 和其他文件以及用于安装操作系统的文件夹。  
+3.  在“数据源”页面上，指定以下设置： 
 
-    > [!IMPORTANT]  
-    >  限制对安装源文件的访问，以防止受到恶意篡改。  
+    - OS 升级包的安装源文件的网络**路径**。 例如，`\\server\share\path`。  
 
-5.  在“常规”页上，指定以下信息，然后单击“下一步”。 当你有多个操作系统安装程序时，此信息在用于标识时非常有用。  
+        > [!NOTE]  
+        >  安装源文件包含 setup.exe 和其他文件以及用于安装 OS 的文件夹。  
 
-    -   **名称**：指定操作系统安装程序的名称。  
+        > [!IMPORTANT]  
+        >  限制对这些安装源文件的访问，以防受到恶意篡改。  
 
-    -   **版本**：指定操作系统安装程序的版本。  
+    - 如果要在客户端上预缓存内容，请指定映像的**体系结构**和**语言**。 有关详细信息，请参阅[配置预缓存内容](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content)。  
 
-    -   **备注**：指定操作系统安装程序的简要描述。  
+4.  在“常规”页面上，指定以下信息。 当你有多个 OS 升级包时，可利用这些信息对其进行识别。  
 
-6.  完成向导。  
+    -   **名称**：OS 升级包的唯一名称。  
 
- 你现在可以将操作系统安装程序分发到部署任务序列访问的分发点。  
+    -   **版本**：可选的版本标识符。 此属性无需为该升级包的 OS 版本。 它通常为组织的包的版本。  
 
-##  <a name="BKMK_DistributeBootImages"></a> 将操作系统映像分发到分发点  
- 将采用与分发其他内容相同的方式将操作系统映像分发到分发点。 大多数情况下，部署操作系统之前必须将操作系统映像分发到至少一个分发点。 关于分发操作系统映像的步骤，请参阅 [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute)。  
+    -   **注释**：可选的简要说明。  
 
-##  <a name="BKMK_OSUpgradePkgApplyUpdates"></a> 将软件更新应用于操作系统升级包  
- 从 Configuration Manager 版本 1602 开始，可以将新的软件更新应用于操作系统升级包中的操作系统映像。 必须将软件更新基础结构实施到位，成功同步软件更新，并将软件更新下载到站点服务器上的内容库后才可将软件更新应用于升级包。 有关详细信息，请参阅[部署软件更新](../../sum/deploy-use/deploy-software-updates.md)。  
+5.  完成向导。  
 
- 你可以按指定计划将适用的软件更新应用于升级包。 Configuration Manager 按指定计划将选择的软件更新应用于操作系统升级包，然后根据需要将更新的升级包分发到分发点。 有关操作系统升级包的信息存储在站点数据库中，包括在导入时应用的软件更新。 自升级包最初添加以来已应用于升级包的软件更新也存储在站点数据库中。 当你启动向导以将软件更新应用于操作系统升级包时，向导将检索尚未应用于升级包的适用软件更新的列表供你选择。 Configuration Manager 从站点服务器上的内容库中复制软件更新，然后将软件更新应用于操作系统升级包。  
 
- 使用以下过程将软件更新应用于操作系统升级包。  
+接下来，将 OS 升级包分发到分发点。  
 
-#### <a name="to-apply-software-updates-to-an-operating-system-upgrade-package"></a>将软件更新应用于操作系统升级包  
 
-1.  在 Configuration Manager 控制台中，单击“软件库”。  
 
-2.  在“软件库”  工作区中，展开“操作系统” ，然后单击“操作系统升级包” 。  
+##  <a name="BKMK_Distribute"></a> 将内容分发到分发点  
 
-3.  选择要向其应用软件更新的操作系统升级包。  
+将 OS 升级包分发到与其他内容相同的分发点。 在部署任务序列之前，请将 OS 升级包分发到至少一个分发点。 有关详细信息，请参阅[分发内容](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_distribute)。  
 
-4.  在“主页”选项卡上的“操作系统升级包”组中，单击“计划更新”以启动向导。  
 
-5.  在“选择更新”  页上，选择要应用于操作系统映像的软件更新，然后单击“下一步” 。  
 
-6.  在“设置计划”  页上，指定以下设置，然后单击“下一步” 。  
+[!INCLUDE [Apply software updates to an image](includes/wim-apply-updates.md)]
 
-    1.  **计划**：指定有关何时将软件更新应用于操作系统映像的计划。  
 
-    2.  **出错时继续**：选择此选项以便即使在出错时也继续将软件更新应用于映像。  
 
-    3.  **将映像分发到分发点**：选择此选项以在应用了软件更新后更新分发点上的操作系统映像。  
+## <a name="next-steps"></a>后续步骤
 
-7.  在“摘要”  页上，验证以下信息，然后单击“下一步” 。  
-
-8.  在“完成”  页上，验证软件更新是否已成功应用于操作系统映像。  
-
-> [!NOTE]  
->  为了最大程度减少有效负载大小，OS 升级包和 OS 映像的维护过程将删除旧版本。 
+[创建用于升级 OS 的任务序列](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system)

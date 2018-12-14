@@ -2,7 +2,7 @@
 title: 产品生命周期仪表板
 titleSuffix: Configuration Manager
 description: 通过 Configuration Manager 中的产品生命周期仪表板查看 Microsoft 生命周期策略。
-ms.date: 07/30/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 8b5b144a-0e5f-4fcc-87b2-33b9bcdb5655
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: dd1a3a56bac6d7917c70db731b1735a195fae3df
-ms.sourcegitcommit: dfb2cb01c1608b848f2f2fee7c84500e7adcb7a4
+ms.openlocfilehash: bda6e266c6be8897de87a2a30fb0198a4b4c8446
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49101239"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456009"
 ---
 # <a name="manage-microsoft-lifecycle-policy-with-configuration-manager"></a>使用 Configuration Manager 管理 Microsoft 生命周期策略
 
@@ -24,6 +24,8 @@ ms.locfileid: "49101239"
 从版本 1806 开始，可以使用 Configuration Manager 产品生命周期仪表板来查看 Microsoft 生命周期策略。 该仪表板显示 Microsoft 产品（安装在由 Configuration Manager 托管的设备上）的 Microsoft 生命周期策略的状态。 它还提供有关环境中 Microsoft 产品的信息、可支持性状态以及支持结束日期。 使用仪表板了解对每个产品的支持的可用性。 这些信息有助于规划在到达当前支持结束日期之前，何时更新使用的 Microsoft 产品。  
 
 有关详细信息，请参阅 [Microsoft 生命周期策略](https://support.microsoft.com/lifecycle)。
+
+从版本 1810 开始，仪表板包含 System Center 2012 Configuration Manager 及更高版本的信息。<!--1358702-->  
 
 
 
@@ -59,6 +61,13 @@ ms.locfileid: "49101239"
 
 ![控制台中的产品生命周期仪表板的屏幕截图](media/product-lifecycle-dashboard.png)
 
+通过从“产品类别”列表中选择以下选项之一来更改视图：  
+- **所有**：同时查看所有产品  
+- **Windows 客户端**：查看 Windows 客户端操作系统版本  
+- **Windows Server**：查看 Windows server 操作系统版本  
+- **数据库**：查看 SQL Server 版本  
+- **Configuration Manager**：从版本 1810 开始，查看 Configuration Manager 版本  
+
 该仪表板具有以下磁贴：  
 
 - **已过期的前五大产品**：此磁贴是一个整合的数据视图，显示在环境中找到的已过期的产品。 此图显示与操作系统及 SQL Server 产品的支持生命周期相比较已过期的已安装软件。  
@@ -79,13 +88,16 @@ ms.locfileid: "49101239"
 
 ## <a name="reporting"></a>报表
 
-其他报表也同样可用。 在 Configuration Manager 控制台中，转到“监视”工作区，展开“报表”并展开“报表”节点。 在类别“产品生命周期”下添加以下新报表：  
+其他报表也同样可用。 在 Configuration Manager 控制台中，转到“监视”工作区，展开“报表”并展开“报表”节点。 在“资产智能”类别下添加了以下新报表：  
 
-- **常规产品生命周期概述**：查看产品生命周期列表。 按产品名称和有效期对列表进行筛选。  
+- **生命周期 01A - 具有特定软件产品的计算机**：查看在其中检测到指定产品的计算机列表。  
 
-- **具有特定软件产品的计算机**：查看在其中检测到指定产品的计算机列表。  
+- **生命周期 02A - 组织中的具有过期产品的计算机列表**：查看具有过期产品的计算机。 可以按产品名称筛选此报表。
 
-- **在组织中找到的已过期产品列表**：查看环境中生命周期已过期的产品的详细信息。  
+- **生命周期 03A - 在组织中找到的已过期产品列表**：查看环境中生命周期已过期的产品的详细信息。  
 
-- **组织中的具有过期产品的计算机列表**：查看具有过期产品的计算机。 可以按产品名称筛选此报表。
+- **生命周期 04A - 常规产品生命周期概述**：查看产品生命周期列表。 按产品名称和有效期对列表进行筛选。  
 
+- **生命周期 05A - 产品生命周期仪表板**：从 1810 版开始，此报表包含与控制台内仪表板类似的信息。 选择一个类别以查看环境中的产品数量以及剩余支持的天数。  
+
+有关详细信息，请参阅[报表列表](/sccm/core/servers/manage/list-of-reports#asset-intelligence) <!--SCCMDocs issue 997-->  

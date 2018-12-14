@@ -10,12 +10,12 @@ ms.assetid: e102fd1a-76df-4d8e-b1b0-10ee18318f67
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5d7c967ce02c009cd9659c7956f7ca79f4a34faf
-ms.sourcegitcommit: be8c0182db9ef55a948269fcbad7c0f34fd871eb
+ms.openlocfilehash: 03b34c09a5fef63316bb1d9d1a94dbbfc3ccf69f
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42755966"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456254"
 ---
 # <a name="how-to-manage-collections-in-configuration-manager"></a>如何管理 Configuration Manager 中的集合
 
@@ -73,40 +73,11 @@ ms.locfileid: "42755966"
 
 
 #### <a name="client-notification"></a>客户端通知
- 指示所选设备集合中的所有客户端立即执行以下操作之一：
-
- - 下载计算机策略：刷新设备策略。 有关详细信息，请参阅[启动 Configuration Manager 客户端的策略检索](/sccm/core/clients/manage/manage-clients#BKMK_PolicyRetrieval)。  
-
- - 下载用户策略：刷新用户策略。  
-
- - 收集发现数据：触发客户端发送发现数据记录 (DDR)。 有关详细信息，请参阅[检测信号发现](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutHeartbeat)。  
-
- - 收集软件清单：触发客户端运行软件清单周期。 有关详细信息，请参阅[软件清单简介](/sccm/core/clients/manage/inventory/introduction-to-software-inventory)。  
-
- - 收集硬件清单：触发客户端运行硬件清单周期。 有关详细信息，请参阅[硬件清单简介](/sccm/core/clients/manage/inventory/introduction-to-hardware-inventory)。  
-
- - 评估应用程序部署：触发客户端运行应用程序部署评估周期。 有关详细信息，请参阅[计划部署的重新评估](/sccm/core/clients/deploy/about-client-settings#schedule-re-evaluation-for-deployments)。  
-
- - 评估软件更新部署：触发客户端运行软件更新部署评估周期。 有关详细信息，请参阅[软件更新简介](/sccm/sum/understand/software-updates-introduction)。  
-
- - 切换到下一个软件更新点：触发客户端切换到下一个可用的软件更新点。 有关详细信息，请参阅[软件更新点切换](/sccm/sum/plan-design/plan-for-software-updates#BKMK_SUPSwitching)。  
-
- - 评估设备运行状况证明：触发 Windows 10 客户端以检查和发送其最新设备的运行状况。 有关详细信息，请参阅[运行状况证明](/sccm/core/servers/manage/health-attestation)。  
-
- - 检查条件访问符合性：触发客户端检查与条件访问的符合性。 有关详细信息，请参阅[管理电脑的 O365 服务的访问权限](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)。  
+ 有关详细信息，请参阅[客户端通知](/sccm/core/clients/manage/client-notification)。
 
 
 #### <a name="endpoint-protection"></a>Endpoint Protection
- 指示所选设备集合中的所有客户端立即执行以下操作之一：
-
- - 完全扫描：触发 Endpoint Protection 或 Windows Defender 运行完整反恶意软件扫描  
-
- - 快速扫描：触发 Endpoint Protection 或 Windows Defender 运行快速反恶意软件扫描  
-
- - 下载定义：触发 Endpoint Protection 或 Windows Defender 下载最新的反恶意软件定义  
-
-
- 有关详细信息，请参阅 [Configuration Manager 中的 Endpoint Protection](/sccm/protect/deploy-use/endpoint-protection)。
+ 有关详细信息，请参阅[客户端通知](/sccm/core/clients/manage/client-notification)。
 
 
 #### <a name="export"></a>导出

@@ -2,7 +2,7 @@
 title: 配置安全性
 titleSuffix: Configuration Manager
 description: 配置 Configuration Manager 的安全相关选项。
-ms.date: 10/22/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 552e7e3d-e584-4a7c-9155-0f796a14b678
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: dc0f57bcc06911f34da481c2e3be81c3cb0de1c2
-ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
+ms.openlocfilehash: d1aaf6db583d9749dda3be14cfd06acbff19b093
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411402"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456084"
 ---
 # <a name="configure-security-in-configuration-manager"></a>配置 Configuration Manager 中的安全性
 
@@ -27,6 +27,7 @@ ms.locfileid: "50411402"
 - [基于角色的管理](#BKMK_ConfigureRBA)  
 - [管理帐户](#BKMK_ManageAccounts)  
 - [配置 Azure Active Directory](#bkmk_azuread)  
+- [配置 SMS 提供程序的身份验证](#bkmk_auth)  
 
 
 
@@ -145,6 +146,12 @@ Configuration Manager 支持为许多不同任务和用途使用 Windows 帐户�
 ##  <a name="bkmk_azuread"></a>配置 Azure Active Directory
 
 将 Configuration Manager 与 Azure Active Directory (Azure AD) 集成，以简化和支持云环境。 使用 Azure AD 使站点和客户端能够进行身份验证。 有关详细信息，请参阅[配置 Azure 服务](/sccm/core/servers/deploy/configure/azure-services-wizard)中的“云管理”服务。
+
+
+
+## <a name="bkmk_auth"></a>配置 SMS 提供程序的身份验证
+
+从版本 1810 开始，可以为管理员指定访问 Configuration Manager 站点的最低身份验证级别。 此功能强制管理员以要求的级别登录到 Windows。 有关详细信息，请参阅[规划 SMS 提供程序](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_auth)。 <!--1357013-->  
 
 
 

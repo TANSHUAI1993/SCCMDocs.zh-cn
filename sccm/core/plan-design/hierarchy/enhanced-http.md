@@ -10,12 +10,12 @@ ms.assetid: 4deac022-e397-4f1f-bc0a-cea6c6c6368d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3a49fd8e171b053a5cc89d316fce3651e2a2f567
-ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
+ms.openlocfilehash: 7b7cb4a6a7ec6738bdf045b75bf88c8b4d8c4650
+ms.sourcegitcommit: 1439817f1309658b31008d7bafaab32fc5ef8789
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411556"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52820095"
 ---
 # <a name="enhanced-http"></a>增强型 HTTP
 
@@ -23,8 +23,9 @@ ms.locfileid: "50411556"
 
 <!--1356889,1358460-->
 
-> [!Note]  
-> 在该 Configuration Manager 版本中，增强型 HTTP 是预发行功能。 若要启用此功能，请参阅[预发行功能](/sccm/core/servers/manage/pre-release-features)。  
+> [!Tip]  
+> 此功能在版本 1806 中作为[预发行功能](/sccm/core/servers/manage/pre-release-features)首次引入。 从版本 1810 开始，此功能不再属于预发行功能。  
+
 
 Microsoft 建议对于所有 Configuration Manager 通信路径使用 HTTPS 通信，但由于管理 PKI 证书的开销，对一些客户来说可能是一个挑战。 Azure Active Directory (Azure AD) 集成的引入可以减少某些证书要求但不是所有证书要求。 
 

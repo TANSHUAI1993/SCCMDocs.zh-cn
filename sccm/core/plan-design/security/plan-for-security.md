@@ -2,7 +2,7 @@
 title: 规划安全性
 titleSuffix: Configuration Manager
 description: 获取 Configuration Manager 中安全相关的最佳做法和其他信息。
-ms.date: 10/22/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 2a216814-ca8c-4d2e-bcef-dc00966a3c9f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e03c2b53044225eeb790d70474868e337a4cc997
-ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
+ms.openlocfilehash: 5332fa778b343a5eaae93a08db0826823fffce42
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411453"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456373"
 ---
 # <a name="plan-for-security-in-configuration-manager"></a>在 Configuration Manager 中规划安全性
 
@@ -40,6 +40,8 @@ ms.locfileid: "50411453"
 - [规划基于角色的管理](#BKMK_PlanningForRBA)  
 
 - [规划 Azure Active Directory](#bkmk_planazuread)  
+
+- [规划 SMS 提供程序的身份验证](#bkmk_auth)
 
 
 
@@ -409,6 +411,25 @@ IIS 始终会检查 CRL 中是否有客户端证书，且无法在 Configuration
 
 
  有关 Azure AD 的详细信息，请参阅 [Azure Active Directory 文档](https://docs.microsoft.com/azure/active-directory/)。
+
+
+
+## <a name="bkmk_auth"></a> 规划 SMS 提供程序的身份验证
+<!--1357013--> 
+
+从版本 1810 开始，可以为管理员指定访问 Configuration Manager 站点的最低身份验证级别。 此功能强制管理员以要求的级别登录到 Windows。 它适用于访问 SMS 提供程序的所有组件。 例如，Configuration Manager 控制台、SDK 方法和 Windows PowerShell cmdlet。 
+
+此配置是层次结构范围的设置。 更改此设置前，请确保所有 Configuration Manager 管理员都能够使用所需的身份验证级别登录到 Windows。 
+
+可用的级别如下：
+
+- Windows 身份验证：要求使用 Active Directory 域凭据进行身份验证。   
+
+- 证书身份验证：要求使用由受信任的 PKI 证书颁发机构颁发的有效证书进行身份验证。  
+
+- Windows Hello 企业版身份验证：要求使用与设备关联并采用生物识别或 PIN 的强双因素身份验证进行身份验证。  
+
+有关详细信息，请参阅[规划 SMS 提供程序](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_auth)。 
 
 
 

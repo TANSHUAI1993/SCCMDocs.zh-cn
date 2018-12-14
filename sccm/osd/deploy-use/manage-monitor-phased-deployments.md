@@ -2,7 +2,7 @@
 title: 管理和监视分阶段部署
 titleSuffix: Configuration Manager
 description: 了解如何在 Configuration Manager 中管理和监视软件的分阶段部署。
-ms.date: 07/30/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,18 +10,21 @@ ms.assetid: dc245916-bc11-4983-9c4d-015f655007c1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1889ba3ea19d27676089f2a9a24cef812c9f526c
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 5324e00f17770feca25d40c645d8e344df797f21
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385858"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456322"
 ---
 # <a name="manage-and-monitor-phased-deployments"></a>管理和监视分阶段部署
 
 本文介绍如何管理和监视分阶段部署。 管理任务包括手动开始下一阶段、暂停或恢复某一阶段。 
 
-首先，需要[创建分阶段部署](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)。 
+首先，需要创建分阶段部署： 
+- [应用程序](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json)  
+- [软件更新](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json)  
+- [任务序列](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)  
 
 
 
@@ -31,7 +34,14 @@ ms.locfileid: "39385858"
 
 1. 启动此操作的方法因部署软件的类型而有所不同：  
 
-    - **应用程序**（仅在版本 1806 或更高版本中）：转到“软件库”，展开“应用程序管理”，然后选择“应用程序”。   
+    - **应用程序**（仅在版本 1806 或更高版本中）：转到“软件库”工作区，展开“应用程序管理”，然后选择“应用程序”。   
+
+    - **软件更新**（仅在版本 1810 或更高版本）：转到“软件库”工作区，然后再选择以下节点之一：    
+        - 软件更新  
+            - **所有软件更新**  
+            - **软件更新组**   
+        - Windows 10 服务、所有 Windows 10 更新  
+        - Office 365 客户端管理、Office 365 更新  
 
     - **任务序列**：转到“软件库”工作区中，展开“操作系统”，然后选择“任务序列”。   
 
@@ -47,11 +57,18 @@ ms.locfileid: "39385858"
 
 ## <a name="bkmk_suspend"></a> 暂停或恢复阶段 
 
-可能需要手动暂停或恢复分阶段部署。 例如，针对任务序列创建分阶段部署。 监视试点组的阶段时，注意到大量的失败数。 暂停分阶段部署可阻止其他设备再运行任务序列。 解决问题后，恢复分阶段部署以继续推出。 
+可手动暂停或恢复分阶段部署。 例如，针对任务序列创建分阶段部署。 监视试点组的阶段时，注意到大量的失败数。 暂停分阶段部署可阻止其他设备再运行任务序列。 解决问题后，恢复分阶段部署以继续推出。 
 
 1. 启动此操作的方法因部署软件的类型而有所不同：  
 
-    - **应用程序**（仅在版本 1806 或更高版本中）：转到“软件库”，展开“应用程序管理”，然后选择“应用程序”。   
+    - **应用程序**（仅在版本 1806 或更高版本中）：转到“软件库”工作区，展开“应用程序管理”，然后选择“应用程序”。   
+
+    - **软件更新**（仅在版本 1810 或更高版本）：转到“软件库”工作区，然后再选择以下节点之一：    
+        - 软件更新  
+            - **所有软件更新**  
+            - **软件更新组**   
+        - Windows 10 服务、所有 Windows 10 更新  
+        - Office 365 客户端管理、Office 365 更新  
 
     - **任务序列**：转到“软件库”工作区中，展开“操作系统”，然后选择“任务序列”。 选择一个现有任务序列，然后单击功能区中的“创建分阶段部署”。  
 
@@ -91,7 +108,8 @@ When you suspend a phased deployment, it sets the available and deadline times o
 
 使用“选择阶段”下拉列表更改“成功标准”磁贴的显示。 此磁贴将阶段目标与部署的当前符合性进行比较。 在默认设置下，阶段目标是 95%。 此值意味着部署需要达到 95% 的符合性才能进入下一阶段。 
 
-在此示例中，阶段目标是 65%，当前符合性是 66.7%。 分阶段部署自动进入到第二阶段，因为第一阶段满足成功标准。
+在此示例中，阶段目标是 65%，当前符合性是 66.7%。 分阶段部署自动进入到第二阶段，因为第一阶段满足成功标准。  
+
 ![来自分阶段部署状态的示例成功标准磁贴](media/pod-status-success-criteria-tile.png)
 
 阶段目标与下一阶段的阶段设置上的部署成功百分比相同。 为让分阶段部署开始下一阶段，该第二阶段会定义第一阶段的成功标准。 查看此设置： 

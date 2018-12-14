@@ -2,7 +2,7 @@
 title: Current Branch 版本
 titleSuffix: Configuration Manager
 description: 查看 Configuration Manager 的版本历史记录，并了解所提供服务的各个阶段。
-ms.date: 07/30/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 35b5baec-d313-46aa-9d14-c443aa0d6c09
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8a8f646b1cd535809689daacb1390fd79f8ce5c1
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: dd8116bc74f855fff956d0bb201691c741a6d351
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39383773"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52455982"
 ---
 # <a name="support-for-configuration-manager-current-branch-versions"></a>对 Configuration Manager Current Branch 版本的支持
 
@@ -33,8 +33,8 @@ Microsoft 计划每年发布几次 Configuration Manager Current Branch 的更�
 > [!NOTE]  
 >  最新 Current Branch 版本始终处于“安全更新和关键更新”服务阶段。 此支持声明意味着如果遇到需要关键更新的代码缺陷，则必须安装最新 Current Branch 版本才会接收修补程序。 所有其他受支持的 Current Branch 版本仅有资格接收安全更新。
 > - 对于版本 1710 以及之后的版本，所有支持都会在 Current Branch 版本的 18 个月生命周期过期之后结束。
-> - 对于 1710 之前的版本，将在 12 个月生命周期过期之后结束支持。
-
+> - 对于 1706 及更早版本，将在 12 个月生命周期过期之后结束支持。
+> 
 > 在当前版本的支持到期之前，将 Configuration Manager 的环境更新到最新版本。
 
 有关 Current Branch 版本的列表，请参阅[版本的详细信息](/sccm/core/servers/manage/updates#version-details)。

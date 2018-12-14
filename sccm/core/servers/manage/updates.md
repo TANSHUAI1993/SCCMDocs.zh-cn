@@ -2,7 +2,7 @@
 title: 更新和服务
 titleSuffix: Configuration Manager
 description: 了解称为“更新与服务”的控制台内服务方法，该方法可轻松找到并安装建议的更新。
-ms.date: 07/31/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 3a832943-580a-4a40-b454-961d0854ac2b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 94d8f3a2ffafb078f3ffe92c4902cc610321ed86
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 1acc1bd6a6ccbd010308d026933a371f9e8227d8
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385043"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456543"
 ---
 # <a name="updates-and-servicing-for-configuration-manager"></a>Configuration Manager 的更新和服务
 
@@ -25,20 +25,6 @@ Configuration Manager 使用称为“更新和服务”的控制台中服务方�
 
 > [!TIP]  
 > “升级”、“更新”和“安装”这三个术语在 Configuration Manager 中用于描述三个独立概念。 若要详细了解每个术语的使用方法，请参阅[关于升级、更新和安装](/sccm/core/understand/upgrade-update-install)。  
-
-
-以下文章可帮助了解如何为 Configuration Manager 查找和安装不同更新类型：  
-
--   [安装控制台内部更新](/sccm/core/servers/manage/install-in-console-updates)  
-
--   [使用服务连接工具](/sccm/core/servers/manage/use-the-service-connection-tool)  
-
--   [使用更新注册工具导入修补程序](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes)  
-
--   [使用修补程序安装程序安装更新](/sccm/core/servers/manage/use-the-hotfix-installer-to-install-updates)  
-
-
-有关技术预览分支的详细信息，请参阅[技术预览](/sccm/core/get-started/technical-preview)。
 
 
 
@@ -70,35 +56,40 @@ Configuration Manager 使用称为“更新和服务”的控制台中服务方�
 
 Configuration Manager 的某些更新可用作现有基础结构的控制台中更新版本，以及新的基准版本。  
 
+#### <a name="supported-versions"></a>支持的版本
 以下受支持版本的 Configuration Manager 目前可用作基准和/或更新：  
 
 | 版本 | 可用日期 | [支持结束日期](/sccm/core/servers/manage/current-branch-versions-supported) | Baseline | 控制台内更新 |  
 |-------------|-----------|------------|--------------|------------------------|  
+| [1810](/sccm/core/plan-design/changes/whats-new-in-version-1810)<br /><br /> 5.00.8740.1000 | 2018 年 11 月 27 日 | 2020 年 5 月 27 日 | 否 | 是 |
 | [1806](/sccm/core/plan-design/changes/whats-new-in-version-1806)<br /><br /> 5.00.8692.1000 | 2018 年 7 月 31 日 | 2020 年 1 月 31 日 | 否 | 是 |
-| [1802](/sccm/core/plan-design/changes/whats-new-in-version-1802)<br /><br /> 5.00.8634.1000 | 2018 年 3 月 22 日 | 2019 年 9 月 22 日 | 是<sup>1</sup> | 是 |
+| [1802](/sccm/core/plan-design/changes/whats-new-in-version-1802)<br /><br /> 5.00.8634.1000 | 2018 年 3 月 22 日 | 2019 年 9 月 22 日 | 是<sup>[注释 1](#bkmk_note1)</sup> | 是 |
 | [1710](/sccm/core/plan-design/changes/whats-new-in-version-1710)<br /><br /> 5.00.8577.1000 | 2017 年 11 月 20 日 | 2019 年 5 月 20 日 | 否 | 是 |
-| [1706](/sccm/core/plan-design/changes/whats-new-in-version-1706)<br /><br /> 5.00.8540.1000 | 2017 年 7 月 31 日 | 2018 年 7 月 31 日 | 否 | 是 |
+
+<a name="bkmk_note1"></a> 
 
 > [!Note]  
-> <sup>1</sup> 在[批量许可服务中心](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC)，1802 基线介质在以下版本中提供：
+> <sup>注释 1：</sup>在[批量许可服务中心](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC)，1802 基线介质在以下版本中提供：
 > - System Center Config Mgr (Current Branch)
 > - System Center 2016 Datacenter
 > - System Center 2016 Standard  
 > 
 > 例如，在 VLSC 中搜索 `System Center Config Mgr (current branch)`。 在文件列表中找到 1802 基线介质，然后下载对应的版本。  
 
+#### <a name="historical-versions"></a>历史版本
 下表列出了不受支持的 Configuration Manager Current Branch 的历史版本：
 
 | 版本 | 可用日期 | 支持结束日期 | Baseline | 控制台内更新 |  
 |-------------|-----------|------------|--------------|------------------------|  
+| 1706 <br /><br /> 5.00.8540.1000 | 2017 年 7 月 31 日 | 2018 年 7 月 31 日 | 否 | 是 |
 | 1702 <br /><br /> 5.00.8498.1000 | 2017 年 3 月 27 日 | 2018 年 3 月 27 日 | 是 | 是 |
 | 1610 <br /><br /> 5.00.8458.1000 | 2016 年 11 月 18 日 | 2017 年 11 月 18 日 | 否 | 是 |
 | 1606 <br /><br /> 5.00.8412.1000 | 2016 年 7 月 22 日 | 2017 年 7 月 22 日 | 否 | 是 |
-| 1606 和 1606 修补程序汇总 (KB3186654) </br></br>5.00.8412.1307 | 2016 年 10 月 12 日 | 2017 年 10 月 12 日 | 是 | 否 |
+| 1606 和 1606 修补程序汇总 (KB3186654) <br><br>5.00.8412.1307 | 2016 年 10 月 12 日 | 2017 年 10 月 12 日 | 是 | 否 |
 | 1602<br /><br /> 5.00.8355.1000 | 2016 年 3 月 11 日 | 2017 年 3 月 11 日 | 否 | 是 |
 | 1511 <br /><br /> 5.00.8325.1000 | 2015 年 12 月 8 日 | 2016 年 12 月 8 日 | 是 | 否 |  
 
-
+#### <a name="how-to-check-the-version"></a>如何检查版本
 若要查看 Configuration Manager 站点的版本，请转到控制台左上角的“关于 System Center Configuration Manager”。 对话框会显示站点和控制台版本。  
 
  > [!Note]  
@@ -112,7 +103,7 @@ Configuration Manager 的某些更新可用作现有基础结构的控制台中�
 
 这些更新包括：  
 
--   新版本，如版本 1710、1802 或 1806。  
+-   新版本，如版本 1802、1806 或 1810。  
 
 -   包括当前版本新功能的更新。
 
@@ -182,3 +173,20 @@ Configuration Manager 可为你发现新的更新。 使用 Microsoft 云服务�
    `<Product>-<product version>-<KB article ID>-<platform>-<language>.exe`  
 
 有关详细信息，请参阅[使用修补程序安装程序安装更新](/sccm/core/servers/manage/use-the-hotfix-installer-to-install-updates)。  
+
+
+
+## <a name="next-steps"></a>后续步骤
+
+以下文章可帮助了解如何为 Configuration Manager 查找和安装不同更新类型：  
+
+-   [安装控制台内部更新](/sccm/core/servers/manage/install-in-console-updates)  
+
+-   [使用服务连接工具](/sccm/core/servers/manage/use-the-service-connection-tool)  
+
+-   [使用更新注册工具导入修补程序](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes)  
+
+-   [使用修补程序安装程序安装更新](/sccm/core/servers/manage/use-the-hotfix-installer-to-install-updates)  
+
+
+有关技术预览分支的详细信息，请参阅[技术预览](/sccm/core/get-started/technical-preview)。

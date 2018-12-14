@@ -2,7 +2,7 @@
 title: 部署应用程序
 titleSuffix: Configuration Manager
 description: 创建或模拟将应用程序部署到设备或用户集合
-ms.date: 07/30/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 2629c376-ec43-4f0e-a78b-4223cc9302bf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d23c5ee5b81264a9725c4654cd1717b30302c708
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 5b70c651186a35e0f1c5a5da8b9c7dffe0abc7da
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39384814"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456577"
 ---
 # <a name="deploy-applications-with-configuration-manager"></a>使用 Configuration Manager 部署应用程序
 
@@ -98,6 +98,8 @@ ms.locfileid: "39384814"
     > [!NOTE]   
     >  将部署操作设置为“卸载”时，部署目的将自动设置为“必需”。 无法更改此行为。  
 
+- **允许最终用户尝试修复此应用程序**：从版本 1810 开始，如果使用修复命令行创建应用程序，则启用此选项。 用户会在软件中心内看到一个用于**修复**应用程序的选项。<!--1357866-->  
+
 - **将软件预部署到用户的主要设备**：如果部署针对于用户，请选择此选项以将应用部署到用户的主要设备。 在该部署运行之前，此设置不需要用户登录。 如果用户必须与安装进行交互，请勿选择此选项。 只有当部署是“必需”时，此选项才可用。  
 
 - **发送唤醒数据包**：如果部署为“必需”，则 Configuration Manager 在客户端运行部署前，会将唤醒数据包发送到计算机。 此包可在安装截止时将计算机从休眠中唤醒。 使用此选项前，必须针对“LAN 唤醒”配置计算机和网络。 有关详细信息，请参阅[计划如何唤醒客户端](/sccm/core/clients/deploy/plan/plan-wake-up-clients)。  
@@ -118,25 +120,9 @@ ms.locfileid: "39384814"
 
 - **如果用户请求此应用程序，则需要管理员批准**：对于 1710 及较早版本，管理员在用户安装前会批准该应用程序的任何用户请求。 如果部署目的为“必需”或者应用程序部署到了设备集合，则此选项为灰色。  
 
-    应用程序批准请求显示在“软件库”  工作区中“应用程序管理”  下的“批准请求”  节点中。 如果请求未在 45 天内获批准，则会将其删除。 重新安装客户端可能会取消任何待批准的请求。  
-
-    批准安装应用程序后，可在 Configuration Manager 控制台中“拒绝”该请求。 执行此操作不会使客户端从任何设备卸载应用程序。 它会阻止用户从软件中心安装应用程序的新副本。  
-
 - **管理员必须在设备上批准对此应用程序的请求**：从版本 1802 开始，管理员会批准该应用程序的任何用户请求，然后用户才能将其安装到请求的设备上。 如果管理员批准请求，则用户只能在该设备上安装应用程序。 用户必须提交另一个请求才能在另一台设备上安装应用程序。 如果部署目的为“必需”或者应用程序部署到了设备集合，则此选项为灰色。 <!--1357015-->  
 
-    此功能为可选。 有关详细信息，请参阅[启用更新中的可选功能](/sccm/core/servers/manage/install-in-console-updates#bkmk_options)。 如果未启用此功能，将看到以前的版本。  
-
-    > [!Note]  
-    > 若要利用新的 Configuration Manager 功能，请先将客户端更新到最新版本。 即使在更新站点和控制台时 Configuration Manager 控制台中会显示新功能，但只有在客户端版本也是最新版本之后，完整方案才能正常运行。<!--SCCMDocs issue 646-->  
-
-    在 Configuration Manager 控制台的“软件库”工作区中，查看“应用程序管理”下的“批准请求”。 每个请求的列表现均提供“设备”列。 当针对此请求执行操作时，“应用程序请求”对话框还将包括用户从中提交请求的设备名称。  
-
-    如果请求未在 45 天内获批准，则会将其删除。 重新安装客户端可能会取消任何待批准的请求。  
-
-    批准安装应用程序后，可在 Configuration Manager 控制台中“拒绝”该请求。 执行此操作不会使客户端从任何设备卸载应用程序。 它会阻止用户从软件中心安装应用程序的新副本。  
-
-    > [!Important]  
-    > 自版本 1806 起，当撤销之前批准并安装的应用程序的批准时，此行为已更改。 现在当拒绝应用程序的请求时，客户端将从用户的设备卸载应用程序。<!--1357891-->  
+有关详细信息，请参阅[批准应用程序](/sccm/apps/deploy-use/app-approval)。
 
 
 #### <a name="deployment-properties-deployment-settings"></a>部署属性“部署设置”

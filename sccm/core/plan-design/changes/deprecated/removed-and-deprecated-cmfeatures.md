@@ -2,7 +2,7 @@
 title: 已弃用的功能
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 不再支持的功能。
-ms.date: 10/26/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 287a6324-ae65-4d38-b2ef-198d47c91231
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7c1e07a2911a5f8560e3b69d7596716eb526bb34
-ms.sourcegitcommit: 3772ece83823714b2aae46ec20523cc094701760
+ms.openlocfilehash: 089f1f69f8df87b1d4b30cd8df6e735f5c79f312
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681420"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52455778"
 ---
 # <a name="removed-and-deprecated-features-for-configuration-manager"></a>Configuration Manager 中已删除和已弃用的功能
 
@@ -31,6 +31,7 @@ ms.locfileid: "51681420"
 
 |功能|首次宣布弃用|支持&nbsp;删除|  
 |-----------|---|--------------|  
+|适用于云管理网关和云分发点的 Azure 经典服务部署。 有关详细信息，请参阅 [CMG 规划](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager)。|2018 年 11 月|在 2019 年 7 月 1 日之后发布的第一个版本| 
 |适用于 Mac 和 Linux 的 System Center Endpoint Protection<br>有关详细信息，请参阅[“不再提供支持”博客文章](https://go.microsoft.com/fwlink/?linkid=870182)。|2018 年 10 月|2018 年 12 月 31 日|
 |混合移动设备管理。 有关详细信息，请参阅[什么是混合 MDM](/sccm/mdm/understand/hybrid-mobile-device-management)。<!--Intune feature 2683117-->|2018 年 8 月 14 日|2019 年 9 月 1 日|
 |应用程序目录网站点的 Silverlight 用户体验不再受支持。 用户应使用新的软件中心。 注意：应用程序目录网站点和 Web 服务点角色依然受支持。 在某些情况下，新的软件中心会与应用程序目录网站点进行通信。 有关详细信息，请参阅[配置软件中心](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex)。<!--1358309-->|2017 年 8 月 11日| 版本 1806|

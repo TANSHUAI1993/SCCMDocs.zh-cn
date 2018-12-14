@@ -2,7 +2,7 @@
 title: 发行说明
 titleSuffix: Configuration Manager
 description: 了解有关产品中尚未解决或 Microsoft 支持知识库文章中未涵盖的紧急问题。
-ms.date: 08/21/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b31e0c84d0e3920024870361239e22bb90005ccb
-ms.sourcegitcommit: e7732dd67f19218cec576f70fe4ab44e2626b8e0
+ms.openlocfilehash: 41039ec31c11573424f044df009e9c364491b5f7
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48045209"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456339"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Configuration Manager 发行说明
 
@@ -29,9 +29,9 @@ ms.locfileid: "48045209"
 >  本主题包含 Configuration Manager 当前分支的发行说明。 有关技术预览分支的信息，请参阅[技术预览](/sccm/core/get-started/technical-preview)  
 
 有关不同版本引入的新功能的信息，请参阅以下文章：
+- [1810 版中的新增功能](/sccm/core/plan-design/changes/whats-new-in-version-1810)
 - [1806 版中的新增功能](/sccm/core/plan-design/changes/whats-new-in-version-1806)  
 - [1802 版中的新增功能](/sccm/core/plan-design/changes/whats-new-in-version-1802)
-- [版本 1710 中的新增功能](/sccm/core/plan-design/changes/whats-new-in-version-1710)
 
 
 
@@ -79,18 +79,8 @@ ms.locfileid: "48045209"
 <!-- ## Backup and recovery  -->
 
 
-## <a name="client-deployment-and-upgrade"></a>客户端部署和升级
+<!--## Client deployment and upgrade-->
 
-### <a name="azure-ad-enabled-clients-cant-communicate-with-management-point"></a>启用 Azure AD 的客户端无法与管理点通信
-<!--501089-->  
-适用于：Configuration Manager 版本 1706
-<!--also fixed in 1710 HFRU-->  
-在[安装和分配 Configuration Manager Windows 10 客户端（使用 Azure AD 进行身份验证）](/sccm/core/clients/deploy/deploy-clients-cmg-azure)的方案中，当启用 HTTPS 的管理点使用备用数据库凭据时，客户端通信将失败。 
-
-#### <a name="workaround"></a>解决方法
-执行以下操作之一来缓解此问题：
-- 将站点更新到最新版本，并应用最新修补程序
-- 更改管理点使用的凭据。
 
 
 <!-- ## Operating system deployment  -->

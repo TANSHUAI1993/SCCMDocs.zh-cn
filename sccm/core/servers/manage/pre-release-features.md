@@ -2,7 +2,7 @@
 title: 预发行功能
 titleSuffix: Configuration Manager
 description: 预发行功能是指 Current Branch 中的功能，用于在生产环境中的早期测试。
-ms.date: 10/24/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 6bce416b-761d-4b23-bd33-5b7c30edb10d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e3b3b31c31725c6b9931d0c2cc67324c4b39f974
-ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
+ms.openlocfilehash: 6fb24c3e262f3d1f3991ab549592e3f21631b32d
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411130"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456119"
 ---
 # <a name="pre-release-features-in-configuration-manager"></a>Configuration Manager 中的预发行功能
 
@@ -75,25 +75,27 @@ ms.locfileid: "50411130"
 
 | 功能          | 添加为预发行功能 | 添加为完整版功能 |  
 |------------------|----------------------|-------------------------|
-| 增强的 HTTP 站点系统<!--1356889,1358228-->|[版本 1806](/sccm/core/plan-design/hierarchy/enhanced-http)|![尚未发行](media/red_x.png)|
-| 适用于共同托管设备的移动应用<!--1357892-->|[版本 1806](/sccm/core/clients/manage/co-management-switch-workloads#workloads-able-to-be-transitioned-to-intune)|![尚未发行](media/red_x.png)|
-| 包转换管理器<!--1357861-->|[版本 1806](/sccm/apps/pcm/package-conversion-manager)|![尚未发行](media/red_x.png)|
-| iOS 支持 Cisco AnyConnect 4.0.07x 及更高版本<!--1357393-->|[版本 1802](/sccm/mdm/deploy-use/create-vpn-profiles)| [具有更新 4163547 的版本 1802](/sccm/mdm/deploy-use/create-vpn-profiles) |
-| 分阶段部署<!--1356837-->|[版本 1802](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)|[版本 1806](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)|
-| 运行任务序列步骤 <!-- 1261338 --> |  [版本 1710](/sccm/osd/understand/task-sequence-steps#child-task-sequence) |[版本 1802](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#add-child-task-sequences-to-a-task-sequence)|
-| Windows Defender 攻击防护 <!-- 1355468 --> |  [版本 1710](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) |[版本 1802](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy)|
-| 用于条件访问符合性策略的“设备运行状况证明”评估 <!-- 1235616 --> |  [版本 1710](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) |[版本 1802](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)|
-| 从 Configuration Manager 控制台创建并运行 PowerShell 脚本 <!-- 1236459 --> |  [版本 1706](/sccm/apps/deploy-use/create-deploy-scripts)|[版本 1802](/sccm/apps/deploy-use/create-deploy-scripts)|
-| 管理 Microsoft Surface 驱动程序更新 <!-- 1098490 --> |  [版本 1706](/sccm/sum/get-started/configure-classifications-and-products) | [版本 1710](/sccm/sum/get-started/configure-classifications-and-products)|
-| 使用 Configuration Manager 进行 Device Guard 管理 <!-- 1319346 --> |  [版本 1702](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager)|![尚未发行](media/red_x.png)|
-| 任务序列内容预缓存 <!-- 1021244 --> |  [版本 1702](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content) | [版本 1710](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content)|
-| 在安装应用程序之前检查运行的可执行文件 <!-- 1284624 --> |   [版本 1702](/sccm/apps/deploy-use/deploy-applications#how-to-check-for-running-executable-files-before-installing-an-application) |[版本 1706](/sccm/apps/deploy-use/deploy-applications#how-to-check-for-running-executable-files-before-installing-an-application)|
-| 数据仓库服务点 <!-- 1277922 --> |  [版本 1702](/sccm/core/servers/manage/data-warehouse) |[版本 1706](/sccm/core/servers/manage/data-warehouse)|
-| 用于向客户端进行内容分发的对等缓存 <!-- 1101436 --> |  [版本 1610](/sccm/core/plan-design/hierarchy/client-peer-cache) | [版本 1710](/sccm/core/plan-design/hierarchy/client-peer-cache)|
-| 云管理网关 <!-- 1101764 --> |  [版本 1610](/sccm/core/clients/manage/plan-cloud-management-gateway) |[版本 1802](/sccm/core/clients/manage/plan-cloud-management-gateway)|
-| Log Analytics 连接器 <!-- 1236739 --> | [版本 1606](/sccm/core/clients/manage/sync-data-log-analytics) |[版本 1802](/sccm/core/clients/manage/sync-data-log-analytics)|
-| 维护群集感知集合（为服务器组提供服务） <!-- 1081776 --> | [版本 1602](/sccm/core/get-started/capabilities-in-technical-preview-1605#BKMK_ServerGroups)|![尚未发行](media/red_x.png)|
-| 对由 System Center Configuration Manager 管理的电脑进行条件访问 <!--  --> | [版本 1602](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)     | [版本 1702](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)                     |
+| SMS 提供程序 API <!--1359052--> | 版本 1810 | ![尚未发行](media/red_x.png) |
+| [增强的 HTTP 站点系统](/sccm/core/plan-design/hierarchy/enhanced-http) <!--1356889,1358228--> | 版本 1806 | 版本 1810 |
+| [适用于共同托管设备的移动应用](/sccm/core/clients/manage/co-management-switch-workloads#workloads-able-to-be-transitioned-to-intune) <!--1357892--> | 版本 1806 | ![尚未发行](media/red_x.png) |
+| [包转换管理器](/sccm/apps/pcm/package-conversion-manager) <!--1357861--> | 版本 1806 | 版本 1810 |
+| [支持适用于 iOS 的 Cisco AnyConnect 4.0.07x 及更高版本](/sccm/mdm/deploy-use/create-vpn-profiles) <!--1357393--> | 版本 1802 | 版本 1802 <br>包含更新 4163547 |
+| [分阶段部署](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence) <!--1356837--> | 版本 1802 | 版本 1806 |
+| [运行任务序列步骤](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#add-child-task-sequences-to-a-task-sequence) <!--1261338--> |  版本 1710 | 版本 1802 |
+| [Windows Defender 攻击防护](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy) <!--1355468--> | 版本 1710 | 版本 1802 |
+| [用于条件访问符合性策略的“设备运行状况证明”评估](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) <!--1235616--> | 版本 1710 | 版本 1802 |
+| [创建并运行 Windows PowerShell 脚本](/sccm/apps/deploy-use/create-deploy-scripts) <!--1236459--> | 版本 1706 | 版本 1802 |
+| [管理 Microsoft Surface 驱动程序更新](/sccm/sum/get-started/configure-classifications-and-products) <!--1098490--> | 版本 1706 | 版本 1710 |
+| [Device Guard 管理](/sccm/protect/deploy-use/use-device-guard-with-configuration-manager) <!--1355092 (1319346)--> | 版本 1702 | ![尚未发行](media/red_x.png) |
+| [任务序列内容预缓存](/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system#configure-pre-cache-content) <!--1021244--> | 版本 1702 | 版本 1710 |
+| [在安装应用程序之前检查运行的可执行文件](/sccm/apps/deploy-use/deploy-applications#how-to-check-for-running-executable-files-before-installing-an-application) <!--1284624--> | 版本 1702 | 版本 1706 |
+| [数据仓库服务点](/sccm/core/servers/manage/data-warehouse)<!--1277922--> | 版本 1702 | 版本 1706 |
+| [用于向客户端进行内容分发的对等缓存](/sccm/core/plan-design/hierarchy/client-peer-cache) <!--1101436--> | 版本 1610 | 版本 1710 |
+| [云管理网关](/sccm/core/clients/manage/plan-cloud-management-gateway) <!--1101764--> | 版本 1610 | 版本 1802 |
+| [Azure Log Analytics 连接器](/sccm/core/clients/manage/sync-data-log-analytics) <!--1236739--> | 版本 1606 | 版本 1802 |
+| [维护群集感知集合（为服务器组提供服务）](/sccm/core/get-started/capabilities-in-technical-preview-1605#BKMK_ServerGroups) <!--1081776--> | 版本 1602 | ![尚未发行](media/red_x.png) |
+| [对由 Configuration Manager 管理的电脑进行条件访问](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm) <!--  --> | 版本 1602 | 版本 1702 |
+
 <!--Image used = ![Not yet](media/red_x.png) -->
 
 > [!Tip]  

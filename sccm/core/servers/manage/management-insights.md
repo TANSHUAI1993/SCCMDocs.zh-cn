@@ -2,7 +2,7 @@
 title: 管理见解
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 控制台中提供的管理见解功能。
-ms.date: 07/30/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: a79f83be-884c-48e6-94d6-ed0a68c22e2f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 92f82ee7247030d19df63e50b0ac4437f250717a
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 3721c4c35dd22a0d2a59d2300bd25dfbd3c75aeb
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39383491"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456305"
 ---
 # <a name="management-insights-in-configuration-manager"></a>Configuration Manager 中的管理见解
 
@@ -31,11 +31,12 @@ Configuration Manager 中的管理见解功能提供了环境当前状态的相�
 
 1. 请打开 Configuration Manager 控制台。  
 
-2. 转到“管理”工作区并单击“管理见解”。  
+2. 转到“管理”工作区，展开“管理见解”，然后选择“所有见解”。  
 
-3. 选择“所有见解”。  
+    > [!Note]  
+    > 从版本 1810 开始，当选择“管理见解”节点时，它会显示为[管理见解仪表板](#bkmk_insights)。  
 
-4. 双击要查看的“管理见解组名称”。 或突出显示该见解，然后单击功能区中的“显示见解”。  
+3. 打开要查看的管理见解组名称。 在功能区中选择“显示见解”。  
 
 以下四个选项卡可供查看： 
 
@@ -45,7 +46,7 @@ Configuration Manager 中的管理见解功能提供了环境当前状态的相�
 
 - **正在进行**：显示已完成部分（但非全部）先决条件的规则。  
 
-- **需要执行操作**：列出需要执行操作的规则。 右键单击并选择“更多详细信息”可检索需要执行操作的特定项目。  
+- **需要执行操作**：列出需要执行操作的规则。 选择“更多详细信息”，检索需要执行操作的特定项目。  
 
 “先决条件”窗格列出了运行规则所需的项目。
 
@@ -53,7 +54,7 @@ Configuration Manager 中的管理见解功能提供了环境当前状态的相�
 ![管理见解 - 云服务组的所有规则和先决条件](./media/Management-insights-all-cloud-rules.png)
 
 
-选择规则并单击“更多详细信息”，查看规则详细信息。
+选择规则并选择“更多详细信息”，查看规则详细信息。
 
 
 
@@ -63,7 +64,7 @@ Configuration Manager 中的管理见解功能提供了环境当前状态的相�
 
 管理见解规则的日志文件是站点服务器上的 SMS_DataEngine.log。
 
-<!--1357930-->从版本 1806 开始，一些规则允许执行操作。 选择规则，单击“更多详细信息”，然后单击“执行操作”（如果可用）。 
+<!--1357930-->从版本 1806 开始，一些规则允许执行操作。 选择规则，选择“更多详细信息”，然后选择“执行操作”（如果可用）。 
 
 根据规则，此操作会出现以下某一行为：  
 
@@ -73,9 +74,45 @@ Configuration Manager 中的管理见解功能提供了环境当前状态的相�
 
 
 
+## <a name="bkmk_insights"></a> 管理见解仪表板
+<!--1357979-->
+
+从版本 1810 开始，“管理见解”节点包括一个图形仪表板。 此仪表板可概要显示规则状态，让你能够更轻松地显示进度。 
+
+使用仪表板顶部的以下筛选器可以细化视图：
+- 显示已完成的工作
+- 可选
+- 建议
+- 严重
+
+该仪表板具有以下磁贴：  
+
+- 管理见解索引：跟踪管理见解规则的整体进度。 该索引为加权平均值。 关键规则最为重要。 此索引为可选规则提供的加权最低。  
+
+- 管理见解组：显示每个组的规则百分比，支持筛选器。 选择一个组以深入查看此组中的特定规则。  
+
+- 管理见解优先级：按优先级显示规则百分比，支持筛选器。   
+
+- 所有见解：一个包括优先级和状态的见解表。 使用表顶部的“筛选器”字段匹配任何可用列中的字符串。 仪表板按以下顺序对表进行排序：
+    - 状态：需要进行操作、已完成、未知  
+    - 优先级：重要、建议、可选  
+    - 上次更改时间：较早的日期排在前面   
+
+![管理见解仪表板的屏幕截图](media/1357979-management-insights-dashboard.png)
+
+
+
 ## <a name="groups-and-rules"></a>组和规则
 
-规则分为不同的管理见解组。 有关当前可用的组和规则，请参阅以下列表：
+规则分为以下管理见解组：
+- [应用程序](#applications)  
+- [云服务](#cloud-services)  
+- [集合](#collections)  
+- [主动维护](#proactive-maintenance)  
+- [安全](#security)  
+- [简化管理](#simplified-management)  
+- [软件中心](#software-center)  
+- [Windows 10](#windows-10)  
 
 
 ### <a name="applications"></a>应用程序
@@ -85,7 +122,7 @@ Configuration Manager 中的管理见解功能提供了环境当前状态的相�
 - **没有部署的应用程序**：列出环境中没有活动部署的应用程序。 此规则有助于查找并删除未使用的应用程序，以简化显示在控制台中的应用程序列表。 有关详细信息，请参阅[部署应用程序](/sccm/apps/deploy-use/deploy-applications)。  
 
 
-### <a name="cloud-services"></a>Cloud Services
+### <a name="cloud-services"></a>云服务
 
 帮助与多种云服务集成，实现设备的现代化管理。 
 
@@ -119,6 +156,8 @@ Configuration Manager 中的管理见解功能提供了环境当前状态的相�
 - **未使用的启动映像**：未引用这些启动映像以用于 PXE 启动或任务序列。 有关详细信息，请参阅[管理启动映像](/sccm/osd/get-started/manage-boot-images)。  
 
 - **未使用的配置项**：这些配置项不属于配置基线，并且存在已超过 30 天。 有关详细信息，请参阅[创建配置基线](/sccm/compliance/deploy-use/create-configuration-baselines)。  
+
+- **将对等缓存源升级到最新版本的 Configuration Manager 客户端**：识别用作对等缓存源但尚未从 1806 之前的客户端版本升级的客户端。 先前的 1806 客户端不能用作运行版本 1806 或更高版本的客户端的对等缓存源。 选择“执行操作”打开显示客户端列表的设备视图。<!--1358008-->  
 
 
 ### <a name="security"></a>安全

@@ -1,8 +1,8 @@
 ---
-title: 管理操作系统映像
+title: 管理 OS 映像
 titleSuffix: Configuration Manager
-description: 在 Configuration Manager 中，了解如何管理存储在 Windows 映像 (WIM) 文件中的操作系统映像。
-ms.date: 12/06/2016
+description: 了解用于管理存储在 Windows 映像 (WIM) 文件中的 OS 映像的方法。
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,131 +10,105 @@ ms.assetid: fab13949-371c-4a4c-978e-471db1e54966
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d442955d62989d3bbc7b32e0aba122a0853a3f14
-ms.sourcegitcommit: 1f8731ed8f0308cb2cb576722adb0821a366e9ce
+ms.openlocfilehash: 700a9d8f88c64e11449349ace8c431b4ad6611cf
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51223664"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456169"
 ---
-# <a name="manage-operating-system-images-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 管理操作系统映像
+# <a name="manage-os-images-with-configuration-manager"></a>使用 Configuration Manager 管理 OS 映像
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-Configuration Manager 中的操作系统映像以 Windows 映像 (WIM) 文件格式存储，代表在计算机上成功安装和配置操作系统所需的引用文件和文件夹的压缩集合。 对于所有操作系统部署方案，必须选择操作系统映像。   你可以使用默认操作系统映像或从你配置的引用计算机生成操作系统映像。 在生成引用计算机时，在捕获操作系统以创建映像文件之前，你可以向其添加操作系统文件、驱动程序、支持文件、软件更新、工具和其他软件应用程序。 下面提供了有关每种方法的信息。  
+Configuration Manager 中的 OS 映像以 Windows 映像 (WIM) 文件格式存储。 这些映像是一系列压缩的引用文件和文件夹，这些引用文件和文件夹用于在计算机上安装和配置新 OS。 许多 OS 部署方案都需要 OS 映像。 
 
- **默认映像**  
+可以使用[默认 OS 映像](#default-image)或者从配置的[引用计算机](#bkmk_capture)生成 OS 映像。 生成引用计算机时，可以向 OS 添加 OS 文件、驱动程序、支持文件、软件更新、工具和应用程序。 然后捕获它以创建映像文件。 
 
- 默认操作系统映像 (install.wim) 包含在 Windows 操作系统安装文件中。 此映像是包含一组标准驱动程序的基本操作系统映像。 当你使用默认操作系统映像时，可以在操作系统安装之后使用任务序列步骤来安装应用和进行其他配置。  默认操作系统映像位于 <*操作系统源路径*>\Sources\install.wim。  
+### <a name="default-image"></a>默认映像
 
--   **优点**  
+Windows 安装文件包含默认 OS 映像。 此映像是包含一组标准驱动程序的基本 OS 映像。 使用默认 OS 映像时，请使用任务序列步骤安装应用，并在设备上安装 OS 后进行其他配置。 在 Windows 源文件中找到默认 OS 映像：`\Sources\install.wim`。  
 
-    -   映像大小小于捕获的映像。  
+#### <a name="default-image-advantages"></a>默认映像的优点
 
-    -   使用任务序列步骤安装应用和配置可更加动态。 例如，你可以在任务序列中更改将安装的应用和配置，并且无需对操作系统进行重映像。  
+- 映像大小小于捕获的映像。  
 
--   **缺点**  
+- 使用任务序列步骤安装应用和配置可更加灵活。 例如，无需对设备重置映像，即可更改按任务序列安装的配置和应用。  
 
-    -   操作系统安装可能需要更多时间，因为操作系统安装完成后将进行应用安装和其他配置。
+#### <a name="default-image-disadvantages"></a>默认映像的缺点
 
-**捕获的映像**  
+- OS 安装可能更耗时。 应用程序的安装和其他配置发生在 OS 安装完成后。  
 
- 若要创建自定义操作系统映像，则构建具有所需的操作系统的引用计算机，并安装应用、配置设置等。然后，从引用计算机捕获操作系统映像以创建 WIM 文件。 你可以手动构建引用计算机，或者可以使用任务序列自动执行部分或所有构建步骤。   
-有关创建自定义操作系统映像的步骤，请参阅[自定义操作系统映像](customize-operating-system-images.md)。  
 
--   **优点**  
+### <a name="bkmk_capture"></a> 从引用计算机捕获的映像
 
-    -   安装速度可以比使用默认映像更快。 例如，可以使用捕获的操作系统映像预安装应用，并且将无需在之后使用任务序列步骤来安装应用。  
+要创建自定义的 OS 映像，请使用所需的 OS 生成引用计算机。 然后安装应用程序并配置设置。 从引用计算机捕获 OS 映像以创建 WIM 文件。 手动生成引用计算机，或者使用任务序列自动执行部分或全部生成步骤。 有关详细信息，请参阅[自定义 OS 映像](/sccm/osd/get-started/customize-operating-system-images)。  
 
--   **缺点**  
+#### <a name="captured-image-advantages"></a>捕获的映像优点
 
-    -   图像大小可能大于默认图像。
-    
-    -   在应用程序和工具需要更新时必须创建新图像。
+- 安装速度可以比使用默认映像更快。 例如，可以使用捕获的 OS 映像预先安装应用程序。 稍后无需再使用任务序列步骤安装这些相同的应用程序。  
 
-##  <a name="BKMK_AddOSImages"></a>将操作系统映像添加到 Configuration Manager  
- 在可以使用操作系统映像之前，必须先将映像添加到 Configuration Manager 站点。 使用以下过程将操作系统映像添加到站点。  
+#### <a name="captured-image-disadvantages"></a>捕获的映像缺点
 
-#### <a name="to-add-an-operating-system-image-to-a-site"></a>若要将操作系统映像添加到站点  
+- 图像大小可能大于默认图像。  
 
-1.  在 Configuration Manager 控制台中，单击“软件库”。  
+- 在应用程序和工具需要更新时必须创建新映像。  
 
-2.  在“软件库”  工作区中，展开“操作系统” ，然后单击“操作系统映像包” 。  
 
-3.  在“主页”  选项卡上的“创建”  组中，单击“添加操作系统映像包”  以启动添加操作系统映像包向导。  
 
-4.  在“数据源”  页上，指定操作系统映像的网络路径。 例如，指定 **\\\server\path\OS.WIM**。  
+##  <a name="BKMK_AddOSImages"></a> 添加 OS 映像  
 
-5.  在“常规”  页上，指定以下信息，然后单击“下一步” 。 当你向同一站点中添加多个操作系统映像时，此信息在用于标识时非常有用。  
+在使用 OS 映像之前，请将其添加到 Configuration Manager 站点。 
 
-    -   **名称**：指定映像的名称。 默认情况下，映像的名称是从 WIM 文件中获取的。  
+1.  在 Configuration Manager 控制台中，转到“软件库”工作区，展开“操作系统”，然后选择“操作系统映像”节点。  
 
-    -   **版本**：指定映像的版本。  
+2.  在功能区“主页”选项卡的“创建”组中，选择“添加操作系统映像”。 此操作将启动“添加操作系统映像向导”。  
 
-    -   **备注**：指定映像的简要描述。  
+3.  在“数据源”页面上，指定 OS 映像文件的网络“路径”。 例如，`\\server\share\path\image.wim`。  
 
-6.  完成向导。  
+4.  在“常规”页面上，指定以下信息。 当你有多个 OS 映像时，可利用这些信息对其进行识别。  
 
- 现在可以将操作系统映像分发到分发点。  
+    -   **名称**：映像的唯一名称。 默认情况下，名称来自 WIM 文件名。  
 
-##  <a name="BKMK_DistributeBootImages"></a>将操作系统映像分发到分发点  
- 将采用与分发其他内容相同的方式将操作系统映像分发到分发点。 大多数情况下，部署操作系统之前必须将操作系统映像分发到至少一个分发点。 关于分发操作系统映像的步骤，请参阅 [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute)。  
+    -   **版本**：可选的版本标识符。 此属性不必是映像的 OS 版本。 它通常为组织的包的版本。   
 
-##  <a name="BKMK_OSImagesApplyUpdates"></a>将软件更新应用于操作系统映像  
- 我们会定期发布适用于你的操作系统映像中的操作系统的新软件更新。 必须将软件更新基础结构实施到位，成功同步软件更新，并将软件更新下载到站点服务器上的内容库后才可将软件更新应用于映像。 有关详细信息，请参阅[部署软件更新](../../sum/deploy-use/deploy-software-updates.md)。  
+    -   **注释**：可选的简要说明。  
 
- 你可以按指定计划将适用的软件更新应用于映像。 Configuration Manager 按指定计划将选择的软件更新应用于操作系统映像，然后根据需要将更新的映像分发到分发点。 有关操作系统映像的信息存储在站点数据库中，包括在导入时应用的软件更新。 自映像最初添加以来已应用于映像的软件更新也存储在站点数据库中。 当你启动向导以将软件更新应用于操作系统映像时，向导将检索尚未应用于映像的适用软件更新的列表供你选择。 Configuration Manager 从站点服务器上的内容库中复制软件更新，然后将软件更新应用于操作系统映像。  
+5.  完成向导。  
 
- 使用以下过程将软件更新应用于操作系统映像。  
 
-#### <a name="to-apply-software-updates-to-an-operating-system-image"></a>将软件更新应用于操作系统映像  
+接下来，将 OS 映像分发到分发点。  
 
-1.  在 Configuration Manager 控制台中，单击“软件库”。  
 
-2.  在“软件库”  工作区中，展开“操作系统” ，然后单击“操作系统映像包” 。  
 
-3.  选择要向其应用软件更新的操作系统映像。  
+##  <a name="BKMK_DistributeBootImages"></a> 将内容分发到分发点  
 
-4.  在“主页”  选项卡上的“操作系统映像包”  组中，单击“计划更新”  以启动向导。  
+将 OS 映像分发到其他内容所分发到的相同分发点。 在部署任务序列之前，请将 OS 映像分发到至少一个分发点。 有关详细信息，请参阅[分发内容](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_distribute)。  
 
-5.  在“选择更新”  页上，选择要应用于操作系统映像的软件更新，然后单击“下一步” 。  
 
-6.  在“设置计划”  页上，指定以下设置，然后单击“下一步” 。  
 
-    1.  **计划**：指定有关何时将软件更新应用于操作系统映像的计划。  
+[!INCLUDE [Apply software updates to an image](includes/wim-apply-updates.md)]
 
-    2.  **出错时继续**：选择此选项以便即使在出错时也继续将软件更新应用于映像。  
 
-    3.  **将映像分发到分发点**：选择此选项以在应用了软件更新后更新分发点上的操作系统映像。  
 
-7.  在“摘要”  页上，验证以下信息，然后单击“下一步” 。  
+##  <a name="BKMK_OSImageMulticast"></a> 为多播部署准备 OS 映像  
 
-8.  在“完成”  页上，验证软件更新是否已成功应用于操作系统映像。  
+使用多播部署，可以使多台计算机同时下载 OS 映像。 映像通过分发点多播给客户端，而不是每个客户端通过单独连接从分发点下载映像的副本。 选择采用 OS 部署方法[使用多播通过网络来部署 Windows](/sccm/osd/deploy-use/use-multicast-to-deploy-windows-over-the-network) 时，请将 OS 映像配置为支持多播。 然后将映像分发到启用了多播的分发点。 
 
-> [!NOTE]  
->  为了最大程度减少有效负载大小，OS 升级包和 OS 映像的维护过程将删除旧版本。  
+1.  在 Configuration Manager 控制台中，转到“软件库”工作区，展开“操作系统”，然后选择“操作系统映像”节点。  
 
-##  <a name="BKMK_OSImageMulticast"></a>为多播部署准备操作系统映像  
- 使用多播部署以允许多台计算机同时下载操作系统映像。 映像通过分发点多播给客户端，而不是让分发点通过单独连接向每个客户端发送映像的副本。 选择[使用多播通过网络部署 Windows](../deploy-use/use-multicast-to-deploy-windows-over-the-network.md) 操作系统部署方法时，必须先将操作系统映像包配置为支持多播，然后才能将操作系统映像分发到启用了多播的分发点。 使用下列过程来为现有操作系统映像包设置多播选项。  
+2.  选择要分发到启用了多播的分发点的 OS 映像。  
 
-#### <a name="to-modify-an-operating-system-image-package-to-use-multicast"></a>修改操作系统映像包以使用多播  
+3.  在功能区“主页”选项卡的“属性”组中，选择“属性”。  
 
-1.  在 Configuration Manager 控制台中，单击“软件库”。  
+4.  切换到“分发设置”选项卡，并配置以下选项：  
 
-2.  在“软件库”  工作区中，展开“操作系统” ，然后单击“操作系统映像包” 。  
+    -   **允许通过多播传输此包（仅 WinPE）**：选择此选项使 Configuration Manager 使用多播同时部署多个 OS 映像。  
 
-3.  选择要分发到启用了多播的分发点的操作系统映像。  
-
-4.  在“主页”选项卡上的“属性”组中，单击“属性”。  
-
-5.  选择“分发设置”  选项卡，并配置以下选项：  
-
-    -   **允许通过多播传输此包(仅 WinPE)**：必须选择此选项以使 Configuration Manager 同时部署多个操作系统映像。  
-
-    -   **加密多播包**：指定在将映像发送到分发点之前是否对其进行加密。 如果包中包含敏感信息，请使用此选项。 如果不对映像进行加密，则包的内容将以明文的形式出现在网络上并且可被未授予用户读取。  
+    -   **加密多播包**：指定站点在将映像发送到分发点之前是否对其进行加密。 如果映像中包含敏感信息，请使用此选项。 如果映像未加密，则其内容会以明文形式在网络上可见。 于是，未经授权的用户可以截获并查看映像内容。  
 
     -   **仅通过多播传输此包**：指定是否希望分发点仅在多播会话期间部署映像。  
 
-         如果选择“仅通过多播传输此包” ，则必须还要指定“需要时通过运行任务序列本地下载内容”  作为操作系统映像的部署选项。 你可以在部署操作系统映像时为映像指定部署选项，或者可以稍后通过编辑部署的属性来指定这些选项。 部署选项位于部署对象的“属性”  页的“分发点”  选项卡上。  
+         如果选择“仅通过多播传输此包”，则还必须将任务序列部署选项制定为“运行的任务序列需要时从本地下载内容”。 有关详细信息，请参阅 [Deploy a task sequence](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS)。   
 
-6.  单击" **确定**"。  
+5.  选择“确定”以保存设置并关闭映像属性。  

@@ -2,7 +2,7 @@
 title: 任务序列变量引用
 titleSuffix: Configuration Manager
 description: 了解用于控制和自定义 Configuration Manager 任务序列的变量。
-ms.date: 08/17/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cfecd7441abd206bdff1d2f6618d763a30dddc51
-ms.sourcegitcommit: be8c0182db9ef55a948269fcbad7c0f34fd871eb
+ms.openlocfilehash: cde62242fc4db99d762d670037aad22bd25d6c00
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42756277"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456730"
 ---
 # <a name="task-sequence-variables-in-configuration-manager"></a>Configuration Manager 中的任务序列变量
 
@@ -124,6 +124,12 @@ ms.locfileid: "42756277"
  适用于[设置动态变量](task-sequence-steps.md#BKMK_SetDynamicVariables)步骤。
 
  指定计算机使用的 IP 地址。
+
+
+### <a name="SMSTSLastActionName"></a> _SMSTSLastActionName
+ 从版本 1810 开始  
+
+ 存储运行的最后一个操作的名称。 此变量与 _SMSTSLastActionRetCode 相关。 任务序列将这些值记录到 smsts.log 文件中。 对任务序列进行故障排除时，此变量十分有用。 当步骤失败时，自定义脚本可以包含步骤名称和返回代码。
 
 
 ### <a name="SMSTSLastActionRetCode"></a> _SMSTSLastActionRetCode

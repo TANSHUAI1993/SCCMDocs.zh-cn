@@ -4,17 +4,17 @@ description: 了解用于云管理网关的各种数字证书。
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 10/24/2018
+ms.date: 11/27/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
-ms.openlocfilehash: 121b3840ea4f61f4789c5d6c21ab857cb091e199
-ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
+ms.openlocfilehash: 4ef9746b9a1eb90beeec6a477ad1d406acebbb05
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411300"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456560"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>云管理网关证书
 
@@ -123,6 +123,9 @@ CMG 创建基于 Internet 的客户端要连接到的 HTTPS 服务。 此服务�
 ## <a name="bkmk_azuremgmt"></a>Azure 管理证书
 
 经典服务部署需要此证书。 Azure 资源管理器部署不需要此证书。
+
+> [!Important]  
+> 从版本 1810 开始，Configuration Manager 已弃用 Azure 的经典服务部署。 开始使用适用于云管理网关的 Azure 资源管理器部署。 有关详细信息，请参阅 [CMG 规划](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager)。
 
 在 Azure 门户中的 Configuration Manager 控制台中创建 CMG 时需要提供此证书。
 

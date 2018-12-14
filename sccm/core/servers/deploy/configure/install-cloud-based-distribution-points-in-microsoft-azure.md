@@ -2,7 +2,7 @@
 title: 安装云分发点
 titleSuffix: Configuration Manager
 description: 使用以下步骤在 Configuration Manager 中设置云分发点。
-ms.date: 07/30/2018
+ms.date: 11/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: bb83ac87-9914-4a35-b633-ad070031aa6e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ef8bfead4bb73871f990a455aef87971413701ba
-ms.sourcegitcommit: 2badee2b63ae63687795250e298f463474063100
+ms.openlocfilehash: a2d39617db7f2ea9a61e73a3c21cc2509fed2f07
+ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601103"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52456611"
 ---
 # <a name="install-a-cloud-distribution-point-for-configuration-manager"></a>为 Configuration Manager 安装云分发点
 
@@ -43,7 +43,7 @@ ms.locfileid: "45601103"
 
 - 要使用的 Azure 环境。 例如，Azure 公有云或 Azure 美国政府云。  
 
-- 从版本 1806 开始，建议如果计划使用 Azure 资源管理器部署，则需满足以下要求：<!--1322209-->  
+- 从版本 1806 开始（建议使用），请使用 Azure 资源管理器部署。 有以下要求：<!--1322209-->  
 
     - 与 [Azure Active Directory](/sccm/core/servers/deploy/configure/azure-services-wizard) 集成以实现云管理。 不需要 Azure AD 用户发现。  
 
@@ -54,6 +54,8 @@ ms.locfileid: "45601103"
     - 订阅管理帐户需要在向导期间登录。  
 
 - 如果计划使用 Azure 经典服务部署，则需满足以下要求：  
+    > [!Important]  
+    > 从版本 1810 开始，Configuration Manager 已弃用 Azure 的经典服务部署。 开始使用适用于云管理网关的 Azure 资源管理器部署。 有关详细信息，请参阅 [CMG 规划](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager)。  
 
     - Azure 订阅 ID。  
 
@@ -64,7 +66,7 @@ ms.locfileid: "45601103"
 - 云分发点的全局唯一服务名称。  
 
     > [!TIP]  
-    > 在请求使用此服务名称的服务器身份验证证书之前，请确认所需的 Azure 域名是唯一的。 例如，WallaceFalls.CloudApp.Net。 登录 [Microsoft Azure 门户](https://portal.azure.com)。 单击“创建资源”，选择“计算”类别，然后单击“云服务”。 在“DNS 名称”字段中，键入所需的前缀，例如 WallaceFalls。 界面将反映域名是否可用，或是否已被其他服务使用。 不要在门户中创建服务，仅使用此流程检查名称可用性。  
+    > 在请求使用此服务名称的服务器身份验证证书之前，请确认所需的 Azure 域名是唯一的。 例如，WallaceFalls.CloudApp.Net。 登录 [Microsoft Azure 门户](https://portal.azure.com)。 依次选择“创建资源”、“计算”类别，以及“云服务”。 在“DNS 名称”字段中，键入所需的前缀，例如 WallaceFalls。 界面将反映域名是否可用，或是否已被其他服务使用。 不要在门户中创建服务，仅使用此流程检查名称可用性。  
  
 - 此部署所在的 Azure 区域。  
 
@@ -74,19 +76,20 @@ ms.locfileid: "45601103"
 
 在站点上执行此过程以托管由[设计](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#bkmk_topology)确定的云分发点。  
 
-1.  在 Configuration Manager 控制台中，转到“管理”工作区，展开“云服务”，然后选择“云分发点”。 在功能区中，单击“创建云分发点”。  
+1.  在 Configuration Manager 控制台中，转到“管理”工作区，展开“云服务”，然后选择“云分发点”。 在功能区中，选择“创建云分发点”。  
 
 2.  在创建云分发点向导的“常规”页上，配置以下设置：  
 
-    a. 首先指定 Azure 环境。  
+    1. 首先指定 Azure 环境。  
 
-    b. 选择 Azure 部署方法，然后配置关联的设置。  
+    2. 从版本 1806 开始（建议使用），请选择 Azure 资源管理器部署作为部署方法。 选择“登录”以使用 Azure 订阅管理员帐户进行身份验证。 向导使用 Azure AD 集成先决条件过程中存储的 信息，自动填充其余字段。 如果拥有多个订阅，请选择要使用的所需订阅的**订阅 ID**。  
 
-       - **Azure 资源管理器部署**（从版本 1806 开始，并建议）：单击“登录”以使用 Azure 订阅管理员帐户进行身份验证。 向导使用 Azure AD 集成先决条件过程中存储的 信息，自动填充其余字段。 如果拥有多个订阅，请选择要使用的所需订阅的**订阅 ID**。  
+    > [!Note]  
+    > 从版本 1810 开始，Configuration Manager 已弃用 Azure 的经典服务部署。 
+    > 
+    > 如果需要使用经典服务部署，请在此页面上选择该选项。 首先输入 Azure 订阅 ID。 然后选择“浏览”并选择 .PFX 文件作为 Azure 管理证书。  
 
-       - **经典服务部署**（以及 Configuration Manager 版本 1802 及更早版本）：输入 Azure 订阅 ID。 然后单击“浏览”，选择 Azure 管理证书的 .PFX 文件。  
-
-3.  单击“下一步” 。 等待站点测试与 Azure 的连接。  
+3.  选择“下一步”。 等待站点测试与 Azure 的连接。  
 
 4.  在“设置”页上，指定以下设置，然后单击“下一步”：  
 
@@ -100,12 +103,12 @@ ms.locfileid: "45601103"
 
     - **主站点**：选择要将内容分发到此分发点的主站点。
 
-    - **证书文件**：单击“浏览”并选择此云分发点的服务器身份验证证书的 .PFX 文件。 来自此证书的公用名称将填充“服务 FQDN”和“服务名称”必填字段。  
+    - **证书文件**：选择“浏览”并选择 .PFX 文件作为此云分发点的服务器身份验证证书。 来自此证书的公用名称将填充“服务 FQDN”和“服务名称”必填字段。  
 
         > [!NOTE]  
         > 云分发点服务器身份验证证书支持通配符。 如果使用通配符证书，请将“服务 FQDN”字段中的星号 (*) 替换为服务所需的主机名。  
 
-5. 在“警报”页上，设置存储配额、传输配额以及希望 Configuration Manager 在达到这些配额的百分之几时生成警报。 然后单击 **“下一步”**。  
+5. 在“警报”页上，设置存储配额、传输配额以及希望 Configuration Manager 在达到这些配额的百分之几时生成警报。 然后选择“下一步”。  
 
 6. 完成向导。  
 
@@ -222,7 +225,7 @@ Configuration Manager 定期检查 Azure 服务。 如果服务未处于活动�
 
 ## <a name="bkmk_modify"></a>修改
 
-还可以在 Configuration Manager 控制台的“管理”工作区中的“云服务”下的“云分发点”节点中，查看有关分发点的高级信息。 选择分发点，然后单击“属性”以查看更多详细信息。  
+还可以在 Configuration Manager 控制台的“管理”工作区中的“云服务”下的“云分发点”节点中，查看有关分发点的高级信息。 选择分发点，然后选择“属性”以查看更多详细信息。  
 
 编辑云分发点的属性时，以下选项卡包括要编辑的设置：  
 
@@ -282,9 +285,9 @@ Configuration Manager 定期检查 Azure 服务。 如果服务未处于活动�
 
 1. 在 Configuration Manager 控制台中，转到“管理”工作区。 展开“云服务”，然后选择“云分发点”节点。  
 
-2. 选择云分发点。 要停止在 Azure 中运行的云服务，请单击功能区中的“停止服务”。  
+2. 选择云分发点。 要停止在 Azure 中运行的云服务，请选择功能区中的“停止服务”。  
 
-3. 单击“启动服务”以重启云分发点。  
+3. 选择“启动服务”以重启云分发点。  
 
 
 ### <a name="delete-a-cloud-distribution-point"></a>删除云分发点
