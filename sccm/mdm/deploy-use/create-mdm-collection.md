@@ -10,16 +10,16 @@ ms.assetid: d1b4337f-85e8-45e6-8bbe-9f18b49041c7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d271499baf48364fe24a8961cae767c46d05a332
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 8aba9fb658072ce4eaa2e4b2a364cf2b52f9c51b
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32346298"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53414644"
 ---
 # <a name="create-an-mdm-collection-with-system-center-configuration-manager-and-microsoft-intune"></a>使用 System Center Configuration Manager 和 Microsoft Intune 创建 MDM 集合
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*适用于：System Center Configuration Manager (Current Branch)*
 
 需要 Configuration Manager 用户集合以指定可以向管理中注册设备的用户。 由于 Intune 许可证由用户进行分配，所以只能使用用户集合（而非设备集合）。
 
@@ -31,4 +31,4 @@ ms.locfileid: "32346298"
 ![为 MDM 创建用户集合](../media/mdm-create-user-collection.png)
 
 > [!div class="button"]
-[下一步 >](confirm-dns.md)
+> [下一步 >](confirm-dns.md)

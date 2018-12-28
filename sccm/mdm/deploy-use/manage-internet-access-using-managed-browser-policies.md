@@ -10,16 +10,16 @@ ms.assetid: 8e25e00c-c9a8-473f-bcb7-ea989f6ca3c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9fe64aef541a4e6405b0fbf6308afc6269d88f56
-ms.sourcegitcommit: f03cb34693b9806e9fecd3c0162de70cc8cb4b1e
-ms.translationtype: HT
+ms.openlocfilehash: 2483a15286a2784f2fb8a4256029004374a313dc
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37886478"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419778"
 ---
 # <a name="manage-internet-access-using-managed-browser-policies-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 的托管浏览器策略管理 Internet 访问
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*适用于：System Center Configuration Manager (Current Branch)*
 
 在 System Center Configuration Manager 中，可以部署 Intune Managed Browser（这是一款 Web 浏览应用程序），还可将应用程序与托管浏览器策略关联。 托管浏览器策略可设置允许列表或阻止列表，用于限制托管浏览器用户可以访问的网站。  
 
@@ -86,52 +86,54 @@ ms.locfileid: "37886478"
 
 使用以下信息来了解有关指定允许和阻止列表中的 URL 时允许使用的格式和通配符。  
 
--   根据下面允许模式列表中的规则使用通配符 `*`（星号）。  
+- 根据下面允许模式列表中的规则使用通配符 `*`（星号）。  
 
--   在将 URL 输入列表时，请对所有 URL 添加 http 或 https 作为前缀。  
+- 在将 URL 输入列表时，请对所有 URL 添加 http 或 https 作为前缀。  
 
--   在地址中指定端口号。 如果未指定端口号，将使用以下值：  
+- 在地址中指定端口号。 如果未指定端口号，将使用以下值：  
 
-    -   对于 http，使用端口 80  
+  - 对于 http，使用端口 80  
 
-    -   对于 https，使用端口 443  
+  - 对于 https，使用端口 443  
 
-     不要为端口号使用通配符，因为这不受支持。 例如 `http://www.contoso.com:*`   
+    不要为端口号使用通配符，因为这不受支持。 例如， `http://www.contoso.com:*`   
 
--   使用下表了解指定 URL 时可以使用的允许模式：  
+- 使用下表了解指定 URL 时可以使用的允许模式：  
 
-    |URL|匹配|不匹配|  
-    |---------|-------------|--------------------|  
-    |`http://www.contoso.com`<br /><br /> 匹配单个页面|`www.contoso.com`|`host.contoso.com`<br /><br /> `www.contoso.com/images`<br /><br /> `contoso.com/`|  
-    |`http://contoso.com`<br /><br /> 匹配单个页面|`contoso.com`|`host.contoso.com`<br /><br /> `www.contoso.com/images`<br /><br /> `www.contoso.com`|  
-    |`http://www.contoso.com/*`<br /><br /> 匹配以 `www.contoso.com` 开头的所有 URL|`www.contoso.com`<br /><br /> `www.contoso.com/images`<br /><br /> `www.contoso.com/videos/tvshows`|`host.contoso.com`<br /><br /> `host.contoso.com/images`|  
-    |`http://*.contoso.com/*`<br /><br /> 匹配 contoso.com 下的所有子域|`developer.contoso.com/resources`<br /><br /> `news.contoso.com/images`<br /><br /> `news.contoso.com/videos`|`contoso.host.com`|  
-    |`http://www.contoso.com/images`<br /><br /> 匹配单个文件夹|`www.contoso.com/images`|`www.contoso.com/images/dogs`|  
-    |`http://www.contoso.com:80`<br /><br /> 匹配单个页面（使用端口号）|`http://www.contoso.com:80`||  
-    |`https://www.contoso.com`<br /><br /> 匹配单个安全页面|`https://www.contoso.com`|`http://www.contoso.com`|  
-    |`http://www.contoso.com/images/*`<br /><br /> 匹配单个文件夹和所有子文件夹|`www.contoso.com/images/dogs`<br /><br /> `www.contoso.com/images/cats`|`www.contoso.com/videos`|  
 
--   以下是一些你不能指定的输入的示例：  
+  |                                           URL                                            |                                                    匹配                                                    |                                    不匹配                                     |
+  |------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|
+  |                `http://www.contoso.com`<br /><br /> 匹配单个页面                |                                               `www.contoso.com`                                               |  `host.contoso.com`<br /><br /> `www.contoso.com/images`<br /><br /> `contoso.com/`   |
+  |                  `http://contoso.com`<br /><br /> 匹配单个页面                  |                                                 `contoso.com`                                                 | `host.contoso.com`<br /><br /> `www.contoso.com/images`<br /><br /> `www.contoso.com` |
+  | `http://www.contoso.com/*`<br /><br /> 匹配以 `www.contoso.com` 开头的所有 URL |      `www.contoso.com`<br /><br /> `www.contoso.com/images`<br /><br /> `www.contoso.com/videos/tvshows`      |               `host.contoso.com`<br /><br /> `host.contoso.com/images`                |
+  |      `http://*.contoso.com/*`<br /><br /> 匹配 contoso.com 下的所有子域      | `developer.contoso.com/resources`<br /><br /> `news.contoso.com/images`<br /><br /> `news.contoso.com/videos` |                                  `contoso.host.com`                                   |
+  |           `http://www.contoso.com/images`<br /><br /> 匹配单个文件夹            |                                           `www.contoso.com/images`                                            |                             `www.contoso.com/images/dogs`                             |
+  |    `http://www.contoso.com:80`<br /><br /> 匹配单个页面（使用端口号）    |                                          `http://www.contoso.com:80`                                          |                                                                                       |
+  |           `https://www.contoso.com`<br /><br /> 匹配单个安全页面            |                                           `https://www.contoso.com`                                           |                               `http://www.contoso.com`                                |
+  | `http://www.contoso.com/images/*`<br /><br /> 匹配单个文件夹和所有子文件夹 |                    `www.contoso.com/images/dogs`<br /><br /> `www.contoso.com/images/cats`                    |                               `www.contoso.com/videos`                                |
 
-    -   `*.com`  
 
-    -   `*.contoso/*`  
+- 以下是一些你不能指定的输入的示例：  
 
-    -   `www.contoso.com/*images`  
+  -   `*.com`  
 
-    -   `www.contoso.com/*images*pigs`  
+  -   `*.contoso/*`  
 
-    -   `www.contoso.com/page*`  
+  -   `www.contoso.com/*images`  
 
-    -   IP 地址  
+  -   `www.contoso.com/*images*pigs`  
 
-    -   `https://*`  
+  -   `www.contoso.com/page*`  
 
-    -   `http://*`  
+  -   IP 地址  
 
-    -   `http://www.contoso.com:*`  
+  -   `https://*`  
 
-    -   `http://www.contoso.com: /*`  
+  -   `http://*`  
+
+  -   `http://www.contoso.com:*`  
+
+  -   `http://www.contoso.com: /*`  
 
 > [!NOTE]  
 >  `*.microsoft.com` 始终允许。  

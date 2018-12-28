@@ -10,16 +10,16 @@ ms.assetid: f0a78038-ea22-4826-9c07-1771b7dd2e8d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e5d00b1efd02d3b096a0b64033b450f0da949eeb
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 19b55204566c49c95e76a3eff3f88206df553e13
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32349453"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416157"
 ---
 # <a name="apply-settings-to-ios-apps-with-app-configuration-policies-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中将设置应用于使用应用配置策略的 iOS 应用
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*适用于：System Center Configuration Manager (Current Branch)*
 
 
 可以使用 System Center Configuration Manager (Configuration Manager) 中的应用配置策略来分发用户运行应用时可能需要的设置。 例如，应用可能要求用户指定以下详细信息：
@@ -44,11 +44,11 @@ ms.locfileid: "32349453"
 1. 在 Configuration Manager 控制台中，选择“软件库” > “应用程序管理” > “应用配置策略”。
 2. 在“主页”选项卡的“应用配置策略”组中，选择“创建新的应用程序配置策略”。
 3. 在“创建应用配置策略”向导的“常规”页上，设置此策略信息：
-  - **名称**。 输入策略的唯一名称。
-  - **说明**。 （可选）为了便于轻松识别策略，可以添加说明。
-  - **分配类别以改进搜索和筛选**。 （可选）若要对策略创建和分配类别，选择“类别”。 类别可以方便用户在 Configuration Manager 控制台中对项目进行排序和查找。
+   - **名称**。 输入策略的唯一名称。
+   - **说明**。 （可选）为了便于轻松识别策略，可以添加说明。
+   - **分配类别以改进搜索和筛选**。 （可选）若要对策略创建和分配类别，选择“类别”。 类别可以方便用户在 Configuration Manager 控制台中对项目进行排序和查找。
 4. 在“iOS 策略”页上，选择设置配置策略信息的方式：
-  - **指定名称和值对**。 可以将此选项用于不使用嵌套的属性列表文件。
+   - **指定名称和值对**。 可以将此选项用于不使用嵌套的属性列表文件。
 
       指定名称和值对
         1. 若要添加新的值对，请选择“新建”。
@@ -57,13 +57,13 @@ ms.locfileid: "32349453"
             - **名称**。 输入要为其指定值的属性列表键的名称。
             - **值**。 输入将应用于所输入的键的值。
 
-  - **浏览到属性列表文件**。 如果已经有一个应用配置 XML 文件或使用嵌套的更复杂的文件，使用此选项。
+   - **浏览到属性列表文件**。 如果已经有一个应用配置 XML 文件或使用嵌套的更复杂的文件，使用此选项。
 
-    *浏览到属性列表文件*
+     *浏览到属性列表文件*
 
-      1.  在“应用配置策略”字段中，以正确的 XML 格式输入属性列表信息。
+     1. 在“应用配置策略”字段中，以正确的 XML 格式输入属性列表信息。
 
-      若要了解有关 XML 属性列表的详细信息，请参阅 iOS 开发人员库中的[了解 XML 属性列表](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/PropertyLists/UnderstandXMLPlist/UnderstandXMLPlist.html)。
+        若要了解有关 XML 属性列表的详细信息，请参阅 iOS 开发人员库中的[了解 XML 属性列表](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/PropertyLists/UnderstandXMLPlist/UnderstandXMLPlist.html)。
 
 根据你所配置的应用，XML 属性列表的格式可能有所不同。 如需了解要使用格式的详细信息，请联系应用供应商。
 Intune 支持属性列表中的以下数据类型：

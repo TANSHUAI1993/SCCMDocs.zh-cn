@@ -10,16 +10,16 @@ ms.assetid: c0593c07-5dd7-4d23-a0d8-d30165f49ef7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7471b408fbc8ce55e443873e4662c2ed87410c3a
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 052da22cd38f5dfca2fb1058f5a92e0dd025da71
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350259"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421716"
 ---
 # <a name="windows-hello-for-business-settings-in-system-center-configuration-manager-hybrid"></a>System Center Configuration Manager 中的 Windows Hello 企业版设置（混合）
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*适用于：System Center Configuration Manager (Current Branch)*
 
 通过 System Center Configuration Manager，可与 Windows Hello 企业版（以前为 Microsoft Passport for Windows）集成，其为 Windows 10 设备的替代登录方法。 Hello 企业版使用 Active Directory 或 Azure Active Directory 帐户来替代密码、智能卡或虚拟智能卡。  
 
@@ -37,65 +37,65 @@ ms.locfileid: "32350259"
 
 ## <a name="configure-windows-hello-for-business-settings-hybrid"></a>配置 Windows Hello 企业版设置（混合）  
 
-1.  在 Configuration Manager 控制台中，单击“管理” > “云服务” > “Microsoft Intune 订阅”。  
+1. 在 Configuration Manager 控制台中，单击“管理” > “云服务” > “Microsoft Intune 订阅”。  
 
-3.  从列表中选择你的 Microsoft Intune 订阅，然后在“主页”选项卡的“订阅”组中，单击“配置平台” > “Windows (MDM)”。  
+2. 从列表中选择你的 Microsoft Intune 订阅，然后在“主页”选项卡的“订阅”组中，单击“配置平台” > “Windows (MDM)”。  
 
-4.  在“Microsoft Intune 订阅属性”对话框的“Windows Hello 企业版”选项卡上，从以下值中选择将影响所有已注册的 Windows 10 和 Windows 10 移动版设备的项：  
+3. 在“Microsoft Intune 订阅属性”对话框的“Windows Hello 企业版”选项卡上，从以下值中选择将影响所有已注册的 Windows 10 和 Windows 10 移动版设备的项：  
 
-    -   **禁用已注册设备上的 Windows Hello 企业版**或**启用已注册设备上的 Windows Hello 企业版** - 启用或禁用所有已注册的 Windows 10 和 Windows 10 移动版设备上的 Windows Hello 企业版。  
+   - **禁用已注册设备上的 Windows Hello 企业版**或**启用已注册设备上的 Windows Hello 企业版** - 启用或禁用所有已注册的 Windows 10 和 Windows 10 移动版设备上的 Windows Hello 企业版。  
 
-    -   **使用受信任的平台模块 (TPM)** - 受信任的平台模块 (TPM) 芯片提供了一层额外的数据安全保障。 选择下列值之一：  
+   - **使用受信任的平台模块 (TPM)** - 受信任的平台模块 (TPM) 芯片提供了一层额外的数据安全保障。 选择下列值之一：  
 
-        -   **必须** （默认）- 仅具有可访问 TPM 的设备可预配 Windows Hello 企业版。  
+     -   **必须** （默认）- 仅具有可访问 TPM 的设备可预配 Windows Hello 企业版。  
 
-        -   **首选** - 首次尝试使用 TPM 的设备。 如果这不可用，他们可以使用软件加密  
+     -   **首选** - 首次尝试使用 TPM 的设备。 如果这不可用，他们可以使用软件加密  
 
-    -   **要求的最小 PIN 长度** - 指定 Windows Hello 企业版 PIN 所需的最小字符数。 必须使用至少 4 个字符（默认值为 6 个字符）。  
+   - **要求的最小 PIN 长度** - 指定 Windows Hello 企业版 PIN 所需的最小字符数。 必须使用至少 4 个字符（默认值为 6 个字符）。  
 
-    -   **要求的最大 PIN 长度** - 指定 Windows Hello 企业版 PIN 允许的最大字符数。 最多可以使用 127 个字符。  
+   - **要求的最大 PIN 长度** - 指定 Windows Hello 企业版 PIN 允许的最大字符数。 最多可以使用 127 个字符。  
 
-    -   **要求在 PIN 中使用小写字母** - 指定是否必须在 Windows Hello 企业版 PIN 中使用小写字母。 选择：  
+   - **要求在 PIN 中使用小写字母** - 指定是否必须在 Windows Hello 企业版 PIN 中使用小写字母。 选择：  
 
-        -   **允许** - 用户可以在其 PIN 中使用小写字母。  
+     -   **允许** - 用户可以在其 PIN 中使用小写字母。  
 
-        -   **必须** - 用户必须在其 PIN 中包含至少一个小写字母。  
+     -   **必须** - 用户必须在其 PIN 中包含至少一个小写字母。  
 
-        -   **不允许** （默认）- 用户不得在其 PIN 中使用小写字母。  
+     -   **不允许** （默认）- 用户不得在其 PIN 中使用小写字母。  
 
-    -   **要求在 PIN 中使用大写字母** - 指定是否必须在 Windows Hello 企业版 PIN 中使用大写字母。 选择：  
+   - **要求在 PIN 中使用大写字母** - 指定是否必须在 Windows Hello 企业版 PIN 中使用大写字母。 选择：  
 
-        -   **允许** - 用户可以在其 PIN 中使用大写字母。  
+     -   **允许** - 用户可以在其 PIN 中使用大写字母。  
 
-        -   **必须** - 用户必须在其 PIN 中包含至少一个大写字母。  
+     -   **必须** - 用户必须在其 PIN 中包含至少一个大写字母。  
 
-        -   **不允许** （默认）- 用户不得在其 PIN 中使用大写字母。  
+     -   **不允许** （默认）- 用户不得在其 PIN 中使用大写字母。  
 
-    -   **要求含有特殊字符** - 指定 PIN 中使用特殊字符。 选择：  
+   - **要求含有特殊字符** - 指定 PIN 中使用特殊字符。 选择：  
 
-        -   **允许** - 用户可以在其 PIN 中使用特殊字符。  
+     - **允许** - 用户可以在其 PIN 中使用特殊字符。  
 
-        -   **必须** - 用户必须在其 PIN 中包含至少一个特殊字符。  
+     - **必须** - 用户必须在其 PIN 中包含至少一个特殊字符。  
 
-        -   **不允许** （默认）- 用户必须在其 PIN 中使用特殊字符（这也是不配置此设置时的行为）。  
+     - **不允许** （默认）- 用户必须在其 PIN 中使用特殊字符（这也是不配置此设置时的行为）。  
 
-         特殊字符包括：**! " # $ % & ' ( ) \* + , - . / : ; < = > ? @ [ \ ] ^ _ ` { &#124; } ~**。  
+       特殊字符包括：**! " # $ % & ' ( ) \* + , - . / : ; < = > ? @ [ \ ] ^ _ ` { &#124; } ~**。  
 
-    -   **需要 PIN 有效期（天）** - 指定必须更改设备 PIN 前的天数。 默认值为 41 天。  
+   - **需要 PIN 有效期（天）** - 指定必须更改设备 PIN 前的天数。 默认值为 41 天。  
 
-    -   **防止重用以前的 PIN** - 使用此设置来限制重用以前使用过的 PIN。 默认设置为不能重用最近使用的 5 个 PIN。  
+   - **防止重用以前的 PIN** - 使用此设置来限制重用以前使用过的 PIN。 默认设置为不能重用最近使用的 5 个 PIN。  
 
-    -   **启用生物识别手势** - 启用如面部识别或指纹等生物识别身份验证作为 Windows Hello 企业版的 PIN 的替代方法。 如果生物识别身份验证失败，则用户仍必须配置工作 PIN。  
+   - **启用生物识别手势** - 启用如面部识别或指纹等生物识别身份验证作为 Windows Hello 企业版的 PIN 的替代方法。 如果生物识别身份验证失败，则用户仍必须配置工作 PIN。  
 
-         如果设置为“启用”，Windows Hello 企业版则允许生物识别身份验证。  如果设置为“禁用”，Windows Hello 企业版将阻止生物识别身份验证（对于所有帐户类型）。  
+      如果设置为“启用”，Windows Hello 企业版则允许生物识别身份验证。  如果设置为“禁用”，Windows Hello 企业版将阻止生物识别身份验证（对于所有帐户类型）。  
 
-    -   **在可用时，使用增强型反欺骗程序** - 配置是否在支持增强型反欺骗程序的设备上使用该程序。  
+   - **在可用时，使用增强型反欺骗程序** - 配置是否在支持增强型反欺骗程序的设备上使用该程序。  
 
-         如果设置为“已启用” ，则 Windows 将在支持反电子欺骗技术时要求所有用户对面部识别功能使用此技术。  
+      如果设置为“已启用” ，则 Windows 将在支持反电子欺骗技术时要求所有用户对面部识别功能使用此技术。  
 
-    -   **使用远程 Passport** - 如果此选项设置为“启用”，则用户可以使用远程 Hello 企业版充当台式计算机身份验证的便携伴侣设备。 台式计算机必须加入 Azure Active Directory，并且伴侣设备必须配置 Windows Hello 企业版 PIN。  
+   - **使用远程 Passport** - 如果此选项设置为“启用”，则用户可以使用远程 Hello 企业版充当台式计算机身份验证的便携伴侣设备。 台式计算机必须加入 Azure Active Directory，并且伴侣设备必须配置 Windows Hello 企业版 PIN。  
 
-5.  完成后单击“确定” 。  
+4. 完成后单击“确定” 。  
 
 ### <a name="see-also"></a>另请参阅  
  [使用 System Center Configuration Manager 保护数据和站点基础架构](../../protect/understand/protect-data-and-site-infrastructure.md)

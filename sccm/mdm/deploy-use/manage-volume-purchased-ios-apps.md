@@ -10,16 +10,16 @@ ms.assetid: 7c3b9316-247b-490b-a363-8f8553821579
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f94cc80d41eb346cb1d4c2fc314d310005c7b5f2
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 86d79a193f09014206b72efcf745212712a3352e
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350181"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417235"
 ---
 # <a name="manage-volume-purchased-ios-apps-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 管理批量购买的 iOS 应用
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*适用于：System Center Configuration Manager (Current Branch)*
 
 
 
@@ -99,19 +99,19 @@ ms.locfileid: "32350181"
 
 ## <a name="step-2---deploy-a-volume-purchased-app"></a>步骤 2 - 部署批量采购的应用  
 
-1.  在 Configuration Manager 控制台中，选择“软件库” > “应用程序管理” > “应用商店应用的许可证信息”。  
+1. 在 Configuration Manager 控制台中，选择“软件库” > “应用程序管理” > “应用商店应用的许可证信息”。  
 
-3.  选择要部署的应用，然后在“主页”选项卡的“创建”组中，选择“创建应用程序”。
-所创建的 Configuration Manager 应用程序包含适用于企业的 Microsoft Store 应用。 然后，可以像对任何其他 Configuration Manager 应用程序一样部署并监视此应用程序。  
+2. 选择要部署的应用，然后在“主页”选项卡的“创建”组中，选择“创建应用程序”。
+   所创建的 Configuration Manager 应用程序包含适用于企业的 Microsoft Store 应用。 然后，可以像对任何其他 Configuration Manager 应用程序一样部署并监视此应用程序。  
 
-    > [!IMPORTANT]  
-    > 必须选择部署目的为“必需”。 当前不支持可用的安装。
+   > [!IMPORTANT]  
+   > 必须选择部署目的为“必需”。 当前不支持可用的安装。
 
- 部署应用时，每个用户使用一个许可证，或对于设备安装，安装该应用的每个设备使用一个许可证。 如果你面向的设备集合包含支持设备授权的应用，则声明设备许可证。 如果定目标到的设备集合包含不支持设备授权的应用，声明的是用户许可证。 
+   部署应用时，每个用户使用一个许可证，或对于设备安装，安装该应用的每个设备使用一个许可证。 如果你面向的设备集合包含支持设备授权的应用，则声明设备许可证。 如果定目标到的设备集合包含不支持设备授权的应用，声明的是用户许可证。 
 
- 从**应用商店的许可证信息**节点创建应用时，该应用将与你所选的应用的令牌的许可证相关联。 例如，可能在节点中看到同一个应用的两个版本。 出现此行为是因为，应用的每个版本都与不同的 Apple VPP 令牌相关联。 然后，可以通过各个令牌创建应用，并单独进行部署。
+   从**应用商店的许可证信息**节点创建应用时，该应用将与你所选的应用的令牌的许可证相关联。 例如，可能在节点中看到同一个应用的两个版本。 出现此行为是因为，应用的每个版本都与不同的 Apple VPP 令牌相关联。 然后，可以通过各个令牌创建应用，并单独进行部署。
 
- 若要回收许可证，必须新建应用部署，并且将部署操作设置为“卸载”。 无法更改原始部署中的部署操作。 应用卸载后，就会回收许可证。  
+   若要回收许可证，必须新建应用部署，并且将部署操作设置为“卸载”。 无法更改原始部署中的部署操作。 应用卸载后，就会回收许可证。  
 
 
 

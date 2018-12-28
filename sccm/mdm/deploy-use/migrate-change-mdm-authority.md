@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: be503ec9-5324-4f7c-bcf5-77204328e99c
-ms.openlocfilehash: d5efcb78ad5e732691cc2f214f81db0b357e0e19
-ms.sourcegitcommit: 316899b08f2ef372993909e08e069f7edfed1d33
-ms.translationtype: HT
+ms.openlocfilehash: 4ded99c2084f274d519680e78fdc54825b3857cb
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44111104"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419506"
 ---
 # <a name="change-your-mdm-authority-to-intune-standalone"></a>将 MDM 机构更改为 Intune 独立版
 
-*适用范围：System Center Configuration Manager (Current Branch)*    
+*适用于：System Center Configuration Manager (Current Branch)*    
 
 可以将从 Configuration Manager 控制台（混合 MDM）配置的现有 Microsoft Intune 租户更改为 Intune 独立版。 将租户级 MDM 机构更改为 Intune 是在仅限云的配置中[将混合 MDM 用户和设备迁移到 Intune 独立版](migrate-hybridmdm-to-intunesa.md)的过程中的最后一步。    
 
@@ -48,20 +48,20 @@ ms.locfileid: "44111104"
 ## <a name="change-the-mdm-authority-to-intune"></a>将 MDM 机构更改为 Intune
 使用下面的过程将租户级 MDM 机构更改为 Intune。
 
-1.  在 Configuration Manager 控制台中，转到“管理”&gt;“概述”&gt;“云服务”&gt;“Microsoft Intune订阅”，然后删除现有的 Intune 订阅。
-2.  选择“将 MDM 机构更改为 Microsoft Intune”，然后单击“下一步”。
+1. 在 Configuration Manager 控制台中，转到“管理”&gt;“概述”&gt;“云服务”&gt;“Microsoft Intune订阅”，然后删除现有的 Intune 订阅。
+2. 选择“将 MDM 机构更改为 Microsoft Intune”，然后单击“下一步”。
 
-    ![删除 Microsoft Intune 订阅对话框](media/mdm-change-delete-subscription.png)
-3.  登录到在 Configuration Manager 中设置 MDM 机构时最初使用的 Intune 租户。
-4.  单击“下一步”并完成向导。
-5.  MDM 机构现已重置。 Intune 订阅在 Configuration Manager 控制台的 Microsoft Intune 订阅节点中不再显示。
-6.  登录到 [Intune 门户](https://aka.ms/IntunePortal)。
-7.  在 Microsoft Intune 边栏选项卡中单击“设备注册”。
-8.  “设备注册概述”边栏选项卡中会显示“MDM 机构”属性。
+   ![删除 Microsoft Intune 订阅对话框](media/mdm-change-delete-subscription.png)
+3. 登录到在 Configuration Manager 中设置 MDM 机构时最初使用的 Intune 租户。
+4. 单击“下一步”并完成向导。
+5. MDM 机构现已重置。 Intune 订阅在 Configuration Manager 控制台的 Microsoft Intune 订阅节点中不再显示。
+6. 登录到 [Intune 门户](https://aka.ms/IntunePortal)。
+7. 在 Microsoft Intune 边栏选项卡中单击“设备注册”。
+8. “设备注册概述”边栏选项卡中会显示“MDM 机构”属性。
 
-  > [!Important]    
-  > 请勿使用 Intune 经典控制台。 必须登录到 Azure 门户中的 Intune。
-7.  确认 MDM 机构已被更改为 **Microsoft Intune**。 
+   > [!Important]    
+   > 请勿使用 Intune 经典控制台。 必须登录到 Azure 门户中的 Intune。
+9. 确认 MDM 机构已被更改为 **Microsoft Intune**。 
 
 ## <a name="next-steps"></a>后续步骤
 更改 MDM 机构完成后，请复查以下信息：

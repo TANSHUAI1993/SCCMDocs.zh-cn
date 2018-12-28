@@ -10,16 +10,16 @@ ms.assetid: 02979fb8-ea7e-4ec6-b7e0-ecbfda73e52d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 10cddac80b9a7ea4bd912e2f52585cdcef7e70da
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 35170f4584f9c327c542ac35d2f63803163330ba
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32351235"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422277"
 ---
 # <a name="plan-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中规划本地移动设备管理
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*适用于：System Center Configuration Manager (Current Branch)*
 
 在准备 Configuration Manager 基础结构以处理本地移动设备管理之前，请考虑以下要求。
 
@@ -52,54 +52,54 @@ ms.locfileid: "32351235"
 ##  <a name="bkmk_roles"></a>所需站点系统角色  
  本地移动设备管理需要至少一个以下站点系统角色：  
 
--   **注册代理点** ，用于支持注册请求。  
+- **注册代理点** ，用于支持注册请求。  
 
--   **注册点** ，用于支持设备注册。  
+- **注册点** ，用于支持设备注册。  
 
--   **设备管理点** ，用于策略传递。 此站点系统角色是管理点角色的变体，后者已配置为允许移动设备管理。  
+- **设备管理点** ，用于策略传递。 此站点系统角色是管理点角色的变体，后者已配置为允许移动设备管理。  
 
--   **分发点** ，用于内容传递。  
+- **分发点** ，用于内容传递。  
 
--   **服务连接点**，用于连接到 Intune 以通知位于防火墙外的设备。  
+- **服务连接点**，用于连接到 Intune 以通知位于防火墙外的设备。  
 
- 这些站点系统角色可以安装在单个站点系统服务器上，或者根据组织的需要分别运行在不同的服务器上。 用于本地移动设备管理的每个站点系统服务器都必须配置为 HTTPS 终结点，以便与受信任的设备通信。 有关详细信息，请参阅 [所需受信任的通信](#bkmk_trustedComs)。  
+  这些站点系统角色可以安装在单个站点系统服务器上，或者根据组织的需要分别运行在不同的服务器上。 用于本地移动设备管理的每个站点系统服务器都必须配置为 HTTPS 终结点，以便与受信任的设备通信。 有关详细信息，请参阅 [所需受信任的通信](#bkmk_trustedComs)。  
 
- 有关规划站点系统角色的详细信息，请参阅 [为 System Center Configuration Manager 规划站点系统服务器和站点系统角色](../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md)。  
+  有关规划站点系统角色的详细信息，请参阅 [为 System Center Configuration Manager 规划站点系统服务器和站点系统角色](../../core/plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md)。  
 
- 有关如何添加所需站点系统角色的详细信息，请参阅 [在 System Center Configuration Manager 中为本地移动设备管理安装站点系统角色](../../mdm/get-started/install-site-system-roles-for-on-premises-mdm.md)。  
+  有关如何添加所需站点系统角色的详细信息，请参阅 [在 System Center Configuration Manager 中为本地移动设备管理安装站点系统角色](../../mdm/get-started/install-site-system-roles-for-on-premises-mdm.md)。  
 
 ##  <a name="bkmk_trustedComs"></a>所需受信任的通信  
  本地移动设备管理要求启用站点系统角色以进行 HTTPS 通信。 根据需要，你可以使用企业的证书颁发机构 (CA) 在服务器和设备之间建立受信任的连接，或者使用公开发布的 CA 作为受信任的颁发机构。  无论哪种方式，你都需要在托管所需站点系统角色的站点系统服务器上用 IIS 配置 Web 服务器证书，并且需要在要连接到那些服务器的设备上安装该 CA 的根证书。  
 
  如果你使用企业的 CA 建立受信任的通信，则需要执行下列任务：  
 
--   在 CA 上创建和颁发 Web 服务器证书模板。  
+- 在 CA 上创建和颁发 Web 服务器证书模板。  
 
--   为托管所需站点系统角色的每个站点系统服务器请求一个 Web 服务器证书。  
+- 为托管所需站点系统角色的每个站点系统服务器请求一个 Web 服务器证书。  
 
--   在站点系统服务器上配置 IIS 以使用所需的 Web 服务器证书。  
+- 在站点系统服务器上配置 IIS 以使用所需的 Web 服务器证书。  
 
- 对于已加入企业 Active Directory 域的设备，企业 CA 的根证书在受信任连接的设备上已经可用。 这意味着使用站点系统服务器的 HTTPS 连接将自动信任已加入域的设备（如台式计算机）。 但是，未加入域的设备（通常为移动设备）将不安装所需根证书。 将需要在这些设备上手动安装根证书，才能与支持本地移动设备管理的站点系统服务器成功通信。  
+  对于已加入企业 Active Directory 域的设备，企业 CA 的根证书在受信任连接的设备上已经可用。 这意味着使用站点系统服务器的 HTTPS 连接将自动信任已加入域的设备（如台式计算机）。 但是，未加入域的设备（通常为移动设备）将不安装所需根证书。 将需要在这些设备上手动安装根证书，才能与支持本地移动设备管理的站点系统服务器成功通信。  
 
- 你必须导出所颁发 CA 的根证书供各设备使用。 要获取根证书文件，你可以使用 CA 导出它，或者采用更简单的方法，即使用由 CA 颁发的 Web 服务器证书提取根目录并创建根证书文件。   然后，必须将根证书传递到设备。  传递方法示例包括  
+  你必须导出所颁发 CA 的根证书供各设备使用。 要获取根证书文件，你可以使用 CA 导出它，或者采用更简单的方法，即使用由 CA 颁发的 Web 服务器证书提取根目录并创建根证书文件。   然后，必须将根证书传递到设备。  传递方法示例包括  
 
--   文件系统  
+- 文件系统  
 
--   电子邮件附件  
+- 电子邮件附件  
 
--   内存卡  
+- 内存卡  
 
--   受限设备  
+- 受限设备  
 
--   云存储（例如 OneDrive）  
+- 云存储（例如 OneDrive）  
 
--   近场通信 (NFC) 连接  
+- 近场通信 (NFC) 连接  
 
--   条形码扫描程序  
+- 条形码扫描程序  
 
--   现成体验 (OOBE) 预配包  
+- 现成体验 (OOBE) 预配包  
 
- 有关详细信息，请参阅 [为 System Center Configuration Manager 中的本地移动设备管理设置受信任通信的证书](../../mdm/get-started/set-up-certificates-on-premises-mdm.md)。  
+  有关详细信息，请参阅 [为 System Center Configuration Manager 中的本地移动设备管理设置受信任通信的证书](../../mdm/get-started/set-up-certificates-on-premises-mdm.md)。  
 
 ##  <a name="bkmk_enrollment"></a>注册注意事项  
  若要为本地移动设备管理启用设备注册，必须向用户授予注册权限，且其设备必须能够与承载所需站点系统角色的站点系统服务器实现受信任的通信。  

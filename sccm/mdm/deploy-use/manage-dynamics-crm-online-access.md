@@ -10,16 +10,16 @@ ms.assetid: 2bfc4c51-b25c-4c70-b81e-8a3b6ddf02c8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d77dbcf0b8b7853153a0b2ead4b2db3affd03733
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 5e2c8ab4f8dc0b544a79b2113c278f97444357bf
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32352770"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420951"
 ---
 # <a name="manage-dynamics-crm-online-access-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中管理 Dynamics CRM Online 访问
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*适用于：System Center Configuration Manager (Current Branch)*
 
 可使用 Microsoft Intune 条件访问从 iOS 和 Android 设备控制对 Microsoft Dynamics CRM Online 的访问。  Intune 条件访问有两个组件：
 * [设备合规性策略](../../protect/deploy-use/device-compliance-policies.md)，设备必须符合该策略才会被视为合规。
@@ -44,7 +44,7 @@ ms.locfileid: "32352770"
 * 如果设备不合规，则会显示一条消息，将用户定向到 Microsoft Intune 公司门户网站或公司门户应用，用户可在其中找到有关该问题及其修正方式的信息。
 
 ## <a name="configure-conditional-access-for-dynamics-crm-online"></a>为 Dynamics CRM Online 配置条件访问  
-### <a name="step-1-configure-active-directory-security-groups"></a>步骤 1：配置 Active Directory 安全组
+### <a name="step-1-configure-active-directory-security-groups"></a>步骤 1:配置 Active Directory 安全组
 
 在开始之前，针对条件访问策略配置 Azure Active Directory 安全组。 可在 **Office 365 管理中心**中配置这些组。 这些组用于从策略中确定目标用户或免除用户。 如果将某个用户设定为策略的目标，则其使用的每个设备必须合规才能访问资源。
 
@@ -54,7 +54,7 @@ ms.locfileid: "32352770"
 
 如果用户位于两个组中，则会将其从策略中免除。
 
-### <a name="step-2-configure-and-deploy-a-compliance-policy"></a>步骤 2：配置和部署合规性策略
+### <a name="step-2-configure-and-deploy-a-compliance-policy"></a>步骤 2:配置和部署合规性策略
 对所有会受此策略影响的设备[创建和部署](../../protect/deploy-use/device-compliance-policies.md)合规性策略。 这些设备将是目标组中的用户使用的所有设备。
 
 > [!NOTE]
@@ -64,20 +64,20 @@ ms.locfileid: "32352770"
 > 如果尚未部署合规性策略，则设备将被视为符合。
 
 准备就绪后，继续执行步骤 3。
-### <a name="step-3-configure-the-dynamics-crm-policy"></a>步骤 3：配置 Dynamics CRM 策略
+### <a name="step-3-configure-the-dynamics-crm-policy"></a>步骤 3:配置 Dynamics CRM 策略
 接下来，配置策略，要求仅托管和合规设备可访问 Dynamics CRM。 此策略会存储在 Azure Active Directory 中。
 
-1.  在 Microsoft Intune 管理控制台中，选择“策略”>“条件访问”>“Dynamics CRM Online 策略”。
+1. 在 Microsoft Intune 管理控制台中，选择“策略”>“条件访问”>“Dynamics CRM Online 策略”。
 
-     ![Dynamics CRM Online 条件性访问策略页的屏幕快照](media/mdm-ca-dynamics-crm-policy-configuration.png)
+    ![Dynamics CRM Online 条件性访问策略页的屏幕快照](media/mdm-ca-dynamics-crm-policy-configuration.png)
 
-2.  选择“启用条件访问”策略。
-3.  在“应用程序访问”下，可以选择将条件访问策略应用到：
-  * **iOS**
-  * **Outlook Web Access (OWA)**
-4.  在“目标组”下，选择“修改”，选择将应用策略的 Azure Active Directory 安全组。 你可以选择将其应用于所有用户或仅针对特定用户组。
-5.  在“免除组”下，可以选择“修改”，选择从此策略中免除的 Azure Active Directory 安全组。
-6.  完成后，选择“保存”。
+2. 选择“启用条件访问”策略。
+3. 在“应用程序访问”下，可以选择将条件访问策略应用到：
+   * **iOS**
+   * **Outlook Web Access (OWA)**
+4. 在“目标组”下，选择“修改”，选择将应用策略的 Azure Active Directory 安全组。 你可以选择将其应用于所有用户或仅针对特定用户组。
+5. 在“免除组”下，可以选择“修改”，选择从此策略中免除的 Azure Active Directory 安全组。
+6. 完成后，选择“保存”。
 
 现已为 Dynamics CRM 配置了条件访问。 不需要部署条件访问策略，它将立即生效。
 ##  <a name="monitor-the-compliance-and-conditional-access-policies"></a>监视遵从性和条件性访问策略

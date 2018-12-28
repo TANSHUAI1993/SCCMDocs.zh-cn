@@ -10,16 +10,16 @@ ms.assetid: 120442be-179e-450c-a0c4-284046895da3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5ee29053f69eaf624079f42a33efa5cdba9d1de9
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: decd16a03a0381718ada3e4c977d10c159c6be25
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32352594"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417058"
 ---
 # <a name="exchange-activesync-email-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的 Exchange ActiveSync 电子邮件配置文件
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*适用于：System Center Configuration Manager (Current Branch)*
 
 通过使用 Microsoft Intune 和 Exchange ActiveSync，可以使用电子邮件配置文件和限制设置设备。 这使用户只需进行最少的设置便可访问其设备上的企业电子邮件。  
 
@@ -45,71 +45,71 @@ ms.locfileid: "32352594"
 
 若要创建配置文件，请使用“创建 Exchange ActiveSync 电子邮件配置文件向导”。 
 
-1.  在 Configuration Manager 控制台中，选择“资产和符合性”。  
+1. 在 Configuration Manager 控制台中，选择“资产和符合性”。  
 
-2.  在“资产和符合性”工作区中，展开“符合性设置”，展开“公司资源访问”，然后选择“电子邮件配置文件”。  
+2. 在“资产和符合性”工作区中，展开“符合性设置”，展开“公司资源访问”，然后选择“电子邮件配置文件”。  
 
-3.  在“主页”选项卡上的“创建”组中，选择“创建 Exchange ActiveSync 电子邮件配置文件”以启动向导。
+3. 在“主页”选项卡上的“创建”组中，选择“创建 Exchange ActiveSync 电子邮件配置文件”以启动向导。
 
-4.  在向导的“常规”页上，配置下列信息：
+4. 在向导的“常规”页上，配置下列信息：
 
-    - **名称**。 提供电子邮件配置文件的描述性名称。
+   - **名称**。 提供电子邮件配置文件的描述性名称。
 
-    - **说明**。 （可选）提供电子邮件配置文件的说明，帮助你在 Configuration Manager 控制台中识别它。
+   - **说明**。 （可选）提供电子邮件配置文件的说明，帮助你在 Configuration Manager 控制台中识别它。
 
-    - **此电子邮件配置文件适用于 Android for Work**。 如果要将此电子邮件配置文件仅部署到 Android for Work 设备，则选择此选项。 如果选中此框，则不显示“支持的平台”向导页。 仅配置 Android for Work 电子邮件配置文件。
+   - **此电子邮件配置文件适用于 Android for Work**。 如果要将此电子邮件配置文件仅部署到 Android for Work 设备，则选择此选项。 如果选中此框，则不显示“支持的平台”向导页。 仅配置 Android for Work 电子邮件配置文件。
 
-4.  在向导的“Exchange ActiveSync”页上，指定下列信息：  
+5. 在向导的“Exchange ActiveSync”页上，指定下列信息：  
 
-    -   **Exchange ActiveSync 主机**。 指定托管 Exchange ActiveSync 服务的公司 Exchange Server 的主机名。  
+   - **Exchange ActiveSync 主机**。 指定托管 Exchange ActiveSync 服务的公司 Exchange Server 的主机名。  
 
-    -   **帐户名称**。 指定电子邮件帐户的显示名称与用户设备上显示的一样。  
+   - **帐户名称**。 指定电子邮件帐户的显示名称与用户设备上显示的一样。  
 
-    -   **帐户用户名**。 选择电子邮件帐户用户名在客户端设备上的配置方式。 你可以从下拉列表中选择下列选项之一：  
+   - **帐户用户名**。 选择电子邮件帐户用户名在客户端设备上的配置方式。 你可以从下拉列表中选择下列选项之一：  
 
-        -   **用户主体名称**。 使用完整的用户主体名称登录到 Exchange。  
+     -   **用户主体名称**。 使用完整的用户主体名称登录到 Exchange。  
 
-        -   **AccountName**。 使用来自 Active Directory 的完整用户帐户名称。
+     -   **AccountName**。 使用来自 Active Directory 的完整用户帐户名称。
 
-        -   **主 SMTP 地址**。 使用用户的主 SMTP 地址登录到 Exchange。  
+     -   **主 SMTP 地址**。 使用用户的主 SMTP 地址登录到 Exchange。  
 
-    -   **电子邮件地址**。 选择每个客户端设备上的用户的电子邮件地址的生成方式。 你可以从下拉列表中选择下列选项之一：  
+   - **电子邮件地址**。 选择每个客户端设备上的用户的电子邮件地址的生成方式。 你可以从下拉列表中选择下列选项之一：  
 
-        -   **主 SMTP 地址**。 使用用户的主 SMTP 地址登录到 Exchange。  
+     -   **主 SMTP 地址**。 使用用户的主 SMTP 地址登录到 Exchange。  
 
-        -   **用户主体名称**。 使用完整的用户主体名称作为电子邮件地址。  
+     -   **用户主体名称**。 使用完整的用户主体名称作为电子邮件地址。  
 
-    -   **帐户域**。 选择下列选项之一：  
+   - **帐户域**。 选择下列选项之一：  
 
-        -   **从 Active Directory 获得**  
+     - **从 Active Directory 获得**  
 
-        -   **自定义**  
+     - **自定义**  
 
-         仅当“sAMAccountName”在“帐户用户名”下拉列表中选中时，此字段适用。  
+       仅当“sAMAccountName”在“帐户用户名”下拉列表中选中时，此字段适用。  
 
-    -   **身份验证方法**。 选择将用于对 Exchange ActiveSync 进行身份验证的以下身份验证方法之一：  
+   - **身份验证方法**。 选择将用于对 Exchange ActiveSync 进行身份验证的以下身份验证方法之一：  
 
-        -   **证书**。 身份证书将用于 Exchange ActiveSync 连接的身份验证。  
+     -   **证书**。 身份证书将用于 Exchange ActiveSync 连接的身份验证。  
 
-        -   **用户名和密码**。 设备用户必须提供密码才能连接到 Exchange ActiveSync。 （用户名将被配置为电子邮件配置文件的一部分）  
+     -   **用户名和密码**。 设备用户必须提供密码才能连接到 Exchange ActiveSync。 （用户名将被配置为电子邮件配置文件的一部分）  
 
-    -   **身份证书**。 选择“选择”，然后选择用于标识的证书。  
+   - **身份证书**。 选择“选择”，然后选择用于标识的证书。  
 
-         标识证书必须是 SCEP 证书；不能使用 PFX 证书。  若要了解详细信息，请参阅[System Center Configuration Manager 中的证书配置文件](/sccm/protect/deploy-use/introduction-to-certificate-profiles)。  
+      标识证书必须是 SCEP 证书；不能使用 PFX 证书。  若要了解详细信息，请参阅[System Center Configuration Manager 中的证书配置文件](/sccm/protect/deploy-use/introduction-to-certificate-profiles)。  
 
-         此选项只有在选择了“身份验证方法”下的“证书”才可用。  
+      此选项只有在选择了“身份验证方法”下的“证书”才可用。  
 
-    -   **使用 S/MIME**。 发送使用 S/MIME 加密的传出电子邮件。 此选项仅适用于 iOS 设备。 选择从以下选项：
+   - **使用 S/MIME**。 发送使用 S/MIME 加密的传出电子邮件。 此选项仅适用于 iOS 设备。 选择从以下选项：
 
-        -   签名证书。  选取“选择”，然后选取用于加密的证书配置文件。  
+     - 签名证书。  选取“选择”，然后选取用于加密的证书配置文件。  
 
-            配置文件可以是 SCEP 或 PFX 证书。  但是，如果同时使用签名和加密，则必须为签名和加密选择 PFX 证书配置文件。
+       配置文件可以是 SCEP 或 PFX 证书。  但是，如果同时使用签名和加密，则必须为签名和加密选择 PFX 证书配置文件。
 
-        -   **加密证书**。 选择“选择”，然后选择用于加密的证书。 只能选择 PFX 证书用作加密证书。
+     - **加密证书**。 选择“选择”，然后选择用于加密的证书。 只能选择 PFX 证书用作加密证书。
 
-        -   要在 iOS 设备上加密所有邮件，请启用“需要加密”复选框。    
+     - 要在 iOS 设备上加密所有邮件，请启用“需要加密”复选框。    
 
-         必须先创建证书配置文件，然后才能在此处进行选择。  若要了解详细信息，请参阅[System Center Configuration Manager 中的证书配置文件](/sccm/protect/deploy-use/introduction-to-certificate-profiles)。  
+       必须先创建证书配置文件，然后才能在此处进行选择。  若要了解详细信息，请参阅[System Center Configuration Manager 中的证书配置文件](/sccm/protect/deploy-use/introduction-to-certificate-profiles)。  
 
 ## <a name="configure-synchronization-settings-for-the-exchange-activesync-email-profile"></a>配置 Exchange ActiveSync 电子邮件配置文件的同步设置  
 

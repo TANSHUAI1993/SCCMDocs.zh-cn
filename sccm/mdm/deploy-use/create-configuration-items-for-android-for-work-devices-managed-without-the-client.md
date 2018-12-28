@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: ab6784fd-8c57-4be9-858f-50fe39f2ff5f
 author: aczechowski
 ms.author: aaroncz
-ms.openlocfilehash: ba70e4d3a87f2a305312449907730174c62c4775
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 0b2104b72a155f269beefc6f64c2615b62266b66
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32351269"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53415429"
 ---
 # <a name="how-to-create-configuration-items-for-android-for-work-devices-managed-with-intune"></a>如何为使用 Intune 管理的 Android for Work 设备创建配置项
 
@@ -21,47 +21,47 @@ ms.locfileid: "32351269"
 
 ### <a name="to-create-an-android-for-work-configuration-item"></a>创建 Android for Work 配置项目  
 
-1.  在 Configuration Manager 控制台中单击“资产和符合性”。  
+1. 在 Configuration Manager 控制台中单击“资产和符合性”。  
 
-2.  在“资产和符合性”  工作区中，展开“符合性设置” ，然后单击“配置项目” 。  
+2. 在“资产和符合性”  工作区中，展开“符合性设置” ，然后单击“配置项目” 。  
 
-3.  在“主页”  选项卡上的“创建”  组中，单击“创建配置项目” 。  
+3. 在“主页”  选项卡上的“创建”  组中，单击“创建配置项目” 。  
 
-4.  在“创建配置项目向导”  的“常规” 页面上，指定配置项目的名称和可选描述。  
+4. 在“创建配置项目向导”  的“常规” 页面上，指定配置项目的名称和可选描述。  
 
-5.  在“指定要创建的配置项目类型” 下，选择“Android for Work” 。  
+5. 在“指定要创建的配置项目类型” 下，选择“Android for Work” 。  
 
-6.  如果创建并分配类别以帮助在 Configuration Manager 控制台中搜索和筛选配置项目，请选择“类别”。  
+6. 如果创建并分配类别以帮助在 Configuration Manager 控制台中搜索和筛选配置项目，请选择“类别”。  
 
-  单击“下一步” 。
+   单击“下一步” 。
 
-7.  在向导的“设备设置”页上，选择要配置的设置组。 若要了解详细信息，请参阅 [Android for Work 配置项目设置](#android-for-work-configuration-item-settings-reference)，然后单击“下一步”。  
+7. 在向导的“设备设置”页上，选择要配置的设置组。 若要了解详细信息，请参阅 [Android for Work 配置项目设置](#android-for-work-configuration-item-settings-reference)，然后单击“下一步”。  
 
-  > [!TIP]  
-  >  如果所需设置未列出，请选中“配置默认设置组以外的其他设置” 复选框。  
+   > [!TIP]  
+   >  如果所需设置未列出，请选中“配置默认设置组以外的其他设置” 复选框。  
 
-9. 在每个设置页面上，配置所需设置，以及是否要在它们在设备上不符合要求时修正它们（如果支持这样做）。  
+8. 在每个设置页面上，配置所需设置，以及是否要在它们在设备上不符合要求时修正它们（如果支持这样做）。  
 
-10. 对于每个设置组，还可以配置在发现配置项目不符合要求时将要报告的严重性：  
+9. 对于每个设置组，还可以配置在发现配置项目不符合要求时将要报告的严重性：  
 
-    -   **不报告** - 对于 Configuration Manager 报表，不符合此合规性规则的设备不报告故障严重性。  
+   -   **不报告** - 对于 Configuration Manager 报表，不符合此合规性规则的设备不报告故障严重性。  
 
-    -   **信息** - 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“信息”这一故障严重性。  
+   -   **信息** - 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“信息”这一故障严重性。  
 
-    -   **警告** - 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“警告”这一故障严重性。  
+   -   **警告** - 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“警告”这一故障严重性。  
 
-    -   **严重** - 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“严重”这一故障严重性。  
+   -   **严重** - 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“严重”这一故障严重性。  
 
-    -   **事件严重** - 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“严重”这一故障严重性。 此外会记录此严重性级别为应用程序事件日志中的 Windows 事件。  
+   -   **事件严重** - 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“严重”这一故障严重性。 此外会记录此严重性级别为应用程序事件日志中的 Windows 事件。  
 
-11. 在向导的“平台适用性”  页面上，查看任何与先前选择的受支持平台不兼容的设置。 你可以返回并删除这些设置，也可以继续。  
+10. 在向导的“平台适用性”  页面上，查看任何与先前选择的受支持平台不兼容的设置。 你可以返回并删除这些设置，也可以继续。  
 
     > [!TIP]  
     >  不会对不受支持的设置评估符合性。  
 
-12. 完成向导。  
+11. 完成向导。  
 
- 可以在“资产和符合性”  工作区的“配置项目”  节点中查看新配置项目。  
+    可以在“资产和符合性”  工作区的“配置项目”  节点中查看新配置项目。  
 
 ##  <a name="android-for-work-configuration-item-settings-reference"></a>Android for Work 配置项目设置参考  
 
@@ -92,9 +92,9 @@ ms.locfileid: "32351269"
 没有任何“允许工作和个人配置文件间的数据共享”选项可阻止复制-粘贴行为。 使用可配置为阻止复制-粘贴的自定义设置。 这可以通过自定义 URI 来设置。
 
 - OMA-URI: ./Vendor/MSFT/WorkProfile/DisallowCrossProfileCopyPaste
-- 值类型：布尔
+- 值类型：布尔值
 
 设置 DisallowCrossProfileCopyPaste，以确实阻止 Android for Work 个人和工作配置文件之间的复制粘贴行为。
 
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [未使用 System Center Configuration Manager 客户端管理的设备的配置项目](../../compliance/deploy-use/configuration-items-for-devices-managed-without-the-client.md)

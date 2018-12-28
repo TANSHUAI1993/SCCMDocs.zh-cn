@@ -10,16 +10,16 @@ ms.assetid: 3f62b763-4347-453d-b0a7-1f4a0d1d4105
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 87ad7a768128cb11a1fc361c90a6eccac454a28c
-ms.sourcegitcommit: 9cff0702c2cc0f214173b47ec241f7e5a40f84e6
-ms.translationtype: HT
+ms.openlocfilehash: 00fa7e538f6156f0dacee00feeb4b767a3c83a5c
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34752584"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417607"
 ---
 # <a name="configure-and-deploy-lookout-for-work-apps"></a>配置和部署 Lookout for Work 应用
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*适用于：System Center Configuration Manager (Current Branch)*
 
 本文介绍如何为 Android 和 iOS 设备配置和部署 Lookout for Work 应用。
 
@@ -31,9 +31,9 @@ ms.locfileid: "34752584"
 2.  在“部署软件向导”的“常规”  页上，指定以下信息：  
     - 类型：选择“Google Play 上的 Android 应用程序包”。
     - 位置：复制此处粘贴的来自 Google Play 商店的 Lookout for Work 应用链接
-    - 发行者：Lookout Mobile Security
+    - 发布者：Lookout Mobile Security
     - 名称：Lookout for Work
-    - 描述：Lookout 提供针对移动威胁的最佳保护，维护设备安全。 安装 Lookout 应用后，此应用可保护设备免受威胁的侵害。 它在找到威胁时会向你和你的 IT 管理员发送警报。
+    - 描述:Lookout 提供针对移动威胁保护你的设备的安全的最佳保护。 安装 Lookout 应用后，此应用可保护设备免受威胁的侵害。 它在找到威胁时会向你和你的 IT 管理员发送警报。
     - 管理类别：计算机管理  
 
     成功完成后，即可在应用程序列表中看到 Lookout for Work 应用。  
@@ -55,11 +55,11 @@ ms.locfileid: "34752584"
 3. 为 iOS 用户启用 Azure Active Directory (Azure AD) 身份验证。
    1.  登录到 [Azure 门户的 Azure AD 边栏选项卡](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview)，再导航到应用注册页面。  
    2.  将名称指定为“Lookout for Work iOS 应用”，并选择“本机”作为应用程序类型。  
-  ![显示本机客户端应用选项的添加应用对话框的屏幕截图](media/aad-add-app-reg.png)
+   ![显示本机客户端应用选项的添加应用对话框的屏幕截图](media/aad-add-app-reg.png)
 
    3.  请使用以下格式的重定向 URI：`lookoutwork://com.lookout.enterprise.<yourcompanyname>`，将 `<yourcompanyname>` 替换为你的公司名称。 例如：`lookoutwork://com.lookout.enterprise.contoso`
    4. 单击“创建”以创建应用。 
-   5.  打开新应用、单击“设置”，再添加其他重定向 URI。 使用格式 `companyportal://code/<originalURI>`，其中 `<originalURI>` 是原始重定向 URI 的 URL 编码版本。 例如 `companyportal://code/lookoutwork%3A%2F%2Fcom.lookout.enterprise.contoso`
+   5.  打开新应用、单击“设置”，再添加其他重定向 URI。 使用格式 `companyportal://code/<originalURI>`，其中 `<originalURI>` 是原始重定向 URI 的 URL 编码版本。 例如， `companyportal://code/lookoutwork%3A%2F%2Fcom.lookout.enterprise.contoso`
    6.  在应用设置中转到“所需权限”并单击“添加”。 选择以下委托的权限：  
 
        | API  | 权限  |
@@ -78,7 +78,7 @@ ms.locfileid: "34752584"
 
 6. 向用户部署 Lookout for Work 应用。 有关详细信息，请参阅[部署应用程序](/sccm/apps/deploy-use/deploy-applications)。  
 
-  选择在 Lookout 控制台中添加到“注册管理”选项的用户。 选择“必需安装”选项。 此选项要求在用户的设备上安装 Lookout 应用。
+   选择在 Lookout 控制台中添加到“注册管理”选项的用户。 选择“必需安装”选项。 此选项要求在用户的设备上安装 Lookout 应用。
 
 
 

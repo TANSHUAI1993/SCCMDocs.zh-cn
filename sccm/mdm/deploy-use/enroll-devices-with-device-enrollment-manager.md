@@ -10,16 +10,16 @@ ms.assetid: 2905f26e-7859-497d-b995-5ff48261efa2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9a691bc98a26cdf56d22c03840997d9e0a380b7b
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: cc1be1d602c3f9f8e65e0523d64c5b6a8e579c90
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32347614"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53415546"
 ---
 # <a name="enroll-devices-with-device-enrollment-manager-with-configuration-manager"></a>使用 Configuration Manager 向设备注册管理器注册设备
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*适用于：System Center Configuration Manager (Current Branch)*
 
 组织可以使用 Intune 来管理大量带有单一用户帐户的移动设备。 设备注册管理器 (DEM) 帐户是用于注册设备的特殊用户帐户。 将现有用户添加到要为其提供专用 DEM 功能的 DEM 帐户。 每个已注册的设备使用单个许可证。 我们建议你将通过此帐户注册的设备作为没有用户关联性的共享设备使用，而不是个人专用设备。  
 
@@ -34,15 +34,15 @@ ms.locfileid: "32347614"
 
 - 存储管理员无法从公司门户重置设备。  
 - 无法加入工作区或已加入 Azure Active Directory 的设备。 这可防止这些设备使用条件性访问。
--  若要将公司应用部署到使用设备注册管理器管理的设备，则需要将公司门户应用作为**必需的安装**到设备注册管理器的用户帐户。 然后，设备注册管理器可以启动公司门户应用来安装其他应用。
+- 若要将公司应用部署到使用设备注册管理器管理的设备，则需要将公司门户应用作为**必需的安装**到设备注册管理器的用户帐户。 然后，设备注册管理器可以启动公司门户应用来安装其他应用。
 - 为了提高性能，公司门户应用仅显示本地设备。 仅管理员可以从 Configuration Manager 控制台远程管理其他的 DEM 设备
 - 设备注册管器帐户不能使用公司门户网站。 打开公司门户应用。
 - 如果使用 DEM 来注册 iOS 设备，则无法使用 Apple Configurator 或 Apple 设备注册计划 (DEP) 来注册设备。 （仅限 iOS） 
 
- **设备注册管理器的示例方案：**   
-一家餐厅想为服务员提供销售点平板电脑，为厨房员工提供订单监视器。 员工无需访问公司数据或作为用户登录。 Intune 管理员创建设备注册管理员帐户并使用该帐户注册公司自有设备。 或者，管理员也可以将设备注册管理员凭据交给餐厅经理，允许他或她注册和管理设备。  
+  **设备注册管理器的示例方案：**   
+  一家餐厅想为服务员提供销售点平板电脑，为厨房员工提供订单监视器。 员工无需访问公司数据或作为用户登录。 Intune 管理员创建设备注册管理员帐户并使用该帐户注册公司自有设备。 或者，管理员也可以将设备注册管理员凭据交给餐厅经理，允许他或她注册和管理设备。  
 
- 管理员或经理可以将特定于角色的应用部署到餐厅设备。 管理员还可以在控制台中选择一台设备，并从移动设备管理中将其停用。  
+  管理员或经理可以将特定于角色的应用部署到餐厅设备。 管理员还可以在控制台中选择一台设备，并从移动设备管理中将其停用。  
 
 #### <a name="add-a-device-enrollment-manager"></a>添加一个设备注册管理器  
 

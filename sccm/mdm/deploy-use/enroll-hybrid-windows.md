@@ -10,32 +10,32 @@ ms.assetid: dc1f70f5-64ab-42ab-aa91-d3858803e12f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1e45cae03754fcfa3a310bf59e8e3280d5088518
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 26529460498d10fb4ee747059ca050cd6af9db54
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32349620"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53415953"
 ---
 # <a name="set-up-windows-hybrid-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>设置 Windows 混合使用 System Center Configuration Manager 和 Microsoft Intune 的设备管理
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*适用于：System Center Configuration Manager (Current Branch)*
 
 本主题介绍 IT 管理员如何能通过 Configuration Manager 和 Microsoft Intune 使用户可以管理 Windows 电脑和移动设备。
 
 ## <a name="enable-windows-device-management"></a>启用 Windows 设备管理
 若要针对电脑或移动设备启用 Windows 设备管理，请按照以下步骤进行操作：
 
-1.  在为任何平台设置注册前，必须先完成[设置混合 MDM](setup-hybrid-mdm.md) 中的先决条件和过程。  
-2.  在 Configuration Manager 控制台中的“管理”工作区中，转到“概述” > “云服务” > “Microsoft Intune 订阅”。  
-3.  在功能区中，单击“配置平台”，然后选择 Windows 平台：
-    - 对于 Windows 电脑和笔记本电脑，请选择“Windows”，然后执行以下步骤：
-      1. 在“常规”选项卡上，单击“启用 Windows 注册”复选框。
-      2. 如果使用证书进行代码签名并部署公司门户应用，请浏览到“代码签名证书”。 设备用户还可从 Microsoft Store 安装公司门户应用，或部署适用于企业的 Microsoft Store 中的应用而无需进行代码签名。
-      3. 你还可以配置 [Windows Hello 企业版设置](windows-hello-for-business-settings.md)。
-    - 对于 Windows 手机和平板电脑，请选择“Windows Phone”，然后执行以下步骤：
-      1. 在“常规”选项卡上，单击“Windows Phone 8.1 和 Windows 10 移动版”复选框。 不再支持 Windows Phone 8.0。
-      2. 如果你的组织需要旁加载公司应用，你可以上传所需的令牌或文件。 有关旁加载应用的详细信息，请参阅[创建 Windows 应用](https://docs.microsoft.com/sccm/apps/get-started/creating-windows-applications)。
+1. 在为任何平台设置注册前，必须先完成[设置混合 MDM](setup-hybrid-mdm.md) 中的先决条件和过程。  
+2. 在 Configuration Manager 控制台中的“管理”工作区中，转到“概述” > “云服务” > “Microsoft Intune 订阅”。  
+3. 在功能区中，单击“配置平台”，然后选择 Windows 平台：
+   - 对于 Windows 电脑和笔记本电脑，请选择“Windows”，然后执行以下步骤：
+     1. 在“常规”选项卡上，单击“启用 Windows 注册”复选框。
+     2. 如果使用证书进行代码签名并部署公司门户应用，请浏览到“代码签名证书”。 设备用户还可从 Microsoft Store 安装公司门户应用，或部署适用于企业的 Microsoft Store 中的应用而无需进行代码签名。
+     3. 你还可以配置 [Windows Hello 企业版设置](windows-hello-for-business-settings.md)。
+   - 对于 Windows 手机和平板电脑，请选择“Windows Phone”，然后执行以下步骤：
+     1. 在“常规”选项卡上，单击“Windows Phone 8.1 和 Windows 10 移动版”复选框。 不再支持 Windows Phone 8.0。
+     2. 如果你的组织需要旁加载公司应用，你可以上传所需的令牌或文件。 有关旁加载应用的详细信息，请参阅[创建 Windows 应用](https://docs.microsoft.com/sccm/apps/get-started/creating-windows-applications)。
         - **应用程序注册令牌**
         - **.pfx 文件**
         - **无**：如果使用 Symantec 证书，则可以指定“在 Symantec 证书到期前显示警报”。
@@ -67,15 +67,15 @@ ms.locfileid: "32349620"
 
 1. 登录到 [Azure 管理门户](https://portal.azure.com) (https://manage.windowsazure.com) ，然后选择“Azure Active Directory”。
 
-  ![Azure 门户的屏幕截图](../media/auto-enroll-azure-main.png)
+   ![Azure 门户的屏幕截图](../media/auto-enroll-azure-main.png)
 
 2. 选择“移动性 (MDM 和 MAM)”。
 
-  ![Azure 门户的屏幕截图](../media/auto-enroll-mdm.png)
+   ![Azure 门户的屏幕截图](../media/auto-enroll-mdm.png)
 
 3. 选择“Microsoft Intune”。
 
-  ![Azure 门户的屏幕截图](../media/auto-enroll-intune.png)
+   ![Azure 门户的屏幕截图](../media/auto-enroll-intune.png)
 
 4. 配置“MDM 用户范围”。 指定应由 Microsoft Intune 管理的用户设备。 这些用户的 Windows 10 设备将自动注册，以使用 Microsoft Intune 进行管理。
 
@@ -107,13 +107,13 @@ ms.locfileid: "32349620"
 |----------|---------------|---------------|---|
 |CNAME|EnterpriseEnrollment.company_domain.com|EnterpriseEnrollment-s.manage.microsoft.com| 1 小时|
 
-如果具有多个 UPN 后缀，你需要为每个域名创建一个 CNAME，并将每个 CNAME 指向 EnterpriseEnrollment-s.manage.microsoft.com。例如，如果 Contoso 的用户使用 name@contoso.com，但也使用 name@us.contoso.com 和 name@eu.constoso.com 作为其电子邮件/UPN，则 Contoso DNS 管理员需要创建以下 CNAME。
+如果具有多个 UPN 后缀，你需要为每个域名创建一个 CNAME，并将每个 CNAME 指向 EnterpriseEnrollment-s.manage.microsoft.com。 例如，如果 Contoso 的用户使用 name@contoso.com，但也使用 name@us.contoso.com 和 name@eu.constoso.com 作为其电子邮件/UPN，则 Contoso DNS 管理员需要创建以下 CNAME。
 
 |键入|主机名|指向|TTL|  
 |----------|---------------|---------------|---|
 |CNAME|EnterpriseEnrollment.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com|1 小时|
 |CNAME|EnterpriseEnrollment.us.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com|1 小时|
-|CNAME|EnterpriseEnrollment.eu.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com| 1 小时|
+|CNAME|EnterpriseEnrollment.eu.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com| 1 小时|
 
 `EnterpriseEnrollment-s.manage.microsoft.com` – 支持从电子邮件的域名重定向到具有域识别的 Intune 服务
 
@@ -124,4 +124,4 @@ ms.locfileid: "32349620"
  设置完成后，需要让用户知道如何注册其设备。 有关指南，请参阅[需要使用户了解的有关设备注册的内容](https://docs.microsoft.com/intune/deploy-use/what-to-tell-your-end-users-about-using-microsoft-intune)。 可以将用户定向到[在 Intune 中注册 Windows 设备](https://docs.microsoft.com/intune/enduser/enroll-your-device-in-intune-windows)。 此信息适用于 Microsoft Intune 和 Configuration Manager 托管的移动设备。
 
 > [!div class="button"]
-[< 上一步](create-service-connection-point.md)  [下一步 >](set-up-additional-management.md)
+> [< 上一步](create-service-connection-point.md)  [下一步 >](set-up-additional-management.md)

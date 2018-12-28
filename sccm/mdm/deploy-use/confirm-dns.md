@@ -10,41 +10,41 @@ ms.assetid: 522c2e82-20eb-4f38-859b-d55640b24e32
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f82f8e782446035ffdf3910cb591e07f61fbfb47
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 6e5aeb6a23231af19280d9eae58945bd76ee5ccd
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32345897"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53414627"
 ---
 # <a name="confirm-domain-name-requirements-with-system-center-configuration-manager-and-microsoft-intune"></a>使用 System Center Configuration Manager 和 Microsoft Intune 确认域名要求
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*适用于：System Center Configuration Manager (Current Branch)*
 
 如有必要，请执行以下步骤以满足 Configuration Manager 外部的任何依赖关系：
 
 1. 每个用户必须分配有 Intune 许可证才能注册设备。 若要将 Intune 许可证关联到用户，每个用户必须具有可公开解析的用户主体名称 (UPN)（例如，johndoe@contoso.com）或是在 Azure Active Directory 中配置的备用登录 ID。 配置备用登录 ID 使用户可以使用电子邮件地址登录，即使其 UPN 是 NetBIOS 格式（例如 CONTOSO\johndoe）。
 
-  - 如果公司使用公开解析的 UPN（例如 johndoe@contoso.com），则无需进一步配置。
-  - 如果公司使用不可解析的 UPN（例如 CONTOSO\johndoe），则你必须[在 Azure Active Directory 中配置备用 ID](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect-get-started-custom/#pages-under-the-section-sync)。
+   - 如果公司使用公开解析的 UPN（例如 johndoe@contoso.com），则无需进一步配置。
+   - 如果公司使用不可解析的 UPN（例如 CONTOSO\johndoe），则你必须[在 Azure Active Directory 中配置备用 ID](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect-get-started-custom/#pages-under-the-section-sync)。
 
-2.  部署并配置 Active Directory 联合身份验证服务 (AD FS)。 （可选）
+2. 部署并配置 Active Directory 联合身份验证服务 (AD FS)。 （可选）
 
-     在设置单一登录时，用户可以使用其公司凭据登录，以访问 Intune 中的服务。
+    在设置单一登录时，用户可以使用其公司凭据登录，以访问 Intune 中的服务。
 
-     有关详细信息，请参阅下列主题：
-    -   [为单一登录做准备](http://go.microsoft.com/fwlink/?LinkID=271124)
-    -   [规划和部署 AD FS 2.0 以用于单一登录](http://go.microsoft.com/fwlink/?LinkID=271125)
+    有关详细信息，请参阅下列主题：
+   -   [为单一登录做准备](http://go.microsoft.com/fwlink/?LinkID=271124)
+   -   [规划和部署 AD FS 2.0 以用于单一登录](http://go.microsoft.com/fwlink/?LinkID=271125)
 
-3.  部署并配置目录同步。
+3. 部署并配置目录同步。
 
-     目录同步可让你利用同步的用户帐户来填充 Intune。 同步的用户帐户和安全组被添加到 Intune 中。 未能启用目录同步是在使用 Microsoft Intune 设置 Configuration Manager MDM 时，设备无法注册的一个常见原因。
+    目录同步可让你利用同步的用户帐户来填充 Intune。 同步的用户帐户和安全组被添加到 Intune 中。 未能启用目录同步是在使用 Microsoft Intune 设置 Configuration Manager MDM 时，设备无法注册的一个常见原因。
 
-     有关详细信息，请参阅 Active Directory 文档库中的 [目录集成](http://go.microsoft.com/fwlink/?LinkID=271120) 。
+    有关详细信息，请参阅 Active Directory 文档库中的 [目录集成](http://go.microsoft.com/fwlink/?LinkID=271120) 。
 
-4.  可选但不建议：如果没有使用 Active Directory 联合身份验证服务，则重置用户的 Microsoft Online 密码。
+4. 可选但不建议：如果不使用 Active Directory 联合身份验证服务，重置用户的 Microsoft Online 密码。
 
-     如果没有使用 AD FS，则必须为每个用户设置 Microsoft Online 密码。
+    如果没有使用 AD FS，则必须为每个用户设置 Microsoft Online 密码。
 
 > [!div class="button"]
-[< 上一步](create-mdm-collection.md)  [下一步 >](configure-intune-subscription.md)
+> [< 上一步](create-mdm-collection.md)  [下一步 >](configure-intune-subscription.md)

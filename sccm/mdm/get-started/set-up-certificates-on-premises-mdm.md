@@ -10,16 +10,16 @@ ms.assetid: 2a7d7170-1933-40e9-96d6-74a6eb7278e2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c538c3b7668cc93069f0805b98f29586c3d7c86c
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 391ecbd4ff9f863f41454786e8f8232b31a112a5
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32351687"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418316"
 ---
 # <a name="set-up-certificates-for-trusted-communications-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>为 System Center Configuration Manager 中的本地移动设备管理的受信任通信设置证书
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*适用于：System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager 本地移动设备管理需要为与托管设备的受信任通信设置注册点、注册代理点、分发点和设备管理点站点系统角色。 托管一个或多个这些角色的任何站点系统服务器必须具有绑定到该系统上的 Web 服务器的唯一 PKI 证书。 根与服务器上的证书的根相同的证书大多也存储在托管设备上，以与它们建立受信任通信。  
 
@@ -88,9 +88,9 @@ System Center Configuration Manager 本地移动设备管理需要为与托管�
     > [!NOTE]  
     >  如果使用的 CA 位于 Windows Server 2012，单击“复制模板”时系统不会提示证书模板版本。 请改为在模板属性的“兼容性”  选项卡上指定这一点，如下所示：  
     >   
-    >  **证书颁发机构**： **Windows Server 2003**  
+    >  **证书颁发机构**:**Windows Server 2003**  
     >   
-    >  **证书接收者**： **Windows XP/Server 2003**  
+    >  **证书接收人**:**Windows XP / Server 2003**  
 
 5.  在“常规”选项卡上的“新模板的属性”对话框中，输入模板名称以生成将在 Configuration Manager 站点系统上使用的 Web 证书，例如 **ConfigMgr MDM Web 服务器**。  
 
@@ -111,21 +111,21 @@ System Center Configuration Manager 本地移动设备管理需要为与托管�
 ##  <a name="bkmk_requestCert"></a>为每个站点系统角色请求 Web 服务器证书  
  注册本地移动设备管理的设备必须信任托管注册点、注册代理点、分发点和设备管理点的 SSL 终结点。  下列步骤说明如何对 IIS 请求 Web 服务器证书。 对于托管本地移动设备管理所需的其中一个站点系统角色的每个服务器（SSL 终结点），都必须执行此操作。  
 
-1.  在主站点服务器上，使用管理员权限打开命令提示符，键入 **MMC** 并按 **Enter**。  
+1. 在主站点服务器上，使用管理员权限打开命令提示符，键入 **MMC** 并按 **Enter**。  
 
-2.  在 MMC 中，单击“文件” > “添加/删除管理单元”。  
+2. 在 MMC 中，单击“文件” > “添加/删除管理单元”。  
 
-3.  在证书管理单元中，选择“证书”，单击“添加”，选择“计算机帐户”，单击“下一步”，单击“完成”，然后单击“确定”，以退出“添加或删除管理单元”窗口。  
+3. 在证书管理单元中，选择“证书”，单击“添加”，选择“计算机帐户”，单击“下一步”，单击“完成”，然后单击“确定”，以退出“添加或删除管理单元”窗口。  
 
-4.  右键单击“个人”，然后单击“所有任务” > “请求新证书”。  
+4. 右键单击“个人”，然后单击“所有任务” > “请求新证书”。  
 
-5.  在证书注册向导中，单击“下一步”，选择“Active Directory 注册策略”并单击“下一步”。  
+5. 在证书注册向导中，单击“下一步”，选择“Active Directory 注册策略”并单击“下一步”。  
 
-6.  选择 Web 服务器证书旁的复选框（“ConfigMgr MDM Web 服务器”），然后单击“注册”。  
+6. 选择 Web 服务器证书旁的复选框（“ConfigMgr MDM Web 服务器”），然后单击“注册”。  
 
-7.  证书注册完成之后，单击“完成”。  
+7. 证书注册完成之后，单击“完成”。  
 
- 因为每个服务器都需要唯一的 Web 服务器证书，所以需要对托管本地移动设备管理所需的其中一个站点系统角色的每个服务器重复此过程。  如果一个服务器托管了所有站点系统角色，则只需要请求一个 Web 服务器证书。  
+   因为每个服务器都需要唯一的 Web 服务器证书，所以需要对托管本地移动设备管理所需的其中一个站点系统角色的每个服务器重复此过程。  如果一个服务器托管了所有站点系统角色，则只需要请求一个 Web 服务器证书。  
 
 ##  <a name="bkmk_bindCert"></a>将证书绑定到 Web 服务器  
  现在需要将新证书绑定到托管本地移动设备管理所需的站点系统角色的每个站点系统服务器的 Web 服务器。 对于托管注册点和注册代理点站点系统角色的每个服务器，请执行以下步骤。 如果一个服务器托管了所有的站点系统角色，则只需要执行一次以下步骤。 对于分发点和设备管理点站点系统角色则无需执行此任务，因为它们在注册过程中会自动获得所需的证书。  

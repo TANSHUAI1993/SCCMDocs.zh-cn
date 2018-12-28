@@ -9,36 +9,36 @@ ms.assetid: df10dc4d-c9ff-4574-bb33-8d30eb14cfe3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4590077b303d5676aa72a816d785a0864fe2205f
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 6cfeae4ddc582d1d641d1065f2542319d5519b5e
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32351966"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416416"
 ---
 # <a name="how-to-create-configuration-items-for-windows-phone-devices-managed-without-the-system-center-configuration-manager-client"></a>如何为未使用 System Center Configuration Manager 客户端管理的 Windows Phone 设备创建配置项目
 使用 System Center Configuration Manager **Windows Phone** 配置项目，为已在 Microsoft Intune 中注册或通过 Configuration Manager 本地管理的 Windows Phone 设备管理设置。  
   
 ### <a name="to-create-a-windows-phone-configuration-item"></a>创建 Windows Phone 配置项目  
   
-1.  在 Configuration Manager 控制台中，单击“资产和符合性”。  
+1. 在 Configuration Manager 控制台中，单击“资产和符合性”。  
   
-2.  在“资产和符合性”  工作区中，展开“符合性设置” ，然后单击“配置项目” 。  
+2. 在“资产和符合性”  工作区中，展开“符合性设置” ，然后单击“配置项目” 。  
   
-3.  在“主页”  选项卡上的“创建”  组中，单击“创建配置项目” 。  
+3. 在“主页”  选项卡上的“创建”  组中，单击“创建配置项目” 。  
   
-4.  在“创建配置项目向导”  的“常规” 页面上，指定配置项目的名称和可选描述。  
+4. 在“创建配置项目向导”  的“常规” 页面上，指定配置项目的名称和可选描述。  
   
-5.  在“指定要创建的配置项目的类型” 下，选择“Windows Phone” 。  
+5. 在“指定要创建的配置项目的类型” 下，选择“Windows Phone” 。  
   
-6.  如果创建并分配类别以帮助在 Configuration Manager 控制台中搜索和筛选配置项目，请单击“类别”。  
+6. 如果创建并分配类别以帮助在 Configuration Manager 控制台中搜索和筛选配置项目，请单击“类别”。  
   
-7.  在向导的“支持的平台”  页面上，选择评估配置项目的特定 Windows Phone 平台。  
+7. 在向导的“支持的平台”  页面上，选择评估配置项目的特定 Windows Phone 平台。  
   
-8.  在向导的“设备设置”  页面上，选择要配置的设置组。 请参阅本主题中的 [Windows Phone 配置项目设置参考](#BKMK_Setref) 以了解详细信息，然后单击“下一步” 。  
+8. 在向导的“设备设置”  页面上，选择要配置的设置组。 请参阅本主题中的 [Windows Phone 配置项目设置参考](#BKMK_Setref) 以了解详细信息，然后单击“下一步” 。  
   
-    > [!TIP]  
-    >  如果所需设置未列出，请选中“配置默认设置组以外的其他设置” 复选框。  
+   > [!TIP]  
+   >  如果所需设置未列出，请选中“配置默认设置组以外的其他设置” 复选框。  
   
 9. 在每个设置页面上，配置所需设置，以及是否要在它们在设备上不符合要求时修正它们（如果支持这样做）。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "32351966"
   
 12. 完成向导。  
   
- 可以在“资产和符合性”  工作区的“配置项目”  节点中查看新配置项目。  
+    可以在“资产和符合性”  工作区的“配置项目”  节点中查看新配置项目。  
   
 ##  <a name="windows-phone-configuration-item-settings-reference"></a>Windows Phone 配置项目设置参考  
   
@@ -293,10 +293,10 @@ ms.locfileid: "32351966"
 |设置|更多信息|  
 |**阻止的应用列表**|如果想要指定不允许用户安装的应用的列表，则选择此选项。|  
 |**允许的应用列表**|如果想要指定允许用户安装的应用的列表，则选择此选项。|  
-|**添加**|将应用添加到选定的列表。 在应用商店中指定你选择的名称（可选择使用应用发布者）和应用的 URL。<br /><br /> 若要从 Windows Phone 商店页面指定 URL，请搜索想要使用的应用。<br /><br /> **示例** ：在应用商店中搜索“Skype”  应用。 你使用的 URL 将为 http://www.windowsphone.com/en-us/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51。<br /><br /> 对于公司门户应用或业务线应用，无需指定完整的 URL，指定应用 GUID 即可。|  
+|**添加**|将应用添加到选定的列表。 在应用商店中指定你选择的名称（可选择使用应用发布者）和应用的 URL。<br /><br /> 若要从 Windows Phone 商店页面指定 URL，请搜索想要使用的应用。<br /><br /> **示例：** 应用商店中搜索**Skype**应用。 你使用的 URL 将为 http://www.windowsphone.com/en-us/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51。<br /><br /> 对于公司门户应用或业务线应用，无需指定完整的 URL，指定应用 GUID 即可。|  
 |**编辑**|允许你编辑选定应用的名称、发布者和 URL。|  
 |**移除**|从列表中删除选定的应用。|  
 |**导入**|导入你已在逗号分隔值文件中指定的应用列表。 在文件中使用格式、应用程序名称、发布者和应用 URL。|  
   
-## <a name="see-also"></a>另请参阅  
+## <a name="see-also"></a>请参阅  
  [未使用 System Center Configuration Manager 客户端管理的设备的配置项目](../../compliance/deploy-use/configuration-items-for-devices-managed-without-the-client.md)

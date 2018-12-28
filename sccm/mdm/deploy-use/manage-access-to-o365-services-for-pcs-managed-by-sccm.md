@@ -10,19 +10,18 @@ ms.assetid: 34024741-edfa-4088-8599-d6bafc331e62
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7bf7114382c956dcac6302b3fc11617ad6b5eeec
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: f4e67050740b9d05dd33f2f79b7820b6dc8d9093
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350368"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53415800"
 ---
 # <a name="manage-access-to-o365-services-for-pcs-managed-by-system-center-configuration-manager"></a>管理对由 System Center Configuration Manager 管理的电脑的 O365 服务的访问
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*适用于：System Center Configuration Manager (Current Branch)*
 
-<!--1191496-->
-为由 System Center Configuration Manager 管理的电脑配置对 Office 365 服务的条件访问。  
+<!--1191496--> 配置 Configuration Manager 管理的电脑的 Office 365 服务的条件性访问。  
 
 > [!Note]  
 > 默认情况下，Configuration Manager 不启用此项可选功能。 必须在使用前启用此功能。 有关详细信息，请参阅[启用更新中的可选功能](/sccm/core/servers/manage/install-in-console-updates#bkmk_options)。<!--505213-->  
@@ -56,36 +55,36 @@ ms.locfileid: "32350368"
 
 ### <a name="prerequisites"></a>先决条件  
 
--   ADFS 同步和 O365 订阅。 O365 订阅用于设置 Exchange Online 和 SharePoint Online。  
+- ADFS 同步和 O365 订阅。 O365 订阅用于设置 Exchange Online 和 SharePoint Online。  
 
--   Microsoft Intune 订阅。 应在 Configuration Manager 控制台中配置 Microsoft Intune 订阅。 Intune 订阅用于将设备符合性状态中继到 Azure Active Directory 和用户授权。  
+- Microsoft Intune 订阅。 应在 Configuration Manager 控制台中配置 Microsoft Intune 订阅。 Intune 订阅用于将设备符合性状态中继到 Azure Active Directory 和用户授权。  
 
- 电脑必须满足以下要求：  
+  电脑必须满足以下要求：  
 
--   将设备自动注册到 Azure Active Directory 所要满足的[先决条件](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)   
+- 将设备自动注册到 Azure Active Directory 所要满足的[先决条件](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)   
 
-     可以通过合规性策略向 Azure AD 注册电脑。  
+   可以通过合规性策略向 Azure AD 注册电脑。  
 
-    -   对于 Windows 8.1 和 Windows 10 电脑，你可以使用 Active Directory 组策略将设备配置为自动注册到 Azure AD。  
+  -   对于 Windows 8.1 和 Windows 10 电脑，你可以使用 Active Directory 组策略将设备配置为自动注册到 Azure AD。  
 
-    -   对于 Windows 7 电脑，必须通过 System Center Configuration Manager 将设备注册软件包部署到 Windows 7 电脑。 有关详细信息，请参阅[将已加入 Windows 域的设备自动注册到 Azure Active Directory](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup) 一文。  
+  -   对于 Windows 7 电脑，必须通过 System Center Configuration Manager 将设备注册软件包部署到 Windows 7 电脑。 有关详细信息，请参阅[将已加入 Windows 域的设备自动注册到 Azure Active Directory](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup) 一文。  
 
--   必须使用[启用了](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a)新式验证的 Office 2013 或 Office 2016。  
+- 必须使用[启用了](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a)新式验证的 Office 2013 或 Office 2016。  
 
- 下列步骤适用于 Exchange Online 和 SharePoint Online  
+  下列步骤适用于 Exchange Online 和 SharePoint Online  
 
 ### <a name="step-1-configure-compliance-policy"></a>步骤 1。 配置合规性策略  
  在 Configuration Manager 控制台中，使用以下规则创建合规性策略：  
 
--   **需要在 Azure Active Directory 中注册：** 此规则检查用户的设备是否在加入到 Azure AD 的地方运行，如果不是，则在 Azure AD 中自动注册该设备。 仅 Windows 8.1 支持自动注册。 对于 Windows 7 PC，请部署 MSI 来执行自动注册。 有关相关信息，请参阅[将设备自动注册到 Azure Active Directory](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)  
+-   **需要在 Azure Active Directory 中的注册：** 此规则检查用户的设备工作场所加入 Azure AD 中，如果没有，请在 Azure AD 中自动注册该设备。 仅 Windows 8.1 支持自动注册。 对于 Windows 7 PC，请部署 MSI 来执行自动注册。 有关相关信息，请参阅[将设备自动注册到 Azure Active Directory](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)  
 
--   **所有必需更新在特定天数后的截止时间内安装**：指定宽限期的值，宽限期自用户设备上的必需更新的部署截止日期算起。 添加此规则还会自动安装所有挂起的必需更新。 指定“必需的自动更新”规则中的必需更新。   
+-   **早于特定天数的截止日期之前安装所需的所有更新：** 对于从用户的设备上的所需更新的部署截止时间在宽限期内指定的值。 添加此规则还会自动安装所有挂起的必需更新。 指定“必需的自动更新”规则中的必需更新。   
 
--   **需要使用 BitLocker 驱动器加密功能：** 此规则检查设备的主驱动器（例如 C:\\）是否使用 BitLocker 进行了加密。 如果主驱动器上未启用 Bitlocker 加密，则将阻止设备对电子邮件和 SharePoint 服务的访问。  
+-   **需要使用 BitLocker 驱动器加密：** 此规则检查的主驱动器 (例如，c:\\) 在设备上进行 BitLocker 加密。 如果主驱动器上未启用 Bitlocker 加密，则将阻止设备对电子邮件和 SharePoint 服务的访问。  
 
--   **需要反恶意软件：** 此规则检查是否启用并运行 System Center Endpoint Protection 或 Windows Defender。 如果未启用，则将阻止对电子邮件和 SharePoint 服务的访问。  
+-   **需要反恶意软件：** 此规则检查 System Center Endpoint Protection 或 Windows Defender 是否已启用并正在运行。 如果未启用，则将阻止对电子邮件和 SharePoint 服务的访问。  
 
--   **已由运行状况证明服务报告为运行状况良好：** 此条件包括四个子规则，检查设备对设备运行状况证明服务的符合性。 有关详细信息，请参阅[运行状况证明](/sccm/core/servers/manage/health-attestation)。 
+-   **报告为正常运行状况证明服务：** 这种情况包括四个子规则检查设备符合性对设备运行状况证明服务。 有关详细信息，请参阅[运行状况证明](/sccm/core/servers/manage/health-attestation)。 
 
     - **需要在设备上启用 BitLocker**
     - **需要在设备上启用安全启动** 
@@ -101,7 +100,7 @@ ms.locfileid: "32350368"
 ### <a name="step-2-evaluate-the-effect-of-conditional-access"></a>步骤 2。 评估条件访问的影响  
  运行“条件访问符合性报告”。 可以在“报表” > “符合性和设置管理”下的“监视”工作区中找到它。 此报表显示所有设备的符合性状态。 会阻止报告为不符合的设备访问 Exchange Online 和 SharePoint Online。  
 
- ![Configuration Manager 控制台、“监视”工作区、报告、报表、符合性和设置管理：条件访问符合性报告](media/CA_compliance_report.png)  
+ ![Configuration Manager 控制台中，监视工作区、 报表、 报表、 符合性和设置管理：条件访问相容性报告](media/CA_compliance_report.png)  
 
 ### <a name="configure-active-directory-security-groups"></a>配置 Active Directory 安全组  
  根据策略类型将条件访问策略的目标设定为用户组。 这些组包含策略设定为目标的用户，或从策略中免除的用户。 如果将某个用户设定为策略的目标，则其使用的每个设备必须符合才能访问服务。  

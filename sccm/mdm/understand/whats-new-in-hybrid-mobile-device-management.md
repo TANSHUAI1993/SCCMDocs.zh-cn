@@ -2,7 +2,7 @@
 title: 混合 MDM 中的新增功能
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 和 Intune 的混合部署可用的新移动设备管理功能。
-ms.date: 12/05/2018
+ms.date: 12/14/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6ecc3f47b908678b1849e16c2cb2053f100a655a
-ms.sourcegitcommit: 2491fbe98915b7a30c2422a371c929d0d4ebf22f
+ms.openlocfilehash: 7cf1adf7d73e60fba0d748022ab7c241d60ffed7
+ms.sourcegitcommit: c60e057075a83f07d1ca2577c3de1c7d7c8e9cec
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53247520"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626491"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Configuration Manager 和 Microsoft Intune 的混合移动设备管理中的新增功能
 
@@ -39,11 +39,28 @@ ms.locfileid: "53247520"
 
 本文的每个部分都列出了混合功能，并按 3 个不同类别进行分类。 请使用以下指南，确定每个类别中的功能与不同版本的 Configuration Manager 的兼容性：  
 
-|功能类别|Description|
+|功能类别|描述|
 |-|-|
 |**Microsoft Intune 中的新增功能** | 一般情况下，此类别下列出的所有功能都应适用于所有 Configuration Manager 版本。 这包括 System Center 2012 R2 Configuration Manager 版本，因为这些功能仅需要 Intune 服务，不需要 Configuration Manager 中的其他功能。|
 |**Configuration Manager Technical Preview 中的新增功能**| 此类别下列出的所有功能仅适用于指定的 Technical Preview 分支。 若要试用这些功能，必须安装功能说明中指定的 Technical Preview 版本。 有关详细信息，请参阅 [Configuration Manager 的 Technical Preview](/sccm/core/get-started/technical-preview)。|
 |**Configuration Manager (Current Branch) 中的新增功能**| 此类别下列出的所有功能仅适用于指定的 Configuration Manager (Current Branch) 版本。 如果要为混合部署使用较旧版本的 Configuration Manager，请升级到功能说明中指定的 Configuration Manager (Current Branch) 版本。 有关详细信息，请参阅[升级到 Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)。|
+
+
+
+## <a name="december-2018"></a>2018 年 12 月
+
+### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
+
+#### <a name="microsoft-auto-update-version-450-required-for-macos-devices"></a>适用于 macOS 设备所需的 Microsoft 自动更新版本 4.5.0
+<!--3503442--> 若要继续接收更新公司门户和其他 Office 应用程序，由 Intune 托管的 macOS 设备必须升级到 Microsoft 自动更新 4.5.0。 用户可能已经有此版本的 Office 应用程序。
+
+#### <a name="the-intune-app-sdk-will-support-256-bit-encryption-keys"></a>Intune App SDK 将支持 256 位加密密钥 
+<!--1832174--> 适用于 Android 的 Intune 应用 SDK 现在使用 256 位加密密钥由应用保护策略启用加密。 SDK 会继续提供与内容和使用较旧的 SDK 版本的应用程序兼容性的 128 位密钥的支持。
+
+#### <a name="intune-requires-macos-1012-or-later"></a>Intune 需要 macOS 10.12 或更高版本 
+<!--2827778--> Intune 现在要求 macOS 10.12 或更高版本。 使用以前的 macOS 版本的设备不能使用公司门户注册到 Intune。 若要接收支持和新功能，用户必须向 macOS 10.12 或更高版本中升级其设备和公司门户升级到最新版本。
+
+有关详细信息，请参阅[更改计划：Intune 支持 macOS 10.12 和更高版本中年 12 月](#plan-for-change-intune-supports-macos-1012-and-higher-in-december)。
 
 
 
@@ -549,7 +566,11 @@ Apple 发布了 macOS 10.14，所以从 2018 年 12 月开始，Intune 将支持
 
 
 ### <a name="plan-for-change-new-intune-support-experience-for-premier-customers"></a>更改计划：对于高级支持客户体验的新 Intune 支持 
-<!--2828727--> 作为 Microsoft 顶级客户，当前可以使用 [Microsoft Premier Online (MPO) 门户](https://premier.microsoft.com)和 [Azure 上的 Intune](https://portal.azure.com) 来创建 Intune 的支持请求。 从 2018 年 12 月 3 日起，为了继续增强顶级支持体验，将仅能在 Azure 上的 Intune 中创建支持请求。
+<!--2828727-->
+
+2018 年 12 月 4 日更新：我们正努力使此过程更好。 不会在 1 年 12 月 3 日禁用 MPO 中的创建支持请求。 我们将告诉您通过消息中心并更新此文章即将共享此更改的时间线。
+
+作为 Microsoft Premier 客户，当前可以使用[Microsoft Premier Online (MPO) 门户](https://premier.microsoft.com)并[Azure 上的 Intune](https://portal.azure.com)若要创建适用于 Intune 的支持请求。 从 2018 年 12 月 3 日起，为了继续增强顶级支持体验，将仅能在 Azure 上的 Intune 中创建支持请求。
 
 #### <a name="how-does-this-affect-me"></a>这会对我产生哪些影响？
 12 月 3 日之后，将无法在 MPO 中创建支持请求。 如果尝试这样做，将会有一个无法忽略的提示将你重新定向至 Azure 上的 Intune。 在 Azure 门户中创建支持请求时，会将请求发送至针对 Intune 的 Microsoft 支持部门。 相关人员会及时诊断并解决你的问题。 如果在 MPO 门户中创建支持请求，则无法在 Azure 门户中查看它。 从现在开始，请仅在 Azure 上的 Intune 中创建支持请求。  

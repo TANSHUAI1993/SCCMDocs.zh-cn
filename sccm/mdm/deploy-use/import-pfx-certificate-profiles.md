@@ -10,27 +10,27 @@ ms.assetid: e3bb3e13-3037-4122-93bc-504bfd080a4d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 81847846efe99bbc3ad5f0ff5a074b393c8b140a
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 214dcdca927e515f776e99f005f968a4b98f4112
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32349545"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418826"
 ---
 # <a name="how-to-create-pfx-certificate-profiles-by-importing-certificate-details"></a>如何通过导入证书详细信息创建 PFX 证书配置文件
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*适用于：System Center Configuration Manager (Current Branch)*
 
 
 本文介绍如何通过从外部证书导入凭据来创建证书配置文件。  
 
 [证书配置文件](../../protect/deploy-use/introduction-to-certificate-profiles.md)提供有关创建和配置证书配置文件的一般信息。 本主题强调了有关与 PFX 证书相关的证书配置文件的一些具体信息。
 
--  Configuration Manager 可管理各种适用于不同设备和操作系统的证书存储。  其中包括:
+- Configuration Manager 可管理各种适用于不同设备和操作系统的证书存储。  其中包括:
 
- -   iOS 和 MacOS/OSX
- -   Android 和 Android for Work
- -   Windows 10，包括 Windows 10 移动版。
+  -   iOS 和 MacOS/OSX
+  -   Android 和 Android for Work
+  -   Windows 10，包括 Windows 10 移动版。
 
 若要了解详细信息，请参阅[证书配置文件先决条件](../../protect/plan-design/prerequisites-for-certificate-profiles.md)。
 
@@ -51,15 +51,15 @@ System Center Configuration Manager 允许导入证书凭据，然后将个人�
 
 4.  在“创建证书配置文件”向导的“常规”  页上  ，指定下列信息：  
 
-    -   **名称**：输入证书配置文件的唯一名称。 最多可以使用 256 个字符。  
+    -   **名称**:输入证书配置文件的唯一名称。 最多可以使用 256 个字符。  
 
-    -   **说明**：提供对证书配置文件进行概述，以及可帮助在 System Center Configuration Manager 控制台中识别该证书配置文件的其他相关信息的描述。 最多可以使用 256 个字符。  
+    -   **描述**：提供概述的证书配置文件和其他相关信息，以帮助在 System Center Configuration Manager 控制台中识别它的说明。 最多可以使用 256 个字符。  
 
-    -   **指定想要创建的证书配置文件的类型**：对于 PFX 证书，请选择以下选项之一：  
+    -   **指定你想要创建的证书配置文件的类型**:对于 PFX 证书，请选择下列选项之一：  
 
-        -   **个人信息交换 PKCS #12 (PFX) 设置 - 导入**：通过以编程方式导入现有证书的信息来创建证书配置文件。  
+        -   **个人信息交换 PKCS #12 (PFX) 设置-导入**:通过以编程方式导入现有证书的信息创建证书配置文件。  
 
-        -   **个人信息交换 - PKCS #12 (PFX) 设置 - 创建**：使用证书颁发机构提供的凭据来创建 PFX 证书配置文件。  若要了解详细信息，请参阅[如何使用证书颁发机构创建 PFX 证书配置文件](../../mdm/deploy-use/create-pfx-certificate-profiles.md)。
+        -   **个人信息交换-PKCS #12 (PFX) 设置-创建**:创建 PFX 证书配置文件使用的证书颁发机构提供的凭据。  若要了解详细信息，请参阅[如何使用证书颁发机构创建 PFX 证书配置文件](../../mdm/deploy-use/create-pfx-certificate-profiles.md)。
 
 
 ### <a name="create-a-pfx-certificate-profile-for-the-imported-credentials"></a>为导入的凭据创建 PFX 证书配置文件

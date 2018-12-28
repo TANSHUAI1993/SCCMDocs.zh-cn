@@ -10,16 +10,16 @@ ms.assetid: c517fe34-0130-465b-a020-bdb555878778
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f833a28a22e4b3ffd2c8fc237effec94e26e69e8
-ms.sourcegitcommit: 10b3a571e2a822bbd7b58a25840ee1e6f703a7a2
-ms.translationtype: HT
+ms.openlocfilehash: fb488ccfc186fcc56ea91c30b6c0319aead5208e
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34814250"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416973"
 ---
 # <a name="set-up-android-hybrid-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>使用 System Center Configuration Manager 和 Microsoft Intune 设置 Android 混合设备管理
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*适用于：System Center Configuration Manager (Current Branch)*
 
 本文将帮助你启用混合 Android 和 Android for Work 设备的混合注册。 随后即可使用 Configuration Manger 通过配置的 Microsoft Intune 订阅来管理设备。 用户可以从 Google Play 中下载 Android 公司门户应用，以便他们可以注册 Android（包括 Samsung KNOX 标准）和 Android for Work 设备。
 
@@ -35,7 +35,7 @@ ms.locfileid: "34814250"
 3. 在“主页”选项卡上的“订阅”组中，选择“配置平台” > “Android”。  
 4. 在“Microsoft Intune 订阅属性” 对话框中，选择“Android” 选项卡并选中“启用 Android 注册” 框。 可以选择“阻止个人拥有的设备”，限制为仅注册[预声明设备](predeclare-devices-with-hardware-id.md)。
 
- 设置完成后，需要让用户知道如何注册其设备。 请参阅[用户需要了解的有关设备注册的内容](/intune/end-user-educate)。 此信息适用于 Microsoft Intune 和 Configuration Manager 托管的移动设备。
+   设置完成后，需要让用户知道如何注册其设备。 请参阅[用户需要了解的有关设备注册的内容](/intune/end-user-educate)。 此信息适用于 Microsoft Intune 和 Configuration Manager 托管的移动设备。
 
 
 
@@ -80,4 +80,4 @@ ms.locfileid: "34814250"
 - [有选择地擦除工作配置文件](/sccm/mdm/deploy-use/wipe-lock-reset-devices#selective-wipe)
 
 > [!div class="button"]
-[< 上一步](create-service-connection-point.md)  [下一步 >](set-up-additional-management.md)
+> [< 上一步](create-service-connection-point.md)  [下一步 >](set-up-additional-management.md)

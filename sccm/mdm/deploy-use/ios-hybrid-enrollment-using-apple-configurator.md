@@ -10,16 +10,16 @@ ms.assetid: 61a19d95-83ff-4ad8-9a67-f304d2ba54f2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4c3dea67cd16c8efe272038894aa4f958f4ef160
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: de83706e92150a654967ec5cf38c5b18508d4e2b
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32348974"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416905"
 ---
 # <a name="ios-hybrid-enrollment-using-apple-configurator-with-configuration-manager"></a>配合使用 Configuration Manager 和 Apple Configurator 进行的 iOS 混合注册
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*适用于：System Center Configuration Manager (Current Branch)*
 
 购买 iOS 设备供员工使用的公司可以使用Microsoft Intune 管理这些设备。 若要准备公司拥有的 iOS 设备以进行注册，请在 Configuration Manager 控制台中配置注册配置文件，然后导出供 Apple Configurator 使用的配置文件 URL。 准备 iOS 设备以进行注册，具体做法是通过 USB 线缆将设备连接到 Mac 计算机，并通过 Apple Configurator 设置该设备。 Apple Configurator 对该设备进行恢复出厂设置，并添加注册配置文件，以便用户第一次启动该设备并执行设置助理流程时便可注册该设备。
 
@@ -47,9 +47,9 @@ ms.locfileid: "32348974"
 
     -   **用户关联** - 指定设备的注册方式。 对于大部分设置助理方案，请使用“针对用户相关性进行提示”。  
 
-        -   **用户关联提示**：必须在初始设置过程中将设备与用户相关联，然后允许该用户将其用于访问公司数据和电子邮件。  
+        -   **用户关联提示**:该设备必须在初始安装过程与用户关联，然后允许其访问公司数据和该用户的电子邮件。  
 
-        -   “没有用户关联”：该设备不与用户关联。 将此隶属关系用于无需访问本地用户数据即可执行任务的设备。 需要用户关联的应用无法运行。
+        -   **无用户关联**:该设备不与用户关联。 将此隶属关系用于无需访问本地用户数据即可执行任务的设备。 需要用户关联的应用无法运行。
 
     单击 **“下一步”** 以继续。  
 
@@ -97,29 +97,29 @@ ms.locfileid: "32348974"
 > [!WARNING]  
 >  Apple Configurator 可擦除设备并将其重置为出厂设置。  
 
-1.  在 Mac 计算机上，打开“Apple Configurator 2”。  
+1. 在 Mac 计算机上，打开“Apple Configurator 2”。  
 
-2.  在菜单栏中，单击“Apple Configurator 2” > “偏好设置”。  
+2. 在菜单栏中，单击“Apple Configurator 2” > “偏好设置”。  
 
-2.  在偏好设置窗格中，选择“服务器”，然后单击左窗格下方的“+”符号，以启动 MDM 服务器向导。 单击“下一步” 。  
+3. 在偏好设置窗格中，选择“服务器”，然后单击左窗格下方的“+”符号，以启动 MDM 服务器向导。 单击“下一步” 。  
 
-3.  输入[之前](#step-3-export-the-profile-to-deploy-to-ios-devices)保存的“名称”和“注册 URL”。 单击“下一步” 。  
+4. 输入[之前](#step-3-export-the-profile-to-deploy-to-ios-devices)保存的“名称”和“注册 URL”。 单击“下一步” 。  
 
    > [!NOTE]
    > 如果收到有关 Apple TV 的信任配置文件请求的警告，可通过单击灰色的“X”安全取消“信任配置文件”选项。 也可以安全忽略任何定位证书警告。
 
    若要继续，请单击“下一步”，直到该向导完成。  
 
-4.  在“服务器”窗格中，单击新服务器的配置文件旁的"编辑"。 确保注册 URL 与之前输入的 URL 完全匹配。 如果不匹配，请重新输入 URL，并单击“保存”。  
+5. 在“服务器”窗格中，单击新服务器的配置文件旁的"编辑"。 确保注册 URL 与之前输入的 URL 完全匹配。 如果不匹配，请重新输入 URL，并单击“保存”。  
 
-5.  通过 USB 线缆将 iOS 设备连接到 Mac 计算机。  
+6. 通过 USB 线缆将 iOS 设备连接到 Mac 计算机。  
 
-  > [!WARNING]  
-  >  此过程会将设备重置为出厂配置。 连接该设备前，请重置并启动设备。 最佳做法是在继续之前设备应显示“你好”屏幕。  
+   > [!WARNING]  
+   >  此过程会将设备重置为出厂配置。 连接该设备前，请重置并启动设备。 最佳做法是在继续之前设备应显示“你好”屏幕。  
 
-6.  单击“准备”。 在“准备 iOS 设备”窗格中，选择“手动”，然后单击“下一步”。  
+7. 单击“准备”。 在“准备 iOS 设备”窗格中，选择“手动”，然后单击“下一步”。  
 
-7.  在“在 MDM 服务器中注册”窗格中，选择已创建的服务器名称，然后单击“下一步”。  
+8. 在“在 MDM 服务器中注册”窗格中，选择已创建的服务器名称，然后单击“下一步”。  
 
 9. 在“创建组织”窗格中，选择“组织”，或新建一个组织，然后单击“下一步”。  
 

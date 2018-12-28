@@ -10,16 +10,16 @@ ms.assetid: 4d3f9e6b-4d71-4fc4-9b91-47f1bfbd8c70
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cda5f01842f08ccc3e8dfbd17078fe157954d985
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: e7f5eefe532c3a0a48bc0703365bf07028bfae71
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353464"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419625"
 ---
 # <a name="add-terms-and-conditions-with-system-center-configuration-manager"></a>通过 System Center Configuration Manager 添加条款和条件
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*适用于：System Center Configuration Manager (Current Branch)*
 
 可将 System Center Configuration Manager 条款和条件部署到用户组，以解释设备如何注册、访问工作资源以及使用公司门户对设备和用户有何影响。 用户必须接受这些条款和条件，然后才能使用公司门户进行注册或访问工作。  
 
@@ -28,29 +28,29 @@ ms.locfileid: "32353464"
 
 ## <a name="to-create-a-terms-and-conditions"></a>创建条款和条件  
 
-1.  在 Configuration Manager 控制台中，转到“资产和符合性” > “概述” > “符合性设置” > “条款和条件”。  
+1. 在 Configuration Manager 控制台中，转到“资产和符合性” > “概述” > “符合性设置” > “条款和条件”。  
 
-2.  单击“创建条款和条件”  以创建新的条款和条件。  
+2. 单击“创建条款和条件”  以创建新的条款和条件。  
 
-3.  在“常规”  页面上，指定下列信息：  
+3. 在“常规”  页面上，指定下列信息：  
 
-    -   **名称** - Configuration Manager 控制台中显示的唯一名称  
+   - **名称** - Configuration Manager 控制台中显示的唯一名称  
 
-    -   **说明** - 可帮助识别 Configuration Manager 控制台中条款和条件的详细信息  
-
-     然后单击 **“下一步”**。  
-
-4.  在“条款”  页上，指定下列信息：  
-
-    -   “标题” - 公司门户中向用户显示的标题  
-
-    -   “条款文本” - 在公司门户向用户显示的条款和条件  
-
-    -   **解释用户接受条款和条件表示什么意思的文本** - 用户看到的关于接受的标签。 **示例**：“我同意这些条款和条件。”  
+   - **说明** - 可帮助识别 Configuration Manager 控制台中条款和条件的详细信息  
 
      然后单击 **“下一步”**。  
 
-5.  完成向导以创建新的条款和条件。 在“资产和符合性”工作区的“条款和条件”节点中显示的新的条款和条件。  
+4. 在“条款”  页上，指定下列信息：  
+
+   - “标题” - 公司门户中向用户显示的标题  
+
+   - “条款文本” - 在公司门户向用户显示的条款和条件  
+
+   - **解释用户接受条款和条件表示什么意思的文本** - 用户看到的关于接受的标签。 **例如**："我同意条款和条件。"  
+
+     然后单击 **“下一步”**。  
+
+5. 完成向导以创建新的条款和条件。 在“资产和符合性”工作区的“条款和条件”节点中显示的新的条款和条件。  
 
 ## <a name="to-deploy-a-terms-and-conditions"></a>部署条款和条件  
 
@@ -117,4 +117,4 @@ ms.locfileid: "32353464"
      我们建议增加版本号，并在条款和条件发生重大变更时要求用户接受。 如果修改错别字或更改格式设置，则维持当前版本号。
 
 > [!div class="button"]
-[< 上一步](configure-intune-subscription.md)  [下一步 >](create-service-connection-point.md)
+> [< 上一步](configure-intune-subscription.md)  [下一步 >](create-service-connection-point.md)

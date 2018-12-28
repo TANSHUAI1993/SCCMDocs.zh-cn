@@ -10,16 +10,16 @@ ms.assetid: 5eae4400-58ca-4c71-804c-6a585cd3df5d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9407180df12902c17f4de8e52be13229ce35c60b
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: a1357c54b0f848374ea15727bb6265f68400f88c
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32348821"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422362"
 ---
 # <a name="set-up-ios-hybrid-device-management-with-system-center-configuration-manager-and-microsoft-intune"></a>设置 iOS 混合使用 System Center Configuration Manager 和 Microsoft Intune 的设备管理
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*适用于：System Center Configuration Manager (Current Branch)*
 
 利用 Configuration Manager 和 Intune，可以启用 iOS 和 macOS 设备注册，以允许 iPhone、iPad 和 Mac 用户访问公司电子邮件和资源。 用户安装 Intune 公司门户应用后，即可向其设备应用策略。 你必须先从 Apple 导入 Apple Push Notification 服务 (APNs) 证书，然后才能管理 iOS 和 Mac 设备。 此证书允许 Intune 通过建立与 Apple 设备管理服务的连接来管理 iOS 和 Mac 设备。  
 
@@ -77,4 +77,4 @@ MDM Push Certificate 用于在管理服务、Intune 和注册的 iOS 移动设�
 3.  选择“阻止个人拥有的设备”，限制为仅注册公司拥有的设备。
 
 > [!div class="button"]
-[< 上一步](create-service-connection-point.md)  [下一步 >](set-up-additional-management.md)
+> [< 上一步](create-service-connection-point.md)  [下一步 >](set-up-additional-management.md)

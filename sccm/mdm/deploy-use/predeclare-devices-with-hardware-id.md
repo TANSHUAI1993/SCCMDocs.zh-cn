@@ -10,16 +10,16 @@ ms.assetid: ddb4c68e-e7f7-475a-89e2-7379a86e44c4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 86ef14c871f476df39923e01e47874702271a08d
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 118e9b32d691c228857fc31b2da1e9d9b72b7b58
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32348277"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53415919"
 ---
 # <a name="predeclare-devices-with-imei-or-ios-serial-numbers"></a>预声明具有 IMEI 或 iOS 序列号的设备
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*适用于：System Center Configuration Manager (Current Branch)*
 
 可通过导入公司拥有设备的国际移动设备识别 (IMEI) 码或 iOS 序列号对此类设备进行识别。 可上传包含设备 IMEI 码的逗号分隔值 (.csv) 文件，或者手动输入设备信息。  导入的信息将设置在设备列表中注册为“公司”的设备的“所有权”。 访问该服务的每位用户仍需要 Intune 许可证。  
 
@@ -30,33 +30,33 @@ ms.locfileid: "32348277"
 
 ## <a name="how-to-predeclare-corporate-owned-devices"></a>如何预声明公司拥有的设备
 
-1.  在 Configuration Manager 控制台中，转至“资产和符合性” > “概述” > “所有公司拥有的设备” > “预声明设备”。
+1. 在 Configuration Manager 控制台中，转至“资产和符合性” > “概述” > “所有公司拥有的设备” > “预声明设备”。
 
-2.  单击“创建预声明的设备”。 将打开“创建预声明设备”向导。
+2. 单击“创建预声明的设备”。 将打开“创建预声明设备”向导。
 
-3.  选择添加设备信息的方式：
+3. 选择添加设备信息的方式：
 
-     -  **上传包含 IMEI 或序列号和详细信息的 CSV 文件**
+    -  **上传包含 IMEI 或序列号和详细信息的 CSV 文件**
 
-        对于此选项，单击“浏览”，指定包含信息的 .csv 文件，以预声明公司拥有的设备。 .csv 文件格式必须正确。 有关详细信息，请参阅[上传的 .csv 文件的格式](#format-for-uploading-csv-files)。
+       对于此选项，单击“浏览”，指定包含信息的 .csv 文件，以预声明公司拥有的设备。 .csv 文件格式必须正确。 有关详细信息，请参阅[上传的 .csv 文件的格式](#format-for-uploading-csv-files)。
 
-     -  **手动添加 IMEI 或序列号和详细信息**
+    -  **手动添加 IMEI 或序列号和详细信息**
 
-        若要手动输入信息，请键入 IMEI 号码或 iOS 序列号和设备的详细信息。 在继续操作前请更正所有错误或警告。
+       若要手动输入信息，请键入 IMEI 号码或 iOS 序列号和设备的详细信息。 在继续操作前请更正所有错误或警告。
 
-    单击“下一步” 。
+   单击“下一步” 。
 
 4. 如果已上传 .csv 文件，查看文件导入的结果。 如果之前已导入设备编号，Configuration Manager 将显示这些设备和替换**详细信息**。 选择希望重写其详细信息的设备。 设备详细信息只能通过重新导入设备标识或序列号来修改。
 
-  如果选择手动输入编号，请填写要预声明的设备表单。
+   如果选择手动输入编号，请填写要预声明的设备表单。
 
-  单击 **“下一步”** 以继续。
+   单击 **“下一步”** 以继续。
 
-4. 如果列表中包含 iOS 序列号，请从提供的配置文件列表中选择“待分配的注册配置文件”，然后单击“下一步”。
+5. 如果列表中包含 iOS 序列号，请从提供的配置文件列表中选择“待分配的注册配置文件”，然后单击“下一步”。
 
-5. 单击“下一步”查看详细信息，然后再次单击“下一步”上传数据。
+6. 单击“下一步”查看详细信息，然后再次单击“下一步”上传数据。
 
-6. 单击“关闭”完成操作。
+7. 单击“关闭”完成操作。
 
 ## <a name="format-for-uploading-csv-files"></a>上传的 .csv 文件的格式
 

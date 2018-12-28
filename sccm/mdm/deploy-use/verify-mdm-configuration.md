@@ -10,16 +10,16 @@ ms.assetid: 94ecfada-97d9-4d5f-bb04-63550dda5f47
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3c2d212268c2c9b875890bfe8e0640f68b7d831e
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 2d57965a75d602b81da7b19d6732ac7db6e7abe0
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32345958"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420807"
 ---
 # <a name="verify-mdm-configuration-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 验证 MDM 配置
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*适用于：System Center Configuration Manager (Current Branch)*
 
 可以通过检查以下日志文件来验证某些设备管理组件：
 
@@ -30,4 +30,4 @@ ms.locfileid: "32345958"
 有关这些特定日志文件和查看方式的详细信息，请参阅 [System Center Configuration Manager 中的日志文件](../../core/plan-design/hierarchy/log-files.md##BKMK_FunctionLogs)。 
 
 > [!div class="button"]
-[< 上一步](set-up-additional-management.md)
+> [< 上一步](set-up-additional-management.md)

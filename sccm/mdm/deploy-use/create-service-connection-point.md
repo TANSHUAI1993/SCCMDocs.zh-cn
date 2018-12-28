@@ -10,16 +10,16 @@ ms.assetid: 617abb22-d22f-41fb-a76b-1c4259e419d2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3dfd02a84cef31c22023b7fc4cb75931dc82160f
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 12626a734138094e7558617b714b2b5acdac6450
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32346443"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424300"
 ---
 # <a name="create-a-service-connection-point-with-system-center-configuration-manager-and-microsoft-intune"></a>使用 System Center Configuration Manager 和 Microsoft Intune 创建服务连接点
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*适用于：System Center Configuration Manager (Current Branch)*
 
 创建了订阅后，你可以随后安装服务连接点站点系统角色，该角色使你能够连接到 Intune 服务。 此站点系统角色会将设置和应用程序推送到 Intune 服务。
 
@@ -37,9 +37,9 @@ ms.locfileid: "32346443"
 
 3.  使用关联的步骤将“服务连接点”  角色添加到新的或现有的站点系统服务器：
 
-    -   新站点系统服务器：在“主页”  选项卡上的“创建”  组中，单击“创建站点系统服务器”  以启动创建站点系统服务器向导。
+    -   新的站点系统服务器：上**主页**选项卡上，在**创建**组中，单击**创建站点系统服务器**以启动创建站点系统服务器向导。
 
-    -   现有站点系统服务器：单击你要在其上安装服务连接点角色的服务器。 然后，在“主页”  选项卡上的“服务器”  组中，单击“添加站点系统角色”  以启动添加站点系统角色向导。
+    -   现有站点系统服务器：单击你想要安装服务连接点角色的服务器。 然后，在“主页”  选项卡上的“服务器”  组中，单击“添加站点系统角色”  以启动添加站点系统角色向导。
 
 4.  在“系统角色选择”  页面上，选择“服务连接点” ，然后单击“下一步” 。
 ![创建服务连接点](../media/mdm-service-connection-point.png)
@@ -54,4 +54,4 @@ ms.locfileid: "32346443"
 2.  步骤 1 中的证书安装在服务连接点站点角色上，用于对与 Microsoft Intune 服务的所有进一步通信进行身份验证和授权。
 
 > [!div class="button"]
-[< 上一步](terms-and-conditions.md)  [下一步 >](enable-platform-enrollment.md)
+> [< 上一步](terms-and-conditions.md)  [下一步 >](enable-platform-enrollment.md)

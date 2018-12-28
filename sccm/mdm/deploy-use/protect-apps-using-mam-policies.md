@@ -10,16 +10,16 @@ ms.assetid: 28115475-e563-4e16-bf30-f4c9fe704754
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e410e50d05a0f190e3dfdc87df066b5ebce92321
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 35064653fc00d63a1e5ad371ce337fea9b141684
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32351160"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424732"
 ---
 # <a name="protect-apps-using-mobile-application-management-policies-in-system-center-configuration-manager"></a>使用 System Center Configuration Manager 中的移动应用程序管理策略保护应用
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*适用于：System Center Configuration Manager (Current Branch)*
 
 通过 System Center Configuration Manager 应用程序管理策略，可修改部署的应用的功能，帮助应用符合公司的合规性策略和安全策略。 例如，可限制在受限应用内进行剪切、复制和粘贴操作，或配置应用以打开托管浏览器内的所有 URL。 应用管理策略支持：  
 
@@ -30,74 +30,74 @@ ms.locfileid: "32351160"
 还可使用移动应用管理策略保护不由 Intune 管理的设备上的应用。 可使用这项新功能，将移动应用管理策略应用到连接到 Office 365 服务的应用。 此操作不支持用于连接到本地 Exchange 或 SharePoint 的应用。  
 
 若要使用这项新功能，需使用 Azure 预览门户。 下列主题可帮你入门：  
--   [在 Azure 门户中开始使用移动应用管理策略](https://technet.microsoft.com/library/mt627830.aspx)  
--   [使用 Microsoft Intune 创建和部署移动应用管理策略](https://technet.microsoft.com/library/mt627829.aspx)  
+- [在 Azure 门户中开始使用移动应用管理策略](https://technet.microsoft.com/library/mt627830.aspx)  
+- [使用 Microsoft Intune 创建和部署移动应用管理策略](https://technet.microsoft.com/library/mt627829.aspx)  
 
- 与 Configuration Manager 中的配置项目和基线不同，不会直接部署应用程序管理策略。 而是将该策略与你想要进行限制的应用程序部署类型关联。 在设备上部署并安装了应用部署类型后，指定的设置将生效。  
+  与 Configuration Manager 中的配置项目和基线不同，不会直接部署应用程序管理策略。 而是将该策略与你想要进行限制的应用程序部署类型关联。 在设备上部署并安装了应用部署类型后，指定的设置将生效。  
 
 若要将限制应用到应用，该应用必须结合 Microsoft Intune 应用软件开发工具包 (SDK)。 有两种方式获得此类应用：  
 
--   **使用策略托管应用**（Android 和 iOS）：这些应用内置了App SDK。 要添加此类型的应用，你可以从 iTunes 应用商店或 Google Play 等应用商店指定应用的链接。 对于此类应用，无需进一步的处理。 有关可用于 iOS 和 Android 设备的策略托管应用的列表，请参阅 [Managed apps for Microsoft Intune mobile application management policies](https://technet.microsoft.com/library/dn708489.aspx)（Microsoft Intune 移动应用程序管理策略的托管应用）。  
+-   **使用策略托管的应用**（Android 和 iOS）：这些应用具有内置了 App SDK。 要添加此类型的应用，你可以从 iTunes 应用商店或 Google Play 等应用商店指定应用的链接。 对于此类应用，无需进一步的处理。 有关可用于 iOS 和 Android 设备的策略托管应用的列表，请参阅 [Managed apps for Microsoft Intune mobile application management policies](https://technet.microsoft.com/library/dn708489.aspx)（Microsoft Intune 移动应用程序管理策略的托管应用）。  
 
--   **使用“已包装的”应用**（Android 和 iOS）：使用 **Microsoft Intune 应用包装工具**重新包装这些应用，将 App SDK 包括在内。 该工具通常用于处理公司内部开发的应用。 它可用于处理从应用商店下载的应用。 有关详细信息，请参阅下列文章：
+-   **使用"包装"应用**（Android 和 iOS）：这些应用进行重新封装，以使用将应用 SDK **Microsoft Intune 应用包装工具**。 该工具通常用于处理公司内部开发的应用。 它可用于处理从应用商店下载的应用。 有关详细信息，请参阅下列文章：
     - [使用 Microsoft Intune 应用包装工具为移动应用程序管理准备 iOS 应用](https://technet.microsoft.com/library/dn878028.aspx)
 
     - [使用 Microsoft Intune 应用包装工具为移动应用程序管理准备 Android 应用](https://technet.microsoft.com/library/mt147413.aspx)  
 
 ## <a name="create-and-deploy-an-app-with-a-mobile-application-management-policy"></a>创建和部署具有移动应用程序管理策略的应用  
 
-##  <a name="step-1-obtain-the-link-to-a-policy-managed-app-or-create-a-wrapped-app"></a>步骤 1：获取指向策略托管应用的链接，或创建已包装的应用  
+##  <a name="step-1-obtain-the-link-to-a-policy-managed-app-or-create-a-wrapped-app"></a>步骤 1:获取指向策略托管应用的链接或创建已包装的应用  
 
--   **获取策略托管应用的链接**：从应用商店查找并记录要部署的策略托管应用的 URL。  
+-   **获取指向策略托管应用**:从应用商店查找并记录你想要部署的策略托管应用的 URL。  
 
      例如，Microsoft Word for iPad 应用的 URL 是 https://itunes.apple.com/us/app/microsoft-word-for-ipad/id586447913?mt=8  
 
--   **创建包装的应用** - 使用主题[使用 Microsoft Intune 应用包装工具为移动应用程序管理准备 iOS 应用](https://technet.microsoft.com/library/dn878028.aspx)和[使用 Microsoft Intune 应用包装工具为移动应用程序管理准备 Android 应用](https://technet.microsoft.com/library/mt147413.aspx)中的信息创建包装的应用。  
+-   **若要创建已包装的应用**:使用主题中的信息[使用 Microsoft Intune 应用包装工具为移动应用管理准备 iOS 应用](https://technet.microsoft.com/library/dn878028.aspx)和[为使用 Microsoft Intune 的移动应用程序管理准备 Android 应用应用包装工具](https://technet.microsoft.com/library/mt147413.aspx)创建已包装的应用。  
 
      创建处理过的应用和关联的清单文件的工具。 创建包含该应用的 Configuration Manager 应用程序时，使用这些文件。  
 
-##  <a name="step-2-create-a-configuration-manager-application-that-contains-an-app"></a>步骤 2：创建包含应用的 Configuration Manager 应用程序  
+##  <a name="step-2-create-a-configuration-manager-application-that-contains-an-app"></a>步骤 2:创建包含应用的 Configuration Manager 应用程序  
  创建 Configuration Manager 应用程序的过程有所不同，具体取决于使用的是策略托管应用（外部链接）还是通过适用于 iOS 的 Microsoft Intune 应用包装工具（iOS 应用包）创建的应用。 使用以下过程之一创建 Configuration Manager 应用程序。  
 
-1.  在 Configuration Manager 控制台中，选择“软件库” > “应用程序管理” > “应用程序”。  
+1. 在 Configuration Manager 控制台中，选择“软件库” > “应用程序管理” > “应用程序”。  
 
-3.  在“主页”选项卡上的“创建”组中，选择“创建应用程序”，打开“创建应用程序”向导。  
+2. 在“主页”选项卡上的“创建”组中，选择“创建应用程序”，打开“创建应用程序”向导。  
 
-4.  在“常规”  页上，选择“自动检测安装文件中有关此应用程序的信息” 。  
+3. 在“常规”  页上，选择“自动检测安装文件中有关此应用程序的信息” 。  
 
-5.  在“类型”下拉列表中，选择“iOS 应用包(\*.ipa 文件)”。**  
+4. 在“类型”下拉列表中，选择“iOS 应用包(\*.ipa 文件)”。**  
 
-6.  选择“浏览”，选择要导入的应用包，然后选择“下一步”。  
+5. 选择“浏览”，选择要导入的应用包，然后选择“下一步”。  
 
-7.  在“常规信息”  页上，输入希望用户在公司门户中看到的描述性文本和类别信息。  
+6. 在“常规信息”  页上，输入希望用户在公司门户中看到的描述性文本和类别信息。  
 
-8.  完成向导。  
+7. 完成向导。  
 
- 新应用程序会显示在“软件库”  工作区的“应用程序”  节点中。  
+   新应用程序会显示在“软件库”  工作区的“应用程序”  节点中。  
 
 ### <a name="create-an-application-that-contains-a-link-to-a-policy-managed-app"></a>创建包含策略托管应用链接的应用程序  
 
-1.  在 Configuration Manager 控制台中，选择“软件库” > “应用程序管理” > “应用程序”。  
+1. 在 Configuration Manager 控制台中，选择“软件库” > “应用程序管理” > “应用程序”。  
 
-3.  在“主页”选项卡上的“创建”组中，选择“创建应用程序”，打开“创建应用程序”向导。  
+2. 在“主页”选项卡上的“创建”组中，选择“创建应用程序”，打开“创建应用程序”向导。  
 
-4.  在“常规”  页上，选择“自动检测安装文件中有关此应用程序的信息” 。  
+3. 在“常规”  页上，选择“自动检测安装文件中有关此应用程序的信息” 。  
 
-5.  在“类型”  下拉列表中，选择以下一项：  
+4. 在“类型”  下拉列表中，选择以下一项：  
 
-    -   对于 iOS： **应用商店中的 iOS 应用包**  
+   -   对于 iOS:**App Store 中的 iOS 应用包**  
 
-    -   对于 Android： **Google Play 上的 Android 应用包**  
+   -   对于 Android:**Google Play 上的 Android 应用包**  
 
-6.  输入应用的 URL（来自步骤 1），然后选择“下一步”。  
+5. 输入应用的 URL（来自步骤 1），然后选择“下一步”。  
 
-7.  在“常规信息”  页上，输入希望用户在公司门户中看到的描述性文本和类别信息。  
+6. 在“常规信息”  页上，输入希望用户在公司门户中看到的描述性文本和类别信息。  
 
-8.  完成向导。  
+7. 完成向导。  
 
- 新应用程序会显示在“软件库”  工作区的“应用程序”  节点中。  
+   新应用程序会显示在“软件库”  工作区的“应用程序”  节点中。  
 
-##  <a name="step-3-create-an-application-management-policy"></a>步骤 3：创建应用程序管理策略  
+##  <a name="step-3-create-an-application-management-policy"></a>步骤 3:创建应用程序管理策略  
  接下来，创建一个与该应用程序关联的应用程序管理策略。 可以创建一个常规或托管浏览器策略。  
 
 1)  在 Configuration Manager 控制台中，选择“软件库” > “应用程序管理” > “应用程序管理策略”。  
@@ -108,9 +108,9 @@ ms.locfileid: "32351160"
 
 4)  在“策略类型”页上，选择此策略的平台和策略类型，然后选择“下一步”。 可以使用下列策略类型：  
 
--   **常规**：通过“常规”策略类型可修改所部署应用的功能，帮助其符合公司的合规性和安全策略。 例如，可以限制受限应用中的剪切、复制和粘贴操作。  
+-   **常规**:常规策略类型可让你修改你部署以帮助其符合公司的合规性和安全策略的应用程序的功能。 例如，可以限制受限应用中的剪切、复制和粘贴操作。  
 
--   **托管浏览器**：通过“托管浏览器”策略可确定允许或阻止托管浏览器打开 URL 列表。 “托管浏览器”策略类型可让你修改 Intune 托管浏览器应用的功能。 这是一个 Web 浏览器，可让你管理用户可以执行的操作（包括他们可以访问的站点）以及打开指向浏览器中内容的链接的方式。 详细了解  [适用于 iOS 的 Intune 托管浏览器应用](https://itunes.apple.com/us/app/microsoft-intune-managed-browser/id943264951?mt=8) 和 [适用于 Android 的 Intune 托管浏览器应用](https://play.google.com/store/apps/details?id=com.microsoft.intune.mam.managedbrowser&hl=en)。
+-   **托管浏览器**:托管浏览器策略，可以决定是允许还是阻止托管浏览器打开 Url 列表。 “托管浏览器”策略类型可让你修改 Intune 托管浏览器应用的功能。 这是一个 Web 浏览器，可让你管理用户可以执行的操作（包括他们可以访问的站点）以及打开指向浏览器中内容的链接的方式。 详细了解  [适用于 iOS 的 Intune 托管浏览器应用](https://itunes.apple.com/us/app/microsoft-intune-managed-browser/id943264951?mt=8) 和 [适用于 Android 的 Intune 托管浏览器应用](https://play.google.com/store/apps/details?id=com.microsoft.intune.mam.managedbrowser&hl=en)。
 
 5)  在“iOS 策略”或“Android 策略”页上，按需配置以下值，然后选择“下一步”。 该选项可能有所差异，这取决于你配置策略的设备类型。  
 
@@ -139,7 +139,7 @@ ms.locfileid: "32351160"
 
  新策略显示在“软件库”  工作区的“应用程序管理策略”  节点中。  
 
-##  <a name="step-4-associate-the-application-management-policy-with-a-deployment-type"></a>步骤 4：将应用程序管理策略与部署类型相关联  
+##  <a name="step-4-associate-the-application-management-policy-with-a-deployment-type"></a>步骤 4:将应用程序管理策略与部署类型相关联  
 
  为需要应用程序管理策略的应用创建部署类型后，Configuration Manager 会对其进行识别，并提示用户关联应用管理策略。 对于托管浏览器，将需要关联“常规”和“托管浏览器”策略。 有关详细信息，请参阅[创建应用程序](create-applications.md)。  
 
@@ -151,16 +151,16 @@ ms.locfileid: "32351160"
 >   
 >  如果从 Configuration Manager 取消注册设备，则策略不会从应用中删除。 应用了策略的应用会保留策略设置，甚至在卸载并重新安装了该应用后也是如此。  
 
-##  <a name="step-5-monitor-the-app-deployment"></a>步骤 5：监视应用部署  
+##  <a name="step-5-monitor-the-app-deployment"></a>步骤 5:监视应用部署  
  创建并部署关联移动应用程序管理策略的应用后，可监视应用并解决任何策略冲突问题。  
 
-1.  在 Configuration Manager 控制台中，选择“软件库” > “概述” > “部署”。  
+1. 在 Configuration Manager 控制台中，选择“软件库” > “概述” > “部署”。  
 
-3.  选择创建的部署。 然后，在“主页”选项卡上，选择“属性”。  
+2. 选择创建的部署。 然后，在“主页”选项卡上，选择“属性”。  
 
-4.  在部署的详细信息窗格中的“相关对象”下，选择“应用程序的管理策略”。  
+3. 在部署的详细信息窗格中的“相关对象”下，选择“应用程序的管理策略”。  
 
- 有关监视应用程序的详细信息，请参阅[监视应用程序](/sccm/apps/deploy-use/monitor-applications-from-the-console)。  
+   有关监视应用程序的详细信息，请参阅[监视应用程序](/sccm/apps/deploy-use/monitor-applications-from-the-console)。  
 
 ##  <a name="learn-how-policy-conflicts-are-resolved"></a>了解如何解决策略冲突  
  如果在第一次部署到用户或设备时出现移动应用管理策略冲突，则会从部署到应用的策略中删除处于冲突的特定设置值。 然后应用将使用内置冲突值。  
