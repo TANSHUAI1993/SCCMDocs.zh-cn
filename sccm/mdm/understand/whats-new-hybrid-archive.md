@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 19044a9fb7f53ca540bccd324f711b60e0ad91c4
-ms.sourcegitcommit: 9cff0702c2cc0f214173b47ec241f7e5a40f84e6
-ms.translationtype: HT
+ms.openlocfilehash: 172ca284a5a030682e01d9be63031180d7175421
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34747793"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53423195"
 ---
 # <a name="past-hybrid-features-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager 和 Microsoft Intune 过去的混合功能
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*适用于：System Center Configuration Manager (Current Branch)*
 
 本文提供有关 System Center Configuration Manager 和 Microsoft Intune 的混合部署过去可用的移动设备管理 (MDM) 功能的详细信息。  
 
@@ -66,11 +66,11 @@ ms.locfileid: "34747793"
 - **Android 适用的公司门户应用的最新用户体验**  
   Android 适用的公司门户应用的用户界面具有更新式的外观。 值得注意的更新有：
 
-  - 颜色：“公司门户”选项卡的颜色与 IT 定义的品牌颜色相同。
-  - 应用：在“应用”选项卡中，更新了“特色应用”和“所有应用”按钮。
-  - 搜索：在“应用”选项卡中，“搜索”按钮是浮动的操作按钮。
-  - 导航应用：“所有应用”视图以选项卡形式呈现出“特色”、“所有”和“分类”视图，便于导航。
-  - 支持：更新了“我的设备”和“联系 IT”选项卡，以改善可读性。
+  - 颜色：公司门户选项卡标头以 IT 定义的品牌。
+  - 应用程序：在**应用程序**选项卡上，**特别推荐的应用**并**的所有应用**按钮进行更新。
+  - 搜索：在中**应用程序**选项卡上，**搜索**按钮是浮动的操作按钮。
+  - 导航应用：**所有应用**视图显示的选项卡式的视图**特色**，**所有**，并且**类别**以便更易于导航。
+  - 支持：**我的设备**并**联系 IT**选项卡会更新，以提高可读性。
 
   有关这些更改的详细信息，请参阅 [Intune 最终用户应用的 UI 更新](https://docs.microsoft.com/intune/whats-new-app-ui)。
 
@@ -78,7 +78,7 @@ ms.locfileid: "34747793"
   如果需要下载和旁加载 Windows 10 公司门户应用，现在可以使用脚本为你的组织简化应用签名过程。 若要下载该脚本及其使用说明，请参阅 TechNet 库中的 [Microsoft Intune Signing Script for Windows 10 Company Portal](https://aka.ms/win10cpscript)（Windows 10 公司门户适用的 Microsoft Intune 签名脚本）。 有关此公告的详细信息，请参阅 Intune 支持团队博客上的[更新 Windows 10 公司门户应用](https://blogs.technet.microsoft.com/intunesupport/2017/03/13/updating-your-windows-10-company-portal-app/)。
 
 - **改进了对中国的 Android 用户的支持**  
-  由于中国地区没有 Google Play 商店，Android 设备必须从中国的应用商店获取应用。 公司门户支持此工作流。 它可重定向中国的 Android 用户，以便从本地应用商店下载公司门户和 Outlook 应用。 启用条件访问策略后，此行为将同时提升有关移动设备管理和移动应用程序管理的用户体验。 以下中文应用商店可以提供 Android 适用的公司门户和 Outlook 应用：
+  由于中国地区没有 Google Play 商店，Android 设备必须从中国市场获取应用。 公司门户支持此工作流。 它可重定向中国的 Android 用户，以便从本地应用商店下载公司门户和 Outlook 应用。 启用条件访问策略后，此行为将同时提升有关移动设备管理和移动应用程序管理的用户体验。 以下中文应用商店可以提供 Android 适用的公司门户和 Outlook 应用：
 
   - [百度](https://go.microsoft.com/fwlink/?linkid=836946)
   - [小米](https://go.microsoft.com/fwlink/?linkid=836947)
@@ -207,7 +207,7 @@ Configuration Manager (Current Branch) 1702 版本中还包括以下其他混合
 
 - **注册移动到 Azure 门户时的多重身份验证**
 
-  以前，你会转到 Intune 控制台或 Configuration Manager 控制台，以设置 MFA 用于 Intune 注册。 通过此更新的功能，现在可使用 Intune凭据登录 [Microsoft Azure 门户] (https://manage.windowsazure.com))，并通过 Azure AD 配置 MFA 设置。 若要了解详细信息，请参阅 [Microsoft Intune 的多重身份验证] (https://aka.ms/mfa_ad))。
+  以前，你会转到 Intune 控制台或 Configuration Manager 控制台，以设置 MFA 用于 Intune 注册。 通过此更新的功能，您现在登录到[Microsoft Azure 门户](https://manage.windowsazure.com)使用 Intune 凭据和通过 Azure AD 配置 MFA 设置。 若要了解详细信息，请参阅 [Microsoft Intune 的多重身份验证](https://aka.ms/mfa_ad)。
 
 - **Android 版公司门户应用现已在中国推出**
 
@@ -291,7 +291,7 @@ Configuration Manager (Current Branch) 1610 版本中还包括以下其他混合
 
   可以限制对 Exchange Online 的访问，以便仅访问支持 Intune 移动应用程序管理策略的应用，如 Outlook。 [这一新增功能](/intune/deploy-use/allow-policy-managed-apps-access-to-o365)可与 Intune 移动应用管理 (MAM) 策略完美结合使用，用户可以阻止对未使用 Intune MAM 策略配置的内置邮件客户端或其他应用的访问。 这可确保你的用户使用通过 Intune MAM 进行保护的应用访问组织的数据。 可通过 Azure 门户使用 Intune 移动应用管理。 查找“设置”边栏选项卡中的条件性访问部分。
 
--   **Intune App Wrapping Tool for Android**
+- **Intune App Wrapping Tool for Android**
 
   通过使用 Intune App Wrapping Tool，应用将可以使用 Intune 移动应用程序管理 (MAM) 策略。
 
@@ -429,7 +429,7 @@ Configuration Manager Technical Preview 1609 的 2016 年 9 月版本中引入�
 
   使用条件性访问时，Windows 8.1、Windows 10 桌面版和 Windows 10 移动版的注册步骤已在公司门户网站中阐明。 用户现在可以看到单独的“设备注册”和“工作区加入”步骤，如果他们遇到了“工作区加入(WPJ)”失败，便可更轻易地看到设备的状态并完成此过程。 这些步骤还有望简化 IT 管理员的故障排除过程。 以前，当最终用户尝试注册并成功完成 WPJ 以外的所有步骤时，已注册的设备将不会出现在设备列表中供用户识别，导致用户困惑。
 
- - **Windows 10 设备中现已提供完全擦除功能**
+  - **Windows 10 设备中现已提供完全擦除功能**
 
     可以擦除注册为移动设备的 Windows 10 电脑和笔记本，目的是将设备重置为出厂设置。 有关详细信息，请参阅[如何使用远程擦除保护设备](/sccm/mdm/deploy-use/wipe-lock-reset)。
 
@@ -536,7 +536,7 @@ Configuration Manager Technical Preview 1609 的 2016 年 9 月版本中引入�
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能  
  2016 年 5 月推出的以下 Intune 功能适用于混合部署。
 
-- **MAM SDK：支持 PIN 长度配置**
+- **MAM SDK:支持 PIN 长度配置**
 
   与设备 PIN 类似，现在可指定 MAM 应用的 PIN 长度。 这要求最终用户符合所设置的新限制。 同时，对 PIN 屏幕稍微进行了修改，以满足较长输入的需要。 有关详细信息，请参阅[适用于 Android 的 MAM 策略设置](https://docs.microsoft.com/intune/deploy-use/android-mam-policy-settings)和[适用于 iOS 的 MAM 策略设置](https://docs.microsoft.com/intune/deploy-use/ios-mam-policy-settings)。  
 
@@ -548,11 +548,11 @@ Configuration Manager Technical Preview 1609 的 2016 年 9 月版本中引入�
 
   适用于 Android 的 Microsoft Word、Excel 和 PowerPoint 应用现在可与未注册 Intune 的设备上的 MAM 策略相关联。 有关受支持应用的完整列表，请转到 [Microsoft Intune 应用程序合作伙伴](https://www.microsoft.com/en-us/server-cloud/products/microsoft-intune/partners.aspx)页面上的 Microsoft Intune 移动应用程序库。  
 
-- **Android 公司门户应用：最终用户 Toast 通知**
+- **Android 公司门户应用：最终用户 toast 通知**
 
   最终用户在公司门户中注册设备或从中删除设备时，会显示来自 Android 公司门户应用的 Toast 通知。  
 
-- **公司门户网站：设备标识横幅将为最终用户提供更多信息**
+- **公司门户网站：设备标识横幅将向最终用户提供的详细信息**
 
   现在当最终用户使用公司门户网站时，可以更轻松地识别其所选的设备。 如果选择了错误的设备，可以通过点击主页横幅中的“点击此处”链接选择正确设备。  
 
@@ -670,7 +670,7 @@ Configuration Manager Technical Preview 1609 的 2016 年 9 月版本中引入�
 
 - **充分利用 iOS“Open-in”管理对在第三方 MDM 解决方案中注册的设备进行管理**
 
-  可以使用第三方移动设备管理 (MDM) 供应商以充分利用 iOS“Open-In”管理。 可在配置文件设置中设置限制，并使用 MDM 软件部署应用。 当用户安装托管应用时，会应用限制。 请阅读 Intune 库中相关的详细信息：[Microsoft Intune 移动应用管理策略和 iOS Open In](/intune/deploy-use/introduction-to-device-compliance-policies-in-microsoft-intune)。  
+  可以使用第三方移动设备管理 (MDM) 供应商以充分利用 iOS“Open-In”管理。 可在配置文件设置中设置限制，并使用 MDM 软件部署应用。 当用户安装托管应用时，会应用限制。 阅读详细信息：[Microsoft Intune 移动应用管理策略和 iOS Open In](/intune/deploy-use/introduction-to-device-compliance-policies-in-microsoft-intune) Intune 库中。  
 
 - **支持 MAM 的 Microsoft 应用**
 
@@ -731,7 +731,7 @@ Configuration Manager Technical Preview 1609 的 2016 年 9 月版本中引入�
 
 ## <a name="notices"></a>通知
 
-### <a name="system-center-2012-configuration-sp1-and-system-center-2012-r2-configuration-manager-rtm-support-for-hybrid-mobile-device-management-ending-on-april-10-2017"></a>System Center 2012 Configuration SP1 和 System Center 2012 R2 Configuration Manager (RTM)：对混合移动设备管理的支持将于 2017 年 4 月 10 日终止
+### <a name="system-center-2012-configuration-sp1-and-system-center-2012-r2-configuration-manager-rtm-support-for-hybrid-mobile-device-management-ending-on-april-10-2017"></a>System Center 2012 Configuration SP1 和 System Center 2012 R2 Configuration Manager (RTM):2017 年 4 月 10 日结束的混合移动设备管理的支持
 2017 年 1 月 11 日
 
 对 System Center 2012 Configuration Manager SP1 和 System Center 2012 R2 Configuration Manager RTM 的支持已于 2016 年 7 月 12 日终止。 随后，对与混合 MDM 的 Microsoft Intune 服务关联的这些版本的支持将于 2017 年 4 月 10 日终止。 在此之后，混合 MDM 将停止运行这些版本。 托管设备实质上将成为非托管设备，因为 Intune 连接器将无法再连接到 Intune 服务。 在升级发生前，Configuration Manager 数据（如策略和应用程序）将不会向上流入 Intune，托管设备数据将不会向下流入 Configuration Manager。
