@@ -10,12 +10,12 @@ ms.assetid: 14226fbe-dd07-4432-910b-130790624a4e
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: bdb48689efba4c6f884d4c36c1a4dee0bbcc6b65
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 319721e18c6571949cf3b1a9d864d9c601f29e39
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334668"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424198"
 ---
 # <a name="how-to-create-configuration-items-for-windows-10-devices-managed-with-the-system-center-configuration-manager-client"></a>如何为使用 System Center Configuration Manager 客户端管理的 Windows 10 设备创建配置项目
 使用 System Center Configuration Manager **Windows 10** 配置项目管理由 Configuration Manager 客户端管理的 Windows 10 计算机的设置。  
@@ -27,24 +27,24 @@ ms.locfileid: "32334668"
   
 ### <a name="to-create-a-windows-10-configuration-item"></a>创建 Windows 10 配置项目  
   
-1.  在 Configuration Manager 控制台中，单击“资产和符合性”。  
+1. 在 Configuration Manager 控制台中，单击“资产和符合性”。  
   
-2.  在“资产和符合性”  工作区中，展开“符合性设置” ，然后单击“配置项目” 。  
+2. 在“资产和符合性”  工作区中，展开“符合性设置” ，然后单击“配置项目” 。  
   
-3.  在“主页”  选项卡上的“创建”  组中，单击“创建配置项目” 。  
+3. 在“主页”  选项卡上的“创建”  组中，单击“创建配置项目” 。  
   
-4.  在“创建配置项目向导”  的“常规” 页面上，指定配置项目的名称和可选描述。  
+4. 在“创建配置项目向导”  的“常规” 页面上，指定配置项目的名称和可选描述。  
   
-5.  在“指定要创建的配置项目的类型” 下，选择“Windows 10” 。  
+5. 在“指定要创建的配置项目的类型” 下，选择“Windows 10” 。  
   
-6.  如果创建并分配类别以帮助在 Configuration Manager 控制台中搜索和筛选配置项目，请单击“类别”。  
+6. 如果创建并分配类别以帮助在 Configuration Manager 控制台中搜索和筛选配置项目，请单击“类别”。  
   
-7.  在向导的“支持的平台”  页上，选择将评估配置项目的特定 Windows 10 平台。  
+7. 在向导的“支持的平台”  页上，选择将评估配置项目的特定 Windows 10 平台。  
   
-8.  在向导的“设备设置”  页面上，选择要配置的设置组。 请参阅本主题中的 [Windows 10 configuration item settings reference](#BKMK_Ref) 以了解详细信息，然后单击“下一步” 。  
+8. 在向导的“设备设置”  页面上，选择要配置的设置组。 请参阅本主题中的 [Windows 10 configuration item settings reference](#BKMK_Ref) 以了解详细信息，然后单击“下一步” 。  
   
-    > [!TIP]  
-    >  如果所需设置未列出，请选中“配置默认设置组以外的其他设置” 复选框。  
+   > [!TIP]  
+   >  如果所需设置未列出，请选中“配置默认设置组以外的其他设置” 复选框。  
   
 9. 在每个设置页面上，配置所需设置，以及是否要在它们在设备上不符合要求时修正它们（如果支持这样做）。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "32334668"
   
 12. 完成向导。  
   
- 可以在“资产和符合性”  工作区的“配置项目”  节点中查看新配置项目。  
+    可以在“资产和符合性”  工作区的“配置项目”  节点中查看新配置项目。  
   
 ##  <a name="windows-10-configuration-item-settings-reference"></a>Windows 10 配置项目设置参考  
   
