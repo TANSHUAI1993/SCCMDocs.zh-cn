@@ -10,16 +10,16 @@ ms.assetid: 8ca970dd-e71c-404f-9435-d36e773a0db2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7ff6d885ca635e15c62eddcdfa06abdc1a09cdf8
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 2d51774688b80faf808653cde77aa3b651ea210c
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456594"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422583"
 ---
 # <a name="upgrade-on-premises-infrastructure-that-supports-configuration-manager"></a>升级支持 Configuration Manager 的本地基础结构
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*适用于：System Center Configuration Manager (Current Branch)*
 
 使用本文中的信息来帮助升级运行 Configuration Manager 的服务器基础结构。  
 
@@ -55,7 +55,7 @@ Configuration Manager 在以下情况中支持托管站点服务器和任何站�
 
 - [适用于 Windows Server 2016 的升级和转换选项](https://docs.microsoft.com/windows-server/get-started/supported-upgrade-paths)  
 
-- [适用于 Windows Server 2012 R2 的升级选项](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416\(v=ws.11))   
+- [Windows Server 2012 R2 的升级选项](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303416(v=ws.11))   
 
 
 ### <a name="bkmk_2016-2019"></a>升级到 Windows Server 2016 或 2019
@@ -130,7 +130,7 @@ Configuration Manager 在以下情况中支持托管站点服务器和任何站�
 #### <a name="before-upgrade"></a>升级之前  
 - 在 Windows Server 2012 上：如果安装了 WSUS 角色，请将它从服务器中删除。 可以保留 SUSDB，并在重新安装 WSUS 后将其重新附加。  
 
-- 在 Windows Server 2008 R2 上：升级到 Windows Server 2012 R2 之前，必须从服务器中卸载 WSUS 3.2。 可以保留 SUSDB，并在重新安装 WSUS 后将其重新附加。 有关详细信息，请参阅 [Windows Server Update Services 概述](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852345\(v=ws.11)#new-and-changed-functionality)。  
+- 在 Windows Server 2008 R2 上：升级到 Windows Server 2012 R2 之前，必须从服务器中卸载 WSUS 3.2。 可以保留 SUSDB，并在重新安装 WSUS 后将其重新附加。 有关详细信息，请参阅 [Windows Server 更新服务概述](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh852345(v=ws.11)#new-and-changed-functionality)。  
 
 #### <a name="after-upgrade"></a>升级之后  
 - 升级过程将禁用 Windows 部署服务。 确保此服务已启动并且正在针对以下站点系统角色运行：  

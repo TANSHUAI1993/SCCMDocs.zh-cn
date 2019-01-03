@@ -4,12 +4,12 @@ hide_bc: true
 title: System Center Configuration Manager 文档
 description: 了解如何使用 System Center Configuration Manager。
 ms.topic: hub-page
-ms.openlocfilehash: 9900d36ba6aae6dff5b5bbc99e6a83e6742abee2
-ms.sourcegitcommit: a4482cbc1496ddc0965fe518fa6c38e6d1ccf813
+ms.openlocfilehash: f3f22bd918fd0f87792781b16648487fcd6fd19d
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46014833"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53414899"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -998,7 +998,7 @@ ms.locfileid: "46014833"
                                             </div>
                                             <div class="cardText">
                                                 <h3>#Twitter 上的 ConfigMgr</h3>
-                                                <p>阅读有关 Configuration Manager 的最新推文。 </p>
+                                                <p>阅读有关 Configuration Manager 的最新推文。 </p>
                                             </div>
                                         </div>
                                     </div>

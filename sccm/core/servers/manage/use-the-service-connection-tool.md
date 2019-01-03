@@ -10,16 +10,16 @@ ms.assetid: 6e4964c5-43cb-4372-9a89-b62ae6a4775c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e88d40317fe0c1385d78ab7b5919f0f766254598
-ms.sourcegitcommit: 303d826f45c8fd9a05d8883afc1ca645e56bd576
+ms.openlocfilehash: 96f816e20d31315e2eaf63b5bf4a14376f3c9261
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269206"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417891"
 ---
 # <a name="use-the-service-connection-tool-for-system-center-configuration-manager"></a>使用适用于 System Center Configuration Manager 的服务连接工具
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*适用于：System Center Configuration Manager (Current Branch)*
 
 当服务连接点处于脱机模式，或当 Configuration Manager 站点系统服务器未连接到 Internet 时，请使用**服务连接工具**。 该工具有助于随时更新网站的 Configuration Manager 最新更新。  
 
@@ -63,7 +63,7 @@ ms.locfileid: "51269206"
 
 -   包含从你的站点导出的数据的 .cab 文件的名称：**UsageData.cab**  
 
--   用于存储 Configuration Manager 的已下载更新以在服务器之间进行传输的空文件夹的名称： **UpdatePacks**  
+-   用于存储 Configuration Manager 的已下载更新以在服务器之间进行传输的空文件夹的名称：**UpdatePacks**  
 
 在承载服务连接点的计算机上：  
 
@@ -121,51 +121,51 @@ ms.locfileid: "51269206"
 
 ### <a name="to-use-the-service-connection-tool"></a>若要使用服务连接点工具  
 
-1.  在承载服务连接点的计算机上：  
+1. 在承载服务连接点的计算机上：  
 
-    -   使用管理特权打开命令提示符，然后将目录更改为包含 **serviceconnectiontool.exe**的位置。   
+   -   使用管理特权打开命令提示符，然后将目录更改为包含 **serviceconnectiontool.exe**的位置。   
 
-2.  运行以下命令以使工具准备包含使用情况信息的 .cab 文件并将其复制到指定的位置：  
+2. 运行以下命令以使工具准备包含使用情况信息的 .cab 文件并将其复制到指定的位置：  
 
-    -   **serviceconnectiontool.exe -prepare -usagedatadest D:\USB\UsageData.cab**  
+   -   **serviceconnectiontool.exe -prepare -usagedatadest D:\USB\UsageData.cab**  
 
-    如果同时上传多个层次结构中的 .cab 文件，则文件夹中的每个 .cab 文件的必须具有一个唯一的名称。 你可以手动重命名添加到该文件夹的文件。
+   如果同时上传多个层次结构中的 .cab 文件，则文件夹中的每个 .cab 文件的必须具有一个唯一的名称。 你可以手动重命名添加到该文件夹的文件。
 
-    如果你想要查看收集并上传到 Configuration Manager 云服务的使用情况信息，请运行以下命令将相同的数据以 .csv 文件导出，然后可以使用像 Excel 之类的应用程序查看该文件：  
+   如果你想要查看收集并上传到 Configuration Manager 云服务的使用情况信息，请运行以下命令将相同的数据以 .csv 文件导出，然后可以使用像 Excel 之类的应用程序查看该文件：  
 
-    -   **serviceconnectiontool.exe -export -dest D:\USB\UsageData.csv**  
+   -   **serviceconnectiontool.exe -export -dest D:\USB\UsageData.csv**  
 
-3.  完成准备步骤后，将 U 盘移动到（或通过另一种方法将导出的数据传输到）有权访问 Internet 的计算机。  
+3. 完成准备步骤后，将 U 盘移动到（或通过另一种方法将导出的数据传输到）有权访问 Internet 的计算机。  
 
-4.  在可访问 Internet 的计算机上，使用管理特权打开命令提示符，然后将目录更改为包含工具  **serviceconnectiontool.exe** 的副本以及该文件夹中其他文件的位置。  
+4. 在可访问 Internet 的计算机上，使用管理特权打开命令提示符，然后将目录更改为包含工具  **serviceconnectiontool.exe** 的副本以及该文件夹中其他文件的位置。  
 
-5.  运行以下命令以开始上载使用情况信息和下载 Configuration Manager 更新：  
+5. 运行以下命令以开始上载使用情况信息和下载 Configuration Manager 更新：  
 
-    -   **serviceconnectiontool.exe -connect -usagedatasrc D:\USB -updatepackdest D:\USB\UpdatePacks**
+   -   **serviceconnectiontool.exe -connect -usagedatasrc D:\USB -updatepackdest D:\USB\UpdatePacks**
 
-    有关此命令行的更多示例，请参阅本主题后的[命令行选项](../../../core/servers/manage/use-the-service-connection-tool.md#bkmk_cmd)部分。
+   有关此命令行的更多示例，请参阅本主题后的[命令行选项](../../../core/servers/manage/use-the-service-connection-tool.md#bkmk_cmd)部分。
 
-    > [!NOTE]  
-    >  运行该命令行以连接到 Configuration Manager 云服务时，可能会发生如下错误：  
-    >   
-    >  -   未经处理的异常：System.UnauthorizedAccessException：  
-    >   
-    >      对路径“C:\  
-    >     Users\br\AppData\Local\Temp\extractmanifestcab\95F8A562.sql”的访问被拒绝。  
-    >   
-    > 你可以直接忽略此错误并关闭错误窗口，然后继续。  
+   > [!NOTE]  
+   >  运行该命令行以连接到 Configuration Manager 云服务时，可能会发生如下错误：  
+   >   
+   >  -   未处理的异常：System.UnauthorizedAccessException：  
+   >   
+   >      对路径“C:\  
+   >     Users\br\AppData\Local\Temp\extractmanifestcab\95F8A562.sql”的访问被拒绝。  
+   >   
+   > 你可以直接忽略此错误并关闭错误窗口，然后继续。  
 
-6.  下载完 Configuration Manager 的更新后，将 U 盘移动到（或通过另一种方法将导出的数据传输到）承载服务连接点的计算机上。  
+6. 下载完 Configuration Manager 的更新后，将 U 盘移动到（或通过另一种方法将导出的数据传输到）承载服务连接点的计算机上。  
 
-7.  在承载服务连接点的计算机上，使用管理特权打开命令提示符，将目录更改为包含 **serviceconnectiontool.exe**的位置，然后运行以下命令：  
+7. 在承载服务连接点的计算机上，使用管理特权打开命令提示符，将目录更改为包含 **serviceconnectiontool.exe**的位置，然后运行以下命令：  
 
-    -   **serviceconnectiontool.exe -import -updatepacksrc D:\USB\UpdatePacks**  
+   -   **serviceconnectiontool.exe -import -updatepacksrc D:\USB\UpdatePacks**  
 
-8.  导入完成后，可以关闭命令提示符。 （仅导入适用的层次结构的更新）。  
+8. 导入完成后，可以关闭命令提示符。 （仅导入适用的层次结构的更新）。  
 
 9. 打开 Configuration Manager 控制台并导航到“管理” > “更新和服务”。 现在即可安装之前导入的更新。 （在版本 1702 之前，“更新和服务”在“管理” > “云服务”下。）
 
- 有关安装更新的信息，请参阅[安装 System Center Configuration Manager 在控制台的更新](../../../core/servers/manage/install-in-console-updates.md)。  
+   有关安装更新的信息，请参阅[安装 System Center Configuration Manager 在控制台的更新](../../../core/servers/manage/install-in-console-updates.md)。  
 
 ## <a name="bkmk_cmd"></a> 日志文件
 

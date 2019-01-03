@@ -10,16 +10,16 @@ ms.assetid: 35e237b6-9f7b-4189-90e7-8eca92ae7d3d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 962029dc6bc5584e1edf0bd26d4be3fc280d6204
-ms.sourcegitcommit: 147aae8300831c722a559087c735df0f761b2041
+ms.openlocfilehash: 43093f38a2769c46d3d96a51afbf47f33ed38b51
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51645236"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53423790"
 ---
 # <a name="supported-sql-server-versions-for-configuration-manager"></a>Configuration Manager 支持的 SQL Server 版本
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*适用于：System Center Configuration Manager (Current Branch)*
 
 每个 System Center Configuration Manager 站点都需要受支持的 SQL Server 版本和配置来托管站点数据库。  
 
@@ -75,29 +75,29 @@ SQL Server 事务复制仅支持将对象复制到配置为使用[数据库副�
 > [!IMPORTANT]  
 >  为管理中心站点上的数据库使用 SQL Server Standard 时，会限制层次结构可支持的客户端总数。 请参阅 [调整大小和扩展数量](/sccm/core/plan-design/configs/size-and-scale-numbers)。
 
-### <a name="sql-server-2017-standard-enterprise"></a>SQL Server 2017：标准版、企业版  
+### <a name="sql-server-2017-standard-enterprise"></a>SQL Server 2017：Standard、Enterprise  
 自 [Configuration Manager 版本 1710](/sccm/core/plan-design/changes/whats-new-in-version-1710) 起，此版本的 SQL Server 最低可与以下站点的[累积更新版本 2](https://support.microsoft.com/help/4052574) 一起使用： 
 
--   管理中心站点  
--   主站点  
--   辅助站点  
-<!--SMS.498506-->
+- 管理中心站点  
+- 主站点  
+- 辅助站点  
+  <!--SMS.498506-->
 
-### <a name="sql-server-2016-sp2-standard-enterprise"></a>SQL Server 2016 SP2：标准版、企业版  
+### <a name="sql-server-2016-sp2-standard-enterprise"></a>SQL Server 2016 SP2：Standard、Enterprise  
 <!--514985--> 可将此版本的 SQL Server 与以下站点的非最低累积更新版本一起使用：  
 
 -   管理中心站点  
 -   主站点  
 -   辅助站点  
 
-### <a name="sql-server-2016-sp1-standard-enterprise"></a>SQL Server 2016 SP1：标准版、企业版  
+### <a name="sql-server-2016-sp1-standard-enterprise"></a>SQL Server 2016 SP1：Standard、Enterprise  
 可将此版本的 SQL Server 与以下站点的非最低累积更新版本一起使用：  
 
 -   管理中心站点  
 -   主站点  
 -   辅助站点  
 
-### <a name="sql-server-2016-standard-enterprise"></a>SQL Server 2016：标准版、企业版  
+### <a name="sql-server-2016-standard-enterprise"></a>SQL Server 2016：Standard、Enterprise  
 可将此版本的 SQL Server 与以下站点的非最低累积更新版本一起使用：  
 
 -   管理中心站点  
@@ -111,35 +111,35 @@ SQL Server 事务复制仅支持将对象复制到配置为使用[数据库副�
 -   主站点  
 -   辅助站点
 
-### <a name="sql-server-2014-sp2-standard-enterprise"></a>SQL Server 2014 SP2：标准版、企业版  
+### <a name="sql-server-2014-sp2-standard-enterprise"></a>SQL Server 2014 SP2：Standard、Enterprise  
 可将此版本的 SQL Server 与以下站点的非最低累积更新版本一起使用：  
 
 -   管理中心站点  
 -   主站点  
 -   辅助站点
 
-### <a name="sql-server-2014-sp1-standard-enterprise"></a>SQL Server 2014 SP1：标准版、企业版  
+### <a name="sql-server-2014-sp1-standard-enterprise"></a>SQL Server 2014 SP1：Standard、Enterprise  
  可将此版本的 SQL Server 与以下站点的非最低累积更新版本一起使用：  
 
 -   管理中心站点  
 -   主站点  
 -   辅助站点
 
-### <a name="sql-server-2012-sp4-standard-enterprise"></a>SQL Server 2012 SP4：标准版、企业版  
+### <a name="sql-server-2012-sp4-standard-enterprise"></a>SQL Server 2012 SP4：Standard、Enterprise  
  可将此版本的 SQL Server 与以下站点的非最低累积更新版本一起使用：  
 
 -   管理中心站点  
 -   主站点  
 -   辅助站点  
 
-### <a name="sql-server-2012-sp3-standard-enterprise"></a>SQL Server 2012 SP3：标准版、企业版  
+### <a name="sql-server-2012-sp3-standard-enterprise"></a>SQL Server 2012 SP3：Standard、Enterprise  
  可将此版本的 SQL Server 与以下站点的非最低累积更新版本一起使用：  
 
 -   管理中心站点  
 -   主站点  
 -   辅助站点  
 
-### <a name="sql-server-2008-r2-sp3-standard-enterprise-datacenter"></a>SQL Server 2008 R2 SP3：标准版、企业版、数据中心版     
+### <a name="sql-server-2008-r2-sp3-standard-enterprise-datacenter"></a>SQL Server 2008 R2 SP3：Standard、Enterprise、Datacenter     
   不支持此版本的 SQL Server。 有关详细信息，请参阅 [SQL Server 版本作为站点数据库的已弃用支持](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-support-for-sql-server-versions-as-a-site-database)。  
 
 ### <a name="sql-server-2017-express"></a>SQL Server 2017 Express   
@@ -187,7 +187,7 @@ SQL Server 事务复制仅支持将对象复制到配置为使用[数据库副�
  Configuration Manager 需要 64 位版本的 SQL Server 以托管站点数据库。  
 
 ### <a name="database-collation"></a>数据库排序规则  
- 在每个站点上，用于站点和站点数据库的 SQL Server 实例必须使用以下排序规则： **SQL_Latin1_General_CP1_CI_AS**。  
+ 在每个站点上，用于站点和站点数据库的 SQL Server 实例必须使用以下排序规则：**SQL_Latin1_General_CP1_CI_AS**。  
 
  Configuration Manager 支持对此排序规则的两种例外情况，以满足在 GB18030 中定义的标准，以便在中国使用。 有关详细信息，请参阅[国际支持](/sccm/core/plan-design/hierarchy/international-support)。  
 
@@ -208,13 +208,13 @@ SQL Server 事务复制仅支持将对象复制到配置为使用[数据库副�
 ### <a name="sql-server-memory"></a>SQL Server 内存  
  通过使用 SQL Server Management Studio 和设置“服务器内存选项”下的“最小服务器内存”设置来保留 SQL Server 的内存。 有关如何配置此设置的详细信息，请参阅 [SQL Server 内存服务器配置选项](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options)。  
 
--   对于与站点服务器安装在同一台计算机上的数据库服务器：将 SQL Server 的内存限制为可用可寻址系统内存的 50% 到 80%。  
+-   **对于作为站点服务器安装在同一计算机上的数据库服务器**：将用于 SQL Server 的内存限制为可用可寻址的系统内存的 50% 到 80%。  
 
--   对于专用的数据库服务器（远离站点服务器）：将 SQL Server 的内存限制为可用可寻址系统内存的 80% 到 90%。  
+-   **专用的数据库服务器（远离站点服务器）**：将用于 SQL Server 的内存限制为可用可寻址的系统内存的 80% 到 90%。  
 
 -   对于使用中的每个 SQL Server 实例的缓冲池内存预留：  
 
-    -   对于管理中心站点：设置至少 8 千兆字节 (GB)。  
+    -   对于中央管理站点：设置至少 8 千兆字节 (GB)。  
     -   对于主站点：设置至少 8 千兆字节 (GB)。  
     -   对于辅助站点：设置至少 4 千兆字节 (GB)。  
 
@@ -252,7 +252,7 @@ SQL Server 事务复制仅支持将对象复制到配置为使用[数据库副�
 SQL Server Reporting Services 是安装可运行报表的 Reporting Services 点的必需条件。  
 
 > [!IMPORTANT]  
-> 将以前版本的 SQL Server 升级后，可能会看到以下错误：“报表生成器不存在”。  
+> 将以前版本的 SQL Server 升级后，可能会看到以下错误：*报表生成器不存在*。  
 > 要修复此错误，必须重新安装 Reporting Services 点站点系统角色。  
 
 ### <a name="sql-server-ports"></a>SQL Server 端口  

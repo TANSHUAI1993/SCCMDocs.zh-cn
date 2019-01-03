@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: 1dd696ce-3e46-4dfa-a76d-592fe0f0320e
-ms.openlocfilehash: 09ea3340d8474c69e6e346fc68120b8849159374
-ms.sourcegitcommit: 316899b08f2ef372993909e08e069f7edfed1d33
-ms.translationtype: HT
+ms.openlocfilehash: bc8a504a8490126fb9f4d7110c041f3c8916b162
+ms.sourcegitcommit: 54e5786875c4e5f5c1b54e38ed59e96344faf9b4
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44111036"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817913"
 ---
 # <a name="migrate-hybrid-mdm-users-and-devices-to-intune-standalone"></a>将混合 MDM 用户及其设备迁移至 Intune 独立版
 
-*适用范围：System Center Configuration Manager (Current Branch)*    
+*适用于：System Center Configuration Manager (Current Branch)*    
 
 本文将介绍在 Azure 上使用 Intune 从混合 MDM 迁移到云（仅限云）的体验。 
 
@@ -55,7 +55,7 @@ ms.locfileid: "44111036"
 
     - 安装 NDES 和 Exchange 连接器  
 
-    完成这些步骤并开始迁移至 Intune 独立版时，这对你的用户应该是透明的。   
+    当您完成的步骤，并开始将迁移到 Intune 独立版时，为你的用户没有明显影响。   
 
 3.  [更改特定用户的 MDM 机构（混合 MDM 机构）](migrate-mixed-authority.md)    
 
