@@ -10,16 +10,16 @@ ms.technology: configmgr-sum
 ms.assetid: de78e8d3-043f-4cd3-97e0-4dfb824fd3fb
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 6c4aa062c79a1ed03d32b894ac6764d63c657ddb
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 84d3afdd7f0416e733777cd52165c98128c013a6
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32348396"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417789"
 ---
 # <a name="download-software-updates"></a>下载软件更新  
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*适用于：System Center Configuration Manager（当前分支）*
 
 你可以使用一些方法在 Configuration Manager 中下载软件更新。 创建自动部署规则 (ADR) 或手动部署软件更新时，软件更新会下载到站点服务器上的内容库。 随后软件更新会复制到与配置的部署包关联的分发点上的内容库。 如果要在部署软件更新之前下载软件更新，则可以使用下载更新向导。 通过执行此操作，你可以在将软件更新部署到客户端计算机之前验证软件更新在分发点上是否可用。  
 
@@ -29,7 +29,8 @@ ms.locfileid: "32348396"
 使用以下过程和下载软件更新向导下载软件更新。  
 
 #### <a name="to-download-software-updates"></a>下载软件更新  
-[!INCLUDE[downloadupdates](..\includes\downloadupdates.md)]
+[!INCLUDE [downloadupdates](../includes/downloadupdates.md)]
+
 <!---
 1.  In the Configuration Manager console, navigate to **Software Library** > **Software Updates**.  
 
