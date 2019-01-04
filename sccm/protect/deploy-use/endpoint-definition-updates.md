@@ -10,32 +10,32 @@ ms.assetid: 537dd2a7-4e44-4877-b8dd-5e1499407f8d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f650ba7bc703ec4fa0492fc86859cb8742e0510d
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: e83f999ccd3e7625b2f83372464569771520632a
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32347359"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419201"
 ---
 #  <a name="configure-definition-updates-for-endpoint-protection"></a>为 Endpoint Protection 配置定义更新  
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*适用于：System Center Configuration Manager (Current Branch)*
 
  通过 System Center Configuration Manager 中的 Endpoint Protection，你可以使用若干可用方法中的任何方法使反恶意软件定义在层次结构中的客户端计算机上保持最新。 本主题中的信息可以帮助你选择和配置这些方法。
 
  若要更新反恶意软件定义，可以使用以下方法中的一种或多种：
 
--   [从 Configuration Manager 中分发的更新](endpoint-definitions-configmgr.md) - 此方法使用 Configuration Manager 软件更新将定义和引擎更新传送到层次结构中的计算机。
+- [从 Configuration Manager 中分发的更新](endpoint-definitions-configmgr.md) - 此方法使用 Configuration Manager 软件更新将定义和引擎更新传送到层次结构中的计算机。
 
--   [从 Windows Server Update Services (WSUS) 分发的更新](endpoint-definitions-wsus.md) - 此方法使用 WSUS 基础结构将定义和引擎更新传送到计算机。
+- [从 Windows Server Update Services (WSUS) 分发的更新](endpoint-definitions-wsus.md) - 此方法使用 WSUS 基础结构将定义和引擎更新传送到计算机。
 
--   [从 Microsoft 更新分发的更新](endpoint-definitions-microsoft-updates.md) - 此方法允许计算机直接连接到 Microsoft 更新以下载定义和引擎更新。 对于不经常连接到企业网络的计算机，此方法会很有用。
+- [从 Microsoft 更新分发的更新](endpoint-definitions-microsoft-updates.md) - 此方法允许计算机直接连接到 Microsoft 更新以下载定义和引擎更新。 对于不经常连接到企业网络的计算机，此方法会很有用。
 
--   [从 Microsoft 恶意软件防护中心分发的更新](endpoint-definitions-protection-center.md) - 此方法将从 Microsoft 恶意软件防护中心下载定义更新。
+- [从 Microsoft 恶意软件防护中心分发的更新](endpoint-definitions-protection-center.md) - 此方法将从 Microsoft 恶意软件防护中心下载定义更新。
 
--   [来自 UNC 文件共享的更新](endpoint-definitions-network.md) - 使用此方法，你可以将最新的定义和引擎更新保存到网络共享上。 然后客户端便可访问网络以安装更新。
+- [来自 UNC 文件共享的更新](endpoint-definitions-network.md) - 使用此方法，你可以将最新的定义和引擎更新保存到网络共享上。 然后客户端便可访问网络以安装更新。
 
- 你可以配置多个定义更新源，并控制对其进行评估和应用的顺序。 将在创建反恶意软件策略时，在“配置定义更新源”  对话框中完成此操作。
+  你可以配置多个定义更新源，并控制对其进行评估和应用的顺序。 将在创建反恶意软件策略时，在“配置定义更新源”  对话框中完成此操作。
 
 > [!IMPORTANT]
 >  对于 Windows 10 电脑，必须配置 Endpoint Protection 以更新 Windows Defender 的恶意软件定义。

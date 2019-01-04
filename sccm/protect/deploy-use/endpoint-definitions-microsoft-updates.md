@@ -10,16 +10,16 @@ ms.assetid: ab7626ae-d4bf-4ca6-ab25-c61f96800a02
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 0d8037f2258f97e2782d475598ca62d2f605e5cd
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: d401eea9b3556eae2ad8b3c26eda5a243fc07211
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32346475"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419132"
 ---
 # <a name="enable-endpoint-protection-malware-definitions-to-download-from-microsoft-updates-for-configuration-manager"></a>实现从 Microsoft 更新为 Configuration Manager 下载 Endpoint Protection 恶意软件定义
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*适用于：System Center Configuration Manager (Current Branch)*
 
 
  当你选择从 Microsoft 更新下载定义更新时，客户端将按照反恶意软件策略对话框的“定义更新”  部分中定义的间隔检查 Microsoft 更新网站。
@@ -34,10 +34,10 @@ ms.locfileid: "32346475"
 
 > [!IMPORTANT]
 >  客户端必须在 Internet 上具有对 Microsoft 更新的访问权限，才能够使用此方法下载定义更新。
-
-
+> 
+> 
 > [!div class="button"]
-[下一步 >](endpoint-antimalware-policies.md)
-
+> [下一步 >](endpoint-antimalware-policies.md)
+> 
 > [!div class="button"]
-[返回 >](endpoint-configure-alerts.md)
+> [返回 >](endpoint-configure-alerts.md)

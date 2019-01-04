@@ -10,16 +10,16 @@ ms.assetid: ddef4d2a-f481-4020-9ddd-9cca5f9795cb
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 47c6a046dac7cd4b5d0d16f0342d7e95ba3cc2a0
-ms.sourcegitcommit: 4f05517f7b284696a492a1b184cc5f25c5cda5e6
-ms.translationtype: HT
+ms.openlocfilehash: 5c4dd69510134efecc730d7cc1bdb5cb2d647653
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48891140"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53414525"
 ---
 # <a name="enable-endpoint-protection-malware-definitions-to-download-from-a-network-share-for-configuration-manager"></a>启用 Endpoint Protection 恶意软件定义，以便从网络共享为 Configuration Manager 下载定义
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*适用于：System Center Configuration Manager (Current Branch)*
 
  你可以手动从 Microsoft 下载最新定义更新，然后将客户端配置为从网络上的共享文件夹下载这些定义。 用户还可以在你使用此更新源时启动定义更新。
 
@@ -48,7 +48,7 @@ ms.locfileid: "48891140"
 
 
 > [!div class="button"]
-[下一步 >](endpoint-antimalware-policies.md)
-
+> [下一步 >](endpoint-antimalware-policies.md)
+> 
 > [!div class="button"]
-[返回 >](endpoint-configure-alerts.md)
+> [返回 >](endpoint-configure-alerts.md)

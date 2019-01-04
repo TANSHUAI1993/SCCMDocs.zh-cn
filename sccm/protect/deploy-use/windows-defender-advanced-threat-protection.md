@@ -10,16 +10,16 @@ ms.assetid: a5fc033e-828e-4e45-9097-bbbd0697ebdf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 10d746f88d0e7b869e2b73d389944f3b382d687d
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: f474db6768204403978eb188c3dbd138e34035d4
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32348379"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422787"
 ---
 # <a name="windows-defender-advanced-threat-protection"></a>Windows Defender 高级威胁防护
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*适用于：System Center Configuration Manager (Current Branch)*
 
 自 Configuration Manager (当前分支) 版本 1606 起，Endpoint Protection 可帮助管理和监视 [Windows Defender 高级威胁防护 (ATP)](http://aka.ms/technet-wdatp)。 Windows Defender ATP 可帮助企业检测和调查其网络上的高级攻击并作出响应。  Configuration Manager 或 Microsoft Intune 策略可帮助载入和监视托管的 Windows 10 版本 1607（内部版本 14328）或更高版本。
 
@@ -46,23 +46,23 @@ Windows Defender ATP 是 [Windows Defender 安全中心](https://securitycenter.
 
 ## <a name="onboard-devices-for-windows-defender-atp"></a>Windows Defender ATP 的机载设备  
 
-1.  在 Configuration Manager 控制台中，导航到“资产和符合性” > “概述” > “Endpoint Protection” > “Windows Defender ATP 策略”，然后单击“创建 Windows Defender ATP 策略”。 将打开 Windows Defender ATP 策略向导。  
+1. 在 Configuration Manager 控制台中，导航到“资产和符合性” > “概述” > “Endpoint Protection” > “Windows Defender ATP 策略”，然后单击“创建 Windows Defender ATP 策略”。 将打开 Windows Defender ATP 策略向导。  
 
-2.  键入 Windows Defender ATP 策略的**名称**和**说明**，然后选择“载入”。 单击“下一步” 。  
+2. 键入 Windows Defender ATP 策略的**名称**和**说明**，然后选择“载入”。 单击“下一步” 。  
 
-3.  **浏览**到组织的 Windows Defender ATP 云服务租户提供的配置文件。 单击“下一步” 。  
+3. **浏览**到组织的 Windows Defender ATP 云服务租户提供的配置文件。 单击“下一步” 。  
 
-4.  指定从托管设备收集和共享的文件示例以进行分析。  
+4. 指定从托管设备收集和共享的文件示例以进行分析。  
 
-    -   **无**   
+   - **无**   
 
-    -   **所有文件类型**  
+   - **所有文件类型**  
 
      单击“下一步” 。  
 
-5.  查看摘要，然后完成该向导。  
+5. 查看摘要，然后完成该向导。  
 
-6.  通过单击“部署”，现在可以将 Windows Defender ATP 策略部署到托管客户端计算机。  
+6. 通过单击“部署”，现在可以将 Windows Defender ATP 策略部署到托管客户端计算机。  
 
 ## <a name="monitor-windows-defender-atp"></a>监视 Windows Defender ATP  
 
