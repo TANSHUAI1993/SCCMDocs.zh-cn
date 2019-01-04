@@ -10,12 +10,12 @@ ms.assetid: 8ca970dd-e71c-404f-9435-d36e773a0db2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2d51774688b80faf808653cde77aa3b651ea210c
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 8b51685d97aea766757034c6f41afa5d4c8a11ee
+ms.sourcegitcommit: 32a257fafbb29aece8b4f435dd5614fcef305328
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53422583"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "54005460"
 ---
 # <a name="upgrade-on-premises-infrastructure-that-supports-configuration-manager"></a>升级支持 Configuration Manager 的本地基础结构
 
@@ -121,6 +121,12 @@ Configuration Manager 在以下情况中支持托管站点服务器和任何站�
     - 远程启用  
 
 5. 保存权限以还原 Configuration Manager 控制台的访问权限。  
+
+
+#### <a name="known-issue-for-remote-site-systems"></a>已知的远程站点系统问题
+在升级托管站点系统角色的服务器之后，下列注册表项中可能缺少值 `Software\Microsoft\SMS`：`HKLM\SYSTEM\CurrentControlSet\Control\SecurePipeServers\Winreg\AllowedPaths` 
+
+如果在服务器上升级 Windows 后缺少此值，请手动添加它。 否则，站点系统角色可能在将文件上传到站点服务器收件箱时遇到问题。
 
 
 ### <a name="bkmk_2012r2"></a>升级到 Windows Server 2012 R2
