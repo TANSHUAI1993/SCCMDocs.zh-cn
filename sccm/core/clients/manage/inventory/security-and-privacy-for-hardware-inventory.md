@@ -10,16 +10,16 @@ ms.assetid: 62e20d86-db6d-4a1f-b14a-905a9de31698
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 948aa0b261f9214dc08b76b25a70133141a1113f
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 2f2cdddc27fd07b806bef8ad729c0a8be4bb29e5
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32336028"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53423059"
 ---
 # <a name="security-and-privacy-for-hardware-inventory-in-system-center-configuration-manager"></a>System Center Configuration Manager 中硬件清单的安全和隐私
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 此主题包含 System Center Configuration Manager 中硬件清单的安全和隐私信息。  
 
@@ -34,15 +34,15 @@ ms.locfileid: "32336028"
 ### <a name="security-issues-for-hardware-inventory"></a>硬件清单的安全问题  
  收集清单会暴露潜在的漏洞。 攻击者可以执行以下操作：  
 
--   发送无效数据，即使禁用了软件清单客户端设置并启用文件收集，管理点也会接受这些数据。  
+- 发送无效数据，即使禁用了软件清单客户端设置并启用文件收集，管理点也会接受这些数据。  
 
--   在一个或多个文件中发送超大量数据，这可能导致拒绝服务。  
+- 在一个或多个文件中发送超大量数据，这可能导致拒绝服务。  
 
--   在将清单信息传输到 Configuration Manager 时访问清单信息。  
+- 在将清单信息传输到 Configuration Manager 时访问清单信息。  
 
- 由于具有本地管理权限的用户可以发送任何信息作为清单数据，因此请不要认为 Configuration Manager 收集的清单数据具有权威性。  
+  由于具有本地管理权限的用户可以发送任何信息作为清单数据，因此请不要认为 Configuration Manager 收集的清单数据具有权威性。  
 
- 默认情况下，客户端设置中启用了硬件清单。  
+  默认情况下，客户端设置中启用了硬件清单。  
 
 ##  <a name="BKMK_Privacy_HardwareInventory"></a> 硬件清单的隐私信息  
  硬件清单允许检索 Configuration Manager 客户端上注册表和 WMI 中存储的任何信息。 软件清单允许您发现具有指定类型的所有文件或从客户端收集任何指定的文件。 通过扩展硬件和软件清单并添加新的许可证管理功能，资产智能增强了清单功能。  

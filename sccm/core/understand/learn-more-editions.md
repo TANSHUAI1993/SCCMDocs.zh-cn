@@ -10,21 +10,21 @@ ms.assetid: 495b87ae-41a4-49ba-abe2-d4f7d22ac0d4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 33cd99fd51bd7fabc1ae7f8379bcf2a69a5c4898
-ms.sourcegitcommit: f195190347a98b6c5be957564d33b6c4dfb610d7
+ms.openlocfilehash: 42a19d690e694ad3ca930dbf89fd0420bb5a45b5
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39309368"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416803"
 ---
 # <a name="licensing-and-branches-for-system-center-configuration-manager"></a>System Center Configuration Manager 的许可和分支
 
-*适用范围：System Center Configuration Manager (Current Branch) 和 (Long-Term Servicing Branch)*
+适用范围：*System Center Configuration Manager (Current Branch) 和 (Long-Term Servicing Branch)*
 
 参阅本主题，了解 System Center Configuration Manager 1606 版本 2016 年 10 月发行版中提供的安装选项的许可要求。 这些安装选项包括 Current Branch 版本 1606、Long-Term Servicing Branch (LTSB) 和Current Branch 版本 1606 的评估安装。
 
 **许可概述：**   
-自 2016 年 10 月 1 日起，具有 System Center Configuration Manager 许可证上可用的软件保障 (SA) 或同等订阅权限的客户，有权使用 System Center Configuration Manager 的 2016 年 10 月发行的版本 1606。 自 2016 年 10 月 1 日起（含），对 System Center Configuration Manager 具有权限的客户在安装时将会发现两个已许可的选项：Current Branch 和 Long-Term Servicing Branch (LTSB)。
+自 2016 年 10 月 1 日起，具有 System Center Configuration Manager 许可证上可用的软件保障 (SA) 或同等订阅权限的客户，有权使用 System Center Configuration Manager 的 2016 年 10 月发行的版本 1606。 自 2016 年 10 月 1 日起（含），具有 System Center Configuration Manager 权限的客户在安装时将会发现两个许可选项：Current Branch 和 Long Term Servicing Branch (LTSB)。
 
 
 **许可指定：**  
@@ -80,7 +80,7 @@ LTSB 以 Current Branch 1606 版为基础，具有以下限制：
 ### <a name="software-assurance-expiration-date"></a>软件保障到期日期
 从 2016 年 10 月发布的 System Center Configuration Manager 的 1606 版基线介质开始，可以指定软件保障协议的到期日期。 “软件保障到期日期”是一个可选值，可在运行 Configuration Manager 安装程序时或稍后从 Configuration Manager 控制台中指定该值。
 
->  [!NOTE]   
+> [!NOTE]
 >  Microsoft 不会验证指定的到期日期，且不使用此日期验证许可证。  相反，可以使用该日期作为到期日期提醒。 这很有用，因为 Configuration Manager 会定期检查在线提供的新软件更新，而软件保障许可证应为最新状态，才有资格使用这些额外的更新。    
 
 **指定日期：**

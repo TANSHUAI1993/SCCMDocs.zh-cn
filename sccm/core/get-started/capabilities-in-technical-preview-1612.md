@@ -10,20 +10,20 @@ ms.assetid: bceab2e8-2f05-4a17-9ac8-a7a558670fb7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a72f7979c38a0a8782aa41fef66b7aa00af9bc0f
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 24f1d08fedfc09a190739182d7858772745fb3fe
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342233"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53423365"
 ---
 # <a name="capabilities-in-technical-preview-1612-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1612 中的功能
 
-*适用范围：System Center Configuration Manager (Technical Preview)*
+适用范围：*System Center Configuration Manager (Technical Preview)*
 
 
 
-本文介绍了 System Center Configuration Manager Technical Preview（版本 1612）中的可用功能。 你可以安装此版本，以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。 在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。    
+本文介绍了 System Center Configuration Manager Technical Preview（版本 1612）中的可用功能。 你可以安装此版本，以更新 Technical Preview 站点的功能并向其添加新功能。 在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager 技术预览版](../../core/get-started/technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。    
 
 
 **以下是此版本可以试用的新功能。**  
@@ -59,7 +59,7 @@ ms.locfileid: "32342233"
 - 安装站点系统角色的计算机要求具有 .NET Framework 4.5.2 或更高版本。
 - 安装站点系统角色的计算机帐户必须对要托管数据仓库数据库的计算机具有本地管理员权限。
 - 用于安装站点系统角色的管理帐户必须是要托管数据仓库数据库的 SQL Server 实例上的 DBO。  
--  支持的数据库需满足以下要求：
+- 支持的数据库需满足以下要求：
   - 使用 SQL Server 2012 或更高版本、Enterprise Edition 或 Datacenter Edition。
   - 位于默认或命名的实例上
   - 位于 SQL Server 群集上。 尽管此配置应可正常工作，但尚未经过测试，因此支持人员正尽其最大努力。
@@ -78,7 +78,7 @@ ms.locfileid: "32342233"
 “系统角色选择”页面：  
 必须先安装 Reporting Services 点，然后向导才能显示选择和安装数据仓库服务点的选项。
 
-**常规**页面：以下常规信息为必需信息：
+“常规”页：以下常规信息为必需信息：
 - **Configuration Manager 数据库设置：**   
   - **服务器名称** - 指定承载站点数据库的服务器的 FQDN。 如果不使用 SQL Server 的默认实例，则必须采用如下格式在 FQDN 后指定实例：***&lt;Sqlserver_FQDN>\&lt;Instance_name>***
   - **数据库名称** - 指定站点数据库的名称。
@@ -122,21 +122,21 @@ ms.locfileid: "32342233"
 ### <a name="move-the-data-warehouse-database"></a>迁移数据仓库数据库
 使用以下步骤将数据仓库数据库移到新的 SQL Server：
 
-  1. 查看当前数据库配置并记录配置详细信息，包括内容如下：  
+1. 查看当前数据库配置并记录配置详细信息，包括内容如下：  
    - 同步的数据组
    - 在同步中包含或排除的表       
 
    将数据库还原到新的服务器并重新安装站点系统角色后，用户将重新配置这些数据组和表。  
 
-  2. 使用 SQL Server Management Studio 备份数据仓库数据库，然后再次将该数据库还原到要托管此数据仓库的新计算机上的 SQL Server。
+2. 使用 SQL Server Management Studio 备份数据仓库数据库，然后再次将该数据库还原到要托管此数据仓库的新计算机上的 SQL Server。
 
-  将数据库还原到新服务器后，请确保新数据仓库数据库与原始数据仓库数据库上的数据库访问权限相同。
+   将数据库还原到新服务器后，请确保新数据仓库数据库与原始数据仓库数据库上的数据库访问权限相同。
 
-  3. 使用 Configuration Manager 控制台从当前服务器删除数据仓库服务点站点系统角色。
+3. 使用 Configuration Manager 控制台从当前服务器删除数据仓库服务点站点系统角色。
 
-  4. 安装新的数据仓库服务点并指定托管已还原数据仓库数据库的新 SQL Server 和实例的名称。
+4. 安装新的数据仓库服务点并指定托管已还原数据仓库数据库的新 SQL Server 和实例的名称。
 
-  5. 安装站点系统角色后，迁移即完成。
+5. 安装站点系统角色后，迁移即完成。
 
 可以查看以下 Configuration Manager 日志，确认是否已成功重新安装站点系统角色：  
 - **DWSSMSI.log** 和 **DWSSSetup.log** - 使用这些日志调查安装数据仓库服务点时的错误。
@@ -148,7 +148,7 @@ ms.locfileid: "32342233"
 
 此工具仅对其运行时用户指定的分发点上的内容有效，并不会从站点服务器上的内容库中删除内容。
 
-安装 Technical Preview 1612 后，可以在 Technical Preview 站点服务器中的 \*%CM_Installation_Path%\cd.latest\SMSSETUP\TOOLS\ContentLibraryCleanup\* 文件夹中找到 **ContentLibraryCleanup.exe**。
+安装 Technical Preview 1612 后，可以在 Technical Preview 站点服务器中的 *%CM_Installation_Path%\cd.latest\SMSSETUP\TOOLS\ContentLibraryCleanup\* 文件夹中找到 **ContentLibraryCleanup.exe**。
 
 随附此 Technical Preview 发布的工具旨在替换随附以往 Configuration Manager 产品发布的旧版类似工具。 尽管此工具版本将在 2017 年 3 月 1 日后停用，但新的版本将随附以后的 Technical Preview 发布，直到此工具作为 Current Branch 的一部分或生产就绪型带外版本进行发布。
 
@@ -158,22 +158,22 @@ ms.locfileid: "32342233"
 
 ### <a name="modes-of-operation"></a>操作模式
 该工具可按以下两种模式运行：
-  1.    **假设模式**：   
-      当未指定 **/delete** 开关时，该工具会以假设模式运行，并且标识将从分发点删除但不实际删除任何数据的内容。
+1. **假设模式**：   
+   当未指定 **/delete** 开关时，该工具会以假设模式运行，并且标识将从分发点删除但不实际删除任何数据的内容。
 
-      - 该工具以此模式运行时，有关要删除内容的信息会自动写入工具日志文件。 不提示用户确认每个可能的删除操作。
-      - 默认情况下，日志文件写入运行工具的计算机上的用户临时文件夹，但用户可使用 /log 开关将日志文件重定向到其他位置。  
-      </br>
+   - 该工具以此模式运行时，有关要删除内容的信息会自动写入工具日志文件。 不提示用户确认每个可能的删除操作。
+   - 默认情况下，日志文件写入运行工具的计算机上的用户临时文件夹，但用户可使用 /log 开关将日志文件重定向到其他位置。  
+   </br>
 
-    使用 /delete 开关运行该工具前，建议以此模式运行该工具，并查看生成的日志文件。  
+   使用 /delete 开关运行该工具前，建议以此模式运行该工具，并查看生成的日志文件。  
 
-  2. **删除模式**：使用 **/delete** 开关运行工具时，工具将以删除模式运行。
+2. **删除模式**：使用 **/delete** 开关运行工具时，工具将以删除模式运行。
 
-     - 以此模式运行工具时，可从分发点的内容库删除指定分发点上的孤立内容。
-     -  删除每个文件之前，系统将提示用户确认是否要删除文件。  若要删除，请选择“是”；若不删除，请选择“否”；或者选择“删除所有”，跳过后续提示并删除所有孤立内容。  
-     </br>
+   - 以此模式运行工具时，可从分发点的内容库删除指定分发点上的孤立内容。
+   -  删除每个文件之前，系统将提示用户确认是否要删除文件。  若要删除，请选择“是”；若不删除，请选择“否”；或者选择“删除所有”，跳过后续提示并删除所有孤立内容。  
+   </br>
 
-     我们建议在假设模式下运行该工具，并查看生成的日志文件，然后再使用 /delete 开关运行该工具。  
+   我们建议在假设模式下运行该工具，并查看生成的日志文件，然后再使用 /delete 开关运行该工具。  
 
 内容库清理工具在其中任一模式下运行时，会自动创建带名称的日志，该日志包括运行采用的模式、分发点名称、日期和操作时间等内容。 工具结束时，日志文件会自动打开。 默认情况下，该日志会写入运行工具所在计算机上的用户**临时**文件夹，但用户可使用命令行开关将日志文件重定向到其他位置，如网络共享。   
 
@@ -184,9 +184,9 @@ ms.locfileid: "32342233"
 2. 接下来，输入包含所需命令行开关和可选开关的命令行。
 
 **已知问题** 运行该工具时，当任何程序包或部署失败或正在进行时，可能会返回以下错误：
--  *System.InvalidOperationException：由于程序包 <packageID> 未完全安装，因此无法清理此内容库。*
+-  *System.InvalidOperationException：由于未完全安装包 <packageID>，因此无法清理此内容库。*
 
-**解决方法：** 无。 当内容正在进行处理或部署失败时，该工具无法可靠地识别孤立的文件。 因此，该工具将不允许你清理内容，直到该问题解决。
+解决方法：无。 当内容正在进行处理或部署失败时，该工具无法可靠地识别孤立的文件。 因此，该工具将不允许你清理内容，直到该问题解决。
 
 
 
@@ -195,12 +195,12 @@ ms.locfileid: "32342233"
 
 |开关|详细信息|
 |---------|-------|
-|**/delete**  |**可选** </br> 要从分发点删除内容时使用此开关。 删除内容之前，系统会进行提示。 </br></br> 如果不使用此开关，该工具将记录有关要删除的内容的结果，但不会从分发点删除任何内容。 </br></br> 示例：***ContentLibraryCleanup.exe /dp server1.contoso.com /delete*** |
-| **/q**       |**可选** </br> 在阻止所有提示（如删除内容时的提示）的安静模式下运行该工具，并且不会自动打开该日志文件。 </br></br> 示例：***ContentLibraryCleanup.exe /q /dp server1.contoso.com*** |
-| **/dp &lt;distribution point FQDN>**  | **必需** </br> 指定要清理的分发点的完全限定域名 (FQDN)。 </br></br> 示例：***ContentLibraryCleanup.exe /dp server1.contoso.com***|
-| **/ps &lt;primary site FQDN>**       | **可选** - 从主站点上的分发点清除内容时。</br>**必需** - 从辅助站点上的分发点清除内容时。 </br></br> 当分发点位于辅助站点上时，指定分发点所属的主站点的 FQDN，或父级主站点的 FQDN。 </br></br> 示例：***ContentLibraryCleanup.exe /dp server1.contoso.com /ps siteserver1.contoso.com*** |
-| **/sc &lt;primary site code>**  | **可选** - 从主站点上的分发点清除内容时。</br>**必需** - 从辅助站点上的分发点清除内容时。 </br></br> 当分发点位于辅助站点上时，指定分发点所属的主站点的站点代码，或父级主站点的站点代码。</br></br> 示例：***ContentLibraryCleanup.exe /dp server1.contoso.com /sc ABC*** |
-| **/log <log file directory>**       |**可选** </br> 指定放置日志文件的目录。 此目录可以是本地驱动器，或者位于网络共享上。</br></br> 如果不使用此开关，日志文件会自动放在用户临时文件夹中。</br></br> 本地驱动器示例：***ContentLibraryCleanup.exe /dp server1.contoso.com /log C:\Users\Administrator\Desktop*** </br></br>网络共享示例：***ContentLibraryCleanup.exe /dp server1.contoso.com /log \\&lt;share>\&lt;folder>***|
+|**/delete**  |**可选** </br> 要从分发点删除内容时使用此开关。 删除内容之前，系统会进行提示。 </br></br> 如果不使用此开关，该工具将记录有关要删除的内容的结果，但不会从分发点删除任何内容。 </br></br> 例如：***ContentLibraryCleanup.exe /dp server1.contoso.com /delete*** |
+| **/q**       |**可选** </br> 在阻止所有提示（如删除内容时的提示）的安静模式下运行该工具，并且不会自动打开该日志文件。 </br></br> 例如：***ContentLibraryCleanup.exe /q /dp server1.contoso.com*** |
+| **/dp &lt;distribution point FQDN>**  | **必需** </br> 指定要清理的分发点的完全限定域名 (FQDN)。 </br></br> 例如：***ContentLibraryCleanup.exe /dp server1.contoso.com***|
+| **/ps &lt;primary site FQDN>**       | **可选** - 从主站点上的分发点清除内容时。</br>**必需** - 从辅助站点上的分发点清除内容时。 </br></br> 当分发点位于辅助站点上时，指定分发点所属的主站点的 FQDN，或父级主站点的 FQDN。 </br></br> 例如：***ContentLibraryCleanup.exe /dp server1.contoso.com /ps siteserver1.contoso.com*** |
+| **/sc &lt;primary site code>**  | **可选** - 从主站点上的分发点清除内容时。</br>**必需** - 从辅助站点上的分发点清除内容时。 </br></br> 当分发点位于辅助站点上时，指定分发点所属的主站点的站点代码，或父级主站点的站点代码。</br></br> 例如：***ContentLibraryCleanup.exe /dp server1.contoso.com /sc ABC*** |
+| **/log <log file directory>**       |**可选** </br> 指定放置日志文件的目录。 此目录可以是本地驱动器，或者位于网络共享上。</br></br> 如果不使用此开关，日志文件会自动放在用户临时文件夹中。</br></br> 本地驱动器的示例：***ContentLibraryCleanup.exe /dp server1.contoso.com /log C:\Users\Administrator\Desktop*** </br></br>网络共享的示例：***ContentLibraryCleanup.exe /dp server1.contoso.com /log \\&lt;share>\&lt;folder>***|
 
 
 ## <a name="improvements-for-in-console-search"></a>控制台中搜索功能的改进

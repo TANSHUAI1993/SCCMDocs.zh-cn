@@ -11,18 +11,18 @@ author: aczechowski
 robots: noindex,nofollow
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: f75c27ece3b9a8b490fb136a411a65ac4cbe2129
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: a11abd53a83f52cbb05d2a49c3271becb4cedb64
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32339462"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420186"
 ---
 # <a name="capabilities-in-technical-preview-1601-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1601 版中的功能
 
-*适用范围：System Center Configuration Manager (Technical Preview)*
+适用范围：System Center Configuration Manager (Technical Preview)
 
-本文介绍 System Center Configuration Manager Technical Preview 1601 版中的可用功能。 你可以安装此版本，以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。      在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。  
+本文介绍 System Center Configuration Manager Technical Preview 1601 版中的可用功能。 你可以安装此版本，以更新 Technical Preview 站点的功能并向其添加新功能。      在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。  
 
  **此 Technical Preview 中的已知问题：**  
 
@@ -81,7 +81,7 @@ ms.locfileid: "32339462"
 
     -   **需要在 Azure ActiveDirectory 中注册：** 此规则检查用户的设备是否在加入到 Azure AD 的地方运行，如果不是，则在 Azure AD 中自动注册该设备。 仅 Windows 8.1 支持自动注册。 对于 Windows 7 PC，请部署 MSI 来执行自动注册。 有关详细信息，请参阅[此处](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-automatic-device-registration/?rnd=1)。  
 
-    -   **在晚于特定天数的截止日期之前安装所有必需的更新：** 此规则检查用户的设备是否在截止日期及指定的宽限期内具有所需的所有更新（在“所需的自动更新”规则中指定），并自动安装任何挂起的所需更新。  
+    -   **在晚于特定天数的截止日期之前安装所有必需的更新：** 此规则检查用户的设备是否在截止日期及你指定的宽限期内具有所需的所有更新（在所需的自动更新规则中指定），并自动安装任何挂起的所需更新。  
 
     -   **需要使用 BitLocker 驱动器加密功能：** 此规则检查设备的主驱动器（例如 C:\\）是否使用 BitLocker 进行了加密。 如果主驱动器上未启用 Bitlocker 加密，则将阻止设备对电子邮件和 SharePoint 服务的访问。  
 
@@ -94,7 +94,7 @@ ms.locfileid: "32339462"
 
     在 configuration manager 控制台中添加了新的合规性规则，该规则允许你根据设备的健康状况指定应允许还是阻止设备进行访问。  要创建此规则，请打开“创建合规性策略向导”，然后添加新规则。  选择“运行状况证明服务报告为正常”作为条件，并将值设置为“True”。  这可以确保只有报告为健康的设备才可以访问你的公司资源。 有关运行状况证明服务和如何在 Intune 中报告设备的运行状况的详细信息，请参阅[设备运行状况证明](#bkmk_devicehealth)。  
 
--   **新合规性策略设置：** 新合规性策略设置有助于提高用于访问公司电子邮件和 SharePoint 服务的设备的安全性：  
+-   **新符合性策略设置：** 新符合性策略设置有助于提高用于访问公司电子邮件和 SharePoint 服务的设备的安全性：  
 
     -   **需要自动更新：** 可以要求运行 Windows 8.1 或更高版本的设备允许自动安装更新，还可以指定要安装的更新的类别。  你可以选择仅安装标记为重要的更新，或者安装所有建议的更新。  
 
@@ -110,7 +110,7 @@ ms.locfileid: "32339462"
 
          要为解锁移动设备的密码创建规则，请打开“创建合规性策略向导”，然后添加新规则。 选择“需要提供密码来解锁空闲设备”作为条件，并将值设置为“True”。  
 
-    -   **需要提供密码之前处于非活动状态的分钟数：** 指定用户必须重新输入其密码前的空闲时间。  
+    -   **需要提供密码之前处于非活动状态的分钟数：** 指定用户必须重新输入密码前的空闲时间。  
 
          要创建此规则，请打开“创建合规性策略向导”，然后添加新规则。 选择“需要提供密码之前处于非活动状态的分钟数”作为条件，并将值设置为以下可用选项之一：1 分钟、5 分钟、15 分钟、30 分钟、1 小时。  
 
@@ -119,7 +119,7 @@ ms.locfileid: "32339462"
      选中此选项时，允许已在 Intune 中注册且符合合规性策略的设备访问内部部署的 Exchange。 此规则将覆盖“默认规则”，这意味着，即使将“默认规则”设置为隔离或阻止访问，已注册并符合要求的设备也仍然能够访问内部部署的 Exchange。  
      当你希望已注册且合规的设备始终可通过内部部署的 Exchange 访问电子邮件时，使用该设置。  
 
-     受以下平台支持：Windows Phone 8 及更高版本、iOS 6 及更高版本。 Android 4.0 及更高版本、Samsung KNOX Standard 4.0 及更高版本。  
+     以下平台支持此功能：Windows Phone 8 及更高版本、iOS 6 及更高版本。 Android 4.0 及更高版本、Samsung KNOX Standard 4.0 及更高版本。  
 
      要使用此选项，请转到本地 Exchange 的“配置条件访问策略向导”的“常规”页面。  
 
@@ -144,17 +144,17 @@ ms.locfileid: "32339462"
 
 ### <a name="to-view-client-online-status"></a>要查看客户端联机状态  
 
-1.  在 Configuration Manager 控制台中，转到“资产和符合性”>“概览”>“设备”。  
+1. 在 Configuration Manager 控制台中，转到“资产和符合性”>“概览”>“设备”。  
 
-2.  在列标题中右键单击，然后单击一个客户端联机状态字段，以便将其添加到设备视图。 这些字段是：  
+2. 在列标题中右键单击，然后单击一个客户端联机状态字段，以便将其添加到设备视图。 这些字段是：  
 
-    -   **设备联机状态** 将指示客户端当前是联机还是脱机。  
+   -   **设备联机状态** 将指示客户端当前是联机还是脱机。  
 
-    -   **上次联机时间**表示客户端联机状态从脱机更改为联机时的时间。  
+   -   **上次联机时间**表示客户端联机状态从脱机更改为联机时的时间。  
 
-    -   **上次脱机时间**表示状态从联机更改为脱机时的时间。  
+   -   **上次脱机时间**表示状态从联机更改为脱机时的时间。  
 
- 要显示客户端状态的最新更改，请刷新控制台。  
+   要显示客户端状态的最新更改，请刷新控制台。  
 
 ##  <a name="bkmk_appmgmt1601"></a>对应用程序管理的改进  
  在 1601 技术预览版中，我们添加了对以下功能的支持：  

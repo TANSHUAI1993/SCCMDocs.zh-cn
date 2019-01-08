@@ -10,16 +10,16 @@ ms.assetid: b06f781b-ab25-4d9a-b128-02cbd7cbcffe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5ab632367e6cc30210db00a61ee4d3b9c414fdbd
-ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
+ms.openlocfilehash: da5ad0fd932bb94bdab42ab723dcfc71ff252140
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36260806"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416366"
 ---
 # <a name="database-replicas-for-management-points-for-system-center-configuration-manager"></a>System Center Configuration Manager 管理点的数据库副本
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 System Center Configuration Manager 主站点可以使用数据库副本来减少管理点在处理来自客户端的请求时对站点数据库服务器施加的 CPU 负载。  
 
@@ -65,7 +65,7 @@ System Center Configuration Manager 主站点可以使用数据库副本来减�
 
     -   若要将此证书提供给远程管理点，则必须导出证书，然后将其添加到远程管理点上的 **受信任人** 证书存储中。  
 
--   **客户端通知：** 若要支持包含管理点数据库副本的客户端通知，你必须针对 **SQL Server Service Broker**配置站点数据库服务器和数据库副本服务器之间的通信。 这要求：  
+-   **客户端通知：** 要支持包含管理点的数据库副本的客户端通知，你必须针对 SQL Server Service Broker 配置站点数据库服务器和数据库副本服务器之间的通信。 这要求：  
 
     -   使用其他数据库的相关信息配置每个数据库  
 
@@ -114,15 +114,15 @@ System Center Configuration Manager 主站点可以使用数据库副本来减�
 
     -   **共享权限**：  
 
-        -   系统： **写**  
+        -   系统：**写入**  
 
-        -   ConfigMgr_MPReplicaAccess： **读取**  
+        -   ConfigMgr_MPReplicaAccess：**读取**  
 
     -   **NTFS 权限**：  
 
-        -   系统： **完全控制**  
+        -   系统：**完全控制**  
 
-        -   ConfigMgr_MPReplicaAccess：“读取”、“读取和执行”、“列表文件夹内容”  
+        -   ConfigMgr_MPReplicaAccess：“读取”、“读取和执行”、“列出文件夹内容”  
 
 5.  使用“SQL Server Management Studio”  连接到站点数据库，并以查询形式运行以下存储过程： **spCreateMPReplicaPublication**  
 
@@ -131,7 +131,7 @@ System Center Configuration Manager 主站点可以使用数据库副本来减�
 ###  <a name="BKMK_DBReplica_ConfigSrv"></a> 第 2 步 – 配置数据库副本服务器  
 数据库副本服务器是运行 SQL Server 的计算机，它承载了站点数据库副本以供管理点使用。 数据库副本服务器按照固定计划将其数据库副本与站点数据库服务器发布的数据库副本同步。  
 
-数据库副本服务器必须满足站点数据库服务器应满足的要求。 但是，数据库副本服务器运行的 SQL Server 版本可以与站点数据库服务器使用的版本不同。 有关支持的 SQL Server 版本的信息，请参阅[对 System Center Configuration Manager 的 SQL Server 版本的支持](../../../../core/plan-design/configs/support-for-sql-server-versions.md)主题。  
+数据库副本服务器必须满足站点数据库服务器应满足的要求。 但是，数据库副本服务器运行的 SQL Server 版本可以与站点数据库服务器使用的版本不同。 有关支持的 SQL Server 版本的信息，请参阅 [对 System Center Configuration Manager 的 SQL Server 版本的支持](../../../../core/plan-design/configs/support-for-sql-server-versions.md) 主题。  
 
 > [!IMPORTANT]  
 >  承载副本数据库的计算机上的 SQL Server 服务必须以系统帐户形式运行。  
@@ -140,83 +140,83 @@ System Center Configuration Manager 主站点可以使用数据库副本来减�
 
 ##### <a name="to-configure-the-database-replica-server"></a>配置数据库副本服务器  
 
-1.  在数据库副本服务器上，将 SQL Server 代理设置为自动启动。  
+1. 在数据库副本服务器上，将 SQL Server 代理设置为自动启动。  
 
-2.  在数据库副本服务器上，使用“SQL Server Management Studio”  连接到本地服务器，浏览到“复制”  文件夹，单击“本地订阅”，并选择“新建订阅”  以启动“新建订阅向导” ：  
+2. 在数据库副本服务器上，使用“SQL Server Management Studio”  连接到本地服务器，浏览到“复制”  文件夹，单击“本地订阅”，并选择“新建订阅”  以启动“新建订阅向导” ：  
 
-    1.  在“发布”  页上的“发布者”  列表框中，选择“查找 SQL Server 发布者” ，输入站点数据库服务器的名称，然后单击“连接” 。  
+   1. 在“发布”  页上的“发布者”  列表框中，选择“查找 SQL Server 发布者” ，输入站点数据库服务器的名称，然后单击“连接” 。  
 
-    2.  选择“ConfigMgr_MPReplica” ，然后单击“下一步” 。  
+   2. 选择“ConfigMgr_MPReplica” ，然后单击“下一步” 。  
 
-    3.  在“分发代理位置”  页上，选择“在其订阅服务器上运行每个代理(请求订阅)” ，然后单击“下一步” 。  
+   3. 在“分发代理位置”  页上，选择“在其订阅服务器上运行每个代理(请求订阅)” ，然后单击“下一步” 。  
 
-    4.  在“订阅服务器”  页上，执行下列操作之一：  
+   4. 在“订阅服务器”  页上，执行下列操作之一：  
 
-        -   从数据库副本服务器上选择要用于数据库副本的现有数据库，然后单击“确定” 。  
+      -   从数据库副本服务器上选择要用于数据库副本的现有数据库，然后单击“确定” 。  
 
-        -   选择“新建数据库”  以为该数据库副本创建新数据库。 在“新建数据库”  页上，指定数据库名称，然后单击“确定” 。  
+      -   选择“新建数据库”  以为该数据库副本创建新数据库。 在“新建数据库”  页上，指定数据库名称，然后单击“确定” 。  
 
-    5.  单击 **“下一步”** 以继续。  
+   5. 单击 **“下一步”** 以继续。  
 
-    6.  在“分发代理安全性”页上，单击对话框的“订阅服务器连接”行中的属性按钮“(.…)”，然后配置连接的安全设置。  
+   6. 在“分发代理安全性”页上，单击对话框的“订阅服务器连接”行中的属性按钮“(.…)”，然后配置连接的安全设置。  
 
-        > [!TIP]  
-        >  属性按钮“(....)”在显示框的第四列中。  
+      > [!TIP]  
+      >  属性按钮“(....)”在显示框的第四列中。  
 
-        **安全设置：**  
+      **安全设置：**  
 
-        -   配置运行分发代理进程（进程帐户）的帐户：  
+      - 配置运行分发代理进程（进程帐户）的帐户：  
 
-            -   如果 SQL Server 代理作为本地系统运行，请选择“在 SQL Server 代理服务帐户下运行(这不是我们推荐的最佳安全配置)”   
+        -   如果 SQL Server 代理作为本地系统运行，请选择“在 SQL Server 代理服务帐户下运行(这不是我们推荐的最佳安全配置)”   
 
-            -   如果 SQL Server 代理使用其他帐户运行，请选择“在以下 Windows 帐户下运行” ，然后配置该帐户。 你可以指定 Windows 帐户或某个 SQL Server 帐户。  
+        -   如果 SQL Server 代理使用其他帐户运行，请选择“在以下 Windows 帐户下运行” ，然后配置该帐户。 你可以指定 Windows 帐户或某个 SQL Server 帐户。  
 
-            > [!IMPORTANT]  
-            >  你必须以请求订阅的形式向运行分发代理的帐户授予对发布者的权限。 有关配置这些权限的信息，请参阅 SQL Server TechNet 库中的 [分发代理安全性](http://go.microsoft.com/fwlink/p/?LinkId=238463) 。  
+        > [!IMPORTANT]  
+        >  你必须以请求订阅的形式向运行分发代理的帐户授予对发布者的权限。 有关配置这些权限的信息，请参阅 SQL Server TechNet 库中的 [分发代理安全性](http://go.microsoft.com/fwlink/p/?LinkId=238463) 。  
 
-        -   对于“连接到分发服务器” ，请选择“通过模拟进程帐户” 。  
+      - 对于“连接到分发服务器” ，请选择“通过模拟进程帐户” 。  
 
-        -   对于“连接到订阅服务器” ，请选择“通过模拟进程帐户” 。  
+      - 对于“连接到订阅服务器” ，请选择“通过模拟进程帐户” 。  
 
-         在配置连接安全设置之后，请单击“确定”  以保存它们，然后单击“下一步” 。  
+        在配置连接安全设置之后，请单击“确定”  以保存它们，然后单击“下一步” 。  
 
-    7.  在“同步计划”  页上的“代理计划”  列表框中，选择“定义计划” ，然后配置“新建作业计划” 。 将频率设置为“每日” 发生，并且每“5 分钟” 重复一次，并将持续时间设置为“无结束日期” 。 单击“下一步”  以保存计划，然后再单击“下一步”  。  
+   7. 在“同步计划”  页上的“代理计划”  列表框中，选择“定义计划” ，然后配置“新建作业计划” 。 将频率设置为“每日” 发生，并且每“5 分钟” 重复一次，并将持续时间设置为“无结束日期” 。 单击“下一步”  以保存计划，然后再单击“下一步”  。  
 
-    8.  在“向导操作”  页上，选中“创建订阅” 的复选框，然后单击“下一步” 。  
+   8. 在“向导操作”  页上，选中“创建订阅” 的复选框，然后单击“下一步” 。  
 
-    9. 在“完成向导”  页上，单击“完成” ，然后单击“关闭”  以完成向导。  
+   9. 在“完成向导”  页上，单击“完成” ，然后单击“关闭”  以完成向导。  
 
-3.  完成新建订阅向导之后，立即使用“SQL Server Management Studio”连接到数据库副本服务器数据库并运行以下查询以启用 TRUSTWORTHY 数据库属性：`ALTER DATABASE <MP Replica Database Name> SET TRUSTWORTHY ON;`  
+3. 完成新建订阅向导之后，立即使用“SQL Server Management Studio”连接到数据库副本服务器数据库并运行以下查询以启用 TRUSTWORTHY 数据库属性：`ALTER DATABASE <MP Replica Database Name> SET TRUSTWORTHY ON;`  
 
-4.  查看同步状态以验证订阅是否成功：  
+4. 查看同步状态以验证订阅是否成功：  
 
-    -   在订阅服务器计算机上：  
+   -   在订阅服务器计算机上：  
 
-        -   在“SQL Server Management Studio” 中，连接到数据库副本服务器，并展开“复制” 。  
+       -   在“SQL Server Management Studio” 中，连接到数据库副本服务器，并展开“复制” 。  
 
-        -   展开“本地订阅” ，右键单击站点数据库发布订阅，然后选择“查看同步状态” 。  
+       -   展开“本地订阅” ，右键单击站点数据库发布订阅，然后选择“查看同步状态” 。  
 
-    -   在发布服务器计算机上：  
+   -   在发布服务器计算机上：  
 
-        -   在“SQL Server Management Studio” 中，连接到站点数据库计算机，右键单击“复制”  文件夹，然后选择“启动复制监视器” 。  
+       -   在“SQL Server Management Studio” 中，连接到站点数据库计算机，右键单击“复制”  文件夹，然后选择“启动复制监视器” 。  
 
-5.  要为数据库副本启用公共语言运行时 (CLR) 集成，请使用“SQL Server Management Studio”  连接到数据库副本服务器上的数据库副本，并以查询形式运行以下存储过程： **exec sp_configure 'clr enabled', 1; RECONFIGURE WITH OVERRIDE**  
+5. 要为数据库副本启用公共语言运行时 (CLR) 集成，请使用“SQL Server Management Studio”  连接到数据库副本服务器上的数据库副本，并以查询形式运行以下存储过程： **exec sp_configure 'clr enabled', 1; RECONFIGURE WITH OVERRIDE**  
 
-6.  对于使用数据库副本服务器的每个管理点，请将该管理点计算机帐户添加到该数据库副本服务器上的本地“管理员”  组中。  
+6. 对于使用数据库副本服务器的每个管理点，请将该管理点计算机帐户添加到该数据库副本服务器上的本地“管理员”  组中。  
 
-    > [!TIP]  
-    >  数据库副本服务器上运行的管理点不需要此步骤。  
+   > [!TIP]  
+   >  数据库副本服务器上运行的管理点不需要此步骤。  
 
- 现在管理点可以使用数据库副本了。  
+   现在管理点可以使用数据库副本了。  
 
 ###  <a name="BKMK_DBReplica_ConfigMP"></a> 第 3 步 - 将管理点配置为使用数据库副本  
  可以将主站点上的管理点配置为在安装管理点角色时使用数据库副本，或者可以将现有管理点重新配置为使用数据库副本。  
 
  使用下列信息将管理点配置为使用数据库副本：  
 
--   **配置新的管理点：** 在用于安装管理点的“管理点数据库”  页上，选择“使用数据库副本” ，然后指定承载数据库副本的计算机的 FQDN。 接着，对于“ConfigMgr 站点数据库名称” ，请指定该计算机上数据库副本的数据库名称。  
+-   **配置新的管理点：** 在用于安装管理点的“管理点数据库”页上，选择“使用数据库副本”，然后指定承载数据库副本的计算机的 FQDN。 接着，对于“ConfigMgr 站点数据库名称” ，请指定该计算机上数据库副本的数据库名称。  
 
--   **配置以前安装的管理点**：打开管理点的属性页，选择“管理点数据库”  选项卡，再选择“使用数据库副本” ，然后指定承载数据库副本的计算机的 FQDN。 接着，对于“ConfigMgr 站点数据库名称” ，请指定该计算机上数据库副本的数据库名称。  
+-   **配置以前安装的管理点**：打开管理点的属性页，选择“管理点数据库”选项卡，再选择“使用数据库副本”，然后指定承载数据库副本的计算机的 FQDN。 接着，对于“ConfigMgr 站点数据库名称” ，请指定该计算机上数据库副本的数据库名称。  
 
 -   **对于使用数据库副本的每个管理点**，必须将管理点服务器的计算机帐户手动添加到该数据库副本的 **db_datareader** 角色。  
 
@@ -371,9 +371,9 @@ System Center Configuration Manager 主站点可以使用数据库副本来减�
 
 3.  在数据库副本服务器上，运行下列适用于 SQL Server 配置的命令：  
 
-    -   对于 SQL Server 的默认实例：右键单击文件“CreateMPReplicaCert.ps1”  ，并选择“使用 PowerShell 运行” 。 运行脚本时，它会创建自签名证书，并将 SQL Server 配置为使用该证书。  
+    -   对于 SQL Server 的默认实例：右键单击文件“CreateMPReplicaCert.ps1”，并选择“使用 PowerShell 运行”。 运行脚本时，它会创建自签名证书，并将 SQL Server 配置为使用该证书。  
 
-    -   对于 SQL Server 的命名实例：使用 PowerShell 运行命令 **%path%\CreateMPReplicaCert.ps1 xxxxxx** ，其中 **xxxxxx** 是 SQL Server 实例的名称。  
+    -   对于 SQL Server 的命名实例：使用 PowerShell 运行命令 %path%\CreateMPReplicaCert.ps1 xxxxxx，其中 xxxxxx 是 SQL Server 实例的名称。  
 
     -   脚本完成之后，验证 SQL Server 代理是否正在运行。 如果未在运行，请重启 SQL Server 代理。  
 
@@ -421,33 +421,33 @@ System Center Configuration Manager 主站点可以使用数据库副本来减�
 
 ##### <a name="to-configure-the-service-broker-for-a-database-replica"></a>为数据库副本配置 Service Broker  
 
-1.  使用“SQL Server Management Studio”连接到数据库副本服务器数据库，然后运行以下查询以在数据库副本服务器上启用 Service Broker：**ALTER DATABASE &lt;副本数据库名称\> SET ENABLE_BROKER, HONOR_BROKER_PRIORITY ON WITH ROLLBACK IMMEDIATE**  
+1. 使用“SQL Server Management Studio”连接到数据库副本服务器数据库，然后运行以下查询以在数据库副本服务器上启用 Service Broker：ALTER DATABASE &lt;副本数据库名称\> SET ENABLE_BROKER，HONOR_BROKER_PRIORITY ON WITH ROLLBACK IMMEDIATE  
 
-2.  接着，在数据库副本服务器上，为客户端通知配置 Service Broker，并导出 Service Broker 证书。 为此，请运行 SQL Server 存储过程，该存储过程只需一次操作便可配置 Service Broker 并导出证书。 在运行该存储过程时，你必须指定数据库副本服务器的 FQDN、数据库副本数据库的名称，并指定证书文件的导出位置。  
+2. 接着，在数据库副本服务器上，为客户端通知配置 Service Broker，并导出 Service Broker 证书。 为此，请运行 SQL Server 存储过程，该存储过程只需一次操作便可配置 Service Broker 并导出证书。 在运行该存储过程时，你必须指定数据库副本服务器的 FQDN、数据库副本数据库的名称，并指定证书文件的导出位置。  
 
-     运行以下查询在数据库副本服务器上配置所需的详细信息，并导出数据库副本服务器的证书：**EXEC sp_BgbConfigSSBForReplicaDB '&lt;副本 SQL Server FQDN\>', '&lt;副本数据库名称\>', '&lt;证书备份文件路径\>'**  
+    运行下列查询以在数据库副本服务器上配置所需的详细信息，并导出数据库副本服务器的证书：EXEC sp_BgbConfigSSBForReplicaDB '&lt;副本 SQL Server FQDN\>', '&lt;副本数据库名称\>, '&lt;证书备份文件路径\>'  
 
-    > [!NOTE]  
-    >  如果数据库副本服务器不在 SQL Server 的默认实例上，则对于此步骤，除了指定副本数据库名称之外，你还必须指定实例名称。 为此，请将**&lt;副本数据库名称\>** 替换为**实例名称&lt;\\副本数据库名称\>**。  
+   > [!NOTE]  
+   >  如果数据库副本服务器不在 SQL Server 的默认实例上，则对于此步骤，除了指定副本数据库名称之外，你还必须指定实例名称。 为此，请将**&lt;副本数据库名称\>** 替换为**实例名称&lt;\\副本数据库名称\>**。  
 
-     从数据库副本服务器中导出证书后，将证书的副本放在主站点数据库服务器上。  
+    从数据库副本服务器中导出证书后，将证书的副本放在主站点数据库服务器上。  
 
-3.  使用“SQL Server Management Studio”  连接到主站点数据库。 连接到主站点数据库后，运行查询以导入证书，并指定数据库副本服务器上正在使用的 Service Broker 端口、数据库副本服务器的 FQDN，以及数据库副本数据库的名称。 这会将主站点数据库配置为使用 Service Broker 与数据库副本服务器的数据库通信。  
+3. 使用“SQL Server Management Studio”  连接到主站点数据库。 连接到主站点数据库后，运行查询以导入证书，并指定数据库副本服务器上正在使用的 Service Broker 端口、数据库副本服务器的 FQDN，以及数据库副本数据库的名称。 这会将主站点数据库配置为使用 Service Broker 与数据库副本服务器的数据库通信。  
 
-     运行以下查询以从数据库副本服务器导入证书并指定所需的详细信息：**EXEC sp_BgbConfigSSBForRemoteService 'REPLICA', '&lt;SQL Service Broker 端口\>', '&lt;证书文件路径\>', '&lt;副本 SQL Server FQDN\>', '&lt;副本数据库名称\>'**  
+    运行下列查询以从数据库副本服务器中导入证书，并指定所需的详细信息：EXEC sp_BgbConfigSSBForRemoteService 'REPLICA', '&lt;SQL Service Broker 端口\>', '&lt;证书文件路径\>', '&lt;副本 SQL Server FQDN\>', '&lt;副本数据库名称\>'  
 
-    > [!NOTE]  
-    >  如果数据库副本服务器不在 SQL Server 的默认实例上，则对于此步骤，除了指定副本数据库名称之外，你还必须指定实例名称。 为此，请将 **&lt;副本数据库名称\>** 替换为 **\实例名称\\副本数据库名称\>**。  
+   > [!NOTE]  
+   >  如果数据库副本服务器不在 SQL Server 的默认实例上，则对于此步骤，除了指定副本数据库名称之外，你还必须指定实例名称。 为此，请将 **&lt;副本数据库名称\>** 替换为 **\实例名称\\副本数据库名称\>**。  
 
-4.  接着，在站点数据库服务器上，运行以下命令来导出站点数据库服务器的证书：**EXEC sp_BgbCreateAndBackupSQLCert '&lt;证书备份文件路径\>'**  
+4. 接着，在站点数据库服务器上，运行下列命令来导出站点数据库服务器的证书：EXEC sp_BgbCreateAndBackupSQLCert '&lt;证书备份文件路径\>'  
 
-     从站点数据库服务器中导出证书后，将证书的副本放在数据库副本服务器上。  
+    从站点数据库服务器中导出证书后，将证书的副本放在数据库副本服务器上。  
 
-5.  使用“SQL Server Management Studio”  连接到数据库副本服务器数据库。 连接到数据库副本服务器数据库后，运行查询以导入证书，并指定主站点的站点代码和站点数据库服务器上正在使用的 Service Broker 端口。 这会将数据库副本服务器配置为使用 Service Broker 与主站点的数据库通信。  
+5. 使用“SQL Server Management Studio”  连接到数据库副本服务器数据库。 连接到数据库副本服务器数据库后，运行查询以导入证书，并指定主站点的站点代码和站点数据库服务器上正在使用的 Service Broker 端口。 这会将数据库副本服务器配置为使用 Service Broker 与主站点的数据库通信。  
 
-     运行以下查询以从站点数据库服务器导入证书：**EXEC sp_BgbConfigSSBForRemoteService '&lt;站点代码\>', '&lt;SQL Service Broker 端口\>', '&lt;证书文件路径\>'**  
+    运行下列查询以从站点数据库服务器中导入证书：EXEC sp_BgbConfigSSBForRemoteService '&lt;站点代码\>', '&lt;SQL Service Broker 端口\>', '&lt;证书文件路径\>'  
 
- 在你完成站点数据库和数据库副本数据库的配置几分钟后，主站点上的通知管理器将为客户端通知设置从主站点数据库到数据库副本的 Service Broker 对话。  
+   在你完成站点数据库和数据库副本数据库的配置几分钟后，主站点上的通知管理器将为客户端通知设置从主站点数据库到数据库副本的 Service Broker 对话。  
 
 ###  <a name="bkmk_supscript"></a> 单个 SQL Server 上附加数据库副本的补充脚本  
  当你使用第 4 步中的脚本在 SQL Server 上配置数据库副本服务器的自签名证书（其中 SQL Server 已具有你计划继续使用的数据库副本）时，必须使用原始脚本修改后的版本。 以下修改使脚本无法删除服务器上的现有证书，并创建具有唯一友好名称的后续证书。  编辑原始脚本，如下所示：  
@@ -457,7 +457,7 @@ System Center Configuration Manager 主站点可以使用数据库副本来减�
 -   对于使用此脚本配置的每个后续数据库副本，请更新证书的友好名称。  若要如此，请编辑行 **$enrollment.CertificateFriendlyName = "ConfigMgr SQL Server Identification Certificate"** 并将 **ConfigMgr SQL Server Identification Certificate** 替换为新名称，如  **ConfigMgr SQL Server Identification Certificate1**。  
 
 ##  <a name="BKMK_DBReplicaOps"></a> 管理数据库副本配置  
- 在站点上使用数据库副本时，请使用下列部分中的信息对卸载数据库副本、卸载使用数据库副本的站点或将站点数据库转移到新安装 SQL Server 的过程进行补充。 在使用下列部分中的信息删除发布时，请使用有关为用于数据库副本的 SQL Server 版本删除事务复制的指引。 例如，如果使用 SQL Server 2008 R2，请参阅 [如何：删除发布（复制 Transact-SQL 编程）](http://go.microsoft.com/fwlink/p/?LinkId=273934)。  
+ 在站点上使用数据库副本时，请使用下列部分中的信息对卸载数据库副本、卸载使用数据库副本的站点或将站点数据库转移到新安装 SQL Server 的过程进行补充。 在使用下列部分中的信息删除发布时，请使用有关为用于数据库副本的 SQL Server 版本删除事务复制的指引。 例如，如果使用 SQL Server 2008 R2，请参阅[如何：删除发布（复制 Transact-SQL 编程）](http://go.microsoft.com/fwlink/p/?LinkId=273934)。  
 
 > [!NOTE]  
 >  还原为数据库副本配置的站点数据库之后，你必须重新配置每个数据库副本（从而重新创建发布和订阅），然后才能使用数据库副本。  

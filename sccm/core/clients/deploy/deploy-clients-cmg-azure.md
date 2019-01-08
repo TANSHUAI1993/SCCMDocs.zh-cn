@@ -10,16 +10,16 @@ ms.assetid: a44006eb-8650-49f6-94e1-18fa0ca959ee
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 490e5a614a98633629df98abcd554b02cec1261a
-ms.sourcegitcommit: ae03ad403b1732a5a61dec981e3a3010a0f09188
+ms.openlocfilehash: b722187a895a71b4195200354180cdbc8b2813e6
+ms.sourcegitcommit: 12b71da551350c99c5916df3629e33e31040db15
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "51860240"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53530908"
 ---
 # <a name="install-and-assign-configuration-manager-windows-10-clients-using-azure-ad-for-authentication"></a>安装并分配 Configuration Manager Windows 10 客户端（使用 Azure AD 进行身份验证）
 
-要在 Windows 10 设备上安装 Configuration Manager 客户端（使用 Azure AD 身份验证），请将 Configuration Manager 与 Azure Active Directory (Azure AD) 集成。 客户端可采用 Intranet，与启用 HTTPS 的管理点直接通信。 它们也可以通过 CMG 或基于 Internet 的管理点进行基于 Internet 的通信。 此过程使用 Azure AD 对访问 Configuration Manager 站点的客户端进行身份验证。 Azure AD 使你不再需要配置和使用客户端身份验证证书。
+要在 Windows 10 设备上安装 Configuration Manager 客户端（使用 Azure AD 身份验证），请将 Configuration Manager 与 Azure Active Directory (Azure AD) 集成。 客户端可以在 Intranet 上直接与启用 HTTPS 的管理点或启用增强型 HTTP 的站点中的任何管理点通信。 它们也可以通过 CMG 或基于 Internet 的管理点进行基于 Internet 的通信。 此过程使用 Azure AD 对访问 Configuration Manager 站点的客户端进行身份验证。 Azure AD 使你不再需要配置和使用客户端身份验证证书。
 
 
 

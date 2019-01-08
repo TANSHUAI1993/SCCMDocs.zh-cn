@@ -10,27 +10,27 @@ ms.assetid: ff6e7267-302a-4563-815e-cdc0d1a4b60f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 61c54ad6c0224dfae03a26784f0b3f61271b172c
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 97c4bde7e589e5d3d3c3ee3683055ca8e7412a03
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353056"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419829"
 ---
 # <a name="create-prestaged-media-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 创建预留媒体
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 System Center Configuration Manager 中的预留媒体是 Windows 映像格式 (WIM) 文件，可以由制造商安装在裸机上，也可以安装在未连接到 Configuration Manager 环境的企业暂存中心。  
 预留媒体包含用于启动目标计算机的启动映像，以及应用到目标计算机的操作系统映像。 你还可以指定要作为预留媒体的一部分包含的应用程序、包和驱动程序包。 此媒体不包含用于部署操作系统的任务序列。 在将新计算机发送给最终用户之前，预留媒体将应用到此计算机的硬盘驱动器。 为以下操作系统部署方案使用预留媒体：  
 
--   [为工厂中的 OEM 或本地 depot 创建映像](../../osd/deploy-use/create-an-image-for-an-oem-in-factory-or-a-local-depot.md)  
+- [为工厂中的 OEM 或本地 depot 创建映像](../../osd/deploy-use/create-an-image-for-an-oem-in-factory-or-a-local-depot.md)  
 
--   [在新计算机（裸机）上安装新版的 Windows](install-new-windows-version-new-computer-bare-metal.md)  
+- [在新计算机（裸机）上安装新版的 Windows](install-new-windows-version-new-computer-bare-metal.md)  
 
--   [部署 Windows To Go](deploy-windows-to-go.md)  
+- [部署 Windows To Go](deploy-windows-to-go.md)  
 
- 在应用预留媒体后第一次启动计算机时，计算机会启动到 Windows PE 并连接到管理点，以查找将完成操作系统部署过程的任务序列。 你可以指定要作为预留媒体的一部分包含的应用程序、包和驱动程序包。 在部署使用预留媒体的任务序列时，向导会首先检查本地任务序列缓存以查找有效的内容，如果无法找到内容或内容已被修改，则向导会从分发点下载内容。  
+  在应用预留媒体后第一次启动计算机时，计算机会启动到 Windows PE 并连接到管理点，以查找将完成操作系统部署过程的任务序列。 你可以指定要作为预留媒体的一部分包含的应用程序、包和驱动程序包。 在部署使用预留媒体的任务序列时，向导会首先检查本地任务序列缓存以查找有效的内容，如果无法找到内容或内容已被修改，则向导会从分发点下载内容。  
 
 ##  <a name="BKMK_CreatePrestagedMedia"></a> 如何创建预留媒体  
  在使用“创建任务序列媒体向导”创建预留媒体之前，请确保满足以下所有条件：  

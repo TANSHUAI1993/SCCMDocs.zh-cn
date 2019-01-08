@@ -10,18 +10,18 @@ ms.assetid: 00684289-d21a-45f8-b1e3-c5c787d73096
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 49205ac1d1fc2dd20cbd4a0844632c5f3d181e45
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: a9a5aeb35137a74152333a78e95781fb727eecdf
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32341893"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421597"
 ---
 # <a name="capabilities-in-technical-preview-1705-for-system-center-configuration-manager"></a>在 System Center Configuration Manager 的 Technical Preview 1705 中的功能
 
-*适用范围：System Center Configuration Manager（Technical Preview）*
+适用范围：*System Center Configuration Manager (Technical Preview)*
 
-本文介绍了在 System Center Configuration Manager 的 Technical Preview 1705 中的可用功能。 你可以安装此版本，以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。 在安装此 Technical Preview 前，请查看 [System Center Configuration Manager 的 Technical Preview](../../core/get-started/technical-preview.md)，熟悉使用 Technical Preview 的常规要求和限制，如何在两版本之间进行更新，以及如何对 Technical Preview 中的有关功能提供反馈。    
+本文介绍了在 System Center Configuration Manager 的 Technical Preview 1705 中的可用功能。 你可以安装此版本，以更新 Technical Preview 站点的功能并向其添加新功能。 在安装此 Technical Preview 前，请查看 [System Center Configuration Manager 的 Technical Preview](../../core/get-started/technical-preview.md)，熟悉使用 Technical Preview 的常规要求和限制，如何在两版本之间进行更新，以及如何对 Technical Preview 中的有关功能提供反馈。    
 
 **此 Technical Preview 中的已知问题：**
 -   **Operations Manager 套件连接器不升级**。 从配置了 OMS 连接器的 Technical Preview 之前版本升级时，该连接器不会升级且在控制台中变得不再可用。 在升级后，必须[使用 Azure 服务向导](capabilities-in-technical-preview-1705.md#use-azure-services-wizard-to-configure-a-connection-to-oms)并重新建立到 OMS 工作区的连接。
@@ -81,13 +81,15 @@ ms.locfileid: "32341893"
 
 **命令行参数：**  
 
-| 参数        |说明                 |  
-|------------------|----------------------------|  
-|**-S &lt;顶层站点的 SQL Server 的 FQDN>** | *必需* <br> 必须指定为层次结构的顶层站点托管站点数据库的 SQL Server 的 FQDN。    |  
-| **-D &lt;数据库名称>**                        | *必需* <br> 必须指定顶层站点数据库的名称。  |  
-| **-P &lt;包 GUID>**                         | *必需* <br> 必须指定想要重置的更新包的 GUID。   |  
-| **-I &lt;SQL Server 实例名称>**             | *可选* <br> 使用此参数确定托管站点数据库的 SQL Server 的实例。 |
-| **-FDELETE**                              | *可选* <br> 使用此参数强制删除已成功下载的更新包。 |  
+
+|                        参数                         |                                                            说明                                                            |
+|----------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
+| **-S &lt;顶层站点的 SQL Server 的 FQDN>** | *必需* <br> 必须指定为层次结构的顶层站点托管站点数据库的 SQL Server 的 FQDN。 |
+|                **-D &lt;数据库名称>**                 |                             *必需* <br> 必须指定顶层站点数据库的名称。                             |
+|                 **-P &lt;包 GUID>**                 |                        *必需* <br> 必须指定想要重置的更新包的 GUID。                        |
+|           **-I &lt;SQL Server 实例名称>**           |                   *可选* <br> 使用此参数确定托管站点数据库的 SQL Server 的实例。                   |
+|                       **-FDELETE**                       |                      *可选* <br> 使用此参数强制删除已成功下载的更新包。                      |
+
  **示例：**  
  在一个典型方案中，你想要重置具有下载问题的更新。 SQL Server FQDN 是 server1.fabrikam.com，站点数据库是 CM_XYZ，包 GUID 是 61F16B3C-F1F6-4F9F-8647-2A524B0C802C。  可以运行：CMUpdateReset.exe -S server1.fabrikam.com -D CM_XYZ -P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C
 
@@ -114,13 +116,13 @@ ms.locfileid: "32341893"
 ## <a name="improvements-for-sql-server-always-on-availability-groups"></a>SQL Server Always On 可用性组改进  
 借助此版本，现在可以在与 Configuration Manager 配合使用的 SQL Server AlwaysOn 可用性组中使用异步提交副本。  这意味着，你可以将其他副本添加到可用性组，用作场外（远程）备份，然后在灾难恢复方案中使用它们。  
 
--   Configuration Manager 支持使用异步提交副本来恢复同步副本。  请参阅备份和恢复主题中的[站点数据库恢复选项](/sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption)，了解有关如何实现此操作的信息。
+- Configuration Manager 支持使用异步提交副本来恢复同步副本。  请参阅备份和恢复主题中的[站点数据库恢复选项](/sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption)，了解有关如何实现此操作的信息。
 
--   此版本不支持故障转移后使用异步提交副本作为站点数据库。
-> [!CAUTION]  
-> 由于 Configuration Manager 不会验证异步提交副本的状态来确认它是否为最新，而[此类副本设计可以为不同步](https://msdn.microsoft.com/library/ff877884(SQL.120).aspx(d=robot)#Availability%20Modes)，因此，使用异步提交副本作为站点数据库可能会危及站点和数据的完整性。  
+- 此版本不支持故障转移后使用异步提交副本作为站点数据库。
+  > [!CAUTION]  
+  > 由于 Configuration Manager 不会验证异步提交副本的状态来确认它是否为最新，而[此类副本设计可以为不同步](https://msdn.microsoft.com/library/ff877884(SQL.120).aspx(d=robot)#Availability%20Modes)，因此，使用异步提交副本作为站点数据库可能会危及站点和数据的完整性。  
 
--   可以在可用性组中使用与所用 SQL Server 版本支持的数量和类型相同的副本。   （先前支持限制为两个同步提交副本。）
+- 可以在可用性组中使用与所用 SQL Server 版本支持的数量和类型相同的副本。   （先前支持限制为两个同步提交副本。）
 
 ### <a name="configure-an-asynchronous-commit-replica"></a>配置异步提交副本
 若要将异步副本添加到[与 Configuration Manager 配合使用的可用性组](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database)，则不需要运行配置同步副本所需的配置脚本。 （这是因为不支持将该异步副本用作站点数据库。）请参阅 [SQL Server 文档](https://msdn.microsoft.com/library/hh213247(v=sql.120).aspx(d=robot))，了解有关如何将辅助副本添加到可用性组的信息。
@@ -128,7 +130,7 @@ ms.locfileid: "32341893"
 ### <a name="use-the-asynchronous-replica-to-recover-your-site"></a>使用异步副本恢复站点
 使用异步副本恢复站点数据库之前，必须停止活动主站点，防止到站点数据库的其他写入。 停止站点后，可以使用异步副本替代[手动恢复的数据库](/sccm/protect/understand/backup-and-recovery#BKMK_SiteDatabaseRecoveryOption)。
 
-若要停止该站点，可以使用[层次结构维护工具](/sccm/core/servers/manage/hierarchy-maintenance-tool-preinst.exe)来停止站点服务器上的密钥服务。 使用命令行：Preinst.exe /stopsite   
+若要停止该站点，可以使用[层次结构维护工具](/sccm/core/servers/manage/hierarchy-maintenance-tool-preinst.exe)来停止站点服务器上的密钥服务。 使用命令行：**Preinst.exe /stopsite**   
 
 停止站点相当于停止站点服务器上后跟 SMS_Executive 服务的站点组件管理器服务 (sitecomp)。
 
@@ -156,7 +158,7 @@ ms.locfileid: "32341893"
 ## <a name="configure-and-deploy-windows-defender-application-guard-policies"></a>配置和部署 Windows Defender 应用程序防护策略
 
 [Windows Defender 应用程序防护](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97)是一项新的 Windows 功能，通过在操作系统的其他部分无法访问的安全隔离容器中打开不受信任的网站来帮助保护用户安全。 在此 Technical Preview 版中，我们使用在配置后部署到集合的 Configuration Manager 符合性设置增加了对配置此功能的支持。
-此功能将在 64 位版本的 Windows 10 创意者更新预览版 (codename: RS2) 中发布。 现在，若要测试此功能，必须使用此更新的预览版本。
+此功能将在 64 位版本的 Windows 10 创意者更新预览版中发布 (codename:RS2)。 现在，若要测试此功能，必须使用此更新的预览版本。
 
 
 ### <a name="before-you-start"></a>开始之前
@@ -224,20 +226,20 @@ ms.locfileid: "32341893"
 
 这会将 Configuration Manager 站点连接到 Azure AD，这也是本节中所有其他操作的先决条件。 要执行此操作：
 
-1.  在 Configuration Manager 控制台的“管理”工作区中，展开“云服务”，然后单击“Azure 服务”。
-2.  在“主页”选项卡上的“Azure 服务”组中，单击“配置 Azure 服务”。
-3.  在 Azure 服务向导的“Azure 服务”页上，选择“云管理”以允许客户端使用 Azure AD 对层次结构进行身份验证。
-4.  在向导的“常规”页上，指定一个名称和 Azure 服务的说明。
-5.  在向导的“应用”页上，从列表中选择 Azure 环境，然后单击“浏览”以选择将用于配置 Azure 服务的服务器和客户端应用：
-    - 在“服务器应用”窗口中，选择要使用的服务器应用，然后单击“确定”。 服务器应用是包含 Azure 帐户配置的 Azure Web 应用，包括客户端的租户 ID、客户端 ID 和密钥。 如果没有可用的服务器应用，请使用以下操作之一：
-        - **创建**：若要创建新的服务器应用，请单击“创建”。 为应用和租户提供友好名称。 然后，登录 Azure 后，Configuration Manager 将在 Azure 中为用户创建 Web 应用，包括用于 Web 应用的客户端 ID 和密钥。 之后，可在 Azure 门户中查看这些内容。
-        - **导入**：若要使用 Azure 订阅中已存在的 Web 应用，请单击“导入”。 为应用和租户提供友好名称，然后为 Configuration Manager 要使用的 Azure Web 应用指定租户 ID、客户端 ID 和密钥。 验证此信息后，单击“确定”以继续。 此选项当前在此 Technical Preview 中不可用。
-    - 为客户端应用重复相同的过程。
+1. 在 Configuration Manager 控制台的“管理”工作区中，展开“云服务”，然后单击“Azure 服务”。
+2. 在“主页”选项卡上的“Azure 服务”组中，单击“配置 Azure 服务”。
+3. 在 Azure 服务向导的“Azure 服务”页上，选择“云管理”以允许客户端使用 Azure AD 对层次结构进行身份验证。
+4. 在向导的“常规”页上，指定一个名称和 Azure 服务的说明。
+5. 在向导的“应用”页上，从列表中选择 Azure 环境，然后单击“浏览”以选择将用于配置 Azure 服务的服务器和客户端应用：
+   - 在“服务器应用”窗口中，选择要使用的服务器应用，然后单击“确定”。 服务器应用是包含 Azure 帐户配置的 Azure Web 应用，包括客户端的租户 ID、客户端 ID 和密钥。 如果没有可用的服务器应用，请使用以下操作之一：
+       - **创建**：若要创建新的服务器应用，请单击“创建”。 为应用和租户提供友好名称。 然后，登录 Azure 后，Configuration Manager 将在 Azure 中为用户创建 Web 应用，包括用于 Web 应用的客户端 ID 和密钥。 之后，可在 Azure 门户中查看这些内容。
+       - **导入**：若要使用 Azure 订阅中已存在的 Web 应用，请单击“导入”。 为应用和租户提供友好名称，然后为 Configuration Manager 要使用的 Azure Web 应用指定租户 ID、客户端 ID 和密钥。 验证此信息后，单击“确定”以继续。 此选项当前在此 Technical Preview 中不可用。
+   - 为客户端应用重复相同的过程。
 
-  在使用“应用程序导入”时，需要授予“读取目录数据”应用程序权限以在门户中设置正确的权限。 如果使用“应用程序创建”，则权限将自动随应用程序创建，但仍需要在 Azure 门户中同意该应用程序。
-6.  在向导的“发现”页上，根据需要选择“启用 Azure Active Directory 用户发现”，然后单击“设置”。
-在“Azure AD 用户发现设置”对话框中，配置出现发现的时间计划。 此外，还可以启用增量发现，用于仅查看 Azure AD 中新增或更改的帐户。
-7.  完成向导。
+   在使用“应用程序导入”时，需要授予“读取目录数据”应用程序权限以在门户中设置正确的权限。 如果使用“应用程序创建”，则权限将自动随应用程序创建，但仍需要在 Azure 门户中同意该应用程序。
+6. 在向导的“发现”页上，根据需要选择“启用 Azure Active Directory 用户发现”，然后单击“设置”。
+   在“Azure AD 用户发现设置”对话框中，配置出现发现的时间计划。 此外，还可以启用增量发现，用于仅查看 Azure AD 中新增或更改的帐户。
+7. 完成向导。
 
 此时，已将 Configuration Manager 站点连接到 Azure AD。
 
@@ -247,14 +249,14 @@ ms.locfileid: "32341893"
 在开始之前，请确保客户端安装源文件已本地存储在用于安装此客户端的设备上。
 然后，使用[如何将客户端部署到 System Center Configuration Manager 中的 Windows 计算机](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#a-namebkmkmanuala-how-to-install-clients-manually)中的说明，使用以下安装命令行（将示例中的值替换为你自己的值）：
 
-ccmsetup.exe /NoCrlCheck /Source:C:\CLIENT  CCMHOSTNAME=SCCMPROXYCONTOSO.CLOUDAPP.NET/CCM_Proxy_ServerAuth/72457598037527932 SMSSiteCode=HEC AADTENANTID=780433B5-E05E-4B7D-BFD1-E8013911E543 AADTENANTNAME=contoso  AADCLIENTAPPID=<GUID> AADRESOURCEURI=https://contososerver
+ccmsetup.exe /NoCrlCheck /Source:C:\CLIENT  CCMHOSTNAME=SCCMPROXYCONTOSO.CLOUDAPP.NET/CCM_Proxy_ServerAuth/72457598037527932 SMSSiteCode=HEC AADTENANTID=780433B5-E05E-4B7D-BFD1-E8013911E543 AADTENANTNAME=contoso  AADCLIENTAPPID=<GUID> AADRESOURCEURI=<https://contososerver>
 
 - **/NoCrlCheck**：如果管理点或云管理网关使用非公共服务器证书，则客户端可能无法访问 CRL 位置。
-- **/Source**：本地文件夹 - 客户端安装文件的位置。
+- **/Source**：本地文件夹： 客户端安装文件位置。
 - **CCMHOSTNAME**：Internet 管理点的名称。 可以通过从托管客户端的命令提示符处运行 gwmi -namespace root\ccm\locationservices -class SMS_ActiveMPCandidate 找到此名称。
-- **SMSMP**：查找管理点的名称，这可以是在 Intranet 上。
+- **SMSMP**：查找管理点的名称，管理点可位于 Intranet 上。
 - **SMSSiteCode**：Configuration Manager 站点的站点代码。
-- **AADTENANTID**、**AADTENANTNAME**：链接到 Configuration Manager 的 Azure AD 租户的 ID 和名称。 可以通过从加入 Azure AD 的设备上的命令提示符处运行 dsregcmd.exe /status 找到上述内容。
+- AADTENANTID、AADTENANTNAME：链接到 Configuration Manager 的 Azure AD 租户的 ID 和名称。 可以通过从加入 Azure AD 的设备上的命令提示符处运行 dsregcmd.exe /status 找到上述内容。
 - **AADCLIENTAPPID**：Azure AD 客户端应用 ID。 有关查找此内容的帮助，请参阅[使用门户创建可访问资源的 Azure Active Directory 应用程序和服务主体](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal#get-application-id-and-authentication-key)。
 - **AADResourceUri**：载入的 Azure AD 服务器应用的标识符 URI。
 

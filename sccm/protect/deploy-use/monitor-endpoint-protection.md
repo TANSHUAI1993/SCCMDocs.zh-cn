@@ -10,38 +10,38 @@ ms.assetid: f4a1335c-bb3d-493e-a124-83a32a107dc8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f4e1ea4cb097381467774af9c3161079419d6840
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 5de0ab2eb56ad671a43a6a40fab4e1f4dcc051a4
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32348763"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424385"
 ---
 # <a name="how-to-monitor-endpoint-protection-status"></a>如何监视 Endpoint Protection 状态
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*适用于：System Center Configuration Manager (Current Branch)*
 
 可以使用“监视”工作区中的“安全性”下的“Endpoint Protection 状态”节点，“资产和符合性”工作区中的“Endpoint Protection”节点以及使用报表，在 Microsoft System Center Configuration Manager 层次结构中监视 Endpoint Protection。  
 
 ##  <a name="BKMK_1"></a>如何使用“Endpoint Protection 状态”节点监视 Endpoint Protection  
 
-1.  在 Configuration Manager 控制台中，单击“监视”。  
+1. 在 Configuration Manager 控制台中，单击“监视”。  
 
-2.  在“监视”工作区中，展开“安全性”，然后单击“Endpoint Protection 状态”。  
+2. 在“监视”工作区中，展开“安全性”，然后单击“Endpoint Protection 状态”。  
 
-3.  在 **集合** 列表中，选择想要查看状态信息的集合。  
+3. 在 **集合** 列表中，选择想要查看状态信息的集合。  
 
-    > [!IMPORTANT]  
-    >  集合是在以下情况下可供选择：  
-    >   
-    >  -   当你在“<集合名称\> 属性”对话框的“警报”选项卡上选择“在 Endpoint Protection 仪表板中查看此集合”时。  
-    > -   当你部署 Endpoint Protection 反恶意软件策略应用到集合。  
-    > -   如果先启用然后部署 Endpoint Protection 到集合的客户端设置。  
+   > [!IMPORTANT]
+   >  集合是在以下情况下可供选择：  
+   > 
+   > - 当你在“<集合名称\>属性”对话框的“警报”选项卡上选择“在 Endpoint Protection 仪表板中查看此集合”时。  
+   >   -   当你部署 Endpoint Protection 反恶意软件策略应用到集合。  
+   >   -   如果先启用然后部署 Endpoint Protection 到集合的客户端设置。  
 
-4.  查看中显示的信息 **安全状态** 和 **操作状态** 部分。 您可以单击以创建临时集合中的任何状态链接 **设备** 中的节点 **资产和符合性** 工作区。 此临时集合包含具有所选状态的计算机。  
+4. 查看中显示的信息 **安全状态** 和 **操作状态** 部分。 您可以单击以创建临时集合中的任何状态链接 **设备** 中的节点 **资产和符合性** 工作区。 此临时集合包含具有所选状态的计算机。  
 
-    > [!IMPORTANT]  
-    >  “Endpoint Protection 状态”节点中显示的信息基于上次从 Configuration Manager 数据库汇总的数据，可能不是最新的。 如果想要检索最新数据，则在“主页”选项卡上，单击“运行摘要”，或单击“计划摘要”以调整摘要间隔。  
+   > [!IMPORTANT]  
+   >  “Endpoint Protection 状态”节点中显示的信息基于上次从 Configuration Manager 数据库汇总的数据，可能不是最新的。 如果想要检索最新数据，则在“主页”选项卡上，单击“运行摘要”，或单击“计划摘要”以调整摘要间隔。  
 
 ##  <a name="BKMK_2"></a>如何在“资产和符合性”工作区中监视 Endpoint Protection  
 

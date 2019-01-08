@@ -10,16 +10,16 @@ ms.assetid: f4f9a5fd-f573-4b99-ad93-b2c76812e922
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7d6b957ebcc19dfe8c14dd781f71678db8e160af
-ms.sourcegitcommit: 1a1bac2d5ee0f20ce565d29798ee4dd99aaca044
+ms.openlocfilehash: c4ceec8c0d5482456d3257106ee067bf3d9ec1fb
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52281900"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418095"
 ---
 # <a name="install-and-upgrade-with-the-version-1606-baseline-media-for-system-center-configuration-manager"></a>使用 1606 版基线介质安装或升级 System Center Configuration Manager
 
-*适用范围：System Center Configuration Manager (Current Branch) 和 (Long-Term Servicing Branch)*
+适用范围：*System Center Configuration Manager (Current Branch) 和 (Long-Term Servicing Branch)*
 
 运行 Configuration Manager 的版本 1606 基线媒体中的安装程序时，可以安装 System Center Configuration Manager 的 Long-Term Servicing Branch 或 Current branch 网站。
 
@@ -71,13 +71,13 @@ ms.locfileid: "52281900"
 使用无人参与的脚本安装许可的分支时，必须向脚本的“选项”部分添加以下部分、密钥名称和值。 不需要使用这些值来编写 Current Branch 评估版的安装的脚本：  
 
  **SABranchOptions**
--   **密钥名称：SAActive**
+- **密钥名称：SAActive**
   - 值：0 或 1。  
-  - 详细信息：0 表示安装 Current Branch 的未经许可的评估版，1 表示安装许可的版本。   
+  - 详细信息:0 表示安装 Current Branch 的未经许可的评估版，1 表示安装许可的版本。   
 
 - **CurrentBranch**
   - 值：0 或 1。  
-  - 详细信息：0 表示安装 Long-Term Servicing Branch，1 表示安装 Current Branch。  
+  - 详细信息:0 表示安装 Long-Term Servicing Branch，1 表示安装 Current Branch。  
 
 例如，若要安装许可的 Current Branch.版本，请使用：
 

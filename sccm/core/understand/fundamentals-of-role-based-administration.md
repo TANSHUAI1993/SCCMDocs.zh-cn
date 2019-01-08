@@ -10,28 +10,28 @@ ms.assetid: 0a2d6c3f-a4e4-4c19-b087-3caada480de9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3b7916b386cb22f2d1869eface009bd10ff17d18
-ms.sourcegitcommit: 3dfe3f4401651afa9dc65d14a8944ae4e4198b3e
+ms.openlocfilehash: 1103b9e977f3bbef3e07d545b6b3762f6cf59fdd
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48862543"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53414967"
 ---
 # <a name="fundamentals-of-role-based-administration-for-system-center-configuration-manager"></a>System Center Configuration Manager 的基于角色的管理基础
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：*System Center Configuration Manager (Current Branch)*
 
 在 System Center Configuration Manager 中，使用基于角色的管理来保护管理 Configuration Manager 所需的访问权限。 还需保护对你管理的对象（如集合、部署和站点）的访问权限。 了解在本主题中引入的概念后，可以[为 System Center Configuration Manager 配置基于角色的管理](../../core/servers/deploy/configure/configure-role-based-administration.md)。  
 
  此基于角色的管理模式使用以下内容为所有站点和站点设置集中定义并管理层次结构范围的安全访问设置：  
 
--   *安全角色*将分配给管理用户，并为这些用户（或用户组）提供不同 Configuration Manager 对象的权限。 例如创建或更改客户端设置的权限。  
+- *安全角色*将分配给管理用户，并为这些用户（或用户组）提供不同 Configuration Manager 对象的权限。 例如创建或更改客户端设置的权限。  
 
--   *管理作用域*用于对管理用户负责管理的对象的特定实例进行分组，如安装 Microsoft Office 2010 的应用程序。  
+- *管理作用域*用于对管理用户负责管理的对象的特定实例进行分组，如安装 Microsoft Office 2010 的应用程序。  
 
--   *集合*用于指定管理用户可管理的用户和设备资源组。  
+- *集合*用于指定管理用户可管理的用户和设备资源组。  
 
- 组合使用安全角色、安全作用域和集合，可分离满足组织需求的管理任务。 将它们组合使用可定义用户的管理作用域，这就是用户可在 Configuration Manager 部署中查看和管理的内容。  
+  组合使用安全角色、安全作用域和集合，可分离满足组织需求的管理任务。 将它们组合使用可定义用户的管理作用域，这就是用户可在 Configuration Manager 部署中查看和管理的内容。  
 
 ## <a name="benefits-of-role-based-administration"></a>基于角色的管理的好处  
 
@@ -75,7 +75,7 @@ ms.locfileid: "48862543"
 > [!TIP]  
 >  在 Configuration Manager 控制台中，可以查看内置的安全角色和创建的自定义安全角色的列表（包括它们的描述）。 若要查看角色，请在“管理”工作区中展开“安全”然后选择“安全角色”。  
 
- 每个安全角色都有针对不同对象类型的特定权限。 例如，“应用程序作者”安全角色具有下列针对应用程序的权限：“批准”、“创建”、“删除”、“修改”、“修改文件夹”、“移动对象”、“读取”、“运行报告”和“设置安全作用域”。
+ 每个安全角色都有针对不同对象类型的特定权限。 例如，“应用程序作者”安全角色具有下列针对应用程序的权限：“批准”、“创建”、“删除”、“修改”、“修改文件夹”、“移动对象”、“读取”、“运行报表”和“设置安全作用域”。
 
  无法更改内置安全角色的权限，但可以复制角色，进行更改，然后将所做的更改另存为新的自定义安全角色。 还可以导入从另一个层次结构（例如测试网络）中导出的安全角色。 查看安全角色及其权限，以确定是使用内置的安全角色还是必须创建自己的自定义安全角色。  
 

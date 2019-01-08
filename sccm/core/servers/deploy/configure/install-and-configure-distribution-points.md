@@ -10,16 +10,16 @@ ms.assetid: aebafaf9-b3d5-4a0f-9ee5-685758c037a1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bca3e0857ed40d2e2b3f9d739b4c0411e0213d09
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 0ab848051d5eaa85d2b515145ff64471aee81a31
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385365"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53415035"
 ---
 # <a name="install-and-configure-distribution-points-in-configuration-manager"></a>在 Configuration Manager 中安装和配置分发点
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 安装 Configuration Manager 分发点以托骨干部署到设备和用户的内容文件。 创建分发点组以简化管理分发点和将内容分发到分发点的方式。  
 
@@ -252,13 +252,13 @@ ms.locfileid: "39385365"
     > [!NOTE]  
     >  此选项仅在“创建站点系统服务器”向导的“分发点”页上。 它仅在[安装新分发点](#bkmk_install-procedure)时可用。  
 
-- **对此分发点启用和配置 BranchCache：** 选择此设置以允许 Configuration Manager 在分发点服务器上配置 Windows BranchCache。 有关详细信息，请参阅 [BranchCache](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#branchcache)。  
+- **启用和配置此分发点的 BranchCache**：选择此设置以允许 Configuration Manager 在分发点服务器上配置 Windows BranchCache。 有关详细信息，请参阅 [BranchCache](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#branchcache)。  
 
-- **调整下载速度以使用未使用的网络带宽 (Windows LEDBAT)**<!--1358112-->：从版本 1806 开始，启用分发点以使用网络拥塞控制。 有关详细信息，请参阅 [Windows LEDBAT](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#windows-ledbat)。 分发点必须运行 Windows Server 版本 1709。 没有客户端先决条件。  
+- **调整下载速度以使用未使用的网络带宽(Windows LEDBAT)**<!--1358112-->：自版本 1806 开始，启用分发点可使用网络拥塞控制。 有关详细信息，请参阅 [Windows LEDBAT](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management#windows-ledbat)。 分发点必须运行 Windows Server 版本 1709。 没有客户端先决条件。  
 
 - **描述**：此分发点角色的可选描述。  
 
--   **配置客户端设备与分发点的通信方式**：无论是使用 HTTP 还是 HTTPS，都有一些优点和缺点。 有关详细信息，请参阅[内容管理的最佳安全做法](/sccm/core/plan-design/hierarchy/security-and-privacy-for-content-management#BKMK_Security_ContentManagement)。  
+-   **配置客户端设备与分发点通信的方式**：使用 HTTP 或 HTTPS 有一些优点和缺点。 有关详细信息，请参阅[内容管理的最佳安全做法](/sccm/core/plan-design/hierarchy/security-and-privacy-for-content-management#BKMK_Security_ContentManagement)。  
 
 -   **允许客户端进行匿名连接**：此设置指定分发点是否允许从 Configuration Manager 客户端到内容库的匿名连接。  
 
@@ -269,7 +269,7 @@ ms.locfileid: "39385365"
     >   
     >  在客户端上安装更新并修改记录的注册表项后，MSIExec 将使用已登录的用户帐户访问内容路径。  
 
--   **创建自签名证书或导入 PKI 客户端证书**：Configuration Manager 将此证书用于以下用途：  
+-   **创建自签名证书或导入 PKI 客户端证书**：Configuration Manager 将此证书用于以下目的：  
 
     -   在分发点发送状态消息之前，该证书向管理点验证分发点。  
 
@@ -290,7 +290,7 @@ ms.locfileid: "39385365"
 
      有关此证书的部署示例，请参阅[为分发点部署客户端证书](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_clientdistributionpoint2008_cm2012)。  
 
--   **为预留内容启用此分发点**：此设置允许你在分发软件之前向服务器添加内容。 由于内容文件已在内容库中，因此，当分发软件时，不会通过网络传输内容文件。 有关详细信息，请参阅[预留内容](/sccm/core/plan-design/hierarchy/manage-network-bandwidth#BKMK_PrestagingContent)。  
+-   **为预留内容启用此分发点**：使用此设置可在分发软件之前向服务器添加内容。 由于内容文件已在内容库中，因此，当分发软件时，不会通过网络传输内容文件。 有关详细信息，请参阅[预留内容](/sccm/core/plan-design/hierarchy/manage-network-bandwidth#BKMK_PrestagingContent)。  
 
 
 ### <a name="bkmk_config-drive"></a>驱动器设置  
@@ -340,26 +340,26 @@ ms.locfileid: "39385365"
 
 - **启用未知计算机支持**：指定是否启用对不受 Configuration Manager 管理的计算机的支持。 有关详细信息，请参阅[准备未知计算机部署](/sccm/osd/get-started/prepare-for-unknown-computer-deployments)。  
 
-- **启用没有 Windows 部署服务的 PXE 响应程序**：从版本 1806 开始，此选项在分发点上启用无需 WDS 的 PXE 响应程序。 此 PXE 响应程序支持 IPv6 网络。 如果在已启用 PXE 的分发点上启用此选项，Configuration Manager 将暂停 WDS 服务。 如果禁用此选项，但仍“为客户端启用 PXE 支持，分发点将重新启用 WDS”<!--1357580-->。  
+- **在没有 Windows 部署服务的情况下启用 PXE 响应方**：从版本 1806 开始，可通过此选项在分发点上启用 PXE 响应方，而不需要 WDS。 此 PXE 响应程序支持 IPv6 网络。 如果在已启用 PXE 的分发点上启用此选项，Configuration Manager 将暂停 WDS 服务。 如果禁用此选项，但仍“为客户端启用 PXE 支持，分发点将重新启用 WDS”<!--1357580-->。  
 
 - **当计算机使用 PXE 时要求密码**：为了提高 PXE 部署的安全性，请指定强密码。  
 
 - **用户设备相关性**：指定你希望分发点如何将用户与 PXE 部署的目标计算机关联。 选择下列选项之一：  
 
-    - **通过自动批准允许用户设备相关性**：选择此设置以自动将用户与目标计算机关联，而无需等待批准。  
+  - **通过自动批准允许用户设备相关性**：选择此设置以自动将用户与目标计算机关联，而无需等待批准。  
 
-    - **允许用户设备相关性挂起管理员批准**：选择此设置以在将用户与目标计算机关联之前等待管理用户批准。  
+  - **允许用户设备相关性挂起管理员批准**：选择此设置以在将用户与目标计算机关联之前等待管理用户批准。  
 
-    - **不允许用户设备相关性**：选择此设置以指定不将用户与目标计算机关联。 此设置为默认设置。  
+  - **不允许用户设备相关性**：选择此设置以指定不将用户与目标计算机关联。 此设置为默认设置。  
 
-     有关用户设备相关性的详细信息，请参阅[将用户和设备同用户设备相关性相链接](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity)。  
+    有关用户设备相关性的详细信息，请参阅[将用户和设备同用户设备相关性相链接](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity)。  
 
 - **网络接口**：指定分发点响应来自所有网络接口或来自特定网络接口的 PXE 请求。 如果分发点响应特定网络接口，然后提供每个网络接口的 MAC 地址。  
 
     > [!Note]  
     > 更改网络接口时，请重新启动 WDS 服务以确保正确保存配置。 从版本 1806 开始，使用 PXE 响应程序服务时，重新启动“ConfigMgr PXE 响应程序服务”(SccmPxe)<!--SCCMDocs issue 642-->。  
 
-- **指定 PXE 服务器响应延迟（以秒为单位）**：使用多个 PXE 服务器时，请指定启用了 PXE 的此分发点在响应计算机请求之前应等待的时长。 默认情况下，启用了 Configuration Manager PXE 的分发点会立即响应。  
+- **指定 PXE 服务器响应延迟(秒)**：使用多个 PXE 服务器时，请指定启用了 PXE 的此分发点在响应计算机请求之前应等待的时长。 默认情况下，启用了 Configuration Manager PXE 的分发点会立即响应。  
 
 
 ### <a name="bkmk_config-multicast"></a>多播  
@@ -388,7 +388,7 @@ ms.locfileid: "39385365"
 
     - **会话启动延迟(分钟)**：指定 Configuration Manager 在响应第一个部署请求之前等待的分钟数。  
 
-    - **最小会话大小(客户端)**：指定在 Configuration Manager 开始部署操作系统之前必须收到多少请求。  
+    - **最小会话大小(客户端)**：指定在 Configuration Manager 开始部署操作系统之前必须收到的请求数。  
 
 
 > [!IMPORTANT]  
@@ -459,7 +459,7 @@ ms.locfileid: "39385365"
 
 要限制数据，请在网格中选择时间段，并选择下列任一“可用性”设置：  
 
-- **为所有优先级打开**：Configuration Manager 不受限制地将数据发送到分发点。 此设置是所有时间段的默认设置。  
+- **为所有优先级打开**：Configuration Manager 将数据发送到分发点而不受任何限制。 此设置是所有时间段的默认设置。  
 
 - **允许中和高优先级**：Configuration Manager 仅向分发点发送中等优先级和高优先级数据。  
 

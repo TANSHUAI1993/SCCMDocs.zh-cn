@@ -10,31 +10,31 @@ ms.assetid: d2ad00e8-9f10-41b6-816a-d8542c23a22e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d610b9f5980376bc9859fcd1e8bb34660e068b09
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 71ad5ae8ff823d03951d5f9ae1a13e8051cba23e
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32335008"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416565"
 ---
 # <a name="capabilities-in-technical-preview-1611-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1611 版中的功能
 
-*适用范围：System Center Configuration Manager (Technical Preview)*
+适用范围：System Center Configuration Manager (Technical Preview)
 
 
 
-本文介绍了 System Center Configuration Manager Technical Preview 1611 版中的可用功能。 你可以安装此版本，以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。 在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。    
+本文介绍了 System Center Configuration Manager Technical Preview 1611 版中的可用功能。 你可以安装此版本，以更新 Technical Preview 站点的功能并向其添加新功能。 在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager 技术预览版](../../core/get-started/technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。    
 
 **此 Technical Preview 中的已知问题：**   
 - ***先决条件状态***：安装版本 1611 时，先决条件的整体状态可能显示为已通过并出现警告，但不会列出导致警告的先决条件。 这可能是由以下两个先决条件引起的：
   - SQL 索引创建内存选项
   - 检查受支持的 SQL Server 版本  
 
- 由于这些只是警告，因此可以忽略。
+  由于这些只是警告，因此可以忽略。
 
-- ***PowerShell***：从 Configuration Manager 控制台连接到 Windows PowerShell 时，可能会收到以下错误： **Microsoft.ConfigurationManagement.PowerShell.Types.ps1xml 未进行数字签名**。  
+- ***PowerShell***：从 Configuration Manager 控制台连接到 Windows PowerShell 时，可能会收到以下错误：Microsoft.ConfigurationManagement.PowerShell.Types.ps1xml 未进行数字签名。  
 
-   可通过使用版本 1610 中的已签名版本替换某些文件来解决此问题。 从版本 1610 安装中的“&lt;安装目录>\AdminConsole\bin”**\** 文件夹复制所有具有以下扩展名的文件：**.psd1**、**.ps1xml** 和 **.psm1**。 将这些文件粘贴到 Technical Preview 1611 安装中的“&lt;安装目录>\AdminConsole\bin”**\** 文件夹，覆盖 1611 版本的文件。
+   可通过使用版本 1610 中的已签名版本替换某些文件来解决此问题。 从版本 1610 安装中的 &lt;安装目录>\AdminConsole\bin\\ 文件夹复制所有具有以下扩展名的文件：.psd1、.ps1xml 和 .psm1。 将这些文件粘贴到 Technical Preview 1611 安装中的 &lt;安装目录>\AdminConsole\bin\\ 文件夹，覆盖 1611 版本的文件。
 
 
 **以下是此版本可以试用的新功能。**  

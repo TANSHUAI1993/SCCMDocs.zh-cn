@@ -10,26 +10,26 @@ ms.assetid: abd45393-d84e-4583-bc80-74bbb3709577
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a17bb43d91d26cf10da0e1d3da5d8f6e4a2af2a7
-ms.sourcegitcommit: 5b3ff56018cfc6bda9643c9f1bebc575173f61bc
+ms.openlocfilehash: 6733a4dc3b027efa23ddc64e06e4269260c43101
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50083779"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418622"
 ---
 # <a name="considerations-for-managing-system-center-configuration-manager-clients--in-a-virtual-desktop-infrastructure-vdi"></a>关于在虚拟桌面基础结构 (VDI) 中管理 System Center Configuration Manager 客户端的注意事项
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 System Center Configuration Manager 支持在以下虚拟桌面基础结构 (VDI) 方案中安装 Configuration Manager 客户端：  
 
--   **个人虚拟机** - 若要确保在会话之间在虚拟机上维护用户数据和设置时，通常使用个人虚拟机。  
+- **个人虚拟机** - 若要确保在会话之间在虚拟机上维护用户数据和设置时，通常使用个人虚拟机。  
 
--   **远程桌面服务会话** - 远程桌面服务使服务器能够承载多个并发客户端会话。 用户可以连接到会话，然后在该服务器上运行应用程序。  
+- **远程桌面服务会话** - 远程桌面服务使服务器能够承载多个并发客户端会话。 用户可以连接到会话，然后在该服务器上运行应用程序。  
 
--   **共用的虚拟机** - 在会话之间不保留共用的虚拟机。 当关闭会话时，将丢弃所有数据和设置。 当无法使用远程桌面服务时（因为所需的业务应用程序无法在承载客户端会话的 Windows Server 上运行），共用的虚拟机很有用。  
+- **共用的虚拟机** - 在会话之间不保留共用的虚拟机。 当关闭会话时，将丢弃所有数据和设置。 当无法使用远程桌面服务时（因为所需的业务应用程序无法在承载客户端会话的 Windows Server 上运行），共用的虚拟机很有用。  
 
- 下表列出了关于在虚拟桌面基础结构中管理 Configuration Manager 客户端的考虑事项。  
+  下表列出了关于在虚拟桌面基础结构中管理 Configuration Manager 客户端的考虑事项。  
 
 |虚拟机类型|注意事项|  
 |--------------------------|--------------------|  
@@ -42,4 +42,4 @@ System Center Configuration Manager 支持在以下虚拟桌面基础结构 (VDI
 > [!NOTE]  
 >  除了处于维护模式的 Windows Embedded 客户端之外，未在虚拟化环境中运行的 Configuration Manager 客户端也使用此随机化延迟。 如果具有许多部署的客户端，则此行为有助于避免网络带宽高峰，并且可以在 Configuration Manager 站点系统（如管理点和站点服务器）上减少 CPU 处理要求。 延迟间隔因 Configuration Manager 功能而异。  
 >   
->  默认情况下，使用以下客户端设置为所需软件更新禁用了随机延迟：“计算机代理”：“禁用截止时间随机性”。
+>  默认情况下，使用以下客户端设置为所需软件更新禁用了随机延迟：**计算机代理**：**禁用截止时间随机化**。

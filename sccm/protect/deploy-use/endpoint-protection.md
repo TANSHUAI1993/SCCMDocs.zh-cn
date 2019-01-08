@@ -10,16 +10,16 @@ ms.assetid: 76c90f64-d729-456b-8304-01852cd66fb6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3e8c6cb33032b0c4283f3e35cbfa7b68535751ea
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 160713fe480b0a47c2ad57376c4a1dccdbfb00b1
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456101"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418945"
 ---
 # <a name="endpoint-protection"></a>Endpoint Protection
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*适用于：System Center Configuration Manager (Current Branch)*
 
 Endpoint Protection 为 Configuration Manager 层次结构中的客户端计算机管理反恶意软件策略和 Windows 防火墙安全性。  
 
@@ -90,7 +90,7 @@ Endpoint Protection 可以管理和监视 Windows Defender 高级威胁防护 (A
 ## <a name="endpoint-protection-client-for-mac-computers-and-linux-servers"></a>适用于 Mac 计算机和 Linux 服务器的 Endpoint Protection 客户端  
 
 > [!Important]  
-> 将于 2018 年 12 月 31 日结束对 Mac 版和 Linux 版 System Center Endpoint Protection (SCEP)（所有版本）的支持。 在支持结束后，将不再能够向 SCEP for Mac 和 SCEP for Linux 提供新的病毒定义。 有关详细信息，请参阅[“不再提供支持”博客文章](https://go.microsoft.com/fwlink/?linkid=870182)。  
+> 将于 2018 年 12 月 31 日结束对 Mac 版和 Linux 版 System Center Endpoint Protection (SCEP)（所有版本）的支持。 在支持结束后，可能会停止为 SCEP for Mac 和 SCEP for Linux 提供新的病毒定义。 有关详细信息，请参阅[“不再提供支持”博客文章](https://go.microsoft.com/fwlink/?linkid=870182)。  
 
  System Center Endpoint Protection 包括适用于 Linux 和 Mac 计算机的 Endpoint Protection 客户端。 不向这些客户端提供 Configuration Manager。 从 [Microsoft 批量许可服务中心](https://www.microsoft.com/licensing/servicecenter/default.aspx)下载以下产品：  
 
@@ -111,7 +111,7 @@ Endpoint Protection 可以管理和监视 Windows Defender 高级威胁防护 (A
 2. 选择网站顶部的“下载和密钥”选项卡。
 3. 筛选产品 **System Center Endpoint Protection (Current Branch)**。
 4. 单击链接以**下载**
-5. 单击“继续” 。 应能看到若干文件，其中一个名为：System Center Endpoint Protection (current branch - version 1606) for Linux OS and Macintosh OS Multilanguage   32/64 bit   1878 MB ISO。
+5. 单击“继续” 。 您应能看到若干文件，其中一个名为：**System Center Endpoint Protection (current branch 的版本 1606年) for Linux OS and Macintosh OS Multilanguage 32/64 bit 1878 MB ISO**。
 6. 单击箭头图标，下载该文件。 文件名为 SW_DVD5_Sys_Ctr_Endpnt_Prtctn_1606_MultiLang_-3_EptProt_Lin_Mac_MLF_X21-67050.ISO。
 
 此 2018 年 1 月更新 (X21-67050) 包括以下版本：
@@ -119,4 +119,4 @@ Endpoint Protection 可以管理和监视 Windows Defender 高级威胁防护 (A
 - 适用于 Mac 4.5.32.0 的 System Center Endpoint Protection（支持 macOS 10.13 High Sierra）
 - 适用于 Linux 4.5.20.0 System Center Endpoint Protection 
 
- 有关如何安装和管理适用于 Linux 和 Mac 计算机的 Endpoint Protection 客户端，请使用这些产品随附的文档。 此产品文档位于 .ISO 文件的“文档”文件夹。
+  有关如何安装和管理适用于 Linux 和 Mac 计算机的 Endpoint Protection 客户端，请使用这些产品随附的文档。 此产品文档位于 .ISO 文件的“文档”文件夹。

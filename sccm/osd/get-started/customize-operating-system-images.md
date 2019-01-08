@@ -10,16 +10,16 @@ ms.assetid: 95033a9b-ff13-4b70-b1de-bcb25bcb6024
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b9a3f4583944f0818f74930753bad99e3408a928
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 0b218d665d574c74358e3d018f45dd5b173cc21c
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350011"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424164"
 ---
 # <a name="customize-operating-system-images-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 自定义操作系统映像
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 System Center Configuration Manager 中的操作系统映像是 WIM 文件，并且表示在计算机上成功安装和配置操作系统所需的参考文件和文件夹的压缩集合。 自定义操作系统映像是通过一台引用计算机构建和捕获的。在该计算机上，你配置了所有必需的操作系统文件、支持文件、软件更新、工具和其他软件应用。 由你决定将引用计算机手动配置到何种程度。 你可以通过使用构建和捕获任务序列完全自动完成配置引用计算机的过程，可以手动配置引用计算机的某些方面然后使用任务序列自动完成其余配置，或者可以在不使用任务序列的情况下手动配置引用计算机。 使用以下部分自定义操作系统。
 
@@ -32,34 +32,34 @@ System Center Configuration Manager 中的操作系统映像是 WIM 文件，并
 #### <a name="automated-configuration"></a>自动配置  
  **优点**  
 
--   配置可完全无人参与，因而不需要管理员或用户存在。  
+- 配置可完全无人参与，因而不需要管理员或用户存在。  
 
--   你可以重用任务序列来信心十足地重复配置其他引用计算机。  
+- 你可以重用任务序列来信心十足地重复配置其他引用计算机。  
 
--   你可以修改任务序列来适用引用计算机中的差异，而不必重新创建整个任务序列。  
+- 你可以修改任务序列来适用引用计算机中的差异，而不必重新创建整个任务序列。  
 
- **缺点**  
+  **缺点**  
 
--   创建任务序列的初始操作可能要花费很长时间来创建和测试。  
+- 创建任务序列的初始操作可能要花费很长时间来创建和测试。  
 
--   如果引用计算机要求发生很大变化，则可能要花费很长时间来重建和重新测试任务序列。  
+- 如果引用计算机要求发生很大变化，则可能要花费很长时间来重建和重新测试任务序列。  
 
 #### <a name="manual-configuration"></a>手动配置  
  **优点**  
 
--   你不必创建任务序列或花时间来对任务序列进行测试和故障诊断。  
+- 你不必创建任务序列或花时间来对任务序列进行测试和故障诊断。  
 
--   你可以直接从 CD 中安装，而不必将所有软件包（包括 Windows 本身）放在 Configuration Manager 包中。  
+- 你可以直接从 CD 中安装，而不必将所有软件包（包括 Windows 本身）放在 Configuration Manager 包中。  
 
- **缺点**  
+  **缺点**  
 
--   引用计算机配置的准确性取决于配置计算机的管理员或用户。  
+- 引用计算机配置的准确性取决于配置计算机的管理员或用户。  
 
--   你仍然必须验证和测试已正确配置的引用计算机。  
+- 你仍然必须验证和测试已正确配置的引用计算机。  
 
--   你无法重用配置方法。  
+- 你无法重用配置方法。  
 
--   需要有人员主动参与整个过程。  
+- 需要有人员主动参与整个过程。  
 
 ###  <a name="BKMK_RefComputerConsiderations"></a>引用计算机的注意事项  
  下面列出了在配置引用计算机时要考虑的基本项目。  
@@ -113,20 +113,20 @@ System Center Configuration Manager 中的操作系统映像是 WIM 文件，并
 
 #### <a name="to-manually-build-the-reference-computer"></a>若要手动构建引用计算机  
 
-1.  确定要用作引用计算机的计算机。  
+1. 确定要用作引用计算机的计算机。  
 
-2.  配置具有适当操作系统以及创建要部署的操作系统映像所需的任何其他软件的引用计算机。  
+2. 配置具有适当操作系统以及创建要部署的操作系统映像所需的任何其他软件的引用计算机。  
 
-    > [!WARNING]  
-    >  至少要安装适当的操作系统和服务包、支持驱动程序、以及必需的软件更新。  
+   > [!WARNING]  
+   >  至少要安装适当的操作系统和服务包、支持驱动程序、以及必需的软件更新。  
 
-3.  将引用计算机配置为工作组的成员。  
+3. 将引用计算机配置为工作组的成员。  
 
-4.  重置引用计算机上的本地管理员密码以使密码值为空白。  
+4. 重置引用计算机上的本地管理员密码以使密码值为空白。  
 
-5.  通过使用以下命令来运行 Sysprep：  **sysprep /quiet /generalize /reboot**。 /generalize 选项指示 Sysprep 从 Windows 安装中删除特定于系统的数据。 特定于系统的信息包括事件日志、唯一安全 ID (SID) 和其他唯一性信息。 删除唯一系统信息后，计算机将重启。  
+5. 通过使用以下命令来运行 Sysprep：  **sysprep /quiet /generalize /reboot**。 /generalize 选项指示 Sysprep 从 Windows 安装中删除特定于系统的数据。 特定于系统的信息包括事件日志、唯一安全 ID (SID) 和其他唯一性信息。 删除唯一系统信息后，计算机将重启。  
 
- 引用计算机准备就绪之后，使用任务序列从引用计算机捕获操作系统映像。  有关详细步骤，请参阅 [从现有引用计算机中捕获操作系统映像](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md#BKMK_CaptureExistingRefComputer)。  
+   引用计算机准备就绪之后，使用任务序列从引用计算机捕获操作系统映像。  有关详细步骤，请参阅 [从现有引用计算机中捕获操作系统映像](../deploy-use/create-a-task-sequence-to-capture-an-operating-system.md#BKMK_CaptureExistingRefComputer)。  
 
 ##  <a name="BKMK_UseTSToBuildReference"></a>使用任务序列构建引用计算机  
  你可以通过使用任务序列自动执行创建引用计算机的过程以部署操作系统、驱动程序、应用程序等。  使用以下步骤构建引用计算机，然后从引用计算机捕获操作系统映像。  

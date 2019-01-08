@@ -10,18 +10,18 @@ ms.assetid: 134a2f60-811e-4dc9-a8f5-1ce0018c5c12
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: f3ee48d60c46def5daef25a2f3654e8a79a0e9e1
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 14e982592491ec5e8a10cd3313f748bddac40cff
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32339853"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420068"
 ---
 # <a name="capabilities-in-technical-preview-1606-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 版本 1606 中的功能
 
-*适用范围：System Center Configuration Manager (Technical Preview)*
+适用范围：*System Center Configuration Manager (Technical Preview)*
 
-本文介绍了 System Center Configuration Manager Technical Preview 版本 1606 中的可用功能。 你可以安装此版本，以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。      在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。    
+本文介绍了 System Center Configuration Manager Technical Preview 版本 1606 中的可用功能。 你可以安装此版本，以更新 Technical Preview 站点的功能并向其添加新功能。      在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager 技术预览版](../../core/get-started/technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。    
 
 **此 Technical Preview 中的已知问题：**  
 *  当从技术预览版 1604 更新到 1605 ，然后再更新到 1606 时，更新可能会失败，并且会在 **cmupdate.log** 中记录一个类似于以下的错误：
@@ -36,7 +36,7 @@ ms.locfileid: "32339853"
 ## <a name="dmp_category"></a>自动将设备分类到集合
 可创建设备类别，可将其用于配合使用 Microsoft Intune 和 Configuration Manager 时自动在设备集合中放置设备。 然后要求用户在 Intune 中注册设备时选择某个设备类别。 此外，还可以从 Configuration Manager 控制台中更改设备的类别。
 
-**重要提示：** 此功能适用于 **2016 年 6** 月版本的 Microsoft Intune。 试用这些过程前，请确保已更新到此版本。
+**重要事项：** 此功能适用于 **2016 年 6 月**版本的 Microsoft Intune。 试用这些过程前，请确保已更新到此版本。
 
 ### <a name="try-it-out"></a>试试看！
 
@@ -98,8 +98,8 @@ ms.locfileid: "32339853"
 - [设备保护认证和符合性](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-certification-and-compliance)
 - [设备保护部署指南](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-deployment-guide)
 
- ##  <a name="dmp_onprem"></a>本地移动设备管理的多个设备管理点  
- 借助 Technical Preview 1606，本地移动设备管理 (MDM) 可支持Windows 10 周年更新中的新功能，该功能会自动将已注册设备配置为具有多个可供使用的设备管理点。 此功能允许设备在其正常使用的设备管理点不可用时回退到另一个设备管理点。 此功能仅适用于安装了 Windows 10 周年更新的电脑。  
+  ##  <a name="dmp_onprem"></a>本地移动设备管理的多个设备管理点  
+  借助 Technical Preview 1606，本地移动设备管理 (MDM) 可支持Windows 10 周年更新中的新功能，该功能会自动将已注册设备配置为具有多个可供使用的设备管理点。 此功能允许设备在其正常使用的设备管理点不可用时回退到另一个设备管理点。 此功能仅适用于安装了 Windows 10 周年更新的电脑。  
 
 ### <a name="try-it-out"></a>试试看！  
 

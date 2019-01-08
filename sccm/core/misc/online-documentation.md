@@ -9,12 +9,12 @@ ms.assetid: 6d665cef-fc67-4686-bcb3-0572c0a3760c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8d9665d67bd0d6fe75efbea851d631d49a508ff9
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 40bc33779cd67cc2105bb7ba52336fc933622641
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334294"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419608"
 ---
 # <a name="online-documentation-for-system-center-configuration-manager"></a>System Center Configuration Manager 的联机文档
 
@@ -23,7 +23,7 @@ ms.locfileid: "32334294"
 在文档库中查找你使用的产品版本：  
 
 ## <a name="system-center-configuration-manager-current-branch"></a>System Center Configuration Manager（当前分支）  
-**联机文档** ：你可以在 TechNet 上查看 System Center Configuration Manager 当前分支的联机文档：  
+**联机文档：** 可以在 TechNet 上查看 System Center Configuration Manager Current Branch 的联机文档：  
 
 -   [System Center Configuration Manager 简介](https://technet.microsoft.com/library/mt622715.aspx)  
 
@@ -53,7 +53,7 @@ ms.locfileid: "32334294"
 
 
 ## <a name="system-center-configuration-manager-technical-preview"></a>System Center Configuration Manager Technical Preview  
-**联机文档：** 您可以在 TechNet 的以下指南中查看联机文档：  
+**联机文档：** 可以在 TechNet 的以下指南中查看联机文档：  
 
  [System Center Configuration Manager Technical Preview](https://go.microsoft.com/fwlink/p/?LinkId=534001)  
 
@@ -70,30 +70,30 @@ ms.locfileid: "32334294"
 
 可以在 TechNet 的以下指南中查看联机文档：  
 
--   [System Center 2012 Configuration Manager 入门](https://go.microsoft.com/fwlink/p/?LinkId=210632)  
+- [System Center 2012 Configuration Manager 入门](https://go.microsoft.com/fwlink/p/?LinkId=210632)  
 
--   [System Center 2012 Configuration Manager 的站点管理](https://go.microsoft.com/fwlink/p/?LinkId=210636)  
+- [System Center 2012 Configuration Manager 的站点管理](https://go.microsoft.com/fwlink/p/?LinkId=210636)  
 
--   [在 System Center 2012 Configuration Manager 中迁移层次结构](https://go.microsoft.com/fwlink/p/?LinkId=210645)  
+- [在 System Center 2012 Configuration Manager 中迁移层次结构](https://go.microsoft.com/fwlink/p/?LinkId=210645)  
 
--   [部署 System Center 2012 Configuration Manager 的客户端](https://go.microsoft.com/fwlink/p/?LinkId=210638)  
+- [部署 System Center 2012 Configuration Manager 的客户端](https://go.microsoft.com/fwlink/p/?LinkId=210638)  
 
--   [使用 Microsoft Intune 和 Configuration Manager 管理移动设备](https://go.microsoft.com/fwlink/?LinkId=529959)  
+- [使用 Microsoft Intune 和 Configuration Manager 管理移动设备](https://go.microsoft.com/fwlink/?LinkId=529959)  
 
--   [在 System Center 2012 Configuration Manager 中部署软件和操作系统](https://go.microsoft.com/fwlink/p/?LinkId=210635)  
+- [在 System Center 2012 Configuration Manager 中部署软件和操作系统](https://go.microsoft.com/fwlink/p/?LinkId=210635)  
 
--   [System Center 2012 Configuration Manager 中的资产和合规性](https://go.microsoft.com/fwlink/p/?LinkId=210639)  
+- [System Center 2012 Configuration Manager 中的资产和合规性](https://go.microsoft.com/fwlink/p/?LinkId=210639)  
 
--   [System Center 2012 Configuration Manager 的安全和隐私](https://go.microsoft.com/fwlink/p/?LinkId=210640)  
+- [System Center 2012 Configuration Manager 的安全和隐私](https://go.microsoft.com/fwlink/p/?LinkId=210640)  
 
--   [Scenarios and Solutions Using System Center 2012 Configuration Manager（使用 System Center 2012 Configuration Manager 的方案和解决方案）（使用 System Center 2012 Configuration Manager 的方案和解决方案）](https://go.microsoft.com/fwlink/p/?LinkId=290889)  
+- [Scenarios and Solutions Using System Center 2012 Configuration Manager（使用 System Center 2012 Configuration Manager 的方案和解决方案）（使用 System Center 2012 Configuration Manager 的方案和解决方案）](https://go.microsoft.com/fwlink/p/?LinkId=290889)  
 
- **发行说明和技术出版物：** 发行说明和技术出版物是对 Configuration Manager 指南的补充。 发行说明包含产品文档中未提供的信息，该信息是成功安装 Configuration Manager 所需要的。 技术出版物提供了支持 Configuration Manager 的附加信息。  
+  **发行说明和技术出版物：** 发行说明和技术出版物对 Configuration Manager 指南进行补充。 发行说明包含产品文档中未提供的信息，该信息是成功安装 Configuration Manager 所需要的。 技术出版物提供了支持 Configuration Manager 的附加信息。  
 
--   [System Center 2012 Configuration Manager 的发行说明](http://go.microsoft.com/fwlink/?LinkId=529437)  
+- [System Center 2012 Configuration Manager 的发行说明](http://go.microsoft.com/fwlink/?LinkId=529437)  
 
--   [System Center 2012 Configuration Manager 的技术出版物](http://go.microsoft.com/fwlink/p/?LinkId=261032)  
+- [System Center 2012 Configuration Manager 的技术出版物](http://go.microsoft.com/fwlink/p/?LinkId=261032)  
 
 **辅助功能：** 有关有利于残障人士更容易使用 Configuration Manager 的功能、产品和服务的信息，请参阅联机主题 [Configuration Manager 的辅助功能](http://go.microsoft.com/fwlink/p/?LinkId=258586)。  
 
-**可下载文档：** 你可以从 Microsoft 下载中心下载 [此技术文档的副本](http://go.microsoft.com/fwlink/?LinkId=253643)中的一样。 请使用在线的 TechNet 库来获取最新的信息。
+**可下载文档：** 你可以 [从 Microsoft 下载中心下载此技术文档的副本](http://go.microsoft.com/fwlink/?LinkId=253643)。 请使用在线的 TechNet 库来获取最新的信息。

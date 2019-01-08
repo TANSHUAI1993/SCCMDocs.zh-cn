@@ -10,16 +10,16 @@ ms.assetid: 52d64ef0-8c0d-42c3-857e-07d7ec776f29
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4933e4e6d9037edd01d80c9535627287275f7462
-ms.sourcegitcommit: 10b3a571e2a822bbd7b58a25840ee1e6f703a7a2
+ms.openlocfilehash: 8914c9ff7a33d24b5d68893018edff8d8e0de444
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34814291"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424278"
 ---
 # <a name="capabilities-in-technical-preview-1806-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1806 中的功能
 
-*适用范围：System Center Configuration Manager (Technical Preview)*
+适用范围：System Center Configuration Manager（技术预览版）
 
 本文介绍 Configuration Manager Technical Preview 1806 版中提供的功能。 你可以安装此版本，以更新 Technical Preview 站点的功能并向其添加新功能。 
 
@@ -39,8 +39,7 @@ Steps to workaround, if any.
 ## <a name="known-issues-in-this-technical-preview"></a>此 Technical Preview 中的已知问题
 
 ### <a name="ki_contentlib"></a> 站点无法使用远程内容库进行升级
-<!--514642-->
-由于 cmupdate.log 中的以下错误站点无法升级：  
+<!--514642--> 由于 cmupdate.log 中的以下错误站点无法升级：  
 ```  
 Failed to find any valid drives  
 GetContentLibraryParameters failed; 0x80070057  
@@ -61,10 +60,10 @@ ERROR: Failed to process configuration manager update.
 
 
 ## <a name="bkmk-3pupdate"></a> 第三方软件更新
-<!--1352101-->
-由于 [UserVoice 反馈](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8803711-3rd-party-patching-scup-integration-with-sccm-co)，此版本在以前版本的基础上进一步更替对第三方软件更新的支持。 对于某些常见方案，不再需要使用 System Center Updates Publisher (SCUP)。 Configuration Manager 控制台中的新“第三方软件更新目录”节点允许订阅第三方目录，将其更新发布到软件更新点，然后将它们部署到客户端。 
+<!--1352101-->根据 [UserVoice 反馈](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8803711-3rd-party-patching-scup-integration-with-sccm-co)，此版本在以前版本的基础上进一步更替对第三方软件更新的支持。 对于某些常见方案，不再需要使用 System Center Updates Publisher (SCUP)。 Configuration Manager 控制台中的新“第三方软件更新目录”节点允许订阅第三方目录，将其更新发布到软件更新点，然后将它们部署到客户端。 
 
 以下第三方软件更新目录在此版本中可用：
+
  | 发布服务器 | 目录名称 |
  |--------|---------------------|
  | HP | HP 客户端更新目录 |
@@ -74,7 +73,12 @@ SCUP 继续支持其他目录和方案。 Configuration Manager 控制台的“�
 
 ### <a name="prerequisites"></a>先决条件
 - 使用支持 HTTPS 的软件更新点来设置软件更新管理。 有关详细信息，请参阅[准备软件更新管理](/sccm/sum/get-started/prepare-for-software-updates-management)。  
-   - 软件更新点必须位于此版本中此功能的站点服务器上。 <!--515810--> 
+  - 软件更新点必须位于此版本中此功能的站点服务器上。 <!--515810--> 
+
+    > [!Tip]  
+    > 软件更新点需要 HTTPS，因为它是用于处理签名证书的 WSUS API 的必需。 客户端也无需启用 HTTPS。 有关在 WSUS 上启用 HTTPS 的详细信息，请参阅以下文章获取帮助：  
+    > - [使用安全套接字层协议保护 WSUS](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#bkmk_2.5.ConfigSSL) 
+    > - [WSUS 支持博客文章](https://blogs.technet.microsoft.com/sus/2011/05/09/how-to-create-an-internet-facing-wsus-server-that-uses-different-internal-and-external-names/)
 
 - 软件更新点上有足够的磁盘空间供 WSUSContent 文件夹存储第三方软件更新的源二进制内容。 所需的存储空间根据供应商、更新类型和发布用于部署的特定更新而有所不同。 如果需要将 WSUSContent 文件夹移到另一个具有更多可用空间的驱动器，请参阅 WSUS 支持团队博客文章 [How to change the location where WSUS stores updates locally](https://blogs.technet.microsoft.com/sus/2008/05/19/wsus-how-to-change-the-location-where-wsus-stores-updates-locally/)（如何更改 WSUS 在本地存储更新的位置）。  
 
@@ -154,23 +158,20 @@ SCUP 继续支持其他目录和方案。 Configuration Manager 控制台的“�
 
 
 ## <a name="configure-windows-defender-smartscreen-settings-for-microsoft-edge"></a>为 Microsoft Edge 配置 Windows Defender SmartScreen 设置
-<!--1353701-->
-此版本向 [Microsoft Edge 浏览器符合性设置策略](/sccm/compliance/deploy-use/browser-profiles)添加了三个 [Windows Defender SmartScreen](/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-overview) 设置。 该策略现在包含“SmartScreen 设置”页上的以下附加设置：
+<!--1353701--> 此版本向 [Microsoft Edge 浏览器符合性设置策略](/sccm/compliance/deploy-use/browser-profiles)添加了三个 [Windows Defender SmartScreen](/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-overview) 设置。 该策略现在包含“SmartScreen 设置”页上的以下附加设置：
 - **允许 SmartScreen**：指定是否允许 Windows Defender SmartScreen。 有关详细信息，请参阅 [AllowSmartScreen 浏览器策略](/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen)。
-- **用户可以覆盖站点的 SmartScreen 提示**：指定用户是否可以覆盖有关潜在恶意网站的 Windows Defender SmartScreen 筛选器警告。 有关详细信息，请参阅 [PreventSmartScreenPromptOverride 浏览器策略](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)。
-- **用户可以覆盖文件的 SmartScreen 提示**：指定用户是否可以覆盖有关下载未验证文件的 Windows Defender SmartScreen 筛选器警告。 有关详细信息，请参阅[PreventSmartScreenPromptOverrideForFiles 浏览器策略](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)。
+- **用户可以替代站点的 SmartScreen 提示**：指定用户是否可替代有关潜在恶意网站的 Windows Defender SmartScreen 筛选器警告。 有关详细信息，请参阅 [PreventSmartScreenPromptOverride 浏览器策略](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)。
+- **用户可以替代文件的 SmartScreen 提示**：指定用户是否可替代有关下载未经认证文件的 Windows Defender SmartScreen 筛选器警告。 有关详细信息，请参阅[PreventSmartScreenPromptOverrideForFiles 浏览器策略](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)。
 
 
 
 ## <a name="sync-mdm-policy-from-microsoft-intune-for-a-co-managed-device"></a>通过 Microsoft Intune 为共同托管设备同步 MDM 策略
-<!--1357377-->
-从此版本开始，当[切换一个共同管理工作负荷](/sccm/core/clients/manage/co-management-switch-workloads)时，共同托管设备自动从 Microsoft Intune 同步 MDM 策略。 当从 Configuration Manager 控制台的客户端通知中启动“下载计算机策略”操作时也会进行此同步。 有关详细信息，请参阅[使用客户端通知启动客户端策略检索](/sccm/core/clients/manage/manage-clients#initiate-client-policy-retrieval-using-client-notification)。
+<!--1357377--> 从此版本开始，当[切换共同管理工作负荷](/sccm/core/clients/manage/co-management-switch-workloads)时，共同托管设备自动从 Microsoft Intune 同步 MDM 策略。 当从 Configuration Manager 控制台的客户端通知中启动“下载计算机策略”操作时也会进行此同步。 有关详细信息，请参阅[使用客户端通知启动客户端策略检索](/sccm/core/clients/manage/manage-clients#initiate-client-policy-retrieval-using-client-notification)。
 
 
 
 ## <a name="transition-office-365-workload-to-intune-using-co-management"></a>使用共同管理将 Office 365 工作负荷转移到 Intune
-<!--1357841-->
-现在可以在启用共同管理后，将 Office 365 工作负荷从 Configuration Manager 转移到 Microsoft Intune。 要转移此工作负荷，请转到共同管理属性页并将滚动条从 Configuration Manager 移到“试点”或“全部”。 有关详细信息，请参阅 [Windows 10 设备共同管理](/sccm/core/clients/manage/co-management-overview)。
+<!--1357841--> 现在可以在启用共同管理后，将 Office 365 工作负荷从 Configuration Manager 转移到 Microsoft Intune。 要转移此工作负荷，请转到共同管理属性页并将滚动条从 Configuration Manager 移到“试点”或“全部”。 有关详细信息，请参阅 [Windows 10 设备共同管理](/sccm/core/clients/manage/co-management-overview)。
 
 另外，还有一个新的全局条件，即 Office 365 应用程序是否由 Intune 在设备上进行托管。 默认情况下将此条件作为一项要求添加到新的 Office 365 应用程序。 当转移此工作负荷时，共同托管客户端不满足应用程序的要求，因此不安装通过 Configuration Manager 部署的 Office 365。
 
@@ -180,8 +181,7 @@ SCUP 继续支持其他目录和方案。 Configuration Manager 控制台的“�
 
 
 ## <a name="package-conversion-manager"></a>包转换管理器 
-<!--1357861-->
-包转换管理器现在是一个集成工具，允许将旧的 Configuration Manager 2007 包转换为 Configuration Manager 当前分支应用程序。 然后，可以使用应用程序的功能，如依赖关系、要求规则和用户设备相关性。
+<!--1357861--> 包转换管理器现在是一个集成工具，你可以通过该工具将旧的 Configuration Manager 2007 包转换为 Configuration Manager Current Branch 应用程序。 然后，可以使用应用程序的功能，如依赖关系、要求规则和用户设备相关性。
 
 > [!Tip]  
 > 包转换管理器中现有功能的旧文档在 [TechNet](https://technet.microsoft.com/library/hh531519.aspx) 上提供。 相关信息正在迁移到 docs.microsoft.com 库。
@@ -210,8 +210,7 @@ SCUP 继续支持其他目录和方案。 Configuration Manager 控制台的“�
 
 
 ## <a name="deploy-software-updates-without-content"></a>部署无内容的软件更新
-<!--1357933-->
-现在可以将软件更新部署到设备，而无需先下载软件更新内容并将其分发到分发点。 当处理非常大的更新内容时，或者当始终希望客户端从 Microsoft 更新云服务中获取内容时，此功能很有用。 在此方案中的客户端还可以从已具有所需内容的对等节点下载内容。 Configuration Manager 客户端继续管理内容下载，因此可以利用 Configuration Manager 对等缓存功能或其他技术，如交付优化。 此功能支持受 Configuration Manager 软件更新管理（包括 Windows 和 Office 更新）支持的任何更新类型。 
+<!--1357933--> 现在可以将软件更新部署到设备，而无需先下载软件更新内容并将其分发到分发点。 当处理非常大的更新内容时，或者当始终希望客户端从 Microsoft 更新云服务中获取内容时，此功能很有用。 在此方案中的客户端还可以从已具有所需内容的对等节点下载内容。 Configuration Manager 客户端继续管理内容下载，因此可以利用 Configuration Manager 对等缓存功能或其他技术，如交付优化。 此功能支持受 Configuration Manager 软件更新管理（包括 Windows 和 Office 更新）支持的任何更新类型。 
 
 ### <a name="try-it-out"></a>试试看！
  尝试完成任务。 然后发送[反馈](capabilities-in-technical-preview-1804.md#bkmk_feedback)，以便我们了解其运作状况。
@@ -226,8 +225,7 @@ SCUP 继续支持其他目录和方案。 Configuration Manager 控制台的“�
 
 
 ## <a name="office-customization-tool-integration-with-the-office-365-installer"></a>Office 自定义工具与 Office 365 安装程序集成
-<!--1358149-->
-现在 Office 自定义工具在 Configuration Manager 控制台中于 Office 365 安装程序集成。 在为 Office 365 创建部署时，现在可以动态配置最新的 Office 可管理性设置。 Office 自定义工具在发布 Office 365 新版本的同时更新。 一旦 Office 365 中的新可管理性设置可用，便可立即使用。 
+<!--1358149--> 现在 Office 自定义工具在 Configuration Manager 控制台中与 Office 365 安装程序集成。 在为 Office 365 创建部署时，现在可以动态配置最新的 Office 可管理性设置。 Office 自定义工具在发布 Office 365 新版本的同时更新。 一旦 Office 365 中的新可管理性设置可用，便可立即使用。 
 
 ### <a name="prerequisites"></a>先决条件
 - 运行 Configuration Manager 控制台的计算机需要通过 HTTPS 端口 443 进行 Internet 访问。 Office 365 客户端安装向导使用 Windows 标准 Web 浏览器 API 来打开 https://config.office.com。 如果使用 Internet 代理，则用户必须能够访问此 URL。
@@ -246,8 +244,7 @@ SCUP 继续支持其他目录和方案。 Configuration Manager 控制台的“�
 此版本包含对云管理网关 (CMG) 的以下改进：
 
 ### <a name="simplified-client-bootstrap-command-line"></a>简化了客户端启动命令行
-<!--1358215-->
-当通过 CMG 在 Internet 上安装 Configuration Manager 客户端时，现在需要的命令行属性更少。 有关此方案示例的详细信息，请在准备共同管理时参阅[安装 Configuration Manager 客户端的命令行](/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client)。 
+<!--1358215--> 当通过 CMG 在 Internet 上安装 Configuration Manager 客户端时，现在需要的命令行属性更少。 有关此方案示例的详细信息，请在准备共同管理时参阅[安装 Configuration Manager 客户端的命令行](/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client)。 
 
 在所有方案中都需要以下命令行属性：
   - CCMHOSTNAME  
@@ -266,12 +263,10 @@ SCUP 继续支持其他目录和方案。 Configuration Manager 控制台的“�
 有关详细信息，请参阅[客户端安装属性](/sccm/core/clients/deploy/about-client-installation-properties)。
 
 ### <a name="download-content-from-a-cmg"></a>从 CMG 下载内容
-<!--1358651-->
-以前，必须将云分发点和 CMG 作为单独的角色进行部署。 现在在此版本中，CMG 也可以向客户端提供内容。 此功能减少了所需的证书和 Azure VM 的成本。 若要启用此功能，在 CMG 属性的“设置”选项卡上启用“允许 CMG 充当云分布点并提供 Azure 存储的内容”这个新选项。 
+<!--1358651--> 以前，必须将云分发点和 CMG 作为单独的角色进行部署。 现在在此版本中，CMG 也可以向客户端提供内容。 此功能减少了所需的证书和 Azure VM 的成本。 若要启用此功能，在 CMG 属性的“设置”选项卡上启用“允许 CMG 充当云分布点并提供 Azure 存储的内容”这个新选项。 
 
 ### <a name="trusted-root-certificate-isnt-required-with-azure-ad"></a>Azure AD 不需要受信任的根证书
-<!--503899-->
-当创建 CMG 时，不再需要在设置页上提供[受信任的根证书](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#cmg-trusted-root-certificate-to-clients)。 使用 Azure Active Directory (Azure AD) 进行客户端身份验证时不需要此证书，但往往在向导中需要。
+<!--503899--> 创建 CMG 时，不再需要在设置页上提供[受信任的根证书](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#cmg-trusted-root-certificate-to-clients)。 使用 Azure Active Directory (Azure AD) 进行客户端身份验证时不需要此证书，但往往在向导中需要。
 
 > [!Important]  
 > 如果使用 PKI 客户端身份验证证书，则仍须向 CMG 添加受信任的根证书。
@@ -279,8 +274,7 @@ SCUP 继续支持其他目录和方案。 Configuration Manager 控制台的“�
 
 
 ## <a name="improvements-to-secure-client-communications"></a>安全客户端通信的改进
-<!--1358278,1358279-->
-此版本通过删除网络访问帐户的附加依赖项，继续更替[改进的安全客户端通信](/sccm/core/get-started/capabilities-in-technical-preview-1805#improved-secure-client-communications)。 当启用“将 Configuration Manager 生成的证书用于 HTTP 站点系统”的新选项时，以下方案不需用网络访问帐户从分发点下载内容：  
+<!--1358278,1358279--> 此版本通过删除网络访问帐户的附加依赖项，继续循环访问[改进的安全客户端通信](/sccm/core/get-started/capabilities-in-technical-preview-1805#improved-secure-client-communications)。 当启用“将 Configuration Manager 生成的证书用于 HTTP 站点系统”的新选项时，以下方案不需用网络访问帐户从分发点下载内容：  
 
 - 从启动媒体或 PXE 运行的任务序列
 - 从软件中心运行的任务序列  
@@ -290,8 +284,7 @@ SCUP 继续支持其他目录和方案。 Configuration Manager 控制台的“�
 
 
 ## <a name="software-center-infrastructure-improvements"></a>软件中心基础结构的改进
-<!--1358309-->
-不再需要应用程序目录角色，即可在软件中心显示用户可用的应用程序。 此项更改有助于减少向用户交付应用程序所需的服务器基础结构。 软件中心现在依靠管理点来获取此信息，通过将更大的环境分配给[边界组](/sccm/core/servers/deploy/configure/boundary-groups#management-points)来帮助它们更好地扩展。
+<!--1358309--> 不再需要应用程序目录角色，即可在软件中心显示用户可用的应用程序。 此项更改有助于减少向用户交付应用程序所需的服务器基础结构。 软件中心现在依靠管理点来获取此信息，通过将更大的环境分配给[边界组](/sccm/core/servers/deploy/configure/boundary-groups#management-points)来帮助它们更好地扩展。
 
 ### <a name="try-it-out"></a>试试看！
  尝试完成任务。 然后发送[反馈](capabilities-in-technical-preview-1804.md#bkmk_feedback)，以便我们了解其运作状况。
@@ -306,8 +299,7 @@ SCUP 继续支持其他目录和方案。 Configuration Manager 控制台的“�
 
 
 ## <a name="provision-windows-app-packages-for-all-users-on-a-device"></a>为设备上的所有用户预配 Windows 应用包
-<!--1358310-->
-现在可以使用 Windows 应用包为设备上的所有用户预配应用程序。 此方案的一个常见示例是将来自 Microsoft Store 商业版和教育版的应用（如 Minecraft 教育版）预配到学校学生使用的所有设备。 以前，Configuration Manager 仅支持按用户安装这些应用程序。 登录到新的设备后，学生不得不等会儿时间来访问应用。 现在，将应用预配到所有用户的设备时，他们的工作更快更高效。
+<!--1358310--> 现在可以使用 Windows 应用包为设备上的所有用户预配应用程序。 此方案的一个常见示例是将来自适用于企业和适用于教育的 Microsoft Store 的应用（如 Minecraft: Education Edition）预配到学校学生使用的所有设备。 以前，Configuration Manager 仅支持按用户安装这些应用程序。 登录到新的设备后，学生不得不等会儿时间来访问应用。 现在，将应用预配到所有用户的设备时，他们的工作更快更高效。
 
 > [!Important]  
 > 在设备上安装、预配和更新相同 Windows 应用包的不同版本时要小心，否则可能会导致意外的结果。 使用 Configuration Manager 预配应用时就需要注意些，但随后用户可从 Microsoft Store 更新应用。 有关详细信息，请在[管理来自适用于企业的 Microsoft Store 的应用](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business#next-steps)时参阅下一步指南。  
@@ -334,8 +326,7 @@ SCUP 继续支持其他目录和方案。 Configuration Manager 控制台的“�
 
 
 ## <a name="improvements-to-the-surface-dashboard"></a>Surface 仪表板的改进
-<!--1358654-->
-此版本包括对 [Surface 仪表板](/sccm/core/clients/manage/surface-device-dashboard)的以下改进：
+<!--1358654--> 此版本包括对 [Surface 仪表板](/sccm/core/clients/manage/surface-device-dashboard)的以下改进：
 - 选中图表部分时，Surface 仪表板现在会显示相关设备列表。
    - 单击“Surface 设备所占百分比”磁贴将打开 Surface 设备列表。
    - 单击“前五个固件版本”磁贴中的栏，将打开带有特定固件版本的 Surface 设备列表。
@@ -344,8 +335,7 @@ SCUP 继续支持其他目录和方案。 Configuration Manager 控制台的“�
 
 
 ## <a name="hardware-inventory-default-unit-revision"></a>硬件清单默认单位修订
-<!--514442-->
-在 [Configuration Manager 版本 1710](/sccm/core/plan-design/changes/whats-new-in-version-1710#site-infrastructure) 中，许多报表视图中使用的默认单元从兆字节 (MB) 更改为千兆字节 (GB)。 由于[硬件清单的大整数值改进](/sccm/core/get-started/capabilities-in-technical-preview-1805#improvement-to-hardware-inventory-for-large-integer-values)，并且根据客户反馈，此默认单位现在又是 MB。
+<!--514442--> 在 [Configuration Manager 1710 版](/sccm/core/plan-design/changes/whats-new-in-version-1710#site-infrastructure)中，许多报表视图中使用的默认单元都从兆字节 (MB) 更改为千兆字节 (GB)。 由于[硬件清单的大整数值改进](/sccm/core/get-started/capabilities-in-technical-preview-1805#improvement-to-hardware-inventory-for-large-integer-values)，并且根据客户反馈，此默认单位现在又是 MB。
 
 
 

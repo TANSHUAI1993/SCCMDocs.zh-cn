@@ -10,16 +10,16 @@ ms.assetid: f504de3e-4caf-455c-80d7-a63f13f4c5d9
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 626c52b827e38a53ed3b8982963496f29f11acb5
-ms.sourcegitcommit: 5b3ff56018cfc6bda9643c9f1bebc575173f61bc
-ms.translationtype: HT
+ms.openlocfilehash: dbebdde88a5031eec91a2383e105d06cbc7541e5
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50083762"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420441"
 ---
 #  <a name="configure-alerts-for-endpoint-protection-in-configuration-manager"></a>在 Configuration Manager 中为 Endpoint Protection 配置警报
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*适用于：System Center Configuration Manager (Current Branch)*
 
  可以在 Microsoft System Center Configuration Manager 中配置 Endpoint Protection 警报，以便在层次结构中发生特定事件（如恶意软件感染时）通知管理用户。 通知会显示在 Configuration Manager 控制台 Endpoint Protection 仪表板中“监视”工作区的“警报”节点中，或是可以通过电子邮件发送到指定用户。
 
@@ -75,13 +75,13 @@ ms.locfileid: "50083762"
 
         -   **检测到恶意软件的次数：** - 当在集合中的计算机上检测到同一恶意软件的次数超过指定次数时，则会生成此警报。 指定一个介于“2”  到“32” 之间的数字。
 
-        -   **检测间隔（小时）：** 指定在其间必须发生指定的恶意软件检测次数的检测间隔（以小时为单位）。 指定一个介于“1”  到“168” 之间的数字。
+        -   **检测间隔(小时)：** 指定在其间必须发生指定的恶意软件检测次数的检测间隔（以小时为单位）。 指定一个介于“1”  到“168” 之间的数字。
 
     -   **多恶意软件检测** - 如果在所监视集合中的计算机上，在指定的小时数内检测到的恶意软件类型超出指定数量，则会生成此警报。 指定以下信息以配置此警报：
 
-        -   **检测到的恶意软件类型数：** 当在集合中的计算机上检测到指定数量的不同恶意软件类型时，则会生成此警报。 指定一个介于“2”  到“32” 之间的数字。
+        -   **已检测的恶意软件的类型数：** 当在集合中的计算机上检测到指定数量的不同恶意软件类型时，则会生成此警报。 指定一个介于“2”  到“32” 之间的数字。
 
-        -   **检测间隔（小时）：** 指定在其间必须发生指定的恶意软件检测次数的检测间隔（以小时为单位）。 指定一个介于“1”  到“168” 之间的数字。
+        -   **检测间隔(小时)：** 指定在其间必须发生指定的恶意软件检测次数的检测间隔（以小时为单位）。 指定一个介于“1”  到“168” 之间的数字。
 
 9. 单击“确定”以关闭“<集合名称\> 属性”对话框。  
 
@@ -92,7 +92,7 @@ ms.locfileid: "50083762"
 若要配置生成警报的百分比，请展开“监视” > “警报” > “所有警报”，双击“反恶意软件客户端已过期”，然后修改“如果具有过期版本的反恶意软件客户端的托管客户端百分比超过以下值，发出警报”选项。
 
 > [!div class="button"]
-[下一步 >](endpoint-definition-updates.md)
-
+> [下一步 >](endpoint-definition-updates.md)
+> 
 > [!div class="button"]
-[返回 >](endpoint-protection-site-role.md)
+> [返回 >](endpoint-protection-site-role.md)

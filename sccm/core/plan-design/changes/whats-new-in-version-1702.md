@@ -10,16 +10,16 @@ ms.assetid: 409e26e1-7716-4f1d-a0ee-34feabf20792
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6abf61488a96ec3299b606b10901b0787b82edc9
-ms.sourcegitcommit: fe279229a90fdc8cddbb13c7ffdbbb22af0e25ef
+ms.openlocfilehash: bdeed74504611589b36e31eff3c1957725345b8a
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47229341"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421835"
 ---
 # <a name="what39s-new-in-version-1702-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1702 中的新增功能
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 System Center Configuration Manager Current Branch 的更新 1702 作为控制台内更新提供，用于运行版本 1602, 1606 或 1610 的以前安装的站点。 安装新部署时，也可将其作为基准版本使用。
 
@@ -63,13 +63,13 @@ System Center Configuration Manager Current Branch 的更新 1702 作为控制�
  可以使用控制台内反馈选项将反馈直接发送到开发团队。
 
  可在以下位置找到“反馈”选项：
- -  在功能区中每个节点的“主页”选项卡的最左侧。  
-    ![功能区](./media/feedback-home.png)
+- 在功能区中每个节点的“主页”选项卡的最左侧。  
+  ![功能区](./media/feedback-home.png)
 
- -  右键单击控制台中的任何对象时。   
-     ![右键单击选项](./media/feedback-option.png)   
+- 右键单击控制台中的任何对象时。   
+   ![右键单击选项](./media/feedback-option.png)   
 
- 选择“反馈”将打开浏览器，并转到 [Configuration Manager UserVoice 反馈网站](https://go.microsoft.com/fwlink/?linkid=617029)。
+  选择“反馈”将打开浏览器，并转到 [Configuration Manager UserVoice 反馈网站](https://go.microsoft.com/fwlink/?linkid=617029)。
 
 
 ###  <a name="changes-for-updates-and-servicing"></a>更新和维护服务的更改
@@ -200,13 +200,13 @@ Windows 10 创意者更新引入了一个简单的转换工具，可自动执行
 ### <a name="improvements-to-the-auto-apply-driver-task-sequence"></a>对“自动应用驱动程序”任务序列所做的改进
 在发出 HTTP 目录请求时，新任务序列变量现在可在“自动应用驱动程序”任务序列步骤中配置超时值。 下面是可用的变量和默认值（以秒为单位）：
    - SMSTSDriverRequestResolveTimeOut  
-     默认值：60
+     默认：60
    - SMSTSDriverRequestConnectTimeOut  
-     默认值：60
+     默认：60
    - SMSTSDriverRequestSendTimeOut  
-     默认值：60
+     默认：60
    - SMSTSDriverRequestReceiveTimeOut  
-     默认值：480
+     默认：480
 
 ### <a name="windows-10-adk-tracked-by-build-version"></a>内部版本所跟踪的 Windows 10 ADK
 现在可通过内部版本号跟踪 Windows 10 ADK，确保自定义 Windows 10 启动映像时有更多受支持的体验。 例如，如果站点使用适用于 Windows 10 的 Windows ADK（版本 1607），那么控制台中仅可自定义版本号为 10.0.14393 的启动映像。 若要深入了解如何自定义 WinPE 版本，请参阅[自定义启动映像](/sccm/osd/get-started/customize-boot-images)。

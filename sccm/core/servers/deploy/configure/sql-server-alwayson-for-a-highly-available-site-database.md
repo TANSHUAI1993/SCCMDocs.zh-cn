@@ -10,26 +10,26 @@ ms.assetid: 58d52fdc-bd18-494d-9f3b-ccfc13ea3d35
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0cb94f8d14ff525687909290085e16ecd47fa39f
-ms.sourcegitcommit: 22257e35a7d7263939a6802602050190897412a8
+ms.openlocfilehash: cf5b55dddae34ac855f21e7d70967d3b9ab1c2dc
+ms.sourcegitcommit: 81e3666c41eb976cc7651854042dafe219e2e467
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51562042"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53747154"
 ---
 # <a name="prepare-to-use-sql-server-always-on-availability-groups-with-configuration-manager"></a>准备将 SQL Server AlwaysOn 可用性组与 Configuration Manager 配合使用
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 本文介绍如何准备 Configuration Manager 以使用 SQL Server AlwaysOn 可用性组。 此功能为站点数据库提供高可用性和灾难恢复解决方案。  
 
 Configuration Manager 支持在以下位置使用可用性组：
--     主站点和管理中心站点。
--     本地环境或 Microsoft Azure 中。
+- 主站点和管理中心站点。
+- 本地环境或 Microsoft Azure 中。
 
 在 Microsoft Azure 中使用可用性组时，可使用 Azure 可用性集进一步提升站点数据库的可用性。 有关 Azure 可用性集的详细信息，请参阅 [管理虚拟机的可用性](https://azure.microsoft.com/documentation/articles/virtual-machines-windows-manage-availability/)。
 
->  [!Important]   
+> [!Important]
 >  在继续之前，熟悉如何配置 SQL Server 和 SQL Server 可用性组。 以下信息引用 SQL Server 文档库和过程。
 
 
@@ -38,12 +38,12 @@ Configuration Manager 支持在以下位置使用可用性组：
 
 以下是将可用性组与 Configuration Manager 配合使用的支持方案。 有关每个方案的详细信息和过程，请参阅[配置 Configuration Manager 的可用性组](/sccm/core/servers/deploy/configure/configure-aoag)。
 
--      [创建与 Configuration Manager 配合使用的可用性组](/sccm/core/servers/deploy/configure/configure-aoag#create-and-configure-an-availability-group)  
--     [配置站点以使用可用性组](/sccm/core/servers/deploy/configure/configure-aoag#configure-a-site-to-use-the-database-in-the-availability-group)  
--     [可以从托管站点数据库的可用性组添加或删除同步副本成员](/sccm/core/servers/deploy/configure/configure-aoag#add-and-remove-synchronous-replica-members)  
--     [配置异步提交副本](/sccm/core/servers/deploy/configure/configure-aoag#configure-an-asynchronous-commit-repilca)  
--     [从异步提交副本恢复站点](/sccm/core/servers/deploy/configure/configure-aoag#use-the-asynchronous-replica-to-recover-your-site)  
--     [可以将站点数据库从可用性组移到独立 SQL Server 的默认实例或命名实例](/sccm/core/servers/deploy/configure/configure-aoag#stop-using-an-availability-group)  
+- [创建与 Configuration Manager 配合使用的可用性组](/sccm/core/servers/deploy/configure/configure-aoag#create-and-configure-an-availability-group)  
+- [配置站点以使用可用性组](/sccm/core/servers/deploy/configure/configure-aoag#configure-a-site-to-use-the-database-in-the-availability-group)  
+- [可以从托管站点数据库的可用性组添加或删除同步副本成员](/sccm/core/servers/deploy/configure/configure-aoag#add-and-remove-synchronous-replica-members)  
+- [配置异步提交副本](/sccm/core/servers/deploy/configure/configure-aoag#configure-an-asynchronous-commit-repilca)  
+- [从异步提交副本恢复站点](/sccm/core/servers/deploy/configure/configure-aoag#use-the-asynchronous-replica-to-recover-your-site)  
+- [可以将站点数据库从可用性组移到独立 SQL Server 的默认实例或命名实例](/sccm/core/servers/deploy/configure/configure-aoag#stop-using-an-availability-group)  
 
 
 
@@ -95,16 +95,16 @@ Configuration Manager 不会验证异步提交副本的状态来确认它是否�
 
 - 使用默认实例或命名实例  
 
-- “主角色中的连接”设置为“是”  
+- “主角色中的连接”设置为“允许所有连接”  
 
 - “可读次要副本”设置为“是”  
 
 - 已启用“手动故障转移”     
 
-    >  [!TIP]  
-    >  Configuration Manager 设置为“自动故障转移”时，支持使用可用性组同步副本。 在以下情况下设置“手动故障转移”：
-    >  -  运行 Configuration Manager 安装程序以指定在可用性组中使用站点数据库。  
-    >  -  安装任何 Configuration Manager 更新。 （不仅仅是安装适用于站点数据库的更新）。  
+  > [!TIP]
+  >  Configuration Manager 设置为“自动故障转移”时，支持使用可用性组同步副本。 在以下情况下设置“手动故障转移”：
+  >  -  运行 Configuration Manager 安装程序以指定在可用性组中使用站点数据库。  
+  >  -  安装任何 Configuration Manager 更新。 （不仅仅是安装适用于站点数据库的更新）。  
 
 #### <a name="replica-member-location"></a>副本成员位置
 可用性组中的所有副本要么在本地托管，要么全部托管在 Microsoft Azure 上。 不支持包含本地成员或 Azure 中成员的组。     
@@ -239,11 +239,11 @@ Configuration Manager 安装程序需要连接到每个副本。 在 Azure 中�
 
 #### <a name="unsupported-sql-server-options-and-configurations"></a>不受支持的 SQL Server 选项和配置
 
-- Basic 可用性组：随着 SQL Server 2016 Standard 版本的推出，Basic 可用性组不支持对次要副本的读取访问。 配置需要此访问权限。 有关详细信息，请参阅 [Basic SQL Server 可用性组](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups?view=sql-server-2017)。  
+- **基本可用性组**：随着 SQL Server 2016 Standard 版本的推出，Basic 可用性组不支持对次要副本的读取访问。 配置需要此访问权限。 有关详细信息，请参阅 [Basic SQL Server 可用性组](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups?view=sql-server-2017)。  
 
-- 故障转移群集实例：与 Configuration Manager 一起使用的副本不支持故障转移群集实例。 有关详细信息，请参阅 [SQL Server AlwaysOn 故障转移群集实例](https://docs.microsoft.com/sql/sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server)。  
+- **故障转移群集实例**：与 Configuration Manager 一起使用的副本不支持故障转移群集实例。 有关详细信息，请参阅 [SQL Server AlwaysOn 故障转移群集实例](https://docs.microsoft.com/sql/sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server)。  
 
-- MultiSubnetFailover：不支持在多子网配置中将可用性组与 Configuration Manager 结合使用。 还不能使用 [MutliSubnetFailover](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) 关键字连接字符串。  
+- **MultiSubnetFailover**：不支持在多子网配置中将可用性组与 Configuration Manager 结合使用。 还不能使用 [MutliSubnetFailover](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server#MultiSubnetFailover) 关键字连接字符串。  
 
 #### <a name="sql-servers-that-host-additional-availability-groups"></a>托管其他可用性组的 SQL Server
 <!--SCCMDocs issue 649--> 如果除了用于 Configuration Manager 的组之外，SQL Server 还承载一个或多个可用性组，则在运行 Configuration Manager 安装程序时需要特定的设置。 还需要这些设置来安装 Configuration Manager 更新。 每个可用性组中的每个副本必须具有以下配置：
@@ -253,11 +253,11 @@ Configuration Manager 安装程序需要连接到每个副本。 在 Azure 中�
 
 #### <a name="unsupported-database-use"></a>不支持使用的数据库
 
-- Configuration Manager 仅支持某一可用性组中的站点数据库：SQL Server AlwaysOn 可用性组中的 Configuration Manager 不支持以下数据库：  
+- **Configuration Manager 仅支持可用性组中的站点数据库：** SQL Server Always On 可用性组中的 Configuration Manager 不支持以下数据库：  
     - 报表数据库  
     - WSUS 数据库  
 
-- 预先存在的数据库：不能使用在副本上创建的新数据库。 在配置可用性组时，将现有 Configuration Manager 数据库的副本还原为主要副本。  
+- **预先存在的数据库：** 不能使用在副本上创建的新数据库。 在配置可用性组时，将现有 Configuration Manager 数据库的副本还原为主要副本。  
 
 #### <a name="setup-errors-in-configmgrsetuplog"></a>ConfigMgrSetup.log 中的安装错误  
 运行 Configuration Manager 安装程序将站点数据库移到可用性组时，它会尝试处理可用性组的次要副本上的数据库角色。 ConfigMgrSetup.log 文件将显示以下错误：  

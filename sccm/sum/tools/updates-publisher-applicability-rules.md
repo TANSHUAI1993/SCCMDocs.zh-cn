@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 robots: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 84705584328b09313bebd1e6c70a0063b2b0724f
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 280dd3da96b0c408f7c75fb7ef0a046ae0343765
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32351422"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421410"
 ---
 # <a name="manage-applicability-rules-in-updates-publisher"></a>管理 Updates Publisher 中的适用性规则
 
-*适用范围：System Center Updates Publisher*
+适用范围：*System Center Updates Publisher*
 
 借助 Updates Publisher，适用性规则可定义设备在安装更新之前必须满足的要求。 这些规则还可用于确定计算机是否已安装更新。 包含多个部分的复杂适用性规则被称为“规则集”。
 
@@ -50,30 +50,30 @@ ms.locfileid: "32351422"
 ## <a name="create-applicability-rule"></a>创建适用性规则
 下面介绍的步骤与在[“创建更新向导”](/sccm/sum/tools/create-updates-with-updates-publisher#the-create-update-wizard)中创建规则的方式类似。 与此向导的不同之处在于，可以视需要保存规则集以供将来使用。
 
-1.  在“规则工作区”中，选择“创建”，打开“创建规则”向导。
+1. 在“规则工作区”中，选择“创建”，打开“创建规则”向导。
 
-2.  指定规则名称，然后单击“新建规则”![](media/newrule.png)。 此时，“适用性规则”页会打开，可以在其中配置规则。
+2. 指定规则名称，然后单击“新建规则”![](media/newrule.png)。 此时，“适用性规则”页会打开，可以在其中配置规则。
 
-3.  对于“规则类型”，请选择下列选项之一。 必须配置的选项因规则类型而异：
+3. 对于“规则类型”，请选择下列选项之一。 必须配置的选项因规则类型而异：
 
-    -   文件 - 使用此规则可要求设备必须包含属性符合你指定的一个或多个条件的文件，然后才能应用此更新。
+   - 文件 - 使用此规则可要求设备必须包含属性符合你指定的一个或多个条件的文件，然后才能应用此更新。
 
-    -   注册表 - 使用此类型可指定必须有注册表详细信息，然后设备才符合此更新的安装条件。
+   - 注册表 - 使用此类型可指定必须有注册表详细信息，然后设备才符合此更新的安装条件。
 
-    -   系统 - 此规则使用系统详细信息来确定适用性。 可以选择定义 Windows 版本、Windows 语言还是处理器体系结构，也可以指定 WMI 查询来标识设备操作系统。
+   - 系统 - 此规则使用系统详细信息来确定适用性。 可以选择定义 Windows 版本、Windows 语言还是处理器体系结构，也可以指定 WMI 查询来标识设备操作系统。
 
-    -   Windows Installer - 使用此规则类型可根据已安装的 .MSI 或 Windows Installer 修补程序 (.MSP) 确定适用性。 还可以确定是否已根据要求安装特定组件或功能。
+   - Windows Installer - 使用此规则类型可根据已安装的 .MSI 或 Windows Installer 修补程序 (.MSP) 确定适用性。 还可以确定是否已根据要求安装特定组件或功能。
 
-       > [!IMPORTANT]   
-       > 对于受管理设备，Windows 更新代理无法检测针对每个用户安装的 Windows Installer 包。 使用此规则类型时，请配置其他适用性规则（如文件版本或注册项值），以便能够正确地检测 Windows Installer 包，无论是针对每个用户安装，还是针对每个系统安装。
+     > [!IMPORTANT]   
+     > 对于受管理设备，Windows 更新代理无法检测针对每个用户安装的 Windows Installer 包。 使用此规则类型时，请配置其他适用性规则（如文件版本或注册项值），以便能够正确地检测 Windows Installer 包，无论是针对每个用户安装，还是针对每个系统安装。
 
-    -   已保存的规则 - 使用此选项，可以查找和使用以前配置和保存的规则。
+   - 已保存的规则 - 使用此选项，可以查找和使用以前配置和保存的规则。
 
-4.  根据需要，继续添加并配置其他规则。
+4. 根据需要，继续添加并配置其他规则。
 
-5.  使用逻辑运算按钮对不同的规则进行排序和分组，以创建更复杂的先决条件检查。
+5. 使用逻辑运算按钮对不同的规则进行排序和分组，以创建更复杂的先决条件检查。
 
-6.  创建完规则集后，单击“确定”进行保存。 此时，该规则集会出现在“我保存的规则”列表中。
+6. 创建完规则集后，单击“确定”进行保存。 此时，该规则集会出现在“我保存的规则”列表中。
 
 ## <a name="edit-applicability-rule-sets"></a>编辑适用性规则集
 若要编辑适用性规则，请转到“规则工作区”，选择在“我保存的规则”列表中保存的任意规则，然后从功能区中选择“编辑”。 此时，“编辑规则”向导会打开。

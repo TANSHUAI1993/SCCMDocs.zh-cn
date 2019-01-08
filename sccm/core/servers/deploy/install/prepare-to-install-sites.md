@@ -10,16 +10,16 @@ ms.assetid: 9089e1b5-cba4-42bd-a2de-126ef882a3af
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9f07a321ac6f10f5287a88d0df7064920f538ae5
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 3de7b19eb7d997ef72cc7a413eb143172c4ce40e
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32341689"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424351"
 ---
 # <a name="prepare-to-install-system-center-configuration-manager-sites"></a>准备安装 System Center Configuration Manager 站点
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 若要准备成功部署一个或多个 System Center Configuration Manager 站点，请熟悉本文中有关步骤的详细信息。 这些步骤可以节省安装多个站点的时间，并有助于防止漏掉步骤从而导致需要重新安装一个或多个站点。
 
@@ -35,9 +35,9 @@ ms.locfileid: "32341689"
 ### <a name="first-site"></a>第一个站点
 层次结构中安装的第一个站点必须是独立主站点或管理中心站点。
 
-**安装介质**：若要将管理中心站点或独立主站点安装为新层次结构中的第一个站点，必须使用 Configuration Manager 的[基线版本](../../../../core/servers/manage/updates.md#bkmk_Baselines)。 安装新层次结构的第一个站点时，请勿使用任何站点的 [CD.Latest 文件夹](../../../../core/servers/manage/the-cd.latest-folder.md)中更新的源文件。
+**安装介质**：若要将管理中心站点或独立主站点安装为新层次结构中的第一个站点，则必须[使用基线版本](../../../../core/servers/manage/updates.md#bkmk_Baselines)的 Configuration Manager。 安装新层次结构的第一个站点时，请勿使用任何站点的 [CD.Latest 文件夹](../../../../core/servers/manage/the-cd.latest-folder.md)中更新的源文件。
 
-**安装方法**：可使用 [Configuration Manager 安装向导](../../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md)安装任一站点类型，或可将脚本配置为与[脚本化命令行安装](../../../../core/servers/deploy/install/use-a-command-line-to-install-sites.md)配合使用。
+**安装方法**：可以使用 [Configuration Manager 安装向导](../../../../core/servers/deploy/install/use-the-setup-wizard-to-install-sites.md)安装任一站点类型，也可以将脚本配置为与[脚本化命令行安装](../../../../core/servers/deploy/install/use-a-command-line-to-install-sites.md)配合使用。
 
 
 ### <a name="additional-sites"></a>其他站点
@@ -56,9 +56,9 @@ ms.locfileid: "32341689"
 
 必须从 Configuration Manager 控制台安装辅助站点。 由此，始终使用父主站点的源文件安装辅助站点。
 
-**安装方法**：附加站点的安装方法取决于要安装的站点类型。
--   **添加管理中心站点**：可使用 Configuration Manager 安装向导或脚本化命令行，将新的管理中心站点作为父站点安装到现有的独立主站点中。 有关详细信息，请参阅[扩展独立主站点](../../../../core/servers/deploy/install/prerequisites-for-installing-sites.md#bkmk_expand)。
--   **添加子主站点**：可使用 Configuration Manager 安装向导或命令行安装在管理中心站点下添加子主站点。
+**安装方法**：安装其他站点的方法取决于想要安装的站点类型。
+-   **添加管理中央站点**：可以使用 Configuration Manager 安装向导或脚本化命令行将新的管理中心站点作为父站点安装到现有的独立主站点。 有关详细信息，请参阅[扩展独立主站点](../../../../core/servers/deploy/install/prerequisites-for-installing-sites.md#bkmk_expand)。
+-   **添加子主站点**：可以使用 Configuration Manager 安装向导或命令行安装在管理中心站点下添加子主站点。
 -   **添加辅助站点**：使用 Configuration Manager 控制台将辅助站点安装为主站点下的子站点。 不可使用其他方法添加辅助站点。
 
 ## <a name="bkmk_tasks"></a>开始安装前要完成的常见任务
@@ -105,11 +105,11 @@ ms.locfileid: "32341689"
 
 ## <a name="limits-and-restrictions-for-installed-sites"></a>已安装站点的限制和局限性
 安装站点前，请务必了解适用于站点和站点层次结构的以下限制：
--   运行安装程序后，除非卸载该站点，然后再使用新值重新安装，否则无法更改下列站点属性：  
+- 运行安装程序后，除非卸载该站点，然后再使用新值重新安装，否则无法更改下列站点属性：  
   -   程序文件安装目录  
   -   站点代码  
   -   站点说明  
--   当你的层次结构中包括管理中心站点时：  
+- 当你的层次结构中包括管理中心站点时：  
   -   Configuration Manager 不支持将子主站点移出层次结构，以创建独立主站点或将其附加到不同的层次结构。 而首先需要卸载子主站点，然后重新将它安装为新的独立主站点或其他层次结构的管理中心站点的子站点。  
 
 
@@ -130,7 +130,7 @@ ms.locfileid: "32341689"
 **确定可选端口**
 
 可确定供站点系统和客户端使用的可选端口。 下面是其他信息：
- -  站点系统和客户端默认使用预定义的端口进行通信。
- -  安装过程中，可以配置备用端口。
+- 站点系统和客户端默认使用预定义的端口进行通信。
+- 安装过程中，可以配置备用端口。
 
- 有关详细信息，请参阅 [System Center Configuration Manager 中使用的端口](../../../../core/plan-design/hierarchy/ports.md)。
+  有关详细信息，请参阅 [System Center Configuration Manager 中使用的端口](../../../../core/plan-design/hierarchy/ports.md)。

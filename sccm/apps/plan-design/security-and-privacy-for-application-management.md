@@ -10,16 +10,16 @@ ms.assetid: 4d26deed-3b16-4116-b640-f618f2c20f5a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 65e4d68f05087d24bc83e8e4a3dd67489fdbaed3
-ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
+ms.openlocfilehash: be4f60bbc6114abc1c4537cc83ee8c2dd0aeef42
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43893577"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421920"
 ---
 # <a name="security-and-privacy-for-application-management-in-configuration-manager"></a>在 Configuration Manager 中管理应用程序的安全和隐私
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 
 ##  <a name="security-guidance-for-application-management"></a>应用程序管理的安全指南  
@@ -213,11 +213,11 @@ ms.locfileid: "43893577"
     > [!Note]  
     > 自 Configuration Manager 1802 开始，应用程序目录的主要功能现包含在软件中心内。 有关详细信息，请参阅[配置软件中心](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex)。  
 
--  安装 Configuration Manager 客户端时，还会在设备上自动安装软件中心。 用户从软件中心更改设置、浏览和安装应用程序。  
+- 安装 Configuration Manager 客户端时，还会在设备上自动安装软件中心。 用户从软件中心更改设置、浏览和安装应用程序。  
 
- 有关[用户设备相关性](#bkmk_privacy-uda)和[软件中心和应用程序目录](#bkmk_privacy-userex)的隐私信息，请查看以下部分。  
+  有关[用户设备相关性](#bkmk_privacy-uda)和[软件中心和应用程序目录](#bkmk_privacy-userex)的隐私信息，请查看以下部分。  
 
- 在配置应用程序管理之前，请考虑隐私要求。  
+  在配置应用程序管理之前，请考虑隐私要求。  
 
 
 ### <a name="bkmk_privacy-uda"></a> 用户设备相关性  

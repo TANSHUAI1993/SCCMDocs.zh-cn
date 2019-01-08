@@ -10,26 +10,26 @@ ms.assetid: d8d5c345-1e91-410b-b8a9-0170dcfa846e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8a5f801edced78306316a63d125d9b90b37600b2
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 676131965165acda9633e7fbceaee7f25d823efe
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32349943"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420373"
 ---
 # <a name="manage-user-state-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中管理用户状态
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 在希望保留当前操作系统的用户状态的操作系统部署方案中，可以使用 System Center Configuration Manager 任务序列来捕获和还原用户状态数据。 例如：  
 
--   某些部署，其中你希望从一台计算机中捕获用户状态，然后在另一台计算机上将其还原。  
+- 某些部署，其中你希望从一台计算机中捕获用户状态，然后在另一台计算机上将其还原。  
 
--   在更新部署中，你希望在同一台计算机上捕获和还原用户状态。  
+- 在更新部署中，你希望在同一台计算机上捕获和还原用户状态。  
 
- 操作系统安装完成后，Configuration Manager 使用用户状态迁移工具 (USMT) 10.0 来管理从源计算机到目标计算机的用户状态数据迁移。 有关 USMT 10.0 常见迁移方案的详细信息，请参阅  [常见迁移方案](https://technet.microsoft.com/library/mt299169\(v=vs.85\).aspx)。  
+  操作系统安装完成后，Configuration Manager 使用用户状态迁移工具 (USMT) 10.0 来管理从源计算机到目标计算机的用户状态数据迁移。 有关 USMT 10.0 常见迁移方案的详细信息，请参阅  [常见迁移方案](https://technet.microsoft.com/library/mt299169\(v=vs.85\).aspx)。  
 
- 使用以下部分可帮助你捕获和还原用户数据。
+  使用以下部分可帮助你捕获和还原用户数据。
 
 
 ##  <a name="BKMK_StoringUserData"></a> 存储用户状态数据  
@@ -81,23 +81,23 @@ ms.locfileid: "32349943"
 ##  <a name="BKMK_StateMigrationPoint"></a> Configure a state migration point  
  状态迁移点在一台计算机上存储捕获的用户状态数据，然后在另一台计算机上还原这些数据。 但是，当你在同一台计算机上捕获操作系统部署的用户设置时（例如在目标计算机上刷新操作系统的部署），你可以通过使用硬链接将数据存储在同一台计算机上或将数据存储在状态迁移点上。 对于某些计算机部署，当你创建状态存储时，Configuration Manager 会自动在状态存储和目标计算机之间创建关联。 你可以使用下列方法来配置状态迁移点以存储用户状态数据：  
 
--   使用“创建站点系统服务器向导”  为状态迁移点创建一个新站点系统服务器。  
+- 使用“创建站点系统服务器向导”  为状态迁移点创建一个新站点系统服务器。  
 
--   使用“添加站点系统角色向导”  将状态迁移点添加到现有服务器。  
+- 使用“添加站点系统角色向导”  将状态迁移点添加到现有服务器。  
 
- 在使用这些向导时，会提示你提供状态迁移点的下列信息：  
+  在使用这些向导时，会提示你提供状态迁移点的下列信息：  
 
--   用于存储用户状态数据的文件夹。  
+- 用于存储用户状态数据的文件夹。  
 
--   可在状态迁移点上存储数据的客户端的最大数量。  
+- 可在状态迁移点上存储数据的客户端的最大数量。  
 
--   供状态迁移点存储用户状态数据的最小可用空间。  
+- 供状态迁移点存储用户状态数据的最小可用空间。  
 
--   角色的删除策略。 你可以指定在计算机上还原用户状态数据之后立即删除该数据，或在计算机上还原用户数据后特定天数之后再删除该数据。  
+- 角色的删除策略。 你可以指定在计算机上还原用户状态数据之后立即删除该数据，或在计算机上还原用户数据后特定天数之后再删除该数据。  
 
--   状态迁移点是否仅响应还原用户状态数据的请求。 如果启用此选项，你将无法使用状态迁移点来存储用户状态数据。  
+- 状态迁移点是否仅响应还原用户状态数据的请求。 如果启用此选项，你将无法使用状态迁移点来存储用户状态数据。  
 
- 有关状态迁移点以及对其进行配置的步骤的详细信息，请参阅[状态迁移点](prepare-site-system-roles-for-operating-system-deployments.md#BKMK_StateMigrationPoints)。  
+  有关状态迁移点以及对其进行配置的步骤的详细信息，请参阅[状态迁移点](prepare-site-system-roles-for-operating-system-deployments.md#BKMK_StateMigrationPoints)。  
 
 ##  <a name="BKMK_ComputerAssociation"></a> Create a computer association  
  当你在新硬件上安装操作系统并且想捕获和还原用户数据设置时，请创建计算机关联以定义源计算机和目标计算机之间的关系。 源计算机是 Configuration Manager 管理的现有计算机。 在你将新操作系统部署到目标计算机时，源计算机包含迁移到目标计算机的用户状态。  

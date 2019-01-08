@@ -10,37 +10,37 @@ ms.assetid: 948664f2-239d-47a8-92fc-f8efeebd5796
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1bafded91dcdcddacd45134ce6b52f4da9d916ac
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 67c50d43a378e2c4939aaffb9943ce4fd408f56f
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334192"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417670"
 ---
 # <a name="how-to-manage-clients-for-linux-and-unix-servers-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中管理 Linux 和 UNIX 服务器客户端
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 当使用 System Center Configuration Manager 管理 Linux 和 UNIX 服务器时，可以配置集合、维护时段和客户端设置，以帮助管理服务器。 此外，尽管适用于 Linux 和 UNIX 的 Configuration Manager 客户端没有用户界面，但可以强制客户端手动轮询客户端策略。
 
 ##  <a name="BKMK_CollectionsforLnU"></a> Linux 和 UNIX 服务器的集合  
  使用集合管理 Linux 和 UNIX 服务器组的方式与使用集合管理其他客户端类型的方式相同。 集合可以是直接成员身份集合，也可以是基于查询的集合。 基于查询的集合用于确定客户端操作系统、硬件配置或有关站点数据库中存储的客户端的其他详细信息。 例如，你可以使用包括 Linux 和 UNIX 服务器的集合来管理下列设置：  
 
--   客户端设置  
+- 客户端设置  
 
--   软件部署  
+- 软件部署  
 
--   强制维护时段  
+- 强制维护时段  
 
- 必须先从客户端收集[硬件清单](../../../core/clients/manage/inventory/hardware-inventory-for-linux-and-unix.md)，然后才可通过客户端操作系统或分发来标识 Linux 或 UNIX 客户端。  
+  必须先从客户端收集[硬件清单](../../../core/clients/manage/inventory/hardware-inventory-for-linux-and-unix.md)，然后才可通过客户端操作系统或分发来标识 Linux 或 UNIX 客户端。  
 
- 硬件清单的默认客户端设置包括有关客户端计算机的操作系统的信息。 你可以使用 **Operating System** 类的 **Caption** 属性来标识 Linux 或 UNIX 服务器的操作系统。  
+  硬件清单的默认客户端设置包括有关客户端计算机的操作系统的信息。 你可以使用 **Operating System** 类的 **Caption** 属性来标识 Linux 或 UNIX 服务器的操作系统。  
 
- 在 Configuration Manager 控制台的“资产和符合性”工作区中的“设备”节点下，可查看有关运行 Linux 和 UNIX 的 Configuration Manager 客户端的计算机的详细信息。 在 Configuration Manager 控制台的“资产和符合性”工作区中，可在“操作系统”列中查看每台计算机的操作系统名称。  
+  在 Configuration Manager 控制台的“资产和符合性”工作区中的“设备”节点下，可查看有关运行 Linux 和 UNIX 的 Configuration Manager 客户端的计算机的详细信息。 在 Configuration Manager 控制台的“资产和符合性”工作区中，可在“操作系统”列中查看每台计算机的操作系统名称。  
 
- 默认情况下，Linux 和 UNIX 服务器属于 **所有系统** 集合的成员。 建议生成仅包括 Linux 和 UNIX 服务器或其子集的自定义集合。 通过自定义集合，可管理向诸如计算机组部署软件或分配客户端设置等操作，以便准确衡量部署是否成功。   
+  默认情况下，Linux 和 UNIX 服务器属于 **所有系统** 集合的成员。 建议生成仅包括 Linux 和 UNIX 服务器或其子集的自定义集合。 通过自定义集合，可管理向诸如计算机组部署软件或分配客户端设置等操作，以便准确衡量部署是否成功。   
 
- 在为 Linux 和 UNIX 服务器生成自定义集合时，请包含成员身份规则查询，并在这些查询中包括操作系统特性的 Caption 特性。 有关创建集合的信息，请参阅[如何在 System Center Configuration Manager 中创建集合](../../../core/clients/manage/collections/create-collections.md)。  
+  在为 Linux 和 UNIX 服务器生成自定义集合时，请包含成员身份规则查询，并在这些查询中包括操作系统特性的 Caption 特性。 有关创建集合的信息，请参阅[如何在 System Center Configuration Manager 中创建集合](../../../core/clients/manage/collections/create-collections.md)。  
 
 ##  <a name="BKMK_MaintenanceWindowsforLnU"></a> Linux 和 UNIX 服务器的维护时段  
  Linux 和 UNIX 服务器的 Configuration Manager 客户端支持使用[维护时段](../../../core/clients/manage/collections/use-maintenance-windows.md)。 与对基于 Windows 的客户端的支持相比，此支持并无变化。  

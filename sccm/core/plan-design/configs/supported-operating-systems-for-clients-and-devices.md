@@ -10,16 +10,16 @@ ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 48eb4abcc328c57fdb35e3511e49500099a68cf2
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 6f60d7f3a8c3bd81f4de38b2ce4080f54756de14
+ms.sourcegitcommit: c60e057075a83f07d1ca2577c3de1c7d7c8e9cec
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456475"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626457"
 ---
 # <a name="supported-os-versions-for-clients-and-devices-for-configuration-manager"></a>Configuration Manager 在客户端和设备上支持的操作系统版本
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
  Configuration Manager 支持在 Windows、Mac、Linux 和 UNIX 计算机上安装客户端软件。  
 
@@ -42,33 +42,33 @@ ms.locfileid: "52456475"
 
     有关详细信息，请参阅 [Windows 10 支持](/sccm/core/plan-design/configs/support-for-windows-10)。  
 
--   **Windows 8.1**（x86、x64）：专业版、企业版    
+-   **Windows 8.1** (x86, x64)：Professional、Enterprise    
 
--   **Windows 7 SP1**（x86、x64）：专业版、企业版和旗舰版    
+-   **带 SP1 的 Windows 7** (x86, x64)：Professional、Enterprise 和 Ultimate    
 
 
 ### <a name="supported-server-os-versions"></a>受支持的服务器 OS 版本
 
--  **Windows Server 2019**：Standard、Datacenter <sup>[注 1](#bkmk_note1)</sup>  
+-  **Windows Server 2019**：标准版、数据中心版<sup>[注释 1](#bkmk_note1)</sup>  
     （自 Configuration Manager 版本 1806 起。）
 
--  Windows Server 2016：标准版、数据中心版<sup>[注释 1](#bkmk_note1)</sup>  
+-  **Windows Server 2016**：标准版、数据中心版<sup>[注释 1](#bkmk_note1)</sup>  
 
--   **Windows Storage Server 2016**：工作组、标准版  
+-   **Windows Storage Server 2016**：标准版、工作组版  
 
--   Windows Server 2012 R2 (x64)：标准版、数据中心版<sup>[注释 1](#bkmk_note1)</sup>    
+-   **Windows Server 2012 R2** (x64)：标准版、数据中心版<sup>[注释 1](#bkmk_note1)</sup>    
 
 -   **Windows Storage Server 2012 R2** (x64)    
 
--   Windows Server 2012 (x64)：标准版、数据中心版<sup>[注释 1](#bkmk_note1)</sup>    
+-   **Windows Server 2012** (x64)：标准版、数据中心版<sup>[注释 1](#bkmk_note1)</sup>    
 
 -   **Windows Storage Server 2012** (x64)    
 
--   Windows Server 2008 R2 SP1 (x64)：标准版、企业版、数据中心版<sup>[注释 1](#bkmk_note1)</sup>    
+-   **带 SP1 的 Windows Server 2008 R2**  (x64)：标准版、企业版、数据中心版<sup>[注释 1](#bkmk_note1)</sup>    
 
--   **Windows Storage Server 2008 R2**（x86、x64）：工作组、标准版、企业版    
+-   **Windows Storage Server 2008 R2** (x86, x64)：工作组版、标准版、企业版    
 
--   Windows Server 2008 SP2（x86、x64）：标准版、企业版、数据中心版<sup>[注释 1](#bkmk_note1)</sup>    
+-   **带 SP2 的 Windows Server 2008** (x86, x64)：标准版、企业版、数据中心版<sup>[注释 1](#bkmk_note1)</sup>    
 
 
 #### <a name="server-core"></a>服务器核心
@@ -360,10 +360,10 @@ Configuration Manager 支持连接到 Exchange Server 的设备的有限管理�
 
 ### <a name="supported-versions-of-exchange-server"></a>受支持的 Exchange Server 版本
 
--   **Exchange Server 2010 SP1**  
+- **Exchange Online (Office 365)**：此版本包括 Business Productivity Online Standard Suite  
 
--   **Exchange Server 2010 SP2**  
+- **Exchange Server 2016**（从版本 1802 开始）  
 
--   **Exchange Server 2013**  
+- **Exchange Server 2013**  
 
--   Exchange Online (Office 365)：此版本包括 Business Productivity Online Standard Suite  
+- **Exchange Server 2010 SP1** 或 **Exchange Server 2010 SP2** 

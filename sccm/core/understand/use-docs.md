@@ -11,16 +11,16 @@ ms.assetid: b3d755bd-0870-4f1f-a56d-bfd3c7b492b9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6bd4675d3b366c5f414467b76627e25b91259ef2
-ms.sourcegitcommit: 240d3199e1c6fa47af6eda499492b2527516ab18
+ms.openlocfilehash: 27eea5c93ec66207e48390e3c7a0352a3a255ceb
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44326197"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424725"
 ---
 # <a name="how-to-use-the-configuration-manager-docs"></a>如何使用 Configuration Manager 文档
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：*System Center Configuration Manager (Current Branch)*
 
 本文分为以下几个部分提供了有关使用 Configuration Manager 文档库的多个资源和技巧：  
 
@@ -45,7 +45,7 @@ ms.locfileid: "44326197"
 
     - 若要进一步将搜索结果集中到当前内容库，请包含 `site:docs.microsoft.com` 以限定搜索引擎的范围。  
 
--   使用和用户界面以及在线文档中的术语相匹配的搜索词。 避免使用可能在社区内容中见过的非正式术语或缩写。 例如，搜索“management point”（管理点）而不是“MP”、搜索“deployment type”（部署类型）而不是“DT”，以及搜索“software updates”（软件更新）而不是“SUM”。  
+-   使用和用户界面以及在线文档中的术语相匹配的搜索词。 避免使用可能在社区内容中见过的非正式术语或缩写。 例如，搜索“management point”（管理点）而不是“MP”、搜索“deployment type”（部署类型）而不是“DT”，以及搜索“software updates”（软件更新）而不是“SUM”。  
 
 -   若要在当前正在查看的文章中进行搜索，请使用浏览器的“查找”功能。 对于大多数新式 Web 浏览器，请按 Ctrl+F，然后输入搜索词。  
 
@@ -77,7 +77,7 @@ ms.locfileid: "44326197"
 - 文档想法：撰写新文章的建议。 使用此方法代替 UserVoice 提供文档反馈。
 - 称赞：关于有用或信息性文章的积极反馈！
 - 本地化：关于内容翻译的反馈。
-- 搜索引擎优化 (SEO)：关于搜索内容时遇到问题的反馈。 在评论中包含搜索引擎、关键字和目标文章。
+- 搜索引擎优化 (SEO)：关于搜索内容时所遇到的问题的反馈。 在评论中包含搜索引擎、关键字和目标文章。
 
 如果针对非文档相关主题提出问题，例如[产品反馈](/sccm/core/understand/find-help#product-feedback)、[产品问题](https://social.technet.microsoft.com/Forums/en-US/home?category=ConfigMgrCB)或[支持请求](https://aka.ms/cmcbsupport)，则这些问题将被关闭，用户重定向到正确的反馈通道。
 
@@ -90,7 +90,7 @@ ms.locfileid: "44326197"
 若要在文档库中的内容更改时接收通知，请使用以下步骤：
 
 1. 使用[文档搜索](https://docs.microsoft.com/search/index?scope=ConfigMgr)查找一篇文章或一组文章。 例如：
-    - 按标题：[“故障排除的日志文件 - Configuration Manager”](https://docs.microsoft.com/search/index?search=%22Log+files+for+troubleshooting+-+Configuration+Manager%22&scope=ConfigMgr)搜索单篇文章
+    - 按标题搜索一篇文章：[“故障排除的日志文件 - Configuration Manager”](https://docs.microsoft.com/search/index?search=%22Log+files+for+troubleshooting+-+Configuration+Manager%22&scope=ConfigMgr)
     - 搜索有关 [SQL](https://docs.microsoft.com/search/index?search=SQL&scope=ConfigMgr) 的任何文章
 2. 在右上角单击“RSS”链接。 
 3. 任何搜索结果更改时，在任何 RSS 应用程序中使用此信息提要接收通知。
@@ -122,8 +122,8 @@ ms.locfileid: "44326197"
 如果有兴趣参与但不知道从何处着手，请参阅以下建议：  
 
 - 搜索针对社区的标签的问题列表：  
-    - [精选问题](https://github.com/MicrosoftDocs/sccmdocs/issues?q=is:open+is:issue+label:good-first-issue)   
-    - [需要帮助](https://github.com/MicrosoftDocs/sccmdocs/issues?q=is:open+is:issue+label:help-wanted)  
+  - [精选问题](https://github.com/MicrosoftDocs/sccmdocs/issues?q=is:open+is:issue+label:good-first-issue)   
+  - [需要帮助](https://github.com/MicrosoftDocs/sccmdocs/issues?q=is:open+is:issue+label:help-wanted)  
 
     Microsoft 作者会将这些标签分配给适用于社区贡献的候选问题。  
 

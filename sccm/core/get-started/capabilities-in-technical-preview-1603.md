@@ -11,26 +11,26 @@ author: aczechowski
 robots: noindex,nofollow
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 6d5ecf4e2d231a596012aa9f7d371f18ef0705a1
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: c7a0c1438fe08e1efae9d2bfe5fb608214486031
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32343545"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53423042"
 ---
 # <a name="capabilities-in-technical-preview-1603-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1603 版中的功能
 
-*适用范围：System Center Configuration Manager (Technical Preview)*
+适用范围：System Center Configuration Manager（技术预览版）
 
-本文介绍了 System Center Configuration Manager Technical Preview 1603 版中的可用功能。 你可以安装此版本，以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。 或者，如果使用的是 System Center Technical Preview 5，此版本将作为 System Center Configuration Manager Technical Preview 的基准版本安装。 在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。  
+本文介绍了 System Center Configuration Manager Technical Preview 1603 版中的可用功能。 你可以安装此版本，以更新 Technical Preview 站点的功能并向其添加新功能。 或者，如果使用的是 System Center Technical Preview 5，此版本将作为 System Center Configuration Manager Technical Preview 的基准版本安装。 在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager 技术预览版](../../core/get-started/technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。  
 
  **此 Technical Preview 中的已知问题：**  
 
--   此版本包括以前发布的功能的更新，但不会引入新功能。 因此，如果以前升级到 1602 并启用了 1602 中包含的所有功能，则更新向导的“功能”页将为空。  
+- 此版本包括以前发布的功能的更新，但不会引入新功能。 因此，如果以前升级到 1602 并启用了 1602 中包含的所有功能，则更新向导的“功能”页将为空。  
 
--   站点服务器更新到 Technical Preview 1603 之后，客户端无法使用任何远程控制功能，直到它们也更新到版本 1603。  
+- 站点服务器更新到 Technical Preview 1603 之后，客户端无法使用任何远程控制功能，直到它们也更新到版本 1603。  
 
- **以下是此版本可以试用的新功能。**  
+  **以下是此版本可以试用的新功能。**  
 
 ##  <a name="BKMK_SC1603"></a>对软件中心的改进  
 
@@ -66,26 +66,26 @@ ms.locfileid: "32343545"
 
 ### <a name="to-modify-the-ramdisk-tftp-window-size"></a>修改 RamDisk TFTP 窗口大小  
 
--   在启用 PXE 的分发点上添加以下注册表项以自定义 RamDisk TFTP 窗口大小：  
+- 在启用 PXE 的分发点上添加以下注册表项以自定义 RamDisk TFTP 窗口大小：  
 
-     **位置**：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\DP  
-    名称：RamDiskTFTPWindowSize  
+   **位置**：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\DP  
+  名称：RamDiskTFTPWindowSize  
 
-     **类型**：REG_DWORD  
+   **类型**：REG_DWORD  
 
-     **值**：&lt;customized window size\>  
+   **值**：&lt;customized window size\>  
 
- 默认值为 1（1 个数据块填满窗口）  
+  默认值为 1（1 个数据块填满窗口）  
 
 ### <a name="to-modify-the-ramdisk-tftp-block-size"></a>修改 RamDisk TFTP 块大小  
 
--   在启用 PXE 的分发点上添加以下注册表项以自定义 RamDisk TFTP 窗口大小：  
+- 在启用 PXE 的分发点上添加以下注册表项以自定义 RamDisk TFTP 窗口大小：  
 
-     **位置**：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\DP  
-    名称：RamDiskTFTPBlockSize  
+   **位置**：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\DP  
+  名称：RamDiskTFTPBlockSize  
 
-     **类型**：REG_DWORD  
+   **类型**：REG_DWORD  
 
-     **值**：&lt;customized block size\>  
+   **值**：&lt;customized block size\>  
 
- 默认值为 4096 (4k)。  
+  默认值为 4096 (4k)。  

@@ -10,20 +10,20 @@ ms.assetid: 18598eaa-1131-44ff-8f8b-6093e87ac7a1
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 894d268151f9c9dfb05ded812eb642f8025dc459
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: b2a01d8ccc76315edbdf0e14085381463ec7ed7b
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32338527"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424504"
 ---
 # <a name="capabilities-in-technical-preview-1701-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1701 中的功能
 
-*适用范围：System Center Configuration Manager (Technical Preview)*
+适用范围：System Center Configuration Manager (Technical Preview)
 
 
 
-本文介绍了 System Center Configuration Manager Technical Preview（版本 1701）中的可用功能。 你可以安装此版本，以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。 在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。    
+本文介绍了 System Center Configuration Manager Technical Preview（版本 1701）中的可用功能。 你可以安装此版本，以更新 Technical Preview 站点的功能并向其添加新功能。 在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager 技术预览版](../../core/get-started/technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。    
 
 
 **以下是此版本可以试用的新功能。**  
@@ -43,24 +43,24 @@ ms.locfileid: "32338527"
 
 下面介绍了此 Technical Preview 中软件更新点的行为：  
 
--   **新客户端使用边界组选择软件更新点，** 安装版本 1701 后所安装的客户端从那些与客户端边界组关联的软件更新点中选取一个。
+- **新客户端使用边界组选择软件更新点，** 安装版本 1701 后所安装的客户端从那些与客户端边界组关联的软件更新点中选取一个。
 
   这将替代以前的行为，即客户端从共享客户端林的软件更新点列表中随机选取一个。   
 
--   **以前安装的客户端继续使用当前的软件更新点，直到它们回退找到新的软件更新点。**
-回退前，以前安装的客户端以及已具有软件更新点的客户端将继续使用该软件更新点。 这包括未与客户端当前边界组关联的软件更新点。 它们不会直接尝试从当前边界组查找和使用软件更新点。
+- **以前安装的客户端继续使用当前的软件更新点，直到它们回退找到新的软件更新点。**
+  回退前，以前安装的客户端以及已具有软件更新点的客户端将继续使用该软件更新点。 这包括未与客户端当前边界组关联的软件更新点。 它们不会直接尝试从当前边界组查找和使用软件更新点。
 
   仅在客户端无法获取其当前软件更新点和启动回退时，已具有软件更新点的客户端才会开始使用这个新边界组行为。
-切换到新行为时发生这种延迟是故意为之的。 原因在于软件更新点的更改可导致网络带宽的大量使用，因为客户端会与新软件更新点同步数据。 过渡中的延迟有助于在所有客户端同时切换到新软件更新点时避免网络饱和。
+  切换到新行为时发生这种延迟是故意为之的。 原因在于软件更新点的更改可导致网络带宽的大量使用，因为客户端会与新软件更新点同步数据。 过渡中的延迟有助于在所有客户端同时切换到新软件更新点时避免网络饱和。
 
--   **回退时间配置：** 此 Technical Preview 中不支持配置客户端启动回退以搜索新软件更新点的时间。 这包括配置“回退时间(以分钟为单位)”和“从不回退”，可以针对不同边界组关系进行配置。
+- **回退时间配置：** 此 Technical Preview 中不支持配置客户端启动回退以搜索新软件更新点的时间。 这包括配置“回退时间(以分钟为单位)”和“从不回退”，可以针对不同边界组关系进行配置。
 
   但是，客户端可将客户端尝试连接到其当前软件更新点的当前行为保留 2 小时，然后再启动回退以查找可用的新软件更新点。
 
   客户端使用回退时，将使用回退的边界组配置创建可用软件更新点的池。 该池包括客户端当前边界组、邻居边界组和客户端站点默认边界组中的所有软件更新点。
 
 - **配置默认站点边界组：**  
- 考虑将软件更新点添加到 Default-Site-Boundary-Group&lt;sitecode>。 这可确保非另一边界组成员的客户端可回退以查找软件更新点。
+  考虑将软件更新点添加到 Default-Site-Boundary-Group&lt;sitecode>。 这可确保非另一边界组成员的客户端可回退以查找软件更新点。
 
 
 若要管理边界组的软件更新点，请使用 [Current Branch 文档中的流程](/sccm/core/servers/deploy/configure/define-site-boundaries-and-boundary-groups#procedures-for-boundary-groups)，但请记住，你可以配置的回退时间还不能用于软件更新点。
@@ -73,15 +73,15 @@ ms.locfileid: "32338527"
 我们对操作系统部署做了以下改进，大部分改进根据用户语音反馈进行的。
 - [**支持更多应用程序执行“安装应用程序”任务序列步骤**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/17062207-task-sequence-allow-more-than-9-applications-in-t)：增加了应用程序的最大数量，因此可以在“安装应用程序”任务序列步骤中安装最多 99 个应用程序。 以前的最大数量为 9 个应用程序。
 - [**在“安装应用”任务序列步骤中选择多个应用**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/15459978-when-adding-items-to-an-install-application-step)：在任务序列编辑器中向“安装应用程序”任务序列步骤添加应用程序时，现在可从“选择要安装的应用程序”面板选择多个应用程序。
-- [**过期独立介质**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/14448564-provide-a-method-for-expiring-standalone-media)：创建独立介质时，可使用新选项对介质设置可选开始日期和到期日期。 默认情况下，这些设置处于禁用状态。 独立介质运行前，该日期将与计算机上的系统时间进行比较。 如果系统时间早于开始时间或晚于过期时间，则独立介质不会启动。 也可通过使用 New-CMStandaloneMedia PowerShell cmdlet 启用这些选项。
-- [**独立介质中支持额外内容**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8341257-support-installation-of-packages-apps-via-dynamic)：独立介质中现在支持额外内容。 可选择将额外的包、驱动程序包和应用程序，以及任务序列中引用的其他内容暂存在介质中。 以前，仅任务序列中引用的内容才暂存在独立介质中。
-- [**“自动应用驱动程序”任务序列步骤可配置超时**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/17153660-auto-apply-driver-timeout)：在发出 HTTP 目录请求时，新任务序列变量现在可在“自动应用驱动程序”任务序列步骤中配置超时值。 下面是可用的变量和默认值（以秒为单位）：
+- [**对独立介质设置到期日期**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/14448564-provide-a-method-for-expiring-standalone-media)：创建独立介质时，可使用新选项对介质设置可选开始日期和到期日期。 默认情况下，这些设置处于禁用状态。 独立介质运行前，该日期将与计算机上的系统时间进行比较。 如果系统时间早于开始时间或晚于过期时间，则独立介质不会启动。 也可通过使用 New-CMStandaloneMedia PowerShell cmdlet 启用这些选项。
+- [**对独立介质中的其他内容的支持**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8341257-support-installation-of-packages-apps-via-dynamic)：在独立介质中现在支持其他内容。 可选择将额外的包、驱动程序包和应用程序，以及任务序列中引用的其他内容暂存在介质中。 以前，仅任务序列中引用的内容才暂存在独立介质中。
+- [**自动应用驱动程序任务序列步骤的可配置超时**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/17153660-auto-apply-driver-timeout)：在发出 HTTP 目录请求时，新任务序列变量现在可在“自动应用驱动程序”任务序列步骤中配置超时值。 下面是可用的变量和默认值（以秒为单位）：
    - SMSTSDriverRequestResolveTimeOut 默认值：60
    - SMSTSDriverRequestConnectTimeOut 默认值：60
    - SMSTSDriverRequestSendTimeOut 默认值：60
    - SMSTSDriverRequestReceiveTimeOut 默认值：480
-- [**任务序列步骤现在会显示包 ID**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/16167430-display-packageid-when-viewing-a-task-sequence-ste)：任何引用包、驱动程序包、操作系统映像、启动映像或操作系统升级包的任务序列步骤现在将显示引用对象的包 ID。 任务序列步骤引用应用程序时，将显示对象 ID。
-- **通过内部版本号跟踪 Windows 10 ADK**：现在可通过内部版本号跟踪 Windows 10 ADK，确保自定义 Windows 10 启动映像时有更多受支持的体验。 例如，如果站点使用适用于 Windows 10 的 Windows ADK（版本 1607），那么控制台中仅可自定义版本号为 10.0.14393 的启动映像。 若要深入了解如何自定义 WinPE 版本，请参阅[自定义启动映像](/sccm/osd/get-started/customize-boot-images)。
+- [**在任务序列步骤中显示包 ID**](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/16167430-display-packageid-when-viewing-a-task-sequence-ste)：任何引用包、驱动程序包、操作系统映像、启动映像或操作系统升级包的任务序列步骤现在将显示引用对象的包 ID。 任务序列步骤引用应用程序时，将显示对象 ID。
+- **内部版本所跟踪的 Windows 10 ADK**：现在可通过内部版本号跟踪 Windows 10 ADK，确保自定义 Windows 10 启动映像时有更多受支持的体验。 例如，如果站点使用适用于 Windows 10 的 Windows ADK（版本 1607），那么控制台中仅可自定义版本号为 10.0.14393 的启动映像。 若要深入了解如何自定义 WinPE 版本，请参阅[自定义启动映像](/sccm/osd/get-started/customize-boot-images)。
 - **默认启动映像源路径无法再进行更改**：默认启动映像由 Configuration Manager 托管，并且无法再在 Configuration Manager 控制台中或通过使用 Configuration Manager SDK 更改默认启动映像源路径。 可继续为自定义启动映像配置自定义源路径。
 
 ## <a name="host-software-updates-on-cloud-based-distribution-points"></a>使用基于云的分发点托管软件更新
@@ -104,31 +104,31 @@ ms.locfileid: "32338527"
 为此，请修改配置文件，使其指向政府云，然后安装 OMS 连接器。
 
 ### <a name="set-up-an-oms-connector-to-microsoft-azure-government-cloud"></a>设置连接到 Microsoft Azure 政府云的 OMS 连接器
-1.  在任何安装了 Configuration Manager 控制台的计算机上，编辑以下配置文件，使其指向政府云：***&lt;CM 安装路径>\AdminConsole\bin\Microsoft.configurationManagmenet.exe.config***
+1. 在任何安装了 Configuration Manager 控制台的计算机上，编辑以下配置文件，使其指向政府云：***&lt;CM 安装路径>\AdminConsole\bin\Microsoft.configurationManagmenet.exe.config***
 
-  **编辑：**
+   **编辑：**
 
-    将设置名称 FairFaxArmResourceID 的值更改为等于“https://management.usgovcloudapi.net/”
+   将设置名称 FairFaxArmResourceID 的值更改为等于“<https://management.usgovcloudapi.net/”>
 
    - **初始：**&lt;setting name="FairFaxArmResourceId" serializeAs="String">   
-      &lt;value>&lt;/value>   
-      &lt;/setting>
+     &lt;value>&lt;/value>   
+     &lt;/setting>
 
    - **编辑后：**     
-      &lt;setting name="FairFaxArmResourceId" serializeAs="String"> &lt;value>https://management.usgovcloudapi.net/&lt;/value>  
-      &lt;/setting>
+     &lt;setting name="FairFaxArmResourceId" serializeAs="String"> &lt;value><https://management.usgovcloudapi.net/&lt;/value>>  
+     &lt;/setting>
 
-  将设置名称 FairFaxAuthorityResource 的值更改为等于“https://login.microsoftonline.com/”
+   将设置名称 FairFaxAuthorityResource 的值更改为等于“<https://login.microsoftonline.com/>”
 
-  - **原始：**&lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
-    &lt;value>&lt;/value>
+   - **原始：**&lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
+     &lt;value>&lt;/value>
 
-    - **编辑后：**&lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
-    &lt;value>https://login.microsoftonline.com/&lt;/value>
+   - **编辑后：**&lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
+     &lt;value><https://login.microsoftonline.com/&lt;/value>>
 
-2.  保存包含这两种更改的文件后，请在同一台计算机上重启 Configuration Manager 控制台，然后使用该控制台安装 OMS 连接器。 若要安装连接器，请使用[将数据从 Configuration Manager 同步到 Microsoft Operations Management Suite](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite) 中的信息，选择 Microsoft Azure 政府云上的 **Microsoft Operations Management Suite**。
+2. 保存包含这两种更改的文件后，请在同一台计算机上重启 Configuration Manager 控制台，然后使用该控制台安装 OMS 连接器。 若要安装连接器，请使用[将数据从 Configuration Manager 同步到 Microsoft Operations Management Suite](/sccm/core/clients/manage/sync-data-microsoft-operations-management-suite) 中的信息，选择 Microsoft Azure 政府云上的 **Microsoft Operations Management Suite**。
 
-3.  OMS 连接器安装后，使用任何连接到站点的控制台时，可使用与政府云的连接。
+3. OMS 连接器安装后，使用任何连接到站点的控制台时，可使用与政府云的连接。
 
 ## <a name="android-and-ios-versions-are-no-longer-targetable-in-creation-wizards-for-hybrid-mdm"></a>在混合 MDM 的创建向导中，不再以 Android 和 iOS 版本为目标
 

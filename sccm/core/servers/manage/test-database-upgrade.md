@@ -10,16 +10,16 @@ ms.assetid: abb696f3-a816-4f12-a9f1-0503a81e1976
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3bd64cd937bf0a90a00ea6b17664d80394dcafab
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 4168b36553dacff69fab0972011a7d4c2843d787
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32339294"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421937"
 ---
 # <a name="test-the-database-upgrade-when-installing-an-update"></a>安装更新时测试数据库升级
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 本主题中的信息可以帮助你在为 Configuration Manager 的当前分支安装控制台内更新之前，运行测试数据库升级。 但是，测试升级不再是必需的或建议的步骤，除非你的数据库处于可疑状态，或由 Configuration Manager 未显式支持的自定义项进行了修改。
 
@@ -45,21 +45,21 @@ ms.locfileid: "32339294"
 如果更新安装失败，应该不需要恢复站点。 但可以从控制台中重试更新的安装。
 
 ##  <a name="run-the-test-upgrade"></a>运行测试升级    
-1.  使用 Configuration Manager 安装程序以及运行你计划更新到的版本的站点的 CD.Latest 文件夹中的源文件。  
+1. 使用 Configuration Manager 安装程序以及运行你计划更新到的版本的站点的 CD.Latest 文件夹中的源文件。  
 
-2.  将 CD.Latest 文件夹复制到要用于运行测试数据库升级的 SQL Server 实例上的某个位置。
+2. 将 CD.Latest 文件夹复制到要用于运行测试数据库升级的 SQL Server 实例上的某个位置。
 
-3.  为要测试升级的站点数据库创建备份。 接下来，将数据库的副本还原到未托管 Configuration Manager 站点的 SQL Server 实例。 该 SQL Server 实例使用的 SQL Server 版本必须与站点数据库相同。  
+3. 为要测试升级的站点数据库创建备份。 接下来，将数据库的副本还原到未托管 Configuration Manager 站点的 SQL Server 实例。 该 SQL Server 实例使用的 SQL Server 版本必须与站点数据库相同。  
 
-4.  还原数据库副本之后，从包含要更新到的版本的源文件的 CD.Latest 文件夹中运行安装程序。 运行安装程序时，使用 **/TESTDBUPGRADE** 命令行选项。 如果托管数据库副本的 SQL Server 实例不是默认实例，请提供命令行参数以确定托管站点数据库副本的实例。   
+4. 还原数据库副本之后，从包含要更新到的版本的源文件的 CD.Latest 文件夹中运行安装程序。 运行安装程序时，使用 **/TESTDBUPGRADE** 命令行选项。 如果托管数据库副本的 SQL Server 实例不是默认实例，请提供命令行参数以确定托管站点数据库副本的实例。   
 
-  例如，已有数据库名称为 SMS_ABC 的站点数据库。 你将此站点数据库的副本还原到实例名称为 DBTest 的受支持 SQL Server 实例。 要测试站点数据库的此副本的升级，请使用以下命令行：**Setup.exe /TESTDBUPGRADE DBtest\CM_ABC**。  
+   例如，已有数据库名称为 SMS_ABC 的站点数据库。 你将此站点数据库的副本还原到实例名称为 DBTest 的受支持 SQL Server 实例。 要测试站点数据库的此副本的升级，请使用下列命令行：Setup.exe /TESTDBUPGRADE DBtest\CM_ABC。  
 
-  可以在 System Center Configuration Manager 的源媒体上的下列位置中找到 Setup.exe：**SMSSETUP\BIN\X64**。  
+   可以在 System Center Configuration Manager 的源媒体上的下列位置中找到 Setup.exe：SMSSETUP\BIN\X64。  
 
-5.  在运行升级测试的 SQL Server 实例上，监视系统驱动器根目录中的 ConfigMgrSetup.log 以了解进度和成功与否。  
+5. 在运行升级测试的 SQL Server 实例上，监视系统驱动器根目录中的 ConfigMgrSetup.log 以了解进度和成功与否。  
 
-     如果测试升级失败，请修复与站点数据库升级失败相关的任何问题。 然后，新建站点数据库的备份并测试数据库的新副本升级。  
+    如果测试升级失败，请修复与站点数据库升级失败相关的任何问题。 然后，新建站点数据库的备份并测试数据库的新副本升级。  
 
 
 

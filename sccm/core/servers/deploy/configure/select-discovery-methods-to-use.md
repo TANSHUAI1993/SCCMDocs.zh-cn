@@ -10,16 +10,16 @@ ms.assetid: 127ce713-d085-430f-ac7b-2701637fe126
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: faa974fda68c9448902f2f5c8e8fcf8ef2f2d386
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 0eec065c9b5d4f75e6a66260760ba08e7bb2c481
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32340227"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422549"
 ---
 # <a name="select-discovery-methods-to-use-for-system-center-configuration-manager"></a>选择 System Center Configuration Manager 要使用的发现方法
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 若要成功且有效地使用 System Center Configuration Manager 的发现，必须考虑使用哪些方法以及在哪些站点运行它们。  
 
@@ -104,22 +104,22 @@ ms.locfileid: "32340227"
 ##  <a name="bkmk_best"></a>最佳发现方案  
 为了获取发现的最佳结果，建议执行以下操作：
 
- - **在运行 Active Directory 组发现之前运行 Active Directory 系统发现和 Active Directory 用户发现。**  
+- **在运行 Active Directory 组发现之前运行 Active Directory 系统发现和 Active Directory 用户发现。**  
 
- 当 Active Directory 组发现将以前未发现的用户或计算机标识为组成员时，它会尝试发现该用户或计算机的基本详细信息。 由于 Active Directory 组发现未针对此类型的发现进行优化，此过程可能会导致它运行缓慢。 此外，Active Directory 组发现只会确定有关它发现的用户和计算机的基本详细信息，而不会创建完整的用户或计算机发现记录。 运行 Active Directory 系统发现和 Active Directory 用户发现时，每个对象类型的其他 Active Directory 属性将可用。 因此，Active Directory 组发现可更高效地运行。  
+  当 Active Directory 组发现将以前未发现的用户或计算机标识为组成员时，它会尝试发现该用户或计算机的基本详细信息。 由于 Active Directory 组发现未针对此类型的发现进行优化，此过程可能会导致它运行缓慢。 此外，Active Directory 组发现只会确定有关它发现的用户和计算机的基本详细信息，而不会创建完整的用户或计算机发现记录。 运行 Active Directory 系统发现和 Active Directory 用户发现时，每个对象类型的其他 Active Directory 属性将可用。 因此，Active Directory 组发现可更高效地运行。  
 
 - **设置 Active Directory 组发现时，请只指定用于 Configuration Manager 的组。**  
 
- 若要帮助控制 Active Directory 组发现的资源使用，请仅指定用于 Configuration Manager 的那些组。 这是因为 Active Directory 组发现会以递归方式搜索它发现的每个组来查找用户、计算机和嵌套组。 搜索每个嵌套组可能会扩展 Active Directory 组发现的作用域，并降低性能。 此外，如果为 Active Directory 组发现设置增量发现，发现方法将监视每个组的更改。 如果该方法必须搜索不必要的组，这会进一步降低性能。  
+  若要帮助控制 Active Directory 组发现的资源使用，请仅指定用于 Configuration Manager 的那些组。 这是因为 Active Directory 组发现会以递归方式搜索它发现的每个组来查找用户、计算机和嵌套组。 搜索每个嵌套组可能会扩展 Active Directory 组发现的作用域，并降低性能。 此外，如果为 Active Directory 组发现设置增量发现，发现方法将监视每个组的更改。 如果该方法必须搜索不必要的组，这会进一步降低性能。  
 
 - **将发现方法设置为具有更长的完整发现间隔和更频繁的增量发现周期。**  
 
- 由于增量发现使用的资源比完整发现周期少，并且可确定 Active Directory 中的新资源或修改的资源，因此可将完整发现周期的频率减少到每周运行一次或更少。 Active Directory 系统发现、Active Directory 用户发现和 Active Directory 组发现的增量发现可确定 Active Directory 对象的几乎所有更改，并可保持准确的资源发现数据。  
+  由于增量发现使用的资源比完整发现周期少，并且可确定 Active Directory 中的新资源或修改的资源，因此可将完整发现周期的频率减少到每周运行一次或更少。 Active Directory 系统发现、Active Directory 用户发现和 Active Directory 组发现的增量发现可确定 Active Directory 对象的几乎所有更改，并可保持准确的资源发现数据。  
 
 - **在其网络位置与 Active Directory 域控制器最接近的主站点上运行 Active Directory 发现方法。**  
 
- 为了提高 Active Directory 发现的性能，最好在拥有与域控制器的快速网络连接的主站点上运行发现。 如果在多个站点上运行同一 Active Directory 发现方法，请对每个发现方法进行设置以避免重叠。 与 Configuration Manager 过去的版本不同，发现数据会在站点中共享。 因此不必在多个站点上发现相同的信息。 有关详细信息，请参阅[发现数据在站点之间共享](../../../../core/servers/deploy/configure/select-discovery-methods-to-use.md#bkmk_shared)。  
+  为了提高 Active Directory 发现的性能，最好在拥有与域控制器的快速网络连接的主站点上运行发现。 如果在多个站点上运行同一 Active Directory 发现方法，请对每个发现方法进行设置以避免重叠。 与 Configuration Manager 过去的版本不同，发现数据会在站点中共享。 因此不必在多个站点上发现相同的信息。 有关详细信息，请参阅[发现数据在站点之间共享](../../../../core/servers/deploy/configure/select-discovery-methods-to-use.md#bkmk_shared)。  
 
 - **计划依据发现数据自动创建边界时，请仅在一个站点上运行 Active Directory 林发现。**  
 
- 如果在层次结构中的多个站点上运行 Active Directory 林发现，最好仅启用在单一站点上自动创建边界的选项。 这是因为，Active Directory 林发现在每个站点上运行并创建边界时，Configuration Manager 无法将这些边界合并为单一边界对象。 如果将 Active Directory 林发现配置为在多个站点上自动创建边界，将会导致在 Configuration Manager 控制台中出现重复的边界对象。  
+  如果在层次结构中的多个站点上运行 Active Directory 林发现，最好仅启用在单一站点上自动创建边界的选项。 这是因为，Active Directory 林发现在每个站点上运行并创建边界时，Configuration Manager 无法将这些边界合并为单一边界对象。 如果将 Active Directory 林发现配置为在多个站点上自动创建边界，将会导致在 Configuration Manager 控制台中出现重复的边界对象。  

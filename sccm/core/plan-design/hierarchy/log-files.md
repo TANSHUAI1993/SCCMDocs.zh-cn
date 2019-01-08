@@ -10,16 +10,16 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cf7ca86dd04d60f1ff914294a7430d9f4a7a2fb7
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 58ec927ee795624cb475b31c44d64334047f3422
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456696"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416497"
 ---
 # <a name="log-files-in-configuration-manager"></a>Configuration Manager 中的日志文件
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 在 Configuration Manager 中，客户端和站点服务器组件都将进程信息记录在单独的日志文件中。 可以使用日志文件中的信息来帮助排除可能出现的问题。 Configuration Manager 默认启用客户端和服务器组件的日志记录。   
 
@@ -216,19 +216,19 @@ Configuration Manager 将日志文件存储在不同的位置。 这些位置取
 ###  <a name="BKMK_LogFilesforLnU"></a>适用于 Linux 和 UNIX 的客户端  
  适用于 Linux 和 UNIX 的 Configuration Manager 客户端将信息记录在以下日志文件中：  
 
-> [!TIP]  
+> [!TIP]
 >  使用 CMTrace 查看 Linux 和 UNIX 客户端的日志文件。  
-
-> [!NOTE]  
+> 
+> [!NOTE]
 >  在使用适用于 Linux 和 UNIX 的客户端的初始版本并引用本部分中的文档时，请替换对每个文件或进程的下列引用：  
->   
->  -   将 **omiserver.bin** 替换为 **nwserver.bin**  
-> -   将 **omi** 替换为 **nanowbem**  
+> 
+> - 将 **omiserver.bin** 替换为 **nwserver.bin**  
+>   -   将 **omi** 替换为 **nanowbem**  
 
-|日志名称|详细信息|  
-|--------------|-------------|  
-|Scxcm.log|适用于 Linux 和 UNIX 的 Configuration Manager 客户端的核心服务 (ccmexec.bin) 的日志文件。 此日志文件包含有关 ccmexec.bin 的安装和当前操作的信息。<br /><br /> 默认情况下，此日志文件位于 **/var/opt/microsoft/scxcm.log**<br /><br /> 要更改该日志文件的位置，请编辑“/opt/microsoft/configmgr/etc/scxcm.conf”  并更改“PATH”  字段。 你无需重启客户端计算机或服务以使更改生效。<br /><br /> 可以将日志级别设置为四个不同的设置之一。|  
-|Scxcmprovider.log|适用于 Linux 和 UNIX 的 Configuration Manager 客户端的 CIM 服务 (omiserver.bin) 的日志文件。 此日志文件包含有关 nwserver.bin 的当前操作的信息。<br /><br /> 此日志位于 **/var/opt/microsoft/configmgr/scxcmprovider.log**<br /><br /> 若要更改该日志文件的位置，请编辑“/opt/microsoft/omi/etc/scxcmprovider.conf”并更改“PATH”字段。 你无需重启客户端计算机或服务以使更改生效。<br /><br /> 可以将日志级别设置为三个设置之一。|  
+|     日志名称      |                                                                                                                                                                                                                                                                                               详细信息                                                                                                                                                                                                                                                                                               |
+|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|     Scxcm.log     | 适用于 Linux 和 UNIX 的 Configuration Manager 客户端的核心服务 (ccmexec.bin) 的日志文件。 此日志文件包含有关 ccmexec.bin 的安装和当前操作的信息。<br /><br /> 默认情况下，此日志文件位于 **/var/opt/microsoft/scxcm.log**<br /><br /> 要更改该日志文件的位置，请编辑“/opt/microsoft/configmgr/etc/scxcm.conf”  并更改“PATH”  字段。 你无需重启客户端计算机或服务以使更改生效。<br /><br /> 可以将日志级别设置为四个不同的设置之一。 |
+| Scxcmprovider.log |     适用于 Linux 和 UNIX 的 Configuration Manager 客户端的 CIM 服务 (omiserver.bin) 的日志文件。 此日志文件包含有关 nwserver.bin 的当前操作的信息。<br /><br /> 此日志位于 <strong>/var/opt/microsoft/configmgr/scxcmprovider.log</strong><br /><br /> 若要更改该日志文件的位置，请编辑“/opt/microsoft/omi/etc/scxcmprovider.conf”并更改“PATH”字段。 你无需重启客户端计算机或服务以使更改生效。<br /><br /> 可以将日志级别设置为三个设置之一。      |
 
  这两个日志文件支持多个级别的日志记录：  
 
@@ -238,7 +238,7 @@ Configuration Manager 将日志文件存储在不同的位置。 这些位置取
 
     -   警告：指示客户端操作可能出现的问题  
 
-    -   信息：更详细的日志记录，指示客户端上各个事件的状态  
+    -   信息：更详细的日志记录，指示客户端上的各个事件的状态  
 
     -   跟踪：通常用于诊断问题的详细日志记录  
 
@@ -248,7 +248,7 @@ Configuration Manager 将日志文件存储在不同的位置。 这些位置取
 
     -   警告：指示客户端操作可能出现的问题
 
-    -   信息：更详细的日志记录，指示客户端上各个事件的状态  
+    -   信息：更详细的日志记录，指示客户端上的各个事件的状态  
 
 在正常操作情况下，使用“错误”日志级别。 此日志级别创建最小的日志文件。 随着日志级别从“错误”提升至“警告”、“信息”直至“跟踪”，由于会将更多数据写入文件，因此将生成更大的日志文件。  
 

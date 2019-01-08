@@ -2,7 +2,7 @@
 title: 技术预览版
 titleSuffix: Configuration Manager
 description: 了解可测试 Configuration Manager 中的新功能和新特性的技术预览分支。
-ms.date: 12/03/2018
+ms.date: 12/14/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,16 +10,16 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9381980f490d543b3018c206359d4a68b9ca69e4
-ms.sourcegitcommit: 6126dfdf5c879db7d12c3eec019a88fa44521361
+ms.openlocfilehash: d2c1e93378711a19b10f9b67fcaad9973e53ee2e
+ms.sourcegitcommit: d36e4c7082a5144e79035dd8847c8e741fa04667
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "52830483"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53444631"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Configuration Manager 的技术预览版
 
-*适用于： System Center Configuration Manager （技术预览版）*
+适用范围：System Center Configuration Manager（技术预览版）
 
 本文提供了有关 Configuration Manager 的每月技术预览分支的详细信息。 技术预览版介绍 Microsoft 正在开发的新功能。 它介绍 Configuration Manager 当前分支中尚未包含的新功能。 这些功能可能最终会包含在当前分支的更新中。 在我们最终发布这些功能前，我们希望你试用这些功能并向我们提供反馈。  
 
@@ -104,7 +104,7 @@ Microsoft 将支持每个技术预览版，直到三个连续的版本可用为�
    
 在基线版本发布后的 1 年内安装此基线版本。 在安装新的技术预览版站点时，如果当前有多个可用的基线版本，则使用最新的基线版本。
 
--  技术预览版 1810.2：Configuration Manager 技术预览版 1810.2 可同时用作控制台内更新和新的基线版本。 从 [TechNet 评估中心](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview)下载基线版本。
+-  **技术预览版 1810.2**：Configuration Manager 技术预览版 1810.2 可同时用作控制台内部更新和新的基线版本。 从 [TechNet 评估中心](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview)下载基线版本。
 
 
 
@@ -124,15 +124,15 @@ Microsoft 将支持每个技术预览版，直到三个连续的版本可用为�
 
 <!-- This is the full list of new features in the latest TP release -->
 
-### <a name="technical-preview-version-1811"></a>技术预览版 1811
+### <a name="technical-preview-version-1812"></a>技术预览版 1812
 
-<!--capabilities-in-technical-preview-1811.md#bkmk_anchor-->
+<!--capabilities-in-technical-preview-1812.md#bkmk_anchor-->
 
-- [请勿加载 Windows PowerShell 配置文件](capabilities-in-technical-preview-1811.md#bkmk_noprofile) <!--1359239-->
-- [本地 MDM 不再需要 Intune 连接](capabilities-in-technical-preview-1811.md#bkmk_opmdm) <!--1359124-->
-- [Configuration Manager 控制台通知](capabilities-in-technical-preview-1811.md#bkmk_notify) <!--1318035-->
-- [对任务序列媒体创建的改进](capabilities-in-technical-preview-1811.md#bkmk_tsmedia) <!--1359388-->
-- [对运行 PowerShell 脚本任务序列步骤的改进](capabilities-in-technical-preview-1811.md#bkmk_posh) <!--1359389-->
+- [对运行 PowerShell 脚本任务序列步骤的改进](capabilities-in-technical-preview-1812.md#bkmk_posh) <!--3556028 fka 1359389-->  
+- [对通过电子邮件进行的应用程序批准的改进](capabilities-in-technical-preview-1812.md#bkmk_email) <!--3594063-->  
+- [在软件中心中配置用户设备相关性](capabilities-in-technical-preview-1812.md#bkmk_uda) <!--3485366-->  
+- [对 Configuration Manager 控制台的改进](capabilities-in-technical-preview-1812.md#bkmk_console) <!--3594151-->  
+- [从社区中心下载报表](capabilities-in-technical-preview-1812.md#bkmk_hub)<!--3555936-->  
 
 
 > [!Note]  
@@ -151,6 +151,11 @@ Then remove the bottom of this list and/or move individual items not in CB to th
 
  | 功能 | 技术预览版 | 当前分支版 |  
  |---------|---------------------------|------------------------|
+ | 请勿加载 Windows PowerShell 配置文件 <!--1359239--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_noprofile) | ![未添加](media/Red_X.gif) | 
+ | 本地 MDM 不再需要 Intune 连接 <!--1359124--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_opmdm) | ![未添加](media/Red_X.gif) | 
+ | Configuration Manager 控制台通知 <!--1318035--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_notify) | ![未添加](media/Red_X.gif) | 
+ | 对任务序列媒体创建的改进 <!--1359388--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_tsmedia) | ![未添加](media/Red_X.gif) | 
+ | 对运行 PowerShell 脚本任务序列步骤的改进 <!--1359389--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_posh) | ![未添加](media/Red_X.gif) | 
  | 对集合评估的改进 <!--1358981--> | [技术预览版 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_colleval) | 版本 1810 | 
  | Configuration Manager 管理员身份验证 <!--1357013--> | [技术预览版 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_auth) | 版本 1810 | 
  | 对等缓存源客户端版本的管理见解规则 <!--1358008--> | [技术预览版 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_insights) | 版本 1810 | 
@@ -169,10 +174,6 @@ Then remove the bottom of this list and/or move individual items not in CB to th
  | 控制台内文档仪表板<!--1357546--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_doc-dashboard) | ![未添加](media/Red_X.gif) | 
  | 对驱动程序维护的改进<!--1358270--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_drivers) | 版本 1810 | 
  | 针对现有设备的 Windows Autopilot 的任务序列支持<!--1358333--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_autopilot) | 版本 1810 | 
- | CMPivot 的改进 <!--1359068--> | [技术预览版 1809](capabilities-in-technical-preview-1809.md#bkmk_cmpivot) | 版本 1810 | 
- | 生命周期仪表板的改进 <!--1358702--> | [技术预览版 1809](capabilities-in-technical-preview-1809.md#bkmk_lifecycle) | 版本 1810 | 
- | 数据仓库的改进 <!--1358870--> | [技术预览版 1809](capabilities-in-technical-preview-1809.md#bkmk_dataw) | 版本 1810 | 
- | 软件更新的维护时段的改进 <!--vso2839307--> | [技术预览版 1809](capabilities-in-technical-preview-1809.md#bkmk_sum-mw) | 版本 1810 | 
 
 
 

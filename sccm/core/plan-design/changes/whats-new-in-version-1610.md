@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: cb9b19c95caaf914fa1cbf040258c30ede2dc54a
-ms.sourcegitcommit: fe279229a90fdc8cddbb13c7ffdbbb22af0e25ef
+ms.openlocfilehash: f53dbbf341d3c6474c1c5dd5066b8d1f2a0fdc63
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47229307"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424232"
 ---
 # <a name="what39s-new-in-version-1610-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1610 的新增功能
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 System Center Configuration Manager Current Branch 的更新 1610 作为控制台内更新提供，用于运行版本 1511、1602 或 1606 的以前安装的站点。
 
@@ -131,8 +131,8 @@ Configuration Manager 版本 1602 中引入了软件中心的自定义品牌。 
 在某些情况下，可能会希望为用户提供更多时间（超出所设置的任何截止时间）来安装所需的应用程序部署或软件更新。 例如，当一台计算机关闭的时间过长和计算机需要安装大量应用程序或更新部署时，可能会需要执行这种操作。 例如，如果最终用户刚从假期返回，则他们可能需要等待很长时间，因为安装的应用程序部署已过期。 为了帮助解决此问题，现在可通过将 Configuration Manager 客户端设置部署到集合来定义强制的宽限期。 
 
 若要配置宽限期，请执行以下操作：
-1.      在客户端设置的“计算机代理”页上，将“部署截止时间后强制的宽限期(小时)”这一新属性的值配置为介于 **1** 和 **120** 小时之间。
-2.      在新的所需应用程序部署中，或在现有部署属性中，在“计划”页上，选中复选框“根据用户首选项延迟此部署的强制执行”，延迟时间以客户端设置中定义的宽限期为依据。 选中了此复选框并针对其中部署了客户端设置的设备的所有部署都将使用此强制宽限期。
+1. 在客户端设置的“计算机代理”页上，将“部署截止时间后强制的宽限期(小时)”这一新属性的值配置为介于 **1** 和 **120** 小时之间。
+2. 在新的所需应用程序部署中，或在现有部署属性中，在“计划”页上，选中复选框“根据用户首选项延迟此部署的强制执行”，延迟时间以客户端设置中定义的宽限期为依据。 选中了此复选框并针对其中部署了客户端设置的设备的所有部署都将使用此强制宽限期。
 
 如果配置强制宽限期，并选中该复选框，则当到达应用程序安装截止时间后，将在用户按照宽限期配置的第一个非业务窗口中安装该应用程序。 但是，用户仍可打开软件中心并在任何所需时间安装该应用程序。 一旦过了宽限期，对于未完成的部署，强制将恢复为正常行为。 已将类似的选项添加到软件更新部署向导、自动部署规则向导和属性页中。
 
@@ -191,7 +191,7 @@ Configuration Manager 版本 1602 中引入了软件中心的自定义品牌。 
 ## <a name="task-sequence-steps-to-manage-bios-to-uefi-conversion"></a>管理 BIOS 转换为 UEFI 所采用的任务序列步骤
 现在可以使用新的变量 TSUEFIDrive 自定义操作系统部署任务的序列，以便“重启计算机”步骤为到 UEFI 的转换在硬盘驱动器上准备 FAT32 分区。 以下过程提供了有关如何创建任务序列步骤以便为 BIOS 到 UEFI 的转换准备硬盘驱动器的示例。 有关详细信息，请参阅[管理 BIOS 转换为 UEFI 所采用的任务序列步骤](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion)。
 
-##  <a name="improvements-to-the-task-sequence-step-prepare-configmgr-client-for-capture"></a>任务序列步骤的改进：准备 ConfigMgr 客户端以便捕获  
+##  <a name="improvements-to-the-task-sequence-step-prepare-configmgr-client-for-capture"></a>对运行任务序列步骤的改进：Prepare ConfigMgr Client for Capture  
 “准备 ConfigMgr 客户端”一步现在将完全删除 Configuration Manager 客户端，而不是仅删除密钥信息。 任务序列每次部署捕获的操作系统映像时，都将安装新的 Configuration Manager 客户端。 有关详细信息，请参阅[任务序列步骤](/sccm/osd/understand/task-sequence-steps#BKMK_PrepareConfigMgrClientforCapture)。
 
 

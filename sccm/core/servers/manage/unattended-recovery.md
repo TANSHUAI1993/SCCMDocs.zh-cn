@@ -10,16 +10,16 @@ ms.assetid: 828c31d1-3d70-4412-b1a8-c92e7e504d39
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d868411b9e8bce171e8626e5a6ecab6125cc056e
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 637727356724085f019ac9ab336bc37e3635ea3a
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39386028"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53415137"
 ---
 # <a name="unattended-site-recovery-for-configuration-manager"></a>Configuration Manager 的无人参与站点恢复   
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
  要对 Configuration Manager 管理中心站点或主站点执行[无人参与恢复](/sccm/protect/understand/recover-sites#site-recovery-procedures)，可以创建一个无人参与安装脚本并将安装程序与 /script 命令选项一起使用。 此脚本提供的信息的类型与安装向导提示输入的信息的类型相同，不同的是没有默认设置。 必须为适用于你要使用的恢复类型的安装密钥指定所有值。
 
@@ -39,23 +39,23 @@ ms.locfileid: "39386028"
 
  **标识**
 
--   **项名称：** Action
+-   **密钥名称：** 操作
 
-    -   **是否必需：** 是
+    -   **必需：** 是
     -   **值：** RecoverCCAR
     -   **详细信息：** 恢复管理中心站点
 
 
 -   **密钥名称：** CDLatest
 
-    -   **必备：** 是（仅在使用 CD.Latest 文件夹中的介质时）。
-    -   **值：** 1。1 以外的任何值均视为不使用 CD.Latest。
+    -   **必需：** 是（仅在使用 CD.Latest 文件夹中的介质时）。
+    -   **值：** 1. 1 以外的任何值均视为不使用 CD.Latest。
     -   **详细信息：** 从 CD.Latest 文件夹中的介质运行安装程序时，你的脚本必须包含该密钥和值，以安装主站点或管理中心站点，或恢复主站点或管理中心站点。 该值将告知安装程序当前使用介质形式 CD.Latest。
 
 **RecoveryOptions**   
--   **项名称：** ServerRecoveryOptions   
+-   **密钥名称：** ServerRecoveryOptions   
 
-    -   **是否必需：** 是
+    -   **必需：** 是
     -   **值：** 1、2 或 4  
          1 = 恢复站点服务器和 SQL Server。   
          2 = 仅恢复站点服务器。  
@@ -69,9 +69,9 @@ ms.locfileid: "39386028"
 
         -   **值 = 4** 如果为 **BackupLocation** 项（用于从备份中还原站点数据库）配置了值 **10** ，则需要 **BackupLocation** 项。
 
--   **项名称：** DatabaseRecoveryOptions
+-   **密钥名称：** DatabaseRecoveryOptions
 
-    -   **是否必需：** 可能
+    -   **必需：** 可能
     -   **值：**   
          - **10** = 从备份中还原站点数据库。  
          - **20** = 使用已通过另一种方法手动恢复的站点数据库。   
@@ -80,9 +80,9 @@ ms.locfileid: "39386028"
     -   **详细信息：** 指定安装程序如何恢复 SQL Server 中的站点数据库。 当 **ServerRecoveryOptions** 设置的值为 **1** 或 **4**时，需要此项。
 
 
--   **项名称：** ReferenceSite  
+-   **密钥名称：** ReferenceSite  
 
-    -   **是否必需：** 可能
+    -   **必需：** 可能
     -   **值：**&lt;ReferenceSiteFQDN\>
     -   **详细信息：** 指定引用主站点。 如果数据库备份早于更改跟踪保持期，或者不使用备份来恢复站点，管理中心站点将使用此引用站点来恢复全局数据。
 
@@ -92,115 +92,115 @@ ms.locfileid: "39386028"
 
          当 **DatabaseRecoveryOptions** 设置的值为 **40**时，需要此项。
 
--   **项名称：** SiteServerBackupLocation
+-   **密钥名称：** SiteServerBackupLocation
 
-    -   **是否必需：** 否
+    -   **必需：** 否
     -   **值：**&lt;PathToSiteServerBackupSet\>
     -   **详细信息：** 指定站点服务器备份集的路径。 当 **ServerRecoveryOptions** 设置的值为 **1** 或 **2**时，此项是可选的。 为 **SiteServerBackupLocation** 项指定值以使用站点备份来恢复站点。 如果未指定值，则会重新安装站点，而不是从备份集中还原站点。
 
 
--   **项名称：** BackupLocation
+-   **密钥名称：** BackupLocation
 
-    -   **是否必需：** 可能
-    -   &lt;PathToSiteDatabaseBackupSet\>
+    -   **必需：** 可能
+    -   **值：**&lt;PathToSiteDatabaseBackupSet\>
     -   **详细信息：** 指定站点数据库备份集的路径。 如果为 **ServerRecoveryOptions** 项配置了值 **1** 或 **4** ，并为 **DatabaseRecoveryOptions** 项配置了值 **10** ，则需要 **BackupLocation** 项。
 
 
 **选项**
 
--   **项名称：** ProductID
-    -   **是否必需：** 是
-    -   **值：**   
-         - xxxxx-xxxxx-xxxxx-xxxxx-xxxxx  
-         - 评估版
-    -   **详细信息：** Configuration Manager 安装产品密钥，包括短划线。 输入 **Eval** 可以安装 Configuration Manager 的评估版。  
+- **密钥名称：** ProductID
+  -   **必需：** 是
+  -   **值：**   
+       - xxxxx-xxxxx-xxxxx-xxxxx-xxxxx  
+       - 评估版
+  -   **详细信息：** Configuration Manager 安装产品密钥，包括短划线。 输入 **Eval** 可以安装 Configuration Manager 的评估版。  
 
 
--   **项名称：** SiteCode
+- **密钥名称：** 站点代码
 
-    -   **是否必需：** 是
-    -   **值：**&lt;Site code\>
-    -   **详细信息：** 三个字母数字字符，用于唯一标识层次结构中的站点。 指定在发生故障之前站点使用的站点代码。
-
-
--   **项名称：** SiteName
-
-    -   **是否必需：** 是
-    -   **值：** SiteName
-    -   **详细信息：** 此站点的描述。
+  -   **必需：** 是
+  -   **值：**&lt;站点代码\>
+  -   **详细信息：** 三个字母数字字符，用于唯一标识层次结构中的站点。 指定在发生故障之前站点使用的站点代码。
 
 
--   **项名称：** SMSInstallDir
+- **密钥名称：** SiteName
 
-    -   **是否必需：** 是
-    -   &lt;*ConfigMgrInstallationPath*>
-    -   **详细信息：** 指定 Configuration Manager 程序文件的安装文件夹。
-        > [!NOTE]   
-        >  可以指定要用于 Configuration Manager 安装的原始路径或新路径。
-
--   **项名称：** SDKServer
-
-    -   **是否必需：** 是
-    -   **值：**&lt;SMS 提供程序的 FQDN>
-    -   **详细信息：** 指定托管 SMS 提供程序的服务器的 FQDN。 指定在发生故障之前托管 SMS 提供程序的服务器。
-
-         你可以在初始安装后为站点配置其他 SMS 提供程序。
-
--   **项名称：** PrerequisiteComp
-
-    -   **是否必需：** 是
-    -   **值：** 0 或 1  
-         0 = 下载   
-         1 = 已下载
-    -   **详细信息：** 指定安装程序先决条件文件是否已下载。 例如，如果使用值 0，则安装程序将下载文件。  
+  -   **必需：** 是
+  -   **值：** SiteName
+  -   **详细信息：** 此站点的描述。
 
 
--   **项名称：** PrerequisitePath
+- **密钥名称：** SMSInstallDir
 
-    -   **是否必需：** 是
-    -   **值：**&lt;*PathToSetupPrerequisiteFiles*>
-    -   **详细信息：** 指定安装程序先决条件文件的路径。 根据 PrerequisiteComp 值，安装程序将使用此路径来存储已下载的文件或查找以前下载的文件。
+  - **必需：** 是
+  - **值：**&lt;*ConfigMgrInstallationPath*>
+  - **详细信息：** 指定 Configuration Manager 程序文件的安装文件夹。
+    > [!NOTE]   
+    >  可以指定要用于 Configuration Manager 安装的原始路径或新路径。
 
--   **项名称：** AdminConsole
+- **密钥名称：** SDKServer
 
-    -   **是否必需：** 可能
-    -   **值：** 0 或 1 0 = 不安装   
-         1 = 安装
-    -   **详细信息：** 指定是否安装 Configuration Manager 控制台。 除非 **ServerRecoveryOptions** 设置的值为 **4**，否则此项为必需。
+  -   **必需：** 是
+  -   **值：**&lt;*SMS 提供程序的 FQDN*>
+  -   **详细信息：** 指定托管 SMS 提供程序的服务器的 FQDN。 指定在发生故障之前托管 SMS 提供程序的服务器。
+
+       你可以在初始安装后为站点配置其他 SMS 提供程序。
+
+- **密钥名称：** PrerequisiteComp
+
+  -   **必需：** 是
+  -   **值：** 0 或 1  
+       0 = 下载   
+       1 = 已下载
+  -   **详细信息：** 指定是否已下载安装程序的必备文件。 例如，如果使用值 0，则安装程序将下载文件。  
 
 
--   **项名称：** JoinCEIP   
-    > [!Note]  
-    > 从 Configuration Manager 版本 1802 开始，从产品中删除了 CEIP 功能。
+- **密钥名称：** PrerequisitePath
 
-    -   **是否必需：** 是
-    -   **值：** 0 或 1  
-         0 = 不加入  
-         1 = 加入
-    -   **详细信息：** 指定是否加入客户体验改善计划。
+  -   **必需：** 是
+  -   **值：**&lt;*PathToSetupPrerequisiteFiles*>
+  -   **详细信息：** 指定安装程序必备文件的路径。 根据 PrerequisiteComp 值，安装程序将使用此路径来存储已下载的文件或查找以前下载的文件。
+
+- **密钥名称：** AdminConsole
+
+  -   **必需：** 可能
+  -   **值：** 0 或 1 0 = 不安装   
+       1 = 安装
+  -   **详细信息：** 指定是否安装 Configuration Manager 控制台。 除非 **ServerRecoveryOptions** 设置的值为 **4**，否则此项为必需。
+
+
+- **密钥名称：** JoinCEIP   
+  > [!Note]  
+  > 从 Configuration Manager 版本 1802 开始，从产品中删除了 CEIP 功能。
+
+  -   **必需：** 是
+  -   **值：** 0 或 1  
+       0 = 不加入  
+       1 = 加入
+  -   **详细信息：** 指定是否加入客户体验改善计划。
 
 **SQLConfigOptions**
 
--   **项名称：** SQLServerName
+-   **密钥名称：** SQLServerName 
 
-    -   **是否必需：** 是
+    -   **必需：** 是
     -   **值：***&lt;SQLServerName\>*
     -   **详细信息：** 运行托管站点数据库的 SQL Server 的服务器名称或群集实例名称。 指定在发生故障之前托管站点数据库的同一服务器。
 
 
--   **项名称：** DatabaseName
+-   **密钥名称：** DatabaseName
 
-    -   **是否必需：** 是
-    -   **值：**&lt;SiteDatabaseName\> 或 &lt;InstanceName\>\\&lt;SiteDatabaseName\>
+    -   **必需：** 是
+    -   **值：***&lt;SiteDatabaseName\>* 或 *&lt;InstanceName\>*\\*&lt;SiteDatabaseName\>*
     -   **详细信息：** 要创建或用于安装管理中心站点数据库的 SQL Server 数据库的名称。 指定在发生故障之前使用的同一数据库名称。
 
         > [!IMPORTANT]  
         >  如果未使用默认实例，则必须指定实例名称和站点数据库名称。
 
--   **项名称：** SQLSSBPort
+-   **密钥名称：** SQLSSBPort
 
-    -   **是否必需：** 否
-    -   **值：**&lt;SSBPortNumber>
+    -   **必需：** 否
+    -   **值：**&lt;*SSBPortNumber*>
     -   **详细信息：** 指定 SQL Server 使用的 SQL Server Service Broker (SSB) 端口。 通常，SSB 配置为使用 TCP 端口 4022，但也支持其他端口。 指定在发生故障之前使用的相同 SSB 端口。
 
 ## <a name="recover-a-primary-site-unattended"></a>在无人参与的情况下恢复主站点
@@ -208,24 +208,24 @@ ms.locfileid: "39386028"
 
  **标识**
 
--   **项名称：** Action
+-   **密钥名称：** 操作
 
-    -   **是否必需：** 是
+    -   **必需：** 是
     -   **值：** RecoverPrimarySite
     -   **详细信息：** 恢复主站点
 
 
 -   **密钥名称：** CDLatest
 
-    -   **必备：** 是（仅在使用 CD.Latest 文件夹中的介质时）。
-    -   **值：** 1。1 以外的任何值均视为不使用 CD.Latest。
+    -   **必需：** 是（仅在使用 CD.Latest 文件夹中的介质时）。
+    -   **值：** 1. 1 以外的任何值均视为不使用 CD.Latest。
     -   **详细信息：** 从 CD.Latest 文件夹中的介质运行安装程序时，你的脚本必须包含该密钥和值，以安装主站点或管理中心站点，或恢复主站点或管理中心站点。 该值将告知安装程序当前使用介质形式 CD.Latest。
 
 **RecoveryOptions**
 
--   **项名称：** ServerRecoveryOptions
+-   **密钥名称：** ServerRecoveryOptions
 
-    -   **是否必需：** 是
+    -   **必需：** 是
     -   **值：** 1、2 或 4    
          1 = 恢复站点服务器和 SQL Server。   
          2 = 仅恢复站点服务器。  
@@ -240,9 +240,9 @@ ms.locfileid: "39386028"
 
         -   **值 = 4** 如果为 **BackupLocation** 项（用于从备份中还原站点数据库）配置了值 **10** ，则需要 **BackupLocation** 项。
 
--   **项名称：** DatabaseRecoveryOptions
+-   **密钥名称：** DatabaseRecoveryOptions
 
-    -   **是否必需：** 可能
+    -   **必需：** 可能
     -   **值：**   
          - **10** = 从备份中还原站点数据库。  
          - **20** = 使用已通过另一种方法手动恢复的站点数据库。     
@@ -251,90 +251,90 @@ ms.locfileid: "39386028"
     -   **详细信息：** 指定安装程序如何恢复 SQL Server 中的站点数据库。 当 **ServerRecoveryOptions** 设置的值为 **1** 或 **4**时，需要此项。
 
 
--   **项名称：** SiteServerBackupLocation
+-   **密钥名称：** SiteServerBackupLocation
 
-    -   **是否必需：** 否
+    -   **必需：** 否
     -   **值：**&lt;PathToSiteServerBackupSet\>
     -   **详细信息：** 指定站点服务器备份集的路径。 当 **ServerRecoveryOptions** 设置的值为 **1** 或 **2**时，此项是可选的。 为 **SiteServerBackupLocation** 项指定值以使用站点备份来恢复站点。 如果未指定值，则会重新安装站点，而不是从备份集中还原站点。     
 
 
--   **项名称：** BackupLocation
+-   **密钥名称：** BackupLocation
 
-    -   **是否必需：** 可能
-    -   &lt;PathToSiteDatabaseBackupSet\>
+    -   **必需：** 可能
+    -   **值：**&lt;PathToSiteDatabaseBackupSet\>
     -   **详细信息：** 指定站点数据库备份集的路径。 如果为 **ServerRecoveryOptions** 项配置了值 **1** 或 **4** ，并为 **DatabaseRecoveryOptions** 项配置了值 **10** ，则需要 **BackupLocation** 项。
 
 **选项**
 
--   **项名称：** ProductID
+-   **密钥名称：** ProductID
 
-    -   **是否必需：** 是
+    -   **必需：** 是
     -   **值：**     
          - xxxxx-xxxxx-xxxxx-xxxxx-xxxxx  
          - 评估版     
     -   **详细信息：** Configuration Manager 安装产品密钥，包括短划线。 输入 **Eval** 可以安装 Configuration Manager 的评估版。  
 
 
--   **项名称：** SiteCode
+-   **密钥名称：** 站点代码
 
-    -   **是否必需：** 是
-    -   **值：**&lt;Site code\>
+    -   **必需：** 是
+    -   **值：**&lt;站点代码\>
     -   **详细信息：** 三个字母数字字符，用于唯一标识层次结构中的站点。 指定在发生故障之前站点使用的站点代码。
 
 
--   **项名称：** SiteName
+-   **密钥名称：** SiteName
 
-    -   **是否必需：** 是
+    -   **必需：** 是
     -   **值：** SiteName
     -   **详细信息：** 此站点的描述。
 
 
--   **项名称：** SMSInstallDir
+-   **密钥名称：** SMSInstallDir
 
-    -   **是否必需：** 是
-    -   &lt;*ConfigMgrInstallationPath*>
+    -   **必需：** 是
+    -   **值：**&lt;*ConfigMgrInstallationPath*>
     -   **详细信息：** 指定 Configuration Manager 程序文件的安装文件夹。
 
         > [!NOTE]   
         >  可以指定要用于 Configuration Manager 安装的原始路径或新路径。
 
--   **项名称：** SDKServer
+-   **密钥名称：** SDKServer
 
-    -   **是否必需：** 是
-    -   **值：**&lt;SMS 提供程序的 FQDN>
+    -   **必需：** 是
+    -   **值：**&lt;*SMS 提供程序的 FQDN*>
     -   **详细信息：** 指定托管 SMS 提供程序的服务器的 FQDN。 指定在发生故障之前托管 SMS 提供程序的服务器。
 
          你可以在初始安装后为站点配置其他 SMS 提供程序。
 
--   **项名称：** PrerequisiteComp
+-   **密钥名称：** PrerequisiteComp
 
-    -   **是否必需：** 是
+    -   **必需：** 是
     -   **值：** 0 或 1    
          0 = 下载   
          1 = 已下载   
-    -   **详细信息：** 指定安装程序先决条件文件是否已下载。 例如，如果使用值 0，则安装程序将下载文件。
+    -   **详细信息：** 指定是否已下载安装程序的必备文件。 例如，如果使用值 0，则安装程序将下载文件。
 
 
--   **项名称：** PrerequisitePath
+-   **密钥名称：** PrerequisitePath
 
-    -   **是否必需：** 是
+    -   **必需：** 是
     -   **值：**&lt;*PathToSetupPrerequisiteFiles*>
-    -   **详细信息：** 指定安装程序先决条件文件的路径。 根据 PrerequisiteComp 值，安装程序将使用此路径来存储已下载的文件或查找以前下载的文件。
+    -   **详细信息：** 指定安装程序必备文件的路径。 根据 PrerequisiteComp 值，安装程序将使用此路径来存储已下载的文件或查找以前下载的文件。
 
 
--   **项名称：** AdminConsole
+-   **密钥名称：** AdminConsole
 
-    -   **是否必需：** 可能
+    -   **必需：** 可能
     -   **值：** 0 或 1  
          0 = 不安装   
          1 = 安装  
     -   **详细信息：** 指定是否安装 Configuration Manager 控制台。 除非 **ServerRecoveryOptions** 设置的值为 **4**，否则此项为必需。
 
--   **项名称：** JoinCEIP  
+-   **密钥名称：** JoinCEIP  
     > [!Note]  
     > 从 Configuration Manager 版本 1802 开始，从产品中删除了 CEIP 功能。
 
-    -   **是否必需：** 是
+    -   **必需：** 是
     -   **值：** 0 或 1    
          0 = 不加入  
          1 = 加入
@@ -343,45 +343,45 @@ ms.locfileid: "39386028"
 
 **SQLConfigOptions**
 
--   **项名称：** SQLServerName
+-   **密钥名称：** SQLServerName 
 
-    -   **是否必需：** 是
+    -   **必需：** 是
     -   **值：***&lt;SQLServerName\>*
     -   **详细信息：** 运行托管站点数据库的 SQL Server 的服务器名称或群集实例名称。 指定在发生故障之前托管站点数据库的同一服务器。
 
 
--   **项名称：** DatabaseName
+-   **密钥名称：** DatabaseName
 
-    -   **是否必需：** 是
-    -   **值：**&lt;SiteDatabaseName\> 或 &lt;InstanceName\>\\&lt;SiteDatabaseName\>
+    -   **必需：** 是
+    -   **值：***&lt;SiteDatabaseName\>* 或 *&lt;InstanceName\>*\\*&lt;SiteDatabaseName\>*
     -   **详细信息：** 要创建或用于安装管理中心站点数据库的 SQL Server 数据库的名称。 指定在发生故障之前使用的同一数据库名称。
 
         > [!IMPORTANT]    
         >  如果未使用默认实例，则必须指定实例名称和站点数据库名称。
 
--   **项名称：** SQLSSBPort
+-   **密钥名称：** SQLSSBPort
 
-    -   **是否必需：** 否
-    -   **值：**&lt;SSBPortNumber>
+    -   **必需：** 否
+    -   **值：**&lt;*SSBPortNumber*>
     -   **详细信息：** 指定 SQL Server 使用的 SQL Server Service Broker (SSB) 端口。 通常，SSB 配置为使用 TCP 端口 4022，但也支持其他端口。 指定在发生故障之前使用的相同 SSB 端口。
 
 **层次结构扩展选项**
 
--   **项名称：** CCARSiteServer
+-   **密钥名称：** CCARSiteServer
 
-    -   **是否必需：** 可能
-    -   **值：** &lt;SiteCodeForCentralAdministrationSite>
+    -   **必需：** 可能
+    -   **值：**&lt;*SiteCodeForCentralAdministrationSite*>
     -   **详细信息：** 指定主站点加入 Configuration Manager 层次结构时要附加到的管理中心站点。 如果在发生故障之前主站点已附加到管理中心站点，则此设置为必需。 指定在发生故障之前用于管理中心站点的站点代码。
 
--   **项名称：** CASRetryInterval
+-   **密钥名称：** CASRetryInterval
 
-    -   **是否必需：** 否
-    -   **值：**&lt;Interval>
-    -   **详细信息：** 指定连接失败后尝试连接到管理中心站点的重试间隔（以分钟为单位）。 例如，如果连接到管理中心站点失败，则主站点将等待你为 CASRetryInterval 指定的分钟数，然后重新尝试连接。
+    -   **必需：** 否
+    -   **值：**&lt;*间隔*>
+    -   **详细信息：** 指定在连接失败后尝试连接到管理中心站点的重试间隔（以分钟为单位）。 例如，如果连接到管理中心站点失败，则主站点将等待你为 CASRetryInterval 指定的分钟数，然后重新尝试连接。
 
 
--   **项名称：** WaitForCASTimeout
+-   **密钥名称：** WaitForCASTimeout
 
-    -   **是否必需：** 否
-    -   **值：** &lt;Timeout>
+    -   **必需：** 否
+    -   **值：**&lt;*超时*>
     -   **详细信息：** 指定主站点连接到管理中心站点的最大超时值（以分钟为单位）。 例如，主站点未能连接到管理中心站点，则在达到 WaitForCASTimeout 期间之前，主站点将基于 CASRetryInterval 重新尝试连接到管理中心站点。 你可以指定 0 到 100 的值。

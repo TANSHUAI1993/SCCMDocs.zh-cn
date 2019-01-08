@@ -10,16 +10,16 @@ ms.assetid: 3b9c4027-a98b-406b-935c-ccabcfe713df
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 414231d2cd07e583196b6b1abdd6530c3d49681a
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 86452d628d025aea2b797d0ade92a3c2e2fff933
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350786"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418571"
 ---
 #  <a name="using-configuration-manager-software-updates-to-deliver-definition-updates"></a>使用 Configuration Manager 软件更新将定义更新交付
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*适用于：System Center Configuration Manager (Current Branch)*
 
 
  可以配置 Configuration Manager 软件更新以将定义更新交付到客户端计算机。 可通过配置自动部署规则完成此操作。 在开始创建自动部署规则之前，请确保你已配置了 Configuration Manager 软件更新。 有关详细信息，请参阅 [System Center Configuration Manager 中的软件更新简介](/sccm/sum/understand/software-updates-introduction)。
@@ -29,31 +29,31 @@ ms.locfileid: "32350786"
 
 ## <a name="to-configure-an-automatic-deployment-rule-to-deliver-definition-updates"></a>若要配置自动部署规则以提供定义更新
 
-1.  在 Configuration Manager 控制台中，单击“软件库”。
+1. 在 Configuration Manager 控制台中，单击“软件库”。
 
-2.  在“软件库”  工作区中，展开“软件更新” ，然后单击“自动部署规则” 。
+2. 在“软件库”  工作区中，展开“软件更新” ，然后单击“自动部署规则” 。
 
-3.  在“主页”  选项卡上的“创建”  组中，单击“创建自动部署规则” 。
+3. 在“主页”  选项卡上的“创建”  组中，单击“创建自动部署规则” 。
 
-4.  在“创建自动部署规则向导”  的“常规” 页上，指定下列信息：
+4. 在“创建自动部署规则向导”  的“常规” 页上，指定下列信息：
 
-    -   “名称”：输入自动部署规则的唯一名称。
+   -   **名称**：输入自动部署规则的唯一名称。
 
-    -   **集合**：选择你想要将定义更新部署到的客户端计算机的集合。
+   -   **集合**：选择你想要将定义更新部署到的客户端计算机的集合。
 
-        > [!NOTE]
-        >  不能将定义更新部署到用户集合。
+       > [!NOTE]
+       >  不能将定义更新部署到用户集合。
 
-5.  单击“添加到现有软件更新组” 。
+5. 单击“添加到现有软件更新组” 。
 
-6.  确保选中“运行此规则后启用部署”   复选框，然后单击“下一步” 。
+6. 确保选中“运行此规则后启用部署”   复选框，然后单击“下一步” 。
 
-7.  在向导的“部署设置”  页上的“详细信息级别”  列表中，选择“最小” ，然后单击“下一步” 。
+7. 在向导的“部署设置”  页上的“详细信息级别”  列表中，选择“最小” ，然后单击“下一步” 。
 
-    > [!NOTE]
-    >  在“详细信息级别”列表中，选择“最小”（不带 Service Pack 的 Configuration Manager）或“仅错误消息”(Configuration Manager)。 这将减少定义部署返回的状态消息数。 此配置有助于降低 Configuration Manager 服务器上的 CPU 处理使用率。
+   > [!NOTE]
+   >  在“详细信息级别”列表中，选择“最小”（不带 Service Pack 的 Configuration Manager）或“仅错误消息”(Configuration Manager)。 这将减少定义部署返回的状态消息数。 此配置有助于降低 Configuration Manager 服务器上的 CPU 处理使用率。
 
-8.  在“属性筛选器”  列表中，选择“更新分类”  复选框。
+8. 在“属性筛选器”  列表中，选择“更新分类”  复选框。
 
 9. 在“搜索条件”列表中，单击“<要查找的项\>”。 然后，在“搜索条件”  对话框中的“指定要搜索的值”  列表中，选择“定义更新” 。
 
@@ -66,8 +66,8 @@ ms.locfileid: "32350786"
 13. 单击“确定”  以关闭“搜索条件”  对话框，然后单击“下一步” 。
 
 14. 可根据需要筛选被取代的更新。   为此，请执行以下操作：
-  1.  在“属性筛选器”  列表中，选择“被取代”  复选框。
-  2.  在“搜索条件”列表中，单击“<要查找的项\>”。 然后，在“搜索条件”  对话框中的“指定要搜索的值”  列表中，选择“否” 。  <br><br>
+    1.  在“属性筛选器”  列表中，选择“被取代”  复选框。
+    2.  在“搜索条件”列表中，单击“<要查找的项\>”。 然后，在“搜索条件”  对话框中的“指定要搜索的值”  列表中，选择“否” 。  <br><br>
 
 15. 单击“确定”  以关闭“搜索条件”  对话框，然后单击“下一步” 。
 
@@ -75,11 +75,11 @@ ms.locfileid: "32350786"
 
 17. 在向导的“部署计划”  页上配置下列设置：
 
-    -   “时间根据”：如果希望层次结构中的所有客户端同时安装最新定义，则选择“”  。 实际安装时间将在两小时时段内有所变化。 此设置是建议的最佳方案。
+    -   **时间基于**：如果希望层次结构中的所有客户端同时安装最新定义，则选择 UTC。 实际安装时间将在两小时时段内有所变化。 此设置是建议的最佳方案。
 
     -   **软件可用时间**：指定可用于由此规则创建的部署的时间。 指定的时间必须至少为自动部署规则运行之后的一小时。 这有助于确保有足够时间将内容复制到层次结构中的分发点。 一些定义更新还可能包括反恶意软件引擎更新，这些更新可能要花更长时间才能到达分发点。
 
-    -   **安装截止时间**：选择“尽快” 。
+    -   **安装截止时间**：选择**越早越好**。
 
         > [!NOTE]
         >  软件更新截止时间在两小时时间段内变化，以防止所有客户端在同一时间请求更新。
@@ -109,7 +109,7 @@ ms.locfileid: "32350786"
 
 
 > [!div class="button"]
-[下一步 >](endpoint-antimalware-policies.md)
-
+> [下一步 >](endpoint-antimalware-policies.md)
+> 
 > [!div class="button"]
-[返回 >](endpoint-configure-alerts.md)
+> [返回 >](endpoint-configure-alerts.md)

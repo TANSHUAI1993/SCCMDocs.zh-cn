@@ -10,18 +10,18 @@ ms.assetid: 2e68dc12-6776-437a-9138-45cd7d4bf9cf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6353b765f769dfa57ea57926d12bf2b254ba8f68
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 4a28f05e813a375f72d15113a01092924eb2245e
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32343865"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424895"
 ---
 # <a name="capabilities-in-technical-preview-1711-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1711 中的功能
 
-*适用范围：System Center Configuration Manager (Technical Preview)*
+适用范围：System Center Configuration Manager（技术预览版）
 
-本文介绍了 System Center Configuration Manager Technical Preview（版本 1711）中的可用功能。 你可以安装此版本，以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。 在安装此 Technical Preview 前，请查看 [System Center Configuration Manager 的 Technical Preview](../../core/get-started/technical-preview.md)，熟悉使用 Technical Preview 的常规要求和限制，如何在两版本之间进行更新，以及如何对 Technical Preview 中的有关功能提供反馈。     
+本文介绍了 System Center Configuration Manager Technical Preview（版本 1711）中的可用功能。 你可以安装此版本，以更新 Technical Preview 站点的功能并向其添加新功能。 在安装此 Technical Preview 前，请查看 [System Center Configuration Manager 的 Technical Preview](../../core/get-started/technical-preview.md)，熟悉使用 Technical Preview 的常规要求和限制，如何在两版本之间进行更新，以及如何对 Technical Preview 中的有关功能提供反馈。     
 
 
 <!--  Known Issues Template   
@@ -30,8 +30,8 @@ ms.locfileid: "32343865"
     Workaround details.
 -->
 **此 Technical Preview 中的已知问题：**
--   **支持 Windows 10 版本 1709（也称为 Fall Creators Update）**。  从此 Windows 版本开始，Windows Media 包括多个版本。 在配置用于使用操作系统升级包或操作系统映像的任务序列时，请务必选择[支持供 Configuration Manager 使用的版本](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client)。
--   如果站点服务器处于被动模式，则无法更新到新的预览版本。 如果运行的是[主站点服务器处于被动模式](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability)的预览版本，则必须先卸载被动模式站点服务器，然后才能将预览站点成功更新到此新版本。 可以在站点完成更新后，重新安装被动模式站点服务器。
+- **支持 Windows 10 版本 1709（也称为 Fall Creators Update）**。  从此 Windows 版本开始，Windows Media 包括多个版本。 在配置用于使用操作系统升级包或操作系统映像的任务序列时，请务必选择[支持供 Configuration Manager 使用的版本](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-as-a-client)。
+- 如果站点服务器处于被动模式，则无法更新到新的预览版本。 如果运行的是[主站点服务器处于被动模式](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability)的预览版本，则必须先卸载被动模式站点服务器，然后才能将预览站点成功更新到此新版本。 可以在站点完成更新后，重新安装被动模式站点服务器。
 
   若要卸载被动模式站点服务器，请执行以下操作：
   1. 在控制台中，依次转到“管理” > “概述” > “站点配置” > “服务器和站点系统角色”，再选择被动模式站点服务器。
@@ -84,7 +84,7 @@ ms.locfileid: "32343865"
 
     c. 对于登录需求，选择“用户是否登录”。
 
-    d. 对于安装程序可见性，选择“常规”。 可从三个选项中进行选择：“最小化”、“常规”或“最大化”。
+    d. 对于安装程序可见性，选择“常规”。 你可以从以下三个选项中选择：最小化、常规或最大化。
 
     e. 选中“允许用户与程序安装进行交互”对话框。
 

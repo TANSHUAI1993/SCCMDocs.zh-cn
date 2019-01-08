@@ -10,16 +10,16 @@ ms.assetid: 5bd637b1-d7a1-411b-877a-c7aae9741173
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0757e7f3fac12c2945a3eab860851b0debf28fd5
-ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
+ms.openlocfilehash: a0e16c137604480ab23e15b52723692491d1816d
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43893883"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53414848"
 ---
 # <a name="whats-new-in-version-1802-of-system-center-configuration-manager"></a>System Center Configuration Manager 1802 版的新增功能
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 Configuration Manager Current Branch 的 1802 更新作为控制台中更新提供。 将此更新应用于运行 1702、1706 或 1710 版的站点。 <!-- baseline only statement: -->安装新站点时，也可将其用作基准版本。
 
@@ -58,7 +58,7 @@ Version 1802 drops support for the following products:
 <!-- 1353704 --> 自此版本起，Windows 10 ARM64 设备支持 Configuration Manager 客户端。 现有客户端管理功能应适用于这些新设备。 例如，硬件和软件清单、软件更新和应用程序管理。 当前不支持操作系统部署。 
 
 ### <a name="improved-support-for-cng-certificates"></a>改进了对 CNG 证书的支持
-<!-- 1357314 --> Configuration Manager（Current Branch）版本 1710 支持[下一代加密技术 (CNG) 证书](/sccm/core/plan-design/network/cng-certificates-overview)。 版本 1710 在多种方案中对客户端证书提供有限支持。 
+<!-- 1357314 --> Configuration Manager (Current Branch) 版本 1710 支持[加密：下一代 (CNG) 证书](/sccm/core/plan-design/network/cng-certificates-overview)。 版本 1710 在多种方案中对客户端证书提供有限支持。 
 
 从此版本开始，CNG 证书将用于以下已启用 HTTPS 的服务器角色：
 - 管理点
@@ -147,7 +147,7 @@ Configuration Manager 1802 中提供以下见解：
 <!-- 1357365 --> 启用共同管理后，Endpoint Protection 工作负载可以转换到 Intune。 若要转移 Endpoint Protection 工作负荷，请转到共同管理属性页，并将滚动条从 Configuration Manager 移动到“试点”或“所有”。 有关工作负荷的详细信息，请参阅[工作负荷能够转换到 Intune](/sccm/core/clients/manage/co-management-switch-workloads#Workloads-able-to-be-transitioned-to-Intune)。 有关共同管理的详细信息，请参阅 [Windows 10 设备共同管理](/sccm/core/clients/manage/co-management-overview)。
  
 ### <a name="co-management-dashboard-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的共同管理仪表板
-<!--1356648--> 自此版本起，可以查看包含共同管理相关信息的仪表板。 此仪表板可帮助你查看环境中共同管理的计算机。 图形有助于标识可能需要注意的设备。 有关详细信息，请参阅文章[共同管理仪表板](\sccm\core\clients\manage\client-management-dashboard)。 
+<!--1356648--> 自此版本起，可以查看包含共同管理相关信息的仪表板。 此仪表板可帮助你查看环境中共同管理的计算机。 图形有助于标识可能需要注意的设备。 有关详细信息，请参阅文章[共同管理仪表板](/sccm/core/clients/manage/client-management-dashboard)。 
 
 
 ## <a name="compliance-settings"></a>符合性设置

@@ -10,18 +10,18 @@ ms.assetid: cb405ba0-8792-4ab7-988b-2f835f3a9550
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 375c743e1094f3b3f52090ae520ee9d8e86acbe0
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 5500b7458935c83207a5e54f8fd1d4d7f40dc333
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32336963"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421631"
 ---
 # <a name="capabilities-in-technical-preview-1707-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1707 中的功能
 
-*适用范围：System Center Configuration Manager (Technical Preview)*
+适用范围：*System Center Configuration Manager (Technical Preview)*
 
-本文介绍了在 System Center Configuration Manager 的 Technical Preview 1707 中的可用功能。 你可以安装此版本，以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。 在安装此 Technical Preview 前，请查看 [System Center Configuration Manager 的 Technical Preview](../../core/get-started/technical-preview.md)，熟悉使用 Technical Preview 的常规要求和限制，如何在两版本之间进行更新，以及如何对 Technical Preview 中的有关功能提供反馈。     
+本文介绍了在 System Center Configuration Manager 的 Technical Preview 1707 中的可用功能。 你可以安装此版本，以更新 Technical Preview 站点的功能并向其添加新功能。 在安装此 Technical Preview 前，请查看 [System Center Configuration Manager 的 Technical Preview](../../core/get-started/technical-preview.md)，熟悉使用 Technical Preview 的常规要求和限制，如何在两版本之间进行更新，以及如何对 Technical Preview 中的有关功能提供反馈。     
 
 
 <!--  Known Issues Template   
@@ -31,7 +31,7 @@ ms.locfileid: "32336963"
 -->
 
 **此 Technical Preview 中的已知问题：**
--   **如果站点服务器处于被动模式，无法更新到预览版本 1707**。 如果运行的是预览版本 1706，且[主站点服务器处于被动模式](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability)，必须先卸载被动模式站点服务器，然后才能将预览站点成功更新到版本 1707。 可以在站点运行版本 1707 后，重新安装被动模式站点服务器。
+- **如果站点服务器处于被动模式，无法更新到预览版本 1707**。 如果运行的是预览版本 1706，且[主站点服务器处于被动模式](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability)，必须先卸载被动模式站点服务器，然后才能将预览站点成功更新到版本 1707。 可以在站点运行版本 1707 后，重新安装被动模式站点服务器。
 
   若要卸载被动模式站点服务器，请执行以下操作：
   1. 在控制台中，依次转到“管理” > “概述” > “站点配置” > “服务器和站点系统角色”，再选择被动模式站点服务器。
@@ -54,12 +54,10 @@ ms.locfileid: "32336963"
 -->
 
 ## <a name="client-peer-cache-support-for-express-installation-files-for-windows-10-and-office-365"></a>对于适用于 Windows 10 和 Office 365 的快速安装文件的客户端对等缓存支持
-<!-- 1352486 -->
-从此版本开始，对等缓存支持分发 Windows 10 的内容快速安装文件和 Office 365 的更新文件。 不需要其他配置。
+<!-- 1352486 --> 从此版本开始，对等缓存支持分发 Windows 10 的内容快速安装文件和 Office 365 的更新文件。 不需要其他配置。
 
 ## <a name="surface-device-dashboard"></a>Surface 仪表板
-<!--1355788-->
-Surface 设备仪表板提供有关在环境中找到的 Surface 设备的信息。 在控制台中，转到“监视” > “Surface 设备”。 可以查看以下信息：
+<!--1355788--> Surface 设备仪表板提供了环境中 Surface 设备的相关信息。 在控制台中，转到“监视” > “Surface 设备”。 可以查看以下信息：
 - Surface 百分比
 - Surface 型号百分比
 - 前五个操作系统版本
@@ -69,7 +67,7 @@ Surface 设备仪表板提供有关在环境中找到的 Surface 设备的信息
 ## <a name="configure-and-deploy-windows-defender-application-guard-policies"></a>配置和部署 Windows Defender 应用程序防护策略
 <!-- 1351960 -->
 
-[Windows Defender 应用程序防护](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97)是一项新的 Windows 功能，通过在操作系统的其他部分无法访问的安全隔离容器中打开不受信任的网站来帮助保护用户安全。 在此 Technical Preview 版中，我们使用在配置后部署到集合的 Configuration Manager 符合性设置增加了对配置此功能的支持。 此功能将在 64 位版本的 Windows 10 Fall Creators Update 预览版 (codename: RS3) 中发布。 现在，若要测试此功能，必须使用此更新的预览版本。
+[Windows Defender 应用程序防护](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97)是一项新的 Windows 功能，通过在操作系统的其他部分无法访问的安全隔离容器中打开不受信任的网站来帮助保护用户安全。 在此 Technical Preview 版中，我们使用在配置后部署到集合的 Configuration Manager 符合性设置增加了对配置此功能的支持。 此功能将在 64 位版本的 Windows 10 Fall Creators Update 预览版 (codename:RS3) 中发布。 现在，若要测试此功能，必须使用此更新的预览版本。
 
 ### <a name="before-you-start"></a>开始之前
 

@@ -10,16 +10,16 @@ ms.assetid: aaf43e69-68b4-469a-ad58-9b66deb29057
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7671025b0a643063f30c98922f7da0659e2e1ab9
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 0c04ee9a62b6c629060f79df2f4b104fe78ca794
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456900"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418979"
 ---
 #  <a name="the-data-warehouse-service-point-for-configuration-manager"></a>Configuration Manager 的数据仓库服务点
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 <!--1277922--> 使用数据仓库服务点存储和报告关于 Configuration Manager 部署的长期历史数据。
 
@@ -90,9 +90,9 @@ ms.locfileid: "52456900"
 
 #### <a name="general-page"></a>“常规”页
 
-- **SQL Server 完全限定的域名**：指定托管数据仓库服务点数据库的服务器的完全限定的域名 (FQDN)。  
+- **SQL Server 完全限定的域名**：指定托管数据仓库服务点和数据库的服务器的完全限定的域名 (FQDN)。  
 
-- **SQL Server 实例名称（如果适用）**：如果不使用 SQL Server 的默认实例，则指定该命名实例。  
+- **SQL Server 实例名称(如果适用)**：如果不使用 SQL Server 的默认实例，则指定该命名实例。  
 
 - **数据库名称**：指定数据仓库数据库的名称。 Configuration Manager 使用此名称创建数据仓库数据库。 如果指定 SQL Server 实例上已存在的数据库名称，则 Configuration Manager 会使用该数据库。  
 
@@ -116,7 +116,7 @@ ms.locfileid: "52456900"
 #### <a name="synchronization-settings-page"></a>同步设置页
 适用于 1810 和更高版本
 
-- **数据同步自定义设置**：选择选项以转到“选择表”。 在“数据库表”窗口中，选择要与数据仓库数据库同步的表名。 使用筛选器按名称搜索，或选择下拉列表以选择特定组。 完成后选择“确定”进行保存。  
+- **数据同步自定义设置**：选择“选择表”选项。 在“数据库表”窗口中，选择要与数据仓库数据库同步的表名。 使用筛选器按名称搜索，或选择下拉列表以选择特定组。 完成后选择“确定”进行保存。  
 
     > [!Note]  
     > 无法删除该角色默认选择的表。  
@@ -142,7 +142,7 @@ ms.locfileid: "52456900"
 
 数据仓库站点系统角色包括数据仓库类别下的以下报告：  
 
-- **应用程序部署 - 历史记录**：查看有关特定应用程序和计算机的应用程序部署的详细信息。  
+- **应用程序部署 -历史记录**：查看有关特定应用程序和计算机的应用程序部署的详细信息。  
 
 - **Endpoint Protection 和软件更新符合性 - 历史记录**：查看缺少软件更新的计算机。  
 
@@ -152,7 +152,7 @@ ms.locfileid: "52456900"
 
 - **基础结构运行状况概述 - 历史记录**：显示 Configuration Manager 基础结构运行状况概述。  
 
-- **检测到的恶意软件的列表 - 历史记录**：查看组织中检测到的恶意软件。  
+- **检测到的恶意软件列表 - 历史记录**：  查看组织中检测到的恶意软件。  
 
 - **软件分发摘要 - 历史记录**：特定播发和计算机的软件分发摘要。  
 
@@ -189,7 +189,7 @@ ms.locfileid: "52456900"
 
 使用以下日志，调查数据仓库服务点安装或数据同步方面的问题：
 
-- **DWSSMSI.log** 和 **DWSSSetup.log**：使用这些日志调查安装数据仓库服务点时的错误。  
+- DWSSMSI.log 和 DWSSSetup.log：使用这些日志调查安装数据仓库服务点时的错误。  
 
 - **Microsoft.ConfigMgrDataWarehouse.log**：使用此日志调查站点数据库和数据仓库数据库之间的数据同步。  
 

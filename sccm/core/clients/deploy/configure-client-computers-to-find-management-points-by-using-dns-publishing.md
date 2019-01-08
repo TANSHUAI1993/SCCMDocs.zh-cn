@@ -10,16 +10,16 @@ ms.assetid: 03cec407-0f9f-454f-a360-b005af738d29
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3735e2cc8ac2f7e4a5c05b49783cad3981a04930
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 84345e26f30c1339ad1f386606ad11f1bb127eae
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32333828"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421427"
 ---
 # <a name="how-to-configure-client-computers-to-find-management-points-by-using-dns-publishing-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中配置客户端计算机以使用 DNS 发布查找管理点
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 System Center Configuration Manager 中的客户端必须找到管理点才能完成站点分配，并作为持续的进程一直受到管理。 Active Directory 域服务为 Intranet 上的客户端提供了找到管理点的最安全的方法。 但是，如果客户端无法使用此服务位置方法（例如，你未扩展 Active Directory 架构，或者客户端来自工作组），则使用 DNS 发布作为首选的备用服务位置方法。  
 
@@ -38,13 +38,13 @@ System Center Configuration Manager 中的客户端必须找到管理点才能�
 
 #### <a name="to-configure-clients-for-a-management-point-suffix-during-client-installation"></a>在客户端安装过程中针对管理点后缀配置客户端  
 
--   利用下列 CCMSetup Client.msi 属性安装客户端：  
+- 利用下列 CCMSetup Client.msi 属性安装客户端：  
 
-    -   **DNSSUFFIX=** &lt;管理点域\>  
+  - **DNSSUFFIX=** &lt;管理点域\>  
 
-         如果站点具有多个管理点，而且这些管理点位于多个域中，则仅指定一个域。 在客户端连接到此域中的管理点时，它们下载可用管理点的列表（将包含其他域中的管理点）。  
+     如果站点具有多个管理点，而且这些管理点位于多个域中，则仅指定一个域。 在客户端连接到此域中的管理点时，它们下载可用管理点的列表（将包含其他域中的管理点）。  
 
-     有关 CCMSetup 命令行属性的详细信息，请参阅[关于 System Center Configuration Manager 中的客户端安装属性](../../../core/clients/deploy/about-client-installation-properties.md)。  
+    有关 CCMSetup 命令行属性的详细信息，请参阅[关于 System Center Configuration Manager 中的客户端安装属性](../../../core/clients/deploy/about-client-installation-properties.md)。  
 
 #### <a name="to-configure-clients-for-a-management-point-suffix-after-client-installation"></a>在客户端安装之后针对管理点后缀配置客户端  
 

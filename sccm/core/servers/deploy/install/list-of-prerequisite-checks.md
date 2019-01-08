@@ -2,7 +2,7 @@
 title: 先决条件检查
 titleSuffix: Configuration Manager
 description: Configuration Manager 更新特定先决条件检查的参考。
-ms.date: 11/27/2018
+ms.date: 12/14/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,16 +10,16 @@ ms.assetid: 6a279624-ffc9-41aa-8132-df1809708dd5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9f17be653d206fd453cdafa4de159804f2fca816
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 4fdc882d63e7bf7d3189e770f230412f17ca0b63
+ms.sourcegitcommit: d36e4c7082a5144e79035dd8847c8e741fa04667
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456679"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53444648"
 ---
 # <a name="list-of-prerequisite-checks-for-configuration-manager"></a>Configuration Manager 先决条件检查列表
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 本文详细介绍了安装或更新 Configuration Manager 时运行的先决条件检查。 有关详细信息，请参阅[先决条件检查程序](/sccm/core/servers/deploy/install/prerequisite-checker)。  
 
@@ -87,7 +87,7 @@ ms.locfileid: "52456679"
 
 ##  <a name="BKMK_Dependencies"></a> 依赖关系
 
-### <a name="dependencies-errors"></a>依赖关系：错误
+### <a name="dependencies-errors"></a>依赖项:错误
 
 #### <a name="active-migration-mappings-on-the-target-primary-site"></a>目标主站点上的活动迁移映射 
 适用范围：管理中心站点
@@ -310,7 +310,7 @@ SQL Server 服务的登录帐户不是本地用户帐户或 LOCAL SERVICE。
 已安装 Windows ADK 的 Windows 预安装环境 (PE) 组件。
 
 
-### <a name="dependencies-warnings"></a>依赖关系：警告
+### <a name="dependencies-warnings"></a>依赖项:警告
 
 #### <a name="administrative-rights-on-distribution-point"></a>分发点上的管理权限 
 适用范围：分发点
@@ -550,13 +550,12 @@ EXEC spDiagChangeTracking @CleanupChangeTracking = 1
 SELECT * FROM vLogs WHERE ProcedureName = 'spDiagChangeTracking'
 ```
 
-<!-- #### SQL Native Client
-<!--SCCMDocs-pr issue 3094->
-*Applies to: Central administration site, primary site, secondary site*
+#### <a name="sql-native-client"></a>SQL Native Client
+<!--SCCMDocs-pr issue 3094-->
+适用范围：管理中心站点、主站点、辅助站点
 
-A supported version of the SQL Native Client. Starting in version 1810, the minimum version is 11.4.7001.0. 
+在安装新站点时，Configuration Manager 会自动将 SQL Native Client 作为可再发行组件安装。 Configuration Manager 不支持升级 SQL Native Client。 此检查可确保站点具有受支持的 SQL Native Client 版本。 从版本 1810 开始，最低版本是 SQL 2012 SP4 (`11.*.7001.0`)。 
 
-This SQL Native Client version supports TLS 1.2. For more information, see the following articles:
-- [TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server)  
-- [How to enable TLS 1.2 for Configuration Manager](https://support.microsoft.com/help/4040243/how-to-enable-tls-1-2-for-configuration-manager)  
- -->
+此 SQL Native Client 版本支持 TLS 1.2。 有关详细信息，请参阅下列文章：
+- [支持 Microsoft SQL Server 的 TLS 1.2](https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server)  
+- [如何启用 Configuration Manager 的 TLS 1.2](https://support.microsoft.com/help/4040243/how-to-enable-tls-1-2-for-configuration-manager)  

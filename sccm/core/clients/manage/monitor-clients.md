@@ -10,16 +10,16 @@ ms.assetid: 2c8f57cf-1968-48de-87fb-4897432ed6e0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 976aeaacfadfa7d2f189f20ab001486d486b764e
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: c88907b82e0066024128985e2d31522a2ea897ee
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32335875"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416769"
 ---
 # <a name="how-to-monitor-clients-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中监视客户端
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 
  在站点中的 Windows 计算机和设备上安装 System Center Configuration Manager 客户端应用程序后，即可在 Configuration Manager 控制台中监视其运行状况和活动。  
@@ -35,7 +35,7 @@ ms.locfileid: "32335875"
 
      在运行 Windows 7 的计算机上，客户端检查将作为计划任务运行。 在更高版本的操作系统上，客户端检查将在 Windows 维护时段自动运行。  
 
-     你可以将修正配置为不在特定计算机（例如关键业务服务器）上运行。 此外，如果想要评估其他项，则可以使用 Configuration Manager 符合性设置提供全面的解决方案，以监视组织中计算机的总体健康状况、活动和符合性。 有关符合性设置的详细信息，请参阅[在 System Center Configuration Manager 中规划和配置符合性设置](../../../compliance/plan-design/plan-for-and-configure-compliance-settings.md)。  
+     你可以将修正配置为不在特定计算机（例如关键业务服务器）上运行。 此外，如果想要评估其他项，则可以使用 Configuration Manager 符合性设置提供全面的解决方案，以监视组织中计算机的总体健康状况、活动和符合性。 有关符合性设置的详细信息，请参阅 [在 System Center Configuration Manager 中规划和配置符合性设置](../../../compliance/plan-design/plan-for-and-configure-compliance-settings.md)。  
 
 ##  <a name="bkmk_indStatus"></a> 监视单个客户端的状态  
 
@@ -62,15 +62,15 @@ ms.locfileid: "32335875"
 
 ##  <a name="bkmk_allStatus"></a> 监视所有客户端的状态  
 
-1.  在 Configuration Manager 控制台中，单击“监视” > “客户端状态”。 在控制台的此页面中，可查看整个站点内客户端活动和客户端检查的总体统计信息。  还可通过选择不同的集合来更改信息的范围。  
+1. 在 Configuration Manager 控制台中，单击“监视” > “客户端状态”。 在控制台的此页面中，可查看整个站点内客户端活动和客户端检查的总体统计信息。  还可通过选择不同的集合来更改信息的范围。  
 
-2.  若要深入探究所报告统计信息的详细信息，请单击所报告信息的名称（例如**已通过客户端检查或无结果的活动客户端**）并查看有关该客户端的信息。  
+2. 若要深入探究所报告统计信息的详细信息，请单击所报告信息的名称（例如**已通过客户端检查或无结果的活动客户端**）并查看有关该客户端的信息。  
 
-3.  单击“客户端活动”以查看对 Configuration Manager 站点中客户端活动进行描述的图表。  
+3. 单击“客户端活动”以查看对 Configuration Manager 站点中客户端活动进行描述的图表。  
 
-4.  单击“客户端检查”以查看对 Configuration Manager 站点中客户端检查的状态进行描述的图表。  
+4. 单击“客户端检查”以查看对 Configuration Manager 站点中客户端检查的状态进行描述的图表。  
 
- 你可以将警报配置为在以下情况下通知你：客户端检查结果或客户端活跃状况低于集合中客户端的指定百分比，或者修正针对指定百分比的客户端失败。 有关如何配置客户端状态的信息，请参阅[如何在 System Center Configuration Manager 中配置客户端状态](../../../core/clients/deploy/configure-client-status.md)。  
+   你可以将警报配置为在以下情况下通知你：客户端检查结果或客户端活跃状况低于集合中客户端的指定百分比，或者修正针对指定百分比的客户端失败。 有关如何配置客户端状态的信息，请参阅[如何在 System Center Configuration Manager 中配置客户端状态](../../../core/clients/deploy/configure-client-status.md)。  
 
 ##  <a name="BKMK_ClientHealth"></a> 客户端检查进行的检查和修正  
  客户端检查可以执行以下检查和修正。  
@@ -103,8 +103,8 @@ ms.locfileid: "32335875"
 |验证 Configuration Manager 远程控制服务启动类型是自动还是手动|将服务启动类型重置为自动|无更多信息|  
 |验证 Configuration Manager 远程控制服务是否正在运行|启动远程控制服务|无更多信息|  
 |验证客户端 WMI 提供程序是否正常|重新启动 Windows Management Instrumentation 服务|仅在运行 Windows Server 2003、Windows XP（64 位）或更早版本的计算机上执行此客户端检查的修正。|  
-|验证唤醒代理服务（ConfigMgr 唤醒代理）是否正在运行|启动 ConfigMgr 唤醒代理服务|仅当“电源管理” 时进行此客户端检查：在受支持的客户端操作系统上，将“启用唤醒代理”  客户端设置设置为“是”  。|  
-|验证唤醒代理服务（ConfigMgr 唤醒代理）启动类型是否为自动|将 ConfigMgr 唤醒代理服务启动类型重置为自动|仅当“电源管理” 时进行此客户端检查：在受支持的客户端操作系统上，将“启用唤醒代理”  客户端设置设置为“是”  。|  
+|验证唤醒代理服务（ConfigMgr 唤醒代理）是否正在运行|启动 ConfigMgr 唤醒代理服务|仅当“电源管理”时进行此客户端检查：在受支持的客户端操作系统上，将“启用唤醒代理”客户端设置设置为“是”。|  
+|验证唤醒代理服务（ConfigMgr 唤醒代理）启动类型是否为自动|将 ConfigMgr 唤醒代理服务启动类型重置为自动|仅当“电源管理”时进行此客户端检查：在受支持的客户端操作系统上，将“启用唤醒代理”客户端设置设置为“是”。|  
 
 ## <a name="client-deployment-log-files"></a>客户端部署日志文件
 有关客户端部署和管理操作使用的日志文件的信息，请参阅 [System Center Configuration Manager 中的日志文件](/sccm/core/plan-design/hierarchy/log-files#BKMK_ClientLogs)。

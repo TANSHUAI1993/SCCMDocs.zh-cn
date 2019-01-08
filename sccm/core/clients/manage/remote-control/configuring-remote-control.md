@@ -10,16 +10,16 @@ ms.assetid: 45affc27-aa11-4249-9493-082ac23a3a3d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4e4d380319704eda608930ac938232513800b81a
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 9fac81f08f4750ab6cc133ddc3a3bb9f73780fcd
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32331635"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422532"
 ---
 # <a name="configuring-remote-control-in-system-center-configuration-manager"></a>配置 System Center Configuration Manager 中的远程控制
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
  此过程介绍了如何为远程控制配置默认客户端设置。 这些设置将应用于层次结构中的所有计算机。 如果希望这些设置仅应用于某些计算机，请向包含这些计算机的集合分配自定义设备客户端设置。 有关详细信息，请参阅[如何在 System Center Configuration Manager 中配置客户端设置](../../../../core/clients/deploy/configure-client-settings.md)。 
 
@@ -27,17 +27,17 @@ ms.locfileid: "32331635"
 
 #### <a name="to-enable-remote-control-and-configure-client-settings"></a>若要启用远程控制并配置客户端设置  
 
-1.  在 Configuration Manager 控制台中，选择“管理” > “客户端设置” > “默认客户端设置”。  
+1. 在 Configuration Manager 控制台中，选择“管理” > “客户端设置” > “默认客户端设置”。  
 
-4.  在“主页”选项卡上的“属性”组中，选择“属性”。  
+2. 在“主页”选项卡上的“属性”组中，选择“属性”。  
 
-5.  在“默认”对话框中，选择“远程工具”。  
+3. 在“默认”对话框中，选择“远程工具”。  
 
-6.  配置远程控制、远程协助和远程桌面客户端设置。 有关可配置的远程工具客户端设置的列表，请参阅[远程工具](../../../../core/clients/deploy/about-client-settings.md#remote-tools)。  
+4. 配置远程控制、远程协助和远程桌面客户端设置。 有关可配置的远程工具客户端设置的列表，请参阅[远程工具](../../../../core/clients/deploy/about-client-settings.md#remote-tools)。  
 
-    可以更改“ConfigMgr 远程控制”  对话框中出现的公司名，方法是配置“计算机代理”  客户端设置中的“在软件中心显示的组织名称”  值。  
+   可以更改“ConfigMgr 远程控制”  对话框中出现的公司名，方法是配置“计算机代理”  客户端设置中的“在软件中心显示的组织名称”  值。  
 
- 当客户端计算机下一次下载客户端策略时，将使用这些设置进行配置。 要为单个客户端启动策略检索，请参阅 [如何在 System Center Configuration Manager 中管理客户端](../../../../core/clients/manage/manage-clients.md)。  
+   当客户端计算机下一次下载客户端策略时，将使用这些设置进行配置。 要为单个客户端启动策略检索，请参阅 [如何在 System Center Configuration Manager 中管理客户端](../../../../core/clients/manage/manage-clients.md)。  
 
 #### <a name="enable-keyboard-translation"></a>启用键盘转换
 

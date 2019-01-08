@@ -10,16 +10,16 @@ ms.assetid: f338e4db-73b5-45ff-92f4-1b89a8ded989
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d2969a0df23f7e8b74708a4aee03c3ea7f689a99
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: bb5814860389de28294c44f367920a2da9b72fbe
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32349892"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419421"
 ---
 # <a name="how-to-create-vpn-profiles-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中创建 VPN 配置文件
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*适用于：System Center Configuration Manager (Current Branch)*
 
 [System Center Configuration Manager 中的 VPN 配置文件](../../protect/deploy-use/vpn-profiles.md) 中介绍了不同设备平台可用的连接类型。  
 
@@ -27,28 +27,28 @@ ms.locfileid: "32349892"
 
 ### <a name="create-a-vpn-profile"></a>创建 VPN 配置文件   
 
-1.  在 Configuration Manager 控制台中，选择“资产和符合性” > “符合性设置” > “公司资源访问” > “VPN 配置文件”。  
+1. 在 Configuration Manager 控制台中，选择“资产和符合性” > “符合性设置” > “公司资源访问” > “VPN 配置文件”。  
 
-2.  在“主页”选项卡上的“创建”组中，选择“创建 VPN 配置文件”。  
-
-
-3.  完成“常规”页。 注意以下事项：  
-
-    - 选择适当的“平台”。
-
-       - 如果选择了 Windows 8.1 平台，你可以选择“从文件中导入现有 VPN 配置文件项”将已导出到 XML 文件的 VPN 配置文件信息导入。
-
-    - VPN 配置文件名称中不要使用字符 \\/:*?&lt;>&#124; 或空格。 Windows Server VPN 配置文件不支持这些字符。  
+2. 在“主页”选项卡上的“创建”组中，选择“创建 VPN 配置文件”。  
 
 
-4.  在“连接”页面上，指定以下内容：  
+3. 完成“常规”页。 注意以下事项：  
 
-    -   **连接类型**：选择 VPN 连接类型。 可从下表的连接类型中进行选择。  
+   - 选择适当的“平台”。
 
-    -   **服务器列表**：添加用于 VPN 连接的新服务器。 根据连接类型，可以添加一个或多个 VPN 服务器，并指定默认服务器。  
+      - 如果选择了 Windows 8.1 平台，你可以选择“从文件中导入现有 VPN 配置文件项”将已导出到 XML 文件的 VPN 配置文件信息导入。
 
-        > [!NOTE]  
-        >  运行 iOS 的设备不支持使用多个 VPN 服务器。 如果配置多个 VPN 服务器并随后将 VPN 配置文件部署到 iOS 设备，则只会使用默认服务器。  
+   - VPN 配置文件名称中不要使用字符 \\/:*?&lt;>&#124; 或空格。 Windows Server VPN 配置文件不支持这些字符。  
+
+
+4. 在“连接”页面上，指定以下内容：  
+
+   - 连接类型选择 VPN 连接类型。 可从下表的连接类型中进行选择。  
+
+   - **服务器列表**：添加用于 VPN 连接的新服务器。 根据连接类型，可以添加一个或多个 VPN 服务器，并指定默认服务器。  
+
+     > [!NOTE]  
+     >  运行 iOS 的设备不支持使用多个 VPN 服务器。 如果配置多个 VPN 服务器并随后将 VPN 配置文件部署到 iOS 设备，则只会使用默认服务器。  
 
      此表提供了可供选择的连接类型。 请参阅 VPN 服务器文档以了解更多信息。
 

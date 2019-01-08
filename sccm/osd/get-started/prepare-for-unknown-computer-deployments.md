@@ -10,32 +10,32 @@ ms.assetid: 9e447e34-0943-49ed-b6ba-3efebf3566c1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 425ab566b5ddbfaad775d61609c0a4ccd98e96d0
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 277881aab8a6d971c110b6ddd5b3dd34aae8fe7a
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32348559"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420152"
 ---
 # <a name="prepare-for-unknown-computer-deployments-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中准备未知计算机部署
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：*System Center Configuration Manager (Current Branch)*
 
 使用本主题中的信息将操作系统部署到 System Center Configuration Manager 环境中的未知计算机。 未知计算机是不受 Configuration Manager 管理的计算机。 这意味着 Configuration Manager 数据库中没有这些计算机的记录。 未知计算机包括下列各项：  
 
--   未安装 Configuration Manager 客户端的计算机  
+- 未安装 Configuration Manager 客户端的计算机  
 
--   未导入到 Configuration Manager 中的计算机  
+- 未导入到 Configuration Manager 中的计算机  
 
--   未被 Configuration Manager 发现的计算机  
+- 未被 Configuration Manager 发现的计算机  
 
- 你可以使用下列部署方法将操作系统部署到未知计算机中：  
+  你可以使用下列部署方法将操作系统部署到未知计算机中：  
 
--   [使用 PXE 通过网络部署 Windows](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md)  
+- [使用 PXE 通过网络部署 Windows](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md)  
 
--   [使用可启动媒体部署操作系统](../deploy-use/create-bootable-media.md)  
+- [使用可启动媒体部署操作系统](../deploy-use/create-bootable-media.md)  
 
--   [使用预留媒体部署操作系统](../deploy-use/create-prestaged-media.md)  
+- [使用预留媒体部署操作系统](../deploy-use/create-prestaged-media.md)  
 
 ## <a name="unknown-computer-deployment-workflow"></a>未知计算机部署工作流  
  下面是将操作系统部署到未知计算机的基本工作流：  
@@ -52,15 +52,15 @@ ms.locfileid: "32348559"
 ## <a name="unknown-computer-installation-process"></a>未知计算机安装过程  
  第一次从 PXE 或媒体中启动计算机时，Configuration Manage 会进行检查以确定 Configuration Manage 数据库中是否存在该计算机的记录。 如果有记录，Configuration Manager 随后将进行检查以确定是否有部署到该记录的任何任务序列。 如果没有记录，Configuration Manager 将进行检查以确定是否有部署到未知计算机对象的任何任务序列。 在任何一种情况下，Configuration Manager 都会随后执行以下操作之一：  
 
--   如果有可用的任务序列，Configuration Manager 将提示用户运行该任务序列。  
+- 如果有可用的任务序列，Configuration Manager 将提示用户运行该任务序列。  
 
--   如果有必需的任务序列，Configuration Manager 将自动运行该任务序列。  
+- 如果有必需的任务序列，Configuration Manager 将自动运行该任务序列。  
 
--   如果没有为记录部署任务序列，Configuration Manager 将生成错误，指出目标计算机没有任何部署的任务序列。  
+- 如果没有为记录部署任务序列，Configuration Manager 将生成错误，指出目标计算机没有任何部署的任务序列。  
 
- 在启动未知计算机时，Configuration Manager 会将该计算机识别为未预配的计算机，而不是未知计算机。 这意味着计算机现在可接收之前部署到未知计算机对象的任务序列。 部署的任务序列随后安装必须包括 Configuration Manager 客户端的操作系统映像。  
+  在启动未知计算机时，Configuration Manager 会将该计算机识别为未预配的计算机，而不是未知计算机。 这意味着计算机现在可接收之前部署到未知计算机对象的任务序列。 部署的任务序列随后安装必须包括 Configuration Manager 客户端的操作系统映像。  
 
- 安装 Configuration Manager 客户端之后，将创建计算机的记录，并且计算机会在相应的 Configuration Manager 集合中列出。 如果该计算机未能安装操作系统映像或 Configuration Manager 客户端，则将为该计算机的创建一条“未知”记录，并且该计算机将出现在“所有系统”集合中。  
+  安装 Configuration Manager 客户端之后，将创建计算机的记录，并且计算机会在相应的 Configuration Manager 集合中列出。 如果该计算机未能安装操作系统映像或 Configuration Manager 客户端，则将为该计算机的创建一条“未知”记录，并且该计算机将出现在“所有系统”集合中。  
 
 > [!NOTE]  
 >  在操作系统映像安装过程中，任务序列可从此计算机中检索集合变量，而无法检索计算机变量。  
@@ -70,7 +70,7 @@ ms.locfileid: "32348559"
 
 -   **PXE**  
 
-     在针对 PXE 启用分发点的“PXE”  选项卡上，选中“启用未知计算机支持”  复选框。 有关详细信息，请参阅[配置分发点以接受 PXE 请求](prepare-site-system-roles-for-operating-system-deployments.md#BKMK_PXEDistributionPoint)。  
+     在针对 PXE 启用分发点的“PXE”  选项卡上，选中“启用未知计算机支持”  复选框。 有关详细信息，请参阅 [配置分发点以接受 PXE 请求](prepare-site-system-roles-for-operating-system-deployments.md#BKMK_PXEDistributionPoint)。  
 
 -   **可启动媒体**  
 

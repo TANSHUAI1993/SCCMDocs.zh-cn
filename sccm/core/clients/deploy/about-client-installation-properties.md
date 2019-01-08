@@ -10,16 +10,16 @@ ms.assetid: c890fd27-7a8c-4f51-bbe2-f9908af1f42b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 735a8da57c0225aee533568eb997dc82d9816d6b
-ms.sourcegitcommit: db6074317d5c68ebb5fc478be5bceeb441aa0737
+ms.openlocfilehash: 61b51fcf9f624f5c2e21a99add1b55f6d6812c84
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34220422"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421359"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-system-center-configuration-manager"></a>关于 System Center Configuration Manager 中的客户端安装参数和属性。
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 使用 CCMSetup.exe 命令安装 Configuration Manager 客户端。 如果在命令行上提供客户端安装参数，它们则会修改安装行为。 如果在命令行上提供客户端安装属性，它们则会修改已安装客户端代理的初始配置。
 
@@ -159,17 +159,17 @@ CCMSetup.exe 无法下载安装文件时的重试间隔。 在达到 downloadtim
 
  指定通过 HTTP 连接下载客户端安装文件时的下载优先级。 可能的值如下：  
 
--   FOREGROUND  
+- FOREGROUND  
 
--   HIGH  
+- HIGH  
 
--   NORMAL  
+- NORMAL  
 
--   LOW  
+- LOW  
 
- 默认值为 NORMAL。  
+  默认值为 NORMAL。  
 
- 示例：`ccmsetup.exe /BITSPriority:HIGH`  
+  示例：`ccmsetup.exe /BITSPriority:HIGH`  
 
 ### <a name="downloadtimeoutltminutes"></a>/downloadtimeout:&lt;分钟数\>
 
@@ -205,7 +205,7 @@ CCMSetup 放弃下载客户端安装文件之前将尝试下载的时长（以�
 
 示例：`CCMSetup.exe /config:&lt;Configuration File Name.txt\>`  
 
-要提供正确的文件格式，请使用站点服务器上 &lt;Configuration Manager 目录\>\\bin\\&lt;平台\> 文件夹中的 mobileclienttemplate.tcf 文件。 此文件也包含有关各个部分及其使用方式的注释。 指定 [Client Install] 部分中的客户端安装属性，其后紧跟下列文本： **Install=INSTALL=ALL**。  
+要提供正确的文件格式，请使用站点服务器上 &lt;Configuration Manager 目录\>\\bin\\&lt;平台\> 文件夹中的 mobileclienttemplate.tcf 文件。 此文件也包含有关各个部分及其使用方式的注释。 指定 [Client Install] 部分中的客户端安装属性，其后紧跟下列文本：**Install=INSTALL=ALL**。  
 
 [Client Install] 部分条目示例：`Install=INSTALL=ALL SMSSITECODE=ABC SMSCACHESIZE=100`  
 
@@ -286,8 +286,8 @@ Azure 管理员可从 Azure 门户获取该属性的值。 在“Azure Active Di
 - 运行以下命令：`dsregcmd.exe /status`
 - 在“设备状态”部分中，找到 TenantId 值。 例如 `TenantId : 607b7853-6f6f-4d5d-b3d4-811c33fdd49a`
 
- > [!Note]
- > Azure 管理员还可在 Azure 门户中获取此值。 有关详细信息，请参阅[获取租户 ID](/azure/azure-resource-manager/resource-group-create-service-principal-portal#get-tenant-id)
+  > [!Note]
+  > Azure 管理员还可在 Azure 门户中获取此值。 有关详细信息，请参阅[获取租户 ID](/azure/azure-resource-manager/resource-group-create-service-principal-portal#get-tenant-id)
 
 示例：`ccmsetup.exe AADTENANTID=607b7853-6f6f-4d5d-b3d4-811c33fdd49a`
 
@@ -315,7 +315,7 @@ Example: `ccmsetup.exe AADTENANTNAME=Contoso`
 > [!IMPORTANT]  
 >  即使用户已登录，计算机也会在不发出警告的情况下重启。  
 
-示例： **CCMSetup.exe  CCMALLOWSILENTREBOOT**  
+例如：**CCMSetup.exe  CCMALLOWSILENTREBOOT**  
 
 ### <a name="ccmalwaysinf"></a>CCMALWAYSINF
 
@@ -356,10 +356,10 @@ Example: `ccmsetup.exe AADTENANTNAME=Contoso`
 
  `CCMCERTSEL="SubjectAttr:OU = Computers"` 搜索以可分辨名称表示且名为 Computers 的组织单位属性。  
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  如果使用“使用者名称框”，则 **Subject:** 区分大小写，而 **SubjectStr:** 不区分大小写。  
->   
->  如果使用“使用者备用名称”框，**Subject:** 和 **SubjectStr:** 均不区分大小写。  
+> 
+>  如果使用“使用者备用名称”框，<strong>Subject:</strong> 和 **SubjectStr:** 均不区分大小写。  
 
  可用于证书选择的完整属性列表在[对于 PKI 证书选择条件支持的属性值](#BKMK_attributevalues)中列出。  
 
@@ -461,7 +461,7 @@ Configuration Manager 日志文件的大小达到上限时，客户端会将其�
 
  如果设置为 TRUE，则此属性会禁止管理用户更改 Configuration Manager 控制面板中分配的站点。  
 
- 示例： **CCMSetup.exe DISABLESITEOPT=TRUE**  
+ 例如：**CCMSetup.exe DISABLESITEOPT=TRUE**  
 
 ### <a name="disablecacheopt"></a>DISABLECACHEOPT
 
@@ -576,19 +576,19 @@ Configuration Manager 日志文件的大小达到上限时，客户端会将其�
 
 指定 Configuration Manager 安装程序检查配置设置的位置和顺序。 此属性是一个含一个或多个字符的字符串，其中每个字符都定义了一个特定的配置源。 单独或组合使用字符值 R、P、M 和 U：  
 
--   R：检查注册表中的配置设置。  
+- R：检查注册表中的配置设置。  
 
-   有关详细信息，请参阅[有关在注册表中存储客户端安装属性的信息](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Provision)。  
+  有关详细信息，请参阅[有关在注册表中存储客户端安装属性的信息](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Provision)。  
 
--   P：检查在命令提示符处提供的安装属性中的配置设置。  
+- P：检查在命令提示符处提供的安装属性中的配置设置。  
 
--   M：检查用 Configuration Manager 客户端软件升级旧版客户端时的现有设置。  
+- M：检查用 Configuration Manager 客户端软件升级旧版客户端时的现有设置。  
 
--   U：将安装的客户端升级为较新版本（并使用分配的站点代码）。  
+- U：将安装的客户端升级为较新版本（并使用分配的站点代码）。  
 
- 默认情况下，客户端安装使用 `PU` 先检查安装属性，然后再检查现有设置。  
+  默认情况下，客户端安装使用 `PU` 先检查安装属性，然后再检查现有设置。  
 
- 示例：`CCMSetup.exe SMSCONFIGSOURCE=RP`  
+  示例：`CCMSetup.exe SMSCONFIGSOURCE=RP`  
 
 ### <a name="smsdirectorylookup"></a>SMSDIRECTORYLOOKUP
 
@@ -627,7 +627,7 @@ Configuration Manager 日志文件的大小达到上限时，客户端会将其�
 
  用于重新安装 Configuration Manager 信任的根密钥。 为包含受信任的根密钥的文件指定完整路径和文件名。 此属性适用于使用 HTTP 和 HTTPS 客户端通信的客户端。 有关详细信息，请参阅[规划受信任的根密钥](../../plan-design/security/plan-for-security.md#BKMK_PlanningForRTK)。  
 
- 示例：CCMSetup.exe SMSROOTKEYPATH=&lt;完整路径和文件名\>`  
+ 例如：CCMSetup.exe SMSROOTKEYPATH=&lt;完整路径和文件名\>`  
 
 ### <a name="smssigncert"></a>SMSSIGNCERT
 
@@ -635,7 +635,7 @@ Configuration Manager 日志文件的大小达到上限时，客户端会将其�
 
  此证书存储在“SMS”  证书存储中，并且具有“站点服务器”  使用者名称以及“站点服务器签名证书” 友好名称。  
 
- 示例：**CCMSetup.exe /UsePKICert SMSSIGNCERT=&lt;完整路径和文件名\>**  
+ 例如：**CCMSetup.exe /UsePKICert SMSSIGNCERT=&lt;完整路径和文件名\>**  
 
 ### <a name="smssitecode"></a>SMSSITECODE
 

@@ -10,16 +10,16 @@ ms.assetid: 694bc29f-a7fd-4e06-815a-1a9c5e9ac563
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 20151eeac8a0a430b38ce9537748e0fef019df64
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 446a5fa47cdf55060b960d8846c913cbafc78da8
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32338068"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53415851"
 ---
 # <a name="introduction-to-the-long-term-servicing-branch-of-system-center-configuration-manager"></a>System Center Configuration Manager 的 Long-Term Servicing Branch 简介
 
-*适用范围：System Center Configuration Manager (Long-Term Servicing Branch)*
+适用范围：System Center Configuration Manager (Long-Term Servicing Branch)
 
 System Center Configuration Manager 的 Long-Term Servicing Branch (LTSB) 是 Configuration Manager 的单独分支，旨在成为面向所有客户的安装选项。 不过，这是面向已终止软件保障 (SA) 或同等 Configuration Manager 订阅权限的客户的唯一选项。
 
@@ -49,17 +49,17 @@ Configuration Manager 的 Current Branch 支持以下功能，但 LTSB 并不支
 ## <a name="find-documentation-for-the-ltsb"></a>查找 LTSB 文档
 LTSB 是在 Current Branch 版本 1606 基础之上构建而成。 若要查找产品文档，请参考 [Current Branch 文档](https://docs.microsoft.com/sccm/)，其中包含 LTSB 专属注意事项和限制。 以下联机主题中标出了这些注意事项和限制：
 
--     [Long-Term Servicing Branch 简介](introduction-to-the-ltsb.md)：（本主题）
--     [安装 Long-Term Servicing Branch](install-the-ltsb.md)
--     [将 Long-Term Servicing Branch 升级到 Current Branch](convert-to-current-branch.md)
--     [Long-Term Servicing Branch 的支持配置](supported-configurations-for-ltsb.md)
--   [System Center Configuration Manager 的 Long-Term Servicing Branch](manage-the-ltsb.md)
+- [Long-Term Servicing Branch 简介](introduction-to-the-ltsb.md)：（本主题）
+- [安装 Long-Term Servicing Branch](install-the-ltsb.md)
+- [将 Long-Term Servicing Branch 升级到 Current Branch](convert-to-current-branch.md)
+- [Long-Term Servicing Branch 的支持配置](supported-configurations-for-ltsb.md)
+- [System Center Configuration Manager 的 Long-Term Servicing Branch](manage-the-ltsb.md)
 
 对 LTSB 参考 Current Branch 文档时，适用于版本 1606 的详细信息也适用于 LTSB。 随版本 1610 或更高版本一起引入的功能或详细信息不受 LTSB 支持。
 
 
 ## <a name="licensing-overview-for-the-ltsb"></a>LTSB 证书概述   
-自 2016 年 10 月 1 日起，具有 System Center Configuration Manager 许可证上可用的软件保障 (SA) 或同等订阅权限的客户，有权使用 System Center Configuration Manager 的 2016 年 10 月发行的版本 1606。 自 2016 年 10 月 1 日起（含），对 System Center Configuration Manager 具有权限的客户在安装时将会发现两个已许可的选项：Current Branch 和 Long-Term Servicing Branch (LTSB)。
+自 2016 年 10 月 1 日起，具有 System Center Configuration Manager 许可证上可用的软件保障 (SA) 或同等订阅权限的客户，有权使用 System Center Configuration Manager 的 2016 年 10 月发行的版本 1606。 自 2016 年 10 月 1 日起（含），对 System Center Configuration Manager 具有权限的客户在安装时将会发现两个许可选项：Current Branch 和 Long Term Servicing Branch (LTSB)。
 
 对 System Center Configuration Manager 具有永久权限或者允许 SA 或订阅在 10 月 1 日之后失效的客户，可以在失效时安装当前的 System Center Configuration Manager LTSB 版本。
 

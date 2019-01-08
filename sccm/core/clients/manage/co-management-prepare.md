@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
-ms.openlocfilehash: 9aab4273129e6a3032d7e85d2545e6abc5b616c4
-ms.sourcegitcommit: 8dd9199bfe8e27f62e9df307f1c6ac58a3b81717
+ms.openlocfilehash: ac7f67a02602473a7635d8c70e4b1b1dc04363bc
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50237150"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417041"
 ---
 # <a name="prepare-windows-10-devices-for-co-management"></a>准备 Windows 10 设备进行共同管理
 可对已加入 AD 和 Azure AD 并在 Microsoft Intune 中注册的 Windows 10 设备和 Configuration Manager 中的客户端启用共同管理。 对于新的 Windows 10 设备和已在 Intune 中注册的设备，请在可以进行共同管理前先安装 Configuration Manager 客户端。 对于已属于 Configuration Manager 客户端的 Windows 10 设备，可向 Intune 注册设备并在 Configuration Manager 控制台中启用共同管理。
@@ -46,15 +46,16 @@ ms.locfileid: "50237150"
 
 - Intune 订阅，且 Intune 中的 MDM 机构设置为 Intune。  
 
-    - 若正在使用[混合机构](/sccm/mdm/deploy-use/migrate-mixed-authority)，请先迁移到 Intune 独立版。 然后在设置共同管理前将 MDM 机构设置为 Intune。<!--SCCMDocs issue #797-->
+    - 若正在使用[混合机构](/sccm/mdm/deploy-use/migrate-mixed-authority)，请先迁移到 Intune 独立版。 然后，在设置共同管理前将 MDM 机构设置为 Intune。<!--SCCMDocs issue #797-->
 
 
-> [!Note]  
+> [!NOTE]
 > 如果具有混合 MDM 环境（Intune 与 Configuration Manager 集成），则无法启用共同管理。 但是，你可以开始将用户迁移到 Intune 独立版本，然后对其关联的 Windows 10 设备启用共同管理。 有关迁移到 Intune 独立版本的详细信息，请参阅[开始从混合 MDM 迁移到 Intune 独立版本](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa)。
 
 
 ### <a name="prerequisite-azure-resource-manager-roles"></a>必备的 Azure 资源管理器角色
 <!--SCCMDocs issue #667--> 有关 Azure 角色的详细信息，请参阅[了解不同角色](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles)。
+
 |操作|所需角色|
 |----|----|
 |设置云管理网关|Azure 订阅管理者|
@@ -68,7 +69,7 @@ ms.locfileid: "50237150"
 
 - Windows 10 版本 1709 或更高版本  
 
-- [混合 Azure AD 加入](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)（已加入 AD 和 Azure AD）或仅加入 Azure AD（此类型有时称为“云域加入”）。
+- [混合 Azure AD 加入](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan)（已加入 AD 和 Azure AD）或仅加入 Azure AD（此类型有时称为“云域加入”）。
 
 
 ### <a name="additional-prerequisites-for-devices-without-the-configuration-manager-client"></a>针对未安装 Configuration Manager 客户端的设备的其他先决条件
@@ -85,16 +86,22 @@ ms.locfileid: "50237150"
 
 ## <a name="command-line-to-install-configuration-manager-client"></a>安装 Configuration Manager 客户端的命令行
 
-在适用于 Windows 10 设备（尚不是 Configuration Manager 客户端）的 Intune 中创建应用。 在下一节中创建应用时，请使用以下命令行：
+在适用于 Windows 10 设备（尚不是 Configuration Manager 客户端）的 Intune 中创建应用。 为此，请执行以下步骤：
+
+1. 导航到 portal.azure.com，然后打开 Intune 边栏选项卡。
+2. 单击“客户端应用” > “应用” > “添加”。 
+3. 在“其他”下，选择“业务线应用”。
+4. 上传 Ccmsetup.msi 应用包文件。 （此文件位于站点服务器上的以下文件夹中：<ConfigMgr installation directory>\bin\i386。） 
+5. 更新应用后，通过运行以下命令行参数来配置应用信息：
 
 `ccmsetup.msi CCMSETUPCMD="/mp:<URL of cloud management gateway mutual auth endpoint> CCMHOSTNAME=<URL of cloud management gateway mutual auth endpoint> SMSSiteCode=<Sitecode> SMSMP=https://<FQDN of MP> AADTENANTID=<AAD tenant ID> AADCLIENTAPPID=<Server AppID for AAD Integration> AADRESOURCEURI=https://<Resource ID>"`
 
-#### <a name="example-command-line"></a>示例命令行
+#### <a name="example-command-line-input"></a>示例命令行输入
 若具有以下值：
 
 - **云管理网关相互身份验证终结点的 URL**：`https://contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500`    
 
-   >[!Note]    
+   >[!NOTE]    
    >对于云管理网关相互身份验证终结点 URL 值，使用 vProxy_Roles SQL 视图中的 MutualAuthPath 值。  
 
 - **管理点 (MP) 的 FQDN**：`mp1.contoso.com`    
@@ -103,7 +110,7 @@ ms.locfileid: "50237150"
 - **Azure AD 客户端应用 ID**：`51e781eb-aac6-4265-8030-4cd1ddaa9dd0`     
 - **AAD 资源 ID URI**：`ConfigMgrServer`    
 
-  > [!Note]    
+  > [!NOTE]    
   > 对于 AAD 资源 ID URI 值，使用在 vSMS_AAD_Application_Ex SQL 视图中找到的 IdentifierUri 值。  
 
 然后使用以下命令行：
@@ -130,7 +137,7 @@ ms.locfileid: "50237150"
 有关详细信息，请参阅[客户端安装属性](/sccm/core/clients/deploy/about-client-installation-properties)。
 
 
-> [!Tip]
+> [!TIP]
 > 通过使用以下步骤查找站点的命令行参数：     
 > 
 > 1. 在 Configuration Manager 控制台中，转到“管理”工作区，展开“云服务”，然后选择“共同管理”节点。  
@@ -143,7 +150,7 @@ ms.locfileid: "50237150"
 > 
 > 5. 单击“取消”退出向导。  
 
-> [!Important]    
+> [!IMPORTANT]    
 > 如果要自定义安装 Configuration Manager 客户端的命令行，请确保命令行的字符数不超过 1024。 如果命令行的字符数大于 1024，客户端安装会失败。
 
 

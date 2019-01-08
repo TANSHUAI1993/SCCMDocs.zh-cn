@@ -10,16 +10,16 @@ ms.assetid: 1a2a9b48-a95b-4643-b00c-b3079584ae2e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 11474f54aaf7a9afe13d411b0dd469abb1eef963
-ms.sourcegitcommit: c2c44329f1f9a2e6c14095360b4fc4aafabc27f0
+ms.openlocfilehash: 2a830b36bec3d112c0b112d2df6887a84c837fa2
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694937"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418248"
 ---
 # <a name="prerequisites-for-deploying-clients-to-windows-computers-in-configuration-manager"></a>在 Configuration Manager 中将客户端部署到 Windows 计算机的先决条件
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 在环境中部署 Configuration Manager 客户端有下列外部依赖关系和产品内部依赖关系。 此外，每个客户端部署方法有其自己的先决条件，要成功安装客户端，必须满足其自己的先决条件。  
 
@@ -115,9 +115,9 @@ Microsoft .NET Framework 版本 4.5.2 可能需要重启才能完成安装。 �
 
 要使用客户端请求，需要具备以下安全权限：  
 
-   -   要配置客户端请求安装帐户，需要“站点”对象的“修改”和“读取”权限。  
+   -   配置客户端请求安装帐户：“站点”对象的“修改”和“读取”权限。  
 
-   -   要使用客户端请求将客户端安装到集合、设备和查询，需要“集合”对象的“修改资源”和“读取”权限。  
+   -   使用客户端请求将客户端安装到集合、设备和查询：“集合”对象的“修改资源”和“读取”权限。  
 
 
 “基础结构管理员”默认安全角色包括管理客户端请求安装所需的权限。  
@@ -222,45 +222,45 @@ Microsoft .NET Framework 版本 4.5.2 可能需要重启才能完成安装。 �
 
 有关详细信息，请参阅[确定客户端的站点系统角色](/sccm/core/clients/deploy/plan/determine-the-site-system-roles-for-clients)。  
 
--   为 HTTPS 客户端连接配置并为移动设备启用的管理点  
+- 为 HTTPS 客户端连接配置并为移动设备启用的管理点  
 
-     必须使用管理点才能在移动设备上安装 Configuration Manager 客户端。 除了 HTTPS 要求和为移动设备启用的要求外，还必须将管理点配置为具有 Internet FQDN 并接受来自 Internet 的客户端连接。  
+   必须使用管理点才能在移动设备上安装 Configuration Manager 客户端。 除了 HTTPS 要求和为移动设备启用的要求外，还必须将管理点配置为具有 Internet FQDN 并接受来自 Internet 的客户端连接。  
 
--   注册点和注册代理点  
+- 注册点和注册代理点  
 
-     注册代理点管理来自移动设备的注册请求，注册点完成注册过程。 注册点必须位于站点服务器所在的 Active Directory 林中，但注册代理点则可位于另一个林中。  
+   注册代理点管理来自移动设备的注册请求，注册点完成注册过程。 注册点必须位于站点服务器所在的 Active Directory 林中，但注册代理点则可位于另一个林中。  
 
--   移动设备注册的客户端设置  
+- 移动设备注册的客户端设置  
 
-     配置客户端设置以允许用户注册移动设备并至少配置一个注册配置文件。  
+   配置客户端设置以允许用户注册移动设备并至少配置一个注册配置文件。  
 
--   Reporting Services 点  
+- Reporting Services 点  
 
-     Reporting Services 点是可选的，但建议使用该站点系统角色，它能够显示与移动设备注册和客户端管理相关的报表。  
+   Reporting Services 点是可选的，但建议使用该站点系统角色，它能够显示与移动设备注册和客户端管理相关的报表。  
 
-     有关详细信息，请参阅 [Configuration Manager 中的报告](/sccm/core/servers/manage/reporting)。  
+   有关详细信息，请参阅 [Configuration Manager 中的报告](/sccm/core/servers/manage/reporting)。  
 
--   要针对移动设备配置注册，你必须具有下列安全权限：  
+- 要针对移动设备配置注册，你必须具有下列安全权限：  
 
-    -   添加、修改和删除注册站点系统角色：“站点”  对象的 **修改** 权限。  
+  - 添加、修改和删除注册站点系统角色：“站点”对象的“修改”权限。  
 
-    -   配置客户端设置以供注册：默认客户端设置需要“站点”  对象的 **修改** 权限，自定义客户端设置需要 **客户端代理**  权限。  
+  - 配置注册的客户端设置：默认客户端设置需要“站点”对象的“修改”权限，自定义客户端设置需要“客户端代理”权限。  
 
-     “完全权限管理员”默认安全角色包括配置注册站点系统角色所需的权限。  
+    “完全权限管理员”默认安全角色包括配置注册站点系统角色所需的权限。  
 
-     要管理注册的移动设备，你必须具有下列安全权限：  
+    要管理注册的移动设备，你必须具有下列安全权限：  
 
-    -   擦除或停用移动设备：“集合”  对象的 **删除资源** 权限。  
+  - 擦除或停用移动设备：“集合”对象的“删除资源”权限。  
 
-    -   取消擦除或停用命令：“集合”  对象的 **删除资源** 权限。  
+  - 取消擦除或停用命令：“集合”对象的“删除资源”权限。  
 
-    -   允许和阻止移动设备：“集合”  对象的 **修改资源** 权限。  
+  - 允许和阻止移动设备：“集合”对象的“修改资源”权限。  
 
-    -   远程锁定或重置移动设备上的密码：“集合”  对象的 **修改资源** 权限。  
+  - 远程锁定或重置移动设备上的密码：“集合”对象的“修改资源”权限。  
 
-     “操作管理员”默认安全角色包括管理移动设备所需的权限。  
+    “操作管理员”默认安全角色包括管理移动设备所需的权限。  
 
-     有关如何配置安全权限的详细信息，请参阅[基于角色的管理的基础](/sccm/core/understand/fundamentals-of-role-based-administration)和[配置基于角色的管理](/sccm/core/servers/deploy/configure/configure-role-based-administration)。  
+    有关如何配置安全权限的详细信息，请参阅[基于角色的管理的基础](/sccm/core/understand/fundamentals-of-role-based-administration)和[配置基于角色的管理](/sccm/core/servers/deploy/configure/configure-role-based-administration)。  
 
 
 ### <a name="firewall-requirements"></a>防火墙要求  

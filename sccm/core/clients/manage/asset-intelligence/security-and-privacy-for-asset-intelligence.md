@@ -10,16 +10,16 @@ ms.assetid: d0c6f7a0-dcae-4e6d-aa28-35d464d97ff7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 51bfe17980a7660ecdccfd13a11d6c7bcfd93e5f
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: cec99ab9d4e52f2a2db4aaef0de47b5abfb794b5
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344368"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417603"
 ---
 # <a name="security-and-privacy-for-asset-intelligence-in-system-center-configuration-manager"></a>System Center Configuration Manager 中资产智能的安全和隐私
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 本主题包括有关 System Center Configuration Manager 中资产智能的安全和隐私的信息。  
 
@@ -38,18 +38,18 @@ ms.locfileid: "32344368"
 
  资产智能不会向 Microsoft 发送关于用户和计算机或许可证使用的信息。 你可以选择发送 System Center Online 分类请求，这意味着你可以标记一个或多个未分类的软件标题，将它们发送给 System Center Online 进行研究和分类。 在上载软件标题后，Microsoft 研究人员会进行识别、分类，然后将此信息提供给使用在线服务的所有客户。 您应该注意下列有关向 System Center Online 提交信息的隐私隐患：  
 
--   上载只适用于您可以选择向 System Center Online 发送的一般软件标题信息（名称、发布者等）。 清单信息不通过上载发送。  
+- 上载只适用于您可以选择向 System Center Online 发送的一般软件标题信息（名称、发布者等）。 清单信息不通过上载发送。  
 
--   上载决不会自动发生，系统并不打算自动进行此任务。 你必须手动选择并批准上载每个软件标题。  
+- 上载决不会自动发生，系统并不打算自动进行此任务。 你必须手动选择并批准上载每个软件标题。  
 
--   在上载过程开始之前，将会出现一个对话框，向你显示将上载的确切数据。  
+- 在上载过程开始之前，将会出现一个对话框，向你显示将上载的确切数据。  
 
--   许可证信息不会发送到 Microsoft。 许可证信息存储在 Configuration Manager 数据库的一个独立区域，不能将其发送给 Microsoft。  
+- 许可证信息不会发送到 Microsoft。 许可证信息存储在 Configuration Manager 数据库的一个独立区域，不能将其发送给 Microsoft。  
 
--   上载的任何软件标题都会变为公用，表现为指定的应用程序及其分类的信息将成为 System Center Online 资产智能目录的一部分，之后会下载到该目录的其他用户。  
+- 上载的任何软件标题都会变为公用，表现为指定的应用程序及其分类的信息将成为 System Center Online 资产智能目录的一部分，之后会下载到该目录的其他用户。  
 
--   软件标题的来源不会记录在资产智能目录中，也不会提供给其他客户。 但是，你仍必须验证以确保没有加载包含任何隐私信息的任何应用程序标题。  
+- 软件标题的来源不会记录在资产智能目录中，也不会提供给其他客户。 但是，你仍必须验证以确保没有加载包含任何隐私信息的任何应用程序标题。  
 
--   无法取消上载的数据。  
+- 无法取消上载的数据。  
 
- 在配置资产智能数据收集以及确定是否将信息提交给 System Center Online 之前，请考虑组织的隐私要求。  
+  在配置资产智能数据收集以及确定是否将信息提交给 System Center Online 之前，请考虑组织的隐私要求。  

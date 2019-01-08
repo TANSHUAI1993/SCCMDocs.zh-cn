@@ -9,16 +9,16 @@ ms.assetid: bec00fb4-1ac0-4e49-b330-0871b3722459
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a6a996c4f1e00c05c0b3766b8955130529832063
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: bb48f192146a3c0d4bbbe6f005dda537db871da7
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344494"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53415477"
 ---
 # <a name="system-center-configuration-manager-privacy-statement---configuration-manager-cmdlet-library"></a>System Center Configuration Manager 隐私声明 – Configuration Manager cmdlet 库
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 本隐私声明涵盖 System Center Configuration Manager Cmdlet 库的功能。  
 
@@ -42,11 +42,11 @@ Microsoft 利用此信息来提高所提供产品和服务的质量、安全性�
 
  若要完全退出，请设置这两个注册表项的值。 每个值针对一个 Windows 事件跟踪 (ETW) 提供程序：  
 
--   HKLM\Software\Microsoft\ConfigMgr10\PowerShell\Microsoft.ConfigurationManagement.PowerShell.Provider:CeipLevel=0（驱动器提供程序“使用情况数据”功能的退出）  
+- HKLM\Software\Microsoft\ConfigMgr10\PowerShell\Microsoft.ConfigurationManagement.PowerShell.Provider:CeipLevel=0（驱动器提供程序“使用情况数据”功能的退出）  
 
--   HKLM\Software\Microsoft\ConfigMgr10\PowerShell\Microsoft.ConfigurationManagement.PowerShell.Cmdlets:CeipLevel=0（cmdlet“使用情况数据”功能的退出）  
+- HKLM\Software\Microsoft\ConfigMgr10\PowerShell\Microsoft.ConfigurationManagement.PowerShell.Cmdlets:CeipLevel=0（cmdlet“使用情况数据”功能的退出）  
 
- “使用情况数据”设置的更改特定于在其中进行更改的计算机。  
+  “使用情况数据”设置的更改特定于在其中进行更改的计算机。  
 
 
 ## <a name="next-steps"></a>后续步骤

@@ -10,16 +10,16 @@ ms.assetid: 9f7142e1-c972-4384-853b-2da1568cb3e3
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 480f7a890e82b46e2b2d69180763f39504a47e0c
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: a08162f36c247136dd346140480e2d29be0c4017
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344477"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424793"
 ---
 # <a name="best-practices-for-power-management-in-system-center-configuration-manager"></a>System Center Configuration Manager 中电源管理的最佳方案
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 使用以下 System Center Configuration Manager 中电源管理的最佳方案。  
 
@@ -40,17 +40,17 @@ ms.locfileid: "32344477"
 
  你可能想要从电源管理中排除的计算机的示例包括：  
 
--   必须保持开机状态的计算机。  
+- 必须保持开机状态的计算机。  
 
--   用户需要通过使用远程桌面连接来连接的计算机。  
+- 用户需要通过使用远程桌面连接来连接的计算机。  
 
--   不能使用电源管理的计算机。  
+- 不能使用电源管理的计算机。  
 
--   具有分发点站点系统角色的计算机。  
+- 具有分发点站点系统角色的计算机。  
 
--   其中的计算机和监视器必须保持开启状态的公用计算机（如网亭计算机、信息显示器或监视控制台）。  
+- 其中的计算机和监视器必须保持开启状态的公用计算机（如网亭计算机、信息显示器或监视控制台）。  
 
- 有关详细信息，请参阅[在 System Center Configuration Manager 中配置电源管理](../../../../core/clients/manage/power/configuring-power-management.md)。  
+  有关详细信息，请参阅[在 System Center Configuration Manager 中配置电源管理](../../../../core/clients/manage/power/configuring-power-management.md)。  
 
 ## <a name="first-apply-power-plans-to-a-test-collection-of-computers"></a>首先，向计算机的测试集合应用电源计划  
  在将电源计划应用于较大的计算机集合前，务必测试对计算机测试集合应用电源管理计划的效果。  

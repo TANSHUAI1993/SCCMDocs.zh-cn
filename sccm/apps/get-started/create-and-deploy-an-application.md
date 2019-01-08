@@ -10,16 +10,16 @@ ms.assetid: 3bd1e487-ea18-43c1-b7c3-acbd9b86d429
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 3d34ec4abb712ce6797033a5ff490280611e1b02
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 18f51e43e223b13c01d0c6bde5a30fe08af64f61
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344385"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53415441"
 ---
 # <a name="create-and-deploy-an-application-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 创建和部署应用程序
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：*System Center Configuration Manager (Current Branch)*
 
 在本主题中，将直接开始使用 System Center Configuration Manager 创建应用程序。 在此示例中，将为 Windows 电脑创建并部署一个包含业务线应用的应用程序，该应用程序名为“Contoso.msi”且必须安装在用户公司中运行 Windows 10 的所有电脑上。 与此同时，你将了解许多可以执行的操作，以便有效管理应用程序。  
 
@@ -48,38 +48,38 @@ ms.locfileid: "32344385"
 
 ### <a name="to-start-the-create-application-wizard-and-create-the-application"></a>启动创建应用程序向导并创建应用程序  
 
-1.  在 Configuration Manager 控制台中，选择“软件库” > “应用程序管理” > “应用程序”。  
+1. 在 Configuration Manager 控制台中，选择“软件库” > “应用程序管理” > “应用程序”。  
 
-3.  在“主页”选项卡上的“创建”组中，选择“创建应用程序”。  
+2. 在“主页”选项卡上的“创建”组中，选择“创建应用程序”。  
 
-4.  在“创建应用程序向导”的“常规”页上，选择“自动检测安装文件中有关此应用程序的信息”。 这将使用从 .msi 安装文件中提取出来的信息预设向导中的某些信息。 然后指定以下信息：  
+3. 在“创建应用程序向导”的“常规”页上，选择“自动检测安装文件中有关此应用程序的信息”。 这将使用从 .msi 安装文件中提取出来的信息预设向导中的某些信息。 然后指定以下信息：  
 
-    -   **类型**：选择“Windows Installer (\*.msi 文件)”。  
+   -   **类型**：选择“Windows Installer (\*.msi 文件)”。  
 
-    -   **位置**：键入安装文件 **Contoso.msi** 的位置（或选择“浏览”以选择位置）。 注意，必须以 *\\\Server\Share\File* 格式指定位置，以便 Configuration Manager 找到安装文件。  
+   -   **位置**：键入安装文件 Contoso.msi 的位置（或选择“浏览”以选择位置）。 注意，必须以 *\\\Server\Share\File* 格式指定位置，以便 Configuration Manager 找到安装文件。  
+
+   此时的屏幕截图如下：  
+
+   ![应用管理向导常规页](/sccm/apps/get-started/media/App-management-wizard-general-page.png)  
+
+4. 选择“下一步”。 “导入信息”页上，会显示有关该应用以及导入到 Configuration Manager 的任何关联文件的一些信息。 完成后，再次选择“下一步”。  
+
+5. 在“常规信息”页上，可以提供有关该应用程序进一步的信息，以帮助在 Configuration Manager 控制台中进行排序和查找。  
+
+    此外，通过“安装程序”字段，可以指定将用于在电脑上安装该应用程序的完整命令行。 可以编辑此字段以添加自己的属性（例如添加“/q”以进行无人参与的安装）。  
+
+   > [!TIP]  
+   >  导入应用程序安装文件后，向导的此页上的某些字段可能已自动填充。  
 
     此时的屏幕截图如下：  
 
-    ![应用管理向导常规页](/sccm/apps/get-started/media/App-management-wizard-general-page.png)  
+    ![应用管理向导常规信息页](/sccm/apps/get-started/media/App-management-wizard-general-information-page.png)  
 
-5.  选择“下一步”。 “导入信息”页上，会显示有关该应用以及导入到 Configuration Manager 的任何关联文件的一些信息。 完成后，再次选择“下一步”。  
+6. 选择“下一步”。 在“摘要”页面上，可以确认应用程序设置，然后完成向导。  
 
-6.  在“常规信息”页上，可以提供有关该应用程序进一步的信息，以帮助在 Configuration Manager 控制台中进行排序和查找。  
+   应用创建结束。 若要找到它，请在“软件库”工作区中，展开“应用程序管理”，然后选择“应用程序”。 对于此示例，你将看到：  
 
-     此外，通过“安装程序”字段，可以指定将用于在电脑上安装该应用程序的完整命令行。 可以编辑此字段以添加自己的属性（例如添加“/q”以进行无人参与的安装）。  
-
-    > [!TIP]  
-    >  导入应用程序安装文件后，向导的此页上的某些字段可能已自动填充。  
-
-     此时的屏幕截图如下：  
-
-     ![应用管理向导常规信息页](/sccm/apps/get-started/media/App-management-wizard-general-information-page.png)  
-
-7.  选择“下一步”。 在“摘要”页面上，可以确认应用程序设置，然后完成向导。  
-
- 应用创建结束。 若要找到它，请在“软件库”工作区中，展开“应用程序管理”，然后选择“应用程序”。 对于此示例，你将看到：  
-
- ![最终应用图形](/sccm/apps/get-started/media/Final-app-graphic.png)  
+   ![最终应用图形](/sccm/apps/get-started/media/Final-app-graphic.png)  
 
 ## <a name="examine-the-properties-of-the-application-and-its-deployment-type"></a>检查应用文件的属性及其部署类型  
 
@@ -102,13 +102,13 @@ ms.locfileid: "32344385"
 
 3.  在“创建要求”  对话框中，指定以下信息：  
 
-    -   “类别”：“设备”  
+    -   **类别**：**设备**  
 
-    -   “条件”：“操作系统”  
+    -   **条件**：**操作系统**  
 
-    -   “规则类型”：“值”  
+    -   **规则类型**：**值**  
 
-    -   “运算符”：“其中一个”  
+    -   **运算符**：**其中一个**  
 
     -   从操作系统列表中，选择“Windows 10” 。  
 

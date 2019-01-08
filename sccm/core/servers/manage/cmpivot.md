@@ -10,18 +10,18 @@ ms.assetid: 32e2d6b9-148f-45e2-8083-98c656473f82
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 29b0f577ad291899467d9c6fd305af9ef6b892eb
-ms.sourcegitcommit: 5b3ff56018cfc6bda9643c9f1bebc575173f61bc
+ms.openlocfilehash: 85bd23130826c7ca23e10125efba58bf14555fb1
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50083796"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424215"
 ---
 # <a name="cmpivot-for-real-time-data-in-configuration-manager"></a>在 Configuration Manager 中使用 CMPivot 获得实时数据
 
 <!--1358456-->
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：*System Center Configuration Manager (Current Branch)*
 
 Configuration Manager 总是提供设备数据的大型集中式存储，客户可将其用于报告目的。 该站点通常每周都会收集这些数据。 从 1806 版开始，CMPivot 这种新的控制台中实用工具现提供对环境中设备实时状态的访问。 它立即对目标集合中的所有连接设备运行查询，并返回结果。 可以在工具中对此数据进行筛选和分组。 通过提供来自联机客户端的实时数据，可以更快地回答业务问题、解决问题并对安全事件作出响应。
 
@@ -131,51 +131,51 @@ CMPivot 窗口包含以下元素：
 
 6. 结果窗格会显示活动客户端针对查询返回的数据。  
 
-    - 可用的列视实体和查询而定。  
+   - 可用的列视实体和查询而定。  
 
-    - 单击列名以按照该属性对结果进行排序。  
+   - 单击列名以按照该属性对结果进行排序。  
 
-    - 右键单击任何列名，按照该列中的相同信息对结果进行分组，或者排序。  
+   - 右键单击任何列名，按照该列中的相同信息对结果进行分组，或者排序。  
 
-    - 右键单击设备名称，在设备上执行以下附加操作：  
+   - 右键单击设备名称，在设备上执行以下附加操作：  
 
-       - **切换到**：查询此设备上的其他实体。  
+      - **切换到**：查询此设备上的其他实体。  
 
-       - **运行脚本**：启动“运行脚本”向导，在此设备上运行现有 PowerShell 脚本。 有关详细信息，请参阅[运行脚本](/sccm/apps/deploy-use/create-deploy-scripts#run-a-script)。  
+      - **运行脚本**：启动“运行脚本”向导，在此设备上运行现有 PowerShell 脚本。 有关详细信息，请参阅[运行脚本](/sccm/apps/deploy-use/create-deploy-scripts#run-a-script)。  
 
-       - **远程控制**：在此设备上启动 Configuration Manager 远程控制会话。 有关详细信息，请参阅[如何远程管理 Windows 客户端计算机](/sccm/core/clients/manage/remote-control/remotely-administer-a-windows-client-computer)。  
+      - **远程控制**：在此设备上启动 Configuration Manager 远程控制会话。 有关详细信息，请参阅[如何远程管理 Windows 客户端计算机](/sccm/core/clients/manage/remote-control/remotely-administer-a-windows-client-computer)。  
 
-       - **资源浏览器**：启动此设备的 Configuration Manager 资源浏览器。 有关详细信息，请参阅[查看硬件清单](/sccm/core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory)或[查看软件清单](/sccm/core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory)。  
+      - **资源浏览器**：启动此设备的 Configuration Manager 资源浏览器。 有关详细信息，请参阅[查看硬件清单](/sccm/core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory)或[查看软件清单](/sccm/core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory)。  
 
-    - 右键单击任何非设备单元格，以执行以下附加操作：  
+   - 右键单击任何非设备单元格，以执行以下附加操作：  
 
-       - **复制**：将单元格的文本复制到剪贴板。  
+     - **复制**：将单元格的文本复制到剪贴板。  
 
-       - **显示具备以下条件的设备**：查询具有此属性值的设备。 例如，从 `OS` 查询的结果中，在“版本”行中的单元格上选择此选项：`OS | summarize countif( (Version == '10.0.17134') ) by Device | where (countif_ > 0)`  
+     - **显示具备以下条件的设备**：查询具有此属性值的设备。 例如，从 `OS` 查询的结果中，在“版本”行中的单元格上选择此选项：`OS | summarize countif( (Version == '10.0.17134') ) by Device | where (countif_ > 0)`  
 
-       - **显示不具备以下条件的设备**：查询没有此属性值的设备。 例如，从 `OS` 查询的结果中，在“版本”行中的单元格上选择此选项：`OS | summarize countif( (Version == '10.0.17134') ) by Device | where (countif_ == 0) | project Device`  
+     - **显示不具备以下条件的设备**：查询没有此属性值的设备。 例如，从 `OS` 查询的结果中，在“版本”行中的单元格上选择此选项：`OS | summarize countif( (Version == '10.0.17134') ) by Device | where (countif_ == 0) | project Device`  
 
-       - **使用必应进行搜索**：使用此值作为查询字符串，启动默认 Web 浏览器以转到 www.bing.com。  
+     - **使用必应进行搜索**：使用此值作为查询字符串，启动默认 Web 浏览器以转到 www.bing.com。  
 
-    - 单击任何超链接文本，可转到针对该特定信息的视图。  
+   - 单击任何超链接文本，可转到针对该特定信息的视图。  
 
-    - 结果窗格显示的行不会超过 20,000 个。 调整查询以进一步筛选数据，或者在较小的集合上重新启动 CMPivot。  
+   - 结果窗格显示的行不会超过 20,000 个。 调整查询以进一步筛选数据，或者在较小的集合上重新启动 CMPivot。  
 
 7. 状态栏显示以下信息（从左到右）：  
 
-    - 目标集合的当前查询状态。 此状态包括：  
-        - 完成查询的活动客户端数量 (3)  
-        - 客户端总数 (5)  
-        - 脱机客户端数量 (2)  
-        - 返回失败的任何客户端 (0)  
+   - 目标集合的当前查询状态。 此状态包括：  
+     - 完成查询的活动客户端数量 (3)  
+     - 客户端总数 (5)  
+     - 脱机客户端数量 (2)  
+     - 返回失败的任何客户端 (0)  
 
-        例如：`Query completed on 3 of 5 clients (2 clients offline and 0 failure)`  
+       例如：`Query completed on 3 of 5 clients (2 clients offline and 0 failure)`  
 
-    - 客户端操作的 ID。 例如：`id(16780221)`  
+   - 客户端操作的 ID。 例如：`id(16780221)`  
 
-    - 当前集合。 例如：`PM_Team_Machines`  
+   - 当前集合。 例如：`PM_Team_Machines`  
 
-    - 结果窗格中的总行数。 例如 `1 objects`  
+   - 结果窗格中的总行数。 例如 `1 objects`  
 
 
 
@@ -215,7 +215,7 @@ CMPivot 窗口包含以下元素：
 `Bios | summarize countif( (Version == 'LENOVO - 1140') ) by Device | where (countif_ > 0)`
 
 
-### <a name="example-4-free-disk-space"></a>示例 4：免费磁盘空间
+### <a name="example-4-free-disk-space"></a>示例 4：可用磁盘空间
 
 需要在网络文件服务器上临时存储大型文件，但不确定哪个磁盘拥有足够的容量。 对文件服务器集合启动 CMPivot，并查询“Disk”实体。 修改 CMPivot 的查询以快速返回包含实时存储数据的活动服务器列表：  
 

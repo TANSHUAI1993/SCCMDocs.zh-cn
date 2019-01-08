@@ -10,16 +10,16 @@ ms.assetid: 49ef2ed2-2e15-4637-8b63-1d5b7f9c17e1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 019b275177e1f264a4bfc2926cfe45ebd0be8eae
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 94ef3ce54db0efb7be7e9d6d0709f48bb212f7e7
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334566"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416531"
 ---
 # <a name="how-to-test-client-upgrades-in-a-pre-production-collection-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中的预生产集合中测试客户端升级
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：*System Center Configuration Manager (Current Branch)*
 
 可以在升级站点的其余部分之前，在预生产集合中测试新 Configuration Manager 客户端版本。  执行此操作时，仅升级属于测试集合的设备。 只要有机会测试客户端，就可以提升客户端，使客户端软件的新版本可用于该站点的其余部分。
 
@@ -38,15 +38,15 @@ ms.locfileid: "32334566"
 > [!IMPORTANT]
 > 工作组计算机不支持预生产客户端部署。 工作组计算机无法使用分发点需要的身份验证来访问预生产客户端包。  当最新客户端被提升为生产客户端时，它们将收到此客户端。
 
-1. [设置](..\collections\create-collections.md)包含想要向其部署预生产客户端的计算机的集合。   
+1. [设置](../collections/create-collections.md)包含想要向其部署预生产客户端的计算机的集合。   
 
-1.  在 Configuration Manager 控制台中，打开“管理” > “站点配置” > “站点”，选择“层次结构设置”。  
+2. 在 Configuration Manager 控制台中，打开“管理” > “站点配置” > “站点”，选择“层次结构设置”。  
 
-     在“层次结构设置属性”  的“客户端升级” 选项卡上：  
+    在“层次结构设置属性”  的“客户端升级” 选项卡上：  
 
-    -   选择“使用预生产客户端自动升级预生产集合中的全部客户端”   
+   -   选择“使用预生产客户端自动升级预生产集合中的全部客户端”   
 
-    -   输入要用作预生产集合的集合的名称  
+   -   输入要用作预生产集合的集合的名称  
 
 ![测试客户端升级](media/test-client-upgrades.png)
 

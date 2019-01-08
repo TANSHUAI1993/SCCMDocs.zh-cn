@@ -10,16 +10,16 @@ ms.assetid: c14a3607-253b-41fb-8381-ae2d534a9022
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7635dce325a2612c144c6eaa9c733b7dffc7c251
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 1c1d83f6dc0de701176bbf6eeec8936afa081829
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456203"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420679"
 ---
 # <a name="install-in-console-updates-for-configuration-manager"></a>为 Configuration Manager 安装控制台内更新
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 Configuration Manager 与 Microsoft 云服务同步，以获取更新。 随后从 Configuration Manager 控制台安装这些更新。
 
@@ -112,7 +112,7 @@ Configuration Manager 与 Microsoft 云服务同步，以获取更新。 随后�
 - [用于安装更新 1802 的清单](/sccm/core/servers/manage/checklist-for-installing-update-1802)
 
 
-###  <a name="bkmk_step2"></a> 步骤 2：安装更新之前运行先决条件检查程序  
+###  <a name="bkmk_step2"></a>步骤 2：安装更新之前运行先决条件检查程序  
 
 安装更新之前，请考虑运行针对该更新的先决条件检查。 如果在安装更新之前运行先决条件检查：  
 
@@ -165,18 +165,18 @@ Configuration Manager 与 Microsoft 云服务同步，以获取更新。 随后�
 #### <a name="1-when-the-update-installation-starts"></a>1.更新安装启动时  
 你会看到更新向导，该向导显示更新适用的产品区域的列表。  
 
--   在该向导的“常规”页面中，根据需要配置“先决条件警告”：  
+- 在该向导的“常规”页面中，根据需要配置“先决条件警告”：  
 
-    -   先决条件错误会始终停止更新安装。 请先解决错误，然后才能成功地重试更新安装。 有关详细信息，请参阅[重试失败更新的安装](#bkmk_retry)。  
+  - 先决条件错误会始终停止更新安装。 请先解决错误，然后才能成功地重试更新安装。 有关详细信息，请参阅[重试失败更新的安装](#bkmk_retry)。  
 
-    -   先决条件警告也可以停止更新安装。 重试更新安装之前，请先解决警告问题。 有关详细信息，请参阅[重试失败更新的安装](#bkmk_retry)。  
+  - 先决条件警告也可以停止更新安装。 重试更新安装之前，请先解决警告问题。 有关详细信息，请参阅[重试失败更新的安装](#bkmk_retry)。  
 
-    -   **无论是否缺少要求，都将忽略任何先决条件检查警告并安装此更新**：为更新安装设置忽略先决条件警告的条件。 此选项允许更新安装以继续操作。 如果不选择此选项，则在更新安装遇到警告时会停止该过程。 除非以前为站点运行了先决条件检查并解决了先决条件警告，否则不要使用此选项。  
+  - **无论是否缺少要求，都将忽略任何先决条件检查警告并安装此更新**：设置更新安装的条件以忽略先决条件警告。 此选项允许更新安装以继续操作。 如果不选择此选项，则在更新安装遇到警告时会停止该过程。 除非以前为站点运行了先决条件检查并解决了先决条件警告，否则不要使用此选项。  
 
-      在“管理”和“监视”这两个工作区中，“更新和维护服务”节点都在功能区上包含了一个名为“忽略先决条件警告”的按钮。 当因先决条件检查警告而导致无法完成更新包安装时，可以使用此按钮。 例如，安装更新而不使用忽略先决条件警告选项（从更新向导中）。 更新安装停止，出现先决条件警告的状态，但没有发生错误。 稍后单击功能区中的“忽略先决条件警告”。 此操作会触发自动继续安装该更新而忽略先决条件警告。 使用此选项时，几分钟后将自动继续更新安装。  
+    在“管理”和“监视”这两个工作区中，“更新和维护服务”节点都在功能区上包含了一个名为“忽略先决条件警告”的按钮。 当因先决条件检查警告而导致无法完成更新包安装时，可以使用此按钮。 例如，安装更新而不使用忽略先决条件警告选项（从更新向导中）。 更新安装停止，出现先决条件警告的状态，但没有发生错误。 稍后单击功能区中的“忽略先决条件警告”。 此操作会触发自动继续安装该更新而忽略先决条件警告。 使用此选项时，几分钟后将自动继续更新安装。  
 
 
--   当 Configuration Manager 客户端有适用的更新时，请选择使用一组有限的客户端来测试该客户端更新。 有关详细信息，请参阅[如何在预生产集合中测试客户端升级](/sccm/core/clients/manage/upgrade/test-client-upgrades)。  
+- 当 Configuration Manager 客户端有适用的更新时，请选择使用一组有限的客户端来测试该客户端更新。 有关详细信息，请参阅[如何在预生产集合中测试客户端升级](/sccm/core/clients/manage/upgrade/test-client-upgrades)。  
 
 
 #### <a name="2-during-the-update-installation"></a>2.更新安装过程中  
@@ -266,54 +266,54 @@ Configuration Manager 与 Microsoft 云服务同步，以获取更新。 随后�
 
 安装后任务包括：
 
--   安装 SMS_EXECUTIVE 服务
+- 安装 SMS_EXECUTIVE 服务
   -   在站点服务器上运行的关键服务。
   -   重新安装此服务应快速完成。
 
 
--   安装 SMS_DATABASE_NOTIFICATION_MONITOR 组件
+- 安装 SMS_DATABASE_NOTIFICATION_MONITOR 组件
   -   SMS_EXECUTIVE 服务的关键站点组件线程。
   -   重新安装此服务应快速完成。
 
 
--   安装 SMS_HIERARCHY_MANAGER 组件
+- 安装 SMS_HIERARCHY_MANAGER 组件
   -   在站点服务器上运行的关键站点组件。
   -   负责在站点系统服务器上重新安装角色。 不显示单个站点系统角色的重新安装状态。
   -   重新安装此服务应快速完成。
 
 
--   安装 SMS_REPLICATION_CONFIGURATION_MONITOR 组件
+- 安装 SMS_REPLICATION_CONFIGURATION_MONITOR 组件
   -   在站点服务器上运行的关键站点组件。
   -   重新安装此服务应快速完成。
 
 
--   安装 SMS_POLICY_PROVIDER 组件
+- 安装 SMS_POLICY_PROVIDER 组件
   -   仅在主站点上运行的关键站点组件。
   -   重新安装此服务应快速完成。
 
 
--   监视复制初始化   
+- 监视复制初始化   
   -   此任务仅显示在管理中心站点和子主站点中。
   -   取决于 SMS_REPLICATION_CONFIGURATION_MONITOR。
   -   应快速完成。
 
 
--   更新 Configuration Manager 客户端预生产包    
+- 更新 Configuration Manager 客户端预生产包    
   -   即使客户端预生产（也称为客户端试验）未启用以供使用，此任务也会显示。
   -   层次结构中的所有站点都完成安装更新之前不会启动。
 
 
--   更新站点服务器上的客户端文件夹
+- 更新站点服务器上的客户端文件夹
   -   如果在预生产环境中使用客户端，则不显示此任务。  
   -   应快速完成。
 
 
--   更新 Configuration Manager 客户端包
+- 更新 Configuration Manager 客户端包
   -   如果在预生产环境中使用客户端，则不显示此任务。  
   -   只有在所有站点都安装更新后才完成。  
 
 
--   打开功能
+- 打开功能
   -   此任务仅显示在层次结构的顶层站点中。
   -   层次结构中的所有站点都完成安装更新之前不会启动。
   -   不显示各项功能。
@@ -342,7 +342,7 @@ Configuration Manager 与 Microsoft 云服务同步，以获取更新。 随后�
 
 转到“管理”工作区，选择“更新和维护服务”节点。 选择更新，然后选择下列选项之一：  
 
-  -   **重试**：从“更新和维护服务”**重试**时，将再次开始更新安装，并自动忽略先决条件警告。 如果之前复制内容失败，则会重新复制更新的内容。  
+  -   **重试**：从“更新和维护服务”重试时，将再次开始更新安装，并自动忽略先决条件警告。 如果之前复制内容失败，则会重新复制更新的内容。  
 
   - **忽略先决条件警告**：如果由于警告而导致更新安装停止，则可以选择“忽略先决条件警告”。 此操作允许在几分钟后继续安装更新，并使用用于忽略先决条件警告的选项。   
 
@@ -357,7 +357,7 @@ Configuration Manager 与 Microsoft 云服务同步，以获取更新。 随后�
 
 转到“监视”工作区，选择“站点维护服务状态”节点。 选择更新，然后单击下列选项之一：  
 
-  - **重试**：从“站点维护服务状态”**重试**时，仅在此站点重启更新安装。 与从“更新和维护服务”节点运行**重试**不同，此重试不会忽略先决条件警告。  
+  - **重试**：从“站点维护服务状态”重试时，仅在此站点重启更新安装。 与从“更新和维护服务”节点运行**重试**不同，此重试不会忽略先决条件警告。  
 
   - **忽略先决条件警告**：如果由于警告而导致更新安装停止，则可以单击“忽略先决条件警告”。 此操作允许在几分钟后继续安装更新，并使用用于忽略先决条件警告的选项。  
 

@@ -10,12 +10,12 @@ ms.assetid: bd3df04a-902f-4e91-89eb-5584b47d9efa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8c807f771d88701127c47d0290b6d8fc6bcb0f00
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: bd1181bd14779a6ac659927979185aa174203206
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350113"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420169"
 ---
 # <a name="task-sequence-steps-to-manage-bios-to-uefi-conversion"></a>管理 BIOS 转换为 UEFI 所采用的任务序列步骤
 Windows 10 提供了许多需要启用 UEFI 的设备的新安全功能。 你可能拥有支持 UEFI 的新式 Windows 电脑，但正在使用旧版 BIOS。 将设备转换为 UEFI 需要你转到每台电脑、对硬盘重新分区并重新配置固件。 通过在 Configuration Manager 中使用任务序列，你可以准备用于 BIOS 到 UEFI 转换的硬盘，作为就地升级过程的一部分从 BIOS 转换为 UEFI，并收集 UEFI 信息作为硬件清单的一部分。
@@ -32,18 +32,18 @@ Windows 10 提供了许多需要启用 UEFI 的设备的新安全功能。 你�
 1. 在捕获文件和设置之后，并在安装操作系统之前，创建新的任务序列组。 例如，在“捕获文件和设置”组之后创建名为“BIOS-to-UEFI”的组。
 2. 在新组的“选项”选项卡中，添加一个新的任务序列变量作为条件，其中 **_SMSTSBootUEFI**  **不等于** **true**。 这样可以在计算机已处于 UEFI 模式时，防止运行组中的步骤。
 
-  ![BIOS 转 UEFI 组](../../core/get-started/media/BIOS-to-UEFI-group.png)
+   ![BIOS 转 UEFI 组](../../core/get-started/media/BIOS-to-UEFI-group.png)
 3. 在新组中，添加“重启计算机”任务序列步骤。 在“指定重启后要运行的内容”中，选择“已选择分配给此任务序列的启动映像”以在 Windows PE 中启动计算机。  
 4. 在“选项”选项卡中，添加一个任务序列变量作为条件，其中 **_SMSTSInWinPE 等于 false**。 这样在计算机已处于 Windows PE 时，防止运行此步骤。
 
-  ![“重启计算机”步骤](../../core/get-started/media/restart-in-windows-pe.png)
+   ![“重启计算机”步骤](../../core/get-started/media/restart-in-windows-pe.png)
 5. 添加一个步骤以启动 OEM 工具，该工具可将固件从 BIOS 转换到 UEFI。 这通常是**运行命令行**任务序列步骤，其中有一个命令行可以启动 OEM 工具。
 6. 添加“格式化磁盘并分区”任务序列步骤，用于对硬盘进行分区和格式化。 在该步骤中，执行以下操作：
-  1. 创建 FAT32 分区，该分区在安装操作系统之前将转换为 UEFI。 为“磁盘类型”选择“GPT”。
+   1. 创建 FAT32 分区，该分区在安装操作系统之前将转换为 UEFI。 为“磁盘类型”选择“GPT”。
     ![格式化磁盘并分区步骤](../media/format-and-partition-disk.png)
-  2. 转到 FAT32 分区的属性。 在“变量”字段中输入“TSUEFIDrive”。 当任务序列检测到此变量时，它将为 UEFI 转换做准备，准备就绪后会重启计算机。
+   2. 转到 FAT32 分区的属性。 在“变量”字段中输入“TSUEFIDrive”。 当任务序列检测到此变量时，它将为 UEFI 转换做准备，准备就绪后会重启计算机。
     ![分区属性](../../core/get-started/media/partition-properties.png)
-  3. 创建 NTFS 分区，任务序列引擎使用此分区保存其状态和存储日志文件。
+   3. 创建 NTFS 分区，任务序列引擎使用此分区保存其状态和存储日志文件。
 7. 添加“重启计算机”任务序列步骤。 在“指定重启后要运行的内容”中，选择“已选择分配给此任务序列的启动映像”以在 Windows PE 中启动计算机。  
 
 ## <a name="convert-from-bios-to-uefi-during-an-in-place-upgrade"></a>在就地升级过程中从 BIOS 转换为 UEFI

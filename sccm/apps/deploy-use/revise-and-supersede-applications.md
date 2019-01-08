@@ -10,16 +10,16 @@ ms.assetid: 30170d70-489f-47f7-bebf-9ed0115db26b
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: d32a2997da45f02dfd4d2abaf3bf292295f88224
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: b42012bdd6eb0456d25f9970ed2cf18f881a1c14
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32335569"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424810"
 ---
 # <a name="revise-and-supersede-applications-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中修订和取代应用程序
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 在本主题中，将了解如何处理 System Center Configuration Manager 应用程序版本，以及如何使用应用程序的新版本取代旧版本。  
 
@@ -76,13 +76,13 @@ ms.locfileid: "32335569"
 
  可以创建一个取代关系，用于将从属应用程序更新到新版本。  
 
-1.  确保新的从属应用程序和原始从属应用程序位于主应用程序的同一依赖关系组中。  
+1. 确保新的从属应用程序和原始从属应用程序位于主应用程序的同一依赖关系组中。  
 
-2.  创建一个取代关系，用于将原始从属应用程序取代为新的从属应用程序。  
+2. 创建一个取代关系，用于将原始从属应用程序取代为新的从属应用程序。  
 
- 在主应用程序的新安装期间，会安装新的从属应用程序。 主应用程序的现有安装会与新的从属应用程序一起更新。  
+   在主应用程序的新安装期间，会安装新的从属应用程序。 主应用程序的现有安装会与新的从属应用程序一起更新。  
 
- 最终结果是主应用程序的所有部署都使用新的从属应用程序。  
+   最终结果是主应用程序的所有部署都使用新的从属应用程序。  
 
 ### <a name="further-considerations"></a>更多注意事项  
 

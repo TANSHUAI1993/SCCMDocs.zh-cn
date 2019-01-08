@@ -10,16 +10,16 @@ ms.assetid: 784c295c-b8b8-4202-ab9f-665908d49d6d
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 4aed4ecda35fded9314ae54b6601deb6f8e07197
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 129223a111085854ede038575653655ad13884dd
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32343882"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53423807"
 ---
 # <a name="monitor-applications-from-the-system-center-configuration-manager-console"></a>监视 System Center Configuration Manager 控制台中的应用程序
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 
 在 System Center Configuration Manager 中，可以监视所有软件的部署，包括软件更新、符合性设置、应用程序、任务序列以及包和程序。 可以使用 Configuration Manager 控制台中的“监视”工作区或使用报表来监视部署。  
@@ -41,17 +41,17 @@ ms.locfileid: "32343882"
 
 可查看每种符合性状态的附加信息，包括符合性状态中的子类别，以及此类别中的用户和设备数。 例如，“错误”  符合性状态包含以下子类别：  
 
--   错误评估要求  
+- 错误评估要求  
 
--   与内容相关的错误  
+- 与内容相关的错误  
 
--   安装错误  
+- 安装错误  
 
- 在多种符合性状态适用于应用程序部署时，你将会看到代表着最低符合性的聚合状态。 例如：  
+  在多种符合性状态适用于应用程序部署时，你将会看到代表着最低符合性的聚合状态。 例如：  
 
-    -   如果用户登录到两台设备，并且应用程序在一台设备上安装成功但在另一台设备上安装失败，则对该用户而言，应用程序的聚合部署状态会显示为“错误”。  
+  -   如果用户登录到两台设备，并且应用程序在一台设备上安装成功但在另一台设备上安装失败，则对该用户而言，应用程序的聚合部署状态会显示为“错误”。  
 
-    -   如果将应用程序部署到登录某计算机的所有用户，将收到该计算机的多个部署结果。 如果其中一个部署失败，则该计算机的聚合部署状态显示为“错误” 。  
+  -   如果将应用程序部署到登录某计算机的所有用户，将收到该计算机的多个部署结果。 如果其中一个部署失败，则该计算机的聚合部署状态显示为“错误” 。  
 
 不会聚合包部署和程序部署的部署状态。  
 

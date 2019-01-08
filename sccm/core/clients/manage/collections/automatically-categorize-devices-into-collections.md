@@ -10,21 +10,21 @@ ms.assetid: 98b038b4-1a13-4228-bdb8-a12194e32b0e
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 2730464afe21705d020943d3e1566b3130c9c780
-ms.sourcegitcommit: ee434c53b3695a039b56298082b6f61f1006d9dd
+ms.openlocfilehash: b3605bc694000a86c407fcc456bb8e4115159490
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49943251"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421087"
 ---
 # <a name="automatically-categorize-devices-into-collections-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 自动将设备分类到集合
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 可创建设备类别，可将其用于配合使用 Microsoft Intune 和 Configuration Manager 时自动在设备集合中放置设备。 然后用户在 Intune 中注册设备时需要选择某个设备类别。 可从 Configuration Manager 控制台中更改设备类别。
 
-> [!IMPORTANT]  
-    >  此功能适用于 **2016 年 6 月**及以后版本的 Microsoft Intune。 试用这些过程前，请确保已更新到此版本。
+> [!IMPORTANT]
+>  此功能适用于 **2016 年 6 月**及以后版本的 Microsoft Intune。 试用这些过程前，请确保已更新到此版本。
 
 ## <a name="create-device-categories"></a>创建设备类别
 

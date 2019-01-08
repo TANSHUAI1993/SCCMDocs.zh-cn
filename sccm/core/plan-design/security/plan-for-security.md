@@ -10,21 +10,21 @@ ms.assetid: 2a216814-ca8c-4d2e-bcef-dc00966a3c9f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5332fa778b343a5eaae93a08db0826823fffce42
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 88fa98de0f9f0a113adeef3a30536628706484ab
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456373"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424674"
 ---
 # <a name="plan-for-security-in-configuration-manager"></a>在 Configuration Manager 中规划安全性
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 本文介绍了使用 Configuration Manager 实现进行安全规划时要考虑的原理。 它包括以下部分：  
 
 - [规划证书（自签名和 PKI）](#BKMK_PlanningForCertificates)  
-    - [下一代加密技术 (CNG) 证书](#bkmk_plan-cng)  
+    - [加密：下一代 (CNG) 证书](#bkmk_plan-cng)  
     - [增强型 HTTP](#bkmk_plan-ehttp)  
     - [CMG 和 CDP 证书](#bkmk_plan-cmgcdp)  
     - [站点服务器签名证书（自签名）](#bkmk_plansitesign)  
@@ -58,9 +58,9 @@ ms.locfileid: "52456373"
  PKI 证书不可用时，Configuration Manager 将自动生成自签名的证书。 Configuration Manager 中的某些证书始终是自签名证书。 在某些情况下，Configuration Manager 会自动管理自签名证书，不必采取任何其他操作。 其中一个示例是站点服务器签名证书。 该证书始终是自签名证书。 它可确保客户端从管理点下载的策略发送自站点服务器，并且未被篡改。  
 
 
-### <a name="bkmk_plan-cng"></a> 下一代加密技术 (CNG) 证书  
+### <a name="bkmk_plan-cng"></a>加密：下一代 (CNG) 证书  
 
- Configuration Manager 对下一代加密技术 (CNG) 证书提供支持。 Configuration Manager 客户端可以通过 CNG 密钥存储提供者 (KSP) 中的私钥使用 PKI 客户端身份验证证书。 通过 KSP 支持，Configuration Manager 客户端可支持基于硬件的私钥，如用于 PKI 客户端身份验证证书的 TPM KSP。 有关详细信息，请参阅 [CNG 证书概述](/sccm/core/plan-design/network/cng-certificates-overview)。
+ Configuration Manager 支持加密：下一代 (CNG) 证书. Configuration Manager 客户端可以通过 CNG 密钥存储提供者 (KSP) 中的私钥使用 PKI 客户端身份验证证书。 通过 KSP 支持，Configuration Manager 客户端可支持基于硬件的私钥，如用于 PKI 客户端身份验证证书的 TPM KSP。 有关详细信息，请参阅 [CNG 证书概述](/sccm/core/plan-design/network/cng-certificates-overview)。
 
 
 ### <a name="bkmk_plan-ehttp"></a> 增强型 HTTP  
@@ -178,17 +178,17 @@ IIS 始终会检查 CRL 中是否有客户端证书，且无法在 Configuration
 
 在大多数情况下，Configuration Manager 客户端会正确标识唯一适合的 PKI 证书。 但是，若情况并非如此，而是根据客户端身份验证功能选择证书时，可设置下列两种替代选择方法：  
 
--   在客户端证书的“使用者名称”中进行部分字符串匹配。 此方法不区分大小写。 如果你在使用者字段中使用计算机的完全限定的域名 (FQDN) 并且想基于域后缀（例如 contoso.com）选择证书，则该方法很适用。 但是，你可使用此选择方法在证书使用者名称中标识任何连续字符串，以将此证书与客户端证书存储中的其他证书区分开来。  
+- 在客户端证书的“使用者名称”中进行部分字符串匹配。 此方法不区分大小写。 如果你在使用者字段中使用计算机的完全限定的域名 (FQDN) 并且想基于域后缀（例如 contoso.com）选择证书，则该方法很适用。 但是，你可使用此选择方法在证书使用者名称中标识任何连续字符串，以将此证书与客户端证书存储中的其他证书区分开来。  
 
-    > [!NOTE]  
-    >  你无法将与使用者可选名称 (SAN) 匹配的部分字符串用作站点设置。 虽然可使用 CCMSetup 为 SAN 指定部分字符串匹配，但在下列情况下将由站点属性对其进行覆盖：  
-    >   
-    >  -   客户端检索发布到 Active Directory 域服务的站点信息。  
-    > -   使用客户端请求安装方式安装的客户端。  
-    >   
-    >  仅当手动安装客户端以及客户端未从 Active Directory 域服务中检索到站点信息时，才在 SAN 中使用部分字符串匹配。 例如，这些条件适用于仅 Internet 客户端。  
+  > [!NOTE]
+  >  你无法将与使用者可选名称 (SAN) 匹配的部分字符串用作站点设置。 虽然可使用 CCMSetup 为 SAN 指定部分字符串匹配，但在下列情况下将由站点属性对其进行覆盖：  
+  > 
+  > - 客户端检索发布到 Active Directory 域服务的站点信息。  
+  >   -   使用客户端请求安装方式安装的客户端。  
+  > 
+  >   仅当手动安装客户端以及客户端未从 Active Directory 域服务中检索到站点信息时，才在 SAN 中使用部分字符串匹配。 例如，这些条件适用于仅 Internet 客户端。  
 
--   匹配客户端证书“使用者名称”属性值或“使用者可选名称 (SAN)”属性值。 此方法区分大小写。 使用符合 RFC 3280 标准的 X500 可分辨名称或同等对象标识符 (OID)，并希望根据属性值选择证书时，该方法适用。 你可以仅指定唯一识别或验证证书并使证书与证书存储中其他证书区别开来所需的属性及其值。  
+- 匹配客户端证书“使用者名称”属性值或“使用者可选名称 (SAN)”属性值。 此方法区分大小写。 使用符合 RFC 3280 标准的 X500 可分辨名称或同等对象标识符 (OID)，并希望根据属性值选择证书时，该方法适用。 你可以仅指定唯一识别或验证证书并使证书与证书存储中其他证书区别开来所需的属性及其值。  
 
 下表显示 Configuration Manager 针对客户端证书选择条件支持的属性值。  
 
@@ -212,9 +212,9 @@ IIS 始终会检查 CRL 中是否有客户端证书，且无法在 Configuration
 
 如果应用了选择条件之后找到了多个合适的证书，则可以替代默认配置以选择有效期最长的证书，并改为指定不选择证书。 在此情况下，客户端将无法使用 PKI 证书与 IIS 站点系统通信。 客户端将向分配的回退状态点发送一则错误消息，警告你证书选择失败，以便可更改或改进证书选择条件。 客户端行为则取决于失败的连接是通过 HTTPS 还是 HTTP 进行的。  
 
--   如果失败的连接是通过 HTTPS 进行的：客户端会尝试通过 HTTP 进行连接并使用客户端自签名证书。  
+-   如果失败的连接是通过 HTTPS 进行的：则客户端尝试通过 HTTP 进行连接，并使用客户端自签名证书。  
 
--   如果失败的连接是通过 HTTP 进行的：客户端会使用自签名的客户端证书尝试通过 HTTP 再次连接。  
+-   如果失败的连接是通过 HTTP 进行的：则客户端尝试使用自签名客户端证书通过 HTTP 再次连接。  
 
 为了帮助标识唯一的 PKI 客户端证书，也可以指定自定义存储，而不是在“计算机”存储中指定“个人”默认值。 但必须独立于 Configuration Manager 创建此存储。 必须能够将证书部署到此自定义存储并在有效期到期之前续订证书。  
 
@@ -227,37 +227,37 @@ IIS 始终会检查 CRL 中是否有客户端证书，且无法在 Configuration
 
 由于 Configuration Manager 中配置选项数量的缘故，无法使用单一方法来转换站点以使所有客户端都使用 HTTPS 连接。 但是，可以按照下列步骤作为指导：  
 
-1.  安装 Configuration Manager 站点并对其进行配置，使站点系统接受 HTTPS 和 HTTP 客户端连接。  
+1. 安装 Configuration Manager 站点并对其进行配置，使站点系统接受 HTTPS 和 HTTP 客户端连接。  
 
-2.  配置站点属性中的“客户端计算机通信”选项卡，从而“站点系统设置”为“HTTP 或 HTTPS”，然后选择“在可用时使用 PKI 客户端证书(客户端身份验证功能)”。  有关详细信息，请参阅[为客户端 PKI 证书配置设置](/sccm/core/plan-design/security/configure-security#BKMK_ConfigureClientPKI)。  
+2. 配置站点属性中的“客户端计算机通信”选项卡，从而“站点系统设置”为“HTTP 或 HTTPS”，然后选择“在可用时使用 PKI 客户端证书(客户端身份验证功能)”。  有关详细信息，请参阅[为客户端 PKI 证书配置设置](/sccm/core/plan-design/security/configure-security#BKMK_ConfigureClientPKI)。  
 
-3.  试运行客户端证书的 PKI 推出。 有关部署示例，请参阅[为 Windows 计算机部署客户端证书](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_client2008_cm2012)。  
+3. 试运行客户端证书的 PKI 推出。 有关部署示例，请参阅[为 Windows 计算机部署客户端证书](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_client2008_cm2012)。  
 
-4.  使用客户端请求安装方法安装客户端。 有关详细信息，请参阅[如何使用客户端请求安装 Configuration Manager 客户端](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientPush)。  
+4. 使用客户端请求安装方法安装客户端。 有关详细信息，请参阅[如何使用客户端请求安装 Configuration Manager 客户端](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_ClientPush)。  
 
-5.  使用 Configuration Manager 控制台中的报表和信息来监视客户端部署和状态。  
+5. 使用 Configuration Manager 控制台中的报表和信息来监视客户端部署和状态。  
 
-6.  通过查看“设备”  节点的“资产和符合性”  工作区中的“客户端证书”  列，来跟踪使用客户端 PKI 证书的客户端的数目。  
+6. 通过查看“设备”  节点的“资产和符合性”  工作区中的“客户端证书”  列，来跟踪使用客户端 PKI 证书的客户端的数目。  
 
-     还可将 Configuration Manager HTTPS 准备情况评估工具 (cmHttpsReadiness.exe) 部署到计算机。 然后，使用这些报表查看可结合使用 Configuration Manager 和客户端 PKI 证书的计算机数量。  
+    还可将 Configuration Manager HTTPS 准备情况评估工具 (cmHttpsReadiness.exe) 部署到计算机。 然后，使用这些报表查看可结合使用 Configuration Manager 和客户端 PKI 证书的计算机数量。  
 
-    > [!NOTE]  
-    >  安装 Configuration Manager 客户端时，CMHttpsReadiness.exe 工具将安装在 `%windir%\CCM` 文件夹中。 运行此工具时可使用以下命令行选项：  
-    >   
-    > - `/Store:<name>`：此选项与 CCMCERTSTORE client.msi 属性相同  
-    > - `/Issuers:<list>`：此选项与 CCMCERTISSUERS client.msi 属性相同    
-    > - `/Criteria:<criteria>`：此选项与 CCMCERTSEL client.msi 属性相同    
-    > - `/SelectFirstCert`：此选项与 CCMFIRSTCERT client.msi 属性相同    
-    >   
-    >  有关详细信息，请参阅[关于客户端安装属性](/sccm/core/clients/deploy/about-client-installation-properties)。  
+   > [!NOTE]
+   >  安装 Configuration Manager 客户端时，CMHttpsReadiness.exe 工具将安装在 `%windir%\CCM` 文件夹中。 运行此工具时可使用以下命令行选项：  
+   > 
+   > - `/Store:<name>`：此选项与 CCMCERTSTORE client.msi 属性相同  
+   > - `/Issuers:<list>`：此选项与 CCMCERTISSUERS client.msi 属性相同    
+   > - `/Criteria:<criteria>`：此选项与 CCMCERTSEL client.msi 属性相同    
+   > - `/SelectFirstCert`：此选项与 CCMFIRSTCERT client.msi 属性相同    
+   > 
+   >   有关详细信息，请参阅[关于客户端安装属性](/sccm/core/clients/deploy/about-client-installation-properties)。  
 
-7.  如果确信足够多的客户端成功使用其客户端 PKI 证书通过 HTTP 进行身份验证，请执行下列步骤：  
+7. 如果确信足够多的客户端成功使用其客户端 PKI 证书通过 HTTP 进行身份验证，请执行下列步骤：  
 
-    1.  将 PKI Web 服务器证书部署到为站点运行其他管理点的成员服务器，并在 IIS 中配置该证书。 有关详细信息，请参阅[为运行 IIS 的站点系统部署 Web 服务器证书](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_webserver2008_cm2012)。  
+   1.  将 PKI Web 服务器证书部署到为站点运行其他管理点的成员服务器，并在 IIS 中配置该证书。 有关详细信息，请参阅[为运行 IIS 的站点系统部署 Web 服务器证书](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_webserver2008_cm2012)。  
 
-    2.  在此服务器上安装管理点角色，并针对“HTTPS”  配置管理点属性中的“客户端连接” 选项。  
+   2.  在此服务器上安装管理点角色，并针对“HTTPS”  配置管理点属性中的“客户端连接” 选项。  
 
-8.  进行监视并使用 HTTPS 验证具有 PKI 证书的客户端是否使用新管理点。 可使用 IIS 日志记录或性能计数器进行验证。  
+8. 进行监视并使用 HTTPS 验证具有 PKI 证书的客户端是否使用新管理点。 可使用 IIS 日志记录或性能计数器进行验证。  
 
 9. 将其他站点系统角色重新配置为使用 HTTPS 客户端连接。 若要在 Internet 上管理客户端，请确保站点系统具有 Internet FQDN。 配置各个管理点和分发点以接受来自 Internet 的客户端连接。  
 
@@ -266,9 +266,9 @@ IIS 始终会检查 CRL 中是否有客户端证书，且无法在 Configuration
 
 10. 扩展客户端和运行 IIS 的站点系统的 PKI 证书推出。 根据需要为 HTTPS 客户端连接和 Internet 连接设置站点系统角色。  
 
-11. 对于最高的安全性：当你确信所有的客户端正使用客户端 PKI 证书进行身份验证和加密时，将此站点属性更改为仅使用 HTTPS。  
+11. 对于最高安全性：如果确信所有客户端均正在使用客户端 PKI 证书进行身份验证和加密，请将站点属性更改为仅使用 HTTPS。  
 
- 该计划引入 PKI 证书，首先仅通过 HTTP 进行身份验证，然后通过 HTTPS 进行身份验证和加密。 按照此计划逐步引入这些证书时，可降低客户端不受管理的风险。 此外，还可得益于 Configuration Manager 支持的最高安全性。  
+    该计划引入 PKI 证书，首先仅通过 HTTP 进行身份验证，然后通过 HTTPS 进行身份验证和加密。 按照此计划逐步引入这些证书时，可降低客户端不受管理的风险。 此外，还可得益于 Configuration Manager 支持的最高安全性。  
 
 ##  <a name="BKMK_PlanningForRTK"></a> 规划受信任的根密钥  
 
@@ -280,26 +280,26 @@ IIS 始终会检查 CRL 中是否有客户端证书，且无法在 Configuration
 
  客户端使用两种机制自动检索受信任的根密钥的公共副本：  
 
- - 为 Configuration Manager 扩展 Active Directory 架构，并将站点发布到 Active Directory 域服务。 然后，客户端从全局目录服务器检索此站点信息。 有关详细信息，请参阅[为站点发布准备 Active Directory](/sccm/core/plan-design/network/extend-the-active-directory-schema)。  
+- 为 Configuration Manager 扩展 Active Directory 架构，并将站点发布到 Active Directory 域服务。 然后，客户端从全局目录服务器检索此站点信息。 有关详细信息，请参阅[为站点发布准备 Active Directory](/sccm/core/plan-design/network/extend-the-active-directory-schema)。  
 
- - 使用客户端请求安装方法安装客户端时。 有关详细信息，请参阅[客户端请求安装](/sccm/core/clients/deploy/plan/client-installation-methods#client-push-installation)。  
+- 使用客户端请求安装方法安装客户端时。 有关详细信息，请参阅[客户端请求安装](/sccm/core/clients/deploy/plan/client-installation-methods#client-push-installation)。  
 
- 如果客户端无法使用其中一种机制检索受信任的根密钥，则它们信任与其通信的第一个管理点提供的受信任的根密钥。 在此情况下，客户端可能会被错误地定向到攻击者的管理点，在那里，它将接收恶意管理点提供的策略。 此操作可能需由经验丰富的攻击者执行。 此攻击仅限于客户端从有效管理点检索受信任根密钥之前的短时间内发生。 为了降低攻击者将客户端错误定向到恶意管理点的风险，可为客户端预配置受信任的根密钥。  
+  如果客户端无法使用其中一种机制检索受信任的根密钥，则它们信任与其通信的第一个管理点提供的受信任的根密钥。 在此情况下，客户端可能会被错误地定向到攻击者的管理点，在那里，它将接收恶意管理点提供的策略。 此操作可能需由经验丰富的攻击者执行。 此攻击仅限于客户端从有效管理点检索受信任根密钥之前的短时间内发生。 为了降低攻击者将客户端错误定向到恶意管理点的风险，可为客户端预配置受信任的根密钥。  
 
- 使用以下过程预先设置并验证 Configuration Manager 客户端的受信任的根密钥：  
+  使用以下过程预先设置并验证 Configuration Manager 客户端的受信任的根密钥：  
 
- - [使用受信任的根密钥和文件来预配置客户端](#bkmk_trk-provision-file)  
+- [使用受信任的根密钥和文件来预配置客户端](#bkmk_trk-provision-file)  
 
- - [使用受信任的根密钥而不使用文件来预配置客户端](#bkmk_trk-provision-nofile)  
+- [使用受信任的根密钥而不使用文件来预配置客户端](#bkmk_trk-provision-nofile)  
 
- - [验证客户端上的受信任的根密钥](#bkmk_trk-verify)  
+- [验证客户端上的受信任的根密钥](#bkmk_trk-verify)  
 
- - [删除或替换受信任的根密钥](#bkmk_trk-reset)  
+- [删除或替换受信任的根密钥](#bkmk_trk-reset)  
 
- > [!NOTE]  
- > 若客户端可从 Active Directory 域服务或客户端请求中获取受信任的根密钥，则无需预先配置它。 
- > 
- > 当客户端使用 HTTPS 与管理点进行通信时，无需预先配置受信任的根密钥。 这些客户端通过使用 PKI 证书建立信任。  
+  > [!NOTE]  
+  > 若客户端可从 Active Directory 域服务或客户端请求中获取受信任的根密钥，则无需预先配置它。 
+  > 
+  > 当客户端使用 HTTPS 与管理点进行通信时，无需预先配置受信任的根密钥。 这些客户端通过使用 PKI 证书建立信任。  
 
 
 ### <a name="bkmk_trk-provision-file"></a> 使用受信任的根密钥和文件来预配置客户端  
@@ -423,11 +423,11 @@ IIS 始终会检查 CRL 中是否有客户端证书，且无法在 Configuration
 
 可用的级别如下：
 
-- Windows 身份验证：要求使用 Active Directory 域凭据进行身份验证。   
+- **Windows 身份验证**：要求使用 Active Directory 域凭据进行身份验证。   
 
-- 证书身份验证：要求使用由受信任的 PKI 证书颁发机构颁发的有效证书进行身份验证。  
+- **证书身份验证**：要求使用由受信任的 PKI 证书颁发机构颁发的有效证书进行身份验证。  
 
-- Windows Hello 企业版身份验证：要求使用与设备关联并采用生物识别或 PIN 的强双因素身份验证进行身份验证。  
+- **Windows Hello 企业版身份验证**：要求使用与设备关联并采用生物识别或 PIN 的强双因素身份验证进行身份验证。  
 
 有关详细信息，请参阅[规划 SMS 提供程序](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_auth)。 
 

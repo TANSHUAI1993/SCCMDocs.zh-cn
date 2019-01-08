@@ -10,16 +10,16 @@ ms.assetid: 72d7b174-f015-498f-a0a7-2161b9929198
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3981d454d0b007f5b057ccca4c8888da609dba97
-ms.sourcegitcommit: 2cc635835709fb8d86cdb63ea34233b36c94d4d8
+ms.openlocfilehash: d1a10f2381d6820d685ec8ff871c83c2a4c39bb1
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52259074"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53415052"
 ---
 # <a name="accounts-used-in-configuration-manager"></a>Configuration Manager 中使用的帐户
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：*System Center Configuration Manager (Current Branch)*
 
 可以使用以下信息确定 Configuration Manager 中使用的 Windows 组和帐户、它们的使用方式以及任何要求。  
 
@@ -223,14 +223,14 @@ Configuration Manager 自动管理组成员身份。 默认情况下，成员资
 ### <a name="active-directory-group-discovery-account"></a>Active Directory 组发现帐户  
 
  该站点使用“Active Directory 组发现帐户”从指定的 Active Directory 域服务中的位置发现以下对象：
- - 本地、全局和通用安全组
- - 这些组内的成员资格
- - 分发组内的成员资格
-    - 不会以组资源的形式发现通讯组
+- 本地、全局和通用安全组
+- 这些组内的成员资格
+- 分发组内的成员资格
+   - 不会以组资源的形式发现通讯组
 
- 此帐户可以是运行发现的站点服务器的计算机帐户，或者是 Windows 用户帐户。 它必须对为发现指定的 Active Directory 位置具有“读取”访问权限。  
+  此帐户可以是运行发现的站点服务器的计算机帐户，或者是 Windows 用户帐户。 它必须对为发现指定的 Active Directory 位置具有“读取”访问权限。  
 
- 有关详细信息，请参阅 [Active Directory 组发现](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutGroup)。
+  有关详细信息，请参阅 [Active Directory 组发现](/sccm/core/servers/deploy/configure/about-discovery-methods#bkmk_aboutGroup)。
 
 
 ### <a name="active-directory-system-discovery-account"></a>Active Directory 系统发现帐户  

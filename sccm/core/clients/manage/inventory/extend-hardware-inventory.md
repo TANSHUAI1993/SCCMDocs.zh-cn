@@ -10,16 +10,16 @@ ms.assetid: d5bfab4f-c55e-4545-877c-5c8db8bc1891
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 317a143ba80607bef46a371c0e93ad9f4027abe4
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: f1fa9f1bb2e036e0208a72e744f66da5c1887593
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344273"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53423297"
 ---
 # <a name="how-to-extend-hardware-inventory-in-system-center-configuration-manager"></a>How to extend hardware inventory in System Center Configuration Manager
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 硬件清单通过使用 Windows Management Instrumentation (WMI) 从 Windows 电脑读取信息。 WMI 是基于 Web 的企业管理 (WBEM) 的 Microsoft 实现，是用于访问企业中管理信息的行业标准。 在以前版本的 Configuration Manager 中，通过修改站点服务器上的文件 sms_def.mof 扩展硬件清单。 此文件包含可由硬件清单读取的 WMI 类的列表。 编辑此文件，可以启用和禁用现有类，还能将新类创建到清单。  
 
@@ -67,33 +67,33 @@ Configuration.mof 文件用于定义要通过客户端上的硬件清单列出�
 
 只能从层次结构的顶层服务器并通过修改默认客户端设置来添加清单类。 当创建自定义设备设置此选项不可用。
 
-1.  在 Configuration Manager 控制台中，选择“管理” > “客户端设置” > “默认客户端设置”。  
+1. 在 Configuration Manager 控制台中，选择“管理” > “客户端设置” > “默认客户端设置”。  
 
-4.  在“主页”选项卡上的“属性”组中，选择“属性”。  
+2. 在“主页”选项卡上的“属性”组中，选择“属性”。  
 
-5.  在“默认客户端设置”对话框中，选择“硬件清单”。  
+3. 在“默认客户端设置”对话框中，选择“硬件清单”。  
 
-6.  在“设备设置”列表中，选择“设置类”。  
+4. 在“设备设置”列表中，选择“设置类”。  
 
-7.  在“硬件清单类”对话框中，选择“添加”。  
+5. 在“硬件清单类”对话框中，选择“添加”。  
 
-8.  在 **添加硬件清单类** 对话框中，单击 **连接**。  
+6. 在 **添加硬件清单类** 对话框中，单击 **连接**。  
 
-9. 在 **连接到 Windows Management Instrumentation (WMI)** 对话框框中，指定将用于检索 WMI 类要用于检索这些类的 WMI 命名空间的计算机的名称。 如果您想要检索您指定的 WMI 命名空间下的所有类中，单击 **递归**。 如果您要连接到计算机不是本地计算机，提供有权访问远程计算机上的 WMI 的帐户的登录凭据。  
+7. 在 **连接到 Windows Management Instrumentation (WMI)** 对话框框中，指定将用于检索 WMI 类要用于检索这些类的 WMI 命名空间的计算机的名称。 如果您想要检索您指定的 WMI 命名空间下的所有类中，单击 **递归**。 如果您要连接到计算机不是本地计算机，提供有权访问远程计算机上的 WMI 的帐户的登录凭据。  
 
-10. 选择“连接”。  
+8. 选择“连接”。  
 
-11. 在“添加硬件清单类”对话框的“清单类”列表中，选择想要添加到 Configuration Manager 硬件清单的 WMI 类。  
+9. 在“添加硬件清单类”对话框的“清单类”列表中，选择想要添加到 Configuration Manager 硬件清单的 WMI 类。  
 
-12. 如果想要编辑所选的 WMI 类的相关信息，请选择“编辑”，然后在“类限定符”对话框框中，提供以下信息：  
+10. 如果想要编辑所选的 WMI 类的相关信息，请选择“编辑”，然后在“类限定符”对话框框中，提供以下信息：  
 
-    -   **显示名称** - 此名称将显示在资源浏览器中。  
+    - **显示名称** - 此名称将显示在资源浏览器中。  
 
-    -   **属性** - 指定将在其中显示 WMI 类的每个属性的单元。  
+    - **属性** - 指定将在其中显示 WMI 类的每个属性的单元。  
 
-     此外可以将属性指定为键属性来帮助唯一地标识每个类的实例。 如果类未定义任何键，从客户端报告的类的多个实例只能找到的最新的实例存储在数据库中。  
+      此外可以将属性指定为键属性来帮助唯一地标识每个类的实例。 如果类未定义任何键，从客户端报告的类的多个实例只能找到的最新的实例存储在数据库中。  
 
-     完成属性配置后，单击“确定”关闭“类限定符”对话框和其他打开的对话框。 
+      完成属性配置后，单击“确定”关闭“类限定符”对话框和其他打开的对话框。 
 
 ###  <a name="BKMK_Import"></a> 若要导入硬件清单类  
 

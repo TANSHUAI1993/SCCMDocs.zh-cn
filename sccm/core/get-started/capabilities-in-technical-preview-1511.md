@@ -11,18 +11,18 @@ author: aczechowski
 robots: noindex,nofollow
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 8a805d6b7075d61b0e7669200670ac8434eccdf5
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: d58a780ecf6232bd8ef6e7f0d9851ead34486177
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32336555"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53414746"
 ---
 # <a name="capabilities-in-technical-preview-1511-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1511 版中的功能
 
-*适用范围：System Center Configuration Manager (Technical Preview)*
+适用范围：System Center Configuration Manager (Technical Preview)
 
-本文介绍了 System Center Configuration Manager Technical Preview 1511 版中的可用功能。 此版本是技术预览版的基准安装版本，可以使用它安装新的技术预览站点，或者从早期的技术预览版升级。   在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager Technical Preview](/sccm/core/get-started/technical-preview)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。  
+本文介绍了 System Center Configuration Manager Technical Preview 1511 版中的可用功能。 此版本是技术预览版的基准安装版本，可以使用它安装新的技术预览站点，或者从早期的技术预览版升级。   在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager 技术预览版](/sccm/core/get-started/technical-preview)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。  
 
 以下是可以试用的此版本的新功能。  
 
@@ -59,15 +59,15 @@ ms.locfileid: "32336555"
 ### <a name="try-it-out"></a>试试看！  
  尝试完成下面的任务，然后使用本主题顶部附近的反馈信息，让我们知道它的工作方式：  
 
-1.  可以将 Office 365 更新同步到 Configuration Manager 站点服务器并从 Configuration Manager 控制台查看它们。  
+1. 可以将 Office 365 更新同步到 Configuration Manager 站点服务器并从 Configuration Manager 控制台查看它们。  
 
-2.  可以审批并成功部署 Office 365 更新。  
+2. 可以审批并成功部署 Office 365 更新。  
 
-3.  可以下载并成功将 Office 365 更新部署到客户端。  
+3. 可以下载并成功将 Office 365 更新部署到客户端。  
 
-4.  可以使用控制台中监视或报告来验证 Office 365 更新的符合性。  
+4. 可以使用控制台中监视或报告来验证 Office 365 更新的符合性。  
 
- 有关详细步骤，请参阅 [使用 System Center Configuration Manager Technical Preview 管理 Office 365 客户端更新](https://technet.microsoft.com/library/mt628083.aspx)。  
+   有关详细步骤，请参阅 [使用 System Center Configuration Manager Technical Preview 管理 Office 365 客户端更新](https://technet.microsoft.com/library/mt628083.aspx)。  
 
 ##  <a name="BKMK_AlwasyOn"></a>支持 SQL Server AlwaysOn，实现数据库的高度可用性  
  Configuration Manager 现在支持使用 SQL Server AlwaysOn 可用性组托管站点数据库。  在安装新站点时，可以指示安装程序使用可用性组，而不是普通的 SQL Server 实例。  

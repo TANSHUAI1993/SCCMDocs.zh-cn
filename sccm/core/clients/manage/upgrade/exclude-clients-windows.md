@@ -10,16 +10,16 @@ ms.assetid: 4cd6031f-8844-4d0b-8166-b24d6528a94e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 164fe811c44306e01e372aa380c2422ec8bd0be7
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: b14ff463d6f39e74ad757d992fda1042f534a2cd
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32332961"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53414661"
 ---
 # <a name="how-to-exclude-upgrading-clients-for-windows-computers-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中排除升级 Windows 计算机的客户端
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：*System Center Configuration Manager (Current Branch)*
 
 从版本 1610 开始，可排除客户端集合，使其不会自动安装更新的客户端版本。 这适用于自动升级以及其他方法，例如基于软件更新的升级、登录脚本和组策略。 可将其用于在升级客户端时需特别注意的计算机集合。 排除集合中的客户端会忽略安装更新客户端软件的请求。
 
@@ -43,9 +43,9 @@ ms.locfileid: "32332961"
 ## <a name="how-to-upgrade-a-client-that-is-in-an-excluded-collection"></a>如何升级排除集合中的客户端
 
 只要某个集合被配置为排除，则只能通过上述两种方法中的一种来升级集合成员的客户端软件，它会替代排除设置：
- - **客户端请求安装** – 可以使用“客户端请求安装”来升级排除集合中的客户端。 由于该操作被视为管理员的意图，因此可以此升级客户端，而无需将整个集合从排除设置中删除。       
+- **客户端请求安装** – 可以使用“客户端请求安装”来升级排除集合中的客户端。 由于该操作被视为管理员的意图，因此可以此升级客户端，而无需将整个集合从排除设置中删除。       
 
- - **手动客户端安装** – 可以手动升级排除集合中的客户端，方法是结合使用后列命令行开关和 ccmsetup：***/ignoreskipupgrade***
+- **手动客户端安装** – 可以手动升级排除集合中的客户端，方法是结合使用后列命令行开关和 ccmsetup：***/ignoreskipupgrade***
 
   如果尝试在不使用此开关的情况下手动升级排除集合中的客户端，客户端将不会安装新的客户端软件。 有关详细信息，请参阅[如何手动安装 Configuration Manager 客户端](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#BKMK_Manual)。
 

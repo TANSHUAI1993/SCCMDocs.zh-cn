@@ -10,16 +10,16 @@ ms.assetid: 463ce307-59dd-4abd-87b8-42ca9db178d7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 073f908057d459d847cbec6b380e7a4a8683db2b
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 16b56d59e1cba6a36f0bd8189587794a680c3865
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456152"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422872"
 ---
 # <a name="using-the-configuration-manager-console"></a>使用 Configuration Manager 控制台
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 管理员使用 Configuration Manager 控制台管理 Configuration Manager 环境。 本文介绍导航控制台的基础知识。  
 
@@ -32,9 +32,11 @@ ms.locfileid: "52456152"
 要连接到其他站点服务器，请按以下步骤操作： 
 
 1. 选择[功能区](#ribbon)顶部的箭头，然后选择“连接到新站点”。  
+
     ![将控制台连接到新站点](media/connect-to-a-new-site.png)  
 
 2. 键入站点服务器的 FQDN。 如果之前已连接到站点服务器，可从下拉列表中选择服务器。  
+
     ![站点连接窗口，输入站点服务器的 FQDN](media/site-server-fqdn.png)  
 
 3. 选择“**连接**”。  
@@ -51,18 +53,24 @@ ms.locfileid: "52456152"
 
 ### <a name="workspaces"></a>工作区
 
-Configuration Manager 控制台中有四个工作区： 
-   - **资产和符合性**  
-   - **软件库**  
-   - **监视**  
-   - **管理**  
+Configuration Manager 控制台中有四个工作区：  
+
+- **资产和符合性**  
+
+- **软件库**  
+
+- **监视**  
+
+- **管理**  
 
 ![带上下文菜单的 Configuration Manager 工作区](media/configuration-manager-workspaces.png)  
 
 选择向下箭头并选择“导航窗格选项”，可对工作区按钮重新进行排序。 选中某个项“上移”或“上移”。 单击“重置”还原默认按钮顺序。  
+
  ![用于对工作区重新排序的“导航窗格选项”窗口](media/navigation-pane-options.png)  
 
 选择“显示更少按钮”可最小化工作区按钮。 列表中的最后一个工作区首先最小化。 选择已最小化的按钮并选择“显示更多按钮”即可将按钮恢复为原始大小。   
+
 ![Configuration Manager 控制台中最小化的工作区](media/workspace-buttons.png)  
 
 
@@ -71,33 +79,40 @@ Configuration Manager 控制台中有四个工作区：
 工作区是一系列节点。 其中一个节点是“软件库”工作区中的“软件更新组”节点。 
 
 在节点中可选择箭头以最小化导航窗格。  
+
 ![示例节点和突出显示的最小化箭头](media/software-update-groups-node.png)  
 
 当导航窗格处于最小化时，使用“导航栏”在控制台中移动。  
+
 ![最小化的 Configuration Manager 导航窗格](media/minimized-navigation-pane.png)  
 
 在控制台中，节点有时会被整理到文件夹中。 通常直接单击文件夹即可转到“导航索引”或“仪表板”。  
+
 ![Configuration Manager 软件更新导航索引](media/software-updates-navigation-index.png)  
 
 
 ### <a name="ribbon"></a>功能区 
 
 功能区位于 Configuration Manager 控制台顶部。 功能区可以有多个选项卡，且可使用右侧的箭头将其最小化。 功能区上的按钮数量因节点而异。 上下文菜单中也提供了功能区中的大多数按钮。  
+
 ![示例功能区，突出显示多个选项卡和最小化箭头](media/ribbon.png)   
 
 
 ### <a name="details-pane"></a>“详细信息”窗格
 
-若要获取有关项的其他信息，可查看细节窗格。 细节窗格中可以有一个或多个选项卡。 选项卡的数量因节点而异。 
+若要获取有关项的其他信息，可查看细节窗格。 细节窗格中可以有一个或多个选项卡。 选项卡的数量因节点而异。  
+
 ![Configuration Manager 示例细节窗格](media/details-pane.png)   
 
 
 ### <a name="columns"></a>列 
 
 可添加、删除、重新排列并调整列的大小。 通过这些操作，可让系统显示你喜欢的数据。 可用列的数量因节点而异。 要在视图中添加或删除列，请右键单击现有列标题，然后选择其中一项。 将列标题拖动到想要的位置即可对其重新排序。  
+
 ![Configuration Manager 添加列](media/add-columns.png)  
 
 在列上下文菜单的底部，可以按列进行排序或分组。 另外，也可通过选择列标题对列进行排序。  
+
 ![Configuration Manager 按列分组](media/column-group-by.png)  
 
 
@@ -122,10 +137,12 @@ Configuration Manager 控制台提供下列命令行选项：
 <!--1357542-->
 
 自 1806 版起，从控制台提交产品反馈。  
-   
-- **发送笑脸**：就喜欢的内容发送反馈。
-- **发送哭脸**：就不喜欢的内容发送反馈。 
-- **发送建议**：转到 UserVoice 分享你的观点。 
+
+- **发送笑脸**：就喜欢的内容发送反馈  
+
+- **发送哭脸**：就不喜欢的内容发送反馈  
+
+- **发送建议**：转到 UserVoice 分享你的观点  
  
 有关详细信息，请参阅[产品反馈](/sccm/core/understand/find-help#BKMK_1806Feedback)。
 
@@ -133,8 +150,10 @@ Configuration Manager 控制台提供下列命令行选项：
 ### <a name="assets-and-compliance-workspace"></a>资产和符合性工作区
 
 #### <a name="view-users-for-a-device"></a>查看设备的用户
-自 1806 版起，“设备”节点中提供了以下列：
+自 1806 版起，“设备”节点中提供了以下列：  
+
 - 主要用户 <!--1357280-->  
+
 - 当前登录的用户 <!--1358202-->  
 
 有关如何显示非默认列的详细信息，请参阅[列](#columns)。
@@ -143,9 +162,11 @@ Configuration Manager 控制台提供下列命令行选项：
 ### <a name="monitoring-workspace"></a>监视工作区
 
 #### <a name="copy-details-in-monitoring-views"></a>复制监视视图中的详细信息
-<!--1357856-->自 1806 版起，从“资产详细信息”窗格复制以下监视节点的信息： 
-    - 内容分发状态  
-    - 部署状态  
+<!--1357856-->自 1806 版起，从“资产详细信息”窗格复制以下监视节点的信息：  
+
+- 内容分发状态  
+
+- 部署状态  
 
 ![部署状态视图，复制资产详细信息](media/1810-deployment-status.PNG)
 

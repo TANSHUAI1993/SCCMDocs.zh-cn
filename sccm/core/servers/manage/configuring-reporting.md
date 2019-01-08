@@ -10,16 +10,16 @@ ms.assetid: 55ae86a7-f0ab-4c09-b4da-89cd0e7fa0e0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 17b0147e82e2eb9a756bdab69eed7ab86f98a1e0
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: d046a5fcd6602c82eda631c9d9b7d47db2470888
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344290"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418418"
 ---
 # <a name="configuring-reporting-in-system-center-configuration-manager"></a>配置 System Center Configuration Manager 中的报表
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 在 System Center Configuration Manager 控制台中创建、修改和运行报表之前，必须执行许多配置任务。 使用本主题中的下列部分帮助在 Configuration Manager 层次结构中配置报表：  
 
@@ -97,9 +97,9 @@ ms.locfileid: "32344290"
     > [!NOTE]  
     >  有关配置站点系统的详细信息，请参阅[为 Center Configuration Manager 添加站点系统角色](../deploy/configure/add-site-system-roles.md)。  
 
-    -   **新建站点系统**：在“主页”选项卡的“创建”组中，单击“创建站点系统服务器”。 “创建站点系统服务器向导”将会打开。  
+    -   **新站点系统**：在“主页”  选项卡上的“创建”  组中，单击“创建站点系统服务器” 。 “创建站点系统服务器向导”将会打开。  
 
-    -   “现有站点系统”：单击要在其上安装 Reporting Services 点站点系统角色的服务器。 单击服务器时，会在结果窗格中显示服务器上已经安装的站点系统角色的列表。  
+    -   **现有站点系统**：单击想要在其上安装 Reporting Services 点站点系统角色的服务器。 单击服务器时，会在结果窗格中显示服务器上已经安装的站点系统角色的列表。  
 
          在“主页”选项卡上的“服务器”组中，单击“添加站点系统角色”。 “添加站点系统角色向导”将会打开。  
 
@@ -118,12 +118,12 @@ ms.locfileid: "32344290"
 
     -   **文件夹名称**：指定所创建且用于托管 Reporting Services 中的 Configuration Manager 报表的文件夹名称。  
 
-    -   “Reporting Services 服务器实例”：在 Reporting Services 的 SQL Server 实例列表中进行选择。 只发现一个实例时，默认情况下会列出并选择该实例。 如果未发现实例，请验证是否安装和配置了 SQL Server Reporting Services，并且是否在站点系统上启动了 SQL Server Reporting Services 服务。  
+    -   **Reporting Services 服务器实例**：在 Reporting Services 的 SQL Server 实例列表中进行选择。 只发现一个实例时，默认情况下会列出并选择该实例。 如果未发现实例，请验证是否安装和配置了 SQL Server Reporting Services，并且是否在站点系统上启动了 SQL Server Reporting Services 服务。  
 
         > [!IMPORTANT]  
         >  Configuration Manager 在当前用户上下文中连接至所选站点系统上的 Windows Management Instrumentation (WMI)，以检索 Reporting Services 的 SQL Server 实例。 当前用户必须对站点系统上的 WMI 具有“读取”访问权限，否则将无法检索 Reporting Services 实例。  
 
-    -   **Reporting Services 点帐户**：单击“设置”，然后选择在 Reporting Services 点上的 SQL Server Reporting Services 连接到 Configuration Manager 站点数据库时要使用的帐户，以检索报表中显示的数据。 选择“现有帐户”以指定以前配置为 Configuration Manager 帐户的 Windows 用户帐户，或者选择“新帐户”以指定当前未配置为 Configuration Manager 帐户的 Windows 用户帐户。 Configuration Manager 会自动授予指定用户访问站点数据库的权限。 “管理”工作区内“安全”节点的“帐户”子文件夹中会显示该帐户，以及“ConfigMgr Reporting Services 点”帐户名称。  
+    -   **Reporting Services 点帐户**：单击“设置”，然后选择一个帐户，当 Reporting Services 点上的 SQL Server Reporting Services 连接到 Configuration Manager 站点数据库以检索报表中显示的数据时会使用此帐户。 选择“现有帐户”以指定以前配置为 Configuration Manager 帐户的 Windows 用户帐户，或者选择“新帐户”以指定当前未配置为 Configuration Manager 帐户的 Windows 用户帐户。 Configuration Manager 会自动授予指定用户访问站点数据库的权限。 “管理”工作区内“安全”节点的“帐户”子文件夹中会显示该帐户，以及“ConfigMgr Reporting Services 点”帐户名称。  
 
          运行 Reporting Services 的帐户必须属于域本地安全组“Windows Authorization Access Group”，并且必须为其将“读取 tokenGroupsGlobalAndUniversal”权限设置为“允许”。 必须为来自与 Reporting Services 点帐户不同域的用户建立双向信任，以便成功运行报表。
 
@@ -147,36 +147,36 @@ ms.locfileid: "32344290"
 > [!IMPORTANT]  
 >  系统使用为 SMS_Executive 服务配置的帐户（通常是站点服务器本地系统帐户）的凭据来执行以下列表中的操作。  
 
--   安装 Reporting Services 点站点角色。  
+- 安装 Reporting Services 点站点角色。  
 
--   使用在向导中指定的存储凭据在 Reporting Services 中创建数据源。 这是当你运行报表时 Reporting Services 用于连接到站点数据库的 Windows 用户帐户和密码。  
+- 使用在向导中指定的存储凭据在 Reporting Services 中创建数据源。 这是当你运行报表时 Reporting Services 用于连接到站点数据库的 Windows 用户帐户和密码。  
 
--   在 Reporting Services 中创建 Configuration Manager 根文件夹。  
+- 在 Reporting Services 中创建 Configuration Manager 根文件夹。  
 
--   在 Reporting Services 中添加“ConfigMgr 报表用户”和“ConfigMgr 报表管理员”安全角色。  
+- 在 Reporting Services 中添加“ConfigMgr 报表用户”和“ConfigMgr 报表管理员”安全角色。  
 
--   创建子文件夹，并将 %ProgramFiles%\SMS_SRSRP 中的Configuration Manager 报表部署到 Reporting Services。  
+- 创建子文件夹，并将 %ProgramFiles%\SMS_SRSRP 中的Configuration Manager 报表部署到 Reporting Services。  
 
--   将 Reporting Services 中的 **ConfigMgr 报表用户**角色添加到 Configuration Manager中具有“站点读取”权限的所有用户帐户的根文件夹。  
+- 将 Reporting Services 中的 **ConfigMgr 报表用户**角色添加到 Configuration Manager中具有“站点读取”权限的所有用户帐户的根文件夹。  
 
--   将 Reporting Services 中的 **ConfigMgr 报表管理员**角色添加到 Configuration Manager中具有“站点修改”权限的所有用户帐户的根文件夹。  
+- 将 Reporting Services 中的 **ConfigMgr 报表管理员**角色添加到 Configuration Manager中具有“站点修改”权限的所有用户帐户的根文件夹。  
 
--   检索报表文件夹与 Configuration Manager 受保护对象类型（在 Configuration Manager 站点数据库中进行维护）之间的映射。  
+- 检索报表文件夹与 Configuration Manager 受保护对象类型（在 Configuration Manager 站点数据库中进行维护）之间的映射。  
 
--   针对 Reporting Services 中的特定报表文件夹，为 Configuration Manager 中的管理用户配置以下权限：  
+- 针对 Reporting Services 中的特定报表文件夹，为 Configuration Manager 中的管理用户配置以下权限：  
 
-    -   添加用户，针对具有 Configuration Manager 对象的“运行报表”权限的管理用户，将 **ConfigMgr 报表用户**角色分配到其关联报表文件夹。  
+  - 添加用户，针对具有 Configuration Manager 对象的“运行报表”权限的管理用户，将 **ConfigMgr 报表用户**角色分配到其关联报表文件夹。  
 
-    -   添加用户，针对具有 Configuration Manager 对象的“修改报表”权限的管理用户，将 **ConfigMgr 报表管理员**角色分配到其关联报表文件夹。  
+  - 添加用户，针对具有 Configuration Manager 对象的“修改报表”权限的管理用户，将 **ConfigMgr 报表管理员**角色分配到其关联报表文件夹。  
 
-     Configuration Manager 将连接到 Reporting Services，并对 Configuration Manager 和 Reporting Services 根文件夹和特定报表文件夹设置用户权限。 在 Reporting Services 点的初始安装后，Configuration Manager 将每隔 10 分钟连接到 Reporting Services 一次，以验证对报表文件夹配置的用户权限是否为 Configuration Manager 用户设置的关联权限。 在使用 Reporting Services 报表管理器添加用户或修改报表文件夹的用户权限时，Configuration Manager 将使用站点数据库中存储的基于角色的分配覆盖这些更改。 Configuration Manager 还会删除在 Configuration Manager 中不具有报表权限的用户。  
+    Configuration Manager 将连接到 Reporting Services，并对 Configuration Manager 和 Reporting Services 根文件夹和特定报表文件夹设置用户权限。 在 Reporting Services 点的初始安装后，Configuration Manager 将每隔 10 分钟连接到 Reporting Services 一次，以验证对报表文件夹配置的用户权限是否为 Configuration Manager 用户设置的关联权限。 在使用 Reporting Services 报表管理器添加用户或修改报表文件夹的用户权限时，Configuration Manager 将使用站点数据库中存储的基于角色的分配覆盖这些更改。 Configuration Manager 还会删除在 Configuration Manager 中不具有报表权限的用户。  
 
 ##  <a name="BKMK_SecurityRoles"></a>Configuration Manager 的 Reporting Services 安全角色  
  Configuration Manager 安装 Reporting Services 点时，会在 Reporting Services 中添加以下安全角色：  
 
--   “ConfigMgr 报表用户”：分配有此安全角色的用户只能运行 Configuration Manage 报表。  
+-   **ConfigMgr 报表用户**：分配有此安全角色的用户只能运行 Configuration Manager 报表。  
 
--   “ConfigMgr 报表管理员”：分配有此安全角色的用户可执行与 Configuration Manage 中的报表相关的所有任务。  
+-   **ConfigMgr 报表管理员**：分配有此安全角色的用户可执行与 Configuration Manager 中的报表相关的所有任务。  
 
 ##  <a name="BKMK_VerifyReportingServicesPointInstallation"></a>验证 Reporting Services 点安装  
  添加 Reporting Services 点站点角色后，你可以通过查看特定状态消息和日志文件条目来验证安装。 使用以下过程来验证 Reporting Services 点安装是否成功。  

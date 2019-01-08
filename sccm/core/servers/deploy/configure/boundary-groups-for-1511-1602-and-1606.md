@@ -10,16 +10,16 @@ ms.assetid: dec1e0d7-5864-43a8-9f56-413923b3914e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7cdcb6306632df79fe69edd1d526afaf2321bad0
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 0bb7ccfb2aa516a5deb712bd2ecd82f36c4f282c
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32343841"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416718"
 ---
 # <a name="boundary-groups-for-system-center-configuration-manager-version-1511-1602-and-1606"></a>System Center Configuration Manager 1511、1602 和 1606 版的边界组
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：*System Center Configuration Manager (Current Branch)*
 <!-- This topic drops from TOC with the release of version 1706 -->
 
 本主题中的信息特定于通过 1511、1602 和 1606 版 System Center Configuration Manager 使用边界组。
@@ -109,15 +109,15 @@ ms.locfileid: "32343841"
 
 #### <a name="to-set-up-a-fallback-site-for-automatic-site-assignment"></a>为自动站点分配设置回退站点  
 
-1.  在 Configuration Manager 控制台中，单击“管理” > “站点配置” >  “站点”。  
+1. 在 Configuration Manager 控制台中，单击“管理” > “站点配置” >  “站点”。  
 
-2.  在“主页”选项卡上的“站点”组中，选择“层次结构设置”。  
+2. 在“主页”选项卡上的“站点”组中，选择“层次结构设置”。  
 
-3.  在“常规”选项卡上，选中“使用回退站点”的复选框，然后从“回退站点”下拉列表中选择一个站点。  
+3. 在“常规”选项卡上，选中“使用回退站点”的复选框，然后从“回退站点”下拉列表中选择一个站点。  
 
-4.  选择“确定”保存配置。  
+4. 选择“确定”保存配置。  
 
- 下列部分提供了有关边界组配置的其他详细信息。  
+   下列部分提供了有关边界组配置的其他详细信息。  
 
 ###  <a name="BKMK_BoundarySiteAssignment"></a> 有关站点分配  
  可以使用客户端的分配的站点设置每个边界组。  

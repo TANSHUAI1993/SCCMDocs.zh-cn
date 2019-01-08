@@ -10,16 +10,16 @@ ms.assetid: b1fdaee2-2816-4447-94cd-609f6948f215
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 66099b45fb04b18c84cd9a3973c1a4d93f0e93a6
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 862555a34d638ad9c1c5c2d0d0de6f2ce1edd3f3
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32335756"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419319"
 ---
 # <a name="software-metering-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的软件计数
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 本主题包含使用 System Center Configuration Manager 软件计数时，可能执行的所有操作的参考。
 
@@ -37,21 +37,21 @@ ms.locfileid: "32335756"
 ##  <a name="configure-software-metering"></a>配置软件计数
  此过程为软件计数配置默认客户端设置，并应用于层次结构中的所有计算机。 如果希望这些设置仅应用于某些计算机，请创建一个自定义设备客户端设置，并将其部署到包含要使用软件计数的计算机的集合。 有关如何创建自定义设备设置的详细信息，请参阅[配置客户端设置](../../core/clients/deploy/configure-client-settings.md)。
 
-1.  在 Configuration Manager 控制台中，单击“管理” > “客户端设置” > “默认客户端设置”。
+1. 在 Configuration Manager 控制台中，单击“管理” > “客户端设置” > “默认客户端设置”。
 
-2.  在“主页”选项卡上的“属性”组中，单击“属性”。
+2. 在“主页”选项卡上的“属性”组中，单击“属性”。
 
-3.  在“默认设置”  对话框中，单击“软件计数” 。
+3. 在“默认设置”  对话框中，单击“软件计数” 。
 
-4.  在“设备设置”  列表中，配置以下各项：
+4. 在“设备设置”  列表中，配置以下各项：
 
-    -   “在客户端上启用软件计数”：选择“”  以启用软件计数。
+   -   **在客户端上启用软件计数**：选择“True”以启用软件计数。
 
-    -   “计划数据收集”：配置从客户端计算机收集软件计数数据的频率。 使用默认值每“7 天”  或单击“计划”  来指定自定义计划。
+   -   **计划数据收集**：配置从客户端计算机收集软件计数数据的频率。 使用默认值每“7 天”  或单击“计划”  来指定自定义计划。
 
-5.  单击“确定”  来关闭“默认设置”  对话框。
+5. 单击“确定”  来关闭“默认设置”  对话框。
 
- 当客户端计算机下一次下载客户端策略时，将使用这些设置进行配置。 若要为单个客户端启动策略检索，请参阅[管理客户端](../../core/clients/manage/manage-clients.md)。
+   当客户端计算机下一次下载客户端策略时，将使用这些设置进行配置。 若要为单个客户端启动策略检索，请参阅[管理客户端](../../core/clients/manage/manage-clients.md)。
 
 ##  <a name="create-software-metering-rules"></a>创建软件计数规则
  使用“创建软件计数规则向导”为 Configuration Manager 站点创建新的软件计数规则。
@@ -154,15 +154,15 @@ ms.locfileid: "32335756"
 ## <a name="example-scenario-for-using-software-metering"></a>使用软件计数的示例方案
  在本部分中，可以创建一个示例软件计数规则，它可以帮助解决下列业务要求：
 
--   确定公司中有多少特定应用的副本。
+- 确定公司中有多少特定应用的副本。
 
--   发现任何未使用的应用副本
+- 发现任何未使用的应用副本
 
--   确定哪些用户定期使用特定应用
+- 确定哪些用户定期使用特定应用
 
- Woodgrove Bank 部署了 Microsoft Office 2010 作为其标准的办公生产力套件。 但是，若要支持旧应用程序，有些计算机必须继续运行 Microsoft Office Word 2003。 IT 部门要减少支持和授权成本，如果不再使用旧应用程序，则需要删除这些 Word 2003 副本。 技术支持还需要识别哪些用户使用旧应用程序。
+  Woodgrove Bank 部署了 Microsoft Office 2010 作为其标准的办公生产力套件。 但是，若要支持旧应用程序，有些计算机必须继续运行 Microsoft Office Word 2003。 IT 部门要减少支持和授权成本，如果不再使用旧应用程序，则需要删除这些 Word 2003 副本。 技术支持还需要识别哪些用户使用旧应用程序。
 
- John 是 Woodgrove Bank 的 IT 系统经理，他使用 Configuration Manager 中的软件计数来实现这些业务目标。 他将执行以下操作：
+  John 是 Woodgrove Bank 的 IT 系统经理，他使用 Configuration Manager 中的软件计数来实现这些业务目标。 他将执行以下操作：
 
 - John 检查软件计数的先决条件，并确认 Reporting Services 点安装且正常运行。
 - John 配置软件计数的默认客户端设置：<br>John 启用软件计数，并且使用每七天一次的默认数据收集计划。<br>他通过配置软件清单客户端设置“列出这些文件类型的清单” ，来配置软件清单以列出具有 .exe 扩展名的清单。<br>他添加了一条名为“woodgrove.exe” 的新软件计数规则，用于监视银行的旧应用程序。
@@ -172,4 +172,4 @@ ms.locfileid: "32335756"
 - John 进行进一步检查，以确认标识的计算机上不再需要旧应用程序。 然后他从这些计算机中卸载旧应用程序和 Word 2003 副本。<br>John 运行该报表“已运行特定计数的软件程序的用户”  来为技术支持提供继续使用旧应用程序的用户的列表。
 - John 继续每周检查软件计数报表，并在必要时采取修正措施。
 
- 进行这一系列操作的结果就是，通过删除不再需要的应用程序，减少了 IT 支持与授权成本。 此外，技术支持人员现在获得了他们想要的运行旧应用程序的用户的列表。
+  进行这一系列操作的结果就是，通过删除不再需要的应用程序，减少了 IT 支持与授权成本。 此外，技术支持人员现在获得了他们想要的运行旧应用程序的用户的列表。

@@ -10,16 +10,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 63c5ef72-5715-4d86-85a2-71beba469fab
 ms.author: aaroncz
-ms.openlocfilehash: d772b4ede4c8bfe13c68597ec8fe9a1f3dccbf38
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 77c6772682c8eb6d1532c0ea38489a45d2466c30
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32352927"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422855"
 ---
 # <a name="icons-used-for-software-updates-in-system-center-configuration-manager"></a>System Center Configuration Manager 中用于软件更新的图标
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 同步后的软件更新会显示在 Configuration Manager 控制台中，每个软件更新的首列均包含一个指示特定状态的图标。 软件更新组也使用一个图标表示，该图标提供有关组中所包含软件更新的状态信息。 本部分提供有关软件更新图标和每个图标表示的内容的信息。  
 
@@ -55,17 +55,17 @@ ms.locfileid: "32352927"
 
  被取代的软件更新已替换为更新版本的软件更新。 通常，取代另一个软件更新的软件更新将执行以下一项或多项操作：  
 
--   增强、改进或添加到由以前发布的一个或多个软件更新提供的修补程序。  
+- 增强、改进或添加到由以前发布的一个或多个软件更新提供的修补程序。  
 
--   提高（如果批准安装软件更新，则由客户端安装的）软件更新文件包的效率。 例如，被取代的软件更新可能包含不再与修补程序或新软件更新现在支持的操作系统相关的文件，因此这些文件未包括在软件更新的取代文件包中。  
+- 提高（如果批准安装软件更新，则由客户端安装的）软件更新文件包的效率。 例如，被取代的软件更新可能包含不再与修补程序或新软件更新现在支持的操作系统相关的文件，因此这些文件未包括在软件更新的取代文件包中。  
 
--   换句话说，产品的较新版本不再适用于产品的较旧版本或配置。 如果进行了修改来扩展语言支持，则软件更新还可能取代其他软件更新。 例如，稍后对 Microsoft Office 的产品更新进行的修订可能会删除对较旧操作系统的支持，但会在初始软件更新版本中添加对新语言的额外支持。  
+- 换句话说，产品的较新版本不再适用于产品的较旧版本或配置。 如果进行了修改来扩展语言支持，则软件更新还可能取代其他软件更新。 例如，稍后对 Microsoft Office 的产品更新进行的修订可能会删除对较旧操作系统的支持，但会在初始软件更新版本中添加对新语言的额外支持。  
 
- 在“软件更新点组件”属性的“取代规则”选项卡上，你可以指定管理取代的软件更新的方式。 有关详细信息，请参阅 [Supersedence rules](../plan-design/plan-for-software-updates.md#BKMK_SupersedenceRules)。  
+  在“软件更新点组件”属性的“取代规则”选项卡上，你可以指定管理取代的软件更新的方式。 有关详细信息，请参阅 [取代规则](../plan-design/plan-for-software-updates.md#BKMK_SupersedenceRules)。  
 
- **操作问题：**  
+  **操作问题：**  
 
- 如果可能，将用于取代的软件更新而不是被取代的更新部署到客户端计算机上。 你可以在软件更新属性中的“取代信息”  选项卡上显示用于取代软件更新的软件更新列表。  
+  如果可能，将用于取代的软件更新而不是被取代的更新部署到客户端计算机上。 你可以在软件更新属性中的“取代信息”  选项卡上显示用于取代软件更新的软件更新列表。  
 
 ### <a name="invalid-icon"></a>“无效”图标  
  ![图标](../media/Invalid.jpg "“无效”图标") 带有红色 X 的图标表示无效的软件更新。  
@@ -74,13 +74,13 @@ ms.locfileid: "32352927"
 
  活动部署中有无效的软件更新，但是由于某种原因，其内容（软件更新文件）不可用。 以下是可能出现此状态的情况：  
 
--   成功部署了软件更新，但已从部署包中删除此软件更新文件，此文件已不再可用。  
+- 成功部署了软件更新，但已从部署包中删除此软件更新文件，此文件已不再可用。  
 
--   在站点上创建了软件更新部署，并且已成功将部署对象复制到子站点，但部署包尚未成功复制到子站点。  
+- 在站点上创建了软件更新部署，并且已成功将部署对象复制到子站点，但部署包尚未成功复制到子站点。  
 
- **操作问题：**  
+  **操作问题：**  
 
- 当软件更新缺少内容时，客户端将无法安装软件更新，直到内容在分发点上可用。 你可以通过使用“重新分发”  操作，将内容重新分发到分发点。 当在父站点创建的部署中缺少软件更新的内容时，必须将软件更新复制或重新分发到子站点上。 有关内容重新分发的详细信息，请参阅[管理已分发的内容](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_manage)。  
+  当软件更新缺少内容时，客户端将无法安装软件更新，直到内容在分发点上可用。 你可以通过使用“重新分发”  操作，将内容重新分发到分发点。 当在父站点创建的部署中缺少软件更新的内容时，必须将软件更新复制或重新分发到子站点上。 有关内容重新分发的详细信息，请参阅[管理已分发的内容](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_manage)。  
 
 ### <a name="metadata-only-icon"></a>“仅元数据”图标
  ![图标](../media/MetadataOnly.png "“仅元数据”图标") 带有蓝色箭头的图标表示仅元数据软件更新。

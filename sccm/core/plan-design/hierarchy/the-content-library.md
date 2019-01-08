@@ -10,16 +10,16 @@ ms.assetid: 65c88e54-3574-48b0-a127-9cc914a89dca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5f063034ed7cdc22a92df8d07d8be03ece12f663
-ms.sourcegitcommit: 4e4b71227309bee7e9f1285971f8235c67a9c502
+ms.openlocfilehash: 4587549ef2f43be3dcc5e18021f60c42770f5800
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46533739"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53415511"
 ---
 # <a name="the-content-library-in-configuration-manager"></a>Configuration Manager 中的内容库
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 内容库是 Configuration Manager 中内容的单实例存储。 站点用它减少分发内容组合正文的总体大小。 内容库存储软件部署的所有内容文件，例如：软件更新、应用程序和操作系统部署。  
 
@@ -45,7 +45,7 @@ Configuration Manager 将内容文件复制到优先级最高的驱动器中，�
 有关如何为分发点配置驱动器设置的详细信息，请参阅[管理内容和内容基础结构](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure)。  
 
 
->  [!IMPORTANT]  
+> [!IMPORTANT]
 >  若要在安装后将内容库移到分发点上的另一位置，请使用 Configuration Manager 工具中的内容库传输工具。 有关详细信息，请参阅[内容库传输工具](/sccm/core/support/content-library-transfer)。  
 
 
@@ -112,13 +112,13 @@ Configuration Manager 会在以下情况下使用管理中心站点上的内容�
 
 5. 请注意细节窗格“摘要”选项卡上“内容库”列中的“状态”值。 它会更新以显示站点在移动内容库方面的进度。  
 
-    - 处于“正在进行”状态时，“移动进度(%)”值将显示完成百分比。  
+   - 处于“正在进行”状态时，“移动进度(%)”值将显示完成百分比。  
 
-    - 如果存在错误状态，状态将显示错误。 常见错误包括“访问被拒绝”或“磁盘已满”。  
+   - 如果存在错误状态，状态将显示错误。 常见错误包括“访问被拒绝”或“磁盘已满”。  
 
-    - 完成时，显示“完成”。  
+   - 完成时，显示“完成”。  
     
-    有关详细信息，请参阅 **distmgr.log**。 有关详细信息，请参阅[站点服务器和站点系统服务器日志](/sccm/core/plan-design/hierarchy/log-files#BKMK_SiteSiteServerLog)。  
+     有关详细信息，请参阅 **distmgr.log**。 有关详细信息，请参阅[站点服务器和站点系统服务器日志](/sccm/core/plan-design/hierarchy/log-files#BKMK_SiteSiteServerLog)。  
 
 有关此过程的详细信息，请参阅[流程图 - 管理内容库](/sccm/core/plan-design/hierarchy/manage-content-library-flowchart)。
 

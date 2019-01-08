@@ -10,16 +10,16 @@ ms.assetid: 4e345791-74db-41ad-b472-024ce6521daf
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: ed9be26417aceef3fb73f48c2a4a2f15f0ba1b52
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: de1b5343bd66cec20ba55f0aa58add9839fcb48d
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32333750"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418520"
 ---
 # <a name="common-tasks-for-managing-compliance-on-devices-with-the-system-center-configuration-manager-client"></a>使用 System Center Configuration Manager 客户端在设备上管理符合性的常见任务
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 本主题中的方案通过演示你可能遇到的一些常见情景介绍如何使用 System Center Configuration Manager 符合性设置。  
 
@@ -40,69 +40,69 @@ ms.locfileid: "32333750"
 
 ## <a name="scenarios-for-windows-10-devices-managed-with-the-configuration-manager-client"></a>使用 Configuration Manager 客户端管理的 Windows 10 设备的方案  
 
-### <a name="scenario-disable-the-use-of-bluetooth-on-windows-10-devices"></a>方案：在 Windows 10 设备上禁用蓝牙  
+### <a name="scenario-disable-the-use-of-bluetooth-on-windows-10-devices"></a>场景：在 Windows 10 设备上禁用蓝牙  
  在此方案中，安全部门已将设备上的蓝牙功能识别为可用于在公司外传输敏感企业信息的一种手段。 你最近已将所有的 PC 都升级到了 Windows 10 并决定禁用这些设备上的蓝牙功能。  
 
-1.  在“创建配置项目”向导的“常规”  页上，选择  “Windows 10”配置项目类型，然后单击“下一步” 。  
+1. 在“创建配置项目”向导的“常规”  页上，选择  “Windows 10”配置项目类型，然后单击“下一步” 。  
 
-2.  在向导的“支持的平台”  页上，选择所有 Windows 10 平台。  
+2. 在向导的“支持的平台”  页上，选择所有 Windows 10 平台。  
 
-3.  在“设备设置”  页上，选择“设备” ，然后单击“下一步” 。  
+3. 在“设备设置”  页上，选择“设备” ，然后单击“下一步” 。  
 
-4.  在“设备”  页上，选择“禁止”  作为 “蓝牙”的值。  
+4. 在“设备”  页上，选择“禁止”  作为 “蓝牙”的值。  
 
-5.  选择“修正非符合性设置”  以确保更改被应用到所有 Windows 10 设备上。  
+5. 选择“修正非符合性设置”  以确保更改被应用到所有 Windows 10 设备上。  
 
-6.  完成向导以创建配置项目。  
+6. 完成向导以创建配置项目。  
 
- 现在便可以通过[使用 System Center Configuration Manager 创建和部署配置基线的常见任务](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md)主题中的信息将创建的配置部署到设备。  
+   现在便可以通过[使用 System Center Configuration Manager 创建和部署配置基线的常见任务](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md)主题中的信息将创建的配置部署到设备。  
 
 ## <a name="scenarios-for-windows-desktop-and-server-computers-managed-with-the-configuration-manager-client"></a>使用 Configuration Manager 客户端管理的 Windows 台式机和服务器计算机的方案  
  在运行 Configuration Manager 客户端的 Mac 计算机上，有两种评估符合性的选项：  
 
--   评估 Mac OS X 首选项 (plist) 文件。  
+- 评估 Mac OS X 首选项 (plist) 文件。  
 
--   使用自定义脚本并评估由该脚本返回的结果。  
+- 使用自定义脚本并评估由该脚本返回的结果。  
 
- 有关详细信息，请参阅[如何为 System Center Configuration Manager 客户端管理的Mac OS X 设备创建配置项目](../../compliance/deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md)。  
+  有关详细信息，请参阅[如何为 System Center Configuration Manager 客户端管理的Mac OS X 设备创建配置项目](../../compliance/deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md)。  
 
-### <a name="scenario-remediate-an-incorrect-registry-value-on-windows-desktop-computers"></a>方案：修正 Windows 台式计算机上的不正确的注册表值  
+### <a name="scenario-remediate-an-incorrect-registry-value-on-windows-desktop-computers"></a>场景：修正 Windows 台式计算机上的不正确的注册表值  
  在此方案中，你将发现重要的业务线应用在你管理的运行 Windows 8.1 的某些计算机上未正确运行。 经过调查发现，这是因为某些计算机上名为“HKEY_LOCAL_MACHINE\SOFTWARE\Woodgrove\LOB App\Configuration\Configuration1”  的注册表值已被设置为了“0”  。 若想成功运行业务线应用，必须将该值设置为“1” 。  
 
  在此过程中，你需要创建一个配置项目，它会监视并自动修正发现的任何错误的注册表项值。  
 
-1.  在“创建配置项目”向导的“常规”  页上，选择  “Windows 台式机和服务器(自定义)”配置项目类型，然后单击 “下一步”。  
+1. 在“创建配置项目”向导的“常规”  页上，选择  “Windows 台式机和服务器(自定义)”配置项目类型，然后单击 “下一步”。  
 
-2.  在向导的“支持的平台”  页上，选择“Windows 8.1”  （以确保配置项目仅应用于受影响的计算机）。  
+2. 在向导的“支持的平台”  页上，选择“Windows 8.1”  （以确保配置项目仅应用于受影响的计算机）。  
 
-3.  在“设置”  页上，单击“新建”  创建新的设置。  
+3. 在“设置”  页上，单击“新建”  创建新的设置。  
 
-4.  在“创建设置”  对话框的“常规”  选项卡上，配置以下信息：  
+4. 在“创建设置”  对话框的“常规”  选项卡上，配置以下信息：  
 
-    -   **名称** > **示例设置**  
+   -   **名称** > **示例设置**  
 
-    -   **设置类型** > **注册表值**  
+   -   **设置类型** > **注册表值**  
 
-    -   **数据类型** > **整数** （因为该值仅包含一个数字）  
+   -   **数据类型** > **整数** （因为该值仅包含一个数字）  
 
-    -   **Hive** > **HKEY_LOCAL_MACHINE**  
+   -   **Hive** > **HKEY_LOCAL_MACHINE**  
 
-    -   **密钥** > **SOFTWARE\Woodgrove\LOB App\Configuration\Configuration1**  
+   -   **密钥** > **SOFTWARE\Woodgrove\LOB App\Configuration\Configuration1**  
 
-    -   **值** > **1** （必需值）  
+   -   **值** > **1** （必需值）  
 
-5.  在  “创建设置”对话框的“符合性规则”  选项卡上，单击“新建” ，然后在“创建规则”  对话框中，配置以下信息：  
+5. 在  “创建设置”对话框的“符合性规则”  选项卡上，单击“新建” ，然后在“创建规则”  对话框中，配置以下信息：  
 
-    -   **名称** > **规则示例**  
+   -   **名称** > **规则示例**  
 
-    -   **所选设置** – 验证所选设置是否为“示例设置” 。  
+   -   **所选设置** – 验证所选设置是否为“示例设置” 。  
 
-    -   **规则类型** > **值**  
+   -   **规则类型** > **值**  
 
-    -   **设置必须符合以下规则** – 验证设置名称是否正确，并配置选项以指定设置值必须等于“1” 。  
+   -   **设置必须符合以下规则** – 验证设置名称是否正确，并配置选项以指定设置值必须等于“1” 。  
 
-    -   **修正非符合性规则(如果支持)** – 勾选此框，以确保 Configuration Manager 在注册表项值不正确时将其重置为正确的值。  
+   -   **修正非符合性规则(如果支持)** – 勾选此框，以确保 Configuration Manager 在注册表项值不正确时将其重置为正确的值。  
 
-6.  完成向导以创建配置项目。  
+6. 完成向导以创建配置项目。  
 
- 现在可以使用[用于创建和部署配置基线的常见任务](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md)主题中的信息将创建的配置部署到设备。  
+   现在可以使用[用于创建和部署配置基线的常见任务](../../compliance/plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md)主题中的信息将创建的配置部署到设备。  

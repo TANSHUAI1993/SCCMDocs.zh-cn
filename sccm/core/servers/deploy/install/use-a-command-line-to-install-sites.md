@@ -10,57 +10,57 @@ ms.assetid: e7cdb1a9-140a-436e-ac71-72d083110223
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4a6c989b1eabe47f3360ceec660d5eba32811d60
-ms.sourcegitcommit: ee434c53b3695a039b56298082b6f61f1006d9dd
+ms.openlocfilehash: dcf12016206fe0c4296d08ad8404b163607313e1
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49943285"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417160"
 ---
 # <a name="use-a-command-line-to-install-system-center-configuration-manager-sites"></a>使用命令行安装 System Center Configuration Manager 站点
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
  可在命令提示符处运行 System Center Configuration Manager 安装程序来安装多个站点类型。
 
 ## <a name="supported-tasks-for-command-line-installations"></a>命令行安装支持的任务
  此种运行安装程序的方式支持以下站点安装和站点维护任务：
 
--   **从命令提示符处安装管理中心站点或主站点**  
+- **从命令提示符处安装管理中心站点或主站点**  
   查看[适用于安装程序的命令行选项](../../../../core/servers/deploy/install/command-line-options-for-setup.md)
 
--  **修改管理中心站点或主站点中使用的语言**  
-    若要从命令提示符处修改站点上安装的语言（包括用于移动设备的语言），必须：  
+- **修改管理中心站点或主站点中使用的语言**  
+   若要从命令提示符处修改站点上安装的语言（包括用于移动设备的语言），必须：  
 
-     -   从站点服务器上的 **&lt;ConfigMgrInstallationPath\>\Bin\X64** 运行安装程序，
-     -   使用 **/MANAGELANGS** 命令行选项，
-     -   指定语言脚本文件，该文件可指定要添加或删除的语言，  
+  - 从站点服务器上的 **&lt;ConfigMgrInstallationPath\>\Bin\X64** 运行安装程序，
+  - 使用 **/MANAGELANGS** 命令行选项，
+  - 指定语言脚本文件，该文件可指定要添加或删除的语言，  
 
     例如，使用以下语法：**setupwpf.exe /MANAGELANGS &lt;language script file\>**  
 
     若要创建语言脚本文件，请使用[用于管理语言的命令行选项](../../../../core/servers/deploy/install/command-line-options-for-setup.md#bkmk_Lang)中的信息  
 
--  **将安装脚本文件用于无人参与的站点安装或站点恢复**  
-    可使用安装脚本从命令提示符运行安装程序，并可运行无人参与的站点安装。 还可以使用此选项来恢复站点。    
+- **将安装脚本文件用于无人参与的站点安装或站点恢复**  
+   可使用安装脚本从命令提示符运行安装程序，并可运行无人参与的站点安装。 还可以使用此选项来恢复站点。    
 
-    若要将脚本用于安装程序：  
+   若要将脚本用于安装程序：  
 
-    -   使用命令行选项 **/SCRIPT** 运行安装程序并指定脚本文件。  
+  - 使用命令行选项 **/SCRIPT** 运行安装程序并指定脚本文件。  
 
-    -   必须使用所需的密钥和值配置脚本文件。  
+  - 必须使用所需的密钥和值配置脚本文件。  
 
     对于无人参与的管理中心站点或主站点安装，该脚本文件必须具有以下部分：  
 
-    -   标识    
-    -   选项    
-    -   SQLConfigOptions    
-      -   HierarchyOptions    
-    -   CloudConnectorOptions   
+  - 标识    
+  - 选项    
+  - SQLConfigOptions    
+    -   HierarchyOptions    
+  - CloudConnectorOptions   
 
     若要恢复站点，还必须包括脚本文件的以下部分：  
 
-    -   标识  
-    -   恢复
+  - 标识  
+  - 恢复
 
 有关详细信息，请参阅 [Configuration Manager 的无人参与站点恢复](/sccm/protect/understand/unattended-recovery)。  
 

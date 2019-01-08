@@ -10,18 +10,18 @@ ms.assetid: 3c061ceb-3bdb-4d4f-8c60-344964bd416b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b6764acf3ecc1aaad4a19c9d56880e7bd5692464
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: b751dab7ca02112959a9a7d6ed8a51b037f25b0e
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334610"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422651"
 ---
 # <a name="capabilities-in-technical-preview-1708-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1708 中的功能
 
-*适用范围：System Center Configuration Manager (Technical Preview)*
+适用范围：*System Center Configuration Manager (Technical Preview)*
 
-本文介绍了 System Center Configuration Manager Technical Preview（版本 1708）中的可用功能。 你可以安装此版本，以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。 在安装此 Technical Preview 前，请查看 [System Center Configuration Manager 的 Technical Preview](../../core/get-started/technical-preview.md)，熟悉使用 Technical Preview 的常规要求和限制，如何在两版本之间进行更新，以及如何对 Technical Preview 中的有关功能提供反馈。     
+本文介绍了 System Center Configuration Manager Technical Preview（版本 1708）中的可用功能。 你可以安装此版本，以更新 Technical Preview 站点的功能并向其添加新功能。 在安装此 Technical Preview 前，请查看 [System Center Configuration Manager 的 Technical Preview](../../core/get-started/technical-preview.md)，熟悉使用 Technical Preview 的常规要求和限制，如何在两版本之间进行更新，以及如何对 Technical Preview 中的有关功能提供反馈。     
 
 
 <!--  Known Issues Template   
@@ -30,7 +30,7 @@ ms.locfileid: "32334610"
     Workaround details.
 -->
 **此 Technical Preview 中的已知问题：**
--   **如果站点服务器处于被动模式，则无法更新到预览版本 1708**。 如果运行的是预览版本 1706 或 1707，且[主站点服务器处于被动模式](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability)，则必须先卸载被动模式站点服务器，然后才能将预览站点成功更新到版本 1708。 可以在站点运行版本 1708 后，重新安装被动模式站点服务器。
+- **如果站点服务器处于被动模式，则无法更新到预览版本 1708**。 如果运行的是预览版本 1706 或 1707，且[主站点服务器处于被动模式](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability)，则必须先卸载被动模式站点服务器，然后才能将预览站点成功更新到版本 1708。 可以在站点运行版本 1708 后，重新安装被动模式站点服务器。
 
   若要卸载被动模式站点服务器，请执行以下操作：
   1. 在控制台中，依次转到“管理” > “概述” > “站点配置” > “服务器和站点系统角色”，再选择被动模式站点服务器。
@@ -72,16 +72,14 @@ ms.locfileid: "32334610"
 脚本运行时，将使用你配置的任何参数值。 如果未配置必需的参数，将要求最终用户在运行脚本时提供此参数。
 
 ## <a name="management-insights"></a>管理见解
-<!-- 1353967 -->
-现在，可以基于站点数据库中的数据分析，深入了解当前的环境状态。 见解有助于更好地了解环境，并根据见解执行操作。 在 Configuration Manager 控制台中，通过“管理” > “管理见解” > “所有见解”来查看管理见解。 在此版本中，现提供有以下见解：
+<!-- 1353967 --> 现在，可以基于站点数据库中的数据分析，深入了解当前的环境状态。 见解有助于更好地了解环境，并根据见解执行操作。 在 Configuration Manager 控制台中，通过“管理” > “管理见解” > “所有见解”来查看管理见解。 在此版本中，现提供有以下见解：
 
-- **没有部署的应用程序**：列出环境中不具有活动部署的应用程序。 这有助于查找并删除未使用的应用程序，以简化显示在控制台中的应用程序列表。
+- **不具有部署的应用程序**：列出环境中没有活动部署的应用程序。 这有助于查找并删除未使用的应用程序，以简化显示在控制台中的应用程序列表。
 - **空集合**：列出环境中没有成员的集合。 例如，可以删除这些集合来简化在部署对象时显示的集合列表。
 
 
 ## <a name="restart-computers-from-the-configuration-manager-console"></a>从 Configuration Manager 控制台重启计算机   
-<!-- 1356283 -->
-从此版本开始，用户可以使用 Configuration Manager 控制台标识需要重启的客户端设备，然后使用客户端通知操作来重启它们。
+<!-- 1356283 --> 从此版本开始，用户可以使用 Configuration Manager 控制台标识需要重启的客户端设备，然后使用客户端通知操作来重启它们。
 
 若要标识等待重启的设备，请转到“资产和符合性” > “设备”，并选择一个可能需要重启的设备的集合。 选择集合后，可以在名为“等待重新启动”的新列的详细信息窗格中查看每个设备的状态。 每台设备都具有值“是”或“否”。
 
@@ -100,16 +98,15 @@ ms.locfileid: "32334610"
 
 
 ## <a name="software-center-customization"></a>软件中心自定义
-<!-- 1351224 -->
-可以添加企业品牌元素，并在“软件中心”上指定选项卡的可见性。 可以添加“软件中心”特定公司名称、设置“软件中心”配置颜色主题、设置公司徽标，并设置客户端设备的可见选项卡。
+<!-- 1351224 --> 可以添加企业品牌元素，并在“软件中心”上指定选项卡的可见性。 可以添加“软件中心”特定公司名称、设置“软件中心”配置颜色主题、设置公司徽标，并设置客户端设备的可见选项卡。
 
 ### <a name="customize-software-center"></a>自定义“软件中心”
 
 若要修改“软件中心”，请执行以下操作：
 
-1. 在“Configuration Manager”控制台中，选择“管理” > “客户端设置”。 单击所需的客户端设置实例。
-2. 在“主页”选项卡上的“属性”组中，选择“属性”。
-3. 在“默认设置”对话框中，选择“软件中心”。
+1. 在“Configuration Manager”控制台中，选择“管理”>“客户端设置” ****  ****。 单击所需的客户端设置实例。
+2. 在“主页”选项卡上的“属性”组中，请选择“属性” ****  ****  ****。
+3. 在“默认设置”对话框中，请选择“软件中心” ****  ****。
 4. 将“选择新设置以指定公司信息”选择为“是”，来启用“软件中心”自定义设置。
 5. 键入“公司名称”。
 6. 选择“软件中心的配色方案”。
@@ -125,4 +122,4 @@ ms.locfileid: "32334610"
 
 ### <a name="next-steps"></a>后续步骤
 
-若要了解有关 Configuration Manager 中应用程序管理的详细信息，请参阅 [System Center Configuration Manager 中的应用程序管理简介](\sccm\apps\understand\introduction-to-application-management)。
+若要了解有关 Configuration Manager 中应用程序管理的详细信息，请参阅 [System Center Configuration Manager 中的应用程序管理简介](/sccm/apps/understand/introduction-to-application-management)。

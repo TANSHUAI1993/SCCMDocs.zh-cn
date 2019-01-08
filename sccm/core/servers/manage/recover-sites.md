@@ -10,16 +10,16 @@ ms.assetid: 19539f4d-1667-4b4c-99a1-9995f12cf5f7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4737acb34de3aebc8560f54d77b6b341c82ebf65
-ms.sourcegitcommit: 6e0e5b4b7779ce03e2b56b3b5f68f4ace1acedd8
+ms.openlocfilehash: b56dd830e2550a14d6b1e44d2aa7fdda7c56bc9b
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467651"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420492"
 ---
 #  <a name="recover-a-configuration-manager-site"></a>恢复 Configuration Manager 站点
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：*System Center Configuration Manager (Current Branch)*
 
 站点出现故障或者站点数据库中发生数据丢失后，请运行 Configuration Manager 站点恢复。 修复和重新同步数据是站点恢复的核心任务，并且是防止操作中断所必需的。
 
@@ -102,9 +102,9 @@ ms.locfileid: "39467651"
 
 - Configuration Manager 可以从以下任何进程恢复站点数据库：  
 
-    - Configuration Manager 备份维护任务  
-    - 使用 Data Protection Manager (DPM) 进行站点数据库备份  
-    - 另一备份过程   
+  - Configuration Manager 备份维护任务  
+  - 使用 Data Protection Manager (DPM) 进行站点数据库备份  
+  - 另一备份过程   
 
     在 Configuration Manager 之外使用某种方法还原站点数据库之后，运行安装程序并选择此选项以完成站点数据库恢复。  
 
@@ -145,27 +145,27 @@ Configuration Manager 为 SQL Server 中的站点数据库启用更改跟踪。 
 #### <a name="recovered-site-is-a-central-administration-site"></a>恢复的站点是管理中心站点
 - 更改跟踪保持期内的数据库备份  
 
-     - **全局数据**：从所有主站点中复制备份之后，全局数据中所做的更改。  
+     - **全局数据**：系统从所有主站点中复制备份之后在全局数据中所做的更改。  
 
-     - **站点数据**：从所有主站点中复制备份之后，站点数据中所做的更改。  
+     - **站点数据**：系统从所有主站点中复制备份之后在站点数据中所做的更改。  
 
 - 更改跟踪保持期之前的数据库备份  
 
-     - **全局数据**：如果指定引用主站点，则管理中心站点会重新初始化引用主站点中的全局数据。 然后，所有其他主站点会重新初始化管理中心站点中的全局数据。 如果未指定引用站点，则所有主站点都会从管理中心站点重新初始化全局数据。 此数据是从备份还原的数据。  
+     - **全局数据**：如果指定了引用主站点，则管理中心站点会重新初始化引用主站点中的全局数据。 然后，所有其他主站点会重新初始化管理中心站点中的全局数据。 如果未指定引用站点，则所有主站点都会从管理中心站点重新初始化全局数据。 此数据是从备份还原的数据。  
 
-     - **站点数据**：管理中心站点会重新初始化每个主站点中的站点数据。  
+     - **站点数据**：管理中心站点重新初始化每个主站点中的站点数据。  
 
 #### <a name="recovered-site-is-a-primary-site"></a>恢复的站点是主站点
 - 更改跟踪保持期内的数据库备份  
 
-     - **全局数据**：从管理中心站点中复制备份之后，全局数据中所做的更改。  
+     - **全局数据**：系统从管理中心站点中复制备份之后在全局数据中所做的更改。  
 
-     - **站点数据**：管理中心站点会重新初始化主站点中的站点数据。 备份后所做的更改会丢失。 客户端在向主站点发送信息时会重新生成大部分数据。  
+     - **站点数据**：管理中心站点重新初始化主站点中的站点数据。 备份后所做的更改会丢失。 客户端在向主站点发送信息时会重新生成大部分数据。  
 
 - 更改跟踪保持期之前的数据库备份  
-     - **全局数据**：主站点会重新初始化管理中心站点中的全局数据。  
+     - **全局数据**：主站点重新初始化管理中心站点中的全局数据。  
 
-     - **站点数据**：管理中心站点会重新初始化主站点中的站点数据。 备份后所做的更改会丢失。 客户端在向主站点发送信息时会重新生成大部分数据。  
+     - **站点数据**：管理中心站点重新初始化主站点中的站点数据。 备份后所做的更改会丢失。 客户端在向主站点发送信息时会重新生成大部分数据。  
 
 
 

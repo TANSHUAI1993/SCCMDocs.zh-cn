@@ -10,16 +10,16 @@ ms.assetid: 24633725-791a-4df7-8dce-2c24c1a19a03
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 616bf5549c80c94b1dd5d27dc15ea693c86e2ca2
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: a520e4e43ca2d7de080272c213c5768cbd284501
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32335069"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53415834"
 ---
 # <a name="choose-a-device-management-solution-for-system-center-configuration-manager"></a>选择 System Center Configuration Manager 的设备管理解决方案
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：*System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager（也称为 ConfgMgr 或 SCCM）提供用于管理电脑、服务器和设备的不同解决方案。 可以根据进行管理所需的设备平台和所需的管理功能来选择最适合的解决方案。  
 
@@ -68,7 +68,7 @@ System Center Configuration Manager（也称为 ConfgMgr 或 SCCM）提供用于
 |Windows Phone||是||是|  
 |Windows Server|是|||是|  
 
- 有关支持的平台的完整列表，请参阅 [System Center Configuration Manager 客户端和设备支持的操作系统](configs\supported-operating-systems-for-clients-and-devices.md)。
+ 有关支持的平台的完整列表，请参阅 [System Center Configuration Manager 客户端和设备支持的操作系统](configs/supported-operating-systems-for-clients-and-devices.md)。
 
 ##  <a name="bkmk_comp2"></a> 根据管理功能比较移动设备管理解决方案  
 

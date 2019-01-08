@@ -10,16 +10,16 @@ ms.assetid: d566d85c-bf7a-40e7-8239-57640a1db5f4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bffbb3373fbcd1a9a34f526a7c73faff68ccae49
-ms.sourcegitcommit: be8c0182db9ef55a948269fcbad7c0f34fd871eb
+ms.openlocfilehash: c9888bbcc0468356b55216491d8599ebb5f42818
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42756103"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420424"
 ---
 # <a name="create-a-task-sequence-to-capture-and-restore-user-state-in-configuration-manager"></a>在 Configuration Manager 中创建用于捕获和还原用户状态的任务序列
 
- *适用范围：System Center Configuration Manager (Current Branch)*
+ 适用范围：*System Center Configuration Manager (Current Branch)*
 
  使用 Configuration Manager 任务序列捕获和还原 OS 部署方案中的用户状态数据。 在这些情况下，需要保留当前操作系统的用户状态。 捕获和还原步骤可能会自动添加为任务序列的一部分，具体取决于创建的任务序列的类型。 在其他方案中，你可能需要手动将捕获和还原步骤添加到任务序列。 本文提供必须添加到现有任务序列以捕获和还原用户状态数据的步骤。  
 
@@ -69,20 +69,20 @@ ms.locfileid: "42756103"
 
  要添加任务序列步骤以还原用户状态，请使用以下步骤：
 
- 1.  在“任务序列”列表中，选择一个任务序列，然后单击“编辑”。  
+1. 在“任务序列”列表中，选择一个任务序列，然后单击“编辑”。  
 
- 2.  将**还原用户状态**步骤添加到任务序列。 在“任务序列编辑器”中，单击“添加”。 指向“用户状态”，然后单击“还原用户状态”。 如有必要，此步骤与状态迁移点建立连接。 配置此步骤的属性和选项，然后单击“应用”。 有关可用设置的详细信息，请参阅[还原用户状态](/sccm/osd/understand/task-sequence-steps#BKMK_RestoreUserState)。  
+2. 将**还原用户状态**步骤添加到任务序列。 在“任务序列编辑器”中，单击“添加”。 指向“用户状态”，然后单击“还原用户状态”。 如有必要，此步骤与状态迁移点建立连接。 配置此步骤的属性和选项，然后单击“应用”。 有关可用设置的详细信息，请参阅[还原用户状态](/sccm/osd/understand/task-sequence-steps#BKMK_RestoreUserState)。  
 
-    > [!Important]  
-    >  使用[捕获用户状态](/sccm/osd/understand/task-sequence-steps#BKMK_CaptureUserState)步骤和选择“使用标准选项捕获所有用户配置文件”时，必须在“还原用户状态”步骤中选择“还原本地计算机用户配置文件”设置。 否则，任务序列将失败。  
+   > [!Important]  
+   >  使用[捕获用户状态](/sccm/osd/understand/task-sequence-steps#BKMK_CaptureUserState)步骤和选择“使用标准选项捕获所有用户配置文件”时，必须在“还原用户状态”步骤中选择“还原本地计算机用户配置文件”设置。 否则，任务序列将失败。  
 
-    > [!Note]  
-    > 如果使用本地硬链接存储用户状态，并且还原不成功，可以手动删除为存储数据而创建的硬链接。 任务序列可以运行 USMTUtils 工具，使用[运行命令行](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine)步骤自动执行此操作。 如果使用 USMTUtils 来删除硬链接，请在运行 USMTUtils 之后添加[重启计算机](/sccm/osd/understand/task-sequence-steps#BKMK_RestartComputer)步骤。  
+   > [!Note]  
+   > 如果使用本地硬链接存储用户状态，并且还原不成功，可以手动删除为存储数据而创建的硬链接。 任务序列可以运行 USMTUtils 工具，使用[运行命令行](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine)步骤自动执行此操作。 如果使用 USMTUtils 来删除硬链接，请在运行 USMTUtils 之后添加[重启计算机](/sccm/osd/understand/task-sequence-steps#BKMK_RestartComputer)步骤。  
 
- 3.  如果使用状态迁移点来存储用户状态，则将“发布状态存储”步骤添加到任务序列中。 在“任务序列编辑器”中，单击“添加”。 指向“用户状态”，然后单击“发布状态存储”。 配置此步骤的属性和选项，然后单击“应用”。 有关可用设置的详细信息，请参阅[发布状态存储](/sccm/osd/understand/task-sequence-steps#BKMK_ReleaseStateStore)。  
+3. 如果使用状态迁移点来存储用户状态，则将“发布状态存储”步骤添加到任务序列中。 在“任务序列编辑器”中，单击“添加”。 指向“用户状态”，然后单击“发布状态存储”。 配置此步骤的属性和选项，然后单击“应用”。 有关可用设置的详细信息，请参阅[发布状态存储](/sccm/osd/understand/task-sequence-steps#BKMK_ReleaseStateStore)。  
 
-    > [!IMPORTANT]  
-    >  在启动“发布状态存储”步骤之前，必须成功执行在“发布状态存储”步骤之前执行的任务序列操作。  
+   > [!IMPORTANT]  
+   >  在启动“发布状态存储”步骤之前，必须成功执行在“发布状态存储”步骤之前执行的任务序列操作。  
 
 
  部署此任务序列，以还原目标计算机上的用户状态。 有关部署任务序列的信息，请参阅[部署任务序列](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS)。  

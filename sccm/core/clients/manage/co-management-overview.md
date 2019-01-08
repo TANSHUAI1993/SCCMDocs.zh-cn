@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
-ms.openlocfilehash: 1791217e22e2bcc6d5fd2603abee3aaced816afe
-ms.sourcegitcommit: 1f8731ed8f0308cb2cb576722adb0821a366e9ce
+ms.openlocfilehash: 6434ba443cb884c7fbb5d727c5db3c80d2d88aad
+ms.sourcegitcommit: 12b71da551350c99c5916df3629e33e31040db15
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51223732"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53530925"
 ---
 # <a name="co-management-for-windows-10-devices"></a>适用于 Windows 10 设备的共同管理    
 
@@ -58,7 +58,7 @@ ms.locfileid: "51223732"
 
  有两个实现共同管理的主要方式：  
 
-   - Configuration Manager 预配共同管理：将已加入 Azure AD 的 Windows 10 设备（已经是 Configuration Manager 客户端）注册到 Intune。  
+   - Configuration Manager 预配共同管理：将已联接 Azure AD 的 Windows 10 设备（已经是 Configuration Manager 客户端）注册到 Intune。  
 
    - 预配的 Intune：对于已注册到 Intune 的设备，安装 Configuration Manager 客户端以实现共同管理状态。 
 
@@ -72,21 +72,21 @@ ms.locfileid: "51223732"
 
  - Windows 10 设备必须加入 Azure AD。 它们可以是以下任一类型：  
 
-     - [混合 Azure AD 加入](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)，其中设备已加入到本地 Active Directory 且使用 Azure Active Directory 注册。
+     - [混合 Azure AD 加入](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan)，其中设备已加入到本地 Active Directory 且使用 Azure Active Directory 注册。
 
-     - 仅限已加入 Azure AD。 （此类型有时称为“已加入云域”）<!--SCCMDocs issue 605-->
+     - 仅限[已联接 Azure AD](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan)。 （此类型有时称为“已加入云域”）<!--SCCMDocs issue 605-->
 
  - [启用 Windows 10 自动注册](https://docs.microsoft.com/intune/windows-enroll)。  
 
 
 ### <a name="intune"></a>Intune
 
- - [如何设置 Intune 订阅。](/sccm/mdm/deploy-use/configure-intune-subscription)或[设置 Intune](/intune/setup-steps)  
+- [如何设置 Intune 订阅。](/sccm/mdm/deploy-use/configure-intune-subscription)或[设置 Intune](/intune/setup-steps)  
 
- - [开始从混合 MDM 迁移到 Intune 独立版本](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa)  
+- [开始从混合 MDM 迁移到 Intune 独立版本](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa)  
 
- > [!Note]  
- > 如果具有混合 MDM 环境（Intune 与 Configuration Manager 集成），则无法启用共同管理。 但是，你可以开始将用户迁移到 Intune 独立版本，然后对其关联的 Windows 10 设备启用共同管理。 有关迁移到 Intune 独立版本的详细信息，请参阅[开始从混合 MDM 迁移到 Intune 独立版本](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa)。  
+  > [!Note]  
+  > 如果具有混合 MDM 环境（Intune 与 Configuration Manager 集成），则无法启用共同管理。 但是，你可以开始将用户迁移到 Intune 独立版本，然后对其关联的 Windows 10 设备启用共同管理。 有关迁移到 Intune 独立版本的详细信息，请参阅[开始从混合 MDM 迁移到 Intune 独立版本](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa)。  
 
 
 ### <a name="enable-co-management"></a>启用共同管理 

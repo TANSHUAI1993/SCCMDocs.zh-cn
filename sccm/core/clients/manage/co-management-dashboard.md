@@ -10,16 +10,16 @@ ms.assetid: e83a7b0d-b381-4b4a-8eca-850385abbebb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ad76140285df1c0125fcd2efab0f4794ed4881bf
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 5e20985ac8fc39f2384cee5d202e19fc69e2b348
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52455932"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53414678"
 ---
 # <a name="co-management-dashboard-in-configuration-manager"></a>Configuration Manager 中的共同管理仪表板
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 从版本 1802 开始，可查看含共同管理相关信息的仪表板。 此仪表板可帮助你查看环境中共同管理的计算机。 图表有助于标识可能需要注意的设备。<!--1356648-->
 
@@ -39,7 +39,7 @@ ms.locfileid: "52455932"
 适用于 1802 和 1806 两个版本
 
 显示整个环境中共同管理的设备所占的百分比。
- ![“共同管理的设备”磁贴](media\co-management-dashboard\Percent-Co-managed-graph.PNG)
+ ![“共同管理的设备”磁贴](media/co-management-dashboard/Percent-Co-managed-graph.PNG)
 
 
 ### <a name="client-os-distribution"></a>客户端 OS 分发
@@ -55,7 +55,7 @@ ms.locfileid: "52455932"
     > Windows 10 1709 及更高版本是共同管理的先决条件。  
 
 将鼠标悬停在图表的某个部分上方可显示该 OS 组中设备所占的百分比。
- ![“客户端 OS 分发”磁贴](media\co-management-dashboard\Co-management-OS-distribution-graph.PNG)
+ ![“客户端 OS 分发”磁贴](media/co-management-dashboard/Co-management-OS-distribution-graph.PNG)
 
 
 ### <a name="co-management-status-donut"></a>共同管理状态（圆环图）
@@ -68,10 +68,10 @@ ms.locfileid: "52455932"
 - 失败：自动注册失败  
 
 将鼠标悬停在图表的某个部分上可显示该类别中设备所占的百分比。 
- ![共同管理状态（圆环图）磁贴](media\co-management-dashboard\Co-management-status-graph.PNG)
+ ![共同管理状态（圆环图）磁贴](media/co-management-dashboard/Co-management-status-graph.PNG)
 
 选择图中某个部分可查看该类别的设备列表。
- ![注册失败设备列表](media\co-management-dashboard\Enrollment-Failure_Device-List.PNG)
+ ![注册失败设备列表](media/co-management-dashboard/Enrollment-Failure_Device-List.PNG)
 
 
 ### <a name="co-management-status-funnel"></a>共同管理状态（漏斗图）
@@ -84,7 +84,7 @@ ms.locfileid: "52455932"
 - 已启动注册  
 - 已注册  
 
-![共同管理状态（漏斗图）磁贴](media\co-management-dashboard\1358980-status-funnel.png)
+![共同管理状态（漏斗图）磁贴](media/co-management-dashboard/1358980-status-funnel.png)
 
 
 ### <a name="co-management-enrollment-status"></a>共同管理注册状态
@@ -101,7 +101,7 @@ ms.locfileid: "52455932"
 
 在该磁贴中选择一种状态，即可深入查看相关状态的设备列表。  
 
-![共同管理注册状态磁贴](media\co-management-dashboard\1358980-enrollment-status.png)
+![共同管理注册状态磁贴](media/co-management-dashboard/1358980-enrollment-status.png)
 
 
 ### <a name="enrollment-errors"></a>注册错误
@@ -118,7 +118,7 @@ ms.locfileid: "52455932"
 显示一个条形图，其中包含为可用工作负荷而转换为 Microsoft Intune 的设备数量。 （工作负荷列表因 Configuration Manager 的版本而异。 有关详细信息，请参阅[能够转换到 Intune 的工作负荷](/sccm/core/clients/manage/co-management-switch-workloads#workloads-able-to-be-transitioned-to-intune)。）
 
 将鼠标悬停在图表某个部分上方可显示为该工作负荷转换的设备的数量。 
- ![工作负荷转换条形图](media\co-management-dashboard\Workload-Transition.PNG)
+ ![工作负荷转换条形图](media/co-management-dashboard/Workload-Transition.PNG)
 
 
 ## <a name="next-steps"></a>后续步骤

@@ -10,35 +10,34 @@ ms.assetid: 3753608d-b539-44dc-8e3f-b631319e7687
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: faf8d48614bc3e27381d57d86fc24da9356aa3f0
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: abae42358e6baba660841eab9443410c0b818428
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32347563"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419251"
 ---
 # <a name="deploy-profiles-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中部署配置文件
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*适用于：System Center Configuration Manager (Current Branch)*
 
 必须将配置文件部署到一个或多个集合，然后才能使用这些配置文件。  
 
  使用“部署 Wi-fi 配置文件”、“部署 VPN 配置文件”、“部署 Exchange ActiveSync 配置文件”或“部署证书配置文件”对话框可配置这些配置文件的部署。 在配置过程中，你可以定义将向其中部署配置文件的集合，以及指定对配置文件的符合性进行评估的频率。  
 
-> [!NOTE]  
+> [!NOTE]
 >  如果部署多个公司资源访问配置文件到同一个用户时，会出现下列行为：  
->   
->  -   如果冲突的设置中包含一个可选值，则它将不会发送到设备。  
-> -   如果冲突设置包含必需的值，则默认值将发送到设备。 如果没有默认值，则整个公司资源访问配置文件将失败。 例如，如果你将两个电子邮件配置文件部署到同一用户并且为“Exchange ActiveSync 主机”  或“电子邮件地址”  指定的值不同，则这两个电子邮件配置文件将失败，因为它们是强制设置。  
-
-> -   你必须首先配置基础结构并创建证书配置文件，然后才能部署证书配置文件。 有关详细信息，请参阅下列主题：  
->   
->  -   [在 System Center Configuration Manager 中配置证书基础结构](certificate-infrastructure.md)  
-> -   [如何在 System Center Configuration Manager 中创建证书配置文件](create-certificate-profiles.md)    
-
-> [!IMPORTANT]  
+> 
+> - 如果冲突的设置中包含一个可选值，则它将不会发送到设备。  
+>   -   如果冲突设置包含必需的值，则默认值将发送到设备。 如果没有默认值，则整个公司资源访问配置文件将失败。 例如，如果你将两个电子邮件配置文件部署到同一用户并且为“Exchange ActiveSync 主机”  或“电子邮件地址”  指定的值不同，则这两个电子邮件配置文件将失败，因为它们是强制设置。  
+> 
+> - 你必须首先配置基础结构并创建证书配置文件，然后才能部署证书配置文件。 有关详细信息，请参阅下列主题：  
+> 
+>   -   [在 System Center Configuration Manager 中配置证书基础结构](certificate-infrastructure.md)  
+> - [如何在 System Center Configuration Manager 中创建证书配置文件](create-certificate-profiles.md)    
+> 
+> [!IMPORTANT]
 >  删除 VPN 配置文件部署时，不会从客户端设备中将其删除。 如果要从设备中删除配置文件，你必须将其手动删除。
->   
 
 ## <a name="deploying--profiles"></a>部署配置文件  
 

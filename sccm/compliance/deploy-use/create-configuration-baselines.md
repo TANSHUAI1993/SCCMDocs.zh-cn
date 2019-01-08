@@ -10,16 +10,16 @@ ms.assetid: 678c9622-c61b-47d1-ba25-690616e431c7
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 665f5720486164cc4c728d579f1a700c4fb16245
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 10b7d0c026ab7af0f5b1964539a70f74f13c079e
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39384665"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421529"
 ---
 # <a name="create-configuration-baselines-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中创建配置基线
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 
 System Center Configuration Manager 中的配置基线包含预定义的配置项目，还可包含其他配置基线。 在创建配置基线之后，可以将其部署到集合以便该集合中的设备下载配置基线并评估其符合性。  
@@ -34,35 +34,35 @@ System Center Configuration Manager 中的配置基线包含预定义的配置�
 
 若要通过“创建配置基线”对话框创建配置基线，请使用以下过程：  
 
-1.  在 Configuration Manager 控制台中，单击“资产和符合性” > “符合性设置” > “配置基线”。  
+1. 在 Configuration Manager 控制台中，单击“资产和符合性” > “符合性设置” > “配置基线”。  
 
-2.  在“主页”  选项卡上的“创建”  组中，单击“创建配置基线” 。  
+2. 在“主页”  选项卡上的“创建”  组中，单击“创建配置基线” 。  
 
-3.  在“创建配置基线”  对话框中，输入配置基线的唯一名称和描述。 描述最多可使用 255 个字符，描述最多可使用 512 个字符。  
+3. 在“创建配置基线”  对话框中，输入配置基线的唯一名称和描述。 描述最多可使用 255 个字符，描述最多可使用 512 个字符。  
 
-4.  “配置数据”  列表将显示此配置基线中包含的所有配置项目或配置基线。 单击“添加”  可向列表中添加新配置项目或配置基线。 可以选择下列项目:  
+4. “配置数据”  列表将显示此配置基线中包含的所有配置项目或配置基线。 单击“添加”  可向列表中添加新配置项目或配置基线。 可以选择下列项目:  
 
-    -   <bpt id="p1">**</bpt>Configuration Items<ept id="p1">**</ept>  
+   - <bpt id="p1">**</bpt>Configuration Items<ept id="p1">**</ept>  
 
-    -   **软件更新**  
+   - **软件更新**  
 
-    -   <bpt id="p1">**</bpt>Configuration Baselines<ept id="p1">**</ept>  
-      > [!IMPORTANT]
-      > 必须将每个配置基线限制为不超过 1000 个软件更新。
-5.  使用“更改目的”列表来指定在“配置数据”列表中已选择的配置项目的行为。 可以选择下列项目：  
+   - <bpt id="p1">**</bpt>Configuration Baselines<ept id="p1">**</ept>  
+     > [!IMPORTANT]
+     > 必须将每个配置基线限制为不超过 1000 个软件更新。
+5. 使用“更改目的”列表来指定在“配置数据”列表中已选择的配置项目的行为。 可以选择下列项目：  
 
-    -   **必需**：如果客户端设备上未检测到配置项目，则配置基线被评估为不符合要求。 如果检测到，则评估为符合要求  
+   -   **必需**：如果客户端设备上未检测到配置项目，则配置基线被评估为不符合要求。 如果检测到，则评估为符合要求  
 
-    -   **可选**：只有在客户端计算机上找到它所引用的应用程序，才会评估配置项目的符合性。 如果找不到该应用程序，则不会将配置基线标记为不符合要求（仅适用于应用程序配置项目）。  
+   -   **可选**：只有在客户端计算机上找到它所引用的应用程序，才会评估配置项目的符合性。 如果找不到该应用程序，则不会将配置基线标记为不符合要求（仅适用于应用程序配置项目）。  
 
-    -   **禁止**：如果客户端计算机上检测到配置项目（仅适用于应用程序配置项目），则将配置基线评估为不符合要求。  
+   -   **禁止**：如果客户端计算机上检测到配置项目（仅适用于应用程序配置项目），则将配置基线评估为不符合要求。  
 
-    > [!NOTE]
-    >  “更改目的”  列表只有在勾选“创建配置项目向导”  中“常规”  页面中的“此配置项目包含应用程序设置” 选项时才可用。  
+   > [!NOTE]
+   >  “更改目的”  列表只有在勾选“创建配置项目向导”  中“常规”  页面中的“此配置项目包含应用程序设置” 选项时才可用。  
 
-6.  使用“更改修订版本”  列表可选择特定版本或最新版本的配置项目来评估客户端设备上的符合性，或选择“始终使用最新”  以始终使用最新版本。 有关配置项目修订版本的详细信息，请参阅[针对配置数据的管理任务](../../compliance/deploy-use/management-tasks-for-configuration-data.md)。  
+6. 使用“更改修订版本”  列表可选择特定版本或最新版本的配置项目来评估客户端设备上的符合性，或选择“始终使用最新”  以始终使用最新版本。 有关配置项目修订版本的详细信息，请参阅[针对配置数据的管理任务](../../compliance/deploy-use/management-tasks-for-configuration-data.md)。  
 
-7.  要从配置基线中删除配置项目，请选择配置项目，然后单击“删除”。  
+7. 要从配置基线中删除配置项目，请选择配置项目，然后单击“删除”。  
 
 8. 自版本 1806 起，选择是否要“始终将此基线应用于共同管理的客户端”。 选中时，此基线甚至将应用于由 Intune 管理的客户端。  此异常可用于配置组织所需但在 Intune 中尚不可用的设置。 
 

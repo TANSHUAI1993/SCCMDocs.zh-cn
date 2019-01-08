@@ -10,35 +10,35 @@ ms.assetid: c7c94ba0-d709-4129-8077-075a8abaea1c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ad4bfe99e841af5ccc4f6792fda664b8259a5369
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 10c072c89064472398c068a62079d1af120b1a11
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350521"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416548"
 ---
 # <a name="preprovision-bitlocker-in-windows-pe-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 预先设置在 Windows PE 中的 BitLocker
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 利用 System Center Configuration Manager 中的“预设置 BitLocker”任务序列步骤，可以在部署操作系统之前从 Windows 预安装环境 (Windows PE) 中启用 BitLocker。 由于仅加密使用的磁盘空间，因此加密时间要短得多。 这是通过在运行 Windows 设置进程之前将随机生成的清除保护程序应用于格式化的卷并对卷进行加密来完成的。 Windows 8 和 Windows Server 2012 引入了预设置 BitLocker 的功能。 但是，只要遵循特定步骤，即可在硬盘上预设置 BitLocker 并安装 Windows 7。 当 Windows 7 安装程序完成后，你必须设置 BitLocker 密钥保护程序，因为 Windows 7 BitLocker 控制面板不使用清除保护程序支持 BitLocker。 你必须执行“启用 BitLocker”  步骤或者使用 manage-bde.exe 命令行工具来添加密钥保护程序。  
 
  通常，你必须执行以下操作，以在将安装 Windows 7 的计算机上成功预设置 BitLocker：  
 
--   在 Windows PE 中重启计算机  
+- 在 Windows PE 中重启计算机  
 
-    > [!IMPORTANT]  
-    >  你必须使用带有 Windows PE 4 或更高版本的启动映像来预设置 BitLocker。 有关 Configuration Manager 中支持的 Windows PE 版本的详细信息，请参阅 [Configuration Manager 的外部依赖关系](../plan-design/infrastructure-requirements-for-operating-system-deployment.md#BKMK_ExternalDependencies)。  
+  > [!IMPORTANT]  
+  >  你必须使用带有 Windows PE 4 或更高版本的启动映像来预设置 BitLocker。 有关 Configuration Manager 中支持的 Windows PE 版本的详细信息，请参阅 [Configuration Manager 的外部依赖关系](../plan-design/infrastructure-requirements-for-operating-system-deployment.md#BKMK_ExternalDependencies)。  
 
--   对硬盘进行分区和格式化  
+- 对硬盘进行分区和格式化  
 
--   中的“预设置 BitLocker”  
+- 中的“预设置 BitLocker”  
 
--   使用特定的操作系统和网络设置安装 Windows 7  
+- 使用特定的操作系统和网络设置安装 Windows 7  
 
--   将密钥保护程序添加到 BitLocker 中  
+- 将密钥保护程序添加到 BitLocker 中  
 
- 在 Configuration Manager 中，在硬盘上预设置 BitLocker 以及安装 Windows 7 的建议方法为：创建新任务序列，并从“创建任务序列向导”的“新建任务序列”页中选择“安装现有的映像包”。 此向导将创建下表中列出的任务序列步骤。  
+  在 Configuration Manager 中，在硬盘上预设置 BitLocker 以及安装 Windows 7 的建议方法为：创建新任务序列，并从“创建任务序列向导”的“新建任务序列”页中选择“安装现有的映像包”。 此向导将创建下表中列出的任务序列步骤。  
 
 > [!NOTE]  
 >  任务序列可能具有其他步骤，具体取决于你在向导中配置设置的方式。 例如，如果在向导的“状态迁移”  页上选择了“捕获 Microsoft Windows 设置”  ，则可能具有“捕获 Windows 设置”  步骤。  

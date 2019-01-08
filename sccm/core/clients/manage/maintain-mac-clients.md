@@ -10,15 +10,15 @@ ms.assetid: cf6337a2-700c-47f3-b6f8-5814f9b81e59
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 32d36f041ed42ef0afa8fe0c0e052389587a2c8f
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 337df4d64b6edda589344b52a100e5a90381676c
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32335212"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421189"
 ---
 # <a name="maintain-mac-clients"></a>维护 Mac 客户端
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 以下是用于卸载 Mac 客户端和续订其证书的步骤。
 
@@ -44,26 +44,26 @@ ms.locfileid: "32335212"
 
 ###  <a name="renew-certificate-wizard"></a>续订证书向导  
 
-1.  在 ccmclient.plist 文件中将以下值配置为字符串，以控制续订证书向导的打开时间：  
+1. 在 ccmclient.plist 文件中将以下值配置为字符串，以控制续订证书向导的打开时间：  
 
- -   **RenewalPeriod1** - 指定用户可以在其中续订证书的第一个续订期间（以秒为单位）。 默认值为 3,888,000 秒（45 天）。 不得将值配置为小于 300 秒，否则该期间将恢复为默认值。 
+   - **RenewalPeriod1** - 指定用户可以在其中续订证书的第一个续订期间（以秒为单位）。 默认值为 3,888,000 秒（45 天）。 不得将值配置为小于 300 秒，否则该期间将恢复为默认值。 
 
- -   **RenewalPeriod2** - 指定用户可以在其中续订证书的第二个续订期间（以秒为单位）。 默认值为 259,200 秒（3 天）。 如果将此值配置为大于或等于 300 秒且小于或等于“RenewalPeriod1”，则将使用该值。 如果“RenewalPeriod1”  大于 3 天，则“RenewalPeriod2” 将使用的值为 3 天。  如果“RenewalPeriod1”  小于 3 天，则“RenewalPeriod2”  设置为与“RenewalPeriod1” 相同的值。  
+   - **RenewalPeriod2** - 指定用户可以在其中续订证书的第二个续订期间（以秒为单位）。 默认值为 259,200 秒（3 天）。 如果将此值配置为大于或等于 300 秒且小于或等于“RenewalPeriod1”，则将使用该值。 如果“RenewalPeriod1”  大于 3 天，则“RenewalPeriod2” 将使用的值为 3 天。  如果“RenewalPeriod1”  小于 3 天，则“RenewalPeriod2”  设置为与“RenewalPeriod1” 相同的值。  
 
- -   **RenewalReminderInterval1** - 指定在第一个续订期间将向用户显示续订证书向导的频率（以秒为单位）。 默认值为 86,400 秒（1 天）。 如果“RenewalReminderInterval1”  大于 300 秒且小于为“RenewalPeriod1” 配置的值，则将使用配置的值。 否则，将使用默认值，即 1 天。  
+   - **RenewalReminderInterval1** - 指定在第一个续订期间将向用户显示续订证书向导的频率（以秒为单位）。 默认值为 86,400 秒（1 天）。 如果“RenewalReminderInterval1”  大于 300 秒且小于为“RenewalPeriod1” 配置的值，则将使用配置的值。 否则，将使用默认值，即 1 天。  
 
- -   **RenewalReminderInterval2** - 指定在第二个续订期间将向用户显示续订证书向导的频率（以秒为单位）。 默认值为 28,800 秒（8 小时）。 如果“RenewalReminderInterval2”  大于 300 秒、小于等于“RenewalReminderInterval1”  且小于等于“RenewalPeriod2” ，则将使用配置的值。 否则，将使用的值为 8 小时。  
+   - **RenewalReminderInterval2** - 指定在第二个续订期间将向用户显示续订证书向导的频率（以秒为单位）。 默认值为 28,800 秒（8 小时）。 如果“RenewalReminderInterval2”  大于 300 秒、小于等于“RenewalReminderInterval1”  且小于等于“RenewalPeriod2” ，则将使用配置的值。 否则，将使用的值为 8 小时。  
 
      **示例：** 如果将各值保留为其默认值，则在证书到期前 45 天，将每 24 小时打开该向导。  在证书到期前 3 天内，将每隔 8 小时打开该向导。  
 
-     **示例：** 使用以下命令行或脚本将第一个续订期间设置为 20 天。  
+     **示例：** 使用以下命令行或脚本将第一个预订期间设置为 20 天。  
 
      `sudo defaults write com.microsoft.ccmclient RenewalPeriod1 1728000`  
 
-2.  当预订证书向导打开时，通常将预先填充“用户名”和“服务器名称”字段，用户只需输入密码即可续订证书。  
+2. 当预订证书向导打开时，通常将预先填充“用户名”和“服务器名称”字段，用户只需输入密码即可续订证书。  
 
-    > [!NOTE]  
-    >  如果向导未打开或者你无意中关闭了向导，请单击“Configuration Manager”  首选项页中的“续订”  以打开向导。  
+   > [!NOTE]  
+   >  如果向导未打开或者你无意中关闭了向导，请单击“Configuration Manager”  首选项页中的“续订”  以打开向导。  
 
 ###  <a name="renew-certificate-manually"></a>手动续订证书  
  Mac 客户端证书的有效期通常为 1 年。 Configuration Manager 不自动续订其在注册过程中请求的用户证书，因此你必须使用以下程序来手动续订证书。  
@@ -120,7 +120,7 @@ ms.locfileid: "32335212"
 
     -   **名称：删除 Mac 的 SMSID**  
 
-    -   **选择的设置：** 选择“浏览”，然后选择先前指定的发现脚本。  
+    -   **选定的设置：** 选择“浏览”，然后选择你先前指定的发现脚本。  
 
     -   在 **“以下值”** 字段中，输入 **“域/默认值对 (com.microsoft.ccmclient, SMSID) 不存在”**。  
 

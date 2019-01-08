@@ -10,12 +10,12 @@ ms.assetid: 946b0f74-0794-4e8f-a6af-9737d877179b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fbcf7a7d76146cc11dd4bb57b86fe4752c694e02
-ms.sourcegitcommit: 1e782268d6c0211bd854b5860de72cfd6c6985c6
+ms.openlocfilehash: 32aced9e14f98008dfd769564c553370d067896e
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44697032"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53423093"
 ---
 # <a name="enable-third-party-updates"></a>启用第三方更新 
 
@@ -53,7 +53,7 @@ ms.locfileid: "44697032"
 4. 在远程 SUP 服务器上向受信任的发布者和受信任的根存储安装自签名 WSUS 签名证书：
    - WSUS 服务器连接帐户应具有 SUP 服务器上的远程管理权限。
 
-    如果无法使用此项，请将证书从本地计算机的 WSUS 存储导出到受信任的发布者和受信任的根存储中。 
+     如果无法使用此项，请将证书从本地计算机的 WSUS 存储导出到受信任的发布者和受信任的根存储中。 
 
 > [!NOTE] 
 >可以通过查看 SUP 的站点系统角色属性上的“代理和帐户设置”选项卡来识别 WSUS 服务器连接帐户。 如果未指定帐户，则使用站点服务器的计算机帐户。
@@ -108,11 +108,11 @@ ms.locfileid: "44697032"
      ![第三方更新添加自定义目录](media/third-party-updates-custom-catalog.png)
 1. 在“常规”页面上，指定以下各项： 
     - **下载 URL**：自定义目录的有效的 HTTPS 地址。
-    - **发行商**：发布目录的组织的名称。 
-    - **名称**：要在 Configuration Manager 控制台中显示的目录的名称。 
-    - **描述**：目录描述。 
-    - **支持 URL**（可选）：用于获取目录相关帮助的网站的有效 HTTPS 地址。 
-    - **支持联系人**（可选）：用于获取目录相关帮助的联系人信息。 
+    - **发布者**：发布目录的组织的名称。 
+    - **名称**：在 Configuration Manager 控制台中显示的目录的名称。 
+    - **描述**：对目录的描述。 
+    - **支持部门 URL**（可选）：用于获取目录相关帮助的网站的有效 HTTPS 地址。 
+    - **支持部门联系人**（可选）：用于获取目录相关帮助的联系人信息。 
 2. 单击“下一步”以查看目录摘要，并继续完成“第三方软件更新自定义目录向导”。
 
 
@@ -122,17 +122,17 @@ ms.locfileid: "44697032"
 1. 在 Configuration Manager 控制台中，转到“软件库”工作区。 展开“软件更新”，然后选择“第三方软件更新目录”节点。  
 2. 选择要订阅的目录，然后单击功能区中的“订阅目录”。 
     ![第三方更新添加自定义目录](media/third-party-updates-subscribe.png)
-1. 查看并批准目录证书。  
-    >[!NOTE]
-    
-    > 当订阅第三方软件更新目录时，将你在向导中查看并批准的证书添加到站点。 此证书的类型是“第三方软件更新目录”。 可以从“管理”工作区中“安全”下的“证书”节点管理它。  
-2. 完成向导。 初始订阅后，目录应该会在几分钟内开始下载。 
+3. 查看并批准目录证书。  
+   > [!NOTE]
+   > 
+   > 当订阅第三方软件更新目录时，将你在向导中查看并批准的证书添加到站点。 此证书的类型是“第三方软件更新目录”。 可以从“管理”工作区中“安全”下的“证书”节点管理它。  
+4. 完成向导。 初始订阅后，目录应该会在几分钟内开始下载。 
     - 目录每 7 天自动同步一次。
     - 单击功能区中的“立即同步”以强制同步。
-3. 下载目录后，需要将产品元数据从 WSUS 数据库同步到 Configuration Manager 数据库。 [手动启动软件更新同步](../get-started/synchronize-software-updates.md#manually-start-software-updates-synchronization)以同步产品信息。
-4. 同步产品信息后，[配置 SUP 以将所需产品同步](../get-started/configure-classifications-and-products.md#to-configure-classifications-and-products-to-synchronize)到 Configuration Manager 中。  
-5. [手动启动软件更新同步](../get-started/synchronize-software-updates.md#manually-start-software-updates-synchronization)，以将新产品的更新同步到 Configuration Manager 中。  
-6. 同步完成后，可以在“所有更新”节点中查看第三方更新。 这些更新将作为“仅元数据”更新发布，直到选择发布它们为止。 
+5. 下载目录后，需要将产品元数据从 WSUS 数据库同步到 Configuration Manager 数据库。 [手动启动软件更新同步](../get-started/synchronize-software-updates.md#manually-start-software-updates-synchronization)以同步产品信息。
+6. 同步产品信息后，[配置 SUP 以将所需产品同步](../get-started/configure-classifications-and-products.md#to-configure-classifications-and-products-to-synchronize)到 Configuration Manager 中。  
+7. [手动启动软件更新同步](../get-started/synchronize-software-updates.md#manually-start-software-updates-synchronization)，以将新产品的更新同步到 Configuration Manager 中。  
+8. 同步完成后，可以在“所有更新”节点中查看第三方更新。 这些更新将作为“仅元数据”更新发布，直到选择发布它们为止。 
      - 带有蓝色箭头的图标表示仅元数据软件更新。 ![“仅元数据软件更新”图标](media/MetadataOnly.png)
 
 

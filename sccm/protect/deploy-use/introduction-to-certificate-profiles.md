@@ -10,16 +10,16 @@ ms.assetid: 41dcc259-f147-4420-bff2-b65bdf8cff77
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c4230b935b7fabc44743d57fcb2315348edb4274
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 27a615a412bca7e30ab5f5a3dc5f794961d13d2c
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32349681"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424487"
 ---
 # <a name="introduction-to-certificate-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的证书配置文件简介
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*适用于：System Center Configuration Manager (Current Branch)*
 
 
 证书配置文件适用于 Active Directory 证书服务和网络设备注册服务 (NDES) 角色。 创建并部署托管设备的身份验证证书，让用户可以轻松访问公司资源。 例如，可以创建和部署证书配置文件来为用户提供必要的证书，从而连接到 VPN 和无线连接。
@@ -34,9 +34,9 @@ ms.locfileid: "32349681"
 
 -   监视并报告已安装的证书。  
 
-**例如：** 所有员工都必须能够连接到多个公司位置的 Wi-fi 热点。 若要启用简单的用户连接，请先部署连接 Wi-Fi 所需的证书。 然后部署引用该证书的 Wi-Fi 配置文件。  
+**示例：** 所有员工都必须能够在多个公司位置连接到 Wi-fi 热点。 若要启用简单的用户连接，请先部署连接 Wi-Fi 所需的证书。 然后部署引用该证书的 Wi-Fi 配置文件。  
 
-**示例：** 假设你的 PKI 已就位。 你希望采用更灵活安全的方法来部署证书。 用户应可在不影响安全性的情况下从个人设备访问公司资源。 使用特定设备平台支持的设置和协议配置证书配置文件。 随后设备可从面向 Internet 的注册服务器自动请求这些证书。 然后，配置 VPN 配置文件以使用这些证书，以便设备能够访问公司资源。  
+例如：制定 PKI。 你希望采用更灵活安全的方法来部署证书。 用户应可在不影响安全性的情况下从个人设备访问公司资源。 使用特定设备平台支持的设置和协议配置证书配置文件。 随后设备可从面向 Internet 的注册服务器自动请求这些证书。 然后，配置 VPN 配置文件以使用这些证书，以便设备能够访问公司资源。  
 
 
 
@@ -100,10 +100,10 @@ Configuration Manager 的一个典型方案是，在连接使用 EAP-TLS、EAP-T
 ## <a name="automatic-revocation-of-certificates"></a>自动吊销证书  
  System Center Configuration Manager 在以下情况下会自动撤销使用证书配置文件部署的用户和计算机证书：  
 
--   设备已从 System Center Configuration Manager 管理停用。  
+- 设备已从 System Center Configuration Manager 管理停用。  
 
--   有选择地擦除了设备。  
+- 有选择地擦除了设备。  
 
--   设备在 System Center Configuration Manager 层次结构中受阻止。  
+- 设备在 System Center Configuration Manager 层次结构中受阻止。  
 
- 为了吊销证书，站点服务器会将吊销命令发送至证书颁发机构。 吊销原因是“停止操作” 。  
+  为了吊销证书，站点服务器会将吊销命令发送至证书颁发机构。 吊销原因是“停止操作” 。  

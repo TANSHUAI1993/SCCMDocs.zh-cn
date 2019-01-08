@@ -10,16 +10,16 @@ ms.assetid: 2e801f8c-d331-41ee-8f27-908448fc0951
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4750d9e31eb41fdad7f655faa4e8058156e922a1
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: aed9ec403496b309b1b556355c955743d43b2dc4
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32337150"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420203"
 ---
 # <a name="capabilities-in-technical-preview-1703-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1703 中的功能
 
-*适用于： System Center Configuration Manager （技术预览版）*
+适用范围：*System Center Configuration Manager (Technical Preview)*
 
 本文介绍在技术预览版的 System Center Configuration Manager，版本 1703年中可用的功能。 你可以安装此版本，以更新 Technical Preview 站点的功能并向其添加新功能。 在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager 技术预览版](../../core/get-started/technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。    
 
@@ -59,9 +59,9 @@ Softwarecenter:SoftwareId=*应用程序标识符*
 1.  在 Configuration Manager 控制台中，单击“软件库”。
 2.  在“软件库”工作区中，展开“应用程序管理”，然后单击“应用程序”。
 3.  在“应用程序”视图中，右键单击其中一个列标题，然后在列表中选择“CI 唯一 ID”。 此时列表中将显示每个应用程序的唯一 ID。
-4.  记下要向其提供链接的应用程序的 **CI 唯一 ID**，例如：**ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f/2**
+4.  请注意要提供链接的应用程序的“CI 唯一 ID”，例如：**ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f/2**
 5.  然后，删除应用程序 GUID 后的所有文本，在本例中为 **/2**。 剩下的即为应用程序标识符。
-6.  最后，若要完成构造链接，请在标识符前附加 **Softwarecenter:SoftwareID=**。 使用上述示例，最终链接将为：**Softwarecenter:SoftwareId= ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f**。
+6.  最后，若要完成构造链接，请在标识符前附加 **Softwarecenter:SoftwareID=**。 使用上面的示例，最终链接将显示为：**Softwarecenter:SoftwareId= ScopeId_1672B0CD-912A-4613-9BAB-D4EF2696D416/Application_970b1fef-1f38-405c-ad37-c753400b895f**。
 
 通过使用此链接，最终用户可直接在指定的应用程序中打开软件中心。
 
@@ -106,18 +106,18 @@ Technical preview 1703 引入了**配置 Azure 服务**向导。 此向导提供
 4. 在“应用”页上，指定 Azure 环境，然后单击“浏览”打开“服务器应用”窗口。
 
 5. 在“服务器应用”窗口中，选择要使用的服务器应用，然后单击“确定”。
-服务器应用是包含 Azure 帐户配置的 Azure Web 应用，包括客户端的租户 ID、客户端 ID 和密钥。 如果没有可用的服务器应用，请使用以下操作之一：
-  - **创建**：若要创建新的服务器应用，请单击“创建”。 为应用和租户提供友好名称。 然后，登录 Azure 后，Configuration Manager 将在 Azure 中为用户创建 Web 应用，包括用于 Web 应用的客户端 ID 和密钥。 之后，可在 Azure 门户中查看这些内容。
-  - **导入**：若要使用 Azure 订阅中已存在的 Web 应用，请单击“导入”。 为应用和租户提供友好名称，然后为 Configuration Manager 要使用的 Azure Web 应用指定租户 ID、客户端 ID 和密钥。 “验证”信息后，单击“确定”以继续。  </br></br>
+   服务器应用是包含 Azure 帐户配置的 Azure Web 应用，包括客户端的租户 ID、客户端 ID 和密钥。 如果没有可用的服务器应用，请使用以下操作之一：
+   - **创建**：若要创建新的服务器应用，请单击“创建”。 为应用和租户提供友好名称。 然后，登录 Azure 后，Configuration Manager 将在 Azure 中为用户创建 Web 应用，包括用于 Web 应用的客户端 ID 和密钥。 之后，可在 Azure 门户中查看这些内容。
+   - **导入**：若要使用 Azure 订阅中已存在的 Web 应用，请单击“导入”。 为应用和租户提供友好名称，然后为 Configuration Manager 要使用的 Azure Web 应用指定租户 ID、客户端 ID 和密钥。 “验证”信息后，单击“确定”以继续。  </br></br>
 
 6. 查看“信息”页，并根据指示完成所有额外步骤和配置。 这些配置是通过 Configuration Manager 使用服务所必需的。
-例如，若要配置 WSfB：
+   例如，若要配置 WSfB：
 
-  1. 在 Azure 中，必须将 Configuration Manager 注册为 Web 应用程序或 Web API 并记录客户端 ID。 还可以指定用于管理工具 (Configuration Manager) 的客户端密钥。
+   1. 在 Azure 中，必须将 Configuration Manager 注册为 Web 应用程序或 Web API 并记录客户端 ID。 还可以指定用于管理工具 (Configuration Manager) 的客户端密钥。
 
-  2.    在 WSfB 控制台中，必须将 Configuration Manager 配置为存储管理工具并启用对脱机许可应用的支持，然后购买至少一个应用。   </br>
+   2.    在 WSfB 控制台中，必须将 Configuration Manager 配置为存储管理工具并启用对脱机许可应用的支持，然后购买至少一个应用。   </br>
 
-  准备好继续后，单击“下一步”。
+   准备好继续后，单击“下一步”。
 
 7. 在“应用配置”页上，完成此服务的应用目录和语言配置，然后单击“下一步”。
 8. 完成向导后，Configuration Manager 控制台将显示已将“适用于企业的 Windows 应用商店”配置为“云服务类型”。

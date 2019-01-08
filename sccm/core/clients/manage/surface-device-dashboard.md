@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 7397fc17-3ae8-4525-8386-aea8a9cffa06
-ms.openlocfilehash: f9f896cdd1c3a0459d6f85e043bc1bba137c912c
-ms.sourcegitcommit: 2cc635835709fb8d86cdb63ea34233b36c94d4d8
+ms.openlocfilehash: b49a794a4036a3f2a8d42dc3b71855b44c22f44b
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52258853"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422600"
 ---
 # <a name="surface-device-dashboard-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的 Surface 设备仪表板
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 从 1802 版开始，可通过 Surface 设备仪表板快速了解在环境中找到的 Surface 设备的相关信息。 <!--1355788-->
 
@@ -32,7 +32,7 @@ ms.locfileid: "52258853"
 3. 若要加载仪表板，请单击“Surface 设备”。
 
 **Surface 设备仪表板**
-![Surface 设备仪表板](media\Surface-device-dashboard.PNG)
+![Surface 设备仪表板](media/Surface-device-dashboard.PNG)
 
 
 
@@ -42,16 +42,16 @@ Surface 设备仪表板针对你的环境显示三个图表。
 
 - **Surface 设备所占百分比**：提供 Surface 设备在你的环境中所占的百分比。
 
-    ![Surface 设备所占百分比图表](media\Percent-Surface-Devices.PNG)
+    ![Surface 设备所占百分比图表](media/Percent-Surface-Devices.PNG)
 - **Surface 型号**：显示每种 Surface 型号的设备数量。 
-    - 将鼠标悬停在某个图表部分上方将显示所选型号的 Surface 设备所占的百分比。 
+  - 将鼠标悬停在某个图表部分上方将显示所选型号的 Surface 设备所占的百分比。 
 
-         ![Surface 型号图表](media\Surface-Models-Hover.PNG)
-    - 单击某个图表部分将转到该型号的设备列表。 
-        ![Surface 型号设备列表](media\Surface-Model-Device-List.PNG)
+       ![Surface 型号图表](media/Surface-Models-Hover.PNG)
+  - 单击某个图表部分将转到该型号的设备列表。 
+      ![Surface 型号设备列表](media/Surface-Model-Device-List.PNG)
 
 - **前五个固件版本**：显示包含环境中前五个固件型号的图表。 
-    - 将鼠标悬停在某个图表部分上方将显示所选固件版本的 Surface 设备的数量。 自 Configuration Manager 版本 1806 起，单击某个图表部分即可显示相关设备的列表。 <!--1358654--> ![Surface 型号设备列表](media\Surface-Firmware-Hover.PNG)
+  - 将鼠标悬停在某个图表部分上方将显示所选固件版本的 Surface 设备的数量。 自 Configuration Manager 版本 1806 起，单击某个图表部分即可显示相关设备的列表。 <!--1358654--> ![Surface 型号设备列表](media/Surface-Firmware-Hover.PNG)
 
 
 ## <a name="more-information"></a>更多信息

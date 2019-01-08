@@ -2,7 +2,7 @@
 title: 批准应用程序
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 中应用程序批准的设置和行为。
-ms.date: 11/27/2018
+ms.date: 12/14/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -10,16 +10,16 @@ ms.assetid: 20493c86-6454-4b35-8f22-0d049b68b8bb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f19146da963055ffc20b274e1017802274844698
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 666df71b32ea0dc95411b8ffd58d18f7666d7b23
+ms.sourcegitcommit: d36e4c7082a5144e79035dd8847c8e741fa04667
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52458002"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53444580"
 ---
 # <a name="approve-applications-in-configuration-manager"></a>在 Configuration Manager 中批准应用程序
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 在 Configuration Manager 中[部署应用程序](/sccm/apps/deploy-use/deploy-applications)时，可能需要获得批准才能安装。 用户在软件中心中请求应用程序，然后在 Configuration Manager 控制台中查看请求。 可以批准或拒绝该请求。 
 
@@ -45,7 +45,7 @@ ms.locfileid: "52458002"
 <a name="bkmk_note1"></a>
 
 > [!Note]  
-> **注释 1**：默认情况下，Configuration Manager 不启用此项可选功能。 必须在使用前启用此功能。 有关详细信息，请参阅[启用更新中的可选功能](/sccm/core/servers/manage/install-in-console-updates#bkmk_options)。 
+> **备注 1**：默认情况下，Configuration Manager 不启用此项可选功能。 必须在使用前启用此功能。 有关详细信息，请参阅[启用更新中的可选功能](/sccm/core/servers/manage/install-in-console-updates#bkmk_options)。 
 > 
 > 如果未启用此功能，将看到以前的版本。  
 
@@ -80,6 +80,14 @@ ms.locfileid: "52458002"
 
 - 配置[警报的电子邮件通知](/sccm/core/servers/manage/use-alerts-and-the-status-system#to-configure-email-notification-for-alerts)。  
 
+- 启用 SMS 提供程序以使用证书。<!--SCCMDocs-pr issue 3135--> 使用以下选项之一：  
+
+    - 启用[增强型 HTTP](/sccm/core/plan-design/hierarchy/enhanced-http)（推荐）  
+
+        > [!Note]  
+        > 当站点为 SMS 提供程序创建一个证书时，客户端上的 Web 浏览器将不信任它。 根据安全设置，响应应用程序请求时可能会看到一条安全警告。  
+
+    - 将基于 PKI 的证书手动绑定到承载 SMS 提供程序角色的服务器上的 IIS 中的端口 443  
 
 
 #### <a name="to-take-action-from-internet"></a>在 Internet 上执行操作

@@ -10,16 +10,16 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ff4cdcc52e9be329fcfa0fd2127c43255c73ad65
-ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
+ms.openlocfilehash: c4cd6c45d21c58459fcd23ee02db4b5900996939
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43893866"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421988"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>关于 Configuration Manager 中的客户端设置
 
-*适用于：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 通过“管理”工作区中的“客户端设置”节点来管理 Configuration Manager 控制台中的所有客户端设置。 Configuration Manager 附带一组默认设置。 如果更改默认的客户端设置，则这些设置将应用于层次结构中的所有客户端。 你也可以配置自定义客户端设置，当将这些设置分配给集合时，它们将替代默认客户端设置。 有关详细信息，请参阅[如何配置客户端设置](/sccm/core/clients/deploy/configure-client-settings)。
 
@@ -100,13 +100,13 @@ Configuration Manager 会自动配置 Windows 防火墙规则以允许此流量�
 
 将此选项设置为“是”，以便用户接收到基于 Internet 的计算机上的用户策略。 此外还需要满足以下要求：  
 
--   将客户端和站点配置为[基于 Internet 的客户端管理](/sccm/core/clients/manage/plan-internet-based-client-management)或[云管理网关](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway)。  
+- 将客户端和站点配置为[基于 Internet 的客户端管理](/sccm/core/clients/manage/plan-internet-based-client-management)或[云管理网关](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway)。  
 
--   “在客户端上启用用户策略”设置为“是”。  
+- “在客户端上启用用户策略”设置为“是”。  
 
--   基于 Internet 的管理点可通过使用 Windows 身份验证（Kerberos 或 NTLM）成功地对用户进行身份验证。 有关详细信息，请参阅[来自 Internet 的客户端通信的注意事项](/sccm/core/plan-design/hierarchy/communications-between-endpoints#BKMK_clientspan)。  
+- 基于 Internet 的管理点可通过使用 Windows 身份验证（Kerberos 或 NTLM）成功地对用户进行身份验证。 有关详细信息，请参阅[来自 Internet 的客户端通信的注意事项](/sccm/core/plan-design/hierarchy/communications-between-endpoints#BKMK_clientspan)。  
 
--   从 1710 版开始，云管理网关可使用 Azure Active Directory 成功对用户进行身份验证。 有关详细信息，请参阅[在加入 Azure AD 的设备上部署用户可用的应用程序](\sccm\apps\deploy-use\deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices)。  
+- 从 1710 版开始，云管理网关可使用 Azure Active Directory 成功对用户进行身份验证。 有关详细信息，请参阅[在加入 Azure AD 的设备上部署用户可用的应用程序](/sccm/apps/deploy-use/deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices)。  
 
 如果将此选项设置为“否”，或不满足之前的任何一个条件，则 Internet 上的计算机将仅收到计算机策略。 在此情况下，用户仍然能够查看、请求和安装基于 Internet 的应用程序目录中的应用程序。 如果此设置为“否”，但“在客户端上启用用户策略”为“是”，则在计算机连接到 Intranet 之前，用户不会收到用户策略。  
 
@@ -216,21 +216,21 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
 配置用户启动软件、软件更新和任务序列安装的方式：  
 
--   所有用户：拥有除“来宾”之外的任何权限的用户。  
+-   **所有用户**：除“来宾”之外的拥有任何权限的用户。  
 
--   仅限管理员：用户必须是本地管理员组的成员。  
+-   **仅限管理员**：用户必须是本地管理员组的成员。  
 
--   仅限管理员和主要用户：用户必须是本地管理员组的成员或计算机的主要用户。  
+-   **仅限管理员和主要用户**：用户必须是本地管理员组的成员或计算机的主要用户。  
 
--   无用户：登录到客户端计算机的用户无法启动软件、软件更新和任务序列的安装。 计算机的必需部署始终在截止日期安装。 用户无法从应用程序目录或软件中心启动软件的安装。  
+-   **无用户**：登录到客户端计算机的用户无法启动软件、软件更新和任务序列的安装。 计算机的必需部署始终在截止日期安装。 用户无法从应用程序目录或软件中心启动软件的安装。  
 
 ### <a name="suspend-bitlocker-pin-entry-on-restart"></a>重新启动时挂起 Bitlocker PIN 项
 
 如果计算机需要 BitLocker PIN 条目，则在软件安装之后重启计算机时，此选项可以略过输入 PIN 的要求。  
 
--   始终：在安装需要重启的软件并且启动计算机重启之后，Configuration Manager 会临时暂停 BitLocker。 此设置仅适用于 Configuration Manager 启动的计算机重启。 当用户重启计算机时，此设置不会暂停输入 BitLocker PIN 的要求。 在 Windows 启动后恢复 BitLocker PIN 输入要求。
+-   **始终**：在安装需要重启的软件并且启动计算机重启之后，Configuration Manager 会临时暂停 BitLocker。 此设置仅适用于 Configuration Manager 启动的计算机重启。 当用户重启计算机时，此设置不会暂停输入 BitLocker PIN 的要求。 在 Windows 启动后恢复 BitLocker PIN 输入要求。
 
--   从不：在安装需要重启的软件之后，Configuration Manager 不会暂停 BitLocker。 在此情况下，直到用户输入 PIN 来完成标准启动过程并加载 Windows，才能完成软件安装。
+-   **从不**：在安装需要重启的软件之后，Configuration Manager 不会暂停 BitLocker。 在此情况下，直到用户输入 PIN 来完成标准启动过程并加载 Windows，才能完成软件安装。
 
 ### <a name="additional-software-manages-the-deployment-of-applications-and-software-updates"></a>其他用于管理应用程序部署和软件更新的软件
 
@@ -247,9 +247,9 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
 配置 Configuration Manager 客户端运行 Windows PowerShell 脚本的方式。 这些脚本可能用于检测配置项目中的符合性设置。 还可以在部署中以标准脚本的形式发送脚本。  
 
--   不使用：Configuration Manager 客户端在客户端计算机上不使用 Windows PowerShell 配置，以便未签名的脚本可以运行。  
+-   **不使用**：Configuration Manager 客户端在客户端计算机上不使用 Windows PowerShell 配置，以便未签名的脚本可以运行。  
 
--   受限：Configuration Manager 客户端在客户端计算机上使用当前的 PowerShell 配置。 这些配置可确定未签名的脚本是否可以运行。  
+-   **受限**：Configuration Manager 客户端在客户端计算机上使用当前的 PowerShell 配置。 这些配置可确定未签名的脚本是否可以运行。  
 
 -   **已全部签名**：只有当受信任的发行者对脚本进行了签名，Configuration Manager 客户端才能运行这些脚本。 系统将应用此限制，而与客户端计算机上的当前 PowerShell 配置无关。  
 
@@ -260,7 +260,7 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 >   
 > -   控制台中的“监视”工作区显示部署状态错误 ID“0x87D00327”。 还显示“脚本未签名”说明。  
 > -   报表显示错误类型“发现错误”。 然后报表显示错误代码“0x87D00327”和“脚本未签名”说明，或错误代码“0x87D00320”和“尚未安装脚本宿主”说明。 其中一个示例报表为：“资产配置基线中配置项目的错误详细信息”。  
-> -   DcmWmiProvider.log 文件显示消息：“脚本未签名(错误: 87D00327；源: CCM)”。  
+> -   DcmWmiProvider.log 文件显示消息：**脚本未签名(错误: 87D00327；源: CCM)**。  
 
 ### <a name="show-notifications-for-new-deployments"></a>显示关于新部署的通知
 
@@ -304,8 +304,8 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
 
 ##  <a name="endpoint-protection"></a>Endpoint Protection  
->  [!Tip]   
-> 除了以下信息，还可以在[示例方案：使用 Endpoint Protection 来保护计算机免受恶意软件侵害](/sccm/protect/deploy-use/scenarios-endpoint-protection)中查找关于使用 Endpoint Protection 客户端设置的详细信息。
+> [!Tip]
+> 除了以下信息，还可以在[示例方案：使用 Endpoint Protection 来保护计算机免受恶意软件攻击](/sccm/protect/deploy-use/scenarios-endpoint-protection)中查找关于使用 Endpoint Protection 客户端设置的详细信息。
 
 ### <a name="manage-endpoint-protection-client-on-client-computers"></a>在客户端计算机上管理 Endpoint Protection 客户端
 
@@ -428,9 +428,9 @@ Set this option to **Yes** for the Endpoint Protection client to attempt to unin
 
 为此设置选择下列某个选项：  
 
--   允许：除非客户端设备正在使用漫游数据连接，否则允许通过按流量计费的 Internet 连接进行所有客户端通信。  
+-   **允许**：除非客户端设备正在使用漫游数据连接，否则允许通过按流量计费的 Internet 连接进行所有客户端通信。  
 
--   限制：只允许通过按流量计费的 Internet 连接进行以下客户端通信：  
+-   **限制**：只允许通过按流量计费的 Internet 连接进行以下客户端通信：  
 
     -   客户端策略检索  
 
@@ -587,7 +587,7 @@ Set this option to **Yes** for the Endpoint Protection client to attempt to unin
 
 - **软件中心的配色方案**：单击“选择颜色”，定义软件中心使用的主色调。  
 
-- **为软件中心选择一个徽标**：单击“浏览”，选择要在软件中心显示的图像。 徽标必须为 400 x 100 像素的 JPEG、PNG 或 BMP 格式，最大尺寸为 750 KB。 徽标文件名称不能包含空格。  
+- **选择在软件中心使用的徽标**：单击“浏览”，选择要在软件中心显示的图像。 徽标必须为 400 x 100 像素的 JPEG、PNG 或 BMP 格式，最大尺寸为 750 KB。 徽标文件名称不能包含空格。  
          
 ### <a name="bkmk_HideUnapproved"></a>在软件中心隐藏未批准的应用程序
 从 Configuration Manager 版本 1802 开始，如果启用此选项，软件中心会隐藏需批准的用户可用的应用程序。   <!--1355146-->
@@ -658,7 +658,7 @@ Set this option to **Yes** for the Endpoint Protection client to attempt to unin
 
     -   **名称**：提供要列出清单的文件的名称。 使用星号 (&#42;) 通配符可表示任何文本字符串，使用问号 (?) 通配符可表示任何单一字符。 例如，若要列出扩展名为 .doc 的所有文件的清单，请指定文件名 **\*.doc**。  
 
-    -   位置：选择“设置”，打开“路径属性”对话框。 配置软件清单，在所有客户端硬盘中搜索指定的文件，搜索指定的路径（例如 C:\Folder）或搜索指定的变量（例如 %windir%）。 还可以搜索指定路径下面的所有子文件夹。  
+    -   **位置**：选择“设置”，打开“路径属性”对话框。 配置软件清单，在所有客户端硬盘中搜索指定的文件，搜索指定的路径（例如 C:\Folder）或搜索指定的变量（例如 %windir%）。 还可以搜索指定路径下面的所有子文件夹。  
 
     -   **排除加密文件和压缩文件**：如果选择此选项，则不会列出任何压缩或加密文件的清单。  
 
@@ -679,11 +679,11 @@ Set this option to **Yes** for the Endpoint Protection client to attempt to unin
 
     -   **名称**：为要收集的文件提供名称。 使用星号 (&#42;) 通配符可表示任何文本字符串，使用问号 (?) 通配符可表示任何单一字符。  
 
-    -   位置：选择“设置”，打开“路径属性”对话框。 配置软件清单，在所有客户端硬盘中搜索要收集的文件，搜索指定的路径（例如 C:\Folder）或搜索指定的变量（例如 %windir%）。 还可以搜索指定路径下面的所有子文件夹。  
+    -   **位置**：选择“设置”，打开“路径属性”对话框。 配置软件清单，在所有客户端硬盘中搜索要收集的文件，搜索指定的路径（例如 C:\Folder）或搜索指定的变量（例如 %windir%）。 还可以搜索指定路径下面的所有子文件夹。  
 
     -   **排除加密文件和压缩文件**：如果选择此选项，则不会收集任何压缩或加密文件。  
 
-    -   **文件的总大小超过(KB)时停止文件收集**：指定文件大小 (KB)，此后客户端会停止收集指定的文件。  
+    -   **当文件的总大小超过以下值 (KB) 时停止文件收集**：指定文件大小（以 KB 为单位），然后客户端停止收集指定的文件。  
 
     > [!NOTE]  
     >  站点服务器收集五个最近更改的收集文件版本，并将它们存储在 `<ConfigMgr installation directory>\Inboxes\Sinv.box\Filecol` 目录中。 如果自上次软件清单周期以来文件未发生更改，则不会再收集该文件。  
@@ -707,7 +707,7 @@ Set this option to **Yes** for the Endpoint Protection client to attempt to unin
 
 -   **显示名称**：指定想要用来替代“清单名称”列表中的名称的显示名称。 要指定新的显示名称，请选择“新建”。  
 
--   清单名称：若要添加清单名称，请选择“新建”。 在软件清单中，此名称被“显示名称”列表中选择的名称替换。 可添加多个名称进行替换。  
+-   **清单名称**：若要添加清单名称，请选择“新建”。 在软件清单中，此名称被“显示名称”列表中选择的名称替换。 可添加多个名称进行替换。  
 
 
 

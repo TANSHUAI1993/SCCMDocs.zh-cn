@@ -10,16 +10,16 @@ ms.assetid: 341f0d0b-f907-44cf-9e10-e1b41fc15f82
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6eaac644b876fa3adfa1a2c79e7c4c5810942d9f
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 187f876999f39dd1d2d4aa345a7e9037f745a0ed
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385569"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418894"
 ---
 # <a name="how-to-deploy-clients-to-windows-computers-in-configuration-manager"></a>如何在 Configuration Manager 中将客户端部署到 Windows 计算机
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 本文详细介绍如何将 Configuration Manager 客户端部署到 Windows 计算机。 有关规划和准备客户端部署的详细信息，请参阅以下文章：
 - [客户端安装方法](/sccm/core/clients/deploy/plan/client-installation-methods)  
@@ -147,7 +147,7 @@ ms.locfileid: "39385569"
 
 3.  打开“指定 Intranet Microsoft 更新服务位置”设置的属性，然后选择“已启用”。  
 
-4.  **设置检测更新的 Intranet 更新服务**：指定软件更新点服务器的名称以及端口。  
+4.  **设置检测更新的 Intranet 更新服务**：指定软件更新点服务器的名称和端口。  
 
     -   如果已将 Configuration Manager 站点系统配置为使用完全限定的域名 (FQDN)，则使用此格式。  
 
@@ -158,7 +158,7 @@ ms.locfileid: "39385569"
 
      FQDN 格式示例：`http://server1.contoso.com:8530`  
 
-5.  **设置 Intranet 统计服务器**：此设置通常为相同的服务器名称。   
+5.  **设置 Intranet 统计服务器**：此设置通常与服务器名称相同。   
 
 6.  将组策略对象分配到想要在其中安装客户端以及接收软件更新的计算机。  
 
@@ -340,7 +340,7 @@ Configuration Manager 支持登录脚本来安装 Configuration Manager 客户�
 
 2. 在 Intune 软件发行者中，输入命令行参数。 例如，在 Intranet 上通过传统客户端使用以下命令行：  
 
-  `CCMSETUPCMD="/MP:<FQDN of management point> SMSMP=<FQDN of management point> SMSSITECODE=<Your site code> DNSSUFFIX=<DNS Suffix of management point>"`  
+   `CCMSETUPCMD="/MP:<FQDN of management point> SMSMP=<FQDN of management point> SMSSITECODE=<Your site code> DNSSUFFIX=<DNS Suffix of management point>"`  
 
    > [!Note]  
    > 有关使用现代 Windows 10 客户端（使用 Azure AD 进行身份验证）的示例命令行，请参阅[准备 Windows 10 设备进行共同管理](/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client)。  

@@ -10,16 +10,16 @@ ms.assetid: 984e8d92-7327-4b08-9228-0c955e6ac778
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: eac38757ed2147d664b3bdbf2f7e0eb11947dcac
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 8fdb7faee21904c504470c2bca86a674d59559cf
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334069"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419812"
 ---
 # <a name="determine-the-site-system-roles-for-system-center-configuration-manager-clients"></a>为 System Center Configuration Manager 客户端确定站点系统角色
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 本主题可帮助确定部署 Configuration Manager 客户端所需的站点系统角色：  
 
@@ -45,15 +45,15 @@ ms.locfileid: "32334069"
 
  如果以下所有条件都适用，请安装回退状态点：  
 
--   你想将 Windows 计算机中的客户端通信错误发送给站点，即使这些客户端计算机无法与管理点通信也不例外。  
+- 你想将 Windows 计算机中的客户端通信错误发送给站点，即使这些客户端计算机无法与管理点通信也不例外。  
 
--   你想要使用 Configuration Manager 客户端部署报表，这些报表显示回退状态点发送的数据。  
+- 你想要使用 Configuration Manager 客户端部署报表，这些报表显示回退状态点发送的数据。  
 
--   此站点系统角色具有专用服务器，并且采取了其他安全措施来帮助保护服务器不受攻击。  
+- 此站点系统角色具有专用服务器，并且采取了其他安全措施来帮助保护服务器不受攻击。  
 
--   使用回退状态点的好处大于与未经过身份验证的连接以及通过 HTTP 流量进行的明文传输关联的安全风险。  
+- 使用回退状态点的好处大于与未经过身份验证的连接以及通过 HTTP 流量进行的明文传输关联的安全风险。  
 
- 如果使用未经过身份验证的连接以及明文传输运行网站的安全风险大于确定客户端通信问题的好处，则不安装回退状态点。  
+  如果使用未经过身份验证的连接以及明文传输运行网站的安全风险大于确定客户端通信问题的好处，则不安装回退状态点。  
 
 ##  <a name="determine-whether-you-need-a-reporting-services-point"></a>确定是否需要 Reporting Services 点  
  Configuration Manager 提供了许多报表，以帮助你在 Configuration Manager 控制台中监视客户端的安装、分配和管理。 一些客户端部署报表需要将客户端分配到回退状态点。  

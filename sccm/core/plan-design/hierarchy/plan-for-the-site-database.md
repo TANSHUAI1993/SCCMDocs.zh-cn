@@ -10,16 +10,16 @@ ms.assetid: 104fb4cc-6e83-40a3-8e6b-ac909fb9ec7d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f2dbdb4702a1deac4ae130e89c501e3d122f1b49
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: cee5a57b708e94d7443efeb517249c44c1323cb4
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32333335"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417925"
 ---
 # <a name="plan-for-the-site-database-for-system-center-configuration-manager"></a>为 System Center Configuration Manager 规划站点数据库
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：*System Center Configuration Manager (Current Branch)*
 
 站点数据库服务器是运行 Microsoft SQL Server 受支持版本的计算机。 SQL Server 用于存储 Configuration Manager 站点的信息。 Configuration Manager 层次结构中的每个站点都包含站点数据库以及分配了站点数据库服务器角色的服务器。  
 
@@ -31,7 +31,7 @@ ms.locfileid: "32333335"
 
 -  若要使用非 SQL 可用性组，数据库恢复模式必须设置为“简单”  
 
-有关 SQL 恢复模式的更多信息，请参阅[恢复模式 (SQL Server)] (https://docs.microsoft.com/sql/relational-databases/backup-restore/recovery-models-sql-server)。
+有关 SQL 恢复模式的更多信息，请参阅[恢复模式 (SQL Server)](https://docs.microsoft.com/sql/relational-databases/backup-restore/recovery-models-sql-server)。
 
 以下 SQL Server 配置可以用于承载站点数据库：  
 

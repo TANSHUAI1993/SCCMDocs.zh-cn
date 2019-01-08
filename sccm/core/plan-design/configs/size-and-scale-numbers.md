@@ -10,16 +10,16 @@ ms.assetid: c5a42100-2f60-4952-b495-918025ea6559
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: de8116e1fec500750e429edfb48303b8c24822f4
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: 4e1ee76acca06534605e58fff27d2e7ec5e464dd
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39384831"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424708"
 ---
 # <a name="size-and-scale-numbers-for-system-center-configuration-manager"></a>System Center Configuration Manager 的大小和扩展数量
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 
 
@@ -43,11 +43,11 @@ ms.locfileid: "39384831"
 
 ### <a name="primary-site"></a>主站点  
 
--   每个主站点最多支持 250 个辅助站点。  
+- 每个主站点最多支持 250 个辅助站点。  
 
--   每个主站点的辅助站点数基于持续连接和可靠的广域网 (WAN) 连接。 对于具有少于 500 个客户端的位置，请考虑使用分发点而不是辅助站点。  
+- 每个主站点的辅助站点数基于持续连接和可靠的广域网 (WAN) 连接。 对于具有少于 500 个客户端的位置，请考虑使用分发点而不是辅助站点。  
 
- 有关主站点可支持的客户端数和设备数的信息，请参阅[站点和层次结构的客户端数量](#bkmk_clientnumbers)。  
+  有关主站点可支持的客户端数和设备数的信息，请参阅[站点和层次结构的客户端数量](#bkmk_clientnumbers)。  
 
 
 ### <a name="secondary-site"></a>辅助站点  
@@ -135,14 +135,14 @@ ms.locfileid: "39384831"
 
 ### <a name="management-point"></a>管理点  
 
--   每个主站点最多支持 15 个管理点。  
+- 每个主站点最多支持 15 个管理点。  
 
-    > [!TIP]  
-    >  请勿在主站点服务器或站点数据库服务器通过慢速链接的服务器上安装管理点。  
+  > [!TIP]  
+  >  请勿在主站点服务器或站点数据库服务器通过慢速链接的服务器上安装管理点。  
 
--   每个辅助站点支持一个单一管理点，该管理点必须安装在辅助站点服务器上。  
+- 每个辅助站点支持一个单一管理点，该管理点必须安装在辅助站点服务器上。  
 
- 有关管理点可支持的客户端数和设备数的信息，请参阅[管理点](#bkmk_mp)部分。  
+  有关管理点可支持的客户端数和设备数的信息，请参阅[管理点](#bkmk_mp)部分。  
 
 
 ### <a name="software-update-point"></a>软件更新点  
@@ -160,17 +160,17 @@ ms.locfileid: "39384831"
 ###  <a name="bkmk_cas"></a>具有管理中心站点的层次结构  
 管理中心站点最多可支持包括对下列三组列出的设备数量总数：  
 
--   700,000 台台式机（运行 Windows、Linux 和 UNIX 的计算机）。 另请参阅对[嵌入式设备](#embedded)的支持。
+- 700,000 台台式机（运行 Windows、Linux 和 UNIX 的计算机）。 另请参阅对[嵌入式设备](#embedded)的支持。
 
--   运行 Mac 和 Windows CE 7.0 的 25,000 台设备  
+- 运行 Mac 和 Windows CE 7.0 的 25,000 台设备  
 
--   下列情况之一，具体取决于你的部署支持移动设备管理 (MDM) 的方式：  
+- 下列情况之一，具体取决于你的部署支持移动设备管理 (MDM) 的方式：  
 
-    -   使用本地 MDM 管理的 100,000 台设备  
+  -   使用本地 MDM 管理的 100,000 台设备  
 
-    -   300,000 台基于云的设备  
+  -   300,000 台基于云的设备  
 
- 例如，在集成 Microsoft Intune 时，层次结构中可以支持 700,000 台台式机、最多 25,000 个 Mac 和 Windows CE 7.0 设备以及最多 300,000 台基于云的设备。 此层次结构总共支持 1,025,000 台设备。 如果支持通过本地 MDM 管理的设备，那么层次结构支持的设备总数为 825,000 台设备。  
+  例如，在集成 Microsoft Intune 时，层次结构中可以支持 700,000 台台式机、最多 25,000 个 Mac 和 Windows CE 7.0 设备以及最多 300,000 台基于云的设备。 此层次结构总共支持 1,025,000 台设备。 如果支持通过本地 MDM 管理的设备，那么层次结构支持的设备总数为 825,000 台设备。  
 
 > [!IMPORTANT]  
 >  在管理中心站点使用标准版 SQL Server 的层次结构中，层次结构最多可支持 50,000 台台式机和设备。 要支持 50,000 个以上的桌面和设备，必须使用 SQL Server 的企业版。 此要求仅适用于管理中心站点。 不适用于独立主站点或子主站点。 主站点所使用的 SQL Server 版本不会限制它能支持的客户端数量。   

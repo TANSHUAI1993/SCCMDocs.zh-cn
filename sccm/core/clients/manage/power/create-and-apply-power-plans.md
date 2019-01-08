@@ -10,16 +10,16 @@ ms.assetid: 738eddaa-52e2-467f-b453-821ef2884d47
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 4504f26f8f6288750d36028d8eb795ae0d839fbc
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: af1d2dd5b3075413cdc661ecc8d75c532443d2ce
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32336215"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424844"
 ---
 # <a name="how-to-create-and-apply-power-plans-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中创建并应用电源计划
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 使用 System Center Configuration Manager 中的电源管理，可以将 Configuration Manager 提供的电源计划应用到层次结构中的计算机集合，或创建自己的自定义电源计划。 使用本主题中的过程，可将内置或自定义电源计划应用到计算机。  
 
@@ -28,11 +28,11 @@ ms.locfileid: "32336215"
 
  如果某台计算机是多个集合的成员，且每个集合应用不同的电源计划，则应执行以下操作：  
 
--   电源计划：如果对某计算机应用了电源设置的多个值，则使用限制最少的值。  
+- 电源计划：如果对某计算机应用了电源设置的多个值，则使用限制最少的值。  
 
--   唤醒时间：如果将多个唤醒时间应用到台式计算机，则使用最接近午夜的时间。  
+- 唤醒时间：如果将多个唤醒时间应用到台式计算机，则使用最接近午夜的时间。  
 
- 使用“具有多个电源计划的计算机”  报表显示应用多个电源计划的所有计算机。 这可以帮助发现存在电源冲突的计算机。 有关电源管理报告的详细信息，请参阅[如何在 System Center Configuration Manager 中监视和规划电源管理](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md)。  
+  使用“具有多个电源计划的计算机”  报表显示应用多个电源计划的所有计算机。 这可以帮助发现存在电源冲突的计算机。 有关电源管理报告的详细信息，请参阅[如何在 System Center Configuration Manager 中监视和规划电源管理](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md)。  
 
 > [!IMPORTANT]  
 >  使用 Windows 组策略配置的电源设置将替代由 Configuration Manager 电源管理配置的设置。  
@@ -41,48 +41,48 @@ ms.locfileid: "32336215"
 
 ### <a name="to-create-and-apply-a-power-plan"></a>若要创建并应用电源计划  
 
-1.  在 Configuration Manager 控制台中，单击“资产和符合性”。  
+1. 在 Configuration Manager 控制台中，单击“资产和符合性”。  
 
-2.  在“资产和符合性”工作区中，单击“设备集合”。  
+2. 在“资产和符合性”工作区中，单击“设备集合”。  
 
-3.  在“设备集合”  列表中，单击要应用电源管理设置的集合，然后在“主页”  选项卡中，在“属性”  组中单击“属性” 。  
+3. 在“设备集合”  列表中，单击要应用电源管理设置的集合，然后在“主页”  选项卡中，在“属性”  组中单击“属性” 。  
 
-4.  在“<集合名称\> 属性”对话框中的“电源管理”选项卡中，选择“为此集合指定电源管理设置”。  
+4. 在<Collection Name\>“属性”对话框中的“电源管理”选项卡中，选择“为此集合指定电源管理设置”。  
 
-    > [!NOTE]  
-    >  还可以单击“浏览”  ，然后从所选集合中将电源管理设置复制到选择的集合。  
+   > [!NOTE]  
+   >  还可以单击“浏览”  ，然后从所选集合中将电源管理设置复制到选择的集合。  
 
-5.  在“开始”  和“结束”  字段中，指定高峰（营业）时间的开始时间和结束时间。  
+5. 在“开始”  和“结束”  字段中，指定高峰（营业）时间的开始时间和结束时间。  
 
-6.  启用“唤醒时间（台式计算机）”  指定台式计算机从睡眠状态唤醒或从休眠状态唤醒以安装计划更新或软件安装的时间。  
+6. 启用“唤醒时间（台式计算机）”  指定台式计算机从睡眠状态唤醒或从休眠状态唤醒以安装计划更新或软件安装的时间。  
 
-    > [!IMPORTANT]  
-    >  电源管理使用内部 Windows 唤醒时间功能从从睡眠状态或休眠状态唤醒计算机。 唤醒时间设置不适用于便携式计算机，以防止其在未接通电源的情况下被唤醒。 随机选择唤醒时间，自指定唤醒时间后一小时将唤醒计算机。  
+   > [!IMPORTANT]  
+   >  电源管理使用内部 Windows 唤醒时间功能从从睡眠状态或休眠状态唤醒计算机。 唤醒时间设置不适用于便携式计算机，以防止其在未接通电源的情况下被唤醒。 随机选择唤醒时间，自指定唤醒时间后一小时将唤醒计算机。  
 
-7.  如果想要配置高峰（营业）时间的自定义电源计划，请从“高峰计划”  下拉列表中选择“自定义高峰 (ConfigMgr)”  ，然后单击“编辑” 。 如果想要配置非高峰（非营业）时间的电源计划，请从“非高峰计划”  下拉列表中选择“自定义非高峰 (ConfigMgr)”  ，然后单击“编辑” 。  
+7. 如果想要配置高峰（营业）时间的自定义电源计划，请从“高峰计划”  下拉列表中选择“自定义高峰 (ConfigMgr)”  ，然后单击“编辑” 。 如果想要配置非高峰（非营业）时间的电源计划，请从“非高峰计划”  下拉列表中选择“自定义非高峰 (ConfigMgr)”  ，然后单击“编辑” 。  
 
-    > [!NOTE]  
-    >  可以使用“计算机活动”  报表来帮助确定将电源计划应用于计算机集合时，高峰时间和非高峰时间要使用的计划。 有关详细信息，请参阅[如何在 System Center Configuration Manager 中监视和规划电源管理](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md)。  
+   > [!NOTE]  
+   >  可以使用“计算机活动”  报表来帮助确定将电源计划应用于计算机集合时，高峰时间和非高峰时间要使用的计划。 有关详细信息，请参阅[如何在 System Center Configuration Manager 中监视和规划电源管理](../../../../core/clients/manage/power/monitor-and-plan-for-power-management.md)。  
 
-     还可从“平衡 (ConfigMgr)” 、“高性能 (ConfigMgr)”  和“节能程序 (ConfigMgr)” 内置电源计划中选择，然后单击“视图”  以显示每个电源计划的属性。  
+    还可从“平衡 (ConfigMgr)” 、“高性能 (ConfigMgr)”  和“节能程序 (ConfigMgr)” 内置电源计划中选择，然后单击“视图”  以显示每个电源计划的属性。  
 
-    > [!NOTE]  
-    >  不能修改内置电源计划。  
+   > [!NOTE]  
+   >  不能修改内置电源计划。  
 
-8.  在“<电源计划名称\> 属性”对话框中，配置以下设置：  
+8. 在 <power plan name\>“属性”对话框中，配置以下设置：  
 
-    -   **名称：** 指定此电源计划的名称或使用提供的默认值。  
+   -   **名称：** 指定此电源计划的名称或使用提供的默认值。  
 
-    -   **描述：**  指定此电源计划的描述或使用提供的默认值。  
+   -   **描述：** 指定此电源计划的描述或使用提供的默认值。  
 
-    -   **指定此电源计划的属性：** 配置电源计划属性。 要禁用某个属性，请清除其复选框。 有关可用设置的信息，请参阅本主题中的 [Available power management plan settings](#BKMK_Plans) 。  
+   -   **指定此电源计划的属性：** 配置电源计划属性。 要禁用某个属性，请清除其复选框。 有关可用设置的信息，请参阅本主题中的 [Available power management plan settings](#BKMK_Plans) 。  
 
-        > [!IMPORTANT]  
-        >  应用电源计划后，已启用的设置会应用到计算机中。 如果清除电源设置复选框，应用电源计划后不会更改客户端计算机上的值。 清除复选框不会将电源设置还原到应用电源计划之前的值。  
+       > [!IMPORTANT]  
+       >  应用电源计划后，已启用的设置会应用到计算机中。 如果清除电源设置复选框，应用电源计划后不会更改客户端计算机上的值。 清除复选框不会将电源设置还原到应用电源计划之前的值。  
 
-9. 单击“确定”关闭“<电源计划名称\> 属性”对话框。  
+9. 单击“确定”可关闭<power plan name\>“属性”对话框。  
 
-10. 单击“确定”关闭“<集合名称\> 设置”对话框，并应用电源计划。  
+10. 单击“确定”可关闭<Collection Name\>“设置”对话框，并应用电源计划。  
 
 ##  <a name="BKMK_Plans"></a> Available power management plan settings  
  下表列出了 Configuration Manager 中可用的电源管理设置。 可以为计算机接通电源时或使用电池电源供电时配置独立的设置。 根据使用的 Windows 版本，可能不能配置某些设置。  

@@ -10,16 +10,16 @@ ms.assetid: 74c60941-5eae-4905-9e58-252bdb39df96
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fb0ef52bc3359e1b31b2e2237a87e58bf671bcb7
-ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
+ms.openlocfilehash: 37471367e95c6f0edc1d33b951776673037d845c
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36260830"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416370"
 ---
 # <a name="how-to-upgrade-clients-on-mac-computers-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中升级 Mac 计算机的客户端
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 按照下面的高级步骤，使用 System Center Configuration Manager 应用程序升级 Mac 计算机上的客户端。 或者，你也可以下载 Mac 客户端安装文件，将其复制到 Mac 计算机上的共享网络位置或本地文件夹，然后指示用户手动运行安装。  
 
@@ -39,19 +39,19 @@ ms.locfileid: "36260830"
 
 ## <a name="step-4-create-a-cmmac-file-that-can-be-used-to-create-an-application"></a>步骤 4：创建可用于创建应用程序的 .cmmac 文件  
 
-1.  使用“CMAppUtil”  工具（位于 Mac 客户端安装文件的“Tools”  文件夹中）通过客户端安装包创建 .cmmac 文件。 该文件将用于创建 Configuration Manager 应用程序。  
+1. 使用“CMAppUtil”  工具（位于 Mac 客户端安装文件的“Tools”  文件夹中）通过客户端安装包创建 .cmmac 文件。 该文件将用于创建 Configuration Manager 应用程序。  
 
-2.  将新文件“CMClient.pkg.cmmac”复制到可供运行 Configuration Manager 控制台的计算机使用的位置。  
+2. 将新文件“CMClient.pkg.cmmac”复制到可供运行 Configuration Manager 控制台的计算机使用的位置。  
 
- 有关详细信息，请参阅[为 Mac 计算机创建和部署应用程序的补充过程](/sccm/apps/get-started/creating-mac-computer-applications#supplemental-procedures-to-create-and-deploy-applications-for-mac-computers)。  
+   有关详细信息，请参阅[为 Mac 计算机创建和部署应用程序的补充过程](/sccm/apps/get-started/creating-mac-computer-applications#supplemental-procedures-to-create-and-deploy-applications-for-mac-computers)。  
 
 ## <a name="step-5-create-and-deploy-an-application-containing-the-mac-client-files"></a>**步骤 5：** 创建并部署包含 Mac 客户端文件的应用程序  
 
-1.  在 Configuration Manager 控制台中，从包含客户端安装文件的“CMClient.pkg.cmmac”文件创建应用程序。  
+1. 在 Configuration Manager 控制台中，从包含客户端安装文件的“CMClient.pkg.cmmac”文件创建应用程序。  
 
-2.  将此应用程序部署到层次结构中的 Mac 计算机。  
+2. 将此应用程序部署到层次结构中的 Mac 计算机。  
 
- 有关详细信息，请参阅[使用 System Center Configuration Manager 创建 Mac 计算机应用程序](../../../../apps/get-started/creating-mac-computer-applications.md)。  
+   有关详细信息，请参阅[使用 System Center Configuration Manager 创建 Mac 计算机应用程序](../../../../apps/get-started/creating-mac-computer-applications.md)。  
 
 ## <a name="step-6-users-install-the-latest-client"></a>步骤 6：用户安装最新的客户端  
  将向 Mac 客户端的用户发出提示，指出 Configuration Manager 客户端的更新可用并且必须安装。 用户安装客户端后，他们必须重启其 Mac 计算机。  
@@ -63,38 +63,38 @@ ms.locfileid: "36260830"
 ##  <a name="BKMK_UpgradingClient_MachineEnrollment"></a> 将升级后的客户端配置为使用现有证书  
  运行下列过程以防止“计算机注册向导”运行，并将升级后的客户端配置为使用现有客户端证书。  
 
--   在 Configuration Manager 控制台中，创建“Mac OS X”类型的配置项目。  
+- 在 Configuration Manager 控制台中，创建“Mac OS X”类型的配置项目。  
 
--   使用设置类型“脚本” 将设置添加到此配置项。  
+- 使用设置类型“脚本” 将设置添加到此配置项。  
 
--   将下列脚本添加到设置：  
+- 将下列脚本添加到设置：  
 
-    ```  
-    #!/bin/sh  
-    echo "Starting script\n"  
-    echo "Changing directory to MAC Client\n"  
-    cd /Users/Administrator/Desktop/'MAC Client'/  
-    echo "Import root cert\n"  
-    /usr/bin/sudo /usr/bin/security import /Users/Administrator/Desktop/'MAC Client'/Root.pfx -A -k /Library/Keychains/System.Keychain -P ROOT  
-    echo "Using openssl to convert pfx to a crt\n"  
-    /usr/bin/sudo openssl pkcs12 -in /Users/Administrator/Desktop/'MAC Client'/Root.pfx -out Root1.crt -nokeys -clcerts -passin pass:ROOT  
-    echo "Adding trust to root cert\n"  
-    /usr/bin/sudo /usr/bin/security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.Keychain Root1.crt  
-    echo "Import client cert\n"  
-    /usr/bin/sudo /usr/bin/security import /Users/Administrator/Desktop/'MAC Client'/MacClient.pfx -A -k /Library/Keychains/System.Keychain -P MAC  
-    echo "Executing ccmclient with MP\n"  
-    sudo ./ccmsetup -MP https://SCCM34387.SCCM34387DOM.NET/omadm/cimhandler.ashx  
-    echo "Editing Plist file\n"  
-    sudo /usr/libexec/Plistbuddy -c 'Add:SubjectName string CMMAC003L' /Library/'Application Support'/Microsoft/CCM/ccmclient.plist  
-    echo "Changing directory to CCM\n"  
-    cd /Library/'Application Support'/Microsoft/CCM/  
-    echo "Making connection to the server\n"  
-    sudo open ./CCMClient  
-    echo "Ending Script\n"  
-    exit  
+  ```  
+  #!/bin/sh  
+  echo "Starting script\n"  
+  echo "Changing directory to MAC Client\n"  
+  cd /Users/Administrator/Desktop/'MAC Client'/  
+  echo "Import root cert\n"  
+  /usr/bin/sudo /usr/bin/security import /Users/Administrator/Desktop/'MAC Client'/Root.pfx -A -k /Library/Keychains/System.Keychain -P ROOT  
+  echo "Using openssl to convert pfx to a crt\n"  
+  /usr/bin/sudo openssl pkcs12 -in /Users/Administrator/Desktop/'MAC Client'/Root.pfx -out Root1.crt -nokeys -clcerts -passin pass:ROOT  
+  echo "Adding trust to root cert\n"  
+  /usr/bin/sudo /usr/bin/security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.Keychain Root1.crt  
+  echo "Import client cert\n"  
+  /usr/bin/sudo /usr/bin/security import /Users/Administrator/Desktop/'MAC Client'/MacClient.pfx -A -k /Library/Keychains/System.Keychain -P MAC  
+  echo "Executing ccmclient with MP\n"  
+  sudo ./ccmsetup -MP https://SCCM34387.SCCM34387DOM.NET/omadm/cimhandler.ashx  
+  echo "Editing Plist file\n"  
+  sudo /usr/libexec/Plistbuddy -c 'Add:SubjectName string CMMAC003L' /Library/'Application Support'/Microsoft/CCM/ccmclient.plist  
+  echo "Changing directory to CCM\n"  
+  cd /Library/'Application Support'/Microsoft/CCM/  
+  echo "Making connection to the server\n"  
+  sudo open ./CCMClient  
+  echo "Ending Script\n"  
+  exit  
 
-    ```  
+  ```  
 
--   将配置项添加到配置基线，然后将该配置基线部署到独立 Configuration Manager 安装证书的所有 Mac 计算机。  
+- 将配置项添加到配置基线，然后将该配置基线部署到独立 Configuration Manager 安装证书的所有 Mac 计算机。  
 
- 有关如何为 Mac 计算机创建和部署配置项目的详细信息，请参阅[如何为使用 System Center Configuration Manager 客户端管理的 Mac OS X 设备创建配置项目](../../../../compliance/deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md)和[如何在 System Center Configuration Manager 中部署配置基线](../../../../compliance/deploy-use/deploy-configuration-baselines.md)。  
+  有关如何为 Mac 计算机创建和部署配置项目的详细信息，请参阅[如何为使用 System Center Configuration Manager 客户端管理的 Mac OS X 设备创建配置项目](../../../../compliance/deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md)和[如何在 System Center Configuration Manager 中部署配置基线](../../../../compliance/deploy-use/deploy-configuration-baselines.md)。  

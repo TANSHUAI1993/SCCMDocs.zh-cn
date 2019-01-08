@@ -10,16 +10,16 @@ ms.assetid: bb83ac87-9914-4a35-b633-ad070031aa6e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a2d39617db7f2ea9a61e73a3c21cc2509fed2f07
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 3d6b4215615b6401a9163edfa33893d866e0c2ce
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456611"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424759"
 ---
 # <a name="install-a-cloud-distribution-point-for-configuration-manager"></a>为 Configuration Manager 安装云分发点
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：*System Center Configuration Manager (Current Branch)*
 
 本文详细介绍了在 Microsoft Azure 中安装 Configuration Manager 云分发点的步骤。 它包括以下部分：
 - [在开始之前](#bkmk_before) 
@@ -106,7 +106,7 @@ ms.locfileid: "52456611"
     - **证书文件**：选择“浏览”并选择 .PFX 文件作为此云分发点的服务器身份验证证书。 来自此证书的公用名称将填充“服务 FQDN”和“服务名称”必填字段。  
 
         > [!NOTE]  
-        > 云分发点服务器身份验证证书支持通配符。 如果使用通配符证书，请将“服务 FQDN”字段中的星号 (*) 替换为服务所需的主机名。  
+        > 云分发点服务器身份验证证书支持通配符。 如果使用通配符证书，请将“服务 FQDN”字段中的星号 (\*) 替换为服务所需的主机名。  
 
 5. 在“警报”页上，设置存储配额、传输配额以及希望 Configuration Manager 在达到这些配额的百分之几时生成警报。 然后选择“下一步”。  
 

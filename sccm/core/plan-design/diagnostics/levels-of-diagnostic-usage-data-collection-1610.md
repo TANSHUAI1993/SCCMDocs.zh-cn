@@ -10,20 +10,20 @@ ms.assetid: eb20eb90-bcc0-41de-bfea-638ea470c0dd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 658d005234469d8729b515e9deeb02e20e94c748
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: b29044858bb9a9d57db1c2229c826630d0905860
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32340890"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416514"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1610-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1610 的诊断使用情况数据收集的级别
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：*System Center Configuration Manager (Current Branch)*
 
-System Center Configuration Manager 版本 1610 收集三个级别的诊断和使用情况数据：**基本**、**增强**和**完全**。 默认情况下，此功能设置为增强级别。 以下部分提供有关每个级别所收集数据的其他详细信息。
+System Center Configuration Manager 版本 1610 收集三个级别的诊断和使用情况数据：“基本”、“增强”和“完全”。 默认情况下，此功能设置为增强级别。 以下部分提供有关每个级别所收集数据的其他详细信息。
 
-针对以前版本进行的更改使用 ***[新增]******[已更新]******[已删除]*** 或 ***[已移动]*** 进行了注明。
+针对以前版本进行的更改使用 ***[新增]*** ***[已更新]*** ***[已删除]*** 或 ***[已移动]*** 进行了注明。
 
 
 > [!IMPORTANT]
@@ -40,18 +40,18 @@ System Center Configuration Manager 版本 1610 收集三个级别的诊断和�
  对于 System Center Configuration Manager 版本 1610，此级别包括以下内容：
 
 
--   安装程序信息：
-      - 内部版本、安装类型、语言包、启用的功能  
+- 安装程序信息：
+    - 内部版本、安装类型、语言包、启用的功能  
 
-      - 更新包部署状态和错误、下载进度和先决条件错误    
+    - 更新包部署状态和错误、下载进度和先决条件错误    
 
-      - 升级后脚本的版本
+    - 升级后脚本的版本
 
-      - 更新快速通道的使用
+    - 更新快速通道的使用
 
-    - ***[新增]*** 预发布版本使用、安装程序媒体类型、分支类型
+  - ***[新增]*** 预发布版本使用、安装程序媒体类型、分支类型
 
-    - ***[新增]*** 软件保障到期日期
+  - ***[新增]*** 软件保障到期日期
 
 - 数据库性能指标（复制处理信息、按处理器和磁盘使用情况排在前面的 SQL Server 存储过程）
 
@@ -400,7 +400,7 @@ System Center Configuration Manager 版本 1610 收集三个级别的诊断和�
 -   上次软件更新扫描后的最小/最大/平均小时数
 
 -    软件更新点同步的软件更新产品
--    符合性设置：SCEP、VPN、Wi-Fi 和合规性策略模板配置详细信息
+-    符合性设置：SCEP、VPN、Wi-Fi 和符合性策略模板配置详细信息
 
 -    Intune 托管设备的 EAS 条件访问策略的类型（阻止或隔离）
 

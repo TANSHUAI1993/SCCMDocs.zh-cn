@@ -10,16 +10,16 @@ ms.assetid: 230be984-d2cd-4d53-bd7a-bc24dd93fc22
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 579e9494a4f44f41a411af88bf58df7dcc5e8075
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 3cdc4ef389e4d46ad1c572b8785cb8ea26d90fcd
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32340464"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416650"
 ---
 # <a name="introduction-to-reporting-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的报表简介
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 System Center Configuration Manager 中的报表提供了一套工具和资源，可帮助用户使用 SQL Server Reporting Services (SSRS) 的高级报表功能和 Reporting Services 报表生成器提供的丰富创作体验。 报表有助于收集、整理和显示组织中用户、硬件和软件清单、软件更新、应用程序、站点状态和其他 Configuration Manager 操作的相关信息。 “报表”为你提供了许多预定义的报表，你可以使用这些报表而不用做任何更改，或者可以进行修改以满足你的需求，并且，你可以创建自定义报表。 使用以下部分有助于在 Configuration Manager 中管理报表。  
 
@@ -28,17 +28,17 @@ System Center Configuration Manager 中的报表提供了一套工具和资源�
 
  Configuration Manager 将 SQL Server Reporting Services 用作其报表解决方案。 与 Reporting Services 的集成提供了以下优点：  
 
--   使用行业标准报告系统查询 Configuration Manager 数据库。  
+- 使用行业标准报告系统查询 Configuration Manager 数据库。  
 
--   使用 Configuration Manager 报表查看器或报表管理器显示报表，这是基于 Web 连接到报表的连接。  
+- 使用 Configuration Manager 报表查看器或报表管理器显示报表，这是基于 Web 连接到报表的连接。  
 
--   提供高性能、可用性和可伸缩性。  
+- 提供高性能、可用性和可伸缩性。  
 
--   提供用户可订阅的报表的订阅；例如，经理可以订阅以每天自动通过电子邮件接收详述软件更新发布状态的报表。  
+- 提供用户可订阅的报表的订阅；例如，经理可以订阅以每天自动通过电子邮件接收详述软件更新发布状态的报表。  
 
--   导出用户可以选择的各种常见格式的报表。  
+- 导出用户可以选择的各种常见格式的报表。  
 
- 有关 Reporting Services 的详细信息，请参阅 SQL Server 2008 联机丛书中的 [SQL Server Reporting Services](http://go.microsoft.com/fwlink/p/?LinkID=212032) 。  
+  有关 Reporting Services 的详细信息，请参阅 SQL Server 2008 联机丛书中的 [SQL Server Reporting Services](http://go.microsoft.com/fwlink/p/?LinkID=212032) 。  
 
 ##  <a name="BKMK_ReportingServicesPoint"></a> Reporting Services 点  
  Reporting Services 点是安装在运行 Microsoft SQL Server Reporting Services 的服务器上的站点系统角色。 Reporting Services 点将 Configuration Manager 报表定义复制到 Reporting Services，基于报表类别创建报表文件夹，根据 Configuration Manager 管理用户基于角色的权限对报表文件夹和报表设置安全策略。 Reporting Services 点按 10 分钟的间隔连接到 Reporting Services 以重新应用更改的安全策略，例如通过使用报表管理器来应用。 有关如何规划和安装 Reporting Services 点的详细信息，请参阅以下文档：  
@@ -80,30 +80,30 @@ System Center Configuration Manager 中的报表提供了一套工具和资源�
 
  报表生成器安装会为 20 多种语言添加支持。 运行报表生成器时，它会以本地计算机上运行的操作系统的语言来显示数据。 如果报表生成器不支持该语言，则会用英文显示数据。 报表生成器支持 SQL Server 2008 Reporting Services 的所有功能，包括以下功能：  
 
--   提供一个直观的报表创作环境，其外观与 Microsoft Office 的外观类似。  
+- 提供一个直观的报表创作环境，其外观与 Microsoft Office 的外观类似。  
 
--   提供了 SQL Server 2008 报表定义语言 (RDL) 的灵活报表布局。  
+- 提供了 SQL Server 2008 报表定义语言 (RDL) 的灵活报表布局。  
 
--   提供了各种形式的数据可视化，包括图表和仪表。  
+- 提供了各种形式的数据可视化，包括图表和仪表。  
 
--   提供了格式丰富的文本框。  
+- 提供了格式丰富的文本框。  
 
--   导出到 Microsoft Word 格式。  
+- 导出到 Microsoft Word 格式。  
 
- 你还可以从 SQL Server Reporting Services 打开报表生成器。  
+  你还可以从 SQL Server Reporting Services 打开报表生成器。  
 
 ##  <a name="BKMK_ReportModels"></a> SQL Server Reporting Services 中的报表模型  
  Configuration Manager 中的 SQL Reporting Services 使用报表模型帮助管理用户从数据库中选择要包含在基于模型的报表中的项。 对于生成报表的管理用户，报表模型仅公开指定的视图和项以供选择。 要创建基于模型的报表，至少必须有一个报表模型可用。 报表模型具有以下功能：  
 
--   你可以提供数据库字段和视图逻辑业务名称，以便于生成报表。 生成报表不需要了解数据库结构。  
+- 你可以提供数据库字段和视图逻辑业务名称，以便于生成报表。 生成报表不需要了解数据库结构。  
 
--   项目可以进行逻辑分组。  
+- 项目可以进行逻辑分组。  
 
--   你可以定义项之间的关系。  
+- 你可以定义项之间的关系。  
 
--   你可以保护模型元素，以便管理用户只能看到他们有权查看的数据。  
+- 你可以保护模型元素，以便管理用户只能看到他们有权查看的数据。  
 
- 虽然 Configuration Manager 提供了样本报表模型，但也可以定义报表模型来满足自己的业务要求。 有关如何创建报表模型的详细信息，请参阅[在 SQL Server Reporting Services 中对 System Center Configuration Manager 创建自定义报表模型](creating-custom-report-models-in-sql-server-reporting-services.md)。  
+  虽然 Configuration Manager 提供了样本报表模型，但也可以定义报表模型来满足自己的业务要求。 有关如何创建报表模型的详细信息，请参阅 [在 SQL Server Reporting Services 中对 System Center Configuration Manager 创建自定义报表模型](creating-custom-report-models-in-sql-server-reporting-services.md)。  
 
 ## <a name="next-steps"></a>后续步骤
 [规划报表](planning-for-reporting.md)

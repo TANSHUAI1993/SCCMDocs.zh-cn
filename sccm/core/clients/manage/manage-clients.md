@@ -10,16 +10,16 @@ ms.assetid: 3986a992-c175-4b6f-922e-fc561e3d7cb7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 623d7b6a048b7728e40adb3655dc1017408fb1d7
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 488a24284e814effea23db0b221d62b7d25c483e
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342216"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419523"
 ---
 # <a name="how-to-manage-clients-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中管理客户端
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 在设备上安装 Configuration Manager 客户端并将其成功分配到站点后，你将在“设备”节点的“资产和符合性”工作区中看到设备，并在“设备集合”节点中看到一个或多个集合。 选择设备或集合时，可执行管理操作。 但是，也可以使用其他方式来管理客户端，其中可能涉及控制台中的其他工作区或控制台未涉及的任务。  
 
@@ -36,119 +36,119 @@ ms.locfileid: "32342216"
 
 根据设备类型，其中某些选项可能不可用。  
 
-1.  在 Configuration Manager 控制台中，选择“资产和符合性” >  “设备”。  
+1. 在 Configuration Manager 控制台中，选择“资产和符合性” >  “设备”。  
 
-3.  选择一台或多台设备，然后从功能区中选择或通过右键单击设备来选择其中一个客户端管理任务：  
+2. 选择一台或多台设备，然后从功能区中选择或通过右键单击设备来选择其中一个客户端管理任务：  
 
-    -   **管理用户设备相关性信息**  
+   - **管理用户设备相关性信息**  
 
-         配置用户和设备之间的关联，以便高效地向用户部署软件。  
+      配置用户和设备之间的关联，以便高效地向用户部署软件。  
 
-         请参阅[在 System Center Configuration Manager 中将用户和设备与用户设备相关性相链接](../../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md)  
+      请参阅[在 System Center Configuration Manager 中将用户和设备与用户设备相关性相链接](../../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md)  
 
-    -   **将设备添加到新集合或现有集合**  
+   - **将设备添加到新集合或现有集合**  
 
-         使用直接规则向集合添加设备。  
+      使用直接规则向集合添加设备。  
 
-    -   **通过使用客户端请求向导来安装和重新安装客户端**  
+   - **通过使用客户端请求向导来安装和重新安装客户端**  
 
-         安装和重新安装 Configuration Manager 客户端，以便对其进行修复或重新配置。 此选项包括站点配置设置以及为客户端请求安装设置的 client.msi 属性。  
+      安装和重新安装 Configuration Manager 客户端，以便对其进行修复或重新配置。 此选项包括站点配置设置以及为客户端请求安装设置的 client.msi 属性。  
 
-        > [!TIP]  
-        >  可通过多种不同的方式来安装（和重新安装）Configuration Manager 客户端。 尽管客户端请求向导提供一种方便的客户端安装方法（因为你可从控制台中运行它），但此方法有许多依赖关系，并且不适合于所有环境。 有关依赖关系的详细信息，请参阅[在 System Center Configuration Manager 中将客户端部署到 Windows 计算机的先决条件](../../../core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md)。 有关其他客户端安装方法的详细信息，请参阅 [System Center Configuration Manager 中的客户端安装方法](../../../core/clients/deploy/plan/client-installation-methods.md)。  
+     > [!TIP]  
+     >  可通过多种不同的方式来安装（和重新安装）Configuration Manager 客户端。 尽管客户端请求向导提供一种方便的客户端安装方法（因为你可从控制台中运行它），但此方法有许多依赖关系，并且不适合于所有环境。 有关依赖关系的详细信息，请参阅[在 System Center Configuration Manager 中将客户端部署到 Windows 计算机的先决条件](../../../core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md)。 有关其他客户端安装方法的详细信息，请参阅 [System Center Configuration Manager 中的客户端安装方法](../../../core/clients/deploy/plan/client-installation-methods.md)。  
 
-         请参阅 [如何使用客户端请求安装 Configuration Manager 客户端](../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientPush)。  
+      请参阅 [如何使用客户端请求安装 Configuration Manager 客户端](../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientPush)。  
 
-    -   **重新分配站点**  
+   - **重新分配站点**  
 
-         将一个或多个客户端（包括被管理的移动设备）重新分配到层次结构中的另一个主站点。 可以单独重新分配客户端，也可以选择多个客户端并成批重新分配到新站点。  
+      将一个或多个客户端（包括被管理的移动设备）重新分配到层次结构中的另一个主站点。 可以单独重新分配客户端，也可以选择多个客户端并成批重新分配到新站点。  
 
-    -   **以远程方式管理客户端**  
+   - **以远程方式管理客户端**  
 
-         运行资源浏览器，从 Windows 客户端查看硬件和软件清单信息。 使用远程控制、远程协助或远程桌面对设备进行远程管理。  
+      运行资源浏览器，从 Windows 客户端查看硬件和软件清单信息。 使用远程控制、远程协助或远程桌面对设备进行远程管理。  
 
-         请参阅[如何使用资源浏览器来查看硬件清单](../../../core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md)和[如何使用资源浏览器来查看软件清单](../../../core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory.md)。  
+      请参阅[如何使用资源浏览器来查看硬件清单](../../../core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md)和[如何使用资源浏览器来查看软件清单](../../../core/clients/manage/inventory/use-resource-explorer-to-view-software-inventory.md)。  
 
-         请参阅[如何远程管理 Windows 客户端计算机](../../../core/clients/manage/remote-control/remotely-administer-a-windows-client-computer.md)。  
+      请参阅[如何远程管理 Windows 客户端计算机](../../../core/clients/manage/remote-control/remotely-administer-a-windows-client-computer.md)。  
 
-    -   **批准客户端**  
+   - **批准客户端**  
 
-         客户端使用 HTTP 和自签名证书与站点系统通信时，必须批准这些客户端以将其标识为受信任计算机。 默认情况下，站点配置会自动批准同一 Active Directory 林和受信任林中的客户端，这样你就不必手动批准每个客户端。 但是，必须手动批准你信任的工作组计算机以及你信任但未获批准的任何其他计算机。  
+      客户端使用 HTTP 和自签名证书与站点系统通信时，必须批准这些客户端以将其标识为受信任计算机。 默认情况下，站点配置会自动批准同一 Active Directory 林和受信任林中的客户端，这样你就不必手动批准每个客户端。 但是，必须手动批准你信任的工作组计算机以及你信任但未获批准的任何其他计算机。  
 
-        > [!WARNING]  
-        >  尽管某些管理功能可能适合于未批准的客户端，但 Configuration Manager 不支持这种情况。  
+     > [!WARNING]  
+     >  尽管某些管理功能可能适合于未批准的客户端，但 Configuration Manager 不支持这种情况。  
 
-         不必批准始终使用 HTTPS 与站点系统通信的客户端，或在通过 HTTP 与站点系统通信时使用 PKI 证书的客户端。 这些客户端通过使用 PKI 证书建立信任。  
+      不必批准始终使用 HTTPS 与站点系统通信的客户端，或在通过 HTTP 与站点系统通信时使用 PKI 证书的客户端。 这些客户端通过使用 PKI 证书建立信任。  
 
-    -   **阻止或解除阻止客户端**  
+   - **阻止或解除阻止客户端**  
 
-         阻止不再受信任的客户端。 阻止操作可以阻止客户端接收策略，阻止站点系统与客户端进行通信。  
+      阻止不再受信任的客户端。 阻止操作可以阻止客户端接收策略，阻止站点系统与客户端进行通信。  
 
-        > [!WARNING]  
-        >  阻止客户端的操作只会阻止从客户端到 Configuration Manager 站点系统的通信，而不会阻止与其他设备的通信。 此外，当客户端通过使用 HTTP（而不是 HTTPS）与站点系统通信时，还有一些安全限制。  
+     > [!WARNING]  
+     >  阻止客户端的操作只会阻止从客户端到 Configuration Manager 站点系统的通信，而不会阻止与其他设备的通信。 此外，当客户端通过使用 HTTP（而不是 HTTPS）与站点系统通信时，还有一些安全限制。  
 
-         也可以取消阻止已阻止的客户端。 
+      也可以取消阻止已阻止的客户端。 
 
-         请参阅[确定是否在 System Center Configuration Manager 中阻止客户端](../../../core/clients/deploy/plan/determine-whether-to-block-clients.md)。  
+      请参阅 [确定是否在 System Center Configuration Manager 中阻止客户端](../../../core/clients/deploy/plan/determine-whether-to-block-clients.md)。  
 
-    -   **清除所需的 PXE 部署**  
+   - **清除所需的 PXE 部署**  
 
-         为计算机重新部署所需的 PXE 部署。  
+      为计算机重新部署所需的 PXE 部署。  
 
-         请参阅[使用 PXE 与 System Center Configuration Manager 一起通过网络部署 Windows](../../../osd/deploy-use/use-pxe-to-deploy-windows-over-the-network.md)。  
+      请参阅 [使用 PXE 与 System Center Configuration Manager 一起通过网络部署 Windows](../../../osd/deploy-use/use-pxe-to-deploy-windows-over-the-network.md)。  
 
-    -   **管理客户端属性**  
+   - **管理客户端属性**  
 
-         查看发现数据和针对客户端的部署。 也可以配置任务序列用于将操作系统部署到设备的变量。  
+      查看发现数据和针对客户端的部署。 也可以配置任务序列用于将操作系统部署到设备的变量。  
 
-    -   **删除客户端**  
+   - **删除客户端**  
 
-        > [!WARNING]  
-        >  如果要卸载 Configuration Manager 客户端或将其从集合中移除，请不要删除客户端。  
+     > [!WARNING]  
+     >  如果要卸载 Configuration Manager 客户端或将其从集合中移除，请不要删除客户端。  
 
-         “删除”操作会从 Configuration Manager 数据库手动删除客户端记录，除非用于故障排除方案，否则通常不应使用此操作。 如果删除了客户端记录，但是依然安装了客户端并与站点进行通信，检测信号发现会重新创建客户端记录。 客户端记录会重新出现在 Configuration Manager 控制台中，然而客户端历史记录和以前的所有关联都会丢失。  
+      “删除”操作会从 Configuration Manager 数据库手动删除客户端记录，除非用于故障排除方案，否则通常不应使用此操作。 如果删除了客户端记录，但是依然安装了客户端并与站点进行通信，检测信号发现会重新创建客户端记录。 客户端记录会重新出现在 Configuration Manager 控制台中，然而客户端历史记录和以前的所有关联都会丢失。  
 
-        > [!NOTE]  
-        >  删除通过 Configuration Manager 注册的移动设备客户端时，此操作还会吊销颁发给移动设备的 PKI 证书，并且管理点随后会拒绝此证书（即使 IIS 未检查 CRL）。 在删除这些客户端时，不会吊销移动设备旧客户端上的证书。  
+     > [!NOTE]  
+     >  删除通过 Configuration Manager 注册的移动设备客户端时，此操作还会吊销颁发给移动设备的 PKI 证书，并且管理点随后会拒绝此证书（即使 IIS 未检查 CRL）。 在删除这些客户端时，不会吊销移动设备旧客户端上的证书。  
 
-         要卸载客户端，请参阅 [卸载 Configuration Manager 客户端](#BKMK_UninstalClient)。  
+      要卸载客户端，请参阅 [卸载 Configuration Manager 客户端](#BKMK_UninstalClient)。  
 
-         要将客户端分配到一个新的主站点，请参阅[如何在 System Center Configuration Manager 中将客户端分配到一个站点](../../../core/clients/deploy/assign-clients-to-a-site.md)。  
+      要将客户端分配到一个新的主站点，请参阅[如何在 System Center Configuration Manager 中将客户端分配到一个站点](../../../core/clients/deploy/assign-clients-to-a-site.md)。  
 
-         要从集合中删除客户端，请重新配置集合属性。 请参阅[如何在 System Center Configuration Manager 中管理集合](../../../core/clients/manage/collections/manage-collections.md)。  
+      要从集合中删除客户端，请重新配置集合属性。 请参阅[如何在 System Center Configuration Manager 中管理集合](../../../core/clients/manage/collections/manage-collections.md)。  
 
-    -   **擦除移动设备**  
+   - **擦除移动设备**  
 
-         你可以擦除支持擦除命令的移动设备。  
+      你可以擦除支持擦除命令的移动设备。  
 
-         此操作会永久删除移动设备上的所有数据，包括个人设置和个人数据。 通常，此操作会将移动设备重置回出厂默认值。 在移动设备不再受信任时将其擦除。 例如设备丢失或被盗的情况。  
+      此操作会永久删除移动设备上的所有数据，包括个人设置和个人数据。 通常，此操作会将移动设备重置回出厂默认值。 在移动设备不再受信任时将其擦除。 例如设备丢失或被盗的情况。  
 
-        > [!TIP]  
-        >  请检查制造商的文档以了解有关移动设备如何处理远程擦除命令的详细信息。  
+     > [!TIP]  
+     >  请检查制造商的文档以了解有关移动设备如何处理远程擦除命令的详细信息。  
 
-         移动设备收到擦除命令之前通常会有延迟：  
+      移动设备收到擦除命令之前通常会有延迟：  
 
-        -   如果移动设备是通过 Configuration Manager 或 Microsoft Intune 注册的，则客户端会在下载客户端策略时收到命令。  
+     - 如果移动设备是通过 Configuration Manager 或 Microsoft Intune 注册的，则客户端会在下载客户端策略时收到命令。  
 
-        -   如果通过 Exchange Server 连接器管理移动设备，则移动设备会在其与 Exchange 同步时收到命令。  
+     - 如果通过 Exchange Server 连接器管理移动设备，则移动设备会在其与 Exchange 同步时收到命令。  
 
-         可使用“擦除状态” 列来监视设备何时收到擦除命令。 设备将擦除确认发送到 Configuration Manager 之前，可以取消擦除命令。  
+       可使用“擦除状态” 列来监视设备何时收到擦除命令。 设备将擦除确认发送到 Configuration Manager 之前，可以取消擦除命令。  
 
-    -   **停用移动设备**  
+   - **停用移动设备**  
 
-         只有通过 Microsoft Intune 或本地移动设备管理注册的移动设备才支持“停用”选项。  
+      只有通过 Microsoft Intune 或本地移动设备管理注册的移动设备才支持“停用”选项。  
 
-         有关详细信息，请参阅 [使用 System Center Configuration Manager 的远程擦除、远程锁定或密码重置功能帮助保护数据](../../../mdm/deploy-use/wipe-lock-reset-devices.md)。  
+      有关详细信息，请参阅 [使用 System Center Configuration Manager 的远程擦除、远程锁定或密码重置功能帮助保护数据](../../../mdm/deploy-use/wipe-lock-reset-devices.md)。  
 
-    -   **更改设备的所有权**  
+   - **更改设备的所有权**  
 
-         如果设备未加入域并且未安装 Configuration Manager 客户端，则可以使用此选项将设备的所有权更改为“公司”或“个人”。  
+      如果设备未加入域并且未安装 Configuration Manager 客户端，则可以使用此选项将设备的所有权更改为“公司”或“个人”。  
 
-         可在应用程序要求中使用此值来控制部署，以及控制从用户设备中收集的清单数量。  
+      可在应用程序要求中使用此值来控制部署，以及控制从用户设备中收集的清单数量。  
 
-        可能需要右键单击任意列标题并选择“设备所有者”列，将此列添加到视图中。
+     可能需要右键单击任意列标题并选择“设备所有者”列，将此列添加到视图中。
 
-         有关详细信息，请参阅[使用 System Center Configuration Manager 和 Microsoft Intune 的混合移动设备管理 (MDM)](../../../mdm/understand/hybrid-mobile-device-management.md)。  
+      有关详细信息，请参阅[使用 System Center Configuration Manager 和 Microsoft Intune 的混合移动设备管理 (MDM)](../../../mdm/understand/hybrid-mobile-device-management.md)。  
 
 ##  <a name="BKMK_ManagingClients_DeviceCollectionsNode"></a> 通过“设备集合”节点管理客户端  
   许多在“设备”节点中的设备上可用的任务在集合上也可用。 控制台会将操作自动应用于集合中的所有合格设备。 此操作对整个集合生成附加的网络数据包，并提高站点服务器上的 CPU 使用率。  
@@ -178,7 +178,7 @@ ms.locfileid: "32342216"
 
     -   **配置电源管理设置。**  
 
-         请参阅[如何在 System Center Configuration Manager 中创建并应用电源计划](../../../core/clients/manage/power/create-and-apply-power-plans.md)。 电源计划只能用于运行 Windows 的计算机。  
+         请参阅 [如何在 System Center Configuration Manager 中创建并应用电源计划](../../../core/clients/manage/power/create-and-apply-power-plans.md)。 电源计划只能用于运行 Windows 的计算机。  
 
     -   **通知计算机尽快下载策略。**  
 
@@ -236,39 +236,39 @@ Configuration Manager 客户端会在接收部署之后立即下载所需软件�
 
 从安装源位置运行 CCMSetup.exe 命令，并指定所需的以下属性，用空格分隔：  
 
-   -   DISABLECACHEOPT  
+- DISABLECACHEOPT  
 
-    -   SMSCACHEDIR  
+  - SMSCACHEDIR  
 
-    -   SMSCACHEFLAGS  
+  - SMSCACHEFLAGS  
 
-    -   SMSCACHESIZE  
+  - SMSCACHESIZE  
 
-        > [!NOTE]
-        > 对于版本 1606，请使用 Configuration Manager 控制台中“客户端设置”的可用缓存大小设置而不是 SMSCACHESIZE。 有关详细信息，请参阅[客户端缓存设置](../../../core/clients/deploy/about-client-settings.md#client-cache-settings)。
+    > [!NOTE]
+    > 对于版本 1606，请使用 Configuration Manager 控制台中“客户端设置”的可用缓存大小设置而不是 SMSCACHESIZE。 有关详细信息，请参阅[客户端缓存设置](../../../core/clients/deploy/about-client-settings.md#client-cache-settings)。
 
 有关如何使用 CCMSetup.exe 的这些命令行属性的详细信息，请参阅[关于客户端安装属性](../../../core/clients/deploy/about-client-installation-properties.md)。  
 
 ### <a name="to-configure-the-client-cache-folder-when-you-install-clients-by-using-client-push-installation"></a>在使用客户端请求安装来安装客户端时配置客户端缓存文件夹  
 
-1.  在 Configuration Manager 控制台中，单击“管理” > “站点配置” > “站点”。  
+1. 在 Configuration Manager 控制台中，单击“管理” > “站点配置” > “站点”。  
 
-3.  选择相应站点，然后在“主页”选项卡上的“设置”组中，选择“客户端安装设置” > “安装属性”选项卡。  
+2. 选择相应站点，然后在“主页”选项卡上的“设置”组中，选择“客户端安装设置” > “安装属性”选项卡。  
 
-5.  指定以下属性，并使用空格分隔：  
+3. 指定以下属性，并使用空格分隔：  
 
-    -   DISABLECACHEOPT  
+   - DISABLECACHEOPT  
 
-    -   SMSCACHEDIR  
+   - SMSCACHEDIR  
 
-    -   SMSCACHEFLAGS  
+   - SMSCACHEFLAGS  
 
-    -   SMSCACHESIZE  
+   - SMSCACHESIZE  
 
-        > [!NOTE]
-        > 对于版本 1606，请使用 Configuration Manager 控制台中“客户端设置”的可用缓存大小设置而不是 SMSCACHESIZE。 有关详细信息，请参阅[客户端缓存设置](../../../core/clients/deploy/about-client-settings.md#client-cache-settings)。
+     > [!NOTE]
+     > 对于版本 1606，请使用 Configuration Manager 控制台中“客户端设置”的可用缓存大小设置而不是 SMSCACHESIZE。 有关详细信息，请参阅[客户端缓存设置](../../../core/clients/deploy/about-client-settings.md#client-cache-settings)。
 
-       有关如何使用 CCMSetup.exe 的这些命令行属性的详细信息，请参阅[关于客户端安装属性](../../../core/clients/deploy/about-client-installation-properties.md)。  
+     有关如何使用 CCMSetup.exe 的这些命令行属性的详细信息，请参阅[关于客户端安装属性](../../../core/clients/deploy/about-client-installation-properties.md)。  
 
 ### <a name="to-configure-the-client-cache-folder-on-the-client-computer"></a>在客户端计算机上配置客户端缓存文件夹  
 
@@ -285,11 +285,11 @@ Configuration Manager 客户端会在接收部署之后立即下载所需软件�
 1. 在 Configuration Manager 控制台中，转到“管理” > “客户端设置”。
 
 2. 双击“默认客户端设置”。
-  还可以创建自定义客户端设置，以便更有选择性地应用缓存大小。 有关默认客户端设置和自定义客户端设置的详细信息，请参阅[如何在 System Center Configuration Manager 中配置客户端设置](../../../core/clients/deploy/configure-client-settings.md)。
+   还可以创建自定义客户端设置，以便更有选择性地应用缓存大小。 有关默认客户端设置和自定义客户端设置的详细信息，请参阅[如何在 System Center Configuration Manager 中配置客户端设置](../../../core/clients/deploy/configure-client-settings.md)。
 
- 3. 选择“客户端缓存设置”，并针对“配置客户端缓存大小”选择“是”，然后选择使用“MB”或“磁盘设置的百分比”。 缓存可调整为任何小于最大缓存的大小。
+   3. 选择“客户端缓存设置”，并针对“配置客户端缓存大小”选择“是”，然后选择使用“MB”或“磁盘设置的百分比”。 缓存可调整为任何小于最大缓存的大小。
 
-     在下载下一个客户端策略时，Configuration Manager 客户端将使用这些设置配置缓存大小。
+      在下载下一个客户端策略时，Configuration Manager 客户端将使用这些设置配置缓存大小。
 
 
 

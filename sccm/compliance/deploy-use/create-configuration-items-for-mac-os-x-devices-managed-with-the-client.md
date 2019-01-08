@@ -10,12 +10,12 @@ ms.assetid: 722d5bf5-bedc-4dfc-b324-6eeb773874e9
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: e6358c8e84d12c37418d7a1af459e775783efaa2
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 24a0bad463dda09c7e23bbcc47ecc388735d1ca5
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32335824"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421818"
 ---
 # <a name="how-to-create-configuration-items-for-mac-os-x-devices-managed-with-the-system-center-configuration-manager-client"></a>如何为使用 System Center Configuration Manager 客户端管理的 Mac OS X设备创建配置项目
 使用 System Center Configuration Manager **Mac OS X（自定义）** 配置项目，管理由 Configuration Manager 客户端托管的 Mac OS X 设备的设置。  
@@ -24,21 +24,21 @@ ms.locfileid: "32335824"
   
 ### <a name="to-create-a-custom-mac-os-x-configuration-item"></a>创建自定义 Mac OS X 配置项目  
   
-1.  在 Configuration Manager 控制台中单击“资产和符合性”。  
+1. 在 Configuration Manager 控制台中单击“资产和符合性”。  
   
-2.  在“资产和符合性”  工作区中，展开“符合性设置” ，然后单击“配置项目” 。  
+2. 在“资产和符合性”  工作区中，展开“符合性设置” ，然后单击“配置项目” 。  
   
-3.  在“主页”  选项卡上的“创建”  组中，单击“创建配置项目” 。  
+3. 在“主页”  选项卡上的“创建”  组中，单击“创建配置项目” 。  
   
-4.  在“创建配置项目向导”  的“常规” 页面上，指定配置项目的名称和可选描述。  
+4. 在“创建配置项目向导”  的“常规” 页面上，指定配置项目的名称和可选描述。  
   
-5.  在“指定要创建的配置项目的类型” 下，选择“Mac OS X（自定义）” 。  
+5. 在“指定要创建的配置项目的类型” 下，选择“Mac OS X（自定义）” 。  
   
-6.  如果创建并分配类别以帮助在 Configuration Manager 控制台中搜索和筛选配置项目，请单击“类别”。  
+6. 如果创建并分配类别以帮助在 Configuration Manager 控制台中搜索和筛选配置项目，请单击“类别”。  
   
-7.  在向导的“支持的平台”  页中，选择将评估配置项目的特定 Mac OS X 版本。  
+7. 在向导的“支持的平台”  页中，选择将评估配置项目的特定 Mac OS X 版本。  
   
-8.  在向导的“设置”  页面中，将添加要评估在 Mac 计算机上的符合性的新设置。 单击“新建”  以打开“创建设置”  对话框。  
+8. 在向导的“设置”  页面中，将添加要评估在 Mac 计算机上的符合性的新设置。 单击“新建”  以打开“创建设置”  对话框。  
   
 9. 在“创建设置”  对话框框中，输入设置的唯一名称和描述。  
   
@@ -78,20 +78,20 @@ ms.locfileid: "32335824"
   
 13. 在向导的“符合性规则”  页面中，可指定定义配置项目的符合性的条件。 必须至少具有一个符合性规则，才可以评估设置的符合性。 单击“新建”  以添加新规则。  
   
-14. 在“创建规则”  对话框中，提供以下信息：  
+14. 在 **Create Rule** 对话框框中，提供以下信息：  
   
     -   **名称：** 输入符合性规则的名称。  
   
-    -   **描述:** 输入符合性规则的说明。  
+    -   **描述：** 输入符合性规则的说明。  
   
-    -   **选定的设置：** 单击 **浏览** 若要打开 **选择设置** 对话框。 选择您想要定义的规则，或单击设置 **新设置**。 在完成，请单击 **选择**。  
+    -   **选定的设置：** 单击“浏览”以打开“选择设置”对话框。 选择您想要定义的规则，或单击设置 **新设置**。 在完成，请单击 **选择**。  
   
         > [!TIP]  
         >  您也可以单击 **属性** 若要查看有关当前所选设置的信息。  
   
     -   **规则类型：** 选择要使用的符合性规则的类型：  
   
-        -   **值：** 创建将配置项目返回的值与指定值进行比较的一条规则。  
+        -   **值：** 创建可以将配置项目返回的值与指定的值进行比较的规则。  
   
         -   **现有** – 创建根据设置是否存在来评估它的一条规则。  
   
@@ -144,7 +144,7 @@ ms.locfileid: "32335824"
   
             -   **设置不得存在于客户端设备**  
   
-        -   **报表的不符合性严重性：** 指定如果此符合性规则失败报告的严重性级别。 可用的严重性级别如下：  
+        -   **报表的不符合性严重程度：** 指定不符合此符合性规则时报告的严重性级别。 可用的严重性级别如下：  
   
             -   **无** - 对于 Configuration Manager 报表，不符合此合规性规则的设备不报告故障严重性。  
   
@@ -163,9 +163,9 @@ ms.locfileid: "32335824"
   
 15. 在“摘要”  页上，确认新配置项目的设置，然后完成此向导。  
   
- 新配置项目会显示在“资产和符合性”  工作区的“配置项目”  节点中。  
+    新配置项目会显示在“资产和符合性”  工作区的“配置项目”  节点中。  
   
- 如果现在想要将此配置项目添加到配置基线，请参阅[如何在 System Center Configuration Manager 中创建配置基线](../../compliance/deploy-use/create-configuration-baselines.md)。  
+    如果现在想要将此配置项目添加到配置基线，请参阅[如何在 System Center Configuration Manager 中创建配置基线](../../compliance/deploy-use/create-configuration-baselines.md)。  
   
 ## <a name="see-also"></a>另请参阅  
  [使用 System Center Configuration Manager 客户端管理的设备的配置项目](../../compliance/deploy-use/configuration-items-for-devices-managed-with-the-client.md)

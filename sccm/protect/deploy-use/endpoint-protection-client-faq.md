@@ -10,16 +10,16 @@ ms.assetid: e3aaa9d2-a40e-42b1-ad75-5a115351729e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7e86c8196cf2ff2473b066fccf741c2df20cd8f9
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 74bcd026dff0b67ae91276c63ba85597008dfd70
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353236"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422466"
 ---
 # <a name="endpoint-protection-client-frequently-asked-questions"></a>Endpoint Protection 客户端的常见问题
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*适用于：System Center Configuration Manager (Current Branch)*
 
 
 此 FAQ 针对其 IT 管理员已将 Windows Defender 或 Endpoint Protection 部署到其托管计算机的计算机用户。 此处的内容可能不适用于其他反恶意软件。 Microsoft System Center Endpoint Protection 管理 Windows 10 上的 Windows Defender。 它还可以部署和管理 Windows 10 之前版本的计算机上的 Endpoint Protection 客户端。 虽然本文对 Windows Defender 进行了介绍，但是其信息也适用于 Endpoint Protection。  
@@ -98,13 +98,13 @@ ms.locfileid: "32353236"
 
  根据警报等级，可选择下列操作之一来应用于检测到的项目：  
 
--   **删除** - 此操作将从你的计算机中永久删除软件。  
+- **删除** - 此操作将从你的计算机中永久删除软件。  
 
--   **隔离** - 此操作将隔离软件使其不能运行。 当 Windows Defender 隔离软件时，它将此软件移至计算机上的其他位置，然后阻止此软件运行，直到你选择还原此软件，或从计算机中删除它。  
+- **隔离** - 此操作将隔离软件使其不能运行。 当 Windows Defender 隔离软件时，它将此软件移至计算机上的其他位置，然后阻止此软件运行，直到你选择还原此软件，或从计算机中删除它。  
 
--   **允许** - 此操作将向 Windows Defender 允许列表添加软件并允许该软件在计算机上运行。 Windows Defender 将停止提醒你此软件可能会给你的隐私或计算机带来的风险。  
+- **允许** - 此操作将向 Windows Defender 允许列表添加软件并允许该软件在计算机上运行。 Windows Defender 将停止提醒你此软件可能会给你的隐私或计算机带来的风险。  
 
- 如果你对某一项（如软件）选择“允许”  ，Windows Defender 将停止提醒你此软件可能会给你的隐私或计算机带来的风险。 因此，仅当你信任软件及软件发布者时，才可将软件添加到允许列表。  
+  如果你对某一项（如软件）选择“允许”  ，Windows Defender 将停止提醒你此软件可能会给你的隐私或计算机带来的风险。 因此，仅当你信任软件及软件发布者时，才可将软件添加到允许列表。  
 
 ### <a name="how-to-remove-potentially-harmful-software"></a>如何删除可能有害的软件
 
@@ -139,7 +139,7 @@ ms.locfileid: "32353236"
  是的，一些恶意软件可以通过嵌入式脚本或网页中的程序从网站安装。 一些恶意软件要求你的帮助才能安装。 此软件通过 Web 弹出消息或免费软件让你接受可下载文件。 但是，如果保持最新的 Microsoft Windows®，并且不减少安全设置，那么你可以尽量减小受感染的可能性。  
 
 ##  <a name="why-is-it-important-to-review-license-agreements-before-installing-software"></a>为什么在安装软件之前查看许可证协议很重要？  
- 当你访问网站时，不要自动同意下载站点提供的任何内容。 如果下载免费软件，如文件共享程序或屏幕保护程序，请仔细阅读许可证协议。 查找提到以下内容的句子：你必须接受来自公司的广告和弹出窗口，或者该软件将发送特定信息给软件发行者。  
+ 访问网站时，不自动同意下载站点提供的任何内容。 如果下载免费软件，如文件共享程序或屏幕保护程序，请仔细阅读许可证协议。 查找提到以下内容的句子：你必须接受来自公司的广告和弹出窗口，或者该软件将发送特定信息给软件发行者。  
 
 ##  <a name="whats-the-difference-between-endpoint-protection-and-windows-defender"></a>Endpoint Protection 和 Windows Defender 之间的区别是什么？  
  Endpoint Protection 是反恶意软件，这意味着它设计用于检测恶意软件，并帮助保护你的计算机免受各种恶意软件的攻击，包括病毒、间谍软件和其他可能不需要的软件。 Windows Defender 随 Windows 操作系统一起自动安装，是用于检测并停止间谍软件的软件。  
@@ -203,11 +203,11 @@ ms.locfileid: "32353236"
 
  每当实时保护检测到威胁或潜在威胁时，Windows Defender 会显示一条通知。 你可从以下选项中进行选择：  
 
--   单击“清理计算机”  删除检测到的项目。 Windows Defender 将自动从你的计算机删除该项目。  
+- 单击“清理计算机”  删除检测到的项目。 Windows Defender 将自动从你的计算机删除该项目。  
 
--   单击“显示详细信息”  链接以显示潜在威胁的详细信息窗口，然后选择要应用于检测到的项目的操作。  
+- 单击“显示详细信息”  链接以显示潜在威胁的详细信息窗口，然后选择要应用于检测到的项目的操作。  
 
- 你可以选择你需要 Windows Defender 监视的软件和设置，但我们建议你打开实时保护，并启用所有实时保护选项。 下表对可用的选项进行了说明。  
+  你可以选择你需要 Windows Defender 监视的软件和设置，但我们建议你打开实时保护，并启用所有实时保护选项。 下表对可用的选项进行了说明。  
 
 |||  
 |-|-|  
@@ -215,7 +215,7 @@ ms.locfileid: "32353236"
 |扫描所有下载|此选项可监视下载的文件和程序，包括通过 Windows Internet Explorer 和 Microsoft Outlook ® Express 自动下载的文件，例如 ActiveX® 控件和软件安装程序。 这些文件可通过浏览器自身下载、安装或运行。 恶意软件，包括病毒、间谍软件和其他可能不需要的软件可以包含在这些文件中，并在你不知情的情况下安装。<br /><br /> 使用此实时保护选项，Windows Defender 可以始终监视你的计算机，并检查你可能已下载的任何恶意文件或程序。 此监视功能意味着 Windows Defender 不需要通过要求检查你可能想要下载的任何文件或程序来减慢你的浏览或电子邮件速度。|  
 |监视计算机上的文件和程序活动|此选项是在文件和程序开始在你的计算机上运行时进行监视，然后它会对你发出警报，通知你它们要执行的任何操作和要对它们执行的操作。 这非常重要，因为恶意软件会利用已安装程序的漏洞在你不知情的情况下运行恶意或不需要的软件。 例如，当你启动经常使用的程序时，间谍软件可以在后台运行。 Windows Defender 监视你的程序，并在检测到可疑活动时向你发出警报。|  
 |启用行为监视|此选项可监视传统防病毒检测方法可能检测不到的可疑模式的行为集合。|  
-|启用网络检查系统|此选项可帮助保护计算机免受已知漏洞的“零日”攻击、缩小发现漏洞和应用更新之间的时间段。|  
+|启用网络检查系统|此选项可帮助保护计算机免受已知漏洞的“零日”攻击，进而缩短发现漏洞和应用更新之间的时间。|  
 
 ### <a name="to-turn-off-real-time-protection"></a>要关闭实时保护  
 
@@ -231,9 +231,9 @@ ms.locfileid: "32353236"
 
  你还将收到其他警报通知，例如，因某种原因关闭了实时保护，你已经有很多天没有更新你的病毒定义和间谍软件定义，或者程序升级已推出。 Windows Defender 还会显示一条简短通知，告知你它正在扫描计算机。  
 
-> [!TIP]  
-
->如果你在通知区域看不到 Windows Defender 图标，则单击通知区域中的箭头以显示隐藏的图标（包括 Windows Defender 图标）。  
+> [!TIP]
+> 
+> 如果你在通知区域看不到 Windows Defender 图标，则单击通知区域中的箭头以显示隐藏的图标（包括 Windows Defender 图标）。  
 
 
  图标颜色取决于你的计算机的当前状态：  

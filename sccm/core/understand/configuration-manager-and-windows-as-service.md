@@ -10,12 +10,12 @@ ms.assetid: c8534a1e-57b8-4688-b6e6-299d82cfcec9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e2fb6b022526ce4bae1de21012ac996dbcea35cf
-ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
+ms.openlocfilehash: 329f5c2f227cbd8a51b1c9ccc21810cda9f6a2cf
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36260901"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417126"
 ---
 # <a name="configuration-manager-and-windows-as-a-service"></a>Configuration Manager 和服务型 Windows
 
@@ -39,6 +39,7 @@ System Center Configuration Manager 提供对 Windows 10 的功能更新的全�
 
 
 ## <a name="key-articles-about-adopting-windows-as-a-service"></a>有关采用服务型 Windows 的关键文章
+
 | 文章        | 说明          | 
 | ------------- |-------------|
 |[将 Windows 作为一项服务来管理](/sccm/osd/deploy-use/manage-windows-as-a-service)|介绍如何使用服务计划来部署 Windows 10 功能更新。|

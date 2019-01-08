@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 robots: NOINDEX, NOFOLLOW
-ms.openlocfilehash: a6a1f8257c2a334b539499a5febbdb77729f0fb2
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: f0ec652a9fb7d4ef6bef881bfc96f1be2b4e297a
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32349909"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424334"
 ---
 # <a name="manage-publications-in-updates-publisher"></a>管理 Updates Publisher 中的发布项
 
-*适用范围：System Center Updates Publisher*
+适用范围：*System Center Updates Publisher*
 
 可以使用发布项将各组更新和捆绑包作为一个对象进行管理。 这包括将更新发布到管理服务器，以及将发布项导出为组，以供其他 Updates Publisher 安装项使用。
 
@@ -41,9 +41,9 @@ ms.locfileid: "32349909"
 
 2. 接下来，在“开始”选项卡上，选择以下任一选项。 可用选项因已选择的更新的发布项类型而异。
 
-  -   **自动**
-  -   **完整内容**
-  -   **仅元数据**
+   -   **自动**
+   -   **完整内容**
+   -   **仅元数据**
 
 更改后，可能需要刷新发布项视图，才能看到新值。
 
@@ -67,13 +67,13 @@ ms.locfileid: "32349909"
 
 ### <a name="to-publish-a-publication"></a>如何发布发布项
 
-1.  转到“发布项工作区”，选择包含要发布或导出的一组更新或捆绑包的发布项。 然后，从功能区的“开始”选项卡中，选择“发布”
+1. 转到“发布项工作区”，选择包含要发布或导出的一组更新或捆绑包的发布项。 然后，从功能区的“开始”选项卡中，选择“发布”
 
-2.  在“发布”向导的“选择”页中，可以选择使用新的发布证书对所有更新进行签名，但不能更改发布项类型。
+2. 在“发布”向导的“选择”页中，可以选择使用新的发布证书对所有更新进行签名，但不能更改发布项类型。
 
-3.  完成向导。
+3. 完成向导。
 
-  如果发布失败，将会看到指向 UpdatesPublisher.log 文件的链接，其中介绍了详细信息。
+   如果发布失败，将会看到指向 UpdatesPublisher.log 文件的链接，其中介绍了详细信息。
 
 ## <a name="export-a-publication"></a>导出发布项
 可以从 Updates Publisher 存储库中导出发布项。 这样可以导出分配给相应发布项的更新和捆绑包，并创建更新目录。 然后，可以[添加](/sccm/sum/tools/updates-publisher-catalogs#add-software-update-catalogs)目录，并将其[导入](/sccm/sum/tools/updates-publisher-catalogs#mport-updates)其他 Updates Publisher 实例。 还可以[导出](/sccm/sum/tools/manage-updates-with-updates-publisher#export-updates)不属于发布项的更新。

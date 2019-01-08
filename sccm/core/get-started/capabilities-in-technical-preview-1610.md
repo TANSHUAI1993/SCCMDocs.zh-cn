@@ -10,20 +10,20 @@ ms.assetid: 8b31fd3e-875a-4a31-9498-5b050aadce32
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0798deff2f4904cb1cecac79251e7bc0688e0d4e
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: d0d1e646795bb778e185d49f5de0796f486d2a08
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32337048"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419557"
 ---
 # <a name="capabilities-in-technical-preview-1610-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1610 版中的功能
 
-*适用范围：System Center Configuration Manager (Technical Preview)*
+适用范围：System Center Configuration Manager (Technical Preview)
 
 
 
-本文介绍 System Center Configuration Manager Technical Preview 1610 版中的可用功能。 你可以安装此版本，以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。      在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。    
+本文介绍 System Center Configuration Manager Technical Preview 1610 版中的可用功能。 你可以安装此版本，以更新 Technical Preview 站点的功能并向其添加新功能。      在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager 技术预览版](../../core/get-started/technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。    
 
 
 **以下是可以试用的此版本的新功能。**  
@@ -63,26 +63,26 @@ ms.locfileid: "32337048"
 1.  在 Configuration Manager 控制台中，[创建和部署需要批准的应用程序](https://docs.microsoft.com/sccm/apps/deploy-use/create-applications)。
 2.  在客户端计算机上，打开“软件中心”并提交应用程序请求。
 3.  在 Configuration Manager 控制台中，批准应用程序请求。
-4.  拒绝已批准的应用程序请求：在 Configuration Manager 控制台中，导航到“软件库” > “概述” > “应用程序管理” > “批准请求”，然后选择要拒绝的应用程序请求。  在功能区上，单击“拒绝”。
+4.  拒绝已批准应用程序请求：在 Configuration Manager 控制台中，导航到“软件库” > “概述” > “应用程序管理” > “批准请求”，然后选择要拒绝的应用程序请求。  在功能区上，单击“拒绝”。
 
 ## <a name="exclude-clients-from-automatic-upgrade"></a>从自动升级中排除客户端
 Technical Preview 1610 引入了一种新设置，可用于排除客户端集合，使其不会自动安装更新后的客户端版本。  这适用于自动升级以及其他方法，例如基于软件更新的升级、登录脚本和组策略。 这可以用于在升级客户端时需格外谨慎的计算机的集合。 排除集合中的客户端会忽略安装更新客户端软件的请求。
 
 ### <a name="configure-exclusion-from-automatic-upgrade"></a>配置自动升级排除
 配置自动升级排除：
-1.  在 Configuration Manager 控制台中，打开“管理”>“站点配置”>“站点”下的“层次结构设置”，然后选择“客户端升级”选项卡。
-2.  选中“从升级中排除指定的客户端”复选框，然后选中“排除集合”，然后选择要排除的集合。 只能选择排除单个集合。
-3.  单击“确定”以关闭并保存配置。 然后，客户端更新策略后，排除集合中的客户端将不再自动安装客户端软件更新。
+1. 在 Configuration Manager 控制台中，打开“管理”>“站点配置”>“站点”下的“层次结构设置”，然后选择“客户端升级”选项卡。
+2. 选中“从升级中排除指定的客户端”复选框，然后选中“排除集合”，然后选择要排除的集合。 只能选择排除单个集合。
+3. 单击“确定”以关闭并保存配置。 然后，客户端更新策略后，排除集合中的客户端将不再自动安装客户端软件更新。
 
-  ![用于自动升级排除的设置](media/automatic_upgrade_exclusion.png)
+   ![用于自动升级排除的设置](media/automatic_upgrade_exclusion.png)
 
 > [!NOTE]
 > 尽管用户界面声明无法通过任何方法升级客户端，但仍有两种方法可用于替代这些设置。 可使用客户端请求安装和手动客户端安装替代此配置。 有关更多详细信息，请参阅以下部分。
 
 ### <a name="how-to-upgrade-a-client-that-is-in-an-excluded-collection"></a>如何升级排除集合中的客户端
 只要某个集合被配置为排除，则只能通过上述两种方法中的一种来升级集合成员的客户端软件，它会替代排除设置：
- - **客户端请求安装** – 可以使用“客户端请求安装”来升级排除集合中的客户端。 由于该操作被视为管理员的意图，因此可以此升级客户端，而无需将整个集合从排除设置中删除。       
- - **手动客户端安装** – 可以手动升级排除集合中的客户端，方法是结合使用后列命令行开关和 ccmsetup：***/ignoreskipupgrade***
+- **客户端请求安装** – 可以使用“客户端请求安装”来升级排除集合中的客户端。 由于该操作被视为管理员的意图，因此可以此升级客户端，而无需将整个集合从排除设置中删除。       
+- **手动客户端安装** – 可以手动升级排除集合中的客户端，方法是结合使用后列命令行开关和 ccmsetup：***/ignoreskipupgrade***
 
   如果尝试在不使用此开关的情况下手动升级排除集合中的客户端，客户端将不会安装新的客户端软件。 有关详细信息，请参阅[如何手动安装 Configuration Manager 客户端](/sccm/core/clients/deploy/deploy-clients-to-windows-computers#a-namebkmkmanuala-how-to-install-configuration-manager-clients-manually)。
 

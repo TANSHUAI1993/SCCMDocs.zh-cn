@@ -9,12 +9,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 robots: noindex,nofollow
-ms.openlocfilehash: b9602d6641e1bb28a3af7c24c64073ba019e0f3e
-ms.sourcegitcommit: 6126dfdf5c879db7d12c3eec019a88fa44521361
+ms.openlocfilehash: a71aa0834a241332d3390e1d888d99b6e3f986f7
+ms.sourcegitcommit: d36e4c7082a5144e79035dd8847c8e741fa04667
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "52830500"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53444563"
 ---
 <!-- 
 - Feature 1357546
@@ -89,7 +89,7 @@ ms.locfileid: "52830500"
 ## <a name="troubleshooting-articles"></a>疑难解答文章
 用来帮助排查 Configuration Manager 组件和功能问题的指导式演练。
 
-- [排查 PXE 启动问题](https://support.microsoft.com/help/10082)
+- [排查 PXE 启动问题](https://support.microsoft.com/help/4468612)
 - [排查软件更新同步问题](https://support.microsoft.com/help/10059)
 - [了解并排查内容分发问题](https://support.microsoft.com/help/4000401)
 - [了解并排查适用于企业的 Microsoft Store 集成的问题](https://support.microsoft.com/help/4010214)
@@ -101,12 +101,12 @@ ms.locfileid: "52830500"
 ## <a name="new-and-updated-support-articles"></a>新的和更新的支持文章
 2018 年 11 月新的或更新的支持文章。
 
-- [KB 4468362：How to deploy a Windows language pack as an application in Configuration Manager](https://support.microsoft.com/help/4468362)（如何为应用程序在 Configuration Manager 中部署 Windows 语言包）
-- [KB 4469580：ConfigMgr PXE does not work because a self-signed certificate is not created](https://support.microsoft.com/help/4469580/)（ConfigMgr PXE 不起作用，因为未创建自签名的证书）
-- [KB 4471003：How to boot from a PXE server that's on a different network](https://support.microsoft.com/help/4471003)（如何从位于其他网络上的 PXE 服务器启动）
-- [KB 4462978：Update rollup for System Center Configuration Manager current branch, version 1806](https://support.microsoft.com/help/4462978)（System Center Configuration Manager Current Branch 版本 1806 更新汇总）
-- [KB 4471061：A client computer can "steal" the Configuration Manager GUID of an Unknown Computer object during imaging](https://support.microsoft.com/help/4471061)（客户端计算机可以在映像处理期间“窃取”未知计算机对象的 Configuration Manager GUID）
-- [KB 4471115：Dynamic Media in Configuration Manager cannot get management point locations when the Task Sequence Wizard runs in Windows PE](https://support.microsoft.com/help/4471115)（任务序列向导在 Windows PE 中运行时，Configuration Manager 中的动态介质无法获取管理点位置）
+- [KB 4468362：如何为应用程序在 Configuration Manager 中部署 Windows 语言包](https://support.microsoft.com/help/4468362)
+- [KB 4469580：ConfigMgr PXE 不起作用，因为未创建自签名的证书](https://support.microsoft.com/help/4469580/)
+- [KB 4471003：如何从不同网络上的 PXE 服务器启动](https://support.microsoft.com/help/4471003)
+- [KB 4462978：System Center Configuration Manager Current Branch（版本 1806）更新汇总](https://support.microsoft.com/help/4462978)
+- [KB 4471061：客户端计算机可以在映像处理期间“窃取”未知计算机对象的 Configuration Manager GUID](https://support.microsoft.com/help/4471061)
+- [KB 4471115：任务序列向导在 Windows PE 中运行时，Configuration Manager 中的动态介质无法获取管理点位置](https://support.microsoft.com/help/4471115)
 
 
 要订阅新的 Configuration Manager 支持文章的 Atom 或 RSS 通知，请参阅[支持内容更新](https://support.microsoft.com/help/4089498/)并选择 System Center Configuration Manager。  

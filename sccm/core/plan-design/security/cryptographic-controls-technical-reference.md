@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cc98ee85ffe4fd419ccc2a2e16bf566144f8b670
-ms.sourcegitcommit: ee434c53b3695a039b56298082b6f61f1006d9dd
+ms.openlocfilehash: 6d25c6a11821b73f34c8a3cd6aa95d4a78c86587
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49943302"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418385"
 ---
 # <a name="cryptographic-controls-technical-reference"></a>加密控制技术参考
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 
 System Center Configuration Manager 使用签名和加密帮助保护 Configuration Manager 层次结构中的设备的管理。 借助签名，如果数据在传输过程中发生更改，则会放弃它。 加密可帮助阻止攻击者使用网络协议分析器读取数据。  
@@ -100,19 +100,19 @@ System Center Configuration Manager 使用签名和加密帮助保护 Configurat
 
  以下情况需要 PKI 证书：  
 
--   在 Internet 上管理 Configuration Manager 客户端时。  
+- 在 Internet 上管理 Configuration Manager 客户端时。  
 
--   在移动设备上管理 Configuration Manager 客户端时。  
+- 在移动设备上管理 Configuration Manager 客户端时。  
 
--   管理 Mac 计算机时。  
+- 管理 Mac 计算机时。  
 
--   使用基于云的分发点时。  
+- 使用基于云的分发点时。  
 
--   对基于 Intel AMT 的计算机进行带外管理时。  
+- 对基于 Intel AMT 的计算机进行带外管理时。  
 
- 对于需要证书进行身份验证、签名或加密的大多数其他 Configuration Manager 通信，如果 PKI 证书可用，则 Configuration Manager 会自动使用这些证书。 如果这些证书不可用，则 Configuration Manager 会生成自签名证书。  
+  对于需要证书进行身份验证、签名或加密的大多数其他 Configuration Manager 通信，如果 PKI 证书可用，则 Configuration Manager 会自动使用这些证书。 如果这些证书不可用，则 Configuration Manager 会生成自签名证书。  
 
- Configuration Manager 在使用 Exchange Server 连接器管理移动设备时不使用 PKI 证书。  
+  Configuration Manager 在使用 Exchange Server 连接器管理移动设备时不使用 PKI 证书。  
 
 ### <a name="mobile-device-management-and-pki-certificates"></a>移动设备管理和 PKI 证书  
  如果移动运营商尚未锁定移动设备，则可以使用 Configuration Manager 或 Microsoft Intune 请求和安装客户端证书。 此证书在移动设备上的客户端与 Configuration Manager 站点系统或 Microsoft Intune 服务之间提供相互身份验证。 如果锁定了移动设备，则无法使用 Configuration Manager 或 Intune 部署证书。  
@@ -180,39 +180,39 @@ System Center Configuration Manager 使用签名和加密帮助保护 Configurat
 
  除了每个站点系统服务器的此证书外，Configuration Manager 还会为大多数站点系统角色生成自签名证书。 如果同一站点中有站点系统角色的多个实例，它们将共享相同的证书。 例如，你可能在同一站点中有多个管理点或多个注册点。 此自签名证书也使用 SHA-256，并且密钥长度为 2048 位。 该证书也将复制到可能需要信任它的站点系统服务器上的“受信任人”存储。 下列站点系统角色会生成此证书：  
 
--   应用程序目录 Web 服务点  
+- 应用程序目录 Web 服务点  
 
--   应用程序目录网站点  
+- 应用程序目录网站点  
 
--   资产智能同步点  
+- 资产智能同步点  
 
--   证书注册点  
+- 证书注册点  
 
--   Endpoint Protection 点  
+- Endpoint Protection 点  
 
--   注册点  
+- 注册点  
 
--   回退状态点  
+- 回退状态点  
 
--   管理点  
+- 管理点  
 
--   启用多播的分发点  
+- 启用多播的分发点  
 
--   带外服务点  
+- 带外服务点  
 
--   Reporting Services 点  
+- Reporting Services 点  
 
--   软件更新点  
+- 软件更新点  
 
--   状态迁移点  
+- 状态迁移点  
 
--   系统健康验证程序点  
+- 系统健康验证程序点  
 
--   Microsoft Intune 连接器  
+- Microsoft Intune 连接器  
 
- 这些证书由 Configuration Manager 自动管理并会在必要时自动生成。  
+  这些证书由 Configuration Manager 自动管理并会在必要时自动生成。  
 
- Configuration Manager 还使用客户端身份验证证书将状态消息从分发点发送到管理点。 如果仅针对 HTTPS 客户端连接配置了管理点，则必须使用 PKI 证书。 如果管理点接受 HTTP 连接，则你可以使用 PKI 证书，或选择选项以使用具有客户端身份验证功能、使用 SHA-256 并且密钥长度为 2048 位的自签名证书。  
+  Configuration Manager 还使用客户端身份验证证书将状态消息从分发点发送到管理点。 如果仅针对 HTTPS 客户端连接配置了管理点，则必须使用 PKI 证书。 如果管理点接受 HTTP 连接，则你可以使用 PKI 证书，或选择选项以使用具有客户端身份验证功能、使用 SHA-256 并且密钥长度为 2048 位的自签名证书。  
 
 ### <a name="server-communication-between-sites"></a>站点间的服务器通信  
  Configuration Manager 通过使用数据库复制和基于文件的复制在站点之间传输数据。 有关详细信息，请参阅[终结点之间的通信](/sccm/core/plan-design/hierarchy/communications-between-endpoints)。  
@@ -223,11 +223,11 @@ System Center Configuration Manager 使用签名和加密帮助保护 Configurat
 
  Configuration Manager 中的数据库复制使用 SQL Server Service Broker 通过下列机制在站点之间传输数据：  
 
--   SQL 服务器到 SQL 服务器的连接：此机制使用 Windows 凭据进行服务器身份验证，并使用具有 1024 位的自签名证书通过高级加密标准 (AES) 对数据进行签名和加密。 如果具有服务器身份验证功能的 PKI 证书可用，则将使用这些证书。 证书必须位于“计算机”证书存储的“个人”存储中。  
+- SQL Server 到 SQL Server 的连接：此机制使用 Windows 凭据进行服务器身份验证，并使用具有 1024 位的自签名证书通过高级加密标准 (AES) 对数据进行签名和加密。 如果具有服务器身份验证功能的 PKI 证书可用，则将使用这些证书。 证书必须位于“计算机”证书存储的“个人”存储中。  
 
--   SQL 服务代理：此机制使用具有 2048 位的自签名证书进行身份验证，以及通过使用高级加密标准 (AES) 对数据进行签名和加密。 证书必须位于 SQL Server master 数据库中。  
+- SQL Service Broker：此机制使用具有 2048 位的自签名证书进行身份验证，以及通过使用高级加密标准 (AES) 对数据进行签名和加密。 证书必须位于 SQL Server master 数据库中。  
 
- 基于文件的复制使用服务器消息块 (SMB) 协议，并使用 SHA-256 对未加密但不包含任何敏感数据的此数据进行签名。 如果要对此数据进行加密，你可以使用 IPsec，并且必须独立于 Configuration Manager 实现这一点。  
+  基于文件的复制使用服务器消息块 (SMB) 协议，并使用 SHA-256 对未加密但不包含任何敏感数据的此数据进行签名。 如果要对此数据进行加密，你可以使用 IPsec，并且必须独立于 Configuration Manager 实现这一点。  
 
 ##  <a name="cryptographic-controls-for-clients-that-use-https-communication-to-site-systems"></a>使用站点系统 HTTPS 通信的客户端的加密控制  
  当站点系统角色接受客户端通信时，你可以将它们配置为接受 HTTPS 和 HTTP 连接，或仅接受 HTTPS 连接。 接受来自 Internet 的连接的站点系统角色仅接受通过 HTTPS 进行的客户端连接。  
@@ -240,17 +240,17 @@ System Center Configuration Manager 使用签名和加密帮助保护 Configurat
 ### <a name="communication-that-is-unencrypted-when-clients-use-https-communication"></a>客户端使用 HTTPS 通信时未加密的通信  
  当客户端使用 HTTPS 与站点系统通信时，通常会通过 SSL 对通信进行加密。 但是，在下列情况中，客户端会在不使用加密的情况下与站点系统通信：  
 
--   客户端无法在 Intranet 上建立 HTTPS 连接并回退为使用 HTTP（如果站点系统允许此配置）  
+- 客户端无法在 Intranet 上建立 HTTPS 连接并回退为使用 HTTP（如果站点系统允许此配置）  
 
--   与下列站点系统角色的通信：  
+- 与下列站点系统角色的通信：  
 
-    -   客户端将状态消息发送到回退状态点  
+  -   客户端将状态消息发送到回退状态点  
 
-    -   客户端将 PXE 请求发送到支持 PXE 的分发点  
+  -   客户端将 PXE 请求发送到支持 PXE 的分发点  
 
-    -   客户端将通知数据发送到管理点  
+  -   客户端将通知数据发送到管理点  
 
- Reporting Services 点配置为独立于客户端通信模式使用 HTTP 或 HTTPS。  
+  Reporting Services 点配置为独立于客户端通信模式使用 HTTP 或 HTTPS。  
 
 ##  <a name="cryptographic-controls-for-clients-chat-use-http-communication-to-site-systems"></a>使用站点系统 HTTP 通信的客户端的加密控制  
  当客户端使用与站点系统角色的 HTTP 通信时，它们可使用 PKI 证书进行客户端身份验证，或使用 Configuration Manager 生成的自签名证书。 当 Configuration Manager 生成自签名证书时，这些证书具有用于签名和加密的自定义对象标识符，并且用于唯一标识客户端。 对于除 Windows Server 2003 之外的所有受支持的操作系统，这些自签名证书使用 SHA-256，并且其密钥长度为 2048 位。 对于 Windows Server 2003，则使用 SHA1，且其密钥长度为 1024 位。  
@@ -268,7 +268,7 @@ System Center Configuration Manager 使用签名和加密帮助保护 Configurat
 
 -   启用 TLS 1.2
 
-    若要启用 TLS 1.2 for Configuration Manager，请参阅以下知识库文章：[如何启用 TLS 1.2 for Configuration Manager](https://support.microsoft.com/en-us/help/4040243/how-to-enable-tls-1-2-for-configuration-manager)。
+    若要为 Configuration Manager 启用 TLS 1.2，请参阅以下知识库文章：[如何为 Configuration Manager 启用 TLS 1.2](https://support.microsoft.com/en-us/help/4040243/how-to-enable-tls-1-2-for-configuration-manager)。
 -   禁用 SSL 3.0、TLS 1.0 和 TLS 1.1 
 -   重新排序与 TLS 相关的密码套件 
 

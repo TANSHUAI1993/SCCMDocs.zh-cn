@@ -10,16 +10,16 @@ ms.assetid: ba9b623f-6e86-4006-93f2-83d563de0cd0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2eb75af410ae1511ae105aa7a3a56659c8ef0442
-ms.sourcegitcommit: 3dfe3f4401651afa9dc65d14a8944ae4e4198b3e
+ms.openlocfilehash: 0d2e3c7bc6cba90ebc24bdfdf244f54d1752d749
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48862407"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420458"
 ---
 # <a name="how-to-assign-clients-to-a-site-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中将客户端分配到一个站点
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 安装 System Center Configuration Manager 客户端后，必须将其加入 Configuration Manager 主站点才能进行管理。 客户端加入的站点称为其*分配的站点*。 无法将客户端分配给管理中心站点或辅助站点。  
 
@@ -94,30 +94,30 @@ ms.locfileid: "48862407"
 
 Configuration Manager 还会检查是否已将 Configuration Manager (Current Branch) 客户端分配给支持它的站点。 从以前版本的 Configuration Manager 进行迁移时，可能会出现以下情况。  
 
--   情况：使用了自动站点分配，并且边界与 Configuration Manager 以前版本中所定义的边界重叠。  
+- 场景：使用了自动站点分配，并且边界与 Configuration Manager 以前版本中所定义的边界重叠。  
 
-     在这种情况下，客户端会自动尝试查找 Configuration Manager (Current Branch) 站点。  
+   在这种情况下，客户端会自动尝试查找 Configuration Manager (Current Branch) 站点。  
 
-     客户端首先检查 Active Directory 域服务，如果它找到发布的 Configuration Manager (Current Branch) 站点，则站点分配将成功。 如果此操作失败（例如，没有发布 Configuration Manager 站点，或者计算机是工作组客户端），则客户端会从其分配的管理点中检查站点信息。  
+   客户端首先检查 Active Directory 域服务，如果它找到发布的 Configuration Manager (Current Branch) 站点，则站点分配将成功。 如果此操作失败（例如，没有发布 Configuration Manager 站点，或者计算机是工作组客户端），则客户端会从其分配的管理点中检查站点信息。  
 
-    > [!NOTE]  
-    >  可通过使用 Client.msi 属性 **SMSMP=&lt;server_name>** 在客户端安装期间将管理点分配给客户端。  
+  > [!NOTE]  
+  >  可通过使用 Client.msi 属性 **SMSMP=&lt;server_name>** 在客户端安装期间将管理点分配给客户端。  
 
-     如果这些方法都失败，则站点分配将失败，你必须手动分配客户端。  
+   如果这些方法都失败，则站点分配将失败，你必须手动分配客户端。  
 
--   情况：你使用特定站点代码（而不是自动站点分配）分配了 Configuration Manager (Current Branch) 客户端，并且错误地为早于 System Center 2012 R2 Configuration Manager 的 Configuration Manager 版本指定了站点代码。  
+- 场景：使用特定站点代码（而不是自动站点分配）分配了 Configuration Manager (Current Branch) 客户端，并且错误地为早于 System Center 2012 R2 Configuration Manager 的 Configuration Manager 版本指定了站点代码。  
 
-     在这种情况下，站点分配将失败，必须手动将客户端重新分配给 Configuration Manager (Current Branch) 站点。  
+   在这种情况下，站点分配将失败，必须手动将客户端重新分配给 Configuration Manager (Current Branch) 站点。  
 
- 站点兼容性检查需要下列条件之一：  
+  站点兼容性检查需要下列条件之一：  
 
--   客户端可以访问发布到 Active Directory 域服务的站点信息。  
+- 客户端可以访问发布到 Active Directory 域服务的站点信息。  
 
--   客户端可以与站点中的管理点通信。  
+- 客户端可以与站点中的管理点通信。  
 
- 如果站点兼容性检查无法成功完成，则在再次运行站点兼容性检查并成功完成之前，将无法成功进行站点分配，并且客户端将保持不受管理。  
+  如果站点兼容性检查无法成功完成，则在再次运行站点兼容性检查并成功完成之前，将无法成功进行站点分配，并且客户端将保持不受管理。  
 
- 执行站点兼容性检查的例外情况是为基于 Internet 的管理点配置了客户端时。 在这种情况下，不进行站点兼容性检查。 如果将客户端分配到包含基于 Internet 的站点系统的站点，并指定基于 Internet 的管理点，请确保将客户端分配到正确的站点。 如果错误地将客户端分配到 Configuration Manager 2007 站点、System Center 2012 Configuration Manager 站点或分配到不具有基于 Internet 的站点系统角色的 Configuration Manager 站点，客户端将不受管理。  
+  执行站点兼容性检查的例外情况是为基于 Internet 的管理点配置了客户端时。 在这种情况下，不进行站点兼容性检查。 如果将客户端分配到包含基于 Internet 的站点系统的站点，并指定基于 Internet 的管理点，请确保将客户端分配到正确的站点。 如果错误地将客户端分配到 Configuration Manager 2007 站点、System Center 2012 Configuration Manager 站点或分配到不具有基于 Internet 的站点系统角色的 Configuration Manager 站点，客户端将不受管理。  
 
 ##  <a name="locating-management-points"></a>定位管理点  
  将客户端成功分配给站点之后，它将定位站点中的管理点。  
@@ -135,7 +135,7 @@ Configuration Manager 注册的移动设备客户端只连接到其分配的站�
 ##  <a name="downloading-site-settings"></a>下载站点设置  
  在站点分配成功并且客户端找到管理点之后，使用 Active Directory 域服务检查其站点兼容性的客户端计算机将下载其分配的站点的客户端相关站点设置。 这些设置包括客户端证书选择条件、是否使用证书吊销列表以及客户端请求端口号。 客户端将继续定期检查这些设置。  
 
- 当客户端计算机无法从 Active Directory 域服务获取站点设置时，它们会从其管理点下载这些设置。 使用客户端请求进行安装时，客户端计算机也可以获取站点设置，或者可使用 CCMSetup.exe 和客户端安装属性手动指定站点设置。 有关客户端安装属性的详细信息，请参阅[关于 System Center Configuration Manager 中的客户端安装属性](../../../core/clients/deploy/about-client-installation-properties.md)。  
+ 当客户端计算机无法从 Active Directory 域服务获取站点设置时，它们会从其管理点下载这些设置。 使用客户端请求进行安装时，客户端计算机也可以获取站点设置，或者可使用 CCMSetup.exe 和客户端安装属性手动指定站点设置。 有关客户端安装属性的详细信息，请参阅 [关于 System Center Configuration Manager 中的客户端安装属性](../../../core/clients/deploy/about-client-installation-properties.md)。  
 
 ##  <a name="downloading-client-settings"></a>下载客户端设置  
  所有客户端均下载默认客户端设置策略或任何合适的自定义客户端设置策略。 软件中心依赖于 Windows 计算机的这些客户端配置策略，并且将通知用户在下载此配置信息之前软件中心无法成功运行。 根据配置的客户端设置，初次下载客户端设置可能需要些时间，并且在此过程完成之前某些客户端管理任务可能无法运行。  

@@ -10,16 +10,16 @@ ms.assetid: a7d3df90-062d-4d57-9e9d-e137d3e7cd7f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0c8cf0af19017f4acfd95bcd01f8226229c05a14
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: f1bf3460e29375a6c5e95ad372af089548be5713
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353386"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422465"
 ---
 # <a name="create-an-image-for-an-oem-in-factory-or-a-local-depot-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 为工厂中的 OEM 或本地 depot 创建映像
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 通过 System Center Configuration Manager 中的预留媒体部署，可将操作系统部署到未完全预配的计算机。 预留媒体是 Windows 映像格式 (WIM) 文件，可以由制造商 (OEM) 安装在裸机计算机上，也可以安装在未连接到 Configuration Manager 环境的企业暂存中心。 之后在 Configuration Manager 环境中，使用媒体提供的启动映像启动计算机，会在预留媒体上运行哈希检查以确保其有效性，然后计算机将连接到站点管理点以执行完成下载过程可用的任务序列。
 
@@ -28,11 +28,11 @@ ms.locfileid: "32353386"
 
  可在以下操作系统部署方案中使用预留媒体：  
 
--   [在新计算机（裸机）上安装新版的 Windows](install-new-windows-version-new-computer-bare-metal.md)  
+- [在新计算机（裸机）上安装新版的 Windows](install-new-windows-version-new-computer-bare-metal.md)  
 
--   [替换现有计算机和传输设置](replace-an-existing-computer-and-transfer-settings.md)  
+- [替换现有计算机和传输设置](replace-an-existing-computer-and-transfer-settings.md)  
 
- 完成其中一个操作系统部署方案中的步骤，然后使用以下部分来准备并创建预留媒体。  
+  完成其中一个操作系统部署方案中的步骤，然后使用以下部分来准备并创建预留媒体。  
 
 ## <a name="configure-deployment-settings"></a>配置部署设置  
  当你使用预留媒体来启动操作系统部署过程时，必须配置该部署才能使操作系统对媒体可用。 可以在“部署软件向导”的“部署设置”  页面或部署属性的“部署设置”  选项卡上配置这一选项。  对于“可用于以下项目”  设置，请配置下述内容之一：  
@@ -44,7 +44,7 @@ ms.locfileid: "32353386"
 -   **仅媒体和 PXE（隐藏）**  
 
 ## <a name="create-the-prestaged-media"></a>创建预留媒体  
- 创建要发送到的 OEM 或本地 depot 的预留媒体文件。 有关详细信息，请参阅 [使用 System Center Configuration Manager 创建预留媒体](create-prestaged-media.md)。  
+ 创建要发送到的 OEM 或本地 depot 的预留媒体文件。 有关详细信息，请参阅 [Create prestaged media with System Center Configuration Manager](create-prestaged-media.md)。  
 
 ## <a name="send-the-prestaged-media-file-to-the-oem-or-local-depot"></a>将预留媒体文件发送到 OEM 或本地 depot  
  将该媒体发送到 OEM 或本地 depot 以预留计算机。 预留媒体文件应用于计算机上已格式化的硬盘。  

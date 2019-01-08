@@ -10,26 +10,26 @@ ms.assetid: 2bafd028-1923-4463-9e3e-ee41bc0c437b
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 05d87b253f2387dd8428f4b9fadea3fe5f3a48e8
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 4eb41ba3a55d0de026d38a673d4e5dfad8e22cd7
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342522"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416123"
 ---
 # <a name="capabilities-in-technical-preview-1605-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1605 版中的功能
 
-*适用范围：System Center Configuration Manager (Technical Preview)*
+适用范围：*System Center Configuration Manager (Technical Preview)*
 
-本文介绍了 System Center Configuration Manager Technical Preview 1605 版中的可用功能。 你可以安装此版本，以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。      在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。  
+本文介绍了 System Center Configuration Manager Technical Preview 1605 版中的可用功能。 你可以安装此版本，以更新 Technical Preview 站点的功能并向其添加新功能。      在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager 技术预览版](../../core/get-started/technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。  
 
  **此 Technical Preview 中的已知问题：**  
 
--   使用 Technical Preview 1605，如果在安装管理点后更新其属性，可能会出现一个错误，该错误将强制关闭控制台。  如果发生此情况，可以卸载管理点，然后再使用所需的设置重新安装它。 也可以在安装 Technical Preview 1605 前修改管理点。  
+- 使用 Technical Preview 1605，如果在安装管理点后更新其属性，可能会出现一个错误，该错误将强制关闭控制台。  如果发生此情况，可以卸载管理点，然后再使用所需的设置重新安装它。 也可以在安装 Technical Preview 1605 前修改管理点。  
 
--   使用 Technical Preview 1604 的适用于企业的 Windows 应用商店功能，然后升级到 Technical Preview 1605 时，你将无法再查看载入的数据。 所有其他功能继续正常运行。 如果使用 Technical Preview 1604 进行载入，在安装 Technical Preview 1605 后仍可继续载入，并且无需采取进一步操作。  
+- 使用 Technical Preview 1604 的适用于企业的 Windows 应用商店功能，然后升级到 Technical Preview 1605 时，你将无法再查看载入的数据。 所有其他功能继续正常运行。 如果使用 Technical Preview 1604 进行载入，在安装 Technical Preview 1605 后仍可继续载入，并且无需采取进一步操作。  
 
- **以下是此版本可以试用的新功能。**  
+  **以下是此版本可以试用的新功能。**  
 
 ##  <a name="BKMK_PerAppVPN"></a> Windows 10 设备的每应用 VPN  
  对于配合使用 Configuration Manager 和 Intune 管理的 Windows 10 设备，可添加一个应用列表，此列表可自动打开通过 Configuration Manager 管理控制台配置的 VPN 连接。 可以选择对这些应用限制 VPN 通信，也可以继续允许通过 VPN 连接进行所有通信。  
@@ -57,15 +57,15 @@ ms.locfileid: "32342522"
 
  若要配置宽限期，请执行以下操作：  
 
-1.  在客户端设置的“计算机代理”页上，将“部署截止时间后强制的宽限期(小时)”这一新属性的值配置为介于 **1** 和 **120** 小时之间。  
+1. 在客户端设置的“计算机代理”页上，将“部署截止时间后强制的宽限期(小时)”这一新属性的值配置为介于 **1** 和 **120** 小时之间。  
 
-2.  在新的应用程序部署中，或在现有部署属性中，在“计划”页上，选中复选框“根据用户首选项延迟此部署的强制”，直到在客户端设置中定义的宽限期。  
+2. 在新的应用程序部署中，或在现有部署属性中，在“计划”页上，选中复选框“根据用户首选项延迟此部署的强制”，直到在客户端设置中定义的宽限期。  
 
-     选中了此复选框的所有部署，以及针对其中部署了客户端设置的设备的所有部署，都将使用此宽限期。  
+    选中了此复选框的所有部署，以及针对其中部署了客户端设置的设备的所有部署，都将使用此宽限期。  
 
- 在此版本中，客户端设备不使用所配置的宽限期。 如果配置宽限期，并选中该复选框，则将在截止时间后在用户配置的第一个非业务窗口中安装该应用程序。  
+   在此版本中，客户端设备不使用所配置的宽限期。 如果配置宽限期，并选中该复选框，则将在截止时间后在用户配置的第一个非业务窗口中安装该应用程序。  
 
- 已将类似的选项添加到软件更新部署向导、自动部署规则向导和属性页中。 但是，这些选项当前都未在此技术预览中实现。  
+   已将类似的选项添加到软件更新部署向导、自动部署规则向导和属性页中。 但是，这些选项当前都未在此技术预览中实现。  
 
 ##  <a name="BKMK_Remote"></a>远程设备操作的新体验  
  已改进从 Configuration Manager 控制台执行远程设备操作的体验。  
@@ -75,24 +75,24 @@ ms.locfileid: "32342522"
 
  这些操作的状态位于以下位置：  
 
--   从“设备”节点选择设备时，可查看详细内容窗格。  
+- 从“设备”节点选择设备时，可查看详细内容窗格。  
 
--   设备的“属性”页。  
+- 设备的“属性”页。  
 
--   “设备”节点的主页（默认情况下，可能不会显示所有列）。  
+- “设备”节点的主页（默认情况下，可能不会显示所有列）。  
 
- 有关 iOS 绕过激活锁的详细信息，请参阅[通过 Configuration Manager 的绕过激活锁帮助保护 iOS 设备](/sccm/mdm/deploy-use/manage-ios-activation-lock)，特别是 **Configuration Manager Technical Preview 中绕过激活锁的当前已知问题**部分。  
+  有关 iOS 绕过激活锁的详细信息，请参阅[通过 Configuration Manager 的绕过激活锁帮助保护 iOS 设备](/sccm/mdm/deploy-use/manage-ios-activation-lock)，特别是 **Configuration Manager Technical Preview 中绕过激活锁的当前已知问题**部分。  
 
 ##  <a name="BKMK_WSFB"></a>适用于企业的 Windows 应用商店应用  
  在[适用于企业的 Windows 应用商店](https://www.microsoft.com/business-store)中可以为组织查找并采购应用（单个或批量）。 通过将应用商店连接到 Configuration Manager，可从 Configuration Manager 控制台管理批量采购的应用，例如：  
 
--   可以将采购的应用列表与 Configuration Manager 同步  
+- 可以将采购的应用列表与 Configuration Manager 同步  
 
--   同步的应用会出现在 Configuration Manager 控制台中，可以如同任何其他应用一样部署这些应用  
+- 同步的应用会出现在 Configuration Manager 控制台中，可以如同任何其他应用一样部署这些应用  
 
--   Configuration Manager 每 24 小时就会从应用商店中下载应用许可信息，你可在 Configuration Manager 控制台中进行查看  
+- Configuration Manager 每 24 小时就会从应用商店中下载应用许可信息，你可在 Configuration Manager 控制台中进行查看  
 
- 在 1604 技术预览版中，你可以从 Configuration Manager 控制台中的适用于企业的 Windows 应用商店进行同步并查看应用。 在此版本中，我们已添加从同步的应用商店应用创建和部署 Configuration Manager 应用程序的功能。  
+  在 1604 技术预览版中，你可以从 Configuration Manager 控制台中的适用于企业的 Windows 应用商店进行同步并查看应用。 在此版本中，我们已添加从同步的应用商店应用创建和部署 Configuration Manager 应用程序的功能。  
 
 ### <a name="set-up-windows-store-for-business-synchronization"></a>设置适用于企业的 Windows 应用商店同步  
 
@@ -143,11 +143,11 @@ ms.locfileid: "32342522"
 
  从适用于企业的 Windows 应用商店脱机许可应用创建和部署 Configuration Manager 应用程序。  
 
-1.  在 Configuration Manager 控制台的“软件库”工作区中，展开“应用程序管理”，然后单击“应用商店应用的许可证信息”。  
+1. 在 Configuration Manager 控制台的“软件库”工作区中，展开“应用程序管理”，然后单击“应用商店应用的许可证信息”。  
 
-2.  选择要部署的应用，然后在“主页”选项卡的“创建”组中，单击“创建应用程序”。  
+2. 选择要部署的应用，然后在“主页”选项卡的“创建”组中，单击“创建应用程序”。  
 
- 将创建包含适用于企业的 Windows 应用商店应用的 Configuration Manager 应用程序。 然后，可以像对任何其他 Configuration Manager 应用程序一样部署并监视此应用程序。  
+   将创建包含适用于企业的 Windows 应用商店应用的 Configuration Manager 应用程序。 然后，可以像对任何其他 Configuration Manager 应用程序一样部署并监视此应用程序。  
 
 > [!IMPORTANT]  
 >  从脱机许可应用创建具有单一部署类型的 Configuration Manager 应用程序时，可将其部署到 MDM 托管并使用 Configuration Manager 客户端进行管理的设备。 如果尝试使用多种部署类型来部署一个应用，安装将失败。  
@@ -231,29 +231,29 @@ ms.locfileid: "32342522"
 
 ### <a name="deploy-the-company-portal-application-and-configuration"></a>部署公司门户应用程序和配置  
 
-1.  使用此技术预览版随附的配置脚本准备公司门户部署和配置：  
+1. 使用此技术预览版随附的配置脚本准备公司门户部署和配置：  
 
-    1.  打开已升级的 PowerShell 命令窗口。  
+   1. 打开已升级的 PowerShell 命令窗口。  
 
-    2.  运行 **set-executionPolicy RemoteSigned**  
+   2. 运行 **set-executionPolicy RemoteSigned**  
 
-    3.  从文件夹 **&lt;SCCM 安装目录 \>\cd.latest\SMSSETUP\TOOLS\MDM** 运行 **.\ConfigurationScript.ps1**  
+   3. 从文件夹 **&lt;SCCM 安装目录 \>\cd.latest\SMSSETUP\TOOLS\MDM** 运行 **.\ConfigurationScript.ps1**  
 
-     此配置脚本可执行以下操作：  
+      此配置脚本可执行以下操作：  
 
-    1.  使用同一文件夹中的 **CompanyPortalOnPremisesMDM.appx** 创建包含 Windows 应用包部署类型的 Configuration Manager 应用程序。  
+   4. 使用同一文件夹中的 **CompanyPortalOnPremisesMDM.appx** 创建包含 Windows 应用包部署类型的 Configuration Manager 应用程序。  
 
-    2.  创建配置公司门户的配置项目和配置基线。  
+   5. 创建配置公司门户的配置项目和配置基线。  
 
-    3.  部署配置基线和应用程序，并将应用程序添加到所有分发点。  
+   6. 部署配置基线和应用程序，并将应用程序添加到所有分发点。  
 
-    > [!NOTE]  
-    >  如果应用程序目录角色不与主站点位于同一处，请执行以下操作：  
-    >   
-    >  -   在“资产和符合性”工作区中，找到“OnPremMDM 门户配置 CI - 服务器 URL”配置项目  
-    > -   将“符合性规则”值更改为其中包含应用程序目录角色的站点系统的完全限定的域名。  
+   > [!NOTE]
+   >  如果应用程序目录角色不与主站点位于同一处，请执行以下操作：  
+   > 
+   > - 在“资产和符合性”工作区中，找到“OnPremMDM 门户配置 CI - 服务器 URL”配置项目  
+   >   -   将“符合性规则”值更改为其中包含应用程序目录角色的站点系统的完全限定的域名。  
 
-2.  部署公司门户应用程序及其配置后，使用 Configuration Manager 控制台的“部署”部分验证给定设备的应用程序和配置基线是否符合。 在设备上的“开始”菜单中，公司门户将显示为“公司门户 (Technical Preview)”。  
+2. 部署公司门户应用程序及其配置后，使用 Configuration Manager 控制台的“部署”部分验证给定设备的应用程序和配置基线是否符合。 在设备上的“开始”菜单中，公司门户将显示为“公司门户 (Technical Preview)”。  
 
 ### <a name="try-it-out"></a>试试看！  
  尝试完成以下任务，然后通过使用 Microsoft Connect 站点上 [Configuration Manager 反馈计划](https://connect.microsoft.com/ConfigurationManagervnext/ConfigMgr%20Customer%20Feedback)页上的反馈表告知我们它的工作原理：  
@@ -293,11 +293,11 @@ ms.locfileid: "32342522"
 
 4.  在“服务器组设置”页上指定下列设置之一：  
 
-    -   **允许同时更新一定比例的计算机**：指定仅特定比例的客户端可在任意某个时间进行更新。 例如，如果集合中有 10 个客户端，并且配置该集合为可同时更新 30% 的客户端，则在任何给定时间只有 3 个客户端可安装软件更新。  
+    -   **允许同时更新一定比例的计算机**：指定一次只更新一定百分比的客户端。 例如，如果集合中有 10 个客户端，并且配置该集合为可同时更新 30% 的客户端，则在任何给定时间只有 3 个客户端可安装软件更新。  
 
-    -   **允许同时更新一定数量的计算机**：指定仅特定数量的客户端可在任意某个时间进行更新。  
+    -   **允许同时更新多台计算机**：指定一次只更新一定数量的客户端。  
 
-    -   **指定维护顺序**：指定集合中的客户端将按配置的顺序一次更新一个。 列表中位于某客户端前面的客户端完成安装其软件更新后，该客户端才能安装软件更新。  
+    -   **指定维护日程安排**：指定集合中的客户端将按配置的顺序一次更新一个。 列表中位于某客户端前面的客户端完成安装其软件更新后，该客户端才能安装软件更新。  
 
 5.  指定是否使用部署前（节点排出）脚本或部署后（节点恢复）脚本。  
 
@@ -342,48 +342,48 @@ ms.locfileid: "32342522"
 ### <a name="try-it-now"></a>立即试试看！  
  尝试完成以下任务，然后通过使用 Microsoft Connect 站点上 [Configuration Manager 反馈计划](https://connect.microsoft.com/ConfigurationManagervnext/ConfigMgr%20Customer%20Feedback)页上的反馈表告知我们它的工作原理：  
 
--   Windows Defender 高级威胁防护 (ATP) 联机服务的机载设备  
+- Windows Defender 高级威胁防护 (ATP) 联机服务的机载设备  
 
--   监视托管设备的 Windows Defender ATP 部署  
+- 监视托管设备的 Windows Defender ATP 部署  
 
- **先决条件**  
+  **先决条件**  
 
--   Windows Defender 高级威胁防护联机服务的订阅  
+- Windows Defender 高级威胁防护联机服务的订阅  
 
--   运行 Windows 10 周年纪念版（内部版本 14328 及更高版本）的客户端  
+- 运行 Windows 10 周年纪念版（内部版本 14328 及更高版本）的客户端  
 
--   创建客户端载入配置文件  
+- 创建客户端载入配置文件  
 
-    ##### <a name="how-to-create-an-onboarding-configuration-file"></a>如何创建载入配置文件  
+  ##### <a name="how-to-create-an-onboarding-configuration-file"></a>如何创建载入配置文件  
 
-    1.  登录到 Windows Defender ATP 联机服务  
+  1.  登录到 Windows Defender ATP 联机服务  
 
-    2.  单击“客户端载入”菜单项  
+  2.  单击“客户端载入”菜单项  
 
-    3.  选择“System Center Configuration Manager”，然后单击“下载包”。  
+  3.  选择“System Center Configuration Manager”，然后单击“下载包”。  
 
-    4.  下载压缩的存档 (.zip) 文件并将内容解压缩。  
+  4.  下载压缩的存档 (.zip) 文件并将内容解压缩。  
 
 
 ##### <a name="onboard-devices-for-windows-defender-atp"></a>Windows Defender ATP 的机载设备  
 
-1.  在 Configuration Manager 控制台中，导航到“资产和符合性” > “概述” > “Endpoint Protection” > “Windows Defender ATP 策略”，然后单击“创建 Windows Defender ATP 策略”。 将打开 Windows Defender ATP 策略向导。  
+1. 在 Configuration Manager 控制台中，导航到“资产和符合性” > “概述” > “Endpoint Protection” > “Windows Defender ATP 策略”，然后单击“创建 Windows Defender ATP 策略”。 将打开 Windows Defender ATP 策略向导。  
 
-2.  键入 Windows Defender ATP 策略的**名称**和**说明**，然后选择“载入”。 单击“下一步”。  
+2. 键入 Windows Defender ATP 策略的**名称**和**说明**，然后选择“载入”。 单击“下一步”。  
 
-3.  **浏览**到组织的 Windows Defender ATP 云服务租户提供的配置文件。 单击“下一步” 。  
+3. **浏览**到组织的 Windows Defender ATP 云服务租户提供的配置文件。 单击“下一步” 。  
 
-4.  指定从托管设备收集和共享的文件示例以进行分析。  
+4. 指定从托管设备收集和共享的文件示例以进行分析。  
 
-    -   **无** - 没有收集示例文件进行分析  
+   - **无** - 没有收集示例文件进行分析  
 
-    -   **可移植可执行文件** - 收集并共享可在网络攻击中利用的文件（例如程序文件 (.exe)、动态库链接 (.dll) 文件、字体文件，以及类似文件），以进行分析  
+   - **可移植可执行文件** - 收集并共享可在网络攻击中利用的文件（例如程序文件 (.exe)、动态库链接 (.dll) 文件、字体文件，以及类似文件），以进行分析  
 
      单击“下一步” 。  
 
-5.  查看摘要，然后完成该向导。  
+5. 查看摘要，然后完成该向导。  
 
-6.  通过单击“部署”，现在可以将 Windows Defender ATP 策略部署到托管客户端计算机。  
+6. 通过单击“部署”，现在可以将 Windows Defender ATP 策略部署到托管客户端计算机。  
 
 ##### <a name="monitor-windows-defender-atp"></a>监视 Windows Defender ATP  
 
@@ -430,38 +430,38 @@ ms.locfileid: "32342522"
 
 ##### <a name="pre-declare-corporate-owned-devices-with-imei-or-ios-serial-number"></a>预声明具有 IMEI 或 iOS 序列号的公司拥有的设备  
 
-1.  在 Configuration Manager 控制台中，转到“资产和符合性” > “概述” > “公司拥有的所有设备” > “预声明设备”，然后单击“创建预声明设备”。 将打开“预声明设备”向导。  
+1. 在 Configuration Manager 控制台中，转到“资产和符合性” > “概述” > “公司拥有的所有设备” > “预声明设备”，然后单击“创建预声明设备”。 将打开“预声明设备”向导。  
 
-2.  指定添加设备信息的方式：  
+2. 指定添加设备信息的方式：  
 
-    -   **上传包含 IMEI 号码和详细信息的 .csv 文件** - 若要上传号码列表，请参阅步骤 #3。  
+   -   **上传包含 IMEI 号码和详细信息的 .csv 文件** - 若要上传号码列表，请参阅步骤 #3。  
 
-    -   **手动添加 IMEI 号码和详细信息** - 若要手动输入信息，请键入 IMEI 号码或 iOS 序列号和设备的详细信息，然后继续执行步骤 #4。  
+   -   **手动添加 IMEI 号码和详细信息** - 若要手动输入信息，请键入 IMEI 号码或 iOS 序列号和设备的详细信息，然后继续执行步骤 #4。  
 
-3.  对于已上传的文件，浏览到包含信息的 .csv 文件，以预声明公司拥有的设备。 该文件必须具有以下格式，顶行（仅提供指导）除外：  
+3. 对于已上传的文件，浏览到包含信息的 .csv 文件，以预声明公司拥有的设备。 该文件必须具有以下格式，顶行（仅提供指导）除外：  
 
-    |**IMEI 号码**|**iOS 序列**|**OS**|**详细信息**|
-    |---|---|---|---|
-    |123456789012345||WINDOWS|公司拥有的 Windows 设备|
-    |123456789012|A0BCD0EFGH0J|IOS|公司拥有的 iOS 设备|
-    |123456789012346||ANDROID|公司拥有的 Android 设备|
+   |**IMEI 号码**|**iOS 序列**|**OS**|**详细信息**|
+   |---|---|---|---|
+   |123456789012345||WINDOWS|公司拥有的 Windows 设备|
+   |123456789012|A0BCD0EFGH0J|IOS|公司拥有的 iOS 设备|
+   |123456789012346||ANDROID|公司拥有的 Android 设备|
 
-     **列：**  
+    **列：**  
 
-    -   第 1 列：IMEI 号码 - 每行都必须提供 IMEI 号码或 iOS 序列号  
+   - 第 1 列：IMEI 号码 - 每行都必须提供 IMEI 号码或 iOS 序列号  
 
-    -   第 2 列：iOS 序列号 - 仅可预声明 iOS 序列号。 将 IMEI 号码用于其他设备平台  
+   - 第 2 列：iOS 序列号 - 仅可预声明 iOS 序列号。 将 IMEI 号码用于其他设备平台  
 
-    -   第 3 列：设备的操作系统（需要大写）：  
+   - 第 3 列：设备的操作系统（需要大写）：  
 
-        -   IOS - 所有 iOS 设备  
+     -   IOS - 所有 iOS 设备  
 
-        -   WINDOWS - 包括 Windows Phone、Windows 10 Mobile 和 Windows 电脑  
+     -   WINDOWS - 包括 Windows Phone、Windows 10 Mobile 和 Windows 电脑  
 
-        -   ANDROID - 所有 Android 设备  
+     -   ANDROID - 所有 Android 设备  
 
-    -   第 4 列：详细信息 - Configuration Manager 控制台中显示的其他设备信息  
+   - 第 4 列：详细信息 - Configuration Manager 控制台中显示的其他设备信息  
 
      单击“下一步” 。  
 
-4.  查看文件导入的结果。 以前导入的 IMEI 或序列号会将其详细信息更新为新的详细信息。  单击“下一步”继续，或单击“返回”保存更新后的详细信息，然后完成向导。  
+4. 查看文件导入的结果。 以前导入的 IMEI 或序列号会将其详细信息更新为新的详细信息。  单击“下一步”继续，或单击“返回”保存更新后的详细信息，然后完成向导。  

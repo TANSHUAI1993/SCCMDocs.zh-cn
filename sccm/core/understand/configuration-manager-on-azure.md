@@ -9,15 +9,15 @@ ms.assetid: d24257d8-8136-47f4-8e0d-34021356dc37
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2b952e76fc21e3190430cdf34cb4a264918fd199
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: fa201029b81bb3e0ca8fb5e97f126c899497d503
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342590"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422923"
 ---
 # <a name="configuration-manager-on-azure---frequently-asked-questions"></a>Azure 上的 Configuration Manager - 常见问题解答
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 下列问题和解答可帮助了解何时使用以及如何在 Microsoft Azure 上配置 Configuration Manager。
 
@@ -45,13 +45,13 @@ ms.locfileid: "32342590"
 ### <a name="what-about-networking-requirements-should-i-use-expressroute-or-an-azure-vpn-gateway"></a>有些什么网络要求？应使用 ExpressRoute 还是 Azure VPN 网关？
 有关网络的决策是一项非常重要的决策。 网络速度和延迟会影响站点服务器和远程站点系统之间的功能以及任何客户端与站点系统之间的通信。 我们的建议是使用 ExpressRoute。 但不存在会阻止使用 Azure VPN 网关的 Configuration Manager 限制。 应仔细斟酌对此基础结构的需求（性能、修补、软件分发、操作系统部署），然后再做决定。 需要为每个解决方案考虑的事项包括：
 
- - **ExpressRoute**（推荐）
+- **ExpressRoute**（推荐）
   - 自然地扩展到数据中心（可联接多个数据中心）
   - Azure 数据中心与基础结构之间的专用连接
   - 不使用公共 Internet
   - 提供可靠性、高速度、更低的延迟和高安全性
   - 高达 10gbps 的速度和不限流量计划选项
- - **VPN 网关**
+- **VPN 网关**
   - 站点到站点/点到站点 VPN
   - 通信流不经过公共 Internet
   - 使用 Internet 协议安全性 (IPsec) 和 Internet 密钥交换 (IKE)
@@ -109,7 +109,7 @@ ms.locfileid: "32342590"
 |--------------------|-------------------|------------------|
 |**最多 25k**       | 站点服务器：F4S </br>数据库服务器：DS12_V2 | 站点服务器：1xP30 </br>数据库服务器：2xP30（带区）  |
 |**25k 到 50k**      | 站点服务器：F4S </br>数据库服务器：DS13_V2 | 站点服务器：1xP30 </br>数据库服务器：2xP30（带区）   |
-|**50k 到 100k**     | 站点服务器：F8S </br>数据库服务器： DS14_V2 | 站点服务器：2xP30（带区）   </br>数据库服务器：3xP30（带区）   |
+|**50k 到 100k**     | 站点服务器：F8S </br>数据库服务器：DS14_V2 | 站点服务器：2xP30（带区）   </br>数据库服务器：3xP30（带区）   |
 
 下面显示了 DS14_V2 上 50k 到 100k 客户端的示例配置，其中 3xP30 磁盘位于带区卷中，Configuration Manager 安装和数据库文件具有单独的逻辑卷：![VM)disks](media/vm_disks.png)  
 
@@ -149,29 +149,29 @@ ms.locfileid: "32342590"
 
 ## <a name="cost"></a>成本
 ### <a name="ok-tell-me-a-bit-about-the-cost-will-this-be-a-cost-effective-solution-for-me"></a>好的，请提供一些成本方面的信息。 这对我来说是划算的解决方案吗？
-很难说，因为环境存在差异。 最佳办法就是使用 Microsoft Azure 定价计算器为环境估算成本：https://azure.microsoft.com/pricing/calculator/
+很难说，因为环境存在差异。 最佳办法就是使用 Microsoft Azure 定价计算器为环境估算成本： https://azure.microsoft.com/pricing/calculator/
 
 ## <a name="additional-resources"></a>其他资源
-基础知识：http://azure.microsoft.com/documentation/articles/fundamentals-introduction-to-azure/
+基础知识： http://azure.microsoft.com/documentation/articles/fundamentals-introduction-to-azure/
 
 **Azure VM 计算机类型：**
- - Azure 计算机大小：https://azure.microsoft.com/documentation/articles/virtual-machines-size-specs/  
- - VM 定价：http://azure.microsoft.com/pricing/details/virtual-machines/  
- - 存储定价：http://azure.microsoft.com/pricing/details/storage/
+ - Azure 计算机大小： https://azure.microsoft.com/documentation/articles/virtual-machines-size-specs/  
+ - VM 定价： http://azure.microsoft.com/pricing/details/virtual-machines/  
+ - 存储定价： http://azure.microsoft.com/pricing/details/storage/
 
 **磁盘性能注意事项：**    
- - 高级磁盘简介：http://azure.microsoft.com/blog/2014/12/11/introducing-premium-storage-high-performance-storage-for-azure-virtual-machine-workloads/  
- - 高级磁盘深层信息：http://azure.microsoft.com/documentation/articles/storage-premium-storage-preview-portal/   
- - 有关图表的最大大小和存储性能目标的综合信息：https://azure.microsoft.com/documentation/articles/storage-scalability-targets/  
- - 另一篇简介以及一些有关高级存储深层工作原理的有用电脑数据：http://azure.microsoft.com/blog/2015/04/16/azure-premium-storage-now-generally-available-2/
+ - 高级磁盘简介： http://azure.microsoft.com/blog/2014/12/11/introducing-premium-storage-high-performance-storage-for-azure-virtual-machine-workloads/  
+ - 高级磁盘深层信息： http://azure.microsoft.com/documentation/articles/storage-premium-storage-preview-portal/   
+ - 有关图表的最大大小和存储性能目标的综合信息： https://azure.microsoft.com/documentation/articles/storage-scalability-targets/  
+ - 另一篇简介以及一些有关高级存储深层工作原理的有用电脑数据： http://azure.microsoft.com/blog/2015/04/16/azure-premium-storage-now-generally-available-2/
 
 **可用性：**
- - Azure IaaS 运行时间 SLA：https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_0/  
- - 可用性集说明：https://azure.microsoft.com/documentation/articles/virtual-machines-manage-availability/
+ - Azure IaaS 运行时间 SLA： https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_0/  
+ - 可用性集说明： https://azure.microsoft.com/documentation/articles/virtual-machines-manage-availability/
 
 **连接性：**
- - Express Route 与Azure VPN：http://azure.microsoft.com/blog/2014/06/10/expressroute-or-virtual-network-vpn-whats-right-for-me/
- - Express Route 定价：http://azure.microsoft.com/pricing/details/expressroute/
- - Express Route 详情：http://azure.microsoft.com/documentation/articles/expressroute-introduction/
+ - Express Route 与Azure VPN： http://azure.microsoft.com/blog/2014/06/10/expressroute-or-virtual-network-vpn-whats-right-for-me/
+ - Express Route 定价： http://azure.microsoft.com/pricing/details/expressroute/
+ - Express Route 详情： http://azure.microsoft.com/documentation/articles/expressroute-introduction/
 
  

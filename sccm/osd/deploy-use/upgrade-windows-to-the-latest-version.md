@@ -10,16 +10,16 @@ ms.assetid: c21eec87-ad1c-4465-8e45-5feb60b92707
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fbba0306cececebeb7a0e20757e7de3b0d4d0e70
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 35312c92a20f8e3842b5ee47dd3b916631671e45
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32348328"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417337"
 ---
 # <a name="upgrade-windows-to-the-latest-version-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 将 Windows 升级到最新版本
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 本文介绍在 Configuration Manager 中升级计算机操作系统的步骤。 你可以在不同的部署方法（如独立媒体或软件中心）中进行选择。 “就地升级”方案具有以下特点：  
 
@@ -46,21 +46,21 @@ ms.locfileid: "32348328"
 
 查看使用任务序列升级操作系统时的要求和限制，以确保其满足你的需要：  
 
-  -   仅添加与操作系统升级的核心任务相关的任务序列步骤。 这些步骤主要包括安装包、应用程序或更新。 还会用到用于运行命令行、PowerShell 或设置动态变量的步骤。  
+- 仅添加与操作系统升级的核心任务相关的任务序列步骤。 这些步骤主要包括安装包、应用程序或更新。 还会用到用于运行命令行、PowerShell 或设置动态变量的步骤。  
 
-  -   在部署升级任务序列前查看安装在计算机中的驱动程序和应用程序以确保它们与 Windows 10 兼容。  
+- 在部署升级任务序列前查看安装在计算机中的驱动程序和应用程序以确保它们与 Windows 10 兼容。  
 
-  -   以下任务与就地升级不兼容。 它们需要使用传统的操作系统部署：  
+- 以下任务与就地升级不兼容。 它们需要使用传统的操作系统部署：  
 
-     -   更改计算机域成员身份或更新本地管理员组。  
+  - 更改计算机域成员身份或更新本地管理员组。  
 
-     -   在计算机上实现基础更改，例如： 
-         - 更改磁盘分区
-         - 将系统体系结构从 x86 改为 x64
-         - 实现 UEFI。 （有关可选操作的更多信息，请参阅[在就地升级过程中从 BIOS 转换到 UEFI](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion#convert-from-bios-to-uefi-during-an-in-place-upgrade)。）
-         - 修改基本操作系统语言  
+  - 在计算机上实现基础更改，例如： 
+    - 更改磁盘分区
+    - 将系统体系结构从 x86 改为 x64
+    - 实现 UEFI。 （有关可选操作的更多信息，请参阅[在就地升级过程中从 BIOS 转换到 UEFI](/sccm/osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion#convert-from-bios-to-uefi-during-an-in-place-upgrade)。）
+    - 修改基本操作系统语言  
 
-     -   你有自定义要求，包括使用自定义基本映像、使用第三方磁盘加密或要求 WinPE 脱机操作。  
+  - 你有自定义要求，包括使用自定义基本映像、使用第三方磁盘加密或要求 WinPE 脱机操作。  
 
 ### <a name="infrastructure-requirements"></a>基础结构要求  
 

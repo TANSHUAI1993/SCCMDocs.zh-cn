@@ -10,16 +10,16 @@ ms.assetid: 79cd131a-1a24-4751-87c8-7f275e45d847
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 35ccc4944359b89bad3ccac52309a289f69933f7
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 12a3bffb48cba2e3f258d06489b7511d05b7daad
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32338207"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422073"
 ---
 # <a name="create-linux-and-unix-server-applications-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 创建 Linux 和 UNIX 服务器应用程序
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 为运行 Linux 和 UNIX 的计算机创建和部署应用程序时，请考虑以下注意事项。  
 
@@ -100,15 +100,15 @@ ms.locfileid: "32338207"
 ### <a name="deploy-software-to-a-linux-or-unix-server"></a>将软件部署到 Linux 或 UNIX 服务器
  若要使用包和程序将软件部署到 Linux 或 UNIX 服务器中，可以从 Configuration Manager 控制台使用“部署软件向导”。 适用于 Linux 和 UNIX 的客户端支持大多数部署设置。 但是，有一些设置不受支持。 在部署软件时，请考虑以下事项：  
 
--   你必须在与针对内容位置配置的边界组关联的至少一个分发点上设置包。  
+- 你必须在与针对内容位置配置的边界组关联的至少一个分发点上设置包。  
 
--   接收此部署的适用于 Linux 和 UNIX 的客户端必须能够从其网络位置访问此分发点。  
+- 接收此部署的适用于 Linux 和 UNIX 的客户端必须能够从其网络位置访问此分发点。  
 
--   适用于 Linux 和 UNIX 的客户端从分发点下载包，并在本地计算机上运行程序。  
+- 适用于 Linux 和 UNIX 的客户端从分发点下载包，并在本地计算机上运行程序。  
 
--   适用于 Linux 和 UNIX 的客户端无法从共享文件夹中下载包。 它从启用了 IIS 的分发点（支持 HTTP 或 HTTPS）下载包。  
+- 适用于 Linux 和 UNIX 的客户端无法从共享文件夹中下载包。 它从启用了 IIS 的分发点（支持 HTTP 或 HTTPS）下载包。  
 
- 下表列出了不受支持的部署的属性：  
+  下表列出了不受支持的部署的属性：  
 
 |部署属性|行为|更多信息|  
 |-------------------------|--------------|----------------------|  
@@ -131,23 +131,23 @@ ms.locfileid: "32338207"
 
  若要配置客户端以使用网络带宽控制，请为“后台智能传输”  配置客户端设置，然后将这些设置应用于客户端计算机。 为了使用带宽控制，客户端必须接收以下设置配置为“是”的“后台智能传输”客户端设置：  
 
--   **限制 BITS 后台传输的最大网络带宽**  
+- **限制 BITS 后台传输的最大网络带宽**  
 
- 客户端支持下列后台智能传输配置：  
+  客户端支持下列后台智能传输配置：  
 
-    -   **限制时段开始时间**  
+  -   **限制时段开始时间**  
 
-    -   **限制时段结束时间**  
+  -   **限制时段结束时间**  
 
-    -   **限制时段期间的最大传输速率(Kbps)**  
+  -   **限制时段期间的最大传输速率(Kbps)**  
 
-    -   **限制时段外的最大传输速率(Kbps)**  
+  -   **限制时段外的最大传输速率(Kbps)**  
 
 下列后台智能传输配置不受支持，适用于 Linux 和 UNIX 的客户端将忽略这些设置：  
 
--   **允许 BITS 在限制时段外下载**  
+- **允许 BITS 在限制时段外下载**  
 
- 如果从分发点将软件下载到客户端的过程中断，适用于 Linux 和 UNIX 的客户端不会恢复下载。 而是会重启整个软件包的下载。  
+  如果从分发点将软件下载到客户端的过程中断，适用于 Linux 和 UNIX 的客户端不会恢复下载。 而是会重启整个软件包的下载。  
 
 ##  <a name="configure-operations-for-software-deployments"></a>配置软件部署的操作  
  与 Windows 客户端类似，适用于 Linux 和 UNIX 的 Configuration Manager 客户端在轮询和检查新策略时发现新软件部署。 客户端检查新策略的频率取决于客户端设置。 你可以配置维护时段以控制何时进行软件部署。  

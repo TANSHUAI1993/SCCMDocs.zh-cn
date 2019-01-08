@@ -10,16 +10,16 @@ ms.assetid: 7341cc6e-9e08-41e4-bcc6-6c1ff12e85ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 891366f7e5fa3f4fd2b8f9a8606e823f0a48c394
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 98deb50a35bd96684bf537c1821c58d1d08ca738
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342505"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420118"
 ---
 # <a name="use-alerts-and-the-status-system-for-system-center-configuration-manager"></a>使用 System Center Configuration Manager 的警报和状态系统
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 配置警报，并使用内置状态系统以保持对 System Center Configuration Manager 部署状态的实时了解。  
 
@@ -181,15 +181,15 @@ ms.locfileid: "32342505"
 ##  <a name="bkmk_Alerts"></a> 警报  
  Configuration Manager 警报由在特定情况下发生的某些操作生成。  
 
--   通常，在发生必须解决的错误时，将会生成警报  
+- 通常，在发生必须解决的错误时，将会生成警报  
 
--   可能会生成警报来警告你存在某种情况，以便继续对该情况进行监视  
+- 可能会生成警报来警告你存在某种情况，以便继续对该情况进行监视  
 
--   你可以配置某些警报（例如针对 Endpoint Protection 和客户端状态的警报），而其他警报将自动配置  
+- 你可以配置某些警报（例如针对 Endpoint Protection 和客户端状态的警报），而其他警报将自动配置  
 
--   你可以将订阅配置为随后可通过电子邮件发送详细信息的警报，从而提高对关键问题的感知  
+- 你可以将订阅配置为随后可通过电子邮件发送详细信息的警报，从而提高对关键问题的感知  
 
- 使用下表来了解有关如何在 Configuration Manager 中配置警报和警报订阅的信息：  
+  使用下表来了解有关如何在 Configuration Manager 中配置警报和警报订阅的信息：  
 
 
 |操作|更多信息|  
@@ -204,9 +204,9 @@ ms.locfileid: "32342505"
 
 ##### <a name="to-manage-general-alerts"></a>若要管理常规警报  
 
-1.  在 Configuration Manager 控制台中，依次导航到“监视” > “警报”，然后选择管理任务。  
+1. 在 Configuration Manager 控制台中，依次导航到“监视” > “警报”，然后选择管理任务。  
 
-  使用下表以详细了解可能需要一些信息才能让你选择的管理任务。  
+   使用下表以详细了解可能需要一些信息才能让你选择的管理任务。  
 
 |管理任务|详细信息|  
     |---------------------|-------------|  
@@ -255,13 +255,13 @@ ms.locfileid: "32342505"
 
     -   **启用警报电子邮件通知**：选中此复选框可允许 Configuration Manager 使用 SMTP 服务器发送电子邮件警报。  
 
-    -   “用于发送电子邮件警报的 SMTP 服务器的 FQDN 或 IP 地址”：输入希望用于发送这些警报的电子邮件服务器的完全限定域名 (FQDN) 或 IP 地址和 SMTP 端口。  
+    -   **用于发送电子邮件警报的 SMTP 服务器的 FQDN 或 IP 地址**：输入希望用于发送这些警报的电子邮件服务器的完全限定域名 (FQDN) 或 IP 地址和 SMTP 端口。  
 
     -   **SMTP 服务器连接帐户**：为将用于连接电子邮件服务器的 Configuration Manage 指定身份验证方法。  
 
     -   **电子邮件警报的发件人地址**：指定从其发送警报电子邮件的电子邮件地址。  
 
-    -   “测试 SMTP 服务器”：向“电子邮件警报的发件人地址” 中指定的电子邮件地址发送一封测试电子邮件。  
+    -   **测试 SMTP 服务器**：向“电子邮件警报的发件人地址”中指定的电子邮件地址发送一封测试电子邮件。  
 
 4.  单击“确定”  以保存设置并关闭“电子邮件设置组件属性”  对话框。  
 
@@ -273,11 +273,11 @@ ms.locfileid: "32342505"
 
 3.  在“新建订阅”  对话框中，指定下列信息：  
 
-    -   “名称”：输入一个名称以标识此电子邮件订阅。 最多可以使用 255 个字符。  
+    -   **名称**：输入一个名称以标识此电子邮件订阅。 最多可以使用 255 个字符。  
 
-    -   “电子邮件地址”：输入你希望将警报发送到的电子邮件地址。 可以使用分号分隔多个电子邮件地址。  
+    -   **电子邮件地址**:输入希望将警报发送到的电子邮件地址。 可以使用分号分隔多个电子邮件地址。  
 
-    -   “电子邮件语言”：在列表中，指定电子邮件的语言。  
+    -   **电子邮件语言**:在列表中，指定电子邮件的语言。  
 
 4.  单击“确定”  关闭“新建订阅”  对话框并创建电子邮件订阅。  
 
@@ -287,22 +287,22 @@ ms.locfileid: "32342505"
 ###  <a name="BKMK_MonitorAlerts"></a> 监视器警报  
  你可以在“监视”  工作区的“警报”  节点中查看警报。 警报具有以下警报状态之一：  
 
--   “从未触发”：未满足警报的条件。  
+- **从未触发**：未满足警报的条件。  
 
--   “活跃”：已满足警报的条件。  
+- **活动**：已满足警报的条件。  
 
--   “已取消”：不再满足活跃警报的条件。 此状态指示导致警报的情况现在已解决。  
+- **已取消**：不再满足活动警报的条件。 此状态指示导致警报的情况现在已解决。  
 
--   **已推迟**：管理用户已配置 Configuration Manager，以便稍后评估警报的状态。  
+- **已推迟**：管理用户已配置 Configuration Manager，以便稍后评估警报的状态。  
 
--   “已禁用”：管理用户已禁用了警报。 当警报处于此状态时，即使警报的状态发生更改，Configuration Manager 也不会更新警报。  
+- **已禁用**：管理用户已禁用了警报。 当警报处于此状态时，即使警报的状态发生更改，Configuration Manager 也不会更新警报。  
 
- Configuration Manager 生成警报时，可以执行以下操作之一：  
+  Configuration Manager 生成警报时，可以执行以下操作之一：  
 
--   解决导致警报的情况，例如，解决生成警报的网络问题或配置问题。 Configuration Manager 检测到问题不再存在之后，警报状态更改为“取消”。  
+- 解决导致警报的情况，例如，解决生成警报的网络问题或配置问题。 Configuration Manager 检测到问题不再存在之后，警报状态更改为“取消”。  
 
--   如果警报为已知问题，你可以将警报推迟特定的一段时间。 在那时，Configuration Manager 会将警报更新为其当前状态。  
+- 如果警报为已知问题，你可以将警报推迟特定的一段时间。 在那时，Configuration Manager 会将警报更新为其当前状态。  
 
-     只有当警报处于活动状态时，你才能将其推迟。  
+   只有当警报处于活动状态时，你才能将其推迟。  
 
--   你可以编辑警报的“备注”  ，以便其他管理用户可以看到你察觉到了该警报。 例如，你可以在备注中确定如何解决该情况，提供有关该情况的当前状态的信息，或解释推迟警报的原因。  
+- 你可以编辑警报的“备注”  ，以便其他管理用户可以看到你察觉到了该警报。 例如，你可以在备注中确定如何解决该情况，提供有关该情况的当前状态的信息，或解释推迟警报的原因。  

@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
-ms.openlocfilehash: 807204b9a64e36e103a32d553e7804a0a8592ec1
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: ea1225b1f7ec29d089e8991e397fbae64d5a38eb
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39383799"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424181"
 ---
 # <a name="plan-for-software-updates-in-configuration-manager"></a>在 Configuration Manager 中规划软件更新
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 在 Configuration Manager 生产环境中使用软件更新之前，请务必完成规划过程。 很好地规划软件更新点基础结构对于成功的软件更新实现十分关键。
 
@@ -39,7 +39,7 @@ ms.locfileid: "39383799"
 - 服务器上安装的其他站点系统角色  
 
 
-###  <a name="BKMK_SUMCapacity"></a>软件更新点的容量规划  
+###  <a name="BKMK_SUMCapacity"></a> 软件更新点的容量规划  
 
 支持的客户端数量取决于在软件更新点上运行的 Windows Server Update Services (WSUS) 的版本。 还取决于软件更新点站点系统角色是否与另一站点系统角色共存：  
 
@@ -104,12 +104,12 @@ Configuration Manager 在下列情况下为客户端提供软件更新点列表�
 
 客户端从列表中随机选择一个软件更新点。 优先考虑同一林中的软件更新点。 Configuration Manager 根据客户端的类型向客户端提供不同的列表：  
 
--   **基于 Intranet 的客户端**：接收可配置为仅允许来自 Intranet 连接的软件更新点列表，或接收允许 Internet 和 Intranet 客户端连接的软件更新点列表。  
+-   **基于 Intranet 的客户端**：接收可配置为仅允许来自 Intranet 的连接的软件更新点的列表，或接收允许 Internet 和 Intranet 客户端连接的软件更新点的列表。  
 
--   **基于 Internet 的客户端**：接收配置为仅允许来自 Internett 连接的软件更新点列表，或接收允许 Internet 和 Intranet 客户端连接的软件更新点列表。  
+-   **基于 Internet 的客户端**：接收配置为仅允许来自 Internet 的连接的软件更新点的列表，或接收允许 Internet 和 Intranet 客户端连接的软件更新点的列表。  
 
 
-###  <a name="BKMK_SUPSwitching"></a>软件更新点切换  
+###  <a name="BKMK_SUPSwitching"></a> 软件更新点切换  
 
 > [!NOTE]  
 > 客户端使用边界组来查找新的软件更新点。 如果无法再访问其当前软件更新点，则客户端还会使用边界组回退并查找新的更新点。 添加单个软件更新点到不同的边界组，以控制客户端可找到的服务器。 有关详细信息，请参阅[软件更新点](/sccm/core/servers/deploy/configure/boundary-groups#software-update-points)。  
@@ -162,7 +162,7 @@ Configuration Manager 在下列情况下为客户端提供软件更新点列表�
 2.  选择目标集合。 在功能区的“主页”选项卡上的“集合”组中，单击“客户端通知”，然后单击“切换到下一个软件更新点”。  
 
 
-###  <a name="BKMK_SUP_CrossForest"></a>不受信任林中的软件更新点  
+###  <a name="BKMK_SUP_CrossForest"></a> 不受信任林中的软件更新点  
 
 在站点上创建一个或多个软件更新点，以支持不受信任的林中的客户端。 要添加另一个林中的软件更新点，请先在该林中安装和配置 WSUS 服务器。 然后启动向导以添加具有软件更新点站点系统角色的 Configuration Manager 站点服务器。 在向导中，配置下列设置以成功连接到不受信任林中的 WSUS：  
 
@@ -178,7 +178,7 @@ Configuration Manager 在下列情况下为客户端提供软件更新点列表�
 通常，层次结构中的顶层站点被配置为将软件更新元数据与 Microsoft 更新同步。 当组织安全策略不允许从顶级站点访问 Internet 时，请将顶级站点的同步源配置为使用现有 WSUS 服务器。 此 WSUS 服务器不在 Configuration Manager 层次结构中。 例如，你的 WSUS 服务器位于已连接到 Internet 的网络（外围网络）中，但顶级站点位于未访问 Internet 的内部网络中。 将外围网络中的 WSUS 服务器配置为软件更新元数据的同步源。 在外围网络中配置 WSUS 服务器，使用 Configuration Manager 中所需的相同条件同步软件更新。 否则，顶层站点可能无法对你期待的软件更新进行同步。 安装软件更新点时，请配置 WSUS 服务器连接帐户。 此帐户需要访问外围网络中的 WSUS 服务器。 同时请确认防火墙防允许流量通过相应的端口。 有关详细信息，请参阅[软件更新点用于同步源的端口](/sccm/core/plan-design/hierarchy/ports#BKMK_PortsSUP-WSUS)。  
 
 
-###  <a name="BKMK_SUPSecSite"></a>辅助站点上的软件更新点  
+###  <a name="BKMK_SUPSecSite"></a> 辅助站点上的软件更新点  
 
 软件更新点在辅助站点上是可选的。 仅在辅助站点上安装一个软件更新点。 如果辅助站点上未安装软件更新点，则辅助站点边界内的设备将使用其所分配的主站点上的软件更新点。 通常当辅助站点中的设备与父主站点上的软件更新点之间存在受限网络带宽时，在辅助站点上安装软件更新点。 也可在主站点上的软件更新点接近容量限制时使用此配置。 在辅助站点上成功安装和配置软件更新点后，将为客户端更新站点范围的政策，并且这些客户端开始使用新的软件更新点。  
 
@@ -197,7 +197,7 @@ Configuration Manager 在下列情况下为客户端提供软件更新点列表�
 
 要详细了解基于 Internet 的客户端管理的优缺点，请参阅[在 Internet 上管理客户端](/sccm/core/clients/manage/manage-clients-internet)。
 
-#### <a name="windows-update-for-business"></a>适用于企业的 Windows 更新
+#### <a name="windows-update-for-business"></a>Windows Update for Business
 借助适用于企业的 Windows 更新，可让 Windows 10 设备始终保持最新质量和功能更新。 这些设备直接连接到 Windows 更新云服务。 Configuration Manager 能够区分使用 WUfB 和 WSUS 来获取软件更新的 Windows 10 计算机。
 
 有关详细信息，请参阅 [与适用于企业的 Windows 更新集成](/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10)。
@@ -255,13 +255,13 @@ System Center Updates Publisher (SCUP) 是一款独立工具，可方便独立�
 
 本部分介绍了成功规划和准备软件更新点安装的相关步骤。 在 Configuration Manager 中为软件更新点创建站点系统角色之前，需考虑几项要求。 具体要求由 Configuration Manager 架构而定。 配置软件更新点，使其通过使用 HTTPS 进行通信时，请务必查看此部分。 已启用 HTTPS 的服务器需要其他步骤才能正常工作。  
 
-###  <a name="BKMK_SUPSystemRequirements"></a>软件更新点的要求  
+###  <a name="BKMK_SUPSystemRequirements"></a> 软件更新点的要求  
 
 在满足 WSUS 的最低要求且具备 Configuration Manager 站点系统支持的配置的站点系统上安装软件更新点角色。  
 
 -   要详细了解针对 Windows Server WSUS 服务器角色的最低要求，请参阅[查看注意事项和系统要求](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/plan/plan-your-wsus-deployment#BKMK_1.1)。  
 
--   要详细了解 Configuration Manager 站点系统支持的配置，请参阅[站点和站点系统先决条件](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)。  
+-   有关 Configuration Manager 站点系统支持的配置的详细信息，请参阅[站点和站点系统先决条件](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)。  
 
 
 ###  <a name="BKMK_PlanningForWSUS"></a> 规划 WSUS 安装  
@@ -283,7 +283,7 @@ System Center Updates Publisher (SCUP) 是一款独立工具，可方便独立�
 在安装 WSUS 时，可以选择使用现有的 IIS 默认网站或创建自定义的 WSUS 网站。 为 WSUS 创建自定义网站，使 IIS 在专用虚拟网站中托管 WSUS 服务。 否则，它将共享由其他 Configuration Manager 站点系统或应用程序使用的同一网站。 在站点服务器上安装软件更新点角色时，尤其需要此配置。 在 Windows Server 2012 或更高版本中运行 WSUS 时，WSUS 默认配置为对 HTTP 使用端口 8530，对 HTTPS 使用端口 8531。 在站点上创建软件更新点时，请指定这些端口设置。  
 
 
-####  <a name="BKMK_WSUSInfrastructure"></a>使用现有的 WSUS 基础结构  
+####  <a name="BKMK_WSUSInfrastructure"></a> 使用现有的 WSUS 基础结构  
 安装 Configuration Manager 之前，请选择在环境中处于活动状态的 WSUS 服务器作为软件更新点。 配置软件更新点后，请指定同步设置。 Configuration Manager 连接至在软件更新点服务器运行的 WSUS 服务器并使用相同设置配置 WSUS。 
 
 在将服务器配置为软件更新点之前，请将其产品和分类的配置与 Configuration Manager 设置进行比较。 如果在将现有 WSUS 服务器配置为软件更新点之前同步该服务器，并且产品列表和分类列表不相同，则无论配置的设置如何，它都会同步所有软件更新元数据。 此行为将导致站点数据库中出现意外的软件更新元数据。 
@@ -292,16 +292,16 @@ System Center Updates Publisher (SCUP) 是一款独立工具，可方便独立�
 
 将 WSUS 服务器配置为软件更新点之后，即无法再将其用作独立的 WSUS 服务器。 如果需要非 Configuration Manager 托管的单个独立 WSUS 服务器，请在其他服务器上进行配置。  
 
-####  <a name="BKMK_WSUSAsReplica"></a>将 WSUS 配置为副本服务器  
+####  <a name="BKMK_WSUSAsReplica"></a> 将 WSUS 配置为副本服务器  
 在主站点服务器上添加软件更新点角色时，无法使用配置为副本的 WSUS 服务器。 将 WSUS 服务器配置为副本后，Configuration Manager 无法配置 WSUS 服务器，且 WSUS 同步失败。 在主站点中安装的第一个软件更新点为默认的软件更新点。 站点中的其他软件更新点被配置为默认软件更新点的副本。  
 
-####  <a name="BKMK_WSUSandSSL"></a>决定是否将 WSUS 配置为使用 SSL  
+####  <a name="BKMK_WSUSandSSL"></a> 决定是否将 WSUS 配置为使用 SSL  
 使用 SSL 协议帮助保护软件更新点。 WSUS 使用 SSL 向 WSUS 服务器验证客户端计算机和下游 WSUS 服务器的身份。 WSUS 还使用 SSL 来加密软件更新元数据。 选择使用 SSL 保护 WSUS 时，请在安装软件更新点之前准备 WSUS 服务器。 有关详细信息，请参阅在 WSUS 文档中的[在 WSUS 服务器上配置 SSL](https://docs.microsoft.com/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#bkmk_2.5.ConfigSSL) 一文。 
 
 在安装和配置软件更新点时，请选择“为 WSUS 服务器启用 SSL 通信”选项。 否则，Configuration Manager 会将 WSUS 配置为不使用 SSL。 在软件更新点上启用 SSL 时，还要在子站点上配置任意软件更新点来使用 SSL。  
 
 
-###  <a name="BKMK_ConfigureFirewalls"></a>配置防火墙  
+###  <a name="BKMK_ConfigureFirewalls"></a> 配置防火墙  
 
 Configuration Manager 管理中心站点上的软件更新点与软件更新点上的 WSUS 进行通信。 WSUS 与同步源通信以同步软件更新元数据。 子站点上的软件更新点与父站点上的软件更新点进行通信。 当主站点中有多个软件更新点时，附加的软件更新点将与默认软件更新点进行通信。 默认角色是站点上安装的第一个软件更新点。  
 
@@ -310,7 +310,7 @@ Configuration Manager 管理中心站点上的软件更新点与软件更新点�
 - 软件更新点与其上游同步源之间
 - 在附加的软件更新点之间  
 
-到 Microsoft 更新的连接始终配置为对 HTTP 使用端口 80，对 HTTPS 使用端口 443。 对于从子站点软件更新点上的 WSUS 到父站点软件更新点上的 WSUS 的连接，请使用自定义端口。 如果安全策略禁止此连接，请使用导出和导入同步方法。 有关详细信息，请参阅本文中的[同步源](#BKMK_SyncSource)部分。 要详细了解 WSUS 使用的端口，请参阅[如何确定 Configuration Manager 中 WSUS 使用的端口设置](../get-started/install-a-software-update-point.md#wsus-settings)。  
+至 Microsoft 更新的连接始终配置为针对 HTTP 使用端口 80，针对 HTTPS 使用端口 443。 对于从子站点软件更新点上的 WSUS 到父站点软件更新点上的 WSUS 的连接，请使用自定义端口。 如果安全策略禁止此连接，请使用导出和导入同步方法。 有关详细信息，请参阅本文中的[同步源](#BKMK_SyncSource)部分。 要详细了解 WSUS 使用的端口，请参阅[如何确定 Configuration Manager 中 WSUS 使用的端口设置](../get-started/install-a-software-update-point.md#wsus-settings)。  
 
 
 #### <a name="restrict-access-to-specific-domains"></a>限制对特定域的访问  
@@ -342,15 +342,15 @@ Configuration Manager 管理中心站点上的软件更新点与软件更新点�
 - 如果子站点具有软件更新点 
 - 如果站点上具有基于 Internet 的远程活动软件更新点
 
- **子站点上的软件更新点**  
+  **子站点上的软件更新点**  
 
--   `http://<FQDN for software update point on child site>`  
+- `http://<FQDN for software update point on child site>`  
 
--   `https://<FQDN for software update point on child site>`  
+- `https://<FQDN for software update point on child site>`  
 
--   `http://<FQDN for software update point on parent site>`  
+- `http://<FQDN for software update point on parent site>`  
 
--   `https://<FQDN for software update point on parent site>`  
+- `https://<FQDN for software update point on parent site>`  
 
 
 
@@ -372,16 +372,16 @@ Configuration Manager 中的软件更新同步会根据所配置的条件下载�
 
 软件更新点的同步源设置可指定软件更新点在何处检索到软件更新元数据。 它还指定同步过程是否创建 WSUS 报告事件。  
 
--   **同步源**：顶级站点的软件更新点默认配置 Microsoft 更新的同步源。 你可以选择将顶层站点与现有的 WSUS 服务器同步。 子主站点上的软件更新点会将同步源配置为管理中心站点中的软件更新点。  
+-   **同步源**：默认情况下，顶层站点的软件更新点针对 Microsoft 更新配置同步源。 你可以选择将顶层站点与现有的 WSUS 服务器同步。 子主站点上的软件更新点会将同步源配置为管理中心站点中的软件更新点。  
 
     -  在主站点中安装的第一个软件更新点为默认的软件更新点，并且会与管理中心站点同步。 主站点中的其他软件更新点与主站点中的默认软件更新点同步。  
 
     - 当软件更新点与 Microsoft 更新或上游更新服务器断开连接时，请配置同步源，使其不与已配置的同步源进行同步。 转而，请将其配置为使用 WSUSUtil 工具的导出和导入功能来同步软件更新。 有关详细信息，请参阅[从断开连接的软件更新点中同步软件更新](../get-started/synchronize-software-updates-disconnected.md)。  
 
--   **WSUS 报告事件**：客户端计算机上的 Windows 更新代理可为 WSUS 报告创建事件消息。 Configuration Manager 不使用这些事件。 因此，默认选中“不创建WSUS报告事件”选项。 如果未创建这些事件，客户端应仅在软件更新评估和符合性扫描期间连接到 WSUS 服务器。 如果在 Configuration Manager 之外进行报告需要这些事件，请修改此设置以创建 WSUS 报告事件。  
+-   **WSUS 报告事件：** 代理计算机上的 Windows 更新代理可以为 WSUS 报告创建事件消息。 Configuration Manager 不使用这些事件。 因此，默认选中“不创建WSUS报告事件”选项。 如果未创建这些事件，客户端应仅在软件更新评估和符合性扫描期间连接到 WSUS 服务器。 如果在 Configuration Manager 之外进行报告需要这些事件，请修改此设置以创建 WSUS 报告事件。  
 
 
-###  <a name="BKMK_SyncSchedule"></a>同步计划  
+###  <a name="BKMK_SyncSchedule"></a> 同步计划  
 
 仅在 Configuration Manager 层次结构中顶级站点的软件更新点上配置同步计划。 配置同步计划后，软件更新点会在你指定的日期和时间与同步源同步。 借助自定义计划，你可同步软件更新来优化环境。 请注意 WSUS 服务器、站点服务器和网络的性能需求。 例如，每周在凌晨 2:00 同步一次。 或者，通过使用 Configuration Manager 控制台中“所有软件更新”或“软件更新组”节点的“同步软件更新”操作，在顶级站点上手动启动同步。  
 
@@ -391,25 +391,25 @@ Configuration Manager 中的软件更新同步会根据所配置的条件下载�
 软件更新点同步成功后，它向子站点发送同步请求。 如果主站点中有其他软件更新点，则向每个软件更新点发送一个同步请求。 此过程在层次结构中的每个站点上重复发生。  
 
 
-###  <a name="BKMK_UpdateClassifications"></a>更新分类  
+###  <a name="BKMK_UpdateClassifications"></a> 更新分类  
 
 每个软件更新都是利用更新分类定义的，此分类能帮助组织不同的更新类型。 同步过程中，站点会同步指定类别的元数据。 
 
 Configuration Manager 支持同步以下更新类别：  
 
--   **关键更新**：针对特定问题的广泛发布的更新，解决与安全性无关的关键错误。  
+-   **关键更新**：针对特定问题广泛发布的更新，旨在解决与安全无关的关键缺陷。  
 
--   **定义更新**：对病毒或其他定义文件的更新。  
+-   **定义更新**：针对病毒定义文件或其他定义文件的更新。  
 
--   **功能包**：在产品版本之外分发的新的产品功能，通常包含在下一个完整产品版本中。  
+-   **功能包**：不通过产品发布分发的新产品功能，通常包含在下一版完整发布的产品中。  
 
--   **安全更新**：广泛发布的更新，针对产品特定的与安全相关的问题。  
+-   **安全更新**：针对特定于产品而且与安全性相关的问题广泛发布的更新。  
 
 -   **服务包**：一组应用于 OS 或应用程序的累积修补程序。 这些修补程序包含安全更新、关键更新和软件更新等。  
 
 -   **工具**：可帮助完成一项或多项任务的实用程序或功能。  
 
--   **更新汇总**：一组打包在一起便于部署的累积修复程序。 这些修补程序包含安全更新、关键更新和软件更新等。 更新汇总通常解决特定领域的问题，例如安全性或产品组件问题。  
+-   **更新汇总**：指定一组打包在一起便于部署的累积修复程序。 这些修补程序包含安全更新、关键更新和软件更新等。 更新汇总通常解决特定领域的问题，例如安全性或产品组件问题。  
 
 -   **更新**：针对当前安装的应用程序或文件的更新。  
 
@@ -421,7 +421,7 @@ Configuration Manager 支持同步以下更新类别：
 >  最佳做法是，在首次同步之前清除所有分类。 初始同步后，请选择所需的分类，然后重新运行同步。  
 
 
-###  <a name="BKMK_UpdateProducts"></a>产品  
+###  <a name="BKMK_UpdateProducts"></a> 产品  
 
 每个软件更新的元数据都定义了更新适用的一个或多个产品。 产品是 OS 或应用程序的特定版本， 例如 Microsoft Windows 10 产品。 产品系列是指从中派生单个产品的基本 OS 或应用程序。 例如 Microsoft Windows 是一个产品系列，Windows 10 和 Windows Server 2016 是其中的成员。 可选择一个产品系列，也可选择产品系列中的单个产品。  
 
@@ -433,7 +433,7 @@ Configuration Manager 支持同步以下更新类别：
 >  Configuration Manager 存储一个包含产品和产品系列的列表，你可在首次安装软件更新点时从中进行选择。 在完成同步之前，可能无法选择在 Configuration Manager 发布后发布的产品和产品系列。 同步进程会更新可供选择的可用产品和产品系列的列表。 请在首次同步软件更新之前清除所有产品。 初始同步后，请选择所需的产品，然后重新运行同步。  
 
 
-###  <a name="BKMK_SupersedenceRules"></a>取代规则  
+###  <a name="BKMK_SupersedenceRules"></a> 取代规则  
 
 通常，取代另一个软件更新的软件更新执行下列一项或多项操作：  
 
@@ -454,10 +454,10 @@ Configuration Manager 支持同步以下更新类别：
 -   如果禁止在生产环境中部署取代的软件更新。  
 
     > [!NOTE]  
-    > 当 Configuration Manager 将被取代的软件更新设置为“已过期”时，不会在 WSUS 中将该更新设置为“已拒绝”。 但是，WSUS 清除任务运行时，Configuration Manager 中设置为“已过期”的更新在 WSUS 服务器上设置为“已拒绝”状态。 因此，客户端上的 Windows 更新代理不再扫描这些更新。 客户端继续扫描过期更新，直到清理任务运行。 有关 WSUS 清除任务的详细信息，请参阅[软件更新维护](/sccm/sum/deploy-use/software-updates-maintenance)。  
+    > 在 Configuration Manager 1806 版之前，当 Configuration Manager 将被取代的软件更新设置为“已过期”时，不会在 WSUS 中将该更新设置为“已拒绝”。 客户端继续扫描已过期的更新，直到手动或通过自定义脚本拒绝更新。  自 Configuration Manager 1806 版之后，Configuration Manager 还会拒绝 WSUS 中被取代的更新。 有关 WSUS 清除任务的详细信息，请参阅[软件更新维护](/sccm/sum/deploy-use/software-updates-maintenance)。
 
 
-###  <a name="BKMK_UpdateLanguages"></a>语言  
+###  <a name="BKMK_UpdateLanguages"></a> 语言  
 
 可使用软件更新点的语言设置配置以下项： 
 - 同步软件更新的摘要详细信息（软件更新元数据）时使用的语言  

@@ -10,21 +10,21 @@ ms.assetid: 97f2d81a-2c58-442c-88bc-defd5a1cd48f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6a2fe20896a781d7c897bd5a827d25a7b70390b7
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: b0fa269199f7f3bf4299f90faef9e55766f775d4
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32351507"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421325"
 ---
 # <a name="manage-boot-images-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 管理启动映像
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 Configuration Manager 中的一个启动映像是在操作系统部署过程中使用的 [Windows PE](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-intro) (WinPE) 映像。 启动映像用于在 WinPE 中启动计算机。 此最小操作系统包含有限的组件和服务。 Configuration Manager 使用 WinPE 准备用于安装 Windows 的目标计算机。 使用下列部分来管理启动映像。
 
 ## <a name="BKMK_BootImageDefault"></a>默认启动映像
-Configuration Manager 提供两个默认启动映像：一个用于支持 x86 平台，另一个用于支持 x64 平台。 这些映像存储在以下路径中：\\\\*servername*>\SMS_<*sitecode*>\osd\boot\\<*x64*> or <*i386*>。 将根据所采用的操作更新或重新生成默认启动映像。
+Configuration Manager 提供两个默认启动映像：一种用于支持 x86 平台，一种用于支持 x64 平台。 这些映像存储在以下路径中：\\\\*servername*>\SMS_<*sitecode*>\osd\boot\\<*x64*> or <*i386*>。 将根据所采用的操作更新或重新生成默认启动映像。
 
 针对所描述的默认启动映像的任何操作，请考虑下列行为：
 - 源驱动程序对象必须有效。 这些对象包括驱动程序源文件。 如果对象无效，站点不会将驱动程序添加到启动映像。
@@ -62,51 +62,51 @@ Configuration Manager 提供两个默认启动映像：一个用于支持 x86 �
 
  在站点安装过程中，Configuration Manager 会自动添加 Windows ADK 支持版本中基于 WinPE 版本的启动映像。 根据 Configuration Manager 的版本，你能够添加 Windows ADK 支持版本中基于不同 WinPE 版本的启动映像。 如果尝试添加包含不受支持的 WinPE 版本的启动映像，则会发生错误。 以下列表中是当前支持的 Windows ADK 和 WinPE 版本： 
 
--   **Windows ADK 版本**  
+- **Windows ADK 版本**  
 
-     适用于 Windows 10 的 Windows ADK  
+   适用于 Windows 10 的 Windows ADK  
 
--   **可从 Configuration Manager 控制台中自定义的启动映像的 Windows PE 版本**  
+- **可从 Configuration Manager 控制台中自定义的启动映像的 Windows PE 版本**  
 
-     Windows PE 10  
+   Windows PE 10  
 
--   **不可从 Configuration Manager 控制台中自定义的启动映像的 Windows PE 支持版本**  
+- **不可从 Configuration Manager 控制台中自定义的启动映像的 Windows PE 支持版本**  
 
-     Windows PE 3.1<sup>1</sup> 和 Windows PE 5  
+   Windows PE 3.1<sup>1</sup> 和 Windows PE 5  
 
-     <sup>1</sup> 只有当启动映像基于 Windows PE 3.1 时才能将该映像添加到 Configuration Manager 中。 使用适用于 Windows 7 SP1（基于 Windows PE 3.1）的 Windows AIK 补充来升级适用于 Windows 7（基于 Windows PE 3.0）的 Windows AIK。 从 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=5188)下载适用于 Windows 7 SP1 的 Windows AIK 补充程序。  
+   <sup>1</sup> 只有当启动映像基于 Windows PE 3.1 时才能将该映像添加到 Configuration Manager 中。 使用适用于 Windows 7 SP1（基于 Windows PE 3.1）的 Windows AIK 补充来升级适用于 Windows 7（基于 Windows PE 3.0）的 Windows AIK。 从 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=5188)下载适用于 Windows 7 SP1 的 Windows AIK 补充程序。  
 
-     例如，利用 Configuration Manager 控制台通过适用于 Windows 10 的 Windows ADK 自定义基于 Windows PE 10 的启动映像。 对于基于 Windows PE 5 的启动映像，请使用适用于 Windows 8 的 Windows ADK 中的 DISM 版本从另一台计算机对其进行自定义。 然后向 Configuration Manager 控制台添加自定义启动映像。 有关详细信息，请参阅[自定义启动映像](customize-boot-images.md)。
+   例如，利用 Configuration Manager 控制台通过适用于 Windows 10 的 Windows ADK 自定义基于 Windows PE 10 的启动映像。 对于基于 Windows PE 5 的启动映像，请使用适用于 Windows 8 的 Windows ADK 中的 DISM 版本从另一台计算机对其进行自定义。 然后向 Configuration Manager 控制台添加自定义启动映像。 有关详细信息，请参阅[自定义启动映像](customize-boot-images.md)。
 
- 使用下列过程来手动添加启动映像。  
+  使用下列过程来手动添加启动映像。  
 
 #### <a name="to-add-a-boot-image"></a>添加启动映像  
 
-1.  在 Configuration Manager 控制台中，单击“软件库”。  
+1. 在 Configuration Manager 控制台中，单击“软件库”。  
 
-2.  在“软件库”  工作区中，展开“操作系统” ，然后单击“启动映像包” 。  
+2. 在“软件库”  工作区中，展开“操作系统” ，然后单击“启动映像包” 。  
 
-3.  在“主页”  选项卡上的“创建”  组中，单击“添加启动映像包”  以启动添加启动映像包向导。  
+3. 在“主页”  选项卡上的“创建”  组中，单击“添加启动映像包”  以启动添加启动映像包向导。  
 
-4.  在“数据源”  页上，指定以下选项，然后单击“下一步” 。  
+4. 在“数据源”  页上，指定以下选项，然后单击“下一步” 。  
 
-    -   在“路径”  框中，指定启动映像 WIM 文件的路径。  
+   -   在“路径”  框中，指定启动映像 WIM 文件的路径。  
 
-         指定的路径必须是 UNC 格式的有效网络路径。 例如：\\\\<*servername*\\<*sharename*>\\<*bootimagename*>.wim。  
+        指定的路径必须是 UNC 格式的有效网络路径。 例如：\\\\<*servername*\\<*sharename*>\\<*bootimagename*>.wim。  
 
-    -   从“启动映像”  下拉列表中选择启动映像。 如果 WIM 文件包含多个启动映像，则选择正确的映像。  
+   -   从“启动映像”  下拉列表中选择启动映像。 如果 WIM 文件包含多个启动映像，则选择正确的映像。  
 
-5.  在“常规”   页上，指定以下选项，然后单击“下一步” 。  
+5. 在“常规”   页上，指定以下选项，然后单击“下一步” 。  
 
-    -   在“名称”  框中，为启动映像指定唯一名称。  
+   -   在“名称”  框中，为启动映像指定唯一名称。  
 
-    -   在“版本”  框中，为启动映像指定版本号。  
+   -   在“版本”  框中，为启动映像指定版本号。  
 
-    -   在“备注”  框中，指定有关启动映像使用方式的简要描述。  
+   -   在“备注”  框中，指定有关启动映像使用方式的简要描述。  
 
-6.  完成向导。  
+6. 完成向导。  
 
- 启动映像现在列出在 Configuration Manager 控制台的“启动映像”节点中。 在使用启动映像部署操作系统之前，请将启动映像分发到分发点。 
+   启动映像现在列出在 Configuration Manager 控制台的“启动映像”节点中。 在使用启动映像部署操作系统之前，请将启动映像分发到分发点。 
 
 > [!NOTE]  
 >  在控制台的“启动映像”节点中，“大小(KB)”列会显示每个启动映像的解压缩大小。 当站点通过网络发送启动映像时，它会发送压缩副本。 此副本通常小于“大小(KB)”列中列出的大小。  
@@ -127,13 +127,13 @@ Configuration Manager 提供两个默认启动映像：一个用于支持 x86 �
 ##  <a name="BKMK_ModifyBootImages"></a>修改启动映像  
  你可在映像中添加或删除设备驱动程序，或编辑与启动映像关联的属性。 你可添加或删除的设备驱动程序包括网络适配器或大容量存储设备驱动程序。 在修改启动映像时，请考虑以下因素：  
 
--   在将设备驱动程序添加到启动映像之前，将这些驱动程序导入驱动程序目录并启用它们。  
+- 在将设备驱动程序添加到启动映像之前，将这些驱动程序导入驱动程序目录并启用它们。  
 
--   在修改启动映像时，启动映像不会更改启动映像所引用的任何关联的包。  
+- 在修改启动映像时，启动映像不会更改启动映像所引用的任何关联的包。  
 
--   对启动映像进行更改后，在已有该启动映像的分发点上更新它。 此过程让客户端可以使用该启动映像的最新版本。 有关详细信息，请参阅 [Manage content you have distributed](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_manage)。  
+- 对启动映像进行更改后，在已有该启动映像的分发点上更新它。 此过程让客户端可以使用该启动映像的最新版本。 有关详细信息，请参阅 [Manage content you have distributed](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_manage)。  
 
- 使用下列过程来修改启动映像。  
+  使用下列过程来修改启动映像。  
 
 #### <a name="to-modify-the-properties-of-a-boot-image"></a>修改启动映像的属性  
 
@@ -220,7 +220,7 @@ Configuration Manager 提供两个默认启动映像：一个用于支持 x86 �
 
         -   单击“验证”  以检查所选分发点或分发点组上的启动映像包的完整性。  
 
-    -   在“可选组件”选项卡上，指定要添加到 Windows PE 上以便与 Configuration Manager 一起使用的组件。 有关可用的可选组件的详细信息，请参阅 [WinPE: Add packages (Optional Components Reference)（WinPE：添加包（可选组件参考））](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference)。  
+    -   在“可选组件”选项卡上，指定要添加到 Windows PE 上以便与 Configuration Manager 一起使用的组件。 有关可用的可选组件的详细信息，请参阅 [WinPE:Add packages (Optional Components Reference)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference)（WinPE：添加包（可选组件参考））。  
 
     -   在“安全”  选项卡上，选择管理用户并更改他们可执行的操作。  
 
@@ -249,14 +249,14 @@ Configuration Manager 提供两个默认启动映像：一个用于支持 x86 �
 ##  <a name="BKMK_BootImageLanguage"></a>为启动映像部署配置多种语言  
  语言中性的启动映像。 此功能允许在 WinPE 中使用单个启动映像以多种语言显示任务序列文本。 包括启动映像“可选组件”选项卡中适用的语言支持。然后设置合适的任务序列变量以指示要显示的语种。 已部署的操作系统的语言独立于 WinPE 中的语言。 WinPE 向用户显示的语言根据下列说明来确定：  
 
--   在用户从现有的操作系统运行任务序列时，Configuration Manager 会自动使用为用户配置的语言。 在规定的部署截止时间导致任务序列自动运行时，Configuration Manager 会使用操作系统的语言。  
+- 在用户从现有的操作系统运行任务序列时，Configuration Manager 会自动使用为用户配置的语言。 在规定的部署截止时间导致任务序列自动运行时，Configuration Manager 会使用操作系统的语言。  
 
--   对于使用 PXE 或媒体的操作系统部署，请在作为预启动命令一部分的 SMSTSLanguageFolder 变量中设置语言 ID 值。 在计算机启动到 WinPE 时，会以你在此变量中指定的语言显示消息。 如果在访问指定文件夹中的语言资源文件时出错，或者未设置此变量，WinPE 则会以默认语言显示消息。  
+- 对于使用 PXE 或媒体的操作系统部署，请在作为预启动命令一部分的 SMSTSLanguageFolder 变量中设置语言 ID 值。 在计算机启动到 WinPE 时，会以你在此变量中指定的语言显示消息。 如果在访问指定文件夹中的语言资源文件时出错，或者未设置此变量，WinPE 则会以默认语言显示消息。  
 
-    > [!NOTE]  
-    >  如果使用密码来保护媒体，则会始终以 WinPE 的语言来显示用于提示用户输入密码的文本。  
+  > [!NOTE]  
+  >  如果使用密码来保护媒体，则会始终以 WinPE 的语言来显示用于提示用户输入密码的文本。  
 
- 使用下列过程为 PXE 或媒体启动的操作系统部署设置 WinPE 的语言。  
+  使用下列过程为 PXE 或媒体启动的操作系统部署设置 WinPE 的语言。  
 
 #### <a name="to-set-the-windows-pe-language-for-a-pxe-or-media-initiated-operating-system-deployment"></a>为 PXE 或媒体启动的操作系统部署设置 Windows PE 的语言  
 

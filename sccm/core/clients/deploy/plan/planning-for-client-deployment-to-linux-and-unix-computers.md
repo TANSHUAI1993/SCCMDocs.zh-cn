@@ -10,32 +10,32 @@ ms.assetid: 44153689-70e8-42ad-9ae8-17ae35f6a2e3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7251ac6bf623236492f0843b8562a06e547c9cb1
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: d9d9fd940c21e0fc8d20c86c51cb3443f21a9339
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32343678"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419442"
 ---
 # <a name="planning-for-client-deployment-to-linux-and-unix-computers-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中规划 Linux 和 UNIX 计算机的客户端部署
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：*System Center Configuration Manager (Current Branch)*
 
 可以在运行 Linux 或 UNIX 的计算机上安装 System Center Configuration Manager 客户端。 此客户端适用于作为工作组计算机运行的服务器，并且不支持与登录用户交互。 安装客户端软件后，客户端将与 Configuration Manager 站点建立通信，可以使用 Configuration Manager 控制台和报表管理客户端。  
 
-> [!NOTE]  
+> [!NOTE]
 >  Linux 和 UNIX 计算机的 Configuration Manager 客户端不支持以下管理功能：  
->   
->  -   客户端请求安装  
-> -   操作系统部署  
-> -   应用程序部署；改用包和程序来部署软件。  
-> -   软件清单  
-> -   软件更新  
-> -   符合性设置  
-> -   远程控制  
-> -   电源管理  
-> -   客户端状态客户端检查和修正  
-> -   基于 Internet 的客户端管理  
+> 
+> - 客户端请求安装  
+>   -   操作系统部署  
+>   -   应用程序部署；改用包和程序来部署软件。  
+>   -   软件清单  
+>   -   软件更新  
+>   -   符合性设置  
+>   -   远程控制  
+>   -   电源管理  
+>   -   客户端状态客户端检查和修正  
+>   -   基于 Internet 的客户端管理  
 
  有关受支持的 Linux 和 UNIX 分发版和支持适用于 Linux 和 UNIX 的客户端所需的硬件的信息，请参阅[用于 System Center Configuration Manager 的推荐硬件](../../../../core/plan-design/configs/recommended-hardware.md)。  
 
@@ -178,7 +178,7 @@ ms.locfileid: "32343678"
 |SysMgmtMin.openssl|OpenSSL 库；安全网络通信协议|A.00.09.08d.002|  
 |PAM|可插入身份验证模块|在 HP-UX 上，PAM 是核心操作系统组件的一部分。 没有其它依赖关系。|  
 
- **Configuration Manager 依赖项：** 下表列出了支持 Linux 和 UNIX 的客户端的站点系统角色。 有关这些站点系统角色的详细信息，请参阅[为 System Center Configuration Manager 客户端确定站点系统角色](../../../../core/clients/deploy/plan/determine-the-site-system-roles-for-clients.md)。  
+ **Configuration Manager 依赖关系：** 下表列出了支持 Linux 和 UNIX 的客户端的站点系统角色。 有关这些站点系统角色的详细信息，请参阅[为 System Center Configuration Manager 客户端确定站点系统角色](../../../../core/clients/deploy/plan/determine-the-site-system-roles-for-clients.md)。  
 
 |Configuration Manager 站点系统|更多信息|  
 |---------------------------------------|----------------------|  
@@ -186,7 +186,7 @@ ms.locfileid: "32343678"
 |分发点|安装适用于 Linux 和 UNIX 的 Configuration Manager 客户端不需要分发点。 但是，站点系统角色时的要求在将软件部署到 Linux 和 UNIX 服务器。<br /><br /> 因为适用于 Linux 和 UNIX 的 Configuration Manager 客户端不支持使用 SMB 的通信，与客户端一起使用的分发点必须支持 HTTP 或 HTTPS 通信。|  
 |回退状态点|安装适用于 Linux 和 UNIX 的 Configuration Manager 客户端不需要回退状态点。 然而，当 Configuration Manager 站点中的计算机不能与管理点通信时，回退状态点可使这些计算机发送状态消息。 客户端还可以向回退状态点发送其安装状态。|  
 
- **防火墙要求**:确保防火墙不会在您指定为客户端请求端口的端口中阻止通信。 适用于 Linux 和 UNIX 的客户端直接与管理点、分发点以及回退状态点进行通信。  
+ **防火墙要求**：确保防火墙不会在您指定为客户端请求端口的端口中阻止通信。 适用于 Linux 和 UNIX 的客户端直接与管理点、分发点以及回退状态点进行通信。  
 
  有关客户端通信和请求端口的详细信息，请参阅  [配置适用于 Linux 和 UNIX 的客户端以查找管理点](../../../../core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md#BKMK_ConfigClientMP)。  
 

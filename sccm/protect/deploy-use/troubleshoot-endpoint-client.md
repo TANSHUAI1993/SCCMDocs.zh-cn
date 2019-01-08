@@ -10,16 +10,16 @@ ms.assetid: d837253e-fcc2-422a-9e2c-c78b938dfd8c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2a8f0e51e5808a691251e4d9acf38d70f2874508
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: b6cbee02b0f3eaa34891019e305572f854575b86
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32351575"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420796"
 ---
 # <a name="troubleshooting-windows-defender-or-endpoint-protection-client"></a>对 Windows Defender 或 Endpoint Protection 客户端进行故障排除
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*适用于：System Center Configuration Manager (Current Branch)*
 
 
 如果你遇到有关 Windows Defender 或者 Endpoint Protection 的问题，请联系你的安全管理员以获得支持。 你也可以尝试对以下问题进行故障排除：  
@@ -37,17 +37,17 @@ ms.locfileid: "32351575"
 
  本文介绍了有关自动更新的常见问题，包括以下情况：  
 
--   你看见表示更新失败的错误消息。  
+- 你看见表示更新失败的错误消息。  
 
--   当你检查更新时，你会收到一条错误消息，指出无法检查、下载或安装病毒和间谍软件定义更新。  
+- 当你检查更新时，你会收到一条错误消息，指出无法检查、下载或安装病毒和间谍软件定义更新。  
 
--   即使已连接到 Internet，更新也会失败。  
+- 即使已连接到 Internet，更新也会失败。  
 
--   不按计划自动安装更新。  
+- 不按计划自动安装更新。  
 
- **原因**  
+  **原因**  
 
- 更新问题的最常见原因是 Internet 连接的问题。 但是，如果你知道已连接到 Internet，因为你可以浏览其他网站，那么该问题可能是由与 Windows Internet Explorer 中的设置冲突引起的。  
+  更新问题的最常见原因是 Internet 连接的问题。 但是，如果你知道已连接到 Internet，因为你可以浏览其他网站，那么该问题可能是由与 Windows Internet Explorer 中的设置冲突引起的。  
 
 > [!IMPORTANT]  
 >  你必须退出 Internet Explorer，然后完成这些步骤。 因此，将其打印出来、写下来，或复制到另一个文件，然后将该主题加入书签供日后访问。  
@@ -155,7 +155,7 @@ ms.locfileid: "32351575"
 -   单击“运行” 。 最新的更新将手动安装在你的计算机上。  
 
 
-### <a name="step-7-contact-support"></a>步骤 7：联系技术支持人员  
+### <a name="step-7-contact-support"></a>步骤 7：联系支持人员  
 
 -   如果这些步骤未能解决此问题，请与技术支持人员联系。 有关详细信息，请参阅[客户支持](http://go.microsoft.com/fwlink/?LinkID=196174) (http://go.microsoft.com/fwlink/?LinkID=196174))。  
 
@@ -170,7 +170,7 @@ ms.locfileid: "32351575"
 
 -   关闭所有应用程序并重新启动计算机。  
 
-### <a name="step-2-make-sure-the-windows-defender-or-endpoint-protection-service-is-set-to-automatic-and-is-started"></a>步骤 2：确保“Windows Defender”或“Endpoint Protection 服务”设置为自动，并且已启动  
+### <a name="step-2-make-sure-the-windows-defender-or-endpoint-protection-service-is-set-to-automatic-and-is-started"></a>步骤 2：确保“Windows Defender”或“Endpoint Protection 服务”设置为自动且已启动  
 
 1.  单击“开始”  ，搜索 **services.msc**，然后按 **Enter**。  
 
@@ -210,7 +210,7 @@ ms.locfileid: "32351575"
 ##  <a name="internet-connection-issues"></a>Internet 连接问题  
  为了确保你的计算机从 Windows 更新接收最新的更新，必须连接到 Internet。  
 
-### <a name="step-1-verify-that-your-computer-is-connected-to-the-internet"></a>步骤 1：验证你的计算机是否连接到 Internet  
+### <a name="step-1-verify-that-your-computer-is-connected-to-the-internet"></a>步骤 1：验证计算机是否连接到 Internet  
 
 1.  单击“开始” ，搜索 **ncpa.cpl**，然后按 **Enter**。  
 
@@ -220,7 +220,7 @@ ms.locfileid: "32351575"
 
 4.  如果计算机显示为未连接，则右键单击连接名称，然后单击“连接”、“启用”、“身份验证”或“修复”。  
 
-### <a name="step-3-restart-your-computer"></a>步骤 3：重新启动计算机。  
+### <a name="step-3-restart-your-computer"></a>步骤 3：重启计算机  
 
 -   关闭任何已打开的程序并重新启动计算机。  
 
@@ -254,15 +254,15 @@ ms.locfileid: "32351575"
 
  如果计算机运行的是 Windows XP Service Pack 2 (SP2)，将会看到下列一条或多条错误消息：  
 
--   安装向导缺少完成安装所需的筛选器管理器汇总包。  
+- 安装向导缺少完成安装所需的筛选器管理器汇总包。  
 
--   KB914882 安装错误，安装程序无法更新 Windows XP 文件，因为系统上安装的语言不同于更新语言。  
+- KB914882 安装错误，安装程序无法更新 Windows XP 文件，因为系统上安装的语言不同于更新语言。  
 
- **原因**  
+  **原因**  
 
- Endpoint Protection 无法安装在运行其他安全程序的计算机上。 有时，即使你删除其他安全程序，但是它们并未完全卸载。 你必须运行正版的 Windows 操作系统才能安装 Endpoint Protection。  
+  Endpoint Protection 无法安装在运行其他安全程序的计算机上。 有时，即使你删除其他安全程序，但是它们并未完全卸载。 你必须运行正版的 Windows 操作系统才能安装 Endpoint Protection。  
 
- **解决方案**  
+  **解决方案**  
 
 > [!IMPORTANT]  
 >  解决此问题时需要重新启动计算机。 可将此页面设为书签（将其标记为收藏页面）以更轻松地再次找到本主题，或者打印此页面以方便参考。  
@@ -293,7 +293,7 @@ ms.locfileid: "32351575"
 
 6.  重新安装 Endpoint Protection。 如果这样做不能解决问题，请继续执行下一步骤。  
 
-### <a name="step-3-start-windows-in-selective-startup-mode"></a>步骤 3：在“选择性启动”模式下启动 Windows  
+### <a name="step-3-start-windows-in-selective-startup-mode"></a>步骤 3：在“有选择的启动”模式下启动 Windows  
 
 1.  单击“开始”  ，搜索 **msconfig**，然后按 **Enter**。  
 

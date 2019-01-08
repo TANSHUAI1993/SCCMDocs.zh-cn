@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: 041ea28e91b77545b8984742b4199782d1edb6b7
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 8f743514af8b89212b10073c07b24990ffedcb1a
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456526"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420390"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>为 Configuration Manager 设置云管理网关
 
-*适用范围：System Center Configuration Manager (Current Branch)*  
+适用范围：System Center Configuration Manager (Current Branch)  
 
 此过程包括设置云管理网关 (CMG) 所需执行的步骤。 
 
@@ -82,37 +82,37 @@ ms.locfileid: "52456526"
 
 5. 选择“下一步”。 等待站点测试与 Azure 的连接。  
 
-4. 在向导的“设置”页上，先选择“浏览”，然后选择 CMG 服务器身份验证证书的 .PFX 文件。 来自此证书的名称将填充“服务 FQDN”和“服务名称”必填字段。  
+6. 在向导的“设置”页上，先选择“浏览”，然后选择 CMG 服务器身份验证证书的 .PFX 文件。 来自此证书的名称将填充“服务 FQDN”和“服务名称”必填字段。  
 
    > [!NOTE]  
    > 从版本 1802 开始，CMG 服务器身份验证证书支持通配符。 如果使用通配符证书，请将“服务 FQDN”字段中的星号 (\*) 替换为 CMG 所需的主机名。  
    <!--491233-->  
 
-5. 选择“区域”下拉列表，选择此 CMG 所在的 Azure 区域。  
+7. 选择“区域”下拉列表，选择此 CMG 所在的 Azure 区域。  
 
-6. 在版本 1802 中，如果使用的是 Azure 资源管理器部署，则选择一个“资源组”选项。 
+8. 在版本 1802 中，如果使用的是 Azure 资源管理器部署，则选择一个“资源组”选项。 
    1. 如果选择“使用现有项”，则从下拉列表中选择现有的资源组。
    2. 如果选择“新建”，则输入新的资源组名称。
 
-6. 在“VM 实例”字段中，输入此服务的 VM 数量。 默认值为 1，但每个 CMG 最多可扩展到 16 个 VM。  
+9. 在“VM 实例”字段中，输入此服务的 VM 数量。 默认值为 1，但每个 CMG 最多可扩展到 16 个 VM。  
 
-7. 选择“证书”以添加受信任的客户端根证书。 最多添加两个受信任的根 CA 和四个中间（从属）CA。  
+10. 选择“证书”以添加受信任的客户端根证书。 最多添加两个受信任的根 CA 和四个中间（从属）CA。  
+
+     > [!Note]  
+     > 从 1806 版开始，创建 CMG 时，不再需要在设置页上提供受信任的根证书。 使用 Azure Active Directory (Azure AD) 进行客户端身份验证时不需要此证书，但往往在向导中需要。 如果使用 PKI 客户端身份验证证书，则仍须向 CMG 添加受信任的根证书。<!--SCCMDocs-pr issue #2872-->  
+
+11. 默认情况下，向导会启用“验证客户端证书吊销”选项。 必须公开发布证书吊销列表 (CRL) 才能使此验证生效。 如果未发布 CRL，请取消选择此选项。  
+
+12. 默认情况下，从版本 1806 开始，向导会启用以下选项：允许 CMG 充当云分发点，并提供 Azure 存储中的内容。 CMG 现还可向客户提供内容。 此功能减少了所需的证书和 Azure VM 的成本。  
+
+13. 选择“下一步”。  
+
+14. 若要通过 14 天阈值监视 CMG 通信，请选中相应复选框以打开阈值警报。 然后，指定阈值，以及引发不同警报级别所依据的百分比。 完成后选择“下一步”。  
+
+15. 检查设置，然后选择“下一步”。 Configuration Manager 开始设置服务。 关闭向导后，需花 5 到 15 分钟在 Azure 中完整预配该服务。 检查新 CMG 的“状态”列，确定服务是否已准备就绪。  
 
     > [!Note]  
-    > 从 1806 版开始，创建 CMG 时，不再需要在设置页上提供受信任的根证书。 使用 Azure Active Directory (Azure AD) 进行客户端身份验证时不需要此证书，但往往在向导中需要。 如果使用 PKI 客户端身份验证证书，则仍须向 CMG 添加受信任的根证书。<!--SCCMDocs-pr issue #2872-->  
-
-8. 默认情况下，向导会启用“验证客户端证书吊销”选项。 必须公开发布证书吊销列表 (CRL) 才能使此验证生效。 如果未发布 CRL，请取消选择此选项。  
-
-9. 从版本 1806 开始，默认情况下，向导将启用以下选项：允许 CMG 充当云分发点并在 Azure 存储中提供内容。 CMG 现还可向客户提供内容。 此功能减少了所需的证书和 Azure VM 的成本。  
-
-10. 选择“下一步”。  
-
-11. 若要通过 14 天阈值监视 CMG 通信，请选中相应复选框以打开阈值警报。 然后，指定阈值，以及引发不同警报级别所依据的百分比。 完成后选择“下一步”。  
-
-12. 检查设置，然后选择“下一步”。 Configuration Manager 开始设置服务。 关闭向导后，需花 5 到 15 分钟在 Azure 中完整预配该服务。 检查新 CMG 的“状态”列，确定服务是否已准备就绪。  
-
- > [!Note]  
- > 若要排查 CMG 部署问题，请使用 **CloudMgr.log** 和 **CMGSetup.log**。 有关详细信息，请参阅[日志文件](/sccm/core/plan-design/hierarchy/log-files#cloud-management-gateway)。
+    > 若要排查 CMG 部署问题，请使用 **CloudMgr.log** 和 **CMGSetup.log**。 有关详细信息，请参阅[日志文件](/sccm/core/plan-design/hierarchy/log-files#cloud-management-gateway)。
 
 
 
@@ -202,7 +202,7 @@ Configuration Manager 客户端自动确定它是在 Intranet 上还是在 Inter
 
 - **验证客户端证书吊销**：如果最初在创建 CMG 时未启用此设置，可以在发布 CRL 后启用。  
 
-- **允许 CMG 充当云分发点并在 Azure 存储中提供内容**：从版本 1806 开始，默认情况下启用该新选项。 CMG 现还可向客户提供内容。 此功能减少了所需的证书和 Azure VM 的成本。<!--1358651-->  
+- 允许 CMG 充当云分发点，并提供 Azure 存储中的内容：从版本 1806 开始，默认启用此新选项。 CMG 现还可向客户提供内容。 此功能减少了所需的证书和 Azure VM 的成本。<!--1358651-->  
 
 #### <a name="alerts"></a>警报
 可在创建 CMG 后随时重新配置警报。 
