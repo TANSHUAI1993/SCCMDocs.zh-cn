@@ -10,16 +10,16 @@ ms.assetid: aaf13bb8-4ba2-4bd7-9fac-d36a9d88a1b6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 296ed6590c10adeab22fb274d5e6f44bc578a784
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: c28152031a540ea3fd5f2ef7233c24fb86c8b7f7
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32339955"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422022"
 ---
 # <a name="prerequisite-checker-for-system-center-configuration-manager"></a>System Center Configuration Manager 的先决条件检查程序
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
  在运行安装程序安装或升级 System Center Configuration Manager 站点之前，或在新的服务器上安装站点系统角色之前，可从想要用于验证服务器是否已准备就绪的 Configuration Manager 版本，使用此独立应用程序 (**Prereqchk.exe**)。 使用先决条件检查程序识别并修复会阻止安装站点或站点系统角色的问题。  
 
@@ -77,119 +77,119 @@ ms.locfileid: "32339955"
 
 ## <a name="run-prerequisite-checker-from-a-command-prompt-to-use-options"></a>从命令提示符运行先决条件检查程序以使用各选项  
 
-1.  打开命令提示符窗口并将目录更改为以下位置之一：  
+1. 打开命令提示符窗口并将目录更改为以下位置之一：  
 
-    -   **&lt;Configuration Manager 安装介质\>\SMSSETUP\BIN\X64**  
-    -   **&lt;Configuration Manager 安装路径\>\BIN\X64**  
+   -   **&lt;Configuration Manager 安装介质\>\SMSSETUP\BIN\X64**  
+   -   **&lt;Configuration Manager 安装路径\>\BIN\X64**  
 
-2.  输入 **prereqchk.exe**，并在后面添加以下一个或多个命令行选项。  
+2. 输入 **prereqchk.exe**，并在后面添加以下一个或多个命令行选项。  
 
-    例如，可使用以下方法检查主站点：  
+   例如，可使用以下方法检查主站点：  
 
-       **prereqchk.exe [/NOUI] /PRI /SQL &lt;FQDN of SQL Server\> /SDK &lt;FQDN of SMS Provider\> [/JOIN &lt;FQDN of central administration site\>] [/MP &lt;FQDN of management point\>] [/DP &lt;FQDN of distribution point\>]**  
+      **prereqchk.exe [/NOUI] /PRI /SQL &lt;FQDN of SQL Server\> /SDK &lt;FQDN of SMS Provider\> [/JOIN &lt;FQDN of central administration site\>] [/MP &lt;FQDN of management point\>] [/DP &lt;FQDN of distribution point\>]**  
 
-    **管理中心站点服务器：**  
+   **管理中心站点服务器：**  
 
-    -   **/NOUI**  
-
-         不需要。 启动先决条件检查程序而不显示用户界面。 你必须在命令行中的任何其他选项之前指定此选项。  
-
-    -   **/CAS**  
-
-         必需。 验证本地计算机是否满足管理中心站点的要求。  
-
-    -   **/SQL &lt;SQL Server 的 FQDN>**  
-
-         必需。 使用完全限定的域名 (FQDN)，验证指定计算机是否满足用于托管 Configuration Manager 站点数据库的 SQL Server 的要求。  
-
-    -   **/SDK &lt;SMS 提供程序的 FQDN>**  
-
-         必需。 验证指定计算机是否满足 SMS 提供程序的要求。  
-
-    -   **/Ssbport**  
-
-         不需要。 验证防火墙例外是否生效以允许 SQL Server Service Broker (SSB) 端口上的通信。 默认 SSB 端口为 4022。  
-
-    -   **InstallDir &lt;Configuration Manager 安装路径>**  
-
-         不需要。 验证站点安装的最小磁盘空间要求。  
-
-    **主站点服务器：**  
-
-    -   **/NOUI**  
+   -   **/NOUI**  
 
         不需要。 启动先决条件检查程序而不显示用户界面。 你必须在命令行中的任何其他选项之前指定此选项。  
 
-    -   **/PRI**  
+   -   **/CAS**  
 
-         必需。 验证本地计算机是否满足主站点的要求。  
+        必需。 验证本地计算机是否满足管理中心站点的要求。  
 
-    -   **/SQL &lt;SQL Server 的 FQDN>**  
+   -   **/SQL &lt;SQL Server 的 FQDN>**  
 
-         必需。 验证指定计算机是否满足用于托管 Configuration Manager 站点数据库的 SQL Server 的要求。  
+        必需。 使用完全限定的域名 (FQDN)，验证指定计算机是否满足用于托管 Configuration Manager 站点数据库的 SQL Server 的要求。  
 
-    -   **/SDK &lt;SMS 提供程序的 FQDN>**  
+   -   **/SDK &lt;SMS 提供程序的 FQDN>**  
 
-         必需。 验证指定计算机是否满足 SMS 提供程序的要求。  
+        必需。 验证指定计算机是否满足 SMS 提供程序的要求。  
 
-    -   **/JOIN &lt;管理中心站点的 FQDN>**  
+   -   **/Ssbport**  
 
-         不需要。 验证本地计算机是否满足用于连接到管理中心站点服务器的要求。  
+        不需要。 验证防火墙例外是否生效以允许 SQL Server Service Broker (SSB) 端口上的通信。 默认 SSB 端口为 4022。  
 
-    -   **/MP &lt;管理点的 FQDN>**  
+   -   **InstallDir &lt;Configuration Manager 安装路径>**  
 
-         不需要。 验证指定计算机是否满足管理点站点系统角色的要求。 只有当你使用 **/PRI** 选项时，才支持此选项。  
+        不需要。 验证站点安装的最小磁盘空间要求。  
 
-    -   **/DP &lt;分发点的 FQDN>**  
+   **主站点服务器：**  
 
-         不需要。 验证指定计算机是否满足分发点站点系统角色的要求。 只有当你使用 **/PRI** 选项时，才支持此选项。  
+   -   **/NOUI**  
 
-    -   **/Ssbport**  
+       不需要。 启动先决条件检查程序而不显示用户界面。 你必须在命令行中的任何其他选项之前指定此选项。  
 
-         不需要。 验证防火墙例外是否生效以允许 SSB 端口上的通信。 默认 SSB 端口为 4022。  
+   -   **/PRI**  
 
-    -   **InstallDir &lt;Configuration Manager 安装路径>**  
+        必需。 验证本地计算机是否满足主站点的要求。  
 
-         不需要。 验证站点安装的最小磁盘空间要求。  
+   -   **/SQL &lt;SQL Server 的 FQDN>**  
 
-    **辅助站点服务器：**  
+        必需。 验证指定计算机是否满足用于托管 Configuration Manager 站点数据库的 SQL Server 的要求。  
 
-    -   **/NOUI**  
+   -   **/SDK &lt;SMS 提供程序的 FQDN>**  
 
-         不需要。 启动先决条件检查程序而不显示用户界面。 你必须在命令行中的任何其他选项之前指定此选项。  
+        必需。 验证指定计算机是否满足 SMS 提供程序的要求。  
 
-    -   **&lt;/SEC 辅助站点服务器的 FQDN>**  
+   -   **/JOIN &lt;管理中心站点的 FQDN>**  
 
-         必需。 验证指定计算机是否满足辅助站点的要求。  
+        不需要。 验证本地计算机是否满足用于连接到管理中心站点服务器的要求。  
 
-    -   **/INSTALLSQLEXPRESS**  
+   -   **/MP &lt;管理点的 FQDN>**  
 
-         不需要。 验证是否可在指定计算机上安装 SQL Server Express。  
+        不需要。 验证指定计算机是否满足管理点站点系统角色的要求。 只有当你使用 **/PRI** 选项时，才支持此选项。  
 
-    -   **/Ssbport**  
+   -   **/DP &lt;分发点的 FQDN>**  
 
-         不需要。 验证防火墙例外是否生效以允许 SSB 端口的通信。 默认 SSB 端口为 4022。  
+        不需要。 验证指定计算机是否满足分发点站点系统角色的要求。 只有当你使用 **/PRI** 选项时，才支持此选项。  
 
-    -   **/Sqlport**  
+   -   **/Ssbport**  
 
-         不需要。 验证防火墙例外是否生效以允许 SQL Server 服务端口的通信，并且该端口未由 SQL Server 的另一个命名实例使用。 默认端口为 1433。  
+        不需要。 验证防火墙例外是否生效以允许 SSB 端口上的通信。 默认 SSB 端口为 4022。  
 
-    -   **InstallDir &lt;Configuration Manager 安装路径>**  
+   -   **InstallDir &lt;Configuration Manager 安装路径>**  
 
-         不需要。 验证站点安装的最小磁盘空间要求。  
+        不需要。 验证站点安装的最小磁盘空间要求。  
 
-    -   **/SourceDir**  
+   **辅助站点服务器：**  
 
-         不需要。 验证辅助站点的计算机帐户是否可访问承载安装程序源文件的文件夹。  
+   -   **/NOUI**  
+
+        不需要。 启动先决条件检查程序而不显示用户界面。 你必须在命令行中的任何其他选项之前指定此选项。  
+
+   -   **&lt;/SEC 辅助站点服务器的 FQDN>**  
+
+        必需。 验证指定计算机是否满足辅助站点的要求。  
+
+   -   **/INSTALLSQLEXPRESS**  
+
+        不需要。 验证是否可在指定计算机上安装 SQL Server Express。  
+
+   -   **/Ssbport**  
+
+        不需要。 验证防火墙例外是否生效以允许 SSB 端口的通信。 默认 SSB 端口为 4022。  
+
+   -   **/Sqlport**  
+
+        不需要。 验证防火墙例外是否生效以允许 SQL Server 服务端口的通信，并且该端口未由 SQL Server 的另一个命名实例使用。 默认端口为 1433。  
+
+   -   **InstallDir &lt;Configuration Manager 安装路径>**  
+
+        不需要。 验证站点安装的最小磁盘空间要求。  
+
+   -   **/SourceDir**  
+
+        不需要。 验证辅助站点的计算机帐户是否可访问承载安装程序源文件的文件夹。  
 
    **Configuration Manager 控制台：**  
 
-    -   **/Adminui**  
+   -   **/Adminui**  
 
-         必需。 验证本地计算机是否满足 Configuration Manager 的安装要求。  
+        必需。 验证本地计算机是否满足 Configuration Manager 的安装要求。  
 
-3.  在先决条件检查程序用户界面中，先决条件检查程序将在“先决条件结果”部分中创建一个已发现问题的列表。  
+3. 在先决条件检查程序用户界面中，先决条件检查程序将在“先决条件结果”部分中创建一个已发现问题的列表。  
 
-    -   单击列表中的项目以了解有关如何解决问题的详细信息。  
-    -   在安装站点服务器、站点系统或 Configuration Manager 控制台之前，必须解决列表中状态为“错误”的所有项目。  
-    -   也可打开系统驱动器根目录中的 **ConfigMgrPrereq.log** 文件，查看先决条件检查程序结果。 该日志文件可能包含先决条件检查程序用户界面中未显示的其他信息。  
+   -   单击列表中的项目以了解有关如何解决问题的详细信息。  
+   -   在安装站点服务器、站点系统或 Configuration Manager 控制台之前，必须解决列表中状态为“错误”的所有项目。  
+   -   也可打开系统驱动器根目录中的 **ConfigMgrPrereq.log** 文件，查看先决条件检查程序结果。 该日志文件可能包含先决条件检查程序用户界面中未显示的其他信息。  

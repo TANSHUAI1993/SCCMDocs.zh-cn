@@ -10,16 +10,16 @@ ms.assetid: 7d2bb377-1005-4a55-bd1f-b80a6d0b22e1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 239cb81c975c51a98733a6f325d46c3da676784c
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: ae91988f895f916b3c22b636a5c7b51f51e1a811
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334491"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420985"
 ---
 # <a name="how-to-upgrade-clients-for-linux-and-unix-servers-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中升级 Linux 和 UNIX 服务器的客户端
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 可以将计算机上的适用于 Linux 和 UNIX 的客户端版本升级到较新的客户端版本，而不用先卸载当前的客户端。 若要实现此操作，请使用 **-keepdb** 命令行属性在计算机上安装新的客户端安装包。 安装适用于 Linux 和 UNIX 的客户端时，它将用新的客户端文件覆盖现有的客户端数据。 但是，**-keepdb** 命令行属性会指示安装过程保留客户端唯一标识符 (GUID)、本地信息数据库和证书存储。 然后，新的客户端安装将使用这些信息。  
 
@@ -38,27 +38,27 @@ ms.locfileid: "32334491"
 
 #### <a name="to-use-a-software-deployment-to-upgrade-the-client-on-linux-and-unix-servers"></a>若要使用软件部署来升级 Linux 和 UNIX 服务器上的客户端  
 
-1.  将新的客户端安装包复制到运行待升级的 Configuration Manager 客户端的计算机上。  
+1. 将新的客户端安装包复制到运行待升级的 Configuration Manager 客户端的计算机上。  
 
-     例如，将客户端安装包和累积更新 1 的安装脚本放在客户端计算机上的以下位置：**/tmp/PATCH**  
+    例如，将客户端安装包和累积更新 1 的安装脚本放在客户端计算机上的以下位置：**/tmp/PATCH**  
 
-2.  创建一个脚本来管理 Configuration Manager 客户端升级。 然后将脚本的副本放在客户端计算机上与步骤 1 中的客户端安装文件相同的文件夹中。  
+2. 创建一个脚本来管理 Configuration Manager 客户端升级。 然后将脚本的副本放在客户端计算机上与步骤 1 中的客户端安装文件相同的文件夹中。  
 
-     该脚本不需要特定的名称。 它包含的命令行必须能够使用客户端计算机上本地文件夹中的客户端安装文件，并能够通过使用 **-keepdb** 命令行属性来安装客户端安装包。 使用 **-keepdb** 命令行属性来维护当前客户端的唯一标识符，以供正在安装的新客户端使用。  
+    该脚本不需要特定的名称。 它包含的命令行必须能够使用客户端计算机上本地文件夹中的客户端安装文件，并能够通过使用 **-keepdb** 命令行属性来安装客户端安装包。 使用 **-keepdb** 命令行属性来维护当前客户端的唯一标识符，以供正在安装的新客户端使用。  
 
-     例如，创建一个名为 **upgrade.sh** 的脚本，该脚本包含以下几行：  
+    例如，创建一个名为 **upgrade.sh** 的脚本，该脚本包含以下几行：  
 
-    ```  
-    #!/bin/sh  
-    #  
-    /tmp/PATCH/install -sitecode <code> -mp <hostname> -keepdb /tmp/PATCH/ccm-Universal-x64.<build>.tar  
+   ```  
+   #!/bin/sh  
+   #  
+   /tmp/PATCH/install -sitecode <code> -mp <hostname> -keepdb /tmp/PATCH/ccm-Universal-x64.<build>.tar  
 
-    ```  
+   ```  
 
-     然后将其复制到客户端计算机上的 **/tmp/PATCH** 文件夹中。
+    然后将其复制到客户端计算机上的 **/tmp/PATCH** 文件夹中。
 
-3.  使用软件部署让每个客户端都使用计算机内置的 **at** 命令来运行 **upgrade.sh** 脚本，且运行脚本前具有短暂延迟。  
+3. 使用软件部署让每个客户端都使用计算机内置的 **at** 命令来运行 **upgrade.sh** 脚本，且运行脚本前具有短暂延迟。  
 
-     例如，使用以下命令行来运行脚本：**at -f /tmp/upgrade.sh -m now + 5 minutes**  
+    例如，使用以下命令行来运行脚本：**at -f /tmp/upgrade.sh -m now + 5 minutes**  
 
- 客户端成功计划要运行的 **upgrade.sh** 脚本后，客户端将提交一条状态消息，指示软件部署已成功完成。 但是在延迟后，实际客户端安装随后由计算机进行管理。 客户端升级完成后，通过检查客户端计算机上的 **/var/opt/microsoft/scxcm.log** 文件来验证安装。 通过在 Configuration Manager 控制台中“资产和符合性”工作区的“设备”节点中查看客户端的详细信息，确认客户端是否已安装并与站点通信。  
+   客户端成功计划要运行的 **upgrade.sh** 脚本后，客户端将提交一条状态消息，指示软件部署已成功完成。 但是在延迟后，实际客户端安装随后由计算机进行管理。 客户端升级完成后，通过检查客户端计算机上的 **/var/opt/microsoft/scxcm.log** 文件来验证安装。 通过在 Configuration Manager 控制台中“资产和符合性”工作区的“设备”节点中查看客户端的详细信息，确认客户端是否已安装并与站点通信。  

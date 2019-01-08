@@ -10,16 +10,16 @@ ms.assetid: ccce7cb5-e18f-4337-8adf-2018edca3c00
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d9ef1ca2dd2763cf5b96fd82031a2ef38ef64927
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 3871d0ccf7bbb368e86b9d4f10a87fd25739d360
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334685"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417585"
 ---
 # <a name="configure-source-hierarchies-and-source-sites-for-migration-to-system-center-configuration-manager"></a>配置源层次结构和源站点以迁移到 System Center Configuration Manager
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 为了能够将数据迁移到 System Center Configuration Manager 环境，必须配置支持的 Configuration Manager 源层次结构，以及该层次结构中一个或多个包含要迁移的数据的源站点。  
 
@@ -41,27 +41,27 @@ ms.locfileid: "32334685"
 
 ### <a name="to-configure-a-source-hierarchy"></a>配置源层次结构   
 
-1.  在 Configuration Manager 控制台中，单击“管理”。  
+1. 在 Configuration Manager 控制台中，单击“管理”。  
 
-2.  在“管理”  工作区中，展开“迁移” ，然后单击“源层次结构” 。  
+2. 在“管理”  工作区中，展开“迁移” ，然后单击“源层次结构” 。  
 
-3.  在“主页”  选项卡上的“迁移”  组中，单击“指定源层次结构” 。  
+3. 在“主页”  选项卡上的“迁移”  组中，单击“指定源层次结构” 。  
 
-4.  在“指定源层次结构”  对话框中，为“源层次结构” 选择“新源层次结构” 。  
+4. 在“指定源层次结构”  对话框中，为“源层次结构” 选择“新源层次结构” 。  
 
-5.  对于“顶层 Configuration Manager 站点服务器”，输入受支持的源层次结构的顶层站点的名称或 IP 地址。  
+5. 对于“顶层 Configuration Manager 站点服务器”，输入受支持的源层次结构的顶层站点的名称或 IP 地址。  
 
-6.  指定具有下列权限的源站点访问帐户：  
+6. 指定具有下列权限的源站点访问帐户：  
 
-    -   源站点帐户：对源层次结构中指定顶层站点的 SMS 提供程序的“读取”  权限。 必须拥有对源层次结构中网站的**修改**和**删除**权限，才能执行分发点共享和升级操作。
+   - 源站点帐户：对源层次结构中指定顶层站点的 SMS 提供程序的“读取”权限。 必须拥有对源层次结构中网站的**修改**和**删除**权限，才能执行分发点共享和升级操作。
 
-    -   源站点数据库帐户：对源层次结构中指定顶层站点的 SQL Server 数据库的“读取”  和“执行”  权限。  
+   - 源站点数据库帐户：对源层次结构中指定顶层站点的 SQL Server 数据库的“读取”和“执行”权限。  
 
      如果指定使用计算机帐户，Configuration Manager 将使用目标层次结构的顶层站点的计算机帐户。 对于此选项，请确保此帐户是源层次结构的顶层站点所在域中“分布式 COM 用户”安全组的成员。  
 
-7.  要在源层次结构和目标层次结构之间共享分发点，请选中“为源站点服务器启用分发点共享”  复选框。 如果此时不启用分发点共享，则可在数据收集完成后通过编辑源站点的凭据来启用分发点共享。  
+7. 要在源层次结构和目标层次结构之间共享分发点，请选中“为源站点服务器启用分发点共享”  复选框。 如果此时不启用分发点共享，则可在数据收集完成后通过编辑源站点的凭据来启用分发点共享。  
 
-8.  单击“确定”  保存配置。 这将打开“数据收集状态”  对话框，并且数据收集将自动开始。  
+8. 单击“确定”  保存配置。 这将打开“数据收集状态”  对话框，并且数据收集将自动开始。  
 
 9. 数据收集完成后，单击“关闭”  以关闭“数据收集状态”  对话框并完成配置。  
 
@@ -88,9 +88,9 @@ ms.locfileid: "32334685"
 
 5.  在“源站点凭据”  对话框中，为源站点访问帐户指定具有以下权限的帐户：  
 
-    -   源站点帐户：对源层次结构中指定顶层站点的 SMS 提供程序的“读取”  权限。 必须拥有对源层次结构中网站的**修改**和**删除**权限，才能执行分发点共享和升级操作。  
+    -   源站点帐户：对源层次结构中指定顶层站点的 SMS 提供程序的“读取”权限。 必须拥有对源层次结构中网站的**修改**和**删除**权限，才能执行分发点共享和升级操作。  
 
-    -   源站点数据库帐户：对源层次结构中指定顶层站点的 SQL Server 数据库的“读取”  和“执行”  权限。  
+    -   源站点数据库帐户：对源层次结构中指定顶层站点的 SQL Server 数据库的“读取”和“执行”权限。  
 
     如果指定使用计算机帐户，Configuration Manager 将使用目标层次结构的顶层站点的计算机帐户。 对于此选项，请确保此帐户是源层次结构的顶层站点所在域中“分布式 COM 用户”安全组的成员。  
 

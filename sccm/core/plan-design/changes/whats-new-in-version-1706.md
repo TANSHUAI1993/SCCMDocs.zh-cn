@@ -10,16 +10,16 @@ ms.assetid: ac034143-003e-4629-aac2-99eaffef4db1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7519971f05813edbf601c598b9281bcfdf19c83b
-ms.sourcegitcommit: fe279229a90fdc8cddbb13c7ffdbbb22af0e25ef
+ms.openlocfilehash: a9fe9c0b2f779558161e7995a01863e6415838ee
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47229324"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53423076"
 ---
 # <a name="what39s-new-in-version-1706-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1706 的新增功能
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 System Center Configuration Manager Current Branch 的更新 1706 作为控制台内更新提供，用于运行版本 1606、1610 或 1702 的以前安装的站点。
 
@@ -130,30 +130,30 @@ Version 1706 drops support for the following products:
 
 ### <a name="new-device-compliance-policy-rules"></a>新设备符合性策略规则
 
-* **所需的密码类型**。 指定用户是否必须创建字母数字密码或数字密码。 对于字母数字密码，你还可以指定密码必须包含的字符集的最小个数。 有以下四个字符集：小写字母、大写字母、符号和数字。
+* **所需的密码类型**。 指定用户是否必须创建字母数字密码或数字密码。 对于字母数字密码，你还可以指定密码必须包含的字符集的最小个数。 四个字符集为：小写字母、大写字母、符号和数字。
 
- **在以下设备上受支持：**
- * Windows Phone 8+
- * Windows 8.1+
- * iOS 6+
-<br></br>
+  **在以下设备上受支持：**
+  * Windows Phone 8+
+  * Windows 8.1+
+  * iOS 6+
+  <br></br>
 * **在设备上阻止进行 USB 调试**。 无需配置此设置，因为已在 Android for Work 的设备上禁用 USB 调试。
 
- **在以下设备上受支持：**
- * Android 4.0+
- * Samsung KNOX 标准版 4.0+
-<br></br>
+  **在以下设备上受支持：**
+  * Android 4.0+
+  * Samsung KNOX 标准版 4.0+
+  <br></br>
 * **阻止来自未知源的应用**。 要求设备阻止安装来自未知源的应用。 无需配置此设置，因为 Android for Work 设备始终限制来自未知源的安装。
 
   **在以下设备上受支持：**
   * Android 4.0+
   * Samsung KNOX 标准版 4.0+
-<br></br>
+  <br></br>
 * **要求对应用进行威胁扫描**。 此设置指定在设备上启用的“验证”应用功能。
 
- **在以下设备上受支持：**
- * Android 4.2 到 4.4
- * Samsung KNOX 标准版 4.0+
+  **在以下设备上受支持：**
+  * Android 4.2 到 4.4
+  * Samsung KNOX 标准版 4.0+
 
 请参阅[创建和部署设备符合性策略](https://docs.microsoft.com/sccm/mdm/deploy-use/create-compliance-policy)，尝试新的设备符合性规则
 
@@ -175,7 +175,7 @@ Version 1706 drops support for the following products:
 ### <a name="new-mobile-application-management-policy-settings"></a>新移动应用程序管理策略设置    
 <!--1324760--> 从此版本开始，可以使用三个新的移动应用程序管理 (MAM) 策略设置：
 
-- 阻止屏幕捕获(仅限 Android 设备)：指定在使用该应用时，阻止设备的屏幕捕获功能。
+- **阻止屏幕捕捉(仅限于 Android 设备)：** 指定在使用该应用时，阻止设备的屏幕捕捉功能。
 
 请参阅[使用 Configuration Manager 中的应用保护策略来保护应用](https://docs.microsoft.com/sccm/mdm/deploy-use/protect-apps-using-mam-policies)，尝试新的应用保护策略设置。
 

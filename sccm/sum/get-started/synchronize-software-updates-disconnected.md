@@ -10,16 +10,16 @@ ms.technology: configmgr-sum
 ms.assetid: 1a997c30-8e71-4be5-89ee-41efb2c8d199
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: da6204a78ce45c72d2b8d5586d02c8692405f295
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: d3155faaa0ccad4e4f98ee72d09f67b1676dc2f4
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350419"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421852"
 ---
 # <a name="synchronize-software-updates-from-a-disconnected-software-update-point"></a>从断开连接的软件更新点中同步软件更新  
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
  如果顶层站点上的软件更新点从 Internet 断开连接，你必须使用 WSUSUtil 工具的导出和导入功能来同步软件更新元数据。 可以选择不属于 Configuration Manager 层次结构的现有 WSUS 服务器作为同步源。 本主题提供有关如何使用 WSUSUtil 工具的导出和导入功能的信息。  
 
@@ -52,11 +52,11 @@ ms.locfileid: "32350419"
 
 #### <a name="to-copy-local-files-from-the-export-server-to-the-disconnected-software-update-point-server"></a>将本地文件从导出服务器复制到断开连接的软件更新点服务器  
 
-1.  在导出服务器上，导航到存储软件更新和软件更新许可条款的文件夹。 默认情况下，WSUS 服务器将文件存储在 <*WSUSInstallationDrive*>\WSUS\WSUSContent\\ 下，其中 *WSUSInstallationDrive* 是安装了 WSUS 的驱动器。  
+1. 在导出服务器上，导航到存储软件更新和软件更新许可条款的文件夹。 默认情况下，WSUS 服务器将文件存储在 <*WSUSInstallationDrive*>\WSUS\WSUSContent\\ 下，其中 *WSUSInstallationDrive* 是安装了 WSUS 的驱动器。  
 
-2.  将所有文件和文件夹从此位置复制到断开连接的软件更新点服务器上的 WSUSContent 文件夹。  
+2. 将所有文件和文件夹从此位置复制到断开连接的软件更新点服务器上的 WSUSContent 文件夹。  
 
- 使用下列过程从导出服务器上的 WSUS 数据库中导出软件更新元数据。  
+   使用下列过程从导出服务器上的 WSUS 数据库中导出软件更新元数据。  
 
 #### <a name="to-export-software-updates-metadata-from-the-wsus-database-on-the-export-server"></a>从导出服务器上的 WSUS 数据库中导出软件更新元数据  
 
@@ -70,7 +70,7 @@ ms.locfileid: "32350419"
 
      **wsusutil.exe export export.cab export.log**  
 
-     此格式可以汇总为如下：WSUSutil.exe 后跟导出选项、在导出操作过程中创建的导出 .cab 文件的名称，以及日志文件的名称。 WSUSutil.exe 从导出服务器中导出元数据，并创建操作的日志文件。  
+     格式可总结如下：WSUSutil.exe 后跟导出选项、在导出操作过程中创建的导出 .cab 文件的名称，以及日志文件的名称。 WSUSutil.exe 从导出服务器中导出元数据，并创建操作的日志文件。  
 
     > [!NOTE]  
     >  包（.cab 文件）和日志文件名称在当前文件夹中必须唯一。  
@@ -98,7 +98,7 @@ ms.locfileid: "32350419"
 
      **wsusutil.exe import export.cab import.log**  
 
-     此格式可以汇总为如下：WSUSutil.exe 后跟导入命令、在导出操作过程中创建的包文件 (.cab) 的名称、包文件的路径（如果该文件位于其他文件夹中），以及日志文件的名称。 WSUSutil.exe 从导出服务器中导入元数据，并创建操作的日志文件。  
+     格式可总结如下：WSUSutil.exe 后跟导入命令、在导出操作过程中创建的包文件 (.cab) 的名称、包文件的路径（如果该文件位于其他文件夹中），以及日志文件的名称。 WSUSutil.exe 从导出服务器中导入元数据，并创建操作的日志文件。  
 
 ## <a name="next-steps"></a>后续步骤
 在首次同步软件更新后，或有新的可用分类或产品时，必须[配置新的分类和产品](configure-classifications-and-products.md)以便通过新条件同步软件更新。

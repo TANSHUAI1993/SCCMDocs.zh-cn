@@ -10,16 +10,16 @@ ms.assetid: 25fa89d6-7e47-45a6-8f4e-70b77560fba6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e6ae6ed46cc1db5f545182e4b4f6b46374b5c174
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: de5c98e45c6f5d6dca1569de812825cce80d6f70
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344082"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417330"
 ---
 # <a name="update-reset-tool"></a>更新重置工具
 
-*适用范围：System Center Configuration Manager (Current Branch)*  
+适用范围：System Center Configuration Manager (Current Branch)  
 
 
 从版本 1706 开始，Configuration Manager 主站点和管理中心站点包含 Configuration Manager 更新重置工具，即 CMUpdateReset.exe。 控制台中更新存在下载或复制问题时，使用此工具修复问题。 可在站点服务器的 \cd.latest\SMSSETUP\TOOLS 文件夹中找到此工具。
@@ -62,13 +62,15 @@ ms.locfileid: "32344082"
 
 **命令行参数：**  
 
-| 参数        |说明                 |  
-|------------------|----------------------------|  
-|**-S &lt;顶层站点的 SQL Server 的 FQDN>** | *必需* <br> 指定为层次结构的顶层站点托管站点数据库的 SQL Server 的 FQDN。    |  
-| **-D &lt;数据库名称>**                        | *必需* <br> 指定顶层站点的数据库的名称。  |  
-| **-P &lt;包 GUID>**                         | *必需* <br> 指定想要重置的更新包的 GUID。   |  
-| **-I &lt;SQL Server 实例名称>**             | *可选* <br> 确定托管站点数据库的 SQL Server 的实例。 |
-| **-FDELETE**                              | *可选* <br> 强制删除已成功下载的更新包。 |  
+
+|                        参数                         |                                                       说明                                                        |
+|----------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
+| **-S &lt;顶层站点的 SQL Server 的 FQDN>** | *必需* <br> 指定为层次结构的顶层站点托管站点数据库的 SQL Server 的 FQDN。 |
+|                **-D &lt;数据库名称>**                 |                          *必需* <br> 指定顶层站点的数据库的名称。                          |
+|                 **-P &lt;包 GUID>**                 |                        *必需* <br> 指定想要重置的更新包的 GUID。                        |
+|           **-I &lt;SQL Server 实例名称>**           |                    *可选* <br> 确定托管站点数据库的 SQL Server 的实例。                     |
+|                       **-FDELETE**                       |                       *可选* <br> 强制删除已成功下载的更新包。                        |
+
  **示例：**  
  在一个典型方案中，你想要重置具有下载问题的更新。 SQL Server FQDN 是 server1.fabrikam.com，站点数据库是 CM_XYZ，包 GUID 是 61F16B3C-F1F6-4F9F-8647-2A524B0C802C。  可以运行：CMUpdateReset.exe -S server1.fabrikam.com -D CM_XYZ -P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C
 

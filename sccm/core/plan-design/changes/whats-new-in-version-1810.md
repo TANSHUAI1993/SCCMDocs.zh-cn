@@ -2,7 +2,7 @@
 title: 1810 版中的新增功能
 titleSuffix: Configuration Manager
 description: 获取有关 Configuration Manager Current Branch 1810 版中引入的更改和新功能的详细信息。
-ms.date: 11/27/2018
+ms.date: 12/20/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,16 +10,16 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 80c4798a93d2424759b85b7d8fe106b9251714a4
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: f93b9c7e96c66fd2279d8d6e42f605a763c75025
+ms.sourcegitcommit: 81e3666c41eb976cc7651854042dafe219e2e467
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52458035"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53747137"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 1810 版中的新增功能
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 Configuration Manager Current Branch 的 1810 更新作为控制台中更新提供。 将此更新应用于运行 1710、1802 或 1806 版的站点。 <!-- baseline only statement: When installing a new site, it's also available as a baseline version.-->
 
@@ -28,9 +28,9 @@ Configuration Manager Current Branch 的 1810 更新作为控制台中更新提�
 > [!Note]  
 > 本文目前列出了此版本中的所有重要功能。 但是，并非所有部分都链接到更新的内容并提供有关新功能的进一步信息。 定期查看此页面以获取更新。 我们使用 [已更新] 标记标注更改。 内容最终确定后，将删除此标注。  
 
-<!--
-Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 1810](https://support.microsoft.com/help/4459701).
+除了新增功能外，这一版还有其他变化（如缺陷修复）。 有关详细信息，请参阅 [Configuration Manager Current Branch（版本 1810）的更改摘要](https://support.microsoft.com/help/4482169)。
 
+<!--
 For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell 1810 Release Notes](https://docs.microsoft.com/powershell/sccm/1810_release_notes?view=sccm-ps).
 
 The following additional updates to this release are also now available:
@@ -77,13 +77,13 @@ Version 1810 drops support for the following products:
 
 安装或更新到版本 1810 时，Configuration Manager 安装程序现在包括或改进了以下先决条件检查：
 
-- **正在等待系统重启**：此先决条件检查现在更具弹性。 它会检查 Windows 功能的其他注册表项。 有关详细信息，请参阅[正在等待系统重启](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#pending-system-restart)。 <!--SCCMDocs-pr issue 3010-->  
+- **正在等待系统重启**：此先决条件检查现可复原。 它会检查 Windows 功能的其他注册表项。 有关详细信息，请参阅[正在等待系统重启](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#pending-system-restart)。 <!--SCCMDocs-pr issue 3010-->  
 
 - **SQL 更改跟踪清除**：一项新检查，检查站点数据库是否有 SQL 更改跟踪数据的积压工作 (backlog)。 有关详细信息（包括验证和清除此积压工作的过程），请参阅 [SQL 更改跟踪清除](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#bkmk_changetracking)。 <!--SCCMDocs-pr issue 3023-->  
 
-<!-- - **SQL Native Client version**: This prerequisite check is updated for versions of SQL Native Client that support TLS 1.2. The minimum version is 11.4.7001.0. For more information, see [SQL Native Client version](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-native-client). <!--SCCMDocs-pr issue 3094->  
- -->
-- **Windows 群集节点上的站点系统**：Configuration Manager 安装过程不再阻止在具有故障转移群集的 Windows 角色的计算机上安装站点服务器角色。 SQL Always On 需要此角色，因此，以前你无法在站点服务器上共置站点数据库。 进行此更改后，你可以通过在被动模式下使用 SQL Always On 和站点服务器创建具有更少服务器的高可用站点。 有关详细信息，请参阅 [Windows 故障转移群集](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#windows-failover-cluster)。 <!--1359132-->  
+- **SQL Native Client 版本**：对于支持 TLS 1.2 的 SQL Native Client 版本，将更新此先决条件检查。 最低版本是 [SQL 2012 SP4](https://www.microsoft.com/download/details.aspx?id=50402)。 有关详细信息，请参阅 [SQL Native Client 版本](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-native-client)。 <!--SCCMDocs-pr issue 3094->  
+
+- **Windows 群集节点上的站点系统**：Configuration Manager 设置进程不再阻止在具有适用于故障转移群集的 Windows 角色的计算机上安装站点服务器角色。 SQL Always On 需要此角色，因此，以前你无法在站点服务器上共置站点数据库。 进行此更改后，你可以通过在被动模式下使用 SQL Always On 和站点服务器创建具有更少服务器的高可用站点。 有关详细信息，请参阅 [Windows 故障转移群集](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#windows-failover-cluster)。 <!--1359132-->  
 
 
 
@@ -104,9 +104,9 @@ Version 1810 drops support for the following products:
 ### <a name="new-boundary-group-options"></a>新的边界组选项
 <!--1358749--> 边界组现在包含以下附加设置，可让你更好地控制环境中的内容分发：
 
-- 优先考虑分发点而不是具有同一子网的对等方：默认情况下，管理点会优先考虑内容位置列表顶部的对等缓存源。 此设置会反转与对等缓存源位于同一子网的客户端的优先级。  
+- **优先选择分发点而非具有相同子网的对等**：默认情况下，管理点会优先考虑内容位置列表顶部的对等缓存源。 此设置会反转与对等缓存源位于同一子网的客户端的优先级。  
 
-- 优先考虑云分发点而不是分发点：如果你的分支机构具有更快的 Internet 链接，你现在可以优先考虑云内容。  
+- **优先选择云分发点而非一般分发点**：如果你的分支机构具有更快的 Internet 链接，你现在可以优先考虑云内容。  
 
 有关详细信息，请参阅[对等下载适用的边界组选项](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions)。
 
@@ -213,7 +213,7 @@ PowerShell 配置文件是在 PowerShell 启动时运行的脚本。 可以创�
 ### <a name="task-sequence-support-of-windows-autopilot-for-existing-devices"></a>针对现有设备的 Windows Autopilot 的任务序列支持
 <!--1358333-->
 
-[针对现有设备的 Windows Autopilot](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430)，现可通过 Windows 10 Insider Preview 提供。 此新功能可重置映像并使用单个本机 Configuration Manager 任务序列为 [Windows Autopilot 用户驱动模式](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven)预配 Windows 7 设备。 
+[针对现有设备的 Windows Autopilot](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430)，现可通过 Windows 10 版本 1809 或更高版本提供。 此新功能可重置映像并使用单个本机 Configuration Manager 任务序列为 [Windows Autopilot 用户驱动模式](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven)预配 Windows 7 设备。 
 
 <!--For more information, see []().--> 
 
@@ -310,13 +310,13 @@ PowerShell 配置文件是在 PowerShell 启动时运行的脚本。 可以创�
 
 “管理见解”节点现在包括一个图形仪表板。 此仪表板可概要显示规则状态，让你能够更轻松地显示进度。 该仪表板具有以下磁贴：
 
-- 管理见解索引：跟踪管理见解规则的整体进度。 该索引为加权平均值。 关键规则最为重要。 此索引为可选规则提供的加权最低。  
+- **管理见解索引**：跟踪管理见解规则的总体进度。 该索引为加权平均值。 关键规则最为重要。 此索引为可选规则提供的加权最低。  
 
 - **管理见解组**：显示每个组中的规则所占百分比。  
 
 - **管理见解优先级**：按优先级显示规则所占百分比。  
 
-- 所有见解：一个包括优先级和状态的见解表。  
+- **所有见解**：一个包括优先级和状态的见解表。  
 
 ![管理见解仪表板的屏幕截图](media/1357979-management-insights-dashboard.png)
 

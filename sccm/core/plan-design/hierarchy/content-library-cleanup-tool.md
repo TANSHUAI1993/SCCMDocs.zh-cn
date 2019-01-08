@@ -10,16 +10,16 @@ ms.assetid: 226cbbb2-9afa-4e2e-a472-be989c0f0e11
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1e71b95642160d519f222a50a66bc8f636628d6e
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: bd347cecce0ae1317fe51a701ce67b4766fbcd10
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39383517"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53423178"
 ---
 # <a name="content-library-cleanup-tool"></a>内容库清理工具
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 使用内容库清理命令行工具删除不再与分发点上的任何包或应用程序关联的内容。 此类内容被称为孤立内容。 此工具替换了针对过去的 Configuration Manager 产品发布的较旧版本的类似工具。  
 
@@ -41,7 +41,7 @@ ms.locfileid: "39383517"
 
 ## <a name="modes-of-operation"></a>操作模式
 
-在以下两种模式中运行该工具：[假设](#what-if-mode)和[删除](#delete-mode)。
+可以在以下两种模式中运行该工具：[假设](#what-if-mode)和[删除](#delete-mode)。
 
 > [!Tip]  
 > 从假设模式开始。 如果对结果满意，接着在删除模式下运行该工具。  
@@ -93,16 +93,17 @@ ms.locfileid: "39383517"
 按任何顺序使用命令行参数。   
 
 ### <a name="required-parameters"></a>必需参数
+
 |参数|详细信息|
 |---------|-------|
 | `/dp <distribution point FQDN>`  | 指定待清理分发点的完全限定的域名 (FQDN)。 |
 | `/ps <primary site FQDN>` | 仅在从辅助站点的分发点清除内容时需要。 该工具连接到父主站点，针对 SMS 提供程序运行查询。 工具通过这些查询确定分发点上应有的内容。 然后，它可以识别要删除的孤立内容。 必须为辅助站点上的分发点创建与父主站点的连接，因为所需的详细信息无法直接从辅助站点获取。|
 | `/sc <primary site code>`  | 仅在从辅助站点的分发点清除内容时需要。 指定父主站点的站点代码。 |
 
-#### <a name="example-scan-and-log-what-content-it-would-delete-what-if"></a>示例：扫描并记录要删除的内容（假设）
+#### <a name="example-scan-and-log-what-content-it-would-delete-what-if"></a>例如：扫描并记录要删除的内容（假设）
 `ContentLibraryCleanup.exe /dp server1.contoso.com`
 
-#### <a name="example-scan-and-log-content-for-a-dp-at-a-secondary-site"></a>示例：扫描并记录辅助站点上分发点的内容
+#### <a name="example-scan-and-log-content-for-a-dp-at-a-secondary-site"></a>例如：扫描并记录辅助站点上分发点的内容
 `ContentLibraryCleanup.exe /dp server1.contoso.com /ps siteserver1.contoso.com /sc ABC` 
 
 
@@ -116,16 +117,16 @@ ms.locfileid: "39383517"
 | `/sc <primary site code>` | 仅在从主站点的分发点清除内容时可选。 指定分发点所属主站点的站点代码。 |
 | `/log <log file directory>` | 指定该工具写入日志文件的位置。 此位置可以是本地驱动器，也可以是网络共享。</br></br> 如果不使用此参数，工具会将日志文件放在用户临时目录中（位于运行工具的计算机上）。|
 
-#### <a name="example-delete-content"></a>示例：删除内容 
+#### <a name="example-delete-content"></a>例如：删除内容 
 `ContentLibraryCleanup.exe /dp server1.contoso.com /delete`
 
-#### <a name="example-delete-content-without-prompts"></a>示例：无提示情况下删除内容
+#### <a name="example-delete-content-without-prompts"></a>例如：无提示情况下删除内容
 `ContentLibraryCleanup.exe /q /dp server1.contoso.com /delete` 
 
-#### <a name="example-log-to-local-drive"></a>示例：记录到本地驱动器
+#### <a name="example-log-to-local-drive"></a>例如：记录到本地驱动器
 `ContentLibraryCleanup.exe /dp server1.contoso.com /log C:\Users\Administrator\Desktop` 
 
-#### <a name="example-log-to-network-share"></a>示例：记录到网络共享
+#### <a name="example-log-to-network-share"></a>例如：记录到网络共享
 `ContentLibraryCleanup.exe /dp server1.contoso.com /log \\server\share`
 
 

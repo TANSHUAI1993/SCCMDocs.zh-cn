@@ -10,18 +10,18 @@ ms.assetid: aedd608d-6db3-4ea5-851d-70f2dcda6bb5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: dc1fc6668c61f2eafe04f92fc6b9ea27520ddc43
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: d87ef098b096f1dc04bc424a3a100955b12f6f57
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342454"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419013"
 ---
 # <a name="capabilities-in-technical-preview-1702-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1702 中的功能
 
-*适用范围：System Center Configuration Manager (Technical Preview)*
+适用范围：*System Center Configuration Manager (Technical Preview)*
 
-本文介绍了 System Center Configuration Manager Technical Preview（版本 1702）中的可用功能。 你可以安装此版本，以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。 在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。    
+本文介绍了 System Center Configuration Manager Technical Preview（版本 1702）中的可用功能。 你可以安装此版本，以更新 Technical Preview 站点的功能并向其添加新功能。 在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager 技术预览版](../../core/get-started/technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。    
 
 
 **以下是此版本可以试用的新功能。**  
@@ -30,9 +30,9 @@ ms.locfileid: "32342454"
 
 此预览版在 Configuration Manager 控制台中引入了新反馈选项。 借助“反馈”选项，可通过 Configuration Manager UserVoice 反馈网站直接向开发团队发送反馈。  
 
->可在以下位置找到“反馈”选项：
--  在功能区中每个节点的“主页”选项卡的最左侧。  
-   ![功能区](./media/feedback-home.png)
+> 可在以下位置找到“反馈”选项：
+> -  在功能区中每个节点的“主页”选项卡的最左侧。  
+>    ![功能区](./media/feedback-home.png)
 
 -  右键单击控制台中的任何对象时。   
     ![右键单击选项](./media/feedback-option.png)   
@@ -86,8 +86,8 @@ ms.locfileid: "32342454"
 对于使用的每种方法，请编辑 LDAP 查询以搜索 Azure AD OU 结构，而不是本地 Active Directory 常用的容器。 这要求你对查询作出指示，让其在 Azure 订阅中搜索 Active Directory。  
 
 下面的示例使用 contoso.onmicrosoft.com 的 Azure AD：
- - **系统发现**   
-Azure AD 将设备存储在 **AADDC 计算机** OU 下。  进行下列配置：  
+- **系统发现**   
+  Azure AD 将设备存储在 **AADDC 计算机** OU 下。  进行下列配置：  
   - *LDAP://OU=AADDC Computers,DC=contoso,DC=onmicrosoft,DC=com*  
 
 
@@ -174,34 +174,34 @@ Azure AD 没有存储组的 OU。 将同一常规结构用作系统或用户查�
 1. 在 Configuration Manager 控制台中，转到“软件库” > “操作系统” > “任务序列”。
 2. 选择要编辑的任务序列，然后单击“属性”。
 3. 在“用户通知”选项卡上，选择“使用自定义文本”。
->  [!NOTE]
->  只能在已选择“这是影响重大的任务序列”时设置用户通知文本。
+   > [!NOTE]
+   >  只能在已选择“这是影响重大的任务序列”时设置用户通知文本。
 
 4. 配置下列设置（每个文本框最多 255 个字符）：
 
    **用户通知标题文本**：指定在软件中心用户通知上显示的蓝色文本。 例如，在默认用户通知中，本部分包含类似“确认想要升级此计算机上的操作系统”的内容。
 
-   **用户通知消息文本**：三个文本框提供自定义通知的正文。
+   **用户通知消息文本**：使用三个文本框提供自定义通知的正文。
    - 第一个文本框：指定文本的主要正文，通常包含针对用户的说明。 例如，在默认用户通知中，本部分包含类似“操作系统升级可能需要一些时间，并且计算机可能会多次重启”的内容。
    - 第二个文本框：指定文本主要正文下的粗体文本。 例如，在默认用户通知中，本部分包含类似“此就地升级将安装新的操作系统并自动迁移你的应用、数据和设置”的内容。
    - 第三个文本框：指定粗体文本下的最后一行文本。 例如，在默认用户通知中，本部分包含类似“单击‘安装’以开始。 否则，单击‘取消’”的内容。   
 
    假设在属性中配置以下自定义通知。
 
-   ![任务序列的的自定义通知](.\media\user-notification.png)
+   ![任务序列的的自定义通知](./media/user-notification.png)
 
    当最终用户从软件中心打开安装时，将显示以下通知消息。
 
-   ![任务序列的的自定义通知](.\media\user-notification-enduser.png)
+   ![任务序列的的自定义通知](./media/user-notification-enduser.png)
 
 ### <a name="configure-software-center-properties"></a>配置软件中心属性
 使用以下过程配置软件中心中显示的任务序列的详细信息。 这些详细信息仅供参考。  
 1. 在 Configuration Manager 控制台中，转到“软件库” > “操作系统” > “任务序列”。
 2. 选择要编辑的任务序列，然后单击“属性”。
 3. 在“常规”选项卡上，可使用软件中心的以下设置：
-  - **需要重启**：让用户了解安装期间是否需要重新启动。
-  - **下载大小(MB)**：指定任务序列在软件中心中显示多少兆字节。  
-  - **预计运行时间(分钟)**：指定任务序列在软件中心中显示的预计运行时间（以分钟为单位）。
+   - **需要重启**：让用户了解安装期间是否需要重启。
+   - **下载大小(MB)**：指定任务序列在软件中心中显示多少兆字节。  
+   - **预计运行时间(分钟)**：指定任务序列在软件中心中显示的预计运行时间（以分钟为单位）。
 
 
 ## <a name="check-for-running-executable-files-before-installing-an-application"></a>在安装应用程序之前检查运行的可执行文件
@@ -264,8 +264,7 @@ Azure AD 没有存储组的 OU。 将同一常规结构用作系统或用户查�
 - **预测键盘**（仅限监督模式下）
 - **自动更正**（仅限监督模式下）
 - **键盘拼写检查**（仅限监督模式下）
-- **键盘快捷方式**（仅限监督模式下）
-<!--- - **Enterprise app trust settings modification** --->
+- **键盘快捷方式**（仅限监督模式下）<!--- - **Enterprise app trust settings modification** --->
 - **仅使用 Apple Configurator 和 iTunes 安装应用**（仅限监督模式下）
 - **自动下载应用**（仅限监督模式下）
 - **更改“查找我的朋友”应用设置**（仅限监督模式下）
@@ -298,17 +297,17 @@ Android for Work 是独立于 Android 的平台，你需要决定对支持工作
 #### <a name="enable-android-for-work-management"></a>启用 Android for Work 管理
 1. 在 https://accounts.google.com/SignUp 创建 Google 帐户，作为 Android for Work 管理员帐户，此帐户将与此 Intune 租户的所有 Android for Work 管理任务相关联。 可以是在管理 Android 设备的管理员中共享的 Google 帐户。 组织使用此 Google 帐户，在 Play for Work 控制台中管理和发布应用。 此帐户将用于在 Play for Work 应用商店中批准应用，因此请记录帐户名和密码。
 2. 通过将 Google 帐户绑定到在 Configuration Manager 中托管的 Intune 租户来启用 Android 注册：
-  1. 转到“管理” > “概述” > “云服务” > “Microsoft Intune 订阅”，然后选择 Intune 订阅。
-  2. 在功能区中，单击“配置平台” > “Android”，并确保已选中“启用 Android 注册”。
-  3. 在功能区中，单击“配置平台” > “Android for Work”。
-  4. 在对话框中，单击“在 Intune 控制台中配置 Android for Work”。 Intune 控制台将在 Web 浏览器中打开。
-  5. 使用你的 Intune 管理员凭据登录 Intune 门户。
-  6. 单击“配置”，打开 Google Play 的 Android for Work 网站。
-  7. 在 Google 登录页上，输入步骤 1 中的 Google 帐户凭据，然后提供你的公司信息。
+   1. 转到“管理” > “概述” > “云服务” > “Microsoft Intune 订阅”，然后选择 Intune 订阅。
+   2. 在功能区中，单击“配置平台” > “Android”，并确保已选中“启用 Android 注册”。
+   3. 在功能区中，单击“配置平台” > “Android for Work”。
+   4. 在对话框中，单击“在 Intune 控制台中配置 Android for Work”。 Intune 控制台将在 Web 浏览器中打开。
+   5. 使用你的 Intune 管理员凭据登录 Intune 门户。
+   6. 单击“配置”，打开 Google Play 的 Android for Work 网站。
+   7. 在 Google 登录页上，输入步骤 1 中的 Google 帐户凭据，然后提供你的公司信息。
 3. 返回 Intune 门户时，Android for Work 已启用，Android for Work 设备有三个注册选项：
-  - **将所有设备作为 Android 设备管理** -（已禁用）所有 Android 设备（包括支持 Android for Work 的设备）均将注册为传统的 Android 设备
-  - **将受支持设备作为 Android for Work 设备管理** -（已启用）将支持 Android for Work 的所有设备均注册为 Android for Work 设备。 任何不支持 Android for Work 的 Android 设备均将注册为传统的 Android 设备。
-  - **仅针对这些组中的用户将受支持设备作为 Android for Work 设备管理** -（测试中）可使 Android for Work 管理面向有限的一组用户。 只有注册支持 Android for Work 的设备的所选组的成员能注册为 Android for Work 设备。 其他所有成员均注册为 Android 设备。
+   - **将所有设备作为 Android 设备管理** -（已禁用）所有 Android 设备（包括支持 Android for Work 的设备）均将注册为传统的 Android 设备
+   - **将受支持设备作为 Android for Work 设备管理** -（已启用）将支持 Android for Work 的所有设备均注册为 Android for Work 设备。 任何不支持 Android for Work 的 Android 设备均将注册为传统的 Android 设备。
+   - **仅针对这些组中的用户将受支持设备作为 Android for Work 设备管理** -（测试中）可使 Android for Work 管理面向有限的一组用户。 只有注册支持 Android for Work 的设备的所选组的成员能注册为 Android for Work 设备。 其他所有成员均注册为 Android 设备。
   
 > [!NOTE]
 > 一个已知的问题将阻止“仅为这些组中的用户将受支持设备作为 Android for Work 设备管理”选项按预期方式正常运行。 指定 Azure AD 组中的用户设备将注册为 Android 而不是 Android for Work。 若要测试 Android for Work，必须使用“将所有受支持设备作为 Android for Work 管理”。
@@ -321,7 +320,7 @@ Android for Work 是独立于 Android 的平台，你需要决定对支持工作
 #### <a name="approve-and-deploy-android-for-work-apps"></a>批准和部署 Android for Work 应用
 使用以下步骤在 Play for Work 应用商店中批准应用，将其同步到 Configuration Manager 控制台，然后将其部署到托管的 Android for Work 设备中。 若要将应用部署到用户的工作配置文件中，需要在 Play for Work 中批准该应用，然后将应用与 Configuration Manager 控制台同步。
 
-1. 打开浏览器并转到：https://play.google.com/work。
+1. 打开浏览器并转到： https://play.google.com/work。
 2. 使用绑定到你的 Intune 租户的 Google 管理员帐户登录。
 3. 浏览要在你的环境中部署的应用，然后对每个应用单击“批准”。
 4. 在 Configuration Manager 控制台中，转到“管理员” > “概述” > “云服务” > “Android for Work”，然后单击“同步”。

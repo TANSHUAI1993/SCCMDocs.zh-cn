@@ -10,30 +10,32 @@ ms.assetid: 1098e8c5-9676-4c2b-841b-ec88bd04e495
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 374a1643c5ea439a7406bbb1f6b53322caa50871
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: ec7db94635bcc03b21392db19eb668917f38de6d
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32333318"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417211"
 ---
 # <a name="support-for-virtualization-environments-for-system-center-configuration-manager"></a>对 System Center Configuration Manager 的虚拟化环境的支持
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 Configuration Manager 支持在受支持的操作系统上安装客户端和站点系统角色，这些受支持的操作系统在本文中列出的虚拟化环境中作为虚拟机运行。 甚至当虚拟机主机（虚拟化环境）不被支持作为客户端或站点服务器时，这种支持仍然存在。  
 
  例如，如果使用 Microsoft Hyper-V Server 2012 托管运行 Windows Server 2012 的虚拟机，则可在虚拟机 (Windows Server 2012) 上安装客户端或站点系统角色，但不是在主机 (Microsoft Hyper-V Server 2012) 上。  
 
-|虚拟化环境|  
-|--------------------------------|  
-|Windows Server 2008 R2|  
-|Microsoft Hyper-V Server 2008 R2|  
-|Windows Server 2012|  
-|Microsoft Hyper-V Server 2012|  
-|Windows Server 2012 R2|
-|Windows Server 2016 <sup>（见注释 1）</sup>|
-|Microsoft Hyper-V Server 2016 <sup>（见注释 1）|
+
+|            虚拟化环境             |
+|---------------------------------------------------|
+|              Windows Server 2008 R2               |
+|         Microsoft Hyper-V Server 2008 R2          |
+|                Windows Server 2012                |
+|           Microsoft Hyper-V Server 2012           |
+|              Windows Server 2012 R2               |
+|   Windows Server 2016 <sup>（见注释 1）</sup>   |
+| Microsoft Hyper-V Server 2016 <sup>（见注释 1） |
+
 -  注释 1：Configuration Manager 不支持[嵌套虚拟化](https://technet.microsoft.com/windows-server-docs/compute/hyper-v/what-s-new-in-hyper-v-on-windows#a-namebkmknestedanested-virtualization-new)，这是 Windows Server 2016 的新增功能。
 
 

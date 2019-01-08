@@ -10,16 +10,16 @@ ms.assetid: a1fe22d0-4695-4de0-8bf0-e3475b03cf0e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d4aa1c044c8ea68b934a6dad4f1f85cbe43ec19b
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 56b1c0cff398f0009169ab1b02801e536e1a3343
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52458022"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418112"
 ---
 # <a name="how-to-configure-boundary-groups-for-configuration-manager"></a>如何为 Configuration Manager 配置边界组
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 本文介绍如何配置边界组的过程。 在开始之前，请确保了解边界组的相关概念。 有关详细信息，请参阅[边界组](/sccm/core/servers/deploy/configure/boundary-groups)。
 
@@ -81,17 +81,17 @@ ms.locfileid: "52458022"
 
 - 若要创建与另一个边界组的关系：  
 
-    - 选择“添加”。 在“回退边界组”窗口中，选择要配置的边界组。  
+  - 选择“添加”。 在“回退边界组”窗口中，选择要配置的边界组。  
 
-    - 设置下列站点系统角色的回退时间：  
-        - 分发点  
-        - 软件更新点  
-        - 管理点  
+  - 设置下列站点系统角色的回退时间：  
+    - 分发点  
+    - 软件更新点  
+    - 管理点  
 
-        > [!Note]  
-        > 例如，打开分支机构边界组的“属性”窗口。 在“回退边界组”窗口中，选择总部边界组。 将分发点的回退时间设置为 `20`。 保存此配置时，分支机构边界组中的客户端将在 20 分钟后开始搜索总部边界组分发点中的内容。  
+      > [!Note]  
+      > 例如，打开分支机构边界组的“属性”窗口。 在“回退边界组”窗口中，选择总部边界组。 将分发点的回退时间设置为 `20`。 保存此配置时，分支机构边界组中的客户端将在 20 分钟后开始搜索总部边界组分发点中的内容。  
 
-    - 若要阻止回退到特定边界组，请选择边界组，并为站点系统角色类型选择“从不回退”。 此操作可以包括默认站点边界组。  
+  - 若要阻止回退到特定边界组，请选择边界组，并为站点系统角色类型选择“从不回退”。 此操作可以包括默认站点边界组。  
 
 - 若要修改现有关系配置，请在列表中选择边界组，然后选择“更改”。 此操作将仅为此边界组打开“回退边界组”窗口。  
  
@@ -103,9 +103,9 @@ ms.locfileid: "52458022"
 ### <a name="bkmk_options"></a> 配置边界组选项
 <!--1356193--> 从版本 1806 开始，若要为此边界组中的客户端配置其他选项，请切换到“选项”选项卡。有关详细信息，请参阅[对等下载适用的边界组选项](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions)。
 
-- 在此边界组中允许对等下载：默认情况下启用此选项。 管理点向客户端提供包含对等源的内容位置的列表。  
+- **允许在此边界组中进行对等下载**：默认情况下会启用此选项。 管理点向客户端提供包含对等源的内容位置的列表。  
 
-    - **在对等下载期间，仅使用同一子网内的对等项**：此设置取决于上面那个选项。 如果启用此选项，管理点将仅包含与客户端在同一子网中的内容位置列表对等源。  
+    - **对等下载期间，只能使用同一子网内的对等设备**：此设置依赖于上述行为。 如果启用此选项，管理点将仅包含与客户端在同一子网中的内容位置列表对等源。  
 
 
 ## <a name="bkmk_site-fallback"></a> 为自动站点分配配置回退站点  

@@ -10,52 +10,52 @@ ms.assetid: e327ce38-6c07-4a27-b6eb-7e5bf74ed04b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4faaae2d261837043b8b6ec208dd8b53b2a97b15
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: aceb5f032cd0a4a5c12672db625b540465e37800
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350898"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418469"
 ---
 # <a name="planning-for-operating-system-deployment-interoperability-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中规划操作系统部署互操作性
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 当单一层次结构中的不同 System Center Configuration Manager 站点使用不同版本时，某些 Configuration Manager 功能不可用。 通常，无法在站点上或通过运行较低版本的客户端访问 Configuration Manager 的较新版本中的功能。 有关详细信息，请参阅 [System Center Configuration Manager 不同版本之间的互操作性](../../core/plan-design/hierarchy/interoperability-between-different-versions.md)。  
 
  在升级层次结构中的顶层站点和升级层次结构中运行具有较低版本的 Configuration Manager 的其他站点时，请考虑以下事项：  
 
--   客户端安装包  
+- 客户端安装包  
 
-    -   会自动升级默认客户端安装包的来源，并使用新的客户端安装包更新层次结构中的所有分发点，即使在层次结构具有较低版本的站点处的分发点上也是如此。  
+  -   会自动升级默认客户端安装包的来源，并使用新的客户端安装包更新层次结构中的所有分发点，即使在层次结构具有较低版本的站点处的分发点上也是如此。  
 
-    -   无法将运行新版本的客户端分配给尚未升级到新版本的站点。 将在管理点处阻止分配。  
+  -   无法将运行新版本的客户端分配给尚未升级到新版本的站点。 将在管理点处阻止分配。  
 
--   启动映像  
+- 启动映像  
 
-    -   将顶层站点升级到 Configuration Manager 的最新版本时，默认启动映像（x86 和 x64）会自动更新为使用 Windows PE 10 且基于适用于 Windows 10 的 Windows ADK 启动映像。 与默认启动映像关联的文件会使用这些文件的最新 Configuration Manager 版本进行更新。 自定义启动映像不会自动更新。 将需要手动更新自定义启动映像，其中包括旧版 Windows PE。  
+  -   将顶层站点升级到 Configuration Manager 的最新版本时，默认启动映像（x86 和 x64）会自动更新为使用 Windows PE 10 且基于适用于 Windows 10 的 Windows ADK 启动映像。 与默认启动映像关联的文件会使用这些文件的最新 Configuration Manager 版本进行更新。 自定义启动映像不会自动更新。 将需要手动更新自定义启动映像，其中包括旧版 Windows PE。  
 
-    -   如果站点层次结构包含具有不同 Configuration Manager 版本的站点，则避免使用动态媒体。 相反，使用基于站点的媒体来联系特定的管理点，直到所有站点均升级到相同版本的 Configuration Manager 版本。  
+  -   如果站点层次结构包含具有不同 Configuration Manager 版本的站点，则避免使用动态媒体。 相反，使用基于站点的媒体来联系特定的管理点，直到所有站点均升级到相同版本的 Configuration Manager 版本。  
 
-    -   验证最新的 Configuration Manager 启动映像是否包含所需的自定义项，然后使用新的启动映像更新具有最新版 Configuration Manager 站点中的所有分发点。  
+  -   验证最新的 Configuration Manager 启动映像是否包含所需的自定义项，然后使用新的启动映像更新具有最新版 Configuration Manager 站点中的所有分发点。  
 
--   用户状态迁移工具 (USMT)  
+- 用户状态迁移工具 (USMT)  
 
-    -   将顶层站点升级到 Configuration Manager 最新版本时，默认 USMT 包将自动更新为最新版本。 自定义 USMT 包不会自动更新。 将需要手动更新这些包。  
+  -   将顶层站点升级到 Configuration Manager 最新版本时，默认 USMT 包将自动更新为最新版本。 自定义 USMT 包不会自动更新。 将需要手动更新这些包。  
 
--   新建任务序列步骤  
+- 新建任务序列步骤  
 
-    -   新任务序列步骤将定期引入到新版本的 Configuration Manager 中。 将具有新步骤的任务序列部署到较旧的客户端时，任务序列步骤将失败。 在部署具有新步骤的任务序列之前，请确保目标集合中的客户端都更新到最新版本。  
+  -   新任务序列步骤将定期引入到新版本的 Configuration Manager 中。 将具有新步骤的任务序列部署到较旧的客户端时，任务序列步骤将失败。 在部署具有新步骤的任务序列之前，请确保目标集合中的客户端都更新到最新版本。  
 
--   操作系统部署媒体  
+- 操作系统部署媒体  
 
-    -   将站点更新到新版本时，必须使用新的 Configuration Manager 客户端包更新所有媒体（可启动媒体、捕获媒体、预留媒体和独立媒体）。  
+  -   将站点更新到新版本时，必须使用新的 Configuration Manager 客户端包更新所有媒体（可启动媒体、捕获媒体、预留媒体和独立媒体）。  
 
--   操作系统部署的第三方扩展  
+- 操作系统部署的第三方扩展  
 
-    -   当具有操作系统部署的第三方扩展且拥有不同版本的 Configuration Manager 站点或 Configuration Manager 客户端（即混合层次结构）时，扩展可能存在问题。  
+  -   当具有操作系统部署的第三方扩展且拥有不同版本的 Configuration Manager 站点或 Configuration Manager 客户端（即混合层次结构）时，扩展可能存在问题。  
 
- 在主动升级层次结构中的站点时，请使用下列部分来帮助你进行操作系统部署。  
+  在主动升级层次结构中的站点时，请使用下列部分来帮助你进行操作系统部署。  
 
 ## <a name="latest-version-of-configuration-manager-sites-in-a-mixed-hierarchy"></a>混合层次结构中 Configuration Manager 站点的最新版本  
  将站点升级到 Configuration Manager 的最新版本时，引用默认客户端安装包的任务序列将自动启动，以部署最新 Configuration Manager 客户端版本。 引用自定义客户端安装包的任务序列将继续部署该自定义包中包含的客户端版本（可能是以前的 Configuration Manager 客户端版本），并且必须更新以避免任务序列部署失败。 如果有配置为使用自定义客户端安装包的任务序列，则必须更新任务序列步骤以使用客户端安装包的最新 Configuration Manager 版本，或更新自定义包以使用最新 Configuration Manager 客户端安装源。  

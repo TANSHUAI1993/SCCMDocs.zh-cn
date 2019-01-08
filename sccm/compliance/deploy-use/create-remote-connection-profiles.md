@@ -10,16 +10,16 @@ ms.assetid: 8c6eabc4-5dda-4682-b03e-3a450e6ef65a
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: c0e94fd8669556223044403fc72216fcaaaa5e54
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 7d6bcb46650082cebc95e8300a2f6adeb119fdbf
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32337694"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421869"
 ---
 # <a name="remote-connection-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的远程连接配置文件
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 使用 System Center Configuration Manager 远程连接配置文件，允许用户在未连接到域时或者其个人计算机通过 Internet 连接时以远程方式连接到工作计算机。  
 
@@ -86,37 +86,37 @@ ms.locfileid: "32337694"
 
 ## <a name="create-a-remote-connection-profile"></a>创建远程连接配置文件
 
-1.  在 Configuration Manager 控制台中，单击“资产和符合性” > “符合性设置” > “远程连接配置文件”。  
+1. 在 Configuration Manager 控制台中，单击“资产和符合性” > “符合性设置” > “远程连接配置文件”。  
 
-3.  在“主页”  选项卡上的“创建”  组中，单击“创建远程连接配置文件” 。  
+2. 在“主页”  选项卡上的“创建”  组中，单击“创建远程连接配置文件” 。  
 
-4.  在 **创建远程连接配置文件向导** 的“常规” 页上，使用最多 256 个字符为每个配置文件指定名称和可选描述。  
+3. 在 **创建远程连接配置文件向导** 的“常规” 页上，使用最多 256 个字符为每个配置文件指定名称和可选描述。  
 
-5.  在“配置文件”设置页面上，为远程连接配置文件指定以下设置：  
+4. 在“配置文件”设置页面上，为远程连接配置文件指定以下设置：  
 
-    -   **远程桌面网关服务器的完整名称和端口(可选)** - 指定用于连接的远程桌面网关服务器的名称。  
+   -   **远程桌面网关服务器的完整名称和端口(可选)** - 指定用于连接的远程桌面网关服务器的名称。  
 
-        > [!NOTE]  
-        >  Configuration Manager 不支持在此框中使用国际化域名指定服务器。  
-        >   
-        >  服务器名称的长度不能超过 256 个字符，可以包含用句点分隔的大写字符、小写字符、数字字符以及“–”  和“_”  字符。  
+       > [!NOTE]  
+       >  Configuration Manager 不支持在此框中使用国际化域名指定服务器。  
+       >   
+       >  服务器名称的长度不能超过 256 个字符，可以包含用句点分隔的大写字符、小写字符、数字字符以及“–”  和“_”  字符。  
 
-    -   **只允许通过网络级别身份验证运行远程桌面的计算机中的连接**  
+   -   **只允许通过网络级别身份验证运行远程桌面的计算机中的连接**  
 
-6.  为下列每个连接设置选择“已启用”  或“已禁用”  ：  
+5. 为下列每个连接设置选择“已启用”  或“已禁用”  ：  
 
-    -   **允许至工作计算机的远程连接**  
+   -   **允许至工作计算机的远程连接**  
 
-    -   **允许工作计算机的所有主要用户进行远程连接**  
+   -   **允许工作计算机的所有主要用户进行远程连接**  
 
-    -   **对 Windows 域和专用网络上的连接允许 Windows 防火墙例外**  
+   -   **对 Windows 域和专用网络上的连接允许 Windows 防火墙例外**  
 
-    > [!IMPORTANT]  
-    >  所有三个设置必须相同，然后你才能继续通过向导的此页。  
+   > [!IMPORTANT]  
+   >  所有三个设置必须相同，然后你才能继续通过向导的此页。  
 
-7.  在“摘要”页上，查看要执行的操作，然后完成向导。  
+6. 在“摘要”页上，查看要执行的操作，然后完成向导。  
 
- 新的远程连接配置文件将显示在“资产和符合性”  工作区的“远程连接配置文件”  节点中。  
+   新的远程连接配置文件将显示在“资产和符合性”  工作区的“远程连接配置文件”  节点中。  
 
 部署远程连接配置文件  
 

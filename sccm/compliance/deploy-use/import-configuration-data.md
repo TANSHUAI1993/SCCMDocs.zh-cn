@@ -10,26 +10,26 @@ ms.assetid: 309b9a09-a611-4ba2-90ab-dde51582cf87
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 2a779f80f42439fe6526c05d7027c22fb191e41e
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 1c5f4b9cd76379d94c1cedb40ce38eda651b5845
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32332104"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416752"
 ---
 # <a name="import-configuration-data-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 导入配置数据
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 除了在 System Center Configuration Manager 控制台中创建配置基线和配置项目之外，还可以导入配置数据（如果它采用 cabinet (.cab) 文件格式并符合受支持的服务建模语言 (SML) 架构）。 可从以下位置导入配置数据：  
 
--   从 Microsoft 或从其他软件供应商站点下载的最佳做法配置数据（配置包）。  
+- 从 Microsoft 或从其他软件供应商站点下载的最佳做法配置数据（配置包）。  
 
--   从 System Center 2012 Configuration Manager 及更高版本导出的配置数据。  
+- 从 System Center 2012 Configuration Manager 及更高版本导出的配置数据。  
 
--   在外部创建且符合 SML 架构的配置数据。  
+- 在外部创建且符合 SML 架构的配置数据。  
 
- 有关可帮助你管理 System Center 2012 Configuration Manager 站点服务器角色的符合性的示例配置包，请参阅 [System Center 2012 Configuration Manager 配置包](http://www.microsoft.com/en-us/download/details.aspx?id=30710&WT.mc_id=rss_alldownloads_all)。  
+  有关可帮助你管理 System Center 2012 Configuration Manager 站点服务器角色的符合性的示例配置包，请参阅 [System Center 2012 Configuration Manager 配置包](http://www.microsoft.com/en-us/download/details.aspx?id=30710&WT.mc_id=rss_alldownloads_all)。  
 
 当导入配置基线时，配置基线中引用的部分或全部配置项目也可能包含在 CAB 文件中。 在导入过程中，Configuration Manager 会验证配置基线中引用的所有配置项目是否也包括在 Cabinet 文件中或在 Configuration Manager 站点中已存在。 如果尝试导入的配置基线引用了 Configuration Manager 无法找到的配置数据，导入过程会失败。  
 
