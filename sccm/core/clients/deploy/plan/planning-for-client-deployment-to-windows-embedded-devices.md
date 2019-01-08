@@ -10,16 +10,16 @@ ms.assetid: 038e61f9-f49d-41d1-9a9f-87bec9e00d5d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6ca987411775ec3a6fbe626d4b34f83313673f5b
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 4dd547f0126fa9e77b4d49db7c0de4ec912d2b23
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334821"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421614"
 ---
 # <a name="planning-for-client-deployment-to-windows-embedded-devices-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中计划 Windows Embedded 设备的客户端部署
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 <a name="BKMK_DeployClientEmbedded"></a>如果 Windows Embedded 设备不包括 System Center Configuration Manager 客户端，并且设备满足所需的依赖关系要求，则可以使用任何客户端安装方法。 如果嵌入式设备支持写入筛选器，则必须在安装客户端之前禁用这些筛选器，然后在安装客户端并将其分配给站点之后再次重新启用筛选器。  
 
@@ -46,60 +46,60 @@ ms.locfileid: "32334821"
 
  Configuration Manager 支持管理下列类型的写入筛选器：  
 
--   基于文件的写入筛选器 (FBWF) – 有关详细信息，请参阅[基于文件的写入筛选器](http://go.microsoft.com/fwlink/?LinkID=204717)。  
+- 基于文件的写入筛选器 (FBWF) – 有关详细信息，请参阅[基于文件的写入筛选器](http://go.microsoft.com/fwlink/?LinkID=204717)。  
 
--   增强型写入筛选器 (EWF) RAM – 有关详细信息，请参阅[增强型写入筛选器](http://go.microsoft.com/fwlink/?LinkId=204718)。  
+- 增强型写入筛选器 (EWF) RAM – 有关详细信息，请参阅[增强型写入筛选器](http://go.microsoft.com/fwlink/?LinkId=204718)。  
 
--   统一写入筛选器 (UWF) – 有关详细信息，请参阅[统一写入筛选器](http://go.microsoft.com/fwlink/?LinkId=309236)。  
+- 统一写入筛选器 (UWF) – 有关详细信息，请参阅[统一写入筛选器](http://go.microsoft.com/fwlink/?LinkId=309236)。  
 
- 当 Windows Embedded 设备处于 EWF RAM 注册模式时，Configuration Manager 不支持写入筛选器操作。  
+  当 Windows Embedded 设备处于 EWF RAM 注册模式时，Configuration Manager 不支持写入筛选器操作。  
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 >  如果可以选择，请将基于文件的写入筛选器 (FBWF) 与 Configuration Manager 一起使用，以便提高效率和可伸缩性。
->
-> **对于仅使用 FBWF 的设备：** 配置以下例外以在设备重启之间保留客户端状态和清单数据：  
->   
->  -   CCMINSTALLDIR\\\*.sdf  
-> -   CCMINSTALLDIR\ServiceData  
-> -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\StateSystem  
->   
->  运行 Windows Embedded 8.0 和更高版本的设备不支持包含通配符的排除项。 在这些设备上，必须分别配置以下排除项：  
->   
->  -   CCMINSTALLDIR 中的所有文件都具有 .sdf 扩展名，通常为：  
->   
->     -   UserAffinityStore.sdf  
->     -   InventoryStore.sdf  
->     -   CcmStore.sdf  
->     -   StateMessageStore.sdf  
->     -   CertEnrollmentStore.sdf  
-> -   CCMINSTALLDIR\ServiceData  
-> -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\StateSystem  
->   
+> 
+> **对于仅使用 FBWF 的设备：** 请配置以下异常以在设备重启之间保留客户端状态和清单数据：  
+> 
+> - CCMINSTALLDIR\\\*.sdf  
+>   -   CCMINSTALLDIR\ServiceData  
+>   -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\StateSystem  
+> 
+>   运行 Windows Embedded 8.0 和更高版本的设备不支持包含通配符的排除项。 在这些设备上，必须分别配置以下排除项：  
+> 
+> - CCMINSTALLDIR 中的所有文件都具有 .sdf 扩展名，通常为：  
+> 
+>   -   UserAffinityStore.sdf  
+>   -   InventoryStore.sdf  
+>   -   CcmStore.sdf  
+>   -   StateMessageStore.sdf  
+>   -   CertEnrollmentStore.sdf  
+>   -   CCMINSTALLDIR\ServiceData  
+>   -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCM\StateSystem  
+> 
 > **对于仅使用 FBWF 和 UWF 的设备：** 当工作组中的客户端使用证书向管理点进行身份验证时，还必须排除私钥以确保客户端继续与管理点通信。 在这些设备上配置以下例外：  
->   
->  -   c:\Windows\System32\Microsoft\Protect  
-> -   c:\ProgramData\Microsoft\Crypto  
-> -   HKEY_LOCAL_MACHINE\Software\Microsoft\SystemCertificates\SMS\Certificates  
+> 
+> - c:\Windows\System32\Microsoft\Protect  
+>   -   c:\ProgramData\Microsoft\Crypto  
+>   -   HKEY_LOCAL_MACHINE\Software\Microsoft\SystemCertificates\SMS\Certificates  
 
  有关在 Configuration Manager 中部署和管理启用写入筛选器的 Windows Embedded 设备的示例场景，请参阅[在 Windows Embedded 设备上部署和管理 System Center Configuration Manager 客户端的示例场景](../../../../core/clients/deploy/example-scenario-for-deploying-and-managing-clients-on-windows-embedded-devices.md)。  
 
  有关如何生成 Windows Embedded 设备映像以及配置写入筛选器的详细信息，请参阅 Windows Embedded 文档或与你的 OEM 联系。  
 
-> [!NOTE]  
+> [!NOTE]
 >  为软件部署和配置项目选择合适的平台时，这些内容会显示 Windows Embedded 系列，而不是特定版本。 请使用以下列表将特定版本的 Windows Embedded 映射到列表框中的选项：  
->   
->  -   “基于 Windows XP (32 位)的嵌入式操作系统” 包括以下各项：  
->   
->      -   Windows XP Embedded  
->     -   Windows Embedded for Point of Service  
->     -   Windows Embedded Standard 2009  
->     -   Windows Embedded POSReady 2009  
-> -   “基于 Windows 7 (32 位)的嵌入式操作系统” 包括以下各项：  
->   
->      -   Windows Embedded Standard 7（32 位）  
->     -   Windows Embedded POSReady 7（32 位）  
->     -   Windows ThinPC  
-> -   “基于 Windows 7 (64 位) 的嵌入式操作系统” 包括以下各项：  
->   
->      -   Windows Embedded Standard 7（64 位）  
->     -   Windows Embedded POSReady 7（64 位）
+> 
+> - “基于 Windows XP (32 位)的嵌入式操作系统” 包括以下各项：  
+> 
+>   -   Windows XP Embedded  
+>   -   Windows Embedded for Point of Service  
+>   -   Windows Embedded Standard 2009  
+>   -   Windows Embedded POSReady 2009  
+>   -   “基于 Windows 7 (32 位)的嵌入式操作系统” 包括以下各项：  
+> 
+>   -   Windows Embedded Standard 7（32 位）  
+>   -   Windows Embedded POSReady 7（32 位）  
+>   -   Windows ThinPC  
+>   -   “基于 Windows 7 (64 位) 的嵌入式操作系统” 包括以下各项：  
+> 
+>   -   Windows Embedded Standard 7（64 位）  
+>   -   Windows Embedded POSReady 7（64 位）

@@ -10,30 +10,30 @@ ms.assetid: 6143fd47-48ec-4bca-b53b-5b9b9f067bc3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9fce0c0a8602b51c3d05e5181023a0f9d05ab0ca
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 9fa55c29d6f67132b4d98fd12d8e249093009c67
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32335137"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419540"
 ---
 # <a name="how-to-upgrade-clients-for-windows-computers-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中升级 Windows 计算机的客户端
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 可以使用客户端安装方法或 Configuration Manager 中的自动客户端升级功能升级 Windows 计算机上的客户端。 下面的客户端安装方法是在 Windows 计算机上升级客户端软件的有效方式：  
 
--   组策略安装  
+- 组策略安装  
 
--   登录脚本安装  
+- 登录脚本安装  
 
--   手动安装  
+- 手动安装  
 
--   升级安装  
+- 升级安装  
 
- 如果对使用客户端安装方法升级客户端感兴趣，请参阅[如何在 System Center Configuration Manager 中部署客户端到 Windows 计算机](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md)，了解使用这些方法的详细信息。
+  如果对使用客户端安装方法升级客户端感兴趣，请参阅[如何在 System Center Configuration Manager 中部署客户端到 Windows 计算机](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md)，了解使用这些方法的详细信息。
 
- 从版本 1610 开始，可通过指定排除组来排除客户端的升级。 有关详细信息，请参阅[如何排除升级 Windows 计算机的客户端](exclude-clients-windows.md)。  
+  从版本 1610 开始，可通过指定排除组来排除客户端的升级。 有关详细信息，请参阅[如何排除升级 Windows 计算机的客户端](exclude-clients-windows.md)。  
 
 
 > [!TIP]  

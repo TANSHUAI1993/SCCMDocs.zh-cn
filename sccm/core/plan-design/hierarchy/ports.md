@@ -10,16 +10,16 @@ ms.assetid: c6777fb0-0754-4abf-8a1b-7639d23e9391
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5a5ec4f699f2c122dc435bbca5c77789ea972de7
-ms.sourcegitcommit: 2badee2b63ae63687795250e298f463474063100
+ms.openlocfilehash: b074ee02ec5e50fb5e495923538535cf8765dcdb
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601222"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420934"
 ---
 # <a name="ports-used-in-configuration-manager"></a>Configuration Manager 中使用的端口
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 本文列出了 Configuration Manager 使用的网络端口。 某些连接使用不可配置的端口，而某些连接支持指定的自定义端口。 如果使用任何端口筛选技术，请验证所需端口是否可用。 这些端口筛选技术包括防火墙、路由器、代理服务器或 IPsec。   
 
@@ -179,7 +179,7 @@ Configuration Manager 不允许为以下通信类型配置端口：
 
 > [!Important]  
 > 若启用基于主机的防火墙，请确保规则允许服务器在这些端口上进行发送和接收。 为 PXE 启用分发点时，Configuration Manager 可在 Windows 防火墙上启用入站（接收）规则。 它不会配置出站（发送）规则。<!--SCCMDocs issue #744-->  
-  
+
 
 ###  <a name="BKMK_PortsClient-FSP"></a> 客户端 -- > 回退状态点  
 
@@ -237,12 +237,14 @@ Configuration Manager 使用这些连接来构建 CMG 通道。 有关详细信�
 
 #### <a name="version-1706-or-1710"></a>版本 1706 或 1710
 特定端口取决于管理点配置。 
+
 |说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |HTTPS|--|443|
 |HTTP|--|80|  
 
 #### <a name="version-1802"></a>版本 1802
+
 |说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |HTTPS|--|443|
@@ -253,6 +255,7 @@ Configuration Manager 使用这些连接来构建 CMG 通道。 有关详细信�
 ###  <a name="bkmk_cmgcp-sup"></a> CMG 连接点 -- > 软件更新点  
 
 特定端口取决于软件更新点配置。 
+
 |说明|UDP|TCP|  
 |-----------------|---------|---------|  
 |HTTPS|--|443|
@@ -681,13 +684,13 @@ Configuration Manager 控制台使用 Internet 访问获取以下操作：
 
 ###  <a name="BKMY_PortNotes"></a> 有关 Configuration Manager 客户端和站点系统使用的端口的备注  
 
-#### <a name="bkmk_note1"></a> 备注 1：代理服务器端口
+#### <a name="bkmk_note1"></a> 注释 1：代理服务器端口
 无法配置此端口，但它可通过配置的代理服务器路由。  
 
-#### <a name="bkmk_note2"></a> 备注 2：可用的备用端口
+#### <a name="bkmk_note2"></a> 注释 2：可用的备用端口
 可在 Configuration Manager 中为此值定义备用端口。 如果定义了自定义端口，则为 IPsec 策略或为配置防火墙定义 IP 筛选器信息时将替代该自定义端口。  
 
-#### <a name="bkmk_note3"></a> 备注 3：Windows Server Update Services (WSUS)
+#### <a name="bkmk_note3"></a> 注释 3：Windows Server Update Services (WSUS)
 可安装 WSUS 以使用端口 80/443 或端口 8530/8531 进行客户端通信。 在 Windows Server 2012 或 Windows Server 2016 中运行 WSUS 时，WSUS 被默认配置为针对 HTTP 使用端口 8530，针对 HTTPS 使用端口 8531。  
 
 安装后，您可以更改端口。 不必在整个站点层次结构中使用相同的端口号。  
@@ -699,7 +702,7 @@ Configuration Manager 控制台使用 Internet 访问获取以下操作：
     > [!NOTE]  
     >  在配置使用 HTTPS 的软件更新点时，还必须打开 HTTP 端口。 未加密的数据（如特定更新的 EULA）使用 HTTP 端口。  
 
-#### <a name="bkmk_note4"></a> 备注 4：日常文件传输协议 (TFTP) 守护程序
+#### <a name="bkmk_note4"></a> 注释 4：日常文件传输协议 (TFTP) 守护程序
 日常文件传输协议 (TFTP) 守护程序系统服务不需要用户名或密码，并且它是 Windows 部署服务 (WDS) 不可或缺的一部分。 普通文件传输协议后台程序服务支持下列 RFC 定义的 TFTP 协议：  
 
 - RFC 350：TFTP  
@@ -712,10 +715,10 @@ Configuration Manager 控制台使用 Internet 访问获取以下操作：
 
 TFTP 为支持无盘启动环境而设计。 TFTP 后台程序侦听 UDP 端口 69，但从动态分配的高端口响应。 因此，启用此端口将允许 TFTP 服务接收传入的 TFTP 请求，但不允许所选服务器响应这些请求。 除非 TFTP 服务器配置为从端口 69 响应，否则所选服务器无法响应入站 TFTP 请求。  
 
-#### <a name="bkmk_note5"></a> 备注 5：站点服务器和站点系统之间的通信
+#### <a name="bkmk_note5"></a> 注释 5：站点服务器和站点系统之间的通信
 默认情况下，站点服务器和站点系统之间的通信是双向的。 站点服务器启动通信以配置站点系统，然后大部分站点系统连接回站点服务器以发送状态信息。 Reporting Services 点和分发点不会发送状态信息。 如果在安装站点系统后选择站点系统属性页上的“要求站点服务器启动到此站点系统的连接” ，则该系统不会启动与站点服务器的通信。 相反，站点服务器会启动通信，并使用站点系统安装帐户执行站点系统服务器的身份验证。  
 
-#### <a name="bkmk_note6"></a> 备注 6：动态端口
+#### <a name="bkmk_note6"></a> 注释 6：动态端口
 动态端口使用由 OS 版本定义的一系列端口号。 这些端口也称为临时端口。 有关默认端口范围的详细信息，请参阅 [Service overview and network port requirements for Windows（Windows 的服务概述和网络端口要求）](https://support.microsoft.com/help/832017/service-overview-and-network-port-requirements-for-windows)。  
 
 
@@ -756,10 +759,10 @@ TFTP 为支持无盘启动环境而设计。 TFTP 后台程序侦听 UDP 端口 
 - 负载均衡规则 
 
 配置下列端口：
- - SQL over TCP: TCP 1433
- - SQL Server Service Broker: TCP 4022
- - 服务器消息块 (SMB): TCP 445
- - RPC 终结点映射程序: TCP 135
+ - SQL over TCP：TCP 1433
+ - SQL Server Service Broker：TCP 4022
+ - 服务器消息块 (SMB)：TCP 445
+ - RPC 端点映射程序：TCP 135
 
 > [!WARNING]  
 >  Configuration Manager 不支持动态端口。 默认情况下，SQL Server 命名实例使用动态端口连接到数据库引擎。 使用命名实例时，请手动配置静态端口以进行站点内通信。  
@@ -796,8 +799,8 @@ Configuration Manager 使用下列端口发现和发布站点信息：
  - 全局编录 LDAP：3268
  - RPC 端点映射程序：135
  - RPC：动态分配的高 TCP 端口
- - TCP：1024: 5000
- - TCP：49152: 65535
+ - TCP:1024：5000
+ - TCP:49152：65535
 
 
 ###  <a name="BKMK_External"></a> Configuration Manager 建立的外部连接  
@@ -836,9 +839,9 @@ Configuration Manager 使用下列端口发现和发布站点信息：
 
  支持基于 Internet 的客户端的基于 Internet 管理点和分发点、软件更新点以及回退状态点均使用下列端口进行安装和修复：  
 
--   站点服务器 --> 站点系统：RPC 端点映射程序使用 UDP 和 TCP 端口 135。  
+-   站点服务器 --> 站点系统：RPC 终结点映射程序使用 UDP 和 TCP 端口 135。  
 
--   站点服务器--> 站点系统：RPC 动态 TCP 端口  
+-   站点服务器 --> 站点系统：RPC 动态 TCP 端口  
 
 -   站点服务器 &lt; --> 站点系统：服务器消息块 (SMB) 使用 TCP 端口 445
 
@@ -846,7 +849,7 @@ Configuration Manager 使用下列端口发现和发布站点信息：
 
 -   站点服务器 --> 分发点：RPC 端点映射程序使用 UDP 和 TCP 端口 135
 
--   站点服务器--> 分发点：RPC 动态 TCP 端口  
+-   站点服务器 --> 分发点：RPC 动态 TCP 端口  
 
 使用 IPsec 帮助确保站点服务器和站点系统之间的通信安全。 如果必须限制针对 RPC 使用的动态端口，则可以使用 Microsoft RPC 配置工具 (rpccfg.exe) 为这些 RPC 数据包配置有限的端口范围。 有关 RPC 配置工具的详细信息，请参阅 [如何配置 RPC 以使用特定端口以及如何使用 IPsec 来帮助保护这些端口](https://support.microsoft.com/help/908472/how-to-configure-rpc-to-use-certain-ports-and-how-to-help-secure-those)。  
 

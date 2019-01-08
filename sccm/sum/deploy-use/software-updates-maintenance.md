@@ -10,16 +10,16 @@ ms.technology: configmgr-sum
 ms.assetid: 4b0e2e90-aac7-4d06-a707-512eee6e576c
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 3a44643870234a08169db1d55cc834e4ca5fcbb5
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.openlocfilehash: d2196890070aa842ac58bc127af8aaa876640ec4
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385484"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417024"
 ---
 # <a name="software-updates-maintenance"></a>软件更新维护
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 可从 Configuration Manager 控制台和软件更新点组件属性中计划和运行 WSUS 清理任务。 首次选择运行 WSUS 清理任务时，它将在下一次软件更新同步后运行。  
 
@@ -68,7 +68,7 @@ ms.locfileid: "39385484"
 - 未联系服务器的计算机
 - 不需要的更新文件
 
- 有关详细信息和说明，请参阅 [Microsoft WSUS 和 Configuration Manager SUP 维护](https://blogs.technet.microsoft.com/configurationmgr/2016/01/26/the-complete-guide-to-microsoft-wsus-and-configuration-manager-sup-maintenance/)博客文章的完整指南。 
+  有关详细信息和说明，请参阅 [Microsoft WSUS 和 Configuration Manager SUP 维护](https://blogs.technet.microsoft.com/configurationmgr/2016/01/26/the-complete-guide-to-microsoft-wsus-and-configuration-manager-sup-maintenance/)博客文章的完整指南。 
 
 ## <a name="updates-cleanup-log-entries"></a>更新清理日志条目
  

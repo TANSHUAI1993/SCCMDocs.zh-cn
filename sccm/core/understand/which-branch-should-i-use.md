@@ -10,16 +10,16 @@ ms.assetid: a3be4f8f-3d44-4e3c-9fa1-e85f30a36e72
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4331ec4120141ab9aa20301b9a99c3c6ebeef568
-ms.sourcegitcommit: 0305e710f634529793ae73e5aac24168ee4fe02f
+ms.openlocfilehash: 35e1675e74b0df768d143441fa4cbb2dda47affc
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042739"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418214"
 ---
 # <a name="which-branch-of-configuration-manager-should-i-use"></a>应该使用 Configuration Manager 的哪一个分支？
 
-*适用范围：System Center Configuration Manager（Current Branch、Long-Term Servicing Branch 和 Technical Preview）*
+适用范围：*System Center Configuration Manager（Current Branch、Long-Term Servicing Branch 和 Technical Preview）*
 
 
 System Center Configuration Manager 的三个可用分支：Current Branch、Long-Term Servicing Branch 和 Technical Preview Branch。 使用本主题帮助选择适合的分支。
@@ -43,11 +43,11 @@ Microsoft 计划每年发布几次 System Center Configuration Manager Current B
 
 还可使用基线介质安装充当 Current Branch 评估版的新站点。 评估版不需要许可证。 评估版可使用 180 天。 它支持升级到 Current Branch 的许可版。 如果想仅安装评估版，可通过 [TechNet 评估中心](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection)获取。
 
->  [!NOTE]  
+> [!NOTE]
 > 使用基线介质安装新的 Configuration Manager 层次结构的站点。 如果以前安装了基准版本，请使用控制台中更新将站点更新到新版本。  
->  
+> 
 > 使用控制台内部更新更新后的站点与使用基线介质安装新站点的效果一样。
->
+> 
 > 有关详细信息，请参阅 [ System Center Configuration Manager 的更新](/sccm/core/servers/manage/updates)。  
 
 

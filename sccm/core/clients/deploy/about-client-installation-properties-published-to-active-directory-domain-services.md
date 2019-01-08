@@ -10,16 +10,16 @@ ms.assetid: 101d7d4d-92db-419d-b2ae-3c1c1dea68e9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 46ede93e8366b4ae387f7e04b83dcb33ce854c5e
-ms.sourcegitcommit: 3dfe3f4401651afa9dc65d14a8944ae4e4198b3e
+ms.openlocfilehash: dccd893cc4a22fddf09598376bdcd05b091e6c2c
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48862509"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53421546"
 ---
 # <a name="about-client-installation-properties-published-to-active-directory-domain-services"></a>关于发布到 Active Directory 域服务的客户端安装属性
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 在扩展 System Center Configuration Manager 的 Active Directory 架构并将站点发布到 Active Directory 域服务时，会将许多客户端安装属性发布到 Active Directory 域服务。 如果计算机可以找到这些客户端安装属性，则它可以在 Configuration Manager 客户端的部署过程中使用这些属性。  
 
@@ -35,29 +35,29 @@ ms.locfileid: "48862509"
 ## <a name="client-installation-properties-published-to-active-directory-domain-services"></a>发布到 Active Directory 域服务的客户端安装属性  
 以下是客户端安装属性的列表。 有关下面列出的各项的详细信息，请参阅[关于 System Center Configuration Manager 中的客户端安装属性](../../../core/clients/deploy/about-client-installation-properties.md)。  
 
--   Configuration Manager 站点代码。  
+- Configuration Manager 站点代码。  
 
--   站点服务器签名证书。  
+- 站点服务器签名证书。  
 
--   受信任的根密钥。  
+- 受信任的根密钥。  
 
--   用于 HTTP 和 HTTPS 的客户端通信端口。  
+- 用于 HTTP 和 HTTPS 的客户端通信端口。  
 
--   回退状态点。 如果站点具有多个回退状态点，则只会将安装的第一个回退状态点发布到 Active Directory 域服务。  
+- 回退状态点。 如果站点具有多个回退状态点，则只会将安装的第一个回退状态点发布到 Active Directory 域服务。  
 
--   指示客户端只能使用 HTTPS 进行通信的设置。  
+- 指示客户端只能使用 HTTPS 进行通信的设置。  
 
--   与 PKI 证书相关的设置：  
+- 与 PKI 证书相关的设置：  
 
-   -   是否使用客户端 PKI 证书。  
+  -   是否使用客户端 PKI 证书。  
 
-   -   证书的选择条件。 可能因客户端具有多个可用于 Configuration Manager 的有效 PKI 证书而需要选择证书。  
+  -   证书的选择条件。 可能因客户端具有多个可用于 Configuration Manager 的有效 PKI 证书而需要选择证书。  
 
-   -   在执行证书选择过程后确定要使用的证书的设置（如果客户端具有多个有效证书）。  
+  -   在执行证书选择过程后确定要使用的证书的设置（如果客户端具有多个有效证书）。  
 
-   -   证书颁发者列表（包含受信任的根 CA 证书的列表）。  
+  -   证书颁发者列表（包含受信任的根 CA 证书的列表）。  
 
--   在“客户端请求安装属性”  对话框的“客户端”  选项卡中指定的 Client.msi 安装属性。
+- 在“客户端请求安装属性”  对话框的“客户端”  选项卡中指定的 Client.msi 安装属性。
 
 只有在未使用下列任何方法来指定任何其他属性时，客户端安装 (CCMSetup) 才会使用发布到 Active Directory 域服务的属性：  
 

@@ -10,16 +10,16 @@ ms.assetid: a7975dc8-46ab-4dae-86b6-dc3e3cf3b2f0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 13d9e83adcdf0e125d1596ff93fbb1a0fa67c09f
-ms.sourcegitcommit: 8827ffaea108678da968a3623f072876990c830c
+ms.openlocfilehash: 0b65f5fb8790f907699a26e36c1ffe41b7e0eb03
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49411321"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418639"
 ---
 # <a name="modify-your-system-center-configuration-manager-infrastructure"></a>修改你的 System Center Configuration Manager 基础结构
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 安装一个或多个站点后，你可能需要修改配置，或采取会影响你部署的基础结构的操作。  
 
@@ -29,36 +29,36 @@ ms.locfileid: "49411321"
 
  在每个 Configuration Manager 站点，均可以重新运行安装程序以实现下列操作：  
 
--   添加其他 SMS 提供程序（每个 SMS 提供程序的其他实例必须是单独的计算机）的实例  
+- 添加其他 SMS 提供程序（每个 SMS 提供程序的其他实例必须是单独的计算机）的实例  
 
--   删除 SMS 提供程序实例（要删除站点的最后一个 SMS 提供程序，你必须卸载该站点）。  
+- 删除 SMS 提供程序实例（要删除站点的最后一个 SMS 提供程序，你必须卸载该站点）。  
 
- 通过查看你运行安装程序的站点服务器的根文件夹中的“ConfigMgrSetup.log”  ，你可以监视 SMS 提供程序的安装或删除。  
+  通过查看你运行安装程序的站点服务器的根文件夹中的“ConfigMgrSetup.log”  ，你可以监视 SMS 提供程序的安装或删除。  
 
- 在站点修改 SMS 提供程序之前，熟悉[为 System Center Configuration Manager 规划 SMS 提供程序](../../../core/plan-design/hierarchy/plan-for-the-sms-provider.md)中的信息。  
+  在站点修改 SMS 提供程序之前，熟悉[为 System Center Configuration Manager 规划 SMS 提供程序](../../../core/plan-design/hierarchy/plan-for-the-sms-provider.md)中的信息。  
 
 #### <a name="to-manage-the-sms-provider-configuration-for-a-site"></a>管理站点的 SMS 提供程序配置  
 
-1.  从 **&lt;Configuration Manager 站点安装文件夹 \>\BIN\X64\setup.exe** 运行 **Configuration Manager 安装程序**。  
+1. 从 **&lt;Configuration Manager 站点安装文件夹 \>\BIN\X64\setup.exe** 运行 **Configuration Manager 安装程序**。  
 
-2.  在“入门”  页上，选择“执行站点维护或重置此站点” ，然后单击“下一步”   
+2. 在“入门”  页上，选择“执行站点维护或重置此站点” ，然后单击“下一步”   
 
-3.  在“站点维护”  页上，选择“修改 SMS 提供程序配置” ，然后单击“下一步” 。  
+3. 在“站点维护”  页上，选择“修改 SMS 提供程序配置” ，然后单击“下一步” 。  
 
-4.  在“管理 SMS 提供程序”  页上，选择下列选项之一，并通过使用下列选项之一来完成向导：  
+4. 在“管理 SMS 提供程序”  页上，选择下列选项之一，并通过使用下列选项之一来完成向导：  
 
-    -   在此站点上添加其他 SMS 提供程序：  
+   -   在此站点上添加其他 SMS 提供程序：  
 
-         选择“添加新的 SMS 提供程序” ，指定将承载 SMS 提供程序且当前没有承载 SMS 提供程序的计算机的 FQDN，然后单击“下一步” 。  
+        选择“添加新的 SMS 提供程序” ，指定将承载 SMS 提供程序且当前没有承载 SMS 提供程序的计算机的 FQDN，然后单击“下一步” 。  
 
-    -   从服务器中删除 SMS 提供程序：  
+   -   从服务器中删除 SMS 提供程序：  
 
-         选择“卸载指定的 SMS 提供程序” ，选择要从中删除 SMS 提供程序的计算机的名称，单击“下一步” ，然后确认操作。  
+        选择“卸载指定的 SMS 提供程序” ，选择要从中删除 SMS 提供程序的计算机的名称，单击“下一步” ，然后确认操作。  
 
-        > [!TIP]  
-        >  要在两台计算机之间移动 SMS 提供程序，你必须将 SMS 提供程序安装到新计算机，并从原始位置中删除 SMS 提供程序。 没有专门用于在单一过程中在两台计算机之间移动 SMS 提供程序的选项。  
+       > [!TIP]  
+       >  要在两台计算机之间移动 SMS 提供程序，你必须将 SMS 提供程序安装到新计算机，并从原始位置中删除 SMS 提供程序。 没有专门用于在单一过程中在两台计算机之间移动 SMS 提供程序的选项。  
 
- 安装向导完成后，SMS 提供程序配置即完成。 在站点的“属性”  对话框的“常规”  选项卡上，你可以验证为站点安装了 SMS 提供程序的计算机。  
+   安装向导完成后，SMS 提供程序配置即完成。 在站点的“属性”  对话框的“常规”  选项卡上，你可以验证为站点安装了 SMS 提供程序的计算机。  
 
 ##  <a name="bkmk_Console"></a>管理 Configuration Manager 控制台  
  以下是可以执行以管理 Configuration Manager 控制台的任务：  
@@ -110,11 +110,11 @@ ms.locfileid: "49411321"
 ##  <a name="BKMK_ConfigDCOMforRemoteConsole"></a>为远程 Configuration Manager 控制台配置 DCOM 权限  
  运行 Configuration Manager 控制台的用户帐户需要权限以使用 SMS 提供程序来访问站点数据库。 但是，使用远程 Configuration Manager 控制台的管理用户也需要以下位置的**远程激活** DCOM 权限：  
 
--   站点服务器计算机  
+- 站点服务器计算机  
 
--   托管 SMS 提供程序实例的每个计算机  
+- 托管 SMS 提供程序实例的每个计算机  
 
- 名为 **SMS 管理员** 的安全组授予计算机上的 SMS 提供程序的访问权限，并且还可用于授予所需的 DCOM 权限。 （如果 SMS 提供程序在成员服务器上运行，此组是计算机的本地组，如果 SMS 提供程序在域控制器上运行，则此组是域本地组。）  
+  名为 **SMS 管理员** 的安全组授予计算机上的 SMS 提供程序的访问权限，并且还可用于授予所需的 DCOM 权限。 （如果 SMS 提供程序在成员服务器上运行，此组是计算机的本地组，如果 SMS 提供程序在域控制器上运行，则此组是域本地组。）  
 
 > [!IMPORTANT]  
 >  Configuration Manager 控制台使用 Windows Management Instrumentation (WMI) 连接到 SMS 提供程序，并且 WMI 在内部使用 DCOM。 因此，如果 Configuration Manager 控制台在 SMS 提供程序计算机之外的其他计算机上运行，则 Configuration Manager 需要权限以在 SMS 提供程序计算机上激活 DCOM 服务器。 默认情况下，只会为内置“管理员”组的成员授予“远程激活”。 如果允许“SMS 管理员”组具有远程激活权限，则此组的成员可能会尝试对 SMS 提供程序计算机进行 DCOM 攻击。 此配置还会增大计算机的受攻击面。 为了减轻此威胁，请仔细监视“SMS 管理员”组的成员身份。  
@@ -123,24 +123,24 @@ ms.locfileid: "49411321"
 
 #### <a name="to-configure-dcom-permissions-for-remote-configuration-manager-console-connections"></a>若要为远程 Configuration Manager 控制台连接配置 DCOM 权限  
 
-1.  通过运行  **Dcomcnfg.exe** 打开“组件服务” 。  
+1. 通过运行  **Dcomcnfg.exe** 打开“组件服务” 。  
 
-2.  在“组件服务”中，单击“控制台根” >  “组件服务” > “计算机”，然后单击“我的计算机” 在“操作”  菜单上，单击“属性” 。  
+2. 在“组件服务”中，单击“控制台根” >  “组件服务” > “计算机”，然后单击“我的计算机” 在“操作”  菜单上，单击“属性” 。  
 
-3.  在“我的电脑属性”  对话框中“COM 安全”  选项卡上的“启动和激活权限”  部分，单击“编辑限制” 。  
+3. 在“我的电脑属性”  对话框中“COM 安全”  选项卡上的“启动和激活权限”  部分，单击“编辑限制” 。  
 
-4.  在“启动和激活权限”  对话框中，单击“添加” 。  
+4. 在“启动和激活权限”  对话框中，单击“添加” 。  
 
-5.  在“选择用户、计算机、服务帐户或组”  对话框中，在“输入要选择的对象名称(示例)”  框中键入 **SMS Admins**，然后单击“确定” 。  
+5. 在“选择用户、计算机、服务帐户或组”  对话框中，在“输入要选择的对象名称(示例)”  框中键入 **SMS Admins**，然后单击“确定” 。  
 
-    > [!NOTE]  
-    >  你可能必须更改“从此位置中”  的设置以查找“SMS 管理员”组。 如果 SMS 提供程序运行在成员服务器上，此组是计算机的本地组，如果 SMS 提供程序运行在域控制器上，则此组是域本地组。  
+   > [!NOTE]  
+   >  你可能必须更改“从此位置中”  的设置以查找“SMS 管理员”组。 如果 SMS 提供程序运行在成员服务器上，此组是计算机的本地组，如果 SMS 提供程序运行在域控制器上，则此组是域本地组。  
 
-6.  在“SMS 管理员的权限”  部分，请选中“远程激活”  复选框以允许远程激活。  
+6. 在“SMS 管理员的权限”  部分，请选中“远程激活”  复选框以允许远程激活。  
 
-7.  单击“确定”  并再次单击“确定”  ，然后关闭“计算机管理” 。 计算机现在已配置为允许“SMS 管理员”组的成员远程访问 Configuration Manager 控制台。  
+7. 单击“确定”  并再次单击“确定”  ，然后关闭“计算机管理” 。 计算机现在已配置为允许“SMS 管理员”组的成员远程访问 Configuration Manager 控制台。  
 
- 在每台可能支持远程 Configuration Manager 控制台的 SMS 提供程序计算机上重复此过程。  
+   在每台可能支持远程 Configuration Manager 控制台的 SMS 提供程序计算机上重复此过程。  
 
 ##  <a name="bkmk_dbconfig"></a>修改站点数据库配置  
  安装站点之后，你可以通过在管理中心站点服务器或主站点服务器上运行安装程序来修改站点数据库和站点数据库服务器的配置。 你可以将站点数据库转移到同一计算机上的新 SQL Server 实例，或转移到运行支持的 SQL Server 版本的其他计算机。 对于辅助站点的数据配置，不支持这些更改和相关更改。  
@@ -164,10 +164,10 @@ ms.locfileid: "49411321"
 
 **如果转移站点数据库，必须进行下列配置：**  
 
--   “配置访问权限” ：在将站点数据库转移到新计算机时，将站点服务器的计算机帐户添加到运行 SQL Server 的计算机上的“本地管理员”  组。 如果为站点数据库使用 SQL Server 群集，你必须将该计算机帐户添加到每台 Windows Server 群集节点计算机的“本地管理员”  组。  
+-   **配置访问权限：** 在将站点数据库转移到新计算机时，将站点服务器的计算机帐户添加到运行 SQL Server 的计算机上的“本地管理员”  组。 如果为站点数据库使用 SQL Server 群集，你必须将该计算机帐户添加到每台 Windows Server 群集节点计算机的“本地管理员”  组。  
 
--   **启用公共语言运行时 (CLR) 集成：**  在将数据库转移到 SQL Server 上的新实例或新 SQL Server 计算机时，你必须启用公共语言运行时 (CLR) 集成。 若要启用 CLR，请使用“SQL Server Management Studio”连接到承载站点数据库的 SQL Server 实例，并以查询形式运行以下存储过程：**sp_configure 'clr enabled',1; reconfigure**。  
--  **确保新的 SQL Server 具有访问备份位置的权限：** 数据库移到新的服务器（包括 SQL Server AlwaysOn 可用性组或 SQL Server 群集）后，将 UNC 用于存储站点数据库备份时，应确保新 SQL Server 的计算机帐户具有对 UNC 位置的**写入**权限。  
+-   **启用公共语言运行时(CLR)集成：** 在将数据库转移到 SQL Server 上的新实例或新 SQL Server 计算机时，你必须启用公共语言运行时 (CLR) 集成。 若要启用 CLR，请使用“SQL Server Management Studio”连接到承载站点数据库的 SQL Server 实例，并以查询形式运行以下存储过程：**sp_configure 'clr enabled',1; reconfigure**。  
+-  **确保新的 SQL Server 可以访问备份位置：** 数据库移到新的服务器（包括 SQL Server AlwaysOn 可用性组或 SQL Server 群集）后，使用 UNC 存储站点数据库备份时，请确保新 SQL Server 的计算机帐户具有对 UNC 位置的“写入”权限。  
 
 
 > [!IMPORTANT]  
@@ -182,9 +182,9 @@ ms.locfileid: "49411321"
 
 SQL 服务器文档可帮助你 [手动注册 SPN](https://technet.microsoft.com/library/ms191153\(v=sql.120\).aspx)，并提供有关 SPN 和 Kerberos 连接的其他背景信息。  
 
-> [!IMPORTANT]  
->  -   在为群集 SQL Server 创建 SPN 时，你必须指定 SQL Server 群集的虚拟名称作为 SQL Server 计算机名  
-> -   用于为 SQL Server 命名实例注册 SPN 的命令与你在为默认实例注册 SPN 时使用的命令相同，只是端口号必须与命名实例使用的端口匹配  
+> [!IMPORTANT]
+> - 在为群集 SQL Server 创建 SPN 时，你必须指定 SQL Server 群集的虚拟名称作为 SQL Server 计算机名  
+>   -   用于为 SQL Server 命名实例注册 SPN 的命令与你在为默认实例注册 SPN 时使用的命令相同，只是端口号必须与命名实例使用的端口匹配  
 
 可通过使用 **Setspn** 工具来为站点数据库服务器的 SQL Server 服务帐户注册 SPN。 你必须在位于 SQL Server 的域中的计算机上运行 Setspn 工具，并且该工具必须使用域管理员凭据才能运行。  
 
@@ -279,9 +279,9 @@ SQL 服务器文档可帮助你 [手动注册 SPN](https://technet.microsoft.com
 
 -   用于执行站点重置的帐户必须具有下列权限：  
 
-    -   **管理中心站点**：您用于在此站点中运行站点重置的帐户必须是管理中心站点服务器上的本地管理员，而且必须具有与“完全权限管理员”  这个基于角色的管理安全角色等效的权限。  
+    -   **管理中心站点**：你用于在此站点中运行站点重置的帐户必须是管理中心站点服务器上的本地管理员，而且必须具有与“完全权限管理员”这个基于角色的管理安全角色等效的权限。  
 
-    -   **主站点**：您用于在此站点中运行站点重置的帐户必须是主站点服务器上的本地管理员，而且必须具有与“完全权限管理员”  这个基于角色的管理安全角色等效的权限。 如果主站点位于具有管理中心站点的层次结构中，则此帐户还必须是管理中心站点服务器上的本地管理员。  
+    -   **主站点**：你用于在此站点中运行站点重置的帐户必须是主站点服务器上的本地管理员，而且必须具有与“完全权限管理员”这个基于角色的管理安全角色等效的权限。 如果主站点位于具有管理中心站点的层次结构中，则此帐户还必须是管理中心站点服务器上的本地管理员。  
 
 **站点重置的限制**
   - 从版本 1602 开始，只要层次结构配置为支持[在预生产集合中测试客户端升级](/sccm/core/clients/manage/upgrade/test-client-upgrades)，则不能使用站点重置来更改安装在站点的服务器或客户端语言包。

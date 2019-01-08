@@ -10,26 +10,26 @@ ms.assetid: f74fdb86-c7c2-447f-91f6-b42df6370d7f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d0beb10dca04fe26fb4add22b64ab61b53154185
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 0d8f5cf6b30bb465dea5ae680510f16814287daa
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32349161"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419115"
 ---
 # <a name="scenarios-to-deploy-enterprise-operating-systems-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 部署企业操作系统的方案
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 以下操作系统部署方案在 System Center Configuration Manager 中可用：  
 
--   [将 Windows 升级到最新版本](upgrade-windows-to-the-latest-version.md)：此方案将升级当前运行 Windows 7、Windows 8、Windows 8.1 或 Windows 10 的计算机上的操作系统。 此升级过程将保留计算机上的应用程序、设置和用户数据。 不存在 Windows ADK 等外部依赖关系，并且此过程比传统的操作系统部署更快、更具弹性。  
+-   [将 Windows 升级到最新版本](upgrade-windows-to-the-latest-version.md)：此方案在当前运行 Windows 7、Windows 8、Windows 8.1 或 Windows 10 的计算机上升级操作系统。 此升级过程将保留计算机上的应用程序、设置和用户数据。 不存在 Windows ADK 等外部依赖关系，并且此过程比传统的操作系统部署更快、更具弹性。  
 
--   [使用新版 Windows 刷新现有计算机](refresh-an-existing-computer-with-a-new-version-of-windows.md)：此方案将对现有计算机进行分区和格式化（擦除），并在该计算机上安装新的操作系统。 你可以在安装操作系统后迁移设置和用户数据。  
+-   [使用新版的 Windows 刷新现有的计算机](refresh-an-existing-computer-with-a-new-version-of-windows.md)：此方案将对现有计算机进行分区和格式化（擦除），并在该计算机上安装新的操作系统。 你可以在安装操作系统后迁移设置和用户数据。  
 
--   [在新计算机（裸机）上安装新版 的 Windows](install-new-windows-version-new-computer-bare-metal.md)：此方案将在新计算机上安装操作系统。 这是操作系统的全新安装，且不包括任何设置或用户数据迁移。  
+-   [在新计算机（裸机）上安装新版的 Windows](install-new-windows-version-new-computer-bare-metal.md)：此方案将在新计算机上安装操作系统。 这是操作系统的全新安装，且不包括任何设置或用户数据迁移。  
 
--   [替换现有计算机并转移设置](replace-an-existing-computer-and-transfer-settings.md)：此方案将在新计算机上安装操作系统。 （可选）你可以将设置和用户数据从旧计算机迁移到新计算机。  
+-   [替换现有计算机和传输设置](replace-an-existing-computer-and-transfer-settings.md)：此方案将在新计算机上安装操作系统。 （可选）你可以将设置和用户数据从旧计算机迁移到新计算机。  
 
 ## <a name="things-to-consider-before-you-deploy-operating-system-images"></a>在部署操作系统映像之前应注意的事项  
  在部署操作系统之前应注意的某些事项。  
@@ -51,12 +51,12 @@ ms.locfileid: "32349161"
 ## <a name="task-sequence-deployments"></a>任务序列部署  
  创建的任务序列可通过下列方式之一在 Configuration Manager 客户端计算机上部署操作系统映像：  
 
--   从分发点将映像及其内容先下载到 Configuration Manager 客户端缓存，然后安装映像。  
+- 从分发点将映像及其内容先下载到 Configuration Manager 客户端缓存，然后安装映像。  
 
--   直接从分发点安装映像及其内容。  
+- 直接从分发点安装映像及其内容。  
 
--   在需要时从分发点安装映像及其内容  
+- 在需要时从分发点安装映像及其内容  
 
- 默认情况下，在为任务序列创建部署时，会将映像先下载到 Configuration Manager 客户端缓存，然后安装映像。 如果选择在运行映像之前将映像下载到 Configuration Manager 客户端缓存，并且任务序列包含对硬盘驱动器重新分区的步骤，则重新分区步骤会失败，因为对硬盘驱动器分区会擦除 Configuration Manager 客户端缓存的内容。 如果任务序列必须对硬盘驱动器重新分区，则你必须通过在部署任务序列时使用“从分发点运行程序”   选项，从分发点运行映像安装。  
+  默认情况下，在为任务序列创建部署时，会将映像先下载到 Configuration Manager 客户端缓存，然后安装映像。 如果选择在运行映像之前将映像下载到 Configuration Manager 客户端缓存，并且任务序列包含对硬盘驱动器重新分区的步骤，则重新分区步骤会失败，因为对硬盘驱动器分区会擦除 Configuration Manager 客户端缓存的内容。 如果任务序列必须对硬盘驱动器重新分区，则你必须通过在部署任务序列时使用“从分发点运行程序”   选项，从分发点运行映像安装。  
 
- 有关详细信息，请参阅 [Deploy a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS)。  
+  有关详细信息，请参阅 [Deploy a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS)。  

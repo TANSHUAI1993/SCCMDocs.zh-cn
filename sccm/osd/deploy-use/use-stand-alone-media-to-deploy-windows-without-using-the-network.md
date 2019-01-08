@@ -10,16 +10,16 @@ ms.assetid: 58a0d2ae-de76-401f-b854-7a5243949033
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 18e50806868955eac807645a5378aea53acdc899
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 9e297842a82ac3ae39f4e3a75962aaef115e35a4
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32348600"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53420968"
 ---
 # <a name="use-stand-alone-media-to-deploy-windows-without-using-the-network-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中使用独立媒体部署 Windows，而不使用网络
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 System Center Configuration Manager 中的独立媒体包含在计算机上部署操作系统所需的所有内容。 这包括启动映像、操作系统映像和安装操作系统的任务序列（包括应用程序、驱动程序等）。 独立媒体部署允许在下列情况下部署操作系统：  
 
@@ -29,13 +29,13 @@ System Center Configuration Manager 中的独立媒体包含在计算机上部�
 
 你可以在以下操作系统部署方案中使用独立媒体：  
 
--   [使用新版的 Windows 刷新现有的计算机](refresh-an-existing-computer-with-a-new-version-of-windows.md)  
+- [使用新版的 Windows 刷新现有的计算机](refresh-an-existing-computer-with-a-new-version-of-windows.md)  
 
--   [在新计算机（裸机）上安装新版的 Windows](install-new-windows-version-new-computer-bare-metal.md)  
+- [在新计算机（裸机）上安装新版的 Windows](install-new-windows-version-new-computer-bare-metal.md)  
 
--   [将 Windows 升级到最新版本](upgrade-windows-to-the-latest-version.md)  
+- [将 Windows 升级到最新版本](upgrade-windows-to-the-latest-version.md)  
 
- 完成其中一个操作系统部署方案中的步骤，然后运行以下部分来准备并创建独立媒体。  
+  完成其中一个操作系统部署方案中的步骤，然后运行以下部分来准备并创建独立媒体。  
 
 ## <a name="task-sequence-actions-not-supported-when-using-stand-alone-media"></a>使用独立媒体时不支持任务序列操作  
  如果你已完成其中一个受支持的操作系统部署方案中的步骤，则会创建要部署或升级操作系统的任务序列并且所有关联的内容都将被分发到分发点。 使用独立媒体时，任务序列中不支持以下操作：  

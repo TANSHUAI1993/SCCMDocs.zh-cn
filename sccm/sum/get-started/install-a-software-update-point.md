@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b099a645-6434-498f-a408-1d438e394396
-ms.openlocfilehash: 3b2bb1f6866bb5266f20fb94451bfbfd2ce675bb
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 2c6c397b7b790b2cecada7fc5a7811ff77ae2d07
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353073"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422974"
 ---
 # <a name="install-and-configure-a-software-update-point"></a>安装和配置软件更新点  
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 
 > [!IMPORTANT]  
@@ -50,7 +50,7 @@ ms.locfileid: "32353073"
         >  辅助站点上提供了“使用自动部署规则下载内容时使用代理服务器”设置，但不用于软件更新点。 只有管理中心站点和主站点上的软件更新点才从 Microsoft 更新页下载内容。  
 
 > [!IMPORTANT]  
->  默认情况下，当自动部署规则运行时，将使用在其上创建自动部署规则的服务器的“本地系统”帐户连接到 Internet 并下载软件更新。 当此帐户没有 Internet 访问权限时，软件更新将无法下载并且以下条目会被记录在 ruleengine.log 中：**无法从 Internet 下载更新。错误 = 12007**。 当“本地系统”帐户没有 Internet 访问权限时，配置凭据以连接到代理服务器。  
+>  默认情况下，当自动部署规则运行时，将使用在其上创建自动部署规则的服务器的“本地系统”帐户连接到 Internet 并下载软件更新。 如果此帐户没有 Internet 访问权限，软件更新将无法下载，并且将在 ruleengine.log 中记录下列条目：**未能从 Internet 下载更新。错误 = 12007**。 当“本地系统”帐户没有 Internet 访问权限时，配置凭据以连接到代理服务器。  
 
 
 ## <a name="wsus-settings"></a>WSUS 设置  
@@ -88,14 +88,14 @@ ms.locfileid: "32353073"
 
  以下列表提供了有关可用作同步源的每个选项的详细信息：  
 
--   从 Microsoft 更新同步：使用此设置以从 Microsoft 更新同步软件更新元数据。 管理中心站点必须具有 Internet 访问权限。否则，同步将失败。 只有在配置顶层站点的软件更新点后才可以使用此设置。  
+-   **从 Microsoft 更新同步**：使用此设置从 Microsoft 更新同步软件更新元数据。 管理中心站点必须具有 Internet 访问权限。否则，同步将失败。 只有在配置顶层站点的软件更新点后才可以使用此设置。  
 
     > [!NOTE]  
     >  如果软件更新点与 Internet 之间存在防火墙，则可能需要将防火墙配置为接受用于 WSUS 网站的 HTTP 和 HTTPS 端口。 你也可以选择将防火墙上的访问权限局限于受限制的域。 有关如何规划支持软件更新的防火墙的详细信息，请参阅 [Configure firewalls](../plan-design/plan-for-software-updates.md#BKMK_ConfigureFirewalls)。  
 
--   **<a name="BKMK_wsussync"></a>** 从上游数据源位置同步：使用此设置以从上游同步源同步软件更新元数据。 系统会将子主站点和辅助站点自动配置为将父站点 URL 用于此设置。 你可以选择将从现有的 WSUS 服务器同步软件更新。 指定 URL，如 https://WSUSServer:8531 ，其中 8531 是用于连接到 WSUS 服务器的端口。  
+-   **<a name="BKMK_wsussync"></a>从上游数据源位置同步**：使用此设置从上游数据源同步软件更新元数据。 系统会将子主站点和辅助站点自动配置为将父站点 URL 用于此设置。 你可以选择将从现有的 WSUS 服务器同步软件更新。 指定 URL，如 https://WSUSServer:8531 ，其中 8531 是用于连接到 WSUS 服务器的端口。  
 
--   不要从 Microsoft 更新或上游数据源同步：使用此设置以在顶层站点上的软件更新点从 Ineternet 断开连接时手动同步软件更新。 有关详细信息，请参阅[从断开连接的软件更新点中同步软件更新](synchronize-software-updates-disconnected.md)。  
+-   **不从 Microsoft 更新或上游数据源同步**：使用此设置在顶层站点上的软件更新点从 Internet 断开时手动同步软件更新。 有关详细信息，请参阅[从断开连接的软件更新点中同步软件更新](synchronize-software-updates-disconnected.md)。  
 
 > [!NOTE]  
 >  如果软件更新点与 Internet 之间存在防火墙，则可能需要将防火墙配置为接受用于 WSUS 网站的 HTTP 和 HTTPS 端口。 你也可以选择将防火墙上的访问权限局限于受限制的域。 有关如何规划支持软件更新的防火墙的详细信息，请参阅 [Configure firewalls](../plan-design/plan-for-software-updates.md#BKMK_ConfigureFirewalls)。  

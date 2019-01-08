@@ -10,18 +10,18 @@ ms.assetid: 3ce372d6-bd93-4d4d-b612-5303f89c36f0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5ecaa025a9a9f0d85b7a2ef857e70c4d762fd1f5
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 065353a9f6d341364a1414d58be1b32fd3686877
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32338272"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53419047"
 ---
 # <a name="capabilities-in-technical-preview-1712-for-system-center-configuration-manager"></a>适用于 System Center Configuration Manager 的 Technical Preview 1712 中的功能
 
-*适用范围：System Center Configuration Manager (Technical Preview)*
+适用范围：System Center Configuration Manager (Technical Preview)
 
-本文介绍了适用于 System Center Configuration Manager 的 Technical Preview（版本 1712）中的可用功能。 你可以安装此版本，以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。 
+本文介绍了适用于 System Center Configuration Manager 的 Technical Preview（版本 1712）中的可用功能。 你可以安装此版本，以更新 Technical Preview 站点的功能并向其添加新功能。 
 
 在安装此版本的 Technical Preview 之前，请查看[适用于 System Center Configuration Manager 的 Technical Preview](/sccm/core/get-started/technical-preview)。 该文章将帮助你熟悉使用 Technical Preview 的常规要求和限制，如何在版本之间进行更新以及如何在 Technical Preview 中提供功能相关的反馈。     
 
@@ -33,14 +33,14 @@ ms.locfileid: "32338272"
 **Known Issues in this Technical Preview:**
 -->
 **此 Technical Preview 中的已知问题：**
--   如果站点服务器处于被动模式，则无法更新到新的预览版本。 如果具有[被动模式的主站点服务器](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability)，那么在更新到此新的预览版本之前，必须卸载该被动模式站点服务器。 可以在站点完成更新后，重新安装被动模式站点服务器。
+- 如果站点服务器处于被动模式，则无法更新到新的预览版本。 如果具有[被动模式的主站点服务器](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability)，那么在更新到此新的预览版本之前，必须卸载该被动模式站点服务器。 可以在站点完成更新后，重新安装被动模式站点服务器。
 
   若要卸载被动模式站点服务器，请执行以下操作：
   1. 在 Configuration Manager 控制台中，依次转到“管理” > “概述” > “站点配置” > “服务器和站点系统角色”，再选择被动模式站点服务器。
   2. 在“站点系统角色”窗格中，右键单击“站点服务器”角色，再选择“删除角色”。
   3. 右键单击被动模式站点服务器，再选择“删除”。
   4. 卸载站点服务器后，在处于主动模式的主站点服务器上重启服务 CONFIGURATION_MANAGER_UPDATE。
-<!--sms489412-->
+  <!--sms489412-->
 
 
 **以下是此版本可以试用的新功能。**  
@@ -56,13 +56,11 @@ ms.locfileid: "32338272"
 -->
 
 ## <a name="do-not-automatically-upgrade-superseded-applications"></a>不自动升级被取代的应用程序
-<!-- 1351266 -->
-基于你的[用户语音反馈](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/11532669-fix-supercedence-behavior)，在此版本中，可选择配置应用程序部署，使其不自动升级任何被取代的版本。 现在创建部署时，在“部署软件向导”的“部署设置”页中，对于可用的或必需的安装目的，可启用或禁用“自动升级此应用程序的任何被取代版本”选项。
+<!-- 1351266 --> 基于你的 [反馈](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/11532669-fix-supercedence-behavior)，在此版本中，可选择配置应用程序部署，使其不自动升级任何被取代的版本。 现在创建部署时，在“部署软件向导”的“部署设置”页中，对于可用的或必需的安装目的，可启用或禁用“自动升级此应用程序的任何被取代版本”选项。
 
 
 ## <a name="install-multiple-applications-in-software-center"></a>安装软件中心中的多个应用程序
-<!-- 1357126 -->
-如果最终用户或桌面技术人员需要在设备上安装多个应用程序，软件中心现在支持安装多个选定的应用程序。 用户无需等待安装完成即可开始下一个安装，从而提高工作效率。
+<!-- 1357126 --> 如果最终用户或桌面技术人员需要在设备上安装多个应用程序，软件中心现在支持安装多个选定应用程序。 用户无需等待安装完成即可开始下一个安装，从而提高工作效率。
 
 在“应用程序”选项卡上使用多选择模式时，可使用以下条件确定软件中心针对多选择启用的应用：
  - 应用对用户可见
@@ -83,8 +81,7 @@ ms.locfileid: "32338272"
 
 
 ## <a name="client-based-pxe-responder-service"></a>基于客户端的 PXE 响应者服务
-<!-- 1357148 -->
-客户面临的共同挑战是在具有很少或没有服务器基础结构的远程/分支机构提供 PXE 服务。 分发点角色支持客户端操作系统，但由于依赖于 Windows 部署服务，因此无法启用 PXE。
+<!-- 1357148 --> 客户面临的共同挑战是在具有很少或没有服务器基础结构的远程/分支机构提供 PXE 服务。 分发点角色支持客户端操作系统，但由于依赖于 Windows 部署服务，因此无法启用 PXE。
 
 现在可使用新的客户端设置在 Configuration Manager 客户端上启用 PXE 响应者服务。 已启用 PXE 的启动映像必须驻留在 PXE 响应者的客户端缓存中。
 
@@ -92,18 +89,18 @@ ms.locfileid: "32338272"
 确保测试环境中不存在可能与此客户端 PXE 响应者冲突的现有的已启用 PXE 的分发点或其他 PXE 服务器。
 
 在 Configuration Manager 控制台中：
- 1. 在“操作系统”下的“软件库”工作区中，“任务序列”：使用自定义模板创建任务序列。
-    1. 单击“添加”，选择“常规”，然后选择“设置任务序列变量”步骤。 输入“SMSTSPersistContent”为任务序列变量，并输入值“TRUE”。
-    1. 单击“添加”，选择“软件”，然后选择“下载包内容”步骤。 单击金色的星号，然后选择已启用 PXE 的启动映像。 包括 x86 和 x64 启动映像。 配置步骤，将其放置于“Configuration Manager 客户端缓存”。
-    1. 单击“添加”，选择“常规”，然后选择“设置任务序列变量”步骤。 输入“SMSTSPreserveContent”为任务序列变量，并输入值“TRUE”。
- 2. 在“客户端设置”下的“管理”工作区中：创建自定义客户端设备设置策略。
-    1. 选择“客户端缓存设置”组。
-  1. 将“在完整的操作系统中启用 Configuration Manager 客户端以共享内容”设置设置为“是”。
-    1. 将“启用 PXE 响应者服务”设置设置为“是”。
-  1. 对于“创建自签名证书或导入 PKI 客户端证书”设置，请单击“提供证书”。 如果测试环境有 PKI，请选择“导入证书”，否则请单击“确定”，创建一个自签名证书。 
-    1. 必要时，请配置测试环境的剩余设置。 （除非有特定的网络或安全性要求，否则应使用默认设置。）
- 3. 将任务序列和自定义客户端设置部署到目标客户端的集合，以成为 PXE 响应者。 等待要应用的策略以及要运行的任务序列。
- 4. 照常在同一个 PXE/网络启动的子网上启动另一个客户。
+1. 在“操作系统”下的“软件库”工作区中，“任务序列”：使用自定义模板创建任务序列。
+   1. 单击“添加”，选择“常规”，然后选择“设置任务序列变量”步骤。 输入“SMSTSPersistContent”为任务序列变量，并输入值“TRUE”。
+   1. 单击“添加”，选择“软件”，然后选择“下载包内容”步骤。 单击金色的星号，然后选择已启用 PXE 的启动映像。 包括 x86 和 x64 启动映像。 配置步骤，将其放置于“Configuration Manager 客户端缓存”。
+   1. 单击“添加”，选择“常规”，然后选择“设置任务序列变量”步骤。 输入“SMSTSPreserveContent”为任务序列变量，并输入值“TRUE”。
+2. 在“客户端设置”下的“管理”工作区中：创建自定义客户端设备设置策略。
+   1. 选择“客户端缓存设置”组。
+   1. 将“在完整的操作系统中启用 Configuration Manager 客户端以共享内容”设置设置为“是”。
+   1. 将“启用 PXE 响应者服务”设置设置为“是”。
+   1. 对于“创建自签名证书或导入 PKI 客户端证书”设置，请单击“提供证书”。 如果测试环境有 PKI，请选择“导入证书”，否则请单击“确定”，创建一个自签名证书。 
+   1. 必要时，请配置测试环境的剩余设置。 （除非有特定的网络或安全性要求，否则应使用默认设置。）
+3. 将任务序列和自定义客户端设置部署到目标客户端的集合，以成为 PXE 响应者。 等待要应用的策略以及要运行的任务序列。
+4. 照常在同一个 PXE/网络启动的子网上启动另一个客户。
 
 ### <a name="known-issues"></a>已知问题
  - 添加启动映像时，任务序列编辑器中的“下载包内容”步骤显示红色错误图标，但任务序列已成功保存。 在编辑器中再次打开此任务序列也会显示找不到引用对象的无害警告。 <!-- sms427542 -->
@@ -118,8 +115,7 @@ ms.locfileid: "32338272"
 Surface 仪表板现在显示 Surface 设备的固件版本，而不是操作系统版本。 在控制台中，转到“监视” > “Surface 设备”。 可查看以下项：
 - Surface 百分比
 - Surface 型号百分比
-- 前五个固件版本
- <!--1355788-->
+- 前五个固件版本 <!--1355788-->
 
 
 ## <a name="improvements-to-office-365-client-management-dashboard"></a>对 Office 365 客户端管理仪表板的改进 
@@ -130,8 +126,8 @@ Surface 仪表板现在显示 Surface 设备的固件版本，而不是操作系
 ## <a name="improvements-to-the-configuration-manager-console"></a>对 Configuration Manager 控制台的改进 
 我们根据用户之声的反馈，对 Configuration Manager 控制台做了以下改进。
 
-- [设备列表显示主要用户](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8782225-enable-a-column-for-primary-user)：默认情况下，现在“资产和符合性”下的设备列表显示主要用户。 上次登录的用户还可以作为可选列添加。 <!-- 1357280 -->
-- [已重命名的集合显示在现有集合成员身份规则中](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/20125567-fix-the-renaming-of-collections)：如果集合是另一个集合的成员并且已重命名，则会根据成员身份规则更新新名称。<!--1357282--> 
+- [设备列表显示主要用户](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8782225-enable-a-column-for-primary-user)：默认情况下，现在“资产和符合性”、“设备”下的设备列表显示主要用户。 上次登录的用户还可以作为可选列添加。 <!-- 1357280 -->
+- [重命名的集合显示在现有的集合成员资格规则中](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/20125567-fix-the-renaming-of-collections)：如果一个集合是另一个集合的成员且已重命名，新名称将根据成员资格规则更新。<!--1357282--> 
 
 
 ## <a name="improvements-to-operating-system-deployment"></a>对操作系统部署的改进

@@ -10,16 +10,16 @@ ms.assetid: ccc9f652-2953-4c38-8a90-c799484105ca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bc20195824af03a361cb38837a061b68e78d098a
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 980f808e4bb367948539ab74ac70d7bce7ed2e20
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32348362"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53416854"
 ---
 # <a name="prestart-commands-for-task-sequence-media-in-system-center-configuration-manager"></a>System Center Configuration Manager 中任务序列媒体的预启动命令
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 可以在 System Center Configuration Manager 中创建一个预启动命令，用于启动媒体、独立媒体和预留媒体。 预启动命令是一个脚本或可执行文件，它在选择任务序列之前运行并且可以在 Windows PE 中与用户交互。 预启动命令可能会提示用户输入信息并将此信息保存在任务序列环境中，或者在任务序列变量中查询信息。 启动目标计算机后，会在从管理点下载策略之前运行命令行。 使用以下过程创建脚本以用于预启动命令，分发与预启动命令关联的内容，以及在媒体中配置预启动命令。  
 

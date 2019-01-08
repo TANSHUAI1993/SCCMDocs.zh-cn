@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
-ms.openlocfilehash: 627e476ee5824eafeb9d034b64010c8677f22a85
-ms.sourcegitcommit: 1f8731ed8f0308cb2cb576722adb0821a366e9ce
+ms.openlocfilehash: 1fa5646b17646258e4863b3a53960c9c15497389
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51223749"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418180"
 ---
 # <a name="manage-office-365-proplus-with-configuration-manager"></a>使用 Configuration Manager 管理 Office 365 ProPlus
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 使用 Configuration Manager，可以通过下列方式管理 Office 365 专业增强版应用：
 
@@ -27,11 +27,11 @@ ms.locfileid: "51223749"
 
 - [部署 Office 365 应用](#deploy-office-365-apps)：可从 Office 365 客户端管理仪表板启动 Office 365 安装程序，使首次 Office 365 应用安装体验更简单。 该向导可让你配置 Office 365 安装设置、从 Office 内容分发网络 (CDN) 下载文件以及创建并部署脚本应用程序的内容。    
 
-- [部署 Office 365 更新](#deploy-office-365-updates)：可以使用软件更新管理工作流管理 Office 365 客户端更新。 当 Microsoft 将新的 Office 365 客户端更新发布到 Office 内容分发网络 (CDN) 时，Microsoft 还会将更新包发布到 Windows Server 更新服务 (WSUS)。 将 Office 365 客户端更新从 WSUS 目录同步到站点服务器之后，更新可部署到客户端。    
+- [部署 Office 365 更新](#deploy-office-365-updates)：可以通过使用软件更新管理工作流来管理 Office 365 客户端更新。 当 Microsoft 将新的 Office 365 客户端更新发布到 Office 内容分发网络 (CDN) 时，Microsoft 还会将更新包发布到 Windows Server 更新服务 (WSUS)。 将 Office 365 客户端更新从 WSUS 目录同步到站点服务器之后，更新可部署到客户端。    
 
-- [添加 Office 365 更新下载的语言](#add-languages-for-office-365-update-downloads)：可以添加对 Configuration Manager 的支持，以下载 Office 365 支持的任意语言的更新。 这意味着只要 Office 365 支持，Configuration Manager 就可不必支持该语言。 在 Configuration Manager 版本 1610 之前，必须使用 Office 365 客户端上配置的语言下载和部署更新。 
+- [添加 Office 365 更新下载语言](#add-languages-for-office-365-update-downloads)：可以添加对 Configuration Manager 的支持，以下载 Office 365 支持的任意语言的更新。 这意味着只要 Office 365 支持，Configuration Manager 就可不必支持该语言。 在 Configuration Manager 版本 1610 之前，必须使用 Office 365 客户端上配置的语言下载和部署更新。 
 
-- [更改更新频道](#change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager)：可以使用组策略向 Office 365 客户端分发注册表项值更改，从而更改更新频道。
+- [更改更新通道](#change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager)：可以使用组策略向 Office 365 客户端分发注册表项值更改，从而更改更新通道。
 
 
 ## <a name="office-365-client-management-dashboard"></a>Office 365 客户端管理仪表板  
@@ -139,10 +139,7 @@ Office 365 客户端管理仪表板中显示的数据来自硬件清单。 启�
 
 |Configuration Manager 版本 |最终用户体验|  
 |----------------|---------------------|
-|1610 之前|设置重启标志，并在计算机重启后安装更新。|
-|1610|安装更新前，关闭 Office 365 应用且不发出警告|
-|包含更新的 1610 <br/>1702|设置重启标志，并在计算机重启后安装更新。|
-|1706|安装更新前，客户端收到弹出消息、应用内通知及倒计时对话框。|
+|1706、1710|安装更新前，客户端收到弹出消息、应用内通知及倒计时对话框。|
 |1802| 安装更新前，客户端收到弹出消息、应用内通知及倒计时对话框。 </br>如果强制执行 Office 365 客户端更新期间有任何 Office 365 应用程序正在运行，将不会强制关闭 Office 应用程序。 更新安装将改为返回要求系统重启 <!--510006-->|
 
 
@@ -173,20 +170,20 @@ Office 365 客户端管理仪表板中显示的数据来自硬件清单。 启�
 1. 从命令提示符处键入 wbemtest，以管理用户身份打开 Windows Management Instrumentation 测试器。
 2. 单击“连接”，然后键入 root\sms\site_&lt;siteCode&gt;。
 3. 单击“查询”，然后运行下列查询：select &#42; from SMS_SCI_Component where componentname ="SMS_WSUS_CONFIGURATION_MANAGER"  
-   ![WMI 查询](..\media\1-wmiquery.png)
+   ![WMI 查询](../media/1-wmiquery.png)
 4. 在结果窗格中，双击具有管理中心站点或独立主站点的站点代码的对象。
 5. 选择“属性”属性，单击“编辑属性”，然后单击“查看嵌入项”。
-![属性编辑器](..\media\2-propeditor.png)
+   ![属性编辑器](../media/2-propeditor.png)
 6. 从第一个查询结果开始，打开每个对象，直到找到 **PropertyName** 属性为 **AdditionalUpdateLanguagesForO365** 的对象。
 7. 选择“Value2”，然后单击“编辑属性”。  
-![编辑 Value2 属性](..\media\3-queryresult.png)
+   ![编辑 Value2 属性](../media/3-queryresult.png)
 8. 向“Value2”属性添加其他语言，然后单击“保存属性”。 <br/> 例如，pt-pt（葡萄牙语 - 葡萄牙）、af-za（南非荷兰语 - 南非），以及 nn-no（挪威尼诺斯克文 - 挪威）等等。可以为示例语言键入 `pt-pt,af-za,nn-no`。 请勿在语言之间使用空格。
  
-   ![在“属性编辑器”中添加语言](..\media\4-props.png)  
+   ![在“属性编辑器”中添加语言](../media/4-props.png)  
 9. 依次单击“关闭”->“关闭”->“保存属性”，然后单击“保存对象”（如果在此处单击“关闭”，值将被丢弃）。 单击“关闭”，然后单击“退出”，退出 Windows Management Instrumentation 测试器。
 10. 在 Configuration Manager 控制台中，转到“软件库” > “概述” > “Office 365 客户端管理” > “Office 365 更新”。
 11. 现在，如果下载 Office 365 更新，将下载在向导中选择的语言的更新，并在此过程中配置更新。 若要验证是否下载了正确语言的更新，请转到更新的包源，再查找文件名中包含语言代码的文件。  
-![使用其他语言的文件名](..\media\5-verification.png)
+    ![使用其他语言的文件名](../media/5-verification.png)
 
 ## <a name="updating-office-365-during-task-sequences-when-office-365-is-installed-in-the-base-image"></a>在基础映像中安装 Office 365 后，在任务序列期间更新 Office 365
 当在已安装有 Office 365 的映像中安装操作系统时，更新通道注册表项值可能会包含原始安装位置。 在这种情况下，更新扫描不会显示任何适用的 Office 365 客户端更新。 计划的 Office 自动更新任务每周运行几次。 该任务运行后，更新通道将指向已配置的 Office CDN URL，随后，扫描将显示这些适用的更新。 <!--510452-->

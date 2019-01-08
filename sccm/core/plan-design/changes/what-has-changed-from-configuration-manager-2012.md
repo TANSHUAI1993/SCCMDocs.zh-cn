@@ -9,16 +9,16 @@ ms.assetid: 3ae68fa6-8b30-45dd-9d12-50bb67cb4a9d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a58e5924fc34bad514ca6f01bb23aa84443705c6
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: df78f6ebfece28d01402272814e8527c3ca4a5fd
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32340703"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53422821"
 ---
 # <a name="what39s-changed-in-system-center-configuration-manager-from-system-center-2012-configuration-manager"></a>自 System Center 2012 Configuration Manager 以来 System Center Configuration Manager 中更改的内容
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 
  System Center Configuration Manager Current Branch 引入了自 System Center 2012 Configuration Manager 以来的重要更改。 本主题帮助识别 System Center Configuration Manager 的基线版本 1511 中的显著更改和新增功能。 若要了解有关 System Center Configuration Manager 后续更新中引入的更改，请参阅 [System Center Configuration Manager 增量版本中的新增功能](/sccm/core/plan-design/changes/whats-new-incremental-versions)。
@@ -122,27 +122,27 @@ ms.locfileid: "32340703"
 
 请注意对符合性设置进行的以下更改：
 
--   System Center Configuration Manager 改进了用于创建配置项目的工作流。 现在，当创建配置项目并选择受支持的平台时，只有与该平台相关的设置才可用。 请参阅[System Center Configuration Manager 中的符合性设置入门](../../../compliance/get-started/get-started-with-compliance-settings.md)。  
+- System Center Configuration Manager 改进了用于创建配置项目的工作流。 现在，当创建配置项目并选择受支持的平台时，只有与该平台相关的设置才可用。 请参阅[System Center Configuration Manager 中的符合性设置入门](../../../compliance/get-started/get-started-with-compliance-settings.md)。  
 
--   **创建配置项目**向导现在可以更轻松地选择你想要创建的配置项目类型。 此外，新的和更新的配置项目可用于：  
+- **创建配置项目**向导现在可以更轻松地选择你想要创建的配置项目类型。 此外，新的和更新的配置项目可用于：  
 
-    -   使用 Configuration Manager 客户端管理的 Windows 10 设备。  
+  -   使用 Configuration Manager 客户端管理的 Windows 10 设备。  
 
-    -   使用 Configuration Manager 客户端管理的 Mac OS X 设备。  
+  -   使用 Configuration Manager 客户端管理的 Mac OS X 设备。  
 
-    -   使用 Configuration Manager 客户端管理的 Windows 台式计算机和服务器计算机。  
+  -   使用 Configuration Manager 客户端管理的 Windows 台式计算机和服务器计算机。  
 
-    -   未使用 Configuration Manager 客户端管理的 Windows 8.1 和 Windows 10 设备。  
+  -   未使用 Configuration Manager 客户端管理的 Windows 8.1 和 Windows 10 设备。  
 
-    -   未使用 Configuration Manager 客户端管理的 Windows Phone 设备。  
+  -   未使用 Configuration Manager 客户端管理的 Windows Phone 设备。  
 
-    -   未使用 Configuration Manager 客户端管理的 iOS 和 Mac OS X 设备。  
+  -   未使用 Configuration Manager 客户端管理的 iOS 和 Mac OS X 设备。  
 
-    -   未使用 Configuration Manager 客户端管理的 Android 和 Samsung KNOX 标准版设备。  
+  -   未使用 Configuration Manager 客户端管理的 Android 和 Samsung KNOX 标准版设备。  
 
- 请参阅[如何在 System Center Configuration Manager 中创建配置项目](../../../compliance/deploy-use/create-configuration-items.md)。  
+  请参阅[如何在 System Center Configuration Manager 中创建配置项目](../../../compliance/deploy-use/create-configuration-items.md)。  
 
--   支持使用 Microsoft Intune 注册或使用 Configuration Manager 客户端管理的 Mac OS X 计算机上的管理设置。 请参阅[如何为没有使用 System Center Configuration Manager 客户端管理的 iOS 和 Mac OS X 设备创建配置项目](../../../compliance/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client.md)。  
+- 支持使用 Microsoft Intune 注册或使用 Configuration Manager 客户端管理的 Mac OS X 计算机上的管理设置。 请参阅 [如何为没有使用 System Center Configuration Manager 客户端管理的 iOS 和 Mac OS X 设备创建配置项目](../../../compliance/deploy-use/create-configuration-items-for-ios-and-mac-os-x-devices-managed-without-the-client.md)。  
 
 ## <a name="protect-data-and-site-infrastructure"></a>保护数据和站点基础结构  
 System Center Configuration Manager 支持与 Windows Hello 企业版（以前为 Microsoft Passport for Windows）集成。 Windows Hello 企业版是运行 Windows 10 的设备上使用 Active Directory 或 Azure Active Directory 帐户取代密码、智能卡或虚拟智能卡进行登录的一种替代方法。 请参阅 [System Center Configuration Manager 中的 Windows Hello 企业版设置](../../../protect/deploy-use/windows-hello-for-business-settings.md)。

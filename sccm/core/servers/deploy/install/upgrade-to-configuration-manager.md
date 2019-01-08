@@ -9,16 +9,16 @@ ms.assetid: c64e7483-b4bb-4738-95f4-ecdaeb6a2ba6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1cea0a54bc4c4c2d69f979bb09d83d7f5fac7706
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 00a6723dd56aa41287d34a7fcdc9f549d792d666
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342709"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417908"
 ---
 # <a name="upgrade-to-system-center-configuration-manager"></a>升级到 System Center Configuration Manager
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 可以运行就地升级，以从运行 System Center 2012 Configuration Manager 的站点和层次结构升级到 System Center Configuration Manager。  
 
@@ -31,19 +31,19 @@ ms.locfileid: "32342709"
 
 **升级到版本 1802**   
 如果具有版本 1802 基线介质，可以将下列版本升级到 System Center Configuration Manager 版本 1802 的完整许可版本：   
--     System Center Configuration Manager 版本 1802 的评估版安装
--     System Center 2012 Configuration Manager Service Pack 1
--     System Center 2012 Configuration Manager Service Pack 2
--     System Center 2012 R2 Configuration Manager
--     System Center 2012 R2 Configuration Manager Service Pack 1
+- System Center Configuration Manager 版本 1802 的评估版安装
+- System Center 2012 Configuration Manager Service Pack 1
+- System Center 2012 Configuration Manager Service Pack 2
+- System Center 2012 R2 Configuration Manager
+- System Center 2012 R2 Configuration Manager Service Pack 1
 
 **升级到版本 1702**   
 如果具有版本 1702 基线介质，可以将下列版本升级到 System Center Configuration Manager 版本 1702 的完整许可版本：   
--     System Center Configuration Manager 版本 1702 的评估版安装
--     System Center 2012 Configuration Manager Service Pack 1
--     System Center 2012 Configuration Manager Service Pack 2
--     System Center 2012 R2 Configuration Manager
--     System Center 2012 R2 Configuration Manager Service Pack 1
+- System Center Configuration Manager 版本 1702 的评估版安装
+- System Center 2012 Configuration Manager Service Pack 1
+- System Center 2012 Configuration Manager Service Pack 2
+- System Center 2012 R2 Configuration Manager
+- System Center 2012 R2 Configuration Manager Service Pack 1
 
 **升级到 1606 版本**  
 2016 年 12 月 15 日，为添加对其他升级方案的支持，已发布版本 1606 的基线媒体。 此新版本支持将以下版本升级到 System Center Configuration Manager 版本 1606 的完整许可版本：  
@@ -87,7 +87,7 @@ When you have version 1511 baseline media, you can upgrade the following to a fu
 
 ### <a name="before-you-upgrade"></a>升级准备工作  
 
-**检查 System Center 2012 Configuration Manager 环境**并按照 KB4018655：[由于反复重试任务 Configuration Manager 客户端每五个小时重新安装一次并可能导致客户端意外升级](https://support.microsoft.com/help/4018655)中详细介绍的方式解决问题。
+检查 System Center 2012 Configuration Manager 环境并解决 KB4018655 中详述的问题：[由于重复的重试任务，Configuration Manager 客户端每五个小时重新安装一次，并可能在无意间导致客户端升级](https://support.microsoft.com/help/4018655)。
 
 **确保计算机环境符合升级到 System Center Configuration Manager 所需的支持配置**：  
 
@@ -147,7 +147,7 @@ Configuration Manager 无法升级使用网络负载平衡 (NLB) 群集来承载
 有关站点维护任务的详细信息，请参阅：  
 
 -   System Center 2012 Configuration Manager：[规划 Configuration Manager 的维护任务](https://technet.microsoft.com/library/gg712686.aspx)  
--   System Center Configuration Manager：[System Center Configuration Manager 维护任务参考](../../../../core/servers/manage/reference-for-maintenance-tasks.md)  
+-   System Center Configuration Manager：[Reference for maintenance tasks for System Center Configuration Manager](../../../../core/servers/manage/reference-for-maintenance-tasks.md)  
 
 **运行安装程序先决条件检查程序**：  
 升级站点之前，可以独立于安装程序运行 **先决条件检查程序** ，以验证站点是否满足先决条件 稍后升级该站点时会再次运行必备组件检查程序。  
@@ -241,7 +241,7 @@ Configuration Manager 不支持辅助站点备份，也不支持辅助站点数�
 > [!TIP]  
 >  在升级层次结构的顶层站点时，也会更新层次结构中的每个分发点上的客户端安装包。 升级主站点时，会更新该主站点提供的客户端升级包。  
 
-有关如何升级现有客户端和如何安装新客户端的信息，请参阅[如何在 System Center Configuration Manager 中升级 Windows 计算机的客户端](../../../../core/clients/manage/upgrade/upgrade-clients-for-windows-computers.md)。  
+有关如何升级现有客户端和如何安装新客户端的信息，请参阅 [如何在 System Center Configuration Manager 中升级 Windows 计算机的客户端](../../../../core/clients/manage/upgrade/upgrade-clients-for-windows-computers.md)。  
 
 ##  <a name="bkmk_considerations"></a> 升级注意事项  
 **自动操作**：  
@@ -282,7 +282,7 @@ Configuration Manager 不支持辅助站点备份，也不支持辅助站点数�
 
 -   有关如何创建和还原站点数据库备份的信息，请参阅[适用于安装程序的命令行选项](../../../../core/servers/deploy/install/command-line-options-for-setup.md)。  
 -   有关 **/TESTDBUPGRADE** 命令行选项的信息，请参阅[适用于安装程序的命令行选项](../../../../core/servers/deploy/install/command-line-options-for-setup.md) 中的表。  
--   有关支持的 SQL Server 版本的信息，请参阅[对 System Center Configuration Manager 的 SQL Server 版本的支持](../../../../core/plan-design/configs/support-for-sql-server-versions.md)主题。  
+-   有关支持的 SQL Server 版本的信息，请参阅 [对 System Center Configuration Manager 的 SQL Server 版本的支持](../../../../core/plan-design/configs/support-for-sql-server-versions.md) 主题。  
 
 > [!TIP]  
 >  如果将 Microsoft Intune 与 Configuration Manager 集成：  
@@ -302,9 +302,9 @@ Configuration Manager 不支持辅助站点备份，也不支持辅助站点数�
 
 2.  还原数据库副本之后，请从 System Center Configuration Manager 的源媒体中运行安装程序。 运行安装程序时，使用 **/TESTDBUPGRADE** 命令行选项。 如果承载数据库副本的 SQL Server 实例不是默认实例，你还必须提供命令行参数以确定承载站点数据库副本的实例。  
 
-     例如，你计划升级数据库名称为 SMS_ABC 的站点数据库。 你将此站点数据库的副本还原到实例名称为 DBTest 的受支持 SQL Server 实例。 要测试站点数据库的此副本的升级，请使用下列命令行： **Setup.exe /TESTDBUPGRADE DBtest\CM_ABC**  
+     例如，你计划升级数据库名称为 SMS_ABC 的站点数据库。 你将此站点数据库的副本还原到实例名称为 DBTest 的受支持 SQL Server 实例。 要测试站点数据库的此副本的升级，请使用下列命令行：Setup.exe /TESTDBUPGRADE DBtest\CM_ABC  
 
-     可以在 System Center Configuration Manager 的源媒体上的下列位置中找到 Setup.exe：**SMSSETUP\BIN\X64**。  
+     可以在 System Center Configuration Manager 的源媒体上的下列位置中找到 Setup.exe：SMSSETUP\BIN\X64。  
 
 3.  在运行数据库升级测试的 SQL Server 实例上，监视系统驱动器根目录中的 ConfigMgrSetup.log 以了解进度和成功情况。  
 
@@ -329,33 +329,33 @@ Configuration Manager 不支持辅助站点备份，也不支持辅助站点数�
 
 #### <a name="to-upgrade-a-central-administration-site-or-primary-site"></a>升级管理中心站点或主站点  
 
-1.  验证运行安装程序的用户是否具有以下安全权限：  
+1. 验证运行安装程序的用户是否具有以下安全权限：  
 
-    -   站点服务器计算机上的本地管理员权限。  
-    -   站点（如果为远程）的远程站点数据库服务器上的本地管理员权限。    </br></br>
+   -   站点服务器计算机上的本地管理员权限。  
+   -   站点（如果为远程）的远程站点数据库服务器上的本地管理员权限。    </br></br>
 
-2.  在站点服务器计算机上，打开 Windows 资源管理器，并浏览到 **&lt;ConfigMgSourceMedia\>\SMSSETUP\BIN\X64**。  
+2. 在站点服务器计算机上，打开 Windows 资源管理器，并浏览到 **&lt;ConfigMgSourceMedia\>\SMSSETUP\BIN\X64**。  
 
-3.  双击 **Setup.exe**。 Configuration Manager 安装向导将打开。  
+3. 双击 **Setup.exe**。 Configuration Manager 安装向导将打开。  
 
-4.  在“开始之前”  页面上，单击“下一步” 。  
+4. 在“开始之前”页面上，单击“下一步”。  
 
-5.  在“入门”  页上，选择“升级此 Configuration Manager 站点” ，然后单击“下一步” 。  
+5. 在“入门”  页上，选择“升级此 Configuration Manager 站点” ，然后单击“下一步” 。  
 
-6.  在“产品密钥”  页上，单击“下一步” 。  
+6. 在“产品密钥”  页上，单击“下一步” 。  
 
-     如果以前安装了 Configuration Manager 评估版，则可以选择“安装此产品的许可版本”，然后输入 Configuration Manager 的完整安装产品密钥以将站点转换为完整版。  
+    如果以前安装了 Configuration Manager 评估版，则可以选择“安装此产品的许可版本”，然后输入 Configuration Manager 的完整安装产品密钥以将站点转换为完整版。  
 
-     从 2016 年 10 月发布的 System Center Configuration Manager 的 1606 版基线介质开始，可以指定软件保障协议的到期日期。 还可以选择指定许可协议的**软件保障到期日期**，方便向你提醒该日期。 如果在设置期间未输入此信息，则可以稍后在 Configuration Manager 控制台中指定。
+    从 2016 年 10 月发布的 System Center Configuration Manager 的 1606 版基线介质开始，可以指定软件保障协议的到期日期。 还可以选择指定许可协议的**软件保障到期日期**，方便向你提醒该日期。 如果在设置期间未输入此信息，则可以稍后在 Configuration Manager 控制台中指定。
 
-     >  [!NOTE]   
-     >  Microsoft 不会验证输入的到期日期，且不会将此日期用作许可证验证。  相反，可以使用该日期作为到期日期提醒。 这很有用，因为 Configuration Manager 定期检查在线提供的新软件更新，而软件保障许可证应为最新状态，以便有资格使用这些额外的更新。    
+   > [!NOTE]
+   >  Microsoft 不会验证输入的到期日期，且不会将此日期用作许可证验证。  相反，可以使用该日期作为到期日期提醒。 这很有用，因为 Configuration Manager 定期检查在线提供的新软件更新，而软件保障许可证应为最新状态，以便有资格使用这些额外的更新。    
 
-     有关详细信息，请参阅 [System Center Configuration Manager 的许可和分支](/sccm/core/understand/learn-more-editions)。
+    有关详细信息，请参阅 [System Center Configuration Manager 的许可和分支](/sccm/core/understand/learn-more-editions)。
 
-7.  在“Microsoft 软件许可条款”  页上，阅读并接受许可条款，然后单击“下一步” 。  
+7. 在“Microsoft 软件许可条款”  页上，阅读并接受许可条款，然后单击“下一步” 。  
 
-8.  在“先决条件许可证”  页上，阅读并接受必备软件的许可条款，然后单击“下一步” 。 安装程序将在需要软件时下载该软件并将其自动安装在站点系统或客户端上。 你必须选中所有复选框，然后才能继续进入下一页。  
+8. 在“先决条件许可证”  页上，阅读并接受必备软件的许可条款，然后单击“下一步” 。 安装程序将在需要软件时下载该软件并将其自动安装在站点系统或客户端上。 你必须选中所有复选框，然后才能继续进入下一页。  
 
 9. 在“先决条件下载”  页上，指定安装程序是从 Internet 下载最新的必备软件可再发行文件、语言包和最新的产品更新还是使用以前下载的文件，然后单击“下一步” 。 如果以前通过使用安装程序下载程序下载了文件，请选择“使用以前下载的文件”  并指定下载文件夹。 有关详细信息，请参阅[安装程序下载程序](/sccm/core/servers/deploy/install/setup-downloader)。
 
@@ -400,6 +400,6 @@ Configuration Manager 不支持辅助站点备份，也不支持辅助站点数�
 将站点升级到新的 Service Pack 后，你可能必须完成其他任务以完成升级或重新配置站点。 这些任务可能包括升级 Configuration Manager 客户端或 Configuration Manager 控制台、重新启用管理点的数据库副本，或者还原所使用的并且在 Service Pack 升级后未保留的 Configuration Manager 功能的设置。  
 
 **辅助站点的已知问题：**  
-- **升级到版本 1511 时：** 若要确保辅助站点上的客户端可以从辅助站点（代理管理点）找到管理点，请将管理点手动添加到还包含辅助站点上的分发点的边界组。  
+- **升级到版本 1511 时：** 若要确保辅助站点上的客户端可以从辅助站点（代理管理点）找到管理点，请将管理点手动添加到也包含辅助站点上的分发点的边界组。  
 
 - **升级到版本 1606 或更高版本时：** 代理管理点会自动添加到包含辅助站点上的分发点的边界组。
