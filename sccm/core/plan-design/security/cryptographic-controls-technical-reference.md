@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6d25c6a11821b73f34c8a3cd6aa95d4a78c86587
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 033f0fc3dd86c074f89804f6d9e70c173e9cf0b8
+ms.sourcegitcommit: 54e5786875c4e5f5c1b54e38ed59e96344faf9b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53418385"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817947"
 ---
 # <a name="cryptographic-controls-technical-reference"></a>加密控制技术参考
 
@@ -108,8 +108,6 @@ System Center Configuration Manager 使用签名和加密帮助保护 Configurat
 
 - 使用基于云的分发点时。  
 
-- 对基于 Intel AMT 的计算机进行带外管理时。  
-
   对于需要证书进行身份验证、签名或加密的大多数其他 Configuration Manager 通信，如果 PKI 证书可用，则 Configuration Manager 会自动使用这些证书。 如果这些证书不可用，则 Configuration Manager 会生成自签名证书。  
 
   Configuration Manager 在使用 Exchange Server 连接器管理移动设备时不使用 PKI 证书。  
@@ -162,7 +160,7 @@ System Center Configuration Manager 使用签名和加密帮助保护 Configurat
 
  IIS 中默认情况下启用了证书吊销列表 (CRL) 检查，因此，如果你要将 CRL 与 PKI 部署结合使用，在运行 IIS 的大多数 Configuration Manager 站点系统上无需进行任何其他配置。 例外情况是软件更新，它需要一个手动步骤来启用 CRL 检查以验证软件更新文件上的签名。  
 
- 对于客户端计算机，当它们使用 HTTPS 客户端连接时，CRL 检查默认情况下已启用。 当你运行带外管理控制台以连接到基于 AMT 的计算机时，CRL 检查默认情况下未启用，并且你可以启用此选项。 在 Configuration Manager SP1 或更高版本中，你无法为 Mac 计算机上的客户端禁用 CRL 检查。  
+ 对于客户端计算机，当它们使用 HTTPS 客户端连接时，CRL 检查默认情况下已启用。 在 Configuration Manager SP1 或更高版本中，你无法为 Mac 计算机上的客户端禁用 CRL 检查。  
 
  对于 Configuration Manager 中的下列连接，CRL 检查不受支持：  
 

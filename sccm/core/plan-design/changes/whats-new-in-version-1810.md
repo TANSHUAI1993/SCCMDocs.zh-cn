@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f93b9c7e96c66fd2279d8d6e42f605a763c75025
-ms.sourcegitcommit: 81e3666c41eb976cc7651854042dafe219e2e467
+ms.openlocfilehash: 050cf81a99f29d24cad6eb13e691e332174627c3
+ms.sourcegitcommit: 54e5786875c4e5f5c1b54e38ed59e96344faf9b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53747137"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53818015"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 1810 版中的新增功能
 
@@ -81,7 +81,7 @@ Version 1810 drops support for the following products:
 
 - **SQL 更改跟踪清除**：一项新检查，检查站点数据库是否有 SQL 更改跟踪数据的积压工作 (backlog)。 有关详细信息（包括验证和清除此积压工作的过程），请参阅 [SQL 更改跟踪清除](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#bkmk_changetracking)。 <!--SCCMDocs-pr issue 3023-->  
 
-- **SQL Native Client 版本**：对于支持 TLS 1.2 的 SQL Native Client 版本，将更新此先决条件检查。 最低版本是 [SQL 2012 SP4](https://www.microsoft.com/download/details.aspx?id=50402)。 有关详细信息，请参阅 [SQL Native Client 版本](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-native-client)。 <!--SCCMDocs-pr issue 3094->  
+- **SQL Native Client 版本**：对于支持 TLS 1.2 的 SQL Native Client 版本，将更新此先决条件检查。 最低版本是 [SQL 2012 SP4](https://www.microsoft.com/download/details.aspx?id=50402)。 有关详细信息，请参阅 [SQL Native Client 版本](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-native-client)。 <!--SCCMDocs-pr issue 3094-->  
 
 - **Windows 群集节点上的站点系统**：Configuration Manager 设置进程不再阻止在具有适用于故障转移群集的 Windows 角色的计算机上安装站点服务器角色。 SQL Always On 需要此角色，因此，以前你无法在站点服务器上共置站点数据库。 进行此更改后，你可以通过在被动模式下使用 SQL Always On 和站点服务器创建具有更少服务器的高可用站点。 有关详细信息，请参阅 [Windows 故障转移群集](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#windows-failover-cluster)。 <!--1359132-->  
 
