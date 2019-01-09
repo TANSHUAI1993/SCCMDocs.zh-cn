@@ -10,16 +10,16 @@ ms.assetid: f2df88b4-c348-4dcf-854a-54fd6eedf485
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: fd606ff7068b7c14047e445d16ea78d20a5c12ea
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: d011272c42f3347f555e4fb5322464e9c5e754da
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342641"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53424691"
 ---
 # <a name="creating-custom-report-models-for-system-center-configuration-manager-in-sql-server-reporting-services"></a>在 SQL Server Reporting Services 中的 System Center Configuration Manager 创建自定义报表模型
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 示例报表模型包括在 System Center Configuration Manager 中，但也可以定义报表模型来满足自己的业务需求，然后将报表模型部署到 Configuration Manager 以在创建基于模型的新报表时使用。 下表提供了创建和部署基本报表模型的步骤。  
 
@@ -136,37 +136,37 @@ ms.locfileid: "32342641"
 
 ###  <a name="BKMK_DeployReportModel"></a> To deploy the custom report model to Configuration Manager  
 
-1.  找到你在其中创建了报表模型项目的文件夹。 例如，%*USERPROFILE*%\Documents\Visual Studio 2008\Projects\\*&lt;项目名称\>。*  
+1. 找到你在其中创建了报表模型项目的文件夹。 例如，%*USERPROFILE*%\Documents\Visual Studio 2008\Projects\\*&lt;项目名称\>。*  
 
-2.  将以下文件从报表模型项目文件夹复制到计算机上的一个临时文件夹。  
+2. 将以下文件从报表模型项目文件夹复制到计算机上的一个临时文件夹。  
 
-    -   *&lt;Model Name\>* **.dsv**  
+   -   *&lt;Model Name\>* **.dsv**  
 
-    -   *&lt;Model Name\>* **.smdl**  
+   -   *&lt;Model Name\>* **.smdl**  
 
-3.  使用文本编辑器（例如记事本）打开前述文件。  
+3. 使用文本编辑器（例如记事本）打开前述文件。  
 
-4.  在文件 &lt;模型名称\>.dsv 中，找到文件的第一行，其内容如下所示：  
+4. 在文件 &lt;模型名称\>.dsv 中，找到文件的第一行，其内容如下所示：  
 
-     **&lt;DataSourceView xmlns="http://schemas.microsoft.com/analysisservices/2003/engine"\>**  
+    **&lt;DataSourceView xmlns="http://schemas.microsoft.com/analysisservices/2003/engine"\>**  
 
-     编辑此行以使内容如下所示：  
+    编辑此行以使内容如下所示：  
 
-     **&lt;DataSourceView xmlns="http://schemas.microsoft.com/analysisservices/2003/engine" xmlns:xsi="RelationalDataSourceView"\>**  
+    **&lt;DataSourceView xmlns="<http://schemas.microsoft.com/analysisservices/2003/engine>" xmlns:xsi="RelationalDataSourceView"\>**  
 
-5.  将文件的整个内容复制到 Windows 剪贴板。  
+5. 将文件的整个内容复制到 Windows 剪贴板。  
 
-6.  关闭文件 &lt;模型名称\>.dsv。*  
+6. 关闭文件 &lt;模型名称\>.dsv。*  
 
-7.  *在文件 &lt;模型名称\>.smdl 中，找到文件的最后三行，其内容如下所示：  
+7. *在文件 &lt;模型名称\>.smdl 中，找到文件的最后三行，其内容如下所示：  
 
-     `</Entity>`  
+    `</Entity>`  
 
-     `</Entities>`  
+    `</Entities>`  
 
-     `</SemanticModel>`  
+    `</SemanticModel>`  
 
-8.  将文件 &lt;模型名称\>.dsv 的内容直接粘贴在文件 (&lt;SemanticModel\>) 的最后一行之前。  
+8. 将文件 &lt;模型名称\>.dsv 的内容直接粘贴在文件 (&lt;SemanticModel\>) 的最后一行之前。  
 
 9. 保存并关闭文件 &lt;模型名称\>.smdl。  
 
@@ -178,13 +178,13 @@ ms.locfileid: "32342641"
 ##  <a name="AdvancedReportModel"></a> 在 SQL Server Reporting Services 中创建高级报表模型的步骤  
  可以使用以下过程创建一个高级报表模型，站点中的用户可使用该模型根据 Configuration Manager 数据库的多个视图中的数据来构建基于特定模型的报表。 你将创建一个报表模型，该报表模型向报表作者呈现有关客户端计算机以及这些计算机上安装的操作系统的信息。 该信息来自 Configuration Manager 数据库中的以下视图：  
 
--   **V_R_System**：包含有关发现的计算机和 Configuration Manager 客户端的信息。  
+- **V_R_System**：包含有关发现的计算机和 Configuration Manager 客户端的信息。  
 
--   **V_GS_OPERATING_SYSTEM**：包含有关客户端计算机上所安装的操作系统的信息。  
+- **V_GS_OPERATING_SYSTEM**：包含有关客户端计算机上安装的操作系统的信息。  
 
- 会将从前述视图中选择的项目合并为一个列表、为其指定友好名称，然后在报表生成器中呈现给报表作者以包括在特定报表中。  
+  会将从前述视图中选择的项目合并为一个列表、为其指定友好名称，然后在报表生成器中呈现给报表作者以包括在特定报表中。  
 
- 在你执行这些过程的计算机上，确保已安装了 SQL Server Business Intelligence Development Studio，并且计算机已通过网络连接到 Reporting Services 点服务器。 有关 SQL Server Business Intelligence Development Studio 的详细信息，请参阅 SQL Server 文档。  
+  在你执行这些过程的计算机上，确保已安装了 SQL Server Business Intelligence Development Studio，并且计算机已通过网络连接到 Reporting Services 点服务器。 有关 SQL Server Business Intelligence Development Studio 的详细信息，请参阅 SQL Server 文档。  
 
 #### <a name="to-create-the-report-model-project"></a>To create the report model project  
 
@@ -234,28 +234,28 @@ ms.locfileid: "32342641"
 
 #### <a name="to-define-the-data-source-view-for-the-report-model"></a>为报表模型定义数据源视图  
 
-1.  在“解决方案资源管理器” 中，右键单击“数据源视图”  以选择“添加新数据源视图” 。  
+1. 在“解决方案资源管理器” 中，右键单击“数据源视图”  以选择“添加新数据源视图” 。  
 
-2.  在“欢迎使用数据源视图向导”  页上，单击“下一步” 。 将显示“选择数据源”  页。  
+2. 在“欢迎使用数据源视图向导”  页上，单击“下一步” 。 将显示“选择数据源”  页。  
 
-3.  在“关系数据源”  窗口中，验证“Advanced_Model”  数据源是否处于选定状态，然后单击“下一步” 。  
+3. 在“关系数据源”  窗口中，验证“Advanced_Model”  数据源是否处于选定状态，然后单击“下一步” 。  
 
-4.  在“选择表和视图”  页上的“可用对象”  列表中选择要在报表模型中使用的以下视图：  
+4. 在“选择表和视图”  页上的“可用对象”  列表中选择要在报表模型中使用的以下视图：  
 
-    -   **v_R_System (dbo)**  
+   - **v_R_System (dbo)**  
 
-    -   **v_GS_OPERATING_SYSTEM (dbo)**  
+   - **v_GS_OPERATING_SYSTEM (dbo)**  
 
      选择每个视图之后，单击“&gt;” **>** 以将对象传输到  。  
 
-    > [!TIP]  
-    >  为了帮助在“可用对象”  列表中找到视图，请单击列表顶部的“名称”  标题，按字母顺序对对象进行排序。  
+   > [!TIP]  
+   >  为了帮助在“可用对象”  列表中找到视图，请单击列表顶部的“名称”  标题，按字母顺序对对象进行排序。  
 
-5.  如果“名称匹配”  对话框出现，请接受默认选择，并单击“下一步” 。  
+5. 如果“名称匹配”  对话框出现，请接受默认选择，并单击“下一步” 。  
 
-6.  选择了所需的对象后，单击“下一步” ，然后为数据源视图指定一个名称。 对于本例，请键入 **Advanced_Model**。  
+6. 选择了所需的对象后，单击“下一步” ，然后为数据源视图指定一个名称。 对于本例，请键入 **Advanced_Model**。  
 
-7.  单击 **“完成”**。 “Advanced_Model.dsv”  数据源视图将显示在“解决方案资源管理器”  的“数据源视图” 文件夹中。  
+7. 单击 **“完成”**。 “Advanced_Model.dsv”  数据源视图将显示在“解决方案资源管理器”  的“数据源视图” 文件夹中。  
 
 #### <a name="to-define-relationships-in-the-data-source-view"></a>在数据源视图中定义关系  
 
@@ -271,9 +271,9 @@ ms.locfileid: "32342641"
 
 6.  在“创建命名查询”  对话框中，指定以下信息：  
 
-    -   **名称** ：指定查询的名称。 对于本例，请键入 **Advanced_Model**。  
+    -   **名称：** 指定查询的名称。 对于本例，请键入 **Advanced_Model**。  
 
-    -   **说明** ：指定查询的说明。 对于本例，请键入 **“示例 Reporting Services 报表模型”**。  
+    -   **描述：** 指定查询的描述。 对于本例，请键入 **“示例 Reporting Services 报表模型”**。  
 
 7.  在“v_R_System”  窗口的对象列表中选择要在报表模型中显示的以下项目：  
 
@@ -379,37 +379,37 @@ ms.locfileid: "32342641"
 
 #### <a name="to-deploy-the-custom-report-model-to-configuration-manager"></a>To deploy the custom report model to Configuration Manager  
 
-1.  找到你在其中创建了报表模型项目的文件夹。 例如，%*USERPROFILE*%\Documents\Visual Studio 2008\Projects\\*&lt;项目名称\>。*  
+1. 找到你在其中创建了报表模型项目的文件夹。 例如，%*USERPROFILE*%\Documents\Visual Studio 2008\Projects\\*&lt;项目名称\>。*  
 
-2.  将以下文件从报表模型项目文件夹复制到计算机上的一个临时文件夹。  
+2. 将以下文件从报表模型项目文件夹复制到计算机上的一个临时文件夹。  
 
-    -   *&lt;Model Name\>* **.dsv**  
+   -   *&lt;Model Name\>* **.dsv**  
 
-    -   *&lt;Model Name\>* **.smdl**  
+   -   *&lt;Model Name\>* **.smdl**  
 
-3.  使用文本编辑器（例如记事本）打开前述文件。  
+3. 使用文本编辑器（例如记事本）打开前述文件。  
 
-4.  在文件 &lt;模型名称\>.dsv 中，找到文件的第一行，其内容如下所示：  
+4. 在文件 &lt;模型名称\>.dsv 中，找到文件的第一行，其内容如下所示：  
 
-     **&lt;DataSourceView xmlns="http://schemas.microsoft.com/analysisservices/2003/engine"\>**  
+    **&lt;DataSourceView xmlns="http://schemas.microsoft.com/analysisservices/2003/engine"\>**  
 
-     编辑此行以使内容如下所示：  
+    编辑此行以使内容如下所示：  
 
-     **&lt;DataSourceView xmlns="http://schemas.microsoft.com/analysisservices/2003/engine" xmlns:xsi="RelationalDataSourceView"\>**  
+    **&lt;DataSourceView xmlns="<http://schemas.microsoft.com/analysisservices/2003/engine>" xmlns:xsi="RelationalDataSourceView"\>**  
 
-5.  将文件的整个内容复制到 Windows 剪贴板。  
+5. 将文件的整个内容复制到 Windows 剪贴板。  
 
-6.  关闭文件 &lt;模型名称\>.dsv。*  
+6. 关闭文件 &lt;模型名称\>.dsv。*  
 
-7.  *在文件 &lt;模型名称\>.smdl 中，找到文件的最后三行，其内容如下所示：  
+7. *在文件 &lt;模型名称\>.smdl 中，找到文件的最后三行，其内容如下所示：  
 
-     `</Entity>`  
+    `</Entity>`  
 
-     `</Entities>`  
+    `</Entities>`  
 
-     `</SemanticModel>`  
+    `</SemanticModel>`  
 
-8.  将文件 &lt;模型名称\>.dsv 的内容直接粘贴在文件 (&lt;SemanticModel\>) 的最后一行之前。  
+8. 将文件 &lt;模型名称\>.dsv 的内容直接粘贴在文件 (&lt;SemanticModel\>) 的最后一行之前。  
 
 9. 保存并关闭文件 &lt;模型名称\>.smdl。  
 

@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 robots: noindex
-ms.openlocfilehash: ead1eef396e643930e00d3208ed1e821c73906d5
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 3454b56e53901668c89062f0910f8ea318f22cf2
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344171"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53417653"
 ---
 # <a name="schema-extensions-for-system-center-configuration-manager"></a>System Center Configuration Manager 的架构扩展
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 可以扩展 Active Directory 架构以支持 Configuration Manager。 这将编辑林 Active Directory 架构，以添加由 Configuration Manager 站点使用的新容器和某些特性，从而将 Active Directory 关键信息发布到客户端可以安全使用的位置。 此信息可以简化客户端部署和配置，并帮助客户端找到站点资源（例如具有部署的内容或向客户端提供不同服务的服务器）。  
 
@@ -67,7 +67,7 @@ ms.locfileid: "32344171"
 
 -   **变通方法：** 如果不扩展此架构，可使用下列选项之一来提供计算机必须安装的配置详细信息：  
 
-    -   <bpt id="p1">**</bpt>使用客户端推送安装**。 使用客户端安装方法前，请确保满足所有先决条件。 有关详细信息，请参阅[将客户端部署到 Windows 计算机的先决条件](/sccm/core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers)中的“安装方法依赖关系”部分。  
+    -   **使用客户端推送安装**。 使用客户端安装方法前，请确保满足所有先决条件。 有关详细信息，请参阅[将客户端部署到 Windows 计算机的先决条件](/sccm/core/clients/deploy/prerequisites-for-deploying-clients-to-windows-computers)中的“安装方法依赖关系”部分。  
 
     -   **手动安装客户端**，并使用 CCMSetup 安装命令行属性来提供客户端安装属性。 这必须包括下列操作：  
 
@@ -79,7 +79,7 @@ ms.locfileid: "32344171"
 
 **客户端与服务器通信的端口配置** - 在安装客户端时，会为其配置存储在 Active Directory 中的端口信息。 如果后来更改了站点的客户端到服务器通信端口，则客户端可以通过 Active Directory 域服务获得此新的端口设置。  
 
--   **工作方法：** 如果不扩展架构，则使用以下其中一个选项向现有客户端提供新的端口配置：  
+-   **变通方法：** 如果不扩展架构，则使用以下其中一个选项向现有客户端提供新的端口配置：  
 
     -   使用配置新端口的选项**重新安装客户端**。  
 
@@ -87,7 +87,7 @@ ms.locfileid: "32344171"
 
 **内容部署方案** - 当在一个站点中创建内容，然后将该内容部署到层次结构中的另一个站点时，接收站点必须能够验证已签名的内容数据的签名。 这需要访问你在其中创建此数据的源站点的公钥。 在扩展 Configuration Manager 的 Active Directory 架构时，站点的公钥将提供给层次结构中的所有站点使用。  
 
--   **工作方法：** 如果不扩展 Active Directory 架构，则可以使用层次结构维护工具“preinst.exe” 在站点之间交换安全密钥信息。  
+-   解决方法：如果不扩展架构，则可以使用层次结构维护工具“preinst.exe”在站点之间交换安全密钥信息。  
 
      例如，如果计划在主站点中创建内容，然后将该内容部署到另一个主站点下面的辅助站点，必须扩展 Active Directory 架构，使此辅助站点能够获得源主站点的公钥，或者必须使用 preinst.exe 直接在这两个站点之间共享密钥。  
 
@@ -135,12 +135,12 @@ ms.locfileid: "32344171"
 
     -   cn=MS-SMS-Site  
 
-> [!NOTE]  
-
+> [!NOTE]
+> 
 >  架构扩展可能包含了从该产品的以前版本中带入的、但没有被 System Center Configuration Manager 使用的属性和类。 例如：  
-
->   
->  -   特性：cn=MS-SMS-Site-Boundaries  
-> -   类：cn=MS-SMS-Server-Locator-Point  
+> 
+> 
+> - 特性：cn=MS-SMS-Site-Boundaries  
+>   -   类：cn=MS-SMS-Server-Locator-Point  
 
 你可以通过查看 System Center Configuration Manager 安装媒体的 **\SMSSETUP\BIN\x64** 文件夹中的 **ConfigMgr_ad_schema.LDF** 文件来确保前面的列是最新的。  

@@ -10,18 +10,18 @@ ms.assetid: a3ef6bdc-a204-4c4c-a02f-2bd03f35183e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 74ffd06f8b9786d627dc7fd9cecb15215228313d
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 79d7488e0554a36eb274bf4ef76cff92b48a71ba
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32341145"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418435"
 ---
 # <a name="capabilities-in-technical-preview-1709-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1709 中的功能
 
-*适用范围：System Center Configuration Manager (Technical Preview)*
+适用范围：*System Center Configuration Manager (Technical Preview)*
 
-本文介绍了 System Center Configuration Manager Technical Preview（版本 1709）中的可用功能。 你可以安装此版本，以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。 在安装此 Technical Preview 前，请查看 [System Center Configuration Manager 的 Technical Preview](../../core/get-started/technical-preview.md)，熟悉使用 Technical Preview 的常规要求和限制，如何在两版本之间进行更新，以及如何对 Technical Preview 中的有关功能提供反馈。     
+本文介绍了 System Center Configuration Manager Technical Preview（版本 1709）中的可用功能。 你可以安装此版本，以更新 Technical Preview 站点的功能并向其添加新功能。 在安装此 Technical Preview 前，请查看 [System Center Configuration Manager 的 Technical Preview](../../core/get-started/technical-preview.md)，熟悉使用 Technical Preview 的常规要求和限制，如何在两版本之间进行更新，以及如何对 Technical Preview 中的有关功能提供反馈。     
 
 
 <!--  Known Issues Template   
@@ -30,7 +30,7 @@ ms.locfileid: "32341145"
     Workaround details.
 -->
 **此 Technical Preview 中的已知问题：**
--   如果站点服务器处于被动模式，则无法更新到预览版本 1709。 如果运行的是预览版本 1706、1707 或 1708，且[主站点服务器处于被动模式](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability)，则必须先卸载被动模式站点服务器，然后才能将预览站点成功更新到版本 1709。 可以在站点运行版本 1709 后，重新安装被动模式站点服务器。
+- 如果站点服务器处于被动模式，则无法更新到预览版本 1709。 如果运行的是预览版本 1706、1707 或 1708，且[主站点服务器处于被动模式](/sccm/core/get-started/capabilities-in-technical-preview-1706#site-server-role-high-availability)，则必须先卸载被动模式站点服务器，然后才能将预览站点成功更新到版本 1709。 可以在站点运行版本 1709 后，重新安装被动模式站点服务器。
 
   若要卸载被动模式站点服务器，请执行以下操作：
   1. 在控制台中，依次转到“管理” > “概述” > “站点配置” > “服务器和站点系统角色”，再选择被动模式站点服务器。
@@ -42,8 +42,7 @@ ms.locfileid: "32341145"
 **以下是此版本可以试用的新功能。**  
 
 ## <a name="improved-vpn-profile-experience-in-configuration-manager-console"></a>Configuration Manager 控制台中改进了 VPN 配置文件体验
-<!-- 1313282 -->
-在此版本中，我们更新了 VPN 配置文件向导和属性页，以显示选定平台相应的设置。 具体而言：
+<!-- 1313282 --> 在此版本中，我们更新了 VPN 配置文件向导和属性页，以显示选定平台相应的设置。 具体而言：
 
 - 每个平台均有其自己的工作流，这意味着新的 VPN 配置文件仅包含平台支持的设置。
 - 如今，“支持的平台”页在“常规”页后显示。  现在于设置属性值之前选择平台。
@@ -77,8 +76,7 @@ ms.locfileid: "32341145"
 请注意，选择不同的平台时，只显示与选定平台相关的设置。
 
 ## <a name="co-management-for-windows-10-devices"></a>适用于 Windows 10 设备的共同管理    
-<!-- 1350871 -->
-许多客户想要使用一种基于云的简单低成本解决方案通过管理移动设备的相同方式来管理 Windows 10 设备。 然而，实现从传统管理到现代管理的转换可能具有挑战性。 从 Windows 10 版本 1607（也称为周年更新）开始，可以将 Windows 10 设备同时联接到本地 Active Directory (AD) 和基于云的 Azure AD（混合 Azure AD）。 共同管理将利用此项改进，并使你能够同时使用 Configuration Manager 和 Intune 来管理 Windows 10 设备。 它是一种解决方案，在传统管理与现代管理之间架起一座桥梁，为你提供利用分阶段的方法实现转换的途径。 
+<!-- 1350871 --> 许多客户想要使用一种基于云的简单低成本解决方案通过管理移动设备的相同方式来管理 Windows 10 设备。 然而，实现从传统管理到现代管理的转换可能具有挑战性。 从 Windows 10 版本 1607（也称为周年更新）开始，可以将 Windows 10 设备同时联接到本地 Active Directory (AD) 和基于云的 Azure AD（混合 Azure AD）。 共同管理将利用此项改进，并使你能够同时使用 Configuration Manager 和 Intune 来管理 Windows 10 设备。 它是一种解决方案，在传统管理与现代管理之间架起一座桥梁，为你提供利用分阶段的方法实现转换的途径。 
 
 ### <a name="prerequisites"></a>先决条件
 必须具备以下先决条件才能实现共同管理。 存在一般先决条件，以及针对现有 Configuration Manager 客户端和不属于该客户端的设备的不同先决条件。
@@ -155,24 +153,24 @@ ccmsetup.msi CCMSETUPCMD="/mp:<云管理网关相互身份验证终结点 URL>/ 
 
 例如，如果具有以下值：
 
-- 云管理网关相互身份验证终结点 URL：https:/&#47;contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100    
+- 云管理网关相互身份验证终结点 URL： https://contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100    
 
    >[!Note]    
    >对于云管理网关相互身份验证终结点 URL 值，使用 vProxy_Roles SQL 视图中的 MutualAuthPath 值。
 
 - 管理点 (MP) 的 FQDN：sccmmp.corp.contoso.com    
-- 站点代码：PS1    
-- Azure AD 租户 ID：72F988BF-86F1-41AF-91AB-2D7CD011XXXX    
+- **站点代码**：PS1    
+- **Azure AD 租户 ID**：72F988BF-86F1-41AF-91AB-2D7CD011XXXX    
 - Azure AD 租户名称：contoso    
 - Azure AD 客户端应用 ID：bef323b3-042f-41a6-907a-f9faf0d1XXXX     
-- AAD 资源 ID URI：ConfigMgrServer    
+- **AAD 资源 ID URI**：ConfigMgrServer    
 
   > [!Note]    
   > 对于 AAD 资源 ID URI 值，使用在 vSMS_AAD_Application_Ex SQL 视图中找到的 IdentifierUri 值。
 
 将使用以下命令行：
 
-ccmsetup.msi CCMSETUPCMD="/mp:https:/&#47;contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100    CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100 SMSSiteCode=PS1 SMSMP=https:/&#47;sccmmp.corp.contoso.com AADTENANTID=72F988BF-86F1-41AF-91AB-2D7CD011XXXX AADTENANTNAME=contoso  AADCLIENTAPPID=bef323b3-042f-41a6-907a-f9faf0d1XXXX AADRESOURCEURI=https:/&#47;ConfigMgrServer”
+ccmsetup.msi CCMSETUPCMD="/mp:https://contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100    CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72057594037928100 SMSSiteCode=PS1 SMSMP=https://sccmmp.corp.contoso.com AADTENANTID=72F988BF-86F1-41AF-91AB-2D7CD011XXXX AADTENANTNAME=contoso  AADCLIENTAPPID=bef323b3-042f-41a6-907a-f9faf0d1XXXX AADRESOURCEURI=https://ConfigMgrServer”
 
 > [!Tip]
 >可通过使用以下步骤查找站点的命令行参数：     
@@ -203,8 +201,8 @@ ccmsetup.msi CCMSETUPCMD="/mp:https:/&#47;contoso.cloudapp.net/CCM_Proxy_MutualA
 2. 在“主页”选项卡的“管理”组中，选择“配置共同管理”以打开“共同管理载入”向导。 ****    
 3. 在“订阅”页中，单击“登录”并登录到 Intune 租户，然后单击“下一步”。   
 4. 在“暂存”页中，配置以下设置并单击“下一步”：
-    - 试点组：试点组包含选定的一个或多个集合。 在分阶段推出共同管理过程中使用此组。 可从小型测试集合开始，然后随着向更多用户和设备推出共同管理，向试点组添加更多集合。 可随时在共同管理属性中更改试点组中的集合。
-    - 生产：如果选择此设置，将对所有支持的 Windows 10 设备启用共同管理。 使用一个或多个集合配置排除组。 将不对属于此组中任意集合的成员的设备使用共同管理。 
+    - **试点组**：试点组包含选定的一个或多个集合。 在分阶段推出共同管理过程中使用此组。 可从小型测试集合开始，然后随着向更多用户和设备推出共同管理，向试点组添加更多集合。 可随时在共同管理属性中更改试点组中的集合。
+    - **生产**：如果选择此设置，将对所有支持的 Windows 10 设备启用共同管理。 使用一个或多个集合配置排除组。 将不对属于此组中任意集合的成员的设备使用共同管理。 
 5. 在“启用”页中，选择“试点”或“全部”（具体取决于“暂存”页中所配置的设置），在 Intune 中启用自动注册，然后单击“下一步”。 如果选择“试点”，仅属于试点组成员的 Configuration Manager 客户端可在 Intune 中自动注册。 这使你能够对客户端子集启用共同管理，以初步测试共同管理，并使用分阶段的方式推出共同管理。 
 6. 在“工作负荷”页中选择是否将 Configuration Manager 工作负荷切换为由 Intune 托管，然后单击“下一步”。 使用滑块来选择是否将工作负荷切换到试点组或所有 Windows 10 设备（具体取决于在“暂存”页中所配置的设置）。 
 7. 要启用共同管理，请完成向导。  

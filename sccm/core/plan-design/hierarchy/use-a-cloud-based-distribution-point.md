@@ -10,16 +10,16 @@ ms.assetid: 3cd9c725-6b42-427d-9191-86e67f84e48c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4673da59da7fede2f425948472c31a620d13a258
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 00c04190b954a7b19d4bea0e43b2dc6ecf9d8388
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456288"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53414984"
 ---
 # <a name="use-a-cloud-distribution-point-in-configuration-manager"></a>在 Configuration Manager 中使用云分发点
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 云分发点是 Configuration Manager 分发点，在 Microsoft Azure 中作为平台即服务 (PaaS) 托管。 此服务支持以下方案：  
 
@@ -102,7 +102,7 @@ Configuration Manager 不会将现有经典云分发点迁移到 Azure 资源管
 
 创建云分发点的位置取决于哪些客户端需要访问内容。 从版本 1806 开始，有三种类型的云分发点：  
 
-- 经典服务部署：仅在主站点上创建此类型。  
+- 传统服务部署：仅在主站点上创建此类型。  
 
 - Azure 资源管理器部署：在主站点或管理中心站点上创建此类型。  
 
@@ -161,10 +161,10 @@ Configuration Manager 不会将现有经典云分发点迁移到 Azure 资源管
 - 云分发点支持[客户端和设备支持的操作系统](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices)中列出的所有 Windows 版本。  
 
 - 管理员分发以下类型的受支持软件内容：  
-    - 应用程序
-    - 包
-    - OS 升级包
-    - 第三方软件更新  
+  - 应用程序
+  - 包
+  - OS 升级包
+  - 第三方软件更新  
 
     > [!Important]  
     > 虽然 Configuration Manager 控制台不会阻止将 Microsoft 软件更新分发到云分发点，但需支付 Azure 费用来存储客户端不使用的内容。 基于 Internet 的客户端始终从 Microsoft 更新云服务获取 Microsoft 软件更新内容。 请勿将 Microsoft 软件更新分发到云分发点。    
@@ -203,11 +203,11 @@ Configuration Manager 包括用于帮助控制成本和监视数据访问的以�
 - 将 Configuration Manager 配置为在客户端下载的“阈值”达到或超过每月限制时发出通知。 有关详细信息，请参阅[数据传输阈值警报](/sccm/core/servers/deploy/configure/install-cloud-based-distribution-points-in-microsoft-azure#bkmk_alerts)。   
 
 - 要帮助减少客户端从云分发点传输数据的数量，请使用以下任一对等缓存技术：  
-    - Configuration Manager 对等缓存
-    - Windows BranchCache
-    - Windows 10 传递优化  
+  - Configuration Manager 对等缓存
+  - Windows BranchCache
+  - Windows 10 传递优化  
 
-   有关详细信息，请参阅[内容管理的基本概念](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management)。   
+    有关详细信息，请参阅[内容管理的基本概念](/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management)。   
 
 
 ### <a name="components"></a>组件数
@@ -276,7 +276,7 @@ Configuration Manager 包括用于帮助控制成本和监视数据访问的以�
 
 2. 管理点使用云分发点的服务 FQDN 响应客户端的位置请求。 此属性与服务器身份验证证书的公用名相同。  
 
-    如果正在使用域名（如 WallaceFalls.contoso.com），则客户端首先尝试解析此 FQDN。 域的面向 Internet 的 DNS 中需要有一个 CNAME 别名，以便客户端解析 Azure 服务名称（如：WallaceFalls.cloudapp.net）。  
+    如果正在使用域名（如 WallaceFalls.contoso.com），则客户端首先尝试解析此 FQDN。 域的面向 Internet 的 DNS 中需要有一个 CNAME 别名，以便客户端解析 Azure 服务名称，例如：WallaceFalls.cloudapp.net。  
 
 3. 接下来，客户端将 Azure 服务名称（如 WallaceFalls.cloudapp.net）解析为有效的 IP 地址。 应由 Azure DNS 处理此响应。  
 
@@ -319,14 +319,14 @@ Azure 存储服务对于单个文件支持每秒 500 个请求。 单个云分�
 
 - 从 1710 版开始，支持第 3 版证书。 有关详细信息，请参阅 [CNG 证书概述](/sccm/core/plan-design/network/cng-certificates-overview)。  
 
-- 从 1802 版开始，使用以下策略配置 Windows 时：系统加密：使用 FIPS 兼容的算法进行加密、哈希处理和签名  
+- 从版本 1802 开始，当使用以下策略配置 Windows 时：**系统加密：对加密、哈希和签名使用 FIPS 兼容算法**  
 
 - 从 1802 版开始，支持 TLS 1.2。 有关详细信息，请参阅[加密控制技术参考](/sccm/core/plan-design/security/cryptographic-controls-technical-reference#about-ssl-vulnerabilities)。  
 
 
 ### <a name="azure-management-certificate"></a>Azure 管理证书
 
-经典服务部署需要此证书。*Azure 资源管理器部署不需要此证书。
+经典服务部署需要此证书。*Azure 资源管理器部署不需要此证书。*
 
 如果使用 Azure 经典部署方法，则需要 Azure 管理证书。 有关详细信息，请参阅“云管理网关证书”一文的 [Azure 管理证书](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#azure-management-certificate)部分。 Configuration Manager 站点服务器使用此证书对 Azure 进行身份验证，以创建和管理经典部署。  
 

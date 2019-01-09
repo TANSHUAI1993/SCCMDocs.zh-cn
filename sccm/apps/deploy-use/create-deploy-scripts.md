@@ -10,16 +10,16 @@ ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c9f3bc1b85ee9b8fbd8af47e22a826fe8d88377d
-ms.sourcegitcommit: c2c44329f1f9a2e6c14095360b4fc4aafabc27f0
+ms.openlocfilehash: 882af6e50a8619684225de53ce700fcc23923a06
+ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694954"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53418386"
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>从 Configuration Manager 控制台创建并运行 PowerShell 脚本
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 <!--1236459--> System Center Configuration Manager 具有运行 Powershell 脚本的集成功能。 Powershell 的优势是创建复杂而易懂的自动执行脚本，并能与较大社区分享。 脚本简化了自定义工具生成，便于软件管理，并让你快速完成常见任务，能够更轻松、更一致地完成大型工作。  
 
@@ -114,8 +114,8 @@ ms.locfileid: "51694954"
 ### <a name="security-role-permissions"></a>安全角色权限  
 
 **角色名称**：脚本运行者  
-- **说明**：这些权限仅允许此角色运行之前创建且已由其他角色批准的脚本。  
-- **权限**：确保将以下项设置为“是”。  
+- **描述**：这些权限仅允许此角色运行之前创建且已由其他角色批准的脚本。  
+- **权限：** 请确保将以下项设置为“是”。  
 
 |类别|权限|状态|
 |---|---|---|
@@ -126,8 +126,8 @@ ms.locfileid: "51694954"
 
 
 **角色名称**：脚本创建者  
-- **说明**：这些权限允许此角色编写脚本，但不能批准或运行脚本。  
-- **权限**：确保设置以下权限。
+- **描述**：这些权限允许此角色编写脚本，但不能批准或运行脚本。  
+- **权限**：请确保设置以下权限。
  
 |类别|权限|状态|
 |---|---|---|
@@ -140,8 +140,8 @@ ms.locfileid: "51694954"
 
 
 **角色名称**：脚本审批者  
-- **说明**：这些权限允许此角色批准脚本，但不能创建或运行脚本。  
-- **权限**：确保设置以下权限。  
+- **描述**：这些权限允许此角色批准脚本，但不能创建或运行脚本。  
+- **权限：** 请确保设置以下权限。  
 
 |类别|权限|状态|
 |---|---|---|
@@ -172,8 +172,8 @@ ms.locfileid: "51694954"
 5. 完成向导。 新脚本将显示在“脚本”列表，且状态显示为“正等待审批”。 在客户端设备上运行此脚本之前，必须先批准它。 
 
 > [!IMPORTANT]
-    >避免在使用“运行脚本”功能时编写设备重启或 Configuration Manager 代理重启的脚本。 执行此操作可能会导致连续的重启状态。 如有需要，从 Configuration Manager 版本 1710 起，已经对启用重启设备的客户端通知功能提供了增强。 [等待重新启动列](/sccm/core/clients/manage/manage-clients#Restart-clients)可以帮助识别需要重启的设备。 
-<!--SMS503978  -->
+> 避免在使用“运行脚本”功能时编写设备重启或 Configuration Manager 代理重启的脚本。 执行此操作可能会导致连续的重启状态。 如有需要，从 Configuration Manager 版本 1710 起，已经对启用重启设备的客户端通知功能提供了增强。 [等待重新启动列](/sccm/core/clients/manage/manage-clients#Restart-clients)可以帮助识别需要重启的设备。 
+> <!--SMS503978  -->
 
 ## <a name="script-parameters"></a>脚本参数
 *（随版本 1710 一起引入）*  
@@ -192,7 +192,7 @@ ms.locfileid: "51694954"
 
 脚本中的每一个参数都有一个“脚本参数属性”对话框，可以在此处添加该参数的验证信息。 添加验证信息后，如果为参数输入了和验证不符的值，那么将收到错误消息。
 
-#### <a name="example-firstname"></a>示例：FirstName
+#### <a name="example-firstname"></a>例如：*FirstName*
 
 在此示例中，你可以设置字符串参数“FirstName”的属性。
 
