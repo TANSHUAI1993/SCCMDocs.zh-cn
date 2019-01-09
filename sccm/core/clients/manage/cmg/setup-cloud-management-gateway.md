@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: 8f743514af8b89212b10073c07b24990ffedcb1a
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 0ad348c47ff7e97d8d9b3bfba91bd8a0c0ae48ff
+ms.sourcegitcommit: 32a257fafbb29aece8b4f435dd5614fcef305328
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53420390"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "54005409"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>为 Configuration Manager 设置云管理网关
 
@@ -41,6 +41,8 @@ ms.locfileid: "53420390"
 - 自版本 1802 开始，选择“Azure 资源管理器部署”。 有关详细信息，请参阅 [Azure 资源管理器](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager)。 对于 CMG 的 Azure 资源管理器部署，需要满足以下要求：  
 
     - 与 [Azure AD](/sccm/core/servers/deploy/configure/azure-services-wizard) 集成以实现**云管理**。 不需要 Azure AD 用户发现。  
+    
+    - 必须在 Azure 订阅中注册 Microsoft.ClassicCompute 资源提供程序。 有关详细信息，请参阅 [Azure 资源管理器](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-supported-services)。
 
     - 订阅管理员需要进行登录。  
 
@@ -54,6 +56,8 @@ ms.locfileid: "53420390"
     - Azure 管理证书  
 
 - 服务的全局唯一名称。 此名称来自 [CMG 服务器身份验证证书](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#cmg-server-authentication-certificate)。  
+
+- 如果启用 CMG 作为云分发点，则所选的同一个全局唯一 CMG 服务名称还需要可用作全局唯一存储帐户名称。 此名称来自 [CMG 服务器身份验证证书](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#cmg-server-authentication-certificate)。
 
 - 此 CMG 部署所在的 Azure 区域。  
 
@@ -91,7 +95,7 @@ ms.locfileid: "53420390"
 7. 选择“区域”下拉列表，选择此 CMG 所在的 Azure 区域。  
 
 8. 在版本 1802 中，如果使用的是 Azure 资源管理器部署，则选择一个“资源组”选项。 
-   1. 如果选择“使用现有项”，则从下拉列表中选择现有的资源组。
+   1. 如果选择“使用现有项”，则从下拉列表中选择现有的资源组。 所选的资源组必须已位于步骤 7 中所选的区域。 如果选择的现有资源组不在之前所选区域中，则 CMG 将预配失败。
    2. 如果选择“新建”，则输入新的资源组名称。
 
 9. 在“VM 实例”字段中，输入此服务的 VM 数量。 默认值为 1，但每个 CMG 最多可扩展到 16 个 VM。  

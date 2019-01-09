@@ -10,12 +10,12 @@ ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5e62983f76b0f2a4277edfab08d4321da5d4a258
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 9d3cd85d4c0bd3a996bd6ec18fc24a02423fab62
+ms.sourcegitcommit: 54e5786875c4e5f5c1b54e38ed59e96344faf9b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53416480"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53818049"
 ---
 # <a name="task-sequence-steps-in-configuration-manager"></a>Configuration Manager 中的任务序列步骤
 
@@ -235,7 +235,14 @@ ms.locfileid: "53416480"
  安装捕获的 OS 映像。 单击“浏览”以打开“选择包”对话框。 然后选择要安装的现有映像包。 如果指定的映像包关联了多个映像，请从下拉列表选择将用于此部署的关联映像。 可以通过单击每个现有映像查看有关该映像的基本信息。  
 
 #### <a name="apply-operating-system-image-from-an-original-installation-source"></a>从原始安装源应用操作系统映像
- 使用 OS 升级包安装 OS，这也是原始安装源。 单击“浏览”以打开“选择和操作系统安装包”对话框。 然后选择要使用的现有 OS 升级包。 可以通过单击查看有关每个现有映像源的基本信息。 关联映像源属性显示在对话框底部的结果窗格中。 如果指定的包关联了多个版本，请使用下拉列表选择要使用的“版本”。  
+ 使用 OS 升级包安装 OS，这也是原始安装源。 单击“浏览”以打开“选择和操作系统升级包”对话框。 然后选择要使用的现有 OS 升级包。 可以通过单击查看有关每个现有映像源的基本信息。 关联映像源属性显示在对话框底部的结果窗格中。 如果指定的包关联了多个版本，请使用下拉列表选择要使用的“版本”。  
+
+>[!NOTE]
+>操作系统升级包主要用于就地升级，而不用于 Windows 的全新安装。 在部署 Windows 的全新安装时，请使用“从捕获的映像应用操作系统”选项和安装源文件中的 install.wim。
+>
+>仍然支持通过操作系统升级包来部署 Windows 的全新安装，但这依赖于驱动程序与此方法兼容。 从操作系统升级包安装 Windows 时，仍在 Windows PE 中安装驱动程序，而不仅仅是在 Windows PE 中注入驱动程序。 某些驱动程序在 Windows PE 中时并不兼容安装。
+>
+>如果驱动程序在 Windows PE 中不兼容安装，则将原始安装源文件中的 install.wim 打包为操作系统映像。 然后改为通过“从捕获的映像应用操作系统”选项部署。
 
 #### <a name="use-an-unattended-or-sysprep-answer-file-for-a-custom-installation"></a>使用无人参与或 Sysprep 答案文件进行自定义安装
  使用此选项提供 Windows 安装程序答案文件（unattend.xml、unattend.txt 或 sysprep.inf），取决于 OS 版本和安装方法。 你指定的文件可以包含 Windows 答案文件支持的任何标准的配置选项。 例如，可以使用它指定默认的 Internet Explorer 主页。 指定包含答案文件的包以及包中文件的关联路径。  

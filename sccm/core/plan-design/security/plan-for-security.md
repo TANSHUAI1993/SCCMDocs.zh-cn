@@ -10,12 +10,12 @@ ms.assetid: 2a216814-ca8c-4d2e-bcef-dc00966a3c9f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 88fa98de0f9f0a113adeef3a30536628706484ab
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 5f7cb374859d2605021a3f1ec98d6a6b6081bfc4
+ms.sourcegitcommit: 54e5786875c4e5f5c1b54e38ed59e96344faf9b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53424674"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817896"
 ---
 # <a name="plan-for-security-in-configuration-manager"></a>在 Configuration Manager 中规划安全性
 
@@ -109,7 +109,7 @@ ms.locfileid: "53424674"
 
 IIS 始终会检查 CRL 中是否有客户端证书，且无法在 Configuration Manager 中更改此配置。 默认情况下，Configuration Manager 客户端将始终检查站点系统的 CRL。 通过指定站点属性并指定 CCMSetup 属性来禁用此设置。  
 
-如果计算机使用证书吊销检查但无法找到 CRL，则会视作证书链中的所有证书均已被吊销。 这是因为他们无法验证证书是否在列表中。 在此情况下，需要证书并使用 CRL 的所有连接都将失败。  
+如果计算机使用证书吊销检查但无法找到 CRL，则会视作证书链中的所有证书均已被吊销。 发生此行为是因为他们无法验证这些证书是否存在于证书吊销列表中。 在此情况下，需要证书并包含 CRL 检查的所有连接都将失败。 在验证是否可通过浏览到 CRL 的 http 位置访问该 CRL 时，请务必注意 Configuration Manager 客户端应作为本地系统运行。 因此，对使用用户上下文内运行的 Web 浏览器是否能够访问 CRL 的测试才可能会成功，但由于内部 Web 筛选解决方案的原因，在尝试与同一 CRL URL 建立 http 连接时，可能会阻止计算机帐户。 在这种情况下，可能需要将任何 Web 筛选解决方案中的 CRL URL 列入允许列表。
 
 每次使用证书时检查 CRL 可提供更高的安全性，防止使用已吊销的证书。 但这会导致客户端上出现连接延迟和额外的处理。 组织可能需要对 Internet 或不受信任的网络上的客户端进行此附加安全性检查。  
 
