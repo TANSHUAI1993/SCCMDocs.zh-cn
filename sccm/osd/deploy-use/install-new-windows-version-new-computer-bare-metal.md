@@ -10,16 +10,16 @@ ms.assetid: f5ad22d5-7df1-49c6-8a0f-db1c3f0cda19
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 41ce74ee0978f561a855c5d3952071f68568dee0
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 23c3a8b379accac0e514cfb8a88197baa6463fee
+ms.sourcegitcommit: 54e5786875c4e5f5c1b54e38ed59e96344faf9b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32347631"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817726"
 ---
 # <a name="install-a-new-version-of-windows-on-a-new-computer-bare-metal-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 在新计算机（裸机）上安装新版本的 Windows
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*适用于：System Center Configuration Manager (Current Branch)*
 
 本主题提供了在 System Center Configuration Manager 中在新计算机上安装操作系统的常规步骤。 对于此方案，可以从许多不同的部署方法中选择，如 PXE、OEM、或独立媒体。 如果不确定这是否是正确的操作系统部署方案，请参阅[部署企业版操作系统的方案](scenarios-to-deploy-enterprise-operating-systems.md)。  
 
@@ -41,7 +41,7 @@ ms.locfileid: "32347631"
 
     -   有关如何自定义启动映像的详细信息，请参阅[自定义启动映像](../get-started/customize-boot-images.md)。  
 
-    -   将启动映像分发到分发点 有关详细信息，请参阅[分发内容](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute)。  
+    -   将启动映像分发到分发点 有关详细信息，请参阅 [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute)。  
 
 2.  **准备操作系统映像**  
 
@@ -49,7 +49,12 @@ ms.locfileid: "32347631"
 
     -   若要了解有关如何创建操作系统映像的详细信息，请参阅[管理操作系统映像](../get-started/manage-operating-system-images.md)。
 
-    -   将操作系统映像分发到分发点。 有关详细信息，请参阅[分发内容](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute)。
+    -   将操作系统映像分发到分发点。 有关详细信息，请参阅[分发内容](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute)。  
+
+    > [!NOTE]
+    > 也可以通过 OS 升级包从安装源文件执行 Windows 的新安装，但改为使用 OS 映像，如 install.wim。
+    >
+    > 仍然支持通过 OS 升级包来部署 Windows 的新安装，但这依赖于驱动程序与此方法兼容。 从 OS 升级包安装 Windows 时，仍在 Windows PE 中安装驱动程序，而不仅仅是在 Windows PE 中注入。 在 Windows PE 中安装时，某些驱动程序与之不兼容。 在 Windows PE 中安装时，如果驱动程序与之不兼容，则改为使用 OS 映像。  
 
 3.  **创建任务序列以通过网络部署操作系统**  
 

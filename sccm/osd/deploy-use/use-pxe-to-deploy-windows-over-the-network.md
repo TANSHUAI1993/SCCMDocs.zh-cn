@@ -10,16 +10,16 @@ ms.assetid: da5f8b61-2386-4530-ad54-1a5c51911f07
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1efd4197e63ddc12c0afc9e37b633c38d0df0f14
-ms.sourcegitcommit: a52255da16c9f8b0b60a6c299a369347c7e01bef
+ms.openlocfilehash: 75e463d27475e82677e91b00bfba4c4287d463ee
+ms.sourcegitcommit: f2a1fa59fb3870a6bebca61daf15c0c157e9fdd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49989138"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030982"
 ---
 # <a name="use-pxe-to-deploy-windows-over-the-network-with-configuration-manager"></a>使用 PXE 和 Configuration Manager 通过网络部署 Windows
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*适用于：System Center Configuration Manager (Current Branch)*
 
 如果 Configuration Manager 中的 OS 部署启动了预启动执行环境 (PXE)，则客户端可通过网络发出请求和部署操作系统。 在此部署方案中，将 OS 映像和启动映像发送到启用 PXE 的分发点。
 
@@ -43,13 +43,16 @@ ms.locfileid: "49989138"
 > [!NOTE]  
 >  配置单个已启用 PXE 的分发点以支持多个子网时，不支持使用 DHCP 选项。 在路由器上配置 IP 帮助程序，以允许 PXE 请求转发到已启用 PXE 的分发点。
 
+> [!NOTE]  
+>  不支持在同时运行 DHCP 服务器的服务器上使用不含 WDS 的 PXE 响应程序。
+
 ## <a name="prepare-a-pxe-enabled-boot-image"></a>准备 PXE 启用的启动映像
 
 若要使用 PXE 来部署 OS，必须将已启用 PXE 的 x86 和 x64 启动映像分发到一个或多个已启用 PXE 的分发点。 使用信息在启动映像上启用 PXE 并将启动映像分发到分发点：
 
 -   要在启动映像上启用 PXE，请从启动映像属性中的“数据源”选项卡中，选择“从已启用 PXE 的分发点部署此启动映像”。
 
--   如果更改启动映像的属性，请将启动映像重新分发到分发点。 有关详细信息，请参阅[分发内容](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_distribute)。
+-   如果更改启动映像的属性，请进行更新并将启动映像重新分发到分发点。 有关详细信息，请参阅[分发内容](/sccm/core/servers/deploy/configure/deploy-and-manage-content#bkmk_distribute)。
 
 
 
@@ -104,7 +107,7 @@ ms.locfileid: "49989138"
 
 将 OS 部署到目标集合。 有关详细信息，请参阅 [Deploy a task sequence](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS)。 当使用 PXE 部署操作系统时，你可以将部署配置为必需或可用。
 
--   所需的部署：所需的部署将使用 PXE，无需任何用户干预。 用户无法绕过 PXE 启动。 但是，如果用户在分发点响应之前取消 PXE 启动，则不会部署 OS。
+-   **所需部署**：所需的部署使用 PXE，无需任何用户干预。 用户无法绕过 PXE 启动。 但是，如果用户在分发点响应之前取消 PXE 启动，则不会部署 OS。
 
 -   **可用部署**：可用部署要求用户在目标计算机旁。 用户必须按 F12 键继续执行 PXE 启动过程。 如果由于用户不在场而未按 F12，则计算机将启动到当前 OS，或者将从下一个可用启动设备启动计算机。
 

@@ -10,16 +10,16 @@ ms.assetid: 3fe32aa2-d594-4ad0-a291-b8f5395ac50b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b4174c68d5a6ccd31355d976b7830b6d09f39d91
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 38b59e520baf9fddb09f71f459de409f38adad2b
+ms.sourcegitcommit: 32a257fafbb29aece8b4f435dd5614fcef305328
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32339870"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "54005443"
 ---
 # <a name="frequently-asked-questions-about-diagnostics-and-usage-data-for-system-center-configuration-manager"></a>有关 System Center Configuration Manager 的诊断和使用情况数据的常见问题
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*适用于：System Center Configuration Manager (Current Branch)*
 
 本文解答有关 Configuration Manager 中的诊断和使用情况数据的常见问题。
 
@@ -50,7 +50,7 @@ ms.locfileid: "32339870"
  否。 用于收集数据的存储过程仅限于站点数据库。  
 
 ### <a name="bkmk_gdpr"></a> Configuration Manager 是否遵循一般数据保护条例 (GDPR)？
- 否。 Configuration Manager 不受 GDPR 监督。 它是你直接部署、管理和操作的本地产品。 Microsoft 收集的诊断和使用情况数据用于改进未来版本的安装体验、质量和安全性。 此数据受 GDPR 监督。 不会收集最终用户标识信息 (EUII) 或最终用户匿名标识符 (EUPI) 并将其传输至 Microsoft。 有关 GDPR 的详细信息，请参阅 [Microsoft 信任中心中关于 GDPR 的内容](https://microsoft.com/gdpr)。 有关 Configuration Manager 数据的详细信息，请参阅[诊断和使用情况数据](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data)。
+ 否。 Configuration Manager 不受 GDPR 监督。 它是你直接部署、管理和操作的本地产品。 Microsoft 收集的诊断和使用情况数据用于改进未来版本的安装体验、质量和安全性。 此诊断和使用情况数据要受到 GDPR 的监督。 但是，不会收集最终用户标识信息 (EUII) 或最终用户匿名标识符 (EUPI) 并将其传输至 Microsoft。 有关 GDPR 的详细信息，请参阅 [Microsoft 信任中心中关于 GDPR 的内容](https://microsoft.com/gdpr)。 有关 Configuration Manager 数据的详细信息，请参阅[诊断和使用情况数据](/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data)。
 
 
 ## <a name="see-also"></a>另请参阅  

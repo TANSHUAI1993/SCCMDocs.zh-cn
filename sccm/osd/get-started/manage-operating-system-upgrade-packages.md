@@ -10,19 +10,21 @@ ms.assetid: b9b22655-b8c1-461f-8047-3a7e906f647a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f7b8b18cbec5a3b5972a448e8a70339533dc11fb
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 46e948a215535bf57153e5a97dbdc9cad2e35e3b
+ms.sourcegitcommit: 54e5786875c4e5f5c1b54e38ed59e96344faf9b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456000"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817845"
 ---
 # <a name="manage-os-upgrade-packages-with-configuration-manager"></a>使用 Configuration Manager 管理 OS 升级包
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*适用于：System Center Configuration Manager (Current Branch)*
 
 Configuration Manager 中的 OS 升级包包含用于在计算机上升级现有 OS 的 Windows 安装程序源文件。 本文介绍如何添加、分发和维护 OS 升级包。
 
+>[!NOTE]
+>OS 升级包还可用于 Windows 的新安装。 但是，它依赖于与此方法兼容的驱动程序。 从 OS 升级包执行 Windows 的新安装时，仍在 Windows PE 中安装驱动程序，而不仅仅是在 Windows PE 中注入。 在 Windows PE 中安装时，某些驱动程序与之不兼容。 在 Windows PE 中安装时，如果驱动程序与之不兼容，则改为使用 [OS 映像](/sccm/osd/get-started/manage-operating-system-images)，如 install.wim。
 
 
 ##  <a name="BKMK_AddOSUpgradePkgs"></a> 添加 OS 升级包  

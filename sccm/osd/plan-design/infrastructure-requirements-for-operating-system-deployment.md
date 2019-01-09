@@ -10,16 +10,16 @@ ms.assetid: 1dc74219-7ff5-4e3b-b4f6-5aad663bb75b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 03ec9c046e1b32f137777f15393b5d26b49e5520
-ms.sourcegitcommit: 265d38d55ca0db043e3a7131a56f123e1d98aa5b
+ms.openlocfilehash: cfaa50b941697b19f2d4d029ed7990f2d39eecbc
+ms.sourcegitcommit: f2a1fa59fb3870a6bebca61daf15c0c157e9fdd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48236151"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030965"
 ---
 # <a name="infrastructure-requirements-for-os-deployment-in-configuration-manager"></a>Configuration Manager 中的 OS 部署的基础结构要求
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*适用于：System Center Configuration Manager (Current Branch)*
 
 Configuration Manager 中的 OS 部署包含外部依赖关系和产品内的依赖关系。 使用本文可帮助你为 OS 部署准备基础结构。  
 
@@ -196,7 +196,7 @@ Configuration Manager 中的 OS 映像以 Windows 映像 (WIM) 文件格式存�
 
 - **操作系统升级包**：创建、删除、修改、修改文件夹、移动对象、读取、设置安全作用域  
 
-- **任务序列包**：创建、创建任务序列介质、删除、修改、修改文件夹、修改报表、移动对象、读取、运行报表、设置安全作用域  
+- **任务序列包**：创建、创建任务序列媒体、删除、修改、修改文件夹、修改报表、移动对象、读取、运行报表、设置安全作用域  
 
 有关详细信息，请参阅[创建自定义安全角色](/sccm/core/servers/deploy/configure/configure-role-based-administration#BKMK_CreateSecRole)。  
 
@@ -260,6 +260,8 @@ Configuration Manager 中的 OS 映像以 Windows 映像 (WIM) 文件格式存�
 
      `WDSUTIL /Set-Server /UseDHCPPorts:No /DHCPOption60:Yes`  
 
+> [!NOTE]
+> 在使用不含 WDS 的 PXE 响应程序（而不是 WDS）时，不支持同时在同一服务器上运行 DHCP。
 
 
 ##  <a name="BKMK_SupportedOS"></a> 支持的操作系统  

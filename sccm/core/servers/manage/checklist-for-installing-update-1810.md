@@ -10,16 +10,16 @@ ms.assetid: b87ac054-9b37-4725-a3f3-2340cfb10bff
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: efce5242c5de148d6922144af27f47a267b3c6c3
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 6ea093b71d19c2cee35caa748ae60f76a95b078c
+ms.sourcegitcommit: 54e5786875c4e5f5c1b54e38ed59e96344faf9b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52458037"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817760"
 ---
 # <a name="checklist-for-installing-update-1810-for-configuration-manager"></a>用于为 Configuration Manager 安装 1810 更新的清单
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*适用于：System Center Configuration Manager (Current Branch)*
 
 使用 Configuration Manager 的 Current Branch 时，可安装版本为 1810 的控制台内部更新，从之前的版本更新层次结构。 <!-- baseline only statement: (Because version 1802 is also available as [baseline media](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions), you can use the installation media to install the first site of a new hierarchy.)-->
 
@@ -89,6 +89,9 @@ ms.locfileid: "52458037"
 Windows 10 评估和部署工具包 (ADK) 的版本应受到 Configuration Manager 版本 1810 的支持。 有关受支持的 Windows ADK 版本的详细信息，请参阅 [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk)。 如果需要更新 Windows ADK，请在开始更新 Configuration Manager 前进行此操作。 此顺序可确保默认启动映像自动更新为最新版本的 Windows PE。 更新站点后手动更新任何自定义启动映像。
 
 如果先更新站点，再更新 Windows ADK，请参阅[利用启动映像更新分发点](/sccm/osd/get-started/manage-boot-images#update-distribution-points-with-the-boot-image)。
+
+#### <a name="review-sql-server-native-client-version"></a>查看 SQL Server Native Client 版本
+必须安装 SQL Server 2012 Native Client 的最低版本，其中包括对 TLS 1.2 的支持。 有关详细信息，请参阅[先决条件检查列表](/sccm/core/servers/deploy/install/list-of-prerequisite-checks#sql-native-client)。
 
 #### <a name="review-the-site-and-hierarchy-status-for-unresolved-issues"></a>查看站点和层次结构状态以寻找未解决的问题 
 由于现有的操作问题，站点更新可能会失败。 在更新站点前，请解决以下系统的所有操作问题：  

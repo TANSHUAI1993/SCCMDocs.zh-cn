@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
-ms.openlocfilehash: 4ef9746b9a1eb90beeec6a477ad1d406acebbb05
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 60fa4176d44b530b2cab6c2b9b4b35c968fae3c1
+ms.sourcegitcommit: 32a257fafbb29aece8b4f435dd5614fcef305328
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456560"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "54005477"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>云管理网关证书
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*适用于：System Center Configuration Manager (Current Branch)*
 
 根据通过云管理网关 (CMG) 管理 Internet 上的客户端所用的方案，可能需要以下一个或多个数字证书：  
 
@@ -45,7 +45,7 @@ ms.locfileid: "52456560"
 
 - 从 1710 版开始，支持对证书私钥的密钥存储提供程序。 有关详细信息，请参阅 [CNG 证书概述](/sccm/core/plan-design/network/cng-certificates-overview)。  
 
-- 从 1802 版开始，使用以下策略配置 Windows 时：“系统加密：使用 FIPS 兼容的算法进行加密、哈希处理和签名”  
+- 从版本 1802 开始，在使用以下策略配置 Windows 时：**系统加密：对加密、哈希和签名使用 FIPS 兼容算法**  
 
 - 从 1802 版开始，支持 TLS 1.2。 有关详细信息，请参阅[加密控制技术参考](/sccm/core/plan-design/security/cryptographic-controls-technical-reference#about-ssl-vulnerabilities)。  
 
@@ -62,6 +62,9 @@ CMG 创建基于 Internet 的客户端要连接到的 HTTPS 服务。 此服务�
  > [!TIP]
  > 此证书需要使用全局唯一名称标识 Azure 中的服务。 请求证书前，请确认所需的 Azure 域名是否唯一。 例如，GraniteFalls.CloudApp.Net。 登录 [Microsoft Azure 门户](https://portal.azure.com)。 依次选择“创建资源”、“计算”类别，以及“云服务”。 在“DNS 名称”字段中，键入所需的前缀，例如 GraniteFalls。 界面将反映域名是否可用，或是否已被其他服务使用。 不要在门户中创建服务，仅使用此流程检查名称可用性。 
   
+ > [!TIP]
+ > 如果还将 CMG 作为云分发点启用，则确认已选的 CMG 服务名称也是唯一 Azure 存储帐户名称。 例如，“GraniteFalls”。 登录 [Microsoft Azure 门户] (https://portal.azure.com))。 依次选择“创建资源”、“存储”类别、“存储帐户 - blob、文件、表、队列”。 单击“创建”，在“实例详细信息”下，输入为 CMG 服务选择的同一名称，例如“GraniteFalls”。 界面将反映存储帐户名称是否可用，或是否已被其他服务使用。 不要在门户中创建存储帐户，仅使用此流程检查名称可用性。 如果 CMG 云服务名称是唯一的，但存储帐户名称不是唯一的，则配置将失败。
+ 
  > [!NOTE]
  > 从 1802 版开始，CMG 服务器身份验证证书支持通配符。 某些证书颁发机构颁发证书时将通配符用作主机名。 例如，.contoso.com**\***。 某些组织使用通配符证书简化其 PKI 并降低维护成本。<!--491233-->  
  > 
@@ -225,7 +228,7 @@ CMG 必须信任客户端身份验证证书。 要实现此信任，请提供受
 <a name="bkmk_note1"></a> 
 
 > [!Note]  
-> **备注 1** ：此配置要求客户端具有[客户端身份验证证书](#bkmk_clientauth)，并且仅支持以设备为中心的方案。  
+> **备注 1**：此配置要求客户端具有[客户端身份验证证书](#bkmk_clientauth)，并且仅支持以设备为中心的方案。  
 
 #### <a name="for-on-premises-clients-communicating-with-the-on-premises-management-point"></a>对于与本地管理点通信的本地客户端
 使用以下客户端连接模式配置本地管理点：
@@ -244,13 +247,13 @@ CMG 必须信任客户端身份验证证书。 要实现此信任，请提供受
 
 
 #### <a name="legend-of-terms"></a>图例中的术语
-- 工作组：设备未加入域或 Azure AD，但具有[客户端身份验证证书](#bkmk_clientauth)  
-- AD 域加入：将设备加入本地 Active Directory 域  
-- Azure AD 加入：也称为云域加入，将设备加入 Azure Active Directory 租户  
-- 混合加入：将设备加入 Active Directory 域和 Azure AD 租户  
-- HTTP：在管理点属性上，将客户端连接设置为“HTTP”  
-- HTTPS：在管理点属性上，将客户端连接设置为“HTTPS”  
-- E-HTTP：在站点属性的“客户端计算机通信”选项卡上，将站点系统设置设置为“HTTPS 或 HTTP”，并启用选项“将 Configuration Manager 生成的证书用于 HTTP 站点系统”。 配置 HTTP 或 HTTPS 的管理点。  
+- *工作组*：设备未加入域或 Azure AD，但具有[客户端身份验证证书](#bkmk_clientauth)  
+- *AD 域加入*：将设备加入本地 Active Directory 域  
+- *Azure AD 加入*：也称为云域加入，将设备加入 Azure Active Directory 租户  
+- *混合加入*：将设备加入 Active Directory 域和 Azure AD 租户  
+- *HTTP*：在管理点属性上，将客户端连接设置为“HTTP”  
+- *HTTPS*：在管理点属性上，将客户端连接设置为“HTTPS”  
+- *E-HTTP*：在站点属性的“客户端计算机通信”选项卡上，将站点系统设置设置为“HTTPS 或 HTTP”，并启用选项“将 Configuration Manager 生成的证书用于 HTTP 站点系统”。 为 HTTP 配置管理点，HTTP 管理点可用于 HTTP 和 HTTPS 通信（令牌身份验证方案）。   
 
 
 

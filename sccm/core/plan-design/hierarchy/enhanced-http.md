@@ -10,16 +10,16 @@ ms.assetid: 4deac022-e397-4f1f-bc0a-cea6c6c6368d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7b7cb4a6a7ec6738bdf045b75bf88c8b4d8c4650
-ms.sourcegitcommit: 1439817f1309658b31008d7bafaab32fc5ef8789
+ms.openlocfilehash: 7f2fab639082e6871e5df8dcebe0d1b3a440624c
+ms.sourcegitcommit: 1bf26b83fa7da637d299a21e1d3bc61f2d7d8c10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52820095"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "54060359"
 ---
 # <a name="enhanced-http"></a>增强型 HTTP
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*适用于：System Center Configuration Manager (Current Branch)*
 
 <!--1356889,1358460-->
 
@@ -55,7 +55,7 @@ Configuration Manager 版本 1806 包括对客户端与站点系统之间的通�
 > 此行为在 Configuration Manager 当前分支版本 1802 中有所不同，在这种情况下，它需要一个已启用 HTTPS 的管理点，用于通过云管理网关进行通信的已加入 Azure AD 的客户端。 有关详细信息，请参阅[为管理点启用 HTTPS](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_mphttps)。  
 
 
-### <a name="bkmk_scenario2"></a> 方案 2： 客户端到分发点
+### <a name="bkmk_scenario2"></a> 方案 2：客户端到分发点
 <!--1358228-->
 
 工作组或已加入 Azure AD 的客户端可通过安全通道从为 HTTP 配置的分发点进行身份验证及下载内容。 这些类型的设备还可从为 HTTPS 配置的分发点进行身份验证和下载内容，而无需在客户端上使用 PKI 证书。 将客户端身份验证证书添加到工作组或已加入 Azure AD 的客户端，这颇具挑战性。
@@ -79,7 +79,7 @@ Configuration Manager 版本 1806 包括对客户端与站点系统之间的通�
 
     - 如果你的站点已满足此先决条件，则需更新 Azure AD 应用程序。 在 Configuration Manager 控制台中，转到“管理”工作区，展开“云服务”，然后选择“Azure Active Directory 租户”。 选择 Azure AD 租户，再选择“应用程序”窗格中 Web 应用程序，然后选择功能区中的“更新应用程序设置”。  
 
-- 仅限[方案 3](#bkmk_scenario3)：运行 Windows 10 版本 1803 且已加入 Azure AD 的客户端。 
+- 仅适用于[方案 3](#bkmk_scenario3)：运行 Windows 10 版本 1803 或更高版本且已加入 Azure AD 的客户端。 
 
 
 

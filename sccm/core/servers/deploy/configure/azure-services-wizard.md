@@ -10,16 +10,16 @@ ms.assetid: a26a653e-17aa-43eb-ab36-0e36c7d29f49
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0e1cdef0acc799fc60c622f11e4c9c7426dfc19c
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 76611065dbed595904c8e0e2f5d52af0b4c68492
+ms.sourcegitcommit: 54e5786875c4e5f5c1b54e38ed59e96344faf9b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456444"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817777"
 ---
 # <a name="configure-azure-services-for-use-with-configuration-manager"></a>配置用于 Configuration Manager 的 Azure 服务
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+*适用于：System Center Configuration Manager (Current Branch)*
 
 使用“Azure 服务向导”简化用于 Configuration Manager 的 Azure 云服务的配置过程。 此向导通过使用 Azure Active Directory (Azure AD) Web 应用注册提供通用的配置体验。 这些应用提供订阅和配置详细信息，以及与 Azure AD 之间的身份验证通信。 每次使用 Azure 设置新的 Configuration Manager 组件或服务时，应用都会输入此相同的信息。
 
@@ -37,14 +37,14 @@ ms.locfileid: "52456444"
 
     - 支持某些[云管理网关方案](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#scenarios)  
 
--   Log Analytics 连接器：[连接到 Azure Log Analytics ](/sccm/core/clients/manage/sync-data-log-analytics)。 将集合数据同步到 Log Analytics。  
+-   **Log Analytics 连接器**：[连接到 Azure 日志分析](/sccm/core/clients/manage/sync-data-log-analytics)。 将集合数据同步到 Log Analytics。  
 
     > [!Note]  
     > 本文引用 Log Analytics 连接器（以前称为“OMS 连接器”）。 没有任何功能区别。 有关详细信息，请参阅 [Azure 管理 - 监视](https://docs.microsoft.com/azure/monitoring/#operations-management-suite)。  
 
--   **升级就绪情况连接器**：连接至 Windows Analytics [升级就绪情况](/sccm/core/clients/manage/upgrade/upgrade-analytics)。 查看客户端升级兼容性数据。  
+-   **升级就绪情况连接器**：连接到 Windows Analytics [升级就绪情况](/sccm/core/clients/manage/upgrade/upgrade-analytics)。 查看客户端升级兼容性数据。  
 
--   **适用于企业的 Microsoft Store**：连接至[适用于企业的 Microsoft Store](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)。 为组织获取可使用 Configuration Manager 部署的 Microsoft Store 应用。  
+-   **适用于企业的 Microsoft Store**：连接到[适用于企业的 Microsoft Store](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)。 为组织获取可使用 Configuration Manager 部署的 Microsoft Store 应用。  
 
 ### <a name="service-details"></a>服务详细信息
 
@@ -54,7 +54,7 @@ ms.locfileid: "52456444"
 
 - **云**：所有服务都支持全局 Azure 云，但是并非所有服务都支持私有云，例如 Azure 美国政府云。  
 
-- **Web 应用**：指定服务是否使用“Web 应用/API 类型”的 Azure AD 应用（在 Configuration Manager 中也被称为服务器应用）。  
+- **Web 应用**：指定服务是否使用“Web 应用/API”类型的 Azure AD 应用（在 Configuration Manager 中也被称为服务器应用）。  
 
 - **本机应用**：指定服务是否使用“本机”类型的 Azure AD 应用（在 Configuration Manager 中也被称为客户端应用）。  
 
@@ -161,7 +161,7 @@ ms.locfileid: "52456444"
 - **客户端 ID**
 - **密钥**
 - **密钥到期日期**：从日历选择一个未来的日期。 
-- **应用 ID URI**：此值在 Azure AD 租户中必须是唯一的。 它在 Configuration Manager 客户端用于请求访问服务的访问令牌中。 默认情况下，此值为 https://ConfigMgrService。  
+- **应用 ID URI**：此值在 Azure AD 租户中必须是唯一的。 它在 Configuration Manager 客户端用于请求访问服务的访问令牌中。 默认值为 https\://ConfigMgrService。  
 
 输入信息后，选择“验证”。 然后选择“确定”，关闭“导入应用”对话框。 此操作会返回 Azure 服务向导的[应用页](#azure-app-properties)或[服务器应用对话框](#server-app-dialog)。
 
@@ -169,8 +169,8 @@ ms.locfileid: "52456444"
 
 在服务器应用对话框中选择“创建”时，会打开“创建服务器应用程序”对话框。 此页会自动在 Azure AD 中创建 Web 应用。 指定下列信息：
 - **应用程序名称**：应用的友好名称。
-- **主页 URL**：Configuration Manager 不使用此值，但是 Azure AD 需要它。 默认情况下，此值为 https://ConfigMgrService。  
-- **应用 ID URI**：此值在 Azure AD 租户中必须是唯一的。 它在 Configuration Manager 客户端用于请求访问服务的访问令牌中。 默认情况下，此值为 https://ConfigMgrService。  
+- **主页 URL**：Configuration Manager 不使用此值，但是 Azure AD 需要它。 默认值为 https\://ConfigMgrService。  
+- **应用 ID URI**：此值在 Azure AD 租户中必须是唯一的。 它在 Configuration Manager 客户端用于请求访问服务的访问令牌中。 默认值为 https\://ConfigMgrService。  
 - **密钥有效期**：从下拉列表中选择“1 年”或“2 年”。 默认值为一年。
 
 选择“登录”以进行 Azure 管理用户的身份验证。 Configuration Manager 不保存这些凭据。 此角色不需要 Configuration Manager 中的权限，其帐户也不需要与运行 Azure 服务向导的帐户相同。 成功完成 Azure 身份验证后，该页面会显示 Azure AD 租户名称以供参考。 
@@ -208,24 +208,41 @@ ms.locfileid: "52456444"
 
 在“客户端应用”对话框中选择“创建”时，会打开“创建客户端应用程序”对话框。 此页会自动在 Azure AD 中创建本机应用。 指定下列信息：
 - **应用程序名称**：应用的友好名称。
-- **回复 URL**：Configuration Manager 不使用此值，但是 Azure AD 需要它。 默认情况下，此值为 https://ConfigMgrService。 
+- **回复 URL**：Configuration Manager 不使用此值，但是 Azure AD 需要它。 默认值为 https\://ConfigMgrService。 
 
 选择“登录”以进行 Azure 管理用户的身份验证。 Configuration Manager 不保存这些凭据。 此角色不需要 Configuration Manager 中的权限，其帐户也不需要与运行 Azure 服务向导的帐户相同。 成功完成 Azure 身份验证后，该页面会显示 Azure AD 租户名称以供参考。 
 
 选择“确定”以在 Azure AD 中创建本机应用，并关闭“创建客户端应用程序”对话框。 此操作会返回至[客户端应用对话框](#client-app-dialog)。
 
 
+### <a name="renew-secret-key-azure-ad-apps"></a>续订密钥 Azure AD 应用
+在版本 1806 以前的版本中，若要续订 Azure 应用的密钥，则需要重新创建应用。
+
+在版本 1806 和更高版本中：
+
+- 创建的应用：在“云服务节点”下，转到“Azure Active Directory 租户”。 在“详细信息”窗格中，选择在其中创建应用程序的租户，然后选择“续订密钥”。  
+
+    - 选择“登录”以进行 Azure 管理用户的身份验证。  
+
+    - 选择“确定”以在 Azure AD 中创建本机应用，并关闭“创建客户端应用程序”对话框。 此操作会返回至[客户端应用对话框](#client-app-dialog)。  
+
+- 导入的应用：使用 Azure 门户续订和记录新的密钥和到期日期。 在“续订密钥”向导上添加此信息。  
+
+> [!Note]  
+> 保存密钥，然后关闭 Azure 应用程序属性“密钥”页。 关闭该页后，此信息将被删除。
+
+
 ## <a name="configuration-or-discovery"></a>配置或发现
 
 在“应用”页指定 Web 应用和本机应用后，Azure 服务向导根据要连接的服务转到“配置”或“发现”页。 此页的详细信息因不同的服务而异。 有关详细信息，请参阅以下文章之一：  
 
--   **云管理**服务，**发现**页：[配置 Azure AD 用户发现](/sccm/core/servers/deploy/configure/configure-discovery-methods#azureaadisc)  
+-   “云管理”服务，“发现”页：[配置 Azure AD 用户发现](/sccm/core/servers/deploy/configure/configure-discovery-methods#azureaadisc)  
 
 -   “Log Analytics 连接器”服务，“配置”页：[配置到 Log Analytics 的连接](/sccm/core/clients/manage/sync-data-log-analytics#configure-the-connection-to-log-analytics)  
 
--   **升级准备情况连接器**服务，**配置**页：[使用 Azure 向导创建连接](/sccm/core/clients/manage/upgrade/upgrade-analytics#use-the-azure-wizard-to-create-the-connection)  
+-   “升级就绪情况连接器”服务，“配置”页：[使用 Azure 向导创建连接](/sccm/core/clients/manage/upgrade/upgrade-analytics#use-the-azure-wizard-to-create-the-connection)  
 
--   **适用于企业的 Microsoft Store**服务，**配置**页：[配置适用于企业的 Microsoft Store 同步](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business#bkmk_config)  
+-   “适用于企业的 Microsoft Store”服务，“配置”页：[配置适用于企业的 Microsoft Store 同步](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business#bkmk_config)  
 
 
 最后，通过“摘要”页、“进度”页和“完成”页完成 Azure 服务向导。 已在 Configuration Manager 中完成一项 Azure 服务的配置。 重复执行此过程以配置其他 Azure 服务。
