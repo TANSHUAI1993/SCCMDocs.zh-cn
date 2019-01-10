@@ -4,12 +4,12 @@ hide_bc: true
 title: System Center Configuration Manager 文档
 description: 了解如何使用 System Center Configuration Manager。
 ms.topic: hub-page
-ms.openlocfilehash: f3f22bd918fd0f87792781b16648487fcd6fd19d
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: b3197faa2207a81fd72e778a9605bb2191167720
+ms.sourcegitcommit: 94bf7d5b5beb9628cc1fdfe75451d33b5de26f8a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53414899"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152496"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -112,7 +112,7 @@ ms.locfileid: "53414899"
                                                 <h3>保护数据和基础结构</h3>
                                                 <p><a href="/sccm/protect/deploy-use/manage-access-to-services">条件性访问</a></p>
                                                 <p><a href="/sccm/protect/deploy-use/endpoint-protection">适用于 Windows Defender 的 Endpoint Protection</a></p>
-                                                <p><a href="/sccm/protect/deploy-use/windows-hello-for-business-settings">Windows Hello 企业版</a></p>
+                                                <p><a href="/sccm/protect/deploy-use/windows-defender-advanced-threat-protection">Windows Defender 高级威胁防护</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -543,18 +543,18 @@ ms.locfileid: "53414899"
                                 </a>
                             </li>
                             <li>
-                                <a href="/sccm/protect/deploy-use/windows-hello-for-business-settings">
+                                <a href="/sccm/protect/deploy-use/windows-defender-advanced-threat-protection">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/bcs-partner-advanced-management-password-3.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/bcs-partner-policies-view-policies-2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3>Windows Hello 企业版</h3>
-                                                <p>创建策略来管理适用于 Windows 10 设备的替代登录方法。</p>
+                                                <h3>Windows Defender 高级威胁防护</h3>
+                                                <p>与 Windows Defender ATP 云服务集成，以防止高级攻击。</p>
                                             </div>
                                         </div>
                                     </div>
