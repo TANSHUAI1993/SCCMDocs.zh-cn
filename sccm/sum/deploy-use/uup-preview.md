@@ -2,7 +2,7 @@
 title: UUP 预览版
 titleSuffix: Configuration Manager
 description: 有关 UUP 集成预览版的说明
-ms.date: 12/21/2018
+ms.date: 01/04/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 robots: noindex,nofollow
-ms.openlocfilehash: d2aac5945d4b7678acf78d215c557a34aaef9c72
-ms.sourcegitcommit: f5fa9e657350ceb963a7928497d2adca9caef3d4
+ms.openlocfilehash: cfc83f4d076a05ea1847c0d073bd824ad10aa731
+ms.sourcegitcommit: 1bf26b83fa7da637d299a21e1d3bc61f2d7d8c10
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53748552"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "54060376"
 ---
 # <a name="uup-private-preview-instructions"></a>UUP 个人预览版说明
 
@@ -27,13 +27,16 @@ ms.locfileid: "53748552"
 
 ### <a name="feature-updates"></a>功能更新
 
-使用 UUP 进行功能更新旨在缓解客户目前在服务方面遇到的诸多问题。 尝试 UUP 功能更新，包括：
+使用 Windows 10 统一更新平台 (UUP) 进行功能更新旨在缓解客户目前在服务方面遇到的诸多问题。 尝试 UUP 功能更新，包括：
 
 - 直接升级到最新的安全符合性级别，而不再需要在升级后立即安装安全更新以符合要求。 每月发布一个新功能更新，以包含最新的累积安全更新。 无需每月重新下载或分发大部分功能更新内容，只需安装更新组件，该组件也可与累积更新共享。
 
-- 在升级过程中，应保留所有 FOD 和语言包，而不是丢弃。
+- 在升级过程中，应保留所有按需功能 (FOD) 和语言包，而不是丢弃。
 
 - 使用 UUP 的功能更新支持快速安装文件，使客户能够减少每个客户端必须下载的内容量。
+
+有关 UUP 的详细信息，请参阅 Windows 博客文章[有关我们的统一更新平台 (UUP) 的更新](https://blogs.windows.com/windowsexperience/2017/03/02/an-update-on-our-unified-update-platform-uup/)。
+
 
 ### <a name="cumulative-updates"></a>累积更新
 
@@ -55,42 +58,33 @@ $config = $server.GetConfiguration()
 $config.ServerId
 ```
 
-### <a name="2-upgrade-configmgr-to-a-supported-version"></a>2.将 ConfigMgr 升级到支持的版本
+### <a name="2-update-configmgr-to-a-supported-version"></a>2.将 ConfigMgr 更新为受支持的版本
 
-若要在环境中同步快速安装文件，则生产环境需要安装 ConfigMgr 1810（TAP、快速通道或正式发行版本均可接受），或 Technical Preview 环境需要安装 1812 Technical Preview。
+若要在环境中同步快速安装文件，则生产环境需要安装 ConfigMgr 1810 当前分支，或实验室环境需要安装 1812 技术预览分支。
 
-若要在环境中同步快速安装文件，则生产环境需要安装基于 1810 正式发行版 的 ConfigMgr 1810 UUP 修补程序，或技术预览环境需要安装 1812 Technical Preview。
+若要在环境中同步快速安装文件，则生产环境还需要安装 ConfigMgr 1810 修补程序 KB4482615，或实验室环境需要安装 1812 技术预览分支。
 
 
-#### <a name="configmgr-1810-uup-hotfix-kb4482615-from-1810-ga-slow-ring"></a>来自 1810 正式发行版（慢速通道）的 ConfigMgr 1810 UUP 修补程序 (KB4482615)
-如果当前使用的是 ConfigMgr 1810 GA（慢速通道），则将需要将 ConfigMgr 更新到 UUP 汇总。
+#### <a name="configmgr-1810-uup-hotfix-kb4482615"></a>ConfigMgr 1810 UUP 修补程序 (KB4482615)
 
-1. 应用“Configuration Manager 1810 修补程序 (KB4482615)”(package GUI 86450B7D-3574-4CF7-8B11-486A2C1F62A6) - 此修补程序将为非快速方案启用 UUP。  
+> [!Important]  
+> 以下过程适用于更新到版本 1810 的当前分支站点，该版本于 2018 年 12 月 19 日后正式发布。
+>
+> 如果你在 2018 年 11 月底或 12 月初通过运行 PowerShell 脚本来选择进行 1810 更新，则该修补程序尚不可用。 
 
-    1. 从 Microsoft 下载中心下载此修补程序（链接将在发布后提供）  
 
-    2. 下载此修补程序后，请参阅以下 Microsoft Docs 网页以获取安装说明：[使用更新注册工具导入修补程序](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes)  
+1. 更新站点
 
-    3. 有关如何下载 Microsoft 支持文件的详细信息，请单击以下文章编号以查看 Microsoft 知识库中的文章：[如何从联机服务获取 Microsoft 支持文件](https://support.microsoft.com/help/119591/how-to-obtain-microsoft-support-files-from-online-services)  
+    1. 从 [Microsoft 下载中心]<!--(https://download.microsoft.com/download/0/9/0/09081E12-A2CF-40B6-82D8-9B8914A1C2D3/KB4482615/CM1810-KB4482615.ConfigMgr.Update.exe)-->下载修补程序 KB4482615。 此修补程序为非快速方案启用 UUP。  
 
-2. 升级到 UUP 修补程序后，请将 ConfigMgr 客户端升级到与之匹配的版本。 必须升级所有针对 UUP 更新的客户端，以防止不必要地将大约 6 GB 的未使用内容下载到客户端。
+    2. [使用更新注册工具导入修补程序](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes)  
 
-#### <a name="configmgr-1810-uup-hotfix-kb4482615-from-1810-fast-ring"></a>来自 1810 快速通道的 ConfigMgr 1810 UUP 修补程序 (KB4482615)
-如果当前使用的是 ConfigMgr 1810 快速通道，则需要升级 ConfigMgr 并进行两次服务更新，但是在部署客户端升级之前要先暂停部署，这样只需要升级一次客户端。
+2. 更新客户端。  
 
-1. 我们很快就会推出一个可以升级到 1810 GA 的修补程序（预计 1 月初），直到你看到更新出现在“更新与维护服务”中。  
+    - 若要简化此过程，请考虑使用自动客户端升级。 有关详细信息，请参阅[升级客户端](/sccm/core/clients/manage/upgrade/upgrade-clients#automatic-client-upgrade)。  
 
-2. 升级（仅限站点服务器，而不是客户端）到“Configuration Manager 1810 修补程序 (KB4479288)”(package GUID 930FA45E-530F-4B08-B1BF-DE3F5267B03C)  
+    - 必须升级所有针对 UUP 更新的客户端，以防止不必要地将大约 6 GB 的未使用内容下载到客户端。
 
-3. 再次升级到“Configuration Manager 1810 修补程序 (KB4482615)”(package GUID 86450B7D-3574-4CF7-8B11-486A2C1F62A6) - 此修补程序将启用 UUP 用于非快速方案。  
-
-    1. 从 Microsoft 下载中心下载此修补程序（链接将在发布后提供）  
-
-    2. 下载此修补程序后，请参阅以下 Microsoft Docs 网页以获取安装说明：[使用更新注册工具导入修补程序](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes)  
-
-    3. 有关如何下载 Microsoft 支持文件的详细信息，请单击以下文章编号以查看 Microsoft 知识库中的文章：[如何从联机服务获取 Microsoft 支持文件](https://support.microsoft.com/help/119591/how-to-obtain-microsoft-support-files-from-online-services)  
-
-4. 升级到 UUP 修补程序后，请将 ConfigMgr 客户端升级到与之匹配的版本。 必须升级所有针对 UUP 更新的客户端，以防止不必要地将大约 6 GB 的未使用内容下载到客户端。
 
 #### <a name="1812-technical-preview"></a>1812 Technical Preview
 1812 Technical Preview 在受支持的 UUP 方案中相当于 ConfigMgr 1810 UUP 修补程序 (KB4482615)。
@@ -127,7 +121,7 @@ Windows 10 版本 1809 和尚未发布的 1 月累积非安全更新（或以下
 
 ### <a name="4-enable-express-installation-on-clients-in-client-settings"></a>4.在客户端设置中启用客户端上的快速安装
 
-无论是否同步快速内容，都必须为 UUP 更新设置可启用快速安装的客户端设置。 通过此设置，ConfigMgr 可借助 WUA 确定需要下载到客户端的内容，而不是下载所有与 UUP 更新相关的内容。 该设置甚至对于非快速方案也是必需的，因为存在可选的 FOD 和语言包内容，导致大量不重要的额外数据，而所有与更新关联的客户端都不需要这些数据。
+无论是否同步快速内容，都必须为 UUP 更新设置可启用快速安装的客户端设置。 通过此设置，ConfigMgr 可借助 Windows 更新代理 (WUA) 确定需要下载到客户端的内容，而不是下载所有与 UUP 更新相关的内容。 该设置甚至对于非快速方案也是必需的，因为存在可选的 FOD 和语言包内容，导致大量不重要的额外数据，而所有与更新关联的客户端都不需要这些数据。
 
 启用此设置不会影响服务器内容下载，只会影响客户端下载行为。 如果尚未启用此设置，则必须在启用此设置之前使用上面明确说明的 ConfigMgr 和 Windows 客户端版本，因为这些版本解决了直接在 WSUS 中批准更新的兼容性问题，使 ConfigMgr 能够使用此通道进行 UUP 更新，即使快速内容没有同步。
 
@@ -144,7 +138,7 @@ Windows 10 版本 1809 和尚未发布的 1 月累积非安全更新（或以下
 
 ### <a name="5-make-sure-your-adrs-are-set-as-desired"></a>5.请确保已按需设置 ADR 
 
-在启用 UUP 更新的同步之前，请考虑 ADR 以及所具有的任何其他更新的基础结构。 如果不希望这些更新作为现有 ADR 和服务计划的一部分自动进行部署，请务必更新 ADR 以将其筛选掉，请参阅[如何查找同步的 UUP 更新](#how-to-find-synced-uup-updates)。 现有服务计划仅在默认情况下部署非 UUP，但可更新该计划以更改此行为。
+在启用 UUP 更新的同步之前，请考虑自动部署规则 (ADR) 以及所具有的任何其他更新的基础结构。 如果不希望这些更新作为现有 ADR 和服务计划的一部分自动进行部署，请务必更新 ADR 以将其筛选掉，请参阅[如何查找同步的 UUP 更新](#how-to-find-synced-uup-updates)。 现有服务计划仅在默认情况下部署非 UUP，但可更新该计划以更改此行为。
 
 还要考虑这些更新是否会影响任何符合性报告或其他基础结构，只需通过将其同步并提前进行任何所需的更改即可。 例如，如果测量所有产品的符合性，将看到 UUP 和非 UUP 累积 Windows 10 更新都是不符合或符合要求的，因此会使数字出现偏差。
 
@@ -160,7 +154,7 @@ Windows 10 版本 1809 和尚未发布的 1 月累积非安全更新（或以下
 
 2. 在 Configuration Manager 控制台中，浏览到“管理” \ “站点配置” \ “站点”。  
 
-3. 选择顶层站点（CAS 或独立主站点）  
+3. 选择顶层站点，它是管理中心站点 (CAS) 或独立主站点  
 
 4. 打开“配置站点组件” \ “软件更新点”  
 
@@ -243,7 +237,7 @@ Windows 10 版本 1809 和尚未发布的 1 月累积非安全更新（或以下
 - Windows 传递优化
 - Configuration Manager 对等缓存
 - Windows BranchCache
-- 部署而不下载到服务器（没有部署包），直接从 MU 下载，如果你正在使用 MU，建议结合使用 DO
+- 部署而不下载到服务器（没有部署包），直接从 Microsoft 更新下载，如果你正在使用 Microsoft 更新，建议结合使用传递优化
 - 第三方替换内容提供程序
 
 有关详细信息，请参阅[优化 Windows 10 更新传递](/sccm/sum/deploy-use/optimize-windows-10-update-delivery)。

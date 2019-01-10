@@ -10,12 +10,12 @@ ms.assetid: aebafaf9-b3d5-4a0f-9ee5-685758c037a1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0ab848051d5eaa85d2b515145ff64471aee81a31
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 430931e8bfba3f40a8d970b7ae7b97e24d3381ec
+ms.sourcegitcommit: f2a1fa59fb3870a6bebca61daf15c0c157e9fdd6
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53415035"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54031016"
 ---
 # <a name="install-and-configure-distribution-points-in-configuration-manager"></a>在 Configuration Manager 中安装和配置分发点
 
@@ -341,6 +341,9 @@ ms.locfileid: "53415035"
 - **启用未知计算机支持**：指定是否启用对不受 Configuration Manager 管理的计算机的支持。 有关详细信息，请参阅[准备未知计算机部署](/sccm/osd/get-started/prepare-for-unknown-computer-deployments)。  
 
 - **在没有 Windows 部署服务的情况下启用 PXE 响应方**：从版本 1806 开始，可通过此选项在分发点上启用 PXE 响应方，而不需要 WDS。 此 PXE 响应程序支持 IPv6 网络。 如果在已启用 PXE 的分发点上启用此选项，Configuration Manager 将暂停 WDS 服务。 如果禁用此选项，但仍“为客户端启用 PXE 支持，分发点将重新启用 WDS”<!--1357580-->。  
+
+    > [!Note]
+    >不支持在同时运行 DHCP 服务器的服务器上使用不含 WDS 的 PXE 响应程序。
 
 - **当计算机使用 PXE 时要求密码**：为了提高 PXE 部署的安全性，请指定强密码。  
 
