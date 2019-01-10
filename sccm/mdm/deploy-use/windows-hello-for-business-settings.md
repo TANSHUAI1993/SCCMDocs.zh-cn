@@ -1,8 +1,8 @@
 ---
 title: Windows Hello 企业版设置
 titleSuffix: Configuration Manager
-description: 了解如何将 Windows Hello 企业版与 System Center Configuration Manager 集成。
-ms.date: 03/05/2017
+description: 了解如何将集成 Windows hello 企业版与 Configuration Manager。
+ms.date: 12/21/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,30 +10,34 @@ ms.assetid: c0593c07-5dd7-4d23-a0d8-d30165f49ef7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 052da22cd38f5dfca2fb1058f5a92e0dd025da71
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: f403fc8c83b93c91a1d648b194e2da1c82133fe2
+ms.sourcegitcommit: 94bf7d5b5beb9628cc1fdfe75451d33b5de26f8a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53421716"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152411"
 ---
-# <a name="windows-hello-for-business-settings-in-system-center-configuration-manager-hybrid"></a>System Center Configuration Manager 中的 Windows Hello 企业版设置（混合）
+# <a name="windows-hello-for-business-settings-in-configuration-manager-hybrid"></a>Windows hello 企业版设置在 Configuration Manager （混合）
 
-*适用于：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
-通过 System Center Configuration Manager，可与 Windows Hello 企业版（以前为 Microsoft Passport for Windows）集成，其为 Windows 10 设备的替代登录方法。 Hello 企业版使用 Active Directory 或 Azure Active Directory 帐户来替代密码、智能卡或虚拟智能卡。  
+Configuration Manager 允许集成 Windows hello 企业版 (以前称为 Microsoft Passport for Windows)，它是一种替代登录方法适用于 Windows 10 设备。 Hello 企业版使用 Active Directory 或 Azure Active Directory 帐户来替代密码、智能卡或虚拟智能卡。 在 Hello 企业版中，可以使用“用户手势”取代密码进行登录。 用户手势可以是简单的 PIN、生物识别身份验证或指纹读取器等外部设备。  
 
-在 Hello 企业版中，可以使用“用户手势”取代密码进行登录。 用户手势可以是简单的 PIN、生物识别身份验证或指纹读取器等外部设备。  
+> [!Important]  
+> 截至 2017 年 12 月 Windows hello 企业版设置在配置管理器是[弃用的功能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)。 Windows Server 2016 Active Directory 联合身份验证服务注册机构 (ADFS RA) 部署更简单、 可提供更好的用户体验，并具有更具确定性的证书注册体验。 有关详细信息，请参阅 [Windows Hello 企业版](https://docs.microsoft.com/windows/access-protection/hello-for-business/hello-identity-verification)。  
 
- Configuration Manager 通过两种方式与 Windows Hello 企业版集成：  
 
--   可以使用 Configuration Manager 来控制用户能够和不能用于登录的手势。  
+Configuration Manager 通过两种方式与 Windows Hello 企业版集成：  
 
--   可在 Windows Hello 企业版密钥存储提供程序 (KSP) 中存储身份验证证书。 有关详细信息，请参阅[证书配置文件](create-pfx-certificate-profiles.md)。  
+- 可以使用 Configuration Manager 来控制用户能够和不能用于登录的手势。  
 
-- 可将 Windows Hello 企业版策略部署到运行 Configuration Manager 客户端的已加入域的 Windows 10 设备。 [在已加入域的 Windows 10 设备上配置 Windows Hello 企业版](../../protect/deploy-use/windows-hello-for-business-settings.md#configure-windows-hello-for-business-on-domain-joined-windows-10-devices)中介绍了此配置。 搭配使用 Configuration Manager 和 Intune（混合）时，可在 Windows 10 和 Windows 10 移动设备上配置这些设置，但不能在运行 Configuration Manager 客户端的已加入域的设备上进行配置。   
+- 可在 Windows Hello 企业版密钥存储提供程序 (KSP) 中存储身份验证证书。 有关详细信息，请参阅[证书配置文件](create-pfx-certificate-profiles.md)。  
 
-有关配置 Windows Hello 企业版设置的一般信息，请参阅 [System Center Configuration Manager 中的 Windows Hello 企业版设置](../../protect/deploy-use/windows-hello-for-business-settings.md)。
+- 可将 Windows Hello 企业版策略部署到运行 Configuration Manager 客户端的已加入域的 Windows 10 设备。 [在已加入域的 Windows 10 设备上配置 Windows Hello 企业版](/sccm/protect/deploy-use/windows-hello-for-business-settings#configure-windows-hello-for-business-on-domain-joined-windows-10-devices)中介绍了此配置。 搭配使用 Configuration Manager 和 Intune（混合）时，可在 Windows 10 和 Windows 10 移动设备上配置这些设置，但不能在运行 Configuration Manager 客户端的已加入域的设备上进行配置。   
+
+有关配置 Windows Hello for Business 设置的常规信息，请参阅[Windows hello 企业版设置在 Configuration Manager 中](/sccm/protect/deploy-use/windows-hello-for-business-settings)。
+
+
 
 ## <a name="configure-windows-hello-for-business-settings-hybrid"></a>配置 Windows Hello 企业版设置（混合）  
 
@@ -97,7 +101,10 @@ ms.locfileid: "53421716"
 
 4. 完成后单击“确定” 。  
 
-### <a name="see-also"></a>另请参阅  
- [使用 System Center Configuration Manager 保护数据和站点基础架构](../../protect/understand/protect-data-and-site-infrastructure.md)
 
- [使用 Windows Hello 企业版管理身份验证](https://technet.microsoft.com/itpro/windows/keep-secure/manage-identity-verification-using-microsoft-passport)。  
+
+## <a name="see-also"></a>另请参阅  
+
+[保护数据和站点基础结构](/sccm/protect/understand/protect-data-and-site-infrastructure)
+
+[Windows Hello 企业版](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-identity-verification)  
