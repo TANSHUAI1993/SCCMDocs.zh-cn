@@ -10,12 +10,12 @@ ms.assetid: 446c83b5-c292-4e74-ba19-0792ac6b3472
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d63100e5525b24ffd8deba447a10325c8209ea00
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 3d7f142752f2d3ce97986455fe516748b0d6fb72
+ms.sourcegitcommit: 54e5786875c4e5f5c1b54e38ed59e96344faf9b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53416684"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817692"
 ---
 # <a name="upgrade-clients-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中升级客户端
 
@@ -29,7 +29,7 @@ ms.locfileid: "53416684"
 ## <a name="group-policy-installation"></a>组策略安装  
  **支持的客户端平台：** Windows  
 
- **优点**  
+#### <a name="advantages"></a>优点  
 
 - 在可以升级客户端之前，无需发现计算机。  
 
@@ -39,7 +39,7 @@ ms.locfileid: "53416684"
 
 - 你无需为目标客户端计算机配置和维护安装帐户。  
 
-  **缺点**  
+#### <a name="disadvantages"></a>缺点  
 
 - 如果升级大量客户端，则会导致较高的网络流量。  
 
@@ -49,7 +49,7 @@ ms.locfileid: "53416684"
 ## <a name="logon-script-installation"></a>登录脚本安装  
  **支持的客户端平台：** Windows  
 
- **优点**  
+#### <a name="advantages"></a>优点  
 
 - 在可以安装客户端之前，无需发现计算机。  
 
@@ -57,7 +57,7 @@ ms.locfileid: "53416684"
 
 - 支持使用 CCMSetup 的命令行属性。  
 
-  **缺点**  
+#### <a name="disadvantages"></a>缺点  
 
 - 如果在短时间内升级大量客户端，则会导致较高的网络流量。  
 
@@ -68,7 +68,7 @@ ms.locfileid: "53416684"
 ## <a name="manual-installation"></a>手动安装  
  **支持的客户端平台：** Windows、UNIX/Linus、Mac OS X  
 
- **优点**  
+#### <a name="advantages"></a>优点  
 
 - 在可以升级客户端之前，无需发现计算机。  
 
@@ -76,7 +76,7 @@ ms.locfileid: "53416684"
 
 - 支持使用 CCMSetup 的命令行属性。  
 
-  **缺点**  
+#### <a name="disadvantages"></a>缺点  
 
 - 无自动化，因此耗费时间。  
 
@@ -94,11 +94,11 @@ ms.locfileid: "53416684"
 > [!NOTE]  
 >  无法使用此方法升级 Configuration Manager 2007 客户端。 在此情况下，可以从 Configuration Manager 2007 站点中以包的形式部署 Configuration Manager 客户端，或者可以使用自动客户端升级，这种方法可自动创建和部署包含客户端最新版本的包。  
 
- **优点**  
+#### <a name="advantages"></a>优点  
 
 - 支持使用 CCMSetup 的命令行属性。  
 
-  **缺点**  
+#### <a name="disadvantages"></a>缺点  
 
 - 将客户端分发到大型集合时，可能会导致较高的网络流量。  
 
@@ -113,17 +113,19 @@ ms.locfileid: "53416684"
 
  **支持的客户端平台：** Windows  
 
- **优点**  
+#### <a name="advantages"></a>优点  
 
+- 由于指定时间段内存在随机选择，所以只有自动升级才适合大规模客户端升级。 其他方法对于大规模客户端升级来说，要么太慢，要么不具备随机选择。 
+
+    > [!Note]
+    > 客户端试验不适合大规模客户端升级，因为它根本不会进行随机选择。  
 - 可用于自动让站点中的客户端的版本保持最新。  
 
 - 所需管理最少。  
 
-  **缺点**  
+#### <a name="disadvantages"></a>缺点  
 
 - 只能用于升级客户端软件，不能用于安装新客户端。  
-
-- 不适用于同时升级多个客户端。  
 
 - 适用于层次结构中分配到站点的所有客户端。 无法按集合来限定范围。  
 
@@ -134,13 +136,13 @@ ms.locfileid: "53416684"
 ## <a name="client-testing"></a>客户端测试  
  **支持的客户端平台：** Windows  
 
- **优点**  
+#### <a name="advantages"></a>优点  
 
 - 可用于在较小的预生产集合中测试新的客户端版本。  
 
 - 测试完成后，预生产中的客户端将被提升到生产，并将在整个 Configuration Manager 站点中自动进行升级。  
 
-  **缺点**  
+#### <a name="disadvantages"></a>缺点  
 
 - 只能用于升级客户端软件，不能用于安装新客户端。  
 
