@@ -2,7 +2,7 @@
 title: 混合 MDM 中的新增功能
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 和 Intune 的混合部署可用的新移动设备管理功能。
-ms.date: 12/14/2018
+ms.date: 01/10/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,16 +10,16 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7cf1adf7d73e60fba0d748022ab7c241d60ffed7
-ms.sourcegitcommit: c60e057075a83f07d1ca2577c3de1c7d7c8e9cec
+ms.openlocfilehash: 610dfb7391347663fd92c0839d20eb7a4a703438
+ms.sourcegitcommit: c80abe7e4b7b2f80e957e45ff205f67d1b715688
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626491"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54226217"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Configuration Manager 和 Microsoft Intune 的混合移动设备管理中的新增功能
 
-*适用于：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 本文提供有关 System Center Configuration Manager 和 Microsoft Intune 的混合部署的可用的新移动设备管理 (MDM) 功能的详细信息。     
 
@@ -44,6 +44,33 @@ ms.locfileid: "53626491"
 |**Microsoft Intune 中的新增功能** | 一般情况下，此类别下列出的所有功能都应适用于所有 Configuration Manager 版本。 这包括 System Center 2012 R2 Configuration Manager 版本，因为这些功能仅需要 Intune 服务，不需要 Configuration Manager 中的其他功能。|
 |**Configuration Manager Technical Preview 中的新增功能**| 此类别下列出的所有功能仅适用于指定的 Technical Preview 分支。 若要试用这些功能，必须安装功能说明中指定的 Technical Preview 版本。 有关详细信息，请参阅 [Configuration Manager 的 Technical Preview](/sccm/core/get-started/technical-preview)。|
 |**Configuration Manager (Current Branch) 中的新增功能**| 此类别下列出的所有功能仅适用于指定的 Configuration Manager (Current Branch) 版本。 如果要为混合部署使用较旧版本的 Configuration Manager，请升级到功能说明中指定的 Configuration Manager (Current Branch) 版本。 有关详细信息，请参阅[升级到 Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)。|
+
+
+
+## <a name="january-2019"></a>2019 年 1 月
+
+### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
+
+#### <a name="tenant-status-dashboard"></a>租户状态仪表板
+<!--1124854--> 新[租户状态页](https://docs.microsoft.com/intune/tenant-status)提供单个位置可以为你的租户查看状态和相关详细信息。 在仪表板分为四个区域：
+
+- **租户详细信息**:显示信息，包括你的租户名称和位置，你的 MDM 机构，总注册你的租户中的设备和你的许可证计数。 本部分还列出了你的租户的当前服务版本。  
+
+- **连接器状态**:显示有关可用的连接器已配置，并还可以列出那些尚未启用的信息。  
+
+    基于每个连接器的当前状态，它们被标记为正常、 警告或不正常。 选择一个连接器来钻取和查看详细信息或配置为它的其他信息。  
+
+- **Intune 服务运行状况**:为你的租户中显示有关活动事件或服务中断的详细信息。 直接从 Office 消息中心检索在本部分中的信息。  
+
+- **Intune 新闻**:显示你的租户活动消息。 当你的租户接收的最新的 Intune 功能时，消息将包括通知等内容。  直接从 Office 消息中心检索在本部分中的信息。  
+
+#### <a name="new-help-and-support-experience-in-company-portal-for-windows-10"></a>新的帮助和支持 Windows 10 公司门户中体验 
+<!--1488939--> 新的公司门户帮助和支持页面可以帮助用户进行故障排除和请求应用程序和访问问题的帮助。 在新页中，它们可以通过电子邮件发送错误和诊断日志的详细信息并查找其组织的支持人员详细信息。 它们还会发现其中包含指向相关的 Intune 文档常见问题部分。 有关详细信息和屏幕截图，请参阅[获取帮助和支持 Windows 10 公司门户中的](https://docs.microsoft.com/intune-user-help/help-and-support-windows-cpapp)。
+
+#### <a name="some-bitlocker-settings-support-windows-10-pro-edition"></a>某些 BitLocker 设置支持 Windows 10 专业版
+<!--2727036--> 可以创建 Windows 10 设备，包括 BitLocker 设置终结点保护设置的配置项目。 此更新将添加对某些 BitLocker 设置的 Windows 10 专业版的支持。
+
+有关详细信息，请参阅[适用于 Windows 10 的加密设置](/sccm/mdm/deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client#encryption)。
 
 
 
@@ -408,7 +435,7 @@ ms.locfileid: "53626491"
 
 - **新移动应用程序管理策略设置**     
   以下设置已添加到移动应用程序管理策略设置：
-  - **禁用联系人同步**:阻止应用在设备上将数据保存到本机联系人应用。
+  - **禁用联系人同步**:阻止应用将数据保存到设备上的本机“联系人”应用。
   - **禁用打印**:阻止应用打印工作或学校数据。
   <!-- 1324760 -->    
 
