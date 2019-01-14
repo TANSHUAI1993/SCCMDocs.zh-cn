@@ -10,16 +10,16 @@ ms.assetid: bb95154b-f63e-4491-896e-41d732c802f8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f3d25120701c12b547727259002fc58a8f8f0780
-ms.sourcegitcommit: 97083c51057e2c4e0fe12c3b1f1b512250874c6a
-ms.translationtype: HT
+ms.openlocfilehash: a84dfc33fe79f5eb4d5397505a12052b8e92aebf
+ms.sourcegitcommit: a3cec96a771eed69e58a29917d1a3fe1a5fb2e73
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50968129"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54250606"
 ---
 # <a name="hybrid-mdm-with-configuration-manager-and-microsoft-intune"></a>使用 Configuration Manager 和 Microsoft Intune 的混合 MDM
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 > [!Important]  
 > 自 2018 年 8 月 14 日起，混合移动设备管理[功能停用](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)。
@@ -28,7 +28,7 @@ ms.locfileid: "50968129"
 > 
 > 因此，大多数客户选择 Azure 上的 Intune 而不是混合 MDM。 随着越来越多的客户迁移到云，使用混合 MDM 的客户数量持续减少。 因此，Microsoft 将在 2019 年 9 月 1 日停用混合 MDM 服务产品。 请计划[迁移到 Azure 上的 Intune](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa) 以满足你的 MDM 需求。 
 > 
-> 此更改不会影响本地 Configuration Manager 或[适用于 Windows 10 设备的共同管理](/sccm/core/clients/manage/co-management-overview)。 如果你不确定自己是否在使用混合 MDM，请转到 Configuration Manager 控制台中的“管理”工作区，展开“云服务”，然后单击“Microsoft Intune 订阅。 如果设置了 Microsoft Intune 订阅，那么你的租户已针对混合 MDM 进行了配置。
+> 此更改不会影响本地 Configuration Manager 或[适用于 Windows 10 设备的共同管理](/sccm/comanage/overview)。 如果你不确定自己是否在使用混合 MDM，请转到 Configuration Manager 控制台中的“管理”工作区，展开“云服务”，然后单击“Microsoft Intune 订阅。 如果设置了 Microsoft Intune 订阅，那么你的租户已针对混合 MDM 进行了配置。
 > 
 > **这会对我产生哪些影响？**
 > 
@@ -86,8 +86,8 @@ ms.locfileid: "50968129"
 
 若要对设备进行混合管理，设备必须向该服务注册。 设备的注册方式取决于设备类型、所有权和所需的管理级别。
 
-- “自带设备办公”(BYOD)：用户注册其个人电话、平板电脑或电脑  
+- **"自带设备办公"(BYOD)**:用户注册其个人电话、 平板电脑  
 
-- 公司拥有的设备 (COD)：启用管理方案，如远程擦除、共享的设备或设备的用户关联  
+- **企业拥有的设备 (COD)**:启用管理方案，如远程擦除、 共享的设备或设备的用户关联  
 
 - 如果使用本地或在云中托管的 [Exchange ActiveSync](/sccm/mdm/plan-design/device-enrollment-methods#mobile-device-management-with-exchange-activesync-and-configuration-manager)，则无需注册即可启用简单的 Intune 管理。 还可使用 [Intune 客户端软件](/intune/deploy-use/manage-windows-pcs-with-microsoft-intune)管理 Windows 电脑。

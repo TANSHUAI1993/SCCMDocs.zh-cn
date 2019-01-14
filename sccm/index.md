@@ -4,12 +4,12 @@ hide_bc: true
 title: System Center Configuration Manager 文档
 description: 了解如何使用 System Center Configuration Manager。
 ms.topic: hub-page
-ms.openlocfilehash: b3197faa2207a81fd72e778a9605bb2191167720
-ms.sourcegitcommit: 94bf7d5b5beb9628cc1fdfe75451d33b5de26f8a
+ms.openlocfilehash: c6002a890f2ed89a1fa52dbf6585cafa10940a56
+ms.sourcegitcommit: a3cec96a771eed69e58a29917d1a3fe1a5fb2e73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54152496"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54250679"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -41,7 +41,7 @@ ms.locfileid: "54152496"
                                         <div class="card">
                                             <div class="cardText">
                                                 <h3>云附加管理</h3>
-                                                <p><a href="/sccm/core/clients/manage/co-management-overview">适用于 Windows 10 的共同管理</a></p>
+                                                <p><a href="/sccm/comanage/overview">适用于 Windows 10 的共同管理</a></p>
                                                 <p><a href="/sccm/core/clients/manage/manage-clients-internet">在 Internet 上管理客户端</a></p>
                                                 <p><a href="/sccm/osd/deploy-use/manage-windows-as-a-service">Windows 即服务</a></p>
                                             </div>
@@ -158,7 +158,7 @@ ms.locfileid: "54152496"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/ms365enterprise-partner-news-2.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/illustrations/ms365enterprise-partner-news-2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -177,7 +177,7 @@ ms.locfileid: "54152496"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-core-infrastructure-2.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/hubs/sccm/sccm-core-infrastructure-2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -196,7 +196,7 @@ ms.locfileid: "54152496"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/nuget-tools-reference_2.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/illustrations/nuget-tools-reference_2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -214,13 +214,13 @@ ms.locfileid: "54152496"
                         <a href="#tasksPanel2">云附加管理</a>
                         <ul id="tasksPanel2" class="cardsC">
                             <li>
-                                <a href="/sccm/core/clients/manage/co-management-overview">
+                                <a href="/sccm/comanage/overview">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/virtualization-hperv-server-management-tools.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/illustrations/virtualization-hperv-server-management-tools.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -239,7 +239,7 @@ ms.locfileid: "54152496"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/biztalk-get-started-get-started.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/illustrations/biztalk-get-started-get-started.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -258,7 +258,7 @@ ms.locfileid: "54152496"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/biztalk-host-integration-update-center.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/illustrations/biztalk-host-integration-update-center.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -282,7 +282,7 @@ ms.locfileid: "54152496"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/bcs-partner-advanced-management-settings-8.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/illustrations/bcs-partner-advanced-management-settings-8.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -301,7 +301,7 @@ ms.locfileid: "54152496"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/teams-fast-track.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/illustrations/teams-fast-track.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -325,7 +325,7 @@ ms.locfileid: "54152496"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-app-mgmt-1.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/hubs/sccm/sccm-app-mgmt-1.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -344,7 +344,7 @@ ms.locfileid: "54152496"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-app-mgmt-2.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/hubs/sccm/sccm-app-mgmt-2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -363,7 +363,7 @@ ms.locfileid: "54152496"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-core-infrastructure-1.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/hubs/sccm/sccm-core-infrastructure-1.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -387,7 +387,7 @@ ms.locfileid: "54152496"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-operating-sys-deploy-1.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/hubs/sccm/sccm-operating-sys-deploy-1.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -406,7 +406,7 @@ ms.locfileid: "54152496"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-operating-sys-deploy-2.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/hubs/sccm/sccm-operating-sys-deploy-2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -425,7 +425,7 @@ ms.locfileid: "54152496"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-operating-sys-deploy-3.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/hubs/sccm/sccm-operating-sys-deploy-3.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -449,7 +449,7 @@ ms.locfileid: "54152496"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-software-update-mgmt-1.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/hubs/sccm/sccm-software-update-mgmt-1.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -468,7 +468,7 @@ ms.locfileid: "54152496"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-software-update-mgmt-2.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/hubs/sccm/sccm-software-update-mgmt-2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -487,7 +487,7 @@ ms.locfileid: "54152496"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-software-update-mgmt-3.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/hubs/sccm/sccm-software-update-mgmt-3.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -511,7 +511,7 @@ ms.locfileid: "54152496"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-protect-data-infrastruct-2.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/hubs/sccm/sccm-protect-data-infrastruct-2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -530,7 +530,7 @@ ms.locfileid: "54152496"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-protect-data-infrastruct-3.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/hubs/sccm/sccm-protect-data-infrastruct-3.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -549,7 +549,7 @@ ms.locfileid: "54152496"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/illustrations/bcs-partner-policies-view-policies-2.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/illustrations/bcs-partner-policies-view-policies-2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -573,7 +573,7 @@ ms.locfileid: "54152496"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-device-compliance-1.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/hubs/sccm/sccm-device-compliance-1.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -592,7 +592,7 @@ ms.locfileid: "54152496"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-device-compliance-2.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/hubs/sccm/sccm-device-compliance-2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -611,7 +611,7 @@ ms.locfileid: "54152496"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-device-compliance-3.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/hubs/sccm/sccm-device-compliance-3.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -640,7 +640,7 @@ ms.locfileid: "54152496"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="https://docs.microsoft.com/en-us/media/common/i_progressive.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/common/i_progressive.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -659,7 +659,7 @@ ms.locfileid: "54152496"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="https://docs.microsoft.com/en-us/media/common/i_upgrade.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/common/i_upgrade.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -678,7 +678,7 @@ ms.locfileid: "54152496"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="https://docs.microsoft.com/en-us/media/logos/logo_Windows.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/logos/logo_Windows.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -697,7 +697,7 @@ ms.locfileid: "54152496"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="https://docs.microsoft.com/en-us/media/logos/logo_office.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/logos/logo_office.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -716,7 +716,7 @@ ms.locfileid: "54152496"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="https://docs.microsoft.com/en-us/media/common/i_get-started.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/common/i_get-started.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -735,7 +735,7 @@ ms.locfileid: "54152496"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="https://docs.microsoft.com/en-us/media/common/i_guidelines.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/common/i_guidelines.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -754,7 +754,7 @@ ms.locfileid: "54152496"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="https://docs.microsoft.com/en-us/media/common/i_deploy.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/common/i_deploy.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -783,7 +783,7 @@ ms.locfileid: "54152496"
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage">
-                                                        <img src="https://docs.microsoft.com/en-us/media/common/i_tools.svg"  alt="" />
+                                                        <img src="https://docs.microsoft.com/media/common/i_tools.svg"  alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -796,13 +796,13 @@ ms.locfileid: "54152496"
                                 </a>
                             </li>
                             <li>
-                                <a href="https://docs.microsoft.com/en-us/previous-versions/system-center/system-center-2012-R2/dn688621(v=technet.10)" data-linktype="absolute-path">
+                                <a href="https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/dn688621(v=technet.10)" data-linktype="absolute-path">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage">
-                                                        <img src="https://docs.microsoft.com/en-us/media/common/i_support.svg"  alt="" />
+                                                        <img src="https://docs.microsoft.com/media/common/i_support.svg"  alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -821,7 +821,7 @@ ms.locfileid: "54152496"
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage">
-                                                        <img src="https://docs.microsoft.com/en-us/media/common/i_deploy.svg"  alt="" />
+                                                        <img src="https://docs.microsoft.com/media/common/i_deploy.svg"  alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -840,7 +840,7 @@ ms.locfileid: "54152496"
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage">
-                                                        <img src="https://docs.microsoft.com/en-us/media/common/i_upgrade.svg"  alt="" />
+                                                        <img src="https://docs.microsoft.com/media/common/i_upgrade.svg"  alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -859,7 +859,7 @@ ms.locfileid: "54152496"
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage">
-                                                        <img src="https://docs.microsoft.com/en-us/media/common/i_security-management.svg" alt="" />
+                                                        <img src="https://docs.microsoft.com/media/common/i_security-management.svg" alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -878,7 +878,7 @@ ms.locfileid: "54152496"
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage">
-                                                        <img src="https://docs.microsoft.com/en-us/media/common/i_package.svg"  alt="" />
+                                                        <img src="https://docs.microsoft.com/media/common/i_package.svg"  alt="" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -907,7 +907,7 @@ ms.locfileid: "54152496"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-tools-1.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/hubs/sccm/sccm-tools-1.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -926,7 +926,7 @@ ms.locfileid: "54152496"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-tools-2.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/hubs/sccm/sccm-tools-2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -945,7 +945,7 @@ ms.locfileid: "54152496"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage bgdAccent1">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-tools-4.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/hubs/sccm/sccm-tools-4.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -974,7 +974,7 @@ ms.locfileid: "54152496"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="https://docs.microsoft.com/en-us/media/common/i_blog.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/common/i_blog.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -993,7 +993,7 @@ ms.locfileid: "54152496"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="https://docs.microsoft.com/en-us/media/hubs/sccm/sccm-social-2.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/hubs/sccm/sccm-social-2.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -1006,13 +1006,13 @@ ms.locfileid: "54152496"
                                 </a>
                             </li>
                             <li>
-                                <a href="https://social.technet.microsoft.com/Forums/en-US/home?forum=ConfigMgrCBGeneral%2CConfigMgrDeployment%2CConfigMgrMDM%2CConfigMgrMigration%2CConfigMgrCompliance%2CConfigMgrAppManagement%2CConfigMgrPowerShell%2CConfigMgrCBOSD&filter=alltypes&sort=lastpostdesc">
+                                <a href="https://social.technet.microsoft.com/Forums/home?forum=ConfigMgrCBGeneral%2CConfigMgrDeployment%2CConfigMgrMDM%2CConfigMgrMigration%2CConfigMgrCompliance%2CConfigMgrAppManagement%2CConfigMgrPowerShell%2CConfigMgrCBOSD&filter=alltypes&sort=lastpostdesc">
                                 <div class="cardSize">
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="https://docs.microsoft.com/en-us/media/common/i_support.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/common/i_support.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -1031,7 +1031,7 @@ ms.locfileid: "54152496"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="https://docs.microsoft.com/en-us/media/logos/logo-uservoice.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/logos/logo-uservoice.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -1050,7 +1050,7 @@ ms.locfileid: "54152496"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="https://docs.microsoft.com/en-us/media/logos/logo-uservoice.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/logos/logo-uservoice.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">
@@ -1069,7 +1069,7 @@ ms.locfileid: "54152496"
                                         <div class="card">
                                             <div class="cardImageOuter">
                                                 <div class="cardImage">
-                                                    <img src="https://docs.microsoft.com/en-us/media/common/i_blog.svg" alt="" />
+                                                    <img src="https://docs.microsoft.com/media/common/i_blog.svg" alt="" />
                                                 </div>
                                             </div>
                                             <div class="cardText">

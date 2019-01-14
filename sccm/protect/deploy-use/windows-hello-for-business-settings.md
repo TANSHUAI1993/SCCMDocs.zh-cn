@@ -1,8 +1,8 @@
 ---
 title: Windows Hello 企业版设置
 titleSuffix: Configuration Manager
-description: 了解如何将 Windows Hello 企业版与 System Center Configuration Manager 集成。
-ms.date: 04/10/2018
+description: 了解如何将 Windows Hello 企业版与 Configuration Manager 集成。
+ms.date: 12/21/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -10,21 +10,23 @@ ms.assetid: a95bc292-af10-4beb-ab56-2a815fc69304
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 60dcf98b83fb4650a10e5503d42b9f49d3aba359
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.openlocfilehash: 81086b01cef3d60af6e0c93d25b2ad937252d4ba
+ms.sourcegitcommit: 94bf7d5b5beb9628cc1fdfe75451d33b5de26f8a
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350079"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152394"
 ---
-# <a name="windows-hello-for-business-settings-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的 Windows Hello 企业版设置
+# <a name="windows-hello-for-business-settings-in-configuration-manager"></a>Configuration Manager 中的 Windows Hello 企业版设置
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
-<!--1245704-->
-通过 System Center Configuration Manager，可与 Windows Hello 企业版（以前为 Microsoft Passport for Windows）集成，其为 Windows 10 设备的替代登录方法。 Hello 企业版使用 Active Directory 或 Azure Active Directory 帐户来替代密码、智能卡或虚拟智能卡。  
+<!--1245704--> 通过 Configuration Manager，可与 Windows Hello 企业版（旧称为“Microsoft Passport for Windows”，也是 Windows 10 设备的替代登录方法）集成。 Hello 企业版使用 Active Directory 或 Azure Active Directory 帐户来替代密码、智能卡或虚拟智能卡。 在 Hello 企业版中，可以使用“用户手势”取代密码进行登录。 用户手势可以是简单的 PIN、生物识别身份验证或指纹读取器等外部设备。
 
-在 Hello 企业版中，可以使用“用户手势”取代密码进行登录。 用户手势可以是简单的 PIN、生物识别身份验证或指纹读取器等外部设备。
+
+> [!Important]  
+> 截至 2017 年 12 月 Windows hello 企业版设置在配置管理器是[弃用的功能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)。 Windows Server 2016 Active Directory 联合身份验证服务注册机构 (ADFS RA) 部署更简单、 可提供更好的用户体验，并具有更具确定性的证书注册体验。  
+
 
 有关详细信息，请参阅 [Windows Hello 企业版](https://docs.microsoft.com/windows/access-protection/hello-for-business/hello-identity-verification)。
 
@@ -33,19 +35,24 @@ ms.locfileid: "32350079"
 > 默认情况下，Configuration Manager 不启用此项可选功能。 必须在使用前启用此功能。 有关详细信息，请参阅[启用更新中的可选功能](/sccm/core/servers/manage/install-in-console-updates#bkmk_options)。<!--505213-->  
 
 
- Configuration Manager 通过两种方式与 Windows Hello 企业版集成：  
+Configuration Manager 通过两种方式与 Windows Hello 企业版集成：  
 
--   可以使用 Configuration Manager 来控制用户能够和不能用于登录的手势。  
+- 可以使用 Configuration Manager 来控制用户能够和不能用于登录的手势。  
 
--   可在 Windows Hello 企业版密钥存储提供程序 (KSP) 中存储身份验证证书。 有关详细信息，请参阅[证书配置文件](introduction-to-certificate-profiles.md)。  
+- 可在 Windows Hello 企业版密钥存储提供程序 (KSP) 中存储身份验证证书。 有关详细信息，请参阅[证书配置文件](introduction-to-certificate-profiles.md)。  
 
-- 可将 Windows Hello 企业版策略部署到运行 Configuration Manager 客户端的已加入域的 Windows 10 设备。 [在已加入域的 Windows 10 设备上配置 Windows Hello 企业版](#configure-windows-hello-for-business-on-domain-joined-windows-10-devices)部分介绍了此配置。 结合使用 Configuration Manager 与 Microsoft Intune（混合）时，可以在 Windows 10 设备和 Windows 10 移动版设备上配置这些设置。 有关详细信息，请参阅[配置 Windows Hello 企业版设置（混合）](../../mdm/deploy-use/windows-hello-for-business-settings.md)。
+- 可将 Windows Hello 企业版策略部署到运行 Configuration Manager 客户端的已加入域的 Windows 10 设备。 [在已加入域的 Windows 10 设备上配置 Windows Hello 企业版](#configure-windows-hello-for-business-on-domain-joined-windows-10-devices)部分介绍了此配置。 结合使用 Configuration Manager 与 Microsoft Intune（混合）时，可以在 Windows 10 设备和 Windows 10 移动版设备上配置这些设置。 有关详细信息，请参阅[配置 Windows Hello 企业版设置（混合）](/sccm/mdm/deploy-use/windows-hello-for-business-settings)。
+
+
 
 ## <a name="configure-windows-hello-for-business-on-domain-joined-windows-10-devices"></a>在已加入域的 Windows 10 设备上配置 Windows Hello 企业版
+
 可以创建和部署 Windows Hello 企业版配置文件，控制域加入 Windows 10 设备上的 Windows Hello 企业版设置。 建议使用此方法。
 
 
 如果使用的是基于证书的身份验证，还必须部署证书配置文件，如[配置证书配置文件](#configure-a-certificate-profile)中所述。 如果使用的是基于密钥的身份验证，无需部署证书配置文件。
+
+
 
 ## <a name="configure-a-windows-hello-for-business-profile"></a>配置 Windows Hello for Business 配置文件  
 
@@ -53,8 +60,11 @@ ms.locfileid: "32350079"
 
 ![Windows Hello 企业版策略向导，显示可用设置列表](../media/Hello-for-Business-settings.png)
 
+
+
 ## <a name="configure-a-certificate-profile-to-enroll-the-windows-hello-for-business-enrollment-certificate-in-configuration-manager"></a>配置证书配置文件以便在 Configuration Manager 中注册 Windows Hello 企业版注册证书  
- 若要使用基于 Windows Hello 企业版证书的登录，请配置下列组件：  
+
+若要使用基于 Windows Hello 企业版证书的登录，请配置下列组件：  
 
 -   Configuration Manager 证书配置文件。  
 
