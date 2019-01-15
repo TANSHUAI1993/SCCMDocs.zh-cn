@@ -10,12 +10,12 @@ ms.assetid: c8534a1e-57b8-4688-b6e6-299d82cfcec9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 329f5c2f227cbd8a51b1c9ccc21810cda9f6a2cf
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 26b6d68f634a230f56a93b6cc1691ce98fa77852
+ms.sourcegitcommit: a3cec96a771eed69e58a29917d1a3fe1a5fb2e73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53417126"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54250675"
 ---
 # <a name="configuration-manager-and-windows-as-a-service"></a>Configuration Manager 和服务型 Windows
 
@@ -48,7 +48,7 @@ System Center Configuration Manager 提供对 Windows 10 的功能更新的全�
 |[优化 Windows 10 更新传递](/sccm/sum/deploy-use/optimize-windows-10-update-delivery)|使用 Configuration Manager 管理更新内容以及时了解 Windows 10 动态。|
 |[与升级就绪情况集成](/sccm/core/clients/manage/upgrade/upgrade-analytics)|利用升级就绪情况，可以访问和分析环境中的设备对升级至 Windows 10 的准备情况。| 
 |[适用于企业的 Windows 更新集成（可选）](/sccm/sum/deploy-use/integrate-windows-update-for-business-windows-10)|介绍如何使用 Configuration Manager 定义和部署适用于企业的 Windows 更新 (WUfB) 策略。|
-|[配合使用共同管理和 Microsoft Intune 及适用于企业的 Windows 更新（可选）](/sccm/core/clients/manage/co-management-overview)|概述共同管理| 
+|[配合使用共同管理和 Microsoft Intune 及适用于企业的 Windows 更新（可选）](/sccm/comanage/overview)|概述共同管理| 
 
 
 ## <a name="related-articles"></a>相关文章

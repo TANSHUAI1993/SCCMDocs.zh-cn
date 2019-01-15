@@ -10,12 +10,12 @@ ms.assetid: 2a216814-ca8c-4d2e-bcef-dc00966a3c9f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5f7cb374859d2605021a3f1ec98d6a6b6081bfc4
-ms.sourcegitcommit: 54e5786875c4e5f5c1b54e38ed59e96344faf9b4
+ms.openlocfilehash: 237a21346665af404850276b12b0f1ca32fc5f6e
+ms.sourcegitcommit: a3cec96a771eed69e58a29917d1a3fe1a5fb2e73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53817896"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54250810"
 ---
 # <a name="plan-for-security-in-configuration-manager"></a>在 Configuration Manager 中规划安全性
 
@@ -381,7 +381,7 @@ IIS 始终会检查 CRL 中是否有客户端证书，且无法在 Configuration
 
 - [管理已加入云域的设备](/sccm/core/clients/deploy/deploy-clients-cmg-azure)  
 
-- [共同管理](/sccm/core/clients/manage/co-management-overview)  
+- [共同管理](/sccm/comanage/overview)  
 
 - [部署用户可用的应用](/sccm/apps/deploy-use/deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices)  
 

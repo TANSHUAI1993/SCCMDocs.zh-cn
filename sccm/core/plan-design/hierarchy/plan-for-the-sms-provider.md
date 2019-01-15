@@ -10,16 +10,16 @@ ms.assetid: 5d5d6273-0d8a-43c7-865a-cdb1736dcae3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 024714c564036cd61a6c1340724aa3b9cad782d2
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: d59e5e5bc1dfdf962517b4c364b74aa0df6b650a
+ms.sourcegitcommit: 94bf7d5b5beb9628cc1fdfe75451d33b5de26f8a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456390"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152445"
 ---
 # <a name="plan-for-the-sms-provider"></a>规划 SMS 提供程序 
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 若要管理 Configuration Manager，可使用连接到 **SMS 提供程序**的实例的 Configuration Manager 控制台。 默认情况下，当安装管理中心站点或主站点时，SMS 提供程序会安装在站点服务器上。 
 
@@ -165,11 +165,11 @@ SMS 提供程序帮助强制实施 Configuration Manager 安全性。 它仅返�
 
 可用的级别如下：
 
-- Windows 身份验证：要求使用 Active Directory 域凭据进行身份验证。 此设置是以前的行为，也是当前的默认设置。 更新站点时，身份验证级别没有更改。  
+- **Windows 身份验证**：要求使用 Active Directory 域凭据进行身份验证。 此设置是以前的行为，也是当前的默认设置。 更新站点时，身份验证级别没有更改。  
 
-- 证书身份验证：要求使用由受信任的 PKI 证书颁发机构颁发的有效证书进行身份验证。 你没有在 Configuration Manager 中配置此证书。 Configuration Manager 要求管理员使用 PKI 登录到 Windows.  
+- **证书身份验证**：要求使用由受信任的 PKI 证书颁发机构颁发的有效证书进行身份验证。 你没有在 Configuration Manager 中配置此证书。 Configuration Manager 要求管理员使用 PKI 登录到 Windows.  
 
-- Windows Hello 企业版身份验证：要求使用与设备关联并采用生物识别或 PIN 的强双因素身份验证进行身份验证。 可以使用 Configuration Manager 管理和部署 Windows Hello 企业版策略。 有关详细信息，请参阅 [Windows Hello 企业版设置](/sccm/protect/deploy-use/windows-hello-for-business-settings)。  
+- **Windows Hello 企业版身份验证**：要求使用与设备关联并采用生物识别或 PIN 的强双因素身份验证进行身份验证。 有关详细信息，请参阅 [Windows Hello 企业版](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-identity-verification)。   
 
 
 ### <a name="exclusions"></a>排除
