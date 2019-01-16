@@ -10,16 +10,16 @@ ms.assetid: f0a78038-ea22-4826-9c07-1771b7dd2e8d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 19b55204566c49c95e76a3eff3f88206df553e13
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: a0a5cb6e609912a280f1cf0608ec298f860fe2e2
+ms.sourcegitcommit: 2687489aa409a050dcacd67f17b3dad3ab7f1804
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53416157"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54316331"
 ---
 # <a name="apply-settings-to-ios-apps-with-app-configuration-policies-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中将设置应用于使用应用配置策略的 iOS 应用
 
-*适用于：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 
 可以使用 System Center Configuration Manager (Configuration Manager) 中的应用配置策略来分发用户运行应用时可能需要的设置。 例如，应用可能要求用户指定以下详细信息：
@@ -34,7 +34,7 @@ ms.locfileid: "53416157"
 
 应用配置策略目前仅在运行 iOS 8 及更高版本的设备上可用，并且可用于下列应用程序类型：
 
-- **iOS 应用包（*.ipa 文件）**
+- **iOS 应用包 (\*.ipa 文件)**
 - **App Store 中的 iOS 应用程序包**
 
 有关应用安装类型的详细信息，请参阅[应用程序管理简介](/sccm/apps/understand/introduction-to-application-management)。

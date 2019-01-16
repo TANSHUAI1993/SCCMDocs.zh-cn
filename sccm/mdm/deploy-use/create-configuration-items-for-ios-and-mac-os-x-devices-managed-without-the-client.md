@@ -10,12 +10,12 @@ ms.assetid: 613a48ac-c55d-4c4a-94ea-d3747a1b10cb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bf5f580d10c48bb44b3c202832ffff3a06c5c37f
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 708a9fc1f3a2f10a602dc5d926cd8b8df0cbc7cf
+ms.sourcegitcommit: 2687489aa409a050dcacd67f17b3dad3ab7f1804
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53416174"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54316569"
 ---
 # <a name="how-to-create-configuration-items-for-ios-and-mac-os-x-devices-managed-with-intune"></a>如何为使用 Intune 管理的 iOS 和 Mac OS X 设备创建配置项
 使用 System Center Configuration Manager **iOS 和 Mac OS X** 配置项目为已在 Microsoft Intune 中注册或通过 Configuration Manager 进行本地管理的 iOS 和 Mac OS X 的设备管理设置。  
@@ -275,7 +275,7 @@ ms.locfileid: "53416174"
      >  若要查找应用的捆绑 ID，请在已安装此应用的 Mac 计算机上执行以下步骤：  
      > 
      > 1. 打开安装应用的文件夹（例如，“/Applications” ）  
-     >    2.  选择“<应用名称\>.app ”捆绑，然后选择“显示包内容”  
+     >    2.  选择 _<应用名称\>_.app 捆绑，然后选择“显示包内容”  
      >    3.  打开“Info.plist”  文件  
      >    4.  检查与“”   
      > 
