@@ -10,12 +10,12 @@ ms.assetid: 341f0d0b-f907-44cf-9e10-e1b41fc15f82
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 187f876999f39dd1d2d4aa345a7e9037f745a0ed
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 64aca2b4840027226ad6fcba2df0bd62b112f602
+ms.sourcegitcommit: a3cec96a771eed69e58a29917d1a3fe1a5fb2e73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53418894"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54250776"
 ---
 # <a name="how-to-deploy-clients-to-windows-computers-in-configuration-manager"></a>如何在 Configuration Manager 中将客户端部署到 Windows 计算机
 
@@ -331,7 +331,7 @@ Configuration Manager 支持登录脚本来安装 Configuration Manager 客户�
 > [!NOTE]  
 > 默认情况下，安装客户端软件后，设备便从 Intune 取消注册。
 > 
-> 从 1710 版开始，客户端不从 Intune 取消注册。 它们可以同时具有 Configuration Manager 客户端和 MDM 注册。 有关详细信息，请参阅[共同管理概述](/sccm/core/clients/manage/co-management-overview)。  
+> 从 1710 版开始，客户端不从 Intune 取消注册。 它们可以同时具有 Configuration Manager 客户端和 MDM 注册。 有关详细信息，请参阅[共同管理概述](/sccm/comanage/overview)。  
 
 
 ###  <a name="install-clients-with-intune"></a>使用 Intune 安装客户端  
@@ -343,7 +343,7 @@ Configuration Manager 支持登录脚本来安装 Configuration Manager 客户�
    `CCMSETUPCMD="/MP:<FQDN of management point> SMSMP=<FQDN of management point> SMSSITECODE=<Your site code> DNSSUFFIX=<DNS Suffix of management point>"`  
 
    > [!Note]  
-   > 有关使用现代 Windows 10 客户端（使用 Azure AD 进行身份验证）的示例命令行，请参阅[准备 Windows 10 设备进行共同管理](/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client)。  
+   > 有关用于使用 Azure AD 身份验证的新式 Windows 10 客户端的示例命令行，请参阅[如何准备基于 Internet 的设备以进行共同管理](/sccm/comanage/how-to-prepare-win10#install-the-configuration-manager-client)。  
 
 3. [将应用分配](https://docs.microsoft.com/intune/deploy-use/deploy-apps-in-microsoft-intune)给一组已注册的 Windows 计算机。  
 

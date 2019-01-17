@@ -10,16 +10,16 @@ ms.assetid: bc6c3e5f-b9e2-400e-9d9d-446ff93c520c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 821c7f32799020948630cd873fead144ae21e39e
-ms.sourcegitcommit: fe279229a90fdc8cddbb13c7ffdbbb22af0e25ef
+ms.openlocfilehash: 4dcf5ce0c31f72db1e6af3ac9e024c83afe92337
+ms.sourcegitcommit: a3cec96a771eed69e58a29917d1a3fe1a5fb2e73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47229256"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54250657"
 ---
 # <a name="what39s-new-in-version-1710-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1710 的新增功能
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 System Center Configuration Manager Current Branch 的更新 1710 作为控制台内更新提供，用于运行版本 1610、1702 或 1706 的以前安装的站点。
 
@@ -64,7 +64,7 @@ Version 1710 drops support for the following products:
 ## <a name="client-management"></a>客户端管理
 
 ### <a name="co-management-for-windows-10-devices"></a>适用于 Windows 10 设备的共同管理    
-<!-- 1350871 --> 在以前的 Windows 10 更新中，已经可以将 Windows 10 设备同时联接到本地 Active Directory (AD) 和基于云的 Azure AD（混合 Azure AD）。 从 Configuration Manager 1710 版本开始，共同管理利用此项改进来使你能够使用 Configuration Manager 和 Intune 来同时管理 Windows 10 设备版本 1709（也称为 Fall Creators Update）。 它是一种解决方案，在传统管理与现代管理之间架起一座桥梁，为你提供利用分阶段的方法实现转换的途径。 有关详细信息，请参阅[适用于 Windows 10 设备的共同管理](/sccm/core/clients/manage/co-management-overview)。
+<!-- 1350871 --> 在以前的 Windows 10 更新中，已经可以将 Windows 10 设备同时联接到本地 Active Directory (AD) 和基于云的 Azure AD（混合 Azure AD）。 从 Configuration Manager 1710 版本开始，共同管理利用此项改进来使你能够使用 Configuration Manager 和 Intune 来同时管理 Windows 10 设备版本 1709（也称为 Fall Creators Update）。 它是一种解决方案，在传统管理与现代管理之间架起一座桥梁，为你提供利用分阶段的方法实现转换的途径。 有关详细信息，请参阅[适用于 Windows 10 设备的共同管理](/sccm/comanage/overview)。
 
 ### <a name="restart-computers-from-the-configuration-manager-console-----1356283---"></a>从 Configuration Manager 控制台重启计算机<!-- 1356283 -->
 从此版本开始，用户可以使用 Configuration Manager 控制台标识需要重启的客户端设备，然后使用客户端通知操作来重启它们。
@@ -179,9 +179,9 @@ Version 1710 drops support for the following products:
 
 更多详细信息，请参阅[System Center Configuration Manager 中移动设备上的 VPN 配置文件](../../../mdm/deploy-use/create-vpn-profiles.md)。
 
-### <a name="limited-support-for-cryptography-next-generation-cng-certificates----1356191---"></a>对下一代加密技术 (CNG) 证书的有限支持<!-- 1356191 -->
+### <a name="limited-support-for-cryptography-next-generation-cng-certificates----1356191---"></a>提供一定程度的加密支持：下一代 (CNG) 证书 <!-- 1356191 -->
 
-Configuration Manager 对下一代加密技术 (CNG) 证书提供有限支持。 Configuration Manager 客户端可以通过 CNG 密钥存储提供者 (KSP) 中的私钥使用 PKI 客户端身份验证证书。 通过 KSP 支持，Configuration Manager 客户端可支持基于硬件的私钥，如用于 PKI 客户端身份验证证书的 TPM KSP。
+Configuration Manager 提供一定程度的加密支持：下一代 (CNG) 证书. Configuration Manager 客户端可以通过 CNG 密钥存储提供者 (KSP) 中的私钥使用 PKI 客户端身份验证证书。 通过 KSP 支持，Configuration Manager 客户端可支持基于硬件的私钥，如用于 PKI 客户端身份验证证书的 TPM KSP。
 
 有关详细信息，请参阅 [CNG 证书概述](../network/cng-certificates-overview.md)。
 

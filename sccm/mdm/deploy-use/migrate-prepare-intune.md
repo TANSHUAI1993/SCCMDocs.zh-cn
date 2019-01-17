@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: db97ae9e-34f4-4e10-a282-cd211f612bb4
-ms.openlocfilehash: f7c0f0d9dc52c39e0ec33abb8df565d4918471f7
-ms.sourcegitcommit: 54e5786875c4e5f5c1b54e38ed59e96344faf9b4
+ms.openlocfilehash: 3f7d880f7e220966a9baa71ac6ad9286a398ffaa
+ms.sourcegitcommit: d5c013a29f53b975fe3a6cb0a41f1e817bd7b235
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53818032"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54342850"
 ---
 # <a name="prepare-intune-for-user-migration"></a>准备 Intune 以进行用户迁移 
 
-*适用于：System Center Configuration Manager (Current Branch)*    
+适用范围：*System Center Configuration Manager (Current Branch)*    
 用户从混合 MDM 迁移至 Intune 独立版之前，请执行步骤来准备 Intune。 这些步骤帮助确保，已迁移的用户和他们的设备继续得到管理。 当完成这些步骤并开始将迁移到 Intune 时，会给您的用户没有大量影响。  
 
 ## <a name="fix-issues-found-during-data-collection-and-import"></a>修复在数据收集和导入过程中发现的问题
@@ -50,7 +50,7 @@ ms.locfileid: "53818032"
 - [分配策略](https://docs.microsoft.com/intune/get-started-policies)  
 - [分配配置文件](https://docs.microsoft.com/intune/device-profile-assign)  
     > [!NOTE]  
-    > 在 Intune 部署新的电子邮件配置文件，用户将收到重新输入其密码的提示。  
+    > 在 Intune 部署新的电子邮件配置文件，用户将收到重新输入其密码的提示。 此行为会导致正在 redownloaded 用户设备上的电子邮件。 由用户完成任何自定义修改将需要再次执行。 
 - [分配应用](https://docs.microsoft.com/intune/get-started-apps) 
 
 ## <a name="terms-and-conditions-policy"></a>条款和条件策略

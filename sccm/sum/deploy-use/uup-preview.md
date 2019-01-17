@@ -2,7 +2,7 @@
 title: UUP 预览版
 titleSuffix: Configuration Manager
 description: 有关 UUP 集成预览版的说明
-ms.date: 01/04/2018
+ms.date: 01/14/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 robots: noindex,nofollow
-ms.openlocfilehash: cfc83f4d076a05ea1847c0d073bd824ad10aa731
-ms.sourcegitcommit: 1bf26b83fa7da637d299a21e1d3bc61f2d7d8c10
+ms.openlocfilehash: 17a9abf2f20f53ba69ad160db421be51471cc311
+ms.sourcegitcommit: 27b2594087e8c54062db6b2a30ab843bab17f8cc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54060376"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54270454"
 ---
 # <a name="uup-private-preview-instructions"></a>UUP 个人预览版说明
 
@@ -160,8 +160,8 @@ Windows 10 版本 1809 和尚未发布的 1 月累积非安全更新（或以下
 
 5. 在“产品”选项卡上，将 WSUS 服务器添加到预览版后，应显示两个新产品。 这些产品包含预览版 UUP 内容。  
 
-    - **Windows 10 UUP 试点**：Windows 工作站 UUP 更新  
-    - **Windows Server 2016 UUP**：Windows UUP 更新  
+    - **Windows 10 UUP 预览版**  
+    - **Windows Server UUP 预览版**  
 
 6. 在“分类”选项卡上，请务必选择：  
 

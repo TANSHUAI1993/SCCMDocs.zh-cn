@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 050cf81a99f29d24cad6eb13e691e332174627c3
-ms.sourcegitcommit: 54e5786875c4e5f5c1b54e38ed59e96344faf9b4
+ms.openlocfilehash: 60d1c93acc2fcc2c04d09cd8f0ec0c083089a8ec
+ms.sourcegitcommit: a3cec96a771eed69e58a29917d1a3fe1a5fb2e73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53818015"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54250589"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 1810 版中的新增功能
 
@@ -123,7 +123,10 @@ Version 1810 drops support for the following products:
 ### <a name="new-client-notification-action-to-wake-up-device"></a>用于唤醒设备的新客户端通知操作
 <!--1317364--> 现在你可以从 Configuration Manager 控制台唤醒客户端，即使客户端与站点服务器不在同一子网中。 如果你需要执行维护或查询设备，则不会受到处于睡眠状态的远程客户端的限制。 站点服务器使用客户端通知通道来标识在同一远程子网上处于唤醒状态的另一个客户端。 然后唤醒的客户端发送 LAN 唤醒请求（幻数据包）。
 
-<!--For more information, see [Plan how to wake up clients](/sccm/core/clients/deploy/plan/plan-wake-up-clients).-->
+### <a name="new-option-to-perform-client-notification-from-devices-node"></a>从“设备”节点执行“客户端通知”的新选项
+<!--1317364--> 在 1810 推出前，“客户端通知”选项仅在“设备集合”节点中可用，或仅在查看设备集合的成员资格时可用。 现在，可以直接从“设备”节点执行“客户端通知”。 不再要求必须在集合成员资格视图内。 
+
+有关详细信息，请参阅[客户端通知](/sccm/core/clients/manage/client-notification)。
 
 
 ### <a name="improvements-to-collection-evaluation"></a>对集合评估的改进
@@ -169,7 +172,7 @@ Version 1810 drops support for the following products:
 
 ![显示了前四个磁贴的共同托管仪表板的屏幕截图](media/1358980-comgmt-dashboard.png)
 
-有关详细信息，请参阅[共同管理仪表板](/sccm/core/clients/manage/co-management-dashboard)。
+有关详细信息，请参阅[共同管理仪表板](/sccm/comanage/how-to-monitor#co-management-dashboard)。
 
 
 

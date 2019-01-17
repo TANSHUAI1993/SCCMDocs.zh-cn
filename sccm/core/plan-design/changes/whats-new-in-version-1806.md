@@ -10,16 +10,16 @@ ms.assetid: 0249dbd3-1e85-4d05-a9e5-420fbe44d850
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e5fd7c26c190407ba5e497068582704b03c71f00
-ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
+ms.openlocfilehash: fe8fb2a8138433d00686530f76916a1ee4e88dac
+ms.sourcegitcommit: a3cec96a771eed69e58a29917d1a3fe1a5fb2e73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411504"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54250793"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 1806 版中的新增功能
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 Configuration Manager Current Branch 的 1806 更新作为控制台中更新提供。 将此更新应用于运行 1706、1710 或 1802 版的站点。 <!-- baseline only statement: When installing a new site, it's also available as a baseline version.-->
 
@@ -136,7 +136,7 @@ Version 1806 drops support for the following products:
 
 - **允许在此边界组中进行对等下载**：管理点向客户端提供包含对等源的内容位置的列表。 此设置还会影响交付优化组 ID 的使用。  
 
-- **对等下载期间，只能使用同一子网内的对等设备**：如果启用此选项，管理点将仅包含与客户端在同一子网中的内容位置列表对等源。  
+- **对等下载期间，只能使用同一子网内的对等设备**：管理点仅包含与客户端位于同一子网中的内容位置列表对等源。  
 
 有关详细信息，请参阅[对等下载适用的边界组选项](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_bgoptions)。
 
@@ -197,7 +197,7 @@ Version 1806 drops support for the following products:
 #### <a name="simplified-client-bootstrap-command-line"></a>简化了客户端启动命令行
 <!--1358215--> 通过 CMG 在 Internet 上安装 Configuration Manager 客户端时，命令行现在需要的属性更少。 在准备共同管理时，此次改进减少了 Microsoft Intune 中使用的命令行的大小。 
 
-有关详细信息，请参阅[准备 Windows 10 设备进行共同管理](/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client)。
+有关详细信息，请参阅[如何准备基于 Internet 的设备以进行共同管理](/sccm/comanage/how-to-prepare-win10#install-the-configuration-manager-client)。
 
 #### <a name="download-content-from-a-cmg"></a>从 CMG 下载内容
 <!--1358651--> 以前，必须将云分发点和 CMG 作为单独的角色进行部署。 CMG 现在还可以向客户提供内容。 此功能减少了所需的证书和 Azure VM 的成本。 
@@ -214,27 +214,27 @@ Version 1806 drops support for the following products:
 ### <a name="sync-mdm-policy-from-microsoft-intune-for-a-co-managed-device"></a>通过 Microsoft Intune 为共同托管设备同步 MDM 策略
 <!--1357377--> 切换共同管理工作负荷时，共同托管设备自动从 Microsoft Intune 同步 MDM 策略。 当从 Configuration Manager 控制台的客户端通知中启动“下载计算机策略”操作时也会进行此同步。 
 
-有关详细信息，请参阅[将 Configuration Manager 工作负荷切换到 Intune](/sccm/core/clients/manage/co-management-switch-workloads)。
+有关详细信息，请参阅[如何将 Configuration Manager 工作负载切换为 Intune](/sccm/comanage/how-to-switch-workloads)。
 
 
 ### <a name="transition-new-workloads-to-intune-using-co-management"></a>使用共同管理将新的工作负荷转移到 Intune
 现在可以在启用共同管理后，将以下工作负荷从 Configuration Manager 转移到 Intune：  
 
-- **设备配置**<!--1357903-->：可通过此工作负荷使用 Intune 部署 MDM 策略，同时继续使用 Configuration Manager 来部署应用程序。  
+- **设备配置**<!--1357903-->：借助此工作负载，可以使用 Intune 来部署 MDM 策略，同时继续使用 Configuration Manager 来部署应用。  
 
 - **Office 365**<!--1357841-->：设备不会从 Configuration Manager 安装 Office 365 部署。  
 
-- **移动应用**<!--1357892-->：在公司门户中可以使用任何从 Intune 部署的可用应用。 从 Configuration Manager 部署的应用在软件中心可用。 此功能是[预发布功能](/sccm/core/servers/manage/pre-release-features)。  
+- **移动应用**<!--1357892-->：所有从 Intune 部署的应用在公司门户中都可用。 从 Configuration Manager 部署的应用在软件中心可用。 此功能是[预发布功能](/sccm/core/servers/manage/pre-release-features)。  
 
 要转移工作负荷，请转到共同管理属性页并将工作负荷滚动条从 Configuration Manager 移到“试点”或“全部”。 
 
-有关详细信息，请参阅 [Windows 10 设备共同管理](/sccm/core/clients/manage/co-management-overview)。
+有关详细信息，请参阅 [Windows 10 设备共同管理](/sccm/comanage/overview)。
 
 
 ### <a name="support-for-multiple-hierarchies-to-one-intune-tenant"></a>支持将多个层次结构合并到一个 Intune 租户
 <!--1357944--> 某些客户拥有多个 Configuration Manager 层次结构，并希望将来让其合并到一个 Azure Active Directory 和 Microsoft Intune 租户。 共同管理现支持将多个 Configuration Manager 环境连接到同一个 Intune 租户。
 
-有关详细信息，请参阅[准备 Windows 10 设备进行共同管理](/sccm/core/clients/manage/co-management-prepare)。
+有关详细信息，请参阅[共同管理先决条件](/sccm/comanage/overview#prerequisites)。
  
 
 
@@ -269,7 +269,7 @@ Version 1806 drops support for the following products:
 
 
 ### <a name="provision-windows-app-packages-for-all-users-on-a-device"></a>为设备上的所有用户预配 Windows 应用包
-<!--1358310--> 使用 Windows 应用包为设备上的所有用户预配应用程序。 此方案的一个常见示例是将来自 Microsoft Store 商业版和教育版的应用（如 Minecraft 教育版）预配到学校学生使用的所有设备。 以前，Configuration Manager 仅支持按用户安装这些应用程序。 登录到新的设备后，学生不得不等会儿时间来访问应用。 现在，将应用预配到所有用户的设备时，他们的工作更快更高效。 
+<!--1358310--> 使用 Windows 应用包为设备上的所有用户预配应用程序。 此方案的一个常见示例是将来自适用于企业和适用于教育的 Microsoft Store 的应用（如 Minecraft: Education Edition）预配到学校学生使用的所有设备。 以前，Configuration Manager 仅支持按用户安装这些应用程序。 登录到新的设备后，学生不得不等会儿时间来访问应用。 现在，将应用预配到所有用户的设备时，他们的工作更快更高效。 
 
 有关详细信息，请参阅[创建 Windows 应用程序](/sccm/apps/get-started/creating-windows-applications#bkmk_provision)。
 
@@ -411,7 +411,7 @@ Version 1806 drops support for the following products:
 
 - 联系 IT 部门：有关如何联系组织 IT 部门的信息  
 
-- IT 支持中心：IT 自助操作，例如搜索知识库或创建支持票证。  
+- IT 支持中心：IT 自助操作，如搜索知识库或开启支持票证。  
 
 - 最终用户文档：面向组织中的用户的文章，涉及各种 IT 主题，例如使用应用程序或升级到 Windows 10。  
 

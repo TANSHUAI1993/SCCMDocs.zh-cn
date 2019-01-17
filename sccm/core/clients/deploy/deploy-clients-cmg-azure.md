@@ -10,12 +10,12 @@ ms.assetid: a44006eb-8650-49f6-94e1-18fa0ca959ee
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b722187a895a71b4195200354180cdbc8b2813e6
-ms.sourcegitcommit: 12b71da551350c99c5916df3629e33e31040db15
+ms.openlocfilehash: 37ed497a83b3a82cd054683f38239f51940b970a
+ms.sourcegitcommit: a3cec96a771eed69e58a29917d1a3fe1a5fb2e73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53530908"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54250623"
 ---
 # <a name="install-and-assign-configuration-manager-windows-10-clients-using-azure-ad-for-authentication"></a>安装并分配 Configuration Manager Windows 10 客户端（使用 Azure AD 进行身份验证）
 
@@ -92,7 +92,7 @@ ms.locfileid: "53530908"
 
 本示例使用云管理网关。 它将替代每个属性的示例值：`ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC SMSMP=https://mp1.contoso.com AADTENANTID=daf4a1c2-3a0c-401b-966f-0b855d3abd1a AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver`
 
-要使用 Azure AD 标识通过 Microsoft Intune 自动执行客户端安装，请参阅[准备 Windows 10 设备进行共同管理](/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client)流程。
+若要使用 Azure AD 标识通过 Microsoft Intune 自动执行客户端安装，请参阅[如何准备基于 Internet 的设备以进行共同管理](/sccm/comanage/how-to-prepare-win10#install-the-configuration-manager-client)。
 
 
 

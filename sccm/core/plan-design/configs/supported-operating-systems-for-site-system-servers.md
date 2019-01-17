@@ -2,7 +2,7 @@
 title: 支持的站点系统服务器
 titleSuffix: Configuration Manager
 description: 了解可用来托管 Configuration Manager 站点或站点系统角色的 Windows 版本。
-ms.date: 11/27/2018
+ms.date: 01/15/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,16 +10,16 @@ ms.assetid: 17905b4c-3895-4ad4-a69c-5e0d0fc5a8c3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4aba91b232a187a72bbc2ea10f32a14a377a3870
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: b43c8d08fe1655aea175bbec3ceb7877be96f42e
+ms.sourcegitcommit: d5c013a29f53b975fe3a6cb0a41f1e817bd7b235
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456849"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54342816"
 ---
 # <a name="supported-operating-systems-for-configuration-manager-site-system-servers"></a>Configuration Manager 站点系统服务器支持的操作系统
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 
 本文详细介绍了可用于托管 Configuration Manager 站点或站点系统角色的 Windows 版本。
@@ -34,7 +34,7 @@ ms.locfileid: "52456849"
 
 ## <a name="bkmk_2019"></a>Windows Server 2019
 
-适用于 Windows Server 2019：Standard 和 Datacenter 
+*适用于 Windows Server 2019：Standard 和 Datacenter* 
 
 从版本 1810 开始，此 OS 版本支持以下角色：
 
@@ -69,7 +69,7 @@ ms.locfileid: "52456849"
 
 ## <a name="bkmk_2016"></a>Windows Server 2016
 
-适用于 Windows Server 2016：Standard 和 Datacenter
+*适用于 Windows Server 2016：Standard 和 Datacenter*
 
 此 OS 版本支持以下角色：
 
@@ -112,7 +112,7 @@ ms.locfileid: "52456849"
 
 ## <a name="bkmk_2012r2"></a>Windows Server 2012 R2 
 
-适用于 Windows Server 2012 R2：Standard 和 Datacenter
+*适用于 Windows Server 2012 R2：Standard 和 Datacenter*
 
 #### <a name="site-servers"></a>站点服务器
 
@@ -145,7 +145,7 @@ ms.locfileid: "52456849"
 
 ## <a name="bkmk_2012"></a>Windows Server 2012  
 
-适用于 Windows Server 2012：Standard 和 Datacenter
+*适用于 Windows Server 2012：Standard 和 Datacenter*
 
 #### <a name="site-servers"></a>站点服务器
 
@@ -178,9 +178,12 @@ ms.locfileid: "52456849"
 
 ## <a name="bkmk_2008r2sp1"></a>Windows Server 2008 R2 SP1   
 
-适用于 Windows Server 2008 R2 Service Pack 1：Standard、Enterprise 和 Datacenter
+*适用于 Windows Server 2008 R2 Service Pack 1：Standard、Enterprise 和 Datacenter*
 
 根据 [Microsoft 支持生命周期](https://support.microsoft.com/lifecycle)中的详细信息，Windows Server 2008 R2 现处于外延支持，不再处于主流支持。 有关这些操作系统以后对 Configuration Manager 的站点系统服务器的支持情况的详细信息，请参阅[已弃用的服务器操作系统](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems)。  
+
+> [!Important]  
+> 对 Windows Server 2008 R2 的支持延长至 2020 年 1 月 14 日结束。 此日期之后，Configuration Manager 不支持将此操作系统用作任何站点系统角色。 
 
 站点服务器或大多数站点系统角色不支持此 OS。 分发点站点系统角色（包括拉取分发点）以及 PXE 和多播仍然支持它。
 
@@ -193,9 +196,12 @@ ms.locfileid: "52456849"
 
 ## <a name="bkmk_2008sp2"></a>Windows Server 2008 SP2  
 
-适用于 Windows Server 2008 Service Pack 2（x86、x64）：Standard、Enterprise 和 Datacenter
+*适用于 Windows Server 2008 Service Pack 2（x86 和 x64）：Standard、Enterprise 和 Datacenter*
 
 如 [Microsoft 支持生命周期](https://support.microsoft.com/lifecycle)中详细所述，Windows Server 2008 Service Pack 2 (SP2) 现处于外延支持，不再处于主流支持。 有关这些操作系统以后对 Configuration Manager 的站点系统服务器的支持情况的详细信息，请参阅[已弃用的服务器操作系统](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-server#deprecated-server-operating-systems)。  
+
+> [!Important]  
+> 对 Windows Server 2008 R2 的支持延长至 2020 年 1 月 14 日结束。 此日期之后，Configuration Manager 不支持将此操作系统用作任何站点系统角色。 
 
 除分发点和拉取分发点外，站点服务器或站点系统角色均不支持此 OS。 继续使用 OS 作为分发点，直到此支持被宣布弃用或者此 OS 的扩展支持期到期为止。 有关详细信息，请参阅 [Installation of Configuration Manager CB and LTSB fails on Windows Server 2008](https://support.microsoft.com/help/4015095)（在 Windows Server 2008 上安装 Configuration Manager CB 和 LTSB 失败）。
 
@@ -212,9 +218,9 @@ ms.locfileid: "52456849"
 
 以下客户端 OS 版本支持用作分发点 <sup>[说明 1](#bkmk_note1)</sup>：  
 
-- Windows 10（x86、x64）：专业版和企业版
-- Windows 8.1（x86、x64）：专业版和企业版
-- Windows 7 SP1（x86、x64）：专业版、企业版和旗舰版
+- Windows 10（x86 和 x64）：专业版和企业版
+- Windows 8.1（x86 和 x64）：Professional 和 Enterprise
+- 带 SP1 的 Windows 7（x86 和 x64）：Professional、Enterprise 和 Ultimate
 
 此支持存在以下限制：  
 
@@ -241,10 +247,10 @@ ms.locfileid: "52456849"
 
 ## <a name="general-notes"></a>一般说明
 
-#### <a name="bkmk_note1"></a> 说明 1：分发点
+#### <a name="bkmk_note1"></a> 注释 1：分发点
 分发点支持多种不同的配置，每种配置都有不同的要求。 在某些情况下，这些配置不仅支持在服务器上安装，而且支持在客户端操作系统上安装。 有关详细信息，请参阅[管理内容和内容基础结构](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure)。  
 
-#### <a name="bkmk_note2"></a> 说明 2：站点数据库服务器
-只读域控制器 (RODC) 上不支持站点数据库服务器。 有关详细信息，请参阅 Microsoft 支持文章：[在域控制器上安装 SQL Server 时可能会遇到问题](https://support.microsoft.com/help/2032911)。 
+#### <a name="bkmk_note2"></a> 注释 2：站点数据库服务器
+只读域控制器 (RODC) 上不支持站点数据库服务器。 有关详细信息，请参阅“Microsoft 支持”文章：[在域控制器上安装 SQL Server 时可能遇到问题](https://support.microsoft.com/help/2032911)。 
 
 此外，任何域控制器上都不支持辅助站点服务器。  

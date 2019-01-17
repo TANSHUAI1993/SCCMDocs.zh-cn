@@ -10,12 +10,12 @@ ms.assetid: 5bd637b1-d7a1-411b-877a-c7aae9741173
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a0e16c137604480ab23e15b52723692491d1816d
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 763826a1a308130415fb972f7f3dc3e577b8e573
+ms.sourcegitcommit: a3cec96a771eed69e58a29917d1a3fe1a5fb2e73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53414848"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54250725"
 ---
 # <a name="whats-new-in-version-1802-of-system-center-configuration-manager"></a>System Center Configuration Manager 1802 版的新增功能
 
@@ -144,7 +144,7 @@ Configuration Manager 1802 中提供以下见解：
 ## <a name="co-management"></a>共同管理
 
 ### <a name="transition-endpoint-protection-workload-to-intune-using-co-management"></a>使用共同管理将 Endpoint Protection 工作负荷转移到 Intune
-<!-- 1357365 --> 启用共同管理后，Endpoint Protection 工作负载可以转换到 Intune。 若要转移 Endpoint Protection 工作负荷，请转到共同管理属性页，并将滚动条从 Configuration Manager 移动到“试点”或“所有”。 有关工作负荷的详细信息，请参阅[工作负荷能够转换到 Intune](/sccm/core/clients/manage/co-management-switch-workloads#Workloads-able-to-be-transitioned-to-Intune)。 有关共同管理的详细信息，请参阅 [Windows 10 设备共同管理](/sccm/core/clients/manage/co-management-overview)。
+<!-- 1357365 --> 启用共同管理后，Endpoint Protection 工作负载可以转换到 Intune。 若要转移 Endpoint Protection 工作负荷，请转到共同管理属性页，并将滚动条从 Configuration Manager 移动到“试点”或“所有”。 若要详细了解工作负载，请参阅[共同管理工作负载](/sccm/comanage/workloads)。 有关共同管理的详细信息，请参阅 [Windows 10 设备共同管理](/sccm/comanage/overview)。
  
 ### <a name="co-management-dashboard-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的共同管理仪表板
 <!--1356648--> 自此版本起，可以查看包含共同管理相关信息的仪表板。 此仪表板可帮助你查看环境中共同管理的计算机。 图形有助于标识可能需要注意的设备。 有关详细信息，请参阅文章[共同管理仪表板](/sccm/core/clients/manage/client-management-dashboard)。 
@@ -234,8 +234,8 @@ Configuration Manager 1802 中提供以下见解：
 ### <a name="report-for-default-browser-counts"></a>默认浏览器计数报表
 <!-- 1357830 --> 现在，可通过新报告了解将特定 Web 浏览器用作 Windows 默认浏览器的客户端计数。 请参阅“软件 - 公司和产品”报表组中的“默认浏览器计数”报表。 有关详细信息，请参阅[报表列表](/sccm/core/servers/manage/list-of-reports#software---companies-and-products)。
 
-### <a name="report-on-windows-autopilot-device-information"></a>关于 Windows AutoPilot 设备信息的报表
-<!-- 1351442 --> Windows AutoPilot 是一种以新式方式加入和配置新 Windows 10 设备的解决方案。 有关详细信息，请参阅 [Windows AutoPilot 概述](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot)。 向 Windows AutoPilot 注册现有设备的一种方法是，将设备信息上传到 Microsoft Store 商业版和教育版。 此信息包括设备序列号、Windows 产品标识符和硬件标识符。 使用 Configuration Manager 通过“硬件 - 常规”报表节点中的新报表“Windows AutoPilot 设备信息”收集和报告此设备信息。 有关详细信息，请参阅准备进行公共管理中的[新 Windows 10 设备](/sccm/core/clients/manage/co-management-prepare#new-windows-10-devices)。
+### <a name="report-on-windows-autopilot-device-information"></a>Windows Autopilot 设备信息报表
+<!-- 1351442 --> Windows Autopilot 是一种以新式方式载入和配置新 Windows 10 设备的解决方案。 有关详细信息，请参阅 [Windows Autopilot 概述](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot)。 一种向 Windows Autopilot 注册现有设备的方法是，将设备信息上传到适用于企业和适用于教育的 Microsoft Store。 此信息包括设备序列号、Windows 产品标识符和硬件标识符。 使用 Configuration Manager 通过“硬件 - 常规”报表节点中的新报表“Windows Autopilot 设备信息”收集和报告此设备信息。 有关详细信息，请参阅[如何准备基于 Internet 的设备以进行共同管理](/sccm/comanage/how-to-prepare-win10#windows-autopilot)，以准备进行共同管理。
 
 ### <a name="report-on-windows-10-servicing-details-for-a-specific-collection"></a>特定集合的 Windows 10 维护服务详细信息报表
 <!--1357653-->“特定集合的 Windows 10 维护服务详细信息”报告显示，与特定集合的 Windows 10 维护服务相关的常规信息。 此报表显示 Windows 10 设备的资源 ID、NetBIOS 名称、OS 名称、OS 版本名称、内部版本、OS 分支和服务状态。 有关详细信息，请参阅[报表列表](/sccm/core/servers/manage/list-of-reports#operating-system)

@@ -10,16 +10,16 @@ ms.assetid: 6bce416b-761d-4b23-bd33-5b7c30edb10d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6fb24c3e262f3d1f3991ab549592e3f21631b32d
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 4d892e8d194f61fece977c91ce36ba46cf9dd53d
+ms.sourcegitcommit: a3cec96a771eed69e58a29917d1a3fe1a5fb2e73
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456119"
+ms.lasthandoff: 01/14/2019
+ms.locfileid: "54250708"
 ---
 # <a name="pre-release-features-in-configuration-manager"></a>Configuration Manager 中的预发行功能
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 预发行功能是指 Current Branch 中的功能，用于在生产环境中的早期测试。 这些功能完全受支持，但仍在积极开发中。 可能会在移出预发行类别后，对它们进行更改。
 
@@ -77,7 +77,7 @@ ms.locfileid: "52456119"
 |------------------|----------------------|-------------------------|
 | SMS 提供程序 API <!--1359052--> | 版本 1810 | ![尚未发行](media/red_x.png) |
 | [增强的 HTTP 站点系统](/sccm/core/plan-design/hierarchy/enhanced-http) <!--1356889,1358228--> | 版本 1806 | 版本 1810 |
-| [适用于共同托管设备的移动应用](/sccm/core/clients/manage/co-management-switch-workloads#workloads-able-to-be-transitioned-to-intune) <!--1357892--> | 版本 1806 | ![尚未发行](media/red_x.png) |
+| [适用于共同管理的设备的客户端应用](/sccm/comanage/workloads#client-apps) <!--1357892--> | 版本 1806 | ![尚未发行](media/red_x.png) |
 | [包转换管理器](/sccm/apps/pcm/package-conversion-manager) <!--1357861--> | 版本 1806 | 版本 1810 |
 | [支持适用于 iOS 的 Cisco AnyConnect 4.0.07x 及更高版本](/sccm/mdm/deploy-use/create-vpn-profiles) <!--1357393--> | 版本 1802 | 版本 1802 <br>包含更新 4163547 |
 | [分阶段部署](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence) <!--1356837--> | 版本 1802 | 版本 1806 |
