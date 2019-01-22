@@ -10,16 +10,16 @@ ms.assetid: 29ae59b7-2695-4a0f-a9ff-4f29222f28b3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ff32a35ccfe3ca51183497197622408c1a28a99d
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 783512841b61d6fa10e3f2832100e9000576e65a
+ms.sourcegitcommit: 2687489aa409a050dcacd67f17b3dad3ab7f1804
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53416293"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54316518"
 ---
 # <a name="configure-certificate-infrastructure"></a>配置证书基础结构
 
-*适用于：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 了解在 System Center Configuration Manager 中配置证书基础结构的过程。 在开始之前，请检查 [System Center Configuration Manager 中证书配置文件先决条件](../../protect/plan-design/prerequisites-for-certificate-profiles.md)中列出的所有先决条件。  
 
@@ -52,7 +52,7 @@ ms.locfileid: "53416293"
    > [!NOTE]  
    >  有一些将适合于大多数环境的默认安全权限。 但是，你可以使用备用安全配置。 有关详细信息，请参阅[为 System Center Configuration Manager 中证书配置文件规划证书模板权限](../../protect/plan-design/planning-for-certificate-template-permissions.md)。  
 
-3. 将支持客户端身份验证的 PKI 证书部署到此服务器。 你可能已在计算机上安装了可以使用的合适证书，或者可能必须（或希望）明确为此目的部署证书。 有关此证书的要求的详细信息，请参阅 [System Center Configuration Manager 的 PKI 证书要求](../../core/plan-design/network/pki-certificate-requirements.md)主题中 **服务器的 PKI 证书** 部分中的“将 Configuration Manager 策略模块与网络设备注册服务角色服务一起运行的服务器”的详细信息。  
+3. 将支持客户端身份验证的 PKI 证书部署到此服务器。 你可能已在计算机上安装了可以使用的合适证书，或者可能必须（或希望）明确为此目的部署证书。 有关此证书的要求的详细信息，请参阅 [System Center Configuration Manager 的 PKI 证书要求](../../core/plan-design/network/pki-certificate-requirements.md)主题中**服务器的 PKI 证书**部分中的“将 Configuration Manager 策略模块与网络设备注册服务角色服务一起运行的服务器”的详细信息。  
 
    > [!TIP]
    >  如果在部署此证书时需要帮助，可以使用[为分发点部署客户端证书](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_clientdistributionpoint2008_cm2012)的说明，因为证书要求是相同的，但有一处例外：  
@@ -125,7 +125,7 @@ ms.locfileid: "53416293"
    - 如果选择“处理 SCEP 证书请求”，请配置以下内容：
      -   证书注册点的**网站名称**、**HTTPS 端口号**和**虚拟应用程序名称**。 这些字段使用默认值自动填充。 
      -   **网络设备注册服务和根 CA 证书的 URL** -单击“添加”，然后在“添加 URL 和根 CA 证书”对话框中，指定以下内容：
-         - 网络设备注册服务的 URL **：指定的 URL 采用以下格式： https://*< server_FQDN >*/certsrv/mscep/mscep.dll。 例如，如果运行网络设备注册服务的服务器的 FQDN 为 server1.contoso.com，请输入 https://server1.contoso.com/certsrv/mscep/mscep.dll。
+         - **网络设备注册服务的 URL**：指定的 URL 采用以下格式： https://*< server_FQDN >*/certsrv/mscep/mscep.dll。 例如，如果运行网络设备注册服务的服务器的 FQDN 为 server1.contoso.com，请输入 https://server1.contoso.com/certsrv/mscep/mscep.dll。
          - **根 CA 证书**：浏览到并选择你在**步骤 1：安装和配置网络设备注册服务及依赖关系**中创建和保存的 .cer 证书文件。 此根 CA 证书允许证书注册点验证 System Center Configuration Manager 策略模块将使用的客户端身份验证证书。  
 
    - 如果选择了“处理 PFX 证书请求”，则要为所选证书颁发机构配置连接详细信息和凭据。
@@ -167,7 +167,7 @@ ms.locfileid: "53416293"
 
 ## <a name="step-3----install-the-system-center-configuration-manager-policy-module-for-scep-certificates-only"></a>步骤 3 - 安装 System Center Configuration Manager 策略模块（仅用于 SCEP 证书）。
 
-您必须安装和配置中指定每个服务器上的 System Center Configuration Manager 策略模块**步骤 2:安装和配置证书注册点中所指定的每台服务器上并对其进行配置为证书注册点属性中的“网络设备注册服务的 URL”**。  
+必须在**步骤 2：安装和配置证书注册点**中指定的每台服务器上安装和配置 System Center Configuration Manager 策略模块，将其作为证书注册点属性中的**网络设备注册服务的 URL**。  
 
 ##### <a name="to-install-the-policy-module"></a>安装策略模块  
 
