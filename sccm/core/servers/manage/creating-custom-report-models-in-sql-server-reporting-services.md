@@ -10,12 +10,12 @@ ms.assetid: f2df88b4-c348-4dcf-854a-54fd6eedf485
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: d011272c42f3347f555e4fb5322464e9c5e754da
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: b28a5be9a494d2568bbdfdee29f9e757ef97f940
+ms.sourcegitcommit: 2687489aa409a050dcacd67f17b3dad3ab7f1804
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53424691"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54316552"
 ---
 # <a name="creating-custom-report-models-for-system-center-configuration-manager-in-sql-server-reporting-services"></a>在 SQL Server Reporting Services 中的 System Center Configuration Manager 创建自定义报表模型
 
@@ -146,7 +146,7 @@ ms.locfileid: "53424691"
 
 3. 使用文本编辑器（例如记事本）打开前述文件。  
 
-4. 在文件 &lt;模型名称\>.dsv 中，找到文件的第一行，其内容如下所示：  
+4. 在文件 _&lt;Model Name\>_**.dsv** 中，找到文件的第一行，其内容如下所示：  
 
     **&lt;DataSourceView xmlns="http://schemas.microsoft.com/analysisservices/2003/engine"\>**  
 
@@ -156,9 +156,9 @@ ms.locfileid: "53424691"
 
 5. 将文件的整个内容复制到 Windows 剪贴板。  
 
-6. 关闭文件 &lt;模型名称\>.dsv。*  
+6. 关闭文件 _&lt;Model Name\>_**.dsv**。  
 
-7. *在文件 &lt;模型名称\>.smdl 中，找到文件的最后三行，其内容如下所示：  
+7. 在文件 _&lt;Model Name\>_**.smdl** 中，找到文件的最后三行，其内容如下所示：  
 
     `</Entity>`  
 
@@ -166,11 +166,11 @@ ms.locfileid: "53424691"
 
     `</SemanticModel>`  
 
-8. 将文件 &lt;模型名称\>.dsv 的内容直接粘贴在文件 (&lt;SemanticModel\>) 的最后一行之前。  
+8. 将文件 _&lt;Model Name\>_**.dsv** 的内容直接粘贴在文件 (**&lt;SemanticModel\>**) 的最后一行之前。  
 
-9. 保存并关闭文件 &lt;模型名称\>.smdl。  
+9. 保存并关闭文件 _&lt;Model Name\>_**.smdl**。  
 
-10. 将文件 &lt;模型名称\>.smdl 复制到 Configuration Manager 站点服务器上的文件夹 %programfiles%\Microsoft Configuration Manager\AdminConsole\XmlStorage\Other 中。  
+10. 将文件 _&lt;Model Name\>_**.smdl** 复制到 Configuration Manager 站点服务器上的文件夹 *%programfiles%* \Microsoft Configuration Manager \AdminConsole\XmlStorage\Other 中。  
 
     > [!IMPORTANT]  
     >  将报表模型文件复制到 Configuration Manager 站点服务器之后，必须退出并重新启动 Configuration Manager 控制台，然后才能在“创建报表向导”中使用报表模型。  
@@ -389,7 +389,7 @@ ms.locfileid: "53424691"
 
 3. 使用文本编辑器（例如记事本）打开前述文件。  
 
-4. 在文件 &lt;模型名称\>.dsv 中，找到文件的第一行，其内容如下所示：  
+4. 在文件 _&lt;Model Name\>_**.dsv** 中，找到文件的第一行，其内容如下所示：  
 
     **&lt;DataSourceView xmlns="http://schemas.microsoft.com/analysisservices/2003/engine"\>**  
 
@@ -399,9 +399,9 @@ ms.locfileid: "53424691"
 
 5. 将文件的整个内容复制到 Windows 剪贴板。  
 
-6. 关闭文件 &lt;模型名称\>.dsv。*  
+6. 关闭文件 _&lt;Model Name\>_**.dsv**。  
 
-7. *在文件 &lt;模型名称\>.smdl 中，找到文件的最后三行，其内容如下所示：  
+7. 在文件 _&lt;Model Name\>_**.smdl** 中，找到文件的最后三行，其内容如下所示：  
 
     `</Entity>`  
 
@@ -409,11 +409,11 @@ ms.locfileid: "53424691"
 
     `</SemanticModel>`  
 
-8. 将文件 &lt;模型名称\>.dsv 的内容直接粘贴在文件 (&lt;SemanticModel\>) 的最后一行之前。  
+8. 将文件 _&lt;Model Name\>_**.dsv** 的内容直接粘贴在文件 (**&lt;SemanticModel\>**) 的最后一行之前。  
 
-9. 保存并关闭文件 &lt;模型名称\>.smdl。  
+9. 保存并关闭文件 _&lt;Model Name\>_**.smdl**。  
 
-10. 将文件 &lt;模型名称\>.smdl 复制到 Configuration Manager 站点服务器上的文件夹 %programfiles%\Microsoft Configuration Manager\AdminConsole\XmlStorage\Other 中。  
+10. 将文件 _&lt;Model Name\>_**.smdl** 复制到 Configuration Manager 站点服务器上的文件夹 *%programfiles%* \Microsoft Configuration Manager\AdminConsole\XmlStorage\Other 中。  
 
     > [!IMPORTANT]  
     >  将报表模型文件复制到 Configuration Manager 站点服务器之后，必须退出并重新启动 Configuration Manager 控制台，然后才能在“创建报表向导”中使用报表模型。  

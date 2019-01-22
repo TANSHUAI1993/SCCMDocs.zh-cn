@@ -10,12 +10,12 @@ ms.assetid: d5bfab4f-c55e-4545-877c-5c8db8bc1891
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f1fa9f1bb2e036e0208a72e744f66da5c1887593
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 5679e74474d161250cd9cef1c2e4866a0702c521
+ms.sourcegitcommit: 2687489aa409a050dcacd67f17b3dad3ab7f1804
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53423297"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54316501"
 ---
 # <a name="how-to-extend-hardware-inventory-in-system-center-configuration-manager"></a>How to extend hardware inventory in System Center Configuration Manager
 
