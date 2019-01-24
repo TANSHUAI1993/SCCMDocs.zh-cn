@@ -10,12 +10,12 @@ ms.assetid: 20493c86-6454-4b35-8f22-0d049b68b8bb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 666df71b32ea0dc95411b8ffd58d18f7666d7b23
-ms.sourcegitcommit: d36e4c7082a5144e79035dd8847c8e741fa04667
+ms.openlocfilehash: 776d0a477d56a178927fb2d09866eacf63b4895a
+ms.sourcegitcommit: d5c013a29f53b975fe3a6cb0a41f1e817bd7b235
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53444580"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54342782"
 ---
 # <a name="approve-applications-in-configuration-manager"></a>在 Configuration Manager 中批准应用程序
 
@@ -69,6 +69,10 @@ ms.locfileid: "53444580"
 <!--1321550-->
 
 自版本 1810 起，可以配置用于应用程序批准请求的电子邮件通知。 当用户请求应用程序时，你会收到一封电子邮件。 单击电子邮件中的链接以批准或拒绝该请求，而无需使用 Configuration Manager 控制台。
+
+在为应用程序创建新部署时，可以定义能够批准或拒绝请求的用户的电子邮件地址。 如果以后需要更改电子邮件地址列表，请转到“监视”工作区中，展开“警报”，然后选择“订阅”节点。 从某个与应用程序部署相关的“通过电子邮件批准应用程序”订阅中选择“属性”。 
+
+如果有多个警报，则可以确定警报与部署的对应关系。 打开警报属性，然后在“常规”选项卡上查看“所选警报”列表。部署已作为此订阅的警报启用。 
 
 
 ### <a name="prerequisites"></a>先决条件
