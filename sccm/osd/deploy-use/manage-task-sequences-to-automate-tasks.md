@@ -10,12 +10,12 @@ ms.assetid: a1f099f1-e9b5-4189-88b3-f53e3b4e4add
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d0db075f652dd77a833f7a3a00f478bae5a5e54f
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 0a2ee528c8b38acbc18aa051dd84a7634b66713b
+ms.sourcegitcommit: 2687489aa409a050dcacd67f17b3dad3ab7f1804
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53415188"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54316586"
 ---
 # <a name="manage-task-sequences-to-automate-tasks-in-configuration-manager"></a>管理任务序列在 Configuration Manager 中自动执行任务
 
@@ -91,7 +91,7 @@ ms.locfileid: "53415188"
 
 3. 在“常规”选项卡上，可使用软件中心的以下设置：  
 
-   - **需要重启**：让用户了解安装期间是否需要重新启动。  
+   - **需要重启**：让用户了解安装期间是否需要重启。  
 
    - **下载大小 (MB)**：指定任务序列在软件中心中显示多少兆字节。  
 
@@ -120,6 +120,8 @@ ms.locfileid: "53415188"
 
        > [!NOTE]    
        > 如果所选程序在客户端上运行失败，则任务序列不会运行。 如果所选程序成功运行，则它不会再次运行，即使在同一客户端上重新运行了任务序列。  
+   
+   - **取消任务序列通知**：选择此选项可隐藏“新软件可用”Toast 通知。 “新软件”图标仍会显示在通知区域的“软件中心”中。 默认情况下，此复选框已清除。  
  
    - **在部署此任务序列的计算机上禁用该任务序列**：如果选择此选项时，Configuration Manager 会暂时禁用包含此任务序列的所有部署。 也会将任务序列从可运行部署列表中删除。 在启用之前，不会运行任务序列。 默认情况下，此选项已被清除。  
 

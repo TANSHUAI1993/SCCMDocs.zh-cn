@@ -10,16 +10,16 @@ ms.assetid: 1392797b-76cb-46b4-a3e4-8f349ccaa078
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 00789c0c469e7de5ccd0b4dcac4130fdb14bb485
-ms.sourcegitcommit: 1439817f1309658b31008d7bafaab32fc5ef8789
+ms.openlocfilehash: e8f575fc609dea662688ed10a76733467784a5b9
+ms.sourcegitcommit: d5c013a29f53b975fe3a6cb0a41f1e817bd7b235
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52820112"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54342799"
 ---
 # <a name="site-and-site-system-prerequisites-for-configuration-manager"></a>用于 Configuration Manager 的站点和站点系统先决条件
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 基于 Windows 的计算机要求特定配置，以支持用作 Configuration Manager 站点系统服务器。 
 
@@ -327,6 +327,8 @@ ms.locfileid: "52820112"
 #### <a name="windows-server-roles-and-features"></a>Windows Server 角色和功能  
 
 -   .NET Framework 3.5 SP1（或更高版本）  
+
+-   Windows Defender 功能（Windows Server 2016 或更高版本）  
 
 
 

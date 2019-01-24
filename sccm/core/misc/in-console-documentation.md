@@ -1,6 +1,6 @@
 ---
 title: 控制台中文档
-ms.date: 11/30/2018
+ms.date: 01/14/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -9,12 +9,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 robots: noindex,nofollow
-ms.openlocfilehash: 151862c390518cf68450c3eb3727a777bc575c5a
-ms.sourcegitcommit: a3cec96a771eed69e58a29917d1a3fe1a5fb2e73
+ms.openlocfilehash: f5bb59cb5912ef638058b09d90132a579a7e651c
+ms.sourcegitcommit: 2687489aa409a050dcacd67f17b3dad3ab7f1804
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54250640"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54316399"
 ---
 <!-- 
 - Feature 1357546
@@ -51,20 +51,20 @@ ms.locfileid: "54250640"
 
 
 ## <a name="trending"></a>趋势
-2018 年 11 月的热门文章。
+2018 年 12 月的热门文章。
 
  | 页面查看次数 | 标题 | 
  |------------|-------| 
- | 16701 | [故障排除的日志文件](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/log-files) | 
- | 11417 | [1806 版中的新增功能](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1806) | 
- | 8346 | [用于连接的端口](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/ports) | 
- | 8038 | [将客户端部署到 Windows](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-to-windows-computers) | 
- | 7104 | [支持 Windows 10](https://docs.microsoft.com/sccm/core/plan-design/configs/support-for-windows-10) | 
- | 6957 | [安装控制台](https://docs.microsoft.com/sccm/core/servers/deploy/install/install-consoles) | 
- | 6765 | [客户端安装参数和属性](https://docs.microsoft.com/sccm/core/clients/deploy/about-client-installation-properties) | 
- | 6091 | [适用于 Windows 10 设备的共同管理](https://docs.microsoft.com/sccm/comanage/overview) | 
- | 6043 | [部署应用程序](https://docs.microsoft.com/sccm/apps/deploy-use/deploy-applications) | 
- | 5833 | [管理分发点](https://docs.microsoft.com/sccm/core/servers/deploy/configure/install-and-configure-distribution-points) | 
+ | 16430 | [故障排除的日志文件](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/log-files) |
+ | 15155 | [1810 版中的新增功能](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1810) |
+ | 8581 | [将客户端部署到 Windows](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-to-windows-computers) |
+ | 7866 | [用于连接的端口](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/ports) |
+ | 7434 | [支持 Windows 10](https://docs.microsoft.com/sccm/core/plan-design/configs/support-for-windows-10) |
+ | 7088 | [1806 版中的新增功能](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1806) |
+ | 7086 | [客户端安装参数和属性](https://docs.microsoft.com/sccm/core/clients/deploy/about-client-installation-properties) |
+ | 6914 | [安装控制台](https://docs.microsoft.com/sccm/core/servers/deploy/install/install-consoles) |
+ | 6087 | [部署应用程序](https://docs.microsoft.com/sccm/apps/deploy-use/deploy-applications) |
+ | 5817 | [更新和维护服务](https://docs.microsoft.com/sccm/core/servers/manage/updates) |
 
 
 
@@ -73,16 +73,16 @@ ms.locfileid: "54250640"
 
  | 上次审阅时间 | 标题 | 
  |---------------|-------|
- | 2018 年 11 月 27 日 | [批准应用程序](https://docs.microsoft.com/sccm/apps/deploy-use/app-approval) | 
- | 2018 年 11 月 27 日 | [边界组的过程](https://docs.microsoft.com/sccm/core/servers/deploy/configure/boundary-group-procedures) | 
- | 2018 年 11 月 27 日 | [支持中心](https://docs.microsoft.com/sccm/core/support/support-center) | 
- | 2018 年 11 月 26 日 | [规划云管理网关](https://docs.microsoft.com/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) | 
- | 2018 年 11 月 16 日 | [部署软件更新](https://docs.microsoft.com/sccm/sum/deploy-use/deploy-software-updates) | 
- | 2018 年 11 月 16 日 | [客户端通知](https://docs.microsoft.com/sccm/core/clients/manage/client-notification) | 
- | 2018 年 11 月 15 日 | [Add-CMScriptDeploymentType](https://docs.microsoft.com/powershell/module/configurationmanager/add-cmscriptdeploymenttype) | 
- | 2018 年 11 月 15 日 | [Set-CMScriptDeploymentType](https://docs.microsoft.com/powershell/module/configurationmanager/set-cmscriptdeploymenttype) | 
- | 2018 年 11 月 15 日 | [Invoke-CMScript](https://docs.microsoft.com/powershell/module/configurationmanager/invoke-cmscript) | 
- | 2018 年 11 月 15 日 | [Get-CMScript](https://docs.microsoft.com/powershell/module/configurationmanager/get-cmscript) | 
+ | 2018/12/26 | [准备 Intune 以便进行用户迁移](https://docs.microsoft.com/sccm/mdm/deploy-use/migrate-prepare-intune) |
+ | 2018/12/21 | [已弃用的功能](https://docs.microsoft.com/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures) |
+ | 2018/12/21 | [发行说明](https://docs.microsoft.com/sccm/core/servers/deploy/install/release-notes) |
+ | 2018/12/21 | [Windows Hello 企业版设置](https://docs.microsoft.com/sccm/mdm/deploy-use/windows-hello-for-business-settings) |
+ | 2018/12/20 | [管理软件更新同步](https://docs.microsoft.com/sccm/sum/get-started/synchronize-software-updates) |
+ | 2018/12/14 | [先决条件检查](https://docs.microsoft.com/sccm/core/servers/deploy/install/list-of-prerequisite-checks) |
+ | 2018/12/14 | [技术预览版](https://docs.microsoft.com/sccm/core/get-started/technical-preview) |
+ | 2018/12/14 | [Technical Preview 1812](https://docs.microsoft.com/sccm/core/get-started/capabilities-in-technical-preview-1812) |
+ | 2018/12/14 | [批准应用程序](https://docs.microsoft.com/sccm/apps/deploy-use/app-approval) |
+ | 2018/12/14 | [混合 MDM 中的新增功能](https://docs.microsoft.com/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management) |
 
 
 
@@ -99,14 +99,13 @@ ms.locfileid: "54250640"
 
 
 ## <a name="new-and-updated-support-articles"></a>新的和更新的支持文章
-2018 年 11 月新的或更新的支持文章。
+2018 年 12 月新的或更新的支持文章。
 
-- [KB 4468362：如何为应用程序在 Configuration Manager 中部署 Windows 语言包](https://support.microsoft.com/help/4468362)
-- [KB 4469580：ConfigMgr PXE 不起作用，因为未创建自签名的证书](https://support.microsoft.com/help/4469580/)
+- [KB 4040243：如何为 Configuration Manager 启用 TLS 1.2](https://support.microsoft.com/help/4040243)
+- [KB 4477073：安装更新时出现错误 0x800f0831](https://support.microsoft.com/help/4477073)
 - [KB 4471003：如何从不同网络上的 PXE 服务器启动](https://support.microsoft.com/help/4471003)
-- [KB 4462978：System Center Configuration Manager Current Branch（版本 1806）更新汇总](https://support.microsoft.com/help/4462978)
-- [KB 4471061：客户端计算机可以在映像处理期间“窃取”未知计算机对象的 Configuration Manager GUID](https://support.microsoft.com/help/4471061)
-- [KB 4471115：任务序列向导在 Windows PE 中运行时，Configuration Manager 中的动态介质无法获取管理点位置](https://support.microsoft.com/help/4471115)
+- [KB 4474026：启用 BitLocker 任务失败，在 Configuration Manager 中出现错误 80070057](https://support.microsoft.com/help/4474026)
+- [KB 4483868：不再为 Azure 中订阅级别的 Web 应用分配参与者角色](https://support.microsoft.com/help/4483868)
 
 
 要订阅新的 Configuration Manager 支持文章的 Atom 或 RSS 通知，请参阅[支持内容更新](https://support.microsoft.com/help/4089498/)并选择 System Center Configuration Manager。  

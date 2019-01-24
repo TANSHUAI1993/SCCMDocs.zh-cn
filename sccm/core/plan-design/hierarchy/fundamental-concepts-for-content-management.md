@@ -10,16 +10,16 @@ ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b73ead1492b143260d327f428db5a6183f84434c
-ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
+ms.openlocfilehash: 4a777ec74fb4006df056b4e69d7cbdfb380bcf72
+ms.sourcegitcommit: d5c013a29f53b975fe3a6cb0a41f1e817bd7b235
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411334"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54342748"
 ---
 # <a name="fundamental-concepts-for-content-management-in-configuration-manager"></a>Configuration Manager 中内容管理的基本概念
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 Configuration Manager 支持可靠的工具和选项系统来管理软件内容。 软件部署（如应用程序、包、软件更新和 OS 部署）都需要内容。 Configuration Manager 将内容存储在站点服务器和分发点上。 在不同位置间传输此内容时需要大量网络带宽。 为有效地规划和使用内容管理基础结构，首先了解可用选项和配置。 然后考虑如何使用它们以最好地适应网络环境和内容部署需求。  
 
@@ -57,7 +57,7 @@ Configuration Manager 支持可靠的工具和选项系统来管理软件内容�
 
 
 ## <a name="binary-differential-replication"></a>二进制差异复制  
- 二进制差异复制 (BDR) 是分发点的先决条件。 它有时称为增量复制。 将更新分发到以前部署到其他站点或远程分发点的内容时，BDR 将自动用于减少带宽。  
+ 二进制差异复制 (BDR) 有时称为增量复制。 它用于将更新分发给先前部署到其他站点或远程分发点的内容。 要支持 BDR 减少对带宽的使用，请在分发点上安装“远程差分压缩”功能。 有关详细信息，请参阅[分发点先决条件](/sccm/core/plan-design/configs/site-and-site-system-prerequisites#bkmk_2012dppreq)。
 
  BDR 将用于发送已分发内容更新的网络带宽降至最低。 每次更改文件时，它仅重新发送新的或更改的内容，而不是发送整个内容源文件集。  
 
@@ -175,7 +175,7 @@ Configuration Manager 支持可靠的工具和选项系统来管理软件内容�
 
 -   **拉取分发点**：分发点的一种变体，该分发点获取其他分发点（源分发点）中的内容。 此过程与客户端从分发点下载内容的方式类似。 在站点服务器必须将内容直接分发给每个分发点时，拉取分发点有助于避免可能出现的网络带宽瓶颈。 [使用拉取分发点](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point)。
 
--   **云分发点**：安装在 Microsoft Azure 中的分发点的变体。 [了解如何使用云分发点](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point)。  
+-   **云分发点**：在 Microsoft Azure 中安装的分发点的变体。 [了解如何使用云分发点](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point)。  
 
 
 标准分发点支持一系列配置和功能：  
@@ -256,7 +256,7 @@ Configuration Manager 支持可靠的工具和选项系统来管理软件内容�
 ## <a name="on-demand-content-distribution"></a>按需内容分发  
  按需内容分发是个别应用程序和包部署的选项。 此选项可将内容按需分发到首选服务器。  
 
--   若要为部署启用此设置，请启用：“将此包的内容分发到首选分发点”。  
+-   要为部署启用此设置，请启用以下选项：将此包的内容分发到首选分发点。  
 
 -   为部署启用此选项后，如果客户端请求该内容而该内容在任何客户端首选分发点上都不可用，Configuration Manager 会将该内容自动分发到客户端首选分发点。  
 

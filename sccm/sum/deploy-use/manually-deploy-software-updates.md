@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 57184274-5fea-4d79-a2b4-22e08ed26daf
-ms.openlocfilehash: aae0951ddf32ce1d58a29b034acef96b55ab85a0
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 8c0752506e410f752f49795470215c30b0928e4e
+ms.sourcegitcommit: d5c013a29f53b975fe3a6cb0a41f1e817bd7b235
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53414797"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54342833"
 ---
 # <a name="manually-deploy-software-updates"></a>手动部署软件更新  
 
@@ -161,7 +161,10 @@ ms.locfileid: "53414797"
 
    -   **用户通知**：指定是否在软件中心已配置的“软件可用时间”上显示通知。 此设置还控制是否通知客户端计算机上的用户。 对于可用部署，无法选择“在软件中心和所有通知中隐藏”选项。  
 
-   -   **截止时间行为**：仅可向所需部署配置此设置。 指定软件更新部署达到任何已定义的维护时段外的截止日期时的行为。 选项包括是否要安装软件更新，以及安装后是否执行系统重启。 有关维护时段的详细信息，请参阅[如何使用维护时段](/sccm/core/clients/manage/collections/use-maintenance-windows)。  
+   -   **截止时间行为**：仅可向所需部署配置此设置。 指定软件更新部署达到任何已定义的维护时段外的截止日期时的行为。 选项包括是否要安装软件更新，以及安装后是否执行系统重启。 有关维护时段的详细信息，请参阅[如何使用维护时段](/sccm/core/clients/manage/collections/use-maintenance-windows)。 
+  
+       > [!Note]
+       > 仅在为客户端设备配置维护时段时才适用。 如果设备上未定义维护时段，则在截止日期之后将始终会更新安装和重启。
 
    -   **设备重启行为**：仅可向所需部署配置此设置。 指定在需要重启才能完成更新安装的情况下，是否在服务器和工作站上抑制系统重启。  
 

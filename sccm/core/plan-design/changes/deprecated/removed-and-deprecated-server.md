@@ -1,8 +1,8 @@
 ---
-title: Configuration Manager 站点服务器中已弃用的项
+title: 站点服务器弃用的内容
 titleSuffix: Configuration Manager
-description: 了解 System Center Configuration Manager 站点服务器不再支持的产品和操作系统。
-ms.date: 01/25/2018
+description: 了解 Configuration Manager 站点服务器不再支持的产品和操作系统。
+ms.date: 01/15/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,37 +10,48 @@ ms.assetid: d53ac075-438b-41da-ab85-42f33982da0c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b92eb8083ce886fcab4d9957b2a79999d72a1a5a
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: c8ea24e141d0e01512ed81ca96e88f2f0f2d07bc
+ms.sourcegitcommit: d5c013a29f53b975fe3a6cb0a41f1e817bd7b235
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32332757"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54342714"
 ---
-# <a name="removed-and-deprecated-for-system-center-configuration-manager-site-servers"></a>System Center Configuration Manager 站点服务器中已删除和已弃用的项
+# <a name="removed-and-deprecated-for-configuration-manager-site-servers"></a>Configuration Manager 站点服务器已删除和已弃用的内容
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
-本文介绍 System Center Configuration Manager 站点服务器的支持中删除的，或者将在未来更新中删除（弃用）的产品和操作系统。 本文预告了可能会影响 Configuration Manager 的使用的未来变更。  
+本文介绍 Configuration Manager 站点服务器的支持中删除的，或者将在未来更新中删除（弃用）的产品和操作系统。 针对可能会影响使用 Configuration Manager 的将来更改提出早期通知。  
 
-此信息在将来版本中可能有所变化，并且可能不会包括每一个弃用的功能、产品或操作系统。  
+此信息以后可能会有所更改。 它可能不包括每个已弃用的功能、产品或操作系统。  
 
 
-## <a name="deprecated-server-operating-systems"></a>已弃用的服务器操作系统  
+
+## <a name="server-os"></a>服务器 OS  
 
 |**操作系统**|**首次宣布弃用**|**删除的支持** |  
 |-|-|-| 
-|Windows Server 2008 R2|2015 年 10 月| 版本 1702（请参阅注释 1）| 
-|Windows Server 2008|2015 年 10 月|版本 1511 </br></br>删除了作为站点系统的支持。 （请参阅注释 2）。|  
+|Windows Server 2008 R2 SP1|2015 年 10 月| 版本 1702 <sup>[注释 1](#bkmk_note1)</sup>| 
+|带 SP2 的 Windows Server 2008|2015 年 10 月|版本 1511 <sup>[注释 2](#bkmk_note2)</sup>|  
 
->[!NOTE]
->-   从 1702 版本开始，站点服务器或大多数站点系统角色不再支持 Windows Server 2008 R2。 但会继续支持使用 1702 之前的版本。 此操作系统仍然支持分发点站点系统角色（包括拉取分发点，而且适用于 PXE 和多播），直到宣布弃用支持，或者操作系统的扩展支持期到期。 从版本 1602 开始，可以对站点服务器的操作系统进行就地升级，从 Windows Server 2008 R2 升级到 Windows Server 2012 R2。  
->- 有关站点服务器操作系统就地升级的详细信息，请参阅 [升级支持 System Center Configuration Manager 的本地基础结构](/sccm/core/servers/manage/upgrade-on-premises-infrastructure)中的[就地升级运行 Windows Server 2008 R2 的站点服务器的操作系统](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#bkmk_from2008r2)部分。
+#### <a name="bkmk_note1"></a> 注释 1：Windows Server 2008 R2 SP1
+站点服务器或大多数站点系统角色不再支持带有服务包 1 的 Windows Server 2008 R2。 分发点角色仍支持此 OS。 此支持包括拉取分发点、PXE 和多播。 
 
->[!NOTE]
->-   除分发点和拉取分发点外，站点服务器或站点系统角色均不支持 Windows Server 2008。 可以继续使用操作系统作为分发点，直到支持被宣布弃用或者操作系统的扩展支持期到期为止。 有关详细信息，请参阅 [Installation of System Center Configuration Manager CB and LTSB fails on Windows Server 2008](https://support.microsoft.com/help/4015095)（在 Windows Server 2008 上安装 System Center Configuration Manager CB 和 LTSB 失败）。
+> [!Important]  
+> Windows Server 2008 R2 SP1 的扩展支持结束日期为 2020 年 1 月 14 日。 此日期之后，Configuration Manager 不支持将此操作系统用作任何站点系统角色。 
 
-## <a name="deprecated-support-for-sql-server-versions-as-a-site-database"></a>SQL Server 版本作为站点数据库的已弃用支持  
+可以将站点服务器 OS 从 Windows Server 2008 R2 升级到 Windows Server 2012 R2。 有关详细信息，请参阅[就地升级运行 Windows Server 2008 R2 的站点服务器的操作系统](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#bkmk_from2008r2)。  
+
+
+#### <a name="bkmk_note2"></a> 注释 2：带 SP2 的 Windows Server 2008
+站点服务器或大多数站点系统角色不再支持带有服务包 2 的 Windows Server 2008。 分发点角色仍支持此 OS。 此支持包括拉取分发点、PXE 和多播。 
+
+> [!Important]  
+> Windows Server 2008 SP2 的扩展支持结束日期为 2020 年 1 月 14 日。 此日期之后，Configuration Manager 不支持将此操作系统用作任何站点系统角色。  
+
+
+
+## <a name="sql-server"></a>SQL Server   
 
 |**SQL Server 版本**|**首次宣布弃用**|**删除的支持**|   
 |-|-|-| 
@@ -48,14 +59,23 @@ ms.locfileid: "32332757"
 |SQL Server 2008|2015 年 10 月|版本 1511|  
 
 
-如果需要升级 SQL Server 版本，建议采用以下由易到难的方法。
-1. [就地升级 SQL Server](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#a-namebkmksupconfigupgradedbsrva-upgrade-sql-server-on-the-site-database-server)（推荐）。
-2. 在一台新计算机上安装 SQL Server 的新版本。 然后使用 Configuration Manager 设置的[数据库移动选项](/sccm/core/servers/manage/modify-your-infrastructure#a-namebkmkdbconfiga-modify-the-site-database-configuration)指向新SQL Server 上的站点服务器。
-3. 使用[备份和恢复](/sccm/protect/understand/backup-and-recovery)。
+如果需要升级 SQL Server 版本，建议采用以下由易到难的方法：
+
+1. [就地升级 SQL Server](/sccm/core/servers/manage/upgrade-on-premises-infrastructure#a-namebkmksupconfigupgradedbsrva-upgrade-sql-server-on-the-site-database-server)（推荐）。  
+
+2. 在一台新计算机上安装 SQL Server 的新版本。 然后使用 Configuration Manager 安装程序的[数据库移动选项](/sccm/core/servers/manage/modify-your-infrastructure#a-namebkmkdbconfiga-modify-the-site-database-configuration)指向新 SQL Server 上的站点服务器。  
+
+3. 使用[备份和恢复](/sccm/protect/understand/backup-and-recovery)。  
+
 
 
 ## <a name="more-information"></a>更多信息
-有关详情，请参阅：
- - [已删除和已弃用的项](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated)
- - [Microsoft 支持生命周期](https://support.microsoft.com/lifecycle)网站。
- - [对 Configuration Manager Current Branch 版本的支持](/sccm/core/servers/manage/current-branch-versions-supported)。
+
+有关详细信息，请参阅下列文章： 
+
+- [已删除和已弃用的项](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated)  
+
+- [Microsoft 支持生命周期](https://support.microsoft.com/lifecycle)  
+
+- [对 Configuration Manager Current Branch 版本的支持](/sccm/core/servers/manage/current-branch-versions-supported)  
+

@@ -10,16 +10,16 @@ ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cde62242fc4db99d762d670037aad22bd25d6c00
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: e7a2801b7efa513b2b15a58a7a89eee5d4727a21
+ms.sourcegitcommit: d5c013a29f53b975fe3a6cb0a41f1e817bd7b235
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456730"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54342891"
 ---
 # <a name="task-sequence-variables-in-configuration-manager"></a>Configuration Manager 中的任务序列变量
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 本文是按字母顺序对所有可用变量的引用。 使用浏览器的查找功能（通常使用 CTRL + F）查找特定变量。 如果变量特定于特定步骤，会对此进行说明。 有关[任务序列步骤](/sccm/osd/understand/task-sequence-steps)的文章包括特定于每个步骤的变量列表。 
 
@@ -153,13 +153,13 @@ ms.locfileid: "52456730"
 
  通过以下方法之一指定启动的任务序列：  
 
- - SMS：Configuration Manager 客户端，例如当用户从软件中心启动它
- - UFD：传统 USB 媒体
- - UFD+FORMAT：较新的 USB 媒体
- - CD：可启动的 CD
- - DVD：可启动的 DVD
- - PXE：使用 PXE 的网络启动
- - HD：硬盘上的预留媒体
+ - **SMS**：Configuration Manager 客户端，例如当用户从软件中心启动它
+ - **UFD**：传统 USB 媒体
+ - **UFD + FORMAT**：新版 USB 媒体
+ - **CD**：可启动的 CD
+ - **DVD**：可启动的 DVD
+ - **PXE**：使用 PXE 进行网络启动
+ - **HD**：硬盘上的预留媒体
 
 
 ### <a name="SMSTSLogPath"></a> _SMSTSLogPath
@@ -289,8 +289,8 @@ ms.locfileid: "52456730"
 
  指定当前运行的任务序列的类型。 可以具有以下一个值：  
 
- - 1：一般任务序列
- - 2：OS 部署任务序列
+ - **1**：一般任务序列
+ - **2**：OS 部署任务序列
 
 
 ### <a name="SMSTSUseCRL"></a> _SMSTSUseCRL
@@ -330,13 +330,13 @@ ms.locfileid: "52456730"
 
  任务序列在[安装应用程序](task-sequence-steps.md#BKMK_InstallApplication)步骤中随应用程序的安装状态一起设置此变量。 它设置为下列值之一：  
 
- - 未定义：“安装应用程序”步骤未运行。  
+ - **Undefined**：“安装应用程序”步骤未运行。  
 
- - **错误**：在至少一个应用程序由于“安装应用程序”步骤中出错而失败时设置。  
+ - **错误**：由于“安装应用程序”步骤中的错误，至少有一个应用程序失败。  
 
- - 警告：在“安装应用程序”步骤中未发生任何错误。 由于不满足要求，一个或多个应用程序或必需的依赖项未安装。  
+ - **警告**：在“安装应用程序”步骤中未发生任何错误。 由于不满足要求，一个或多个应用程序或必需的依赖项未安装。  
 
- - **成功**：在“安装应用程序”步骤中未检测到任何错误或警告。  
+ - **成功**：“安装应用程序”步骤中未检测到任何错误或警告。  
 
 
 ### <a name="OSDAdapter"></a> OSDAdapter
@@ -347,7 +347,7 @@ ms.locfileid: "52456730"
 
  此任务序列变量是一个数组变量。 数组中的每个元素都代表计算机上单个网络适配器的设置。 通过将数组变量名称与基于零的网络适配器下标及属性名称组合，访问每个适配器的设置。
 
- 如果应用网络设置步骤配置多个网络适配器，则使用变量名称中的下标 1定义第二个网络适配器的属性。 例如：OSDAdapter1EnableDHCP、OSDAdapter1IPAddressList 和 OSDAdapter1DNSDomain。
+ 如果应用网络设置步骤配置多个网络适配器，则使用变量名称中的下标 1定义第二个网络适配器的属性。 例如：OSDAdapter1EnableDHCP、OSDAdapter1IPAddressList 和OSDAdapter1DNSDomain。
 
  以下变量名称可用于为将由此步骤配置的第一个网络适配器定义属性：
 
@@ -393,8 +393,8 @@ ms.locfileid: "52456730"
  TCP/IP 上层的 NetBIOS 选项。 可能的值如下：  
 
  - `0`：使用 DHCP 服务器中的 NetBIOS 设置  
- - `1`：启用 TCP/IP 上层的 NetBIOS  
- - `2`：禁用 TCP/IP 上层的 NetBIOS  
+ - `1`：启用 TCP/IP 上的 NetBIOS  
+ - `2`：禁用 TCP/IP 上的 NetBIOS  
 
 #### <a name="osdadapter0enablewins"></a>OSDAdapter0EnableWINS
  设置为 `true` 以使用 WINS 进行名称解析。
@@ -1090,9 +1090,9 @@ ms.locfileid: "52456730"
  指定在新操作系统中为本地管理员帐户随机生成的密码。 
 
  #### <a name="valid-values"></a>有效值
- - `true`（默认值）：Windows 安装程序将在目标计算机上禁用本地管理员帐户  
+ - `true`（默认值）：Windows 安装程序禁用目标计算机上的本地管理员帐户  
 
- - `false`：Windows 安装程序将在目标计算机上启用本地管理员帐户，并将帐户密码设置为值 [OSDLocalAdminPassword](#OSDLocalAdminPassword)  
+ - `false`：Windows 安装程序将在目标计算机上启用本地管理员帐户，并将帐户密码设置为 [OSDLocalAdminPassword](#OSDLocalAdminPassword) 的值  
 
 
 ### <a name="OSDRegisteredOrgName-input"></a> OSDRegisteredOrgName (input)
@@ -1371,11 +1371,11 @@ ms.locfileid: "52456730"
 
  指定任务序列如何将用户与目标计算机关联。 将该变量设置为以下值之一：  
 
- - 自动：当任务序列将操作系统部署到目标计算机时，它会在指定的用户和目标计算机之间创建关系。  
+ - **自动：**：当任务序列将 OS 部署到目标计算机时，它会创建指定用户和目标计算机之间的关系。  
 
- - 挂起：任务序列创建指定的用户和目标计算机之间的关系。 管理员必须批准该关系才能对其进行设置。  
+ - **挂起**：任务序列会创建指定用户和目标计算机之间的关系。 管理员必须批准该关系才能对其进行设置。  
 
- - 禁用：当任务序列部署操作系统时，它不会将用户与目标计算机关联。
+ - **已禁用**：当任务序列部署 OS 时，它不会将用户与目标计算机关联。
 
 
 ### <a name="SMSTSDisableStatusRetry"></a> SMSTSDisableStatusRetry
@@ -1580,6 +1580,8 @@ ms.locfileid: "52456730"
 
  控制此步骤中软件更新扫描的超时。 例如，如果预计在扫描期间有大量更新，则增加该值。 默认值为 `1800` 秒（30 分钟）。 变量值以秒为单位。
 
+> [!NOTE] 
+> 自版本 1802 起，默认值为 `3600` 秒（60 分钟）。
 
 ### <a name="SMSTSUDAUsers"></a> SMSTSUDAUsers
 
@@ -1637,11 +1639,11 @@ ms.locfileid: "52456730"
 
 不推荐使用以下变量：
 
-- OSDAllowUnsignedDriver：部署 Windows Vista 和更高版本的操作系统时不使用此变量
-- OSDBuildStorageDriverList：仅适用于 Windows XP 和 Windows Server 2003
-- OSDDiskpartBiosCompatibilityMode：部署 Windows XP 或 Windows Server 2003 时才需要此变量
-- OSDInstallEditionIndex：Windows Vista 之后的版本不需要此变量
-- OSDPreserveDriveLetter：有关详细信息，请参阅 [OSDPreserveDriveLetter](#OSDPreserveDriveLetter)
+- **OSDAllowUnsignedDriver**：部署 Windows Vista 和更高版本的操作系统时不使用此变量
+- **OSDBuildStorageDriverList**：仅适用于 Windows XP 和 Windows Server 2003
+- **OSDDiskpartBiosCompatibilityMode**：部署 Windows XP 或 Windows Server 2003 时才需要此变量
+- **OSDInstallEditionIndex**：Windows Vista 之后的版本不需要此变量
+- **OSDPreserveDriveLetter**：有关详细信息，请参阅 [OSDPreserveDriveLetter](#OSDPreserveDriveLetter)
 
 ### <a name="osdpreservedriveletter"></a>OSDPreserveDriveLetter
 

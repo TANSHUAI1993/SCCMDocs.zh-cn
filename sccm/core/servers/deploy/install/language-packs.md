@@ -10,16 +10,16 @@ ms.assetid: cd74e5f5-33f6-4566-8c9d-d6a93bfe71ed
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 54034ec94ad2a0ea2b7ce095d9da669aea02f0b3
-ms.sourcegitcommit: 702e6017b6dee4629b67bb9f3bd5d9b5a889ebee
+ms.openlocfilehash: 9f6b10706638a476242051757145f725b262a7fc
+ms.sourcegitcommit: 2687489aa409a050dcacd67f17b3dad3ab7f1804
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37340220"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54316433"
 ---
 # <a name="language-packs-in-configuration-manager"></a>Configuration Manager 中的语言包
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 本文提供有关 Configuration Manager 中的语言支持的技术详细信息。 Configuration Manager 站点服务器和客户端被认为语言中性。 通过在管理中心站点和主站点中安装服务器语言包或客户端语言包，添加对显示语言的支持。 在站点安装过程中，从可用的语言包文件中选择要在该站点支持的服务器和客户端语言。
  
@@ -31,9 +31,9 @@ ms.locfileid: "37340220"
 
 安装对匹配以下组件的语言的支持时：  
 
-- 计算机的显示语言：在该计算机上运行的 Configuration Manager 控制台和客户端用户界面将以该语言显示信息。  
+- 计算机的显示语言：在该计算机上运行的 Configuration Manager 控制台和客户端用户界面都以该语言显示信息。  
 
-- 计算机 Web 浏览器正在使用的语言首选项：基于 Web 的信息的连接（包括应用程序目录或 SQL Server Reporting Services）将以该语言显示。  
+- 计算机的 Web 浏览器正在使用的语言首选项：基于 Web 的信息的连接（包括应用程序目录或 SQL Server Reporting Services）将以该语言显示。  
 
 
 运行 Configuration Manager 安装程序时，会作为先决条件和可再发行文件的一部分下载语言包文件。 在运行安装程序之前，你还可以使用[安装下载程序](setup-downloader.md)来下载这些文件。   
@@ -47,7 +47,6 @@ ms.locfileid: "37340220"
 |服务器语言|区域设置 ID (LCID)|3 个字母的代码|  
 |---------------------|------------------------|-----------------------|  
 |英语（默认）|0409|ENU|  
-|中文（繁体，香港特别行政区）|0c04|ZHH|  
 |中文（简体）|0804|CHS|  
 |中文（繁体，台湾）|0404|CHT|  
 |捷克语|0405|CSY|  
@@ -75,7 +74,6 @@ ms.locfileid: "37340220"
 |客户端语言|区域设置 ID (LCID)|3 个字母的代码|  
 |---------------------|------------------------|-----------------------|  
 |英语（默认）|0409|ENG|  
-|中文（繁体，香港特别行政区）|0c04|ZHH|  
 |中文 - 简体|0804|CHS|  
 |中文（繁体，台湾）|0404|CHT|  
 |捷克语|0405|CSY|  
