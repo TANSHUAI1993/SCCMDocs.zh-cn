@@ -10,12 +10,12 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 610dfb7391347663fd92c0839d20eb7a4a703438
-ms.sourcegitcommit: c80abe7e4b7b2f80e957e45ff205f67d1b715688
+ms.openlocfilehash: 1ec1155ec578e0eab957baa991628ed18eef6c62
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226217"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898641"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Configuration Manager 和 Microsoft Intune 的混合移动设备管理中的新增功能
 
@@ -435,8 +435,8 @@ ms.locfileid: "54226217"
 
 - **新移动应用程序管理策略设置**     
   以下设置已添加到移动应用程序管理策略设置：
-  - **禁用联系人同步**:阻止应用将数据保存到设备上的本机“联系人”应用。
-  - **禁用打印**:阻止应用打印工作或学校数据。
+  - **禁用联系人同步**：阻止应用将数据保存到设备上的本机“联系人”应用。
+  - **禁用打印**：阻止应用打印工作或学校数据。
   <!-- 1324760 -->    
 
   请参阅[使用 Configuration Manager 中的应用保护策略来保护应用](/sccm/mdm/deploy-use/protect-apps-using-mam-policies)，尝试新的应用保护策略设置。
@@ -592,24 +592,24 @@ Apple 发布了 macOS 10.14，所以从 2018 年 12 月开始，Intune 将支持
 有关详细信息，请参阅[使用公司门户应用在 Intune 中注册 macOS 设备](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos-cp)。
 
 
-### <a name="plan-for-change-new-intune-support-experience-for-premier-customers"></a>更改计划：对于高级支持客户体验的新 Intune 支持 
+### <a name="intune-support-experience-for-premier-customers-now-in-azure-instead-of-mpo"></a>Intune 支持对高级立即在 Azure 而不是 MPO 的客户体验  
 <!--2828727-->
 
-2018 年 12 月 4 日更新：我们正努力使此过程更好。 不会在 1 年 12 月 3 日禁用 MPO 中的创建支持请求。 我们将告诉您通过消息中心并更新此文章即将共享此更改的时间线。
-
-作为 Microsoft Premier 客户，当前可以使用[Microsoft Premier Online (MPO) 门户](https://premier.microsoft.com)并[Azure 上的 Intune](https://portal.azure.com)若要创建适用于 Intune 的支持请求。 从 2018 年 12 月 3 日起，为了继续增强顶级支持体验，将仅能在 Azure 上的 Intune 中创建支持请求。
+我们中的共享 MC147649 在 9 月，我们将删除在年 12 月中创建从 Microsoft Premier Online (MPO) 门户 (premier.microsoft.com) 的 Intune 支持请求的功能。 现在，期间的轻微延迟后年 1 月，结束时，将重定向仅在 Azure 上 Intune 中创建支持请求。
 
 #### <a name="how-does-this-affect-me"></a>这会对我产生哪些影响？
-12 月 3 日之后，将无法在 MPO 中创建支持请求。 如果尝试这样做，将会有一个无法忽略的提示将你重新定向至 Azure 上的 Intune。 在 Azure 门户中创建支持请求时，会将请求发送至针对 Intune 的 Microsoft 支持部门。 相关人员会及时诊断并解决你的问题。 如果在 MPO 门户中创建支持请求，则无法在 Azure 门户中查看它。 从现在开始，请仅在 Azure 上的 Intune 中创建支持请求。  
+年 1 月，若要继续增强高级支持结束后支持体验，您将无法在 MPO 中创建支持请求。 当您尝试执行此操作时，将看到将你重定向到 Azure 上的 Intune 无法关闭的提示。 在这里，可以创建支持请求路由到 Intune 专用 Microsoft 支持部门。 这些支持工程师将诊断和及时地解决遇到的问题。 您不能在 MPO 门户中创建在 Azure 门户中查看支持请求。
 
-如果使用混合移动设备管理（混合 MDM）或使用共同管理，可以继续使用 MPO 为 Configuration Manager 创建支持请求，但使用 Azure 门户为 Intune 创建支持请求。 这里再次提醒，混合 MDM 已被弃用，应计划尽快移动到 Azure 上的 Intune。 有关详细信息，请参阅[从混合移动设备管理移动到 Azure 上的 Intune](https://aka.ms/hybrid_notification)。
+在 Azure 门户具有新的支持体验，如我们最近宣布 MC171941。 有关详细信息，请参阅[如何获取对 Microsoft Intune 的支持](https://aka.ms/new_support_experience)。
 
-请注意，只有具有全局管理员、Intune 服务管理员和服务支持管理员角色的用户才能在 Azure 门户中创建支持票证。
+如果你使用混合 MDM 或共同管理，继续使用 MPO 创建为 Configuration Manager 的支持请求。 使用 Azure 门户创建适用于 Intune 的支持请求。 这里再次提醒，混合 MDM 已被弃用，应计划尽快移动到 Azure 上的 Intune。 有关详细信息，请参阅[从混合移动设备管理移动到 Azure 上的 Intune](https://aka.ms/hybrid_notification)。
+
+只有具有全局管理员、 Intune 服务管理员和服务支持管理员角色的用户可以在 Azure 门户中创建支持票证。
 
 #### <a name="what-can-i-do-to-prepare-for-this-change"></a>针对此更改，我可以做什么准备？
 - 停止使用 MPO 进行与 Intune 相关的支持请求。 使用 Azure 上的 Intune 来创建和管理所有 Intune 支持请求。  
 - 如有必要，请通知支持人员并更新文档。  
-- 如果你有不具备全局管理员或 Intune 服务管理员角色的用户当前正在 MPO 中创建支持请求，则请在 Azure Active Directory 中向其分配服务支持管理员角色。 用户需要其中一个角色才能在 Azure 门户中创建支持票证。  
+- 如果当前在 MPO 中创建支持请求的全局管理员或 Intune 服务管理员角色的用户，请将其分配 Azure Active Directory 中的服务支持管理员角色。 用户需要其中一个角色才能在 Azure 门户中创建支持票证。  
 
 #### <a name="additional-information"></a>其他信息
 有关详细信息，请参阅 [Microsoft Intune 支持团队博客文章](https://aka.ms/IntuneSupport_MPO_to_Azure)。
