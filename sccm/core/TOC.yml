@@ -204,9 +204,13 @@ items:
     items:
     - name: 设置实验室
       href: get-started/set-up-your-lab.md
+    - name: 在 Azure 中创建实验室
+      href: get-started/azure-template.md
   - name: Technical Preview
     href: get-started/technical-preview.md
     items:
+    - name: 1901 中的功能
+      href: get-started/2019/technical-preview-1901.md
     - name: 1812 中的功能
       href: get-started/capabilities-in-technical-preview-1812.md
     - name: 1811 中的功能
@@ -215,8 +219,6 @@ items:
       href: get-started/capabilities-in-technical-preview-1810-2.md
     - name: 1810 中的功能
       href: get-started/capabilities-in-technical-preview-1810.md
-    - name: 1809 中的功能
-      href: get-started/capabilities-in-technical-preview-1809.md
   - name: 在层次结构之间迁移数据
     href: migration/migrate-data-between-hierarchies.md
     items:
@@ -765,9 +767,9 @@ items:
       href: clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md
     - name: 升级 Mac 客户端
       href: clients/manage/upgrade/upgrade-clients-on-mac-computers.md
-ms.openlocfilehash: aa4011a4b3a62500307769fb36212a46cd406c2a
-ms.sourcegitcommit: d36e4c7082a5144e79035dd8847c8e741fa04667
+ms.openlocfilehash: 0e150450ce64e610187c1c046a299c23b08fc235
+ms.sourcegitcommit: b8167a60fd6f2d8387b2db723976c0e2c4198d33
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53444597"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54832782"
