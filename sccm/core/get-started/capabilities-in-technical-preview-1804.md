@@ -10,16 +10,17 @@ ms.assetid: 8af43618-ec60-4c3e-a007-12399d1335b9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a796c8cc23ab15e3fbeb09fca6ffa6f1dbd45bc3
-ms.sourcegitcommit: 4b8afbd08ecf8fd54950eeb630caf191d3aa4767
+ROBOTS: NOINDEX
+ms.openlocfilehash: 80f16244c10899ed264b83f6c7a9a050fba7a224
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "34474337"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898301"
 ---
 # <a name="capabilities-in-technical-preview-1804-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1804 中的功能
 
-*适用范围：System Center Configuration Manager (Technical Preview)*
+适用范围：System Center Configuration Manager (Technical Preview)
 
 本文介绍 Configuration Manager Technical Preview 1804 版中提供的功能。 你可以安装此版本，以更新 Technical Preview 站点的功能并向其添加新功能。 
 
@@ -97,11 +98,11 @@ ms.locfileid: "34474337"
 
 2. 从下拉列表中，选择可用选项之一：  
 
-   - 发送笑脸：你真的很喜欢！ 对于此选项，请输入反馈详细信息。 然后根据需要包含屏幕截图和电子邮件地址。  
+   - **发送笑脸**：你真的很喜欢！ 对于此选项，请输入反馈详细信息。 然后根据需要包含屏幕截图和电子邮件地址。  
 
-   - 发送哭脸：在控制台中遇到问题，或内容未按预期方式工作。 对于此选项，请输入潜在产品问题的详细信息。 然后根据需要包含屏幕截图、电子邮件地址和诊断数据。  
+   - **发送哭脸**：在控制台中遇到问题，或内容未按预期方式运行。 对于此选项，请输入潜在产品问题的详细信息。 然后根据需要包含屏幕截图、电子邮件地址和诊断数据。  
 
-   - 发送建议：你对更改和改进 Configuration Manager 有想法。 此选项将在 Web 浏览器中打开我们的 [UserVoice](https://configurationmanager.uservoice.com) 网站。  
+   - **发送建议**：你对更改和改进 Configuration Manager 有想法。 此选项将在 Web 浏览器中打开我们的 [UserVoice](https://configurationmanager.uservoice.com) 网站。  
 
 该反馈将直接提交给 Configuration Manager 的 Microsoft 产品团队。 虽然仍然支持使用 Windows 10 反馈中心，但最好使用控制台内部的反馈机制。  
 
@@ -148,29 +149,29 @@ Configuration Manager 服务器和客户端工具现在 Technical Preview 中提
 
 #### <a name="server-tools"></a>服务器工具  
 
- - DP 作业管理器：对面向分发点的内容分发作业进行故障排除  
+ - **DP 作业管理器**：对面向分发点的内容分发作业进行故障排除  
 
- - 集合评估查看器：查看集合评估详细信息  
+ - **集合评估查看器**：查看集合评估详细信息  
 
- - 内容库资源管理器：查看内容库单一实例存储的内容  
+ - **内容库资源管理器**：查看内容库单一实例存储的内容  
 
- - 内容库传输：在驱动器之间传输内容库  
+ - **内容库转让**：在驱动器之间转让内容库  
 
- - 内容所有权工具：更改孤立包的所有权。 这些包存在于没有自有站点服务器的站点。  
+ - **内容所有权工具**：更改孤立包的所有权。 这些包存在于没有自有站点服务器的站点。  
 
- - 基于角色的管理和审核工具：可帮助管理员审核角色配置  
+ - **基于角色的管理和审核工具**：帮助管理员审核角色配置  
 
 #### <a name="client-tools"></a>客户端工具
 
- - CMTrace：查看日志  
+ - **CMTrace**：查看日志  
 
- - 部署监视工具：对应用程序、更新和基线部署进行故障排除  
+ - **部署监视工具**：对应用程序、更新和基线部署进行故障排除  
 
- - 策略 Spy：查看策略分配  
+ - **策略监视**：查看策略分配  
 
- - Power Viewer 工具：查看电源管理功能的状态  
+ - **电源查看器工具**：查看电源管理功能状态  
 
- - 发送计划工具：触发 DCM 基线的计划和评估  
+ - **发送计划工具**：触发 DCM 基线的计划和评估  
 
 > [!Important]  
 > 对于大多数用例，建议使用[支持中心](#support-center)，因为它包含以下工具的相同或改进功能：  
@@ -288,7 +289,7 @@ Configuration Manager 服务器和客户端工具现在 Technical Preview 中提
 ## <a name="improvements-to-os-deployment"></a>对 OS 部署的改进
 我们对 OS 部署做了以下改进，其中有些是根据用户之声的反馈做出的。  
 
- - [隐藏存储在任务序列变量中的敏感数据](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/15282795-secret-task-sequence-variable-value-exposed)：在[设置任务序列变量](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable)步骤中，选择新选项“不显示此值”。 例如，当指定密码时。<!--1358330--> 当启用此选项时，以下行为适用：
+ - [过滤任务序列变量中存储的敏感数据](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/15282795-secret-task-sequence-variable-value-exposed)：在[设置任务序列变量](/sccm/osd/understand/task-sequence-steps#BKMK_SetTaskSequenceVariable)步骤中，选择新选项“不显示此值”。 例如，当指定密码时。<!--1358330--> 当启用此选项时，以下行为适用：
    - 变量值不显示在 smsts.log 中。
    - Configuration Manager 控制台和 SMS 提供程序处理此值的方式与处理其他机密（如密码）的方式相同。
    - 导出任务序列时，该值不包括在内。
@@ -298,7 +299,7 @@ Configuration Manager 服务器和客户端工具现在 Technical Preview 中提
    > 变量及其值同任务序列作为 XML 保存，并以混淆方式置于数据库中。 当客户端从管理点请求任务序列策略时，它会在传输过程中加密，并存储在客户端上。 但是，所有变量值都是客户端上运行时期间内存的任务序列环境中的纯文本。 如果任务序列包含一个输出变量值的步骤，此输出将为纯文本。 此行为需要管理员显式操作，以便在任务序列中包含此类步骤。 
 
 
- - [在任务序列的运行命令步骤中隐藏程序名称](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/15282795-secret-task-sequence-variable-value-exposed)：若要禁止显示或记录潜在的敏感数据，请将任务序列变量“OSDDoNotLogCommand”设置为 `TRUE`。 此变量在[运行命令行](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine)任务序列步骤中隐藏 smsts.log 中的程序名称。 <!--1358493-->  
+ - [在执行任务序列的“运行命令步骤”期间过滤程序名称](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/15282795-secret-task-sequence-variable-value-exposed)：若要禁止显示或记录潜在敏感数据，请将任务序列变量“OSDDoNotLogCommand”设置为 `TRUE`。 此变量在[运行命令行](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine)任务序列步骤中隐藏 smsts.log 中的程序名称。 <!--1358493-->  
 
 
 

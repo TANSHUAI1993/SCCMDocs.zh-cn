@@ -1,0 +1,51 @@
+items:
+- name: 桌面分析
+  items:
+  - name: 概述
+    href: overview.md
+  - name: 教程
+    items:
+    - name: 试点 Office 365
+      href: tutorial-office-365.md
+  - name: 概念
+    items:
+    - name: 部署计划
+      href: about-deployment-plans.md
+    - name: 资产
+      href: about-assets.md
+    - name: 质量和功能更新
+      href: about-updates.md
+    - name: Windows 应用兼容性风险
+      href: compat-risk.md
+    - name: 运行状况监视
+      href: health-status-monitoring.md
+  - name: 操作指南
+    items:
+    - name: 设置桌面分析
+      href: set-up.md
+    - name: 连接 Configuration Manager
+      href: connect-configmgr.md
+    - name: 注册设备
+      href: enroll-devices.md
+    - name: 创建部署计划
+      href: create-deployment-plans.md
+    - name: 部署到试点
+      href: deploy-pilot.md
+    - name: 部署到生产
+      href: deploy-prod.md
+    - name: 使用应用运行状况分析器评估兼容性
+      href: app-health-analyzer.md
+  - name: 参考
+    items:
+    - name: 启用数据共享
+      href: enable-data-sharing.md
+    - name: 故障排除
+      href: troubleshooting.md
+    - name: 隐私
+      href: privacy.md
+ms.openlocfilehash: 473ddb150610af13b099bc601e05e8c50be6aac8
+ms.sourcegitcommit: ad25a7bdd983c5a0e4c95bffdc61c9a1ebcbb765
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55073175"

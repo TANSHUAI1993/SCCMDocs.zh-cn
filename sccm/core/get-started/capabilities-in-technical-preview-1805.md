@@ -10,16 +10,17 @@ ms.assetid: 7996b3eb-5259-483b-af40-adae2943d123
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ebd51b397e37c69e8f6e8d1e154fc369347bd63a
-ms.sourcegitcommit: fe279229a90fdc8cddbb13c7ffdbbb22af0e25ef
+ROBOTS: NOINDEX
+ms.openlocfilehash: 6108a6d90a18277275e50ba980a9d81099ba116a
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47229358"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898488"
 ---
 # <a name="capabilities-in-technical-preview-1805-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1805 中的功能
 
-*适用范围：System Center Configuration Manager (Technical Preview)*
+适用范围：System Center Configuration Manager (Technical Preview)
 
 本文介绍 Configuration Manager Technical Preview 1805 版中提供的功能。 你可以安装此版本，以更新 Technical Preview 站点的功能并向其添加新功能。 
 
@@ -65,15 +66,15 @@ Steps to workaround, if any.
 6. 在“阶段设置”选项卡上，为每个计划设置选择一个选项，然后在完成后选择“下一步”。  
 
     - 上一阶段成功的标准（此选项对第一阶段禁用。）
-        - 部署成功百分比：指定成功完成部署的设备所占的百分比作为上一阶段成功标准。  
+        - **部署成功百分比**：指定根据上一阶段成功标准成功完成部署的设备所占的百分比。  
 
     - 在上一阶段成功后开始此阶段部署的条件  
-        - 在某个延迟时间段(以天为单位)后自动开始此阶段：选择在上一阶段成功后开始下一阶段之前等待的天数。 
-        - 手动开始此阶段部署：在上一阶段成功后不自动开始此阶段。  
+        - **在延迟时间段(以天为单位)后自动开始此阶段**：选择在上一阶段成功后开始下一阶段之前等待的天数。 
+        - **手动开始此阶段部署**：在上一阶段成功后不自动开始此阶段。  
 
     - 设备成为目标后，安装软件
-        - 尽快：确定目标设备后立即设置设备上的安装截止时间。
-        - 截止时间(相对于确定目标设备的时间)：将安装截止时间设置为确定目标设备后的特定天数。  
+        - **尽快**：确定目标设备后立即设置设备上的安装截止时间。
+        - **截止时间(相对于确定目标设备的时间)**：确定目标设备后设置特定天数的安装截止时间。  
      
 7. 完成阶段设置向导。
 
@@ -282,7 +283,7 @@ CMPivot 是一种新的控制台中实用工具，它提供对环境中设备实
 > [!Note]  
 > 此行为在 Configuration Manager 当前分支版本 1802 中有所不同，在这种情况下，它需要一个启用了 HTTPS 的管理点。 有关详细信息，请参阅[为管理点启用 HTTPS](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#enable-management-point-for-https)。  
 
-#### <a name="bkmk_token2"></a> 方案 2： 客户端到分发点
+#### <a name="bkmk_token2"></a> 方案 2：客户端到分发点
 <!--1358228--> 工作组或加入 Azure AD 的客户端可以通过安全通道从为 HTTP 配置的分发点下载内容。   
 
 #### <a name="bkmk_token3"></a> 方案 3：Azure AD 设备标识 
@@ -359,7 +360,7 @@ CMPivot 是一种新的控制台中实用工具，它提供对环境中设备实
 Windows 10 就地升级的默认任务序列模板现在包括在升级过程失败的情况下要添加的带建议操作的另一个新组。 这些操作有助于进行故障排除。
 
 ### <a name="new-groups-under-run-actions-on-failure"></a>“在失败情况下运行操作”下的新组
-- 收集日志：若要从客户端中收集日志，请在此组中添加步骤。 
+- **收集日志**：若要从客户端中收集日志，请在此组中添加步骤。 
     - 一种常见的做法是将日志文件复制到网络共享中。 若要建立此连接，请使用[连接到网络文件夹](/sccm/osd/understand/task-sequence-steps#BKMK_ConnectToNetworkFolder)步骤。 
     - 若要执行复制操作，请通过[运行命令行](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine)或[运行 PowerShell 脚本](/sccm/osd/understand/task-sequence-steps#BKMK_RunPowerShellScript)步骤来使用自定义脚本或实用工具。
     - 要收集的文件可能包括以下日志：  
@@ -369,7 +370,7 @@ Windows 10 就地升级的默认任务序列模板现在包括在升级过程失
     - 有关 Configuration Manager 客户端日志的详细信息，请参阅 [Configuration Manager 客户端日志](/sccm/core/plan-design/hierarchy/log-files#BKMK_ClientLogs)
     - 有关 _SMSTSLogPath 和其他有用变量的详细信息，请参阅[任务序列内置变量](/sccm/osd/understand/task-sequence-built-in-variables)
 
-- 运行诊断工具：若要运行其他诊断工具，请在此组中添加步骤。 这些工具应在出现故障后尽可能快地自动收集系统中的其他信息。
+- **运行诊断工具**：若要运行其他诊断工具，请在此组中添加步骤。 这些工具应在出现故障后尽可能快地自动收集系统中的其他信息。
     - 其中一个工具是 Windows [SetupDiag](/windows/deployment/upgrade/setupdiag)。 它是一个独立的诊断工具，可用于获取有关 Windows 10 升级失败原因的详细信息。
          - 在 Configuration Manager 中，[创建工具包](/sccm/apps/deploy-use/packages-and-programs#create-a-package-and-program)。
          - 向该组任务序列添加[运行命令行](/sccm/osd/understand/task-sequence-steps#BKMK_RunCommandLine)步骤。 使用“包”选项来引用该工具。 以下字符串是一个示例命令行：  
@@ -405,7 +406,7 @@ CMTrace 日志查看工具现自动与 Configuration Manager 客户端一起安�
 - 它现在支持脱机反馈。 从控制台保存反馈，然后通过连接 internet 的系统上传到 Microsoft。 使用位于 `cd.latest\SMSSETUP\Tools\UploadOfflineFeedback\UploadOfflineFeedback.exe` 中的新脱机反馈上载程序工具。 若要查看可用和所需的命令行选项，使用 `--help` 选项运行工具。 已连接的系统需要访问 **petrol.office.microsoft.com**。
 
 ### <a name="known-issues"></a>已知问题
-在具有 Internet 连接的计算机上使用控制台中的“发送笑脸”或“发送哭脸”时，它可能返回以下消息“发送反馈错误”。 如果单击“更多详细信息”，它将显示以下文本：`{"Message":""}`。 此错误是由后端反馈系统中的响应的已知问题所导致的。 可以忽略此错误。 Microsoft 仍会收到你的反馈。 （如果详细信息显示其他消息，请使用脱机反馈选项在稍后重试发送反馈的步骤。）
+在连接 Internet 的计算机上的控制台内使用“发送笑脸”或“发送苦脸”时，可能会看到以下返回消息：“发送反馈时出错了”。 如果单击“更多详细信息”，它将显示以下文本：`{"Message":""}`。 此错误是由后端反馈系统中的响应的已知问题所导致的。 可以忽略此错误。 Microsoft 仍会收到你的反馈。 （如果详细信息显示其他消息，请使用脱机反馈选项在稍后重试发送反馈的步骤。）
 
 
 
