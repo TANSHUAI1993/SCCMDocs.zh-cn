@@ -10,12 +10,13 @@ ms.assetid: 00684289-d21a-45f8-b1e3-c5c787d73096
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a9a5aeb35137a74152333a78e95781fb727eecdf
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ROBOTS: NOINDEX
+ms.openlocfilehash: cf42e357abf40593484867186c9f3753df6bb94a
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53421597"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54897944"
 ---
 # <a name="capabilities-in-technical-preview-1705-for-system-center-configuration-manager"></a>在 System Center Configuration Manager 的 Technical Preview 1705 中的功能
 
@@ -158,7 +159,7 @@ ms.locfileid: "53421597"
 ## <a name="configure-and-deploy-windows-defender-application-guard-policies"></a>配置和部署 Windows Defender 应用程序防护策略
 
 [Windows Defender 应用程序防护](https://blogs.windows.com/msedgedev/2016/09/27/application-guard-microsoft-edge/#XLxEbcpkuKcFebrw.97)是一项新的 Windows 功能，通过在操作系统的其他部分无法访问的安全隔离容器中打开不受信任的网站来帮助保护用户安全。 在此 Technical Preview 版中，我们使用在配置后部署到集合的 Configuration Manager 符合性设置增加了对配置此功能的支持。
-此功能将在 64 位版本的 Windows 10 创意者更新预览版中发布 (codename:RS2)。 现在，若要测试此功能，必须使用此更新的预览版本。
+此功能将在 64 位版本的 Windows 10 创意者更新预览版 (codename:RS2) 中发布。 现在，若要测试此功能，必须使用此更新的预览版本。
 
 
 ### <a name="before-you-start"></a>开始之前

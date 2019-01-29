@@ -8,13 +8,13 @@ ms.assetid: 955e56fa-6485-4a1a-90e6-77bc2cf8e326
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex,nofollow
-ms.openlocfilehash: f5bb59cb5912ef638058b09d90132a579a7e651c
-ms.sourcegitcommit: 2687489aa409a050dcacd67f17b3dad3ab7f1804
+ROBOTS: NOINDEX
+ms.openlocfilehash: eec34451ff9ece005322b67c1d40d1dbcba2f4f6
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54316399"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898131"
 ---
 <!-- 
 - Feature 1357546

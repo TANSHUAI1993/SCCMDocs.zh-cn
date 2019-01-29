@@ -9,17 +9,17 @@ ms.assetid: 1fa7d0d9-4bb5-4475-82ff-0d5da4a3da61
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex,nofollow
-ms.openlocfilehash: d4b0d0553254bd3bd86dd2ade1a3c1afc5127ad2
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ROBOTS: NOINDEX
+ms.openlocfilehash: 169bb7fa3bfcd8ead178685be3b9d466069b016d
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32333087"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898267"
 ---
 # <a name="learn-more-about-available-updates-for-system-center-configuration-manager"></a>了解有关 System Center Configuration Manager 可用更新的详细信息
 
-*适用于：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 如果你使用 System Center Configuration Manager 的发行版本，请参阅 [System Center Configuration Manager 中的新增功能](http://technet.microsoft.com/library/mt622084.aspx)  
 

@@ -10,12 +10,13 @@ ms.assetid: 409e26e1-7716-4f1d-a0ee-34feabf20792
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bdeed74504611589b36e31eff3c1957725345b8a
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ROBOTS: NOINDEX
+ms.openlocfilehash: a9e9074bca61196e53a7f1cb6e10b5537e7c4565
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53421835"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898539"
 ---
 # <a name="what39s-new-in-version-1702-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1702 中的新增功能
 

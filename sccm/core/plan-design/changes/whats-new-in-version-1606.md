@@ -10,16 +10,17 @@ ms.assetid: df2e57b9-6445-4067-98e7-ace85d4e6aa6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0dcd2db7543d68a97e00244536d2aac218d440e7
-ms.sourcegitcommit: 2cc635835709fb8d86cdb63ea34233b36c94d4d8
+ROBOTS: NOINDEX
+ms.openlocfilehash: 0d45586267e06185752f597549f798be19d4d47b
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52259057"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54897043"
 ---
 # <a name="what39s-new-in-version-1606-of-system-center-configuration-manager"></a>System Center Configuration Manager 1606 版中的新增功能
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 System Center Configuration Manager 的更新 1606 作为控制台内部更新提供，用于以前安装的、运行版本 1511 或 1602 的站点。 版本 1511 是用于安装新 Configuration Manager 站点的初始基准版本。
 > [!TIP]  
@@ -146,7 +147,7 @@ OMS 连接器是一种预发行功能。 若要启用此功能，请参阅[使�
 
 ## <a name="operating-system-deployment"></a>操作系统部署
 
-### <a name="improvements-to-the-task-sequence-step-install-software-updates"></a>任务序列步骤的改进：安装软件更新
+### <a name="improvements-to-the-task-sequence-step-install-software-updates"></a>对运行任务序列步骤的改进：安装软件更新
 使用“根据缓存的扫描结果评估软件更新”这一新设置可选择对软件更新进行完整扫描，而不是使用缓存的扫描结果。 有关详细信息，请参阅 [System Center Configuration 中的任务序列步骤](../../../osd/understand/task-sequence-steps.md#BKMK_InstallSoftwareUpdates)。
 
 此外，还可使用新任务序列变量 **SMSTSSoftwareUpdateScanTimeout**。 通过此变量，可在安装软件更新任务序列步骤期间控制软件更新扫描的超时时间。 默认值为 30 分钟。 有关详细信息，请参阅 [System Center Configuration Manager 中的任务序列内置变量](../../../osd/understand/task-sequence-built-in-variables.md)。

@@ -10,13 +10,12 @@ ms.assetid: e6c1df1d-7728-4980-9199-bc32cde5439e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: NOINDEX, NOFOLLOW
-ms.openlocfilehash: f0ec652a9fb7d4ef6bef881bfc96f1be2b4e297a
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: f626d07d1fe25d8277ab2189f136862079dc503c
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53424334"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54896618"
 ---
 # <a name="manage-publications-in-updates-publisher"></a>管理 Updates Publisher 中的发布项
 

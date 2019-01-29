@@ -8,15 +8,15 @@ ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: aae1cf2f-2c04-4f68-a03a-f4a925433c09
 author: aczechowski
-robots: noindex,nofollow
+ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: a11abd53a83f52cbb05d2a49c3271becb4cedb64
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: ed6da304f689430d1d141b823646b07deb087928
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53420186"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54897706"
 ---
 # <a name="capabilities-in-technical-preview-1601-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1601 版中的功能
 

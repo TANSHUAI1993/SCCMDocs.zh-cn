@@ -10,13 +10,13 @@ ms.assetid: 1210a1ca-78c7-4d17-81cf-ac1bc5c5cf3e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex,nofollow
-ms.openlocfilehash: cac4e555ece110ede0ccddb59d947a6068ef38ff
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ROBOTS: NOINDEX
+ms.openlocfilehash: 64bd6ee21c98b7a047f3a8330cf5995ed762501b
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53423314"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54897961"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1602-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1602 的诊断使用情况数据收集的级别
 

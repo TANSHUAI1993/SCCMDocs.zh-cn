@@ -10,18 +10,19 @@ ms.assetid: 2bb69547-3370-4860-96b0-7fb600c56482
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 3bc18a9d061100e63d241c5078ea7dbac75db3f8
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ROBOTS: NOINDEX
+ms.openlocfilehash: b3fb33191f8ae5a33876603e1a3d94ee2ac80860
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344443"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54896560"
 ---
 # <a name="capabilities-in-technical-preview-1607-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1607 版中的功能
 
-*适用范围：System Center Configuration Manager (Technical Preview)*
+适用范围：System Center Configuration Manager (Technical Preview)
 
-本文介绍了 System Center Configuration Manager Technical Preview 1607 版中的可用功能。 你可以安装此版本，以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。      在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。    
+本文介绍了 System Center Configuration Manager Technical Preview 1607 版中的可用功能。 你可以安装此版本，以更新 Technical Preview 站点的功能并向其添加新功能。      在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager 技术预览版](../../core/get-started/technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。    
 
 
 **以下是此版本可以试用的新功能。**  

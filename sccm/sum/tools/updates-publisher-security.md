@@ -10,13 +10,12 @@ ms.assetid: a7f91e63-4750-402e-9970-dd14be7f76a3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 3632cbf8a512ef39413685f29b769e133fbcee40
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: fd2ffac47aca43e8358fedca00ed04dab43f58d5
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53424274"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54897743"
 ---
 # <a name="manage-certificates-and-security-for-updates-publisher"></a>管理 Updates Publisher 中的证书和安全性
 

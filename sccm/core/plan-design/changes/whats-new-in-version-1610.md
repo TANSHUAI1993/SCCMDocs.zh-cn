@@ -10,13 +10,13 @@ ms.assetid: f7eb0803-3f8f-4ab6-825a-99ac11f5ba7d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: f53dbbf341d3c6474c1c5dd5066b8d1f2a0fdc63
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ROBOTS: NOINDEX
+ms.openlocfilehash: 85e7761699944e76216d9ba22cd46f5b80c76533
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53424232"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54897672"
 ---
 # <a name="what39s-new-in-version-1610-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1610 的新增功能
 

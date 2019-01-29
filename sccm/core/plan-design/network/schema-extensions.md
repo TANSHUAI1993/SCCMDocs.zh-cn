@@ -10,13 +10,12 @@ ms.assetid: 95c13c00-909f-4fbb-bbaa-1eba9d54d8c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex
-ms.openlocfilehash: 3454b56e53901668c89062f0910f8ea318f22cf2
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: af7ddd4bd40fb60efa58fb78e20ee587aca9d4f5
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53417653"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54897638"
 ---
 # <a name="schema-extensions-for-system-center-configuration-manager"></a>System Center Configuration Manager 的架构扩展
 

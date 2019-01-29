@@ -10,13 +10,12 @@ ms.assetid: 46a1a8ac-126c-4ee6-ae09-32dfbdb83368
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 8fb06e43139538d8f5599ce3696b99fbf14cb5a3
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 4f98e06bac3f396ab9dad29c95861cd225c1d6ec
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53423824"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898403"
 ---
 # <a name="create--software-updates-and-update-bundles-with-updates-publisher"></a>使用 Updates Publisher 创建软件更新和更新捆绑包
 

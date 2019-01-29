@@ -10,13 +10,12 @@ ms.assetid: 4e620080-5400-45bb-87c2-fbdbc8aeacac
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 126ac524aaea851f5203888d414f7f9b188649c2
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 7f86a871355a48774a25ae8759065b6a02d0feac
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53424470"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898250"
 ---
 # <a name="configure-options-for-updates-publisher"></a>为 Updates Publisher 配置选项
 

@@ -10,16 +10,17 @@ ms.assetid: 3687ac39-0fc4-4ea8-a4d2-cacc43acc655
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c859cf11dbf26019863cfbc6343393b5b10e3c22
-ms.sourcegitcommit: 7eebd112a9862bf98359c1914bb0c86affc5dbc0
+ROBOTS: NOINDEX
+ms.openlocfilehash: ec2c765dd751ada5c75e86229f5b156bb4d964d9
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594225"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54897519"
 ---
 # <a name="capabilities-in-configuration-manager-technical-preview-version-1808"></a>Configuration Manager 技术预览版 1808 中的功能 
 
-*适用范围：System Center Configuration Manager (Technical Preview)*
+适用范围：System Center Configuration Manager (Technical Preview)
 
 本文介绍 Configuration Manager 技术预览版 1808 中提供的功能。 安装此版本，以更新技术预览站点的功能并向其添加新功能。 
 

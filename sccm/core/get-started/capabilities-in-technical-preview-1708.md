@@ -10,12 +10,13 @@ ms.assetid: 3c061ceb-3bdb-4d4f-8c60-344964bd416b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b751dab7ca02112959a9a7d6ed8a51b037f25b0e
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ROBOTS: NOINDEX
+ms.openlocfilehash: 5f135ab9389ba50e12d5f4fa81c046a873a74b30
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53422651"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54897774"
 ---
 # <a name="capabilities-in-technical-preview-1708-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1708 中的功能
 

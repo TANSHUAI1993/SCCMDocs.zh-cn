@@ -10,12 +10,13 @@ ms.assetid: b587779e-1bd3-4ee3-8146-8e31f53499bd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: be6d3bc210bfc672efc21b3c9397f679f00f2a82
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ROBOTS: NOINDEX
+ms.openlocfilehash: 53b09c5652eed1a1fad6cac0a2cb146863886d24
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53416392"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54897472"
 ---
 # <a name="checklist-for-installing-update-1702-for-system-center-configuration-manager"></a>用于为 System Center Configuration Manager 安装更新 1702 的清单
 
@@ -127,9 +128,9 @@ Configuration Manager 无法更新使用网络负载均衡 (NLB) 群集来托管
 
 有关详细信息，请参阅  [System Center Configuration Manager 的维护任务](/sccm/core/servers/manage/maintenance-tasks) 和 [System Center Configuration Manager 维护任务参考](/sccm/core/servers/manage/reference-for-maintenance-tasks)。
 
-**暂时停止 System Center Configuration Manager 服务器上的所有防病毒软件：** 更新站点之前，请确保已停止 Configuration Manager 服务器上的防病毒软件。 <!--SMS.503481--> 
+**暂时停止 System Center Configuration Manager 服务器上的任何防病毒软件：** 更新站点之前，请确保已停止 Configuration Manager 服务器上的防病毒软件。 <!--SMS.503481--> 
 
-**在管理中心站点和主站点上创建站点数据库备份：** 升级站点之前，请备份站点数据库，以确保具有用于灾难恢复的成功备份。
+**在管理中心站点和主站点上创建站点数据库备份：** 更新站点之前，请备份站点数据库，以确保具有用于灾难恢复的成功备份。
 
 有关详细信息，请参阅  [System Center Configuration Manager 的备份和恢复](/sccm/protect/understand/backup-and-recovery)。
 
