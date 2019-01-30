@@ -2,7 +2,7 @@
 title: 混合 MDM 中的新增功能
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 和 Intune 的混合部署可用的新移动设备管理功能。
-ms.date: 01/10/2019
+ms.date: 01/28/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1ec1155ec578e0eab957baa991628ed18eef6c62
-ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
+ms.openlocfilehash: 84c244a959bb9a087d33410fe0605bc6ddcadfbc
+ms.sourcegitcommit: a2ecd84d93f431ee77848134386fec14031aed6a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54898641"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55230896"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Configuration Manager 和 Microsoft Intune 的混合移动设备管理中的新增功能
 
@@ -50,6 +50,15 @@ ms.locfileid: "54898641"
 ## <a name="january-2019"></a>2019 年 1 月
 
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
+
+#### <a name="intune-app-protection-policies-ui-update"></a>Intune 应用保护策略用户界面更新 
+<!--3251427--> 我们已更改的设置标签和 Intune 应用保护，以使每个易于理解的按钮。 所做的更改包括：  
+
+- 控件更改从**是** / **没有**控件添加到主要**块** / **允许**和**禁用** / **启用**控件。 标签也会更新。  
+
+- 设置重新格式化，因此设置，并且其标签-同时在控件中，以提供更好的导航。   
+
+默认设置和设置数保持不变，但此更改使用户了解，导航，并利用更多的设置轻松地以应用所选的应用保护策略。 有关详细信息，请参阅[iOS 设置](https://docs.microsoft.com/intune/app-protection-policy-settings-ios#access-requirements)并[Android 设置](https://docs.microsoft.com/intune/app-protection-policy-settings-android#access-requirements)。
 
 #### <a name="tenant-status-dashboard"></a>租户状态仪表板
 <!--1124854--> 新[租户状态页](https://docs.microsoft.com/intune/tenant-status)提供单个位置可以为你的租户查看状态和相关详细信息。 在仪表板分为四个区域：
