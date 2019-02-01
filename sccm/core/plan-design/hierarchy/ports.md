@@ -10,12 +10,12 @@ ms.assetid: c6777fb0-0754-4abf-8a1b-7639d23e9391
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b074ee02ec5e50fb5e495923538535cf8765dcdb
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 8338e08ffb6d09299123e363f27e586b650452fe
+ms.sourcegitcommit: 231111a704777789629911369f4d9593d2053fc0
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53420934"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55065093"
 ---
 # <a name="ports-used-in-configuration-manager"></a>Configuration Manager 中使用的端口
 
@@ -714,6 +714,11 @@ Configuration Manager 控制台使用 Internet 访问获取以下操作：
 - RFC 2349：超时间隔和传输大小选项  
 
 TFTP 为支持无盘启动环境而设计。 TFTP 后台程序侦听 UDP 端口 69，但从动态分配的高端口响应。 因此，启用此端口将允许 TFTP 服务接收传入的 TFTP 请求，但不允许所选服务器响应这些请求。 除非 TFTP 服务器配置为从端口 69 响应，否则所选服务器无法响应入站 TFTP 请求。  
+
+Windows PE 中已启用 PXE 的分发点和客户端选择动态分配的高端口进行 TFTP 传输。 这些端口由 Microsoft 定义（49152 - 65535）。 有关详细信息，请参阅 [Windows 的服务概述和网络端口要求](https://support.microsoft.com/help/832017/service-overview-and-network-port-requirements-for-windows)
+
+但是，在实际的 PXE 启动期间，设备上的网络卡可选择其在 TFTP 传输过程中使用的动态分配的高端口。 设备上的网络卡未绑定到 Microsoft 定义的动态分配的高端口。 它只绑定到 RFC 350 中定义的端口。 此端口可以是 0 到 65535 中的任意值。 有关网络卡所使用的动态分配的高端口的信息，请与设备硬件制造商联系。
+
 
 #### <a name="bkmk_note5"></a> 注释 5：站点服务器和站点系统之间的通信
 默认情况下，站点服务器和站点系统之间的通信是双向的。 站点服务器启动通信以配置站点系统，然后大部分站点系统连接回站点服务器以发送状态信息。 Reporting Services 点和分发点不会发送状态信息。 如果在安装站点系统后选择站点系统属性页上的“要求站点服务器启动到此站点系统的连接” ，则该系统不会启动与站点服务器的通信。 相反，站点服务器会启动通信，并使用站点系统安装帐户执行站点系统服务器的身份验证。  

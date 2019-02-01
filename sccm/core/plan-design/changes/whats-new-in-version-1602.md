@@ -10,17 +10,17 @@ ms.assetid: 4021eca1-adfb-4e5a-adee-159263c29637
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex,nofollow
-ms.openlocfilehash: c6d085fd33513a32207a3b9acfdfe6fe91657a88
-ms.sourcegitcommit: 2cc635835709fb8d86cdb63ea34233b36c94d4d8
+ROBOTS: NOINDEX
+ms.openlocfilehash: 86d36921939b611fa6647d4a0bf3af6d11f27ee7
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52259040"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54897621"
 ---
 # <a name="what39s-new-in-version-1602-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1602 中的新增功能
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 
 System Center Configuration Manager 的更新 1602 作为控制台内部更新提供，用于以前安装的、运行版本 1511 的站点。 版本 1511 是用于安装新 Configuration Manager 站点的初始基准版本。  
@@ -132,7 +132,7 @@ System Center Configuration Manager 的更新 1602 作为控制台内部更新�
  有关详细信息，请参阅 [System Center Configuration Manager 中的设备合规性策略](../../../protect/deploy-use/device-compliance-policies.md)。  
 
 ### <a name="make-sure-enrolled-and-compliant-devices-always-have-access-to-exchange-on-premises"></a>确保已注册且合规的设备始终有权访问 Exchange 内部部署  
- 选中以下选项时，允许已在 Intune 中注册且符合合规性策略的设备访问 Exchange 内部部署：**默认规则覆盖 - 始终允许已注册 Intune 且合规的设备访问 Exchange 内部部署**。 Exchange 内部部署的“配置条件访问策略向导”的“常规页面”提供了此规则。
+ 选中以下选项时，允许已在 Intune 中注册且符合合规性策略的设备访问本地 Exchange：**替代默认规则 - 始终允许已注册 Intune 且合规的设备访问本地 Exchange：**。 Exchange 内部部署的“配置条件访问策略向导”的“常规页面”提供了此规则。
 
  此规则将覆盖“默认规则”，这意味着，即使将“默认规则”设置为隔离或阻止访问，已注册并符合要求的设备也仍然能够访问内部部署的 Exchange。 当你希望已注册且合规的设备始终可通过内部部署的 Exchange 访问电子邮件时，使用该设置。   
 
@@ -175,7 +175,7 @@ System Center Configuration Manager 的更新 1602 作为控制台内部更新�
 
 -   实时保护：在下载时和安装前阻止可能不需要的应用程序。  
 
--   扫描设置：在完全扫描期间扫描映射的网络驱动器。  
+-   扫描设置：完全扫描期间扫描映射的网络驱动器。  
 
 -   自动示例文件提交配置：  
 
@@ -209,10 +209,10 @@ Configuration Manager 可以请求运行 iOS 7.1 和更高版本的已监管设�
 
  从部署的列表中选择部署的条款和条件。 摘要区域显示以下统计信息：  
 
--   **合规**：用户已接受最新版本的条款和条件。  
+-   **符合**：用户已接受最新版本的条款和条件。  
 
 -   **错误**  
 
--   **不合规**：用户已接受某版本的条款和条件，但未接受最新版本。  
+-   **不符合**：用户已接受某版本的条款和条件，但未接受最新版本。  
 
 -   **未知**：用户从未接受条款和条件，包括不具有已注册设备的用户。  

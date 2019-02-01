@@ -10,17 +10,16 @@ ms.assetid: a70bfbd4-757a-4468-9312-1c3b373ef9fc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex
-ms.openlocfilehash: 0481abfb1ed881355a489b99b0c3f7ec9c595e69
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 0e77225fb378a5851dbba9718dd3810463255cf7
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342318"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898420"
 ---
 # <a name="plan-a-migration-job-strategy-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中规划迁移作业策略
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 使用迁移作业来配置要迁移到 System Center Configuration Manager 环境的特定数据。 迁移作业确定你计划迁移的对象，并且在目标层次结构中的顶层站点上运行。 可为每个源站点设置一个或多个迁移作业。 这可以实现一次迁移所有对象，或迁移每个作业的有限数据子集。  
 
@@ -45,7 +44,7 @@ ms.locfileid: "32342318"
 ##  <a name="Types_of_Migration"></a>迁移作业的类型  
  Configuration Manager支持以下类型的迁移作业。 每种作业类型都旨在帮助定义你可包括在该作业中的对象。  
 
- **集合迁移**（仅当从 Configuration Manager 2007 SP2 迁移时受支持）：迁移与所选集合相关的对象。 默认情况下，集合迁移包括与集合成员关联的所有对象。 在使用集合迁移作业时，你可以排除特定对象实例。  
+ **集合迁移**（仅当从 Configuration Manager 2007 SP2 迁移时支持）：迁移与所选集合相关的对象。 默认情况下，集合迁移包括与集合成员关联的所有对象。 在使用集合迁移作业时，你可以排除特定对象实例。  
 
  **对象迁移**：迁移所选的单独对象。 仅选择你希望迁移的特定数据。  
 
@@ -285,7 +284,7 @@ ms.locfileid: "32342318"
 ### <a name="collection-dependencies-and-include-objects"></a>集合依赖项和包括对象  
  在“创建迁移作业向导”中指定要迁移的集合时，会自动选择将包括在作业中的任何依赖的集合。 此行为确保在迁移后可以获得所有必需的资源。  
 
- 例如：为运行 Windows 7 的设备选择了一个命名为 **Win_7** 的集合。 此集合受到包含所有客户端操作系统的集合（命名为 **All_Clients**）的限制。 在迁移时，将会自动选择 **All_Clients** 集合。  
+ 例如：你为运行 Windows 7 的设备选择了一个名为 Win_7 的集合。 此集合受到包含所有客户端操作系统的集合（命名为 **All_Clients**）的限制。 在迁移时，将会自动选择 **All_Clients** 集合。  
 
 ### <a name="collection-limiting"></a>集合限制  
  凭借 System Center Configuration Manager，集合是全局数据，且在层次结构的每个站点上接受评估。 因此，计划如何在迁移后限制集合的范围。 在迁移期间，可以标识要使用的目标层次结构中的集合，以限制你要迁移的集合的范围，从而确保迁移后的集合不会包含意料之外的成员。  

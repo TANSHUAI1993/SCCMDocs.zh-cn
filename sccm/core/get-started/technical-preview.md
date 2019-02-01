@@ -2,7 +2,7 @@
 title: 技术预览版
 titleSuffix: Configuration Manager
 description: 了解可测试 Configuration Manager 中的新功能和新特性的技术预览分支。
-ms.date: 12/14/2018
+ms.date: 01/23/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d2c1e93378711a19b10f9b67fcaad9973e53ee2e
-ms.sourcegitcommit: d36e4c7082a5144e79035dd8847c8e741fa04667
+ms.openlocfilehash: cf432ea32e5946a98b59e158752b3e82cf63b3b3
+ms.sourcegitcommit: b8167a60fd6f2d8387b2db723976c0e2c4198d33
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53444631"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54832765"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Configuration Manager 的技术预览版
 
@@ -25,7 +25,7 @@ ms.locfileid: "53444631"
 
 由于此版本是技术预览版，因此详细信息和功能可能有所更改。  
 
-此信息适用于 Configuration Manager 技术预览分支的所有版本。 本文列出了每个新功能以及该功能首次出现所在的技术预览版。 例如，版本 1809 为 2018 年 (18) 的 9 月 (09)。 单独的文章专用于详细介绍每个预览版的单独功能。  
+此信息适用于 Configuration Manager 技术预览分支的所有版本。 本文列出了每个新功能以及该功能首次出现所在的技术预览版。 例如，版本 1901 为 2019 年 (19) 的 1 月 (01)。 单独的文章专用于详细介绍每个预览版的单独功能。  
 
 有关 Configuration Manager 的当前版本 中新增功能的信息，请参阅 [Configuration Manager 增量版本中的新增功能](/sccm/core/plan-design/changes/whats-new-incremental-versions)。
 
@@ -124,15 +124,30 @@ Microsoft 将支持每个技术预览版，直到三个连续的版本可用为�
 
 <!-- This is the full list of new features in the latest TP release -->
 
-### <a name="technical-preview-version-1812"></a>技术预览版 1812
+### <a name="technical-preview-version-1901"></a>技术预览版 1901
 
-<!--capabilities-in-technical-preview-1812.md#bkmk_anchor-->
+<!-- - [title](/sccm/core/get-started/2019/technical-preview-1901#bkmk_anchor)<!--ID-->
 
-- [对运行 PowerShell 脚本任务序列步骤的改进](capabilities-in-technical-preview-1812.md#bkmk_posh) <!--3556028 fka 1359389-->  
-- [对通过电子邮件进行的应用程序批准的改进](capabilities-in-technical-preview-1812.md#bkmk_email) <!--3594063-->  
-- [在软件中心中配置用户设备相关性](capabilities-in-technical-preview-1812.md#bkmk_uda) <!--3485366-->  
-- [对 Configuration Manager 控制台的改进](capabilities-in-technical-preview-1812.md#bkmk_console) <!--3594151-->  
-- [从社区中心下载报表](capabilities-in-technical-preview-1812.md#bkmk_hub)<!--3555936-->  
+
+- [客户端运行状况仪表板](/sccm/core/get-started/2019/technical-preview-1901#bkmk_health)<!--3599209-->  
+- [在 Windows 10 维护服务中指定功能更新的优先级](/sccm/core/get-started/2019/technical-preview-1901#bkmk_neo)<!--3734525-->  
+- [分阶段部署专用监视](/sccm/core/get-started/2019/technical-preview-1901#bkmk_pod)<!--3555949--> 
+- [从管理中心站点运行 CMPivot](/sccm/core/get-started/2019/technical-preview-1901#bkmk_cmpivot)<!--3610960-->  
+- [对运行 PowerShell 脚本任务序列步骤的改进](/sccm/core/get-started/2019/technical-preview-1901#bkmk_posh)<!--3556028-->  
+- [生命周期仪表板上的 Office 产品](/sccm/core/get-started/2019/technical-preview-1901#bkmk_lifecycle)<!--3556026-->  
+- [集合的管理见解规则](/sccm/core/get-started/2019/technical-preview-1901#bkmk_micoll)<!--3555752-->  
+- [使用 MAC 地址搜索设备视图](/sccm/core/get-started/2019/technical-preview-1901#bkmk_mac)<!--3600878-->  
+- [分发点维护模式](/sccm/core/get-started/2019/technical-preview-1901#bkmk_dpmaint)<!--3555754-->  
+- [经优化的映像维护](/sccm/core/get-started/2019/technical-preview-1901#bkmk_resetbase)<!--3555951-->  
+- [导入 OS 映像的单个索引](/sccm/core/get-started/2019/technical-preview-1901#bkmk_index)<!--3719699--> 
+- [使用云服务适用的 Azure 资源管理器](/sccm/core/get-started/2019/technical-preview-1901#bkmk_arm)<!--3605704-->  
+- [控制台反馈确认](/sccm/core/get-started/2019/technical-preview-1901#bkmk_feedback)<!--3556010--> 
+- [在 Azure 中创建 Configuration Manager 技术预览实验室](/sccm/core/get-started/2019/technical-preview-1901#bkmk_azurevm)<!--3556017-->  
+- [指定一个自定义端口用于对等唤醒](/sccm/core/get-started/2019/technical-preview-1901#bkmk_sleep)<!--3605925-->  
+- [查看最近连接的控制台](/sccm/core/get-started/2019/technical-preview-1901#bkmk_console)<!--3699367-->  
+- [超过阈值时停止云服务](/sccm/core/get-started/2019/technical-preview-1901#bkmk_cmg)<!--3735092--> 
+- [客户端预配模式超时](/sccm/core/get-started/2019/technical-preview-1901#bkmk_osdprov)<!--3197824-->
+- [对 OS 部署的改进](/sccm/core/get-started/2019/technical-preview-1901#bkmk_osd)<!--3633146,3641475,3654172,3734270-->
 
 
 > [!Note]  
@@ -151,6 +166,11 @@ Then remove the bottom of this list and/or move individual items not in CB to th
 
  | 功能 | 技术预览版 | 当前分支版 |  
  |---------|---------------------------|------------------------|
+ | 对运行 PowerShell 脚本任务序列步骤的改进<!--3556028 fka 1359389--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_posh) | ![未添加](media/Red_X.gif) | 
+ | 对通过电子邮件进行的应用程序批准的改进<!--3594063--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_email) | ![未添加](media/Red_X.gif) | 
+ | 在软件中心中配置用户设备相关性<!--3485366--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_uda) | ![未添加](media/Red_X.gif) | 
+ | 对 Configuration Manager 控制台的改进<!--3594151--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_console) | ![未添加](media/Red_X.gif) | 
+ | 从社区中心下载报表<!--3555936--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_hub) | ![未添加](media/Red_X.gif) | 
  | 请勿加载 Windows PowerShell 配置文件 <!--1359239--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_noprofile) | ![未添加](media/Red_X.gif) | 
  | 本地 MDM 不再需要 Intune 连接 <!--1359124--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_opmdm) | ![未添加](media/Red_X.gif) | 
  | Configuration Manager 控制台通知 <!--1318035--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_notify) | ![未添加](media/Red_X.gif) | 
@@ -161,19 +181,6 @@ Then remove the bottom of this list and/or move individual items not in CB to th
  | 对等缓存源客户端版本的管理见解规则 <!--1358008--> | [技术预览版 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_insights) | 版本 1810 | 
  | 对基于 Internet 的客户端设置的改进 <!--1359181--> | [技术预览版 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_cmg) | 版本 1810 | 
  | 将应用程序转换为 MSIX <!--1359029--> | [技术预览版 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_msix) | 版本 1810 | 
- | 客户端安装改进<!--1358840--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_ccmsetup) | 版本 1810 | 
- | 共同托管设备所需的应用符合性策略<!--1358196--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_app-compliance) | 版本 1810 | 
- | 对共同管理仪表板的改进<!--1358980--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_comgmt-report) | 版本 1810 | 
- | 新的边界组选项<!--1358749--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_bgoptions) | 版本 1810 | 
- | Windows 群集节点上的站点系统<!--1359132--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_cluster) | 版本 1810 | 
- | CMPivot 的改进 <!--1359068--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_cmpivot) | 版本 1810 | 
- | 脚本的改进<!--1358239--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_scripts) | 版本 1810 | 
- | 用于唤醒设备的新客户端通知操作<!--1317364--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_wakeup) | 版本 1810 | 
- | 对边界组的任务序列支持<!--1359025--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_bgr-osd) | 版本 1810 | 
- | 管理见解仪表板<!--1357979--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_insights) | 版本 1810 | 
- | 控制台内文档仪表板<!--1357546--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_doc-dashboard) | ![未添加](media/Red_X.gif) | 
- | 对驱动程序维护的改进<!--1358270--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_drivers) | 版本 1810 | 
- | 针对现有设备的 Windows Autopilot 的任务序列支持<!--1358333--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_autopilot) | 版本 1810 | 
 
 
 
@@ -189,6 +196,7 @@ With each CB release, review and remove from this list for anything that's now a
 
 | 功能        | 技术预览版 |  
 |----------------|---------------------------|
+| 控制台内文档仪表板<!--1357546--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_doc-dashboard) | 
 | 社区中心 <!--1357766--> | [技术预览版 1807](capabilities-in-technical-preview-1807.md#bkmk_hub) | 
 | 来自 Intune 的共同管理的设备同步活动 <!--1358565--> | [技术预览版 1807](capabilities-in-technical-preview-1807.md#bkmk_comgmt) | 
 | 基于客户端的 PXE 响应者服务 <!--1357148--> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#client-based-pxe-responder-service) |

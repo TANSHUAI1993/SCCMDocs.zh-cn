@@ -10,18 +10,18 @@ ms.assetid: 272ee86b-d3d9-4fd9-b5c4-73e490e1a1e4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fc49a74fe4e257acceaea54d7c423709998a87bd
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 09a583fd3d7ff768c9a102631a0c2cb39a286c23
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334175"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898369"
 ---
 # <a name="security-and-privacy-for-remote-control-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的远程控制的安全和隐私
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
-本主题包括有关 System Center 2012 Configuration Manager 中远程控制的安全和隐私信息。  
+本主题包括有关 System Center Configuration Manager 中远程控制的安全和隐私信息。  
 
 ##  <a name="BKMK_Security_HardwareInventory"></a> 远程控制安全最佳方案  
  当使用远程控制来管理客户端计算机时使用下列最佳安全方案。  
@@ -32,7 +32,7 @@ ms.locfileid: "32334175"
 |请勿在远程控制查看器中启用剪贴板共享。|剪贴板支持诸如可执行文件和文本这类对象，可以由主计算机上的用户在远程控制会话期间用于对原始计算机运行程序。|  
 |在远程管理计算机时，请勿对特权帐户输入密码。|监视键盘输入的软件可能捕获到该密码。 或者，如果在客户端计算机上运行的程序不是远程控制用户假定的程序，该程序也可能正在捕获密码。 当要求输入帐户和密码时，应由最终用户输入。|  
 |在远程控制会话过程中锁定键盘和鼠标。|如果 Configuration Manager 检测到远程控制连接已终止，则 Configuration Manager 会自动锁定键盘和鼠标，以便用户无法控制打开的远程控制会话。 但是，此检测可能不会立即进行，因而不会在远程控制服务终止时进行。<br /><br /> 在“ConfigMgr 远程控制”  窗口中选择操作“锁定远程键盘和鼠标”  。|  
-|请勿让用户在软件中心配置远程控制设置。|请勿启用客户端设置“用户可以在软件中心内更改策略或通知设置”  以帮助防止用户被窥探。<br /><br /> 此设置适用于计算机，而不适用于已登录用户。|  
+|请勿让用户在软件中心配置远程控制设置。|请勿启用客户端设置“用户可以在软件中心内更改策略或通知设置”  以帮助防止用户被窥探。 如果某用户更改它，则允许远程查看相同计算机上的其他用户。 <br /><br />**此设置适用于计算机，而不适用于已登录用户**。|  
 |启用“域”  Windows 防火墙配置文件。|启用客户端设置“对客户端防火墙例外配置文件启用远程控制”  ，然后为 intranet 计算机选择“域”  Windows 防火墙。|  
 |如果在远程控制会话期间注销，然后以其他用户身份登录，请确保在断开远程控制会话连接之前注销。|如果未在此情况下注销，则会话会保持打开状态。|  
 |请勿向用户授予本地管理员权限。|向用户提供本地管理员权限时，他们可能能够接管远程控制会话或损害你的凭据。|  

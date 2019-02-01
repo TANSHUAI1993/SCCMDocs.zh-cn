@@ -10,16 +10,17 @@ ms.assetid: 56dc4b07-5aa4-43e2-9be8-d26ae5ff5613
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: dc4dc88b2a8fa9ba075fee51e187e02ae55c2cce
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ROBOTS: NOINDEX
+ms.openlocfilehash: 672257141c0672a76b89ee9d78184d2a4230280f
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344511"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898352"
 ---
 # <a name="capabilities-in-technical-preview-1803-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1803 中的功能
 
-*适用范围：System Center Configuration Manager (Technical Preview)*
+适用范围：System Center Configuration Manager (Technical Preview)
 
 本文介绍 Configuration Manager Technical Preview 1803 版中提供的功能。 你可以安装此版本，以更新 Technical Preview 站点的功能并向其添加新功能。 
 
@@ -41,8 +42,7 @@ ms.locfileid: "32344511"
 
  
 ## <a name="pull-distribution-points-support-cloud-distribution-points-as-source"></a>请求分发点支持将云分发点作为源  
-<!--1321554-->
-许多客户在远程办公室或分支机构使用[请求分发点](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point)，这些分发点通过 WAN 从源分发点下载内容。 如果远程办公室与 Internet 建立了更好的连接，或者为了减少 WAN 链路负载，现在可以在 Microsoft Azure 中使用[云分发点](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point)作为源。 现在，当你在分发点属性的“请求分发点”选项卡上添加源时，站点中的所有云分发点都会列为可用的分发点。 两个站点系统角色的行为都保持不变。 
+<!--1321554--> 许多客户在远程办公室或分支机构使用[请求分发点](/sccm/core/plan-design/hierarchy/use-a-pull-distribution-point)，这些分发点通过 WAN 从源分发点下载内容。 如果远程办公室与 Internet 建立了更好的连接，或者为了减少 WAN 链路负载，现在可以在 Microsoft Azure 中使用[云分发点](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point)作为源。 现在，当你在分发点属性的“请求分发点”选项卡上添加源时，站点中的所有云分发点都会列为可用的分发点。 两个站点系统角色的行为都保持不变。 
 
 ### <a name="prerequisites"></a>先决条件
 - 请求分发点需要访问 Internet 才能与 Microsoft Azure 通信。
@@ -54,8 +54,7 @@ ms.locfileid: "32344511"
 
 
 ## <a name="partial-download-support-in-client-peer-cache-to-reduce-wan-utilization"></a>客户端对等缓存中的部分下载支持可降低 WAN 利用率
-<!--1357346-->
-客户端对等缓存源现在可以将内容分成多个部分。 这些部分最大限度地减少了网络传输，从而降低了 WAN 利用率。 管理点提供更详细的内容部分跟踪。 它试图消除每个边界组多次下载相同内容的行为。 
+<!--1357346--> 客户端对等缓存源现可以将内容分成多个部分。 这些部分最大限度地减少了网络传输，从而降低了 WAN 利用率。 管理点提供更详细的内容部分跟踪。 它试图消除每个边界组多次下载相同内容的行为。 
 
 ### <a name="example-scenario"></a>示例方案
 Contoso 有一个单独的主站点，该站点包含两个边界组：总部 (HQ) 和分支机构。 边界组之间有 30 分钟的回退关系。 该站点的管理点和分发点都位于 HQ 边界中。 分支机构所在地没有本地分发点。 分支机构的四个客户端中有两个配置为对等缓存源。 
@@ -93,17 +92,15 @@ Contoso 有一个单独的主站点，该站点包含两个边界组：总部 (H
 
 
 ## <a name="maintenance-windows-in-software-center"></a>软件中心的维护时段
-<!--1358131-->
-软件中心现在显示下一个计划性维护时段。 在“安装状态”选项卡上，将视图从“全部”切换为“即将进行”。 它显示时间范围和计划部署列表。 如果没有将来的维护时段，则该列表为空。 
+<!--1358131--> 软件中心现在显示下一个计划性维护时段。 在“安装状态”选项卡上，将视图从“全部”切换为“即将进行”。 它显示时间范围和计划部署列表。 如果没有将来的维护时段，则该列表为空。 
 
 ![软件中心的“安装状态”选项卡上显示即将进行的部署的列表](media/1358131-software-center-maintenance-windows.png)
 
 
 ## <a name="custom-tab-for-webpage-in-software-center"></a>软件中心用于网页的自定义选项卡
-<!--1358132-->
-现在可以在软件中心创建自定义选项卡来打开网页。 此功能可让你以一致、可靠的方式向最终用户展示内容。 以下列表包含几个示例：
+<!--1358132--> 现在可以在软件中心创建自定义选项卡来打开网页。 此功能可让你以一致、可靠的方式向最终用户展示内容。 以下列表包含几个示例：
 - 联系 IT 部门：有关如何联系组织 IT 部门的信息
-- IT 支持中心：IT 自助操作，例如搜索知识库或创建支持票证。
+- IT 支持中心：IT 自助操作，如搜索知识库或开启支持票证。
 - 最终用户文档：面向组织中的用户的文章，涉及各种 IT 主题，例如使用应用程序或升级到 Windows 10。
 
 

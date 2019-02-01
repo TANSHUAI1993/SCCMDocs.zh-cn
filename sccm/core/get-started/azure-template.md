@@ -1,0 +1,139 @@
+---
+title: 在 Azure 中创建实验室
+titleSuffix: Configuration Manager
+description: 使用 Azure 模板自动创建 Configuration Manager 技术预览实验室
+ms.date: 01/22/2019
+ms.prod: configuration-manager
+ms.technology: configmgr-other
+ms.topic: conceptual
+ms.assetid: 9875c443-19bf-43a0-9203-3a741f305096
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.openlocfilehash: a6f087b6905d307c707b95e3926a01b0c482f857
+ms.sourcegitcommit: b8167a60fd6f2d8387b2db723976c0e2c4198d33
+ms.translationtype: HT
+ms.contentlocale: zh-CN
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54832853"
+---
+# <a name="create-a-configuration-manager-technical-preview-lab-in-azure"></a>在 Azure 中创建 Configuration Manager 技术预览实验室
+
+适用范围：System Center Configuration Manager (Technical Preview)
+
+<!--3556017-->
+
+本指南介绍如何在 Microsoft Azure 中构建 Configuration Manager 实验室环境。 它使用 Azure 资源通过 Azure 模板来简化和自动化实验室的创建。 此过程可安装 Configuration Manager 技术预览分支的最新版本。 
+
+有关 Configuration Manager 当前分支的详细信息，请参阅 [Azure 上的 Configuration Manager](/sccm/core/understand/configuration-manager-on-azure)。
+
+
+
+## <a name="prerequisites"></a>先决条件
+
+此过程需要可在其中创建以下对象的 Azure 订阅： 
+- 四个 Standard_D2s_v3 虚拟机
+- Standard_LRS 存储帐户
+
+> [!Tip]  
+> 请参阅 [Azure 定价计算器](https://azure.microsoft.com/pricing/calculator/)以帮助确定潜在的费用。  
+
+
+
+## <a name="process"></a>过程
+
+1. 转到 [Configuration Manager 模板](https://azure.microsoft.com/resources/templates/sccm-technicalpreview/)。  
+
+2. 选择“部署到 Azure”，随即打开 Azure 门户。  
+
+3. 完成包含以下信息的 Azure 快速入门模板：
+
+    - 基础知识  
+
+        - **订阅**：要在其中创建 VM 的订阅的名称  
+
+        - **资源组**：选择要用于这些 VM 的资源组  
+
+        - **位置**：选择 Azure 数据中心，以托管此实验室环境  
+
+    - 设置  
+
+        - **前缀**：计算机的前缀名称。 有关详细信息，请参阅 [Azure VM 信息](#azure-vm-info)。  
+
+        - **管理员用户名**：VM 上具有管理权限的用户的名称。 使用此用户登录 VM。  
+
+        - **管理员密码**：密码必须满足 Azure 复杂性要求。 有关详细信息，请参阅 [adminPassword](https://docs.microsoft.com/rest/api/compute/virtualmachines/createorupdate#osprofile)。  
+
+    > [!Important]  
+    > 以下设置是 Azure 所必需的。 使用默认值。 请勿更改这些值。  
+    > 
+    > - **\_项目位置**：此模板脚本的位置 <!-- https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/sccm-technicalpreview/ -->  
+    >
+    > - **\_项目位置 Sas 令牌**：sasToken 是访问项目位置所必需的  
+    > 
+    > - **位置**：所有资源的位置
+
+4. 阅读条款和条件。 如果同意，请选择“我同意上述条款和条件”。 然后选择“购买”以继续。 
+
+Azure 可验证设置，然后开始部署。 检查 Azure 门户中部署的状态。 该过程可能需要 2-4 小时。 即使 Azure 门户显示成功部署，配置脚本仍会继续运行。 在此过程中，请勿重启 VM。
+
+若要查看配置脚本的状态，请连接到 `<prefix>PS1` 服务器，并查看以下文件：`%windir%\TEMP\ProvisionScript\PS1.json`。 如果它显示所有步骤已完成，则该过程已完成。
+
+若要连接到 VM，首先从 Azure 门户获取每个 VM 的公共 IP 地址。 当连接到 VM 时，域名为 `contoso.com`。 使用部署模板中指定的凭据。 有关详细信息，请参阅[如何连接并登录到运行 Windows 的 Azure 虚拟机](https://docs.microsoft.com/azure/virtual-machines/windows/connect-logon)。
+
+
+
+## <a name="azure-vm-info"></a>Azure VM 信息
+
+所有四个虚拟机均具有以下规格：
+- 具有两个 CPU 核心和 8 GB 内存的 Standard_D2s_v3  
+- Windows Server 2016 Datacenter Edition
+- 150 GB 磁盘空间
+- 公共和专用 IP 地址。 公共 IP 位于网络安全组中，该网络安全组仅允许通过 TCP 端口 3389 进行远程桌面连接。 
+
+部署模板中指定的前缀即为 VM 名称前缀。 例如，如果将“contoso”设置为前缀，则域控制器计算机名称为 `contosoDC`。
+
+
+### `<prefix>DC`
+
+Active Directory 域控制器
+
+#### <a name="windows-features-and-roles"></a>Windows 功能和角色
+- Active Directory 域服务 (ADDS)
+- .NET
+- 远程差分压缩 (RDC)
+
+
+### `<prefix>PS1`
+
+- SQL Server
+- Windows PE 中的 Windows 10 ADK 
+- Configuration Manager 主站点
+
+#### <a name="windows-features-and-roles"></a>Windows 功能和角色
+- .NET
+- 远程差分压缩 (RDC) 
+- Internet Information Service (IIS)
+
+
+### `<prefix>MPDP`
+
+- 管理点
+- 分发点
+
+#### <a name="windows-features-and-roles"></a>Windows 功能和角色
+- .NET
+- 远程差分压缩 (RDC) 
+- Internet Information Service (IIS)
+- 后台智能传输服务 (BITS)
+
+
+### `<prefix>Other`
+
+此 VM 可用作客户端，或用于承载其他站点角色。
+
+#### <a name="windows-features-and-roles"></a>Windows 功能和角色
+- .NET
+- 远程差分压缩 (RDC) 
+
+

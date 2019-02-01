@@ -2,7 +2,7 @@
 title: UUP 预览版
 titleSuffix: Configuration Manager
 description: 有关 UUP 集成预览版的说明
-ms.date: 01/14/2018
+ms.date: 01/25/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -10,13 +10,13 @@ ms.assetid: 0b0da585-0096-410b-8035-6b7a312f37f5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex,nofollow
-ms.openlocfilehash: 17a9abf2f20f53ba69ad160db421be51471cc311
-ms.sourcegitcommit: 27b2594087e8c54062db6b2a30ab843bab17f8cc
+ROBOTS: NOINDEX
+ms.openlocfilehash: 27a960758d8d3939798ae270404d5dd1afbea62d
+ms.sourcegitcommit: ad25a7bdd983c5a0e4c95bffdc61c9a1ebcbb765
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54270454"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55072979"
 ---
 # <a name="uup-private-preview-instructions"></a>UUP 个人预览版说明
 
@@ -56,28 +56,28 @@ ms.locfileid: "54270454"
 $server = Get-WsusServer
 $config = $server.GetConfiguration()
 $config.ServerId
+
+# also check MUUrl
+$config.MUUrl
 ```
 
-### <a name="2-update-configmgr-to-a-supported-version"></a>2.将 ConfigMgr 更新为受支持的版本
+MUUrl 属性应为 `https://sws.update.microsoft.com`。 若要更改它，请参阅以下支持文章中的解决办法：[WSUS 同步失败，出现 SoapException](https://support.microsoft.com/help/4482416/wsus-synchronization-fails-with-soapexception)
+
+
+### <a name="2-update-configmgr"></a>2.更新 ConfigMgr
 
 若要在环境中同步快速安装文件，则生产环境需要安装 ConfigMgr 1810 当前分支，或实验室环境需要安装 1812 技术预览分支。
 
 若要在环境中同步快速安装文件，则生产环境还需要安装 ConfigMgr 1810 修补程序 KB4482615，或实验室环境需要安装 1812 技术预览分支。
 
 
-#### <a name="configmgr-1810-uup-hotfix-kb4482615"></a>ConfigMgr 1810 UUP 修补程序 (KB4482615)
-
-> [!Important]  
-> 以下过程适用于更新到版本 1810 的当前分支站点，该版本于 2018 年 12 月 19 日后正式发布。
->
-> 如果你在 2018 年 11 月底或 12 月初通过运行 PowerShell 脚本来选择进行 1810 更新，则该修补程序尚不可用。 
+#### <a name="diagnostics-and-usage-data-level"></a>诊断和使用情况数据级别
+请考虑在此预览期间提高 Configuration Manager 诊断和数据使用情况级别。 “完整”级别可帮助 Microsoft 更好地分析和排查此新功能的问题。 有关详细信息，请参阅 [1810 版的诊断使用情况数据收集的级别](/sccm/core/plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1810)。
 
 
-1. 更新站点
+#### <a name="update-rollup-for-configmgr-1810-4486457"></a>ConfigMgr 1810 (4486457) 的更新汇总
 
-    1. 从 [Microsoft 下载中心]<!--(https://download.microsoft.com/download/0/9/0/09081E12-A2CF-40B6-82D8-9B8914A1C2D3/KB4482615/CM1810-KB4482615.ConfigMgr.Update.exe)-->下载修补程序 KB4482615。 此修补程序为非快速方案启用 UUP。  
-
-    2. [使用更新注册工具导入修补程序](/sccm/core/servers/manage/use-the-update-registration-tool-to-import-hotfixes)  
+1. 使用版本 1810 的更新汇总更新站点。 有关详细信息，请参阅[安装控制台内部更新](/sccm/core/servers/manage/install-in-console-updates)。  
 
 2. 更新客户端。  
 
@@ -85,11 +85,15 @@ $config.ServerId
 
     - 必须升级所有针对 UUP 更新的客户端，以防止不必要地将大约 6 GB 的未使用内容下载到客户端。
 
+有关此更新的详细信息，请参阅 [System Center Configuration Manager Current Branch（版本 1810）更新汇总](https://support.microsoft.com/help/4486457)。
 
-#### <a name="1812-technical-preview"></a>1812 Technical Preview
-1812 Technical Preview 在受支持的 UUP 方案中相当于 ConfigMgr 1810 UUP 修补程序 (KB4482615)。
 
-唯一需要注意的是，1812 Technical Preview 的客户端升级已从 1810.1 TP 或 1811 TP 断开。 要解决此问题，需要卸载 1810.1 TP 和 1811 TP 客户端，然后完全安装 1812 TP 客户端。 所有针对 UUP 更新的客户端都必须处于 1812 Technical Preview（或更高版本），以防止不必要地将大约 6 GB 的未使用内容下载到客户端。
+<!-- 
+#### 1812 Technical Preview
+The 1812 Technical Preview is equivalent in supported UUP scenarios to the ConfigMgr 1810 UUP Hotfix (KB4482615).
+
+The only note is that client upgrade of 1812 Technical Preview is broken from 1810.1 TP or 1811 TP. To work around this issue, you'll need to uninstall 1810.1 TP and 1811 TP clients, then install the 1812 TP client cleanly. All clients you target UUP updates to must be on 1812 Technical Preview (or later) to prevent **unnecessarily downloading around 6 GB** of unused content to the client.
+ -->
 
 
 ### <a name="3-update-windows-clients-to-supported-versions"></a>3.将 Windows 客户端更新为支持的版本
@@ -97,26 +101,26 @@ $config.ServerId
 #### <a name="for-express-installation-file-sync"></a>对于快速安装文件同步
 对于快速内容，受支持的 Windows 版本包括：
 
-- Windows 10 版本 1709 和 [KB4338825](https://support.microsoft.com/help/4338825)（2017 年 7 月累计安全更新）或更高版本  
+- 具有非安全性累计更新 [KB4476976](https://support.microsoft.com/help/4476976/windows-10-update-kb4476976)（1 月 22 日发布）或更高版本的 Windows 10 版本 1809。 此更新仅在目录中可用，并且不直接同步到 WSUS。 要将更新导入环境以进行部署，请参阅[从 Microsoft 更新目录导入更新](/sccm/sum/get-started/synchronize-software-updates#import-updates-from-the-microsoft-update-catalog)。
 
 - Windows 10 版本 1803 和 [KB4284835](https://support.microsoft.com/help/4284835)（2017 年 6 月累计安全更新）或更高版本  
 
-- Windows 10 版本 1809 和尚未发布的 1 月累积非安全更新（或以下 2 月累积安全更新）或更高版本
+- Windows 10 版本 1709 和 [KB4338825](https://support.microsoft.com/help/4338825)（2017 年 7 月累计安全更新）或更高版本  
+
 
 #### <a name="for-non-express-installation-file-sync"></a>对于非快速安装文件同步
-对于非快速内容，必须应用其他修补程序。 此路径在目录 12/20 上以非累积格式提供，并将在 1 月下旬以正常累积格式提供。
+对于非快速内容，必须应用其他修补程序。 此更新非常重要，可防止不必要地将大约 6 GB 的未使用内容下载到客户端。 受支持的 Windows 版本包括以下内部版本：
 
-Windows 10 版本 1709 和 Windows 10 版本 1803 的任何一种：
-- 12 - 1 月版本：客户端必须具有基本累积更新级别和非累积更新  
-    - 累积更新  
-        - 1709：[KB4338825](https://support.microsoft.com/help/4338825)（2017 年 7 月累积安全更新）到 2019 年 1 月安全累积更新（包括在内）  
-        - 1803：[KB4284835](https://support.microsoft.com/help/4284835)（2017 年 6 月累积安全更新）到 2019 年 1 月累积安全更新（包括在内）  
-    - 非累积更新：此更新仅在目录中可用，并且不直接同步到 WSUS。 要将更新导入环境以进行部署，请参阅[从 Microsoft 更新目录导入更新](/sccm/sum/get-started/synchronize-software-updates#import-updates-from-the-microsoft-update-catalog)。  
-        - 1709：[KB4483530](https://support.microsoft.com/help/4483530)  
-        - 1803：[KB4483541](https://support.microsoft.com/help/4483541)  
-- 2 月及更高版本：对于累积更新，仅限于尚未发布的 1 月累积非安全更新（或以下 2 月累积安全更新）或更高版本   
+- 具有非安全性累计更新 [KB4476976](https://support.microsoft.com/help/4476976/windows-10-update-kb4476976)（1 月 22 日发布）或更高版本的 Windows 10 版本 1809。 此更新仅在目录中可用，并且不直接同步到 WSUS。 要将更新导入环境以进行部署，请参阅[从 Microsoft 更新目录导入更新](/sccm/sum/get-started/synchronize-software-updates#import-updates-from-the-microsoft-update-catalog)。
 
-Windows 10 版本 1809 和尚未发布的 1 月累积非安全更新（或以下 2 月累积安全更新）或更高版本
+
+- Windows 10 版本 1803 和 Windows 10 版本 1709 客户端必须具有基本累积更新级别和非累积更新：
+    - 累积更新
+        - 1803：[KB4284835](https://support.microsoft.com/help/4284835)（2017 年 6 月累积安全更新）到 2019 年 1 月累积安全更新（包括在内）
+        - 1709：[KB4338825](https://support.microsoft.com/help/4338825)（2017 年 7 月累积安全更新）到 2019 年 1 月安全累积更新（包括在内）
+    - 非累积更新：此更新仅在目录中可用，并且不直接同步到 WSUS。 要将更新导入环境以进行部署，请参阅[从 Microsoft 更新目录导入更新](/sccm/sum/get-started/synchronize-software-updates#import-updates-from-the-microsoft-update-catalog)。
+        - 1803：[KB4483541](https://support.microsoft.com/help/4483541)
+        - 1709：[KB4483530](https://support.microsoft.com/help/4483530)
 
 
 ### <a name="4-enable-express-installation-on-clients-in-client-settings"></a>4.在客户端设置中启用客户端上的快速安装
@@ -182,10 +186,7 @@ Windows 10 版本 1809 和尚未发布的 1 月累积非安全更新（或以下
 
 ### <a name="updates-available-during-preview"></a>在预览期间可用的更新
 
-- Windows 10 1709 累积更新
-    - 12 月安全更新 (12/11)
-    - 1 月安全更新 (1/8)
-    - 1 月非安全更新 (1/15)
+- Windows 10 1809 累积更新
     - 2 月安全更新 (2/12)  
 
 - Windows 10 1803 累积更新
@@ -194,17 +195,20 @@ Windows 10 版本 1809 和尚未发布的 1 月累积非安全更新（或以下
     - 1 月非安全更新 (1/15)
     - 2 月安全更新 (2/12)  
 
-- Windows 10 1809 累积更新
+- Windows 10 1709 累积更新
+    - 12 月安全更新 (12/11)
+    - 1 月安全更新 (1/8)
+    - 1 月非安全更新 (1/15)
     - 2 月安全更新 (2/12)  
-
-- Windows 10 1803 功能更新（版本 1709 或 1803）   
-    - 12 月安全更新符合性 (12/11)
-    - 1 月安全更新符合性 (1/8)
-    - 2 月安全更新符合性 (2/12)  
 
 - Windows 10 1809 功能更新（版本 1709 或 1803）
     - 12 月 (12/11) 安全更新符合性
     - 1 月 (1/8) 安全更新符合性
+    - 2 月安全更新符合性 (2/12)  
+
+- Windows 10 1803 功能更新（版本 1709 或 1803）   
+    - 12 月安全更新符合性 (12/11)
+    - 1 月安全更新符合性 (1/8)
     - 2 月安全更新符合性 (2/12)  
 
 必要时，只要 UUP 仍处于预览状态（个人版或公共版），3 月和未来的安全更新将继续在所有这些区域中发布。 完成预览后，生产中将仅支持 Windows 10 版本 1809 累积更新和功能更新（Windows 10 版本 1803）。
@@ -226,7 +230,7 @@ Windows 10 版本 1809 和尚未发布的 1 月累积非安全更新（或以下
 在预览期间，使用 UUP 类型更新保持客户端符合多个连续更新要求，体会持续更新的感觉。
 
 #### <a name="content"></a>Content
-与之前的非 UUP 更新相比，每个主要版本（1709、1803、1809）、体系结构和语言组合的第一次更新对文件数和磁盘空间量的要求似乎都比较大。 此额外内容主要用于所有 FOD 和语言包以进行累积更新。 对于功能更新，特别是如果启用了快速更新，则会为第一次更新提供额外的内容。 
+与之前的非 UUP 更新相比，每个主要版本（1809、1803、1709）、体系结构和语言组合的第一次更新对文件数和磁盘空间量的要求似乎都比较大。 此额外内容主要用于所有 FOD 和语言包以进行累积更新。 对于功能更新，特别是如果启用了快速更新，则会为第一次更新提供额外的内容。 
 
 但是，后续更新（累积更新和具有更高符合性级别的每月功能更新）需要下载和分发的新内容量将会小得多，因为所有 FOD 和语言包内容都会在更新中智能共享而不是重新加载或重新分配。 在预览期间，在版本 1709 和 1803 中，此月度下载大约相当于你在非 UUP 方案中看到的累积更新的大小。 然而，在版本 1809 中，由于累积更新的增量下载每月都要小得多，情况会好得多。 
 

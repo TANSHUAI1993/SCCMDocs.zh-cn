@@ -10,20 +10,21 @@ ms.assetid: f7350d03-f440-4744-82d4-75f8c6c25028
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 902e5e91b64cf3061862deeb98b0d9bf427e4598
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ROBOTS: NOINDEX
+ms.openlocfilehash: af82e3b5d0f555494705a28fba291253c83b00ea
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32340907"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898012"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1606-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1606 的诊断使用情况数据收集的级别
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 System Center Configuration Manager 版本 1606 收集三个级别的诊断和使用情况数据：“基本”、“增强”和“完全”。 默认情况下，此功能设置为增强级别。 以下部分提供有关每个级别所收集数据的其他详细信息。
 
-针对以前版本进行的更改使用 ***[新增]******[已更新]******[已删除]*** 或 ***[已移动]*** 进行了注明。
+针对以前版本进行的更改使用 ***[新增]*** ***[已更新]*** ***[已删除]*** 或 ***[已移动]*** 进行了注明。
 
 
 > [!IMPORTANT]
@@ -385,7 +386,7 @@ System Center Configuration Manager 版本 1606 收集三个级别的诊断和�
 -   上次软件更新扫描后的最小/最大/平均小时数
 
 -    软件更新点同步的软件更新产品
--    符合性设置：SCEP、VPN、Wi-Fi 和合规性策略模板配置详细信息
+-    符合性设置：SCEP、VPN、Wi-Fi 和符合性策略模板配置详细信息
 
 -    Intune 托管设备的 EAS 条件访问策略的类型（阻止或隔离）
 

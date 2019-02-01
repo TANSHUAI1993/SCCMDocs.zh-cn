@@ -10,18 +10,19 @@ ms.assetid: e318e705-20f2-417d-8cde-7dfe661b2fa7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b86b1a4b8400be29f9b4c468c280fdd0a47385c3
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ROBOTS: NOINDEX
+ms.openlocfilehash: 0b47d64a350a9cf0a8838809604d1a38b55ea3b1
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32343484"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54896722"
 ---
 # <a name="capabilities-in-technical-preview-1704-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1704 中的功能
 
-*适用范围：System Center Configuration Manager (Technical Preview)*
+适用范围：System Center Configuration Manager (Technical Preview)
 
-本文介绍了 System Center Configuration Manager Technical Preview（版本 1704）中的可用功能。 可以安装此版本以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。 在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager Technical Preview](../../core/get-started/technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。    
+本文介绍了 System Center Configuration Manager Technical Preview（版本 1704）中的可用功能。 可以安装此版本以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。 在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager 技术预览版](../../core/get-started/technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。    
 
 
 **以下是此版本可以试用的新功能。**  
@@ -31,7 +32,7 @@ ms.locfileid: "32343484"
 
 ### <a name="try-it-out"></a>试试看                 
 
-在 Configuration Manager 控制台中，选择“软件库” > “应用程序管理” > “应用配置策略”，然后选择“创建应用配置策略”。 在向导的“常规”页中，现在你可以“选择配置策略类型”。 指定应用配置策略所针对的平台：**适用于Android for Work 应用的配置策略**。 然后，你可以**指定名称和值对**或**浏览到属性列表 JSON 文件**。 新应配置策略显示在“软件库”工作区的“应用配置策略”节点中。 若要将应用配置策略与 Android for Work 应用的部署相关联，可按通常方式使用[部署应用程序](/sccm/apps/deploy-use/deploy-applications)主题中的过程来部署应用程序。
+在 Configuration Manager 控制台中，选择“软件库” > “应用程序管理” > “应用配置策略”，然后选择“创建应用配置策略”。 在向导的“常规”页中，现在你可以“选择配置策略类型”。 指定应用配置策略的目标平台：**Android for Work 应用的配置策略**。 然后，你可以**指定名称和值对**或**浏览到属性列表 JSON 文件**。 新应配置策略显示在“软件库”工作区的“应用配置策略”节点中。 若要将应用配置策略与 Android for Work 应用的部署相关联，可按通常方式使用[部署应用程序](/sccm/apps/deploy-use/deploy-applications)主题中的过程来部署应用程序。
 
 ## <a name="hardware-inventory-collects-secure-boot-information"></a>硬件清单收集安全启动信息
 硬件清单现在收集有关是否在客户端启用安全启动的信息。 该信息存储在 **SMS_Firmware** 类（在 1702 版本中引入）中，并在硬件清单中默认启用。 有关硬件清单的详细信息，请参阅[如何配置硬件清单](/sccm/core/clients/manage/inventory/configure-hardware-inventory)。
@@ -66,6 +67,6 @@ ms.locfileid: "32343484"
 ## <a name="improvements-to-operating-system-deployment"></a>对操作系统部署的改进
 我们根据用户的语音反馈，对操作系统部署做了以下改进。
 
-- 操作系统映像的[新**操作系统版本**列](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/17558407-add-a-column-to-the-operating-system-images-node-f)：我们添加了一个名为**操作系统版本**的新列，以便在“操作系统映像”和“操作系统升级包”节点中查看信息时显示映像的操作系统版本。 仅显示 WIM 中第一条索引的版本。 转到映像的“详细信息”选项卡，查看其他索引的操作系统版本。
+- [操作系统映像的新 OS 版本列](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/17558407-add-a-column-to-the-operating-system-images-node-f)：我们添加了一个名为 OS 版本的新列，以便在“操作系统映像”和“操作系统升级包”节点中查看信息时显示映像的操作系统版本。 仅显示 WIM 中第一条索引的版本。 转到映像的“详细信息”选项卡，查看其他索引的操作系统版本。
 
 - [更高效地登录 Smsts.log](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/16791919-stop-filling-smsts-log-with-useless)：从此版本开始，我们不再向 smsts.log 文件写入用于获取 CCM_CIVersionInfo.PolicyID 信息的条目。 此版本之前的版本可能包含很多带有此信息的条目，这使得在日志文件中查找相关度更高的信息非常困难。

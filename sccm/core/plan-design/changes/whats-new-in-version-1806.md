@@ -10,12 +10,12 @@ ms.assetid: 0249dbd3-1e85-4d05-a9e5-420fbe44d850
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fe8fb2a8138433d00686530f76916a1ee4e88dac
-ms.sourcegitcommit: a3cec96a771eed69e58a29917d1a3fe1a5fb2e73
+ms.openlocfilehash: cb0d5d1982bb0b109b83f30f1101ddd50316d53e
+ms.sourcegitcommit: ad25a7bdd983c5a0e4c95bffdc61c9a1ebcbb765
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54250793"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55073027"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 1806 版中的新增功能
 
@@ -29,14 +29,6 @@ Configuration Manager Current Branch 的 1806 更新作为控制台中更新提�
 > [!Important]  
 > This article currently lists all significant features in this version. However, not all sections yet link to updated content with further information on the new features. Keep checking this page regularly for updates. Changes are noted with the ***[Updated]*** tag. This note will be removed when the content is finalized.  
 -->
-
-除了新增功能外，这一版还有其他变化（如缺陷修复）。 有关详细信息，请参阅 [Configuration Manager Current Branch（版本 1806）的更改摘要](https://support.microsoft.com/help/4459701)。
-
-若要详细了解用于 Configuration Manager 的 Windows PowerShell cmdlet 的更改，请参阅 [PowerShell 1806 发行说明](https://docs.microsoft.com/powershell/sccm/1806_release_notes?view=sccm-ps)。
-
-此外，现在还可以获取这一版的以下附加更新：
-- [Configuration Manager Current Branch（版本 1806）更新汇总](https://support.microsoft.com/help/4462978)
-
 
 以下各节提供有关 Configuration Manager Current Branch 1806 版中的更改和新功能的详细信息。  
 
@@ -529,6 +521,27 @@ Version 1806 drops support for the following products:
 发送笑脸！ 现在可以就你的体验直接告知 Configuration Manager 团队。 从 Configuration Manager 控制台发送反馈很简单。 我们希望听到你的所有反馈：表扬、问题和建议。 在 Configuration Manager 控制台中，单击功能区上方右上角的笑脸按钮。 该反馈将直接提交给 Configuration Manager 的 Microsoft 产品团队。 虽然仍然支持使用 Windows 10 反馈中心，但最好使用控制台内部的反馈机制。  
 
 有关详细信息，请参阅 [1806 版中的控制台改进](/sccm/core/servers/manage/admin-console#console-improvements-in-version-1806)和[产品反馈](/sccm/core/understand/find-help#BKMK_1806Feedback)。
+
+
+
+## <a name="other-updates"></a>其他更新
+
+除了新增功能外，这一版还有其他变化（如缺陷修复）。 有关详细信息，请参阅 [Configuration Manager Current Branch（版本 1806）的更改摘要](https://support.microsoft.com/help/4459701)。
+
+若要详细了解用于 Configuration Manager 的 Windows PowerShell cmdlet 的更改，请参阅 [PowerShell 1806 发行说明](https://docs.microsoft.com/powershell/sccm/1806_release_notes?view=sccm-ps)。
+
+以下更新汇总 (4462978) 于 2018 年 10 月 24 日起在控制台中提供：[Configuration Manager Current Branch（版本 1806）更新汇总](https://support.microsoft.com/help/4462978)。
+
+
+### <a name="hotfixes"></a>修补程序
+
+以下附加修补程序可用于解决特定问题：
+
+| ID | 标题 | 日期 | 控制台内部 |
+|---------|---------|---------|---------|
+| [4346645](https://support.microsoft.com/help/4346645) | System Center Configuration Manager（版本 1806）更新，第一波 | 2018 年 8 月 31 日 | 是 |
+| [4465865](https://support.microsoft.com/help/4465865) | 如果 WSUS 断开连接，则不会在 Configuration Manager 环境中下载软件更新<br><br>更新汇总 (4462978) 中也包括此更新 | 2018 年 10 月 1 日 | 是 |
+| [4471892](https://support.microsoft.com/help/4471892) | PXE 响应程序不适用于 Configuration Manager 1806 中的子集 | 2018 年 11 月 23 日 | 否 |
 
 
 

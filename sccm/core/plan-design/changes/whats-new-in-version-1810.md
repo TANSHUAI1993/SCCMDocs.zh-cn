@@ -2,7 +2,7 @@
 title: 1810 版中的新增功能
 titleSuffix: Configuration Manager
 description: 获取有关 Configuration Manager Current Branch 1810 版中引入的更改和新功能的详细信息。
-ms.date: 12/20/2018
+ms.date: 01/25/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 60d1c93acc2fcc2c04d09cd8f0ec0c083089a8ec
-ms.sourcegitcommit: a3cec96a771eed69e58a29917d1a3fe1a5fb2e73
+ms.openlocfilehash: be1bbc8319a67b4aa2b4c27be9e9bbe6e935d087
+ms.sourcegitcommit: ad25a7bdd983c5a0e4c95bffdc61c9a1ebcbb765
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54250589"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55072962"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 1810 版中的新增功能
 
@@ -27,15 +27,6 @@ Configuration Manager Current Branch 的 1810 更新作为控制台中更新提�
 
 > [!Note]  
 > 本文目前列出了此版本中的所有重要功能。 但是，并非所有部分都链接到更新的内容并提供有关新功能的进一步信息。 定期查看此页面以获取更新。 我们使用 [已更新] 标记标注更改。 内容最终确定后，将删除此标注。  
-
-除了新增功能外，这一版还有其他变化（如缺陷修复）。 有关详细信息，请参阅 [Configuration Manager Current Branch（版本 1810）的更改摘要](https://support.microsoft.com/help/4482169)。
-
-<!--
-For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell 1810 Release Notes](https://docs.microsoft.com/powershell/sccm/1810_release_notes?view=sccm-ps).
-
-The following additional updates to this release are also now available:
-- [Update rollup for Configuration Manager current branch, version 1810](https://support.microsoft.com/help/4462978)
--->
 
 > [!Important]  
 > 若要利用新的 Configuration Manager 功能，请先将客户端更新到最新版本。 尽管在更新站点和控制台时 Configuration Manager 控制台中会显示新功能，但只有在客户端版本也是最新版本之后，完整方案才能正常运行。
@@ -147,7 +138,8 @@ Version 1810 drops support for the following products:
 
 ### <a name="improvements-to-internet-based-client-setup"></a>对基于 Internet 的客户端设置的改进
 <!--1359181-->
-<!--move this under co-management?--> 此版本进一步简化了针对 Internet 上的客户端的 Configuration Manager 客户端设置过程。 此站点向云管理网关 (CMG) 发布其他 Azure Active Directory (Azure AD) 信息。 Azure AD 联接的客户端使用其联接的同一租户在 ccmsetup 进程中从 CMG 获取此信息。 这种行为进一步简化了注册设备，使其在有多个 Azure AD 租户的环境中进行共同管理。 现在，只有两个必需的 ccmsetup 属性：CCMHOSTNAME 和 SMSSiteCode。
+<!--move this under co-management?-->  
+此版本进一步简化了针对 Internet 上的客户端的 Configuration Manager 客户端设置过程。 此站点向云管理网关 (CMG) 发布其他 Azure Active Directory (Azure AD) 信息。 Azure AD 联接的客户端使用其联接的同一租户在 ccmsetup 进程中从 CMG 获取此信息。 这种行为进一步简化了注册设备，使其在有多个 Azure AD 租户的环境中进行共同管理。 现在，只有两个必需的 ccmsetup 属性：CCMHOSTNAME 和 SMSSiteCode。
 
 <!--For more information, see [Prepare Windows 10 devices for co-management](https://docs.microsoft.com/en-us/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client).-->
 
@@ -361,8 +353,31 @@ PowerShell 配置文件是在 PowerShell 启动时运行的脚本。 可以创�
 
 ## <a name="bkmk_opmdm"></a> 本地 MDM
 
-### <a name="an-intune-connection-is-no-longer-required-for-on-premises-mdm"></a>本地 MDM 不再需要 Intune 连接
-<!--1359124--> 不再需要配置 Microsoft Intune 订阅的本地 MDM 先决条件。 组织仍需要 Intune 许可证才能使用此功能。 
+### <a name="an-intune-connection-is-no-longer-required-for-new-on-premises-mdm-deployments"></a>新的本地 MDM 部署不再需要 Intune 连接
+<!--1359124--> 新部署不再需要配置 Microsoft Intune 订阅的本地 MDM 先决条件。 组织仍需要 Intune 许可证才能使用此功能。 目前无法从现有的本地 MDM 部署中删除 Intune 连接。 有关详细信息，请参阅 [Intune 支持博客文章](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150)。
+
+
+
+## <a name="other-updates"></a>其他更新
+
+除了新增功能外，这一版还有其他变化（如缺陷修复）。 有关详细信息，请参阅 [Configuration Manager Current Branch（版本 1810）的更改摘要](https://support.microsoft.com/help/4482169)。
+
+<!--
+For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell 1810 Release Notes](https://docs.microsoft.com/powershell/sccm/1810_release_notes?view=sccm-ps).
+--> 
+
+以下更新汇总 (4486457) 于 2019 年 1 月 25 日起在控制台中提供：[Configuration Manager Current Branch（版本 1810）更新汇总](https://support.microsoft.com/help/4486457)。
+
+<!-- 
+### Hotfixes
+
+The following additional hotfixes are available to address specific issues:
+
+| ID | Title | Date | In-console |
+|---------|---------|---------|---------|
+| [4346645](https://support.microsoft.com/help/4346645) | Update for System Center Configuration Manager version 1806, first wave | 31 August 2018 | Yes | 
+
+-->
 
 
 

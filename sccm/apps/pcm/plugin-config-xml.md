@@ -10,17 +10,17 @@ ms.assetid: 940cc075-4066-44d5-972a-927c0b0a1143
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: noindex,nofollow
-ms.openlocfilehash: 863beac218dd493d75294686a00f9bda569fdfbb
-ms.sourcegitcommit: 759098de944b8f7d5eedfc2bae2cb9a6ba15276f
+ROBOTS: NOINDEX
+ms.openlocfilehash: 8fda0e2cc2d820904e1fb9ec893c4453fe26bfc2
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43297170"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54897436"
 ---
 # <a name="technical-reference-for-the-package-conversion-manager-plug-in-configuration-xml"></a>包转换管理器插件配置 XML 的技术参考
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 <!--1357861-->
 

@@ -10,16 +10,17 @@ ms.assetid: bcde47a7-433e-4944-964b-539b17d15d64
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9095bdf431525a66a570267c4fff07a382a16fe4
-ms.sourcegitcommit: af4f8bd8dffe6fb05f51322ea9e94d335a2cc0c0
+ROBOTS: NOINDEX
+ms.openlocfilehash: c443f561392f95d875a681319ebb9db4ff3fb66b
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39360761"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898471"
 ---
 # <a name="capabilities-in-configuration-manager-technical-preview-version-1807"></a>Configuration Manager 技术预览版 1807 中的功能 
 
-*适用范围：System Center Configuration Manager (Technical Preview)*
+适用范围：System Center Configuration Manager (Technical Preview)
 
 本文介绍 Configuration Manager 技术预览版 1807 中提供的功能。 安装此版本，以更新技术预览站点的功能并向其添加新功能。 
 
@@ -71,9 +72,9 @@ Steps to workaround, if any.
 
 社区工作区还包括以下节点：
 
-- 文档：显示 Configuration Manager [文档库](https://docs.microsoft.com/sccm/)  
+- **文档**：显示 Configuration Manager [文档库](https://docs.microsoft.com/sccm/)  
 
-- 反馈：显示 Configuration Manager [UserVoice 站点](https://configurationmanager.uservoice.com/)  
+- **反馈**：显示 Configuration Manager [UserVoice 站点](https://configurationmanager.uservoice.com/)  
 
 
 ### <a name="prerequisites"></a>先决条件
@@ -219,7 +220,7 @@ Steps to workaround, if any.
 
 现在，可以原始或结构化的 JSON 格式查看详细的脚本输出。 此格式设置可使输出更易于读取和分析。 如果该脚本返回有效的 JSON 格式的文本，则将详细输出视为 JSON 输出或原始输出。 否则，唯一的选择是脚本输出。 
 
-#### <a name="example-script-output-is-valid-json"></a>示例：脚本输出是有效的 JSON
+#### <a name="example-script-output-is-valid-json"></a>例如：脚本输出是有效的 JSON
 命令：`$PSVersionTable.PSVersion`  
 
 输出：  
@@ -229,7 +230,7 @@ Major  Minor  Build  Revision
 5      1      16299  551
 ```
 
-#### <a name="example-script-output-isnt-valid-json"></a>示例：脚本输出不是有效的 JSON
+#### <a name="example-script-output-isnt-valid-json"></a>例如：脚本输出是无效的 JSON
 命令：`Write-Output (Get-WmiObject -Class Win32_OperatingSystem).Caption`  
 
 输出：  

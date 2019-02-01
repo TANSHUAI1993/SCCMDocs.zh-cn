@@ -10,17 +10,16 @@ ms.assetid: 2200b02b-e76b-4aa7-a77a-6dc5e70f1333
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-robots: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 3a9c7758e394118041700192a393aff98f0d9087
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 2047874bb44c89e510abd52a387277e749cf65db
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32347325"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54896441"
 ---
 # <a name="system-center-updates-publisher"></a>System Center Updates Publisher
 
-*适用范围：System Center Updates Publisher*
+适用范围：System Center Updates Publisher
 
 System Center Updates Publisher (Updates Publisher) 是一款独立工具，可方便独立软件供应商或业务线应用程序开发者管理自定义更新。 这包括具有依赖项的更新，如驱动程序和更新捆绑包。
 

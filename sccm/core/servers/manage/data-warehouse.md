@@ -10,12 +10,12 @@ ms.assetid: aaf43e69-68b4-469a-ad58-9b66deb29057
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0c04ee9a62b6c629060f79df2f4b104fe78ca794
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: a4d95495f2f200eaff39699c65cc391a2a81b009
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53418979"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54897553"
 ---
 #  <a name="the-data-warehouse-service-point-for-configuration-manager"></a>Configuration Manager 的数据仓库服务点
 
@@ -237,7 +237,7 @@ A connection was successfully established with the server, but then an error occ
 
     2. 打开“SQL Server 配置管理器” 。 在“SQL Server 网络置配”下，右键单击选择“MSSQLSERVER 协议”下的“属性”。 在“证书”选项卡上，选择“数据仓库 SQL Server 标识证书”作为证书，然后保存所做更改。  
 
-    3. 在“SQL Server 配置管理器”中，在“SQL Server 服务”下，重启“SQL Server 服务”和“Reporting Service”服务。  
+    3. 在“SQL Server 配置管理器”中的“SQL Server 服务”下，重启“SQL Server 服务”。 如果承载数据仓库数据库的服务器上还安装了 SQL Reporting Services，请同样重启“Reporting Services”服务。  
 
     4. 打开 Microsoft 管理控制台 (MMC)，然后添加“证书”管理单元。 选择本地计算机的“计算机帐户”。 展开“个人”文件夹，然后选择“证书”。 将“数据仓库 SQL Server 标识证书”导出为 DER 编码的二进制 X.509 (.CER) 文件。  
 

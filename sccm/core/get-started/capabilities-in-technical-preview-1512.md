@@ -8,21 +8,21 @@ ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: e4d9e414-1346-4ed4-85d0-64d602b68731
 author: aczechowski
-robots: noindex,nofollow
+ROBOTS: NOINDEX
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 939a767820983c1fe2d575d7a745d6dabb45f25c
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.openlocfilehash: 970f86849572d6b360c5b92a42a3d131a38fe1d7
+ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32335654"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54896458"
 ---
 # <a name="capabilities-in-technical-preview-1512-for-system-center-configuration-manager"></a>System Center Configuration Manager Technical Preview 1512 版中的功能
 
-*适用范围：System Center Configuration Manager (Technical Preview)*
+适用范围：System Center Configuration Manager (Technical Preview)
 
-本文介绍了 System Center Configuration Manager Technical Preview 1512 版中的可用功能。 你可以安装此版本，以更新 Configuration Manager Technical Preview 站点的功能并向其添加新功能。 在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager Technical Preview](technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。  
+本文介绍了 System Center Configuration Manager Technical Preview 1512 版中的可用功能。 你可以安装此版本，以更新 Technical Preview 站点的功能并向其添加新功能。 在安装此版本的 Technical Preview 前，请查看介绍性主题 [System Center Configuration Manager 技术预览版](technical-preview.md)，以熟悉使用 Technical Preview 的常规要求和限制、如何在版本之间进行更新，以及如何提供关于 Technical Preview 中的功能的反馈。  
 
  以下是可以试用的此版本的新功能。  
 
@@ -63,7 +63,7 @@ ms.locfileid: "32335654"
 
     -   默认启用了保护策略设置（设置为“是”）。 启用后，此设置将在下载和安装时阻止 PUA。 但是，您可以排除特定文件或文件夹，以满足您的环境的特定需求。  
 
--   扫描设置：**在运行完全扫描时扫描映射的网络驱动器**  
+-   扫描设置：在运行完全扫描时扫描映射的网络驱动器  
 
     -   此设置可以提供更高的粒度，让管理员能够在按计划完全扫描的过程中允许按需扫描网络文件，从而规避始终扫描映射的网络驱动器的风险。  
 
@@ -75,9 +75,9 @@ ms.locfileid: "32335654"
 
      反恶意软件引擎可能会请求将文件示例发送到 Microsoft 供进一步分析。 默认情况下，发送此类示例之前将始终给出提示。 管理员现在可以管理以下设置以配置此行为：  
 
-    -   高级：**启用自动示例文件提交以帮助 Microsoft 确定某些检测到的项是否为恶意项**：将此设置更改为“是”以启用自动示例文件提交。 默认情况下，此设置为“否”，这意味着禁用了自动示例文件提交，并且将在发送示例前提示用户。   （此设置是在 System Center 2012 R2 Configuration Manager SP1 中首次推出的）  
+    -   高级：启动自动示例文件提交以帮助 Microsoft 确定某些检测到的项目是否恶意：将此设置改为“是”以启用自动示例文件提交。 默认情况下，此设置为“否”，这意味着禁用了自动示例文件提交，并且将在发送示例前提示用户。   （此设置是在 System Center 2012 R2 Configuration Manager SP1 中首次推出的）  
 
-    -   高级：**允许用户修改自动示例文件提交设置**：此设置决定在设备上具有本地管理权限的用户可否在客户端界面中更改自动示例文件提交设置。 默认情况下，此设置为“否”，这意味着只能从 Configuration Manager 内更改设置，设备上的本地管理员不能更改此配置。  
+    -   高级：允许用户修改自动示例文件提交设置：此设置决定在设备上具有本地管理权限的用户可否在客户端界面中更改自动示例文件提交设置。 默认情况下，此设置为“否”，这意味着只能从 Configuration Manager 内更改设置，设备上的本地管理员不能更改此配置。  
 
          例如，下面显示了启用时由管理员设置的 Windows 10 中的 Windows Defender 设置，并且不允许用户对其进行修改：  
 
