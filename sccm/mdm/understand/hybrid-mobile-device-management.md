@@ -2,7 +2,7 @@
 title: 使用 Microsoft Intune 的混合 MDM
 titleSuffix: Configuration Manager
 description: 了解使用 Configuration Manager 和 Microsoft Intune 的混合移动设备管理 (MDM)。
-ms.date: 11/02/2018
+ms.date: 01/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: bb95154b-f63e-4491-896e-41d732c802f8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a84dfc33fe79f5eb4d5397505a12052b8e92aebf
-ms.sourcegitcommit: a3cec96a771eed69e58a29917d1a3fe1a5fb2e73
+ms.openlocfilehash: a744463aa82951d68125c0d17d88ba5e8a1f2703
+ms.sourcegitcommit: 33e066aceaf321add1031df00e552e942c8351a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54250606"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55764406"
 ---
 # <a name="hybrid-mdm-with-configuration-manager-and-microsoft-intune"></a>使用 Configuration Manager 和 Microsoft Intune 的混合 MDM
 
@@ -38,7 +38,9 @@ ms.locfileid: "54250606"
 > 
 > - 许可将保持不变。 混合 MDM 中随附 Azure 上的 Intune 许可证。  
 > 
-> - Configuration Manager 中的条件访问和本地 MDM 功能并未弃用。 即将对 Configuration Manager 进行的更改将允许这些功能在没有混合 MDM 的情况下运行。 
+> - 在本地 MDM 功能在 Configuration Manager 中不推荐使用。 从 Configuration Manager 版本 1810年开始，可以使用本地 MDM 未连接到 Intune。 有关详细信息，请参阅[Intune 连接不再是新的本地 MDM 部署所必需的](/sccm/core/plan-design/changes/whats-new-in-version-1810#bkmk_opmdm)。 
+> 
+> - 在本地条件性访问功能的配置管理器也已弃用的混合 mdm。 如果在使用 Configuration Manager 客户端管理的设备上使用条件性访问，以确保它们仍然受到保护，首次启用条件性访问在 Intune 中的为这些设备在迁移之前。 启用共同管理配置管理器中，将符合性策略工作负载移动到 Intune，然后完成从 Intune 混合版迁移到 Intune 独立版。 有关详细信息，请参阅[条件访问的共同管理](https://docs.microsoft.com/sccm/comanage/quickstart-conditional-access)。 
 > 
 > - 2019 年 9 月 1 日，任何剩余的混合 MDM 设备将不再接收策略、应用或安全更新。  
 > 

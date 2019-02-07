@@ -10,24 +10,30 @@ ms.assetid: 34024741-edfa-4088-8599-d6bafc331e62
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f4e67050740b9d05dd33f2f79b7820b6dc8d9093
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 8bd926535f56e32430ae41c883623b80d142aebc
+ms.sourcegitcommit: 33e066aceaf321add1031df00e552e942c8351a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53415800"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55764423"
 ---
 # <a name="manage-access-to-o365-services-for-pcs-managed-by-system-center-configuration-manager"></a>管理对由 System Center Configuration Manager 管理的电脑的 O365 服务的访问
 
-*适用于：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 <!--1191496--> 配置 Configuration Manager 管理的电脑的 Office 365 服务的条件性访问。  
+
+> [!Important]  
+> 混合 MDM 包括本地条件性访问[已弃用的功能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)。 有关详细信息，请参阅[什么是混合 MDM](/sccm/mdm/understand/hybrid-mobile-device-management)。<!--Intune feature 2683117-->  
+> 
+> 如果在使用 Configuration Manager 客户端管理的设备上使用条件性访问，以确保它们仍然受到保护，首次启用条件性访问在 Intune 中的为这些设备在迁移之前。 启用共同管理配置管理器中，将符合性策略工作负载移动到 Intune，然后完成从 Intune 混合版迁移到 Intune 独立版。 有关详细信息，请参阅[条件访问的共同管理](https://docs.microsoft.com/sccm/comanage/quickstart-conditional-access)。 
+
+
+有关使用 Microsoft Intune 为注册设备和托管设备配置条件访问的信息，请参阅[在 System Center Configuration Manager 中管理服务访问权限](../../protect/deploy-use/manage-access-to-services.md)。 本文还介绍了已加入域但未对符合性进行评估的设备。
 
 > [!Note]  
 > 默认情况下，Configuration Manager 不启用此项可选功能。 必须在使用前启用此功能。 有关详细信息，请参阅[启用更新中的可选功能](/sccm/core/servers/manage/install-in-console-updates#bkmk_options)。<!--505213-->  
 
-
-有关使用 Microsoft Intune 为注册设备和托管设备配置条件访问的信息，请参阅[在 System Center Configuration Manager 中管理服务访问权限](../../protect/deploy-use/manage-access-to-services.md)。 本文还介绍了已加入域但未对符合性进行评估的设备。
 
 ## <a name="supported-services"></a>支持的服务  
 
@@ -78,9 +84,9 @@ ms.locfileid: "53415800"
 
 -   **需要在 Azure Active Directory 中的注册：** 此规则检查用户的设备工作场所加入 Azure AD 中，如果没有，请在 Azure AD 中自动注册该设备。 仅 Windows 8.1 支持自动注册。 对于 Windows 7 PC，请部署 MSI 来执行自动注册。 有关相关信息，请参阅[将设备自动注册到 Azure Active Directory](https://docs.microsoft.com/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup)  
 
--   **早于特定天数的截止日期之前安装所需的所有更新：** 对于从用户的设备上的所需更新的部署截止时间在宽限期内指定的值。 添加此规则还会自动安装所有挂起的必需更新。 指定“必需的自动更新”规则中的必需更新。   
+-   **在晚于特定天数的截止日期之前安装所有必需的更新：** 对于从用户的设备上的所需更新的部署截止时间在宽限期内指定的值。 添加此规则还会自动安装所有挂起的必需更新。 指定“必需的自动更新”规则中的必需更新。   
 
--   **需要使用 BitLocker 驱动器加密：** 此规则检查的主驱动器 (例如，c:\\) 在设备上进行 BitLocker 加密。 如果主驱动器上未启用 Bitlocker 加密，则将阻止设备对电子邮件和 SharePoint 服务的访问。  
+-   **需要使用 BitLocker 驱动器加密功能：** 此规则检查的主驱动器 (例如，c:\\) 在设备上进行 BitLocker 加密。 如果主驱动器上未启用 Bitlocker 加密，则将阻止设备对电子邮件和 SharePoint 服务的访问。  
 
 -   **需要反恶意软件：** 此规则检查 System Center Endpoint Protection 或 Windows Defender 是否已启用并正在运行。 如果未启用，则将阻止对电子邮件和 SharePoint 服务的访问。  
 

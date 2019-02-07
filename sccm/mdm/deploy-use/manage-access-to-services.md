@@ -10,20 +10,24 @@ ms.assetid: 7b04727b-d563-422f-8d59-4dd66215d0b3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6724113633ab7043c65bad0664ae4a338c829fce
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 37688e1bf992e6b48f3d871f09b7b357453cfc3f
+ms.sourcegitcommit: 33e066aceaf321add1031df00e552e942c8351a7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53422566"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55764338"
 ---
 # <a name="manage-access-to-services-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中管理对服务的访问
 
-*适用于：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
-
-## <a name="conditional-access-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的条件访问
 使用条件访问指定条件，从而帮助确保设备上通过 Microsoft Intune 注册的电子邮件和其他服务的安全。  
+
+> [!Important]  
+> 混合 MDM 包括本地条件性访问[已弃用的功能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)。 有关详细信息，请参阅[什么是混合 MDM](/sccm/mdm/understand/hybrid-mobile-device-management)。<!--Intune feature 2683117-->  
+> 
+> 如果在使用 Configuration Manager 客户端管理的设备上使用条件性访问，以确保它们仍然受到保护，首次启用条件性访问在 Intune 中的为这些设备在迁移之前。 启用共同管理配置管理器中，将符合性策略工作负载移动到 Intune，然后完成从 Intune 混合版迁移到 Intune 独立版。 有关详细信息，请参阅[条件访问的共同管理](https://docs.microsoft.com/sccm/comanage/quickstart-conditional-access)。 
+
 
  有关使用 Configuration Manager 客户端管理的设备上的条件访问信息，请参阅[管理对由 System Center Configuration Manager 管理的电脑的 O365 服务的访问](../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)。  
 
