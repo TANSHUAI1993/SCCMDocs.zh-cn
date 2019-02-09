@@ -10,19 +10,19 @@ ms.assetid: bb95154b-f63e-4491-896e-41d732c802f8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a744463aa82951d68125c0d17d88ba5e8a1f2703
-ms.sourcegitcommit: 33e066aceaf321add1031df00e552e942c8351a7
+ms.openlocfilehash: dd91d8afb092f855179edaa07163d5fcaa2ac350
+ms.sourcegitcommit: 38f56f1d5803370f4262931c2dc4a532bfcf0594
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55764406"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55905584"
 ---
 # <a name="hybrid-mdm-with-configuration-manager-and-microsoft-intune"></a>使用 Configuration Manager 和 Microsoft Intune 的混合 MDM
 
 适用范围：System Center Configuration Manager (Current Branch)
 
 > [!Important]  
-> 自 2018 年 8 月 14 日起，混合移动设备管理[功能停用](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)。
+> 自 2018 年 8 月 14 日起，混合移动设备管理[功能停用](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)。 从 1902 Intune 服务版本，应在 2019 年 2 月，末尾开始新客户不能创建新的混合连接。 
 > <!--Intune feature 2683117-->  
 > 自从一年多前在 Azure 上推出以来，Intune 已经增加了数百个客户要求和市场领先的新服务功能。 Intune 现在提供的功能远远超过了混合移动设备管理 (MDM)。 Azure 上的 Intune 为你的企业移动需求提供了更深入集成的简化管理体验。
 > 
@@ -36,13 +36,20 @@ ms.locfileid: "55764406"
 > 
 > - 如果在混合 MDM 产品/服务结束之前迁移到 Azure 上的 Intune，则不会对最终用户产生任何影响。  
 > 
+> - 2019 年 9 月 1 日，任何剩余的混合 MDM 设备将不再接收策略、应用或安全更新。  
+> 
 > - 许可将保持不变。 混合 MDM 中随附 Azure 上的 Intune 许可证。  
 > 
 > - 在本地 MDM 功能在 Configuration Manager 中不推荐使用。 从 Configuration Manager 版本 1810年开始，可以使用本地 MDM 未连接到 Intune。 有关详细信息，请参阅[Intune 连接不再是新的本地 MDM 部署所必需的](/sccm/core/plan-design/changes/whats-new-in-version-1810#bkmk_opmdm)。 
 > 
-> - 在本地条件性访问功能的配置管理器也已弃用的混合 mdm。 如果在使用 Configuration Manager 客户端管理的设备上使用条件性访问，以确保它们仍然受到保护，首次启用条件性访问在 Intune 中的为这些设备在迁移之前。 启用共同管理配置管理器中，将符合性策略工作负载移动到 Intune，然后完成从 Intune 混合版迁移到 Intune 独立版。 有关详细信息，请参阅[条件访问的共同管理](https://docs.microsoft.com/sccm/comanage/quickstart-conditional-access)。 
-> 
-> - 2019 年 9 月 1 日，任何剩余的混合 MDM 设备将不再接收策略、应用或安全更新。  
+> - 在本地条件性访问功能的配置管理器也已弃用的混合 mdm。 如果使用 Configuration Manager 客户端管理的设备上使用条件性访问，请确保它们在迁移之前受保护。 
+>     1. 设置在 Azure 中的条件性访问策略
+>     2. 设置 Intune 门户中的符合性策略 
+>     3. 完成混合迁移，并将 MDM 机构设置为 Intune
+>     4. 启用共同管理
+>     5. 将符合性策略共同管理工作负载移动到 Intune 
+>
+>     有关详细信息，请参阅[条件访问的共同管理](https://docs.microsoft.com/sccm/comanage/quickstart-conditional-access)。 
 > 
 > **我需要如何准备应对此项变化？**
 > 
