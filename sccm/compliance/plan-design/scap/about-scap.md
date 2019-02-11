@@ -2,7 +2,7 @@
 title: SCAP 扩展
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 的安全内容自动化协议 (SCAP) 扩展。
-ms.date: 07/30/2018
+ms.date: 01/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
@@ -10,18 +10,25 @@ ms.assetid: a315489d-5e12-46d6-903e-3a35235b72c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0cf248704d49f429bf4ca9dc4ea2be375093f92c
-ms.sourcegitcommit: 2cc635835709fb8d86cdb63ea34233b36c94d4d8
+ms.openlocfilehash: e42027663f06bff715cb7e9087ececbc421cc495
+ms.sourcegitcommit: 013ca76d5a3c07306de7b5bfd985b0289d1be599
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52258993"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55482446"
 ---
 # <a name="about-the-security-content-automation-protocol-scap-extensions"></a>关于安全内容自动化协议 (SCAP) 扩展
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 Configuration Manager 的 SCAP 扩展有助于分析和评估网络环境是否符合安全内容自动化协议 (SCAP)。 SCAP 由美国国家标准技术研究院 (NIST) 定义和维护。 有关详细信息，请参阅 [SCAP 项目概述](https://csrc.nist.gov/projects/security-content-automation-protocol)。
+
+> [!Note]  
+> 此版本的工具是预发布功能，仅在版本 1806 中提供。 此版本未通过 NIST 认证。 <!--SCCMDocs-pr issue 3323-->
+> 
+> 如果需要使用已认证的工具或正在使用 Configuration Manager 当前分支的其他版本，请使用以下版本的 SCAP 扩展：
+> - [下载 System Center Configuration Manager 的 SCAP 扩展](https://www.microsoft.com/download/details.aspx?id=48741)
+> - [SCAP 扩展版本 3.0 的文档](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/mt228311\(v%3dtechnet.10\))
 
 Configuration Manager 的 SCAP 扩展使用符合性设置功能首先扫描环境中的计算机。 然后，记录这些计算机对美国政府配置基线 (USGCB) 的符合性级别。
 

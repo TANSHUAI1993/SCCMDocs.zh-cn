@@ -10,12 +10,12 @@ ms.assetid: 0249dbd3-1e85-4d05-a9e5-420fbe44d850
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cb0d5d1982bb0b109b83f30f1101ddd50316d53e
-ms.sourcegitcommit: ad25a7bdd983c5a0e4c95bffdc61c9a1ebcbb765
+ms.openlocfilehash: 1cc8a2abaf6deff54db569416b91316e23cb4a69
+ms.sourcegitcommit: 013ca76d5a3c07306de7b5bfd985b0289d1be599
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55073027"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55482514"
 ---
 # <a name="whats-new-in-version-1806-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 1806 版中的新增功能
 
@@ -542,7 +542,7 @@ Version 1806 drops support for the following products:
 | [4346645](https://support.microsoft.com/help/4346645) | System Center Configuration Manager（版本 1806）更新，第一波 | 2018 年 8 月 31 日 | 是 |
 | [4465865](https://support.microsoft.com/help/4465865) | 如果 WSUS 断开连接，则不会在 Configuration Manager 环境中下载软件更新<br><br>更新汇总 (4462978) 中也包括此更新 | 2018 年 10 月 1 日 | 是 |
 | [4471892](https://support.microsoft.com/help/4471892) | PXE 响应程序不适用于 Configuration Manager 1806 中的子集 | 2018 年 11 月 23 日 | 否 |
-
+| [4487960](https://support.microsoft.com/help/4487960) | Microsoft Intune 连接器证书在 Configuration Manager 中未续订 | 2019 年 1 月 18 日 | 是 |
 
 
 ## <a name="next-steps"></a>后续步骤

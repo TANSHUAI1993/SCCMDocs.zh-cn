@@ -10,12 +10,12 @@ ms.assetid: 6bce416b-761d-4b23-bd33-5b7c30edb10d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4d892e8d194f61fece977c91ce36ba46cf9dd53d
-ms.sourcegitcommit: a3cec96a771eed69e58a29917d1a3fe1a5fb2e73
+ms.openlocfilehash: e1becb8cc719466edabfb55ce82f9aa5e3345e3f
+ms.sourcegitcommit: 013ca76d5a3c07306de7b5bfd985b0289d1be599
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54250708"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55482429"
 ---
 # <a name="pre-release-features-in-configuration-manager"></a>Configuration Manager 中的预发行功能
 
@@ -78,6 +78,7 @@ ms.locfileid: "54250708"
 | SMS 提供程序 API <!--1359052--> | 版本 1810 | ![尚未发行](media/red_x.png) |
 | [增强的 HTTP 站点系统](/sccm/core/plan-design/hierarchy/enhanced-http) <!--1356889,1358228--> | 版本 1806 | 版本 1810 |
 | [适用于共同管理的设备的客户端应用](/sccm/comanage/workloads#client-apps) <!--1357892--> | 版本 1806 | ![尚未发行](media/red_x.png) |
+| [SCAP 扩展](/sccm/compliance/plan-design/scap/about-scap) <!--3607889--> | 版本 1806 | ![尚未发行](media/red_x.png) |
 | [包转换管理器](/sccm/apps/pcm/package-conversion-manager) <!--1357861--> | 版本 1806 | 版本 1810 |
 | [支持适用于 iOS 的 Cisco AnyConnect 4.0.07x 及更高版本](/sccm/mdm/deploy-use/create-vpn-profiles) <!--1357393--> | 版本 1802 | 版本 1802 <br>包含更新 4163547 |
 | [分阶段部署](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence) <!--1356837--> | 版本 1802 | 版本 1806 |

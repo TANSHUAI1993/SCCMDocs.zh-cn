@@ -10,12 +10,12 @@ ms.assetid: 83a7c934-3b11-435d-ba22-cbc274951e83
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1ce1596a6882b7756339eff3a9bf65a9420a6cec
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: f334c4ec1ef66ba85026da6bc970e34b94b51204
+ms.sourcegitcommit: a2ecd84d93f431ee77848134386fec14031aed6a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53424511"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55230862"
 ---
 # <a name="plan-for-internet-based-client-management-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中基于 Internet 的客户端管理计划
 
@@ -48,8 +48,8 @@ ms.locfileid: "53424511"
 
   如果你具有配置为接受 Internet 连接的软件更新点，则 Internet 上基于 Configuration Manager Internet 的客户端始终会对此软件更新点进行扫描，以确定是否需要软件更新。 但是，如果这些客户端在 Internet 上，则它们首先会尝试从 Microsoft 更新下载软件更新，而不是从基于 Internet 的分发点中下载。 只有在此下载失败的情况下，它们之后才会尝试从基于 Internet 的分发点下载所需的软件更新。 未针对基于 Internet 的客户端管理进行配置的客户端不能从 Microsoft 更新下载软件更新，而必须使用 Configuration Manager 分发点。  
  
-[!Tip]  
-Configuration Manager 客户端自动确定它是在 Intranet 上还是在 Internet 上。 如果客户端可以访问域控制器或本地管理点，它会将自己的连接类型设置为“当前 Intranet”。 否则，它会切换到当前 Internet，客户端会使用分配到其站点的管理点、软件更新点和分发点进行通信。
+> [!Tip]  
+> Configuration Manager 客户端自动确定它是在 Intranet 上还是在 Internet 上。 如果客户端可以访问域控制器或本地管理点，它会将自己的连接类型设置为“当前 Intranet”。 否则，它会切换到当前 Internet，客户端会使用分配到其站点的管理点、软件更新点和分发点进行通信。
 
 ##  <a name="considerations-for-client-communications-from-the-internet-or-untrusted-forest"></a>有来自 Internet 或不受信任的林中的客户端通信的注意事项  
  下列安装在主站点上的站点系统角色支持来自不受信任的位置（如 Internet 或不受信任的林）的客户端连接（辅助站点不支持来自不受信任位置的客户端连接）：  

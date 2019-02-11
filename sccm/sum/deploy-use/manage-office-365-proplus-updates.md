@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
-ms.openlocfilehash: 1fa5646b17646258e4863b3a53960c9c15497389
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 7ef9c7d734c74d578c188576b3b03d66fcb1de06
+ms.sourcegitcommit: f7b2fe522134cf102a3447505841cee315d3680c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53418180"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55570228"
 ---
 # <a name="manage-office-365-proplus-with-configuration-manager"></a>使用 Configuration Manager 管理 Office 365 ProPlus
 
@@ -108,7 +108,6 @@ Office 365 客户端管理仪表板中显示的数据来自硬件清单。 启�
 
 
 ## <a name="deploy-office-365-updates"></a>部署 Office 365 更新
-计划的 [Office 365 中的自动更新任务](https://docs.microsoft.com/deployoffice/overview-of-the-update-process-for-office-365-proplus)每周运行几次。 如果最近安装了 Office 365，可能尚未设置更新通道，因此更新扫描将找不到适用的更新。 出于测试目的，可以手动启动更新任务。 
 
 使用以下步骤通过 Configuration Manager 部署 Office 365 更新：
 
@@ -133,6 +132,11 @@ Office 365 客户端管理仪表板中显示的数据来自硬件清单。 启�
 > - 从 Configuration Manager 版本 1706 开始，Office 365 客户端更新已移至“Office 365 客户端管理” >“Office 365 更新”节点。 此移动不会影响当前 ADR 配置。 
 > - 在 Configuration Manager 版本 1610 之前，必须使用 Office 365 客户端上配置的语言下载和部署更新。 例如，假设 Office 365 客户端上配置的语言为 en-us 和 de-de。 在站点服务器上，对适用的 Office 365 更新只下载并部署 en-us 内容。 当用户从软件中心开始安装此更新时，该更新会在下载 de-de 内容时挂起。   
 
+> [!NOTE]  
+>
+> 如果最近安装了 Office 365 专业增强版，根据其安装方式，更新通道可能尚未设置。 在这种情况下，已部署的更新将被检测为不适用。 在安装 Office 365 专业增强版时，将会创建一个[计划的自动更新任务](https://docs.microsoft.com/deployoffice/overview-of-the-update-process-for-office-365-proplus)。 在这种情况下，此任务需要至少运行一次，以设置更新通道并使更新检测为适用。
+>
+> 如果最近安装了 Office 365 专业增强版且未检测已部署的更新，出于测试目的，可以手动启动 Office 自动更新任务，然后在客户端上启动[软件更新部署评估周期](https://docs.microsoft.com/sccm/sum/understand/software-updates-introduction#scan-for-software-updates-compliance-process)。 有关如何在任务序列中执行此操作的说明，请参阅[在任务序列中更新 Office 365 专业增强版](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates#updating-office-365-ProPlus-in-a-task-sequence)。
 
 ## <a name="restart-behavior-and-client-notifications-for-office-365-updates"></a>Office 365 更新的重启行为和客户端通知
 将更新部署到 Office 365 客户端时，重启行为和客户端通知会存在差异，具体取决于 Configuration Manager 的版本。 下表提供了有关客户端收到 Office 365 更新时的最终用户体验的信息：
@@ -185,17 +189,28 @@ Office 365 客户端管理仪表板中显示的数据来自硬件清单。 启�
 11. 现在，如果下载 Office 365 更新，将下载在向导中选择的语言的更新，并在此过程中配置更新。 若要验证是否下载了正确语言的更新，请转到更新的包源，再查找文件名中包含语言代码的文件。  
     ![使用其他语言的文件名](../media/5-verification.png)
 
-## <a name="updating-office-365-during-task-sequences-when-office-365-is-installed-in-the-base-image"></a>在基础映像中安装 Office 365 后，在任务序列期间更新 Office 365
-当在已安装有 Office 365 的映像中安装操作系统时，更新通道注册表项值可能会包含原始安装位置。 在这种情况下，更新扫描不会显示任何适用的 Office 365 客户端更新。 计划的 Office 自动更新任务每周运行几次。 该任务运行后，更新通道将指向已配置的 Office CDN URL，随后，扫描将显示这些适用的更新。 <!--510452-->
+## <a name="updating-office-365-proplus-in-a-task-sequence"></a>在任务序列中更新 Office 365 专业增强版
+在使用[安装软件更新](https://docs.microsoft.com/sccm/osd/understand/task-sequence-steps#BKMK_InstallSoftwareUpdates)任务序列步骤来安装 Office 365 更新时，可能会将已部署的更新检测为不适用。  如果计划的 Office 自动更新任务尚未运行至少一次，则可能会出现这种情况（请参阅[部署 Office 365 更新中的说明](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates#deploy-office-365-updates)）。 例如，如果在安装 Office 365 专业增强版后立即运行此步骤，则可能会出现这种情况。
 
-若要确保通过设置更新通道找到适用的更新，请执行以下步骤：
-1. 在具有与 OS 基础映像相同 Office 365 版本的计算机上，打开任务计划程序 (taskschd.msc) 并标识 Office 365 自动更新任务。 它通常位于“任务计划程序库” >“Microsoft”>“Office”下。
+为确保对更新通道进行设置，以便正确检测已部署的更新，请使用以下方法之一：
+
+**方法 1：**
+1. 在具有与 Office 365 专业增强版相同版本的计算机上，打开任务计划程序 (taskschd.msc) 并标识 Office 365 自动更新任务。 它通常位于“任务计划程序库” >“Microsoft”>“Office”下。
 2. 右键单击自动更新任务，选择“属性”。
 3. 转到“操作”选项卡，单击“编辑”。 复制命令和所有参数。 
 4. 在 Configuration Manager 控制台中，编辑你的任务序列。
-5. 在任务序列中“安装更新”步骤的前面添加新的“运行命令行”步骤。 
+5. 在任务序列中“安装软件更新”步骤的前面添加新的“运行命令行”步骤。 如果将 Office 365 专业增强版作为同一任务序列的一部分安装，请确保在安装 Office 之后运行此步骤。
 6. 复制从 Office 自动更新计划任务收集的命令和参数。 
-7. 单击" **确定**"。 
+7. 单击“确定”。 
+
+**方法 2：**
+1. 在具有与 Office 365 专业增强版相同版本的计算机上，打开任务计划程序 (taskschd.msc) 并标识 Office 365 自动更新任务。 它通常位于“任务计划程序库” >“Microsoft”>“Office”下。
+2. 在 Configuration Manager 控制台中，编辑你的任务序列。
+3. 在任务序列中“安装软件更新”步骤的前面添加新的“运行命令行”步骤。 如果将 Office 365 专业增强版作为同一任务序列的一部分安装，请确保在安装 Office 之后运行此步骤。
+4. 在命令行字段中，输入将运行计划的任务的命令行。 请参阅以下示例，确保引号中的字符串与步骤 1 中标识的路径和任务名称相匹配。  
+
+    示例：`schtasks /run /tn "\Microsoft\Office\Office Automatic Updates"`
+5. 单击“确定”。 
 
 ## <a name="change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager"></a>在使 Office 365 客户端可从 Configuration Manager 接收更新后更改更新频道
 若要在将 Office 365 客户端启用为从 Configuration Manager 接收更新后更改更新频道，请使用组策略向 Office 365 客户端分发注册表项值更改。 更改 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration\CDNBaseUrl** 注册表项以使用以下值之一：

@@ -10,16 +10,16 @@ ms.assetid: 92b339ef-2723-4322-bec6-077b3e8846b0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a16794fbcff6f21f2240f69998c576994a57502c
-ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
+ms.openlocfilehash: 818065f4ea3f537dc565d06c278b710b224a4031
+ms.sourcegitcommit: f0ec334a70d0cdd3f5f185ac7787b700947f82de
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43893621"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55303210"
 ---
 # <a name="prerequisites-for-installing-configuration-manager-sites"></a>安装 Configuration Manager 站点的先决条件
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 在开始站点安装之前，先了解安装不同类型的 Configuration Manager 站点的先决条件。
 
@@ -115,7 +115,7 @@ Configuration Manager 仅在层次结构的顶层站点上支持这些角色。 
 #### <a name="open-the-sql-server-service-broker-port"></a>打开 SQL Server Service Broker 端口
 在独立主站点和管理中心站点的服务器之间，SQL Server Service Broker (SSB) 的网络端口必须打开。  
 
-若要在管理中心站点和主站点之间成功复制数据，Configuration Manager 需要在两个站点之间打开端口以供 SSB 使用。 在安装管理中心站点并扩展独立主站点时，先决条件检查不会验证为 SSB 指定的端口是否在主站点上打开。  
+若要在管理中心站点和主站点之间成功复制数据，Configuration Manager 需要在两个站点之间打开端口以供 SSB 使用。 在安装管理中心站点和扩展独立主站点时，先决条件检查不会验证你为 SSB 指定的端口是否在主站点上打开。  
 
 #### <a name="known-issues-with-azure-services"></a>Azure 服务的已知问题
 将以下任一 Azure 服务与 Configuration Manager 配合使用，扩展站点后，删除指向该服务的连接并重新创建连接。

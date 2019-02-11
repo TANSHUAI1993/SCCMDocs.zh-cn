@@ -2,7 +2,7 @@
 title: 支持中心
 titleSuffix: Configuration Manager
 description: 使用支持中心对 Configuration Manager 客户端进行故障排除。
-ms.date: 11/27/2018
+ms.date: 01/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,16 +10,16 @@ ms.assetid: c631197d-7daa-4faa-9e22-980cd6d604c2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6d9a4df006619278504d3a4967b813aa2989ebf7
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: 828edc3c90b4dd93f4d86772b863816bbc8c9130
+ms.sourcegitcommit: 013ca76d5a3c07306de7b5bfd985b0289d1be599
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52458001"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55482412"
 ---
 # <a name="support-center-for-configuration-manager"></a>Configuration Manager 的支持中心
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 <!--1357489--> 从版本 1810 开始，使用支持中心排除客户端故障、查看实时日志，或者捕获 Configuration Manager 客户端计算机状态供日后分析。 支持中心是用于整合多个管理员故障排除工具的单一工具。 
 
@@ -88,6 +88,8 @@ ms.locfileid: "52458001"
 使用 [New-CMMachineConnection](https://go.microsoft.com/fwlink/p/?linkid=390542) PowerShell cmdlet 连接到远程客户端时，支持中心会创建与每个远程客户端的服务器消息块 (SMB) 连接。 完成数据收集后，它会保留这些连接。 要避免超出 Windows 的最大远程连接数，请使用 `net use` 命令查看当前活动的远程连接集。 然后使用以下命令禁用所有不需要的连接：`net use <connection_name> /d` 
 其中 `<connection_name>` 是远程连接的名称。
 
+#### <a name="application-deployment-evaluation-cycle-request-isnt-sent-correctly-to-remote-machines"></a>向远程计算机发送的应用程序部署评估周期请求不正确
+<!--2849356--> 在支持中心，如果在“内容”选项卡上的“调用触发器”操作中选择“应用程序部署评估”，则此操作将启动一个评估已部署应用程序的任务。 如果你已连接到本地客户端，则它会评估计算机和用户应用程序部署。 但是，如果你已连接到远程客户端，它将仅评估计算机应用程序部署。
 
 
 ## <a name="next-steps"></a>后续步骤

@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 68407ab8-c205-44ed-9deb-ff5714451624
-ms.openlocfilehash: ad084aabca6f3b0fd920fd2c9b406efff36005a1
-ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
+ms.openlocfilehash: 0ba5a484fe11185b46125de0d8764bce153f577d
+ms.sourcegitcommit: a2ecd84d93f431ee77848134386fec14031aed6a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43995340"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55230845"
 ---
 # <a name="integrate-upgrade-readiness-with-configuration-manager"></a>将升级就绪情况与 Configuration Manager 集成
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 升级就绪情况是 [Windows Analytics](https://docs.microsoft.com/windows/deployment/upgrade/manage-windows-upgrades-with-upgrade-readiness) 的一部分。 可以使用它来访问和分析环境中的设备对升级至 Windows 10 的准备情况。 将升级就绪情况与 Configuration Manager 集成，以便在 Configuration Manager 控制台中访问客户端升级兼容性数据。 然后使用此数据创建集合，并设定要升级或修正的设备。
 
@@ -50,10 +50,14 @@ ms.locfileid: "43995340"
 
 使用 [Azure 服务向导](/sccm/core/servers/deploy/configure/azure-services-wizard)简化用于 Configuration Manager 的 Azure 服务的配置过程。 若要将 Configuration Manager 和升级就绪情况相连，请在 [Azure 门户](https://portal.azure.com)中创建“Web 应用/API”类型的 Azure Active Directory (Azure AD) 应用注册。 有关如何创建应用注册的详细信息，请参阅[向 Azure AD 租户注册应用程序](/azure/active-directory/active-directory-app-registration)。 
 
-在 Azure 门户中，向新注册的 Web 应用提供“参与者”权限。 在包含承载升级就绪情况数据的 Log Analytics 工作区的资源组上设置这些权限。 Azure 服务向导使用此应用注册来允许 Configuration Manager 与 Azure AD 进行安全通信，并将你的基础结构连接至升级就绪情况数据。
+在 Azure 门户中，向新注册的 Web 应用提供以下权限：
+- 向包含升级就绪情况数据的 Log Analytics 工作区的资源组提供读者权限
+- 向托管升级就绪情况数据的 Log Analytics 工作区提供参与者权限
+
+Azure 服务向导使用此应用注册来允许 Configuration Manager 与 Azure AD 进行安全通信，并将你的基础结构连接至升级就绪情况数据。
 
 > [!IMPORTANT]  
-> 将“参与者”权限赋予应用本身，而不是 Azure AD 用户标识。 它是代表 Configuration Manager 基础结构访问数据的注册应用。 要授予权限，需要在分配权限时，在“添加用户”区域中搜索应用注册的名称。 
+> 将权限赋予应用本身，而不是 Azure AD 用户标识。 它是代表 Configuration Manager 基础结构访问数据的注册应用。 要授予权限，需要在分配权限时，在“添加用户”区域中搜索应用注册的名称。 
 > 
 > 此过程与向 Configuration Manager 提供 Log Analytics 权限相同。 在使用 Azure 服务向导将应用注册导入 Configuration Manager 之前，必须完成这些步骤。
 > 

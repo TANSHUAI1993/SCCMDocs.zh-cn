@@ -2,7 +2,7 @@
 title: UUP 预览版
 titleSuffix: Configuration Manager
 description: 有关 UUP 集成预览版的说明
-ms.date: 01/25/2019
+ms.date: 01/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 27a960758d8d3939798ae270404d5dd1afbea62d
-ms.sourcegitcommit: ad25a7bdd983c5a0e4c95bffdc61c9a1ebcbb765
+ms.openlocfilehash: fde592b02d78c0a2ab29d77f7e55273c143b09ee
+ms.sourcegitcommit: f7b2fe522134cf102a3447505841cee315d3680c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55072979"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55570126"
 ---
 # <a name="uup-private-preview-instructions"></a>UUP 个人预览版说明
 
@@ -40,7 +40,9 @@ ms.locfileid: "55072979"
 
 ### <a name="cumulative-updates"></a>累积更新
 
-使用 UUP 的累积更新允许对 FOD 和语言包的内容进行脱机分发，从而使最终用户能够按需获取它们，而无需上网或管理员进行繁琐的暂存工作。
+- 使用 UUP 的累积更新允许对 FOD 和语言包的内容进行脱机分发，从而使最终用户能够按需获取它们，而无需上网或管理员进行繁琐的暂存工作。
+
+- 使用 UUP 的累积更新包括每月累积安全更新的服务堆栈更新。 这样可解决协调这两种更新的难题。 它可确保及时提供服务堆栈更新以安装累积更新，而无需管理和协调关系。
 
 
 
@@ -66,9 +68,7 @@ MUUrl 属性应为 `https://sws.update.microsoft.com`。 若要更改它，请�
 
 ### <a name="2-update-configmgr"></a>2.更新 ConfigMgr
 
-若要在环境中同步快速安装文件，则生产环境需要安装 ConfigMgr 1810 当前分支，或实验室环境需要安装 1812 技术预览分支。
-
-若要在环境中同步快速安装文件，则生产环境还需要安装 ConfigMgr 1810 修补程序 KB4482615，或实验室环境需要安装 1812 技术预览分支。
+对 Configuration Manager 站点进行以下更改，以支持此 UUP 预览版：
 
 
 #### <a name="diagnostics-and-usage-data-level"></a>诊断和使用情况数据级别

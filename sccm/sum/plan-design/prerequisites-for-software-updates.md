@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: fdf05118-162a-411e-b72e-386b9dc9a5e1
-ms.openlocfilehash: cbaaa84b0c4b3c9b05e7ffbae565a7b6da7c7426
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 5ec545fd2ae6c775fbbd0d984dcdd487359ab043
+ms.sourcegitcommit: f7b2fe522134cf102a3447505841cee315d3680c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53423875"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55570160"
 ---
 # <a name="prerequisites-for-software-updates-in-system-center-configuration-manager"></a>System Center Configuration Manager 中软件更新的先决条件
 
@@ -32,7 +32,8 @@ ms.locfileid: "53423875"
 ### <a name="windows-server-update-services"></a>Windows Server 更新服务  
  软件更新同步和在客户端上进行的软件更新适用性扫描都需要使用 Windows Server Update Services (WSUS)。 在创建软件更新点角色之前，必须安装 WSUS 服务器。 软件更新点支持以下版本的 WSUS：  
 
--   WSUS 10.0（Windows Server 2016 中的角色）
+-   WSUS 10.0.14393（Windows Server 2016 中的角色）
+-   WSUS 10.0.17763（Windows Server 2019 中的角色）（需要使用 Configuration Manager 1810 或更高版本）
 -   WSUS 6.2 和 6.3（Windows Server 2012 和 Windows Server 2012 R2 中的角色）
 
 >[!NOTE]
