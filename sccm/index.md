@@ -4,12 +4,13 @@ hide_bc: true
 title: System Center Configuration Manager 文档
 description: 了解如何使用 System Center Configuration Manager。
 ms.topic: hub-page
-ms.openlocfilehash: ddf8843e490a86534eea0a3c90a78cc7849e4a62
-ms.sourcegitcommit: 6c39c1b5540d8cd8d0e2952b6afc805d6d7540cd
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 996ff0e10a6f5db2743e9c74a32692f9ac2fc0e2
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54379598"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56121135"
 ---
 <div id="main" class="v2">
     <div class="container">
