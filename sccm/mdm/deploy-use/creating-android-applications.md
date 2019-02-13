@@ -10,16 +10,17 @@ ms.assetid: e025c48c-1514-4ab7-836c-e0635aaa993a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a95a7735cc7f7afb6a16b030de6925926335e403
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: ef070186112642d204aade24039da87c0e3a22f0
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385212"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56139664"
 ---
 # <a name="create-android-applications-in-configuration-manager"></a>在 Configuration Manager 中创建 Android 应用程序
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 Configuration Manager 应用程序具有一个或多个部署类型。 部署类型包括将软件部署到设备所需的安装文件和信息。 部署类型还具有指定软件的部署时间和方法的规则。  
 
@@ -37,7 +38,7 @@ Configuration Manager 支持部署 Android .apk 包。
 
 |设备类型|支持的操作|
 |-|-|
-|Android|可用、必需：用户必须同意安装和卸载。|
+|Android|**可用**，**所需**:用户必须同意安装和卸载。|
 |Android for Work |可用、必需 |
 
 
@@ -48,7 +49,7 @@ Configuration Manager 支持部署 Android .apk 包。
 
 使用以下步骤在 Play for Work 应用商店中批准应用，将其同步到 Configuration Manager 控制台，然后将其部署到托管的 Android for Work 设备中。 若要将应用部署到用户的工作配置文件，需要在 Play for Work 中批准应用。 然后将应用与 Configuration Manager 控制台同步。
 
-1. 打开浏览器并转到：https://play.google.com/work。  
+1. 打开浏览器并转到： https://play.google.com/work。  
 
 2. 使用绑定到 Microsoft Intune 租户的 Google 管理员帐户登录。  
 

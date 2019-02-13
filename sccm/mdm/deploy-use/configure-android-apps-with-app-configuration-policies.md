@@ -10,16 +10,17 @@ ms.assetid: 9126d188-7780-45a4-b21d-7fcf4fad7da2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6f83f26f746c54e3d1defe31df47b3c7c8a7e117
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 7d6f8c25902be857e0eec3cd4b969d1fb5bda136
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53417942"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56136324"
 ---
 # <a name="apply-settings-to-android-for-work-apps-with-app-configuration-policies-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中将设置应用于使用应用配置策略的 Android for Work 应用
 
-*适用于：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 可以使用 System Center Configuration Manager 中的应用配置策略来分发用户运行应用时可能需要的设置。 例如，应用可能要求用户指定以下详细信息：
 - 自定义端口号
@@ -41,7 +42,7 @@ Android 应用配置政策仅适用于运行 Android for Work 的设备。 应�
 3. 在“创建应用配置策略”向导的“常规”页上，设置此策略信息：
    - **名称**。 输入策略的唯一名称。
    - **说明**。 （可选）为了便于轻松识别策略，可以添加说明。
-   -  **选择配置策略类型**。 指定应用配置策略的目标平台：**Android for Work 应用配置策略**。
+   -  **选择配置策略类型**。 指定应用配置策略的目标平台：**Android for Work 应用的配置策略**。
    -  **分配类别以改进搜索和筛选**。 （可选）若要对策略创建和分配类别，选择“类别”。 类别可以方便用户在 Configuration Manager 控制台中对项目进行排序和查找。
 4. 在“Android for Work 策略”页上，选择设置配置策略信息的方式：
    - **指定名称和值对**。 可以将此选项用于不使用嵌套的属性列表文件。 指定名称和值对：

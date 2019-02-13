@@ -10,16 +10,17 @@ ms.assetid: 49cec466-1676-4fe2-a2fe-5004f01d735e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4d00973704ce49a949c89a37e89ed2d39064cbec
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 755be3231c00eabf9562256e62061fbad70633e7
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53422906"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56140943"
 ---
 # <a name="manage-sharepoint-online-access-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中管理 SharePoint Online 访问
 
-*适用于：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 
 SharePoint Online 的 Configuration Manager 条件访问策略可管理对 OneDrive for Business 文件（存储在 SharePoint Online 上）的访问。 根据所指定的条件进行访问。
@@ -128,7 +129,7 @@ Office 桌面应用程序可以访问运行以下系统的电脑上的 SharePoin
 
    
 
-###  <a name="BKMK_OneDrive"></a> 步骤 3:配置 SharePoint Online 策略  
+###  <a name="BKMK_OneDrive"></a>步骤 3：配置 SharePoint Online 策略  
 
  接下来，配置策略以要求只有托管及合规设备才能访问 SharePoint Online。 此策略存储在 Azure AD 中。
 

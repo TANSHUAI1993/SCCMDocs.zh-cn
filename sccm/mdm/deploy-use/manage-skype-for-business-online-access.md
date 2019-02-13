@@ -10,16 +10,17 @@ ms.assetid: 71c44250-626e-482c-8794-434c6aeb2fb1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f5a03629fdea4a8fc496db624d0b32657d9bec83
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 78c40d84b7d774d7621b983a6e2bb755b14f9563
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53419098"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56138358"
 ---
 # <a name="manage-skype-for-business-online-access"></a>管理 Skype for Business Online 访问
 
-*适用于：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 
 基于你指定的条件，使用 Skype for Business Online 的条件访问策略管理对 Skype for Business Online 的访问权限。  

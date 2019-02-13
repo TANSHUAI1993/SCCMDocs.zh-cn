@@ -10,12 +10,13 @@ ms.assetid: 7b127cee-61f1-4681-9760-caebed36ddf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d6b54466f72c56d830954f8641b9f06f5f6e76e7
-ms.sourcegitcommit: 7e020ce097360e8703ac8cd6bd871c33f72a441e
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: e5199edf3e362deaeb160bf105ae69f7acbee334
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55742050"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56124330"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Configuration Manager 和 Microsoft Intune 的混合移动设备管理中的新增功能
 

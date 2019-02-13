@@ -4,12 +4,13 @@ ms.author: aaroncz
 ms.prod: configuration-manager
 ms.topic: include
 ms.date: 11/30/2018
-ms.openlocfilehash: b58f4a299ec5831d1b39c222e5800ac852136bc9
-ms.sourcegitcommit: 9f02f21fbd4324ee8cc1af2d56db67c9c2fce969
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 83ee795be7683a708a32b2c747524d4e400d0df2
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52716288"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56142555"
 ---
 - Apple iOS 9.0 及更高版本
 - Google Android 4.0 及更高版本（包括 Samsung KNOX 标准版 4.0 及更高版本）*

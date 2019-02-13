@@ -10,16 +10,17 @@ ms.assetid: ad8fa94d-45bb-4c94-8d86-31234c5cf21c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8c27c945b384a9769d008667f124d414275a3c11
-ms.sourcegitcommit: e54e9d4a735e72b84095e0017c5bec50af480207
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 2544d2b61c3d92555d0bc1abc908003f1c982bab
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/14/2018
-ms.locfileid: "39039584"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56136511"
 ---
 # <a name="device-compliance-policies-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的设备合规性策略
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 Configuration Manager 中的符合性策略定义了设备必须遵守哪些规则和设置才能被视为符合条件访问策略。 也可使用符合性策略来监视和修正独立于条件访问的设备符合性问题。  
 
@@ -82,7 +83,7 @@ Configuration Manager 中的符合性策略定义了设备必须遵守哪些规�
 
      - 不符合- 未分配有符合性策略的设备被视为不符合策略。 如果启用条件访问，则按照条件访问策略中的条件阻止这些设备访问内部资源。  
 
-4. 单击“保存”。  
+4. 单击保存。  
 
 强烈建议至少在每个平台中向环境中的所有用户部署一个符合性策略。 然后将此设置配置为“不符合”，从而确保内部资源的安全性。 有关详细信息，请参阅 [Intune 服务中的安全性增强功能](https://aka.ms/compliance_policies)博客文章。
 

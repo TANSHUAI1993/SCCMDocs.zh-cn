@@ -10,16 +10,17 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: 6f0201d7-5714-4ba0-b2bf-d1acd0203e9a
-ms.openlocfilehash: 79cf4c2ec217a245bb5c4abbad40aad7188e0ac0
-ms.sourcegitcommit: 3772ece83823714b2aae46ec20523cc094701760
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 7ede0049847eda2b87731f4cfbce0bda8984f158
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51688460"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56120242"
 ---
 # <a name="change-the-mdm-authority-for-specific-users-mixed-mdm-authority"></a>更改特定用户的 MDM 机构（混合 MDM 机构） 
 
-*适用于：System Center Configuration Manager (Current Branch)*    
+适用范围：System Center Configuration Manager (Current Branch)    
 
 您可以在同一租户中配置混合的 MDM 机构。 管理在 Microsoft Intune 和其他一些用户使用混合 mdm。 此文提供有关如何开始将用户移至 Intune 独立版的信息。 它假定你已完成以下步骤：  
 

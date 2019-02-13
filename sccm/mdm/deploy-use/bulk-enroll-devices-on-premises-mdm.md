@@ -10,16 +10,17 @@ ms.assetid: b36f5e4a-2b57-4d18-83f6-197081ac2a0a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 437f6e6068fb56f1a906cbb8bea24cd3c707f0e3
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: e0c007a2414a68701584967ee21e3cf046e42be3
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350232"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56130616"
 ---
 # <a name="how-to-bulk-enroll-devices-with-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中向本地移动设备管理批量注册设备
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 
 相较于要求用户输入其凭据以注册设备的用户注册，System Center Configuration Manager 本地移动设备管理中的批量注册是自动化程度更高的注册设备的方式。  批量注册使用注册程序包在注册过程中对设备进行身份验证。 包（.ppkg 文件）中包含证书配置文件和可选的 Wi-Fi 配置文件（设备需要 intranet 连接以支持注册时选择）。  
@@ -65,9 +66,9 @@ ms.locfileid: "32350232"
 >
 > - Configuration Manager 的 Current Branch 仅支持以下用于本地移动设备管理的 Wi-Fi 安全性配置：  
 >   
->   - 安全类型：“WPA2 企业”  或“WPA2 个人”   
->   - 加密类型：“AES”  或“TKIP”   
->   - EAP 类型：“智能卡或其他证书”  或“PEAP”   
+>   - 安全类型：**WPA2 企业**或**WPA2 个人**  
+>   - 加密类型：**AES**或**TKIP**  
+>   - EAP 类型：“智能卡或其他证书”或 PEAP  
 >
 >
 > - 尽管 Configuration Manager 在 Wi-Fi 配置文件中有针对代理服务器信息的设置，但在注册设备时不会配置代理。 如果需要对已注册设备设置代理服务器，可以在设备注册后使用配置项目部署设置，或使用 Windows 映像和配置设计器 (ICD) 创建第二个包以部署在批量注册程序包旁边。

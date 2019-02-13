@@ -10,16 +10,17 @@ ms.assetid: 497c05c7-fe9f-4b88-983b-1c5b3d59308e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ac0e4426b2025a88f126f9cc0b2e57f5a5313740
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 63a82c6b81d5a2e09c6f73b79c39372c96ed4e07
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32347393"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56143650"
 ---
 # <a name="on-premises-mobile-device-management-mdm-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的本地移动设备管理 (MDM)
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 System Center Configuration Manager 本地移动设备管理是一个设备管理解决方案，它在使用企业的 Configuration Manager 基础结构管理和维护设备时，（基于开放移动联盟设备管理或 OMA DM 标准）需要依赖设备操作系统的内置管理功能。 本地移动设备管理要求 Microsoft Intune 设置管理功能，但仅在订阅（有时帮助通知设备签入更改的策略）时需要，而不用于管理设备或存储有关这些设备的数据。  
 

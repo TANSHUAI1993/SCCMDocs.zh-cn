@@ -10,16 +10,17 @@ ms.assetid: aba688d9-fd5b-4c42-8cb4-f7e1b161ef50
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 98b573dcf72f4bbf3cde73cb9a5cd7905b8a0248
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: a157e8696a9b4b24acb722be037185351f94ccdc
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53417313"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56127875"
 ---
 # <a name="manage-mobile-devices-with-system-center-configuration-manager-and-exchange"></a>使用 System Center Configuration Manager 和 Exchange 管理移动设备
 
-*适用于：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 希望使用 Microsoft Exchange ActiveSync 协议管理连接到 Exchange Server（本地或联机）的移动设备，并且无法使用 Configuration Manager 注册这些设备时，请使用 System Center Configuration Manager 中的 Exchange Server 连接器。 可从 Configuration Manager 控制台配置 Exchange 移动设备管理功能，例如远程设备擦除和针对多个 Exchange 服务器的设置控制。  
 
@@ -44,7 +45,7 @@ ms.locfileid: "53417313"
 ## <a name="required-security-permissions"></a>所需的安全权限  
  你必须具有以下安全权限才能配置 Exchange Server 连接器：  
 
-- 若要添加、 修改和删除 Exchange Server 连接器：**修改**的权限**站点**对象。  
+- 若要添加、 修改和删除 Exchange Server 连接器：“站点”对象的“修改”权限。  
 
 - 若要配置移动设备设置：**ModifyConnectorPolicy**的权限**站点**对象。  
 
@@ -52,11 +53,11 @@ ms.locfileid: "53417313"
 
   你必须具有以下安全权限才能管理移动设备：  
 
-- 若要擦除移动设备：**删除资源**有关**集合**对象。  
+- 若要擦除移动设备：“集合”对象的“删除资源”权限。  
 
-- 若要取消擦除命令：**修改资源**有关**集合**对象。  
+- 若要取消擦除命令：“集合”对象的“修改资源”权限。  
 
-- 若要允许和阻止移动设备：**修改资源**有关**集合**对象。  
+- 若要允许和阻止移动设备：“集合”对象的“修改资源”权限。  
 
   “操作管理员”  安全角色包括使用 Exchange Server 连接器管理移动设备所需的权限。  
 

@@ -10,16 +10,17 @@ ms.assetid: 59004b34-b64f-4d77-898c-07bf3dc75430
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 15774704665b2b52daf1061db221ab0eb158eceb
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: dcf12937009a91bb8cc5a8c1c191861fec06ac13
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32347512"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56137552"
 ---
 # <a name="how-users-enroll-devices-with-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>用户如何在 System Center Configuration Manager 中向本地移动设备管理注册设备
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 借助 System Center Configuration Manager 本地移动设备管理，如果用户已获得注册权限（通过更新客户端设置的方式）并且设备已安装所需的根证书以与承载所需站点系统角色的服务器进行受信任的通信，则可以注册设备。 有关如何设置注册的详细信息，请参阅 [Set up device enrollment for On-premises Mobile Device Management in System Center Configuration Manager](../../mdm/get-started/set-up-device-enrollment-on-premises-mdm.md)（在 System Center Configuration Manager 中为本地移动设备管理设置设备注册）。  
 

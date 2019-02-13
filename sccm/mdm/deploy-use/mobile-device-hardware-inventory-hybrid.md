@@ -10,16 +10,17 @@ ms.assetid: 78a0aecc-f775-451e-aa05-56377ec91b1f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5a616d20c71b76571e34a9147d0408a98c235e97
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: d1a208b3bac5d0b12a9fd395506f02d283a0b55f
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350164"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56125079"
 ---
 # <a name="how-to-configure-hardware-inventory-for-mobile-devices-enrolled-by-microsoft-intune-and-system-center-configuration-manager"></a>如何配置通过 Microsoft Intune 和 System Center Configuration Manager 注册的移动设备的硬件清单
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 在 Configuration Manager 中，可以使用 Microsoft Intune 连接器收集 iOS、Android 和 Windows 设备上的硬件清单。 有关如何配置硬件清单的信息，请参阅[如何在 System Center Configuration Manager 中扩展硬件清单](../../core/clients/manage/inventory/extend-hardware-inventory.md)。  
 
@@ -56,7 +57,7 @@ ms.locfileid: "32350164"
  **Outlook Web Access (OWA)**  
 
 > [!NOTE]  
->  **注意：** 使用 Android 公司门户应用时，Android 清单类可用。  
+>  **注意：** 使用 Android 公司门户应用时，android 清单类都可用。  
 
 |硬件清单类|Android|  
 |------------------------------|-------------|  

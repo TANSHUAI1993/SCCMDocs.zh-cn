@@ -10,16 +10,17 @@ ms.assetid: 408190da-bea6-4122-9dd6-f90155040e88
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 24a066b30d6c220ecb5be8455a3150bd27936da7
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: cc5b38894155df35812d14397fb0d3aaea79c585
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32347529"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56122485"
 ---
 # <a name="monitor-mobile-threat-defense-compliance"></a>**监视移动威胁防御符合性**
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 ## <a name="to-monitor-the-overall-compliance-status"></a>监视整体符合性状态
 
@@ -54,15 +55,15 @@ ms.locfileid: "32347529"
 > [!IMPORTANT] 
 > 设备威胁防护选项卡仅在所选设备为移动设备时才会显示。
 
-|列名称|默认情况下可见|说明| 
+|列名称|默认情况下可见|描述| 
 |-|-|-|
 |**描述**| 是 | 有关移动威胁防御合作伙伴所提供的威胁的详细信息。 |
 |**上次更新时间**| 是 | 移动威胁防御合作伙伴上一次向 Intune 发送有关威胁的已更新的详细信息的时间。 |
-|**威胁严重性**| 是 | 威胁严重性是单个威胁的定义，它基于“移动威胁防御合作伙伴”控制台中的管理员的配置。 它具有三个值：**低**、**中**或**高** |
-|**威胁状态**| 是 | 设备上威胁的当前状态。 可能的状态：**激活**、**已解决**或**已忽略：** 表示用户忽略了设备上的威胁，但是威胁仍然存在。 |
-|**威胁类型**| 是 | 威胁的移动威胁防御合作伙伴类型。 可能的值：**应用**、**文件**或**操作系统** |
+|**威胁严重性**| 是 | 威胁严重性是单个威胁的定义，它基于“移动威胁防御合作伙伴”控制台中的管理员的配置。 它具有三个值之一：**低**，**中等**或**高** |
+|**威胁状态**| 是 | 设备上威胁的当前状态。 可能的状态：**Active**，**解析**或**忽略：** 指示用户将忽略其设备上的威胁但威胁仍然存在。 |
+|**威胁类型**| 是 | 威胁的移动威胁防御合作伙伴类型。 可能的值：**应用程序**，**文件**或**OS** |
 |**AAD 帐户 ID**| 否 | Azure Active Directory 唯一标识符。 |
-|**分类**| 是 | 移动威胁防御合作伙伴提供了威胁的分类。 可取值：**Root Enabler、Riskware、Adware、Chargeware、DataLeak、Trojan、Worm、Virus、Exploit、Backdoor、Bot、AppDropper、ClickFraud、Spam、Spyware、SurveillanceWare、Vulnerability、Unknown、Root Jailbrake、Connectivity、TollFraud、SideloadedApp** |
+|**分类**| 是 | 移动威胁防御合作伙伴提供了威胁的分类。 可能的值：**Root Enabler、 Riskware、 广告软件、 Chargeware、 DataLeak、 木马病毒、 蠕虫、 病毒，利用，后门，Bot、 AppDropper、 ClickFraud、 垃圾邮件、 间谍软件、 SurveillanceWare、 漏洞和未知，Root Jailbrake、 连接、 TollFraud、 SideloadedApp** |
 |**设备 ID**| 否 | Azure Active Directory 对象 ID，表示包含威胁信息的已联接的设备的工作区。 |
 |**威胁 ID**| 否 | 移动威胁防御合作伙伴生成的威胁的唯一标识符。 威胁 ID 用于跟踪解析。 |
 |**威胁 URL**| 否 | 如果存在，则威胁 URL 链接回此特定威胁的移动威胁防御合作伙伴的管理控制台视图。 |

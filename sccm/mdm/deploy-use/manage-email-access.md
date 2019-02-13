@@ -10,16 +10,17 @@ ms.assetid: fa648e73-5fb8-4818-ab57-7466ffaf888e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f1dbe514e8beca7250b7bfa62a9af7997bf5246c
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: f976b63b4580b5df9c6e609ff6b361538860c41c
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53417228"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56137637"
 ---
 # <a name="manage-email-access-in-configuration-manager"></a>管理 Configuration Manager 中的电子邮件访问
 
-*适用于：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 使用 Configuration Manager 条件访问来管理对 Exchange 电子邮件基于你指定的条件访问中。  
 
@@ -124,7 +125,7 @@ Exchange Online 仅支持适用于 iOS 和 Android 的 Outlook 应用以及 Outl
 
 - **已向 AAD 注册**:设备注册到 Azure Active Directory （称为工作区加入） 中。  
 
-- **符合**:设备不符合任何已部署的符合性策略。  
+- **符合**：设备不符合任何已部署的符合性策略。  
 
 - **已激活 EAS**: iOS 和 Android 设备需要具有与 Azure Active Directory 中的设备注册记录相关联的 Exchange ActiveSync ID。 当用户单击隔离电子邮件中的“激活电子邮件”  链接时，将发生这种情况。  
 

@@ -9,16 +9,17 @@ ms.assetid: 7e4ada34-63bf-4b9f-8246-31816aa44196
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 179aae5fdbd8d6c09a34dca6dd01437d5f61f7b8
-ms.sourcegitcommit: 0a4556820fabe004d45a82b0ee1176f6891ac9f0
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: b36e98edfffcc26b7fb2670cbfdc31c165331f0f
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37949588"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56139385"
 ---
 # <a name="enable-lookout-mtd-connection-in-the-intune-admin-console"></a>在 Intune 管理控制台中启用 Lookout MTD 连接
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 本文演示如何在 Microsoft Intune 中启用 Lookout 移动威胁防御 (MTD) 连接。 用户应在 Lookout 控制台中配置 Intune 连接器，然后才执行此步骤。 如果尚未执行此步骤，请执行[使用 Lookout 移动威胁防御设置订阅](set-up-your-subscription-with-lookout.md)中所述的步骤。
 
@@ -46,11 +47,11 @@ ms.locfileid: "37949588"
 
 可以根据组织要求决定需要启用哪些 MTD 切换选项。 下面是更多详细信息：
 
-- **将 Android 4.1+ 设备连接到 Lookout for Work MTD**：如果启用此选项，可以让 Android 4.1+ 设备将安全风险报回 Intune。  
-    - **如果未收到任何数据则标记为不符合：** 如果 Intune 未从 Lookout 收到有关此平台上的设备的数据，则将设备视为不符合。  
+- **连接 Android 4.1 + 设备到 Lookout for Work MTD**:如果启用此选项，可以让 Android 4.1 + 设备将安全风险回 Intune。  
+    - **标记为不符合，如果未不收到任何数据**:如果 Intune 未从 Lookout 收到有关此平台上的设备的数据，则将设备视为不符合要求。  
 
-- **将 iOS 8.0+ 设备连接到 Lookout for Work MTD**：启用此选项后，可让 iOS 8.0+ 设备向 Intune 报告安全风险。
-    - **如果未收到任何数据则标记为不符合：** 如果 Intune 未从 Lookout 收到有关此平台上的设备的数据，则将设备视为不符合。  
+- **IOS 8.0 + 设备连接到 Lookout for Work MTD**:如果启用此选项，您可以返回向 Intune 报告安全风险的 iOS 8.0 + 设备。
+    - **标记为不符合，如果未不收到任何数据**:如果 Intune 未从 Lookout 收到有关此平台上的设备的数据，则将设备视为不符合要求。  
 
 > [!TIP]  
 > 可以从“移动威胁防御”窗格看到 Intune 和 Lookout 之间的“连接状态”和“上次同步”时间。

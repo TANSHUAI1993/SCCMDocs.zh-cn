@@ -10,18 +10,19 @@ ms.assetid: 9083c571-f4fc-4a78-adc5-8aec84dabcbd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c8e984c6eb76716e031ed793a7753840842f0ea7
-ms.sourcegitcommit: 98c3f7848dc9014de05541aefa09f36d49174784
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 62db216d2047ee0272c6b3fa226493b5e8af5f84
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42584539"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56128715"
 ---
 # <a name="manage-access-to-company-resource-based-on-device-network-and-application-risk"></a>根据设备、网络和应用程序风险管理对公司资源的访问权限
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
-根据 Lookout 执行的风险评估，控制从移动设备对公司资源的访问。 Lookout 是与 Microsoft Intune 集成的设备威胁防护解决方案。 该风险基于 Lookout 服务所收集的数据。 它从设备收集有关 OS 漏洞、已安装的恶意软件和恶意网络配置文件的数据。 
+根据 Lookout 执行的风险评估，控制从移动设备对公司资源的访问。 Lookout 是与 Microsoft Intune 集成的设备威胁防护解决方案。 该风险基于 Lookout 服务所收集的数据。 它从设备收集有关 OS 漏洞、已安装的恶意软件和恶意网络配置文件的数据。 
 
 可基于通过 Configuration Manager 符合性策略启用的 Lookout 风险评估来配置条件访问策略。 基于 Configuration Manager 是否在设备上检测到威胁而判定其不符合，这些策略会相应地允许或阻止设备。
 

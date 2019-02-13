@@ -10,12 +10,13 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: db97ae9e-34f4-4e10-a282-cd211f612bb4
-ms.openlocfilehash: 3f7d880f7e220966a9baa71ac6ad9286a398ffaa
-ms.sourcegitcommit: d5c013a29f53b975fe3a6cb0a41f1e817bd7b235
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: e217c7afc2910a23fe3f29fa215d58574f3d79d8
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54342850"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56137807"
 ---
 # <a name="prepare-intune-for-user-migration"></a>准备 Intune 以进行用户迁移 
 

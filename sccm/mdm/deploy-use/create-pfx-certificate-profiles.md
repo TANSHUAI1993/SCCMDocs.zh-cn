@@ -10,16 +10,17 @@ ms.assetid: d240a836-c49b-49ab-a920-784c062d6748
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a186e0b2c4b355cabcaaeb3b3124b65d3588fbc8
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 6bbe52a282db016077cb96144938a0d443955f6c
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350956"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56127433"
 ---
 # <a name="how-to-create-pfx-certificate-profiles-using-a-certificate-authority"></a>如何使用证书颁发机构创建 PFX 证书配置文件
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 本文介绍如何使用凭据的证书颁发机构创建证书配置文件。
 
@@ -43,7 +44,7 @@ ms.locfileid: "32350956"
 
     -   **名称**：输入证书配置文件的唯一名称。 最多可以使用 256 个字符。  
 
-    -   **说明**：提供对证书配置文件进行概述，以及可帮助在 System Center Configuration Manager 控制台中识别该证书配置文件的其他相关信息的描述。 最多可以使用 256 个字符。  
+    -   **描述**：提供对证书配置文件进行概述，以及可帮助在 System Center Configuration Manager 控制台中识别该证书配置文件的其他相关信息的描述。 最多可以使用 256 个字符。  
 
     -   在“指定想要创建的证书配置文件的类型”中，选择“个人信息交换 -- PKCS #12 (PFX)设置 -- 创建”，然后从下拉列表中选择证书颁发机构。  从版本 1706 开始，可以选择 Microsoft 或 Entrust。
 

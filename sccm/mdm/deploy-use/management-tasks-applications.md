@@ -10,16 +10,17 @@ ms.assetid: 8adbe2e2-de26-4a80-8bbd-a5f34b8bac79
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 26aff6a374da4c6822943083b24c1a7ac04ee91d
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 4ff166d93812b07c37c31228ca395f0cfcf94de6
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32346492"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56156951"
 ---
 # <a name="manage-applications-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中管理应用程序
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 通过 Microsoft Intune 或 Configuration Manager 在本地设备管理中管理设备时，还可以管理以下应用程序类型：
 - Windows Phone 应用包（*.xap 文件）

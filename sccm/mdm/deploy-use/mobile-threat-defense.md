@@ -10,16 +10,17 @@ ms.assetid: 9083c571-f4fc-4a78-adc5-8aec84dabcbd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a00a4e8140548c4f503e3467626b8d6cbab69ee3
-ms.sourcegitcommit: 98c3f7848dc9014de05541aefa09f36d49174784
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 90098dc0243e8513fe78692fe91a8390f7936eba
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42584622"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56119643"
 ---
 # <a name="manage-access-to-company-resource-based-on-device-network-and-application-risk"></a>根据设备、网络和应用程序风险管理对公司资源的访问权限
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 通过移动威胁防御连接器，可以将选定的移动威胁防御供应商用作符合性策略和条件访问规则的信息源。 由此，可以增强组织资源（如 Exchange 和 Sharepoint）的安全性，特别是易受攻击的移动设备的安全性。
 

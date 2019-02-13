@@ -10,16 +10,17 @@ ms.assetid: 9e83007f-e81c-4b7e-b47e-b01d7b19cfbc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5f6ee6ae8d059905e8cda08fec3d75deff177163
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: c81e7198a01e2d5dfca7abc80f6a23714184a32c
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53418537"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56121771"
 ---
 # <a name="managing-compliance-on-devices-managed-with-intune"></a>管理使用 Intune 管理的设备上的符合性
 
-*适用于：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 这些方案通过演示你可能遇到的一些常见情景介绍如何使用 System Center Configuration Manager 符合性设置。  
 

@@ -10,16 +10,17 @@ ms.assetid: 2bdaa8a7-6a64-4b0e-b617-309dcd912c45
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 198e5b65b85e10a1aa64f06361f1ba425e156662
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 8b6d56309238acc2889ac39ab39d5982fb8d535c
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32345709"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56124432"
 ---
 # <a name="enroll-user-owned-devices-for-hybrid-deployments-with-configuration-manager"></a>使用 Configuration Manager 注册用户拥有的设备以用于混合部署
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 注册用户拥有的设备以便管理，通常将这一过程称为“携带自己的设备”，简称“BYOD”。 用户实现此过程的方式如下：在设备（iOS、macOS 和 Android）上安装公司门户应用并登录，或向设备添加工作或学校帐户并加入域 (Windows)。 此过程向 Intune 注册设备，授予用户访问 Intune 所托管的资源的权限，并使 Intune 管理某些设备设置，如要求 PIN 等。
 

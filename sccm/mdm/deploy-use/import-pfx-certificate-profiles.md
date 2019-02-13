@@ -10,16 +10,17 @@ ms.assetid: e3bb3e13-3037-4122-93bc-504bfd080a4d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 214dcdca927e515f776e99f005f968a4b98f4112
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: e694b81943dda937f1d95765f75f182e072bc7da
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53418826"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56156900"
 ---
 # <a name="how-to-create-pfx-certificate-profiles-by-importing-certificate-details"></a>如何通过导入证书详细信息创建 PFX 证书配置文件
 
-*适用于：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 
 本文介绍如何通过从外部证书导入凭据来创建证书配置文件。  
@@ -51,13 +52,13 @@ System Center Configuration Manager 允许导入证书凭据，然后将个人�
 
 4.  在“创建证书配置文件”向导的“常规”  页上  ，指定下列信息：  
 
-    -   **名称**:输入证书配置文件的唯一名称。 最多可以使用 256 个字符。  
+    -   **名称**：输入证书配置文件的唯一名称。 最多可以使用 256 个字符。  
 
-    -   **描述**：提供概述的证书配置文件和其他相关信息，以帮助在 System Center Configuration Manager 控制台中识别它的说明。 最多可以使用 256 个字符。  
+    -   **描述**：提供对证书配置文件进行概述，以及可帮助在 System Center Configuration Manager 控制台中识别该证书配置文件的其他相关信息的描述。 最多可以使用 256 个字符。  
 
-    -   **指定你想要创建的证书配置文件的类型**:对于 PFX 证书，请选择下列选项之一：  
+    -   **指定想要创建的证书配置文件的类型**：对于 PFX 证书，请选择下列选项之一：  
 
-        -   **个人信息交换 PKCS #12 (PFX) 设置-导入**:通过以编程方式导入现有证书的信息创建证书配置文件。  
+        -   **个人信息交换- PKCS #12 (PFX) 设置 - 导入**：通过以编程方式导入现有证书的信息创建证书配置文件。  
 
         -   **个人信息交换-PKCS #12 (PFX) 设置-创建**:创建 PFX 证书配置文件使用的证书颁发机构提供的凭据。  若要了解详细信息，请参阅[如何使用证书颁发机构创建 PFX 证书配置文件](../../mdm/deploy-use/create-pfx-certificate-profiles.md)。
 

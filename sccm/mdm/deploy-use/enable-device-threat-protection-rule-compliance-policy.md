@@ -10,16 +10,17 @@ ms.assetid: 99a5b715-f172-46e1-ac27-ad55bde66d0d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f6e102f65baad93bdbdf630649a4639d1092284c
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 0bae054d3daa5aea8e343fef05aa4578221f17b6
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353039"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56133980"
 ---
 # <a name="enable-device-threat-protection-rule-in-the-compliance-policy"></a>启用合规性策略中的设备威胁防护规则
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 Intune with Lookout 移动威胁防护使用户能够在设备上检测移动威胁并进行风险评估。 可以在 Configuration Manager 中创建合规性策略规则，以包含确定设备是否合规的风险评估。 然后可以使用条件访问策略，根据设备合规性来允许或阻止对 Exchange、SharePoint 和其他服务的访问。
 
@@ -37,12 +38,12 @@ Intune with Lookout 移动威胁防护使用户能够在设备上检测移动威
 作为 Lookout 设备威胁防护设置过程的一部分，你会在 [Lookout 控制台](https://aad.lookout.com)中创建一个策略，该策略将各种威胁分类为高级别、中等级别和低级别。 在 Intune 合规性策略中，将使用威胁级别来设置允许的最大威胁级别。
 
 在合规性策略向导的“规则”页中，使用以下信息定义新规则：
-  * 条件：设备威胁防护最大风险级别。
-  * 值：可以是下列值之一：
-    * “无(安全)”：这是最安全的选项。 这意味着设备不能有任何威胁。 如果发现了任何级别的威胁，设备都将视为不合规。
-    * “低”：如果只有低级别的威胁存在，设备将视为合规。 高于此级别的威胁均会使设备处于不合规状态。
-    * “中等”：如果设备上发现的威胁为低级别或中等级别，设备将视为合规。 如果检测到高级别威胁，则设备会被确定为不合规。
-    * “高”：这是最不安全的选项。 实际上，这将允许所有威胁级别，并且可能只有在将此解决方案用于报告用途时才有用。
+  * 条件：设备威胁保护最大风险级别。
+  * 值:值可以是以下值之一：
+    * **无 （安全）**:这是最安全的。 这意味着设备不能有任何威胁。 如果发现了任何级别的威胁，设备都将视为不合规。
+    * **低**：如果仅存在低级威胁，则，设备被评估为符合。 高于此级别的威胁均会使设备处于不合规状态。
+    * **中等**:设备被评估为符合的设备上发现的威胁为低级或中级，则。 如果检测到高级别威胁，则设备会被确定为不合规。
+    * **高**:这是最不安全。 实际上，这将允许所有威胁级别，并且可能只有在将此解决方案用于报告用途时才有用。
 
 如果为 Office 365 和其他服务创建条件访问策略，则应将上述合规性评估纳入考虑范围，并且在威胁解决前阻止非合规性设备访问公司资源。
 

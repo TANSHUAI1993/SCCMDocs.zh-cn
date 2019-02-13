@@ -10,16 +10,17 @@ ms.assetid: 99de8fe7-560e-401a-8ab2-6d87d091be17
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a009159a4bd0588f80f140f588b17911101cc72c
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 9ec6756e5c180561bef10bba799e3fdba3dcc303
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53418554"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56137620"
 ---
 # <a name="configure-your-intune-subscription-with-system-center-configuration-manager-and-microsoft-intune"></a>使用 System Center Configuration Manager 和 Microsoft Intune 配置 Intune 订阅
 
-*适用于：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 Intune 订阅使你可以通过 Internet 管理设备。 这包括指定可以注册设备的用户集合以及定义向用户显示的信息。 创建 Intune 订阅时，还可以使用公司徽标和自定义颜色方案将公司品牌添加到 Intune 公司门户中。
 
@@ -53,12 +54,12 @@ Intune 订阅执行以下任务：
 
 7. 在“常规”页上，指定以下选项，然后单击“下一步”。
 
-   - **集合**:指定包含将注册其移动设备用户的用户集合。
+   - **集合**：指定包含将注册其移动设备用户的用户集合。
 
      > [!NOTE]
      >  如果从集合中删除某个用户，则将继续管理该用户的设备最多 24 小时，直至从用户数据库中删除用户记录为止。
 
-   - **公司名称**:指定你的公司名称。
+   - **公司名称**：指定你的公司名称。
 
    - **指向公司隐私文档的 URL**:如果将公司隐私信息发布到可从 Internet 访问的链接，提供该链接以便用户可以从公司门户中，例如访问 http://www.contoso.com/CP_privacy.html。 隐私信息可阐明用户与你的公司分享了什么信息。
 

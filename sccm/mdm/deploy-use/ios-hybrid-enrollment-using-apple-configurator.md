@@ -10,16 +10,17 @@ ms.assetid: 61a19d95-83ff-4ad8-9a67-f304d2ba54f2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: de83706e92150a654967ec5cf38c5b18508d4e2b
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 04b67b324927f4918ff5c0835896cb0d63a9e48c
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53416905"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56126651"
 ---
 # <a name="ios-hybrid-enrollment-using-apple-configurator-with-configuration-manager"></a>配合使用 Configuration Manager 和 Apple Configurator 进行的 iOS 混合注册
 
-*适用于：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 购买 iOS 设备供员工使用的公司可以使用Microsoft Intune 管理这些设备。 若要准备公司拥有的 iOS 设备以进行注册，请在 Configuration Manager 控制台中配置注册配置文件，然后导出供 Apple Configurator 使用的配置文件 URL。 准备 iOS 设备以进行注册，具体做法是通过 USB 线缆将设备连接到 Mac 计算机，并通过 Apple Configurator 设置该设备。 Apple Configurator 对该设备进行恢复出厂设置，并添加注册配置文件，以便用户第一次启动该设备并执行设置助理流程时便可注册该设备。
 

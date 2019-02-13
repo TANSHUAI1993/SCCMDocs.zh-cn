@@ -11,12 +11,13 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 32c28eef77976d83f881a17595fb5e9ec4bb08d4
-ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 9dfbec94ac584442f65826d08c6b7abefc16d375
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54898284"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56124166"
 ---
 # <a name="choose-between-microsoft-intune-standalone-and-hybrid-mdm-with-configuration-manager"></a>在 Microsoft Intune 独立版和带 Configuration Manager 的混合 MDM 之间进行选择
 

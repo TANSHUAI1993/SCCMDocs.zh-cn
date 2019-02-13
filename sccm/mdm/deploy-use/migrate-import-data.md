@@ -10,16 +10,17 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: b552391d-abc0-48a2-a429-93605a13a66a
-ms.openlocfilehash: 26d6f9b928a7acdfbeb6baac3c3ce1c29cc127d9
-ms.sourcegitcommit: d021f82e4bc35a8e9b5d291bf779ce52b4f47eb8
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 46b5034cb95193a07421fe79a445dac0f5b28503
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656452"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56124255"
 ---
 # <a name="import-configuration-manager-data-to-microsoft-intune"></a>将 Configuration Manager 数据导入 Microsoft Intune 
 
-*适用于：System Center Configuration Manager (Current Branch)*    
+适用范围：System Center Configuration Manager (Current Branch)    
 
 在仅限云的配置中[将混合 MDM 用户和设备迁移到 Intune 独立版](migrate-hybridmdm-to-intunesa.md)过程中的第一步，建议使用 Intune 数据导入程序工具。 如果需要，可以跳过这一步，并转到[准备 Intune 以便进行用户迁移](migrate-prepare-intune.md)阶段。 但是，该工具执行以下功能，可以在下一阶段节省大量时间：  
 
@@ -181,9 +182,9 @@ There are some Configuration Manager objects that the importer tool cannot impor
 
     - **选择要导入的对象类型**:提供你想要导入有关你的站点和对象的以下信息：  
 
-        - **站点服务器名称**:提供要导入对象的站点服务器的完全限定的域名。 该工具仅发现运行该工具的用户有权访问的对象。 通常指定顶级站点并通过有权访问站点层次结构中所有对象的用户来运行此工具。  
+        - **站点服务器名称**：提供要导入对象的站点服务器的完全限定的域名。 该工具仅发现运行该工具的用户有权访问的对象。 通常指定顶级站点并通过有权访问站点层次结构中所有对象的用户来运行此工具。  
 
-        - **站点代码**:为站点服务器提供站点代码。 可以在 Configuration Manager 控制台顶部找到三个字母的代码。  
+        - **站点代码**：为站点服务器提供站点代码。 可以在 Configuration Manager 控制台顶部找到三个字母的代码。  
 
         - **对象类型要导入**:选择您希望该工具以收集的对象。 可以选择“选择全部”来选择所有对象，或者选择个别对象类型。  
 
@@ -196,7 +197,7 @@ There are some Configuration Manager objects that the importer tool cannot impor
     - 你可以运行未收集的对象再次的工具或在收集过程已取消。  
 
 
-### <a name="phase-2-resolve-issues-and-select-the-objects-to-import"></a>阶段 2:解决问题，并选择要导入的对象  
+### <a name="phase-2-resolve-issues-and-select-the-objects-to-import"></a>阶段 2：解决问题，并选择要导入的对象  
 
 在阶段 2 中，审阅工具查找到的对象，解决阻止将对象导入 Intune 的问题，并选择要导入的对象。 如果你解决问题，请返回到**发现环境**向导重新发现对象的页。 
 
@@ -212,7 +213,7 @@ There are some Configuration Manager objects that the importer tool cannot impor
 
 4. 在每个项目选择页面上，选择想要导入的对象。 已列出以下各列：  
 
-    - **名称**:Configuration Manager 对象的名称。  
+    - **名称**：Configuration Manager 对象的名称。  
 
     - **可导入**:指定是否可以导入对象。 可以仅选择在“可导入”列中标为“是”的对象。  
 
@@ -235,7 +236,7 @@ There are some Configuration Manager objects that the importer tool cannot impor
     - **导出错误数据**:将导出压缩的文件，其中包含有关该工具无法转换或导入的数据的信息。  
 
 
-### <a name="phase-3-import-selected-objects-to-intune"></a>阶段 3:所选的对象导入到 Intune
+### <a name="phase-3-import-selected-objects-to-intune"></a>阶段 3：所选的对象导入到 Intune
 
 在阶段 3 中，您登录到 Intune 并导入所选的对象。 
 

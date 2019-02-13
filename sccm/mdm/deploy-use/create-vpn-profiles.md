@@ -10,16 +10,17 @@ ms.assetid: 45388103-2410-4c7e-b4cf-73a1bda485fc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1c90525b20107cbc926e3775f10d75b7c7083cac
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: d7accfe4c329b61c7791bc4b82028d48fdc81931
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53424555"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56122612"
 ---
 # <a name="vpn-profiles-on-mobile-devices-in-system-center-configuration-manager"></a>System Center Configuration Manager 中移动设备上的 VPN 配置文件
 
-*适用于：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 使用 Configuration Manager 中的 VPN 配置文件将 VPN 设置部署到组织中的移动设备用户。 如果部署这些设置，可以最大限度地减少最终用户在连接公司网络上的资源时需要完成的工作。  
 
@@ -122,7 +123,7 @@ ms.locfileid: "53424555"
 
      - **请记住在每次登录的用户凭据**:以便用户无需输入其每次连接的时记住用户凭据。  
 
-     - **选择用于客户端身份验证的客户端证书**:选择以前创建的客户端[SCEP 证书](create-pfx-certificate-profiles.md)用于 VPN 连接的身份验证。   
+     - **选择用于客户端身份验证的客户端证书**：选择以前创建的客户端[SCEP 证书](create-pfx-certificate-profiles.md)用于 VPN 连接的身份验证。   
 
        > [!NOTE]  
        >  对于 iOS 设备，选择的 SCEP 配置文件在 VPN 配置文件中嵌入。 对于其他平台，可添加适用性规则确保仅在该证书存在或符合要求时才安装 VPN 配置文件。  

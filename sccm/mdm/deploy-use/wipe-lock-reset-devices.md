@@ -10,16 +10,17 @@ ms.assetid: 770da7bd-02dd-474a-9604-93ff1ea0c1e4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 21fed8dbba8cc5c8e96218459288b57364fe350e
-ms.sourcegitcommit: 98c3f7848dc9014de05541aefa09f36d49174784
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: ebc2b995c763aa54e1d47ee38ab2d250554f5a29
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42584442"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56136018"
 ---
 # <a name="protect-data-with-remote-wipe-lock-or-passcode-reset-by-using-configuration-manager"></a>使用 Configuration Manager，通过远程擦除、锁定或密码重置功能保护数据
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 Configuration Manager 提供选择性擦除、完全擦除、远程锁定以及密码重置功能。 移动设备可以存储敏感的公司数据并提供对许多公司资源的访问。 为了保护设备，你可以发出以下命令：  
 
@@ -69,7 +70,7 @@ Configuration Manager 提供选择性擦除、完全擦除、远程锁定以及�
 |使用 Configuration Manager 和 Intune 安装的公司应用及关联数据|卸载应用。 删除公司应用数据。|  
 |VPN 和 Wi-Fi 配置文件|删除。|  
 |证书|删除并吊销。|  
-|设置|已删除，除了：**允许语音漫游**、**允许数据漫游**和**允许漫游时自动同步**。|  
+|设置|删除，以下各项除外：**允许语音漫游**，**允许数据漫游**，和**允许漫游时自动同步**。|  
 |管理代理|删除管理配置文件。|  
 |电子邮件配置文件|对于由 Intune 设置的电子邮件配置文件，将删除电子邮件帐户和电子邮件。|  
 

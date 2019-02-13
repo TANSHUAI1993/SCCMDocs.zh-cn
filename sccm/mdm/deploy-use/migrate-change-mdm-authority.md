@@ -10,16 +10,17 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: be503ec9-5324-4f7c-bcf5-77204328e99c
-ms.openlocfilehash: 4ded99c2084f274d519680e78fdc54825b3857cb
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: bcd70b708208e2c49a1a7b6fff12d0a1cf5f16f0
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53419506"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56132929"
 ---
 # <a name="change-your-mdm-authority-to-intune-standalone"></a>将 MDM 机构更改为 Intune 独立版
 
-*适用于：System Center Configuration Manager (Current Branch)*    
+适用范围：System Center Configuration Manager (Current Branch)    
 
 可以将从 Configuration Manager 控制台（混合 MDM）配置的现有 Microsoft Intune 租户更改为 Intune 独立版。 将租户级 MDM 机构更改为 Intune 是在仅限云的配置中[将混合 MDM 用户和设备迁移到 Intune 独立版](migrate-hybridmdm-to-intunesa.md)的过程中的最后一步。    
 

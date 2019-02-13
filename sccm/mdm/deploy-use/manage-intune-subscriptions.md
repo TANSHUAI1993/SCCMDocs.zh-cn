@@ -10,16 +10,17 @@ ms.assetid: 9b494767-68c1-47b1-9a86-591bff0ad491
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1b8390faa557f37b2ee148299079df81d3c13299
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: b2e63720bf4a5e6b2cf2f7d1a034d916c9ca5338
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32346733"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56133327"
 ---
 # <a name="manage-an-intune-subscription-associated-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 管理 Intune 订阅
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 如果将 Microsoft Intune（试用订阅或付费订阅）添加到 Configuration Manager，随后需要切换到不同的 Intune 订阅，则必须先从 Configuration Manager 控制台中同时删除 **Microsoft Intune 订阅**和**服务连接点**，然后才能添加新订阅。
 

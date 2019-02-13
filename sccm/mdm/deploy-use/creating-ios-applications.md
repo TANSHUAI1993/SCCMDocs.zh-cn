@@ -10,16 +10,17 @@ ms.assetid: ff633013-5313-4cd3-949c-56d45e777280
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 246ca26b8fab3a1006e8d72b803c298fe48df9df
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: e4a2d84fe31c3a524b876e3beb34f0e3d25d0089
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385229"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56125436"
 ---
 # <a name="create-ios-applications-in-configuration-manager"></a>在 Configuration Manager 中创建 iOS 应用程序
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 Configuration Manager 应用程序具有一个或多个部署类型，包含将软件部署到设备所需的安装文件和信息。 部署类型还具有指定软件的部署时间和方法的规则。  
 

@@ -10,16 +10,17 @@ ms.assetid: 1e42b1c1-3d58-481f-8647-5c7ae640c5f5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 64acd3dbdafaec3dbf49e7939718100897c0976b
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 21ff4920ae8829c41dace778ac74824519c5a628
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53422617"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56136001"
 ---
 # <a name="set-up-a-microsoft-intune-subscription-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中为本地移动设备管理设置 Microsoft Intune 订阅
 
-*适用于：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 System Center Configuration Manager 本地移动设备管理需要 Microsoft Intune 订阅来跟踪许可证。 Intune 服务不能用于管理设备或存储管理信息。 对于本地移动设备管理，所有设备管理均由 Configuration Manager 基础结构处理。  
 
