@@ -10,12 +10,12 @@ ms.assetid: f7560876-8084-4570-aeab-7fd44f4ba737
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c4cd6c45d21c58459fcd23ee02db4b5900996939
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: b272a8988a3e8d2e09b4043c087207e62c59b274
+ms.sourcegitcommit: 5e7c4d36f4cdb3390ad3b381d31a3e1e4bf3c6e1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53421988"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "55986580"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>关于 Configuration Manager 中的客户端设置
 
@@ -624,7 +624,7 @@ Set this option to **Yes** for the Endpoint Protection client to attempt to unin
 配置 Configuration Manager 为所有部署重新评估要求规则的计划。 默认值为每七天一次。  
 
 > [!IMPORTANT]  
->  请勿将此值更改为低于默认值的值。 更加主动的重新评估计划会对网络和客户端计算机的性能产生负面影响。  
+> 与网络或站点服务器相比，此设置对本地客户端更具侵入性。 更加主动的重新评估计划会对网络和客户端计算机的性能产生负面影响。 Microsoft 不建议将该值设置为低于默认值。 如果更改此值，请密切监视性能。  
 
 按以下步骤从客户端启动此操作：从“Configuration Manager”控制面板的“操作”选项卡中，选择“应用程序部署评估周期”。  
 

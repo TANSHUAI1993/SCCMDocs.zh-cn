@@ -2,7 +2,7 @@
 title: 已弃用的功能
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 不再支持的功能。
-ms.date: 12/21/2018
+ms.date: 01/30/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 287a6324-ae65-4d38-b2ef-198d47c91231
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 441fb520fcf3e82bd284eb20db44f14cab52224f
-ms.sourcegitcommit: 94bf7d5b5beb9628cc1fdfe75451d33b5de26f8a
+ms.openlocfilehash: a46f2cb84e447a9b76e812dcb98805e83e31f701
+ms.sourcegitcommit: 38f56f1d5803370f4262931c2dc4a532bfcf0594
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54152462"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55905625"
 ---
 # <a name="removed-and-deprecated-features-for-configuration-manager"></a>Configuration Manager 中已删除和已弃用的功能
 
@@ -33,7 +33,8 @@ ms.locfileid: "54152462"
 |-----------|---|--------------|  
 |适用于云管理网关和云分发点的 Azure 经典服务部署。 有关详细信息，请参阅 [CMG 规划](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager)。|2018 年 11 月|在 2019 年 7 月 1 日之后发布的第一个版本| 
 |适用于 Mac 和 Linux 的 System Center Endpoint Protection<br>有关详细信息，请参阅[“不再提供支持”博客文章](https://go.microsoft.com/fwlink/?linkid=870182)。|2018 年 10 月|2018 年 12 月 31 日|
-|混合移动设备管理。 有关详细信息，请参阅[什么是混合 MDM](/sccm/mdm/understand/hybrid-mobile-device-management)。<!--Intune feature 2683117-->|2018 年 8 月 14 日|2019 年 9 月 1 日|
+|本地条件访问<br>有关详细信息，请参阅[什么是混合 MDM](/sccm/mdm/understand/hybrid-mobile-device-management)。|2019 年 1 月 30 日|2019 年 9 月 1 日|
+|混合移动设备管理 (MDM)<br>有关详细信息，请参阅[什么是混合 MDM](/sccm/mdm/understand/hybrid-mobile-device-management)。<br><br>从 1902 Intune 服务版本开始，预计在 2019 年 2 月末，新客户将无法创建新的混合连接。<!--Intune feature 2683117-->|2018 年 8 月 14 日|2019 年 9 月 1 日|
 |Configuration Manager 中的 Windows Hello 企业版设置<br>有关详细信息，请参阅 [Windows Hello 企业版设置](/sccm/protect/deploy-use/windows-hello-for-business-settings)。|2017 年 12 月|2019 年 11 月 1 日后发布的首版|
 |应用程序目录网站点的 Silverlight 用户体验不再受支持。 用户应使用新的软件中心。 注意：应用目录网站点和 Web 服务点角色仍受支持。 在某些情况下，新的软件中心会与应用程序目录网站点进行通信。 有关详细信息，请参阅[配置软件中心](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex)。<!--1358309-->|2017 年 8 月 11日| 版本 1806|
 |以前版本的软件中心。<br><br>有关新软件中心的详细信息，请参阅[规划和配置应用程序管理](/sccm/apps/plan-design/plan-for-and-configure-application-management##bkmk_userex)。|2016 年 12 月 13 日|版本 1802|

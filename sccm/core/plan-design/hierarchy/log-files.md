@@ -10,12 +10,12 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 58ec927ee795624cb475b31c44d64334047f3422
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.openlocfilehash: 96673c0b299e45111c7d9a2bedf55282de50132e
+ms.sourcegitcommit: 5e7c4d36f4cdb3390ad3b381d31a3e1e4bf3c6e1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53416497"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "55986614"
 ---
 # <a name="log-files-in-configuration-manager"></a>Configuration Manager 中的日志文件
 
@@ -701,7 +701,7 @@ Configuration Manager 将日志文件存储在不同的位置。 这些位置取
 |MP_ClientIDManager.log|记录管理点对任务序列从 PXE 或启动媒体中发起的客户端 ID 请求的响应。|站点系统服务器|  
 |MP_DriverManager.log|记录管理点对“自动应用驱动程序”任务序列操作请求的响应。|站点系统服务器|  
 |OfflineServicingMgr.log|记录针对操作系统 Windows 映像格式 (WIM) 文件的脱机维护计划和更新应用操作的详细信息。|站点系统服务器|  
-|Setupact.log|记录有关 Windows Sysprep 和安装日志的详细信息。|客户端|  
+|Setupact.log|记录有关 Windows Sysprep 和安装日志的详细信息。 有关详细信息，请参阅[日志文件](https://docs.microsoft.com/windows/deployment/upgrade/log-files)。|客户端|  
 |Setupapi.log|记录有关 Windows Sysprep 和安装日志的详细信息。|客户端|  
 |Setuperr.log|记录有关 Windows Sysprep 和安装日志的详细信息。|客户端|  
 |smpisapi.log|记录有关客户端状态捕获和还原操作的详细信息以及阈值信息。|客户端|  
@@ -808,28 +808,14 @@ Configuration Manager 将日志文件存储在不同的位置。 这些位置取
 
 ###  <a name="BKMK_WindowsServicingLog"></a>Windows 10 维护服务  
  下表列出了包含与 Windows 10 维护服务相关的信息的日志文件。  
-
+服务使用与软件更新相同的基础结构和进程。 有关适用于服务方案的其他日志，请参阅[软件更新](#BKMK_SU_NAPLog)。
 |日志名称|说明|带有日志文件的计算机|  
 |--------------|-----------------|----------------------------|  
-|Ccmperf.log|记录与数据维护和捕获（与客户端性能计数器相关）关联的活动。|客户端|  
-|CcmRepair.log|记录客户端代理的维修活动。|客户端|
-|PatchDownloader.log|记录有关从更新源将软件更新下载到站点服务器上的下载目的地的过程的详细信息。|承载从中启动下载的 Configuration Manager 控制台的计算机|  
-|PolicyEvaluator.log|记录有关客户端计算机上的策略评估的详细信息，其中包括来自软件更新的策略。|客户端|  
-|RebootCoordinator.log|记录有关安装软件更新后在客户端计算机上协调系统重新启动的过程的详细信息。|客户端|  
-|ScanAgent.log|记录有关软件更新的扫描请求、WSUS 位置和相关操作的详细信息。|客户端|  
-|SdmAgent.log|记录有关对修正和符合性进行的跟踪的详细信息。 但是，软件更新日志文件 UpdatesHandler.log 可提供有关安装符合性所需的软件更新的更详细信息。<br /><br /> 此日志文件与符合性设置共享。|客户端|  
-|ServiceWindowManager.log|记录有关维护时段评估的详细信息。|客户端|  
+|CBS.log|记录与 Windows 更新或角色和功能的更改相关的维护失败。|客户端|  
+|DISM.log|使用 DISM 记录所有操作。 如有必要，DISM.log 将指向 CBS.log 以提供更多详细信息。|客户端|
 |setupact.log|在 Windows 安装过程中发生的大多数错误的主日志文件。 该日志文件位于 %windir%\$Windows.~BT\sources\panther 文件夹。|客户端|
-|SmsWusHandler.log|记录有关 Microsoft 更新清单工具的扫描过程的详细信息。|客户端|  
-|StateMessage.log|记录有关创建并发送到管理点的软件更新状态消息的详细信息。|客户端|  
-|SUPSetup.log|记录有关软件更新点安装的详细信息。 当软件更新点安装完成后，会向此日志文件写入 **Installation was successful** 。|站点系统服务器|  
-|UpdatesDeployment.log|记录有关客户端上的部署的详细信息，包括软件更新激活、评估和强制执行。 详细日志记录显示有关与客户端用户界面交互的其他信息。|客户端|  
-|Updateshandler.log|记录有关软件更新符合性扫描以及在客户端上下载和安装软件更新的详细信息。|客户端|  
-|UpdatesStore.log|记录有关在符合性扫描周期中接受评估的软件更新的符合性状态的详细信息。|客户端|  
-|WCM.log|记录有关软件更新点配置的详细信息，以及有关连接到 WSUS 服务器的详细信息（以获取有关订阅的更新类别、分类和语言等信息）。|站点服务器|  
-|WSUSCtrl.log|记录有关站点的配置、数据库连接和 WSUS 服务器健康状况的详细信息。|站点系统服务器|  
-|wsyncmgr.log|记录有关软件更新同步过程的详细信息。|站点服务器|  
-|WUAHandler.log|记录有关客户端上的搜索软件更新的 Windows 更新代理的详细信息。|客户端|  
+
+有关详细信息，请参阅[在线服务相关的日志文件](https://docs.microsoft.com/windows-hardware/manufacture/desktop/deployment-troubleshooting-and-log-files#online-servicing-related-log-files)。
 
 ###  <a name="BKMK_WULog"></a> Windows 更新代理  
  下表列出了包含与 Windows 更新代理相关的信息的日志文件。  
@@ -838,6 +824,8 @@ Configuration Manager 将日志文件存储在不同的位置。 这些位置取
 |--------------|-----------------|----------------------------|  
 |WindowsUpdate.log|记录有关的详细信息，涉及到 Windows 更新代理何时连接到 WSUS 服务器并为符合性评估检索软件更新，以及代理组件是否有更新。|客户端|  
 
+有关详细信息，请参阅 [Windows 更新日志文件](https://docs.microsoft.com/windows/deployment/update/windows-update-logs)。
+
 ###  <a name="BKMK_WSUSLog"></a> WSUS 服务器  
  下表列出了包含与 WSUS 服务器相关的信息的日志文件。  
 
@@ -845,3 +833,5 @@ Configuration Manager 将日志文件存储在不同的位置。 这些位置取
 |--------------|-----------------|----------------------------|  
 |Change.log|记录有关已更改的 WSUS 服务器数据库信息的详细信息。|WSUS 服务器|  
 |SoftwareDistribution.log|记录有关从已配置的更新源同步到 WSUS 服务器数据库的软件更新的详细信息。|WSUS 服务器|  
+
+这些日志文件位于 %ProgramFiles%\Update Services\LogFiles 文件夹。

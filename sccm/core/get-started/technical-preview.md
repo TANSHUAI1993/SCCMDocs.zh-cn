@@ -2,7 +2,7 @@
 title: 技术预览版
 titleSuffix: Configuration Manager
 description: 了解可测试 Configuration Manager 中的新功能和新特性的技术预览分支。
-ms.date: 01/23/2019
+ms.date: 02/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cf432ea32e5946a98b59e158752b3e82cf63b3b3
-ms.sourcegitcommit: b8167a60fd6f2d8387b2db723976c0e2c4198d33
+ms.openlocfilehash: 69fd77df25465910776eb413601efef5d87842aa
+ms.sourcegitcommit: 4317bd20050f582a068d0a813e71c449d655e4b4
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54832765"
+ms.lasthandoff: 02/09/2019
+ms.locfileid: "55971891"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Configuration Manager 的技术预览版
 
@@ -69,10 +69,10 @@ Configuration Manager 的技术预览分支支持以下产品和技术：
 
 -   它仅支持 SQL Server 的以下版本：  
 
-    -   从 Configuration Manager 版本 1710 开始的 SQL Server 2017（含累积更新 2 及更高版本）
-    -   SQL Server 2016（不带 Service Pack）及更高版本
-    -   SQL Server 2014（含 Service Pack 1）及更高版本
-    -   SQL Server 2012（含 Service Pack 3）或更高版本  
+    -   SQL Server 2017（带累积更新 2 或更高版本） 
+    -   SQL Server 2016（不带服务包或更高版本）
+    -   SQL Server 2014（含服务包 1 或更高版本）
+    -   SQL Server 2012（含服务包 3 或更高版本）  
 
 
 -   站点最多支持 10 个客户端，这些客户端必须运行 Windows 的以下版本之一：  
@@ -124,30 +124,19 @@ Microsoft 将支持每个技术预览版，直到三个连续的版本可用为�
 
 <!-- This is the full list of new features in the latest TP release -->
 
-### <a name="technical-preview-version-1901"></a>技术预览版 1901
+### <a name="technical-preview-version-1902"></a>技术预览版 1902
 
 <!-- - [title](/sccm/core/get-started/2019/technical-preview-1901#bkmk_anchor)<!--ID-->
 
+- [使用对话框窗口替换 toast 通知](/sccm/core/get-started/2019/technical-preview-1902#bkmk_impact)<!--3555947-->
+- [就地升级任务序列期间的进度状态](/sccm/core/get-started/2019/technical-preview-1902#bkmk_ipu)<!--3747129-->
+- [将 Windows 已知文件夹重定向到 OneDrive](/sccm/core/get-started/2019/technical-preview-1902#bkmk_odfb)<!--3556021-->
+- [仅在远程控制期间查看第一个屏幕](/sccm/core/get-started/2019/technical-preview-1902#bkmk_rcmulti)<!--3231732-->
+- [编辑或复制 PowerShell 脚本](/sccm/core/get-started/2019/technical-preview-1902#bkmk_psedit)<!--3705507-->
+- [将云管理网关添加到边界组](/sccm/core/get-started/2019/technical-preview-1902#bkmk_cmgbg)<!--3640932-->
+- [在软件中心配置默认视图](/sccm/core/get-started/2019/technical-preview-1902#bkmk_swctr)<!--3612112-->
+- [对客户端运行状况仪表板所做的改进](/sccm/core/get-started/2019/technical-preview-1902#bkmk_health)<!--3599209-->
 
-- [客户端运行状况仪表板](/sccm/core/get-started/2019/technical-preview-1901#bkmk_health)<!--3599209-->  
-- [在 Windows 10 维护服务中指定功能更新的优先级](/sccm/core/get-started/2019/technical-preview-1901#bkmk_neo)<!--3734525-->  
-- [分阶段部署专用监视](/sccm/core/get-started/2019/technical-preview-1901#bkmk_pod)<!--3555949--> 
-- [从管理中心站点运行 CMPivot](/sccm/core/get-started/2019/technical-preview-1901#bkmk_cmpivot)<!--3610960-->  
-- [对运行 PowerShell 脚本任务序列步骤的改进](/sccm/core/get-started/2019/technical-preview-1901#bkmk_posh)<!--3556028-->  
-- [生命周期仪表板上的 Office 产品](/sccm/core/get-started/2019/technical-preview-1901#bkmk_lifecycle)<!--3556026-->  
-- [集合的管理见解规则](/sccm/core/get-started/2019/technical-preview-1901#bkmk_micoll)<!--3555752-->  
-- [使用 MAC 地址搜索设备视图](/sccm/core/get-started/2019/technical-preview-1901#bkmk_mac)<!--3600878-->  
-- [分发点维护模式](/sccm/core/get-started/2019/technical-preview-1901#bkmk_dpmaint)<!--3555754-->  
-- [经优化的映像维护](/sccm/core/get-started/2019/technical-preview-1901#bkmk_resetbase)<!--3555951-->  
-- [导入 OS 映像的单个索引](/sccm/core/get-started/2019/technical-preview-1901#bkmk_index)<!--3719699--> 
-- [使用云服务适用的 Azure 资源管理器](/sccm/core/get-started/2019/technical-preview-1901#bkmk_arm)<!--3605704-->  
-- [控制台反馈确认](/sccm/core/get-started/2019/technical-preview-1901#bkmk_feedback)<!--3556010--> 
-- [在 Azure 中创建 Configuration Manager 技术预览实验室](/sccm/core/get-started/2019/technical-preview-1901#bkmk_azurevm)<!--3556017-->  
-- [指定一个自定义端口用于对等唤醒](/sccm/core/get-started/2019/technical-preview-1901#bkmk_sleep)<!--3605925-->  
-- [查看最近连接的控制台](/sccm/core/get-started/2019/technical-preview-1901#bkmk_console)<!--3699367-->  
-- [超过阈值时停止云服务](/sccm/core/get-started/2019/technical-preview-1901#bkmk_cmg)<!--3735092--> 
-- [客户端预配模式超时](/sccm/core/get-started/2019/technical-preview-1901#bkmk_osdprov)<!--3197824-->
-- [对 OS 部署的改进](/sccm/core/get-started/2019/technical-preview-1901#bkmk_osd)<!--3633146,3641475,3654172,3734270-->
 
 
 > [!Note]  
@@ -166,6 +155,25 @@ Then remove the bottom of this list and/or move individual items not in CB to th
 
  | 功能 | 技术预览版 | 当前分支版 |  
  |---------|---------------------------|------------------------|
+ | 客户端运行状况仪表板 <!--3599209--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_health) | ![未添加](media/Red_X.gif) | 
+ | 在 Windows 10 维护服务中指定功能更新的优先级 <!--3734525--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_neo) | ![未添加](media/Red_X.gif) | 
+ | 分阶段部署专用监视 <!--3555949--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_pod) | ![未添加](media/Red_X.gif) | 
+ | 从管理中心站点运行 CMPivot <!--3610960--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_cmpivot) | ![未添加](media/Red_X.gif) | 
+ | 对运行 PowerShell 脚本任务序列步骤的改进<!--3556028--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_posh) | ![未添加](media/Red_X.gif) | 
+ | 生命周期仪表板上的 Office 产品 <!--3556026--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_lifecycle) | ![未添加](media/Red_X.gif) | 
+ | 集合的管理见解规则 <!--3555752--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_micoll) | ![未添加](media/Red_X.gif) | 
+ | 使用 MAC 地址搜索设备视图 <!--3600878--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_mac) | ![未添加](media/Red_X.gif) | 
+ | 分发点维护模式 <!--3555754--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_dpmaint) | ![未添加](media/Red_X.gif) | 
+ | 经优化的映像维护 <!--3555951--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_resetbase) | ![未添加](media/Red_X.gif) | 
+ | 导入 OS 映像的单个索引 <!--3719699--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_index) | ![未添加](media/Red_X.gif) | 
+ | 使用云服务适用的 Azure 资源管理器 <!--3605704--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_arm) | ![未添加](media/Red_X.gif) | 
+ | 控制台反馈确认 <!--3556010--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_feedback) | ![未添加](media/Red_X.gif) | 
+ | 在 Azure 中创建 Configuration Manager 技术预览实验室 <!--3556017--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_azurevm) | ![未添加](media/Red_X.gif) | 
+ | 指定一个自定义端口用于对等唤醒 <!--3605925--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_sleep) | ![未添加](media/Red_X.gif) | 
+ | 查看最近连接的控制台 <!--3699367--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_console) | ![未添加](media/Red_X.gif) | 
+ | 超过阈值时停止云服务 <!--3735092--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_cmg) | ![未添加](media/Red_X.gif) | 
+ | 客户端预配模式超时 <!--3197824--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_osdprov) | ![未添加](media/Red_X.gif) | 
+ | 对操作系统部署的改进 <!--3633146,3641475,3654172,3734270--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_osd) | ![未添加](media/Red_X.gif) | 
  | 对运行 PowerShell 脚本任务序列步骤的改进<!--3556028 fka 1359389--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_posh) | ![未添加](media/Red_X.gif) | 
  | 对通过电子邮件进行的应用程序批准的改进<!--3594063--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_email) | ![未添加](media/Red_X.gif) | 
  | 在软件中心中配置用户设备相关性<!--3485366--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_uda) | ![未添加](media/Red_X.gif) | 
@@ -176,11 +184,6 @@ Then remove the bottom of this list and/or move individual items not in CB to th
  | Configuration Manager 控制台通知 <!--1318035--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_notify) | ![未添加](media/Red_X.gif) | 
  | 对任务序列媒体创建的改进 <!--1359388--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_tsmedia) | ![未添加](media/Red_X.gif) | 
  | 对运行 PowerShell 脚本任务序列步骤的改进 <!--1359389--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_posh) | ![未添加](media/Red_X.gif) | 
- | 对集合评估的改进 <!--1358981--> | [技术预览版 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_colleval) | 版本 1810 | 
- | Configuration Manager 管理员身份验证 <!--1357013--> | [技术预览版 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_auth) | 版本 1810 | 
- | 对等缓存源客户端版本的管理见解规则 <!--1358008--> | [技术预览版 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_insights) | 版本 1810 | 
- | 对基于 Internet 的客户端设置的改进 <!--1359181--> | [技术预览版 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_cmg) | 版本 1810 | 
- | 将应用程序转换为 MSIX <!--1359029--> | [技术预览版 1810.2](capabilities-in-technical-preview-1810-2.md#bkmk_msix) | 版本 1810 | 
 
 
 

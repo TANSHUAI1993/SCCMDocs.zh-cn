@@ -10,12 +10,12 @@ ms.assetid: aebafaf9-b3d5-4a0f-9ee5-685758c037a1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 430931e8bfba3f40a8d970b7ae7b97e24d3381ec
-ms.sourcegitcommit: f2a1fa59fb3870a6bebca61daf15c0c157e9fdd6
+ms.openlocfilehash: 78eb7f360230951184ec645b78081b4ff6995984
+ms.sourcegitcommit: 5e7c4d36f4cdb3390ad3b381d31a3e1e4bf3c6e1
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54031016"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "55986563"
 ---
 # <a name="install-and-configure-distribution-points-in-configuration-manager"></a>在 Configuration Manager 中安装和配置分发点
 
@@ -409,8 +409,7 @@ ms.locfileid: "54031016"
 
 要将此分发点作为成员添加到现有分发点组，请单击“添加” 。 在“添加到分发点组”窗口中，选择现有组，然后单击“确定”。  
 
-要从分发点组中删除此分发点，请在列表中选择组，然后单击“删除”。  
-
+要从分发点组中删除此分发点，请在列表中选择组，然后单击“删除”。 从分发点组中删除分发点不会删除分发点中的任何内容。
 
 ### <a name="bkmk_config-content"></a>内容  
 
