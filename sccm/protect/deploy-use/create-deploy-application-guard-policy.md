@@ -10,12 +10,13 @@ ms.assetid: 33a6c1d9-4dd8-411c-a748-693a5bd2ea5a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 82423914b1d1f5cae8fa4ecea3d02ef02d23703a
-ms.sourcegitcommit: 2cc635835709fb8d86cdb63ea34233b36c94d4d8
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: d6446fed2d48fc6428bdc3fbc7a24f728c206dc7
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52258904"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56132415"
 ---
 # <a name="create-and-deploy-windows-defender-application-guard-policy"></a>创建和部署 Windows Defender 应用程序防护策略 
 *适用于： System Center Configuration Manager (Current Branch)* 

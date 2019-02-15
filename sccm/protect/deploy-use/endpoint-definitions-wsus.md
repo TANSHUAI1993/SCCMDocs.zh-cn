@@ -10,16 +10,17 @@ author: aczechowski
 description: 了解如何将 Windows Server 更新服务配置为自动批准定义更新。
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: b66c55da65f65c219b5c961949244f105885ba8f
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 74a1dc94a30f56e22b181446422a8b5f99790ffc
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53424266"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56127620"
 ---
 # <a name="enable-endpoint-protection-malware-definitions-to-download-from-windows-server-update-services-wsus-for-configuration-manager"></a>启用 Endpoint Protection 恶意软件定义，以便从 Server Update Services (WSUS) 为 Configuration Manager 下载定义
 
-*适用于：System Center Configuration Manager (Current Branch)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
  如果使用 WSUS 来使反恶意软件定义保持最新，可以将其配置为自动批准定义更新。 尽管推荐使用 Configuration Manager 软件更新使定义保持最新，但还可以将 WSUS 配置为允许用户手动启动更新的定义。 使用以下过程将 WSUS 配置为定义更新源。
 
@@ -74,19 +75,19 @@ ms.locfileid: "53424266"
 
 2.  在“更新规则”  选项卡上，单击“新规则” 。
 
-3.  在中**添加规则**对话框中的**步骤 1:选择属性**，选择**更新属于特定分类**复选框。
+3.  在“添加规则”  对话框中，在“步骤 1：选择属性” 下选择“当更新在某个特定分类中时”  复选框。
 
-4.  下**步骤 2:在“步骤 2：编辑属性”** 下，单击“任何分类” 。
+4.  在“步骤 2：编辑属性” 下，单击“任何分类” 。
 
 5.  清除除“定义更新” 以外的所有复选框，然后单击“确定” 。
 
-6.  在中**添加规则**对话框中的**步骤 1:选择属性**，选择**当更新属于特定产品**复选框。
+6.  在“添加规则”  对话框中，在“步骤 1：选择属性” 下选择“当更新在某个特定产品中时”  复选框。
 
-7.  下**步骤 2:在“步骤 2：编辑属性”** 下，单击“任何产品” 。
+7.  在“步骤 2：编辑属性” 下，单击“任何产品” 。
 
 8.  除适用于 Windows 8.1 及更早版本的“Forefront Endpoint Protection”  或适用于 Windows 10 及更高版本的“Windows Defender”  以外，清除其余所有复选框，然后单击“确定” 。
 
-9. 下**步骤 3:在“步骤 3：指定一个名称”** 下，为该规则输入名称，然后单击“确定” 。
+9. 在“步骤 3：指定一个名称” 下，为该规则输入名称，然后单击“确定” 。
 
 10. 在“自动批准”  对话框中，选择用于新创建的规则的复选框，然后单击“运行规则” 。
 

@@ -10,16 +10,17 @@ ms.assetid: 29ae59b7-2695-4a0f-a9ff-4f29222f28b3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 783512841b61d6fa10e3f2832100e9000576e65a
-ms.sourcegitcommit: 2687489aa409a050dcacd67f17b3dad3ab7f1804
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 95a5166433ef35b3c2ab7108bfc83a2d403558e0
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54316518"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56128164"
 ---
 # <a name="configure-certificate-infrastructure"></a>配置证书基础结构
 
-适用范围：System Center Configuration Manager (Current Branch)
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 了解在 System Center Configuration Manager 中配置证书基础结构的过程。 在开始之前，请检查 [System Center Configuration Manager 中证书配置文件先决条件](../../protect/plan-design/prerequisites-for-certificate-profiles.md)中列出的所有先决条件。  
 
@@ -42,7 +43,7 @@ ms.locfileid: "54316518"
 
         此权限是必需的，以便在你运行“创建证书配置文件向导”时能够浏览以选择要在创建 SCEP 设置配置文件时使用的证书模板。 选择证书模板意味着随后会为你自动填充向导中的某些设置，因此可以减少你要配置的内容，并降低选择与网络设备注册服务所使用的证书模板不兼容的设置所带来的风险。  
 
-   -   对于网络设备注册服务应用程序池使用的 SCEP 服务帐户：“读取”和“注册”权限。  
+   -   对于网络设备注册服务应用程序池使用的 SCEP 服务帐户：“读取”  和“注册”  权限。  
 
         此项要求并不特定于 System Center Configuration Manager，但却是配置网络设备注册服务过程的一部分。 有关详细信息，请参阅 TechNet 上 Active Directory 证书服务库中的 [Network Device Enrollment Service Guidance（网络设备注册服务指导）](http://go.microsoft.com/fwlink/p/?LinkId=309016) 。  
 
@@ -69,15 +70,15 @@ ms.locfileid: "54316518"
 
    - 将“MaxRequestBytes”  项设置为“16777216” 。  
 
-     有关详细信息，请参阅 Microsoft 知识库中的文章 [820129：用于 Windows 的 Http.sys 注册表设置](http://go.microsoft.com/fwlink/?LinkId=309013)。  
+     有关详细信息，请参阅 Microsoft 知识库中的文章 [820129：用于 Windows 的 Http.sys 注册表设置](http://go.microsoft.com/fwlink/?LinkId=309013) 。  
 
 6. 在同一服务器上的 Internet Information Services (IIS) 管理器中，修改 /certsrv/mscep 应用程序的请求筛选设置，然后重启服务器。 在“编辑请求筛选设置”  对话框中，“请求限制”  设置应如下所示：  
 
-   - **允许的最大内容长度(字节)**：**30000000**  
+   - **允许的最大内容长度(字节)**： **30000000**  
 
-   - **最大 URL 长度(字节)**：**65534**  
+   - **最大 URL 长度(字节)**： **65534**  
 
-   - **最大查询字符串(字节)**：**65534**  
+   - **最大查询字符串(字节)**： **65534**  
 
      有关这些设置以及如何配置这些设置的详细信息，请参阅 IIS 参考库中的 [Requests Limits（请求限制）](http://go.microsoft.com/fwlink/?LinkId=309014) 。  
 
@@ -126,7 +127,7 @@ ms.locfileid: "54316518"
      -   证书注册点的**网站名称**、**HTTPS 端口号**和**虚拟应用程序名称**。 这些字段使用默认值自动填充。 
      -   **网络设备注册服务和根 CA 证书的 URL** -单击“添加”，然后在“添加 URL 和根 CA 证书”对话框中，指定以下内容：
          - **网络设备注册服务的 URL**：指定的 URL 采用以下格式： https://*< server_FQDN >*/certsrv/mscep/mscep.dll。 例如，如果运行网络设备注册服务的服务器的 FQDN 为 server1.contoso.com，请输入 https://server1.contoso.com/certsrv/mscep/mscep.dll。
-         - **根 CA 证书**：浏览到并选择你在**步骤 1：安装和配置网络设备注册服务及依赖关系**中创建和保存的 .cer 证书文件。 此根 CA 证书允许证书注册点验证 System Center Configuration Manager 策略模块将使用的客户端身份验证证书。  
+         - **根 CA 证书**：浏览到并选择你在 **步骤 1：安装和配置网络设备注册服务及依赖关系**中创建和保存的 .cer 证书文件。 此根 CA 证书允许证书注册点验证 System Center Configuration Manager 策略模块将使用的客户端身份验证证书。  
 
    - 如果选择了“处理 PFX 证书请求”，则要为所选证书颁发机构配置连接详细信息和凭据。
 
@@ -189,9 +190,9 @@ ms.locfileid: "54316518"
 
 6. 接受默认端口“443”  ，或指定证书注册点正在使用的其他端口号，然后单击“下一步” 。  
 
-7. 在“策略模块的客户端证书”页上，浏览到并指定你在**步骤 1：安装和配置网络设备注册服务及依赖关系**中部署的客户端身份验证证书，然后单击“下一步”。  
+7. 在“策略模块的客户端证书” 页上，浏览到并指定你在 **步骤 1：安装和配置网络设备注册服务及依赖关系**中部署的客户端身份验证证书，然后单击“下一步” 。  
 
-8. 在“证书注册点证书”页上，单击“浏览”选择你在**步骤 2：安装和配置证书注册点**结尾找到并保存的已导出根 CA 证书文件。  
+8. 在“证书注册点证书”  页上，单击“浏览”  选择你在 **步骤 2：安装和配置证书注册点**结尾找到并保存的已导出根 CA 证书文件。  
 
    > [!NOTE]  
    >  如果之前未保存此证书文件，则该文件位于站点服务器计算机上的 <ConfigMgr Installation Path\>\inboxes\certmgr.box 中。  

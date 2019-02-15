@@ -10,16 +10,17 @@ ms.assetid: ab7626ae-d4bf-4ca6-ab25-c61f96800a02
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: d401eea9b3556eae2ad8b3c26eda5a243fc07211
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: ee1734178e3225aaf25a8105d83d9c0315866283
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53419132"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56122179"
 ---
 # <a name="enable-endpoint-protection-malware-definitions-to-download-from-microsoft-updates-for-configuration-manager"></a>实现从 Microsoft 更新为 Configuration Manager 下载 Endpoint Protection 恶意软件定义
 
-*适用于：System Center Configuration Manager (Current Branch)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 
  当你选择从 Microsoft 更新下载定义更新时，客户端将按照反恶意软件策略对话框的“定义更新”  部分中定义的间隔检查 Microsoft 更新网站。

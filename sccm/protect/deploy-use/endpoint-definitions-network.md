@@ -10,16 +10,17 @@ ms.assetid: ddef4d2a-f481-4020-9ddd-9cca5f9795cb
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 5c4dd69510134efecc730d7cc1bdb5cb2d647653
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 2dbe2c5ecfbf58248f1bc391d39d6e0b86b86bc2
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53414525"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56140450"
 ---
 # <a name="enable-endpoint-protection-malware-definitions-to-download-from-a-network-share-for-configuration-manager"></a>启用 Endpoint Protection 恶意软件定义，以便从网络共享为 Configuration Manager 下载定义
 
-*适用于：System Center Configuration Manager (Current Branch)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
  你可以手动从 Microsoft 下载最新定义更新，然后将客户端配置为从网络上的共享文件夹下载这些定义。 用户还可以在你使用此更新源时启动定义更新。
 

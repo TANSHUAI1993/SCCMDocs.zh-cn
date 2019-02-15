@@ -10,12 +10,13 @@ ms.assetid: ef3ab519-9cf7-47fc-8831-d400e0e96df8
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 6ba2cf8139cd1a5f416ff7877afc0a6b7b1ad081
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: be81ff80f0da01916e2ec21a8ba1c7fe48fb8062
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32347495"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56142317"
 ---
 # <a name="security-and-privacy-for-wi-fi-and-vpn-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager 中 Wi-Fi 和 VPN 配置文件的安全性和隐私
 

@@ -10,16 +10,17 @@ ms.assetid: 321b19b2-a093-4b8f-995f-41f74b886eb5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f294bd3e6c8043149e7f5af8b07eb11288751601
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: dba1107dd8cd8d39be555b3b77ff828152513eb8
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53416259"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56122230"
 ---
 # <a name="create-wi-fi-profiles"></a>创建 Wi-Fi 配置文件
 
-*适用于：System Center Configuration Manager (Current Branch)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 
 在 System Center Configuration Manager 中使用 Wi-Fi 配置文件将无线网络设置部署到组织中的用户。 通过部署这些设置，可以让用户很方便地连接到 Wi-Fi。  
@@ -56,15 +57,15 @@ ms.locfileid: "53416259"
 
 4. 在**报表的不符合性严重程度**中，指定在客户端设备上发现 Wi-Fi 配置文件不符合（例如，配置文件安装失败）时报告的严重性级别。 可用的严重性级别如下：  
 
-   -   **无**：违反此符合性规则的计算机不在 Configuration Manager 报表中报告故障严重性。  
+   -   **无**：对于 Configuration Manager 报表，不符合此合规性规则的设备不报告故障严重性。  
 
-   -   **信息**：违反此符合性规则的计算机在 Configuration Manager 报表中将故障严重性级别报告为“信息”。  
+   -   **信息**：对于 Configuration Manager 报表，不符合此合规性规则的计算机将报告故障严重性**信息**。  
 
-   -   **警告**：违反此符合性规则的计算机在 Configuration Manager 报表中将故障严重性级别报告为“警告”。  
+   -   **警告**：对于 Configuration Manager 报表，不符合此合规性规则的计算机将报告故障严重性**警告**。  
 
-   -   **严重**：违反此符合性规则的计算机在 Configuration Manager 报表中将故障严重性级别报告为“严重”。  
+   -   **严重**：对于 Configuration Manager 报表，不符合此合规性规则的计算机将报告故障严重性**严重**。  
 
-   -   **严重事件**：违反此符合性规则的计算机在 Configuration Manager 报表中将故障严重性级别报告为“严重”。 应用程序事件日志中也会以 Windows 事件的形式记录此严重性级别。  
+   -   **事件严重**：对于 Configuration Manager 报表，不符合此合规性规则的计算机将报告故障严重性**严重**。 应用程序事件日志中也会以 Windows 事件的形式记录此严重性级别。  
 
 5. 在“Wi-Fi 配置文件”页，提供设备会将其显示为网络名称的名称。  
 
@@ -78,9 +79,9 @@ ms.locfileid: "53416259"
    > [!IMPORTANT]
    >  如果你正在为本地移动设备管理创建 Wi-Fi 配置文件，Configuration Manager 的 Current Branch 仅支持以下 Wi-Fi 安全性配置：  
    > 
-   >  安全类型**WPA2 企业**或**WPA2 个人**  
-   > 加密类型**AES**或**TKIP**  
-   > EAP 类型：“智能卡或其他证书”或 PEAP  
+   >  安全类型：“WPA2 企业”  或“WPA2 个人”   
+   > 加密类型：“AES”  或“TKIP”   
+   > EAP 类型：“智能卡或其他证书”  或“PEAP”   
    > 
    > 仅限 Android 设备，不支持安全类型“WPA – 个人”、“WPA2 – 个人”和“WEP”。  
 
@@ -102,12 +103,12 @@ ms.locfileid: "53416259"
 13. **仅适用于 iOS 设备：**  
     配置 Wi-Fi 连接所需的任何证书的信息。 必须配置客户端证书以及受信任的服务器证书名称或根证书，如下所示：  
 
-    - **受信任的服务器证书名称**：如果设备连接到的服务器使用服务器身份验证证书来识别服务器并帮助保护信道的安全，请在该证书的使用者名称或使用者可选名称中输入一个或多个名称。 名称通常为服务器完全限制的域名。 例如，服务器证书在证书使用者中具有公用名 srv1.contoso.com，则输入“srv1.contoso.com” 。 如果服务器证书具有多个在使用者可选名称中指定的名称，请输入每个名称，以分号分隔。  
+    - **受信任的服务器证书名称**：如果设备连接到的服务器使用服务器身份验证证书来识别服务器并帮助保护信道的安全，请在该证书的使用者名称或使用者备用名称中输入一个或多个名称。 名称通常为服务器完全限制的域名。 例如，服务器证书在证书使用者中具有公用名 srv1.contoso.com，则输入“srv1.contoso.com” 。 如果服务器证书具有多个在使用者可选名称中指定的名称，请输入每个名称，以分号分隔。  
 
       > [!TIP]  
       >  如果将使用你为 iOS 设备 EAP 或客户端身份验证选择的客户端证书来向远程身份验证拨入用户服务 (RADIUS) 服务器（例如正在运行网络策略服务器的服务器）进行验证，则你必须将使用者可选名称设置为用户主体名称。  
 
-    - **选择用于服务器验证的根证书**：如果设备连接到的服务器使用设备不信任的服务器身份验证证书，请选择包含服务器证书的根证书的证书配置文件，以在设备上创建证书信任链。  
+    - “选择用于服务器验证的根证书”：如果设备连接到的服务器使用设备不信任的服务器身份验证证书，请选择包含服务器证书的根证书的证书配置文件，以在设备上创建证书信任链。  
 
     - **选择用于客户端身份验证的客户端证书**：如果服务器或网络设备需要客户端证书来验证连接设备，请选择包含客户端身份验证证书的证书配置文件。  
 

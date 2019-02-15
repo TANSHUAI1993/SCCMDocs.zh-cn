@@ -10,12 +10,13 @@ ms.assetid: e2315b8b-98bc-40e1-8ef9-bfb5e69ab109
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 47b5bb12a89143a0c7e6d16a3252948b955b8ff3
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 49602002a789c0bd1e8d8cc128d3062fde9194fc
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32349205"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56137688"
 ---
 # <a name="monitor-email-wi-fi-and-vpn-profiles-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中监视电子邮件、Wi-Fi 和 VPN 配置文件
 

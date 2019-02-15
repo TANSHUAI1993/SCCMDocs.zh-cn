@@ -10,16 +10,17 @@ ms.assetid: f504de3e-4caf-455c-80d7-a63f13f4c5d9
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: dbebdde88a5031eec91a2383e105d06cbc7541e5
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 26cf060d8443cefeed05c3615d5b1ecd0e862038
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53420441"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56138800"
 ---
 #  <a name="configure-alerts-for-endpoint-protection-in-configuration-manager"></a>在 Configuration Manager 中为 Endpoint Protection 配置警报
 
-*适用于：System Center Configuration Manager (Current Branch)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
  可以在 Microsoft System Center Configuration Manager 中配置 Endpoint Protection 警报，以便在层次结构中发生特定事件（如恶意软件感染时）通知管理用户。 通知会显示在 Configuration Manager 控制台 Endpoint Protection 仪表板中“监视”工作区的“警报”节点中，或是可以通过电子邮件发送到指定用户。
 
@@ -75,13 +76,13 @@ ms.locfileid: "53420441"
 
         -   **检测到恶意软件的次数：** - 当在集合中的计算机上检测到同一恶意软件的次数超过指定次数时，则会生成此警报。 指定一个介于“2”  到“32” 之间的数字。
 
-        -   **检测间隔(小时)：** 指定在其间必须发生指定的恶意软件检测次数的检测间隔（以小时为单位）。 指定一个介于“1”  到“168” 之间的数字。
+        -   **检测间隔（小时）：** 指定在其间必须发生指定的恶意软件检测次数的检测间隔（以小时为单位）。 指定一个介于“1”  到“168” 之间的数字。
 
     -   **多恶意软件检测** - 如果在所监视集合中的计算机上，在指定的小时数内检测到的恶意软件类型超出指定数量，则会生成此警报。 指定以下信息以配置此警报：
 
-        -   **已检测的恶意软件的类型数：** 当在集合中的计算机上检测到指定数量的不同恶意软件类型时，则会生成此警报。 指定一个介于“2”  到“32” 之间的数字。
+        -   **检测到的恶意软件类型数：** 当在集合中的计算机上检测到指定数量的不同恶意软件类型时，则会生成此警报。 指定一个介于“2”  到“32” 之间的数字。
 
-        -   **检测间隔(小时)：** 指定在其间必须发生指定的恶意软件检测次数的检测间隔（以小时为单位）。 指定一个介于“1”  到“168” 之间的数字。
+        -   **检测间隔（小时）：** 指定在其间必须发生指定的恶意软件检测次数的检测间隔（以小时为单位）。 指定一个介于“1”  到“168” 之间的数字。
 
 9. 单击“确定”以关闭“<集合名称\> 属性”对话框。  
 

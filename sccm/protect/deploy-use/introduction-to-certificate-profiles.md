@@ -10,16 +10,17 @@ ms.assetid: 41dcc259-f147-4420-bff2-b65bdf8cff77
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 27a615a412bca7e30ab5f5a3dc5f794961d13d2c
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 5872a6a8ee69e50d0abfe5840a087aaf83ab7aa5
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53424487"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56156604"
 ---
 # <a name="introduction-to-certificate-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的证书配置文件简介
 
-*适用于：System Center Configuration Manager (Current Branch)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 
 证书配置文件适用于 Active Directory 证书服务和网络设备注册服务 (NDES) 角色。 创建并部署托管设备的身份验证证书，让用户可以轻松访问公司资源。 例如，可以创建和部署证书配置文件来为用户提供必要的证书，从而连接到 VPN 和无线连接。
@@ -34,9 +35,9 @@ ms.locfileid: "53424487"
 
 -   监视并报告已安装的证书。  
 
-**示例：** 所有员工都必须能够在多个公司位置连接到 Wi-fi 热点。 若要启用简单的用户连接，请先部署连接 Wi-Fi 所需的证书。 然后部署引用该证书的 Wi-Fi 配置文件。  
+**例如：** 所有员工都必须能够连接到多个公司位置的 Wi-fi 热点。 若要启用简单的用户连接，请先部署连接 Wi-Fi 所需的证书。 然后部署引用该证书的 Wi-Fi 配置文件。  
 
-例如：制定 PKI。 你希望采用更灵活安全的方法来部署证书。 用户应可在不影响安全性的情况下从个人设备访问公司资源。 使用特定设备平台支持的设置和协议配置证书配置文件。 随后设备可从面向 Internet 的注册服务器自动请求这些证书。 然后，配置 VPN 配置文件以使用这些证书，以便设备能够访问公司资源。  
+**示例：** 假设你的 PKI 已就位。 你希望采用更灵活安全的方法来部署证书。 用户应可在不影响安全性的情况下从个人设备访问公司资源。 使用特定设备平台支持的设置和协议配置证书配置文件。 随后设备可从面向 Internet 的注册服务器自动请求这些证书。 然后，配置 VPN 配置文件以使用这些证书，以便设备能够访问公司资源。  
 
 
 

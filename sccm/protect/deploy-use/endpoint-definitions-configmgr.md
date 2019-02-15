@@ -10,16 +10,17 @@ ms.assetid: 3b9c4027-a98b-406b-935c-ccabcfe713df
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 86452d628d025aea2b797d0ade92a3c2e2fff933
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: c16487bc59a7e067aac5554213e2be750729078f
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53418571"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56120140"
 ---
 #  <a name="using-configuration-manager-software-updates-to-deliver-definition-updates"></a>使用 Configuration Manager 软件更新将定义更新交付
 
-*适用于：System Center Configuration Manager (Current Branch)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 
  可以配置 Configuration Manager 软件更新以将定义更新交付到客户端计算机。 可通过配置自动部署规则完成此操作。 在开始创建自动部署规则之前，请确保你已配置了 Configuration Manager 软件更新。 有关详细信息，请参阅 [System Center Configuration Manager 中的软件更新简介](/sccm/sum/understand/software-updates-introduction)。
@@ -37,7 +38,7 @@ ms.locfileid: "53418571"
 
 4. 在“创建自动部署规则向导”  的“常规” 页上，指定下列信息：
 
-   -   **名称**：输入自动部署规则的唯一名称。
+   -   “名称”：输入自动部署规则的唯一名称。
 
    -   **集合**：选择你想要将定义更新部署到的客户端计算机的集合。
 
@@ -75,11 +76,11 @@ ms.locfileid: "53418571"
 
 17. 在向导的“部署计划”  页上配置下列设置：
 
-    -   **时间基于**：如果希望层次结构中的所有客户端同时安装最新定义，则选择 UTC。 实际安装时间将在两小时时段内有所变化。 此设置是建议的最佳方案。
+    -   “时间根据”：如果希望层次结构中的所有客户端同时安装最新定义，则选择“”  。 实际安装时间将在两小时时段内有所变化。 此设置是建议的最佳方案。
 
     -   **软件可用时间**：指定可用于由此规则创建的部署的时间。 指定的时间必须至少为自动部署规则运行之后的一小时。 这有助于确保有足够时间将内容复制到层次结构中的分发点。 一些定义更新还可能包括反恶意软件引擎更新，这些更新可能要花更长时间才能到达分发点。
 
-    -   **安装截止时间**：选择**越早越好**。
+    -   **安装截止时间**：选择“尽快” 。
 
         > [!NOTE]
         >  软件更新截止时间在两小时时间段内变化，以防止所有客户端在同一时间请求更新。

@@ -10,16 +10,17 @@ ms.assetid: 3753608d-b539-44dc-8e3f-b631319e7687
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: abae42358e6baba660841eab9443410c0b818428
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 63b52b42a9957ed8728d0942988067fef2be6271
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53419251"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56129708"
 ---
 # <a name="deploy-profiles-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中部署配置文件
 
-*适用于：System Center Configuration Manager (Current Branch)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 必须将配置文件部署到一个或多个集合，然后才能使用这些配置文件。  
 

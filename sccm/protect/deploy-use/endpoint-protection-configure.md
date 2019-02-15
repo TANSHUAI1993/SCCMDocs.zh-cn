@@ -10,12 +10,13 @@ ms.assetid: e63f2394-6eb1-4a33-bec5-8377fc62a34e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9dc5c79588c8d5211139f0614491d80ba7597f49
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 89eee933d9845ae86bcc8d008045b669d104d03d
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32347172"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56156723"
 ---
 # <a name="configure-endpoint-protection"></a>配置 Endpoint Protection
 

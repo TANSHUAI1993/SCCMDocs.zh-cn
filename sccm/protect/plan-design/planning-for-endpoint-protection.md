@@ -9,12 +9,13 @@ ms.assetid: 7610bbd3-a67f-4a09-8115-e35d40d43b42
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 0e8cd4a409718645d06f17c8cea36e7b06ec61d2
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 94b1da6564c4b23c3db45b7b8851d795b97b061e
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32352001"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56133629"
 ---
 # <a name="planning-for-endpoint-protection-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中规划 Endpoint Protection
 

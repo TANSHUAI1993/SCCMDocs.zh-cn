@@ -10,16 +10,17 @@ ms.assetid: 76c90f64-d729-456b-8304-01852cd66fb6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 160713fe480b0a47c2ad57376c4a1dccdbfb00b1
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 1048b24dba0658610471d37f12f75fd1d06b8d03
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53418945"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56123867"
 ---
 # <a name="endpoint-protection"></a>Endpoint Protection
 
-*适用于：System Center Configuration Manager (Current Branch)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 Endpoint Protection 为 Configuration Manager 层次结构中的客户端计算机管理反恶意软件策略和 Windows 防火墙安全性。  
 
@@ -111,7 +112,7 @@ Endpoint Protection 可以管理和监视 Windows Defender 高级威胁防护 (A
 2. 选择网站顶部的“下载和密钥”选项卡。
 3. 筛选产品 **System Center Endpoint Protection (Current Branch)**。
 4. 单击链接以**下载**
-5. 单击“继续” 。 您应能看到若干文件，其中一个名为：**System Center Endpoint Protection (current branch 的版本 1606年) for Linux OS and Macintosh OS Multilanguage 32/64 bit 1878 MB ISO**。
+5. 单击“继续” 。 应能看到若干文件，其中一个名为：System Center Endpoint Protection (current branch - version 1606) for Linux OS and Macintosh OS Multilanguage   32/64 bit   1878 MB ISO。
 6. 单击箭头图标，下载该文件。 文件名为 SW_DVD5_Sys_Ctr_Endpnt_Prtctn_1606_MultiLang_-3_EptProt_Lin_Mac_MLF_X21-67050.ISO。
 
 此 2018 年 1 月更新 (X21-67050) 包括以下版本：

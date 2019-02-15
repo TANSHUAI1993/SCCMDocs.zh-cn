@@ -10,16 +10,17 @@ ms.assetid: a5fc033e-828e-4e45-9097-bbbd0697ebdf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f474db6768204403978eb188c3dbd138e34035d4
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: cf48b4602245750071ad60e2f42cb9afa66c40aa
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53422787"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56123553"
 ---
 # <a name="windows-defender-advanced-threat-protection"></a>Windows Defender 高级威胁防护
 
-*适用于：System Center Configuration Manager (Current Branch)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 自 Configuration Manager (当前分支) 版本 1606 起，Endpoint Protection 可帮助管理和监视 [Windows Defender 高级威胁防护 (ATP)](http://aka.ms/technet-wdatp)。 Windows Defender ATP 可帮助企业检测和调查其网络上的高级攻击并作出响应。  Configuration Manager 或 Microsoft Intune 策略可帮助载入和监视托管的 Windows 10 版本 1607（内部版本 14328）或更高版本。
 

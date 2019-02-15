@@ -10,12 +10,13 @@ ms.assetid: 0a9dc0fe-a942-40a2-bab1-7eeee4d95380
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0ffca1ddec5b6504ccb2b6646336f56d40e44ac4
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 25360f8563820fc5463a6fefd738402038ef79d5
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32350640"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56136654"
 ---
 # <a name="create-an-endpoint-protection-point-site-system-role"></a>创建 Endpoint Protection 点站点系统角色
 

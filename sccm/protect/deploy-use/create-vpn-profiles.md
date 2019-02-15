@@ -10,16 +10,17 @@ ms.assetid: f338e4db-73b5-45ff-92f4-1b89a8ded989
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bb5814860389de28294c44f367920a2da9b72fbe
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 8f00b3aef75d2200d991f99e514f83636f7b16bb
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53419421"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56121805"
 ---
 # <a name="how-to-create-vpn-profiles-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中创建 VPN 配置文件
 
-*适用于：System Center Configuration Manager (Current Branch)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 [System Center Configuration Manager 中的 VPN 配置文件](../../protect/deploy-use/vpn-profiles.md) 中介绍了不同设备平台可用的连接类型。  
 
@@ -43,7 +44,7 @@ ms.locfileid: "53419421"
 
 4. 在“连接”页面上，指定以下内容：  
 
-   - 连接类型选择 VPN 连接类型。 可从下表的连接类型中进行选择。  
+   - **连接类型**：选择 VPN 连接类型。 可从下表的连接类型中进行选择。  
 
    - **服务器列表**：添加用于 VPN 连接的新服务器。 根据连接类型，可以添加一个或多个 VPN 服务器，并指定默认服务器。  
 

@@ -10,16 +10,17 @@ ms.assetid: d837253e-fcc2-422a-9e2c-c78b938dfd8c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b6cbee02b0f3eaa34891019e305572f854575b86
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 4f7528f15c67e8ce339013db583d545cb252712d
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53420796"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56125657"
 ---
 # <a name="troubleshooting-windows-defender-or-endpoint-protection-client"></a>对 Windows Defender 或 Endpoint Protection 客户端进行故障排除
 
-*适用于：System Center Configuration Manager (Current Branch)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 
 如果你遇到有关 Windows Defender 或者 Endpoint Protection 的问题，请联系你的安全管理员以获得支持。 你也可以尝试对以下问题进行故障排除：  
@@ -155,7 +156,7 @@ ms.locfileid: "53420796"
 -   单击“运行” 。 最新的更新将手动安装在你的计算机上。  
 
 
-### <a name="step-7-contact-support"></a>步骤 7：联系支持人员  
+### <a name="step-7-contact-support"></a>步骤 7：联系技术支持人员  
 
 -   如果这些步骤未能解决此问题，请与技术支持人员联系。 有关详细信息，请参阅[客户支持](http://go.microsoft.com/fwlink/?LinkID=196174) (http://go.microsoft.com/fwlink/?LinkID=196174))。  
 
@@ -170,7 +171,7 @@ ms.locfileid: "53420796"
 
 -   关闭所有应用程序并重新启动计算机。  
 
-### <a name="step-2-make-sure-the-windows-defender-or-endpoint-protection-service-is-set-to-automatic-and-is-started"></a>步骤 2：确保“Windows Defender”或“Endpoint Protection 服务”设置为自动且已启动  
+### <a name="step-2-make-sure-the-windows-defender-or-endpoint-protection-service-is-set-to-automatic-and-is-started"></a>步骤 2：确保“Windows Defender”或“Endpoint Protection 服务”设置为自动，并且已启动  
 
 1.  单击“开始”  ，搜索 **services.msc**，然后按 **Enter**。  
 
@@ -210,7 +211,7 @@ ms.locfileid: "53420796"
 ##  <a name="internet-connection-issues"></a>Internet 连接问题  
  为了确保你的计算机从 Windows 更新接收最新的更新，必须连接到 Internet。  
 
-### <a name="step-1-verify-that-your-computer-is-connected-to-the-internet"></a>步骤 1：验证计算机是否连接到 Internet  
+### <a name="step-1-verify-that-your-computer-is-connected-to-the-internet"></a>步骤 1：验证你的计算机是否连接到 Internet  
 
 1.  单击“开始” ，搜索 **ncpa.cpl**，然后按 **Enter**。  
 
@@ -220,7 +221,7 @@ ms.locfileid: "53420796"
 
 4.  如果计算机显示为未连接，则右键单击连接名称，然后单击“连接”、“启用”、“身份验证”或“修复”。  
 
-### <a name="step-3-restart-your-computer"></a>步骤 3：重启计算机  
+### <a name="step-3-restart-your-computer"></a>步骤 3：重新启动计算机。  
 
 -   关闭任何已打开的程序并重新启动计算机。  
 
@@ -293,7 +294,7 @@ ms.locfileid: "53420796"
 
 6.  重新安装 Endpoint Protection。 如果这样做不能解决问题，请继续执行下一步骤。  
 
-### <a name="step-3-start-windows-in-selective-startup-mode"></a>步骤 3：在“有选择的启动”模式下启动 Windows  
+### <a name="step-3-start-windows-in-selective-startup-mode"></a>步骤 3：在“选择性启动”模式下启动 Windows  
 
 1.  单击“开始”  ，搜索 **msconfig**，然后按 **Enter**。  
 

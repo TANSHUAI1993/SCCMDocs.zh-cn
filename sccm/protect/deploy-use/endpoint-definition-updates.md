@@ -10,16 +10,17 @@ ms.assetid: 537dd2a7-4e44-4877-b8dd-5e1499407f8d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e83f999ccd3e7625b2f83372464569771520632a
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: f87f6c439a7f42144553406081e0b21bcef84c9b
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53419201"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56123856"
 ---
 #  <a name="configure-definition-updates-for-endpoint-protection"></a>为 Endpoint Protection 配置定义更新  
 
-*适用于：System Center Configuration Manager (Current Branch)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
  通过 System Center Configuration Manager 中的 Endpoint Protection，你可以使用若干可用方法中的任何方法使反恶意软件定义在层次结构中的客户端计算机上保持最新。 本主题中的信息可以帮助你选择和配置这些方法。
 

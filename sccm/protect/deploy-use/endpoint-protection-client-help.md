@@ -10,12 +10,13 @@ ms.assetid: fdcee455-22e3-451d-bcf3-e7b62792f04a
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 580218b701b01af388b56bbd2b7293f67cf5d77d
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 55615761dfa18c0a6bfc4988c18a4327446f02ca
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32348923"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56124858"
 ---
 # <a name="endpoint-protection-client-help"></a>Endpoint Protection 客户端帮助
 
@@ -26,7 +27,7 @@ ms.locfileid: "32348923"
 
 -   **Windows 防火墙集成。** 可使用 Endpoint Protection 设置打开或关闭 Windows 防火墙。  
 -   **网络检查系统。** 此功能可检查网络流量，以便及时阻止他人利用已知的网络漏洞，从而增强实时保护。  
--   **保护引擎。** 实时保护可查找恶意软件并阻止其在电脑上安装或运行。 更新后的引擎可增强检测和清理功能并提高性能。  
+-   **保护引擎。** 实时保护可查找恶意软件并阻止其在电脑上安装或运行。 更新后的引擎增强检测和清理功能并提高性能。  
 
 Windows Defender 默认为 Windows 10 操作系统的一部分。  在早期版本的 Windows 中，你的管理员可以使用管理软件提供 Windows Defender 或 Endpoint Protection。
 
