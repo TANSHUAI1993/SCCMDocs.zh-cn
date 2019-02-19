@@ -11,12 +11,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.assetid: 6f0201d7-5714-4ba0-b2bf-d1acd0203e9a
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7ede0049847eda2b87731f4cfbce0bda8984f158
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: b7f2875852b49ab8af9b1f34c4747f12a6620896
+ms.sourcegitcommit: fd16fc2b681608fd6def5bad2cedffbcd1f2423a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56120242"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56405669"
 ---
 # <a name="change-the-mdm-authority-for-specific-users-mixed-mdm-authority"></a>更改特定用户的 MDM 机构（混合 MDM 机构） 
 
@@ -140,17 +140,7 @@ ms.locfileid: "56120242"
 
 ## <a name="migrate-devices-without-user-affinity"></a>迁移无用户关联的设备
 
-使用设备注册管理员注册的设备和无[用户关联](/sccm/mdm/deploy-use/user-affinity-for-hybrid-managed-devices)的设备不会自动迁移至新的 MDM 机构。 可以在以下方案中，使用 Switch-MdmDeviceAuthority PowerShell cmdlet 来切换 Intune 和 Configuration Manager 管理机构： 
-
--   方案 1：使用*Switch-mdmdeviceauthority* cmdlet 迁移所选的设备，并验证可以在 Azure 中使用 Intune 管理它们。 然后，准备就绪后，[将租户的 MDM 机构更改为 Intune](migrate-change-mdm-authority.md) 以完成设备迁移。  
-
--   方案 2：如果你已准备好将租户的 MDM 机构更改为 Intune，执行以下操作来迁移无用户关联设备：  
-
-    - 使用 cmdlet 来更改无用户关联的设备的 MDM 机构，然后[将租户的 MDM 机构更改为 Intune](migrate-change-mdm-authority.md)。     
-
-    - 将租户的 MDM 机构更改为 Intune 后，致电支持部门来切换无用户关联的设备。  
-
-若要切换这些 MDM 设备的管理机构，可以使用 Switch-MdmDeviceAuthority cmdlet 来切换 Intune 和 Configuration Manager 管理机构。 
+若要迁移到 Intune 不通过用户关联注册窗体的单独设备配置管理器，使用 Switch-mdmdeviceauthority PowerShell cmdlet。  在迁移中发生的 Azure 中的 Intune 中使用 cmdlet 迁移所选的设备验证后应为所选设备。 然后，当您准备，MDM 机构更改为 Intune 租户以完成具有为其的 MDM 机构的 Configuration Manager 的任何剩余的设备的迁移。
 
 ### <a name="cmdlet-switch-mdmdeviceauthority"></a>Cmdlet Switch-MdmDeviceAuthority
 
