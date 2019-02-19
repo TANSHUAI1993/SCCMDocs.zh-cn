@@ -10,19 +10,19 @@ ms.assetid: c0f094f1-852e-4606-91db-97846d8f0772
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7a9095ea946e024dcd633aa6457b21fe71988c85
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 6c3217dee8406b46aeb93925c368f18f402bfb70
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32348311"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56123587"
 ---
 # <a name="vpn-profiles-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的 VPN 配置文件
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-<!--1283610-->
-使用 Configuration Manager 中的 VPN 配置文件将 VPN 设置部署到组织中的用户。 通过部署这些设置，你可以最大限度减少最终用户连接到公司网络资源需要进行的工作。  
+<!--1283610-->要将 VPN 设置部署给组织中的用户，请在 Configuration Manager 中使用 VPN 配置文件。 通过部署这些设置，你可以最大限度减少最终用户连接到公司网络资源需要进行的工作。  
 
  例如，你希望用连接到公司网络上的文件共享所需的设置来配置所有 Windows 10 设备。 可以用连接到公司网络所需的设置创建 VPN 配置文件。 然后将此配置文件部署至拥有运行 Windows 10 的设备的所有用户。 用户能在可用网络的列表中看到 VPN 连接，并可以轻松连接。  
 
