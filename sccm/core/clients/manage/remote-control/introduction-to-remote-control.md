@@ -10,16 +10,17 @@ ms.assetid: 29350919-6a25-446b-a0da-05e8914fbb26
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6a6f6ea0d68a8ba8d2db20bd8a77d5e480314150
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: b2f9744db8722686d10ad098b186c3972b570cfc
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32331958"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56129283"
 ---
 # <a name="introduction-to-remote-control-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的远程控制简介
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 使用远程控制可远程管理、提供协助或查看层次结构中的任何客户端计算机。 可使用远程控制来解决客户端计算机上的硬件和软件配置问题，并提供支持。 Configuration Manager 支持远程控制所有工作组计算机和域加入计算机，但前提是它们运行的操作系统受 Configuration Manager 客户端支持。 有关详细信息，请参阅 [System Center Configuration Manager 的客户端和设备支持的操作系统](../../../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md)
 

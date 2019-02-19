@@ -10,12 +10,13 @@ ms.assetid: 54aa20d5-791e-4416-9db4-5aaea472c0b7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 85d7dbb494f1d6288ad7a45fad98e24a6ad2b393
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: f519762e7ba4dcc90083bc43149e18b8a444df25
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53421138"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56136705"
 ---
 # <a name="define-site-boundaries-and-boundary-groups-for-system-center-configuration-manager"></a>为 System Center Configuration Manager 定义站点边界和边界组
 

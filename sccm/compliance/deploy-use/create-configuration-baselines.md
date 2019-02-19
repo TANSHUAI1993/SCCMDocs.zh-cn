@@ -10,12 +10,13 @@ ms.assetid: 678c9622-c61b-47d1-ba25-690616e431c7
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 10b7d0c026ab7af0f5b1964539a70f74f13c079e
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 67a68975bbd6f9356ecc34ec95007fad3b8b333b
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53421529"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56132742"
 ---
 # <a name="create-configuration-baselines-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中创建配置基线
 

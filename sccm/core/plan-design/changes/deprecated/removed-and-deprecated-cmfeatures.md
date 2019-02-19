@@ -10,12 +10,13 @@ ms.assetid: 287a6324-ae65-4d38-b2ef-198d47c91231
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a46f2cb84e447a9b76e812dcb98805e83e31f701
-ms.sourcegitcommit: 38f56f1d5803370f4262931c2dc4a532bfcf0594
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 0a207399f5baa1b00be954ef4d0eb432939ed261
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55905625"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56127297"
 ---
 # <a name="removed-and-deprecated-features-for-configuration-manager"></a>Configuration Manager 中已删除和已弃用的功能
 

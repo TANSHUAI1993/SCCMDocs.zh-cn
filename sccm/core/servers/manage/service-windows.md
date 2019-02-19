@@ -10,16 +10,17 @@ ms.assetid: ca4886d4-7173-46be-8dcd-1657d5b0deb9
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 8b81efc7f31339bd7b19530ef603855f0ee8fad6
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 495d109d73a32617f58383b78d11a10bf05edf75
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32343899"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56134531"
 ---
 #  <a name="service-windows-for-site-servers"></a>站点服务器的服务时段
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 可以在中心管理站点和主站点配置服务时段，控制控制台中更新可以安装的时间。  可配置多个时段，时段允许用于安装更新，更新由该站点服务器的所有服务时段的组合决定。
 

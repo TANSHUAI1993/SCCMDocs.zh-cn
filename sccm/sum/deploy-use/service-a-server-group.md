@@ -10,16 +10,17 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 304a83ea-0f72-437d-9688-2e6e0c7526dd
-ms.openlocfilehash: 7c775df2446dbd0da1d9317982fc752dbfe5120a
-ms.sourcegitcommit: 4e4b71227309bee7e9f1285971f8235c67a9c502
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: aac5c9d6c683447fe7dda50e6dcfd52b7024656d
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46533807"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56131636"
 ---
 # <a name="service-a-server-group"></a>为服务器组提供服务
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 >[!IMPORTANT]
 >预发行功能是指 Current Branch 中的功能，用于在生产环境中的早期测试。 这些功能完全受支持，但仍在开发过程中，所以在从预发行类别中划出之前，可能会有所变更。 必须启用此功能，使其可供使用。 有关详细信息，请参阅[使用更新中的预发行功能](https://docs.microsoft.com/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease)。
@@ -41,11 +42,11 @@ ms.locfileid: "46533807"
 
 4.  在“服务器组设置”页上指定下列设置之一：  
 
-    -   **允许同时更新一定比例的计算机**：指定仅特定比例的客户端可在任意某个时间进行更新。 例如，如果集合中有 10 个客户端，并且配置该集合为可同时更新 30% 的客户端，则在任何给定时间只有 3 个客户端可安装软件更新。  
+    -   **允许同时更新一定比例的计算机**：指定一次只更新一定百分比的客户端。 例如，如果集合中有 10 个客户端，并且配置该集合为可同时更新 30% 的客户端，则在任何给定时间只有 3 个客户端可安装软件更新。  
 
-    -   **允许同时更新一定数量的计算机**：指定仅特定数量的客户端可在任意某个时间进行更新。  
+    -   **允许同时更新多台计算机**：指定一次只更新一定数量的客户端。  
 
-    -   **指定维护顺序**：指定集合中的客户端将按配置的顺序一次更新一个。 列表中位于某客户端前面的客户端完成安装其软件更新后，该客户端才能安装软件更新。  
+    -   **指定维护日程安排**：指定集合中的客户端将按配置的顺序一次更新一个。 列表中位于某客户端前面的客户端完成安装其软件更新后，该客户端才能安装软件更新。  
 
 5.  指定是否使用部署前（节点排出）脚本或部署后（节点恢复）脚本。  
 

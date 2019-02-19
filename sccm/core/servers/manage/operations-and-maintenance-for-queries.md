@@ -10,16 +10,17 @@ ms.assetid: f050ee45-bcab-4a3b-9050-4952f5e2ec2e
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 7597d7a3f281360533673c91ff53622dcdfebd6c
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 65b90d8f5e1b60d20e05f31f89ab12a2ca22572e
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32336419"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56125334"
 ---
 # <a name="operations-and-maintenance-for-queries-in-system-center-configuration-manager"></a>System Center Configuration Manager 中查询的操作和维护
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 使用本节中的以下主题可了解有关 System Center Configuration Manager 中的查询的操作和维护信息。  
 

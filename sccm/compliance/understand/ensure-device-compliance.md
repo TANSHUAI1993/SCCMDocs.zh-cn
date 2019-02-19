@@ -10,16 +10,17 @@ ms.assetid: 7568c9aa-b99e-4466-bfc8-0301aa376930
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 081e485211e3bb5b2b0d8e6a9606c4037c29d4e3
-ms.sourcegitcommit: 2deba3d3aaba47a532273bcd377da8e60f7b1a68
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 2ac27cfd7bccc55da891707878fccd8829c43d93
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169594"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56125927"
 ---
 # <a name="ensure-device-compliance-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 确保设备的合规性
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 System Center Configuration Manager 中的符合性设置提供了管理组织中设备的配置和符合性所需的工具与资源。 这可以帮助你支持以下业务要求：  
 

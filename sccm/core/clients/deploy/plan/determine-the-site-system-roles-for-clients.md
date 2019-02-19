@@ -10,12 +10,13 @@ ms.assetid: 984e8d92-7327-4b08-9228-0c955e6ac778
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8fdb7faee21904c504470c2bca86a674d59559cf
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 5a7df7b8c1ff14e8783b6f988f315a477cc7065c
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53419812"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56122111"
 ---
 # <a name="determine-the-site-system-roles-for-system-center-configuration-manager-clients"></a>为 System Center Configuration Manager 客户端确定站点系统角色
 

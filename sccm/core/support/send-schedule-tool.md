@@ -10,16 +10,17 @@ ms.assetid: d5ce547d-3b3b-47d3-bcd7-6ff94692c046
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7fd90b613fa7e52b4bc83e6c0d0f593d585fdd48
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 38829a249ca87ca87f9c5005ed7ae73e1500e2ab
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385838"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56131194"
 ---
 # <a name="send-schedule-tool"></a>发送计划工具
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 发送计划工具是一个 [Configuration Manager 工具](/sccm/core/support/tools)。 使用该工具在客户端上触发计划或者触发指定配置基线的评估。 它适用于本地计算机或面向远程客户端。  
 

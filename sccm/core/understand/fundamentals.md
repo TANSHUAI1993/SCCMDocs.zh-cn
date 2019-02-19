@@ -10,12 +10,13 @@ ms.assetid: cc4cdb35-f0b4-42b5-9cec-6431a8c30793
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e29042aa4c6d335189c929eef6f2a19700681246
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 4bb48ebf1bcf5be503505efd2b84d364e655a6e5
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53422260"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56131177"
 ---
 # <a name="fundamentals-of-system-center-configuration-manager"></a>System Center Configuration Manager 基础知识
 

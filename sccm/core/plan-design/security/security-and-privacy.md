@@ -10,16 +10,17 @@ ms.assetid: e18be4d1-9f6e-477c-a79d-c46014b4a03a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1b2f672f1ed5f8192cd78e12a5837ee0e3b3fe3e
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 6bfc608fd9180f690269597a03fa35d15faa1b57
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32333301"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56142470"
 ---
 # <a name="security-and-privacy-for-system-center-configuration-manager"></a>System Center Configuration Manager 的安全性和隐私
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 本文包括 System Center Configuration Manager 的安全和隐私相关资源。  
 

@@ -10,12 +10,13 @@ ms.assetid: a1f099f1-e9b5-4189-88b3-f53e3b4e4add
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0a2ee528c8b38acbc18aa051dd84a7634b66713b
-ms.sourcegitcommit: 2687489aa409a050dcacd67f17b3dad3ab7f1804
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 0f3eb6a459eee5d97575b00a4d9de494910bb303
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54316586"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56140365"
 ---
 # <a name="manage-task-sequences-to-automate-tasks-in-configuration-manager"></a>管理任务序列在 Configuration Manager 中自动执行任务
 

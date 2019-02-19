@@ -10,12 +10,13 @@ ms.assetid: ab5cda93-b67c-4aa5-904d-7b63ce790aa0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f97decbe40293ee45cdc75c3fb36f4c57662ac06
-ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 2cd48e40f594ced5a62e3a65beb43e6dc74e090b
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54896771"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56122468"
 ---
 # <a name="install-updates-publisher"></a>安装 Updates Publisher
 

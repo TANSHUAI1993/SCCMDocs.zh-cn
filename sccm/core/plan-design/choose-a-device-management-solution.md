@@ -10,12 +10,13 @@ ms.assetid: 24633725-791a-4df7-8dce-2c24c1a19a03
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1214a5b73b3e6b1bddab8a3918ddd32af0cacb68
-ms.sourcegitcommit: f7b2fe522134cf102a3447505841cee315d3680c
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 2b396ad5955227494511355f6efdb88ecd901110
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55570194"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56120825"
 ---
 # <a name="choose-a-device-management-solution-for-configuration-manager"></a>选择 Configuration Manager 的设备管理解决方案
 

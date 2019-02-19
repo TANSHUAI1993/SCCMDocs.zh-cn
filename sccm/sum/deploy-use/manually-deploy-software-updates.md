@@ -10,12 +10,13 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 57184274-5fea-4d79-a2b4-22e08ed26daf
-ms.openlocfilehash: 8c0752506e410f752f49795470215c30b0928e4e
-ms.sourcegitcommit: d5c013a29f53b975fe3a6cb0a41f1e817bd7b235
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 1cf0f84a1d4b0144dbfb82fd912fd7d900a76ca6
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54342833"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56137824"
 ---
 # <a name="manually-deploy-software-updates"></a>手动部署软件更新  
 

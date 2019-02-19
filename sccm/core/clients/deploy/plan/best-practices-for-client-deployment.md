@@ -10,22 +10,23 @@ ms.assetid: a933d69c-5feb-4b2b-84e8-56b3b64d5947
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9c68a51202152e4b1418101412739b0d83f10203
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: a3f5be163775e667571d97ef8a9d417ce6256b2d
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32333512"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56121992"
 ---
 # <a name="best-practices-for-client-deployment-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中部署客户端的最佳方案
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 
 ## <a name="use-software-update-based-client-installation-for-active-directory-computers"></a>为 Active Directory 计算机使用基于软件更新的客户端安装  
  此客户端部署方法使用现有 Windows 技术，与 Active Directory 基础结构集成，在 Configuration Manager 中需要进行的配置最少，对于防火墙而言最容易配置，并且最为安全。 通过为组策略配置使用安全性组和 WMI 筛选，你还可以非常灵活地控制哪些计算机安装 Configuration Manager 客户端。  
 
- 有关详细信息，请参阅 [如何使用基于软件更新的安装来安装 Configuration Manager 客户端](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientSUP)。  
+ 有关详细信息，请参阅 [How to Install Configuration Manager Clients by Using Software Update-Based Installation](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientSUP)。  
 
 ## <a name="extend-the-active-directory-schema-and-publish-the-site-so-that-you-can-run-ccmsetup-without-command-line-options"></a>扩展 Active Directory 架构并发布站点，以便能够不带命令行选项运行 CCMSetup  
  在扩展 Configuration Manager 的 Active Directory 架构并将站点发布到 Active Directory 域服务时，会将许多客户端安装属性发布到 Active Directory 域服务。 如果计算机可以找到这些客户端安装属性，则它可以在 Configuration Manager 客户端的部署过程中使用这些属性。 由于此信息自动生成，消除了与手动输入安装属性关联的人为错误风险。  
@@ -73,4 +74,4 @@ ms.locfileid: "32333512"
 
  如果可以选择要启用的写入筛选器类型，请选择基于文件的写入筛选器，并配置例外以在设备下次重启之前保持客户端状态和清单数据，以在 Configuration Manager 客户端上提高网络和 CPU 效率。 有关写入筛选器的详细信息，请参阅   [在 System Center Configuration Manager 中计划 Windows Embedded 设备的客户端部署](../../../../core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md)。  
 
- 有关主站点可支持的最大 Windows Embedded 客户端数量的详细信息，请参阅[客户端和设备支持的操作系统](../../../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md)。  
+ 有关主站点可支持的最大 Windows Embedded 客户端数量的详细信息，请参阅 [客户端和设备支持的操作系统](../../../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md)。  

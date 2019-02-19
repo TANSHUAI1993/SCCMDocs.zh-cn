@@ -4,12 +4,13 @@ ms.author: aaroncz
 ms.prod: configuration-manager
 ms.topic: include
 ms.date: 08/17/2019
-ms.openlocfilehash: 24632ebc898249b325afd75484dd28e73f3d3c9e
-ms.sourcegitcommit: b8167a60fd6f2d8387b2db723976c0e2c4198d33
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 35b57eb54f6301825b022ec2fdd9a017337c354c
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54832834"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56141164"
 ---
 ### <a name="ki_ANCHOR"></a> 已知问题标题
 <!--bugID--> 问题说明和原因。

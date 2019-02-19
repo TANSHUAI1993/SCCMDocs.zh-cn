@@ -10,12 +10,13 @@ ms.assetid: a70bfbd4-757a-4468-9312-1c3b373ef9fc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0e77225fb378a5851dbba9718dd3810463255cf7
-ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: c66ef90812e8b5ccf47063fb335c17aaeca4fa64
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54898420"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56122213"
 ---
 # <a name="plan-a-migration-job-strategy-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中规划迁移作业策略
 

@@ -10,16 +10,17 @@ ms.assetid: 753d2681-ea72-4f47-94d1-ac10188d9d5b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 962b19f1849628776eb1b9059089f7ce8e6df3ee
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 3ba864914afb6794d460b81f5df346902b8ab0ce
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385978"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56121874"
 ---
 # <a name="content-ownership-tool"></a>内容所有权工具
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 内容所有权工具是一个 [Configuration Manager 工具](/sccm/core/support/tools)。 它可以在 Configuration Manager 中更改孤立包的所有权。 孤立包没有自己所拥有的站点服务器。 删除站点服务器时，如果包仍然属于此站点服务器，它们可能会变为孤立包。
 

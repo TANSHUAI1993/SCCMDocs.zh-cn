@@ -10,12 +10,13 @@ ms.assetid: 87f4e041-67df-4c61-aa98-7444faffe565
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6f60d7f3a8c3bd81f4de38b2ce4080f54756de14
-ms.sourcegitcommit: c60e057075a83f07d1ca2577c3de1c7d7c8e9cec
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 100fdd8e9032b1d16ae79b3cd52ffba3b3609446
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626457"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56140154"
 ---
 # <a name="supported-os-versions-for-clients-and-devices-for-configuration-manager"></a>Configuration Manager 在客户端和设备上支持的操作系统版本
 

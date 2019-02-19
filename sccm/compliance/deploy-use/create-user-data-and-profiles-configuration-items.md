@@ -10,12 +10,13 @@ ms.assetid: 9fcbcc81-cd6f-496e-b075-ef1afa2b8ccc
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 1ddefeafdf03a64f5fe50df6a4638616552f818a
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: e6ae7f6b14da4f5959e336e08bec0e71896425ff
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53420135"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56129912"
 ---
 # <a name="create-user-data-and-profiles-configuration-items-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中创建用户数据和配置文件配置项目
 

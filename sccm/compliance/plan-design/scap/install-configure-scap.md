@@ -10,16 +10,17 @@ ms.assetid: f53b484b-5123-48f0-be2f-4e30318f3d39
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4fd440905bb736dfbfac01de804373d29c9fbb59
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: b63894764e45e67ef262e345140e245297a11c87
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39384608"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56133929"
 ---
 # <a name="install-and-configure-the-scap-extensions-for-configuration-manager"></a>安装并配置 Configuration Manager 的 SCAP 扩展
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 在[准备基础结构](/sccm/compliance/plan-design/scap/about-scap#bkmk_prepare)后，即可在需要运行此进程的计算机上安装并配置 Configuration Manager 的 SCAP 扩展。
 

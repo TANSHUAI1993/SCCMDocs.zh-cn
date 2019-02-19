@@ -10,12 +10,13 @@ ms.assetid: 2200b02b-e76b-4aa7-a77a-6dc5e70f1333
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2047874bb44c89e510abd52a387277e749cf65db
-ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 0f21e087e73a26191af56793e0015cbb21e8714c
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54896441"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56136528"
 ---
 # <a name="system-center-updates-publisher"></a>System Center Updates Publisher
 

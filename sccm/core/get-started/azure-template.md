@@ -10,12 +10,13 @@ ms.assetid: 9875c443-19bf-43a0-9203-3a741f305096
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a6f087b6905d307c707b95e3926a01b0c482f857
-ms.sourcegitcommit: b8167a60fd6f2d8387b2db723976c0e2c4198d33
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: c3f1ca26c4cbc6de21565948ab2f161e2ccf0ea0
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54832853"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56128249"
 ---
 # <a name="create-a-configuration-manager-technical-preview-lab-in-azure"></a>在 Azure 中创建 Configuration Manager 技术预览实验室
 

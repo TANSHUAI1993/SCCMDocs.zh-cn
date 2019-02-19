@@ -10,16 +10,17 @@ ms.assetid: 2bdec799-905f-48bc-aed5-2d92134739e8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6212a22a8ed2fbce7dda19a0b70b0336812b2827
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 8700919d372722f16001fcf1405531b0e2b383ff
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32338323"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56138375"
 ---
 # <a name="unicode-and-ascii-support-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的 Unicode 和 ASCII 支持
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 System Center Configuration Manager 使用 Unicode 字符来创建大部分对象。 但是，有几个对象仅支持 ASCII 字符，或者具有其他限制。  
 

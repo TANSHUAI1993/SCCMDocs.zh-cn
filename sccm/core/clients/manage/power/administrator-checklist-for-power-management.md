@@ -10,16 +10,17 @@ ms.assetid: 94e42cbe-9df8-4228-a04e-0ad7626180ca
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: c556cb51ff071d40fcf5e4bb24c0b6b5f85c512a
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 8198669fdf7d0acf3273af2d8a2e83f5b89f520c
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32337218"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56156985"
 ---
 # <a name="administrator-checklist-for-power-management-in-system-center-configuration-manager"></a>System Center Configuration Manager 中电源管理的管理员清单
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 此管理员清单提供了在组织中使用 System Center Configuration Manager 电源管理的建议步骤。  
 

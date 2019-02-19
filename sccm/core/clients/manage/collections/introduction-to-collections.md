@@ -10,16 +10,17 @@ ms.assetid: d17e1188-d277-438f-9236-db9cd213b421
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 48a0788d83ffcd7a373f5f73ee675b62508a6d86
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: b9b995d0abfc3f14dce35e0aec70ac25b2ca2853
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32333580"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56138936"
 ---
 # <a name="introduction-to-collections-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的集合简介
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 集合有助于将资源安排到可管理单位。 你可以创建集合来满足客户端管理需求，以及一次性在多个资源上执行操作。 
 

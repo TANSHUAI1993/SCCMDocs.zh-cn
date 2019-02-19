@@ -10,12 +10,13 @@ ms.assetid: cd74e5f5-33f6-4566-8c9d-d6a93bfe71ed
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9f6b10706638a476242051757145f725b262a7fc
-ms.sourcegitcommit: 2687489aa409a050dcacd67f17b3dad3ab7f1804
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 1db764221757bf1d00a8579f9c53fd4af6aed351
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54316433"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56138188"
 ---
 # <a name="language-packs-in-configuration-manager"></a>Configuration Manager 中的语言包
 

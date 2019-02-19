@@ -10,12 +10,13 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
-ms.openlocfilehash: 7ef9c7d734c74d578c188576b3b03d66fcb1de06
-ms.sourcegitcommit: f7b2fe522134cf102a3447505841cee315d3680c
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 9ece8381fd41651b5b52e3187bbcbfc1a0578234
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55570228"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56124756"
 ---
 # <a name="manage-office-365-proplus-with-configuration-manager"></a>使用 Configuration Manager 管理 Office 365 ProPlus
 
@@ -201,7 +202,7 @@ Office 365 客户端管理仪表板中显示的数据来自硬件清单。 启�
 4. 在 Configuration Manager 控制台中，编辑你的任务序列。
 5. 在任务序列中“安装软件更新”步骤的前面添加新的“运行命令行”步骤。 如果将 Office 365 专业增强版作为同一任务序列的一部分安装，请确保在安装 Office 之后运行此步骤。
 6. 复制从 Office 自动更新计划任务收集的命令和参数。 
-7. 单击“确定”。 
+7. 单击" **确定**"。 
 
 **方法 2：**
 1. 在具有与 Office 365 专业增强版相同版本的计算机上，打开任务计划程序 (taskschd.msc) 并标识 Office 365 自动更新任务。 它通常位于“任务计划程序库” >“Microsoft”>“Office”下。
@@ -210,7 +211,7 @@ Office 365 客户端管理仪表板中显示的数据来自硬件清单。 启�
 4. 在命令行字段中，输入将运行计划的任务的命令行。 请参阅以下示例，确保引号中的字符串与步骤 1 中标识的路径和任务名称相匹配。  
 
     示例：`schtasks /run /tn "\Microsoft\Office\Office Automatic Updates"`
-5. 单击“确定”。 
+5. 单击" **确定**"。 
 
 ## <a name="change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager"></a>在使 Office 365 客户端可从 Configuration Manager 接收更新后更改更新频道
 若要在将 Office 365 客户端启用为从 Configuration Manager 接收更新后更改更新频道，请使用组策略向 Office 365 客户端分发注册表项值更改。 更改 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration\CDNBaseUrl** 注册表项以使用以下值之一：

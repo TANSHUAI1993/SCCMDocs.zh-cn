@@ -10,12 +10,13 @@ ms.assetid: 44153689-70e8-42ad-9ae8-17ae35f6a2e3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d9d9fd940c21e0fc8d20c86c51cb3443f21a9339
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 60811ad0556be4d59caab346d20fbb2c40024206
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53419442"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56128232"
 ---
 # <a name="planning-for-client-deployment-to-linux-and-unix-computers-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中规划 Linux 和 UNIX 计算机的客户端部署
 
@@ -124,7 +125,7 @@ ms.locfileid: "53419442"
 |所需程序包|说明|最低版本|  
 |----------------------|-----------------|---------------------|  
 |glibc-2.4-31.30|C 标准共享库|2.4-31.30|  
-|OpenSSL|OpenSSL 库；安全网络通信协议|0.9.8a-18.15|  
+|Openssl|OpenSSL 库；安全网络通信协议|0.9.8a-18.15|  
 |PAM|可插入身份验证模块|0.99.6.3-28.8|  
 
  **SUSE Linux Enterprise Server 11 (i586)**  

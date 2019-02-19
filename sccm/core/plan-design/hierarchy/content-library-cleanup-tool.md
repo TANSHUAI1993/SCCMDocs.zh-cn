@@ -10,12 +10,13 @@ ms.assetid: 226cbbb2-9afa-4e2e-a472-be989c0f0e11
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bd347cecce0ae1317fe51a701ce67b4766fbcd10
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 7662ccba7b6f672888ab8d98954fb8cb70631fe4
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53423178"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56134616"
 ---
 # <a name="content-library-cleanup-tool"></a>内容库清理工具
 

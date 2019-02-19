@@ -10,16 +10,17 @@ ms.assetid: 46dd9cb2-a812-4b6a-a747-b840f92fef8b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bce6abd57cd50ff19339c29b97bda165109b79b1
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 7c76f0213ffb30432c51430f3fd98b911ab5d627
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344307"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56129147"
 ---
 # <a name="international-support-in-system-center-configuration-manager"></a>System Center Configuration Manager 的国际支持
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 以下部分提供技术详细信息，帮助使 System Center Configuration Manager 符合特定的国际要求。  
 

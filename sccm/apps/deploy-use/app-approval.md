@@ -10,12 +10,13 @@ ms.assetid: 20493c86-6454-4b35-8f22-0d049b68b8bb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 776d0a477d56a178927fb2d09866eacf63b4895a
-ms.sourcegitcommit: d5c013a29f53b975fe3a6cb0a41f1e817bd7b235
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: f78ec291701d15c0907aa780b4bed23b712995c7
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54342782"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56135215"
 ---
 # <a name="approve-applications-in-configuration-manager"></a>在 Configuration Manager 中批准应用程序
 

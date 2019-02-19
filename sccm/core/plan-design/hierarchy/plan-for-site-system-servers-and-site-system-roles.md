@@ -10,16 +10,17 @@ ms.assetid: 0a7415ba-2c53-4433-983e-780e92aa662f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f2c3052337b5c985798c15950a541086587176d1
-ms.sourcegitcommit: 19fc4f27667d51502fc9d7d02d164f2837d65dae
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: c6ae8b6fb99016bfc0a39c328cb0d52269897917
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461301"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56128028"
 ---
 # <a name="plan-for-site-system-servers-and-site-system-roles-in-configuration-manager"></a>在 Configuration Manager 中规划站点系统服务器和站点系统角色
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 每个安装的 Configuration Manager 站点都包括一个站点服务器，该服务器是一个站点系统服务器。 该站点还可以包括远离站点服务器的计算机上的其他站点系统服务器。 站点系统服务器（站点服务器或远程站点系统服务器）支持 **站点系统角色**。  
 

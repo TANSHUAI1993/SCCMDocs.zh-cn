@@ -10,16 +10,17 @@ ms.technology: configmgr-sum
 ms.assetid: a0767664-fd60-46a8-9da5-86cc431ce53c
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: df213206ee673e872852958233973e4f091728b9
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: c4d17d4e1e0a41e2e94cfe70d422ed3425a812d6
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353117"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56141147"
 ---
 # <a name="add-software-updates-to-an-update-group"></a>将软件更新添加到更新组  
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
  软件更新组会为你提供行之有效的方法来组织你的环境中的软件更新。 你可以将软件更新手动添加到软件更新组，或通过运用 ADR，将软件更新自动添加到软件更新组。 你还可以手动部署软件更新组，或通过运用 ADR 自动部署该组。 在部署软件更新组后，你可以将新的软件更新添加到组，Configuration Manager 将自动对它们进行部署。 使用下列过程以将软件更新添加到新的或现有的软件更新组。  
 

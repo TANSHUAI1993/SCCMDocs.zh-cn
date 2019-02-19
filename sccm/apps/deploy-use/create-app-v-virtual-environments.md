@@ -10,16 +10,17 @@ ms.assetid: b6b86078-fcc4-46cf-87d6-4b52b914b712
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e04b1d5662bb67ddb14310cd136abd6fdf29855d
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 2becf31d807f0854bf6ab9d4eb58adf84d8ab7e6
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32331822"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56135756"
 ---
 # <a name="create-app-v-virtual-environments-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中创建 App-V 虚拟环境
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 在 System Center Configuration Manager 中的 Microsoft Application Virtualization (App-V) 虚拟环境中，已部署的虚拟应用程序可在客户端 Windows 电脑上共享相同的文件系统和注册表。 与标准虚拟应用程序不同，这些应用程序可以相互共享数据。 在安装应用程序时，或者在客户端接下来评估已安装的应用程序时，会在客户端电脑上创建或修改虚拟环境。 可以对这些应用程序进行排序，以便在多个应用程序尝试修改一个文件系统或注册表值时，排在最前面的应用程序优先进行修改。  
 

@@ -10,16 +10,17 @@ ms.assetid: 699cedb4-af12-4f6c-91dd-325b57e8e2bf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 98f2d631c5c7795ea30285b218ff68656afdf68e
-ms.sourcegitcommit: 6126dfdf5c879db7d12c3eec019a88fa44521361
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 2618d534011ec841779b90418f55623656a47095
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "52830543"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56138409"
 ---
 # <a name="capabilities-in-configuration-manager-technical-preview-version-1811"></a>Configuration Manager 技术预览版 1811 中的功能 
 
-*适用于： System Center Configuration Manager （技术预览版）*
+适用范围：System Center Configuration Manager (Technical Preview)
 
 本文介绍 Configuration Manager 技术预览版 1811 中提供的功能。 安装此版本，以更新技术预览站点的功能并向其添加新功能。 
 

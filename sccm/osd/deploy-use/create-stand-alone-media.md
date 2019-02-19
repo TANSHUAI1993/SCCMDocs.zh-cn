@@ -10,12 +10,13 @@ ms.assetid: c6b9ccd2-78d9-4f0e-b25a-70d0866300ba
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e2a9c4a1d2feba0c96dcbe3a2f7ee03c7c5a4555
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: cdf2c0e1501707e836c914265e0edf2d9c88521f
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53418690"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56138051"
 ---
 # <a name="create-stand-alone-media-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 创建独立媒体
 

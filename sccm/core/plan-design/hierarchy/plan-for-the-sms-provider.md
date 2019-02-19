@@ -10,12 +10,13 @@ ms.assetid: 5d5d6273-0d8a-43c7-865a-cdb1736dcae3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d59e5e5bc1dfdf962517b4c364b74aa0df6b650a
-ms.sourcegitcommit: 94bf7d5b5beb9628cc1fdfe75451d33b5de26f8a
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: d6eeb74e3e8e83dd0082f45583bd2eb5dbe1df4e
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54152445"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56131602"
 ---
 # <a name="plan-for-the-sms-provider"></a>规划 SMS 提供程序 
 

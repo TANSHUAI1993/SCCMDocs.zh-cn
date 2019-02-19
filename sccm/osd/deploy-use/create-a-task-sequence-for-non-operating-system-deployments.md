@@ -10,16 +10,17 @@ ms.assetid: 92aaec8a-8751-442a-b64b-62ab05b5bf50
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 42c56b048afe768cd04cd5c91d659535ad5ffc9e
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: c8ef75ea9b0948a932c1b146d0f4fe7051017759
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32347478"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56140307"
 ---
 # <a name="create-a-task-sequence-for-non-operating-system-deployments-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 创建用于非操作系统部署的任务序列
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 System Center Configuration Manager 中的任务序列用于自动在环境中执行各种任务。 这些任务经过测试主要设计用于部署操作系统。  Configuration Manager具有许多其他功能，这些功能应是用于以下这些方案的主要技术：[应用程序安装](../../apps/understand/introduction-to-application-management.md)[软件更新安装](../../sum/understand/software-updates-introduction.md)、[设置配置](../../compliance/understand/ensure-device-compliance.md)或自定义自动化。 此外，你也可以考虑诸如 [Orchestrator](https://technet.microsoft.com/library/hh237242.aspx) 和 [Service Management Automation](https://technet.microsoft.com/library/dn469260.aspx) 等其他 Microsoft System Center 自动化技术。  
 

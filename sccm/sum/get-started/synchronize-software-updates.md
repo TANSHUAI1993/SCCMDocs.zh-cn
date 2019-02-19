@@ -10,12 +10,13 @@ ms.technology: configmgr-sum
 ms.assetid: ea8698c4-9df5-4cf5-8b62-ab93115b4769
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 0fd176984316dc040568deda3ceb339f2ef0eb3c
-ms.sourcegitcommit: 81e3666c41eb976cc7651854042dafe219e2e467
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 543a7867ca40cded389ee3ce875845dd32631274
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53747103"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56123512"
 ---
 #  <a name="BKMK_SUMSync"></a> 同步软件更新
 

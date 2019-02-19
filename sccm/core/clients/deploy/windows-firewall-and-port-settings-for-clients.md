@@ -10,12 +10,13 @@ ms.assetid: dce4b640-c92f-401a-9873-ce9aa9262014
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 94af249b91735a535ea4056f8a5f19d120632770
-ms.sourcegitcommit: 818f98187d377a90263d1b1c89d4c1fdbf8c908b
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: b53f55a47a77848840493fa7fe08b599a4db2111
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54398483"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56139147"
 ---
 # <a name="windows-firewall-and-port-settings-for-clients-in-system-center-configuration-manager"></a>System Center Configuration Manager 中客户端的 Windows 防火墙和端口设置
 

@@ -10,16 +10,17 @@ ms.assetid: fc497a8a-3c54-4529-8403-6f6171a21c64
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 608b947e75ff29cf9653b2a12497918846556f4d
-ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 6030bb1a02a94e61cf3ef53b6d90f7b6a5ae4f7a
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411283"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56122094"
 ---
 # <a name="planning-considerations-for-automating-tasks-in-configuration-manager"></a>计划在 Configuration Manager 中自动执行任务的注意事项
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
  可以创建任务序列，以在 Configuration Manager 环境中自动执行任务。 这些任务涉及从捕获引用计算机上的 OS 到向一个或多个目标计算机部署 OS 在内的各种任务。 序列的各个步骤中定义了任务序列的操作。 任务序列运行时，它在本地系统上下文中的命令行级别运行每个操作步骤。 此行为意味着任务序列完全自动化运行，而无需用户干预。 
 

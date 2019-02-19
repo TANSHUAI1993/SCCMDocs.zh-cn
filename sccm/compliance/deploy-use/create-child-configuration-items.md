@@ -10,16 +10,17 @@ ms.assetid: 113984fa-6150-41a1-89ed-d2a83b979732
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 358f2d67a5a4689927632bb1492ace1a33490451
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 42b6bceacf8d8ecd733e4d13b882fe3b5c0500e7
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32331710"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56135739"
 ---
 # <a name="how-to-create-child-configuration-items-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中创建子配置项目
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 System Center Configuration Manager 中的子配置项目是与原始配置项目保持关系的配置项目的副本，因为它们从父配置项目继承原始配置。  
 

@@ -10,16 +10,17 @@ ms.assetid: 518f9882-ce71-48c3-9f47-cd968cfb658d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cd5488f6ed1a52b35197fa7ef0eb775eafd33e01
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 63a3025411f8c355b4070937f4f29814346f16f4
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32331727"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56156655"
 ---
 # <a name="planning-considerations-for-deploying-clients-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中部署客户端的规划注意事项
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 在电脑、服务器以及 System Center Configuration Manager 中的其他设备上安装客户端之前，应考虑如何部署客户端软件并相应准备 Configuration Manager 基础结构。  
 

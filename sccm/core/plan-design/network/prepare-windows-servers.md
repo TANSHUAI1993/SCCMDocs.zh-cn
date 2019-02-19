@@ -10,12 +10,13 @@ ms.assetid: 2aca914f-641e-4bc8-98d4-bbf0a2a5276f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a531168aaedc67c1a403946374edb7b79273eb64
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 1e794ff161f193f76fc899ab35acb1d29afdf606
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53423831"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56120328"
 ---
 # <a name="prepare-windows-servers-to-support-configuration-manager"></a>准备 Windows Server 以支持 Configuration Manager
 

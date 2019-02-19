@@ -10,16 +10,17 @@ ms.assetid: 0d3cf6e1-b295-4b05-821d-e9f57c74ca14
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 62c4453cc383fa14eebf6e66c2582b878aaebae2
-ms.sourcegitcommit: 759098de944b8f7d5eedfc2bae2cb9a6ba15276f
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: a10ebaad901181e80a449c5c64274a0d68b53100
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43297184"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56126428"
 ---
 # <a name="technical-reference-for-package-conversion-manager-error-messages"></a>包转换管理器错误消息的技术参考
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 <!--1357861-->
 

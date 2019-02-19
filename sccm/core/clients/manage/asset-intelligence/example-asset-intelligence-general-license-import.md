@@ -10,16 +10,17 @@ ms.assetid: e6258333-a783-440b-b1af-f8023b782fbc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d4ce90c28a8af0714f07ad5450d82202a7d5a543
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: b830efbdf2abdfddd7bbe1d7ac4ac13010399cad
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32335392"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56142215"
 ---
 # <a name="example-asset-intelligence-general-license-import-file-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中的资产智能常规许可证导入文件示例
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 本主题中的示例信息可用于创建常规软件许可证文件示例，以通过使用“导入软件许可证向导”将软件许可证导入到资产智能目录中。 你可以将下表复制并粘贴到新的 Microsoft Excel 电子表格中，并采用 .csv 文件扩展名保存，然后将其用作常规软件许可证导入文件示例以进行测试。 在创建许可证导入文件时，只有当电子表格中需要“名称”、“发布者”、“版本”和“有效数量”数据值时，才需要所有标题字段。 有关将软件许可证导入资产智能目录的详细信息，请参阅[在 System Center Configuration Manager 中配置资产智能](../../../../core/clients/manage/asset-intelligence/configuring-asset-intelligence.md)。  
 

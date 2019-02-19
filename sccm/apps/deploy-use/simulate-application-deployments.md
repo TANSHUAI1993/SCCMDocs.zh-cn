@@ -10,16 +10,17 @@ ms.assetid: 28b240a4-d358-40ce-8006-c697b1622ece
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: bd2f4f24a9bc22daac5b5c6e785ff2ea5d02f49a
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 89283226a067ff3e0bd232c33ab1cfe5d9240fb5
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32333070"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56130014"
 ---
 # <a name="simulate-application-deployments-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 模拟应用程序部署
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 如果想在不安装或卸载应用程序的前提下测试应用程序部署，可以使用模拟部署。 模拟部署评估部署类型的检测方法、要求和依赖关系。 它在“监视”工作区的“部署”节点中报告结果。 请使用本主题中的过程模拟 System Center Configuration Manager (Configuration Manager) 中的应用程序部署。  
 

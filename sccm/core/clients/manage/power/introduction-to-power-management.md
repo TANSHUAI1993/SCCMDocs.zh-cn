@@ -10,16 +10,17 @@ ms.assetid: 3ddff2a7-99eb-4ef8-b969-f3f7f24053db
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: adf410b2cfdb45b3f01ac48c53d324b678689cda
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: a86b430849945a01093a2eb136afd6d1aa363aaf
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334583"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56122060"
 ---
 # <a name="introduction-to-power-management-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的电源管理简介
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 System Center Configuration Manager 中的电源管理可满足众多组织监视和减少其计算机功耗的需求。 该功能利用 Windows 中的内置电源管理功能对组织中的计算机应用相关且一致的设置。 你可以在营业时间和非营业时间对计算机应用不同的电源设置。 例如，你可能想要在非营业时间对计算机应用限制性更强的电源计划。 在计算机必须始终保持开机状态的情况下，可以禁止应用电源管理设置。  
 

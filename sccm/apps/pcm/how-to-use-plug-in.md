@@ -11,12 +11,13 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 5ed885ba459a584939881235e44d632515138cdf
-ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 1d76b43a1918184fea9cc97bb3ed35a57a7c7ada
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54896356"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56126045"
 ---
 # <a name="how-to-use-the-package-conversion-manager-plug-in"></a>如何使用包转换管理器插件
 

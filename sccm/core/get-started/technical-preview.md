@@ -10,12 +10,13 @@ ms.assetid: 9ce0a8cb-f96c-4e41-834c-59ceb54ce44a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 69fd77df25465910776eb413601efef5d87842aa
-ms.sourcegitcommit: 4317bd20050f582a068d0a813e71c449d655e4b4
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: c48e7fdd2826af942cc94017d58614760f61545d
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/09/2019
-ms.locfileid: "55971891"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56136977"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Configuration Manager 的技术预览版
 

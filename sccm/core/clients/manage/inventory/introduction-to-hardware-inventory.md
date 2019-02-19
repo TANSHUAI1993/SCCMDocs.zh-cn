@@ -10,12 +10,13 @@ ms.assetid: 3969952e-9d05-49c9-82a2-e7e90ccef511
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 91bb316c59929898ea18bd1e647cff884f106f1c
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 65060281c020615c9411f98c250222f2386002bd
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53424776"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56156434"
 ---
 # <a name="introduction-to-hardware-inventory-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的硬件清单简介
 

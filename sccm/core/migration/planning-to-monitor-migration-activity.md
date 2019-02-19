@@ -10,16 +10,17 @@ ms.assetid: fc731d3f-edd7-4049-b17b-653d6693a564
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2dfad7c9963862ff90934861973bf3862d745b98
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 5588afeb02ead302201cc99c8c2ad7558ec4b32e
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32333121"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56134776"
 ---
 # <a name="planning-to-monitor-migration-activity-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中规划监视迁移活动
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 使用 System Center Configuration Manager，可以在连接到目标层次结构的 Configuration Manager 控制台中监视迁移。 在 Configuration Manager 控制台的“管理” 工作区中，可以使用“迁移”节点监视迁移工作的进度和成功情况。 你可以查看每个迁移作业的摘要信息，该信息确定已迁移的对象、尚未迁移的那些对象，以及从迁移作业中排除的对象的数量。 你还将看到有关任何迁移问题的详细信息。  
 

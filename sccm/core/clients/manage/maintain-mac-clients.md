@@ -10,12 +10,13 @@ ms.assetid: cf6337a2-700c-47f3-b6f8-5814f9b81e59
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 337df4d64b6edda589344b52a100e5a90381676c
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 6c8eef0ad8164ce6545264e0a1c229a647383661
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53421189"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56138919"
 ---
 # <a name="maintain-mac-clients"></a>维护 Mac 客户端
 适用范围：System Center Configuration Manager (Current Branch)

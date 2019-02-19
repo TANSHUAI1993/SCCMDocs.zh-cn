@@ -10,12 +10,13 @@ ms.assetid: 6af92de2-b2c7-4d5c-affd-6cce81979fb5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 46de654a0db0c635edb7101cce2e651c87fca31b
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 96a100131d8fe0e9c289cdf4d272aeefb43fbf15
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53417449"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56140399"
 ---
 # <a name="checklist-for-installing-update-1802-for-system-center-configuration-manager"></a>用于为 System Center Configuration Manager 安装更新 1802 的清单
 
@@ -71,7 +72,7 @@ ms.locfileid: "53417449"
 
 有关详细信息，请参阅 [System Center Configuration Manager 的许可和分支](/sccm/core/understand/learn-more-editions)。
 
-**查看站点系统服务器上已安装的 Microsoft .NET 版本：** 站点安装此更新时，如果尚未安装 .NET Framework 4.5 或更高版本，则 Configuration Manager 会在承载以下站点系统角色之一的每台计算机上自动安装 .NET Framework 4.5.2：
+**查看站点系统服务器上已安装的 Microsoft .NET 版本：** 站点安装此更新时，如果尚未安装 .NET Framework 4.5 或更高版本，则 Configuration Manager 会在承载以下任一站点系统角色的每台计算机上自动安装 .NET Framework 4.5.2：
 
 -   注册代理点
 -   注册点
@@ -150,7 +151,7 @@ Configuration Manager 无法成功更新启用了管理点数据库副本的主�
 
 若要从控制台运行先决条件检查，请转到“管理”工作区，并选择“更新和服务”。 选择 Configuration Manager 1802 更新包，然后在功能区单击“运行先决条件检查”。
 
-有关启动并监视先决条件检查的详细信息，请参阅 **步骤 3：安装[安装 System Center Configuration Manager 控制台内的更新](/sccm/core/servers/manage/install-in-console-updates)主体中的更新 之前请运行先决条件检查程序**。
+有关启动并监视先决条件检查的详细信息，请参阅 **步骤 3：**[安装 System Center Configuration Manager 控制台内部更新](/sccm/core/servers/manage/install-in-console-updates)主题中的步骤 3：安装更新之前运行先决条件检查程序 。
 
 > [!IMPORTANT]  
 > 必备组件检查程序作为更新安装的一部分运行或独立运行时，该过程会更新某些用于站点维护任务的产品源文件。 因此，在运行先决条件检查程序之后但在安装更新之前，如果需要执行站点维护任务，可从站点服务器上的 CD.Latest 文件夹运行  **Setupwpf.exe** （Configuration Manager 安装程序）。

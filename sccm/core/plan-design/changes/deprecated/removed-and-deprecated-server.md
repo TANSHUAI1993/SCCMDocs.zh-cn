@@ -10,12 +10,13 @@ ms.assetid: d53ac075-438b-41da-ab85-42f33982da0c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c8ea24e141d0e01512ed81ca96e88f2f0f2d07bc
-ms.sourcegitcommit: d5c013a29f53b975fe3a6cb0a41f1e817bd7b235
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: a1a15d803077f183897f182ef162d36896eb238a
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54342714"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56126430"
 ---
 # <a name="removed-and-deprecated-for-configuration-manager-site-servers"></a>Configuration Manager 站点服务器已删除和已弃用的内容
 

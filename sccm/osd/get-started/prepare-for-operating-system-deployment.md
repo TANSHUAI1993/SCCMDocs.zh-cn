@@ -10,16 +10,17 @@ ms.assetid: 8d27e5ac-4f19-4b3d-85c7-fa34eb5d5e7e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 14a9e3929aba14f1715112b293eaedc41f3d2dc2
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: c26c204b391ddd41b62a80bfff6779f59baed9bd
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32346560"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56125640"
 ---
 # <a name="prepare-for-operating-system-deployment-in-system-center-configuration-manager"></a>准备 System Center Configuration Manager 中的操作系统部署
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 必须在 Configuration Manager 中完成几件事情，才能部署操作系统。 使用以下主题帮助你准备操作系统的部署：  
 

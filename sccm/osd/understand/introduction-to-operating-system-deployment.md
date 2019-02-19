@@ -10,12 +10,13 @@ ms.assetid: d9a1c545-8301-492c-832f-2c108ff93c77
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6ec1e6b2ce2322086fdb85e4e45c34ae1a4b5887
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 69df6eaa9d7ca164b5d855840eeca2f2c6f72ffc
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53416701"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56123114"
 ---
 # <a name="introduction-to-operating-system-deployment-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的操作系统部署简介
 

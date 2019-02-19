@@ -10,16 +10,17 @@ ms.assetid: 76c220b6-1824-4e2e-8c61-a719f0b056f1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 25e0cef11b3524a4337745e7c32593d080fe6640
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 5a8033c148241e597ec7dd32366dbd977d0b51f2
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32337014"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56125062"
 ---
 # <a name="where-to-get-installation-media-for-system-center-configuration-manager"></a>可获取 System Center Configuration Manager 的安装媒体的位置
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 如果具有 System Center Configuration Manager 批量许可证（带软件保障），或已购买 System Center Configuration Manager 批量许可证的许可证，则可下载基线源媒体，从[批量许可服务中心](https://www.microsoft.com/Licensing/servicecenter/default.aspx)安装 System Center Configuration Manager。   
 

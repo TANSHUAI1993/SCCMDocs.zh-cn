@@ -10,12 +10,13 @@ ms.assetid: 25fa89d6-7e47-45a6-8f4e-70b77560fba6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: de5c98e45c6f5d6dca1569de812825cce80d6f70
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 85b6421d8582d4278f6d60a6e60bd7d4940a8afa
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53417330"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56140256"
 ---
 # <a name="update-reset-tool"></a>更新重置工具
 

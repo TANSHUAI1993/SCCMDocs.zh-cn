@@ -10,16 +10,17 @@ ms.assetid: 54ef5fbb-521d-4ca5-a1c5-61e6f538d71e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4371e9ede643d794058520cf001f30f01b47fe94
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: a90e100c242514eb2526e16bb68e379a2326572f
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32331924"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56136909"
 ---
 # <a name="determine-whether-to-block-clients-in-system-center-configuration-manager"></a>确定是否在 System Center Configuration Manager 中阻止客户端
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 如果某个客户端计算机或客户端移动设备不再受信任，则可以在 System Center 2012 Configuration Manager 控制台中阻止该客户端。 Configuration Manager 基础结构会拒绝被阻止的客户端，使它们无法与站点系统通信，从而无法下载策略、上载清单数据或者发送状况或状态消息。  
 

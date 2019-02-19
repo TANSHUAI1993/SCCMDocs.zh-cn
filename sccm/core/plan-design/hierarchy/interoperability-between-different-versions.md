@@ -10,12 +10,13 @@ ms.assetid: 9b0a7859-747f-4495-a2f4-13fd5991f897
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 92e525cc39d9ae893309963094a604cbc9bb9a03
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: ccb7861b5264d649a8ff4b2340bf34eaaafe7970
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53418027"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56126974"
 ---
 # <a name="interoperability-between-different-versions-of-system-center-configuration-manager"></a>System Center Configuration Manager 不同版本之间的互操作性
 

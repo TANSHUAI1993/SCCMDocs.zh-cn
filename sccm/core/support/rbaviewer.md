@@ -10,16 +10,17 @@ ms.assetid: 6372ff17-7f56-4d7b-a21b-87fb8bdd6d3a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 19e0e61681e26a2fc666f67909864ba09b68691d
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: b51b3367969f985f9d9b4e90c9bd75105afa8b4f
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39386408"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56124841"
 ---
 # <a name="role-based-administration-and-auditing-tool"></a>基于角色的管理和审核工具
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 基于角色的管理和审核工具是一个 [Configuration Manager 工具](/sccm/core/support/tools)。 使用此工具执行以下任务：
 

@@ -10,16 +10,17 @@ ms.assetid: 1a38421d-24c1-4fef-bf6c-42fce53109ac
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 057310d7f580cfc61f23a53977716743ed906867
-ms.sourcegitcommit: 849391d3985b057027cae610bd3a79fdaa708b94
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 9b69fac83283963e49b01c733fb8fa3000702cfb
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42584498"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56132160"
 ---
 # <a name="high-availability-options-for-configuration-manager"></a>Configuration Manager 的高可用性选项
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 本文介绍如何使用维持高可用性服务的选项部署 Configuration Manager。   
 

@@ -10,12 +10,13 @@ ms.technology: configmgr-sum
 ms.assetid: de78e8d3-043f-4cd3-97e0-4dfb824fd3fb
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 84d3afdd7f0416e733777cd52165c98128c013a6
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 4f43379f315a3a2e24a33f2112a26108aa7418bb
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53417789"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56138715"
 ---
 # <a name="download-software-updates"></a>下载软件更新  
 

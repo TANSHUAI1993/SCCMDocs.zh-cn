@@ -10,16 +10,17 @@ ms.assetid: dc526e8d-fac3-4bb5-b206-03ad29b0ae11
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 45fb1bc31a7e888ca4caa21a710e74ec0fde422c
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 39ae7c931b2d69199dc2c24cbb1bf9ae804a04b4
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32341860"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56123182"
 ---
 # <a name="data-transfers-between-sites-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的站点间数据传输
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 System Center Configuration Manager 使用**基于文件的复制**和**数据库复制**在站点之间传输不同类型的信息。 了解 Configuration Manager 如何在站点之间移动数据，并了解如何管理网络上的数据传输。  
 

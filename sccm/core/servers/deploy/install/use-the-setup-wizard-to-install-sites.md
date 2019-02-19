@@ -9,12 +9,13 @@ ms.assetid: 1f703376-5f2c-4fd2-8209-7028c931ddc7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: bca8d9efd4a48b4fddfed92521d9189c5b6fef30
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 4705106efe82595a4a7649a81d8368cf40f6fedc
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53421308"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56124773"
 ---
 # <a name="use-the-setup-wizard-to-install-system-center-configuration-manager-sites"></a>使用安装向导安装 System Center Configuration Manager 站点
 

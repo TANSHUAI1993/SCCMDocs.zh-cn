@@ -10,16 +10,17 @@ ms.assetid: 0e9f0fbd-e442-4509-a021-bfdedf2d04dd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 379fa3637d1634caf4797b1f1b7029e3531158cc
-ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 209e09ba11de851a1275211364af3cee930737d0
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43893519"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56131534"
 ---
 # <a name="configuration-options-for-site-system-roles-in-configuration-manager"></a>Configuration Manager 中的站点系统角色的配置选项
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 Configuration Manager 站点系统角色的大多数配置选项都不言自明，或在对其进行配置时于向导或对框中予以了解释。 以下部分介绍站点系统角色，这些角色具有可能需要额外信息的设置。  
 

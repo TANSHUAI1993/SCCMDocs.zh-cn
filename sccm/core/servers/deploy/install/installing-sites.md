@@ -10,16 +10,17 @@ ms.assetid: d0e4ddc3-d9c4-4f5c-8b1f-af098e54f5c8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2ae77e7bf34e77ecadfad1e0e3c16722588599b0
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: ccaf6afd25d74e030d3a4cf9e09b2783418f3fd6
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334729"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56134514"
 ---
 # <a name="resources-for-installing-system-center-configuration-manager-sites"></a>用于安装 System Center Configuration Manager 站点的资源
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 以下主题有助于安装 System Center Configuration Manager，或将站点添加到现有 Configuration Manager 层次结构。
 

@@ -10,12 +10,13 @@ ms.assetid: 10eb8958-3848-49d7-95c0-16119b624580
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8d733f4eb70b9e95bb00a918cb82f47c85cb3059
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: edf7d7d40e42535a600d127dc0692aee3d7dd857
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53417534"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56142419"
 ---
 # <a name="create-capture-media-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 创建捕获媒体
 

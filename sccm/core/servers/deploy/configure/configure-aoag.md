@@ -10,12 +10,13 @@ ms.assetid: 7e4ec207-bb49-401f-af1b-dd705ecb465d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 10b15f8463bb54df859f09379f41a809a45fc5b9
-ms.sourcegitcommit: 81e3666c41eb976cc7651854042dafe219e2e467
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 26c6ac9b8e3e2391828fd25cfcafb50aba5bb4e2
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53747120"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56139521"
 ---
 # <a name="configure-sql-server-always-on-availability-groups-for-configuration-manager"></a>为 Configuration Manager 配置 SQL Server AlwaysOn 可用性组
 

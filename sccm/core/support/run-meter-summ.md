@@ -10,16 +10,17 @@ ms.assetid: d27f88fe-817f-4af4-b290-c16f2e46cf31
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4815b308b1a4c93e3bc9271a3ec3af2f637b11cf
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 7bfb6758d62fb76650e019d00eef1ac2b2803d4b
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39386348"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56126957"
 ---
 # <a name="run-meter-summarization-tool"></a>运行计量摘要工具
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 运行计量摘要工具是一个 [Configuration Manager 工具](/sccm/core/support/tools)。 使用它可以立即触发主站点上的软件计数摘要的维护任务。 默认情况下，这些任务按照“站点维护”任务中的计划运行，即从每天中午 12:00 开始。 
 

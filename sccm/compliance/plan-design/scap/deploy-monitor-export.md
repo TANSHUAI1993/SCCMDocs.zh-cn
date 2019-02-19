@@ -10,16 +10,17 @@ ms.assetid: 0bdcb018-bac2-4540-b786-6242bac73ff4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7b59b7414ad2095d053b1121ba936281559aa5e2
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: e3280edbe900e96cf97af8e59578ceab5322ee2a
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385998"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56137290"
 ---
 # <a name="deploy-and-monitor-scap-compliance-in-configuration-manager"></a>在 Configuration Manager 中部署和监视 SCAP 符合性
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 [转换并导入](/sccm/compliance/plan-design/scap/install-configure-scap#bkmk_convert-and-import) SCAP 数据流文件后，请参阅以下后续步骤：  
 

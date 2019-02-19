@@ -10,12 +10,13 @@ ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e7a2801b7efa513b2b15a58a7a89eee5d4727a21
-ms.sourcegitcommit: d5c013a29f53b975fe3a6cb0a41f1e817bd7b235
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 10f0ce608908a4db568d549586017f67fb0436b2
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54342891"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56138086"
 ---
 # <a name="task-sequence-variables-in-configuration-manager"></a>Configuration Manager 中的任务序列变量
 

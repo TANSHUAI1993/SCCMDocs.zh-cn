@@ -10,12 +10,13 @@ ms.assetid: c8534a1e-57b8-4688-b6e6-299d82cfcec9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 26b6d68f634a230f56a93b6cc1691ce98fa77852
-ms.sourcegitcommit: a3cec96a771eed69e58a29917d1a3fe1a5fb2e73
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 1ea9e2ef8da09d0ab344d56fe0ad4f1b3fb9d94b
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54250675"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56130497"
 ---
 # <a name="configuration-manager-and-windows-as-a-service"></a>Configuration Manager 和服务型 Windows
 

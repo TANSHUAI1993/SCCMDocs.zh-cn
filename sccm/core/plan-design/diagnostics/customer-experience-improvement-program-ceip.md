@@ -10,16 +10,17 @@ ms.assetid: bd5b34c9-7304-4743-81c3-96f1e0c80702
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d9bf25066e0f04b2885dc161542380b8b0df0cb0
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 7e9f5111de0a6aae0b1dfd1012a05146b54ff074
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32331254"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56136620"
 ---
 # <a name="customer-experience-improvement-program-ceip-for-system-center-configuration-manager"></a>System Center Configuration Manager 的客户体验改善计划 (CEIP)
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 > [!Note]  
 > 从 Configuration Manager 版本 1802 开始，从产品中删除了 CEIP 功能。

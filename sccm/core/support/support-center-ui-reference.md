@@ -10,12 +10,13 @@ ms.assetid: 41cdebfe-b595-40aa-a385-32e0746255ed
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: df7d443a9f611278296c729949d5dfb764a43e9e
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 970d2fbf69a7c4c91a55cadf5d420988b2207ca2
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53420778"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56131092"
 ---
 # <a name="support-center-user-interface-reference"></a>支持中心用户界面引用
 

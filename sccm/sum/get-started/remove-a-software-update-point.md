@@ -10,16 +10,17 @@ ms.technology: configmgr-sum
 ms.assetid: 2486375c-d4a2-4cf2-9124-9bee02bbf173
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 585077c44b13d79da55e8ab140fd93998b8371c1
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: c7ab7e28d576bb543fa47f86ad4363e9cffd53e0
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353563"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56138001"
 ---
 #  <a name="BKMK_RemoveSUP"></a> 删除软件更新点站点系统角色  
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 可以通过 Configuration Manager 控制台删除站点中的软件更新点站点系统角色。 客户端策略将更新，以便从列表中删除软件更新点。 在删除站点中的最后一个软件更新点时，软件更新点列表将不包含软件更新点，而且实质上将在站点中禁用软件更新。 如果主站点中有多个软件更新点，而且你删除了配置为同步源的软件更新点，则必须将站点中的另一个软件更新点选为新的同步源。  
 

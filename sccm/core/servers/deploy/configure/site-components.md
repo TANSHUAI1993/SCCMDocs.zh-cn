@@ -10,16 +10,17 @@ ms.assetid: 5fccbbeb-0faa-4943-83c2-e67db62d392d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5ffe1a95252d575a5f828d46932f583f4276c5c0
-ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: af4d3319e94d8dd673f597e4df4dde3e73e15653
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411168"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56129045"
 ---
 # <a name="site-components-for-configuration-manager"></a>Configuration Manager 的站点组件
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 在每个 Configuration Manager 站点上，均可以配置站点组件来修改站点系统角色和站点状态报告的行为。 站点组件配置适用于站点以及站点中适用的站点系统角色的每个实例。  
 

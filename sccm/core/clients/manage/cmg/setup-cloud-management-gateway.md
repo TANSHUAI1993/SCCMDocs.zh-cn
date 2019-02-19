@@ -10,12 +10,13 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
-ms.openlocfilehash: 0ad348c47ff7e97d8d9b3bfba91bd8a0c0ae48ff
-ms.sourcegitcommit: 32a257fafbb29aece8b4f435dd5614fcef305328
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: e937bf4adf3b695bf33d41318e5d48bc560ad06b
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "54005409"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56128096"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>为 Configuration Manager 设置云管理网关
 

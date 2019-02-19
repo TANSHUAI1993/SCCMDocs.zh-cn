@@ -10,12 +10,13 @@ ms.assetid: 65c88e54-3574-48b0-a127-9cc914a89dca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4587549ef2f43be3dcc5e18021f60c42770f5800
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 0453f181133b69dcf3fe83032da0eace84718cf3
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53415511"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56129266"
 ---
 # <a name="the-content-library-in-configuration-manager"></a>Configuration Manager 中的内容库
 

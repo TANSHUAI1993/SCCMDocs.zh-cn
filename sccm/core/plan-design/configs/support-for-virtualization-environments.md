@@ -10,12 +10,13 @@ ms.assetid: 1098e8c5-9676-4c2b-841b-ec88bd04e495
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 792e9e34f67ad0dc2a12df0905578effaf1f79aa
-ms.sourcegitcommit: 3f791918c5dd87d8968ae9977d761dd97909398c
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 6a2200a72330fab2f0584c419e6b66b2fc25c44b
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54196308"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56135596"
 ---
 # <a name="support-for-virtualization-environments-with-configuration-manager"></a>Configuration Manager 支持虚拟化环境
 

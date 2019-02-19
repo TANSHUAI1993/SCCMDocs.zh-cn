@@ -10,16 +10,17 @@ ms.assetid: deb8aac8-2bd9-4980-a25b-5f8d93051226
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8aa38217c3e9456a074a984b66feb83bdb192801
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: f190522300090247cdca0affa9d993fe46201668
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52458021"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56122026"
 ---
 # <a name="client-notification-in-configuration-manager"></a>Configuration Manager 中的客户端通知
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 若要立即对远程客户端执行操作，请从 Configuration Manager 控制台发送客户端通知操作。 在单个设备或一组设备上启动这些操作。 
 

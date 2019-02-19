@@ -11,12 +11,13 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: ec2c765dd751ada5c75e86229f5b156bb4d964d9
-ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 8c738b72c2cf97825a94d5e1db3b2641cc054eaa
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54897519"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56137324"
 ---
 # <a name="capabilities-in-configuration-manager-technical-preview-version-1808"></a>Configuration Manager 技术预览版 1808 中的功能 
 

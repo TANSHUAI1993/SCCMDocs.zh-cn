@@ -10,12 +10,13 @@ ms.assetid: 79eb49da-cd2b-4ffc-b355-b595aeba3aea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 38a2bfb725e61a20293b6bb6ca8aef4e46f189b0
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 54bcd177d228e67748f561be556ff4219523711a
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53414695"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56130405"
 ---
 # <a name="introduction-to-software-inventory-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的软件清单简介
 

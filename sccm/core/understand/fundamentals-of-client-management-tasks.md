@@ -10,16 +10,17 @@ ms.assetid: 8d4e5641-354e-4439-8b4f-620a760e233d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e517b345340619055b03df22638ec0b491c13d40
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 468d21123e6a4166957b7dcc8cda614a78d2366e
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32339088"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56136392"
 ---
 # <a name="fundamentals-of-client-management-tasks-for-system-center-configuration-manager"></a>System Center Configuration Manager 的客户端管理任务基础
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 安装 System Center Configuration Manager 客户端后，可以运行几个任务来管理客户端。  可从 Configuration Manager 控制台运行一些任务。 可从 Configuration Manager 客户端应用程序运行其他任务。 使用 Configuration Manager 客户端软件安装 Configuration Manager 客户端应用程序。
 

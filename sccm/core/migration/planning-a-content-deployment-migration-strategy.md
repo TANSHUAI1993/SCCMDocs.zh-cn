@@ -10,16 +10,17 @@ ms.assetid: 66f7759c-6272-4116-aad7-0d05db1d46cd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d261b246c0718777be56425c7783d05f767575df
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 1df57ef2d51a9cd525dbd9b8d99a909baf47ef95
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342607"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56127535"
 ---
 # <a name="plan-a-content-deployment-migration-strategy-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中规划内容部署迁移策略
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 以主动方式将数据迁移到 System Center Configuration Manager 目标层次结构时，源和目标层次结构中的 Configuration Manager 客户端都能继续访问在源层次结构中部署的内容。 还可使用迁移升级或重新分配源层次结构中的分发点，以成为目标层次结构中的分发点。 在共享和升级或重新分配分发点时，此策略使你不必为你迁移的客户端将内容重新部署到目标层次结构中的新服务器。  
 

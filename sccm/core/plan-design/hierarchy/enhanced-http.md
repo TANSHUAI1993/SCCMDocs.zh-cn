@@ -10,16 +10,17 @@ ms.assetid: 4deac022-e397-4f1f-bc0a-cea6c6c6368d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7f2fab639082e6871e5df8dcebe0d1b3a440624c
-ms.sourcegitcommit: 1bf26b83fa7da637d299a21e1d3bc61f2d7d8c10
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 2b8d9c3480c86b282c9780395980625f86ee82e6
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54060359"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56156917"
 ---
 # <a name="enhanced-http"></a>增强型 HTTP
 
-*适用于：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 <!--1356889,1358460-->
 

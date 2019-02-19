@@ -10,12 +10,13 @@ ms.assetid: da1e687b-28f6-43c4-b14a-ff2b76e60d24
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 69df0e379ff747b21db795416a284cc2fd3302bf
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 51c5d7f1bb6500eddfaf7e1a3a19e25bc7cafa63
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53419751"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56137586"
 ---
 # <a name="manage-windows-as-a-service-using-system-center-configuration-manager"></a>使用 System Center Configuration Manager 将 Windows 作为服务进行管理
 

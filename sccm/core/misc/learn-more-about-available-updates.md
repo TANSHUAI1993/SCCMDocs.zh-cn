@@ -10,12 +10,13 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: 169bb7fa3bfcd8ead178685be3b9d466069b016d
-ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 8c342a927fff8d9e120e15695bcd7287a9249648
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54898267"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56120467"
 ---
 # <a name="learn-more-about-available-updates-for-system-center-configuration-manager"></a>了解有关 System Center Configuration Manager 可用更新的详细信息
 

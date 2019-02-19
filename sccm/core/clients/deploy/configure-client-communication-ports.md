@@ -10,12 +10,13 @@ ms.assetid: 406bbdbf-ab4a-4121-a68b-154f96ea14ec
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 84d8be8b8f00edd541425bd0e94f7411c45dab55
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: f8909ce8cc3a7c98c64e227810ff7916a85de7e4
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53422124"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56135351"
 ---
 # <a name="how-to-configure-client-communication-ports-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中配置客户端通信端口
 

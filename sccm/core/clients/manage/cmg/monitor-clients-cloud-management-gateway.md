@@ -10,16 +10,17 @@ ms.assetid: 15f72f80-9850-40ce-9c3a-443ba04b6a03
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4ef27c67b9b17f41fbe71d57fdea9552b7dff9f7
-ms.sourcegitcommit: 2badee2b63ae63687795250e298f463474063100
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 6b52a97432dd85987dd98f11b0a048b1f730db84
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601035"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56140671"
 ---
 # <a name="monitor-cloud-management-gateway-in-configuration-manager"></a>在 Configuration Manager 中监视云管理网关
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 客户端通过正在运行的云管理网关 (CMG) 连接后，用户可以监视客户端与网络流量以确保了解该服务的执行方式。
 

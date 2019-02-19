@@ -10,16 +10,17 @@ ms.assetid: 90498b4b-6a9b-43cd-b465-1d6c9a52df1c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 69c2f3620ed618711534366121aa1267efe6a8a5
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: e3aa7a1acdd6378e41afe24c869a8ffa898a916b
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32348804"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56122604"
 ---
 # <a name="create-task-sequence-media-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 创建任务序列媒体
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 可以使用媒体从引用计算机中捕获操作系统映像，或者将操作系统部署到 System Center Configuration Manager 环境中的目标计算机。 你创建的媒体可以是 CD、DVD 集或者 USB 闪存驱动器。  
 

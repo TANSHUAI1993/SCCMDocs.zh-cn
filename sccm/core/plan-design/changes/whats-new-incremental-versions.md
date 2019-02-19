@@ -10,16 +10,17 @@ ms.assetid: b57acf0b-05b7-46af-ad4c-f3e707bd3861
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0a7d07972d412826f8b9b069f23c79df1e972f38
-ms.sourcegitcommit: 1439817f1309658b31008d7bafaab32fc5ef8789
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: d78297845f256468d13deaa4af4e4a63b8819a21
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52820027"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56137451"
 ---
 # <a name="whats-new-in-configuration-manager-incremental-versions"></a>Configuration Manager 增量版本中的新增功能
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
  Configuration Manager 采用控制台中[更新和服务](/sccm/core/servers/manage/updates)进程。 此更新进程可以轻松发现和安装 Configuration Manager 更新。 不再需要跟踪和安装服务包或累积更新版本。 无需再搜索下载最新版本或更新。
 

@@ -10,12 +10,13 @@ ms.assetid: 25e4ac68-0e78-4bbe-b8fc-3898b372c4e8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 974ecfdf30dd24e6addad91588fce5d223f27b1c
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 5a8c3ee0a9d524a640ab8439ee83f8df269f07c7
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53423739"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56131755"
 ---
 # <a name="create-a-task-sequence-to-capture-an-operating-system-in-system-center-configuration-manager"></a>创建任务序列来捕获 System Center Configuration Manager 中的操作系统
 
@@ -73,7 +74,7 @@ ms.locfileid: "53423739"
 
    -   **映像索引**：指定要安装的操作系统。 如果操作系统映像包含多个版本，则选择你想要安装的版本。  
 
-   -   **产品密钥**：指定要安装的 Windows 操作系统的产品密钥。 你可以指定编码的批量许可证密钥和标准产品密钥。 如果使用非编码的产品密钥，则必须通过短划线 (-) 分隔每组 5 个字符。 例如：*XXXXX-XXXXX-XXXXX-XXXXX-XXXXX*  
+   -   **产品密钥**：指定要安装的 Windows 操作系统的产品密钥。 你可以指定编码的批量许可证密钥和标准产品密钥。 如果使用非编码的产品密钥，则必须通过短划线 (-) 分隔每组 5 个字符。 例如：XXXXX-XXXXX-XXXXX-XXXXX-XXXXX  
 
    -   **服务器授权模式**：指定服务器许可证为“每席位”、“每服务器”或未指定许可证。 如果服务器许可证为“每服务器” ，则还需指定服务器连接的最大数量。  
 

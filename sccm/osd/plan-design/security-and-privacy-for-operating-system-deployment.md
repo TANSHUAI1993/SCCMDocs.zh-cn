@@ -10,16 +10,17 @@ ms.assetid: 5ee5928f-3d72-4b00-8156-1e0d1030a96c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0e2bb7992854f8743efa45f924e3d3d0718a3efe
-ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 8ad92f3857c1303bf3f4a7c171b0de98f75e56ee
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411385"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56135164"
 ---
 # <a name="security-and-privacy-for-os-deployment-in-configuration-manager"></a>在 Configuration Manager 中的 OS 部署的安全和隐私
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 本文包含 Configuration Manager 中 OS 部署功能的安全和隐私信息。  
 

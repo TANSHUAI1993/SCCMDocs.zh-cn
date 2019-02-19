@@ -10,12 +10,13 @@ ms.assetid: 30170d70-489f-47f7-bebf-9ed0115db26b
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: b42012bdd6eb0456d25f9970ed2cf18f881a1c14
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 1330eafb50d7a855d60b86e427f9cf4f3cb8790e
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53424810"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56126096"
 ---
 # <a name="revise-and-supersede-applications-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中修订和取代应用程序
 

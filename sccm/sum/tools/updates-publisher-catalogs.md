@@ -10,12 +10,13 @@ ms.assetid: 887f8029-1a3a-423c-a9c1-31dc0d693386
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3bc66350205ac09a09ca5543adf022b00e2b027f
-ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 383cd0aaa8e20613cdef0009c95aa44c6b1117f1
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54896670"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56156485"
 ---
 # <a name="manage-software-update-catalogs-in-updates-publisher"></a>管理 Updates Publisher 中的软件更新目录
 

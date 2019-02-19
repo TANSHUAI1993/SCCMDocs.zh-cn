@@ -10,12 +10,13 @@ ms.assetid: 946b0f74-0794-4e8f-a6af-9737d877179b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 32aced9e14f98008dfd769564c553370d067896e
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: e361760d9d7a2b21f42dc7b9504d653b584fca0a
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53423093"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56132432"
 ---
 # <a name="enable-third-party-updates"></a>启用第三方更新 
 

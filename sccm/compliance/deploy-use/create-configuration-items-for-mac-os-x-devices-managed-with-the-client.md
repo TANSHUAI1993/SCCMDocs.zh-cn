@@ -10,12 +10,13 @@ ms.assetid: 722d5bf5-bedc-4dfc-b324-6eeb773874e9
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 24a0bad463dda09c7e23bbcc47ecc388735d1ca5
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: cf610c3310265f8b7dd6b467640617928a51258f
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53421818"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56124047"
 ---
 # <a name="how-to-create-configuration-items-for-mac-os-x-devices-managed-with-the-system-center-configuration-manager-client"></a>如何为使用 System Center Configuration Manager 客户端管理的 Mac OS X设备创建配置项目
 使用 System Center Configuration Manager **Mac OS X（自定义）** 配置项目，管理由 Configuration Manager 客户端托管的 Mac OS X 设备的设置。  
@@ -84,7 +85,7 @@ ms.locfileid: "53421818"
   
     -   **描述：** 输入符合性规则的说明。  
   
-    -   **选定的设置：** 单击“浏览”以打开“选择设置”对话框。 选择您想要定义的规则，或单击设置 **新设置**。 在完成，请单击 **选择**。  
+    -   **所选设置：** 单击“浏览”以打开“选择设置”对话框。 选择您想要定义的规则，或单击设置 **新设置**。 在完成，请单击 **选择**。  
   
         > [!TIP]  
         >  您也可以单击 **属性** 若要查看有关当前所选设置的信息。  

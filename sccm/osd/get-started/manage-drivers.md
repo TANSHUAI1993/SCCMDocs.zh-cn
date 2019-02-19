@@ -10,12 +10,13 @@ ms.assetid: 84802d55-112e-4f7f-9a48-74a80d91a0f4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2ef469260147326511f2e6f435308a941be351fd
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 52d5fd0b1d7ec9c262c1f33dd55e452e30008e68
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53416922"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56130973"
 ---
 # <a name="manage-drivers-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中管理驱动程序
 

@@ -10,16 +10,17 @@ ms.assetid: bb0a87a6-fd65-440b-90a5-2fef35622c9d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d0f79053eba91ac7177fe117a79612d1c1988965
-ms.sourcegitcommit: be8c0182db9ef55a948269fcbad7c0f34fd871eb
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 6c0705df8fafea253fde06ed605521aad2d6ffbd
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42755770"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56131704"
 ---
 # <a name="checklist-for-installing-update-1806-for-configuration-manager"></a>用于为 Configuration Manager 安装更新 1806 的清单
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 使用 Configuration Manager 的 Current Branch 时，可安装版本为 1806 的控制台内部更新，从之前的版本更新层次结构。 <!-- baseline only statement: (Because version 1802 is also available as [baseline media](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions), you can use the installation media to install the first site of a new hierarchy.)-->
 
@@ -73,7 +74,7 @@ ms.locfileid: "42755770"
 
 有关详细信息，请参阅[许可和分支](/sccm/core/understand/learn-more-editions)。
 
-#### <a name="review-microsoft-net-versions"></a>查看 Microsoft.NET 版本 
+#### <a name="review-microsoft-net-versions"></a>查看 Microsoft.NET 版本 
 在站点安装此更新时，Configuration Manager 将自动安装.NET Framework 4.5.2。 如果尚未安装此必备组件，站点会将其安装在托管以下站点系统角色之一的每个服务器上：
 
 -   管理点
@@ -83,19 +84,19 @@ ms.locfileid: "42755770"
 
 此安装可以将站点系统服务器置于重启挂起状态，并向 Configuration Manager 组件状态查看器报告错误。 此外，服务器上的 .NET 应用程序可能会遇到随机故障，直到重启服务器。
 
-有关详细信息，请参阅[站点和站点系统先决条件](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)。
+有关详细信息，请参阅 [站点和站点系统先决条件](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)。
 
 #### <a name="review-the-version-of-the-windows-adk-for-windows-10"></a>查看适用于 Windows 10 的 Windows ADK 版本
 Windows 10 评估和部署工具包 (ADK) 的版本应受到 Configuration Manager 版本 1806 的支持。 有关受支持的 Windows ADK 版本的详细信息，请参阅 [Windows 10 ADK](/sccm/core/plan-design/configs/support-for-windows-10#windows-10-adk)。 如果需要更新 Windows ADK，请在开始更新 Configuration Manager 前进行此操作。 该顺序可确保默认启动映像自动更新为最新版本的 Windows PE。 更新站点后手动更新任何自定义启动映像。
 
 如果先更新站点，再更新 Windows ADK，请参阅[利用启动映像更新分发点](/sccm/osd/get-started/manage-boot-images#update-distribution-points-with-the-boot-image)。
 
-#### <a name="review-the-site-and-hierarchy-status-for-unresolved-issues"></a>查看站点和层次结构状态以寻找未解决的问题 
+#### <a name="review-the-site-and-hierarchy-status-for-unresolved-issues"></a>查看站点和层次结构状态以寻找未解决的问题 
 更新站点之前，请解决远程计算机上安装的站点服务器、站点数据库服务器和站点系统角色的所有操作问题。 由于现有的操作问题，站点更新可能会失败。
 
-有关详细信息，请参阅[使用警报和状态系统](/sccm/core/servers/manage/use-alerts-and-the-status-system)。
+有关详细信息，请参阅 [使用警报和状态系统](/sccm/core/servers/manage/use-alerts-and-the-status-system)。
 
-#### <a name="review-file-and-data-replication-between-sites"></a>查看站点之间的文件和数据复制   
+#### <a name="review-file-and-data-replication-between-sites"></a>查看站点之间的文件和数据复制   
 确保站点之间的文件和数据库复制正常运行并且处于最新状态。 延迟或积压工作可能会阻止顺利、成功更新。 对于数据库复制，可以在开始更新之前，使用复制链接分析器来帮助解决问题。
 
 有关详细信息，请参阅[关于复制链接分析器](/sccm/core/servers/manage/monitor-hierarchy-and-replication-infrastructure#BKMK_RLA)。
@@ -103,13 +104,13 @@ Windows 10 评估和部署工具包 (ADK) 的版本应受到 Configuration Manag
 #### <a name="install-all-applicable-critical-windows-updates"></a>安装所有适用的关键 Windows 更新
 为 Configuration Manager 安装更新之前，为每个适用的站点系统安装任何关键的 OS 更新。 这些服务器包括站点服务器、站点数据库服务器和远程站点系统角色。 如果安装的更新需要重启，请在开始升级之前重启相应的服务器。
 
-#### <a name="disable-database-replicas-for-management-points-at-primary-sites"></a>在主站点上禁用管理点的数据库副本   
+#### <a name="disable-database-replicas-for-management-points-at-primary-sites"></a>在主站点上禁用管理点的数据库副本   
 Configuration Manager 无法成功更新启用了管理点数据库副本的主站点。 为 Configuration Manager 安装更新之前，禁用数据库复制。
 
 有关详细信息，请参阅[管理点的数据库副本](/sccm/core/servers/deploy/configure/database-replicas-for-management-points)。
 
 #### <a name="set-sql-server-alwayson-availability-groups-to-manual-failover"></a>将 SQL Server AlwaysOn 可用性组设置为手动故障转移   
-如果使用可用性组，请确保在开始安装更新之前将可用性组设置为手动故障转移。 站点更新后，可以将故障转移还原为自动进行。 有关详细信息，请参阅[站点数据库的 SQL Server AlwaysOn](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database)。
+如果使用可用性组，请确保在开始安装更新之前将可用性组设置为手动故障转移。 站点更新后，可以将故障转移还原为自动进行。 有关详细信息，请参阅 [站点数据库的 SQL Server AlwaysOn](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database)。
 
 #### <a name="disable-site-maintenance-tasks-at-each-site"></a>禁用每个站点的站点维护任务
 在安装更新之前，请禁用可能会在更新过程进行时运行的任何站点维护任务。 例如，但不限于：
@@ -120,28 +121,28 @@ Configuration Manager 无法成功更新启用了管理点数据库副本的主�
 
 站点数据库维护任务在更新安装过程中运行时，更新安装可能会失败。 在禁用任务之前，请记录该任务的计划，以便在安装更新之后可恢复其配置。
 
-有关详细信息，请参阅[维护任务](/sccm/core/servers/manage/maintenance-tasks)和[维护任务参考](/sccm/core/servers/manage/reference-for-maintenance-tasks)。
+有关详细信息，请参阅 [维护任务](/sccm/core/servers/manage/maintenance-tasks) 和[维护任务参考](/sccm/core/servers/manage/reference-for-maintenance-tasks)。
 
 #### <a name="temporarily-stop-any-antivirus-software"></a>暂时停止任何防病毒软件 
 更新站点之前，停止 Configuration Manager 服务器上的防病毒软件。 <!--SMS.503481--> 
 
-#### <a name="create-a-backup-of-the-site-database"></a>创建站点数据库的备份 
+#### <a name="create-a-backup-of-the-site-database"></a>创建站点数据库的备份 
 更新站点之前，在管理中心站点和主站点上备份站点数据库。 此备份可确保你具有可用于灾难恢复的成功备份。
 
-有关详细信息，请参阅[备份和恢复](/sccm/protect/understand/backup-and-recovery)。
+有关详细信息，请参阅 [备份和恢复](/sccm/protect/understand/backup-and-recovery)。
 
-#### <a name="plan-for-client-piloting"></a>规划客户端试点   
+#### <a name="plan-for-client-piloting"></a>规划客户端试点   
 安装更新客户端的更新后，可以在新的客户端更新部署和升级所有活动的客户端之前在预生产中对其进行测试。 若要利用此选项，在开始安装更新之前必须配置站点，以支持预生产的自动升级。
 
-有关详细信息，请参阅[升级客户端](/sccm/core/clients/manage/upgrade/upgrade-clients)和[如何在预生产集合中测试客户端升级](/sccm/core/clients/manage/upgrade/test-client-upgrades)。
+有关详细信息，请参阅 [升级客户端](/sccm/core/clients/manage/upgrade/upgrade-clients) 和[如何在预生产集合中测试客户端升级](/sccm/core/clients/manage/upgrade/test-client-upgrades)。
 
 #### <a name="plan-to-use-service-windows"></a>计划使用服务时段   
-若要定义可向站点服务器安装更新的时间段，请使用服务时段。 它们可以帮助控制层次结构中的站点安装更新的时间。 有关详细信息，请参阅[站点服务器的服务时段](/sccm/core/servers/manage/service-windows)。
+若要定义可向站点服务器安装更新的时间段，请使用服务时段。 它们可以帮助控制层次结构中的站点安装更新的时间。 有关详细信息，请参阅 [站点服务器的服务时段](/sccm/core/servers/manage/service-windows)。
 
 #### <a name="review-supported-extensions"></a>查看支持的扩展
 <!--SCCMdocs#587--> 如果使用 Microsoft 或 Microsoft 合作伙伴的其他产品扩展 Configuration Manager，请确认这些产品支持版本 1806。 检查产品供应商的此项信息。 例如，请查看 Microsoft Deployment Toolkit 的[发行说明](/sccm/mdt/release-notes)。
 
-#### <a name="run-the-setup-prerequisite-checker"></a>运行安装程序先决条件检查程序   
+#### <a name="run-the-setup-prerequisite-checker"></a>运行安装程序先决条件检查程序   
 当更新在控制台中列为“可用”时，可以独立运行先决条件检查程序，然后再安装更新。 （在站点上安装更新时，会再次运行必备组件检查程序。）
 
 若要从控制台运行先决条件检查，请转到“管理”工作区，并选择“更新和服务”。 选择 Configuration Manager 1806 更新包，然后在功能区单击“运行先决条件检查”。
@@ -149,14 +150,14 @@ Configuration Manager 无法成功更新启用了管理点数据库副本的主�
 有关详细信息，请参阅[安装控制台内部更新前](/sccm/core/servers/manage/install-in-console-updates#bkmk_beforeinstall)中的“安装更新之前运行先决条件检查程序”部分。
 
 > [!IMPORTANT]  
-> 运行先决条件检查程序时，该过程会更新某些用于站点维护任务的产品源文件。 因此，在运行必备组件检查程序之后但在安装更新之前，如果需要执行站点维护任务，可从站点服务器上的 CD.Latest 文件夹运行 **Setupwpf.exe**（Configuration Manager 安装程序）。
+> 运行先决条件检查程序时，该过程会更新某些用于站点维护任务的产品源文件。 因此，在运行先决条件检查程序之后但在安装更新之前，如果需要执行站点维护任务，可从站点服务器上的 CD.Latest 文件夹运行  **Setupwpf.exe** （Configuration Manager 安装程序）。
 
-#### <a name="update-sites"></a>更新站点   
+#### <a name="update-sites"></a>更新站点   
 现已准备好为层次结构开始更新安装。 有关安装更新的详细信息，请参阅[安装控制台内部更新](/sccm/core/servers/manage/install-in-console-updates#a-namebkmkinstalla-install-in-console-updates)。
 
 你有可能计划在常规工作时间外安装更新。 确定过程将对业务操作造成最小影响的时间。 安装更新及其操作会重新安装站点组件和站点系统角色。
 
-有关详细信息，请参阅 [Configuration Manager 的更新](/sccm/core/servers/manage/updates)。
+有关详细信息，请参阅  [Configuration Manager 更新](/sccm/core/servers/manage/updates)。
 
 
 

@@ -10,16 +10,17 @@ ms.assetid: d466edd2-97f0-44c1-a73e-d71abbdbf4a8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0f87975d660a94d04cdd7d0e10816b6e2815fe53
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 50543fdd042eb0285c070d8714cb98eec9a7629f
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342063"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56129062"
 ---
 # <a name="uninstall-sites-and-hierarchies-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中卸载站点和层次结构
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 如果需要卸载 System Center Configuration Manager 站点，请使用以下详细信息作为指南。  
 

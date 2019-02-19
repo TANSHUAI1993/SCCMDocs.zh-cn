@@ -10,16 +10,17 @@ ms.assetid: 915f866e-7559-4c9c-aee2-f9ca92e637b3
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 87d9209624441d571bf01e56717134115540b3fb
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 55960af3afb3d1b7ba6cf8960923b1d9a16359f7
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32331992"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56135562"
 ---
 # <a name="common-tasks-for-managing-compliance-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 管理符合性的常见任务
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 在本部分中，将介绍一些常见方案，它们可帮助了解如何使用 System Center Configuration Manager 中的符合性设置。  
 

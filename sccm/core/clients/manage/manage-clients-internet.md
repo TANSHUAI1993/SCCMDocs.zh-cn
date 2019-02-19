@@ -10,16 +10,17 @@ ms.assetid: c667d6af-80c4-485f-910c-896c0171fd00
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 198b044a66bf81ea846d5e4febe655b78c04dd13
-ms.sourcegitcommit: 316899b08f2ef372993909e08e069f7edfed1d33
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 5cac59462b037ecf857792d06b690e57ddcf6e89
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44111070"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56132793"
 ---
 # <a name="manage-clients-on-the-internet-with-configuration-manager"></a>使用 Configuration Manager 管理 Internet 上的客户端
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 通常，Configuration Manager 中的多数托管计算机和服务器与执行管理功能的站点系统服务器物理上位于同一内部网络中。 但是，当客户端连接到 Internet 时，你可以在内部网络外对其进行管理。 此功能不需要客户端通过 VPN 连接到站点系统服务器。
 

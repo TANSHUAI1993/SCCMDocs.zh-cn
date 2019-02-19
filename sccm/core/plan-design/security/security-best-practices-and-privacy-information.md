@@ -10,16 +10,17 @@ ms.assetid: b7bff8a0-fe76-4d3b-aac6-065290888bea
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 83a06e2b43166f80532fbcc45e4f7199c890adcc
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: daa59087ef30ccbaad1332e33934e728fa793b3d
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334338"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56132725"
 ---
 # <a name="security-best-practices-and-privacy-information-for-system-center-configuration-manager"></a>System Center Configuration Manager 的安全最佳方案和隐私信息
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 使用以下信息可查找 System Center Configuration Manager 的安全最佳方案和隐私信息。  
 

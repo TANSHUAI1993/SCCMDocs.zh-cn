@@ -10,16 +10,17 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 41d6d5d8-ba84-4efb-b105-4d1eed239824
 ms.author: aaroncz
-ms.openlocfilehash: 3bf98c7b5ae2ee29266203e3496f0b28b1ea134e
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 2dee37b0cc55c35b6bd5286acbd18e39c2f5c40c
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32349178"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56125215"
 ---
 # <a name="security-and-privacy-for-software-updates-in-system-center-configuration-manager"></a>System Center Configuration Manager 中软件更新的安全和隐私
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 本主题包括有关 System Center Configuration Manager 中软件更新的安全和隐私的信息。  
 

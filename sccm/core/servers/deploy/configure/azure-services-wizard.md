@@ -10,16 +10,17 @@ ms.assetid: a26a653e-17aa-43eb-ab36-0e36c7d29f49
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 76611065dbed595904c8e0e2f5d52af0b4c68492
-ms.sourcegitcommit: 54e5786875c4e5f5c1b54e38ed59e96344faf9b4
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: b5a0834e61173708fd99dcdc8806e2f8e633e87c
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53817777"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56137501"
 ---
 # <a name="configure-azure-services-for-use-with-configuration-manager"></a>配置用于 Configuration Manager 的 Azure 服务
 
-*适用于：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 使用“Azure 服务向导”简化用于 Configuration Manager 的 Azure 云服务的配置过程。 此向导通过使用 Azure Active Directory (Azure AD) Web 应用注册提供通用的配置体验。 这些应用提供订阅和配置详细信息，以及与 Azure AD 之间的身份验证通信。 每次使用 Azure 设置新的 Configuration Manager 组件或服务时，应用都会输入此相同的信息。
 

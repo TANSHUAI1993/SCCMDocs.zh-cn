@@ -10,16 +10,17 @@ ms.assetid: 9a32f5a3-9917-434f-9811-106170f404be
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b1bbce9f3ca7a1a6cf9c199677b33e34d9be109c
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: f9cb58d1a697cd26bfefc8081d8705f09e818194
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32335909"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56128909"
 ---
 # <a name="upgrade-an-evaluation-installation-of-system-center-configuration-manager-to-a-full-installation"></a>将 System Center Configuration Manager 的评估版安装升级到完整安装
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 如果将 System Center Configuration Manager 作为评估版进行安装，那么 180 天后，Configuration Manager 控制台会变为只读，直至从安装程序的“站点维护”页激活产品。 在 180 天期限之前或之后，可随时选择将评估安装升级到完整安装。  
 

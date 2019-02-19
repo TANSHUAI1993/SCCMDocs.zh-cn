@@ -10,12 +10,13 @@ ms.assetid: 6bce416b-761d-4b23-bd33-5b7c30edb10d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e1becb8cc719466edabfb55ce82f9aa5e3345e3f
-ms.sourcegitcommit: 013ca76d5a3c07306de7b5bfd985b0289d1be599
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: e31e56948d30b95c6de4d9640985c4387bbe7058
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55482429"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56124960"
 ---
 # <a name="pre-release-features-in-configuration-manager"></a>Configuration Manager 中的预发行功能
 

@@ -10,12 +10,13 @@ ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6870f5100ad4ed929adad3f376b6c2e1bbda15de
-ms.sourcegitcommit: 30c608339dd1fc3ddb4bde01210f8eaeebee400c
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 0f29dabe9c29ad69278ac52253a81a0172643f84
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689553"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56142521"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 1810 版中的新增功能
 

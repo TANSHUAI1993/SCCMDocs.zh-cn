@@ -10,16 +10,17 @@ ms.assetid: 4800a800-66c8-4c35-aebe-e413a23790c1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: dfe31642342fee75046df7083f059955f011d26f
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 76f82734229f3b8e9ed37ed4bc9057eff6421aad
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32335552"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56156536"
 ---
 # <a name="plan-a-source-hierarchy-strategy-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中规划源层次结构策略
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 在 System Center Configuration Manager 环境中设置迁移作业之前，必须配置源层次结构，并从该层次结构内的至少一个源站点中收集数据。 使用以下部分来帮助规划配置源层次结构、配置源站点，并确定 Configuration Manager 从源层次结构内的源站点中收集信息的方式。 
 

@@ -10,16 +10,17 @@ ms.assetid: 16acfd63-0c40-424c-82f4-8c63f7f1c30b
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 6374fa186ab13f3288e218e6670da3ea4ff10f4e
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: a76ce199b84db200ed023d610f40dbf6f9f989c2
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32332417"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56120859"
 ---
 # <a name="create-windows-embedded-applications-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 创建 Windows Embedded 应用程序
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 除了创建应用程序的其他 System Center Configuration Manager 要求和过程，在创建和部署适用于 Windows Embedded 设备的应用程序时还必须考虑以下注意事项。  
 

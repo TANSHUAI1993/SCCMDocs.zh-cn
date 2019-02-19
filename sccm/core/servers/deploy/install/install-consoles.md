@@ -10,16 +10,17 @@ ms.assetid: d39c201f-d364-4e7b-bde4-faa76d747f33
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a8d1d0a727f0a4ad4a2bfc25141f7e2982494080
-ms.sourcegitcommit: b596d944e49f3c4912c6ca91915ed1418c17a1a2
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 35bfd908864ee77c19821ce02ab62c03523fae37
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42584502"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56126940"
 ---
 # <a name="install-the-system-center-configuration-manager-console"></a>安装 System Center Configuration Manager 控制台
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 管理员使用 Configuration Manager 控制台管理 Configuration Manager 环境。 每个 Configuration Manager 控制台可以连接到管理中心站点或主站点。 但是，无法将 Configuration Manager 控制台连接到辅助站点。
 

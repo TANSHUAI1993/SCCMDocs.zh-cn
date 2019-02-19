@@ -10,16 +10,17 @@ ms.assetid: cdb9fb0c-0912-41e4-b427-f40620971763
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f9f857a2045f67690579955236c082ff29721a5f
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 10aa303b930c76b50859b38509e854e643538ed8
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32339564"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56125130"
 ---
 # <a name="reference-for-system-center-configuration-manager-setup"></a>System Center Configuration Manager 安装的参考
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 System Center Configuration Manager 安装程序提供了几个主题的链接，以下部分对相关内容进行了详细介绍。 此处提供的信息有助于准备安装 Configuration Manager 站点或层次结构，且有助于为某些必须在安装过程中做出的决定做好准备。  
 

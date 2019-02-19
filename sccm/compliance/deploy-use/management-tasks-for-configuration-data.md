@@ -10,16 +10,17 @@ ms.assetid: b48c693c-d2b0-4707-a5dd-fe92172c49fe
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: d4602a2dbee04259d5953873485cdbccdc58167d
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: b1eb13beac2882121b2e083ad3e29eef6918eeaa
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32333654"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56120883"
 ---
 # <a name="manage-configuration-data-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中管理配置数据
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 在 System Center Configuration Manager 中创建配置项目和配置基线后，后续命令可帮助你执行各种操作。  
 

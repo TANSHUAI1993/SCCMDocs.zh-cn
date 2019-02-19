@@ -10,12 +10,13 @@ ms.assetid: 1026d616-2a20-4fb2-8604-d331763937f8
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 561a74730b8a4d27197f0de6f3149659430cc241
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 96bed23c96a6ccf511cd4808ad775343dc8e5d9e
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53421172"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56132466"
 ---
 # <a name="hardware-inventory-for-linux-and-unix-in-system-center-configuration-manager"></a>System Center Configuration Manager 中 Linux 和 UNIX 的硬件清单
 

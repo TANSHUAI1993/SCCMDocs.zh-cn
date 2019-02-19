@@ -10,16 +10,17 @@ ms.assetid: f4854b50-2e8c-414c-a872-9579554dca98
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b9bdffc9271b1e59bbe459dffc0e3c69578a4711
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 2b93672c951668a4ea3b9970c0fd22132ec5aa8b
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32332658"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56128317"
 ---
 # <a name="plan-to-complete-migration-in-system-center-configuration-manager"></a>规划在 System Center Configuration Manager 中完成迁移
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 对于 System Center Configuration Manager，当源层次结构不再包含要迁移到目标层次结构的数据时，可以完成迁移过程。 完成迁移包括下列常规步骤：  
 

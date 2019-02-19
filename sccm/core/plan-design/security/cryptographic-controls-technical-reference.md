@@ -9,12 +9,13 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 033f0fc3dd86c074f89804f6d9e70c173e9cf0b8
-ms.sourcegitcommit: 54e5786875c4e5f5c1b54e38ed59e96344faf9b4
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 17a99fff7b6486d6de26e2d4c153244a5665391a
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53817947"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56136637"
 ---
 # <a name="cryptographic-controls-technical-reference"></a>加密控制技术参考
 

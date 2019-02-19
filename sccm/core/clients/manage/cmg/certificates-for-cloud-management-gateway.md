@@ -9,16 +9,17 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
-ms.openlocfilehash: 60fa4176d44b530b2cab6c2b9b4b35c968fae3c1
-ms.sourcegitcommit: 32a257fafbb29aece8b4f435dd5614fcef305328
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 8104210fcf690cecf4bdb815384b8dd672c3873d
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "54005477"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56122315"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>云管理网关证书
 
-*适用于：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 根据通过云管理网关 (CMG) 管理 Internet 上的客户端所用的方案，可能需要以下一个或多个数字证书：  
 

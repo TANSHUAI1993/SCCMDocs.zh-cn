@@ -10,16 +10,17 @@ ms.assetid: e5a8c79f-5791-49c5-8055-086d742e5559
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3e66708471b22346901e8ee16e63dd962b699a16
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 2ecd5b3ad493f4916b475aea69b4db241f7ff74b
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344732"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56132844"
 ---
 # <a name="linux-and-unix-clients-component-services-and-commands-for-system-center-configuration-manager"></a>System Center Configuration Manager 的 UNIX 和 Linux 客户端组件服务和命令
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 
  下表标识了适用于 Linux 和 UNIX 的 Configuration Manager 客户端的客户端组件服务。  

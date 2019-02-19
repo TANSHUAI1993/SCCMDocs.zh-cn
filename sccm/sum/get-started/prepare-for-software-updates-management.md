@@ -10,16 +10,17 @@ ms.technology: configmgr-sum
 ms.assetid: 01907900-e28b-4cd7-9479-42906416707b
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: f2608d8cd46572a0fbcbafc6bc8c0f5e013356a2
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 57d83601af5aa41a61b80d539bf87f4e9616792c
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32353614"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56138018"
 ---
 # <a name="prepare-for-software-updates-management"></a>准备软件更新管理
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 在软件更新的符合性评估数据显示在 System Center Configuration Manager 控制台中之前，以及在可以将软件更新部署到客户端计算机之前，必须完成以下部分中的步骤。
 

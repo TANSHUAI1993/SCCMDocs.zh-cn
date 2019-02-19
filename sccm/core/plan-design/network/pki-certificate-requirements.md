@@ -10,12 +10,13 @@ ms.assetid: d6a73e68-57d8-4786-842b-36669541d8ff
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f2334148a94aa5355c2188013a537b4abb04ec42
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: b3e10263f8d052f93f99abd16fbe64acc28bc6fa
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53420543"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56127365"
 ---
 # <a name="pki-certificate-requirements-for-system-center-configuration-manager"></a>System Center Configuration Manager 的 PKI 证书要求
 

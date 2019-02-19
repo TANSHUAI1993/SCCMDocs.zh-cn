@@ -10,12 +10,13 @@ ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 41b068da0524333ae25ea2228a71bf27344f4f58
-ms.sourcegitcommit: f5fa9e657350ceb963a7928497d2adca9caef3d4
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 4ba088be689808139a977073dd5b111d1fa46b7b
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53748487"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56121550"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Configuration Manager 发行说明
 

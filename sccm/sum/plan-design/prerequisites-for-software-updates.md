@@ -10,12 +10,13 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: fdf05118-162a-411e-b72e-386b9dc9a5e1
-ms.openlocfilehash: 5ec545fd2ae6c775fbbd0d984dcdd487359ab043
-ms.sourcegitcommit: f7b2fe522134cf102a3447505841cee315d3680c
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 395c22b3fb7652a1da4652d1bf259bffb601c109
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55570160"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56133555"
 ---
 # <a name="prerequisites-for-software-updates-in-system-center-configuration-manager"></a>System Center Configuration Manager 中软件更新的先决条件
 

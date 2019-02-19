@@ -10,12 +10,13 @@ ms.assetid: 79cd131a-1a24-4751-87c8-7f275e45d847
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 12a3bffb48cba2e3f258d06489b7511d05b7daad
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 125a5fda74834c51e98f3028325bcc227fd106eb
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53422073"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56126172"
 ---
 # <a name="create-linux-and-unix-server-applications-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 创建 Linux 和 UNIX 服务器应用程序
 

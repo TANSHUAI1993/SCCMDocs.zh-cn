@@ -10,16 +10,17 @@ ms.assetid: 33bcf8b3-a6b6-4fc9-bb59-70a9621b2b0d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b0fd4c36ed03f0e0b158fe637a045553dab31ade
-ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 9b3ba4c5179069e5443beaf1b7f733c797cfd680
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43995341"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56156519"
 ---
 #  <a name="sync-data-from-configuration-manager-to-azure-log-analytics"></a>将数据从 Configuration Manager 同步到 Azure Log Analytics
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 <!--1258052--> 使用“Azure 服务向导”来配置从 Configuration Manager 到 Azure Log Analytics 云服务的连接。 此连接会将设备集合数据同步到 Log Analytics。 
 

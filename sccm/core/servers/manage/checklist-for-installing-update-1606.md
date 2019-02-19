@@ -11,12 +11,13 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: b8584bf77a72a4feb86814014ee0239f62a91f71
-ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 3ad9d054f39e5d5a607b0116b438c784950c7ebd
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54896653"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56138103"
 ---
 # <a name="checklist-for-installing-update-1606-for-system-center-configuration-manager"></a>用于为 System Center Configuration Manager 安装更新 1606 的清单
 
@@ -135,7 +136,7 @@ Do not run a test database upgrade on the production site database. Doing so upd
 
  **运行安装程序必备组件检查程序：** 安装更新 1606 之前，可以独立于更新安装来运行必备组件检查程序。 在站点上安装更新时，会再次运行必备组件检查程序。  
 
-有关详细信息，请参阅[“System Center Configuration Manager 的更新”主题中的步骤 3：安装更新之前运行必备组件检查程序](../../../core/servers/manage/install-in-console-updates.md)。  
+有关详细信息，请参阅[System Center Configuration Manager 的更新](../../../core/servers/manage/install-in-console-updates.md)主题中的“步骤 3：安装更新之前运行先决条件检查程序”。  
 
 > [!IMPORTANT]  
 >  必备组件检查程序作为更新安装的一部分运行或独立运行时，该过程会更新某些用于站点维护任务的产品源文件。 因此，在运行必备组件检查程序之后但在安装 1606 更新之前，如果必须执行站点维护任务，可从站点服务器上的 CD.Latest 文件夹运行 **Setupwpf.exe**（Configuration Manager 安装程序）。  

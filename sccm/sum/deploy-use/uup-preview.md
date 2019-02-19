@@ -11,12 +11,13 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: fde592b02d78c0a2ab29d77f7e55273c143b09ee
-ms.sourcegitcommit: f7b2fe522134cf102a3447505841cee315d3680c
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 932f515c902e89236a1537c2f20d6be5f13a79c5
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55570126"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56123393"
 ---
 # <a name="uup-private-preview-instructions"></a>UUP 个人预览版说明
 

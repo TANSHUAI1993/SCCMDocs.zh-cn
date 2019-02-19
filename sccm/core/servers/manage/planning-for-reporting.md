@@ -10,16 +10,17 @@ ms.assetid: ff920c84-d5c8-458c-b67f-bc7219b05690
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 21b9e2b685890cde4c9cc2a0fa57bc9118dcc665
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 9920b8b16f076fe9f0ebf807f4231e262fcabf33
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32339251"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56123148"
 ---
 # <a name="planning-for-reporting-in-system-center-configuration-manager"></a>规划 System Center Configuration Manager 中的报告
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 System Center Configuration Manager 提供了一组工具和资源，可帮助你使用 SQL Server Reporting Services 的高级报表功能。 使用以下部分协助规划 Configuration Manager 中的报表。  
 

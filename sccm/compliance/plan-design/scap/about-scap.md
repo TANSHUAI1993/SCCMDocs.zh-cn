@@ -10,12 +10,13 @@ ms.assetid: a315489d-5e12-46d6-903e-3a35235b72c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e42027663f06bff715cb7e9087ececbc421cc495
-ms.sourcegitcommit: 013ca76d5a3c07306de7b5bfd985b0289d1be599
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 969bbb28e64c37d8843d634adce99916333540ed
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55482446"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56130354"
 ---
 # <a name="about-the-security-content-automation-protocol-scap-extensions"></a>关于安全内容自动化协议 (SCAP) 扩展
 

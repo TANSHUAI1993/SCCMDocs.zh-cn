@@ -10,12 +10,13 @@ ms.assetid: a1fe22d0-4695-4de0-8bf0-e3475b03cf0e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 56b1c0cff398f0009169ab1b02801e536e1a3343
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 7a7438a2815f615b029888d8fb1ca28f601735d5
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53418112"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56140004"
 ---
 # <a name="how-to-configure-boundary-groups-for-configuration-manager"></a>如何为 Configuration Manager 配置边界组
 

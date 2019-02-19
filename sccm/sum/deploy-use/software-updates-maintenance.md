@@ -10,12 +10,13 @@ ms.technology: configmgr-sum
 ms.assetid: 4b0e2e90-aac7-4d06-a707-512eee6e576c
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: d2196890070aa842ac58bc127af8aaa876640ec4
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: e5fcba51bcc048f94cfe596f8730775580dbd7d3
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53417024"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56132895"
 ---
 # <a name="software-updates-maintenance"></a>软件更新维护
 

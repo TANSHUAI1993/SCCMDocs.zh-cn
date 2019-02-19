@@ -10,12 +10,13 @@ ms.assetid: 435c923c-ea30-4dce-8afd-48962ed85502
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 9b375c7498e0b6d74c326bd51b45a50e0f9d9555
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 9561528d8f02cf5909c83a88a276e1d263343589
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53422634"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56142232"
 ---
 # <a name="configuring-power-management-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中配置电源管理
 

@@ -10,12 +10,13 @@ ms.assetid: c6777fb0-0754-4abf-8a1b-7639d23e9391
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a65b1f30815eca411a64a72b1a35acc9d7dad34c
-ms.sourcegitcommit: 013ca76d5a3c07306de7b5bfd985b0289d1be599
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 7aaadae5feaff2aa55e521c4b7438f4f1d24209a
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55482531"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56156808"
 ---
 # <a name="ports-used-in-configuration-manager"></a>Configuration Manager 中使用的端口
 

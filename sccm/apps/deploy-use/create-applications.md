@@ -10,12 +10,13 @@ ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9bf3a58c58a525ac3d9fdb30eafaeb68e74002db
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: d7f896f2ad719572c5adb4e0f24cfc1cf7d1c4d6
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53423773"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56126743"
 ---
 # <a name="create-applications-in-configuration-manager"></a>在 Configuration Manager 中创建应用程序
 

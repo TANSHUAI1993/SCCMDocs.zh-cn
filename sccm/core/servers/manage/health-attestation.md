@@ -10,16 +10,17 @@ ms.assetid: 91f9de33-b277-4500-acd6-e7d90a2947c9
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 27e8e3ef78947eb6623a56e670e176aaa2800f68
-ms.sourcegitcommit: 78d2dce465e3500653b252583a6903a006784c26
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 116c12d86c097222844e76dde877b674ca7498b9
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448899"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56127110"
 ---
 # <a name="health-attestation-for-system-center-configuration-manager"></a>System Center Configuration Manager 的运行状况证明
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 管理员可以在 Configuration Manager 控制台中查看 [Windows 10 设备运行状况证明](https://technet.microsoft.com/library/mt592023.aspx)的状态。  设备运行状况证明让管理员能够确保客户端计算机启用以下可信 BIOS、TPM 和启动软件配置：  
 

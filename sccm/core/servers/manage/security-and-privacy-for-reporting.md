@@ -10,16 +10,17 @@ ms.assetid: 7a555e06-e6d7-4ebb-8252-412b7c5ad1c1
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: d9c5ec56032cd014e63dff7e22c83119bf2f5f4e
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 6f7f98036745a417e14611231e681b4be114bbce
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32336385"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56130837"
 ---
 # <a name="security-and-privacy-for-reporting-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的报表的安全和隐私
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 本主题包含 System Center Configuration Manager 中报表的安全最佳实践和隐私信息。  
 

@@ -10,12 +10,13 @@ ms.assetid: 86cd5382-8b41-45db-a4f0-16265ae22657
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0650e1aa16f0c1005748c85423c3367a727b1b9b
-ms.sourcegitcommit: 4659946369d5352234f27c7682bce65a0e86c697
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: b655b21b2d630d91d0e1a143e800d613882ca573
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53303884"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56135022"
 ---
 # <a name="peer-cache-for-configuration-manager-clients"></a>用于 Configuration Manager 客户端的对等缓存
 

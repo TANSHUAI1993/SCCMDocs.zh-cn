@@ -10,12 +10,13 @@ ms.assetid: 8d15ae3f-de42-461f-a907-c43873da22d2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 396652d4fcfe2ad41aaa4dad188947d369cb0052
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: fe9c5a22f1c3a17737ccfb452b3cd4dd418bf9a9
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53418656"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56142453"
 ---
 # <a name="planning-for-client-deployment-to-mac-computers-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中规划 Mac 计算机的客户端部署
 

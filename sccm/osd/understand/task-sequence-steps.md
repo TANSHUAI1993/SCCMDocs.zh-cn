@@ -10,12 +10,13 @@ ms.assetid: 7c888a6f-8e37-4be5-8edb-832b218f266d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9d3cd85d4c0bd3a996bd6ec18fc24a02423fab62
-ms.sourcegitcommit: 54e5786875c4e5f5c1b54e38ed59e96344faf9b4
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 73ca4a1ce43fff63c1d43dc7515517f00600a484
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53818049"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56126917"
 ---
 # <a name="task-sequence-steps-in-configuration-manager"></a>Configuration Manager 中的任务序列步骤
 

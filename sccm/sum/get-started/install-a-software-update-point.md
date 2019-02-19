@@ -10,12 +10,13 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b099a645-6434-498f-a408-1d438e394396
-ms.openlocfilehash: 2c6c397b7b790b2cecada7fc5a7811ff77ae2d07
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: b51b8245de3c446657e328456f81bd40ebf71261
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53422974"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56141851"
 ---
 # <a name="install-and-configure-a-software-update-point"></a>安装和配置软件更新点  
 

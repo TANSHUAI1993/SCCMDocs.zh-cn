@@ -10,16 +10,17 @@ ms.assetid: 45a10878-ff48-4318-9c6d-c014b38a4039
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: de769a24b44c5ab5e28035e96fef341aecd78006
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: c56d9a17e48ff62dfae9b54b84909f1eebb3ccd0
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32332978"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56129725"
 ---
 # <a name="supported-configurations-for-system-center-configuration-manager"></a>System Center Configuration Manager 支持的配置
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 作为本地解决方案，System Center Configuration Manager 会使用服务器、客户端、网络配置和其他产品（如 Microsoft Intune、SQL Server 和 Azure）。
 
