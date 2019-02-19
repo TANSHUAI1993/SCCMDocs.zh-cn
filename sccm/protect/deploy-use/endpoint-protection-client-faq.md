@@ -10,16 +10,17 @@ ms.assetid: e3aaa9d2-a40e-42b1-ad75-5a115351729e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 74bcd026dff0b67ae91276c63ba85597008dfd70
-ms.sourcegitcommit: 48098f9fb2f447672bf36d50c9f58a3d26acb9ed
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: ba364ce222ae5e07cc1a0e9d25eb3ae525f2cbbf
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53422466"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56142385"
 ---
 # <a name="endpoint-protection-client-frequently-asked-questions"></a>Endpoint Protection 客户端的常见问题
 
-*适用于：System Center Configuration Manager (Current Branch)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 
 此 FAQ 针对其 IT 管理员已将 Windows Defender 或 Endpoint Protection 部署到其托管计算机的计算机用户。 此处的内容可能不适用于其他反恶意软件。 Microsoft System Center Endpoint Protection 管理 Windows 10 上的 Windows Defender。 它还可以部署和管理 Windows 10 之前版本的计算机上的 Endpoint Protection 客户端。 虽然本文对 Windows Defender 进行了介绍，但是其信息也适用于 Endpoint Protection。  
