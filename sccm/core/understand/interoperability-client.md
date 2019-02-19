@@ -10,16 +10,17 @@ ms.assetid: 600086d5-bd9e-4ac1-8ace-c7a62de80dc2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f46fdb622a55c7281de89c84d5e66e54ab149548
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: e339d096b64bb35cd344e601212ae5ec1f5504ec
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32339530"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56119609"
 ---
 # <a name="use-the-configuration-manager-client-software-for-extended-interoperability-with-future-versions-of-a-current-branch-site"></a>使用 Configuration Manager 客户端软件，实现与未来 Current Branch 站点版本的扩展互操作性
 
-*适用范围：System Center Configuration Manager (Current Branch)*  
+适用范围：System Center Configuration Manager (Current Branch)  
 
 业务要求可能不允许定期更新某些设备上的 Configuration Manager 客户端。 例如，可能需要遵守变更管理策略，或设备可能是任务关键型。 可通过安装一个长期使用的新客户端来满足这些需求，这一客户端称为扩展互操作性客户端 (EIC)。 EIC 应仅用于无法经常更新的特定设备，如展台或销售点设备。 继续对大多数客户端使用[自动客户端升级](/sccm/core/clients/manage/upgrade/upgrade-clients-for-windows-computers#use-automatic-client-upgrade)。 
 

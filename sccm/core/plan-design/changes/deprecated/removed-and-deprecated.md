@@ -10,16 +10,17 @@ ms.assetid: b0adf873-2ff4-4a7b-b5e7-6047f146511f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3381c28ef050d40fdb56ca381e47e6bccb4c638b
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: b8bd442c527c5f09fb6704a9e2ec8d7c4cbfd0f0
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32333252"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56119936"
 ---
 # <a name="removed-and-deprecated-items-for-system-center-configuration-manager"></a>System Center Configuration Manager 中已删除和已弃用的项
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 本文介绍如何使用有关 System Center Configuration Manager 不再支持或将在未来更新中删除（弃用）的功能、产品和操作系统的信息。 本文预告了可能会影响 Configuration Manager 的使用的未来变更。  
 

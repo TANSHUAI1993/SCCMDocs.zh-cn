@@ -10,16 +10,17 @@ ms.assetid: 2bca3db9-115a-451d-8c93-f073ceefe0c7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8d5fe709f403676c36d77e23e3ebe40a66101a44
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: d3890b67e88de6483d231f473ef2025c5f71ed93
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32340278"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56119868"
 ---
 # <a name="fundamentals-of-managing-devices-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 管理设备的基础知识
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 System Center Configuration Manager 可管理两大类设备：
 
@@ -31,7 +32,7 @@ System Center Configuration Manager 可管理两大类设备：
 
 ## <a name="managing-devices-with-the-configuration-manager-client"></a>使用 Configuration Manager 客户端管理设备
 
-使用 Configuration Manager 客户端软件管理设备有两种方法。 第一种方法是发现网络上的设备，然后将客户端软件部署到该设备。 另一种方法是在新计算机上手动安装客户端软件，然后在该计算机加入网络时加入你的站点。 若要发现尚未安装客户端软件的设备，请运行一个或多个内置发现方法。 发现设备后，使用众多方法之一来安装客户端软件。 有关使用发现的信息，请参阅[运行 System Center Configuration Manager 发现](../../core/servers/deploy/configure/run-discovery.md)。  
+使用 Configuration Manager 客户端软件管理设备有两种方法。 第一种方法是发现网络上的设备，然后将客户端软件部署到该设备。 另一种方法是在新计算机上手动安装客户端软件，然后在该计算机加入网络时加入你的站点。 若要发现尚未安装客户端软件的设备，请运行一个或多个内置发现方法。 发现设备后，使用众多方法之一来安装客户端软件。 有关使用发现的信息，请参阅 [运行 System Center Configuration Manager 发现](../../core/servers/deploy/configure/run-discovery.md)。  
 
  发现支持运行 Configuration Manager 客户端软件的设备后，可以使用众多方法之一来安装软件。 安装软件并将客户端分配到主站点后，即可开始管理设备。  常见安装方法包括：
 

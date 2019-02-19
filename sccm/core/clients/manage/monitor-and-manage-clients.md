@@ -10,16 +10,17 @@ ms.assetid: 110b65b3-2202-466f-bb5d-e5ee282506fc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 56ee10370807f016dfadf521a20ffc9722500a30
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 63f1216d19b82ad3e39680150736908b4f9762de
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32332689"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56128766"
 ---
 # <a name="monitor-and-manage-clients-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中监视和管理客户端
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 一旦客户端软件被部署到组织的计算机和设备，System Center Configuration Manager（也称为 ConfigMgr 或 SCCM）就会提供多种方式来监视和管理它。  可以监视客户端以检查其状态，在某些情况下，Configuration Manager 可以基于检测到的问题执行自动修正（或修补程序）。 Configuration Manager 控制台还提供管理个人设备或设备集合的客户端的方法。  
 

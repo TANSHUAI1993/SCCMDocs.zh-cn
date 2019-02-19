@@ -10,12 +10,13 @@ ms.assetid: 92b339ef-2723-4322-bec6-077b3e8846b0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 818065f4ea3f537dc565d06c278b710b224a4031
-ms.sourcegitcommit: f0ec334a70d0cdd3f5f185ac7787b700947f82de
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 5a56739eee4d116014f89b3a7e7835e3e87a62ac
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55303210"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56124582"
 ---
 # <a name="prerequisites-for-installing-configuration-manager-sites"></a>安装 Configuration Manager 站点的先决条件
 

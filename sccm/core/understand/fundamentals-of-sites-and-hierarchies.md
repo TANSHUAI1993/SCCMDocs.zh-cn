@@ -10,16 +10,17 @@ ms.assetid: 4db1e15f-e832-4cf9-be33-d3971e635a55
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: dbd87268c1572f53fcc86d5f2dc93537ad759260
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 00465c431ded49c3833b19a3efd1da05ad1c388d
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32339275"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56124630"
 ---
 # <a name="fundamentals-of-sites-and-hierarchies-for-system-center-configuration-manager"></a>System Center Configuration Manager 的站点和层次结构基础知识
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 必须在 Active Directory 域中安装 System Center Configuration Manager 部署。 此部署的基础包括组成站点层次结构的一个或多个 Configuration Manager 站点。 从单站点到多站点层次结构，安装的站点类型和位置在必要时提供纵向扩展（扩大）部署的能力，并向托管用户和设备提供重要服务。
 
