@@ -2,7 +2,7 @@
 title: 混合 MDM 中的新增功能
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 和 Intune 的混合部署可用的新移动设备管理功能。
-ms.date: 02/04/2019
+ms.date: 02/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e5199edf3e362deaeb160bf105ae69f7acbee334
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 2d65f6493ca3d067e31b6602c711ab1fbf9408a1
+ms.sourcegitcommit: e7e5ca04601270ea7af90183123d5db1d42784da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56124330"
+ms.lasthandoff: 02/19/2019
+ms.locfileid: "56422232"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Configuration Manager 和 Microsoft Intune 的混合移动设备管理中的新增功能
 
@@ -51,6 +51,10 @@ ms.locfileid: "56124330"
 ## <a name="february-2019"></a>2019 年 2 月
 
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
+
+#### <a name="macos-users-are-prompted-to-update-their-password"></a>系统会提示 macOS 用户更新其密码 
+<!--1873216--> 在 macOS 设备上将提示最终用户更新其密码。 用户运行需要身份验证，例如在登录到设备的任务时则会出现此提示。 此外提示你更新其密码时执行任何操作，需要管理权限，如请求密钥链访问权限的用户。  
+
 
 #### <a name="intune-macos-company-portal-dark-mode"></a>Intune macOS 公司门户深色模式
 <!--3300524--> Intune macOS 公司门户现在支持的 macOS 深色模式。 当 macOS 10.14 + 设备上启用深色模式下时，公司门户将调整其外观与反映该模式下的颜色。
@@ -609,29 +613,6 @@ Apple 发布了 macOS 10.14，所以从 2018 年 12 月开始，Intune 将支持
  
 #### <a name="additional-information"></a>其他信息
 有关详细信息，请参阅[使用公司门户应用在 Intune 中注册 macOS 设备](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos-cp)。
-
-
-### <a name="intune-support-experience-for-premier-customers-now-in-azure-instead-of-mpo"></a>Intune 支持对高级立即在 Azure 而不是 MPO 的客户体验  
-<!--2828727-->
-
-我们中的共享 MC147649 在 9 月，我们将删除在年 12 月中创建从 Microsoft Premier Online (MPO) 门户 (premier.microsoft.com) 的 Intune 支持请求的功能。 现在，期间的轻微延迟后年 1 月，结束时，将重定向仅在 Azure 上 Intune 中创建支持请求。
-
-#### <a name="how-does-this-affect-me"></a>这会对我产生哪些影响？
-年 1 月，若要继续增强高级支持结束后支持体验，您将无法在 MPO 中创建支持请求。 当您尝试执行此操作时，将看到将你重定向到 Azure 上的 Intune 无法关闭的提示。 在这里，可以创建支持请求路由到 Intune 专用 Microsoft 支持部门。 这些支持工程师将诊断和及时地解决遇到的问题。 您不能在 MPO 门户中创建在 Azure 门户中查看支持请求。
-
-在 Azure 门户具有新的支持体验，如我们最近宣布 MC171941。 有关详细信息，请参阅[如何获取对 Microsoft Intune 的支持](https://aka.ms/new_support_experience)。
-
-如果你使用混合 MDM 或共同管理，继续使用 MPO 创建为 Configuration Manager 的支持请求。 使用 Azure 门户创建适用于 Intune 的支持请求。 这里再次提醒，混合 MDM 已被弃用，应计划尽快移动到 Azure 上的 Intune。 有关详细信息，请参阅[从混合移动设备管理移动到 Azure 上的 Intune](https://aka.ms/hybrid_notification)。
-
-只有具有全局管理员、 Intune 服务管理员和服务支持管理员角色的用户可以在 Azure 门户中创建支持票证。
-
-#### <a name="what-can-i-do-to-prepare-for-this-change"></a>针对此更改，我可以做什么准备？
-- 停止使用 MPO 进行与 Intune 相关的支持请求。 使用 Azure 上的 Intune 来创建和管理所有 Intune 支持请求。  
-- 如有必要，请通知支持人员并更新文档。  
-- 如果当前在 MPO 中创建支持请求的全局管理员或 Intune 服务管理员角色的用户，请将其分配 Azure Active Directory 中的服务支持管理员角色。 用户需要其中一个角色才能在 Azure 门户中创建支持票证。  
-
-#### <a name="additional-information"></a>其他信息
-有关详细信息，请参阅 [Microsoft Intune 支持团队博客文章](https://aka.ms/IntuneSupport_MPO_to_Azure)。
 
 
 ### <a name="plan-for-change-use-intune-on-azure-now-for-your-mdm-management"></a>更改计划：现在在 Azure 上使用 Intune MDM 管理 
