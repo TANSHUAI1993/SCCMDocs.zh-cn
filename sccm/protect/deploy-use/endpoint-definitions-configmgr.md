@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c16487bc59a7e067aac5554213e2be750729078f
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 411811c4047cd781d0edcd5cc345ff82acc80f91
+ms.sourcegitcommit: 0a23cde6112cbb5987f433bffcf6f223b994ba72
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56120140"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56667437"
 ---
 #  <a name="using-configuration-manager-software-updates-to-deliver-definition-updates"></a>使用 Configuration Manager 软件更新将定义更新交付
 
@@ -49,10 +49,10 @@ ms.locfileid: "56120140"
 
 6. 确保选中“运行此规则后启用部署”   复选框，然后单击“下一步” 。
 
-7. 在向导的“部署设置”  页上的“详细信息级别”  列表中，选择“最小” ，然后单击“下一步” 。
+7. 在向导的“部署设置”页上，选择“详细信息级别”列表中的“仅错误消息”，再单击“下一步”。
 
    > [!NOTE]
-   >  在“详细信息级别”列表中，选择“最小”（不带 Service Pack 的 Configuration Manager）或“仅错误消息”(Configuration Manager)。 这将减少定义部署返回的状态消息数。 此配置有助于降低 Configuration Manager 服务器上的 CPU 处理使用率。
+   >  选择**仅错误消息**将减少定义部署返回的状态消息的数目。 此配置有助于降低 Configuration Manager 服务器上的 CPU 处理使用率。
 
 8. 在“属性筛选器”  列表中，选择“更新分类”  复选框。
 
@@ -91,18 +91,20 @@ ms.locfileid: "56120140"
 
 20. 在向导的“警报”  页中，你无需配置任何警报。 Configuration Manager 中的 Endpoint Protection 会生成任何可能需要的警报。 单击“下一步” 。
 
-21. 在向导的“下载设置”  页中，选择必要的软件更新下载行为，然后单击“下一步” 。
-
-22. 在向导的“部署包”  页中，选择现有部署包或创建新的部署包，以包含与规则关联的软件更新文件。
+21. 在向导的“部署包”  页中，选择现有部署包或创建新的部署包，以包含与规则关联的软件更新文件。
 
     > [!NOTE]
     >  考虑将定义更新放置在不包含其他软件更新的包中。 此策略可保持定义更新包的大小较小，从而使其可以更快复制到分发点。
 
-23. 在向导的“分发点”  页中，选择此包的内容将被复制到的一个或多个分发点，然后单击“下一步” 。
+22. 若要新建包，在向导的“分发点”页上，选择此包的内容将被复制到的一个或多个分发点，再单击“下一步”。
 
-24. 在向导的“下载位置”  页中，选择“从 Internet 下载软件更新” ，然后单击“下一步” 。
+23. 在向导的“下载位置”  页中，选择“从 Internet 下载软件更新” ，然后单击“下一步” 。
 
-25. 在向导的“语言选择”  页中，选择要下载的更新的每个语言版本，然后单击“下一步” 。
+24. 在向导的“语言选择”  页中，选择要下载的更新的每个语言版本，然后单击“下一步” 。
+
+25. 在向导的“下载设置”  页中，选择必要的软件更新下载行为，然后单击“下一步” 。
+
+26. 在向导的“摘要”页上，检查设置并单击“下一步”。
 
 26. 完成“创建自动部署规则向导”。
 

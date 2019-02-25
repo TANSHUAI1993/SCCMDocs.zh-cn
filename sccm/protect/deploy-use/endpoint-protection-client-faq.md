@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba364ce222ae5e07cc1a0e9d25eb3ae525f2cbbf
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 2f19fee37ab817670bd754d6da1ad1ebe9ccb452
+ms.sourcegitcommit: 369db96ee84299b5ab6d74b177e6366b3017fc54
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56142385"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56589928"
 ---
 # <a name="endpoint-protection-client-frequently-asked-questions"></a>Endpoint Protection 客户端的常见问题
 
@@ -51,16 +51,7 @@ ms.locfileid: "56142385"
 
  Windows Defender 或 Endpoint Protection 提供了三种防止计算机感染恶意软件的方法：  
 
--   **使用实时保护** - 利用实时保护，Windows Defender 可以始终监视你的计算机，并在恶意软件（包括病毒、间谍软件或其他可能不需要的软件）试图在你的计算机上自行安装或运行时向你发出警报。 然后，Windows Defender 会挂起此软件，并允许你遵循有关此软件的建议，或采取替代操作。  
-
-    |**实时保护选项** |**用途** |
-
-    |-|-|  
-    |扫描所有下载|此选项可监视下载的文件和程序，包括通过 Windows Internet Explorer 和 Microsoft Outlook® Express 自动下载的文件，例如 ActiveX® 控件和软件安装程序。 这些文件可通过浏览器自身下载、安装或运行。 恶意软件，包括病毒、间谍软件和其他可能不需要的软件可以包含在这些文件中，并在你不知情的情况下安装。<br /><br /> 使用此实时保护选项，Windows Defender 可以始终监视你的计算机，并检查你可能已下载的任何恶意文件或程序。 此监视功能意味着 Windows Defender 不需要通过要求检查你可能想要下载的任何文件或程序来减慢你的浏览或电子邮件速度。|  
-    |监视计算机上的文件和程序活动|此选项是在文件和程序开始在你的计算机上运行时进行监视，然后它会对你发出警报，通知你它们要执行的任何操作和要对它们执行的操作。 这非常重要，因为恶意软件会利用已安装程序的漏洞在你不知情的情况下运行恶意或不需要的软件。 例如，当你启动经常使用的程序时，间谍软件可以在后台运行。 Windows Defender 监视你的程序，并在检测到可疑活动时向你发出警报。|  
-    |启用行为监视|此选项可监视传统防病毒检测方法可能检测不到的可疑模式的行为集合。|  
-
-    |启用网络检查系统|此选项可帮助保护计算机免受已知漏洞的零日攻击、减小发现漏洞和应用更新之间的时间段。|  
+-   **使用实时保护** - 利用实时保护，Windows Defender 可以始终监视你的计算机，并在恶意软件（包括病毒、间谍软件或其他可能不需要的软件）试图在你的计算机上自行安装或运行时向你发出警报。 然后，Windows Defender 会挂起此软件，并允许你遵循有关此软件的建议，或采取替代操作。
 
 -   **扫描选项** - 可以使用 Windows Defender 扫描可能给你的计算机带来风险的潜在威胁，如病毒、间谍软件以及其他恶意软件。 你也可以用它来计划定期扫描，并删除在扫描过程中检测到的恶意软件。  
 
@@ -216,7 +207,7 @@ ms.locfileid: "56142385"
 |扫描所有下载|此选项可监视下载的文件和程序，包括通过 Windows Internet Explorer 和 Microsoft Outlook ® Express 自动下载的文件，例如 ActiveX® 控件和软件安装程序。 这些文件可通过浏览器自身下载、安装或运行。 恶意软件，包括病毒、间谍软件和其他可能不需要的软件可以包含在这些文件中，并在你不知情的情况下安装。<br /><br /> 使用此实时保护选项，Windows Defender 可以始终监视你的计算机，并检查你可能已下载的任何恶意文件或程序。 此监视功能意味着 Windows Defender 不需要通过要求检查你可能想要下载的任何文件或程序来减慢你的浏览或电子邮件速度。|  
 |监视计算机上的文件和程序活动|此选项是在文件和程序开始在你的计算机上运行时进行监视，然后它会对你发出警报，通知你它们要执行的任何操作和要对它们执行的操作。 这非常重要，因为恶意软件会利用已安装程序的漏洞在你不知情的情况下运行恶意或不需要的软件。 例如，当你启动经常使用的程序时，间谍软件可以在后台运行。 Windows Defender 监视你的程序，并在检测到可疑活动时向你发出警报。|  
 |启用行为监视|此选项可监视传统防病毒检测方法可能检测不到的可疑模式的行为集合。|  
-|启用网络检查系统|此选项可帮助保护计算机免受已知漏洞的“零日”攻击，进而缩短发现漏洞和应用更新之间的时间。|  
+|启用网络检查系统|此选项有助于保护计算机免受已知漏洞的零日攻击，同时缩短发现漏洞和应用更新之间的时间间隔。|  
 
 ### <a name="to-turn-off-real-time-protection"></a>要关闭实时保护  
 
