@@ -10,16 +10,17 @@ ms.assetid: ed931751-18f2-4230-a09e-a0a329fbfa1c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 51823b2e424450352d55402f16a8c05211eb77c5
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 59376c5b9846e32cc8b63666956424a11211f1c0
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342114"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56130786"
 ---
 # <a name="about-discovery-methods-for-system-center-configuration-manager"></a>有关 System Center Configuration Manager 的发现方法
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 Configuration Manager 发现方法可用于在网络上查找不同设备，从 Active Directory 查找设备和用户，或从 Azure Active Directory (Azure AD) 查找用户。 若要有效地使用发现方法，应了解及其可用配置和限制。  
 
@@ -50,7 +51,7 @@ Configuration Manager 发现方法可用于在网络上查找不同设备，从 
 
 可以在 Configuration Manager 控制台中管理 Active Directory 林发现。 转到“管理”工作区，展开“层次结构配置”。   
 
--   **发现方法**：启用 Active Directory 林发现以在层次结构的顶层站点上运行。 还可以指定一个简单计划来运行发现。 将其配置为依据所发现的 IP 子网和 Active Directory 站点自动创建边界。 Active Directory 林发现无法在子主站点或辅助站点上运行。  
+-   **发现方法**：启用 Active Directory 林发现方法，在层次结构的顶层站点上运行。 还可以指定一个简单计划来运行发现。 将其配置为依据所发现的 IP 子网和 Active Directory 站点自动创建边界。 Active Directory 林发现无法在子主站点或辅助站点上运行。  
 
 -   **Active Directory 林**：配置其他林用于发现和指定每个 Active Directory 林帐户，并配置对每个林的发布。 监视发现过程。 添加 IP 子网和 Active Directory 站点作为 Configuration Manager 边界和边界组的成员。  
 
@@ -275,7 +276,7 @@ Azure AD 用户发现的操作记录在层次结构顶层站点服务器上的 S
 
 -   **路由器 ARP 缓存：** 网络发现将查询路由器的 ARP 缓存来查找子网信息。 通常，路由器 ARP 缓存中的数据生存时间很短。 因此，当网络发现查询 ARP 缓存时，ARP 缓存可能不再包含有关所请求的对象的信息。  
 
--   **DHCP：** 网络发现查询指定的每个 DHCP 服务器，以发现 DHCP 服务器为其提供了租约的设备。 网络发现只支持运行 DHCP 的 Microsoft 实现的 DHCP 服务器。  
+-   **DHCP：** 网络发现查询你指定的每个 DHCP 服务器来发现 DHCP 服务器为其提供了租约的设备。 网络发现只支持运行 DHCP 的 Microsoft 实现的 DHCP 服务器。  
 
 -   **SNMP 设备：** 网络发现可以直接查询 SNMP 设备。 设备必须安装本地 SNMP 代理，网络发现才能查询该设备。 同时将网络发现配置为使用 SNMP 代理所使用的共同体名称。  
 

@@ -10,16 +10,17 @@ ms.assetid: 9edc214f-f405-456d-80df-8adcc2a5428d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 67a052fffcaf6ad105f417649aa9f3826922ce80
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 2188ce295f999b392166c99133822ad8fc1e441e
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385888"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56125232"
 ---
 # <a name="deployment-monitoring-tool"></a>部署监视工具
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 部署监视工具是一个 [Configuration Manager 工具](/sccm/core/support/tools)。 它是图形用户界面，旨在帮助对 Configuration Manager 客户端上的应用程序、软件更新和配置基线部署进行故障排除。 该工具为只读状态，因为它不会改变客户端上的任何状态。 可放心用它来诊断常见部署方案。
 

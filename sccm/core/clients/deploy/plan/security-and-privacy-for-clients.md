@@ -10,16 +10,17 @@ ms.assetid: c1d71899-308f-49d5-adfa-3a3ec0163ed8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3dfb749695ffb7a8ecdeab5e4fbed764023eb6e2
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 9671ccad42fc9135193cf41e058b472b52a412e1
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385586"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56142300"
 ---
 # <a name="security-and-privacy-for-configuration-manager-clients"></a>Configuration Manager 客户端的安全和隐私
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 本文介绍 Configuration Manager 客户端的安全和隐私信息。 它还涵盖 [Exchange Server 连接器](/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync)所管理的移动设备的相关信息。  
 
@@ -201,9 +202,9 @@ Configuration Manager 在此期间会锁定计算机，仅允许本地管理员�
 
 #### <a name="configure-the-password-settings-to-help-protect-mobile-devices-from-unauthorized-access"></a>配置密码设置以帮助防止未经授权访问移动设备。  
 
-*对于 Configuration Manager 注册的移动设备*：使用移动设备配置项目将密码复杂性配置为 PIN。 至少指定默认的最短密码长度。  
+*对于 Configuration Manager 注册的移动设备*：使用移动设备配置项将密码复杂性配置为 PIN。 至少指定默认的最短密码长度。  
 
-*对于未安装 Configuration Manager 客户端但由 Exchange Server 连接器管理的移动设备*：为 Exchange Server 连接器配置“密码设置”，使密码复杂性配置为 PIN。 至少指定默认的最短密码长度。  
+*对于未安装 Configuration Manager 客户端但由 Exchange Server 连接器管理的移动设备*：为 Exchange Server 连接器配置“密码设置”，以使密码复杂性为 PIN。 至少指定默认的最短密码长度。  
 
 
 #### <a name="only-allow-applications-to-run-that-are-signed-by-companies-that-you-trust"></a>仅允许运行经过你信任的公司签名的应用程序  
@@ -219,9 +220,9 @@ Configuration Manager 在此期间会锁定计算机，仅允许本地管理员�
 
 通过在未使用移动设备时将其锁定，帮助防止特权提升攻击。
 
-*对于 Configuration Manager 注册的移动设备*：使用移动设备配置项目来配置密码设置“锁定移动设备之前的空闲时间”。  
+*对于 Configuration Manager 注册的移动设备*：使用移动设备配置项目来配置密码设置“锁定移动设备之前的空闲时间（分钟）”。  
 
-*对于未安装 Configuration Manager 客户端但由 Exchange Server 连接器管理的移动设备*：为 Exchange Server 连接器配置“密码设置”，以设置“锁定移动设备之前的空闲时间”。  
+*对于未安装 Configuration Manager 客户端但由 Exchange Server 连接器管理的移动设备*：为 Exchange Server 连接器配置“密码设置”，以设置“锁定移动设备之前的空闲时间（分钟）”。  
 
 
 #### <a name="restrict-the-users-who-can-enroll-their-mobile-devices"></a>限制可注册其移动设备的用户  
@@ -295,7 +296,7 @@ Configuration Manager 在此期间会锁定计算机，仅允许本地管理员�
 
     1.  **使用此证书时**：将“始终信任”设置更改为“使用系统默认值”。  
 
-    2.  **安全套接字层(SSL)**：将“未指定值”更改为“始终信任”。  
+    2.  **安全套接字层 (SSL)**：将“未指定值”更改为“始终信任”。  
 
 6.  关闭对话框。 在出现提示时输入管理员的密码，然后单击“更新设置”。  
 

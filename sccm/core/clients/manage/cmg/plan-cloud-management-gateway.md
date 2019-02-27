@@ -10,16 +10,17 @@ ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b059fd3b8511a3cbbf308ea7a3ee21a4ec9dbfaa
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: d8eff4154f5799ef0d6411b077f50753d203310e
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456713"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56126770"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>在 Configuration Manager 中规划云管理网关
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
  
 <!--1101764-->云管理网关 (CMG) 提供了一种简单的方法来管理 Internet 上的 Configuration Manager 客户端。 将 CMG 部署为 Microsoft Azure 中的云服务，即可管理在 Internet 上漫游的传统客户端，无需其他基础结构。 也不需要将本地基础结构向 Internet 公开。 
 
@@ -359,7 +360,7 @@ CMG 连接点站点系统支持使用 Web 代理。 有关配置代理的此角�
 
 - 对于通过 Configuration Manager 控制台和客户端进行的 Azure AD 令牌检索：ActiveDirectoryEndpoint (https://login.microsoftonline.com/)  
 
-- 对于 Azure AD 用户发现：AAD Graph 终结点 (https://graph.windows.net/)  
+- 对于 Azure AD 用户发现：AAD 图形终结点 (https://graph.windows.net/)  
 
 
 

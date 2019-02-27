@@ -10,16 +10,17 @@ ms.assetid: ddcad9f2-a542-4079-83ca-007d7cb44995
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 42cd1011b3d077a21cd481d5c88b6c9c53765f0e
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: b151b93bf0dfa067c2b85860e2c0119922a17cd2
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32340617"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56130286"
 ---
 # <a name="deploy-app-v-virtual-applications-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 部署 App-V 虚拟应用程序
 
-*适用于：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 使用 Configuration Manager 管理虚拟应用程序时，可以获得以下好处：  
 
@@ -60,8 +61,8 @@ ms.locfileid: "32340617"
 
      还必须使用知识库文章 [2645225](http://go.microsoft.com/fwlink/p/?LinkId=237322) 中所述的修补程序来更新 App-V 4.6 SP1 客户端，才能成功部署虚拟应用程序。  
 
--   **App-V 5、App-V 5.0 SP1、App-V 5.0 SP2、App-V 5.0 SP3 和 App-V 5.1**：对于 App-V 5.0 SP2，必须安装[修补程序包 5](https://support.microsoft.com/en-us/kb/2963211) 或使用 App-V 5.0 SP3。  
--   **App-V 5.2**：App-V 5.2 内置在 Windows 10 教育版（1607 及更高版本）、Windows 10 企业版（1607 及更高版本）和 Windows Server 2016 中。
+-   **App-V 5、App-V 5.0 SP1、App-V 5.0 SP2、App-V 5.0 SP3 和 App-V 5.1**：必须为 App-V 5.0 SP2 安装[修补程序包 5](https://support.microsoft.com/en-us/kb/2963211) 或使用 App-V 5.0 SP3。  
+-   **App-V 5.2**：内置在 Windows 10 教育版（1607 及更高版本）、Windows 10 企业版（1607 及更高版本）和 Windows Server 2016 中。
 
 有关 Windows 10 的 App-V 的详细信息，请参阅下列主题：
 
@@ -120,7 +121,7 @@ Configuration Manager 支持以下两种方法来向客户端传递虚拟应用�
 |在首次部署虚拟应用程序之后，Configuration Manager 将在客户端上开始管理虚拟应用程序。 此后，Configuration Manager 必须管理计算机上的所有 App-V 应用程序。|无更多信息。|  
 |将内容分发到合适的分发点以启用应用程序本地传递。|请参阅[管理内容和内容基础结构](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md)。|  
 |将应用程序部署到 Configuration Manager 客户端。<br /><br /> 如果使用不创建清单 XML 文件的 Sequencer 的早期版本创建了 App-V 应用程序，则可以在较新版本的 Sequencer 中打开和保存此应用程序以创建文件。 使用 Configuration Manager 部署虚拟应用程序需要此文件。<br /><br /> App-V 支持使用 Sequencer 的 SoftGrid 4.1 SP1 或 4.2 版本创建的虚拟应用程序包。<br /><br /> 如果以前在本地安装了应用程序，则在部署应用程序虚拟版本之前必须卸载它们。|请参阅[部署应用程序](../../apps/deploy-use/deploy-applications.md)。|  
-|System Center Configuration Manager 不再支持使用包含虚拟应用程序的包和程序。 从 Configuration Manager 2007 迁移到 System Center Configuration Manager 时，Configuration Manager 会将这些包转换为应用程序。<br /><br /> Configuration Manager 2007 播发将转换为以下部署类型：<br /><br /> - 迁移无播发的 App-V 包：使用默认部署类型设置的一个部署类型。<br /><br /> - 迁移具有一个播发的 App-V 包：使用与 Configuration Manager 2007 播发相同的设置的 <br />                一个部署类型。<br /><br /> - 迁移具有多个播发的 App-V 包：每个 <br />                Configuration Manager 2007 播发一个部署类型，该类型使用对应播发的设置。|请参阅[规划将 Configuration Manager 对象迁移到 System Center Configuration Manager](../../core/migration/planning-for-the-migration-of-objects.md)。|  
+|System Center Configuration Manager 不再支持使用包含虚拟应用程序的包和程序。 从 Configuration Manager 2007 迁移到 System Center Configuration Manager 时，Configuration Manager 会将这些包转换为应用程序。<br /><br /> Configuration Manager 2007 播发将转换为以下部署类型：<br /><br /> - 迁移无播发的 APP-V 包：使用默认部署类型设置的一个部署类型。<br /><br /> - 迁移具有一个播发的 APP-V 包：使用与 Configuration Manager 2007 播发相同的设置的 <br />                一个部署类型。<br /><br /> - 迁移具有多个播发的 APP-V 包：用于每个 <br />                Configuration Manager 2007 播发的部署类型，该类型使用对应该播发的设置。|请参阅[规划将 Configuration Manager 对象迁移到 System Center Configuration Manager](../../core/migration/planning-for-the-migration-of-objects.md)。|  
 
 ##  <a name="migrating-app-v-5-connection-groups-to-configuration-manager-virtual-environments"></a>将 App-V 5 连接组迁移到 Configuration Manager 虚拟环境  
 Configuration Manager 中的 App-V 虚拟环境允许所部署的虚拟应用程序在客户端计算机上共享相同的文件系统和注册表。 这意味着这些应用程序可以互相共享数据（这与标准的虚拟应用程序不同）。 在安装应用程序时，或者在客户端接下来评估已安装的应用程序时，会在客户端计算机上创建或更改虚拟环境。 虚拟环境类似于独立 APP-V 5 中的连接组。  

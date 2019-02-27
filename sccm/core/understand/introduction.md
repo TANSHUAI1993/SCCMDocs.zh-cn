@@ -10,16 +10,17 @@ ms.assetid: 3343eccf-bf09-41cd-9e68-03e893c7f904
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f0986d713b47d15dc0298e413216a1e33fe2e937
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 10e30b2446d1b2f51d2de8d97c4d8b084357ae32
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342471"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56133379"
 ---
 # <a name="introduction-to-system-center-configuration-manager"></a>System Center Configuration Manager 简介
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 System Center Configuration Manager 作为 Microsoft System Center 管理解决方案套件中的一种产品，有助于在本地和云中管理设备和用户。  
 
@@ -63,7 +64,7 @@ Configuration Manager 也可使用：
 **本文档库中的相关主题：**  
 
 -   [System Center Configuration Manager 的特性和功能](../../core/plan-design/changes/features-and-capabilities.md)  
--   [为 System Center Configuration Manager 选择设备管理解决方案](../../core/plan-design/choose-a-device-management-solution.md)  
+-   [选择 System Center Configuration Manager 的设备管理解决方案](../../core/plan-design/choose-a-device-management-solution.md)  
 -   [自 System Center 2012 Configuration Manager 以来 System Center Configuration Manager 中更改的内容](../../core/plan-design/changes/what-has-changed-from-configuration-manager-2012.md)
 -   [System Center Configuration Manager 基础知识](../../core/understand/fundamentals.md)  
 -   [通过构建自己的实验室环境来评估 System Center Configuration Manager](/sccm/core/get-started/set-up-your-lab)
@@ -110,7 +111,7 @@ Configuration Manager 也可使用：
 
 在所有方案中，Adam 是 Configuration Manager 的主要管理员。  
 
-###  <a name="BKMK_ScenarioEmpower"></a>示例方案：通过确保从任何设备访问应用程序来提高用户的工作效率  
+###  <a name="BKMK_ScenarioEmpower"></a> 示例方案：通过确保从任何设备访问应用程序来提高用户的工作效率  
  Trey Research 希望确保员工能够尽可能高效地访问所需的应用程序。 Adam 将这些公司要求映射到以下方案：  
 
 |要求|当前客户端管理状态|将来的客户端管理状态|  

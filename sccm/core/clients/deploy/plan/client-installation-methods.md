@@ -10,16 +10,17 @@ ms.assetid: 51b5964b-374d-4abc-8619-414a9fffad2d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6e437709ec1b721cf9ca597bdc944bcce6da9b0f
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: c206a8045429551f361f640febbcda4a39ef9698
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32334243"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56139936"
 ---
 # <a name="client-installation-methods-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的客户端安装方法
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 你可以使用不同的方法安装 Configuration Manager 客户端软件。 可使用一种方法或多种方法的组合。 本文介绍每种方法，方便你了解最适用于组织的方法。  
 

@@ -10,16 +10,17 @@ ms.assetid: 8db92d67-5d9c-4e9c-80d0-ae6fa0dd4817
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 35a8e1356306815503f2c153a12139e06dd27be2
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: ef94f51ad85f5d816a5de253a63a639111b4383a
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32337167"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56134327"
 ---
 # <a name="the-cdlatest-folder-for-system-center-configuration-manager"></a>System Center Configuration Manager 的 CD.Latest 文件夹
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 System Center Configuration Manager 引入一种新的更新过程，该过程会从 Configuration Manager 控制台内部将更新传递到产品。 为了支持这种更新 Configuration Manager 的新方法，创建了一个名为 **CD.Latest** 的新文件夹，其中包含用于站点的更新版本的 Configuration Manager 安装文件副本。  
 
@@ -32,9 +33,9 @@ CD.Latest 文件夹包含一个名为 Redist 的文件夹，该文件夹包含�
 
  下面是在管理中心站点或主站点服务器上创建或更新 CD.Latest 文件夹的方案：  
 
--   从 Configuration Manager 控制台中安装更新或修补程序：在 Configuration Manager 安装文件夹中创建或更新该文件夹。  
+-   从 Configuration Manager 控制台安装更新或修补程序：在 Configuration Manager 安装文件夹中创建或更新文件夹。  
 
--   运行内置 Configuration Manager 备份任务：在指定备份文件夹位置下创建或更新该文件夹。  
+-   运行内置的 Configuration Manager 备份任务：在指定备份文件夹位置下创建或更新该文件夹。  
 
 -  使用基线媒体（如 1802 版）安装新站点时，将会创建 CD.Latest 文件夹。
 

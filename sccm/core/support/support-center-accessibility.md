@@ -10,16 +10,17 @@ ms.assetid: 1b931c9d-ffae-4d8e-baa7-c330a152674f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 424ab2a1ca7ed81ccdb5c0607edd74ec8ccb7484
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 4d759ada36184ac8a6d1ac59c94c96cdaf234d56
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52458026"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56139368"
 ---
 # <a name="accessibility-features-in-support-center"></a>支持中心中的辅助功能
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 支持中心具有许多有用的辅助功能，人人都能轻松上手。 
 
@@ -59,9 +60,9 @@ ms.locfileid: "52458026"
 |在当前视图中打开日志文件<br>（位于支持中心“日志”选项卡上，且在“日志查看器”窗口中）|**Ctrl** + **Shift** + **O** |
 |在新的“日志查看器”窗口中打开日志文件<br>（位于支持中心“日志”选项卡上，且在“日志查看器”窗口中）|**Ctrl** + **N** |
 |关闭所有日志文件<br>（位于支持中心“日志”选项卡上，且在“日志查看器”窗口中）|**Ctrl** + **W** |
-|在日志文件中搜索| - **Ctrl** + **F**：打开“查找”对话框，输入搜索字符串<br> - **F3**：查找下一个匹配项<br> - **Shift** + **F3**：查找上一个匹配项|
+|在日志文件中搜索| - Ctrl + F：打开“查找”对话框，输入搜索字符串<br> - **F3**：查找下一个匹配项<br> - Shift + F3：查找上一个匹配项|
 |查找错误代码<br>（位于“日志”选项卡上，且在“日志查看器”窗口中）|**Ctrl** + **L** |
-|从日志文件复制| - **Ctrl** + **C**：复制日志文件文本<br> - **Ctrl** + **Shift** + **C**：复制日志条目（不复制格式）|
+|从日志文件复制| - Ctrl + C：复制日志文件文本<br> - Ctrl + Shift + C：复制日志条目（不复制格式）|
 |使用日志文件文本进行快速过滤<br>（位于“日志”选项卡上，且在“日志查看器”窗口中）|**Ctrl** + **Shift** + **C** |
 |注释日志文件<br>（位于“日志”选项卡上，且在“日志查看器”窗口中）|**Ctrl** + **Shift** + **N** <sup>[注释 1](#bkmk_note1)</sup>|
 |打开帮助|**F1**|

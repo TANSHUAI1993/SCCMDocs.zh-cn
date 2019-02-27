@@ -10,12 +10,13 @@ ms.assetid: dc245916-bc11-4983-9c4d-015f655007c1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5324e00f17770feca25d40c645d8e344df797f21
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 5ebf89e46b33649f12ea5770d6e771e811a66094
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456322"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56125725"
 ---
 # <a name="manage-and-monitor-phased-deployments"></a>管理和监视分阶段部署
 
@@ -36,14 +37,14 @@ ms.locfileid: "52456322"
 
     - **应用程序**（仅在版本 1806 或更高版本中）：转到“软件库”工作区，展开“应用程序管理”，然后选择“应用程序”。   
 
-    - **软件更新**（仅在版本 1810 或更高版本）：转到“软件库”工作区，然后再选择以下节点之一：    
+    - **软件更新**（仅在版本 1810 或更高版本中）：转到“软件库”工作区，再选择以下节点之一：    
         - 软件更新  
             - **所有软件更新**  
             - **软件更新组**   
         - Windows 10 服务、所有 Windows 10 更新  
         - Office 365 客户端管理、Office 365 更新  
 
-    - **任务序列**：转到“软件库”工作区中，展开“操作系统”，然后选择“任务序列”。   
+    - **任务序列**：转到“软件库”工作区，展开“操作系统”，选择“任务序列”。   
 
 2. 选择具有分阶段部署的软件。  
 
@@ -63,14 +64,14 @@ ms.locfileid: "52456322"
 
     - **应用程序**（仅在版本 1806 或更高版本中）：转到“软件库”工作区，展开“应用程序管理”，然后选择“应用程序”。   
 
-    - **软件更新**（仅在版本 1810 或更高版本）：转到“软件库”工作区，然后再选择以下节点之一：    
+    - **软件更新**（仅在版本 1810 或更高版本中）：转到“软件库”工作区，再选择以下节点之一：    
         - 软件更新  
             - **所有软件更新**  
             - **软件更新组**   
         - Windows 10 服务、所有 Windows 10 更新  
         - Office 365 客户端管理、Office 365 更新  
 
-    - **任务序列**：转到“软件库”工作区中，展开“操作系统”，然后选择“任务序列”。 选择一个现有任务序列，然后单击功能区中的“创建分阶段部署”。  
+    - **任务序列**：转到“软件库”工作区，展开“操作系统”，选择“任务序列”。 选择一个现有任务序列，然后单击功能区中的“创建分阶段部署”。  
 
 2. 选择具有分阶段部署的软件。  
 
@@ -92,7 +93,7 @@ When you suspend a phased deployment, it sets the available and deadline times o
 
 此仪表板显示部署的每个阶段的以下信息：  
 
-- **总设备数**：此阶段针对多少台设备。  
+- **设备总数**：此阶段针对多少台设备。  
 
 - **状态**：此阶段的当前状态。 每个阶段可以为以下状态之一：  
 
@@ -102,7 +103,7 @@ When you suspend a phased deployment, it sets the available and deadline times o
 
     - **已挂起**：管理员已挂起部署。  
 
-- **进度**：客户端的用颜色标明的部署状态。 例如：成功、进行中、错误、不符合要求以及未知。 
+- **进度**：客户端中用颜色标明的部署状态。 例如：成功、进行中、错误、不符合要求以及未知。 
 
 #### <a name="success-criteria-tile"></a>成功标准磁贴
 

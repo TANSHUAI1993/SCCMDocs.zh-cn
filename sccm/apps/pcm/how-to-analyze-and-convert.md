@@ -10,28 +10,29 @@ ms.assetid: f3bf1737-827d-48fa-8bb1-f48fe71afe0c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9c58e12d906606acc0015d38e543616570d61520
-ms.sourcegitcommit: 759098de944b8f7d5eedfc2bae2cb9a6ba15276f
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 50ec232c9f5b007ef7a139cbe7894c333b6eed63
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43297293"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56137875"
 ---
 # <a name="how-to-analyze-and-convert-packages-with-package-conversion-manager"></a>如何使用包转换管理器来分析和转换包
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 <!--1357861-->
 
 转换包之前，首先对其进行分析。 根据分析结果，可以继续执行下列其中一项任务：
 
-- 将包“转换”为应用程序。 在控制台中的“包”列表上，就绪状态显示为“自动”。  
+- 将包“转换” 为应用程序。 在控制台中的“包”  列表上，就绪状态显示为“自动” 。  
 
-- “修复并转换”包，附加集合并创建全局条件。 在控制台中的“包”列表上，就绪状态显示为“自动”。  
+- “修复并转换”包，附加集合并创建全局条件。 在控制台中的“包”  列表上，就绪状态显示为“自动” 。  
 
-- “修复并转换”包。 在控制台中的“包”列表上，就绪状态显示为“手动”。  
+- “修复并转换” 包。 在控制台中的“包”  列表上，就绪状态显示为“手动” 。  
 
-- 不转换包。 在控制台中的“包”列表上，就绪状态显示为“不适用”。  
+- 不转换包。 在控制台中的“包”  列表上，就绪状态显示为“不适用” 。  
 
 
 
@@ -43,13 +44,13 @@ ms.locfileid: "43297293"
 
 3. 若要查看包的就绪状态，请将“就绪”列添加到包的列表。 包的就绪状态将决定你的下一步操作：  
 
-    - “自动”：[如何转换包](#bkmk_convert)  
+    - **自动**：[如何转换包](#bkmk_convert)  
 
         若要附加集合并创建就绪状态为“自动”的全局条件，请参阅[如何修复和转换包](#bkmk_fix)。  
 
-    - “手动”：[如何修复和转换包](#bkmk_fix)
+    - **手动**：[如何修复和转换包](#bkmk_fix)
 
-    - “不适用”：此包缺少必需的内容或程序。 添加缺少的任何内容或程序，然后重试分析。 或者使其保留为未转换的状态，并继续将其作为一个包进行部署。  
+    - **不适用**：此包缺少必需的内容或程序。 添加缺少的任何内容或程序，然后重试分析。 或者使其保留为未转换的状态，并继续将其作为一个包进行部署。  
 
 
 

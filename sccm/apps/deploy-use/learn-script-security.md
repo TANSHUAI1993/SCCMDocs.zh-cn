@@ -10,16 +10,17 @@ ms.assetid: a0bd093d-67a5-4f74-bf79-dd604889f5ba
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b5f7ac3125b099a764604b3338a92f3f45b10afe
-ms.sourcegitcommit: 2cc635835709fb8d86cdb63ea34233b36c94d4d8
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 5adc8809edc0a069269dfce71f302452a0e01b45
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52258972"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56124023"
 ---
 # <a name="learn-more-about-powershell-script-security"></a>详细了解 PowerShell 脚本安全性
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 管理员有责任在其环境中验证建议的 PowerShell 和 PowerShell 参数使用情况。 以下是一些有用的资源，可以帮助管理员了解 PowerShell 的功能和潜在风险面。 这是为了帮助缓解潜在风险面，并允许使用安全脚本。
 
@@ -59,12 +60,12 @@ ms.locfileid: "52258972"
 
 - 只允许使用预定义参数。
 - 使用正则表达式功能来验证允许的参数。
-    - 示例：如果只允许特定范围的值，则使用正则表达式仅检查可以构成该范围的这些字符或值。
+    - 例如：如果只允许特定范围的值，则仅使用正则表达式检查可以位于该范围内的字符或值。
     - 验证参数可以帮助防止用户尝试使用某些可以转义的字符，如引号。 请注意，可能存在多种引号，因此使用正则表达式来验证哪些已决定的字符是允许的通常比尝试定义所有不允许的输入更容易。
 - 在 PowerShell 库中利用 PowerShell 模块[“注入搜寻”](https://www.powershellgallery.com/packages/InjectionHunter/1.0.0)。
     - 可能是误报，当某些内容被标记为可疑时会查找意向，以确定它是否是一个真正的问题。 
 - Microsoft Visual Studio 提供脚本分析器，可以帮助检查 PowerShell 语法。
-- 本视频的标题为“DEF CON 25 - Lee Holmes - Get $pwnd: Attacking Battle Hardened Windows Server”，概述了可以避免的问题类型（尤其是 12:20 到 17:50 部分）：    <iframe width="560" height="315" src="https://www.youtube.com/embed/ahxMOAAani8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+- 本视频的标题为：“DEF CON 25 - Lee Holmes - Get $pwnd：Attacking Battle Hardened Windows Server”，概述了可以避免的问题类型（尤其是 12:20 到 17:50 部分）：    <iframe width="560" height="315" src="https://www.youtube.com/embed/ahxMOAAani8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ## <a name="environment-recommendations"></a>环境建议
 PowerShell 管理员的一般建议。

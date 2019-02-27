@@ -10,16 +10,17 @@ ms.assetid: 5d388399-07ca-431c-a9b2-56c69771aa87
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fadc93d1977d5d066a6c4c3884bdbaeefb2a0c90
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 235355dff634bab09ef7be65645dbb32c5b86cf9
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32343760"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56133708"
 ---
 # <a name="features-and-capabilities-of-system-center-configuration-manager"></a>System Center Configuration Manager 的特性和功能
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 以下是 System Center Configuration Manager 的主要管理功能。 每项功能都有自己的先决条件，用户希望使用的功能可能会影响 Configuration Manager 层次结构的设计和实现。 例如，你希望将软件部署到层次结构中的设备，则必须安装分发点站点系统角色。  
 

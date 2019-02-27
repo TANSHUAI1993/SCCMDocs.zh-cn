@@ -10,16 +10,17 @@ ms.assetid: c1b2057e-b74f-43fa-a293-763a8f866d3d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 117ad9a087151db51c4cf33112ab662f53b9134e
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 72478fc0b8853cbf9767adfa3949f96b29f2668a
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32332009"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56120351"
 ---
 # <a name="prerequisites-for-remote-control-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中远程控制的先决条件
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 System Center Configuration Manager 中的远程控制具有外部依赖关系和产品中的依赖关系。  
 
@@ -45,4 +46,4 @@ System Center Configuration Manager 中的远程控制具有外部依赖关系�
 |----------------|----------------------|  
 |必须为客户端启用远程控制|默认情况下，安装 Configuration Manager时，不启用远程控制。 有关如何启用和配置远程控制的信息，请参阅[在 System Center Configuration Manager 中配置远程控制](../../../../core/clients/manage/remote-control/configuring-remote-control.md)。|  
 |Reporting Services 点|在远程控制的报表前，必须先安装 Reporting Services 点站点系统角色。 有关详细信息，请参阅 [System Center Configuration Manager 中的报表](../../../../core/servers/manage/reporting.md)。|  
-|管理远程控制的安全权限|若要访问集合资源并从 Configuration Manager 控制台启动远程控制会话，需要拥有“集合”对象的“读取”、“读取资源”和“远程控制”权限。<br /><br /> “远程工具操作人员”安全角色包括这些在 Configuration Manager 中管理远程控制所需要的权限。<br /><br /> 有关详细信息，请参阅[为 System Center Configuration Manager 配置基于角色的管理](../../../../core/servers/deploy/configure/configure-role-based-administration.md)。<br /><br /> 此外，还必须将获准的查看器添加到“远程工具”客户端设置中的“获准的远程控制和远程协助查看器”列表中，它们才有权使用远程控制。
+|管理远程控制的安全权限|访问集合资源和从 Configuration Manager 控制台发起远程控制会话需要：“集合”对象的“读取”、“读取资源”和“远程控制”权限。<br /><br /> “远程工具操作人员”安全角色包括这些在 Configuration Manager 中管理远程控制所需要的权限。<br /><br /> 有关详细信息，请参阅[为 System Center Configuration Manager 配置基于角色的管理](../../../../core/servers/deploy/configure/configure-role-based-administration.md)。<br /><br /> 此外，还必须将获准的查看器添加到“远程工具”客户端设置中的“获准的远程控制和远程协助查看器”列表中，它们才有权使用远程控制。

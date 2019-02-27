@@ -2,7 +2,7 @@
 title: 故障排除的日志文件
 titleSuffix: Configuration Manager
 description: 使用日志文件解决 Configuration Manager 客户端和站点系统中的问题。
-ms.date: 11/27/2018
+ms.date: 02/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,13 @@ ms.assetid: c1ff371e-b0ad-4048-aeda-02a9ff08889e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 96673c0b299e45111c7d9a2bedf55282de50132e
-ms.sourcegitcommit: 5e7c4d36f4cdb3390ad3b381d31a3e1e4bf3c6e1
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: a5c6cee6422d3fc8777f54bd42716748410c9323
+ms.sourcegitcommit: ceec0e20bf801071f2a05233f984cf17acc3fd29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "55986614"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265064"
 ---
 # <a name="log-files-in-configuration-manager"></a>Configuration Manager 中的日志文件
 
@@ -809,9 +810,10 @@ Configuration Manager 将日志文件存储在不同的位置。 这些位置取
 ###  <a name="BKMK_WindowsServicingLog"></a>Windows 10 维护服务  
  下表列出了包含与 Windows 10 维护服务相关的信息的日志文件。  
 服务使用与软件更新相同的基础结构和进程。 有关适用于服务方案的其他日志，请参阅[软件更新](#BKMK_SU_NAPLog)。
+
 |日志名称|说明|带有日志文件的计算机|  
 |--------------|-----------------|----------------------------|  
-|CBS.log|记录与 Windows 更新或角色和功能的更改相关的维护失败。|客户端|  
+|CBS.log|记录与 Windows 更新或角色和功能的更改相关的维护失败。|客户端|
 |DISM.log|使用 DISM 记录所有操作。 如有必要，DISM.log 将指向 CBS.log 以提供更多详细信息。|客户端|
 |setupact.log|在 Windows 安装过程中发生的大多数错误的主日志文件。 该日志文件位于 %windir%\$Windows.~BT\sources\panther 文件夹。|客户端|
 

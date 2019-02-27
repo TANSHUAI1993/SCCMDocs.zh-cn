@@ -10,16 +10,17 @@ ms.assetid: e102fd1a-76df-4d8e-b1b0-10ee18318f67
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 03b34c09a5fef63316bb1d9d1a94dbbfc3ccf69f
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 93a502e9c77e05eedba1c2989cbae69e4080832f
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456254"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56133725"
 ---
 # <a name="how-to-manage-collections-in-configuration-manager"></a>如何管理 Configuration Manager 中的集合
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 使用本文中的概述信息可帮助执行 Configuration Manager 中的集合的管理任务。  
 
@@ -40,9 +41,9 @@ ms.locfileid: "52456254"
 #### <a name="add-selected-items"></a>添加所选的项
  提供下列选项： 
 
- - 将所选项添加到现有设备集合：打开“选择集合”对话框。 选择想要将所选成员集合添加到其中的集合。 使用“包括集合”  成员身份规则可将所选集合包括在此集合中。  
+ - **将所选项目添加到现有设备集合**：打开“选择集合”  对话框。 选择想要将所选成员集合添加到其中的集合。 使用“包括集合”  成员身份规则可将所选集合包括在此集合中。  
 
- - 将所选项添加到新的设备集合：将打开“创建设备集合向导”，可以在其中创建新的集合。 使用“包括集合”  成员身份规则可将所选集合包括在此集合中。  
+ - **将所选项目添加到新的设备集合**：将打开“创建设备集合向导”，可以在其中创建新的集合。 使用“包括集合”  成员身份规则可将所选集合包括在此集合中。  
 
 
  有关详细信息，请参阅[如何创建集合](/sccm/core/clients/manage/collections/create-collections)。
@@ -105,15 +106,15 @@ ms.locfileid: "52456254"
 #### <a name="deploy"></a>部署
  显示下列选项：  
 
- - 应用程序：打开“部署软件向导”。 选择并配置所选集合的应用程序部署。 有关详细信息，请参阅[如何部署应用程序](/sccm/apps/deploy-use/deploy-applications)。  
+ - **应用程序**：打开“部署软件向导”。 选择并配置所选集合的应用程序部署。 有关详细信息，请参阅[如何部署应用程序](/sccm/apps/deploy-use/deploy-applications)。  
 
- - 程序：打开“部署软件向导”。 选择并配置所选集合的包和程序部署。 有关详细信息，请参阅[包和程序](/sccm/apps/deploy-use/packages-and-programs)。  
+ - **程序**：打开“部署软件向导”。 选择并配置所选集合的包和程序部署。 有关详细信息，请参阅[包和程序](/sccm/apps/deploy-use/packages-and-programs)。  
 
- - “配置基线”：打开“部署配置基线”对话框。 配置所选集合的一个或多个配置基线的部署。 有关详细信息，请参阅[如何部署配置基线](/sccm/compliance/deploy-use/deploy-configuration-baselines)。  
+ - **配置基线**：打开“部署配置基线”对话框。 配置所选集合的一个或多个配置基线的部署。 有关详细信息，请参阅[如何部署配置基线](/sccm/compliance/deploy-use/deploy-configuration-baselines)。  
 
- - 任务序列：打开“部署软件向导”。 选择并配置所选集合的任务序列部署。 有关详细信息，请参阅[管理任务序列以自动执行任务](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS)。  
+ - **任务序列**：打开“部署软件向导”。 选择并配置所选集合的任务序列部署。 有关详细信息，请参阅[管理任务序列以自动执行任务](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS)。  
 
- - 软件更新：打开“部署软件更新向导”。 配置所选集合中到资源的软件更新部署。 有关详细信息，请参阅[管理软件更新](/sccm/sum/understand/software-updates-introduction)。  
+ - **软件更新**：打开“部署软件更新向导”。 配置所选集合中到资源的软件更新部署。 有关详细信息，请参阅[管理软件更新](/sccm/sum/understand/software-updates-introduction)。  
 
 
 #### <a name="clear-server-group-deployment-locks"></a>清除服务器组部署锁定
@@ -149,7 +150,7 @@ ms.locfileid: "52456254"
  - **删除**  
  - **模拟部署**  
  - **部署**  
-     - 应用程序  
+     - **应用程序**  
      - 程序  
      - 配置基线   
  - **移动**  

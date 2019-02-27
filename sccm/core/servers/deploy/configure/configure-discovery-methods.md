@@ -10,16 +10,17 @@ ms.assetid: 49505eb1-d44d-4121-8712-e0f3d8b15bf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e232875aab086dea04261abc4d83df8d5d03e6c8
-ms.sourcegitcommit: aca62bd3d267b1dbea46d4db6f32d797c5f6263c
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 6524fb7715c9bc3040996a16b4204464e0505123
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43347964"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56139181"
 ---
 # <a name="configure-discovery-methods-for-configuration-manager"></a>配置 Configuration Manager 的发现方法
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 
 配置发现方法，从网络、Active Directory 和 Azure Active Directory (Azure AD) 找到要管理的资源。 首先启用要用于搜索环境的每种方法，然后对这些方法进行配置。 也可通过使用与启用相同的过程来禁用某种方法。 此过程的其中两个例外情况是检测信号发现和服务器发现：  
@@ -141,9 +142,9 @@ ms.locfileid: "43347964"
 
 1. 在“Active Directory 组属性”窗口的“常规”选项卡上，选择“添加”以配置发现作用域。 选择“组”或“位置”。 然后在“添加组”或“添加 Active Directory 位置”对话框中完成以下配置：  
 
-    1.  为此发现作用域指定“名称” 。  
+    1.  为此发现作用域指定“名称”  。  
 
-    2.  指定要搜索的“Active Directory 域”或“位置”：  
+    2.  指定要搜索的“Active Directory 域”  或“位置”  ：  
 
         -   如果选择了“组”，请指定要发现的一个或多个 Active Directory 组。  
 
@@ -155,7 +156,7 @@ ms.locfileid: "43347964"
 
 2.  为要定义的每个其他发现作用域重复以上步骤。  
 
-3.  在“轮询计划”选项卡上，配置完整发现轮询计划和增量发现。  
+3.  在“轮询计划”  选项卡上，配置完整发现轮询计划和增量发现。  
 
 4.  在“选项”选项卡上，可以配置这些设置，以从发现中筛选出或排除过期的计算机记录。 同时配置对分发组成员身份的发现。  
 
@@ -173,23 +174,23 @@ ms.locfileid: "43347964"
 
     2.  指定更改搜索行为的选项：  
 
-        - 发现 Active Directory 组内的对象：该站点还会查看此路径中组的成员身份。  
+        - **发现 Active Directory 组内的对象**：该站点还会查看此路径中的组的成员资格。  
 
-        - 以递归方式搜索 Active Directory 子容器：如果启用此选项，该站点将搜索以上路径中的任何其他容器或 OU。 如果禁用此选项，该站点仅搜索特定路径中的资源。  
+        - **以递归方式搜索 Active Directory 子容器：**：如果启用此选项，该站点将搜索以上路径中的任何其他容器或 OU。 如果禁用此选项，该站点仅搜索特定路径中的资源。  
 
             从版本 1806 开始，请选择要从此递归搜索中排除的子容器。 此选项有助于减少发现的对象数。 选择“添加”选择以上路径下的容器。 在“选择新容器”对话框中，选择要排除的子容器。 选择“确定”以关闭“选择新容器”对话框。<!--1358143-->
 
             > [!Tip]  
             > “Active Directory 系统发现属性”窗口中的 Active Directory 容器列表包含列“已排除”。 当选择要排除的容器，此值为“是”。  
 
-    3.  对于每个位置，指定要用作“Active Directory 发现帐户”的帐户。 有关详细信息，请参阅[帐户](/sccm/core/plan-design/hierarchy/accounts#active-directory-system-discovery-account)。  
+    3.  对于每个位置，指定要用作“Active Directory 发现帐户” 的帐户。 有关详细信息，请参阅[帐户](/sccm/core/plan-design/hierarchy/accounts#active-directory-system-discovery-account)。  
 
         > [!TIP]  
         >  对于指定的每个位置，可以配置一组发现选项和唯一的 Active Directory 发现帐户。  
 
     4.  选择“确定”保存 Active Directory 容器配置。  
 
-2.  在“轮询计划”选项卡上，配置完整发现轮询计划和增量发现。  
+2.  在“轮询计划”  选项卡上，配置完整发现轮询计划和增量发现。  
 
 3.  在“Active Directory 属性”选项卡上，为要发现的计算机配置其他 Active Directory 属性。 此选项卡会列出默认对象属性。  
 
@@ -209,14 +210,14 @@ ms.locfileid: "43347964"
 
     2.  对于每个位置，指定更改搜索行为的选项。  
 
-    3.  对于每个位置，指定要用作“Active Directory 发现帐户”的帐户。 有关详细信息，请参阅[帐户](/sccm/core/plan-design/hierarchy/accounts#active-directory-user-discovery-account)。  
+    3.  对于每个位置，指定要用作“Active Directory 发现帐户” 的帐户。 有关详细信息，请参阅[帐户](/sccm/core/plan-design/hierarchy/accounts#active-directory-user-discovery-account)。  
 
         > [!NOTE]  
         >  对于指定的每个位置，可以配置一组唯一的发现选项和唯一的 Active Directory 发现帐户。  
 
     4.  选择“确定”保存 Active Directory 容器配置。  
 
-6.  在“轮询计划”选项卡上，配置完整发现轮询计划和增量发现。  
+6.  在“轮询计划”  选项卡上，配置完整发现轮询计划和增量发现。  
 
 7.  在“Active Directory 属性”选项卡上，为要发现的计算机配置其他 Active Directory 属性。 此选项卡会列出默认对象属性。  
 
@@ -356,7 +357,7 @@ Configuration Manager 支持以下搜索网络的方法：
 
  可以将网络发现配置为使用特定 DHCP 服务器或多个服务器在发现运行期间发现 DHCP 客户端。  
 
- 网络发现搜索你在“网络发现属性”对话框中的“DHCP”选项卡上指定的每个 DHCP 服务器。 如果正在运行发现的服务器从 DHCP 服务器租赁其 IP 地址，可以配置发现来搜索该 DHCP 服务器。 使用选项“包括配置站点服务器使用的 DHCP 服务器”来启用此行为。  
+ 网络发现搜索你在“网络发现属性”  对话框中的“DHCP”  选项卡上指定的每个 DHCP 服务器。 如果正在运行发现的服务器从 DHCP 服务器租赁其 IP 地址，可以配置发现来搜索该 DHCP 服务器。 使用选项“包括配置站点服务器使用的 DHCP 服务器”来启用此行为。  
 
 > [!NOTE]  
 >  为了在网络发现中成功配置 DHCP 服务器，你的环境必须支持 IPv4。 你无法将网络发现配置为使用本机 IPv6 环境中的 DHCP 服务器。  
@@ -488,7 +489,7 @@ Configuration Manager 支持以下搜索网络的方法：
 4.  在“所有状态消息”窗口中，从“选择日期和时间”下拉列表选择一个值，说明多久之前启动发现。 然后选择“确定”以打开“Configuration Manager 状态消息查看器”。  
 
     > [!TIP]  
-    >  你也可以使用“指定日期和时间”选项选择运行发现的指定日期和时间。 当你在指定日期运行网络发现并且想要仅检索该日期中的消息时，此选项很有用。  
+    >  你也可以使用“指定日期和时间”  选项选择运行发现的指定日期和时间。 当你在指定日期运行网络发现并且想要仅检索该日期中的消息时，此选项很有用。  
 
 5.  要验证网络发现是否已经完成，请搜索具有以下详细信息的状态消息：  
 
@@ -496,7 +497,7 @@ Configuration Manager 支持以下搜索网络的方法：
 
     -   组件：**SMS_NETWORK_DISCOVERY**  
 
-    -   描述：**此组件已停止**  
+    -   描述:**此组件已停止**  
 
     如果不存在此状态消息，则网络发现尚未完成。  
 
@@ -506,6 +507,6 @@ Configuration Manager 支持以下搜索网络的方法：
 
     -   组件：**SMS_NETWORK_DISCOVERY**  
 
-    -   描述：**此组件已启动**  
+    -   描述:**此组件已启动**  
 
     此信息验证是否已启动网络发现。 如果没有此信息，请重新计划网络发现。  

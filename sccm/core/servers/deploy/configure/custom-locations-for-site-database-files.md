@@ -10,16 +10,17 @@ ms.assetid: 500a9aa6-68aa-44eb-bf49-350c1314a697
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 597ce060dc1fb37f1cc827da3e1c059958a91163
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 6f094e2e6eab0067f51cb7fcd193a4acc914fc5c
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32332723"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56134946"
 ---
 # <a name="custom-locations-for-system-center-configuration-manager-site-database-files"></a>System Center Configuration Manager 站点数据库文件的自定义位置
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
  System Center Configuration Manager 支持 SQL Server 数据库文件的自定义位置。  
 
@@ -28,9 +29,9 @@ ms.locfileid: "32332723"
 
  在新的主站点或管理中心站点的**安装过程中**，你可以：  
 
--   **指定站点数据库的非默认文件位置**：然后 Configuration Manager 安装程序会创建使用这些位置的站点数据库。  
+-   **指定站点数据库的非默认文件位置**：然后，Configuration Manager 安装程序使用这些位置创建站点数据库。  
 
--   **指定使用预创建的 SQL Server 数据库，该库使用自定义文件位置**：然后 Configuration Manager 安装程序使用该预创建的数据库及其预配置的文件位置。  
+-   **指定使用预先创建的 SQL Server 数据库，该数据库使用自定义文件位置**：然后，Configuration Manager 安装程序使用该预先创建的数据库及其预配置的文件位置。  
 
 **安装之后**，可以更改站点数据库文件的位置。 这需要你停止该站点并在 SQL Server 中编辑文件位置：  
 

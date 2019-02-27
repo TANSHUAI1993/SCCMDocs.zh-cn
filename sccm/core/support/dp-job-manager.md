@@ -10,16 +10,17 @@ ms.assetid: 4b72922a-d11e-4aef-b309-19f5f0716f32
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5218d47ae8699ee0feb0cf59405833ec4cc49569
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 1365c3951a829d92cbdb2f6a4a87c8496f9ada3c
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385828"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56136341"
 ---
 # <a name="dp-job-queue-manager"></a>DP 作业队列管理器
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 分发点 (DP) 作业队列管理器是一个 [Configuration Manager 工具](/sccm/core/support/tools)。 它可用于对 Configuration Manager 分发点的正在进行的内容分发作业进行故障排除和管理。 
 
@@ -33,11 +34,11 @@ ms.locfileid: "39385828"
 
 运行 DPJobMgr.exe。 工具的主菜单包含以下选项卡： 
 
-- [连接](#bkmk_connect)：建立到主站点服务器的初始连接  
+- [连接](#bkmk_connect)：建立与主站点服务器的初始连接  
 
 - [概述](#bkmk_overview)：在单个视图中汇总在所有分发点上正在运行的所有作业  
 
-- [分发点信息](#bkmk_dp-info)：多选分发点以跟踪它们，并管理感兴趣的单个作业  
+- [分发点信息](#bkmk_dp-info)：选择多个分发点，以跟踪它们并管理感兴趣的一个作业  
 
 - [管理作业](#bkmk_manage-jobs)：在一个平面视图中显示所有作业及其状态的列表。 操作作业、上移作业、取消或手动启动作业。  
 
@@ -55,12 +56,12 @@ ms.locfileid: "39385828"
 
 - **分发点**：列出分发点的名称  
 
-- **正在的运行作业**：显示正在特定分发点上运行的并发作业数。  
+- **正在的运行作业数**：显示正在特定分发点上运行的并发作业数。  
 
     > [!Tip]  
     > 并发软件分发数属于站点设置。 已在“软件分发组件属性”中修改此设置。  
 
-- **总作业数**：显示针对特定分发点的所有作业数。 此数字包括正在运行、正在重试或正在等待执行的作业。  
+- **总作业数**：显示以特定分发点为目标的所有作业的数量。 此数字包括正在运行、正在重试或正在等待执行的作业。  
 
 - **总重试次数**：显示作业在特定分发点中已重试的次数。 较大的数字可能表示该特定分发点存在常规问题。  
 
@@ -97,7 +98,7 @@ ms.locfileid: "39385828"
 
 - **启动/重启时间**：对于正在运行的作业，此值为启动时间（绿色）。 对于重试作业，此值是进行重试作业的时间。  
 
-- **重试次数**：重试此包的次数。  
+- **重试**：重试此包的次数。  
 
 - **分发点名称**：分发点的完全限定的域名 (FQDN)  
 

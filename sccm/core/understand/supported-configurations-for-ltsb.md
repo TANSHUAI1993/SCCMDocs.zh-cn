@@ -10,16 +10,17 @@ ms.assetid: f0f818d4-7f45-402f-8758-dc88bc024953
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2da1ff9f8a45ba33f6546dcab8df423d9064e650
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: e185244bda88c317e0157618f066056a817a1a82
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344630"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56141885"
 ---
 # <a name="supported-configurations-for-the-long-term-servicing-branch-of-system-center-configuration-manager"></a>System Center Configuration Manager 的 Long-Term Servicing Branch 支持的配置
 
-*适用范围：System Center Configuration Manager (Long-Term Servicing Branch)*
+适用范围：System Center Configuration Manager (Long-Term Servicing Branch)
 
 使用本主题中的信息，了解哪些操作系统和产品依赖项受 Configuration Manager 的 Long-Term Servicing Branch (LTSB) 支持。
 如果未在本主题或 LTSB 特定主题中另行声明，适用于 Current Branch 版本 1606 的相同配置和限制同样适用于 LTSB。  发生冲突时，使用适用于所使用版本的信息。 通常，LTSB 受到的限制比 Current Branch 更多。
@@ -47,16 +48,16 @@ LTSB 支持使用以下 Windows 计算机操作系统作为站点系统。  每�
 - Windows Server 2016
 - Windows Server 2012 R2 (x64)：标准版、数据中心版
 - Windows Server 2012 (x64)：标准版、数据中心版
-- Windows Server 2008 R2 SP1 (x64)：标准版、企业版、数据中心版
-- Windows Server 2008 SP2（x86、x64）：标准版、企业版、数据中心版（请参阅注释 1）
+- 带 SP1 的 Windows Server 2008 R2 (x64)：Standard、Enterprise、Datacenter
+- 带 SP2 的 Windows Server 2008（x86、x64）：标准版、企业版、数据中心版（参见注释 1）
 - Windows 10 企业版 2015 长期服务（x86、x64）
 - Windows 10 企业版 2016 长期服务（x86、x64）
-- Windows 8.1（x86、x64）：专业版、企业版
-- Windows 7 SP1（x86、x64）：专业版、企业版、旗舰版
+- Windows 8.1（x86 和 x64）：Professional、Enterprise
+- 带 SP1 的 Windows 7（x86 和 x64）：专业版、企业版、旗舰版
 - Windows Server 2012 的服务器核心安装
 - Windows Server 2012 R2 的服务器核心安装    
 
-*注释 1*：除分发点和拉取分发点外，站点服务器或站点系统角色均不支持此操作系统。 你可以继续使用操作系统作为分发点，直到此支持被宣布弃用或者此操作系统的扩展支持期到期为止。 有关详细信息，请参阅 [Installation of System Center Configuration Manager CB and LTSB fails on Windows Server 2008](https://support.microsoft.com/help/4015095)（在 Windows Server 2008 上安装 System Center Configuration Manager CB 和 LTSB 失败）。
+*备注 1*：除分发点和拉取分发点外，站点服务器或站点系统角色均不支持此操作系统。 你可以继续使用操作系统作为分发点，直到此支持被宣布弃用或者此操作系统的扩展支持期到期为止。 有关详细信息，请参阅 [Installation of System Center Configuration Manager CB and LTSB fails on Windows Server 2008](https://support.microsoft.com/help/4015095)（在 Windows Server 2008 上安装 System Center Configuration Manager CB 和 LTSB 失败）。
 
 ## <a name="client-management"></a>客户端管理
 以下各节介绍可以使用 LTSB 管理的客户端操作系统。 LTSB 不支持新增操作系统作为支持的客户端。
@@ -70,13 +71,13 @@ LTSB 支持使用以下 Windows 计算机操作系统作为站点系统。  每�
 - Windows Server 2012 (x64)：标准版、数据中心版（注释 1）
 - Windows Storage Server 2012 R2 (x64)
 - Windows Storage Server 2012 (x64)
-- Windows Server 2008 R2 SP1 (x64)：标准版、企业版、数据中心版（注释 1）
-- Windows Storage Server 2008 R2（x86、x64）：工作组、标准版、企业版
-- Windows Server 2008 SP2（x86、x64）：标准版、企业版、数据中心版（注释 1）
+- 带 SP1 的 Windows Server 2008 R2 (x64)：标准版、企业版、数据中心版（注释 1）
+- Windows Storage Server 2008 R2（x86、x64）：工作组版、标准版、企业版
+- 带 SP2 的 Windows Server 2008（x86、x64）：标准版、企业版、数据中心版（注释 1）
 - Windows 10 企业版 2015 长期服务（x86、x64）
 - Windows 10 企业版 2016 长期服务（x86、x64）
-- Windows 8.1（x86、x64）：专业版、企业版
-- Windows 7 SP1（x86、x64）：专业版、企业版、旗舰版
+- Windows 8.1（x86 和 x64）：Professional、Enterprise
+- 带 SP1 的 Windows 7（x86 和 x64）：专业版、企业版、旗舰版
 - Windows Server 2012 R2 的服务器核心安装 (x64)（注释 2）
 - Windows Server 2012 的服务器核心安装 (x64)（注释 2）
 - Windows Server 2008 R2 SP1 的服务器核心安装 (x64)
@@ -289,12 +290,12 @@ LTSB 支持以下操作系统运行 Configuration Manager 控制台。 托管控
 - Windows Server 2016
 - Windows Server 2012 R2 (x64)：标准版、数据中心版
 - Windows Server 2012 (x64)：标准版、数据中心版
-- Windows Server 2008 R2 SP1 (x64)：标准版、企业版、数据中心版
-- Windows Server 2008 SP2（x86、x64）：标准版、企业版、数据中心版
+- 带 SP1 的 Windows Server 2008 R2 (x64)：Standard、Enterprise、Datacenter
+- 带 SP2 的 Windows Server 2008（x86、x64）：Standard、Enterprise、Datacenter
 - Windows 10 企业版 2016 长期服务（x86、x64）
 - Windows 10 企业版 2015 长期服务（x86、x64）
-- Windows 8.1（x86、x64）：专业版、企业版
-- Windows 7 SP1（x86、x64）：专业版、企业版、旗舰版
+- Windows 8.1（x86 和 x64）：Professional、Enterprise
+- 带 SP1 的 Windows 7（x86 和 x64）：专业版、企业版、旗舰版
 
 
 ## <a name="sql-server-versions-supported-for-the-site-database-and-reporting-point"></a>站点数据库和报表点支持的 SQL Server 版本
@@ -302,11 +303,11 @@ LTSB 支持以下版本的 SQL Server，以托管站点数据库和报表点。 
 
 **支持的版本：**
 
-- SQL Server 2016：标准版、企业版
-- SQL Server 2014 SP2：标准版、企业版
-- SQL Server 2014 SP1：标准版、企业版
-- SQL Server 2012 SP3：标准版、企业版
-- SQL Server 2008 R2 SP3：标准版、企业版、数据中心版
+- SQL Server 2016：Standard、Enterprise
+- SQL Server 2014 SP2：Standard、Enterprise
+- SQL Server 2014 SP1：Standard、Enterprise
+- SQL Server 2012 SP3：Standard、Enterprise
+- SQL Server 2008 R2 SP3：Standard、Enterprise、Datacenter
 - SQL Server 2016 Express
 - SQL Server 2014 Express SP2
 - SQL Server 2014 Express SP1

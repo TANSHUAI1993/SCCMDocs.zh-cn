@@ -9,16 +9,17 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 7304730b-b517-4c76-aadd-4cbd157dc971
-ms.openlocfilehash: d07c30d6a1e4fd1314b6e69ac157577ae0163696
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 013d00fd7c207df45b0f6b7910283c3e8b60b44d
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32333733"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56137164"
 ---
 # <a name="security-and-privacy-for-the-cloud-management-gateway"></a>云管理网关的安全和隐私
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 本文包含 Configuration Manager 云管理网关 (CMG) 的安全和隐私信息。 有关详细信息，请参阅[规划云管理网关](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway)。
 
@@ -67,8 +68,7 @@ URL 对每个管理点都是唯一的。 然后，Configuration Manager 客户�
 <a name="bkmk_ctl"></a>
 
 ### <a name="review-entries-in-the-sites-certificate-trust-list"></a>查看站点的证书信任列表中的条目
-<!--503739-->
-每个 Configuration Manager 站点都包含一个受信任根证书颁发机构列表，即证书信任列表 (CTL)。 通过转到“管理”工作区、展开“站点配置”并选择“站点”，可查看和修改该列表。 选择一个站点，然后单击功能区中的“属性”。 切换到“客户端计算机通信”选项卡，然后单击“受信任的根证书颁发机构”下的“设置”。
+<!--503739--> 每个 Configuration Manager 站点都包含一个受信任根证书颁发机构列表，即证书信任列表 (CTL)。 通过转到“管理”工作区、展开“站点配置”并选择“站点”，可查看和修改该列表。 选择一个站点，然后单击功能区中的“属性”。 切换到“客户端计算机通信”选项卡，然后单击“受信任的根证书颁发机构”下的“设置”。
  
 使用 PKI 客户端身份验证，为具有 CMG 的站点使用限制性更强的 CTL。 否则，客户端注册会自动接受这类客户端：使用由管理点上已存在的任何受信任根颁发的客户端身份验证证书的客户端。
 

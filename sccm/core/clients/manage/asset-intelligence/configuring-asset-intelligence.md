@@ -10,16 +10,17 @@ ms.assetid: 08e0382d-de05-4a76-ba5c-7223173f7066
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 182006f0e4fcaf2304570ef4110527a61180c290
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 3a96f9292256227da6a216a913c7a0be1be5c60d
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32341009"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56156706"
 ---
 # <a name="configure-asset-intelligence-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中配置资产智能
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 资产智能列出清单，并管理软件许可证使用情况。   
 
@@ -77,12 +78,12 @@ ms.locfileid: "32341009"
 
 3.  将资产智能同步点站点系统角色添加到新的或现有的站点系统服务器：  
 
-    -  对于**新站点系统服务器**：在“主页”选项卡上的“创建”组中，选择“创建站点系统服务器”以启动向导。   
+    -  对于“新站点系统服务器”：在“主页”选项卡上的“创建”组中，选择“创建站点系统服务器”以启动向导。   
 
         > [!NOTE]  
         >  默认情况下，当 Configuration Manager 安装站点系统角色时，安装文件将安装在具有最多可用空闲硬盘空间的第一个可用 NTFS 格式的硬盘驱动器上。 要防止 Configuration Manager 安装在特定驱动器上，请在安装站点系统服务器之前创建一个名为 No_sms_on_drive.sms 的空文件，并将该文件复制到驱动器的根文件夹。  
 
-    -  对于**现有站点系统服务器**：选择要在其中安装资产智能同步点站点系统角色的服务器。 选择服务器时，会在详细信息窗格中显示服务器上已经安装的站点系统角色的列表。  
+    -  对于“现有站点系统服务器”：选择要在其中安装资产智能同步点站点系统角色的服务器。 选择服务器时，会在详细信息窗格中显示服务器上已经安装的站点系统角色的列表。  
 
          在“主页”选项卡上的“服务器”组中，选择“添加站点系统角色”以启动向导。  
 
@@ -152,7 +153,7 @@ ms.locfileid: "32341009"
  还可以使用以逗号分隔 (.csv) 文件格式手动创建的许可证导入文件将常规许可证声明导入资产智能目录中。  
 
 > [!NOTE]  
->  只有当“名称” 、“发布者” 、“版本” 和“有效数量”  字段需要包含数据时，才必须在许可证导入文件的首行输入所有字段。 所有日期字段都应采用以下格式显示：月/日/年，例如 08/04/2008。  
+>  只有当“名称” 、“发布者” 、“版本” 和“有效数量”  字段需要包含数据时，才必须在许可证导入文件的首行输入所有字段。 所有日期字段应以下列格式显示：年/月/日，例如 2008/08/04。  
 
 资产智能使用产品名称和产品版本（而不是发布者名称）对常规许可证声明中指定的产品进行匹配。 你必须在常规许可证声明中使用与站点数据库中存储的产品名称完全匹配的产品名称。 资产智能采用常规许可证声明中提供的“有效数量”数字，将该数字与 Configuration Manager 清单中找到的已安装产品数进行比较。  
 
@@ -163,9 +164,9 @@ ms.locfileid: "32341009"
 
 |常规许可证声明条目|匹配的站点数据库条目|  
 |-------------------------------------|------------------------------------|  
-|名称：“MySoftware”，ProductVersion0：“2”|ProductName0：“Mysoftware”，ProductVersion0：“2.01.1234”<br /><br /> ProductName0：“MySoftware”，ProductVersion0：“2.02.5678”<br /><br /> ProductName0：“MySoftware”，ProductVersion0：“2.05.1234”<br /><br /> ProductName0：“MySoftware”，ProductVersion0：“2.05.5678”<br /><br /> ProductName0：“MySoftware”，ProductVersion0：“2.05.3579.000”<br /><br /> ProductName0：“MySoftware”，ProductVersion0：“2.10.1234”|  
-|Name：“MySoftware”，Version“2.05”|ProductName0：“MySoftware”，ProductVersion0：“2.05.1234”<br /><br /> ProductName0：“MySoftware”，ProductVersion0：“2.05.5678”<br /><br /> ProductName0：“MySoftware”，ProductVersion0：“2.05.3579.000”|  
-|名称：“Mysoftware”，Version“2”<br /><br /> 名称：“Mysoftware”，Version“2.05”|导入过程中出错。 当多个条目与相同产品版本匹配时，导入失败。|  
+|名称："MySoftware", ProductVersion0:"2"|ProductName0:"Mysoftware", ProductVersion0:"2.01.1234"<br /><br /> ProductName0:"Mysoftware", ProductVersion0:"2.02.5678"<br /><br /> ProductName0:"Mysoftware", ProductVersion0:"2.05.1234"<br /><br /> ProductName0:"Mysoftware", ProductVersion0:"2.05.5678"<br /><br /> ProductName0:"Mysoftware", ProductVersion0:"2.05.3579.000"<br /><br /> ProductName0:"Mysoftware", ProductVersion0:"2.10.1234"|  
+|名称："MySoftware", Version "2.05"|ProductName0:"Mysoftware", ProductVersion0:"2.05.1234"<br /><br /> ProductName0:"Mysoftware", ProductVersion0:"2.05.5678"<br /><br /> ProductName0:"Mysoftware", ProductVersion0:"2.05.3579.000"|  
+|名称："Mysoftware", Version "2"<br /><br /> 名称："Mysoftware", Version "2.05"|导入过程中出错。 当多个条目与相同产品版本匹配时，导入失败。|  
   
 
 ##### <a name="to-create-a-general-license-statement-import-file-by-using-microsoft-excel"></a>若要使用 Microsoft Excel 创建常规许可证声明导入文件  
@@ -200,14 +201,14 @@ ms.locfileid: "32341009"
 |PO 编号|最多 255 个字符|否|订单信息|  
 |经销商名称|最多 255 个字符|否|经销商信息|  
 |购买日期|日期值格式如下：MM/DD/YYYY|否|许可证的购买日期|  
-|购买的支持|位值|否|0 或 1：如果“是”，则输入 0；如果为“否”，则输入 1|  
+|购买的支持|位值|否|0 或 1：如果为“是”，输入 0；如果为“否”，输入 1|  
 |支持到期日期|日期值格式如下：MM/DD/YYYY|否|购买的支持的结束日期|  
 |注释|最多 255 个字符|否|可选备注|  
 
 ###  <a name="BKMK_ConfigureMaintenanceTasks"></a> Configure Asset Intelligence maintenance tasks  
  以下维护任务可用于资产智能：  
 
--   **将应用程序标题与清单信息进行核对**：检查软件清单中报告的软件标题是否与资产智能目录中的软件标题一致。 默认情况下，此任务处于启用状态并计划在星期六凌晨 12:00 之后 到凌晨 5:00 之前运行。 此维护任务只能在 Configuration Manager 层次结构中的顶层站点上使用。  
+-   **检查应用程序标题与清单信息**：检查软件清单中报告的软件标题是否与资产智能目录中的软件标题一致。 默认情况下，此任务处于启用状态并计划在星期六凌晨 12:00 之后 到凌晨 5:00 之前运行。 此维护任务只能在 Configuration Manager 层次结构中的顶层站点上使用。  
 
 -   **汇总已安装软件的数据**：提供“资产和符合性”工作区中“资产智能”节点下面的“已列出清单的软件”节点中显示的信息。 该任务运行时，Configuration Manager 会收集主站点上所有已列出清单的软件标题的计数。 默认情况下，此任务处于启用状态并计划在每天凌晨 12:00 之后 到凌晨 5:00 之前运行。 此维护任务只能在主站点上使用。  
 

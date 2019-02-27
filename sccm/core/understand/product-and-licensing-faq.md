@@ -10,16 +10,17 @@ ms.assetid: ee8d611f-aa0c-4efd-b0ad-dbd14d0a0623
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 9e58e11bec9441f73bff021c8a6a24d150777cbe
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 57770c35b3a824aa285185e3031ed2fc9b9dd82d
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385535"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56135437"
 ---
 # <a name="frequently-asked-questions-for-configuration-manager-branches-and-licensing"></a>Configuration Manager 分支和许可的常见问题解答
 
- *适用范围：System Center Configuration Manager (Current Branch)、System Center Configuration Manager (Long-Term Servicing Branch)*
+ 适用范围：System Center Configuration Manager (Current Branch)、System Center Configuration Manager (Long-Term Servicing Branch)
 
 ## <a name="summary"></a>摘要
 此常见问题解答涉及通过 Microsoft 批量许可计划提供的 System Center Configuration Manager Current Branch 和 Long-Term Servicing Branch (LTSB) 版本的常见许可问题。 本文仅供参考。 它不会取代或替换任何涉及 System Center Configuration Manager 许可的文档。 有关详细信息，请参阅 [System Center 2016](https://www.microsoft.com/en-us/licensing/product-licensing/system-center-2016.aspx)<!-- this link doesn't work without some language code --> 的产品许可和[产品条款](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53)。 产品术语描述批量许可中所有 Microsoft 产品的使用条款。
@@ -78,9 +79,7 @@ EMS 授予使用 System Center Configuration Manager（Current Branch 和 Long-T
 否。 获取使用 System Center Configuration Manager 的权限的唯一方法是获取具有 SA 的许可证或通过等效订阅。 开发人员计划（如 MSDN）中提供的 System Center Configuration Manager 用于开发和测试目的，但不用作生产用途。
 
 
-### 
-  <a name="bkmk_update-rights">
-  </a>我发现我的控制台中提供 System Center Configuration Manager 的更新，如版本 1610。 我是否有权安装它？   
+### <a name="bkmk_update-rights"></a>我发现我的控制台中提供 System Center Configuration Manager 的更新，如版本 1610。 我是否有权安装它？   
 如果你拥有可用 *SA*，则有权安装它。 如果没有可用 SA，则必须卸载 Current Branch，然后安装 System Center Configuration Manager 的 LTSB。 LTSB 不会接收 System Center Configuration Manager 增量版本的更新，但会接收基于支持生命周期的安全更新。
 
 

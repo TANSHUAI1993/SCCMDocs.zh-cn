@@ -10,16 +10,17 @@ ms.assetid: 1401a35e-4312-4d3b-8ceb-0abbb10d4f05
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c314cba909929ee49355eab59dfc813aab7e393e
-ms.sourcegitcommit: a849dab9333ebac799812624d6155f2a96b523ca
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 6235f3f58d8688d9ceee11e1b4be05a2df21a509
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42584511"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56141113"
 ---
 # <a name="how-to-create-collections-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中创建集合
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 集合是用户组或设备组。 可使用集合执行任务，包括应用程序管理、部署符合性设置或安装软件更新。 还可以使用集合来管理客户端设置的组，或将它们与基于角色的管理结合使用来指定管理用户可以访问的资源。 Configuration Manager 包含几个内置集合。 有关详细信息，请参阅 [System Center Configuration Manager 中的集合简介](../../../../core/clients/manage/collections/introduction-to-collections.md)。  
 
@@ -62,7 +63,7 @@ ms.locfileid: "42584511"
 
 -   **排除未安装 Configuration Manager 客户端的资源** - 这些资源不会显示在搜索结果中。  
 
--   **值** ：输入你要在所选属性名称搜索的值。 可以使用百分比字符 **%** 作为通配符。 例如，若要搜索 NetBIOS 名称以“M”开头的计算机，请在此字段中输入“M%”。  
+-   **值：** 输入要搜索所选属性名称的值。 可以使用百分比字符 **%** 作为通配符。 例如，若要搜索 NetBIOS 名称以“M”开头的计算机，请在此字段中输入“M%”。  
 
 2.  在“选择资源”页上，在“资源”列表中选择要添加到集合的资源，然后选择“下一步”。  
 
@@ -71,7 +72,7 @@ ms.locfileid: "42584511"
 
 1.  在“查询规则属性”  对话框中，指定以下信息：  
 
--   “名称”：指定唯一名称。  
+-   **名称**：指定唯一名称。  
 
 -   **导入查询语句** - 打开“浏览查询”对话框，在其中可以选择要用作集合的查询规则的 [Configuration Manager 查询](../../../../core/servers/manage/create-queries.md)。   
 

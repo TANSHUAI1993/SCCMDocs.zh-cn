@@ -10,16 +10,17 @@ ms.assetid: 552e7e3d-e584-4a7c-9155-0f796a14b678
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: d1aaf6db583d9749dda3be14cfd06acbff19b093
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 4d58f8566f80efa2700f5947f4144623b10eb6ad
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456084"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56140586"
 ---
 # <a name="configure-security-in-configuration-manager"></a>配置 Configuration Manager 中的安全性
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 使用本主题中的信息来帮助为 Configuration Manager 配置以下安全相关选项。 它涵盖以下安全选项：
 - [客户端计算机通信](#BKMK_ConfigureClientPKI)，用于客户端 PKI 证书  
@@ -49,7 +50,7 @@ ms.locfileid: "52456084"
 
     - **HTTPS 或 HTTP**：不要求客户端使用 PKI 证书。  
 
-    - **为 HTTP 站点系统使用 Configuration Manager 生成的证书**：有关此设置的详细信息，请参阅[增强的 HTTP](/sccm/core/plan-design/hierarchy/enhanced-http)。  
+    - **将 Configuration Manager 生成的证书用于 HTTP 站点系统**：有关此设置的详细信息，请参阅[增强型 HTTP](/sccm/core/plan-design/hierarchy/enhanced-http)。  
 
 4.  选择客户端计算机的设置。  
 
@@ -59,7 +60,7 @@ ms.locfileid: "52456084"
 
     有关客户端证书选择方法的详细信息，请参阅[规划 PKI 客户端证书选择](/sccm/core/plan-design/security/plan-for-security#BKMK_PlanningForClientCertificateSelection)。  
 
-    - **客户端检查站点系统的证书吊销列表(CRL)**：为客户端启用此设置以检查组织的 CRL 是否已吊销证书。  
+    - **客户端检查站点系统的证书吊销列表(CRL)**：为客户端启用此设置，以便检查组织的 CRL 中是否存在吊销的证书。  
 
     有关客户端 CRL 检查的详细信息，请参阅[规划 PKI 证书吊销](/sccm/core/plan-design/security/plan-for-security#BKMK_PlanningForCRLs)。  
 
@@ -86,16 +87,16 @@ ms.locfileid: "52456084"
 
 3.  配置客户端的签名和加密选项以与站点通信。  
 
-    - **需要签名**：客户端在发送到管理点之前签署数据。  
+    - **需要签名**：客户端先对数据签名，再发送到管理点。  
 
-    - **需要 SHA-256**：客户端在签名数据时使用 SHA-256 算法。  
+    - **需要 SHA-256**：客户端在对数据签名时使用 SHA-256 算法。  
 
     > [!WARNING]  
     >  如果没有首先确认所有客户端都支持此哈希算法，请不要“需要 SHA-256”。 这些客户端包括将来可能分配给该站点的客户端。  
     >   
     >  如果选择此选项，并且具有自签名证书的客户端不支持 SHA-256，则 Configuration Manager 将会拒绝这些客户端。 SMS_MP_CONTROL_MANAGER 组件记录消息 ID 5443。  
 
-    - **使用加密**：客户端在发送到管理点之前加密客户端清单数据和状态消息。 它们使用 3DES 算法。  
+    - **使用加密**：客户端先加密客户端清单数据和状态消息，再将其发送到管理点。 它们使用 3DES 算法。  
 
 为层次结构中的所有主站点重复此过程。  
 

@@ -10,16 +10,17 @@ ms.assetid: 24fca61e-9cdb-447a-ad7a-f4d2e4fd6704
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 07eb6ec88a5f9b9f7985c317813b2ef7dd5534ff
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: fe4e1c83f4079e0df959563ac8209a98983b8d90
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344698"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56132449"
 ---
 # <a name="use-cloud-services-with-system-center-configuration-manager"></a>将云服务用于 System Center Configuration Manager
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 System Center Configuration Manager 支持多个基于云的选项。 这些选项能补充本地基础结构，还有助于解决以下业务问题，如：  
 

@@ -10,16 +10,17 @@ ms.assetid: 375912f5-436d-4315-bdbe-d77afee6c9f3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e4f39d06072222c14627481f21139f06ee6656c4
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: fc4958e83c73da91aa31fb8ac0e1b84375218ac9
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39384966"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56128198"
 ---
 # <a name="how-to-use-resource-explorer-to-view-hardware-inventory-in-configuration-manager"></a>如何使用 Configuration Manager 中的资源浏览器来查看硬件清单
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 使用 Configuration Manager 中的资源浏览器查看有关硬件清单的信息。 该站点从层次结构中的客户端收集此信息。  
 
@@ -32,7 +33,7 @@ ms.locfileid: "39384966"
 
 资源浏览器具有与硬件清单相关的以下部分：  
 
-- **硬件**显示从指定客户端设备收集的最新硬件清单。  
+- **硬件**：显示从指定客户端设备收集的最新硬件清单。  
 
     - “工作站状态”节点显示设备中最新硬件清单的时间和日期。  
 

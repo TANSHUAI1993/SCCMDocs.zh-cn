@@ -10,16 +10,17 @@ ms.assetid: bce9e299-7b3a-4f51-8863-a322877daa2c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: c6dd50d137cdc570b7e37cd96fb310c85ba60840
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 52c13109710fc35dcd2853f76188ac42269a8058
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52458034"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56120055"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1810"></a>1810 版的诊断使用情况数据收集的级别
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 Configuration Manager 版本 1810 收集三个级别的诊断和使用情况数据：“基本”、“增强”和“完全”。 默认情况下，此功能设置为增强级别。 以下部分提供有关每个级别所收集数据的其他详细信息。
 
@@ -42,7 +43,7 @@ Configuration Manager 版本 1810 收集三个级别的诊断和使用情况数�
 
 对于 Configuration Manager 1810 版，此级别包括以下数据：
 
-- 有关 Configuration Manager 控制台连接的统计信息：OS 版本、语言、SKU 和体系结构、系统内存、逻辑处理器计数、连接站点 ID、已安装的 .NET 版本和控制台语言包
+- 有关 Configuration Manager 控制台连接的统计信息（OS 版本、语言、SKU 和体系结构、系统内存、逻辑处理器计数、连接站点 ID、已安装的 .NET 版本和控制台语言包）
 
 - 基本应用程序和部署类型计数：应用总数、包含多个部署类型的应用总数、包含依赖项的应用总数、被取代的应用总数和使用中的部署技术计数
 

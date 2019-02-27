@@ -10,12 +10,13 @@ ms.assetid: 8cdb22a6-72d7-41f5-9bed-c098b1bcf675
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ae137cae29d49413ca11668ff0cc744168e91e21
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: d0a32357001f37f537f13fe85e71a41f9cb658ac
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39383671"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56122434"
 ---
 # <a name="manage-apps-from-the-microsoft-store-for-business-with-configuration-manager"></a>使用 Configuration Manager 来管理适用于企业的 Microsoft Store 中的应用
 
@@ -26,9 +27,9 @@ ms.locfileid: "39383671"
 
 适用于企业的 Microsoft Store 支持两种类型的应用：
 
-- 联机：此许可证类型要求用户和设备连接到应用商店，以此获取应用及其许可证。 Windows 10 设备必须已加入域的 Azure Active Directory (Azure AD)。  
+- **联机**：此许可类型要求用户和设备连接到 Microsoft Store，以获取应用及其许可。 Windows 10 设备必须已加入域的 Azure Active Directory (Azure AD)。  
 
-- 脱机：此类型允许缓存应用和许可证，以便直接在本地网络中部署。 设备无需连接到适用于企业的 Microsoft Store 或 Internet。
+- **脱机**：使用此类型的应用能够缓存应用和许可证，以便直接在本地网络中部署。 设备无需连接到适用于企业的 Microsoft Store 或 Internet。
 
 [了解更多](https://docs.microsoft.com/microsoft-store/microsoft-store-for-business-overview)适用于企业的 Microsoft Store 的相关信息。
 
@@ -82,7 +83,7 @@ Configuration Manager 支持在具有 Configuration Manager 客户端的 Windows
 
 - 用户必须从应用商店完成安装  
 
-- 在 Configuration Manager 控制台中，应用部署状态会报告失败，并显示以下错误："Microsoft Store 应用已在客户端电脑上打开，正在等待用户完成安装。"  
+- 在 Configuration Manager 控制台中，应用部署状态报告失败，并显示以下错误：“在客户端电脑上打开了 Microsoft Store 应用，正在等待用户完成安装。”  
 
 在下一步的应用程序评估周期中：  
 
@@ -124,11 +125,11 @@ Configuration Manager 支持在具有 Configuration Manager 客户端的 Windows
 
 在 Azure 服务向导的“配置”页面上，指定以下信息：  
 
-- 适用于企业的 Microsoft Store 应用内容存储的路径：指定共享网络路径，包括文件夹。 例如，`\\server\share\folder`。 当站点服务器与应用商店同步时，它在此位置缓存内容。 在 Configuration Manager 中创建应用程序时，站点服务器会将应用内容从本地缓存复制到站点的内容库中。  
+- **适用于企业的 Microsoft Store 应用内容存储的路径**：指定共享网络路径，包括文件夹。 例如，`\\server\share\folder`。 当站点服务器与应用商店同步时，它在此位置缓存内容。 在 Configuration Manager 中创建应用程序时，站点服务器会将应用内容从本地缓存复制到站点的内容库中。  
 
-- 所选语言：从应用商店中选择要同步的语言，并在软件中心中向用户显示。 例如，如果用户将 Windows 配置为德语，那么软件中心会在应用商店中显示德语字符串。 此行为要求语言同步并且针对特定应用程序存在。    
+- **所选语言**：从 Microsoft Store 中选择要同步的语言，并在软件中心中向用户显示。 例如，如果用户将 Windows 配置为德语，那么软件中心会在应用商店中显示德语字符串。 此行为要求语言同步并且针对特定应用程序存在。    
 
-- 默认语言：如果用户的语言不可用，请选择要使用的默认语言。  
+- **默认语言**：如果用户的语言不可用，请选择要使用的默认语言。  
 
 
 

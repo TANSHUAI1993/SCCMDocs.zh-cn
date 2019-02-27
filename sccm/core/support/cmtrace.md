@@ -10,16 +10,17 @@ ms.assetid: 6a4a3290-5228-4871-918a-554aa1c20834
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 3ad96cedf1170f8563fdafe3922f6ad2e7c67b5a
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 87552016d1cd17e79abf01a9de9109195d3d2a70
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39386008"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56125289"
 ---
 # <a name="cmtrace"></a>CMTrace
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 CMTrace 是一个 [Configuration Manager 工具](/sccm/core/support/tools)。 可通过它查看和监视日志文件，包括以下类型：  
 
@@ -117,10 +118,10 @@ CMTrace 是一个 [Configuration Manager 工具](/sccm/core/support/tools)。 �
 - [显示/隐藏详细信息](#show-hide-details)
 - [显示/隐藏信息窗格](#show-hide-info-pane)
 
-#### <a name="find"></a>找
+#### <a name="find"></a>查找
 在打开的日志文件中搜索指定的文本字符串。  
 
-#### <a name="find-next"></a>找下一个
+#### <a name="find-next"></a>查找下一个
 如先前在“查找”对话框中指定的那样，查找下一个匹配字符串。  
 
 #### <a name="copy-to-clipboard"></a>复制到剪贴板
@@ -146,7 +147,7 @@ CMTrace 是一个 [Configuration Manager 工具](/sccm/core/support/tools)。 �
 
 
 #### <a name="error-lookup"></a>错误查找
-键入或粘贴十进制或十六进制格式的错误代码以显示说明。 可能的错误来源包括：Windows、WMI 或 Winhttp。
+键入或粘贴十进制或十六进制格式的错误代码以显示说明。 可能的错误源包括：Windows、WMI 或 Winhttp。
 
 #### <a name="pause"></a>暂停
 挂起或重启日志监视。 以下用例是导致使用此操作的一些可能的原因：  

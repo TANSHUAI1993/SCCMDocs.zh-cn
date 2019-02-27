@@ -10,16 +10,17 @@ ms.assetid: 07ce872e-1558-42ad-b5ad-582c5b1bdbb4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: eb7e4a6645514cedee382932adff76da14d0ba16
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 74b8f7b099e906856300f5cc76b807daf894e060
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385518"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56120072"
 ---
 # <a name="design-a-hierarchy-of-sites-for-configuration-manager"></a>为 Configuration Manager 设计站点层次结构
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 在安装新的 Configuration Manager 层次结构的第一个站点之前，最好先了解：  
 
@@ -53,7 +54,7 @@ ms.locfileid: "39385518"
 
 层次结构拓扑的范围：  
 
-- 最简单：单一独立主站点  
+- 最简单：一个独立主站点  
 
 - 最复杂：一组连接的主站点和辅助站点，在层次结构的顶层站点上具有管理中心站点  
 

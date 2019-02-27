@@ -10,12 +10,13 @@ ms.assetid: 6a279624-ffc9-41aa-8132-df1809708dd5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ffcb60ff355a67304b057ef2d1b632fb9e0c21dc
-ms.sourcegitcommit: 5e7c4d36f4cdb3390ad3b381d31a3e1e4bf3c6e1
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 6bea2d7fc41bdec96fbdfe3508d13eea0a59d514
+ms.sourcegitcommit: ceec0e20bf801071f2a05233f984cf17acc3fd29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "55986529"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265030"
 ---
 # <a name="list-of-prerequisite-checks-for-configuration-manager"></a>Configuration Manager 先决条件检查列表
 
@@ -554,7 +555,7 @@ SELECT * FROM vLogs WHERE ProcedureName = 'spDiagChangeTracking'
 <!--SCCMDocs-pr issue 3094-->
 适用范围：管理中心站点、主站点、辅助站点
 
-在安装新站点时，Configuration Manager 会自动将 SQL Native Client 作为可再发行组件安装。 Configuration Manager 不支持升级 SQL Native Client。 此检查可确保站点具有受支持的 SQL Native Client 版本。 从版本 1810 开始，最低版本是 SQL 2012 SP4 (`11.*.7001.0`)。 
+在安装新站点时，Configuration Manager 会自动将 SQL Server Native Client 作为可再发行组件安装。 安装站点后，Configuration Manager 不会升级 SQL Server Native Client。 此检查可确保站点具有受支持的 SQL Native Client 版本。 从版本 1810 开始，最低版本是 SQL 2012 SP4 (`11.*.7001.0`)。 
 
 此 SQL Native Client 版本支持 TLS 1.2。 有关详细信息，请参阅下列文章：
 - [支持 Microsoft SQL Server 的 TLS 1.2](https://support.microsoft.com/help/3135244/tls-1-2-support-for-microsoft-sql-server)  

@@ -10,16 +10,17 @@ ms.assetid: 3a832943-580a-4a40-b454-961d0854ac2b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1acc1bd6a6ccbd010308d026933a371f9e8227d8
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: dd0caf8db2c5d0c29c43f3be1e20a0b8adc01fce
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456543"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56125266"
 ---
 # <a name="updates-and-servicing-for-configuration-manager"></a>Configuration Manager 的更新和服务
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 Configuration Manager 使用称为“更新和服务”的控制台中服务方法。 通过此控制台中方法，可轻松找到并安装 Configuration Manager 基础结构的建议更新。 控制台内服务由带外更新（如修补程序）补充。 带外更新适用于需要解决其环境特定问题的客户。  
 
@@ -69,7 +70,7 @@ Configuration Manager 的某些更新可用作现有基础结构的控制台中�
 <a name="bkmk_note1"></a> 
 
 > [!Note]  
-> <sup>注释 1：</sup>在[批量许可服务中心](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC)，1802 基线介质在以下版本中提供：
+> <sup>备注 1：</sup>在[批量许可服务中心](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx) (VLSC)，1802 基线介质在以下版本中提供：
 > - System Center Config Mgr (Current Branch)
 > - System Center 2016 Datacenter
 > - System Center 2016 Standard  

@@ -10,16 +10,17 @@ ms.assetid: b7332ed3-8003-454b-bb12-1fdf8721425c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 01112dac89ba0fe9e18dabe186353506d9476213
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: cb208bdb360f726a59585d567c239074717acf66
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456764"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56120004"
 ---
 # <a name="list-of-reports-in-configuration-manager"></a>Configuration Manager 中的报表列表
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 Configuration Manager 提供许多内置报表，涵盖你可能想要完成的许多报告任务。 你也可以在这些报表中使用 SQL 语句，以帮助编制自己的报表。   
 
@@ -619,7 +620,7 @@ Configuration Manager 包括以下报表。 报表分为各种类别。
 |**统计特定产品的清单产品和版本**|显示指定产品的清单版本以及每个产品所安装到的计算机数量的列表。|  
 |**统计使用“添加或删除程序”注册的软件的所有实例**|显示使用指定集合中计算机上的“添加或删除程序”或“程序和功能”安装并注册的所有软件实例的摘要。|  
 |**统计使用“添加或删除程序”注册的特定软件的实例**|显示在“添加或删除程序”或“程序和功能”中安装并注册的指定软件包的实例计数。|  
-|**默认浏览器计数**|显示将特定 Web 浏览器作为 Windows 默认浏览器的客户端计数。 <br>对于常见 BrowserProgIDs，请使用以下引用：<br> - AppXq0fevzme2pys62n3e0fbqa7peapykr8v: Microsoft Edge<br> - IE.HTTP: Microsoft Internet Explorer<br> - ChromeHTML: Google Chrome<br> - OperaStable: Opera Software<br> - FirefoxURL-308046B0AF4A39CB: Mozilla Firefox<br> - 未知：客户端 OS 不支持查询，查询尚未运行，或者用户尚未登录|
+|**默认浏览器计数**|显示将特定 Web 浏览器作为 Windows 默认浏览器的客户端计数。 <br>对于常见 BrowserProgIDs，请使用以下引用：<br> - AppXq0fevzme2pys62n3e0fbqa7peapykr8v：Microsoft Edge<br> - IE.HTTP：Microsoft Internet Explorer<br> - ChromeHTML：Google Chrome<br> - OperaStable：Opera Software<br> - FirefoxURL-308046B0AF4A39CB：Mozilla Firefox<br> - 未知：客户端 OS 不支持查询，查询尚未运行，或者用户尚未登录|
 |**指定 Windows 应用的安装**|此报表列出具有指定 Windows 应用的所有计算机。|  
 |**特定计算机上的产品**|显示指定计算机上清单软件产品及其制造商的摘要。|  
 |**在特定计算机上的“添加或删除程序”中注册的软件**|显示指定计算机上安装的并在“添加/删除程序”或“程序和功能”中注册的软件的摘要。|  

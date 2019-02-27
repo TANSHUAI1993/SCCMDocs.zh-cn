@@ -10,16 +10,17 @@ ms.assetid: f3058277-c597-4dac-86d1-41b6f7e62b36
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5c90889861db55a27da897e709b16b66edece08a
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 67d2fc976b08e438c6f19a7fecca03761bb099f6
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342420"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56124724"
 ---
 # <a name="use-the-hotfix-installer-to-install-updates-for-system-center-configuration-manager"></a>使用修补程序安装程序来安装 System Center Configuration Manager 的更新
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 System Center Configuration Manager 的某些更新无法从 Microsoft 云服务获取，只能在带外获取。 用于解决特定问题的受限版本修补程序是一个示例。   
 必须安装从 Microsoft 接收的更新（或修补程序），并且该更新的文件名是以 **.exe** 扩展名（而非 **update.exe**）结尾时，可使用该修补程序下载所随附的修补程序安装程序，将更新直接安装到 Configuration Manager 站点服务器。  
@@ -78,7 +79,7 @@ System Center Configuration Manager 的某些更新无法从 Microsoft 云服务
 |&lt;Product version\>-QFE-KB&lt;KB article ID\>-&lt;platform\>-&lt;language\>.exe|这是更新文件。 此文件的命令行由 Updatesetup.exe 进行管理。<br /><br /> 例如：<br />CM1511RTM-QFE-KB123456-X64-ENU.exe|  
 |Updatesetup.exe|此 .msi 包装管理更新捆绑的安装。<br /><br /> 运行更新时，Updatesetup.exe 会检测运行它的计算机的显示语言。 默认情况下，此更新的用户界面是英文。 但是，如果支持显示语言，则会以计算机的本地语言显示用户界面。|  
 |License_&lt;language\>.rtf|如果适用，每个更新都会包含支持语言的一个或多个许可证文件。|  
-|&lt;Product&updatetype>-&lt;product version\>-&lt;KB article ID\>-&lt;platform\>.msp|如果更新适用于 Configuration Manager 控制台或客户端，则更新捆绑包会包括单独的 Windows Installer 修补 (.msp) 文件。<br /><br /> 例如：<br /><br /> **Configuration Manager 控制台更新：** ConfigMgr1511 AdminUI KB1234567 i386.msp<br /><br /> **客户端更新：** ConfigMgr1511-client-KB1234567-i386.msp<br />ConfigMgr1511-client-KB1234567-x64.msp|  
+|&lt;Product&updatetype>-&lt;product version\>-&lt;KB article ID\>-&lt;platform\>.msp|如果更新适用于 Configuration Manager 控制台或客户端，则更新捆绑包会包括单独的 Windows Installer 修补 (.msp) 文件。<br /><br /> 例如：<br /><br /> **Configuration Manager 控制台更新：** ConfigMgr1511-AdminUI-KB1234567-i386.msp<br /><br /> **客户端更新：** ConfigMgr1511-client-KB1234567-i386.msp<br />ConfigMgr1511-client-KB1234567-x64.msp|  
 
  默认情况下，更新捆绑会将其操作记录到站点服务器上的 .log 文件中。 此日志文件与更新捆绑同名，并且会写入到 **%SystemRoot%/Temp** 文件夹中。  
 
@@ -161,10 +162,10 @@ System Center Configuration Manager 的某些更新无法从 Microsoft 云服务
 
 4.  重启在前面的步骤中停止的服务。  
 
-5.  安装更新捆绑包时，会将 **update.sql** 提取到站点服务器上的以下位置：**\\\\&lt;Server Name\>\SMS_&lt;Site Code\>\Hotfix\\&lt;KB Number\>\update.sql**  
+5.  安装更新捆绑时，会将“update.sql”  提取到站点服务器上的以下位置：\\\\&lt;Server Name\>\SMS_&lt;Site Code\>\Hotfix\\&lt;KB Number\>\update.sql  
 
 ####  <a name="bkmk_provider"></a>更新运行 SMS 提供程序的计算机  
- 安装包含 SMS 提供程序的更新的更新捆绑之后，必须将更新部署到运行 SMS 提供程序的每台计算机。 唯一的例外情况是，你安装更新捆绑的站点服务器上以前安装的 SMS 提供程序的实例。 在你安装此更新捆绑时，会更新站点服务器上的 SMS 提供程序的本地实例。  
+ 安装包含 SMS 提供程序的更新的更新捆绑之后，必须将更新部署到运行 SMS 提供程序的每台计算机。 唯一的例外是，你安装此更新捆绑的站点服务器上以前安装的 SMS 提供程序实例。 在你安装此更新捆绑时，会更新站点服务器上的 SMS 提供程序的本地实例。  
 
  如果删除某计算机上的 SMS 提供程序，然后重新安装它，则之后必须在该计算机上重新安装 SMS 提供程序的更新。  
 
@@ -202,7 +203,7 @@ System Center Configuration Manager 的某些更新无法从 Microsoft 云服务
 ###  <a name="BKMK_DeploySCUP"></a>使用 Updates Publisher 2011 安装更新  
  在站点服务器上安装更新捆绑时，安装向导会为 Updates Publisher 创建一个目录文件，用于将更新部署到适用的计算机。 即使选择“使用包和程序来部署此更新” 选项，此向导也会创建该目录。  
 
- Updates Publisher 的目录名为 **SCUPCatalog.cab**，它位于运行更新捆绑包的计算机上的下列位置：**\\\\&lt;ServerName\>\SMS_&lt;SiteCode\>\Hotfix\\&lt;KB Number\>\SCUP\SCUPCatalog.cab**  
+ Updates Publisher 的目录名为“SCUPCatalog.cab”，它位于运行更新捆绑的计算机上的下列位置：\\\\&lt;ServerName\>\SMS_&lt;SiteCode\>\Hotfix\\&lt;KB Number\>\SCUP\SCUPCatalog.cab  
 
 > [!IMPORTANT]  
 >  在创建 SCUPCatalog.cab 时，使用了安装更新捆绑的站点服务器的特定路径，因此，无法在其他站点服务器上使用该文件。  

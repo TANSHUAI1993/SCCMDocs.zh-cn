@@ -10,24 +10,25 @@ ms.assetid: a6f7f6b7-9ef3-4ffa-a3cf-d877ac55983b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ca7dfce7b96747e46247cb290b4fc0d7e0df41ff
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: b100daf91b8bb7c5d4dd5f041c57e7dc9dac390e
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52458029"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56156774"
 ---
 # <a name="customize-support-center"></a>自定义支持中心
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 [支持中心](/sccm/core/support/support-center)工具包括可自定义的配置文件。 默认情况下，安装支持中心时，此文件位于以下路径：`C:\Program Files (x86)\Configuration Manager Support Center\ConfigMgrSupportCenter.exe.config`。 配置文件会更改程序的行为：
 
-  - [自定义数据收集：](#bkmk_datacoll)：编辑数据收集期间包含的注册表项和 WMI 命名空间集  
+  - [自定义数据收集](#bkmk_datacoll)：编辑数据收集期间包含的注册表项和 WMI 命名空间集  
 
   - [自定义日志组](#bkmk_loggroups)：使用正则表达式定义新的日志文件组。 也向日志组添加其他日志文件。  
 
-  - [使用通配符收集其他日志文件](#bkmk_wildcards)：使用通配符搜索功能收集其他日志文件  
+  - [使用通配符收集额外的日志文件](#bkmk_wildcards)：使用通配符搜索收集额外的日志文件  
 
 要进行这些更改，你需要在安装支持中心的客户端上具有本地管理权限。 使用文本编辑器或 XML 编辑器（如 Notepad 或 Visual Studio）进行这些自定义设置。
 

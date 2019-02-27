@@ -10,16 +10,17 @@ ms.assetid: cead6825-6113-4ba5-a381-ac3598dfee86
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 4dd1bf9b4085b6e1591d5841bfc307398505f5d1
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 87819530c5a37885c66611da0ba66c1a8872ac57
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32340771"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56156621"
 ---
 # <a name="hierarchy-maintenance-tool-preinstexe-for-system-center-configuration-manager"></a>System Center Configuration Manager 的层次结构维护工具 (Preinst.exe)
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 层次结构管理器服务正在运行时，层次结构维护工具 (Preinst.exe) 会将命令传递给 System Center Configuration Manager 层次结构管理器。 在安装 Configuration Manager 站点时，会自动安装层次结构维护工具。 Preinst.exe 位于站点服务器上的 \\&lt;*SiteServerName*>\SMS_&lt;*SiteCode*\bin\X64\00000409 共享文件夹中。  
 
@@ -104,7 +105,7 @@ ms.locfileid: "32340771"
 
 1.  登录到子站点，打开命令提示符，然后导航到 **Preinst.exe**的位置。  
 
-2.  键入下列命令以导出子站点的公钥：**Preinst /keyforparent**  
+2.  键入下列命令以导出子站点的公钥：“Preinst /keyforparent”  
 
 3.  /keyforparent 选项会将子站点的公钥放置在系统驱动器根目录下的 **&lt;site code\>.CT4** 文件中。  
 
@@ -114,7 +115,7 @@ ms.locfileid: "32340771"
 
 1.  登录到父站点，打开命令提示符，然后导航到 **Preinst.exe**的位置。  
 
-2.  键入下列命令以导出父站点的公钥：**Preinst /keyforchild**。  
+2.  键入下列命令以导出父站点的公钥：“Preinst /keyforchild”  
 
 3.  /keyforchild 选项会将父站点的公钥放置在系统驱动器根目录下的 **&lt;site code\>.CT5** 文件中。  
 

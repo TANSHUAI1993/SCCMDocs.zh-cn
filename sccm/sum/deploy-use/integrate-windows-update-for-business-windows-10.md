@@ -10,16 +10,17 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
-ms.openlocfilehash: ce3937b630eea38af34f1abd7c7348ebf2f8dfdb
-ms.sourcegitcommit: 316899b08f2ef372993909e08e069f7edfed1d33
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 456e4537e7c397063c50422e8c408dc5d688af04
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44111087"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56121567"
 ---
 # <a name="integration-with-windows-update-for-business-in-windows-10"></a>在 Windows 10 中与 Windows Update for Business 集成
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 当基于 Windows 10 的设备直接连接到 Windows 更新 (WU) 服务时，适用于企业的 Windows 更新 (WUfB) 能够让组织中的这些设备始终具有最新的安全防御和 Windows 功能。 Configuration Manager 能够区分使用 WUfB 和 WSUS 来获取软件更新的 Windows 10 计算机。  
 
@@ -80,12 +81,12 @@ ms.locfileid: "44111087"
 2. 在“主页”选项卡的“创建”组中，选择“创建 Windows Update for Business 策略”，以打开“创建 Windows Update for Business 策略向导”。
 3. 在“常规”页上，提供策略的名称和描述。
 4. 在“延迟策略”页上，配置是否要延迟或暂停功能更新。 功能更新通常是针对 Windows 的新增功能。 在配置“分支就绪级别”设置后，你可以根据其可用性定义是否要延迟从 Microsoft 接收功能更新以及延迟时长。
-    - 分支就绪级别：设置设备将为其接收 Windows 更新的分支（Current Branch 或 Current Branch for Business）。
-    - 延迟期(天)：指定功能更新将被延迟的天数。 可以自更新发布之日起，在 365 天内延迟接收这些功能更新。
-    - 暂停功能更新启动：选择是否要暂停设备接收功能更新，暂停时间为自暂停更新之日起的 60 天内。 在设置的最大天数过后，暂停功能将自动过期，并且设备将扫描 Windows 更新以获取适用的更新。 在此扫描之后，你可以再次暂停更新。 通过清除该复选框，可以取消暂停功能更新。   
+    - **分支就绪级别**：设置设备将为其接收 Windows 更新的分支（Current Branch 或 Current Branch for Business）。
+    - **延迟期(天)**：指定功能更新将被延迟的天数。 可以自更新发布之日起，在 365 天内延迟接收这些功能更新。
+    - **暂停功能更新启动**：选择是否要暂停设备接收功能更新，暂停时间为自暂停更新之日起的 60 天内。 在设置的最大天数过后，暂停功能将自动过期，并且设备将扫描 Windows 更新以获取适用的更新。 在此扫描之后，你可以再次暂停更新。 通过清除该复选框，可以取消暂停功能更新。   
 5. 选择是否要延迟或暂停质量更新。 质量更新通常是对现有 Windows 功能的修复和改进，通常会在每个月的第一个星期二发布，虽然 Microsoft 可以在任何时候发布。 你可以根据其可用性定义是否要延迟接收质量更新，以及它的延迟时长。
-    - 延迟期(天)：指定质量更新将被延迟的天数。 你可以自更新发布之日起，在 30 天内延迟接收这些质量更新。
-    - 暂停质量更新启动：选择是否要暂停设备接收质量更新，暂停时间为自暂停更新之日起的 35 天内。 在设置的最大天数过后，暂停功能将自动过期，并且设备将扫描 Windows 更新以获取适用的更新。 在此扫描之后，你可以再次暂停更新。 通过清除该复选框，可以取消暂停质量更新。
+    - **延迟期(天)**：指定质量更新将被延迟的天数。 你可以自更新发布之日起，在 30 天内延迟接收这些质量更新。
+    - **暂停质量更新启动**：选择是否要暂停设备接收质量更新，暂停时间为自暂停更新之日起的 35 天内。 在设置的最大天数过后，暂停功能将自动过期，并且设备将扫描 Windows 更新以获取适用的更新。 在此扫描之后，你可以再次暂停更新。 通过清除该复选框，可以取消暂停质量更新。
 6. 选择“安装来自其他 Microsoft 产品的更新”，可启用使延迟设置适用于 Microsoft 更新以及 Windows 更新的组策略设置。
 7. 选择“包括 Windows 更新中的驱动程序”，可自动更新 Windows 更新中的驱动程序。 如果清除此设置，则不会从 Windows 更新下载驱动程序更新。
 8. 完成向导以创建新的延迟策略。
@@ -94,11 +95,11 @@ ms.locfileid: "44111087"
 1. 在“软件库” > “Windows 10 维护服务” > “Windows Update for Business 策略”中
 2. 在“主页”选项卡的“部署”组中，选择“部署 Windows Update for Business 策略”。
 3. 配置下列设置：
-    - 要部署的配置策略：选择要部署的 Windows Update for Business 策略。
-    - 集合：单击“浏览”，可选择要在其中部署策略的集合。
-    - 在支持时修正非符合性规则：选择该选项，可自动修正 Windows Management Instrumentation (WMI)、注册表、脚本和 Configuration Manager 所注册移动设备的所有设置的任何非符合性规则。
-    - 允许维护时段外的修正：如果已为你向其部署策略的集合配置了维护时段，启用此选项可以让符合性设置在维护时段外修正值。 有关维护时段的详细信息，请参阅[如何使用维护时段](/sccm/core/clients/manage/collections/use-maintenance-windows)。
-    - 生成警报：配置一个警报，在指定日期和时间之前配置基线符合性小于指定百分比时，生成一个警报。 你也可以指定是否希望将警报发送到 System Center Operations Manager。
-    - 随机延迟(小时)：指定延迟时段，以免网络设备注册服务的处理负荷过重。 默认值为 64 小时。
-    - 计划：指定在客户端计算机上对部署的配置文件进行评估所依据的符合性评估计划。 该计划可以是简单计划或自定义计划。 当用户登录时，客户端计算机将评估配置文件。
+    - **要部署的配置策略**：选择要部署的适用于企业的 Windows 更新策略。
+    - **集合**：单击“浏览”，可选择要在其中部署策略的集合。
+    - **在支持时修正非符合性规则**：选择该选项，可自动修正 Windows Management Instrumentation (WMI)、注册表、脚本和 Configuration Manager 所注册移动设备的所有设置的任何非符合性规则。
+    - **允许维护时段外的修正**：如果已为你向其部署策略的集合配置了维护时段，启用此选项可以让符合性设置在维护时段外修正值。 有关维护时段的详细信息，请参阅[如何使用维护时段](/sccm/core/clients/manage/collections/use-maintenance-windows)。
+    - **生成警报**：配置一个警报，在指定日期和时间之前配置基线符合性小于指定百分比时，生成一个警报。 你也可以指定是否希望将警报发送到 System Center Operations Manager。
+    - **随机延迟(小时)**：指定延迟时段，以免网络设备注册服务的处理负荷过重。 默认值为 64 小时。
+    - **计划**：指定在客户端计算机上对部署的配置文件进行评估所依据的符合性评估计划。 该计划可以是简单计划或自定义计划。 当用户登录时，客户端计算机将评估配置文件。
 4.  完成向导以部署配置文件。

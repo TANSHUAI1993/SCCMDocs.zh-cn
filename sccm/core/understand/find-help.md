@@ -10,16 +10,17 @@ ms.assetid: 86810629-cf2a-43e8-86a2-847444119fc1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e6be541a1b26961684f0577f2540132b81f50b7a
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: f9c4b9bdbd67e26962a4de3ff66643f071339795
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385467"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56139470"
 ---
 # <a name="find-help-for-using-configuration-manager"></a>查找使用 Configuration Manager 的帮助
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 本文以下部分提供多种资源，可用于查找有关使用 Configuration Manager 的帮助：  
 

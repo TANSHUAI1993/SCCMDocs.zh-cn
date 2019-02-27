@@ -10,20 +10,21 @@ ms.assetid: dba904ae-7c44-46db-ae63-999b9821cb46
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 8b85961c14c3db69c3e02e776798588fadd0fc89
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 2fb57705079072e6a656464f5b7252b2ce05ad9d
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39383147"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56123240"
 ---
 # <a name="cng-certificates-overview"></a>CNG 证书概述
 <!-- 1356191 --> 
 
-Configuration Manager 对下一代加密技术 (CNG) 证书提供有限支持。 Configuration Manager 客户端可以通过 CNG 密钥存储提供者 (KSP) 中的私钥使用 PKI 客户端身份验证证书。 通过 KSP 支持，Configuration Manager 客户端可支持基于硬件的私钥，如用于 PKI 客户端身份验证证书的 TPM KSP。
+Configuration Manager 提供一定程度的加密支持：下一代 (CNG) 证书. Configuration Manager 客户端可以通过 CNG 密钥存储提供者 (KSP) 中的私钥使用 PKI 客户端身份验证证书。 通过 KSP 支持，Configuration Manager 客户端可支持基于硬件的私钥，如用于 PKI 客户端身份验证证书的 TPM KSP。
 
 ## <a name="supported-scenarios"></a>支持的方案
-可以将[下一代加密技术 (CNG) API](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx) 证书模板用于以下方案：
+可以使用[加密 API：下一代加密技术 (CNG)](https://msdn.microsoft.com/library/windows/desktop/bb204775.aspx) 证书模板用于以下方案：
 
 - 客户端注册和与 HTTPS 管理点的通信   
 - 使用 HTTPS 分发点的软件分发和应用程序部署   

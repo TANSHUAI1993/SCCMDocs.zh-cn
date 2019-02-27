@@ -10,16 +10,17 @@ ms.assetid: 1012ec24-27d9-4193-8236-918d283c7448
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 66a9949723e6555ddb72ebfdb845a523fb29bfe5
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 740dda5c41c28e1648eb24e75fe24a2e22784f3b
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385988"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56129096"
 ---
 # <a name="policy-spy"></a>策略 Spy
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 Policy Spy 是一个 [Configuration Manager 工具](/sccm/core/support/tools)。 它是用于查看 Configuration Manager 客户端上的策略系统并对其进行故障排除的工具。 运行 **PolicySpy.exe**，打开用户界面。 有关命令行用法的详细信息，请参阅[命令行语法](#bkmk_policyspy-syntax)。
 
@@ -96,7 +97,7 @@ Policy Spy 是一个 [Configuration Manager 工具](/sccm/core/support/tools)。
 
 - **配置**：显示从 CCM_Policy_Config 派生的配置类列表，其中包含策略对象、分配等。  
 
-- **设置**：显示策略生成的所有活动设置。 设置在“配置”节点下显示。 
+- **设置**：显示策略生成的所有有效设置。 设置在“配置”节点下显示。 
 
 > [!Note]   
 > 可存在具有相同名称的多个实例，因为客户端未将这些设置合并到最终结果集中。 Policy Spy 通过使用 RealKey 属性（而不使用其真正的策略密钥）来显示此节点下的实例。 将这些实例与“实际”选项卡中显示的结果集关联。  

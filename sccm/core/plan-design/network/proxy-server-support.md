@@ -10,16 +10,17 @@ ms.assetid: 9123a87a-0b6f-43c7-b5c2-fac5d09686b1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 78694282dae7408e1f9e01fd75585f87aef41da7
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 5123bd51de9678666b28ec464e811dafdd91a30d
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39383543"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56156553"
 ---
 # <a name="proxy-server-support-in-configuration-manager"></a>Configuration Manager 中的代理服务器支持
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 某些 Configuration Manager 站点系统服务器需要连接到 Internet。 如果环境需要 Internet 流量才能使用代理服务器，请配置这些站点系统角色以使用代理。  
 
@@ -75,7 +76,7 @@ ms.locfileid: "39383543"
 这些设置位于软件更新点属性的“代理和帐户设置”选项卡上。  
 
 > [!NOTE]  
->  默认情况下，通过创建自动部署规则的服务器的“系统”帐户在运行自动部署规则时连接到 Internet 并下载软件更新。 或者，配置并使用站点系统代理服务器帐户。 
+>  默认情况下，运行自动部署规则时，在创建了自动部署规则的站点的站点服务器上，“系统”帐户用于连接 Internet 并下载软件更新。 或者，配置并使用站点系统代理服务器帐户。 
 >   
 >  如果此帐户无法访问 Internet，则无法下载软件更新。 以下条目记录到 ruleengine.log 中:  
 > `Failed to download the update from internet. Error = 12007.`  
@@ -90,12 +91,12 @@ ms.locfileid: "39383543"
 
 3.  在“站点系统属性”中，切换到“代理”选项卡。配置以下代理设置：  
 
-    - **从 Internet 同步信息时使用代理服务器**：选择此选项，让站点系统服务器使用代理服务器。  
+    - **同步 Internet 中的信息时使用代理服务器**：选择此选项可使站点系统服务器使用代理服务器。  
 
     - **代理服务器名称**：指定环境中代理服务器的主机名或 FQDN。  
 
     - **端口**：指定与代理服务器进行通信的网络端口。 默认使用端口 80。  
 
-    - **使用凭据连接到代理服务器**：许多代理服务器都要求用户进行身份验证。 站点系统服务器默认使用其计算机帐户来连接到代理服务器。 如有必要，请启用此选项，单击“设置”，然后选择“现有帐户”或指定“新帐户”。 这些凭据就是站点系统代理服务器帐户。  有关详细信息，请参阅 [Configuration Manager 中使用的帐户](/sccm/core/plan-design/hierarchy/accounts)。  
+    - **使用凭据连接至代理服务器**：许多代理服务器都要求用户进行身份验证。 站点系统服务器默认使用其计算机帐户来连接到代理服务器。 如有必要，请启用此选项，单击“设置”，然后选择“现有帐户”或指定“新帐户”。 这些凭据就是站点系统代理服务器帐户。  有关详细信息，请参阅 [Configuration Manager 中使用的帐户](/sccm/core/plan-design/hierarchy/accounts)。  
 
 4.  选择“确定”以保存新的代理服务器配置。  

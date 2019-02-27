@@ -10,16 +10,17 @@ ms.assetid: 2e27b0b7-7bd3-45cd-bc99-9c991606c637
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a67fb2d070c971004418ba47c9eb56b6b0de3e5a
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 088f300e475e7299ae0f589790c6c9bfabea3544
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32335858"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56132551"
 ---
 # <a name="plan-a-client-migration-strategy-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中规划客户端迁移策略
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 要将客户端从源层次结构迁移到 System Center Configuration Manager 目标层次结构，必须执行两个任务。 你必须迁移与客户端关联的对象，并且必须重新安装或将客户端从源层次结构重新分配到目标层次结构。 请先迁移对象，以便在迁移客户端时这些对象可用。 与客户端关联的对象是通过使用迁移作业迁移的。 有关如何迁移与客户端关联的对象的信息，请参阅[在 System Center Configuration Manager 中规划迁移作业策略](../../core/migration/planning-a-migration-job-strategy.md)。  
 
@@ -34,7 +35,7 @@ ms.locfileid: "32335858"
 ##  <a name="Planning_for_Client_Agent_Migration"></a> 规划将客户端迁移到目标层次结构  
  从源层次结构中迁移客户端时，客户端计算机上的客户端软件将升级，以与目标层次结构的产品版本匹配。  
 
--   **Configuration Manager 2007 源层次结构：** 从运行受支持版本的 Configuration Manager 源层次结构中迁移客户端时，客户端软件将升级到目标层次结构的客户端版本。  
+-   **Configuration Manager 2007 源层次结构：** 从运行支持的 Configuration Manager 版本的源层次结构中迁移客户端时，客户端软件会升级为目标层次结构的客户端版本。  
 
 -   **System Center 2012 Configuration Manager 或更高版本的层次结构：** 在产品版本相同的层次结构之间迁移客户端时，客户端软件不会更改或升级。 而是会从源层次结构重新分配到目标层次结构中的站点。  
 

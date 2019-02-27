@@ -10,16 +10,17 @@ ms.assetid: 99222dc8-0e1e-4513-8302-7a1acf671e9b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 071c8cc45d81ceeee0ac97934a747c2fcc79821b
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 5b260a9e3deeb8668d736c3ed5ec2c2519e3ed50
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32335042"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56138970"
 ---
 # <a name="determine-whether-to-migrate-data-to-system-center-configuration-manager"></a>确定是否将数据迁移到 System Center Configuration Manager
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 在 System Center Configuration Manager 中，迁移提供了一个进程，用于将从 Configuration Manager 的受支持版本中创建的数据和配置迁移到新的层次结构。  可用它来执行以下操作：  
 

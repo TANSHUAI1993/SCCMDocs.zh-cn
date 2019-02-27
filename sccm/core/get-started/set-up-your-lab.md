@@ -10,16 +10,17 @@ ms.assetid: b1970688-0cd2-404f-a17f-9e2aa4a78758
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 14251bb062423a31bcf74d2079b2e1b667f61ba9
-ms.sourcegitcommit: 06d490d526070e17d77e86bc6c200899ded911cb
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: d096681c044b794b849d05c48fa17171344b8a64
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38967158"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56129861"
 ---
 # <a name="set-up-your-system-center-configuration-manager-lab"></a>设置你的 System Center Configuration Manager 实验室
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 遵循本主题中的指导原则将使你能够设置实验室以使用模拟现实活动评估 Configuration Manager。  
 
@@ -30,7 +31,7 @@ ms.locfileid: "38967158"
 
      可以从 [TechNet 评估中心](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012)下载 Windows Server 2012 R2 的评估版。  
 
-     请考虑修改或禁用 Internet Explorer 增强的安全配置以便更轻松地访问在整个练习过程中引用的某些下载文件。 请查看 [Internet Explorer：增强的安全配置](https://technet.microsoft.com/library/dd883248\(v=ws.10\).aspx) 以获取其他信息。  
+     请考虑修改或禁用 Internet Explorer 增强的安全配置以便更轻松地访问在整个练习过程中引用的某些下载文件。 请查看 [Internet Explorer：增强的安全配置](https://technet.microsoft.com/library/dd883248\(v=ws.10\).aspx) 了解其他信息。  
 
 -   **实验室环境中将 SQL Server 2012 SP2** 用于站点数据库。  
 
@@ -79,13 +80,13 @@ ms.locfileid: "38967158"
 ##  <a name="BKMK_LabADPrep"></a> 为实验室准备 Active Directory 内容  
  你将为此实验室创建一个安全组，然后向其添加一个域用户。  
 
--   安全组： **Evaluation**  
+-   安全组：**评估**  
 
-    -   组作用域： **Universal**  
+    -   组范围：**通用**  
 
-    -   组类型： **Security**  
+    -   组类型：**安全**  
 
--   域用户： **ConfigUser**  
+-   域用户：**ConfigUser**  
 
      正常情况下，你不会将向环境内的所有用户授予通用访问权限。 你与此用户一起进行此操作的目的是为了简化你的实验室联机。  
 
@@ -356,14 +357,14 @@ Internet 信息服务 (IIS) 是可用来承载 Web 上找到的任何内容的�
     |站点安装过程的步骤|选择|  
     |-----------------------------------------|---------------|  
     |步骤 4：“产品密钥”  页|选择“评估” 。|  
-    |步骤 7：“必备下载”  |选择“下载所需文件”  并指定预定义的位置。|  
-    |步骤 10：“站点和安装设置” |-   **站点代码：LAB**<br />-   **站点名称：Evaluation**<br />-    指定预定义的位置。|  
-    |步骤 11：“主站点安装” |选择“将主站点安装为独立站点” ，然后单击“下一步” 。|  
-    |步骤 12：“数据库安装” |-    在此处输入你的 FQDN。<br />-    将其留空，因为你将使用以前安装的 SQL 的默认实例。<br />-    保留为默认端口 4022。|  
-    |步骤 13：“数据库安装” |将这些设置保留为默认值。|  
-    |步骤 14：“SMS 提供程序”|将这些设置保留为默认值。|  
-    |步骤 15：“客户端通信设置” |确认未选择“所有站点系统角色仅接受来自客户端的 HTTPS 通信” |  
-    |步骤 16：“站点系统角色” |输入你的 FQDN，并确认仍未选择“所有站点系统角色仅接受来自客户端的 HTTPS 通信”  。|  
+    |步骤 7：必需下载的项|选择“下载所需文件”  并指定预定义的位置。|  
+    |步骤 10：站点和安装设置|-   **站点代码：LAB**<br />-   **站点名称：Evaluation**<br />-    指定预定义的位置。|  
+    |步骤 11：主站点的安装|选择“将主站点安装为独立站点” ，然后单击“下一步” 。|  
+    |步骤 12：数据库的安装|-    在此处输入你的 FQDN。<br />-    将其留空，因为你将使用以前安装的 SQL 的默认实例。<br />-    保留为默认端口 4022。|  
+    |步骤 13：数据库的安装|将这些设置保留为默认值。|  
+    |步骤 14：**SMS 提供程序**|将这些设置保留为默认值。|  
+    |步骤 15：客户端通信设置|确认未选择“所有站点系统角色仅接受来自客户端的 HTTPS 通信” |  
+    |步骤 16：站点系统角色|输入你的 FQDN，并确认仍未选择“所有站点系统角色仅接受来自客户端的 HTTPS 通信”  。|  
 
 ##  <a name="BKMK_EnablePubLab"></a>为 Configuration Manager 站点启用发布  
 每个 Configuration Manager 站点将其自己的特定于站点的信息发布到 Active Directory 架构中其域分区内的系统管理容器中。 必须打开 Active Directory 和 Configuration Manager 之间的双向通道以处理此流量。 此外，还将启用林发现以确定 Active Directory 和网络基础结构的某些组件。  

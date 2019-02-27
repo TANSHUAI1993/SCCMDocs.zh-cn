@@ -10,16 +10,17 @@ ms.assetid: 3fab4d67-8d2a-45ce-8b06-471280102cf6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 04faf92545f84fdf53c522ad9aa0c74bbd5c4aa1
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: d7a9fcf06630c76fc3e1123fa56861c4de224521
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342267"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56129368"
 ---
 # <a name="monitor-hierarchy-and-replication-infrastructure-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的监视层次结构和复制基础结构
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 若要在 System Center Configuration Manager 中监视基础结构和操作，请使用 Configuration Manager 控制台中的“监视”工作区。  
 
@@ -73,7 +74,7 @@ ms.locfileid: "32342267"
    请参阅[如何在 System Center Configuration Manager 中监视 Endpoint Protection](../../../protect/deploy-use/monitor-endpoint-protection.md)。  
 
 **监视电源管理**  
- 请参阅[如何在 System Center Configuration Manager 中监视和规划电源管理](../../../core/clients/manage/power/monitor-and-plan-for-power-management.md)。  
+ 请参阅 [如何在 System Center Configuration Manager 中监视和规划电源管理](../../../core/clients/manage/power/monitor-and-plan-for-power-management.md)。  
 
 **监视软件计数**  
 请参阅[在 System Center Configuration Manager 中使用软件计数监视应用使用情况](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md)。  

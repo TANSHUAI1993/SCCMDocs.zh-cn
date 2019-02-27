@@ -10,16 +10,17 @@ ms.assetid: 681f0893-e83b-476e-9ec0-a5dc7c9deeb6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5614317639c12813acf61f17de844c8304bed70f
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: fd2e358a93ff91c79f0f4716a596a9f7026c5daa
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32344341"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56123444"
 ---
 # <a name="websites-for-site-system-servers-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的站点系统服务器网站
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 多个 Configuration Manager 站点系统角色需要使用 Microsoft Internet Information Services (IIS) 和默认的 IIS 网站来托管站点系统服务。 当必须在同一服务器上运行其他 Web 应用程序，且设置与 Configuration Manager 不兼容时，请考虑使用 Configuration Manager 的自定义网站。  
 
@@ -116,7 +117,7 @@ ms.locfileid: "32344341"
 ## <a name="set-up-custom-websites"></a>设置自定义网站  
 由于自定义网站的创建步骤随操作系统版本的不同而有所不同，所以请参阅你操作系统版本的文档以了解确切步骤，但请在适当时使用以下信息：  
 
--   网站名称必须是：**SMSWEB**。  
+-   网站名称必须是：SMSWEB。  
 
 -   设置 HTTPS 时，必须先指定 SSL 证书才能保存配置。  
 

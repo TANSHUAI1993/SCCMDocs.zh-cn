@@ -9,16 +9,17 @@ ms.assetid: 57413dd3-b2f8-4a5f-b27f-8464d357caff
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: f5a0601af46d4d5f835822d3e5c551096512ceb3
-ms.sourcegitcommit: 7eebd112a9862bf98359c1914bb0c86affc5dbc0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 554e67e171fe5b800d231d257105531dcd633baf
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590870"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56131568"
 ---
 # <a name="configure-role-based-administration-for-configuration-manager"></a>为 Configuration Manager 配置基于角色的管理   
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 在 Configuration Manager 中，基于角色的管理结合了安全角色、安全作用域和分配的集合来定义每个管理用户的管理作用域。 管理作用域包括管理用户可在 Configuration Manager 控制台中查看的对象，以及管理用户有权执行的与这些对象相关的任务。 基于角色的管理配置应用于层次结构中的每个站点。  
 
@@ -154,9 +155,9 @@ ms.locfileid: "42590870"
 
 6.  选择以下两个选项之一，定义新用户的安全对象行为：  
 
-    -   与分配的安全角色相关的所有对象实例：此选项将管理用户与“全部”安全作用域以及“所有系统”和“所有用户和用户组”集合相关联。 分配给用户的安全角色定义对象的访问权限。 会将此管理用户创建的新对象分配到“默认”  安全作用域。  
+    -   **与分配的安全角色相关的所有对象实例**：此选项将管理用户与“所有”安全作用域以及“所有系统”和“所有用户和用户组”集合关联。 分配给用户的安全角色定义对象的访问权限。 会将此管理用户创建的新对象分配到“默认”  安全作用域。  
 
-    -   仅限分配给指定安全作用域和集合的对象实例：默认情况下，此选项将管理用户与“默认”安全作用域以及“所有系统”和“所有用户和用户组”集合相关联。 但是，实际安全作用域和集合仅限于那些与创建新管理用户所需的帐户关联的安全作用域和集合。 此选项支持添加或删除安全作用域和集合来自定义管理用户的管理作用域。  
+    -   **仅分配给指定安全作用域和集合的对象实例**：默认情况下，此选项将管理用户与“默认”安全作用域以及“所有系统”和“所有用户和用户组”集合关联。 但是，实际安全作用域和集合仅限于那些与创建新管理用户所需的帐户关联的安全作用域和集合。 此选项支持添加或删除安全作用域和集合来自定义管理用户的管理作用域。  
 
     > [!IMPORTANT]  
     >  前面的选项将每个分配的安全作用域和集合与分配给管理用户的每个安全角色关联。 可使用第三个选项“将分配的安全角色与特定安全作用域和集合相关联”将单独的安全角色与特定安全作用域和集合关联。 在你创建新管理用户之后修改管理用户时，可以使用这第三个选项。  
@@ -172,11 +173,11 @@ ms.locfileid: "42590870"
 
  当你修改管理用户时，你可以更改有关安全对象如何与分配的安全角色关联的行为。 你可选择的三个行为如下所示：  
 
--   与分配的安全角色相关的所有对象实例：此选项将管理用户与“全部”作用域以及“所有系统”和“所有用户和用户组”集合相关联。 分配给用户的安全角色定义对象的访问权限。  
+-   **与分配的安全角色相关的所有对象实例**：此选项将管理用户与“所有”作用域以及“所有系统”和“所有用户和用户组”集合关联。 分配给用户的安全角色定义对象的访问权限。  
 
--   仅限分配到指定安全作用域和集合的对象实例：此选项将管理用户和与用于配置管理用户的帐户关联的相同安全作用域和集合相关联。 此选项支持添加或删除安全角色和集合来自定义管理用户的管理作用域。  
+-   **仅分配给指定安全作用域和集合的对象实例**：此选项将管理用户与安全作用域和集合关联，这些安全作用域和集合关联和与用于配置管理用户的帐户关联安全作用域和集合相同。 此选项支持添加或删除安全角色和集合来自定义管理用户的管理作用域。  
 
--   将分配的安全角色与特定安全作用域和集合相关联：使用此选项，可以在单独的安全角色与用户的特定安全作用域以及集合之间创建特定关联。  
+-   **将分配的安全角色与特定安全作用域和集合关联**：此选项使你能在单独的安全角色与用户的安全作用域和集合之间创建特定关联。  
 
     > [!NOTE]  
     >  只有在你修改管理用户的属性时，此选项才可用。  
@@ -203,7 +204,7 @@ ms.locfileid: "42590870"
 
 使用以下过程来修改安全对象行为设置为“与分配的安全角色相关的所有对象实例”的管理用户。  
 
-#### <a name="for-option-all-instances-of-the-objects-that-are-related-to-the-assigned-security-roles"></a>选项：与分配的安全角色相关的所有对象实例  
+#### <a name="for-option-all-instances-of-the-objects-that-are-related-to-the-assigned-security-roles"></a>对于选项：与分配的安全角色相关的所有对象实例  
 
 1.  在 Configuration Manager 控制台中，选择“管理”。  
 
@@ -230,7 +231,7 @@ ms.locfileid: "42590870"
 
 使用以下过程来修改其安全对象行为设置为“仅限分配到指定安全作用域和集合的所有对象实例”的管理用户。  
 
-#### <a name="for-option-only-the-instances-of-objects-that-are-assigned-to-the-specified-security-scopes-and-collections"></a>选项：仅限分配到指定安全作用域和集合的所有对象实例  
+#### <a name="for-option-only-the-instances-of-objects-that-are-assigned-to-the-specified-security-scopes-and-collections"></a>对于选项：仅分配给指定安全作用域和集合的对象实例  
 
 1.  在 Configuration Manager 控制台中，选择“管理”。  
 
@@ -258,7 +259,7 @@ ms.locfileid: "42590870"
 
 使用以下过程来修改其安全对象行为设置为“将分配的安全角色与特定安全作用域和集合相关联”的管理用户。  
 
-#### <a name="for-option-associate-assigned-security-roles-with-specific-security-scopes-and-collections"></a>选项：将分配的安全角色与特定安全作用域和集合相关联  
+#### <a name="for-option-associate-assigned-security-roles-with-specific-security-scopes-and-collections"></a>对于选项：将分配的安全角色与特定安全作用域和集合关联  
 
 1.  在 Configuration Manager 控制台中，选择“管理”。  
 

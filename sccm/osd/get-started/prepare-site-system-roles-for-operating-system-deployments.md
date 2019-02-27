@@ -10,16 +10,17 @@ ms.assetid: 0ef5f3ce-b0e4-4775-b5c2-b245e45b4194
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: cbfa49dddb19d588a3fe16f042b50af590cf39e8
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 6c7f54ccda217ebbae543b70aeead37f6c55cf0f
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39383722"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56125678"
 ---
 # <a name="prepare-site-system-roles-for-os-deployments-with-configuration-manager"></a>使用 Configuration Manager 准备 OS 部署的站点系统角色
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 要在 Configuration Manager 中部署操作系统，请先准备下列要求特定配置和需考虑特定注意事项的站点系统角色。
 
@@ -67,7 +68,7 @@ Configuration Manager 不会将站点服务器与集合中的其他目标计算�
 
 可以为启用 PXE 的分发点自定义 RamDisk TFTP 块大小和窗口大小。 如果已自定义网络，较大的块或窗口可能会导致启动映像下载由于超时错误而失败。 通过 RamDisk TFTP 块大小和窗口大小自定义，可以在使用 PXE 时优化 TFTP 流量，以满足特定网络要求。 若要确定最高效的设置，请在环境中测试自定义设置。  
 
--   **TFTP 块大小**：块大小是指服务器发送到正在下载文件的客户端的数据包大小。 较大的块大小使服务器可以发送较少的数据包，因此服务器与客户端之间的往返延迟较少。 但是，较大的块会导致产生零碎的数据包，而大多数 PXE 客户端实现不支持这一点。  
+-   **TFTP 块大小**：块大小是指服务器发送到正在下载文件的客户端的数据包的大小。 较大的块大小使服务器可以发送较少的数据包，因此服务器与客户端之间的往返延迟较少。 但是，较大的块会导致产生零碎的数据包，而大多数 PXE 客户端实现不支持这一点。  
 
 -   **TFTP 窗口大小**：对于发送的每个数据块，TFTP 需要确认 (ACK) 数据包。 服务器在收到上一个块的 ACK 数据包之前，不会发送序列中的下一个块。 通过 TFTP 窗口化可定义填满窗口所需的数据块数量。 服务器在窗口填满之前会背靠背地发送数据块，随后客户端会发送 ACK 数据包。 如果增加此窗口大小，它会减少客户端与服务器之间的往返延迟数，并缩短下载启动映像所需的总体时间。  
   

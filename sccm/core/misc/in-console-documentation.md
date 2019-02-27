@@ -1,6 +1,6 @@
 ---
 title: 控制台中文档
-ms.date: 01/14/2019
+ms.date: 02/11/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
@@ -9,12 +9,13 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: eec34451ff9ece005322b67c1d40d1dbcba2f4f6
-ms.sourcegitcommit: ef3fdf21180e43afd7af6c8264524711435e426e
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 5cfe4457bb2ebe2d5c8c621aa08c6d41346f4290
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54898131"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56133497"
 ---
 <!-- 
 - Feature 1357546
@@ -25,7 +26,8 @@ ms.locfileid: "54898131"
 
 
 # <a name="configuration-manager-documentation"></a>Configuration Manager 文档
-此页面上的链接表示特选内容，用于帮助了解和支持 Configuration Manager。 
+
+此内容可以有助于学习 Configuration Manager 相关知识和为其提供支持。 
 
 有关详细信息，请参阅下列文章：
 - [Configuration Manager 文档库](https://docs.microsoft.com/sccm)  
@@ -34,7 +36,7 @@ ms.locfileid: "54898131"
 
 
 ## <a name="recommended"></a>建议 
-重要文章的手动特选列表。
+重要文章的特选列表。
 
 - [适用于 Windows 10 设备的共同管理](https://docs.microsoft.com/sccm/comanage/overview)  
 - [CMPivot](https://docs.microsoft.com/sccm/core/servers/manage/cmpivot)  
@@ -51,38 +53,38 @@ ms.locfileid: "54898131"
 
 
 ## <a name="trending"></a>趋势
-2018 年 12 月的热门文章。
+2019 年 1 月最热门的文章。
 
- | 页面查看次数 | 标题 | 
- |------------|-------| 
- | 16430 | [故障排除的日志文件](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/log-files) |
- | 15155 | [1810 版中的新增功能](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1810) |
- | 8581 | [将客户端部署到 Windows](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-to-windows-computers) |
- | 7866 | [用于连接的端口](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/ports) |
- | 7434 | [支持 Windows 10](https://docs.microsoft.com/sccm/core/plan-design/configs/support-for-windows-10) |
- | 7088 | [1806 版中的新增功能](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1806) |
- | 7086 | [客户端安装参数和属性](https://docs.microsoft.com/sccm/core/clients/deploy/about-client-installation-properties) |
- | 6914 | [安装控制台](https://docs.microsoft.com/sccm/core/servers/deploy/install/install-consoles) |
- | 6087 | [部署应用程序](https://docs.microsoft.com/sccm/apps/deploy-use/deploy-applications) |
- | 5817 | [更新和维护服务](https://docs.microsoft.com/sccm/core/servers/manage/updates) |
+| 页面查看次数 | 标题 | 
+|------------|-------| 
+| 20862 | [故障排除的日志文件](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/log-files) |
+| 19761 | [1810 版中的新增功能](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1810) |
+| 11327 | [将客户端部署到 Windows](https://docs.microsoft.com/sccm/core/clients/deploy/deploy-clients-to-windows-computers) |
+| 9963 | [支持 Windows 10](https://docs.microsoft.com/sccm/core/plan-design/configs/support-for-windows-10) |
+| 9684 | [用于连接的端口](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/ports) |
+| 8870 | [安装控制台](https://docs.microsoft.com/sccm/core/servers/deploy/install/install-consoles) |
+| 8296 | [客户端安装参数和属性](https://docs.microsoft.com/sccm/core/clients/deploy/about-client-installation-properties) |
+| 7810 | [1810 清单](https://docs.microsoft.com/sccm/core/servers/manage/checklist-for-installing-update-1810) |
+| 7758 | [更新和维护服务](https://docs.microsoft.com/sccm/core/servers/manage/updates) |
+| 7530 | [先决条件检查](https://docs.microsoft.com/sccm/core/servers/deploy/install/list-of-prerequisite-checks) |
 
 
 
 ## <a name="recently-updated"></a>最近更新
 包含最新更新和重要更新的文章。
 
- | 上次审阅时间 | 标题 | 
- |---------------|-------|
- | 2018/12/26 | [准备 Intune 以便进行用户迁移](https://docs.microsoft.com/sccm/mdm/deploy-use/migrate-prepare-intune) |
- | 2018/12/21 | [已弃用的功能](https://docs.microsoft.com/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures) |
- | 2018/12/21 | [发行说明](https://docs.microsoft.com/sccm/core/servers/deploy/install/release-notes) |
- | 2018/12/21 | [Windows Hello 企业版设置](https://docs.microsoft.com/sccm/mdm/deploy-use/windows-hello-for-business-settings) |
- | 2018/12/20 | [管理软件更新同步](https://docs.microsoft.com/sccm/sum/get-started/synchronize-software-updates) |
- | 2018/12/14 | [先决条件检查](https://docs.microsoft.com/sccm/core/servers/deploy/install/list-of-prerequisite-checks) |
- | 2018/12/14 | [技术预览版](https://docs.microsoft.com/sccm/core/get-started/technical-preview) |
- | 2018/12/14 | [Technical Preview 1812](https://docs.microsoft.com/sccm/core/get-started/capabilities-in-technical-preview-1812) |
- | 2018/12/14 | [批准应用程序](https://docs.microsoft.com/sccm/apps/deploy-use/app-approval) |
- | 2018/12/14 | [混合 MDM 中的新增功能](https://docs.microsoft.com/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management) |
+| 上次审阅时间 | 标题 | 
+|---------------|-------|
+| 2019/01/30 | [使用 Microsoft Intune 的混合 MDM](https://docs.microsoft.com/sccm/mdm/understand/hybrid-mobile-device-management) |
+| 2019/01/30 | [已弃用的功能](https://docs.microsoft.com/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures) |
+| 2019/01/30 | [支持中心](https://docs.microsoft.com/sccm/core/support/support-center) |
+| 2019/01/29 | [用于连接的端口](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/ports) |
+| 2019/01/25 | [1810 版中的新增功能](https://docs.microsoft.com/sccm/core/plan-design/changes/whats-new-in-version-1810) |
+| 2019/01/23 | [技术预览版 1901](https://docs.microsoft.com/sccm/core/get-started/2019/technical-preview-1901) |
+| 2019/01/23 | [技术预览版](https://docs.microsoft.com/sccm/core/get-started/technical-preview) |
+| 2019/01/22 | [在 Azure 中创建实验室](https://docs.microsoft.com/sccm/core/get-started/azure-template) |
+| 2019/01/15 | [支持的站点系统服务器](https://docs.microsoft.com/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers) |
+| 2019/01/15 | [Cloud connecting with co-management](https://docs.microsoft.com/sccm/comanage/quickstarts)（连接共同管理的云） |
 
 
 
@@ -91,7 +93,7 @@ ms.locfileid: "54898131"
 
 - [排查 PXE 启动问题](https://support.microsoft.com/help/4468612)
 - [排查软件更新同步问题](https://support.microsoft.com/help/10059)
-- [了解并排查内容分发问题](https://support.microsoft.com/help/4000401)
+- [了解并排查内容分发问题](https://support.microsoft.com/help/4482728)
 - [了解并排查适用于企业的 Microsoft Store 集成的问题](https://support.microsoft.com/help/4010214)
 - [软件更新管理疑难解答](https://support.microsoft.com/help/10680)
 - [排查“安装应用程序”任务序列步骤问题](https://support.microsoft.com/help/18408/)
@@ -99,13 +101,13 @@ ms.locfileid: "54898131"
 
 
 ## <a name="new-and-updated-support-articles"></a>新的和更新的支持文章
-2018 年 12 月新的或更新的支持文章。
+2019 年 1 月新的或更新的支持文章。
 
-- [KB 4040243：如何为 Configuration Manager 启用 TLS 1.2](https://support.microsoft.com/help/4040243)
-- [KB 4477073：安装更新时出现错误 0x800f0831](https://support.microsoft.com/help/4477073)
-- [KB 4471003：如何从不同网络上的 PXE 服务器启动](https://support.microsoft.com/help/4471003)
-- [KB 4474026：启用 BitLocker 任务失败，在 Configuration Manager 中出现错误 80070057](https://support.microsoft.com/help/4474026)
-- [KB 4483868：不再为 Azure 中订阅级别的 Web 应用分配参与者角色](https://support.microsoft.com/help/4483868)
-
+- [KB 4490065：A task sequence is slow if the client in the media, or in the boot image, is earlier than the site version](https://support.microsoft.com/help/4490065)（媒体或启动映像中的客户端版本低于站点版本时，任务序列缓慢）
+- [KB 4490414：Windows Server Update Services Best Practices](https://support.microsoft.com/help/4490414)（Windows Server Update Services 最佳做法）
+- [KB 4489045：How to troubleshoot high CPU usage on a WSUS server](https://support.microsoft.com/help/4489045)（如何排查 WSUS 服务器上 CPU 使用率高的问题）
+- [KB 4486457：Update rollup for System Center Configuration Manager current branch, version 1810](https://support.microsoft.com/help/4486457)（System Center Configuration Manager Current Branch 1810 版更新汇总）
+- [KB 4487768：Error "Conversion failed" when you update to Configuration Manager version 1810](https://support.microsoft.com/help/4487768)（更新到 Configuration Manager 版本 1810 时，显示错误“转换失败”）
+- [KB 4487960：Microsoft Intune connector certificate does not renew in Configuration Manager](https://support.microsoft.com/help/4487960)（Configuration Manager 中未续订Microsoft Intune 连接器证书）
 
 要订阅新的 Configuration Manager 支持文章的 Atom 或 RSS 通知，请参阅[支持内容更新](https://support.microsoft.com/help/4089498/)并选择 System Center Configuration Manager。  

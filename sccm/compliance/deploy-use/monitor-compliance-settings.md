@@ -10,16 +10,17 @@ ms.assetid: 92c1ccca-a748-44cd-a52e-e41d34bf981d
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 9920bd48ad7b953469261602c21a6664580143a2
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 07b766db6b80f92eba8d401b3c751ca1d4766b38
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32335773"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56130854"
 ---
 # <a name="monitor-compliance-settings-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中监视符合性设置
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 在向层次结构中的设备部署 System Center Configuration Manager 配置基线后，你可以使用本主题中的一个或多个过程来显示配置基线的符合性状态：
 

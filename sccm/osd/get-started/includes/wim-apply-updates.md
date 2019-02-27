@@ -4,12 +4,12 @@ ms.author: aaroncz
 ms.prod: configuration-manager
 ms.topic: include
 ms.date: 11/27/2018
-ms.openlocfilehash: c91cf0abb8cb79fe92e34b6b234a4c8264af75ab
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.openlocfilehash: f6e46f8b0bf985eae87cd5157f8a82af5fa0b849
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456934"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56142572"
 ---
 ##  <a name="BKMK_OSImagesApplyUpdates"></a> 将软件更新应用于映像  
 
@@ -43,9 +43,9 @@ ms.locfileid: "52456934"
 
     a.  **计划**：指定站点将软件更新应用于映像的时间表。  
 
-    b.  **出错时继续**：选择此选项以便即使在出错时也继续将软件更新应用于映像。  
+    b.  **出错时继续**：选择此选项以便即使在出错时也将软件更新应用于映像。  
 
-    c.  **使用映像更新分发点**：选择此选项可在站点应用软件更新后更新分发点上的映像。  
+    c.  **利用映像更新分发点**：选择此选项可在站点应用软件更新后更新分布点上的映像。  
 
 6.  完成计划更新向导。  
 
@@ -82,4 +82,5 @@ ms.locfileid: "52456934"
 如果选择站点服务器上不存在的驱动器，则 Configuration Manager 的行为与选择“自动”时的行为相同。 
 
 在脱机服务期间，Configuration Manager 将临时文件存储在文件夹 `<drive>:\ConfigMgr_OfflineImageServicing` 中。 它还会将 OS 映像装载在此文件夹中。 
+
 

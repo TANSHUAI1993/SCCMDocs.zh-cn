@@ -10,16 +10,17 @@ ms.assetid: 5cb41e2b-4c79-4da9-a432-ff869c0870f8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 5a9865a591f6947447ebb088b5e5e25db1e9fa54
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 026c6e5646983f815572974d5aaa67746178c03b
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52458000"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56156451"
 ---
 # <a name="support-center-quickstart-guide"></a>支持中心快速入门指南
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 支持中心拥有强大的功能，包括故障排除和实时日志查看。 它还可用于在几分钟内捕获 Configuration Manager 客户端计算机的状态。 此功能包括访问远程客户端。
 
@@ -35,7 +36,7 @@ ms.locfileid: "52458000"
 
 
 
-## <a name="step-1-create-a-data-bundle-on-a-local-client"></a>步骤 1：在本地客户端上创建一个数据包绑定
+## <a name="step-1-create-a-data-bundle-on-a-local-client"></a>步骤 1：在本地客户端上创建一个数据包
 
 1.  在 Configuration Manager 客户端上安装支持中心。  
 
@@ -67,7 +68,7 @@ ms.locfileid: "52458000"
 
         - 网络适配器  
 
-    - **日志**：在列表中选择一个或多个条目，然后选择“打开”。 此操作将在日志查看器中打开选定的日志文件。 使用此功能查找错误代码，并使用高级筛选器来帮助更快地分析日志文件。  
+    - **日志**：在列表中选择一个或多个条目，并选择“打开”。 此操作将在日志查看器中打开选定的日志文件。 使用此功能查找错误代码，并使用高级筛选器来帮助更快地分析日志文件。  
 
 
 

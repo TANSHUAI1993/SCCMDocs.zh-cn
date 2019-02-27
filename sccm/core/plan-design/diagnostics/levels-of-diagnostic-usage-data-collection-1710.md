@@ -10,18 +10,19 @@ ms.assetid: 8fce5391-8e75-4f99-813a-76f8842be5bc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7ba95a61b074fa1ae4cc4c77f896659b91eaaaaa
-ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 6526d0cb6b6b84afcaa5faeef93cc230a335196f
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43893692"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56136773"
 ---
 # <a name="levels-of-diagnostic-usage-data-collection-for-version-1710-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1710 的诊断使用情况数据收集的级别
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
-System Center Configuration Manager 版本 1710 收集三个级别的诊断和使用情况数据：“基本”、“增强”和“完全”。 默认情况下，此功能设置为增强级别。 以下部分提供有关每个级别所收集数据的其他详细信息。
+System Center Configuration Manager 1710 版收集三个级别的诊断和使用数据：“基本”、“增强”和“完全”。 默认情况下，此功能设置为增强级别。 以下部分提供有关每个级别所收集数据的其他详细信息。
 
 针对以前版本进行的更改使用 ***[新增]*** ***[已更新]*** ***[已删除]*** 或 ***[已移动]*** 进行了注明。
 

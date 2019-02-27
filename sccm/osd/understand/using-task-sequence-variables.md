@@ -10,16 +10,17 @@ ms.assetid: bc7de742-9e5c-4a70-945c-df4153a61cc3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 18305b26937c87cbdb4d5726bded571699416793
-ms.sourcegitcommit: be8c0182db9ef55a948269fcbad7c0f34fd871eb
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 3e8ebea21b735e6b93d73bf6ff5eb842243ef42d
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42756261"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56121856"
 ---
 # <a name="how-to-use-task-sequence-variables-in-configuration-manager"></a>如何使用 Configuration Manager 中的任务序列变量
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
  Configuration Manager 的 OS 部署功能中的任务序列引擎使用多个变量来控制其行为。 使用这些变量： 
  - 设置步骤条件  
@@ -225,11 +226,11 @@ ms.locfileid: "42756261"
 
  3. 在“任务序列变量”对话框中，指定以下设置：  
 
-    - 变量：变量名称。 例如，`_SMSTSInWinPE`。  
+    - **变量**：变量的名称。 例如，`_SMSTSInWinPE`。  
 
-    - 条件：计算变量值的条件。 例如，等于。  
+    - **条件**：计算变量值的条件。 例如，等于。  
 
-    - 值：要检查的变量的值。 例如，`false`。  
+    - **值**：要检查的变量的值。 例如，`false`。  
 
 
  上面三个示例构成了测试的常见条件，即任务是否从 Windows PE 的启动映像运行： 

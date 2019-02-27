@@ -10,16 +10,17 @@ ms.assetid: ae72df4b-5f5d-4e19-9052-bda28edfbace
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ae82e17f5a0e7d32c3f5838edc3dfbf00b6f396b
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 9cf206bfb0774ee1d45c70e2a0c890a2f157ad65
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342097"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56127178"
 ---
 # <a name="learn-how-clients-find-site-resources-and-services-for-system-center-configuration-manager"></a>了解客户端如何查找 System Center Configuration Manager 的站点资源和服务
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 System Center Configuration Manager 客户端使用名为*服务定位*的进程来查找可与之通信的站点系统服务器，此服务器提供客户端定向使用的服务。 了解客户端如何以及何时使用服务定位查找站点资源有助于配置站点，使其成功支持客户端任务。 这些配置可能需要站点与域和网络配置（如 Active Directory 域服务 (AD DS) 和 DNS）进行交互。 或者需要配置更复杂的替代项。  
 
@@ -183,19 +184,19 @@ Configuration Manager 支持服务定位记录的 RFC 2782。 这些记录格式
 
 若要将管理点发布到 Configuration Manager，请指定下列值：  
 
--   **_Service**：输入 **_mssms_mp**_&lt;sitecode\>，其中 &lt;sitecode\> 是管理点的站点代码。  
--   **._Proto**：指定 **._tcp**。  
--   **.Name**：输入管理点的 DNS 后缀，例如 **contoso.com**。  
--   **TTL**：输入 **14400**，代表四个小时。  
--   **类**：指定 **IN** （符合 RFC 1035）。  
--   **Priority**：Configuration Manager 不使用此字段。
--   **Weight**：Configuration Manager 不使用此字段。  
--   **端口**：输入管理点使用的端口号，例如 **80** （适用于 HTTP）和 **443** （适用于 HTTPS）。  
+-   **_Service**：输入 _mssms_mp_&lt;sitecode\>，其中 &lt;sitecode\> 是管理点的站点代码。  
+-   **._Proto**：指定 ._tcp。  
+-   **.Name**：输入管理点的 DNS 后缀，例如 contoso.com。  
+-   **TTL**：输入 14400，代表四个小时。  
+-   **类**：指定 IN （符合 RFC 1035）。  
+-   **优先级**：Configuration Manager 不使用此字段。
+-   **权重**：Configuration Manager 不使用此字段。  
+-   **端口**：输入管理点使用的端口号，例如 80（适用于 HTTP）和 443（适用于 HTTPS）。  
 
     > [!NOTE]  
     >  SRV 记录端口应与管理点使用的通信端口匹配。 默认情况下，对于 HTTP 通信，该端口为 **80**，对于 HTTPS 通信，端口为 **443**。  
 
--   “目标”：输入为配置为具有管理点站点角色的站点系统指定的 Intranet FQDN。  
+-   **目标**：输入为配置为具有管理点站点角色的站点系统指定的 Intranet FQDN。  
 
 如果使用 Windows Server DNS，你可以使用下列部分来为 Intranet 管理点输入此 DNS 记录。 如果使用 DNS 的其他实现，请使用此部分中有关字段值的信息，并查阅该 DNS 文档以适应此过程。  
 
@@ -225,17 +226,17 @@ Configuration Manager 支持服务定位记录的 RFC 2782。 这些记录格式
 
 4.  通过使用“新建其他记录”选项，在“资源记录类型”对话框中选择“服务位置(SRV)”，选择“创建记录”，输入下列信息，然后选择“完成”：  
 
-    -   **域**：必要时，输入管理点的 DNS 后缀，例如 **contoso.com**。  
-    -   **服务**：键入 **_mssms_mp**_&lt;sitecode\>，其中 &lt;sitecode\> 是管理点的站点代码。  
-    -   **协议**：键入 **_tcp**。  
-    -   **Priority**：Configuration Manager 不使用此字段。  
-    -   **Weight**：Configuration Manager 不使用此字段。  
-    -   **端口**：输入管理点使用的端口号，例如 **80** （适用于 HTTP）和 **443** （适用于 HTTPS）。  
+    -   **域**：如有必要，输入管理点的 DNS 后缀，例如 contoso.com。  
+    -   **服务**：键入 _mssms_mp_&lt;sitecode\>，其中 &lt;sitecode\> 是管理点的站点代码。  
+    -   **协议**：键入 _tcp。  
+    -   **优先级**：Configuration Manager 不使用此字段。  
+    -   **权重**：Configuration Manager 不使用此字段。  
+    -   **端口**：输入管理点使用的端口号，例如 80（适用于 HTTP）和 443（适用于 HTTPS）。  
 
         > [!NOTE]  
         >  SRV 记录端口应与管理点使用的通信端口匹配。 默认情况下，对于 HTTP 通信，该端口为 **80**，对于 HTTPS 通信，端口为 **443**。  
 
-    -   **提供此服务的主机**：输入为站点系统指定的 Intranet FQDN，该站点系统配置有管理点站点角色。  
+    -   **提供此服务的主机**：输入为配置为具有管理点站点角色的站点系统指定的 Intranet FQDN。  
 
 为 Intranet 上每个要发布到 DNS 的管理点重复这些步骤。  
 

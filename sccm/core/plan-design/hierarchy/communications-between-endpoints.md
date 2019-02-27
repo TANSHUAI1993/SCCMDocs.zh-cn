@@ -10,16 +10,17 @@ ms.assetid: 68fe0e7e-351e-4222-853a-877475adb589
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: ce3353d9cc139da53a655f50144c3816b1a4a355
-ms.sourcegitcommit: 8791bb9be477fe6a029e8a7a76e2ca310acd92e0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 5ebe37bb97c4a1e231bfaf94f420f7f0471f30f6
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411368"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56141953"
 ---
 # <a name="communications-between-endpoints-in-configuration-manager"></a>Configuration Manager 中终结点之间的通信
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 本文介绍了 Configuration Manager 站点系统和客户端如何跨网络通信。 它包括以下部分：  
 
@@ -82,8 +83,8 @@ ms.locfileid: "50411368"
 ### <a name="bkmk_client2mp"></a>客户端到管理点的通信
 
 客户端与管理点通信时存在两个阶段：身份验证（传输）和授权（消息）。 此过程因以下因素而异： 
-- 站点配置：HTTP、HTTPS 或增强型 HTTP
-- 管理点配置：仅限 HTTPS 或允许 HTTP 或 HTTPS
+- 网站配置：HTTP、HTTPS 或增强型 HTTP
+- 管理点配置：是仅 HTTPS，还是允许使用 HTTP 或 HTTPS
 - 以设备为中心的方案的设备标识
 - 以用户为中心的方案的用户标识
 
@@ -157,7 +158,7 @@ ms.locfileid: "50411368"
 
      代理 Web 服务器上的 SSL 终止的优点是：在将来自 Internet 的数据包转发到内部网络之前，会对该数据包进行检测。 代理 Web 服务器将对来自客户端的连接进行验证，将其终止，然后建立一个新的经身份验证的连接，连接到基于 Internet 的站点系统。 当 Configuration Manager 客户端使用代理 Web 服务器时，客户端标识（客户端 GUID）安全地包含在数据包有效负载内，因而管理点不会将代理 Web 服务器视为客户端。 Configuration Manager 中不支持 HTTP 到 HTTPS 的桥接，或 HTTPS 到 HTTP 的桥接。  
 
--   隧道：   
+-   **隧道**：   
     如果代理 Web 服务器无法支持 SSL 桥接的要求，或者想对通过 Configuration Manager 注册的移动设备配置 Internet 支持，则也支持 SSL 隧道。 这是一项安全性较差的选项，因为来自 Internet 的 SSL 数据包会在不终止 SSL 的情况下转发到站点系统，因此无法检测其是否包含恶意内容。 使用 SSL 隧道时，代理 Web 服务器不需要证书。  
 
 
@@ -265,9 +266,9 @@ Configuration Manager 中的站点间通信使用数据库复制和基于文件�
 
 如果将域用户帐户配置为这些站点系统角色的连接帐户，请确保该域用户帐户具有对该站点上的 SQL Server 数据库的适当访问权限：  
 
--   管理点：“管理点数据库连接帐户”   
+-   管理点：**管理点数据库连接帐户**  
 
--   注册点：“注册点连接帐户”   
+-   注册点：**注册点连接帐户**  
 
 在规划其他林中的站点系统角色时，请考虑以下其他信息：  
 
@@ -295,7 +296,7 @@ Configuration Manager 对不在其站点的站点服务器所在的相同林中�
 -   将每个站点配置为将其数据发布到 Active Directory 域服务。 此配置允许该林中的客户端检索站点信息以及查找管理点。 对于无法将 Active Directory 域服务用于服务定位的客户端，可使用 DNS、WINS 或客户端的分配的管理点。  
 
 
-####  <a name="bkmk_xchange"></a> 方案 4：将 Exchange Server 连接器置于远程林中  
+####  <a name="bkmk_xchange"></a> 方案 4：将 Exchange Server 连接器放置到远程林中  
 
 若要支持此方案，请确保在林之间进行名称解析。 例如，配置 DNS 转发。 配置 Exchange Server 连接器时，请指定 Exchange Server 的 Intranet FQDN。 有关详细信息，请参阅[使用 Configuration Manager 和 Exchange 管理移动设备](/sccm/mdm/deploy-use/manage-mobile-devices-with-exchange-activesync)。  
 

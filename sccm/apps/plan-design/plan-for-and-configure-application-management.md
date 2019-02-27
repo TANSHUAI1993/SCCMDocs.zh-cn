@@ -10,16 +10,17 @@ ms.assetid: 2be84a1d-ebb9-47ae-8982-c66d5b92a52a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: df936f3ab5567840560497edd60a32f3bbb9c74d
-ms.sourcegitcommit: 0d7efd9e064f9d6a9efcfa6a36fd55d4bee20059
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 62d750a6ff711afc06ddbcec9b9ad98ecfab758e
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43893595"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56124149"
 ---
 # <a name="plan-for-and-configure-application-management-in-configuration-manager"></a>在 Configuration Manager 中规划和配置应用程序管理
 
-*适用于：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 使用本文中的信息可帮助实现用于在 Configuration Manager 中部署应用程序的所需依赖关系。  
 
@@ -266,11 +267,11 @@ Configuration Manager 根据以下属性应用自定义软件中心品牌：
 
 #### <a name="verify-the-installation-of-these-site-system-roles"></a>验证这些站点系统角色的安装  
 
-- 状态消息：使用组件“SMS_PORTALWEB_CONTROL_MANAGER”  和“SMS_AWEBSVC_CONTROL_MANAGER” 。  
+- 状态消息：使用组件“SMS_PORTALWEB_CONTROL_MANAGER”和“SMS_AWEBSVC_CONTROL_MANAGER”。  
 
     例如，“SMS_PORTALWEB_CONTROL_MANAGER”的状态 ID“1015”确认站点组件管理器已成功安装在应用程序目录网站点上。  
 
-- 日志文件：搜索 **SMSAWEBSVCSetup.log** 和 **SMSPORTALWEBSetup.log**。  
+- 日志文件：搜索“SMSAWEBSVCSetup.log”和“SMSPORTALWEBSetup.log”。  
 
     有关详细信息，请搜索 **awebsvcMSI.log** 和 **portlwebMSI.log** 日志文件。  
 
@@ -301,7 +302,7 @@ Configuration Manager 客户端在下次下载客户端策略时将为设备配�
 > [!TIP]  
 >  应用程序目录在安装后未正常运行的大多数典型原因都是未满足先决条件。 确认应用程序目录站点系统角色的角色先决条件。 有关详细信息，请参阅[站点和站点系统先决条件](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)。  
 
-在浏览器中，输入应用程序目录网站的地址。 确认网页显示以下三个选项卡：“应用程序目录”、“我的应用程序请求”和“我的设备”。  
+在浏览器中，输入应用程序目录网站的地址。 确认网页显示三个选项卡：“应用程序目录”、“我的应用程序请求”和“我的设备”。  
 
 为“应用程序目录”使用以下列表中适当的地址，其中 &lt;server&gt; 是计算机名、Intranet FQDN 或 Internet FQDN：  
 

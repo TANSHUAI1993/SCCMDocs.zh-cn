@@ -10,16 +10,17 @@ ms.assetid: 9181c84e-d74f-44ea-9bb9-f7805eb465fc
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-ms.openlocfilehash: 38732081ce27fde764f7d47a565ce1211cef1f54
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 1fa26147539abc611b86791f6dd9a4be0bc89c59
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39383544"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56156468"
 ---
 # <a name="create-windows-applications-in-configuration-manager"></a>在 Configuration Manager 中创建 Windows 应用程序
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 除了[创建应用程序](/sccm/apps/deploy-use/create-applications)的其他 Configuration Manager 要求和过程，在创建和部署适用于 Windows 设备的应用程序时还需考虑以下注意事项。  
 
@@ -43,7 +44,7 @@ Configuration Manager 支持为 Windows 8.1 和 Windows 10 设备部署 Windows 
 
 
 ## <a name="bkmk_provision"></a> 为设备上的所有用户预配 Windows 应用包
-<!--1358310--> 从版本 1806 开始，使用 Windows 应用包为设备上的所有用户预配应用程序。 此方案的一个常见示例是将来自 Microsoft Store 商业版和教育版的应用（如 Minecraft 教育版）预配到学校学生使用的所有设备。 以前，Configuration Manager 仅支持按用户安装这些应用程序。 登录到新的设备后，学生不得不等会儿时间来访问应用。 现在，将应用预配到所有用户的设备时，他们的工作更快更高效。
+<!--1358310--> 从版本 1806 开始，使用 Windows 应用包为设备上的所有用户预配应用程序。 此方案的一个常见示例是将来自适用于企业和适用于教育的 Microsoft Store 的应用（如 Minecraft: Education Edition）预配到学校学生使用的所有设备。 以前，Configuration Manager 仅支持按用户安装这些应用程序。 登录到新的设备后，学生不得不等会儿时间来访问应用。 现在，将应用预配到所有用户的设备时，他们的工作更快更高效。
 
 > [!Important]  
 > 在设备上安装、预配和更新相同 Windows 应用包的不同版本时要小心，否则可能会导致意外的结果。 使用 Configuration Manager 预配应用时就需要注意些，但随后用户可从 Microsoft Store 更新应用。 有关详细信息，请在[管理来自适用于企业的 Microsoft Store 的应用](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business#next-steps)时参阅下一步指南。  
@@ -51,8 +52,8 @@ Configuration Manager 支持为 Windows 8.1 和 Windows 10 设备部署 Windows 
 当预配脱机许可应用时，Configuration Manager 不允许 Windows 从 Microsoft Store 自动更新它。  
 
 Configuration Manager 支持在以下 Windows 版本上预配应用：<!--SCCMDocs-pr issue 2762-->
-- 安装操作：Windows 10，版本 1607 及更高版本
-- 卸载操作：Windows 10，版本 1703 及更高版本
+- 安装操作：Windows 10 1607 版及更高版本
+- 卸载操作：Windows 10 1703 版及更高版本
 
 若要配置此功能的 Windows 应用部署类型，请启用“为设备上的所有用户预配此应用程序”选项。 有关详细信息，请参阅[创建应用程序](/sccm/apps/deploy-use/create-applications)。
 

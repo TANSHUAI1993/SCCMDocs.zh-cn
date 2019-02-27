@@ -10,16 +10,17 @@ ms.assetid: 60575413-44fe-43bb-bcfb-39ec5ed5055b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: e798c11bbbd6c6d69ea8455ecb7b0252a408659d
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: b90628e4f1e4a1405c90d17fc43628df00070978
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385928"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56123376"
 ---
 # <a name="client-spy"></a>客户端 Spy
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 客户端 Spy 是一个 [Configuration Manager 工具](/sccm/core/support/tools)。 该工具可用于排查 Configuration Manager 客户端上的软件分发、清单和软件计数问题。 
 
@@ -190,13 +191,13 @@ ms.locfileid: "39385928"
 
 - **软件清单**：包含上一个周期的开始日期、上一个报表的日期以及上一个报表的次要和主要版本。  
 
-- **文件收集**：包含上一个周期的开始日期、上一个报表的日期以及上一个报表的次要和主要版本。  
+- **文件集合**：包含上一个周期的开始日期、上一个报表的日期以及上一个报表的次要和主要版本。  
 
 - **硬件清单**：包含上一个周期的开始日期、上一个报表的日期以及上一个报表的次要和主要版本。  
 
-- **IDMIF 集合**：包含上一个周期的开始日期、上一个报表的日期以及上一个报表的次要和主要版本。  
+- **IDMIF 收集**：包含上一个周期的开始日期、上一个报表的日期以及上一个报表的次要和主要版本。  
 
-- **DDR**：包含上一个周期的开始日期、上一个报表的日期以及上一个报表的次要版本和主要版本。 DDR 信息也会显示在子树中。
+- **DDR**：包含上一个周期的开始日期、上一个报表的日期以及上一个报表的次要和主要版本。 DDR 信息也会显示在子树中。
 
 
 

@@ -10,16 +10,17 @@ ms.assetid: f7832d83-9ae2-4530-8a77-790e0845e12f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 85ce1c4b5201c29ffa3543357f50a379c1b11e7f
-ms.sourcegitcommit: 84afecee44200e27d1d5bb5ed2d54fd6a8c51617
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: e876e34929479654240ff220c3cad91043da0f83
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43053875"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56123131"
 ---
 # <a name="back-up-a-configuration-manager-site"></a>备份 Configuration Manager 站点
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 准备备份和恢复方法，以避免数据丢失。 对于 Configuration Manager 站点，备份和恢复方法可有助于更快地恢复站点和层次结构，并最大程度降低数据丢失的风险。  
 
@@ -29,7 +30,7 @@ ms.locfileid: "43053875"
 
 ## <a name="considerations-before-creating-a-backup"></a>创建备份之前的注意事项  
 
--   如果使用 SQL Server Always On 可用性组来托管站点数据库：按照[准备使用 SQL Server Always On](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database#changes-for-site-backup) 中的说明修改备份和恢复计划。  
+-   如果使用 SQL Server Always On 可用性组托管站点数据库：修改备份和恢复计划，如[准备使用 SQL Server Always On](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database#changes-for-site-backup) 中所述。  
 
 -   Configuration Manager 可以从 Configuration Manager 备份任务恢复站点数据库。 它还可以使用通过其他进程创建的站点数据库的备份。   
 
@@ -83,11 +84,11 @@ ms.locfileid: "43053875"
     > [!IMPORTANT]  
     >  为了帮助防止篡改备份文件，请将文件存储在安全的位置。 最安全的备份路径是本地驱动器，因此可以在文件夹上设置 NTFS 文件权限。 Configuration Manager 不会对备份路径中存储的备份数据进行加密。  
 
-    -   站点服务器上用于站点数据和数据库的本地驱动器：指定任务将站点和站点数据库的备份文件存储在站点服务器本地磁盘驱动器上的指定路径中。 在备份任务运行之前创建本地文件夹。 站点服务器上的本地系统帐户必须具有站点服务器备份的本地文件夹的“写入”NTFS 文件权限。 运行 SQL Server 的计算机上的本地系统帐户必须具有站点数据库备份文件夹的“写入”NTFS 权限。  
+    -   **站点服务器上用于站点数据和数据库的本地驱动器**：指定任务将站点和站点数据库的备份文件存储在站点服务器本地磁盘驱动器上的指定路径中。 在备份任务运行之前创建本地文件夹。 站点服务器上的本地系统帐户必须具有站点服务器备份的本地文件夹的“写入”NTFS 文件权限。 运行 SQL Server 的计算机上的本地系统帐户必须具有站点数据库备份文件夹的“写入”NTFS 权限。  
 
-    -   站点数据和数据库的网络路径（UNC 名称）：指定任务将站点和站点数据库的备份文件存储在指定网络路径中。 在备份任务运行之前创建共享。 站点服务器的计算机帐户必须具有对共享网络文件夹的“写入”NTFS 和共享权限。 如果 SQL Server 安装在另一台计算机上，则 SQL Server 的计算机帐户必须具有相同的权限。  
+    -   **站点数据和数据库的网络路径(UNC 名称)**：指定任务将站点和站点数据库的备份文件存储在指定的网络路径中。 在备份任务运行之前创建共享。 站点服务器的计算机帐户必须具有对共享网络文件夹的“写入”NTFS 和共享权限。 如果 SQL Server 安装在另一台计算机上，则 SQL Server 的计算机帐户必须具有相同的权限。  
 
-    -   站点服务器和 SQL Server 上的本地驱动器：指定任务将站点的备份文件存储在站点服务器本地驱动器上的指定路径中。 该任务将站点数据库的备份文件存储在站点数据库服务器的本地驱动器上的指定路径中。 在备份任务运行之前创建本地文件夹。 站点服务器的计算机帐户必须具有你在站点服务器上创建的文件夹的“写入”NTFS 权限。 SQL Server 的计算机帐户必须具有你在站点数据库服务器上创建的文件夹的“写入”NTFS 权限。 只有在站点服务器未安装站点数据库时，此选项才可用。  
+    -   **站点服务器和 SQL Server 上的本地驱动器**：指定任务将站点的备份文件存储在站点服务器的本地驱动器上的指定路径中。 该任务将站点数据库的备份文件存储在站点数据库服务器的本地驱动器上的指定路径中。 在备份任务运行之前创建本地文件夹。 站点服务器的计算机帐户必须具有你在站点服务器上创建的文件夹的“写入”NTFS 权限。 SQL Server 的计算机帐户必须具有你在站点数据库服务器上创建的文件夹的“写入”NTFS 权限。 只有在站点服务器未安装站点数据库时，此选项才可用。  
 
     > [!NOTE]  
     >   只有在指定了备份目标的网络路径时，用于浏览到备份目标的选项才可用。  

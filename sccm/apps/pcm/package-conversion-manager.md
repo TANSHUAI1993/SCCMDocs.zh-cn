@@ -10,16 +10,17 @@ ms.assetid: f053fa73-c553-4522-a6b9-f885f23fe57c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 41dd6ad6f8a0292fdb16a0d727665b17e038f87b
-ms.sourcegitcommit: 1439817f1309658b31008d7bafaab32fc5ef8789
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: ba73d215b9a672f4843c2f1e4a63dfc6bd13ea74
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52820035"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56132878"
 ---
 # <a name="package-conversion-manager"></a>包转换管理器
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 <!--1357861-->
 
@@ -63,7 +64,7 @@ ms.locfileid: "52820035"
 
 - [资源充足的测试环境](#bkmk_define-high)：你拥有的测试环境具有资源、权限和体系结构，可完全复制你的生产环境。  
 
-- [资源受限的测试环境](#bkmk_define-limited)：你拥有的测试环境无法完全复制你的生产环境。  
+- [资源有限的测试环境](#bkmk_define-limited)：你拥有的测试环境无法完全复制你的生产环境。  
 
 针对其他特定于环境的问题，请根据需要调整这些计划。
 

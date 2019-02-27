@@ -10,16 +10,17 @@ ms.assetid: 1d58176e-abc0-4087-8583-ce70deb4dcf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 515385c6c6855e63dc32b522edff9cd2047331bd
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: a41b2c0931fc3deb72ff92d8b12b433ef5651aa1
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32343028"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56129589"
 ---
 # <a name="security-and-privacy-for-site-administration-in-system-center-configuration-manager"></a>System Center Configuration Manager 中站点管理的安全和隐私
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 本主题介绍了 System Center Configuration Manager 站点和层次结构的安全和隐私信息。
 
@@ -98,7 +99,7 @@ Configuration Manager 自动创建和管理这些安全组。 这包括在删除
 
 安全配置向导 (SCW) 帮助你创建可应用于网络上的任何服务器的安全策略。 安装 System Center Configuration Manager 模板后，SCW 可识别 Configuration Manager 站点系统角色、服务、端口和应用程序。 然后，它允许 Configuration Manager 所需的通信并阻止不必要的通信。  
 
-安全配置向导包含在可从 Microsoft 下载中心下载的 System Center 2012 Configuration Manager 工具包中：[System Center 2012 — Configuration Manager Component Add-ons and Extensions](http://go.microsoft.com/fwlink/p/?LinkId=251931)（System Center 2012 - Configuration Manager 组件加载项和扩展）。  
+System Center 2012 Configuration Manager 工具包附有安全配置向导，该工具包可从 Microsoft 下载中心下载：[System Center 2012 — Configuration Manager Component Add-ons and Extensions](http://go.microsoft.com/fwlink/p/?LinkId=251931)（System Center 2012 - Configuration Manager 组件附加设备和扩展）。  
 
 **为站点系统配置静态 IP 地址。**  
 

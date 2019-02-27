@@ -10,15 +10,17 @@ ms.assetid: 17cf034f-eaff-43ce-bc8e-917213c1db74
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: b7fa19ed6dbdcd745b911e235c95166a70c00f23
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: f8efc99783b07b5097ac2e6de82df9651eefa5ce
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56127195"
 ---
 # <a name="publish-site-data-for-system-center-configuration-manager"></a>发布 System Center Configuration Manager 的站点数据
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 在为 System Center Configuration Manager 扩展 Active Directory 架构后，可将 Configuration Manager 站点发布到 Active Directory 域服务 (AD DS)。 这使 Active Directory 计算机能以从受信任的源中安全地检索站点信息。 尽管无需将站点信息发布到 AD DS 即可使用基本的 Configuration Manager 功能，但这么做可以减少管理开销。  
 
@@ -49,7 +51,7 @@ ms.lasthandoff: 05/03/2018
 
 1.  在 Configuration Manager 控制台中，单击“管理”。  
 
-2.  在“管理”  工作区中，单击“Active Directory 林” 。 如果 Active Directory 林发现之前已运行，你将在结果窗格中看到每个发现的林。 当 Active Directory 林发现运行时，将发现本地林和任何受信任林。 只有不受信任的林才必须手动添加。  
+2.  在“管理”工作区中，展开“层次结构配置”，并单击“Active Directory 林”。 如果 Active Directory 林发现之前已运行，你将在结果窗格中看到每个发现的林。 当 Active Directory 林发现运行时，将发现本地林和任何受信任林。 只有不受信任的林才必须手动添加。  
 
     -   若要设置先前发现的林，请在结果窗格中选择林。 然后在“主页”选项卡上的“属性”组中，单击“属性”以打开林属性。 继续执行步骤 3。  
 

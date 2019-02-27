@@ -10,16 +10,17 @@ ms.assetid: b0c9db74-841e-46eb-8924-957cde968bf7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 0c15e919978ae8458f426511dd9a0e6d7c311b4b
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 3cda70e7a5f1b2cf7dec079a7e933af48f0bf8ad
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32333262"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56128392"
 ---
 # <a name="upgrade-windows-devices-with-the-edition-upgrade-policy-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中使用版本升级策略升级 Windows 设备
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 
 “版本升级策略”可以将运行以下任一 Windows 10 版本的设备自动升级为其他版本：
@@ -38,7 +39,7 @@ ms.locfileid: "32333262"
 ## <a name="before-you-start"></a>开始之前  
  开始将设备升级为最新版本之前，请先查看以下先决条件：  
 
--   针对 Windows 10 桌面版：在使用该策略的所有目标设备上的新版 Windows 的有效产品密钥。 此产品密钥可以是多次激活密钥 (MAK) 或通用批量授权密钥 (GVLK)。 GVLK 也叫密钥管理服务 (KMS) 客户端安装密钥。 有关详细信息，请参阅[规划批量激活](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client)。 如需 KMS 客户端设置密钥的列表，请参阅 Windows Server 激活指南的[附录 A](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys)。 <!--496871-->  
+-   针对 Windows 10 桌面版：使用该策略的所有目标设备上的新版 Windows 的有效产品密钥。 此产品密钥可以是多次激活密钥 (MAK) 或通用批量授权密钥 (GVLK)。 GVLK 也叫密钥管理服务 (KMS) 客户端安装密钥。 有关详细信息，请参阅[规划批量激活](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client)。 如需 KMS 客户端设置密钥的列表，请参阅 Windows Server 激活指南的[附录 A](https://docs.microsoft.com/windows-server/get-started/kmsclientkeys)。 <!--496871-->  
 
 -   针对 Windows 10 移动版：Microsoft 批量许可服务中心 (VLSC) 的 XML 许可证文件。 此文件包含在使用该策略的所有目标设备上的新版 Windows 的许可信息。
 

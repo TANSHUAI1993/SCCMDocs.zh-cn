@@ -10,16 +10,17 @@ ms.assetid: 15a4e323-9f42-4fea-bb14-f2b905d1f77c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7caffbbccfa53ef4e502685263cb0d81c6e83535
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: a94cb1338e010bfbd9ed1e2ecf7bdb5ba2418390
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32336630"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56120685"
 ---
 # <a name="how-to-deploy-clients-to-unix-and-linux-servers-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中如何将客户端部署到 UNIX 和 Linux 服务器
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 在可以用 System Center Configuration Manager 管理 Linux 或 UNIX 服务器之前，你必须在每个 Linux 或 UNIX 服务器上安装适用于 Linux 和 UNIX 的 Configuration Manager 客户端。 可以在每台计算机上手动完成客户端安装，或远程使用安装客户端的 shell 脚本。 Configuration Manager 不支持对 Linux 或 UNIX 服务器使用客户端请求安装。 （可选）你可以为 System Center orchestrator 配置 Runbook 来自动执行 Linux 或 UNIX 服务器上的客户端安装。  
 
@@ -56,7 +57,7 @@ ms.locfileid: "32336630"
 
 -   **-sitecode &lt;site code\>** 指定将客户端分配到的站点的站点代码。  
 
-     示例：S01  
+     例如：S01  
 
 -   &lt;property #1> &lt;property #2> 指定要与安装脚本搭配使用的命令行属性。  
 
@@ -145,7 +146,7 @@ ms.locfileid: "32336630"
 
      如果不使用此属性可指定 PKI 证书，客户端使用自签名的证书和与站点系统的所有通讯都是通过 HTTP。  
 
-     如果您在上指定了无效的证书客户端安装命令行，会返回任何错误。 这是因为客户端安装后会发生的证书验证。 如果客户端启动，证书的验证与管理点并且如果验证失败的证书中将显示以下消息 **scxcm.log**, ，Unix 和 Linux Configuration Manager 客户端的日志文件： **失败验证管理点证书**。 默认的日志文件位置是：  **/var/opt/microsoft/scxcm.log**。  
+     如果您在上指定了无效的证书客户端安装命令行，会返回任何错误。 这是因为客户端安装后会发生的证书验证。 当客户端启动并使用管理点验证证书时，如果证书未通过验证，则将在 scxcm.log（即 Unix 和 Linux Configuration Manager 客户端日志文件）中显示以下消息：“管理点证书未通过验证”。 默认的日志文件位置是：  **/var/opt/microsoft/scxcm.log**。  
 
     > [!NOTE]  
     >  安装客户端时，必须指定此属性并使用 **-mp** 属性指定配置为仅接受 HTTPS 客户端连接的管理点。  

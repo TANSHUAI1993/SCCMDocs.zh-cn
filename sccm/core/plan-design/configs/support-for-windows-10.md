@@ -10,16 +10,17 @@ ms.assetid: a1626a65-da22-49e0-9564-d2f752ea3f4b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: a02f904614e245a61e533164d25c0280e3a4d486
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 7e09453086d2ce8ff02e566188e5ae4a20228820
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456120"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56135933"
 ---
 # <a name="support-for-windows-10-in-configuration-manager"></a>Configuration Manager 支持使用 Windows 10  
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 
 了解 Configuration Manager 支持的 Windows 10 版本，包括：
@@ -65,7 +66,7 @@ Configuration Manager 版本将在[对该版本的支持](/sccm/core/servers/man
 <!-- lifecycle reference: https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet -->
 
 > [!Note]  
-> 对 Windows 10 半年频道版本支持的版本包括：企业版、专业版、教育版和专业教育版。   
+> 支持 Windows 10 半年频道版本的版本包括：企业版、专业版、教育版和专业教育版。   
 
 | 项 |
 |--|

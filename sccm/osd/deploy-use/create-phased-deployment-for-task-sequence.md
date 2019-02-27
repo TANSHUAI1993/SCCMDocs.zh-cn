@@ -10,16 +10,17 @@ ms.assetid: b634ff68-b909-48d2-9e2c-0933486673c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 7d103f7f7b92003605d92d34d6294ed06009118c
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 9107e3bf851ddbcec061eeeac064f31e7392ee9f
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52456509"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56142436"
 ---
 # <a name="create-phased-deployments-with-configuration-manager"></a>使用 Configuration Manager 创建分阶段部署
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 分阶段部署可在多个集合中自动协调有序地推出软件。 例如，将软件部署到试点集合，然后根据成功条件自动继续推出。 创建分阶段部署时，既可以使用默认的两个阶段，也可以手动配置多个阶段。 
 
@@ -58,12 +59,12 @@ ms.locfileid: "52456509"
 
 #### <a name="criteria-for-success-of-the-first-phase"></a>第一阶段成功的标准  
 
-- **部署成功百分比**：指定要确保第一阶段成功，需成功完成部署的设备所占百分。 默认情况下，此值为 95%。 换而言之，针对此部署，当 95% 的设备的符合性状态都为“成功”时，站点认为第一阶段成功。 然后，该站点将继续进入第二阶段，并创建下一个集合的软件部署。  
+- **部署成功百分比**：指定要确保第一阶段成功，需成功完成部署的设备所占百分比。 默认情况下，此值为 95%。 换而言之，针对此部署，当 95% 的设备的符合性状态都为“成功”时，站点认为第一阶段成功。 然后，该站点将继续进入第二阶段，并创建下一个集合的软件部署。  
 
 
 #### <a name="conditions-for-beginning-second-phase-of-deployment-after-success-of-the-first-phase"></a>在第一阶段成功后开始第二阶段部署的条件  
 
-- **在某个延迟时间段(以天为单位)后自动开始此阶段**：选择在第一阶段成功后开始第二阶段之前等待的天数。 默认情况下，此值为一天。  
+- **在延迟时间段(以天为单位)后自动开始此阶段**：选择在第一阶段成功后开始第二阶段之前等待的天数。 默认情况下，此值为一天。  
 
 - **手动开始第二阶段部署**：在第一阶段成功后，站点不会自动开始第二阶段。 此选项需手动启动第二阶段。 有关详细信息，请参阅[进入下一阶段](/sccm/osd/deploy-use/manage-monitor-phased-deployments#bkmk_move)。  
 
@@ -77,7 +78,7 @@ ms.locfileid: "52456509"
 
 #### <a name="configure-the-deadline-behavior-relative-to-when-the-software-is-made-available"></a>配置与软件可用时间相关的截止时间行为  
 
-- **需要尽快安装**：将设备上的安装截止时间设置为在确定目标设备后立即安装。  
+- **需要尽快安装**：确定目标设备后立即设置设备上的安装截止时间。  
 
 - **需要在这段时间后进行安装**：将安装截止时间设置为在确定目标设备后的特定天数内安装。 默认情况下，此值为七天。   
 
@@ -94,7 +95,7 @@ Include a timeline diagram
 
     - **应用程序**（仅在版本 1806 或更高版本中）：转到“软件库”，展开“应用程序管理”，然后选择“应用程序”。 选择现有应用程序，然后选择功能区中的“创建分阶段部署”。  
 
-    - **软件更新**（仅在版本 1810 或更高版本中）：转到“软件库”，展开“软件更新”并选择“所有软件更新”。 选择一个或多个更新，然后选择功能区中的“创建分阶段部署”。  
+    - **软件更新**（仅在版本 1810 或更高版本中）：转到“软件库”，展开“软件更新”，然后选择“所有软件更新”。 选择一个或多个更新，然后选择功能区中的“创建分阶段部署”。  
 
         此操作可用于以下节点的软件更新：  
         - 软件更新  
@@ -103,7 +104,7 @@ Include a timeline diagram
         - Windows 10 服务、所有 Windows 10 更新  
         - Office 365 客户端管理、Office 365 更新  
 
-    - **任务序列**：转到“软件库”工作区中，展开“操作系统”，然后选择“任务序列”。 选择现有任务序列，然后选择功能区中的“创建分阶段部署”。  
+    - **任务序列**：转到“软件库”工作区，展开“操作系统”，选择“任务序列”。 选择现有任务序列，然后选择功能区中的“创建分阶段部署”。  
 
 2. 在“常规”页上，为分阶段部署提供名称、说明（可选），并选择“自动创建默认的二阶段部署”。  
 

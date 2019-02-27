@@ -1,5 +1,5 @@
 ---
-title: 拉取分发点
+title: 请求分发点
 titleSuffix: Configuration Manager
 description: 了解在结合使用 Configuration Manager 和拉取分发点方面的配置和限制。
 ms.date: 07/30/2018
@@ -10,23 +10,24 @@ ms.assetid: 7d8f530b-1a39-4a9d-a2f0-675b516da7e4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 008da23a6fedf1666a29754dc41a47c61f8bfbda
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: a5336db0bd16d4845650bae775f2eff895e617fb
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39384226"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56142266"
 ---
 # <a name="use-a-pull-distribution-point-with-configuration-manager"></a>结合使用 Configuration Manager 和拉取分发点
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 
 如果将内容分发给 Configuration Manager 控制台中的标准分发点，站点服务器会将该内容推送至分发点。 拉取分发点通过从客户端等源位置进行下载来获取内容。  
 
 在将内容分发到多个分发点时，拉取分发点有助于降低站点服务器的处理负荷。 它们还能更快地将内容传输到每个服务器。 通常，站点服务器上的分发管理器组件将内容发送到每个分发点。 相对的，站点则卸载将内容传输至拉取分发点的进程。  
 
-可将单独的分发点配置为拉取分发点。 对于每个拉取分发点，请指定可从中获取内容的一个或多个源分发点。 拉取分发点只能从指定为源分发点的分发点中下载内容。 
+可以将单独的分发点配置为请求分发点。 对于每个拉取分发点，请指定可从中获取内容的一个或多个源分发点。 拉取分发点只能从指定为源分发点的分发点中下载内容。 
 
 在将内容分发到控制台中的拉取分发点时，站点服务器会向其发送通知。 然后，拉取分发点从源分发点下载内容。 拉取分发点通过从已具有内容副本的分发点下载内容，实现内容传输的管理。  
 
@@ -39,7 +40,7 @@ ms.locfileid: "39384226"
 - 单独管理或作为分发点组的成员进行管理  
 
 > [!IMPORTANT]  
-> 尽管拉取分发点支持通过 HTTP 和 HTTPS 进行通信，但在使用 Configuration Manager 控制台时，你只能指定为 HTTP 配置的源分发点。 你可以使用 Configuration Manager SDK 来指定为 HTTPS 配置的源分发点。  
+> 尽管请求分发点支持通过 HTTP 和 HTTPS 的通信，但在使用 Configuration Manager 控制台时，你只能指定为 HTTP 配置的源分发点。 你可以使用 Configuration Manager SDK 来指定为 HTTPS 配置的源分发点。  
 
 在安装分发点时配置拉取分发点。 创建分发点之后，可通过编辑角色属性将其配置为拉取分发点。 要详细了解如何使分发点成为拉取分发点，请参阅[拉取分发点](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#pull-distribution-point)。  
 
@@ -53,9 +54,9 @@ ms.locfileid: "39384226"
 
 -   将内容分发到控制台中的拉取分发点之后，站点服务器上的包传输管理器组件会检查站点数据库，确认内容在源分发点上是否可用。 如果无法确认内容位于拉取分发点的源分发点上，则每 20 分钟重复检查一次，直至内容可用为止。  
 
--   当包传输管理器确认内容可用后，它将通知拉取分发点下载内容。 如果此通知失败，则它根据拉取分发点的软件分发组件“重试设置”进行重试。 拉取分发点收到此通知后，会尝试从其源分发点下载内容。  
+-   当包传输管理器确认内容可用后，它将通知请求分发点下载内容。 如果此通知失败，则它根据拉取分发点的软件分发组件“重试设置”进行重试。 拉取分发点收到此通知后，会尝试从其源分发点下载内容。  
 
--   在拉取分发点下载内容时，包传输管理器将根据拉取分发点的软件分发组件“状态轮询设置”轮询状态。  在拉取分发点完成内容下载后，它会将此状态提交到管理点。  
+-   在拉取分发点下载内容时，包传输管理器将根据拉取分发点的软件分发组件“状态轮询设置”轮询状态。  在请求分发点完成内容下载后，它会将此状态提交到管理点。  
 
 
 
@@ -94,7 +95,7 @@ ms.locfileid: "39384226"
 
 -   预留内容配置覆盖拉取分发点配置。 如果在拉取分发点上打开“为预留的内容启用此分发点”选项，则它会等待内容。 它不会从源分发点拉取内容。 就像为预留内容启用的标准分发点一样，它不从站点服务器接收内容。 有关详细信息，请参阅[预留内容](/sccm/core/plan-design/hierarchy/manage-network-bandwidth#BKMK_PrestagingContent)。  
 
--   拉取分发点不使用计划或速率限制配置。 如果将之前安装的分发点配置为拉取分发点，则会保存计划和速率限制配置，但不使用这些配置。 如果稍后删除了分发点配置，则实现之前配置的计划和速率限制配置。  
+-   拉取分发点不使用计划或速率限制配置。 如果将之前安装的分发点配置为拉取分发点，则会保存计划和速率限制配置，但不使用这些配置。 如果在以后删除请求分发点配置，则会实现以前配置的计划和速率限制配置。  
 
     > [!NOTE]  
     >  “计划”和“速率限制”选项卡在分发点属性中隐藏。  
@@ -113,20 +114,20 @@ ms.locfileid: "39384226"
 
 -   向导仅显示有资格成为源分发点的分发点。  
 
--   可将拉取分发点指定为另一个拉取分发点的源分发点。  
+-   可以将请求分发点指定为另一个请求分发点的源分发点。  
 
 -   在使用 Configuration Manager 控制台时，只能将支持 HTTP 的分发点指定为源分发点。  
 
 -   请使用 Configuration Manager SDK 来指定为 HTTPS 配置的源分发点。 若要使用为 HTTPS 配置的源分发点，请在拉取分发点上安装 Configuration Manager 客户端。  
 
--   自版本 1806 起，如果远程办公室与 Internet 建立了更好的连接，或者希望减少 WAN 链路负载，可在 Microsoft Azure 中将[云分发点](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point)用作源。 拉取分发点需要访问 Internet 才能与 Microsoft Azure 通信。 必须将内容分发到源云分发点。<!--1321554-->  
+-   自版本 1806 起，如果远程办公室与 Internet 建立了更好的连接，或者希望减少 WAN 链路负载，可在 Microsoft Azure 中将[云分发点](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point)用作源。 请求分发点需要访问 Internet 才能与 Microsoft Azure 通信。 必须将内容分发到源云分发点。<!--1321554-->  
 
     > [!Note]  
     > 此功能确实会对你的 Azure 数据存储和网络出口订阅收取费用。 有关详细信息，请参阅[使用云分发点所产生的成本](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#bkmk_cost)。  
 
 
 > [!Tip]  
-> 当拉取分发点从源分发点下载内容时，会将该拉取分发点计为“分发点使用情况摘要”  报表中“已访问客户端(唯一)”  列中的一个客户端。  
+> 当请求分发点从源分发点下载内容时，会将该请求分发点计为“分发点使用情况摘要”  报表中“已访问客户端(唯一)”  列中的一个客户端。  
 
 
 ### <a name="source-priorities"></a>源优先级
@@ -135,7 +136,7 @@ ms.locfileid: "39384226"
 
 -   优先级确定拉取分发点按什么顺序从其源分发点请求内容。  
 
--   拉取分发点首先将与优先级值最低的源分发点联系。 如果有多个源分发点具有相同的优先级，则拉取分发点随机选择该优先级上的某个源分发点。  
+-   请求分发点首先将与优先级值最低的源分发点联系。 如果有多个源分发点具有相同的优先级，则拉取分发点随机选择该优先级上的某个源分发点。  
 
 -   如果所选源上的内容不可用，拉取分发点随后会尝试从该优先级上的其他分发点下载内容。  
 

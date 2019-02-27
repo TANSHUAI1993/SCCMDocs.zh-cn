@@ -10,16 +10,17 @@ ms.assetid: b87ac054-9b37-4725-a3f3-2340cfb10bff
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 6ea093b71d19c2cee35caa748ae60f76a95b078c
-ms.sourcegitcommit: 54e5786875c4e5f5c1b54e38ed59e96344faf9b4
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 99bde59429af4d75e7e1dfab42d627d3a973efe6
+ms.sourcegitcommit: ceec0e20bf801071f2a05233f984cf17acc3fd29
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53817760"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265006"
 ---
 # <a name="checklist-for-installing-update-1810-for-configuration-manager"></a>用于为 Configuration Manager 安装 1810 更新的清单
 
-*适用于：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 使用 Configuration Manager 的 Current Branch 时，可安装版本为 1810 的控制台内部更新，从之前的版本更新层次结构。 <!-- baseline only statement: (Because version 1802 is also available as [baseline media](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions), you can use the installation media to install the first site of a new hierarchy.)-->
 
@@ -31,7 +32,7 @@ ms.locfileid: "53817760"
 
     -   dmpdownloader.log 可能指示 dmpdownloader 进程要等待一段时间之后才检查更新。 若要重启更新的重分发文件的下载，请在站点服务器上重启 SMS_Executive 服务。
 
-    -   当代理服务器设置阻止从 http://silverlight.dlservice.microsoft.com 和 http://download.microsoft.com 下载时，会出现另一个常见下载问题。
+    -   当代理服务器设置阻止从 http://silverlight.dlservice.microsoft.com、 http://download.microsoft.com 和/或 http://go.microsoft.com 下载时，会出现另一个常见下载问题。
 
 有关安装更新的详细信息，请参阅[控制台内部的更新和维护服务](/sccm/core/servers/manage/updates#a-namebkmkinconsolea-in-console-updates-and-servicing)。
 

@@ -10,16 +10,17 @@ ms.assetid: 82e8a693-9adf-4ca3-8484-7e101c34c7c1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 44ddf230d33759787636e88f6edcdd79744fd7b2
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: f6bc81a1aa6d8464094195c33faeecfeaf2d46f0
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32338918"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56123924"
 ---
 # <a name="monitor-content-you-have-distributed-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 监视分发的内容
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 使用 System Center Configuration Manager 控制台监视分发的内容，包括：  
 
@@ -161,7 +162,7 @@ ms.locfileid: "32338918"
 - **分发点**：显示属于所选边界组的分发点的数量。
 - **使用分发点的客户端**：显示所选边界组中使用了分发点来获取内容的客户端的数量。
 - **对等缓存源**：对于所选的边界组，显示已报出曾进行过下载操作的对等缓存源的数量。
-- “使用对等的客户端”：是所选边界组中的客户端数，显示使用对等缓存源来获取内容的客户端数。
+- **使用对等的客户端**：是所选边界组中的客户端数，显示使用对等缓存源来获取内容的客户端数。
 
 
 

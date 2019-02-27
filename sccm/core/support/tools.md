@@ -10,16 +10,17 @@ ms.assetid: 395403dc-6997-4415-93fd-6b1eeb6ba31a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fd23bd523eb64f7d00f71c38c79a180c4e2e569a
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 1479524f08f17aa59f6e7dc771253a4fb6720189
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39386538"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56131126"
 ---
 # <a name="configuration-manager-tools"></a>Configuration Manager 工具
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 Configuration Manager 工具包括[基于客户端的工具](#client-tools)和[基于服务器的工具](#server-tools)。 使用这些工具，帮助管理 Configuration Manager 基础结构并对其进行故障排除。 
 
@@ -39,9 +40,9 @@ Configuration Manager 工具包括[基于客户端的工具](#client-tools)和[�
 
 - [部署监视工具](/sccm/core/support/deployment-monitoring-tool)：对应用程序、更新和基线部署进行故障排除  
 
-- [策略 Spy](/sccm/core/support/policy-spy)：查看策略分配  
+- [策略监视](/sccm/core/support/policy-spy)：查看策略分配  
 
-- [Power Viewer 工具](/sccm/core/support/power-viewer-tool)：查看电源管理功能的状态  
+- [电源查看器工具](/sccm/core/support/power-viewer-tool)：查看电源管理功能状态  
 
 - [发送计划工具](/sccm/core/support/send-schedule-tool)：触发配置基线的计划和评估  
 
@@ -57,11 +58,11 @@ Configuration Manager 工具包括[基于客户端的工具](#client-tools)和[�
 
 - [内容库资源管理器](/sccm/core/support/content-library-explorer)：查看内容库单一实例存储的内容  
 
-- [内容库传输](/sccm/core/support/content-library-transfer)：在驱动器之间传输内容库  
+- [内容库转让](/sccm/core/support/content-library-transfer)：在驱动器之间转让内容库  
 
 - [内容所有权工具](/sccm/core/support/content-ownership-tool)：更改孤立包的所有权。 这些包存在于没有自有站点服务器的站点。  
 
-- [基于角色的管理和审核工具](/sccm/core/support/rbaviewer)：可帮助管理员审核角色配置  
+- [基于角色的管理和审核工具](/sccm/core/support/rbaviewer)：帮助管理员审核角色配置  
 
 - [运行计量摘要工具](/sccm/core/support/run-meter-summ)：运行计数摘要任务并分析计量数据
 

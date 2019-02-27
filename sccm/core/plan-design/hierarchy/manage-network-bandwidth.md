@@ -10,12 +10,13 @@ ms.assetid: e80d1151-91db-4a27-8411-a957297b67d0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 2d8587c0640d831a723b9ff7c3a6402d47ee2405
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 03d85a55e51125e40e1df766382b0a074d865a51
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32337235"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56141613"
 ---
 # <a name="manage-network-bandwidth-for-content"></a>管理用于内容的网络带宽
 为帮助管理用于 System Center Configuration Manager 内容管理过程的网络带宽，可以使用内置控件进行计划和限制。 也可以使用预留内容。 以下几部分详细说明了这些选项。
@@ -63,7 +64,7 @@ ms.locfileid: "32337235"
 
     -   **仅下载对分发点所做的内容更改**：如果预期包中内容的未来更新通常比初始包小，请使用此选项。 例如，可以预留 Microsoft Office 等应用程序，因为初始包大小超过 700 MB 并且太大而无法通过网络发送。 但是，对此包的内容更新可能小于 10 MB 并且容许通过网络进行分发。 另一个示例可能是驱动程序包，其中初始包较大，但逐渐添加到包中的驱动程序可能较小。  
 
-    -   **手动将此包中的内容复制到分发点**：如果具有较大的包（其中包含诸如操作系统之类的内容），并且决不想使用网络将内容分发到分发点，请使用此选项。 如果选择此选项，则必须在分发点上预留内容。  
+    -   **手动将此包中的内容复制到分发点**：如果具有较大的包（其中包含操作系统等内容），并且决不想使用网络将内容分发到分发点，请使用此选项。 如果选择此选项，则必须在分发点上预留内容。  
 
     > [!IMPORTANT]  
     >  前面的选项适用于单个包，并且仅在分发点被标识为预留时使用。 未被标识为预留的分发点将忽略这些设置。 在此情况下，内容始终通过网络从站点服务器分发到分发点。  

@@ -10,16 +10,17 @@ ms.assetid: 6dcef836-c0d1-40af-ad30-cd8d864b09a9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 912bdb93db05091ff756c51ee9f951a17a76ff5d
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: be12cfe29ff470f2f577bab2c685695ae5770bae
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39385968"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56131415"
 ---
 # <a name="site-server-high-availability-in-configuration-manager"></a>Configuration Manager 中的站点服务器高可用性
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 <!--1128774-->
 
@@ -119,11 +120,11 @@ ms.locfileid: "39385968"
 
      - 选择下列选项之一：  
 
-         - **通过网络从主动模式下的站点服务器复制安装源文件**：此选项创建压缩包并将其发送到新站点服务器。  
+         - **通过网络从主动模式下的站点服务器复制安装源文件**：此选项创建压缩包并将其发送到新的站点服务器。  
 
-         - **使用被动模式站点服务器上位于以下位置的源文件**：例如，已将源文件复制到其中的本地路径。 确保此内容与主动模式下的站点服务器中的相同。  
+         - **在处于被动模式的站点服务器上的以下位置使用源文件**：例如，已将源文件复制到的本地路径。 确保此内容与主动模式下的站点服务器中的相同。  
 
-         - （推荐）**使用位于以下网络位置的源文件**：从主动模式下的站点服务器直接指定 CD.Latest 文件夹内容的路径。 例如，`\\Server\SMS_ABC\CD.Latest` 中，“Server”是主动模式站点服务器的名称，“ABC”是站点代码。  
+         - （推荐）**使用以下网络位置中的源文件**：从主动模式下的站点服务器直接指定 CD.Latest 文件夹内容的路径。 例如，`\\Server\SMS_ABC\CD.Latest` 中，“Server”是主动模式站点服务器的名称，“ABC”是站点代码。  
 
      - 指定在新站点服务器上安装 Configuration Manager 的本地路径。 例如：`C:\Program Files\Configuration Manager`  
 

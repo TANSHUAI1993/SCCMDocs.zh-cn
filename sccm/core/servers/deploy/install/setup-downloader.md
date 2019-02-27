@@ -10,16 +10,17 @@ ms.assetid: bda87fc5-2e4c-4992-98a4-01770365038c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 1b29fb48d8d8abc2e0c6693725b65c90a0cf1cd1
-ms.sourcegitcommit: a849dab9333ebac799812624d6155f2a96b523ca
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: abfad38e0c02ff6c0af8d4c9c47bdeed7598e513
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42584553"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56129742"
 ---
 # <a name="setup-downloader-for-system-center-configuration-manager"></a>System Center Configuration Manager 安装程序下载程序
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 在运行安装程序安装或升级 System Center Configuration Manager 站点之前，可从要安装的 Configuration Manager 版本中使用安装程序下载程序独立应用程序下载更新的安装程序文件。  
 
@@ -65,7 +66,7 @@ ms.locfileid: "42584553"
 
     -   **/NOUI**：使用此选项以启动安装程序下载程序而不显示用户界面。 如果使用此选项，必须指定“下载路径”作为命令提示符中命令的一部分。  
 
-    -   **&lt;DownloadPath\>**：可以指定下载文件夹的路径以自动启动验证或下载过程。 使用“/NOUI”选项时必须指定下载路径。 如果未指定下载路径，则必须在安装程序下载程序打开时指定该路径。 安装程序下载程序会创建文件夹（如果不存在）。  
+    -   **&lt;DownloadPath\>**：你可以指定下载文件夹的路径以自动启动验证或下载过程。 使用“/NOUI”选项时必须指定下载路径。 如果未指定下载路径，则必须在安装程序下载程序打开时指定该路径。 安装程序下载程序会创建文件夹（如果不存在）。  
 
     示例命令：
 
