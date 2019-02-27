@@ -10,16 +10,17 @@ ms.assetid: 0cf4bacb-6b6d-4d4f-8640-b13fe15873de
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 915a8ac1d20ca288b2b830791c8a3b79c65ffbce
-ms.sourcegitcommit: 1826664216c61691292ea2a79e836b11e1e8a118
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: ae1ac3262acff35e23de4faa1e80c796f5ee4e4b
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39383629"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56156689"
 ---
 # <a name="support-for-windows-features-and-networks-in-configuration-manager"></a>对 Configuration Manager 中的 Windows 功能和网络的支持
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 本文介绍 Configuration Manager 对常用 Windows 功能和网络功能的支持。  
 
@@ -151,7 +152,7 @@ Configuration Manager 与在安装了 Configuration Manager 组件的 OS 版本�
 
 ### <a name="support-considerations"></a>支持注意事项
 
-- **存储区域网络**：只要将受支持的基于 Windows 的服务器直接连接至 SAN 托管的卷，就支持存储区域网络 (SAN)。  
+- **存储区域网络**：只要支持的基于 Windows 的服务器直接连接到 SAN 托管的卷，就支持存储区域网络 (SAN)。  
 
 - **单实例存储**：Configuration Manager 不支持在启用了单实例存储 (SIS) 的卷上配置分发点包和签名文件夹。  
 

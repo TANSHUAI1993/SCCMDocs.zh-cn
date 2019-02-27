@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4ff166d93812b07c37c31228ca395f0cfcf94de6
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: a57beb79bf7e4dc51e72d7254ff0f190c6ca32c4
+ms.sourcegitcommit: ef2960bd91655c741450774e512dd0a9be610625
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56156951"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56838950"
 ---
 # <a name="manage-applications-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中管理应用程序
 
@@ -45,6 +45,8 @@ ms.locfileid: "56156951"
 以下是特定于移动设备管理的部署和监视应用程序时需要牢记的一些注意事项。
 
 - 已注册 MDM 的设备不支持模拟部署、用户体验或计划设置。
+
+- 不要将超过 100 个区域设置添加到单个应用程序。 添加 100 个以上的区域设置可阻止应用与 Intune 同步。 此操作还会阻止应用程序正在安装或保持可用于在设备上安装。
 
 - 可以将该部署与 iOS 应用配置策略（如果已配置）相关联。 请参阅[使用应用配置策略配置 iOS 应用](configure-ios-apps-with-app-configuration-policies.md)。
 

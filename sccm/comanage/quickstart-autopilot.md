@@ -2,7 +2,7 @@
 title: 通过共同管理的 Windows Autopilot
 titleSuffix: Configuration Manager
 description: 使用 Windows Autopilot 通过共同管理配置管理器中，简化了的新 Windows 10 设备。
-ms.date: 01/14/2019
+ms.date: 02/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4c9867b7ea59b435bd1fd344dd0bf4aa67a2be21
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 28710b925444d681a161eff184b845a1cdd430b1
+ms.sourcegitcommit: ef2960bd91655c741450774e512dd0a9be610625
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56754690"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56838746"
 ---
 # <a name="windows-autopilot-with-co-management"></a>通过共同管理的 Windows Autopilot
 
@@ -94,5 +94,9 @@ Windows Autopilot 设备上使用 Windows 10 已预装的 OEM 优化版本。 �
 
 ## <a name="configure"></a>配置
 
-有关详细信息，请参阅[注册 Windows 设备在 Intune 中的使用 Windows Autopilot](https://docs.microsoft.com/intune/enrollment-autopilot)。
+有关详细信息，请参阅下列文章：
+
+[使用 Intune 创建 Windows Autopilot 配置文件](https://docs.microsoft.com/intune/enrollment-autopilot)
+
+[现有的设备的 Windows Autopilot](/sccm/osd/deploy-use/windows-autopilot-for-existing-devices)任务序列
 

@@ -10,16 +10,17 @@ ms.assetid: 0da167f1-52cf-4dfd-8f73-833ca3eb8478
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: fa8e3bf572ced8a2394099bbb59532502ef3b019
-ms.sourcegitcommit: 0b0c2735c4ed822731ae069b4cc1380e89e78933
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: f5c85e3058a63868cfee28865c1be222919b29a8
+ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32342148"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56141817"
 ---
 # <a name="command-line-options-for-setup-in-system-center-configuration-manager"></a>System Center Configuration Manager 中适用于安装程序的命令行选项
 
-*适用范围：System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
 
  使用以下信息从命令行配置脚本或安装 System Center Configuration Manager。  
@@ -68,9 +69,9 @@ ms.locfileid: "32342148"
 ##  <a name="bkmk_Lang"></a> 用于管理语言的命令行选项  
  **标识**  
 
--   **项名称：** Action  
+-   **密钥名称：** 操作  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** ManageLanguages  
 
@@ -78,41 +79,41 @@ ms.locfileid: "32342148"
 
 **选项**  
 
--   **项名称：** AddServerLanguages  
+-   **密钥名称：** AddServerLanguages  
 
-    -   **是否必需：** 否  
+    -   **必需：** 否  
 
     -   **值：** DEU、FRA、RUS、CHS、JPN、CHT、CSY、ESN、HUN、ITA、KOR、NLD、PLK、PTB、PTG、SVE、TRK 或 ZHH  
 
     -   **详细信息：** 指定可用于 Configuration Manager 控制台、报告和 Configuration Manager 对象的服务器语言。 默认情况下使用英语。  
 
--   **项名称：** AddClientLanguages  
+-   **密钥名称：** AddClientLanguages  
 
-    -   **是否必需：** 否  
+    -   **必需：** 否  
 
     -   **值：** DEU、FRA、RUS、CHS、JPN、CHT、CSY、ESN、HUN、ITA、KOR、NLD、PLK、PTB、PTG、SVE、TRK 或 ZHH  
 
     -   **详细信息：** 指定将可供客户端计算机使用的语言。 默认情况下使用英语。  
 
--   **项名称：** DeleteServerLanguages  
+-   **密钥名称：** DeleteServerLanguages  
 
-    -   **是否必需：** 否  
+    -   **必需：** 否  
 
     -   **值：** DEU、FRA、RUS、CHS、JPN、CHT、CSY、ESN、HUN、ITA、KOR、NLD、PLK、PTB、PTG、SVE、TRK 或 ZHH  
 
     -   **详细信息：** 指定将不再可用于 Configuration Manager 控制台、报告和 Configuration Manager 对象的要删除的语言。 默认情况下使用英语，因此无法删除它。  
 
--   **项名称：** DeleteClientLanguages  
+-   **密钥名称：** DeleteClientLanguages  
 
-    -   **是否必需：** 否  
+    -   **必需：** 否  
 
     -   **值：** DEU、FRA、RUS、CHS、JPN、CHT、CSY、ESN、HUN、ITA、KOR、NLD、PLK、PTB、PTG、SVE、TRK 或 ZHH  
 
     -   **详细信息：** 指定将不再可用于客户端计算机的要删除的语言。 默认情况下使用英语，因此无法删除它。  
 
--   **项名称：** MobileDeviceLanguage  
+-   **密钥名称：** MobileDeviceLanguage  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** 0 或 1  
 
@@ -122,9 +123,9 @@ ms.locfileid: "32342148"
 
     -   **详细信息：** 指定是否安装移动设备客户端语言。  
 
--   **项名称：** PrerequisiteComp  
+-   **密钥名称：** PrerequisiteComp  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** 0 或 1  
 
@@ -132,15 +133,15 @@ ms.locfileid: "32342148"
 
          1 = 已下载  
 
-    -   **详细信息：** 指定安装程序先决条件文件是否已下载。 例如，如果使用值 0，则安装程序将下载文件。  
+    -   **详细信息：** 指定是否已下载安装程序的必备文件。 例如，如果使用值 0，则安装程序将下载文件。  
 
--   **项名称：** PrerequisitePath  
+-   **密钥名称：** PrerequisitePath  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** <安装程序先决条件文件的路径>  
 
-    -   **详细信息：** 指定安装程序先决条件文件的路径。 根据 PrerequisiteComp 值，安装程序将使用此路径来存储已下载的文件或查找以前下载的文件。  
+    -   **详细信息：** 指定安装程序必备文件的路径。 根据 PrerequisiteComp 值，安装程序将使用此路径来存储已下载的文件或查找以前下载的文件。  
 
 ##  <a name="bkmk_Unattended"></a>无人参与安装程序脚本文件项  
  使用下列部分来帮助你为无人参与安装程序创建脚本。 列表显示了可用的安装程序脚本项、其对应的值、是否需要它们、它们用于哪种安装类型以及项的简要描述。  
@@ -150,9 +151,9 @@ ms.locfileid: "32342148"
 
 **标识**  
 
--   **项名称：** Action  
+-   **密钥名称：** 操作  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** InstallCAS  
 
@@ -160,57 +161,57 @@ ms.locfileid: "32342148"
 
 -   **密钥名称：** CDLatest  
 
-    -   **必备：** 是（仅在使用 CD.Latest 文件夹中的介质时）。    
+    -   **必需：** 是（仅在使用 CD.Latest 文件夹中的介质时）。    
 
-    -   **值：** 1。1 以外的任何值均视为不使用 CD.Latest。
+    -   **值：** 1. 1 以外的任何值均视为不使用 CD.Latest。
 
     -   **详细信息：** 从 CD.Latest 文件夹中的介质运行安装程序时，你的脚本必须包含该密钥和值，以安装主站点或管理中心站点，或恢复主站点或管理中心站点。 该值将告知安装程序当前使用介质形式 CD.Latest。
 
 **选项**  
 
--   **项名称：** ProductID  
+-   **密钥名称：** ProductID  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** <*xxxxx-xxxxx-xxxxx-xxxxx-xxxxx*>  *或* Eval  
 
     -   **详细信息：** 指定 Configuration Manager 安装产品密钥，包括短划线。 输入 **Eval** 以安装 Configuration Manager 的评估版。  
 
--   **项名称：** SiteCode  
+-   **密钥名称：** 站点代码  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** <*站点代码*>  
 
     -   **详细信息：** 指定三个字母数字字符，以唯一标识层次结构中的站点。  
 
--   **项名称：** 站点名称  
+-   **密钥名称：** 站点名称  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** <*站点名称*>  
 
     -   **详细信息：** 指定此站点的名称。  
 
--   **项名称：** SMSInstallDir  
+-   **密钥名称：** SMSInstallDir  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** <*Configuration Manager 安装路径*>  
 
     -   **详细信息：** 指定 Configuration Manager 程序文件的安装文件夹。  
 
--   **项名称：** SDKServer  
+-   **密钥名称：** SDKServer  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** <*SMS 提供程序 FQDN*>  
 
     -   **详细信息：** 指定将托管 SMS 提供程序的服务器的 FQDN。 你可以在初始安装后为站点配置其他 SMS 提供程序。  
 
--   **项名称：** PrerequisiteComp  
+-   **密钥名称：** PrerequisiteComp  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** 0 或 1  
 
@@ -218,19 +219,19 @@ ms.locfileid: "32342148"
 
          1 = 已下载  
 
-    -   **详细信息：** 指定安装程序先决条件文件是否已下载。 例如，如果使用值 0，则安装程序将下载文件。  
+    -   **详细信息：** 指定是否已下载安装程序的必备文件。 例如，如果使用值 0，则安装程序将下载文件。  
 
--   **项名称：** PrerequisitePath  
+-   **密钥名称：** PrerequisitePath  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** <安装程序先决条件文件的路径>  
 
-    -   **详细信息：** 指定安装程序先决条件文件的路径。 根据 PrerequisiteComp 值，安装程序将使用此路径来存储已下载的文件或查找以前下载的文件。  
+    -   **详细信息：** 指定安装程序必备文件的路径。 根据 PrerequisiteComp 值，安装程序将使用此路径来存储已下载的文件或查找以前下载的文件。  
 
--   **项名称：** AdminConsole  
+-   **密钥名称：** AdminConsole  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** 0 或 1  
 
@@ -240,11 +241,11 @@ ms.locfileid: "32342148"
 
     -   **详细信息：** 指定是否安装 Configuration Manager 控制台。  
 
--   **项名称：** JoinCEIP  
+-   **密钥名称：** JoinCEIP  
     > [!Note]  
     > 从 Configuration Manager 版本 1802 开始，从产品中删除了 CEIP 功能。
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** 0 或 1  
 
@@ -252,43 +253,43 @@ ms.locfileid: "32342148"
 
          1 = 加入  
 
-    -   **详细信息：** 指定是否加入客户体验改善计划 (CEIP)。  
+    -   **详细信息：** 指定是否要加入客户体验改善计划 (CEIP)。  
 
--   **项名称：** AddServerLanguages  
+-   **密钥名称：** AddServerLanguages  
 
-    -   **是否必需：** 否  
+    -   **必需：** 否  
 
     -   **值：** DEU、FRA、RUS、CHS、JPN、CHT、CSY、ESN、HUN、ITA、KOR、NLD、PLK、PTB、PTG、SVE、TRK 或 ZHH  
 
     -   **详细信息：** 指定可用于 Configuration Manager 控制台、报告和 Configuration Manager 对象的服务器语言。 默认情况下使用英语。  
 
--   **项名称：** AddClientLanguages  
+-   **密钥名称：** AddClientLanguages  
 
-    -   **是否必需：** 否  
+    -   **必需：** 否  
 
     -   **值：** DEU、FRA、RUS、CHS、JPN、CHT、CSY、ESN、HUN、ITA、KOR、NLD、PLK、PTB、PTG、SVE、TRK 或 ZHH  
 
     -   **详细信息：** 指定将可供客户端计算机使用的语言。 默认情况下使用英语。  
 
--   **项名称：** DeleteServerLanguages  
+-   **密钥名称：** DeleteServerLanguages  
 
-    -   **是否必需：** 否  
+    -   **必需：** 否  
 
     -   **值：** DEU、FRA、RUS、CHS、JPN、CHT、CSY、ESN、HUN、ITA、KOR、NLD、PLK、PTB、PTG、SVE、TRK 或 ZHH  
 
     -   **详细信息：** 在安装站点后对其进行修改。 指定将不再可用于 Configuration Manager 控制台、报告和 Configuration Manager 对象的要删除的语言。 默认情况下使用英语，因此无法删除它。  
 
--   **项名称：** DeleteClientLanguages  
+-   **密钥名称：** DeleteClientLanguages  
 
-    -   **是否必需：** 否  
+    -   **必需：** 否  
 
     -   **值：** DEU、FRA、RUS、CHS、JPN、CHT、CSY、ESN、HUN、ITA、KOR、NLD、PLK、PTB、PTG、SVE、TRK 或 ZHH  
 
     -   **详细信息：** 在安装站点后对其进行修改。 指定将不再可用于客户端计算机的要删除的语言。 默认情况下使用英语，因此无法删除它。  
 
--   **项名称：** MobileDeviceLanguage  
+-   **密钥名称：** MobileDeviceLanguage  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** 0 或 1  
 
@@ -300,17 +301,17 @@ ms.locfileid: "32342148"
 
 **SQLConfigOptions**  
 
--   **项名称：** SQLServerName  
+-   **密钥名称：** SQLServerName   
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** <*SQL Server 名称*>  
 
-    -   **详细信息：** 指定服务器或群集实例的名称，它们正在运行 SQL Server 并将承载站点数据库。  
+    -   **详细信息：** 指定正在运行 SQL Server 并将托管站点数据库的服务器或群集实例的名称。  
 
--   **项名称：** DatabaseName  
+-   **密钥名称：** DatabaseName  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** <*站点数据库名称*> 或 <*实例名称*>\\<*站点数据库名称*>  
 
@@ -319,35 +320,35 @@ ms.locfileid: "32342148"
         > [!IMPORTANT]  
         >  如果未使用默认实例，则必须指定实例名称和站点数据库名称。  
 
--   **项名称：** SQLSSBPort  
+-   **密钥名称：** SQLSSBPort  
 
-    -   **是否必需：** 否  
+    -   **必需：** 否  
 
     -   **值：** <*SSB 端口号*>  
 
     -   **详细信息：** 指定 SQL Server 使用的 SQL Server Service Broker (SSB) 端口。 SSB 配置为使用 TCP 端口 4022，但也可以使用其他端口。  
 
--   **项名称：** SQLDataFilePath  
+-   **密钥名称：** SQLDataFilePath  
 
-    -   **是否必需：** 否  
+    -   **必需：** 否  
 
     -   **值：** <数据库 .mdb 文件的路径>  
 
-    -   **详细信息：** 指定创建数据库 .mdb 文件的替代位置。  
+    -   **详细信息：** 指定创建数据库 .mdb 文件的备用位置。  
 
--   **项名称：** SQLLogFilePath  
+-   **密钥名称：** SQLLogFilePath  
 
-    -   **是否必需：** 否  
+    -   **必需：** 否  
 
     -   **值：** <*数据库.ldf 文件的路径*>  
 
-    -   **详细信息：** 指定创建数据库 .ldf 文件的替代位置。  
+    -   **详细信息：** 指定创建数据库 .ldf 文件的备用位置。  
 
 **CloudConnectorOptions**  
 
--   **项名称：** CloudConnector  
+-   **密钥名称：** CloudConnector  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** 0 或 1  
 
@@ -357,17 +358,17 @@ ms.locfileid: "32342148"
 
     -   **详细信息：** 指定是否在此站点上安装服务连接点。 因为服务连接点只能安装在层次结构的顶层站点上，此值对子主站点必须为 **0**。  
 
--   **项名称：** CloudConnectorServer  
+-   **密钥名称：** CloudConnectorServer  
 
-    -   **是否必需：** 当 **CloudConnector** 等于 1 时需要  
+    -   **必需：** 当 CloudConnector 等于 1 时需要  
 
     -   **值：** <服务连接点服务器 FQDN>  
 
     -   **详细信息：** 指定将承载服务连接点站点系统角色的服务器的 FQDN。  
 
--   **项名称：** UseProxy  
+-   **密钥名称：** UseProxy  
 
-    -   **是否必需：** 当 **CloudConnector** 等于 1 时需要  
+    -   **必需：** 当 CloudConnector 等于 1 时需要  
 
     -   **值：** 0 或 1  
 
@@ -377,17 +378,17 @@ ms.locfileid: "32342148"
 
     -   **详细信息：** 指定服务连接点是否使用代理服务器。  
 
--   **项名称：** ProxyName  
+-   **密钥名称：** ProxyName  
 
-    -   **是否必需：** 当 **UseProxy** 等于 1 时需要  
+    -   **必需：** 当 UseProxy 等于 1 时需要  
 
     -   **值：** <代理服务器 FQDN>  
 
     -   **详细信息：** 指定服务连接点使用的代理服务器的 FQDN。  
 
--   **项名称：** ProxyPort  
+-   **密钥名称：** ProxyPort  
 
-    -   **是否必需：** 当 **UseProxy** 等于 1 时需要  
+    -   **必需：** 当 UseProxy 等于 1 时需要  
 
     -   **值：** <*端口号*>  
 
@@ -398,9 +399,9 @@ ms.locfileid: "32342148"
 
 **标识**  
 
--   **项名称：** Action  
+-   **密钥名称：** 操作  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** InstallPrimarySite  
 
@@ -408,57 +409,57 @@ ms.locfileid: "32342148"
 
 -   **密钥名称：** CDLatest  
 
-    -   **必备：** 是（仅在使用 CD.Latest 文件夹中的介质时）。    
+    -   **必需：** 是（仅在使用 CD.Latest 文件夹中的介质时）。    
 
-    -   **值：** 1。1 以外的任何值均视为不使用 CD.Latest。
+    -   **值：** 1. 1 以外的任何值均视为不使用 CD.Latest。
 
     -   **详细信息：** 从 CD.Latest 文件夹中的介质运行安装程序时，你的脚本必须包含该密钥和值，以安装主站点或管理中心站点，或恢复主站点或管理中心站点。 该值将告知安装程序当前使用介质形式 CD.Latest。
 
 **选项**  
 
--   **项名称：** ProductID  
+-   **密钥名称：** ProductID  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** <*xxxxx-xxxxx-xxxxx-xxxxx-xxxxx*>  *或* Eval  
 
     -   **详细信息：** 指定 Configuration Manager 安装产品密钥，包括短划线。 输入 **Eval** 以安装 Configuration Manager 的评估版。  
 
--   **项名称：** SiteCode  
+-   **密钥名称：** 站点代码  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** <*站点代码*>  
 
     -   **详细信息：** 指定三个字母数字字符，以唯一标识层次结构中的站点。  
 
--   **项名称：** SiteName  
+-   **密钥名称：** SiteName  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** <*站点名称*>  
 
     -   **详细信息：** 指定此站点的名称。  
 
--   **项名称：** SMSInstallDir  
+-   **密钥名称：** SMSInstallDir  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** <*Configuration Manager 安装路径*>
 
     -   **详细信息：** 指定 Configuration Manager 程序文件的安装文件夹。  
 
--   **项名称：** SDKServer  
+-   **密钥名称：** SDKServer  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** <*SMS 提供程序 FQDN*>  
 
     -   **详细信息：** 指定将托管 SMS 提供程序的服务器的 FQDN。 你可以在初始安装后为站点配置其他 SMS 提供程序。  
 
--   **项名称：** PrerequisiteComp  
+-   **密钥名称：** PrerequisiteComp  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** 0 或 1  
 
@@ -466,19 +467,19 @@ ms.locfileid: "32342148"
 
          1 = 已下载  
 
-    -   **详细信息：** 指定安装程序先决条件文件是否已下载。 例如，如果使用值 0，则安装程序将下载文件。  
+    -   **详细信息：** 指定是否已下载安装程序的必备文件。 例如，如果使用值 0，则安装程序将下载文件。  
 
--   **项名称：** PrerequisitePath  
+-   **密钥名称：** PrerequisitePath  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** <安装程序先决条件文件的路径>  
 
-    -   **详细信息：** 指定安装程序先决条件文件的路径。 根据 PrerequisiteComp 值，安装程序将使用此路径来存储已下载的文件或查找以前下载的文件。  
+    -   **详细信息：** 指定安装程序必备文件的路径。 根据 PrerequisiteComp 值，安装程序将使用此路径来存储已下载的文件或查找以前下载的文件。  
 
--   **项名称：** AdminConsole  
+-   **密钥名称：** AdminConsole  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** 0 或 1  
 
@@ -488,11 +489,11 @@ ms.locfileid: "32342148"
 
     -   **详细信息：** 指定是否安装 Configuration Manager 控制台。  
 
--   **项名称：** JoinCEIP  
+-   **密钥名称：** JoinCEIP  
     > [!Note]  
     > 从 Configuration Manager 版本 1802 开始，从产品中删除了 CEIP 功能。
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** 0 或 1  
 
@@ -502,49 +503,49 @@ ms.locfileid: "32342148"
 
     -   **详细信息：** 指定是否加入 CEIP。  
 
--   **项名称：** ManagementPoint  
+-   **密钥名称：** ManagementPoint  
 
-    -   **是否必需：** 否  
+    -   **必需：** 否  
 
     -   **值：** <*管理点站点服务器 FQDN*>  
 
     -   **详细信息：** 指定将承载管理点站点系统角色的服务器的 FQDN。  
 
--   **项名称：** ManagementPointProtocol  
+-   **密钥名称：** ManagementPointProtocol  
 
-    -   **是否必需：** 否  
+    -   **必需：** 否  
 
-    -   **值：** HTTPS *或* HTTP  
+    -   **值：** HTTPS 或 HTTP  
 
     -   **详细信息：** 指定要用于管理点的协议。  
 
--   **项名称：** DistributionPoint  
+-   **密钥名称：** DistributionPoint  
 
-    -   **是否必需：** 否  
+    -   **必需：** 否  
 
     -   **值：** <*分发点站点服务器 FQDN*>  
 
     -   **详细信息：** 指定要用于分发点的协议。  
 
--   **项名称：** DistributionPointProtocol  
+-   **密钥名称：** DistributionPointProtocol  
 
-    -   **是否必需：** 否  
+    -   **必需：** 否  
 
-    -   **值：** HTTPS *或* HTTP  
+    -   **值：** HTTPS 或 HTTP  
 
     -   **详细信息：** 指定要用于分发点的协议。  
 
--   **项名称：** RoleCommunicationProtocol  
+-   **密钥名称：** RoleCommunicationProtocol  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
-    -   **值：** EnforceHTTPS *或* HTTPorHTTPS  
+    -   **值：** EnforceHTTPS 或 HTTPorHTTPS  
 
-    -   **详细信息：** 指定是将所有站点系统配置为仅接受来自客户端的 HTTPS 通信，还是为每个站点系统角色配置通信方法。 如果选择“EnforceHTTPS”，则客户端计算机必须具有有效的公钥基础结构 (PKI) 证书以进行客户端身份验证。  
+    -   **详细信息：** 指定是将所有站点系统配置为仅接受来自客户端的 HTTPS 通信，还是接受为每个站点系统角色配置的通信方法所传输的信息。 如果选择“EnforceHTTPS”，则客户端计算机必须具有有效的公钥基础结构 (PKI) 证书以进行客户端身份验证。  
 
--   **项名称：** ClientsUsePKICertificate  
+-   **密钥名称：** ClientsUsePKICertificate  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** 0 或 1  
 
@@ -554,41 +555,41 @@ ms.locfileid: "32342148"
 
     -   **详细信息：** 指定客户端是否将使用客户端 PKI 证书与站点系统角色通信。  
 
--   **项名称：** AddServerLanguages  
+-   **密钥名称：** AddServerLanguages  
 
-    -   **是否必需：** 否  
+    -   **必需：** 否  
 
     -   **值：** DEU、FRA、RUS、CHS、JPN、CHT、CSY、ESN、HUN、ITA、KOR、NLD、PLK、PTB、PTG、SVE、TRK 或 ZHH  
 
     -   **详细信息：** 指定可用于 Configuration Manager 控制台、报告和 Configuration Manager 对象的服务器语言。 默认情况下使用英语。  
 
--   **项名称：** AddClientLanguages  
+-   **密钥名称：** AddClientLanguages  
 
-    -   **是否必需：** 否  
+    -   **必需：** 否  
 
     -   **值：** DEU、FRA、RUS、CHS、JPN、CHT、CSY、ESN、HUN、ITA、KOR、NLD、PLK、PTB、PTG、SVE、TRK 或 ZHH  
 
     -   **详细信息：** 指定将可供客户端计算机使用的语言。 默认情况下使用英语。  
 
--   **项名称：** DeleteServerLanguages  
+-   **密钥名称：** DeleteServerLanguages  
 
-    -   **是否必需：** 否  
+    -   **必需：** 否  
 
     -   **值：** DEU、FRA、RUS、CHS、JPN、CHT、CSY、ESN、HUN、ITA、KOR、NLD、PLK、PTB、PTG、SVE、TRK 或 ZHH  
 
     -   **详细信息：** 在安装站点后对其进行修改。 指定将不再可用于 Configuration Manager 控制台、报告和 Configuration Manager 对象的要删除的语言。 默认情况下使用英语，因此无法删除它。  
 
--   **项名称：** DeleteClientLanguages  
+-   **密钥名称：** DeleteClientLanguages  
 
-    -   **是否必需：** 否  
+    -   **必需：** 否  
 
     -   **值：** DEU、FRA、RUS、CHS、JPN、CHT、CSY、ESN、HUN、ITA、KOR、NLD、PLK、PTB、PTG、SVE、TRK 或 ZHH  
 
     -   **详细信息：** 在安装站点后对其进行修改。 指定将不再可用于客户端计算机的要删除的语言。 默认情况下使用英语，因此无法删除它。  
 
--   **项名称：** MobileDeviceLanguage  
+-   **密钥名称：** MobileDeviceLanguage  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** 0 或 1  
 
@@ -600,70 +601,70 @@ ms.locfileid: "32342148"
 
 **SQLConfigOptions**  
 
--   **项名称：** SQLServerName  
+-   **密钥名称：** SQLServerName   
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** <*SQL Server 名称*>  
 
-    -   **详细信息：** 指定服务器或群集实例的名称，它们正在运行 SQL Server 并将承载站点数据库。  
+    -   **详细信息：** 指定正在运行 SQL Server 并将托管站点数据库的服务器或群集实例的名称。  
 
--   **项名称：** DatabaseName  
+-   **密钥名称：** DatabaseName  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** <*站点数据库名称*> 或 <*实例名称*>\\<*站点数据库名称*>  
 
-    -   **详细信息：** 指定要创建或用于安装主站点数据库的 SQL Server 数据库的名称。  
+    -   **详细信息：** 指定要创建的 SQL Server 数据库的名称，或者安装主站点数据库时要使用的 SQL Server 数据库的名称。  
 
         > [!IMPORTANT]  
         >  如果未使用默认实例，则必须指定实例名称和站点数据库名称。  
 
--   **项名称：** SQLSSBPort  
+-   **密钥名称：** SQLSSBPort  
 
-    -   **是否必需：** 否  
+    -   **必需：** 否  
 
     -   **值：** <*SSB 端口号*>  
 
     -   **详细信息：** 指定 SQL Server 使用的 SSB 端口。 SSB 配置为使用 TCP 端口 4022，但也可以使用其他端口。  
 
--   **项名称：** SQLDataFilePath  
+-   **密钥名称：** SQLDataFilePath  
 
-    -   **是否必需：** 否  
+    -   **必需：** 否  
 
     -   **值：** <数据库 .mdb 文件的路径>  
 
-    -   **详细信息：** 指定创建数据库 .mdb 文件的替代位置。  
+    -   **详细信息：** 指定创建数据库 .mdb 文件的备用位置。  
 
--   **项名称：** SQLLogFilePath  
+-   **密钥名称：** SQLLogFilePath  
 
-    -   **是否必需：** 否  
+    -   **必需：** 否  
 
     -   **值：** <*数据库.ldf 文件的路径*>  
 
-    -   **详细信息：** 指定创建数据库 .ldf 文件的替代位置。  
+    -   **详细信息：** 指定创建数据库 .ldf 文件的备用位置。  
 
 **HierarchyExpansionOption**  
 
--   **项名称：** CCARSiteServer  
+-   **密钥名称：** CCARSiteServer  
 
-    -   **是否必需：** 否  
+    -   **必需：** 否  
 
     -   **值：** <*管理中心站点 FQDN*>  
 
     -   **详细信息：** 指定主站点加入 Configuration Manager 层次结构时要附加到的管理中心站点。 请在安装过程中指定管理中心站点。  
 
--   **项名称：** CASRetryInterval  
+-   **密钥名称：** CASRetryInterval  
 
-    -   **是否必需：** 否  
+    -   **必需：** 否  
 
     -   **值：** <*Interval*>  
 
-    -   **详细信息：** 指定连接失败后尝试连接到管理中心站点的重试间隔（以分钟为单位）。 例如，如果连接到管理中心站点失败，则主站点将等待你为 CASRetryInterval 值指定的分钟数，然后重新尝试连接。  
+    -   **详细信息：** 指定在连接失败后尝试连接到管理中心站点的重试间隔（以分钟为单位）。 例如，如果连接到管理中心站点失败，则主站点将等待你为 CASRetryInterval 值指定的分钟数，然后重新尝试连接。  
 
--   **项名称：** WaitForCASTimeout  
+-   **密钥名称：** WaitForCASTimeout  
 
-    -   **是否必需：** 否  
+    -   **必需：** 否  
 
     -   **值：** <*Timeout*>  
 
@@ -673,9 +674,9 @@ ms.locfileid: "32342148"
 
 **CloudConnectorOptions**  
 
--   **项名称：** CloudConnector  
+-   **密钥名称：** CloudConnector  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** 0 或 1  
 
@@ -685,17 +686,17 @@ ms.locfileid: "32342148"
 
     -   **详细信息：** 指定是否在此站点上安装服务连接点。 因为服务连接点只能安装在层次结构的顶层站点上，此值对子主站点必须为 **0**。  
 
--   **项名称：** CloudConnectorServer  
+-   **密钥名称：** CloudConnectorServer  
 
-    -   **是否必需：** 当 **CloudConnector** 等于 1 时需要  
+    -   **必需：** 当 CloudConnector 等于 1 时需要  
 
     -   **值：** <服务连接点服务器 FQDN\>  
 
     -   **详细信息：** 指定将承载服务连接点站点系统角色的服务器的 FQDN。  
 
--   **项名称：** UseProxy  
+-   **密钥名称：** UseProxy  
 
-    -   **是否必需：** 当 **CloudConnector** 等于 1 时需要  
+    -   **必需：** 当 CloudConnector 等于 1 时需要  
 
     -   **值：** 0 或 1  
 
@@ -705,17 +706,17 @@ ms.locfileid: "32342148"
 
     -   **详细信息：** 指定服务连接点是否使用代理服务器。  
 
--   **项名称：** ProxyName  
+-   **密钥名称：** ProxyName  
 
-    -   **是否必需：** 当 **UseProxy** 等于 1 时需要  
+    -   **必需：** 当 UseProxy 等于 1 时需要  
 
     -   **值：** <代理服务器 FQDN>  
 
     -   **详细信息：** 指定服务连接点使用的代理服务器的 FQDN。  
 
--   **项名称：** ProxyPort  
+-   **密钥名称：** ProxyPort  
 
-    -   **是否必需：** 当 **UseProxy** 等于 1 时需要  
+    -   **必需：** 当 UseProxy 等于 1 时需要  
 
     -   **值：** <*端口号*>  
 
@@ -726,9 +727,9 @@ ms.locfileid: "32342148"
 
 **标识**  
 
--   **项名称：** Action  
+-   **密钥名称：** 操作  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** RecoverCCAR  
 
@@ -736,17 +737,17 @@ ms.locfileid: "32342148"
 
 -   **密钥名称：** CDLatest  
 
-    -   **必备：** 是（仅在使用 CD.Latest 文件夹中的介质时）。    
+    -   **必需：** 是（仅在使用 CD.Latest 文件夹中的介质时）。    
 
-    -   **值：** 1。1 以外的任何值均视为不使用 CD.Latest。
+    -   **值：** 1. 1 以外的任何值均视为不使用 CD.Latest。
 
     -   **详细信息：** 从 CD.Latest 文件夹中的介质运行安装程序时，你的脚本必须包含该密钥和值，以安装主站点或管理中心站点，或恢复主站点或管理中心站点。 该值将告知安装程序当前使用介质形式 CD.Latest。
 
 **RecoveryOptions**  
 
--   **项名称：** ServerRecoveryOptions  
+-   **密钥名称：** ServerRecoveryOptions  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** 1、2 或 4  
 
@@ -758,15 +759,15 @@ ms.locfileid: "32342148"
 
     -   **详细信息：** 指定安装程序是恢复站点服务器、SQL Server 还是两者都恢复。 设置 **ServerRecoveryOptions** 设置的以下值时需要关联的项：  
 
-        -   值 = 1：你可以选择为 **SiteServerBackupLocation** 项指定值以使用站点备份来恢复站点。 如果未指定值，则会重新安装站点，而不是从备份集中还原站点。  
+        -   值 = 1：你可以选择为 SiteServerBackupLocation 项指定值以使用站点备份来恢复站点。 如果未指定值，则会重新安装站点，而不是从备份集中还原站点。  
 
-        -   值 = 2：你可以选择为 **SiteServerBackupLocation** 项指定值以使用站点备份来恢复站点。 如果未指定值，则会重新安装站点，而不是从备份集中还原站点。  
+        -   值 = 2：你可以选择为 SiteServerBackupLocation 项指定值以使用站点备份来恢复站点。 如果未指定值，则会重新安装站点，而不是从备份集中还原站点。  
 
-        -   值 = 4：如果为 **DatabaseRecoveryOptions** 项（用于从备份中还原站点数据库）配置值 **10** ，则需要 **BackupLocation** 项。  
+        -   值 = 4：如果为 **DatabaseRecoveryOptions** 项（用于从备份中还原站点数据库）配置了值 **10** ，则需要 **BackupLocation** 项。  
 
--   **项名称：** DatabaseRecoveryOptions  
+-   **密钥名称：** DatabaseRecoveryOptions  
 
-    -   **是否必需：** 当 **ServerRecoveryOptions** 设置的值为 **1** 或 **4** 时，需要此项。  
+    -   **必需：** 当 **ServerRecoveryOptions** 设置的值为 **1** 或 **4**时，需要此项。  
 
     -   **值：** 10、20、40 或 80  
 
@@ -780,29 +781,29 @@ ms.locfileid: "32342148"
 
     -   **详细信息：** 指定安装程序如何恢复 SQL Server 中的站点数据库。  
 
--   **项名称：** ReferenceSite  
+-   **密钥名称：** ReferenceSite  
 
-    -   **是否必需：** 当 **DatabaseRecoveryOptions** 设置的值为 **40** 时，需要此项。  
+    -   **必需：** 当 **DatabaseRecoveryOptions** 设置的值为 **40**时，需要此项。  
 
     -   **值：** <*引用站点 FQDN*>  
 
-    -   **详细信息：** 指定在数据库备份早于更改跟踪保持期或者在没有备份的情况下恢复站点时，管理中心站点用于恢复全局数据的引用主站点。  
+    -   **详细信息：** 指定引用主站点 - 如果数据库备份早于更改跟踪保持期，或者在不使用备份来恢复站点时，管理中心站点将使用此引用主站点来恢复全局数据。  
 
          如果未指定引用站点，并且备份早于更改跟踪保持期，则会使用管理中心站点中的还原数据重新初始化所有主站点。  
 
          如果未指定引用站点，并且备份在更改跟踪保持期中，则从主站点中仅复制备份以后的更改。 如果不同的主站点中具有冲突的更改，则管理中心站点使用它收到的第一个更改。  
 
--   **项名称：** SiteServerBackupLocation  
+-   **密钥名称：** SiteServerBackupLocation  
 
-    -   **是否必需：** 否  
+    -   **必需：** 否  
 
     -   **值：** <*到站点服务器备份集的路径*>  
 
     -   **详细信息：** 指定站点服务器备份集的路径。 当 **ServerRecoveryOptions** 设置的值为 **1** 或 **2**时，此项是可选的。 为 **SiteServerBackupLocation** 项指定值以使用站点备份来恢复站点。 如果未指定值，则会重新安装站点，而不是从备份集中还原站点。  
 
--   **项名称：** BackupLocation  
+-   **密钥名称：** BackupLocation  
 
-    -   **是否必需：** 如果为 **ServerRecoveryOptions** 项配置了值 **1** 或 **4**，并为 **DatabaseRecoveryOptions** 项配置了值 **10**，则需要此项。  
+    -   **必需：** 如果为 ServerRecoveryOptions 项配置了值 1 或 4，并为 DatabaseRecoveryOptions 项配置了值 10，则需要此项。  
 
     -   **值：** <*到站点数据库备份集的路径*>  
 
@@ -810,41 +811,41 @@ ms.locfileid: "32342148"
 
 **选项**  
 
--   **项名称：** ProductID  
+-   **密钥名称：** ProductID  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** <*xxxxx-xxxxx-xxxxx-xxxxx-xxxxx*>  *或* Eval  
 
     -   **详细信息：** 指定 Configuration Manager 安装产品密钥，包括短划线。 输入 **Eval** 以安装 Configuration Manager 的评估版。  
 
--   **项名称：** SiteCode  
+-   **密钥名称：** 站点代码  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** <*站点代码*>  
 
     -   **详细信息：** 指定三个字母数字字符，以唯一标识层次结构中的站点。 指定在发生故障之前站点使用的站点代码。
 
--   **项名称：** SiteName  
+-   **密钥名称：** SiteName  
 
-    -   **是否必需：** 否  
+    -   **必需：** 否  
 
     -   **值：** <*站点名称*>  
 
     -   **详细信息：** 指定此站点的名称。  
 
--   **项名称：** SMSInstallDir  
+-   **密钥名称：** SMSInstallDir  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** <*Configuration Manager 安装路径*>  
 
     -   **详细信息：** 指定 Configuration Manager 程序文件的安装文件夹。  
 
--   **项名称：** SDKServer  
+-   **密钥名称：** SDKServer  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** <*SMS 提供程序 FQDN*>  
 
@@ -852,9 +853,9 @@ ms.locfileid: "32342148"
 
          你可以在初始安装后为站点配置其他 SMS 提供程序。 有关 SMS 提供程序的详细信息，请参阅[为 System Center Configuration Manager 规划 SMS 提供程序](../../../../core/plan-design/hierarchy/plan-for-the-sms-provider.md)。  
 
--   **项名称：** PrerequisiteComp  
+-   **密钥名称：** PrerequisiteComp  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** 0 或 1  
 
@@ -862,19 +863,19 @@ ms.locfileid: "32342148"
 
          1 = 已下载  
 
-    -   **详细信息：** 指定安装程序先决条件文件是否已下载。 例如，如果使用值 0，则安装程序将下载文件。  
+    -   **详细信息：** 指定是否已下载安装程序的必备文件。 例如，如果使用值 0，则安装程序将下载文件。  
 
--   **项名称：** PrerequisitePath  
+-   **密钥名称：** PrerequisitePath  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** <安装程序先决条件文件的路径>  
 
-    -   **详细信息：** 指定安装程序先决条件文件的路径。 根据 PrerequisiteComp 值，安装程序将使用此路径来存储已下载的文件或查找以前下载的文件。  
+    -   **详细信息：** 指定安装程序必备文件的路径。 根据 PrerequisiteComp 值，安装程序将使用此路径来存储已下载的文件或查找以前下载的文件。  
 
--   **项名称：** AdminConsole  
+-   **密钥名称：** AdminConsole  
 
-    -   **是否必需：** 当 **ServerRecoveryOptions** 设置的值为 **4**时，需要此项。  
+    -   **必需：** 除非 **ServerRecoveryOptions** 设置的值为 **4**，否则此项为必需。  
 
     -   **值：** 0 或 1  
 
@@ -884,11 +885,11 @@ ms.locfileid: "32342148"
 
     -   **详细信息：** 指定是否安装 Configuration Manager 控制台。  
 
--   **项名称：** JoinCEIP  
+-   **密钥名称：** JoinCEIP  
     > [!Note]  
     > 从 Configuration Manager 版本 1802 开始，从产品中删除了 CEIP 功能。
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** 0 或 1  
 
@@ -900,17 +901,17 @@ ms.locfileid: "32342148"
 
 **SQLConfigOptions**  
 
--   **项名称：** SQLServerName  
+-   **密钥名称：** SQLServerName   
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** <*SQL Server 名称*>  
 
     -   **详细信息：** 指定正在运行 SQL Server 并托管站点数据库的服务器或群集实例的名称。 指定在发生故障之前托管站点数据库的同一服务器。  
 
--   **项名称：** DatabaseName  
+-   **密钥名称：** DatabaseName  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** <*站点数据库名称*> 或 <*实例名称*>\\<*站点数据库名称*>  
 
@@ -919,35 +920,35 @@ ms.locfileid: "32342148"
         > [!IMPORTANT]  
         >  如果未使用默认实例，则必须指定实例名称和站点数据库名称。  
 
--   **项名称：** SQLSSBPort  
+-   **密钥名称：** SQLSSBPort  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** <*SSB 端口号*>  
 
     -   **详细信息：** 指定 SQL Server 使用的 SSB 端口。 通常，SSB 配置为使用 TCP 端口 4022。 指定在发生故障之前使用的相同 SSB 端口。  
 
--   **项名称：** SQLDataFilePath  
+-   **密钥名称：** SQLDataFilePath  
 
-    -   **是否必需：** 否  
+    -   **必需：** 否  
 
     -   **值：** <数据库 .mdb 文件的路径>  
 
-    -   **详细信息：** 指定创建数据库 .mdb 文件的替代位置。  
+    -   **详细信息：** 指定创建数据库 .mdb 文件的备用位置。  
 
--   **项名称：** SQLLogFilePath  
+-   **密钥名称：** SQLLogFilePath  
 
-    -   **是否必需：** 否  
+    -   **必需：** 否  
 
     -   **值：** <*数据库.ldf 文件的路径*>  
 
-    -   **详细信息：** 指定创建数据库 .ldf 文件的替代位置。  
+    -   **详细信息：** 指定创建数据库 .ldf 文件的备用位置。  
 
 **CloudConnectorOptions**  
 
--   **项名称：** CloudConnector  
+-   **密钥名称：** CloudConnector  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** 0 或 1  
 
@@ -957,17 +958,17 @@ ms.locfileid: "32342148"
 
     -   **详细信息：** 指定是否在此站点上安装服务连接点。 因为服务连接点只能安装在层次结构的顶层站点上，此值对子主站点必须为 **0**。  
 
--   **项名称：** CloudConnectorServer  
+-   **密钥名称：** CloudConnectorServer  
 
-    -   **是否必需：** 当 **CloudConnector** 等于 1 时需要  
+    -   **必需：** 当 CloudConnector 等于 1 时需要  
 
     -   **值：** <服务连接点服务器 FQDN>  
 
     -   **详细信息：** 指定将承载服务连接点站点系统角色的服务器的 FQDN。  
 
--   **项名称：** UseProxy  
+-   **密钥名称：** UseProxy  
 
-    -   **是否必需：** 当 **CloudConnector** 等于 1 时需要  
+    -   **必需：** 当 CloudConnector 等于 1 时需要  
 
     -   **值：** 0 或 1  
 
@@ -977,17 +978,17 @@ ms.locfileid: "32342148"
 
     -   **详细信息：** 指定服务连接点是否使用代理服务器。  
 
--   **项名称：** ProxyName  
+-   **密钥名称：** ProxyName  
 
-    -   **是否必需：** 当 **CloudConnector** 等于 1 时需要  
+    -   **必需：** 当 CloudConnector 等于 1 时需要  
 
     -   **值：** <代理服务器 FQDN>  
 
     -   **详细信息：** 指定服务连接点使用的代理服务器的 FQDN。  
 
--   **项名称：** ProxyPort  
+-   **密钥名称：** ProxyPort  
 
-    -   **是否必需：** 当 **CloudConnector** 等于 1 时需要  
+    -   **必需：** 当 CloudConnector 等于 1 时需要  
 
     -   **值：** <*端口号*>  
 
@@ -998,9 +999,9 @@ ms.locfileid: "32342148"
 
 **标识**  
 
--   **项名称：** Action  
+-   **密钥名称：** 操作  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** <*RecoverPrimarySite*>  
 
@@ -1008,17 +1009,17 @@ ms.locfileid: "32342148"
 
 -   **密钥名称：** CDLatest  
 
-    -   **必备：** 是（仅在使用 CD.Latest 文件夹中的介质时）。    
+    -   **必需：** 是（仅在使用 CD.Latest 文件夹中的介质时）。    
 
-    -   **值：** 1。1 以外的任何值均视为不使用 CD.Latest。
+    -   **值：** 1. 1 以外的任何值均视为不使用 CD.Latest。
 
     -   **详细信息：** 从 CD.Latest 文件夹中的介质运行安装程序时，你的脚本必须包含该密钥和值，以安装主站点或管理中心站点，或恢复主站点或管理中心站点。 该值将告知安装程序当前使用介质形式 CD.Latest。    
 
 **RecoveryOptions**  
 
--   **项名称：** ServerRecoveryOptions  
+-   **密钥名称：** ServerRecoveryOptions  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** 1、2 或 4  
 
@@ -1030,15 +1031,15 @@ ms.locfileid: "32342148"
 
     -   **详细信息：** 指定安装程序是恢复站点服务器、SQL Server 还是两者都恢复。 设置 **ServerRecoveryOptions** 设置的以下值时需要关联的项：  
 
-        -   值 = 1：你可以选择为 **SiteServerBackupLocation** 项指定值以使用站点备份来恢复站点。 如果未指定值，则会重新安装站点，而不是从备份集中还原站点。  
+        -   值 = 1：你可以选择为 SiteServerBackupLocation 项指定值以使用站点备份来恢复站点。 如果未指定值，则会重新安装站点，而不是从备份集中还原站点。  
 
-        -   值 = 2：你可以选择为 **SiteServerBackupLocation** 项指定值以使用站点备份来恢复站点。 如果未指定值，则会重新安装站点，而不是从备份集中还原站点。  
+        -   值 = 2：你可以选择为 SiteServerBackupLocation 项指定值以使用站点备份来恢复站点。 如果未指定值，则会重新安装站点，而不是从备份集中还原站点。  
 
-        -   值 = 4：如果为 **DatabaseRecoveryOptions** 项（用于从备份中还原站点数据库）配置值 **10** ，则需要 **BackupLocation** 项。  
+        -   值 = 4：如果为 **DatabaseRecoveryOptions** 项（用于从备份中还原站点数据库）配置了值 **10** ，则需要 **BackupLocation** 项。  
 
--   **项名称：** DatabaseRecoveryOptions  
+-   **密钥名称：** DatabaseRecoveryOptions  
 
-    -   **是否必需：** 当 **ServerRecoveryOptions** 设置的值为 **1** 或 **4** 时，需要此项。  
+    -   **必需：** 当 **ServerRecoveryOptions** 设置的值为 **1** 或 **4**时，需要此项。  
 
     -   **值：** 10、20、40 或 80  
 
@@ -1052,9 +1053,9 @@ ms.locfileid: "32342148"
 
     -   **详细信息：** 指定安装程序如何恢复 SQL Server 中的站点数据库。  
 
--   **项名称：** SiteServerBackupLocation  
+-   **密钥名称：** SiteServerBackupLocation  
 
-    -   **是否必需：** 否  
+    -   **必需：** 否  
 
     -   **值：** <*到站点服务器备份集的路径*>  
 
@@ -1062,9 +1063,9 @@ ms.locfileid: "32342148"
 
          指定站点服务器备份集的路径。 当 **ServerRecoveryOptions** 设置的值为 **1** 或 **2**时，此项是可选的。 为 **SiteServerBackupLocation** 项指定值以使用站点备份来恢复站点。 如果未指定值，则会重新安装站点，而不是从备份集中还原站点。  
 
--   **项名称：** BackupLocation  
+-   **密钥名称：** BackupLocation  
 
-    -   **是否必需：** 如果为 **ServerRecoveryOptions** 项配置了值 **1** 或 **4**，并为 **DatabaseRecoveryOptions** 项配置了值 **10**，则需要此项。  
+    -   **必需：** 如果为 ServerRecoveryOptions 项配置了值 1 或 4，并为 DatabaseRecoveryOptions 项配置了值 10，则需要此项。  
 
     -   **值：** <*到站点数据库备份集的路径*>  
 
@@ -1072,49 +1073,49 @@ ms.locfileid: "32342148"
 
 **选项**  
 
--   **项名称：** ProductID  
+-   **密钥名称：** ProductID  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：***xxxxx-xxxxx-xxxxx-xxxxx-xxxxx* 或 *Eval*  
 
     -   **详细信息：** 指定 Configuration Manager 安装产品密钥，包括短划线。 输入 **Eval** 以安装 Configuration Manager 的评估版。  
 
--   **项名称：** SiteCode  
+-   **密钥名称：** 站点代码  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** <*站点代码*>  
 
     -   **详细信息：** 指定三个字母数字字符，以唯一标识层次结构中的站点。 指定在发生故障之前站点使用的站点代码。
 
--   **项名称：** SiteName  
+-   **密钥名称：** SiteName  
 
-    -   **是否必需：** 否  
+    -   **必需：** 否  
 
     -   **值：** <*站点名称*>  
 
     -   **详细信息：** 指定此站点的名称。  
 
--   **项名称：** SMSInstallDir  
+-   **密钥名称：** SMSInstallDir  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** <*Configuration Manager 安装路径*>  
 
     -   **详细信息：** 指定 Configuration Manager 程序文件的安装文件夹。  
 
--   **项名称：** SDKServer  
+-   **密钥名称：** SDKServer  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** <*SMS 提供程序 FQDN*>  
 
     -   **详细信息：** 指定托管 SMS 提供程序的服务器的 FQDN。 指定在发生故障之前托管 SMS 提供程序的服务器。 在初始安装后为站点配置其他 SMS 提供程序。 有关 SMS 提供程序的详细信息，请参阅[规划 SMS 提供程序](../../../../core/plan-design/hierarchy/plan-for-the-sms-provider.md)。  
 
--   **项名称：** PrerequisiteComp  
+-   **密钥名称：** PrerequisiteComp  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** 0 或 1  
 
@@ -1122,19 +1123,19 @@ ms.locfileid: "32342148"
 
          1 = 已下载  
 
-    -   **详细信息：** 指定安装程序先决条件文件是否已下载。 例如，如果使用值 0，则安装程序将下载文件。  
+    -   **详细信息：** 指定是否已下载安装程序的必备文件。 例如，如果使用值 0，则安装程序将下载文件。  
 
--   **项名称：** PrerequisitePath  
+-   **密钥名称：** PrerequisitePath  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** <安装程序先决条件文件的路径>  
 
-    -   **详细信息：** 指定安装程序先决条件文件的路径。 根据 PrerequisiteComp 值，安装程序将使用此路径来存储已下载的文件或查找以前下载的文件。  
+    -   **详细信息：** 指定安装程序必备文件的路径。 根据 PrerequisiteComp 值，安装程序将使用此路径来存储已下载的文件或查找以前下载的文件。  
 
--   **项名称：** AdminConsole  
+-   **密钥名称：** AdminConsole  
 
-    -   **是否必需：** 当 **ServerRecoveryOptions** 设置的值为 **4**时，需要此项。  
+    -   **必需：** 除非 **ServerRecoveryOptions** 设置的值为 **4**，否则此项为必需。  
 
     -   **值：** 0 或 1  
 
@@ -1144,11 +1145,11 @@ ms.locfileid: "32342148"
 
     -   **详细信息：** 指定是否安装 Configuration Manager 控制台。  
 
--   **项名称：** JoinCEIP  
+-   **密钥名称：** JoinCEIP  
     > [!Note]  
     > 从 Configuration Manager 版本 1802 开始，从产品中删除了 CEIP 功能。
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** 0 或 1  
 
@@ -1160,17 +1161,17 @@ ms.locfileid: "32342148"
 
 **SQLConfigOptions**  
 
--   **项名称：** SQLServerName  
+-   **密钥名称：** SQLServerName   
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** <*SQL Server 名称*>  
 
     -   **详细信息：** 指定正在运行 SQL Server 并托管站点数据库的服务器或群集实例的名称。 指定在发生故障之前托管站点数据库的同一服务器。  
 
--   **项名称：** DatabaseName  
+-   **密钥名称：** DatabaseName  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** <*站点数据库名称*> 或 <*实例名称*>\\<*站点数据库名称*>
 
@@ -1181,51 +1182,51 @@ ms.locfileid: "32342148"
         > [!IMPORTANT]  
         >  如果未使用默认实例，则必须指定实例名称和站点数据库名称。  
 
--   **项名称：** SQLSSBPort  
+-   **密钥名称：** SQLSSBPort  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** <*SSB 端口号*>  
 
     -   **详细信息：** 指定 SQL Server 使用的 SSB 端口。 通常，SSB 配置为使用 TCP 端口 4022。 指定在发生故障之前使用的相同 SSB 端口。  
 
--   **项名称：** SQLDataFilePath  
+-   **密钥名称：** SQLDataFilePath  
 
-    -   **是否必需：** 否  
+    -   **必需：** 否  
 
     -   **值：** <数据库 .mdb 文件的路径>  
 
-    -   **详细信息：** 指定创建数据库 .mdb 文件的替代位置。  
+    -   **详细信息：** 指定创建数据库 .mdb 文件的备用位置。  
 
--   **项名称：** SQLLogFilePath  
+-   **密钥名称：** SQLLogFilePath  
 
-    -   **是否必需：** 否  
+    -   **必需：** 否  
 
     -   **值：** <*数据库.ldf 文件的路径*>  
 
-    -   **详细信息：** 指定创建数据库 .ldf 文件的替代位置。  
+    -   **详细信息：** 指定创建数据库 .ldf 文件的备用位置。  
 
 **HierarchyExpansionOptions**  
 
--   **项名称：** CCARSiteServer  
+-   **密钥名称：** CCARSiteServer  
 
-    -   **是否必需：** 查看详细信息。  
+    -   **必需：** 查看详情。  
 
     -   **值：** <*中央管理站点的站点代码*>  
 
     -   **详细信息：** 指定主站点加入 Configuration Manager 层次结构时将要附加到的管理中心站点。 如果在发生故障之前主站点已附加到管理中心站点，则此设置为必需。 指定在发生故障之前用于管理中心站点的站点代码。  
 
--   **项名称：** CASRetryInterval  
+-   **密钥名称：** CASRetryInterval  
 
-    -   **是否必需：** 否  
+    -   **必需：** 否  
 
     -   **值：** <*Interval*>  
 
-    -   **详细信息：** 指定连接失败后尝试连接到管理中心站点的重试间隔（以分钟为单位）。 例如，如果连接到管理中心站点失败，则主站点将等待你为 **CASRetryInterval** 值指定的分钟数，然后再次尝试连接。  
+    -   **详细信息：** 指定在连接失败后尝试连接到管理中心站点的重试间隔（以分钟为单位）。 例如，如果连接到管理中心站点失败，则主站点将等待你为 **CASRetryInterval** 值指定的分钟数，然后再次尝试连接。  
 
--   **项名称：** WaitForCASTimeout  
+-   **密钥名称：** WaitForCASTimeout  
 
-    -   **是否必需：** 否  
+    -   **必需：** 否  
 
     -   **值：** <*Timeout*>  
 
@@ -1233,9 +1234,9 @@ ms.locfileid: "32342148"
 
 **CloudConnectorOptions**  
 
--   **项名称：** CloudConnector  
+-   **密钥名称：** CloudConnector  
 
-    -   **是否必需：** 是  
+    -   **必需：** 是  
 
     -   **值：** 0 或 1  
 
@@ -1245,17 +1246,17 @@ ms.locfileid: "32342148"
 
     -   **详细信息：** 指定是否在此站点上安装服务连接点。 因为服务连接点只能安装在层次结构的顶层站点上，此值对子主站点必须为 **0**。  
 
--   **项名称：** CloudConnectorServer  
+-   **密钥名称：** CloudConnectorServer  
 
-    -   **是否必需：** 当 **CloudConnector** 等于 1 时需要  
+    -   **必需：** 当 CloudConnector 等于 1 时需要  
 
     -   **值：** <服务连接点服务器 FQDN>  
 
     -   **详细信息：** 指定将承载服务连接点站点系统角色的服务器的 FQDN。  
 
--   **项名称：** UseProxy  
+-   **密钥名称：** UseProxy  
 
-    -   **是否必需：** 当 **CloudConnector** 等于 1 时需要  
+    -   **必需：** 当 CloudConnector 等于 1 时需要  
 
     -   **值：** 0 或 1  
 
@@ -1265,17 +1266,17 @@ ms.locfileid: "32342148"
 
     -   **详细信息：** 指定服务连接点是否使用代理服务器。  
 
--   **项名称：** ProxyName  
+-   **密钥名称：** ProxyName  
 
-    -   **是否必需：** 当 **CloudConnector** 等于 1 时需要  
+    -   **必需：** 当 CloudConnector 等于 1 时需要  
 
     -   **值：** <代理服务器 FQDN>  
 
     -   **详细信息：** 指定服务连接点使用的代理服务器的 FQDN。  
 
--   **项名称：** ProxyPort  
+-   **密钥名称：** ProxyPort  
 
-    -   **是否必需：** 当 **CloudConnector** 等于 1 时需要  
+    -   **必需：** 当 CloudConnector 等于 1 时需要  
 
     -   **值：** <*端口号*>  
 
