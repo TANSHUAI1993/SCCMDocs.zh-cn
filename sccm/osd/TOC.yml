@@ -49,6 +49,8 @@ items:
     items:
     - name: 将 Windows 升级到最新版本
       href: deploy-use/upgrade-windows-to-the-latest-version.md
+    - name: 面向现有设备的 Windows Autopilot
+      href: deploy-use/windows-autopilot-for-existing-devices.md
     - name: 使用新版本的 Windows 刷新现有的计算机
       href: deploy-use/refresh-an-existing-computer-with-a-new-version-of-windows.md
     - name: 在新计算机（裸机）上安装新版本的 Windows
@@ -124,9 +126,9 @@ items:
     href: understand/task-sequence-variables.md
   - name: 任务序列媒体的预启动命令
     href: understand/prestart-commands-for-task-sequence-media.md
-ms.openlocfilehash: 583f3b6e7fb239455e37253c205a8cc2fc0a5998
-ms.sourcegitcommit: 8661f10596f565ca2b7bdb5951388b44b3b622ee
+ms.openlocfilehash: c0d57368fc08fc08dcee0cca6a844d1344f8c762
+ms.sourcegitcommit: ef2960bd91655c741450774e512dd0a9be610625
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "48817551"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56838729"

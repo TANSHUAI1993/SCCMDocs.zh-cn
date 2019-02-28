@@ -386,6 +386,8 @@ items:
       href: plan-design/network/proxy-server-support.md
     - name: 发行说明
       href: servers/deploy/install/release-notes.md
+    - name: Configuration Manager 中的状况消息
+      href: plan-design/hierarchy/state-messaging-system-center-configuration-manager.md
     - name: Unicode 和 ASCII 支持
       href: plan-design/hierarchy/unicode-and-ascii-support.md
 - name: 管理基础结构
@@ -758,9 +760,9 @@ items:
       href: clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md
     - name: 升级 Mac 客户端
       href: clients/manage/upgrade/upgrade-clients-on-mac-computers.md
-ms.openlocfilehash: 24a09ebe4efb69eda4f9530266b3e8bb22f48864
-ms.sourcegitcommit: e7e5ca04601270ea7af90183123d5db1d42784da
+ms.openlocfilehash: 97eb6fe3dac61766ca7f561807e6ee0dd48e1559
+ms.sourcegitcommit: ef2960bd91655c741450774e512dd0a9be610625
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2019
-ms.locfileid: "56422215"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56838797"

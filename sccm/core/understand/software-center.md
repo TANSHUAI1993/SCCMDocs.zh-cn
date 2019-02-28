@@ -5,18 +5,18 @@ description: 了解软件中心的功能和特性
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 07/30/2018
+ms.date: 02/20/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.assetid: 9e68de6e-2b33-442b-b674-a382728d9529
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: da01c741107d4eb4a707f7f0d8ada5d82706f292
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: eacd1d1be2564b718423b9d0db8d24b60aac1adb
+ms.sourcegitcommit: 369db96ee84299b5ab6d74b177e6366b3017fc54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56119885"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56589911"
 ---
 # <a name="software-center-user-guide"></a>软件中心用户指南
 
@@ -45,7 +45,7 @@ ms.locfileid: "56119885"
 - **全部**：显示可安装的所有应用程序
 - **必需**：IT 管理员会强制安装这些应用程序。 如果用户卸载其中一个应用程序，软件中心会重新安装它。
 - **筛选器**：IT 管理员可能会创建各种应用程序。 如果可用，请单击下拉列表进行筛选，以便仅查看特定类别的应用程序。 选择“全部”可显示所有应用程序。
-- **排序方式**：重新排列应用程序列表。 默认情况下，此列表按“最近的”排序。
+- **排序方式**：重新排列应用程序列表。 默认情况下，此列表按“最近的”排序。 使用 7 天可见的“全新”标记，列出了最新可用的应用程序。
 - **搜索**：仍找不到要查找的内容？ 在“搜索”框中输入关键字来查找它！
 -  **切换视图**：单击图标，在列表视图和磁贴视图之间进行切换。 默认情况下，应用程序列表显示为图形磁贴。 
     - 磁贴视图：IT 管理员可以自定义图标。 在每个磁贴下方显示应用程序名称、发布者和版本。 
