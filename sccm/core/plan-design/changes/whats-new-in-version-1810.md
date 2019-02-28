@@ -2,7 +2,7 @@
 title: 1810 版中的新增功能
 titleSuffix: Configuration Manager
 description: 获取有关 Configuration Manager Current Branch 1810 版中引入的更改和新功能的详细信息。
-ms.date: 01/25/2019
+ms.date: 02/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0f29dabe9c29ad69278ac52253a81a0172643f84
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 703b8be554f0a7ed1601703d381e4ed7c317af77
+ms.sourcegitcommit: 369db96ee84299b5ab6d74b177e6366b3017fc54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56142521"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56589860"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 1810 版中的新增功能
 
@@ -258,7 +258,10 @@ PowerShell 配置文件是在 PowerShell 启动时运行的脚本。 可以创�
 
 <!--For more information, see []().-->
 
+### <a name="improvement-to-software-updates-maintenance"></a>对软件更新维护的改进
+<!--2839349--> WSUS 清理任务现在在辅助站点上运行。 为辅助站点运行已过期更新的 WSUS 清理，并拒绝 WSUS 中的取代更新。
 
+有关更多信息，请参阅[从版本 1810 开始的 WSUS 清理行为](/sccm/sum/deploy-use/software-updates-maintenance#wsus-cleanup-behavior-starting-in-version-1810)
 
 ## <a name="bkmk_report"></a>报表
 
@@ -363,9 +366,7 @@ PowerShell 配置文件是在 PowerShell 启动时运行的脚本。 可以创�
 
 除了新增功能外，这一版还有其他变化（如缺陷修复）。 有关详细信息，请参阅 [Configuration Manager Current Branch（版本 1810）的更改摘要](https://support.microsoft.com/help/4482169)。
 
-<!--
-For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [PowerShell 1810 Release Notes](https://docs.microsoft.com/powershell/sccm/1810_release_notes?view=sccm-ps).
---> 
+若要详细了解对用于 Configuration Manager 的 Windows PowerShell cmdlet 的更改，请参阅 [PowerShell 1810 版发行说明](https://docs.microsoft.com/powershell/sccm/1810-release-notes?view=sccm-ps)。
 
 以下更新汇总 (4486457) 于 2019 年 1 月 25 日起在控制台中提供：[Configuration Manager Current Branch（版本 1810）更新汇总](https://support.microsoft.com/help/4486457)。
 

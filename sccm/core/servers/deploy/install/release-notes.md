@@ -2,7 +2,7 @@
 title: 发行说明
 titleSuffix: Configuration Manager
 description: 了解有关产品中尚未解决或 Microsoft 支持知识库文章中未涵盖的紧急问题。
-ms.date: 12/21/2018
+ms.date: 02/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4ba088be689808139a977073dd5b111d1fa46b7b
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: bc19092f1272611ea3e05d708bf89bda1a4ba3b9
+ms.sourcegitcommit: 0a23cde6112cbb5987f433bffcf6f223b994ba72
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56121550"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56667454"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Configuration Manager 发行说明
 
@@ -84,7 +84,16 @@ ms.locfileid: "56121550"
 
 
 
-<!-- ## Operating system deployment  -->
+## <a name="os-deployment"></a>OS 部署
+
+### <a name="after-passive-site-server-is-promoted-the-default-boot-image-packages-still-have-package-source-on-the-previous-active-server"></a>提升被动站点服务器之后，默认启动映像包在上一个活动服务器上仍有包源
+<!--3453224, SCCMDocs-pr issue 3097-->
+适用范围：Configuration Manager 版本 1810
+
+如果站点服务器处于被动模式（服务器 B），在将其提升为活动模式时，默认启动映像的内容位置将继续引用先前活动的服务器（服务器 A）。 如果服务器 A 出现硬件故障，则无法更新或更改默认启动映像。
+
+#### <a name="workaround"></a>解决方法
+无
 
 
 

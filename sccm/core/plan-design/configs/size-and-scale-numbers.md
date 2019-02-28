@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 304fe88dd5ed8a37bf17dca390d95158d005bae3
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 8850d849066c97b8cb07719f229ebec1d4748403
+ms.sourcegitcommit: 369db96ee84299b5ab6d74b177e6366b3017fc54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56125360"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56589877"
 ---
 # <a name="size-and-scale-numbers-for-system-center-configuration-manager"></a>System Center Configuration Manager 的大小和扩展数量
 
@@ -208,7 +208,7 @@ ms.locfileid: "56125360"
 
 
 ### <a name="embedded"></a>主站点和 Windows Embedded 设备
-主站点支持启用了基于文件的写入筛选器 (FBWF) 的 Windows Embedded 设备。 如果嵌入式设备没有启用写入筛选器，则主站点支持大量嵌入式设备，数量最多可以达到该站点允许的设备数。 在主站点可支持的所有设备中，最多只能有 10,000 台 Windows Embedded 设备。 这些设备必须针对[规划 Windows Embedded 设备的客户端部署](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices)中重要说明中列出的异常进行配置。 主站点仅支持 3,000 台启用了 EWF 且不是为异常配置的 Windows Embedded 设备。
+主站点支持启用了基于文件的写入筛选器 (FBWF) 的 Windows Embedded 设备。 如果嵌入式设备没有启用写入筛选器，则主站点支持大量嵌入式设备，数量最多可以达到该站点允许的设备数。 嵌入式设备启用了 FBWF 或统一写入筛选器 (UWF) 时，主站点最多可支持 10,000 个 Windows 嵌入式设备。 这些设备必须针对[规划 Windows Embedded 设备的客户端部署](/sccm/core/clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices)中重要说明中列出的异常进行配置。 主站点仅支持 3,000 台启用了 EWF 且不是为异常配置的 Windows Embedded 设备。
 
 
 ###  <a name="bkmk_sec"></a>辅助站点  

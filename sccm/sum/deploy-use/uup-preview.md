@@ -2,7 +2,7 @@
 title: UUP 预览版
 titleSuffix: Configuration Manager
 description: 有关 UUP 集成预览版的说明
-ms.date: 01/30/2019
+ms.date: 02/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 932f515c902e89236a1537c2f20d6be5f13a79c5
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: ece763244ffbd1ebaabd2c85d92697683eea8732
+ms.sourcegitcommit: e7e5ca04601270ea7af90183123d5db1d42784da
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56123393"
+ms.lasthandoff: 02/19/2019
+ms.locfileid: "56422181"
 ---
 # <a name="uup-private-preview-instructions"></a>UUP 个人预览版说明
 
@@ -246,3 +246,39 @@ The only note is that client upgrade of 1812 Technical Preview is broken from 18
 - 第三方替换内容提供程序
 
 有关详细信息，请参阅[优化 Windows 10 更新传递](/sccm/sum/deploy-use/optimize-windows-10-update-delivery)。
+
+
+## <a name="known-issues"></a>已知问题
+
+### <a name="additional-resources-are-required-on-wsus"></a>WSUS 上需要额外的资源
+同步 UUP 更新时（尤其是首次同步时），WSUS 服务器上需要额外的资源。 在某些情况下，此行为阻止了与顶层 WSUS 服务器的更新同步或者向下层服务器的层次结构同步。
+
+此问题表现为 WSUS 中同步失败。 Configuration Manager 还将其显示为同步失败。
+
+#### <a name="workaround"></a>解决方法
+在顶层 WSUS 服务器或层次结构中的任何父 WSUS 服务器上进行以下更改：
+1. 增加 ServerSyncWebService 超时 
+
+    1. 使用其他名称创建 `C:\Program Files\Update Services\WebServices\serversyncwebservice\web.config` 的备份副本  
+
+    2. 在记事本中打开 `C:\Program Files\Update Services\WebServices\serversyncwebservice\web.config`  
+
+    3. 通过添加“executionTimeout”属性来修改“httpRunTime”，例如：  
+
+        `<httpRuntime maxRequestLength="4096" executionTimeout="3600" />`  
+
+    4. 将 web.config 保存到其他位置。 必须执行此步骤，因为如果没有文件的所有权，通常不可编辑配置文件。  
+
+    5. 然后将修改后的 web.config 复制到 `C:\Program Files\Update Services\WebServices\serversyncwebservice` 目录，替换旧版本。  
+
+    6. 从提升的命令提示符处，重新启动 IIS：`IISReset`  
+
+        > [!Note]  
+        > 此操作会暂时停止 IIS 服务器
+
+2. 增加 WSUS 服务器的应用程序池内存：  
+
+    1. 转到 IIS 管理器 > 应用程序池 > 选择“WsusPool”，然后在右窗格中选择“高级设置”。  
+
+    2. 将“专用内存”和“虚拟内存”限制设置为 `0`。
+

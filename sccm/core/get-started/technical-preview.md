@@ -2,7 +2,7 @@
 title: 技术预览版
 titleSuffix: Configuration Manager
 description: 了解可测试 Configuration Manager 中的新功能和新特性的技术预览分支。
-ms.date: 02/08/2019
+ms.date: 02/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c48e7fdd2826af942cc94017d58614760f61545d
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: aa55a8e7c46df0c0d946e7e7c9f93e894bc49b89
+ms.sourcegitcommit: e7e5ca04601270ea7af90183123d5db1d42784da
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56136977"
+ms.lasthandoff: 02/19/2019
+ms.locfileid: "56422198"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Configuration Manager 的技术预览版
 
@@ -105,7 +105,7 @@ Microsoft 将支持每个技术预览版，直到三个连续的版本可用为�
    
 在基线版本发布后的 1 年内安装此基线版本。 在安装新的技术预览版站点时，如果当前有多个可用的基线版本，则使用最新的基线版本。
 
--  **技术预览版 1810.2**：Configuration Manager 技术预览版 1810.2 可同时用作控制台内部更新和新的基线版本。 从 [TechNet 评估中心](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview)下载基线版本。
+-  **技术预览版 1902.2**：Configuration Manager 技术预览版 1902.2 可同时用作控制台内更新和新的基线版本。 从 [TechNet 评估中心](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview)下载基线版本。
 
 
 
@@ -125,19 +125,14 @@ Microsoft 将支持每个技术预览版，直到三个连续的版本可用为�
 
 <!-- This is the full list of new features in the latest TP release -->
 
-### <a name="technical-preview-version-1902"></a>技术预览版 1902
+### <a name="technical-preview-version-19022"></a>技术预览版 1902.2
 
-<!-- - [title](/sccm/core/get-started/2019/technical-preview-1901#bkmk_anchor)<!--ID-->
+<!-- - [title](/sccm/core/get-started/2019/technical-preview-1901#bkmk_anchor) <!--ID--> 
 
-- [使用对话框窗口替换 toast 通知](/sccm/core/get-started/2019/technical-preview-1902#bkmk_impact)<!--3555947-->
-- [就地升级任务序列期间的进度状态](/sccm/core/get-started/2019/technical-preview-1902#bkmk_ipu)<!--3747129-->
-- [将 Windows 已知文件夹重定向到 OneDrive](/sccm/core/get-started/2019/technical-preview-1902#bkmk_odfb)<!--3556021-->
-- [仅在远程控制期间查看第一个屏幕](/sccm/core/get-started/2019/technical-preview-1902#bkmk_rcmulti)<!--3231732-->
-- [编辑或复制 PowerShell 脚本](/sccm/core/get-started/2019/technical-preview-1902#bkmk_psedit)<!--3705507-->
-- [将云管理网关添加到边界组](/sccm/core/get-started/2019/technical-preview-1902#bkmk_cmgbg)<!--3640932-->
-- [在软件中心配置默认视图](/sccm/core/get-started/2019/technical-preview-1902#bkmk_swctr)<!--3612112-->
-- [对客户端运行状况仪表板所做的改进](/sccm/core/get-started/2019/technical-preview-1902#bkmk_health)<!--3599209-->
-
+- [Office 365 更新的额外的语言](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_o365lang)<!--3555955--> 
+- [Office 365 专业增强版与分析集成的就绪情况](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_o365) <!--3735402--> 
+- [对分阶段部署成功标准的改进](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_pod) <!--3555946--> 
+- [对增强型 HTTP 的改进](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_ehttp) <!--3798957--> 
 
 
 > [!Note]  
@@ -156,6 +151,14 @@ Then remove the bottom of this list and/or move individual items not in CB to th
 
  | 功能 | 技术预览版 | 当前分支版 |  
  |---------|---------------------------|------------------------|
+ | 使用对话框窗口替换 toast 通知 <!--3555947--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_impact) | ![未添加](media/Red_X.gif) | 
+ | 就地升级任务序列期间的进度状态 <!--3747129--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_ipu) | ![未添加](media/Red_X.gif) | 
+ | 将 Windows 已知文件夹重定向到 OneDrive <!--3556021--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_odfb) | ![未添加](media/Red_X.gif) | 
+ | 仅在远程控制期间查看第一个屏幕 <!--3231732--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_rcmulti) | ![未添加](media/Red_X.gif) | 
+ | 编辑或复制 PowerShell 脚本 <!--3705507--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_psedit) | ![未添加](media/Red_X.gif) | 
+ | 将云管理网关添加到边界组 <!--3640932--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_cmgbg) | ![未添加](media/Red_X.gif) | 
+ | 在软件中心配置默认视图 <!--3612112--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_swctr) | ![未添加](media/Red_X.gif) | 
+ | 对客户端运行状况仪表板所做的改进 <!--3599209--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_health) | ![未添加](media/Red_X.gif) | 
  | 客户端运行状况仪表板 <!--3599209--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_health) | ![未添加](media/Red_X.gif) | 
  | 在 Windows 10 维护服务中指定功能更新的优先级 <!--3734525--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_neo) | ![未添加](media/Red_X.gif) | 
  | 分阶段部署专用监视 <!--3555949--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_pod) | ![未添加](media/Red_X.gif) | 

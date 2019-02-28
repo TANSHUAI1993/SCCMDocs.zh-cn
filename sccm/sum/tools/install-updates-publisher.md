@@ -2,31 +2,32 @@
 title: 安装 Updates Publisher
 titleSuffix: Configuration Manager
 description: 在环境中安装 System Center Updates Publisher
-ms.date: 07/03/2017
+ms.date: 02/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
 ms.assetid: ab5cda93-b67c-4aa5-904d-7b63ce790aa0
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2cd48e40f594ced5a62e3a65beb43e6dc74e090b
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 37a468a2b9727d66f7d3fe0cafd1aae044585b2a
+ms.sourcegitcommit: e18853c214c95e4d21b2f032aba6d17c21e97027
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56122468"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56443947"
 ---
 # <a name="install-updates-publisher"></a>安装 Updates Publisher
 
 适用范围：System Center Updates Publisher
 
-本主题介绍了如何获取、安装和设置 Updates Publisher，以便在环境中使用。
-
+这些文章中的信息可以帮助你下载、安装和设置 Updates Publisher，以便用于 System Center Configuration Manager 环境。
 
 ## <a name="prerequisites-and-limitations"></a>先决条件和限制
-下面各部分详细介绍了 Updates Publisher 的安装和使用要求，以及使用限制或已知问题。
+System Center Updates Publisher 只能与 System Center Configuration Manager 一起使用。 它不适用于独立的 WSUS 层次结构。
+
+下面各部分详细介绍了 Updates Publisher 的安装和使用要求，以及使用限制或已知问题。  
 
 ### <a name="operating-systems"></a>操作系统
 在以下版本的 64 位操作系统上安装和运行 Updates Publisher。 没有最低累积更新或 Service Pack 要求。

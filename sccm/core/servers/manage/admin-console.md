@@ -2,7 +2,7 @@
 title: Configuration Manager 控制台
 titleSuffix: Configuration Manager
 description: 了解如何导航 Configuration Manager 控制台。
-ms.date: 11/27/2018
+ms.date: 2/20/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bf617a579108f58723f267a065338ab857832d8f
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 30db8b061f41e8a9255b5a308df6a98ef8c0d81b
+ms.sourcegitcommit: 369db96ee84299b5ab6d74b177e6366b3017fc54
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56134565"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56589894"
 ---
 # <a name="using-the-configuration-manager-console"></a>使用 Configuration Manager 控制台
 
@@ -156,6 +156,8 @@ Configuration Manager 控制台提供下列命令行选项：
 - 主要用户 <!--1357280-->  
 
 - 当前登录的用户 <!--1358202-->  
+    > [!NOTE]  
+    > 查看当前登录的用户需要[用户发现](/sccm/core/servers/deploy/configure/configure-discovery-methods#bkmk_config-adud)和[用户设备相关性](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity)。  
 
 有关如何显示非默认列的详细信息，请参阅[列](#columns)。
 
