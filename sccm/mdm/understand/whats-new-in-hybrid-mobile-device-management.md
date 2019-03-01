@@ -2,7 +2,7 @@
 title: 混合 MDM 中的新增功能
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 和 Intune 的混合部署可用的新移动设备管理功能。
-ms.date: 02/19/2019
+ms.date: 02/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d65f6493ca3d067e31b6602c711ab1fbf9408a1
-ms.sourcegitcommit: e7e5ca04601270ea7af90183123d5db1d42784da
+ms.openlocfilehash: f5c55b48da8e3be356cb91979a8e478a6ac2e43a
+ms.sourcegitcommit: 0bf253085adeca0d9ea62d76497eb5ebf5ce89da
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/19/2019
-ms.locfileid: "56422232"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57012490"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Configuration Manager 和 Microsoft Intune 的混合移动设备管理中的新增功能
 
@@ -51,6 +51,22 @@ ms.locfileid: "56422232"
 ## <a name="february-2019"></a>2019 年 2 月
 
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
+
+#### <a name="create-new-intune-tenants-in-azure-portal"></a>在 Azure 门户中创建新的 Intune 租户
+<!--3754067--> 创建新的混合 MDM 租户的功能已删除，因为 Intune 1902年的更新。 在 Azure 门户中创建所有新的 Intune 租户。 提醒一下[混合 MDM 已弃用](/sccm/mdm/understand/hybrid-mobile-device-management)。 当前的混合 MDM 客户应尽快迁移至 Intune 独立版。
+
+有关详细信息，请参阅 [Intune 支持博客文章](https://aka.ms/hybrid_notification)。
+
+
+#### <a name="intune-uses-google-play-protect-apis-on-android-devices"></a>Intune 在 Android 设备上使用 Google Play 保护 Api 
+<!--2577355--> 一些管理员面临着 BYOD 横向其中根用户可能会或越狱其移动电话。 此行为，而有时不格式错误善意，会导致跳过的设置以保护组织的最终用户设备上的数据的多个 Intune 策略。 因此，Intune 提供已注册和未注册设备的根和越狱的检测。 
+
+此版本中，Intune 现在利用 Google Play 保护 Api 将添加到我们现有的根检测检查未注册设备。 尽管 Google 不共享发生的根检测检查整个，但是我们预期这些 Api 来检测已取得 root 权限从设备自定义任何原因为能够在较旧的设备上获取更高版本的操作系统更新其设备的用户。 这些用户将被阻止访问公司数据，或从其策略已启用应用程序，可擦除其公司帐户。 
+
+
+#### <a name="new-app-categories-screen-in-the-company-portal-app-for-windows-10"></a>新**应用类别**适用于 Windows 10 公司门户应用中的屏幕
+<!--3834780--> 若要提高应用程序浏览和选择体验 Windows 10 公司门户中的，它现在包括一个名为的新屏幕**应用类别**。 用户现在看到排序在类别下，如按其应用**特色**，**教育**，并**工作效率**。 此更改出现在公司门户版本 10.3.3451.0 中及更高版本。 若要查看新屏幕，请参阅[什么是应用程序 UI 中的新增功能](https://docs.microsoft.com/intune/whats-new)。 有关公司门户中的应用程序的详细信息，请参阅[安装并共享你的设备上的应用](https://docs.microsoft.com/intune-user-help/install-apps-cpapp-windows)。  
+
 
 #### <a name="macos-users-are-prompted-to-update-their-password"></a>系统会提示 macOS 用户更新其密码 
 <!--1873216--> 在 macOS 设备上将提示最终用户更新其密码。 用户运行需要身份验证，例如在登录到设备的任务时则会出现此提示。 此外提示你更新其密码时执行任何操作，需要管理权限，如请求密钥链访问权限的用户。  
