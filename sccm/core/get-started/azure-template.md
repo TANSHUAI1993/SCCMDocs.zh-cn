@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c3f1ca26c4cbc6de21565948ab2f161e2ccf0ea0
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 02f3df4b8c090df960f1052a25c1f6cc8ef45395
+ms.sourcegitcommit: ef2960bd91655c741450774e512dd0a9be610625
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56128249"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56838763"
 ---
 # <a name="create-a-configuration-manager-technical-preview-lab-in-azure"></a>在 Azure 中创建 Configuration Manager 技术预览实验室
 
@@ -117,10 +117,10 @@ Active Directory 域控制器
 - Internet Information Service (IIS)
 
 
-### `<prefix>MPDP`
+### `<prefix>DPMP`
 
-- 管理点
 - 分发点
+- 管理点
 
 #### <a name="windows-features-and-roles"></a>Windows 功能和角色
 - .NET
