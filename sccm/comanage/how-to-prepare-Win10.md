@@ -5,18 +5,18 @@ description: 了解如何准备 Windows 10 的基于 internet 的设备进行共
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 01/14/2019
+ms.date: 03/05/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 101de2ba-9b4d-4890-b087-5d518a4aa624
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fbe26eee8b01c581776b1c134e1fe59cf4293e1a
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 31779b3588617816df4309461ed7715b20b0abd4
+ms.sourcegitcommit: f3dd8405018fe1043434386be15c16752c1a4a3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56754656"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57558025"
 ---
 # <a name="how-to-prepare-internet-based-devices-for-co-management"></a>基于 internet 的设备进行共同管理的准备工作
 
@@ -51,7 +51,9 @@ ms.locfileid: "56754656"
 ### <a name="autopilot-for-existing-devices"></a>适用于现有设备的 autopilot
 <!--1358333-->
 
-[现有的设备的 Windows Autopilot](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430)是可用的 Windows 10，1809年或更高版本。 此功能，可重置映像和预配为 Windows 7 设备[Windows Autopilot 用户驱动模式](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven)使用一个单一的本机 Configuration Manager 任务序列。 
+[现有的设备的 Windows Autopilot](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430)是在 Windows 10，1809年或更高版本中提供。 此功能，可重置映像和预配为 Windows 7 设备[Windows Autopilot 用户驱动模式](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven)使用一个单一的本机 Configuration Manager 任务序列。 
+
+有关详细信息，请参阅[现有设备的任务序列的 Windows Autopilot](/sccm/osd/deploy-use/windows-autopilot-for-existing-devices)。
 
 
 
@@ -87,6 +89,11 @@ ms.locfileid: "56754656"
     
      有关详细信息，请参阅[规划 Crl](/sccm/core/plan-design/security/plan-for-security#-plan-for-the-site-server-signing-certificate-self-signed)  
 
+从版本 1810年，站点将发布其他 Azure AD 与云管理网关 (CMG) 的信息。 Azure AD 联接的客户端使用其联接的同一租户在 ccmsetup 进程中从 CMG 获取此信息。 这种行为进一步简化了注册设备，使其在有多个 Azure AD 租户的环境中进行共同管理。 现在，只有两个必需的 ccmsetup 属性**CCMHOSTNAME**并**SMSSiteCode**。<!--3607731-->
+
+> [!Note]
+> 如果你已在部署 Intune 的 Configuration Manager 客户端，使用新命令行和新 MSI 更新的 Intune 应用。 <!-- SCCMDocs-pr issue 3084 -->
+
 下面的示例包括所有这些属性：   
 `ccmsetup.exe CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver SMSMP=https://mp1.contoso.com`
 
@@ -102,6 +109,9 @@ ms.locfileid: "56754656"
 3. 在“其他”下，选择“业务线应用”。  
 
 4. 上传**ccmsetup.msi**应用包文件。 站点服务器上的 Configuration Manager 在以下文件夹中找到此文件： `<ConfigMgr installation directory>\bin\i386`。  
+
+    > [!Tip]  
+    > 当更新站点时，请确保还更新此应用在 Intune 中。  
 
 5. 更新应用程序后，使用命令行复制从 Configuration Manager 中配置应用信息。  
 

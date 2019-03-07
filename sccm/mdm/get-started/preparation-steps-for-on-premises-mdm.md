@@ -1,8 +1,8 @@
 ---
-title: '准备步骤 '
+title: 准备本地 MDM
 titleSuffix: Configuration Manager
-description: 准备在 System Center Configuration Manager 中通过本地移动设备管理对设备进行管理。
-ms.date: 03/05/2017
+description: 准备使用 Configuration Manager 中的本地移动设备管理来管理设备
+ms.date: 03/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -11,33 +11,37 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7b97d30e1d5cc5cdca0cd69e260910c7981d1cec
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: fad5ce96b84b5a6edfafdead64cff0223009ebf8
+ms.sourcegitcommit: f3dd8405018fe1043434386be15c16752c1a4a3c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56134208"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57558042"
 ---
-# <a name="preparation-steps-for-on-premises-mobile-device-management-in-system-center-configuration-manager"></a>用于 System Center Configuration Manager 中本地移动设备管理的准备步骤
+# <a name="preparation-steps-for-on-premises-mdm-in-configuration-manager"></a>用于本地 MDM Configuration Manager 中的准备步骤
 
 适用范围：System Center Configuration Manager (Current Branch)
 
-使用 System Center Configuration Manager 本地移动设备管理对设备进行管理需要设置 Configuration Manager 基础结构，以便所需的站点系统角色（注册代理点、注册点、设备管理点和分发点）可以跨整个受信任通道与要管理的移动设备进行通信。  
+若要使用 Configuration Manager 本地移动设备管理 (MDM) 管理设备，先设置必要的基础结构。 所需的站点系统角色需要跨整个受信任通道与移动设备通信。 这些角色包括注册代理点、 注册点、 设备管理点和分发点。
 
- 需要以下高级任务来为本地移动设备管理准备 Configuration Manager 系统：  
+为本地 MDM 准备 Configuration Manager 所需的以下高级任务：  
 
--   [在 System Center Configuration Manager 中为本地移动设备管理设置 Microsoft Intune 订阅](../../mdm/get-started/set-up-intune-subscription-on-premises-mdm.md)  
+- [为本地 MDM 设置 Microsoft Intune 订阅](/sccm/mdm/get-started/set-up-intune-subscription-on-premises-mdm)  
 
-     在此任务中，需注册 Microsoft Intune，然后将订阅通过 Configuration Manager 控制台添加到 Configuration Manager。 此步骤仅需用于许可授权的目的。 Intune 不用于管理设备或存储管理信息。 设备的所有协调和管理均由你组织的企业通过使用本地 Configuration Manager 基础结构实施。  
+    注册 Microsoft Intune，然后将订阅添加到 Configuration Manager 通过 Configuration Manager 控制台。 此步骤仅需用于许可授权的目的。 Intune 不用于管理设备或存储管理信息。 设备的所有协调和管理均由你组织的企业通过使用本地 Configuration Manager 基础结构实施。  
 
--   [在 System Center Configuration Manager 中为本地移动设备管理安装站点系统角色](../../mdm/get-started/install-site-system-roles-for-on-premises-mdm.md)  
+    > [!Note]  
+    > 从版本 1810年，Intune 连接不再新的本地 MDM 部署所必需的。<!--3607730, fka 1359124--> 组织仍需要 Intune 许可证才能使用此功能。 当前不能从现有的本地 MDM 部署中删除 Intune 连接。 有关详细信息，请参阅 [Intune 支持博客文章](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150)。  
 
-     在此任务中，安装和配置使用本地 Configuration Manager 基础结构管理设备所需的站点系统角色。 本地移动设备管理至少需要注册代理点、注册点、设备管理点和分发点这些站点系统角色。  
+- [为本地 MDM 安装站点系统角色](/sccm/mdm/get-started/install-site-system-roles-for-on-premises-mdm)  
 
--   [在 System Center Configuration Manager 中为本地移动设备管理的受信任通信设置证书](../../mdm/get-started/set-up-certificates-on-premises-mdm.md)  
+    安装和配置使用本地 Configuration Manager 基础结构管理设备所需的站点系统。 最小值，此功能需要注册代理点、 注册点、 设备管理点和分发点角色。  
 
-     在此任务中，配置本地 Configuration Manager 基础结构，以允许管理的设备和承载所需站点系统角色的服务器之间能够进行受信任的通信 (HTTPS)。  
+- [设置本地 MDM 的受信任通信的证书](/sccm/mdm/get-started/set-up-certificates-on-premises-mdm)  
 
--   [在 System Center Configuration Manager 中为本地移动设备管理设置设备注册](../../mdm/get-started/set-up-device-enrollment-on-premises-mdm.md)  
+    配置本地配置管理器基础结构，允许被管理的设备和承载所需的站点系统角色的服务器之间的受信任的通信 (HTTPS)。  
 
-     在此任务中，向用户授予注册计算机和设备的权限，并在设备（通常是未加入域的设备）上安装受信任的根证书，以允许 HTTPS 连接到站点系统服务。  
+- [设置本地 MDM 的设备注册](/sccm/mdm/get-started/set-up-device-enrollment-on-premises-mdm)  
+
+    权限授予用户注册的计算机和设备。 设备要允许 HTTPS 连接到的站点系统服务器上安装受信任的根证书。 这些设备通常不是已加入域的。  
+
