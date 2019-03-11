@@ -2,7 +2,7 @@
 title: 已弃用的功能
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 不再支持的功能。
-ms.date: 01/30/2019
+ms.date: 02/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0a207399f5baa1b00be954ef4d0eb432939ed261
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 40469e8173303eb7ad46ef8e716529c37ec6e76d
+ms.sourcegitcommit: ef2960bd91655c741450774e512dd0a9be610625
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56127297"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56838780"
 ---
 # <a name="removed-and-deprecated-features-for-configuration-manager"></a>Configuration Manager 中已删除和已弃用的功能
 
@@ -32,6 +32,7 @@ ms.locfileid: "56127297"
 
 |功能|首次宣布弃用|支持&nbsp;删除|  
 |-----------|---|--------------|  
+|共享 Azure 内容的实现已更改。 使用启用了内容的云管理网关。 将来无法创建传统的云分发点。|2019 年 2 月|2019 年 11 月 1 日后发布的首版|
 |适用于云管理网关和云分发点的 Azure 经典服务部署。 有关详细信息，请参阅 [CMG 规划](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway#azure-resource-manager)。|2018 年 11 月|在 2019 年 7 月 1 日之后发布的第一个版本| 
 |适用于 Mac 和 Linux 的 System Center Endpoint Protection<br>有关详细信息，请参阅[“不再提供支持”博客文章](https://go.microsoft.com/fwlink/?linkid=870182)。|2018 年 10 月|2018 年 12 月 31 日|
 |本地条件访问<br>有关详细信息，请参阅[什么是混合 MDM](/sccm/mdm/understand/hybrid-mobile-device-management)。|2019 年 1 月 30 日|2019 年 9 月 1 日|

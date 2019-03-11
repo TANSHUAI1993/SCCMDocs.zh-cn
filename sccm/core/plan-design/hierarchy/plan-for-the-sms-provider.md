@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d6eeb74e3e8e83dd0082f45583bd2eb5dbe1df4e
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: aec16c4b55afd8c4baf7486794e07f29fa84aebf
+ms.sourcegitcommit: 223549003829fce7c6dc63959ee71e8b88542417
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56131602"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56951828"
 ---
 # <a name="plan-for-the-sms-provider"></a>规划 SMS 提供程序 
 
@@ -51,7 +51,7 @@ SMS 提供程序帮助强制实施 Configuration Manager 安全性。 它仅返�
 
  若要支持 SMS 提供程序，目标服务器必须满足以下先决条件：  
 
--   位于具有站点服务器和站点数据库站点系统双向信任关系的域中  
+-   与站点服务器和站点数据库站点系统位于同一域中  
 
 -   不能具有不同站点中的站点系统角色  
 

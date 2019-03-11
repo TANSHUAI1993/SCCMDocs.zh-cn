@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d8eff4154f5799ef0d6411b077f50753d203310e
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 0a66ba04defcea48db143487cc08bc5dc330cf2c
+ms.sourcegitcommit: ef2960bd91655c741450774e512dd0a9be610625
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56126770"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56838899"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>在 Configuration Manager 中规划云管理网关
 
@@ -208,7 +208,8 @@ CMG 向导仍提供使用 Azure 管理证书的“经典服务部署”选项。
 | 软件分发（以设备为目标）     | ![支持](media/green_check.png) |
 | 软件分发（以用户为目标，必需）<br>（带 Azure AD 集成）     | ![支持](media/green_check.png)  (1710) |
 | 软件分发（以用户为目标，可用）<br>（[所有要求](/sccm/apps/deploy-use/deploy-applications#deploy-user-available-applications-on-azure-ad-joined-devices)） | ![支持](media/green_check.png)  (1802) |
-| Windows 10 就地升级任务序列     | ![支持](media/green_check.png)  (1802) |
+| Windows 10 就地升级任务序列      | ![支持](media/green_check.png)  (1802) |
+| 不使用启动映像但使用以下选项部署的任务序列：**启动任务序列之前在本地下载所有内容**      | ![支持](media/green_check.png)  (1802) |
 | CMPivot     | ![支持](media/green_check.png)  (1806) |
 | 任何其他任务序列方案     | ![不支持](media/Red_X.png) |
 | 客户端推送     | ![不支持](media/Red_X.png) |

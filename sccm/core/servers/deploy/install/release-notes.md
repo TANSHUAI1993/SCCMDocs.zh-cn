@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc19092f1272611ea3e05d708bf89bda1a4ba3b9
-ms.sourcegitcommit: 0a23cde6112cbb5987f433bffcf6f223b994ba72
+ms.openlocfilehash: c7e4307d61cccf968729f013ebaa4bfab4b0027e
+ms.sourcegitcommit: 56ec6933cf7bfc93842f55835ad336ee3a1c6ab5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56667454"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57211527"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Configuration Manager 发行说明
 
@@ -26,13 +26,15 @@ ms.locfileid: "56667454"
 
 特定于功能的文档包含有关影响核心方案的已知问题的信息。  
 
-> [!TIP]  
->  本主题包含 Configuration Manager 当前分支的发行说明。 有关技术预览分支的信息，请参阅[技术预览](/sccm/core/get-started/technical-preview)  
+本主题包含 Configuration Manager 当前分支的发行说明。 有关技术预览分支的信息，请参阅[技术预览](/sccm/core/get-started/technical-preview)  
 
 有关不同版本引入的新功能的信息，请参阅以下文章：
 - [1810 版中的新增功能](/sccm/core/plan-design/changes/whats-new-in-version-1810)
 - [1806 版中的新增功能](/sccm/core/plan-design/changes/whats-new-in-version-1806)  
 - [1802 版中的新增功能](/sccm/core/plan-design/changes/whats-new-in-version-1802)
+
+> [!Tip]  
+> 若要在此页面更新时收到通知，请将以下 URL 复制并粘贴到 RSS 源阅读器中：`https://docs.microsoft.com/api/search/rss?search=%22release+notes+-+Configuration+Manager%22&locale=en-us`
 
 
 

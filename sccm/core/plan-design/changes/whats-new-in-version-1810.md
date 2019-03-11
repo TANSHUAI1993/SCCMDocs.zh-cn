@@ -2,7 +2,7 @@
 title: 1810 版中的新增功能
 titleSuffix: Configuration Manager
 description: 获取有关 Configuration Manager Current Branch 1810 版中引入的更改和新功能的详细信息。
-ms.date: 02/19/2019
+ms.date: 03/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,28 +11,28 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 703b8be554f0a7ed1601703d381e4ed7c317af77
-ms.sourcegitcommit: 369db96ee84299b5ab6d74b177e6366b3017fc54
+ms.openlocfilehash: 7d8a3c6c73d30d7d5e8e825cd20baa334214dceb
+ms.sourcegitcommit: 33a006204f7f5f9b9acd1f3e84c4bc207362d00a
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56589860"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305790"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 1810 版中的新增功能
 
 适用范围：System Center Configuration Manager (Current Branch)
 
-Configuration Manager Current Branch 的 1810 更新作为控制台中更新提供。 将此更新应用于运行 1710、1802 或 1806 版的站点。 <!-- baseline only statement: When installing a new site, it's also available as a baseline version.-->
+Configuration Manager Current Branch 的 1810 更新作为控制台中更新提供。 将此更新应用于运行 1710、1802 或 1806 版的站点。 <!-- baseline only statement: When installing a new site, it's also available as a baseline version.-->本文汇总了 Configuration Manager 1810 版中的更改和新增功能。  
 
 始终查看安装此更新的最新清单。 有关详细信息，请参阅 [1810 的安装更新清单](/sccm/core/servers/manage/checklist-for-installing-update-1810)。 更新站点后，还可以查看[更新后清单](/sccm/core/servers/manage/checklist-for-installing-update-1810#post-update-checklist)。
+
+若要利用新的 Configuration Manager 功能，请先将客户端更新到最新版本。 尽管在更新站点和控制台时 Configuration Manager 控制台中会显示新功能，但只有在客户端版本也是最新版本之后，完整方案才能正常运行。
 
 > [!Note]  
 > 本文目前列出了此版本中的所有重要功能。 但是，并非所有部分都链接到更新的内容并提供有关新功能的进一步信息。 定期查看此页面以获取更新。 我们使用 [已更新] 标记标注更改。 内容最终确定后，将删除此标注。  
 
-> [!Important]  
-> 若要利用新的 Configuration Manager 功能，请先将客户端更新到最新版本。 尽管在更新站点和控制台时 Configuration Manager 控制台中会显示新功能，但只有在客户端版本也是最新版本之后，完整方案才能正常运行。
-
-本文汇总了 Configuration Manager 1810 版中的更改和新增功能。  
+> [!Tip]  
+> 若要在此页面更新时收到通知，请将以下 URL 复制并粘贴到 RSS 源阅读器中：`https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+1810+-+Configuration+Manager%22&locale=en-us`
 
 
 
@@ -176,9 +176,10 @@ Version 1810 drops support for the following products:
 ## <a name="bkmk_app"></a>应用程序管理
 
 ### <a name="convert-applications-to-msix"></a>将应用程序转换为 MSIX
-<!--1359029--> 从版本 1806 开始，Configuration Manager 支持部署新的 Windows 10 应用包 (.msix) 格式。 现在可以将你的现有 Windows Installer (.msi) 应用程序转换为 MSIX 格式。
+<!--3607729, fka 1359029-->
+ ***[已更新]*** 从版本 1806 开始，Configuration Manager 支持部署新的 Windows 10 应用包 (.msix) 格式。 现在可以将你的现有 Windows Installer (.msi) 应用程序转换为 MSIX 格式。
 
-<!--For more information, see [Create Windows applications](/sccm/apps/get-started/creating-windows-applications#bkmk_general).  this might move to a new section for msix-->
+有关详细信息，请参阅[创建 Windows 应用程序](/sccm/apps/get-started/creating-windows-applications#bkmk_msix)。  
 
 
 ### <a name="repair-applications"></a>修复应用程序
@@ -207,11 +208,11 @@ PowerShell 配置文件是在 PowerShell 启动时运行的脚本。 可以创�
 ## <a name="bkmk_osd"></a> OS 部署
 
 ### <a name="task-sequence-support-of-windows-autopilot-for-existing-devices"></a>针对现有设备的 Windows Autopilot 的任务序列支持
-<!--1358333-->
+<!--3607717, fka 1358333-->
 
-[针对现有设备的 Windows Autopilot](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430)，现可通过 Windows 10 版本 1809 或更高版本提供。 此新功能可重置映像并使用单个本机 Configuration Manager 任务序列为 [Windows Autopilot 用户驱动模式](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven)预配 Windows 7 设备。 
+***[已更新]*** [面向现有设备的 Windows Autopilot](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) 现可通过 Windows 10 版本 1809 或更高版本提供。 此新功能可重置映像并使用单个本机 Configuration Manager 任务序列为 [Windows Autopilot 用户驱动模式](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven)预配 Windows 7 设备。 
 
-<!--For more information, see []().--> 
+有关详细信息，请参阅[面向现有设备的 Windows Autopilot](/sccm/osd/deploy-use/windows-autopilot-for-existing-devices)。
 
 
 ### <a name="specify-the-drive-for-offline-os-image-servicing"></a>指定用于为脱机 OS 映像提供服务的驱动器  
@@ -227,7 +228,10 @@ PowerShell 配置文件是在 PowerShell 启动时运行的脚本。 可以创�
 
 
 ### <a name="improvements-to-driver-maintenance"></a>对驱动程序维护的改进
-<!--1358270--> 驱动程序包现在具有用于“制造商”和“模型”的其他元数据字段。 使用这些字段可标记驱动程序包的信息，以帮助进行常规任务管理，或标识可以删除的旧的及重复的驱动程序。
+<!--3607716, fka 1358270-->
+ ***[已更新]*** 驱动程序包现在具有用于“制造商”和“模型”的其他元数据字段。 使用这些字段可标记驱动程序包的信息，以帮助进行常规任务管理，或标识可以删除的旧的及重复的驱动程序。
+
+有关详细信息，请参阅[管理驱动程序](/sccm/osd/get-started/manage-drivers)。
 
 
 ### <a name="new-task-sequence-variable-for-last-action-name"></a>最后一个操作名称的新任务序列变量
@@ -378,6 +382,8 @@ PowerShell 配置文件是在 PowerShell 启动时运行的脚本。 可以创�
 | ID | 标题 | 日期 | 控制台内部 |
 |---------|---------|---------|---------|
 | [4487960](https://support.microsoft.com/help/4487960) | Microsoft Intune 连接器证书在 Configuration Manager 中未续订 | 2019 年 1 月 18 日 | 是 |
+| [4490434](https://support.microsoft.com/help/4490434) | 在 Configuration Manager 中创建重复的用户发现列 | 2019 年 2 月 22 日 | 是 |
+| [4490575](https://support.microsoft.com/help/4490575) | 更新安装在 Configuration Manager 1810 版中停止响应或从未显示完成 | 2019 年 2 月 22 日 | 是 |
 
 
 ## <a name="next-steps"></a>后续步骤

@@ -2,7 +2,7 @@
 title: 1810 清单
 titleSuffix: Configuration Manager
 description: 了解更新到 Configuration Manager 版本 1810 之前需要执行的操作。
-ms.date: 11/27/2018
+ms.date: 02/28/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99bde59429af4d75e7e1dfab42d627d3a973efe6
-ms.sourcegitcommit: ceec0e20bf801071f2a05233f984cf17acc3fd29
+ms.openlocfilehash: 11a67aa698340cd100ded1ca64b9a97960bc6b9b
+ms.sourcegitcommit: 56ec6933cf7bfc93842f55835ad336ee3a1c6ab5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265006"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57211663"
 ---
 # <a name="checklist-for-installing-update-1810-for-configuration-manager"></a>用于为 Configuration Manager 安装 1810 更新的清单
 
@@ -75,7 +75,7 @@ ms.locfileid: "56265006"
 有关详细信息，请参阅[许可和分支](/sccm/core/understand/learn-more-editions)。
 
 #### <a name="review-microsoft-net-versions"></a>查看 Microsoft.NET 版本 
-在站点安装此更新时，Configuration Manager 将自动安装.NET Framework 4.5.2。 如果尚未安装此必备组件，站点会将其安装在托管以下站点系统角色之一的每个服务器上：
+站点安装此更新后，如果未安装所需的最低版本 .NET Framework 4.5，Configuration Manager 将自动安装 .NET Framework 4.5.2。 如果尚未安装此必备组件，站点会将其安装在托管以下站点系统角色之一的每个服务器上：
 
 -   管理点
 -   服务连接点

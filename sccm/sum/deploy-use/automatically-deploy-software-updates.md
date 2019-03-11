@@ -11,12 +11,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c42cfb2b973084efc897c8f313e58541164d3fa2
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 8d83085637e971b47ee9941d76fef749660861aa
+ms.sourcegitcommit: 223549003829fce7c6dc63959ee71e8b88542417
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56123478"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56951845"
 ---
 #  <a name="automatically-deploy-software-updates"></a>自动部署软件更新  
 
@@ -196,7 +196,7 @@ ms.locfileid: "56123478"
     - **没有部署包**：自 1806 版本起，无需先下载内容并将其分发到分发点，即可将软件更新部署到设备。 处理非常大的更新内容时，此设置很有用。 希望客户端始终从 Microsoft 更新云服务中获取内容时，也请使用此设置。 在此方案中的客户端还可以从已具有所需内容的对等节点下载内容。 Configuration Manager 客户端继续管理内容下载，因此可以利用 Configuration Manager 对等缓存功能或其他技术，如交付优化。 此功能支持受 Configuration Manager 软件更新管理（包括 Windows 和 Office 更新）支持的任何更新类型。<!--1357933-->  
 
         > [!Note]  
-        > 此选项仅适用于新的自动部署规则。 不能使用此设置来修改现有规则。<!--SCCMDocs issue 741-->  
+        > 选择此选项并应用设置后，将无法再更改它。 其他选项将显示为灰色。<!--SCCMDocs-pr issue 3003-->  
 
 12. 在“分发点”页面上，指定用于托管软件更新文件的分发点或分发点组。 有关分发点的详细信息，请参阅[分发点配置](/sccm/core/servers/deploy/configure/install-and-configure-distribution-points#bkmk_configs)。 只有当你在创建新的软件更新部署包时才能使用本页。  
   

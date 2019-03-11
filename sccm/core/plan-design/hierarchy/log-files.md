@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a5c6cee6422d3fc8777f54bd42716748410c9323
-ms.sourcegitcommit: ceec0e20bf801071f2a05233f984cf17acc3fd29
+ms.openlocfilehash: b3edf45c5b4eb62d5bfdd795f104c40da1ee1526
+ms.sourcegitcommit: 56ec6933cf7bfc93842f55835ad336ee3a1c6ab5
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265064"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57211697"
 ---
 # <a name="log-files-in-configuration-manager"></a>Configuration Manager 中的日志文件
 
@@ -576,6 +576,7 @@ Configuration Manager 将日志文件存储在不同的位置。 这些位置取
 |PrestageContent.log|记录有关在远程预留分发点上使用 ExtractContent.exe 工具的详细信息。 此工具提取已导出到文件的内容。|站点系统角色|  
 |SMSdpmon.log|记录有关在分发点上配置的分发点运行状况监视计划任务的详细信息。|站点系统角色|  
 |smsdpprov.log|记录有关提取从主站点接收的压缩文件的详细信息。 此日志由远程分发点的 WMI 提供程序生成。|未与站点服务器共置的分发点计算机|  
+|smsdpusage.log|记录有关运行的 smsdpusage.exe 的详细信息，并收集分发点使用情况摘要报告的数据。|站点系统角色|  
 
 ###  <a name="BKMK_DiscoveryLog"></a>发现  
 下表列出的日志文件包含与发现相关的信息。  

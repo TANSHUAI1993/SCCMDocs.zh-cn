@@ -2,7 +2,7 @@
 title: 安装云分发点
 titleSuffix: Configuration Manager
 description: 使用以下步骤在 Configuration Manager 中设置云分发点。
-ms.date: 11/27/2018
+ms.date: 02/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,16 +11,22 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ef6ace569a73700c2250cd5a45301df387e54c33
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: e840e951e7519214a609f2b865adbd38287d0c0f
+ms.sourcegitcommit: ef2960bd91655c741450774e512dd0a9be610625
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56127161"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56838831"
 ---
 # <a name="install-a-cloud-distribution-point-for-configuration-manager"></a>为 Configuration Manager 安装云分发点
 
-适用范围：*System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
+
+> [!Important]  
+> 共享 Azure 内容的实现已更改。 通过启用“允许 CMG 充当云分发点，并提供 Azure 存储中的内容”的选项，使用启用了内容的云管理网关。 有关详细信息，请参阅[修改 CMG](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#modify-a-cmg)。
+> 
+> 将来无法创建传统的云分发点。 有关详细信息，请参阅[已删除和已弃用的功能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)。 
+
 
 本文详细介绍了在 Microsoft Azure 中安装 Configuration Manager 云分发点的步骤。 它包括以下部分：
 - [在开始之前](#bkmk_before) 
