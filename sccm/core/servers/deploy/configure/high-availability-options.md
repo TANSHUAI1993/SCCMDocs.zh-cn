@@ -2,7 +2,7 @@
 title: 高可用性
 titleSuffix: Configuration Manager
 description: 了解如何使用维持高可用性服务的选项部署 Configuration Manager。
-ms.date: 07/30/2018
+ms.date: 03/06/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9b69fac83283963e49b01c733fb8fa3000702cfb
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 424b841360efbebef96ba5980c4ea7a45995ea0a
+ms.sourcegitcommit: 544f335cfd1bfd0a1d4973439780e9f5e9ee8bed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56132160"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562123"
 ---
 # <a name="high-availability-options-for-configuration-manager"></a>Configuration Manager 的高可用性选项
 
@@ -214,6 +214,8 @@ Configuration Manager 客户端自主性包括以下行为：
 > 本部分仅适用于 Configuration Manager 版本 1802 及更早版本。 从版本 1806 开始，Configuration Manager 为站点服务器提供高可用性选项。 有关详细信息，请参阅[站点服务器高可用性](/sccm/core/servers/deploy/configure/site-server-high-availability)。  
 
 Configuration Manager 不支持在 Windows Server 群集或 NLB 群集上为每个站点安装站点服务器。  
+
+从版本 1810 开始，Configuration Manager 设置进程不再阻止在具有适用于故障转移群集的 Windows 角色的计算机上安装站点服务器角色。 SQL Always On 需要此角色，因此，以前你无法在站点服务器上共置站点数据库。 进行此更改后，你可以通过在被动模式下使用 SQL Always On 和站点服务器创建具有更少服务器的高可用站点。 <!--3607761, fka 1359132-->  
 
 下列信息有助于为站点服务器失败或无法工作的情况做好准备：  
 
