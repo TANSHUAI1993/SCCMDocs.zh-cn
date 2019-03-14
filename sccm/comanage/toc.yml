@@ -34,6 +34,8 @@ items:
     items:
     - name: 为 Configuration Manager 客户端启用共同管理
       href: tutorial-co-manage-clients.md
+    - name: 为基于 Internet 的设备启用共同管理
+      href: tutorial-co-manage-new-devices.md
   - name: 概念
     items:
     - name: 工作负载
@@ -48,9 +50,9 @@ items:
       href: how-to-switch-workloads.md
     - name: 监视共同管理
       href: how-to-monitor.md
-ms.openlocfilehash: bd369fa1393d42e70776d644d055b31eee2a208c
-ms.sourcegitcommit: a3cec96a771eed69e58a29917d1a3fe1a5fb2e73
+ms.openlocfilehash: ff313299137330aab790e62d1db127c0f1bb1808
+ms.sourcegitcommit: af8693048e6706ffda72572374f56e0bc7dfce2c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54251241"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57737274"
