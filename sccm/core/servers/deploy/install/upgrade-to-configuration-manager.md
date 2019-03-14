@@ -148,7 +148,7 @@ Configuration Manager 无法升级使用网络负载平衡 (NLB) 群集来承载
 有关站点维护任务的详细信息，请参阅：  
 
 -   System Center 2012 Configuration Manager：[规划 Configuration Manager 的维护任务](https://technet.microsoft.com/library/gg712686.aspx)  
--   System Center Configuration Manager：[Reference for maintenance tasks for System Center Configuration Manager](../../../../core/servers/manage/reference-for-maintenance-tasks.md)  
+-   System Center Configuration Manager：[System Center Configuration Manager 维护任务参考](../../../../core/servers/manage/reference-for-maintenance-tasks.md)  
 
 **运行安装程序先决条件检查程序**：  
 升级站点之前，可以独立于安装程序运行 **先决条件检查程序** ，以验证站点是否满足先决条件 稍后升级该站点时会再次运行必备组件检查程序。  
