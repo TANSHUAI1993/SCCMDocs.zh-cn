@@ -19,8 +19,8 @@ ms.lasthandoff: 02/12/2019
 ms.locfileid: "56132415"
 ---
 # <a name="create-and-deploy-windows-defender-application-guard-policy"></a>创建和部署 Windows Defender 应用程序防护策略 
-*适用于： System Center Configuration Manager (Current Branch)* 
- <!-- 1351960 -->可以创建和部署[Windows Defender 应用程序防护](https://docs.microsoft.com/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview)策略通过使用配置管理器终结点保护。 这些策略通过在操作系统的其他部分无法访问的安全隔离容器中打开不受信任的网站来帮助保护用户安全。
+*适用于： System Center Configuration Manager (Current Branch)*
+<!-- 1351960 -->可以创建和部署[Windows Defender 应用程序防护](https://docs.microsoft.com/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview)策略通过使用配置管理器终结点保护。 这些策略通过在操作系统的其他部分无法访问的安全隔离容器中打开不受信任的网站来帮助保护用户安全。
 
 ## <a name="prerequisites"></a>先决条件
 
