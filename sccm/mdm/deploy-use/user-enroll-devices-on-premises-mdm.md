@@ -22,7 +22,7 @@ ms.locfileid: "56137552"
 
 适用范围：System Center Configuration Manager (Current Branch)
 
-借助 System Center Configuration Manager 本地移动设备管理，如果用户已获得注册权限（通过更新客户端设置的方式）并且设备已安装所需的根证书以与承载所需站点系统角色的服务器进行受信任的通信，则可以注册设备。 有关如何设置注册的详细信息，请参阅 [Set up device enrollment for On-premises Mobile Device Management in System Center Configuration Manager](../../mdm/get-started/set-up-device-enrollment-on-premises-mdm.md)（在 System Center Configuration Manager 中为本地移动设备管理设置设备注册）。  
+借助 System Center Configuration Manager 本地移动设备管理，如果用户已获得注册权限（通过更新客户端设置的方式）并且设备已安装所需的根证书以与承载所需站点系统角色的服务器进行受信任的通信，则可以注册设备。 有关如何设置注册的详细信息，请参阅 [在 System Center Configuration Manager 中为本地移动设备管理设置设备注册](../../mdm/get-started/set-up-device-enrollment-on-premises-mdm.md)。  
 
 > [!NOTE]  
 >  Configuration Manager 的 Current Branch 支持针对运行以下操作系统的设备的本地移动设备管理中的注册：  

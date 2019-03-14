@@ -32,7 +32,7 @@ ms.locfileid: "57211663"
 
     -   dmpdownloader.log 可能指示 dmpdownloader 进程要等待一段时间之后才检查更新。 若要重启更新的重分发文件的下载，请在站点服务器上重启 SMS_Executive 服务。
 
-    -   当代理服务器设置阻止从 http://silverlight.dlservice.microsoft.com、 http://download.microsoft.com 和/或 http://go.microsoft.com 下载时，会出现另一个常见下载问题。
+    -   当代理服务器设置阻止从 [http://silverlight.dlservice.microsoft.com](http://silverlight.dlservice.microsoft.com)、 http://download.microsoft.com 和/或 http://go.microsoft.com 下载时，会出现另一个常见下载问题。
 
 有关安装更新的详细信息，请参阅[控制台内部的更新和维护服务](/sccm/core/servers/manage/updates#a-namebkmkinconsolea-in-console-updates-and-servicing)。
 

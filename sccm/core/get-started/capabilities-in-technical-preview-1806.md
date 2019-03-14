@@ -230,7 +230,7 @@ SCUP 继续支持其他目录和方案。 Configuration Manager 控制台的“�
 <!--1358149--> 现在 Office 自定义工具在 Configuration Manager 控制台中与 Office 365 安装程序集成。 在为 Office 365 创建部署时，现在可以动态配置最新的 Office 可管理性设置。 Office 自定义工具在发布 Office 365 新版本的同时更新。 一旦 Office 365 中的新可管理性设置可用，便可立即使用。 
 
 ### <a name="prerequisites"></a>先决条件
-- 运行 Configuration Manager 控制台的计算机需要通过 HTTPS 端口 443 进行 Internet 访问。 Office 365 客户端安装向导使用 Windows 标准 Web 浏览器 API 来打开 https://config.office.com。 如果使用 Internet 代理，则用户必须能够访问此 URL。
+- 运行 Configuration Manager 控制台的计算机需要通过 HTTPS 端口 443 进行 Internet 访问。 Office 365 客户端安装向导使用 Windows 标准 Web 浏览器 API 来打开 [https://config.office.com](https://config.office.com)。 如果使用 Internet 代理，则用户必须能够访问此 URL。
 
 ### <a name="try-it-out"></a>试试看！
  尝试完成任务。 然后发送[反馈](capabilities-in-technical-preview-1804.md#bkmk_feedback)，以便我们了解其运作状况。
