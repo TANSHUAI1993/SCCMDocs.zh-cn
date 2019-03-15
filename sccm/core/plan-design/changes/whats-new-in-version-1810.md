@@ -2,7 +2,7 @@
 title: 1810 版中的新增功能
 titleSuffix: Configuration Manager
 description: 获取有关 Configuration Manager Current Branch 1810 版中引入的更改和新功能的详细信息。
-ms.date: 03/02/2019
+ms.date: 03/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d8a3c6c73d30d7d5e8e825cd20baa334214dceb
-ms.sourcegitcommit: 33a006204f7f5f9b9acd1f3e84c4bc207362d00a
+ms.openlocfilehash: 9d2ab324038e833da7bc080286c820b3df8d06fa
+ms.sourcegitcommit: f3dd8405018fe1043434386be15c16752c1a4a3c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305790"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57558161"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 1810 版中的新增功能
 
@@ -122,27 +122,20 @@ Version 1810 drops support for the following products:
 
 
 ### <a name="improvements-to-collection-evaluation"></a>对集合评估的改进
-<!--1358981--> 集合评估行为中的以下更改可改进站点性能：  
- 
+<!--3607726, fka 1358981-->
+ ***[已更新]*** 集合评估行为中的以下更改可改进站点性能：  
+
 - 以前，在基于查询的集合上配置计划时，站点将继续评估查询，无论你是否启用了“在此集合上计划完全更新”的集合设置。 若要完全禁用计划，必须将计划更改为“无”。 现在，当你禁用此设置时，站点将清除计划。 若要指定对计划进行集合评估，请启用“在此集合上计划完全更新”的选项。  
 
 - 你无法禁用“所有系统”等内置集合的评估，但现在可以配置计划。 此行为使你能够在满足你的业务需求的同时自定义此操作。 
 
-<!--For more information, see [How to create collections](/sccm/core/clients/manage/collections/create-collections).-->
+有关详细信息，请参阅[如何创建集合](/sccm/core/clients/manage/collections/create-collections#bkmk_create)。
 
 
 ### <a name="improvement-to-client-installation"></a>客户端安装改进
 <!--1358840--> 在安装 Configuration Manager 客户端时，ccmsetup 进程会联系管理点以查找所需的内容。 以前在此进程中，管理点仅返回客户端当前边界组中的分发点。 如果没有可用内容，安装进程会回退，以从管理点下载内容。 无法回退到其他边界组中可能具有必要内容的分发点。 现在，管理点会基于边界组配置返回分发点。 
 
 有关详细信息，请参阅[配置边界组](/sccm/core/servers/deploy/configure/boundary-groups#bkmk_ccmsetup)。
-
-
-### <a name="improvements-to-internet-based-client-setup"></a>对基于 Internet 的客户端设置的改进
-<!--1359181-->
-<!--move this under co-management?-->  
-此版本进一步简化了针对 Internet 上的客户端的 Configuration Manager 客户端设置过程。 此站点向云管理网关 (CMG) 发布其他 Azure Active Directory (Azure AD) 信息。 Azure AD 联接的客户端使用其联接的同一租户在 ccmsetup 进程中从 CMG 获取此信息。 这种行为进一步简化了注册设备，使其在有多个 Azure AD 租户的环境中进行共同管理。 现在，只有两个必需的 ccmsetup 属性：CCMHOSTNAME 和 SMSSiteCode。
-
-<!--For more information, see [Prepare Windows 10 devices for co-management](https://docs.microsoft.com/en-us/sccm/core/clients/manage/co-management-prepare#command-line-to-install-configuration-manager-client).-->
 
 
 
@@ -166,6 +159,13 @@ Version 1810 drops support for the following products:
 ![显示了前四个磁贴的共同托管仪表板的屏幕截图](media/1358980-comgmt-dashboard.png)
 
 有关详细信息，请参阅[共同管理仪表板](/sccm/comanage/how-to-monitor#co-management-dashboard)。
+
+
+### <a name="improvements-to-internet-based-client-setup"></a>对基于 Internet 的客户端设置的改进
+<!--3607731, fka 1359181-->
+ ***[已更新]*** 此版本进一步简化了针对 Internet 上的客户端的 Configuration Manager 客户端安装过程。 此站点向云管理网关 (CMG) 发布其他 Azure Active Directory (Azure AD) 信息。 Azure AD 联接的客户端使用其联接的同一租户在 ccmsetup 进程中从 CMG 获取此信息。 这种行为进一步简化了注册设备，使其在有多个 Azure AD 租户的环境中进行共同管理。 现在，只有两个必需的 ccmsetup 属性：CCMHOSTNAME 和 SMSSiteCode。
+
+有关详细信息，请参阅[如何准备基于 Internet 的设备以进行共同管理](/sccm/comanage/how-to-prepare-Win10#install-the-configuration-manager-client)。
 
 
 
@@ -195,14 +195,16 @@ Version 1810 drops support for the following products:
 
 
 ### <a name="detection-methods-dont-load-windows-powershell-profiles"></a>检测方法不会加载 Windows PowerShell 配置文件
-<!--1359239--> 可以使用 Windows PowerShell 脚本来检测应用程序和配置项中的设置。 当这些脚本在客户端上运行时，Configuration Manager 客户端现在使用 `-NoProfile` 参数调用 PowerShell。 此选项在没有配置文件的情况下启动 PowerShell。 
+<!--3607762, fka 1359239-->
+ ***[已更新]*** 可以使用 Windows PowerShell 脚本来检测应用程序和配置项中的设置。 当这些脚本在客户端上运行时，Configuration Manager 客户端现在使用 `-NoProfile` 参数调用 PowerShell。 此选项在没有配置文件的情况下启动 PowerShell。 
 
 PowerShell 配置文件是在 PowerShell 启动时运行的脚本。 可以创建 PowerShell 配置文件以自定义环境，并向启动的每个 PowerShell 会话中添加特定于会话的元素。 
 
 > [!Note]  
 > 此行为中的更改不适用于[脚本](/sccm/apps/deploy-use/create-deploy-scripts)或 [CMPivot](/sccm/core/servers/manage/cmpivot)。 这两项功能均已使用此 PowerShell 参数。    
 
-<!--For more information, see []().-->
+有关详细信息，请参阅[创建应用程序](/sccm/apps/deploy-use/create-applications)和[创建自定义配置项](/sccm/compliance/deploy-use/create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-client)。
+
 
 
 ## <a name="bkmk_osd"></a> OS 部署

@@ -2,7 +2,7 @@
 title: 安装客户端（使用 Azure AD）
 titleSuffix: Configuration Manager
 description: 在 Windows 10 设备上安装并分配 Configuration Manager 客户端（使用 Azure Active Directory 进行身份验证）
-ms.date: 03/28/2018
+ms.date: 03/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,16 +11,20 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e3815ff3252b4f58412be84dc16813caa2ebfc6e
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: b45c5938e9c1980802055bd73d5fd7e71122fc2a
+ms.sourcegitcommit: f3dd8405018fe1043434386be15c16752c1a4a3c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56132691"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57558110"
 ---
 # <a name="install-and-assign-configuration-manager-windows-10-clients-using-azure-ad-for-authentication"></a>安装并分配 Configuration Manager Windows 10 客户端（使用 Azure AD 进行身份验证）
 
 要在 Windows 10 设备上安装 Configuration Manager 客户端（使用 Azure AD 身份验证），请将 Configuration Manager 与 Azure Active Directory (Azure AD) 集成。 客户端可以在 Intranet 上直接与启用 HTTPS 的管理点或启用增强型 HTTP 的站点中的任何管理点通信。 它们也可以通过 CMG 或基于 Internet 的管理点进行基于 Internet 的通信。 此过程使用 Azure AD 对访问 Configuration Manager 站点的客户端进行身份验证。 Azure AD 使你不再需要配置和使用客户端身份验证证书。
+
+对于某些客户而言，设置 Azure AD 可能比为基于证书的身份验证设置公钥基础结构更容易。 有些功能要求将站点载入 Azure AD，但不一定要求客户端已加入 Azure AD。<!-- SCCMDocs issue 1259 --> 有关详细信息，请参阅下列文章：
+- [规划 Azure Active Directory](/sccm/core/plan-design/security/plan-for-security#bkmk_planazuread)
+- [使用 Azure AD 进行共同管理](/sccm/comanage/quickstart-hybrid-aad)
 
 
 
@@ -92,6 +96,8 @@ ms.locfileid: "56132691"
 - 基于 Internet 的管理点 SMSMP 属性指定本地或基于 Internet 的管理点。
 
 本示例使用云管理网关。 它将替代每个属性的示例值：`ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC SMSMP=https://mp1.contoso.com AADTENANTID=daf4a1c2-3a0c-401b-966f-0b855d3abd1a AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver`
+
+从 1810 版开始，该站点将其他 Azure AD 信息发布到云管理网关 (CMG)。 Azure AD 联接的客户端使用其联接的同一租户在 ccmsetup 进程中从 CMG 获取此信息。 此行为进一步简化了在具有多个 Azure AD 租户的环境中安装客户端的过程。 现在，只有两个必需的 ccmsetup 属性：CCMHOSTNAME 和 SMSSiteCode。<!--3607731-->
 
 若要使用 Azure AD 标识通过 Microsoft Intune 自动执行客户端安装，请参阅[如何准备基于 Internet 的设备以进行共同管理](/sccm/comanage/how-to-prepare-win10#install-the-configuration-manager-client)。
 

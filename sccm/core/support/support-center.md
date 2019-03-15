@@ -2,7 +2,7 @@
 title: 支持中心
 titleSuffix: Configuration Manager
 description: 使用支持中心对 Configuration Manager 客户端进行故障排除。
-ms.date: 01/30/2019
+ms.date: 03/06/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5942f60ea15ad83f5debdf8dd3d53e72770744c6
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 367c293794eea86ef8b7b7fb0e331ce0602b325e
+ms.sourcegitcommit: 544f335cfd1bfd0a1d4973439780e9f5e9ee8bed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56122859"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562034"
 ---
 # <a name="support-center-for-configuration-manager"></a>Configuration Manager 的支持中心
 
@@ -77,6 +77,9 @@ ms.locfileid: "56122859"
 
 
 ## <a name="known-issues"></a>已知问题 
+
+#### <a name="you-cant-install-the-latest-version-if-an-older-version-is-already-installed"></a>如果已安装旧版本，则无法安装最新版本
+<!--SCCMDocs-pr issue #3090-->如果已安装旧版支持中心，1810 版安装程序将失败。 文件在原始版本和最新版本之间进行版本控制，从而导致了此问题。 为解决此问题，请先卸载旧版支持中心。 然后从 Configuration Manager 1810 版安装最新版本。
 
 #### <a name="remote-connections-must-include-computer-name-or-domain-as-part-of-the-user-name"></a>远程连接必须包括计算机名或域名作为用户名的一部分
 如果从支持中心连接到远程客户端，在建立连接时，必须为用户帐户提供计算机名或域名。 如果使用缩写的计算机名或域名（例如 `.\administrator`），则连接会成功，但支持中心不会从客户端收集数据。 

@@ -10,12 +10,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 4c1a128d-22fb-49f1-8e0b-36513a8dc117
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bcc535c007fc081d2597e5c6dafc159ed1176f39
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 4cbb9b37c951c490c1f2245f089fa22707f4c220
+ms.sourcegitcommit: f3dd8405018fe1043434386be15c16752c1a4a3c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56156866"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557993"
 ---
 # <a name="frequently-asked-questions-about-the-cloud-management-gateway"></a>有关云管理网关的常见问题解答
 
@@ -41,6 +41,10 @@ ms.locfileid: "56156866"
 ### <a name="do-i-need-to-maintain-the-azure-virtual-machines"></a>我需要维护 Azure 虚拟机吗？
 
 不需要维护。 云管理网关的设计使用 Azure 平台即服务 (PaaS)。 通过使用你提供的订阅，Configuration Manager 可创建必要的虚拟机 (VM)、存储和网络。 Azure 可保护和更新虚拟机。 与基础结构即服务 (IaaS) 一样，这些 VM 不是本地环境的一部分。 云管理网关是将 Configuration Manager 环境扩展到云端的 PaaS。 
+
+### <a name="how-can-i-ensure-service-continuity-during-service-updates"></a>如何在服务更新期间确保服务连续性？
+
+通过扩展 CMG 以包含两个或更多实例，可以自动从 Azure 的更新域中受益。 请参阅[如何更新云服务](/azure/cloud-services/cloud-services-update-azure-service)。
 
 
 ### <a name="im-already-using-ibcm-if-i-add-cmg-how-do-clients-behave"></a>我已经在使用 IBCM 了。 如果添加 CMG，客户端会有何种行为？

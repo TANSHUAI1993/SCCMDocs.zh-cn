@@ -2,7 +2,7 @@
 title: 发行说明
 titleSuffix: Configuration Manager
 description: 了解有关产品中尚未解决或 Microsoft 支持知识库文章中未涵盖的紧急问题。
-ms.date: 02/21/2019
+ms.date: 03/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c7e4307d61cccf968729f013ebaa4bfab4b0027e
-ms.sourcegitcommit: 56ec6933cf7bfc93842f55835ad336ee3a1c6ab5
+ms.openlocfilehash: 33ef7020e1b9312717919a9dda8ce189c8db533c
+ms.sourcegitcommit: f3dd8405018fe1043434386be15c16752c1a4a3c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57211527"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57558178"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Configuration Manager 发行说明
 
@@ -142,6 +142,18 @@ OS Deployment Manager 内置安全角色具有[分阶段部署](/sccm/osd/deploy
 
 
 ## <a name="mobile-device-management"></a>移动设备管理  
+
+### <a name="validation-for-ios-app-link-sometimes-fails-on-valid-link"></a>有效链接上的 iOS 应用链接验证有时会失败
+<!-- LSI 106004348 -->创建“应用商店中的 iOS 应用包”类型的新应用程序时，验证程序不接受该位置的某些有效 URL。 具体而言，iOS App Store 不需要 URL 的应用名称部分的值。 例如，以下两个链接都有效并指向同一个应用，但“创建应用程序向导”仅接受第一个链接：
+- `https://itunes.apple.com/us/app/app-name/id123456789?mt=8`
+- `https://itunes.apple.com/us/app//id123456789?mt=8`
+
+#### <a name="workaround"></a>解决方法
+在创建一个 URL 中缺少应用名称的 iOS 应用时，请添加任意值，就好像它是 URL 的应用名称一样。 例如：
+- `https://itunes.apple.com/us/app/any-string/id123456789?mt=8`
+
+使用此操作可以完成向导。 该应用仍然成功部署到 iOS 设备。 添加到 URL 的字符串在向导的“常规信息”选项卡上显示为“名称”。 它也是公司门户中应用的标签。
+
 
 ### <a name="you-can-no-longer-deploy-windows-phone-81-vpn-profiles-to-windows-10"></a>无法再将 Windows Phone 8.1 VPN 配置文件部署到 Windows 10
 <!-- 503274  -->

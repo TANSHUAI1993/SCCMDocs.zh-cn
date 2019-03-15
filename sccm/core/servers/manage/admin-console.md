@@ -2,7 +2,7 @@
 title: Configuration Manager 控制台
 titleSuffix: Configuration Manager
 description: 了解如何导航 Configuration Manager 控制台。
-ms.date: 2/20/2019
+ms.date: 03/06/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 30db8b061f41e8a9255b5a308df6a98ef8c0d81b
-ms.sourcegitcommit: 369db96ee84299b5ab6d74b177e6366b3017fc54
+ms.openlocfilehash: 0f9c06f40af1134055d4038fd23954b3f4c59682
+ms.sourcegitcommit: 544f335cfd1bfd0a1d4973439780e9f5e9ee8bed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56589894"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562102"
 ---
 # <a name="using-the-configuration-manager-console"></a>使用 Configuration Manager 控制台
 
@@ -160,6 +160,15 @@ Configuration Manager 控制台提供下列命令行选项：
     > 查看当前登录的用户需要[用户发现](/sccm/core/servers/deploy/configure/configure-discovery-methods#bkmk_config-adud)和[用户设备相关性](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity)。  
 
 有关如何显示非默认列的详细信息，请参阅[列](#columns)。
+
+#### <a name="improvement-to-device-search-performance"></a>设备搜索性能的改进
+<!-- 3614690 -->从 1806 版开始，在设备集合中进行搜索时，它不会针对所有对象属性搜索关键字。 如果搜索内容不精确，则会搜索以下四个属性：
+- 名称
+- 主要用户
+- 当前登录的用户
+- 上一个登录用户名
+
+此行为显著缩短了按名称搜索所需的时间（尤其是在大型环境中）。 按特定条件进行的自定义搜索不受此更改的影响。 
 
 
 ### <a name="monitoring-workspace"></a>监视工作区

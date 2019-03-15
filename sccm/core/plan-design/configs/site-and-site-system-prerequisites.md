@@ -2,7 +2,7 @@
 title: 站点先决条件
 titleSuffix: Configuration Manager
 description: 了解如何将 Windows 计算机配置为 Configuration Manager 站点系统服务器。
-ms.date: 07/30/2018
+ms.date: 03/06/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5b1a5a5e27108debe4f9f055da889d5b7a031ece
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 4187be7bf25bd88a5ba1432eaeb4cb5a44945551
+ms.sourcegitcommit: 544f335cfd1bfd0a1d4973439780e9f5e9ee8bed
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56128443"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562120"
 ---
 # <a name="site-and-site-system-prerequisites-for-configuration-manager"></a>用于 Configuration Manager 的站点和站点系统先决条件
 
@@ -52,6 +52,8 @@ ms.locfileid: "56128443"
   如果必须更改其中任何项，请先从计算机中删除站点系统角色。 然后在更改完成后重新安装该角色。 对于影响站点服务器的更改，请首先卸载该站点。 然后在更改完成后重新安装该站点。  
 
 - 在 Windows Server 群集实例上，站点系统角色不受支持。 唯一例外是站点数据库服务器。 有关详细信息，请参阅[对 Configuration Manager 站点数据库使用 SQL Server 群集](/sccm/core/servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database)。  
+
+    从版本 1810 开始，Configuration Manager 设置进程不再阻止在具有适用于故障转移群集的 Windows 角色的计算机上安装站点服务器角色。 SQL Always On 需要此角色，因此，以前你无法在站点服务器上共置站点数据库。 进行此更改后，你可以通过在被动模式下使用 SQL Always On 和站点服务器创建具有更少服务器的高可用站点。 有关详细信息，请参阅[高可用性选项](/sccm/core/servers/deploy/configure/high-availability-options)。 <!--3607761, fka 1359132-->  
 
 - 不支持更改任意 Configuration Manager 服务的启动类型或“登录身份”设置。 这样做可能会阻止关键服务正常运行。  
 
@@ -337,15 +339,17 @@ ms.locfileid: "56128443"
 
 #### <a name="windows-server-roles-and-features"></a>Windows Server 角色和功能  
 
--   .NET Framework 3.5（或更高版本）  
+- .NET Framework 3.5（或更高版本）  
 
--   .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1 或 4.7.2：  
+- .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1 或 4.7.2：  
 
      此站点系统角色安装时，Configuration Manager 将自动安装 .NET Framework 4.5.2。 此安装可将服务器置于重启挂起状态。 如果挂起对 .NET Framework 的重启，在服务器重启和安装完成之前，.NET 应用程序可能失败。  
 
-    -   HTTP 激活（和自动选择的选项）  
+    - HTTP 激活（和自动选择的选项）  
 
-    -   ASP.NET 4.5  
+    - ASP.NET 4.5  
+
+    - Windows Communication Foundation (WCF) 服务<!-- SCCMDocs issue #1168 -->  
 
 #### <a name="iis-configuration"></a>IIS 配置  
 
