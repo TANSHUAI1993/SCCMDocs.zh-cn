@@ -3,7 +3,7 @@ title: 软件更新维护
 titleSuffix: Configuration Manager
 description: 若要在 Configuration Manager 中维护更新，可以计划 WSUS 清理任务，也可以手动运行它。
 author: mestew
-ms.date: 02/19/2019
+ms.date: 03/05/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -11,16 +11,16 @@ ms.assetid: 4b0e2e90-aac7-4d06-a707-512eee6e576c
 manager: dougeby
 ms.author: mstewart
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a872d48437b14bfec5b2b3da3a51be5c11cdfba3
-ms.sourcegitcommit: e18853c214c95e4d21b2f032aba6d17c21e97027
-ms.translationtype: HT
+ms.openlocfilehash: ff0f69a0e43c2d52aec9df262bf8d48587edb94c
+ms.sourcegitcommit: 4ab85212268e76d3fd22f00e6c74edaa5abde60c
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443930"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426849"
 ---
 # <a name="software-updates-maintenance"></a>软件更新维护
 
-适用范围：System Center Configuration Manager (Current Branch)
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 可从 Configuration Manager 控制台和软件更新点组件属性中计划和运行 WSUS 清理任务。 首次选择运行 WSUS 清理任务时，它将在下一次软件更新同步后运行。  
 
@@ -52,7 +52,7 @@ ms.locfileid: "56443930"
 - Configuration Manager 数据库中的软件更新配置项每七天进行一次清理，并从控制台中删除不需要的更新。
   - 如果当前已部署，则此清理不会从 Configuration Manager 控制台中删除过期的更新。
 
-顶层 WSUS 数据库和环境中的所有其他 WSUS 数据库仍需其他维护。 有关详细信息和说明，请参阅 [Microsoft WSUS 和 Configuration Manager SUP 维护](https://blogs.technet.microsoft.com/configurationmgr/2016/01/26/the-complete-guide-to-microsoft-wsus-and-configuration-manager-sup-maintenance/)博客文章的完整指南。
+顶层 WSUS 数据库和环境中的所有其他 WSUS 数据库仍需其他维护。 有关详细信息和说明，请参阅 [Microsoft WSUS 和 Configuration Manager SUP 维护](https://support.microsoft.com/help/4490644/complete-guide-to-microsoft-wsus-and-configuration-manager-sup-maint/)博客文章的完整指南。
 
 ## <a name="wsus-cleanup-behavior-starting-in-version-1806"></a>从版本 1806 开始的 WSUS 清理行为
 
@@ -75,7 +75,7 @@ ms.locfileid: "56443930"
 - 未联系服务器的计算机
 - 不需要的更新文件
 
-  有关详细信息和说明，请参阅 [Microsoft WSUS 和 Configuration Manager SUP 维护](https://blogs.technet.microsoft.com/configurationmgr/2016/01/26/the-complete-guide-to-microsoft-wsus-and-configuration-manager-sup-maintenance/)博客文章的完整指南。
+  有关详细信息和说明，请参阅 [Microsoft WSUS 和 Configuration Manager SUP 维护](https://support.microsoft.com/help/4490644/complete-guide-to-microsoft-wsus-and-configuration-manager-sup-maint/)博客文章的完整指南。
 
 ## <a name="wsus-cleanup-behavior-starting-in-version-1810"></a>从版本 1810 开始的 WSUS 清理行为
 
@@ -97,7 +97,7 @@ CAS、主站点和辅助站点上不运行以下“WSUS 服务器清理向导”
 - 未联系服务器的计算机
 - 不需要的更新文件
 
-  有关详细信息和说明，请参阅 [Microsoft WSUS 和 Configuration Manager SUP 维护](https://blogs.technet.microsoft.com/configurationmgr/2016/01/26/the-complete-guide-to-microsoft-wsus-and-configuration-manager-sup-maintenance/)博客文章的完整指南。
+  有关详细信息和说明，请参阅 [Microsoft WSUS 和 Configuration Manager SUP 维护](https://support.microsoft.com/help/4490644/complete-guide-to-microsoft-wsus-and-configuration-manager-sup-maint/)博客文章的完整指南。
 
 ## <a name="updates-cleanup-log-entries"></a>更新清理日志条目
 
