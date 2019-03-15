@@ -2,7 +2,7 @@
 title: 管理电子邮件访问权限
 titleSuffix: Configuration Manager
 description: 了解如何使用 Configuration Manager 条件访问管理对 Exchange 电子邮件的访问权限。
-ms.date: 03/05/2017
+ms.date: 03/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f976b63b4580b5df9c6e609ff6b361538860c41c
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 76326a1e0bcb3d9362db5eccfc08459bb4448206
+ms.sourcegitcommit: ec4411fe30770f90128cf6cbd181047db90040cb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56137637"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57881769"
 ---
 # <a name="manage-email-access-in-configuration-manager"></a>管理 Configuration Manager 中的电子邮件访问
 
@@ -146,7 +146,7 @@ Exchange Online 仅支持适用于 iOS 和 Android 的 Outlook 应用以及 Outl
 
 将条件性访问策略的目标设定为不同的用户组或集合，具体取决于策略类型。 这些组包含将作为目标的用户，或从策略中免除的用户。 如果将某个用户设定为策略的目标，则其使用的每个设备必须合规才能访问电子邮件。  
 
-- **对于 Exchange Online 策略**： 为 Azure Active Directory 安全用户组。 你可以在 **“Office 365 管理中心”**，或 **“Intune 帐户门户”** 中配置这些组。  
+- **对于 Exchange Online 策略**： 为 Azure Active Directory 安全用户组。 你可以配置这些组中的**Microsoft 365 管理中心**，或**Intune 帐户门户**。  
 
 - **对于 Exchange 内部部署策略**： 到 Configuration Manager 用户集合。 你可以在“资产和符合性”  工作区中进行配置。  
 

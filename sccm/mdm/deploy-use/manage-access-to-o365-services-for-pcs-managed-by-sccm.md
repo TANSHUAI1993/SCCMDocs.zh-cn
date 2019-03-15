@@ -2,7 +2,7 @@
 title: 管理 O365 服务的访问权限
 titleSuffix: Configuration Manager
 description: 了解如何为由 System Center Configuration Manager 管理的电脑配置对 Office 365 服务的条件访问。
-ms.date: 04/10/2018
+ms.date: 03/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -11,18 +11,19 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b45e9f586616a1f620864a6e6dc8d0777a118251
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 74a28863b2e30566b07890d57e927703d77247f6
+ms.sourcegitcommit: ec4411fe30770f90128cf6cbd181047db90040cb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56122281"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57881701"
 ---
 # <a name="manage-access-to-o365-services-for-pcs-managed-by-system-center-configuration-manager"></a>管理对由 System Center Configuration Manager 管理的电脑的 O365 服务的访问
 
 适用范围：System Center Configuration Manager (Current Branch)
 
-<!--1191496--> 配置 Configuration Manager 管理的电脑的 Office 365 服务的条件性访问。  
+<!--1191496-->
+为由 System Center Configuration Manager 管理的电脑配置对 Office 365 服务的条件访问。  
 
 > [!Important]  
 > 混合 MDM 包括本地条件性访问[已弃用的功能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)。 有关详细信息，请参阅[什么是混合 MDM](/sccm/mdm/understand/hybrid-mobile-device-management)。<!--Intune feature 2683117-->  
@@ -112,7 +113,7 @@ ms.locfileid: "56122281"
 ### <a name="configure-active-directory-security-groups"></a>配置 Active Directory 安全组  
  根据策略类型将条件访问策略的目标设定为用户组。 这些组包含策略设定为目标的用户，或从策略中免除的用户。 如果将某个用户设定为策略的目标，则其使用的每个设备必须符合才能访问服务。  
 
- Active Directory 安全用户组 这些用户组应同步到 Azure Active Directory。 你还可以在 Office 365 管理中心或 Intune 帐户门户中配置这些组。  
+ Active Directory 安全用户组 这些用户组应同步到 Azure Active Directory。 此外可以在 Microsoft 365 管理中心内或在 Intune 帐户门户中配置这些组。  
 
  可以在每个策略中指定两种组类型。 ：  
 

@@ -2,7 +2,7 @@
 title: 归档混合 MDM 的新增功能
 titleSuffix: Configuration Manager
 description: System Center Configuration Manager 和 Intune 的混合部署过去可用的移动设备管理功能的存档
-ms.date: 05/31/2018
+ms.date: 03/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fcc81e06cbb1ab0206b4145f042cbc10bab44676
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 420026065caf619f51a5ebf84d7ae2f61a2248e1
+ms.sourcegitcommit: ec4411fe30770f90128cf6cbd181047db90040cb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56134412"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57881922"
 ---
 # <a name="past-hybrid-features-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager 和 Microsoft Intune 过去的混合功能
 
@@ -476,7 +476,7 @@ Configuration Manager Technical Preview 1609 的 2016 年 9 月版本中引入�
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
 2016 年 6 月推出的以下 Intune 功能适用于混合部署。
 
-- **Intune 服务运行状况**：Intune 的服务运行状况信息已与其他 Microsoft 服务一起移到了中央位置。 现在可在 Office 365 管理门户中的“服务运行状况”下找到此信息。 有关详细信息，请参阅此[博客文章](https://blogs.technet.microsoft.com/enterprisemobility/2016/04/28/intune-service-health-is-now-available-in-the-office-365-portal/)。
+- **Intune 服务运行状况**：Intune 的服务运行状况信息已与其他 Microsoft 服务一起移到了中央位置。 现在将在 Microsoft 365 管理中心内，服务的运行状况下找到此信息。 有关详细信息，请参阅此[博客文章](https://blogs.technet.microsoft.com/enterprisemobility/2016/04/28/intune-service-health-is-now-available-in-the-office-365-portal/)。
 
 - **增强的 Windows 10 企业数据策略配置体验**
 

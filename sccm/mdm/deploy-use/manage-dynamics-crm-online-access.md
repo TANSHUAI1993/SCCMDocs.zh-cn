@@ -2,7 +2,7 @@
 title: 管理 Dynamics CRM Online 访问权限
 titleSuffix: Configuration Manager
 description: 了解如何使用 Microsoft Intune 条件访问从 iOS 和 Android 设备控制对 Microsoft Dynamics CRM Online 的访问。
-ms.date: 03/05/2017
+ms.date: 03/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2bf6073a15518e971d4880a7adbb0853d6387f0d
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: fbd3d765a17d41bfbc2c400a3368cf00784b16c1
+ms.sourcegitcommit: ec4411fe30770f90128cf6cbd181047db90040cb
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56122842"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57881667"
 ---
 # <a name="manage-dynamics-crm-online-access-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中管理 Dynamics CRM Online 访问
 
@@ -47,7 +47,7 @@ ms.locfileid: "56122842"
 ## <a name="configure-conditional-access-for-dynamics-crm-online"></a>为 Dynamics CRM Online 配置条件访问  
 ### <a name="step-1-configure-active-directory-security-groups"></a>步骤 1:配置 Active Directory 安全组
 
-在开始之前，针对条件访问策略配置 Azure Active Directory 安全组。 可在 **Office 365 管理中心**中配置这些组。 这些组用于从策略中确定目标用户或免除用户。 如果将某个用户设定为策略的目标，则其使用的每个设备必须合规才能访问资源。
+在开始之前，针对条件访问策略配置 Azure Active Directory 安全组。 你可以配置这些组中的**Microsoft 365 管理中心内**。 这些组用于从策略中确定目标用户或免除用户。 如果将某个用户设定为策略的目标，则其使用的每个设备必须合规才能访问资源。
 
 可指定两种组类型用于 Dynamics CRM 策略：
 * **目标组** - 包含将应用策略的用户组。
