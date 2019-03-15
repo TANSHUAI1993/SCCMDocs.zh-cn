@@ -1,8 +1,8 @@
 ---
-title: 教程&#58;共同管理路径 1
+title: 教程：为现有 Configuration Manager 客户端启用共同管理
 titleSuffix: Configuration Manager
-description: 已在管理 Windows 10 设备使用 Configuration Manager 时，请使用 Microsoft Intune 中配置共同管理。
-ms.date: 01/14/2019
+description: 在已使用 Configuration Manager 管理 Windows 10 设备时，在 Microsoft Intune 中配置共同管理。
+ms.date: 03/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: tutorial
@@ -11,206 +11,208 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1aecb2c33c874717f1da979f1316d1b46b785071
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: MT
+ms.openlocfilehash: af526f531ed81de105aea9d6c5d7f2ea81e8f104
+ms.sourcegitcommit: af8693048e6706ffda72572374f56e0bc7dfce2c
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56754667"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57737290"
 ---
-# <a name="tutorial-enable-co-management-for-existing-configuration-manager-clients"></a>教程：启用共同管理现有 Configuration Manager 客户端
-通过共同管理，可以保留您使用 Configuration Manager 来管理你的组织中的 Pc 的现成过程。 在同一时间投资通过 Intune 使用的安全和最新预配在云中。  
+# <a name="tutorial-enable-co-management-for-existing-configuration-manager-clients"></a>教程：为现有 Configuration Manager 客户端启用共同管理
+通过共同管理，可以保持完善的流程，以便使用 Configuration Manager 管理组织中的电脑。 同时，通过使用 Intune 在云上投入，实现安全性和新式预配。  
 
-在本教程中，你将在 Configuration Manager 已注册的 Windows 10 设备的共同管理设置。 本教程开始使用已使用 Configuration Manager 来管理 Windows 10 设备的前提。
+在本教程中，你对已在 Configuration Manager 中注册的 Windows 10 设备设置共同管理。 开始学习此教程的前提是，你已使用 Configuration Manager 来管理 Windows 10 设备。
 
-使用本教程时：  
+若要使用本教程，需要具备以下条件：  
 
-- 混合 Azure AD 配置中具有可以连接到 Azure Active Directory (Azure AD) 的本地 Active Directory
-- 具有你想要将云附加的现有 Configuration Manager 客户端
+- 具有可以连接到混合 Azure AD 配置中的 Azure Active Directory (Azure AD) 的本地 Active Directory。 
+
+  如果无法部署联接本地 AD 与 Azure AD 联接的混合 Azure Active Directory (AD)，建议学习我们的配套教程：[为基于 Internet 的新 Windows 10 设备启用共同管理](/sccm/comanage/tutorial-co-manage-new-devices)。 
+- 具有想要进行云附加的 Configuration Manager 客户端。
 
 
 **在本教程中，你将：**  
 > [!div class="checklist"]  
-> * 查看适用于 Azure 和本地环境的先决条件  
+> * 检查 Azure 和本地环境的先决条件  
 > * 设置混合 Azure AD  
-> * 配置 Configuration Manager 客户端代理注册到 Azure AD  
-> * 配置 Intune 自动注册设备  
-> * 向用户分配 Intune 许可证  
-> * 启用共同管理配置管理器中  
+> * 配置 Configuration Manager 客户端代理以注册 Azure AD  
+> * 将 Intune 配置为自动注册设备  
+> * 将 Intune 许可证分配给用户  
+> * 在 Configuration Manager 中启用共同管理  
 
 
 ## <a name="prerequisites"></a>先决条件  
 
 ### <a name="azure-services-and-environment"></a>Azure 服务和环境
-- Azure 订阅 ([免费试用版](https://azure.microsoft.com/free))
+- Azure 订阅（[免费试用版](https://azure.microsoft.com/free)）
 - Azure Active Directory Premium
 - Microsoft Intune 订阅
   > [!TIP]  
-  > 企业移动性 + 安全性 (EMS) 订阅包括 Azure Active Directory Premium 和 Microsoft Intune。 EMS 订阅 ([免费试用版](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-trial))。  
+  > 企业移动性 + 安全性 (EMS) 订阅包括 Azure Active Directory Premium 和 Microsoft Intune。 EMS 订阅（[免费试用版](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-trial)）。  
 
-如果你的环境中尚不存在将在本教程期间：
-- 将用户分配的许可证*Intune*以及*Azure Active Directory Premium*
-- 配置[Azure AD Connect](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-install-select-installation)之间在本地 Active Directory 和 Azure Active Directory (AD) 租户
+如果环境中尚不存在，在学习本教程期间，你将：
+- 为用户分配 Intune 和 Azure Active Directory Premium 许可证
+- 在本地 Active Directory 和 Azure Active Directory (AD) 租户之间配置 [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-install-select-installation)
 
 
-### <a name="on-premises-infrastructure"></a>在本地基础结构
-- 一个[受支持的版本](https://docs.microsoft.com/sccm/core/servers/manage/updates#supported-versions)System Center Configuration Manager current branch
-- [MDM 机构](https://docs.microsoft.com/sccm/mdm/deploy-use/change-mdm-authority)必须设置为 Intune  
+### <a name="on-premises-infrastructure"></a>本地基础结构
+- [受支持的](https://docs.microsoft.com/sccm/core/servers/manage/updates#supported-versions) System Center Configuration Manager Current Branch 版本
+- 必须将 [MDM 机构](https://docs.microsoft.com/sccm/mdm/deploy-use/change-mdm-authority)设置为 Intune  
 
 
 ### <a name="permissions"></a>权限
-在本教程中，使用以下权限来完成的任务：  
-- 该帐户是*全局管理员*在 Azure 中  
-- 该帐户是*域管理员*上的本地基础结构  
-- 该帐户是*完全权限管理员*有关*所有*作用域在配置管理器   
+在本教程中，请使用以下权限来完成各项任务：  
+- Azure 中的全局管理员帐户  
+- 本地基础结构上的域管理员帐户  
+- Configuration Manager 中所有范围的完全权限管理员帐户   
 
 ## <a name="set-up-hybrid-azure-ad"></a>设置混合 Azure AD
-如果设置了混合 Azure AD 时，要真正设置集成的本地 AD 与 Azure AD 使用 Azure AD Connect 和 Active Directory 联合服务 (ADFS)。 成功配置，与您的工作人员可以无缝登录到外部系统使用其本地 AD 凭据。
+设置混合 Azure AD 时，实际上是使用 Azure AD Connect 和 Active Directory 联合身份验证服务 (ADFS) 来设置本地 AD 与 Azure AD 的集成。 成功配置后，工作人员可以使用其本地 AD 凭据无缝登录到外部系统。
 
 > [!IMPORTANT]  
-> 本教程详细介绍了一个基本的过程设置混合 Azure AD 托管域。 我们建议您应该熟悉过程而不依赖本教程引导您了解和部署混合 Azure AD。
+> 本教程详细介绍了为托管域设置混合 Azure AD 的基本过程。 建议你熟悉此过程，而不依赖于本教程引导你了解和部署混合 Azure AD。
 >
-> 有关混合 Azure AD 的详细信息，开始使用 Azure Active Directory 文档中的以下文章：
-> - [计划你的 Azure AD 联接实现](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan)
+> 有关混合 Azure AD 的详细信息，请先参阅 Azure Active Directory 文档中的以下文章：
+> - [规划 Azure AD 联接实现](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan)
 > -  [规划混合 Azure AD 联接实现](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan)
-> -  [控制你的设备的混合 Azure AD 联接](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-control)
-> -  [配置为联合域的混合 Azure AD 联接](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-federated-domains)  
+> -  [控制设备的混合 Azure AD 联接](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-control)
+> -  [为联盟域配置混合 Azure AD 联接](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-federated-domains)  
 
 
 ### <a name="set-up-azure-ad-connect"></a>设置 Azure AD Connect  
-混合 Azure AD 需要配置的 Azure AD Connect，以使计算机帐户在你的本地 Active Directory (AD) 和设备对象在 Azure AD 中保持同步。
+混合 Azure AD 需要配置 Azure AD Connect，以使本地 Active Directory (AD) 中的计算机帐户和 Azure AD 中的设备对象保持同步。
 
-从版本 1.1.819.0 开始，Azure AD Connect 提供向导，配置混合 Azure AD 联接。 使用该向导可简化配置过程。  
+从版本 1.1.819.0 开始，Azure AD Connect 提供了配置混合 Azure AD 联接的向导。 使用该向导可简化配置过程。  
 
-若要配置 Azure AD Connect，需要在 Azure AD 租户的全局管理员凭据。  
+若要配置 Azure AD Connect，需要 Azure AD 租户的全局管理员凭据。  
 
 > [!TIP]  
-> 下面的过程应不被视为具有权威的 Azure AD Connect 设置，但这里提供了用于帮助简化配置 Intune 和 Configuration Manager 之间的共同管理。 对此的权威内容和相关的过程的设置的 Azure AD 中，请参阅[托管域配置混合 Azure AD 联接](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains)Azure AD 文档中。  
+> 以下过程不应被视为是设置 Azure AD Connect 的权威方法，但在这里提供此方法旨在帮助简化在 Intune 和 Configuration Manager 之间配置共同管理的过程。 有关此过程的权威内容和与设置 Azure AD 相关的过程，请参阅 Azure AD 文档中的[为托管域配置混合 Azure AD 联接](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains)。  
 
 
-#### <a name="configure-a-hybrid-azure-ad-join-using-azure-ad-connect"></a>配置使用 Azure AD Connect 的混合 Azure AD 联接
+#### <a name="configure-a-hybrid-azure-ad-join-using-azure-ad-connect"></a>使用 Azure AD Connect 配置混合 Azure AD 联接
 
-1. 获取并安装[最新版本的 Azure AD Connect](https://www.microsoft.com/download/details.aspx?id=47594) (1.1.819.0 或更高版本)。  
-2. 启动 Azure AD Connect，并选择**配置**。
-3. 上**其他任务**页上，选择**配置设备选项**，然后选择**下一步**。
-4. 上**概述**页上，选择**下一步**。
-5. 上**连接到 Azure AD**页上，输入你的 Azure AD 租户的全局管理员凭据。
-6. 上**设备选项**页上，选择**配置混合 Azure AD 联接**，然后选择**下一步**。
-7. 上**SCP**页上，对于每个本地林所需 Azure AD Connect 配置服务连接点 (SCP)，执行以下步骤，然后选择**下一步**:  
-   1. 选择该林。  
-   2. 选择身份验证服务。  如果联合的域，请选择 AD FS 服务器，除非你的组织有专门的 Windows 10 客户端和配置计算机/设备同步，或使用你的组织[SeamlessSSO](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso)。  
-   3. 单击**添加**输入企业管理员凭据。  
-8. 上**设备的操作系统**页上，选择在 Active Directory 环境中，设备使用的操作系统，然后选择**下一步**。  
+1. 获取和安装[最新版本的 Azure AD Connect](https://www.microsoft.com/download/details.aspx?id=47594)（1.1.819.0 或更高版本）。  
+2. 启动 Azure AD Connect，然后选择“配置”。
+3. 在“其他任务”页上，选择“配置设备选项”，然后选择“下一步”。
+4. 在“概述”页上，选择“下一步”。
+5. 在“连接到 Azure AD”页上，输入 Azure AD 租户的全局管理员凭据。
+6. 在“设备选项”页上，选择“配置混合 Azure AD 联接”，然后选择“下一步”。
+7. 在“SCP’页上，对于想要 Azure AD Connect 配置服务连接点 (SCP) 的每个本地林，执行以下步骤，然后选择“下一步”：  
+   1. 选择林。  
+   2. 选择身份验证服务。  如果具有联盟域，选择 AD FS 服务器，除非贵组织具有专门的 Windows 10 客户端且已配置计算机/设备同步或组织正在使用 [SeamlessSSO](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-sso)。  
+   3. 单击“添加”以输入企业管理员凭据。  
+8. 在“设备操作系统”页上，选择 Active Directory 环境中的设备所使用的操作系统，然后选择“下一步”。  
 
-   您可以选择选项以支持 Windows 下层已加入域的设备，但请记住该共同管理的设备仅支持适用于 Windows 10。
+   可以选择支持 Windows 下层加入域的设备的选项，但请记住，仅 Windows 10 支持设备的共同管理。
 
-9. 如果必须在托管的域，请跳过此步骤。  
+9. 如果有托管域，则跳过此步骤。  
 
-   上**联合身份验证配置**页上，输入你的 AD FS 管理员凭据，然后选择**下一步**。
-10. 上**已准备好配置**页上，选择**配置**。
-11. 上**完成配置**页上，选择**退出**。
+   在“联合身份验证配置”页上，输入 AD FS 管理员的凭据，然后选择“下一步”。
+10. 在“已准备好进行配置”页上，选择“配置”。
+11. 在“配置完成”页上，选择“退出”。
 
-如果遇到问题与完成混合 Azure AD 域联接已加入的 Windows 设备，请参阅[适用于 Windows 当前设备的故障排除混合 Azure AD 联接](https://docs.microsoft.com/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current)。
+如果在完成已加入域的 Windows 设备的混合 Azure AD 联接时遇到问题，请参阅[针对 Windows 当前设备混合 Azure AD 联接的故障排除](https://docs.microsoft.com/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current)。
 
 
-## <a name="configure-client-settings-to-direct-clients-register-with-azure-ad"></a>配置客户端设置以直接向 Azure AD 注册客户端  
-使用客户端设置来配置 Configuration Manager 客户端自动注册到 Azure AD。  
+## <a name="configure-client-settings-to-direct-clients-register-with-azure-ad"></a>配置客户端设置，以引导客户端注册 Azure AD  
+使用客户端设置将 Configuration Manager 客户端配置自动注册 Azure AD。  
 
-1. 打开**Configuration Manager 控制台** > **管理** > **概述** > **客户端设置**，然后编辑**默认客户端设置**。  
+1. 打开“Configuration Manager 控制台” > “管理” > “概述” > “客户端设置”，然后编辑“默认客户端设置”。  
 
-2. 选择**云服务**。  
+2. 选择“云服务”。  
 
-3. 上**默认设置**页上，将**与 Azure Active Directory 自动注册 Windows 10 已加入域的新设备**为 =**是**。  
+3. 在“默认设置”页上，将“在 Azure Active Directory 中自动注册已加入域的新 Windows 10 设备”设置为 =“是”。  
 
 4. 选择“确定”以保存此配置。  
 
-## <a name="configure-auto-enrollment-of-devices-to-intune"></a>配置自动注册到 Intune 的设备   
-接下来，我们将设置具有 Intune 的设备自动注册。 使用自动注册，使用 Configuration Manager 自动管理的设备注册 Intune。
+## <a name="configure-auto-enrollment-of-devices-to-intune"></a>配置设备自动注册到 Intune   
+接下来，我们将在 Intune 中设置设备的自动注册。 借助自动注册，使用 Configuration Manager 管理的设备将在 Intune 中自动注册。
 
-自动注册还允许用户注册到 Intune Windows 10 设备。 当用户将其工作帐户添加到其个人拥有的设备，或者当公司拥有的设备加入 Azure Active Directory 注册设备。  
+自动注册还允许用户将其 Windows 10 设备注册到 Intune。 在以下情况中注册设备：用户将其工作帐户添加到其个人拥有的设备，或将企业拥有的设备加入到 Azure Active Directory。  
 
-1. 登录到[Azure 门户](https://portal.azure.com/)，然后选择**Azure Active Directory** > **移动性 （MDM 和 MAM）** > **Microsoft Intune**.  
+1. 登录到 [Azure 门户](https://portal.azure.com/)，然后选择“Azure Active Directory” > “移动性(MDM 和 MAM)” > “Microsoft Intune”。  
 
-2. 配置**MDM 用户作用域**。 指定一个以下操作来配置由 Microsoft Intune 管理的用户设备，然后接受 URL 值的默认值。  
+2. 配置“MDM 用户范围”。 指定以下任一设置以配置由 Microsoft Intune 管理的用户设备并接受 URL 值的默认值。  
 
-   - **某些**-选择**组**可以自动注册其 Windows 10 设备  
+   - “部分”- 选择可自动注册其 Windows 10 设备的“组”  
 
-   - **所有**-所有用户可以自动都注册 Windows 10 设备如果设置为**None**，移动设备管理 (MDM) 自动注册已禁用
+   - “全部”- 当设置为“无”时，所有用户都可以自动注册其 Windows 10 设备，移动设备管理 (MDM) 自动注册将遭禁用
 
    > [!IMPORTANT]  
-   > 如果这两个**MAM 用户作用域**和自动 MDM 注册 (**MDM 用户作用域**) 之外的所有组，只会启用 MAM。 仅移动应用管理 (MAM) 添加为该组中的用户时这些工作区加入个人设备。 设备不会自动注册 MDM。  
+   > 如果为某个组同时启用了“MAM 用户范围”和自动 MDM 注册（MDM 用户范围），则仅启用 MAM。 当该组中用户的工作区加入个人设备时，仅为这些用户添加移动应用程序管理 (MAM)。 设备不会自动注册 MDM。  
 
-3. 选择**保存**完成自动注册的配置。  
+3. 选择“保存”以完成自动注册的配置。  
 
-4. 返回到**移动性 （MDM 和 MAM）** ，然后选择**Microsoft Intune 注册**。  
+4. 返回到“移动性(MDM 和 MAM)”，然选择“Microsoft Intune 注册”。  
 
-5. MDM 用户范围，请选择**所有**，然后**保存**。  
-
-
-## <a name="assign-intune-licenses-to-users"></a>向用户分配 Intune 许可证   
-通常被忽略，但关键操作是将 Intune 许可证分配给每个用户都将使用共同管理的设备。  
-
-若要将许可证分配到用户组，请使用 Azure Active Directory。  
-
-1. 登录到[Azure 门户](https://portal.azure.com/)使用管理员帐户。 若要管理许可证，该帐户必须是全局管理员角色或用户帐户管理员。  
-
-2. 选择**所有服务**在左侧的导航窗格中，然后选择**Azure Active Directory**。  
-
-3. 上**Azure Active Directory**窗格中，选择**许可证**以打开的窗格，可以在其中查看和管理租户中所有可许可的产品。  
-
-4. 下**所有产品**，选择你的产品选项，包括 Intune 许可证，并选择**分配**窗格的顶部。  
-
-   例如，可以选择**企业移动性 + 安全性 E5**如果这是如何获取 Intune。  
-
-5. 上**分配许可证**窗格中，单击**用户和组**以打开**用户和组**窗格。 选择的组和你要向其分配许可证的单个用户。  然后，单击**选择**底部的以确认所选内容窗格。  
-
-6. 上**分配许可证**窗格中，单击**分配选项**以显示包含在前面选择的产品中的所有服务计划。 如果选择了一个 Intune 等产品，则会显示仅该产品。  
-   - 设置**Microsoft Intune**到**上**。  
-   - 每个用户分配的许可证**Azure Active Directory Premium**。  
-
-   在适用的许可证分配，选择**确定**。  
-
-7. 若要完成分配，在**分配许可证**窗格中，单击**分配**窗格的底部。
-
-8. 在右上角显示的状态和过程的结果显示一个通知。 如果 （例如，由于组中的已有许可证），无法完成向组分配，请单击该通知查看失败的详细信息。
-
-有关将 intune 许可证分配给用户的详细信息，请参阅[将许可证分配](https://docs.microsoft.com/intune/licenses-assign)。
+5. 对于 MDM 用户范围，选择“全部”，然后选择“保存”。  
 
 
-## <a name="enable-co-management-in-configuration-manager"></a>启用共同管理配置管理器中
-使用混合 Azure AD 设置，Configuration Manager 中的位置，并向用户分配的产品许可证的客户端配置，现在即可将开关和启用共同管理的 Windows 10 设备。  
+## <a name="assign-intune-licenses-to-users"></a>将 Intune 许可证分配给用户   
+有一个关键操作（但这个操作通常被忽略）是向将要使用共同管理的设备的每个用户分配 Intune 许可证。  
+
+若要将许可证分配给用户组，请使用 Azure Active Directory。  
+
+1. 使用管理员帐户登录到 [Azure 门户](https://portal.azure.com/)。 若要管理许可证，该帐户必须是全局管理员角色或用户帐户管理员。  
+
+2. 选择左侧导航窗格中的“所有服务”，然后选择“Azure Active Directory”。  
+
+3. 在“Azure Active Directory”窗格上，选择“许可证”以打开窗格，可以在此处查看和管理租户中的所有可许可的产品。  
+
+4. 在“所有产品”下，选择包含 Intune 许可证的产品选项，然后选择窗格顶部的“分配”。  
+
+   例如，如果是要获取 Intune，可以选择“企业移动性 + 安全性 E5”。  
+
+5. 在“分配许可证”窗格上，单击“用户和组”打开“用户和组”窗格。 选择要为其分配许可证的组和单个用户。  然后，单击窗格底部的“选择”以确认所选内容。  
+
+6. 在“分配许可证”窗格上，单击“分配选项”以显示之前选择的产品中包含的所有服务计划。 如果选中某个产品（如 Intune），则仅显示该产品。  
+   - 将“Microsoft Intune”设置为“启用”。  
+   - 为每个用户分配 Azure Active Directory Premium 许可证。  
+
+   分配适用的许可证后，选择“确定”。  
+
+7. 若要完成分配，在“分配许可证”窗格上，单击窗格底部的“分配”。
+
+8. 右上角随即出现一条通知，显示过程的状态和结果。 如果无法完成组的分配（例如，由于组中预先存在的许可证），单击该通知以查看失败的详细信息。
+
+有关向用户分配 Intune 许可证的详细信息，请参阅[分配许可证](https://docs.microsoft.com/intune/licenses-assign)。
+
+
+## <a name="enable-co-management-in-configuration-manager"></a>在 Configuration Manager 中启用共同管理
+混合 Azure AD 设置后，Configuration Manager 客户端配置就绪，并向用户分配了产品许可证，现在你可以切换开关并启用 Windows 10 设备的共同管理。  
 
 > [!TIP]  
->  在步骤 6 个以下的过程中，将分配集合作为*试点组*进行共同管理。 这是包含少量的客户端来测试共同管理配置的组。 我们建议在开始该过程之前创建合适的集合。 然后您可以选择该集合而不退出过程来执行此操作。  
+>  在以下过程的第六步中，你将指定一个集合作为共同管理的试点组。 此组包含少量客户端，用于测试共同管理配置。 建议在开始此过程前先创建合适的集合。 然后，可以选择此集合，而无需退出该过程来执行此操作。  
 
 1. 在 Configuration Manager 控制台中，转到“管理” > “概述” > “云服务” > “共同管理”。
 
-2. 在主页选项卡上，在管理组中，选择**配置共同管理**打开共同管理配置向导。
+2. 在“主页”选项卡的“管理”组中，选择“配置共同管理”以打开“共同管理配置向导”。
 
-3. 在订阅页上，选择**Sign In**并登录到你的 Intune 租户，然后选择**下一步**。
+3. 在“订阅”页上，选择“登录”并登录到 Intune 租户，然后选择“下一步”。
 
-4. 在启用页中，从*在 Intune 中的自动注册*下拉列表中，选择以下选项之一：  
+4. 在“启用”页的“在 Intune 中自动注册”下拉列表中，选择以下选项之一：  
 
-   - **试点**  - *（推荐）* 指定的集合的成员自动注册到 Intune，随后可共同管理。 在指定试点集合*过渡*此向导页。 此选项可以测试共同管理的客户端的一个子集。 您然后可以向其他客户端使用分阶段的方式推出共同管理。  
+   - **试点**  - （建议）指定的集合成员将被自动注册到 Intune，然后可以对其进行共同管理。 可以在此向导的“暂存”页上指定试点集合。 通过此选项可以测试客户端子集上的共同管理。 然后，可以分阶段逐步向其他客户端推出共同管理。  
 
-   - **所有**-为所有客户端启用共同管理。  
+   - **全部** - 为所有客户端启用共同管理。  
 
-5. 工作负荷页上，您可以切换工作负荷**Configuration Manager**为以下内容，并准备好继续后，选择**下一步**。  
+5. 在“工作负荷”页上，可以将工作负荷从“Configuration Manager”切换为以下负荷之一，然后准备好继续后，选择“下一步”。  
 
-   - **试验 Intune** -试点组中切换仅适用于设备的工作负荷。 将分配为向导的下一页上的试验组的集合。  
+   - **试点 Intune** - 仅为试点组中的设备切换工作负荷。 将在向导的下一页上将集合指定为试点组。  
 
-   - **Intune** -切换为所有共同托管的 Windows 10 设备相关联的工作负荷。  
+   - **Intune** - 切换所有共同管理的 Windows 10 设备的关联的工作负荷。  
 
-   您无需启用共同管理次切换任何工作负荷。 配置共同管理后，可以重新访问 Configuration Manager 控制台中的此配置更高版本。  
+   在启用共同管理时，无需切换任何工作负荷。 在配置共同管理后，可以稍后从 Configuration Manager 控制台重新访问此配置。  
 
-   切换工作负荷之前，请确保配置和部署在 Intune 中的相应工作负荷。 执行操作，使工作负荷管理。  
+   切换工作负荷之前，请确保已在 Intune 中配置和部署相应的工作负荷。 这样做可以管理工作负荷。  
 
-6. 在暂存页上，指定要用于集合**试点集合**，然后单击**下一步**。 指定的集合用作的分阶段推出共同管理的一部分。 可随时在共同管理属性中更改试点组中的集合。  
+6. 在“暂存”页上，指定供“试点集合”使用的集合，然后单击“下一步”。 在分阶段启用共同管理的过程中将用到你指定的集合。 可随时在共同管理属性中更改试点组中的集合。  
 
-7. 在摘要页上选择**下一步**，然后**关闭**以完成向导。  
+7. 在“摘要”页上，选择“下一步”，然后选择“关闭”以完成向导。  
 
 
 ## <a name="next-steps"></a>后续步骤
-- 查看与共同托管的设备状态[共同管理仪表板](/sccm/comanage/how-to-monitor)
-- 开始获取[即时值](quickstarts.md#immediate-value)从共同管理
-- 使用[条件性访问](quickstart-conditional-access.md)和 Intune 符合性规则，用于管理用户对公司资源的访问权限
+- 使用[共同管理仪表板](/sccm/comanage/how-to-monitor)查看共同管理的设备的状态
+- 开始从共同管理中获取[即时值](quickstarts.md#immediate-value)
+- 使用[条件访问](quickstart-conditional-access.md)和 Intune 符合性规则来管理用户对企业资源的访问权限
