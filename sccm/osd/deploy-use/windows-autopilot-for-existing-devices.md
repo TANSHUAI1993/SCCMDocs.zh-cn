@@ -2,7 +2,7 @@
 title: 面向现有设备的 Windows Autopilot
 titleSuffix: Configuration Manager
 description: 使用 Configuration Manager 任务序列为 Windows Autopilot 用户驱动模式重置映像并预配 Windows 7 设备
-ms.date: 02/22/2019
+ms.date: 03/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
@@ -11,17 +11,17 @@ ms.assetid: 2e96f847-5b5a-4da9-8e8f-6aa488838508
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.openlocfilehash: 53a9ac779a9a89e010334970c2045e71380a7801
-ms.sourcegitcommit: ef2960bd91655c741450774e512dd0a9be610625
-ms.translationtype: HT
+ms.openlocfilehash: 6878e36e5bf20774f6eef1ee855dda2f95dabfb4
+ms.sourcegitcommit: f3dd8405018fe1043434386be15c16752c1a4a3c
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56839009"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557992"
 ---
 # <a name="windows-autopilot-for-existing-devices"></a>面向现有设备的 Windows Autopilot
 <!--3607717, fka 1358333-->
 
-适用范围：System Center Configuration Manager (Current Branch)
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 [Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot) 为组织提供了一种方法，将全新未经使用的 Windows 10 设备直接交付给最终用户，并定义用户获得安全、高效的 Windows 10 设备需要完成的预配流程。 这类设备已注册 Windows Autopilot 服务，因此用户可以分配必要的 Windows Autopilot 配置文件。 此配置文件定义该设备的全新体验 (OOBE)。 
 
@@ -31,9 +31,12 @@ ms.locfileid: "56839009"
 
 ## <a name="prerequisites"></a>先决条件
 
-获取 Windows 10 版本 1809 或更高版本的安装介质。 然后创建 Configuration Manager OS 映像。 有关详细信息，请参阅[管理 OS 映像](/sccm/osd/get-started/manage-operating-system-images)。
+- 获取 Windows 10 版本 1809 或更高版本的安装介质。 然后创建 Configuration Manager OS 映像。 有关详细信息，请参阅[管理 OS 映像](/sccm/osd/get-started/manage-operating-system-images)。
 
-在 Microsoft Intune 中，创建适用于 Windows Autopilot 的配置文件。 有关详细信息，请参阅[在 Intune 中使用 Windows AutoPilot 注册 Windows 设备](https://docs.microsoft.com/intune/enrollment-autopilot)。
+- 在 Microsoft Intune 中，创建适用于 Windows Autopilot 的配置文件。 有关详细信息，请参阅[在 Intune 中使用 Windows AutoPilot 注册 Windows 设备](https://docs.microsoft.com/intune/enrollment-autopilot)。
+
+- 设备尚未注册 Windows Autopilot 服务。 如果已注册设备，那么指定的配置文件优先级更高。 现有的设备配置文件的 Autopilot 只适用于 online 配置文件会超时。
+
 
 
 ## <a name="create-the-configuration-file"></a>创建配置文件
@@ -89,11 +92,11 @@ ms.locfileid: "56839009"
 
 4. 在“安装 Windows”页上，选择 Windows 10 映像包。 然后配置下列设置：  
 
-    - **映像索引**：根据组织的要求，选择 Enterprise、Education 或 Professional  
+    - **映像索引**：根据组织要求，选择“Enterprise”、“Education”或“Professional”  
 
     - 启用该选项以“在安装操作系统之前对目标计算机进行分区和格式化”  
 
-    - **配置用于 BitLocker 的任务序列**：如果启用此选项，任务序列将包含启用 Bitlocker 所需的步骤  
+    - **使用任务序列配置为使用 Bitlocker**： 如果启用此选项，任务序列包括启用 Bitlocker 所需的步骤  
 
     - **产品密钥**：如果需要指定用于激活 Windows 的产品密钥，请在此处输入  
 
@@ -121,9 +124,9 @@ ms.locfileid: "56839009"
 
 如果编辑任务序列，它将类似于应用现有 OS 映像的默认任务序列。 此任务序列包括以下附加步骤：  
 
-- **应用 Windows Autopilot 配置**：此步骤从指定包中应用 Autopilot 配置文件。 它不是一种新的步骤类型，而是用于复制文件的“运行命令行”步骤。  
+- **应用 Windows Autopilot 配置**：此步骤应用指定包中的 Autopilot 配置文件。 它不是一种新的步骤类型，而是用于复制文件的“运行命令行”步骤。  
 
-- **准备 Windows 以便捕获**：此步骤运行 Windows Sysprep，已设置为“运行此操作后关闭计算机”。 有关详细信息，请参阅[准备 Windows 以便捕获](/sccm/osd/understand/task-sequence-steps#BKMK_PrepareWindowsforCapture)。  
+- **让 Windows 做好捕获准备**：此步骤运行 Windows Sysprep，并包括设置“在运行此操作后关闭计算机”。 有关详细信息，请参阅[准备 Windows 以便捕获](/sccm/osd/understand/task-sequence-steps#BKMK_PrepareWindowsforCapture)。  
 
 面向现有设备的 Windows Autopilot 任务序列会使设备加入 Azure Active Directory (Azure AD)。 
 

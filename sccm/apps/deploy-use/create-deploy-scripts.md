@@ -2,27 +2,28 @@
 title: 创建和运行脚本
 titleSuffix: Configuration Manager
 description: 在客户端设备上创建并运行 Powershell 脚本。
-ms.date: 04/10/2018
+ms.date: 03/13/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
 ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6d9b65629e000814f80876747e1148d450c2080b
-ms.sourcegitcommit: fd16fc2b681608fd6def5bad2cedffbcd1f2423a
-ms.translationtype: HT
+ms.openlocfilehash: 007c3b68932a673b5d1971fbcf6919a7ad3adc70
+ms.sourcegitcommit: 8803a64692f3edc0422b58f6c3037a8796374cc8
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56405652"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57881837"
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>从 Configuration Manager 控制台创建并运行 PowerShell 脚本
 
-适用范围：System Center Configuration Manager (Current Branch)
+*适用范围：System Center Configuration Manager (Current Branch)*
 
-<!--1236459--> System Center Configuration Manager 具有运行 Powershell 脚本的集成功能。 Powershell 的优势是创建复杂而易懂的自动执行脚本，并能与较大社区分享。 脚本简化了自定义工具生成，便于软件管理，并让你快速完成常见任务，能够更轻松、更一致地完成大型工作。  
+<!--1236459-->
+System Center Configuration Manager 具有运行 Powershell 脚本的集成功能。 Powershell 的优势是创建复杂而易懂的自动执行脚本，并能与较大社区分享。 脚本简化了自定义工具生成，便于软件管理，并让你快速完成常见任务，能够更轻松、更一致地完成大型工作。  
 
 > [!TIP]  
 > 此功能在 1706 版中首次引入，属于[预发行功能](/sccm/core/servers/manage/pre-release-features)。 从 1802 版开始，此功能不再属于预发行功能。  
@@ -66,7 +67,7 @@ ms.locfileid: "56405652"
 
 
 >[!WARNING]
->请注意，使用参数时会打开外围应用，可能存在 PowerShell 注入攻击风险。 可通过多种方法缓解和解决此问题，例如，使用正则表达式验证参数输入或使用预定义参数。 常见最佳做法是不在 PowerShell 脚本 中包含机密（不包含密码等）。 [详细了解 PowerShell 脚本安全性](/sccm/apps/deploy-use/learn-script-security)<!--There are external tools available to validate your PowerShell scripts such as the [PowerShell Injection Hunter](https://www.powershellgallery.com/packages/InjectionHunter/1.0.0) tool. -->
+>请注意，使用参数时会打开外围应用，可能存在 PowerShell 注入攻击风险。 可通过多种方法缓解和解决此问题，例如，使用正则表达式验证参数输入或使用预定义参数。 常见最佳做法是不在 PowerShell 脚本 中包含机密（不包含密码等）。 [详细了解 PowerShell 脚本安全性](/sccm/apps/deploy-use/learn-script-security) <!--There are external tools available to validate your PowerShell scripts such as the [PowerShell Injection Hunter](https://www.powershellgallery.com/packages/InjectionHunter/1.0.0) tool. -->
 
 
 ## <a name="run-script-authors-and-approvers"></a>“运行脚本”的创建者和审批者
@@ -115,8 +116,8 @@ ms.locfileid: "56405652"
 ### <a name="security-role-permissions"></a>安全角色权限  
 
 **角色名称**：脚本运行者  
-- **描述**：这些权限仅允许此角色运行之前创建且已由其他角色批准的脚本。  
-- **权限：** 请确保将以下项设置为“是”。  
+- **说明**：这些权限仅允许此角色运行之前创建且已由其他角色批准的脚本。  
+- **权限**：确保将以下项设置为“是”。  
 
 |类别|权限|状态|
 |---|---|---|
@@ -126,8 +127,8 @@ ms.locfileid: "56405652"
 
 
 **角色名称**：脚本创建者  
-- **描述**：这些权限允许此角色编写脚本，但不能批准或运行脚本。  
-- **权限**：请确保设置以下权限。
+- **说明**：这些权限允许此角色编写脚本，但不能批准或运行脚本。  
+- **权限**：确保设置以下权限。
  
 |类别|权限|状态|
 |---|---|---|
@@ -140,8 +141,8 @@ ms.locfileid: "56405652"
 
 
 **角色名称**：脚本审批者  
-- **描述**：这些权限允许此角色批准脚本，但不能创建或运行脚本。  
-- **权限：** 请确保设置以下权限。  
+- **说明**：这些权限允许此角色批准脚本，但不能创建或运行脚本。  
+- **权限**：确保设置以下权限。  
 
 |类别|权限|状态|
 |---|---|---|
@@ -156,7 +157,6 @@ ms.locfileid: "56405652"
 
  ![脚本创建者角色的 SMS 脚本权限示例](./media/run-scripts/script_authors_permissions.png)
 
-   
 
 ## <a name="create-a-script"></a>创建脚本
 
@@ -177,11 +177,11 @@ ms.locfileid: "56405652"
 
 ## <a name="script-parameters"></a>脚本参数
 *（随版本 1710 一起引入）*  
-将参数添加到脚本可以为你的工作提供更高的灵活性。 以下内容概述“运行脚本”功能的当前功能以及“字符串”和“整数”数据类型的脚本参数。 也提供了预设值列表。 如果脚本具有不受支持的数据类型，你将收到一个警告。
+将参数添加到脚本可以为你的工作提供更高的灵活性。 可以包含最多 10 个参数。 以下内容概述“运行脚本”功能的当前功能以及“字符串”和“整数”数据类型的脚本参数。 也提供了预设值列表。 如果脚本具有不受支持的数据类型，你将收到一个警告。
 
 在“创建脚本” 对话框中，单击“脚本”下的“脚本参数”。
 
-你的每一个脚本参数都有自己的对话框，用于添加更多细节以及验证信息。
+你的每一个脚本参数都有自己的对话框，用于添加更多细节以及验证信息。 如果在脚本中的默认参数，它将枚举中的参数 UI 并将其设置。 配置管理器不会重写默认值，因为它将永远不会直接修改该脚本。 您可以将此视为在 UI 中，提供了"预填充建议的值"，但 Configuration Manager 不提供对在运行时的"默认"值的访问。 这可以通过编辑此脚本，使正确的默认设置来解决。 <!--17694323-->
 
 >[!IMPORTANT]
 > 参数值不能包含单引号。 </br></br>
@@ -192,7 +192,7 @@ ms.locfileid: "56405652"
 
 脚本中的每一个参数都有一个“脚本参数属性”对话框，可以在此处添加该参数的验证信息。 添加验证信息后，如果为参数输入了和验证不符的值，那么将收到错误消息。
 
-#### <a name="example-firstname"></a>例如：*FirstName*
+#### <a name="example-firstname"></a>示例：FirstName
 
 在此示例中，你可以设置字符串参数“FirstName”的属性。
 
@@ -254,8 +254,8 @@ Write-Output (Get-WmiObject -Class Win32_operatingSystem).Caption
 5. 在“运行脚本”向导的“脚本”页，从列表中选择一个脚本。 仅显示已批准的脚本。
 6. 单击“下一步”，然后完成向导。
 
->[!IMPORTANT]
->如果脚本未运行（例如，因为目标设备关闭），则在这一小时内你必须再次运行。
+> [!IMPORTANT]
+> 如果脚本未运行（例如，因为目标设备关闭），则在这一小时内你必须再次运行。
 
 ### <a name="target-machine-execution"></a>目标计算机执行
 
@@ -263,7 +263,7 @@ Write-Output (Get-WmiObject -Class Win32_operatingSystem).Caption
 
 ## <a name="script-monitoring"></a>脚本监视
 
-在设备集合上启动脚本运行以后，请使用采用以下过程来监视该操作。 从版本 1710 开始，你可以在脚本执行时进行实时监视，也可以返回至某个给定“运行脚本”执行的报告。 <br>
+在设备集合上启动脚本运行以后，请使用采用以下过程来监视该操作。 从版本 1710 开始，你可以在脚本执行时进行实时监视，也可以返回至某个给定“运行脚本”执行的报告。 清除脚本状态数据的一部分[维护任务删除过期的客户端操作](../../core/servers/manage/reference-for-maintenance-tasks.md)或删除操作的脚本。<br>
 
 ![脚本监视器 - 脚本运行状态](./media/run-scripts/RS-monitoring-three-bar.png)
 
@@ -271,9 +271,37 @@ Write-Output (Get-WmiObject -Class Win32_operatingSystem).Caption
 2. 在“监视”工作区中，单击“脚本状态”。
 3. 在“脚本状态”列表中，可以查看在客户端设备上运行的每个脚本的结果。 脚本退出代码为“0”通常表示脚本已成功运行。
     - 从 Configuration Manager 1802 开始，脚本输出截断为 4 KB，以便提供更好的显示体验。  <!--510013-->
-      ![脚本监视器 - 截断的脚本](./media/run-scripts/Script-monitoring-truncated.png) 
+   
+   ![脚本监视器 - 截断的脚本](./media/run-scripts/Script-monitoring-truncated.png)
 
-## <a name="script-output"></a>脚本输出
+## <a name="script-output-in-1810"></a>1810 中的脚本输出
+
+可以原始或结构化 JSON 格式查看详细的脚本输出。 此格式设置可使输出更易于读取和分析。 如果该脚本返回有效的 JSON 格式的文本，则将详细输出视为 JSON 输出或原始输出。 否则，唯一的选择是脚本输出。
+
+### <a name="example-script-output-is-valid-json"></a>示例：脚本输出是有效的 JSON
+命令：`$PSVersionTable.PSVersion`  
+
+输出：  
+```
+Major  Minor  Build  Revision
+-----  -----  -----  --------
+5      1      16299  551
+```
+
+### <a name="example-script-output-isnt-valid-json"></a>示例：脚本输出不是有效的 JSON
+命令：`Write-Output (Get-WmiObject -Class Win32_OperatingSystem).Caption`  
+
+输出：  
+```
+Microsoft Windows 10 Enterprise
+```
+
+- 1810 客户端通过快速信道将少于 80KB 的输出返回到网站。 这一更改提高了查看脚本或查询输出的性能。  
+
+  - 如果脚本或查询输出大于 80 KB，客户端会通过状态消息发送数据。  
+  - 版本低于 1802年客户端继续使用状态消息。
+
+## <a name="script-output-pre-1810"></a>版本低于 1810 中的脚本输出
 
 - 从 Configuration Manager 1802 版开始，脚本输出重新使用 JSON 格式。 此格式一致返回可读的脚本输出。 
 - 收到未知结果或客户端脱机的脚本不会在图表或数据集中显示。 <!--507179-->
@@ -282,10 +310,24 @@ Write-Output (Get-WmiObject -Class Win32_operatingSystem).Caption
     - 如果 Configuration Manager 客户端版本低于 1802，你会得到一个字符串输出。
     -  对于 Configuration Manager 客户端 1802 及更高版本，你会得到 JSON 格式。
         - 例如，你可能得到两个结果，在一个客户端版本上显示 TEXT，在另一个版本上显示 "TEXT"（输出括在双引号中），这两个结果将作为两个不同的类别放入图表中。
-        - 如果需要解决此问题，请考虑针对两个不同的集合运行脚本。 一个集合包含 1802 以前的客户端，另一个集合包含 1802 及更高版本的客户端。 或者，你可以将脚本中的枚举对象转换为字符串值，以便它们以 JSON 格式正确显示。 
-- 将脚本中的枚举对象转换为字符串值，以便它们以 JSON 格式正确显示。 <!--508377-->![将枚举对象转换为字符串值](./media/run-scripts/enum-tostring-JSON.png)
+        - 如果需要解决此问题，请考虑针对两个不同的集合运行脚本。 一个集合包含版本低于 1802 的客户端，另一个集合包含 1802 及更高版本的客户端。 或者，你可以将脚本中的枚举对象转换为字符串值，以便它们以 JSON 格式正确显示。 
+- 将脚本中的枚举对象转换为字符串值，以便它们以 JSON 格式正确显示。 <!--508377-->
 
+   ![将枚举对象转换为字符串值](./media/run-scripts/enum-tostring-JSON.png)
 
+## <a name="log-files"></a>日志文件
+
+从版本 1810年，其他日志记录功能添加了对故障排除。
+
+- 在客户端上，默认情况下位于 C:\Windows\CCM\logs 中：  
+  - **Scripts.log**  
+  - **CcmMessaging.log**  
+
+- 在 MP 上，默认情况下位于 C:\SMS_CCM\Logs 中：
+  - MP_RelayMsgMgr.log  
+
+- 在站点服务器上，默认情况下位于 C:\Program Files\Configuration Manager\Logs 中：
+  - SMS_Message_Processing_Engine.log
 
 ## <a name="see-also"></a>另请参阅
 

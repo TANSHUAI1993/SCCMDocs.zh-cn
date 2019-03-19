@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 78acd5880bfdada80fca33ea4147fc36b28c495e
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 322ca2cb3f1df6a71fb7ceaf15017d7bd45db4c7
+ms.sourcegitcommit: 544f335cfd1bfd0a1d4973439780e9f5e9ee8bed
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56126736"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562068"
 ---
 # <a name="use-pxe-to-deploy-windows-over-the-network-with-configuration-manager"></a>使用 PXE 和 Configuration Manager 通过网络部署 Windows
 
-适用范围：System Center Configuration Manager (Current Branch)
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 如果 Configuration Manager 中的 OS 部署启动了预启动执行环境 (PXE)，则客户端可通过网络发出请求和部署操作系统。 在此部署方案中，将 OS 映像和启动映像发送到启用 PXE 的分发点。
 
@@ -108,7 +108,7 @@ ms.locfileid: "56126736"
 
 将 OS 部署到目标集合。 有关详细信息，请参阅 [Deploy a task sequence](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS)。 当使用 PXE 部署操作系统时，你可以将部署配置为必需或可用。
 
--   **所需部署**：所需的部署使用 PXE，无需任何用户干预。 用户无法绕过 PXE 启动。 但是，如果用户在分发点响应之前取消 PXE 启动，则不会部署 OS。
+-   所需的部署：所需的部署将使用 PXE，无需任何用户干预。 用户无法绕过 PXE 启动。 但是，如果用户在分发点响应之前取消 PXE 启动，则不会部署 OS。
 
 -   **可用部署**：可用部署要求用户在目标计算机旁。 用户必须按 F12 键继续执行 PXE 启动过程。 如果由于用户不在场而未按 F12，则计算机将启动到当前 OS，或者将从下一个可用启动设备启动计算机。
 
@@ -134,4 +134,4 @@ ms.locfileid: "56126736"
 
 3. 在步骤 2 中找到的任务序列列表中，Configuration Manager 会查找与尝试启动的客户端体系结构相匹配的启动映像。 如果找到具有相同体系结构的启动映像，则会使用该启动映像。  
 
-4. 如果找不到具有相同体系结构的启动映像，Configuration Manager 会查找与客户端体系结构兼容的启动映像。 它查找在步骤 2 中发现的任务序列列表。 例如，64 位客户端兼容 32 位和 64 位启动映像。 32 位客户端仅兼容 32 位启动映像。 UEFI 客户端仅兼容 64 位启动映像。  
+4. 如果找不到具有相同体系结构的启动映像，Configuration Manager 会查找与客户端体系结构兼容的启动映像。 它查找在步骤 2 中发现的任务序列列表。 例如，64 位 BIOS/MBR 客户端与 32 位和 64 位启动映像兼容。 32 位 BIOS/MBR 客户端仅与 32 位启动映像兼容。 UEFI 客户端才与匹配的体系结构兼容。 64 位的 UEFI 客户端兼容只有 64 位启动映像，32 位的 UEFI 客户端仅兼容 32 位启动映像。
