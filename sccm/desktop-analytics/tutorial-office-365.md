@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eb4170bddfbad34807c6fb82131fa09dc7c6b09f
-ms.sourcegitcommit: ceec0e20bf801071f2a05233f984cf17acc3fd29
+ms.openlocfilehash: c8e346aaabb03296f19a1eaf40d79c0f9f241cce
+ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56754715"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58197004"
 ---
 # <a name="tutorial-deploy-office-365-to-pilot"></a>教程：将 Office 365 部署到试运行 
 
@@ -84,7 +84,7 @@ ms.locfileid: "56754715"
     - `https://nexus.officeapps.live.com`  
     - `https://office.pipe.aria.microsoft.com`  
     - `https://graph.windows.net` （在 Configuration Manager 服务器角色）
-    - `https://fef.bmsub01.manage-beta.microsoft.com` （在 Configuration Manager 服务器角色）
+    - `https://fef.msua06.manage.microsoft.com` （在 Configuration Manager 服务器角色）
 
     有关详细信息，请参阅[如何启用数据共享桌面分析](/sccm/desktop-analytics/enable-data-sharing#endpoints)。  
 
@@ -101,7 +101,7 @@ ms.locfileid: "56754715"
 
 2. 上**接受服务协议**页上，查看服务协议，然后选择**接受**。  
 
-3. 上**确认你的订阅**页上，需符合条件的许可证的列表适用于 Windows 设备运行状况分析功能的桌面。 选择**下一步**以继续。  
+3. 上**确认你的订阅**页上，需符合条件的许可证的列表适用于 Windows 设备运行状况分析功能的桌面。 选择“下一步”继续操作。  
 
 4. 上**授予用户访问权限**页上，桌面分析预配置 Azure Active Directory 中的两个安全组：  
 

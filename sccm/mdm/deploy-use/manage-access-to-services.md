@@ -2,7 +2,7 @@
 title: 条件性访问
 titleSuffix: Configuration Manager
 description: 了解如何在 System Center Configuration Manager 中使用条件访问来帮助保护电子邮件和其他服务。
-ms.date: 12/22/2017
+ms.date: 03/18/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 38036f72603265f14ccd228b9466abc2a74a8ff5
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: f38b991ef942ea3dae3cffc49d7fe498458f6108
+ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56135797"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58197038"
 ---
 # <a name="manage-access-to-services-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中管理对服务的访问
 
@@ -30,7 +30,7 @@ ms.locfileid: "56135797"
 > 如果在使用 Configuration Manager 客户端管理的设备上使用条件性访问，以确保它们仍然受到保护，首次启用条件性访问在 Intune 中的为这些设备在迁移之前。 启用共同管理配置管理器中，将符合性策略工作负载移动到 Intune，然后完成从 Intune 混合版迁移到 Intune 独立版。 有关详细信息，请参阅[条件访问的共同管理](https://docs.microsoft.com/sccm/comanage/quickstart-conditional-access)。 
 
 
- 有关使用 Configuration Manager 客户端管理的设备上的条件访问信息，请参阅[管理对由 System Center Configuration Manager 管理的电脑的 O365 服务的访问](../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)。  
+ 有关条件性访问管理的设备上使用 Configuration Manager 客户端，请参阅[管理 System Center Configuration manager 管理的电脑的 Office 365 服务的访问权限](../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)。  
 
 
  条件性访问的典型流可能如下所示：  

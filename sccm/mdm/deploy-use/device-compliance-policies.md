@@ -2,7 +2,7 @@
 title: 设备合规性策略
 titleSuffix: Configuration Manager
 description: 了解如何在 Configuration Manager 中管理符合性策略以使设备符合条件访问策略。
-ms.date: 07/12/2018
+ms.date: 03/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2544d2b61c3d92555d0bc1abc908003f1c982bab
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 4e225b7ab54a1061387d1c8ee369641f68bd7889
+ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56136511"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58196868"
 ---
 # <a name="device-compliance-policies-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的设备合规性策略
 
@@ -26,7 +26,7 @@ Configuration Manager 中的符合性策略定义了设备必须遵守哪些规�
 
 
 > [!IMPORTANT]  
->  本文介绍了由 Microsoft Intune 管理的设备的合规性策略。 要了解由 Configuration Manager 客户端管理的设备符合性策略，请参阅[针对 Configuration Manager 管理的设备管理其 O365 服务的访问权限](/sccm/protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)。  
+>  本文介绍了由 Microsoft Intune 管理的设备的合规性策略。 中介绍了由 Configuration Manager 客户端管理的设备的合规性策略[管理对 Office 365 服务的 Configuration Manager 管理的设备访问](/sccm/protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)。  
 
  这些规则包括类似于下面这样的要求：  
 
@@ -71,7 +71,8 @@ Configuration Manager 中的符合性策略定义了设备必须遵守哪些规�
 
 
 ## <a name="devices-without-any-assigned-compliance-policy"></a>未分配有任何符合性策略的设备
-<!--2520152-->自 2018 年 7 月起，需配置将未分配有符合性策略的所有设备视为符合条件还是不符合条件。 未分配有符合性策略的设备被默认视为符合条件。 可按以下步骤在 Azure 门户中更改此设置：
+<!--2520152-->
+从 2018 年 7 月开始，配置是否有任何已分配符合性策略的所有设备都视为符合还是不符合标准。 未分配有符合性策略的设备被默认视为符合条件。 可按以下步骤在 Azure 门户中更改此设置：
 
 1. 登录到 [Azure 门户上的 Intune](https://aka.ms/intuneportal)。  
 

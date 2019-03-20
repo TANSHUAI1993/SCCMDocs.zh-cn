@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 76326a1e0bcb3d9362db5eccfc08459bb4448206
-ms.sourcegitcommit: ec4411fe30770f90128cf6cbd181047db90040cb
+ms.openlocfilehash: 2ee4ed8f102507b4d62a1ccbfe1cc38240e85df9
+ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57881769"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58196851"
 ---
 # <a name="manage-email-access-in-configuration-manager"></a>管理 Configuration Manager 中的电子邮件访问
 
@@ -79,7 +79,7 @@ Office 桌面应用程序可以访问运行以下系统的电脑上的 Exchange 
 
 将阻止不受支持的浏览器。 适用于 iOS 和 Android 的 OWA 应用不受支持。 将通过 ADFS 声明规则对其进行阻止：  
 
-- 安装 ADFS 声明规则以阻止非新式验证协议。 方案 3 中提供了详细的说明[阻止除基于浏览器应用程序的所有访问 o365](https://technet.microsoft.com/library/dn592182.aspx)。  
+- 安装 ADFS 声明规则以阻止非新式验证协议。 方案 3 中提供了详细的说明[阻止除基于浏览器应用程序的所有访问 Office 365](https://technet.microsoft.com/library/dn592182.aspx)。  
 
 #### <a name="for-pcs"></a>为电脑
 

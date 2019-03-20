@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 420026065caf619f51a5ebf84d7ae2f61a2248e1
-ms.sourcegitcommit: ec4411fe30770f90128cf6cbd181047db90040cb
+ms.openlocfilehash: 73eda37c9432750d94ef0b770348fc3d3250800c
+ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57881922"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58197072"
 ---
 # <a name="past-hybrid-features-with-system-center-configuration-manager-and-microsoft-intune"></a>System Center Configuration Manager 和 Microsoft Intune 过去的混合功能
 
@@ -223,12 +223,12 @@ Configuration Manager (Current Branch) 1702 版本中还包括以下其他混合
   Android 版公司门户应用使用 Google Play Services 与 Microsoft Intune 服务进行通信。 由于 Google Play Services 尚未在中国推出，因此执行以下任何任务最长可能需要 8 个小时才能完成。
 
   | Configuration Manager 管理控制台 | Android 适用的 Intune 公司门户应用 | Intune 公司门户网站 |
-  |----|----|----|      
-  | 停用/擦除（删除所有数据）   | 删除远程设备 | 删除设备（本地和远程） |
-  | 停用/擦除（删除公司数据）   | 重置设备 | 重置设备|
+  |----|----|----|
+  | 停用/擦除（删除所有数据）| 删除远程设备 | 删除设备（本地和远程） |
+  | 停用/擦除（删除公司数据）| 重置设备 | 重置设备|
   | 新的或更新的应用部署 | 安装可用的业务线应用 | 设备密码重置|
-  | 远程锁定 | | |
-  | 密码重置 | | |        
+  | 远程锁定| | |
+  | 密码重置 | | |
 
 
 ## <a name="november-2016"></a>2016 年 11 月

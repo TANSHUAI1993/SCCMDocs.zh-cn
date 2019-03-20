@@ -1,5 +1,5 @@
 ---
-title: 管理 O365 服务的访问权限
+title: 管理对 Office 365 服务的访问
 titleSuffix: Configuration Manager
 description: 了解如何为由 System Center Configuration Manager 管理的电脑配置对 Office 365 服务的条件访问。
 ms.date: 03/21/2019
@@ -11,14 +11,14 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 74a28863b2e30566b07890d57e927703d77247f6
-ms.sourcegitcommit: ec4411fe30770f90128cf6cbd181047db90040cb
+ms.openlocfilehash: 434801b170ed5efcbbafa046a3ac1e94a615ed3d
+ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57881701"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58196766"
 ---
-# <a name="manage-access-to-o365-services-for-pcs-managed-by-system-center-configuration-manager"></a>管理对由 System Center Configuration Manager 管理的电脑的 O365 服务的访问
+# <a name="manage-access-to-office-365-services-for-pcs-managed-by-system-center-configuration-manager"></a>管理 System Center Configuration manager 管理的电脑的 Office 365 服务的访问权限
 
 适用范围：System Center Configuration Manager (Current Branch)
 
@@ -63,7 +63,7 @@ ms.locfileid: "57881701"
 
 ### <a name="prerequisites"></a>先决条件  
 
-- ADFS 同步和 O365 订阅。 O365 订阅用于设置 Exchange Online 和 SharePoint Online。  
+- ADFS 同步和 Office 365 订阅。 设置 Exchange Online 和 SharePoint Online 是 Office 365 订阅。  
 
 - Microsoft Intune 订阅。 应在 Configuration Manager 控制台中配置 Microsoft Intune 订阅。 Intune 订阅用于将设备符合性状态中继到 Azure Active Directory 和用户授权。  
 

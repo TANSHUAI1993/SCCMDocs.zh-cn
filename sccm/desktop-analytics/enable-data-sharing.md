@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5213c96ee434d9d87ea7728701945ac46c0a62a0
-ms.sourcegitcommit: ceec0e20bf801071f2a05233f984cf17acc3fd29
+ms.openlocfilehash: f1a6ab6fca6650bde69179b71576d1df2e201b92
+ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56754714"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58196732"
 ---
 # <a name="enable-data-sharing-for-desktop-analytics"></a>共享桌面分析数据 
 
@@ -76,8 +76,8 @@ ms.locfileid: "56754714"
 | `https://nexusrules.officeapps.live.com` | 用于从 Office 客户端请求动态诊断数据的事件。 此数据可用于桌面 Analytics 门户中的向下钻取和诊断目的 |
 | `https://nexus.officeapps.live.com` | 由 Office 客户端来发送诊断数据事件从 Office 14、 Office 15 和 16.0.8702 以前版本的 Office 16。 它使用，用于收集使用情况和可靠性 Desktop 分析的信号的事件。 |
 | `https://office.pipe.aria.microsoft.com` | 由 Office 客户端用于从通用/新式 Office 应用和 Win32 Office 16 版本晚于 16.0.8702 发送诊断数据事件。 它使用，用于收集使用情况和可靠性 Desktop 分析的信号的事件。 |
-| `https://graph.windows.net` | 由 Configuration Manager 用于将你的层次结构附加到 Desktop 分析时自动检索设置，例如 CommercialId。 |
-| `https://fef.bmsub01.manage-beta.microsoft.com` | 由 Configuration Manager 用于同步设备集合成员身份、 部署计划和使用 Desktop 分析设备就绪状态。 |
+| `https://graph.windows.net` | 用于自动检索设置，例如 CommercialId 附加到 Desktop 分析 （在 Configuration Manager 服务器角色） 的层次结构时。 |
+| `https://fef.msua06.manage.microsoft.com` | 用于同步设备集合成员身份、 部署计划和使用 Desktop 分析 （在 Configuration Manager 服务器角色） 的设备就绪状态。 |
 
 
 ### <a name="ssl-inspection"></a>SSL 检查
