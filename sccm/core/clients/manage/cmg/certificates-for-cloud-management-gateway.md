@@ -10,12 +10,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8104210fcf690cecf4bdb815384b8dd672c3873d
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 8add225db488a749eba98f9015fcb112e8f34f04
+ms.sourcegitcommit: 8803a64692f3edc0422b58f6c3037a8796374cc8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56122315"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "57881786"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>云管理网关证书
 
@@ -40,9 +40,10 @@ ms.locfileid: "56122315"
 
 
 ### <a name="general-information"></a>常规信息
-<!--SCCMDocs issue #779-->云管理网关的证书支持以下配置：  
+<!--SCCMDocs issue #779-->
+云管理网关的证书支持以下配置：  
 
-- **4096 位密钥长度**  
+- 2048 位或 4096 位密钥长度
 
 - 从 1710 版开始，支持对证书私钥的密钥存储提供程序。 有关详细信息，请参阅 [CNG 证书概述](/sccm/core/plan-design/network/cng-certificates-overview)。  
 

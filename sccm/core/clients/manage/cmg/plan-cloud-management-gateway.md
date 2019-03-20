@@ -11,18 +11,19 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0a66ba04defcea48db143487cc08bc5dc330cf2c
-ms.sourcegitcommit: ef2960bd91655c741450774e512dd0a9be610625
+ms.openlocfilehash: 44d19c9d2ba7daa029bb46eeb386771de70a2e8f
+ms.sourcegitcommit: 8803a64692f3edc0422b58f6c3037a8796374cc8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56838899"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "57881888"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>在 Configuration Manager 中规划云管理网关
 
 适用范围：System Center Configuration Manager (Current Branch)
  
-<!--1101764-->云管理网关 (CMG) 提供了一种简单的方法来管理 Internet 上的 Configuration Manager 客户端。 将 CMG 部署为 Microsoft Azure 中的云服务，即可管理在 Internet 上漫游的传统客户端，无需其他基础结构。 也不需要将本地基础结构向 Internet 公开。 
+<!--1101764-->
+云管理网关 (CMG) 提供一种简单的方法来管理 Internet 上的 Configuration Manager 客户端。 将 CMG 部署为 Microsoft Azure 中的云服务，即可管理在 Internet 上漫游的传统客户端，无需其他基础结构。 也不需要将本地基础结构向 Internet 公开。 
 
 > [!Tip]  
 > 此功能在 1610 版本中首次引入，属于[预发行功能](/sccm/core/servers/manage/pre-release-features)。 从 1802 版开始，此功能不再属于预发行功能。  
@@ -95,11 +96,12 @@ CMG 部署和操作包括以下组件：
 
 - [云分发点](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point)按需向基于 Internet 的客户端提供内容。  
 
-    - 从版本 1806 开始，CMG 也可向客户端提供内容。 此功能减少了所需的证书和 Azure VM 的成本。 有关详细信息，请参阅[修改 CMG](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#modify-a-cmg) <!--1358651-->。  
+    - 从版本 1806 开始，CMG 也可向客户端提供内容。 此功能减少了所需的证书和 Azure VM 的成本。 有关详细信息，请参阅[修改 CMG](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#modify-a-cmg)。<!--1358651-->  
 
 
 ### <a name="azure-resource-manager"></a>Azure 资源管理器
-<!-- 1324735 -->自 1802 版本起，可使用“Azure 资源管理器部署”来创建 CMG。 [Azure 资源管理器](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview)是一个现代平台，用于以单个实体（称为[资源组](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups)）的方式来管理所有解决方案资源。 如果在 Azure 资源管理器中部署 CMG，站点将使用 Azure Active Directory (Azure AD) 进行身份验证并创建必要的云资源。 此现代化部署不需要经典 Azure 管理证书。  
+<!-- 1324735 -->
+从版本 1802 起，可使用 Azure 资源管理器部署来创建 CMG。 [Azure 资源管理器](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview)是一个现代平台，用于以单个实体（称为[资源组](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview#resource-groups)）的方式来管理所有解决方案资源。 如果在 Azure 资源管理器中部署 CMG，站点将使用 Azure Active Directory (Azure AD) 进行身份验证并创建必要的云资源。 此现代化部署不需要经典 Azure 管理证书。  
 
 > [!Note]  
 > 此功能不提供对 Azure 云服务提供商 (CSP) 的支持。 Azure 资源管理器中的 CMG 部署将继续使用 CSP 不支持的经典云服务。 有关详细信息，请参阅 [Azure CSP 中可用的 Azure 服务](https://docs.microsoft.com/azure/cloud-solution-provider/overview/azure-csp-available-services)。 
@@ -280,7 +282,7 @@ CMG 使用以下 Azure 组件，使用这些组件会向 Azure 订阅帐户收�
 
 - 有关详细信息，请参阅使用[云分发点](/sccm/core/plan-design/hierarchy/use-a-cloud-based-distribution-point#bkmk_cost)所产生的成本。  
 
-- 从版本 1806 开始，CMG 也可向客户端提供内容。 此功能减少了所需的证书和 Azure VM 的成本。 有关详细信息，请参阅[修改 CMG](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#modify-a-cmg) <!--1358651-->。  
+- 从版本 1806 开始，CMG 也可向客户端提供内容。 此功能减少了所需的证书和 Azure VM 的成本。 有关详细信息，请参阅[修改 CMG](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway#modify-a-cmg)。<!--1358651-->  
 
 
 #### <a name="other-costs"></a>其他成本
@@ -297,9 +299,9 @@ CMG 使用以下 Azure 组件，使用这些组件会向 Azure 订阅帐户收�
 
 - 如果可能，在同一网络区域中配置 CMG、CMG 连接点和 Configuration Manager 站点服务器，以减少延迟。  
 
-- 目前，Configuration Manager 客户端和 CMG 之间的连接无法感知区域。  
+- Configuration Manager 客户端和 CMG 之间的连接无法感知区域。 客户端通信在很大程度上不受延迟/地理分散的影响。 不必为地理邻近部署多个 CMG。 在层次结构中的顶层站点部署 CMG 并添加实例以增加规模。
 
-- 为实现服务的高可用性，请为每个站点创建至少两个 CMG 服务和两个 CMG 连接点。  
+- 为实现服务的高可用性，请为每个站点创建至少具有两个 CMG 实例和两个 CMG 连接点的 CMG。  
 
 - 可以添加更多 VM 实例，将 CMG 扩展为支持更多客户端。 Azure 负载均衡器可控制客户端与服务的连接。  
 

@@ -2,7 +2,7 @@
 title: 规划 SMS 提供程序
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 中的 SMS 提供程序站点系统角色。
-ms.date: 11/27/2018
+ms.date: 03/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aec16c4b55afd8c4baf7486794e07f29fa84aebf
-ms.sourcegitcommit: 223549003829fce7c6dc63959ee71e8b88542417
+ms.openlocfilehash: aba8479d6a2aecb3c73dad6acce6ab8237ff2576
+ms.sourcegitcommit: 8803a64692f3edc0422b58f6c3037a8796374cc8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56951828"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "57881871"
 ---
 # <a name="plan-for-the-sms-provider"></a>规划 SMS 提供程序 
 
@@ -40,10 +40,12 @@ Configuration Manager 管理用户使用 SMS 提供程序访问存储在数据�
 
 SMS 提供程序帮助强制实施 Configuration Manager 安全性。 它仅返回控制台用户有权查看的信息。  
 
+从 1810 版开始，SMS 提供程序现通过 HTTPS 提供对 WMI 的只读 API 互操作性访问，称为“管理服务”。 此 REST API 可用于取代自定义 Web 服务访问站点信息。 有关详细信息，请参阅[管理服务](#bkmk_admin-service)。 
+
 > [!IMPORTANT]  
 >  当站点的 SMS 提供程序的每个实例都处于脱机状态时，Configuration Manager 控制台无法连接到该站点。  
 
- 有关如何管理 SMS 提供程序的详细信息，请参阅[管理 SMS 提供程序](/sccm/core/servers/manage/modify-your-infrastructure#BKMK_ManageSMSprovider)。  
+有关如何管理 SMS 提供程序的详细信息，请参阅[管理 SMS 提供程序](/sccm/core/servers/manage/modify-your-infrastructure#BKMK_ManageSMSprovider)。  
 
 
 
@@ -246,3 +248,53 @@ Configuration Manager WMI 架构定义 SMS 提供程序的结构。 架构命名
 
 
 在安装 SMS 提供程序的每台计算机上，安装 Windows ADK 可能需要最多 650 MB 的可用磁盘空间。 Configuration Manager 需要如此高的磁盘空间来安装 Windows PE 启动映像。  
+
+
+
+## <a name="bkmk_admin-service"></a>管理服务
+<!--3607711, fka 1321523-->
+
+> [!Note]  
+> 在该 Configuration Manager 版本中，SMS 提供程序 API 是预发行功能。 若要启用此功能，请参阅[预发行功能](/sccm/core/servers/manage/pre-release-features)。  
+
+从 1810 版开始，SMS 提供程序通过 HTTPS 提供对 WMI 的只读 API 互操作性访问，称为“管理服务”。 此 REST API 可用于取代自定义 Web 服务访问站点信息。
+
+`https://servername/AdminService/wmi/<ClassName>` 
+
+例如 `https://servername/AdminService/wmi/SMS_Site`
+
+使用 Windows PowerShell cmdlet [Invoke-RestMethod](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-restmethod) 直接调用此服务。
+
+借助它，也可以通过 OData 连接器选项访问 PowerBI 中的站点数据。 
+
+> [!Tip]  
+> 可以在任务序列中使用此 cmdlet。 借助此操作，可以访问站点中的信息，无需使用自定义 Web 服务与 WMI 提供程序进行交互。 
+
+管理服务将其活动记录到 adminservice.log 文件。
+
+
+### <a name="enable-the-administration-service-through-the-cmg"></a>通过 CMG 启用管理服务
+
+SMS 提供程序显示为角色，其中包含允许通过云管理网关 (CMG) 进行通信的选项。 此设置的当前用途是通过来自远程设备的电子邮件启用应用程序批准。 有关详细信息，请参阅[批准应用程序](/sccm/apps/deploy-use/app-approval)。
+
+#### <a name="prerequisites"></a>先决条件
+- 托管 SMS 提供程序的服务器需要 .NET 4.5.2 或更高版本。  
+
+- 启用 SMS 提供程序以使用证书。 使用以下选项之一：  
+
+    - 启用[增强型 HTTP](/sccm/core/plan-design/hierarchy/enhanced-http)（推荐）  
+
+        > [!Note]  
+        > 当站点为 SMS 提供程序创建一个证书时，客户端上的 Web 浏览器将不信任它。 根据你的安全设置，访问 REST 提供程序时，可能会看到一条安全警告。  
+
+    - 将基于 PKI 的证书手动绑定到承载 SMS 提供程序角色的服务器上的 IIS 中的端口 443  
+
+#### <a name="process-to-enable-the-api-through-the-cmg"></a>通过 CMG 启用 API 的过程
+1. 在 Configuration Manager 控制台中，转到“管理”工作区，展开“站点配置”，然后选择“服务器和站点系统角色”节点。  
+
+2. 选择具有 SMS 提供程序角色的服务器。  
+
+3. 在细节窗格中，选择“SMS 提供程序”角色，然后在“站点角色”选项卡的功能区中选择“属性”。  
+
+4. 选择“允许管理服务的 Configuration Manager 云管理网关通信”选项。  
+

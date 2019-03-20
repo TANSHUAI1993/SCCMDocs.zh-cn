@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4187be7bf25bd88a5ba1432eaeb4cb5a44945551
-ms.sourcegitcommit: 544f335cfd1bfd0a1d4973439780e9f5e9ee8bed
+ms.openlocfilehash: db5e58d82f12ceaac5ad0da66a0836f1d3d913d6
+ms.sourcegitcommit: 8803a64692f3edc0422b58f6c3037a8796374cc8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562120"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "57881803"
 ---
 # <a name="site-and-site-system-prerequisites-for-configuration-manager"></a>用于 Configuration Manager 的站点和站点系统先决条件
 
@@ -157,6 +157,9 @@ ms.locfileid: "57562120"
 
 - 有关此要求的详细信息，请参阅[操作系统部署的基础架构要求](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment)。  
 
+#### <a name="windows-server-roles-and-features"></a>Windows Server 角色和功能  
+
+- 如果使用的是[管理服务](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider#bkmk_admin-service)，那么托管 SMS 提供程序角色的服务器需要 .NET 4.5.2 或更高版本  <!-- SCCMDocs issue #1203 -->
 
 
 ##  <a name="bkmk_2012acwspreq"></a>应用程序目录网站点  
