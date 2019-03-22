@@ -3,7 +3,7 @@ title: '将更新添加到更新组 '
 titleSuffix: Configuration Manager
 description: 手动或自动将软件更新添加到环境中的软件更新组。
 author: aczechowski
-ms.date: 01/23/2017
+ms.date: 03/18/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -11,16 +11,16 @@ ms.assetid: a0767664-fd60-46a8-9da5-86cc431ce53c
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c4d17d4e1e0a41e2e94cfe70d422ed3425a812d6
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 0657877c22aa8ce2382408821d5b61f5fded151d
+ms.sourcegitcommit: d71e558db2da124357b840332e2da671b3810507
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56141147"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58268995"
 ---
 # <a name="add-software-updates-to-an-update-group"></a>将软件更新添加到更新组  
 
-适用范围：System Center Configuration Manager (Current Branch)
+*适用范围：System Center Configuration Manager (Current Branch)*
 
  软件更新组会为你提供行之有效的方法来组织你的环境中的软件更新。 你可以将软件更新手动添加到软件更新组，或通过运用 ADR，将软件更新自动添加到软件更新组。 你还可以手动部署软件更新组，或通过运用 ADR 自动部署该组。 在部署软件更新组后，你可以将新的软件更新添加到组，Configuration Manager 将自动对它们进行部署。 使用下列过程以将软件更新添加到新的或现有的软件更新组。  
 
@@ -49,7 +49,7 @@ ms.locfileid: "56141147"
 3.  选择要添加到新软件更新组的软件更新。  
 
     > [!NOTE]  
-    >  在“所有软件更新”节点上，默认情况下 Configuration Manager 只显示分类为“严重”和“安全”并且在过去 30 天内发布的软件更新。  
+    >  上**的所有软件更新**节点，配置管理器将显示除中的所有更新**升级**分类并**Office 365 客户端**产品分类。  
 
 4.  在“主页”选项卡上的“更新”组中，单击“编辑成员身份”。  
 
