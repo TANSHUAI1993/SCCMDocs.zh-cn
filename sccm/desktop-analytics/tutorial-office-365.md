@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c8e346aaabb03296f19a1eaf40d79c0f9f241cce
-ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
+ms.openlocfilehash: b8102e426e4737efdd5ca77de2824c1465b382ec
+ms.sourcegitcommit: 5f17355f954b9d9e10325c0e9854a9d582dec777
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58197004"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329492"
 ---
 # <a name="tutorial-deploy-office-365-to-pilot"></a>教程：将 Office 365 部署到试运行 
 
@@ -97,7 +97,7 @@ ms.locfileid: "58197004"
 
 使用此过程中登录到桌面分析并将其配置你的订阅中。 此过程是一次性的过程来为你的组织设置 Desktop 分析。  
 
-1. 打开[Desktop 分析门户](https://aka.ms/m365aprod)中的用户的 Microsoft 365 设备管理**公司管理员**权限。 选择**启动**。  
+1. 在 Microsoft 365 设备管理中打开桌面分析门户，以用户身份**公司管理员**权限。 选择**启动**。  
 
 2. 上**接受服务协议**页上，查看服务协议，然后选择**接受**。  
 
@@ -134,7 +134,7 @@ ms.locfileid: "58197004"
 
 ### <a name="create-an-app-in-azure-ad-for-configuration-manager"></a>在 Azure AD 中为 Configuration Manager 创建应用  
 
-1. 在中[Azure 门户](http://portal.azure.com)，请转到**Azure Active Directory**，然后选择**应用注册**。 然后选择**新建应用程序注册**。  
+1. 在中[Azure 门户](https://portal.azure.com)，请转到**Azure Active Directory**，然后选择**应用注册**。 然后选择**新建应用程序注册**。  
 
 2. 在中**创建**面板中，配置以下设置：  
 
