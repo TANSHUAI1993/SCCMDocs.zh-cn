@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b8102e426e4737efdd5ca77de2824c1465b382ec
-ms.sourcegitcommit: 5f17355f954b9d9e10325c0e9854a9d582dec777
+ms.openlocfilehash: 0f05b1115338f9808a950bcd1646d8035f3a563b
+ms.sourcegitcommit: 4441b3035222cfaf7442416873ed824ac7d852c5
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58329492"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356353"
 ---
 # <a name="tutorial-deploy-office-365-to-pilot"></a>教程：将 Office 365 部署到试运行 
 
@@ -381,5 +381,5 @@ Configuration Manager 同步创建连接的 15 分钟内，任何桌面分析部
 
 转到下一步的文章，了解有关桌面分析部署计划的详细信息。
 > [!div class="nextstepaction"]  
-> [部署计划](/sccm/desktop-analytics/deployment-plans)  
+> [部署计划](/sccm/desktop-analytics/about-deployment-plans)
 
