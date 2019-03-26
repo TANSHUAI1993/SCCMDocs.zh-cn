@@ -2,25 +2,25 @@
 title: 安装和配置软件更新点
 titleSuffix: Configuration Manager
 description: 主站点需要管理中心站点上的软件更新点，以便评估软件更新合规性，并将软件更新部署到客户端。
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
-ms.date: 05/30/2017
+ms.date: 03/20/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: b099a645-6434-498f-a408-1d438e394396
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b51b8245de3c446657e328456f81bd40ebf71261
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 286fb75eb16636ac129bc634e443d6bbfac3d44a
+ms.sourcegitcommit: d71e558db2da124357b840332e2da671b3810507
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56141851"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58269039"
 ---
 # <a name="install-and-configure-a-software-update-point"></a>安装和配置软件更新点  
 
-适用范围：System Center Configuration Manager (Current Branch)
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 
 > [!IMPORTANT]  
@@ -34,7 +34,7 @@ ms.locfileid: "56141851"
 > [!IMPORTANT]  
 >  不支持在服务器上安装已配置和用作独立 WSUS 服务器的软件更新点站点系统，或使用软件更新点来直接管理 WSUS 客户端。 现有 WSUS 服务器仅支持作为活动软件更新点的上游同步源。 请参阅[从上游数据源位置同步](#BKMK_wsussync)
 
- 你可以将软件更新点站点系统角色添加到现有站点系统服务器，或者可以创建新站点系统服务器。 在“创建站点系统服务器向导”或“添加站点系统角色向导”的“系统角色选择”页上，根据是要将站点系统角色添加到新的还是现有站点服务器，选择“软件更新点”，然后在向导中配置软件更新点设置。 根据所使用的 Configuration Manager 版本，设置会有所不同。 有关如何安装站点系统角色的详细信息，请参阅[安装站点系统角色](../../core/servers/deploy/configure/install-site-system-roles.md)。  
+ 你可以将软件更新点站点系统角色添加到现有站点系统服务器，或者可以创建新站点系统服务器。 在“创建站点系统服务器向导”或“添加站点系统角色向导”的“系统角色选择”页上，根据是要将站点系统角色添加到新站点服务器，还是添加到现有站点服务器，选择“软件更新点”，然后在向导中配置软件更新点设置。 根据所使用的 Configuration Manager 版本，设置会有所不同。 有关如何安装站点系统角色的详细信息，请参阅[安装站点系统角色](../../core/servers/deploy/configure/install-site-system-roles.md)。  
 
  使用下列部分来了解有关站点上的软件更新点设置的信息。  
 
@@ -51,7 +51,7 @@ ms.locfileid: "56141851"
         >  辅助站点上提供了“使用自动部署规则下载内容时使用代理服务器”设置，但不用于软件更新点。 只有管理中心站点和主站点上的软件更新点才从 Microsoft 更新页下载内容。  
 
 > [!IMPORTANT]  
->  默认情况下，当自动部署规则运行时，将使用在其上创建自动部署规则的服务器的“本地系统”帐户连接到 Internet 并下载软件更新。 如果此帐户没有 Internet 访问权限，软件更新将无法下载，并且将在 ruleengine.log 中记录下列条目：**未能从 Internet 下载更新。错误 = 12007**。 当“本地系统”帐户没有 Internet 访问权限时，配置凭据以连接到代理服务器。  
+>  默认情况下，当自动部署规则运行时，将使用在其上创建自动部署规则的服务器的“本地系统”帐户连接到 Internet 并下载软件更新。 当此帐户没有 Internet 访问权限时，软件更新将无法下载并且以下条目会被记录在 ruleengine.log 中：**无法从 Internet 下载更新。错误 = 12007**。 当“本地系统”帐户没有 Internet 访问权限时，配置凭据以连接到代理服务器。  
 
 
 ## <a name="wsus-settings"></a>WSUS 设置  
@@ -89,14 +89,14 @@ ms.locfileid: "56141851"
 
  以下列表提供了有关可用作同步源的每个选项的详细信息：  
 
--   **从 Microsoft 更新同步**：使用此设置从 Microsoft 更新同步软件更新元数据。 管理中心站点必须具有 Internet 访问权限。否则，同步将失败。 只有在配置顶层站点的软件更新点后才可以使用此设置。  
+-   从 Microsoft 更新同步：使用此设置以从 Microsoft 更新同步软件更新元数据。 管理中心站点必须具有 Internet 访问权限。否则，同步将失败。 只有在配置顶层站点的软件更新点后才可以使用此设置。  
 
     > [!NOTE]  
     >  如果软件更新点与 Internet 之间存在防火墙，则可能需要将防火墙配置为接受用于 WSUS 网站的 HTTP 和 HTTPS 端口。 你也可以选择将防火墙上的访问权限局限于受限制的域。 有关如何规划支持软件更新的防火墙的详细信息，请参阅 [Configure firewalls](../plan-design/plan-for-software-updates.md#BKMK_ConfigureFirewalls)。  
 
--   **<a name="BKMK_wsussync"></a>从上游数据源位置同步**：使用此设置从上游数据源同步软件更新元数据。 系统会将子主站点和辅助站点自动配置为将父站点 URL 用于此设置。 你可以选择将从现有的 WSUS 服务器同步软件更新。 指定 URL，如 https://WSUSServer:8531 ，其中 8531 是用于连接到 WSUS 服务器的端口。  
+-   **<a name="BKMK_wsussync"></a>** 从上游数据源位置同步：使用此设置以从上游同步源同步软件更新元数据。 系统会将子主站点和辅助站点自动配置为将父站点 URL 用于此设置。 你可以选择将从现有的 WSUS 服务器同步软件更新。 指定 URL，如 https://WSUSServer:8531 ，其中 8531 是用于连接到 WSUS 服务器的端口。  
 
--   **不从 Microsoft 更新或上游数据源同步**：使用此设置在顶层站点上的软件更新点从 Internet 断开时手动同步软件更新。 有关详细信息，请参阅[从断开连接的软件更新点中同步软件更新](synchronize-software-updates-disconnected.md)。  
+-   不要从 Microsoft 更新或上游数据源同步：使用此设置以在顶层站点上的软件更新点从 Ineternet 断开连接时手动同步软件更新。 有关详细信息，请参阅[从断开连接的软件更新点中同步软件更新](synchronize-software-updates-disconnected.md)。  
 
 > [!NOTE]  
 >  如果软件更新点与 Internet 之间存在防火墙，则可能需要将防火墙配置为接受用于 WSUS 网站的 HTTP 和 HTTPS 端口。 你也可以选择将防火墙上的访问权限局限于受限制的域。 有关如何规划支持软件更新的防火墙的详细信息，请参阅 [Configure firewalls](../plan-design/plan-for-software-updates.md#BKMK_ConfigureFirewalls)。  
@@ -115,7 +115,7 @@ ms.locfileid: "56141851"
 >  如果选择不按计划启用软件更新同步，则可以从“软件库”工作区内的“所有软件更新”或“软件更新组”节点中手动同步软件更新。 有关详细信息，请参阅[同步软件更新](synchronize-software-updates.md)。  
 
 ## <a name="supersedence-rules"></a>取代规则  
- 在向导的“取代规则”页上或者在“软件更新点组件属性”中的“取代规则”选项卡上配置取代设置。 只能在顶层站点上配置取代规则。  
+ 在向导的“取代规则”页上或者在“软件更新点组件属性”中的“取代规则”选项卡上配置取代设置。 只能在顶层站点上配置取代规则。 从 Configuration Manager 版本 1810年开始，可以指定用于取代规则行为**功能更新**分开**非功能更新**。 <!--3098809, 2977644-->
 
  在此页上，你可以指定被取代的软件更新立即过期，这会阻止将它们包含在新部署中并标记现有部署，以指明被取代的软件更新包含一个或多个过期的软件更新。 或者，你可以指定被取代软件更新过期之前的时间段，从而允许你继续部署这些更新。 有关详细信息，请参阅 [取代规则](../plan-design/plan-for-software-updates.md#BKMK_SupersedenceRules)。  
 

@@ -2,25 +2,25 @@
 title: 规划软件更新
 titleSuffix: Configuration Manager
 description: 在 Configuration Manager 生产环境中使用软件更新之前，软件更新点架构规划至关重要。
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
-ms.date: 07/30/2018
+ms.date: 03/21/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 730d99764f8ae8f8ce1b76bfd13411988c3a2e23
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: a4100bca2f1cd1f770c2e739ec229dc020d5d8d8
+ms.sourcegitcommit: 5f17355f954b9d9e10325c0e9854a9d582dec777
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56138533"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329577"
 ---
 # <a name="plan-for-software-updates-in-configuration-manager"></a>在 Configuration Manager 中规划软件更新
 
-适用范围：System Center Configuration Manager (Current Branch)
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 在 Configuration Manager 生产环境中使用软件更新之前，请务必完成规划过程。 很好地规划软件更新点基础结构对于成功的软件更新实现十分关键。
 
@@ -105,9 +105,9 @@ Configuration Manager 在下列情况下为客户端提供软件更新点列表�
 
 客户端从列表中随机选择一个软件更新点。 优先考虑同一林中的软件更新点。 Configuration Manager 根据客户端的类型向客户端提供不同的列表：  
 
--   **基于 Intranet 的客户端**：接收可配置为仅允许来自 Intranet 的连接的软件更新点的列表，或接收允许 Internet 和 Intranet 客户端连接的软件更新点的列表。  
+-   **基于 Intranet 的客户端**：接收可配置为仅允许来自 Intranet 连接的软件更新点列表，或接收允许 Internet 和 Intranet 客户端连接的软件更新点列表。  
 
--   **基于 Internet 的客户端**：接收配置为仅允许来自 Internet 的连接的软件更新点的列表，或接收允许 Internet 和 Intranet 客户端连接的软件更新点的列表。  
+-   **基于 Internet 的客户端**：接收配置为仅允许来自 Internett 连接的软件更新点列表，或接收允许 Internet 和 Intranet 客户端连接的软件更新点列表。  
 
 
 ###  <a name="BKMK_SUPSwitching"></a> 软件更新点切换  
@@ -221,7 +221,7 @@ Configuration Manager 支持使用 Windows 10 更新的快速安装文件。 快
 #### <a name="clients-download-content-from-the-internet"></a>客户端从 Internet 下载内容
 将软件更新部署到客户端时，请配置部署，使客户端从 Microsoft 更新云服务下载内容。 当客户端无法从另一内容源下载内容时，它们仍可以从 Internet 下载内容。 
 
-自 1806 版本起，无需在部署软件更新时创建部署包。 选择“无部署包”选项时，客户端仍可从本地源下载内容（如有），但通常是从 Microsoft 更新服务下载内容。<!--1357933-->
+自 1806 版本起，无需在部署软件更新时创建部署包。 如果你选择“无部署包”选项，客户端仍可从本地源下载内容（若有），但通常是从 Microsoft 更新服务下载内容。<!--1357933-->
 
 基于 Internet 的客户端始终从 Microsoft 更新云服务中下载内容。 请不要将软件更新部署包分发到云分发点。 使用云分发点存储需要付费，但客户端不会下载这些包。 
 
@@ -235,7 +235,7 @@ Configuration Manager 与 WSUS 集成，后者本身支持 Microsoft 发布的�
 有关详细信息，请参阅 [修改和取代应用程序](/sccm/apps/deploy-use/revise-and-supersede-applications)。
 
 #### <a name="third-party-software-updates"></a>第三方软件更新
-自 1806 版本起，可使用 Configuration Manager 控制台中的“第三方软件更新目录”节点订阅第三方目录，将其更新发布到软件更新点，然后将其部署到客户端。<!--1352101-->
+自版本 1806 起，可使用 Configuration Manager 控制台中的“第三方软件更新目录”节点来订阅第三方目录、将更新发布到软件更新点，以及将它们部署到客户端。<!--1352101-->
 
 有关详细信息，请参阅[软件更新](/sccm/sum/deploy-use/third-party-software-updates)。
 
@@ -373,13 +373,13 @@ Configuration Manager 中的软件更新同步会根据所配置的条件下载�
 
 软件更新点的同步源设置可指定软件更新点在何处检索到软件更新元数据。 它还指定同步过程是否创建 WSUS 报告事件。  
 
--   **同步源**：默认情况下，顶层站点的软件更新点针对 Microsoft 更新配置同步源。 你可以选择将顶层站点与现有的 WSUS 服务器同步。 子主站点上的软件更新点会将同步源配置为管理中心站点中的软件更新点。  
+-   **同步源**：顶级站点的软件更新点默认配置 Microsoft 更新的同步源。 你可以选择将顶层站点与现有的 WSUS 服务器同步。 子主站点上的软件更新点会将同步源配置为管理中心站点中的软件更新点。  
 
     -  在主站点中安装的第一个软件更新点为默认的软件更新点，并且会与管理中心站点同步。 主站点中的其他软件更新点与主站点中的默认软件更新点同步。  
 
     - 当软件更新点与 Microsoft 更新或上游更新服务器断开连接时，请配置同步源，使其不与已配置的同步源进行同步。 转而，请将其配置为使用 WSUSUtil 工具的导出和导入功能来同步软件更新。 有关详细信息，请参阅[从断开连接的软件更新点中同步软件更新](../get-started/synchronize-software-updates-disconnected.md)。  
 
--   **WSUS 报告事件：** 代理计算机上的 Windows 更新代理可以为 WSUS 报告创建事件消息。 Configuration Manager 不使用这些事件。 因此，默认选中“不创建WSUS报告事件”选项。 如果未创建这些事件，客户端应仅在软件更新评估和符合性扫描期间连接到 WSUS 服务器。 如果在 Configuration Manager 之外进行报告需要这些事件，请修改此设置以创建 WSUS 报告事件。  
+-   **WSUS 报告事件**：客户端计算机上的 Windows 更新代理可为 WSUS 报告创建事件消息。 Configuration Manager 不使用这些事件。 因此，默认选中“不创建WSUS报告事件”选项。 如果未创建这些事件，客户端应仅在软件更新评估和符合性扫描期间连接到 WSUS 服务器。 如果在 Configuration Manager 之外进行报告需要这些事件，请修改此设置以创建 WSUS 报告事件。  
 
 
 ###  <a name="BKMK_SyncSchedule"></a> 同步计划  
@@ -398,19 +398,19 @@ Configuration Manager 中的软件更新同步会根据所配置的条件下载�
 
 Configuration Manager 支持同步以下更新类别：  
 
--   **关键更新**：针对特定问题广泛发布的更新，旨在解决与安全无关的关键缺陷。  
+-   **关键更新**：针对特定问题的广泛发布的更新，解决与安全性无关的关键错误。  
 
--   **定义更新**：针对病毒定义文件或其他定义文件的更新。  
+-   **定义更新**：对病毒或其他定义文件的更新。  
 
--   **功能包**：不通过产品发布分发的新产品功能，通常包含在下一版完整发布的产品中。  
+-   **功能包**：在产品版本之外分发的新的产品功能，通常包含在下一个完整产品版本中。  
 
--   **安全更新**：针对特定于产品而且与安全性相关的问题广泛发布的更新。  
+-   **安全更新**：广泛发布的更新，针对产品特定的与安全相关的问题。  
 
 -   **服务包**：一组应用于 OS 或应用程序的累积修补程序。 这些修补程序包含安全更新、关键更新和软件更新等。  
 
 -   **工具**：可帮助完成一项或多项任务的实用程序或功能。  
 
--   **更新汇总**：指定一组打包在一起便于部署的累积修复程序。 这些修补程序包含安全更新、关键更新和软件更新等。 更新汇总通常解决特定领域的问题，例如安全性或产品组件问题。  
+-   **更新汇总**：一组打包在一起便于部署的累积修复程序。 这些修补程序包含安全更新、关键更新和软件更新等。 更新汇总通常解决特定领域的问题，例如安全性或产品组件问题。  
 
 -   **更新**：针对当前安装的应用程序或文件的更新。  
 
@@ -455,8 +455,8 @@ Configuration Manager 支持同步以下更新类别：
 -   如果禁止在生产环境中部署取代的软件更新。  
 
     > [!NOTE]  
-    > 在 Configuration Manager 1806 版之前，当 Configuration Manager 将被取代的软件更新设置为“已过期”时，不会在 WSUS 中将该更新设置为“已拒绝”。 客户端继续扫描已过期的更新，直到手动或通过自定义脚本拒绝更新。  自 Configuration Manager 1806 版之后，Configuration Manager 还会拒绝 WSUS 中被取代的更新。 有关 WSUS 清除任务的详细信息，请参阅[软件更新维护](/sccm/sum/deploy-use/software-updates-maintenance)。
-
+    > - 在 Configuration Manager 1806 版之前，当 Configuration Manager 将被取代的软件更新设置为“已过期”时，不会在 WSUS 中将该更新设置为“已拒绝”。 客户端继续扫描已过期的更新，直到手动或通过自定义脚本拒绝更新。  自 Configuration Manager 1806 版之后，Configuration Manager 还会拒绝 WSUS 中被取代的更新。 有关 WSUS 清除任务的详细信息，请参阅[软件更新维护](/sccm/sum/deploy-use/software-updates-maintenance)。
+    > - 从 Configuration Manager 版本 1810年开始，可以指定用于取代规则行为**功能更新**分开**非功能更新**。
 
 ###  <a name="BKMK_UpdateLanguages"></a> 语言  
 
@@ -488,8 +488,11 @@ Configuration Manager 支持同步以下更新类别：
 
 ##  <a name="BKMK_MaintenanceWindow"></a>规划软件更新维护时段  
 
-添加专用于软件更新安装的维护时段。 通过此操作，你可为软件更新配置常规维护时段和其他维护时段。 同时配置常规维护时段和软件更新维护时段时，客户端仅在软件更新维护时段期间安装软件更新。 有关维护时段的详细信息，请参阅[如何使用维护时段](../../core/clients/manage/collections/use-maintenance-windows.md)。  
+添加专用于软件更新安装的维护时段。 通过此操作，你可为软件更新配置常规维护时段和其他维护时段。 同时配置常规维护时段和软件更新维护时段时，客户端仅在软件更新维护时段期间安装软件更新。 
 
+从 Configuration Manager 版本 1810年开始，您可以更改此行为，并允许用于常规维护时段内安装的软件更新。 有关此客户端设置的详细信息，请参阅[软件更新客户端设置](/sccm/core/clients/deploy/about-client-settings#bkmk_SUMMaint)。
+
+有关维护时段的详细信息，请参阅[如何使用维护时段](../../core/clients/manage/collections/use-maintenance-windows.md)。  
 
 
 ##  <a name="BKMK_RestartOptions"></a> 在软件更新安装之后重启 Windows 10 客户端的选项
