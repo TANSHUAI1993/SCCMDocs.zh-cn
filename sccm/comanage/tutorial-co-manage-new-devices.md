@@ -13,10 +13,10 @@ ms.service: ''
 ms.technology: ''
 ms.assetid: ''
 ms.openlocfilehash: 61400d382a539efa495af99795e32fc1f2a517ab
-ms.sourcegitcommit: af8693048e6706ffda72572374f56e0bc7dfce2c
+ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/11/2019
+ms.lasthandoff: 03/27/2019
 ms.locfileid: "57737349"
 ---
 # <a name="tutorial-enable-co-management-for-new-internet-based-devices"></a>教程：为基于 Internet 的新设备启用共同管理
@@ -396,7 +396,7 @@ Azure 配置、站点系统角色和客户端设置配置就绪后，可以配�
 
    - **发布者**：Microsoft  
 
-   - **命令行参数**：*\<指定 CCMSETUPCMD 命令行。可以使用从“共同管理配置向导”的“启用”页保存的命令行**。此命令行包含云服务的名称以及使设备能够安装 Configuration Manager 客户端软件的其他值。>**  
+   - **命令行参数**：*\<指定 CCMSETUPCMD 命令行。可以使用从“共同管理配置向导”的“启用”页保存的命令行**。此命令行包含云服务的名称以及使设备能够安装 Configuration Manager 客户端软件的其他值。>*  
 
      命令行结构应该类似于仅使用 CCMSETUPCMD 和 SMSSiteCode 参数的以下示例：  
  
