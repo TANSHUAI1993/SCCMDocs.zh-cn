@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9ac08431c76653711eacb62aed4100c2fab0db50
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 7b0c162e7d1fcc38b388d0b39cc6811bc9e86973
+ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56122502"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58196800"
 ---
 # <a name="what39s-new-in-version-1602-of-system-center-configuration-manager"></a>System Center Configuration Manager 版本 1602 中的新增功能
 
@@ -120,7 +120,7 @@ System Center Configuration Manager 的更新 1602 作为控制台内部更新�
 ### <a name="conditional-access-for-pcs-managed-by-system-center-configuration-manager"></a>对由 System Center Configuration Manager 管理的电脑进行条件访问  
  此版本之前，若要配置电脑的条件访问，则该电脑必须已在 Intune 中注册或为已加入域。 从 1602 更新开始，支持对由 System Center Configuration Manager 管理的电脑进行条件访问。 对于由 System Center Configuration Manager 管理的电脑，可将对 Exchange Online 和 SharePoint Online 的访问限制为仅限符合你设置的合规性策略的设备。  
 
- 有关详细信息，请参阅[管理对由 System Center Configuration Manager 管理的电脑的 O365 服务的访问](../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)。  
+ 有关详细信息，请参阅[管理对由 System Center Configuration Manager 管理的电脑的 Office 365 服务的访问](../../../protect/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md)。  
 
 ### <a name="restricting-access-based-on-the-health-of-devices"></a>基于设备的运行状况限制访问  
  现可根据运行状况证明服务报告的设备的运行状况，限制对电子邮件和 Office 365 服务的访问。 此外，设备健康状况报告还包括由 Intune 管理的设备。  

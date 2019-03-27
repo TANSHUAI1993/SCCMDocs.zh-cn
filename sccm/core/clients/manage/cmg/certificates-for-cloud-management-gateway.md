@@ -10,12 +10,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: 71eaa409-b955-45d6-8309-26bf3b3b0911
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8add225db488a749eba98f9015fcb112e8f34f04
-ms.sourcegitcommit: 8803a64692f3edc0422b58f6c3037a8796374cc8
+ms.openlocfilehash: 69c5f446c465655adb1e9fee1b891a3152af47e9
+ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 03/19/2019
-ms.locfileid: "57881786"
+ms.locfileid: "58197089"
 ---
 # <a name="certificates-for-the-cloud-management-gateway"></a>云管理网关证书
 
@@ -206,11 +206,9 @@ CMG 必须信任客户端身份验证证书。 要实现此信任，请提供受
 请在 Configuration Manager 的上下文外预配此证书。 例如，使用 Active Directory 证书服务和组策略颁发 Web 服务器证书。 有关详细信息，请参阅 [PKI 证书要求](/sccm/core/plan-design/network/pki-certificate-requirements)和[为运行 IIS 的站点系统部署 Web 服务器证书](/sccm/core/plan-design/network/example-deployment-of-pki-certificates#BKMK_webserver2008_cm2012)。
 
 
-- 在 1706 或 1710 版中，使用客户端身份验证证书管理具有本地标识的传统客户端时，建议但不强制使用此证书。  
+- 在 1710 版中，使用客户端身份验证证书管理具有本地标识的传统客户端时，建议但不强制使用此证书。 管理加入 Azure AD 的 Windows 10 客户端时，管理点需要此证书。
 
-- 在 1710 版中，管理加入 Azure AD 的 Windows 10 客户端时，管理点需要此证书。  
-
-- 从 1802 版开始，所有方案都需要使用此证书。 只有针对 CMG 启用的管理点才需使用 HTTPS。 此行为更改为基于 Azure AD 令牌的身份验证提供了更好的支持。  
+- 在 1802 版中，所有方案都需要使用此证书。 只有针对 CMG 启用的管理点才需使用 HTTPS。 此行为更改为基于 Azure AD 令牌的身份验证提供了更好的支持。  
 
 - 从 1806 版开始，使用站点选项“使用 Configuration Manager 为 HTTP 站点系统生成的证书”时，管理点可以是 HTTP。 有关详细信息，请参阅[增强型 HTTP](/sccm/core/plan-design/hierarchy/enhanced-http)。
 
@@ -220,12 +218,12 @@ CMG 必须信任客户端身份验证证书。 要实现此信任，请提供受
 #### <a name="for-internet-based-clients-communicating-with-the-cloud-management-gateway"></a>对于与云管理网关通信的基于 Internet 的客户端
 配置本地管理点以允许来自 CMG 的连接具有以下客户端连接模式：
 
-| 客户端的类型   | 1706        | 1710        | 1802        | 1806        |
+| 客户端的类型   | 1710        | 1802        | 1806        | 1810        |
 |------------------|-------------|-------------|-------------|-------------|
-| 工作组        | HTTP、HTTPS | HTTP、HTTPS | HTTPS       | E-HTTP<sup>[备注 1](#bkmk_note1)</sup>HTTPS |
-| AD 域加入 | HTTP、HTTPS | HTTP、HTTPS | HTTPS       | E-HTTP<sup>[备注 1](#bkmk_note1)</sup>HTTPS |
-| Azure AD 加入  | HTTPS       | HTTPS       | HTTPS       | E-HTTP、HTTPS |
-| 混合加入    | HTTP、HTTPS | HTTP、HTTPS | HTTPS       | E-HTTP、HTTPS |
+| 工作组        | HTTP、HTTPS | HTTPS       | E-HTTP<sup>[备注 1](#bkmk_note1)</sup>HTTPS | E-HTTP<sup>[备注 1](#bkmk_note1)</sup>HTTPS |
+| AD 域加入 | HTTP、HTTPS | HTTPS       | E-HTTP<sup>[备注 1](#bkmk_note1)</sup>HTTPS | E-HTTP<sup>[备注 1](#bkmk_note1)</sup>HTTPS |
+| Azure AD 加入  | HTTPS       | HTTPS       | E-HTTP、HTTPS | E-HTTP、HTTPS |
+| 混合加入    | HTTP、HTTPS | HTTPS       | E-HTTP、HTTPS | E-HTTP、HTTPS |
 
 <a name="bkmk_note1"></a> 
 
@@ -235,7 +233,7 @@ CMG 必须信任客户端身份验证证书。 要实现此信任，请提供受
 #### <a name="for-on-premises-clients-communicating-with-the-on-premises-management-point"></a>对于与本地管理点通信的本地客户端
 使用以下客户端连接模式配置本地管理点：
 
-| 客户端的类型   | 1706        | 1710        | 1802        | 1806        |
+| 客户端的类型   | 1710        | 1802        | 1806        | 1810        |
 |------------------|-------------|-------------|-------------|-------------|
 | 工作组        | HTTP、HTTPS | HTTP、HTTPS | HTTP、HTTPS | HTTP、HTTPS |
 | AD 域加入 | HTTP、HTTPS | HTTP、HTTPS | HTTP、HTTPS | HTTP、HTTPS |

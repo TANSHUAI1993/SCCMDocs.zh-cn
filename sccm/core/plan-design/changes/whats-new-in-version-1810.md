@@ -2,7 +2,7 @@
 title: 1810 版中的新增功能
 titleSuffix: Configuration Manager
 description: 获取有关 Configuration Manager Current Branch 1810 版中引入的更改和新功能的详细信息。
-ms.date: 03/13/2019
+ms.date: 03/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 51329775e44963a4ca14067fb909c05c0ec9a24c
-ms.sourcegitcommit: 8803a64692f3edc0422b58f6c3037a8796374cc8
+ms.openlocfilehash: 5e0b1e9404eb332a562b6d48db0f55e8726a09c8
+ms.sourcegitcommit: 5f17355f954b9d9e10325c0e9854a9d582dec777
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "57881854"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329611"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 1810 版中的新增功能
 
@@ -61,10 +61,10 @@ Configuration Manager 现支持将 Windows Server 2019 和 Windows Server 1809 �
 
 
 ### <a name="hierarchy-support-for-site-server-high-availability"></a>对站点服务器高可用性的层次结构支持
-<!--1358224-->
-管理中心站点和子主站点现可拥有其他被动模式下的站点服务器。 
+<!--3607755, fka 1358224-->
+[已更新] 管理中心站点和子主站点现可拥有一个额外的被动模式下的站点服务器。 
 
-<!--For more information, see [Site server high availability](/sccm/core/servers/deploy/configure/site-server-high-availability).-->
+有关详细信息，请参阅[站点服务器高可用性](/sccm/core/servers/deploy/configure/site-server-high-availability)。
 
 
 ### <a name="improvements-to-setup-prerequisites"></a>安装先决条件方面的改进
@@ -249,6 +249,12 @@ PowerShell 配置文件是在 PowerShell 启动时运行的脚本。 可以创�
 
 有关详细信息，请参阅[管理驱动程序](/sccm/osd/get-started/manage-drivers)。
 
+### <a name="improvements-to-windows-10-servicing-plan-filters"></a>对 Windows 10 维护计划筛选器的改进
+
+<!--3098809, 3113836, 3204570 -->
+[已更新] 已向 Windows 10 维护计划添加更多筛选器。 现在可以按“体系结构”、“产品类别”进行筛选（如果升级“被取代”）。
+
+有关详细信息，请参阅 [Windows 10 维护服务计划](/sccm/osd/deploy-use/manage-windows-as-a-service#BKMK_ServicingPlan)。
 
 ### <a name="new-task-sequence-variable-for-last-action-name"></a>最后一个操作名称的新任务序列变量
 <!--SCCMDocs-pr issue #2964-->
@@ -273,19 +279,27 @@ PowerShell 配置文件是在 PowerShell 启动时运行的脚本。 可以创�
 
 ### <a name="improvement-to-maintenance-windows-for-software-updates"></a>软件更新的维护时段的改进
 <!--vso2839307-->
-以下客户端设置位于“软件更新”组中，以控制维护时段中软件更新的安装行为： 
+[已更新] 以下客户端设置位于“软件更新”组中，以控制维护时段中软件更新的安装行为： 
 
 当“软件更新”维护时段可用时，在“所有部署”维护时段中启用更新安装
 
 默认情况下，此选项为“否”以与现有行为保持一致。 请将其更改为“是”，以允许客户端使用其他可用的维护时段来安装软件更新。
 
-<!--For more information, see []().-->
+有关详细信息，请参阅[软件更新客户端设置](/sccm/core/clients/deploy/about-client-settings#bkmk_SUMMaint)。
+
 
 ### <a name="improvement-to-software-updates-maintenance"></a>对软件更新维护的改进
 <!--2839349-->
 WSUS 清理任务现在在辅助站点上运行。 为辅助站点运行已过期更新的 WSUS 清理，并拒绝 WSUS 中的取代更新。
 
 有关更多信息，请参阅[从版本 1810 开始的 WSUS 清理行为](/sccm/sum/deploy-use/software-updates-maintenance#wsus-cleanup-behavior-starting-in-version-1810)
+
+### <a name="improvement-to-software-update-supersedence-rules"></a>对软件更新取代规则的改进
+<!--3098809, 2977644-->
+
+[已更新] 现在可以独立于非功能更新指定功能更新的取代规则。 这意味着在维护 Windows 10 客户端完成之前不会从 Configuration Manager 中删除升级。
+
+有关详细信息，请参阅 [取代规则](/sccm/sum/get-started/install-a-software-update-point#supersedence-rules)。
 
 ## <a name="bkmk_report"></a>报表
 
@@ -363,9 +377,8 @@ CMPivot 包括以下改进：
 
 
 ### <a name="bkmk_scripts"></a> 脚本改进
-
-<!--3607711, fka 1358239-->
-[已更新]现在，可以按原始或结构化的 JSON 格式查看详细的脚本输出。 此格式设置可使输出更易于读取和分析。
+<!--1358239-->
+现在，可以原始或结构化的 JSON 格式查看详细的脚本输出。 此格式设置可使输出更易于读取和分析。 
 
 以下性能和故障诊断改进适用于 CMPivot 和脚本：
 
@@ -373,11 +386,11 @@ CMPivot 包括以下改进：
 
 - 用于故障排除的其他日志  
 
-有关详细信息，请参阅下列文章：  
+<!--For more information, see the following articles:  
 
-- [从 Configuration Manager 控制台创建并运行 PowerShell 脚本](/sccm/apps/deploy-use/create-deploy-scripts)  
+- [Create and run PowerShell scripts from the Configuration Manager console](/sccm/apps/deploy-use/create-deploy-scripts)  
 
-- [CMPivot](/sccm/core/servers/manage/cmpivot)
+- [CMPivot](/sccm/core/servers/manage/cmpivot)  -->
 
 
 ### <a name="sms-provider-api"></a>SMS 提供程序 API

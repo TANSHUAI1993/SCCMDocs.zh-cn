@@ -2,7 +2,7 @@
 title: 客户端通知
 titleSuffix: Configuration Manager
 description: 通过立即从中央 Configuration Manager 控制台执行操作来管理客户端。
-ms.date: 03/06/2019
+ms.date: 03/19/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a643924cbaef928f9db4011f634ae96171ab7914
-ms.sourcegitcommit: 544f335cfd1bfd0a1d4973439780e9f5e9ee8bed
+ms.openlocfilehash: 39135a1fa548c83e0ba9c7d2a98cf1e925217280
+ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562085"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58197021"
 ---
 # <a name="client-notification-in-configuration-manager"></a>Configuration Manager 中的客户端通知
 
@@ -79,7 +79,8 @@ ms.locfileid: "57562085"
 在 1806 版或更早版本中，“客户端通知”选项仅在“设备集合”节点中或在查看了“设备集合”的成员身份时显示。 从 1810 版开始，可以直接从“设备”节点启动“客户端通知”。 不再要求必须在集合成员资格视图内。 <!--SCCMDocs-pr issue 2972-->
 
 #### <a name="permissions"></a>权限
-<!--SCCMDocs-pr issue #2972--> 从版本 1810 开始，客户端通知操作现在需要“集合”对象上的“通知资源”权限。 此权限适用于“客户端通知”菜单下的所有操作。 
+<!--SCCMDocs-pr issue #2972-->
+从 1810 版开始，客户端通知操作现在需要“集合”对象上的“通知资源”权限。 此权限适用于“客户端通知”菜单下的所有操作。 
 
 默认情况下，以下内置角色具有此权限：
 - 完全权限管理员  
@@ -135,7 +136,7 @@ ms.locfileid: "57562085"
 
 ### <a name="check-conditional-access-compliance"></a>检查条件访问符合性
 
-触发客户端检查其是否符合条件访问。 有关详细信息，请参阅[管理电脑的 O365 服务的访问权限](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)。  
+触发客户端检查其是否符合条件访问。 有关详细信息，请参阅[管理对电脑的 Office 365 服务的访问](/sccm/mdm/deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm)。  
 
 
 ### <a name="wake-up"></a>唤醒

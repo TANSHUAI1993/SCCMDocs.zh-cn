@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aba8479d6a2aecb3c73dad6acce6ab8237ff2576
-ms.sourcegitcommit: 8803a64692f3edc0422b58f6c3037a8796374cc8
+ms.openlocfilehash: 6ff872817805c85665bde7219ca26de0bf8d78ef
+ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 03/19/2019
-ms.locfileid: "57881871"
+ms.locfileid: "58197106"
 ---
 # <a name="plan-for-the-sms-provider"></a>规划 SMS 提供程序 
 
@@ -259,19 +259,18 @@ Configuration Manager WMI 架构定义 SMS 提供程序的结构。 架构命名
 
 从 1810 版开始，SMS 提供程序通过 HTTPS 提供对 WMI 的只读 API 互操作性访问，称为“管理服务”。 此 REST API 可用于取代自定义 Web 服务访问站点信息。
 
-`https://servername/AdminService/wmi/<ClassName>` 
+管理服务 URL 格式为 `https://<servername>/AdminService/wmi/<ClassName>`，其中 `<servername>` 为安装 SMS 提供程序的服务器，`<ClassName>` 为有效 Configuration Manager WMI 类名称。
 
 例如 `https://servername/AdminService/wmi/SMS_Site`
 
 使用 Windows PowerShell cmdlet [Invoke-RestMethod](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-restmethod) 直接调用此服务。
 
-借助它，也可以通过 OData 连接器选项访问 PowerBI 中的站点数据。 
-
 > [!Tip]  
 > 可以在任务序列中使用此 cmdlet。 借助此操作，可以访问站点中的信息，无需使用自定义 Web 服务与 WMI 提供程序进行交互。 
 
-管理服务将其活动记录到 adminservice.log 文件。
+借助它，也可以通过 OData 连接器选项访问 PowerBI 中的站点数据。 
 
+管理服务将其活动记录到 adminservice.log 文件。
 
 ### <a name="enable-the-administration-service-through-the-cmg"></a>通过 CMG 启用管理服务
 

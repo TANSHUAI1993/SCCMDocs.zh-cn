@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 44d19c9d2ba7daa029bb46eeb386771de70a2e8f
-ms.sourcegitcommit: 8803a64692f3edc0422b58f6c3037a8796374cc8
+ms.openlocfilehash: f50bb18edf782d5012e90db0b4b21a2309ad4f0b
+ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
 ms.lasthandoff: 03/19/2019
-ms.locfileid: "57881888"
+ms.locfileid: "58196885"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>在 Configuration Manager 中规划云管理网关
 
@@ -170,7 +170,7 @@ CMG 向导仍提供使用 Azure 管理证书的“经典服务部署”选项。
 
 - 可能需要其他证书，具体取决于客户端操作系统版本和身份验证模型。 有关详细信息，请参阅 [CMG 证书](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway)。  
 
-    - 从 1802 版起，必须将所有启用了 CMG 的[**管理点配置为使用 HTTPS**](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_mphttps)。  
+    - 在 1802 版中，必须将所有启用了 CMG 的[管理点配置为使用 HTTPS](/sccm/core/clients/manage/cmg/certificates-for-cloud-management-gateway#bkmk_mphttps)。  
 
     - 从 1806 版开始，使用站点选项“使用 Configuration Manager 为 HTTP 站点系统生成的证书”时，管理点可以是 HTTP。 有关详细信息，请参阅[增强型 HTTP](/sccm/core/plan-design/hierarchy/enhanced-http)。  
 

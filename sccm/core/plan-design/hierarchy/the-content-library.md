@@ -2,7 +2,7 @@
 title: 内容库
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 用于减少已分发内容总大小的内容库。
-ms.date: 09/19/2018
+ms.date: 03/20/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0453f181133b69dcf3fe83032da0eace84718cf3
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 9b082e28fde0b1ae53a00b9d3236764d03b474ed
+ms.sourcegitcommit: 5f17355f954b9d9e10325c0e9854a9d582dec777
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56129266"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329509"
 ---
 # <a name="the-content-library-in-configuration-manager"></a>Configuration Manager 中的内容库
 
@@ -75,7 +75,8 @@ Configuration Manager 会在以下情况下使用管理中心站点上的内容�
 
 
 ## <a name="bkmk_remote"></a>配置用于站点服务器的远程内容库  
-<!--1357525-->从版本 1806 开始，若要配置[站点服务器高可用性](/sccm/core/servers/deploy/configure/site-server-high-availability)或释放管理中心或主站点服务器上的硬盘空间，请将内容库重定位到另一个存储位置。 将内容库移至站点服务器上的另一个驱动器、单独服务器或者存储区域网络 (SAN) 中的容错磁盘。 建议移至 SAN，因为它具有高可用性，并提供弹性存储，即存储可随时间推移而增长或收缩，以满足不断变化的内容需求。 有关详细信息，请参阅[高可用性选项](/sccm/protect/understand/high-availability-options)。
+<!--1357525-->
+从 1806 版开始，若要配置[站点服务器高可用性](/sccm/core/servers/deploy/configure/site-server-high-availability)或释放管理中心或主站点服务器上的硬盘空间，请将内容库重定位到另一个存储位置。 将内容库移至站点服务器上的另一个驱动器、单独服务器或者存储区域网络 (SAN) 中的容错磁盘。 建议移至 SAN，因为它具有高可用性，并提供弹性存储，即存储可随时间推移而增长或收缩，以满足不断变化的内容需求。 有关详细信息，请参阅[高可用性选项](/sccm/protect/understand/high-availability-options)。
 
 远程内容库是[站点服务器高可用性](/sccm/core/servers/deploy/configure/site-server-high-availability)的先决条件。 
 
@@ -90,7 +91,7 @@ Configuration Manager 会在以下情况下使用管理中心站点上的内容�
 
 ### <a name="prerequisites"></a>先决条件  
 
-- 站点服务器计算机帐户需要将内容库移至其中的网络路径的“读取”和“写入”权限。 远程系统上不安装任何组件。  
+- 站点服务器计算机帐户需要将内容库移至其中的网络路径的“完全控制”权限。 此权限适用于共享和文件系统。 远程系统上不安装任何组件。
 
 - 站点服务器无法获得分发点角色。 分发点也使用内容库，并且此角色不支持远程内容库。 移动内容库后，无法将分发点角色添加到站点服务器。  
 
@@ -115,6 +116,9 @@ Configuration Manager 会在以下情况下使用管理中心站点上的内容�
 
    - 处于“正在进行”状态时，“移动进度(%)”值将显示完成百分比。  
 
+        > [!Note]  
+        > 如果有大型内容库，可能会在一段时间内看到控制台中的进度为 `0%`。 例如，使用 1 TB 库时，在显示 `1%` 之前，它必须复制 10 GB 的数据。 查看 distmgr.log，它显示了复制的文件数和字节数。 从 1810 版开始，日志文件还会显示估计的剩余时间。
+
    - 如果存在错误状态，状态将显示错误。 常见错误包括“访问被拒绝”或“磁盘已满”。  
 
    - 完成时，显示“完成”。  
@@ -124,6 +128,10 @@ Configuration Manager 会在以下情况下使用管理中心站点上的内容�
 有关此过程的详细信息，请参阅[流程图 - 管理内容库](/sccm/core/plan-design/hierarchy/manage-content-library-flowchart)。
 
 实际上，站点将内容库文件复制到远程位置。 此过程不会删除站点服务器上原始位置的内容库文件。 若要释放空间，管理员必须手动删除这些原始文件。
+
+如果原始内容库跨两个驱动器，该库将在新目标中合并为单个文件夹。 
+
+从 1810 版开始，在复制过程中，站点会停止 Despooler 和分发管理器组件。 此操作可确保该内容在移动时不会添加到库中。 无论如何，在系统维护期间安排此更改。
 
 如果需要将内容库移回站点服务器，请重复此过程，但在“新位置”中输入本地驱动器和路径。 它必须包含已存在于驱动器上的文件夹名称，例如，`D:\SCCMContentLib`。 如果原始内容仍存在，该过程会快速将配置移动到站点服务器的本地位置。 
 

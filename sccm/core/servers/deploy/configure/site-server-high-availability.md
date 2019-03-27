@@ -2,7 +2,7 @@
 title: 站点服务器高可用性
 titleSuffix: Configuration Manager
 description: 如何通过添加被动模式站点服务器来配置 Configuration Manager 站点服务器高可用性。
-ms.date: 07/30/2018
+ms.date: 03/20/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: be12cfe29ff470f2f577bab2c685695ae5770bae
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 1259e54f552496f1c838ce4d8da5dbb385dc3c52
+ms.sourcegitcommit: 5f17355f954b9d9e10325c0e9854a9d582dec777
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56131415"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329526"
 ---
 # <a name="site-server-high-availability-in-configuration-manager"></a>Configuration Manager 中的站点服务器高可用性
 
@@ -24,7 +24,14 @@ ms.locfileid: "56131415"
 
 <!--1128774-->
 
-从 Configuration Manager 1806 版开始，站点服务器角色的高可用性（一个基于 Configuration Manager 的解决方案）可用于安装被动模式下的其他站点服务器。 被动模式下的站点服务器是对主动模式下的现有站点服务器的补充。 在需要时可立即使用被动模式下的站点服务器。 将此附加站点服务器作为整体设计的一部分，从而使 Configuration Manager 服务获得[高可用性](/sccm/core/servers/deploy/configure/high-availability-options)。  
+过去可以向 Configuration Manager 中的大部分角色添加冗余，方法是使环境拥有这些角色的多个实例。 站点服务器本身除外。 从 Configuration Manager 1806 版开始，站点服务器角色的高可用性（一个基于 Configuration Manager 的解决方案）可用于安装被动 ** 模式下的其他站点服务器。 版本 1810 添加了层次结构支持，因此管理中心站点和子主站点还可拥有其他被动模式下的站点服务器。 被动模式下的站点服务器可以是本地服务器或是 Azure 中基于云的服务器。
+
+此功能提供以下优点 
+- 站点服务器角色的冗余和高可用性  
+- 更轻松地更改站点服务器的硬件或操作系统  
+- 更轻松地将站点服务器移动到 Azure IaaS  
+
+被动模式下的站点服务器是对主动模式下的现有站点服务器的补充。 在需要时可立即使用被动模式下的站点服务器。 将此附加站点服务器作为整体设计的一部分，从而使 Configuration Manager 服务获得[高可用性](/sccm/core/servers/deploy/configure/high-availability-options)。  
 
 被动模式下的站点服务器：
 - 使用同一站点数据库作为主动模式下的站点服务器。
@@ -33,12 +40,17 @@ ms.locfileid: "56131415"
 
 要使站点服务器处于被动模式，请手动将其提升。 此操作将主动模式下的站点服务器切换为被动模式下的站点服务器。 只要该计算机可以访问，在原始主动模式服务器上可用的站点系统角色将仍然可用。 仅站点服务器角色会在主动和被动模式之间切换。
 
-> [!Note]  
-> 默认情况下，Configuration Manager 不启用此项可选功能。 必须在使用前启用此功能。 有关详细信息，请参阅[启用更新中的可选功能](/sccm/core/servers/manage/install-in-console-updates#bkmk_options)。
+Microsoft Core Services Engineering and Operations 使用此功能将其管理中心站点迁移到 Microsoft Azure。 有关详细信息，请参阅 [Microsoft IT 展示文章](https://www.microsoft.com/itshowcase/Article/Content/1065/Migrating-System-Center-Configuration-Manager-onpremises-infrastructure-to-Microsoft-Azure)。
 
 
 
 ## <a name="prerequisites"></a>先决条件
+
+- 站点内容库必须位于远程网络共享上。 两个站点服务器都需要对共享及其内容拥有完全控制权限。 有关详细信息，请参阅[管理内容库](/sccm/core/plan-design/hierarchy/the-content-library#bkmk_remote)。<!--1357525-->  
+
+    - 站点服务器计算机帐户需要将内容库移至其中的网络路径的“完全控制”权限。 此权限适用于共享和文件系统。 远程系统上不安装任何组件。
+
+    - 站点服务器无法获得分发点角色。 分发点也使用内容库，并且此角色不支持远程内容库。 移动内容库后，无法将分发点角色添加到站点服务器。  
 
 - 被动模式下的站点服务器可以是本地服务器或是 Azure 中基于云的服务器。  
     > [!Note]  
@@ -48,40 +60,73 @@ ms.locfileid: "56131415"
 
 - 两个站点服务器必须加入同一个 Active Directory 域。  
 
-- 站点是独立主站点。 
+- 在版本 1806 中，站点必须是独立主站点。  
 
-- 两个站点服务器必须使用同一站点数据库，该数据库对每个站点服务器必须是远程的。  
+    - 从版本 1810 开始，Configuration Manager 在层次结构中支持被动模式下的站点服务器。 管理中心站点和子主站点可拥有其他被动模式下的站点服务器。<!-- 3607755 -->  
 
-     - 两个站点服务器都需要对承载站点数据库的 SQL Server 实例拥有 sysadmin 权限。
+- 两个站点服务器必须使用相同的站点数据库。  
 
-     - 承载站点数据库的 SQL Server 可以使用默认实例、命名实例、[SQL Server 群集](/sccm/core/servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database)或 [SQL Server Always On 可用性组](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database)。  
+    - 在版本 1806 中，数据库必须远离每个站点服务器。 从版本 1810 开始，Configuration Manager 设置进程不再阻止在具有适用于故障转移群集的 Windows 角色的计算机上安装站点服务器角色。 SQL Always On 需要此角色，因此，以前你无法在站点服务器上共置站点数据库。 进行此更改后，你可以通过在被动模式下使用 SQL Always On 和站点服务器创建具有更少服务器的高可用站点。<!-- SCCMDocs issue 1074 -->  
 
-     - 被动模式下的站点服务器被配置为使用与主动模式站点服务器相同的站点数据库。 被动模式下的站点服务器仅从数据库中进行读取。 在将数据库提升为主动模式之前，它都不会向数据库写入数据。  
+    - 承载站点数据库的 SQL Server 可以使用默认实例、命名实例、[SQL Server 群集](/sccm/core/servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database)或 [SQL Server Always On 可用性组](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database)。  
 
-- 站点内容库必须位于远程网络共享上。 两个站点服务器都需要对共享及其内容拥有完全控制权限。 有关详细信息，请参阅[管理内容库](/sccm/core/plan-design/hierarchy/the-content-library#manage-content-library)。<!--1357525-->  
+    - 两个站点服务器都需要在托管站点数据库的 SQL Server 实例上拥有 sysadmin 和 securityadmin 安全角色。 原始站点服务器应已具有这些角色，因此请为新站点服务器添加这些角色。 例如，以下 SQL 脚本将为 Contoso 域中的新站点服务器 VM2 添加这些角色：  
 
-    - 站点服务器无法获得分发点角色。 分发点也使用内容库，并且此角色不支持远程内容库。 移动内容库后，无法将分发点角色添加到站点服务器。  
+        ```SQL
+        USE [master]
+        GO
+        CREATE LOGIN [contoso\vm2$] FROM WINDOWS WITH DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[us_english]
+        GO
+        ALTER SERVER ROLE [sysadmin] ADD MEMBER [contoso\vm2$]
+        GO
+        ALTER SERVER ROLE [securityadmin] ADD MEMBER [contoso\vm2$]
+        GO        
+        ```
+    - 两个站点服务器需要有权访问 SQL Server 实例上的站点数据库。 原始站点服务器应已具有此访问权限，因此请为新站点服务器添加此权限。 例如，以下 SQL 脚本将为 Contoso 域中的新站点服务器 VM2 添加登录到 CM_ABC 数据库的权限：  
+
+        ```SQL
+        USE [CM_ABC]
+        GO
+        CREATE USER [contoso\vm2$] FOR LOGIN [contoso\vm2$] WITH DEFAULT_SCHEMA=[dbo]
+        GO
+        ```
+
+    - 被动模式下的站点服务器被配置为使用与主动模式站点服务器相同的站点数据库。 被动模式下的站点服务器仅从数据库中进行读取。 在将数据库提升为主动模式之前，它都不会向数据库写入数据。  
 
 - 被动模式下的站点服务器：  
 
-     - 必须满足[安装主站点的先决条件](/sccm/core/servers/deploy/install/prerequisites-for-installing-sites#primary-sites-and-the-central-administration-site)。  
+    - 必须满足安装主站点的先决条件。 例如，.NET Framework、远程差分压缩和 Windows ADK。 有关完整列表，请参阅[站点和站点系统先决条件](/sccm/core/plan-design/configs/site-and-site-system-prerequisites)。<!-- SCCMDocs issue 765 -->  
 
-     - 在主动模式站点服务器的本地 Administrator 组中必须要有其计算机帐户。<!--516036-->
+    - 其计算机帐户必须位于主动模式下的站点服务器的本地 Administrator 组中。<!--516036-->
 
-     - 使用与主动模式站点服务器的版本相匹配的源文件进行安装。  
+    - 必须使用与主动模式下的站点服务器的版本相匹配的源文件进行安装。  
 
-     - 在安装被动模式下的站点服务器之前，无法从任何站点获得站点系统角色。  
+    - 在安装被动模式角色下的站点服务器之前，无法从在其上安装的任何站点获得站点系统角色。  
 
 - 只要 [Configuration Manager 支持](/sccm/core/plan-design/configs/supported-operating-systems-for-site-system-servers)，两个站点服务器都可以运行不同的 OS 或 Service Pack 版本。  
+
+- 请勿在针对高可用性配置的任何站点服务器上托管服务连接点角色。 如果它当前位于原始站点服务器上，请将其删除，然后将其安装到另一个站点系统服务器上。 有关详细信息，请参阅[关于服务连接点](/sccm/core/servers/deploy/configure/about-the-service-connection-point)。  
+
+- [站点系统安装帐户](/sccm/core/plan-design/hierarchy/accounts#site-system-installation-account)的权限  
+
+    - 默认情况下，很多客户使用站点服务器的计算机帐户安装新站点系统。 要求则是将站点服务器的计算机帐户添加到远程站点系统上的本地 Administrators 组。 如果环境使用此配置，请确保将新站点服务器的计算机帐户添加到所有远程站点系统上的此本地组。 例如，所有远程分发点。  
+
+    - 建议采纳的更为安全的配置是使用服务帐户安装站点系统。 最安全的配置是使用本地服务帐户。 如果环境使用此配置，则不需要任何更改。  
 
 
 
 ## <a name="limitations"></a>限制
-- 每个主站点均支持在被动模式下的单一站点服务器。  
 
-- 层次结构中不支持被动模式下的站点服务器。 层次结构中包含管理中心站点和子主站点。 仅在独立主站点上创建被动模式站点服务器。<!--1358224-->
+- 每个站点仅支持一个被动模式下的站点服务器。  
+
+- 在版本 1806 中，层次结构中不支持被动模式下的站点服务器。 层次结构中包含管理中心站点和子主站点。 仅在独立主站点上创建被动模式下的站点服务器。<!--1358224-->  
+
+    - 从版本 1810 开始，Configuration Manager 在层次结构中支持被动模式下的站点服务器。 管理中心站点和子主站点可拥有其他被动模式下的站点服务器。<!-- 3607755 -->  
 
 - 辅助站点不支持被动模式下的站点服务器。<!--SCCMDocs issue 680-->  
+
+    > [!Note]  
+    > 辅助站点在具有高度可用的站点服务器的主站点上仍受支持。
 
 - 将被动模式下的站点服务器提升到主动模式下站点服务器需要手动进行。 没有任何自动故障转移。  
 
@@ -92,7 +137,7 @@ ms.locfileid: "56131415"
 
 - 对于使用数据库的报告点等角色，请在远离这两个站点服务器的服务器上托管数据库。  
 
-- SMS_Provider 不会安装在被动模式站点服务器上。 连接到站点的提供程序，手动将被动模式下的站点服务器提升为主动模式。 在另一台服务器上至少安装一个提供程序的其他实例。 有关详细信息，请参阅[规划 SMS 提供程序](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider)。  
+- 添加处于被动模式角色的站点服务器时，站点不会同时安装 SMS 提供程序角色。 在另一台服务器上至少再安装一个提供程序实例，以实现高可用性。 如果你的设计在站点服务器上包括此角色，请在添加处于被动模式角色的站点服务器后在新站点服务器上安装此角色。 有关详细信息，请参阅[规划 SMS 提供程序](/sccm/core/plan-design/hierarchy/plan-for-the-sms-provider)。  
 
 - Configuration Manager 控制台不会自动安装在被动模式下的站点服务器上。  
 
@@ -154,10 +199,12 @@ ms.locfileid: "56131415"
 
     - 检查在站点之间进行主动复制的任何包的内容状态。  
 
-    - 不要启动任何新的内容分发作业。 
+    - 检查辅助站点状态和站点复制。 
+
+    - 请勿在子站点服务器或辅助站点服务器上启动任何新内容分发作业或维护。 
 
         > [!Note]  
-        > 如果在故障转移期间正在站点之间复制文件，则新站点服务器可能无法接收复制的文件。 如果发生这种情况，请在新站点服务器处于主动模式后重新分发软件内容。<!--515436-->  
+        > 如果在故障转移期间正在站点之间复制文件或数据库，则新站点服务器可能无法接收复制的内容。 如果发生这种情况，请在新站点服务器处于主动模式后重新分发软件内容。<!--515436--> 对于数据库复制，可能需要在故障转移后重新初始化辅助站点。<!-- SCCMDocs issue 808 -->
 
 
 ### <a name="process-to-promote-the-site-server-in-passive-mode-to-active-mode"></a>将被动模式下的站点服务器提升到主动模式的流程

@@ -2,7 +2,7 @@
 title: 在 Azure 中创建实验室
 titleSuffix: Configuration Manager
 description: 使用 Azure 模板自动创建 Configuration Manager 技术预览实验室
-ms.date: 01/22/2019
+ms.date: 03/18/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 02f3df4b8c090df960f1052a25c1f6cc8ef45395
-ms.sourcegitcommit: ef2960bd91655c741450774e512dd0a9be610625
+ms.openlocfilehash: 25283e513e256e8ce779df7b71ac6f6c17f1e370
+ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56838763"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58196817"
 ---
 # <a name="create-a-configuration-manager-technical-preview-lab-in-azure"></a>在 Azure 中创建 Configuration Manager 技术预览实验室
 
@@ -33,7 +33,7 @@ ms.locfileid: "56838763"
 ## <a name="prerequisites"></a>先决条件
 
 此过程需要可在其中创建以下对象的 Azure 订阅： 
-- 四个 Standard_D2s_v3 虚拟机
+- 三台 Standard_D2s_v3 虚拟机
 - Standard_LRS 存储帐户
 
 > [!Tip]  
@@ -86,7 +86,7 @@ Azure 可验证设置，然后开始部署。 检查 Azure 门户中部署的状
 
 ## <a name="azure-vm-info"></a>Azure VM 信息
 
-所有四个虚拟机均具有以下规格：
+所有三台虚拟机均具有以下规格：
 - 具有两个 CPU 核心和 8 GB 内存的 Standard_D2s_v3  
 - Windows Server 2016 Datacenter Edition
 - 150 GB 磁盘空间
@@ -127,14 +127,4 @@ Active Directory 域控制器
 - 远程差分压缩 (RDC) 
 - Internet Information Service (IIS)
 - 后台智能传输服务 (BITS)
-
-
-### `<prefix>Other`
-
-此 VM 可用作客户端，或用于承载其他站点角色。
-
-#### <a name="windows-features-and-roles"></a>Windows 功能和角色
-- .NET
-- 远程差分压缩 (RDC) 
-
 

@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e876e34929479654240ff220c3cad91043da0f83
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 7fb6a87f965db0a329a4f64918b0efcd5732ea0b
+ms.sourcegitcommit: d71e558db2da124357b840332e2da671b3810507
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56123131"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58269136"
 ---
 # <a name="back-up-a-configuration-manager-site"></a>备份 Configuration Manager 站点
 
@@ -67,6 +67,8 @@ ms.locfileid: "56123131"
 可以备份管理中心站点和主站点。 辅助站点或站点系统服务器没有备份任务。
 
 当 Configuration Manager 备份服务运行时，它会按照备份控制文件中定义的指令进行操作：`<ConfigMgrInstallationFolder>\Inboxes\Smsbkup.box\Smsbkup.ctl`。 你可以修改备份控制文件来更改备份服务的行为。  
+> [!NOTE]
+> 对 Smsbkup.ctl 所做的修改将在重启站点服务器上的服务 SMS_SITE_VSS_WRITER 后应用。
 
 站点备份状态信息将写入 **Smsbkup.log** 文件。 将在备份站点服务器维护任务属性内指定的目标文件夹中创建此文件。  
 

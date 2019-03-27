@@ -2,7 +2,7 @@
 title: 客户端设置
 titleSuffix: Configuration Manager
 description: 了解用于控制客户端行为的默认和自定义设置
-ms.date: 08/31/2018
+ms.date: 03/21/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d9a06e9f0607161b87422d29ede028da0e8aea8c
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 472cf012805700e1ec2de2f3c83a0ef63e10183b
+ms.sourcegitcommit: 5f17355f954b9d9e10325c0e9854a9d582dec777
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56140892"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329594"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>关于 Configuration Manager 中的客户端设置
 
@@ -294,7 +294,8 @@ Configuration Manager 使用此设置将用户连接到软件中心中的应用�
 
 ## <a name="delivery-optimization"></a>传递优化
 
-<!-- 1324696 -->使用 Configuration Manager 边界组来定义和控制跨公司网络和到远程办公室的内容分发。 [Windows 传递优化](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization)是一种基于云的对等技术，用于在 Windows 10 设备之间共享内容。 从版本 1802 开始，配置传递优化以在对等方之间共享内容时使用边界组。
+<!-- 1324696 -->
+使用 Configuration Manager 边界组来定义和控制跨公司网络和到远程办公室的内容分发。 [Windows 传递优化](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization)是一种基于云的对等技术，用于在 Windows 10 设备之间共享内容。 从版本 1802 开始，配置传递优化以在对等方之间共享内容时使用边界组。
 
  > [!Note]
  > 传递优化仅可用于 Windows 10 客户端
@@ -594,7 +595,7 @@ Set this option to **Yes** for the Endpoint Protection client to attempt to unin
 从 Configuration Manager 版本 1802 开始，如果启用此选项，软件中心会隐藏需批准的用户可用的应用程序。   <!--1355146-->
 
 ### <a name="bkmk_HideInstalled"></a>在软件中心隐藏安装的应用程序
-从 Configuration Manager 版本 1802 开始，如果启用此选项，已安装的应用程序将不再显示在“应用程序”选项卡中。安装或升级到 Configuration Manager 1802 时，此选项会设置为默认选项。 仍可在安装状态选项卡下查看安装的应用程序。<!--1357592-->   
+从 Configuration Manager 版本 1802 开始，如果启用此选项，已安装的应用程序将不再显示在“应用程序”选项卡中。安装或升级到 Configuration Manager 1802 时，此选项会设置为默认选项。 仍可以在安装状态选项卡下查看已安装的应用程序。 <!--1357592-->   
  
 ### <a name="bkmk_HideAppCat"></a>隐藏软件中心中的应用程序目录链接
 从 Configuration Manager 版本 1806 开始，可在软件中心中指定应用程序目录网站链接的可见性。 设置此选项后，用户将不会在软件中心的安装状态节点中看到应用程序目录网站链接。 <!--1358214-->
@@ -608,7 +609,7 @@ Set this option to **Yes** for the Endpoint Protection client to attempt to unin
 - **安装状态**
 - **设备符合性**
 - **选项**
-- **为软件中心指定自定义选项卡**（从版本 1806 开始）<!--1358132-->
+- **为软件中心指定自定义选项卡**（从 1806 版开始） <!--1358132-->
     - **选项卡名称**
     - **内容 URL**
 
@@ -722,7 +723,7 @@ Set this option to **Yes** for the Endpoint Protection client to attempt to unin
 
 
 
-##  <a name="software-updates"></a>软件更新  
+## <a name="software-updates"></a>软件更新  
 
 ### <a name="enable-software-updates-on-clients"></a>在客户端上启用软件更新
 
@@ -774,6 +775,10 @@ Set this option to **Yes** for the Endpoint Protection client to attempt to unin
 ### <a name="enable-management-of-the-office-365-client-agent"></a>启用 Office 365 客户端代理的管理
 
 当此选项设置为“是”时，它将启用 Office 365 安装设置配置。 还可以从 Office 内容分发网络 (CDN) 下载文件，以及将文件部署为 Configuration Manager 中的应用程序。 有关详细信息，请参阅[管理 Office 365 专业增强版](/sccm/sum/deploy-use/manage-office-365-proplus-updates)。
+
+### <a name="bkmk_SUMMaint"></a>当“软件更新”维护时段可用时，在“所有部署”维护时段中启用软件更新安装
+
+将此选项设置为“是”且客户端定义了至少一个"软件更新"维护时段时，将在"所有部署"维护时段安装软件更新。 默认情况下，此设置设为“否” 。 Configuration Manager 1810 版中已添加此客户端设置。 <!--2839307-->
 
 ### <a name="enable-third-party-software-updates"></a>启用第三方软件更新 
 
