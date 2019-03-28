@@ -2,7 +2,7 @@
 title: 站点服务器高可用性
 titleSuffix: Configuration Manager
 description: 如何通过添加被动模式站点服务器来配置 Configuration Manager 站点服务器高可用性。
-ms.date: 03/20/2019
+ms.date: 03/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1259e54f552496f1c838ce4d8da5dbb385dc3c52
-ms.sourcegitcommit: 5f17355f954b9d9e10325c0e9854a9d582dec777
+ms.openlocfilehash: be3b70d91155b379881332ddb7c8d405d0d92e84
+ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58329526"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58523854"
 ---
 # <a name="site-server-high-availability-in-configuration-manager"></a>Configuration Manager 中的站点服务器高可用性
 

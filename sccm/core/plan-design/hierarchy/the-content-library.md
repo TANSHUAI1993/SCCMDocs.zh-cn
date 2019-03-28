@@ -2,7 +2,7 @@
 title: 内容库
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 用于减少已分发内容总大小的内容库。
-ms.date: 03/20/2019
+ms.date: 03/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9b082e28fde0b1ae53a00b9d3236764d03b474ed
-ms.sourcegitcommit: 5f17355f954b9d9e10325c0e9854a9d582dec777
+ms.openlocfilehash: b6251bfa098f575662d1a1c0dbf742b35af05846
+ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58329509"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58523939"
 ---
 # <a name="the-content-library-in-configuration-manager"></a>Configuration Manager 中的内容库
 

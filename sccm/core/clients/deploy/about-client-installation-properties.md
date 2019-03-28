@@ -2,7 +2,7 @@
 title: 客户端安装参数和属性
 titleSuffix: Configuration Manager
 description: 了解用于安装 Configuration Manager 客户端的 ccmsetup 命令行参数和属性。
-ms.date: 03/28/2018
+ms.date: 03/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ebfcde2be230c9c5e04031210cb6e137ed81668c
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: f84b4b775c2baa59a5281a79f8154c0a6d0820f6
+ms.sourcegitcommit: 5feeb99605be5c4c39896bcee239cc274d89b3e8
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56126484"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58508524"
 ---
 # <a name="about-client-installation-parameters-and-properties-in-system-center-configuration-manager"></a>关于 System Center Configuration Manager 中的客户端安装参数和属性。
 
@@ -40,7 +40,7 @@ ms.locfileid: "56126484"
 > [!NOTE]  
 >  在 Configuration Manager 中，不能直接运行 Client.msi 文件。  
 
- CCMSetup.exe 提供[命令行参数](#ccmsetup-exe-command-line-parameters)以自定义安装 -- 参数以反斜杠作为前缀，并按照约定采用小写。 在必要时，使用一个冒号紧跟所需的值来指定参数的值。 还可以提供属性以修改 CCMSetup.exe 命令行中的 client.msi 行为 -- 按照约定属性均采用大写。 使用等于号紧跟所需的值来指定参数的值。  
+ CCMSetup.exe 提供[命令行参数](#ccmsetupexe-command-line-parameters)以自定义安装 -- 参数以反斜杠作为前缀，并按照约定采用小写。 在必要时，使用一个冒号紧跟所需的值来指定参数的值。 还可以提供属性以修改 CCMSetup.exe 命令行中的 client.msi 行为 -- 按照约定属性均采用大写。 使用等于号紧跟所需的值来指定参数的值。  
 
 > [!IMPORTANT]  
 >  指定 client.msi 的属性之前，先指定 CCMSetup 参数。  
@@ -336,7 +336,7 @@ Example: `ccmsetup.exe AADTENANTNAME=Contoso`
 
  此值是根 CA 证书中主题属性的匹配（区分大小写）。 属性可由逗号 (,) 或分号 (;) 分隔。 使用分隔线指定多个根 CA 证书。 例如：  
 
- `CCMCERTISSUERS=”CN=Contoso Root CA; OU=Servers; O=Contoso, Ltd; C=US &#124; CN=Litware Corporate Root CA; O=Litware, Inc.”`  
+ `CCMCERTISSUERS="CN=Contoso Root CA; OU=Servers; O=Contoso, Ltd; C=US | CN=Litware Corporate Root CA; O=Litware, Inc."`  
 
 > [!TIP]  
 >  要复制站点的 CertificateIssuers=&lt;string\>，请引用站点服务器上 &lt;Configuration Manager 目录\>\bin\\&lt;平台\> 文件夹中的 mobileclient.tcf 文件。  
