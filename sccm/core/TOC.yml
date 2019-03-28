@@ -69,6 +69,8 @@ items:
       href: plan-design/changes/what-has-changed-from-configuration-manager-2012.md
     - name: 增量版本中的新增功能
       href: plan-design/changes/whats-new-incremental-versions.md
+    - name: 1902 版中的新增功能
+      href: plan-design/changes/whats-new-in-version-1902.md
     - name: 1810 版中的新增功能
       href: plan-design/changes/whats-new-in-version-1810.md
     - name: 1806 版中的新增功能
@@ -168,6 +170,8 @@ items:
     items:
     - name: 如何使用诊断和使用情况数据
       href: plan-design/diagnostics/how-diagnostics-and-usage-data-is-used.md
+    - name: 1902 的诊断数据
+      href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1902.md
     - name: 1810 的诊断数据
       href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1810.md
     - name: 1806 的诊断数据
@@ -432,6 +436,8 @@ items:
       href: servers/manage/use-the-update-registration-tool-to-import-hotfixes.md
     - name: 使用修补程序安装程序
       href: servers/manage/use-the-hotfix-installer-to-install-updates.md
+    - name: 用于安装更新 1902 的清单
+      href: servers/manage/checklist-for-installing-update-1902.md
     - name: 用于安装更新 1810 的清单
       href: servers/manage/checklist-for-installing-update-1810.md
     - name: 用于安装更新 1806 的清单
@@ -760,9 +766,9 @@ items:
       href: clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md
     - name: 升级 Mac 客户端
       href: clients/manage/upgrade/upgrade-clients-on-mac-computers.md
-ms.openlocfilehash: 97eb6fe3dac61766ca7f561807e6ee0dd48e1559
-ms.sourcegitcommit: ef2960bd91655c741450774e512dd0a9be610625
+ms.openlocfilehash: befe656dec3949f792d9118a1ef092ff36316fdd
+ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56838797"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58523905"
