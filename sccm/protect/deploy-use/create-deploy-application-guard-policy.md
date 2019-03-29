@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d6446fed2d48fc6428bdc3fbc7a24f728c206dc7
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: fa50719107838ed2c5c277a45ead4a7d9be6192a
+ms.sourcegitcommit: dff462bd9830e5e66f519f3c948d5150c18e94ad
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56132415"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58417026"
 ---
 # <a name="create-and-deploy-windows-defender-application-guard-policy"></a>创建和部署 Windows Defender 应用程序防护策略 
-*适用于： System Center Configuration Manager (Current Branch)*
-<!-- 1351960 -->可以创建和部署[Windows Defender 应用程序防护](https://docs.microsoft.com/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview)策略通过使用配置管理器终结点保护。 这些策略通过在操作系统的其他部分无法访问的安全隔离容器中打开不受信任的网站来帮助保护用户安全。
+*适用范围：System Center Configuration Manager (Current Branch)*
+<!-- 1351960 --> 可以使用 Configuration Manager endpoint protection 创建和部署 [Windows Defender 应用程序保护策略](https://docs.microsoft.com/windows/threat-protection/windows-defender-application-guard/wd-app-guard-overview)。 这些策略通过在操作系统的其他部分无法访问的安全隔离容器中打开不受信任的网站来帮助保护用户安全。
 
 ## <a name="prerequisites"></a>先决条件
 
