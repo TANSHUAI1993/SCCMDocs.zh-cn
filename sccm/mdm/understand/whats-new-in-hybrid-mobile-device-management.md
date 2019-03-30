@@ -2,7 +2,7 @@
 title: 混合 MDM 中的新增功能
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 和 Intune 的混合部署可用的新移动设备管理功能。
-ms.date: 02/26/2019
+ms.date: 03/28/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c6e883b6ea5cea6d6b27863afc84eef774b4d552
-ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
+ms.openlocfilehash: b26ad559d9417fcc81a2023c1bf1704ae44b7d0c
+ms.sourcegitcommit: 60aff44c76e6432dc544c8b26acba432ac799cfc
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58197140"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58639590"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Configuration Manager 和 Microsoft Intune 的混合移动设备管理中的新增功能
 
@@ -45,6 +45,32 @@ ms.locfileid: "58197140"
 |**Microsoft Intune 中的新增功能** | 一般情况下，此类别下列出的所有功能都应适用于所有 Configuration Manager 版本。 这包括 System Center 2012 R2 Configuration Manager 版本，因为这些功能仅需要 Intune 服务，不需要 Configuration Manager 中的其他功能。|
 |**Configuration Manager Technical Preview 中的新增功能**| 此类别下列出的所有功能仅适用于指定的 Technical Preview 分支。 若要试用这些功能，必须安装功能说明中指定的 Technical Preview 版本。 有关详细信息，请参阅 [Configuration Manager 的 Technical Preview](/sccm/core/get-started/technical-preview)。|
 |**Configuration Manager (Current Branch) 中的新增功能**| 此类别下列出的所有功能仅适用于指定的 Configuration Manager (Current Branch) 版本。 如果要为混合部署使用较旧版本的 Configuration Manager，请升级到功能说明中指定的 Configuration Manager (Current Branch) 版本。 有关详细信息，请参阅[升级到 Configuration Manager](/sccm/core/servers/deploy/install/upgrade-to-configuration-manager)。|
+
+
+
+## <a name="march-2019"></a>2019 年 3 月
+
+### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
+
+#### <a name="install-available-apps-using-the-company-portal-app-after-windows-bulk-enrollment"></a>安装 Windows 批量注册后，使用公司门户应用可用的应用 
+<!-- 2751523 -->
+在使用 Intune 中注册的 Windows 设备[Windows 批量注册](https://docs.microsoft.com/intune/windows-bulk-enroll)（预配包） 将能够使用公司门户应用安装可用的应用程序。 有关公司门户应用的详细信息，请参阅[手动添加 Windows 10 公司门户](https://docs.microsoft.com/intune/store-apps-company-portal-app)并[如何配置 Microsoft Intune 公司门户应用](https://docs.microsoft.com/intune/company-portal-app)。
+
+> [!Note]  
+> 此功能不是尚未完全部署到所有客户。 如果无法在批量注册设备上使用公司门户，你可能需要等待，直到此更改会发布到你的帐户。
+
+#### <a name="app-icons-are-displayed-with-an-automatically-generated-background"></a>使用自动生成的背景显示应用程序图标 
+<!-- 1429026 -->
+Windows 公司门户应用现在将显示带有自动生成的背景的应用程序图标。 如果可以检测到，此背景基于图标主导颜色。 如果适用，在后台将替换了以前应用磁贴上显示的灰色边框。 你将看到此晚于 10.3.3451.0 版本的公司门户中的更改。
+
+#### <a name="changes-to-company-portal-enrollment-for-ios-12-devices"></a>将 12 设备更改为适用于 iOS 的公司门户注册
+<!-- 3448635 -->  
+适用于 iOS 的公司门户更新应用程序的注册屏幕和步骤与在 Apple iOS 12.2 中发布的 MDM 注册更改保持一致。 更新的工作流现在会提示您：
+- 允许使用 Safari 打开公司门户网站 （通过 Safari) 并返回到公司门户应用之前下载的管理配置文件。 
+- 打开设置应用在其设备上安装管理配置文件。
+- 返回到完成注册的公司门户应用。  
+
+有关如何准备这些更改的详细信息，请参阅[Microsoft 技术社区文章](https://aka.ms/CP_changes_iOS12)。 若要在公司门户中支持新的 iOS 注册，请参阅[在 Intune 中的注册 iOS 设备](https://docs.microsoft.com/intune/ios-enroll)。
 
 
 
