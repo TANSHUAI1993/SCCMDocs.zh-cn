@@ -2,7 +2,7 @@
 title: 创建 Linux 和 UNIX 服务器应用程序
 titleSuffix: Configuration Manager
 description: 请参阅创建和部署适用于 Linux 和 Unix 设备的应用程序时必须考虑的注意事项。
-ms.date: 04/13/2017
+ms.date: 03/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -11,16 +11,21 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 125a5fda74834c51e98f3028325bcc227fd106eb
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 35765aa804bf0e6d303caf2c395d3d44d5027951
+ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56126172"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58524075"
 ---
-# <a name="create-linux-and-unix-server-applications-with-system-center-configuration-manager"></a>使用 System Center Configuration Manager 创建 Linux 和 UNIX 服务器应用程序
+# <a name="create-linux-and-unix-server-applications-with-configuration-manager"></a>使用 Configuration Manager 创建 Linux 和 UNIX 服务器应用程序
 
-适用范围：System Center Configuration Manager (Current Branch)
+*适用范围：System Center Configuration Manager (Current Branch)*
+
+> [!Important]  
+> 从 1902年版开始，Configuration Manager 不支持 Linux 或 UNIX 客户端。 
+> 
+> 用于管理 Linux 服务器，请考虑 Microsoft Azure 管理。 Azure 解决方案具有广泛的 Linux 支持（包括面向 Linux 的端到端补丁管理），在大多数情况下优于 Configuration Manager 的功能。
 
 为运行 Linux 和 UNIX 的计算机创建和部署应用程序时，请考虑以下注意事项。  
 
@@ -29,13 +34,13 @@ ms.locfileid: "56126172"
 
  Linux 和 UNIX 软件部署的功能包括：  
 
--   Linux 和 UNIX 服务器的软件安装包括以下各项：  
+-   Linux 和 UNIX 服务器的软件安装包括以下功能：  
 
     -   新软件部署  
 
     -   计算机上已有程序的软件更新  
 
-    -   操作系统修补程序  
+    -   OS 修补程序  
 
 -   本机 Linux 和 UNIX 命令，以及位于 Linux 和 UNIX 服务器上的脚本  
 
@@ -53,7 +58,7 @@ ms.locfileid: "56126172"
 |配置|详细信息|  
 |-------------------|-------------|  
 |仅使用适用于计算机的配置，而不要使用适用于用户的配置。|适用于 Linux 和 UNIX 的 Configuration Manager 客户端不支持适用于用户的配置。|  
-|将程序配置为从分发点下载软件，并从本地客户端缓存中运行程序。|适用于 Linux 和 UNIX 的 Configuration Manager 客户端不支持从分发点运行软件。 而必须配置软件以下载到客户端，然后进行安装。<br /><br /> 默认情况下，在适用于 Linux 和 UNIX 的客户端安装软件后，将从客户端的缓存中删除该软件。 但是，在软件安装之后，不会从客户端中删除配置了“保留客户端缓存中的内容”  的包，并会将其保留在客户端的缓存中。<br /><br /> 适用于 Linux 和 UNIX 的客户端不支持客户端缓存的配置，并且客户端缓存的最大大小仅受客户端计算机上的可用磁盘空间限制。|  
+|将程序配置为从分发点下载软件，并从本地客户端缓存中运行程序。|适用于 Linux 和 UNIX 的 Configuration Manager 客户端不支持从分发点运行软件。 而必须配置软件以下载到客户端，然后进行安装。<br /><br /> 默认情况下，在适用于 Linux 和 UNIX 的客户端安装软件后，将从客户端的缓存中删除该软件。 但是，在软件安装之后，不会从客户端中删除配置了“保留客户端缓存中的内容”的包，并会将其保留在客户端的缓存中。<br /><br /> 适用于 Linux 和 UNIX 的客户端不支持客户端缓存的配置，并且客户端缓存的最大大小仅受客户端计算机上的可用磁盘空间限制。|  
 |为分发点访问配置网络访问帐户|Linux 和 UNIX 计算机设计为工作组计算机。 为了在 Configuration Manager 站点服务器域中访问分发点中的包，必须为站点配置网络访问帐户。 你必须指定此帐户作为软件分发组件属性，并在部署软件之前配置帐户。<br /><br /> 你可以在每个站点配置多个网络访问帐户。 适用于 Linux 和 UNIX 的客户端可使用你配置的每个帐户作为网络访问帐户。<br /><br /> 有关详细信息，请参阅 [Site components for System Center Configuration Manager](../../core/servers/deploy/configure/site-components.md)。|  
 
  你可以将包和程序部署到仅包含 Linux 或 UNIX 客户端的集合，或者可以将它们部署到包含混合客户端类型的集合，例如“所有系统集合” 。 但是，非 Linux 和非 UNIX 客户端将不安装软件或报告失败。  
@@ -74,7 +79,7 @@ ms.locfileid: "56126172"
 
 -   定义适合于在目标计算机上使用的命令行。  
 
--   请记住，不支持与用户交互的设置。  
+-   请注意，不支持与用户交互的设置。  
 
 下表列出了不受支持的包和程序属性：  
 
@@ -91,7 +96,7 @@ ms.locfileid: "56126172"
 |允许用户查看程序安装并与之交互|忽略设置|不支持特定于用户的设置。<br /><br /> 将忽略此配置，并且软件安装将继续。|  
 |驱动器模式：<br /><br /> - 所有选项|忽略设置|由于会始终将内容下载到客户端并以本地方式运行，因此不支持此设置。|  
 |首先运行其他程序|生成错误，并且软件安装失败|不支持递归程序安装。<br /><br /> 当某个程序配置为先运行另一个程序时，软件安装将失败，并且不会启动其他程序安装。|  
-|当此程序分配到计算机时：<br /><br /> - 为每个登录用户运行一次|忽略设置|不支持特定于用户的设置。<br /><br /> 但是，客户端支持为计算机运行一次的配置。<br /><br /> 此设置不生成错误或日志条目，因为已经为设置为“仅当用户登录时”  = **仅当用户登录时**。|  
+|当此程序分配到计算机时：<br /><br /> - 为每个登录用户运行一次|忽略设置|不支持特定于用户的设置。<br /><br /> 但是，客户端支持为计算机运行一次的配置。<br /><br /> 此设置不生成错误或日志条目，因为已经针对先决条件配置“程序可以运行” = “仅当用户登录时”创建了错误和日志条目。|  
 |取消程序通知|忽略设置|客户端不实现用户界面。<br /><br /> 如果选择了此配置，则会将其忽略，并且软件安装将继续。|  
 |在部署此程序的计算机上禁用此程序|忽略设置|不支持此设置，并且此设置不影响软件的安装。|  
 |允许在不部署的情况下从“安装包”任务序列安装此程序。||客户端不支持任务序列。<br /><br /> 不支持此设置，并且此设置不影响软件的安装。|  
@@ -101,7 +106,7 @@ ms.locfileid: "56126172"
 ### <a name="deploy-software-to-a-linux-or-unix-server"></a>将软件部署到 Linux 或 UNIX 服务器
  若要使用包和程序将软件部署到 Linux 或 UNIX 服务器中，可以从 Configuration Manager 控制台使用“部署软件向导”。 适用于 Linux 和 UNIX 的客户端支持大多数部署设置。 但是，有一些设置不受支持。 在部署软件时，请考虑以下事项：  
 
-- 你必须在与针对内容位置配置的边界组关联的至少一个分发点上设置包。  
+- 在与针对内容位置配置的边界组关联的至少一个分发点上设置包。  
 
 - 接收此部署的适用于 Linux 和 UNIX 的客户端必须能够从其网络位置访问此分发点。  
 
@@ -109,15 +114,15 @@ ms.locfileid: "56126172"
 
 - 适用于 Linux 和 UNIX 的客户端无法从共享文件夹中下载包。 它从启用了 IIS 的分发点（支持 HTTP 或 HTTPS）下载包。  
 
-  下表列出了不受支持的部署的属性：  
+  下表列出了不支持的部署属性：  
 
 |部署属性|行为|更多信息|  
 |-------------------------|--------------|----------------------|  
-|部署设置 – 目的：<br /><br /> - 可用<br /><br /> - 必需|忽略设置|不支持特定于用户的设置。<br /><br /> 但是，客户端支持“必需” 设置，该设置强制实施计划的安装时间，但不支持在该计划的时间之前进行手动安装。|  
+|部署设置 – 目的：<br /><br /> - 可用<br /><br /> - 必需|忽略设置|不支持特定于用户的设置。<br /><br /> 但客户端支持用于强制执行计划安装时间的“必需”设置，但不支持在该计划时间之前手动安装。|  
 |发送唤醒数据包|忽略设置|客户端不支持此配置。|  
 |分配计划：<br /><br /> - 登录<br /><br /> - 注销|生成错误，并且软件安装失败|不支持特定于用户的设置。<br /><br /> 但是，客户端支持“尽快” 设置。|  
 |通知设置：<br /><br /> - 允许用户独立于分配运行程序|忽略设置|客户端不实现用户界面。|  
-|如果已达到计划的分配时间，则允许在维护时段之外执行以下活动：<br /><br /> - 系统重启(如果要求完成安装)|生成错误|客户端不支持系统重启。|  
+|如果已达到计划的分配时间，则允许在维护时段之外执行以下活动：<br /><br /> - 重启系统（如需完成安装）|生成错误|客户端不支持系统重启。|  
 |适用于快速（LAN）网络的部署选项：<br /><br /> - 从分发点运行程序|生成错误，并且软件安装失败|客户端无法从分发点运行软件，而是必须下载程序，之后它才能运行。|  
 |适用于慢速或不可靠网络边界或者内容的回退源位置的部署选项：<br /><br /> - 允许客户端与同一子网上的其他客户端共享内容|忽略设置|客户端不支持在对等方之间共享内容。|  
 
@@ -128,7 +133,7 @@ ms.locfileid: "56126172"
 ##  <a name="manage-network-bandwidth-for-software-downloads-from-distribution-points"></a>管理从分发点下载软件的网络带宽  
  Linux 和 UNIX 客户端支持在从分发点下载软件时控制网络带宽。  
 
- 客户端使用你在 Configuration Manager 中配置为客户端设置的后台智能传输 (BITS) 设置，但不实施 BITS。 相反，为了限制网络带宽的使用，客户端将控制软件下载的 HTTP 请求块大小和块间延迟。  
+ 客户端使用你在 Configuration Manager 中配置为客户端设置的后台智能传输 (BITS) 设置，但不实现 BITS。 相反，为了限制网络带宽的使用，客户端将控制软件下载的 HTTP 请求块大小和块间延迟。  
 
  若要配置客户端以使用网络带宽控制，请为“后台智能传输”  配置客户端设置，然后将这些设置应用于客户端计算机。 为了使用带宽控制，客户端必须接收以下设置配置为“是”的“后台智能传输”客户端设置：  
 

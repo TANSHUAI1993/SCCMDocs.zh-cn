@@ -400,6 +400,9 @@ items:
     href: servers/manage/management-insights.md
   - name: CMPivot
     href: servers/manage/cmpivot.md
+    items:
+    - name: CMPivot 疑难解答
+      href: servers/manage/cmpivot-tsg.md
   - name: 维护任务
     href: servers/manage/maintenance-tasks.md
     items:
@@ -766,9 +769,9 @@ items:
       href: clients/manage/upgrade/upgrade-clients-for-linux-and-unix-servers.md
     - name: 升级 Mac 客户端
       href: clients/manage/upgrade/upgrade-clients-on-mac-computers.md
-ms.openlocfilehash: befe656dec3949f792d9118a1ef092ff36316fdd
-ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
+ms.openlocfilehash: d5340329217fb4769b1bc708feba0744d3e8d40a
+ms.sourcegitcommit: 60aff44c76e6432dc544c8b26acba432ac799cfc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58523905"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58639556"

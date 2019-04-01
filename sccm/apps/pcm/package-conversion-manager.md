@@ -2,7 +2,7 @@
 title: 包转换管理器
 titleSuffix: Configuration Manager
 description: 了解如何在 Configuration Manager 中使用包转换管理器将包转换为应用程序。
-ms.date: 08/24/2018
+ms.date: 03/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba73d215b9a672f4843c2f1e4a63dfc6bd13ea74
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 2abfa18bdf454850510c18551f2f64813a7891ea
+ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56132878"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58523922"
 ---
 # <a name="package-conversion-manager"></a>包转换管理器
 
-适用范围：System Center Configuration Manager (Current Branch)
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 <!--1357861-->
 
@@ -40,6 +40,12 @@ ms.locfileid: "56132878"
 > 如果以前安装了较旧版本的包转换管理器，请在升级站点之前先卸载它。 此集成版本不需要安装，但可能会与现有版本发生冲突。  
 
 此集成版本的包转换管理器适用于 Configuration Manager 当前分支站点中的包。 它不是一个独立的工具。 如果有较旧版本的 Configuration Manager 包和程序，请首先将包迁移到当前分支站点。 有关详细信息，请参阅[在层次结构之间迁移数据](/sccm/core/migration/migrate-data-between-hierarchies)。
+
+<!-- SCCMDocs-pr issue #3357 -->
+配置管理器版本 1902年包括以下改进：
+- 默认情况下安排的程序包分析运行每 7 天
+- 用于分析和转换包的 PowerShell cmdlet
+- 一般性的 bug 修复与改进
 
 
 
@@ -64,7 +70,7 @@ ms.locfileid: "56132878"
 
 - [资源充足的测试环境](#bkmk_define-high)：你拥有的测试环境具有资源、权限和体系结构，可完全复制你的生产环境。  
 
-- [资源有限的测试环境](#bkmk_define-limited)：你拥有的测试环境无法完全复制你的生产环境。  
+- [资源受限的测试环境](#bkmk_define-limited)：你拥有的测试环境无法完全复制你的生产环境。  
 
 针对其他特定于环境的问题，请根据需要调整这些计划。
 

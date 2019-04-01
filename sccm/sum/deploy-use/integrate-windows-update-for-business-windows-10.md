@@ -1,28 +1,32 @@
 ---
 title: 在 Windows 10 中与 Windows Update for Business 集成
 titleSuffix: Configuration Manager
-description: 将可使组织中基于 Windows 10 的设备保持最新状态的 Windows Update for Business 用于连接到 Windows 更新服务的设备。
-author: aczechowski
-ms.author: aaroncz
+description: 将可使组织中基于 Windows 10 的设备保持最新状态的适用于企业的 Windows 更新用于连接到 Windows 更新服务的设备。
+author: mestew
+ms.author: mstewart
 manager: dougeby
-ms.date: 03/22/2018
+ms.date: 03/28/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 456e4537e7c397063c50422e8c408dc5d688af04
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 2929782880971b53be3b6013188f65d50d691c05
+ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56121567"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58523752"
 ---
 # <a name="integration-with-windows-update-for-business-in-windows-10"></a>在 Windows 10 中与 Windows Update for Business 集成
 
-适用范围：System Center Configuration Manager (Current Branch)
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 当基于 Windows 10 的设备直接连接到 Windows 更新 (WU) 服务时，适用于企业的 Windows 更新 (WUfB) 能够让组织中的这些设备始终具有最新的安全防御和 Windows 功能。 Configuration Manager 能够区分使用 WUfB 和 WSUS 来获取软件更新的 Windows 10 计算机。  
+
+>[!WARNING]
+> 如果设备使用共同管理，并且已移动[Windows 更新策略](/sccm/comanage/workloads#windows-update-policies)到 Intune，那么你的设备将获得其[适用于企业的 Windows 更新策略从 Intune](https://docs.microsoft.com/intune/windows-update-for-business-configure)。
+> - 如果仍在共同管理的设备上安装 Configuration Manager 客户端，则是由 Intune 管理的累积更新和功能更新的设置。 但是，第三方修补，如果在中启用[**客户端设置**](/sccm/core/clients/deploy/about-client-settings#enable-third-party-software-updates)，仍管理由 Configuration Manager。  
 
  当 Configuration Manager 客户端配置为从 WU 接收更新后（其中包括 WUfB 或 Windows 预览体验成员），一些 Configuration Manager 功能将不再可用：  
 
@@ -32,7 +36,7 @@ ms.locfileid: "56121567"
 
     -   针对总体符合性状态的故障排除会很困难，因为“未知”状态之前仅用于未报告过从 WSUS 返回的扫描状态的客户端。 现在，它还包括从 WU 接收更新的 Configuration Manager 客户端。  
 
-    -   基于更新符合性状态的条件性访问（用于企业资源）对从 WU 接收更新的客户端将无法按预期方式运行，因为它们将永远不会满足 Configuration Manager 的符合性。  
+    -   基于更新符合性状态的条件访问（用于企业资源）对从 WU 接收更新的客户端将无法按预期方式运行，因为它们将永远不会满足 Configuration Manager 的符合性。  
 
     -   定义更新符合性是整体更新符合性报告的一部分，也无法按预期方式工作。  定义更新符合性也是条件性访问评估的一部分  
 
@@ -40,7 +44,7 @@ ms.locfileid: "56121567"
 
 -   Configuration Manager 无法将 Microsoft 更新（如 Office、IE 和 Visual Studio）部署到连接 WUfB 以接收更新的客户端。  
 
--   Configuration Manager 将无法将发布到 WSUS 并通过 Configuration Manager 管理的第三方更新部署到连接 WUfB 以接收更新的客户端。  
+-   Configuration Manager 仍可将发布到 WSUS 并通过 Configuration Manager 管理的第三方更新部署到连接 WUfB 以接收更新的客户端。 如果不希望连接到 WUfB 的客户端上安装任何第三方更新，然后禁用客户端设置[客户端上启用软件更新](/sccm/core/clients/deploy/about-client-settings#software-updates)。
 
 -   使用软件更新基础结构的 Configuration Manager 完整客户端部署将不能用于连接 WUfB 以接收更新的客户端。  
 
@@ -67,7 +71,8 @@ ms.locfileid: "56121567"
 5.  通过 WUfB 管理的计算机会在符合性状态中显示“未知”，且不会计入总体符合性百分比中。  
 
 ## <a name="configure-windows-update-for-business-deferral-policies"></a>配置 Windows Update for Business 延迟策略
-<!-- 1290890 --> 从 Configuration Manager 版本 1706 开始，针对 Windows 10 功能更新或直接由适用于企业的 Windows 更新托管的 Windows 10 设备的质量更新，可以配置延迟策略。 你可以在“软件库” > “Windows 10 维护服务”下方的新“Windows Update for Business 策略”节点中管理延迟策略。
+<!-- 1290890 -->
+从 Configuration Manager 版本 1706 开始，针对 Windows 10 功能更新或直接由 Windows Update for Business 托管的 Windows 10 设备的质量更新，可以配置延迟策略。 你可以在“软件库” > “Windows 10 维护服务”下方的新“Windows Update for Business 策略”节点中管理延迟策略。
 
 >[!NOTE] 
 >从 Configuration Manager 1802 版开始，可以为 Windows 预览体验设置延迟策略。 <!--507201-->有关 Windows 预览体验计划的详细信息，请参阅 [Windows 预览体验计划企业版入门](https://docs.microsoft.com/windows/deployment/update/waas-windows-insider-for-business)。
@@ -81,12 +86,12 @@ ms.locfileid: "56121567"
 2. 在“主页”选项卡的“创建”组中，选择“创建 Windows Update for Business 策略”，以打开“创建 Windows Update for Business 策略向导”。
 3. 在“常规”页上，提供策略的名称和描述。
 4. 在“延迟策略”页上，配置是否要延迟或暂停功能更新。 功能更新通常是针对 Windows 的新增功能。 在配置“分支就绪级别”设置后，你可以根据其可用性定义是否要延迟从 Microsoft 接收功能更新以及延迟时长。
-    - **分支就绪级别**：设置设备将为其接收 Windows 更新的分支（Current Branch 或 Current Branch for Business）。
-    - **延迟期(天)**：指定功能更新将被延迟的天数。 可以自更新发布之日起，在 365 天内延迟接收这些功能更新。
-    - **暂停功能更新启动**：选择是否要暂停设备接收功能更新，暂停时间为自暂停更新之日起的 60 天内。 在设置的最大天数过后，暂停功能将自动过期，并且设备将扫描 Windows 更新以获取适用的更新。 在此扫描之后，你可以再次暂停更新。 通过清除该复选框，可以取消暂停功能更新。   
+    - 分支就绪级别：设置设备将为其接收 Windows 更新的分支（Current Branch 或 Current Branch for Business）。
+    - 延迟期(天)：指定功能更新将被延迟的天数。 最多可以自更新发布之日起，在 365 天内延迟接收这些功能更新。
+    - **暂停功能更新启动**：选择是否要暂停设备接收功能更新，暂停时间最多为自暂停更新之日起的 60 天内。 在设置的最大天数过后，暂停功能将自动过期，并且设备将扫描 Windows 更新以获取适用的更新。 在此扫描之后，你可以再次暂停更新。 通过清除该复选框，可以取消暂停功能更新。   
 5. 选择是否要延迟或暂停质量更新。 质量更新通常是对现有 Windows 功能的修复和改进，通常会在每个月的第一个星期二发布，虽然 Microsoft 可以在任何时候发布。 你可以根据其可用性定义是否要延迟接收质量更新，以及它的延迟时长。
-    - **延迟期(天)**：指定质量更新将被延迟的天数。 你可以自更新发布之日起，在 30 天内延迟接收这些质量更新。
-    - **暂停质量更新启动**：选择是否要暂停设备接收质量更新，暂停时间为自暂停更新之日起的 35 天内。 在设置的最大天数过后，暂停功能将自动过期，并且设备将扫描 Windows 更新以获取适用的更新。 在此扫描之后，你可以再次暂停更新。 通过清除该复选框，可以取消暂停质量更新。
+    - 延迟期(天)：指定质量更新将被延迟的天数。 最多可以自更新发布之日起，在 30 天内延迟接收这些质量更新。
+    - **暂停质量更新启动**：选择是否要暂停设备接收质量更新，暂停时间最多为自暂停更新之日起的 35 天内。 在设置的最大天数过后，暂停功能将自动过期，并且设备将扫描 Windows 更新以获取适用的更新。 在此扫描之后，你可以再次暂停更新。 通过清除该复选框，可以取消暂停质量更新。
 6. 选择“安装来自其他 Microsoft 产品的更新”，可启用使延迟设置适用于 Microsoft 更新以及 Windows 更新的组策略设置。
 7. 选择“包括 Windows 更新中的驱动程序”，可自动更新 Windows 更新中的驱动程序。 如果清除此设置，则不会从 Windows 更新下载驱动程序更新。
 8. 完成向导以创建新的延迟策略。
@@ -95,11 +100,11 @@ ms.locfileid: "56121567"
 1. 在“软件库” > “Windows 10 维护服务” > “Windows Update for Business 策略”中
 2. 在“主页”选项卡的“部署”组中，选择“部署 Windows Update for Business 策略”。
 3. 配置下列设置：
-    - **要部署的配置策略**：选择要部署的适用于企业的 Windows 更新策略。
-    - **集合**：单击“浏览”，可选择要在其中部署策略的集合。
-    - **在支持时修正非符合性规则**：选择该选项，可自动修正 Windows Management Instrumentation (WMI)、注册表、脚本和 Configuration Manager 所注册移动设备的所有设置的任何非符合性规则。
+    - 要部署的配置策略：选择要部署的 Windows Update for Business 策略。
+    - 集合：单击“浏览”，可选择要在其中部署策略的集合。
+    - 在支持时修正非符合性规则：选择该选项，可自动修正 Windows Management Instrumentation (WMI)、注册表、脚本和 Configuration Manager 所注册移动设备的所有设置的任何非符合性规则。
     - **允许维护时段外的修正**：如果已为你向其部署策略的集合配置了维护时段，启用此选项可以让符合性设置在维护时段外修正值。 有关维护时段的详细信息，请参阅[如何使用维护时段](/sccm/core/clients/manage/collections/use-maintenance-windows)。
     - **生成警报**：配置一个警报，在指定日期和时间之前配置基线符合性小于指定百分比时，生成一个警报。 你也可以指定是否希望将警报发送到 System Center Operations Manager。
-    - **随机延迟(小时)**：指定延迟时段，以免网络设备注册服务的处理负荷过重。 默认值为 64 小时。
-    - **计划**：指定在客户端计算机上对部署的配置文件进行评估所依据的符合性评估计划。 该计划可以是简单计划或自定义计划。 当用户登录时，客户端计算机将评估配置文件。
+    - 随机延迟(小时)：指定延迟时段，以免网络设备注册服务的处理负荷过重。 默认值为 64 小时。
+    - 计划：指定在客户端计算机上对部署的配置文件进行评估所依据的符合性评估计划。 该计划可以是简单计划或自定义计划。 当用户登录时，客户端计算机将评估配置文件。
 4.  完成向导以部署配置文件。
