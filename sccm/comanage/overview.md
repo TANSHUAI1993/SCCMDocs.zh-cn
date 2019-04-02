@@ -12,23 +12,24 @@ ms.technology: configmgr-client
 ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c88bf98e035499c271de8acf9d8fa222e5058447
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: MT
+ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
+ms.lasthandoff: 03/27/2019
 ms.locfileid: "56754689"
 ---
 # <a name="what-is-co-management"></a>什么是共同管理？
 
-<!-- 1350871 --> 共同管理是一个要附加现有的配置管理器部署到 Microsoft 365 云的主要方式。 它可帮助你解锁其他云提供支持的功能，如条件性访问。 
+<!-- 1350871 -->
+共同管理是将现有 Configuration Manager 部署附加到 Microsoft 365 云的主要方式之一。 它可帮助解锁其他由云提供支持的功能，例如条件访问。 
 
-共同管理，可使用 Configuration Manager 和 Microsoft Intune 同时管理 Windows 10 设备。 它允许你云附加现有投资在 Configuration Manager 中添加新功能。 通过使用共同管理，您可以使用最适合你的组织的技术解决方案的灵活性。 
+通过共同管理，可以使用 Configuration Manager 和 Microsoft Intune 同时管理 Windows 10 设备。 它允许通过添加新功能在 Configuration Manager 中云附加现有投资。 通过使用共同管理，可以灵活地使用最适合组织的技术解决方案。 
 
-如果 Windows 10 设备具有 Configuration Manager 客户端，并且会注册到 Intune，获得这两个服务的优势。 如果有的话，切换到 Intune 的颁发机构从 Configuration Manager，控制哪些工作负荷。 配置管理器将继续管理所有其他工作负荷，包括不切换到 Intune，并且所有其他功能的 Configuration Manager 的共同管理不支持这些工作负荷。
+如果某台 Windows 10 设备既具有 Configuration Manager 客户端又已注册到 Intune，用户将同时获得这两项服务的优势。 可以控制将颁发机构从 Configuration Manager 切换到 Intune 时的工作负载（如果有）。 Configuration Manager 持续管理所有其他工作负载（其中包括不切换到 Intune 的那些工作负载）以及共同管理不支持的的所有其他 Configuration Manager 功能。
 
-您还可以试验具有单独的设备集合的工作负荷。 试验，可切换更大的组之前测试的子集的设备的 Intune 功能。 
+用户还可以使用单独的设备集合来试验工作负载。 借助试验功能，可以在切换大型组之前使用设备子集测试 Intune 功能。 
 
-![共同管理的概要示意图](media/co-management-overview.png)
+![共同管理的概述图](media/co-management-overview.png)
 
 
 
@@ -36,39 +37,39 @@ ms.locfileid: "56754689"
 
 有两个实现共同管理的主要方式：  
 
-- **现有的 Configuration Manager 客户端**:必须已将 Configuration Manager 客户端的 Windows 10 设备。 设置混合 Azure AD 中，并在 Intune 中注册。  
+- **现有 Configuration Manager 客户端**：拥有已经是 Configuration Manager 客户端的 Windows 10 设备。 设置混合 Azure AD，并将其注册到 Intune。  
 
-- **新的基于 internet 的设备**:具有新的 Windows 10 设备加入 Azure AD 并自动注册到 Intune。 安装 Configuration Manager 客户端，以达到共同管理状态。  
+- **基于 Internet 的新设备**：拥有联接 Azure AD 并自动注册到 Intune 的新 Windows 10 设备。 安装 Configuration Manager 客户端以实现共同管理。  
 
-在路径上的详细信息，请参阅[共同管理的路径](/sccm/comanage/quickstart-paths)。
+有关这些方式的详细信息，请参阅[实现共同管理的方式](/sccm/comanage/quickstart-paths)。
 
 
 
 ## <a name="benefits"></a>优点 
 
-当你注册共同管理中的现有 Configuration Manager 客户端时，可以获得以下即时值：  
+在共同管理中注册现有的 Configuration Manager 客户端时，将获得以下直接价值：  
 
-- 使用设备符合性的条件访问  
+- 遵守设备符合性的条件访问  
 
-- 基于 Intune 的远程操作，例如： 重新启动、 远程控制或恢复出厂设置
+- 基于 Intune 的远程操作，例如：重启、远程控制或恢复出厂设置
 
 - 设备运行状况的集中可见性  
 
-- 链接用户、 设备和应用与 Azure Active Directory (Azure AD)  
+- 将用户、设备和应用与 Azure Active Directory (Azure AD) 相关联  
 
-- 现代与 Windows Autopilot 预配  
+- 通过 Windows Autopilot 进行新式预配  
 
 - 远程操作
 
-此值立即从共同管理的详细信息，请参阅向的快速入门系列[云连接通过共同管理](/sccm/comanage/quickstarts)。
+若要详细了解共同管理的直接价值，请参阅快速入门系列[启用了共同管理的云](/sccm/comanage/quickstarts)。
 
-共同管理还可通过 Intune 安排适用于多个工作负荷。 有关详细信息，请参阅[工作负荷](#workloads)部分。 
+借助共同管理，还可以使用 Intune 协调多个工作负载。 有关详细信息，请参阅[工作负载](#workloads)部分。 
 
 
 
 ## <a name="prerequisites"></a>先决条件
 
-共同管理的以下区域中具有这些系统必备组件：
+共同管理具有以下方面的先决条件：
 
 - [许可](#licensing)  
 - [Configuration Manager](#configuration-manager)  
@@ -86,16 +87,16 @@ ms.locfileid: "56754689"
     > 企业移动性 + 安全性 (EMS) 订阅包括 Azure Active Directory Premium 和 Microsoft Intune。
 
 > [!Tip]  
-> 请确保向用于登录到你的租户的帐户分配 Intune 许可证。 否则，登录会失败并显示错误消息"无法识别的用户"。  
+> 确保将 Intune 许可证分配到用于登录租户的帐户。 否则，登录将失败，并显示错误消息“无法识别用户”。  
 
 
 ### <a name="configuration-manager"></a>配置管理器
 
-共同管理需要 Configuration Manager 版本 1710年或更高版本。
+共同管理需要 Configuration Manager 1710 版或更高版本。
 
-从 Configuration Manager 版本 1806年开始，可以连接到单一的 Intune 租户的多个配置管理器实例。 <!--1357944-->  
+自 Configuration Manager 1806 版起，可将多个 Configuration Manager 实例连接到单个 Intune 租户。 <!--1357944-->  
 
-启用共同管理本身不需要你加入你的站点与 Azure AD。 有关[第二个路径方案](#paths-to-co-management)，基于 internet 的 Configuration Manager 客户端需要[云管理网关](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway)(CMG)。 CMG 需要的站点是[登记到 Azure AD 进行云管理](/sccm/core/servers/deploy/configure/azure-services-wizard)。 
+启用共同管理本身并不要求使用 Azure AD 登录站点。 对于[第二种方式](#paths-to-co-management)，基于 Internet 的 Configuration Manager 客户端需要[云管理网关](/sccm/core/clients/manage/cmg/plan-cloud-management-gateway) (CMG)。 CMG 要求站点[加入 Azure AD 以进行云管理](/sccm/core/servers/deploy/configure/azure-services-wizard)。 
 
 
 ### <a name="azure-ad"></a>Azure AD
@@ -121,7 +122,7 @@ ms.locfileid: "56754689"
 
 ### <a name="windows-10"></a>Windows 10
 
-将设备升级到 Windows 10 版本 1709年或更高版本。 有关详细信息，请参阅[采用 Windows 作为服务](/sccm/core/understand/configuration-manager-and-windows-as-service#key-articles-about-adopting-windows-as-a-service)。
+将设备升级到 Windows 10 版本 1709 或更高版本。 有关详细信息，请参阅[采用 Windows 即服务](/sccm/core/understand/configuration-manager-and-windows-as-service#key-articles-about-adopting-windows-as-a-service)。
 
 > [!IMPORTANT]
 > Windows 10 移动设备不支持共同管理。
@@ -132,21 +133,21 @@ ms.locfileid: "56754689"
 
 | 操作 | 所需角色 |
 |----|----|
-| 设置云管理网关配置管理器中 | Azure**订阅管理器** |
-| 从 Configuration Manager 中创建 Azure AD 应用 | Azure AD**全局管理员** |
-| 导入 Azure 应用程序在配置管理器 | 配置管理器**完全权限管理员**<br>所需的任何其他的 Azure 角色 |
-| 启用共同管理配置管理器中 | Azure AD 用户<br>配置管理器**完全权限管理员**与**所有**作用域权限。<!--SCCMDoc issue 626--> | 
+| 在 Configuration Manager 中设置云管理网关 | Azure 订阅管理员 |
+| 从 Configuration Manager 中创建 Azure AD 应用 | Azure AD 全局管理员 |
+| 在 Configuration Manager 中导入 Azure 应用 | Configuration Manager 完全权限管理员<br>无需任何其他的 Azure 角色 |
+| 在 Configuration Manager 中启用共同管理 | Azure AD 用户<br>具有所有范围权限的 Configuration Manager 完全权限管理员。<!--SCCMDoc issue 626--> | 
 
 要详细了解 Azure 角色，请参阅[了解不同角色](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles)。
 
-有关配置管理器角色的详细信息，请参阅[的基于角色的管理基础](/sccm/core/understand/fundamentals-of-role-based-administration)。
+有关 Configuration Manager 角色的详细信息，请参阅[基于角色的管理基础](/sccm/core/understand/fundamentals-of-role-based-administration)。
 
 
 ## <a name="workloads"></a>工作负载 
 
-无需切换工作负荷，或您可以在单独执行准备就绪后这些。 配置管理器将继续管理所有其他工作负荷，包括不切换到 Intune，并且所有其他功能的 Configuration Manager 的共同管理不支持这些工作负荷。
+不必切换工作负载，或可以在准备好后单独执行这些工作负载。 Configuration Manager 持续管理所有其他工作负载（其中包括不切换到 Intune 的那些工作负载）以及共同管理不支持的的所有其他 Configuration Manager 功能。
 
-共同管理支持以下工作负荷：
+共同管理支持以下工作负载：
 
 - 相容性策略  
 
@@ -160,15 +161,15 @@ ms.locfileid: "56754689"
 
 - Office 即点即用应用  
 
-- 客户端应用程序  
+- 客户端应用  
 
-有关详细信息，请参阅[工作负荷](/sccm/comanage/workloads)。
+有关详细信息，请参阅[工作负载](/sccm/comanage/workloads)。
 
 
 
 ## <a name="monitor-co-management"></a>监视共同管理
 
-共同管理仪表板可帮助你查看你的环境中共同管理的计算机。 图形有助于标识可能需要注意的设备。
+此共同管理仪表板可帮助你查看环境中共同管理的计算机。 图形有助于标识可能需要注意的设备。
 
 ![共同管理仪表板的屏幕截图](media/co-management-dashboard.png)
 
@@ -178,7 +179,7 @@ ms.locfileid: "56754689"
 
 ## <a name="next-steps"></a>后续步骤
 
-- [了解有关即时值以及如何开始使用共同管理的详细信息](/sccm/comanage/quickstarts)  
+- [详细了解直接价值并开始使用共同管理](/sccm/comanage/quickstarts)  
 
-- [教程：启用共同管理现有 Configuration Manager 客户端](/sccm/comanage/tutorial-co-manage-clients)  
+- [教程：为现有 Configuration Manager 客户端启用共同管理](/sccm/comanage/tutorial-co-manage-clients)  
 

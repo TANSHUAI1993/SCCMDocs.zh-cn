@@ -1,7 +1,7 @@
 ---
 title: 共同管理的路径
 titleSuffix: Configuration Manager
-description: 了解两种主要方式，以便设置共同管理的先决条件。
+description: 了解设置共同管理的两种主要方法的先决条件。
 ms.date: 01/14/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -12,53 +12,53 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 803f05dd14da8d280f08f2bcf3608865f384d273
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: MT
+ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
+ms.lasthandoff: 03/27/2019
 ms.locfileid: "56754653"
 ---
 # <a name="paths-to-co-management"></a>共同管理的路径
 
-有两种主要方式，以便设置了共同管理。 请务必了解每个路径的先决条件。 它们每个需要 Azure Active Directory (Azure AD)、 Configuration Manager、 Microsoft Intune 和 Windows 10 的某种组合。 
+可以使用两种主要方法来设置共同管理。 请务必了解每种方法的先决条件。 这两种方法都需要结合使用 Azure Active Directory (Azure AD)、Configuration Manager、Microsoft Intune 和 Windows 10。 
 
-1. [自动注册到 Intune 现有 Configuration Manager 管理的设备](#bkmk_path1)  
-2. [启动 Configuration Manager 客户端通过现代预配](#bkmk_path2)  
+1. [将现有 Configuration Manager 管理的设备自动注册到 Intune](#bkmk_path1)  
+2. [使用新式配置启动 Configuration Manager 客户端](#bkmk_path2)  
 
-![共同管理路径的关系图](media/co-management-paths.png)
+![共同管理方法的关系图](media/co-management-paths.png)
 
 
 
-## <a name="bkmk_path1"></a> 路径 1:现有客户端中自动注册
+## <a name="bkmk_path1"></a>方法 1：自动注册现有客户端
 
-采用此路径可以获取现有 Configuration Manager 托管的设备快速注册到 Intune。 启用共同管理之前，这些设备从 Configuration Manager 的管理并无不同。 现在，您有所有基于云的优势。 此路径是对用户透明。
+采用此方法可将现有的 Configuration Manager 管理的设备快速注册到 Intune。 在 Configuration Manager 中管理这些设备的方式与启用共同管理之前没有差别。 现在，可以获得所有基于云的优势。 此方法对用户而言是透明的。
 
-下面是需要将其设置：
+以下是需要设置的选项：
 - 混合 Azure AD
-    - Active Directory 联合身份验证服务 (ADFS) 与直通身份验证 (PTA)
+    - 使用传递身份验证 (PTA) 的Active Directory 联合身份验证服务 (ADFS)
     - Azure AD Connect
     - Azure AD Premium 许可证
-    - 配置混合 Azure AD 联接 （选择一个选项）：
-        - 托管域
-        - 为联合域
-- 客户端代理设置混合 Azure AD 联接
-- 配置自动注册到 Intune 的设备
+    - 配置混合 Azure AD 联接（选择一个选项）：
+        - 针对托管域
+        - 针对联盟域
+- 混合 Azure AD 联接的客户端代理设置
+- 配置设备自动注册到 Intune
 - 分配 Intune 用户许可证
-- 启用共同管理配置管理器中
+- 在 Configuration Manager 中启用共同管理
 
-此路径的教程，请参阅[教程：启用共同管理现有 Configuration Manager 客户端](/sccm/comanage/tutorial-co-manage-clients)。
+有关此方法的教程，请参阅[教程：为现有 Configuration Manager 客户端启用共同管理](/sccm/comanage/tutorial-co-manage-clients)。
 
 
 
-## <a name="bkmk_path2"></a> 路径 2:启动新式预配
+## <a name="bkmk_path2"></a> 方法 2：使用新式预配启动
 
-下面是需要将其设置：
+以下是需要设置的选项：
 
-1. [安装程序增强了 HTTP](/sccm/core/plan-design/hierarchy/enhanced-http)  
+1. [设置增强型 HTTP](/sccm/core/plan-design/hierarchy/enhanced-http)  
 2. [在 Azure 中创建云服务](/sccm/core/servers/deploy/configure/azure-services-wizard)  
-3. [配置管理点和客户端使用云管理网关](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway)  
-4. [使用 Intune 来部署 Configuration Manager 客户端](/sccm/comanage/how-to-prepare-win10)  
+3. [配置管理点和客户端以使用云管理网关](/sccm/core/clients/manage/cmg/setup-cloud-management-gateway)  
+4. [使用 Intune 部署 Configuration Manager 客户端](/sccm/comanage/how-to-prepare-win10)  
 
 > [!Note]  
-> 此路径的教程即将推出。
+> 此方法的教程即将推出。
 

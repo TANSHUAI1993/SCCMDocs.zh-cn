@@ -1,7 +1,7 @@
 ---
 title: 使用 Azure AD 进行共同管理
 titleSuffix: Configuration Manager
-description: 与 Azure AD，可以充分利用提高工作效率为用户和安全资源，在云中和本地环境
+description: 借助 Azure AD，可以在云和本地环境中提高用户的生产力并增强资源的安全性
 ms.date: 01/14/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -12,101 +12,101 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 3b773c0bfe8cd0f8253a67ac96f5a0113b7206c0
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: MT
+ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
+ms.lasthandoff: 03/27/2019
 ms.locfileid: "56754699"
 ---
 # <a name="use-azure-ad-for-co-management"></a>使用 Azure AD 进行共同管理
 
-在云中，标识是新的控制平面。 Azure Active Directory (Azure AD)，可链接在本地和云环境中的用户、 设备和应用程序。 到 Azure AD 设备注册，可提高工作效率为你的用户并为你的资源的安全。 在 Azure AD 中拥有的设备是共同管理和基于设备的条件性访问的基础。 
+在云中，标识是新的控制平面。 Azure Active Directory (Azure AD) 支持联接云和本地环境中的用户、设备和应用程序。 将设备注册到 Azure AD 可以提高用户的工作效率，并增强资源的安全性。 将设备置于 Azure AD 中是实现共同管理和基于设备的条件访问的基础。 
 
-基于设备的条件性访问的详细信息，请参阅[How To:需要使用条件性访问的云应用访问权限的被管理的设备](https://docs.microsoft.com/azure/active-directory/conditional-access/require-managed-devices)
+有关基于设备的条件访问的详细信息，请参阅[操作指南：使用条件访问要求托管设备实现云应用访问](https://docs.microsoft.com/azure/active-directory/conditional-access/require-managed-devices)
 
-在下面的视频中，高级项目经理 Sandeep Deo 产品营销的经理 Adam Harbour 讨论和演示 Azure AD 进行共同管理：
+在下面的视频中，高级项目经理 Sandeep Deo 和产品营销经理 Adam Harbour 介绍并演示了如何使用 Azure AD 进行共同管理：
 
 > [!VIDEO https://channel9.msdn.com/Series/Endpoint-Zone/Embedding-Co-management-With-Azure-Active-Directory/player]
 
-Azure AD 提供公司拥有的设备以满足组织的需要两个的选项：  
+Azure AD 提供了两个适用于公司自有设备的选项，以满足组织的需求：  
 
-- **Azure AD 加入设备**:将你的 Windows 10 设备加入到 Azure AD，而无需将它们加入到你的本地 Active Directory  
+- **已联接 Azure AD 的设备**：无需将 Windows 10 设备联接本地 Active Directory，即可将它们联接 Azure AD  
 
     - 支持 Windows 10
 
-    - 而无需任何额外配置才能在本地环境设置  
+    - 无需为本地环境提供任何额外配置，即可进行设置  
 
-    - 通过在 Azure AD 中启用的一些设置，可以让用户将设备加入 Azure AD 通过 Windows 安装程序体验 (OOBE)  
+    - 启用 Azure AD 中的一些设置后，你的用户即可通过 Windows 设置体验 (OOBE) 将设备联接 Azure AD  
 
-    - 有关详细信息，请参阅[如何：计划你的 Azure AD 联接实现](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan)  
+    - 有关详细信息，请参阅[如何：规划 Azure AD 联接实现](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan)  
 
-- **混合 Azure AD 加入设备**:将现有的已加入域的设备加入到 Azure AD  
+- **已联接混合 Azure AD 的设备**：将现有已加入域的设备联接 Azure AD  
 
-    - 支持 Windows 10，Windows 8.1 和 Windows 7
+    - 支持 Windows 10、Windows 8.1 和 Windows 7
 
     - 使用 AD FS 声明或 Azure AD Connect 设置  
 
-    - 适用于 Windows 10 中执行联接计算机上下文中，因此用户无需执行额外的步骤  
+    - 对于 Windows 10，联接操作在计算机上下文中执行，这样一来，用户就无需执行其他步骤  
 
-    - 有关详细信息，请参阅[如何计划你的混合 Azure Active Directory 联接实现](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan)  
+    - 有关详细信息，请参阅[如何规划混合 Azure Active Directory 联接实现](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan)  
 
-这两个选项为用户提供类似的功能。 它非常灵活，以便选择其中之一根据你的需求。 例如，可以[访问本地资源](https://docs.microsoft.com/azure/active-directory/devices/azuread-join-sso)从 Azure AD 加入计算机即使它们未加入到 Active Directory。 
+两种选项为用户提供的功能相似。 可以根据自己的需求灵活选择任意一个。 例如，即使本地资源未联接 Active Directory，用户也可以从已联接 Azure AD 的计算机[访问本地资源](https://docs.microsoft.com/azure/active-directory/devices/azuread-join-sso)。 
 
-您可以加入到各种环境中的 Azure AD 的设备而不管你[身份验证方法](https://docs.microsoft.com/azure/security/azure-ad-choose-authn)。 例如，联合身份验证，或者云身份验证。 
+无论使用的是哪种[身份验证方法](https://docs.microsoft.com/azure/security/azure-ad-choose-authn)，都可以在各种环境中将设备联接 Azure AD。 例如，联合身份验证或云身份验证。 
 
-如果已在本地 Active Directory，设置任一选项非常简单。 
+如果已有本地 Active Directory，可轻松设置任意一种选项。 
 
 
 
 ## <a name="benefits"></a>优点
 
-将设备加入 Azure AD 提供了到你的组织的以下好处：
+将设备联接 Azure AD 将为组织提供以下优势：
 
-#### <a name="single-sign-on-to-cloud-resources"></a>对云资源的单一登录
-在加入到 Azure AD 的设备，你获取访问的任何云或本地资源的集成的体验。 后登录到已加入 Azure AD 的 Windows 计算机时，会获得单一登录方式登录到所有应用程序没有任何其他的登录提示。  
+#### <a name="single-sign-on-to-cloud-resources"></a>单一登录到云资源
+可以在已联接 Azure AD 的设备上获得访问任意云或本地资源的统一体验。 登录到已联接 Azure AD 的 Windows 计算机后，不再出现任何其他登录提示，即会单一登录到所有应用程序。  
 
-#### <a name="windows-hello-for-business"></a>Windows hello 企业版
-Windows hello 企业版提供强密码身份验证对 Windows 10。 通过加入到 Azure AD 的设备，你可以启用 Windows hello 企业版跨用户群的在本地和云资源。 Windows hello 企业版消除记住复杂的密码或无意中将它们公开的问题。 其登录的进程是简单且安全。 
+#### <a name="windows-hello-for-business"></a>Windows Hello 企业版
+Windows Hello 企业版将无强密码身份验证引入 Windows 10。 将设备联接 Azure AD 后，可以跨云资源和本地资源的用户群启用 Windows Hello 企业版。 Windows Hello 企业版让用户无需记忆复杂密码，也不会意外暴露密码。 它的登录过程简单且安全。 
 
 有关详细信息，请参阅 [Windows Hello 企业版](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-identity-verification)。  
 
-#### <a name="device-based-conditional-access"></a>基于设备的条件性访问
-启用基于设备状态以更好地保护你组织的数据的条件性访问。 基于设备的条件性访问需要的托管的设备。 此设备必须是合规的设备或混合 Azure AD 加入设备。 对于加入 Azure AD 的设备，需要 Intune 将设备标记为符合。 但对于混合 Azure AD 加入设备，设备状态本身用于评估条件性访问。 共同管理为你提供一些额外的优点的评估符合性通过 Intune 的混合 Azure AD 加入设备。 此功能可确保该设备的配置保持不变。 
+#### <a name="device-based-conditional-access"></a>基于设备的条件访问
+启用基于设备状态的条件访问，进一步保护组织数据。 基于设备的条件访问要求设备是托管设备。 此设备必须是符合要求的设备，或已联接混合 Azure AD 的设备。 对于已联接 Azure AD 的设备，需要使用 Intune 将设备标记为符合要求的设备。 然而，对于已联接混合 Azure AD 的设备，将通过设备状态本身来评估条件访问。 共同管理还提供了额外的优势：对于已联接混合 Azure AD 的设备，通过 Intune 评估符合性。 此功能可确保设备配置完整无缺。 
 
-基于设备的条件性访问的详细信息，请参阅[How To:需要使用条件性访问的云应用访问权限的被管理的设备](https://docs.microsoft.com/azure/active-directory/conditional-access/require-managed-devices)。  
+有关基于设备的条件访问的详细信息，请参阅[操作指南：使用条件访问要求托管设备实现云应用访问](https://docs.microsoft.com/azure/active-directory/conditional-access/require-managed-devices)。  
 
-#### <a name="automatic-device-licensing"></a>自动设备授权
-所有 Windows 10 设备加入 Azure AD 都要通过检查许可证。 这些检查，可自动将其升级从专业版到企业通过 Microsoft 云。 当从用户中删除相关的订阅时，设备会自动将降级其许可证。 此功能提供单个窗格控件，用于管理 Windows 许可证，而无需任何复杂的进程或在本地系统。
+#### <a name="automatic-device-licensing"></a>自动化设备许可
+将对所有已联接 Azure AD 的 Windows 10 设备进行许可证检查。 这些检查支持通过 Microsoft 云自动将它们从 Pro 版升级到 Enterprise 版。 删除用户的相关订阅时，设备会自动将其许可证降级。 此功能提供了一个集中的控制平台来管理 Windows 许可证，且无需任何复杂流程或本地系统即可实现。
 
 #### <a name="self-service-functionality"></a>自助服务功能
-自助服务功能包括自助服务密码重置和 BitLocker 恢复密钥。 Azure AD 还提供了直接的选项以重置密码或访问 BitLocker 恢复密钥。 可以使用 Azure AD 来重置密码，直接从 Windows 锁定屏幕，而不是从 web 浏览器。 这些功能减少冲突的用户，并帮助降低支持人员成本为你的组织。  
+自助服务功能包括自助式密码重置和 BitLocker 恢复密钥。 此外，Azure AD 还为用户提供了重置密码或访问 BitLocker 恢复密钥的直接选项。 借助 Azure AD，无需通过 Web 浏览器，即可直接从 Windows 锁屏界面重置密码。 这些功能减少了用户冲突，有助于为组织缩减支持人员成本。  
 
-有关详细信息，请参阅[快速入门：自助服务密码重置](https://docs.microsoft.com/azure/active-directory/authentication/quickstart-sspr)。
+有关详细信息，请参阅[快速入门：自助式密码重置](https://docs.microsoft.com/azure/active-directory/authentication/quickstart-sspr)。
 
 #### <a name="enterprise-state-roaming"></a>企业状态漫游
-所有加入到 Azure AD 的设备可以同步到云及其设置。 向其用户登录同步其提高工作效率体验的所有设置的任何设备。  
+所有已联接 Azure AD 的设备都可以将其设置同步到云。 用户登录的任何设备都会同步其所有设置，以提高效率。  
 
 
 
 ## <a name="value-proposition"></a>价值主张
 
-通过这两种方法将设备加入到 Azure AD 是加快数字化转型。 这样，Microsoft 365 提供的更多的功能。 您将有更好的体验，并且将为你的数据具有更高的安全性。 
+通过任意方法将设备联接 Azure AD 有助于实现数字化转型。 可通过它启用 Microsoft 365 提供的更多功能。 用户能够获得更出色的体验，并增强数据安全性。 
 
-Azure AD 提供多个选项来简化您的工作负载，例如：
+Azure AD 提供了多个可简化工作负载的选项，例如：
 
-- 从单个位置管理你的组织中的所有设备标识  
+- 集中管理组织内的所有设备标识  
 
-- 自助服务密码重置，从而降低技术支持成本。 然后用户可以重置 Windows 10 锁定屏幕中的密码，你的设备上在任何时间。  
+- 通过启用自助式密码重置，降低支持人员成本。 用户可以随时从设备的 Windows 10 锁屏界面重置密码。  
 
 
 
 ## <a name="configure"></a>配置
 
-如果已有的本地 Active Directory 环境，并且你想要将已加入域的设备加入到 Azure AD，配置混合 Azure AD 加入设备。 有关详细信息[如何计划你的混合 Azure Active Directory 联接实现](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan)。 
+如果已有本地 Active Directory 环境，并且想要将已加入域的设备联接 Azure AD，请配置已联接混合 Azure AD 的设备。 有关详细信息，请参阅[如何规划混合 Azure Active Directory 联接实现](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan)。 
 
-Configuration Manager 具有客户端设置设[与 Azure AD 中自动注册新的 Windows 10 已加入域的设备](/sccm/core/clients/deploy/about-client-settings#automatically-register-new-windows-10-domain-joined-devices-with-azure-active-directory)。 有关配置客户端设置的详细信息，请参阅[如何配置客户端设置](/sccm/core/clients/deploy/configure-client-settings)。
+Configuration Manager 提供了[自动将已加入域的新 Windows 10 设备注册到 Azure AD](/sccm/core/clients/deploy/about-client-settings#automatically-register-new-windows-10-domain-joined-devices-with-azure-active-directory) 的客户端设置。 若要详细了解如何配置客户端设置，请参阅[如何配置客户端设置](/sccm/core/clients/deploy/configure-client-settings)。
 
-如果你想要配置 Azure AD 加入设备而无需还将它们加入到你的本地的域，查看的注意事项适用于 Azure AD 加入您的环境中。 一旦您决定使用 Azure AD 加入，您有多种方法可部署它根据组织的需求。 有关详细信息，请参阅下列文章：
-- [如何：计划你的 Azure AD 联接实现](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan)  
+若要在不将设备加入本地域的前提下为设备配置 Azure AD 联接，请查看相关注意事项，以在环境中实现 Azure AD 联接。 决定实现 Azure AD 联接后，可根据组织的需求从大量部署选项中进行选择。 有关详细信息，请参阅下列文章：
+- [如何：规划 Azure AD 联接实现](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan)  
 - [了解预配选项](https://docs.microsoft.com/azure/active-directory/devices/azureadjoin-plan#understand-your-provisioning-options)  
 
