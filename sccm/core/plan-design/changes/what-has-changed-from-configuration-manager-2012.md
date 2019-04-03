@@ -1,7 +1,7 @@
 ---
 title: 自 Configuration Manager 2012 以来的更改
 description: 识别与 System Center 2012 Configuration Manager 相比，System Center Configuration Manger 中更改的内容和新功能。
-ms.date: 03/22/2018
+ms.date: 03/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bd275406a95507441e6b60167c7658a7c5dfccf9
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 05304b1cd7da4878bc06b5214b95e3a6a6c26895
+ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56136358"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58524109"
 ---
 # <a name="whats-changed-in-system-center-configuration-manager-from-system-center-2012-configuration-manager"></a>自 System Center 2012 Configuration Manager 以来 System Center Configuration Manager 中更改的内容
 
@@ -29,9 +29,9 @@ System Center Configuration Manager：
 
 - 不在产品名称中使用年份或产品标识符，与 Configuration Manager 2007 或 System Center 2012 Configuration Manager 等旧版本不同。  
 
-- 支持增量产品内更新，也称为更新版本。 初始版本是版本 1511。 一年发布几次作为控制台内更新的后续版本，如版本 1710。  
+- 支持增量产品内更新，也称为更新版本。 初始版本是版本 1511。 一年发布几次作为控制台内更新的后续版本，如版本 1810。  
 
-- 使用基线版本安装。 1511 是原始的基线版本，而新的基线版本也会不定期发布，如 1802。 基线版本可用于安装新的 System Center Configuration Manager 站点和层次结构，或从 Configuration Manager 2012 支持的版本升级。  
+- 使用基线版本安装。 1511 是原始的基线版本，而新的基线版本也会不定期发布，如 1902。 基线版本可用于安装新的 System Center Configuration Manager 站点和层次结构，或从 Configuration Manager 2012 支持的版本升级。  
 
 
 
@@ -39,9 +39,9 @@ System Center Configuration Manager：
 
 System Center Configuration Manager 使用称为“更新和服务”的控制台中服务方法，可轻松找到并安装建议的更新。  
 
-一些版本只用作现有站点的更新（在 Configuration Manager 控制台内），而无法用于安装新 Configuration Manager 站点。 例如，仅可从 Configuration Manager 控制台获取 1710 更新。 它用于更新已运行 System Center Configuration Manager 版本的站点。
+一些版本只用作现有站点的更新（在 Configuration Manager 控制台内），而无法用于安装新 Configuration Manager 站点。 例如，仅可从 Configuration Manager 控制台获取 1810 更新。 它用于更新已运行 System Center Configuration Manager 版本的站点。
 
-我们还会定期发布更新版本（如更新 1802）作为新的基线版本。 此类更新可用于在无需以较旧的基线版本（如 1511）开始的情况下安装新的层次结构，并且将版本升级到最新版本。
+我们还会定期发布更新版本（如更新 1902）作为新的基线版本。 此类更新可用于在无需以较旧的基线版本（如 1802）开始的情况下安装新的层次结构，并且将版本升级到最新版本。
 
 
 若要详细了解如何使用更新，请参阅 [Configuration Manager 更新](/sccm/core/servers/manage/updates)。  

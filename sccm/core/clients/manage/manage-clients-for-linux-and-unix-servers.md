@@ -1,8 +1,8 @@
 ---
 title: 管理 Linux 和 UNIX 客户端
 titleSuffix: Configuration Manager
-description: 在 System Center Configuration Manager 中管理 Linux 和 UNIX 服务器上的客户端。
-ms.date: 04/23/2017
+description: 在 Configuration Manager 中管理 Linux 和 UNIX 服务器上的客户端。
+ms.date: 03/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,18 +11,23 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 43c7d4768e7da6af69422cce772665250d39764f
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 32e7a643c98fc8a6bd4baccda703146816930367
+ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56138562"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58524041"
 ---
-# <a name="how-to-manage-clients-for-linux-and-unix-servers-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中管理 Linux 和 UNIX 服务器客户端
+# <a name="how-to-manage-clients-for-linux-and-unix-servers-in-configuration-manager"></a>如何在 Configuration Manager 中管理 Linux 和 UNIX 服务器上的客户端
 
 适用范围：System Center Configuration Manager (Current Branch)
 
-当使用 System Center Configuration Manager 管理 Linux 和 UNIX 服务器时，可以配置集合、维护时段和客户端设置，以帮助管理服务器。 此外，尽管适用于 Linux 和 UNIX 的 Configuration Manager 客户端没有用户界面，但可以强制客户端手动轮询客户端策略。
+> [!Important]  
+> 从版本 1902 开始，Configuration Manager 不支持 Linux 或 UNIX 客户端。 
+> 
+> 请考虑使用 Microsoft Azure 管理来管理 Linux 服务器。 Azure 解决方案具有广泛的 Linux 支持（包括面向 Linux 的端到端补丁管理），在大多数情况下优于 Configuration Manager 的功能。
+
+使用 Configuration Manager 管理 Linux 和 UNIX 服务器时，可以配置集合、维护时段和客户端设置，以帮助管理服务器。 此外，尽管适用于 Linux 和 UNIX 的 Configuration Manager 客户端没有用户界面，但可以强制客户端手动轮询客户端策略。
 
 ##  <a name="BKMK_CollectionsforLnU"></a> Linux 和 UNIX 服务器的集合  
  使用集合管理 Linux 和 UNIX 服务器组的方式与使用集合管理其他客户端类型的方式相同。 集合可以是直接成员身份集合，也可以是基于查询的集合。 基于查询的集合用于确定客户端操作系统、硬件配置或有关站点数据库中存储的客户端的其他详细信息。 例如，你可以使用包括 Linux 和 UNIX 服务器的集合来管理下列设置：  
@@ -66,12 +71,12 @@ ms.locfileid: "56138562"
 >  Linux 和 UNIX 的 Configuration Manager 客户端从不请求或处理用户策略。  
 
 ##  <a name="BKMK_ManageLinuxCerts"></a> 如何管理适用于 Linux 和 UNIX 的客户端上的证书  
- 安装适用于 Linux 和 UNIX 的客户端后，你可以使用 **certutil** 工具来更新包含新 PKI 证书的客户端，并导入新的证书吊销列表 (CRL)。 安装适用于 Linux 和 UNIX 的客户端时，将此工具放置在 **/opt/microsoft/configmgr/bin/certutil** 中。 
+ 安装适用于 Linux 和 UNIX 的客户端后，你可以使用 **certutil** 工具来更新包含新 PKI 证书的客户端，并导入新的证书吊销列表 (CRL)。 安装适用于 Linux 和 UNIX 的客户端时，此工具位于 `/opt/microsoft/configmgr/bin/certutil` 中。 
 
  若要管理证书，请使用以下选项之一在每个客户端上运行 certutil：  
 
 |选项|更多信息|  
 |------------|----------------------|  
-|importPFX|使用此选项可指定证书，以替换客户端当前使用的证书。<br /><br /> 使用 **-importPFX**时，还必须使用 **-password** 命令行参数来提供与 PKCS#12 文件关联的密码。<br /><br /> 使用 **-rootcerts** 可指定任何其他根证书要求。<br /><br /> 示例：**certutil -importPFX &lt;Path to the PKCS#12 certificate> -password &lt;Certificate password\> [-rootcerts &lt;comma-separated list of certificates>]**|  
-|-importsitecert|使用此选项可更新管理服务器上的站点服务器签名证书。<br /><br /> 示例：**certutil -importsitecert &lt;Path to the DER certificate\>**|  
-|-importcrl|使用此选项可通过一个或多个 CRL 文件路径更新客户端上的 CRL。<br /><br /> 示例：**certutil -importcrl &lt;comma separated CRL file paths\>**|  
+|`importPFX`|使用此选项可指定证书，以替换客户端当前使用的证书。<br /><br /> 使用 `-importPFX` 时，还必须使用 `-password` 命令行参数来提供与 PKCS#12 文件关联的密码。<br /><br /> 使用 `-rootcerts` 可指定任何其他根证书要求。<br /><br /> 示例：`certutil -importPFX <path to the PKCS#12 certificate> -password <certificate password> [-rootcerts <comma-separated list of certificates>]`|  
+|`importsitecert`|使用此选项可更新管理服务器上的站点服务器签名证书。<br /><br /> 示例：`certutil -importsitecert <path to the DER certificate>`|  
+|`importcrl`|使用此选项可通过一个或多个 CRL 文件路径更新客户端上的 CRL。<br /><br /> 示例：`certutil -importcrl <comma separated CRL file paths>`|  

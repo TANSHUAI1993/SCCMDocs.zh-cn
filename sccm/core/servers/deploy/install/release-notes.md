@@ -2,7 +2,7 @@
 title: 发行说明
 titleSuffix: Configuration Manager
 description: 了解有关产品中尚未解决或 Microsoft 支持知识库文章中未涵盖的紧急问题。
-ms.date: 03/05/2019
+ms.date: 03/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 33ef7020e1b9312717919a9dda8ce189c8db533c
-ms.sourcegitcommit: f3dd8405018fe1043434386be15c16752c1a4a3c
+ms.openlocfilehash: a168e12000f11ca2bb6af8b1988f508910ab7263
+ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57558178"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58523956"
 ---
 # <a name="release-notes-for-configuration-manager"></a>Configuration Manager 发行说明
 
@@ -29,6 +29,7 @@ ms.locfileid: "57558178"
 本主题包含 Configuration Manager 当前分支的发行说明。 有关技术预览分支的信息，请参阅[技术预览](/sccm/core/get-started/technical-preview)  
 
 有关不同版本引入的新功能的信息，请参阅以下文章：
+- [版本 1902 中的新增功能](/sccm/core/plan-design/changes/whats-new-in-version-1902)
 - [1810 版中的新增功能](/sccm/core/plan-design/changes/whats-new-in-version-1810)
 - [1806 版中的新增功能](/sccm/core/plan-design/changes/whats-new-in-version-1806)  
 - [1802 版中的新增功能](/sccm/core/plan-design/changes/whats-new-in-version-1802)
@@ -103,7 +104,7 @@ ms.locfileid: "57558178"
 
 ### <a name="security-roles-are-missing-for-phased-deployments"></a>分阶段部署缺少安全角色
 <!--3479337, SCCMDocs-pr issue 3095-->
-适用范围：Configuration Manager 版本 1810
+适用范围：Configuration Manager 版本 1810、1902
 
 OS Deployment Manager 内置安全角色具有[分阶段部署](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence)的权限。 以下角色缺少这些权限：  
 
@@ -144,7 +145,8 @@ OS Deployment Manager 内置安全角色具有[分阶段部署](/sccm/osd/deploy
 ## <a name="mobile-device-management"></a>移动设备管理  
 
 ### <a name="validation-for-ios-app-link-sometimes-fails-on-valid-link"></a>有效链接上的 iOS 应用链接验证有时会失败
-<!-- LSI 106004348 -->创建“应用商店中的 iOS 应用包”类型的新应用程序时，验证程序不接受该位置的某些有效 URL。 具体而言，iOS App Store 不需要 URL 的应用名称部分的值。 例如，以下两个链接都有效并指向同一个应用，但“创建应用程序向导”仅接受第一个链接：
+<!-- LSI 106004348 -->
+创建“应用商店中的 iOS 应用包”类型的新应用程序时，验证程序不接受该位置的某些有效 URL。 具体而言，iOS App Store 不需要 URL 的应用名称部分的值。 例如，以下两个链接都有效并指向同一个应用，但“创建应用程序向导”仅接受第一个链接：
 - `https://itunes.apple.com/us/app/app-name/id123456789?mt=8`
 - `https://itunes.apple.com/us/app//id123456789?mt=8`
 

@@ -2,7 +2,7 @@
 title: 技术预览版
 titleSuffix: Configuration Manager
 description: 了解可测试 Configuration Manager 中的新功能和新特性的技术预览分支。
-ms.date: 02/19/2019
+ms.date: 03/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d9dee0aa39454d41f217cbe646845bf42076d3af
-ms.sourcegitcommit: 56ec6933cf7bfc93842f55835ad336ee3a1c6ab5
+ms.openlocfilehash: daa2367dde0ce1e1d76673b787240b24e9bd38ea
+ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57211612"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58524245"
 ---
 # <a name="technical-preview-for-configuration-manager"></a>Configuration Manager 的技术预览版
 
@@ -131,10 +131,10 @@ Microsoft 将支持每个技术预览版，直到三个连续的版本可用为�
 
 <!-- - [title](/sccm/core/get-started/2019/technical-preview-1901#bkmk_anchor) <!--ID--> 
 
-- [Office 365 更新的额外的语言](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_o365lang)<!--3555955--> 
-- [Office 365 专业增强版与分析集成的就绪情况](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_o365) <!--3735402--> 
-- [对分阶段部署成功标准的改进](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_pod) <!--3555946--> 
-- [对增强型 HTTP 的改进](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_ehttp) <!--3798957--> 
+- [Office 365 更新的其他语言](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_o365lang) <!--3555955--> <!-- Version 1902 --> 
+- [Office 365 专业增强版与分析集成的就绪情况](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_o365) <!--3735402--> <!-- Version 1902 --> 
+- [对分阶段部署成功标准的改进](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_pod) <!--3555946--> <!-- Version 1902 -->
+- [对增强型 HTTP 的改进](/sccm/core/get-started/2019/technical-preview-1902-2#bkmk_ehttp) <!--3798957--> <!-- Version 1902 -->
 
 
 > [!Note]  
@@ -153,43 +153,43 @@ Then remove the bottom of this list and/or move individual items not in CB to th
 
  | 功能 | 技术预览版 | 当前分支版 |  
  |---------|---------------------------|------------------------|
- | 使用对话框窗口替换 toast 通知 <!--3555947--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_impact) | ![未添加](media/Red_X.gif) | 
- | 就地升级任务序列期间的进度状态 <!--3747129--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_ipu) | ![未添加](media/Red_X.gif) | 
- | 将 Windows 已知文件夹重定向到 OneDrive <!--3556021--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_odfb) | ![未添加](media/Red_X.gif) | 
- | 仅在远程控制期间查看第一个屏幕 <!--3231732--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_rcmulti) | ![未添加](media/Red_X.gif) | 
- | 编辑或复制 PowerShell 脚本 <!--3705507--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_psedit) | ![未添加](media/Red_X.gif) | 
- | 将云管理网关添加到边界组 <!--3640932--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_cmgbg) | ![未添加](media/Red_X.gif) | 
- | 在软件中心配置默认视图 <!--3612112--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_swctr) | ![未添加](media/Red_X.gif) | 
- | 对客户端运行状况仪表板所做的改进 <!--3599209--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_health) | ![未添加](media/Red_X.gif) | 
- | 客户端运行状况仪表板 <!--3599209--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_health) | ![未添加](media/Red_X.gif) | 
- | 在 Windows 10 维护服务中指定功能更新的优先级 <!--3734525--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_neo) | ![未添加](media/Red_X.gif) | 
- | 分阶段部署专用监视 <!--3555949--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_pod) | ![未添加](media/Red_X.gif) | 
- | 从管理中心站点运行 CMPivot <!--3610960--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_cmpivot) | ![未添加](media/Red_X.gif) | 
- | 对运行 PowerShell 脚本任务序列步骤的改进<!--3556028--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_posh) | ![未添加](media/Red_X.gif) | 
- | 生命周期仪表板上的 Office 产品 <!--3556026--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_lifecycle) | ![未添加](media/Red_X.gif) | 
- | 集合的管理见解规则 <!--3555752--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_micoll) | ![未添加](media/Red_X.gif) | 
- | 使用 MAC 地址搜索设备视图 <!--3600878--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_mac) | ![未添加](media/Red_X.gif) | 
- | 分发点维护模式 <!--3555754--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_dpmaint) | ![未添加](media/Red_X.gif) | 
- | 经优化的映像维护 <!--3555951--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_resetbase) | ![未添加](media/Red_X.gif) | 
- | 导入 OS 映像的单个索引 <!--3719699--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_index) | ![未添加](media/Red_X.gif) | 
- | 使用云服务适用的 Azure 资源管理器 <!--3605704--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_arm) | ![未添加](media/Red_X.gif) | 
- | 控制台反馈确认 <!--3556010--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_feedback) | ![未添加](media/Red_X.gif) | 
- | 在 Azure 中创建 Configuration Manager 技术预览实验室 <!--3556017--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_azurevm) | ![未添加](media/Red_X.gif) | 
- | 指定一个自定义端口用于对等唤醒 <!--3605925--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_sleep) | ![未添加](media/Red_X.gif) | 
- | 查看最近连接的控制台 <!--3699367--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_console) | ![未添加](media/Red_X.gif) | 
- | 超过阈值时停止云服务 <!--3735092--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_cmg) | ![未添加](media/Red_X.gif) | 
- | 客户端预配模式超时 <!--3197824--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_osdprov) | ![未添加](media/Red_X.gif) | 
- | 对操作系统部署的改进 <!--3633146,3641475,3654172,3734270--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_osd) | ![未添加](media/Red_X.gif) | 
- | 对运行 PowerShell 脚本任务序列步骤的改进<!--3556028 fka 1359389--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_posh) | ![未添加](media/Red_X.gif) | 
- | 对通过电子邮件进行的应用程序批准的改进<!--3594063--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_email) | ![未添加](media/Red_X.gif) | 
- | 在软件中心中配置用户设备相关性<!--3485366--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_uda) | ![未添加](media/Red_X.gif) | 
- | 对 Configuration Manager 控制台的改进<!--3594151--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_console) | ![未添加](media/Red_X.gif) | 
+ | 使用对话框窗口替换 toast 通知 <!--3555947--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_impact) | 版本 1902 | 
+ | 就地升级任务序列期间的进度状态 <!--3747129--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_ipu) | 版本 1902 | 
+ | 将 Windows 已知文件夹重定向到 OneDrive <!--3556021--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_odfb) | 版本 1902 | 
+ | 在远程控制期间仅查看第一个屏幕 <!--3231732--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_rcmulti) | 版本 1902 | 
+ | 编辑或复制 PowerShell 脚本 <!--3705507--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_psedit) | 版本 1902 | 
+ | 将云管理网关添加到边界组 <!--3640932--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_cmgbg) | 版本 1902 | 
+ | 在软件中心配置默认视图 <!--3612112--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_swctr) | 版本 1902 | 
+ | 对客户端运行状况仪表板所做的改进 <!--3599209--> | [Tech Preview 1902](/sccm/core/get-started/2019/technical-preview-1902#bkmk_health) | 版本 1902 | 
+ | 客户端运行状况仪表板 <!--3599209--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_health) | 版本 1902 | 
+ | 在 Windows 10 维护服务中指定功能更新的优先级 <!--3734525--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_neo) | 版本 1902 | 
+ | 分阶段部署专用监视 <!--3555949--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_pod) | 版本 1902 | 
+ | 从管理中心站点运行 CMPivot <!--3610960--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_cmpivot) | 版本 1902 | 
+ | 对运行 PowerShell 脚本任务序列步骤的改进 <!--3556028--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_posh) | 版本 1902 | 
+ | 生命周期仪表板上的 Office 产品 <!--3556026--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_lifecycle) | 版本 1902 | 
+ | 集合的管理见解规则 <!--3555752--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_micoll) | 版本 1902 | 
+ | 使用 MAC 地址搜索设备视图 <!--3600878--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_mac) | 版本 1902 | 
+ | 分发点维护模式 <!--3555754--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_dpmaint) | 版本 1902 | 
+ | 经优化的映像维护 <!--3555951--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_resetbase) | 版本 1902 | 
+ | 导入 OS 映像的单个索引 <!--3719699--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_index) | 版本 1902 | 
+ | 使用云服务适用的 Azure 资源管理器 <!--3605704--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_arm) | 版本 1902 | 
+ | 确认控制台反馈 <!--3556010--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_feedback) | 版本 1902 | 
+ | 在 Azure 中创建 Configuration Manager 技术预览实验室 <!--3556017--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_azurevm) | 不适用 | 
+ | 指定一个自定义端口用于对等唤醒 <!--3605925--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_sleep) | 版本 1902 | 
+ | 查看最近连接的控制台 <!--3699367--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_console) | 版本 1902 | 
+ | 超过阈值时停止云服务 <!--3735092--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_cmg) | 版本 1902 | 
+ | 客户端预配模式超时 <!--3197824--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_osdprov) | 版本 1902 | 
+ | 对 OS 部署的改进 <!--3633146,3641475,3654172,3734270--> | [技术预览 1901](/sccm/core/get-started/2019/technical-preview-1901#bkmk_osd) | 版本 1902 | 
+ | 对运行 PowerShell 脚本任务序列步骤的改进 <!--3556028 fka 1359389--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_posh) | 版本 1902 | 
+ | 对通过电子邮件进行的应用程序批准的改进 <!--3594063--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_email) | 版本 1902 | 
+ | 在软件中心中配置用户设备相关性 <!--3485366--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_uda) | 版本 1902 | 
+ | 对 Configuration Manager 控制台的改进 <!--3594151--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_console) | 版本 1902 | 
  | 从社区中心下载报表<!--3555936--> | [Tech Preview 1812](capabilities-in-technical-preview-1812.md#bkmk_hub) | ![未添加](media/Red_X.gif) | 
- | 请勿加载 Windows PowerShell 配置文件 <!--1359239--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_noprofile) | ![未添加](media/Red_X.gif) | 
- | 本地 MDM 不再需要 Intune 连接 <!--1359124--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_opmdm) | ![未添加](media/Red_X.gif) | 
- | Configuration Manager 控制台通知 <!--1318035--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_notify) | ![未添加](media/Red_X.gif) | 
- | 对任务序列媒体创建的改进 <!--1359388--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_tsmedia) | ![未添加](media/Red_X.gif) | 
- | 对运行 PowerShell 脚本任务序列步骤的改进 <!--1359389--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_posh) | ![未添加](media/Red_X.gif) | 
+ | 请勿加载 Windows PowerShell 配置文件 <!--3607762, fka 1359239--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_noprofile) | 版本 1810 | 
+ | 本地 MDM 不再需要 Intune 连接 <!--3607730, fka 1359124--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_opmdm) | 版本 1810 | 
+ | Configuration Manager 控制台通知 <!--3556016, fka 1318035--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_notify) | 版本 1902 | 
+ | 对任务序列媒体创建的改进 <!--3556027, fka 1359388--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_tsmedia) | 版本 1902 | 
+ | 对运行 PowerShell 脚本任务序列步骤的改进 <!--3556028, fka 1359389--> | [Tech Preview 1811](capabilities-in-technical-preview-1811.md#bkmk_posh) | 版本 1902 | 
 
 
 
@@ -205,15 +205,12 @@ With each CB release, review and remove from this list for anything that's now a
 
 | 功能        | 技术预览版 |  
 |----------------|---------------------------|
-| 控制台内文档仪表板<!--1357546--> | [技术预览版 1810](capabilities-in-technical-preview-1810.md#bkmk_doc-dashboard) | 
-| 社区中心 <!--1357766--> | [技术预览版 1807](capabilities-in-technical-preview-1807.md#bkmk_hub) | 
-| 来自 Intune 的共同管理的设备同步活动 <!--1358565--> | [技术预览版 1807](capabilities-in-technical-preview-1807.md#bkmk_comgmt) | 
-| 基于客户端的 PXE 响应者服务 <!--1357148--> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#client-based-pxe-responder-service) |
-| PXE 网络启动对 IPv6 的支持 <!--1269793--> |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#pxe-network-boot-support-for-ipv6)|
-| 使用 Azure Active Directory<!--1322145--> | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#azurediscovery) |
-| Windows Update for Business 更新的符合性评估 <!--1235390--> | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#compliance-assessment-for-windows-update-for-business-updates) |
-| 对资产智能的改进<!--1307390--> | [Tech Preview 1608](capabilities-in-technical-preview-1608.md#improvements-to-asset-intelligence) |
-| 最终用户可从公司门户安装应用 <!--1037233?--> | [Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_End) |
+| 社区中心 <!--3556020, fka 1357766--> | [技术预览版 1807](capabilities-in-technical-preview-1807.md#bkmk_hub) | 
+| 基于客户端的 PXE 响应者服务 <!--3556018, fka 1357148--> | [Tech Preview 1712](capabilities-in-technical-preview-1712.md#client-based-pxe-responder-service) |
+| PXE 网络启动对 IPv6 的支持 <!--3601254, fka 1269793--> |[Tech Preview 1706](capabilities-in-technical-preview-1706.md#pxe-network-boot-support-for-ipv6)|
+| 使用 Azure Active Directory <!--3607315, fka 1322145--> | [Tech Preview 1702](capabilities-in-technical-preview-1702.md#azurediscovery) |
+| 对资产智能的改进 <!--3601024, fka 1307390--> | [Tech Preview 1608](capabilities-in-technical-preview-1608.md#improvements-to-asset-intelligence) |
+| 最终用户可从公司门户安装应用 <!--3601249, fka 1037233--> | [Tech Preview 1605](capabilities-in-technical-preview-1605.md#BKMK_End) |
 
 
 

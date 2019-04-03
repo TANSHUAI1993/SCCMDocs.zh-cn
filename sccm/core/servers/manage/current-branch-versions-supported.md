@@ -2,7 +2,7 @@
 title: Current Branch 版本
 titleSuffix: Configuration Manager
 description: 查看 Configuration Manager 的版本历史记录，并了解所提供服务的各个阶段。
-ms.date: 11/27/2018
+ms.date: 03/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: acdc85980db937433cf8bf10336d940d0a434c94
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: ed5e7b6931fe8c853b867483d3db8a2d5bc9ad8b
+ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56135950"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58523718"
 ---
 # <a name="support-for-configuration-manager-current-branch-versions"></a>对 Configuration Manager Current Branch 版本的支持
 
@@ -28,8 +28,11 @@ Microsoft 计划每年发布几次 Configuration Manager Current Branch 的更�
 
 - “安全更新”（仅）服务阶段 - 新的 Current Branch 版本发布之后，Microsoft 在该版本支持生命周期的剩余时间内仅支持旧版本的安全更新（如图 1 所示）。  
 
-  ![Configuration Manager 服务和支持时间线图](media/CM_Servicing_support_timeline1.png)  
-  图 1. Current Branch 服务支持发布周期重叠示例。 此示例用于说明该周期，并不代表实际或预期的发布日期。
+（[查看完整大小的图形](media/CM_Servicing_support_timeline1.png)）
+
+![Configuration Manager 服务和支持时间线图](media/CM_Servicing_support_timeline1.png)  
+
+图 1. Current Branch 服务支持发布周期重叠示例。 此示例用于说明该周期，并不代表实际或预期的发布日期。
 
 > [!NOTE]  
 >  最新 Current Branch 版本始终处于“安全更新和关键更新”服务阶段。 此支持声明意味着如果遇到需要关键更新的代码缺陷，则必须安装最新 Current Branch 版本才会接收修补程序。 所有其他受支持的 Current Branch 版本仅有资格接收安全更新。

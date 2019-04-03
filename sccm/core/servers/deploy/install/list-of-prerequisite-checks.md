@@ -2,7 +2,7 @@
 title: 先决条件检查
 titleSuffix: Configuration Manager
 description: Configuration Manager 更新特定先决条件检查的参考。
-ms.date: 12/14/2018
+ms.date: 03/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6bea2d7fc41bdec96fbdfe3508d13eea0a59d514
-ms.sourcegitcommit: ceec0e20bf801071f2a05233f984cf17acc3fd29
+ms.openlocfilehash: 81689907f326399de704b075b8500b82803b4d3d
+ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265030"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58524177"
 ---
 # <a name="list-of-prerequisite-checks-for-configuration-manager"></a>Configuration Manager 先决条件检查列表
 
@@ -455,7 +455,7 @@ Configuration Manager 计算机是 Windows 域的成员。
 要安装站点服务器，必须至少具有 15 GB 的可用磁盘空间。 如果在同一服务器上安装 SMS 提供程序，则需要额外的 1 GB 可用空间。
 
 #### <a name="pending-system-restart"></a>正在等待系统重启 
-适用范围：管理中心站点、主站点、辅助站点、Configuration Manager 控制台、SMS 提供程序、SQL Server、管理点、分发点
+适用范围：管理中心站点、主站点、辅助站点
 
 在运行安装程序之前，另一个程序需要重启服务器。
 
@@ -515,6 +515,18 @@ Configuration Manager 计算机是 Windows 域的成员。
 
 必须用 NTFS 文件系统格式化磁盘驱动器。 为提高安全性，在使用 NTFS 文件系统格式化的磁盘驱动器上安装站点服务器组件。
 
+#### <a name="pending-system-restart-on-the-remote-sql-server"></a>正在等待远程 SQL Server 上的系统重启
+适用范围：版本 1902 和更高版本的远程 SQL Server
+
+在运行安装程序之前，另一个程序需要重启服务器。
+
+为了查看计算机是否处于挂起的重启状态，它会检查以下注册表位置：<!--SCCMDocs-pr issue 3377-->  
+
+- `HKLM:Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\RebootPending`  
+- `HKLM:SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\RebootRequired`  
+- `HKLM:SYSTEM\CurrentControlSet\Control\Session Manager, PendingFileRenameOperations`  
+- `HKLM:Software\Microsoft\ServerManager, CurrentRebootAttempts`  
+
 #### <a name="schema-extensions"></a>架构扩展 
 适用范围：管理中心站点、主站点
 
@@ -525,7 +537,7 @@ Configuration Manager 不需要 Active Directory 架构扩展来安装站点服�
 #### <a name="bkmk_changetracking"></a> SQL 更改跟踪清除
 适用范围：站点数据库服务器
 
-从版本 1810 开始，将检查站点数据库是否有积压工作 (backlog) 的 SQL 更改跟踪数据。<!--SCCMDocs-pr issue 3023-->  
+从版本 1810 开始，将检查站点数据库是否有 SQL 更改跟踪数据积压工作 (backlog)。<!--SCCMDocs-pr issue 3023-->  
 
 可通过在站点数据库中运行诊断存储过程来手动验证此检查。 首先，为站点数据库创建[诊断连接](https://docs.microsoft.com/sql/database-engine/configure-windows/diagnostic-connection-for-database-administrators?view=sql-server-2017)。 最简单的方法是使用 SQL Server Management Studio 的数据库引擎查询编辑器，并连接到 `admin:<instance name>`。 
 

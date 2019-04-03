@@ -1,8 +1,8 @@
 ---
 title: 升级 Linux 和 UNIX 客户端
 titleSuffix: Configuration Manager
-description: 在 System Center Configuration Manager 中升级 Linux 或 UNIX 服务器上的客户端。
-ms.date: 04/23/2017
+description: 在 Configuration Manager 中升级 Linux 或 UNIX 服务器上的客户端。
+ms.date: 03/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,16 +11,21 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c71d58b247620be08dfbd1244deda5e513890376
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 987014084626e13b09a3c39fe6eff08ecc8fbe6b
+ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56141572"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58523990"
 ---
-# <a name="how-to-upgrade-clients-for-linux-and-unix-servers-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中升级 Linux 和 UNIX 服务器的客户端
+# <a name="how-to-upgrade-clients-for-linux-and-unix-servers-in-configuration-manager"></a>如何在 Configuration Manager 中升级 Linux 和 UNIX 服务器上的客户端
 
 适用范围：System Center Configuration Manager (Current Branch)
+
+> [!Important]  
+> 从版本 1902 开始，Configuration Manager 不支持 Linux 或 UNIX 客户端。 
+> 
+> 请考虑使用 Microsoft Azure 管理来管理 Linux 服务器。 Azure 解决方案具有广泛的 Linux 支持（包括面向 Linux 的端到端补丁管理），在大多数情况下优于 Configuration Manager 的功能。
 
 可以将计算机上的适用于 Linux 和 UNIX 的客户端版本升级到较新的客户端版本，而不用先卸载当前的客户端。 若要实现此操作，请使用 **-keepdb** 命令行属性在计算机上安装新的客户端安装包。 安装适用于 Linux 和 UNIX 的客户端时，它将用新的客户端文件覆盖现有的客户端数据。 但是，**-keepdb** 命令行属性会指示安装过程保留客户端唯一标识符 (GUID)、本地信息数据库和证书存储。 然后，新的客户端安装将使用这些信息。  
 

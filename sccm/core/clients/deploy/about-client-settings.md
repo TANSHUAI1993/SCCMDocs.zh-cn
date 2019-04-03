@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 472cf012805700e1ec2de2f3c83a0ef63e10183b
-ms.sourcegitcommit: 5f17355f954b9d9e10325c0e9854a9d582dec777
+ms.openlocfilehash: e76dc5892ad34d72bfee3cd4aea0fa660e34855d
+ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58329594"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477528"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>关于 Configuration Manager 中的客户端设置
 
@@ -460,6 +460,10 @@ Set this option to **Yes** for the Endpoint Protection client to attempt to unin
 ### <a name="allow-users-to-exclude-their-device-from-power-management"></a>允许用户从电源管理中排除其设备
 
 选择“是”允许软件中心的用户从任何配置的电源管理设置中排除其计算机。  
+
+### <a name="allow-network-wake-up"></a>允许网络唤醒
+
+已添加到 1810。 如果设置为“启用”，则将网络适配器上的电源设置配置为允许网络适配器唤醒设备。 如果设置为“禁用”，则将网络适配器上的电源设置配置为不允许网络适配器唤醒设备。
 
 ### <a name="enable-wake-up-proxy"></a>启用唤醒代理
 

@@ -1,8 +1,8 @@
 ---
 title: 规划将客户端部署到 Linux 和 UNIX 计算机
 titleSuffix: Configuration Manager
-description: 在 System Center Configuration Manager 中规划 Linux 和 UNIX 计算机的客户端部署。
-ms.date: 08/30/2017
+description: 规划在 Configuration Manager 中将客户端部署到 Linux 和 UNIX 计算机。
+ms.date: 03/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,18 +11,23 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 60811ad0556be4d59caab346d20fbb2c40024206
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: cfa2a2412744046ca1a16aad2721fcb9efcff38e
+ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56128232"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58524143"
 ---
-# <a name="planning-for-client-deployment-to-linux-and-unix-computers-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中规划 Linux 和 UNIX 计算机的客户端部署
+# <a name="planning-for-client-deployment-to-linux-and-unix-computers-in-configuration-manager"></a>规划在 Configuration Manager 中将客户端部署到 Linux 和 UNIX 计算机
 
-适用范围：*System Center Configuration Manager (Current Branch)*
+适用范围：System Center Configuration Manager (Current Branch)
 
-可以在运行 Linux 或 UNIX 的计算机上安装 System Center Configuration Manager 客户端。 此客户端适用于作为工作组计算机运行的服务器，并且不支持与登录用户交互。 安装客户端软件后，客户端将与 Configuration Manager 站点建立通信，可以使用 Configuration Manager 控制台和报表管理客户端。  
+> [!Important]  
+> 从版本 1902 开始，Configuration Manager 不支持 Linux 或 UNIX 客户端。 
+> 
+> 请考虑使用 Microsoft Azure 管理来管理 Linux 服务器。 Azure 解决方案具有广泛的 Linux 支持（包括面向 Linux 的端到端补丁管理），在大多数情况下优于 Configuration Manager 的功能。
+
+可以在运行 Linux 或 UNIX 的计算机上安装 Configuration Manager 客户端。 此客户端适用于作为工作组计算机运行的服务器，并且不支持与已登录用户交互。 安装客户端软件后，客户端将与 Configuration Manager 站点建立通信，可以使用 Configuration Manager 控制台和报表管理客户端。  
 
 > [!NOTE]
 >  Linux 和 UNIX 计算机的 Configuration Manager 客户端不支持以下管理功能：  
@@ -156,7 +161,7 @@ ms.locfileid: "56128232"
 
 |所需程序包|说明|最低版本|  
 |----------------------|-----------------|---------------------|  
-|操作系统版本|操作系统的版本|AIX 6.1、任何 Technology Level 和 Service Pack|  
+|操作系统版本|操作系统的版本|AIX 6.1：任何 Technology Level 和 Service Pack|  
 |xlC.rte|XL C/C++ Runtime|9.0.0.5|  
 |OpenSSL/openssl.base|OpenSSL 库；安全网络通信协议|0.9.8.4|  
 
@@ -164,7 +169,7 @@ ms.locfileid: "56128232"
 
 |所需程序包|说明|最低版本|  
 |----------------------|-----------------|---------------------|  
-|操作系统版本|操作系统的版本|AIX 7.1、任何 Technology Level 和 Service Pack|  
+|操作系统版本|操作系统的版本|AIX 7.1：任何 Technology Level 和 Service Pack|  
 |xlC.rte|XL C/C++ Runtime||  
 |OpenSSL/openssl.base|OpenSSL 库；安全网络通信协议||  
 
@@ -183,51 +188,51 @@ ms.locfileid: "56128232"
 
 |Configuration Manager 站点系统|更多信息|  
 |---------------------------------------|----------------------|  
-|管理点|尽管安装适用于 Linux 和 UNIX 的 Configuration Manager 客户端不需要管理点，但必须拥有管理点才能在客户端计算机和 Configuration Manager 服务器之间传输信息。 没有管理点，就无法管理客户端计算机。|  
+|管理点|尽管安装适用于 Linux 和 UNIX 的 Configuration Manager 客户端不需要管理点，但必须拥有管理点才能在客户端计算机和 Configuration Manager 服务器之间传输信息。 没有管理点就无法管理客户端计算机。|  
 |分发点|安装适用于 Linux 和 UNIX 的 Configuration Manager 客户端不需要分发点。 但是，站点系统角色时的要求在将软件部署到 Linux 和 UNIX 服务器。<br /><br /> 因为适用于 Linux 和 UNIX 的 Configuration Manager 客户端不支持使用 SMB 的通信，与客户端一起使用的分发点必须支持 HTTP 或 HTTPS 通信。|  
 |回退状态点|安装适用于 Linux 和 UNIX 的 Configuration Manager 客户端不需要回退状态点。 然而，当 Configuration Manager 站点中的计算机不能与管理点通信时，回退状态点可使这些计算机发送状态消息。 客户端还可以向回退状态点发送其安装状态。|  
 
- **防火墙要求**：确保防火墙不会在您指定为客户端请求端口的端口中阻止通信。 适用于 Linux 和 UNIX 的客户端直接与管理点、分发点以及回退状态点进行通信。  
+ **防火墙要求**：确保防火墙不会阻止你指定为客户端请求端口的端口之间的通信。 适用于 Linux 和 UNIX 的客户端直接与管理点、分发点以及回退状态点进行通信。  
 
  有关客户端通信和请求端口的详细信息，请参阅  [配置适用于 Linux 和 UNIX 的客户端以查找管理点](../../../../core/clients/deploy/deploy-clients-to-unix-and-linux-servers.md#BKMK_ConfigClientMP)。  
 
 ##  <a name="BKMK_PlanningforCommunicationsforLnU"></a>为 Linux 和 UNIX 服务器规划跨林信任的通信  
- 使用 Configuration Manager 管理的 Linux 和 UNIX 服务器作为工作组客户端运行并且需要与工作组中基于 Windows 的客户端相似的配置。 有关来自工作组中的计算机的通信的信息，请参阅 [System Center Configuration Manager 中终结点之间的通信](../../../../core/plan-design/hierarchy/communications-between-endpoints.md)主题中的[跨 Active Directory 林的通信](../../../../core/plan-design/hierarchy/communications-between-endpoints.md#Plan_Com_X-Forest)部分。  
+ 使用 Configuration Manager 管理的 Linux 和 UNIX 服务器作为工作组客户端运行并且需要与工作组中基于 Windows 的客户端相似的配置。 有关来自工作组中的计算机的通信的信息，请参阅[跨 Active Directory 林的通信](/sccm/core/plan-design/hierarchy/communications-between-endpoints#Plan_Com_X-Forest)。  
 
 ###  <a name="BKMK_ServiceLocationforLnU"></a>适用于 Linux 和 UNIX 客户端的服务位置  
- 查找为客户端提供服务的站点系统服务器的任务称为服务位置。 与不同的是基于 Windows 的客户端，适用于 Linux 和 UNIX 客户端不使用 Active Directory 用于服务定位。 此外，适用于 Linux 和 UNIX 的 Configuration Manager 客户端不支持指定管理点的域后缀的客户端属性。 相反，客户端了解到关于从已知的管理点时安装客户端软件分配给客户端提供服务的其他站点系统服务器。  
+ 查找为客户端提供服务的站点系统服务器的任务称为服务位置。 与基于 Windows 的客户端不同，适用于 Linux 和 UNIX 的客户端未将 Active Directory 用于服务定位。 此外，适用于 Linux 和 UNIX 的 Configuration Manager 客户端不支持指定管理点的域后缀的客户端属性。 相反，客户端了解到关于从已知的管理点时安装客户端软件分配给客户端提供服务的其他站点系统服务器。  
 
- 有关服务定位的详细信息，请参阅[了解客户端如何查找 System Center Configuration Manager 的站点资源和服务](../../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md)中的[服务定位和客户端如何确定向其分配的管理点](../../../../core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md#BKMK_Plan_Service_Location)。  
+ 有关详细信息，请参阅[服务定位和客户端如何确定向其分配的管理点](/sccm/core/plan-design/hierarchy/understand-how-clients-find-site-resources-and-services#BKMK_Plan_Service_Location)。  
 
 ##  <a name="BKMK_SecurityforLnU"></a>规划 Linux 和 UNIX 服务器的安全性和证书  
  为了与 Configuration Manager 站点进行安全且通过身份验证的通信，适用于 Linux 和 UNIX 的 Configuration Manager 客户端使用与适用于 Windows 的 Configuration Manager 客户端相同的模型进行通信。  
 
- 安装 Linux 和 UNIX 客户端时，可以向客户端分配 PKI 证书，使它能够使用 HTTPS 与 Configuration Manager 站点进行通信。 如果未分配的 PKI 证书，客户端创建自签名的证书和仅通过 HTTP 进行通信。  
+ 安装 Linux 和 UNIX 客户端时，可以向客户端分配 PKI 证书，使它能够使用 HTTPS 与 Configuration Manager 站点进行通信。 如果没有分配 PKI 证书，客户端将创建自签名证书，并仅通过 HTTP 进行通信。  
 
  在安装时提供的 PKI 证书的客户端使用 HTTPS 与管理点进行通信。 客户端找不到支持 HTTPS 的管理点时，它会回退到 HTTP 使用所提供的 PKI 证书。  
 
- 在 Linux 或 UNIX 的客户端使用 PKI 证书时您不需要批准它们。 当客户端使用自签名证书时，请在 Configuration Manager 控制台中查看客户端批准的层次结构设置。 如果客户端批准方法不是 **自动批准所有计算机 (不推荐)**, ，您必须手动都批准客户端。  
+ 如果 Linux 或 UNIX 客户端使用 PKI 证书，则无需批准。 当客户端使用自签名证书时，请在 Configuration Manager 控制台中查看客户端批准的层次结构设置。 如果客户端批准方法不是 **自动批准所有计算机 (不推荐)**, ，您必须手动都批准客户端。  
 
- 有关如何手动批准客户端的详细信息，请参阅[如何在 System Center Configuration Manager 中管理客户端](../../../../core/clients/manage/manage-clients.md)主题中的[从设备节点管理客户端](../../../../core/clients/manage/manage-clients.md#BKMK_ManagingClients_DevicesNode)部分。  
+ 有关如何手动批准客户端的详细信息，请参阅[通过设备节点管理客户端](/sccm/core/clients/manage/manage-clients#BKMK_ManagingClients_DevicesNode)。  
 
- 有关如何在 Configuration Manager 使用证书的信息，请参阅 [System Center Configuration Manager 的 PKI 证书要求](../../../../core/plan-design/network/pki-certificate-requirements.md)。  
+ 有关如何在 Configuration Manager 中使用证书的信息，请参阅 [PKI 证书要求](/sccm/core/plan-design/network/pki-certificate-requirements)。  
 
 ###  <a name="BKMK_AboutCertsforLnU"></a>关于 Linux 和 UNIX 服务器使用的证书  
  适用于 Linux 和 UNIX 的 Configuration Manager 客户端使用与基于 Windows 的客户端相同的自签名证书或 X.509 PKI 证书。 管理 Linux 和 UNIX 客户端时，Configuration Manager 站点系统的 PKI 要求没有任何更改。  
 
  用于与 Configuration Manager 站点系统通信的 Linux 和 UNIX 客户端的证书必须为公钥证书标准 (PKCS#12) 格式，并且必须知道密码，以便在指定 PKI 证书时可以将它指定给客户端。  
 
- 适用于 Linux 和 UNIX 的 Configuration Manager 客户端支持单个 PKI 证书，不支持多个证书。 因此，为 Configuration Manager 站点配置的证书选择条件不适用。  
+ 适用于 Linux 和 UNIX 的 Configuration Manager 客户端支持单个 PKI 证书，但不支持多个证书。 因此，为 Configuration Manager 站点配置的证书选择条件不适用。  
 
 ###  <a name="BKMK_ConfigCertsforLnU"></a>为 Linux 和 UNIX 服务器配置证书  
- 若要将适用于 Linux 和 UNIX 服务器的 Configuration Manager 客户端配置为使用 HTTPS 通信，必须在安装该客户端时将其配置为使用 PKI 证书。 无法设置之前的客户端软件安装的证书。  
+ 若要将适用于 Linux 和 UNIX 服务器的 Configuration Manager 客户端配置为使用 HTTPS 通信，必须在安装该客户端时将其配置为使用 PKI 证书。 无法在安装客户端软件之前预配证书。  
 
- 在安装时使用 PKI 证书的客户端，您使用命令行参数 **-UsePKICert** 指定位置和包含 PKI 证书的 PKCS #12 文件的名称。 此外，您必须使用命令行参数 **-certpw** 来指定证书的密码。  
+ 安装使用 PKI 证书的客户端时，请使用命令行参数 `-UsePKICert` 来指定包含 PKI 证书的 PKCS #12 文件的位置和名称。 此外，必须使用命令行参数 `-certpw` 来指定证书的密码。  
 
- 如果未指定 **-UsePKICert**, ，客户端生成自签名的证书并尝试通过仅使用 HTTP 与站点系统服务器进行通信。  
+ 如果未指定 `-UsePKICert`，客户端将生成自签名证书并尝试通过仅使用 HTTP 与站点系统服务器进行通信。  
 
-##  <a name="BKMK_NoSHA-256"></a>关于不支持 SHA-256 的 Linux 和 UNIX 操作系统  
- 作为 Configuration Manager 客户端受到支持的以下 Linux 和 UNIX 操作系统发布了不支持 SHA-256 的 OpenSSL 版本：  
+##  <a name="BKMK_NoSHA-256"></a>不支持 SHA-256 的版本  
+ 支持作为 Configuration Manager 客户端的以下 Linux 和 UNIX 操作系统在发布时随附了不支持 SHA-256 的 OpenSSL 版本：  
 
 -   Solaris 版本 10 (SPARC/x86)  
 
@@ -239,11 +244,11 @@ ms.locfileid: "56128232"
 -   客户端不会验证它们从分发点下载的包的哈希值。  
 
 > [!IMPORTANT]  
->  **IgnoreSHA256validation** 选项允许您在较不安全模式下运行 Linux 和 UNIX 计算机的客户端。 这旨在用于在不包括支持 sha-256 的较旧平台上使用。 这是安全覆盖并不建议使用由 Microsoft，但支持在安全和受信任的数据中心环境中使用。  
+>  使用 `ignoreSHA256validation` 选项，可以在安全性较低的模式下运行适用于 Linux 和 UNIX 计算机的客户端。 这旨在用于在不包括支持 sha-256 的较旧平台上使用。 这是安全覆盖并不建议使用由 Microsoft，但支持在安全和受信任的数据中心环境中使用。  
 
  当安装适用于 Linux 和 UNIX 的 Configuration Manager 客户端时，安装脚本会检查操作系统版本。 默认情况下，如果操作系统版本被标识为未发布支持 SHA-256 的 OpenSSL 版本，则无法安装 Configuration Manager 客户端。  
 
- 若要在未发布支持 SHA-256 的 OpenSSL 版本的 Linux 和 UNIX 操作系统上安装 Configuration Manager 客户端，必须使用安装命令行开关 **ignoreSHA256validation**。 当在适当的 Linux 或 UNIX 操作系统上使用此命令行选项时，Configuration Manager 客户端将跳过 SHA-256 验证，并且在安装完成后，客户端将不会使用 SHA-256 来对它通过使用 HTTP 提交到站点系统的数据进行签名。 有关将 Linux 和 UNIX 客户端配置为使用证书的详细信息，请参阅本主题中的 [规划 Linux 和 UNIX 服务器的安全性和证书](#BKMK_SecurityforLnU) 。 有关需要 SHA-256 的信息，请参阅[配置 System Center Configuration Manager 中的安全](../../../../core/plan-design/security/configure-security.md)主题中的[配置签名和加密](../../../../core/plan-design/security/configure-security.md#BKMK_ConfigureSigningEncryption)。  
+ 若要在发布时未随附支持 SHA-256 的 OpenSSL 版本的 Linux 和 UNIX 操作系统上安装 Configuration Manager 客户端，必须使用安装命令行开关 `ignoreSHA256validation`。 当在适当的 Linux 或 UNIX 操作系统上使用此命令行选项时，Configuration Manager 客户端将跳过 SHA-256 验证，并且在安装完成后，客户端将不会使用 SHA-256 来对它通过使用 HTTP 提交到站点系统的数据进行签名。 若要详细了解如何将 Linux 和 UNIX 客户端配置为使用证书，请参阅[规划 Linux 和 UNIX 服务器的安全性和证书](#BKMK_SecurityforLnU)。 有关需要 SHA-256 的详细信息，请参阅[配置签名和加密](/sccm/core/plan-design/security/configure-security#BKMK_ConfigureSigningEncryption)。  
 
 > [!NOTE]  
->  命令行选项 **ignoreSHA256validation** 忽略使用支持 sha-256 的 OpenSSL 版本运行 Linux 和 UNIX 发布的版本的计算机上。  
+>  在运行发布了支持 SHA-256 的 OpenSSL 版本的 Linux 和 UNIX 版本的计算机上，将忽略命令行选项 `ignoreSHA256validation`。  

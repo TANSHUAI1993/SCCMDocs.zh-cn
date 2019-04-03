@@ -1,8 +1,8 @@
 ---
-title: '监视 Linux/UNIX 客户端 '
+title: 监视 Linux/UNIX 客户端
 titleSuffix: Configuration Manager
-description: 在 System Center Configuration Manager 中监视 Linux 和 UNIX 服务器上的客户端。
-ms.date: 08/04/2017
+description: 在 Configuration Manager 中监视 Linux 和 UNIX 服务器上的客户端。
+ms.date: 03/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,18 +11,23 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5e8e10b4297e1367f6835e61ced77f2a1154319b
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 47a85ec7dea72f08a0ec48ebb151566b8563ba9a
+ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56127926"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58523684"
 ---
-# <a name="how-to-monitor-clients-for-linux-and-unix-servers-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中监视 Linux 和 UNIX 服务器的客户端
+# <a name="how-to-monitor-clients-for-linux-and-unix-servers-in-configuration-manager"></a>如何在 Configuration Manager 中监视 Linux 和 UNIX 服务器上的客户端
 
 适用范围：System Center Configuration Manager (Current Branch)
 
-可以使用查看基于 Windows 的客户端的信息的相同方法在 System Center Configuration Manager 控制台中查看来自于 Linux 和 UNIX 服务器的信息。  
+> [!Important]  
+> 从版本 1902 开始，Configuration Manager 不支持 Linux 或 UNIX 客户端。 
+> 
+> 请考虑使用 Microsoft Azure 管理来管理 Linux 服务器。 Azure 解决方案具有广泛的 Linux 支持（包括面向 Linux 的端到端补丁管理），在大多数情况下优于 Configuration Manager 的功能。
+
+可以使用查看基于 Windows 的客户端的信息的相同方法在 Configuration Manager 控制台中查看来自于 Linux 和 UNIX 服务器的信息。  
 
  可以查看的信息包括:  
 

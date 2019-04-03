@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5e0b1e9404eb332a562b6d48db0f55e8726a09c8
-ms.sourcegitcommit: 5f17355f954b9d9e10325c0e9854a9d582dec777
+ms.openlocfilehash: ca7214b12532305932ddca4595b4ef4d5bdc1569
+ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58329611"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477502"
 ---
 # <a name="whats-new-in-version-1810-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 1810 版中的新增功能
 
@@ -417,7 +417,7 @@ SMS 提供程序显示为角色，其中包含允许通过云管理网关进行�
 
 若要详细了解对用于 Configuration Manager 的 Windows PowerShell cmdlet 的更改，请参阅 [PowerShell 1810 版发行说明](https://docs.microsoft.com/powershell/sccm/1810-release-notes?view=sccm-ps)。
 
-以下更新汇总 (4486457) 于 2019 年 1 月 25 日起在控制台中提供：[Configuration Manager Current Branch（版本 1810）更新汇总](https://support.microsoft.com/help/4486457)。
+从 2019 年 3 月 25 日开始，以下更新汇总 (4488598) 在控制台中可用：[Configuration Manager Current Branch 版本 1810 更新汇总 2](https://support.microsoft.com/help/4488598)。 它将替换先前的更新汇总 KB 4486457。
 
 
 ### <a name="hotfixes"></a>修补程序

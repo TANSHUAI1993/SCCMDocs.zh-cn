@@ -2,7 +2,7 @@
 title: 支持 Windows 10
 titleSuffix: Configuration Manager
 description: 了解支持作为客户端或 OSD 对 System Center Configuration Manager 使用的 Windows 10 版本
-ms.date: 11/27/2018
+ms.date: 03/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,21 +11,20 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7e09453086d2ce8ff02e566188e5ae4a20228820
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 5fe2ae298aff96683b5e7a99cff964c3810948b8
+ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56135933"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58523888"
 ---
 # <a name="support-for-windows-10-in-configuration-manager"></a>Configuration Manager 支持使用 Windows 10  
 
 适用范围：System Center Configuration Manager (Current Branch)
 
-
 了解 Configuration Manager 支持的 Windows 10 版本，包括：
- -  [作为 Configuration Manager 客户端的 Windows 10](#windows-10-as-a-client)
- -  [适用于 Windows 10 的 Windows 评估和部署工具包 (ADK)](#windows-10-adk)
+- [作为 Configuration Manager 客户端的 Windows 10](#windows-10-as-a-client)
+- [适用于 Windows 10 的 Windows 评估和部署工具包 (ADK)](#windows-10-adk)
 
 > [!Tip]
 > 如同支持 Windows 10 版本一样支持作为客户端的 Windows Server 内部版本。 例如，Windows Server 2016 是与 Windows 10 LTSB 2016 相同的内部版本，Windows Server 版本 1803 是与 Windows 10 版本 1803 相同的内部版本。
@@ -40,28 +39,28 @@ ms.locfileid: "56135933"
 
 Configuration Manager 版本将在[对该版本的支持](/sccm/core/servers/manage/current-branch-versions-supported)结束后从列表中删除。 同样，对 Enterprise 2015 LTSB 或 1511 等 Windows 10 版本的支持也将在它们不受支持时从列表中删除。
 
--   Configuration Manager Current Branch 的最新版本会接收安全更新和关键更新，其中可能包括 Windows 10 版本中问题的修补程序。 当 Microsoft 发布新版本的 Configuration Manager Current Branch 时，以前的版本将仅接收安全更新。 有关详细信息，请参阅[对 Configuration Manager Current Branch 版本的支持](/sccm/core/servers/manage/current-branch-versions-supported)。  
+- Configuration Manager Current Branch 的最新版本会接收安全更新和关键更新，其中可能包括 Windows 10 版本中问题的修补程序。 当 Microsoft 发布新版本的 Configuration Manager Current Branch 时，以前的版本将仅接收安全更新。 有关详细信息，请参阅[对 Configuration Manager Current Branch 版本的支持](/sccm/core/servers/manage/current-branch-versions-supported)。  
 
     > [!Note]  
     > 使 Windows 10 保持最新的最佳方式是随时关注 Configuration Manager 的最新动态。 有关详细信息，请参阅 [Configuration Manager 和 Windows 即服务](/sccm/core/understand/configuration-manager-and-windows-as-service)。  
 
--   此信息补充了[客户端和设备支持的操作系统](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices)。  
+- 此信息补充了[客户端和设备支持的操作系统](/sccm/core/plan-design/configs/supported-operating-systems-for-clients-and-devices)。  
 
--   如果使用 Configuration Manager 的 Long-Term Servicing Branch，请参阅 [Long-Term Servicing Branch 的支持配置](/sccm/core/understand/supported-configurations-for-ltsb)。  
+- 如果使用 Configuration Manager 的 Long-Term Servicing Branch，请参阅 [Long-Term Servicing Branch 的支持配置](/sccm/core/understand/supported-configurations-for-ltsb)。  
 
 <br/>
 下表列出了 Windows 10 的版本，这些版本可用作具有不同 Configuration Manager 版本的客户端。
 
-| Windows 10 版本 | Configuration Manager 1710 | Configuration Manager 1802 | Configuration Manager 1806 | Configuration Manager 1810 |
-|---------------------|-----|-----|-----|-----|
-| Enterprise 2015 LTSB <!--10/14/2025-->   | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
-| Enterprise 2016 LTSB <!--10/13/2026-->   | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
-| Enterprise LTSC 2019 <!--10/10/2028-->   | ![不支持](media/Red_X.png)   | ![不支持](media/Red_X.png)   | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
-| 1607   <!--04/09/2019-->   | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
-| 1703   <!--10/08/2019-->   | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
-| 1709   <!--04/14/2020-->   | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
-| 1803   <!--11/10/2020-->   | ![不支持](media/Red_X.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
-| 1809   <!--04/12/2021?-->   | ![不支持](media/Red_X.png) | ![不支持](media/Red_X.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
+| Windows 10 版本 | Configuration Manager 1710 | Configuration Manager 1802 | Configuration Manager 1806 | Configuration Manager 1810 | Configuration Manager 1902 |
+|---------------------|-----|-----|-----|-----|-----|
+| 企业版 2015 长期服务 <!--10/14/2025-->   | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
+| 企业版 2016 长期服务 <!--10/13/2026-->   | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
+| Enterprise LTSC 2019 <!--10/10/2028-->   | ![不支持](media/Red_X.png)   | ![不支持](media/Red_X.png)   | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
+| 1607   <!--04/09/2019-->   | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
+| 1703   <!--10/08/2019-->   | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
+| 1709   <!--04/14/2020-->   | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
+| 1803   <!--11/10/2020-->   | ![不支持](media/Red_X.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
+| 1809   <!--04/12/2021?-->   | ![不支持](media/Red_X.png) | ![不支持](media/Red_X.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
 
 <!-- lifecycle reference: https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet -->
 
@@ -84,23 +83,27 @@ Configuration Manager 版本将在[对该版本的支持](/sccm/core/servers/man
 
 使用 Configuration Manager 部署操作系统时，Windows ADK 是必需的外部依赖项。 有关详细信息，请参阅 [OS 部署的基础架构要求](/sccm/osd/plan-design/infrastructure-requirements-for-operating-system-deployment#windows-adk-for-windows-10)。
 
+> [!Important]  
+> 从 Windows 10 版本 1809 开始，Windows PE 是单独的安装程序。 但是功能上没有任何区别。
+
+<br/>
 下表列出了可用于不同版本 Configuration Manager 的 Windows 10 ADK 的版本。
 
-| Windows 10 ADK 版本  | Configuration Manager 1710 | Configuration Manager 1802 | Configuration Manager 1806 | Configuration Manager 1810 |
-|--------------------|-----|-----|-----|-----|
-| 1703  | ![后向兼容](media/blue_compat.png) | ![后向兼容](media/blue_compat.png) | ![不支持](media/Red_X.png) | ![不支持](media/Red_X.png) |
-| 1709  | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![后向兼容](media/blue_compat.png) | ![不支持](media/Red_X.png)   |
-| 1803  | ![不支持](media/Red_X.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![后向兼容](media/blue_compat.png) |
-| 1809  | ![不支持](media/Red_X.png) | ![不支持](media/Red_X.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
+| Windows 10 ADK 版本  | Configuration Manager 1710 | Configuration Manager 1802 | Configuration Manager 1806 | Configuration Manager 1810 | Configuration Manager 1902 |
+|--------------------|-----|-----|-----|-----|-----|
+| **1703**<br>(10.1.15063) | ![后向兼容](media/blue_compat.png) | ![后向兼容](media/blue_compat.png) | ![不支持](media/Red_X.png) | ![不支持](media/Red_X.png) | ![不支持](media/Red_X.png) |
+| **1709**<br>(10.1.16299) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![后向兼容](media/blue_compat.png) | ![不支持](media/Red_X.png)   | ![不支持](media/Red_X.png) |
+| **1803**<br>(10.1.17134) | ![不支持](media/Red_X.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![后向兼容](media/blue_compat.png) | ![后向兼容](media/blue_compat.png) |
+| **1809**<br>(10.1.17763) | ![不支持](media/Red_X.png) | ![不支持](media/Red_X.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) | ![支持](media/green_check.png) |
 
 |项|
 |--|
-| ![支持](media/green_check.png) = **支持** <br/> Microsoft 建议使用与要部署的 Windows 版本匹配的 Windows ADK。 例如，部署 Windows 10 版本 1703 时，使用适用于 Windows 10 版本 1703 的 Windows ADK。 有关 Windows ADK 组件支持能力的详细信息，请参阅 [DISM supported platforms](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-supported-platforms)（DISM 支持的平台）和 [USMT requirements](https://docs.microsoft.com/windows/deployment/usmt/usmt-requirements#bkmk-1)（USMT 要求）。 |
+| ![支持](media/green_check.png) = **支持** <br/> Microsoft 建议使用与要部署的 Windows 版本匹配的 Windows ADK。 部署最新的 Windows 10 版本时，请使用最新的 Windows ADK 版本。 最新的 Windows ADK 版本可能支持部署较低的 OS 版本，如 Windows 7。<!-- SCCMDocs issue 1229 --> 有关 Windows ADK 组件支持能力的详细信息，请参阅 [DISM supported platforms](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism-supported-platforms)（DISM 支持的平台）和 [USMT requirements](https://docs.microsoft.com/windows/deployment/usmt/usmt-requirements#bkmk-1)（USMT 要求）。 |
 | ![Backwards compatible](media/blue_compat.png)  = 后向兼容 <br/> 此组合未经测试，但应该适用。 我们会记录任何已知问题或注意事项。 |
 | ![不支持](media/Red_X.png) = **不支持** |
 
- > [!Note]  
- > Configuration Manager 仅支持 Windows 10 ADK 的 x86 和 amd64 组件。 当前不支持 ARM 或 ARM64 组件。 
+> [!Note]  
+> Configuration Manager 仅支持 Windows 10 ADK 的 x86 和 amd64 组件。 当前不支持 ARM 或 ARM64 组件。 
 
 > [!Tip]
 > Windows Server 内部版本具有与关联的 Windows 10 版本相同的 Windows ADK 需求。 例如，Windows Server 2016 的生成版本与 Windows 10 LTSB 2016 相同。

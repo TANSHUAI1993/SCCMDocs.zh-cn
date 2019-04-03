@@ -2,7 +2,7 @@
 title: 增量版本
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 最新更新中的新增功能。
-ms.date: 11/27/2018
+ms.date: 03/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,35 +11,38 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d78297845f256468d13deaa4af4e4a63b8819a21
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 350b349aee07a984b51d1d1f53358bf45dd4402b
+ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56137451"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58523701"
 ---
 # <a name="whats-new-in-configuration-manager-incremental-versions"></a>Configuration Manager 增量版本中的新增功能
 
 适用范围：System Center Configuration Manager (Current Branch)
 
- Configuration Manager 采用控制台中[更新和服务](/sccm/core/servers/manage/updates)进程。 此更新进程可以轻松发现和安装 Configuration Manager 更新。 不再需要跟踪和安装服务包或累积更新版本。 无需再搜索下载最新版本或更新。
+Configuration Manager 采用控制台中[更新和服务](/sccm/core/servers/manage/updates)进程。 此更新进程可以轻松发现和安装 Configuration Manager 更新。 不再需要跟踪和安装服务包或累积更新版本。 无需再搜索下载最新版本或更新。
 
- 若要将产品更新到 Current Branch 的新版本，可使用 Configuration Manager 控制台查找并[安装控制台中更新](/sccm/core/servers/manage/install-in-console-updates)。 Microsoft 每年都会发布几次包括产品更新的新版本。 每个版本都会引入新功能。 安装具有新功能的更新时，可以选择使用这些功能。 
+若要将产品更新到 Current Branch 的新版本，可使用 Configuration Manager 控制台查找并[安装控制台中更新](/sccm/core/servers/manage/install-in-console-updates)。 Microsoft 每年都会发布几次包括产品更新的新版本。 每个版本都会引入新功能。 安装具有新功能的更新时，可以选择使用这些功能。 
 
- 不同的更新版本会按年和月标识出来。 例如，版本 1511 标识的年月为 2015 年 11 月（Configuration Manager Current Branch 首次发布到制造阶段的月份）。 之后的更新具有类似 1802（表示更新创建于 2018 年 2 月）的版本名称。 这些更新版本是了解 Configuration Manager 安装的增量版本以及能在环境中启用哪些功能的关键。
+不同的更新版本会按年和月标识出来。 例如，版本 1511 标识的年月为 2015 年 11 月（Configuration Manager Current Branch 首次发布到制造阶段的月份）。 之后的更新具有类似 1802（表示更新创建于 2018 年 2 月）的版本名称。 这些更新版本是了解 Configuration Manager 安装的增量版本以及能在环境中启用哪些功能的关键。
 
 
 
 ## <a name="supported-versions"></a>支持的版本
- 使用以下链接查看每个受支持版本的新增功能：
-  - [1810 版中的新增功能](/sccm/core/plan-design/changes/whats-new-in-version-1810)
-  - [1806 版中的新增功能](/sccm/core/plan-design/changes/whats-new-in-version-1806)  
-  - [1802 版中的新增功能](/sccm/core/plan-design/changes/whats-new-in-version-1802)
-  - [版本 1710 中的新增功能](/sccm/core/plan-design/changes/whats-new-in-version-1710)
 
+使用以下链接查看每个受支持版本的新增功能：
+    - [版本 1902 中的新增功能](/sccm/core/plan-design/changes/whats-new-in-version-1902)
+    - [1810 版中的新增功能](/sccm/core/plan-design/changes/whats-new-in-version-1810)
+    - [1806 版中的新增功能](/sccm/core/plan-design/changes/whats-new-in-version-1806)  
+    - [1802 版中的新增功能](/sccm/core/plan-design/changes/whats-new-in-version-1802)
+    - [版本 1710 中的新增功能](/sccm/core/plan-design/changes/whats-new-in-version-1710)
 
 对于 1710 前发布的 Configuration Manager 版本，支持期为 12 个月。 从 1710 版本开始后，对于每个更新版本，仍为自其通用版本 (GA) 发布日期起 18 个月内受支持。  了解最新的更新版本。 有关详细信息，请参阅[对 Configuration Manager Current Branch 版本的支持](/sccm/core/servers/manage/current-branch-versions-supported)。  
 
 
+
 ## <a name="see-also"></a>另请参阅
+
 [发行说明](/sccm/core/servers/deploy/install/release-notes)

@@ -2,7 +2,7 @@
 title: 客户端通知
 titleSuffix: Configuration Manager
 description: 通过立即从中央 Configuration Manager 控制台执行操作来管理客户端。
-ms.date: 03/19/2019
+ms.date: 03/22/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 39135a1fa548c83e0ba9c7d2a98cf1e925217280
-ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
+ms.openlocfilehash: db68a55136d708ad9276f8b1319dde33fcde35ac
+ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58197021"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477460"
 ---
 # <a name="client-notification-in-configuration-manager"></a>Configuration Manager 中的客户端通知
 
@@ -141,7 +141,7 @@ ms.locfileid: "58197021"
 
 ### <a name="wake-up"></a>唤醒
 
-从版本 1810 开始，触发休眠设备恢复全功率状态。
+从版本 1810 开始，使用同一子网上的其他设备触发配置为支持使用 LAN 唤醒进行唤醒的设备，以发送 LAN 唤醒包。
 
 
 ### <a name="restart"></a>重启

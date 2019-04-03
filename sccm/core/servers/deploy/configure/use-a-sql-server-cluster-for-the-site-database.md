@@ -11,18 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cdbe1d7c3fb28a16c6ba55d073adba3781b12f58
-ms.sourcegitcommit: 544f335cfd1bfd0a1d4973439780e9f5e9ee8bed
+ms.openlocfilehash: d07005c63f0d69d57d24eac163b67c34529658cf
+ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562051"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477545"
 ---
 # <a name="use-a-sql-server-cluster-for-the-site-database"></a>将 SQL Server 群集用于站点数据库
 
 适用范围：System Center Configuration Manager (Current Branch)
 
-可以使用 SQL Server 群集托管 Configuration Manager 站点数据库。 群集提供故障转移支持，并提高站点数据库的可靠性。 但是，它不提供额外的处理或负载均衡优势。 由于站点服务器在连接到站点数据库之前必须查找 SQL Server 群集的活动节点，因此可能出现性能下降。  
+可以使用 SQL Server 故障转移群集托管 Configuration Manager 站点数据库。 群集提供故障转移支持，并提高站点数据库的可靠性。 但是，它不提供额外的处理或负载均衡优势。 此外，SQL Server 故障转移群集还使用共享的存储，并引入了单点故障。 由于站点服务器在连接到站点数据库之前必须查找 SQL Server 群集的活动节点，因此可能出现性能下降。  
 
 > [!IMPORTANT]  
 > SQL Server 群集是否设置成功依赖于 SQL Server 文档库中提供的文档和过程。  
