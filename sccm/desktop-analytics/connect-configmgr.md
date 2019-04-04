@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 063502ae7b09fcdcd7ae1b5c463da4b616829804
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 1280e7cbd1c2d8e7524b296e48d0b1bec426d9ed
+ms.sourcegitcommit: da753df27d3909265ca45d3e79091f1e98758d16
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56754647"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58913619"
 ---
 # <a name="how-to-connect-configuration-manager-with-desktop-analytics"></a>如何将 Configuration Manager 和桌面分析 
 
@@ -31,7 +31,7 @@ ms.locfileid: "56754647"
 
 首先，请确保至少运行 Configuration Manager 站点版本 1810年。 有关详细信息，请参阅[安装控制台内部更新](/sccm/core/servers/manage/install-in-console-updates)。
 
-此外需要安装版本 1810年更新汇总 (4486457) 以支持与桌面 Analytics 的集成。 有关此更新的详细信息，请参阅[更新的 Configuration Manager current branch，版本 1810年汇总](https://support.microsoft.com/help/4486457)。
+此外需要安装版本 1810年更新汇总 2 (4488598) 以支持与桌面 Analytics 的集成。 有关此更新的详细信息，请参阅[Configuration Manager current branch，版本 1810年更新汇总 2](https://support.microsoft.com/help/4488598)。
 
 1. 使用版本 1810 的更新汇总更新站点。 有关详细信息，请参阅[安装控制台内部更新](/sccm/core/servers/manage/install-in-console-updates)。  
 

@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8602db7ece8d786598eb419eb855f1c77cff35ca
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 4105a8a81ab3f09dee9cf3ca5a2462ed2bb4183a
+ms.sourcegitcommit: da753df27d3909265ca45d3e79091f1e98758d16
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56754681"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58913585"
 ---
 # <a name="what-is-desktop-analytics"></a>什么是桌面分析？
 
@@ -74,7 +74,7 @@ ms.locfileid: "56754681"
 
     - **公司管理员**在 Azure 中的权限  
 
-- Configuration Manager，版本 1810年 4486457 或更高版本的更新汇总。 有关详细信息，请参阅[更新 Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix)。  
+- Configuration Manager，版本 1810年与更新汇总 4488598 或更高版本。 有关详细信息，请参阅[更新 Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix)。  
 
     - **完全权限管理员**角色在 Configuration Manager  
 
