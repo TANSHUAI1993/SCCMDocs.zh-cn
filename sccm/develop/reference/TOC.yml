@@ -67,19 +67,19 @@ items:
   - name: ICcmAlternateDowloadProvider 接口
     href: core/servers/configure/iccmalternatedowloadprovider-interface.md
     items:
-    - name: ICcmAlternatedownloadProvider：CancelJob 方法
+    - name: ICcmAlternatedownloadProvider CancelJob 方法
       href: core/servers/configure/iccmalternatedownloadprovider---canceljob-method.md
-    - name: ICcmAlternatedownloadProvider：DownloadContent 方法
+    - name: ICcmAlternatedownloadProvider DownloadContent 方法
       href: core/servers/configure/iccmalternatedownloadprovider---downloadcontent-method.md
-    - name: ICcmAlternatedownloadProvider：ModifyJobPriority 方法
+    - name: ICcmAlternatedownloadProvider ModifyJobPriority 方法
       href: core/servers/configure/iccmalternatedownloadprovider---modifyjobpriority-method.md
-    - name: ICcmAlternatedownloadProvider：ModifyJobSource 方法
+    - name: ICcmAlternatedownloadProvider ModifyJobSource 方法
       href: core/servers/configure/iccmalternatedownloadprovider---modifyjobsource-method.md
-    - name: ICcmAlternatedownloadProvider：ModifyJobTimeout 方法
+    - name: ICcmAlternatedownloadProvider ModifyJobTimeout 方法
       href: core/servers/configure/iccmalternatedownloadprovider---modifyjobtimeout-method.md
-    - name: ICcmAlternatedownloadProvider：Resume 方法
+    - name: ICcmAlternatedownloadProvider Resume 方法
       href: core/servers/configure/iccmalternatedownloadprovider---resume-method.md
-    - name: ICcmAlternatedownloadProvider：Suspend 方法
+    - name: ICcmAlternatedownloadProvider Suspend 方法
       href: core/servers/configure/iccmalternatedownloadprovider---suspend-method.md
   - name: ICcmContentTransferManager4 Interface
     href: core/servers/configure/iccmcontenttransfermanager4-interface.md
@@ -260,22 +260,22 @@ items:
     - name: IAppContentExt 接口
       href: core/clients/client-classes/iappcontentext-interface.md
       items:
-      - name: IAppContentExt::GetExcludedFileList
+      - name: IAppContentExt GetExcludedFileList
         href: core/clients/client-classes/iappcontentext--getexcludedfilelist.md
     - name: IAppManagementHandler 接口
       href: core/clients/client-classes/iappmanagementhandler-interface.md
       items:
-      - name: IAppManagementHandler::CheckReconnectData 方法
+      - name: IAppManagementHandler CheckReconnectData 方法
         href: core/clients/client-classes/iappmanagementhandler--checkreconnectdata-method.md
-      - name: IAppManagementHandler::CompleteEnforcement 方法
+      - name: IAppManagementHandler CompleteEnforcement 方法
         href: core/clients/client-classes/iappmanagementhandler--completeenforcement-method.md
-      - name: IAppManagementHandler::DiscoverApp 方法
+      - name: IAppManagementHandler DiscoverApp 方法
         href: core/clients/client-classes/iappmanagementhandler--discoverapp-method.md
-      - name: IAppManagementHandler::EnforceApp 方法
+      - name: IAppManagementHandler EnforceApp 方法
         href: core/clients/client-classes/iappmanagementhandler--enforceapp-method.md
-      - name: IAppManagementHandler::EnumerateApps 方法
+      - name: IAppManagementHandler EnumerateApps 方法
         href: core/clients/client-classes/iappmanagementhandler--enumerateapps-method.md
-      - name: IAppManagementHandler::GetPendingComponentList 方法
+      - name: IAppManagementHandler GetPendingComponentList 方法
         href: core/clients/client-classes/iappmanagementhandler--getpendingcomponentlist-method.md
     - name: IAppManagementTypes 接口
       href: core/clients/client-classes/iappmanagementtypes-interface.md
@@ -383,53 +383,53 @@ items:
     - name: ICIINFO 接口
       href: core/clients/client-classes/iciinfo-interface.md
       items:
-      - name: ICIINFO::GetCategory 方法
+      - name: ICIINFO GetCategory 方法
         href: core/clients/client-classes/iciinfo--getcategory-method.md
-      - name: ICIINFO::GetCategoryCount 方法
+      - name: ICIINFO GetCategoryCount 方法
         href: core/clients/client-classes/iciinfo--getcategorycount-method.md
-      - name: ICIINFO::GetCIPresence 方法
+      - name: ICIINFO GetCIPresence 方法
         href: core/clients/client-classes/iciinfo--getcipresence-method.md
-      - name: ICIINFO::GetContextInfo 方法
+      - name: ICIINFO GetContextInfo 方法
         href: core/clients/client-classes/iciinfo--getcontextinfo-method.md
-      - name: ICIINFO::GetDependantPackages 方法
+      - name: ICIINFO GetDependantPackages 方法
         href: core/clients/client-classes/iciinfo--getdependantpackages-method.md
-      - name: ICIINFO::GetDetailedComplianceInfo 方法
+      - name: ICIINFO GetDetailedComplianceInfo 方法
         href: core/clients/client-classes/iciinfo--getdetailedcomplianceinfo-method.md
-      - name: ICIINFO::GetEvalState 方法
+      - name: ICIINFO GetEvalState 方法
         href: core/clients/client-classes/iciinfo--getevalstate-method.md
-      - name: ICIINFO::GetId 方法
+      - name: ICIINFO GetId 方法
         href: core/clients/client-classes/iciinfo--getid-method.md
-      - name: ICIINFO::GetJobState 方法
+      - name: ICIINFO GetJobState 方法
         href: core/clients/client-classes/iciinfo--getjobstate-method.md
-      - name: ICIINFO::GetLastEvalTime 方法
+      - name: ICIINFO GetLastEvalTime 方法
         href: core/clients/client-classes/iciinfo--getlastevaltime-method.md
-      - name: ICIINFO::GetProperty 方法
+      - name: ICIINFO GetProperty 方法
         href: core/clients/client-classes/iciinfo--getproperty-method.md
-      - name: ICIINFO::GetSdmTypeName 方法
+      - name: ICIINFO GetSdmTypeName 方法
         href: core/clients/client-classes/iciinfo--getsdmtypename-method.md
-      - name: ICIINFO::GetVersion 方法
+      - name: ICIINFO GetVersion 方法
         href: core/clients/client-classes/iciinfo--getversion-method.md
     - name: IDCMAgentCallback 接口
       href: core/clients/client-classes/idcmagentcallback-interface.md
       items:
-      - name: IDCMAgentCallback::NotifyComplete 方法
+      - name: IDCMAgentCallback NotifyComplete 方法
         href: core/clients/client-classes/idcmagentcallback--notifycomplete-method.md
-      - name: IDCMAgentCallback::NotifyError 方法
+      - name: IDCMAgentCallback NotifyError 方法
         href: core/clients/client-classes/idcmagentcallback--notifyerror-method.md
-      - name: IDCMAgentCallback::NotifyProgress 方法
+      - name: IDCMAgentCallback NotifyProgress 方法
         href: core/clients/client-classes/idcmagentcallback--notifyprogress-method.md
     - name: IDCMSDK 接口
       href: core/clients/client-classes/idcmsdk-interface.md
       items:
-      - name: IDCMSDK::EvaluateBaseline 方法
+      - name: IDCMSDK EvaluateBaseline 方法
         href: core/clients/client-classes/idcmsdk--evaluatebaseline-method.md
-      - name: IDCMSDK::GetAssignedBaselines 方法
+      - name: IDCMSDK GetAssignedBaselines 方法
         href: core/clients/client-classes/idcmsdk--getassignedbaselines-method.md
-      - name: IDCMSDK::GetBaselineComplianceReport 方法
+      - name: IDCMSDK GetBaselineComplianceReport 方法
         href: core/clients/client-classes/idcmsdk--getbaselinecompliancereport-method.md
-      - name: IDCMSDK::GetBaselineInfo 方法
+      - name: IDCMSDK GetBaselineInfo 方法
         href: core/clients/client-classes/idcmsdk--getbaselineinfo-method.md
-      - name: IDCMSDK::SetEvaluationCallback 方法
+      - name: IDCMSDK SetEvaluationCallback 方法
         href: core/clients/client-classes/idcmsdk--setevaluationcallback-method.md
     - name: CIDetectInfo 结构
       href: core/clients/client-classes/cidetectinfo-structure.md
@@ -482,28 +482,40 @@ items:
       - name: IProgressUI 接口
         href: core/clients/client-classes/iprogressui-interface.md
         items:
-        - name: IProgressUI::ShowActionProgress 方法
+        - name: IProgressUI CloseProgressDialog 方法
+          href: core/clients/client-classes/iprogressui--closeprogressdialog-method.md
+        - name: IProgressUI ShowActionProgress 方法
           href: core/clients/client-classes/iprogressui--showactionprogress-method.md
+        - name: IProgressUI ShowErrorDialog 方法
+          href: core/clients/client-classes/iprogressui--showerrordialog-method.md
+        - name: IProgressUI ShowMessage 方法
+          href: core/clients/client-classes/iprogressui--showmessage-method.md
+        - name: IProgressUI ShowRebootDialog 方法
+          href: core/clients/client-classes/iprogressui--showrebootdialog-method.md
+        - name: IProgressUI ShowSwapMediaDialog 方法
+          href: core/clients/client-classes/iprogressui--showswapmediadialog-method.md
+        - name: IProgressUI ShowTSProgress 方法
+          href: core/clients/client-classes/iprogressui--showtsprogress-method.md
     - name: PxeAuthClass 客户端 COM 自动化类
       href: core/clients/client-classes/pxeauthclass-client-com-automation-class.md
       items:
       - name: IPxeAuthClass 接口
         href: core/clients/client-classes/ipxeauthclass-interface.md
         items:
-        - name: IPxeAuthClass::CreateIdentity 方法
+        - name: IPxeAuthClass CreateIdentity 方法
           href: core/clients/client-classes/ipxeauthclass--createidentity-method.md
-        - name: IPxeAuthClass::ReadIdentity 方法
+        - name: IPxeAuthClass ReadIdentity 方法
           href: core/clients/client-classes/ipxeauthclass--readidentity-method.md
     - name: ITSEnvClass 接口
       href: core/clients/client-classes/itsenvclass-interface.md
       items:
-      - name: ITSEnvClass::Clear 方法
+      - name: ITSEnvClass Clear 方法
         href: core/clients/client-classes/itsenvclass--clear-method.md
-      - name: ITSEnvClass::Create 方法
+      - name: ITSEnvClass Create 方法
         href: core/clients/client-classes/itsenvclass--create-method.md
-      - name: ITSEnvClass::GetVariables 方法
+      - name: ITSEnvClass GetVariables 方法
         href: core/clients/client-classes/itsenvclass--getvariables-method.md
-      - name: ITSEnvClass::Value 属性
+      - name: ITSEnvClass Value 属性
         href: core/clients/client-classes/itsenvclass--value-property.md
   - name: 带外管理客户端 WMI 类
     href: core/clients/client-classes/out-of-band-management-client-wmi-classes.md
@@ -1476,37 +1488,37 @@ items:
     - name: ITsMediaClass 接口
       href: misc/itsmediaclass-interface.md
       items:
-      - name: ITsMediaClass::Cancel 方法
+      - name: ITsMediaClass Cancel 方法
         href: misc/itsmediaclass--cancel-method.md
-      - name: ITsMediaClass::ConnectionOptions 属性
+      - name: ITsMediaClass ConnectionOptions 属性
         href: misc/itsmediaclass--connectionoptions-property.md
-      - name: ITsMediaClass::CreateBootMedia 方法
+      - name: ITsMediaClass CreateBootMedia 方法
         href: misc/itsmediaclass--createbootmedia-method.md
-      - name: ITsMediaClass::CreateCaptureMedia 方法
+      - name: ITsMediaClass CreateCaptureMedia 方法
         href: misc/itsmediaclass--createcapturemedia-method.md
-      - name: ITsMediaClass::CreateStandaloneMedia 方法
+      - name: ITsMediaClass CreateStandaloneMedia 方法
         href: misc/itsmediaclass--createstandalonemedia-method.md
-      - name: ITsMediaClass::CurrentStep 属性
+      - name: ITsMediaClass CurrentStep 属性
         href: misc/itsmediaclass--currentstep-property.md
-      - name: ITsMediaClass::DistributionPoints 属性
+      - name: ITsMediaClass DistributionPoints 属性
         href: misc/itsmediaclass--distributionpoints-property.md
-      - name: ITsMediaClass::ErrorDetail 属性
+      - name: ITsMediaClass ErrorDetail 属性
         href: misc/itsmediaclass--errordetail-property.md
-      - name: ITsMediaClass::ExitCode 属性
+      - name: ITsMediaClass ExitCode 属性
         href: misc/itsmediaclass--exitcode-property.md
-      - name: ITsMediaClass::MediaLabel 属性
+      - name: ITsMediaClass MediaLabel 属性
         href: misc/itsmediaclass--medialabel-property.md
-      - name: ITsMediaClass::NumSteps 属性
+      - name: ITsMediaClass NumSteps 属性
         href: misc/itsmediaclass--numsteps-property.md
-      - name: ITsMediaClass::ProviderName 属性
+      - name: ITsMediaClass ProviderName 属性
         href: misc/itsmediaclass--providername-property.md
-      - name: ITsMediaClass::SiteCode 属性
+      - name: ITsMediaClass SiteCode 属性
         href: misc/itsmediaclass--sitecode-property.md
-      - name: ITsMediaClass::Status 属性
+      - name: ITsMediaClass Status 属性
         href: misc/itsmediaclass--status-property.md
-      - name: ITsMediaClass::StepInfo 属性
+      - name: ITsMediaClass StepInfo 属性
         href: misc/itsmediaclass--stepinfo-property.md
-      - name: ITsMediaClass::StepProgress 属性
+      - name: ITsMediaClass StepProgress 属性
         href: misc/itsmediaclass--stepprogress-property.md
 - name: 操作系统部署类
   href: osd/operating-system-deployment-classes.md
@@ -2238,6 +2250,8 @@ items:
       href: core/servers/configure/importglobaluseraccountex-method-in-class-sms_site.md
     - name: 类 SMS_Site 中的 ImportMachineEntry 方法
       href: core/servers/configure/importmachineentry-method-in-class-sms_site.md
+    - name: 类 SMS_Site 中的 ImportMachineEntryToMultipleCollections 方法
+      href: core/servers/configure/importmachineentrytomultiplecollections-method-in-class-sms_site.md
     - name: 类 SMS_Site 中的 IsUsedCert 方法
       href: core/servers/configure/isusedcert-method-in-class-sms_site.md
     - name: 类 SMS_Site 中的 RedistributeAutoUpgradeClientContent 方法
@@ -2619,15 +2633,15 @@ items:
     - name: SMSEvent 类
       href: core/servers/manage/smsevent-class.md
       items:
-      - name: ICCMEvent::EventType 属性
+      - name: ICCMEvent EventType 属性
         href: core/servers/manage/iccmevent--eventtype-property.md
-      - name: ICCMEvent::RawEvent 属性
+      - name: ICCMEvent RawEvent 属性
         href: core/servers/manage/iccmevent--rawevent-property.md
-      - name: ICCMEvent::SetProperty 方法
+      - name: ICCMEvent SetProperty 方法
         href: core/servers/manage/iccmevent--setproperty-method.md
-      - name: ICCMEvent::Submit 方法
+      - name: ICCMEvent Submit 方法
         href: core/servers/manage/iccmevent--submit-method.md
-      - name: ICCMEvent::SubmitPending 方法
+      - name: ICCMEvent SubmitPending 方法
         href: core/servers/manage/iccmevent--submitpending-method.md
   - name: 状态消息类型
     href: core/servers/manage/status-message-types.md
@@ -2745,11 +2759,9 @@ items:
     href: misc/sms_windowsservicinglocalizednames-server-wmi-class.md
   - name: SMS_WindowsServicingStates 服务器 WMI 类
     href: misc/sms_windowsservicingstates-server-wmi-class.md
-- name: Configuration Manager 托管参考
-  href: https://msdn.microsoft.com/library/mt767606.aspx
-ms.openlocfilehash: ba172c1d11b9c3089e8cbeec1493cbeb0ebe4217
-ms.sourcegitcommit: 4f05517f7b284696a492a1b184cc5f25c5cda5e6
+ms.openlocfilehash: 19da531a2b9821b54ed03f93e495cdfbb1e84f86
+ms.sourcegitcommit: deb28cdc95a456d4a38499ef1bc71e765ef6dc13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48891242"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58901530"
