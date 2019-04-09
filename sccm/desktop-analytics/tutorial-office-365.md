@@ -2,7 +2,7 @@
 title: 教程-部署 Office 365
 titleSuffix: Configuration Manager
 description: 使用桌面 Analytics 和 Configuration Manager 将 Office 365 部署到试验组的教程。
-ms.date: 01/25/2019
+ms.date: 04/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: tutorial
@@ -12,14 +12,14 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 12f19fe6f52d1ceb4b47b080e45030df898a332a
-ms.sourcegitcommit: da753df27d3909265ca45d3e79091f1e98758d16
+ms.openlocfilehash: 4d21b2b94c53390a9fcdbc1be640578060042ea9
+ms.sourcegitcommit: 5ee9487c891c37916294bd34a10d04e398f111f7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58913551"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59069443"
 ---
-# <a name="tutorial-deploy-office-365-to-pilot"></a>教程：将 Office 365 部署到试运行 
+# <a name="tutorial-deploy-office-365-to-pilot"></a>教程：将 Office 365 部署到试运行
 
 > [!Note]  
 > 此信息与商业发布之前可能有大幅度修改的预览服务。 对于此处提供的信息，Microsoft 不提供任何明示或暗示的担保。  
@@ -34,7 +34,7 @@ ms.locfileid: "58913551"
 > * 为 Office 365 专业增强版创建桌面分析部署计划  
 > * 将 Office 365 专业增强版 Configuration Manager 中部署到试验组  
 
-如果还没有 Azure 订阅，创建[免费帐户](https://azure.microsoft.com/free/?WT.mc_id=A261C142F)在开始之前。 正确配置后，使用 Desktop Analytics 不会产生任何 Azure 费用。 
+如果还没有 Azure 订阅，创建[免费帐户](https://azure.microsoft.com/free/?WT.mc_id=A261C142F)在开始之前。 正确配置后，使用 Desktop Analytics 不会产生任何 Azure 费用。
 
 使用桌面分析*Log Analytics 工作区*在 Azure 订阅中。 工作区是实质上是包含帐户信息和帐户简单配置信息的容器。 有关详细信息，请参阅[管理的工作区](https://docs.microsoft.com/azure/log-analytics/log-analytics-manage-access?toc=/azure/azure-monitor/toc.json)。
 
@@ -109,7 +109,7 @@ ms.locfileid: "58913551"
 
     - **工作区参与者**:创建和管理此工作区中的部署计划。 它们不需要任何其他的 Azure 访问权限。  
   
-   若要将用户添加到这两个组中，键入在其名称或电子邮件地址**输入名称或电子邮件地址**相应的组的部分。 完成后，选择**下一步**。 
+   若要将用户添加到这两个组中，键入在其名称或电子邮件地址**输入名称或电子邮件地址**相应的组的部分。 完成后，选择**下一步**。
 
 5. 在到页**设置工作区**:  
 
@@ -148,11 +148,11 @@ ms.locfileid: "58913551"
 
 3. 选择应用，并记下**应用程序 ID**。 此值是用于配置 Configuration Manager 连接的 GUID。  
 
-4. 选择**设置**上的应用，并选择**密钥**。 在中**密码**部分中，输入**密钥说明**，指定一个过期**持续时间**，然后选择**保存**。 复制**值**的密钥，用于进行配置的配置管理器连接。 
+4. 选择**设置**上的应用，并选择**密钥**。 在中**密码**部分中，输入**密钥说明**，指定一个过期**持续时间**，然后选择**保存**。 复制**值**的密钥，用于进行配置的配置管理器连接。
 
     > [!Important]  
     > 这是唯一的机会来复制密钥值。 如果您不立即将其复制，需要创建另一个密钥。  
-    > 
+    >
     > 将密钥值保存在安全的位置。  
 
 5. 在应用上**设置**面板中，选择**所需的权限**。  
@@ -205,11 +205,11 @@ ms.locfileid: "58913551"
 
     - **Azure AD 租户名称**:此名称是它如何命名已在配置管理器  
 
-    - **Azure AD 租户 ID**:**Directory ID**从 Azure AD 复制   
+    - **Azure AD 租户 ID**:**Directory ID**从 Azure AD 复制  
 
-    - **客户端 ID**：**应用程序 ID**复制从 Azure AD 应用   
+    - **客户端 ID**：**应用程序 ID**复制从 Azure AD 应用  
 
-    - **机密密钥**:键**值**复制从 Azure AD 应用   
+    - **机密密钥**:键**值**复制从 Azure AD 应用  
 
     - **密钥到期日期**：密钥的同一个到期日期   
 
@@ -233,7 +233,7 @@ ms.locfileid: "58913551"
 
     - **目标集合**:此集合包含所有设备，配置管理器配置商业 ID 和诊断数据设置。 它是完整的配置管理器连接到桌面 Analytics 服务的设备集。  
 
-    - **目标集合中的设备使用用户身份验证代理进行出站通信**:默认情况下，此值是**否**。 如果需要在环境中，将设置为**是**。   
+    - **目标集合中的设备使用用户身份验证代理进行出站通信**:默认情况下，此值是**否**。 如果需要在环境中，将设置为**是**。  
 
     - **选择要与桌面 Analytics 同步的特定集合**:选择**添加**以包括其他集合。 这些集合是可在部署计划及分组 Desktop 分析门户中。 请确保包括试验和试验的排除集合。  
 
@@ -245,7 +245,7 @@ Configuration Manager 创建一个设置策略来配置目标集合中的设备�
 
 监视桌面分析你的设备的配置。 在 Configuration Manager 控制台中，转到**软件库**工作区中，展开**Microsoft 365 维护**节点，然后选择**连接运行状况**仪表板。  
 
-Configuration Manager 同步创建连接的 15 分钟内，任何桌面分析部署计划。 在 Configuration Manager 控制台中，转到**软件库**工作区中，展开**Microsoft 365 维护**节点，然后选择**部署计划**节点。 
+Configuration Manager 同步创建连接的 15 分钟内，任何桌面分析部署计划。 在 Configuration Manager 控制台中，转到**软件库**工作区中，展开**Microsoft 365 维护**节点，然后选择**部署计划**节点。
 
 
 
@@ -275,7 +275,7 @@ Configuration Manager 同步创建连接的 15 分钟内，任何桌面分析部
 
         - 低安装 Office 加载项的计数阈值。默认阈值为`2%`。 低于此阈值的外接程序将自动设置为*低安装计数*。 桌面分析在试用期间不会验证这些加载项。 
 
-            如果外接程序安装在大于此阈值为较高百分比的计算机外, 接程序作为将标记部署计划*Noteworthy*。 然后可以决定要在试验阶段测试其重要性。   
+            如果外接程序安装在大于此阈值为较高百分比的计算机外, 接程序作为将标记部署计划*Noteworthy*。 然后可以决定要在试验阶段测试其重要性。  
 
     - **完成日期**:选择依据 Office 应完全部署到所有目标设备的日期。  
 
@@ -287,7 +287,7 @@ Configuration Manager 同步创建连接的 15 分钟内，任何桌面分析部
 
     1. 上**Office 加载项**选项卡上，选择此选项可以仅显示**未检查**资产。  
 
-    2. 选择每个外接程序，并选择**编辑**。 您可以选择多个应用在同一时间编辑。   
+    2. 选择每个外接程序，并选择**编辑**。 您可以选择多个应用在同一时间编辑。  
 
     3. 选择重要性级别从**重要性**列表。 如果您希望桌面分析在试运行过程中验证外接程序，选择**严重**或**重要**。 它不会验证加载项标记为**不重要**。 分配重要性级别时，请考虑兼容性风险和其他计划见解。  
 
@@ -337,7 +337,7 @@ Configuration Manager 同步创建连接的 15 分钟内，任何桌面分析部
 
     5. 完成后，选择**评审**右上角。 查看配置的设置，并选择**提交**。  
 
-5. 选择“下一步”。 上**部署**页上，选择**否**若要立即部署。 （下一步的过程使用 Desktop 分析部署计划的部署。）选择**下一步**并完成向导。  
+4. 选择“下一步”。 上**部署**页上，选择**否**若要立即部署。 （下一步的过程使用 Desktop 分析部署计划的部署。）选择**下一步**并完成向导。  
 
 
 ### <a name="bkmk_deploy-app"></a> 部署 Office 365 使用 Desktop 分析部署计划
@@ -348,7 +348,12 @@ Configuration Manager 同步创建连接的 15 分钟内，任何桌面分析部
 
 3. 在中**试验状态**磁贴中，选择**应用程序**从下拉列表中，然后选择**部署**。  
 
-4. 上**常规**部署软件向导，选择页面**浏览**旁边**软件**字段。 例如，选择 Office 365 应用程序中， **Office 365 专业增强版**。 通过桌面 Analytics 集成，Configuration Manager 自动创建的试验部署计划的集合。 选择“下一步”。  
+4. 上**常规**部署软件向导，选择页面**浏览**旁边**软件**字段。 例如，选择 Office 365 应用程序中， **Office 365 专业增强版**。 选择“下一步”。  
+
+    > [!Note]  
+    > 通过桌面 Analytics 集成，Configuration Manager 自动创建的试验部署计划的集合。 它可能需要 10 分钟的时间为此集合可以使用它之前进行同步。<!-- 3887891 -->
+    >
+    > 此集合被保留的桌面分析部署计划设备。 不支持对此集合的手动更改。<!-- 3866460, SCCMDocs-pr 3544 -->  
 
 5. 上**内容**页上，选择**添加**，然后选择**分发点**。 选择可用的分发点以承载安装内容，并选择**确定**。 然后选择“下一步”。  
 
@@ -375,11 +380,8 @@ Configuration Manager 同步创建连接的 15 分钟内，任何桌面分析部
 -->
 
 
-
-
 ## <a name="next-steps"></a>后续步骤
 
 转到下一步的文章，了解有关桌面分析部署计划的详细信息。
 > [!div class="nextstepaction"]  
 > [部署计划](/sccm/desktop-analytics/about-deployment-plans)
-

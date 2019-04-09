@@ -2,7 +2,7 @@
 title: 混合 MDM 中的新增功能
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 和 Intune 的混合部署可用的新移动设备管理功能。
-ms.date: 03/28/2019
+ms.date: 04/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-hybrid
 ms.topic: conceptual
@@ -11,32 +11,32 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b26ad559d9417fcc81a2023c1bf1704ae44b7d0c
-ms.sourcegitcommit: 60aff44c76e6432dc544c8b26acba432ac799cfc
+ms.openlocfilehash: 01e5d9761cb90715e88a2658d8bf1c31c7cd92cf
+ms.sourcegitcommit: 5ee9487c891c37916294bd34a10d04e398f111f7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58639590"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59069545"
 ---
 # <a name="whats-new-in-hybrid-mobile-device-management-with-configuration-manager-and-microsoft-intune"></a>Configuration Manager 和 Microsoft Intune 的混合移动设备管理中的新增功能
 
 适用范围：System Center Configuration Manager (Current Branch)
 
-本文提供有关 System Center Configuration Manager 和 Microsoft Intune 的混合部署的可用的新移动设备管理 (MDM) 功能的详细信息。     
+本文提供有关 System Center Configuration Manager 和 Microsoft Intune 的混合部署的可用的新移动设备管理 (MDM) 功能的详细信息。
 
 > [!Important]  
 > 自 2018 年 8 月 14 日起，混合移动设备管理[功能停用](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)。 有关详细信息，请参阅[什么是混合 MDM](/sccm/mdm/understand/hybrid-mobile-device-management)。<!--Intune feature 2683117-->  
 
-
-> [!Note]    
-> Azure 上的 Intune 是 Microsoft 建议的 MDM 解决方案。     
-> - 若有详细了解 Intune 独立版中的新增功能和更新，请参阅 [Intune 中的新增功能](https://docs.microsoft.com/intune/whats-new)。    
+> [!Note]  
+> Azure 上的 Intune 是 Microsoft 建议的 MDM 解决方案。
+>
+> - 若有详细了解 Intune 独立版中的新增功能和更新，请参阅 [Intune 中的新增功能](https://docs.microsoft.com/intune/whats-new)。
 > - 有关如何迁移到 Intune 独立版的详细信息，请参阅[将混合 MDM 用户和设备迁移到 Intune 独立版](/sccm/mdm/deploy-use/migrate-hybridmdm-to-intunesa)。
-> - 有关 Intune 和混合 MDM 的 UI 更新的详细信息，请参阅 [Intune 最终用户应用的 UI 更新](https://docs.microsoft.com/intune/whats-new-app-ui)。 
+> - 有关 Intune 和混合 MDM 的 UI 更新的详细信息，请参阅 [Intune 最终用户应用的 UI 更新](https://docs.microsoft.com/intune/whats-new-app-ui)。
 
 
 
-##  <a name="compatibility-with-configuration-manager-versions"></a>与 Configuration Manager 版本的兼容性  
+## <a name="compatibility-with-configuration-manager-versions"></a>与 Configuration Manager 版本的兼容性  
 
 本文的每个部分都列出了混合功能，并按 3 个不同类别进行分类。 请使用以下指南，确定每个类别中的功能与不同版本的 Configuration Manager 的兼容性：  
 
@@ -52,20 +52,29 @@ ms.locfileid: "58639590"
 
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
 
-#### <a name="install-available-apps-using-the-company-portal-app-after-windows-bulk-enrollment"></a>安装 Windows 批量注册后，使用公司门户应用可用的应用 
+#### <a name="user-experience-update-for-the-company-portal-app-for-ios"></a>iOS 版公司门户应用的用户体验更新
+
+<!-- 2536024 -->
+适用于 iOS 设备的公司门户应用的主页上已经过重新设计。 进行此更改后，主页上更好地遵循 iOS 的 UI 模式。 它还提供用于应用和电子书的改进可发现性。
+
+#### <a name="install-available-apps-using-the-company-portal-app-after-windows-bulk-enrollment"></a>安装 Windows 批量注册后，使用公司门户应用可用的应用
+
 <!-- 2751523 -->
 在使用 Intune 中注册的 Windows 设备[Windows 批量注册](https://docs.microsoft.com/intune/windows-bulk-enroll)（预配包） 将能够使用公司门户应用安装可用的应用程序。 有关公司门户应用的详细信息，请参阅[手动添加 Windows 10 公司门户](https://docs.microsoft.com/intune/store-apps-company-portal-app)并[如何配置 Microsoft Intune 公司门户应用](https://docs.microsoft.com/intune/company-portal-app)。
 
 > [!Note]  
 > 此功能不是尚未完全部署到所有客户。 如果无法在批量注册设备上使用公司门户，你可能需要等待，直到此更改会发布到你的帐户。
 
-#### <a name="app-icons-are-displayed-with-an-automatically-generated-background"></a>使用自动生成的背景显示应用程序图标 
+#### <a name="app-icons-are-displayed-with-an-automatically-generated-background"></a>使用自动生成的背景显示应用程序图标
+
 <!-- 1429026 -->
 Windows 公司门户应用现在将显示带有自动生成的背景的应用程序图标。 如果可以检测到，此背景基于图标主导颜色。 如果适用，在后台将替换了以前应用磁贴上显示的灰色边框。 你将看到此晚于 10.3.3451.0 版本的公司门户中的更改。
 
 #### <a name="changes-to-company-portal-enrollment-for-ios-12-devices"></a>将 12 设备更改为适用于 iOS 的公司门户注册
+
 <!-- 3448635 -->  
 适用于 iOS 的公司门户更新应用程序的注册屏幕和步骤与在 Apple iOS 12.2 中发布的 MDM 注册更改保持一致。 更新的工作流现在会提示您：
+
 - 允许使用 Safari 打开公司门户网站 （通过 Safari) 并返回到公司门户应用之前下载的管理配置文件。 
 - 打开设置应用在其设备上安装管理配置文件。
 - 返回到完成注册的公司门户应用。  
@@ -79,30 +88,31 @@ Windows 公司门户应用现在将显示带有自动生成的背景的应用程
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
 
 #### <a name="create-new-intune-tenants-in-azure-portal"></a>在 Azure 门户中创建新的 Intune 租户
+
 <!--3754067-->  
 创建新的混合 MDM 租户的功能已删除，因为 Intune 1902年的更新。 在 Azure 门户中创建所有新的 Intune 租户。 提醒一下[混合 MDM 已弃用](/sccm/mdm/understand/hybrid-mobile-device-management)。 当前的混合 MDM 客户应尽快迁移至 Intune 独立版。
 
 有关详细信息，请参阅 [Intune 支持博客文章](https://aka.ms/hybrid_notification)。
 
+#### <a name="intune-uses-google-play-protect-apis-on-android-devices"></a>Intune 在 Android 设备上使用 Google Play 保护 Api
 
-#### <a name="intune-uses-google-play-protect-apis-on-android-devices"></a>Intune 在 Android 设备上使用 Google Play 保护 Api 
 <!--2577355-->  
-一些管理员面临着 BYOD 横向其中根用户可能会或越狱其移动电话。 此行为，而有时不格式错误善意，会导致跳过的设置以保护组织的最终用户设备上的数据的多个 Intune 策略。 因此，Intune 提供已注册和未注册设备的根和越狱的检测。 
+一些管理员面临着 BYOD 横向其中根用户可能会或越狱其移动电话。 此行为，而有时不格式错误善意，会导致跳过的设置以保护组织的最终用户设备上的数据的多个 Intune 策略。 因此，Intune 提供已注册和未注册设备的根和越狱的检测。
 
-此版本中，Intune 现在利用 Google Play 保护 Api 将添加到我们现有的根检测检查未注册设备。 尽管 Google 不共享发生的根检测检查整个，但是我们预期这些 Api 来检测已取得 root 权限从设备自定义任何原因为能够在较旧的设备上获取更高版本的操作系统更新其设备的用户。 这些用户将被阻止访问公司数据，或从其策略已启用应用程序，可擦除其公司帐户。 
-
+此版本中，Intune 现在利用 Google Play 保护 Api 将添加到我们现有的根检测检查未注册设备。 尽管 Google 不共享发生的根检测检查整个，但是我们预期这些 Api 来检测已取得 root 权限从设备自定义任何原因为能够在较旧的设备上获取更高版本的操作系统更新其设备的用户。 这些用户将被阻止访问公司数据，或从其策略已启用应用程序，可擦除其公司帐户。
 
 #### <a name="new-app-categories-screen-in-the-company-portal-app-for-windows-10"></a>新**应用类别**适用于 Windows 10 公司门户应用中的屏幕
+
 <!--3834780-->  
 若要提高应用程序浏览和选择体验 Windows 10 公司门户中的，它现在包括一个名为的新屏幕**应用类别**。 用户现在看到排序在类别下，如按其应用**特色**，**教育**，并**工作效率**。 此更改出现在公司门户版本 10.3.3451.0 中及更高版本。 若要查看新屏幕，请参阅[什么是应用程序 UI 中的新增功能](https://docs.microsoft.com/intune/whats-new)。 有关公司门户中的应用程序的详细信息，请参阅[安装并共享你的设备上的应用](https://docs.microsoft.com/intune-user-help/install-apps-cpapp-windows)。  
 
+#### <a name="macos-users-are-prompted-to-update-their-password"></a>系统会提示 macOS 用户更新其密码
 
-#### <a name="macos-users-are-prompted-to-update-their-password"></a>系统会提示 macOS 用户更新其密码 
 <!--1873216-->  
 在 macOS 设备上将提示最终用户更新其密码。 用户运行需要身份验证，例如在登录到设备的任务时则会出现此提示。 此外提示你更新其密码时执行任何操作，需要管理权限，如请求密钥链访问权限的用户。  
 
-
 #### <a name="intune-macos-company-portal-dark-mode"></a>Intune macOS 公司门户深色模式
+
 <!--3300524-->  
 Intune macOS 公司门户现在支持的 macOS 深色模式。 当 macOS 10.14 + 设备上启用深色模式下时，公司门户将调整其外观与反映该模式下的颜色。
 
@@ -112,17 +122,19 @@ Intune macOS 公司门户现在支持的 macOS 深色模式。 当 macOS 10.14 +
 
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
 
-#### <a name="intune-app-protection-policies-ui-update"></a>Intune 应用保护策略用户界面更新 
+#### <a name="intune-app-protection-policies-ui-update"></a>Intune 应用保护策略用户界面更新
+
 <!--3251427-->  
 我们已更改的设置标签和 Intune 应用保护，以使每个易于理解的按钮。 所做的更改包括：  
 
 - 控件更改从**是** / **没有**控件添加到主要**块** / **允许**和**禁用** / **启用**控件。 标签也会更新。  
 
-- 设置重新格式化，因此设置，并且其标签-同时在控件中，以提供更好的导航。   
+- 设置重新格式化，因此设置，并且其标签-同时在控件中，以提供更好的导航。  
 
 默认设置和设置数保持不变，但此更改使用户了解，导航，并利用更多的设置轻松地以应用所选的应用保护策略。 有关详细信息，请参阅[iOS 设置](https://docs.microsoft.com/intune/app-protection-policy-settings-ios#access-requirements)并[Android 设置](https://docs.microsoft.com/intune/app-protection-policy-settings-android#access-requirements)。
 
 #### <a name="tenant-status-dashboard"></a>租户状态仪表板
+
 <!--1124854-->  
 新[租户状态页](https://docs.microsoft.com/intune/tenant-status)提供单个位置可以为你的租户查看状态和相关详细信息。 在仪表板分为四个区域：
 
@@ -136,11 +148,13 @@ Intune macOS 公司门户现在支持的 macOS 深色模式。 当 macOS 10.14 +
 
 - **Intune 新闻**:显示你的租户活动消息。 当你的租户接收的最新的 Intune 功能时，消息将包括通知等内容。  直接从 Office 消息中心检索在本部分中的信息。  
 
-#### <a name="new-help-and-support-experience-in-company-portal-for-windows-10"></a>新的帮助和支持 Windows 10 公司门户中体验 
+#### <a name="new-help-and-support-experience-in-company-portal-for-windows-10"></a>新的帮助和支持 Windows 10 公司门户中体验
+
 <!--1488939-->  
 新的公司门户帮助和支持页面可以帮助用户进行故障排除和请求应用程序和访问问题的帮助。 在新页中，它们可以通过电子邮件发送错误和诊断日志的详细信息并查找其组织的支持人员详细信息。 它们还会发现其中包含指向相关的 Intune 文档常见问题部分。 有关详细信息和屏幕截图，请参阅[获取帮助和支持 Windows 10 公司门户中的](https://docs.microsoft.com/intune-user-help/help-and-support-windows-cpapp)。
 
 #### <a name="some-bitlocker-settings-support-windows-10-pro-edition"></a>某些 BitLocker 设置支持 Windows 10 专业版
+
 <!--2727036-->  
 可以创建 Windows 10 设备，包括 BitLocker 设置终结点保护设置的配置项目。 此更新将添加对某些 BitLocker 设置的 Windows 10 专业版的支持。
 
@@ -153,14 +167,17 @@ Intune macOS 公司门户现在支持的 macOS 深色模式。 当 macOS 10.14 +
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
 
 #### <a name="microsoft-auto-update-version-450-required-for-macos-devices"></a>适用于 macOS 设备所需的 Microsoft 自动更新版本 4.5.0
+
 <!--3503442-->  
 若要继续接收更新公司门户和其他 Office 应用程序，由 Intune 托管的 macOS 设备必须升级到 Microsoft 自动更新 4.5.0。 用户可能已经有此版本的 Office 应用程序。
 
-#### <a name="the-intune-app-sdk-will-support-256-bit-encryption-keys"></a>Intune App SDK 将支持 256 位加密密钥 
+#### <a name="the-intune-app-sdk-will-support-256-bit-encryption-keys"></a>Intune App SDK 将支持 256 位加密密钥
+
 <!--1832174-->  
 适用于 Android 的 Intune 应用 SDK 现在使用 256 位加密密钥由应用保护策略启用加密。 SDK 会继续提供与内容和使用较旧的 SDK 版本的应用程序兼容性的 128 位密钥的支持。
 
-#### <a name="intune-requires-macos-1012-or-later"></a>Intune 需要 macOS 10.12 或更高版本 
+#### <a name="intune-requires-macos-1012-or-later"></a>Intune 需要 macOS 10.12 或更高版本
+
 <!--2827778-->  
 Intune 现在要求 macOS 10.12 或更高版本。 使用以前的 macOS 版本的设备不能使用公司门户注册到 Intune。 若要接收支持和新功能，用户必须向 macOS 10.12 或更高版本中升级其设备和公司门户升级到最新版本。
 
@@ -173,10 +190,12 @@ Intune 现在要求 macOS 10.12 或更高版本。 使用以前的 macOS 版本�
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
 
 #### <a name="new-intune-device-subscription-sku"></a>新的 Intune 设备订阅的 SKU
+
 <!--3312071-->  
 若要帮助更低时管理在企业中，设备的成本的新的基于设备的订阅 SKU 现已推出。 此 Intune 设备 SKU 是每个设备每月获得许可。 价格因许可计划。 它目前在 Direct Channel、 企业协议 (EA)、 Microsoft 产品和服务程序 (MPSA)，并打开和云解决方案提供商 (CSP)。
 
-#### <a name="new-apps-support-with-app-protection-policies"></a>新的应用程序支持使用应用保护策略 
+#### <a name="new-apps-support-with-app-protection-policies"></a>新的应用程序支持使用应用保护策略
+
 <!--3330037-->  
 现在可以管理以下应用[Intune 应用保护策略](https://docs.microsoft.com/intune/app-protection-policies):
 
@@ -185,7 +204,7 @@ Intune 现在要求 macOS 10.12 或更高版本。 使用以前的 macOS 版本�
 - PowerApps (Android、 iOS)  
 - 流 (Android、 iOS)  
 
-使用应用保护策略来保护这些应用，例如其他 Intune 策略托管应用的公司数据和控制数据传输。 
+使用应用保护策略来保护这些应用，例如其他 Intune 策略托管应用的公司数据和控制数据传输。
 
 > [!Note]  
 > 如果流尚未显示在控制台中，创建或编辑任何应用保护策略时添加流。 选择**更多应用**，然后指定*应用程序 ID*输入字段中的流。 用于 Android `com.microsoft.flow`，并为 iOS 使用`com.microsoft.procsimo`。  
@@ -196,35 +215,42 @@ Intune 现在要求 macOS 10.12 或更高版本。 使用以前的 macOS 版本�
 
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
 
-#### <a name="updates-for-application-transport-security"></a>针对应用传输安全进行更新 
+#### <a name="updates-for-application-transport-security"></a>针对应用传输安全进行更新
+
 <!--748318-->  
 Microsoft Intune 支持传输层安全性 (TLS) 1.2 + 它提供同类最佳的加密，以确保 Intune 是更安全的默认值，并与 Microsoft Office 365 等其他 Microsoft 服务保持一致。 为了满足此要求，iOS 和 macOS 公司门户将强制执行 Apple 更新的应用程序传输层安全性 (ATS) 要求，这些要求也需要 TLS 1.2+。 ATS 用于对所有通过 HTTPS 的应用通信强制实施更严格的安全措施。 此更改会影响使用 iOS 和 macOS 公司门户应用的 Intune 客户。 有关详细信息，请参阅[将 Intune 升级到 TLS 1.2 以进行加密](https://blogs.technet.microsoft.com/intunesupport/2018/06/05/intune-moving-to-tls-1-2-for-encryption/)。
 
-#### <a name="remove-an-email-profile-from-a-device-even-when-theres-only-one-email-profile"></a>即使只有一个电子邮件配置文件，也可从设备中删除该电子邮件配置文件 
+#### <a name="remove-an-email-profile-from-a-device-even-when-theres-only-one-email-profile"></a>即使只有一个电子邮件配置文件，也可从设备中删除该电子邮件配置文件
+
 <!--1818139-->  
-以前，无法从设备删除电子邮件配置文件，如果它是唯一的电子邮件配置文件。 通过此更新，此行为发生了变化。 现可删除电子邮件配置文件，即使它是设备上唯一的电子邮件配置文件。 
+以前，无法从设备删除电子邮件配置文件，如果它是唯一的电子邮件配置文件。 通过此更新，此行为发生了变化。 现可删除电子邮件配置文件，即使它是设备上唯一的电子邮件配置文件。
 
-#### <a name="remove-pkcs-and-scep-certificates-from-your-devices"></a>从设备中删除 PKCS 和 SCEP 证书 
+#### <a name="remove-pkcs-and-scep-certificates-from-your-devices"></a>从设备中删除 PKCS 和 SCEP 证书
+
 <!--3218390-->  
-在某些情况下，PKCS 和 SCEP 证书仍然在设备上，即使删除了配置或符合性部署或更新现有的 SCEP 或 PKCS 配置文件的管理员组中删除一个策略。 
+在某些情况下，PKCS 和 SCEP 证书仍然在设备上，即使删除了配置或符合性部署或更新现有的 SCEP 或 PKCS 配置文件的管理员组中删除一个策略。
 
-此更新会改变该行为。 有些情况下，PKCS 和 SCEP 证书会从设备中删除，而有些情况下，这些证书会保留在设备上。 
+此更新会改变该行为。 有些情况下，PKCS 和 SCEP 证书会从设备中删除，而有些情况下，这些证书会保留在设备上。
 
 #### <a name="access-to-key-profile-properties-using-the-company-portal-app"></a>使用公司门户应用访问键配置文件属性
-<!--772203-->  
-最终用户现在可以从公司门户应用访问键帐户属性和操作，例如密码重置。 
 
-#### <a name="pin-prompt-when-you-change-fingerprints-or-face-id-on-an-ios-device"></a>当你在 iOS 设备上更改指纹或 Face ID 时，系统将提示你输入 PIN  
+<!--772203-->  
+最终用户现在可以从公司门户应用访问键帐户属性和操作，例如密码重置。
+
+#### <a name="pin-prompt-when-you-change-fingerprints-or-face-id-on-an-ios-device"></a>当你在 iOS 设备上更改指纹或 Face ID 时，系统将提示你输入 PIN
+
 <!--2637704-->  
 当用户在其 iOS 设备上进行生物识别更改后，系统将提示用户输入 PIN。 这包括对已注册的指纹或 Face ID 进行的更改。 出现提示的时间取决于如何配置“以下时间过后重新检查访问要求(分钟)”超时。  未设置 PIN 时，系统将提示用户设置一个 PIN。  
 
 此功能仅适用于 iOS，并要求具有针对 iOS 集成 Intune APP SDK9（版本 8.1.1 或更高版本）的应用程序的参与。 集成 SDK 是必需的，以便可以在目标应用程序上强制执行行为。 此集成陆续进行，取决于特定应用程序团队。 参与的某些应用包括 WXP、Outlook、Managed Browser 和 Yammer。
 
-#### <a name="end-user-device-and-app-content-menu"></a>最终用户设备的应用内容菜单 
+#### <a name="end-user-device-and-app-content-menu"></a>最终用户设备的应用内容菜单
+
 <!--2771453-->  
-最终用户现在可以使用设备上的上下文菜单和应用来触发常见操作，例如，重命名设备或检查合规性。 
+最终用户现在可以使用设备上的上下文菜单和应用来触发常见操作，例如，重命名设备或检查合规性。
 
 #### <a name="windows-company-portal-keyboard-shortcuts"></a>Windows 公司门户快捷键
+
 <!--2771518-->  
 最终用户现在可以使用快捷键（加速器）在 Windows 公司门户中触发应用和设备操作。
 
@@ -235,6 +261,7 @@ Microsoft Intune 支持传输层安全性 (TLS) 1.2 + 它提供同类最佳的�
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
 
 #### <a name="new-user-experience-update-for-the-company-portal-website"></a>公司门户网站的新用户体验更新
+
 <!--2000968-->  
 根据你的反馈，我们添加了新功能到公司门户网站。 在 Android、iOS 和 Windows 设备中，你将会看到现有功能和可用性体验显著提高。 站点区域已得到全新现代化的响应式设计。 这些区域包括设备详细信息、反馈和支持及设备概述。 此外你还会看到以下改进：
 
@@ -253,13 +280,14 @@ Microsoft Intune 支持传输层安全性 (TLS) 1.2 + 它提供同类最佳的�
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
 
 #### <a name="updated-intune-app-sdk-for-android-is-now-available"></a>现推出了更新的 Intune App SDK for Android
+
 <!--2744271-->  
-用于 Android 的 Intune App SDK 的更新的版本是可用于支持 Android 9 饼图版本。 如果你是应用开发人员，并使用 Intune SDK for Android，请安装 Intune app SDK 的更新版本。 此更新确保 Android 应用中的 Intune 功能继续在 Android 9 Pie 设备上正常使用。 此版本的 Intune App SDK 提供了一个内置插件来执行 SDK 更新。 你不必重写任何现有集成代码。 有关详细信息，请参阅 [Intune SDK for Android](https://github.com/msintuneappsdk/ms-intune-app-sdk-android)。 
+用于 Android 的 Intune App SDK 的更新的版本是可用于支持 Android 9 饼图版本。 如果你是应用开发人员，并使用 Intune SDK for Android，请安装 Intune app SDK 的更新版本。 此更新确保 Android 应用中的 Intune 功能继续在 Android 9 Pie 设备上正常使用。 此版本的 Intune App SDK 提供了一个内置插件来执行 SDK 更新。 你不必重写任何现有集成代码。 有关详细信息，请参阅 [Intune SDK for Android](https://github.com/msintuneappsdk/ms-intune-app-sdk-android)。
 
 如果使用的是 Intune 的旧徽章样式，请切换以使用公文包图标。 有关品牌的详细信息，请参阅 [Intune 应用徽章系统](https://github.com/msintuneappsdk/intune-app-partner-badge)。
 
-
 #### <a name="support-for-security-enhancement-in-intune-service"></a>支持 Intune 服务中的安全性增强功能
+
 <!--2520152-->  
 现在可以指定不包含任何已分配符合性策略的设备并不符合在混合环境中。 在 Azure 门户的 Intune 中配置此设置。 强烈建议启用此功能来保护内部资源。
 
@@ -268,10 +296,12 @@ Microsoft Intune 支持传输层安全性 (TLS) 1.2 + 它提供同类最佳的�
 为帮助确定开启此功能所带来的影响，我们提供了 [TechNet 库中的脚本](https://gallery.technet.microsoft.com/SQL-Query-for-Hybrid-MDM-5bcb8695)。 如果针对 Configuration Manager 数据库运行此脚本，它将列出不实施任何符合性策略的设备。
 
 有关详细信息，请参阅下列文章：
-- [Intune 服务中的安全性增强功能](https://aka.ms/compliance_policies)博客文章 
+
+- [Intune 服务中的安全性增强功能](https://aka.ms/compliance_policies)博客文章
 - [Configuration Manager 中的设备符合性策略](/sccm/mdm/deploy-use/device-compliance-policies)
 
-#### <a name="updates-to-out-of-compliance-messages-in-company-portal-app"></a>更新公司门户应用中的不合规消息 
+#### <a name="updates-to-out-of-compliance-messages-in-company-portal-app"></a>更新公司门户应用中的不合规消息
+
 <!--1832222-->  
 我们正在修改扩展的符合性设备时，请参阅设备用户的消息。 消息原义未变，只是用更为友好的语言和更少的技术术语进行更新。 此外，我们还将刷新文档和修正步骤的链接，以使其保持最新。  
 
@@ -281,17 +311,20 @@ Microsoft Intune 支持传输层安全性 (TLS) 1.2 + 它提供同类最佳的�
 
 - 之后：*使用你的组织在一段尚未检查你的设备。* 要重新建立连接，请打开设备上的公司门户应用，然后点击设备的“检查设置”。  
 
-#### <a name="select-device-categories-by-using-the-access-work-or-school-settings"></a>使用“访问工作单位或学校”设置选择设备类别 
+#### <a name="select-device-categories-by-using-the-access-work-or-school-settings"></a>使用“访问工作单位或学校”设置选择设备类别
+
 <!--1058963-->  
 如果已启用[设备组映射](https://docs.microsoft.com/intune/device-group-mapping)，现在会提示用户在 Windows 10 注册完成后选择设备类别**Connect**按钮**设置** > **帐户** > **访问工作或学校**。  
 
-#### <a name="new-browsing-experiences-in-the-company-portal-app-for-windows"></a>适用于 Windows 的公司门户应用中的全新浏览体验 
+#### <a name="new-browsing-experiences-in-the-company-portal-app-for-windows"></a>适用于 Windows 的公司门户应用中的全新浏览体验
+
 <!--2317227-->  
-现在当浏览或搜索 Windows 公司门户应用中的应用时，现有切换**磁贴**视图和新添加**详细信息**视图。 新增视图列出应用程序详细信息，如名称、发布者、发布日期和安装状态。 
+现在当浏览或搜索 Windows 公司门户应用中的应用时，现有切换**磁贴**视图和新添加**详细信息**视图。 新增视图列出应用程序详细信息，如名称、发布者、发布日期和安装状态。
 
 通过“应用”页的“已安装”视图，可查看有关已完成和进行中的应用安装的详细信息。 若要查看新视图的外观，请参阅 [UI 中的新增内容](https://docs.microsoft.com/intune/whats-new-app-ui)。
 
-#### <a name="more-opportunities-to-sync-in-the-company-portal-app-for-windows"></a>更多在适用于 Windows 的公司门户应用中同步的机会  
+#### <a name="more-opportunities-to-sync-in-the-company-portal-app-for-windows"></a>更多在适用于 Windows 的公司门户应用中同步的机会
+
 <!--2683177-->  
 适用于 Windows 的公司门户应用现在可以启动直接从 Windows 任务栏和 「 开始 」 菜单同步。 如果唯一的任务是同步设备并访问公司资源，那么此功能极其有用。 若要访问新功能，请右键单击固定到任务栏或“开始”菜单的公司门户图标。 在菜单选项中，选择“同步此设备”。 （此菜单也称为跳转列表。）公司门户将打开“设置”页并启动同步。有关更新过程的信息，请参阅[手动同步 Windows 设备](https://docs.microsoft.com/intune/intune-user-help/sync-your-device-manually-windows#sync-from-device-taskbar-or-start-menu)。
 
@@ -301,11 +334,13 @@ Microsoft Intune 支持传输层安全性 (TLS) 1.2 + 它提供同类最佳的�
 
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
 
-#### <a name="access-to-macos-company-portal-pre-release-build"></a>访问 macOS 公司门户预发布版本 
+#### <a name="access-to-macos-company-portal-pre-release-build"></a>访问 macOS 公司门户预发布版本
+
 <!--1734766-->  
 使用 Microsoft 自动更新，注册以接收生成早期通过加入预览体验计划。 通过注册，可在更新的公司门户对最终用户可用前使用它。
 
-#### <a name="intune-app-protection-policies-and-microsoft-edge"></a>Intune 应用保护策略和 Microsoft Edge 
+#### <a name="intune-app-protection-policies-and-microsoft-edge"></a>Intune 应用保护策略和 Microsoft Edge
+
 <!--1818968,1818969-->  
 面向移动设备（iOS 和 Android）的 Microsoft Edge 浏览器现支持 Microsoft Intune 应用保护策略。 在 Microsoft Edge 应用程序中使用公司的 Azure Active Directory 帐户进行登录的 iOS 和 Android 设备用户受到 Intune 保护。 在 iOS 设备上，“需要使用托管浏览器获取 Web 内容”的策略允许用户在托管的 Microsoft Edge 中打开链接。
 
@@ -315,7 +350,8 @@ Microsoft Intune 支持传输层安全性 (TLS) 1.2 + 它提供同类最佳的�
 
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
 
-#### <a name="requesting-help-in-the-company-portal-for-windows-10"></a>在适用于 Windows 10 的公司门户中请求帮助 
+#### <a name="requesting-help-in-the-company-portal-for-windows-10"></a>在适用于 Windows 10 的公司门户中请求帮助
+
 <!--1874137-->  
 当用户启动工作流以获取相关问题的帮助时，适用于 Windows 10 的公司门户现在直接向 Microsoft 发送应用日志。 此行为有助于更轻松地进行故障排除并解决向 Microsoft 提出的问题。  
 
@@ -323,19 +359,21 @@ Microsoft Intune 支持传输层安全性 (TLS) 1.2 + 它提供同类最佳的�
 ### <a name="new-in-configuration-manager-current-branch"></a>Configuration Manager (Current Branch) 中的新增功能
 
 #### <a name="android-for-work-and-lookout-onboarding-moved-to-intune-on-azure"></a>Android for Work 和 Lookout 载入已移至 Azure 上的 Intune
+
 <!--2355022,2357366-->  
 借助最新的 Intune 更新，可访问 Azure 门户中的 Intune，在混合移动设备管理租户上启用并管理 Android for Work 集成和 Lookout 移动威胁防御集成。 在此更新之前，只能在 Intune Classic (Silverlight) 门户中配置这些设置。
- 
+
 注意：Lookout 是仅移动威胁防御 (MTD) 提供程序支持在混合环境中。 如果之前已与任何其他 MTD 提供程序集成，它仍会在 Azure 门户的 Intune 中显示。 如果删除它的连接器，则不能再重新添加它。
- 
+
 这些更改不影响现有功能。 继续使用 Configuration Manager 控制台管理相关应用、报告和策略。
- 
+
 有关详细信息，请参阅下列文章：
+
 - [设置 Android 混合设备管理](/sccm/mdm/deploy-use/enroll-hybrid-android)
 - [根据设备、网络和应用程序风险管理对公司资源的访问权限](/sccm/mdm/deploy-use/lookout-mobile-threat-defense-in-configuration-manager)
 
-
 #### <a name="support-for-new-versions-of-cisco-anyconnect-client-for-ios"></a>对适用于 iOS 的 Cisco AnyConnect 客户端新版本的支持
+
 <!--1357393-->  
 你可以启用对适用于 iOS 4.0.7 或更高版本的 Cisco AnyConnect 的支持。 如果启用，现有 Cisco AnyConnect VPN 配置文件会标记为“Cisco 旧式 AnyConnect”，然后继续按照以前的方式工作。 “Cisco AnyConnect”选项适用于可与 iOS 4.0.7 或更高版本的 Cisco AnyConnect 配合使用的新 VPN 配置文件。
 
@@ -343,7 +381,7 @@ Microsoft Intune 支持传输层安全性 (TLS) 1.2 + 它提供同类最佳的�
   > 适用于 iOS 的 Cisco AnyConnect 4.0.07x 和更高版本作为[预发行功能](/sccm/core/servers/manage/pre-release-features)首次被引入版本 1802。 从[更新 4163547](https://support.microsoft.com/help/4163547) 开始到版本 1802，此功能不再属于预发行功能。  
 
 > [!Note]  
-> 继续使用适用于 macOS VPN 配置文件的“Cisco 旧式 AnyConnect”选项。 
+> 继续使用适用于 macOS VPN 配置文件的“Cisco 旧式 AnyConnect”选项。
 
 
 
@@ -351,51 +389,53 @@ Microsoft Intune 支持传输层安全性 (TLS) 1.2 + 它提供同类最佳的�
 
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
 
-#### <a name="intune-adapts-to-fluent-design-system-in-the-company-portal-app-for-windows-10"></a>Intune 适用于面向 Windows 10 的公司门户中的 Fluent Design System 
+#### <a name="intune-adapts-to-fluent-design-system-in-the-company-portal-app-for-windows-10"></a>Intune 适用于面向 Windows 10 的公司门户中的 Fluent Design System
+
 <!--1195010-->  
 适用于 Windows 10 的 Intune 公司门户应用经已更新 [Fluent Design System 的导航窗格视图](/windows/uwp/design/basics/navigation-basics)。 在应用程序旁边，会看到一个包含所有顶级页面的静态垂直列表。 单击任意链接可快速查看并在页面之间进行切换。 我们正不断努力在 Intune 中打造更具适应性、引人入胜且熟悉的体验，在此期间，你会看到多个更新，此更新正是第一个。 要查看更新的外观，请转到[应用 UI 中的新增功能](/intune/whats-new-app-ui)。
 
 #### <a name="improved-device-tiles-in-the-windows-10-company-portal"></a>改进了 Windows 10 公司门户中的设备磁贴
+
 <!--2213364-->  
 更新后的磁贴更易于视力较差的用户使用，还可使屏幕阅读工具提供更好的性能。
 
-
 #### <a name="test-the-company-portal-for-macos-on-virtual-machines"></a>在虚拟机上测试适用于 macOS 的公司门户
+
 <!--2216679-->  
 我们已发布可帮助 IT 管理员在 Parallels Desktop 和 VMware Fusion 虚拟机上测试适用于 macOS 的公司门户应用的指南。 有关详细信息，请参阅[注册用于测试的虚拟 macOS 计算机](/intune/macos-enroll#enroll-virtual-macos-machines-for-testing)。
 
-
 #### <a name="send-diagnostic-reports-in-company-portal-app-for-macos"></a>在适用于 macOS 的公司门户应用中发送诊断报告
+
 <!--2216677-->  
 适用于 macOS 设备的公司门户应用已进行更新，改进了用户报告 Intune 相关错误的方式。 员工可从公司门户应用中：
 
 - 将诊断报告直接上传给 Microsoft 开发人员团队。
 - 通过电子邮件将事件 ID 发送给公司的 IT 支持团队。
 
+#### <a name="updated-help-experience-on-company-portal-app-for-android"></a>Android 公司门户应用中更新的帮助体验
 
-#### <a name="updated-help-experience-on-company-portal-app-for-android"></a>Android 公司门户应用中更新的帮助体验 
 <!--1631531-->  
 我们更新了适用于 Android 的公司门户应用中的帮助体验，以符合 Android 平台的最佳做法。 现在，当用户在应用中遇到问题时，他们可以点击“菜单” > “帮助”并执行以下操作：
+
 - 将诊断日志上传到 Microsoft。
 - 将描述问题和事件 ID 的电子邮件发送给公司支持人员。
 
+#### <a name="update-where-to-configure-your-app-protection-policies"></a>更新配置应用保护策略的位置
 
-#### <a name="update-where-to-configure-your-app-protection-policies"></a>更新配置应用保护策略的位置 
 <!--2144597-->  
-在 Azure 门户中 Microsoft Intune 服务中，我们将暂时重定向从**Intune 应用保护**区域**移动应用**部分。 Intune 中“应用配置”下的“移动应用”部分已包括所有应用保护策略。 直接转到 Intune 即可，无需转到“Intune 应用保护”。 2018 年 4 月，我们将停止该重定向并完全删除“Intune 应用保护”。 在此之后，Intune 内只有一个管理应用保护策略的位置。 
+在 Azure 门户中 Microsoft Intune 服务中，我们将暂时重定向从**Intune 应用保护**区域**移动应用**部分。 Intune 中“应用配置”下的“移动应用”部分已包括所有应用保护策略。 直接转到 Intune 即可，无需转到“Intune 应用保护”。 2018 年 4 月，我们将停止该重定向并完全删除“Intune 应用保护”。 在此之后，Intune 内只有一个管理应用保护策略的位置。
 
 **这一更改会对我产生哪些影响？** 此更改将同时影响 Intune 独立版客户和混合版（带 Configuration Manager 的 Intune）客户。 此集成将有助于简化云管理。
 
-**我需要如何准备应对此项变化？** 将“Intune”标记为收藏，而不是“Intune 应用保护”。 熟悉 Intune 内“移动应用”区域中的应用保护策略工作流。 我们将重定向一小段时间，然后删除“应用保护”。 请记住，所有应用保护策略都已转到 Intune，可修改任何条件访问策略。 有关修改条件访问策略的详细信息，请参阅 [Azure Active Directory 中的条件访问](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)。 有关详细信息，请参阅[什么是应用保护策略？](https://docs.microsoft.com/intune/app-protection-policy) 
+**我需要如何准备应对此项变化？** 将“Intune”标记为收藏，而不是“Intune 应用保护”。 熟悉 Intune 内“移动应用”区域中的应用保护策略工作流。 我们将重定向一小段时间，然后删除“应用保护”。 请记住，所有应用保护策略都已转到 Intune，可修改任何条件访问策略。 有关修改条件访问策略的详细信息，请参阅 [Azure Active Directory 中的条件访问](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)。 有关详细信息，请参阅[什么是应用保护策略？](https://docs.microsoft.com/intune/app-protection-policy)。
 
+#### <a name="user-experience-update-for-the-company-portal-app-for-ios"></a>iOS 版公司门户应用的用户体验更新
 
-
-
-#### <a name="user-experience-update-for-the-company-portal-app-for-ios"></a>iOS 版公司门户应用的用户体验更新 
 <!--1412866-->  
 我们已向 iOS 版公司门户应用发布用户体验主要更新。 此更新具有经过完全重新设计的视觉效果，包括现代化的外观。 我们保留了应用的功能，但提高了其可用性和可访问性。  
 
 你还会看到：
+
 - 对 iPhone X 的支持。
 - 应用启动速度和加载响应速度更快，可节省用户时间。
 - 可为用户提供最新状态信息的附加进度条。
@@ -410,8 +450,9 @@ Microsoft Intune 支持传输层安全性 (TLS) 1.2 + 它提供同类最佳的�
 ### <a name="new-in-microsoft-intune"></a>Microsoft Intune 中的新增功能
 
 #### <a name="windows-company-portal-send-feedback-option-may-no-longer-work"></a>Windows 公司门户的“发送反馈”选项可能失效
+
 <!--2070166-->  
-Windows 公司门户应用上有一个“发送反馈”选项，用户可用它向 Microsoft 发送应用反馈。 自 2018 年 4 月 30 日起，只有 Windows 10 版本 1607 及更高版本上运行的 Windows 10 公司门户应用才能继续使用此选项。   
+Windows 公司门户应用上有一个“发送反馈”选项，用户可用它向 Microsoft 发送应用反馈。 自 2018 年 4 月 30 日起，只有 Windows 10 版本 1607 及更高版本上运行的 Windows 10 公司门户应用才能继续使用此选项。
 
 **这一更改会对我产生哪些影响？**
 
@@ -419,15 +460,15 @@ Windows 公司门户应用上有一个“发送反馈”选项，用户可用它
 
 如果任一最终用户具有公司门户应用，则自 4 月 30 日起，以下情形中的应用不可再使用“发送反馈”按钮：  
 
- - Windows 10 版本 1507 和版本 1511 上的 Windows 10 公司门户应用  
+- Windows 10 版本 1507 和版本 1511 上的 Windows 10 公司门户应用  
 
- - Windows Phone 8.1 公司门户应用  
+- Windows Phone 8.1 公司门户应用  
 
 对于受影响的设备，“发送反馈”选项会失效，且重试后仍不能成功运行。 若要将上述平台的体验反馈发送给 Microsoft，可使用下述备用反馈通道。
 
 **我需要如何准备应对此项变化？**
 
-请将此项变化告知最终用户，并在必要时更新用户指南。 
+请将此项变化告知最终用户，并在必要时更新用户指南。
 
 让在 Windows Phone 8.1、Windows 10 版本 1507 和 Windows 10 版本 1511 上使用公司门户的最终用户了解有两个备用反馈通道可用。 最终用户可：  
 
@@ -436,9 +477,8 @@ Windows 公司门户应用上有一个“发送反馈”选项，用户可用它
 
 要求使用 Windows 10 版本 1607 或更高版本的最终用户将 Windows 公司门户更新到 Microsoft Store 中的最新版。
 
-
-
 #### <a name="azure-active-directory-web-sites-can-require-the-intune-managed-browser-app-and-support-single-sign-on-for-the-managed-browser-public-preview"></a>Azure Active Directory 网站可能需要 Intune Managed Browser 应用，且支持 Managed Browser（公共预览版）的单一登录
+
 <!-- 710595 -->  
 利用 Azure Active Directory (Azure AD)，现可在移动设备上将网站访问限制为仅可访问 Intune Managed Browser 应用。 在 Managed Browser 中，网站数据可保持安全并且独立于最终用户的个人数据。 此外，Managed Browser 支持受 Azure AD 保护的站点的单一登录功能。 通过登录 Managed Browser，或在设备上搭配使用 Managed Browser 和 Intune 管理的其他应用，用户无需输入凭据，Managed Browser 即可访问受 Azure AD 保护的公司站点。 此功能适用于 Outlook Web Access (OWA) 和 SharePoint Online 等站点，以及通过 Azure 应用代理访问的其他公司站点（如 Intranet 资源）。
 

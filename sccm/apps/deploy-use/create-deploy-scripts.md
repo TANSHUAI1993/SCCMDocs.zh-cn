@@ -12,10 +12,10 @@ ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 007c3b68932a673b5d1971fbcf6919a7ad3adc70
-ms.sourcegitcommit: 8803a64692f3edc0422b58f6c3037a8796374cc8
+ms.sourcegitcommit: da753df27d3909265ca45d3e79091f1e98758d16
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2019
+ms.lasthandoff: 04/04/2019
 ms.locfileid: "57881837"
 ---
 # <a name="create-and-run-powershell-scripts-from-the-configuration-manager-console"></a>从 Configuration Manager 控制台创建并运行 PowerShell 脚本
@@ -177,11 +177,11 @@ System Center Configuration Manager 具有运行 Powershell 脚本的集成功�
 
 ## <a name="script-parameters"></a>脚本参数
 *（随版本 1710 一起引入）*  
-将参数添加到脚本可以为你的工作提供更高的灵活性。 可以包含最多 10 个参数。 以下内容概述“运行脚本”功能的当前功能以及“字符串”和“整数”数据类型的脚本参数。 也提供了预设值列表。 如果脚本具有不受支持的数据类型，你将收到一个警告。
+将参数添加到脚本可以为你的工作提供更高的灵活性。 最多只能包含 10 个参数。 以下内容概述“运行脚本”功能的当前功能以及“字符串”和“整数”数据类型的脚本参数。 也提供了预设值列表。 如果脚本具有不受支持的数据类型，你将收到一个警告。
 
 在“创建脚本” 对话框中，单击“脚本”下的“脚本参数”。
 
-你的每一个脚本参数都有自己的对话框，用于添加更多细节以及验证信息。 如果在脚本中的默认参数，它将枚举中的参数 UI 并将其设置。 配置管理器不会重写默认值，因为它将永远不会直接修改该脚本。 您可以将此视为在 UI 中，提供了"预填充建议的值"，但 Configuration Manager 不提供对在运行时的"默认"值的访问。 这可以通过编辑此脚本，使正确的默认设置来解决。 <!--17694323-->
+你的每一个脚本参数都有自己的对话框，用于添加更多细节以及验证信息。 如果脚本中有默认参数，它将在参数 UI 中枚举，你可以设置它。 Configuration Manager 不会覆盖默认值，因为它永远不会直接修改脚本。 可以将此视为 UI 中提供的“预先填充的建议值”，但 Configuration Manager 在运行时不提供对“默认”值的访问。 这可以通过编辑脚本以具有正确的默认值来解决。 <!--17694323-->
 
 >[!IMPORTANT]
 > 参数值不能包含单引号。 </br></br>
@@ -263,7 +263,7 @@ Write-Output (Get-WmiObject -Class Win32_operatingSystem).Caption
 
 ## <a name="script-monitoring"></a>脚本监视
 
-在设备集合上启动脚本运行以后，请使用采用以下过程来监视该操作。 从版本 1710 开始，你可以在脚本执行时进行实时监视，也可以返回至某个给定“运行脚本”执行的报告。 清除脚本状态数据的一部分[维护任务删除过期的客户端操作](../../core/servers/manage/reference-for-maintenance-tasks.md)或删除操作的脚本。<br>
+在设备集合上启动脚本运行以后，请使用采用以下过程来监视该操作。 从版本 1710 开始，你可以在脚本执行时进行实时监视，也可以返回至某个给定“运行脚本”执行的报告。 脚本状态数据将作为[删除过期客户端操作维护任务](../../core/servers/manage/reference-for-maintenance-tasks.md)的一部分或删除脚本任务的一部分进行清理。<br>
 
 ![脚本监视器 - 脚本运行状态](./media/run-scripts/RS-monitoring-three-bar.png)
 
@@ -299,7 +299,7 @@ Microsoft Windows 10 Enterprise
 - 1810 客户端通过快速信道将少于 80KB 的输出返回到网站。 这一更改提高了查看脚本或查询输出的性能。  
 
   - 如果脚本或查询输出大于 80 KB，客户端会通过状态消息发送数据。  
-  - 版本低于 1802年客户端继续使用状态消息。
+  - 1802 之前的客户端继续使用状态消息。
 
 ## <a name="script-output-pre-1810"></a>版本低于 1810 中的脚本输出
 
@@ -317,7 +317,7 @@ Microsoft Windows 10 Enterprise
 
 ## <a name="log-files"></a>日志文件
 
-从版本 1810年，其他日志记录功能添加了对故障排除。
+从版本 1810 开始，添加了其他日志记录以进行故障排除。
 
 - 在客户端上，默认情况下位于 C:\Windows\CCM\logs 中：  
   - **Scripts.log**  

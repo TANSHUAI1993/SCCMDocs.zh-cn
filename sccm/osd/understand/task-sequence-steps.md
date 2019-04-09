@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 95fb105d10fc7afbb94328dd7905ef075daa447b
-ms.sourcegitcommit: 33a006204f7f5f9b9acd1f3e84c4bc207362d00a
-ms.translationtype: HT
+ms.openlocfilehash: a349997150c951d1a4ec9e0b99f9d24c21f37205
+ms.sourcegitcommit: d584c126a0a5725567631b74ac1e01f63242a997
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305773"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58861082"
 ---
 # <a name="task-sequence-steps-in-configuration-manager"></a>Configuration Manager 中的任务序列步骤
 
-适用范围：System Center Configuration Manager (Current Branch)
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 以下任务序列步骤可添加到 Configuration Manager 任务序列中。 有关编辑任务序列的信息，请参阅 [Edit a task sequence](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_ModifyTaskSequence)。  
 
@@ -29,7 +29,7 @@ ms.locfileid: "57305773"
 #### <a name="properties-tab"></a>“属性”选项卡
 - **名称**：任务序列编辑器要求指定一个短名称，用于描述此步骤。 添加新步骤时，任务序列编辑器默认将名称设置为“Type”。 名称的长度不能超过 50 个字符。  
 
-- **描述**：（可选）指定有关此步骤的更多详细信息。 说明的长度不能超过 256 个字符。  
+- **说明**：（可选）指定有关此步骤的更多详细信息。 说明的长度不能超过 256 个字符。  
 
 本文的其余部分将介绍每个任务序列步骤的“属性”选项卡上的其他设置。
 
@@ -37,7 +37,7 @@ ms.locfileid: "57305773"
 
 - **禁用此步骤**：任务序列在计算机上运行时，会跳过此步骤。 此步骤的图标在任务序列编辑器中灰显。  
 
-- **出错时继续**：如果在运行该步骤时出现错误，继续执行任务序列。 有关详细信息，请参阅[计划自动执行任务时的考虑事项](/sccm/osd/plan-design/planning-considerations-for-automating-tasks#BKMK_TSGroups)。   
+- 出错时继续：在运行该步骤时若出现错误，继续执行任务序列。 有关详细信息，请参阅[计划自动执行任务时的考虑事项](/sccm/osd/plan-design/planning-considerations-for-automating-tasks#BKMK_TSGroups)。   
 
 - **添加条件**：任务序列判断这些条件语句，以确定其是否运行该步骤。 有关使用任务序列变量作为条件的示例，请参阅[如何使用任务序列变量](/sccm/osd/understand/using-task-sequence-variables#bkmk_access-condition)。   
 
@@ -71,13 +71,13 @@ ms.locfileid: "57305773"
 #### <a name="destination"></a>目标  
 配置下列选项之一：
 
-- **下一个可用分区**：使用此任务序列中尚未被“应用操作系统”或“应用数据映像”步骤作为目标的下一个顺序分区。  
+- 下一可用分区：使用此任务序列中尚未被“应用操作系统”或“应用数据映像”步骤作为目标的下一个顺序分区。  
 
-- **特定磁盘和分区**：选择“磁盘”编号（从 0 开始）和“分区”编号（从 1 开始）。  
+- **特定磁盘和分区**选择“磁盘”编号（从 0 开始）和“分区”编号（从 1 开始）。  
 
-- **特定逻辑驱动器号**：指定 Windows PE 分配给分区的“驱动器号”。 此驱动器号可不同于新部署的 OS 分配的驱动器号。  
+- 特定逻辑驱动器号：指定 Windows PE 分配给分区的“驱动器号”。 此驱动器号可不同于新部署的 OS 分配的驱动器号。  
 
-- **变量中存储的逻辑驱动器号**：指定包含 Windows PE 分配给分区的驱动器号的任务序列变量。 对于“格式化磁盘并分区”任务序列步骤，此变量通常在“分区属性”对话框的“高级”部分中设置。  
+- 变量中存储的逻辑驱动器号：指定包含 Windows PE 分配给分区的驱动器号的任务序列变量。 对于“格式化磁盘并分区”任务序列步骤，此变量通常在“分区属性”对话框的“高级”部分中设置。  
 
 #### <a name="delete-all-content-on-the-partition-before-applying-the-image"></a>应用映像之前删除分区中的所有内容  
 指定任务序列在安装映像前删除目标分区中的所有文件。 如果不删除分区内容，则此操作可用于将其他内容应用到以前的目标分区。  
@@ -88,7 +88,7 @@ ms.locfileid: "57305773"
 
 使用此步骤可下载驱动程序包中的所有驱动程序，并将其安装在 Windows OS 上。
 
-“应用驱动程序包”任务序列步骤使 Windows 可以使用驱动程序包中的所有设备驱动程序。 将此步骤添加到“应用操作系统”与“安装 Windows 和 ConfigMgr”步骤之间，使包中的驱动程序可以用于 Windows。 通常，“应用驱动程序包”步骤位于“自动应用驱动程序”任务序列步骤之后。 “应用驱动程序包”任务序列步骤也可以与独立媒体部署方案配合使用。  
+“应用驱动程序包”任务序列步骤使 Windows 可以使用驱动程序包中的所有设备驱动程序。 将此步骤添加到“应用操作系统”与“安装 Windows 和 ConfigMgr”步骤之间，使包中的驱动程序可以用于 Windows。 “应用驱动程序包”任务序列步骤也可以与独立媒体部署方案配合使用。  
 
 将类似的设备驱动程序放入驱动程序包，并将其分发到合适的分发点。 例如，将一个制造商的所有驱动程序放入一个驱动程序包。 然后将该程序包分发到关联计算机可以对其进行访问的分发点。
 
@@ -101,7 +101,7 @@ ms.locfileid: "57305773"
 - [OSDApplyDriverBootCriticalHardwareComponent](/sccm/osd/understand/task-sequence-variables#OSDApplyDriverBootCriticalHardwareComponent)  
 - [OSDApplyDriverBootCriticalID](/sccm/osd/understand/task-sequence-variables#OSDApplyDriverBootCriticalID)  
 - [OSDApplyDriverBootCriticalINFFile](/sccm/osd/understand/task-sequence-variables#OSDApplyDriverBootCriticalINFFile)  
-- [OSDInstallDriversAdditionalOptions](/sccm/osd/understand/task-sequence-variables#OSDInstallDriversAdditionalOptions)<!--516679/2840016-->（从版本 1806 开始）  
+- [OSDInstallDriversAdditionalOptions](/sccm/osd/understand/task-sequence-variables#OSDInstallDriversAdditionalOptions)<!--516679/2840016--> （从版本 1806 开始）  
 
 选择任务序列编辑器中的“添加”，选择“驱动程序”，然后选择“应用驱动程序包”以添加此步骤。 
 
@@ -250,13 +250,13 @@ ms.locfileid: "57305773"
 #### <a name="destination"></a>目标  
 配置下列选项之一：  
 
-- **下一个可用分区**：使用此任务序列中尚未被“应用操作系统”或“应用数据映像”步骤作为目标的下一个顺序分区。  
+- 下一可用分区：使用此任务序列中尚未被“应用操作系统”或“应用数据映像”步骤作为目标的下一个顺序分区。  
 
-- **特定磁盘和分区**：选择“磁盘”编号（从 0 开始）和“分区”编号（从 1 开始）。  
+- **特定磁盘和分区**选择“磁盘”编号（从 0 开始）和“分区”编号（从 1 开始）。  
 
-- **特定逻辑驱动器号**：指定 Windows PE 分配给分区的“驱动器号”。 此驱动器号可不同于新部署的 OS 分配的驱动器号。  
+- **特定逻辑驱动器号**指定 Windows PE 分配给分区的“驱动器号”。 此驱动器号可不同于新部署的 OS 分配的驱动器号。  
 
-- **变量中存储的逻辑驱动器号**：指定包含 Windows PE 分配给分区的驱动器号的任务序列变量。 对于“格式化磁盘并分区”任务序列步骤，此变量通常在“分区属性”对话框的“高级”部分中设置。  
+- **变量中存储的逻辑驱动器号**指定包含 Windows PE 分配给分区的驱动器号的任务序列变量。 对于“格式化磁盘并分区”任务序列步骤，此变量通常在“分区属性”对话框的“高级”部分中设置。  
 
 
 ### <a name="options"></a>选项  
@@ -408,7 +408,7 @@ ms.locfileid: "57305773"
 捕获目标计算机的网络适配器配置。 它捕获以下信息： 
 - 全局网络设置  
 - 适配器数  
-- 以下网络设置与每个适配器相关联：DNS、WINS、IP 和端口筛选器
+- 以下网络设置与每个适配器相关联：DNS、 WINS、IP 和端口筛选器
 
 
 
@@ -515,13 +515,13 @@ Configuration Manager 在存储捕获的 OS 映像时所使用位置的文件系
 #### <a name="copy-by-using-file-system-access"></a>使用文件系统访问进行复制
 启用此选项以指定任何以下设置：  
 
-- **如果无法捕获某些文件则继续**：启用此设置以在无法捕获某些文件时继续迁移过程。 如果禁用此选项，且无法捕获某个文件，此步骤将失败。 默认情况下会启用此选项。  
+- 在无法捕获某些文件时继续：启用此设置以在无法捕获某些文件时继续迁移过程。 如果禁用此选项，且无法捕获某个文件，此步骤将失败。 默认情况下会启用此选项。  
 
-- **通过使用链接而不是通过复制文件以本地方式进行捕获**：启用此设置以使用 NTFS 硬链接来捕获文件。  
+- **使用链接而非复制文件的方式在本地捕获：** 启用此设置以使用 NTFS 硬链接来捕获文件。  
 
     有关使用硬链接迁移数据的详细信息，请参阅 [硬链接迁移存储](https://docs.microsoft.com/windows/deployment/usmt/usmt-hard-link-migration-store)。  
 
-- **在脱机模式下进行捕获（仅 Windows PE）**：启用此设置可在 Windows PE 而不是整个 OS 中捕获用户状态。  
+- 在脱机模式下捕获(仅针对 Windows PE)：启用此设置可在 Windows PE 而不是整个 OS 中捕获用户状态。  
 
 #### <a name="capture-by-using-volume-copy-shadow-services-vss"></a>使用卷影复制服务 (VSS) 进行捕获
 通过此选项，你可捕获文件，即使文件被锁定由其他应用程序编辑也无妨。  
@@ -681,11 +681,11 @@ Configuration Manager 在存储捕获的 OS 映像时所使用位置的文件系
 #### <a name="place-into-the-following-location"></a>置于下列位置
 选择将包保存在下列位置之一：  
 
-- **任务序列工作目录**：此位置也称为任务序列缓存。  
+- 任务序列工作目录：此位置也称为任务序列缓存。  
 
-- **Configuration Manager 客户端缓存**：使用此选项可在客户端缓存中存储内容。 默认情况下，此路径为 `%WinDir%\ccmcache`。  
+- **Configuration Manager 客户端缓存：** 使用此选项可在客户端缓存中存储内容。 默认情况下，此路径为 `%WinDir%\ccmcache`。  
 
-- **自定义路径**：任务序列引擎首先会将包下载到任务序列工作目录。 然后将内容移动到指定的路径。 任务序列引擎会将包 ID 附加到路径中。  
+- 自定义路径：任务序列引擎首先会将包下载到任务序列工作目录。 然后将内容移动到指定的路径。 任务序列引擎会将包 ID 附加到路径中。  
 
 #### <a name="save-path-as-a-variable"></a>将路径另存为一个变量
 将包路径保存到自定义任务序列变量。 然后在另一个任务序列步骤中使用此变量。 
@@ -739,18 +739,19 @@ BitLocker 可用于加密单个计算机系统上的多个驱动器（OS 和数�
 #### <a name="choose-the-drive-to-encrypt"></a>选择要加密的驱动器
 指定要加密的驱动器。 若要加密当前 OS 驱动器，请选择“当前操作系统驱动器”。 然后配置下列密钥管理选项：  
 
-- **仅 TPM**：选择此选项，以仅使用受信任的平台模块 (TPM)。  
+- **仅 TPM：** 选择此选项，以仅使用受信任的平台模块 (TPM)。  
 
-- **仅 USB 上的启动密钥**：选择此选项以使用存储在 USB 闪存驱动器上的启动密钥。 选择此选项时，BitLocker 将锁定正常启动过程，直至含有 BitLocker 启动密钥的 USB 设备连接到计算机。  
+- **仅 USB 上的启动密钥：** 选择此选项以使用存储在 USB 闪存驱动器上的启动密钥。 选择此选项时，BitLocker 将锁定正常启动过程，直至含有 BitLocker 启动密钥的 USB 设备连接到计算机。  
 
-- **USB 上的 TPM 和启动密钥**：选择此选项以使用存储在 USB 闪存驱动器上的 TPM 和启动密钥。 选择此选项时，BitLocker 将锁定正常启动过程，直至含有 BitLocker 启动密钥的 USB 设备连接到计算机。  
+- **TPM 和 USB 上的启动密钥：** 选择此选项以使用 TPM 和存储在 USB 闪存驱动器上的启动密钥。 选择此选项时，BitLocker 将锁定正常启动过程，直至含有 BitLocker 启动密钥的 USB 设备连接到计算机。  
 
-- **TPM 和 PIN**：选择此选项以使用 TPM 和个人标识号 (PIN)。 当选择此选项时，BitLocker 将锁定正常启动过程，直至用户提供 PIN。  
+- TPM 和 PIN：选择此选项以使用 TPM 和个人标识号 (PIN)。 当选择此选项时，BitLocker 将锁定正常启动过程，直至用户提供 PIN。  
 
 要加密特定非 OS 数据驱动器，请选择“特定驱动器”。 然后从列表中选择驱动器。  
 
 #### <a name="use-full-disk-encryption"></a>使用全磁盘加密
-<!--SCCMDocs-pr issue 2671--> 默认情况下，此步骤仅加密驱动器上的已用空间。 建议使用此默认行为，因为它更加快速高效。 从版本 1806 开始，如果贵组织需要在安装期间加密整个驱动器，请启用此选项。 Windows 安装程序会等待整个驱动器加密，所需时间较长（尤其是在大型驱动器上）。 
+<!--SCCMDocs-pr issue 2671-->
+默认情况下，此步骤仅加密驱动器上的已用空间。 建议使用此默认行为，因为它更加快速高效。 从版本 1806 开始，如果贵组织需要在安装期间加密整个驱动器，请启用此选项。 Windows 安装程序会等待整个驱动器加密，所需时间较长（尤其是在大型驱动器上）。 
 
 #### <a name="choose-where-to-create-the-recovery-key"></a>选择要创建恢复密钥的位置
 要在 Active Directory 中指定 BitLocker 创建和托管恢复密码的位置，请选择“在 Active Directory 中”。 此选项要求为 BitLocker 密钥托管扩展 Active Directory。 然后，BitLocker 可以在 Active Directory 中保存关联的恢复信息。 选择“请勿创建恢复密钥”，可以不创建密码。 创建密码为建议选项。  
@@ -789,8 +790,8 @@ BitLocker 可用于加密单个计算机系统上的多个驱动器（OS 和数�
 
 #### <a name="disk-type"></a>磁盘类型
 要格式化的磁盘类型。 可以从下拉列表中选择两个选项： 
-- **标准 (MBR)**：主启动记录  
-- **GPT**：GUID 分区表  
+- 标准 (MBR)：主启动记录  
+- GPT：GUID 分区表  
 
 > [!NOTE]  
 > 如果将磁盘类型从“标准 (MBR)”更改为“GPT”，并且分区布局包含扩展分区，则任务序列将从布局中删除所有扩展分区和逻辑分区。 任务序列编辑器会在更改磁盘类型前提示确认此操作。  
@@ -859,7 +860,7 @@ Configuration Manager 将筛选出任何禁用的或具有以下设置的应用�
 #### <a name="install-applications-according-to-dynamic-variable-list"></a>根据动态变量列表安装应用程序
 任务序列使用此基本变量名安装应用程序。 基本变量名称适用于为集合或计算机定义的任务序列变量。 这些变量指定任务序列为该集合或计算机安装的应用程序。 每个变量名称都由其通用的基名称和一个数字后缀（从 01 开始）组成。 每个变量的值都必须包含应用程序的名称，且没有其他任何内容。  
 
-对于要使用动态变量列表安装的应用程序，请在应用程序“属性”的“常规”选项卡中启用以下设置：**允许通过“安装应用程序”任务序列操作安装此应用程序，而不是手动部署**。  
+为让任务序列使用动态变量列表安装应用程序，在应用程序“属性”的“常规”选项卡中启用以下设置：“允许通过安装应用程序任务序列操作安装此应用程序，而不是手动部署”。  
 
 > [!NOTE]  
 > 对于独立媒体部署，无法使用动态变量列表安装应用程序。  
@@ -942,7 +943,7 @@ Configuration Manager 将筛选出任何禁用的或具有以下设置的应用�
 #### <a name="install-software-packages-according-to-dynamic-variable-list"></a>根据动态变量列表安装软件包
 任务序列将使用此基本变量名称安装包。 基本变量名称适用于为集合或计算机定义的任务序列变量。 这些变量指定任务序列将为该集合或计算机安装的包。 每个变量名称都由其通用的基名称和一个数字后缀（从 001 开始）组成。 每个变量的值都必须包含包 ID 和软件名称，以冒号分隔。  
 
-对于要使用动态变量列表安装的软件，请在包“属性”的“高级”选项卡中启用以下设置：**允许在不部署的情况下从“安装包”任务序列安装此程序**。  
+为让任务序列使用动态变量列表安装软件，请在包“属性”的“高级”选项卡上启用以下设置：“允许在未部署的情况下从安装包任务序列中安装此应用程序”。  
 
 > [!NOTE]  
 > 对于独立媒体部署，无法使用动态变量列表安装软件包。  
@@ -1113,7 +1114,8 @@ SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫�
 选择此选项以阻止 Sysprep 重置产品激活标志。  
 
 #### <a name="shutdown-the-computer-after-running-this-action"></a>运行此操作后关闭计算机
-<!--SCCMDocs-pr issue 2695--> 从版本 1806 开始，此选项指示 Sysprep 关闭计算机，代替其默认重启行为。 
+<!--SCCMDocs-pr issue 2695-->
+从版本 1806 开始，此选项指示 Sysprep 关闭计算机，代替其默认重启行为。 
 
 从版本 1810 开始，可以在[适用于现有设备的 Windows Autopilot](/sccm/osd/deploy-use/windows-autopilot-for-existing-devices) 任务序列中使用此步骤。
 
@@ -1143,7 +1145,8 @@ SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫�
 指定要为其启用 BitLocker 的驱动器。 BitLocker 仅加密驱动器上使用的空间。  
 
 #### <a name="use-full-disk-encryption"></a>使用全磁盘加密
-<!--SCCMDocs-pr issue 2671--> 默认情况下，此步骤仅加密驱动器上的已用空间。 建议使用此默认行为，因为它更加快速高效。 从版本 1806 开始，如果贵组织需要在安装期间加密整个驱动器，请启用此选项。 Windows 安装程序会等待整个驱动器加密，所需时间较长（尤其是在大型驱动器上）。 
+<!--SCCMDocs-pr issue 2671-->
+默认情况下，此步骤仅加密驱动器上的已用空间。 建议使用此默认行为，因为它更加快速高效。 从版本 1806 开始，如果贵组织需要在安装期间加密整个驱动器，请启用此选项。 Windows 安装程序会等待整个驱动器加密，所需时间较长（尤其是在大型驱动器上）。 
 
 #### <a name="skip-this-step-for-computers-that-do-not-have-a-tpm-or-when-tpm-is-not-enabled"></a>对于没有 TPM 或 未启用 TPM 的计算机跳过此步骤
 选择此选项可跳过针对某类计算机的驱动器加密操作，这类计算机不包含受支持且已启用的 TPM。 例如，可在将 OS 部署到虚拟机时使用此选项。  
@@ -1421,7 +1424,7 @@ SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫�
 
 - **AllSigned**：只能运行由受信任的发布者签发的脚本  
 
-- **Undefined**：请勿定义任何执行策略  
+- Undefined：请勿定义任何执行策略  
 
 - **Bypass**：加载所有配置文件并运行所有脚本。 如果从 Internet 下载未签名的脚本，Windows PowerShell 不会在运行脚本前提示需要权限。  
 
@@ -1549,7 +1552,8 @@ SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫�
 指定任务序列内置或活动变量的名称，或者指定用户定义的变量名。  
 
 #### <a name="do-not-display-this-value"></a>不显示此值
-<!--1358330--> 从版本 1806 开始，启用此选项来屏蔽存储在任务序列变量中的敏感数据。 例如，指定密码时。 
+<!--1358330-->
+从版本 1806 开始，启用此选项来屏蔽存储在任务序列变量中的敏感数据。 例如，指定密码时。 
 
 > [!Note]  
 > 启用此选项，然后设置任务序列变量的值。 否则，变量值不会按预期设置，这可能会在任务序列运行时导致异常行为。<!--SCCMdocs issue #800--> 
@@ -1682,9 +1686,9 @@ SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫�
 #### <a name="provide-the-following-driver-content-to-windows-setup-during-upgrade"></a>在升级过程中向 Windows 安装程序提供以下驱动程序内容
 升级过程中将驱动程序添加到目标计算机。 此设置对应于 Windows 安装程序命令行选项 `/InstallDriver`。 驱动程序必须与 Windows 10 兼容。 指定下列选项之一：  
 
-- **驱动程序包**：选择“浏览”并从列表中选择现有的驱动程序包。  
+- **驱动程序包：** 选择“浏览”并从列表中选择现有的驱动程序包。  
 
-- **预留内容**：选择此选项以指定驱动程序包的位置。 可以指定本地文件夹、网络路径或任务序列变量。 将变量用作源路径时，必须在任务序列中提前设置其值。 例如，通过使用[下载包内容](/sccm/osd/understand/task-sequence-steps#BKMK_DownloadPackageContent)步骤。  
+- **暂存内容：** 选择此选项以指定驱动程序包的位置。 可以指定本地文件夹、网络路径或任务序列变量。 将变量用作源路径时，必须在任务序列中提前设置其值。 例如，通过使用[下载包内容](/sccm/osd/understand/task-sequence-steps#BKMK_DownloadPackageContent)步骤。  
 
 #### <a name="time-out-minutes"></a>超时（分钟）
 指定 Configuration Manager 执行此步骤失败前的分钟数。 如果 Windows 安装程序停止进程但未终止，则此选项非常有用。  
@@ -1692,7 +1696,8 @@ SMSTSSoftwareUpdateScanTimeout 变量控制着此步骤期间的软件更新扫�
 #### <a name="perform-windows-setup-compatibility-scan-without-starting-upgrade"></a>不启动升级而执行 Windows 安装程序兼容性扫描
 在不启动升级进程的情况下执行 Windows 安装程序兼容性扫描。 此设置对应于 Windows 安装程序命令行选项 `/Compat ScanOnly`。 使用此选项部署整个 OS 升级包。 
 
-<!--SCCMDocs-pr issue 2812--> 从版本 1806 开始，当启用此选项，此步骤不会将 Configuration Manager 客户端置于预配模式。 Windows 安装程序在后台以无提示方式运行，且客户端将继续正常工作。 
+<!--SCCMDocs-pr issue 2812-->
+从版本 1806 开始，当启用此选项时，此步骤不会将 Configuration Manager 客户端置于预配模式。 Windows 安装程序在后台以无提示方式运行，且客户端将继续正常工作。 
 
 安装程序将退出代码作为扫描结果返回。 下表提供了一些常见的退出代码：  
 

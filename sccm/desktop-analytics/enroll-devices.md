@@ -2,7 +2,7 @@
 title: 在 Desktop 分析中注册设备
 titleSuffix: Configuration Manager
 description: 了解如何在桌面分析中注册设备。
-ms.date: 01/25/2019
+ms.date: 04/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,25 +12,26 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4e409a1bba4642f2a9390c08896ba86cb676839f
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: c5d5e6665b0ddd2e7726af4b8ac8929d5019fedf
+ms.sourcegitcommit: 5ee9487c891c37916294bd34a10d04e398f111f7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56754697"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59069460"
 ---
-# <a name="how-to-enroll-devices-in-desktop-analytics"></a>如何在桌面分析中注册设备 
+# <a name="how-to-enroll-devices-in-desktop-analytics"></a>如何在桌面分析中注册设备
 
 > [!Note]  
 > 此信息与商业发布之前可能有大幅度修改的预览服务。 对于此处提供的信息，Microsoft 不提供任何明示或暗示的担保。  
 
-当您[配置管理器连接](/sccm/desktop-analytics/connect-configmgr)到 Desktop 分析配置设置，以设备注册到 Desktop 分析。 您可以随时更改这些设置。 此外请确保设备是最新。 
+当您[配置管理器连接](/sccm/desktop-analytics/connect-configmgr)到 Desktop 分析配置设置，以设备注册到 Desktop 分析。 您可以随时更改这些设置。 此外请确保设备是最新。
 
 
 
 ## <a name="update-devices"></a>更新设备
 
-有两种类型的更新需要适用于桌面分析的最佳体验： 
+有两种类型的更新需要适用于桌面分析的最佳体验：
+
 - [兼容性的更新](#bkmk_appraiser)  
 - [连接的用户体验和遥测服务](#bkmk_diagtrack)
 
@@ -50,9 +51,11 @@ Microsoft 定期递增此组件的更新，但不会更改关联的 KB 数。 �
 > 没有相关的可选更新， [KB 3150513](https://catalog.update.microsoft.com/v7/site/Search.aspx?q=3150513)。 此更新提供更新的配置和较旧的兼容性更新的定义。 有关详细信息，请参阅[Windows 的最新兼容性定义更新](https://support.microsoft.com/help/3150513)。  
 
 #### <a name="windows-10"></a>Windows 10
+
 Windows 10 包括兼容性组件。 若要获取最新的兼容性更新，请安装最新的 Windows 10 累积更新。
 
 #### <a name="windows-81"></a>Windows 8.1
+
 下载更新：[KB 2976978](http://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB2976978) 
 
 参与 Windows 客户体验改善计划的 Windows 8.1 系统上运行诊断程序。 这些诊断帮助确定是否在升级到 Windows 10 时，可能会遇到兼容性问题。
@@ -60,6 +63,7 @@ Windows 10 包括兼容性组件。 若要获取最新的兼容性更新，请�
 有关详细信息，请参阅[兼容性更新使 Windows 保持最新 Windows 8.1 中](https://support.microsoft.com/help/2976978)。
 
 #### <a name="windows-7-with-service-pack-1"></a>带有 Service Pack 1 的 Windows 7
+
 下载更新：[KB 2952664](http://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB2952664) 
 
 参与 Windows 客户体验改善计划的 Service Pack 1 (SP1) 系统与 Windows 7 上运行诊断程序。 这些诊断帮助确定是否在升级到 Windows 10 时，可能会遇到兼容性问题。
@@ -74,14 +78,16 @@ Windows 10 包括兼容性组件。 若要获取最新的兼容性更新，请�
 为获得最佳体验，安装以下更新取决于操作系统版本。
 
 > [!Note]  
-> 在安装这些更新时，预期以下行为： 
+> 在安装这些更新时，预期以下行为：
+> 
 > - Desktop 分析到注册的设备显示在该服务在不到一小时内  
 > - 设备快速报告状态功能和质量更新 Windows 和 Office  
-> 
+>
 > 如果没有这些更新，这些过程可能需要 48 小时内，使设备能够向桌面分析报告。  
 
 
 #### <a name="windows-10"></a>Windows 10
+
 安装最新的 Windows 10 累积更新。
 
 <!-- 
@@ -93,9 +99,11 @@ Windows 10 包括兼容性组件。 若要获取最新的兼容性更新，请�
  -->
 
 #### <a name="windows-81"></a>Windows 8.1
+
 安装 2018 年 10 月每月汇总， [KB4462926](https://support.microsoft.com/help/4462926)
 
 #### <a name="windows-7"></a>Windows 7
+
 安装 2018 年 10 月每月汇总， [KB4462923](https://support.microsoft.com/help/4462923)
 
 
@@ -105,17 +113,17 @@ Windows 10 包括兼容性组件。 若要获取最新的兼容性更新，请�
 Desktop 分析服务已安装任何代理。 设备注册需要在想要监视的设备上配置设置。 这些设置控制设备应该向哪些桌面分析实例发送其数据，而其他配置选项。
 
 > [!Note]  
-> 如果你已经在使用 Windows Analytics，用于桌面分析该相同的工作区。 您需要重新注册到桌面 Analytics 以前在 Windows Analytics 中注册的设备。 
-> 
-> 只能有一个桌面 Analytics 工作区，每个 Azure AD 租户。 设备只可以将诊断数据发送到一个工作区。   
+> 如果你已经在使用 Windows Analytics，用于桌面分析该相同的工作区。 您需要重新注册到桌面 Analytics 以前在 Windows Analytics 中注册的设备。
+>
+> 只能有一个桌面 Analytics 工作区，每个 Azure AD 租户。 设备只可以将诊断数据发送到一个工作区。  
 
-Configuration Manager 提供管理以及将这些设置部署到客户端的集成的体验。 为获得最佳体验，使用配置管理器。 
+Configuration Manager 提供管理以及将这些设置部署到客户端的集成的体验。 为获得最佳体验，使用配置管理器。
 
 时将配置管理器连接到桌面 Analytics，你配置的设置，以注册设备。 有关详细信息，请参阅[如何将 Configuration Manager 和桌面分析](/sccm/desktop-analytics/connect-configmgr#bkmk_connect)。
 
 若要更改这些设置，请使用以下过程：
 
-1. 在 Configuration Manager 控制台中，转到“管理”工作区，展开“云服务”，然后选择“Azure 服务”节点。 选择与桌面 Analytics 的连接，然后选择**属性**功能区中。 
+1. 在 Configuration Manager 控制台中，转到“管理”工作区，展开“云服务”，然后选择“Azure 服务”节点。 选择与桌面 Analytics 的连接，然后选择**属性**功能区中。
 
 2. 上**诊断数据**页上，根据需要对以下设置进行更改：  
 
@@ -152,12 +160,14 @@ Configuration Manager 提供管理以及将这些设置部署到客户端的集�
 | **AllowDeviceNameInTelemetry** | *适用于 Windows 10，版本 1803年和更高版本*:单独参加需要使设备能够继续发送设备名称。<br> <br>注意：默认情况下，设备名称不是发送给 Microsoft。 如果不发送设备名称，它显示在桌面分析为"未知"。 此行为可以使难以确定和评估设备。 有关详细信息，请参阅[设备名称](#device-name)。 |
 | **CommercialDataOptIn** | *适用于 Windows 7 和 Windows 8.1*:值为`1`Desktop 分析需要进行。 有关详细信息，请参阅[商业数据自愿加入 Windows 7 中](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/ee126127\(v=ws.10\))。 |
 
-在组策略编辑器中的以下路径中查看这些设置：**计算机配置** > **管理模板** > **Windows 组件** > **数据集合和预览生成**。 
+在组策略编辑器中的以下路径中查看这些设置：**计算机配置** > **管理模板** > **Windows 组件** > **数据集合和预览生成**。
 
+> [!Important]  
+> 在大多数情况下，仅使用配置管理器配置这些设置。 不会还应用域组策略对象中的这些设置。 有关详细信息，请参阅[冲突解决](#conflict-resolution)。<!-- SCCMDocs-pr 3120 -->
 
 ### <a name="device-name"></a>设备名称
 
-从 Windows 10，版本 1803，开始设备名称不能再收集默认情况下。 收集诊断数据的设备名称需要单独参加。 不包含设备名称会更加困难，以便识别哪些设备评估升级到 Windows 或 Office 的新版本时需要注意。 
+从 Windows 10，版本 1803，开始设备名称不能再收集默认情况下。 收集诊断数据的设备名称需要单独参加。 不包含设备名称会更加困难，以便识别哪些设备评估升级到 Windows 或 Office 的新版本时需要注意。
 
 如果不发送设备名称，它显示在桌面分析为"未知"。
 
@@ -170,9 +180,9 @@ Configuration Manager 提供管理以及将这些设置部署到客户端的集�
 
 一般情况下，使用 Configuration Manager 集合以面向桌面分析设置和注册。 使用直接成员身份或查询中包括或排除设备集合。 有关详细信息，请参阅[如何创建集合](/sccm/core/clients/manage/collections/create-collections)。
 
-如果值尚不存在，configuration Manager 仅配置 Windows 设置。 如果需要配置唯一的一组设备的不同设置，则可以使用[组策略](#group-policy)。 针对由组策略的设置优先于配置管理器设置。
+如果值尚不存在，configuration Manager 仅配置 Windows 设置。 如果需要配置唯一的一组设备的不同设置，则可以使用[组策略](#windows-settings)。 针对由组策略的设置优先于配置管理器设置。
 
-如果你面向 Configuration Manager 客户端使用 Windows Analytics 和 Desktop 分析设置，桌面分析的设置优先。 
+如果你面向 Configuration Manager 客户端使用 Windows Analytics 和 Desktop 分析设置，桌面分析的设置优先。
 
 在配置的诊断数据级别时，您设置设备的上限。 默认情况下，在 Windows 10，版本 1803年和更高版本，用户可以选择设置较低级别。 您可以控制使用组策略设置，此行为**配置遥测参加设置用户界面**。 有关详细信息，请参阅[配置组织中的 Windows 诊断数据](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enterprise-management)。
 

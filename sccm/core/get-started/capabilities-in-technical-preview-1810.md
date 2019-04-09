@@ -10,13 +10,14 @@ ms.assetid: 8109d0fe-a8d8-4cf2-92a1-94afa5299719
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d6fd090d9478b36bfdb64cf9f6058a3224b2706c
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 88e6c71aca94ca72a98fa17d82cf34274a21db58
+ms.sourcegitcommit: da753df27d3909265ca45d3e79091f1e98758d16
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56120917"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58913466"
 ---
 # <a name="capabilities-in-configuration-manager-technical-preview-version-1810"></a>Configuration Manager 技术预览版 1810 中的功能 
 
