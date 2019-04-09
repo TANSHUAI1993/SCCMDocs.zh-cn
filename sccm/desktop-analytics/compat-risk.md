@@ -2,7 +2,7 @@
 title: Windows 应用兼容性风险
 titleSuffix: Configuration Manager
 description: 了解有关桌面 Analytics 中的 Windows 应用程序的兼容性风险。
-ms.date: 01/25/2019
+ms.date: 04/05/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,14 +12,14 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8deaa8eef49b2d4792146cb47ecdf094eaed4eac
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: da0bde04e019fdf0fbb0a997be652860824270b1
+ms.sourcegitcommit: 5ee9487c891c37916294bd34a10d04e398f111f7
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56754665"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59069392"
 ---
-# <a name="compatibility-risk-for-windows-apps-in-desktop-analytics"></a>用于 Windows 桌面 Analytics 中的应用程序兼容性风险 
+# <a name="compatibility-risk-for-windows-apps-in-desktop-analytics"></a>用于 Windows 桌面 Analytics 中的应用程序兼容性风险
 
 > [!Note]  
 > 此信息与商业发布之前可能有大幅度修改的预览服务。 对于此处提供的信息，Microsoft 不提供任何明示或暗示的担保。  
@@ -52,47 +52,55 @@ Windows Analytics 中的升级评估了泛型类型，例如：需要注意或�
 
 ### <a name="ready-for-windows"></a>准备好进行 Windows
 
-在设备上的兼容性块检查准备就绪的 Windows 数据存储。 它还与其他客户报告类似应用程序中的数据相关联。 Microsoft 使用此应用程序报告的任何问题的其他类似的设备中的数据。 
+在设备上的兼容性块检查准备就绪的 Windows 数据存储。 它还与其他客户报告类似应用程序中的数据相关联。 Microsoft 使用此应用程序报告的任何问题的其他类似的设备中的数据。
 
 
 ### <a name="app-health-analyzer-signals-for-compatibility-assessment"></a>应用程序运行状况分析器信号兼容性评估
 
-使用的应用程序运行状况分析器工具包来收集有关应用程序兼容性的其他信号。 有关详细信息，请参阅[应用程序运行状况分析器](/sccm/desktop-analytics/app-health-analyzer)。 
+使用的应用程序运行状况分析器工具包来收集有关应用程序兼容性的其他信号。 有关详细信息，请参阅[应用程序运行状况分析器](/sccm/desktop-analytics/app-health-analyzer)。
 
 以下信号是当前可用：
 
 #### <a name="adopted-version-available"></a>采用的可用版本
+
 还有其他客户高度采用此应用程序的另一个版本。 此信号从准备好的 Windows 中使用的数据。 如果有任何与当前版本的升级阻塞程序，请考虑改为部署的替代版本。
 
 #### <a name="16-bit"></a>16 位
-删除所有的 16 位组件从应用程序，并使用 32 位或 64 位等效信息替换。 有关详细信息，请参阅[Windows Vista 和 Windows Server 2008 开发人员故事：应用程序兼容性指南](https://msdn.microsoft.com/library/aa480152.aspx)。 
+
+删除所有的 16 位组件从应用程序，并使用 32 位或 64 位等效信息替换。 有关详细信息，请参阅[Windows Vista 和 Windows Server 2008 开发人员故事：应用程序兼容性指南](https://msdn.microsoft.com/library/aa480152.aspx)。
 
 另一个选项是为支持 Windows 10 上启用 NT 虚拟 DOS 计算机 (NTVDM)。
 
 #### <a name="requires-admin-privileges"></a>需要管理员权限
+
 应用程序要求用户具有管理访问权限的设备。 使用这些应用需要管理员权限的应用程序清单。 有关详细信息，请参阅[创建和应用程序清单嵌入](https://msdn.microsoft.com/library/bb756929.aspx)。
 <!--Is this a better, more current link? https://docs.microsoft.com/windows/desktop/sbscs/application-manifests-->
 
-桌面的分析建议适用于试验测试的应用。 它应正常的试验，但您会发现任何回归。 
+桌面的分析建议适用于试验测试的应用。 它应正常的试验，但您会发现任何回归。
 
 #### <a name="java-dependency"></a>Java 依赖项
+
 很多 Java 应用程序依赖于上单独安装 Java Runtime Environment (JRE)。 当较旧的 JRE 版本可继续在 Windows 10 上工作时，Oracle 将仅支持最新的 JRE 版本。 使用较早的不支持的 JRE 可能会产生安全漏洞。 检查你的应用程序在最新的 JRE 版本上运行。
 
 #### <a name="not-dpi-aware"></a>非 DPI 感知
+
 Windows 10 上，应用程序可能具有高级的屏幕分辨率的显示问题。 使用应用程序清单以避免与高 DPI 分辨率的任何问题。 有关详细信息，请参阅[应用程序清单](https://docs.microsoft.com/windows/desktop/SbsCs/application-manifests)。
 
-桌面的分析建议适用于试验测试的应用。 它应正常的试验，但您会发现任何回归。 
+桌面的分析建议适用于试验测试的应用。 它应正常的试验，但您会发现任何回归。
 
 #### <a name="visual-basic-version-6-vb6"></a>Visual Basic 版本 6 (VB6)
-桌面的分析建议适用于试验测试的应用。 VB6 应用程序通常是兼容的。 如果应用在试点期间 regresses 由于任何其他依赖项或小组件，则应更新应用到 Visual Basic.NET 
+
+桌面的分析建议适用于试验测试的应用。 VB6 应用程序通常是兼容的。 如果应用在试点期间 regresses 由于任何其他依赖项或小组件，则应更新应用到 Visual Basic.NET
 
 #### <a name="os-version-dependency"></a>OS 版本依赖关系
+
 请考虑重新开发应用程序以使用版本帮助程序 API 或清单到目标 Windows 10 应用程序。
 
-桌面的分析建议适用于试验测试的应用。 它应正常的试验，但您会发现任何回归。 
+桌面的分析建议适用于试验测试的应用。 它应正常的试验，但您会发现任何回归。
 
 #### <a name="silverlight-framework"></a>Silverlight framework
-Microsoft 建议非基于浏览器的应用不使用 Silverlight。 Silverlight 5 的支持结束日期是年 10 月 2021年。 
+
+Microsoft 建议非基于浏览器的应用不使用 Silverlight。 Silverlight 5 的支持结束日期是年 10 月 2021年。
 
 最新的 web 浏览器不支持 Silverlight。
 
@@ -102,20 +110,24 @@ Microsoft 建议非基于浏览器的应用不使用 Silverlight。 Silverlight 
 | Firefox | 终止支持时间：2017 年 3 月 |
 | Microsoft Edge | 没有可用的插件 |
 
-桌面的分析建议适用于试验测试的应用。 它应正常的试验，但您会发现任何回归。 
+桌面的分析建议适用于试验测试的应用。 它应正常的试验，但您会发现任何回归。
 
-#### <a name="net-framework-1011"></a>.NET framework 1.0/1.1 
+#### <a name="net-framework-1011"></a>.NET framework 1.0/1.1
+
 在 Windows 10 上不支持.NET framework 1.0 版。 版本 1.1 中不允许在 Windows 10 上。 如果应用是从第三方发布者，请联系供应商联系以请求与 Windows 10 兼容的版本。 否则，重新开发应用程序以使用受支持的.NET 版本。
 
-#### <a name="net-framework-2030"></a>.NET framework 2.0/3.0 
+#### <a name="net-framework-2030"></a>.NET framework 2.0/3.0
+
 在 Windows 10 上支持.NET 2.0 和 3.5 框架。 您可能需要启用 Windows 功能。 有关详细信息，请参阅[在 Windows 10 上安装.NET Framework 3.5](https://docs.microsoft.com/dotnet/framework/install/dotnet-35-windows-10)。
 
 #### <a name="ui-access"></a>UI 访问
+
 使用 UI 访问应用程序可以绕过用户界面控制级别，以将输入到高特权的 windows 桌面上。 仅为用户界面辅助技术应用程序中使用此设置。
 
 如果您不使用辅助功能应用程序中，为 false 的应用程序清单中设置 UI 访问标志。 有关详细信息，请参阅[创建和应用程序清单嵌入](https://msdn.microsoft.com/library/bb756929.aspx)。
 
 #### <a name="driver-dependency"></a>驱动程序依赖关系
+
 该应用是依赖于驱动程序。 桌面的分析建议适用于试验测试的应用。 它应正常的试验，但您会发现任何回归。 如果有任何疑问，请联系发布者请求与 Windows 10 兼容的版本。
 
 
@@ -127,3 +139,8 @@ Microsoft 建议非基于浏览器的应用不使用 Silverlight。 Silverlight 
 此数据显示 60 899 应用程序，包括业务线应用与设备的置信度度量值。
 
 ![之前和之后显示应用置信度的图表](media/aha-app-confidence-simulation.png)
+
+
+## <a name="see-also"></a>另请参阅
+
+FastTrack 中心权益适用于 Windows 10 的连接可以访问**桌面应用程序确保**。 这一优势是设计用于 Windows 10 和 Office 365 专业增强版应用程序兼容性的解决问题的新服务。 有关详细信息，请参阅[桌面应用程序确保](https://docs.microsoft.com/fasttrack/win-10-desktop-app-assure)。

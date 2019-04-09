@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6bebf4065a4db1c45ee7eaa0a5b04b8d1533f29f
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: MT
+ms.openlocfilehash: d857b0e9d280bfed0834a97760d4fd481f0398d7
+ms.sourcegitcommit: d138a6a9ccbb6a03dc378272cf6f81b98b940f1d
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56754663"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "59013401"
 ---
 # <a name="troubleshooting-desktop-analytics"></a>故障排除桌面分析
 
@@ -137,7 +137,8 @@ Configuration Manager 客户端不是至少版本 1810 (5.0.8740)。
 - [Office 诊断终结点连接](#office-diagnostic-endpoint-connectivity)  
 
 #### <a name="appraiser-configuration"></a>评估程序配置
-<!--20,21--> 评估程序是 Windows 组件，它对应于[兼容性更新](/sccm/desktop-analytics/enroll-devices#update-devices)。 它将评估应用程序和适用于 Windows 的最新版本的兼容性的设备上的驱动程序。 
+<!--20,21-->
+评估程序是 Windows 组件，它对应于[兼容性更新](/sccm/desktop-analytics/enroll-devices#update-devices)。 它将评估应用程序和适用于 Windows 的最新版本的兼容性的设备上的驱动程序。 
 
 如果此检查成功，然后评估程序组件在设备上正确配置。 
 
@@ -155,7 +156,8 @@ Configuration Manager 客户端不是至少版本 1810 (5.0.8740)。
 
 
 #### <a name="minimum-compatibility-update"></a>最小兼容性更新
-<!--18,19,32--> 兼容性更新 (appraiser.dll) 不是已安装或在设备上已过期。 它是早于 Desktop 分析，10.0.17763 的最低要求。 
+<!--18,19,32-->
+兼容性更新 (appraiser.dll) 不是已安装或在设备上已过期。 它是早于 Desktop 分析，10.0.17763 的最低要求。 
 
 安装最新的兼容性更新。 有关详细信息，请参阅[兼容性更新](/sccm/desktop-analytics/enroll-devices#bkmk_appraiser)。
 
@@ -170,7 +172,8 @@ Configuration Manager 客户端不是至少版本 1810 (5.0.8740)。
 
 #### <a name="appraiser-data-collection"></a>估价师数据收集
 <!--Appraiser run status-->
-<!--22,33--> 此属性显示 Windows 的最新结果运行评估程序组件。 
+<!--22,33-->
+此属性显示 Windows 的最新结果运行评估程序组件。 
 
 如果不成功，它可能会显示以下错误之一： 
 
@@ -212,7 +215,8 @@ Start-Service -Name dps
 
 #### <a name="census-data-collection"></a>人口普查数据收集
 <!-- Census run status -->
-<!--51,52--> 人口普查是列出清单的设备的 Windows 组件。 使用此清单数据以了解设备和其配置。 
+<!--51,52-->
+人口普查是列出清单的设备的 Windows 组件。 使用此清单数据以了解设备和其配置。 
 
 此属性显示 Windows 的最新结果运行人口普查组件。
 
@@ -228,7 +232,8 @@ Start-Service -Name dps
 
 
 #### <a name="windows-diagnostic-endpoint-connectivity"></a>Windows 诊断终结点连接
-<!--12,15--> 如果此检查成功，则可以连接到的连接的用户体验与遥测终结点 （顶点） 设备。 
+<!--12,15-->
+如果此检查成功，则可以连接到的连接的用户体验与遥测终结点 （顶点） 设备。 
 
 否则，它可能会显示以下错误之一：  
 
@@ -275,7 +280,8 @@ Start-Service -Name dps
 
 
 #### <a name="commercial-id-configuration"></a>商业 ID 配置
-<!--9, 11, 53--> Microsoft 使用的唯一商业 ID 映射到 Desktop 分析工作区设备中的信息。 当 Configuration Manager 将使用 Desktop 分析时，它会自动查询的服务的此 id。 配置管理器自动应用于客户端向其目标 Desktop 分析设置此 ID。 
+<!--9, 11, 53-->
+Microsoft 使用的唯一商业 ID 映射到 Desktop 分析工作区设备中的信息。 当 Configuration Manager 将使用 Desktop 分析时，它会自动查询的服务的此 id。 配置管理器自动应用于客户端向其目标 Desktop 分析设置此 ID。 
 
 如果此检查成功，然后该设备已正确配置了一个商业 id。
 
@@ -331,7 +337,8 @@ Start-Service -Name dps
 
 
 #### <a name="diagtrack-service-configuration"></a>DiagTrack 服务配置
-<!--44,45,50--> 如果此检查成功，然后 DiagTrack 组件在设备上正确配置。 Desktop 分析所需的最低版本是 10010586 (10.0.10586)。 
+<!--44,45,50-->
+如果此检查成功，然后 DiagTrack 组件在设备上正确配置。 Desktop 分析所需的最低版本是 10010586 (10.0.10586)。 
 
 否则，它可能显示下列错误之一：
 
@@ -369,7 +376,8 @@ Start-Service -Name dps
 
 
 #### <a name="unique-device-identifier-retrieval"></a>唯一的设备标识符检索
-<!--54--> 桌面分析使用 Microsoft 帐户服务的更可靠的设备标识。 
+<!--54-->
+桌面分析使用 Microsoft 帐户服务的更可靠的设备标识。 
 
 请确保**Microsoft 帐户登录助手**服务未被禁用。 启动类型应为**手动 （触发器启动）**。
 
@@ -377,7 +385,8 @@ Start-Service -Name dps
 
 
 #### <a name="windows-diagnostic-data-opt-in"></a>Windows 诊断数据参加
-<!--8,40,55,62--> 此属性检查已正确配置 Windows 以允许诊断数据。 它会检查以下注册表项中的 AllowTelemetry 值：
+<!--8,40,55,62-->
+此属性检查已正确配置 Windows 以允许诊断数据。 它会检查以下注册表项中的 AllowTelemetry 值：
 
 - `HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection`
 - `HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection`
@@ -418,6 +427,7 @@ Start-Service -Name dps
 | **M365ADeploymentPlanWorker.log** | 有关从桌面分析部署计划同步的信息的云服务到本地 Configuration Manager |
 | **M365ADeviceHealthWorker.log** | 有关设备运行状况的信息将从 Configuration Manager 上传到 Microsoft 云 |
 | **M365AUploadWorker.log** | 有关集合和设备的信息将从 Configuration Manager 上传到 Microsoft 云 |
+| **SmsAdminUI.log** | 有关 Configuration Manager 控制台活动，例如，配置 Azure 云服务的信息  |
 
 
 ### <a name="configuration-manager-client"></a>Configuration Manager 客户端
@@ -426,14 +436,14 @@ Start-Service -Name dps
 
 | 日志 | 描述 |
 |---------|---------|
-| **M365Handler.log** | 有关桌面分析设置策略的信息 |
+| **M365AHandler.log** | 有关桌面分析设置策略的信息 |
 
 
 ### <a name="enable-verbose-logging"></a>启用详细日志记录 
 
 1. 对服务连接点，请转到以下注册表项： `HKLM\Software\Microsoft\SMS\Tracing\SMS_SERVICE_CONNECTOR`  
 2. 设置**LogLevel**值设为 `0`  
-3. 在站点数据库上运行以下 SQL 命令：  
+3. （可选）在站点数据库上运行以下 SQL 命令：  
 
     ```SQL
     DELETE FROM M365AProperties WHERE Name = 'M365ATenantUpdateInfo_LastUpdateTime'
