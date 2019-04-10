@@ -11,18 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 60856d3e2621f48fb669a4a1385876ddae849b2e
-ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
+ms.openlocfilehash: 5833db7cd6f47d0711fdcfae5d1f7a4114d7ff34
+ms.sourcegitcommit: d584c126a0a5725567631b74ac1e01f63242a997
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58525000"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58861014"
 ---
 # <a name="checklist-for-installing-update-1902-for-configuration-manager"></a>用于为 Configuration Manager 安装更新 1902 的清单
 
 适用范围：System Center Configuration Manager (Current Branch)
 
-使用 Configuration Manager 的 Current Branch 时，可安装版本为 1902 的控制台内部更新，从之前的版本更新层次结构。 <!-- baseline only statement:-->（由于版本 1802 也可用作[基线介质](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)，因此，可使用该安装介质安装新层次结构的第一个站点。）
+使用 Configuration Manager 的 Current Branch 时，可安装版本为 1902 的控制台内部更新，从之前的版本更新层次结构。 <!-- baseline only statement:-->（由于版本 1902 也可用作[基线介质](/sccm/core/servers/manage/updates#a-namebkmkbaselinesa-baseline-and-update-versions)，因此，可使用该安装介质安装新层次结构的第一个站点。）
 
 若要获取版本 1902 的更新，必须在层次结构的顶级站点上使用服务连接点。 站点系统角色可处于任一模式（联机或脱机）。 层次结构从 Microsoft 下载更新包之后，可在控制台中找到它。 在“管理”工作区中，选择“更新和维护服务”节点。
 

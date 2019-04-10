@@ -11,12 +11,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.assetid: e0ec7d66-1502-4b31-85bb-94996b1bc66f
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e937bf4adf3b695bf33d41318e5d48bc560ad06b
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 94a55e0678942623e6afe9752f435ceb8eb71270
+ms.sourcegitcommit: d584c126a0a5725567631b74ac1e01f63242a997
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56128096"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58861048"
 ---
 # <a name="set-up-cloud-management-gateway-for-configuration-manager"></a>为 Configuration Manager 设置云管理网关
 
@@ -43,7 +43,7 @@ ms.locfileid: "56128096"
 
     - 与 [Azure AD](/sccm/core/servers/deploy/configure/azure-services-wizard) 集成以实现**云管理**。 不需要 Azure AD 用户发现。  
     
-    - 必须在 Azure 订阅中注册 Microsoft.ClassicCompute 资源提供程序。 有关详细信息，请参阅 [Azure 资源管理器](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-supported-services)。
+    - 必须在 Azure 订阅中注册 Microsoft.ClassicCompute & Microsoft.Storage 资源提供程序。 有关详细信息，请参阅 [Azure 资源管理器](https://docs.microsoft.com/azure/azure-resource-manager/resource-manager-supported-services)。
 
     - 订阅管理员需要进行登录。  
 

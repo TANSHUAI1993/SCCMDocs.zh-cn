@@ -2,21 +2,21 @@
 title: Configuration Manager 控制台
 titleSuffix: Configuration Manager
 description: 了解如何导航 Configuration Manager 控制台。
-ms.date: 03/06/2019
+ms.date: 04/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 463ce307-59dd-4abd-87b8-42ca9db178d7
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0f9c06f40af1134055d4038fd23954b3f4c59682
-ms.sourcegitcommit: 544f335cfd1bfd0a1d4973439780e9f5e9ee8bed
+ms.openlocfilehash: fb58662350caec9fd1a08295c93c3811893048a9
+ms.sourcegitcommit: da753df27d3909265ca45d3e79091f1e98758d16
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562102"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58913534"
 ---
 # <a name="using-the-configuration-manager-console"></a>使用 Configuration Manager 控制台
 
@@ -99,7 +99,7 @@ Configuration Manager 控制台中有四个工作区：
 ![示例功能区，突出显示多个选项卡和最小化箭头](media/ribbon.png)   
 
 
-### <a name="details-pane"></a>“详细信息”窗格
+### <a name="details-pane"></a>细节窗格
 
 若要获取有关项的其他信息，可查看细节窗格。 细节窗格中可以有一个或多个选项卡。 选项卡的数量因节点而异。  
 
@@ -116,7 +116,36 @@ Configuration Manager 控制台中有四个工作区：
 
 ![Configuration Manager 按列分组](media/column-group-by.png)  
 
+## <a name="bkmk_viewconnected"></a>查看最近连接的控制台
+<!--3699367-->
 
+从版本 1902 开始，可以查看 Configuration Manager 控制台的最新连接。 视图包括活动连接和最近连接。 始终可在列表中看到当前控制台连接，并且只能看见来自 Configuration Manager 控制台的连接。 而看不到 PowerShell 或其他基于 SDK 的到 SMS 提供程序的连接。 该站点将从列表中删除 30 天以前的实例。
+
+
+### <a name="prerequisites-to-view-connected-consoles"></a>查看已连接控制台的先决条件
+
+- 帐户需要 SMS_Site 对象的读取权限 
+- 需要在 SMS 提供程序服务器上安装 IIS <!---SCCMDocs-pr issue 1326--> 
+- 启用 SMS 提供程序以使用证书。<!--SCCMDocs-pr issue 3135--> 使用以下选项之一：  
+
+  - 启用[增强型 HTTP](/sccm/core/plan-design/hierarchy/enhanced-http)（推荐）
+  - 将基于 PKI 的证书手动绑定到承载 SMS 提供程序角色的服务器上的 IIS 中的端口 443  
+
+### <a name="view-connected-consoles"></a>查看已连接控制台
+
+1. 在 Configuration Manager 控制台中，转到“管理”工作区。  
+
+2. 展开“安全”并选择“控制台连接”节点。  
+
+3. 查看具有以下属性的最近连接：  
+
+    - 用户名
+    - 计算机名
+    - 已连接的站点代码
+    - 控制台版本
+    - 上次连接时间：用户上一次打开控制台的时间
+
+![查看 Configuration Manager 控制台连接](media/console-connections.png) 
 
 ## <a name="command-line-options"></a>命令行选项
 
@@ -153,16 +182,17 @@ Configuration Manager 控制台提供下列命令行选项：
 #### <a name="view-users-for-a-device"></a>查看设备的用户
 自 1806 版起，“设备”节点中提供了以下列：  
 
-- 主要用户 <!--1357280-->  
+- **主要用户** <!--1357280-->  
 
-- 当前登录的用户 <!--1358202-->  
+- **当前登录的用户** <!--1358202-->  
     > [!NOTE]  
     > 查看当前登录的用户需要[用户发现](/sccm/core/servers/deploy/configure/configure-discovery-methods#bkmk_config-adud)和[用户设备相关性](/sccm/apps/deploy-use/link-users-and-devices-with-user-device-affinity)。  
 
 有关如何显示非默认列的详细信息，请参阅[列](#columns)。
 
 #### <a name="improvement-to-device-search-performance"></a>设备搜索性能的改进
-<!-- 3614690 -->从 1806 版开始，在设备集合中进行搜索时，它不会针对所有对象属性搜索关键字。 如果搜索内容不精确，则会搜索以下四个属性：
+<!-- 3614690 -->
+从 1806 版开始，在设备集合中进行搜索时，它不会针对所有对象属性搜索关键字。 如果搜索内容不精确，则会搜索以下四个属性：
 - 名称
 - 主要用户
 - 当前登录的用户
@@ -174,7 +204,8 @@ Configuration Manager 控制台提供下列命令行选项：
 ### <a name="monitoring-workspace"></a>监视工作区
 
 #### <a name="copy-details-in-monitoring-views"></a>复制监视视图中的详细信息
-<!--1357856-->自 1806 版起，从“资产详细信息”窗格复制以下监视节点的信息：  
+<!--1357856-->
+从版本 1806 开始，从“资产详细信息”窗格复制以下监视节点的信息：  
 
 - 内容分发状态  
 

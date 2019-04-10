@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c50bc520dfe1703d1881c04db67bac095e084d10
-ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
+ms.openlocfilehash: 971d1cd2a8571b6d0dc120a07cd583674ac7fb62
+ms.sourcegitcommit: 60aff44c76e6432dc544c8b26acba432ac799cfc
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58524160"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58639489"
 ---
 # <a name="install-in-console-updates-for-configuration-manager"></a>为 Configuration Manager 安装控制台内更新
 
@@ -359,6 +359,8 @@ Configuration Manager 与 Microsoft 云服务同步，以获取更新。 随后�
 ##  <a name="bkmk_after"></a> 站点安装更新之后  
 
 站点更新后，查看更新后清单以寻找适用的版本：  
+
+- [版本 1902 的更新后清单](/sccm/core/servers/manage/checklist-for-installing-update-1902#post-update-checklist)  
 
 - [版本 1810 的更新后清单](/sccm/core/servers/manage/checklist-for-installing-update-1810#post-update-checklist)  
 

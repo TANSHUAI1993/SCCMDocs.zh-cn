@@ -2,7 +2,7 @@
 title: 1902 版中的新增功能
 titleSuffix: Configuration Manager
 description: 获取有关 Configuration Manager Current Branch 版本 1902 中引入的更改和新增功能的详细信息。
-ms.date: 03/27/2019
+ms.date: 04/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 81d4a34074e71d97061b8fbcab94e81335df4314
-ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
+ms.openlocfilehash: 0be6a28aa0421c6479ba676e67fd5dd7b4b13d39
+ms.sourcegitcommit: da753df27d3909265ca45d3e79091f1e98758d16
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58525003"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58913670"
 ---
 # <a name="whats-new-in-version-1902-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 版本 1902 中的新增功能
 
@@ -121,9 +121,9 @@ Configuration Manager Current Branch 的更新 1902 作为控制台中更新提�
 
 ### <a name="run-cmpivot-from-the-central-administration-site"></a>从管理中心站点运行 CMPivot
 <!--3610960-->
-Configuration Manager 现在支持从层次结构中的管理中心站点运行 CMPivot。 主站点仍可处理与客户端的通信。 从管理中心站点运行 CMPivot 时，它将通过高速消息订阅通道与主站点通信。 该通信不依赖于站点之间的标准 SQL 复制。
+[已更新] Configuration Manager 现在支持从层次结构中的管理中心站点运行 CMPivot。 主站点仍可处理与客户端的通信。 从管理中心站点运行 CMPivot 时，它将通过高速消息订阅通道与主站点通信。 该通信不依赖于站点之间的标准 SQL 复制。
 
-<!-- For more information, see [CMPivot for real-time data](/sccm/core/servers/manage/cmpivot). -->
+有关详细信息，请参阅[使用 CMPivot 获得实时数据](/sccm/core/servers/manage/cmpivot#bkmk_cmpivot1902)。
 
 
 ### <a name="edit-or-copy-powershell-scripts"></a>编辑或复制 PowerShell 脚本
@@ -440,16 +440,16 @@ Configuration Manager 现在支持 Office 365 客户端更新支持的所有语�
 
 ### <a name="confirmation-of-console-feedback"></a>确认控制台反馈
 <!--3556010-->
-在 Configuration Manager 控制台中发送[反馈](/sccm/core/understand/find-help#product-feedback)时，现在它将显示一条确认消息。 此消息包含反馈 ID，可将其作为跟踪标识符提供给 Microsoft。 
+[已更新] 在 Configuration Manager 控制台中发送[反馈](/sccm/core/understand/find-help#product-feedback)时，现在它将显示一条确认消息。 此消息包含反馈 ID，可将其作为跟踪标识符提供给 Microsoft。
 
-<!-- For more information, see [Product feedback](/sccm/core/understand/find-help#product-feedback). -->
+有关详细信息，请参阅[产品反馈](/sccm/core/understand/find-help#bkmk_feedbackid)。
 
 
 ### <a name="view-recently-connected-consoles"></a>查看最近连接的控制台 
 <!--3699367-->
-现在可以查看 Configuration Manager 控制台的最新连接。 视图包括活动连接以及最近连接的控制台。 在 Configuration Manager 控制台中，转到“管理”工作区，展开“安全性”，然后选择“控制台连接”节点。
+[已更新] 现在可以查看 Configuration Manager 控制台的最新连接。 视图包括活动连接以及最近连接的控制台。 在 Configuration Manager 控制台中，转到“管理”工作区，展开“安全性”，然后选择“控制台连接”节点。
 
-<!-- For more information, see [Using the Configuration Manager console](/sccm/core/servers/manage/admin-console). -->
+有关详细信息，请参阅[使用 Configuration Manager 控制台](/sccm/core/servers/manage/admin-console#bkmk_viewconnected)。
 
 
 ### <a name="in-console-documentation-dashboard"></a>控制台内文档仪表板

@@ -2,7 +2,7 @@
 title: 使用的帐户
 titleSuffix: Configuration Manager
 description: 标识和管理 Configuration Manager 中使用的 Windows 组和帐户。
-ms.date: 10/26/2018
+ms.date: 03/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f0c9ad4831d0450b7a30de4117a65005164d5080
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: a05ff407c3787283a58973f2861432a0a26a52b0
+ms.sourcegitcommit: deb28cdc95a456d4a38499ef1bc71e765ef6dc13
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56122383"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58901513"
 ---
 # <a name="accounts-used-in-configuration-manager"></a>Configuration Manager 中使用的帐户
 
@@ -25,8 +25,8 @@ ms.locfileid: "56122383"
 可以使用以下信息确定 Configuration Manager 中使用的 Windows 组和帐户、它们的使用方式以及任何要求。  
 
 - [Configuration Manager 创建和使用的 Windows 组](#bkmk_groups)  
-    - [ConfigMgr_CollectedFilesAccess](#configmgrcollectedfilesaccess)  
-    - [ConfigMgr_DViewAccess](#configmgrdviewaccess)  
+    - [ConfigMgr_CollectedFilesAccess](#configmgr_collectedfilesaccess)  
+    - [ConfigMgr_DViewAccess](#configmgr_dviewaccess)  
     - [ConfigMgr 远程控制用户](#configmgr-remote-control-users)  
     - [SMS 管理员](#sms-admins)  
     - [SMS_SiteSystemToSiteServerConnection_MP_&lt;sitecode\>](#bkmk_remotemp)  
@@ -71,7 +71,7 @@ ms.locfileid: "56122383"
 >  当 Configuration Manager 在作为域成员的计算机上创建组时，该组为本地安全组。 如果计算机是域控制器，则该组是域本地组。 此类组在域中的所有域控制器之间共享。  
 
 
-### <a name="configmgrcollectedfilesaccess"></a>ConfigMgr_CollectedFilesAccess  
+### <a name="configmgrcollectedfilesaccess"></a>ConfigMgr_CollectedFilesAccess
 
 Configuration Manager 使用此组来授予查看软件清单所收集的文件的访问权限。  
 
@@ -443,7 +443,8 @@ Configuration Manager 自动管理组成员身份。 默认情况下，成员资
 
 
 ### <a name="site-installation-account"></a>站点安装帐户
-<!--SCCMDocs issue #572-->使用域用户帐户登录运行 Configuration Manager 安装程序的服务器并安装新站点。
+<!--SCCMDocs issue #572-->
+使用域用户帐户登录运行 Configuration Manager 安装程序的服务器并安装新站点。
 
 此帐户要求具有以下权限：  
 
@@ -474,7 +475,8 @@ Configuration Manager 安装程序会自动将此帐户添加到 [SMS 管理员]
 
 
 ### <a name="site-system-proxy-server-account"></a>站点系统代理服务器帐户
-<!--SCCMDocs issue #648-->以下站点系统角色使用“站点系统代理服务器帐户”通过需要对访问进行身份验证的代理服务器或防火墙访问 Internet：
+<!--SCCMDocs issue #648-->
+ 以下站点系统角色使用“站点系统代理服务器帐户”通过需要对访问进行身份验证的代理服务器或防火墙访问 Internet：
 
 - 资产智能同步点
 - Exchange Server 连接器
