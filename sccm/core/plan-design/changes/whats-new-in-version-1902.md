@@ -2,7 +2,7 @@
 title: 1902 版中的新增功能
 titleSuffix: Configuration Manager
 description: 获取有关 Configuration Manager Current Branch 版本 1902 中引入的更改和新增功能的详细信息。
-ms.date: 04/03/2019
+ms.date: 04/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,18 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0be6a28aa0421c6479ba676e67fd5dd7b4b13d39
-ms.sourcegitcommit: da753df27d3909265ca45d3e79091f1e98758d16
+ms.openlocfilehash: a424a2397f4e1845795441208929b7d9efb7f93c
+ms.sourcegitcommit: d4b0e44e6bb06a830d0887493528d9166a15154b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58913670"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59506271"
 ---
 # <a name="whats-new-in-version-1902-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 版本 1902 中的新增功能
 
 适用范围：System Center Configuration Manager (Current Branch)
 
-Configuration Manager Current Branch 的更新 1902 作为控制台中更新提供。 将此更新应用于运行版本 1710、1802、1806 或 1810 的站点。 <!-- baseline only statement:-->安装新站点时，它也可作为基准版本提供。 本文汇总了 Configuration Manager 版本 1902 中的更改和新增功能。  
+Configuration Manager Current Branch 的更新 1902 作为控制台中更新提供。 将此更新应用于运行版本 1802、1806 或 1810 的站点。 <!-- baseline only statement:-->安装新站点时，它也可作为基准版本提供。 本文汇总了 Configuration Manager 版本 1902 中的更改和新增功能。  
 
 始终查看安装此更新的最新清单。 有关详细信息，请参阅[用于安装更新 1902 的清单](/sccm/core/servers/manage/checklist-for-installing-update-1902)。 更新站点后，还可以查看[更新后清单](/sccm/core/servers/manage/checklist-for-installing-update-1902#post-update-checklist)。
 
@@ -343,11 +343,11 @@ Configuration Manager Current Branch 的更新 1902 作为控制台中更新提�
 
 ### <a name="specify-priority-for-feature-updates-in-windows-10-servicing"></a>在 Windows 10 维护服务中指定功能更新的优先级
 <!--3734525-->
-调整客户端通过 [Windows 10 维护服务](/sccm/osd/deploy-use/manage-windows-as-a-service)安装功能更新的优先级。 默认情况下，客户端现在安装具有较高处理优先级的功能更新。 
+[已更新] 调整客户端通过 [Windows 10 维护服务](/sccm/osd/deploy-use/manage-windows-as-a-service)安装功能更新的优先级。 默认情况下，客户端现在安装具有较高处理优先级的功能更新。 
 
 使用客户端设置来配置此选项。 在“软件更新”组中，配置以下设置：为功能更新指定线程优先级。 
 
-<!-- For more information, see [About client settings](/sccm/core/clients/deploy/about-client-settings#software-updates). -->
+有关详细信息，请参阅[关于客户端设置](/sccm/core/clients/deploy/about-client-settings#software-updates)。 
 
 
 
@@ -355,7 +355,7 @@ Configuration Manager Current Branch 的更新 1902 作为控制台中更新提�
 
 ### <a name="redirect-windows-known-folders-to-onedrive"></a>将 Windows 已知文件夹重定向到 OneDrive
 <!--3556021-->
-使用 Configuration Manager 将 Windows 已知文件夹移动到 OneDrive for Business。 这些文件夹包括桌面、文档和图片。 若要简化 Windows 10 升级过程，请先将这些设置部署到 Windows 7 客户端，然后部署任务序列。 
+[已更新] 使用 Configuration Manager 将 Windows 已知文件夹移动到 OneDrive for Business。 这些文件夹包括桌面、文档和图片。 若要简化 Windows 10 升级过程，请先将这些设置部署到 Windows 7 客户端，然后部署任务序列。 
 
 有关此 OneDrive for Business 功能的详细信息，请参阅[将 Windows 已知文件夹重定向并移动到 OneDrive](https://docs.microsoft.com/onedrive/redirect-known-folders)。
 
@@ -363,23 +363,23 @@ Configuration Manager Current Branch 的更新 1902 作为控制台中更新提�
 
 若要创建和部署 OneDrive for Business 配置文件，在 Configuration Manager 控制台中，转到“资产和符合性”工作区。 展开“符合性设置”，然后选择“OneDrive for Business 配置文件”节点。  
 
-<!-- For more information, see [Redirect Windows known folders to OneDrive](/sccm/compliance/deploy-use/onedrive-profile). -->
+有关详细信息，请参阅 [OneDrive for Business 配置文件](/sccm/compliance/deploy-use/onedrive-profile)一文中的“将 Windows 已知文件夹重定向到 OneDrive”部分。
 
 
-### <a name="integration-with-analytics-for-office-365-proplus-readiness"></a>Office 365 专业增强版与分析集成的就绪情况
+### <a name="integration-for-office-365-proplus-readiness"></a>Office 365 专业增强版集成的就绪情况
 <!--3735402-->
-使用 Configuration Manager 识别准备升级到 Office 365 专业增强版的设备，且识别的可信度非常高。 与 Office 分析集成，可以深入了解环境中所用 Office 加载项和宏的任何潜在兼容性问题。 然后使用 Configuration Manager 将 Office 部署到已就绪的设备。 
+[已更新] 使用 Configuration Manager 识别准备升级到 Office 365 专业增强版的设备，且识别的可信度非常高。 通过该集成可以深入了解环境中所用 Office 加载项和宏的任何潜在兼容性问题。 然后使用 Configuration Manager 将 Office 部署到已就绪的设备。 
 
 现有 Office 365 客户端管理仪表板现在包含新磁贴“Office 365 专业增强版升级就绪情况”。
 
-<!-- For more information, see [Office 365 client management dashboard](/sccm/sum/deploy-use/manage-office-365-proplus-updates#office-365-client-management-dashboard) -->
+有关详细信息，请参阅 [Office 365 客户端管理仪表板](/sccm/sum/deploy-use/office-365-dashboard#bkmk_o365_readiness)
 
 
 ### <a name="additional-languages-for-office-365-updates"></a>Office 365 更新的其他语言
 <!--3555955-->
-Configuration Manager 现在支持 Office 365 客户端更新支持的所有语言。 现在，更新工作流将“Windows 更新”的 38 种语言与“Office 365 客户端更新”的 103 种语言分开。 
+Configuration Manager 现在支持 Office 365 客户端更新支持的所有语言。 现在，更新工作流将“Windows 更新”的 38 种语言与“Office 365 客户端更新”的多种语言分开。 
 
-<!-- For more information, see [Office 365 client management dashboard](/sccm/sum/deploy-use/manage-office-365-proplus-updates#office-365-client-management-dashboard) -->
+有关详细信息，请参阅[管理 Office 365 更新](/sccm/sum/deploy-use/manage-office-365-proplus-updates#bkmk_o365_lang)
 
 
 ### <a name="office-products-on-lifecycle-dashboard"></a>生命周期仪表板上的 Office 产品
@@ -469,6 +469,19 @@ Configuration Manager 现在支持 Office 365 客户端更新支持的所有语�
 若要改进 Configuration Manager 控制台的辅助功能，请在运行控制台的计算机上将 .NET 更新到版本 4.7 或更高版本。 
 
 有关详细信息，请参阅 [Configuration Manager 中的辅助功能](/sccm/core/understand/accessibility-features)。
+
+
+### <a name="changes-to-console-setup-process"></a>对控制台安装过程的更改
+
+<!-- 3612513 -->
+[已更新] 安装 Configuration Manager 控制台时需要新组件。 如果创建用于在其他计算机上安装控制台的程序包，请确保该程序包包含以下文件：
+
+- ConsoleSetup.exe
+- AdminConsole.msi
+- ConfigMgr.AC_Extension.i386.cab
+- ConfigMgr.AC_Extension.amd64.cab
+
+安装或更新站点服务器时，它会将这些安装文件和受支持的站点语言包复制到 Tools\ConsoleSetup 子文件夹中。 有关详细信息，请参阅[安装 Configuration Manager 控制台](/sccm/core/servers/deploy/install/install-consoles)。
 
 
 

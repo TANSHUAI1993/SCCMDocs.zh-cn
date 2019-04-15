@@ -2,7 +2,7 @@
 title: 1902 清单
 titleSuffix: Configuration Manager
 description: 了解更新到 Configuration Manager 版本 1902 之前需要执行的操作。
-ms.date: 03/27/2019
+ms.date: 04/11/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5833db7cd6f47d0711fdcfae5d1f7a4114d7ff34
-ms.sourcegitcommit: d584c126a0a5725567631b74ac1e01f63242a997
+ms.openlocfilehash: c9d0714bd55b4c99b181dfaf3ac34e63a0e9a35e
+ms.sourcegitcommit: d4b0e44e6bb06a830d0887493528d9166a15154b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58861014"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59506135"
 ---
 # <a name="checklist-for-installing-update-1902-for-configuration-manager"></a>用于为 Configuration Manager 安装更新 1902 的清单
 
@@ -65,7 +65,7 @@ ms.locfileid: "58861014"
 ## <a name="checklist"></a>清单
 
 #### <a name="all-sites-run-a-supported-version-of-configuration-manager"></a>所有站点都运行 Configuration Manager 的支持版本  
-层次结构中的每个站点服务器都必须运行相同的 Configuration Manager 版本，然后才能开始安装更新 1902。 若要更新到 1902，必须使用版本 1710、1802、1806 或 1810。
+层次结构中的每个站点服务器都必须运行相同的 Configuration Manager 版本，然后才能开始安装更新 1902。 若要更新到 1902，必须使用版本 1802、1806 或 1810。
 
 #### <a name="review-the-status-of-your-product-licensing"></a>查看产品许可的状态 
 必须拥有有效的软件保障 (SA) 协议或等效的订阅权利才能安装此更新。 更新站点时，“许可”页将出现确认“软件保障到期日期”的选项。

@@ -2,7 +2,7 @@
 title: 客户端设置
 titleSuffix: Configuration Manager
 description: 了解用于控制客户端行为的默认和自定义设置
-ms.date: 03/21/2019
+ms.date: 04/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e76dc5892ad34d72bfee3cd4aea0fa660e34855d
-ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
+ms.openlocfilehash: 42218443f83726bfbca0dcf77ffa37e61c46a2b3
+ms.sourcegitcommit: d4b0e44e6bb06a830d0887493528d9166a15154b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477528"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59506203"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>关于 Configuration Manager 中的客户端设置
 
@@ -784,11 +784,23 @@ Set this option to **Yes** for the Endpoint Protection client to attempt to unin
 
 将此选项设置为“是”且客户端定义了至少一个"软件更新"维护时段时，将在"所有部署"维护时段安装软件更新。 默认情况下，此设置设为“否” 。 Configuration Manager 1810 版中已添加此客户端设置。 <!--2839307-->
 
+### <a name="bkmk_thread-priority"></a>为功能更新指定线程优先级
+<!--3734525-->
+从 Configuration Manager 版本 1902 开始，可以调整 Windows 10 版本 1709 或更高版本客户端通过 [Windows 10 维护服务](/sccm/osd/deploy-use/manage-windows-as-a-service)安装功能更新的优先级。 此设置对 Windows 10 就地升级任务序列没有影响。
+
+此客户端设置提供以下选项：
+
+- **未配置**：Configuration Manager 不更改设置。 管理员可以预暂存自己的 setupconfig.ini 文件。 该值为默认值。 
+- **常规**：Windows 安装程序使用更多系统资源，更新更快。 它使用更多的处理器时间，因此总安装时间更短，但用户的服务中断时间更长。  
+   - 使用 `/Priority Normal` [Windows 安装程序命令行选项](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options)在设备上配置 setupconfig.ini 文件。
+
+- **低**：可继续使用设备，而它在后台进行下载和更新。 总安装时间更长，但用户的服务中断时间更短。 可能需要增加更新最大运行时间以避免在使用此选项时超时。
+  - 从 setupconfig.ini 文件中删除 `/Priority` [Windows 安装程序命令行选项](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-setup-command-line-options)。
+
+
 ### <a name="enable-third-party-software-updates"></a>启用第三方软件更新 
 
 如果将此选项设置为“是”，它将设置“允许 Intranet Microsoft 更新服务位置的签名更新”策略，并将签名证书安装到客户端上受信任的发布者库。 此客户端设置已添加到 Configuration Manager 1802 版中。
-
-
 
 ## <a name="state-messaging"></a>状态消息
 
