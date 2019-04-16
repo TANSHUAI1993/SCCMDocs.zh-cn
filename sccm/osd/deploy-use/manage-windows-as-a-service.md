@@ -2,7 +2,7 @@
 title: 将 Windows 作为一项服务来管理
 titleSuffix: Configuration Manager
 description: 使用 Configuration Manager 查看 Windows 即服务 (WaaS) 的状态，创建维护服务计划以形成部署环，以及在 Windows 10 客户端即将结束支持时查看警报。
-ms.date: 03/15/2017
+ms.date: 04/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 614ccc06a3fef5cca54c7eb1c32952e8531aedfa
-ms.sourcegitcommit: d71e558db2da124357b840332e2da671b3810507
+ms.openlocfilehash: 13fde17d8fe46b723a8f49b22a68685fbc4d47de
+ms.sourcegitcommit: d4b0e44e6bb06a830d0887493528d9166a15154b
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58269065"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59506237"
 ---
 # <a name="manage-windows-as-a-service-using-system-center-configuration-manager"></a>使用 System Center Configuration Manager 将 Windows 作为服务进行管理
 
@@ -54,6 +54,7 @@ ms.locfileid: "58269065"
 -   必须在运行 Configuration Manager 控制台的计算机上安装 Internet Explorer 9 或更高版本。  
 
 -   必须配置和同步软件更新。 选择“升级”分类并同步软件更新之后，才能在 Configuration Manager 控制台中使用 Windows 10 功能升级。 有关详细信息，请参阅[准备软件更新管理](../../sum/get-started/prepare-for-software-updates-management.md)。  
+- 从 Configuration Manager 1902 版开始，验证“为功能更新指定线程优先级”[客户端设置](/sccm/core/clients/deploy/about-client-settings#bkmk_thread-priority)以确保它适合你的环境。
 
 ##  <a name="BKMK_ServicingDashboard"></a> Windows 10 维护服务仪表板  
  Windows 10 维护服务仪表板提供了有关环境中的 Windows 10 计算机和活动维护服务计划的信息以及符合性信息等。 Windows 10 维护服务仪表板中的数据依赖于安装服务连接点。 该仪表板具有以下磁贴：  
@@ -72,7 +73,7 @@ ms.locfileid: "58269065"
 
 -   **“服务计划监视”磁贴**：显示已创建的维护服务计划，以及每个计划的符合性图表。 该磁贴提供维护服务计划部署当前状态的简要概述。 如果较早的部署环满足你对符合性的期望，则可以选择较晚的维护服务计划（部署环）然后单击“立即部署”  ，而不必等待自动触发维护服务计划规则。  
 
--   **“Windows 10 内部版本”磁贴**：显示固定的映像时间线，它提供当前发布的 Windows 10 内部版本的概述，以及内部版本转换为各种状态的大致时间。  
+-   **“Windows 10 内部版本”磁贴**：显示固定的映像时间线，它提供当前发布的 Windows 10 内部版本的概述，以及内部版本转换为各种状态的大致时间。 从 Configuration Manager 1902 版开始，已删除此磁贴，因为[产品生命周期仪表板](/sccm/core/clients/manage/asset-intelligence/product-lifecycle-dashboard)中提供了更详细的信息。 <!--3446861-->
 
 > [!IMPORTANT]  
 >  Windows 10 维护服务仪表板中显示的信息（例如 Windows 10 版本的支持使用期限）是出于方便考虑而提供的，仅供公司内部使用。 不应仅依赖此信息来确认更新符合性。 请务必验证所提供信息的准确性。  
@@ -144,15 +145,15 @@ ms.locfileid: "58269065"
    -   **Microsoft 发布新升级后，你希望等待多少天再在环境中进行部署**：如果当前日期晚于发布日期加上为此设置配置的天数，Configuration Manager 会评估是否在部署中包含升级。
 
 
-7. 在“升级”页面上，配置搜索条件以筛选添加到服务计划的升级。 只有满足指定条件的升级项才会添加到关联部署中。 提供了以下属性筛选器： <!--3098809, 3113836, 3204570 -->
+7. 在“升级”页面上，配置搜索条件以筛选添加到服务计划的升级。 只有满足指定条件的升级项才会添加到关联部署中。 可用属性筛选器如下： <!--3098809, 3113836, 3204570 -->
 
-   - **体系结构**（从版本 1810年）
+   - **体系结构**（从 1810 版开始）
    - **语言**
-   - **产品类别**（从版本 1810年）
+   - **产品类别**（从 1810 版开始）
    - **必需**
       > [!Important]    
       > 建议将“所需”字段的值设置为“>=1”，作为搜索条件的一部分。 使用此条件可确保只向服务计划添加适用的更新。
-   - **取代**（从版本 1810年）
+   - **被取代**（从 1810 版开始）
    - **标题**
 
     单击“预览”可查看符合指定条件的升级。  

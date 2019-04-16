@@ -2,21 +2,21 @@
 title: 管理 Office 365 ProPlus 更新
 titleSuffix: Configuration Manager
 description: Configuration Manager 将 Office 365 客户端更新从 WSUS 目录同步到站点服务器，使更新可部署到客户端。
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
-ms.date: 07/30/2018
+ms.date: 04/11/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 10c04b5daa53a1b12637fa8470b97ae27a63678b
-ms.sourcegitcommit: 8803a64692f3edc0422b58f6c3037a8796374cc8
+ms.openlocfilehash: 7122d57696a7407731b93da20b995fc3e40949ac
+ms.sourcegitcommit: d4b0e44e6bb06a830d0887493528d9166a15154b
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57881820"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59506169"
 ---
 # <a name="manage-office-365-proplus-with-configuration-manager"></a>使用 Configuration Manager 管理 Office 365 ProPlus
 
@@ -24,38 +24,15 @@ ms.locfileid: "57881820"
 
 使用 Configuration Manager，可以通过下列方式管理 Office 365 专业增强版应用：
 
-- [Office 365 客户端管理仪表板](#office-365-client-management-dashboard)：可以从 Office 365 客户端管理仪表板查看 Office 365 客户端信息。 从 Configuration Manager 1802 版开始，选择图形部分时，Office 365 客户端管理仪表板会显示相关设备的列表。 <!--1357281 -->
-
-- [部署 Office 365 应用](#deploy-office-365-apps)：可从 Office 365 客户端管理仪表板启动 Office 365 安装程序，使首次 Office 365 应用安装体验更简单。 该向导可让你配置 Office 365 安装设置、从 Office 内容分发网络 (CDN) 下载文件以及创建并部署脚本应用程序的内容。    
+- [部署 Office 365 应用](#deploy-office-365-apps)：可从 [Office 365 客户端管理仪表板](/sccm/sum/deploy-use/office-365-dashboard)启动 Office 365 安装程序，使首次 Office 365 应用安装体验更简单。 该向导可让你配置 Office 365 安装设置、从 Office 内容分发网络 (CDN) 下载文件以及创建并部署脚本应用程序的内容。
 
 - [部署 Office 365 更新](#deploy-office-365-updates)：可以使用软件更新管理工作流管理 Office 365 客户端更新。 当 Microsoft 将新的 Office 365 客户端更新发布到 Office 内容分发网络 (CDN) 时，Microsoft 还会将更新包发布到 Windows Server 更新服务 (WSUS)。 将 Office 365 客户端更新从 WSUS 目录同步到站点服务器之后，更新可部署到客户端。    
 
-- [添加 Office 365 更新下载的语言](#add-languages-for-office-365-update-downloads)：可以添加对 Configuration Manager 的支持，以下载 Office 365 支持的任意语言的更新。 这意味着只要 Office 365 支持，Configuration Manager 就可不必支持该语言。 在 Configuration Manager 版本 1610 之前，必须使用 Office 365 客户端上配置的语言下载和部署更新。 
+- [添加 Office 365 更新下载的语言](#bkmk_o365_lang)：可以添加对 Configuration Manager 的支持，以下载 Office 365 支持的任意语言的更新。 这意味着只要 Office 365 支持，Configuration Manager 就可不必支持该语言。 在 Configuration Manager 版本 1610 之前，必须使用 Office 365 客户端上配置的语言下载和部署更新。
 
 - [更改更新频道](#change-the-update-channel-after-you-enable-office-365-clients-to-receive-updates-from-configuration-manager)：可以使用组策略向 Office 365 客户端分发注册表项值更改，从而更改更新频道。
 
-
-## <a name="office-365-client-management-dashboard"></a>Office 365 客户端管理仪表板  
-Office 365 客户端管理仪表板提供以下信息的相关图表：
-
-- Office 365 客户端数
-- Office 365 客户端版本
-- Office 365 客户端语言
-- Office 365 客户端通道     
-  有关详细信息，请参阅 [Office 365 专业增强版的更新频道概述](/DeployOffice/overview-of-update-channels-for-office-365-proplus)。
-
-若要在 Configuration Manager 控制台中查看 Office 365 客户端管理仪表板，请依次转到“软件库” > “概述” > “Office 365 客户端管理”。 在仪表板顶部，使用“集合”下拉列表设置按特定集合的成员筛选仪表板数据。 从 Configuration Manager 1802 版开始，选择图形部分时，Office 365 客户端管理仪表板会显示相关设备的列表。
-
-### <a name="display-data-in-the-office-365-client-management-dashboard"></a>在 Office 365 客户端管理仪表板中显示数据
-Office 365 客户端管理仪表板中显示的数据来自硬件清单。 启用硬件清单，并选择“Office 365 ProPlus 配置”硬件清单类，以便在仪表板中显示数据。 
-#### <a name="to-display-data-in-the-office-365-client-management-dashboard"></a>若要在 Office 365 客户端管理仪表板中显示数据
-1. 启用硬件清单（如果尚未启用）。 有关详细信息，请参阅[配置硬件清单](/sccm/core/clients/manage/inventory/configure-hardware-inventory)。
-2. 在 Configuration Manager 控制台中，导航到“管理” > “客户端设置” > “默认客户端设置”。  
-3. 在“主页”选项卡上的“属性”组中，单击“属性”。  
-4. 在**默认客户端设置**对话框中，单击**硬件清单**。  
-5. 在**设备设置**列表中，单击**设置类**。  
-6. 在“硬件清单类”对话框中，选择“Office 365 ProPlus 配置”。  
-7.  单击**确定**以保存所做的更改并关闭**硬件清单类**对话框。 <br/>Office 365 客户端管理仪表板在硬件清单得到报告的同时开始显示数据。
+若要查看 Office 365 客户端信息并开始执行一些 Office 365 管理操作，请使用 [Office 365 客户端管理仪表板](/sccm/sum/deploy-use/office-365-dashboard)。
 
 ## <a name="deploy-office-365-apps"></a>部署 Office 365 应用  
 从 Office 365 客户端管理仪表板启动 Office 365 安装程序，以执行首次 Office 365 应用安装。 该向导可让你配置 Office 365 安装设置、从 Office 内容分发网络 (CDN) 下载文件以及创建并部署文件的脚本应用程序。 在客户端上安装 Office 365 并运行 [Office自动更新任务](https://docs.microsoft.com/deployoffice/overview-of-the-update-process-for-office-365-proplus)之前，Office 365 更新不适用。 出于测试目的，可以手动运行更新任务。
@@ -105,33 +82,33 @@ Office 365 客户端管理仪表板中显示的数据来自硬件清单。 启�
 
 使用 Office 365 安装程序创建并部署 Office 365 应用程序后，默认情况下，Configuration Manager 不会管理 Office 更新。 若要允许 Office 365 客户端从 Configuration Manager 接收更新，请参阅[使用 Configuration Manager 部署 Office 365 更新](#deploy-office-365-updates)。
 
-部署 Office 365 应用后，可以创建自动部署规则以维护该应用。 要创建 Office 365 应用的自动部署规则，请单击 Office 365 客户端管理仪表板中的“创建 ADR”。 选择产品时，请选择“Office 365 客户端”。 有关详细信息，请参阅[自动部署软件更新](/sccm/sum/deploy-use/automatically-deploy-software-updates)。
+部署 Office 365 应用后，可以创建自动部署规则以维护该应用。 若要创建 Office 365 应用的自动部署规则，请单击 [Office 365 客户端管理仪表板](/sccm/sum/deploy-use/office-365-dashboard)中的“创建 ADR”。 选择产品时，请选择“Office 365 客户端”。 有关详细信息，请参阅[自动部署软件更新](/sccm/sum/deploy-use/automatically-deploy-software-updates)。
 
 
 ## <a name="deploy-office-365-updates"></a>部署 Office 365 更新
 
 使用以下步骤通过 Configuration Manager 部署 Office 365 更新：
 
-1.  在本文章的“使用 Configuration Manager 管理 Office 365 客户端更新的要求”部分，验证使用 Configuration Manager 管理 Office 365 客户端更新的[要求](/DeployOffice/manage-updates-to-office-365-proplus-with-system-center-configuration-manager#requirements-for-using-configuration-manager-to-manage-office-365-client-updates)。  
+1. 在本文章的“使用 Configuration Manager 管理 Office 365 客户端更新的要求”部分，验证使用 Configuration Manager 管理 Office 365 客户端更新的[要求](/DeployOffice/manage-updates-to-office-365-proplus-with-system-center-configuration-manager#requirements-for-using-configuration-manager-to-manage-office-365-client-updates)。  
 
-2.  [配置软件更新点](../get-started/configure-classifications-and-products.md)来同步 Office 365 客户端更新。 针对分类设置**更新**，并为产品选择 **Office 365 客户端**。 将软件更新点配置为使用“更新”分类后，同步软件更新。
-3.  使 Office 365 客户端可以从 Configuration Manager 接收更新。 可使用 Configuration Manager 客户端设置或组策略启动客户端。   
+2. [配置软件更新点](../get-started/configure-classifications-and-products.md)来同步 Office 365 客户端更新。 针对分类设置**更新**，并为产品选择 **Office 365 客户端**。 将软件更新点配置为使用“更新”分类后，同步软件更新。
+3. 使 Office 365 客户端可以从 Configuration Manager 接收更新。 可使用 Configuration Manager 客户端设置或组策略启动客户端。
 
     **方法 1**：自 Configuration Manager 版本 1606 起，可使用 Configuration Manager 客户端设置来管理 Office 365 客户端代理。 配置此设置和部署 Office 365 更新后，Configuration Manager 客户端代理将与 Office 365 客户端代理通信，从分发点下载更新并进行安装。 Configuration Manager 盘点了 Office 365 ProPlus 客户端设置的步骤。    
 
-      1.  在 Configuration Manager 控制台中，单击“管理” > “概述” > “客户端设置”。  
+      1. 在 Configuration Manager 控制台中，单击“管理” > “概述” > “客户端设置”。  
 
-      2.  打开相应的设备设置以启用客户端代理。 有关默认客户端设置和自定义客户端设置的详细信息，请参阅[如何在 System Center Configuration Manager 中配置客户端设置](../../core/clients/deploy/configure-client-settings.md)。  
+      2. 打开相应的设备设置以启用客户端代理。 有关默认客户端设置和自定义客户端设置的详细信息，请参阅[如何在 System Center Configuration Manager 中配置客户端设置](../../core/clients/deploy/configure-client-settings.md)。  
 
-      3.  单击“软件更新”，并针对“启用 Office 365 客户端代理的管理”设置选择“是”。  
+      3. 单击“软件更新”，并针对“启用 Office 365 客户端代理的管理”设置选择“是”。  
 
-    **方法 2**：使用 Office 部署工具或组策略[将 Office 365 客户端启用为从 Configuration Manager 接收更新](/DeployOffice/manage-updates-to-office-365-proplus-with-system-center-configuration-manager#BKMK_EnableClient)。  
+    **方法 2**：使用 Office 部署工具或组策略从 Configuration Manager [启用 Office 365 客户端以接收更新](/DeployOffice/manage-updates-to-office-365-proplus-with-system-center-configuration-manager#BKMK_EnableClient)。  
 
-4. [将 Office 365 更新部署](deploy-software-updates.md)到客户端。   
+4. [将 Office 365 更新部署](deploy-software-updates.md)到客户端。
 
 > [!Important]
 > - 从 Configuration Manager 版本 1706 开始，Office 365 客户端更新已移至“Office 365 客户端管理” >“Office 365 更新”节点。 此移动不会影响当前 ADR 配置。 
-> - 在 Configuration Manager 版本 1610 之前，必须使用 Office 365 客户端上配置的语言下载和部署更新。 例如，假设 Office 365 客户端上配置的语言为 en-us 和 de-de。 在站点服务器上，对适用的 Office 365 更新只下载并部署 en-us 内容。 当用户从软件中心开始安装此更新时，该更新会在下载 de-de 内容时挂起。   
+> - 在 Configuration Manager 版本 1610 之前，必须使用 Office 365 客户端上配置的语言下载和部署更新。 例如，假设 Office 365 客户端上配置的语言为 en-us 和 de-de。 在站点服务器上，对适用的 Office 365 更新只下载并部署 en-us 内容。 当用户从软件中心开始安装此更新时，该更新会在下载 de-de 内容时挂起。 
 
 > [!NOTE]  
 >
@@ -163,15 +140,31 @@ Office 365 客户端管理仪表板中显示的数据来自硬件清单。 启�
 >- 有关详细信息，请参阅 [Office 365 的最终用户更新通知](https://docs.microsoft.com/deployoffice/end-user-update-notifications-for-office-365-proplus)
 
 
+## <a name="bkmk_o365_lang"></a>添加 Office 365 更新下载语言
+可以添加对 Configuration Manager 的支持，以下载 Office 365 支持的任意语言的更新。
 
-## <a name="add-languages-for-office-365-update-downloads"></a>添加 Office 365 更新下载语言
-可以添加对 Configuration Manager 的支持，以下载 Office 365 支持的任意语言的更新（无论语言是否受 Configuration Manager 支持）。    
+### <a name="download-updates-for-additional-languages-in-version-1902"></a>下载 1902 版中其他语言的更新
+<!--3555955-->
+
+从 Configuration Manager 1902 版开始，更新工作流将“Windows 更新”的 38 种语言与“Office 365 客户端更新”的多种其他语言分开。
+
+若要选择必要的语言，请使用以下位置的“语言选择”页面：
+- 创建自动部署规则向导
+- 部署软件更新向导
+- 下载软件更新向导
+- 自动部署规则属性
+
+在“语言选择”页上，选择“Office 365 客户端更新”，然后单击“编辑”。 添加 Office 365 的所需语言，然后单击“确定”。
+
+![为 Office 365 添加其他语言的屏幕截图](media/office-update-languages-selection.png)
+
+### <a name="to-add-support-to-download-updates-for-additional-languages-in-version-1810-and-earlier"></a>添加支持以下载 1810 版及更高版本其他语言的更新
+
+对管理中心站点或独立主站点上的软件更新点执行以下过程。
 
 > [!IMPORTANT]  
 > 配置其他 Office 365 更新语言是网站范围的设置。 通过执行以下过程添加语言后，将下载这些语言的所有 Office 365 更新，以及在“下载软件更新”或“部署软件更新”向导中的“语言选择”页上选择的语言的所有 Office 365 更新。
 
-### <a name="to-add-support-to-download-updates-for-additional-languages"></a>添加支持以下载其他语言的更新
-对管理中心站点或独立主站点上的软件更新点执行以下过程。
 1. 从命令提示符处键入 wbemtest，以管理用户身份打开 Windows Management Instrumentation 测试器。
 2. 单击“连接”，然后键入 root\sms\site_&lt;siteCode&gt;。
 3. 单击“查询”，然后运行下列查询：select &#42; from SMS_SCI_Component where componentname ="SMS_WSUS_CONFIGURATION_MANAGER"  
@@ -244,5 +237,6 @@ Office 365 客户端管理仪表板中显示的数据来自硬件清单。 启�
 You can create an application just as you would with any other application in Configuration Manager from **Software Library** > **Overview** > **Application Management** > **Applications**. For details, see [Create and deploy an application](/sccm/apps/get-started/create-and-deploy-an-application).
 --->
 
-<!--- ## Next steps
-Use the Office 365 Client Management dashboard in Configuration Manager to review Office 365 client information and deploy Office 365 apps. For details, see [Manage Office 365 apps](manage-office-365-apps.md). --->
+## <a name="next-steps"></a>后续步骤
+
+在 Configuration Manager 中使用 Office 365 客户端管理仪表板查看 Office 365 客户端信息并部署 Office 365 应用。 有关详细信息，请参阅 [Office 365 客户端管理仪表板](/sccm/sum/deploy-use/office-365-dashboard)。 --->
