@@ -2,7 +2,7 @@
 title: 故障排除桌面分析
 titleSuffix: Configuration Manager
 description: 若要帮助你解决使用 Desktop 分析问题的技术详细信息。
-ms.date: 04/05/2019
+ms.date: 04/15/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b7fab23b4d1d977d2d634a11959887f1c1baa9a7
-ms.sourcegitcommit: 5ee9487c891c37916294bd34a10d04e398f111f7
+ms.openlocfilehash: f0da26f1ea2b7f7c0c49377cb934e451d56889b7
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59069426"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59673660"
 ---
 # <a name="troubleshooting-desktop-analytics"></a>故障排除桌面分析
 
@@ -272,7 +272,7 @@ Start-Service -Name dps
 #### <a name="check-end-user-diagnostic-data"></a>检查最终用户诊断数据
 
 <!--1004-->
-如果此检查不成功，用户选择了较低设备上的 Windows 诊断数据。
+如果此检查不成功，用户选择了较低设备上的 Windows 诊断数据。 它还可能引起冲突的组策略对象。 有关详细信息，请参阅[Windows 设置](/sccm/desktop-analytics/enroll-devices#windows-settings)。
 
 根据你的业务需求，可以禁用通过组策略的用户选择。 使用设置为**配置遥测参加设置用户界面**。 有关详细信息，请参阅[配置组织中的 Windows 诊断数据](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enterprise-management)。
 
@@ -289,7 +289,7 @@ Start-Service -Name dps
 
 有关详细信息，在客户端上查看 M365AHandler.log。  
 
-检查此注册表项的权限。 请确保本地系统帐户可以访问此密钥，以便 Configuration Manager 客户端设置。  
+检查此注册表项的权限。 请确保本地系统帐户可以访问此密钥，以便 Configuration Manager 客户端设置。 它还可能引起冲突的组策略对象。 有关详细信息，请参阅[Windows 设置](/sccm/desktop-analytics/enroll-devices#windows-settings)。  
 
 #### <a name="commercial-id-configuration"></a>商业 ID 配置
 
@@ -308,7 +308,7 @@ Microsoft 使用的唯一商业 ID 映射到 Desktop 分析工作区设备中的
 
 有关详细信息，在客户端上查看 M365AHandler.log。  
 
-检查此注册表项的权限。 请确保本地系统帐户可以访问此密钥，以便 Configuration Manager 客户端设置。  
+检查此注册表项的权限。 请确保本地系统帐户可以访问此密钥，以便 Configuration Manager 客户端设置。 它还可能引起冲突的组策略对象。 有关详细信息，请参阅[Windows 设置](/sccm/desktop-analytics/enroll-devices#windows-settings)。  
 
 没有为设备不同的 ID。 组策略使用此注册表项。 它将优先于配置管理器提供的 ID。  
 
@@ -341,7 +341,7 @@ Microsoft 使用的唯一商业 ID 映射到 Desktop 分析工作区设备中的
 
 有关详细信息，在客户端上查看 M365AHandler.log。  
 
-检查此注册表项的权限。 请确保本地系统帐户可以访问此密钥，以便 Configuration Manager 客户端设置。  
+检查此注册表项的权限。 请确保本地系统帐户可以访问此密钥，以便 Configuration Manager 客户端设置。 它还可能引起冲突的组策略对象。 有关详细信息，请参阅[Windows 设置](/sccm/desktop-analytics/enroll-devices#windows-settings)。  
 
 请确保另一个策略机制，如组策略未禁用此设置。
 
@@ -402,7 +402,7 @@ Microsoft 使用的唯一商业 ID 映射到 Desktop 分析工作区设备中的
 - `HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection`
 - `HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection`
 
-检查这些注册表项的权限。 请确保本地系统帐户可以访问 Configuration Manager 客户端设置这些密钥。  
+检查这些注册表项的权限。 请确保本地系统帐户可以访问 Configuration Manager 客户端设置这些密钥。 它还可能引起冲突的组策略对象。 有关详细信息，请参阅[Windows 设置](/sccm/desktop-analytics/enroll-devices#windows-settings)。  
 
 有关详细信息，在客户端上查看 M365AHandler.log。  
 
@@ -473,6 +473,54 @@ Microsoft 使用的唯一商业 ID 映射到 Desktop 分析工作区设备中的
 
 
 
-## <a name="bkmk_MALogAnalyticsReader"></a> MALogAnalyticsReader 应用程序角色
+## <a name="bkmk_AzureADApps"></a> Azure AD 应用程序
 
-如果设置了桌面分析时，你代表你的组织接受一个许可。 此许可是将分配 
+桌面 Analytics 添加到你的 Azure AD 的以下应用程序：
+
+- **配置管理器微服务**:将 Configuration Manager 连接与桌面的分析。 此应用具有没有访问要求。  
+
+- **Office 365 客户端管理**:从 Log Analytics 工作区中检索数据。 此应用需要写入到 Log Analytics 的访问权限。  
+
+- **MALogAnalyticsReader**:检索 OMS 组和 Log Analytics 中创建的设备。 有关详细信息，请参阅[MALogAnalyticsReader 应用程序角色](#bkmk_MALogAnalyticsReader)。  
+
+如果需要将这些应用程序提供了完成设置后，请转到**连接服务**窗格。 选择**配置用户和应用访问**，将应用和设置。  
+
+- **Azure AD 应用程序为 Configuration Manager**。 如果您需要预配或向上完成设置后对连接问题进行故障排除，请参阅[创建应用的 Configuration Manager](/sccm/desktop-analytics/set-up#create-app-for-configuration-manager)。 此应用需要**CM 集合数据写入**并**读取 CM 集合数据**上**配置管理器服务**API。  
+
+### <a name="bkmk_MALogAnalyticsReader"></a> MALogAnalyticsReader 应用程序角色
+
+如果设置了桌面分析时，你代表你的组织接受一个许可。 此许可是将 MALogAnalyticsReader 应用程序分配工作区的 Log Analytics 读者角色。 此应用程序角色是桌面分析所需。
+
+如果存在此过程的问题在设置过程已启动，使用以下过程来手动添加此权限：
+
+1. 转到[Azure 门户](http://portal.azure.com)，然后选择**的所有资源**。 选择类型的工作区**Log Analytics**。  
+
+2. 在工作区菜单中，选择**访问控制 (IAM)**，然后选择**添加**。  
+
+3. 在中**添加权限**面板中，配置以下设置：  
+
+    - **角色**:**Log Analytics 读者**  
+
+    - **分配其访问权限**:**Azure AD 用户、 组或应用程序**  
+
+    - **选择**:**MALogAnalyticsReader**  
+
+4. 选择“保存”。
+
+门户会显示一个通知它添加的角色分配的。
+
+
+## <a name="data-latency"></a>数据滞后时间
+
+<!-- 3846531 -->
+每日刷新桌面 Analytics 门户中的数据。 此刷新包括收集诊断数据从设备更改和对配置进行任何更改。 例如，当你更改的资产**升级决策**，它可能会导致更改到设备的就绪状态与安装该资产。
+
+- **管理员更改**九个小时内通常由桌面 Analytics 服务处理。 例如，如果在下午 11:00 UTC 进行更改，在门户应反映这些更改之前 08:00 AM UTC 下一天。
+
+- **设备更改**检测到通过在 UTC 午夜本地时间中的通常包含在每日刷新。 通常是延迟的额外 23 小时与处理相比管理更改的设备更改相关联。
+
+如果未看到更改这些时间框架内更新，等待下一个每日刷新的另一个 24 小时。 如果您看到的更长的延迟，请检查服务运行状况仪表板。 如果该服务报告为正常运行，请联系 Microsoft 支持部门。
+
+当首次设置 Desktop 分析时，Configuration Manager 和桌面 Analytics 门户中的图表可能不会显示完整的数据。 可能需要 2-3 天的活动设备将诊断数据发送到 Desktop 分析服务，该服务处理数据，并与 Configuration Manager 站点同步时间。
+
+在 Configuration Manager 层次结构中，可能需要 10 分钟后，新的集合来显示的部署计划。 主站点创建集合，并与 Desktop 分析的管理中心站点同步。<!-- 3896921 -->

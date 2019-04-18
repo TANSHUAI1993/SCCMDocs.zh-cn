@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b46bf167bc77716fe360940c4fb45cae2dc9dc5a
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: a10a7b5bbb3a1b7d0dada86774f3412e22faff01
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56754693"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59673541"
 ---
 # <a name="updates-in-desktop-analytics"></a>在桌面 Analytics 中的更新 
 
@@ -48,7 +48,7 @@ ms.locfileid: "56754693"
 #### <a name="not-measured"></a>不测量
 桌面分析尚未评估设备。 
 
-- 对于 Windows，这包括运行 Windows 7 或 Windows 8.1 的设备  
+- 对于 Windows，这包括运行 Windows 预览体验计划的已注册的 Windows 7、 Windows 8.1 或 Windows 10 设备的设备  
 
 - 对于 Office，这包括具有以下版本之一的设备：  
 
@@ -81,12 +81,12 @@ ms.locfileid: "56754693"
 设备正在运行的服务的结束前的 90 天内的功能更新。
 
 #### <a name="end-of-service"></a>服务的结束
-设备正在运行已超过服务日期的功能更新。 有关终止服务日期的详细信息，请参阅 {xlink 到相关部分，其中 UDR_monitoring} |
+设备正在运行已超过服务日期的功能更新。 有关终止服务日期的详细信息，请参阅[Windows 生命周期简报](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet)  <!-- {xlink into relevant section of UDR_monitoring}|-->
 
 #### <a name="not-measured"></a>不测量
 桌面分析尚未评估设备。 
 
-- 对于 Windows，这包括运行 Windows 7 或 Windows 8.1 的设备  
+- 对于 Windows，这包括运行 Windows 预览体验计划的已注册的 Windows 7、 Windows 8.1 或 Windows 10 设备的设备
 
 - 对于 Office，这包括具有以下版本之一的设备：  
 

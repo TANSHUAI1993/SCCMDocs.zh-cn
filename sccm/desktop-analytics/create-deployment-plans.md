@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4b56fac3060acc16fe46221464ddc6535b478399
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 35e8e883acafaa1d606d81402b868b8a755d0887
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56754671"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59673456"
 ---
 # <a name="how-to-create-deployment-plans-in-desktop-analytics"></a>如何在桌面 Analytics 中创建部署计划 
 
@@ -56,7 +56,7 @@ ms.locfileid: "56754671"
 
     2. 选择每个应用，并选择**编辑**。 您可以选择多个应用在同一时间编辑。   
 
-    3. 选择重要性级别从**重要性**列表。 如果您希望桌面分析在试运行过程中验证外接程序，选择**严重**或**重要**。 它不会验证加载项标记为**不重要**。 分配重要性级别时，请考虑兼容性风险和其他计划见解。  
+    3. 选择重要性级别从**重要性**列表。 如果您希望桌面分析在试运行过程中验证外接程序，选择**严重**或**重要**。 它不会验证加载项标记为**不重要**。 请考虑[兼容性风险](/sccm/desktop-analytics/compat-risk)和其他计划见解分配重要性级别时。  
 
         如果将分配重要性级别，您还可以选择升级决策。  
 

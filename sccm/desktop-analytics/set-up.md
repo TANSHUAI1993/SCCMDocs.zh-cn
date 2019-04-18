@@ -2,7 +2,7 @@
 title: 设置桌面分析
 titleSuffix: Configuration Manager
 description: 用于设置和载入到桌面 Analytics 的操作方法指南。
-ms.date: 01/25/2019
+ms.date: 04/15/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,14 +12,14 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7b20637cea4e02f390ae845ff9d421e5011120ab
-ms.sourcegitcommit: 4441b3035222cfaf7442416873ed824ac7d852c5
+ms.openlocfilehash: 0d03b670ade984298df7a1ba5428a3f8696360bb
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356319"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59673558"
 ---
-# <a name="how-to-set-up-desktop-analytics"></a>如何设置 Desktop 分析 
+# <a name="how-to-set-up-desktop-analytics"></a>如何设置 Desktop 分析
 
 > [!Note]  
 > 此信息与商业发布之前可能有大幅度修改的预览服务。 对于此处提供的信息，Microsoft 不提供任何明示或暗示的担保。  
@@ -36,22 +36,30 @@ ms.locfileid: "58356319"
 
 3. 上**确认你的订阅**页上，查看所需的合格许可证的列表。 将设置切换为**是**旁边**您确实有一个在受支持或更高版本的订阅**，然后选择**下一步**。  
 
-4. 上**让用户和应用访问**页上，桌面分析预配置 Azure Active Directory 中的两个安全组：  
+4. 上**授予用户访问权限**页：
 
-    - **工作区所有者**:创建和管理工作区。 这些帐户需要对 Azure 订阅所有者访问权限。  
+    - **执行要管理目录角色为你的用户桌面 Analytics**:桌面分析自动分配**工作区所有者**并**工作区参与者**到组**Desktop 分析管理员**角色。 如果这些组已经**全局管理员**，没有任何更改。  
 
-    - **工作区参与者**:创建和管理此工作区中的部署计划。 它们不需要任何其他的 Azure 访问权限。  
-  
-   若要将用户添加到这两个组中，键入在其名称或电子邮件地址**输入名称或电子邮件地址**相应的组的部分。 完成后，选择**下一步**。 
+        如果不选择此选项，则桌面分析仍将用户添加为两个安全组的成员。 一个**全局管理员**需要手动分配**Desktop 分析管理员**角色的用户。  
+
+        有关如何将 Azure Active Directory 中的管理员角色权限和权限分配给分配的详细信息**Desktop 分析管理员**，请参阅[在 Azure 中的管理员角色权限Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles)。  
+
+    - 桌面分析会预先配置 Azure Active Directory 中的两个安全组：  
+
+        - **工作区所有者**:要创建和管理工作区的安全组。 这些帐户需要对 Azure 订阅所有者访问权限。  
+
+        - **工作区参与者**:要创建和管理此工作区中的部署计划的安全组。 它们不需要任何其他的 Azure 访问权限。  
+
+        若要将用户添加到这两个组中，键入在其名称或电子邮件地址**输入名称或电子邮件地址**相应的组的部分。 完成后，选择**下一步**。
 
 5. 在到页**设置工作区**:  
 
     - 若要使用 Desktop 分析现有的工作区，选择它，并继续下一步。  
 
         > [!Note]  
-        > 如果你已经在使用 Windows Analytics，请选择该相同的工作区。 您需要重新注册到桌面 Analytics 以前在 Windows Analytics 中注册的设备。 
-        > 
-        > 只能有一个桌面 Analytics 工作区，每个 Azure AD 租户。 设备只可以将诊断数据发送到一个工作区。   
+        > 如果你已经在使用 Windows Analytics，请选择该相同的工作区。 您需要重新注册到桌面 Analytics 以前在 Windows Analytics 中注册的设备。
+        >
+        > 只能有一个桌面 Analytics 工作区，每个 Azure AD 租户。 设备只可以将诊断数据发送到一个工作区。  
 
     - 若要为 Desktop 分析创建一个工作区，选择**添加工作区**。  
 
@@ -70,7 +78,7 @@ ms.locfileid: "58356319"
 
 8. 恢复到页面上**设置工作区**，选择**下一步**。  
 
-9. 上**最后步骤**页上，选择**转到桌面分析**。 
+9. 上**最后步骤**页上，选择**转到桌面分析**。
 
 Azure 门户显示桌面分析**主页**页。
 
@@ -94,11 +102,11 @@ Azure 门户显示桌面分析**主页**页。
 
 3. 选择应用，并记下**应用程序 ID**。 此值是用于配置 Configuration Manager 连接的 GUID。  
 
-4. 选择**设置**上的应用，并选择**密钥**。 在中**密码**部分中，输入**密钥说明**，指定一个过期**持续时间**，然后选择**保存**。 复制**值**的密钥，用于进行配置的配置管理器连接。 
+4. 选择**设置**上的应用，并选择**密钥**。 在中**密码**部分中，输入**密钥说明**，指定一个过期**持续时间**，然后选择**保存**。 复制**值**的密钥，用于进行配置的配置管理器连接。
 
     > [!Important]  
     > 这是唯一的机会来复制密钥值。 如果您不立即将其复制，需要创建另一个密钥。  
-    > 
+    >
     > 将密钥值保存在安全的位置。  
 
 5. 在应用上**设置**面板中，选择**所需的权限**。  

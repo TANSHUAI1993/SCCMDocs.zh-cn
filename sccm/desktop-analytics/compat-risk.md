@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: da0bde04e019fdf0fbb0a997be652860824270b1
-ms.sourcegitcommit: 5ee9487c891c37916294bd34a10d04e398f111f7
+ms.openlocfilehash: bf2114ac77a75fedc18c38a8d373b9c0a1ada591
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59069392"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59673405"
 ---
 # <a name="compatibility-risk-for-windows-apps-in-desktop-analytics"></a>用于 Windows 桌面 Analytics 中的应用程序兼容性风险
 
@@ -52,8 +52,17 @@ Windows Analytics 中的升级评估了泛型类型，例如：需要注意或�
 
 ### <a name="ready-for-windows"></a>准备好进行 Windows
 
-在设备上的兼容性块检查准备就绪的 Windows 数据存储。 它还与其他客户报告类似应用程序中的数据相关联。 Microsoft 使用此应用程序报告的任何问题的其他类似的设备中的数据。
+[准备用于 Windows](https://www.readyforwindows.com)应用目录相关联的设备上报告与来自 Microsoft 的其他检查，如兼容性块的相同应用其他客户的诊断数据。 
 
+可能的类别包括：
+
+- **数据不足**意味着太少商业的 Windows 10 设备共享此应用程序，以便 Microsoft 对其采用率进行分类的信息。
+
+- **采用**意味着至少 10,000 个商用 Windows 10 设备上安装了应用程序。  
+
+- **高度采用**意味着至少 10 万商业的 Windows 10 设备上安装了应用程序。  
+
+- **请联系开发人员**意味着可能与此解决方案中，兼容性问题，因此 Microsoft 建议联系软件提供商以了解详细信息。  
 
 ### <a name="app-health-analyzer-signals-for-compatibility-assessment"></a>应用程序运行状况分析器信号兼容性评估
 

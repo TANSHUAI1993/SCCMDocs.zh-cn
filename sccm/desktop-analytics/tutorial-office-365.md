@@ -2,7 +2,7 @@
 title: 教程-部署 Office 365
 titleSuffix: Configuration Manager
 description: 使用桌面 Analytics 和 Configuration Manager 将 Office 365 部署到试验组的教程。
-ms.date: 04/05/2019
+ms.date: 04/15/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: tutorial
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4d21b2b94c53390a9fcdbc1be640578060042ea9
-ms.sourcegitcommit: 5ee9487c891c37916294bd34a10d04e398f111f7
+ms.openlocfilehash: 66fc982fa7f2cee3fdd83945c1b43d490b40d2f2
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59069443"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59673779"
 ---
 # <a name="tutorial-deploy-office-365-to-pilot"></a>教程：将 Office 365 部署到试运行
 
@@ -103,13 +103,21 @@ ms.locfileid: "59069443"
 
 3. 上**确认你的订阅**页上，需符合条件的许可证的列表适用于 Windows 设备运行状况分析功能的桌面。 选择“下一步”继续操作。  
 
-4. 上**授予用户访问权限**页上，桌面分析预配置 Azure Active Directory 中的两个安全组：  
+4. 上**授予用户访问权限**页：
 
-    - **工作区所有者**:创建和管理工作区。 这些帐户需要对 Azure 订阅所有者访问权限。  
+    - **执行要管理目录角色为你的用户桌面 Analytics**:桌面分析自动分配**工作区所有者**并**工作区参与者**到组**Desktop 分析管理员**角色。 如果这些组已经**全局管理员**，没有任何更改。  
 
-    - **工作区参与者**:创建和管理此工作区中的部署计划。 它们不需要任何其他的 Azure 访问权限。  
-  
-   若要将用户添加到这两个组中，键入在其名称或电子邮件地址**输入名称或电子邮件地址**相应的组的部分。 完成后，选择**下一步**。
+        如果不选择此选项，则桌面分析仍将用户添加为两个安全组的成员。 一个**全局管理员**需要手动分配**Desktop 分析管理员**角色的用户。  
+
+        有关如何将 Azure Active Directory 中的管理员角色权限和权限分配给分配的详细信息**Desktop 分析管理员**，请参阅[在 Azure 中的管理员角色权限Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles)。  
+
+    - 桌面分析会预先配置 Azure Active Directory 中的两个安全组：  
+
+        - **工作区所有者**:要创建和管理工作区的安全组。 这些帐户需要对 Azure 订阅所有者访问权限。  
+
+        - **工作区参与者**:要创建和管理此工作区中的部署计划的安全组。 它们不需要任何其他的 Azure 访问权限。  
+
+        若要将用户添加到这两个组中，键入在其名称或电子邮件地址**输入名称或电子邮件地址**相应的组的部分。 完成后，选择**下一步**。
 
 5. 在到页**设置工作区**:  
 
