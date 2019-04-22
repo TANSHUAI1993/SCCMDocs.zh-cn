@@ -12,11 +12,11 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 0b5320df41e3a2cbfb2bd7e1d25d49f1ff42d927
-ms.sourcegitcommit: da753df27d3909265ca45d3e79091f1e98758d16
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58913754"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59802268"
 ---
 # <a name="features-in-configuration-manager-technical-preview-version-1903"></a>Configuration Manager 技术预览版 1903 中的功能
 

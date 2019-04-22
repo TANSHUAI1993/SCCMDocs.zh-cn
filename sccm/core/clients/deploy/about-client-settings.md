@@ -12,11 +12,11 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 42218443f83726bfbca0dcf77ffa37e61c46a2b3
-ms.sourcegitcommit: d4b0e44e6bb06a830d0887493528d9166a15154b
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59506203"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59802744"
 ---
 # <a name="about-client-settings-in-configuration-manager"></a>关于 Configuration Manager 中的客户端设置
 

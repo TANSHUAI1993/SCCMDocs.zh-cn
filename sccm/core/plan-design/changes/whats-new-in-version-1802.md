@@ -12,11 +12,11 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 9d36ac033b197c21122b49aba70bdeaef4f9b5ac
-ms.sourcegitcommit: 1328b5bcf4e52fe459cb212f936038c69886693b
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/10/2019
-ms.locfileid: "59476825"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59802846"
 ---
 # <a name="whats-new-in-version-1802-of-system-center-configuration-manager"></a>System Center Configuration Manager 1802 版的新增功能
 

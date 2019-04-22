@@ -12,11 +12,11 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: a05ff407c3787283a58973f2861432a0a26a52b0
-ms.sourcegitcommit: deb28cdc95a456d4a38499ef1bc71e765ef6dc13
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58901513"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59802778"
 ---
 # <a name="accounts-used-in-configuration-manager"></a>Configuration Manager 中使用的帐户
 

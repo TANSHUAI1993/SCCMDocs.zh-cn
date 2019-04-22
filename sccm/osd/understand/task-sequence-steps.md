@@ -12,11 +12,11 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: a349997150c951d1a4ec9e0b99f9d24c21f37205
-ms.sourcegitcommit: d584c126a0a5725567631b74ac1e01f63242a997
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58861082"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59802948"
 ---
 # <a name="task-sequence-steps-in-configuration-manager"></a>Configuration Manager 中的任务序列步骤
 

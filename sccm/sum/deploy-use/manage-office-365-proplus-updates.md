@@ -12,11 +12,11 @@ ms.technology: configmgr-sum
 ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 7122d57696a7407731b93da20b995fc3e40949ac
-ms.sourcegitcommit: d4b0e44e6bb06a830d0887493528d9166a15154b
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59506169"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59802591"
 ---
 # <a name="manage-office-365-proplus-with-configuration-manager"></a>使用 Configuration Manager 管理 Office 365 ProPlus
 

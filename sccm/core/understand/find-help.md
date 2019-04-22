@@ -12,11 +12,11 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 9440a4873b6011ed4a7394c335531afc72ac5d97
-ms.sourcegitcommit: deb28cdc95a456d4a38499ef1bc71e765ef6dc13
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58901394"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59802540"
 ---
 # <a name="find-help-for-using-configuration-manager"></a>查找使用 Configuration Manager 的帮助
 

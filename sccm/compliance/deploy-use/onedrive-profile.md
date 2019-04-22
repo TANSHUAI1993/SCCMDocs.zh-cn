@@ -12,11 +12,11 @@ ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 22fcc8704651d75b4123e7942d14b861b3f6c099
-ms.sourcegitcommit: d4b0e44e6bb06a830d0887493528d9166a15154b
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59506297"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59802456"
 ---
 # <a name="onedrive-for-business-profiles"></a>OneDrive for Business 配置文件
 

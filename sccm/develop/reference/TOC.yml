@@ -2760,8 +2760,8 @@ items:
   - name: SMS_WindowsServicingStates 服务器 WMI 类
     href: misc/sms_windowsservicingstates-server-wmi-class.md
 ms.openlocfilehash: 19da531a2b9821b54ed03f93e495cdfbb1e84f86
-ms.sourcegitcommit: deb28cdc95a456d4a38499ef1bc71e765ef6dc13
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58901530"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59802897"

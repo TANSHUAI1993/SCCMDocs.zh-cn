@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af4d3319e94d8dd673f597e4df4dde3e73e15653
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: c64968ca0348b94e3fb20367af7f739d8a699c58
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56129045"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59673592"
 ---
 # <a name="site-components-for-configuration-manager"></a>Configuration Manager 的站点组件
 
@@ -27,7 +27,8 @@ ms.locfileid: "56129045"
 在 Configuration Manager 控制台中，转到“管理”工作区，展开“站点配置”，然后选择“站点”节点。 选择一个站点。 在功能区的“设置”组中，选择“配置站点组件”。 选择下列选项之一：
 
 - [软件分发](#software-distribution)  
-- [软件更新点](#software-update-point)  
+- [软件更新点](#software-update-point) 
+- [操作系统部署](#operating-system-deployment)
 - [管理点](#management-point)  
 - [状态报告](#status-reporting)  
 - [电子邮件通知](#email-notification)
@@ -58,6 +59,11 @@ ms.locfileid: "56129045"
 ### <a name="software-update-point"></a>软件更新点  
 
 有关详细信息，请参阅[安装软件更新点](/sccm/sum/get-started/install-a-software-update-point)。  
+
+
+### <a name="operating-system-deployment"></a>操作系统部署
+
+有关详细信息，请参阅[指定用于为脱机 OS 映像提供服务的驱动器](/sccm/osd/get-started/manage-operating-system-images#bkmk_servicing-drive)。
 
 
 ### <a name="management-point"></a>管理点  

@@ -12,11 +12,11 @@ ms.technology: configmgr-sum
 ms.assetid: 6d20389a-9de2-4a64-bced-9fc4fa519174
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: eb5471c5a993a1a2f683807a12dfc01ea00bf275
-ms.sourcegitcommit: 5ee9487c891c37916294bd34a10d04e398f111f7
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59069511"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59802116"
 ---
 # <a name="best-practices-for-software-updates-in-configuration-manager"></a>Configuration Manager 中软件更新的最佳做法
 

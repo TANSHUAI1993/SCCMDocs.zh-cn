@@ -13,11 +13,11 @@ manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 4105a8a81ab3f09dee9cf3ca5a2462ed2bb4183a
-ms.sourcegitcommit: da753df27d3909265ca45d3e79091f1e98758d16
-ms.translationtype: MT
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58913585"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59802625"
 ---
 # <a name="what-is-desktop-analytics"></a>什么是桌面分析？
 
