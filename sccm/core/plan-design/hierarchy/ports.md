@@ -2,7 +2,7 @@
 title: 用于连接的端口
 titleSuffix: Configuration Manager
 description: 了解有关 Configuration Manager 用于连接的必需的和可自定义网络端口。
-ms.date: 01/29/2019
+ms.date: 04/11/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7aaadae5feaff2aa55e521c4b7438f4f1d24209a
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 99df201cb3525a124b42d5d599d4a74708258bad
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56156808"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59673711"
 ---
 # <a name="ports-used-in-configuration-manager"></a>Configuration Manager 中使用的端口
 
@@ -586,6 +586,14 @@ Configuration Manager 控制台使用 Internet 访问获取以下操作：
 |RPC (DCOM)|--|DYNAMIC <sup>[备注 6](#bkmk_note6)</sup>|  
 
 
+###  <a name="BKMK_PortsSite-RCL"></a> 站点服务器 -- > 托管远程内容库共享的服务器  
+ 从版本 1806 开始，可以将内容库重定位到另一个存储位置来释放管理中心站点或主站点服务器上的硬盘空间。 有关详细信息，请参阅[配置用于站点服务器的远程内容库](/sccm/core/plan-design/hierarchy/the-content-library#bkmk_remote)。  
+
+|说明|UDP|TCP|  
+|-----------------|---------|---------|  
+|服务器消息块 (SMB)|--|445|  
+
+
 ###  <a name="BKMK_PortsSite-RSP"></a> 站点服务器 &lt; -- > Reporting Services 点  
  <sup>[备注 5](#bkmk_note5)</sup>  
 
@@ -809,8 +817,8 @@ Configuration Manager 使用下列端口发现和发布站点信息：
  - 全局编录 LDAP：3268
  - RPC 端点映射程序：135
  - RPC：动态分配的高 TCP 端口
- - TCP:1024：5000
- - TCP:49152：65535
+ - TCP：1024：5000
+ - TCP：49152：65535
 
 
 ###  <a name="BKMK_External"></a> Configuration Manager 建立的外部连接  

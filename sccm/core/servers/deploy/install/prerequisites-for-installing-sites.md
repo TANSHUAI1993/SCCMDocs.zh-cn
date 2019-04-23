@@ -2,7 +2,7 @@
 title: 站点的先决条件
 titleSuffix: Configuration Manager
 description: 了解安装不同类型的 Configuration Manager 站点所需的先决条件。
-ms.date: 09/04/2018
+ms.date: 04/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5a56739eee4d116014f89b3a7e7835e3e87a62ac
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 51569f04a8665f230030da7fec4bc67042263d92
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56124582"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59673575"
 ---
 # <a name="prerequisites-for-installing-configuration-manager-sites"></a>安装 Configuration Manager 站点的先决条件
 
@@ -37,6 +37,15 @@ ms.locfileid: "56124582"
 
 
 ###  <a name="bkmk_PrereqPri"></a>安装主站点或管理中心站点的先决条件  
+
+- 必须安装以下 Windows Server 角色、功能和 Windows 组件：  
+    - .NET Framework 3.5 SP1（或更高版本）
+    - .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1 或 4.7.2
+    - 远程差分压缩
+    - Windows ADK
+    - Visual C++ Redistributable  
+    
+    有关详细信息，请参阅[站点系统先决条件](/sccm/core/plan-design/configs/site-and-site-system-prerequisites#bkmk_2012sspreq)  
 
 - 安装站点的用户帐户必须具有以下权限：  
 
@@ -136,7 +145,15 @@ Configuration Manager 仅在层次结构的顶层站点上支持这些角色。 
 
 ## <a name="bkmk_secondary"></a>辅助站点
 
-以下是安装辅助站点的先决条件：
+以下是安装辅助站点的先决条件：  
+
+- 必须安装以下 Windows Server 角色、功能和 Windows 组件：  
+    - .NET Framework 3.5 SP1（或更高版本）
+    - .NET Framework 4.5.2、4.6.1、4.6.2、4.7、4.7.1 或 4.7.2
+    - 远程差分压缩
+    - Visual C++ Redistributable  
+    
+    有关详细信息，请参阅[站点系统先决条件](/sccm/core/plan-design/configs/site-and-site-system-prerequisites#bkmk_2012secpreq)  
 
 - 在 Configuration Manager 控制台中配置辅助站点安装的管理员必须具有基于角色的管理权限，且这些权限相当于“基础结构管理员”或“完全权限管理员”的安全角色。  
 

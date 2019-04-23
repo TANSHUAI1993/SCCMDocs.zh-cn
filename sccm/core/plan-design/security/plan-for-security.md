@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f0ea9d6d923aeb1c278e5f3e96806044bbae6e4
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: f6ffa061e3d04bbbda31cc4406494b492ba98d9b
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56138613"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59673847"
 ---
 # <a name="plan-for-security-in-configuration-manager"></a>在 Configuration Manager 中规划安全性
 
@@ -121,7 +121,7 @@ IIS 始终会检查 CRL 中是否有客户端证书，且无法在 Configuration
 -   要求检查与站点系统（配置为使用 PKI 证书）的每个连接的 CRL，此要求高于以下要求：  
     - 连接速度更快  
     - 在客户端上进行高效处理  
-    - 如果客户端找不到 CRL，无法连接到服务器的风险  
+    - 如果找不到 CRL，则存在客户端无法连接到服务器的风险  
 
 
 ###  <a name="BKMK_PlanningForRootCAs"></a> 规划 PKI 受信任的根证书和证书颁发者列表  

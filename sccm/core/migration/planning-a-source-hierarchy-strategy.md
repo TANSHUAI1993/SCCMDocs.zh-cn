@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 76f82734229f3b8e9ed37ed4bc9057eff6421aad
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 44f71aeb0019ce2b481e9f5ecd9f37ce6421398e
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56156536"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59673813"
 ---
 # <a name="plan-a-source-hierarchy-strategy-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中规划源层次结构策略
 
@@ -55,6 +55,7 @@ ms.locfileid: "56156536"
 
 > [!CAUTION]  
 >  如果从超过一个源层次结构中迁移数据，则每个额外的源层次结构都必须包含一组唯一的站点代码。  
+> 源和目标层次结构也需要另一组站点代码。
 
 有关配置源层次结构的详细信息，请参阅[配置源层次结构和源站点以迁移到 System Center Configuration Manager](../../core/migration/configuring-source-hierarchies-and-source-sites-for-migration.md)  
 

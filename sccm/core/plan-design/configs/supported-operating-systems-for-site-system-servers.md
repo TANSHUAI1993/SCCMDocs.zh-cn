@@ -2,7 +2,7 @@
 title: 支持的站点系统服务器
 titleSuffix: Configuration Manager
 description: 了解可用来托管 Configuration Manager 站点或站点系统角色的 Windows 版本。
-ms.date: 01/15/2019
+ms.date: 04/16/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c5352d1d43de97375eb66389586778d7c23c2aa0
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 125d139548b827d349864496cd636622449b8fe3
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56138698"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59673626"
 ---
 # <a name="supported-operating-systems-for-configuration-manager-site-system-servers"></a>Configuration Manager 站点系统服务器支持的操作系统
 
@@ -233,6 +233,7 @@ ms.locfileid: "56138698"
 
 支持将以下服务器 OS 版本的服务器核心安装用作一个分发点： 
 
+- Windows Server 2019（从 Configuration Manager 版本 1810 开始）  
 - Windows Server 版本 1809（从 Configuration Manager 版本 1810 开始）  
 - Windows Server 版本 1803（从 Configuration Manager 版本 1802 开始）  
 - Windows Server 版本 1709（从 Configuration Manager 版本 1710 开始）  
@@ -246,7 +247,7 @@ ms.locfileid: "56138698"
 
 
 
-## <a name="general-notes"></a>一般说明
+## <a name="general-notes"></a>一般注释
 
 #### <a name="bkmk_note1"></a> 注释 1：分发点
 分发点支持多种不同的配置，每种配置都有不同的要求。 在某些情况下，这些配置不仅支持在服务器上安装，而且支持在客户端操作系统上安装。 有关详细信息，请参阅[管理内容和内容基础结构](/sccm/core/servers/deploy/configure/manage-content-and-content-infrastructure)。  

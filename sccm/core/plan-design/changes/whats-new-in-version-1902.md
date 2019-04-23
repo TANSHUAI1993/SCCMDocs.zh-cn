@@ -2,7 +2,7 @@
 title: 1902 版中的新增功能
 titleSuffix: Configuration Manager
 description: 获取有关 Configuration Manager Current Branch 版本 1902 中引入的更改和新增功能的详细信息。
-ms.date: 04/12/2019
+ms.date: 04/17/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a424a2397f4e1845795441208929b7d9efb7f93c
-ms.sourcegitcommit: d4b0e44e6bb06a830d0887493528d9166a15154b
+ms.openlocfilehash: fbc38cdb72a2c8f595eed88e0b4b5b5e29374597
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59506271"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59673643"
 ---
 # <a name="whats-new-in-version-1902-of-configuration-manager-current-branch"></a>Configuration Manager Current Branch 版本 1902 中的新增功能
 
@@ -166,9 +166,9 @@ Configuration Manager Current Branch 的更新 1902 作为控制台中更新提�
 
 ### <a name="view-first-screen-only-during-remote-control"></a>在远程控制期间仅查看第一个屏幕
 <!--3231732-->
-当连接到具有两个或多个监视器的客户端时，可能很难在 Configuration Manager 远程控制查看器中查看所有监视器。 远程工具操作人员现在可以选择查看“所有屏幕”或仅查看“第一个屏幕”。 
+[已更新] 当连接到具有两个或多个监视器的客户端时，可能很难在 Configuration Manager 远程控制查看器中查看所有监视器。 远程工具操作人员现在可以选择查看“所有屏幕”或仅查看“第一个屏幕”。
 
-<!-- For more information, see [How to remotely administer a Windows client computer](/sccm/core/clients/manage/remote-control/remotely-administer-a-windows-client-computer). -->
+有关详细信息，请参阅[如何远程管理 Windows 客户端计算机](/sccm/core/clients/manage/remote-control/remotely-administer-a-windows-client-computer)。 
 
 
 ### <a name="specify-a-custom-port-for-peer-wakeup"></a>指定一个自定义端口用于对等唤醒
@@ -492,7 +492,7 @@ Configuration Manager 现在支持 Office 365 客户端更新支持的所有语�
 
 ## <a name="other-updates"></a>其他更新
 
-<!-- Aside from new features, this release also includes additional changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 1902](https://support.microsoft.com/help/4482169). -->
+除了新增功能外，这一版还有其他变化（如缺陷修复）。 有关详细信息，请参阅 [Configuration Manager Current Branch（版本 1902）的更改摘要](https://support.microsoft.com/help/4498910)。
 
 有关 Configuration Manager 的 Windows PowerShell cmdlet 更改的详细信息，请参阅 [PowerShell 版本 1902 发行说明](https://docs.microsoft.com/powershell/sccm/1902-release-notes?view=sccm-ps)。
 

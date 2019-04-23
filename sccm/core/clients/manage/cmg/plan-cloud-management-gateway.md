@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f50bb18edf782d5012e90db0b4b21a2309ad4f0b
-ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
+ms.openlocfilehash: f9057a2126a548ebb8706e905b86edb702f0ff35
+ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58196885"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59673677"
 ---
 # <a name="plan-for-the-cloud-management-gateway-in-configuration-manager"></a>在 Configuration Manager 中规划云管理网关
 
@@ -175,7 +175,7 @@ CMG 向导仍提供使用 Azure 管理证书的“经典服务部署”选项。
     - 从 1806 版开始，使用站点选项“使用 Configuration Manager 为 HTTP 站点系统生成的证书”时，管理点可以是 HTTP。 有关详细信息，请参阅[增强型 HTTP](/sccm/core/plan-design/hierarchy/enhanced-http)。  
 
 
-- 对于 Windows 10 客户端可能需要与 Azure AD 集成。 有关详细信息，请参阅[配置 Azure 服务](/sccm/core/servers/deploy/configure/azure-services-wizard)。  
+- 与 Azure AD 的集成是 Azure 资源管理器部署所必需的。 它可能也是 Windows 10 客户端所必需的。 有关详细信息，请参阅[配置 Azure 服务](/sccm/core/servers/deploy/configure/azure-services-wizard)。  
 
 - 客户端必须使用 IPv4。  
 
