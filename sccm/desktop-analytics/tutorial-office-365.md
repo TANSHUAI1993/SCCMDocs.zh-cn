@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 66fc982fa7f2cee3fdd83945c1b43d490b40d2f2
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.openlocfilehash: 006a887a3989d7f05b7cf44b13562e644e6f7d94
+ms.sourcegitcommit: d23ccf7b95e6c2a6b156975194ebbc375cb5e6ea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59673779"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124397"
 ---
 # <a name="tutorial-deploy-office-365-to-pilot"></a>教程：将 Office 365 部署到试运行
 
@@ -45,6 +45,8 @@ ms.locfileid: "59673779"
 在开始本教程之前，请确保具备以下先决条件：  
 
 - 有效的 Azure 订阅，使用**公司管理员**权限  
+    
+    有关详细信息，请参阅[Desktop 分析先决条件](/sccm/desktop-analytics/overview#prerequisites)。
 
 - Configuration Manager，版本 1810年与更新汇总 4488598 或更高版本，且**完全权限管理员**角色  
 
@@ -119,7 +121,11 @@ ms.locfileid: "59673779"
 
         若要将用户添加到这两个组中，键入在其名称或电子邮件地址**输入名称或电子邮件地址**相应的组的部分。 完成后，选择**下一步**。
 
+可以通过完成以下步骤**工作区所有者**或**参与者**。 
+
 5. 在到页**设置工作区**:  
+
+    - 选择你的 Azure 订阅。 
 
     - 若要使用 Desktop 分析现有的工作区，选择它，并继续下一步。  
 
@@ -129,7 +135,9 @@ ms.locfileid: "59673779"
 
         2. 选择的下拉列表**选择此工作区的 Azure 订阅名称**，然后选择此工作区的 Azure 订阅。  
 
-        3. 选择**地区**从列表中，然后选择**添加**。  
+        3. **创建新**资源组或**使用现有**。  
+
+        4. 选择**地区**从列表中，然后选择**添加**。  
 
 6. 选择新的或现有工作区中，并选择**设置为桌面 Analytics 工作区**。  然后选择**继续**中**确认和授予访问权限**对话框。  
 
@@ -142,7 +150,7 @@ ms.locfileid: "59673779"
 
 ### <a name="create-an-app-in-azure-ad-for-configuration-manager"></a>在 Azure AD 中为 Configuration Manager 创建应用  
 
-1. 在中[Azure 门户](https://portal.azure.com)，请转到**Azure Active Directory**，然后选择**应用注册**。 然后选择**新建应用程序注册**。  
+1. 打开[Azure 门户](http://portal.azure.com)公司管理员权限的用户，请转到**Azure Active Directory**，然后选择**应用注册**。 然后选择**新建应用程序注册**。  
 
 2. 在中**创建**面板中，配置以下设置：  
 

@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4105a8a81ab3f09dee9cf3ca5a2462ed2bb4183a
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
-ms.translationtype: HT
+ms.openlocfilehash: 1229dabb0fedf600f7d57a2a400df87906945ba4
+ms.sourcegitcommit: d23ccf7b95e6c2a6b156975194ebbc375cb5e6ea
+ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59802625"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124414"
 ---
 # <a name="what-is-desktop-analytics"></a>什么是桌面分析？
 
@@ -71,8 +71,14 @@ ms.locfileid: "59802625"
 ### <a name="technical"></a>技术
 
 - 有效的 Azure 订阅  
+    
+    - [**公司管理员**](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator)到 Azure 中的权限**接受服务协议**，**确认你的订阅**和**提供用户的访问** 
 
-    - **公司管理员**在 Azure 中的权限  
+    - **工作区所有者**或**参与者**权**设置工作区**和  
+
+        - [**Log Analytics 参与者**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#log-analytics-contributor)并[**用户访问管理员**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator)上要使用现有的工作区或现有资源组中创建新的工作区的资源组。
+
+        - [**所有者**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#owner)，或[**参与者**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#contributor)并[**用户访问管理员**](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles#user-access-administrator)上的权限若要创建新的资源组中的工作区的订阅。
 
 - Configuration Manager，版本 1810年与更新汇总 4488598 或更高版本。 有关详细信息，请参阅[更新 Configuration Manager](/sccm/desktop-analytics/connect-configmgr#bkmk_hotfix)。  
 

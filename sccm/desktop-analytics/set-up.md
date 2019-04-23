@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0d03b670ade984298df7a1ba5428a3f8696360bb
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.openlocfilehash: b75b82f632c8bfbbc11a2b11d58ab83116e2180a
+ms.sourcegitcommit: d23ccf7b95e6c2a6b156975194ebbc375cb5e6ea
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59673558"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124431"
 ---
 # <a name="how-to-set-up-desktop-analytics"></a>如何设置 Desktop 分析
 
@@ -51,6 +51,8 @@ ms.locfileid: "59673558"
         - **工作区参与者**:要创建和管理此工作区中的部署计划的安全组。 它们不需要任何其他的 Azure 访问权限。  
 
         若要将用户添加到这两个组中，键入在其名称或电子邮件地址**输入名称或电子邮件地址**相应的组的部分。 完成后，选择**下一步**。
+
+可以通过完成以下步骤**工作区所有者**或**参与者**。 请参阅[系统必备组件。](/sccm/desktop-analytics/overview#prerequisites) 
 
 5. 在到页**设置工作区**:  
 
@@ -88,7 +90,7 @@ Azure 门户显示桌面分析**主页**页。
 
 在 Azure AD 中为 Configuration Manager 创建应用。
 
-1. 在中[Azure 门户](http://portal.azure.com)，请转到**Azure Active Directory**，然后选择**应用注册**。 然后选择**新建应用程序注册**。  
+1. 打开[Azure 门户](http://portal.azure.com)公司管理员权限的用户，请转到**Azure Active Directory**，然后选择**应用注册**。 然后选择**新建应用程序注册**。  
 
 2. 在中**创建**面板中，配置以下设置：  
 
