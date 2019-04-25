@@ -1,75 +1,68 @@
-items:
 - name: 了解和探索
   items:
-  - name: 确保设备符合性
-    href: understand/ensure-device-compliance.md
+    - name: 确保设备符合性
+      href: understand/ensure-device-compliance.md
 - name: 入门
   items:
-  - name: 符合性设置入门
-    href: get-started/get-started-with-compliance-settings.md
+    - name: 符合性设置入门
+      href: get-started/get-started-with-compliance-settings.md
 - name: 规划和设计
   items:
-  - name: 规划和配置符合性设置
-    href: plan-design/plan-for-and-configure-compliance-settings.md
-  - name: 管理符合性的常见任务
-    href: plan-design/common-tasks-for-managing-compliance.md
-    items:
-    - name: 带 Configuration Manager 客户端的设备
-      href: plan-design/common-tasks-for-managing-compliance-on-devices-with-the-client.md
-    - name: 创建和部署配置基线
-      href: plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md
-  - name: 安全和隐私
-    href: plan-design/security-and-privacy-for-compliance-settings.md
-  - name: 安全内容自动化协议 (SCAP) 扩展
-    href: plan-design/scap/about-scap.md
-    items:
-    - name: 安装并配置 SCAP 扩展
-      href: plan-design/scap/install-configure-scap.md
-    - name: 部署和监视 SCAP 符合性
-      href: plan-design/scap/deploy-monitor-export.md
-    - name: SCAP 扩展疑难解答
-      href: plan-design/scap/troubleshooting-scap.md
+    - name: 规划和配置符合性设置
+      href: plan-design/plan-for-and-configure-compliance-settings.md
+    - name: 管理符合性的常见任务
+      href: plan-design/common-tasks-for-managing-compliance.md
+      items:
+        - name: 带 Configuration Manager 客户端的设备
+          href: plan-design/common-tasks-for-managing-compliance-on-devices-with-the-client.md
+        - name: 创建和部署配置基线
+          href: plan-design/common-tasks-for-creating-and-deploying-configuration-baselines.md
+    - name: 安全和隐私
+      href: plan-design/security-and-privacy-for-compliance-settings.md
+    - name: 安全内容自动化协议 (SCAP) 扩展
+      href: plan-design/scap/about-scap.md
+      items:
+        - name: 安装并配置 SCAP 扩展
+          href: plan-design/scap/install-configure-scap.md
+        - name: 部署和监视 SCAP 符合性
+          href: plan-design/scap/deploy-monitor-export.md
+        - name: SCAP 扩展疑难解答
+          href: plan-design/scap/troubleshooting-scap.md
 - name: 部署和使用
   items:
-  - name: 创建配置项目
-    href: deploy-use/create-configuration-items.md
-    items:
-    - name: 使用 Configuration Manager 客户端管理的设备
-      href: deploy-use/configuration-items-for-devices-managed-with-the-client.md
+    - name: 创建配置项目
+      href: deploy-use/create-configuration-items.md
       items:
-      - name: Windows 10
-        href: deploy-use/create-configuration-items-for-windows-10-devices-managed-with-the-client.md
-      - name: Mac OS X
-        href: deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md
-      - name: Windows 台式机和服务器（自定义）
-        href: deploy-use/create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-client.md
-  - name: 创建子配置项目
-    href: deploy-use/create-child-configuration-items.md
-  - name: 创建配置基线
-    href: deploy-use/create-configuration-baselines.md
-  - name: 部署配置基线
-    href: deploy-use/deploy-configuration-baselines.md
-  - name: 管理配置数据
-    items:
+        - name: 使用 Configuration Manager 客户端管理的设备
+          href: deploy-use/configuration-items-for-devices-managed-with-the-client.md
+          items:
+            - name: Windows 10
+              href: deploy-use/create-configuration-items-for-windows-10-devices-managed-with-the-client.md
+            - name: Mac OS X
+              href: deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md
+            - name: Windows 台式机和服务器（自定义）
+              href: deploy-use/create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-client.md
+    - name: 创建子配置项目
+      href: deploy-use/create-child-configuration-items.md
+    - name: 创建配置基线
+      href: deploy-use/create-configuration-baselines.md
+    - name: 部署配置基线
+      href: deploy-use/deploy-configuration-baselines.md
     - name: 管理配置数据
-      href: deploy-use/management-tasks-for-configuration-data.md
-    - name: 导入配置数据
-      href: deploy-use/import-configuration-data.md
-  - name: 创建用户数据和配置文件配置项目
-    href: deploy-use/create-user-data-and-profiles-configuration-items.md
-  - name: OneDrive for Business 配置文件
-    href: deploy-use/onedrive-profile.md
-  - name: 创建远程连接配置文件
-    href: deploy-use/create-remote-connection-profiles.md
-  - name: 将 Windows 设备升级到新版本
-    href: deploy-use/upgrade-windows-version.md
-  - name: 配置 Microsoft Edge 设置
-    href: deploy-use/browser-profiles.md
-  - name: 监视符合性设置
-    href: deploy-use/monitor-compliance-settings.md
-ms.openlocfilehash: 0e3875fe8038d1d17030a69d2df11631e4e480c1
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59802404"
+      items:
+        - name: 管理配置数据
+          href: deploy-use/management-tasks-for-configuration-data.md
+        - name: 导入配置数据
+          href: deploy-use/import-configuration-data.md
+    - name: 创建用户数据和配置文件配置项目
+      href: deploy-use/create-user-data-and-profiles-configuration-items.md
+    - name: OneDrive for Business 配置文件
+      href: deploy-use/onedrive-profile.md
+    - name: 创建远程连接配置文件
+      href: deploy-use/create-remote-connection-profiles.md
+    - name: 将 Windows 设备升级到新版本
+      href: deploy-use/upgrade-windows-version.md
+    - name: 配置 Microsoft Edge 设置
+      href: deploy-use/browser-profiles.md
+    - name: 监视符合性设置
+      href: deploy-use/monitor-compliance-settings.md

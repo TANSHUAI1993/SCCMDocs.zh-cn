@@ -1,96 +1,89 @@
-items:
 - name: 了解和探索
   items:
-  - name: 软件更新简介
-    href: understand/software-updates-introduction.md
-  - name: 用于软件更新的图标
-    href: understand/software-updates-icons.md
+    - name: 软件更新简介
+      href: understand/software-updates-introduction.md
+    - name: 用于软件更新的图标
+      href: understand/software-updates-icons.md
 - name: 规划和设计
   items:
-  - name: 规划软件更新
-    href: plan-design/plan-for-software-updates.md
-  - name: 软件更新的先决条件
-    href: plan-design/prerequisites-for-software-updates.md
-  - name: 软件更新的最佳方案
-    href: plan-design/software-updates-best-practices.md
-  - name: 软件更新的安全和隐私
-    href: plan-design/security-and-privacy-for-software-updates.md
+    - name: 规划软件更新
+      href: plan-design/plan-for-software-updates.md
+    - name: 软件更新的先决条件
+      href: plan-design/prerequisites-for-software-updates.md
+    - name: 软件更新的最佳方案
+      href: plan-design/software-updates-best-practices.md
+    - name: 软件更新的安全和隐私
+      href: plan-design/security-and-privacy-for-software-updates.md
 - name: 入门
   items:
-  - name: 准备软件更新管理
-    href: get-started/prepare-for-software-updates-management.md
-  - name: 安装软件更新点
-    href: get-started/install-a-software-update-point.md
-  - name: 同步软件更新
-    href: get-started/synchronize-software-updates.md
-  - name: 从断开连接的软件更新点中同步软件更新
-    href: get-started/synchronize-software-updates-disconnected.md
-  - name: 配置分类和产品
-    href: get-started/configure-classifications-and-products.md
-  - name: 管理软件更新的设置
-    href: get-started/manage-settings-for-software-updates.md
-  - name: 删除软件更新点
-    href: get-started/remove-a-software-update-point.md
+    - name: 准备软件更新管理
+      href: get-started/prepare-for-software-updates-management.md
+    - name: 安装软件更新点
+      href: get-started/install-a-software-update-point.md
+    - name: 同步软件更新
+      href: get-started/synchronize-software-updates.md
+    - name: 从断开连接的软件更新点中同步软件更新
+      href: get-started/synchronize-software-updates-disconnected.md
+    - name: 配置分类和产品
+      href: get-started/configure-classifications-and-products.md
+    - name: 管理软件更新的设置
+      href: get-started/manage-settings-for-software-updates.md
+    - name: 删除软件更新点
+      href: get-started/remove-a-software-update-point.md
 - name: 部署和使用
   items:
-  - name: 下载软件更新
-    href: deploy-use/download-software-updates.md
-  - name: 将软件更新添加到更新组
-    href: deploy-use/add-software-updates-to-an-update-group.md
-  - name: 部署软件更新
-    href: deploy-use/deploy-software-updates.md
-    items:
-    - name: 手动部署软件更新
-      href: deploy-use/manually-deploy-software-updates.md
-    - name: 自动部署软件更新
-      href: deploy-use/automatically-deploy-software-updates.md
-    - name: 创建分阶段部署
-      href: ../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json
-  - name: 监视软件更新
-    href: deploy-use/monitor-software-updates.md
-    items:
-    - name: 管理和监视分阶段部署
-      href: ../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json
-  - name: 软件更新维护
-    href: deploy-use/software-updates-maintenance.md
-  - name: 为服务器组提供服务
-    href: deploy-use/service-a-server-group.md
-  - name: Office 365 客户端管理仪表板
-    href: deploy-use/office-365-dashboard.md
-  - name: 管理 Office 365 ProPlus 更新
-    href: deploy-use/manage-office-365-proplus-updates.md
-  - name: 优化 Windows 10 更新传递
-    href: deploy-use/optimize-windows-10-update-delivery.md
-  - name: 管理 Windows 10 更新的快速安装文件
-    href: deploy-use/manage-express-installation-files-for-windows-10-updates.md
-  - name: 在 Windows 10 中与 Windows Update for Business 集成
-    href: deploy-use/integrate-windows-update-for-business-windows-10.md
-  - name: 第三方软件更新
-    href: deploy-use/third-party-software-updates.md
-  - name: 部署安全更新的示例方案
-    href: deploy-use/example-scenario-deploy-monitor-monthly-security-updates.md
+    - name: 下载软件更新
+      href: deploy-use/download-software-updates.md
+    - name: 将软件更新添加到更新组
+      href: deploy-use/add-software-updates-to-an-update-group.md
+    - name: 部署软件更新
+      href: deploy-use/deploy-software-updates.md
+      items:
+        - name: 手动部署软件更新
+          href: deploy-use/manually-deploy-software-updates.md
+        - name: 自动部署软件更新
+          href: deploy-use/automatically-deploy-software-updates.md
+        - name: 创建分阶段部署
+          href: ../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json
+    - name: 监视软件更新
+      href: deploy-use/monitor-software-updates.md
+      items:
+        - name: 管理和监视分阶段部署
+          href: ../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json
+    - name: 软件更新维护
+      href: deploy-use/software-updates-maintenance.md
+    - name: 为服务器组提供服务
+      href: deploy-use/service-a-server-group.md
+    - name: Office 365 客户端管理仪表板
+      href: deploy-use/office-365-dashboard.md
+    - name: 管理 Office 365 ProPlus 更新
+      href: deploy-use/manage-office-365-proplus-updates.md
+    - name: 优化 Windows 10 更新传递
+      href: deploy-use/optimize-windows-10-update-delivery.md
+    - name: 管理 Windows 10 更新的快速安装文件
+      href: deploy-use/manage-express-installation-files-for-windows-10-updates.md
+    - name: 在 Windows 10 中与 Windows Update for Business 集成
+      href: deploy-use/integrate-windows-update-for-business-windows-10.md
+    - name: 第三方软件更新
+      href: deploy-use/third-party-software-updates.md
+    - name: 部署安全更新的示例方案
+      href: deploy-use/example-scenario-deploy-monitor-monthly-security-updates.md
 - name: System Center Updates Publisher
   href: tools/updates-publisher.md
   items:
-  - name: 安装
-    href: tools/install-updates-publisher.md
-  - name: 配置选项
-    href: tools/updates-publisher-options.md
-  - name: 管理目录
-    href: tools/updates-publisher-catalogs.md
-  - name: 管理更新
-    href: tools/manage-updates-with-updates-publisher.md
-  - name: 管理发布内容
-    href: tools/updates-publisher-publications.md
-  - name: 新建更新程序
-    href: tools/create-updates-with-updates-publisher.md
-  - name: 适用性规则
-    href: tools/updates-publisher-applicability-rules.md
-  - name: 证书和安全
-    href: tools/updates-publisher-security.md
-ms.openlocfilehash: 2f0cf536a5f34c47951f6d5992d3509d81d1e2dd
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59802574"
+    - name: 安装
+      href: tools/install-updates-publisher.md
+    - name: 配置选项
+      href: tools/updates-publisher-options.md
+    - name: 管理目录
+      href: tools/updates-publisher-catalogs.md
+    - name: 管理更新
+      href: tools/manage-updates-with-updates-publisher.md
+    - name: 管理发布内容
+      href: tools/updates-publisher-publications.md
+    - name: 新建更新程序
+      href: tools/create-updates-with-updates-publisher.md
+    - name: 适用性规则
+      href: tools/updates-publisher-applicability-rules.md
+    - name: 证书和安全
+      href: tools/updates-publisher-security.md

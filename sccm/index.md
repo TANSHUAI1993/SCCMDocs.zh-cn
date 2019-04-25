@@ -6,11 +6,11 @@ description: 了解如何使用 System Center Configuration Manager。
 ms.topic: hub-page
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 996ff0e10a6f5db2743e9c74a32692f9ac2fc0e2
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56121135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62233896"
 ---
 <div id="main" class="v2">
     <div class="container">
