@@ -6,11 +6,11 @@ ms.topic: include
 ms.date: 12/30/2018
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 8305102657a5973c19ca161f65204587954b0232
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56754705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62231857"
 ---
 使用以下定义试点和生产环境之间进行区分：  
 
