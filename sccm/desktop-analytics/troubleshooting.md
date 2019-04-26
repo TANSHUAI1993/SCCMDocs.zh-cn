@@ -13,11 +13,11 @@ manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: f0da26f1ea2b7f7c0c49377cb934e451d56889b7
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59673660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62261478"
 ---
 # <a name="troubleshooting-desktop-analytics"></a>故障排除桌面分析
 

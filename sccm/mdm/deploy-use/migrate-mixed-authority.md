@@ -12,11 +12,11 @@ ms.technology: configmgr-hybrid
 ms.assetid: 6f0201d7-5714-4ba0-b2bf-d1acd0203e9a
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b7f2875852b49ab8af9b1f34c4747f12a6620896
-ms.sourcegitcommit: fd16fc2b681608fd6def5bad2cedffbcd1f2423a
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56405669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62282459"
 ---
 # <a name="change-the-mdm-authority-for-specific-users-mixed-mdm-authority"></a>更改特定用户的 MDM 机构（混合 MDM 机构） 
 
@@ -45,7 +45,7 @@ ms.locfileid: "56405669"
 - 集合中与 Intune 订阅关联的用户的设备可以在混合 MDM 中注册。 只要用户具有 Intune/EMS 许可证，将在 Intune 中管理与不在集合中的用户相关联的所有设备。   
 
     > [!Note]  
-    > 即使你已通过 Configuration Manager 控制台进行阻止，用户仍可以注册 Intune 独立版。 若要完全阻止用户进行注册，不要向不必要的用户授权 Intune 许可证。 他们不能在没有许可证的情况下注册。<!--SCCMDocs issue 738-->  
+    > 即使你已通过 Configuration Manager 控制台进行阻止，用户仍可以注册 Intune 独立版。 若要完全阻止用户进行注册，不要向不必要的用户授权 Intune 许可证。 他们不能注册许可证的情况下。<!--SCCMDocs issue 738-->  
 
 - 将用户迁移至 Intune 时，该用户和设备会在约 15 分钟后出现在 Azure 门户的 Intune 中。   
 
@@ -85,7 +85,7 @@ ms.locfileid: "56405669"
 - 不要迁移已在 Configuration Manager 中添加为设备注册管理员 (DEM) 的任何用户帐户。 接下来，将租户级 MDM 机构更改为 Intune 后，这些用户帐户将准确迁移。 如果执行迁移之前租户级 MDM 机构更改的 DEM 用户帐户，必须手动将用户添加为 Azure 上 Intune 中 DEM。 但是，通过使用 DEM 注册的设备不会成功迁移。 请致电支持部门来迁移这些设备。 有关详细信息，请参阅[添加设备注册管理器](https://docs.microsoft.com/intune/device-enrollment-manager-enroll#add-a-device-enrollment-manager)。  
 
     > [!Note]  
-    > 在混合机构模式下，不要通过从 ConfigMgr 云集合中删除帐户来将它们移动到 Intune。 如果这样做，用户将成为标准用户，并且不能注册 15 台以上的设备。 相反，一旦完全为租户切换 MDM 机构，就迁移这些用户及其设备。<!--Intune bug 2174210-->  
+    > 在混合机构模式下，不要通过从 ConfigMgr 云集合中删除帐户来将它们移动到 Intune。 如果这样做，用户将成为标准用户，并且不能注册 15 台以上的设备。 相反，一旦完全将 MDM 机构切换租户迁移这些用户和他们的设备。<!--Intune bug 2174210-->  
 
 - 通过使用 DEM 和设备，无需注册设备[用户相关性](/sccm/mdm/deploy-use/user-affinity-for-hybrid-managed-devices)不会自动迁移到新的 MDM 机构。 若要切换这些 MDM 设备的管理机构，请参阅[迁移不具备用户关联的设备](#migrate-devices-without-user-affinity)。  
 

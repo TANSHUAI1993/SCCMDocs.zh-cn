@@ -12,11 +12,11 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 69699dc76fa9e0324376a8a4dbb7430b2b2f068d
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56142402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62227478"
 ---
 # <a name="microsoft-store-for-business-in-system-center-configuration-manager"></a>System Center Configuration Manager 中适用于企业的 Microsoft Store
 

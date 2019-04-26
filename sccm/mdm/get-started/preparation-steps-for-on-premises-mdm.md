@@ -12,11 +12,11 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: fad5ce96b84b5a6edfafdead64cff0223009ebf8
-ms.sourcegitcommit: f3dd8405018fe1043434386be15c16752c1a4a3c
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57558042"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288637"
 ---
 # <a name="preparation-steps-for-on-premises-mdm-in-configuration-manager"></a>用于本地 MDM Configuration Manager 中的准备步骤
 
@@ -31,7 +31,7 @@ ms.locfileid: "57558042"
     注册 Microsoft Intune，然后将订阅添加到 Configuration Manager 通过 Configuration Manager 控制台。 此步骤仅需用于许可授权的目的。 Intune 不用于管理设备或存储管理信息。 设备的所有协调和管理均由你组织的企业通过使用本地 Configuration Manager 基础结构实施。  
 
     > [!Note]  
-    > 从版本 1810年，Intune 连接不再新的本地 MDM 部署所必需的。<!--3607730, fka 1359124--> 组织仍需要 Intune 许可证才能使用此功能。 当前不能从现有的本地 MDM 部署中删除 Intune 连接。 有关详细信息，请参阅 [Intune 支持博客文章](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150)。  
+    > 从版本 1810年，Intune 连接不再新的本地 MDM 部署所必需的。<!--3607730, fka 1359124--> 组织仍需要 Intune 许可证才能使用此功能。 目前无法从现有的本地 MDM 部署中删除 Intune 连接。 有关详细信息，请参阅 [Intune 支持博客文章](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150)。  
 
 - [为本地 MDM 安装站点系统角色](/sccm/mdm/get-started/install-site-system-roles-for-on-premises-mdm)  
 

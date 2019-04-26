@@ -12,11 +12,11 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 37a1b1bf6ca1b14933ce03005a5b6b8681ef4db0
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56139351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62227890"
 ---
 # <a name="protect-data-and-devices-in-on-premises-mobile-device-management"></a>保护本地移动设备管理中的数据和设备
 

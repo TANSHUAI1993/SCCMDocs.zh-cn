@@ -12,11 +12,11 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 2ee4ed8f102507b4d62a1ccbfe1cc38240e85df9
-ms.sourcegitcommit: f38ef9afb0c608c0153230ff819e5f5e0fb1520c
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58196851"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260457"
 ---
 # <a name="manage-email-access-in-configuration-manager"></a>管理 Configuration Manager 中的电子邮件访问
 
@@ -107,7 +107,7 @@ Exchange Online 仅支持适用于 iOS 和 Android 的 Outlook 应用以及 Outl
 
 ## <a name="configure-conditional-access"></a>配置条件访问
 
-### <a name="step-1-evaluate-the-effect-of-the-conditional-access-policy"></a>步骤 1:评估条件性访问策略的影响  
+### <a name="step-1-evaluate-the-effect-of-the-conditional-access-policy"></a>步骤 1：评估条件性访问策略的影响  
 
 配置后**内部部署 Exchange 连接器**，可以使用 Configuration Manager**按条件访问状态的设备列表**报告，以确定将阻止的设备在配置条件性访问策略后，请访问 Exchange。 此报表还要求：  
 
@@ -161,7 +161,7 @@ Exchange Online 仅支持适用于 iOS 和 Android 的 Outlook 应用以及 Outl
 仅会对条件性访问策略面向的组或集合评估 Exchange 访问权限。  
 
 
-### <a name="step-3-configure-and-deploy-a-compliance-policy"></a>步骤 3:配置和部署合规性策略  
+### <a name="step-3-configure-and-deploy-a-compliance-policy"></a>步骤 3：配置和部署合规性策略  
 
 确保你已创建合规性策略并将其部署到设定为 Exchange 条件访问策略的目标的所有设备。  
 
@@ -171,12 +171,12 @@ Exchange Online 仅支持适用于 iOS 和 Android 的 Outlook 应用以及 Outl
 > 如果你尚未部署合规性策略，但是启用了 Exchange 条件性访问策略，访问将允许所有目标的设备。  
 
 
-### <a name="step-4-configure-the-conditional-access-policy"></a>步骤 4:配置条件性访问策略  
+### <a name="step-4-configure-the-conditional-access-policy"></a>步骤 4：配置条件性访问策略  
 
 #### <a name="for-exchange-online-and-tenants-in-the-new-exchange-online-dedicated-environment"></a>对于 Exchange Online（和新 Exchange Online Dedicated 环境中的租户）
 
 > [!NOTE]  
-> 此外，还可在 Azure AD 管理控制台中创建条件访问策略。 除多重身份验证之类的其他条件访问策略之外，Azure AD 管理控制台还允许创建 Intune 设备条件访问策略（在 Azure AD 中称为基于设备的条件访问策略）。 还可为第三方企业应用（如 Azure AD 支持的 Salesforce 和 Box）设置条件访问策略。 有关更多详细信息，请参阅[How To:需要使用条件性访问的云应用访问权限的被管理的设备](https://docs.microsoft.com/azure/active-directory/conditional-access/require-managed-devices)。  
+> 此外，还可在 Azure AD 管理控制台中创建条件访问策略。 除多重身份验证之类的其他条件访问策略之外，Azure AD 管理控制台还允许创建 Intune 设备条件访问策略（在 Azure AD 中称为基于设备的条件访问策略）。 还可为第三方企业应用（如 Azure AD 支持的 Salesforce 和 Box）设置条件访问策略。 有关更多详细信息，请参阅[How To:使用条件访问要求托管设备实现云应用访问](https://docs.microsoft.com/azure/active-directory/conditional-access/require-managed-devices)。  
 
 Exchange Online 的条件访问策略使用下面的流来评估是允许还是阻止设备。  
 

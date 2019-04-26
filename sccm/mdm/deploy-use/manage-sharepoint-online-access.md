@@ -12,11 +12,11 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 69a160a3c7833f196d50185e551f619d68dc0925
-ms.sourcegitcommit: ec4411fe30770f90128cf6cbd181047db90040cb
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57881735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62255550"
 ---
 # <a name="manage-sharepoint-online-access-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中管理 SharePoint Online 访问
 
@@ -105,7 +105,7 @@ Office 桌面应用程序可以访问运行以下系统的电脑上的 SharePoin
 
 ## <a name="configure-conditional-access-for-sharepoint-online"></a>为 SharePoint Online 配置条件访问  
 
-### <a name="step-1-configure-active-directory-security-groups"></a>步骤 1:配置 Active Directory 安全组  
+### <a name="step-1-configure-active-directory-security-groups"></a>步骤 1：配置 Active Directory 安全组  
  在开始之前，请针对条件访问策略配置 Azure AD 安全组。 你可以配置这些组中的**Microsoft 365 管理中心**，或**Intune 帐户门户**。 这些组包含要作为目标或者要从策略中免除的用户。 如果将某用户设定为策略的目标，则其使用的每台设备必须符合条件才能访问资源。  
 
  你可以在 SharePoint Online 策略中指定两种组类型：  

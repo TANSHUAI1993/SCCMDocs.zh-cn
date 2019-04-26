@@ -13,11 +13,11 @@ manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 149c5f2a4469a353c6dce6fde86527ca95518484
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56754672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62254636"
 ---
 # <a name="assets-in-desktop-analytics"></a>在桌面 Analytics 中的资产 
 

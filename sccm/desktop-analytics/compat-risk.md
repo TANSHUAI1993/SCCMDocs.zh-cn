@@ -13,11 +13,11 @@ manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: bf2114ac77a75fedc18c38a8d373b9c0a1ada591
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59673405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62206571"
 ---
 # <a name="compatibility-risk-for-windows-apps-in-desktop-analytics"></a>用于 Windows 桌面 Analytics 中的应用程序兼容性风险
 

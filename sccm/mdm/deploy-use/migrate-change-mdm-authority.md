@@ -12,11 +12,11 @@ ms.technology: configmgr-hybrid
 ms.assetid: be503ec9-5324-4f7c-bcf5-77204328e99c
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 9d6a909be4b1817b9a251046d666839e2e351443
-ms.sourcegitcommit: 0bf253085adeca0d9ea62d76497eb5ebf5ce89da
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57012422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62282161"
 ---
 # <a name="change-your-mdm-authority-to-intune-standalone"></a>将 MDM 机构更改为 Intune 独立版
 
@@ -118,7 +118,8 @@ ms.locfileid: "57012422"
 - 对于不是与用户关联的设备，请致电支持人员以帮助更改 MDM 机构。 
 
 #### <a name="bkmk-ki-dep"></a> Apple DEP 设备记录
-<!--ICM 105091970--> 完成从混合 MDM 迁移后，可能会注意到 Apple DEP 设备记录将保留在 Configuration Manager 控制台。 一旦将 MDM 机构更改为 Intune 后，不能从 Configuration Manager 中删除这些设备。 
+<!--ICM 105091970-->
+完成从混合 MDM 迁移后，可能会注意到 Apple DEP 设备记录将保留在 Configuration Manager 控制台。 一旦将 MDM 机构更改为 Intune 后，不能从 Configuration Manager 中删除这些设备。 
 
 有两种解决方法：
 

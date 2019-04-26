@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 006a887a3989d7f05b7cf44b13562e644e6f7d94
-ms.sourcegitcommit: d23ccf7b95e6c2a6b156975194ebbc375cb5e6ea
+ms.openlocfilehash: 66b7d7da7081a4523378c0dc4b2a00917ac16ea9
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60124397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62261411"
 ---
 # <a name="tutorial-deploy-office-365-to-pilot"></a>教程：将 Office 365 部署到试运行
 
@@ -121,7 +121,7 @@ ms.locfileid: "60124397"
 
         若要将用户添加到这两个组中，键入在其名称或电子邮件地址**输入名称或电子邮件地址**相应的组的部分。 完成后，选择**下一步**。
 
-可以通过完成以下步骤**工作区所有者**或**参与者**。 
+可以通过完成以下步骤**工作区所有者**或**参与者**。 有关详细信息，请参阅[先决条件](/sccm/desktop-analytics/overview#prerequisites)。
 
 5. 在到页**设置工作区**:  
 

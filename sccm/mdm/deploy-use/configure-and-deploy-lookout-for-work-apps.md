@@ -12,11 +12,11 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: a4e829d92b099be3fbf77796ea604d9d33db252c
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56132946"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273637"
 ---
 # <a name="configure-and-deploy-lookout-for-work-apps"></a>配置和部署 Lookout for Work 应用
 
@@ -60,7 +60,7 @@ ms.locfileid: "56132946"
 
    3.  请使用以下格式的重定向 URI：`lookoutwork://com.lookout.enterprise.<yourcompanyname>`，将 `<yourcompanyname>` 替换为你的公司名称。 例如：`lookoutwork://com.lookout.enterprise.contoso`
    4. 单击“创建”以创建应用。 
-   5.  打开新应用、单击“设置”，再添加其他重定向 URI。 使用格式 `companyportal://code/<originalURI>`，其中 `<originalURI>` 是原始重定向 URI 的 URL 编码版本。 例如， `companyportal://code/lookoutwork%3A%2F%2Fcom.lookout.enterprise.contoso`
+   5.  打开新应用、单击“设置”，再添加其他重定向 URI。 使用格式 `companyportal://code/<originalURI>`，其中 `<originalURI>` 是原始重定向 URI 的 URL 编码版本。 例如 `companyportal://code/lookoutwork%3A%2F%2Fcom.lookout.enterprise.contoso`
    6.  在应用设置中转到“所需权限”并单击“添加”。 选择以下委托的权限：  
 
        | API  | 权限  |

@@ -12,11 +12,11 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d7da4767bd8ef26ebf3f56010e99bc1cbd0b0c10
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56120385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62227856"
 ---
 # <a name="protect-apps-using-mobile-application-management-policies-in-system-center-configuration-manager"></a>使用 System Center Configuration Manager 中的移动应用程序管理策略保护应用
 
@@ -47,7 +47,7 @@ ms.locfileid: "56120385"
 
 ## <a name="create-and-deploy-an-app-with-a-mobile-application-management-policy"></a>创建和部署具有移动应用程序管理策略的应用  
 
-##  <a name="step-1-obtain-the-link-to-a-policy-managed-app-or-create-a-wrapped-app"></a>步骤 1:获取指向策略托管应用的链接或创建已包装的应用  
+##  <a name="step-1-obtain-the-link-to-a-policy-managed-app-or-create-a-wrapped-app"></a>步骤 1：获取指向策略托管应用的链接或创建已包装的应用  
 
 -   **获取指向策略托管应用**:从应用商店查找并记录你想要部署的策略托管应用的 URL。  
 
@@ -98,7 +98,7 @@ ms.locfileid: "56120385"
 
    新应用程序会显示在“软件库”  工作区的“应用程序”  节点中。  
 
-##  <a name="step-3-create-an-application-management-policy"></a>步骤 3:创建应用程序管理策略  
+##  <a name="step-3-create-an-application-management-policy"></a>步骤 3：创建应用程序管理策略  
  接下来，创建一个与该应用程序关联的应用程序管理策略。 可以创建一个常规或托管浏览器策略。  
 
 1)  在 Configuration Manager 控制台中，选择“软件库” > “应用程序管理” > “应用程序管理策略”。  
@@ -140,7 +140,7 @@ ms.locfileid: "56120385"
 
  新策略显示在“软件库”  工作区的“应用程序管理策略”  节点中。  
 
-##  <a name="step-4-associate-the-application-management-policy-with-a-deployment-type"></a>步骤 4:将应用程序管理策略与部署类型相关联  
+##  <a name="step-4-associate-the-application-management-policy-with-a-deployment-type"></a>步骤 4：将应用程序管理策略与部署类型相关联  
 
  为需要应用程序管理策略的应用创建部署类型后，Configuration Manager 会对其进行识别，并提示用户关联应用管理策略。 对于托管浏览器，将需要关联“常规”和“托管浏览器”策略。 有关详细信息，请参阅[创建应用程序](create-applications.md)。  
 

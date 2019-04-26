@@ -12,11 +12,11 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: cbd996629d3b312febd271757aff69faf5371c64
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56127416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62234001"
 ---
 # <a name="set-up-actions-for-non-compliance"></a>设置针对非符合性的操作
 
@@ -63,7 +63,7 @@ Configuration Manager 提供电子邮件模板，但也可以创建自己的模�
     a. **名称**：电子邮件模板名称  
 
     > [!Note]  
-    > “发件人”字段使用来自 Microsoft 的无答复电子邮件地址自动填充。<!--SCCMDocs issue 652-->  
+    > **从**字段是使用来自 Microsoft 的无答复电子邮件地址自动填充。<!--SCCMDocs issue 652-->  
 
     c. **主题**：解释正在发送的电子邮件通知中的主题  
 

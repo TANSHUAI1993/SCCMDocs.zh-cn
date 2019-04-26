@@ -12,11 +12,11 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 601b58b2f955170e5ab2f038cb49306efe3b499c
-ms.sourcegitcommit: ec4411fe30770f90128cf6cbd181047db90040cb
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57881718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62255253"
 ---
 # <a name="manage-skype-for-business-online-access"></a>管理 Skype for Business Online 访问
 
@@ -51,7 +51,7 @@ ms.locfileid: "57881718"
 
 ## <a name="configure-conditional-access-for-skype-for-business-online"></a>为 Skype for Business Online 配置条件访问  
 
-### <a name="step-1-configure-active-directory-security-groups"></a>步骤 1:配置 Active Directory 安全组  
+### <a name="step-1-configure-active-directory-security-groups"></a>步骤 1：配置 Active Directory 安全组  
  在开始之前，针对条件访问策略配置 Azure Active Directory 安全组。 在 Microsoft 365 管理中心内配置这些组。 这些组包含作为策略目标的用户或从策略排除的用户。 如果将某个用户设定为策略的目标，则其使用的每个设备必须合规才能访问资源。  
 
  你可以指定两种组类型以用于 Skype for Business 策略：  
@@ -70,7 +70,7 @@ ms.locfileid: "57881718"
 >  如果你尚未部署符合性策略，但是启用了 Skype for Business Online 策略，则允许所有已向 Microsoft Intune 注册的目标设备进行访问。  
 
 
-### <a name="step-3-configure-the-skype-for-business-online-policy"></a>步骤 3:配置 Skype for Business Online 策略  
+### <a name="step-3-configure-the-skype-for-business-online-policy"></a>步骤 3：配置 Skype for Business Online 策略  
  配置策略以要求只有托管及符合性设备才能访问 Skype for Business Online。 此策略存储在 Azure Active Directory 中。  
 
 1. 在 [Microsoft Intune 管理控制台](https://manage.microsoft.com)中，单击“策略” > “条件访问” > “Skype for Business Online 策略”。  

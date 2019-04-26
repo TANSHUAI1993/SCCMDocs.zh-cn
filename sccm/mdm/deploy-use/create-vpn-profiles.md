@@ -12,11 +12,11 @@ ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d7accfe4c329b61c7791bc4b82028d48fdc81931
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56122612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62256581"
 ---
 # <a name="vpn-profiles-on-mobile-devices-in-system-center-configuration-manager"></a>System Center Configuration Manager 中移动设备上的 VPN 配置文件
 
@@ -50,7 +50,7 @@ ms.locfileid: "56122612"
  |PPTP|是|否|是|是|是|否|是|  
  |L2TP|是|否|是|是|是|否|是 (OMA-URI)|  
 
-<sup>1</sup> 从版本 1802 开始，Cisco AnyConnect 连接类型的使用情况各不相同。<!--1357393-->  
+<sup>1</sup>从版本 1802 开始，使用情况的 Cisco AnyConnect 连接类型而异。<!--1357393-->  
    - 对于以下版本的 VPN 配置文件，请使用“Cisco 旧式 AnyConnect”选项：
        - 带有 Cisco AnyConnect 4.0.5 或更低版本的 iOS
        - 带有 Cisco AnyConnect 任何版本的 macOS

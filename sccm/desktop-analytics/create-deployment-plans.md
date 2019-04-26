@@ -13,11 +13,11 @@ manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 35e8e883acafaa1d606d81402b868b8a755d0887
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59673456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62208035"
 ---
 # <a name="how-to-create-deployment-plans-in-desktop-analytics"></a>如何在桌面 Analytics 中创建部署计划 
 

@@ -12,11 +12,11 @@ ms.technology: configmgr-hybrid
 ms.assetid: cc397ab5-125f-4f17-905b-fab980194f49
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c0420113feaaf9c9485b8d1e3d488b07878c61b5
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56131959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62233971"
 ---
 # <a name="change-your-mdm-authority"></a>更改 MDM 机构
 
@@ -124,9 +124,9 @@ ms.locfileid: "56131959"
     
 - 如果特定设备存在问题，请取消注册并重新注册这些设备。 此操作会将设备连接至新机构并使其尽快受到管理。  
 
-- 如果已将 [Android for Work](/sccm/mdm/deploy-use/create-configuration-items-for-android-for-work-devices-managed-without-the-client) 启用为混合租户并将租户迁移至 Intune 独立版，受注册限制影响，Android for Work 设置可能会显示为“阻止”而不是“允许”。 请将其手动设置为“允许”以重新启用 Android for Work 注册。<!--512117-->  
+- 如果已将 [Android for Work](/sccm/mdm/deploy-use/create-configuration-items-for-android-for-work-devices-managed-without-the-client) 启用为混合租户并将租户迁移至 Intune 独立版，受注册限制影响，Android for Work 设置可能会显示为“阻止”而不是“允许”。 手动将其设置为**允许**以重新启用 Android for Work 注册。<!--512117-->  
 
-- 在更改 MDM 机构后，不会自动删除 Apple VPP 令牌和关联的[批量采购的 iOS 应用](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps)。 若要清除此信息，请按照[删除 Apple VPP 令牌](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps#delete-an-apple-vpp-token)中的步骤操作。 操作完成后，该站点将删除令牌。 它还会从“许可应用商店应用”节点那里删除该令牌的任何应用程序元数据。<!--SCCMDocs issue 579-->  
+- 在更改 MDM 机构后，不会自动删除 Apple VPP 令牌和关联的[批量采购的 iOS 应用](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps)。 若要清除此信息，请按照[删除 Apple VPP 令牌](/sccm/mdm/deploy-use/manage-volume-purchased-ios-apps#delete-an-apple-vpp-token)中的步骤操作。 操作完成后，该站点将删除令牌。 它还会删除从许可的应用商店应用程序节点该令牌的任何应用程序元数据。<!--SCCMDocs issue 579-->  
 
     在极少数情况下，可能会看到站点无法删除管理对象的错误。  
 

@@ -13,11 +13,11 @@ manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 4aa078f5a8306cb30ea83d45b93b18971be7764f
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59802812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62234276"
 ---
 # <a name="how-to-deploy-to-pilot-with-desktop-analytics"></a>如何将部署到试运行时使用 Desktop 分析
 
