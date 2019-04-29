@@ -1,58 +1,51 @@
-items:
 - name: 共同管理
   items:
-  - name: 什么是共同管理？
-    href: overview.md
-  - name: 快速入门
-    href: quickstarts.md
-    items:
-    - name: 立即值
+    - name: 什么是共同管理？
+      href: overview.md
+    - name: 快速入门
+      href: quickstarts.md
       items:
-      - name: 条件性访问
-        href: quickstart-conditional-access.md
-      - name: 从 Intune 执行远程操作
-        href: quickstart-remote-actions.md
-      - name: 客户端运行状况
-        href: quickstart-client-health.md
-      - name: 混合 Azure AD
-        href: quickstart-hybrid-aad.md
-      - name: Windows Autopilot
-        href: quickstart-autopilot.md
-    - name: 入门
+        - name: 立即值
+          items:
+            - name: 条件性访问
+              href: quickstart-conditional-access.md
+            - name: 从 Intune 执行远程操作
+              href: quickstart-remote-actions.md
+            - name: 客户端运行状况
+              href: quickstart-client-health.md
+            - name: 混合 Azure AD
+              href: quickstart-hybrid-aad.md
+            - name: Windows Autopilot
+              href: quickstart-autopilot.md
+        - name: 入门
+          items:
+            - name: 共同管理的路径
+              href: quickstart-paths.md
+            - name: 设置混合 Azure AD
+              href: quickstart-setup-hybrid-aad.md
+            - name: 升级到 Windows 10
+              href: quickstart-upgrade-win10.md
+            - name: 从混合 MDM 迁移
+              href: quickstart-migrate-hybrid-mdm.md
+            - name: 从 FastTrack 获取帮助
+              href: quickstart-fasttrack.md
+    - name: 教程
       items:
-      - name: 共同管理的路径
-        href: quickstart-paths.md
-      - name: 设置混合 Azure AD
-        href: quickstart-setup-hybrid-aad.md
-      - name: 升级到 Windows 10
-        href: quickstart-upgrade-win10.md
-      - name: 从混合 MDM 迁移
-        href: quickstart-migrate-hybrid-mdm.md
-      - name: 从 FastTrack 获取帮助
-        href: quickstart-fasttrack.md
-  - name: 教程
-    items:
-    - name: 为 Configuration Manager 客户端启用共同管理
-      href: tutorial-co-manage-clients.md
-    - name: 为基于 Internet 的设备启用共同管理
-      href: tutorial-co-manage-new-devices.md
-  - name: 概念
-    items:
-    - name: 工作负载
-      href: workloads.md
-  - name: 操作指南
-    items:
-    - name: 启用共同管理
-      href: how-to-enable.md
-    - name: 准备基于 Internet 的设备
-      href: how-to-prepare-Win10.md
-    - name: 将工作负载切换到 Intune
-      href: how-to-switch-workloads.md
-    - name: 监视共同管理
-      href: how-to-monitor.md
-ms.openlocfilehash: ff313299137330aab790e62d1db127c0f1bb1808
-ms.sourcegitcommit: 9aebc20b25cdef0af908918ccfd791f3264a5d94
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "57737274"
+        - name: 为 Configuration Manager 客户端启用共同管理
+          href: tutorial-co-manage-clients.md
+        - name: 为基于 Internet 的设备启用共同管理
+          href: tutorial-co-manage-new-devices.md
+    - name: 概念
+      items:
+        - name: 工作负载
+          href: workloads.md
+    - name: 操作指南
+      items:
+        - name: 启用共同管理
+          href: how-to-enable.md
+        - name: 准备基于 Internet 的设备
+          href: how-to-prepare-Win10.md
+        - name: 将工作负载切换到 Intune
+          href: how-to-switch-workloads.md
+        - name: 监视共同管理
+          href: how-to-monitor.md

@@ -1,94 +1,87 @@
-items:
 - name: 了解和探索
   items:
-  - name: 简介
-    href: understand/introduction-to-application-management.md
+    - name: 简介
+      href: understand/introduction-to-application-management.md
 - name: 入门
   items:
-  - name: 创建和部署应用程序
-    href: get-started/create-and-deploy-an-application.md
+    - name: 创建和部署应用程序
+      href: get-started/create-and-deploy-an-application.md
 - name: 规划和设计
   items:
-  - name: 规划和配置应用程序管理
-    href: plan-design/plan-for-and-configure-application-management.md
-  - name: 安全和隐私
-    href: plan-design/security-and-privacy-for-application-management.md
+    - name: 规划和配置应用程序管理
+      href: plan-design/plan-for-and-configure-application-management.md
+    - name: 安全和隐私
+      href: plan-design/security-and-privacy-for-application-management.md
 - name: 部署和使用
   items:
-  - name: 创建应用程序
-    href: deploy-use/create-applications.md
-    items:
-    - name: 创建 Mac 计算机应用程序
-      href: get-started/creating-mac-computer-applications.md
-    - name: 创建 Windows 应用程序
-      href: get-started/creating-windows-applications.md
-    - name: 创建 Linux 和 UNIX 服务器应用程序
-      href: get-started/creating-linux-and-unix-server-applications.md
-    - name: 创建 Windows Embedded 应用程序
-      href: get-started/creating-windows-embedded-applications.md
-    - name: 创建全局条件
-      href: deploy-use/create-global-conditions.md
-    - name: 包和程序
-      href: deploy-use/packages-and-programs.md
-  - name: 部署应用程序
-    items:
-    - name: 部署应用程序
-      href: deploy-use/deploy-applications.md
-    - name: 创建分阶段部署
-      href: ../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json
-    - name: 批准应用程序
-      href: deploy-use/app-approval.md
-    - name: 共享应用程序
-      href: deploy-use/share-applications.md
-    - name: 模拟应用程序部署
-      href: deploy-use/simulate-application-deployments.md
-    - name: 部署 App-V 虚拟应用程序
-      href: get-started/deploying-app-v-virtual-applications.md
-  - name: 监视应用程序
-    items:
-    - name: 从控制台监视应用程序
-      href: deploy-use/monitor-applications-from-the-console.md
-    - name: 管理和监视分阶段部署
-      href: ../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json
-    - name: 使用软件计数监视应用使用情况
-      href: deploy-use/monitor-app-usage-with-software-metering.md
-  - name: 管理应用程序
-    items:
-    - name: 管理任务
-      href: deploy-use/management-tasks-applications.md
-    - name: 用户设备相关性
-      href: deploy-use/link-users-and-devices-with-user-device-affinity.md
-    - name: 适用于企业的 Microsoft Store 批量采购的应用
-      href: deploy-use/manage-apps-from-the-windows-store-for-business.md
-    - name: APP-V 虚拟环境
-      href: deploy-use/create-app-v-virtual-environments.md
-  - name: 更新和停用应用程序
-    items:
-    - name: 更新和停用应用程序
-      href: deploy-use/update-and-retire-applications.md
-    - name: 修订和取代应用程序
-      href: deploy-use/revise-and-supersede-applications.md
-    - name: 卸载应用程序
-      href: deploy-use/uninstall-applications.md
-  - name: 运行和管理脚本
-    href: deploy-use/create-deploy-scripts.md
-    items:
-    - name: 了解 PowerShell 脚本安全性
-      href: deploy-use/learn-script-security.md
-  - name: 包转换管理器
-    href: pcm/package-conversion-manager.md
-    items:
-    - name: 如何分析和转换包
-      href: pcm/how-to-analyze-and-convert.md
-    - name: 包转换管理器故障排除
-      href: pcm/troubleshoot-pcm.md
-    - name: 技术参考
+    - name: 创建应用程序
+      href: deploy-use/create-applications.md
       items:
-      - name: 错误消息
-        href: pcm/error-messages.md
-ms.openlocfilehash: e8e963fb8d33b8d57dc1d1eaadd4eb16501d9ff7
-ms.sourcegitcommit: 6e42785c8c26e3c75bf59d3df7802194551f58e1
-ms.translationtype: HT
-ms.contentlocale: zh-CN
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52455747"
+        - name: 创建 Mac 计算机应用程序
+          href: get-started/creating-mac-computer-applications.md
+        - name: 创建 Windows 应用程序
+          href: get-started/creating-windows-applications.md
+        - name: 创建 Linux 和 UNIX 服务器应用程序
+          href: get-started/creating-linux-and-unix-server-applications.md
+        - name: 创建 Windows Embedded 应用程序
+          href: get-started/creating-windows-embedded-applications.md
+        - name: 创建全局条件
+          href: deploy-use/create-global-conditions.md
+        - name: 包和程序
+          href: deploy-use/packages-and-programs.md
+    - name: 部署应用程序
+      items:
+        - name: 部署应用程序
+          href: deploy-use/deploy-applications.md
+        - name: 创建分阶段部署
+          href: ../osd/deploy-use/create-phased-deployment-for-task-sequence.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json
+        - name: 批准应用程序
+          href: deploy-use/app-approval.md
+        - name: 共享应用程序
+          href: deploy-use/share-applications.md
+        - name: 模拟应用程序部署
+          href: deploy-use/simulate-application-deployments.md
+        - name: 部署 App-V 虚拟应用程序
+          href: get-started/deploying-app-v-virtual-applications.md
+    - name: 监视应用程序
+      items:
+        - name: 从控制台监视应用程序
+          href: deploy-use/monitor-applications-from-the-console.md
+        - name: 管理和监视分阶段部署
+          href: ../osd/deploy-use/manage-monitor-phased-deployments.md?toc=/sccm/apps/toc.json&bc=/sccm/apps/breadcrumb/toc.json
+        - name: 使用软件计数监视应用使用情况
+          href: deploy-use/monitor-app-usage-with-software-metering.md
+    - name: 管理应用程序
+      items:
+        - name: 管理任务
+          href: deploy-use/management-tasks-applications.md
+        - name: 用户设备相关性
+          href: deploy-use/link-users-and-devices-with-user-device-affinity.md
+        - name: 适用于企业的 Microsoft Store 批量采购的应用
+          href: deploy-use/manage-apps-from-the-windows-store-for-business.md
+        - name: APP-V 虚拟环境
+          href: deploy-use/create-app-v-virtual-environments.md
+    - name: 更新和停用应用程序
+      items:
+        - name: 更新和停用应用程序
+          href: deploy-use/update-and-retire-applications.md
+        - name: 修订和取代应用程序
+          href: deploy-use/revise-and-supersede-applications.md
+        - name: 卸载应用程序
+          href: deploy-use/uninstall-applications.md
+    - name: 运行和管理脚本
+      href: deploy-use/create-deploy-scripts.md
+      items:
+        - name: 了解 PowerShell 脚本安全性
+          href: deploy-use/learn-script-security.md
+    - name: 包转换管理器
+      href: pcm/package-conversion-manager.md
+      items:
+        - name: 如何分析和转换包
+          href: pcm/how-to-analyze-and-convert.md
+        - name: 包转换管理器故障排除
+          href: pcm/troubleshoot-pcm.md
+        - name: 技术参考
+          items:
+            - name: 错误消息
+              href: pcm/error-messages.md
