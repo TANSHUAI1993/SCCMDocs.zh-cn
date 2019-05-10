@@ -72,7 +72,7 @@ Microsoft 公司副总裁 Brad Anderson 在 Ignite 2018主题演讲期间通过�
 IT 咨询公司 Wipro 使用条件访问来保护和管理所有 91,000 名员工所使用的设备。 在最近的案例研究中，Wipro 的 IT 副总裁指出：
 
 > 实现条件访问是 Wipro 的一大胜利。现在，我们的所有员工都可以按需移动访问信息。
-> 我们增强了安全性，并提高了员工生产效率。**** 现在，91,000 名员工可以从任何地方的任何设备高度安全地访问超过 100 个应用。
+> 我们增强了安全性，并提高了员工生产效率。 **** 现在，91,000 名员工可以从任何地方的任何设备高度安全地访问超过 100 个应用。
 
 <!-- waiting for the case study to be public
 For more information, see [Wipro drives mobile productivity with Microsoft cloud security tools to improve customer engagements](https://customers.microsoft.com/story/446f72f9-2f50-4697-b688-6d279786e010)
