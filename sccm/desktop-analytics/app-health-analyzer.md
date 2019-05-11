@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 21b4907667e055c9595b31eedf9da0ad516b5fec
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.openlocfilehash: d982094a427f1f67992584e3262493d3f4a96766
+ms.sourcegitcommit: 9af73f5c1b93f6ccaea3e6a096f75a5fecd65c2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59802251"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64669172"
 ---
 # <a name="how-to-assess-compatibility-with-app-health-analyzer"></a>如何评估应用程序运行状况分析器与兼容性
 
@@ -30,7 +30,7 @@ ms.locfileid: "59802251"
 
 ## <a name="download"></a>下载
 
-下载工具包[Microsoft Download Center](http://download.microsoft.com/download/3/7/D/37D7E378-D805-4822-A712-4EADBF50FC08/AppHealthAnalyzer.zip)<!-- (https://www.microsoft.com/download/details.aspx?id=57276) -->。 始终使用最新版本。
+请联系 Microsoft 代表联系以获取下载链接。 始终使用最新版本。
 
 下载是一个 Windows Installer (MSI) 文件。 用户的计算机上安装的应用程序运行状况分析器工具包。 在运行该工具包时，向导将指导您完成创建应用程序准备情况报告的过程。
 

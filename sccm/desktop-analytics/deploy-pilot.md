@@ -2,7 +2,7 @@
 title: 如何将部署到试运行
 titleSuffix: Configuration Manager
 description: 用于部署到桌面分析试验组的操作方法指南。
-ms.date: 04/05/2019
+ms.date: 04/22/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,19 +12,19 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4aa078f5a8306cb30ea83d45b93b18971be7764f
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.openlocfilehash: d11e5eeb5e7a183c6b409fdbe58034ebe181898f
+ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62234276"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65083175"
 ---
 # <a name="how-to-deploy-to-pilot-with-desktop-analytics"></a>如何将部署到试运行时使用 Desktop 分析
 
 > [!Note]  
 > 此信息与商业发布之前可能有大幅度修改的预览服务。 对于此处提供的信息，Microsoft 不提供任何明示或暗示的担保。  
 
-Desktop 分析的好处之一是帮助标识设备，可提供因素范围最广范围的最小集。 它主要关注对试运行 Windows 和 Office 的升级和更新最重要的因素。 确保来说，试点更大的成功，可将更快、 更有信心地移动到生产环境中广泛部署。  
+Desktop 分析的好处之一是帮助标识设备，可提供因素范围最广范围的最小集。 它主要关注对试运行 Windows 升级和更新最重要的因素。 确保来说，试点更大的成功，可将更快、 更有信心地移动到生产环境中广泛部署。  
 
 [!INCLUDE [Definition of pilot and production](includes/define-pilot-prod.md)]
 
@@ -50,42 +50,31 @@ Desktop 分析的好处之一是帮助标识设备，可提供因素范围最广
 
 ## <a name="create-software"></a>创建的软件
 
-你可以部署 Windows 或 Office 之前，先软件对象创建 Configuration Manager 中。
-
-- [Office 365 专业增强版应用程序](https://docs.microsoft.com/sccm/sum/deploy-use/manage-office-365-proplus-updates#deploy-office-365-apps)  
-
-- [Windows 10 就地升级任务序列](https://docs.microsoft.com/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system)
+你可以部署 Windows 之前，先软件对象创建 Configuration Manager 中。 有关详细信息，请参阅[Windows 10 就地升级任务序列](https://docs.microsoft.com/sccm/osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system)。
 
 
 
 ## <a name="deploy-to-pilot-devices"></a>将部署到试运行的设备
 
-Configuration Manager 使用 Desktop 分析中的数据创建试验部署的集合。 不需要部署使用的是传统的部署的应用程序或任务序列。 使用以下过程创建桌面 Analytics 集成的部署：
+Configuration Manager 使用 Desktop 分析中的数据创建试验部署的集合。 不使用传统的部署任务序列部署。 使用以下过程创建桌面 Analytics 集成的部署：
 
 1. 在 Configuration Manager 控制台中，转到**软件库**，展开**Desktop 分析服务**，然后选择**部署计划**节点。  
 
 2. 选择部署计划，并选择**部署计划的详细信息**功能区中。  
 
-3. 在中**试验状态**磁贴中，从下拉列表中选择下列对象类型之一：  
+3. 在中**试验状态**磁贴中，选择**任务序列**从下拉列表。  
 
-    - **应用程序**适用于 Office 365 专业增强版  
+    > [!Note]  
+    > 不要使用**应用程序**选项。 它被保留供将来提供的功能。
 
-    - **任务序列**适用于 Windows 10  
-  
-   选择**部署**。 此操作将启动部署软件向导对所选的对象类型。
+    选择**部署**。 此操作将启动部署软件向导对所选的对象类型。
 
     > [!Note]  
     > 通过桌面 Analytics 集成，Configuration Manager 自动创建的试验部署计划的集合。 它可能需要 10 分钟的时间为此集合可以使用它之前进行同步。<!-- 3887891 -->
     >
     > 此集合被保留的桌面分析部署计划设备。 不支持对此集合的手动更改。<!-- 3866460, SCCMDocs-pr 3544 -->  
 
-有关详细信息，请参阅下列文章：  
-
-- [部署应用程序](/sccm/apps/deploy-use/deploy-applications#bkmk_deploy)  
-
-- [部署任务序列](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS)  
-
-如果你的部署计划适用于 Windows 10 和 Office 365，请重复此过程以创建第二个部署。 例如，如果第一个部署是为任务序列，创建的第二个部署的应用程序。
+有关详细信息，请参阅 [Deploy a task sequence](/sccm/osd/deploy-use/deploy-a-task-sequence)。
 
 
 
@@ -93,11 +82,7 @@ Configuration Manager 使用 Desktop 分析中的数据创建试验部署的集�
 
 ### <a name="configuration-manager-console"></a>Configuration Manager 控制台
 
-使用配置管理器部署相同监视任何其他应用程序和任务序列部署。 有关详细信息，请参阅下列文章：  
-
-- [从 Configuration Manager 控制台监视应用程序](/sccm/apps/deploy-use/monitor-applications-from-the-console)  
-
-- [监视 OS 部署](/sccm/osd/deploy-use/monitor-operating-system-deployments)  
+使用配置管理器部署相同监视任何其他任务序列部署。 有关详细信息，请参阅[监视器 OS 部署](/sccm/osd/deploy-use/monitor-operating-system-deployments)。
 
 
 ### <a name="desktop-analytics-portal"></a>桌面分析门户
@@ -128,7 +113,7 @@ Configuration Manager 使用 Desktop 分析中的数据创建试验部署的集�
 
 ## <a name="next-steps"></a>后续步骤
 
-让一段时间来收集操作数据的试验运行。 鼓励用户的试运行设备测试应用程序、 加载项和宏。
+让一段时间来收集操作数据的试验运行。 鼓励用户的试运行设备测试应用程序。
 
 在你的试验部署符合您的成功条件时，请转到下一篇文章中部署到生产环境。
 > [!div class="nextstepaction"]  

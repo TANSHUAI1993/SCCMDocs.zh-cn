@@ -2,7 +2,7 @@
 title: 设置桌面分析
 titleSuffix: Configuration Manager
 description: 用于设置和载入到桌面 Analytics 的操作方法指南。
-ms.date: 04/15/2019
+ms.date: 04/25/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b75b82f632c8bfbbc11a2b11d58ab83116e2180a
-ms.sourcegitcommit: d23ccf7b95e6c2a6b156975194ebbc375cb5e6ea
+ms.openlocfilehash: 3b831d6f42e6a9c908b46bf21882cab58fa08483
+ms.sourcegitcommit: 9af73f5c1b93f6ccaea3e6a096f75a5fecd65c2f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60124431"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64559044"
 ---
 # <a name="how-to-set-up-desktop-analytics"></a>如何设置 Desktop 分析
 
@@ -52,9 +52,10 @@ ms.locfileid: "60124431"
 
         若要将用户添加到这两个组中，键入在其名称或电子邮件地址**输入名称或电子邮件地址**相应的组的部分。 完成后，选择**下一步**。
 
-可以通过完成以下步骤**工作区所有者**或**参与者**。 请参阅[系统必备组件。](/sccm/desktop-analytics/overview#prerequisites) 
-
 5. 在到页**设置工作区**:  
+
+    > [!Note]  
+    > 完成此步骤作为**工作区所有者**或**参与者**。 有关详细信息，请参阅[先决条件](/sccm/desktop-analytics/overview#prerequisites)。  
 
     - 若要使用 Desktop 分析现有的工作区，选择它，并继续下一步。  
 
@@ -69,7 +70,9 @@ ms.locfileid: "60124431"
 
         2. 选择的下拉列表**选择此工作区的 Azure 订阅名称**，然后选择此工作区的 Azure 订阅。  
 
-        3. 选择**地区**从列表中，然后选择**添加**。  
+        3. **创建新**资源组或**使用现有**。
+
+        4. 选择**地区**从列表中，然后选择**添加**。  
 
 6. 选择新的或现有工作区中，并选择**设置为桌面 Analytics 工作区**。  然后选择**继续**中**确认和授予访问权限**对话框。  
 
@@ -83,50 +86,6 @@ ms.locfileid: "60124431"
 9. 上**最后步骤**页上，选择**转到桌面分析**。
 
 Azure 门户显示桌面分析**主页**页。
-
-
-
-## <a name="create-app-for-configuration-manager"></a>为 Configuration Manager 中创建应用
-
-在 Azure AD 中为 Configuration Manager 创建应用。
-
-1. 打开[Azure 门户](http://portal.azure.com)公司管理员权限的用户，请转到**Azure Active Directory**，然后选择**应用注册**。 然后选择**新建应用程序注册**。  
-
-2. 在中**创建**面板中，配置以下设置：  
-
-    - **名称**： 唯一名称标识的应用，例如： `Desktop-Analytics-Connection`  
-
-    - **应用程序类型**:**Web 应用 / API**  
-
-    - **登录 URL**： 此值不是使用由配置管理器中，但所需的 Azure AD。 输入一个唯一且有效的 URL，例如： `https://configmgrapp`  
-  
-   选择“创建”。  
-
-3. 选择应用，并记下**应用程序 ID**。 此值是用于配置 Configuration Manager 连接的 GUID。  
-
-4. 选择**设置**上的应用，并选择**密钥**。 在中**密码**部分中，输入**密钥说明**，指定一个过期**持续时间**，然后选择**保存**。 复制**值**的密钥，用于进行配置的配置管理器连接。
-
-    > [!Important]  
-    > 这是唯一的机会来复制密钥值。 如果您不立即将其复制，需要创建另一个密钥。  
-    >
-    > 将密钥值保存在安全的位置。  
-
-5. 在应用上**设置**面板中，选择**所需的权限**。  
-
-    1. 上**所需的权限**面板中，选择**添加**。  
-
-    2. 在中**添加 API 访问权限**面板中，**选择 API**。  
-
-    3. 搜索**配置管理器微服务**API。 选择它，，然后选择**选择**。  
-
-    4. 上**启用访问权限**面板中，选择这两个应用程序权限：**CM 集合数据写入**并**读取 CM 集合数据**。 然后选择**选择**。  
-
-    5. 上**添加 API 访问权限**面板中，选择**完成**。  
-
-6. 上**所需的权限**页上，选择**授予权限**。 选择**是**。  
-
-7. 复制 Azure AD 租户 id。 此值是用于配置 Configuration Manager 连接的 GUID。 选择**Azure Active Directory**在主菜单中，然后选择**属性**。 复制**Directory ID**值。  
-
 
 
 ## <a name="next-steps"></a>后续步骤

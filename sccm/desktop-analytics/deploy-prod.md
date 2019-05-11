@@ -2,7 +2,7 @@
 title: 如何部署到生产环境
 titleSuffix: Configuration Manager
 description: 用于部署到桌面分析生产组的操作方法指南。
-ms.date: 01/25/2019
+ms.date: 04/22/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,26 +12,25 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 599da20674c581501d69333f85ad0e91ee158da2
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 20067da8eccf9896bcd948f8efa2becd2b35a707
+ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56754676"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65083481"
 ---
 # <a name="how-to-deploy-to-production-with-desktop-analytics"></a>如何将部署到生产环境且 Desktop 分析
 
 > [!Note]  
 > 此信息与商业发布之前可能有大幅度修改的预览服务。 对于此处提供的信息，Microsoft 不提供任何明示或暗示的担保。  
 
-后[部署到试运行](/sccm/desktop-analytics/deploy-pilot)，并已查看状态的资产，您已经准备好更新你的生产环境的其余部分。 
+后[部署到试运行](/sccm/desktop-analytics/deploy-pilot)，并已查看状态的资产，您已经准备好更新你的生产环境的其余部分。
 
 [!INCLUDE [Definition of pilot and production](includes/define-pilot-prod.md)]
 
-
 有三个主要部分完成的生产设备的更新部署：
 
-1. [查看需要升级决策的资产](#bkmk_review):若要使设备准备好进行生产部署，其资产 （应用、 Office 应用、 Office 加载项和 Office 宏） 必须具有设置为其升级决策**准备好**或**就绪、 所需的修正**。  
+1. [查看需要升级决策的资产](#bkmk_review):若要使设备准备好进行生产部署，其资产必须设置为其升级决策**准备好**或**就绪、 所需的修正**。  
 
 2. [将部署到设备已准备好](#bkmk_deploy):使用 Configuration Manager 更新已准备的设备。 桌面 Analytics 提供用于监视部署的成功率准备好进行生产部署和报告的设备的列表。  
 
@@ -48,62 +47,52 @@ ms.locfileid: "56754676"
 
 ![准备生产的屏幕截图桌面 Analytics 中的视图](media/prepare-production.png)
 
-查看应用、 Office 应用、 Office 加载项和 Office 宏的状态。 使用该信息来设置这些资产的每个升级的决策。
+查看您的应用程序的状态。 使用该信息来设置这些资产的每个升级的决策。
 
-使用每个选项卡来查看应用、 Office 应用、 Office 加载项和 Office 宏的状态。 在每个选项卡式视图中，您可以筛选结果以显示设备在按计划进行升级，需要关注、 具有不同的结果，设备和这些设备处于不确定状态。
-
-**Office 宏**视图显示与启用了宏的文件相关的建议。 它不会显示实际的启用宏的文件。 选择特定的建议来查看其他详细信息。 <!-- You can also export this list for later use, such as to run the Readiness Toolkit on this subgroup for still more detail about reported issues like the names of the files for which the advisories were raised. -->
+使用每个选项卡可查看应用程序的状态。 在每个选项卡式视图中，您可以筛选结果以显示设备在按计划进行升级，需要关注、 具有不同的结果，设备和这些设备处于不确定状态。
 
 选择**会议目标**来筛选资产可能已可供基于以下条件的生产部署的视图：
 
 - 风险： 用于更新已安装此资产的设备的已知风险升级前评估  
 
-- 运行状况状态： 中的其他部署和安装更新后是否在遇到问题的设备的升级后评估。 有关运行状况的详细信息，请参阅[监视更新设备的运行状况](#montor-the-health-of-updated-devices)。  
+- 运行状况状态： 中的其他部署和安装更新后是否在遇到问题的设备的升级后评估。 有关运行状况的详细信息，请参阅[监视更新设备的运行状况](#bkmk_monitor)。  
 
 要批准的资产进行升级，请在列表中，选择名称，然后选择从以下选项之一**升级决策**列表：
+
 - 查看正在进行中
 - 准备就绪
 - 准备好 （修正）
 - 无法
 - 未检查
 
-若要在一次设置多个应用此值，请使用到的第一列**选择此项目**，然后选择**设置升级决策**。 
+若要在一次设置多个应用此值，请使用到的第一列**选择此项目**，然后选择**设置升级决策**。
 
 ![设置多个应用程序升级决策选项](media/prep-prod-set-upgrade-decision.png)
 
 选择**没有数据**视图无法进行分类的资产。 这些资产通常是没有足够的覆盖范围供桌面 Analytics 执行分析的风险或运行状况状态的资产。 若要增加覆盖范围，将借助这些资产的其他设备添加到试验，或让试验用户尝试这些资产。
 
-也可能在资产**要小心**或**混合结果**状态。 在为其进行升级决策之前，这些资产可能需要进行额外审查。 
+也可能在资产**要小心**或**混合结果**状态。 在为其进行升级决策之前，这些资产可能需要进行额外审查。
 
-查看所有应用、 Office 应用和 Office 加载项。一旦给定的设备后，所有资产正升级决策，其状态更改为"准备好生产环境。" 选择第三个部署步骤，在部署计划的主页上查看当前计数**部署**。
+查看所有应用。 一旦给定的设备后，所有资产正升级决策，其状态更改为"准备好生产环境。" 选择第三个部署步骤，在部署计划的主页上查看当前计数**部署**。
 
 
 
 ## <a name="bkmk_deploy"></a> 将部署到已准备的设备
 
-Configuration Manager 使用 Desktop 分析中的数据创建生产部署的集合。 不需要部署使用的是传统的部署的应用程序或任务序列。 使用以下过程创建桌面 Analytics 集成的部署：
+Configuration Manager 使用 Desktop 分析中的数据创建生产部署的集合。 不使用传统的部署任务序列部署。 使用以下过程创建桌面 Analytics 集成的部署：
 
 1. 在 Configuration Manager 控制台中，转到**软件库**，展开**Desktop 分析服务**，然后选择**部署计划**节点。  
 
 2. 选择部署计划，并选择**部署计划的详细信息**功能区中。  
 
-3. 在中**生产状态**磁贴中，从下拉列表中选择下列对象类型之一：  
+3. 在中**生产状态**磁贴中，选择**任务序列**从下拉列表。  
 
-    - **应用程序**适用于 Office 365 专业增强版  
+    > [!Note]  
+    > 不要使用**应用程序**选项。 它被保留供将来提供的功能。
 
-    - **任务序列**适用于 Windows 10  
-  
-   选择**部署**。 此操作将启动部署软件向导对所选的对象类型。 
+    选择**部署**。 此操作将启动部署软件向导对所选的对象类型。
 
-
-有关详细信息，请参阅下列文章：  
-
-- [部署应用程序](/sccm/apps/deploy-use/deploy-applications#bkmk_deploy)  
-
-- [部署任务序列](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS)  
-
-
-如果你的部署计划适用于 Windows 10 和 Office 365，请重复此过程以创建第二个部署。 例如，如果第一个部署是为任务序列，创建的第二个部署的应用程序。
+有关详细信息，请参阅 [Deploy a task sequence](/sccm/osd/deploy-use/deploy-a-task-sequence)。
 
 
 ### <a name="address-deployment-alerts"></a>地址部署警报
@@ -131,12 +120,12 @@ Configuration Manager 使用 Desktop 分析中的数据创建生产部署的集�
 | **需要注意** | （默认筛选器）桌面 Analytics 检测到与该资产某些运行状况指标具有统计学意义回归
 | **会议目标** | 桌面的分析行为中检测到没有回归 |
 | **数据不足** | 桌面分析没有足够的任何建议此资产的相关数据 |
-| **没有数据** | 无使用情况数据尚不可用于此资产 | 
+| **没有数据** | 无使用情况数据尚不可用于此资产 |
 
 若要显示的所有资产的未筛选的视图，请选择当前筛选器。 此操作将删除该筛选器。
 
 > [!NOTE]  
-> 若要减少具有足够的数据资产的数量，桌面分析监视所有已升级到目标 Windows 或 Office 版本部署计划中指定的设备上的资产。 这些设备包括未包含在特定部署计划。  
+> 若要减少具有足够的数据资产的数量，桌面分析监视所有已升级到你的部署计划中指定的目标 Windows 版本的设备上的资产。 这些设备包括未包含在特定部署计划。  
 
 默认的排序顺序是按过事件与该特定的资产，因此可以快速查看哪些引起大多数问题的设备数。 例如，当查看**应用程序**，它按**设备与应用程序崩溃过去两周内**。
 
@@ -149,6 +138,5 @@ Configuration Manager 使用 Desktop 分析中的数据创建生产部署的集�
     生成的视图显示在最小数量的事件与事件的最高费率的资产。  
 
 3. 选择要获取更多详细信息或更改其升级决策的资产。  
-
 
 有关详细信息，请参阅[运行状况状态监视](/sccm/desktop-analytics/health-status-monitoring)。
