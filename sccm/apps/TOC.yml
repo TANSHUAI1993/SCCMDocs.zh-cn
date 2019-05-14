@@ -1,3 +1,4 @@
+- name: 应用程序管理
 - name: 了解和探索
   items:
     - name: 简介
@@ -10,13 +11,16 @@
   items:
     - name: 规划和配置应用程序管理
       href: plan-design/plan-for-and-configure-application-management.md
+    - name: 规划软件中心
+      href: plan-design/plan-for-software-center.md
     - name: 安全和隐私
       href: plan-design/security-and-privacy-for-application-management.md
 - name: 部署和使用
   items:
     - name: 创建应用程序
-      href: deploy-use/create-applications.md
       items:
+        - name: 创建应用程序
+          href: deploy-use/create-applications.md
         - name: 创建 Mac 计算机应用程序
           href: get-started/creating-mac-computer-applications.md
         - name: 创建 Windows 应用程序
@@ -70,13 +74,15 @@
         - name: 卸载应用程序
           href: deploy-use/uninstall-applications.md
     - name: 运行和管理脚本
-      href: deploy-use/create-deploy-scripts.md
       items:
+        - name: 运行和管理脚本
+          href: deploy-use/create-deploy-scripts.md
         - name: 了解 PowerShell 脚本安全性
           href: deploy-use/learn-script-security.md
     - name: 包转换管理器
-      href: pcm/package-conversion-manager.md
       items:
+        - name: 包转换管理器
+          href: pcm/package-conversion-manager.md
         - name: 如何分析和转换包
           href: pcm/how-to-analyze-and-convert.md
         - name: 包转换管理器故障排除

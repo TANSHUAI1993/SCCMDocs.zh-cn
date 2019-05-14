@@ -1,3 +1,4 @@
+- name: 移动设备管理
 - name: 概述
   items:
     - name: 什么是混合 MDM
@@ -5,15 +6,17 @@
     - name: 混合 MDM 中的新增功能
       href: understand/whats-new-in-hybrid-mobile-device-management.md
 - name: 规划和设计
-  href: plan-design/plan-hybrid-mobile-device-management.md
   items:
+    - name: 规划和设计概述
+      href: plan-design/plan-hybrid-mobile-device-management.md
     - name: 受支持的设备平台
       href: plan-design/supported-device-platforms-for-hybrid.md
     - name: 设备注册方法
       href: plan-design/device-enrollment-methods.md
 - name: 入门
-  href: deploy-use/setup-hybrid-mdm.md
   items:
+    - name: 安装步骤
+      href: deploy-use/setup-hybrid-mdm.md
     - name: 创建 MDM 集合
       href: deploy-use/create-mdm-collection.md
     - name: 确认域名要求
@@ -25,8 +28,9 @@
     - name: 创建服务连接点
       href: deploy-use/create-service-connection-point.md
     - name: 启用平台注册
-      href: deploy-use/enable-platform-enrollment.md
       items:
+        - name: 启用平台注册概述
+          href: deploy-use/enable-platform-enrollment.md
         - name: iOS 和 MAC
           href: deploy-use/enroll-hybrid-ios-mac.md
         - name: Windows
@@ -42,8 +46,9 @@
     - name: 注册用户自有设备 (BYOD)
       href: deploy-use/enroll-user-owned-devices.md
     - name: 注册公司拥有的设备
-      href: deploy-use/enroll-company-owned-devices.md
       items:
+        - name: 注册公司拥有的设备概述
+          href: deploy-use/enroll-company-owned-devices.md
         - name: iOS DEP 注册
           href: deploy-use/ios-device-enrollment-program-for-hybrid.md
         - name: Apple 配置器注册
@@ -63,8 +68,9 @@
     - name: 配置软件清单
       href: deploy-use/software-inventory-mobile-devices.md
     - name: 管理符合性设置
-      href: deploy-use/manage-compliance-settings.md
       items:
+        - name: 符合性方案
+          href: deploy-use/manage-compliance-settings.md
         - name: Windows 8.1 和 Windows 10
           href: deploy-use/create-configuration-items-for-windows-8.1-and-windows-10-devices-managed-without-the-client.md
         - name: Windows Phone
@@ -78,8 +84,9 @@
     - name: 同步注册有 Intune 的设备
       href: deploy-use/sync-intune-device.md
     - name: 管理应用程序
-      href: deploy-use/management-tasks-applications.md
       items:
+        - name: 管理应用程序概览
+          href: deploy-use/management-tasks-applications.md
         - name: 创建 iOS 应用程序
           href: deploy-use/creating-ios-applications.md
         - name: iOS 应用配置策略
@@ -103,8 +110,9 @@
     - name: 更改 MDM 机构
       href: deploy-use/change-mdm-authority.md
     - name: 开始从混合 MDM 迁移到 Intune 独立版本
-      href: deploy-use/migrate-hybridmdm-to-intunesa.md
       items:
+        - name: 从混合 MDM 迁移到 Intune 独立版本概述
+          href: deploy-use/migrate-hybridmdm-to-intunesa.md
         - name: 将 Configuration Manager 数据导入 Microsoft Intune
           href: deploy-use/migrate-import-data.md
         - name: 准备 Intune 以进行用户迁移
@@ -128,11 +136,13 @@
         - name: Windows Hello 企业版设置
           href: deploy-use/windows-hello-for-business-settings.md
     - name: 管理条件访问
-      href: deploy-use/manage-access-to-services.md
       items:
+        - name: 条件访问概述和要求
+          href: deploy-use/manage-access-to-services.md
         - name: 设备合规性策略
-          href: deploy-use/device-compliance-policies.md
           items:
+            - name: 设备合规性策略概述
+              href: deploy-use/device-compliance-policies.md
             - name: 针对非符合性的操作
               href: deploy-use/actions-for-noncompliance.md
         - name: 创建设备合规性策略
@@ -148,11 +158,13 @@
         - name: 管理电脑对 Office 365 服务的访问
           href: deploy-use/manage-access-to-o365-services-for-pcs-managed-by-sccm.md
     - name: 基于设备风险管理访问权限
-      href: deploy-use/mobile-threat-defense.md
       items:
+        - name: 基于设备风险的访问权限
+          href: deploy-use/mobile-threat-defense.md
         - name: 在 Configuration Manager 中查询
-          href: deploy-use/lookout-mobile-threat-defense-in-configuration-manager.md
           items:
+            - name: Lookout 概述
+              href: deploy-use/lookout-mobile-threat-defense-in-configuration-manager.md
             - name: 设置监视移动威胁防御
               href: deploy-use/set-up-your-subscription-with-lookout.md
             - name: 在 Intune 中启用 Lookout
@@ -171,9 +183,10 @@
       href: understand/manage-mobile-devices-with-on-premises-infrastructure.md
     - name: 规划本地 MDM
       href: plan-design/plan-on-premises-mdm.md
-    - name: 安装步骤
-      href: get-started/preparation-steps-for-on-premises-mdm.md
+    - name: 安装
       items:
+        - name: 安装步骤
+          href: get-started/preparation-steps-for-on-premises-mdm.md
         - name: 设置 Intune 订阅
           href: get-started/set-up-intune-subscription-on-premises-mdm.md
         - name: 安装本地角色
@@ -183,8 +196,9 @@
         - name: 设置进行注册
           href: get-started/set-up-device-enrollment-on-premises-mdm.md
     - name: 注册设备以实现本地 MDM
-      href: deploy-use/enroll-devices-on-premises-mdm.md
       items:
+        - name: 注册概述
+          href: deploy-use/enroll-devices-on-premises-mdm.md
         - name: 用户注册
           href: deploy-use/user-enroll-devices-on-premises-mdm.md
         - name: 批量注册

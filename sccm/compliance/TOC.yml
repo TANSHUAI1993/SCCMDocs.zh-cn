@@ -1,3 +1,4 @@
+- name: 设备符合性
 - name: 了解和探索
   items:
     - name: 确保设备符合性
@@ -10,9 +11,10 @@
   items:
     - name: 规划和配置符合性设置
       href: plan-design/plan-for-and-configure-compliance-settings.md
-    - name: 管理符合性的常见任务
-      href: plan-design/common-tasks-for-managing-compliance.md
+    - name: 管理符合性的任务
       items:
+        - name: 管理符合性的常见任务
+          href: plan-design/common-tasks-for-managing-compliance.md
         - name: 带 Configuration Manager 客户端的设备
           href: plan-design/common-tasks-for-managing-compliance-on-devices-with-the-client.md
         - name: 创建和部署配置基线
@@ -20,8 +22,9 @@
     - name: 安全和隐私
       href: plan-design/security-and-privacy-for-compliance-settings.md
     - name: 安全内容自动化协议 (SCAP) 扩展
-      href: plan-design/scap/about-scap.md
       items:
+        - name: 关于 SCAP 扩展
+          href: plan-design/scap/about-scap.md
         - name: 安装并配置 SCAP 扩展
           href: plan-design/scap/install-configure-scap.md
         - name: 部署和监视 SCAP 符合性
@@ -31,10 +34,10 @@
 - name: 部署和使用
   items:
     - name: 创建配置项目
-      href: deploy-use/create-configuration-items.md
       items:
+        - name: 创建配置项目概述
+          href: deploy-use/create-configuration-items.md
         - name: 使用 Configuration Manager 客户端管理的设备
-          href: deploy-use/configuration-items-for-devices-managed-with-the-client.md
           items:
             - name: Windows 10
               href: deploy-use/create-configuration-items-for-windows-10-devices-managed-with-the-client.md

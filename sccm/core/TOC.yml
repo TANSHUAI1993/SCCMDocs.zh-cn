@@ -1,8 +1,10 @@
+- name: 核心基础结构
 - name: 了解和探索
   items:
     - name: Configuration Manager 简介
-      href: understand/introduction.md
       items:
+        - name: Configuration Manager 概述
+          href: understand/introduction.md
         - name: 查找 Configuration Manager 的帮助
           href: understand/find-help.md
         - name: 如何使用文档
@@ -14,24 +16,27 @@
         - name: 软件中心用户指南
           href: understand/software-center.md
     - name: Configuration Manager 基础知识
-      href: understand/fundamentals.md
       items:
+        - name: Configuration Manager 基础知识
+          href: understand/fundamentals.md
         - name: 站点和层次结构基础知识
-          href: understand/fundamentals-of-sites-and-hierarchies.md
           items:
+            - name: 站点和层次结构基础知识
+              href: understand/fundamentals-of-sites-and-hierarchies.md
             - name: 关于站点和层次结构基础结构的升级、更新和安装
               href: understand/upgrade-update-install.md
-        - name: 管理设备的基础知识
-          href: understand/fundamentals-of-managing-devices.md
-        - name: 客户端管理基础
-          href: understand/fundamentals-of-client-management-tasks.md
-        - name: 安全基础知识
-          href: understand/fundamentals-of-security.md
-        - name: 基于角色的管理基础
-          href: understand/fundamentals-of-role-based-administration.md
+            - name: 管理设备的基础知识
+              href: understand/fundamentals-of-managing-devices.md
+            - name: 客户端管理基础
+              href: understand/fundamentals-of-client-management-tasks.md
+            - name: 安全基础知识
+              href: understand/fundamentals-of-security.md
+            - name: 基于角色的管理基础
+              href: understand/fundamentals-of-role-based-administration.md
     - name: Long-Term Servicing Branch 简介
-      href: understand/introduction-to-the-ltsb.md
       items:
+        - name: Long-Term Servicing Branch 概述
+          href: understand/introduction-to-the-ltsb.md
         - name: Long-Term Servicing Branch 的支持配置
           href: understand/supported-configurations-for-ltsb.md
         - name: 安装 Long-Term Service Branch
@@ -49,8 +54,9 @@
     - name: System Center Configuration Manager 授权
       href: understand/learn-more-editions.md
     - name: 使用云服务
-      href: understand/use-cloud-services.md
       items:
+        - name: 云服务概述
+          href: understand/use-cloud-services.md
         - name: Azure 上的 Configuration Manager
           href: understand/configuration-manager-on-azure.md
     - name: 产品和许可常见问题解答
@@ -58,8 +64,9 @@
     - name: 诊断和使用情况数据常见问题解答
       href: understand/frequently-asked-questions-about-diagnostics-and-usage-data.md
 - name: 规划和设计
-  href: plan-design/get-ready.md
   items:
+    - name: 为 Configuration Manager 做准备
+      href: plan-design/get-ready.md
     - name: 产品更改
       items:
         - name: 特性和功能
@@ -79,8 +86,9 @@
         - name: 1710 版中的新增功能
           href: plan-design/changes/whats-new-in-version-1710.md
         - name: 已删除和已弃用的项
-          href: plan-design/changes/deprecated/removed-and-deprecated.md
           items:
+            - name: 已删除和已弃用的项概述
+              href: plan-design/changes/deprecated/removed-and-deprecated.md
             - name: 已删除和已弃用的功能
               href: plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md
             - name: 站点服务器已删除和弃用的项
@@ -88,8 +96,9 @@
             - name: 客户端已删除和弃用的项
               href: plan-design/changes/deprecated/removed-and-deprecated-client.md
     - name: 支持的配置
-      href: plan-design/configs/supported-configurations.md
       items:
+        - name: 支持的配置
+          href: plan-design/configs/supported-configurations.md
         - name: 大小和扩展数量
           href: plan-design/configs/size-and-scale-numbers.md
         - name: 站点和站点系统先决条件
@@ -115,8 +124,9 @@
     - name: 选择设备管理解决方案
       href: plan-design/choose-a-device-management-solution.md
     - name: 设计站点层次结构
-      href: plan-design/hierarchy/design-a-hierarchy-of-sites.md
       items:
+        - name: 设计层次结构
+          href: plan-design/hierarchy/design-a-hierarchy-of-sites.md
         - name: 规划 SMS 提供程序
           href: plan-design/hierarchy/plan-for-the-sms-provider.md
         - name: 规划站点数据库
@@ -124,8 +134,9 @@
         - name: 规划站点系统服务器
           href: plan-design/hierarchy/plan-for-site-system-servers-and-site-system-roles.md
         - name: 内容管理的基本概念
-          href: plan-design/hierarchy/fundamental-concepts-for-content-management.md
           items:
+            - name: 内容管理基础
+              href: plan-design/hierarchy/fundamental-concepts-for-content-management.md
             - name: 使用基于云的分发点
               href: plan-design/hierarchy/use-a-cloud-based-distribution-point.md
             - name: 使用请求分发点
@@ -149,11 +160,13 @@
         - name: 站点管理的安全和隐私
           href: plan-design/hierarchy/security-and-privacy-for-site-administration.md
     - name: 规划网络基础结构
-      href: plan-design/network/configure-firewalls-ports-domains.md
       items:
-        - name: 准备 Active Directory 架构
-          href: plan-design/network/extend-the-active-directory-schema.md
+        - name: 网络基础结构注意事项
+          href: plan-design/network/configure-firewalls-ports-domains.md
+        - name: Active Directory 架构
           items:
+            - name: 准备 Active Directory 架构
+              href: plan-design/network/extend-the-active-directory-schema.md
             - name: 架构扩展
               href: plan-design/network/schema-extensions.md
         - name: 准备 Windows Servers 以支持站点系统
@@ -165,8 +178,9 @@
         - name: CNG 证书概述
           href: plan-design/network/cng-certificates-overview.md
     - name: 诊断和使用情况数据
-      href: plan-design/diagnostics/diagnostics-and-usage-data.md
       items:
+        - name: 诊断和使用情况数据概述
+          href: plan-design/diagnostics/diagnostics-and-usage-data.md
         - name: 如何使用诊断和使用情况数据
           href: plan-design/diagnostics/how-diagnostics-and-usage-data-is-used.md
         - name: 1902 的诊断数据
@@ -186,8 +200,9 @@
         - name: 客户体验改善计划 (CEIP)
           href: plan-design/diagnostics/customer-experience-improvement-program-ceip.md
     - name: Configuration Manager 安全和隐私
-      href: plan-design/security/security-and-privacy.md
       items:
+        - name: 安全和隐私概述
+          href: plan-design/security/security-and-privacy.md
         - name: 规划安全性
           href: plan-design/security/plan-for-security.md
         - name: 安全最佳方案和隐私信息
@@ -203,15 +218,19 @@
 - name: 入门
   items:
     - name: 在实验室中评估 Configuration Manager
-      href: get-started/evaluate-with-lab-environment.md
       items:
+        - name: 实验室概述
+          href: get-started/evaluate-with-lab-environment.md
         - name: 设置实验室
           href: get-started/set-up-your-lab.md
         - name: 在 Azure 中创建实验室
           href: get-started/azure-template.md
     - name: Technical Preview
-      href: get-started/technical-preview.md
       items:
+        - name: Technical Preview 概述
+          href: get-started/technical-preview.md
+        - name: 1904 中的功能
+          href: get-started/2019/technical-preview-1904.md
         - name: 1903 中的功能
           href: get-started/2019/technical-preview-1903.md
         - name: 1902.2 功能
@@ -220,14 +239,14 @@
           href: get-started/2019/technical-preview-1902.md
         - name: 1901 中的功能
           href: get-started/2019/technical-preview-1901.md
-        - name: 1812 中的功能
-          href: get-started/capabilities-in-technical-preview-1812.md
     - name: 在层次结构之间迁移数据
-      href: migration/migrate-data-between-hierarchies.md
       items:
-        - name: 制定迁移计划
-          href: migration/planning-for-migration.md
+        - name: 迁移概述
+          href: migration/migrate-data-between-hierarchies.md
+        - name: 迁移计划
           items:
+            - name: 制定迁移计划
+              href: migration/planning-for-migration.md
             - name: 迁移的先决条件
               href: migration/prerequisites-for-migration.md
             - name: 用于迁移的核对清单
@@ -255,8 +274,9 @@
         - name: 迁移的安全和隐私
           href: migration/security-and-privacy-for-migration.md
 - name: 部署服务器和角色
-  href: servers/deploy/start-using.md
   items:
+    - name: 部署服务器和角色
+      href: servers/deploy/start-using.md
     - name: 安装基础结构
       items:
         - name: 获取安装媒体
@@ -272,8 +292,9 @@
             - name: 先决条件检查
               href: servers/deploy/install/list-of-prerequisite-checks.md
         - name: 安装站点
-          href: servers/deploy/install/installing-sites.md
           items:
+            - name: 安装站点的准备工作概述
+              href: servers/deploy/install/installing-sites.md
             - name: 安装站点的准备工作
               href: servers/deploy/install/prepare-to-install-sites.md
             - name: 安装站点的先决条件
@@ -281,8 +302,9 @@
             - name: 使用安装向导
               href: servers/deploy/install/use-the-setup-wizard-to-install-sites.md
             - name: 使用命令行
-              href: servers/deploy/install/use-a-command-line-to-install-sites.md
               items:
+                - name: 命令行概述
+                  href: servers/deploy/install/use-a-command-line-to-install-sites.md
                 - name: 命令行选项
                   href: servers/deploy/install/command-line-options-for-setup.md
             - name: 安装控制台
@@ -296,11 +318,13 @@
             - name: 卸载站点和层次结构
               href: servers/deploy/install/uninstall-sites-and-hierarchies.md
     - name: 卸载站点和层次结构
-      href: servers/deploy/configure/configure-sites-and-hierarchies.md
       items:
+        - name: 配置站点和层次结构概述
+          href: servers/deploy/configure/configure-sites-and-hierarchies.md
         - name: 添加站点系统角色
-          href: servers/deploy/configure/add-site-system-roles.md
           items:
+            - name: 添加站点系统角色概述
+              href: servers/deploy/configure/add-site-system-roles.md
             - name: 安装站点系统角色
               href: servers/deploy/configure/install-site-system-roles.md
             - name: 安装基于云的分发点
@@ -316,8 +340,9 @@
         - name: 发布站点数据
           href: servers/deploy/configure/publish-site-data.md
         - name: Manage content and content infrastructure
-          href: servers/deploy/configure/manage-content-and-content-infrastructure.md
           items:
+            - name: 内容基础结构概述
+              href: servers/deploy/configure/manage-content-and-content-infrastructure.md
             - name: 安装和配置分发点
               href: servers/deploy/configure/install-and-configure-distribution-points.md
             - name: 部署和管理应用
@@ -325,8 +350,9 @@
             - name: 监视内容
               href: servers/deploy/configure/monitor-content-you-have-distributed.md
         - name: 运行发现
-          href: servers/deploy/configure/run-discovery.md
           items:
+            - name: 发现方法概述
+              href: servers/deploy/configure/run-discovery.md
             - name: 关于发现方法
               href: servers/deploy/configure/about-discovery-methods.md
             - name: 选择发现方法
@@ -334,17 +360,19 @@
             - name: 配置发现方法
               href: servers/deploy/configure/configure-discovery-methods.md
         - name: 站点边界和边界组
-          href: servers/deploy/configure/define-site-boundaries-and-boundary-groups.md
           items:
+            - name: 站点边界和边界组概述
+              href: servers/deploy/configure/define-site-boundaries-and-boundary-groups.md
             - name: 边界
               href: servers/deploy/configure/boundaries.md
             - name: 边界组
               href: servers/deploy/configure/boundary-groups.md
             - name: 边界组的过程
               href: servers/deploy/configure/boundary-group-procedures.md
-        - name: 高可用性选项
-          href: servers/deploy/configure/high-availability-options.md
+        - name: 高可用性
           items:
+            - name: 高可用性选项
+              href: servers/deploy/configure/high-availability-options.md
             - name: 站点服务器高可用性
               href: servers/deploy/configure/site-server-high-availability.md
             - name: 流程图 - 被动站点服务器设置
@@ -398,28 +426,33 @@
     - name: 管理见解
       href: servers/manage/management-insights.md
     - name: CMPivot
-      href: servers/manage/cmpivot.md
       items:
+        - name: 使用 CMPivot
+          href: servers/manage/cmpivot.md
         - name: CMPivot 疑难解答
           href: servers/manage/cmpivot-tsg.md
     - name: 维护任务
-      href: servers/manage/maintenance-tasks.md
       items:
+        - name: 维护任务概述
+          href: servers/manage/maintenance-tasks.md
         - name: 维护任务参考
           href: servers/manage/reference-for-maintenance-tasks.md
     - name: 修改基础结构
-      href: servers/manage/modify-your-infrastructure.md
       items:
+        - name: 修改基础结构
+          href: servers/manage/modify-your-infrastructure.md
         - name: CD.Latest 文件夹
           href: servers/manage/the-cd.latest-folder.md
     - name: 升级本地基础结构
       href: servers/manage/upgrade-on-premises-infrastructure.md
-    - name: Configuration Manager 的更新
-      href: servers/manage/updates.md
+    - name: Configuration Manager 更新概述
       items:
-        - name: 安装控制台内部更新
-          href: servers/manage/install-in-console-updates.md
+        - name: Configuration Manager 的更新
+          href: servers/manage/updates.md
+        - name: 控制台中更新
           items:
+            - name: 安装控制台内部更新
+              href: servers/manage/install-in-console-updates.md
             - name: 更新重置工具
               href: servers/manage/update-reset-tool.md
             - name: 测试数据库升级
@@ -467,32 +500,29 @@
         - name: 运行状况证明
           href: servers/manage/health-attestation.md
         - name: 监视层次结构和复制基础结构
-          href: servers/manage/monitor-hierarchy-and-replication-infrastructure.md
           items:
+            - name: 监视层次结构和复制基础结构
+              href: servers/manage/monitor-hierarchy-and-replication-infrastructure.md
             - name: 站点间数据传输
               href: servers/manage/data-transfers-between-sites.md
         - name: 查询
-          href: servers/manage/queries-technical-reference.md
           items:
             - name: 查询简介
               href: servers/manage/introduction-to-queries.md
-            - name: 查询的操作和维护
-              href: servers/manage/operations-and-maintenance-for-queries.md
-              items:
-                - name: 如何管理查询
-                  href: servers/manage/manage-queries.md
-                - name: 如何创建查询
-                  href: servers/manage/create-queries.md
+            - name: 如何管理查询
+              href: servers/manage/manage-queries.md
+            - name: 如何创建查询
+              href: servers/manage/create-queries.md
             - name: 查询的安全和隐私
               href: servers/manage/security-and-privacy-for-queries.md
         - name: 报表
-          href: servers/manage/reporting.md
           items:
             - name: 报表简介
               href: servers/manage/introduction-to-reporting.md
             - name: 规划报表
-              href: servers/manage/planning-for-reporting.md
               items:
+                - name: 报表规划
+                  href: servers/manage/planning-for-reporting.md
                 - name: 报告的先决条件
                   href: servers/manage/prerequisites-for-reporting.md
                 - name: 报告的最佳做法
@@ -512,6 +542,8 @@
     - name: 支持中心
       href: support/support-center.md
       items:
+        - name: 支持中心概述
+          href: support/support-center.md
         - name: 快速入门指南
           href: support/support-center-quickstart.md
         - name: 辅助功能
@@ -521,8 +553,9 @@
         - name: 自定义
           href: support/support-center-customize.md
     - name: Configuration Manager 工具
-      href: support/tools.md
       items:
+        - name: 工具概述
+          href: support/tools.md
         - name: CMTrace
           href: support/cmtrace.md
         - name: 客户端 Spy
@@ -558,8 +591,9 @@
         - name: 客户端安装方法
           href: clients/deploy/plan/client-installation-methods.md
         - name: 将客户端部署到 Windows 计算机的先决条件
-          href: clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md
           items:
+            - name: 客户端部署先决条件
+              href: clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md
             - name: 客户端的 Windows 防火墙和端口设置
               href: clients/deploy/windows-firewall-and-port-settings-for-clients.md
         - name: 确定客户端的站点系统角色
@@ -574,9 +608,10 @@
           href: clients/deploy/plan/planning-for-client-deployment-to-linux-and-unix-computers.md
         - name: 规划在 Mac 计算机上部署客户端
           href: clients/deploy/plan/planning-for-client-deployment-to-mac-computers.md
-        - name: 规划 Windows Embedded 设备的客户端部署
-          href: clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md
+        - name: Windows Embedded 设备的客户端部署
           items:
+            - name: 规划 Windows Embedded 设备的客户端部署
+              href: clients/deploy/plan/planning-for-client-deployment-to-windows-embedded-devices.md
             - name: 示例方案
               href: clients/deploy/example-scenario-for-deploying-and-managing-clients-on-windows-embedded-devices.md
         - name: 规划如何唤醒客户端
@@ -589,25 +624,28 @@
           href: clients/deploy/configure-client-communication-ports.md
         - name: 如何配置客户端计算机以使用 DNS 发布查找管理点
           href: clients/deploy/configure-client-computers-to-find-management-points-by-using-dns-publishing.md
-        - name: 如何配置客户端设置
-          href: clients/deploy/configure-client-settings.md
+        - name: 配置客户端设置
           items:
+            - name: 如何配置客户端设置
+              href: clients/deploy/configure-client-settings.md
             - name: 关于客户端设置
               href: clients/deploy/about-client-settings.md
         - name: 如何配置 LAN 唤醒
           href: clients/deploy/configure-wake-on-lan.md
-        - name: 如何部署客户端到 Windows 计算机
-          href: clients/deploy/deploy-clients-to-windows-computers.md
+        - name: 将客户端部署到 Windows 计算机
           items:
+            - name: 如何部署客户端到 Windows 计算机
+              href: clients/deploy/deploy-clients-to-windows-computers.md
             - name: 使用 Azure AD 安装客户端
               href: clients/deploy/deploy-clients-cmg-azure.md
             - name: 客户端安装属性
               href: clients/deploy/about-client-installation-properties.md
             - name: 在 AD 中发布的客户端安装属性
               href: clients/deploy/about-client-installation-properties-published-to-active-directory-domain-services.md
-        - name: 如何将客户端部署到 UNIX 和 Linux 服务器
-          href: clients/deploy/deploy-clients-to-unix-and-linux-servers.md
+        - name: 将客户端部署到 UNIX 和 Linux 服务器
           items:
+            - name: 如何将客户端部署到 UNIX 和 Linux 服务器
+              href: clients/deploy/deploy-clients-to-unix-and-linux-servers.md
             - name: Linux 和 UNIX 客户端命令
               href: clients/deploy/linux-and-unix-clients-technical-reference.md
         - name: 将客户端部署到 Mac 的准备工作
@@ -621,8 +659,9 @@
         - name: 如何监视客户端部署状态
           href: clients/deploy/monitor-client-deployment-status.md
 - name: 管理客户端
-  href: clients/manage/monitor-and-manage-clients.md
   items:
+    - name: 管理客户端概述
+      href: clients/manage/monitor-and-manage-clients.md
     - name: 监视和管理客户端
       items:
         - name: 如何监视客户端
@@ -646,11 +685,13 @@
         - name: Surface 设备仪表板
           href: clients/manage/surface-device-dashboard.md
     - name: 管理 Internet 上的客户端
-      href: clients/manage/manage-clients-internet.md
       items:
-        - name: 规划云管理网关
-          href: clients/manage/cmg/plan-cloud-management-gateway.md
+        - name: 管理 Internet 上的客户端概述
+          href: clients/manage/manage-clients-internet.md
+        - name: 云管理网关
           items:
+            - name: 规划云管理网关
+              href: clients/manage/cmg/plan-cloud-management-gateway.md
             - name: 云管理网关的安全和隐私
               href: clients/manage/cmg/security-and-privacy-for-cloud-management-gateway.md
             - name: 云管理网关的常见问题解答
@@ -756,8 +797,9 @@
         - name: 电源管理的安全和隐私
           href: clients/manage/power/security-and-privacy-for-power-management.md
     - name: 升级客户端
-      href: clients/manage/upgrade/upgrade-clients.md
       items:
+        - name: 如何升级客户端
+          href: clients/manage/upgrade/upgrade-clients.md
         - name: 在预生产集合中测试客户端升级
           href: clients/manage/upgrade/test-client-upgrades.md
         - name: 从升级中排除 Windows 客户端

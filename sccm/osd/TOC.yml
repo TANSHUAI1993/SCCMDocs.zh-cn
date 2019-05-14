@@ -1,3 +1,4 @@
+- name: 操作系统部署
 - name: 了解和探索
   items:
     - name: OS 部署简介
@@ -16,17 +17,20 @@
   items:
     - name: 为 OS 部署准备站点系统角色
       href: get-started/prepare-site-system-roles-for-operating-system-deployments.md
-    - name: 准备进行 OS 部署
-      href: get-started/prepare-for-operating-system-deployment.md
+    - name: 准备 OS 部署
       items:
-        - name: 管理启动映像
-          href: get-started/manage-boot-images.md
+        - name: 准备进行 OS 部署
+          href: get-started/prepare-for-operating-system-deployment.md
+        - name: 启动映像
           items:
+            - name: 管理启动映像
+              href: get-started/manage-boot-images.md
             - name: 自定义启动映像
               href: get-started/customize-boot-images.md
-        - name: 管理 OS 映像
-          href: get-started/manage-operating-system-images.md
+        - name: OS 映像
           items:
+            - name: 管理 OS 映像
+              href: get-started/manage-operating-system-images.md
             - name: 自定义 OS 映像
               href: get-started/customize-operating-system-images.md
         - name: 管理 OS 升级包
@@ -44,8 +48,9 @@
 - name: 部署和使用
   items:
     - name: 部署企业版操作系统的方案
-      href: deploy-use/scenarios-to-deploy-enterprise-operating-systems.md
       items:
+        - name: OS 部署方案概述
+          href: deploy-use/scenarios-to-deploy-enterprise-operating-systems.md
         - name: 将 Windows 升级到最新版本
           href: deploy-use/upgrade-windows-to-the-latest-version.md
         - name: 面向现有设备的 Windows Autopilot
@@ -57,8 +62,9 @@
         - name: 替换现有计算机和传输设置
           href: deploy-use/replace-an-existing-computer-and-transfer-settings.md
     - name: 部署企业版操作系统的方法
-      href: deploy-use/methods-to-deploy-enterprise-operating-systems.md
       items:
+        - name: OS 部署方法
+          href: deploy-use/methods-to-deploy-enterprise-operating-systems.md
         - name: 使用 PXE 通过网络部署 Windows
           href: deploy-use/use-pxe-to-deploy-windows-over-the-network.md
         - name: 使用软件中心通过网络部署 Windows
@@ -82,8 +88,9 @@
     - name: 监视 OS 部署
       href: deploy-use/monitor-operating-system-deployments.md
     - name: 管理任务序列来自动执行任务
-      href: deploy-use/manage-task-sequences-to-automate-tasks.md
       items:
+        - name: 管理和创建任务序列
+          href: deploy-use/manage-task-sequences-to-automate-tasks.md
         - name: 创建用于安装 OS 的任务序列
           href: deploy-use/create-a-task-sequence-to-install-an-operating-system.md
         - name: 创建用于升级 OS 的任务序列
@@ -92,6 +99,8 @@
           href: deploy-use/create-a-task-sequence-to-capture-an-operating-system.md
         - name: 创建任务序列以捕获和还原用户状态
           href: deploy-use/create-a-task-sequence-to-capture-and-restore-user-state.md
+        - name: 部署任务序列
+          href: deploy-use/deploy-a-task-sequence.md
         - name: 使用任务序列来管理虚拟硬盘
           href: deploy-use/use-a-task-sequence-to-manage-virtual-hard-disks.md
     - name: 自定义任务序列应用方案
@@ -105,8 +114,9 @@
         - name: 预先设置 Windows PE 中的 BitLocker
           href: deploy-use/preprovision-bitlocker-in-windows-pe.md
     - name: 创建任务序列媒体
-      href: deploy-use/create-task-sequence-media.md
       items:
+        - name: 任务序列媒体概述
+          href: deploy-use/create-task-sequence-media.md
         - name: 创建独立媒体
           href: deploy-use/create-stand-alone-media.md
         - name: 创建预留媒体
@@ -118,8 +128,9 @@
 - name: 技术参考
   items:
     - name: 任务序列步骤
-      href: understand/task-sequence-steps.md
       items:
+        - name: 关于任务序列步骤
+          href: understand/task-sequence-steps.md
         - name: 安装软件更新
           href: understand/install-software-updates.md
     - name: 如何使用任务序列变量
