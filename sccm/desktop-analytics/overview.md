@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 52879853e3d3286234ccd51479adddac94098441
-ms.sourcegitcommit: 9af73f5c1b93f6ccaea3e6a096f75a5fecd65c2f
+ms.openlocfilehash: 6827f94a0191aee9c1fe1e20978e6414050fca7c
+ms.sourcegitcommit: ab9f2a7fb7ea3a0c65808fce2975ab25a670281f
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64559078"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65612500"
 ---
 # <a name="what-is-desktop-analytics"></a>什么是桌面分析？
 
@@ -70,7 +70,7 @@ ms.locfileid: "64559078"
 
 ### <a name="technical"></a>技术
 
-- 有效的 Azure 订阅  
+- 有效的 Azure 订阅，使用[全局管理员](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles#company-administrator)权限  
 
     - **工作区所有者**或**参与者**权**设置工作区**，和以下角色：  
 
