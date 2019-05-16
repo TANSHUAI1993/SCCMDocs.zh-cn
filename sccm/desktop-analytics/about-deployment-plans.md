@@ -2,7 +2,7 @@
 title: 在桌面 Analytics 中的部署计划
 titleSuffix: Configuration Manager
 description: 了解桌面 Analytics 中的部署计划。
-ms.date: 04/22/2019
+ms.date: 05/14/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 91cd7fc450ee53f900ae890e3a698c26c789ba8c
-ms.sourcegitcommit: 4023fb6fb534d8a0d589c8208f021e3311c7167f
+ms.openlocfilehash: b44684f897e7aad4365c39e58c9bfd486bde7cbb
+ms.sourcegitcommit: 53f2380ac67025fb4a69fc1651edad15d98e0cdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64880572"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65673284"
 ---
 # <a name="about-deployment-plans-in-desktop-analytics"></a>有关桌面 Analytics 中的部署计划
 
@@ -51,8 +51,6 @@ ms.locfileid: "64880572"
 桌面分析每日刷新部署计划数据。 所做的任何更改可能不会显示 24 小时。 此类更改包括将重要性分配到应用程序，或选择要包括在试验中的设备。  
 
 连接到 Configuration Manager Desktop 分析后, 选择部署计划中的集合。 然后此集成可以将 Windows 部署到基于桌面分析数据的集合。
-
-尽管桌面分析最适用于 Configuration Manager 集合，还可以在 Log Analytics 中创建设备组。 有关详细信息，请参阅[日志搜索在 Log Analytics 中的计算机组](https://docs.microsoft.com/azure/log-analytics/log-analytics-computer-groups)。
 
 
 

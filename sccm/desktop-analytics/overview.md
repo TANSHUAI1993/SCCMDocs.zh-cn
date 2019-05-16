@@ -12,12 +12,12 @@ ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6827f94a0191aee9c1fe1e20978e6414050fca7c
-ms.sourcegitcommit: ab9f2a7fb7ea3a0c65808fce2975ab25a670281f
+ms.openlocfilehash: 78e9454212bb8264926c1aba5262f06db1798abe
+ms.sourcegitcommit: 53f2380ac67025fb4a69fc1651edad15d98e0cdd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65612500"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65673439"
 ---
 # <a name="what-is-desktop-analytics"></a>什么是桌面分析？
 
@@ -101,20 +101,14 @@ ms.locfileid: "65612500"
 
 ### <a name="licensing"></a>许可
 
-桌面 Analytics 中的大多数功能不需要任何额外的许可证或订阅。 正确配置后，使用 Desktop Analytics 不会产生任何 Azure 费用。
+桌面分析需要以下许可证订阅之一：
 
-若要访问 Windows 运行状况见解，或将数据导出，没有其他许可要求。 如果你不具有以下订阅之一，你仍可以设置和使用 Desktop 分析，但未授权使用 Windows 运行状况见解，或将数据导出：
+- Windows 10 企业版 E3 或 E5;或 Microsoft 365 F1、 E3 或 E5  
 
-- Windows 10 企业版或 Windows 10 教育版： 每个设备具有有效软件保障  
+- Windows 10 教育版 A3 或 A5;Microsoft 365 A3 或 A5  
 
-- Windows 10 企业版 E3 或 E5： 每个设备或每个用户订阅 （包含在 Microsoft 365 F1、 E3 或 E5）  
+- Windows VDA E3 或 E5  
 
-- Windows 10 教育版 A3 或 A5 （随附 Microsoft 365 教育版 A3 或 A5）  
-
-- Windows 虚拟桌面访问 E3 或 E5： 每个设备的每个用户的订阅  
-
-> [!Note]  
-> 对于每个设备许可证，你无需激活许可证的每个设备。 你只需在桌面 Analytics 中注册的设备的足够的许可证。  
 
 
 
