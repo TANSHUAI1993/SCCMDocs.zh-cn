@@ -12,11 +12,11 @@ ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: a16d598b80dd18802e42cae51aeba3c91a4d707c
-ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
+ms.sourcegitcommit: 9af73f5c1b93f6ccaea3e6a096f75a5fecd65c2f
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62201407"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64669157"
 ---
 # <a name="plan-how-to-wake-up-clients-in-system-center-configuration-manager"></a>计划如何在 System Center Configuration Manager 中唤醒客户端
 
