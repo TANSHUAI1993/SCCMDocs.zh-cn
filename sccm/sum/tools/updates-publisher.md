@@ -7,20 +7,20 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
 ms.assetid: 2200b02b-e76b-4aa7-a77a-6dc5e70f1333
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0f21e087e73a26191af56793e0015cbb21e8714c
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: d19f2529c549c84b969124bf006dd5793b28521b
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56136528"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65493383"
 ---
 # <a name="system-center-updates-publisher"></a>System Center Updates Publisher
 
-适用范围：System Center Updates Publisher
+*适用范围：System Center Updates Publisher*
 
 System Center Updates Publisher (Updates Publisher) 是一款独立工具，可方便独立软件供应商或业务线应用程序开发者管理自定义更新。 这包括具有依赖项的更新，如驱动程序和更新捆绑包。
 

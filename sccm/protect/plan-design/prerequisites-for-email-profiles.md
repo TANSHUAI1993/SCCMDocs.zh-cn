@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
 ms.assetid: dccf0b73-43bd-4545-8914-114168ebad36
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1bb46973334dcec74715dd6123d71ddc4c0331b6
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: e0e682d96b772dfb1bfd6be8947781fc0a002018
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56142334"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65493877"
 ---
 # <a name="email-profile-prerequisites"></a>电子邮件配置文件先决条件
 

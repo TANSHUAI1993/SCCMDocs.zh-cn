@@ -2,25 +2,25 @@
 title: 准备软件更新管理
 titleSuffix: Configuration Manager
 description: 若要准备管理更新，请完成以下任务以显示 System Center Configuration Manager 控制台中的符合性评估数据。
-author: aczechowski
 ms.date: 10/06/2016
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 01907900-e28b-4cd7-9479-42906416707b
 manager: dougeby
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 57d83601af5aa41a61b80d539bf87f4e9616792c
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 8381a9a5195982a2defa347934c28286e9082ce7
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56138018"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65493973"
 ---
 # <a name="prepare-for-software-updates-management"></a>准备软件更新管理
 
-适用范围：System Center Configuration Manager (Current Branch)
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 在软件更新的符合性评估数据显示在 System Center Configuration Manager 控制台中之前，以及在可以将软件更新部署到客户端计算机之前，必须完成以下部分中的步骤。
 

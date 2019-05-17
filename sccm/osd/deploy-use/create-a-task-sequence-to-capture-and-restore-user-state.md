@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0077cd6a906da59a06f4cf619b74ddc0af947cea
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 709442083cd2d9c935aeb2c5fe6c2ad30a2dddf5
+ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56133912"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65083049"
 ---
 # <a name="create-a-task-sequence-to-capture-and-restore-user-state-in-configuration-manager"></a>在 Configuration Manager 中创建用于捕获和还原用户状态的任务序列
 
- 适用范围：*System Center Configuration Manager (Current Branch)*
+ *适用范围：System Center Configuration Manager (Current Branch)*
 
  使用 Configuration Manager 任务序列捕获和还原 OS 部署方案中的用户状态数据。 在这些情况下，需要保留当前操作系统的用户状态。 捕获和还原步骤可能会自动添加为任务序列的一部分，具体取决于创建的任务序列的类型。 在其他方案中，你可能需要手动将捕获和还原步骤添加到任务序列。 本文提供必须添加到现有任务序列以捕获和还原用户状态数据的步骤。  
 
@@ -62,7 +62,7 @@ ms.locfileid: "56133912"
     >  在启动“发布状态存储”步骤之前，必须成功执行在“发布状态存储”步骤之前执行的任务序列操作。  
 
 
- 部署此任务序列，以捕获目标计算机上的用户状态。 有关如何部署任务序列的信息，请参阅[部署任务序列](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS)。  
+ 部署此任务序列，以捕获目标计算机上的用户状态。 有关如何部署任务序列的信息，请参阅[部署任务序列](/sccm/osd/deploy-use/deploy-a-task-sequence)。  
 
 
 
@@ -86,7 +86,7 @@ ms.locfileid: "56133912"
    >  在启动“发布状态存储”步骤之前，必须成功执行在“发布状态存储”步骤之前执行的任务序列操作。  
 
 
- 部署此任务序列，以还原目标计算机上的用户状态。 有关部署任务序列的信息，请参阅[部署任务序列](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS)。  
+ 部署此任务序列，以还原目标计算机上的用户状态。 有关部署任务序列的信息，请参阅[部署任务序列](/sccm/osd/deploy-use/deploy-a-task-sequence)。  
 
 
 

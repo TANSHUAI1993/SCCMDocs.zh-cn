@@ -2,25 +2,25 @@
 title: '在无 Internet 连接的情况下同步更新 '
 titleSuffix: Configuration Manager
 description: 在断开 Internet 连接的顶层软件更新点上运行软件更新同步。
-author: aczechowski
 ms.date: 01/23/2017
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 1a997c30-8e71-4be5-89ee-41efb2c8d199
 manager: dougeby
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0ca643b348d9d6d2800c671d9985f10d08bf5d60
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 67b284e369268b184067e33d2a505585618795e5
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56130463"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65493977"
 ---
 # <a name="synchronize-software-updates-from-a-disconnected-software-update-point"></a>从断开连接的软件更新点中同步软件更新  
 
-适用范围：System Center Configuration Manager (Current Branch)
+*适用范围：System Center Configuration Manager (Current Branch)*
 
  如果顶层站点上的软件更新点从 Internet 断开连接，你必须使用 WSUSUtil 工具的导出和导入功能来同步软件更新元数据。 可以选择不属于 Configuration Manager 层次结构的现有 WSUS 服务器作为同步源。 本主题提供有关如何使用 WSUSUtil 工具的导出和导入功能的信息。  
 
@@ -71,7 +71,7 @@ ms.locfileid: "56130463"
 
      **wsusutil.exe export export.cab export.log**  
 
-     格式可总结如下：WSUSutil.exe 后跟导出选项、在导出操作过程中创建的导出 .cab 文件的名称，以及日志文件的名称。 WSUSutil.exe 从导出服务器中导出元数据，并创建操作的日志文件。  
+     此格式可以汇总为如下：WSUSutil.exe 后跟导出选项、在导出操作过程中创建的导出 .cab 文件的名称，以及日志文件的名称。 WSUSutil.exe 从导出服务器中导出元数据，并创建操作的日志文件。  
 
     > [!NOTE]  
     >  包（.cab 文件）和日志文件名称在当前文件夹中必须唯一。  
@@ -99,7 +99,7 @@ ms.locfileid: "56130463"
 
      **wsusutil.exe import export.cab import.log**  
 
-     格式可总结如下：WSUSutil.exe 后跟导入命令、在导出操作过程中创建的包文件 (.cab) 的名称、包文件的路径（如果该文件位于其他文件夹中），以及日志文件的名称。 WSUSutil.exe 从导出服务器中导入元数据，并创建操作的日志文件。  
+     此格式可以汇总为如下：WSUSutil.exe 后跟导入命令、在导出操作过程中创建的包文件 (.cab) 的名称、包文件的路径（如果该文件位于其他文件夹中），以及日志文件的名称。 WSUSutil.exe 从导出服务器中导入元数据，并创建操作的日志文件。  
 
 ## <a name="next-steps"></a>后续步骤
 在首次同步软件更新后，或有新的可用分类或产品时，必须[配置新的分类和产品](configure-classifications-and-products.md)以便通过新条件同步软件更新。

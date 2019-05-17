@@ -2,8 +2,8 @@
 title: 软件更新简介
 titleSuffix: Configuration Manager
 description: 了解 System Center Configuration Manager 中的软件更新的基础知识。
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.date: 10/30/2017
 ms.topic: conceptual
@@ -11,16 +11,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: e9778b13-c8a3-40eb-8655-34ac8ce9cdaa
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ac745419dafea6a8fc86ddf1c744944f8f5698b2
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: e95055473cc5d61b10ee06e43456f3f7dfeb428b
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56125028"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65493366"
 ---
 # <a name="introduction-to-software-updates-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的软件更新简介
 
-适用范围：*System Center Configuration Manager (Current Branch)*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager 中的软件更新提供了一组工具和资源，可帮助管理跟踪软件更新并将其应用到企业中的客户端计算机的复杂任务。 要维持运行效率、克服安全问题和保持网络基础结构的稳定性，有效的软件更新管理过程是必不可少的。 但是，由于技术日新月异，并且新的安全威胁不断出现，因此需要始终如一地持续关注有效的软件更新管理。  
 
@@ -132,15 +132,15 @@ System Center Configuration Manager 中的软件更新提供了一组工具和�
 
 -   **软件更新扫描计划**：软件更新符合性扫描按照软件更新客户端代理设置中配置的扫描计划开始。 有关如何配置软件更新客户端设置的详细信息，请参阅[软件更新客户端设置](../../core/clients/deploy/about-client-settings.md#software-updates)。  
 
--   **Configuration Manager 属性操作**：用户可以在客户端计算机上的“Configuration Manager 属性”对话框内的“操作”选项卡上启动“软件更新扫描周期”或“软件更新部署评估周期”操作。  
+-   **Configuration Manager 属性操作**：用户可以在客户端计算机上的“Configuration Manager 属性”  对话框内的“操作”  选项卡上启动“软件更新扫描周期”  或“软件更新部署评估周期”  操作。  
 
 -   **部署重估计划**：软件更新符合性的部署重估和扫描按照软件更新客户端代理设置中配置的部署重估计划开始。 有关软件更新客户端设置的详细信息，请参阅[软件更新客户端设置](../../core/clients/deploy/about-client-settings.md#software-updates)。  
 
 -   **下载更新文件之前**：当客户端计算机收到新的所需部署的分配策略时，软件更新客户端代理会将软件更新文件下载到本地客户端缓存。 下载软件更新文件之前，客户端代理将启动扫描以验证是否仍然需要软件更新。  
 
--   **在软件更新安装之前**：下载软件更新安装之前，软件更新客户端代理将启动扫描以验证是否仍然需要软件更新。  
+-   **在软件更新安装之前**：在软件更新安装之前，软件更新客户端代理将启动扫描以验证是否仍然需要软件更新。  
 
--   **在软件更新安装之后**：软件更新安装完成之后，软件更新客户端代理将立即启动扫描以验证是否不再需要软件更新，并创建新状态消息来表明已安装了软件更新。 如果完成了安装，但需要重启，则状态消息会指明客户端计算机正在等待重启。  
+-   **在软件更新安装之后**：软件更新安装完成之后，软件更新客户端代理将启动扫描以验证是否不再需要软件更新，并创建新状态消息来表明已安装了软件更新。 如果完成了安装，但需要重启，则状态消息会指明客户端计算机正在等待重启。  
 
 -   **在系统重启之后**：当客户端计算机等待系统重启以完成软件更新安装时，软件更新客户端代理将在重启后启动扫描以验证是否不再需要软件更新，并创建一条状态消息来表明已安装了软件更新。  
 

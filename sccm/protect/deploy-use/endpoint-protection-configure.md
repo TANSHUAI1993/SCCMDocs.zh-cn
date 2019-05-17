@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
 ms.assetid: e63f2394-6eb1-4a33-bec5-8377fc62a34e
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 89eee933d9845ae86bcc8d008045b669d104d03d
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 8bb6d974a46f2a2a3a3c826ee7239b552b14fd6c
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56156723"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65494476"
 ---
 # <a name="configure-endpoint-protection"></a>配置 Endpoint Protection
 

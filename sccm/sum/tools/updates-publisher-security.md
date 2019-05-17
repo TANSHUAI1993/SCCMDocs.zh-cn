@@ -7,20 +7,20 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
 ms.assetid: a7f91e63-4750-402e-9970-dd14be7f76a3
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2a0dbe80e2333df85893365a366d5862842ffa3d
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 045a1daef8da0863ed7957ce4c9d3d48cfacca64
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56125402"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65496194"
 ---
 # <a name="manage-certificates-and-security-for-updates-publisher"></a>管理 Updates Publisher 中的证书和安全性
 
-适用范围：System Center Configuration Manager (Current Branch)
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 下面的过程展示了如何在更新服务器上配置证书存储、如何在客户端计算机上配置自签名证书，以及如何将组策略配置为允许计算机上的 Windows 更新代理扫描已发布的更新。
 
@@ -74,7 +74,7 @@ ms.locfileid: "56125402"
 
    -   对于自签名证书：将证书添加到“受信任的根证书颁发机构”和“受信任的发布者”证书存储中。
 
-   -   对于证书颁发机构 (CA) 证书：将证书添加到“受信任的发布者”证书存储中。
+   -   对于证书颁发机构 (CA) 颁发的证书：将证书添加到“受信任的发布者”证书存储中。
 
    > [!NOTE]
    > WUA 还会检查本地计算机上是否启用了“允许来自 Intranet Microsoft 更新服务位置的签名内容”组策略设置。 必须为 WUA 启用此策略设置，以扫描使用 Updates Publisher 创建和发布的更新。 若要详细了解如何启用此组策略设置，请参阅[如何在客户端计算机上配置组策略](<https://technet.microsoft.com/library/bb530967.aspx(d=robot>)。

@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
 ms.assetid: fdcee455-22e3-451d-bcf3-e7b62792f04a
-author: aczechowski
+author: mestew
+ms.author: mstewart
 manager: dougeby
-ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 55615761dfa18c0a6bfc4988c18a4327446f02ca
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 96ad29b10052c153aa34a27006b613e0443d68f4
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56124858"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65494453"
 ---
 # <a name="endpoint-protection-client-help"></a>Endpoint Protection 客户端帮助
 

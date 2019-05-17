@@ -2,25 +2,25 @@
 title: 管理软件更新同步
 titleSuffix: Configuration Manager
 description: 使用以下步骤可计划软件更新同步、手动启动软件更新同步，以及监视软件更新同步。
-author: aczechowski
 ms.date: 12/20/2018
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: ea8698c4-9df5-4cf5-8b62-ab93115b4769
 manager: dougeby
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 543a7867ca40cded389ee3ce875845dd32631274
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 4ef815287321bf6c5554ff424da58276af0cc655
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56123512"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65493935"
 ---
 #  <a name="BKMK_SUMSync"></a> 同步软件更新
 
-适用范围：System Center Configuration Manager (Current Branch)
+*适用范围：System Center Configuration Manager (Current Branch)*
 
  Configuration Manager 中的软件更新同步是指检索满足你配置的条件的软件更新元数据的过程。 这包括特定的产品、分类和语言。 通常，管理中心站点或独立主站点上的软件更新点从 Microsoft 更新中检索元数据。 然后，顶层站点将向其他站点发送同步请求。 当站点收到来自父站点的同步请求时，站点的软件更新点将从其上游[同步源](../plan-design/plan-for-software-updates.md#BKMK_SyncSource)检索软件更新元数据。 有关软件更新同步的详细信息，请参阅[软件更新同步](../understand/software-updates-introduction.md#BKMK_Synchronization)。
 

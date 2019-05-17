@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ea320b42bfb08ec0023598d010375042d143c220
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: e5651f381f2c4a101c82d6f1f7730ffc4ae99a20
+ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56124064"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65083544"
 ---
 # <a name="manage-os-images-with-configuration-manager"></a>使用 Configuration Manager 管理 OS 映像
 
-适用范围：System Center Configuration Manager (Current Branch)
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 Configuration Manager 中的 OS 映像以 Windows 映像 (WIM) 文件格式存储。 这些映像是一系列压缩的引用文件和文件夹，这些引用文件和文件夹用于在计算机上安装和配置新 OS。 许多 OS 部署方案都需要 OS 映像。 
 
@@ -106,10 +106,10 @@ Windows 安装文件包含默认 OS 映像。 此映像是包含一组标准驱�
 
     -   **允许通过多播传输此包（仅 WinPE）**：选择此选项使 Configuration Manager 使用多播同时部署多个 OS 映像。  
 
-    -   **加密多播包**：指定站点在将图像发送到分发点之前是否对其进行加密。 如果映像中包含敏感信息，请使用此选项。 如果映像未加密，则其内容会以明文形式在网络上可见。 于是，未经授权的用户可以截获并查看映像内容。  
+    -   **加密多播包**：指定站点在将映像发送到分发点之前是否对其进行加密。 如果映像中包含敏感信息，请使用此选项。 如果映像未加密，则其内容会以明文形式在网络上可见。 于是，未经授权的用户可以截获并查看映像内容。  
 
     -   **仅通过多播传输此包**：指定是否希望分发点仅在多播会话期间部署映像。  
 
-         如果选择“仅通过多播传输此包”，则还必须将任务序列部署选项制定为“运行的任务序列需要时从本地下载内容”。 有关详细信息，请参阅 [Deploy a task sequence](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS)。   
+         如果选择“仅通过多播传输此包”，则还必须将任务序列部署选项制定为“运行的任务序列需要时从本地下载内容”。 有关详细信息，请参阅 [Deploy a task sequence](/sccm/osd/deploy-use/deploy-a-task-sequence)。   
 
 5.  选择“确定”以保存设置并关闭映像属性。  

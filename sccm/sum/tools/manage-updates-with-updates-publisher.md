@@ -7,20 +7,20 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
 ms.assetid: cd64994c-b426-4465-96cd-54b0edc2778d
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f658ce4757455e4e49cff6228ee37a38b8e4fa5
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 88cc03de66847143336425dbc4b730703d15378c
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56139487"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65493758"
 ---
 # <a name="manage-software-updates-in-updates-publisher"></a>管理 Updates Publisher 中的软件更新
 
-适用范围：System Center Updates Publisher     
+*适用范围：System Center Updates Publisher*     
 
 在 System Center Updates Publisher 中，可以使用“更新工作区”管理已导入存储库中的软件更新和捆绑包。  
 
@@ -90,7 +90,7 @@ ms.locfileid: "56139487"
 ### <a name="to-publish-updates-and-bundles"></a>如何发布更新和捆绑包
 1.  转到“更新工作区”，并选择一个或多个要发布的更新和捆绑包。 然后，从功能区的“开始”选项卡中，选择“发布”
 
-2.  在“发布”向导的“选择”页中，选择所需的更新发布方式。 选项对于[分配更新](#assign-updates-and-bundles-to-a-publication)是相同的：“完整内容”、“仅元数据”或“自动”。
+2.  在“发布”向导的“选择”页中，选择所需的更新发布方式。 选项与[分配更新](#assign-updates-and-bundles-to-a-publication)时相同：“完整内容”、“仅元数据”或“自动”。
 
     还可以选择使用新发布证书对所有更新进行签名。
 

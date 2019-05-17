@@ -2,25 +2,25 @@
 title: 部署和监视安全软件更新的示例方案
 titleSuffix: Configuration Manager
 description: 请使用此示例方案以了解如何在 Configuration Manager 中使用软件更新以部署和监视 Microsoft 每月发布的安全软件更新。
-author: aczechowski
 manager: dougeby
 ms.date: 10/06/2016
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: c32f757a-02da-43f2-b055-5cfd097d8c43
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 30377a9b2cfde1616114779ab7790deec1fb2bb2
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 02c1f1cbc80bacf35306d2e4d5367a41ec5d8c1c
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56132119"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65496328"
 ---
 # <a name="example-scenario-for-using-system-center-configuration-manager-to-deploy-and-monitor-the-security-software-updates-released-monthly-by-microsoft"></a>使用 System Center Configuration Manager 部署和监视 Microsoft 每月发布的安全软件更新的示例方案
 
-适用范围：System Center Configuration Manager (Current Branch)
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 本主题提供一个示例方案，以说明如何在 System Center Configuration Manager 中使用软件更新来部署和监视 Microsoft 每月发布的安全软件更新。  
 
@@ -42,13 +42,13 @@ ms.locfileid: "56132119"
 
  本主题中的下列部分提供了有助于在组织中部署和监视 Configuration Manager 安全软件更新的示例步骤。
 
-##  <a name="BKMK_Step1"></a>步骤 1：为每年符合性创建软件更新组  
+##  <a name="BKMK_Step1"></a>步骤 1：为每年的符合性创建软件更新组  
  John 创建一个软件更新组，可用于监视他在 2016 年发布的所有安全软件更新的符合性。 他执行下表中的步骤。  
 
 |过程|参考|  
 |-------------|---------------|  
-|John 从 Configuration Manager 控制台中的“所有软件更新”节点中添加条件，以仅显示满足以下条件的于 2015 年发布或修订的安全软件更新：<br /><br /><ul><li>**条件**：发布或修订日期</li><li>**条件**：大于或等于特定日期<br />**值**：2015/1/1</li><li>**条件**：更新分类<br />**值**：安全更新</li><li>**条件**：已过期 <br />**值**：否</li></ul>|无更多信息|
-|John 将所有经过筛选的软件更新添加到一个具有以下要求的新的软件更新组中：<br /><br /><ul><li>**名称**：符合性组 - Microsoft 安全更新 2015</li><li>**描述**：软件更新|[将软件更新添加到更新组](add-software-updates-to-an-update-group.md)|  
+|John 从 Configuration Manager 控制台中的“所有软件更新”节点中添加条件，以仅显示满足以下条件的于 2015 年发布或修订的安全软件更新：<br /><br /><ul><li>**条件**：发布或修订日期</li><li>**条件**：大于或等于特定日期<br />“值”：1/1/2015</li><li>“条件”：更新分类<br />**值**：安全更新</li><li>**条件**：已过期 <br />**值**：否</li></ul>|无更多信息|
+|John 将所有经过筛选的软件更新添加到一个具有以下要求的新的软件更新组中：<br /><br /><ul><li>“名称”：符合性组 - Microsoft 安全更新2015</li><li>**描述**：软件更新|[将软件更新添加到更新组](add-software-updates-to-an-update-group.md)|  
 
 ##  <a name="BKMK_Step2"></a>步骤 2：为当月创建自动部署规则  
  John 为 Microsoft 在当月发布的安全软件更新创建自动部署规则。 他执行下表中的步骤。  
@@ -64,7 +64,7 @@ ms.locfileid: "56132119"
 |-------------|---------------|  
 |John 验证软件更新同步是否已成功完成。|[软件更新同步状态](monitor-software-updates.md#BKMK_SUSyncStatus)|  
 
-##  <a name="BKMK_Step4"></a>步骤 4：部署软件更新组  
+##  <a name="BKMK_Step4"></a> 步骤 4：部署软件更新组  
  在 John 确认软件更新已做好部署准备后，他部署软件更新。 他执行下表中的步骤。  
 
 |过程|参考|  

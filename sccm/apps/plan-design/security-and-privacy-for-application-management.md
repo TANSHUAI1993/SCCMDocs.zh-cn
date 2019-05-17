@@ -11,27 +11,28 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 13467e3b227a8080d03e3e44864970703c2e000f
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 6d8715b8d91f6397fbf5d4d254b48f8078b0dfc3
+ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56126331"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65083229"
 ---
 # <a name="security-and-privacy-for-application-management-in-configuration-manager"></a>在 Configuration Manager 中管理应用程序的安全和隐私
 
-适用范围：System Center Configuration Manager (Current Branch)
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 
 ##  <a name="security-guidance-for-application-management"></a>应用程序管理的安全指南  
 
 
 ### <a name="use-the-new-software-center-without-the-application-catalog"></a>使用新的软件中心，而无需应用程序目录
-<!--1358309--> 从版本 1806 开始，不再需要应用程序目录角色，即可在软件中心显示用户可用的应用程序。 此项配置有助于减少向用户交付应用程序所需的服务器基础结构。 减少服务器基础结构还可以减少攻击面。 
+<!--1358309-->
+从版本 1806 开始，不再需要应用程序目录角色，即可在软件中心显示用户可用的应用程序。 此项配置有助于减少向用户交付应用程序所需的服务器基础结构。 减少服务器基础结构还可以减少攻击面。 
 
 若要为基于 Internet 的客户端提供一致且安全的应用程序体验，使用 Azure Active Directory 和云管理网关。
 
-有关详细信息，请参阅[配置软件中心](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex)。 
+有关详细信息，请参阅[配置软件中心](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex)。 
 
 
 ### <a name="use-https-with-the-application-catalog"></a>在应用程序目录中使用 HTTPS
@@ -178,7 +179,7 @@ ms.locfileid: "56126331"
 > [!Important]  
 > 自 Configuration Manager 版本 1802 起，客户端不再自动安装 Silverlight。
 > 
-> 从版本 1806 开始，应用程序目录网站点的 Silverlight 用户体验不再受支持。 用户应使用新的软件中心。 有关详细信息，请参阅[配置软件中心](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex)。  
+> 从版本 1806 开始，应用程序目录网站点的 Silverlight 用户体验不再受支持。 用户应使用新的软件中心。 有关详细信息，请参阅[配置软件中心](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex)。  
 
  Configuration Manager 客户端版本 1710 和早期版本需安装 Microsoft Silverlight 5，必须在提升的信任模式下运行 Microsoft Silverlight 5，用户才能从应用程序目录中安装软件。 默认情况下，Silverlight 应用程序在部分信任模式下运行，以防止应用程序访问用户数据。 如果尚未安装 Microsoft Silverlight 5，Configuration Manager 会自动将其安装在客户端上。 默认情况下，Configuration Manager 会将计算机代理“允许 Silverlight 应用程序在提升的信任模式下运行”客户端设置设为“是”。 此设置会让签名和信任的 Silverlight 应用程序请求提升的信任模式。  
 
@@ -212,7 +213,7 @@ ms.locfileid: "56126331"
 - 应用程序目录是一个网站，用户可在其中请求要安装的软件。  
 
     > [!Note]  
-    > 自 Configuration Manager 1802 开始，应用程序目录的主要功能现包含在软件中心内。 有关详细信息，请参阅[配置软件中心](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex)。  
+    > 自 Configuration Manager 1802 开始，应用程序目录的主要功能现包含在软件中心内。 有关详细信息，请参阅[配置软件中心](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex)。  
 
 - 安装 Configuration Manager 客户端时，还会在设备上自动安装软件中心。 用户从软件中心更改设置、浏览和安装应用程序。  
 

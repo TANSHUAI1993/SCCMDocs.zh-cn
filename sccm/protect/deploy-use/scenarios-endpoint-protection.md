@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 539c7a89-3c03-4571-9cb4-02d455064eeb
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: doubeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9eeb219cc681aa50ea671833efc72014a1ccfd4a
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 0b6bbf7acd30ca8a19b898738490d30733e81f2d
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56137722"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65494323"
 ---
 # <a name="example-scenario-use-endpoint-protection-to-protect-computers-from-malware"></a>示例方案：使用 Endpoint Protection 来保护计算机免遭恶意软件攻击
 

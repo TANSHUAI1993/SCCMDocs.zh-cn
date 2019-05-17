@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: baed9b8032c0020153754d400ea127eab9b56812
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.openlocfilehash: 6e47df52fd3b59c950f7005a7639abe57b2080bb
+ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59673796"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65083221"
 ---
 # <a name="use-multicast-to-deploy-windows-over-the-network-with-system-center-configuration-manager"></a>使用多播与 System Center Configuration Manager 一起通过网络部署 Windows
 
@@ -39,4 +39,4 @@ ms.locfileid: "59673796"
  若要将操作系统映像包配置为支持多播，请参阅[为多播部署准备操作系统映像](../get-started/manage-operating-system-images.md#BKMK_OSImageMulticast)。  
 
 ##  <a name="BKMK_Deploy"></a> 部署任务序列  
- 将操作系统部署到目标集合。 有关详细信息，请参阅 [Deploy a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS)。  
+ 将操作系统部署到目标集合。 有关详细信息，请参阅 [Deploy a task sequence](/sccm/osd/deploy-use/deploy-a-task-sequence)。  

@@ -2,8 +2,8 @@
 title: 软件更新的最佳方案
 titleSuffix: Configuration Manager
 description: 使用这些 Configuration Manager 中软件更新的最佳做法。
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.date: 07/30/2018
 ms.topic: conceptual
@@ -11,12 +11,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 6d20389a-9de2-4a64-bced-9fc4fa519174
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eb5471c5a993a1a2f683807a12dfc01ea00bf275
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.openlocfilehash: 579ecbfc5c085ebca2fe7e8402da9b5cb1507ff1
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59802116"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65496170"
 ---
 # <a name="best-practices-for-software-updates-in-configuration-manager"></a>Configuration Manager 中软件更新的最佳做法
 

@@ -2,25 +2,25 @@
 title: 管理软件更新的设置
 titleSuffix: Configuration Manager
 description: 了解安装软件更新点后适用于你的站点的软件更新的客户端设置。
-author: aczechowski
 ms.date: 03/26/2017
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 0d484c1a-e903-4bff-9e9b-e452c62e38a8
 manager: dougeby
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 848cb4e23240091c62ff9ca12c46fedae769010f
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 90304156778f4f41b2ac35a2840a4a7e7bb4dc32
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56129011"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499787"
 ---
 #  <a name="BKMK_ManageSUSettings"></a>管理软件更新的设置  
 
-适用范围：System Center Configuration Manager (Current Branch)
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 在 Configuration Manager 中同步软件更新后，配置并验证以下部分中的设置。
 
@@ -69,32 +69,32 @@ ms.locfileid: "56129011"
 ####  <a name="BKMK_SoftwareUpdateDetails"></a> 软件更新详细信息  
 在“更新详细信息”  选项卡中，你可以查看关于所选软件更新的以下摘要信息：  
 
-- **公告 ID**：指定与安全软件更新相关联的公告 ID。 通过在 [Microsoft Security Bulletin Search（Microsoft 安全公告搜索）](http://go.microsoft.com/fwlink/p/?LinkId=58313) 网页上根据公告 ID 进行搜索，你可以查找安全公告详细信息。  
+- “公告 ID”：指定与安全软件更新相关联的公告 ID。 通过在 [Microsoft Security Bulletin Search（Microsoft 安全公告搜索）](http://go.microsoft.com/fwlink/p/?LinkId=58313) 网页上根据公告 ID 进行搜索，你可以查找安全公告详细信息。  
 
-- **文章 ID**：指定软件更新的文章 ID。 引用的文章提供了关于软件更新以及软件更新所修复或改进的问题的更多详细信息。  
+- “文章 ID”：指定软件更新的文章 ID。 引用的文章提供了关于软件更新以及软件更新所修复或改进的问题的更多详细信息。  
 
-- **修订日期**：指定软件更新的上次修改日期。  
+- “修订日期”：指定软件更新的上次修改日期。  
 
-- **最高严重性级别**：指定软件更新的供应商定义的严重性分级。  
+- “最大严重性分级”：指定软件更新的供应商定义的严重性分级。  
 
-- **描述**：概述软件更新所修复或改进的情况。  
+- “说明”：概述软件更新所修复或改进的情况。  
 
-- **适用的语言**：列出软件更新适用的语言。  
+- “适用的语言”：列出软件更新适用的语言。  
 
-- **受影响产品**：列出软件更新适用的产品。  
+- “受影响产品”：列出软件更新适用的产品。  
 
 ####  <a name="BKMK_ContentInformation"></a> 内容信息  
 在“内容信息”  选项卡中，查看与选定软件更新关联内容有关的下列信息：  
 
--   **内容 ID**：指定软件更新的内容 ID。  
+-   “内容 ID”：指定软件更新的内容 ID。  
 
 -   **已下载**：指示 Configuration Manager 是否已下载软件更新文件。  
 
--   **语言**：指定软件更新的语言。  
+-   “语言”：指定软件更新的语言。  
 
--   **源路径**：指定软件更新源文件的路径。  
+-   “源路径”：指定软件更新源文件的路径。  
 
--   **大小 (MB)**：指定软件更新源文件的大小。  
+-   **大小(MB)**：指定软件更新源文件的大小。  
 
 ####  <a name="BKMK_CustomBundleInformation"></a> 自定义捆绑信息  
 在“自定义捆绑信息”  选项卡中，查看软件更新的自定义捆绑信息。 当选定软件更新包含在软件更新文件中所包含的捆绑软件更新时，它们会显示在“捆绑信息”  部分。 此选项卡不会显示在“内容信息”  选项卡中显示的捆绑软件更新，如不同语言的更新文件。  
@@ -102,9 +102,9 @@ ms.locfileid: "56129011"
 ####  <a name="BKMK_SupersedenceInformation"></a> 取代信息  
 在“取代信息”  选项卡中，你可以查看关于软件更新取代的下列信息：  
 
-- **此更新已由下列更新取代**：指定取代此更新的软件更新，这意味着所列的更新较新。 在大多数情况下，你将部署取代该软件更新的其中一项软件更新。 在列表中显示的软件更新包含提供详细软件更新信息的网页超链接。 当此更新未取代时，将显示“无”  。  
+- “此更新已由下列更新取代”：指定取代此更新的软件更新，这意味着所列的更新较新。 在大多数情况下，你将部署取代该软件更新的其中一项软件更新。 在列表中显示的软件更新包含提供详细软件更新信息的网页超链接。 当此更新未取代时，将显示“无”  。  
 
-- **此更新会取代下列更新**：指定由此软件更新所取代的软件更新，这意味着此软件更新较新。 在大多数情况下，你将会部署此软件更新以替换取代的软件更新。 在列表中显示的软件更新包含提供详细软件更新信息的网页超链接。 当此更新未取代任何其他更新时，将显示“无”  。  
+- “此更新会取代下列更新”：指定由此软件更新所取代的软件更新，这意味着此软件更新较新。 在大多数情况下，你将会部署此软件更新以替换取代的软件更新。 在列表中显示的软件更新包含提供详细软件更新信息的网页超链接。 当此更新未取代任何其他更新时，将显示“无”  。  
 
 ###  <a name="BKMK_SoftwareUpdatesSettings"></a> 配置软件更新设置  
 在属性中，你可以为一个或多个软件更新配置软件更新设置。 你仅可以在管理中心站点或独立主站点中配置大多数软件更新设置。 下列部分将帮助你配置软件更新的设置。  
@@ -126,7 +126,7 @@ Configuration Manager 还使用此设置来确定是否在配置的维护时段�
 
 你可以在“自定义严重性”  选项卡上配置下列设置。  
 
-- **自定义严重性**：为软件更新设置自定义的严重性值。 从列表中选择“严重” 、“重要” 、“中” 或“低”  。 默认情况下，自定义严重性值为空。
+- “自定义严重性”：为软件更新设置自定义的严重性值。 从列表中选择“严重” 、“重要” 、“中” 或“低”  。 默认情况下，自定义严重性值为空。
 
 ## <a name="crl-checking-for-software-updates"></a>软件更新的 CRL 检查
 默认情况下，在验证 System Center Configuration Manager 软件更新上的签名时不会检查证书吊销列表 (CRL)。 如果在每次使用证书时都检查 CRL，则能更好地抵御因使用已吊销的证书而造成的安全威胁，但这样做会使连接出现延迟，并在执行 CRL 检查的计算机上引发额外的处理操作。  

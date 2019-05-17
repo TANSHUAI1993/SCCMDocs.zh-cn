@@ -2,8 +2,8 @@
 title: 软件更新的先决条件
 titleSuffix: Configuration Manager
 description: 了解 System Center Configuration Manager 中软件更新的先决条件。
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.date: 02/02/2018
 ms.topic: conceptual
@@ -11,16 +11,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: fdf05118-162a-411e-b72e-386b9dc9a5e1
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 395c22b3fb7652a1da4652d1bf259bffb601c109
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 92e1d0e672d4fc5e6e98f87ba92cec2602f7d240
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56133555"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65496210"
 ---
 # <a name="prerequisites-for-software-updates-in-system-center-configuration-manager"></a>System Center Configuration Manager 中软件更新的先决条件
 
-适用范围：System Center Configuration Manager (Current Branch)
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 本文列出了 System Center Configuration Manager 中软件更新的先决条件。 对于这些先决条件中的每一个，在不同的表格中列出了外部依赖关系和内部依赖关系。  
 

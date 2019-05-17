@@ -7,20 +7,20 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
 ms.assetid: e6c1df1d-7728-4980-9199-bc32cde5439e
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 72c23bdf08972028d86c1824b3b796995845e8c4
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 636d9ef3ba7768c73b00de4f50c22629548e7921
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56134810"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65493955"
 ---
 # <a name="manage-publications-in-updates-publisher"></a>管理 Updates Publisher 中的发布项
 
-适用范围：*System Center Updates Publisher*
+*适用范围：System Center Updates Publisher*
 
 可以使用发布项将各组更新和捆绑包作为一个对象进行管理。 这包括将更新发布到管理服务器，以及将发布项导出为组，以供其他 Updates Publisher 安装项使用。
 
