@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: b0adf873-2ff4-4a7b-b5e7-6047f146511f
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b8bd442c527c5f09fb6704a9e2ec8d7c4cbfd0f0
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 3bf7fd4902f5aa30347d2ccc2410227078035872
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56119936"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65496245"
 ---
 # <a name="removed-and-deprecated-items-for-system-center-configuration-manager"></a>System Center Configuration Manager 中已删除和已弃用的项
 

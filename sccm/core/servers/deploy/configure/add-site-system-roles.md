@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: b90de2d9-494e-43ad-b269-c8ed589f37d3
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6ae01355024170fd63236299864ce0d2286bfeed
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 96710897dd518832a221717b7fdbec0a73eed01e
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56131517"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499102"
 ---
 # <a name="add-site-system-roles-for-system-center-configuration-manager"></a>添加 System Center Configuration Manager 的站点系统角色
 

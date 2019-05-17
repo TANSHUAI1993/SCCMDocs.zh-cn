@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 91f9de33-b277-4500-acd6-e7d90a2947c9
-author: aczechowski
+author: mestew
+ms.author: mstewart
 manager: dougeby
-ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 116c12d86c097222844e76dde877b674ca7498b9
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 61ca3c68f1d0c193bf81dfce5591fc69fc22b828
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56127110"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65501101"
 ---
 # <a name="health-attestation-for-system-center-configuration-manager"></a>System Center Configuration Manager 的运行状况证明
 

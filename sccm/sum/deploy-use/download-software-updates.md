@@ -2,25 +2,25 @@
 title: '下载软件更新 '
 titleSuffix: Configuration Manager
 description: 使用下载软件更新向导下载软件更新，并将它们分发到分发点，以准备部署到客户端。
-author: aczechowski
 ms.date: 01/23/2017
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: de78e8d3-043f-4cd3-97e0-4dfb824fd3fb
 manager: dougeby
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f43379f315a3a2e24a33f2112a26108aa7418bb
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 15ed5e56d5284b3014061a5d910dc88903b624db
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56138715"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500201"
 ---
 # <a name="download-software-updates"></a>下载软件更新  
 
-*适用于：System Center Configuration Manager（当前分支）*
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 你可以使用一些方法在 Configuration Manager 中下载软件更新。 创建自动部署规则 (ADR) 或手动部署软件更新时，软件更新会下载到站点服务器上的内容库。 随后软件更新会复制到与配置的部署包关联的分发点上的内容库。 如果要在部署软件更新之前下载软件更新，则可以使用下载更新向导。 通过执行此操作，你可以在将软件更新部署到客户端计算机之前验证软件更新在分发点上是否可用。  
 

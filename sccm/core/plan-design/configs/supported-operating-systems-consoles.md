@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 21a80050-6452-4b7d-8424-99bddf9fa1f4
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6b8d171e3bb4023843c23b45b0ce8f8c45007524
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 602dcde75e6efc4b588349edada1f1c49c3c1a5b
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56138664"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499350"
 ---
 # <a name="supported-os-versions-for-configuration-manager-consoles"></a>Configuration Manager 控制台支持的操作系统版本
 

@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 0e9f0fbd-e442-4509-a021-bfdedf2d04dd
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 209e09ba11de851a1275211364af3cee930737d0
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: a5fb9a553efa634dad314da58298611cdf0bbb58
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56131534"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65498984"
 ---
 # <a name="configuration-options-for-site-system-roles-in-configuration-manager"></a>Configuration Manager 中的站点系统角色的配置选项
 
@@ -29,7 +29,7 @@ Configuration Manager 站点系统角色的大多数配置选项都不言自明�
 ##  <a name="BKMK_ApplicationCatalog_Website"></a>应用程序目录网站点  
 
 > [!Note]  
-> 从版本 1806 开始，不再需要应用程序目录网站点，但仍受支持。 有关详细信息，请参阅[配置软件中心](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex)。  
+> 从版本 1806 开始，不再需要应用程序目录网站点，但仍受支持。 有关详细信息，请参阅[配置软件中心](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex)。  
 > 
 > 应用程序目录网站点的 Silverlight 用户体验不再受支持。 有关详细信息，请参阅[已删除和已弃用的功能](/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures)。  
 
@@ -54,7 +54,7 @@ Configuration Manager 站点系统角色的大多数配置选项都不言自明�
 ##  <a name="BKMK_ApplicationCatalog_WebService"></a>应用程序目录 Web 服务点  
 
 > [!Note]  
-> 从版本 1806 开始，不再需要应用程序目录 Web 服务点，但仍受支持。 有关详细信息，请参阅[配置软件中心](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex)。  
+> 从版本 1806 开始，不再需要应用程序目录 Web 服务点，但仍受支持。 有关详细信息，请参阅[配置软件中心](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex)。  
 
  有关如何设置应用程序目录 Web 服务点的详细信息，请参阅[规划和配置应用程序管理](/sccm/apps/plan-design/plan-for-and-configure-application-management)。  
 

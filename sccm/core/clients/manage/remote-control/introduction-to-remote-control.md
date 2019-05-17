@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
 ms.assetid: 29350919-6a25-446b-a0da-05e8914fbb26
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b2f9744db8722686d10ad098b186c3972b570cfc
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 272c43f7514c585ea182b9b7e946c89fd13d3ad8
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56129283"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500036"
 ---
 # <a name="introduction-to-remote-control-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的远程控制简介
 

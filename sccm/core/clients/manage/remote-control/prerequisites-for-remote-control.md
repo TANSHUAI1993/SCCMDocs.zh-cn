@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
 ms.assetid: c1b2057e-b74f-43fa-a293-763a8f866d3d
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 72478fc0b8853cbf9767adfa3949f96b29f2668a
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 17a8f425877ce90761fbef97497b1f3a0f93f3cc
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56120351"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499711"
 ---
 # <a name="prerequisites-for-remote-control-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中远程控制的先决条件
 

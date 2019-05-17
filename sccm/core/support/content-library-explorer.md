@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 691896d9-ec0f-461f-a3f2-40378ebd3121
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9fb8c5c189407fdc6fc742ebcd0b7d9730d4289
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 1fbd046115dcd4d13cec7a2bf880740a9dd616cc
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56142198"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65495764"
 ---
 # <a name="content-library-explorer"></a>内容库资源管理器
 

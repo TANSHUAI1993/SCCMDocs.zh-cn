@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: cd74e5f5-33f6-4566-8c9d-d6a93bfe71ed
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1db764221757bf1d00a8579f9c53fd4af6aed351
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 238165dfe6822e05e64b725546837b3b4f0c496b
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56138188"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65498015"
 ---
 # <a name="language-packs-in-configuration-manager"></a>Configuration Manager 中的语言包
 

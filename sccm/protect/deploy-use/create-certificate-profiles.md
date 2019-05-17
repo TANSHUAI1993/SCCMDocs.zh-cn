@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
 ms.assetid: 634d612c-92d7-4c03-873a-b2e730c9a72d
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: daae36016192184fbc7f6bfa087cfb17b8c56c43
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 600b786bbb2f718868c5d08c722621682582f4e1
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56138324"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500648"
 ---
 # <a name="create-certificate-profiles"></a>创建证书配置文件
 

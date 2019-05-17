@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 35b5baec-d313-46aa-9d14-c443aa0d6c09
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ed5e7b6931fe8c853b867483d3db8a2d5bc9ad8b
-ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
+ms.openlocfilehash: 4f14d245ef6bed5749ace29adae6e20d18574905
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58523718"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65497446"
 ---
 # <a name="support-for-configuration-manager-current-branch-versions"></a>对 Configuration Manager Current Branch 版本的支持
 

@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
 ms.assetid: 5c975e69-0cc0-4afd-b7fb-b7182162a933
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d7c24692b88571e56c877c8529fe84b7441c6696
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 88dfdb9ed5279b981b20946385aa948fcad67814
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56127637"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499651"
 ---
 # <a name="how-to-audit-remote-control-usage-in-system-center-configuration-manager"></a>如何审核 System Center Configuration Manager 中的远程控制使用
 

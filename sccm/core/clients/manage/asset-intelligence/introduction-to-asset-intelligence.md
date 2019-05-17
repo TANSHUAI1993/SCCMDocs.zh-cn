@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 0bdfdef5-390f-4099-8bde-de51d9a89175
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17cdfdfa90dd53f516f0dde8cd3b1130f05b9a82
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: d63fa2f25b63e663301fdf9b25d8190b57138e31
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56137232"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499981"
 ---
 # <a name="introduction-to-asset-intelligence-in-configuration-manager"></a>Configuration Manager 中资产智能的简介
 

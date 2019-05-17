@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: caad2d93-087c-4dc0-a2a7-6a2fd808b4c8
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 054676d5583dbc4468f1d2716d895100f3a5471a
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 48b5abb686171b475233a2c61b80c0819ee26994
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56134293"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500902"
 ---
 # <a name="collection-evaluation-viewer"></a>集合评估查看器
 

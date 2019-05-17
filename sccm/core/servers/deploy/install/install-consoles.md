@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: d39c201f-d364-4e7b-bde4-faa76d747f33
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1469845ce89b0de08a687baf3d518c1bd6d5294d
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.openlocfilehash: ebbbf62bb3cc1e2b96d83ad109064d643544fdb9
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59802761"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65498253"
 ---
 # <a name="install-the-configuration-manager-console"></a>安装 Configuration Manager 控制台
 

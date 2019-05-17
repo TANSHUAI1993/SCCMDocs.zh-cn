@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
 ms.assetid: 321b19b2-a093-4b8f-995f-41f74b886eb5
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dba1107dd8cd8d39be555b3b77ff828152513eb8
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: c0e6a5d3b83bbf98bab8f36616622d376caa2266
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56122230"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500592"
 ---
 # <a name="create-wi-fi-profiles"></a>创建 Wi-Fi 配置文件
 

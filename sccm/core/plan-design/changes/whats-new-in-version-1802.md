@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 5bd637b1-d7a1-411b-877a-c7aae9741173
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9d36ac033b197c21122b49aba70bdeaef4f9b5ac
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.openlocfilehash: 6e6e603210342f5acc3e66328fca95e964dde2bf
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59802846"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65495520"
 ---
 # <a name="whats-new-in-version-1802-of-system-center-configuration-manager"></a>System Center Configuration Manager 1802 版的新增功能
 
@@ -214,12 +214,12 @@ Windows 10 就地升级的默认任务序列模板现在包括在升级过程前
      - 支持所有来自软件中心、PXE和媒体的操作系统部署方案。
      - 在对象删除期间改进控制台操作，例如复制、导入、导出和警告。
      - 支持[创建预留内容文件](/sccm/core/plan-design/hierarchy/manage-network-bandwidth#BKMK_PrestagingContent)向导。
-     - 与部署验证集成。 有关详细信息，请参阅[高风险任务序列部署](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS)。 
+     - 与部署验证集成。 有关详细信息，请参阅[高风险任务序列部署](/sccm/osd/deploy-use/deploy-a-task-sequence)。 
      - 运行任务序列步骤现在可以在多级别任务序列中使用，而不仅仅适用于单个父子关系。 多级别关系会增加复杂性，请谨慎使用。 仍会检查这些关系的循环引用。
     
 ### <a name="deployment-templates-for-task-sequences"></a>任务序列的部署模板
 <!-- 1357391 -->
-[任务序列的部署向导](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS)现在可以创建部署模板。 部署模板可以保存并应用到现有或新任务序列以创建部署。 
+[任务序列的部署向导](/sccm/osd/deploy-use/deploy-a-task-sequence)现在可以创建部署模板。 部署模板可以保存并应用到现有或新任务序列以创建部署。 
 
 ### <a name="phased-deployments-for-task-sequences"></a>任务序列的分阶段部署
 <!--1356837-->
@@ -287,11 +287,11 @@ Windows Autopilot 是一种以新式方式载入和配置新 Windows 10 设备�
 
 ### <a name="improvements-to-configuration-manager-policies-for-windows-defender-exploit-guard"></a>对 Configuration Manager 的 Windows Defender 攻击防护策略的改进
 <!-- 1356220 -->
-在 Configuration Manager 中，为 [Windows Defender 攻击防护](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard)添加了有关[攻击面减少](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy#BKMK_ASR)和[受控文件夹访问权限](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy#BKMK_CFA)组件的其他策略设置。
+在 Configuration Manager 中，为 [Windows Defender 攻击防护](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard)添加了有关[攻击面减少](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy#bkmk_ASR)和[受控文件夹访问权限](/sccm/protect/deploy-use/create-deploy-exploit-guard-policy#bkmk_CFA)组件的其他策略设置。
 
 ### <a name="new-host-interaction-settings-for-windows-defender-application-guard"></a>Windows Defender 应用程序防护的新主机交互设置
 <!-- 1356256 -->
-Windows 10 1709 版和更高版本的设备中包含面向 [Windows Defender 应用程序防护](/sccm/protect/deploy-use/create-deploy-application-guard-policy#BKMK_HIS)的两种新主机交互设置： 
+Windows 10 1709 版和更高版本的设备中包含面向 [Windows Defender 应用程序防护](/sccm/protect/deploy-use/create-deploy-application-guard-policy#bkmk_HIS)的两种新主机交互设置： 
 - 可向网站授予主机虚拟图形处理器的访问权限。 
 - 容器内已下载的文件可保存在主机上。 
 

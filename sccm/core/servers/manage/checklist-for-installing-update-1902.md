@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: b87ac054-9b37-4725-a3f3-2340cfb10bff
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c9d0714bd55b4c99b181dfaf3ac34e63a0e9a35e
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.openlocfilehash: 801a4819e4bfc9c0f18b87915ea0969b0aa60dc3
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59802480"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65497873"
 ---
 # <a name="checklist-for-installing-update-1902-for-configuration-manager"></a>用于为 Configuration Manager 安装更新 1902 的清单
 

@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 604ab835-bce3-4fe3-a7f3-3f059cfc0ecf
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9c6c4af31af08d2c723df01fa37f21f708453044
-ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
+ms.openlocfilehash: ad9dba601a1ddc6d16e0c820bf7577531b6eb1db
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58523769"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65496826"
 ---
 # <a name="removed-and-deprecated-items-for-configuration-manager-clients"></a>Configuration Manager 客户端中已删除和已弃用的项
 

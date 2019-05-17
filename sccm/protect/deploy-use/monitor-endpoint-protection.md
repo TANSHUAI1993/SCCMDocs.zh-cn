@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
 ms.assetid: f4a1335c-bb3d-493e-a124-83a32a107dc8
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4d35ec2f02befec0221a1555be19046d3751b3b9
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: b05f80eac2b7dfe8cf1a1eee7a37a29a8148a580
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56131398"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500402"
 ---
 # <a name="how-to-monitor-endpoint-protection-status"></a>如何监视 Endpoint Protection 状态
 

@@ -7,16 +7,15 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 64f9d931-33f1-456f-a4e4-0ec077465bd0
-author: aczechowski
-manager: dougeby
+author: mestew
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f24873410feebd8a7c96cc588c63f84314e26b96
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: f6e57099ae31ccc51324dca342265337c79afddd
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56121033"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65497643"
 ---
 # <a name="best-practices-for-reporting-in-system-center-configuration-manager"></a>System Center Configuration Manager 中报告的最佳做法
 

@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 7d07bd0a-7012-47f7-8bc5-509a402915b7
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f7375a62349aba30ee239aa34fa594650f5a844
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: ee63a4eb7b3f0d575586b2e672f9440060c7f6f6
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56121975"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65495797"
 ---
 # <a name="content-library-transfer-tool"></a>内容库传输工具
 

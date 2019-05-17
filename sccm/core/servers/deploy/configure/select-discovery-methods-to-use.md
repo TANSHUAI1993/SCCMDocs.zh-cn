@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 127ce713-d085-430f-ac7b-2701637fe126
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8f13508504b6e78fafaf76e44948cd643705846a
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: d3965f0df55e16fa87d259532fdc4f2f580d1253
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56141766"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65501409"
 ---
 # <a name="select-discovery-methods-to-use-for-system-center-configuration-manager"></a>选择 System Center Configuration Manager 要使用的发现方法
 

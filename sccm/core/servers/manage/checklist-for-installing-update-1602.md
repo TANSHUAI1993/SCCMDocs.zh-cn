@@ -7,17 +7,17 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: b63ef197-01f0-4894-b929-5ef8403c5195
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 606e4a5573a2dd1c58ea1c85515029f2f27f1d29
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: ba54ff30f880520106ef615ef713781149776eda
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56132609"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65501209"
 ---
 # <a name="checklist-for-installing-update-1602-for-system-center-configuration-manager"></a>为 System Center Configuration Manager 安装更新 1602 的清单
 

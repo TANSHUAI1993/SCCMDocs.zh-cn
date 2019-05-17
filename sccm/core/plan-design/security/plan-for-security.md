@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f6ffa061e3d04bbbda31cc4406494b492ba98d9b
-ms.sourcegitcommit: 6f4c2987debfba5d02ee67f6b461c1a988a3e201
+ms.openlocfilehash: c5e6aca35dcadf145c0b93f0c984767099eb8960
+ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59673847"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65083562"
 ---
 # <a name="plan-for-security-in-configuration-manager"></a>在 Configuration Manager 中规划安全性
 
@@ -388,7 +388,7 @@ IIS 始终会检查 CRL 中是否有客户端证书，且无法在 Configuration
 
 - [适用于企业的 Microsoft Store 联机应用](/sccm/apps/deploy-use/manage-apps-from-the-windows-store-for-business)  
 
-- 降低基础结构要求。 例如，[使用管理点的软件中心](/sccm/apps/plan-design/plan-for-and-configure-application-management#bkmk_userex)而不是应用程序目录  
+- 降低基础结构要求。 例如，[使用管理点的软件中心](/sccm/apps/plan-design/plan-for-software-center#bkmk_userex)而不是应用程序目录  
 
 - [管理 Office 365 应用](/sccm/sum/deploy-use/manage-office-365-proplus-updates)  
 

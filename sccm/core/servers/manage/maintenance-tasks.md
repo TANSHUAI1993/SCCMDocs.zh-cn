@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 625bb787-6d16-47a0-8b0f-b129cd909ca3
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bee46ea8eba968c0714478ff0921b0d9b3447621
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 26e17b190312dd1d3b1b73f5b1d6b91912938255
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56123159"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65501075"
 ---
 # <a name="maintenance-tasks-for-system-center-configuration-manager"></a>System Center Configuration Manager 的维护任务
 

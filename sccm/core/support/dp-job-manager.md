@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 4b72922a-d11e-4aef-b309-19f5f0716f32
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1365c3951a829d92cbdb2f6a4a87c8496f9ada3c
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 720311c9bd4a8ecb9420801881d7c6c142457db3
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56136341"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500870"
 ---
 # <a name="dp-job-queue-manager"></a>DP 作业队列管理器
 

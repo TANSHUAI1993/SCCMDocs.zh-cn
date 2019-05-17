@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: c14a3607-253b-41fb-8381-ae2d534a9022
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 971d1cd2a8571b6d0dc120a07cd583674ac7fb62
-ms.sourcegitcommit: 60aff44c76e6432dc544c8b26acba432ac799cfc
+ms.openlocfilehash: e1209f055d96d57d9b747945ea15584da159428f
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58639489"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65501086"
 ---
 # <a name="install-in-console-updates-for-configuration-manager"></a>为 Configuration Manager 安装控制台内更新
 

@@ -2,21 +2,21 @@
 title: 软件清单
 titleSuffix: Configuration Manager
 description: 获取 System Center Configuration Manager 中的软件清单简介。
-ms.date: 2/22/2017
+ms.date: 04/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
 ms.assetid: 79eb49da-cd2b-4ffc-b355-b595aeba3aea
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 54bcd177d228e67748f561be556ff4219523711a
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: b4d50e26d2505a5df859f65b89b736783aca0a9a
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56130405"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499808"
 ---
 # <a name="introduction-to-software-inventory-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的软件清单简介
 
@@ -28,7 +28,7 @@ ms.locfileid: "56130405"
 
  可通过以下方法查看软件清单数据：  
 
-- [创建查询](../../../../core/servers/manage/queries-technical-reference.md)，该查询将返回具有特定文件的设备。   
+- [创建查询](../../../../core/servers/manage/create-queries.md)，该查询将返回具有特定文件的设备。   
 
 - 创建[基于查询的集合](../../../../core/clients/manage/collections/introduction-to-collections.md)，此集合包括具有特定文件的设备。   
 

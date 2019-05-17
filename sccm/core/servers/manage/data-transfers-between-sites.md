@@ -2,21 +2,21 @@
 title: 数据传输
 titleSuffix: Configuration Manager
 description: 了解 Configuration Manager 如何在站点之间移动数据，并了解如何管理网络上的数据传输。
-ms.date: 10/06/2016
+ms.date: 05/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: dc526e8d-fac3-4bb5-b206-03ad29b0ae11
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 39ae7c931b2d69199dc2c24cbb1bf9ae804a04b4
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 33edef5a7dba5274509dcf455b337c71886dd608
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56123182"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65497465"
 ---
 # <a name="data-transfers-between-sites-in-system-center-configuration-manager"></a>System Center Configuration Manager 中的站点间数据传输
 

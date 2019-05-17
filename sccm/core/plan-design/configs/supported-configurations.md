@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 45a10878-ff48-4318-9c6d-c014b38a4039
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c56d9a17e48ff62dfae9b54b84909f1eebb3ccd0
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: e53c0dd242d1274914738173ee1997109cff8411
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56129725"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499373"
 ---
 # <a name="supported-configurations-for-system-center-configuration-manager"></a>System Center Configuration Manager 支持的配置
 

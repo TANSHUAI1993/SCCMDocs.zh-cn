@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: d0e4ddc3-d9c4-4f5c-8b1f-af098e54f5c8
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ccaf6afd25d74e030d3a4cf9e09b2783418f3fd6
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: c8ebd90b994e3e6103282e3796be180bfd021128
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56134514"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65501383"
 ---
 # <a name="resources-for-installing-system-center-configuration-manager-sites"></a>用于安装 System Center Configuration Manager 站点的资源
 

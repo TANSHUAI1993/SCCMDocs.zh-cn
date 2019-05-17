@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 9efb4061-f642-48bd-8332-3357ff5b3118
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f9b56f408dc76b3b9bf48fbdab64a50eed14f0f2
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: c66a87636850a33f77fccc1c978242cf0323d413
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56133606"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65498930"
 ---
 # <a name="configure-sites-and-hierarchies-for-configuration-manager"></a>配置 Configuration Manager 的站点和层次结构
 

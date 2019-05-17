@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 753d2681-ea72-4f47-94d1-ac10188d9d5b
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3ba864914afb6794d460b81f5df346902b8ab0ce
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 500a59b4af9f1d25a1e0b5e82ba0a75bfa23df88
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56121874"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500886"
 ---
 # <a name="content-ownership-tool"></a>内容所有权工具
 

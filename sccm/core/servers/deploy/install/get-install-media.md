@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 76c220b6-1824-4e2e-8c61-a719f0b056f1
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5a8033c148241e597ec7dd32366dbd977d0b51f2
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 82ddc015a9d5df29b54e13efe6382934c713ac4b
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56125062"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65501395"
 ---
 # <a name="where-to-get-installation-media-for-system-center-configuration-manager"></a>可获取 System Center Configuration Manager 的安装媒体的位置
 

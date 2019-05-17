@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 1098e8c5-9676-4c2b-841b-ec88bd04e495
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6a2200a72330fab2f0584c419e6b66b2fc25c44b
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: ebf07aa7fba1a017821eb63a57f8c721b4a9860b
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56135596"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499421"
 ---
 # <a name="support-for-virtualization-environments-with-configuration-manager"></a>Configuration Manager 支持虚拟化环境
 

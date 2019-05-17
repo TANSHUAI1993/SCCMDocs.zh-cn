@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: e7cdb1a9-140a-436e-ac71-72d083110223
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 293517d3c01366e07507a56c1973069ae1e308af
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 63fb00eb446c8e91f8bc741c0375b314ad0ef9a7
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56138987"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65497653"
 ---
 # <a name="use-a-command-line-to-install-system-center-configuration-manager-sites"></a>使用命令行安装 System Center Configuration Manager 站点
 

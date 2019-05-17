@@ -5,16 +5,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 32609a30-465c-4406-b227-aca5c276e015
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1cabd75b26f282c737d80e831a735984580c6fe5
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 5ccac130293edf3e3e74c0ed0e3a86adad9af084
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56122893"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65501247"
 ---
 # <a name="start-using-system-center-configuration-manager"></a>开始使用 System Center Configuration Manager
 

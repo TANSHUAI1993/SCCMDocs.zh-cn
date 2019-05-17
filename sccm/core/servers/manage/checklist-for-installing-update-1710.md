@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 7e8ab8ca-41ef-467a-943b-a115d88cafe0
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 188d2ffdb3ad6f908a0ea25a6966bd0dcf5db807
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 7a23759bea4135aa929e3dcf940eeb479f16c92a
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56122995"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65497885"
 ---
 # <a name="checklist-for-installing-update-1710-for-system-center-configuration-manager"></a>用于为 System Center Configuration Manager 安装更新 1710 的清单
 
@@ -108,7 +108,8 @@ Configuration Manager 无法成功更新启用了管理点数据库副本的主�
 如果使用可用性组，请确保在开始安装更新之前将可用性组设置为手动故障转移。 站点更新后，可以将故障转移还原为自动进行。 有关详细信息，请参阅 [站点数据库的 SQL Server AlwaysOn](/sccm/core/servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database)。
 
 **重新配置使用 NLB 的软件更新点：**   
-<!-- Support for NLBs is fully removed with 1702. When 1702 is no longer in support, this statement can drop --> Configuration Manager 无法更新使用网络负载均衡 (NLB) 群集来托管软件更新点的站点。
+<!-- Support for NLBs is fully removed with 1702. When 1702 is no longer in support, this statement can drop -->
+Configuration Manager 无法更新使用网络负载均衡 (NLB) 群集来托管软件更新点的站点。
 
 如果为软件更新点使用 NLB 群集，请使用 Windows PowerShell 删除 NLB 群集。
 有关详细信息，请参阅  [System Center Configuration Manager 的软件更新计划](/sccm/sum/plan-design/plan-for-software-updates)。

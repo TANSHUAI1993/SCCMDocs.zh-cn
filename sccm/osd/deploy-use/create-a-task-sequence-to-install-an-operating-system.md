@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4c18d6320397281156e39624ea8dc50e6d0539ed
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: c6d0cecc348076bcf728cb08ba29500ae55d1c77
+ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56139902"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65082884"
 ---
 # <a name="create-a-task-sequence-to-install-an-operating-system-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中创建用于安装操作系统的任务序列
 
-适用范围：System Center Configuration Manager (Current Branch)
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 在 System Center Configuration Manager 中使用任务序列，自动在目标计算机上安装操作系统映像。 创建一个任务序列，该任务序列引用用于启动目标计算机的启动映像、要安装在目标计算机上的操作系统映像以及要安装的任何其他附加内容（例如其他应用程序或软件更新）。 然后将任务序列部署到包含目标计算机的集合。  
 
@@ -55,7 +55,7 @@ ms.locfileid: "56139902"
 
    -   **描述**：指定任务序列所执行的任务的描述。  
 
-   -   **启动映像**：指定用于在目标计算机上安装操作系统的启动映像。 启动映像包含用于安装操作系统的 Windows PE 的某个版本，以及任何其他所需的设备驱动程序。 有关信息，请参阅[管理启动映像](../get-started/manage-boot-images.md)。  
+   -   **启动映像包**：指定用于在目标计算机上安装操作系统的启动映像。 启动映像包含用于安装操作系统的 Windows PE 的某个版本，以及任何其他所需的设备驱动程序。 有关信息，请参阅[管理启动映像](../get-started/manage-boot-images.md)。  
 
        > [!IMPORTANT]  
        >  启动映像的体系结构必须与目标计算机的硬件体系结构兼容。  
@@ -64,13 +64,13 @@ ms.locfileid: "56139902"
 
    -   **映像包**：指定包含要安装的操作系统映像的包。 有关详细信息，请参阅[管理操作系统映像](../get-started/manage-operating-system-images.md)。  
 
-   -   **映像**：如果操作系统映像包有多个映像，请指定要安装的操作系统映像的索引。  
+   -   “映像”：如果操作系统映像包有多个映像，请指定要安装的操作系统映像的索引。  
 
    -   **对安装操作系统的目标计算机进行分区和格式化**：指定是否希望任务序列在安装操作系统之前对目标计算机进行分区和格式化。  
 
-   -   **产品密钥**：指定要安装的 Windows 操作系统的产品密钥。 你可以指定编码的批量许可证密钥和标准产品密钥。 如果使用非编码的产品密钥，则必须通过短划线 (-) 分隔每组 5 个字符。 例如：XXXXX-XXXXX-XXXXX-XXXXX-XXXXX  
+   -   **产品密钥**：指定要安装的 Windows 操作系统的产品密钥。 你可以指定编码的批量许可证密钥和标准产品密钥。 如果使用非编码的产品密钥，则必须通过短划线 (-) 分隔每组 5 个字符。 例如： *XXXXX-XXXXX-XXXXX-XXXXX-XXXXX*  
 
-   -   **服务器授权模式**：指定服务器许可证为“每席位”、“每服务器”或未指定许可证。 如果服务器许可证为“每服务器” ，则还需指定服务器连接的最大数量。  
+   -   **服务器授权模式**：指定服务器授权为“每客户”、“每服务器”或不指定授权。 如果服务器许可证为“每服务器” ，则还需指定服务器连接的最大数量。  
 
    -   指定如何处理在部署操作系统映像时使用的管理员帐户。  
 
@@ -80,16 +80,16 @@ ms.locfileid: "56139902"
 
 7. 在“配置网络”  页上，指定以下设置，然后单击“下一步” 。  
 
-   -   **加入工作组**：指定是否将目标计算机添加到工作组。  
+   -   “加入工作组”：指定是否将目标计算机添加到工作组。  
 
-   -   **加入域**：指定是否将目标计算机添加到域。 在“域” 中，指定域的名称。  
+   -   “加入域”：指定是否将目标计算机添加到域。 在“域” 中，指定域的名称。  
 
        > [!IMPORTANT]  
        >  你可以浏览以查找本地林中的域，但对于远程林则必须指定域名。  
 
         你还可以指定组织单位 (OU)。 这是一项可选设置，用于指定在其中创建计算机帐户的 OU 的 LDAP X.500 可分辨名称（如果尚未存在）。  
 
-   -   **帐户**：指定具有加入指定域的权限的帐户的用户名和密码。 例如： *domain\user* 或 *%variable%*。  
+   -   “帐户”：指定具有加入指定域的权限的帐户的用户名和密码。 例如： *domain\user* 或 *%variable%*。  
 
        > [!IMPORTANT]  
        >  如果打算迁移域设置或工作组设置，你必须输入适当的域凭据。  
@@ -110,7 +110,7 @@ ms.locfileid: "56139902"
 
 12. 完成向导。  
 
-    你现在可以将任务序列部署到计算机集合。  有关详细信息，请参阅 [Deploy a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS)。  
+    你现在可以将任务序列部署到计算机集合。  有关详细信息，请参阅 [Deploy a task sequence](/sccm/osd/deploy-use/deploy-a-task-sequence)。  
 
 ##  <a name="BKMK_InstallExistingOSImageTSExample"></a> 安装现有操作系统映像的示例任务序列  
  使用下表作为您创建任务序列以部署使用现有操作系统映像的操作系统时的指导。 该表将帮助您决定任务序列步骤的常规顺序，以及如何将这些任务序列步骤组织并构建成逻辑组。 您创建的任务序列可能与此示例有所不同并可包含更多或更少的任务序列步骤和组。  

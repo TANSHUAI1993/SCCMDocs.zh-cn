@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 8143e3bf-d6bd-4c69-aec1-e6989cf2ecd9
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5f9695decaf7af8d947d57443bd4b14032545b7d
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 09b1cf553aaa5fd75dbf0f7500246263a9bed7a6
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56133310"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500838"
 ---
 # <a name="power-viewer-tool"></a>Power Viewer 工具
 

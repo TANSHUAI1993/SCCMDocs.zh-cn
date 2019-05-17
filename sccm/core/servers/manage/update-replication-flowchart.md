@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: d38ea401-4695-4b4c-bd8d-95bdc2c67f5a
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 25a9f1f9776a2d92b2ee6f7b525960007484da05
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: ecb6698d8ac1a4a9855877fcdbc21bb321946b8d
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56138035"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65497282"
 ---
 # <a name="flowchart---update-replication-for-system-center-configuration-manager"></a>流程图 - 更新 System Center Configuration Manager 的副本
 

@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
 ms.assetid: 0a9dc0fe-a942-40a2-bab1-7eeee4d95380
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 25360f8563820fc5463a6fefd738402038ef79d5
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 7f0b489d4241350dc7b0f5ee7f9a9a48fcf026cf
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56136654"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500492"
 ---
 # <a name="create-an-endpoint-protection-point-site-system-role"></a>创建 Endpoint Protection 点站点系统角色
 

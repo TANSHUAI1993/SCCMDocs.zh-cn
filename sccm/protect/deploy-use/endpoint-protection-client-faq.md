@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
 ms.assetid: e3aaa9d2-a40e-42b1-ad75-5a115351729e
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2f19fee37ab817670bd754d6da1ad1ebe9ccb452
-ms.sourcegitcommit: 369db96ee84299b5ab6d74b177e6366b3017fc54
+ms.openlocfilehash: e0f3e0a20874539b079541f363c6d494a738225f
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56589928"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500505"
 ---
 # <a name="endpoint-protection-client-frequently-asked-questions"></a>Endpoint Protection 客户端的常见问题
 
@@ -28,15 +28,15 @@ ms.locfileid: "56589928"
 -   [为什么需要防病毒和反间谍软件？](#why-do-i-need-antivirus-and-antispyware-software)  
 -   [如何判断计算机是否感染恶意软件？](#how-can-i-tell-if-my-computer-is-infected-with-malicious-software)
 -   [如何查找 Windows Defender 版本？](#how-can-i-find-the-version-of-windows-defender)
--   [如果 Windows Defender 或 Endpoint Protection 在我的计算机上检测到恶意软件，我该怎么办？](#what-should-i-do-if-windows-defender-or-endpoint-protection-detects-software-on-my-computer)  
+-   [如果 Windows Defender 或 Endpoint Protection 在我的计算机上检测到恶意软件，我该怎么办？](#what-should-i-do-if-windows-defender-or-endpoint-protection-detects-malicious-software-on-my-computer)  
 -   [什么是病毒？](#what-is-a-virus)  
 -   [什么是间谍软件？](#what-is-spyware)  
--   [病毒、间谍软件和其他可能有害的软件之间的区别是什么？](#hat-s-the-difference-between-viruses-spyware-and-other-potentially-harmful-software)  
+-   [病毒、间谍软件和其他可能有害的软件之间的区别是什么？](#whats-the-difference-between-viruses-spyware-and-other-potentially-harmful-software)  
 -   [病毒、间谍软件以及其他可能不需要的软件来自哪里？](#where-do-viruses-spyware-and-other-potentially-unwanted-software-come-from)  
 -   [我是否会在不知情的情况下获取恶意软件？](#can-i-get-malicious-software-without-knowing-it)  
 -   [为什么在安装软件之前查看许可证协议很重要？](#why-is-it-important-to-review-license-agreements-before-installing-software)  
--   [Endpoint Protection 和 Windows Defender 之间的区别是什么？](#what-s-the-difference-between-endpoint-protection-and-windows-defender)  
--   [Windows Defender 为什么没有检测到 cookie？](#why-doesn-t-windows-defender-detect-cookies)  
+-   [Endpoint Protection 和 Windows Defender 之间的区别是什么？](#whats-the-difference-between-endpoint-protection-and-windows-defender)  
+-   [Windows Defender 为什么没有检测到 cookie？](#why-doesnt-windows-defender-detect-cookies)  
 -   [如何防止恶意软件？](#how-can-i-prevent-malware)  
 -   [病毒和间谍软件的定义是什么？](#what-are-virus-and-spyware-definitions)  
 -   [如何使病毒和间谍软件定义保持最新？](#how-do-i-keep-virus-and-spyware-definitions-up-to-date)  

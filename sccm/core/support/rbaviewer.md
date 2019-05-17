@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 6372ff17-7f56-4d7b-a21b-87fb8bdd6d3a
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b51b3367969f985f9d9b4e90c9bd75105afa8b4f
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 533d055db3a68360c3c18d0e30e0718bf42c2a7c
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56124841"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500807"
 ---
 # <a name="role-based-administration-and-auditing-tool"></a>基于角色的管理和审核工具
 
