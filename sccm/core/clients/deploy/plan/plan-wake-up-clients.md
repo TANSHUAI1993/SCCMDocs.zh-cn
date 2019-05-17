@@ -2,35 +2,42 @@
 title: 唤醒客户端
 titleSuffix: Configuration Manager
 description: 计划如何在 System Center Configuration Manager 中使用 LAN 唤醒 (WOL) 唤醒客户端。
-ms.date: 05/23/2018
+ms.date: 04/23/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
 ms.assetid: 52ee82b2-0b91-4829-89df-80a6abc0e63a
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8ad20f88d6296a45c97e7c04d94624f9341d369e
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: a16d598b80dd18802e42cae51aeba3c91a4d707c
+ms.sourcegitcommit: 4e47f63a449f5cc2d90f9d68500dfcacab1f4dac
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56125970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62201407"
 ---
 # <a name="plan-how-to-wake-up-clients-in-system-center-configuration-manager"></a>计划如何在 System Center Configuration Manager 中唤醒客户端
 
 *适用于：System Center Configuration Manager (Current Branch)*
 
+ Configuration Manager 支持传统唤醒数据包，以在你要安装必需的软件（如软件更新和应用程序）时唤醒处于睡眠模式下的计算机。
+
+> [!NOTE]
+> 本文介绍较旧版本的 LAN 唤醒的工作方式。 此功能在 Configuration Manager 版本 1810 中仍然存在，该版本还包括较新版本的 LAN 唤醒。 在许多情况下，可以同时启用这两种版本的 LAN 唤醒。 若要详细了解从 1810 开始新版 LAN 唤醒的工作方式以及如何启用其中一个版本或同时启用两个版本，请参阅[如何配置 LAN 唤醒](/sccm/core/clients/deploy/configure-wake-on-lan)。  
+
+## <a name="how-to-wake-up-clients-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中唤醒客户端
+
  Configuration Manager 支持传统唤醒数据包，以在你要安装必需的软件（如软件更新和应用程序）时唤醒处于睡眠模式下的计算机。  
 
 可以使用唤醒代理客户端设置来对传统唤醒数据包方法进行补充。 唤醒代理使用对等协议和选定的计算机来检查子网上的其他计算机是否已唤醒并在必要时唤醒这些计算机。 在为 LAN 唤醒配置站点并为唤醒代理配置客户端后，过程将按以下方式工作：  
 
-1. 安装有 Configuration Manager 的客户端并且未在子网上休眠的计算机将检查子网上的其他计算机是否已唤醒。 它们通过每隔五秒就相互发送 TCP/IP ping 命令来完成此检查。  
+1. 安装有 Configuration Manager 的客户端并且未在子网上处于睡眠状态的计算机将检查子网上的其他计算机是否已唤醒。 它们通过每隔五秒就相互发送 TCP/IP ping 命令来完成此检查。  
 
-2. 如果其他计算机没有响应，则假定它们已休眠。 已唤醒的计算机将成为子网的“管理器计算机”。  
+2. 如果其他计算机没有响应，则假定它们已处于睡眠状态。 已唤醒的计算机将成为子网的“管理器计算机”。  
 
-    可能由于计算机休眠以外的原因（例如，计算机已关闭、已从网络中移除或者不再应用代理唤醒客户端设置）而导致计算机可能无法响应，因此将于当地时间每天下午两点向计算机发送唤醒数据包 。 未响应的计算机将不会被认为在休眠并且唤醒代理不会将其唤醒。  
+    可能由于除计算机处于睡眠状态以外的原因（例如，计算机已关闭、已从网络中移除或者不再应用代理唤醒客户端设置）而导致计算机可能无法响应，因此将于当地时间每天下午两点向计算机发送唤醒数据包 。 未响应的计算机将不会被认为处于睡眠状态并且唤醒代理不会将其唤醒。  
 
     若要支持唤醒代理，必须为每个子网至少唤醒三台计算机。 若要实现此要求，必须为子网随机选择三台计算机作为“守护计算机”。 该状态意味着尽管任何配置的电源策略在一段不活动时间后处于睡眠或休眠状态，它们也将保持唤醒状态。 例如为了维护任务，守护计算机将遵守关闭或重启命令。 如果发生此操作，则其余守护计算机将唤醒子网上的另一计算机，从而子网将继续拥有三台守护计算机。  
 
@@ -84,7 +91,7 @@ ms.locfileid: "56125970"
 
 决定是使用子网导向型广播包还是单播包以及要使用什么 UDP 端口号。 默认情况下，传统唤醒数据包通过 UDP 端口 9 传输，但为便于提高安全级别，你可以为站点选择备用端口（如果干预路由器和防火墙支持该备用端口）。  
 
-### <a name="choose-between-unicast-and-subnet-directed-broadcast-for-wake-on-lan"></a>为 LAN 唤醒在单播和子网导向型广播之间选择  
+## <a name="choose-between-unicast-and-subnet-directed-broadcast-for-wake-on-lan"></a>为 LAN 唤醒在单播和子网导向型广播之间选择  
  如果选择通过发送传统的唤醒数据包来唤醒计算机，则你必须决定是传输单播包，还是传输子网导向型广播包。 如果使用唤醒代理，则必须使用单播包。 或者，可使用下表来帮助你确定要选择的传输方法。  
 
 |传输方法|优点|缺点|  
@@ -93,4 +100,4 @@ ms.locfileid: "56125970"
 |子网导向型广播|如果你在同一子网上具有频繁更改其 IP 地址的计算机，则此解决方案比单播的成功率更高。<br /><br /> 无需进行交换机重新配置。<br /><br /> 对于所有睡眠状态，与计算机适配器具有较高的符合率，因为子网导向型广播是用于发送唤醒数据包的原始传输方法。|此解决方案没有使用单播安全，因为攻击者可能会从伪造的源地址向定向广播地址发送 ICMP 回显请求持续流。 这导致所有主机均回复该源地址。 如果路由器已配置为允许子网导向型广播，则出于安全原因，建议使用附加配置：<br /><br /> -   通过使用指定的 UDP 端口号，将路由器配置为只允许来自 Configuration Manager 站点服务器的 IP 导向型广播。<br />-   将 Configuration Manager 配置为使用指定的非默认端口号。<br /><br /> 可能需要重新配置所有干预路由器以启用子网定向广播。<br /><br /> 比单播传输消耗更多网络带宽。<br /><br /> 仅支持 IPv4；不支持 IPv6。|  
 
 > [!WARNING]  
->  与子网定向广播相关的安全风险：攻击者可能会从伪造的源地址向定向广播地址发送 Internet 控制消息协议 (ICMP) 回显请求连续流，这可能会使主机回复该源地址。 此类型的拒绝服务攻击通常叫做 Smurf 攻击，通常可以通过不启用子网定向广播得到缓解。
+>  与子网定向广播相关的安全风险：攻击者可能会从伪造的源地址向定向广播地址发送 Internet 控制消息协议 (ICMP) 回显请求连续流，这可能会使所有主机回复该源地址。 此类型的拒绝服务攻击通常叫做 Smurf 攻击，通常可以通过不启用子网定向广播得到缓解。
