@@ -1,6 +1,6 @@
 ---
 title: MMS 2019 Docathon
-ms.date: 04/18/2019
+ms.date: 05/06/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
@@ -10,12 +10,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-ms.openlocfilehash: ffd912f5776f38f9a5af6fd0b628127d0100c926
-ms.sourcegitcommit: 14d27fa21dea8bbb48a410d01def651c31567bd6
+ms.openlocfilehash: 76970a024e54067aaa6a3059bb95a6c134a2e999
+ms.sourcegitcommit: 99dfe4fb9e9cfd20c44380ae442b3a5b895a0d9b
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346660"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65214707"
 ---
 # <a name="mms-2019-docathon"></a>MMS 2019 Docathon
 
@@ -97,7 +97,7 @@ ms.locfileid: "64346660"
 
 ## <a name="contest-summary"></a>比赛摘要
 
-比赛持续一周，具体日期为 5 月 6 日至 9 日。 已注册 MMS 2019 的任何与会者都可以参加。 奖品将于 5 月 9 日（星期四）的 [ConfigMgr 产品团队问答环节](https://sched.co/N6ge)之后颁发。 必须在 MMS 2019 现场才有机会获奖，但不需要参加上述会议环节。 如果领取奖品时你不在现场，请在 Aaron 于周五上午离开之前与他取得联系。
+比赛持续一周，具体日期为 5 月 6 日至 9 日。 已注册 MMS 2019 的任何与会者都可以参加。 在 2019 年 5 月 9 日（星期四）下午 3:00（中央标准时间）前提交条目。 奖品将于 5 月 9 日（星期四）的 [ConfigMgr 产品团队问答环节](https://sched.co/N6ge)之后颁发。 必须在 MMS 2019 现场才有机会获奖，但不需要参加上述会议环节。 如果领取奖品时你不在现场，请在 Aaron 于周五上午离开之前与他取得联系。
 
 > [!Important]  
 > 必须在所有贡献内容中加上 #MMS2019Docathon 井号标签才能获得加分。
@@ -206,7 +206,7 @@ Microsoft 云 + AI 开发人员关系内容及了解 MMS 2019 Docathon 活动官
         - 更改内容最多者
         - 处理文章最多者
 
-    将于 2019 年 5 月 9 日（星期四）中部时间下午 5:00 之后选出获胜者。
+    获胜者将在 2019 年 5 月 9 日（星期四）下午 3:00（中央标准时间）后选出。
 
     获胜者将在活动中收到通知，并且必须在活动结束前领取奖品。
 
