@@ -61,6 +61,8 @@
           href: understand/configuration-manager-on-azure.md
     - name: 产品和许可常见问题解答
       href: understand/product-and-licensing-faq.md
+    - name: 网站规模和性能常见问题解答
+      href: understand/site-size-performance-faq.md
     - name: 诊断和使用情况数据常见问题解答
       href: understand/frequently-asked-questions-about-diagnostics-and-usage-data.md
 - name: 规划和设计
@@ -101,8 +103,8 @@
           href: plan-design/configs/supported-configurations.md
         - name: 大小和扩展数量
           href: plan-design/configs/size-and-scale-numbers.md
-        - name: 站点和站点系统先决条件
-          href: plan-design/configs/site-and-site-system-prerequisites.md
+        - name: 网站规模和性能指南
+          href: plan-design/configs/site-size-performance-guidelines.md
         - name: 站点系统服务器支持的操作系统
           href: plan-design/configs/supported-operating-systems-for-site-system-servers.md
         - name: 客户端和设备支持的操作系统
