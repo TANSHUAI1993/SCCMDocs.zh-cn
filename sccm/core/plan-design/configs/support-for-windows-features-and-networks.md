@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 ms.assetid: 0cf4bacb-6b6d-4d4f-8640-b13fe15873de
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ae1ac3262acff35e23de4faa1e80c796f5ee4e4b
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 8b2e5573ae4ec74db83dc895641af7b8fbc31a24
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: HT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56156689"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499583"
 ---
 # <a name="support-for-windows-features-and-networks-in-configuration-manager"></a>对 Configuration Manager 中的 Windows 功能和网络的支持
 
