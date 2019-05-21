@@ -2,8 +2,8 @@
 title: 配置分类和产品
 titleSuffix: Configuration Manager
 description: 按照以下步骤在 Configuration Manager 控制台中配置要同步的软件更新分类和产品。
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.date: 02/15/2019
 ms.topic: conceptual
@@ -11,16 +11,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 5ddde4e6-d553-4182-b752-6bc8b4a26745
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f1d984598288434aa1e81c6bd2c51a315edfa551
-ms.sourcegitcommit: fd16fc2b681608fd6def5bad2cedffbcd1f2423a
-ms.translationtype: HT
+ms.openlocfilehash: 747e66adb8f6ce0d013073463ee2472785d3bb70
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56405686"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499996"
 ---
 #  <a name="configure-classifications-and-products-to-synchronize"></a>配置要同步的分类和产品  
 
-适用范围：System Center Configuration Manager (Current Branch)
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 
 > [!NOTE]  
@@ -45,7 +45,7 @@ ms.locfileid: "56405686"
     > - **定义更新**：指定广泛发布且频率较高的软件更新，其中包含对产品的定义数据库的新增内容。  
     > - **功能包**：指定新的产品功能，这些功能首次在产品版本以外分发，而且通常包含在下一个完整的产品版本中。  
     > - **安全更新**：指定一个广泛发布的修复程序，旨在修复特定于产品的安全相关漏洞。  
-    > - **服务包**：指定一个经过测试、逐渐累积的集合，其中包含所有的修补程序、安全更新、关键更新和应用于某个产品的更新。 此外，服务包可能还包含旨在解决产品发布以来内部发现的问题的其他修补程序。  
+    > - **服务包**：指定一个经过测试、逐渐累积的集合，其中包含所有的修补程序、安全更新、关键更新和适用于某个产品的更新。 此外，服务包可能还包含旨在解决产品发布以来内部发现的问题的其他修补程序。  
     > - **工具**：指定可帮助完成一项或多项任务的实用程序或功能。  
     > - **更新汇总**：指定为便于部署而一起打包的修补程序、安全更新、关键更新和其他更新的经过测试的累积集合。 更新汇总通常解决特定领域的问题，例如安全性或产品组件问题。  
     > - **更新**：指定广泛发布的针对特定问题的修补程序。 更新解决了非关键且与安全无关的 bug。  

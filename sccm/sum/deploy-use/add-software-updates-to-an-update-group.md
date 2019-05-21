@@ -2,21 +2,21 @@
 title: '将更新添加到更新组 '
 titleSuffix: Configuration Manager
 description: 手动或自动将软件更新添加到环境中的软件更新组。
-author: aczechowski
 ms.date: 03/18/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: a0767664-fd60-46a8-9da5-86cc431ce53c
 manager: dougeby
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0657877c22aa8ce2382408821d5b61f5fded151d
-ms.sourcegitcommit: d71e558db2da124357b840332e2da671b3810507
+ms.openlocfilehash: b207d0c210aa25489d67a5a551bf795e86c1582b
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58268995"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500230"
 ---
 # <a name="add-software-updates-to-an-update-group"></a>将软件更新添加到更新组  
 
@@ -49,7 +49,7 @@ ms.locfileid: "58268995"
 3.  选择要添加到新软件更新组的软件更新。  
 
     > [!NOTE]  
-    >  上**的所有软件更新**节点，配置管理器将显示除中的所有更新**升级**分类并**Office 365 客户端**产品分类。  
+    >  在“所有软件更新”节点上，Configuration Manager 将显示所有更新，但“升级”分类和“Office 365 客户端”产品分类中的更新除外。  
 
 4.  在“主页”选项卡上的“更新”组中，单击“编辑成员身份”。  
 

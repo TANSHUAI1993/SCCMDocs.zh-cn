@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
 ms.assetid: 946b0f74-0794-4e8f-a6af-9737d877179b
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e361760d9d7a2b21f42dc7b9504d653b584fca0a
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 04963f6c565a9cb83655416dd706d5dd9055a29b
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56132432"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65499919"
 ---
 # <a name="enable-third-party-updates"></a>启用第三方更新 
 
@@ -109,11 +109,11 @@ ms.locfileid: "56132432"
      ![第三方更新添加自定义目录](media/third-party-updates-custom-catalog.png)
 1. 在“常规”页面上，指定以下各项： 
     - **下载 URL**：自定义目录的有效的 HTTPS 地址。
-    - **发布者**：发布目录的组织的名称。 
-    - **名称**：在 Configuration Manager 控制台中显示的目录的名称。 
-    - **描述**：对目录的描述。 
-    - **支持部门 URL**（可选）：用于获取目录相关帮助的网站的有效 HTTPS 地址。 
-    - **支持部门联系人**（可选）：用于获取目录相关帮助的联系人信息。 
+    - **发行商**：发布目录的组织的名称。 
+    - **名称**：要在 Configuration Manager 控制台中显示的目录的名称。 
+    - **描述**：目录描述。 
+    - **支持 URL**（可选）：用于获取目录相关帮助的网站的有效 HTTPS 地址。 
+    - **支持联系人**（可选）：用于获取目录相关帮助的联系人信息。 
 2. 单击“下一步”以查看目录摘要，并继续完成“第三方软件更新自定义目录向导”。
 
 

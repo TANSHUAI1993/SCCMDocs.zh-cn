@@ -11,16 +11,16 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6030bb1a02a94e61cf3ef53b6d90f7b6a5ae4f7a
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 32a645f95d25c92809723ae735f566535fc4043d
+ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56122094"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65083312"
 ---
 # <a name="planning-considerations-for-automating-tasks-in-configuration-manager"></a>计划在 Configuration Manager 中自动执行任务的注意事项
 
-适用范围：System Center Configuration Manager (Current Branch)
+*适用范围：System Center Configuration Manager (Current Branch)*
 
  可以创建任务序列，以在 Configuration Manager 环境中自动执行任务。 这些任务涉及从捕获引用计算机上的 OS 到向一个或多个目标计算机部署 OS 在内的各种任务。 序列的各个步骤中定义了任务序列的操作。 任务序列运行时，它在本地系统上下文中的命令行级别运行每个操作步骤。 此行为意味着任务序列完全自动化运行，而无需用户干预。 
 
@@ -92,7 +92,8 @@ ms.locfileid: "56122094"
 
 
 ## <a name="add-child-task-sequences-to-a-task-sequence"></a>将子任务序列添加到任务序列
- <!--1261338--> 自 Configuration Manager 版本 1710 起，可以添加运行另一个任务序列的新任务序列步骤。 此步骤将创建任务序列之间的父子关系。 使用此步骤可创建更多可重复使用的模块式任务序列。  
+ <!--1261338-->
+ 从 Configuration Manager 版本 1710 开始，可以添加运行另一个任务序列的新任务序列步骤。 此步骤将创建任务序列之间的父子关系。 使用此步骤可创建更多可重复使用的模块式任务序列。  
 
  有关详细信息，请参阅[运行任务序列](/sccm/osd/understand/task-sequence-steps#child-task-sequence)。 
 
@@ -190,7 +191,7 @@ ms.locfileid: "56122094"
  >   
  >  如果客户端在维护时段之外下载任务序列，则会下载两次任务序列。 在此方案中，客户端下载任务序列、禁用写入筛选器、重新启动计算机，然后会再次下载任务序列。 此行为是因为任务序列最初已下载到临时覆盖区，当设备重新启动时就会被清除。  
 
- 有关如何部署任务序列的详细信息，请参阅[部署任务序列](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS)。  
+ 有关如何部署任务序列的详细信息，请参阅[部署任务序列](/sccm/osd/deploy-use/deploy-a-task-sequence)。  
 
 
 
@@ -267,7 +268,7 @@ ms.locfileid: "56122094"
 > [!Note]  
 > 以下操作 OS 情况仍需要使用网络访问帐户：
 >  
-> - 任务序列[部署选项](/sccm/osd/deploy-use/manage-task-sequences-to-automate-tasks#BKMK_DeployTS)“需要时通过运行任务序列从分发点直接访问内容”   
+> - 任务序列[部署选项](/sccm/osd/deploy-use/deploy-a-task-sequence)“需要时通过运行任务序列从分发点直接访问内容”   
 > - [请求状态存储](/sccm/osd/understand/task-sequence-steps#BKMK_RequestStateStore)步骤选项“如果计算机帐户无法连接到状态存储，请使用网络访问帐户” 
 > - 与不受信任的域或跨 Active Directory 林连接时 
 > - [应用 OS 映像](/sccm/osd/understand/task-sequence-steps#BKMK_ApplyOperatingSystemImage)步骤选项“直接从分发点访问内容” 

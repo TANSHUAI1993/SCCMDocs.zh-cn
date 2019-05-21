@@ -2,21 +2,21 @@
 title: 管理和监视分阶段部署
 titleSuffix: Configuration Manager
 description: 了解如何在 Configuration Manager 中管理和监视软件的分阶段部署。
-ms.date: 11/27/2018
+ms.date: 04/16/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
 ms.assetid: dc245916-bc11-4983-9c4d-015f655007c1
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5ebf89e46b33649f12ea5770d6e771e811a66094
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: f378fd399a874b0db3844bbf02528dfe92981db5
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56125725"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500669"
 ---
 # <a name="manage-and-monitor-phased-deployments"></a>管理和监视分阶段部署
 
@@ -37,14 +37,14 @@ ms.locfileid: "56125725"
 
     - **应用程序**（仅在版本 1806 或更高版本中）：转到“软件库”工作区，展开“应用程序管理”，然后选择“应用程序”。   
 
-    - **软件更新**（仅在版本 1810 或更高版本中）：转到“软件库”工作区，再选择以下节点之一：    
+    - **软件更新**（仅在版本 1810 或更高版本）：转到“软件库”工作区，然后再选择以下节点之一：    
         - 软件更新  
             - **所有软件更新**  
             - **软件更新组**   
         - Windows 10 服务、所有 Windows 10 更新  
         - Office 365 客户端管理、Office 365 更新  
 
-    - **任务序列**：转到“软件库”工作区，展开“操作系统”，选择“任务序列”。   
+    - **任务序列**：转到“软件库”工作区中，展开“操作系统”，然后选择“任务序列”。   
 
 2. 选择具有分阶段部署的软件。  
 
@@ -64,14 +64,14 @@ ms.locfileid: "56125725"
 
     - **应用程序**（仅在版本 1806 或更高版本中）：转到“软件库”工作区，展开“应用程序管理”，然后选择“应用程序”。   
 
-    - **软件更新**（仅在版本 1810 或更高版本中）：转到“软件库”工作区，再选择以下节点之一：    
+    - **软件更新**（仅在版本 1810 或更高版本）：转到“软件库”工作区，然后再选择以下节点之一：    
         - 软件更新  
             - **所有软件更新**  
             - **软件更新组**   
         - Windows 10 服务、所有 Windows 10 更新  
         - Office 365 客户端管理、Office 365 更新  
 
-    - **任务序列**：转到“软件库”工作区，展开“操作系统”，选择“任务序列”。 选择一个现有任务序列，然后单击功能区中的“创建分阶段部署”。  
+    - **任务序列**：转到“软件库”工作区中，展开“操作系统”，然后选择“任务序列”。 选择一个现有任务序列，然后单击功能区中的“创建分阶段部署”。  
 
 2. 选择具有分阶段部署的软件。  
 
@@ -86,14 +86,15 @@ When you suspend a phased deployment, it sets the available and deadline times o
 
 ## <a name="bkmk_monitor"></a> 监视
 <!--1358577-->
+从版本 1902 开始，分阶段部署拥有其自己的专用监视节点，这样便能更轻松地识别已创建的分阶段部署及导航到分阶段部署的监视视图。 从“监视”工作区中，选择“分阶段部署”，然后双击其中一个分阶段部署以查看状态。 <!--3555949-->
 
-从版本 1806 开始，分阶段部署具有本地监视体验。 从“监视”工作区中的“部署”节点，选择分阶段部署，然后单击功能区中的“分阶段部署状态”。
+在 Configuration Manager 1806 和 1810 版中，可以看到分阶段部署的本机监视体验。 从“监视”工作区中的“部署”节点，选择分阶段部署，然后单击功能区中的“分阶段部署状态”。
 
 ![显示两个阶段的状态的分阶段部署状态仪表板](media/1358577-phased-deployment-status.png)
 
 此仪表板显示部署的每个阶段的以下信息：  
 
-- **设备总数**：此阶段针对多少台设备。  
+- **设备总数**或**资源总数**：此阶段针对多少台设备。  
 
 - **状态**：此阶段的当前状态。 每个阶段可以为以下状态之一：  
 
@@ -103,15 +104,15 @@ When you suspend a phased deployment, it sets the available and deadline times o
 
     - **已挂起**：管理员已挂起部署。  
 
-- **进度**：客户端中用颜色标明的部署状态。 例如：成功、进行中、错误、不符合要求以及未知。 
+- **进度**：客户端的用颜色标明的部署状态。 例如：成功、进行中、错误、不符合要求以及未知。 
 
 #### <a name="success-criteria-tile"></a>成功标准磁贴
 
-使用“选择阶段”下拉列表更改“成功标准”磁贴的显示。 此磁贴将阶段目标与部署的当前符合性进行比较。 在默认设置下，阶段目标是 95%。 此值意味着部署需要达到 95% 的符合性才能进入下一阶段。 
+使用“选择阶段”下拉列表更改“成功标准”磁贴的显示。 此磁贴将阶段目标与部署的当前符合性进行比较。 在默认设置下，阶段目标是 95%。 此值意味着部署需要达到 95% 的符合性才能进入下一阶段。
 
 在此示例中，阶段目标是 65%，当前符合性是 66.7%。 分阶段部署自动进入到第二阶段，因为第一阶段满足成功标准。  
 
-![来自分阶段部署状态的示例成功标准磁贴](media/pod-status-success-criteria-tile.png)
+   ![来自分阶段部署状态（目标是 65%）的示例成功标准磁贴](media/pod-status-success-criteria-tile.png)
 
 阶段目标与下一阶段的阶段设置上的部署成功百分比相同。 为让分阶段部署开始下一阶段，该第二阶段会定义第一阶段的成功标准。 查看此设置： 
 

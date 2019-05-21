@@ -2,7 +2,7 @@
 title: '创建客户端托管的 Windows 10 的配置项目 '
 titleSuffix: Configuration Manager
 description: 使用 System Center Configuration Manager Windows 10 配置项目管理由 Configuration Manager 客户端管理的 Windows 10 计算机的设置。
-ms.date: 03/28/2017
+ms.date: 05/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
@@ -11,12 +11,12 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e7215214c315af5965344c2b3c8ffbd29d522012
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 6a26ffcb0d88f50902e82049102825af956a4027
+ms.sourcegitcommit: 99dfe4fb9e9cfd20c44380ae442b3a5b895a0d9b
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56121016"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65214918"
 ---
 # <a name="how-to-create-configuration-items-for-windows-10-devices-managed-with-the-system-center-configuration-manager-client"></a>如何为使用 System Center Configuration Manager 客户端管理的 Windows 10 设备创建配置项目
 使用 System Center Configuration Manager **Windows 10** 配置项目管理由 Configuration Manager 客户端管理的 Windows 10 计算机的设置。  
@@ -42,16 +42,16 @@ ms.locfileid: "56121016"
   
 7. 在向导的“支持的平台”  页上，选择将评估配置项目的特定 Windows 10 平台。  
   
-8. 在向导的“设备设置”  页面上，选择要配置的设置组。 请参阅本主题中的 [Windows 10 configuration item settings reference](#BKMK_Ref) 以了解详细信息，然后单击“下一步” 。  
+8. 在向导的“设备设置”  页面上，选择要配置的设置组。 请参阅本文中的 [Windows 10 配置项目设置参考](#BKMK_Ref)以了解详细信息，然后单击“下一步”。  
   
    > [!TIP]  
    >  如果所需设置未列出，请选中“配置默认设置组以外的其他设置” 复选框。  
   
-9. 在每个设置页面上，配置所需设置，以及是否要在它们在设备上不符合要求时修正它们（如果支持这样做）。  
+9. 在每个设置页上，配置所需设置，以及是否要在它们在设备上不符合要求时修正它们（如果支持这样做）。  
   
 10. 对于每个设置组，还可以配置在发现配置项目不符合要求时将要报告的严重性：  
   
-    -   **不报告** - 对于 Configuration Manager 报表，不符合此合规性规则的设备不报告故障严重性。  
+    -   **无** - 对于 Configuration Manager 报表，不符合此符合性规则的设备不报告故障严重性。  
   
     -   **信息** - 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“信息”这一故障严重性。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "56121016"
   
     -   **事件严重** - 对于 Configuration Manager 报表，不符合此合规性规则的设备将报告“严重”这一故障严重性。 此外会记录此严重性级别为应用程序事件日志中的 Windows 事件。  
   
-11. 在向导的“平台适用性”  页面上，查看任何与先前选择的受支持平台不兼容的设置。 你可以返回并删除这些设置，也可以继续。  
+11. 在向导的“平台适用性”页上，查看任何与先前选择的受支持平台不兼容的设置。 你可以返回并删除这些设置，也可以继续。  
   
     > [!TIP]  
     >  不会对不受支持的设置评估符合性。  
@@ -70,7 +70,7 @@ ms.locfileid: "56121016"
   
     可以在“资产和符合性”  工作区的“配置项目”  节点中查看新配置项目。  
   
-##  <a name="windows-10-configuration-item-settings-reference"></a>Windows 10 配置项目设置参考  
+## <a name="BKMK_Ref"></a> Windows 10 configuration item settings reference  
   
 ### <a name="password"></a>Password  
   
@@ -80,10 +80,10 @@ ms.locfileid: "56121016"
 |**最短密码长度（字符）**|密码的最短长度（以字符为单位）。|  
 |**密码过期天数**|必须更改密码前的天数。|  
 |**记住的密码数**|防止重复使用以前的密码。|  
-|**擦除设备前的失败登录尝试次数**|如果登录失败达到此次数，则擦除设备。|  
+|**擦除设备前的失败登录尝试次数**|如果登录失败次数达到此次数，则擦除设备。|  
 |**锁定设备前的空闲时间**|指定设备在自动锁定之前必须处于非活动状态的分钟数。|  
 |**密码复杂性**|选择是否可以指定一个如“1234”的 PIN，或是否必须提供一个强密码。|
-|**密码中需要的复杂字符集数**|如果选择“强”密码，使用此设置配置所需的复杂字符集数量。 对于强密码，至少应设置为 **3**，这意味着同时需要字母和数字。 如果要强制采用额外需要特殊字符（如 **(%$**）的密码，请选择 **4**。<br>（仅 Windows 10）  |
+|**密码中需要的复杂字符集数**|如果选择“强”密码，使用此设置配置所需的复杂字符集数量。 对于强密码，至少应将此设置设置为 **3，表示同时需要字母和数字。 如果要强制采用额外需要特殊字符（如 **(%$**）的密码，请选择 **4**。<br>（仅 Windows 10）  |
   
 ###  <a name="device"></a>设备  
   
@@ -133,4 +133,4 @@ Windows 信息保护（以前称为企业数据保护）帮助防范此可能的
 有关如何使用 Configuration Manager 配置 Windows 信息保护的信息，请参阅[使用 Windows 信息保护 (WIP) 保护企业数据](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip)。
   
 ## <a name="see-also"></a>另请参阅  
- [使用 System Center Configuration Manager 客户端管理的设备的配置项目](../../compliance/deploy-use/configuration-items-for-devices-managed-with-the-client.md)
+ [使用 System Center Configuration Manager 客户端管理的设备的配置项目](../../compliance/deploy-use/create-configuration-items.md)

@@ -2,8 +2,8 @@
 title: 部署软件更新
 titleSuffix: Configuration Manager
 description: 了解如何在 Configuration Manager 控制台中手动或自动部署软件更新。
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.date: 11/27/2018
 ms.topic: conceptual
@@ -11,16 +11,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 04536d51-3bf7-45e5-b4af-36ceed10583d
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cabcb57a429e0fb14732cead98902ca5b43957af
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: d01e01bf8318e5d4016420044a5f2f49c9b6965c
+ms.sourcegitcommit: 53f2380ac67025fb4a69fc1651edad15d98e0cdd
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56156757"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65673379"
 ---
 # <a name="deploy-software-updates"></a>部署软件更新  
 
-适用范围：System Center Configuration Manager (Current Branch)
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 软件更新部署阶段是指部署软件更新的过程。 无论如何部署软件更新，该站点：
 - 将更新添加到软件更新组
@@ -114,7 +114,8 @@ ms.locfileid: "56156757"
 
 ## <a name="bkmk_phased"></a> 分阶段部署软件更新
 
-<!--1358146--> 从版本 1810 开始，为软件更新创建分阶段部署。 通过分阶段部署，可以根据可自定义条件和组进行协调安排，有序推出软件。
+<!--1358146-->
+从版本 1810 开始，为软件更新创建分阶段部署。 通过分阶段部署，可以根据可自定义条件和组进行协调安排，有序推出软件。
 
 有关详细信息，请参阅[创建分阶段部署](/sccm/osd/deploy-use/create-phased-deployment-for-task-sequence?toc=/sccm/sum/toc.json&bc=/sccm/sum/breadcrumb/toc.json)。
 

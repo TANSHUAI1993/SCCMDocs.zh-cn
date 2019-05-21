@@ -5,18 +5,18 @@ description: 将可使组织中基于 Windows 10 的设备保持最新状态的�
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 03/28/2019
+ms.date: 04/25/2019
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2929782880971b53be3b6013188f65d50d691c05
-ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
+ms.openlocfilehash: 36ab933876b96c0eebe87ba07932757147e334c0
+ms.sourcegitcommit: 9af73f5c1b93f6ccaea3e6a096f75a5fecd65c2f
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58523752"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64669115"
 ---
 # <a name="integration-with-windows-update-for-business-in-windows-10"></a>在 Windows 10 中与 Windows Update for Business 集成
 
@@ -25,8 +25,8 @@ ms.locfileid: "58523752"
 当基于 Windows 10 的设备直接连接到 Windows 更新 (WU) 服务时，适用于企业的 Windows 更新 (WUfB) 能够让组织中的这些设备始终具有最新的安全防御和 Windows 功能。 Configuration Manager 能够区分使用 WUfB 和 WSUS 来获取软件更新的 Windows 10 计算机。  
 
 >[!WARNING]
-> 如果设备使用共同管理，并且已移动[Windows 更新策略](/sccm/comanage/workloads#windows-update-policies)到 Intune，那么你的设备将获得其[适用于企业的 Windows 更新策略从 Intune](https://docs.microsoft.com/intune/windows-update-for-business-configure)。
-> - 如果仍在共同管理的设备上安装 Configuration Manager 客户端，则是由 Intune 管理的累积更新和功能更新的设置。 但是，第三方修补，如果在中启用[**客户端设置**](/sccm/core/clients/deploy/about-client-settings#enable-third-party-software-updates)，仍管理由 Configuration Manager。  
+> 如果设备使用共同管理，并且你已将 [Windows 更新策略](/sccm/comanage/workloads#windows-update-policies)移动到 Intune，设备将获得 [Intune 中适用于企业的 Windows 更新策略](https://docs.microsoft.com/intune/windows-update-for-business-configure)。
+> - 如果 Configuration Manager 客户端仍安装在共同管理的设备上，则累积更新和功能更新的设置由 Intune 管理。 但是，如果已在[客户端设置](/sccm/core/clients/deploy/about-client-settings#enable-third-party-software-updates)中启用第三方修补，则该修补仍由 Configuration Manager 管理。  
 
  当 Configuration Manager 客户端配置为从 WU 接收更新后（其中包括 WUfB 或 Windows 预览体验成员），一些 Configuration Manager 功能将不再可用：  
 
@@ -44,7 +44,7 @@ ms.locfileid: "58523752"
 
 -   Configuration Manager 无法将 Microsoft 更新（如 Office、IE 和 Visual Studio）部署到连接 WUfB 以接收更新的客户端。  
 
--   Configuration Manager 仍可将发布到 WSUS 并通过 Configuration Manager 管理的第三方更新部署到连接 WUfB 以接收更新的客户端。 如果不希望连接到 WUfB 的客户端上安装任何第三方更新，然后禁用客户端设置[客户端上启用软件更新](/sccm/core/clients/deploy/about-client-settings#software-updates)。
+-   Configuration Manager 仍可将发布到 WSUS 并通过 Configuration Manager 管理的第三方更新部署到连接 WUfB 以接收更新的客户端。 如果不需要在连接到 WUfB 的客户端上安装任何第三方更新，则禁用名为[在客户端上启用软件更新](/sccm/core/clients/deploy/about-client-settings#software-updates)的客户端设置。
 
 -   使用软件更新基础结构的 Configuration Manager 完整客户端部署将不能用于连接 WUfB 以接收更新的客户端。  
 

@@ -2,7 +2,7 @@
 title: 创建子配置项目
 titleSuffix: Configuration Manager
 description: 在 System Center Configuration Manager 中创建子配置项目。
-ms.date: 10/06/2016
+ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
@@ -11,21 +11,21 @@ author: aczechowski
 manager: dougeby
 ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 42b6bceacf8d8ecd733e4d13b882fe3b5c0500e7
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 0b88ee7eaac8df8ffce93937f3a3f2616b9e085b
+ms.sourcegitcommit: 417e3834a42b415a8e129327dd3c15cc0c7ec5a2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56135739"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65443155"
 ---
 # <a name="how-to-create-child-configuration-items-in-system-center-configuration-manager"></a>如何在 System Center Configuration Manager 中创建子配置项目
 
-适用范围：System Center Configuration Manager (Current Branch)
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager 中的子配置项目是与原始配置项目保持关系的配置项目的副本，因为它们从父配置项目继承原始配置。  
 
 在 Configuration Manager 控制台中查看子配置项目的属性时，无法通过所继承的对象和设置的验证条件对其进行编辑。 但是，您可以将其他验证条件添加到子配置项目并进行编辑，也可以向子配置项目添加新的对象和设置。
-创建和编辑子配置项目的通常目的在于完善原始配置项目以满足业务要求。  
+例如，创建和编辑子配置项目可以完善原始配置项目以满足业务要求。  
 
 > [!NOTE]  
 >  只能从类型为“Windows 台式机和服务器(自定义)” 的配置项目创建子配置项目。  

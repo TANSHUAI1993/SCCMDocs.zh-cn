@@ -7,16 +7,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
 ms.assetid: 3b9c4027-a98b-406b-935c-ccabcfe713df
-author: aczechowski
+author: mestew
+ms.author: mstewart
 manager: dougeby
-ms.author: aaroncz
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 411811c4047cd781d0edcd5cc345ff82acc80f91
-ms.sourcegitcommit: 0a23cde6112cbb5987f433bffcf6f223b994ba72
+ms.openlocfilehash: 976a6b149175b817ea7039faf1f909a73f2b514d
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56667437"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500527"
 ---
 #  <a name="using-configuration-manager-software-updates-to-deliver-definition-updates"></a>使用 Configuration Manager 软件更新将定义更新交付
 
@@ -52,7 +52,7 @@ ms.locfileid: "56667437"
 7. 在向导的“部署设置”页上，选择“详细信息级别”列表中的“仅错误消息”，再单击“下一步”。
 
    > [!NOTE]
-   >  选择**仅错误消息**将减少定义部署返回的状态消息的数目。 此配置有助于降低 Configuration Manager 服务器上的 CPU 处理使用率。
+   >  选择“仅错误消息”将减少定义部署返回的状态消息数。 此配置有助于降低 Configuration Manager 服务器上的 CPU 处理使用率。
 
 8. 在“属性筛选器”  列表中，选择“更新分类”  复选框。
 

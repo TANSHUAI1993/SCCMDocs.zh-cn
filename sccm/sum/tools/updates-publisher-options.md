@@ -7,20 +7,20 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
 ms.assetid: 4e620080-5400-45bb-87c2-fbdbc8aeacac
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17a233c7f71edfd9d294c33ee3b9813cc581b8c6
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 7a26aaa2d4e409e899763cedebd32ebf64c93ffa
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56124132"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65496386"
 ---
 # <a name="configure-options-for-updates-publisher"></a>为 Updates Publisher 配置选项
 
-适用范围：System Center Updates Publisher
+*适用范围：System Center Updates Publisher*
 
 检查并配置影响 Updates Publisher 操作的选项和相关设置。
 
@@ -57,9 +57,9 @@ ms.locfileid: "56124132"
 
   如果没有设置为更新服务器自动检测数字证书，请选择以下选项之一：
 
-  -   **浏览**：仅在运行控制台的服务器上安装了更新服务器后，“浏览”才可用。 选择证书后，必须选择“创建”，才能将证书添加到更新服务器上的 WSUS 证书存储中。 必须为通过此方法选择的证书输入 **.pfx** 文件密码。
+  -   浏览：仅在运行控制台的服务器上安装了更新服务器后，“浏览”才可用。 选择证书后，必须选择“创建”，才能将证书添加到更新服务器上的 WSUS 证书存储中。 必须为通过此方法选择的证书输入 **.pfx** 文件密码。
 
-  -   **创建：** 选择此选项可新建证书。 还可以将证书添加到更新服务器上的 WSUS 证书存储中。
+  -   创建：选择此选项可新建证书。 还可以将证书添加到更新服务器上的 WSUS 证书存储中。
 
   **如果创建你自己的签名证书**，请配置以下选项：
 
@@ -74,15 +74,15 @@ ms.locfileid: "56124132"
 ## <a name="configmgr-server"></a>ConfigMgr 服务器
 将 Configuration Manager 与 Updates Publisher 结合使用时，请配置下面这些选项。
 
--   **指定 Configuration Manager 服务器：** 启用对 Configuration Manager 的支持后，指定 Configuration Manager 层次结构中的顶层网站服务器的位置。 如果此服务器远离 Updates Publisher 安装项，请指定网站服务器的 FQDN。 选择“测试连接”，以确保可以连接网站服务器。
+-   指定 Configuration Manager 服务器：启用对 Configuration Manager 的支持后，指定 Configuration Manager 层次结构中的顶层网站服务器的位置。 如果此服务器远离 Updates Publisher 安装项，请指定网站服务器的 FQDN。 选择“测试连接”，以确保可以连接网站服务器。
 
--   **配置阈值：** 如果发布的更新的发布项类型为“自动”，需要使用阈值。 阈值有助于确定何时发布更新的完整内容，而不是只发布元数据。 若要详细了解发布项类型，请参阅[将更新分配给发布项](/sccm/sum/tools/manage-updates-with-updates-publisher#assign-updates-and-bundles-to-a-publication)
+-   配置阈值：如果发布的更新的发布项类型为“自动”，需要使用阈值。 阈值有助于确定何时发布更新的完整内容，而不是只发布元数据。 若要详细了解发布项类型，请参阅[将更新分配给发布项](/sccm/sum/tools/manage-updates-with-updates-publisher#assign-updates-and-bundles-to-a-publication)
 
     可以使用以下阈值之一，也可以两种阈值都使用：
 
-    -   **请求客户端计数阈值：** 此阈值定义了必须有多少个客户端请求更新，Updates Publisher 才能自动发布更新的完整内容。 如果没有指定数量的客户端请求更新，只会发布更新元数据。
+    -   请求客户端计数阈值：此阈值定义了必须有多少个客户端请求更新，Updates Publisher 才能自动发布更新的完整内容。 如果没有指定数量的客户端请求更新，只会发布更新元数据。
 
-    -   **包源大小阈值 (MB)：** 此阈值可阻止自动发布超出指定大小的更新。 如果更新的大小超出此阈值，只会发布元数据。 如果更新的大小小于指定阈值，可以发布更新的完整内容。
+    -   包源大小阈值(MB)：此阈值可阻止自动发布超出指定大小的更新。 如果更新的大小超出此阈值，只会发布元数据。 如果更新的大小小于指定阈值，可以发布更新的完整内容。
 
 ## <a name="proxy-settings"></a>代理设置
 从 Internet 导入软件目录或向 Internet 发布更新时，Updates Publisher 使用代理设置。
@@ -101,17 +101,17 @@ ms.locfileid: "56124132"
 ## <a name="advanced"></a>高级
 高级选项如下：
 
--   **存储库位置：** 查看和修改数据库文件 scupdb.sdf 的位置。 此文件是 Updates Publisher 存储库。
+-   存储库位置：查看和修改数据库文件 **scupdb.sdf** 的位置。 此文件是 Updates Publisher 存储库。
 
--   **时间戳：** 启用后，时间戳会添加到签名的更新中，以标识签名时间。 在证书有效时签名的更新可以在签名证书过期后继续使用。 默认情况下，无法部署签名证书过期的软件更新。
+-   时间戳：启用后，时间戳会添加到签名的更新中，以标识签名时间。 在证书有效时签名的更新可以在签名证书过期后继续使用。 默认情况下，无法部署签名证书过期的软件更新。
 
--   **检查已订阅目录的更新：** 每次启动时，Updates Publisher 都可以自动检查已订阅目录的更新。 发现的目录最新动态会在“更新工作区”的“概述”窗口中以“最新警报”的形式详细显示。
+-   检查已订阅目录的最新动态：每次启动时，Updates Publisher 都可以自动检查已订阅目录的最新动态。 发现的目录最新动态会在“更新工作区”的“概述”窗口中以“最新警报”的形式详细显示。
 
--   **证书吊销：** 选择此选项可以启用证书吊销检查。
+-   证书吊销：选择此选项可以启用证书吊销检查。
 
--   **本地源发布：** 从 Internet 下载要发布的更新前，Updates Publisher 可以先使用它的本地副本。 位置必须是运行 Updates Publisher 的计算机上的文件夹。 默认情况下，此位置是 **My Documents\LocalSourcePublishing**。 如果以前下载过一个或多个更新，或对要部署的更新进行了修改，请选择此选项。
+-   本地源发布：从 Internet 下载要发布的更新前，Updates Publisher 可以先使用它的本地副本。 位置必须是运行 Updates Publisher 的计算机上的文件夹。 默认情况下，此位置是 **My Documents\LocalSourcePublishing**。 如果以前下载过一个或多个更新，或对要部署的更新进行了修改，请选择此选项。
 
--   **软件更新清理向导：** 启动更新清理向导。 此向导会终止更新服务器上有、但 Updates Publisher 存储库中没有的更新。 请参阅[终止未引用的软件更新](#expire-unreferenced-software-updates)，了解更多详情。
+-   软件更新清理向导：启动更新清理向导。 此向导会终止更新服务器上有、但 Updates Publisher 存储库中没有的更新。 请参阅[终止未引用的软件更新](#expire-unreferenced-software-updates)，了解更多详情。
 
 ## <a name="updates"></a>更新
  Updates Publisher 可以在每次打开时自动检查是否有新更新。 也可以选择接收 Updates Publisher 的预览版。
@@ -122,7 +122,7 @@ ms.locfileid: "56124132"
 找到新更新后，Updates Publisher 会在“更新可用”窗口中进行显示，然后你可以选择安装。 如果选择不安装更新，将在下次打开控制台时看到安装提示。
 
 ## <a name="logging"></a>日志记录
-Updates Publisher 将 Updates Publisher 的基本信息记录到 &lt;路径&gt;\Windows\Temp\UpdatesPublisher.log。
+Updates Publisher 将 Updates Publisher 的基本信息记录到 %WINDIR%\Temp\UpdatesPublisher.log。
 
 使用记事本或 **CMTrace** 可以查看日志。 CMTrace 是 Configuration Manager 日志文件工具，位于 Configuration Manager 源媒体的 **\SMSSetup\Tools** 文件夹中。
 

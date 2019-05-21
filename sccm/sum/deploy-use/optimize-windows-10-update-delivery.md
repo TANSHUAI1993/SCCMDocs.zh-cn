@@ -7,20 +7,20 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
 ms.assetid: b670cfaf-96a4-4fcb-9caa-0f2e8c2c6198
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 92ac9cbfd8b4c68a818a3988c0ce1f3ec26a2215
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 667dfda7f03c5c39f8a0a2e4ffc2ba38bddf5a0e
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56139164"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500133"
 ---
 # <a name="optimize-windows-10-update-delivery-with-configuration-manager"></a>使用 Configuration Manager 优化 Windows 10 更新传递
 
-适用范围：System Center Configuration Manager (Current Branch)
+*适用于：System Center Configuration Manager (Current Branch)*
 
 对于许多客户而言，使用 Configuration Manager 获取且及时了解 Windows 10 月度更新的成功途径从良好的内容分发策略开始。 月度质量更新的大小可能是大型组织关心的一个原因。 某些技术旨在帮助降低带宽和网络负载以优化更新传递。 本文将介绍这些技术，对它们进行比较，并提供帮助你决定使用哪种技术的建议。  
  

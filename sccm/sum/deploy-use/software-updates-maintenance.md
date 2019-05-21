@@ -11,12 +11,12 @@ ms.assetid: 4b0e2e90-aac7-4d06-a707-512eee6e576c
 manager: dougeby
 ms.author: mstewart
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5146ba92da82aad6c8dfbf4d961a52e197d0a9b2
-ms.sourcegitcommit: d8d142044586a53709b4478ad945f714737c8d6e
+ms.openlocfilehash: 1f8624e898e22ebb2eef66d72a242d02b36d342d
+ms.sourcegitcommit: 2db6863c6740380478a4a8beb74f03b8178280ba
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58523820"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65083360"
 ---
 # <a name="software-updates-maintenance"></a>软件更新维护
 
@@ -80,7 +80,7 @@ ms.locfileid: "58523820"
 
 ## <a name="wsus-cleanup-behavior-starting-in-version-1810"></a>从版本 1810 开始的 WSUS 清理行为
 
-从版本 1810年，可以在软件更新点组件属性中指定独立于非功能更新的功能更新的取代规则。 WSUS 清理选项在每次同步后出现，并执行以下清理项：
+从版本 1810 开始，可以在软件更新点组件属性中指定独立于非功能更新的功能更新的取代规则。 WSUS 清理选项在每次同步后出现，并执行以下清理项：
 <!--2839349,3098809, 2977644-->
 
 - CAS、主站点和辅助站点上 WSUS 服务器的“已过期更新”选项。

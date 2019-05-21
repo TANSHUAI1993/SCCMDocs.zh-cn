@@ -2,8 +2,8 @@
 title: 监视软件更新
 titleSuffix: Configuration Manager
 description: System Center Configuration Manager 控制台提供警报和状态以监视更新和符合性。
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.date: 07/30/2018
 ms.topic: conceptual
@@ -11,16 +11,16 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.assetid: 9afd7b0f-5c8e-48bc-9a65-1f7d74103688
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9399900849ead41118cb727c3ec36cd8345e393b
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
-ms.translationtype: HT
+ms.openlocfilehash: 5cd5c27aa04f25b044f74533983a214dc9f9341b
+ms.sourcegitcommit: 80cbc122937e1add82310b956f7b24296b9c8081
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56133099"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65500157"
 ---
 # <a name="monitor-software-updates-in-system-center-configuration-manager"></a>在 System Center Configuration Manager 中监视软件更新
 
-适用范围：System Center Configuration Manager (Current Branch)
+*适用范围：System Center Configuration Manager (Current Branch)*
 
 System Center Configuration Manager 提供了许多方式来帮助你监视软件更新对象、过程和符合性信息。 使用以下部分可监视软件更新。
 
@@ -69,7 +69,7 @@ System Center Configuration Manager 提供了许多方式来帮助你监视软�
 #### <a name="compliance-9---overall-health-and-compliance-starting-in-version-1806"></a>符合性 9 - 总体运行状况和符合性（自版本 1806 起）
 报告包括以下几个部分：
 
-- **运行正常的客户端与客户端总数**：此条形图比较了在指定时间段内与站点通信的“运行正常”客户端的数量和指定集合中的客户端总数。
+- **正常客户端与总客户端**：此条形图比较了在指定时间段内与站点通信的“正常”客户端的数量和指定集合中的客户端总数。
 - **符合性概述**：此饼图显示了指定集合中活动客户端上的特定软件更新组的总体符合性状态。
 - **前 5 个不符合（按文章 ID）**：此条形图显示了特定组中在指定集合中的活动客户端上不符合的前五个软件更新。
 - 报告底部是具有更多详细信息的表，其中列出了指定组中的软件更新。

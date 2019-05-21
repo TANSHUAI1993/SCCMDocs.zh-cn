@@ -11,16 +11,16 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 37a468a2b9727d66f7d3fe0cafd1aae044585b2a
-ms.sourcegitcommit: e18853c214c95e4d21b2f032aba6d17c21e97027
-ms.translationtype: HT
+ms.openlocfilehash: eb07b154c1da9c7b93f2d8e0f06b825eb52fd561
+ms.sourcegitcommit: 417e3834a42b415a8e129327dd3c15cc0c7ec5a2
+ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443947"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65443197"
 ---
 # <a name="install-updates-publisher"></a>安装 Updates Publisher
 
-适用范围：System Center Updates Publisher
+*适用范围：System Center Updates Publisher*
 
 这些文章中的信息可以帮助你下载、安装和设置 Updates Publisher，以便用于 System Center Configuration Manager 环境。
 
@@ -103,12 +103,10 @@ System Center Updates Publisher 只能与 System Center Configuration Manager �
 -   俄语
 -   西班牙语
 
-
-
 ## <a name="install-updates-publisher"></a>安装 Updates Publisher
 从 [Microsoft 下载中心](https://www.microsoft.com/download/details.aspx?id=55543)获取用于安装 System Center Updates Publisher 的 **UpdatesPubliser.msi**。
 
-若要安装 Updates Publisher，在满足*先决条件*的计算机上运行 **UpdatesPublisher.msi**。 安装程序会创建以下文件夹，以包含运行 Updates Publisher 所必需的文件：*&lt;path&gt;\Program Files\Microsoft\UpdatesPublisher*。
+若要安装 Updates Publisher，在满足*先决条件*的计算机上运行 **UpdatesPublisher.msi**。 安装程序会创建以下文件夹，以包含运行 Updates Publisher 所必需的文件：%PROGRAMFILES%\Microsoft\UpdatesPublisher*。
 
 因为此文件夹包含使用 Updates Publisher 所必需的全部文件，所以可以将此文件夹及其内容复制到新的位置或计算机中，然后从相应位置使用 Updates Publisher。 不过，新的位置或计算机必须满足运行 Updates Publisher 的先决条件。
 
@@ -118,4 +116,3 @@ System Center Updates Publisher 只能与 System Center Configuration Manager �
  安装 Updates Publisher 后，我们建议为 Updates Publisher [配置选项](updates-publisher-options.md)。 必须先配置一些选项，然后才能使用 Updates Publisher 的一些功能。
 
  不过，如果要使用默认功能，并且不打算将更新部署到更新服务器或受管理设备，可以直接跳到[管理软件更新目录](updates-publisher-catalogs.md)或[创建软件更新](create-updates-with-updates-publisher.md)，创建你自己的更新目录。
-

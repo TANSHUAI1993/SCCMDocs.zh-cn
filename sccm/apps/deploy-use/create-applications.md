@@ -2,7 +2,7 @@
 title: 创建应用程序
 titleSuffix: Configuration Manager
 description: 使用部署类型、检测方法和安装软件要求创建应用程序。
-ms.date: 03/04/2019
+ms.date: 05/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -11,18 +11,18 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 236ae6e9efafcfe24f064fb643a43524eee3718d
-ms.sourcegitcommit: 4ab85212268e76d3fd22f00e6c74edaa5abde60c
+ms.openlocfilehash: e796996f870fcdd8428f3a16b08eee56d249cfa6
+ms.sourcegitcommit: 53f2380ac67025fb4a69fc1651edad15d98e0cdd
 ms.translationtype: MTE75
 ms.contentlocale: zh-CN
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426934"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65673395"
 ---
 # <a name="create-applications-in-configuration-manager"></a>在 Configuration Manager 中创建应用程序
 
 *适用范围：System Center Configuration Manager (Current Branch)*
 
-Configuration Manager 应用程序可定义有关应用的元数据。 应用程序具有一个或多个部署类型。 这些部署类型包括安装文件和在设备上安装软件所需的信息。 部署类型还有规则（如检测方法）和要求。 这些规则指定客户端安装软件的时间和方式。  
+Configuration Manager 应用程序可定义有关应用程序的元数据。 应用程序具有一个或多个部署类型。 这些部署类型包括安装文件和在设备上安装软件所需的信息。 部署类型还有规则（如检测方法）和要求。 这些规则指定客户端安装软件的时间和方式。  
 
 使用下列方法创建应用程序：  
 
@@ -88,7 +88,7 @@ Configuration Manager 应用程序可定义有关应用的元数据。 应用程
 
     -   **使用自动 VPN 连接（如果已配置）**：如果已将 VPN 配置文件部署到用户启动应用的设备，请在应用启动时连接 VPN。 此选项仅适用于 Windows 8.1 和 Windows Phone 8.1。 在 Windows Phone 8.1 设备上，如果有多个 VPN 配置文件部署到设备，则不支持自动 VPN 连接。 有关详细信息，请参阅 [VPN 配置文件](/sccm/protect/deploy-use/vpn-profiles)。  
 
-    - **为设备上的所有用户预配此应用程序**<!--1358310-->：从版本 1806 开始，为设备上的所有用户预配具有 Windows 应用包的应用程序。 有关详细信息，请参阅[创建 Windows 应用程序](/sccm/apps/get-started/creating-windows-applications#bkmk_provision)。  
+    - **为设备上的所有用户预配此应用程序**<!--1358310-->：从版本 1806 开始，使用 Windows 应用包为设备上的所有用户预配应用程序。 有关详细信息，请参阅[创建 Windows 应用程序](/sccm/apps/get-started/creating-windows-applications#bkmk_provision)。  
 
        > [!Tip]  
        > 如果要修改现有应用程序，则此设置位于 Windows 应用包部署类型属性的“用户体验”选项卡上。  
@@ -126,6 +126,9 @@ Configuration Manager 应用程序可定义有关应用的元数据。 应用程
         > 必须为设置的每个语言版本指定一个本地化应用程序名称。  
 
     -   **用户类别**：选择“编辑”以使用选择的语言指定应用程序类别。 软件中心的用户使用这些类别来帮助对可用应用程序进行筛选和排序。  
+
+        > [!IMPORTANT]  
+        > 用户类别仅适用于部署到用户集合。  如果将某个应用程序部署到计算机集合，则会忽略用户类别。
 
     -   **用户文档**：指定文件的位置，软件中心用户可从中获取有关此应用程序的详细信息。 此位置是网站地址或网络路径和文件名称。 请确保用户有权访问此位置。  
 
@@ -321,7 +324,7 @@ Configuration Manager 应用程序可定义有关应用的元数据。 应用程
 2.  在“脚本编辑器”对话框中，单击“脚本类型”下拉列表。 选择以下脚本语言之一以检测部署类型：PowerShell、VBScript 或 JScript。  
 
     > [!Note]  
-    > 从版本 1810，当 Windows PowerShell 脚本运行作为应用的检测方法时，Configuration Manager 客户端调用 PowerShell 使用`-NoProfile`参数。 此选项在没有配置文件的情况下启动 PowerShell。 PowerShell 配置文件是在 PowerShell 启动时运行的脚本。 <!--3607762-->  
+    > 从版本 1810 开始，当 Windows PowerShell 脚本作为应用检测方法运行时，Configuration Manager 客户端会使用 `-NoProfile` 参数调用 PowerShell。 此选项在没有配置文件的情况下启动 PowerShell。 PowerShell 配置文件是在 PowerShell 启动时运行的脚本。 <!--3607762-->  
 
 3.  在“脚本内容”框中，输入想要使用的脚本，或粘贴现有脚本的内容。 选择“打开”，浏览到已保存的现有脚本。 单击“清除”，删除脚本内容字段中的文本。 如有必要，启用选项“在 64 位客户端上以 32 位进程形式运行脚本”。  
 
@@ -648,7 +651,7 @@ Configuration Manager 支持以下应用程序部署类型：
 |--------------------------|----------------------|  
 | **Windows Installer（\*.msi 文件）** | Windows Installer 文件。 |  
 | **Windows 应用包（\*.appx、\*.appxbundle）** | 适用于 Windows 8 或更高版本。 选择 Windows 应用包文件或 Windows 应用捆绑包。 |  
-| **Windows 应用包（\*.appx、\*.appxbundle、\*.msix、\*.msixbundle）** | 从版本 1806 开始，适用于新的 Windows 10 应用包 (.msix) 和应用程序包 (.msixbundle) 格式。 选择 Windows 应用包文件或 Windows 应用程序包。<!--1357427--> |  
+| **Windows 应用包（\*.appx、\*.appxbundle、\*.msix、\*.msixbundle）** | 从版本 1806 开始，适用于新的 Windows 10 应用包 (.msix) 和应用程序包 (.msixbundle) 格式。 选择 Windows 应用包文件或 Windows 应用捆绑包。<!--1357427--> |  
 | **Windows 应用包（在 Windows 应用商店中）** | 适用于 Windows 8 或更高版本。 指定指向 Windows 应用商店中的应用的链接，或浏览应用商店以选择应用。<sup>[注释 1](#bkmk_note1)</sup> |  
 | **脚本安装程序** | 指定在 Windows 客户端上运行的脚本或程序，以安装内容或执行操作。 将此部署类型用于 setup.exe 安装程序或脚本包装器。 |  
 | **Microsoft Application Virtualization 4** | Microsoft App-V v4 清单。 |  
