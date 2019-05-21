@@ -11,12 +11,12 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a157e8696a9b4b24acb722be037185351f94ccdc
-ms.sourcegitcommit: 874d78f08714a509f61c52b154387268f5b73242
+ms.openlocfilehash: 8f774fc163d6ec9739733002a4c5054a2e85fec8
+ms.sourcegitcommit: f531d0a622f220739710b2fe6644ea58d024064a
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56127875"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65933548"
 ---
 # <a name="manage-mobile-devices-with-system-center-configuration-manager-and-exchange"></a>使用 System Center Configuration Manager 和 Exchange 管理移动设备
 
@@ -40,7 +40,7 @@ ms.locfileid: "56127875"
  Exchange Server 连接器管理用户的移动设备并且 Exchange Server 位于本地时，该移动设备将自动出现在应用程序目录中。 在为 Microsoft Exchange Online 配置 Exchange Server 连接器时，必须手动配置用户设备相关性，用户的移动设备才会出现在应用程序目录中。 有关如何手动配置用户设备相关性的详细信息，请参阅[在 System Center Configuration Manager 中将用户和设备同用户设备相关性相链接](../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md)。  
 
 > [!TIP]  
->  如果使用 Exchange Server 连接器管理移动设备，并且该移动设备已转让给另一名用户，请从 Configuration Manager 控制台中删除该移动设备，之后移动设备的新所有者才能在这台转让的移动设备上配置其 Exchange 帐户。  
+>  如果使用 Exchange Server 连接器管理移动设备和移动设备已转让给另一个用户，删除移动设备从 Configuration Manager 控制台之前的新所有者的移动设备上配置其 Exchange 帐户此传输移动设备。  
 
 ## <a name="required-security-permissions"></a>所需的安全权限  
  你必须具有以下安全权限才能配置 Exchange Server 连接器：  
